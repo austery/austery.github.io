@@ -1,0 +1,117 @@
+/* src/css/layouts/_home.css */
+
+.home-layout {
+    /* 让容器内的所有文本都居中 */
+    text-align: center;
+    padding: 2rem 0;
+    /* 给主页内容一些垂直的呼吸空间 */
+}
+
+/* 对主页上的列表进行特殊处理 */
+.home-layout ul {
+    /* 将列表本身作为一个块在页面上居中显示 */
+    display: inline-block;
+
+    /* 但保持列表项内部的文字是左对齐的，这样更易读 */
+    text-align: left;
+
+    margin-top: 2rem;
+    padding: 0;
+    list-style: none;
+    /* 移除列表前面的黑点 */
+}
+
+.home-layout li {
+    padding: 0.75rem 0;
+    /* 增加每个列表项之间的垂直间距 */
+    border-bottom: 1px solid var(--pico-muted-border-color);
+    /* 在列表项之间增加一条柔和的分割线 */
+}
+
+.home-layout li:last-child {
+    border-bottom: none;
+    /* 最后一项不需要分割线 */
+}
+
+/* 书籍笔记布局样式 */
+.book-note-layout {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.book-note-layout .metadata-block {
+    overflow: auto; /* Clear floats */
+    margin-bottom: 2rem;
+}
+
+.book-content {
+    margin-top: 2rem;
+    line-height: 1.6;
+    clear: both; /* Ensure content starts below floated image */
+}
+
+.book-content h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--pico-h2-color);
+}
+
+.book-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: var(--pico-h3-color);
+}
+
+.book-content p {
+    margin-bottom: 1.2rem;
+}
+
+.book-content ul, .book-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.book-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+/* 书籍封面图片样式 */
+.book-cover {
+    max-width: 120px;
+    height: auto;
+    margin: 0.5rem 0;
+    border-radius: var(--pico-border-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* 演讲者页面样式 */
+.speaker-posts-list {
+    margin-top: 2rem;
+    padding: 0;
+    list-style: none;
+}
+
+.speaker-posts-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--pico-muted-border-color);
+}
+
+.speaker-posts-list li:last-child {
+    border-bottom: none;
+}
+
+.speaker-posts-list a {
+    text-decoration: none;
+    color: var(--pico-primary);
+    font-weight: 500;
+}
+
+.speaker-posts-list a:hover {
+    color: var(--pico-primary-hover);
+    text-decoration: underline;
+}
