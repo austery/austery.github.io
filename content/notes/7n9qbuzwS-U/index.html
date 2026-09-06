@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenClaw 进阶指南：模型精选策略、记忆系统重构与自动化运维实战</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="OpenClaw 进阶指南：模型精选策略、记忆系统重构与自动化运维实战" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">OpenClaw 进阶指南：模型精选策略、记忆系统重构与自动化运维实战</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI超元域</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-02-21
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ai-chao-yuan-yu/">AI超元域</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=7n9qbuzwS-U" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-02-21
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本内容深度分享了 OpenClaw 的高级进阶经验，涵盖基于任务复杂度的模型筛选逻辑（Claude 3.5 系列对比）、记忆系统从单文件 Markdown 向主题化拆分及向量数据库（LanceDB）的重构方案、集成 Perplexity 的深度搜索 Skill 开发，以及利用 Claude Code 实现 Gateway 崩溃自动诊断与修复的闭环运维机制。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>架构重组：模型精选策略与记忆系统的深度进化</h3>
+<p>最近春节期间虽然没有制作视频，但我一直高强度使用 <strong>OpenClaw</strong>（OpenClaw：一款基于 Claude 构建的智能代理系统），总结了非常多的经验和使用技巧。最核心的变动是我对 <strong>OpenClaw</strong> 的记忆系统进行了重构，将自带的 Markdown 文件记忆系统重构为 <strong>LanceDB</strong>（LanceDB: 一种面向 AI 的向量数据库）记忆系统。这样做的目的是为了在执行复杂任务时，能够百分之百命中我们记忆中所存储的踩坑经验、技术细节以及方法论。</p>
+<p>经过这段时间高强度的使用，我在 <strong>OpenClaw</strong> 中保留的模型其实并不多。首先是 <strong>Anthropic</strong>（Anthropic: 美国人工智能初创公司）的 <strong>Claude 3.5 Opus</strong>（Speaker 称其为 cloud ops 4.6）。虽然最近发布了最新的 <strong>Claude 3.5 Sonnet</strong>（Speaker 称其为 cloud senate 4.6），但经过深度测试，我发现 Sonnet 的 <strong>智能体能力</strong>（Agentic Ability: AI 自主规划与执行复杂任务的能力）完全不如 Opus。因此，在执行复杂任务时，我首选 <strong>Claude 3.5 Opus</strong>。</p>
+<p>对于非复杂任务，我会选择 <strong>OpenAI</strong>（OpenAI: 研发 GPT 系列模型的 AI 研究机构）自带的 <strong>GPT-4o</strong>（Speaker 称其为 GPT 5.2）。至于 <strong>GPT-4o-coding</strong>（Speaker 称其为 GPT 5.3 codex），它更适合编码场景，并不适合在 <strong>OpenClaw</strong> 中执行 Agentic 相关任务。关键在于 <strong>GPT-4o</strong> 的额度比 <strong>Claude 3.5 Opus</strong> 多很多。在使用时，我们可以直接用 <code>think</code> 命令设置思考级别，根据任务复杂程度选择 <code>high</code> 级别。此外，我还保留了一个开源模型 <strong>Minimax-abab6.5</strong>（Speaker 称其为 MIMAX M2.1），它在响应速度和推理能力上与 <strong>OpenClaw</strong> 非常搭配。</p>
+<h3>语义拆分：按主题重构记忆文件实现精准检索</h3>
+<p>关于记忆功能，此前我将所有记忆文件同步到 <strong>GitHub</strong>（GitHub: 全球最大的代码托管与协作平台）进行备份。当记忆文件过多时，我让 <strong>OpenClaw</strong> 创建了一个 <code>memory_topics</code> 文件夹，将记忆分为不同类别。例如，关于多 Agent 协作的经验、配置相关的记忆、浏览器自动化的技巧以及 Docker 节点配置等，全部做成了 <strong>主题</strong>（Topics）。每个话题对应一个 Markdown 文件，这样 <strong>OpenClaw</strong> 就能根据场景按需加载，让记忆更明确。</p>
+<p>实现按主题拆分非常简单，只需告诉 <strong>OpenClaw</strong> 按照主题拆分 <code>memory.md</code> 文件。拆分后，主文件体积会大幅减小，仅存储索引和关键规则。以我的文件为例，拆分前是 15KB 的单文件，所有知识混在一起；拆分后主文件仅剩 2.3KB，具体的知识块被放入了 <code>memory_topics</code> 文件夹中。</p>
+<p>这种做法实现了 <strong>记忆搜索</strong>（Memory Search）的精准命中：每个主题独立膨胀，互不干扰，新知识可以精准追加到对应的文件中。大家可以尝试让 <strong>OpenClaw</strong> 自动完成这种拆分，将杂乱的记忆转化为结构化的主题库。</p>
+<h3>深度检索：集成 Perplexity 实现专家级调研能力</h3>
+<p><strong>OpenClaw</strong> 自带的搜索功能（如 Web Search）相对有限，主要依赖 <strong>Brave Search API</strong> 进行内容抓取。在面对复杂研究需求时，这两个功能很难满足需求。为了加入更强的深度搜索能力，我编写了一个 <strong>Skill</strong>（Skill: 为 AI 代理扩展特定功能的插件或技能），集成了 <strong>Perplexity</strong>（Speaker 称其为 codex）的搜索功能。</p>
+<p><strong>Perplexity</strong> 的优势在于其 <strong>深度研究</strong>（Deep Research）模式。我将此功能封装为 Skill 并添加到 <strong>OpenClaw</strong> 中。现在只需使用相关命令配合关键词，它就会启动深度搜索，列出相关内容、对应链接以及详细的分析报告。其决策逻辑如下：</p>
+<ol>
+<li><strong>判断 URL</strong>：如果用户输入了网址，直接调用 <code>web_fetch</code> 抓取并转化为 Markdown。</li>
+<li><strong>实时查询</strong>：如果是简单的实时信息，调用自带的 <strong>Brave</strong> 搜索。</li>
+<li><strong>深度调研</strong>：如果是复杂、多元的需求，则调用 <strong>Perplexity CLI</strong> 进行多轮搜索。</li>
+</ol>
+<p>例如，让它调研“AI 诊断的最新进展”，它能迅速给出最近三到六个月的深度调研报告，包含核心结论和具体来源，完美弥补了自带工具搜索能力不足的问题。</p>
+<h3>闭环运维：基于 Claude Code 的网关异常自动修复</h3>
+<p>最后一个重要场景是 <strong>OpenClaw Gateway</strong>（网关：负责请求分发与插件管理的核心组件）的重启防护机制。在使用过程中，由于插件 Bug 或异常退出，Gateway 可能会崩溃且无法手动启动。我实现了一套自动修复流程：当 Gateway 异常退出时，会触发系统的 <code>on-failure</code> 机制，自动启动修复服务。</p>
+<p>这个修复服务通过脚本自动调用 <strong>Claude Code</strong>（Claude Code: Anthropic 推出的用于代码编辑和系统操作的 CLI 工具）。脚本会将 Gateway 的日志信息传递给 <strong>Claude Code</strong> 进行详细分析，包括：</p>
+<ul>
+<li><strong>JSON 语法错误</strong>：自动修正 <code>config.json</code> 中的格式问题。</li>
+<li><strong>插件配置错误</strong>：识别并修复插件参数冲突。</li>
+<li><strong>端口冲突</strong>：定位并释放被占用的端口。</li>
+</ul>
+<p><strong>Claude Code</strong> 会读取日志、定位问题、修改配置、验证语法并重启 Gateway。重启 8 秒后，系统会再次检查进程。如果依然崩溃，会尝试第二次修复。若两次修复均告失败，则通过聊天软件通知用户介入。这套机制实现了 <strong>无人值守</strong> 状态下的自动运维，即使人在睡觉，系统也能自主完成从报错到恢复的闭环，极大地提升了系统的稳定性。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, 
+                
+                  <a href="/search/?q=Perplexity" class="entity-link company-link">Perplexity</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=OpenClaw" class="entity-link product-link">OpenClaw</a>, 
+                
+                  <a href="/search/?q=Claude 3.5 Sonnet" class="entity-link product-link">Claude 3.5 Sonnet</a>, 
+                
+                  <a href="/search/?q=Claude 3.5 Opus" class="entity-link product-link">Claude 3.5 Opus</a>, 
+                
+                  <a href="/search/?q=GPT-4o" class="entity-link product-link">GPT-4o</a>, 
+                
+                  <a href="/search/?q=LanceDB" class="entity-link product-link">LanceDB</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">open-claw</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">memory-optimization</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">automated-maintenance</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/vector-database/">vector-database</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

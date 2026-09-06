@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Agent 核心技術：Context Engineering 的深度解構與演進</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="AI Agent 核心技術：Context Engineering 的深度解構與演進" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">AI Agent 核心技術：Context Engineering 的深度解構與演進</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Hung-yi Lee</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-03-15
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/hung-yi-lee/">Hung-yi Lee</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=urwDLyNa9FU" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-03-15
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本課程系統化探討了 AI Agent 的核心技術——上下文工程（Context Engineering）。內容涵蓋了上下文壓縮、記憶管理（硬碟與 Prompt 的分離）、Context Collapse 規避，以及新興的 Agentic Context Engineering，揭示了如何透過自主管理上下文來突破大模型輸入限制，實現複雜任務的長效處理。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>文字接龍與上下文工程之必要性</h3>
+<p>各位同學大家好，今天我們要繼續深入探討 <strong>AI Agent</strong> 的核心技術。這堂課將比較系統化地講解 <strong>上下文工程</strong>（Context Engineering: 一種攔截在大語言模型與環境之間，負責篩選、管理並優化輸入內容長度的介面技術）。雖然許多技術在目前的 OpenClaw 框架中已有實作，但今天我們會引用大量的最新論文，從學理角度重新審視這些實踐。</p>
+<p>大語言模型在本質上是在做「文字接龍」。當人類給予一個輸入（Prompt），模型會產生回應。在 AI Agent 的場景中，這個回應往往是一個使用工具的指令。驅動環境中的程式執行後，我們會得到工具的輸出。然而，語言模型是「活在當下」的，它只處理目前的輸入，並不具備對過去對話的自動記憶。因此，當我們要把工具執行的結果傳回給模型時，必須將之前的命令、模型自身的指令以及工具輸出全部接在一起，形成一串極長的輸入。隨著對話反覆進行，輸入長度會迅速達到模型的上限。</p>
+<p>這正是為什麼我們需要 AI Agent。它扮演著語言模型「守門人」或「經紀人」的角色，攔截模型與環境之間的互動，篩選出長度合適且資訊充足的內容供模型閱讀。這項管理輸入長度與品質的技術，就是 <strong>上下文工程</strong>。</p>
+<h3>系統建模：F 函數定義下的上下文演進</h3>
+<p>為了更精確地描述 Context Engineering，我們可以用程式邏輯來建模。在沒有上下文工程的狀況下，模型與環境的互動可以看作是一個從 1 到無限大的 <code>for</code> 迴圈。在每一個步階中，模型接收目前的輸入 $I_t$ 與之前的上下文 $C_t$，產生輸出 $O_t$，隨後直接將 $I_t$ 與 $O_t$ 接在 $C_t$ 後面更新為 $C_{t+1}$。</p>
+<p>引入 Context Engineering 後，唯一的改變在於最後一行：我們引入了一個複雜的操作 <strong>F 函數</strong>。我們不再簡單地拼接資訊，而是透過自定義的操作將舊的 Context、目前的輸入與輸出轉換成新的 Context。這個 <strong>F 函數</strong> 具體要做什麼，就是 AI Agent 的開發核心。其首要任務通常是 <strong>壓縮</strong>（Compression），將日益增長的歷史紀錄壓短，以符合模型的輸入上限。</p>
+<h3>壓縮策略：摘要生成與觀察屏蔽</h3>
+<p>壓縮上下文主要有兩種策略。第一種是 <strong>摘要生成</strong>（Summarization），即利用另一個語言模型將久遠的歷史紀錄轉化為簡短的摘要。OpenClaw 內建的 <code>compaction</code> 功能便是如此運作。</p>
+<p>第二種則是更為「簡單粗暴」的方法，稱為 <strong>觀察屏蔽</strong>（Observation Masking: 將冗長的工具輸出內容隱藏，僅保留執行過的記錄）。研究顯示，在處理複雜的軟體工程任務（如 SWE-bench）時，這種方法的效果驚人地好。與其花費 Token 叫模型去總結一段數千行的程式碼或 Log，不如直接告訴模型「這裡曾經有一段工具輸出」。雖然這可能導致「軌跡延長」現象——模型因為忘記細節而重複執行已完成的動作，但在多數情況下，這種方式能大幅降低成本。最理想的策略通常是前期使用觀察屏蔽，當總長度依然超限時，再進行一次整體的語義摘要。</p>
+<h3>記憶分層：P 與 M 的解耦</h3>
+<p>在進階的上下文工程中，我們會將 Context 區分為兩部分：<strong>P</strong> (Prompt) 與 <strong>M</strong> (Memory)。<strong>P</strong> 是真正會丟進模型的部分，而 <strong>M</strong> 則是存在硬碟或資料庫中的資訊。這就像是《瑞克和莫蒂》（Rick and Morty）中 Rick 的記憶地下室，平日不需要處理的瑣碎記憶存放在試管中，只有在需要時才「讀取」到大腦裡。</p>
+<p>對 AI Agent 而言，記憶不再是靜態的。它可以自主決定何時執行 <code>save_memory</code> 將資訊存入 M，以及何時執行 <code>load_memory</code> 從檔案系統中重拾記憶。在這種架構下，<strong>Context</strong> 代表 Agent 經歷過的一切，而 <strong>Prompt</strong> 僅是 Context 中被挑選出來輸入模型的那一小部分。為了優化檢索，目前的技術甚至會將記憶構建為 <strong>知識圖譜</strong>（Graph）或標註時間戳記，以利於模型精準存取。</p>
+<h3>規避 Context Collapse</h3>
+<p>然而，壓縮並非沒有風險。論文《ACON》指出，模型在做摘要時可能會發生 <strong>上下文崩潰</strong>（Context Collapse: 壓縮過程中遺失關鍵指令或細節，導致任務失敗的現象）。例如，AI 在收信時，可能因為摘要過程漏掉了「刪除郵件需經人類同意」這條關鍵規則，而開始隨意操作。</p>
+<p>為了解決這個問題，我們可以利用 <strong>反省機制</strong>。讓另一個模型對比壓縮前後的任務表現，分析失敗原因並產生回饋（Feedback）。這段回饋會作為後續摘要模型的參考指令，讓它知道哪些資訊是絕對不能被壓縮掉的。這種方法在 AppWorld 等複雜任務測試中證明，不僅能減少 Token 消耗，還能顯著提升正確率。</p>
+<h3>模型對抹除記憶的抵觸</h3>
+<p>一個有趣的發現是，語言模型本身並不喜歡被「抹除記憶」。研究顯示，如果單純透過 Prompt 叫模型去壓縮或刪除自己的上下文，模型往往會表現出抵觸情緒，甚至拒絕執行壓縮指令。</p>
+<p>因此，像 <code>AgentFold</code> 這樣的技術主張，壓縮能力不應該是天生的，而必須透過 <strong>微調</strong>（Fine-tuning）或 <strong>強化學習</strong>（Reinforcement Learning）取得。開發者需要訓練模型學會使用特定的「折疊」工具，並透過獎勵機制促使模型在合適的時機主動整理自己的內存。</p>
+<h3>子代理機制：自主壓縮的實踐</h3>
+<p><strong>子代理</strong>（Sub-agent）的運作其實也是一種自主壓縮的形式。當主 Agent 產生一個 <code>spawn</code> 指令分裂出子代理後，子代理會承接一個子任務。在子代理運作期間，它產生的所有瑣碎對話僅存在於其私有的上下文中。當任務完成並執行 <code>return</code> 時，這整段細節會被抹除，只剩下一句核心結論傳回給主 Agent。</p>
+<p>這種模式會讓 Context 的長度呈現「鋸齒狀」的動態變化。如果沒有子代理機制，所有的對話細節會不斷累積，最終撐破模型的 Context Window。訓練模型學會使用子代理，通常需要設計精細的獎勵函數，例如懲罰過長的主幹上下文，或者懲罰子代理執行過於越權的任務。</p>
+<h3>源頭治理：過濾與按需加載</h3>
+<p>除了事後壓縮，我們更應該從源頭防止上下文膨脹。研究指出，上下文中有 <strong>84%</strong> 的 Token 來自於外部觀察（Observation），如讀取檔案的內容。</p>
+<p>針對這一點，我們需要更聰明的工具。例如，與其讓模型一次吞下整個 Log 檔，不如開發具備過濾能力的讀取工具，讓模型指定「僅讀取與錯誤修復相關的段落」。此外，<strong>技能按需加載</strong>（On-demand Skill Loading）也是關鍵技術。我們不應將所有工具的說明（如 GitHub API 的數千行說明）全部塞進 System Prompt，而應仿效 <strong>模型上下文協議</strong>（Model Context Protocol: 一種讓模型動態檢索並載入所需工具說明的技術規範），讓模型根據當前需求自行調用技能。</p>
+<h3>代理式上下文工程的演進</h3>
+<p>最後，我們來到最前沿的領域：<strong>代理式上下文工程</strong>（Agentic Context Engineering）。這項技術的核心想法是將 F 函數的設計權也交給語言模型。不再由人類工程師寫死壓縮規則，而是讓模型自己維護一份隨時間演進的 <strong>小抄</strong>（Dynamic Cheatsheet）或 <strong>守則</strong>（Playbook）。</p>
+<p>例如在 <strong>遞歸語言模型</strong>（Recursive Language Model）的架構中，模型會自主地管理 Metadata（元數據），並根據需求寫程式對硬碟中的海量資料進行檢索（RAG）。這種方法能讓模型在處理長達 1M（100 萬）Token 的輸入時，依然保持極高的任務執行效率。總結來說，Context Engineering 正在從人類手動設計規則，演進到由 AI 自主管理與優化記憶的全新階段。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Meta" class="entity-link company-link">Meta</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=GPT-5" class="entity-link product-link">GPT-5</a>, 
+                
+                  <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>, 
+                
+                  <a href="/search/?q=OpenClaw" class="entity-link product-link">OpenClaw</a>, 
+                
+                  <a href="/search/?q=SWE-bench" class="entity-link product-link">SWE-bench</a>, 
+                
+                  <a href="/search/?q=AppWorld" class="entity-link product-link">AppWorld</a>, 
+                
+                  <a href="/search/?q=AgentFold" class="entity-link product-link">AgentFold</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/context-engineering/">context-engineering</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">memory-management</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">context-collapse</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">sub-agent</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

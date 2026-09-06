@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI赋能编程与投资：从Claude Code实践到AI基础设施展望</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="AI赋能编程与投资：从Claude Code实践到AI基础设施展望" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">AI赋能编程与投资：从Claude Code实践到AI基础设施展望</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Money or Life 美股频道</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-03-25
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/money-or-life-mei-gu-pin-dao/">Money or Life 美股频道</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=rYBhtzxbO4I" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-03-25
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本期视频详细介绍了作者使用Anthropic的Claude Code工具，从零开始构建并部署一个自动化SEC财报下载小程序的经历。作者分享了Vibe Coding的实践体会、AI投资的看法，特别是对AI基础设施的价值分析，并强调了AI素养对下一代教育的重要性。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>初探Vibe Coding：用AI构建小程序</h3>
+<p>大家好，欢迎来到Money or Life美股频道，我是<strong>Ace</strong>。本期视频想和大家来聊<strong>Vibe Coding</strong>（AI辅助编程: 利用AI工具进行代码编写和软件开发的流程）。因为昨天<strong>Ace</strong>人生第一次利用<strong>Vibe Coding</strong>，花了大概六七个小时，写了自己人生第一个小程序。那么在接下来的内容，会和大家分享，我写了一个什么样的程序，以及从<strong>Vibe Coding</strong>角度来谈一下<strong>AI</strong>的投资。</p>
+<h3>开发环境与Token焦虑</h3>
+<p>首先简单介绍一下我使用的工具。其实在春节我回国休假之前，我就已经决定要尝试<strong>Vibe Coding</strong>。当时呢，我下载了<strong>Antigravity</strong>，但是因为时间有限，而且打开<strong>Antigravity</strong>发现不太会用，就直接放弃了。昨天我又下定决心再次尝试。这次呢，我第一次下载了Anthropic旗下的<strong>Claude</strong>，那么我们知道<strong>Claude</strong>有<strong>Claude Code</strong>（AI编码工具: Anthropic提供的用于编程的AI助手）这个<strong>Vibe Coding</strong>的工具。然后我在网上随便看了一下教程，大概花了5分钟。同时下载了<strong>Visual Studio Code</strong>，这是一个和<strong>Claude</strong>结合使用的一个编程工具。但我后来实际操作中，干脆就直接用<strong>Claude</strong>，根本没有用<strong>Visual Studio Code</strong>这么复杂了。我相信如果你和我一样，完全不懂编程，也可以直接就用<strong>Claude Code</strong>。</p>
+<p>昨天是我第一次使用Anthropic公司旗下的<strong>Coding</strong>工具。那么打开这个工具以后相当的简单，分为Chat、Co-work和Code。<strong>Chat</strong>就是普通的，让<strong>大语言模型</strong>（Large Language Model: 基于海量文本训练的AI系统）解决你的一些问题，我们平时都在使用的LLM。而<strong>Code</strong>就是我们要使用的编程的工具。</p>
+<p>大家可以看到下方，我已经订阅了<strong>Max plan</strong>。为什么呢？因为在我使用了<strong>Code</strong>工具之后，我的<strong>Pro subscription</strong>（AI模型处理单位: AI模型处理文本的基本单位，通常是单词或子词）的<strong>Tokens</strong>一下子就用完了。大家可以看到，当我昨天刚开始使用的时候，我订阅的是大约30新币每个月的<strong>Pro subscription</strong>，但我发现，在写这个小程序的过程中，<strong>Tokens</strong>很快就用完了。所以呢，我升级到了左下方的<strong>Max plan</strong>。可是升级之后还不能用，我还等了一会。在这等待的过程中我非常焦虑，我就问<strong>Claude Chat</strong>说我的<strong>Tokens</strong>用完了，我已经更新了怎么还不给我用。显然，我昨天出现了<strong>Tokens</strong>焦虑。</p>
+<h3>SEC财报下载器：解决实际问题的AI工具</h3>
+<p>我写的小程序是屏幕上方大家看到有一个程序按钮叫做“Ace 财报下载”，然后这个Logo是<strong>SEC</strong>。其实这个程序就是解决我现实中的一个小问题：我每次分析公司的时候，都要下载非常多的<strong>SEC文件</strong>（美国证券交易委员会文件: 公司向SEC提交的财务报告和披露文件）。有的时候，从下载到重新命名，可能要15-20分钟甚至更久的时间。</p>
+<p>双击蓝色的按钮，我们就进入到屏幕上展示的，部署在我本地的小程序“Ace 财报下载”。然后呢，我们只需要输入股票代码，比如说<strong>RKLB</strong>。他的第一步就是告诉三个重要的网站。为什么要有这三个网站？因为我每次去研究一家公司，比如说火箭实验室或者新的公司，我首先就是进入他的官网，然后进入他的Investor Relationship（投资者网站），然后才进入到季度财报、earning call网站。所以这三个网站对于我来说很重要。</p>
+<p>紧接着，我们就让这个程序自动下载<strong>SEC文件</strong>。首先输入一个邮箱，这个邮箱是<strong>SEC</strong>官网必须要强制要求的，其实你输入任何的邮箱都可以。然后下载类型，你可以选择<strong>SEC 10-Q季度报告</strong>（季度财务报告: 公司向SEC提交的季度财务报告），也可以选择<strong>SEC 10-K年度报告</strong>（年度财务报告: 公司向SEC提交的年度财务报告），也可以两个都选。那么我这里暂时两个都选。时间范围呢，我从25年一季度选到最新的，那么就是从25年开年一直到现在，所有的10-K 10-K我都要。然后点击保存位置，就可以选择你想把这些文件存在哪里。</p>
+<p>紧接着，只需要简单的点击“下载 <strong>SEC</strong> 文件”，他就开始跑了。我们看到，大概可能花一点点时间吧，他就能把我要求的所有文件，按照我想要的名字存储起来。因为这里我选择时间是25年一季度开始，所以其实没有几个文件，那他很快就帮我下载好了，大概只有几秒钟的时间。只需要点击“打开文件夹”就可以看到，这就是刚刚他为我们下载的5个文件，包括25年一季度的10-Q，二季度10-Q，三季度10-Q，以及24年10-Q和25年的10-Q。也就是三份季度报告加两份年度<strong>SEC</strong>报告。我们随便打开一个25年三季度10-Q，看到底这个命名准不准确。那么打开之后可以发现，这个25年三季度10-Q确实是结束在9月30号这一天，所以确实是第三季度的季度<strong>SEC</strong>文件。</p>
+<p>那么这么一套下来，我大概只需要一两分钟的时间，就能够下载完过去好几年某一家公司他的<strong>10-Q</strong>、<strong>10-K</strong>文件，为我下一步研究公司做好准备。这相当于我以前可能花15-30分钟去手动下载，节约了不少的时间。</p>
+<h3>从本地部署到在线服务：AI驱动的商业化尝试</h3>
+<p>刚刚我展示的只是我本地部署的工具。那么为了体验整个软件从创意到编写到<strong>DBA</strong>（Database Administrator: 数据库管理员），再到发布再到收费的流程，我也将它发布在了网上。那么如何发布的？也是通过<strong>Claude Code</strong>一键发布的智能帮助，我并没有费太多的心思。</p>
+<p>我还特意做了一个购买访问权限的功能，也仅仅是为了体验一下。如大家点击“立即购买”，花5美金就可以永久使用我这个程序。当然，我这里分享不是为了真的让大家去购买，而仅仅是我作为一个初次<strong>Vibe Coding</strong>的使用者，看一个普通人是否可以真的写一个软件，然后就放上网，然后为别人创造价值，就可以获得收益。事实证明整个实现过程是很简单的。</p>
+<p>那么其实你点击购买的话，你是真的能付钱的，因为我已经连接了<strong>Stripe</strong>（支付处理平台: 用于处理在线支付和交易的服务）。你付钱的话，这5块钱就会进入我的口袋。但是目前我只是把这个程序分享给了我的会员社群，他们通过输入密码，就可以免费的进入，然后免费的使用。</p>
+<h3>Vibe Coding实战：对话驱动的开发流程</h3>
+<p>那么以上是如何实现的呢？其实99%的时间，仅仅是在<strong>Claude Code</strong>通过和工具对话而实现。大家可以看到我还专门总结了一下，在整个昨天，大概四五个小时使用<strong>Claude Code</strong>从0到1创造这个软件到发布软件的过程。我和他对话的类型呢，大概可以分为：功能开发最多（25次），然后UI界面调整也是挺多的（12次对话），<strong>Bug</strong>修复有10次。俗话说，程序员有一半的时间都在<strong>Debug</strong>（修复程序错误），对吧？那我们自己用<strong>Vibe Coding</strong>也是有<strong>Bug</strong>也要进行检查。然后部署相关（8个对话），安全隐私（4个对话）。接下来呢，还有性能优化、使用咨询和功能移除。所以呢，我大部分对话集中在功能开发、UI界面调整和<strong>Bug</strong>修复。</p>
+<p>而要强调的是，在这里你可以选不同的模型。我选择的是比较高级别的、比较<strong>Capable</strong>的模型。那当然，这种模型他耗费的<strong>Tokens</strong>也就更多。刚刚提到99.9%的时间，我都是在和<strong>Claude Code</strong>进行对话，通过普通语言的对话实现了<strong>Web Coding</strong>。然后还有0.01%呢，就是有的时候因为安全的问题，我们确实要自己去填写一些内容。你比如说关于<strong>Stripe</strong>的支付，<strong>Claude Code</strong>没有办法全程的帮助你去完成，你还是需要手动填写一些信息。</p>
+<p>那么具体<strong>Claude Code</strong>怎么实现这个工作的？全自动化的工作其实也很简单。首先，他有编程的技术，他有这个Skill。其次呢，他可以控制你的屏幕，相当于他控制你的浏览器去帮你搜索，甚至帮你填写一些他可以被允许填写的东西。就这么简单。</p>
+<h3>AI Agenting：未来自动化构想</h3>
+<p>以上这个工具只是非常简单的，因为我自己确实也不懂<strong>Web Code</strong>，第一次尝试。但是我接下来的计划是，将我自己股票分析从0到1，整个过程我会看一下哪些过程可以拆解下来，用<strong>Vibe Coding</strong>，用小程序去实现自动化。甚至比如说，我昨天和<strong>Claude Code</strong>对话的这四五个小时，可能大部分的时间，都可以由一个<strong>Agent</strong>去和<strong>Claude Code</strong>对话，而不是我自己花费时间。所以这个<strong>Agent</strong>他在昨天的这个语境下，他就是一个软件工程师。那么我还可以创造做PPT的人，还可以创造写文稿的人，也可以创造去帮我搜索文件的人。希望以后把这一整套做下来，如果做的比较好，再和大家分享我的成果。</p>
+<h3>AI时代的关键能力：动机与提问技巧</h3>
+<p>接下来，<strong>Ace</strong>就花一点时间和大家闲聊聊我对使用<strong>AI</strong>以及投资<strong>AI</strong>的看法。</p>
+<p>首先第一点：现在<strong>大语言模型</strong>很多，<strong>Vibe Coding</strong>的工具也很多。这就意味着，我们每个人都处在同一起跑线吗？其实不是的。我觉得最重要的有两点，他们都和工具无关。第一点，我们有没有<strong>动机</strong>（motivation），我们有没有这个想法要去创造一些东西？如果没有想法，你根本不会去使用，对吗？而第二点，有了想法之后我们要学会问问题。我们都知道问问题是一个技巧。在<strong>大语言模型</strong>时代，问问题的能力显得尤为重要。如果你不会问问题，可能同一个最终的目的地，你要走很多弯路。会问问题的，可能问两三个问题他就解决了。所以我觉得值得去思考一下，如何更合理更高效的去向<strong>AI</strong>问问题，以达到自己的最终目的，而不是说一直浪费时间在和<strong>AI</strong>对话，把自己搞得很stressful，很有压力，这样反而是适得其反了。</p>
+<h3>AI赋能教育：年轻一代的先机</h3>
+<p>我的第二个想法就是，如果屏幕前的朋友们和<strong>Ace</strong>一样，已经有子女了，或者是你已经结婚快要结婚，未来有子女。那么对于我们这一代人来说，鼓励现在的小朋友去使用<strong>AI</strong>，真的是很有必要的。我自己的儿子就是经常知道我在做什么，他知道我是Youtuber，我经常跟他谈我自己喜欢的公司、我自己喜欢的技术。然后呢，我也用<strong>AI</strong>帮他制作他喜欢的一些图片，比如说一些玩具的卡车呀、一些玩具的挖掘机之类的。那么他也是大概了解了<strong>AI</strong>是什么。我就告诉他，等你上了小学，如果你有学习的需要，那么可以使用<strong>AI</strong>问他问题，他就可以跟你解答。</p>
+<p>刚好，昨天和我家的阿姨在聊天的时候，他说他女儿13岁了想要买一台电脑。那么家庭条件一般嘛，可能买电脑觉得有些压力。我就告诉他，你现在要鼓励你的女儿多使用<strong>AI</strong>。因为现在进入大学四年，你能够体验大学的生活很好。但是除此之外，你能够使用<strong>AI</strong>，在大学之前就开始学习一些你感兴趣的知识，找到自己的方向，那就会领先别人一步对吧？然后我就跟他说，我甚至可以资助你一部分钱，去为你女儿购买这个电脑，让他能够使用现在最好的工具。所以我觉得整体下来，还是比较感慨吧。我们现在这一代人，就是80后、90后，是处于<strong>AI</strong>的变革期。我觉得让子女，让年轻一代有这个<strong>AI</strong>的意识，是教育中非常重要的一环。</p>
+<h3>AI投资聚焦：高护城河的基础设施</h3>
+<p>最后和大家简单聊一下投资。但是这里聊的投资只是一些具体的，我认为一个好的方向，而不是说所有的<strong>AI</strong>板块，因为整个<strong>AI</strong>板块太大了。那么我要聊的这个具体的方向就是，具有高护城河的<strong>AI基础设施</strong>（AI Infrastructure: 支持AI模型运行和部署的底层技术和硬件）。为什么会聊到这个板块？其实和我自己个人的一些投资需求有关。因为前一阵我爸妈就在焦虑说，哎，现在的定存利率太低了。然后我就说，哎，其实如果你这个钱不是你全部的资产，只是你用来投资的一小部分，风险可以承担，然后呢你5年，可能甚至5-10年都不需要用的情况下，现在我们去投资一些有高护城河的<strong>AI基础设施</strong>，我觉得是很好的。</p>
+<p>请注意啊，我说的这个是特例，因为我爸妈的投资需求可能不等同于我自己的投资需求，可能也不等同于屏幕前大家的投资需求。我只是告诉大家，现在<strong>AI</strong>上游基础设施，你比如说<strong>英伟达</strong>（Nvidia），比如说最近我常提到的<strong>ASML</strong>（Advanced Semiconductor Materials Lithography and Manufacturing），这个我在<strong>Terra Fab</strong>这一期视频有详细的说明一些细节。你比如说还有像<strong>TSMC</strong>（Taiwan Semiconductor Manufacturing Company）以及像<strong>Intel</strong>这样的企业，我认为他们都属于<strong>AI基础设施</strong>上游，非常有护城河的企业。</p>
+<p>基于现在我们人人都可以<strong>Vibe Coding</strong>，我们每个人都需要很多<strong>Tokens</strong>，甚至很多人可能出现像我昨天这样<strong>Tokens</strong>焦虑的情况。这种大环境，我觉得以上提到的这些高护城和企业，如果你对他每年的复合收益率期望值没有说要百分之三四十，甚至每年你都要翻倍，这种极端的期望，那我觉得长期投资来看，还是非常的稳当的。我自己有投资<strong>英伟达</strong>，我自己最近也觉得<strong>ASML</strong>不错，特别是我<strong>Tire Fab</strong>的视频里面强调了这一点。</p>
+<p>那么整个<strong>AI</strong>行业呢，我还是比较看重<strong>AI基础设施</strong>这一块。下游<strong>AI应用</strong>我有<strong>Palantier</strong>以及<strong>Tesla</strong>。但是这样的<strong>AI应用</strong>，我觉得它目前的风险显然还是要比上游高一点。可能有朋友问，哎，那你之前非常关注的<strong>neoClaude</strong>？<strong>neoClaude</strong>也是基础设施，但问题就是它目前的利润率存在很大的问号。所以如果考虑到未来长期的确定性，那么这个利润率就是个问号，确定性就会降低。相比较之下，像<strong>Nvidia</strong>、<strong>ASML</strong>这种公司，他们可能长期的收益没有那么的高，但是我觉得他的确定性非常的强大，就比较适合像我们父母这一代，他们有一些闲钱想要投资，想要长期投资的这种需求。</p>
+<h3>结语与社群邀请</h3>
+<p>好了，今天的视频就到这里。希望大家能够订阅<strong>Money or Life美股频道</strong>，这是对我最大的支持。当然，也欢迎大家通过视频下方的Patreon链接加入我的会员社群。在那里，每个工作日我都会进行文字更新，不仅有我的实际交易，也有我对一些热门话题的及时的看法。感谢大家，我们下期视频，再见！</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, 
+                
+                  <a href="/search/?q=Nvidia" class="entity-link company-link">Nvidia</a>, 
+                
+                  <a href="/search/?q=ASML" class="entity-link company-link">ASML</a>, 
+                
+                  <a href="/search/?q=TSMC" class="entity-link company-link">TSMC</a>, 
+                
+                  <a href="/search/?q=Intel" class="entity-link company-link">Intel</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/vibe-coding/">vibe-coding</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/claude-code/">claude-code</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-investment/">ai-investment</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-infrastructure/">ai-infrastructure</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

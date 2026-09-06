@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>告别Vibe Coding！用Superpowers让Claude Code写出工程级代码，一次通过零报错！遵循TDD最佳实践！支持Codex和OpenCode！从需求澄清到代码审查</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="告别Vibe Coding！用Superpowers让Claude Code写出工程级代码，一次通过零报错！遵循TDD最佳实践！支持Codex和OpenCode！从需求澄清到代码审查" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">告别Vibe Coding！用Superpowers让Claude Code写出工程级代码，一次通过零报错！遵循TDD最佳实践！支持Codex和OpenCode！从需求澄清到代码审查</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI超元域</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-01-11
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ai-chao-yuan-yu/">AI超元域</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=TMmq9Wx1AIQ" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-01-11
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本视频详细介绍了开源AI编程助手工作流Superpowers，它将工程化开发方法论固化，支持Claude Code、CodeX和Open Code。Superpowers强调测试驱动开发（TDD），通过需求澄清、计划编写、子代理执行和两阶段代码审查，确保AI生成高质量、可维护的代码，告别随意编码。演示了一个使用Superpowers在Claude Code中从零开始开发iOS时间线笔记应用的全过程，并成功一次性通过所有测试。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>在之前的视频中，我为大家演示过多种与 <strong>Claude Code</strong> 和 <strong>CodeX</strong> 相关的开发工作流，包括 <strong>OpenAI</strong> 等。最近，我发现了一个更加工程化、更完整的开源工作流：<strong>Superpowers</strong>。它是一个面向AI编程助手的完整软件开发工作流系统。它支持 <strong>Claude Code</strong>，还支持 <strong>OpenAI</strong> 的 <strong>CodeX</strong>，并且支持开源的AI编程助手 <strong>Open Code</strong>。</p>
+<p>我曾使用 <strong>Superpowers</strong> 在 <strong>Claude Code</strong> 中开发了一款 iOS 的时间线笔记原生应用。在这个应用中，我们可以记笔记，输入标签，还可以选择图像。点击发布后，笔记会以时间线方式显示在最顶部，下方是之前发布的笔记内容。我们还可以对笔记进行编辑、删除，或放大图像。</p>
+<p><strong>Superpowers</strong> 的核心功能并非让AI随心所欲地写代码（即我们常说的 <strong>vibe coding</strong>），而是将一整套接近专业工程团队的开发方法论固化下来，让AI编程助手在写代码时能够自动遵循最佳的实践，包括先澄清需求、编写计划、分步实现，并且每一步都有检查点，从而避免AI编程助手采用 <strong>vibe coding</strong> 的方式将项目越搞越乱。</p>
+<p>它最大的特色是<strong>测试驱动开发（TDD）<strong>贯穿始终，作为铁律强制执行。每个任务都会委派一个新的</strong>sub-agent</strong>，这样就不会造成上下文污染。它的实现方式是将研发流程打包成一组可组合的 <strong>skills</strong> 与启动指令，并通过指令、技能库和工作流编排的组合，让AI在不同阶段按流程做正确的事。</p>
+<p>本期视频，我们将结合实际项目，带大家测试 <strong>Superpowers</strong> 这个开源工作流的使用方式和效果。由于 <strong>Superpowers</strong> 对 <strong>Claude Code</strong> 的支持更好，在 <strong>Claude Code</strong> 中，它能借助 <strong>Claude Code</strong> 原生支持的 <strong>skills</strong> 功能以及插件功能，实现一键安装、加载与自动触发。因此，本期视频将重点在 <strong>Claude Code</strong> 中测试这个开源工作流项目。</p>
+<h3>安装与配置</h3>
+<p>在 <strong>Claude Code</strong> 中使用 <strong>Superpowers</strong> 这个插件非常简单。首先，打开终端命令行，进入 <strong>Claude Code</strong>，然后复制官方给出的一条命令，粘贴到 <strong>Claude Code</strong> 中并执行。接着，复制官方给出的第二条命令，粘贴到 <strong>Claude Code</strong> 中直接执行。</p>
+<p>在 <strong>CodeX</strong> 中安装也非常简单。我们只需要复制官方给出的提示词，在 <strong>CodeX</strong> 中直接粘贴并执行即可。</p>
+<p>在 <strong>Open Code</strong> 中安装同样简单。我们直接复制官方给出的提示词，然后在 <strong>Open Code</strong> 中粘贴并运行即可。</p>
+<h3>Superpowers 工作流概览</h3>
+<p>安装完成后，我们就可以在 <strong>Claude Code</strong> 中输入斜杠命令 <code>/superpowers</code>。这时，我们可以看到 <strong>Superpowers</strong> 支持的三条命令：</p>
+<ol>
+<li><strong>头脑风暴 (Brainstorming)</strong>：我们只需要简单描述要开发的内容，与AI进行苏格拉底式对话，从而帮助我们厘清真正的需求。</li>
+<li><strong>编写开发计划 (Write Development Plan)</strong>：它能实现编写2到5分钟的小任务，包含精确的文件路径、完整的代码片段，以及明确的验证步骤。</li>
+<li><strong>执行计划 (Execute Plan)</strong>：这是最终的执行命令。</li>
+</ol>
+<p><strong>Superpowers</strong> 的整体执行流程非常简单：</p>
+<ul>
+<li><strong>头脑风暴</strong>：首先进行需求澄清。</li>
+<li><strong>工作区隔离</strong>：它会创建新的分支来隔离开发环境。</li>
+<li><strong>项目初始化</strong>：进行项目的基础设置。</li>
+<li><strong>验证测试基线</strong>：确保初始状态可测试。</li>
+<li><strong>编写计划</strong>：生成详细的开发计划。</li>
+<li><strong>子代理开发</strong>：将计划分配给<strong>sub-agent</strong>进行开发。</li>
+</ul>
+<p>它的核心原则是<strong>测试驱动开发（TDD）循环</strong>，包括写（代码）、失败（测试）、测试、最小实现，最后清理优化。其特点是<strong>两阶段代码审查</strong>：第一阶段是规格符合性审查，第二阶段是代码质量审查。</p>
+<h3>演示：iOS笔记应用开发</h3>
+<p>设置好 <strong>Superpowers</strong> 后，下面我们用一个实际例子来测试其开发流程和效果。</p>
+<p>在开始执行之前，我们可以在 <strong>Xcode</strong> 中初始化一个 iOS 项目，然后用 <code>cd</code> 命令进入我们创建的路径，再启动 <strong>Claude Code</strong>。我们可以直接用斜杠命令 <code>/superpowers brainstorm</code> 来开启 <strong>Superpowers</strong> 的头脑风暴模式。然后，直接输入开发需求，它就会自动激活头脑风暴 <strong>skill</strong>。</p>
+<p>我这里输入的开发需求是：“开发一个个人时间线笔记的 iOS 应用，像 <strong>X</strong>（推测为Twitter/X）一样能够发布短笔记，按时间线浏览，还能支持图片和标签。”</p>
+<p>我们直接运行，先看一下效果。这里提示使用头脑风暴这个 <strong>skill</strong>，我们允许它执行。这样，不需要我们去执行具体命令，只需要输入开发需求，它就能自动激活 <strong>Superpowers</strong> 的头脑风暴 <strong>skill</strong>。</p>
+<p>AI 识别到我们刚才创建了一个空的 <strong>Xcode</strong> 项目，并需要查看项目结构。它提示这是一个新的 <strong>Xcode</strong> 项目，并表示理解了我们想创建一个时间线笔记 App。</p>
+<p>接下来，它需要我们来澄清几个问题：</p>
+<ol>
+<li>
+<p><strong>如何创建笔记？</strong></p>
+<ul>
+<li>选项一：采用类似 <strong>X</strong> 右下角的加号按钮，点击即可打开撰写窗口。</li>
+<li>选项二：顶部撰写栏，时间线顶部始终可见的输入框，直接输入即可发布。</li>
+<li>选项三：下拉撰写，在时间线上拉即可显示撰写区域。
+我们选择第一项，输入“1”。</li>
+</ul>
+<p>AI 很快输出了回答：“悬浮按钮既方便，又能保持时间线的简洁。”</p>
+</li>
+<li>
+<p><strong>笔记在时间线上应该如何显示？</strong></p>
+<ul>
+<li>选项一：卡片样式，每条笔记以圆角卡片的形式呈现。</li>
+<li>选项二：扁平列表形式，类似 <strong>X</strong>。</li>
+<li>选项三：气泡形式，类似聊天气泡的显示方式。
+我们选择第一种，让它实现这种圆角卡片的风格，输入“1”。</li>
+</ul>
+</li>
+<li>
+<p><strong>笔记中的图片应该如何显示？</strong></p>
+<ul>
+<li>选项一：内嵌式展开，图片在卡片内全框显示，类似于 <strong>X</strong> 风格。</li>
+<li>选项二：缩略图网格，多张图片显示为小缩略图，点击展开。</li>
+<li>选项三：单张预览。如果有更多图片，则显示徽章。
+我们选择第二项，实现缩略图的网格，输入“2”。</li>
+</ul>
+</li>
+<li>
+<p><strong>标签如何运作？</strong></p>
+<ul>
+<li>选项一：在笔记中内嵌标签。</li>
+<li>选项二：单独的标签选择器。</li>
+<li>选项三：两者兼备。
+我们选择第一种，输入“1”（像 <strong>X</strong> 中一样，输入井号键就能填写标签）。</li>
+</ul>
+</li>
+<li>
+<p><strong>点击标签后会发生什么？</strong></p>
+<ul>
+<li>选项一：筛选时间线，仅显示带有该标签的笔记。</li>
+<li>选项二：标签详情页，跳转到专门的页面。</li>
+<li>选项三：快速筛选栏，将标签添加到顶部的筛选栏，可以组合多个标签。
+我们选择第二项，输入“2”（点击标签后跳转到专门的页面）。</li>
+</ul>
+</li>
+<li>
+<p><strong>是否需要搜索功能？</strong></p>
+<ul>
+<li>选项一：全文搜索。</li>
+<li>选项二：仅标签搜索。</li>
+<li>选项三：搜索加标签建议。
+我们选择第三项，输入“3”。</li>
+</ul>
+</li>
+<li>
+<p><strong>笔记编辑和删除应该如何操作？</strong></p>
+<ul>
+<li>选项一：向左滑动删除，向右滑动编辑。</li>
+<li>选项二：长按来显示编辑、删除或复制的选项。</li>
+<li>选项三：点击查看详情，在详情中包含删除按钮。
+我们选择第三项，输入“3”。</li>
+</ul>
+</li>
+<li>
+<p><strong>是否需要数据的备份？</strong></p>
+<ul>
+<li>选项一：不需要备份（为了快速开发）。
+我们选择第一项，输入“1”。</li>
+</ul>
+</li>
+</ol>
+<p>AI 生成了一个最终方案，并分析了设计。最后询问数据模型是否正确，我们直接输入“正确”并发送。</p>
+<p>AI 紧接着输出了第二部分：项目的结构和导航，包含详细的交互设计。我们让它继续执行。</p>
+<p>AI 又输出了 UI 设计，包括时间线和笔记卡片。我们让它继续执行。</p>
+<p>AI 生成了项目结构，并询问是否合理、是否准备执行。我们输入提示词：“这个结构看起来很好，请按照 <strong>Superpowers</strong> 的工作流继续执行，先让它创建隔离的工作区，然后再使用这个 <strong>skill</strong> 创建详细的 TDD 实现计划。”</p>
+<p>AI 提示它将先保存设计文档，然后继续执行工作流。它需要执行 <code>git</code> 命令，我们让它继续执行。</p>
+<p>AI 开始使用“创建工作区”的 <strong>skill</strong>。我们允许它执行。它询问将在哪里创建独立开发的<strong>工作区</strong>。我们直接按照它给出的推荐的第一项，输入“1”并运行。</p>
+<p>这样，它就执行到了创建工作区，包含创建新分支、隔离开发环境、项目初始化，以及验证测试基线。现在开始运行到了“写计划”的步骤，我们直接让它执行。</p>
+<p>AI 提示调用了 <code>writing plans</code> 这个 <strong>skill</strong>，它会创建一个综合性的 TDD 执行计划。</p>
+<p>AI 提示这个执行计划已经存入到了文件中。在这里，它给出了两种选择方式：第一种是使用 <strong>sub-agent</strong> 驱动的。我们选择第一种，输入“1”并发送。</p>
+<p>AI 提示它需要调用这个 <strong>skill</strong>，我们允许它执行。它将使用 <strong>sub-agent driver</strong> 来执行我们这个计划。</p>
+<p>现在生成了这些任务，一共生成了13个任务。这样就进入了 <strong>sub-agent</strong> 开发的步骤。在这个步骤中，每个任务都会有一个 <strong>sub-agent</strong>，并且会进行刚才提到的两阶段检查，包括规格检查和代码质量检查，通过 TDD 循环直到通过为止。</p>
+<p>在等待了大约1多分钟之后，它执行到了这一步。它需要调用 <strong>skills</strong>，我们允许它执行。</p>
+<p>AI 提示在执行第一步验证测试。测试成功。</p>
+<p>下面它需要执行第二步。</p>
+<p>AI 开始执行第三步。这里给出了三个选项。第一个选项是“本地合并回主分支”。我们就选“1”，让它合并回主分支。</p>
+<p>我们允许它执行命令。AI 提示执行完成，合并到了主分支。这时就提示我们可以运行这个项目了。</p>
+<h3>最终成果验证</h3>
+<p>下面我们来测试一下。在 <strong>Xcode</strong> 中打开这个项目，然后我们运行。AI 提示构建成功。</p>
+<p>打开应用后，我们就看到了它为我们生成的时间线笔记界面。我们可以先添加一个测试笔记。点击发布，这里我们就看到了我们发布的笔记。</p>
+<p>我们再测试一下图片功能。点击图片库，点击添加一个图像，查看一下。这里我们随便添加一个，然后我们再添加一个图像，点击发布。这里我们就看到了我们发布的第二篇笔记。我们再添加一个，再添加几张图像，然后点击发布。这样的话，图像就按照缩略图的方式进行了显示。</p>
+<p>然后我们就可以向下滑动来查看我们所发布的这些笔记。</p>
+<p>我们再选一篇笔记，点击进入详情。这样的话，就进入到了这个笔记的详情页。</p>
+<p>下面我们点一下这个标签，看一下。这里就将带有这个标签的所有笔记显示在了这里。</p>
+<p>然后我们点击第二篇笔记，然后测试一下删除。我们点击这个删除，然后确认。</p>
+<p>这里删除成功。</p>
+<p>这样的话，我们就在 <strong>Claude Code</strong> 中使用 <strong>Superpowers</strong> 为我们完成了这个时间线风格的笔记应用的开发，而且一次就通过了测试，没有出现任何报错。</p>
+<p>本期视频就做到这里，欢迎大家点赞、关注和转发，谢谢大家观看。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Claude Code" class="entity-link company-link">Claude Code</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Superpowers" class="entity-link product-link">Superpowers</a>, 
+                
+                  <a href="/search/?q=CodeX" class="entity-link product-link">CodeX</a>, 
+                
+                  <a href="/search/?q=Open Code" class="entity-link product-link">Open Code</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">ai-coding-assistants</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/test-driven-development/">test-driven-development</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">software-development-workflows</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/code-generation/">code-generation</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/prompt-engineering/">prompt-engineering</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

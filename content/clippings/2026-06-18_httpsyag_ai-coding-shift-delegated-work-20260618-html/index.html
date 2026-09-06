@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 编程的下一个变化：从盯着改到整个交出去</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="AI 编程的下一个变化：从盯着改到整个交出去" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">AI 编程的下一个变化：从盯着改到整个交出去</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-06-18
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://yage.ai/share/ai-coding-shift-delegated-work-20260618.html" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-06-18
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">文章探讨了AI编程范式的转变，即从用户全程盯着修改代码（Agent作为工具）升级为将整个复杂任务交给Agent去自主探索、试错和完成（Agent作为执行者）。这种转变不仅提高了任务的复杂度上限，也重新定义了开发者的核心价值，使其从“会写代码的人”转变为“知道该做什么、能判断结果的人”。巨头对完整任务生命周期数据的需求，驱动了围绕长时间运行Agent基础设施的激烈竞争和并购。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>你大概这样用 AI 写代码：打开 Cursor 或 Claude
+Code，描述你要什么，agent
+生成代码，你盯着看，哪里不对让它改，几分钟到半小时搞定一个任务。</p>
+<p>但正在出现另一种用法。你把一整个任务交给
+agent，比如”把这个模块从旧框架迁到新框架”，或者”查清这个 bug
+为什么会间歇性出现然后修掉”，然后关掉电脑，去开会，去睡觉。几小时或者一两天之后，回来看结果。</p>
+<p>这种用法现在还早期。Goldman Sachs 从 2025 年 7 月开始试点
+Devin，到现在仍在持续扩展（CNBC）。独立
+benchmark 上，这类 agent
+的复杂任务成功率还远低于交互式模式。方向已经清楚了：OpenAI、Google、Anthropic
+三家前沿 lab 都在为这种用法专门建云端运行环境，2026 年 6
+月一周里落了三笔并购：SpaceX 花 600 亿美元收 Cursor（Reuters），OpenAI
+收 Ona，Salesforce 花 36 亿美元收 Fin，全指向同一个方向。</p>
+<p>这篇文章讲为什么。</p>
+<h2>这不是盯着改的升级版</h2>
+<p>盯着改和整个交出去，看起来像同一种工作的快慢版本。其实是两种不同性质的工作。</p>
+<p>盯着改的时候，agent
+是你的工具。你全程在场，它帮你加速。你能做的任务受限于你的注意力和在场时间：改一个函数，修一个小
+bug，加一个功能。</p>
+<p>整个交出去的时候，agent
+是你的执行者。你给一个目标，它自己去探索、试错、完成。它能做的任务，是盯着改根本做不了的。</p>
+<p>比如同时重构十个代码仓库的依赖，花两天追踪一个跨系统的间歇性
+bug，把一整个模块从旧架构迁到新架构。这些任务，盯着改做不到。它们需要
+agent
+自己长时间探索、不断试错、来回回溯，人在旁边盯着既看不懂它在中途干什么，也帮不上忙。</p>
+<p>所以长时间运行这件事重要的原因，在于它打开了一类盯着改根本进不去的任务。速度提升只是附带的效果。能做什么这件事变了，比做得快不快重要得多。</p>
+<h2>你从执行者变成了管理者</h2>
+<p>盯着改的时候，你同时只能管一个
+agent。你的注意力被绑在它的执行过程上。就算它全做对了，你也得盯着，因为你需要在它出错的时候立刻纠正。</p>
+<p>整个交出去之后，这个限制消失了。你可以同时交出去五个任务，每个 agent
+在不同分支上自己跑。你去开会，去做设计，去带孩子，回来挨个看结果。</p>
+<p>你从亲手干活的人，变成了管一堆 agent
+的人。这两种角色的生产力上限完全不同。一个人盯着一个 agent
+改代码，和一个人同时管五个 agent 各自跑完整任务，中间差好几倍。</p>
+<p>这个变化对外面看的人可能不明显，对正在用这些工具的人是切身的。你现在花在”盯着
+agent 改代码”上的时间，大部分会变成”给 agent
+分活、看结果、做判断”的时间。省下来的注意力，可以同时管更多任务，也可以去做
+agent 做不了的事。</p>
+<h2>那你还能干什么</h2>
+<p>当 agent 能整个接住任务，写代码这件事本身就被它吃掉了。</p>
+<p>你的价值剩下两层：决定该做什么，以及判断做得好不好。</p>
+<p>“开发者”这个角色在重新定义。从”会写代码的人”，变成”知道该做什么、能判断结果的人”。</p>
+<p>这个变化比前面两个都深。前两个说的是工作方式和效率，这个说的是你这个人靠什么吃饭。写代码变成了
+agent
+的事，你的核心资产变成了品味、判断力和方向感：知道什么是值得做的，什么做好了什么没做好。</p>
+<p>对已经在写代码的人来说，这意味着经验里的高阶部分在升值，低阶部分在贬值。系统设计、问题诊断、取舍判断在升；语法、模板、重复实现在降。对刚入行的人来说门槛变了：过去靠写代码建立价值，以后写代码这件事不太需要人做了，得靠别的途径积累判断力。</p>
+<h2>为什么巨头愿意花 600 亿</h2>
+<p>盯着改的 agent
+积累的是什么数据？你改了什么、接受了还是拒绝了它的建议。交互片段。</p>
+<p>整个交出去的 agent
+积累的是什么？完整的任务生命周期：一个复杂任务怎么被拆成几步，中间在哪里卡住，怎么恢复，怎么验证做对了。任务级的完整记录。</p>
+<p>后者的训练价值远高于前者。想训练一个能独立完成复杂任务的下一代
+agent，你需要大量”完整任务怎么做”的数据，光靠”这段代码怎么补”的数据训练不出来。</p>
+<p>这就解释了三笔并购的底层逻辑。SpaceX 花 600 亿买 Cursor，买的不是 IDE
+的用户量，是开发者做设计决策的过程数据。OpenAI 买 Ona（公告），买的是让
+agent 长时间安全运行的基础设施。Salesforce 买 Fin，买的是客服场景里
+agent 独立完成任务的完整记录。</p>
+<p>三家买的标的完全不同，底层逻辑一样：谁拥有长时间运行 agent
+的完整数据和运行环境，谁就在下一代竞争中占据位置。</p>
+<h2>这意味着什么</h2>
+<p>三笔并购是表面信号。底下同时发生的是三层变化。</p>
+<p>工作方式从盯着改变成整个交出去。人的角色从执行者变成管理者。核心能力从写代码变成判断该做什么、做得好不好。</p>
+<p>对正在用 AI
+写代码的人来说，该关注的不是”哪个工具更好用”，是”我能不能把整个任务交出去”。以及更重要的：交出去之后，我的价值在哪。</p>
+<p>这个变化现在还早期。agent 能稳定完成复杂任务的比例还不高。但三家前沿
+lab
+用自己的工程投资投了票，三笔并购用真金白银投了票。方向清楚之后，剩下的只是时间和迭代。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Goldman Sachs" class="entity-link company-link">Goldman Sachs</a>, 
+                
+                  <a href="/search/?q=SpaceX" class="entity-link company-link">SpaceX</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>, 
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, 
+                
+                  <a href="/search/?q=Salesforce" class="entity-link company-link">Salesforce</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Cursor" class="entity-link product-link">Cursor</a>, 
+                
+                  <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>, 
+                
+                  <a href="/search/?q=Devin" class="entity-link product-link">Devin</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">task-execution</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">developer-role</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">long-running-agent</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="container" data-pagefind-ignore>
+
+<div class="home-layout">
+
+<h1>标签：context-window</h1>
+
+<ul><li>
+      
+      <a href="/content/clippings/2026-07-22_httpsyag_codex-gpt56-context-budget-20260721-html/">GPT-5.6 的上下文到底是 1.05M、500K，还是 400K？</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-07-22T00:00:00.000Z">
+          7/22/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章详细解析了GPT-5.6模型在不同使用场景（API vs Codex）下的上下文窗口限制的复杂性。它区分了官方API规格上限与实际产品额度，解释了输入预算和最大输出限制如何通过不同的版本配置（如v0.144.5到v0.144.6）导致总上下文容量从约500K降至400K的机制，并强调了客户端本地配置与云端实际资源分配之间的差异。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/EUsPvBeIx70/">解决 LLM 语义盲区：如何为 50 万个传感器的 AI 工厂构建可扩展的 AI 智能体</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-07-12T00:00:00.000Z">
+          7/12/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文探讨了 Phaidra 在为 1GW 级 AI 工厂（数据中心）构建 AI 智能体时面临的“语义盲区”挑战。在面对 50 万个命名规则混乱的设备传感器时，传统 RAG、向量检索和分片 LLM 方案均告失效。Phaidra 团队通过将层次化拓扑结构（Software 1.0）与 LLM 查询规划能力（Software 3.0）结合，实现了 100% 的查询准确率，并使 Token 消耗降低了 300 倍，探索出 AI 原生软件从 3.0 向 1.0 反向演进的成熟路径。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/_B4Pv9ttFgY/">构建智能体交互界面：来自 Chrome DevTools 的四大工程范式</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-06-05T00:00:00.000Z">
+          6/5/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 探讨如何为AI智能体设计交互界面（以Chrome DevTools MCP为例）。文章解析了解决大模型上下文溢出的语义摘要法、基于“单次成功耗损比”的效能评估基准，以及在工具颗粒度、容错自愈和多层级信任边界间的核心工程权衡。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/YBYUvGOuotE/">API即工具：Agent交互的未来与Cloudflare的实践</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-04-25T00:00:00.000Z">
+          4/25/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本次演讲探讨了如何将API转化为Agent的工具，解决了MCP（Meta Context Problem）导致的上下文窗口爆炸问题。演讲者Matt Carey分享了Cloudflare在API工具化、安全运行不受信任代码以及Agent客户端未来发展方向上的实践与思考。核心观点包括：API应作为Agent的可发现工具，而非一次性加载；代码生成是比工具调用更优的交互方式；通过Worker等技术构建安全的可编程沙箱，以及MCP将成为API开发和Agent交互的中间件。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/vD4vYtihJvc/">GPT-5.5重磅发布：AI新纪元开启，能力与安全全面升级</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/best-partners-tv/" class="speaker-inline">🎙️ Best Partners TV</a>
+      
+      
+      
+        <time datetime="2026-04-24T00:00:00.000Z">
+          4/24/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 OpenAI发布新一代旗舰模型GPT-5.5，标志着AI从回答问题转向独立完成工作。该模型在效率、上下文窗口（100万Token）、自我优化基础设施方面实现重大突破，并在职业工作、编程、科研等领域基准测试中大幅领先。GPT-5.5在安全性、幻觉控制和对齐性方面也得到加强，并具备操作系统级别的自主操控能力。尽管API价格翻倍，但因Token消耗减少，综合成本效益提升。此次发布巩固了OpenAI在AI行业的领先地位，并对竞争对手构成压力。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-04-15_httpsbao_claude-code-session-management/">使用 Claude Code：会话管理与 100 万 上下文 | 宝玉的分享</a>
+      
+      
+      
+      
+        <a href="/speakers/baoyu-io/" class="speaker-inline">🎙️ baoyu.io</a>
+      
+      
+      
+        <time datetime="2026-04-15T00:00:00.000Z">
+          4/15/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文由 Anthropic 员工 Thariq 分享，详细介绍了 Claude Code 的会话管理技巧，特别关注了 100 万 Token 上下文窗口的有效利用。文章深入剖析了上下文衰减、压缩、回溯和子智能体等核心概念，并提供了实用的操作建议，旨在帮助用户优化使用体验，提升 AI 编程助手的工作效率。核心在于强调每次交互时的决策重要性。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/Jty4s9-Jb78/">大语言模型记忆机制：权重与激活的深度解析</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2025-12-29T00:00:00.000Z">
+          12/29/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入探讨了大型语言模型（LLM）的知识存储与检索机制，对比了三种核心方法：全上下文、检索增强生成（RAG）和权重注入（训练到模型参数中）。讲者详细分析了全上下文的成本与推理瓶颈，揭示了RAG在安全性、适应性和复杂推理方面的局限性。核心论点在于，通过合成数据生成和参数高效微调技术，将知识直接训练到模型权重中，能够有效克服现有方法的挑战，实现更智能、更专业化且推理成本更低的LLM应用，并探讨了未来模型个性化与持续更新的潜力。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/UJuDZNykOIc/">Mistral 3 14B模型深度评测：256K上下文、多模态与Function Calling能力解析</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-chao-yuan-yu/" class="speaker-inline">🎙️ AI超元域</a>
+      
+      
+      
+        <time datetime="2025-12-03T00:00:00.000Z">
+          12/3/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文详细评测了Mistral AI的Mistral 3 14B模型。该模型具备256K上下文窗口、多模态图像理解、精准Function Calling及文档问答能力，并支持FP8精度下的高速本地部署。评测涵盖图像识别、OCR、文本生成、文档问答及智能体集成，展现其在本地化AI应用中的潜力。</small>
+      
+
+      
+      
+    </li></ul>
+
+</div>
+
+</div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

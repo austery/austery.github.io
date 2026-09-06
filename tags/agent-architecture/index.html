@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="container" data-pagefind-ignore>
+
+<div class="home-layout">
+
+<h1>标签：agent-architecture</h1>
+
+<ul><li>
+      
+      <a href="/content/notes/0uC6u0lJJl4/">企业级 AI 知识库如何防止秘密泄露：大银行背后的架构实践与权限隔离</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-09-03T00:00:00.000Z">
+          9/3/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Hasura 联合创始人及 PromptQL 团队针对企业级 AI 大脑（Company Brain）的数据泄露与权限越界难题，提出了去中心化生长的 Wiki 知识架构。通过引入人工审核确认机制与动态上下文 Scope 范围隔离，并在沙箱执行层实现基于用户凭证的动态注入与数据虚拟化代理，彻底解决了多租户与协同场景下的权限提升风险。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-08-21_httpsyag_mobile-agent-capability-sandbox-20260821-html/">把 Agent 塞进手机前，先想清楚它能碰什么</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-08-21T00:00:00.000Z">
+          8/21/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了将 Agent 塞入手机前需要明确其能接触的边界和执行环境。通过对比云端、系统级接口和应用进程内三种 Agent 路线，文章指出移动平台严苛的系统约束（如沙箱、权限限制）迫使开发者必须在‘大脑越强离现场越远’和‘context最贴身但执行环境受限’之间做出权衡，并以 PhoneBuddySDK 的开源项目为例，展示了如何通过参数化边界设计来构建可复用的生成内核。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-08-18_httpsyag_multi-agent-hats-layers-20260818-html/">卖你 AI 产品经理的公司，自己的 agent
+不设岗位：multi-agent 的角色、隔离与代码</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-08-18T00:00:00.000Z">
+          8/18/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了当前主流 AI 产品（如 Cursor, Grok Bot, Claude Code）在 Multi-Agent 架构中的三种不同设计哲学：功能分工路线、具名同事路线和脚本编排路线。核心观点指出，底层机制（如上下文窗口隔离）是通用的，而不同产品在编排层（控制权分配）和接口层（岗位包装）上采取了不同的策略，这决定了它们对用户和开发者的适配性与适用场景。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/5lFD-34dhqE/">Exo：让 AI Agent Harness 具备自我修改与日志可见性，走向完全递归自我提升</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/latent-space/" class="speaker-inline">🎙️ Latent Space</a>
+      
+      
+      
+        <time datetime="2026-08-15T00:00:00.000Z">
+          8/15/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本期访谈中，来自加州大学伯克利分校的博士生 Alex Krentsel 详细介绍了 Exo 这一新型 AI Agent Harness 架构。Exo 通过将执行器、Sandbox 与 Harness 隔离，并赋予 Agent 对自身代码和日志的完全读写权限，实现了真正的运行时递归自我提升（RSI）。同时，探讨了该系统与 Lisp、Smalltalk 等经典编程语言理念的相通之处。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/shRR1e2HXMk/">Codex Harness 架构深析：OpenAI 开源智能体底座的实现与优化</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-08-10T00:00:00.000Z">
+          8/10/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入解析了 OpenAI 开源智能体运行底座 Codex Harness 的核心设计，涵盖延迟加载工具、基于 Node REPL 的浏览器操控机制、多平台沙箱环境、自动安全审查子智能体以及用于解决高吞吐量推理网络瓶颈的 WebSocket 与上下文压缩技术。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-08-10_httpsyag_cloudflare-os-authorization-20260808-html/">Agent 读过的数据，分享后还能给谁看？Cloudflare OS
+的授权实践与源码真相</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-08-10T00:00:00.000Z">
+          8/10/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了 Cloudflare OS 如何通过引入操作系统的角色隐喻，将 Agent 的数据授权实践从一次性的调用检查延伸到读取登记与共享准入两个环节。核心思想是建立一个覆盖数据读取后整个生命周期的观察记录与双向不变量机制，从而在工作区层面实现对数据源的精细化控制和安全共享策略的落地。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/X1kp-ABIIxQ/">重构智能体：通过三层解耦与持久执行层突破半衰期瓶颈</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-07-21T00:00:00.000Z">
+          7/21/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/architecture/" class="category-badge-inline">
+              🏷️ architecture
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深度解析了智能体系统架构快速迭代下的应对之道，提出了将系统解耦为执行层、上下文层和计算层的三层模型。文章重点论述了执行层在状态持久化、断点续传、柔性编排原语及全链路可观测性中的关键作用，并展示了如何通过自适应审查闭环与基于业务结果的评分机制实现智能体的自我迭代。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-06-28_httpsyag_ai-cost-subsidy-retreat-agent-design-20260628-html/">AI 补贴退潮后，agent 开始按每美元智能计价</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-06-28T00:00:00.000Z">
+          6/28/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 随着大模型早期补贴退潮，企业对 AI 的关注点正从单纯的 token 消耗转向以每美元交付可靠任务结果的工程实践。文章探讨了在成本结构变化下，Agent 架构需要引入专门的成本控制面（如提示词缓存、上下文精简和动态路由）来平衡性能与财务弹性，强调建立内部智能账本的重要性。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-06-18_httpsyag_vercel-eve-agent-directory-20260618-html/">Vercel 开源 eve：「一个文件夹就是一个
+agent」这句话为什么不是废话</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-06-18T00:00:00.000Z">
+          6/18/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了 Vercel 开源的 &#39;eve&#39; 项目，它提出了将 Agent 视为独立软件（一个文件夹）而非单一框架或模型延伸的观点。通过对比 LangChain 的零件拼装路线和 Claude Managed Agents 的云端配置项路线，eve 强调了 agent 生产生命周期中对部署、版本管理和持久化执行等基础设施的需求，并提出了一种将运行能力与个人认知上下文（context infrastructure）相结合的三层分工模型。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-05-07_httpsyag_agent-filesystem-survey-20260507-html/">Agent 文件系统：从喂给模型记忆到让模型自己翻文件</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-05-07T00:00:00.000Z">
+          5/7/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/tech-trends/" class="category-badge-inline">
+              🏷️ tech-trends
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入分析 AI Agent 记忆机制从向量数据库向文件系统的演进，指出成本、LLM 能力及渐进式披露是驱动因素。文章介绍了 Anthropic、Vercel、Turso 等公司的实践，讨论了语义弹性、安全与 GC 等挑战，并预测未来架构将以文件系统为核心的状态层。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-04-05_httpsbao_components-of-a-coding-agent/">编程智能体的核心组件【译】 | 宝玉的分享</a>
+      
+      
+      
+      
+        <a href="/speakers/baoyu-io/" class="speaker-inline">🎙️ baoyu.io</a>
+      
+      
+      
+        <time datetime="2026-04-05T00:00:00.000Z">
+          4/5/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入剖析了编程智能体（Coding Agent）及其配套的运行框架（Coding Harness）的核心组件。文章区分了大语言模型、推理模型与智能体，并阐述了 Harness 如何通过代码库上下文、提示词缓存、工具调用、上下文瘦身、会话记忆及任务委派等功能，极大地增强 LLM 在软件开发中的实用性。作者以其开源项目 Mini Coding Agent 和 Claude Code、Codex CLI 为例进行说明。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/rSKh6bVuVZI/">AI Agent堆栈的演变：LangChain CEO Harrison Chase谈代理、框架与未来</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/the-mad-podcast-with-matt-turck/" class="speaker-inline">🎙️ The MAD Podcast with Matt Turck</a>
+      
+      
+      
+        <time datetime="2026-03-12T00:00:00.000Z">
+          3/12/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 LangChain创始人兼CEO Harrison Chase深入探讨了AI代理技术的演变，从早期模型局限到当前代理架构的突破。他详细阐述了代理核心组件，如系统提示、规划工具、子代理、文件系统和技能，并强调了Harness（代理线束）在模型应用中的关键作用。对话还涵盖了不同类型的代理（对话型与长周期型）、上下文压缩、记忆机制、沙盒安全以及LangChain的产品演进和未来发展方向，为AI开发者提供了构建高效、可靠代理的洞见。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/8mGAi05iLn4/">Agent 演进、AI 组织与智能边界：与 UBC 教授李霄霄的深度对话</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/indigo-shu-zi-jing-xiang/" class="speaker-inline">🎙️ INDIGO 数字镜像</a>
+      
+      
+      
+        <time datetime="2026-02-23T00:00:00.000Z">
+          2/23/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本期节目邀请到 UBC **李霄霄教授**，深入探讨 AI **Agent** 的演进、单智能体与多智能体协作的效率问题，以及人类认知局限对 AI 设计的启发。对话涵盖了 **Agent** 的学术定义、市场应用、规划能力对比（如 **Claude** 和 **Gemini**），以及 AI 安全与可解释性研究。嘉宾还分享了 AI 部署的挑战、容错性考量，并对 AI 时代下教育理念的转变、**Critical Thinking** 的重要性、以及如何拓展人类与 AI 共同的智能边界提出了独到见解。节目最后对年轻人未来的职业选择和教育方向给出了建议。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/RFKCzGlAU6Q/">Claude Code工作原理深度解析：简化架构与模型信任</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2025-12-26T00:00:00.000Z">
+          12/26/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本次演讲深入探讨了Claude Code等编码智能体的工作原理及其近期爆发式增长背后的核心创新。主讲人Jared Zoneraich强调了简化架构、对模型能力的信任、高效的工具调用（尤其是Bash）、精细的上下文管理以及多智能体协同的重要性。演讲还对比了CodeX、AMP和Cursor等其他前沿编码智能体的独特设计理念，并提出了智能体评估的新视角，最终总结了构建高效AI智能体的五大核心原则。</small>
+      
+
+      
+      
+    </li></ul>
+
+</div>
+
+</div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

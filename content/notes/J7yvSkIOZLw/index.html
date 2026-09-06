@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI算力竞赛：微软与OpenAI的百亿级数据中心扩张与未来展望</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="AI算力竞赛：微软与OpenAI的百亿级数据中心扩张与未来展望" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">AI算力竞赛：微软与OpenAI的百亿级数据中心扩张与未来展望</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Dwarkesh Patel</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2024-10-09
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/work-career/">work-career</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/dwarkesh-patel/">Dwarkesh Patel</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=J7yvSkIOZLw" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2024-10-09
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本文深入探讨了AI训练所需的庞大计算基础设施。分析了微软和OpenAI在数据中心、GPU（如H100、GB200）规模上的巨额投资，以及未来几年内计算能力的指数级增长预测。讨论了电力需求、网络连接和资金挑战，并展望了AI算力发展的关键趋势。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>训练新范式</h3>
+<p>You could imagine that the training regime becomes much more paralyzable, where most of the compute for training is used to come up with synthetic data or do some kind of search. And that can happen across a wide area. You have synthetic data, you have this search stuff, you have all these post-training techniques, you have all these ways to soak up <strong>FLOPs</strong> (Floating Point Operations Per Second: 每秒浮点运算次数，衡量计算能力的指标), or you just figure out how to train across multiple data centers.</p>
+<h3>巨头基建投资</h3>
+<p>I think at least <strong>Microsoft</strong> and <strong>OpenAI</strong> have figured it out. Their actions show this: Microsoft has signed deals north of <strong>$10 billion</strong> with fiber companies to connect their data centers together. There are some permits already filed to show people are digging between certain data centers. So, we think with fairly high accuracy, we can say that there are five regions that they're connecting together, which comprises of many data centers.</p>
+<h3>算力与电力</h3>
+<p>What will be the total power? Depends on the time, but easily north of a <strong>gigawatt</strong> (GW: 10亿瓦特，衡量大功率的单位), which is like <strong>close to a million GPUs</strong>. Well, each GPU is getting more power, higher power consumption too. The rule of thumb is like GPU <strong>H100</strong> (Nvidia H100: 英伟达公司推出的高性能GPU型号) is like 700 Watts, but then total power per GPU all-in is like 1200-1400 Watts. But next-generation Nvidia GPUs are, it's 1,200 Watts for the GPU, but then it actually ends up being like <strong>2,000 Watts all-in</strong>.</p>
+<h3>GPU功耗趋势</h3>
+<p>So there's a little bit of scaling of power per GPU. But like, you already have <strong>100K clusters</strong>, right? <strong>OpenAI</strong> in Arizona, <strong>XAI</strong> (XAI: 指代AI研究机构或项目，此处指代与AI计算相关的实体) in Memphis, and many others already building 100K clusters of H100s. You have multiple, at least five, I believe, <strong>GB200</strong> (Nvidia GB200: 英伟达公司推出的下一代AI计算芯片，集成了CPU和GPU) 100K clusters being built by <strong>Microsoft</strong> and partners for them. And then potentially even more <strong>500K GB200s</strong>.</p>
+<h3>数据中心建设</h3>
+<p>That's a gigawatt, and that's like online next year. And the year after that, if you aggregate all the data center sites and how much power, and you only look at net adds since 2022 instead of the total capacity at each data center, then you're still north of <strong>multi-gigawatt</strong>. So they're spending $10+ billion dollars on these fiber deals with a few fiber companies like <strong>Lumen Technologies</strong> (Lumen Technologies: 美国一家领先的通信技术公司) and <strong>Zayo</strong> (Zayo: 美国一家领先的光纤网络和通信服务提供商), and a couple of other companies.</p>
+<p>And then they've got all these data centers that they're clearly building 100K clusters on, like old crypto mining sites with <strong>Cor-weave</strong> (Cor-weave: 美国一家数据中心基础设施提供商) in Texas, or like this <strong>Oracle</strong> (Oracle: 美国一家跨国科技公司，提供数据库软件、云计算服务等) infrastructure in Texas, and then like in Wisconsin and Arizona, and a couple of other places.</p>
+<p>There's a lot of data centers being built up by providers like <strong>QTS</strong> (QTS: 美国一家大型数据中心服务提供商) and <strong>Cooper</strong> (Cooper: 指代数据中心相关服务商，具体公司需结合上下文确认), and you go down the list, there's so many different providers, and self-build data centers I'm building myself.</p>
+<h3>2025年算力</h3>
+<p>So, let's give the number: Okay, 2025, <strong>Elon Musk</strong>'s cluster is going to be the big one. It doesn't matter who it is. Then there's a definition game, right? Like, Elon Musk claims he has the largest cluster at 100K GPUs because they're all fully connected. Then who it is... like, I just want to know how many. I don't know if it's better to denominate in 100,000 GPUs this year for the biggest cluster. Next year, 300,000 to 500,000, depending on whether it's one site or many. 300,000 to 700,000, I think, is the upper bound of that.</p>
+<h3>集群定义挑战</h3>
+<p>But anyways, it's about when they turn it on, when they can connect them, when the fibers are connected together. Anyways, 300,000 to 700,000, let's say. But those GPUs are 2 to 3x faster versus the 100K cluster. So on an H100 equivalent basis, you're at a <strong>million chips next year</strong>, one cluster by the end of the year.</p>
+<p>Yes, no, no, no. Well, so one cluster is like, the wishy-washy definition, right? Multi-site? Can you do multi-site? What's the efficiency loss when you go multi-site? Is it possible at all? I truly believe so. What is it? Whether it's... what's the efficiency loss is a question, right? Okay, would it be like 20% loss, 50% loss?</p>
+<h3>资金挑战</h3>
+<p>Great question. This is where you need like the secrets of like, and <strong>Anthropic</strong> (Anthropic: 一家领先的人工智能安全与研究公司) has similar plans with <strong>Amazon</strong> (Amazon: 美国一家跨国电子商务和云计算公司), and you go down the list, right? People. And then the year after that, the year after that, is where this is 2026. There is a single gigawatt site. And that's just part of the multiple sites, right? For Microsoft, the Microsoft 5 GWatt thing happens in 2026. One gigawatt, one site in 2026. But then you have a number of other... you have five different locations, each with multiple sites, some with single sites. You're easily north of 2-3 GWatt.</p>
+<p>And then the question is, can you start using the old chips with the new chips? And the scaling, I think, is like you're going to continue to see FLOPs scaling much faster than people expect, as long as the money pours in.</p>
+<p>That's the other thing: there's no way you can pay for the scale of clusters that are being planned to be built next year for <strong>OpenAI</strong> unless they raise like <strong>50 to 100 billion</strong>. Which I think they will raise that, like end of this year, early next year. 50 to 100 billion? Are you kidding me? No. Oh my God. This is like, <strong>Sam Altman</strong> has a superpower. No, like it's like recruiting and like raising money. That's like what he's got.</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Dylan Patel" class="entity-link person-link">Dylan Patel</a>, 
+                
+                  <a href="/search/?q=Sam Altman" class="entity-link person-link">Sam Altman</a>, 
+                
+                  <a href="/search/?q=Elon Musk" class="entity-link person-link">Elon Musk</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Microsoft" class="entity-link company-link">Microsoft</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, 
+                
+                  <a href="/search/?q=Amazon" class="entity-link company-link">Amazon</a>, 
+                
+                  <a href="/search/?q=Oracle" class="entity-link company-link">Oracle</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=H100" class="entity-link product-link">H100</a>, 
+                
+                  <a href="/search/?q=GB200" class="entity-link product-link">GB200</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/data-center/">data-center</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/infrastructure/">infrastructure</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/llm/">llm</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/technology/">technology</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

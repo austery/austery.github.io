@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="container" data-pagefind-ignore>
+
+<div class="home-layout">
+
+<h1>标签：kv-cache</h1>
+
+<ul><li>
+      
+      <a href="/content/clippings/2026-08-27_httpsyag_grok-bot-context-engineering-20260827-html/">Grok Bot 泄露：为什么 agent 的 system prompt
+必须冻结</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-08-27T00:00:00.000Z">
+          8/27/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章深入探讨了 Grok Bot 源码泄露后，在 Agent 系统设计中如何管理 system prompt 的稳定性与动态性。核心思想是，将 system prompt 视为需要显式管理失效边界的工程对象，并提出了‘稳定’（冻结到 compaction 边界）、‘追加’（append-only 序列化）、‘外置’（超过 12KB 的内容写到文件系统）等六条纪律，以平衡模型性能、运行成本和上下文容量。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-08-27_httpsyag_grok-bot-dynamic-tools-20260827-html/">Grok Bot 泄露：Cursor
+为什么只给模型一部分工具的完整定义</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-08-27T00:00:00.000Z">
+          8/27/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章深入分析了 Grok Bot 源码泄露后，Cursor 如何设计其动态工具加载机制，并探讨了将工具定义放在 context 层还是 tools 数组层对模型性能和成本的影响。核心观点是，将动态性推到 context 层（通过一行 hint 形式存在）可以保持工具面稳定，同时实现按需加载，这与 Manus 的静态全量加载策略在底层约束上是相通的。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-07-31_httpsyag_kimi-k3-scaling-production-factors-20260731-html/">Kimi K3
+报告解读：当规模从一个旋钮变成一组受约束的生产要素</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-07-31T00:00:00.000Z">
+          7/31/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/architecture/" class="category-badge-inline">
+              🏷️ architecture
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Kimi K3 模型展示了如何通过精妙的工程权衡，将 Scaling Law 从单一参数膨胀转变为受显存、带宽和延迟等物理约束的一组生产要素。文章详细拆解了模型在序列架构（混合注意力机制）、网络深度（Block AttnRes）和专家并行（LatentMoE）上的具体工程优化，并提出了训练信号生成与推理扩展的解决方案，为前沿大模型的系统工程实践提供了范例。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-05-22_httpsyag_ds4-deepseek-v4-flash-mac-20260522-html/">如何在 Mac 上本地运行 DeepSeek V4 Flash：DS4
+引擎深度解读</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-05-22T00:00:00.000Z">
+          5/22/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章介绍了通过 DwarfStar 4 (ds4) 引擎在 Mac 上本地高效运行 DeepSeek V4 Flash 的方案。该引擎通过垂直架构优化、KV cache 磁盘持久化和精准的工具调用原话回放，解决了大模型在消费级硬件上的部署难题，并兼容主流 coding agent 工作流。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/xmkSf5IS-zw/">GPT-5、Claude和Gemini的训练与服务：Reiner Pope深度解析</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/dwarkesh-patel/" class="speaker-inline">🎙️ Dwarkesh Patel</a>
+      
+      
+      
+        <time datetime="2026-04-29T00:00:00.000Z">
+          4/29/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Reiner Pope深入探讨了大型语言模型（LLM）的训练和推理架构，包括批处理大小对延迟和成本的影响、稀疏专家混合模型、GPU机架内外的通信模式、流水线并行化以及内存容量与带宽的权衡。他解释了API定价如何反映底层硬件成本，并讨论了神经网络与密码学在架构上的相似与不同。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/IqWXCtDj_FA/">TurboQuant乌龙：谷歌算法引发内存股暴跌，市场FOMO情绪下的迷局</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/best-partners-tv/" class="speaker-inline">🎙️ Best Partners TV</a>
+      
+      
+      
+        <time datetime="2026-03-27T00:00:00.000Z">
+          3/27/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 谷歌研究院发布的TurboQuant算法博客引发全球内存芯片巨头股价暴跌。该算法仅优化AI大模型推理阶段的KV Cache，而非AI内存的整体需求。市场因FOMO情绪和对美光科技资本支出的担忧，将此局部软件优化误读为AI内存需求见顶，导致非理性抛售。本文解析TurboQuant的真实技术价值、AI内存需求的底层逻辑，以及市场情绪如何扭曲了技术解读，揭示了AI技术发展与资本市场理解之间的错位。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/fDQaadKysSA/">深度解码 KV Cache：大模型生成加速的底层逻辑与优化实务</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+      
+      
+      
+        <time datetime="2026-03-23T00:00:00.000Z">
+          3/23/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入探讨了大语言模型生成过程中的核心优化技术——KV Cache。从 Prefill 与 Decode 阶段的差异入手，解析了 KV Cache 如何通过存储键值对来消除重复计算。针对显存压力，文章详细对比了 MQA、GQA 及 DeepSeek 首创的 MLA 等架构级优化方案，并介绍了 Streaming LLM 与剪枝等前沿技术。最后，结合 OpenAI 的计费模型，为 AI Agent 的 Prompt 设计提供了极具价值的成本优化建议。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/64D6tcsPH1U/">NVIDIA 的推理炼金术：从创业魂到数据中心级的 Dynamo 推理引擎</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/latent-space/" class="speaker-inline">🎙️ Latent Space</a>
+      
+      
+      
+        <time datetime="2026-03-08T00:00:00.000Z">
+          3/8/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本次访谈深入探讨了 NVIDIA 内部如何保持“4万人的创业公司”活力。重点解析了数据中心级推理引擎 Dynamo 的架构设计，详细讨论了推理优化的核心三轴（成本、质量、延迟）、预填充与解码解耦技术、长上下文的硬件协同设计，以及 AI Agent 在生产环境中的安全边界与 CLI 交互的复兴。</small>
+      
+
+      
+      
+    </li></ul>
+
+</div>
+
+</div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

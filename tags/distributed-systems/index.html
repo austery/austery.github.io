@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="container" data-pagefind-ignore>
+
+<div class="home-layout">
+
+<h1>标签：distributed-systems</h1>
+
+<ul><li>
+      
+      <a href="/content/notes/e_ZG0UcWUjY/">Google Bigtable 二十年演进之路：如何在规模万倍增长中保持架构稳定性</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/best-partners-tv/" class="speaker-inline">🎙️ Best Partners TV</a>
+      
+      
+      
+        <time datetime="2026-08-03T00:00:00.000Z">
+          8/3/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深度解析 Google 在 SIGMOD 2026 发表的 Bigtable 二十年演进论文，探讨其在数据量与 QPS 增长数万倍的背景下，如何通过异步处理、存算分离、LSM树优化及高吞吐复制等机制，在不改动核心写路径的前提下实现系统的高扩展性、高资源效率与极致的可运维性。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/s4r6nk5WsZw/">深入解析 MCP Tasks 异步协议：从 V1 状态化到 V2 无状态化的架构演进</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-08-02T00:00:00.000Z">
+          8/2/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文由 Temporal 技术专家 Cornelia Davis 主讲，深入探讨了模型上下文协议（MCP）异步任务（Tasks）的实现机制。分析了 MCP Tasks V1 协议在处理长期运行任务、高并发和连接中断时面临的状态化复杂性与扩展难题，并详细解析了 V2 协议向无状态化转型、取消任务列表以及引入单向更新信号等关键设计演进，为构建高可用、可扩展的 AI Agent 异步工作流提供了架构指导。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/APh1Vx0oLmQ/">确定性基建与非确定性智能：重构AI Agent的生产力屏障</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-06-29T00:00:00.000Z">
+          6/29/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/architecture/" class="category-badge-inline">
+              🏷️ architecture
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Meta技术主管Nishant Gupta指出，AI Agent落地生产环境的瓶颈已从模型智能转向系统可靠性。本文系统阐述了非确定性AI模型与确定性云基础设施之间的“伟大失配”，并提出了通过提议-执行分离、Agent控制面、多维观测性及共享内存一致性等分布式系统工程方法，构建高可靠Agent系统的核心架构原则。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-06-25_httpsyag_deutsche-bahn-gsm-r-outage-20260625-html/">一次计划内更换部件，停了全德国的火车</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-06-25T00:00:00.000Z">
+          6/25/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/architecture/" class="category-badge-inline">
+              🏷️ architecture
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文分析了德国铁路因一次计划内更换技术部件而导致全线停运的事件。核心教训在于分布式系统中，冗余设计如果只是纸面上的主备共享同一层代码和配置，无法抵御共因失效带来的系统性风险。文章强调了关键基础设施在通信链路（如GSM-R）依赖下的单点脆弱性，并提出了从‘全开全关’的响应模式转向具备优雅降级机制的韧性设计原则。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/SKDJo2CopRs/">Cloudflare AI Agents：持久化对象与动态代码沙盒的未来</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-06-08T00:00:00.000Z">
+          6/8/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Cloudflare 探讨了有状态无服务器架构（Stateful Serverless）如何成为构建 AI Agents 的理想计算单元。他们介绍了能直接安全运行模型生成代码的沙盒环境，以及为模型上下文协议（MCP）提供跨平台同步与持久化连接的新型范式。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/TUnPNY4E2fw/">突破500万上下文限制：长文本大模型训练的内存优化架构全解析</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-06-08T00:00:00.000Z">
+          6/8/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 深入剖析长上下文大模型训练的内存扩展瓶颈，从基础的分片并行、上下文并行到前沿的激活卸载，并详细论述支持500万Token极限训练的U-Pipe内存复用架构技术体系。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/vi-2nasppAg/">事件溯源下的 AI 智能体框架：构建可调试与高度可扩展的分布式系统</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-05-14T00:00:00.000Z">
+          5/14/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Iterate 联合创始人 Jonas Templestein 探讨了基于事件溯源（Event Sourcing）构建 AI 智能体（Agent Harness）的新范式。通过将所有交互抽象为层级化的流式事件，实现了极高的调试效率、分布式扩展能力及智能体自演化。演示展示了如何利用流处理器（Stream Processor）从事件中推导状态，并实现“代码即事件”的动态部署。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/xGirTJSQ5pQ/">解耦DiLoCo：谷歌DeepMind突破超大规模大模型训练瓶颈</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/best-partners-tv/" class="speaker-inline">🎙️ Best Partners TV</a>
+      
+      
+      
+        <time datetime="2026-04-29T00:00:00.000Z">
+          4/29/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 这篇论文深入探讨了谷歌DeepMind和谷歌研究院联合发布的Decoupled DiLoCo框架，旨在解决超大规模大语言模型预训练中硬件故障导致的算力浪费和效率低下问题。通过颠覆传统SPMD范式的“一致性优先”原则，转而采用“可用性优先”，Decoupled DiLoCo实现了在极端故障环境下的高有效吞吐率和零停机时间，并大幅降低了通信带宽需求。文章详细拆解了其核心架构及三大关键机制，揭示了其对未来AI训练格局的深远影响。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/SVOrURyOu_U/">对话 Martin Kleppmann：重新审视数据密集型应用系统与 AI 时代的工程挑战</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/the-pragmatic-engineer/" class="speaker-inline">🎙️ The Pragmatic Engineer</a>
+      
+      
+      
+        <time datetime="2026-04-25T00:00:00.000Z">
+          4/25/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/architecture/" class="category-badge-inline">
+              🏷️ architecture
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本访谈深入探讨了分布式系统权威专家 Martin Kleppmann 的职业生涯。从早期创业到在 LinkedIn 参与 Kafka 的开发，再到撰写享誉全球的《数据密集型应用系统设计》。他分享了该书第二版针对云原生环境的更新，并讨论了形式化验证在 AI 代码生成背景下的重要性，以及他在学术界推动的 local-first 软件和加密供应链验证等前沿研究。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/Lt-lVe957hc/">GenAI全明星对话：贾扬清、Opus与Martian谈AI产品的成本、架构与未来</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ke-dai-biao-li-zheng/" class="speaker-inline">🎙️ 课代表立正</a>
+      
+      
+      
+        <time datetime="2026-04-21T00:00:00.000Z">
+          4/21/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本场访谈汇集了硅谷顶尖AI专家，包括贾扬清（Lepton AI创始人）、Jay（Opus Clip CTO）和Jason（Martian创始工程师）。核心议题涵盖生成式AI与传统软件开发的本质差异、AI成本优化的供应链思维、计算历史中的中心化与去中心化博弈，以及在模糊输出环境下建立评估（Evaluation）与QA体系的挑战。嘉宾们强调，AI开发正从确定性的逻辑世界转向统计学驱动的模糊世界，领域上下文将成为初创公司的核心护城河。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/YPObBOwIrHk/">图灵奖得主 Mike Stonebraker 访谈：炮轰 Google、揭秘 Postgres 演进与 AI 时代的数据库困局</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ryan-peterman/" class="speaker-inline">🎙️ Ryan Peterman</a>
+      
+      
+      
+        <time datetime="2026-04-20T00:00:00.000Z">
+          4/20/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/architecture/" class="category-badge-inline">
+              🏷️ architecture
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 图灵奖得主、Postgres 之父 Mike Stonebraker 回顾了数据库架构从 Ingres 到 Postgres 的演进，尖锐批判了 Google 的 MapReduce 和 AWS 的产品策略。他深入探讨了 DBOS（数据库操作系统）的前沿实验，并用 Beaver 基准测试证明了当前大模型在真实企业数据仓库（Text-to-SQL）中 0% 准确率的尴尬现状。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/2czYyrTzILg/">从混乱到有序：行之有效的多智能体系统编排模式</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-04-08T00:00:00.000Z">
+          4/8/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Sandipan Bhaumik 分享了构建可扩展、可靠多智能体 AI 系统的经验。她阐述了从单智能体到多智能体的复杂性爆炸，介绍了编舞（Choreography）和编排（Orchestration）两种核心协调模式，并强调了不可变状态快照、版本控制、数据契约、断路器模式和补偿模式在故障恢复中的关键作用。演讲最终展示了一个生产级别的 Databricks 架构，强调了从构建演示到构建生产系统的转变。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/5Kn32cIWPSY/">30人团队造就190亿美元奇迹：WhatsApp 早期工程师 Jean Lee 深度访谈</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/the-pragmatic-engineer/" class="speaker-inline">🎙️ The Pragmatic Engineer</a>
+      
+      
+      
+        <time datetime="2026-03-18T00:00:00.000Z">
+          3/18/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/software-development/" class="category-badge-inline">
+              🏷️ software-development
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 前 WhatsApp 第19号员工 Jean Lee 分享了这家传奇公司的内部运作机制。在仅有30名工程师的情况下，WhatsApp 如何通过“零流程”、极简架构（Erlang）和对质量的偏执，服务4.5亿用户并被 Facebook 收购。访谈还揭示了大厂生存真相、早期招聘策略以及 AI 时代下精简团队的永恒价值。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/aI77F7vVodE/">跨越设备边界：OpenClaw A2A Gateway 深度指南——构建分布式智能体对等网络</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-chao-yuan-yu/" class="speaker-inline">🎙️ AI超元域</a>
+      
+      
+      
+        <time datetime="2026-03-07T00:00:00.000Z">
+          3/7/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本视频详细介绍了作者自研的 OpenClaw A2A Gateway 插件，该工具基于谷歌 A2A 协议，彻底解决了不同设备、不同网关间 AI Agent 的通信难题。相比传统的群组协作，A2A 模式具备精准路由、上下文隔离及显著的 Token 节省优势。文章涵盖了跨机通信实测、协议原理及自动化部署流程。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/5vL6aCvgQXU/">揭秘 AWS S3：支撑 500 万亿对象的架构演进与工程哲学</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/the-pragmatic-engineer/" class="speaker-inline">🎙️ The Pragmatic Engineer</a>
+      
+      
+      
+        <time datetime="2026-01-21T00:00:00.000Z">
+          1/21/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/data-engineering/" class="category-badge-inline">
+              🏷️ data-engineering
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本次访谈深入探讨了全球最大云存储服务 AWS S3 的技术内幕。AWS 数据与分析副总裁 Milan 分享了 S3 如何管理数千万块硬盘的超大规模集群，解析了从最终一致性向强一致性跨越的复杂工程，以及如何利用形式化验证确保正确性。对话还涵盖了 S3 Tables 和向量存储等新特性的演进，揭示了“尊重先例”与“技术无畏”并存的工程文化。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/k8cnVCMYmNc/">OpenAI + Temporal：构建高可用、生产级的 AI 智能体</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-01-12T00:00:00.000Z">
+          1/12/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本视频由 Temporal 开发者倡导者 Cornelia Davis 主讲，探讨了如何结合 OpenAI Agents SDK 与 Temporal 构建具备“持久性”的生产级 AI Agent。通过引入 Temporal 的工作流引擎，开发者可以确保 Agent 在面对网络中断或进程崩溃时，能够自动恢复状态并继续执行，避免重复消耗 Token。视频深入解析了 Activity 和 Workflow 等核心抽象，并演示了微智能体编排与移交的实现方式。</small>
+      
+
+      
+      
+    </li></ul>
+
+</div>
+
+</div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NVIDIA 的推理炼金术：从创业魂到数据中心级的 Dynamo 推理引擎</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="NVIDIA 的推理炼金术：从创业魂到数据中心级的 Dynamo 推理引擎" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">NVIDIA 的推理炼金术：从创业魂到数据中心级的 Dynamo 推理引擎</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Latent Space</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-03-08
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/latent-space/">Latent Space</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=64D6tcsPH1U" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-03-08
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本次访谈深入探讨了 NVIDIA 内部如何保持“4万人的创业公司”活力。重点解析了数据中心级推理引擎 Dynamo 的架构设计，详细讨论了推理优化的核心三轴（成本、质量、延迟）、预填充与解码解耦技术、长上下文的硬件协同设计，以及 AI Agent 在生产环境中的安全边界与 CLI 交互的复兴。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>Agent 的三大安全边界</h3>
+<p><strong>[Netter]</strong>: <strong>Agent</strong> 基本上能做三件事：访问你的文件、连接互联网，以及现在它们可以编写并执行<strong>自定义代码</strong>。你实际上应该只允许 Agent 同时做这三件事中的两件。</p>
+<p>如果你允许它访问文件并编写自定义代码，你就不会想要它连接互联网，因为那是一个安全漏洞。如果你同时开启了互联网访问和文件系统访问，你就必须非常清楚这个 Agent 行为的全部范围。否则，可能会被注入恶意软件。这一直是我们思考的核心：既要赋能这种显然是未来的技术，又要找到能保护系统的<strong>执行点</strong>（Enforcement Points）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>[Netter]</strong>: Agents can do three things. They can access your files. They can access the internet. And then now they can write custom code and execute it. You should really only let an agent do two of those three things. If you can access your files and you can write custom code, you don't want internet access because that's one vulnerability, right? If you have access to internet and your file system, you should know the full scope of what that agent's capable of doing. Otherwise, malware can get injected or something that can happen. And so that's a lot of what we've been thinking about is like, you know, how do we both enable this because it's clearly the future, but then also, you know, what are these enforcement points that we can start to like protect?</p>
+</details>
+<h3>从 Brev 冲浪板到 NVIDIA 收购</h3>
+<p><strong>[主持人]</strong>: 欢迎来到 Chroma Studio 的 Lean Space 播客。我们请到了客座主持人 <strong>Vivu</strong>，以及来自 <strong>NVIDIA</strong> 的朋友们：<strong>Netter</strong> 和 <strong>Kyle</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>[Host]</strong>: All right, welcome to the Lean Space podcast in the Chroma Studio. Welcome um to all the guests here. Uh we're back with our guest host Vivu. Welcome. Good to have you back. Uh and our friends uh Netter and uh Kyle from Nvidia. Welcome.</p>
+</details>
+<p><strong>[Netter]</strong>: 大家好，我是 <strong>Dynamo</strong> 的工程负责人和架构师之一。</p>
+<p><strong>[Kyle]</strong>: 我是开发工具部门的负责人，主要关注开源、Agent 营销、<strong>Brev</strong> 以及开发者工具。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>[Netter]</strong>: Yeah, thanks for having us. I'm one of the engineering leaders and AR architects of Dynamo.</p>
+<p><strong>[Kyle]</strong>: Yeah, you're the developers, developers, developers guy at NVIDIA, open source, agent marketing, brev, and like dev tools and stuff in the focus.</p>
+</details>
+<p><strong>[主持人]</strong>: 我对 Netter 最深刻的记忆是你在 <strong>GTC</strong> 大会上的“营销噱头”。当时你的初创公司 <strong>Brev</strong> 还没被收购，你带着一块<strong>冲浪板</strong>去参展，结果 NVIDIA 竟然非常喜欢，直接把你们买了。</p>
+<p><strong>[Netter]</strong>: 是的，我们的 Logo 是一个 <strong>Shaka</strong>（夏威夷招呼手势）。很多初创公司都喜欢假装成大公司，但 <strong>SF Compute</strong> 的 Evan Conrad 告诉我们：“你们就是两个人在房间里搞开发，为什么要装呢？”于是我们把冲浪板和棕榈树带进了展位。虽然我们的展位在最偏僻的角落，但因为棕榈树很高，大家隔着老远都能看到 Brev。</p>
+<p>我妻子当时还在医学院，她来帮忙贴冲浪板上的乙烯基贴纸。凌晨一点，在去 GTC 的前一天，她看着我说：“你这混蛋，要是这招真能成，你就是个天才。”后来被收购的消息公布后，我把这段视频发到了家庭群聊里。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>[Host]</strong>: One of my favorite memories uh for NAD, like you always do like marketing stunts and like while you were brev you like had this surfboard that you like went down to GTC with and like Nvidia apparently liked it so much that they bought you like what was that like?</p>
+<p><strong>[Netter]</strong>: Yeah. Um, yeah, we we um our logo was a shaka. We we uh we were always just kind of like trying to keep true to who we were. I think you know so much stuff startups you're like trying to pretend that you're a bigger more mature company than you are and it was actually Evan Conrad uh from SF Compute who was just like you guys are guest amazing yeah um he was just like guys you're two dudes in a room why are you pretending that you're not U and so then we were like okay let's make the logo of Shaka we brought surfboards to our booth to GTC and the energy was great some palm trees too. They actually poked out over the walls so you could see the bread booth and no one else just from very far way.</p>
+<p>My wife was uh at the time fiance she was in medical school and she came to help us cuz it was like a big moment for us. And so we we bought this Cricut. It's like a vine like a vinyl uh printer cuz like how else are we going to label the surfboard? So um we got a surfboard. We got a cricket and it was just like fine-tuning for enterprises or something like that that we put on the surfboard and it's 1:00 a.m. the day before we go to GTC. She's helping me put these like vinyl stickers on and she goes, &quot;You son of a... If you pull this off, you son of a bitch.&quot; And so, uh, pretty much after the acquisition, I stitched that within the news of the acquisition. I sent it to our family group chat.</p>
+</details>
+<h3>NVIDIA 的“物理极限”文化：SOL 原则</h3>
+<p><strong>[主持人]</strong>: 我听说 NVIDIA 内部有一个非常有名的 <strong>SOL</strong>（Speed of Light，光速）原则，或者简称为 <strong>SO</strong>。这是什么意思？</p>
+<p><strong>[Netter]</strong>: 这是我学到的最重要的一课。在初创公司，一切都是关乎生死的；但在大组织里，层级会掩盖现实。<strong>SO</strong> 的本质是问：<strong>物理规律</strong>是什么？</p>
+<p>如果光速是某个值，而现在速度慢了，那一定有东西挡路了。在讨论交付日期之前，先理解理论极限。不要告诉我为什么做不到，先告诉我理论上最快能多快，然后再告诉我差距在哪。这能帮助领导者创造<strong>紧迫感</strong>，打破噪音。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>[Host]</strong>: One more thing before we move on to Kyle. Just have so many Jensen stories and I just love mining Jensen stories. Uh, my favorite so far is so. Uh, what is what is so?</p>
+<p><strong>[Netter]</strong>: So is actually I I think of all the lessons I've learned, that one's definitely my favorite. As you start to become a much larger organization, so is is essentially like what is the physics, right? The speed of light moves at a certain speed. So if flight's moving some slower, then you know something's in the way. So before trying to layer reality back in of like why can't this be delivered at some date? Let's just understand the physics. what is the theoretical limit to like uh how fast this can go and then start to tell me why cuz otherwise people will start telling you why something can't be done but actually I think any great leader's goal is just to create urgency.</p>
+</details>
+<p><strong>[Vivu]</strong>: 只有<strong>黄仁勋</strong>能用“SO”卡来挑战别人吗？</p>
+<p><strong>[Netter]</strong>: 并不是为了赶人走，而是为了获得<strong>第一性原理</strong>（First Principles）的理解。比如你说买台电脑要5天，那 SOL 是什么？SOL 是我直接走进百思买（Best Buy）当场拿走。超出这个时间的部分就是“现实阻力”，我们需要拆解这些阻力是否合理。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>[Vivu]</strong>: One thing I'm unclear about is can only Jensen use the so card...</p>
+<p><strong>[Netter]</strong>: Yeah. I think it's not so much about like get the [ __ ] out. It's like give me the root understanding, right? Like if you tell me something takes 3 weeks... The first principles. It's like what's the like why is it 3 weeks? What is the actual limit? If let's say you wanted to buy a new computer and someone told you it's going to be here in 5 days, what's the SOL? Well, like the SOL is like I could walk into a Best Buy and pick it up for you, right? So then anything that's like beyond that... we can kind of piece the reality back.</p>
+</details>
+<h3>推理引擎 Dynamo：数据中心级的炼金术</h3>
+<p><strong>[Kyle]</strong>: 现在“<strong>推理</strong>”（Inference）已经从一个小众话题变成了 101 公路边的广告牌。随着 <strong>Agent</strong> 消耗越来越多的 Token，<strong>测试时扩缩容</strong>（Test-time Scaling）变得极其重要。</p>
+<p><strong>Dynamo</strong> 的诞生是因为我们发现，现有的引擎如 vLLM 或 TensorRT-LLM 通常只关注单个副本的优化。但在数据中心级别大规模部署时，你不能只是垂直扩容（Scale up），因为会有硬件边界（比如 <strong>NVLink</strong> 只能跨 8 颗 GPU，超出后必须走稍慢的 <strong>Infiniband</strong>）。</p>
+<p>Dynamo 是一个坐落在推理框架之上的<strong>数据中心级推理引擎</strong>。它利用规模经济来最大化 <strong>KV Cache</strong> 的命中率，并引入了“<strong>解耦</strong>”（Disaggregation）技术。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>[Kyle]</strong>: I think at this point a lot of people are familiar with the term of inference. Inference at scale is becoming a lot more important. Uh we have these moments like you know open claw where you have these agents that take lots and lots of tokens but produce you know incredible results. Dynino sort of came about at NVIDIA because myself and a couple others were sort of talking about the these concepts that like, you know, you have inference engines like VLM, SLA, Tensor TLM. Um, and they have like one single copy. But when you're actually serving things at scale, you can't just scale up that replica because you end up with like performance problems. Dynamo is this data center scale inference engine that sits on top of the frameworks like VLM sang and tensor HLM and just makes things go faster because you can leverage the economy of scale. maximizing your cache hits or you want to employ new techniques in inference like disagregation.</p>
+</details>
+<h3>预填充与解码的“解耦”艺术</h3>
+<p><strong>[主持人]</strong>: 这种优化具体是怎么实现的？</p>
+<p><strong>[Kyle]</strong>: 我们通过调整三个轴来寻找最优解：<strong>成本、质量、延迟</strong>。一个核心技术是<strong>解耦</strong>。</p>
+<p>传统推理引擎会在两个阶段之间“跳跃”：<strong>预填充</strong>（Pre-fill，读取序列并生成 KV Cache）和<strong>解码</strong>（Decode，生成新 Token）。预填充通常是<strong>计算受限</strong>（Compute-bound）的，而解码则是<strong>内存带宽受限</strong>（Memory-bound）。</p>
+<p>通过将这两个阶段分开，你可以分别扩容。比如，你可以在高性能的 <strong>DGX-Spark</strong> 上做预填充，然后在 Mac 上做解码，这样速度反而更快。Dynamo 内部有一个名为 <strong>Grove</strong> 的 Kubernetes 组件，它会根据工作负载动态调整预填充和解码节点的比例。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>[Kyle]</strong>: There are three things that determine whether or not something can be done with inference: cost, quality, latency. Historically models would be hosted with a single inference engine and that inference engine would sort of ping pong between two phases. There's pre-fill and then using that KV cache to generate new tokens which is called decode. Prefill is right now computebound most of the time. Decode is usually memory bound. Someone uh ExoLabs did a really cool demo where for the DGX Spark, which has a lot more compute, you can do the compute hungry prefill on a DGX Spark and then do the decode on a Mac and so that's faster. Dynamo actually has like a a Kubernetes uh component in it called Grove that allows you to do do this like crazy scaling specialization.</p>
+</details>
+<h3>长上下文与硬件协同设计</h3>
+<p><strong>[Vivu]</strong>: 我们在长上下文（Long Context）方面是否已经达到了极限？比如目前大多模型都卡在 100 万长度。</p>
+<p><strong>[Kyle]</strong>: 这涉及到了“<strong>硬件-模型-上下文协同设计</strong>”。比如 <strong>Moonshot</strong> 的 <strong>Kimi 2</strong> 或 <strong>DeepSeek</strong>。Kimi 2 增加了很多专家（Experts），但减少了<strong>注意头</strong>（Attention Heads）。虽然计算依然是平方级增长，但通过减少头数，工作量减半了。</p>
+<p>DeepSeek 的 <strong>MLA</strong>（Multi-head Latent Attention）更是激进。原本 12.8 万长度的 Llama 405B 上下文可能需要 40-80GB 的显存，而 DeepSeek 只需要 8GB。这些被 Leopold Aschenbrenner 称为“<strong>Unhoblers</strong>”（去阻碍者）的技术突破，将带领我们突破千万甚至亿级的上下文。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>[Kyle]</strong>: We see models like Kimmy or GPTOSS. Kimmy 2 comes out, right? Kimi has more experts but fewer attention heads. Attention scales with the number of heads. If you have 64 heads versus 32 heads you do half the work. Deepseek's MLA (multi headlen attention) decrease the burden that KV has on the model which allows you to grow like longer in context. For context, the total context length of Deepseek is 128,000 tokens... fits into 8 GB and previously context like the llama 405b context of a similar size was like 40 or 80 gigabytes. I wouldn't be surprised if we do see the ability to like break through to like 10 million, 20 million, 100 million context through an unhobler showing up.</p>
+</details>
+<h3>命令行（CLI）：Agent 的通用语言</h3>
+<p><strong>[Netter]</strong>: NVIDIA 内部已经大规模部署了 <strong>Claude Code</strong> 和 <strong>Cursor</strong>，几万人都在用。我发现一个有趣的现象：<strong>编码 Agent</strong> 比通用 Agent 成功得多，很大程度上是因为它们能访问<strong>终端</strong>（Terminal）。</p>
+<p>终端意味着它们可以访问你安装的所有工具。比如我们有个同事 Carlos 写了一个 <strong>Outlook CLI</strong>，我让 Agent 扫描我所有的邮件，总结重点，把需要回复的放进文件夹，其余全部归档。这简直是魔法。</p>
+<p><strong>[Kyle]</strong>: 没错。计算始于 Shell，后来我们觉得它对人类不友好，于是造了 GUI。讽刺的是，现在我们要让 LLM 去操作 GUI。其实最直接的办法就是把 Shell 的访问权限给 LLM。命令行数据在预训练语料中极其丰富，模型天然理解 CLI。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>[Netter]</strong>: Coding agents have been so much more effective than general purpose agents. And I think a large part of that is it just has access to the terminal. It can write code and then it can compile the code and if there are errors it can fix it. I found this person uh his name is Carlos at the company. He wrote an Outlook CLI. I asked it to go through all of my emails... give me a summary, highlight any escalations... It was magic.</p>
+<p><strong>[Kyle]</strong>: Yeah, it's kind of funny, right? Like we like computing began with a terminal with a shell, but we said that it's not empathetic to humans. So we built these nice user interfaces and then now we have LLMs navigating our user interfaces. And ironically, we're not empathetic to the machine anymore. Just give the LLM access to the shell.</p>
+</details>
+<h3>2026：系统即模型（System as Model）</h3>
+<p><strong>[Kyle]</strong>: 如果说去年是编码 Agent 的元年，今年就是 <strong>Sub-agent</strong>（子代理）的一年。</p>
+<p>我们要实现“<strong>系统即模型</strong>”（System as Model）。当你调用一个 API 时，后台可能是一个包含数十个子 Agent、各种路由和优化组件的复杂系统，但对用户来说，它依然表现为一个黑盒模型。Dynamo 就在帮助管理这种复杂性。</p>
+<p>例如在 CES 上发布的模型路由器，它会自动决定某个查询是发给本地的 <strong>DGX-Spark</strong> 还是云端的基座模型，用户不再需要在“本地”和“云端”之间做二选一。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>[Kyle]</strong>: This is the year system as model, right? Where instead of having like a single model be a thing, you have a system of models and components that are working together to like emulate the blackbox model. Under the hood, it's like a billion different models. And that's a lot of complexity, right? With Dynamo and with other libraries on media, we're looking to help manage that comp. We actually for CES, we just released the model router... the model router decides when to send queries to which one. It's no longer this like either or. It's use the best of everything that's available to you.</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Jensen Huang" class="entity-link person-link">Jensen Huang</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=NVIDIA" class="entity-link company-link">NVIDIA</a>, 
+                
+                  <a href="/search/?q=Brev" class="entity-link company-link">Brev</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Dynamo" class="entity-link product-link">Dynamo</a>, 
+                
+                  <a href="/search/?q=DGX-Spark" class="entity-link product-link">DGX-Spark</a>, 
+                
+                  <a href="/search/?q=Claude-Code" class="entity-link product-link">Claude-Code</a>, 
+                
+                  <a href="/search/?q=DeepSeek" class="entity-link product-link">DeepSeek</a>, 
+                
+                  <a href="/search/?q=Kimi" class="entity-link product-link">Kimi</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/inference-optimization/">inference-optimization</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">disaggregation</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/kv-cache/">kv-cache</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/hardware-software-co-design/">hardware-software-co-design</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

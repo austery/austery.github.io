@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>哈萨比斯与DeepMind崛起：在科学理想与失控的AI竞赛之间</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="哈萨比斯与DeepMind崛起：在科学理想与失控的AI竞赛之间" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">哈萨比斯与DeepMind崛起：在科学理想与失控的AI竞赛之间</span>
+      <span data-pagefind-meta="speaker" style="display:none;">硅谷101播客</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-02-26
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/gui-gu-101-bo-ke/">硅谷101播客</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=3Oad7PtEMVk" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-02-26
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本期访谈深入探讨了DeepMind创始人德米斯·哈萨比斯的传奇经历，从国际象棋神童到诺贝尔奖得主。对话解析了DeepMind在谷歌体系内的博弈、与OpenAI的竞争，以及哈萨比斯如何利用AI破解科学难题。同时探讨了在AGI浪潮下，这位“AI之脑”如何在科学探索与技术失控的矛盾中寻找平衡。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>走近“谷歌AI之脑”德米斯·哈萨比斯</h3>
+<p><strong>泓君</strong>: Hello 大家好，欢迎收听《硅谷101》，我是泓君。今天我们来聊一聊 <strong>DeepMind</strong> 的创始人 <strong>德米斯·哈萨比斯</strong>（Demis Hassabis）。他掌管着整个谷歌 AI 的研发，也是站在这场全球 AI 军备竞赛最前线的人。最近英国作家 <strong>塞巴斯蒂安·马拉比</strong>（Sebastian Mallaby）出版了一本关于哈萨比斯的新书，中文名字叫做 <strong>《哈萨比斯：谷歌AI之脑》</strong>。正好借着这个由头，可以聊一聊我想聊很久的这样一个人。</p>
+<p>我先简单介绍一下哈萨比斯整个的一个经历：他 4 岁开始下国际象棋，13 岁成为大师，15 岁被欧洲顶级的游戏公司录用，从 <strong>剑桥大学</strong> 毕业以后又回到学校继续读 <strong>神经科学</strong> 的博士，因为他觉得要造出真正的 <strong>AGI</strong>（通用人工智能），得先搞明白人脑是怎么工作的。他创建的 DeepMind 打败了围棋世界冠军，破解了困扰生物学家半个世纪的蛋白质折叠难题，还因此拿了 <strong>诺贝尔化学奖</strong>。</p>
+<p>但是这个人最打动我的，倒不是说他的这些成就，而是驱动他的东西。哈萨比斯造 AI 不是为了做产品，不是为了赚钱，用他自己的话说是为了理解宇宙。他说：“对我来说科学是一种精神追求。”而且很巧的是，在他创办 DeepMind 办公室旁边，就是当年物理学家 <strong>西拉德</strong> 萌发核链式反应堆想法的那个路口。他说他自己每天经过那里的时候都会想，现在正在做的事情重要性跟原子弹是不相上下的。一个人一生只想造出比人类更聪明的东西，同时又比谁都清楚这件事情可能失控。今天我们就带着这种矛盾感，请到了这本书中文版的译者 <strong>周健工</strong> 老师，一起来聊一聊哈萨比斯与 DeepMind 崛起的故事。Hello 周老师您好！</p>
+<p><strong>周健工</strong>: 泓君，你好。《硅谷101》的听众，你们好。</p>
+<p><strong>泓君</strong>: 周老师，你要不要先跟听众简单介绍一下您自己？</p>
+<p><strong>周健工</strong>: 首先我是非常喜欢《硅谷101》这个节目的。我本人主要是一个科技和财经的媒体人，我以前负责过 <strong>《福布斯》</strong> 中文版，也负责过 <strong>《第一财经》</strong>，也在企业里做过一些管理工作。现在我在做一个研究公司叫 <strong>未尽研究</strong>。前年跟湛庐一起翻译了 <strong>《黄仁勋》</strong> 那本书，最近也翻译了《哈萨比斯》这本书。</p>
+<p><strong>泓君</strong>: 对，我觉得您翻译的这两本书都是非常经典的，也是现在 AI 圈最受关注的两个人。如果我们说黄仁勋代表硬件，那哈萨比斯可以说在整个 AI 层面就代表了软件的一端。周老师，我知道您也是国内第一批当面采访哈萨比斯的中国媒体人，您要不要讲一下您第一次见到他的场景和第一印象？</p>
+<p><strong>周健工</strong>: 好像是 2017 年 5 月份，那个时候 <strong>AlphaGo</strong> 已经非常出名了。我对哈萨比斯进行了一场大概一个小时左右的电视专访。我对他的第一印象：第一，他这个人非常瘦小；第二，他当时大概将近 40 岁，头发有些秃顶，非常像一个中国普普通通研究所里搞科研的人。他母亲是新加坡华人，看到他有一种文化上的亲切感。</p>
+<p>我事先知道他很聪明，当时还在世的物理学家 <strong>霍金</strong> 说哈萨比斯是世界上最聪明的人。那次交流非常愉快，我有两个特别深的印象：第一，他没有摆出神童的架子，跟人交流非常平和，但语速比较快，表达的思想极其流畅、清晰甚至犀利。你问他任何问题，他都能给你一个非常清晰的逻辑，在不同知识之间的切换运用自如。</p>
+<h3>智慧与真诚：哈萨比斯与黄仁勋的区别</h3>
+<p><strong>泓君</strong>: 为什么您用了“智慧”而不是用“聪明”这个词？</p>
+<p><strong>周健工</strong>: 我觉得他讲话不是那种一套一套的，很多人被训练出公关的那种讲话，我觉得黄仁勋有一点点这个味道。哈萨比斯讲话非常具体地针对你问的问题，能贡献出最新鲜的一个想法，不是像放了无数遍的 PPT 一样。</p>
+<p><strong>泓君</strong>: 您觉得哈萨比斯跟黄仁勋作为两个创始人，身上最核心的特质会有什么不一样的地方？</p>
+<p><strong>周健工</strong>: 在哈萨比斯身上能感觉到更多真诚的东西。马拉比的这本书用了大量的对话，你可以从他跟哈萨比斯私下里 30 多个小时的对话中感觉到他发自内心的想法。他在写黄仁勋的时候没有那么多对话，很多都是公开场合的套话。我在翻译过程中对哈萨比斯的对话处理得非常认真，怎么从对话中看到这个人内心深处真实、微妙的想法，这是非常大的一个不同。</p>
+<p><strong>泓君</strong>: 对，我觉得这点也是我对哈萨比斯这个选题感兴趣的原因。最近 <strong>OpenAI</strong> 的 <strong>o1</strong> 出来以后，我整个人处在一种非常震惊的状态中，我觉得 AI 已经开始冲击人类的工作了。但像哈萨比斯，包括 <strong>Anthropic</strong> 的 <strong>Dario Amodei</strong>，他们都是 AI 的建造者。书中用 <strong>奥本海默</strong> 的例子做对比，哈萨比斯一直想做正确的事情，但他能不能做到是一个问号。我挺感兴趣，这样一个 AI 科学家在建成强大 AI 的过程中，到底是怎么看待技术和“AI 威胁论”的。</p>
+<p><strong>周健工</strong>: 马拉比写这本书的立意非常高。AGI 是威力无比强大的技术，也可能是人类的终极技术，就像书的原名 <strong>《The Infinity Machine》</strong>（上帝的机器）。发明这些技术的一小撮人究竟是什么样的人？他们的动机可能会直接影响技术的未来。马拉比认为哈萨比斯是其中最关键的人物，因为 AGI 这个技术浪潮确实是从哈萨比斯和 DeepMind 发起的。在 <strong>ChatGPT</strong> 出现 10 年之前，AGI 运动就已经源自于他们这个团队了。</p>
+<h3>从象棋神童到计算机启蒙</h3>
+<p><strong>泓君</strong>: 我们要不要给听众介绍一下哈萨比斯在创建 DeepMind 以前的经历？</p>
+<p><strong>周健工</strong>: 首先他的第一个标签是神童。4 岁看大人下棋，5 岁开始自己下，13 岁成为国际象棋大师，积分在全球同年龄段排名第二。他个子矮小，坐在凳子上连棋盘都看不清楚，屁股底下要垫两本厚书。他是典型的移民家庭，母亲是华人，父亲是塞浦路斯希腊人。他父亲几乎放弃了自己的事情，开着破车带他到处比赛。</p>
+<p>有两个关键的顿悟点：第一，11 岁在列支敦士登比赛时，他突然想到：“难道我就在下棋中度过这一辈子吗？屋子里这些最聪明的人，难道把智力全部用在下棋这一件小事上吗？”他突然感觉胜负不重要了，于是投子认输。从那以后他就不再那么执念了。</p>
+<p>第二，他在伦敦一家书店看到了一本关于如何编程国际象棋程序的小册子。这本书把他从象棋世界连接到了计算机世界。书中提到了 <strong>香农</strong>（Claude Shannon），香农在 1950 年就写过关于编程象棋的文章，并预见如果能编程下象棋，这种编程也可能完成其他智力任务，具有通用性。这给幼小的哈萨比斯带来了极大的启蒙。</p>
+<p><strong>泓君</strong>: 他 16 岁被剑桥录取，因为年龄太小推迟一年入学。在这一年里他去游戏公司工作，表现非常突出。他在创建 DeepMind 以前有两段游戏公司经历，对吧？</p>
+<p><strong>周健工</strong>: 对，叫 <strong>万灵药公司</strong>（Elixir Studios）。第一家是 <strong>牛蛙公司</strong>（Bullfrog Productions），他在游戏中增加了一些早期“智能体”的概念，比如给角色设定反馈环境。后来剑桥毕业后他和大卫·西尔弗（David Silver）一起搞了万灵药工作室。这其实是一个失败的创业项目，因为他标准定得太高，想做一个世界上最牛的游戏 <strong>《共和国》</strong>（Republic: The Revolution），模拟上千个独立思维角色。但因为算力有限，在演示时“掉链子”了。这次失败对他很有意义，奠定了他“知行合一”的风格——如果你不能把一个东西造出来，你就不能真正理解它。</p>
+<h3>强化学习的执念与 DeepMind 的诞生</h3>
+<p><strong>泓君</strong>: 您讲的这段经历有两点跟现在的 AI 判断息息相关：第一是算力的重要性，没有算力支撑，再好的算法也只能停在纸面上；第二是 <strong>强化学习</strong>（Reinforcement Learning）。DeepMind 最强的是强化学习，哈萨比斯坚信光靠大语言模型到不了 AGI，还需要类似 AlphaGo 的规划和推理能力。现在 OpenAI 的 o1 也在往强化学习方向回摆，借鉴 AlphaGo 的思路。</p>
+<p><strong>周健工</strong>: 这种执念是有渊源的。AGI 这个词是他在剑桥时的学霸 <strong>大卫·西尔弗</strong> 引入的。他们成立 DeepMind 的使命就是发明 AGI 机器，“先解决 AI，再用 AI 解决一切”。他们认为通向 AGI 之路一定是强化学习。在强化学习和 <strong>深度学习</strong>（Deep Learning）之间曾有过学派之争，就是 <strong>辛顿</strong>（Geoffrey Hinton）和 <strong>萨顿</strong>（Richard Sutton）之争。萨顿是强化学习之父，西尔弗专门跑去跟他读研。当时两个派别是有对峙的，辛顿那边的人甚至要求从萨顿那边过来的人放弃强化学习那套。</p>
+<p><strong>泓君</strong>: 这段背景太精彩了。DeepMind 崛起的几个高光时刻，包括 AlphaGo、<strong>AlphaZero</strong> 和 <strong>AlphaFold</strong>，都是跟这条线一脉相承的。</p>
+<p><strong>周健工</strong>: 是的。在实践中，两者在不断融合。DeepMind 不停从辛顿那挖人，也从 OpenAI 挖人。到做 AlphaFold 的时候，我认为是完全融合的，甚至深度学习占据了更主要的作用。</p>
+<h3>融资往事：彼得·蒂尔与周凯旋的助力</h3>
+<p><strong>泓君</strong>: 我们聊聊 DeepMind 的三个创始人。除了哈萨比斯，还有谁？</p>
+<p><strong>周健工</strong>: 第一个叫 <strong>肖恩·莱格</strong>（Shane Legg），他在伦敦大学学院认识了哈萨比斯，并把哈萨比斯引向了硅谷的 <strong>奇点大会</strong>。另一个是 <strong>苏莱曼</strong>（Mustafa Suleyman），他来自移民家庭，考上牛津后辍学做生意。他跟哈萨比斯建立了信任，哈萨比斯觉得他在融资和经营方面能帮上忙。</p>
+<p>第一笔天使融资很有意思。在伦敦没人听得懂 AGI，有人觉得他们是骗子。但他们找到了一个出于宗教信仰愿意投资的人，认为这是“上帝的机器”。另外哈萨比斯的教授也投了 10 万美元。最重要的是 <strong>彼得·蒂尔</strong>（Peter Thiel），他认为哈萨比斯是那种能在科学上做出顶级发现但在商业模式上不成立的人。蒂尔的手下 <strong>诺塞克</strong>（Luke Nosek）非常支持，甚至破例不上投决会就投了这家公司。</p>
+<p><strong>泓君</strong>: Founders Fund 投了 DeepMind 至少三轮，但彼得·蒂尔其实一直质疑他们如何商业化。最后是 <strong>周凯旋</strong> 的领投救了最后一轮融资。</p>
+<p><strong>周健工</strong>: 对，周凯旋帮 <strong>李嘉诚</strong> 管理基金，在关键的 B 轮投了大概 1000 万美元。后来在谷歌收购前，彼得·蒂尔觉得 AI 成了共识，意味着泡沫，就决定不再追加了。</p>
+<h3>谷歌收购战：与扎克伯格的博弈</h3>
+<p><strong>泓君</strong>: 谷歌当时收购 DeepMind 是在什么背景下？</p>
+<p><strong>周健工</strong>: 当时 <strong>马斯克</strong>（Elon Musk）也承诺投资，他跟 <strong>拉里·佩奇</strong>（Larry Page）在私人飞机上谈起 DeepMind，佩奇在安卓手机上记下了名字。随后谷歌就发来了邮件。中间还插出了 <strong>扎克伯格</strong>（Mark Zuckerberg），他邀请哈萨比斯去家里神侃。哈萨比斯发现扎克伯格把 AI 和 3D 打印等技术看得同样重要，认为他对未来技术没有自己的判断，就告辞了。</p>
+<p>拉里·佩奇约哈萨比斯散步时说了一句话：“你为什么不来谷歌呢？你的目标不是追求 AGI 吗？我已经在这里为你准备了一切。”这句话打动了哈萨比斯。他当时为了融资焦头烂额，谷歌提供了最好的资金和算力，而且两位创始人有科学家情怀。</p>
+<p><strong>泓君</strong>: 最终以 6.5 亿美元成交。哈萨比斯在谈判中也非常有策略，他参考了谷歌收购辛顿团队的价格，把人才价格抬到了平均每人 1500 万美元。</p>
+<h3>从 AlphaGo 到 AlphaFold：跨越巅峰</h3>
+<p><strong>周健工</strong>: 2016 年 AlphaGo 击败 <strong>李世石</strong>。为什么选围棋？因为难。哈萨比斯自己围棋大概是初段水平，他知道围棋的难度远超国际象棋。当时没人相信计算机能穷尽围棋的可能性，所以战胜人类具有天方夜谭般的震撼力。</p>
+<p><strong>泓君</strong>: 接下来是 AlphaFold，破解了蛋白质折叠难题。哈萨比斯也因此获得了 2024 年诺贝尔化学奖。这个跨越是怎么发生的？</p>
+<p><strong>周健工</strong>: 他一直关注生命科学，读博时就想破解蛋白质结构。2016 年在汉城下棋时，他就跟西尔弗谈起下一个目标是蛋白质。他们参加了蛋白质结构预测竞赛，引入了 <strong>詹珀</strong>（John Jumper）。詹珀决定转向机器学习，得到了哈萨比斯的支持。他们利用谷歌强大的算力，最终采用了 <strong>Transformer</strong> 架构，在 2020 年 AlphaFold 2 彻底颠覆了整个领域。</p>
+<h3>内部裂痕：苏莱曼的离去与 NHS 危机</h3>
+<p><strong>泓君</strong>: 被谷歌收购后，哈萨比斯跟谷歌的关系怎么样？</p>
+<p><strong>周健工</strong>: 矛盾始终存在。苏莱曼主张建立安全和伦理委员会，但没搞起来。后来 DeepMind 曾想独立出去，搞了一个“马里奥计划”，甚至找过 <strong>蔡崇信</strong> 融资，但没成。苏莱曼后来因为 <strong>NHS</strong> 医疗项目引发了隐私保护的舆论危机，加上管理作风问题，被哈萨比斯启动调查并边缘化，最终离开了 DeepMind。</p>
+<p><strong>泓君</strong>: 很有意思的是，苏莱曼现在是 <strong>微软</strong> AI 部门的掌门人。谷歌的旧部现在分别掌管着谷歌和微软的 AI，这种竞争关系很有历史渊源。</p>
+<p><strong>周健工</strong>: 对。其实 OpenAI 的成立也是因为马斯克没办法控制 DeepMind，为了抗衡谷歌才成立的。</p>
+<h3>迎战 OpenAI：从固执到反击</h3>
+<p><strong>泓君</strong>: 2022 年底 ChatGPT 推出时，DeepMind 是什么反应？</p>
+<p><strong>周健工</strong>: 哈萨比斯和大卫·西尔弗对强化学习有执念，他们非常不重视大语言模型，认为语言是“不接地”的。直到 <strong>GPT-3</strong> 出来才让他们警醒。ChatGPT 发布时，谷歌因为安全考虑非常慎重，结果被 OpenAI 抢了先。哈萨比斯当时非常愤怒，说“他们把坦克开到了我们家草皮上”。</p>
+<p><strong>泓君</strong>: 后来谷歌进行了大调整，DeepMind 和 <strong>Google Brain</strong> 合并。</p>
+<p><strong>周健工</strong>: 对，2023 年 4 月合并，哈萨比斯担任 CEO。他们改变了工作方式，资源向大模型集中，采用突击队式的攻关。<strong>Gemini</strong> 系列的推出证明了他们的实力还在。虽然 OpenAI 在推理模型上领先了两三个月，但谷歌很快就赶上来了。</p>
+<h3>科学家的天责与潘多拉魔盒</h3>
+<p><strong>泓君</strong>: 杰弗里·辛顿对 AI 持负面看法，觉得会毁灭人类。但哈萨比斯依然乐观，觉得 AI 能解决人类重大挑战。您怎么看哈萨比斯这个人？</p>
+<p><strong>周健工</strong>: 我觉得他是个好人，底色是偏乐观的。他身上有浓厚的欧洲科学革命的人文精神，他想发明机器完成比爱因斯坦更伟大的发现，破解宇宙奥秘。他主张以人为本的 AI，把 AI 控制在沙盒之内。</p>
+<p><strong>泓君</strong>: 顶级科学家往往无法停止探索的乐趣。书中引用了 <strong>冯·诺依曼</strong> 的话：如果我们不履行发现的天责，就违背了科学伦理；但一旦威力释放，我们可能成为最被憎恨的人。</p>
+<p><strong>周健工</strong>: 马拉比作为英国人，把哈萨比斯当成国宝来写，确实有一定的倾向性。哈萨比斯非常争强好胜，他在任何智力游戏中都要战胜别人，这种“赢”的欲望也是一种控制。</p>
+<p><strong>泓君</strong>: 谢谢周老师，今天讲了好多精彩的故事。哈萨比斯最近也开始公开警醒 AI 风险，认为 AI 正在变得越来越自主。一个想用 AI 理解宇宙的科学家，却发现自己可能亲手打开了潘多拉的盒子。感谢大家的收听，我们下期再见。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Demis Hassabis" class="entity-link person-link">Demis Hassabis</a>, 
+                
+                  <a href="/search/?q=Mustafa Suleyman" class="entity-link person-link">Mustafa Suleyman</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=DeepMind" class="entity-link company-link">DeepMind</a>, 
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Facebook" class="entity-link company-link">Facebook</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=AlphaGo" class="entity-link product-link">AlphaGo</a>, 
+                
+                  <a href="/search/?q=AlphaFold" class="entity-link product-link">AlphaFold</a>, 
+                
+                  <a href="/search/?q=Gemini" class="entity-link product-link">Gemini</a>, 
+                
+                  <a href="/search/?q=ChatGPT" class="entity-link product-link">ChatGPT</a>
+                
+              </p>
+            
+            
+              <p><strong>媒体/书籍:</strong>
+                
+                  <a href="/search/?q=《哈萨比斯：谷歌AI之脑》" class="entity-link media-link">《哈萨比斯：谷歌AI之脑》</a>
+                
+              </p>
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/agi/">agi</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/reinforcement-learning/">reinforcement-learning</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/deep-learning/">deep-learning</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-safety/">ai-safety</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/scientific-discovery/">scientific-discovery</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

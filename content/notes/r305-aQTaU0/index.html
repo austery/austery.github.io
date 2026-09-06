@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文本扩散模型（Text Diffusion）：重构下一代低延迟与双向推理范式</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="文本扩散模型（Text Diffusion）：重构下一代低延迟与双向推理范式" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">文本扩散模型（Text Diffusion）：重构下一代低延迟与双向推理范式</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-06-04
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=r305-aQTaU0" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-06-04
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本讲座由 Google DeepMind 研究科学家 Brendan Dillon 主讲，深入探讨了文本扩散（Text Diffusion）的技术原理与独特优势。与传统的单向自回归模型相比，文本扩散模型通过迭代降噪实现了极低的单用户推理延迟、强大的双向上下文推理、自适应计算以及高效的原位文本编辑，并在边缘侧设备端（On-Device）场景中展现出广阔的应用前景。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>范式重构：从自回归生成到离散文本扩散</h3>
+<p>在当前的自然语言处理领域，以 GPT 和 Gemini 为代表的主流模型普遍采用<strong>自回归生成</strong>（Autoregressive Generation）机制。这种机制在生成文本时受限于时间步的单向性，即依据当前的上下文，以“每次一个 Token”的串行方式向后预测，且其注意力机制是单向因果的，无法感知未生成的未来信息。与此形成鲜明对比的是，<strong>文本扩散</strong>（Text Diffusion）引入了一种全新的生成范式。它不依赖于逐字码字，而是将整个待生成的文本区域视为一块“画布”。</p>
+<p>在训练阶段，系统向干净的 Token 序列中逐步引入离散噪声（例如随机替换或插入词表中的其他 Token）；而在推理阶段，模型则从一串纯随机噪声 Token 开始，通过多次前向传播进行<strong>迭代去噪</strong>（Iterative Denoising）。这种去噪过程允许模型在整块画布上应用双向注意力机制，同时兼顾过去与未来的上下文，从而在多轮迭代中逐步提炼、完善出结构完整、逻辑通顺的文本语句。</p>
+<details>
+<summary>Original English Source</summary>
+Some people are still filtering into the room. But it's mostly intro stuff for the first couple of slides so they won't miss anything. Okay, welcome everybody. My name is Brendan. I'm I'm a research scientist at DeepMind. I'm talking today about text diffusion, which is kind of a more forward-looking research area at DeepMind. So you're probably familiar with image and video diffusion, which is kind of state of the art for these modalities right now where you you know, you take ground truth, say image, you add noise to it in training, and then you train a neural network to remove that noise gradually, and then at inference time you just initialize the the picture with pure noise, and then you iteratively refine out the noise to recover back to, you know, whatever image or video or audio or whatever you're looking for. And the principle is essentially the same for text for text diffusion, where you start with a clean sequence of tokens, like so a clean sentence or something like that. And then you gradually add noise, you corrupt it somehow. There's lots of different ways to do that. You can do it in continuous or discrete way, but let's just say discrete for now, which would in this case just mean adding random tokens or replacing tokens with other random tokens. And you do that for a bunch of different noise levels, and you train the neural network to try to fill in to try to correct the mistakes basically in the text. And then at inference time you initialize the sequence of tokens to just pure noise, like pure random discrete tokens from the vocabulary, and then you iteratively refine through that to fill in the information in the order that the neural network wants to do to recover back to, say, a clean sentence. And then in practice, so we, you know, I showed we I showed you some GIFs here of what it looks like for images. You get very similar looking at for text, where it kind of uh you know, starts off all noisy and then gradually like fills in the text and then you get clean relatively clean outputs at the end.
+</details>
+<h3>硬件释放：突破内存带宽瓶颈的极速生成</h3>
+<p>从底层的硬件计算架构来看，GPU 和 TPU 等现代 AI 芯片的设计特点是拥有极高的算力（FLOPS），但<strong>内存带宽</strong>（Memory Bandwidth）却相对受限。在运行传统的自回归模型时，计算瓶颈往往在于内存带宽（即所谓的 Memory-bound）。因为在生成每一个 Token 的时间步里，芯片都必须将庞大的模型权重、激活值以及 KV 缓存从高带宽内存（HBM）中完整读取并传输至 Tensor 核心。如果单次请求的批处理大小（Batch Size）为 1，这种频繁的数据传输会导致硬件计算资源的极大浪费。</p>
+<p>而文本扩散模型通过在单次数据传输中处理整块 Token 画布，极大地改善了这一状况。举例来说，如果模型需要生成 256 个 Token，自回归模型需要进行 256 次完整的内存读取；而扩散模型在进行<strong>迭代降噪</strong>时，可能只需 24 次前向传播（Passes）即可输出这 256 个 Token。这意味着内存数据传输次数减少到了原来的十分之一，在单用户推理（Batch Size = 1）的场景下，可以实现接近 10 倍的<strong>超低延迟</strong>（Low Latency）加速。</p>
+<p>尽管扩散模型在超大规模云端并发服务（Large Batches）时的整体吞吐量（Throughput）因多次前向计算而面临成本挑战，但对于不需要高并发 Batching 的端侧应用（On-Device）、移动端设备或实时机器人控制系统而言，这种能够最大化单用户响应速度的极速生成特性，具有无可比拟的落地价值。</p>
+<details>
+<summary>Original English Source</summary>
+Okay, so the the team I'm on we had a a research demo release 1 year ago now called Gemini diffusion which was a variant of a Gemini model which did text diffusion instead of auto aggressive next token generation and that was like a research preview that was open to about 100k people. Uh Uh And you know, we're still you know, keep keep posted for new new developments in that direction upcoming soon. Um And we did have some good numbers at the time, but again it's a year ago which is like you know, prehistoric times in this field. Our kind of main competitor model was Gemini 2.0 flashlight at the time cuz that was the architecture we were branching from the text fusion model and we basically had very similar quality across the board there. Um mostly you know, a little bit of advantage in code, a little bit of disadvantage in some other areas, but kind of relatively similar performance at much better latencies. Um but again yeah, this is a year ago so I wouldn't fixate too much on these numbers. Okay, so what's the difference between auto aggressive generation and diffusion? So in in the standard vanilla Gemini Gemma you know, GPT whatever um generation of text you do this you know, you have some context that comes in and you want to generate some response to that and the model does it one token at a time. So it generates the first token and then condition on that generates the next token and so on. Whereas in diffusion you have the you know, a context will come in whatever that is and it'll initialize like I like I mentioned like a long sequence of tokens could be hundreds could be thousands could be shorter depends on the model uh to be random noise and then it iteratively refines that canvas to remove the noise over the course of a few denoising steps. So rather than one token at a time it does the entire block together but over a couple of iterations. So it's not just one pass, it does multiple passes, but it gets to attend to the future tokens and so on. So, it's a kind of a different way of generating text. Uh um So, that obviously has some pros and cons. So, the main pro that people really like and probably is the biggest advantage that text-to-image models have is that it's it's just faster inference. It just generates faster tokens per second cuz it makes much better use of the hardware, the TPU and the GPU. And I have some slides on that to explain why. Um but some other advantages are it can do bidirectional attention within the within this canvas of tokens. So, you know, autoregressive models can only attend to the past. They have causal attention within their, you know, their transformer. Whereas the a text-to-image model is not restricted at all. It can attend to the future. And that has some interesting properties like it can do self-correcting generation based on future tokens. So, it could like, you know, do some reasoning, see that it got the answer incorrect, and then go back and fix the reasoning and do it again. I have I have a demo of that. Um because this this process is is iterative, it does a number of steps to to to respond, and that means the model can actually do adaptive computation. It it it turns out that you can train the model to spend more time on harder problems and less time on easier problems. And like like the fusion models in general, you can do things like in-place editing where you say like fix the last tokens and give me the prefix that corresponds to those tokens and stuff. Um but the main disadvantage it has and the reason why it's not kind of used everywhere right now is lower throughput for large batches. So, autoregressive models, they're slow, but you can have a big batch of queries together, and then if you push that through the neural network through on the GPU, each individual user is slow, but that you make good use of the TPU by doing that. And so, you can serve a lot of queries. And so, you keep your costs down. You can serve a lot. Whereas since text-to-image does multiple forward passes on the same data, it, you know, it hits a compute threshold basically earlier, and it's it's even though it's lower latency for any one user, it tends to be, you know, lower throughput overall. So, higher cost to serve. And right now, you know, if you have if you've played with Claude recently, uh you'll know that they have some throughput concerns. So, uh people really care about throughput right now. And so, no one's landing text diffusion into any of these big models primarily because of that disadvantage. It's just too expensive to serve, even if it is much lower latency. Okay, so just leading into why does it have lower latency in case you're not familiar with kind of the architecture of how GPUs and TPUs run today. So, in a in a GPU, there's like a a tensor core, which does these like big matrix multiplies. It's very efficient, has a lot of flops or hops or, you know, whatever. Uh and then the memory that sits on the TPU GPU, this this HBM, that's where the weights and the activations and everything are stored, and that has to transfer over from the memory, all the weights and the activations and the KV cache, into the tensor core in order to do the computation. And so, it has to flow through this bandwidth channel. And that bandwidth channel is very tight. It turns out that the both GPUs and TPUs have a lot of flops and not that much bandwidth. It's quite hard to It's expensive to put bandwidth onto these chips, and it's easy to put flops. So, because of that ratio, you can uh you you know, you can If you do the more flops you do for each streaming amount of data you put through, the better. All right, so So, when we're serving uh an auto regressive model, these these chips are memory bound. They're basically bottlenecked by this bandwidth. Um so, when you do auto regressive next token generation, for each token, you're doing one token at a time. Let's say batch size one. You have to stream over the entire neural network and all the KV cache and everything to get one token, and then you do it again for the next token and so on. Whereas for text diffusion, you're generating, say, 256 tokens, you still will over everything, but if you can do that less times than the number of tokens, this iterative refinement process, then you'll get a speed up. So, if you can do, say, 24 passes to generate 256 tokens, you'll be doing 10 times fewer memory transfers than an autoregressive model. And if you are truly memory bound, then you'll be 10 times faster, something like that. So, that's that's the real reason, that's the hardware reason why uh text-to-image models are much lower latency than autoregressive models. Okay. So, you know, we had this Gemini diffusion demo. Maybe some of you got access to it uh last year. And, you know, that was able to hit, you know, something like 2,000 tokens a second um pretty consistently, depending on the length of the query. Obviously, it depends. The longer sequence it's generating, the less it's prefill dominated. And so, you can really lean into these very long sequences of very fast tokens. But, if you're only generating one token, for instance, you'll be just dominated by the cost of the prefill. And the tokens per second number that was reported on this webpage was incorporated prefill and everything like that. So, this was 2,000 tokens a second. Those were genuine raw tokens that you would receive in your web browser.
+</details>
+<h3>智能跃升：双向自我纠错与自适应计算分配</h3>
+<p>文本扩散模型最引人瞩目的高级特性之一，是其实现<strong>双向推理</strong>（Bidirectional Reasoning）与<strong>原位自我纠错</strong>（Self-Correction）的能力。在传统的自回归模型中，一旦某个时间步输出了错误的 Token，该错误就会被固定在上下文中，模型只能在后续生成中“将错就错”或以文字形式道歉（如 GPT-4o 可能会在后续文本中写道：“不好意思，我刚才算错了，正确答案是...”）。</p>
+<p>而文本扩散模型由于采用了非因果的注意力机制，可以在降噪的迭代过程中对已生成的画布内容进行重写。以一道数学计算题为例：
+$$\sqrt{81} \times \left(\frac{2}{3}\right)^2 + \dots$$
+在前两次前向降噪中，模型可能会先粗略地猜测答案为 <code>60</code> 或 <code>49</code>，但在后续的前向传播中，随着对后面推理步骤（如 $2^2=4$ 等）的去噪提炼，模型会发现前期的预测错误，从而直接在初始的输出位置将答案<strong>原位修改</strong>为正确的 <code>39</code>。</p>
+<p>此外，该架构天然支持<strong>自适应计算</strong>（Adaptive Computation）。模型能够自己评估任务难度，从而动态决定去噪的步数。对于简单的记忆性任务（如背诵 Pi 的前 100 位数字），模型可能仅需 4 步即可输出完毕；而对于中等难度的 FizzBuzz 代码编写则需 18 步；面对更复杂的物理概念阐述（如用一段话解释量子力学），模型则会自动将计算预算扩展至 31 步降噪，从而将宝贵的算力精准投放到高价值的推理环节上。</p>
+<details>
+<summary>Original English Source</summary>
+Okay, so that was the kind of a whirlwind tour of text-to-image and its main advantage, which is latency. But, I want to dig in a little bit into some of the other advantages that text-to-image has, which are kind of a little bit less talked about in the literature. Um but, I think are pretty cool, and this is why I'm excited about it. So, at at the at IO last year, Google IO last year, they showed this demo for the text-to-image model, which is you know, this is really easy prompt. But, uh you know, lots of models actually make mistakes on it. So, the prompt is, do you go to next slide? What is the square root of 81 * 2/3 squared plus, you know, blah blah blah. And I think the answer is 39 to this problem. And so, you know, you pass that into the model, and you ask the you ask the Gemini diffusion to respond to that. After one forward pass, these are the tokens it's generated. So, one forward pass through the model, it's starting to respond. Now, since it's an iterative refine the process, a one forward pass is is not all it's going to do, but after one forward pass it has this. So, it has answer equals and then it said 60. It's not correct, but that's what it's guessing for now. And then it starts to do the reasoning. So, a solution calculate square root of 81 and so on. After two forward passes, it's changed 60 to 49. And it's gotten a little bit further into the reasoning. So, it's gotten like, you know, five steps into the reasoning. 2 squared equals 4 and some of the blue tokens are kind of still going to change. And then after three forward passes, it's actually gotten all the way through the reasoning. So, it gets it gets and it gets the answer correct at the end. 36 + 3 is equal to 39. And it's gone back and fixed the original response to say 39. So, it's it had a mistake twice, 60 and then 49, but once it finished the reasoning, it was able to return back and fix the mistake that it made at the start. Now, it's going to do a couple more forward passes in order to fix, you know, some of these tokens that aren't quite right in the text, but overall that's basically the structure of the output that it'll return. And this is, you know, this is a a property that text division models have. This ability to do bidirectional reasoning. So, to to not only see the past, but also see the future that it's going to utter. It's going to respond. And also to use that information to do self-correction. So, it made a mistake, but it was able to, you know, had another forward pass, it was able to go through and fix that mistake. At the time, you know, much, much bigger models than the one we were serving made a mistake for this problem. So, both Chat GPT 4o, which was new at the time, and Gemini 2.5 Flash, which was brand new at the time, both made an error on this on this exact problem. So, you give them the exact same prompt and then they would say, you know, remember the answer is 39. GPT 4o said 40. That's the best guess it can do at that one token. It went through the reasoning and then it said 30 It did manage to figure out it was 39 and said I made a mistake. It's 39, not 40. Uh Gemini 2.5 Flash also made a mistake, said 42 and then it it actually just stuck to its guns and never changed it and said 36 + 3 is 42. So it like incorporated the error into its reasoning later. Uh and these are way bigger models than the Gemini diffusion models. So it's it's really is a property a flaw of auto aggressive models that the text diffusion models don't have. Um and you know, you can fix this with modern reasoning thinking models. Uh but you know, then you're just kind of punting the the problem into something else, but Anyway, okay. So that's that's that's one advantage, which is bidirectional reasoning self-correction. Another one is what I I hinted at before, which is dynamic computation. So you can you can give the model more time at inference, more forward passes, you get a bigger budget, and it can just do better. It's not exactly monotonic, but it is roughly monotonic that the quality across every eval basically just continues to go up because it can it gets even if the even if the solution is almost entirely clean and correct, it gets to look at it and see that it made a mistake and then fix it. So you get this you get this nice kind of curve where you always see as the number of denoising steps such as the forward passes go increases, you get you can overall the the quality gets higher. And these are just six coding evals that we monitor internally. On top of that, a slightly different concept is it is the model can do adaptive computation, which is that you can allow the model, you train it in a way to determine itself when it is finished. And then for easy responses, it can use a little bit of compute and for harder responses, it can take longer. So here's just three examples from from the Gemini diffusion model. Which is what are the first 100 digits of pi? This is actually 100 tokens. It looks like a short response. This is actually 100 tokens. And it only takes four steps to do that. Because the model it's an easy prompt. It's an easy response because you've just memorized the 100 digits of pi. You can just output it. Whereas you know, for an auto aggressive model in the same time would have only done four tokens. Um so that's a very easy one. Slightly more challenging is to write a little bit of code, so that takes you know, 18 forward passes uh to generate FizzBuzz. And then some something more complicated is explained quantum mechanics in a single paragraph, and that took 31 denoising steps. So, it just took its time just for whatever reason decided to spend longer on those ones. And so, the model naturally gets to decide I guess to determine when it's going to finish and return the response. And typically, we see that harder evals take more time. So, this is This is a year ago now, so the evals are kind of old school, but um the you know, on the higher on the harder end is GPQA Diamond, which for this the model size we were targeting was quite a hard eval, and that took a long time for it to respond to those ones. Whereas on the other end are like MBPP, which is mostly basic Python programs, it was very it was very easy to you know, took a very little time for it to respond to these ones. And this is entirely determined by the model itself. Just easier problems, easier prompts, it could respond to quickly, and harder ones it decided itself to spend more time reasoning.
+</details>
+<h3>应用演进：原位文本编辑与全动态系统生成</h3>
+<p>除了生成速度和推理精度的提升，文本扩散模型在实际交互应用中还带来了一系列突破性的功能演进。最典型的便是<strong>原位文本编辑</strong>（In-place Editing）。这类似于图像扩散模型中的“局部重绘”（Inpainting）技术，用户只需锁定绝大部分已有文本，仅对局部内容进行遮罩（Masking），扩散模型即可在此基础上直接进行纠错、优化或续写。</p>
+<p>在代码开发中，这意味着模型可以“原位”修复 Bug，或者在保留原始逻辑的同时就地生成代码注释，而不需要像自回归模型那样从头到尾重新生成或输出整段冗长的代码。</p>
+<p>这种亚秒级的极低单用户延迟，彻底打通了人机交互的实时感，解锁了诸多极具未来感的动态应用：</p>
+<ul>
+<li><strong>动态维基百科（Dynamic Wikipedia）</strong>：用户在点击页面链接时，后台会当即动态生成整页 HTML 与文章内容，无需任何预先加载，且体验平滑、真实。</li>
+<li><strong>动态社交网络（Dynamic Reddit）</strong>：系统在毫秒级时间内根据用户的主题定制，瞬间模拟出包括发帖、多楼层评论和插图在内的整个活跃社区（文本由扩散模型生成，图像由 Juno 等端侧图像生成器渲染）。</li>
+<li><strong>动态操作系统（Dynamic OS）</strong>：实现整套虚拟操作系统的即时演算，从文件系统的 Readme 文本到桌面图标的点击响应，每一次交互都是由模型在后台实时生成的。</li>
+<li><strong>实时语音编程（Live Coding by Voice）</strong>：演示展示了用户通过语音下达指令（例如“构建一个 To-Do 应用，随机填充 10 条任务，设置其中 4 条已完成，并支持按名称和状态排序，最后切换到深色模式”），模型在 15 秒内直接在网页画布上就地完成了完整的应用开发与多次迭代修改。</li>
+</ul>
+<details>
+<summary>Original English Source</summary>
+Lastly is the kind of fast in-place editing. So, diffusion models in general have this very nice property where you can so, take an image like in this example, you know, cut something out of it or whatever or give it a little prompt, and it'll fill it in, and you can use the context uh that that you haven't cut out to fill in the the piece you've cut out correctly. And so, you you can use that for like clever image editing, things like that. Um And then because the reason it can do that is because uh you know, it's not autoregressive. There are autoregressive image generators, right, which go left to right, top to bottom like raster order, generating pixels, you know, but diffusion doesn't work like that. It'll just see the entire image and then start to denoise it. And because of that, because it gets to see every pix- every pixel gets to see every pixel, it can fill in the missing information and and do it in a way that's kind of consistent with whatever prompt you're giving. Uh Uh we can do something similar. So, I have a couple of demos here. Uh Can you see that? Yeah, so this is just some code and you say, "There is a bug in this code. Can you fix it?" And it just It'll just make the edit in the correct place. Like, it won't you You can barely see that, but it's just doing a little fix here of the indices. Uh and you can say things like, "Can you add documentation?" And it'll go in. It's not It's not just one by one generating all the tokens. It's doing a clever editing procedure to to actually fill in the uh the correct edits here. You can do that with, you know, more general text. Like, you can take a story and then say, "Add a middle paragraph." And because it can see that the first and the and this third paragraph, it can fill in the paragraph in a way that's consistent with the the rest of the story, for instance. And this is just in-place editing, basically. Um okay. So, that's uh Those are some of the advantages. Uh don't have a lot of time. Uh the biggest advantage, like I mentioned, is this low latency. And you know, we we really lean into that. And uh I just want to show you a couple of demos of some of the things that people internally have built to kind of show what the advantage of low latency can give you. So, it's not just the same thing faster. It can really unlock some new some really new applications. So, in your own work, you're all AI engineers. Uh it'd be interesting to see when when the next diffusion model comes out from our team what the low latency could unlock. Uh and kind of what new applications can be built. So, here are just some demos. So, this is Wikipedia. Let me just pause it, actually. This is Wikipedia where everything is generated on the fly, even the HTML. So, this This is actually being Oops. This is actually being generated by the by the model on the fly. So, that It's a web page with the HTML and the text and everything being generated on the fly. So, it looks like regular Wikipedia. And when you click on it, it's it's the the latency is low enough that it can just fill in the page as if it was a real Wikipedia page. Um so, that's kind of uh Wikipedia generated on the fly by a this is a very low latency model. We have a similar thing where we did it for Reddit. So, now all the responses to your posts will be by bots. They weren't already. Um and it's generating fake comments. Not the So, uh the Gemini diffusion model was not an image generating model. So, this demo links in the which was our startup state-of-the-art image generator model at the time, which I think was Juno. Was it was before Nano Banana. So, it is the two of these models working together to fill in the web page. So, it's the image generation model is a little slower. Um but you can see that it's like, you know, you can you can invent any Reddit you want, sharks in this case, and it'll generate the page with the text. The images follow a minute a minute later, and then you can interact with this website as if it was a real website with, you know, real users and so on. Just being entire All the comments, all the images, all the HTML, everything is being generated entirely on the fly here. This is being generated by the model. Um I love this one. This is my favorite one. This is an operating system also being entirely generated on the fly. So, every click here is generating the next page of the operating system. So, it looks like a real operating system, but it's all being generated by the model on the fly responding to every click. So, every time you enter like the readme, it generates the text, but it also generates, you know, the the web pages you can do, you know, go back to the desktop and and so on. I think this Yeah, okay. Um and then this is a this is a demo from someone on Twitter who used the who used the Gemini diffusion API or sorry, not the API, the web page to do some live coding with his voice. So, I I really like this one. >> Create a to-do app. Add 10 random to-dos. Allow to-dos to have a completed state. Mark four random to-dos as completed. Allow me to sort to-do's by name and by state. All right, let's see if this works. Sort by name, sort by state. Testing, enter, was added to the bottom. We'll try deleting a few. Add one. Everything's working. Please convert this to dark mode. And this was literally 15 seconds of work. >> Okay, so that was uh yeah, that was someone outside of our team so he he could say that. Uh yeah, but five coding by voice but but just in general I think that, you know, low latency models can really unlock some new experiences uh for users and new products. And so we're excited to see what people will do when the next generation comes out. Okay, and on that note, thank you very much. Questions? Yeah? >> Yeah, yeah. So yeah, we use all the same data. Yeah. I mean, the algorithms have to change a bit but we use all the same data. Yeah. You can distill them, yeah. Yeah, they're I'm not sure if there are any published ones. I don't think so. Maybe they're selling externally but There's a Yeah, so we're going to release something soon. Yeah. Yeah. Yeah. Uh yeah, so there's a the bigger models tend to require less steps for the same output. So, they kind of you know, even if the model is getting bigger and the flops per forward pass are getting bigger, they tend to reduce the the forward passes they need. So, it's kind of a you kind of have some sort of a diminishing cost of serving even the biggest models. Yeah. >> So, the next question, do you how do you price the price of the structure doesn't matter for the diffusion >> Uh I don't know. We haven't got to that yet. I'm a research scientist. Uh Yeah. >> How do you define the size of the answer because for you expect that I have this image and I have the output >> Yeah. >> frame. How do you do that in >> Mhm. >> coding or text? >> So, there's a there's a there's a few different ways. The easiest way is to just fix some some window length and then just iterate on that. So, it's like auto aggressive, block-wise auto aggressive. It's kind of the standard way to do it. But, you can have like a a head that will predict the length of the response and stuff like that if you wanted. Yeah. >> Yeah, but you have to fix the outcome in order to let the diffusion model >> No, it still can generate unlimited texts texts, but it's just if you fix a window length then it just does that window length auto aggressively if it needs to generate like many many windows of text. Yeah. >> I might have already mentioned this, but when you gave that example of the denoising steps being different ranges with different, you know, uh >> Yeah. >> Could you ahead of time set like a a limit on the denoising steps that you that you require for a problem so you can have >> Yeah. >> almost just understand what your latency is going to be ahead of time? >> Mhm. Yeah, yeah, these are all with a limit, but they just finish as with earlier than the limit. Yeah. >> If you if you had multiple windows like you just said going through, can can they then go back and attempt to previous windows? Is that kind of as the window goes is it >> It's Yeah, it's it's I mean that that you could potentially, but for for us we just set it in stone and continue. Yeah. Yeah. Other questions here? Yeah, yeah, that's how it works. Yeah. Oh no, so it's prefill is the same. It's just so you've got some context and you pre you prefill. Uh and then after that the generation step is typically in blocks of some fixed size, like 512 or 1,000 or 32 or whatever you want. And then that's auto aggressive. Yeah. So you can do that. Um the easiest way to do it is to just have like a logits at the top. Just vanilla prediction head at the top. Well, it So this is like this is all like discrete diffusion, right? So it's always tokens in tokens out. Like if I show you the For every step, yeah. So if I go back here, it's always like a discrete corruption process. And then you fill in a discrete token back in. So it's always So you're always in a discrete space. But you can do it in latent spaces, but and people have done that, but most of most of the text diffusion models in literature is discrete diffusion today. Yeah. There might be one day. Yeah. >> I think for now they have different use cases. So, you know, if you think about what a low latency model provides, that's like that's worse throughput. So, what's that trade-off is on-device applications. So, we are in a couple of on-device applications already. Um and within like the Alphabet ecosystem. So, robotics, things like that, where you want to run a a model on the device itself. So, your phone or a robot or whatever. And then you but you want it to be low latency and you're not batching with thousands of other queries like Gemini being served in the service side. So, you want the lowest latency model. Quality isn't really any They're the same quality basically. So, then you may as well pick the low latency one cuz you don't have the throughput concerns. >> What do you mean like in the in the future like can we get quality up to the bar with with the current black box models? >> I Quality isn't the concern, it's the throughput uh for serving in a big batch setting. Yeah, yeah. Yeah. >> So, currently you are getting more or less the same quality of frontier models in your research? >> Yeah, yeah. >> So, what about reasoning tasks? Because we we can really verify what we want. Something like this. >> Yeah, yeah. Yeah, you can do RL. Yeah. You just need to change the algorithm, you know, but you can still do it. Yeah. Yeah. >> Is there much scope for combining diffusion with autoregressive text models? >> Yeah, you can do that. Yeah. Yeah. Yeah. >> Can you like initialize with a smaller model so you don't have to start from noise so you can have to do less steps? >> Um the problem with that is if you train it with noise, it expects noise. You'd have to train it with the small model. As you like the output and that just adds complexity. So, we don't usually do that. Yeah. Um Well, not from not from our team, but there are there's a bunch of literature out there, yeah. Yeah. Yeah. You get the idea, I think. Yeah. Any other questions? There's a lot of questions. Gone through them all. That's good. Oh, one more. Okay. Um I don't know. I don't think we've tried to do that. Probably would work. It would probably do something. Yeah. Cool. Okay. Thanks, everybody.
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Google DeepMind" class="entity-link company-link">Google DeepMind</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Gemini Diffusion" class="entity-link product-link">Gemini Diffusion</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">text-diffusion</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">discrete-diffusion</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">hardware-utilization</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">adaptive-computation</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">in-place-editing</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI学习的真相：超越名词，掌握“动词”的力量</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="AI学习的真相：超越名词，掌握“动词”的力量" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">AI学习的真相：超越名词，掌握“动词”的力量</span>
+      <span data-pagefind-meta="speaker" style="display:none;">课代表立正</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-05-14
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ke-dai-biao-li-zheng/">课代表立正</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=9A98hWZs5yU" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-05-14
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本视频深入剖析AI学习者为何普遍焦虑且能力停滞。核心论点是，人们常沉迷于学习AI名词（如RAG、Agent），却忽视了更关键的“动词”——即任务拆解、上下文管理、人机协作、调试等实际操作能力。通过RAG案例，揭示了真正价值在于“做事的手艺”，而非对工具的熟悉。视频强调，掌握这些“动词”是AI能力提升的根本，并指明了学习的正确方向。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>最近我一直在思考一个问题：为什么许多人在学习 AI 的过程中会越学越焦虑，并且他们的水平似乎被限制在一个地方，难以提高？表面上看，这些人似乎懂很多新概念，比如 <strong>微调</strong>（Fine-tune: 针对特定任务或数据调整预训练模型的参数）、<strong>检索增强生成</strong>（RAG: Retrieval-Augmented Generation，结合检索和生成，为大型语言模型提供外部知识）、各种 <strong>框架</strong>（Framework: 支持特定类型应用程序开发的可重用软件组件集合）如 <strong>LangChain</strong>（LangChain: A development framework for building language model-powered applications）、以及 <strong>Harness Engineering</strong>（Harness Engineering: 指构建和管理AI应用的工程实践，涉及复杂流程和工具链）。他们能够头头是道地讲道理，也可能看过很多 AI 工作流，甚至模仿大佬们的 prompt 来完成一些任务，写文案、写代码都能做得不错，让人感觉 AI 确实很厉害。</p>
+<p>然而，当这些技能进入真实工作场景时，他们往往会“抓瞎”。真实工作是一个连续推进的过程，代码库可能积压历史包袱，上下文信息不完整，模型需要针对具体任务设计解决方案，而非简单复制他人的方法。更重要的是，AI 的表现并不总是“happy path”：它会偷懒、会忘记、会答非所问、会产生幻觉（hallucinate），甚至在看似不会出错的地方突然出错。这时，许多人的第一反应是：“是不是我的 prompt 没学好？是不是我还没掌握最新的 fancy technique？是不是应该换个模型或工具？是不是要重新学习那些概念？”于是，他们继续追逐下一个新名词，离真正完成任务越来越远。</p>
+<p><strong>问题出在追逐名词，而非动词</strong>
+这些人在 AI 能力上的瓶颈，恰恰源于他们过度追逐“名词”，而真正决定一个人 AI 能力好坏的是“动词”——即那些实际的操作和解决问题的能力。RAG、Harness Engineering 固然有价值，但它们只是名词。这些东西真的去学，5分钟跟 AI 就能学会。真正厉害的人与普通使用者之间的差距，不在于多学了几个名词或新东西，而在于他们处理任务的方式完全不一样。</p>
+<h3>核心差异：动词的力量</h3>
+<p>高水平使用者知道：</p>
+<ul>
+<li>什么时候该给 AI 更多或更少的上下文。</li>
+<li>如何将一个复杂任务拆解并分配给 AI。</li>
+<li>哪些环节可以交给 AI，哪些环节必须由人来判断。</li>
+<li>如何针对任务本身进行评估（evaluation）。</li>
+<li>如何确保 AI 能够准确地遵循指令。</li>
+<li>是让 AI 直接看结果，还是先让它写脚本。</li>
+</ul>
+<p>当整个任务出错时，他们能够调试（debug），能识别出问题根源：是 AI 能力限制？上下文不足？路由问题？还是其他环节？他们能识别（identify）并解决这些根本原因（root cause）。</p>
+<p>这些“动词”听起来不像 MCP（可能是某种AI开发平台或方法论，具体含义依赖于上下文）、LangChain 那样“技术感”十足，它们没有直接的 GitHub 仓库，网上也很少有人专门教授，甚至不能 <code>pip install</code> 成一个 package。而且，学会这些“动词”后，很难直接写进简历的技能栏，因此大家往往不重视。然而，最终决定你 AI 能力的，恰恰是这些动作，是这些“动词”。</p>
+<h3>名词的诱惑与动词的价值</h3>
+<p>为什么我们会“上瘾”于学习名词，而忽视更有用的动词？</p>
+<ol>
+<li><strong>边界与错觉</strong>：名词有明确的边界。学了 RAG，就以为能解决 RAG 相关问题；学了 Agent，就懂了模型如何调用工具；学了 Fine-tune，就觉得能针对小样本数据做专属模型。这给人一种“进步明显”的错误感觉。</li>
+<li><strong>证明与清单</strong>：学习名词有一个好处是可以被证明——“我学了 RAG，我做过 RAG”，然后可以直接写进简历，完成一个“技能清单”的打勾。这让你停止了继续深入学习的动力。</li>
+</ol>
+<p>我们的大脑里因此形成了两个“货架”：</p>
+<ul>
+<li><strong>第一个货架（名词）</strong>：RAG、Agent、Harness Engineering。这些东西看起来“硬”，有技术含量。</li>
+<li><strong>第二个货架（动词）</strong>：上下文管理、任务拆解、人机协同、结果确定性。这些东西看起来“软”，大家觉得不急，或者不确定其价值。</li>
+</ul>
+<p>因此，大家更愿意投入时间和精力在第一个货架上。</p>
+<h4>RAG 案例解析：管中窥豹</h4>
+<p>以 RAG 为例，许多人学习的方式是从“pipeline”开始：文档切分、embedding、存入向量数据库、用户检索时找 top-k、塞入 prompt、生成答案。这听起来是一个完整的、令人安心的流程。但到了真实应用场景，这个流程“狗屁都不是”，甚至适得其反。</p>
+<p>真实工作中会遇到：</p>
+<ul>
+<li><strong>切分策略</strong>：固定 size 还是让模型决定？</li>
+<li><strong>Embedding 的必要性</strong>：是否总需要 embedding？是否有更好的信息存储检索方式？</li>
+<li><strong>召回方式</strong>：为什么用 top-k？如何决定召回多少内容（5段还是20段）？</li>
+<li><strong>信息处理</strong>：答案会不会被无关信息掩盖？Chunk 太小是否会切分答案？Recall 下降怎么办？</li>
+<li><strong>时效性与权限</strong>：文档过期怎么办？跨部门的权限管理如何实现？</li>
+<li><strong>准确性与溯源</strong>：答案引用是否准确？什么是“ground truth”？</li>
+<li><strong>问题定位</strong>：回答错误时，是检索、生成、prompt、流程、还是用户意图理解错误？</li>
+</ul>
+<p>这些是企业工作中真实面对的问题，与基础的 pipeline 流程关系不大，却是懂行的面试官会重点考察的内容。用“名词”方式学 RAG，关心的是 pipeline 里有哪些“零件”；用“动词”方式学 RAG，关心的是系统如何在工作环境中稳定运行。</p>
+<p>关注名词的人本质上是“反生产力”（counterproductive）的，因为他们只想用学到的名词去解决问题，而忽略了真正值得解决的问题，并急于“炫技”（show off）。</p>
+<p>当你看到“动词”层面的能力时，你会发现 RAG 这个概念远远不够用。真正有价值的动作包括：权限控制、监控、诊断、上下文工程、工作流设计、评估。这些基础 RAG pipeline 中有用的部分，早已被平台吸收。企业愿意付出溢价的，正是这些 pipeline 之上的能力。因此，学习名词不仅反生产力，而且越来越不值钱。真正值钱的，是这些“动词”，无论在面试、工作还是创业。</p>
+<p>RAG 只是一个例子。换成 Agent、Harness Engineering，甚至是 AI 编程、AI 写作、AI 知识库，道理都是一样的。</p>
+<ul>
+<li><strong>初学者</strong>关心“我该学哪个工具？”vs. <strong>高手</strong>关心“这个任务该如何组织？”</li>
+<li><strong>初学者</strong>关心“怎么写更好用的 prompt？”vs. <strong>高手</strong>关心“这个任务需要什么样的上下文结构？”</li>
+<li><strong>初学者</strong>关心“哪个模型最强？”vs. <strong>高手</strong>关心“哪个模型/工具/流程最适合你的任务？”</li>
+<li><strong>初学者</strong>问“为什么 AI 又错了？”vs. <strong>高手</strong>就问“到底哪里出错了？”</li>
+</ul>
+<p>高手的动作围绕着：<strong>管理（Management）、拆解（Decomposition）、判断（Judgment）、路由（Routing）、诊断（Debugging）、沉淀（Sedimentation）</strong>。</p>
+<p>同样是使用模型和工具，高质量项目的产出（如 Claude Code 基本上是用 AI 写出来的）与普通开发者抱怨 AI 不好用之间，存在巨大的差距。很多开发者停留在浅层名词，忽视了“动词”的重要性，甚至不知道它们的存在，自然认为自己水平已经很高。但这种观念上的差距，是限制水平提高的“天花板”。了解并掌握这些“动词”的存在，才有持续提升的希望。</p>
+<h3>机制与原因</h3>
+<p>为什么会出现这种“名词热”、“动词冷”的现象？</p>
+<ol>
+<li><strong>可见性差异</strong>：工具（名词）的进步很容易被看见和感知，而动作（动词）的改进则不那么直观，他人难以察觉。</li>
+<li><strong>瓶颈的可见性</strong>：人们只能看到自己当下能看到的瓶颈，这些往往是名词层面的。动词层面的瓶颈则不容易被发现，直到你真正克服了这些障碍，才能体会到它们的重要性。就像只有高手才能告诉你，自己和另一个高手的“刺拳”之间，到底有多少差距。</li>
+</ol>
+<p>这也是为什么“鸭哥”（此处指代一位在AI领域有深度实践和教学能力的人）如此稀缺和有价值。他不仅走过了这条路，看到了其中的深层内容，还能将其具象化、深入浅出地教导出来，帮助他人弥补差距。</p>
+<p>这也能联系到“手艺”的概念：无论是高尔夫、拳击，还是编程、写作、学 AI，本质上都是一种手艺。用“学科学习”的思维去学 AI，容易只关注概念；而用“手艺”的心态去看待 AI，就会理解“用 AI 做事的手艺”的重要性。</p>
+<p><strong>总结：找到真正的入口</strong></p>
+<p>为什么学了很多 AI 却越来越焦虑，却无法用好？
+因为大家只看到了“上面这条线”——各种各样的名词，而没有看到“下面这个面”——真正的动词和它们展开的实践。真正的入门，不是追逐最新的概念，而是开始看到并提高“下面的这些动作”。那时，你就不再是追逐 AI 新名词的人，而是真正开始用 AI 做事的人，焦虑自然会减轻。</p>
+<p>工具、模型、框架、名词会不断变化，但这些“动词”相对稳定，并且随着模型增强，会产生越来越大的复利效应。例如，上下文管理能力，在新模型拥有更大 Context Window 后，其重要性反而会提升，因为我们可以用它做更厉害的事情，并且有更多手段去有效管理。这些沉淀的经验和认知，具有长期价值。它们构成了 AI 时代的工作“手艺”。</p>
+<p>下次当你觉得学了很多 AI 却没入门时，请反思：</p>
+<ul>
+<li>我是否看到了“手艺”背后对应的那些动词？</li>
+<li>我可以在哪里学习更多动词？</li>
+<li>我应该如何提高这些动词的能力？
+这可能才是真正的入口。</li>
+</ul>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=LinkedIn" class="entity-link company-link">LinkedIn</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=RAG" class="entity-link product-link">RAG</a>, 
+                
+                  <a href="/search/?q=LangChain" class="entity-link product-link">LangChain</a>, 
+                
+                  <a href="/search/?q=Harness Engineering" class="entity-link product-link">Harness Engineering</a>, 
+                
+                  <a href="/search/?q=MCP" class="entity-link product-link">MCP</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">ai-learning</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/skill-development/">skill-development</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/problem-solving/">problem-solving</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-workflow/">ai-workflow</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/artificial-intelligence/">artificial-intelligence</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

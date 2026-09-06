@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anthropic研究员万字长文：没人教过你怎么做研究 · 乔木博客</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="Anthropic研究员万字长文：没人教过你怎么做研究 · 乔木博客" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">Anthropic研究员万字长文：没人教过你怎么做研究 · 乔木博客</span>
+      <span data-pagefind-meta="speaker" style="display:none;">向阳乔木</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-06-14
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/knowledge-meta/">knowledge-meta</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/workflow-tools/">workflow-tools</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/xiang-yang-qiao-mu/">向阳乔木</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://blog.qiaomu.ai/anthropic-researcher-guide" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-06-14
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">文章探讨了在研究领域如何进行有效的研究方法论，强调研究能力是一组需要刻意训练的技能。核心观点包括：从吸收问题、预测结果、保持诚实的日志记录和公开写作等实践，是提升研究质量的关键。同时指出信息来源的局限性，倡导通过主动设计实验循环、将工程与研究融合以及积极地与外部世界互动来加速发现自己错误的速度。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>乔木博客</p>
+<p>全部</p>
+<p>AI工具</p>
+<p>AI教程</p>
+<p>AI生成</p>
+<p>AI资讯</p>
+<p>健脑房</p>
+<p>播客解读</p>
+<p>论文学习</p>
+<h1>Anthropic研究员万字长文：没人教过你怎么做研究</h1>
+<p>论文学习</p>
+<p>·</p>
+<p>2026年6月14日</p>
+<p>·</p>
+<p>145 次阅读</p>
+<p>·</p>
+<p>约 9 分钟</p>
+<blockquote>
+<p>https://x.com/itsreallyvivek/status/2064686372737454155</p>
+</blockquote>
+<p>Richard Hamming在贝尔实验室有个习惯，让他在午餐桌上很不受欢迎。</p>
+<p>他会问坐在旁边的人：你们领域里最重要的问题是什么？然后再问：那你为什么没在研究它？</p>
+<p>人们开始换桌子坐。</p>
+<p>这个问题刺痛人，是因为大多数人根本没有好答案。</p>
+<p>我们不是在选择问题，我们是在吸收问题，从导师那里，从某个大实验室上季度宣布的方向里，从这周所有人都在转发的那篇论文里。</p>
+<p>研究能力是一组可以刻意训练的小技能。</p>
+<p>从怎么选问题、读什么材料、如何记录思考，到怎么加速实验循环、怎么找对合作者，每一项都有具体的方法论。</p>
+<h2>吸收来的问题，自带一个致命缺陷</h2>
+<p>吸收来的问题，你拿到了结论，却没有推理过程。</p>
+<p>你知道某个著名实验室在押注某个方向，但不知道为什么，不知道他们期待找到什么，也不知道什么情况下他们会放弃。</p>
+<p>等他们转向，你一年后才知道。</p>
+<p>而在一个已经时髦的问题上，你在和一千个比你起步更早、算力比你更多的人赛跑。</p>
+<p>John Schulman在他的机器学习研究指南里把工作分成两种模式：</p>
+<p>一种是读文献、找可以改进的地方；另一种是先确定一个你真正想看到存在的结果，然后倒推出需要做的实验。</p>
+<p>他主张第二种，背后的逻辑很安静：这种方式会制造出原创性。</p>
+<p>一个你真正在乎的目标，会把你拖进任何综述论文都没有覆盖到的领域。</p>
+<p>品味这件事，常被人当作天赋来讨论，但它更像一块肌肉。</p>
+<p>每次跑实验之前先预测结果。</p>
+<p>拿到一篇论文，先盖住结果部分，只看方法，猜数字。</p>
+<p>记下这个月发布的哪些工作两年后还会有人提，之后回来对照命中率。</p>
+<p>预测加纠错，重复几百次，这就是所有好模型的训练方式，包括你脑子里那个。</p>
+<h2>共享的阅读清单，只会产生共享的想法</h2>
+<p>如果你的信息来源是arXiv的热门页面，加上群聊里过滤剩下的内容，你大概率会和所有人同时得出同样的结论。</p>
+<p>而同时得出的同样结论，价值约等于零。</p>
+<p>旧材料的价格被严重低估了。</p>
+<p>这个领域一直在延迟重演自己的历史：混合专家模型可以追溯到1991年，LSTM到1997年，反向传播在1986年才真正流行起来。</p>
+<p>Rich Sutton在2019年用大约一千个词写了《苦涩的教训》，它对这个领域走向的预测能力，比很多十倍长的综述都强。</p>
+<p>Claude Shannon在1952年有一个关于创造性思维的演讲，他的第一招是：把问题缩小到几乎平凡的程度，先解决小版本，再一块一块地把难度加回来。</p>
+<p>这一个技巧能带你穿过的墙，比任何现代生产力建议都多。</p>
+<p>跨领域的宽度和深度同样重要。可解释性研究在厚颜无耻地借鉴神经科学。</p>
+<p>评测设计本质上是穿着实验室白大褂的机制设计。真正理解GPU如何搬运内存，能让你在跑基准测试之前就看出哪些架构论文是死路。</p>
+<p>而诚实的统计学，大概是机器学习里最稀缺的技能，这个领域里很多所谓的严谨，不过是带着误差棒的直觉。</p>
+<p>还有一件事：去读论文本身，不要只看线程摘要。</p>
+<p>附录里藏着尸体，局限性部分通常是整篇文章最诚实的段落。</p>
+<h2>写下来，才知道自己有没有真的想清楚</h2>
+<p>Paul Graham说过，一个想法在你试图把它写成文字之前，可以感觉完全成形。</p>
+<p>但纸面会找出你脑子里糊过去的漏洞：那个从没验证过的假设，那个其实推不出来的步骤，那两个悄悄互相矛盾的论断。</p>
+<p>Feynman的原则是：你最不能愚弄的人是你自己，因为你是最容易被愚弄的目标。</p>
+<p>写作是有史以来最便宜的防御手段。</p>
+<p>Darwin走得更远，他把这件事变成了一个流程。</p>
+<p>任何与他理论相悖的事实，必须当场记下来，因为他发现自己的记忆删除不方便的证据，比删除方便的快得多。</p>
+<p>你的记忆对你失败的实验做着同样的事。</p>
+<p>保持一个日志：假设、设置、预期、结果、更新后的判断。</p>
+<p>回看上个月的记录，那种羞耻感是任何审稿人都给不了你的。</p>
+<p>然后把一部分内容公开发出去。</p>
+<p>Chris Olah和Shan Carter在《研究债务》里论证过：一个领域会被消化不良的想法噎住，而一篇清晰的解释是真正的贡献，不只是服务性工作。</p>
+<p>今天很多在做可解释性研究的人，是通过可读的博客文章找到这个领域的，不是通过会议论文。</p>
+<p>公开写作也是你能拥有的最强履历，因为它是你思维方式的一个无法造假的样本。</p>
+<h2>研究速度，本质上是发现自己错了的速度</h2>
+<p>关于Alec Radford的故事，很少涉及某个单一的天才时刻。</p>
+<p>它们涉及的是体量：每天更多的实验，每周丢弃更多的错误想法，一个比任何人都更新得快的现实模型。</p>
+<p>这让工具链成为了一项一流的研究活动。</p>
+<p>启动一次实验应该是一条命令。画图应该再多一条。</p>
+<p>每个实验都应该能从配置文件里复现，比较两次实验结果应该花几秒钟，而不是一个下午的考古。</p>
+<p>Karpathy的神经网络训练手册里有一个步骤，回报率高得离谱：在大规模训练之前，先在单个batch上过拟合。</p>
+<p>三十秒，消灭一半的bug。把一切缩小到便宜，做对，再花算力。</p>
+<p>也该放弃&quot;工程是研究的初级合伙人&quot;这个想法了。</p>
+<p>在前沿，这两份工作已经融合了。</p>
+<p>能自己搭框架、写评测、做数据管道的研究员，才是那个假设真正能被检验的人。其他人都在排队等待。</p>
+<h2>下降的loss曲线不是分析，是安慰</h2>
+<p>你的实验产生的信息远比你消化的多：对话记录、失败案例、分布的奇怪尾巴。</p>
+<p>大部分死在一个没人打开的logs文件夹里。</p>
+<p>Karpathy的手册在任何训练代码动工之前，先花几个小时手动看原始数据。</p>
+<p>大多数机器学习的bug藏在数据里，而且是静默失败的。</p>
+<p>没有任何东西崩溃，你只是得到一个平庸的模型，以及一个关于原因的错误理论。</p>
+<p>Andrew Ng推了这个不上镜的动作超过十年，因为没有什么能打败它：拉出一百个失败案例，读完，分类，攻克最大的那堆。</p>
+<p>这个方法对模型有效，对评测也有效。</p>
+<p>一个你从没读过对话记录的基准测试，是一个你其实不理解的基准测试。</p>
+<p>一条真正奇怪的行为记录，能教给你的东西，比准确率再多一位小数多得多。</p>
+<h2>你的第一个子领域，是时机的意外</h2>
+<p>把它当意外来对待。</p>
+<p>在可解释性、评测、强化学习、系统方向上都花真实的时间，再决定你住在哪里。</p>
+<p>这个领域的某个角落里，你特定的怪癖是一种不公平的优势，而找到它的唯一方式是在几个地方交学费。</p>
+<p>没有人能免学费。</p>
+<p>先跑每个想法的一次性版本，让大多数想法早早死去。</p>
+<p>把基线调到令人痛苦的程度，因为机器学习的墓地里堆满了在一个调好的基线面前蒸发掉的&quot;提升&quot;，而从审稿人那里学到这件事是最糟糕的方式。</p>
+<p>做消融实验，直到你知道哪个组件在撑着结果。通常只有一个，而且通常不是标题里写的那个。</p>
+<p>宽度也是保险。每个子领域都会饱和，通常就在它在社交媒体上到达顶峰之后不久。</p>
+<p>那些能穿越这些转折继续产出的人，是那些已经对邻近领域了如指掌的人。</p>
+<h2>开放的门，带来真正重要的信息</h2>
+<p>Hamming注意到一个规律：关着门的同事在任何给定的一年里完成了更多工作，而开着门的同事做了真正重要的工作，因为那些打断他们的信息，携带着关于世界真正需要什么的线索。</p>
+<p>你的开着的门大概是你的收件箱，保持这样。</p>
+<p>慷慨在研究里的复利效果无与伦比。</p>
+<p>复现一个结果并发布你的发现。把你为自己做的工具开源出去。</p>
+<p>用平实的语言解释一件难事。</p>
+<p>回报会从侧面到来，几个月后，以一次合作、一个引用、或一个你原本无法申请的职位的形式。</p>
+<p>把你半成形的想法也公开发出去，因为在时间线上犯错，代价远比在论文里犯错便宜。</p>
+<p>而那个在你投入三个月之前告诉你这个想法有问题的合作者，比算力更值钱。</p>
+<p>那种关系买不到，只能赚到。</p>
+<h2>比感觉必要的时间更早开始复利</h2>
+<p>Pasteur说运气偏爱有准备的头脑，Hamming在这句话上建立了整个职业哲学：知识和生产力像利息一样复利增长。</p>
+<p>每天的优势单独看微不足道：读什么，记什么，循环跑多快，和谁争论。</p>
+<p>给它们几年时间，它们会产生从外面看起来像运气的职业生涯。</p>
+<p>比感觉必要的时间更早开始复利。未来的你已经知道，现在是最便宜的阶段。</p>
+<p>© 2026</p>
+<p>·</p>
+<p>向阳乔木</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/research-methodology/">research-methodology</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/experimentation/">experimentation</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/knowledge-management/">knowledge-management</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">scientific-process</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

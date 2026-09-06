@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anthropic、OpenAI与SpaceX的IPO博弈与算力竞争</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="Anthropic、OpenAI与SpaceX的IPO博弈与算力竞争" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">Anthropic、OpenAI与SpaceX的IPO博弈与算力竞争</span>
+      <span data-pagefind-meta="speaker" style="display:none;">人民公园说AI</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-05-18
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ren-min-gong-yuan-shuo-ai-1/">人民公园说AI</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=F7zeD2ZvbFo" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-05-18
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本期访谈深度探讨了Anthropic、OpenAI与SpaceX的上市预期，分析了算力分配背后的博弈、大模型迭代与SOTA基准对公司估值的影响，并讨论了国内外模型性能差距及行业趋势。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>上市策略与市场博弈</h3>
+<p><strong>主持人</strong>: 马斯克是有多恨奥特曼啊？</p>
+<p><strong>Raymond</strong>: 我认为这纯粹是私仇。他甚至说xAI这个公司他不做了，把22万张卡送人。他就是送给竞争对手Anthropic，就是要弄你。</p>
+<p><strong>主持人</strong>: 关于Claude Mythos那个模型，那才是真的收着走。</p>
+<p><strong>Raymond</strong>: 是的，它等于说有一个更高级的模型，全世界有10个人用过，且都知道很厉害。如果是我，我也不敢放。放了我把所有行业大哥都得罪了。</p>
+<p><strong>主持人</strong>: 从技术端看，他们应该已经基本实现了自我迭代的程度，只是不方便开放给大家。他们现在大模型迭代，更多是为了服务于上市。我不确定豆包或者国内其他模型在半年或一年之内能否赶上，6个月左右应该蛮充足的，3个月左右可能就赶上了。</p>
+<p><strong>主持人</strong>: 绝对不能忽略Anthropic这家公司。你觉得它能不能今年上市？为什么能反超OpenAI的估值？</p>
+<p><strong>Raymond</strong>: 今年都非常明确，SpaceX和Anthropic今年都要上市。坊间传闻太多，第一是公司发出了明确信息，第二是投行在美股上市过程中会安排公司见很多大的投资人。哪怕签了NDA（保密协议），口耳相传，全世界也都知道了。NDA在投行经验里就是废纸一张。</p>
+<p><strong>主持人</strong>: 这三家公司今年下半年都会上市吗？估值会是多少？</p>
+<p><strong>Raymond</strong>: Anthropic是今年下半年，SpaceX可能今年上半年，OpenAI我感觉是今年下半年。上市估值要看这两家公司在未来几个月产品的推出状况。每次大模型公司估值较好时，都是因为有个新的模型达到了SOTA（State of the Art）。目前为止，SOTA是Anthropic，应该没有争议。我不确定未来3-5个月GPT能不能推出一个跳了级的SOTA。如果能，会加速它的IPO时间表并让估值上个台阶，否则现在很多人对OpenAI比较失望。</p>
+<h3>算力策略与行业动态</h3>
+<p><strong>主持人</strong>: 前两天新闻说Anthropic从SpaceX买了马斯克手里的22万张GPU，这对SpaceX来讲难道不是利空吗？</p>
+<p><strong>Raymond</strong>: 小白的主观看法是，AI模型再先进复杂也无法理解人类的仇恨。马斯克有多恨奥特曼？他宁可公司不做，卡送人，也要去打败他。这确实是22万张卡，给了我，我吃灰，但肯定有别人能做很多事。这可能是Elon Musk在事业优先级上的排序变化。回头我们可以再讨论SpaceX的IPO，那个会巨复杂，因为里面装了xAI、Twitter、Cursor、colossus和Starlink。</p>
+<p><strong>主持人</strong>: 关于SOTA对估值的帮助，但我恰恰觉得接下来的半年，大模型的SOTA不是太重要了。大家的SOTA可能拉不开差距。如果你现在主用Claude Code，你去用Codex，会发现差距并没有那么大。甚至很多时候Codex写的比Claude Code要好。而且如果关注国内模型，会发现有些闭源模型也达到了SOTA水平。</p>
+<p><strong>主持人</strong>: 我是觉得下半年这几家上市的模型，即便达到了SOTA，差异也不会比前一代大，也不会把国内开源模型甩开太多。这个时候更多需要看ToB企业应用的情况。</p>
+<h3>AI自主进化的隐忧</h3>
+<p><strong>主持人</strong>: 我们是不是一直在讲希望AI能够自主进化（self-evolution）？但前几个月大家还会提，现在不怎么说了。</p>
+<p><strong>Raymond</strong>: 从技术端观察，不管是论文还是小道消息，大家确实讲出他们应该基本实现了自我迭代的程度。只是这个程度不好开放给大家，好东西先自己搞，自己先用。他们现在迭代更多是为了服务上市或者是商业节奏。它的迭代速度差不多一个月就可以放一个新的小版本出来。</p>
+<p><strong>主持人</strong>: 像最新的GPT-5.5就是在Star gate（星际之门）那些算力集群上搞出来的，据说一个月就训好了。如果到这种速度，大家马上就能刷SOTA，只是像下棋一样，谁先出谁后出的问题。</p>
+<p><strong>主持人</strong>: 大家现在最默契的集体“降智”是怎么回事？</p>
+<p><strong>Raymond</strong>: 如果从产品层面有很大进步空间，那一定是大家优先跑市场。你降智了，Codex量大又给我补回来。但现在Codex也不补了，两边都在降智。这就像跳高，早就可以跳更高，但每次只跳一厘米，因为现在不需要跳那么多。当前的SOTA可能去年的SOTA水平就够大部分应用用了。我想刷的话，随时能刷，像学霸控分一样。</p>
+<h3>市场博弈的复杂性</h3>
+<p><strong>主持人</strong>: Google投了400亿给Anthropic，Anthropic在这个博弈中做了一个很好的周旋。</p>
+<p><strong>Raymond</strong>: 没错，它既稳住了Google老大哥，又拿到了马斯克的英伟达卡，脚踩两只船，卡到了一个神位。大家现在不搞模型进步，开始搞这些运作了。</p>
+<p><strong>主持人</strong>: 市场上现在普遍认为Anthropic还是断档式的领先。今天别的公司不出SOTA不是降智，是确实出不了，非常想出但出不了。这是全世界范围超过10个公司以上的复杂博弈。Mythos那个模型才是真的收着走，那个模型全世界有10个人用过，太强了，放出来会得罪所有大哥。</p>
+<p><strong>主持人</strong>: 你认为国内模型半年内能赶上Claude Code的4.7版本吗？</p>
+<p><strong>Raymond</strong>: 确实，人类够用的水准是可以做到的。如果智谱等国内厂商半年一年后能做到4.7的水平，那对大部分人来说是够用的。</p>
+<p><strong>主持人</strong>: 6个月左右给国内厂商是蛮充足的，3个月左右可能就赶上了。</p>
+<p><strong>主持人</strong>: 别忘了很重要的事情，前两个月Claude Code源码泄露了。这个事情大大加速了大家的追赶速度。如果最近担心封号，用Codex就完事了。虽然全面性不如Claude，但在大部分数据处理、UI交互场景中绝对可以做得非常好，完全从被封号的恐惧中走出来了。大规模的脏活苦活累活，国产模型一上也非常稳。</p>
+<p><strong>主持人</strong>: 今天讨论出了很多疑问，尤其是想看到国内公司在编程方面的突破。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=SpaceX" class="entity-link company-link">SpaceX</a>, 
+                
+                  <a href="/search/?q=xAI" class="entity-link company-link">xAI</a>, 
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>, 
+                
+                  <a href="/search/?q=智谱" class="entity-link company-link">智谱</a>, 
+                
+                  <a href="/search/?q=小米" class="entity-link company-link">小米</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=GPT-4" class="entity-link product-link">GPT-4</a>, 
+                
+                  <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>, 
+                
+                  <a href="/search/?q=Codex" class="entity-link product-link">Codex</a>, 
+                
+                  <a href="/search/?q=Gemini" class="entity-link product-link">Gemini</a>, 
+                
+                  <a href="/search/?q=Grok" class="entity-link product-link">Grok</a>, 
+                
+                  <a href="/search/?q=Mythos" class="entity-link product-link">Mythos</a>, 
+                
+                  <a href="/search/?q=GLM" class="entity-link product-link">GLM</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">model-iteration</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ipo-strategy/">ipo-strategy</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">gpu-allocation</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">sota-benchmark</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-commercialization/">ai-commercialization</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

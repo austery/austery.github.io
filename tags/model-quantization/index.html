@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="container" data-pagefind-ignore>
+
+<div class="home-layout">
+
+<h1>标签：model-quantization</h1>
+
+<ul><li>
+      
+      <a href="/content/notes/maRzp4kImJ4/">跨数据中心强化学习：解耦训练与弹性 Rollout Fleet 的系统实践</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-08-10T00:00:00.000Z">
+          8/10/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 来自 Modal 的 Nan Jiang 介绍了如何打破传统 RL 强化学习训练中 Trainer 和 Rollout 节点的强耦合限制。通过利用 Adam 优化器在低精度（BF16/FP8/FP4）表示下的“更新吸收”效应，将每步权重更新同步量从数百 GB 的全量 Checkpoint 压缩至数百 MB 的稀疏 Delta 补丁。这使得 Rollout 节点可以脱离昂贵的 RDMA 局域集群，以高弹性、全球分布式、多云供应商的方式在廉价闲置 GPU 上低延迟运行，极大提升了强化学习后训练（Post-Training）的算力利用率与规模瓶颈。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-07-26_httpsyag_bonsai-iphone-on-device-model-routes-20260726-html/">27B 模型进了
+iPhone，问题终于从“能不能跑”变成“跑它有什么用”</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-07-26T00:00:00.000Z">
+          7/26/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了将大语言模型（LLM）部署到iPhone等移动设备上的可行性与应用场景。核心观点是端侧模型的价值在于处理本地的、私密的实时理解需求，如屏幕识别、票据整理和敏感信息摘要，以减少数据上传和网络延迟。文章对比了两种主流路线：一是通过极低比特量化保留大模型推理能力（如Bonsai 27B），适用于通用文字推理；二是采用小模型结合高精度视觉编码器（如MiniCPM-V或Gemma），更适合处理图片、截图等多模态任务。最终结论强调，选择哪种路线取决于具体任务需求和对可靠性、功耗的权衡。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/gHs5ZiY80PM/">Nvidia 专家解析：加速扩散模型的量化、缓存与蒸馏策略</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-06-16T00:00:00.000Z">
+          6/16/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Nvidia 专家 Ziv Ilan 探讨了优化扩散模型以实现实时生成的路径。他详细阐述了量化、缓存和蒸馏三大核心技术，并介绍了开源库 FastGen 在降低算力门槛与提升训练稳定性上的实际应用。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/Lm8BLHkxiAo/">Gemma 4 与 Light RT：重构边缘侧 AI 智能体部署生态</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-05-05T00:00:00.000Z">
+          5/5/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入探讨了 Google DeepMind 最新推出的 Gemma 4 系列边缘模型及其配套的 Light RT 部署框架。文章重点介绍了从传统聊天机器人向具备推理、函数调用和结构化输出能力的自主智能体（Autonomous Agents）的演进，并展示了在隐私保护、低延迟和低成本背景下的多样化端侧应用场景，以及 NPU 加速带来的性能飞跃。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/BKWpYIWvAo4/">边缘侧的微型大模型：从 Tiny LLMs 到智能体技能的演进</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-05-03T00:00:00.000Z">
+          5/3/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Google 边缘 AI 技术负责人 Cormac Brick 深入解析了在移动设备和 IoT 终端部署大模型的最新进展。演讲涵盖了微型 LLM（小于 1B 参数）的微调工作流、LiteRT-LM 推理引擎的跨平台架构，以及基于 Gemma 4 模型的智能体技能（Agent Skills）系统，展示了如何通过离线、低延迟的方式在边缘端实现复杂的 AI 交互。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/c5-kx2bwoCk/">本地运行大语言模型：Jetson Spark 上的 LLM 性能实践</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-04-10T00:00:00.000Z">
+          4/10/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入探讨了在 NVIDIA Jetson Spark 上本地运行大型语言模型（LLMs）的实际性能。通过数据驱动的实验，分析了内存容量、内存带宽、模型量化（如 NVFB4）对吞吐量和首个 token 生成时间（TTFT）的影响。结果表明，Jetson Spark 能够高效运行高达 2000 亿参数的模型，并提供了关键的本地开发和原型设计优势，是处理隐私数据和加速迭代的理想平台。</small>
+      
+
+      
+      
+    </li></ul>
+
+</div>
+
+</div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

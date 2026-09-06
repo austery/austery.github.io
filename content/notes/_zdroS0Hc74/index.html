@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Engineer Europe 第二天回顾：从模型发布到 Agent 生态的深度重构</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="AI Engineer Europe 第二天回顾：从模型发布到 Agent 生态的深度重构" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">AI Engineer Europe 第二天回顾：从模型发布到 Agent 生态的深度重构</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-04-10
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/tech-trends/">tech-trends</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=_zdroS0Hc74" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-04-10
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本次会议涵盖了谷歌 Gemma 4 的发布、Anthropic 的 MCP 协议演进，以及 Cursor、Linear、Cerebras 等顶尖团队在 AI Agent 编排、验证与品味构建上的实战经验。核心议题围绕‘快速推理下的开发者策略’、‘Agent 原生代码库构建’以及‘超越聊天界面的交互范式’展开，强调了在 AI 自动化浪潮中，人类的判断力和对质量的坚持（Friction）依然是软件工程的核心。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>开场：欧洲 AI 创新的崛起</h3>
+<p><strong>Tjisk Kumar</strong>: 大家早安！非常荣幸能在这里见到大家。看看这个房间，全坐满了。昨天过得开心吗？昨天最让我难忘的是 Malta 展示的那张幻灯片，它展示了欧洲在 <strong>AI 创新</strong> 方面的领先地位。作为一个住在柏林的人，我有时觉得自己像个弱者，但看到 DeepMind 在柏林设立办公室，看到这么多真正的创新来自欧洲，真的让人倍感振奋。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Tjisk Kumar</strong>: Good morning. Thank you. Thank you. Good morning. We are here. Look at this. It's a full room. We are so excited. How many of you enjoyed yesterday? My highlight was Malta yesterday when he shared this slide of how Europe is leading AI innovation. And I think this is so cool because oftentimes we feel like the underdog, and this was so validating that real innovation is coming out of Europe with even the DeepMind office in Berlin.</p>
+</details>
+<p><strong>Tjisk Kumar</strong>: 今天是第二天，我们将讨论很多有趣的话题：<strong>Coding Agents</strong>、<strong>MCP</strong>（谁在用 MCP？几乎所有人，太棒了）、AI 架构、媒体和 GPU。在开始之前，请和我一起感谢我们的赞助商，首席赞助商 <strong>Google DeepMind</strong>，以及白金赞助商 <strong>Brain Trust</strong>、<strong>WorkOS</strong> 和 <strong>OpenAI</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Tjisk Kumar</strong>: Today is day two and we're going to talk about a lot of interesting topics. So, we're going to talk about coding agents. We're going to talk about MCP. Who's using MCP here? Look at that. Almost everybody. Incredible. We're going to talk about AI architecture, media, GPUs. But before we do that, will you join me in giving it up for our sponsors, Google DeepMind, our presenting sponsor? Let's also give a huge round of applause for our platinum sponsors. We got Brain Trust, WorkOS, OpenAI.</p>
+</details>
+<h3>谷歌 Gemma 4：在个人设备上运行的强大开源模型</h3>
+<p><strong>Omar Santoro</strong>: 大家好！我非常激动，因为就在七天前，我们发布了 <strong>Gemma 4</strong>。Gemma 是 Google Mind 的一个**开放模型（Open Models）**家族。这意味着你可以下载并在自己的基础设施、设备上运行它们，也可以针对自己的用例进行微调。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Omar Santoro</strong>: All right. Hi everyone. I'm super excited to give this talk because just seven days ago we released Gemma 4. So GM is Google minds a family of open models. Open models means that these are models that you can take, you can download, you can run in your own infrastructure, your own devices, you can fine-tune for your own use cases.</p>
+</details>
+<p><strong>Omar Santoro</strong>: Gemma 4 是谷歌迄今为止发布的性能最强的开放模型家族，参数量从 <strong>20 亿 (2B)</strong> 到 <strong>320 亿 (32B)</strong> 不等。最小的两个模型可以在安卓手机、iPhone 甚至树莓派上运行，它们具备多模态能力和推理能力，可以完成非常酷的离线 <strong>Agent</strong> 任务。而 <strong>31B</strong> 模型则是最智能、能力最强的，即便如此，它也能在消费级 GPU 上运行。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Omar Santoro</strong>: So, Gemma 4 is the family of most capable of open models that Google has released ever. These are models that go from two billion parameters all the way to 32 billion parameters. The smallest two models can run in an Android phone, in an iOS, in a iPhone phone as well, even in a Raspberry Pi. These are really small models that are multimodel have reasoning can do like very cool ondevice agentic things. Then you have the 31B that's the most intelligent model the most capable. But even the 31B is a model that can run in a consumer GPU.</p>
+</details>
+<p><strong>Omar Santoro</strong>: 架构方面，Gemma 4 引入了 <strong>Per-layer Embeddings</strong>。简单来说，每一层都有对应的嵌入，它的工作方式更像是一个查找表，而不是复杂的计算。这使得它运行极快，你甚至可以将其放在 CPU 或磁盘中。这就是为什么 5B 模型实际上只需要在 GPU 中加载 2B 参数量，其余部分可以利用更慢的内存，因为它不需要进行传统的矩阵乘法。此外，我们还将授权协议更改为了 <strong>Apache 2</strong>，给予开发者充分的灵活性。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Omar Santoro</strong>: So actually Yema E2B has a new novel kind of architecture called per layer embeddings. The TLDR here is that pretty much there is like a embedding kind of per each layer, and it works more of a lookup table rather than a computation that you need to do. So pretty much this is a extremely fast thing. You don't need to have this in the GPU. You can have this in the CPU. You can have this in the disk. leveraging lama CPP with a simple flag override tensor and then you move the per layer embeddings to CPU or even to disk. With the M4 we change our license to an actual Apache 2 license.</p>
+</details>
+<h3>MCP 协议：构建 Agent 互联的神经系统</h3>
+<p><strong>David Sora Par</strong>: 欢迎大家。这是一个 <strong>MCP 应用</strong>。这是一个自带界面的 Agent，它不是通过插件或 SDK 实现的，也不是在客户端硬编码的，而是通过 <strong>MCP 服务端</strong> 提供的。你可以把这个服务端放在 Claude、ChatGPT、VS Code 或 Cursor 中，它都能直接运行。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>David Sora Par</strong>: Okay. Well, welcome. This is an MCP application. That's an agent shipping its own interface, not through like a plug-in, not through an SDK, not rendered on the fly by the model on the client side or hardcoded into the product. That is something that is served over an MCP server. And you can take the server, put it into cloud, you can put it into chatbt, you can put it into VS Code, cursor, and it will just work.</p>
+</details>
+<p><strong>David Sora Par</strong>: 为了实现这一点，我们需要语义化。客户端和服务端都需要理解对方在说什么，理解 UI 是如何渲染的。因此我们需要一套协议。目前 MCP 的月下载量已经达到了 <strong>1.1 亿次</strong>。作为对比，React 达到这个下载量所花的时间大约是 MCP 的两倍。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>David Sora Par</strong>: For doing that you need semantics. You need to have both sides the client and the server to understand what each side is talking to understand how you render this. And for that you need a protocol. We're now like at 110 million monthly downloads. Just a bit for context, React, one of the most successful open-source projects probably of the last decades, took roughly double the amount of time to reach that download volume.</p>
+</details>
+<p><strong>David Sora Par</strong>: 我认为 2025 年是关于探索的一年，而 2026 年则是关于将 Agent 投入生产环境。我们正在进入一个通用的 <strong>Knowledge Worker</strong> 时代，财务分析师或市场营销人员需要的不是调用编译器的本地 Agent，而是能连接五个 SaaS 应用和共享驱动器的 Agent。连接性（Connectivity）是核心。在 2026 年构建 Agent 时，你需要考虑三件事：<strong>Skills</strong>、<strong>MCP</strong> 以及 <strong>CLI/Computer Use</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>David Sora Par</strong>: But I still think this is just the absolute beginning because I think 2025 was all about exploring in 2026 is all about putting these agents into production. We're going to have general agents that will do real knowledge worker stuff like things a financial analyst want to do. And they need one thing in particular: connectivity. In my mind, there are three major things that you want to consider building an agent in 2026. It's skills, MCP, and of course, like CLI or computer use.</p>
+</details>
+<p><strong>David Sora Par</strong>: 我们还需要构建 <strong>Progressive Discovery</strong>（渐进式发现）模式。目前很多人直接把所有工具塞进上下文窗口，导致上下文膨胀。相反，你应该使用工具搜索（Tool Search），只在模型需要时才加载工具。此外，我们正在改进核心协议，包括由谷歌提议的 <strong>Stateless Transport Protocol</strong>（无状态传输协议），这将使 MCP 服务端更容易像普通的 REST 服务一样部署到 Cloud Run 或 Kubernetes 上。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>David Sora Par</strong>: The number one thing we're going to do there is that we need to go and start building something called progressive discovery. Everybody so far has done is to simply put all the tools into the context window. But what you should do instead you should start using this progressive discovery pattern which is to say use something like tool search to defer the loading of the tools. We have a proposal from our friends at Google who are working with something called a stateless transport protocol which make it significantly easier to just treat MCP servers like another stateless rest server.</p>
+</details>
+<h3>AgentCraft：借鉴游戏机制进行 Agent 编排</h3>
+<p><strong>Ido Salamon</strong>: 早上好伦敦。如果一个 Agent 这么神奇，为什么我们不扩展到 10 个、20 个甚至 100 个，让它神奇 100 倍呢？原因在于瓶颈不在于启动 Agent，而在于我们自己。我们才是编排这些 Agent 的瓶颈。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ido Salamon</strong>: So good morning London. agents are amazing. Uh, but if one agent is so amazing, why don't we scale up to 10 or 20 or 100 different agents and be a 100 times more amazing? It is pretty simple. spinning them up isn't the problem. It's us. We are the bottleneck in orchestrating all of these agents.</p>
+</details>
+<p><strong>Ido Salamon</strong>: 幸运的是，这些管理技能并非全新的。如果你是一个游戏玩家，管理几十个单位听起来应该很熟悉。这就是我构建 <strong>AgentCraft</strong> 的原因，它是一个旨在通过将<strong>游戏领域的经验</strong>转移到生产力领域，从而提升人机协作上限的编排器。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ido Salamon</strong>: Luckily, they're not really brand new. If you're a gamer or used to play games, managing dozens of units probably sounds a little bit familiar, which is why I built AgentCraft, which is an orchestrator that aims to raise the ceiling of human agent collaboration by taking learnings from gaming and transferring them into productivity.</p>
+</details>
+<p><strong>Ido Salamon</strong>: 在 AgentCraft 中，每个 Agent 都有物理表现。你可以看到它们在地图上工作，而这个地图实际上是我<strong>文件系统 (File System)</strong> 的投影。你可以看到 Agent 正在处理哪个文件，查看完整的变更历史。我们甚至可以创建一个<strong>热力图 (Heat Map)</strong> 来可视化冲突并主动预防。当 Agent 需要你的帮助（如审批计划或回答问题）时，你可以利用 <strong>RTS 游戏</strong> 中的肌肉记忆，在 Agent 之间快速切换。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ido Salamon</strong>: this is a physical manifestation of a coding agent. if we look at the map, you would notice that it's actually a projection of my file system. I can actually track and see visually what the agent is working on, which file. why not just create a heat map? I can actually try and see visualize collisions and I can even prevent them proactively. We can simply use muscle memory to quickly cycle between the agents that need our help.</p>
+</details>
+<h3>Pi 与 OpenClaw：反思 Agent 对开源软件的冲击</h3>
+<p><strong>Mario Zechn</strong>: 嘿大家，我是 Mario。我构建了 <strong>Pi</strong>。在一切的开始，有了 Claude Code，它确实很棒，让我们都兴奋得睡不着觉。但随着功能越来越多，Bug 也随之而来。更严重的问题是，我的上下文不再受我控制，Claude Code 会背着我修改系统提示词，在不合时宜的地方插入提醒，这搞乱了模型并破坏了我的工作流。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Mario Zechn</strong>: Hey there, I'm Mario. I built Pi in a world of slop. In the beginning there was cloud code and was good. Back then, it was simple and predictable. But eventually the team got bigger and they built a lot of features. With more features come more bugs. The real problem is that my context wasn't my context. Cloud code is the thing that controls my context. And behind my back, cloud code does things to the context.</p>
+</details>
+<p><strong>Mario Zechn</strong>: 我反思之后构建了 Pi。它是一个适应你的工作流而非相反的 Agent。它只有四个核心工具：Read、Edit、Bash 和微调。它非常轻量，系统提示词极其简洁。为什么？因为现在的模型经过了大量的<strong>强化学习 (RL)</strong> 训练，它们天生就知道什么是 Coding Agent，你不需要花 10,000 个 token 去告诉它。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Mario Zechn</strong>: So that's Pi. It's an agent that adapts to your workflow instead of the other way around. It comes with four tools. Read, edit, bash. Here's Pi's system prompt. That's it. The models are actually reinforcement trained up the wazoo. So they know what a coding agent is. You don't need 10,000 tokens to tell them you're a coding agent.</p>
+</details>
+<p><strong>Mario Zechn</strong>: 现在的 Agent 正在制造大量的<strong>垃圾 (Slop)</strong>。它们从互联网上学习，而互联网上 90% 的代码都是旧垃圾。Agent 不像人类那样有痛感，它们会开心地不断往你的代码库里“排泄”。这种局部修复、全局搞砸的行为，让你最终既无法信任代码，也无法信任测试。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Mario Zechn</strong>: OSS in the age of clankers. Clankers are destroying OSS. The problem is that agents are emergent learned complexity. 90% of code on the internet is our old garbage. And that's what the models learn from. Agents will happily keep [ __ ] into your codebase. So the agent patches locally and [ __ ] up globally. You cannot trust your codebase anymore and also not your test because your agent wrote your test.</p>
+</details>
+<p><strong>Mario Zechn</strong>: 所以，请<strong>慢下来 (Slow down)</strong>。不要因为 Agent 能做就去堆砌功能。学会说“不”是你目前最有价值的能力。对于关键代码，请亲手编写并阅读每一行。那点“摩擦力”正是你在大脑中构建系统理解的关键。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Mario Zechn</strong>: My final slide, slow the [ __ ] down. Think about what you're building and why. And don't just build because your agent can do it. Learn to say no. Critical code, read every [ __ ] line. Write it by hand. And that friction is the thing that builds the understanding of the system in your head.</p>
+</details>
+<h3>Arendil：摩擦力即判断力</h3>
+<p><strong>Armen Ronacher</strong>: 刚才 Mario 提到了“摩擦力”。我创建了 <strong>Flask</strong> 框架，讽刺的是，现在很多人是通过机器生成的代码了解到它的。我们在过去 12 个月里一直在用 Agent 构建系统，虽然获得了巨大的杠杆，但也遇到了巨大的失望。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Armen Ronacher</strong>: Today I want to talk with Christina about friction a little bit. I have created Flask, which is a Python framework, which ironically is so much in the weights that a lot of people are learning about it now because the machines are producing it. We have been building with or on agents for a good 12 months. We had huge leverage and great disappointment.</p>
+</details>
+<p><strong>Christina Ponella Cubro</strong>: 我是一个“原生 AI 工程师”，这些工具出现的时间比我入行的时间还长。问题在于，这些工具非常有成瘾性。你会不断输入下一个 Prompt，期待它是那个能让产品跑通的神来之笔，但它也可能是压死骆驼的最后一根稻草。因为产出很快，我们被欺骗，认为自己更有效率了，但实际上我们失去了停止、思考和设计的时间。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Christina Ponella Cubro</strong>: I am what I like to call a native AI engineer. what this means is like they've been super foundational in how I've become a software engineer. these tools are super addictive. You never know if that next prompt is going to be the one that makes your product work or if it's going to be that last drop of slop. because we produce a lot of output very fast, we are tricked into thinking that we're actually being more efficient.</p>
+</details>
+<p><strong>Armen Ronacher</strong>: Agent 编写的代码往往过于追求“不卡壳”。比如读取配置失败时，它会默默加载默认值。作为一个工程师，你知道这很糟糕，因为你可能几个小时后才发现数据库里全是错误数据。Agent 没有情绪，它不会因为写出烂代码而感到难受。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Armen Ronacher</strong>: the agents are writing kind of code that when you as a human start learning how to write code you wouldn't necessarily write. they optimize towards making progress towards shipping stuff. And as a result, they're creating many more failure conditions than human written code normally would do. because you as a human feel a little bit bad when you write code like this. But the agent doesn't have a reason for this.</p>
+</details>
+<p><strong>Christina Ponella Cubro</strong>: 我们的对策是构建 <strong>Agent-Legible Codebase</strong>（Agent 易读的代码库）。这包括：</p>
+<ul>
+<li><strong>Modularization</strong>（模块化）：不仅仅是组件，还有代码流本身的模块化。</li>
+<li><strong>机械强制执行</strong>：通过 Lint 规则禁止空的 Catch 块，强制要求唯一的函数名（为了 <strong>Token 效率</strong>）。</li>
+<li><strong>Erasable Syntax Only TypeScript</strong>：代码本质上是 JavaScript 加上类型注解，没有转译过程，这让 Agent 在查找错误时更高效。</li>
+</ul>
+<details>
+<summary>Original English</summary>
+<p><strong>Christina Ponella Cubro</strong>: what we're proposing here is an agent legible codebase. one of the main points is modularization. we enforce unique function names. And the reason for this is not just more legibility, but it's actually also the token efficiency. we've started exploring something recently called erasable syntax only TypeScript mode. there's one source of truth between your actual code and the compiler.</p>
+</details>
+<h3>Cursor 实践：用 Markdown 技能取代上万行代码</h3>
+<p><strong>David Gomez</strong>: 大家好！今天我要讲的是，<strong>Markdown 基本上就是新的代码</strong>。在 Cursor 中，我们最近用一个仅 200 行的 <strong>Skill</strong>（技能文件）取代了 12,000 到 15,000 行复杂的 TypeScript 代码。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>David Gomez</strong>: I'm going to be talking about how markdown is basically the new code. we recently replaced a lot of code in the cursor application with just markdown just a skill. Like I think it was around 15,000 lines of code deleted.</p>
+</details>
+<p><strong>David Gomez</strong>: 这个功能就是 <strong>Git Worktrees</strong>（工作树）。以前为了实现它，我们需要写大量的代码来管理隔离的 Checkouts、处理清理逻辑、注入上下文。现在，我们只需要两个原语：<strong>Agent Skills</strong> 和 <strong>Sub-agents</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>David Gomez</strong>: We decided that there are two primitives that we could use to effectively allow cursor users to use word trees. One is Asian skills and the other are subentations.</p>
+</details>
+<p><strong>David Gomez</strong>: 现在的实现非常简单。我们编写一套指令，告诉模型如何创建 Worktree，如何运行用户配置的安装脚本，并严令模型只能在该 Checkouts 中操作。虽然这听起来有点“凭感觉”（Vibes-based），因为它不再是物理隔离，但通过强大的 <strong>Prompting</strong> 和 Evals（评分器），效果惊人地好。我们可以让不同的模型在不同的 Worktree 中竞争完成同一个任务，这就是我们的 <strong>Best Event</strong> 功能。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>David Gomez</strong>: The skill is written is actually really simple. it's basically a set of instructions telling the model how to create word trees. We have to instruct the model to stay on that work tree. we do that with some aggressive prompting effectively. it's effectively a way for you to compete on have have different models compete on the same task. And then you can even preview the changes.</p>
+</details>
+<h3>Cerebras：极速推理模型下的开发者策略</h3>
+<p><strong>Sarah Chang</strong>: 过去几年，我们因为 AI 生成代码速度慢而养成了一些坏习惯，比如写巨大的 Prompt 试图 One-shot。但上个月，我们发布了 <strong>Codex Spark</strong>，它的生成速度达到了 <strong>1,200 tokens/second</strong>。作为对比，Claude Sonnet 的速度大约是 40-60 tokens/second。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sarah Chang</strong>: over the past few years, we as developers have developed a series of bad habits as a result of slow AI code generation. Codex Spark can generate code at 1,200 tokens per second. So in this new era, this is 20 times faster.</p>
+</details>
+<p><strong>Sarah Chang</strong>: 当验证变得“免费”时，一切都变了。你没有理由不在每一步都加入单元测试、Lint 和 Diffs 评审。我建议大家尝试 <strong>Cherry-picking</strong>（择优挑选）：以前你需要等待一个模型生成一个版本，现在你可以让五个 Sub-agents 在同样的时间内生成 75 个版本，然后挑选最好的那个。这实际上是在用数量诱发“品味”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sarah Chang</strong>: at 1200 tokens per second, a model like codec spark makes validation basically free. There is no excuse why you should not be doing things like test suites, linting, diff reviews. Another tip is exploring cherrypicking. I can generate five sub aents that are each generating 15 versions and now I have 75 versions and I pick the one that's best.</p>
+</details>
+<p><strong>Sarah Chang</strong>: 在这个新机制下，你应该把 AI 看作 <strong>Pair Programmer</strong>（结对编程者），而不是那种你发个指令就跑去吃汉堡的离线工具。你需要坐在它旁边驾驶，给它具体的约束：比如禁止删除文件、限制 Diff 大小。我们推荐使用一个四文件系统来管理外部记忆：<code>agents.md</code>（定义 Agent）、<code>plan.md</code>（整体计划）、<code>progress.md</code>（进度跟踪）和 <code>verify.md</code>（验证逻辑）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sarah Chang</strong>: You should view it much more as a pure programmer. sit down with it and actually steer it. You can do things like ban the model from deleting files, give it a max diff size. a good way that you can think about how do I externalize this memory is with this four file system: agents MD, plan MD, progress MD and verify MD.</p>
+</details>
+<h3>Incident.io：用 AI 调试 AI 系统</h3>
+<p><strong>Lawrence Jones</strong>: 我们的目标是完全自动化生产环境的调查。但这带来了一个挑战：我们背后有成百上千个 Prompt，系统变得极其复杂，人类已经无法直观地理解它的表现。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Lawrence Jones</strong>: our goal is actually to fully automate production investigations. But behind this investigation is like hundreds, if not thousands of prompts. So, how on earth do we scalably understand how this system is performing? They are now complicated enough that you can't as a human really tractably dig into how these things are performing.</p>
+</details>
+<p><strong>Lawrence Jones</strong>: 一个巨大的突破是：我们将原本用于人类观察的 UI <strong>转换为可下载的文件系统</strong>。Agent 在处理文件系统方面表现卓越。当出现问题时，我们把整个交互轨迹下载到一个沙盒中，让 Claude Code 或 Codex 去阅读。它能看到所有 Prompt 的输入输出，并直接在代码库中指出哪里需要修改。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Lawrence Jones</strong>: can we just download all of the UI that we have as a file system? And that's kind of what we've done. these agents are fantastic at using file systems and just going through this data. You sit there in the session and you go hey like have a look at this. Tell me what you think has gone wrong. and then it will be able to tell you where you should be making the modification.</p>
+</details>
+<p><strong>Lawrence Jones</strong>: 我们还建立了一个名为 <code>scrapbook</code> 的仓库，里面有非常结构化的流程，教 Agent 如何分析这些下载的数据。我们会启动 25 个并发 Agent 进行实体分析，然后进行<strong>群组聚类 (Cohort Clustering)</strong>，总结出故障模式。这不仅仅告诉你哪里错了，还告诉你系统为什么表现不好。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Lawrence Jones</strong>: we created this repo called scrapbook. we parallelize out all of your agents. they can all individually build their analysis of an investigation. and then you go into the next stage of the pipeline where you do some cohort clustering. by clustering it together, you end up with actually a really really useful report.</p>
+</details>
+<h3>Factory：支持多日运行的“任务”系统</h3>
+<p><strong>Luke Alvo</strong>: 现在的软件工程瓶颈不在于智能，而在于<strong>人类的注意力</strong>。再优秀的工程师一天也只能处理几个任务，因为每个 Commit 都需要他们评审。如果人类决定构建什么，而系统决定如何构建，那会怎样？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Luke Alvo</strong>: the bottleneck in software engineering nowadays is not intelligence. It's now limited by human attention. we kept asking ourselves, what if a human decides what to build and then a system figures out how to do so? An agent could just work for hours for days and you come back to finish work.</p>
+</details>
+<p><strong>Luke Alvo</strong>: 我们提出了 <strong>Missions</strong>（任务）系统。它不是一个单一的 Agent 会话，而是一个通过结构化交接和共享状态进行协作的 Agent 生态。它采用三角色架构：</p>
+<ol>
+<li><strong>Orchestrator</strong>（编排者）：处理规划，生成 <strong>Validation Contract</strong>（验证契约）。</li>
+<li><strong>Workers</strong>（执行者）：拥有干净的上下文，实现功能并 Commit。</li>
+<li><strong>Validators</strong>（验证者）：它们没见过代码，只根据验证契约来测试行为。它们像 QA 一样启动应用、填写表单、点击按钮。</li>
+</ol>
+<details>
+<summary>Original English</summary>
+<p><strong>Luke Alvo</strong>: notably, a mission is not a single agent session. It's an ecosystem of agents. It uses a three-role architecture: orchestrator, workers, and then there's validators. the orchestrator produces a plan that includes features, milestones, and then something that's called a validation contract. workers handle implementation. and then the last role are validators. They handle verification.</p>
+</details>
+<p><strong>Luke Alvo</strong>: 我们最长的一个任务运行了 <strong>16 天</strong>。这之所以可行，是因为我们采用了<strong>串行执行 (Serial Execution)</strong> 而不是并行。虽然并行看起来更快，但 Agent 之间会互相踩踏、产生不一致的决策。通过串行的结构化交接，错误率大幅下降。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Luke Alvo</strong>: our longest mission ran for 16 days. The difference with missions is that we run features serially. Within a feature, we allow for parallelization on readonly operations. It seems slower on paper, but the error rate drops dramatically and when you have tasks that run for many days, the sort of correctness compounds.</p>
+</details>
+<h3>Linear 炉边谈话：追求软件品味与“零 Bug”文化</h3>
+<p><strong>Gergely Orosz</strong>: Thomas，我们曾在 Uber 共事过。那时 Uber 处于疯狂增长期，为了营收可以不惜一切代价牺牲质量。但在现在的 AI 时代，当每个人都能瞬间生成大量功能时，你认为趋势是否在向错误的方向发展？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Gergely Orosz</strong>: things are trending the wrong way right now. what happens when when agents are capable of doing everything immediately for you? the pendulum has swung too far into the wrong direction. Uber was a winner takes it all market. you just had to ship immensely. what I saw at Uber was that hyperrowth that I never want to go through again.</p>
+</details>
+<p><strong>Thomas Artman</strong>: 确实。Steve Jobs 曾说，优秀的产品源于对 999 件事说“不”。现在因为 AI，说“是”变得太容易了。在 <strong>Linear</strong>，我们依然对大量请求说“不”。我们要弄清楚客户真正的痛点，然后设计出完美的解决方案。AI 确实帮我们加速了，比如 10% 的 Bug 现在是由 AI 自动修复并提交 PR 的，未来这个比例会接近 100%。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Thomas Artman</strong>: great products come out of saying no to you know 999 things and yes to one thing and with AI we might be in a place where it's just too easy to say yes. We still say no to a lot of custom requests. 10% of our bugs are automatically fixed by a singleshot AI instance. I do foresee a future where like it gets closer to 100%.</p>
+</details>
+<p><strong>Thomas Artman</strong>: 我们有一项名为 <strong>Quality Wednesdays</strong>（质量周三）的传统。全公司 25 名工程师每人展示一个他们做的质量修复，哪怕只是挪动一个像素。这个传统的 side effect 是让所有人即便在开发无关功能时，也会留意那些细微的体验问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Thomas Artman</strong>: every engineer would show one fix that they did was quality and it went from like a one pixel change to oh I just made our backend way more efficient. people kept on finding problems in the product because they knew they had to come to the next Wednesday meeting with a fix.</p>
+</details>
+<p><strong>Thomas Artman</strong>: 我们还有 <strong>Zero Bug Policy</strong>（零 Bug 政策）。只要发现 Bug，它就会立即被分配，并成为最高优先级。你必须停下新功能开发，先修复它。这背后的逻辑是：Bug 产生的速率是恒定的，不管你现在修还是三个月后修，工作量是一样的。唯一的区别是你的产品会因此变得越来越烂还是保持卓越。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Thomas Artman</strong>: zero bug policy literally means that if a bug gets reported it gets assigned to somebody automatically and that becomes your highest priority. the rate at which you have to fix bugs is again constant. It doesn't matter whether you fix them two months from now or immediately.</p>
+</details>
+<h3>Lagora：超越聊天界面的垂直 AI</h3>
+<p><strong>Jacob Laurson</strong>: 现在的瓶颈已经从“做功”转移到了“规划”和“评审”。如果你用过 Claude Code 这样长序列运行的 Agent，你可能会陷入那种“它改了条款 3，但有没有顺便改了别的？”的困惑中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jacob Laurson</strong>: planning work and reviewing work is the new bottleneck. doing the actual work is extremely cheap. if you've ever worked with a longunning complex agent, you get a new contract. Does it look was it only clause three that was changed? Probably not. And so you end up in this state.</p>
+</details>
+<p><strong>Jacob Laurson</strong>: 根据 <strong>Verifier's Rule</strong>（验证者规则），如果一个任务容易验证，AI 就能解决它。法律领域很特殊，写合同容易，但验证很难，只有法官才能真正验证。我们通过分解任务，把风险评估、先例选择留给人类，把格式调整、定义校验（类似于代码的 Lint）交给 Agent。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jacob Laurson</strong>: verifiers rule states that if it's a task is solvable and it's easy to verify then it's going to get solved by AI. verticals have tasks that are different places on the spectrum. Writing a contract is very easy to solve, but actually extremely difficult to verify. You can decompose task. leave picking risk profile to the human, but I can try to get other stuff down where it's easy to verify.</p>
+</details>
+<p><strong>Jacob Laurson</strong>: 聊天框是一个非常低带宽的界面。它试图把复杂的工作树压缩成一维的线性对话。我认为人类和 Agent 应该在**高带宽的持久化 Artifacts（制品）**中协作。比如在一个文档里，你可以直接高亮条款 3 并打上标签，让特定的 Agent 只修改这一部分。不要把 Agent 限制在人类语言中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jacob Laurson</strong>: Chat is one-dimensional. It's a very low bandwidth interface. So what's a better interface? Well, I think humans and agents should collaborate in high bandwidth artifacts. durable interface where it makes sense to collaborate. agents aren't humans and so we should not constrain them to human language.</p>
+</details>
+<h3>Arena.ai：模型仍待突破的局限性</h3>
+<p><strong>Peter Gstiff</strong>: 大家都看着那些一路向上的曲线，觉得 AGI 就在下个转角。但我们 Arena 的数据展示了另一个故事。我们有一个 <strong>Nonsense Benchmark</strong>（废话基准测试），专门问模型一些毫无逻辑的问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Peter Gstiff</strong>: any benchmark you seem to look at line goes up. this could create this kind of psychosis that we all see. I think there's still quite a few things missing. the idea behind the [ __ ] benchmark is quite simple. what happens if you ask nonsense questions?</p>
+</details>
+<p><strong>Peter Gstiff</strong>: 结果令人惊讶。即使是像 GPT-5.4 这样具备强大推理能力的模型，往往也会在指出问题“不合逻辑”后，接着写 20 个段落试图去强行解释它。这说明它们被过度训练去“不惜代价解决任务”。我们的数据显示，前沿模型的 <strong>Dissatisfaction Rate</strong>（不满意率）依然在 9% 左右。模型在数学和物理上进步巨大，但在创意写作、法律和游戏设计上，进步非常缓慢。它们依然完全不理解游戏机制。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Peter Gstiff</strong>: quite often it would maybe have one line where it would question the premise of this question and then spend 20 paragraphs trying to solve it. the reason why that happens is that they were trained so much to solve the task at any cost. 9% of the time people would get two responses from two good models and they don't like them. whenever you try to build games with LLMs, it just feels like they have no idea like how to build actual games.</p>
+</details>
+<h3>Swix 总结：Agent 正在渗透一切</h3>
+<p><strong>Swix</strong>: 我虽然在 Cognition 工作，但我为 AI Engineer 组织这个会议时，所有的工作都是由 <strong>Devon</strong> 完成的。我不再需要自己去弄 Figma 还原，我把 Figma 发给 Devon，它就能生成像素级还原的代码。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Swix</strong>: I start introducing a workflow of our contract designer showing me a Figma page and asking me to turn it into reality. I just added Dev into it. hooked up Devon to Figma and in very short order we have a perfectly functioning website that is pixel perfect to the Figma.</p>
+</details>
+<p><strong>Swix</strong>: 最让我惊讶的是，这让我的员工工作得更开心了。我的设计师在印尼，他醒来就开始和 Devon 互动，给它画红线标注。这消除了原本等待我反馈的阻塞感。我们还用 Devon 来管理 130 名演讲者的日程，处理各种繁琐的 ETL 任务，甚至让它帮我在伦敦买一只作为装饰的龙虾。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Swix</strong>: I am getting more work out of my employees because they enjoy doing it because the feedback cycle for them from waiting blocking on me is gone. this entire schedule is managed by Devon. whenever someone comes in with a speaker change, I just say, &quot;Devon, handle it for me.&quot; I asked Devon to research where can I get a lobster in London. that's literally the the lobster that you had was bought from Devon.</p>
+</details>
+<p><strong>Swix</strong>: 2026 年的一个大趋势是 <strong>AI 正在取代 SaaS</strong>。我会跟员工争论，为什么要付钱买某个 SaaS？我们可以让 Agent 直接帮我们写一个。现在的用户不再只是人类，Vercel 60% 的用户已经是机器人。这意味着你的仪表盘不再重要，你的 <strong>API、CLI 和 MCP</strong> 才重要。Agent 正在冲出牢笼，渗透进除了代码之外的每一项知识工作中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Swix</strong>: once you get enough psychosis, you are thinking about replacing entire pieces of SAS. here is me arguing with my employees about kicking out a SAS tool and building it ourselves because we can. 60% of the user base of Versell now is bots is agents. It's not humans. So actually your dashboards don't matter. Your APIs matter your CLI matter. Your MCPs matter. Agents for everything else are coming.</p>
+</details>
+<p><strong>Tjisk Kumar</strong>: 我们做到了！这两天真是一段不可思议的旅程。我们要感谢所有的演讲者、赞助商和组织者。接下来晚上 7:00 在 Fabric 俱乐部有 Afterparty，那不是去蹦迪，而是去深入交流。请务必带上你的证件（Badge）。现在，让我们一起上台拍张大合照！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Tjisk Kumar</strong>: We did it. Y'all are such an amazing crowd. What a journey. Give it up for your speakers each and everyone. we have a party coming up at 7:00 local time in a club called Fabric. But here's the deal. It's not clubbing. we're going to create an atmosphere that's not you can talk to each other and ideally you do. come with your badge. let's move to taking a group photo together.</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Omar Santoro" class="entity-link person-link">Omar Santoro</a>, 
+                
+                  <a href="/search/?q=David Sora Par" class="entity-link person-link">David Sora Par</a>, 
+                
+                  <a href="/search/?q=Mario Zechn" class="entity-link person-link">Mario Zechn</a>, 
+                
+                  <a href="/search/?q=Armen Ronacher" class="entity-link person-link">Armen Ronacher</a>, 
+                
+                  <a href="/search/?q=Sarah Chang" class="entity-link person-link">Sarah Chang</a>, 
+                
+                  <a href="/search/?q=Thomas Artman" class="entity-link person-link">Thomas Artman</a>, 
+                
+                  <a href="/search/?q=Swix" class="entity-link person-link">Swix</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Google DeepMind" class="entity-link company-link">Google DeepMind</a>, 
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, 
+                
+                  <a href="/search/?q=Cursor" class="entity-link company-link">Cursor</a>, 
+                
+                  <a href="/search/?q=Cerebras" class="entity-link company-link">Cerebras</a>, 
+                
+                  <a href="/search/?q=Linear" class="entity-link company-link">Linear</a>, 
+                
+                  <a href="/search/?q=Hugging Face" class="entity-link company-link">Hugging Face</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Gemma 4" class="entity-link product-link">Gemma 4</a>, 
+                
+                  <a href="/search/?q=MCP" class="entity-link product-link">MCP</a>, 
+                
+                  <a href="/search/?q=Codex Spark" class="entity-link product-link">Codex Spark</a>, 
+                
+                  <a href="/search/?q=Devon" class="entity-link product-link">Devon</a>, 
+                
+                  <a href="/search/?q=Pi" class="entity-link product-link">Pi</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/mcp-protocol/">mcp-protocol</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/software-development/">software-development</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/model-evaluation/">model-evaluation</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/developer-experience/">developer-experience</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

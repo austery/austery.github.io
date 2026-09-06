@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI工具到AI协作者：个人网站开发与协作新范式</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="AI工具到AI协作者：个人网站开发与协作新范式" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">AI工具到AI协作者：个人网站开发与协作新范式</span>
+      <span data-pagefind-meta="speaker" style="display:none;">用AI發電</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-03-08
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/yong-ai-fa-dian/">用AI發電</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=BRrr6jwVnWE" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-03-08
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本次分享深入探讨了如何将AI从单一工具转变为高效的协作者。主讲人宇翔通过个人网站开发项目，分享了利用AI进行UI设计、代码编写、成本优化（如通过Open Interpreter调用Google服务节省token）的实战经验。他强调了信任AI能力、明确任务目标的重要性，并介绍了如何利用NotebookLM进行系统化学习。分享倡导在AI时代下，我们应转变视角，将AI视为有能力的伙伴，而非仅限于技术细节，从而发挥AI的最大潜能，建立人与AI协作的新范式。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>开场与寒暄</h3>
+<p><strong>[Speaker 0]</strong>: 跳到首页，一会开场你来说吗？</p>
+<p><strong>[Speaker 2]</strong>: 我在这群里艾特大家一下。你先都可以啊，都可以。</p>
+<p><strong>[Speaker 0]</strong>: 那你先说一下，我赶紧打打小抄，我的 PPT 没赶出来，我睡着的时候太困了。我能看到其他人的聊天吗？</p>
+<p><strong>[Speaker 1]</strong>: 好的。</p>
+<p><strong>[Speaker 2]</strong>: Hello hello WCL。你可以看见下面有一个 chat，不过他刚才进来一会儿，又退出去了。我们可以稍微等一下吧，毕竟还没到时间，你这个网站还有就是加工了。我看了有上个人说持续施工。</p>
+<p><strong>[Speaker 0]</strong>: 我加更了一些东西，显得不那么空了。</p>
+<p><strong>[Speaker 1]</strong>: 可以，hello hello 明姐。</p>
+<p><strong>[Speaker 3]</strong>: 我们等一下开摄像头，刚起来有点乱。</p>
+<p><strong>[Speaker 0]</strong>: 我也刚起没多久。</p>
+<p><strong>[Speaker 2]</strong>: 麦克来，hello hello <strong>麦克</strong>。</p>
+<p><strong>[Speaker 4]</strong>: 我这边麦有回音吗？</p>
+<p><strong>[Speaker 2]</strong>: 没有，没问题，很好。</p>
+<p><strong>[Speaker 3]</strong>: 感谢，我这边听我自己有回音。</p>
+<p><strong>[Speaker 0]</strong>: 是的。</p>
+<p><strong>[Speaker 1]</strong>: 稍微有一点点。</p>
+<p><strong>[Speaker 3]</strong>: 还是有一些人来的。</p>
+<p><strong>[Speaker 2]</strong>: 对，我看快二十个人报名了。</p>
+<p><strong>[Speaker 3]</strong>: Hello WCL 欢迎，他刚才有进来，然后又退出了，然后又重新进来了。</p>
+<p><strong>[Speaker 2]</strong>: 我们可以先随便聊聊闲聊一会儿。你这个网站的话，你做了一些什么样的一个改进呢？</p>
+<p><strong>[Speaker 0]</strong>: 这两天吧，主要是加了一个小游戏，一会想要演示一下。正好可以让大家体验一下，我希望不会出 bug。</p>
+<p><strong>[Speaker 3]</strong>: 这个是你待会儿会把你的网站地址放进聊天框里吗？</p>
+<p><strong>[Speaker 0]</strong>: 那我怎么放到聊天？我现在在这里看不到聊天哦。</p>
+<p><strong>[Speaker 2]</strong>: 我帮你发啊。</p>
+<p><strong>[Speaker 0]</strong>: 好，我看到 chat 在这里，我说话大家都能看见。我可以的，好的好的。</p>
+<p><strong>[Speaker 3]</strong>: 把这个 pin 上去，然后大家就可以从这里看到你的网站。</p>
+<p><strong>[Speaker 1]</strong>: Joining 得有七个人。</p>
+<p><strong>[Speaker 3]</strong>: 可能因为时间比较早吧，一般人也不会特别多。</p>
+<p><strong>[Speaker 0]</strong>: 好的好的。</p>
+<p><strong>[Speaker 2]</strong>: 对，报名的会很多。然后大家 RSVP 之后就忘记了。</p>
+<p><strong>[Speaker 4]</strong>: 也是有看录像的。为了防止错过录像，我发现很多朋友在看录像。大家早上好。</p>
+<p><strong>[Speaker 2]</strong>: 早安早安。</p>
+<p><strong>[Speaker 1]</strong>: 大家都是几点呀？</p>
+<p><strong>[Speaker 3]</strong>: Victoria 来了。</p>
+<p><strong>[Speaker 2]</strong>: Hello hello Victoria，Oscar。</p>
+<p><strong>[Speaker 3]</strong>: 我们等一下直播的时候，大家随时有问题，可以随时在这个 chat box 里面聊，可以直接提问。我们中间会穿插 Q&amp;A，不会说到最后才回答大家的问题，就是中间完成一个板块，我们就回答一些问题，所以大家不用担心，随时可以在 chat 里面提问哦。Oscar 在美国应该是晚上，没有语音哦，因为你没有在台上。伟豆呀，你要上来吗？</p>
+<p><strong>[Speaker 2]</strong>: 我们到时候中场的时候，大家可以提问嘛。现在的话我觉得也可以邀请大家，然后到时候中场可以提问。</p>
+<p><strong>[Speaker 3]</strong>: 但这场是<strong>宇翔</strong>自己分享，我们可以先让他先分享。</p>
+<p><strong>[Speaker 2]</strong>: 然后等到中场的时候就邀请大家嘛。好，那么再等一分钟，我们就开始，我们三十五分钟开始。</p>
+<p><strong>[Speaker 1]</strong>: OK OK。</p>
+<p><strong>[Speaker 2]</strong>: 就是默认是关闭的。</p>
+<p><strong>[Speaker 3]</strong>: 如果我们这种分享形式的话，是默认关闭所有人的。但我们还有另一种形式，以后也许你再参加，就会遇到那种进来就默认开着摄像头和开麦的状态。</p>
+<h3>个人网站开发经验</h3>
+<p><strong>[Speaker 2]</strong>: 好，那我们要不就先开始。那我就先介绍一下，宇翔是我这个月的 AI chat 伙伴。在和他聊的过程中，就聊到了他的个人网站开发。他也是从零开始，用 AI 发现做这个网站的过程中有很多心得。也包括像用一些工具，社群里面有一些像 <strong>Google IDX</strong>，还有设计及 App 开发工具流程的学习之后，他做出来的这个网站我觉得很有意思。所以想邀请他来给大家分享一下他的经验。</p>
+<p><strong>[Speaker 0]</strong>: 好的好的。其实个人网站我自己之前做过一个，大概也是有 AI 的时代了，可能是去年年初吧。那个时候我就觉得 AI 做起来，当然比我自己去写要好，我自己是写不出来的，我只会一点点技术，非常皮毛。那个时候我就一边问 AI，他会教我怎么做，然后我自己去网上查一些东西，包括还要弄 VPS 之类的。然后今年呢，我大概也就这个周末只花了两天的时间做出来，我觉得就已经相当可用了。以前尤其是做什么 UI 设计，我觉得几乎没法用语言描述。你告诉 AI，你很难形容出你自己的感觉，你到底要怎么样。但今年 AI 给我的感觉，就是你可以把问题交给他，然后让他自己做就可以了。一年之间进步会这么快。我来看看我的小抄，不好意思，我没有把我的 PPT 做出来，没关系。</p>
+<h3>AI 控制 AI 实践</h3>
+<p><strong>[Speaker 0]</strong>: 在技术使用的层面上，我就特别想分享说，用 AI 来控制 AI 是一个非常省时省力的方法。我也在社群里看到 Google IDX 嘛，UI 是我之前自己一直卡住的部分，那个网站做的实在太丑了，我都不想上线了。这次我用了蛮多 Google IDX 设计的东西，但是我可以告诉大家，那个网站我自己是不会用的。我也是把所有的问题都丢给 <strong>Open Interpreter</strong>。我让他把我的首页截图发过去，然后让他重新设计一版，很多时候是这么完成的。我不知道大家有没有试过用 AI 控制 AI 的？</p>
+<p><strong>[Speaker 4]</strong>: 我来分享一下。最近我也做了一个 AI 控制 AI 的。我感觉现在有时候不小心订阅太多了嘛，比如我订了 <strong>ChatGPT</strong>，又订了 <strong>Claude</strong>，然后也有 <strong>Grok</strong>。感觉时间不够用，我就想怎么榨干它呢？我觉得网页版其实都挺好，但是懒得打开用，挨个打开之后还得总结。我就做了一个自动化，可以打开浏览器替我去问问题，然后 AI 再帮我总结。我觉得特别好用，我也在这个社群里发过这个叫 <strong>10xChat</strong>。大家也可以去试，就是用 AI 控制 AI，叠 buff。</p>
+<p><strong>[Speaker 0]</strong>: 麦克的那个我也看过了。我想分享一下自己那个 Google IDX 的页面，看看怎么弄。</p>
+<p><strong>[Speaker 2]</strong>: 下面有个 Share Screen，OK，整体可以看见。</p>
+<p><strong>[Speaker 0]</strong>: 这个网站我其实自己是不知道的，我是在社群里看到的。我觉得这是一个相当好的东西，但它有一个缺点是特别慢。如果让我自己搞的话，我也觉得这是一个蛮大的问题。包括问题描述，一开始是我自己写的，后来这些比较短的都是我自己问的。后来这些就是 Open Interpreter 帮我弄的。我只是简单跟他描述一两句，然后他可以给我完善成这么长的句子。我人在外面的时候也可以这么操作，非常非常省时省力。而且省 token，我这个网站有很大一部分是用 <strong>Cursor</strong> 做的。但是因为我只订了二十美金档的会员嘛，其实有蛮多时候不够用的，他有限制，你得等几个小时，经常会有这种情况出现。后来我发现我可以用 Open Interpreter 去调用，不管 Gemini 还是 Google IDX 也好，既省我的时间，又省我的 token，这是一个我觉得蛮有用的经验。</p>
+<p><strong>[Speaker 4]</strong>: 那你是怎么 prompt 那个 Open Interpreter 去调用呢？你是不是做了 agent skill？我顺手问一个问题。</p>
+<p><strong>[Speaker 0]</strong>: 这个 skill 我现在可能把它弄坏了。我进来之前我还想给大家演示一下，我又想给它加个功能，可能把它弄坏了，我就不演示了。但是我是让他自己写的，我让他去官方文档把怎么使用给总结下来。然后我说你现在懂了吗？他说没问题，然后我让他写一个 skill，以后都按这么操作，但他好像还是不太会。然后我就说你就去我的网站，把每个网页都截图发给他，把我的需求跟他说，你懂了吗？他说懂了，然后他去做了，我觉得挺满意的。我说那固定下来吧，就把这个存下来，就是这样而已。我不太会写 skills，但是非常可用，在我写网站的时候没有遇到任何问题。但今天有可能我在酒店里，不知道是网关的设置问题还是什么，开始之前调用有些不是很成功，所以先不演示了，怕一会儿一直翻车。我现在分享的是网页本身吗？</p>
+<p><strong>[Speaker 4]</strong>: 对，是网页本身，左边是你的窗口。</p>
+<p><strong>[Speaker 0]</strong>: 首先大家有什么问题吗？没有我就接着讲了。</p>
+<p><strong>[Speaker 4]</strong>: 我这里 spotlight Victoria 的问题：你怎么知道这样的话会省 token 呢？</p>
+<p><strong>[Speaker 0]</strong>: 因为如果你订的是会员的话，很多是按月收费的，比如 ChatGPT 和 Claude，但是它会在单位时间内有用量限制。然后 Google 有很多服务其实是相当于免费的，包括我一会儿再讲一讲那个 <strong>NotebookLM</strong>，这也是我用的特别多的一个服务，我从来没用到过用量限制。我现在一直用它来看书，当然我也是看瑞的分享才知道的。</p>
+<p><strong>[Speaker 4]</strong>: 然后你现在用 NotebookLM 是直接用它的 App 呢，还是说也是用 Open Interpreter 调用的？</p>
+<p><strong>[Speaker 0]</strong>: 我也是用 Open Interpreter 调用的，我觉得不想去点，觉得好懒。</p>
+<p><strong>[Speaker 0]</strong>: 是的，所以我说这是一个蛮大的差别。去年还是更多在跟 AI 本身聊天嘛，现在尤其是用 AI 控制 AI，我觉得是大家都应该去实践的一件事情，省时省力。</p>
+<h3>网站 UI 与双链</h3>
+<p><strong>[Speaker 2]</strong>: 那么你也可以稍稍介绍一下，这个网站上具体的内容。</p>
+<p><strong>[Speaker 0]</strong>: 首先这主要是一个文档站。我自己平时有积累很多东西，包括文章、笔记，但非常散乱。我想把它拼成一些长文发出来，也是我自己的一些思考。要不要发社交媒体我还在考虑，如果有跟 AI 相关的，我也同步到我们社群里。我想说这个 UI 部分是我以前自己最头疼的。我自己不懂设计，以前跟 AI 沟通又比较难说清需求。现在像我这种不懂的事情，主要的解决方式就是一个：抄。我最开始问 AI 有什么模板可以直接套用，他问我要做静态站还是动态站，我说哪个合适？他说静态站合适，因为主要是图文。然后他推荐用 <strong>Astro</strong>，这个我以前知道。但是我觉得太没有个性了，一页白的只有文章。我说你能不能去给我找几个用 Astro 的博客，我看看别人是怎么做的。然后我从中选了一个，觉得风格挺喜欢的，我说我们先把它抄下来。上传文章后，我觉得纯文本不太适合我，我觉得 <strong>Obsidian</strong> 的双链功能挺好的，我说你能不能帮我把这个功能加进去。他说怎么实现用什么技术，我说技术我不懂，那你帮我做吧，我直接把我的笔记文件传给你，你帮我把双链都给我做上。大概试了两三次，他就把这个做好了。</p>
+<p><strong>[Speaker 0]</strong>: 那些字体什么的，因为模板有默认的嘛。我都传上去之后，我就去跟 Claude 讲，我说你帮我检查一下审美吧，有什么建议可以给我。他说字体、行间距之类的，我说那有没有做的比较好的软件？我们直接按他的方案来。这个字体应该是用终端的那个 Ghost，我觉得挺好看的。这些配色呢，因为我主要自己用 Obsidian，我说我直接用我 Obsidian 主题的颜色好不好？这些加粗、斜体，我都是直接抄过来的。因为它只是几个颜色配置文件嘛，所以跟我平时写笔记的体验是一模一样的。我等于是东抄抄西抄抄，借鉴成功经验。</p>
+<p><strong>[Speaker 1]</strong>: 比较好奇 Ghost 字体是不是就是这一个。</p>
+<p><strong>[Speaker 0]</strong>: 这个得问我的 AI。我是用的时候觉得还可以，就拿过来用了，我很偷懒。</p>
+<p><strong>[Speaker 2]</strong>: 其实我还比较好奇你那个打字机的效果，你是怎么想出来那个设计的？然后也有个问题，问你这里接入了 API 吗？</p>
+<p><strong>[Speaker 0]</strong>: 这个我没想。我是搞了一个文件夹，因为我不是所有都要发上来嘛，我把想要的直接拖到文件夹里。然后我说你去读这个文件夹，把这里的内容发到网站上去。可能直接接入 API 会更省力一点，这个倒是提醒我了，我把这个记下来，最后去试试。</p>
+<p><strong>[Speaker 2]</strong>: 因为我觉得本质上 Obsidian 就是一个文件夹。你可以看下一个问题吗？</p>
+<p><strong>[Speaker 0]</strong>: 我的网站也就是一个个人发文章的网站，所以我不是很想让很多人看见，我不知道其他人有没有这个经验。</p>
+<h3>SEO 与流量讨论</h3>
+<p><strong>[Speaker 4]</strong>: 我这里开麦分享一下。Oscar 这个问题其实挺好的，而且现在挺内卷的。我前段时间做了一个叫 <strong>awesomeskills.dev</strong> 的网站，最近有点懒没更新，就发现这个赛道特别卷。大家做 SEO，你可以搜关键词在 Google 排得很靠前。我给你打到公屏里面，这网站已经有点荒废了。如果坚持的话呢，能 rank 到很靠前，现在已经掉得很厉害了。本质上你要做内容的话就两部分：一部分目标是让 Google 搜索进来，让他停留时间足够长。那就不能是 AI 生成的废话，你得给用户提供价值。增加停留时间，比如他进来之后在内部可以 link、可以搜索、可以 explore，像进入一个游戏一样，这有助于提高你的排名。因为从 Google 进入你的网站之后，他如果点了后退，Google 就知道了，原来这个网站没什么营养，然后它就会往下给你惩罚。这就是我现在能感受到的，ranking 还是蛮困难的。</p>
+<p><strong>[Speaker 2]</strong>: 然后下面还有一个问题，对你刚才说用 AI 控制 AI 很感兴趣，不知道这部分能不能分享。你可以 share 一下你的屏幕。</p>
+<p><strong>[Speaker 0]</strong>: 好，我其实用的也就是 Claude、Cursor 还有 Open Interpreter。因为 Claude 现在比较慢嘛，我就让他在那里跑，同时给 Cursor 同样一个我本地的文件夹。我就直接给他，你别跟我提示了，你提示了我也不懂，就去做好了。让两个程序分别去跑不同的任务。比如我让 Claude 去检查一下有什么可以改进的 UI 设计，或者不统一的风格。然后这边 Cursor 就去解决一些实际的问题。</p>
+<h3>游戏演示与理念</h3>
+<p><strong>[Speaker 0]</strong>: 昨天编写了一个小游戏，一会给大家分享一下。其实做 Prompt Engineering 我觉得也蛮简单的。我在网上看到一些很花哨的功能，比如给 Open Interpreter 配置了好多个不同的 agent 让大家一起讨论。我觉得第一是我跟不上，第二是大家非常的 formal。我觉得我不焦虑的时候，生产力会高很多。你首先要搞清楚自己的目的是什么，你跟 AI 交代一下，他可能自己就去做了。你没必要去搞那么复杂的操作，而是应该去把自己想要的是什么想清楚。我花了两天时间做出来了自己心目中想要的样子。像这个小机器人，现在既有声音又有动作，应该都是我用几句话就说的。我会让他先给我一个方案，比如先去生成几张贴图，做成动作，或者拆分成各个组件，说优势劣势。我也看不懂，我就说那你选一个你推荐的做下去就好了。大概十分钟就会给我做出来了，我觉得非常好玩。现在他可以给我的文章生成，我觉得这些移动也蛮合理的，看起来跟真正人手工编程编出来的没差别。</p>
+<p><strong>[Speaker 2]</strong>: 那我比较好奇，Victoria 问了一个问题，就是屏幕会有变化吗？就是你在动的时候，它发出的声音。</p>
+<p><strong>[Speaker 0]</strong>: 以后可以做。但我不想做那么多功能的原因是，我不想让它干扰阅读。你想玩就跟他玩一玩，不想玩扔在一边，你可以好好的看。我觉得我主要还是一个文档阅读站。</p>
+<p><strong>[Speaker 2]</strong>: 那你可以分享一下，你是怎么从一开始这个网站的原型，你有存档吗？你可以给我们看一下你 Google IDX 具体设计的流程。</p>
+<p><strong>[Speaker 0]</strong>: 我第一版首页是一个空白的，其实第一版跟现在区别就已经不大了。我第一次让 Google IDX 去给我设计，大概就已经长得差不多了。因为我知道我自己想要大概就是这样，我看了别人的网站，字体跟背景什么都是抄的。所以你在一个自己已经有不错基础上面改，就远远要比你没有一个清晰的图景从头开始做效率要高。当时我还弄了贴图，后来觉得算了吧，每次编辑还得编辑个图片，AI 生成的图片有时候我又不满意。</p>
+<p><strong>[Speaker 0]</strong>: 稍微讲一下那个音效的问题。这个也是 AI 合成我觉得还比较差劲的，我就给他们提了一个要求，说你能不能去给我找开源的音效库。我的机器人的声音、开头打字机的声音，都是从开源音效库里找的，并不是 AI 自己生成的。如果你有哪个地方卡住了，我经常用的 prompt 就是去 <strong>GitHub</strong> 上找有没有别人的先例，我们要站在巨人的肩膀上。</p>
+<p><strong>[Speaker 1]</strong>: 其实现在音效的 AI 我觉得也蛮不错的，有 <strong>Suno</strong>。然后 Gemini 最近也出了一个在网页端就可以用的 <strong>Make Music</strong>，还有一个 <strong>Udio</strong>，这些工具现在其实已经蛮成熟的。主要我们就是像你说的，如何去用 AI 协作不同的工具。那我比较好奇你真正用 Open Interpreter 去调用这些不同 AI 工具之间的协作，你可以展示一下吗？</p>
+<p><strong>[Speaker 2]</strong>: 哎呀，我现在真展示不了，现在有很多问题，我不想现场 debug 浪费大家时间。</p>
+<p><strong>[Speaker 1]</strong>: OK 没问题。</p>
+<p><strong>[Speaker 2]</strong>: 不知道大家有没有兴趣说，现在 AI 卷这么厉害，我给大家说一下我想的一个问题吧。就是我们跟 AI 之间的关系，你到底在这个部分应该负责些什么东西？AI 越来越厉害之后，我们可不可以在技术方面的事情都放手让 AI 去做，多信任他一点。我看到有些人说 Cursor 就是不行，应该用 ChatGPT 或者 Claude，或者 Gemini。我遇到的问题是，如果说木桶效应的话，我永远是自己是最短的那一半。每一个 AI 懂得都比我多，他们能做的事情都比我多得多。我有一个问题，Cursor 做了两遍做不好。我就跟他说，相信你自己可以的，第三遍就过去了，就这么简单。因为我觉得我也帮不到他什么，但是我知道他的能力是可以的。或者你可以问他，你哪里遇到问题，然后你可以让他去搜索去做。我觉得我们很多时候工作应该稍微转变一下，不是工具的问题，是我们自己的问题。我有没有真的想清楚到底要的是什么。</p>
+<p><strong>[Speaker 1]</strong>: 接下来你可以分享一下你那个 NotebookLM。</p>
+<p><strong>[Speaker 3]</strong>: 在 NotebookLM 之前，我来 echo 一下宇翔。我也觉得最近半年的 AI，确实是有点像我们能帮到 AI 什么，而不是说我们应该给人家下什么指令。举个例子，前段时间我跟瑞还有独行在准备一个 <strong>iOS</strong> 的项目。我发现最后我们同样做一个语音转笔记的 App，我是我们仨中做最不好用的，就是我想太多技术细节了。我局限了我的 AI，我说哎这个别弄坏了，那个要注意，那这个 AI 它就局限了。反而就是让他放开手干，只要我们关注希望要用什么设计，他可以做得很好。所以大家用的时候不要太畏手畏脚了。我现在电脑基本上都交给他接管，让他尽量去更多的迭代，自动化去测试。</p>
+<p><strong>[Speaker 2]</strong>: 谢谢克的分享。我老是能看到别人的案例，说 Open Interpreter 把自己的邮件删了，把文件删了。我倒是没想那么多，我觉得删了就删了。首先让它恢复，文件只要没覆盖都是能恢复的嘛。其次没什么特别重要的东西，我只要不输信用卡进去，我觉得都 OK。我是把 AI 看成是一个很有能力的小孩子，他要是办点什么错事，你应该为自己的 AI 负责。他现在欠缺的能力就是他无法为自己负责，他也不知道自己要干什么，你就帮他把这两件事情处理好，他就非常非常强大。</p>
+<p><strong>[Speaker 2]</strong>: 我希望大家有兴趣来我的网站看一看，我给大家看一个小游戏，就是我今天早上做的大概花了十几分钟。</p>
+<p><strong>[Speaker 1]</strong>: 我把链接也发在聊天框里面了。你可以继续分享屏幕给我们看一下怎么用。</p>
+<p><strong>[Speaker 2]</strong>: 这种炸弹人我觉得我们小时候应该都玩过吧，就是要找到一个去下一层的路口，然后打怪。我做了一些还蛮厉害的角色，像这个战士是不会被怪打死的。还有法师、爆破家。但是我想说的是，这个游戏的最强角色是这个，他没有任何技能，我只给他一个能力，就是他知道出口在哪。如果你选这个的话，他就直接到下一关了。这个就是我用 AI 的时候的一个感觉。就是 AI，你只要找到出口，也就是你的目的。你只要清晰，其他什么编程能力我觉得都是小事情。这是一个小玩具，只要花个十分钟都能做出来。这也是你做一个自己的网站很好的优点，你可以放一些你实验的东西。</p>
+<h3>NotebookLM 学习法</h3>
+<p><strong>[Speaker 0]</strong>: 我跟大家讲一讲那个 NotebookLM。</p>
+<p><strong>[Speaker 2]</strong>: 这边我的用法是从瑞那里抄的。它不光可以用来读书，还可以用来听一些 podcast。我懒得看，但是他一期都很长，一个小时两个小时。以前我健身的时候放在那里当背景音乐，现在就可以把主题类似的东西都放在一个源里面。我是让 AI 去搜主题类似的，然后组合到一起丢进去，这样我觉得我的学习效率蛮高的。不管我想学任何东西，你首先可以利用 AI 来学习，一边学一边给他下指令。如果你遇到什么问题，你的 AI 解决不了了，你想想办法自己能学到什么帮到 AI。</p>
+<p><strong>[Speaker 1]</strong>: 你主要就是用它去生成播客用来听的吗？</p>
+<p><strong>[Speaker 2]</strong>: 我懒得听。像 ChatGPT 和 Claude 有个问题，他们没法拿 YouTube 的字幕，所以你得用谷歌家的服务。我现在用 Gemini 用的蛮少的，我觉得前两天用 GPT-4o，我发现他写代码也会更好用一些。我现在写文章也不是用 AI 来写，我会写好之后发给 AI 看。我用 Claude 最多的是让他给我修改一下我自己的文章。我写代码主力是用 Cursor，因为它比较便宜，我二十美金的档位没有用完过。Google 的 AI 我就用它来做一些免费的事情。</p>
+<p><strong>[Speaker 1]</strong>: 我也可以 echo 一下，NotebookLM 里面其实它有一个 <strong>Deep Research</strong> 的功能。你用 Open Interpreter 的话，可以让他用这个 Deep Research 去找东西，很方便。</p>
+<p><strong>[Speaker 2]</strong>: 我有用过。AI 有一些很烦人的问题，比如 Open Interpreter 配置、自动升级，我都是一句话让他来做的。像 Google IDX，我也是让他去网上搜那个 skill，先看看别人有没有写好，我自己就懒得写了。如果别人写好的不够用，我再补充两句。在别人的基础上修改，这个 AI 时代我觉得版权就先放一边吧。我有想过让 ChatGPT 来控制自己的电脑，或者用它来调用 Claude，都是用几句话让他试试的。我配置 Open Interpreter 我也是不会的，我让 Cursor 一句话帮我配置，然后他就弄好了。</p>
+<p><strong>[Speaker 3]</strong>: 确实，包括 Open Interpreter 用的时候遇到各种奇怪的 bug，有时候你用 Cursor 或者 Claude 去修复也挺好的。</p>
+<p><strong>[Speaker 2]</strong>: 对，如果遇到什么问题，尤其是 AI 的问题，都让 AI 先去试试。他如果哪里做的不好，我再去搜。比如知识系统没有更新，我也让他先去上网看看 X 上有没有人在讨论这件事情。我装了 skills，所以我的 Open Interpreter 可以搜索 X。不知道它什么原理，但是它运行得目前我挺满意的。</p>
+<h3>问答与交流</h3>
+<p><strong>[Speaker 1]</strong>: 大家有什么问题也可以在评论区提一下，或者想要上台提问的可以举手。明姐问了 X 具体是用哪个 skill？</p>
+<p><strong>[Speaker 2]</strong>: 这个我得翻翻我们的对话记录了。今天我的 Open Interpreter 一直有问题，正在输入卡住，要不然就那个 X 还没有识别。</p>
+<p><strong>[Speaker 4]</strong>: 其实你在聊天对话框里面 slash 一下，会出现你所有安装的 skill，可以看到关键字。我看 Victoria 举手有问题，你可以开麦问问题。</p>
+<p><strong>[Speaker 5]</strong>: 想问一下，你刚才说用 Open Interpreter，比方说你打开两个窗口，一个是 Cursor 编程，另外就是跟 Open Interpreter 说你去检查一下。你的意思就是说让 Open Interpreter 去 review Cursor 的结果，是这意思吗？</p>
+<p><strong>[Speaker 2]</strong>: 可以这么理解，就是给不同的 agent 分配不同的任务，这样他们可以同时做不同的事，省时间。</p>
+<p><strong>[Speaker 5]</strong>: 但是刚才你说的是 AI 控制 AI，我理解的是你让 Open Interpreter 去开 Cursor 帮你完成这件事。</p>
+<p><strong>[Speaker 2]</strong>: 完全可以这么做，但我不这么做。我在电脑面前的话，我就直接用 Cursor，我觉得可以实现所有的。Open Interpreter 我用的最多的，是我在做网站的时候让他调用 Google IDX，因为我不太会用。现在每天都会有很多新程序新项目出来，比如 GitHub 有什么特别热的东西，我还要去看它的使用说明配置下来，这是一个浪费时间的事情。你直接让 Open Interpreter 帮你读一下它的 readme，然后帮你配置好，实现什么效果，他就帮你跑了。这样省去了你的学习成本。</p>
+<p><strong>[Speaker 5]</strong>: 因为 Google IDX 它是网页版，等于是你给他你的 Google account，然后让他去打开网页去浏览，去跟他交互，是这意思吗？</p>
+<p><strong>[Speaker 2]</strong>: 应该差不多吧，我装了一个 skills，它应该是用 <strong>MCP</strong> 吧，具体细节的技术我也不知道，我也不想知道。</p>
+<p><strong>[Speaker 5]</strong>: 你刚才说觉得省 token，你觉得省 token 的原因是因为 Open Interpreter 给你的 review 方向比较清晰了，然后你的 command 更明确了？</p>
+<p><strong>[Speaker 2]</strong>: 是这样的，比如 Claude 它有每一周的用量，还有每四五个小时刷新一次。我的意思是你可以把闲置的都利用起来。然后 Google 的不是比较便宜吗？可是我觉得 Gemini 现在不够好用，你比如搜索什么的任务交给他，他做得比他们好，总结优秀。</p>
+<p><strong>[Speaker 5]</strong>: 有道理。那我再问一个问题，你用 NotebookLM，能不能分享一下你用的过程？比方说一个 podcast，你让他去看看有什么 popular 的，不同的 theme 给你 create 不同的 NotebookLM，有更新的话让他直接更新，最后得出来的东西让他 generate podcast 然后你去听，是这意思吗？</p>
+<p><strong>[Speaker 2]</strong>: 就是这个。我举的那个 podcast 例子是因为他是一个我很喜欢的播客。以前我都是从头到尾听的，只是有一些我没那么感兴趣的东西，我就不想听。两个小时我就让他把文字稿给我，我去看看重点。像看书也是这样的，我在用 NotebookLM 来看《圣经》。《圣经》这个东西我读起来好枯燥，但是我分章节用 NotebookLM 来看，我就觉得特有意思。有一些很晦涩的文字，我就直接让他给我生成思维导图，也可以问他一些问题。</p>
+<p><strong>[Speaker 3]</strong>: 你能举一下看《圣经》的例子吗？我也想看一下。</p>
+<p><strong>[Speaker 2]</strong>: 我来分享这个 screen。这就是伊甸园。我就想看看他原始版本《圣经》里到底讲的是什么。总之呢，上帝是跟亚当说，吃了这个智慧果会死。然后蛇对夏娃说的是吃了果子不一定会死，反而眼睛会变得明亮。我就觉得上帝是不会撒谎的，那么为什么神要撒谎呢？这边就告诉我说《圣经》明确指出神不能撒谎，神说了吃了果子的日子必定死，但亚当却活到了九百多岁。我说他这个死，是不是暗喻呢？是不是就不是字面意义上的 death？</p>
+<p><strong>[Speaker 5]</strong>: 死是我理解死是与神隔离的意思。不管它是什么文，不同版本的《圣经》已经是有一些偏颇的。看这些其实你看的是他的隐喻，在不同的阶段理解的也不一样。我觉得不用对那个词儿特别嚼，看这些东西是看他的故事后面的隐喻。</p>
+<p><strong>[Speaker 2]</strong>: 我可以理解。我比较想知道他们后面的哲学含义到底是什么。</p>
+<p><strong>[Speaker 5]</strong>: 我有个问题，你现在看这个《圣经》，你还是跟他以对话的方式，是这意思吗？NotebookLM 最大的问题，就是他没有一个 record 说我到底有哪些章节我已经读完了。除非自己有 separate note，你很难知道到底哪些 document 是你完全读完了的。假如说你跳着读，你可能就记不住了。大家有没有用这种东西学习的困惑？我觉得在上面如果做知识管理的话，肯定还要自己再加一个 note taking 的 layer。</p>
+<p><strong>[Speaker 2]</strong>: 我就分享一下，我没有这个困扰。因为我读书都是，如果我不记住的那就说明我不是很关心，我记不住就记不住。所以我没有这个困扰，我也不关心那些技术细节。</p>
+<p><strong>[Speaker 1]</strong>: 我补充一点，就是它左边可以选择来源。还有一个方法就是它的 note 可以导出，可以让 AI 整理。甚至可以导出到 Obsidian 里面。</p>
+<p><strong>[Speaker 5]</strong>: 有道理。</p>
+<p><strong>[Speaker 1]</strong>: 好，那么如果说没有更多的问题，我们这次的直播就差不多到这里啦。</p>
+<p><strong>[Speaker 2]</strong>: 谢谢大家。</p>
+<p><strong>[Speaker 3]</strong>: 感谢大家的参与，学到了很多，真的是他山之石可以攻玉。</p>
+<p><strong>[Speaker 1]</strong>: 我也准备去用这个去做系统的学习。感谢大家。</p>
+<hr>
+<h3>导语：</h3>
+<p>本次分享会由“用AI发电”社群成员 yuxiang chen 主讲，深入复盘了他如何在短短两天内，利用 AI 协作而非简单的指令堆砌，从零构建起一个功能完备、审美在线的个人网站及“数字实验室”。这不仅是一次技术的展示，更是一场关于如何转换思维——从“工具使用者”进化为“AI 协作者”的深刻探讨。</p>
+<hr>
+<h3>第一部分：核心理念 — 从“指令交互”到“多代理协作”</h3>
+<p>1. AI Provider Orchestration（AI 供应商编排）：用 AI 控制 AI</p>
+<ul>
+<li><strong>核心理念:</strong> 面对纷繁复杂的 AI 工具和用量限制，最高效的方法是建立一个“协作网络”，利用一个全能型 Agent（如 OpenClaw）去调度和监控其他专用工具。 <em>(yuxiang, 00:09:44)</em></li>
+<li><strong>实战案例:</strong> 在设计 UI 时，宇翔并未亲自操作设计工具，而是将网站首页截图发给 OpenClaw，让它调用 Google Stitch 进行重构，并让不同的 Agent 分别负责代码实现、UI 审查和文章同步。 <em>(yuxiang, 00:10:11)</em></li>
+<li><strong>落地方法:</strong> 不要试图在单一窗口解决所有问题。利用 `OpenClaw` 或 `10x Chat` 等自动化工具，让 AI 去读取 Readme 文档并自行配置环境，人类只需定义最终目标。 <em>(yuxiang, 00:54:19)</em></li>
+</ul>
+<p>2. “木桶效应”的逆转：人类应是 AI 的辅助者</p>
+<ul>
+<li><strong>核心理念:</strong> 在 AI 时代，技术能力已不再是短板，人类往往才是那个“最短的木板”。我们需要从“给 AI 下指令”转变为“为 AI 提供必要的支持”。 <em>(yuxiang, 00:34:40)</em></li>
+<li><strong>实战案例:</strong> Mike 分享了 iOS 项目开发的教训。作为拥有十多年经验的专业开发者，他因过度关注技术细节和潜在错误而局限了 AI 的发挥，导致最后生成的项目反不如“放手让 AI 干”的初学者作品。 <em>(Mike Chong, 00:36:51)</em></li>
+<li><strong>落地方法:</strong> 给予 AI 充分的信任和探索空间。当 AI 遇到错误时，与其亲自 Debug，不如问它：“你哪里遇到了困难？我能提供什么支持？” <em>(yuxiang, 00:35:14)</em></li>
+</ul>
+<hr>
+<h3>第二部分：工具与武器库 — 宇翔的数字实验室</h3>
+<hr>
+<h3>第三部分：高级战术与宝贵教训</h3>
+<ul>
+<li><strong>审美“东拼西凑”法：</strong> 如果不懂设计，就去 GitHub 寻找审美在线的开源博客（如 Ghosty 风格），直接把 Obsidian 的配色方案丢给 AI，让它“像素级复刻”你的笔记体验。 <em>(yuxiang, 00:19:32)</em></li>
+<li><strong>开源音效优于合成音效：</strong> 相比纯 AI 合成的音效，让 AI 去开源音效库搜索并匹配素材，往往能得到更自然的打字机声和环境音。 <em>(yuxiang, 00:31:22)</em></li>
+<li><strong>SEO 与用户留存战术：</strong> 网站的排名取决于用户的停留时长。通过内部链接（Link）构建游戏化的探索感，防止用户进入后立即点击“返回”，是应对 Google 惩罚的关键。 <em>(Mike Chong, 00:22:40)</em></li>
+<li><strong>对抗 FOMO 的心态：</strong> 每天都有新工具（Agent Skill）出现，不要试图跟上所有花哨的功能。明确自己的目的，让 AI 帮你看 Readme，只集成你真正需要的。 <em>(yuxiang, 00:26:42)</em></li>
+</ul>
+<hr>
+<h3>第四部分：资源与链接库 (来自聊天室)</h3>
+<p><strong>1. 宇翔的个人项目：</strong></p>
+<ul>
+<li><strong>个人博客：</strong> <a href="https://personal-blog-cn.pages.dev/">https://personal-blog-cn.pages.dev/</a></li>
+<li><strong>数字实验室 (小游戏体验区)：</strong> <a href="https://personal-blog-cn.pages.dev/lab/">https://personal-blog-cn.pages.dev/lab/</a></li>
+</ul>
+<p><strong>2. 核心推荐工具：</strong></p>
+<ul>
+<li><strong>10x Chat (自动化协作)：</strong> <a href="https://10x.chat/">https://10x.chat/</a> (参考聊天记录)</li>
+<li><strong>Awesome Skills (社区案例)：</strong> <a href="https://www.awesomeskills.dev/en">https://www.awesomeskills.dev/en</a></li>
+<li><strong>Suno AI (音乐生成)：</strong> <a href="https://suno.com/home">https://suno.com/home</a></li>
+<li><a href="http://producer.ai/"><strong>Producer.ai</strong></a> <strong>(生产力 AI)：</strong> 聊天记录提到</li>
+</ul>
+<p><strong>3. 实用资讯与讨论：</strong></p>
+<ul>
+<li><strong>Google Stitch 设计教程：</strong> 「入門/初級」5分鐘用Google Stitch快速設計App</li>
+<li><strong>Ghosty 默认字体讨论：</strong> <a href="https://www.reddit.com/r/Ghostty/comments/1hpkuyn/what_is_the_default_font/?tl=zh-hans">Reddit 链接</a></li>
+</ul>
+<hr>
+<h3>行动清单 (给所有社区成员)</h3>
+<ol>
+<li><strong>建立个人实验室：</strong> 哪怕只有一个空白页，也要找一个地方存放你的 AI 实验成果，避免“随手做，随手丢”。</li>
+<li><strong>尝试一次“多机协作”：</strong> 在下次遇到 UI 瓶颈时，尝试截图给 OpenClaw，让它去寻找 Google Stitch 方案。</li>
+<li><strong>转换提问视角：</strong> 停止单纯的下指令，下次 AI 出错时，尝试问它：“你需要什么样的上下文或文档才能做得更好？”</li>
+<li><strong>利用 NotebookLM 攻克枯燥读物：</strong> 找一本你一直想读但读不下去的经典（如圣经），分章节导入并生成思维导图。</li>
+</ol>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Microsoft" class="entity-link company-link">Microsoft</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=ChatGPT" class="entity-link product-link">ChatGPT</a>, 
+                
+                  <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>, 
+                
+                  <a href="/search/?q=Grock" class="entity-link product-link">Grock</a>, 
+                
+                  <a href="/search/?q=Google Stitch" class="entity-link product-link">Google Stitch</a>, 
+                
+                  <a href="/search/?q=Open Interpreter" class="entity-link product-link">Open Interpreter</a>, 
+                
+                  <a href="/search/?q=GPT-4o" class="entity-link product-link">GPT-4o</a>, 
+                
+                  <a href="/search/?q=NotebookLM" class="entity-link product-link">NotebookLM</a>, 
+                
+                  <a href="/search/?q=Sonar" class="entity-link product-link">Sonar</a>, 
+                
+                  <a href="/search/?q=Gemini" class="entity-link product-link">Gemini</a>, 
+                
+                  <a href="/search/?q=Producer AI" class="entity-link product-link">Producer AI</a>, 
+                
+                  <a href="/search/?q=Code X" class="entity-link product-link">Code X</a>
+                
+              </p>
+            
+            
+              <p><strong>媒体/书籍:</strong>
+                
+                  <a href="/search/?q=Bible" class="entity-link media-link">Bible</a>
+                
+              </p>
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-collaboration/">ai-collaboration</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-automation/">ai-automation</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">web-development</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">prompt-strategy</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/knowledge-management/">knowledge-management</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

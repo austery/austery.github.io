@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI评估的未来：Braintrust如何通过Loop实现自动化和优化</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="AI评估的未来：Braintrust如何通过Loop实现自动化和优化" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">AI评估的未来：Braintrust如何通过Loop实现自动化和优化</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2025-08-09
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/technology/">technology</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=MC55hdWLq4o" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2025-08-09
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本文探讨了人工智能评估（evals）的现状与未来趋势。Braintrust团队发现，尽管AI产品日益自动化，但评估过程仍高度依赖人工。为解决这一痛点，Braintrust开发了名为Loop的AI代理，它能自动优化提示词、数据集和评分器。得益于Claude 4等前沿模型的突破性进展，Loop的性能显著提升，有望彻底改变AI评估的效率和质量，使开发者能更高效地构建顶尖AI产品。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>AI评估的现状与未来展望</h3>
+<p>今天，我们将探讨迄今为止的<strong>评估</strong>（Evals: 人工智能模型或产品的性能评估）现状，以及我们认为评估未来将走向何方。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Today, we're going to talk a little bit about evaluations (evals) to date and where we think evals are going to be going in the future.</p>
+</details>
+<p>另外，对于那些之前见过我兄弟的人，我将尽力展现出他那样的活力和魅力。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Also, for those of you who saw my brother earlier, I'm going to do my best to live up to his energy and charisma.</p>
+</details>
+<p>对于我们Braintrust团队来说，这近两年的旅程令人惊叹。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">It's been an amazing, almost two-year journey for us at Braintrust.</p>
+</details>
+<p>我们有幸与一些最杰出的公司合作，共同打造我认为是世界上最好的AI产品。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">We have had the opportunity to work with some of the most amazing companies building, I think, the best AI products in the world.</p>
+</details>
+<p>我对人们在产品上实际运行的评估数量感到震惊。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">I'm blown away by how many evals people actually run on the product.</p>
+</details>
+<p>平均而言，注册Braintrust的组织每天运行近13次评估。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">The average organization that signs up for Braintrust runs almost 13 evals a day.</p>
+</details>
+<p>我们的一些客户每天运行超过3,000次评估。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Some of our customers run more than 3,000 evals a day.</p>
+</details>
+<p>而一些运行评估的最先进公司，每天在产品上花费超过两小时来处理他们的评估工作。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">And some of the most advanced companies that are running evals are spending more than two hours in the product every day working through their evals.</p>
+</details>
+<p>我认为最让我印象深刻的一点是，尽管我们的客户正在构建世界上一些最酷、最自动化的基于AI的产品和<strong>代理</strong>（Agents: 能够感知环境、做出决策并执行行动的AI系统），但对于评估而言，你所能做的最好的事情就是查看仪表盘。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">And I think one of the things that stands out to me is that while we have customers building some of the coolest, most automated AI-based products and agents in the world, the best thing you can do for evaluation is to look at a dashboard.</p>
+</details>
+<p>我认为我们在Braintrust中有一个相当不错的仪表盘，但它仍然只是一个你查看后离开，然后思考‘我应该对我的代码或<strong>提示词</strong>（Prompts: 指导AI模型生成响应的输入文本）做出什么改变，才能让这次评估表现得更好？’的工具。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">I think we have a pretty cool dashboard in Braintrust, but still, it's just a dashboard that you look at and then you walk away and think, 'Okay, what changes can I make to my code or to my prompts so that this eval does better?'</p>
+</details>
+<p>而我实际上认为，这一切都将改变。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">And I actually think that is all going to change.</p>
+</details>
+<h3>隆重推出Loop：自动化AI评估代理</h3>
+<p>因此，今天我很高兴能谈论一个名为<strong>Loop</strong>的工具。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So today, I'm excited to talk about something called Loop.</p>
+</details>
+<p><strong>Loop</strong>是我们已经开发了一段时间并内置于Braintrust中的一个代理。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Loop is an agent that we've been working on for some time now that's built into Braintrust.</p>
+</details>
+<p>它实际上只有通过评估才能实现。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">And it's actually only possible because of evals.</p>
+</details>
+<p>在过去的两年里，我们每个季度都会对<strong>前沿模型</strong>（Frontier Models: 指当前最先进、性能最强大的AI模型）进行评估，以了解它们在实际改进提示词、改进数据集和改进<strong>评分器</strong>（Scorers: 用于衡量AI模型输出质量的工具或算法）方面的表现如何。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Every quarter for the last two years, we've run evals on the frontier models to see how good they are at actually improving prompts, improving data sets, and improving scorers.</p>
+</details>
+<p>直到最近，它们的表现其实并不理想。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">And until very, very recently, they actually weren't very good.</p>
+</details>
+<p>事实上，我们认为<strong>Claude 4</strong>尤其是一个真正的突破性时刻。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">In fact, we think that Claude 4 in particular was a real breakthrough moment.</p>
+</details>
+<p>它的性能比之前的领先模型提高了近六倍。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">And it performs almost six times better than the previous leading model before it.</p>
+</details>
+<p>因此，Loop在Braintrust内部运行，它能够自动优化你的提示词，甚至包括非常复杂的代理。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So, Loop runs inside of Braintrust, and it can automatically optimize your prompts all the way to very complex agents.</p>
+</details>
+<p>但同样重要的是，它还能帮助你构建更好的数据集和评分器，因为正是这三者的结合才能带来真正出色的评估。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">But just as importantly, it also helps you build better data sets and better scorers, because it's really the combination of these three things that make for really great evals.</p>
+</details>
+<h3>Loop的用户界面与灵活性</h3>
+<p>这是用户界面（UI）的一个小预览。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">This is a little preview of the UI.</p>
+</details>
+<p>如果你是Braintrust的现有用户或注册了该产品，今天就可以开始使用它。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">You can actually start using it today if you are an existing Braintrust user or you sign up for the product.</p>
+</details>
+<p>有一个名为Loop的功能开关，你只需打开它就可以立即开始使用。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">There's a feature flag that you can just flip on called Loop and start using it right away.</p>
+</details>
+<p>默认情况下，它使用<strong>Claude 4</strong>，但你实际上可以选择任何你有权限访问的模型并开始使用。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">By default, it uses Claude 4, but you can actually pick any model that you have access to and start using it.</p>
+</details>
+<p>无论是<strong>OpenAI模型</strong>、一个<strong>Gemini模型</strong>，或者你们中的一些人正在构建自己的<strong>大型语言模型</strong>（LLMs: Large Language Models），你都可以使用这些模型。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Whether it's an OpenAI model, a Gemini model, or maybe some of you are building your own LLMs, you can use those as well.</p>
+</details>
+<p>正如你所看到的，它直接在Braintrust内部运行。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">And as you can see, it runs directly inside of Braintrust.</p>
+</details>
+<p>我们从与许多用户的合作中了解到，在处理数据和提示词时，实际查看它们是多么重要。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">One of the things that we learned from working with a lot of users is how important it is to actually look at data and look at prompts while you're working with them.</p>
+</details>
+<p>在引入Loop时，我们不希望这一功能消失。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">And we didn't want that to go away when we introduced Loop.</p>
+</details>
+<p>因此，每当它建议修改你的数据、提出新的评分想法，或者建议修改你的某个提示词时，你都可以在用户界面中直接并排查看这些更改。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So every time it suggests an edit to your data, or it suggests a new idea for scoring, or it suggests an edit to one of your prompts, you can actually see that side by side directly in the UI.</p>
+</details>
+<p>当然，对于那些更喜欢冒险的用户，还有一个开关可以打开，它会说‘放手去做吧’，然后它就会自动进行优化。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Of course, for the more adventurous among you, there's also a toggle that you can turn on that says, 'Just go for it,' and it will go and optimize away.</p>
+</details>
+<p>这实际上效果非常好。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Which actually works really well.</p>
+</details>
+<h3>总结与展望</h3>
+<p>总结一下，迄今为止，评估一直是构建世界上一些最佳AI产品的关键部分，但实际执行评估的任务却极其依赖人工。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So, just to recap, to date, evals have been a critical part of building some of the best AI products in the world, but the task of actually doing evaluation has been incredibly manual.</p>
+</details>
+<p>我很高兴看到，在未来一年里，评估本身将通过<strong>前沿模型</strong>的最新和最伟大进展而彻底变革，我们也非常期待将这些进展整合到Braintrust中。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">And I'm excited about how, over the next year, evals themselves are going to be completely revolutionized by the latest and greatest coming out from the frontier models themselves, and we're very excited to incorporate that into Braintrust.</p>
+</details>
+<p>如果你还没有使用我们的产品，请务必尝试一下。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Please, if you're not already using the product, try it out.</p>
+</details>
+<p>试用Loop，并向我们提供反馈。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Try out Loop, give us your feedback.</p>
+</details>
+<p>我们还有很多工作要做。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">We have a lot of work to do.</p>
+</details>
+<p>我们很乐意与你交流。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">And we'd love to talk to you.</p>
+</details>
+<p>我们也在招聘。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">We're also hiring.</p>
+</details>
+<p>因此，如果你对解决这类问题感兴趣，无论是用户界面（UI）部分、AI部分还是基础设施方面，我们都非常乐意与你交谈。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So if you're interested in working on this kind of problem, whether it's the UI part of it, the AI part of it, or the infrastructure side of it, we'd love to talk to you.</p>
+</details>
+<p>你可以扫描这个二维码。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">You can scan this QR code.</p>
+</details>
+<p>它应该就在那边。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">It should be over there.</p>
+</details>
+<p>是的，你可以扫描二维码与我们取得联系。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Yes, you can scan the QR code and get in touch with us.</p>
+</details>
+<p>我们很乐意与你交流。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">We'd love to chat.</p>
+</details>
+<p>谢谢大家。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Thank you.</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Claude 4" class="entity-link product-link">Claude 4</a>, 
+                
+                  <a href="/search/?q=LLMs" class="entity-link product-link">LLMs</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-evaluation/">ai-evaluation</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/automation/">automation</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/development/">development</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/optimization/">optimization</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/performance/">performance</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

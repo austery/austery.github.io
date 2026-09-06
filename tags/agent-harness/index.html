@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="container" data-pagefind-ignore>
+
+<div class="home-layout">
+
+<h1>标签：agent-harness</h1>
+
+<ul><li>
+      
+      <a href="/content/clippings/2026-08-27_httpsyag_grok-bot-dynamic-tools-20260827-html/">Grok Bot 泄露：Cursor
+为什么只给模型一部分工具的完整定义</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-08-27T00:00:00.000Z">
+          8/27/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章深入分析了 Grok Bot 源码泄露后，Cursor 如何设计其动态工具加载机制，并探讨了将工具定义放在 context 层还是 tools 数组层对模型性能和成本的影响。核心观点是，将动态性推到 context 层（通过一行 hint 形式存在）可以保持工具面稳定，同时实现按需加载，这与 Manus 的静态全量加载策略在底层约束上是相通的。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-05-16_httpsyag_agent-runtime-battlefield-20260516-html/">Agent Runtime 正在成为 AI 的下一个主战场</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-05-16T00:00:00.000Z">
+          5/16/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文指出AI Agent Runtime已成为行业竞争的核心战场。通过Cline等案例证明，Harness优化对性能的提升可比肩模型迭代。模型公司正集体向Agent平台转型以建立护城河，token价格战导致价值捕获向上游迁移。开发者需重视Runtime选型，通过工程手段构建差异化应用体验。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-05-01_httpsyag_cursor-agent-harness-evaluation-first-20260501-html/">Evaluation-First：Cursor 这篇 Agent Harness
+文章真正值得读的地方</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-05-01T00:00:00.000Z">
+          5/1/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/software-development/" class="category-badge-inline">
+              🏷️ software-development
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Cursor的文章强调了“evaluation-first”在Agent Harness持续改进中的核心作用。文章阐述了如何通过定义北极星指标、诊断指标，利用CursorBench等数据集和标准化的决策协议，来驱动AI产品开发中的每一次变更。同时，作者提出了“停止和拒绝”作为评估的第四维度，并分析了Cursor在上下文策略、模型适配、成本优化等方面的具体实践，指出评估系统是应对Agent平台复杂性增长和任务难度提升的必要条件。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/S36ri23-l60/">Agent Harness：十二大模块深度解析与未来趋势</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/best-partners-tv/" class="speaker-inline">🎙️ Best Partners TV</a>
+      
+      
+      
+        <time datetime="2026-04-24T00:00:00.000Z">
+          4/24/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本视频深入解析了Agent Harness的核心概念、十二大模块及其在生产级AI智能体中的关键作用。内容涵盖了编排循环、工具、记忆、上下文管理、提示词组装、工具调用、状态与检查点、错误处理、护栏、验证与反馈、子Agent编排以及初始化与环境搭建。视频还对比了Anthropic、OpenAI、LangGraph、CrewAI、AutoGen等主流框架的设计哲学，并探讨了Harness与模型共同进化的趋势及七大架构抉择，强调了Harness工程在未来AI竞争中的核心地位，并指出“模型不行”往往是Harness架构不完善的根本原因。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-04-18_httpsblo_2026-04-18-jgypqm/">Agent Harness：让AI从聊天机器人变成真正的智能体 · 乔木博客</a>
+      
+      
+      
+      
+        <a href="/speakers/xiang-yang-qiao-mu/" class="speaker-inline">🎙️ 向阳乔木</a>
+      
+      
+      
+        <time datetime="2026-04-18T00:00:00.000Z">
+          4/18/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/software-development/" class="category-badge-inline">
+              🏷️ software-development
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章介绍了&quot;Agent Harness&quot;，即围绕 LLM 构建的完整软件基础设施，负责编排循环、工具、记忆、上下文管理和安全等。它强调了 Harness 工程作为第三层工程的重要性，并列举了生产级 Harness 的 12 个组件及设计决策，指出 Harness 设计对 AI Agent 性能至关重要，并预测未来 Harness 会趋向更薄，以适应更强大的模型。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/qua6FfJmydo/">Agent Harness 与 Harness Engineering：AI长时任务的驾驭之道</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/best-partners-tv/" class="speaker-inline">🎙️ Best Partners TV</a>
+      
+      
+      
+        <time datetime="2026-03-15T00:00:00.000Z">
+          3/15/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本次内容深入探讨了AI领域的新革命——Agent Harness与Harness Engineering。文章指出，当前AI模型在长时复杂任务中的可靠性是巨大挑战，静态排行榜无法反映模型漂移问题。Agent Harness被类比为计算机的操作系统，是管理AI Agent长时运行的基础设施，而Harness Engineering是实现这一基础设施落地的工程实践。内容详细阐述了Agent Harness的定义、价值、发展阶段、趋势，并结合OpenAI的实践，提出了上下文工程、架构约束、垃圾回收等核心组件，强调了AI开发正从模型论转向系统论，标志着AI工程化新时代的开启。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/rSKh6bVuVZI/">AI Agent堆栈的演变：LangChain CEO Harrison Chase谈代理、框架与未来</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/the-mad-podcast-with-matt-turck/" class="speaker-inline">🎙️ The MAD Podcast with Matt Turck</a>
+      
+      
+      
+        <time datetime="2026-03-12T00:00:00.000Z">
+          3/12/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 LangChain创始人兼CEO Harrison Chase深入探讨了AI代理技术的演变，从早期模型局限到当前代理架构的突破。他详细阐述了代理核心组件，如系统提示、规划工具、子代理、文件系统和技能，并强调了Harness（代理线束）在模型应用中的关键作用。对话还涵盖了不同类型的代理（对话型与长周期型）、上下文压缩、记忆机制、沙盒安全以及LangChain的产品演进和未来发展方向，为AI开发者提供了构建高效、可靠代理的洞见。</small>
+      
+
+      
+      
+    </li></ul>
+
+</div>
+
+</div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

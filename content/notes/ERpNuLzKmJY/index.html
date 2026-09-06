@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatGPT的诞生：从基础模型到对话助手的演进之路</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="ChatGPT的诞生：从基础模型到对话助手的演进之路" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">ChatGPT的诞生：从基础模型到对话助手的演进之路</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Dwarkesh Patel</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2024-05-20
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/dwarkesh-patel/">Dwarkesh Patel</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=ERpNuLzKmJY" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2024-05-20
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本期内容深入探讨了ChatGPT的诞生历程，揭示了从早期基础模型到指令遵循模型，再到最终实现对话助手的关键技术演进。演讲者分享了OpenAI在模型开发中的探索，包括如何通过指令遵循和对话数据优化模型，以及GPT-3.5和GPT-4在这一过程中的作用。对话还触及了Google在聊天机器人领域的早期研究，并阐述了为何对话式AI比指令式AI在用户交互和模型行为上更具优势，以及自研ChatGPT的非易事性，特别是多轮微调和RLHF的重要性。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>ChatGPT的演进之路</h3>
+<p><strong>John Schulman</strong>: 在ChatGPT之前，OpenAI拥有<strong>指令遵循模型</strong>。而当时的想法是，我们有<strong>基础模型</strong>，人们可以以复杂的方式提示它们，但提示它们很困难，因为它们本质上是自动补全，所以你需要用一些例子设置一个非常好的提示。因此，OpenAI的人们正在努力，只是拿来基础模型并让它们更容易被提示，这样如果你只写一个问题，它就会回答问题，而不是给你更多问题。我们有了这些指令遵循模型，它们就像基础模型，但更容易使用。这些是在API中部署的原始模型，GPT-3之后，它们是下一代模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John Schulman</strong>: Before ChatGPT, OpenAI had these <strong>instruction-following models</strong>. And, uh, that was, B, the idea. There was, um, we had <strong>base models</strong> and people can, um, prompt them in elaborate ways, um, but, uh, they're also kind of hard to prompt. You had to, uh, they basically do autocomplete, so you have to set up a very good prompt with some examples. So, uh, people at <strong>OpenAI</strong>, uh, were working on, um, just taking the base models and making them easier to prompt, so that if you just wrote a question, it would answer the question instead of giving you more questions or something. Uh, so we had these instruction-following models which were kind of like base models but a little easier to use. Um, and those were the original ones deployed in the API, uh, after, um, <strong>GPT-3</strong>. Those were the next, uh, generation of models.</p>
+</details>
+<p><strong>John Schulman</strong>: 同时，也有很多人在思考<strong>聊天</strong>。比如，<strong>Google</strong>发布了一些论文，像是有<strong>Lambda</strong>和更早的<strong>Mina</strong>。它们有这些聊天机器人，更像是一个专门用于聊天任务的基础模型，非常擅长聊天。根据论文的例子，它们更多地用于有趣的应用程序，比如模型会扮演某个角色。它不像“帮我重构代码”那样功能化。所以，是的，确实有人在思考聊天。我之前在一个名为<strong>Web GPT</strong>的项目上工作过，它更多地是通过网络浏览和检索来进行问答。当你进行问答时，它确实想进入聊天状态，因为你总是想问后续问题，或者有时需要澄清，模型应该问一个澄清问题，因为问题本身含糊不清。所以，在我们完成了第一个版本后，很明显下一版本应该是对话式的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John Schulman</strong>: Um, then at the same time, there were definitely a lot of people thinking about, um, chat. So, uh, so <strong>Google</strong> had some papers, uh, like they had, uh, <strong>Lambda</strong> and, um, earlier <strong>Mina</strong>. So they had these chat bots, and it was more like, um, uh, like you had a, it was more like a base model that was really specialized to, um, the task of chat, really good at chat. And, uh, like, I think, at least looking at the examples from the paper, it was more, uh, used for sort of fun applications, like, um, where the model would, would, uh, like take on some persona and pretend to be that persona. It was not so functional, like, um, like, help me refactor my code. Um, so, yeah, there are definitely people thinking about chat. I had worked on a project before, uh, looking at chat called, uh, <strong>Web GPT</strong>, which was more about doing question answering with the help of web browsing and retrieval. And, well, when you do question answering, uh, it really wants to be in a chat because, um, you always want to ask follow-up questions, or sometimes you need a clar, the, the model should ask a clarifying question because the question is ambiguous. So it was kind of clear after we did the first version of that that we should, the next version should be conversational.</p>
+</details>
+<p><strong>John Schulman</strong>: 因此，我们开始着手开发一个<strong>对话式聊天助手</strong>。这个助手是基于<strong>GPT-3.5</strong>构建的，它在2022年初完成了训练。那个模型在语言和代码方面都相当不错，所以我们很快意识到它在<strong>编码辅助</strong>方面actually相当出色，这是我们感到兴奋的一点。所以，我们花了将近一年的时间来研究它，我们还加入了浏览功能。但后来我们逐渐淡化了它，因为模型的内部知识已经足够好，浏览功能并不是最吸引人的部分。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John Schulman</strong>: So anyway, we started working on, uh, like a conversational chat assistant. Um, and, uh, we, uh, this was built on top of <strong>GPT-3.5</strong>, which was done training at the beginning of '22. And, uh, that model was quite good at language and code. So we quickly realized that it was actually, uh, quite good at <strong>coding help</strong>, and that was one of the things we were excited about. So, yeah, we worked on that. Uh, we worked on that for, for most of the year. And we had, we had browsing, um, as another feature, and it, though we ended up, uh, like deemphasizing that later on because the, like, the model's internal knowledge was so good that we didn't, that the browsing, um, wasn't the most interesting thing about it.</p>
+</details>
+<p><strong>John Schulman</strong>: 接着，我们在2022年8月，<strong>GPT-4</strong>完成了训练。当时，OpenAI的主要**RL（强化学习）**工作是指令遵循模型，因为这些模型将被部署到生产环境。因此，GPT-4的第一个微调版本使用了那整套技术栈。这些模型非常好，大家看到它们后都很兴奋。但它们有时会提供惊人的输出，但模型明显不太可靠，经常会产生幻觉，有时会给出相当离谱的输出，显然还没有准备好。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John Schulman</strong>: Um, and then, uh, we were thinking about, we had it out for beta testing or to friends and family for a while, and we were thinking about doing a public release. Um, but, um, at that time, uh, actually <strong>GPT-4</strong> finished training in August, or, um, yeah, in August that year. And, um, actually, the, um, like the flagship <strong>RL</strong> effort at OpenAI was the instruction-following effort because that was the models that were being deployed into production. So, um, like the first fine-tunes of GPT-4 used that, um, that whole stack, and that was, um, yeah, those models were really good, and everyone got really excited about that after seeing the, uh, like, instru, fine-tune GPT-4s. Uh, but so they were really, really good. They would occasionally give you amazing outputs, but they were also, like, a little bit, the model was clearly, like, pretty unreliable. Like, it would sometimes hallucinate it a lot, and it was like pretty, it would sometimes give you pretty unhinged outputs. So it was clearly not quite ready for prime time, but it was, like, obviously very good.</p>
+</details>
+<p><strong>John Schulman</strong>: 然后，大家在一段时间内似乎忘记了聊天。但我们继续推进，将<strong>指令</strong>和<strong>聊天</strong>的数据集混合在一起，试图获得两者的最佳结合。聊天模型显然更易于使用，行为更合理，能意识到自身的局限性。另一个关于聊天的方面是，对于指令模型，像“以友好的方式或有帮助的方式完成这段文字”这样的任务定义非常模糊，对模型和人工标注者都很困惑。而对于聊天，人们对“有帮助的机器人”应该是什么样子有更直观的理解。因此，更容易让人们理解模型的预期功能。结果是，模型拥有更连贯的个性，并且具有更稳健、合理的行为。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John Schulman</strong>: Um, and, uh, yeah, so I guess that, um, people forgot about chat for a little while after that. C, about this, like, alternative branch. Uh, but then we, we ended up, um, we pushed it further, and we ended up, like, mixing together all the datasets, like the instruct and the chat data, and to try to get something that was the best of both worlds. And, uh, I think the, yeah, the models we, the chat models were like, uh, were clearly more, um, like, it was an easy, easier to use. It was sort of more, um, it sort of, uh, like, automatically had much more sensible behavior in terms of, like, the model knowing its own limitations. The other thing about chat was that when we had these instruct models, uh, like the task of, uh, complete this text, but in a nice way, or in a helpful way, that's like a pretty poorly defined task. So I think, uh, like, I think that task is like both confusing for the model and for the human who's supposed to do the data labeling. Whereas for chat, um, I think people had an intuitive sense of, uh, like, what a helpful robot should be like. So I think it was, uh, just much easier to tell people, uh, like, uh, to, to get, for people to get the idea of what, what the model was supposed to do. Yeah.</p>
+</details>
+<p><strong>John Schulman</strong>: 那么，任何人是否都能使用你们公开的微调API来制作ChatGPT？不完全是。假设当时我们有3.5可供微调，你可以做出相当接近的东西。但我不确定你是否能只通过一次<strong>微调</strong>就能做到，即只用人工编写的数据进行微调。我认为你需要进行多次迭代。如果你不进行RL（强化学习），而我们确实做了，那么你需要进行某种<strong>迭代式监督微调</strong>，即让人类编辑模型生成的输出来进行微调。因为如果只用人类生成的数据训练，即使质量很高，模型也难以完美拟合，因为它可能无法输出这样的内容。所以你需要进行一些更接近RL的迭代。那样可以得到非常接近的结果，但这并不简单。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John Schulman</strong>: Um, and, uh, so that, so as a result, I think the, um, like the model had a much more coherent personality and, uh, like it was much, like, easier to get, um, like, robust, like, sensible behavior. Robustly. Is it the case that anybody could have made ChatGPT using your publicly available fine-tuning API? Not exactly. I mean, uh, they could have, um, I don't remember the status of which models were available for fine-tuning. Uh, you, assuming we had 3.5 available for fine-tuning at the time, you could have made something pretty decently close. But I'm not sure you would have, um, I don't think you would have been able to do just one iteration of fine-tuning where you have like, purely human-written data, and you fine-tune on that. I think you would want, like, you'd want to do several iterations. Like if you're not going to do RL, um, which, which we did, um, you'd want to do some kind of <strong>iterative supervised fine-tuning</strong> where you have like, humans edit the model-generated outputs. Because it's really hard to get people to, like, if you train on human-generated data, even if it's really high quality, it's just hard for a model to fit that data perfectly because it might not be, like, it might not be something a model is capable of outputting. Uh, so you need to do something iterative that looks a little bit more like RL.</p>
+</details>
+<p><strong>John Schulman</strong>: 但是，我们也有一个在ChatGPT之前发布的、用RL训练的指令遵循模型。所以，如果你给它加上一个聊天的包装器，你就能得到一个相当接近的东西。但那个模型，如果你只是用聊天方式提示它，它在某些方面就有差异，比如它很擅长写作和诗歌，但不太擅长认识到自己的局限性以及事实准确性等方面。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John Schulman</strong>: Uh, so I think if you had done that, you could have gotten something pretty close. But, um, that would have been kind of non-trivial. Um, but we also had another, uh, like instruction-following model trained with RL that was released a little before ChatGPT. So I think if you put a chat, like wrapper on that, you would get something decently close. Uh, but it, like, that model, um, like if you just prompted it with chat, um, so, but that model had some, uh, differences in, uh, strengths. Like, it was like that model was pretty good at writing and poetry and so forth, but it wasn't, uh, it sort of, it wasn't as good at knowing its limitations and, uh, at factuality and so forth.</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=ChatGPT" class="entity-link product-link">ChatGPT</a>, 
+                
+                  <a href="/search/?q=GPT-3.5" class="entity-link product-link">GPT-3.5</a>, 
+                
+                  <a href="/search/?q=GPT-4" class="entity-link product-link">GPT-4</a>, 
+                
+                  <a href="/search/?q=Lambda" class="entity-link product-link">Lambda</a>, 
+                
+                  <a href="/search/?q=Mina" class="entity-link product-link">Mina</a>, 
+                
+                  <a href="/search/?q=Web GPT" class="entity-link product-link">Web GPT</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">llm-development</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/prompt-engineering/">prompt-engineering</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">conversational-ai</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">instruction-following-models</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

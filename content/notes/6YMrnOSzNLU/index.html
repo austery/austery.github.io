@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeepSeek V4与GPT-5.5：中国AI短暂黄金时代的终结?</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="DeepSeek V4与GPT-5.5：中国AI短暂黄金时代的终结?" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">DeepSeek V4与GPT-5.5：中国AI短暂黄金时代的终结?</span>
+      <span data-pagefind-meta="speaker" style="display:none;">FearNation 世界苦茶</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-04-28
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/fearnation-shi-jie-ku-cha/">FearNation 世界苦茶</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=6YMrnOSzNLU" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-04-28
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本文分析了DeepSeek V4发布及其与GPT-5.5等模型的对比表现，并提出了AI发展的“三阶段论”。第一阶段为规模效应驱动，第二阶段是推理模型和Agentic范式兴起，通过“蒸馏”技术为中国AI模型带来红利。然而，随着2026年预训练规模效应的重新确立，对算力与参数有更高要求的顶尖基础模型再次成为竞争焦点，预示着中国AI通过特定路径实现快速追赶的“黄金时代”可能告一段落。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>DeepSeek V4发布：表现平平与榜单解析</h3>
+<p><strong>DeepSeek V4</strong> 终于发布了。此前，其发布日期一再推迟。在4月22日正式发布后，其效果却非常一般。我们可以参考一份全面的 <strong>Coding Benchmark</strong> 榜单，该榜单由拉西辆公布，并于4月24日，即DeepSeek V4发布后不久进行了测试。此次测试涵盖了包括 <strong>DeepSeek V4</strong>、<strong>ChatGPT</strong> 新发布的 <strong>GPT-5.5</strong>、以及中国月之暗面发布的 <strong>Kimi 2.6</strong> 在内的多个模型。</p>
+<p>该Benchmark包含一系列测试指标，在综合跑分中，共有6个模型达到了A档。其中，<strong>Claude Opus 4.7</strong> 位列榜首，其次是 <strong>Claude 5.4</strong> 和 <strong>GPT 5.4</strong>，<strong>GPT-5.5</strong> 排名第三。紧随其后的是月之暗面的 <strong>Kimi 2.6</strong>（第四名）、<strong>Claude Opus 4.6</strong>（第五名）和 <strong>Gemini 3.1</strong>（第六名）。令人意外的是，<strong>DeepSeek V3</strong> 排名第七，与 <strong>Claude Sonnet 4.6</strong> 持平。而智谱的 <strong>GLM-4 Pro</strong> 甚至不如 <strong>GLM-4 Flash</strong>，仅排第十名，且只达到B等级，表现糟糕。在所有中国模型中，唯一进入A等级的是月之暗面的 <strong>Kimi 2.6</strong>。</p>
+<p>在此次发布中，<strong>DeepSeek V3</strong> 并未像2025年年初 <strong>R1</strong> 发布时那样令人惊艳。2025年初 <strong>R1</strong> 发布时，其卓越的 <strong>Reasoning Model</strong> 能力获得了广泛认可，被认为与 <strong>GPT</strong> 体验相近，生成的文本质量极高。然而，对于此次 <strong>DeepSeek V4</strong>，许多用户可能会感到平淡，甚至不知所云。</p>
+<h3>中国AI的时代终结：从GPT-5.5谈起</h3>
+<p>我将用一个非常负面的词汇来形容此次 <strong>DeepSeek V4</strong> 的发布：这标志着中国AI模型一个时代的结束。</p>
+<p>几乎同时，<strong>ChatGPT</strong> 发布了 <strong>GPT-5.5</strong>。尽管名称上只比 <strong>GPT-5.4</strong> 前进了一点点，但 <strong>GPT-5.5</strong> 实际上是一个全新的模型，即 <strong>ChatGPT</strong> 所谓的 <strong>Spot</strong>，一个全新预训练的 <strong>大模型</strong>（Large Language Model: 基于海量文本训练的AI系统）。大模型的预训练通常意味着从零开始或进行大规模的持续增量训练。</p>
+<p>回顾 <strong>ChatGPT</strong> 的发展历程：</p>
+<ul>
+<li><strong>GPT-3</strong>：最初令人印象深刻。</li>
+<li><strong>ChatGPT</strong>：以对话式AI形式呈现。</li>
+<li><strong>GPT-4</strong>：实现了巨大飞跃，带来了完全不同的用户体验。</li>
+<li><strong>GPT-4.5</strong>：一次失败的预训练尝试，效果不佳，其API也很快退役。该版本代号为 <strong>Orion</strong>，当时 <strong>OpenAI</strong> 虽宣称其为“最大模型”，但用户普遍感受不到显著差异。</li>
+<li><strong>GPT-5</strong>：并非基础模型的重新训练，而是在 <strong>Reasoning Model</strong> 上的巨大飞跃，尤其是在 <strong>Mixture of Experts</strong>（MoE: 混合专家模型）方面。</li>
+</ul>
+<p>因此，<strong>GPT-5.5</strong> 才是真正意义上重新预训练的成功，是 <strong>Spot</strong> 模型的首次大规模新预训练，并且是一次成功的预训练。为什么说它成功？尽管在刚才的榜单中，<strong>GPT-5.5</strong> 排名第三（<strong>GPT-5.4</strong> 排名第二），但其亮点在于显著降低了 <strong>Reasoning</strong> 所需的资源，同时实现了与 <strong>GPT-5.4</strong> 相当甚至更好的结果。之前，使用 <strong>GPT Pro</strong> 运行 <strong>GPT-5.4</strong> 的任务平均需要30分钟，而 <strong>GPT-5.5</strong> 则可缩短至六七分钟。这意味着 <strong>GPT-5.5</strong> 不仅能提供高质量结果，成本也远低于 <strong>GPT-5.4</strong>。<strong>GPT-5.5</strong> 之所以不叫 <strong>GPT-6</strong>，是因为其基本参数并未大幅飞跃，但已在现有参数基础上实现了更优效果，堪称一次极为成功的迭代。需要指出的是，<strong>GPT-4o</strong>（Omni: 多模态、全能）才是真正的多模态模型，而非 <strong>GPT-4</strong>。</p>
+<h3>AI发展三阶段论：中国AI红利期的兴衰</h3>
+<p>为了理解 <strong>GPT-5.5</strong> 对 <strong>DeepSeek</strong> 的冲击，我将AI发展历程分为三个阶段。</p>
+<h4>AI发展第一阶段：规模效应主导（2020年-2024年上半年）</h4>
+<p>这一阶段从2020年 <strong>GPT-3</strong> 发布开始，历经 <strong>ChatGPT</strong>，直至划时代的 <strong>GPT-4</strong>。它证明了 <strong>Scaling Law</strong>（规模效应: 增加训练时间、扩大参数量即可大幅提升模型效率和结果）的有效性。只要投入更多算力、更多数据，就能显著提升模型表现。<strong>GPT-4</strong> 便是这一理论的明证。在此阶段，中国AI参与较少，直到 <strong>DeepSeek V3</strong> 于2024年末、<strong>R1</strong> 于2025年1月发布，中国模型才真正加入战场。</p>
+<h4>AI发展第二阶段：推理与Agentic范式（2024年三季度-2025年全年）</h4>
+<p>2024年三季度至2025年全年是第二阶段，特点是预训练的 <strong>Scaling Crisis</strong>（规模化危机）。自2024年5月 <strong>GPT-4o</strong> 发布后，<strong>ChatGPT</strong> 在预训练方面似乎进入了一个问题时期，转向了 <strong>Agentic Reinforcement Learning</strong>（智能体强化学习）。例如，2024年9月推出的 <strong>ChatGPT o1</strong> 是第一个 <strong>Reasoning Model</strong>（推理模型），它在 <strong>GPT-4</strong> 的基础上实现了推理能力，其 <strong>Chain of Thought</strong>（思维链: 模型通过一系列中间步骤进行推理）能力令人惊艳。尽管其基础模型（Base Model）无大进展，但展现了卓越效果。</p>
+<p><strong>GPT-4.5</strong>（2025年2月发布）的 <strong>Base Model</strong> 失败，其API在五个月后退役。从2024年9月起，<strong>Reasoning Model</strong> 成为主导。<strong>DeepSeek R1</strong>（2025年1月发布），其名称中的“R”即代表 <strong>Reasoning</strong>，是中国模型在2025年大爆发的代表。许多耳熟能详的中国大模型如 <strong>通义千问</strong>、<strong>Kimi</strong>、<strong>智源</strong> 等，在2025年纷纷涌现并取得了优异成绩，它们大多是 <strong>Reasoning Model</strong>。</p>
+<p><strong>Reasoning Model</strong> 成功的一个关键原因是其高度可 <strong>蒸馏</strong>（Distillation: 将大型复杂模型的知识转移到小型模型中）。这意味着即使基础模型（如 <strong>DeepSeek V3</strong>）表现较差且存在严重幻觉问题，通过结合优秀的思维链，也能产出好的结果。这种思维链是纯文本，可以通过大规模拷贝并作为奖励模型（Reward Model）进行训练，使其变得与源模型类似。例如，开源社区中，用 <strong>通义千问</strong> 蒸馏 <strong>Claude</strong> 的思维链已能取得良好效果。</p>
+<p>因此，第二阶段对于中国模型而言是一个红利期：</p>
+<ol>
+<li><strong>技术路线红利</strong>：即便基础模型稍逊，结合优秀的 <strong>Reasoning</strong> 也能产出好结果。</li>
+<li><strong>实现红利</strong>：思维链可大规模拷贝进行蒸馏。</li>
+</ol>
+<p>这使得中国模型在2025年百花齐放，取得显著成就。</p>
+<p>从2025年下半年开始，<strong>Agentic</strong>（智能体: 能自主规划、执行复杂任务的AI系统）范式兴起，如 <strong>Claude Code</strong> 普及并成为强大的编程智能体。<strong>Agentic</strong> 与 <strong>Reasoning</strong> 的最大区别在于，<strong>Agentic</strong> 不仅依赖 <strong>prompt</strong>（提示: 引导模型行为的输入文本）和思维链，还依赖于一个 <strong>Harness</strong>（外部辅助系统: 围绕基础模型提供外部工具、文档、程序等支持）。<strong>Anthropic</strong> 的 <strong>Harness</strong> 称为 <strong>Claude Code</strong>，而 <strong>OpenAI</strong> 的则为 <strong>Codex</strong>。</p>
+<p><strong>Agentic Model</strong> 同样可以蒸馏，但比 <strong>Reasoning Model</strong> 难度更大，因为并非所有数据都可直接获取。然而，2026年 <strong>Claude Code</strong> 源代码的意外泄漏，为中国企业提供了学习和模仿的机会。即使在此之前，许多中国企业也已通过各种方式蒸馏 <strong>Agentic Model</strong>。目前，许多中国企业发布的是针对 <strong>Agentic Model</strong> 优化的模型，例如 <strong>Kimi 2.6</strong> 和 <strong>智源</strong> 的模型。</p>
+<h4>AI发展第三阶段：预训练规模效应重获主导（2026年至今）</h4>
+<p>进入2026年，预训练的 <strong>Scaling Law</strong> 重新被证明有效。两个关键事件是 <strong>ChatGPT 5.5</strong> 的发布和 <strong>Anthropic Mysus</strong>（代号“水豚”）的出现。<strong>GPT-5.5</strong> 证明了 <strong>OpenAI</strong> 成功进行了新的预训练。<strong>Anthropic</strong> 则从 <strong>Claude 3</strong>（2024年3月）到 <strong>Claude 4</strong>（2025年5月），再到 <strong>Mysus</strong>（2026年4月），几乎每12个月推出一个新模型，其预训练过程非常顺利，甚至在某些方面超越了 <strong>OpenAI</strong>。<strong>GPT-5.5</strong> 和 <strong>Anthropic Mysus</strong> 的成功共同证明了 <strong>Scaling Law</strong> 仍然有效，且预训练是最根本的。</p>
+<p>这对于中国AI而言是个不利消息。第二阶段的成功依赖于“稍弱的基础模型 + <strong>Reasoning</strong>”或“稍弱的基础模型 + <strong>Agentic</strong>”来取得良好效果。然而，第三阶段又回到了最开始，即一个强大的 <strong>Base Model</strong> 自身就具备强大的泛化和衍生能力，不再过度依赖 <strong>Reasoning</strong> 或 <strong>Agentic</strong> 层。虽然 <strong>Agentic</strong> 部分已融入训练过程，但一个卓越的 <strong>Base Model</strong> 结合 <strong>Reasoning</strong> 和 <strong>Agentic</strong> 将更强大。</p>
+<p>这种趋势对中国企业不利，因为预训练需要极大的算力（Compute Power）和海量的模型参数（Parameters），而中国在这些方面并不处于领先地位。例如，中国尚未能大规模采购 <strong>H200</strong> 显卡。尽管中国公司可以通过各种途径获取先进的 <strong>Nvidia</strong> 显卡进行训练，但平滑、高效的算力堆叠仍不如 <strong>Anthropic</strong> 和 <strong>ChatGPT</strong> 顺畅。</p>
+<p>从2026年开始，以 <strong>GPT-5.5</strong> 和 <strong>Mistral</strong> 为代表，预训练的 <strong>Scaling Law</strong> 重新运作。这意味着中国不能再依靠较弱的 <strong>Base Model</strong> 取得好效果。例如，<strong>DeepSeek V2</strong> 仍然存在严重的幻觉问题，其表现甚至不如半年前的 <strong>Claude</strong> 和 <strong>ChatGPT</strong> 版本。2025年中国与国际模型的距离曾一度拉近，但随着对 <strong>Base Model</strong> 竞争的回归，这一差距可能会逐渐拉大。</p>
+<p><strong>Claude</strong> 和 <strong>OpenAI</strong> 在2026年选择了相同的路径：削减不必要的消费级应用扩展，全力保障企业研究和 <strong>Base Model</strong> 的发展。他们认为，在当前阶段，过度投入消费级应用价值不大。虽然 <strong>OpenAI</strong> 发布了新的图片模型，但其原理与文本模型相似（图片生成下一个像素，文本生成下一个词元），都属于 <strong>Base Model</strong> 的范畴。相比之下，字节跳动的 <strong>Seaweed</strong> 等模型，若要从图像或文本转换为视频，则并非典型的 <strong>Transformer</strong> 模式，其中包含大量为消费级优化进行的 <strong>Fine-tune</strong>。</p>
+<p>目前，最新的战场是如何通过 <strong>Scaling Law</strong> 堆叠出强大的 <strong>Base Model</strong>。将大量资源投入消费级应用而导致 <strong>Base Model</strong> 落后，实属不智。中国企业如字节跳动的 <strong>豆包</strong> 和 <strong>Seaweed</strong> 在消费级应用上表现出色，拥有庞大的用户基础。但如果 <strong>AI</strong> 的能力边界远未触达，过早专注于消费级应用可能会局限于市场需求，而无法成为推动 <strong>AI</strong> 发展最远的公司，也不是中国当前发展 <strong>AI</strong> 能力最需要的方向。</p>
+<h3>总结：Base Model差距与中国AI的抉择</h3>
+<p><strong>AI</strong> 的三个阶段：</p>
+<ol>
+<li><strong>2020年-2024年上半年</strong>： <strong>GPT-3</strong> 到 <strong>GPT-4</strong> 阶段，由预训练的 <strong>Scaling Law</strong> 主导。</li>
+<li><strong>2024年三季度-2025年全年</strong>： <strong>OpenAI</strong> 预训练遭遇挫折，<strong>Scaling Law</strong> 受质疑，<strong>Reasoning Model</strong> 兴起，是中国AI的红利期。</li>
+<li><strong>2026年至今</strong>：预训练的 <strong>Scaling Law</strong> 重新被关注并取得良好效果，同时 <strong>Agentic</strong> 范式并行发展。</li>
+</ol>
+<p>尽管 <strong>Agentic Model</strong> 仍可蒸馏，但难度更高。未来最大的差距将在 <strong>Base Model</strong> 层面拉开。2025年，除 <strong>Claude</strong> 以外，<strong>Base Model</strong> 的差距并未显著扩大，但从现在起，这一差距可能将加速拉大。</p>
+<p>中国公司目前有多条路径：</p>
+<ul>
+<li><strong>通义千问</strong> 等已实现了不错的 <strong>多模态</strong> <strong>Base Model</strong>。</li>
+<li><strong>DeepSeek</strong> 拥有不错的 <strong>Base Model</strong>，但尚未实现多模态。</li>
+<li>一些公司专注于 <strong>Agentic Model</strong>，如 <strong>Kimi 2.6</strong> 和 <strong>智谱</strong> 的 <strong>GLM5</strong>。</li>
+</ul>
+<p><strong>Agentic Model</strong> 确实具有商业化潜力，尤其在 <strong>Coding</strong> 等可程序化验证的任务中，易于通过后训练（Post Training）将一个普通 <strong>Base Model</strong> 优化为 <strong>Agentic Model</strong>。这是一种训练捷径，能帮助企业在特定应用上取得不错表现。但这条“狭窄路径”（Narrow Path）无法产生泛化的新能力，也无法实现迁移能力。</p>
+<p><strong>DeepSeek</strong> 此次发布仍强调其节省算力的优势，表明其在“便宜”市场定位。然而，AI的核心市场如信息安全、科学研究、企业大型项目编程等都是高利润领域，这些领域会选择最好的模型，而非仅仅最便宜的。这意味着小型模型或成本导向模型的边际效益将非常弱。</p>
+<p>对于中国的开源模型而言，挑战巨大。 <strong>阿里</strong> 最新版 <strong>通义千问 3.6</strong> 已转为闭源，因为开源模式难以盈利。<strong>OpenAI</strong> 和 <strong>Anthropic</strong> 每年收入数百亿美元，而中国企业仅数千万至数亿美元。若持续开源，缺乏收入将限制算力投入和新模型训练能力；若转为闭源，则失去开源优势，且与顶尖模型仍存在差距。这使得中国企业面临艰难的抉择。</p>
+<p>总而言之，第三阶段对 <strong>Base Model</strong> 的重新投入，对算力和参数不具备优势的中国企业不利。我提出的“三阶段论”——第一阶段为 <strong>Pre-Train</strong> 验证期，第二阶段为 <strong>Reasoning</strong> 红利期，第三阶段为 <strong>Pre-Train</strong> 加 <strong>Agentic</strong> 期——说明了中国AI通过“较弱 <strong>Base Model</strong> + <strong>Reasoning</strong> + 蒸馏”快速追赶的黄金时代已结束。<strong>Base Model</strong> 差距的扩大以及 <strong>Agentic</strong> 蒸馏难度的增加将成为巨大障碍。随着算力等问题，中美AI差距可能进一步拉大。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, 
+                
+                  <a href="/search/?q=Moonshot AI" class="entity-link company-link">Moonshot AI</a>, 
+                
+                  <a href="/search/?q=DeepSeek" class="entity-link company-link">DeepSeek</a>, 
+                
+                  <a href="/search/?q=Zhipu AI" class="entity-link company-link">Zhipu AI</a>, 
+                
+                  <a href="/search/?q=ByteDance" class="entity-link company-link">ByteDance</a>, 
+                
+                  <a href="/search/?q=Alibaba" class="entity-link company-link">Alibaba</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=DeepSeek V4" class="entity-link product-link">DeepSeek V4</a>, 
+                
+                  <a href="/search/?q=DeepSeek V3" class="entity-link product-link">DeepSeek V3</a>, 
+                
+                  <a href="/search/?q=DeepSeek R1" class="entity-link product-link">DeepSeek R1</a>, 
+                
+                  <a href="/search/?q=GPT-5.5" class="entity-link product-link">GPT-5.5</a>, 
+                
+                  <a href="/search/?q=GPT-5.4" class="entity-link product-link">GPT-5.4</a>, 
+                
+                  <a href="/search/?q=Kimi 2.6" class="entity-link product-link">Kimi 2.6</a>, 
+                
+                  <a href="/search/?q=Claude Opus 4.7" class="entity-link product-link">Claude Opus 4.7</a>, 
+                
+                  <a href="/search/?q=Claude Opus 5.4" class="entity-link product-link">Claude Opus 5.4</a>, 
+                
+                  <a href="/search/?q=Claude Opus 4.6" class="entity-link product-link">Claude Opus 4.6</a>, 
+                
+                  <a href="/search/?q=Gemini 3.1" class="entity-link product-link">Gemini 3.1</a>, 
+                
+                  <a href="/search/?q=Claude Sonnet 4.6" class="entity-link product-link">Claude Sonnet 4.6</a>, 
+                
+                  <a href="/search/?q=GLM-4 Pro" class="entity-link product-link">GLM-4 Pro</a>, 
+                
+                  <a href="/search/?q=GLM-4 Flash" class="entity-link product-link">GLM-4 Flash</a>, 
+                
+                  <a href="/search/?q=GPT-3" class="entity-link product-link">GPT-3</a>, 
+                
+                  <a href="/search/?q=GPT-4" class="entity-link product-link">GPT-4</a>, 
+                
+                  <a href="/search/?q=GPT-4.5" class="entity-link product-link">GPT-4.5</a>, 
+                
+                  <a href="/search/?q=GPT-4o" class="entity-link product-link">GPT-4o</a>, 
+                
+                  <a href="/search/?q=GPT-5" class="entity-link product-link">GPT-5</a>, 
+                
+                  <a href="/search/?q=GPT-6" class="entity-link product-link">GPT-6</a>, 
+                
+                  <a href="/search/?q=ChatGPT o1" class="entity-link product-link">ChatGPT o1</a>, 
+                
+                  <a href="/search/?q=通义千问" class="entity-link product-link">通义千问</a>, 
+                
+                  <a href="/search/?q=Anthropic Mysus" class="entity-link product-link">Anthropic Mysus</a>, 
+                
+                  <a href="/search/?q=Mistral" class="entity-link product-link">Mistral</a>, 
+                
+                  <a href="/search/?q=Sora 2" class="entity-link product-link">Sora 2</a>, 
+                
+                  <a href="/search/?q=豆包" class="entity-link product-link">豆包</a>, 
+                
+                  <a href="/search/?q=Seaweed" class="entity-link product-link">Seaweed</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/scaling-law/">scaling-law</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">pretraining</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">reasoning-model</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/agentic-ai/">agentic-ai</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/model-distillation/">model-distillation</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&#92;&quot;Open Cloud 调用 Cloud Code 省 Token 秘籍：Hooks 与 Agent Teams 实现全自动开发&#92;&quot;</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="&#92;&quot;Open Cloud 调用 Cloud Code 省 Token 秘籍：Hooks 与 Agent Teams 实现全自动开发&#92;&quot;" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">&#92;&quot;Open Cloud 调用 Cloud Code 省 Token 秘籍：Hooks 与 Agent Teams 实现全自动开发&#92;&quot;</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI超元域</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-02-10
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ai-chao-yuan-yu/">AI超元域</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=iJEfIc1mrsc" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-02-10
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">&#92;&quot;本视频揭示了 Open Cloud 调用 Cloud Code 时高 token 消耗的根本原因——传统轮询机制。通过引入 Cloud Code 的 Hooks 功能与 Agent Teams 特性，实现了真正的零轮询和全自动开发流程。这种创新方法能极大节省 token 消耗，并支持后台独立运行，通过回调通知用户任务完成，显著提升了开发效率与生产力。&#92;&quot;</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>Token 消耗的痛点与 Agent Teams 的潜力</h3>
+<p>最近为大家做了多期 <strong>Open Cloud</strong> 的视频，而且昨天我还发了一期 <strong>Open Cloud</strong> 的高级用法视频。但最近我发现几乎每期视频的评论区都会有留言，提到 <strong>Open Cloud</strong> 调用 <strong>Cloud Code</strong> 会非常消耗 <strong>token</strong>。</p>
+<p>因为在之前的视频中，我为大家演示过用 <strong>Open Cloud</strong> 来调用 <strong>Cloud Code</strong> 进行编程开发。我们只需要为 <strong>Open Cloud</strong> 下达一个指令，然后让 <strong>Open Cloud</strong> 全程操作 <strong>Cloud Code</strong> 为我们实现编程开发。但是如果我们采用传统的方式，也就是常规的方式，让 <strong>Open Cloud</strong> 直接调用 <strong>Cloud Code</strong> 的话，那么 <strong>Open Cloud</strong> 每隔几秒就会<strong>轮询</strong>一次，检查一下 <strong>Cloud Code</strong> 的状态以及 <strong>Cloud Code</strong> 的输出。使用这种传统方式的话，<strong>Open Cloud</strong> 必须时刻盯着 <strong>Cloud Code</strong>，所以 <strong>Open Cloud</strong> 就会消耗非常多的 <strong>token</strong>。</p>
+<p>因此，我在评论区发现大家抱怨 <strong>Open Cloud</strong> 调用 <strong>Cloud Code</strong> 会消耗更多的 <strong>token</strong>，因为大家采用的是这种常规的传统方式。所以 <strong>Open Cloud</strong> 需要采用不断<strong>轮询</strong>的方式来查询 <strong>Cloud Code</strong> 的状态。也就是说，<strong>Cloud Code</strong> 它执行的任务越久，在 <strong>Open Cloud</strong> 中它<strong>轮询</strong>的次数就越多，消耗的 <strong>token</strong> 也越多。</p>
+<p>所以，我们可以完全不需要用这种传统的方式，直接让 <strong>Open Cloud</strong> 来调用 <strong>Cloud Code</strong>。因为无论是 <strong>Open Cloud</strong> 还是 <strong>Cloud Code</strong>，它们都非常非常灵活。所以越灵活就越强大，就越有利于我们去自定义一些功能，从而轻松解决用 <strong>Open Cloud</strong> 调用 <strong>Cloud Code</strong> 时产生大量的 <strong>token</strong> 消耗。</p>
+<p>尤其是 <strong>Cloud Code</strong>，在前几天新增了 <strong>Agent Teams</strong> 这个新特性。这相当于在 <strong>Cloud Code</strong> 中，随时可以创建一个完整的开发团队。而且每个 <strong>Agent</strong> 都是独立的进程，所以是真正的<strong>并行执行</strong>。而且每个 <strong>Agent</strong> 之间还可以相互通信，随时共享任务列表，能自动领取任务，还能实现专职角色分工。比如说负责开发前端的 <strong>Agent</strong>，负责开发后端的 <strong>Agent</strong>，还有负责测试的 <strong>Agent</strong>。</p>
+<p>所以，在 <strong>Cloud Code</strong> 中有了 <strong>Agent Teams</strong> 这个最强大的新特性，在 <strong>Open Cloud</strong> 中就可以更加轻松地像 <strong>Cloud Code</strong> 委派任务，让 <strong>Cloud Code</strong> 全自动完成整个开发工作流。</p>
+<h3>Hooks 回调：实现零轮询与高效通知</h3>
+<p>想让 <strong>Open Cloud</strong> 更节省 <strong>token</strong> 的方式来调用 <strong>Cloud Code</strong>，其实非常简单，我们只需要用到 <strong>Cloud Code</strong> 的 <strong>Hooks</strong> 功能。在 <strong>Open Cloud</strong> 中可以结合 <strong>Cloud Code</strong> 的 <strong>Hooks</strong> 功能，只需要调用 <strong>Cloud Code</strong> 进行自主开发，并且能够实现真正的<strong>零轮询</strong>，而且还能非常节省 <strong>token</strong>。</p>
+<p>当开发任务完成之后，我们还能在聊天软件的群组中自动接收到任务完成的通知，包括实现了什么任务，然后项目存储的路径还有耗时，还有 <strong>Cloud Code</strong> 的 <strong>Agent Teams</strong> 是否已经启用，还有具体完成的功能，还有项目的文件结构等内容。</p>
+<p>下面我们就看一下我是如何通过 <strong>Cloud Code</strong> 的 <strong>Hooks</strong> 来实现了整个流程。下面我们先通过这个流程图，让大家更直观的感受一下，在 <strong>Cloud Code</strong> 中，通过 <strong>Hooks</strong> <strong>回调</strong>来实现了整个步骤是怎样的。</p>
+<p>首先是由 <strong>Open Cloud</strong> 将我们要开发的任务委派给 <strong>Cloud Code</strong>，这个委派只执行一次，而且它是后台运行不会阻塞 <strong>Open Cloud</strong> 的对话窗口和它的<strong>主 Agent</strong>。当 <strong>Cloud Code</strong> 接到任务之后，它就会进行自主开发和测试。当任务完成之后，它就会触发事件。</p>
+<p>第三步就是 <strong>Cloud Code</strong> 中 <strong>Hooks</strong> 自动触发，它会先将执行结果写入到这个文件中，然后再发送 <strong>event</strong> 来唤醒 <strong>Open Cloud</strong>。在这里采用了 <strong>stop hook</strong> 以及 <strong>session end hook</strong>，实现双重保障来保障。在聊天软件中，我们能够真正收到它的任务完成的通知。然后 <strong>Open Cloud</strong> 会读取这个文件中的这些结果和状态。当它读取完这些结果和状态之后，它就会回复给我们，也就是通过我们的聊天软件来回复给我们这个状态。</p>
+<p>像这个流程的话，<strong>Open Cloud</strong> 只在给 <strong>Cloud Code</strong> 派发任务的时候调用一次 <strong>Cloud Code</strong>。然后这中间的流程不需要 <strong>Open Cloud</strong> 参与。在最后这里 <strong>Open Cloud</strong> 再读取一下这个执行的结果，并且将结果发送给用户。所以，在第一步 <strong>Open Cloud</strong> 只是给 <strong>Cloud Code</strong> 下发一个任务，它下发任务的过程所消耗的 <strong>token</strong> 几乎可以忽略不计。在最后这里它只是读取一下结果，将处理结果发送给用户，而且这个结果里的内容非常少，甚至不超过一千字。所以，在最后一个步骤它所消耗的 <strong>token</strong> 也几乎可以忽略不计。在 <strong>Cloud Code</strong> 自主完成这个任务的过程中，<strong>Open Cloud</strong> 不需要对 <strong>Cloud Code</strong> 进行<strong>轮询</strong>。</p>
+<p>好，下面为大家讲解一下我是如何实现的。在 <strong>Cloud Code</strong> 中，通过 <strong>stop hook</strong> 来达到任务完成自动<strong>回调</strong>的效果。在刚才也提到了，我们使用了 <strong>stop hook</strong>，还用到了 <strong>Cloud Code session end hook</strong>。下面我们简单看一下为什么要用到这两个 <strong>hooks</strong>。</p>
+<p>在 <strong>Cloud Code</strong> 中，一共有十四个 <strong>hooks</strong>。之所以我们选择这两个，是因为我们构建的这个工作流，在 <strong>Cloud Code</strong> 中它完成开发之后才会触发这个 <strong>hooks</strong>。所以使用 <strong>stop hook</strong> 作为主<strong>回调</strong>，可以保证 <strong>Cloud Code</strong> 真正完成开发时才会触发。在这里我们还用到了 <strong>session end hook</strong> 作为兜底<strong>回调</strong>，也就是假设 <strong>stop hook</strong> 没有触发成功，还有这个 <strong>session end hook</strong> 能够作为兜底。像这样的话，我们就能够真正保证 <strong>Open Cloud</strong> 向 <strong>Cloud Code</strong> 发送一条开发任务，然后 <strong>Cloud Code</strong> 独立运行。在 <strong>Cloud Code</strong> 独立运行的这个过程中，它并不会消耗 <strong>Open Cloud</strong> 上下文。当 <strong>Cloud Code</strong> 完成开发后才会触发 <strong>hooks</strong>，然后我们的聊天软件就会收到通知。</p>
+<h3>实战演示：非阻塞开发与成果交付</h3>
+<p>下面我们就可以看一下具体的代码。在这个代码中，我们先看一下这一个脚本，它的作用就是将要开发的任务写入到这一个文件中，然后再通过这个脚本来启动 <strong>Cloud Code</strong>。当 <strong>Cloud Code</strong> 完成开发后，这个 <strong>stop hook</strong> 就会自动触发，然后就会调用这一个脚本。我们可以点开看一下这一个脚本，就会将任务发送给 <strong>Open Cloud</strong>。所以这个自动<strong>回调</strong>流程它会读取这两个文件里的内容，并且写入到这一个文件。然后 <strong>Open Cloud</strong> 就会将这些信息推送到我们的聊天软件。这样的话，我们就能够实现在 <strong>Open Cloud</strong> 中，像 <strong>Cloud Code</strong> 下达开发任务，然后由 <strong>Cloud Code</strong> 自主完成开发。当完成开发之后，再触发这两个 <strong>hooks</strong>。最后我们的聊天软件就会收到推送通知。</p>
+<p>好，下面我们可以先用一个简单的开发案例来测试一下。在<strong>主 Agent</strong> 这里，我们直接在对话框中输入我们的任务。我输入的是：“用 <strong>Cloud Code</strong> 的 <strong>Agent Teams</strong> 协作模式，构建一个基于物理引擎、HTML/CSS 的带材质系统的<strong>落沙模拟游戏</strong>。”然后我们直接发送看一下这个效果。</p>
+<p>这里很快输出提示，它已经将这个任务派发给 <strong>Cloud Code</strong> 的 <strong>Agent Teams</strong>。这个开发模式就是调用 <strong>Cloud Code</strong> 的 <strong>Agent Teams</strong>，多智能体协作。这里还给出了这个工作路径，然后这里他提到完成后会自动通知到群里。</p>
+<p>像这样的话，这个<strong>主 Agent</strong> 的线程并没有被阻塞，它还可以继续为我们执行其他的任务。比如说，我们在这个<strong>主 Agent</strong> 中继续输入任务，比如说让他查询新加坡今天的天气。然后我们直接点击发送，看一下最终的效果。</p>
+<p>像我们如果采取传统的方式，在 <strong>Open Cloud</strong> 中来调用 <strong>Cloud Code</strong>，在<strong>主 Agent</strong> 中必须等到 <strong>Cloud Code</strong> 真正完成开发之后，这个<strong>主 Agent</strong> 才会继续执行我们的其他任务。像我们采取了现在这种方式，这个<strong>主 Agent</strong> 的进程并没有被阻塞。然后我们让他查询新加坡的天气，然后这里他就很快查询了一个天气。然后我们还可以继续输入其他任务，比如说讲个笑话。然后这里他就很快输出了一个笑话。</p>
+<p>而 <strong>Cloud Code</strong> 在后台完全是自主运行，不需要我们去干预。然后我们只需要等待 <strong>Cloud Code</strong> 完成之后，将完成后的消息推送到这一个群组里就可以了。之所以设置为将完成后的消息单独推送到一个群组，是因为我们在这个<strong>主 Agent</strong> 中可能还在进行其他任务的操作。比如说让他讲的笑话，他在讲笑话的时候，突然多出来一条任务完成通知，这样会导致这个上下文窗口比较混乱。所以我们就将它完成后的这个消息，单独推送到一个群组里。这样的话就不会占用这个<strong>主 Agent</strong> 的这个聊天窗口。</p>
+<p>在这个群组里，我们就看到了这个消息推送。我们点开群组查看一下。在这里我们就看到了这个任务推送，这里提示 <strong>Cloud Code</strong> 任务完成。这里是开发的这个游戏，然后这里是游戏的路径。在 <strong>Cloud Code</strong> 中使用的就是 <strong>Agent Teams</strong>。这里就是给出的项目文件。然后这里他还推送了第二条消息，这里还给出了完成时间大概六分钟。然后这里还包含一百八十四个测试是通过。然后这里就是给出的交付。然后这里还给出了这些性能。</p>
+<p>下面我们可以输入提示词，让他将代码文件打包发给我。这样的话，我们就可以在本地打开进行测试。因为我的 <strong>Open Cloud</strong> 是运行在云端的。</p>
+<p>好，这里它将为我们开发的这个项目文件发送给了我们。这里还提示解压后，在浏览器中就可以打开使用。然后我们直接点开，然后我们在浏览器中打开看一下这个效果，就是它开发的这个<strong>落沙模拟游戏</strong>。</p>
+<p>我们可以先测试一下，我们选择这个沙子。好，这样点击之后，这个沙子就落在了底下。然后我们再点击这个水。好，可以看到水落在了沙子上。然后我们再给它加一把火。可以看到这个火会往天上飘。再给它加一些木头，然后再给它加一些蒸汽。可以看到这个蒸汽飘到木头上会变成雨。</p>
+<p>像这样的话，我们就真正实现了在 <strong>Open Cloud</strong> 中调用 <strong>Cloud Code</strong> 进行开发。大家就不用担心在 <strong>Open Cloud</strong> 中调用 <strong>Cloud Code</strong> 非常浪费 <strong>token</strong>。<strong>Open Cloud</strong> 所消耗的 <strong>token</strong> 几乎可以忽略不计。哪怕我们不在电脑前，也可以通过手机向 <strong>Open Cloud</strong> 下达开发指令。当完成开发之后，我们就可以在群组中查看推送的消息。</p>
+<p>本期视频所用到的代码和笔记，我都会放在视频下方的描述栏或者评论区。如果你在视频下方无法找到的话，也可以通过我的博客去查找本期视频所有对应的笔记。</p>
+<p>好，本期视频就做到这里，欢迎大家点赞、关注和转发，谢谢大家观看。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=GPT-4o" class="entity-link product-link">GPT-4o</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/token-efficiency/">token-efficiency</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">code-execution</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">ai-development-workflow</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">agentic-collaboration</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">cloud-code-hooks</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

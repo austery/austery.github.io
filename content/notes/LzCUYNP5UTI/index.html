@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Railway 创始人 Jake Cooper 访谈：AI Agent 时代的“克隆机”云平台与开发范式革命</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="Railway 创始人 Jake Cooper 访谈：AI Agent 时代的“克隆机”云平台与开发范式革命" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">Railway 创始人 Jake Cooper 访谈：AI Agent 时代的“克隆机”云平台与开发范式革命</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Latent Space</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-05-20
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/tech-trends/">tech-trends</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/latent-space/">Latent Space</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=LzCUYNP5UTI" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-05-20
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">Railway 创始人 Jake Cooper 深入探讨了在 AI Agent 时代，软件开发如何从“手动编写”转向“审查代码”。他提出 PR 模式正在消亡，未来的核心在于能支持大规模并行 Agent 的基础设施。通过自建裸金属数据中心、深耕内核级优化以及“克隆式”环境管理，Railway 致力于构建一个低摩擦、高确定性的 Agent 原生云环境。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>核心观点：停止手写代码，转向代码审查</h3>
+<p><strong>Jake Cooper</strong>: 如果你现在还在手写代码，那你就做错了。现在的工具已经足够成熟，可以让你行动得极其迅速。虽然还存在一些痛点和问题，但你应该是在<strong>审查</strong>你写的代码，而不是尝试去亲手编写。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jake Cooper</strong>: If you are writing code by hand, you are doing this wrong, right? Like your code, the tools are good enough at this point like that you can move extremely extremely quickly and like yes, there are issues and pain points and all these other things. Um, but you should be reviewing the code that you are writing instead of trying to go and write it by hand.</p>
+</details>
+<p><strong>Jake Cooper</strong>: 那些架构模式之类的东西，现在比以往任何时候都更重要。但你不应该把时间花在生成那些你自己本来就会写的代码上。如果你知道怎么写，直接让 <strong>Agent</strong> 去写，然后不断调整，直到它看起来像你亲手写的一样。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jake Cooper</strong>: Like all of those architectural patterns, all of those other things like you're not just don't like you're not going to throw them in the garbage or whatever. Actually, they matter more now than than than any other time. But you just shouldn't spend your time generating code that you would write. Like if you know how to go in and write it, just like ask the agent to go in and write it and then reconcile it until it looks like you would have written it.</p>
+</details>
+<h3>Railway 的定义与愿景</h3>
+<p><strong>Allesio</strong>: 欢迎来到最新的 Space 播客。我是 Allesio，<strong>Kernel Labs</strong> 的创始人。和我在一起的是 <strong>Latent Space</strong> 的编辑 Swix。今天我们邀请到了 <strong>Railway</strong> 的 Jay Cooper。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Allesio</strong>: Hey everyone, welcome to the latest space podcast. This is Allesio, founder of Colonel Labs, and I'm joined by Swixs, editor of Len Space. And today we're in the studio with Jay Cooper of Railway,</p>
+</details>
+<p><strong>Swix</strong>: 嘿！嘿！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Swix</strong>: Hey. Hey.</p>
+</details>
+<p><strong>Jake Cooper</strong>: 我是 Railway 的<strong>列车长</strong> (Conductor)。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jake Cooper</strong>: conductor of railway.</p>
+</details>
+<p><strong>Allesio</strong>: 对于那些还不知道的人，Railway 到底是什么？先给个清晰的定义吧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Allesio</strong>: Um okay so well for those who don't know what is railway let's give people a crisp definition up front.</p>
+</details>
+<p><strong>Jake Cooper</strong>: Railway 是部署任何东西最简单的方式。你只需要打开画布 (Canvas) 或与 <strong>Claude</strong> 对话，告诉它“部署一个 <strong>PostgreSQL</strong> 实例”或“部署我的 GitHub 仓库”，然后你就可以直接起跑了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jake Cooper</strong>: Yeah, railway is the easiest way to ship anything. You just go to the canvas or you talk with claude um and you say deploy Postgress instance, deploy my GitHub repository, run this code, etc., right? Um and you'll just be up and away to the races, right?</p>
+</details>
+<p><strong>Jake Cooper</strong>: 我们想让应用随着时间不断演进。目前的许多工具就像是在不断堆积熵——先是 <strong>Docker</strong> 和 <strong>Kubernetes</strong>，然后是 <strong>Ansible</strong> 脚本。如果我们能为你管理所有软件的版本并跟踪变更，那么克隆环境、甚至在并行宇宙中进行分叉 (Fork) 都会变得微不足道。你可以获取生产数据的副本，验证更改，然后合并，而不需要费力重建测试环境。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jake Cooper</strong>: But yeah, we want to make it really easy for not just to like deploy things, but for you to almost like evolve applications over time. Like we believe that most of the tooling right now is kind of like stacked up like you're stacking entropy on top of entropy on top of entropy, right? So you have like Docker and Cube and then like Ansible scripts and all of these other things, right? Um, and if we can kind of like version all of your software for you and keep track of all of the changes, then we can make it actually trivial for you to clone environments, you know, fork into a parallel universe, get copies of like production data, get copies of like any of your services, make those changes, validate those changes, collapse it in, uh, without kind of having to just like reproduce everything across a, you know, a staging environment or all of those other things, right?</p>
+</details>
+<h3>从 Uber 到 Railway：追求极致体验</h3>
+<p><strong>Allesio</strong>: 我看你的背景，<strong>Bloomberg</strong>、<strong>Uber</strong>，似乎没有哪一点能预示你会创办下一个伟大的 <strong>PaaS</strong> (平台即服务)。是什么让你为此做好了准备？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Allesio</strong>: Amazing. Uh, one thing I I was looking at your background, right? like um Bloomberg, Uber, there's nothing immediately that stands out to me as like okay this guy's going to found like the next great platform as a service. Uh what prepared you for real?</p>
+</details>
+<p><strong>Jake Cooper</strong>: 这几乎是一种不断深入的好奇心。我从前端开始，后来在 Uber 接触分布式系统，将 Jump 单车系统迁移到基于 <strong>Cadence</strong>（<strong>Temporal</strong> 的前身）的分布式系统上。我一直想要那种“走近单车、解锁、然后顺畅骑行”的<strong>无摩擦体验</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jake Cooper</strong>: It's almost like a curiosity just like ever go deeper, right? Um and so like you know started out on like front end stuff you know like working on the like wolf from like web mathematic and like porting it over there and then you know briefly moving to Bloomberg um and then moving towards Uber and like distributed systems and kind of like taking all the jump bikes uh kind of systems and and moving them over to a distributed uh system built on top of uh Cadence like uh the yeah the pre-temporal temporal. And so like it's just been a a a continual step of like I I want this experience whether it is like walking up to like a bike and just unlocking it and like having it be like frictionless to like work or whatever and then like necessitating the like depth required to go in and make that happen, right?</p>
+</details>
+<p><strong>Jake Cooper</strong>: 我们团队的核心理念是：为了把体验做对，我们不介意潜到游泳池的最深处。我没有物理学博士学位，只是学了电子工程和计算机科学 (EECS)，但我始终在思考如何达到下一步。这就是为什么我们现在甚至开始涉足<strong>裸金属</strong> (Bare Metal) 数据中心。这周我还在给内核打补丁，只是为了让体验更完美。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jake Cooper</strong>: Like it it a lot of the work that that I do and a lot of the team does is like it's all in service of that experience, right? and like we fundamentally don't care like how deep we have to go whatever like we will swim to the bottom of the swimming pool to go and get the experience right um and I think that's what a lot of of you know kind of the trajectory was right and so it's not like I have a physics PhD or whatever I did like an EECS degree you know it it's just it's always been about just trying to figure out that next step of like how do we get there right um and that's like what's led to you know starting railway for that experience and then like moving all the way to bare metal data centers right like you know I was adding patches to the kernel this week Right. Just to like get the experience there cuz I'm like I see it and like how much better it can be. Right.</p>
+</details>
+<h3>数据中心的经济学：3 个月回本</h3>
+<p><strong>Allesio</strong>: 你提到了新加坡的数据中心，在其他地区也有。建立数据中心是什么感觉？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Allesio</strong>: Yeah. You have a data center in Singapore. Singapore, we're adding a second one in Q3. So, Yep. So, so like what's it like? I mean I I' I've never built a data center.</p>
+</details>
+<p><strong>Jake Cooper</strong>: 基本上就是去跟 <strong>Equinix</strong> 这样的人说：“我需要电力和一个机柜。”他们会租给你一个机柜，然后你需要往里填满机架、服务器并接入互联网。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jake Cooper</strong>: You basically just go and you say, &quot;Hey, listen. I want uh power and I want a cage.&quot; Uh and they're like, &quot;Great. Here this is what it's going to be.&quot; Um and then you rent the cage for a period of time and then you have to fill the cage uh with racks servers and then hook up internet to it, right? Um that's realistically.</p>
+</details>
+<p><strong>Allesio</strong>: 相比于直接用公有云，这里的数学账是怎么算的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Allesio</strong>: and like what's the math versus obviously the clouds?</p>
+</details>
+<p><strong>Jake Cooper</strong>: 如果我们在云端租用资源，相比之下，我们转向裸金属服务器的<strong>投资回收期</strong> (Payback Period) 大约只有 3 个月。这太疯狂了。而且硬件还在升值，因为内存价格涨了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jake Cooper</strong>: Yeah. Uh it our payback period when we go to to metal um if we rent it in the cloud, our payback period is about 3 months. It goes crazy. It's nuts. Yeah. and and that's like four years worth of like depreciated hardware, right? Um and so I think it's like you're going to see a lot of this almost like compute crunch so to speak because a lot of the hyperscalers are buying up a lot of stuff.</p>
+</details>
+<h3>AI Agent 对基础设施的渴求</h3>
+<p><strong>Jake Cooper</strong>: 很多人看到大型厂商投入数百亿美元进行资本支出，觉得不可思议。但如果你意识到未来每个人都会同时运行几十个甚至几百个 Agent，你就会发现目前的算力缺口有多大。即使效率再高，算力需求也会爆炸。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jake Cooper</strong>: if you go back to every person is going to run you know dozens hundreds whatever of agents in parallel like you should spend more than you have you have like you have no conceptual idea of like how much compute is required to go in and make that experience happen. Even if you're deeply efficient, even if you're sharing resources, even if you're doing all of these other things correctly, and that doesn't even count inference.</p>
+</details>
+<p><strong>Allesio</strong>: 你们什么时候开始优先考虑 AI 或 Agent 的开发？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Allesio</strong>: Is there any point at which you started prioritizing um AI developments or agent development?</p>
+</details>
+<p><strong>Jake Cooper</strong>: 过去六个月里，我们深度优先考虑将 <strong>Agentic</strong>（代理化）作为构建和部署软件的核心机制。我们相信这是一种不可逆转的趋势。人类经历了从汇编到 C，再到 C++、JavaScript，现在正进入“文字”阶段。你必须能够闭合这个环路。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jake Cooper</strong>: Um and probably over the last like six months we've probably deep deeply prioritized like Agentic as a as a mechanism to go and build and and deploy things. uh just because we we believe fundamentally like the the curve is so sheer and like that is the way that people are going to go and build and deploy software. we've moved from assembly to C to C++ to JavaScript to now like words, right? And you're going to need to be able to close that loop, right?</p>
+</details>
+<h3>PR 的消亡与提示请求的兴起</h3>
+<p><strong>Allesio</strong>: 除了开发工具的改变，软件开发生命周期 (SDLC) 还有什么变化？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Allesio</strong>: Yeah, the SDLC is changing and it's something that both of us are like super interested in exploring as well. Um, my one of my thesis or it's not my thesis, it's the pull request is dying, right? It's it's going to be the prompt request.</p>
+</details>
+<p><strong>Jake Cooper</strong>: 没错，<strong>PR</strong> 正在死去，代码审查也在死去。如果你有完善的系统，你还需要像现在这样审查吗？我们想消除“推送-拉取-重新构建”这种带有摩擦的循环。理想的状态是，你在生产环境中做一个小改动，这个改动会在你的整个基础设施中自动版本化，与数据库的写时复制 (Copy-on-write) 版本协同工作，然后瞬间上线。这就是闭环的“圣杯”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jake Cooper</strong>: and then beyond that code review is also kind of dying because do you really need to uh if you have all the other systems in place? But that like pushpull rebuild thing, right, is a point of friction that we are like removing entirely from from our loops.</p>
+</details>
+<h3>宠物还是牲畜？我们要能克隆的“宠物”</h3>
+<p><strong>Allesio</strong>: 关于服务器管理，有个经典的说法是“<strong>牲畜而非宠物</strong>” (Cattle not Pets)。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Allesio</strong>: cattle not pets. Right. Because like your prod like it has a name like a baby, you know, I have to keep it alive. But when it's cattle, you can just mass farm and you can like roll out and you can like, you know, uh portion out parts of them and kill them or whatever.</p>
+</details>
+<p><strong>Jake Cooper</strong>: 我有个不同的观点：你可以把它们当成“宠物”，只要你有一台<strong>克隆机</strong>。如果你能快照每一帧的状态，那么它是否被毁灭就不再重要，因为你可以随时恢复。我们之前的整个 DevOps 体系都是为了“防爆”，限制任何变更。但如果我们能秒级快照整个文件系统并延迟加载，我们就不再需要那么多复杂的仪式（如 Dockerfile 或 Ansible）。你直接在生产环境的副本上迭代，觉得对了，直接合并文件系统。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jake Cooper</strong>: I actually think that maybe that's the the hot take, but I think that that's actually going to change. And I think you can move towards having pets so long as uh you have a and this is going to be a jump. So long as you have a cloning machine for your pets. If you can snapshot every single thing at every frame, then like it actually doesn't matter if you know that obliterated because you have some sort of like snapshot of it, right? What if you just had the whole file system? what if you just snapshot it and what if you lazily load the entirety of the file system? right then you can get around this problem entirely.</p>
+</details>
+<p><strong>Allesio</strong>: 听起来很有趣。非常感谢你的分享。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Allesio</strong>: Sounds fun. Amazing. All right, that's the future of cloud. Thank you. Thank you for having me. It's been wonderful.</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Railway" class="entity-link company-link">Railway</a>, 
+                
+                  <a href="/search/?q=Uber" class="entity-link company-link">Uber</a>, 
+                
+                  <a href="/search/?q=Heroku" class="entity-link company-link">Heroku</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Salesforce" class="entity-link company-link">Salesforce</a>, 
+                
+                  <a href="/search/?q=Bloomberg" class="entity-link company-link">Bloomberg</a>, 
+                
+                  <a href="/search/?q=Equinix" class="entity-link company-link">Equinix</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>, 
+                
+                  <a href="/search/?q=PostgreSQL" class="entity-link product-link">PostgreSQL</a>, 
+                
+                  <a href="/search/?q=Kubernetes" class="entity-link product-link">Kubernetes</a>, 
+                
+                  <a href="/search/?q=Temporal" class="entity-link product-link">Temporal</a>, 
+                
+                  <a href="/search/?q=Docker" class="entity-link product-link">Docker</a>, 
+                
+                  <a href="/search/?q=Nyxpacks" class="entity-link product-link">Nyxpacks</a>
+                
+              </p>
+            
+            
+              <p><strong>媒体/书籍:</strong>
+                
+                  <a href="/search/?q=The Martian" class="entity-link media-link">The Martian</a>
+                
+              </p>
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/cloud-infrastructure/">cloud-infrastructure</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-agents/">ai-agents</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/software-development-lifecycle/">software-development-lifecycle</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">bare-metal</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">version-control</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

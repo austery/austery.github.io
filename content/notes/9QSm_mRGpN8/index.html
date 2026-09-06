@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>衡量 AI 的指数级增长：专访 METR 研究员 Joel Becker</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="衡量 AI 的指数级增长：专访 METR 研究员 Joel Becker" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">衡量 AI 的指数级增长：专访 METR 研究员 Joel Becker</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Latent Space</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-02-27
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/latent-space/">Latent Space</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=9QSm_mRGpN8" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-02-27
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本期访谈深入探讨了 AI 评估机构 METR 的核心使命。研究员 Joel Becker 详细解释了著名的“时间线图表”如何衡量 AI 的自主能力，分析了从 GPT-4 到 Opus 4.5 的飞跃。对话涵盖了开发者生产力随机对照实验、预测市场的博弈论，以及闭环 R&amp;D 自动化可能带来的风险。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>METR 的定义</h3>
+<p><strong>Joel Becker</strong>: <strong>METR</strong> 的名字由两部分组成。前两个字母 <strong>ME</strong> 代表模型评估（Model Evaluation），即思考 AI 模型在今天和未来的能力，以及它们在具备一定能力后的行为倾向。最后两个字母 <strong>TR</strong> 代表威胁研究（Threat Research），我们试图将这些能力与特定的<strong>威胁模型</strong>联系起来，以确定 AI 是否会对社会造成巨大或灾难性的风险。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Joel Becker</strong>: METR stands for... first two letters, Model Evaluation. That is, we think about what their capabilities of AI models might look like today and tomorrow, as well as their propensities—what they'll actually do in the wild given that they have some level of capability. And then Threat Research, the final two letters. We try to connect those capabilities and propensities to particular threat models that we have in order to determine whether AI models pose enormous or catastrophic risks to society.</p>
+</details>
+<p><strong>Allesio</strong>: 你觉得你们目前的工作是偏向 ME（评估）更多，而 TR（威胁研究）是下一个阶段，还是现在已经有 TR 方面的工作了？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Allesio</strong>: Would you say that you've done a lot more ME and TR is like kind of the next phase, or is there TR side of work that I'm [missing]?</p>
+</details>
+<p><strong>Joel Becker</strong>: 我认为 TR 已经存在了。虽然最知名的工作可能看起来更像 ME，比如<strong>时间线图表</strong>（Time Horizon）和开发者生产力的<strong>随机对照实验</strong>（RCTs），但我们的网站上有一份关于 GPT-5 及其后续版本的完整报告。我们试图建立一个结构化的案例，分析为什么它目前不构成大规模风险。虽然结论是目前没有，但值得思考原因：为什么它在基准测试中得分很高，却无法做出严重错误的事情？我们发现目前的模型能力还不够。但在未来，当模型能够完成更非凡的任务时，我们就需要更多地依赖“倾向性”研究，即现有的防护措施是否足以防止它构成<strong>生存威胁</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Joel Becker</strong>: I think there is TR. Some of the most publicized work does look more like the ME—looks like this Time Horizon stuff and the developer productivity RCTs. But there's this wonderful full report on our website, GPT-5 report, trying to make this more structured case that it doesn't pose these really large scale risks. Eventually coming to the conclusion that it doesn't, but it's worth thinking: why exactly is that the case? Why is it not able to do something really enormously wrong? Well, we find it's not capable enough on the basis of some of this capabilities evidence. But perhaps in future, we will think it's capable of doing pretty extraordinary things, the kinds of things that would be necessary to provide really serious threats. And then maybe you'd lean more on the propensities part—are the protections that we have against these dangerous capabilities sufficient for it not to pose an existential threat?</p>
+</details>
+<h3>时间线图表</h3>
+<p><strong>Swix</strong>: “模型时间线图表”可能是被引用最多的图表。它的起源故事是什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Swix</strong>: The model Time Horizon chart is probably the most quoted... What was the origin story of it?</p>
+</details>
+<p><strong>Joel Becker</strong>: 2023 年 METR 内部有一份试图规划研究愿景的 PPT，里面有一张草图：纵轴是自主能力或危险能力，横轴是时间或算力，上面有一些向右上方散射的数据点。我们后来的研究就是为了让这个图表更具体。当我们真正绘制出数据时——纵轴改为“人类完成任务所需的时间长度”，即模型能以 50% 可靠性完成的任务难度——我们发现趋势线异常笔直。这种规律性非常惊人，甚至比我加入 METR 前看到的那些零散的数据点还要直。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Joel Becker</strong>: There's this internal METR PowerPoint from 2023 where we're trying to lay out our ambitions for what METR research might look like. There's this graph. It has a y-axis that's some measure of autonomous capabilities or dangerous capabilities, and then an x-axis labeled time or compute. And then it has a bunch of sort of scattered points that kind of go up and to the right. Many of METR's research bets have been trying to make this ever more concrete. And then when we actually did the full thing, when we had this y-axis—which turned out to be this task difficulty as measured by the length of time it takes for humans to do at which models can complete these tasks with 50% reliability—when we actually plotted that data over time, it turned out to be remarkably straight.</p>
+</details>
+<h3>任务筛选原则</h3>
+<p><strong>Allesio</strong>: 你们是如何选择任务的？比如“训练分类器”或“修复 bug”，看起来有些随机。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Allesio</strong>: How did you pick the tasks? You have some labels like &quot;train classifier&quot;, &quot;fix bugs&quot;. They all seem kind of arbitrary. What's the process of task selection?</p>
+</details>
+<p><strong>Joel Becker</strong>: 这是一个大家普遍关心的问题。我们的目标是选择具有经济价值的任务，特别是与通用自主权和<strong>威胁模型</strong>相关的任务。一个误读是认为这个图表代表了 AI 能完成的所有任务，但并非如此。例如，需要<strong>计算机视觉</strong>能力的任务，AI 今天的表现可能远不如不需要视觉的任务。我们通过内部人员创建任务和外部悬红（Bounty）来采样。为了能够大规模运行评估，我们倾向于选择可以自动评分的任务，这确实带来了一些限制，但这是我们的愿景。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Joel Becker</strong>: People are right to be worried about task selection. The aspiration was to pick economically valuable tasks relevant especially to sort of general autonomy and the threat models that we're primarily interested in. One misreading of the Time Horizon graph is this is referring to the full distribution of any tasks. In particular, tasks that are requiring of vision capabilities, they're probably much less capable today as measured by Time Horizon. We sample these tasks by having people inside of METR create them and by having a bounty so people from outside can provide them. In order to be able to scalably run our evals, it's helpful for the success on the tasks to be automatically gradable, which means some types of tasks are included and others are not.</p>
+</details>
+<p><strong>Allesio</strong>: 除了计算机视觉，还有哪些任务是被排除在外的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Allesio</strong>: Any other disqualifiers? What are other things where you would expect the chart to be a lot worse?</p>
+</details>
+<p><strong>Joel Becker</strong>: 我们要求任务原则上是模型可以完成的，即它拥有足够的信息。我们的参考标准是：一个具备通用技能但缺乏特定背景知识的“低上下文人类”能否完成？这排除了一大部分现实工作，因为现实工作往往依赖于复杂的心理模型，而这些模型并不会完全写在 Issue 描述里。此外，我们的任务通常比较闭环，不像现实世界那样“杂乱”（Messy），比如需要与外部世界进行开放式互动。我们后续会聊到的开发者生产力研究中，那些任务就比 METR 的基准测试任务要杂乱得多。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Joel Becker</strong>: One thing is fairness—we want tasks to be in principle completable by a model. Could a low-context human who was sufficiently skilled at general skills, but maybe not the particulars in the background, be able to achieve success? That rules out a lot of real work because a lot of real work involves people having careful mental models of the situation that are not fully listed in an issue description. Another thing is that our tasks tend not to be so open-ended or interacting with the outside world—&quot;messy&quot;, as we call it internally. Relative to tasks in the real world, our tasks are somewhat nicely scoped.</p>
+</details>
+<h3>Opus 4.5 与不连续性</h3>
+<p><strong>Swix</strong>: 当 <strong>Opus 4.5</strong> 发布时，它在你们的图表上表现出了巨大的飞跃。这似乎打破了你们辛苦建立多年的趋势线。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Swix</strong>: Let's talk about Opus 4.5. There's a very big jump. You're the first people to call out how much better Opus 4.5 was than the status quo... But it broke your trend line.</p>
+</details>
+<p><strong>Joel Becker</strong>: 确实。关于 Opus 4.5 是否符合每 4 个月能力翻倍（而不是我之前相信的 7 个月）存在争论。它在某种程度上证伪了我的趋势线。我看到很多顶尖工程师从对 AI 编码持挑剔态度，转变为几乎不亲手写一行代码。虽然这种飞跃在直觉上很大，但从多年来的算力和有效算力增长来看，进步依然是相对连续的。只是模型能力的惊人程度让我们觉得它是跃迁的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Joel Becker</strong>: There was some speculation that maybe the appropriate trend line to use is this faster 4-month doubling time, which Opus 4.5 would be perfect for. I was more of a believer in 7 months, so it is kind of falsifying my trend line in some way. I've seen some of the most talented engineers I know go from being picky about not using AI for coding to practically not writing a line of code. In some ways, I think the story of Time Horizon is that progress has been remarkably continuous over so many orders of magnitude of compute. But yeah, model capabilities are astonishing.</p>
+</details>
+<p><strong>Swix</strong>: 我同意你的看法。即使是很资深的开发人员，现在也开始转向 <strong>Agentic Coding</strong>（智能体编码）。去年这时候没人会说“我们团队要实现 100% 智能体编码，不写一行代码”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Swix</strong>: I would cosign what you said there with even very senior developers being finally pilled into agentic coding. Now very serious people are telling me that they want to commit to 100% agentic coding, which is not something that you would have said a year ago.</p>
+</details>
+<h3>开发者生产力研究的挑战</h3>
+<p><strong>Allesio</strong>: 既然 Opus 4.5 这么强，你们之前的研究（认为 AI 可能减慢人类速度）是否失效了？你们会重做吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Allesio</strong>: How do you invalidate previous research? Take the developer productivity study—you had AI slowed people down. If you redo it with Opus 4.5, would you expect results to be dramatically different?</p>
+</details>
+<p><strong>Joel Becker</strong>: 我们一直在后台重做。但现在做这个实验比过去难得多。首先是“样本偏差”：现在很难找到愿意在实验中被分配到“禁用 AI”组的开发者。其次是工作流的改变：现在的开发者习惯于同时处理多个 Issue，而传统的实验设计要求一次只做一个。2025 年 3 月的时候，人们还没这么多并发工作。所以重复同样的实验设计已经不可行了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Joel Becker</strong>: We have been redoing it in the background. It is much harder to do it today. First, as AIs get better at coding, it's harder to find developers willing to be randomized to &quot;AI disallowed&quot;. There's a selection issue. Second, a common workflow today is to work on multiple issues concurrently, which wasn't really true before. If you flip a single task to be AI allowed or disallowed, you're supposed to work on that single task. But that's not how developers are working today. These weren't threats to the previous study design in March 2025.</p>
+</details>
+<p><strong>Allesio</strong>: 我现在用 <strong>Claude Code</strong> 进行审查和迭代，效率提升了很多，但我无法量化。你觉得人们是否高估了这种增速？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Allesio</strong>: Today I do a lot of just Claude Code and then review and iterate. It's much better and I don't know how to quantify it. People maybe overestimate... like 10x, but it's probably not right.</p>
+</details>
+<p><strong>Joel Becker</strong>: 这里有几个问题。由于 AI 的存在，你可能会做一些以前根本不会去做的副作用项目（Side Projects），从这个角度看，加速是“无限大”的，但这些项目的经济价值可能较低。此外，人们对增速的预期往往过于乐观。正如我们在原始论文中记录的，人们往往没有意识到，他们能额外完成的任务价值其实比想象中低，否则他们以前就会想办法完成了。不过，我并不怀疑 AI 显著加快了即使是以前就会做的任务。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Joel Becker</strong>: There are a couple of side projects I have that I simply wouldn't be doing were it not for AI. In some sense, the speed up there is infinite, but these wouldn't really line up with additional value. I think that very bullish estimates of speed up today are inflated by what we document in that original paper—that people's expectations of speed up tend to be too optimistic. They also tend to be inflated by not quite grokking that the value of the additional tasks they're able to complete is lower than you might think. There's a reason they weren't doing them previously.</p>
+</details>
+<h3>闭环自动化与能力爆炸</h3>
+<p><strong>Swix</strong>: 你们提到了“能力爆炸”（Capabilities Explosion）。如果 AI 能够完全闭环地改进下一代 AI，情况会发生突变吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Swix</strong>: This concept of capability explosion... If you believe in emergence, it should be discontinuous in some sense.</p>
+</details>
+<p><strong>Joel Becker</strong>: 这确实是我最担心的：如果 <strong>AR&amp;D</strong>（人工智能研发）在实验室内部完全实现了自动化，那么能力爆炸的条件就成熟了。即使模型现在能完成 90% 的自动化，剩下的 10% 也是关键。有趣的是关于“仅限软件的智能爆炸”与“涉及硬件的循环”的争论。有人认为即使硬件固定，模型自我改进也能带来极端飞跃；也有人认为你需要闭环到芯片设计甚至芯片生产。如果芯片生产、软件改进和芯片设计这三个环节全部闭环，那将是非常令人担忧的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Joel Becker</strong>: The thing that would really concern me is if AR&amp;D was fully automated inside of a lab. The conditions are there for potentially a capabilities explosion. For things to be fully automated, 90% isn't enough; you need some full loop to be closed. Some people talk about software-only intelligence explosions—even holding hardware fixed, models improving themselves could lead to some extreme takeoff. Or instead, you need chip design or even chip production, and that's this larger loop that can close. Closing the chip production, software, and chip design loop is potentially very destabilizing.</p>
+</details>
+<p><strong>Allesio</strong>: 那就是真正的“回形针工厂”了。如果 AI 被激励去制造自己的算力，它会把整个星球都变成芯片。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Allesio</strong>: I think that is the actual paperclip factory. If you incentivize a model to go build its own compute, it will turn the planet into chips.</p>
+</details>
+<h3>预测市场的策略</h3>
+<p><strong>Swix</strong>: 让我们聊聊 <strong>Manifold</strong> 预测市场。你是上面获利最多的交易员之一。你有什么秘诀吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Swix</strong>: Do we want to talk about Manifold? You were the most profitable trader... what is your secret for Manifold markets alpha?</p>
+</details>
+<p><strong>Joel Becker</strong>: 听起来很牛，但其实主要是因为一个特定的慈善市场。Manifold 当时有一个项目，根据每月的捐赠金额开盘。我注意到作为一个会捐款的人，我可以操纵这个市场——通过增加捐赠来推高预期。我用大量的虚拟货币（Mana）买入高于线性预测的选项，人们因为没看到有人捐款而疯狂跟我对赌，我就一直加码。最后我确实捐了大约 5000 美元，从而赢取了大量的虚拟积分，成为了“最赚钱的交易员”。这在规则内是完全合法的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Joel Becker</strong>: The secret... actually mostly comes down to this one market where Manifold had opened up a charity program. The market is on how much is going to be donated. I noticed that you could manipulate this market by giving more to charity. So the strategy was to put a ton of Mana into the option that was above the linear projection. People keep betting against you because it doesn't look like that's happening. Eventually they caught on that someone's going to make this donation to move over the edge. I ended up donating something like $5,000. I won lots of fake internet points and became the number one most profitable trader.</p>
+</details>
+<p><strong>Allesio</strong>: 这就是所谓的“高主体性”预测市场，你亲自去创造未来。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Allesio</strong>: This is called prediction markets with high agency—you actually going [and making] the future what you make it.</p>
+</details>
+<h3>总结与愿景</h3>
+<p><strong>Joel Becker</strong>: 到 2026 年，你会看到 METR 提供更多高质量的能力证据。我们还在研究监控技术（Safeguards），即能否在模型尝试危险任务时成功应用防护措施。此外，METR 正在<strong>招聘</strong>研究工程师、研究科学家和运营总监。我们不只看 AI 背景，也欢迎有初创公司经验或经济学背景、能够脚踏实地完成前沿科学工作的人。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Joel Becker</strong>: From METR, I think you're going to see more hopefully high quality capabilities evidence. We also have some monitoring research directions—thinking about if we can successfully apply safeguards to models attempting dangerous tasks. Maybe now is a good time to say that we are hiring. On my team, we're hiring for research engineers, research scientists, people from startup backgrounds. We are accepting a pretty wide range of people who get stuff done.</p>
+</details>
+<p><strong>Allesio</strong>: 最后一个关于<strong>卡拉 OK</strong> 的问题，听说你经常组织这类活动？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Allesio</strong>: Did you have a karaoke question? What is this karaoke thing that you organize?</p>
+</details>
+<p><strong>Joel Becker</strong>: 是的，我主持过几次现场乐队卡拉 OK。虽然 AI 生成歌曲很强，但我认为在现场唱歌有一种“超越感”，这是 AI 无法提供的。我期待在下一次活动中见到你们。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Joel Becker</strong>: I've hosted a couple of these live band karaoke events. I think there's kind of transcendence to singing in person that the AI generator songs are not providing me. I look forward to seeing you both at the next one.</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Joel Becker" class="entity-link person-link">Joel Becker</a>, 
+                
+                  <a href="/search/?q=Sam Altman" class="entity-link person-link">Sam Altman</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=METR" class="entity-link company-link">METR</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, 
+                
+                  <a href="/search/?q=Manifold" class="entity-link company-link">Manifold</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Opus 4.5" class="entity-link product-link">Opus 4.5</a>, 
+                
+                  <a href="/search/?q=GPT-4" class="entity-link product-link">GPT-4</a>, 
+                
+                  <a href="/search/?q=Claude Code" class="entity-link product-link">Claude Code</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-evaluation/">ai-evaluation</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">capability-explosion</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/developer-productivity/">developer-productivity</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/prediction-market/">prediction-market</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-safety/">ai-safety</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

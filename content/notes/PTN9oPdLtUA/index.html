@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>重构人机协作：Thinking Machines Lab 发布原生交互模型 Interaction Models</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="重构人机协作：Thinking Machines Lab 发布原生交互模型 Interaction Models" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">重构人机协作：Thinking Machines Lab 发布原生交互模型 Interaction Models</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Best Partners TV</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-05-13
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/best-partners-tv/">Best Partners TV</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=PTN9oPdLtUA" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-05-13
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">由前 OpenAI CTO Mira Murati 创立的 Thinking Machines Lab 发布最新成果 Interaction Models。该研究指出当前 AI 协作停留在低带宽的“轮询模式”，提出通过时间对齐的微轮询设计与双模型协同架构，将交互转化为模型的原生基因。模型实现了无缝对话管理、主动插话及同步工具调用，在响应延迟与交互质量上显著超越 GPT-4o 等竞品，标志着人机协作从“任务分配”转向“实时共创”。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>语义带宽：重构协作的底层逻辑</h3>
+<p>2026年5月11日，由前 OpenAI 首席技术官 <strong>Mira Murati</strong>（米拉·穆拉蒂）创立的 <strong>Thinking Machines Lab</strong> 发布了其最新研究成果：<strong>交互模型</strong>（Interaction Models）。这项研究试图重构人机协作的底层逻辑，将交互从模型的一项“附加功能”转变为其“原生基因”。目前大模型虽然智能极强，但在协作方式上仍处于极其笨拙的阶段，人类习惯于“发邮件式”的轮询交互——即必须等用户输入完成、模型思考、生成输出后，才能进行下一轮沟通。这种模式缺乏即时反馈、无法打断，更没有像人与人面对面那样边说边听、边看边回应的自然感。</p>
+<p>Thinking Machines Lab 指出，全球顶尖 AI 实验室正陷入一个认知误区：将 AI <strong>自主完成长时任务</strong>的能力作为核心评价标准，这导致主流大模型完全没有为人类持续的 <strong>In-the-loop</strong>（人在回路：人类参与决策与调整的闭环过程）做优化。在真实场景中，没有人能一次性说清所有需求，优质成果需要人类全程参与、不断澄清与反馈。然而，现有的交互界面并没有给人类留下参与的空间，导致模型的响应在同步协作中显得极其迟缓。</p>
+<h3>沟通基础：从单线程轮询到实时共存</h3>
+<p>为了解决这一问题，研究团队引用了克拉克（Clark）和布伦南（Brennan）在1991年《<strong>沟通基础</strong>》（Grounding in Communication: 关于沟通如何建立共识的经典理论）中提出的三大核心要素：<strong>共存性</strong>（双方互动同一对象）、<strong>即时性</strong>（信息产生即被接收）和<strong>同步性</strong>（双方同时输入输出）。此外，瓦尔特·J·翁诗杰（W.J. Ong）在《口语和书面语》中也提到，口头交流的魅力在于其参与性。</p>
+<p>当前的通用大模型完全背离了这一逻辑。它们采用单线程感知，在用户输入时模型处于冻结等待状态，而模型生成时则对外部新信息视而不见。这种设计阻断了哈耶克（F.A. Hayek）所说的基于特定时点的“<strong>隐性知识</strong>”以及斯科特（James Campbell Scott）提到的依赖直觉的“<strong>实践智慧</strong>”（Metis: 基于经验和随机推理的智慧）。为了打破协作带宽瓶颈，AI 必须适配人类的协作习惯，实现在所有模态下的实时交互，而非强迫人类去适配 AI 的轮询规则。</p>
+<h3>原生进化：摆脱“外部脚手架”的束缚</h3>
+<p>目前市面上的实时语音 AI 多是靠外部组件“拼接”出来的，例如使用 <strong>语音活动检测</strong>（VAD: Voice Activity Detection）判断停顿，或用多模块组合模拟打断。Thinking Machines Lab 引用萨顿（Sutton）在《<strong>苦涩的教训</strong>》（The Bitter Lesson: 指出利用算力的通用方法最终会战胜人工设计的规则）中的观点，认为手工定制的系统终将被通用能力超越。因此，交互必须成为模型本身的一部分。</p>
+<p><strong>交互模型</strong>解锁了五大原生核心能力：</p>
+<ol>
+<li><strong>无缝对话管理</strong>：模型能隐性感知说话人是在思考、自我纠正还是邀请回应，无需人工设定轮询边界。</li>
+<li><strong>主动插话</strong>：模型能根据视觉和语音上下文随时介入，例如实时纠正用户的口误。</li>
+<li><strong>全双工同步交互</strong>：支持双方同时说话，典型场景如实时同声传译。</li>
+<li><strong>原生时间感知</strong>：模型自带时间流逝感知，无需外部计时器即可执行“每4秒提醒我呼吸”等指令。</li>
+<li><strong>并发工具调用与生成式 UI</strong>：模型在对话的同时，可并发执行搜索、调用工具并实时更新 UI 界面，无需中断沟通。</li>
+</ol>
+<h3>微轮询架构：时间对齐的技术突破</h3>
+<p>在技术实现上，交互模型彻底颠覆了传统“Token 序列”的线性逻辑。它采用了<strong>时间对齐的微轮询设计</strong>（Time-aligned Micro-polling），以真实时间为基准，将连续的流拆分为无数个 <strong>200毫秒</strong> 的微单元。在每个单元内，模型同时处理输入并生成输出，使沉默、语音重叠和打断都成为上下文的一部分。</p>
+<p>为了平衡响应速度与深度推理，系统采用了<strong>双模型协同架构</strong>：</p>
+<ul>
+<li><strong>实时交互模型</strong>（Front-end）：负责持续双向交互，处理即时响应与上下文承接。</li>
+<li><strong>异步后台模型</strong>（Back-end）：负责深度推理、长时规划与复杂工具调用。
+当交互模型遇到复杂任务时，会将上下文打包给后台模型，后者处理完后流式返回，由交互模型在合适时机自然融入对话。这种架构让用户同时拥有“快速反应”与“深度思考”能力，且交互模型本身的智能水平在行业内也极具竞争力。</li>
+</ul>
+<h3>极简融合与推理优化：性能的极限压榨</h3>
+<p>为了降低延迟，研究团队开发了<strong>无编码器的早期融合</strong>（Early Fusion）技术。不同于传统多模态模型分离的音频/视频编码器，交互模型通过轻量嵌入层和 <strong>hMLP</strong> 编码将特征直接输入 Transformer，大幅提升了信息融合效率。针对 200ms 微轮询带来的高频小批量预填充挑战，团队实现了<strong>流式会话机制</strong>，并将该功能贡献给了开源项目 <strong>SGLang</strong>。同时，他们在 <strong>混合专家模型</strong>（MoE）中优化了计算内核，并实现了比特级的训练器与采样器对齐，确保系统极度稳定。</p>
+<p>在安全防御上，团队从<strong>模态适配的拒绝响应</strong>和<strong>长时健壮性</strong>两个维度发力，通过自动化红队测试，保证了语音与文本交互在违规场景下拒绝行为的高度一致性。</p>
+<h3>性能领跑：TML-Interaction-Small 实力霸榜</h3>
+<p>在基准测试中，<strong>TML-Interaction-Small</strong>（2760亿参数 MoE，激活参数120亿）展现了统治级的性能：</p>
+<ul>
+<li><strong>响应延迟</strong>：轮询延迟仅为 <strong>0.40秒</strong>，远低于 GPT-realtime-2.0 的 1.18秒和 Gemini-3.1-flash-live 的 0.57秒。</li>
+<li><strong>交互质量</strong>：在 FD-bench v1.5 流式基准中获得 77.8分，大幅领先竞品。</li>
+<li><strong>时间与视觉感知</strong>：在 <strong>TimeSpeak</strong>（定时发起语音）和 <strong>ProactiveVideoQA</strong>（主动视觉回答）等新维度基准上，现有商业 API 几乎无法得分，而交互模型能有效完成任务。</li>
+</ul>
+<p>尽管在长会话上下文管理、网络依赖性以及大规模模型部署上仍存挑战，Thinking Machines Lab 已计划在 2026 年内发布更大规模的模型。该研究预览版将在未来几个月限时开放，并于 2026 年下半年全面发布，预示着 AI 将从一个“被动执行工具”进化为真正的“实时协作伙伴”。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Mira Murati" class="entity-link person-link">Mira Murati</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Thinking Machines Lab" class="entity-link company-link">Thinking Machines Lab</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=TML-Interaction-Small" class="entity-link product-link">TML-Interaction-Small</a>, 
+                
+                  <a href="/search/?q=GPT-realtime-2.0" class="entity-link product-link">GPT-realtime-2.0</a>, 
+                
+                  <a href="/search/?q=Gemini-3.1-flash-live" class="entity-link product-link">Gemini-3.1-flash-live</a>
+                
+              </p>
+            
+            
+              <p><strong>媒体/书籍:</strong>
+                
+                  <a href="/search/?q=Grounding in Communication" class="entity-link media-link">Grounding in Communication</a>, 
+                
+                  <a href="/search/?q=Orality and Literacy" class="entity-link media-link">Orality and Literacy</a>, 
+                
+                  <a href="/search/?q=The use of knowledge in society" class="entity-link media-link">The use of knowledge in society</a>, 
+                
+                  <a href="/search/?q=Seeing like a State" class="entity-link media-link">Seeing like a State</a>
+                
+              </p>
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">interaction-models</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">human-computer-collaboration</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/real-time-ai/">real-time-ai</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">dual-model-architecture</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">low-latency-inference</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

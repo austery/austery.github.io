@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>所有演讲者</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        <div class="container">
+  
+<div data-pagefind-ignore>
+
+<h1>所有演讲者</h1>
+
+<div class="filterable-container">
+  <input type="text" class="list-filter-input" placeholder="筛选演讲者..." aria-label="Filter speakers">
+
+  <ul class="filterable-list speaker-list">
+    
+      <li>
+        <a href="/speakers/a16z/" class="speaker-pill">
+          a16z (115)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/adams-axiom/" class="speaker-pill">
+          Adam&#39;s Axiom (20)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/ai-engineer/" class="speaker-pill">
+          AI Engineer (341)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/ai-chao-yuan-yu/" class="speaker-pill">
+          AI超元域 (57)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/all-in-podcast/" class="speaker-pill">
+          All-In Podcast (108)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/amit-kukreja/" class="speaker-pill">
+          Amit Kukreja (104)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/anthony-kan-shi-jie/" class="speaker-pill">
+          Anthony看世界 (93)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/anthropic/" class="speaker-pill">
+          Anthropic (35)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/banned-film/" class="speaker-pill">
+          Banned Film (3)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/baoyu-io/" class="speaker-pill">
+          baoyu.io (69)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/ben-dicken/" class="speaker-pill">
+          Ben Dicken (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/ben-ge-kan-di-chan/" class="speaker-pill">
+          Ben哥侃地产 (6)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/berks-community-television/" class="speaker-pill">
+          Berks Community Television (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/best-partners-tv/" class="speaker-pill">
+          Best Partners TV (551)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/beyond-coding/" class="speaker-pill">
+          Beyond Coding (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/bg2-pod/" class="speaker-pill">
+          Bg2 Pod (5)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/big-think/" class="speaker-pill">
+          Big Think (94)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/big-think-clips/" class="speaker-pill">
+          Big Think Clips (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/bloomberg-podcasts/" class="speaker-pill">
+          Bloomberg Podcasts (243)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/cnbc/" class="speaker-pill">
+          CNBC (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/cofit-x-song-yan-ren-yi-shi-chu-ri-yi-xue/" class="speaker-pill">
+          Cofit x 宋晏仁醫師 - 初日醫學 (92)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/darren-liao-mei-gu/" class="speaker-pill">
+          Darren聊美股 (50)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/dwarkesh-patel/" class="speaker-pill">
+          Dwarkesh Patel (102)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/eo/" class="speaker-pill">
+          EO (83)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/fearnation-shi-jie-ku-cha/" class="speaker-pill">
+          FearNation 世界苦茶 (174)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/google-gemini/" class="speaker-pill">
+          Google Gemini (7)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/happy-night-live-xiao-kou-chang-kai/" class="speaker-pill">
+          Happy Night Live 笑口常开 (2)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/harvard-business-review/" class="speaker-pill">
+          Harvard Business Review (9)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/hoover-institution/" class="speaker-pill">
+          Hoover Institution (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/house-of-el-ai-1/" class="speaker-pill">
+          House of El - AI (43)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/house-of-el-ai-2/" class="speaker-pill">
+          House of El: AI (11)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/how-i-ai/" class="speaker-pill">
+          How I AI (78)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/hung-yi-lee/" class="speaker-pill">
+          Hung-yi Lee (26)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/indigo-shu-zi-jing-xiang/" class="speaker-pill">
+          INDIGO 数字镜像 (33)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/internet-of-bugs/" class="speaker-pill">
+          Internet of Bugs (24)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/joseph-wang/" class="speaker-pill">
+          Joseph Wang (65)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/justin-sung/" class="speaker-pill">
+          Justin Sung (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/kevinfeng-feng-kai-wen/" class="speaker-pill">
+          KevinFeng 冯凯文 (15)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/latent-space/" class="speaker-pill">
+          Latent Space (70)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/lei/" class="speaker-pill">
+          Lei (4)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/leon-no1/" class="speaker-pill">
+          LeonのNo1 (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/liangzi-interview/" class="speaker-pill">
+          Liangzi Interview (3)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/lt-shi-jie/" class="speaker-pill">
+          LT視界 (347)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/machine-learning-street-talk/" class="speaker-pill">
+          Machine Learning Street Talk (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/mark-carney/" class="speaker-pill">
+          Mark Carney (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/money-and-macro/" class="speaker-pill">
+          Money &amp; Macro (34)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/money-or-life-mei-gu-pin-dao/" class="speaker-pill">
+          Money or Life 美股频道 (164)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/new-york-times-podcasts/" class="speaker-pill">
+          New York Times Podcasts (531)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/nico-tou-zi-you-dao/" class="speaker-pill">
+          Nico投资有道 (23)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/norges-bank-investment-management/" class="speaker-pill">
+          Norges Bank Investment Management (216)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/pastor-rick/" class="speaker-pill">
+          Pastor Rick (3)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/patrick-boyle/" class="speaker-pill">
+          Patrick Boyle (23)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/pcc/" class="speaker-pill">
+          PCC (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/peter-pang/" class="speaker-pill">
+          Peter Pang (24)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/peter-santenello/" class="speaker-pill">
+          Peter Santenello (4)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/rolling-stone/" class="speaker-pill">
+          Rolling Stone (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/ryan-peterman/" class="speaker-pill">
+          Ryan Peterman (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/sandeep-swadia/" class="speaker-pill">
+          Sandeep Swadia (33)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/shanghao-jin/" class="speaker-pill">
+          Shanghao Jin (33)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/shijun-tang/" class="speaker-pill">
+          Shijun Tang (161)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/stanford-online/" class="speaker-pill">
+          Stanford Online (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/summer-hailstones-xia-bing-bao/" class="speaker-pill">
+          Summer Hailstones 夏冰雹 (3)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/techbutmakeitreal/" class="speaker-pill">
+          TechButMakeItReal (53)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/ted/" class="speaker-pill">
+          TED (264)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/the-diary-of-a-ceo/" class="speaker-pill">
+          The Diary Of A CEO (88)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/the-ezra-klein-show/" class="speaker-pill">
+          The Ezra Klein Show (43)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/the-knowledge-project-podcast/" class="speaker-pill">
+          The Knowledge Project Podcast (30)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/the-mad-podcast-with-matt-turck/" class="speaker-pill">
+          The MAD Podcast with Matt Turck (41)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/the-pragmatic-engineer/" class="speaker-pill">
+          The Pragmatic Engineer (55)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/the-prof-g-pod-scott-galloway/" class="speaker-pill">
+          The Prof G Pod – Scott Galloway (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/tvo-today/" class="speaker-pill">
+          TVO Today (355)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/variety-show/" class="speaker-pill">
+          Variety show (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/veritasium/" class="speaker-pill">
+          veritasium (167)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/whynottv/" class="speaker-pill">
+          WhynotTV (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/yage-ai/" class="speaker-pill">
+          yage.ai (312)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/yinfi/" class="speaker-pill">
+          Yinfi (3)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/zhang-xiaojun-podcast/" class="speaker-pill">
+          Zhang Xiaojun Podcast (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/yi-kou-xin-fan/" class="speaker-pill">
+          一口新飯 (109)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/yi-kou-xin-fan-she-qun/" class="speaker-pill">
+          一口新飯社群 (39)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/yi-xi-yixi/" class="speaker-pill">
+          一席YiXi (148)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/yi-zhi-tu-bo-shu-mrmarmot/" class="speaker-pill">
+          一隻土撥鼠MrMarmot (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/san-ge-shui-qiang-shou/" class="speaker-pill">
+          三個水槍手 (250)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/bu-ming-bai-bo-ke/" class="speaker-pill">
+          不明白播客 (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/dong-jing-ren-wen-lun-tan/" class="speaker-pill">
+          东京人文论坛 (65)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/ren-min-gong-yuan-shuo-ai-1/" class="speaker-pill">
+          人民公园说AI (28)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/ren-min-gong-yuan-shuo-ai-2/" class="speaker-pill">
+          人民公園說AI (17)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/ren-sheng-chuang-yi-you-le-chang/" class="speaker-pill">
+          人生創意遊樂場 (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/dai-ma-zhi-wai-beyond-code/" class="speaker-pill">
+          代码之外 Beyond Code (3)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/zuo-zhi-ya-xiao-shuai-asian-answers-with-xiaoshuai/" class="speaker-pill">
+          佐治亚小帅 Asian Answers with Xiaoshuai (5)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/chu-ri-yi-xue-song-yan-ren-yi-shi-x-cofit/" class="speaker-pill">
+          初日醫學 - 宋晏仁醫師 x Cofit (57)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/bei-mei-wang-lu-fei/" class="speaker-pill">
+          北美王路飞 (510)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/xiang-yang-qiao-mu/" class="speaker-pill">
+          向阳乔木 (124)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/xi-ju-da-lian-meng/" class="speaker-pill">
+          喜剧大联盟 (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/dan-xiang-jie-dong-jing-oneway-street-tokyo/" class="speaker-pill">
+          單向街東京Oneway Street Tokyo (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/shi-mei-na-smyrna-rci/" class="speaker-pill">
+          士每拿Smyrna RCI (10)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/shou-si-tan-ding-sociostanding/" class="speaker-pill">
+          壽司坦丁 Sociostanding (25)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/da-wei-tan-mi-jia-na-da/" class="speaker-pill">
+          大伟探秘加拿大 (87)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/da-ke-wu-li-bi-ji/" class="speaker-pill">
+          大可物理笔记 (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/da-wen-ti-dialectic/" class="speaker-pill">
+          大问题Dialectic (53)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/tian-xia-wen-hua/" class="speaker-pill">
+          天下文化 (96)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/kua-ke-shuo/" class="speaker-pill">
+          夸克说 (103)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/an-zheng-ming-stella-an/" class="speaker-pill">
+          安争鸣（Stella An） (67)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/xiao-bi-tou-zi-bi-ji/" class="speaker-pill">
+          小畢投資筆記 (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/xiao-cui-shi-zheng-cai-jing/" class="speaker-pill">
+          小翠時政財經 (274)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/zhang-nei-xian-tuo-kou-xiu/" class="speaker-pill">
+          張内咸脫口秀 (77)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/zhang-xiao-jun-xiaojun/" class="speaker-pill">
+          張小珺 Xiaojùn (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/tu-bu-de-qi-shou/" class="speaker-pill">
+          徒步的騎手 (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/tu-bu-de-qi-shou-liu-zong-kun/" class="speaker-pill">
+          徒步的騎手•劉宗坤 (223)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/tou-zi-talk-jun/" class="speaker-pill">
+          投资TALK君 (237)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/zheng-jing-sun-lao-shi/" class="speaker-pill">
+          政經孫老師 (54)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/zeng-bo-en/" class="speaker-pill">
+          曾博恩 (4)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/you-hua-ming-shuo/" class="speaker-pill">
+          有 話 銘 說 (3)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/li-hou-chen/" class="speaker-pill">
+          李厚辰 (4)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/chai-jing-chai-jing/" class="speaker-pill">
+          柴静 Chai Jing (52)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/fan-deng-du-shu/" class="speaker-pill">
+          樊登读书 (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/hai-lun-zi-hellen/" class="speaker-pill">
+          海伦子Hellen (26)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/hai-dian-zhuo-da-shu/" class="speaker-pill">
+          海淀拙大叔 (63)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/wang-hong-yu/" class="speaker-pill">
+          王红雨 (45)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/yong-ai-fa-dian/" class="speaker-pill">
+          用AI發電 (28)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/bai-jia-zheng-ming/" class="speaker-pill">
+          百家争鸣 (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/shui-qian-xiao-xi/" class="speaker-pill">
+          睡前消息 (201)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/zhi-hang-xiao-jiu-guan/" class="speaker-pill">
+          知行小酒馆 (60)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/po-bi-yuan-zhuo/" class="speaker-pill">
+          破壁圆桌 (2)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/gui-gu-101/" class="speaker-pill">
+          硅谷101 (82)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/gui-gu-101-bo-ke/" class="speaker-pill">
+          硅谷101播客 (44)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/shi-ye-huan-qiu-cai-jing/" class="speaker-pill">
+          视野环球财经 (188)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/jin-shu-bi-ji/" class="speaker-pill">
+          禁書筆記 (17)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/zhu-zhu-bao-feng-xue/" class="speaker-pill">
+          竹竹暴风雪 (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/xiao-fan-tian-zong-yi-she/" class="speaker-pill">
+          笑翻天综艺社 (5)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/luo-yong-hao-de-shi-zi-lu-kou/" class="speaker-pill">
+          罗永浩的十字路口 (24)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/mei-tou-jiang-mei-gu/" class="speaker-pill">
+          美投讲美股 (67)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/lao-zhou-heng-mei/" class="speaker-pill">
+          老周横眉 (74)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/lao-ke-tan-ke-ji-gu/" class="speaker-pill">
+          老科谈科技股 (22)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/tuo-kou-xiu-bo-ke/" class="speaker-pill">
+          脱口秀播客 (1)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/zhuang-ye-za-tan/" class="speaker-pill">
+          莊也雜談 (133)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/ji-zhe-yi-su-li/" class="speaker-pill">
+          记者易速利 (133)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/ke-dai-biao-li-zheng/" class="speaker-pill">
+          课代表立正 (106)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/chao-ji-wai-supery/" class="speaker-pill">
+          超級歪 SuperY (85)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/guo-li-you-fan/" class="speaker-pill">
+          郭里有范 (32)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/jin-rong-wang/" class="speaker-pill">
+          金融汪 (17)
+        </a>
+      </li>
+    
+      <li>
+        <a href="/speakers/wei-zhi-chao-sha-shu-du-du/" class="speaker-pill">
+          魏知超啥书都读 (127)
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+<script src="/js/list-filter.js" defer></script>
+
+<p><a href="/">← 返回首页</a></p>
+
+</div>
+
+</div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

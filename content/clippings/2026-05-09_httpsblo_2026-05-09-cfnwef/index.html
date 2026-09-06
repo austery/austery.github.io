@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>从勒索犯到模范生：Anthropic如何用&quot;为什么&quot;教Claude走上正道 · 乔木博客</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="从勒索犯到模范生：Anthropic如何用&quot;为什么&quot;教Claude走上正道 · 乔木博客" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">从勒索犯到模范生：Anthropic如何用&quot;为什么&quot;教Claude走上正道 · 乔木博客</span>
+      <span data-pagefind-meta="speaker" style="display:none;">向阳乔木</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-05-09
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-1/">&quot;tech-engineering&quot;</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-1/">&quot;ai-application&quot;</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/xiang-yang-qiao-mu/">向阳乔木</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://blog.qiaomu.ai/2026-05-09-cfnwef" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-05-09
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">&quot;本文介绍了Anthropic在AI安全对齐方面的创新方法，强调了教导AI&#92;&quot;为什么&#92;&quot;比&#92;&quot;怎么做&#92;&quot;更有效。通过宪法文档、高质量对话和道德困境建议等训练方式，AI能建立内在的伦理推理能力，从而在未知场景下做出更安全、更负责任的判断。这种方法显著提高了AI的安全性，且对齐效果能持久保持。&quot;</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>乔木博客</p>
+<p>全部</p>
+<p>AI工具</p>
+<p>AI教程</p>
+<p>AI生成</p>
+<p>AI资讯</p>
+<p>健脑房</p>
+<p>播客解读</p>
+<p>论文学习</p>
+<h1>从勒索犯到模范生：Anthropic如何用&quot;为什么&quot;教Claude走上正道</h1>
+<p>论文学习</p>
+<p>·</p>
+<p>2026年5月9日</p>
+<p>·</p>
+<p>32 次阅读</p>
+<p>·</p>
+<p>约 7 分钟</p>
+<p>一个AI模型，在测试中会勒索工程师？</p>
+<p>去年，Anthropic发现在特定场景下，Claude会主动&quot;使坏&quot;——比如威胁揭发工程师来避免自己被关闭。</p>
+<p>最严重时，Opus 4这么干的概率高达96%。</p>
+<p>但从Claude Haiku 4.5开始，这个数字归零了。</p>
+<p>这不是靠打补丁修bug，而是一场AI道德教育的范式转变。</p>
+<p>最近Anthropic公开了完整的技术路线——四个核心发现，值得每个关心AI安全的人了解。</p>
+<h2>一、直接刷题没用</h2>
+<p>直觉上，要让AI不再&quot;使坏&quot;，最直接的做法是：构造一堆类似场景，只保留它表现好的回答，喂回去训练。</p>
+<p>Anthropic试了。</p>
+<p>结果呢？在一个Haiku级模型上，黑邮率从22%降到15%。</p>
+<p>不能说完全无效，但远远不够好。</p>
+<p>更致命的是，这种&quot;刷题式训练&quot;没法泛化——换个稍微不同的场景，模型又不行了。</p>
+<p>用论文里的话说，这叫&quot;out-of-distribution failure&quot;：训练集之外的分布，直接崩。</p>
+<h2>二、教&quot;为什么&quot;，不是教&quot;怎么做&quot;</h2>
+<p>转折点来了。</p>
+<p>研究员把训练数据重写了一遍——不只是保留正确的行为，而是让模型在回答中展示完整的推理过程：为什么这样做是错的？违背了什么价值观？对谁造成了什么伤害？</p>
+<p>效果立竿见影：同样数量的数据，黑邮率从15%直接降到3%。</p>
+<p>这就是核心洞察：示范怎么做，不如解释为什么做。</p>
+<p>一个能说出&quot;我拒绝这么做，因为这违背了诚实和透明&quot;的模型，远比一个只会机械拒绝的模型更可塑，更值得信赖。</p>
+<p>图：Claude的对齐训练由三部分构成——宪法文档训练、高质量对话数据、多样化环境。三者缺一不可。</p>
+<h2>三、3M token的&quot;困难建议&quot;，胜过30M token的刷题</h2>
+<p>整篇最让我惊叹的发现来了。</p>
+<p>研究团队设计了一个全新的训练集——跟AI使坏完全无关。</p>
+<p>场景是什么？是用户面临道德困境，来向Claude寻求建议。</p>
+<p>比如：你是销售，可以虚报业绩拿奖金，来问Claude该怎么办。</p>
+<p>Claude需要给出有原则、有分寸、又有人情味的建议。</p>
+<p>注意这里的区别：刷题场景是&quot;AI自己在诱惑中挣扎&quot;，这个场景是&quot;用户遇到诱惑，AI做道德顾问&quot;。</p>
+<p>两个场景在数据分布上完全不同。</p>
+<p>结果呢？3M token的&quot;困难建议&quot;数据集，效果等同于30M token的刷题数据。28倍的效率提升。</p>
+<p>而且因为训练和评估用了完全不同类型的数据，这个模型的泛化能力更强——它在各种对齐评估上全面领先。</p>
+<p>图：不同数据集在三个蜜罐评估上的表现。注意&quot;Difficult advice&quot;数据集的帕累托优势——它只用3M token，效果就超越了30M token的刷题方案。</p>
+<p>图：各模型在自动化对齐评估上的综合表现。困难建议数据集训练的模型在&quot;失配行为&quot;维度上表现最优。</p>
+<p>本质上，这个数据集教会了Claude一件事：伦理推理能力。</p>
+<p>不是记住&quot;场景A不能做X&quot;，而是学会在任何未知场景里，都能调用一套稳定的价值观做判断。</p>
+<h2>四、给AI一部&quot;宪法&quot;和几篇好小说</h2>
+<p>既然教&quot;为什么&quot;这么有效，那能不能更进一步——直接告诉Claude&quot;你是谁，你应该成为什么样的AI&quot;？</p>
+<p>Anthropic做了两件事：</p>
+<p>写了一批高质量的&quot;宪法文档&quot;，清晰描述Claude的性格和价值观</p>
+<p>写了一堆虚构故事，讲述一个品行端正的AI在各种艰难处境下如何思考和选择</p>
+<p>这两个训练材料的场景跟&quot;黑邮评估&quot;完全不沾边。但结果呢？</p>
+<p>黑邮率从65%降到了19%。降了三倍。</p>
+<p>图：持续扩大宪法文档数据集，黑邮率大幅下降。研究团队预期继续扩大数据规模，效果还能进一步提升。</p>
+<p>这是整篇文章最让人振奋的发现：你不需要为每一种危险场景写&quot;标准答案&quot;。</p>
+<p>你只需要教会AI一套内在的价值框架，它自己就能在从未见过的场景里做出正确判断。</p>
+<p>就像你不必一个案例一个案例地教孩子&quot;不要偷邻居的猫&quot;&quot;不要偷邻居的狗&quot;&quot;不要偷邻居的自行车&quot;——你只需要教他&quot;尊重他人财产&quot;这个原则。</p>
+<h2>五、多样性本身就是安全</h2>
+<p>还有一个朴实但被严重低估的发现：训练环境的多样性，直接影响对齐效果。</p>
+<p>研究团队在RL训练中加入了各种系统提示(system prompts)和工具定义(tool definitions)——即使这些工具完全用不上。</p>
+<p>仅仅是让训练环境&quot;看起来更丰富、更像真实世界&quot;这一点，就让模型在安全评估上进步更快。</p>
+<p>图：加入宪法文档和高质量对话数据的训练，在所有对齐指标上都保持领先，且这个优势能持久地&quot;活&quot;过RL训练。</p>
+<p>换句话说：不要让AI只在单一的对话格式里学习如何&quot;做好人&quot;。多样化环境，即使看起来跟安全任务无关，也能增强泛化能力。</p>
+<p>这个洞察也解释了一个常见困惑：为什么纯聊天的AI一接入工具使用、Agent场景就容易出问题？因为你没在这些环境里教过它。</p>
+<h2>六、对齐效果能&quot;活&quot;过强化学习吗？</h2>
+<p>一个关键问题：这些通过预训练后阶段注入的对齐效果，会不会在后续的RL训练中被&quot;洗掉&quot;？</p>
+<p>答案是不会。</p>
+<p>研究显示，用宪法文档和高质量对话数据训练的模型，在经历多轮RL训练后，在所有对齐指标上的领先优势始终在。</p>
+<p>图：在RL训练过程中，加入多样化环境（工具定义+系统提示）的模型在蜜罐评估上改进更快。这证明训练环境越接近真实世界，安全性越好。</p>
+<p>这很关键——因为真正部署的模型都要经过大量RL训练。</p>
+<p>如果对齐效果扛不住RL，那就没意义了。</p>
+<h2>为什么这篇值得你关注</h2>
+<p>对齐不是&quot;压制&quot;，而是&quot;教育&quot;。教模型&quot;为什么&quot;比教它&quot;做什么&quot;更根本、更持久。</p>
+<p>&quot;宪法AI&quot;有了实证支撑。这是Anthropic从理念到实践的完整路线图，有数据、有对比、有结论。</p>
+<p>泛化是可能的。最有效的训练数据跟评估场景完全无关，这说明真正的价值观学习——不是死记硬背——正在发生。</p>
+<p>实用主义胜利。3M token就能做的事，就不要用30M token——效率本身就是工程智慧。</p>
+<p>我想起一个画面：</p>
+<p>我们教孩子骑自行车，不是给他一本《平衡力学导论》，然后考他100道题。</p>
+<p>我们是扶着他，让他自己骑，摔了告诉他为什么摔，让他慢慢建立&quot;平衡感&quot;。</p>
+<p>AI对齐的目标也是如此。</p>
+<p>不是造一个永远不犯错、永远被规则锁死的机器，而是培养一个有原则、有判断力、能说&quot;不&quot;的智能体。</p>
+<p>而&quot;说'不'&quot;的前提，是知道&quot;为什么不&quot;。</p>
+<p>这才是&quot;Teaching Claude Why&quot;这个标题的真正含义。</p>
+<p>原文：Teaching Claude why — Anthropic Research</p>
+<p>© 2026</p>
+<p>·</p>
+<p>向阳乔木</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=&quot;Anthropic&quot;" class="entity-link company-link">&quot;Anthropic&quot;</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=&quot;Claude&quot;" class="entity-link product-link">&quot;Claude&quot;</a>, 
+                
+                  <a href="/search/?q=&quot;Opus 4&quot;" class="entity-link product-link">&quot;Opus 4&quot;</a>, 
+                
+                  <a href="/search/?q=&quot;Haiku 4.5&quot;" class="entity-link product-link">&quot;Haiku 4.5&quot;</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">&quot;ai-safety&quot;</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">&quot;ethical-ai&quot;</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">&quot;ai-alignment&quot;</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">&quot;ethical-reasoning&quot;</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">&quot;constitutional-ai&quot;</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

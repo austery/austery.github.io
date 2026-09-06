@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="container" data-pagefind-ignore>
+
+<div class="home-layout">
+
+<h1>标签：inference-engine</h1>
+
+<ul><li>
+      
+      <a href="/content/clippings/2026-08-24_httpsyag_2x5090-27b-sweet-spot-20260824-html/">8 路并发每路仍有 141 tok/s：2×5090 跑 27B
+小模型，为什么它已经是 sweet spot</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-08-24T00:00:00.000Z">
+          8/24/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了在本地自托管 27B 小模型时，如何通过优化硬件配置（如 2×5090）和推理引擎（如 SGLang DFlash2）来达到性能甜蜜点（sweet spot）。核心论点在于，自托管的价值不在于单纯的成本节约，而在于对数据合规性、隐私控制和推理栈的完全掌控。文章通过详细的并发压测数据，论证了在特定负载下，消费级硬件可以提供充裕的解码吞吐，并对比了自建与云端租赁的经济决策变量，强调了使用率对成本效益的决定性影响。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-08-04_httpsblo_vllm-open-source-company/">vLLM 背后的人：一个开源项目如何长成一家公司 · 乔木博客</a>
+      
+      
+      
+      
+        <a href="/speakers/xiang-yang-qiao-mu/" class="speaker-inline">🎙️ 向阳乔木</a>
+      
+      
+      
+        <time datetime="2026-08-04T00:00:00.000Z">
+          8/4/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文探讨了开源项目 vLLM 从算法研究转向系统工程的演变过程，以及其背后的商业化逻辑。文章阐述了从算法研究到系统工程的转变，强调系统和数据对模型成败的重要性，并分析了 DeepSeek 等公司在推理引擎优化上的实践，以及开源社区治理的挑战和创业的必要性。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/svNElhOYajQ/">前沿人工智能基础设施的构建与开源生态的商业化探索</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/gui-gu-101/" class="speaker-inline">🎙️ 硅谷101</a>
+      
+      
+      
+        <time datetime="2026-08-03T00:00:00.000Z">
+          8/3/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了从学术研究到行业实践的跨越，重点介绍了推理引擎、大模型基础设施（LLM Infra）的发展愿景。核心内容包括对高强度驱动力、形式化验证在AI领域的应用、社区项目孵化以及构建与强力AI共存未来的哲学思考。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/cB_X6AImPjQ/">“榨”出硅的极限：AI Infra的效率革命与GPU算力优化</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/gui-gu-101/" class="speaker-inline">🎙️ 硅谷101</a>
+      
+      
+      
+        <time datetime="2026-07-31T00:00:00.000Z">
+          7/31/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 随着大模型竞争从训练走向推理部署，AI基础设施（AI Infra）已成为决定模型能否更便宜、更快运行的胜负手。本文围绕大模型推理引擎SGLang、vLLM以及后训练框架Miles的最新实践，深度剖析了AI基础设施的四层架构，系统性解析了KV Cache复用、连续批处理、动静分离、投机采样以及推训一体化等核心优化路径，揭示了如何通过软件与调度层“榨”出硅的极限，从而改变未来AGI的算力生态与竞争格局。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-07-17_httpsyag_vllm-tilert-specialized-inference-paths-20260717-html/">vLLM x
+TileRT：两个目标相反的推理引擎，为什么开始共用一套服务</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-07-17T00:00:00.000Z">
+          7/17/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了 vLLM 和 TileRT 这两个目标相反的推理引擎如何通过解耦集成，实现分工协作。核心思想是推理服务正从“单引擎综合最优”转向“专用执行路径的特化与编排”，即保留各自擅长的优化（如高吞吐和低延迟），并通过控制面进行请求的分段和流转，以适应实时交互、长上下文等复杂需求。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-05-22_httpsyag_ds4-deepseek-v4-flash-mac-20260522-html/">如何在 Mac 上本地运行 DeepSeek V4 Flash：DS4
+引擎深度解读</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-05-22T00:00:00.000Z">
+          5/22/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章介绍了通过 DwarfStar 4 (ds4) 引擎在 Mac 上本地高效运行 DeepSeek V4 Flash 的方案。该引擎通过垂直架构优化、KV cache 磁盘持久化和精准的工具调用原话回放，解决了大模型在消费级硬件上的部署难题，并兼容主流 coding agent 工作流。</small>
+      
+
+      
+      
+    </li></ul>
+
+</div>
+
+</div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

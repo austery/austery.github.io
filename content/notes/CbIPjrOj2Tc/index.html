@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>语音语言模型发展史：从早期探索到智能对话的演进</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="语音语言模型发展史：从早期探索到智能对话的演进" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">语音语言模型发展史：从早期探索到智能对话的演进</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Hung-yi Lee</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2025-12-22
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/work-career/">work-career</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/hung-yi-lee/">Hung-yi Lee</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=CbIPjrOj2Tc" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2025-12-22
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本讲座深入探讨了语音语言模型（SLM）的发展历程，从早期的语音识别技术、无监督学习、自监督表示模型，到现代端到端对话式AI的挑战与突破。讲者结合自身团队的研究经验，详细介绍了SLM的定义、不同模式、与文本模型的对比，以及未来在推理、全双工交互等方面的研究方向。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>大家好，这是本学期最后一堂课。今天我将跟大家分享<strong>语音语言模型</strong>（Speech Language Model: 一种能处理语音输入并生成语音输出的模型）的发展史。在过去的几堂课里，我们花了很多精力讲解了各式各样的生成式AI技术，其中多数基本观念都已涵盖。剩下的就靠大家自己深入研究了。今天这堂课，我将以第一人称视角，讲述语音语言模型这项技术这些年来的发展历程。</p>
+<p>在开始之前，有一个免责声明：本课程并非完整介绍语音语言模型的技术，而是以我及我的团队的第一人称视角，讲述我们所看到的语音语言模型技术发展。所以这不是一个完整的概述。希望大家能通过这堂课，了解一线研究人员是如何看待一个技术的演进的。在某个时间点，受限于概念、资源和想法的局限，我们是如何看待一个问题，以及后来发生了怎样的转变。</p>
+<h3>语音语言模型：定义与模式</h3>
+<p>在本课程中，多数时候我们讲到语言模型，指的是<strong>文字模型</strong>，即输入文字输出文字。而<strong>语音语言模型</strong>（Speech Language Model），顾名思义，是输入语音输出语音。如果一个模型能做到输入语音输出语音，我们就可以称之为语音语言模型。如今，你可能已经在手机上使用过许多语音语言模型，例如<strong>ChatGPT Voice Mode</strong>（ChatGPT语音模式: OpenAI开发的、支持语音交互的ChatGPT功能）和<strong>Gemini Live</strong>（Gemini Live: Google开发的、支持语音交互的Gemini功能）。除了<strong>ChatGPT</strong>和<strong>Gemini</strong>，还有许多其他知名的语音语言模型。</p>
+<p>然而，语音语言模型有多种不同的模式。当你看到文献中提到“语音语言模型”时，需要仔细辨别其具体功能。我大致将其分为两种模式：<strong>对话模式</strong>（Dialog Mode: 语音语言模型将语音输入视为对话，并给出相应语音回应的模式）和<strong>命令模式</strong>（Command Mode: 语音语言模型根据指令处理语音输入并给出特定类型回应的模式）。在对话模式下，你对模型说“How are you”，它会回应“I'm fine”。但在命令模式下，模型除了语音输入，还会有一个<strong>指令</strong>（Instruction）。例如，如果指令是“Identify the emotion”，模型会识别说话人的情绪，回应“happy”或“angry”；如果指令是“Translate the input”，模型会将“How are you”翻译成“你好”。</p>
+<p>在今天的课程中，我们主要讨论对话模式。目前，文献中“<strong>Speech Language Model</strong>”这个词汇使用非常混乱，不同论文指涉的技术可能大相径庭。有人尝试用不同名称区分，例如将命令模式的模型称为<strong>Speech Aware Language Model</strong>（语音感知语言模型: 一种能理解语音输入的语言模型）。这种用词的混乱，恰恰说明这是一项非常新的技术，大家仍在摸索阶段。</p>
+<h3>语音语言模型与语音合成（TTS）的区别</h3>
+<p>需要强调的是，我们讨论的语音语言模型并非<strong>语音合成</strong>（TTS: Text-to-Speech: 文本转语音技术）。当你对一个对话模式的语音语言模型说“How are you”时，它会回答“I'm fine”，而不是重复你的话。而TTS模型是输入文字（如“How are you”），然后将其朗读出来。然而，很多TTS模型也自称是Speech Language Model，因为它们背后也使用<strong>语音Token</strong>（Speech Token: 语音信号经过编码后形成的离散单元）进行<strong>Token接龙</strong>（Token Generation: 模型根据前序Token预测并生成下一个Token的过程），技术上与语音语言模型有相似之处。这进一步加剧了Speech Language Model文献的混乱。</p>
+<h3>端到端与级联方案的优劣</h3>
+<p>要构建一个语音语言模型，使其能输入语音并给出回应，不一定非要采用<strong>端到端</strong>（End-to-End: 指模型直接从原始输入到最终输出，中间不经过人工干预的模块划分）的方法。今天我们主要探讨端到端方法，即模型直接以声音为输入，以声音为输出。但你也可以轻易想到非端到端（<strong>Cascade Solution</strong>：级联方案: 指将多个独立模型（如语音识别、文本语言模型、语音合成）串联起来完成任务的方法）的做法。例如，将语音识别系统、文本语言模型和语音合成系统串联起来，也能实现语音到语音的交互。</p>
+<p>事实上，今天多数号称语音输入语音输出的系统，往往采用<strong>级联方案</strong>。例如，<strong>台大图书馆</strong>门口的数字人，就是将语音识别、文本模型和语音合成串联起来的。另一种思考方式是<strong>Agentic Solution</strong>，即以文本模型为核心，操控各种语音工具（如语音识别、语音合成、语音转换、<strong>Speech Enhancement</strong>语音增强等），让文本模型根据语音输入自行决定如何处理。<strong>AudioGPT</strong>和<strong>Speech Copilot</strong>是这类方案的例子。</p>
+<p>非端到端级联方案的巨大优势是<strong>易于实现</strong>。语音合成、语音识别和大型文本语言模型都有现成的API，只需调用即可快速构建语音聊天机器人，无需大量技术背景或模型训练。然而，它也有缺点：首先是<strong>巨大的信息损失</strong>（Information Loss: 指在数据处理过程中，原始信息被丢弃或简化，导致部分信息无法恢复）。当语音信号只转换为文字时，就忽略了文字以外的丰富信息，如语者身份、语调、情绪、环境信息等。其次是<strong>延迟</strong>（Latency: 指从发出请求到接收到响应之间的时间间隔）。串联多个模型通常需要等待前一个模型完成才能传递给下一个，这使得实现实时交互更困难，需要大量工程投入。</p>
+<p>相比之下，<strong>端到端模型</strong>的优势在于能够利用语音中所有的信息，且部署时延迟较低，可实现即时响应。但其弱点在于，这仍是<strong>尚待研发的技术</strong>，目前可能没有特别成熟的端到端解决方案能处理所有语音到语音的问题。在2025年这个时间点，通常级联模型才是最强的。因此，若要快速构建语音对话机器人，级联模型能更快给出好结果。但端到端模型具有<strong>更高的能力上限</strong>，我们对AI的最终期望是它能理解声音的所有面向，而非仅限于语音识别。</p>
+<h3>语音识别技术演进：从级联到端到端</h3>
+<p>你可能会好奇，这种目前表现较差的端到端模型是否缺乏研究价值？我们可以回顾一下历史。今天的语音识别领域，只要接触过的人，都一定听说过<strong>Whisper</strong>（Whisper: OpenAI开发的一种强大的端到端语音识别模型）。它是一个巨大的<strong>Transformer</strong>（Transformer: 一种基于自注意力机制的深度学习模型架构，广泛应用于自然语言处理）神经网络，直接以声音信号为输入，输出文字，非常简洁。</p>
+<p>然而，这种端到端解决方案并非一直如此。几年前，在端到端模型尚未统治整个语音领域时，人们更多采用<strong>级联模型</strong>。语音识别被视为一个复杂问题，难以通过一个巨大的神经网络一步到位解决，因此需要拆解成多个阶段，通常包括<strong>声学模型</strong>（Acoustic Model: 语音识别系统中用于将声学特征映射到语音单元（如音素）的模型）、<strong>词典</strong>（Lexicon: 语音识别系统中存储词汇及其对应发音（音素序列）的数据库）和<strong>语言模型</strong>（Language Model: 预测文本序列中下一个词或字符概率的模型）。很长一段时间，人们认为语音识别必须通过级联模型才能解决，端到端方法是不可行的。</p>
+<p>很多人想象中，端到端模型的崛起是某位聪明人获得了巨大算力，训练后一飞冲天，击败所有级联模型。但历史并非如此。我记得第一篇真正意义上的端到端语音识别系统发表在<strong>Interspeech 2015</strong>（Interspeech 2015: 国际语音通信协会（ISCA）举办的国际语音领域顶级会议），距今整整十年。在此之前，<strong>NeurIPS 2014</strong>（NeurIPS 2014: 神经信息处理系统大会，机器学习领域的顶级会议）也有一篇端到端模型，但它识别的是<strong>音素</strong>（Phoneme: 语言中最小的、能区分意义的语音单位），而非真正的文字。</p>
+<p>我清晰记得，<strong>Interspeech 2015</strong>的那篇论文是一个海报展示。我站在海报前，觉得它“太潮了”，一群人试图用一个巨大的网络，直接从声音信号输出文字，这真的能做到吗？如果单看2015年那篇论文的结果，你会觉得这简直是天方夜谭。例如，他们在<strong>Switchboard</strong>（Switchboard: 一个大型的电话对话语料库，常用于语音识别基准测试）这个<strong>基准语料库</strong>（Benchmark Corpus: 用于评估和比较不同模型性能的标准数据集）上，最好的错误率是<strong>38.8%</strong>。你可能会觉得还不错，但要知道，在2014年，Switchboard上正常的错误率已经可以做到**10.4%**了。所以，近40%的错误率简直是“做坏了”，根本不好意思说系统被成功训练。</p>
+<p>然而，这是十年前的情况。当时，端到端系统刚出现时，很难说它有一天能取代级联系统。多数人仍认为级联才是好的语音识别方式。但经过多代研究人员的努力，这些端到端模型逐渐变得越来越强，从“训练失败”到与级联模型仅差几个百分点的错误率，再到最终<strong>主导整个语音社区</strong>。这个过程花费了将近十年。因此，一项新技术刚出现时，它不一定是表现最好的，需要长时间、多团队的努力，才能成为今天我们看到的样子。</p>
+<h3>深度学习在语音识别中的早期应用</h3>
+<p>我们乘坐时光机回到2015年，如果说2016年<strong>AlphaGo</strong>的出现是<strong>寒武纪</strong>（Cambrian: 此处指AI领域技术大爆发的时代）的话，那我们还在寒武纪之前。现在，让我们再次回溯到更早。在级联时代，2015年，语音识别其实已经<strong>基于深度学习</strong>（Deep Learning Based: 指使用深度神经网络进行模型训练和任务处理的方法），只是级联中的每个模块都是深度学习的。</p>
+<p>那么，人们何时开始将深度学习技术应用于语音识别呢？据我所知，最早将深度学习引入语音识别的论文之一，应该是发表在<strong>ICASSP 2010</strong>（ICASSP 2010: 国际声学、语音与信号处理会议，IEEE举办的信号处理领域顶级会议）的这篇。作者是鼎鼎大名的<strong>Hinton</strong>（Geoffrey Hinton: 深度学习领域的先驱之一，被称为“深度学习教父”），第一作者是多伦多大学的学生<strong>Abdel-rahman Mohamed</strong>（Abdel-rahman Mohamed: 深度学习在语音识别领域应用的早期研究者）。他们使用<strong>受限玻尔兹曼机</strong>（Restricted Boltzmann Machine: 一种生成式随机神经网络，是早期深度学习模型之一）进行<strong>音素识别</strong>（Phone Recognition: 语音识别任务中识别出语音对应的音素序列），并未实现真正的大词汇量语音识别。</p>
+<p>我当时是一名博士生，参加了ICASSP 2010。很多“农场文”会说Hinton将深度学习应用于语音识别后，所有人都“跪了”，但这并非事实。真实情况是，在ICASSP 2010，这篇论文并未引起太多关注。当时人们认为更关键的技术是<strong>隐马尔可夫模型</strong>（Hidden Markov Model: 一种统计模型，常用于语音识别等序列数据建模）的变体——<strong>子空间高斯混合模型</strong>（Subspace GMM: 隐马尔可夫模型的一种变体，用于语音识别）。</p>
+<p>在ICASSP 2010这个“开天辟地”的时代，深度学习在语音识别上的表现并不出色。他们的论文中提到，在<strong>TIMIT</strong>（TIMIT: 一个经典的语音语料库，常用于音素识别和语音识别研究）语料库上，音素识别的错误率是<strong>26.7%</strong>。论文中诚实地引用了其他研究，例如HMM能做到<strong>24.8%</strong>，所以他们并非<strong>SOTA</strong>（State of the Art: 某个领域或任务中当前最佳的技术或模型表现）。而且，他们比较的都是单音素模型，并未采用能大幅降低错误率的<strong>三音素</strong>（Triphone）技术。</p>
+<p>因此，在深度学习刚兴起的那段时间，不断有人质疑其效果，认为它没有用。这不是深度学习一出现就立刻被所有人接受，而是一个缓慢演变的过程。人们开始拥护深度学习，也有人认为它不可行，各种争论不断。直到后来，深度学习的论文逐渐增多，才最终压倒了非深度学习的流派。历史的演进并非一项技术一出现就“轰动武林，惊动万教”，通常它以一种<strong>不起眼的方式</strong>出现在世人面前。</p>
+<h3>技术发展的真实曲线与潜力评估</h3>
+<p>一般人想象中的技术发展曲线是：一项技术（如<strong>隐马尔可夫模型</strong>）发展到瓶颈，聪明人引入新技术（如<strong>深度学习</strong>），然后所有人都转向新方法；接着新方法又遇到瓶颈，再引入更先进的技术（如<strong>端到端</strong>），再次引发变革。然而，真实的<strong>发展往往并非如此</strong>。你之所以在报章杂志上觉得这些方法一出现就统治了世界，是因为你注意到它们时，它们往往已被吹捧。当新技术超越旧技术，并被社会大众开始追捧时，你才意识到它们的存在，从而误以为它们是“一鸣惊人”。</p>
+<p>但对于站在第一线的研究人员而言，我在前两波技术变革中看到的都是：这些技术一开始都以<strong>非常不起眼的状态存在</strong>。它们看起来与<strong>SOTA</strong>相去甚远，让人怀疑是否有希望。然后，经过多代人的努力，才逐渐发展成今天的样子。因此，回顾历史，我的感想是，除了关注一项技术当前的表现，我们更应关注它的<strong>上限</strong>。一个现在表现不佳的方法，不代表它未来没有希望；一个现在表现出色的方法，也不代表它能一直发展下去。关键在于其上限。一个表现差但上限很高的方法，也许是潜力股；一个现在看似主流的方法，也许其发展已走到极限，人们所做的只是“奇技淫巧”，不再值得深入研究。</p>
+<p>这让我想起人类的演化。哺乳类并非在恐龙灭绝后才出现，它们在中生代就与恐龙共存，只是当时它们像老鼠一样，例如人类祖先<strong>摩根齿兽</strong>。这些小动物在恐龙的阴影下生存，但它们拥有恐龙没有的优势，如恒温和哺乳。最终，它们挺过了白垩纪末大灭绝，演化成了现代智人。许多技术也是如此，有些现在看似平平无奇，但可能蕴藏着他人没有的潜力，最终能独霸一方。</p>
+<h3>早期语音内容检索研究</h3>
+<p>接下来，我们来讲述语音语言模型的故事，从<strong>序章</strong>开始，讲述在语音语言模型概念出现之前，我们为之做了哪些准备。一开始，我并不知道语音语言模型会问世。这要从我的博士论文讲起。我于<strong>2012年</strong>获得博士学位，博士论文研究的是<strong>Spoken Content Retrieval</strong>（语音内容检索: 在大量语音数据中搜索特定内容的技术）。你可以想象，YouTube上有海量语音信号，我们能否直接搜索这些声音信号的内容？</p>
+<p>毕业后，我先后在中研院和<strong>MIT</strong>各待了一年，于<strong>2014年</strong>回到<strong>台大</strong>任教。与多数新老师一样，我刚任教时，研究题目往往是博士论文的延续，因为这是最容易继续进行的研究方向。我当时也继续研究<strong>Spoken Content Retrieval</strong>。当时我思考的问题是：除了用文字搜索语音，能否直接用语音搜索语音？例如，你对机器说一个词汇，比如“ICASSP”，即使语音识别系统无法正确识别，甚至该词不在词典中，我们能否直接在<strong>声音信号层面</strong>，将输入的语音问题与数据库中的声音信号进行比对，找出关键词出现的地方？</p>
+<p>在当时的框架下，遇到的一个难点是，在信号层面比对两段声音信号的相似度非常耗时。那时有一个算法叫<strong>DTW</strong>（Dynamic Time Warping: 动态时间规整，一种衡量两个时间序列相似度的方法，常用于语音匹配）。DTW是一个耗费算力和时间的算法，当数据库非常大时，很难实现实时搜索。因此，我们需要更好的语音搜索方法。</p>
+<h3>无监督语音分割与表示：Audio Word Vector</h3>
+<p>当时我有一个想法：我们先将数据库中的声音信号切成一个个小段，例如一个词汇切成一段。然后，每一小段声音信号通过<strong>Audio Word Vector</strong>（语音词向量: 将一段语音信号编码成固定维度的向量表示）的方式，变成一个固定维度的向量。这样，一段原本复杂且长短不一的声音信号，就被简化为一个向量。当有人输入一个<strong>Spoken Query</strong>时，这个Query也通过Audio Word Vector技术转换为一个向量。接下来，我们只需比较这个Query向量与数据库中每小段声音信号向量之间的相似度，即可得到搜索结果。向量之间的相似度比对速度非常快，有多种加速方法，无论数据集多大，都能在<strong>Constant Time</strong>内通过<strong>Approximate</strong>方式找出最近的向量。因此，将一段声音信号转换为向量具有巨大优势。</p>
+<p>那么，如何将一段声音信号转换为向量呢？当时我构思了一个名为<strong>Audio Word Vector</strong>的技术。实现这个网络的同学是专题生<strong>鍾毓安</strong>（鍾毓安: 语音领域研究者）。当时还没有<strong>Transformer</strong>，我们使用的是<strong>LSTM</strong>（Long Short-Term Memory: 长短期记忆网络，一种循环神经网络，擅长处理序列数据）。一个单层LSTM将一段声音信号读入后，输出一个向量。接着，另一个LSTM将这个向量作为输入，试图还原原始的声音信号。这两个LSTM共同训练，目标是使输入和输出尽可能接近。这与我们上周讲到的<strong>Tokenization</strong>（分词/Token化: 将连续的文本或语音数据分割成离散的单元（Token）的过程）和<strong>Detokenization</strong>（反分词/反Token化: 将离散的Token序列还原成连续的文本或语音数据的过程）概念几乎一致。这篇论文发表在<strong>2016年</strong>的<strong>Interspeech</strong>，即<strong>寒武纪时代</strong>的论文。据我所知，在语音领域，当时还没有人做过类似的事情。过去有一些尝试将声音信号转换为向量，但都是<strong>有监督</strong>（Supervised）的，需要标注数据。在这篇文章之前，应该没有人尝试过<strong>无监督</strong>（Unsupervised: 指在没有人工标注数据的情况下，模型通过学习数据自身的结构和模式进行训练）的方式。总之，我们训练Audio Word Vector，使其能将每段声音信号都转换为一个向量，从而加快搜索速度。</p>
+<h3>语音分割的挑战与Segmental Audio Word Vector</h3>
+<p>然而，这里遇到了一个问题：我们似乎假设声音已被切成一段一段的。但如何进行声音分割呢？尤其我们期望每段声音对应一个固定单位，最好是一个词，至少是一个音素。但声音信号中并没有像文字中标点符号那样明确的<strong>边界</strong>（Boundary）。词汇之间没有分隔，如何自动将声音信号切成一个个<strong>语音片段</strong>（Audio Segment: 语音信号中被分割出来的一小段，通常对应一个词汇或音素）呢？在2016年寒武纪时代，当研究者问我这个问题时，我总是说：“先别问我，我来想想，过几年我就解决了。”</p>
+<p>后来，我们进行了一系列研究，试图在不使用语音识别的情况下，自动从声音信号中找出词汇间的边界。因为我们要做的是<strong>无监督</strong>的，所以机器必须在没有任何标注数据的情况下，通过听大量声音信号，自动识别哪些声音信号组合成常见单位（如音素或词汇）。<strong>王育軒</strong>（王育軒: 语音领域研究者）同学在<strong>2017年</strong>发表的一篇论文中，利用<strong>无监督</strong>方法训练的<strong>LSTM</strong>，通过其内部<strong>门控机制</strong>（Gate: 神经网络中控制信息流动的结构）来寻找边界。这个网络的训练有点像语言模型，它输入声音信号，预测未来的或被掩盖的声音信号。</p>
+<p>后来，我想到一个新方法，可以将分割<strong>语音片段</strong>和将<strong>语音片段</strong>转换为向量这两个过程<strong>联合训练</strong>。这个方法被命名为<strong>Segmental Audio Word Vector</strong>（分段式语音词向量: 一种同时进行语音分割和词向量生成的技术），即在原有<strong>Audio Word Vector</strong>概念上增加了<strong>分段</strong>（Segmental）的概念。这篇论文于<strong>2018年</strong>发表，同样由<strong>王育軒</strong>同学完成。</p>
+<p><strong>Segmental Audio Word Vector</strong>的工作原理是：一个<strong>LSTM编码器</strong>（LSTM Encoder: LSTM网络中负责将输入序列编码为隐藏状态表示的部分）每次读取一小段声音信号（每个方格代表一个0.01秒的<strong>帧</strong>）。当它识别出这是一个频繁出现的模式时，就认为这是一个<strong>语音片段</strong>，并输出一个向量（<strong>Embedding</strong>或<strong>Representation</strong>）来代表这个<strong>语音片段</strong>的信息。然后，LSTM会清空记忆，重新读取下一段声音信号，重复此过程。通过这种方式，机器一方面自行决定<strong>语音片段</strong>的边界，另一方面也自行决定如何用向量描述每个<strong>语音片段</strong>。</p>
+<p>这个模型如何训练呢？它有一个<strong>LSTM解码器</strong>（LSTM Decoder: LSTM网络中负责从隐藏状态生成输出序列的部分），每次读取一个向量，并试图还原该向量对应的原始<strong>语音片段</strong>。训练目标是使输入的整句话与输出的整句话尽可能接近。在训练过程中，如何将一段落转换为向量，以及如何确定段落边界，都由模型自己决定。这是一个<strong>端到端</strong>学习的网络架构。</p>
+<p>然而，仅仅让输入和输出尽可能接近是不够的。因为如果这是唯一的训练目标，网络可能会采取“作弊”的方式：将每个<strong>帧</strong>都视为一个<strong>语音片段</strong>，这样还原最容易。因此，需要一个额外的限制：除了输入输出相似度高，机器选择的<strong>语音片段</strong>数量要尽可能少。模型必须学会用最少量的<strong>语音片段</strong>来表示一段声音信号，并将其还原。所以，LSTM在学习时有两个目标：一是还原，二是使用最少的向量表示声音信号。</p>
+<h3>无监督语音识别的突破</h3>
+<p>有了<strong>Segmental Audio Word Vector</strong>技术后，我们就可以一边分割<strong>语音片段</strong>，一边将其转换为向量，且整个训练过程是<strong>无监督</strong>的，不依赖标注数据。除了将其用于搜索，我有一天突然想到，能否直接利用这些向量进行<strong>无监督语音识别</strong>呢？假设这些向量与音素信息非常接近，因为我们发现<strong>Audio Word Vector</strong>能切割出音素层级的<strong>语音片段</strong>。如果每个<strong>语音片段</strong>的向量能直接转换为音素，再结合<strong>词典</strong>和<strong>语言模型</strong>，就能实现语音识别，而且我们希望这个转换过程也是<strong>无监督</strong>的。</p>
+<p>当时的想法是：我们有一个非常简单的<strong>线性模型</strong>（Linear Model），它将这些向量读入并转换为<strong>音素序列</strong>（Phoneme Sequence）。如何训练这个小模型呢？我们采用了<strong>GAN</strong>（Generative Adversarial Network: 生成对抗网络，一种通过生成器和判别器对抗训练的深度学习模型）的思想。假设我们有一大堆文字，这些文字与语音无需成对。我们将这些文字通过查字典转换为<strong>音素序列</strong>。然后，训练一个<strong>判别器</strong>（Discriminator: GAN中负责判断数据真伪的部分），其任务是分辨一个<strong>音素序列</strong>是由语音识别系统生成的，还是真实的<strong>音素序列</strong>。而<strong>生成器</strong>（Generator: GAN中负责生成新数据的部分）则试图欺骗判别器。判别器和生成器<strong>迭代交替训练</strong>，这就是GAN的概念。整个训练过程是<strong>无监督</strong>的，不需要任何标注数据。我们完全不需要声音及其对应的文字，就能让模型学会将声音信号转换为<strong>音素序列</strong>，从而实现语音识别。</p>
+<p>我们将这个结果发表在<strong>2018年</strong>的<strong>Interspeech</strong>。如果说2016年是寒武纪，那2018年我们可以说是进入了<strong>奥陶纪</strong>（Ordovician: 此处指AI领域技术发展的早期阶段）。在这个远古时代，我们实现了<strong>无监督语音识别</strong>，这应该是世界上第一个成功实现<strong>无监督语音识别</strong>的结果。在2018年，在<strong>TIMIT</strong>数据集上，我们的<strong>音素错误率</strong>（Phone Error Rate: 衡量音素识别系统性能的指标，错误率越低越好）达到了<strong>60%多</strong>。请注意，这是错误率，不是正确率，意味着错的比对的多。但我们第一次看到这个结果时，已经非常振奋，因为机器在完全没有任何标注数据的情况下，确实学到了东西。60%多的错误率并非随机猜测。</p>
+<p>几个月后，<strong>腾讯</strong>也发表了<strong>无监督语音识别</strong>，错误率降至40%多。后来，我们实验室的<strong>陳冠宇</strong>（陳冠宇: 语音领域研究者）同学将错误率进一步压低到30%多。30%多的错误率是什么水平呢？回顾历史，这大概是人们刚开始使用<strong>隐马尔可夫模型</strong>时的水平。当时我们已经觉得非常了不起，因为这些有标注的模型训练的，而我们在完全没有标注数据的情况下，已经能与最差的有标注模型（即最差的<strong>有监督模型</strong>）达到相似的结果，与三四十年前的<strong>有监督模型</strong>不相上下。在2019年，我们甚至觉得这可能就是<strong>无监督学习</strong>的极限了，毕竟没有任何人教它，它是无师自通的。我当时以为我有生之年都不会再看到更多进步了。</p>
+<h3>自监督语音表示模型：Mockingjay、TERA、APC</h3>
+<p>然而，历史仍在不断推进。<strong>2018年</strong>，在<strong>自然语言处理</strong>（NLP）领域，<strong>BERT</strong>（Bidirectional Encoder Representations from Transformers: 一种基于Transformer的双向编码器，广泛应用于自然语言处理）等早期文本模型问世。我当时想，我们能否在语音领域也做一个语音版的<strong>BERT</strong>呢？于是，<strong>劉廷偉</strong>（劉廷偉: 语音领域研究者）同学便着手开发了语音版的<strong>BERT</strong>。</p>
+<p>当时我们的计算资源非常有限，他用一张<strong>NVIDIA GeForce GTX 1080</strong>显卡，训练了一周，训练出了一个语音版的<strong>BERT</strong>。其概念与文本版<strong>BERT</strong>非常相似：取一段声音信号，将其中的一些地方<strong>掩盖</strong>（Mask），然后训练一个<strong>Transformer</strong>。这可能是第一个<strong>自监督</strong>（Self-Supervised: 指模型利用数据自身生成监督信号进行训练，无需人工标注）的<strong>Transformer</strong>语音模型。据我所知，在此之前，应该没有人用<strong>Transformer</strong>来训练这种语音<strong>语言模型</strong>。总之，这个<strong>Transformer</strong>以声音信号为输入，输出一排向量（<strong>Representation</strong>），其任务是与后面的一个<strong>线性模型</strong>（Linear Model）——一个非常小的<strong>线性头</strong>（Linear Head）配合，还原被掩盖的部分。</p>
+<p>我们当时将这个模型命名为<strong>Mockingjay</strong>（Mockingjay: 一种语音版的BERT模型，通过掩码预测进行自监督训练），意为“学舌鸟”，因为它做的事情就是输入什么，就输出一模一样的东西。这个想法与文本版<strong>BERT</strong>几乎一致，也与我们上周介绍的<strong>MaskGIT</strong>（MaskGIT: 一种基于掩码生成图像的Transformer模型）非常相似，尽管<strong>MaskGIT</strong>是更晚的文章，其灵感也源于<strong>BERT</strong>。我们曾尝试用<strong>Mockingjay</strong>合成声音，但结果是完全无法理解的。</p>
+<p><strong>Mockingjay</strong>与文本模型仍有一些不同之处，它在某些方面是根据语音特性设计的。例如，在进行<strong>掩码</strong>时，文本<strong>BERT</strong>通常一次掩盖一个文本<strong>Token</strong>。但在语音上，如果只一次掩盖一个<strong>帧</strong>（Frame），效果会非常差。因为一个<strong>帧</strong>代表的声音信号非常小，模型只需对两边的<strong>帧</strong>进行<strong>内插</strong>（Interpolation），就能轻易猜出被掩盖的<strong>帧</strong>。因此，如果只掩盖一个<strong>帧</strong>，模型学不到什么。我们发现，在<strong>掩码</strong>时必须进行<strong>连续掩码</strong>（Consecutive Masking: 指在序列数据中连续掩盖多个Token或帧，以增加预测难度和模型学习效果），一次掩盖三到九个<strong>帧</strong>，才能得到较好的结果。</p>
+<p>此外，在<strong>掩码策略</strong>（Masking Strategy）上也有突破。我们发现，<strong>掩码</strong>不一定只在时间方向上进行。如果在<strong>频带方向</strong>（Frequency Band Direction）上进行<strong>掩码</strong>，在某些任务上能获得更好的结果。我们发现，在频带方向上<strong>掩码</strong>对模型学习<strong>语者相关任务</strong>（Speaker-related Tasks）特别有帮助。因此，<strong>Mockingjay</strong>后来有了一个进阶版本，名为<strong>TERA</strong>（TERA: Mockingjay的进阶版本，考虑了频带方向的掩码），将频带<strong>掩码</strong>纳入考虑。<strong>TERA</strong>后来发表在语音领域顶级期刊<strong>TASLP</strong>（IEEE/ACM Transactions on Audio, Speech, and Language Processing: 语音和语言处理领域的顶级期刊）上，是当年<strong>TASLP</strong>下载次数前25名的文章。</p>
+<h3>语音版GPT与Meta的自监督模型</h3>
+<p>大约在同一时间，<strong>鍾毓安</strong>同学（他后来去<strong>MIT</strong>读博士）在<strong>MIT</strong>也训练了语音版的<strong>GPT</strong>。其概念与文本版<strong>GPT</strong>非常相似：取一段声音信号的前半段，模型训练目标是预测接下来的声音信号，即预测接下来的<strong>帧</strong>。但语音与文字仍有不同。语音版的<strong>GPT</strong>不能直接预测下一个<strong>帧</strong>，如果直接预测下一个<strong>帧</strong>，结果会很差。根据<strong>鍾毓安</strong>的论文，需要预测更久远以后的<strong>帧</strong>，例如至少三个<strong>帧</strong>以外的<strong>帧</strong>，才能得到较好的结果。原理与<strong>Mockingjay</strong>的<strong>连续掩码</strong>类似：如果只预测下一个<strong>帧</strong>，对模型来说太容易了。</p>
+<p>当时那个模型名为<strong>APC</strong>（Auto-Regressive Predictive Coding: 自回归预测编码，一种语音自监督学习模型）。当年应该没有人真正尝试用这个模型合成声音。我预计，在那个年代的数据量和技术下，可能不会得到特别好的结果。其中一个原因可能是这类模型都是直接预测<strong>连续表示</strong>（Continuous Representation: 指用浮点数向量来表示数据，而非离散的符号），而没有添加<strong>扩散模型</strong>（Diffusion: 一种生成模型，通过逐步添加噪声和去噪来生成数据）或<strong>流匹配</strong>（Flow Matching: 一种生成模型，通过学习数据从简单分布到复杂分布的连续变换来生成数据）的<strong>头</strong>（Head）。在2019年<strong>奥陶纪</strong>时，人类还没有添加<strong>扩散头</strong>或<strong>流匹配头</strong>的概念。</p>
+<p>在<strong>Meta</strong>（Meta: 一家全球领先的科技公司，拥有Facebook、Instagram等产品）那边，也开发了许多类似的语音语言模型。它们的目标都是输入一段声音信号，产生<strong>表示</strong>（Representation），而非真正输出声音信号。其中两个特别有代表性的研究成果是<strong>wav2vec</strong>（wav2vec: Meta开发的一系列自监督语音表示模型）和<strong>HuBERT</strong>（HuBERT: Meta开发的另一种自监督语音表示模型，通过掩码预测和聚类目标进行训练）。<strong>wav2vec</strong>的第一代于2019年初发表，比<strong>Mockingjay</strong>和<strong>APC</strong>还要早。第二代于2020年发表。后来，性能更好的<strong>HuBERT</strong>于2021年发表。当时，这些模型都被称为<strong>表示模型</strong>（Representation Model: 旨在将原始数据（如语音）转换为更抽象、更有意义的向量表示的模型），我们甚至不会称它们为生成模型，尽管有时也称之为语言模型，但我们并不会真的用它们来做生成。</p>
+<h3>表示模型在语音识别中的巨大作用</h3>
+<p>这些<strong>表示模型</strong>被训练出来的目的是为了获得更好的语音<strong>表示</strong>。它们的作用是：给定一段声音信号，将其转换为一个个向量。接下来，你可以根据需要执行任何任务，多数人希望做的是语音识别。因此，你会训练一个<strong>下游模型</strong>（Downstream Model: 指在预训练模型之上，针对特定任务进行微调的模型），其任务就是进行语音识别。如果训练时使用标注数据，它就是<strong>有监督</strong>的。这个<strong>下游模型</strong>以这些<strong>表示</strong>向量为输入，将其转换为语音识别结果。</p>
+<p>有了这些<strong>表示模型</strong>后，语音识别的性能取得了显著突破。例如，在<strong>LibriSpeech</strong>（LibriSpeech: 一个大型的英文有声读物语料库，常用于语音识别基准测试）这个常用的语音<strong>基准测试</strong>（Benchmark）上，<strong>词错误率</strong>（Word Error Rate: 衡量语音识别系统性能的指标，错误率越低越好）显著降低。使用100小时标注数据训练<strong>下游模型</strong>的结果显示，如果没有<strong>表示模型</strong>，直接训练一个六层<strong>LSTM</strong>模型，错误率接近<strong>5-6%</strong>。但如果使用<strong>表示模型</strong>，<strong>下游模型</strong>只需两层<strong>LSTM</strong>，就能达到**3%**甚至更低的错误率。</p>
+<p>更令人惊叹的是，即使将训练数据减少到仅10分钟（这非常少，相当于听三分之一的《大家说英语》），如果使用<strong>wav2vec 2.0</strong>或<strong>HuBERT</strong>作为<strong>表示模型</strong>，仍然可以获得<strong>4-5%<strong>的错误率，比使用六层</strong>LSTM</strong>和100小时数据的结果还要好。这表明这些<strong>表示模型</strong>非常有用，它们提取的<strong>表示</strong>非常适合用于语音识别，对语音识别有巨大帮助。</p>
+<h3>SUPERB：通用语音表示模型的探索</h3>
+<p>在<strong>wav2vec 2.0</strong>问世时，其表现非常惊人。我当时直觉地想，如果我们将<strong>Segmental Audio Word2Vec</strong>替换为更强大的<strong>wav2vec 2.0</strong>，能否进一步提升<strong>无监督语音识别</strong>的水平？对于<strong>无监督学习</strong>的<strong>GAN</strong>部分，我们保持不变，只是将生成<strong>表示</strong>的<strong>骨干模型</strong>（Backbone Model: 深度学习模型中负责提取特征的主体部分）替换为更好的<strong>表示模型</strong>。当时我们的做法是，取出<strong>wav2vec 2.0</strong>的最后一层作为<strong>表示</strong>，然后训练<strong>无监督ASR</strong>。结果却非常糟糕，甚至不如<strong>Segmental Audio Word2Vec</strong>。当时我们觉得<strong>wav2vec 2.0</strong>没什么帮助，似乎被过誉了。但我们不知道，我们离<strong>无监督ASR</strong>的下一个突破仅一步之遥。</p>
+<p>既然<strong>wav2vec 2.0</strong>对<strong>无监督ASR</strong>帮助不大，我们便将精力转向另一个方向。当时我思考的问题是：已经有许多优秀的语音<strong>表示模型</strong>，它们在语音识别上表现出色，例如<strong>wav2vec 2.0</strong>、<strong>HuBERT</strong>等。但语音相关的任务并非只有语音识别。语音中还包含语者信息、情绪信息，可以进行<strong>语者识别</strong>（Speaker Recognition）和<strong>情绪识别</strong>（Emotion Recognition）。这些<strong>表示模型</strong>在其他任务上也能取得好结果吗？我们能否拥有一个<strong>通用模型</strong>（Universal Model: 指一个模型能够处理多种不同任务或适应多种不同领域），一个<strong>通用语音表示模型</strong>（Universal Speech Representation Model: 能够为多种语音相关任务提供有效表示的通用模型）？</p>
+<p>这个<strong>通用模型</strong>就像一个操作系统，你可以为其添加各种应用程序。真的存在这样的语音<strong>表示模型</strong>吗？回溯到2021年，当时大家都在开发语音<strong>表示模型</strong>，我会说我不认为它们能成为<strong>通用模型</strong>。但今天，大家都知道语音<strong>表示模型</strong>可以是<strong>通用模型</strong>。今天，大家已经期待一个<strong>基础模型</strong>（Foundation Model: 指在大量数据上预训练的、具有广泛通用能力的模型，可适应多种下游任务）是通用的、多功能的、全能的。但四五年前，人类并没有这样的期待，甚至我当时觉得不太可能轻易出现<strong>通用语音表示模型</strong>。因为不同的语音任务往往需要截然不同的信息。例如，语音识别需要提取文字信息，机器要学会<strong>忽略语者信息</strong>；而<strong>语者识别</strong>则需要机器学会<strong>忽略内容信息</strong>，只提取语者信息。这两个任务是互斥的，很难想象一个模型能同时做好。</p>
+<h3>SUPERB项目的成果与影响</h3>
+<p>无论如何，我当时想知道是否存在<strong>通用模型</strong>，或者每个模型擅长什么，以便我们开发<strong>通用模型</strong>。因此，我组织了一个团队，将这个计划命名为<strong>SUPERB</strong>（Speech Processing Universal Performance Benchmark: 语音处理通用性能基准，一个评估通用语音表示模型的项目），即<strong>Speech Processing Universal Performance Benchmark</strong>的缩写。团队的第一作者和领导者是<strong>楊書文</strong>（楊書文: 语音领域研究者）同学。团队中还有许多知名资深成员，如<strong>Meta</strong>研究员<strong>李尚文</strong>（李尚文: Meta研究人员）和<strong>Abdelrahman Mohamed</strong>（即前面提到的<strong>Hinton</strong>的学生），以及<strong>CMU</strong>（Carnegie Mellon University: 卡内基梅隆大学，美国著名研究型大学）知名语音学者<strong>Shinji Watanabe</strong>（Shinji Watanabe: CMU知名语音学者）。我们组建团队共同完成了这项巨大任务。</p>
+<p><strong>SUPERB</strong>的目标是，将当时所有能找到的语音<strong>表示模型</strong>应用于我们认为重要的各种语音相关任务，评估它们在哪些任务上表现好，哪些任务上表现不佳。最初，我们都只使用每个模型的最后一层进行任务。我们发现，当我们将每个模型的最后一层交给<strong>下游模型</strong>时，在许多任务上，模型表现不佳，尤其是在<strong>语者相关任务</strong>上，例如<strong>语者验证</strong>（Speaker Verification: 识别说话人身份的任务），多数模型无法取得好表现，甚至不如不使用<strong>表示模型</strong>。</p>
+<p>我当时得出的第一个结论是：这与我预料的一样，这些模型果然擅长语音识别，如<strong>HuBERT</strong>和<strong>wav2vec</strong>。擅长语音识别往往意味着可能不太能做好与语音识别互斥的任务，如<strong>语者识别</strong>。但当时我们也观察到一些比较奇怪的现象：例如，<strong>wav2vec</strong>和<strong>HuBERT</strong>的<strong>大型版本</strong>（Large Model）表现非常差，比小型版本差，甚至比随机结果还差。当时觉得有些奇怪。</p>
+<p>后来我们进行了更深入的分析，发现这些<strong>自监督模型</strong>的每一层往往能提取非常不同的信息。在图中，横轴代表<strong>表示模型</strong>的层数（从第一层到第二十四层），纵轴代表如果使用该层进行某个任务所能达到的性能（数值越大越好）。红色线代表<strong>音素识别</strong>（即语音识别）的性能，蓝色线代表<strong>语者识别</strong>的性能。虚线是<strong>wav2vec</strong>模型，实线是<strong>HuBERT</strong>模型。从图中可以看出，如果看语音识别，这些模型的前几层不擅长语音识别，需要到后几层提取的<strong>表示</strong>才包含更多<strong>内容信息</strong>（Content Information），适合语音识别。而<strong>语者信息</strong>在前几层就能提取出来，到后几层反而减少。因此，如果要进行<strong>语者相关任务</strong>，前几层更合适。至于<strong>wav2vec 2.0</strong>，它是一个神奇的模型，其最后几层几乎没有任何信息，这与其训练机制有关。所以，之前进行<strong>无监督ASR</strong>时，只使用最后一层导致结果很差也就不足为奇了。</p>
+<h3>加权求和与SUPERB的深远影响</h3>
+<p>既然我们知道这些<strong>表示模型</strong>的不同层包含不同信息，那么如何应用这些信息呢？如何知道哪个任务应该使用哪一层呢？当时我们采用了<strong>加权求和</strong>（Weighted Sum: 将多个输入按不同权重相加的方法）的方法。我们将每一层的<strong>表示</strong>都提取出来，并为每一层乘以一个<strong>权重</strong>。这些<strong>权重</strong>是<strong>下游模型</strong>参数的一部分，在训练<strong>下游模型</strong>时也会一并训练。这样，<strong>下游模型</strong>会自行决定使用哪几层。如果是语音识别，模型可能会自动学习使用最后几层；如果是<strong>语者识别</strong>，模型会学习使用前几层。这种<strong>加权求和</strong>的方法非常有效。</p>
+<p><strong>SUPERB</strong>项目的结果显示，我们有一个巨大的表格，横轴代表不同的模型，颜色深浅代表模型表现（越深越好），每个纵列代表一个任务。表格显示，<strong>WavLM</strong>、<strong>data2vec</strong>、<strong>HuBERT</strong>、<strong>wav2vec 2.0</strong>等最强的模型，往往能在多数任务上表现出色。最下面一行<strong>FBank</strong>代表未使用<strong>表示</strong>的结果。从实验结果可以看出，使用<strong>表示模型</strong>后，所有任务的性能都得到了提升。这些<strong>表示模型</strong>加上<strong>加权求和</strong>后，确实可以是<strong>十项全能</strong>的。</p>
+<p>我认为<strong>SUPERB</strong>的出现具有非常重要的意义，它告诉大家这些<strong>自监督模型</strong>非常强大，它们不仅能做语音识别，还有机会成为<strong>通用模型</strong>。因此，<strong>SUPERB</strong>这篇论文获得了很高的引用量，在<strong>Interspeech</strong>近五年所有发表论文中，引用次数排名第四。后来，<strong>SUPERB</strong>也成为了一个“宇宙”，一个品牌名称。如今，如果有人进行这种<strong>通用模型</strong>的评估，往往会冠以<strong>SUPERB</strong>之名，例如<strong>AV-SUPERB</strong>（Audio-visual SUPERB: 结合音频和视觉信息的SUPERB基准）、<strong>ML-SUPERB</strong>（Multilingual SUPERB: 多语言的SUPERB基准）、<strong>Dynamic-SUPERB</strong>（Dynamic SUPERB: 动态版本的SUPERB基准，可能涉及众包数据收集）和<strong>Indic-SUPERB</strong>（Indic-SUPERB: 针对印度语言的SUPERB基准）等。</p>
+<h3>无监督语音识别的再次飞跃</h3>
+<p>让我们回到<strong>无监督语音识别</strong>。我们之前提到，我们错过了<strong>无监督语音识别</strong>的一次重大突破。后来，<strong>Meta</strong>的研究人员也使用<strong>wav2vec</strong>进行<strong>无监督语音识别</strong>，但与我们最大的不同是，他们没有使用最后一层，而是使用了第15层。当然，除了选择第15层，他们还做了许多改进。使用第15层后，<strong>无监督学习</strong>的<strong>音素错误率</strong>突然暴跌，达到了大约<strong>15%</strong>。这意味着在<strong>TIMIT</strong>这个<strong>基准测试</strong>上，<strong>无监督ASR</strong>几乎可以做到与<strong>有监督学习</strong>一样好。我本以为<strong>无监督学习</strong>再怎么努力也无法与<strong>有监督学习</strong>相媲美，但在有了优秀的<strong>表示模型</strong>后，<strong>无监督语音识别</strong>居然能与<strong>有监督学习</strong>不相上下。</p>
+<p>事实上，<strong>无监督语音识别</strong>最近仍在取得进展。例如，有一个模型叫做<strong>wav2vec-U</strong>（wav2vec-U: 一种基于wav2vec的无监督语音识别模型），这是我们实验室的同学与<strong>孫帥豪</strong>（孫帥豪: 语音领域研究者）老师合作的结果。我们不再报告<strong>TIMIT</strong>上的结果，因为<strong>TIMIT</strong>已被“攻克”。我们在<strong>LibriSpeech</strong>上进行测试，使用100小时的训练数据。如果使用<strong>wav2vec</strong>加上<strong>无监督ASR</strong>，错误率约为<strong>19%</strong>。几年后，我们实验室也参与了一个名为<strong>EURO</strong>（EURO: 一个无监督语音识别项目）的项目，它也能做<strong>无监督ASR</strong>，并且比<strong>wav2vec-U</strong>做得更好。后来，<strong>wav2vec</strong>加上<strong>无监督ASR</strong>，<strong>Meta</strong>又推出了2.0版，正确率更高，错误率可压低到<strong>10%<strong>左右。而</strong>wav2vec-U 2.0</strong>则能达到约<strong>5.4%<strong>的错误率，这在</strong>LibriSpeech</strong>上也是一个非常好的结果。因此，<strong>无监督ASR</strong>在这些年确实取得了突破，<strong>wav2vec-U 2.0</strong>最大的突破在于找到了更好的<strong>分割方法</strong>（Segmentation Method），这里使用了<strong>强化学习</strong>（Reinforcement Learning: 一种机器学习范式，通过与环境互动学习如何做出决策以最大化奖励）技术，但没有人工干预，而是利用<strong>无监督信号</strong>训练出更好的边界寻找方法。</p>
+<h3>语音问答系统发展</h3>
+<p>有了这些<strong>表示模型</strong>后，许多原本无法实现的事情突然变得可行。例如，我们实验室有一个长期的梦想：做<strong>语音问答</strong>（Speech QA: 直接从语音输入中提取答案的问答系统）。所谓<strong>语音问答</strong>，就是给一个<strong>QA模型</strong>一段声音信号（比如一段上课录音），然后问它一个问题，希望它能直接给出答案。我们实验室最早的<strong>语音问答</strong>项目是从<strong>托福听力测验</strong>（TOEFL Listening Comprehension: 托福考试中的听力理解部分）开始的。</p>
+<p><strong>曾柏翔</strong>（曾柏翔: 语音领域研究者）同学在2016年，即<strong>寒武纪时代</strong>，做了这个项目。当时之所以选择<strong>托福听力测验</strong>，是因为我觉得它有四个选项，那时还没有<strong>生成</strong>（Generative）的观念，认为机器直接输出答案是不可行的。但我觉得四个选项可以看作一个<strong>分类问题</strong>（Classification Problem），有机会直接训练一个模型，听声音、看问题，然后预测是A、B、C、D中的哪一个。当时做出来，正确率达到了<strong>40%多</strong>，比随机猜测好很多。但后来我发现，40%多的正确率申请不到好学校，需要70-80%的正确率才行。所以那时机器与人类的差距仍然巨大。</p>
+<p>后来随着时间的演进，我们挑战了真正的<strong>问答</strong>，即让模型真正回答问题，而不仅仅是选择一个选项。这是<strong>李佳軒</strong>（李佳軒: 语音领域研究者）同学做的。当时的做法是，我们仍然非常依赖<strong>语音识别系统</strong>。我们需要先将一段录音通过语音识别模型转换为文字，问题也是声音的，也需要转换为文字。既然声音都变成了文字，问题也是文字，那么直接套用一个<strong>文本模型</strong>就可以回答问题了。因此，在有好的语音识别系统的情况下，能够进行<strong>语音问答</strong>，也就能进行<strong>听力理解</strong>（Listening Comprehension: 理解听到的语音内容的能力）。</p>
+<p>但在有了像<strong>HuBERT</strong>这样的<strong>语音表示模型</strong>后，我们就有机会挑战更困难的问题。当时<strong>李佳軒</strong>在做的时候，我问她能否挑战做一个<strong>端到端模型</strong>，不用语音识别，直接<strong>端到端</strong>地训练一个模型。她确实尝试了，但训练不起来。然而，有了<strong>语音表示模型</strong>后，我们真的有机会做一个<strong>端到端模型</strong>，直接将声音信号输入给<strong>语音表示模型</strong>，它输出<strong>表示</strong>，然后一个<strong>下游模型</strong>读取这些<strong>表示</strong>，直接给出答案。</p>
+<p>这个<strong>语音问答</strong>的结果，当时提出了一个名为<strong>Dual</strong>（Dual: 一个语音问答模型）的模型。<strong>Dual</strong>中有很多有趣的巧思，并非直接<strong>端到端</strong>地“硬训练”就能成功，需要多种方法才能实现<strong>语音问答</strong>。至于具体方法，我在2022年<strong>ChatGPT</strong>问世之前（即<strong>史前时代</strong>）曾做过一个演讲，讲解这类模型是如何训练出来的。</p>
+<p><strong>Dual</strong>模型的结果如何呢？横轴是语音识别系统的错误率，纵轴是<strong>F1分数</strong>（F1 Score: 衡量分类模型准确性的指标，是精确率和召回率的调和平均值），数值越大代表模型表现越好。绿色线代表<strong>级联模型</strong>（即语音识别系统加文本<strong>QA模型</strong>）。你可以想象，随着语音识别系统错误率越来越高，整体表现当然越来越差。但如果有一个<strong>端到端模型</strong>，它没有语音识别模块，直接输入声音输出答案，那么它与语音识别的错误率就没有什么关系。当语音识别错误率超过<strong>25%<strong>时，<strong>端到端模型</strong>相对于</strong>级联模型</strong>在当时也能占据一些优势。</p>
+<p>如果你想了解更多关于<strong>语音语言模型</strong>开始之前发生的事情，可以阅读我与其他学者合写的一篇<strong>综述论文</strong>（Overview Paper），我们从<strong>上古时代</strong>、<strong>寒武纪时代</strong>一直讲到<strong>史前时代</strong>（ChatGPT出现之前），那时<strong>语音语言模型</strong>有哪些进展。当年，<strong>楊書文</strong>同学和<strong>劉廷偉</strong>同学还开发了一个非常好用的<strong>工具包</strong>（Toolkit）叫做<strong>S3PRL</strong>（S3PRL: 一个用于语音表示学习的开源工具包），它可以调用各种<strong>语音表示模型</strong>应用于各种任务。如果你今天有机会使用这些<strong>语音表示模型</strong>，我推荐你使用这个好用的<strong>工具包</strong>。</p>
+<h3>初代语音语言模型：GSLM与Token化</h3>
+<p>讲了这么久，其实都还没有真正讲到<strong>语音语言模型</strong>，我们甚至都还没有进入<strong>石器时代</strong>。接下来第二部分，我们终于要讲到初代<strong>语音语言模型</strong>的样子。最早可以称之为<strong>语音语言模型</strong>，并且与我们现在想象的、可以做<strong>生成</strong>（Generative）的模型比较类似的，我想应该是<strong>Meta</strong>的<strong>Generative Spoken Language Model</strong>（GSLM: Meta提出的生成式语音语言模型），简称<strong>GSLM</strong>。</p>
+<p>它的做法与你今天可以想象的做法其实差不多：首先，你需要一个<strong>分词器</strong>（Tokenizer: 将连续数据（如语音）转换为离散Token序列的组件），可以将声音信号转换为<strong>Token</strong>。然后，你训练一个<strong>自回归模型</strong>（Autoregressive Model: 一种序列模型，通过预测序列中的下一个元素来生成序列），它与一般的文本<strong>语言模型</strong>没有太大差别，就是输入<strong>Token</strong>，预测下一个<strong>Token</strong>。最后，你需要一个<strong>反分词器</strong>（Detokenizer: 将Token序列转换回原始连续数据（如语音）的组件），可以将<strong>Token</strong>还原成声音信号。有了这三样东西，就完成了。</p>
+<p>这个<strong>分词器</strong>是如何构建的呢？在上一个世代中，已经开发了许多<strong>表示模型</strong>。因此，在<strong>GSLM</strong>中，他们没有再花时间开发<strong>分词器</strong>，而是直接将<strong>表示模型</strong>改造为一个<strong>分词器</strong>。改造方式是：这些<strong>表示模型</strong>可以输入一段声音信号，输出一堆向量。他们直接对这些输出的向量进行<strong>聚类</strong>（Clustering: 将数据点分组，使得同一组内的数据点相似度高，不同组之间相似度低）。你可以进行<strong>K-Means聚类</strong>（K-Means Clustering: 一种常用的聚类算法，将数据划分为K个簇），或者使用一个<strong>VQ层</strong>（Vector Quantization Layer: 向量量化层，一种将连续向量映射到离散码本中的向量的层）。你将相似的向量集合起来，称它们为同一个<strong>Token</strong>。</p>
+<p>后来也有许多不同的<strong>语音语言模型</strong>，对<strong>Token</strong>做了一些改进，例如去除重复的<strong>Token</strong>，或者将一些<strong>Token模式</strong>（Token Pattern），如“3后面总是接2”，合并为一个新的<strong>Token</strong>。这种方法其实是致敬了文本领域常用的<strong>BPE</strong>（Byte Pair Encoding: 字节对编码，一种常用的文本分词算法，通过合并频繁出现的字节对来创建新的Token）。</p>
+<p>在早期的<strong>语音语言模型</strong>中，<strong>分词器</strong>通常不需要额外训练，因为已有的<strong>表示模型</strong>稍加改造即可用作<strong>分词器</strong>。但<strong>反分词器</strong>仍需训练。你需要训练一个模型，将<strong>Token</strong>作为输入，目标是生成这些<strong>Token</strong>对应的声音信号。我们希望输入一段声音信号，经过<strong>Token化</strong>后，能通过<strong>反分词器</strong>还原回原始声音信号。<strong>反分词器</strong>需要训练，但<strong>分词器</strong>通常不需要。</p>
+<p><strong>GSLM</strong>最初采用这种做法，但后来也有人采用了其他语音<strong>Token</strong>，例如另一组常用的<strong>Token</strong>叫做<strong>Neural Speech Codec</strong>（神经语音编解码器: 一种端到端训练的语音编解码器，用于将语音压缩成Token并还原）。在<strong>Neural Speech Codec</strong>中，<strong>分词器</strong>和<strong>反分词器</strong>是<strong>联合训练</strong>（Jointly Trained）的。它们都是巨大的网络，<strong>分词器</strong>将声音信号转换为<strong>Token</strong>，<strong>Token</strong>再通过<strong>反分词器</strong>转换回声音信号，目标是使输入输出尽可能相似。<strong>Codec</strong>一词中的“Co”指<strong>Compression</strong>（压缩），即<strong>分词器</strong>将语音<strong>压缩</strong>成<strong>Token</strong>；“Dec”指<strong>Decompression</strong>（解压缩），即<strong>反分词器</strong>将<strong>Token****解压缩</strong>成原始声音信号。</p>
+<h3>Semantic Token与Acoustic Token</h3>
+<p><strong>分词器</strong>主要有两种类型：一种是直接从<strong>Speech Representation Model</strong>改造而来，这种<strong>Token</strong>被称为<strong>Semantic Token</strong>（语义Token: 历史文献中指从语音表示模型中提取的、被认为包含语义信息的Token）。另一种是<strong>分词器</strong>和<strong>反分词器****联合训练</strong>，这种<strong>Token</strong>被称为<strong>Acoustic Token</strong>（声学Token: 历史文献中指由编解码器联合训练得到的、包含声学细节的Token）。不过，<strong>Semantic Token</strong>和<strong>Acoustic Token</strong>只是历史上某篇论文（即<strong>AudioLM</strong>）的称呼，后来大家一直沿用这种说法。事实上，<strong>Speech Representation Model</strong>无法提取真正的语义信息，所以称之为<strong>Semantic Token</strong>有些言过其实，但这已是约定俗成。</p>
+<p>有了各种各样的<strong>Token</strong>，你可能会问，哪种<strong>Token</strong>更好呢？答案是“小孩子才做选择，大人是全都要”。你可以同时使用所有<strong>Token</strong>。例如，<strong>AudioLM</strong>（AudioLM: Google开发的一种基于自监督学习的语音生成模型）论文中提到，他们在生成时会同时生成<strong>Semantic Token</strong>和<strong>Acoustic Token</strong>，而且<strong>Acoustic Token</strong>还有不同的等级（粗粒度、细粒度）。</p>
+<p>同时使用多组不同的<strong>Token</strong>后，下一个问题是采用何种<strong>生成策略</strong>（Generation Strategy）来生成不同的<strong>Token</strong>。如果只有一组<strong>Token</strong>，那就是<strong>自回归</strong>（Autoregressive: 指模型通过预测序列中的下一个元素来生成序列）地生成下一个<strong>Token</strong>即可。但如果有多组<strong>Token</strong>，谁先谁后，以何种方式、何种顺序生成，就成了一个研究问题。我已在另一个课程录影中讨论过这方面内容，如果大家对生成多种不同<strong>Token</strong>的策略感兴趣，可以参考上学期机器学习最后一堂课的录影（27分到39分）。</p>
+<h3>语音语言模型的训练挑战</h3>
+<p>然而，<strong>语音语言模型</strong>训练起来往往难以获得非常好的结果。我们实验室曾尝试<strong>微调</strong>（Fine-tune: 在预训练模型的基础上，使用特定任务的数据进行进一步训练）一个已在数万小时数据上训练的<strong>语音语言模型</strong>，但结果不尽如人意。我强调一下，这些<strong>语音语言模型</strong>做的事情都是<strong>预训练</strong>（Pre-train: 在大规模通用数据集上对模型进行初步训练，使其学习通用知识和能力），它们只是用大量未标注数据训练模型。因此，这些模型真正能做的只是<strong>语音接龙</strong>（Speech Completion），即帮你把一句话讲完，还不能进行对话。要进行对话，必须进行<strong>微调</strong>。</p>
+<p>就像我们讲<strong>语言模型</strong>时提到的，<strong>预训练模型</strong>如果没有<strong>聊天模板</strong>（Chat Template: 指用于格式化输入给语言模型的对话或指令的特定结构），根本不会回答问题，只会把一句话不断讲下去。这些语音模型也是如此，它们只是把一句未完成的句子讲下去。我们给<strong>语音语言模型</strong>一段声音信号：“某个人刺杀了总统，接下来会发生什么事情呢？”模型觉得接下来会发生这样一些事情。你肯定觉得它在说什么啊，我也看不懂。我把这句话拿去问<strong>ChatGPT</strong>，它也说这句话根本不知道在说什么，只有一些词汇和短语，但组合起来毫无意义。所以，最初代的<strong>语音语言模型</strong>就是这个样子。</p>
+<p>但这已经是<strong>2023年</strong>了，那时<strong>ChatGPT</strong>已问世，文字模型已进入<strong>中世纪</strong>。那时，人们不能接受这样的人工智能，一个不能好好说话的人工智能是不能接受的。当时初代的<strong>语音语言模型</strong>不太能好好说话，但我们还是尝试用它做一些事情，例如进行<strong>上下文学习</strong>（In-context Learning: 指大型语言模型在不更新参数的情况下，仅通过输入示例就能学习并执行新任务的能力）。我们告诉<strong>语音语言模型</strong>：“听到这句话，你就说是Happy；这句话就是Sad。”看它能否进行情绪识别。结果是无法做到。这些<strong>语音语言模型</strong>没有<strong>上下文学习</strong>的能力。我们后来发现，必须<strong>微调</strong>它，它才会有<strong>上下文学习</strong>的能力。也就是说，它并没有从那些未标注数据中自动启发<strong>上下文学习</strong>的能力。这与文本模型不同，<strong>GPT-3</strong>（GPT-3: OpenAI开发的大型语言模型，具有强大的文本生成和理解能力）作为<strong>预训练模型</strong>，即使没有经过<strong>对齐</strong>（Alignment: 指将不同模态或不同粒度的数据（如语音和文本）进行对应匹配的过程），也具有<strong>上下文学习</strong>的能力，但语音模型没有。</p>
+<p>当时，我们实验室的博士生<strong>張凱為</strong>（張凱為: 语音领域研究者）同学进行了一系列研究，试图<strong>提示</strong>（Prompt: 提供给模型以引导其生成特定输出的文本或数据）这些<strong>语音语言模型</strong>。他使用的是<strong>软提示</strong>（Soft Prompt: 指通过可学习的向量而非离散文本来引导模型行为的提示），试图找到一些<strong>提示</strong>来激发这些<strong>语音语言模型</strong>的能力，让它们能做各种事情。他建立了一个网站记录这些研究。</p>
+<h3>算力与数据量的巨大鸿沟</h3>
+<p>为什么训练<strong>语音语言模型</strong>如此困难呢？我们来算一笔账。假设你有100万小时的声音信号，这听起来已经非常多了。100万小时的声音信号对应多少文字量呢？人类大约一分钟能讲100个<strong>Token</strong>。100万小时的声音信号对应<strong>60亿个文字Token</strong>。你可能觉得60亿个文字<strong>Token</strong>听起来很多，但对于一个<strong>文本模型</strong>来说，这根本非常少。不要忘了<strong>Llama 3</strong>（Llama 3: Meta开发的一系列大型语言模型）是用<strong>15万亿个文字Token</strong>进行训练的。</p>
+<p>如果有人将<strong>Llama 3</strong>训练的这些文字数据全部转换为语音，例如用语音合成系统将这些文字全部朗读出来，会产生多少声音数据呢？<strong>28万5千小时</strong>。28万5千年前，地球上还没有现代智人。所以，你需要从那个时候就开始播放音频，一直听到现在，这才能相当于<strong>Llama 3</strong>学到的文字信息量。因此，如果你想让一个语音模型拥有等同于<strong>Llama 3</strong>的能力，它需要的数据量是<strong>28万5千小时</strong>，这是一个非常惊人的数据量。</p>
+<p>也有人通过实验验证，<strong>语音语言模型</strong>确实更难学习。图中的黑点代表<strong>文本模型</strong>的能力，绿点代表<strong>语音语言模型</strong>的能力。纵轴是<strong>评估指标</strong>（Evaluation Metrics）。所有评估都只衡量了模型的<strong>内容能力</strong>（Content Capability），没有考虑模型能否理解情绪、环境音、语者信息等。它只问模型在进行<strong>文字接龙</strong>时，生成的句子是否合理。你会发现，<strong>文本模型</strong>当然是<strong>吊打语音模型</strong>，<strong>语音模型</strong>与<strong>文本模型</strong>不在同一个量级上。横轴是投入的运算资源，且是<strong>对数尺度</strong>（Log Scale）。你会发现，投入的运算资源越多，<strong>文本模型</strong>增长得越快，而<strong>语音模型</strong>的增长比<strong>文本模型</strong>慢得多。</p>
+<p>如果我们要让<strong>文本模型</strong>和<strong>语音模型</strong>拥有同样的能力，考虑到横轴是<strong>对数尺度</strong>，所需的运算量大约是<strong>文本模型</strong>的<strong>十倍到一百倍</strong>。训练一个<strong>文本模型</strong>已经很痛苦了，再增加一百倍的运算资源，这很可能难以实现。而且，这里只讨论了内容部分，我们还没有讨论机器是否学到了语者信息、情绪信息或其他文字以外的信息。所以，看起来<strong>语音语言模型</strong>非常有挑战性。</p>
+<p>我们实验室曾尝试用较大量的数据（约数万小时）来训练<strong>语音语言模型</strong>。当时<strong>从零开始训练</strong>（Train from Scratch），结果也不尽如人意。我后来与<strong>Meta</strong>最初做<strong>GSLM</strong>的团队交流，他们说即使数据扩展到十万小时，也做不出什么好结果。所以我当时觉得<strong>语音语言模型</strong>的挑战非常大，短时间内无法克服。这对于做研究的人来说，其实是好事，意味着我们还有很多事情可以做。</p>
+<h3>GPT-4o的震撼与行业变革</h3>
+<p>然而，就在<strong>2024年5月</strong>，一切都变了。<strong>2024年5月</strong>，当<strong>GPT-4o</strong>（GPT-4o: OpenAI开发的多模态大型语言模型，支持语音、视觉和文本交互）即将发布时，几天前就有风声说他们做的是一个语音模型，只是不知道做得怎么样。所以在发布当天，我其实守在电脑前，想看看他们会做出什么。他们做出了一个我心目中<strong>语音语言模型</strong>应有的样子：不仅听得懂文字，还能听懂文字以外的信息，而且可以进行非常流畅的互动。</p>
+<p>当时我看到后非常震惊，那时已是半夜两点，发现实验室的同学也都在线上，大家非常紧张，想看看<strong>OpenAI</strong>做了什么。我们终于感受到了<strong>自然语言处理</strong>（NLP）研究者的痛苦。<strong>ChatGPT</strong>问世后，<strong>NLP</strong>领域陷入了巨大的“灭顶之灾”，学术界能做的事情越来越少。我们语音界终于也要体会到<strong>NLP</strong>领域的“灭顶之灾”了，终于要体会到“没得写”的痛苦了（笑）。</p>
+<p><strong>ChatGPT</strong>发布后，我们立即制定了一个计划：也许接下来没什么模型可以训练了，我们要做的事情就是<strong>衡量现有模型</strong>，衡量<strong>ChatGPT</strong>能做到什么程度。大家先把音频文件和要做的<strong>基准测试</strong>准备好，它的API只要一上线，立刻就来评估它。系统一上线，我们就立刻评估它。但是第二天早上没有上线，下午没有上线，晚上也没有上线，过了好几天都还是没有上线。</p>
+<p>有人会说，不是有吗？发布会后不是马上就有语音功能吗？那个语音功能<strong>不是发布会上演示的语音功能</strong>。发布会上演示的，或者他们试图让你相信的，是一个<strong>端到端</strong>的语音系统。我当时有点怀疑那是不是一个<strong>端到端</strong>的语音系统，但学生告诉我：“老师你傻啊，它博客上都跟你说是<strong>端到端</strong>的语音系统，它就是<strong>端到端</strong>的。”总之，我当时有点怀疑它是否真的是<strong>端到端</strong>的，它看起来非常<strong>端到端</strong>。但它发布的那个应用程序显然是<strong>级联</strong>的，它并没有发布他们所谓的高级语音模式，只发布了<strong>级联</strong>模式。那几天，一堆网红<strong>UP主</strong>（UP主: 指在视频分享网站上传原创视频的用户）录视频说“我有这个语音模式了”，但那些语音模式都是假的，都是<strong>级联模型</strong>，根本没有他们宣称的那些功能。</p>
+<p>所以等了好几周，一直没有真正的<strong>语音语言模型</strong>应用出现。我记得<strong>OpenAI</strong>直到<strong>9月底</strong>才上线真正的<strong>语音语言模型</strong>，但上线后用起来确实非常惊艳。然而，几个月后情况又变了。在<strong>OpenAI</strong>刚发布他们的<strong>Advanced Voice Mode Demo</strong>时，我觉得非常震惊，难以想象它是如何实现的。但在几个月后，大家越来越清楚这类<strong>语音语言模型</strong>可能是如何构建的，所以觉得还有很多研究空间可以继续。</p>
+<h3>利用文本信息构建语音模型</h3>
+<p>虽然<strong>OpenAI</strong>没有立即发布这个<strong>语音语言模型</strong>，但在<strong>2024年7月中旬</strong>，一家名为<strong>Kyutai</strong>（Kyutai: 一家法国新创公司）的法国新创公司，开发了一个<strong>语音语言模型</strong>叫做<strong>Moshi</strong>（Moshi: Kyutai开发的一个开源语音语言模型）。<strong>Moshi</strong>已经发布，并在<strong>10月</strong>真正<strong>开源</strong>（Open Source: 指软件的源代码可以被公众自由使用、修改和分发）了它的模型权重。但在<strong>7月</strong>时，它的<strong>演示版</strong>（Demo）可以直接在线互动。所以，如果要说世界上第一个可以互动的<strong>语音语言模型</strong>，我反而觉得<strong>Moshi</strong>才是第一个。</p>
+<p><strong>OpenAI</strong>是如何在短时间内做出一个<strong>语音语言模型</strong>的呢？我当时的猜测是利用了一个强大的<strong>文本模型</strong>作为基础。在<strong>GPT-4o</strong>的语音模式<strong>演示版</strong>发布一周后，我录了一个视频，讲述我对<strong>GPT-4o</strong>语音技术背后的猜测，其中就提到了<strong>利用文本信息</strong>。如果你有空，可以再去看看我当年的猜测，看看与今天的技术是否非常相似。</p>
+<p>什么叫<strong>利用文本信息</strong>呢？其实<strong>利用文本信息</strong>在语音领域并非新鲜事。我们前面讲过<strong>语音问答系统</strong>，提到在有了<strong>Speech Representation Model</strong>后，我们就能做一个<strong>端到端</strong>的<strong>语音问答系统</strong>。这个<strong>语音问答系统</strong>之所以能成功，还有一个诀窍：我们的<strong>下游模型</strong>其实是拿<strong>BERT</strong>做<strong>初始化</strong>（Initialization: 在模型训练开始前，为模型参数设置初始值）。所以可以想象，我们其实是将<strong>Speech Representation Model</strong>后面接上一个<strong>BERT</strong>作为整个<strong>语音问答系统</strong>。因此，我们过去就知道，可以拿<strong>文本模型</strong>来初始化一个<strong>语音模型参数</strong>，而且这往往是有用的。</p>
+<p>有人可能会问，为什么没有在<strong>语言模型</strong>上试试看呢？我们试过。我们前面提到，我们收集了一万小时的数据，<strong>从零开始训练</strong>了一个<strong>语音语言模型</strong>，结果不佳。后来，我们尝试用当时的<strong>Llama</strong>来做<strong>初始化</strong>，结果仍然非常不好，无法达到<strong>OpenAI</strong>那样的效果。<strong>Meta</strong>那边也尝试拿一个<strong>文本模型</strong>来初始化<strong>Speech Language Model</strong>，他们的模型叫做<strong>Twist</strong>（Twist: Meta尝试利用文本模型初始化语音语言模型的研究项目）。<strong>Twist</strong>使用文本做<strong>初始化</strong>确实有帮助，但它仍然无法做出非常好的结果。像这样的模型，你仍然无法预期它说的每一句话都能被人听懂。</p>
+<h3>语音与文本混合训练：Interleaving与Hybrid生成</h3>
+<p>还有什么方法可以利用<strong>文本信息</strong>呢？另一种想法是能否打造一个<strong>语音原生模型</strong>。在训练<strong>语音语言模型</strong>时，我们将语音和文本信息<strong>混合</strong>（Mix）在一起，让模型不仅向文本学习，也向语音学习，两者同时学习。这种概念早在构建<strong>Speech Representation Model</strong>的<strong>2021年</strong>（即<strong>中生代</strong>）就已经存在。当时有许多研究试图将语音和文本<strong>混合</strong>在一起，共同训练一个<strong>表示模型</strong>。但如果只是简单<strong>混合</strong>训练，往往不一定能得到好结果。如何让两种看似非常不同的信息能够<strong>对齐</strong>（Align）在一起，需要非常多的技术。这里我们不细讲，我将一些相关论文放在这里供大家参考。</p>
+<p>当然，在<strong>语音语言模型</strong>上，也有人尝试过将语音和文本<strong>混合</strong>在一起训练。怎么做呢？就是我有一堆文字，我有一堆语音。这里有一个比较强的假设，即假设文字和语音有对应的关系，比如这句话就是“How are you”。所以这与一般的<strong>预训练</strong>不同，一般的<strong>预训练</strong>我们假设完全没有标注数据，但这里我们假设每段声音都有其对应的文字。这需要某种人工干预才能获得，所以<strong>预训练</strong>并非完全<strong>无监督</strong>。</p>
+<p>在训练时，会使用一个技巧叫做<strong>交错</strong>（Interleaving: 指在训练过程中将不同类型的数据（如语音Token和文本Token）交替或混合排列）。即将<strong>文本序列</strong>中的一些<strong>Token</strong>替换为语音，将<strong>语音Token序列</strong>中的一些<strong>Token</strong>替换为文字，然后继续训练。这种方法可以使机器更好地将语音和文本信息<strong>对齐</strong>在一起，更好地利用彼此的信息来强化语音和文本的能力。我这里引用了一些相关论文，其中一个比较知名的论文也是<strong>Meta</strong>做的，这个模型叫做<strong>Spirit LM</strong>（Spirit LM: Meta开发的一种将语音和文本信息交错训练的语言模型）。</p>
+<h3>避免遗忘：文本Token生成的重要性</h3>
+<p>然而，前面提到的两种方法——用<strong>文本模型</strong>做<strong>初始化</strong>，以及在训练时做<strong>交错</strong>——都无法真正打造出非常好的<strong>语音语言模型</strong>。在看了<strong>OpenAI</strong>的<strong>演示版</strong>后，我觉得他们有不同的方法。我当时的猜测是这样的（许多后来的研究也证实了这种猜测和方法非常有用）：他们同样从<strong>文本模型</strong>作为<strong>初始化</strong>，但在训练时，你需要教你的<strong>语音模型</strong>同时生成<strong>文字Token</strong>和<strong>语音Token</strong>。所以重点是，模型不仅要用<strong>文本参数</strong>做<strong>初始化</strong>，它还要能够学习同时生成<strong>文字Token</strong>和<strong>语音Token</strong>。</p>
+<p>我们真正需要的是<strong>语音Token</strong>，因为这些<strong>语音Token</strong>会输入到<strong>反分词器</strong>中，还原出声音信号，这样你就能知道模型想说什么。但为什么生成<strong>文字Token</strong>仍然是必要的呢？因为我们在训练时，经常会遇到<strong>遗忘问题</strong>（Forgetting: 指模型在学习新任务时，忘记之前学到的知识或能力）。每次教模型一个新任务时，它很容易忘记旧任务。如果你教一个<strong>文本模型</strong>生成<strong>语音Token</strong>，但同时又不让它经常回顾如何生成<strong>文字Token</strong>，它很快就会忘记如何生成<strong>文字Token</strong>，只会生成<strong>语音Token</strong>。而那些<strong>语音Token</strong>又不足以让它学到<strong>文本</strong>那么丰富的信息，整个模型就会崩溃。</p>
+<p>所以，今天在训练<strong>语音模型</strong>时，一个重点是<strong>你仍然要教它生成文字Token</strong>。这可以避免它忘记在文本时学到的信息，而这些文本信息非常重要。因为仅仅依靠语音数据，模型无法学到足够的信息。文字是语音的<strong>压缩</strong>，语音数据比较复杂，而文字数据比较简洁。今天机器通过大量文字数据，已经学到了非常丰富的信息。如果你想保留这些知识并用于语音互动，就必须避免它遗忘在文本时学到的信息。因此，在训练时<strong>保持文字生成能力</strong>，即<strong>文字Token生成能力</strong>，可能是非常关键的一步。</p>
+<h3>文本与语音Token长度不一致的挑战</h3>
+<p>然而，这里有一个小问题：<strong>文字Token</strong>的长度与<strong>语音Token</strong>的长度往往<strong>天差地远</strong>。一句话，例如“How are you?”，可能是三个<strong>文字Token</strong>，但它对应的<strong>语音Token</strong>可能比三个多很多，因为通常一个<strong>语音Token</strong>只对应0.02秒的声音信号，所以一秒钟就有50个<strong>语音Token</strong>。由于两者差异巨大，而且它们之间的<strong>对齐关系</strong>（Alignment Relationship）也非常复杂。例如，“How”可能对应前面的这些<strong>Token</strong>，“are”可能只对应这一小段<strong>Token</strong>，“you”可能对应这段<strong>Token</strong>。它们之间没有非常明确、一致、有规律的<strong>对齐关系</strong>。</p>
+<p>因此，在生成时，如何将两者放在一起就成了一个需要考虑的问题。这里有不同的猜测。一个想法是<strong>先生成文字再生成语音</strong>，教机器先生成<strong>文字Token</strong>，再生成<strong>语音Token</strong>。对于生成<strong>语音Token</strong>，模型做的事情几乎等同于<strong>语音合成</strong>。它等于先生成文字，然后根据这些文字再进行<strong>语音合成</strong>，生成对应的<strong>语音Token</strong>。这种方法的缺点是<strong>难以实现流式处理</strong>（Streaming: 指数据在生成或接收的同时进行处理，无需等待全部数据完成）。当你与模型说话时，你期望模型立即回应。但像这种先生成文字再生成语音的模型，你必须先等它生成完文字（比如三秒），每次与它讲话时，它都会停顿三秒才开始回复，这会让人觉得非常不自然。</p>
+<p>另一种方法是<strong>词汇层级的交错</strong>（Word-level Interleaving），即模型先生成一个<strong>文字词汇</strong>，然后生成这个<strong>文字Token</strong>对应的<strong>语音Token</strong>，再生成下一个<strong>文字Token</strong>，再生成对应的<strong>语音Token</strong>，以此类推。这看起来是一种有效的方式，但缺点是必须先进行<strong>对齐</strong>。你必须假设在训练时，你知道每个<strong>文字Token</strong>对应哪些<strong>语音Token</strong>。这种<strong>对齐数据</strong>并非无法获取，但需要额外精力。</p>
+<p>还有一种方法是<strong>分块交错</strong>（Chunk-wise Interleaving），即我们完全不考虑语音和文字之间的对应关系，只规定每生成一个<strong>文字Token</strong>，接下来就生成两个<strong>语音Token</strong>，如此循环。你可能会问，如果<strong>文字Token</strong>和<strong>语音Token</strong>长度不一样，会不会<strong>文字Token</strong>都生成完了，<strong>语音Token</strong>还没生成完？有可能。如果<strong>文字Token</strong>生成完了，就继续生成<strong>语音Token</strong>。一些模型，例如<strong>GLM-4-Voice</strong>（GLM-4-Voice: 智谱AI开发的语音语言模型），就是用这种方法训练出来的。你可能会觉得，这样这些<strong>Token</strong>和这些文字不就没有对应关系了吗？也许今天已经输出到“Are”了，这边“How”还没念完。告诉你，没关系，这样训练也能成功。<strong>GLM-4-Voice</strong>就是用这种方法训练出来的。</p>
+<p>还有其他想法。在刚才的想法中，我们每次只生成<strong>语音Token</strong>或<strong>文字Token</strong>。也可能在每个时间点，两种<strong>Token</strong>同时生成。也就是说，你有两个<strong>语言模型头</strong>（Language Model Head），一个专门生成<strong>文字Token</strong>，一个专门生成<strong>语音Token</strong>。所以每次都生成一个<strong>文字Token</strong>和一个<strong>语音Token</strong>。当然，这样你仍然需要处理文字和语音长度不一致的问题。历史上，有各种各样的方法，这些都是在去年年中到年底提出的一系列方法。<strong>Moshi</strong>在去年<strong>10月</strong>发布了它的技术报告，它也采用了这种包含文字生成的方式，但它有一套自己的方法来处理文字和语音<strong>Token</strong>长度不一致的问题。</p>
+<h3>TASTE：新型语音Token化方法</h3>
+<p>后来我们实验室也朝这个方向做了一些尝试，我们做了<strong>词汇层级的文本与语音混合</strong>（Word-level Text and Speech Hybrid）。确实，你可以用这种方法训练出一个看起来还不错的<strong>语音语言模型</strong>。我在这里播放<strong>蕭淇元</strong>（蕭淇元: 语音领域研究者）同学提供的一个音频文件。首先你会听到输入给这个<strong>语音语言模型</strong>的声音信号。</p>
+<p>接下来，模型进行<strong>文字接龙</strong>。大家要注意的是，它在进行<strong>文字接龙</strong>时，是<strong>一边生成文字Token，一边生成语音Token</strong>。它生成<strong>文字Token</strong>，生成<strong>语音Token</strong>，再生成<strong>文字Token</strong>，再生成<strong>语音Token</strong>。然后将<strong>语音Token</strong>通过<strong>反分词器</strong>，就能听到声音信号。我们也会将<strong>文字Token</strong>集合起来，让你知道如果看文字，模型想说什么。</p>
+<p>（播放模型生成音频）</p>
+<p>至少能听懂它在说什么。但你会发现，有些合成的地方，比如“Restriction”，它就念得一塌糊涂。我想这可能是因为训练数据非常少。在这个项目中，我们使用的训练数据不到1000小时。如果有些词汇模型从未听过，它可能就无法精确地念出来。只有1000小时的训练数据真的非常少，光是让模型好好回答问题可能都不太够，更不用说让它学到情绪、语者等相关信息。</p>
+<p>如果要让机器学会这些文字以外的信息（我们常称之为<strong>副语言信息</strong>，Paralinguistic: 指语音中除了文字内容以外的、传达情感、语者身份等信息的特征，如语调、语速、音色），可能需要使用<strong>Web Scale Data</strong>，即非常大量的网络数据进行大规模<strong>预训练</strong>才能做到。所以，如果只用上千小时进行<strong>微调</strong>，你可能只能让模型回答问题，但很难让它学到语义以外的东西。</p>
+<p>你可能会问，为什么不用更多数据呢？那是因为我们手上的算力不足以支撑更大规模的计算。训练这样的<strong>语音模型</strong>是非常痛苦的。痛苦在哪里呢？你想想看，文字通常是一秒钟的声音信号对应3到4个<strong>Token</strong>，可以说文字的频率大约是3到4赫兹（Hz）。而<strong>语音Token</strong>通常是50赫兹（Hz），即一秒有50个<strong>Token</strong>。所以可以想象，如果比较下面<strong>语音模型</strong>要生成的<strong>序列长度</strong>（Sequence Length）与上面<strong>文本模型</strong>的<strong>序列长度</strong>，前者至少是后者的十倍以上。十倍以上的<strong>序列</strong>意味着你需要<strong>百倍以上</strong>的算力。你训练一个普通的<strong>文本模型</strong>已经很痛苦了，再加一百倍的算力，谁有算力能做这么大规模的运算呢？</p>
+<p>然而，许多大公司就是用这样的方法训练出了他们的<strong>语音语言模型</strong>。如果你有足够的算力，当然可以自己做。但在学校，我们不可能获得这样的算力，所以我们需要更好的方法。</p>
+<h3>TASTE：更合适的语音表示方式</h3>
+<p>有什么更好的方法呢？我想跟大家分享的一个方向是寻找<strong>更合适的语音表示方式</strong>。为什么有机会寻找更合适的语音表示方式呢？这项研究是与<strong>MTK Research</strong>（MTK Research: 联发科研究部门）团队合作的，第一作者是我们实验室的博士生<strong>曾亮軒</strong>（曾亮軒: 语音领域研究者），<strong>MTK</strong>的<strong>陳宜昌</strong>（陳宜昌: MTK研究人员）和<strong>NTU</strong>（National Taiwan University: 台湾大学）的<strong>李冠儀</strong>（李冠儀: 语音领域研究者）同学也参与了这项计划。这是今年年初发表在<strong>arXiv</strong>（arXiv: 一个预印本服务器，用于发布科学论文）上的文章。</p>
+<p>为什么可能存在更合适的语音表示方式呢？现在我们已经知道，在生成这些<strong>语音Token</strong>时，模型会同时生成<strong>文字Token</strong>。如果我们相信这种<strong>语音文字混合生成</strong>（Hybrid Generation: 指模型同时生成两种或多种不同类型的数据，如语音Token和文本Token）的方式是未来的主流，那么在构建<strong>语音Token</strong>时，就应该考虑到<strong>文字Token</strong>。</p>
+<p>如何做到在构建<strong>语音Token</strong>时考虑到<strong>文字Token</strong>呢？我有两个想法。第一个是，我们希望<strong>语音Token</strong>的数量能够配合<strong>文字Token</strong>，两者之间不要有非常复杂的关联性。过去的<strong>语音Token</strong>通常是<strong>固定时长</strong>（Fixed Duration）的，每个<strong>语音Token</strong>对应一小段时间（比如0.02秒）。我们不想要这种<strong>Token</strong>，我们期望有<strong>动态时长</strong>（Dynamic Duration）的<strong>语音Token</strong>，每个<strong>Token</strong>对应不同长度的时间，并且与文字有简单直接的对应关系，甚至是一对一的关系。所以，我们期望有一个<strong>分词器</strong>，它能做到：一句话如果是三个<strong>文字Token</strong>（“How are you”），它就只输出三个<strong>语音Token</strong>。这三个<strong>语音Token</strong>分别告诉我们这三个<strong>文字Token</strong>（How、Are、You）应该如何发音，才是合适的回复。</p>
+<p>这是第一个想法。如果<strong>语音Token</strong>和<strong>文字Token</strong>之间的关系非常简单，例如它们之间有一对一的关系，每输出一个<strong>文字Token</strong>，就输出一个<strong>语音Token</strong>，那么我们在训练<strong>语言模型</strong>时就会变得非常简单。我们不需要考虑各种策略，只需记住训练模型每次生成一个<strong>文字Token</strong>，就生成一个<strong>语音Token</strong>。这可能使训练更加简便，让模型更容易学习这样的<strong>序列</strong>（Sequence）。</p>
+<p>另一个考量是，既然生成结果中已经有文字，那么<strong>语音Token</strong>就不需要包含文字信息。过去在构建这些<strong>语音Token</strong>时，人们的想法往往是这些<strong>语音Token</strong>应该<strong>包罗万象</strong>，包含语音中所有的信息。但现在，如果我们在生成时，文字一定会伴随<strong>语音Token</strong>产生，那么<strong>语音Token</strong>其实只需要专注于存储那些文字无法表达的信息即可。文字信息交由<strong>语言模型</strong>已经产生的<strong>文字Token</strong>来表达。</p>
+<p>所以，我们的<strong>分词器</strong>在接收输入时，不能只接收这些<strong>语音Token</strong>，它还需要将<strong>文字Token</strong>作为输入。<strong>分词器</strong>会根据这些<strong>文字Token</strong>和<strong>语音Token</strong>来生成声音信号。而这些<strong>文字Token</strong>已经告诉<strong>反分词器</strong>这句话要说什么。除了要说什么，这句话如何被说出来，用什么样的声音说出来，则由<strong>语音Token</strong>来操控<strong>反分词器</strong>完成这些事情。</p>
+<h3>TASTE模型架构与实验</h3>
+<p>有了这些想法后，<strong>曾亮軒</strong>同学构思了一个神奇的模型，叫做<strong>TASTE</strong>（TASTE: TASTE Align Speech Tokenization And Embedding 的缩写，一种新的语音Token化方法）。<strong>TASTE</strong>提取<strong>Token</strong>的方式是这样的：首先，我们有一个传统的<strong>Speech Representation Model</strong>（这里你可以使用任何<strong>Speech Representation Model</strong>，在我们的论文中直接使用了<strong>Whisper</strong>的<strong>编码器</strong>），它会产生一排<strong>表示</strong>，每个<strong>表示</strong>对应固定的时间。接下来，我们会从不同的层提取两排<strong>表示</strong>（具体提取哪两排是尚待研究的问题，论文中根据经验选择了最合适的两层）。</p>
+<p>然后，我们假设这段声音已经进行了语音识别，所以你知道它对应的文字是什么。接下来，你会将这里的文字作为<strong>注意力机制</strong>（Attention Mechanism）中的<strong>查询</strong>（Query），将那两个<strong>表示</strong>一个作为<strong>键</strong>（Key），一个作为<strong>值</strong>（Value）。至于哪一层适合作为<strong>键</strong>，哪一层适合作为<strong>值</strong>，需要通过实验来确定。然后进行<strong>注意力计算</strong>，将<strong>查询</strong>与<strong>键</strong>计算<strong>注意力权重</strong>（Attention Weight），并对<strong>值</strong>进行<strong>加权求和</strong>。每个<strong>查询</strong>都会给我们一个<strong>Token</strong>，一个<strong>表示</strong>。接下来会进行<strong>量化</strong>（Quantization），所以最终输出的是一个<strong>离散Token</strong>。如果语音识别结果有几个<strong>文字Token</strong>，我们就提取几个<strong>语音Token</strong>。</p>
+<p>那么，这些<strong>语音Token</strong>如何还原回声音信号呢？从<strong>预训练的语音编码器</strong>到<strong>聚合器</strong>（Aggregator），从声音信号到这些<strong>语音Token</strong>，合起来就是我们的<strong>分词器</strong>。接下来我们看<strong>反分词器</strong>（Detokenizer）的样子。<strong>反分词器</strong>除了接收这些<strong>Audio Token</strong>之外，还会接收<strong>文字信息</strong>。它会将语音识别出来的结果也作为输入。所以，你可以将这个<strong>反分词器</strong>看作是一个<strong>语音合成模型</strong>。事实上，我们的<strong>反分词器</strong>就是直接拿一个<strong>语音合成模型</strong>（<strong>CosyVoice</strong>）进行<strong>初始化</strong>的。所以我们的架构与<strong>CosyVoice</strong>这个<strong>语音合成模型</strong>一模一样。</p>
+<p>与一般<strong>语音合成</strong>不同的是，一般<strong>语音合成</strong>是根据文字生成声音信号。但我们现在除了<strong>文字Token</strong>之外，还有一些<strong>语音Token</strong>。这些<strong>语音Token</strong>告诉我们这些<strong>文字Token</strong>应该如何发音才是对的。所以，这个<strong>反分词器</strong>就根据文字和<strong>语音Token</strong>去还原声音信号。训练时，与一般的<strong>语音Token</strong>和<strong>图像Token</strong>训练方式一样，就是要<strong>最小化重建误差</strong>（Minimize Reconstruction Error）。输入一段声音信号，变成<strong>Token</strong>，<strong>Token</strong>通过<strong>反分词器</strong>还原回来后，输入与还原的结果要尽可能接近。然后，你就可以<strong>端到端</strong>地训练<strong>聚合器</strong>和<strong>反分词器</strong>，你就拥有了一个可以提取与文字数量相同的<strong>语音Token</strong>的<strong>分词器</strong>了。这个方法就叫做<strong>TASTE</strong>。</p>
+<p>我们在这里做一个小实验来展示一下这些<strong>语音Token</strong>中可能包含了什么信息。这个实验展示了这些<strong>语音Token</strong>包含了<strong>时长信息</strong>，它告诉你一个<strong>文字Token</strong>要念多长。我们先给<strong>分词器</strong>一段音频文件，这段音频是一个人以很慢的语速念一个句子。这句话输入进去后，就产生一排<strong>Token</strong>。我们另外一个句子是一个人念得很快。我们将这两个句子的部分<strong>Token</strong>对调。我们将第一个句子的“Came around to”对应的<strong>语音Token</strong>与第二个句子的“News on the”对应的<strong>语音Token</strong>对调。对调后，有了不同的<strong>语音Token</strong>，再输入到<strong>反分词器</strong>中还原回声音。</p>
+<p>（播放音频示例）</p>
+<p>你听出来了吗？“Came around to”这三个字突然被加速了。这表明这三个<strong>Token</strong>告诉<strong>反分词器</strong>，念这三个字时要加速。再看另一个例子，当“News on the”换成蓝色<strong>Token</strong>后，你会发现这三个字念的时候被减速了。这说明这些<strong>语音Token</strong>确实告诉我们一个词汇，一个<strong>文字Token</strong>，要如何被念出来。</p>
+<h3>TASTE模型效果展示与局限</h3>
+<p>接下来，有了这个新的<strong>分词器</strong>后，就是训练了。你需要做的是找一些语音数据，这些语音数据不需要任何标注，我们并不真的需要文字标注，所以这种数据可以轻易获取。然后，你对这些语音数据进行<strong>语音识别</strong>，得到它对应的文字。有了对应的文字后，你就看有几个<strong>文字Token</strong>，就提取几个<strong>语音Token</strong>。然后，你就可以训练一个<strong>语音语言模型</strong>，它每次就是输入一个<strong>文字Token</strong>，就输出一个<strong>语音Token</strong>。这个<strong>语音语言模型</strong>也可以从<strong>文字语言模型</strong>进行<strong>初始化</strong>，确保它能继承<strong>文字模型</strong>已有的能力。</p>
+<p>大家要注意，这里的模型只是<strong>预训练模型</strong>，我们没有进行<strong>监督式微调</strong>（Supervised Fine-Tuning: 监督式微调，使用有标注数据对预训练模型进行进一步训练）。我们只用大量没有标注的数据来训练它。所谓大量，大约是一万小时左右。你可能觉得一万小时很多，但我的学生在大公司工作时常告诉我：“老师你不要再说一万小时很多了，正确的模型训练的语音单位是<strong>亿</strong>。”他们都是用上亿小时的数据来训练模型的，真的非常惊人。</p>
+<p>总之，在我们有限的算力下，用不到一万小时的数据来<strong>预训练</strong>一个模型。这里没有进行<strong>SFT</strong>，所以模型唯一能做的事情就是<strong>语音接龙</strong>：你给它前半句话，它帮你把后半句话讲完。这样的模型如何评估呢？我们也需要进行一些<strong>评估</strong>来展示模型的表现。评估方式是：你给模型一段声音信号，让它进行<strong>声音信号接龙</strong>。接完后，如何判断它说得好不好呢？我们从三个方面评估：首先，我们会将接出来的声音信号进行<strong>语音识别</strong>，然后将识别结果交给<strong>GPT-4</strong>，问它：“你觉得这句话合不合理？”这衡量的是它的<strong>语义连贯性</strong>（Semantic Coherence）。其次，我们会测量一个叫做<strong>UTMOS</strong>（UTMOS: 语音质量评估指标）的东西，它代表语音的<strong>质量</strong>。当然，这些都是<strong>自动化评估方法</strong>。有时一个模型可能骗过了这些<strong>自动化评估方法</strong>，但实际表现不好。所以最后，我们还需要人工评估，看哪一个模型生成的结果是最好的。</p>
+<p>结果如何呢？我们主要比较的对象是<strong>TWIST</strong>和<strong>Spirit LM</strong>这两个模型。<strong>TWIST</strong>就是用<strong>文本模型</strong>做<strong>初始化</strong>，但它没有保持生成文字的能力。<strong>Spirit LM</strong>则是在训练时进行<strong>交错</strong>，将语音和文字以<strong>交错</strong>的方式训练。我们的模型是<strong>Ours</strong>。你会发现，我们的模型在所有三个评估指标上都比<strong>基线模型</strong>（Baseline Model: 用于比较新模型性能的参考模型）要好。我们甚至尝试了一下，这些<strong>预训练模型</strong>能否回答问题。虽然是<strong>预训练模型</strong>，但它在进行<strong>接龙</strong>时，有时也能接出正确的答案。所以它仍然具有一定程度的回答问题能力，虽然不如那些<strong>监督式微调</strong>的模型做得好，但它能回答问题。</p>
+<p>这个模型实际表现怎么样呢？上个学期我已做过<strong>演示</strong>，展示这些模型的英文能力。你可能会问为什么这里会有<strong>Ruby</strong>（Ruby: 一种面向对象的编程语言，此处可能指代某个特定人物或项目），你可以看那个视频就知道了。这里我们来<strong>演示</strong>一下模型的中文能力。我给它前半句中文，让它把这句话说完。我先用我自己的声音尝试一下：“大家好。”模型就继续接下去：“大家好，我是，我是奎老师。”为什么是“奎老师”我也不知道，反正它讲出来就是这个样子。要注意，它是一个<strong>预训练模型</strong>，所以就像我们之前的<strong>文本预训练模型</strong>一样，<strong>文本预训练模型</strong>在做<strong>文字接龙</strong>时会“乱讲”，它也一样，它是生成<strong>语音Token</strong>，它想讲什么就讲什么。</p>
+<p>（播放中文演示音频）</p>
+<p>至少是知道它在讲什么。但你会发现，有一些合成的地方，比如“Restriction”，它就是乱念一通。我想之所以，它有一些字会乱念的原因，是因为训练资料其实非常的少。在这个Project里面，我们用的训练资料是不到1000个小时的。如果有一些词汇，模型从来没有听过，它怎么念，它可能就没有办法精确的把那个词汇念出来。那只有一千小时训练资料，真的非常的少。光要让模型好好回答问题，可能都不太够。更遑论是要让它学到一些什么Emotion啊、Speaker啊相关的东西。如果要让机器能够学到这些文字以外的资讯，那我們常常把文字以外的資訊统称为<strong>Paralinguistic</strong>（副语言信息: 指语音中除了文字内容以外的、传达情感、语者身份等信息的特征，如语调、语速、音色）的资讯。让模型学到这些<strong>Paralinguistic</strong>的资讯，可能需要用<strong>Web Scale Data</strong>，用非常大量的资料，网路上爬到的大量资料，做一个大规模的<strong>Pre-train</strong>才有办法办到。所以如果只用上千个小时做<strong>Fine-tune</strong>，你可能只能让模型回答问题，但不容易让它学到语意以外的东西。</p>
+<h3>语音语言模型的后期训练：SFT与RLHF</h3>
+<p>到目前为止，我们提到的<strong>语音语言模型</strong>都只是<strong>预训练模型</strong>。但你知道<strong>预训练</strong>并非构建一个模型的全部。<strong>预训练</strong>之后，你还需要进行<strong>SFT</strong>（Supervised Fine-Tuning: 监督式微调，使用有标注数据对预训练模型进行进一步训练）和<strong>RLHF</strong>（Reinforcement Learning from Human Feedback: 基于人类反馈的强化学习，通过人类偏好来优化模型行为）。</p>
+<p>对于<strong>语音模型</strong>的<strong>SFT</strong>和<strong>RLHF</strong>，目前没有非常特别的想法。当然，在进行<strong>SFT</strong>时，你需要教模型进行<strong>一问一答</strong>，所以此时你显然需要<strong>对话数据</strong>。如果你都使用非对话数据（例如大量演讲）来训练它，它就只会听一个人的声音，然后用同一个人的声音继续讲下去。所以，要教它进行对话，你需要收集一些<strong>对话数据</strong>来训练<strong>语音语言模型</strong>。</p>
+<p>但有时<strong>对话数据</strong>可能无法大量收集。因此，一个常见的想法是<strong>自己合成对话数据</strong>。你可以让<strong>文本模型</strong>生成对话脚本，再用<strong>语音合成模型</strong>将对话脚本朗读出来，这样你就有了语音对话数据，可以用来训练模型。</p>
+<p>接下来需要进行<strong>RLHF</strong>，让模型的输出更贴近人类需求。这里的<strong>RLHF</strong>与一般的<strong>文本RLHF</strong>可能没有本质上的不同。人类可以提供<strong>反馈</strong>（Feedback），告诉<strong>语音语言模型</strong>哪个答案好，哪个答案不好。你甚至可以训练一个<strong>奖励模型</strong>（Reward Model: 评估模型输出质量并提供奖励信号的模型，用于RLHF）。这个<strong>奖励模型</strong>接收<strong>语音语言模型</strong>的输入和输出，判断它们组合起来是否构成一个好的对话。人类会教<strong>奖励模型</strong>生成合适的<strong>奖励</strong>，然后你再用<strong>奖励模型</strong>为<strong>语音语言模型</strong>提供<strong>反馈</strong>，使其输出更接近人类需求。这与文本模型的做法可能没有非常核心的差异，所以这里我们讲得比较简短。</p>
+<p>我们来看几个<strong>语音语言模型RLHF</strong>的例子。第一个例子是<strong>林冠廷</strong>（林冠廷: 语音领域研究者）同学在<strong>Amazon</strong>（Amazon: 一家全球领先的电子商务和云计算公司）实习时做的。这篇论文发表于去年<strong>11月</strong>，大约一年前。在AI领域，一年前就是很久很久以前了，所以这是一篇早期的论文。当时关注的还不是如何让<strong>语音语言模型</strong>学会<strong>副语言信息</strong>。<strong>林冠廷</strong>同学在更早的论文中，曾尝试让<strong>语音语言模型</strong>学习<strong>副语言信息</strong>，但那是<strong>SFT</strong>阶段的工作。在<strong>RLHF</strong>阶段，他当时思考的是能否让这些模型好好说话，至少说出人能听懂的话。因为他当时使用的模型还没有进行文本和语音的<strong>混合</strong>，只生成<strong>文字Token</strong>，所以模型说出来的话往往是人听不懂的。他试图通过<strong>RLHF</strong>来纠正这些模型，让它们能好好说话。</p>
+<p>论文中直接复制的图显示，他们将模型的输出进行<strong>语音识别</strong>，先转换为文字，再将这些文字交给一个<strong>文本模型</strong>，让这个<strong>文本模型</strong>评分，判断答案是好是坏。<strong>语音语言模型</strong>获得这样的评分后，就得到了<strong>反馈</strong>，从而可以<strong>微调语音语言模型</strong>。最终，即使不使用文本和语音<strong>Token</strong>的<strong>混合解码</strong>（Hybrid Decoding），通过<strong>强化学习</strong>的力量，也能让模型好好说话。</p>
+<p>我想跟大家分享的是，<strong>楊書文</strong>同学在<strong>ByteDance</strong>（字节跳动: 一家中国科技公司，拥有TikTok等产品）实习时也发表了一篇论文，这是上个月才放到<strong>arXiv</strong>上的文章。他们的论文也做了<strong>RLHF</strong>，但他们更关注如何让模型学习<strong>副语言数据</strong>。他们的模型可以做到：给定内容相同的句子，但情绪或其他<strong>副语言信息</strong>不同，模型能否做出适当的回应。例如，如果是不同的性别、不同的年龄（老人的声音、小孩的声音），模型能否做出适当的回应。他们有一个<strong>演示</strong>，我可以展示一下。</p>
+<p>（播放演示音频）</p>
+<p>这个<strong>演示</strong>展示了，当一个人用兴高采烈的声音说“我现在知道是谁在我们团队里面得到了升迁的机会”时，模型会用高兴的声音给出正面回应。而当一个人用失落的声音说“好像没有选他”时，模型会安慰他。还有许多其他例子，例如模型能识别讽刺与真诚的语气，并给出相应的回应。在性别方面，当女性询问预防癌症的检查时，模型会建议乳房检测；当男性询问时，模型会给出不同的建议。在年龄方面，当大人询问设置银行账户时，模型会给出正常回答；当小孩询问时，模型会知道他是小孩，而不帮他办理。所以，这就是<strong>语音语言模型</strong>能做的事情。</p>
+<h3>语音语言模型的推理能力：STITCH</h3>
+<p>接下来，我要讲下一步的研究：让<strong>语音语言模型</strong>一边说一边思考。我们知道，现在很多<strong>文本模型</strong>都具有<strong>推理能力</strong>（Reasoning: 模型在给出答案前进行逻辑分析和思考的过程），通常翻译为<strong>深度思考</strong>。例如<strong>ChatGPT</strong>在回答问题时，常常会显示“正在思考”；<strong>DeepSeek</strong>会告诉你它“已思考”；<strong>Gemini</strong>会告诉你它有某种“思路”。通常这些<strong>思考过程</strong>默认是隐藏的，但你可以点击展开，看看模型在想什么。<strong>Claude</strong>也具有这种<strong>推理功能</strong>。</p>
+<p>现在<strong>文本模型</strong>拥有这些<strong>推理功能</strong>，并且这些<strong>推理功能</strong>确实可以强化<strong>文本模型</strong>的能力。所谓<strong>推理功能</strong>，实际上是模型在产生答案之前，额外生成一些<strong>文字Token</strong>。这些<strong>文字Token</strong>不需要给用户看，模型生成出来给自己看，可以帮助模型得到更正确的答案。对于语音来说，我们能否做同样的事情呢？</p>
+<p>到目前为止，我们讲的<strong>语音模型</strong>都是输入语音输出语音。但实际上，输出的不仅是语音，而是<strong>语音与文字的混合</strong>（Hybrid）。今天能运行的<strong>语音语言模型</strong>通常都是这样做的。不过，为了简便起见，我接下来不再画出<strong>文字Token</strong>。但在模型得到答案之前，我们能否让它像<strong>文本模型</strong>一样，也进行<strong>推理</strong>呢？这里的<strong>推理</strong>输出的可能也是<strong>文字Token</strong>，也不给用户看，通过<strong>推理</strong>让模型得到更好的结果。</p>
+<p>确实有人尝试过这个方向，例如<strong>Audio Reasoner</strong>和<strong>Audio Thinker</strong>都将<strong>语音语言模型</strong>与<strong>推理能力</strong>结合。然而，如果我们将<strong>推理能力</strong>加入这种<strong>对话模型</strong>，你会发现在实际应用中会带来巨大问题。如果每次你对模型说完一句话，它需要花费很长时间（可能是10秒、15秒）进行<strong>推理</strong>，然后才输出回应，这会非常影响用户体验。如果你今天使用<strong>ChatGPT</strong>的文本版在线平台，你可能可以接受在电脑前等待一下。但如果我们要让这些<strong>语音语言模型</strong>模仿人类真实的对话，对话时每次都要等10秒才能回应，这实在难以接受。</p>
+<p>那么怎么办呢？我们能否让模型<strong>一边说话一边思考</strong>？其实人类也是这样。我们在与另一个人讲话时，同时也在思考接下来要说什么。例如，作为一名老师，在很多场合常有人问问题，演讲结束后大家会举手提问。通常人们问完问题，都期望你立即给出答案。如果你说我隔30秒再给答案，大家是不能接受的。但有时如果你没有立即的答案怎么办呢？这时你通常会说：“嗯，这真是个好问题。”以此争取几秒钟的时间思考答案。我们能否让模型做同样的事情？它能否<strong>边听边讲</strong>？它能否<strong>边讲边想</strong>？</p>
+<h3>STITCH：边说边思考的语音语言模型</h3>
+<p>如何让模型做到<strong>边说话边思考</strong>呢？我们本来以为这可能需要一个新的模型架构，例如需要两个平行的<strong>解码器</strong>（Decoder），一个负责生成<strong>语音Token</strong>，一个负责生成<strong>推理Token</strong>，它们之间互相进行<strong>注意力机制</strong>。这样可以使模型<strong>一边说话一边思考</strong>。但是，接下来要讲的<strong>姜成翰</strong>（姜成翰: 语音领域研究者）同学的研究发现，<strong>不需要改变语言模型的架构</strong>，使用原有的语言模型架构就有机会让模型做到<strong>一边说话一边思考</strong>。他的论文已于今年<strong>7月</strong>发布在<strong>arXiv</strong>上，他将这个模型命名为<strong>STITCH</strong>（STITCH: 一种允许语音语言模型在对话中边说边思考的模型）。这是他与<strong>Microsoft</strong>（微软: 一家全球领先的科技公司）的研究人员合作的成果。</p>
+<p><strong>STITCH</strong>是如何运作的呢？在讲解<strong>STITCH</strong>之前，我先举一个例子，看看现在的<strong>语音语言模型</strong>是如何运作的。这里以<strong>GLM-4-Voice-9B</strong>模型为例。这类模型在对话时，会先生成一些<strong>Token</strong>。它生成的39个<strong>Token</strong>中，通常是先生成13个<strong>文字Token</strong>，再生成26个<strong>语音Token</strong>，总共39个<strong>Token</strong>为一组。生成完39个<strong>Token</strong>后，它会将这些<strong>Token</strong>交给<strong>反分词器</strong>还原出声音信号。在播放声音信号的同时，它会再生另外39个<strong>Token</strong>。它必须在声音信号播放完之前，生成完这39个<strong>Token</strong>，并通过<strong>反分词器</strong>合成出声音信号。这样，在前一段音频播放完后，新的声音信号可以立即衔接，人听起来就会是连贯的，不会有不自然的地方。</p>
+<p>在播放前一段音频的时间内，<strong>GLM-4-Voice</strong>有足够的时间生成39个<strong>Token</strong>并合成声音吗？非常足够。如果你有一张<strong>NVIDIA A100</strong>（NVIDIA A100: 英伟达推出的一款高性能GPU，常用于深度学习训练）显卡，生成39个<strong>Token</strong>加上<strong>反分词器</strong>只需要大约0.5秒。而用0.5秒生成39个<strong>Token</strong>后，合成出来的声音大约对应2秒的时间。所以，只要模型能在2秒内生成下一段音频，你的声音听起来就不会有不自然的地方。而生成下一段音频只需要0.5秒，这意味着你的模型其实有1.5秒的时间是空闲的，这1.5秒可以作为<strong>缓冲区</strong>（Buffer）。</p>
+<p>我们可以利用这1.5秒的时间做什么呢？能否让它在这1.5秒内进行<strong>推理</strong>？能否让模型在这1.5秒内生成一些<strong>推理Token</strong>？1.5秒的时间足以让模型生成至少100个<strong>推理Token</strong>，通过这些<strong>推理Token</strong>来强化模型的能力。而要让模型生成<strong>语音Token</strong>，再生成<strong>推理Token</strong>，再生成<strong>语音Token</strong>，其实不需要修改内容，它就是一个正常的<strong>语言模型</strong>，你只需要修改你的训练数据即可。</p>
+<h3>STITCH的训练与效果</h3>
+<p><strong>STITCH</strong>提出的想法是这样的：通常我们说要增加<strong>推理</strong>能力，是你对模型说一句话，它产生<strong>文字推理</strong>，然后给出答案。它产生的是<strong>语音Token</strong>，需要<strong>反分词器</strong>还原声音信号。但<strong>STITCH</strong>的做法是：你对模型说一句话，它先生成<strong>语音Token</strong>，立即将<strong>语音Token</strong>还原出声音信号。它可能一开始会重复你的问题，然后说：“这真是个好问题。”然后才开始回答。接下来它会生成<strong>推理Token</strong>。只要在声音播放完之前，它能生成<strong>推理Token</strong>，并生成足够的<strong>语音Token</strong>，再合成出下一段声音，那么在前一段声音播放完之前，下一段声音就已经生成出来，声音听起来就不会有不自然的地方。同时，在空闲时，它还可以生成一些<strong>文字Token</strong>，这相当于它<strong>一边讲话一边思考</strong>，而没有在讲话时进行深入思考，从而得到更好的答案。</p>
+<p>接下来问题是如何训练这样的模型呢？现在世界上已经有许多训练<strong>语音到语音模型</strong>的对话数据。这些对话数据就是你有一句输入，有一句输出，它们都是语音的。我们这里做的事情是，先对它们进行<strong>文字转录</strong>（Transcription），即<strong>ASR</strong>（Automatic Speech Recognition: 自动语音识别），将其转换为文字。然后将这些文字交给<strong>GPT-4o</strong>，告诉它：“现在如果要产生这个答案，你觉得要做什么样的<strong>推理</strong>？”让它写出<strong>推理过程</strong>。</p>
+<p>接下来在训练时，我们将这个<strong>推理过程</strong>切成一段一段的，每100个<strong>Token</strong>一段。语音输出也要切成一段一段的，比如39个<strong>Token</strong>一段。然后，你教你的<strong>语音语言模型</strong>：输出语音的第一段<strong>Token</strong>后，接下来就输出<strong>推理</strong>的第一段<strong>Token</strong>；再输出语音的第二段<strong>Token</strong>，再输出<strong>推理</strong>的第二段<strong>Token</strong>，就这样持续下去。这样，模型就会学会在两段语音之间，利用一些空档进行思考。</p>
+<p>这一招有用吗？<strong>姜成翰</strong>同学的实验是进一步<strong>微调GLM-4 Voice</strong>。<strong>GLM-4 Voice</strong>本来没有<strong>推理能力</strong>，他通过<strong>微调</strong>使其具备<strong>推理能力</strong>。结果如何呢？他在一系列数学问题上进行测试。这里展示的是不同数学语料库的平均结果。原版<strong>GLM-4 Voice</strong>的正确率约为<strong>53%</strong>。经过<strong>微调</strong>后，如果<strong>没有增加推理</strong>，它其实可以从53%提高到大约<strong>63%</strong>，仍然有10%的进步。这可能是因为我们的一些训练数据是<strong>GLM</strong>没有的，所以<strong>微调</strong>后即使不增加<strong>推理能力</strong>，仍然有一些提升。</p>
+<p>如果你为它增加<strong>推理能力</strong>，但不是使用<strong>STITCH</strong>，你可以得到<strong>79%<strong>的正确率。也就是说，模型听完一段声音后，它先在脑中生成一大堆</strong>文字Token</strong>，思考完之后（无论多久，人都必须等待），然后它再生成答案。这样可以得到<strong>79%<strong>的正确率。而我们这里，如果使用</strong>STITCH</strong>方法，我们有两个实验结果（具体细节请查阅论文）。即使是较差的结果，也能达到约<strong>78%<strong>的正确率。而且要注意，当我们进行</strong>推理</strong>时，使用传统<strong>推理</strong>方法，人必须等待模型进行<strong>推理</strong>，这是一种很不自然的互动。但当我们使用<strong>STITCH</strong>时，这个模型的<strong>延迟</strong>（Delay），即人的等待时间，与没有<strong>推理</strong>的情况是相同的。我们通过利用两次生成<strong>语音Token</strong>之间的间隔时间进行<strong>推理</strong>，可以将正确率从62%提高到78%，而相对于让人等待，只损失了1%的正确率。</p>
+<p>此外，虽然我没有展示实验结果（论文中有），模型的<strong>音频质量</strong>不会因为使用<strong>STITCH</strong>而受到影响。<strong>姜成翰</strong>同学还做了另一个实验：他设想，如果拥有<strong>A100</strong>显卡，生成39个<strong>Token</strong>只需0.5秒。但如果你没有<strong>A100</strong>呢？不是每个人都有<strong>A100</strong>。如果你使用性能较差的GPU，生成<strong>语音Token</strong>的时间就会更长，<strong>缓冲区</strong>就会更短，能生成的<strong>文字Token</strong>就会更少。在<strong>推理</strong>时，我们能否在训练时都训练生成100个<strong>推理Token</strong>，但在<strong>推理</strong>时，根据当前使用的GPU等级，<strong>动态地调整</strong>生成多少<strong>文字Token</strong>呢？他发现这是可行的。训练时都是固定100个<strong>Token</strong>，但在<strong>推理</strong>时，即使减少<strong>Token</strong>数量，<strong>推理</strong>仍然能带来帮助。</p>
+<p>以下是实验结果。横轴是<strong>推理</strong>使用的<strong>Token</strong>数量（从60个到100个），不同的线代表不同<strong>语料库</strong>上的结果，纵轴是正确率（数值越大越好）。你可以很明显地看到，<strong>Token</strong>越多，性能当然越好。虽然<strong>Token</strong>越多性能越好，但图中那些没有连接起来的点代表没有<strong>推理</strong>的结果。你会发现，虽然<strong>推理</strong>通常更好，但没有<strong>推理</strong>在很多情况下仍然有帮助。所以，即使你在<strong>推理</strong>时没有好的GPU，你仍然可以让模型进行<strong>推理</strong>，只是<strong>推理Token</strong>的数量少一点，你仍然可以通过<strong>推理</strong>来提升模型的能力。</p>
+<h3>外部推理与未来展望</h3>
+<p>我们再进一步思考：<strong>推理过程</strong>能否不由<strong>语音模型</strong>自己生成？毕竟<strong>语音模型</strong>往往更专注于生成好听的声音，其<strong>推理能力</strong>可能不如那些<strong>文本模型</strong>强。我们能否使用另一个<strong>文本模型</strong>在背后进行<strong>推理</strong>，将其<strong>推理结果</strong>交给<strong>语音模型</strong>，从而强化<strong>语音模型</strong>的答案呢？这确实是可行的。</p>
+<p>这里的做法是：当你给<strong>语音模型</strong>一段声音信号时，你同时进行<strong>语音识别</strong>，将那段语音识别的文字交给一个<strong>文本模型</strong>。接下来，<strong>语音模型</strong>会生成<strong>语音Token</strong>。本来我们会让<strong>语音模型</strong>自己生成<strong>推理Token</strong>，但我们现在不用<strong>语音模型</strong>自己的<strong>推理</strong>，而是让<strong>文本模型</strong>生成<strong>推理结果</strong>。让<strong>文本模型</strong>根据文字输入（通过<strong>语音识别</strong>得到的结果）和<strong>语音模型</strong>的输出（<strong>语音模型</strong>的输出其实包含文字）来生成<strong>推理结果</strong>。<strong>文本模型</strong>生成<strong>推理结果</strong>后，<strong>语音模型</strong>再根据<strong>文本模型</strong>的<strong>推理结果</strong>生成<strong>语音Token</strong>。这个过程不断反复，看看能否通过<strong>文本模型推理</strong>来强化<strong>语音模型</strong>的能力。</p>
+<p>结果确实是可行的。这里的纵轴是模型在各个不同<strong>语料库</strong>上的正确率平均值。每条线代表我们使用了不同的模型来生成<strong>推理</strong>。红色这条线是模型的<strong>推理</strong>（<strong>文字推理</strong>）与生成语音使用的是同一个模型。最好的这条线是换了一个<strong>文本模型</strong>，这里使用的是<strong>GLM-4 9B Chat</strong>（GLM-4 9B Chat: 智谱AI开发的GLM-4系列中的一个强大文本模型），让它来生成<strong>推理</strong>，再由<strong>语音模型</strong>来回答答案，可以得到更好的结果。如果你故意使用一个较差的<strong>文本模型</strong>，例如<strong>Llama 3.2 1B</strong>（Llama 3.2 1B: Meta Llama系列中的一个较小文本模型），你会发现结果会差很多。这个实验结果告诉我们一件事：<strong>推理</strong>确实对模型有影响。它并不是说“我就<strong>推理</strong>乱讲，我就不要管<strong>推理</strong>，我就光产生答案就好”。其实<strong>推理</strong>会影响模型的结果。如果给它差的<strong>推理</strong>，它最终就会得到差的结果。</p>
+<p>最后，这是一个<strong>演示</strong>，让你了解这个模型运作起来是什么样子。你会听到有人念一个数学问题，然后模型用语音来回答这个问题。</p>
+<p>（播放演示音频）</p>
+<p>你刚才听到模型讲话时没有任何停顿，它就是顺畅地把话说出来。但你可以看到它在背后其实是做了一个<strong>推理过程</strong>。模型实际运作过程是这样的：红色的东西代表<strong>语音Token</strong>，那是人看不懂的，就是一堆<strong>语音Token</strong>。黄色的东西是<strong>文字Token</strong>，但那些<strong>文字Token</strong>是用来支持那些<strong>语音Token</strong>的。而绿色的东西是模型在做<strong>推理</strong>时说出来的文字。你看这里它会条列一点、两点、三点、四点，但这些是不会被念出来的。你就想成这些东西是模型在心里思考的，人类不需要看这么复杂的东西。你会发现，模型一开始先复述问题，然后用一些语音生成一些<strong>语音Token</strong>。在复述问题的同时，它在心里就开始条列，想说这个问题要怎么解。然后它再讲一些话，再想如何解。所以刚才听到模型并没有列出很完整的计算过程，但它可以给你一个正确的答案。这就是<strong>STITCH</strong>做的事情。</p>
+<h3>语音语言模型的未来研究方向</h3>
+<p>其实在有了<strong>STITCH</strong>之后，接下来也有很多模型有类似的想法，例如让模型<strong>一边讲话一边使用工具</strong>，<strong>一边听声音一边使用工具</strong>等等。我今天就把一些相关的论文列在这里给大家参考。</p>
+<p>这就是今天想跟大家分享的内容。我今天讲述的是我以第一人称视角，我们团队曾经参与的研究。但是这里还有很多很多没有讲到的与<strong>语音语言模型</strong>有关的技术。有一个很关键的技术还没有讲到，那就是对于<strong>语音语言模型</strong>来说，有一个非常重要且需要具备的技能，就是它要能够<strong>超越回合制问答</strong>。</p>
+<p>什么叫<strong>超越回合制问答</strong>呢？通常我们使用<strong>文本模型</strong>时，例如<strong>ChatGPT</strong>，就是<strong>一问一答</strong>。你给它一个输入，它给你一个输出，它输出完才轮到你讲话。但在<strong>语音对话</strong>中，这个对话是<strong>全双工</strong>（Full Duplex: 指通信系统能够同时进行双向数据传输）的。<strong>全双工</strong>是什么意思呢？<strong>全双工</strong>意味着沟通是双向的，两个人可能同时发出声音信号。例如，其中一个人在讲什么事情，你就会发出一些声音，比如你说“你说的都对”，代表你有在听他讲话。在对方讲话时，你得一边发出声音，这样才能变成一个自然的对话。或者你在讲话时，对方说“这不是我想听的”，你停下来，你会同时听他在讲什么，然后他叫你停下来，你可能就会停下来。或者你觉得他说得根本是错的，你可能会主动插话打断，说“不不不，你说的错了，不要再讲了”，他在讲话，你还是继续讲，想要声音压过他。所以，两个人对话时，其实可能是同时在说话的。</p>
+<p>如何处理这个问题呢？今天当然有不同的解法，但还没有标准答案。但在有标准答案之前，也许我们需要知道什么样的答案才是标准的。我们期待一个<strong>全双工模型</strong>能做到什么样的事情呢？所以我们实验室的<strong>林冠廷</strong>同学和<strong>上官思雲</strong>（上官思雲: 语音领域研究者）同学就做了一系列与<strong>全双工</strong>有关的<strong>评估</strong>，看看今天号称可以做<strong>全双工</strong>的模型，它们都能做到什么样的事情。由于今天时间有限，我们就不再细讲这个部分，我把论文链接列在这里给大家参考。</p>
+<p>还有很多能力，也许我们希望有一天<strong>语音语言模型</strong>可以具备。举例来说，<strong>语音语言模型</strong>既然要与人类互动，那它要与存在于现实中的人类互动，它就得知道人类<strong>物理世界的时间流逝</strong>。今天<strong>语音语言模型</strong>能知道<strong>物理世界的时间流逝</strong>吗？它对<strong>物理世界的时间</strong>有概念吗？看起来是没有的。<strong>張凱為</strong>同学在这方面做了一系列的测试，你可以看看他的这篇论文。例如，如果我们今天问这些<strong>语音语言模型</strong>，叫它十秒钟不要说话，基本上没有<strong>语音语言模型</strong>能真正做到这件事情，因为它根本没有“十秒”这样的概念，它根本不知道多长是十秒。那么，如何让<strong>语音语言模型</strong>能够意识到现实生活中真实的<strong>物理世界时间流逝</strong>，这也是另一个研究问题。总之，还有太多未解的问题尚待研究。</p>
+<p>最后，如果你想了解更多与<strong>语音语言模型</strong>有关的事情，可以参考一下我与其他学者写的一篇<strong>综述论文</strong>，我们从<strong>语音语言模型</strong>的起源开始讲起，一直讲到今日<strong>语音语言模型</strong>的发展。这就是我今天想跟大家分享的内容。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Geoffrey Hinton" class="entity-link person-link">Geoffrey Hinton</a>, 
+                
+                  <a href="/search/?q=Sam Altman" class="entity-link person-link">Sam Altman</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Meta" class="entity-link company-link">Meta</a>, 
+                
+                  <a href="/search/?q=Microsoft" class="entity-link company-link">Microsoft</a>, 
+                
+                  <a href="/search/?q=ByteDance" class="entity-link company-link">ByteDance</a>, 
+                
+                  <a href="/search/?q=CMU" class="entity-link company-link">CMU</a>, 
+                
+                  <a href="/search/?q=Amazon" class="entity-link company-link">Amazon</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Whisper" class="entity-link product-link">Whisper</a>, 
+                
+                  <a href="/search/?q=AlphaGo" class="entity-link product-link">AlphaGo</a>, 
+                
+                  <a href="/search/?q=BERT" class="entity-link product-link">BERT</a>, 
+                
+                  <a href="/search/?q=Llama 3" class="entity-link product-link">Llama 3</a>, 
+                
+                  <a href="/search/?q=GPT-4o" class="entity-link product-link">GPT-4o</a>, 
+                
+                  <a href="/search/?q=DeepSeek" class="entity-link product-link">DeepSeek</a>, 
+                
+                  <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>
+                
+              </p>
+            
+            
+              <p><strong>媒体/书籍:</strong>
+                
+                  <a href="/search/?q=《Interspeech》" class="entity-link media-link">《Interspeech》</a>, 
+                
+                  <a href="/search/?q=《NeurIPS》" class="entity-link media-link">《NeurIPS》</a>, 
+                
+                  <a href="/search/?q=《ICASSP》" class="entity-link media-link">《ICASSP》</a>, 
+                
+                  <a href="/search/?q=《TASLP》" class="entity-link media-link">《TASLP》</a>, 
+                
+                  <a href="/search/?q=《arXiv》" class="entity-link media-link">《arXiv》</a>, 
+                
+                  <a href="/search/?q=《饥饿游戏》" class="entity-link media-link">《饥饿游戏》</a>, 
+                
+                  <a href="/search/?q=《大家说英语》" class="entity-link media-link">《大家说英语》</a>, 
+                
+                  <a href="/search/?q=《托福听力测验》" class="entity-link media-link">《托福听力测验》</a>, 
+                
+                  <a href="/search/?q=《生成式人工智慧與機器學習導論2025》" class="entity-link media-link">《生成式人工智慧與機器學習導論2025》</a>
+                
+              </p>
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/learning/">learning</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/model/">model</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/philosophy/">philosophy</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/self/">self</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">speech-recognition</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

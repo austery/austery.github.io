@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>影像與聲音的生成策略：擴散模型與自回歸架構的深度匯聚</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="影像與聲音的生成策略：擴散模型與自回歸架構的深度匯聚" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">影像與聲音的生成策略：擴散模型與自回歸架構的深度匯聚</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Hung-yi Lee</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2025-12-14
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/hung-yi-lee/">Hung-yi Lee</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=ccqCDD9LqCA" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2025-12-14
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本講由李宏毅教授解析生成式 AI 在影像與語音領域的核心技術演進。內容涵蓋從早期的像素與取樣點接龍，到現代離散與連續 Token 的表徵技術，並重點探討了 Flow Matching 與擴散模型如何與自回歸架構結合，揭示 2025 年跨模態生成技術的前沿趨勢。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>生成新紀元：從文字接龍到多模態模擬</h3>
+<p>目前為止，生成式人工智慧的討論核心大多集中在<strong>語言模型</strong>（Language Model: 處理文本輸入與輸出的系統），其本質是透過文字接龍來預測下一個字。然而，生成技術的邊界已延伸至影像、影片與聲音。以 Google 的 <strong>NanoBanana</strong> 為例，它能根據指令生成極其逼真的 PTT 八卦板貼文截圖，甚至能模擬螢幕呈現的微小瑕疵與像素模糊；在語音領域，<strong>語音合成</strong>（Speech Synthesis: 將文字轉換為人工語音的技術）已進步到僅需輸入一段參考音頻，即可模仿特定語者的音色與情感進行跨語言配音。</p>
+<p>這種能力的躍遷不僅限於靜態內容。<strong>Sora</strong> 等模型展示了文字生影片的驚人潛力，它能理解物理邏輯並生成帶有環境音效的動態畫面。有趣的是，這些模型甚至開始展現出某種「世界模型」的雛形，例如能自動補全線性代數考卷的解答，或模擬教授授課的場景。在這些表象背後，影像與聲音生成的底層邏輯正發生深刻變革：從傳統的擴散模型（Diffusion Model）轉向一種結合了<strong>自回歸</strong>（Auto-Regressive: 基於過去預測未來的序列生成方法）與<strong>流匹配</strong>（Flow Matching: 透過向量場指引機率分布轉換的技術）的新路徑。</p>
+<h3>數位原子：像素、取樣點與 Token 的層級演進</h3>
+<p>要理解生成策略，必須先定義生成的基本單位。在影像中，最小單位是<strong>像素</strong>（Pixel: 構成數位影像的最小點），每個像素由 RGB 三個數值組成；在聲音中，則是<strong>取樣點</strong>（Sampling Point: 對連續聲波進行離散化取樣後的數值點）。早在 2016 年的「寒武紀時期」，<strong>Pixel RNN</strong> 與 <strong>WaveNet</strong> 就嘗試以像素或取樣點進行接龍。然而，这种微觀層級的生成效率極低——生成一秒鐘的音頻可能需要 90 分鐘的運算，因為取樣點過於細碎。</p>
+<p>為了提升效率，研究者引入了 <strong>Token</strong>（權標：資訊處理的基本語意單位）的概念。這就像人體由細胞而非原子構成一樣，影像與語音也需要更大的「細胞」來作為生成單位。透過 <strong>Tokenization</strong>（符號化：將連續信號轉換為離散符號的過程），我們可以將 320 個取樣點壓縮為一個語音 Token。這通常依賴於 <strong>VQ-VAE</strong>（Vector Quantized Variational Autoencoder: 向量量化的變分自編碼器）技術，將連續的信號映射到有限的編碼本中。儘管這種離散化過程會帶來一定的資訊失真，但它賦予了影像與聲音像文字一樣進行高效接龍的可能性。</p>
+<h3>語意建模：從 Raster Order 到隨機生成的邏輯轉向</h3>
+<p>在具備了 Token 之後，生成的順序成為關鍵。傳統做法是遵循 <strong>Raster Order</strong>（柵欄式順序：由左至右、由上而下的掃描順序），但這並不符合人類創作的邏輯。<strong>MaskGIT</strong> 提出了一種全新的策略：<strong>掩碼生成</strong>（Masked Generation: 隨機遮蓋部分內容並預測剩餘部分的技術）。在訓練時，模型學習如何還原被蓋住的圖片區域；在生成時，模型先產生全局草圖，再逐步細化高信心的區域，最終達成非固定順序的並行生成。</p>
+<p>這種「層級化」的思想在 <strong>VAR</strong>（Visual Auto-Regressive: 視覺自回歸建模）中得到了進一步發揮。模型不再是一步到位生成高清圖像，而是先生成低解析度的「草圖」，再根據草圖逐步預測更高比例尺的細節。這種從小圖到大圖的 <strong>Next-Scale Prediction</strong>（跨尺度預測），不僅提升了生成品質，也讓模型能更好地捕捉全局語意與局部特徵之間的關聯。然而，隨著對解析度要求的提高，離散 Token 的壓縮極限（如蒙娜麗莎畫像中的臉部扭曲）成為了技術瓶頸。</p>
+<h3>範式匯聚：連續 Token 與流匹配的向量博弈</h3>
+<p>為了解決離散 Token 的失真問題，2025 年的前沿趨勢是轉向 <strong>連續 Token</strong>（Continuous Token: 以實數向量而非離散索引表示的單位）。但連續空間的生成面臨一個巨大挑戰：<strong>均方誤差</strong>（Mean Square Error: 預測值與真實值差距的平方均值）在多目標場景下失效。如果一隻狗既可以出現在左邊也可以在右邊，MSE 會引導模型生成一個模糊的雙頭狗。因此，我們需要模型輸出的是一個<strong>機率分布</strong>而非單一向量。</p>
+<p>這正是 <strong>Flow Matching</strong>（流匹配）發揮作用的地方。它定義了一個<strong>向量場</strong>（Vector Field: 空間中每一點及其移動方向的集合），像一位嚮導般指引點從原始分布（Source Distribution）平滑地移動到目標分布（Target Distribution）。這與擴散模型在數學上互補，但在實作上更為高效。透過將這種生成能力植入 Transformer 架構的 <strong>Generation Head</strong>（生成頭：模型末端負責特定模態輸出的組件），我們實現了兩條世界線的匯聚：Transformer 負責宏觀的語意接龍，而 Generation Head 負責微觀的機率分布採樣。這種結合了自回歸深度與生成式廣度的架構，正成為 Video VAR 與語音語意模型（Speech Language Model）的標準範式。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=李宏毅 (Hung-yi Lee)" class="entity-link person-link">李宏毅 (Hung-yi Lee)</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Meta" class="entity-link company-link">Meta</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=NanoBanana" class="entity-link product-link">NanoBanana</a>, 
+                
+                  <a href="/search/?q=Sora" class="entity-link product-link">Sora</a>, 
+                
+                  <a href="/search/?q=Flow Matching" class="entity-link product-link">Flow Matching</a>, 
+                
+                  <a href="/search/?q=MaskGIT" class="entity-link product-link">MaskGIT</a>, 
+                
+                  <a href="/search/?q=VAR" class="entity-link product-link">VAR</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">autoregressive-model</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">flow-matching</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">diffusion-model</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/tokenization/">tokenization</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">vector-quantization</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

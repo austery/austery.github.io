@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Agent Skills: Prompt Engineering 的工程化飞跃与未来</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="AI Agent Skills: Prompt Engineering 的工程化飞跃与未来" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">AI Agent Skills: Prompt Engineering 的工程化飞跃与未来</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Peter Pang</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-01-22
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/software-development/">software-development</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/peter-pang/">Peter Pang</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=0HIlhRl38QA" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-01-22
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">演讲者锐评AI Agent Skills，将其类比为包管理器，强调其本地运行、可控性和对提示词工程的革新，并预测了未来发展。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>Agent Skill 概念解析</h3>
+<p>我将认真锐评一下<strong>skill</strong>（技能）这个概念。众所周知，作为业界的三巨头，<strong>OpenAI</strong>最擅长炒作，<strong>Google</strong>最擅长算法，而<strong>Anthropic</strong>最擅长开发。自从2024年底发布了<strong>MCP</strong>（Meta-Cognitive Programming）标准后，2025年底，<strong>Anthropic</strong>又带来了<strong>agent skill</strong>（智能体技能）这一新概念。skill一经发布，业界便知晓AI开发即将迎来新一轮升级。</p>
+<p>其实，skill这一概念本身并无颠覆性的重大突破，甚至可以说它是一种返璞归真的方式。它旨在解决一个非常现实的问题：如何用最少的<strong>token</strong>（令牌）处理最多的事务。其核心在于将提示词（prompt）进行拆解，根据能力范围进行打包，彼此之间保留指针引用，然后实时按需导入，从而实现动态的提示词构建。</p>
+<h3>依赖管理模式</h3>
+<p>这正是<strong>skill</strong>概念最有潜力成功的关键所在。它让我想起了<strong>maven</strong>、<strong>npm</strong>、<strong>crate</strong>、<strong>pip</strong>等大家熟悉的<strong>依赖管理</strong>（dependency management）工具。尽管我们可能会批评当前一些技术框架过度依赖依赖，一个简单的“hello world”应用就可能安装上千个依赖，但不可否认的是，正是这种<strong>积木结构</strong>（building block structure）带来了无穷的可能性。</p>
+<h3>集成简便与安全</h3>
+<p>从技术层面而言，<strong>skill</strong>相较于大模型和<strong>MCP</strong>，其集成到工作流的难度更低、可接受度也更高。以大模型为例，即使是频繁更新的<strong>VSCode</strong>，至今仍需依赖第三方插件来支持不同的模型。而<strong>MCP</strong>的整合则更为复杂繁琐，尤其是在经历了去年一系列<strong>MCP安全漏洞事故</strong>后，现在稍微专业的平台都会对<strong>MCP</strong>的接入增加多层验证机制。我曾尝试将<strong>AWS</strong>上的一个AI服务接入<strong>GitHub</strong>的<strong>MCP</strong>，从查找资料到生成各种密钥，耗时近一个小时才完成。</p>
+<p>相比之下，<strong>skill</strong>以一种最简洁的方式解决了这些问题：它支持<strong>完全本地运行</strong>。所有代码存储在本地，所有指令也在本地执行。一切都是公开透明的，没有跨网络通信，自然也就避免了<strong>RPC漏洞</strong>（Remote Procedure Call vulnerability）等安全问题。</p>
+<h3>实践：宁滥勿缺</h3>
+<p>我认为，<strong>skill</strong>的出现标志着<strong>prompt engineering</strong>（提示词工程）首次真正具备了“工程”的属性。在此之前，我们对提示词的使用更像是进行实验：由于尚未完全摸清大模型这一“生物”的特性，我们只能对其进行零散的调整，观察其反应。而如今，随着大模型对<strong>function call</strong>（函数调用）等基本机制的稳定支持，<strong>skill</strong>这种有结构、有规模的软件工程范式才得以真正普及。</p>
+<p>这对我这样的软件工程师而言，是一个重要的契机。在大模型迭代的<strong>上半场</strong>，主角是算法科学家，他们提出的概念我们往往难以理解，只能作为用户。而现在进入应用落地的<strong>下半场</strong>，软件工程的理念将发挥更大作用，我们这些软件工程师将成为懂行者。</p>
+<p>为了深入了解当前的<strong>skill生态</strong>，我搜集了互联网上大约300个开源skill，涵盖了文件处理、数据分析、网页生成、安全检测、项目管理等领域，并将它们全部安装到了IDE中。由于目前尚无类似<strong>npm</strong>的包管理框架，这些skill需要一个个导入，过程略显繁琐。之所以选择将所有skill一股脑地安装进去，而非按需选用，是因为我们永远无法预知何时会用到何种skill。例如，在让AI完成一个完整数据可视化项目时，其设计方案可能涉及处理<strong>CSV</strong>数据源、使用<strong>D3.js</strong>可视化框架，以及用<strong>Playwright</strong>进行前端测试。正因我预先安装了对应skill，AI在系统提示词中发现这些需求后，便能直接导入相关的提示词和参考代码。</p>
+<p>同理，即使后续AI方案要求使用<strong>Excel</strong>作为数据源、<strong>Echarts</strong>作为可视化框架，或采用<strong>property based testing</strong>进行测试，我也无需担忧，因为这些skill也早已备好。这种<strong>按需导入</strong>（on-demand import）的机制，决定了我们在安装skill时，应遵循“<strong>宁滥勿缺</strong>”（better safe than sorry）的原则。能找到多少就安装多少，找不到的就自己创造，因为构建skill比想象中更容易——它甚至可以是一个只有几句话的Markdown文档，在此基础上再逐步拓展功能、增加可执行脚本和补充案例。</p>
+<h3>Skill 构建与迭代</h3>
+<p>以我近期开发的用于分析CVE漏洞和相关事故的skill为例。起初，它的功能非常简单：找到官方报告，提取漏洞代码及官方解释，最后生成总结。随后，我逐步补充了更详细的拆解要求，并在让AI进行分析时，明确了需要关注的要点，引导其做出更有针对性的解读。再后来，我还为一些步骤增加了执行脚本，例如在收集官方报告时，我指定了特定的爬取网页脚本，以确保数据获取的准确性。拥有了这个漏洞分析skill后，我在日常询问AI技术问题时，它便能提供更专业的回答，而非像之前那样仅给出笼统的漏洞分析。</p>
+<h3>Token 可控的价值</h3>
+<p>作为一个实用主义者，在我看来，<strong>skill</strong>最大的价值在于赋予了输入<strong>token</strong>数量的<strong>可控性</strong>。在没有skill的情况下，我们几乎无法控制AI会花费多少token、爬取多少外部网页、导入多少参考代码才能完成一个小动作。但在skill的加持下，我们能够精确控制每一个输入的字符。如果想要更细致的操作，可以提供更多提示；若希望输出更稳定，则可以增加更多参考案例，反之亦然。同时，我们也能在不影响输出效果的前提下，适当地削减提示词，以减轻token的负担。</p>
+<p>近期在粉丝群里，关于“token额度又没了”、“基础套餐完全不够用”的抱怨最多。我自己还好，通常不购买基础套餐，而是专注于利用免费资源，因为大模型（如<strong>GPT</strong>、<strong>Gemini</strong>、<strong>Claude</strong>）的运行成本高昂，每一个都消耗大量token，我甚至怀疑它们是否是故意的。</p>
+<p>基于此，我大胆推测，未来<strong>skill</strong>的发展可能会效仿大模型，出现不同等级的分类，例如更节省token的<strong>Lite Skill</strong>，提示词更详细的<strong>Pro Skill</strong>，以及预算充足的<strong>Max Skill</strong>等。而像我这样的“羊毛党”，则会继续使用免费的IDE，运行最经济的Lite Skill，做一个勤俭持家的好男人。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>, 
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=GPT" class="entity-link product-link">GPT</a>, 
+                
+                  <a href="/search/?q=Gemini" class="entity-link product-link">Gemini</a>, 
+                
+                  <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/prompt-engineering/">prompt-engineering</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/agent-skills/">agent-skills</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">dependency-management</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">token-control</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">software-engineering-paradigm</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

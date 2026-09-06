@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="container" data-pagefind-ignore>
+
+<div class="home-layout">
+
+<h1>标签：agentic-coding</h1>
+
+<ul><li>
+      
+      <a href="/content/notes/KhYifX22yhE/">大模型规模化的喧嚣与真实：合成数据策略与分布式预训练工程实操</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-07-26T00:00:00.000Z">
+          7/26/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入探讨了 poolside 在训练 Laguna 系列（包括 Laguna M.1、XS.2 及最新 118B MoE 架构的 Laguna S）模型时的前沿实践。文章详细介绍了 poolside 的合成数据流水线设计（包括多阶段生成、跨域迁移和双角色演进等四种核心模式），以及在大规模分布式预训练中，如何通过模型副本哈希校验（Model Replica Hash Checks）、FP32 精度积累和解决开源 DeepGemm FP8 算子中的竞态条件，来应对静默数据损坏与梯度爆炸等工程挑战。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/Ib5GBkD555M/">为什么软件工厂会失败：超越 Harness 工程的智能体编码反思</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-07-23T00:00:00.000Z">
+          7/23/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/software-development/" class="category-badge-inline">
+              🏷️ software-development
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文探讨了 AI 智能体编码与自动化“软件工厂”面临的瓶颈。作者指出，仅靠增加 Token 消耗或改进 Harness 无法解决代码可维护性下降的问题，因为现有强化学习模型缺乏对设计与架构质量的评估。未来开发应将 AI 辅助前置规划与人工审查结合，以保证质量与效率。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/Usufn8IQJgw/">上下文工程、循环工程与智能体代码生成的新范式</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/the-pragmatic-engineer/" class="speaker-inline">🎙️ The Pragmatic Engineer</a>
+      
+      
+      
+        <time datetime="2026-07-15T00:00:00.000Z">
+          7/15/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/software-development/" class="category-badge-inline">
+              🏷️ software-development
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了“上下文工程”的定义，解释了如何通过抽象层去处理模型输入。同时分析了“循环工程”和“更卖力地生成 token”等概念，并回顾了软件工厂的历史演变。核心观点强调了在AI时代，开发者需要从单纯编写代码转向规范说明和测试，以及构建适应大规模智能体输出的持续集成系统的重要性。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-06-26_httpsyag_gpt-56-white-house-speed-limiter-20260626-html/">白宫的限速器：一场被按下暂停键的最强 AI 发布</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-06-26T00:00:00.000Z">
+          6/26/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 OpenAI 发布了最新旗舰大模型 GPT-5.6，但其发布受到白宫的限制。文章详细分析了美国政府对 AI 模型发布的两种干预机制（出口管制与行政令协商），并对比了 GPT-5.6 在 agentic coding 上的性能表现，以及其在安全定级和实际可用性方面的现状。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/ktl8mNiWqMM/">AI吞噬世界：Benedict Evans谈基础模型的商品化与未来</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/a16z/" class="speaker-inline">🎙️ a16z</a>
+      
+      
+      
+        <time datetime="2026-06-08T00:00:00.000Z">
+          6/8/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/tech-trends/" class="category-badge-inline">
+              🏷️ tech-trends
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 在本次访谈中，前A16Z合伙人Benedict Evans探讨了AI的未来发展趋势。他提出基础模型最终将走向商品化，真正的商业价值在于将AI融入具体工作流与产品中。如同互联网和移动支付一样，AI将在未来20年内成为我们习以为常的基础设施。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/HTxtDxEo3kQ/">AI时代下的职业转型与子女教育：一位技术专家的深度思考</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ke-dai-biao-li-zheng/" class="speaker-inline">🎙️ 课代表立正</a>
+      
+      
+      
+        <time datetime="2026-05-28T00:00:00.000Z">
+          5/28/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 前谷歌工程师刘希元（Zero）分享了他在AI浪潮下从前端技术领导转型为产品经理的职业路径，以及如何利用AI工具与儿子共同创作游戏，实践前沿AI教育。访谈深入探讨了AI对个人职业发展、生产力提升及下一代教育模式的深远影响，并反思了PM转型中的挑战与机遇。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-05-28_httpsyag_ai-language-choice-20260528-html/">AI 写代码，选 TypeScript 还是 Python 是个错问题</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-05-28T00:00:00.000Z">
+          5/28/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/software-development/" class="category-badge-inline">
+              🏷️ software-development
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章指出AI编程中语言的选择不应仅依赖训练数据或基准测试，而应关注反馈循环（agentic loop）的速度与错误信号的精确度。Go等语言凭借快速的测试缓存、结构化的接口及精确的编译错误反馈，在AI代理编程模式下表现出比Python更优的工程特性，推动了编程范式从注重语法表现力向注重AI处理效率的重估。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/h0gZf1hL4D4/">Claude Opus 4.8 实测解析：卓越的单次生成与致命的『最后 10%』难题</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/how-i-ai/" class="speaker-inline">🎙️ How I AI</a>
+      
+      
+      
+        <time datetime="2026-05-28T00:00:00.000Z">
+          5/28/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深度评测了 Anthropic 最新发布的 Claude Opus 4.8 模型。作者通过编程原型开发、现有代码库维护以及业务策略分析等实战场景，揭示了该模型在单次生成上的强劲表现，同时也指出了其在长程任务、复杂边缘案例处理以及事实幻觉方面的局限性，为开发者和商业决策者提供了理性的使用参考。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/S-T12Z-8Tbo/">Google I/O 2026 深度盘点：Gemini 3.5 闪速编程与 Omni 创意大爆发</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/how-i-ai/" class="speaker-inline">🎙️ How I AI</a>
+      
+      
+      
+        <time datetime="2026-05-20T00:00:00.000Z">
+          5/20/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/tech-trends/" class="category-badge-inline">
+              🏷️ tech-trends
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本视频深度测评了 Google I/O 2026 首日发布的核心产品与模型。主讲人 Claraveville 现场实测了超高速的 Gemini 3.5 Flash 模型、全新 Agentic IDE Anti-gravity 2.0、AI Studio 的 Workspace 工作流集成，以及颠覆性的 Omni 视频生成大模型、Stitch 设计协作平台与 Pomelli 营销生成器，直击谷歌新一代 AI 工具生态的实测表现与痛点。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/dvWfeexfa1s/">AI Agent Token消耗的隐形账单与效率真相</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/best-partners-tv/" class="speaker-inline">🎙️ Best Partners TV</a>
+      
+      
+      
+        <time datetime="2026-05-19T00:00:00.000Z">
+          5/19/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本研究深度剖析了AI Agent在代码任务中的Token消耗模式，揭示了其成本由输入Token主导、具有极高随机波动性，并指出存在‘逆测试时间缩放’现象。分析比较了八款顶尖模型的效率表现，并探讨了在事前成本预判困难的背景下，重构定价模式与优化Agent设计方向的产业启示。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-05-16_httpsbao_the-founders-playbook-building-an-ai-native-startup/">创始人手册：打造 AI 原生初创公司 | 宝玉的分享</a>
+      
+      
+      
+      
+        <a href="/speakers/baoyu-io/" class="speaker-inline">🎙️ baoyu.io</a>
+      
+      
+      
+        <time datetime="2026-05-16T00:00:00.000Z">
+          5/16/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文为2026年AI原生初创公司提供实用手册，梳理了构思、MVP、发布和扩展四个阶段。强调利用AI智能体、智能编程及自动化工具重塑创业工作流，实现小团队的高效运营与快速迭代，极大地降低创业门槛。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/fYh1CWadxDM/">AI时代下的工程团队：生产力、角色转变与分布式协作</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/the-pragmatic-engineer/" class="speaker-inline">🎙️ The Pragmatic Engineer</a>
+      
+      
+      
+        <time datetime="2026-02-24T00:00:00.000Z">
+          2/24/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本次访谈探讨了AI如何重塑工程团队。嘉宾们分享了AI原生团队的特点，如工程师零代码开发、PM和设计师参与编码，以及生产力的大幅提升。讨论还涵盖了AI对分布式团队协作的积极影响，以及工程领导者角色和传统职业路径的转变。核心观点是AI让编码再次充满乐趣，并促使团队更注重创造力而非效率。</small>
+      
+
+      
+      
+    </li></ul>
+
+</div>
+
+</div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

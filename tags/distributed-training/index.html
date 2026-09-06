@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="container" data-pagefind-ignore>
+
+<div class="home-layout">
+
+<h1>标签：distributed-training</h1>
+
+<ul><li>
+      
+      <a href="/content/notes/maRzp4kImJ4/">跨数据中心强化学习：解耦训练与弹性 Rollout Fleet 的系统实践</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-08-10T00:00:00.000Z">
+          8/10/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 来自 Modal 的 Nan Jiang 介绍了如何打破传统 RL 强化学习训练中 Trainer 和 Rollout 节点的强耦合限制。通过利用 Adam 优化器在低精度（BF16/FP8/FP4）表示下的“更新吸收”效应，将每步权重更新同步量从数百 GB 的全量 Checkpoint 压缩至数百 MB 的稀疏 Delta 补丁。这使得 Rollout 节点可以脱离昂贵的 RDMA 局域集群，以高弹性、全球分布式、多云供应商的方式在廉价闲置 GPU 上低延迟运行，极大提升了强化学习后训练（Post-Training）的算力利用率与规模瓶颈。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/KhYifX22yhE/">大模型规模化的喧嚣与真实：合成数据策略与分布式预训练工程实操</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-07-26T00:00:00.000Z">
+          7/26/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入探讨了 poolside 在训练 Laguna 系列（包括 Laguna M.1、XS.2 及最新 118B MoE 架构的 Laguna S）模型时的前沿实践。文章详细介绍了 poolside 的合成数据流水线设计（包括多阶段生成、跨域迁移和双角色演进等四种核心模式），以及在大规模分布式预训练中，如何通过模型副本哈希校验（Model Replica Hash Checks）、FP32 精度积累和解决开源 DeepGemm FP8 算子中的竞态条件，来应对静默数据损坏与梯度爆炸等工程挑战。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/DcvgPEApHT8/">Trajectory 创始人 Ronuk 访谈：持续学习（Continual Learning）将如何重塑 AI 智能体</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/latent-space/" class="speaker-inline">🎙️ Latent Space</a>
+      
+      
+      
+        <time datetime="2026-06-21T00:00:00.000Z">
+          6/21/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文是 Trajectory 创始人 Ronuk 的深度访谈录。Ronuk 回顾了他在 Windsurf 及 Google DeepMind 的经历，分享了 Windsurf 被谷歌收购的幕后故事，并深入探讨了 Trajectory 的核心愿景：通过自主研发的 SDPO 算法以及开源的分布式 LoRA 训练框架，将“持续学习”这一关键能力带到法律、金融等非代码领域，构建能够动态进化的下一代 AI 智能体。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/NbldZVdusKo/">从 OpenClaw 到 Hermes Agent：拆解下一代自我进化智能体</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/best-partners-tv/" class="speaker-inline">🎙️ Best Partners TV</a>
+      
+      
+      
+        <time datetime="2026-04-17T00:00:00.000Z">
+          4/17/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深度对比了两款主流自托管智能体 OpenClaw 与 Hermes Agent。OpenClaw 以中心化网关提供稳定性，而 Hermes Agent 则通过‘自主执行循环’驱动系统，实现了从执行经验到程序化知识的自动沉淀。文章详细解析了 Hermes 的分层记忆体系、技能生成机制及安全防护模型，探讨了本地智能体从工具向个人数字化基础设施演进的趋势。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/Uh0F_suae5Q/">对话 Amazon AGI 专家：大模型训练的深水区，从算力基建、数据洗练到 AI 自进化的终局</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ke-dai-biao-li-zheng/" class="speaker-inline">🎙️ 课代表立正</a>
+      
+      
+      
+        <time datetime="2026-03-04T00:00:00.000Z">
+          3/4/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本访谈由 Amazon AGI 高级经理查晟深度拆解大模型预训练的核心技术栈。内容涵盖 Scaling Laws 的实操坑点、科研中“最大化信息增益”的方法论、算力集群在 backward 阶段的电力冲击挑战，以及行业内 Benchmark 泄露与刷分的现状。查晟进一步预测了 AI 将从“答题”转向自主“出题”的自进化阶段，并探讨了智能商品化后对人类职业路径与宏观经济的深远影响。</small>
+      
+
+      
+      
+    </li></ul>
+
+</div>
+
+</div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

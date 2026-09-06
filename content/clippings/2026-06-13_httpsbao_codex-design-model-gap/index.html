@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>为啥 Codex 还不推出类似 Codex Design 的产品？ | 宝玉的分享</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="为啥 Codex 还不推出类似 Codex Design 的产品？ | 宝玉的分享" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">为啥 Codex 还不推出类似 Codex Design 的产品？ | 宝玉的分享</span>
+      <span data-pagefind-meta="speaker" style="display:none;">baoyu.io</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-06-13
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/baoyu-io/">baoyu.io</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://baoyu.io/blog/2026-06-13/codex-design-model-gap" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-06-13
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">文章探讨了为什么 Codex 尚未推出类似 Claude Design 的可交互原型产品。核心观点是，模型能力（如 GPT-5.5）的瓶颈不在于生成静态界面，而在于需要同时具备优秀的 UI/UX 设计能力和复杂系统架构设计能力，才能一次性交付高精度、状态保持完整的交互式原型。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>宝玉的分享</p>
+<p>Menu</p>
+<p>See all posts</p>
+<p>Published on 2026-06-13</p>
+<h1>为啥 Codex 还不推出类似 Codex Design 的产品？</h1>
+<p>作者：</p>
+<p>宝玉</p>
+<h1>为啥 Codex 还不推出类似 Codex Design 的产品？</h1>
+<p>Anthropic 最近推出了 Claude Design，是我除了编程之外用得最多的 Agent，也推荐过很多次。效果真的好：你用一句话描述想要的 App，它直接给你生成一个可交互的原型，点哪哪都有反应，不仔细看还以为在操作真实的 App。</p>
+<p>有网友问：为啥 Codex 还不推出类似 Codex Design 的产品？</p>
+<p>简单来说，GPT-5.5 的模型能力还做不好这件事。但要解释清楚为什么，得先理解一个关键区分。</p>
+<h2>【1】Agent 的两层：模型和 Harness</h2>
+<p>很多人把 Codex、Claude Design 和 GPT-5.5、Claude Opus 4.8 混在一起说，其实它们是完全不同的两层。</p>
+<p>Claude Design 和 Codex 是&quot;产品层&quot;，业界叫 Harness，包括提示词、工具链、UI 交互流程这些工程层面的东西。Claude Opus 4.8 和 GPT-5.5 是&quot;模型层&quot;，是真正干活的大脑。</p>
+<p>打个比方：Harness 是厨房，里面有锅碗瓢盆（工具）和菜谱（Skills），模型是厨师。同一套厨房，换个厨师，做出来的菜完全不一样。</p>
+<p>理解了这个区分，后面的事情就好说了。</p>
+<h2>【2】Harness 不是门槛</h2>
+<p>Claude Design 的 Harness 层技术上不复杂。花点心思逆向一下，提示词、工具代码几乎都可以拿到。我已经做过了，成果在 baoyu-design（https://github.com/JimLiu/baoyu-design），可以借助 Skill 把 Claude Design 在其他模型上运行。工程上没秘密。</p>
+<p>真正拉开差距的是背后的模型。</p>
+<h2>【3】高精度可交互原型，难在模型</h2>
+<p>Claude Design 这个名字容易让人误解，以为交付的是 Figma、Photoshop 那样的静态设计图。实际上它交付的比 Figma 更进一步，是融合了设计稿和原型的高精度可交互原型：你不光能看到设计，还能直接上手操作。</p>
+<p>这对模型的要求很高。</p>
+<p>举个例子。我要做一个类似 X/微博的客户端。让模型画一个好看的静态界面，很多模型都做得到。但要让这个界面能交互就复杂了：切换不同 Timeline，展示不同类型的推文（文本、图片、视频），点赞要变红心，删推要从列表消失，从列表点进详情再返回，状态还要保持住。</p>
+<p>要做到这些，模型必须在动手画 UI 之前，先把整套数据结构和状态管理想清楚：tweet 长什么样、timeline 有哪几种、每个按钮当前是什么状态、状态之间怎么联动。这是系统架构设计的活，不是画 UI 的活。</p>
+<p>Claude Design 对模型的要求，是同时具备优秀的 UI/UX 设计能力和系统架构设计能力，缺一个效果就大打折扣。这也是为什么我之前反对只产出纯 HTML 的设计稿，那只是静态的 UI 设计，没有融合 UX 交互。</p>
+<p>有条件的话可以自己测试感受一下。比如用这个提示词：</p>
+<blockquote>
+<p>Design a X Client for Mac, similar to Tweetbot for Mac from Tapbots</p>
+</blockquote>
+<p>同样的提示词让 Codex 去做，也能出个东西，能看，也能简单交互。但对比一下就知道差距了：列表能滚动，sidebar 不能点；点赞按钮没反应。来回迭代好几轮，才能达到一个勉强凑合的水平。</p>
+<p>Claude Design 做出来完全不一样。从 Timeline 切到通知页，从列表点进详情再返回，全程流畅，状态都保持住了。不仔细看真以为在操作一个完成度很高的 App，虽然数据都是模拟的。</p>
+<p>Claude Opus 4.8 显然在设计和架构这类场景上做了大量训练和优化。</p>
+<h2>【4】产出物就是代码</h2>
+<p>去看 Claude Design 的产出物，注意里面的 data.jsx 文件。它把整个设计的数据结构定义得很清晰，基于这个结构模拟了一套完整数据，然后用 React 在这套数据上构建 UI。</p>
+<p>设计产物本身就是代码（React、CSS、JSON），不是 Figma 或 PSD，任何开发者拿到都能直接看出按钮的圆角、主色、间距，照着自己的技术栈实现就行。后续设计变更？git diff 一看就知道改了什么。设计和开发之间的沟通损耗降到了最低。</p>
+<p>说得不严谨，应该说设计 Agent 和开发 Agent 之间的沟通损耗很低了。现在都是人在指挥 Agent 去设计，人指挥 Agent 写代码了。</p>
+<h2>【5】怎么用好 Claude Design</h2>
+<p>很多人不知道该怎么用好 Claude Design，其实有点像 Vibe Coding：有个基本的想法，先让它做一个版本出来，然后通过 Chat 去指挥 Agent 帮你改，调整几个版本你的思路就清晰了。</p>
+<p>整个调整的过程非常神奇，有一种&quot;言出法随&quot;的感觉，你想让它怎么改它总能给你实现出来。这也是为啥我现在很痴迷用 Claude Design，反馈来得太快太过瘾了。</p>
+<p>还有一个小技巧：不要说太具体的要求，而是说你的目标是想要什么，让它自由发挥。往往能得到更好的效果，毕竟它训练过几乎所有公共的 UI 设计。</p>
+<p>回到最初的问题。Codex 不推类似的设计产品，是因为 GPT-5.5 还扛不住这个活。画个好看的界面很多模型都行，难的是在动手之前把数据结构、状态管理、交互逻辑都想清楚，然后一次性交付一个完整的可交互原型。</p>
+<p>目前只有 Claude 的模型做到了。至于能领先多久，就看 OpenAI 或者其他家后面模型的进化速度了。</p>
+<p>See all posts</p>
+<p>Built by 宝玉.  RSS . 本站原创内容，独家授权赛博禅心公众号发布。</p>
+<p>Toggle theme</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Codex" class="entity-link product-link">Codex</a>, 
+                
+                  <a href="/search/?q=Claude Design" class="entity-link product-link">Claude Design</a>, 
+                
+                  <a href="/search/?q=GPT-5.5" class="entity-link product-link">GPT-5.5</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/model-capability/">model-capability</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">ui-ux-design</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/system-architecture/">system-architecture</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

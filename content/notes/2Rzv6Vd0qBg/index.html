@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>从诺奖到通用方法论：蛋白质结构预测的突破、局限与科学AI的未来探索</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="从诺奖到通用方法论：蛋白质结构预测的突破、局限与科学AI的未来探索" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">从诺奖到通用方法论：蛋白质结构预测的突破、局限与科学AI的未来探索</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Best Partners TV</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-06-25
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/best-partners-tv/">Best Partners TV</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=2Rzv6Vd0qBg" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-06-25
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">文章探讨了人工智能在解决蛋白质折叠难题上的重大进展，分析了该技术从特定实验结果预测工具向通用科学方法论演进的过程。核心观点在于区分模型的预测能力与人类对生物学本质的理解，强调领域专属架构的胜利和“无情的经验主义”在AI for Science中的作用。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>AlphaFold：从诺奖到通用方法论的探索</h3>
+<p>大家好，这里是最佳拍档，我是大飞。2024年诺贝尔化学奖颁给AlphaFold团队的时候，整个科技圈和生物圈都在说困扰学界半个世纪的蛋白质折叠难题被AI彻底攻克了。一个原本要花一年、十万美金才能解析的蛋白结构，现在几分钟就能算出来，两亿个蛋白结构免费开放给全世界，怎么看都是划时代的突破。但很少有人注意到，AlphaFold的核心负责人<strong>John Jumper</strong>自己始终在给这件事降温。他在最近的一期深度访谈里直白地说，如果你拿AlphaFold的预测去做药物靶点，十次里面有九次都是错的。更有意思的是，拿完诺奖没多久，他就离开了DeepMind，加入了<strong>Anthropic</strong>，一个做科学AI的顶尖专家。为什么要去通用大模型公司？AlphaFold的真实能力边界到底在哪里？今天我们就顺着这期访谈来聊聊这些问题。</p>
+<h3>蛋白质折叠的生物学本质与传统瓶颈</h3>
+<p>先回到问题本身：为什么蛋白质折叠是生物学的圣杯级难题？简单说，DNA是生命的说明书，但真正在细胞里干活的是蛋白质，它从一条氨基酸链自折叠成三维结构，结构决定功能，功能决定了整个生命活动的运转。但半个世纪以来，我们能轻松测序DNA，却很难测出蛋白质的三维结构。传统的X射线晶体学要先把蛋白提纯结晶，再用同步辐射级别的X射线照射解析，顺利的话也要一整年，成本大概十万美金，很多蛋白方向的博士读了五年都未必能拿到一个合格的结构。为了推动这个领域的进展，学界每两年会办一场双盲评测，全称是<strong>蛋白质结构预测关键评估（Critical Assessment of Structure Prediction），简称CASP</strong>。主办方会拿刚刚实验解析出来、还没公开的蛋白结构当题目，让全世界的团队用算法预测最后比对准确率。几十年里大家的进步都是挤牙膏式的，直到2020年的第十四届CASP，<strong>AlphaFold2横空出世</strong>，在单链蛋白上的预测精度已经和实验结果相差无几，主办方直接宣布蛋白质结构预测这个问题本质上已经被解决了。之后的事情大家都熟悉了，DeepMind没有把技术藏起来，反而上线了<strong>AlphaFold蛋白质结构数据库</strong>，把超过两亿个预测的蛋白结构全部免费开放，覆盖了几乎所有已测序的生物。到今天，这个工具已经被全球190多个国家、超过300万研究者使用。2024年，诺贝尔化学奖正式颁出，一半给了做蛋白质设计的大卫·贝克（David Baker），另一半给了德密斯·哈萨比斯（Demis Hassabis）和John Jumper，表彰他们在蛋白质结构预测上的贡献，AI第一次正式成为了化学家的核心工具。</p>
+<h3>专家视角：给AlphaFold祛魅与研究范式转变</h3>
+<p>也就是在这期访谈录制后不久，Jumper宣布离开Google DeepMind，加入Anthropic。很多人会好奇一个深耕结构生物学的专家为什么要去做通用大模型的公司？访谈里没有直接回答这个问题，但整个对话看下来你大概能摸到他的思考方向：他从来没把AlphaFold当成一个生物学的终点，而是在探索AI做科学的通用方法论。不过在聊技术细节之前，Jumper反复强调的第一件事就是给<strong>AlphaFold祛魅</strong>。很多人把AlphaFold吹成了生命模型，觉得有了它就能治愈疾病、破解生命奥秘，但在他看来，AlphaFold只是一个非常窄的预测器，它只擅长预测这一类结构生物学实验的结果，它不是细胞的全模型，也不能直接告诉你怎么治病。它最大的价值是把原本要花一年的实验压缩到几分钟，给科学家提供一个高质量的研究起点，而不是直接给出终极答案。</p>
+<p>我们先得明白蛋白质到底是什么。Jumper打了个很形象的比方：蛋白质就像细胞里的自组装纳米机器，你打开宜家（IKEA）的包装盒，家具自己就拼好了。每个蛋白质由二十种氨基酸串联而成，几千个原子自发折叠成螺旋、折叠片这些复杂结构，最后形成特定的功能，细胞的运动、代谢、信号传导，所有的生命活动本质上都是这些蛋白质机器在干活。人类基因组里大概有两万种不同的蛋白质，每一种的结构和功能都值得科学家花好几年去研究。有了结构预测工具之后，生物学家的研究范式确实变了。最常见的用法是和**冷冻电镜（Cryo-EM）**这类实验技术配合。冷冻电镜能拍出蛋白的整体轮廓但分辨率不够，看不到原子级的细节，以前大家调侃它是“Blob学”，就是一团模糊的球。现在把实验得到的轮廓和AlphaFold的预测一比对，形状刚好能对上，很快就能拼出完整的原子级模型。比如最近关于胆固醇转运蛋白的研究，就是用这种方式很快搞清楚了这个蛋白包裹胆固醇的特殊结构，为后续研究高血脂和心脏病的机制打下了基础。</p>
+<h3>案例驱动：从机制破解到药物发现的闭环</h3>
+<p>更有代表性的是<strong>Midnolin的研究案例</strong>。以前大家知道细胞里有一套蛋白回收机制在特定发育阶段会降解不需要的蛋白但一直搞不清具体是哪个蛋白在起作用。后来通过遗传学筛选，研究者找到了一个几乎没人研究过的人类蛋白叫Midnolin，敲低它之后蛋白降解就停了，但没人知道它的工作原理。这时候研究者用AlphaFold把Midnolin和五百多个响应的蛋白放在一起预测，发现差不多40%的靶蛋白都会被Midnolin的两个结构域像钳子一样夹住。后续的实验验证里十个靶点有九个完全符合预测，剩下一个部分符合，最后发现是因为AlphaFold预测了两个结合位点把第二个也去掉之后降解就完全停止了。就这样，一个全新的蛋白降解机制靠着AlphaFold的预测快速被破解了。但Jumper也明确说，这只是研究的第一步，从搞懂机制到做出药物中间还有很长的路。</p>
+<h3>边界拓展：从纯蛋白到“蛋白质电影宇宙”</h3>
+<p>AlphaFold2只能预测纯蛋白的结构，但真正的药物分子、脂质、核酸这些非蛋白分子它都处理不了。所以一年前推出的<strong>AlphaFold3</strong>把预测范围扩展到了整个PDB里的所有分子，包括药物小分子、配体、核酸等等，也就是Jumper说的“蛋白质电影宇宙”。现在你可以用它预测药物分子和蛋白的结合位点，这才真正摸到了药物发现的门槛。Alphabet旗下的<strong>Isomorphic Labs</strong>就是沿着这个方向试着用AI技术从头设计药物分子干预蛋白的功能，最终走向临床治疗。这里Jumper用了一个老笑话打比方：工厂里有台核心机器坏了，技师过来拧了四分之一圈螺丝机器就好了，收费一万美元。老板说拧个螺丝怎么这么贵，技师说拧螺丝只值五十美分，但知道拧哪颗螺丝值九千九百九十九块五。药物研发就是这样，AlphaFold帮我们更快找到“该拧哪颗螺丝”，但真正把药做出来，还要走很长的路。</p>
+<h3>架构深度解析：AlphaFold2的工程细节与经验主义</h3>
+<p>聊到这里其实就能感受到Jumper的风格，他始终对技术保持着很强的谦卑感。他反复说，AlphaFold的定位非常清晰，它只预测这一种实验的结果，它不解释整个细胞的运行规律，更不是什么通用生命模型，你可以把它理解成一个一键生成“Nature级论文结果”的机器，但只限于单一蛋白结构这一个狭窄的领域。很多人会觉得十次预测错九次这也太没用了，但Jumper说，在机器学习领域十次错九次已经是非常成功的模型了，因为它把原本零敲碎打的研究变成了可以高通量筛选的流水线，你可以一次性跑几千个预测从中找出最可能成立的假设再去做实验验证，哪怕命中率只有十分之一也比以前盲人摸象式的研究效率高太多了。这其实也是<strong>AI for Science最核心的价值</strong>，它不是替代科学家而是把科学家从耗时最长的体力活里解放出来，把精力花在真正的思考和判断上。但反过来，我们也不能神话它，指望一个结构预测工具解决所有生物学问题是不现实的，生物学的复杂度远不止蛋白质结构这一层。</p>
+<p>聊完了应用和边界，我们再往技术底层走看看<strong>AlphaFold2到底是怎么做到的</strong>。很多人提到AlphaFold第一反应是几何深度学习、SE3等变性觉得是这个数学上的对称设计造就了AlphaFold的成功，但Jumper直接给这个观点泼了冷水，他说外界对AlphaFold的技术归因很多都是错的。我们先捋清楚三代AlphaFold的路线：<strong>AlphaFold1本质上是个卷积神经网络</strong>，用的是计算机视觉那套现成的架构，中间夹着蛋白质领域的预处理和后处理，本质上是把图像识别技术套用到了蛋白质问题上。到了<strong>AlphaFold2</strong>，团队彻底换了思路，不再套用通用视觉模型而是从头搭建了一套完全服务于蛋白质结构预测的架构。整个架构最核心的部分叫<strong>进化变换器（Evoformer）</strong>，占了整个模型90%以上的算力和精度贡献。它的输入有两部分：一是目标蛋白的氨基酸序列，二是所有进化上同源的蛋白序列，也就是多序列比对（MSA），因为蛋白结构在进化上非常保守，人类的蛋白和酵母、甚至大肠杆菌的同源蛋白结构往往都很像。Evoformer用两种轴向注意力在序列信息和两两残基的几何信息之间来回迭代，让进化信息和几何约束互相修正，最终输出每个残基之间的距离预测。在Evoformer之后是<strong>结构模块</strong>，相当于一个几何生成引擎把两两距离的约束转化成真实的三维坐标。这里面用到了大家常说的不变点注意力（Invariant Point Attention，IPA），也就是符合SE3空间变换不变性的注意力机制，简单说就是不管你把整个蛋白怎么平移旋转计算结果都不会变。但比IPA更重要的其实是基于局部坐标系设计的损失函数，叫做**帧对齐点误差（Frame Aligned Point Error，FAPE）**的思路是站在每个氨基酸残基的局部坐标系里看其他残基的位置准不准最后把所有局部视角的误差平均起来。Jumper说这个损失函数才是早期最关键的突破之一，比等变性的作用大得多。除此之外，团队还做了很多反直觉的设计：比如模型初始化的时候他们甚至把所有残基都堆在同一个点上，也就是所谓的“黑洞初始化”，完全不符合物理规律但模型依然能自己迭代出正确的结构；再比如他们没有严格遵守蛋白质的化学键几何约束，传统的结构优化会把蛋白当成串联的机械臂只能沿着键角扭转三百多个残基就要有上千个关节优化起来非常慢，AlphaFold干脆把每个残基当成独立的“残基气体”不预设键长键角的约束让模型自己去学结果只需要几步迭代就能收敛速度快了很多。</p>
+<p>更有意思的是消融实验的结果：<strong>AlphaFold2比AlphaFold1在全局距离测试（Global Distance Test，GDT）精度上高了大概30分</strong>，这是质的飞跃，但去掉IPA，也就是去掉等变性之后，精度只掉了2到2.5分连十分之一都不到。换句话说，被外界吹上天的几何等变性其实只贡献了很小一部分性能，真正的提升是几十个大大小小的工程细节堆出来的。Jumper说审稿人评价AlphaFold2的论文说这相当于六七篇普通论文的工作量不是一两个惊天动地的想法而是十几个中等体量的优化叠在一起最终形成了质变。用棒球的类比说，不是一两个本垒打而是十八个二垒安打攒出来的胜利。还有个很反常识的实验：团队把架构里的卷积层全部删掉参数变少了模型精度反而变高了。这在常规机器学习里几乎不可能发生因为通常参数越少拟合能力越差，但是在蛋白质这个特定问题上卷积层反而在干扰模型学习真正的规律。这也是为什么Jumper说做科学AI不能抱着通用方法论生搬硬套必须在具体问题上反复试错积累属于这个领域的直觉，这种靠大量消融实验驱动迭代的思路他把它叫做**“无情的经验主义”**。</p>
+<p>最能体现架构价值的是数据量的对比：AlphaFold1和AlphaFold2用的训练数据完全一样都是当时PDB里大概14万个实验结构没有增加数据量就实现了30分的精度飞跃。后来有个实验室做了复刻只用1%的PDB数据也就是一千五百个结构训练出来的AlphaFold2精度居然比用全部数据训练的AlphaFold1还高，换句话说，AlphaFold2的架构创新等效于把数据效率提升了一百倍。这也是Jumper最反对外界标签化AlphaFold的原因。很多人喜欢用一句话概括成功原因比如“用了Transformer”“用了扩散模型”，但真正的核心竞争力是在这个特定问题上常年摸爬滚打积累的隐性知识是几百次消融实验试出来的细节优化，这些东西没法写进一句话的总结里但才是真正的壁垒。</p>
+<h3>预测、控制与理解：AI的认知层次划分</h3>
+<p>聊到这里主持人抛出了一个更本质的问题：AlphaFold能准确预测结构算不算真正“理解”了蛋白质折叠呢？Jumper的回答很有意思，他把这件事分成了三个层次：<strong>预测、控制、理解</strong>。预测很简单，就是你给我一个序列我告诉你结构是什么能复现实验结果。控制更进一步，就是我想要某个功能的蛋白我能设计出对应的序列让它折叠成我要的结构。而理解是人类层面的事，你能用几句话、一张小卡片把背后的规律讲清楚让另一个人也能听懂。现在的AI能做到很好的预测也开始能做到部分控制，但它不会替人类完成“理解”这件事。我们可以去分析AlphaFold的中间层可以研究它的预测规律，但最终的理解还是要靠人自己来完成。这里他还提出了一个很经典的区分：你写进代码里的算法和模型最终学到的算法不是一回事。AlphaFold最终呈现出的“逐步细化结构”的行为很像人类做结构优化的思路，但这不是我们写进代码里的是模型自己从数据里学出来的，我们加的循环机制只是帮它更快地学到了这个过程而不是直接规定了它必须这么做。就像大语言模型我们只写了预测下一个token的目标但是模型为了做好这件事自发地学会了推理、规划、知识记忆这些能力，你不能说因为目标是预测下一个token模型就没有规划能力。同样你也不能因为AlphaFold最终呈现出迭代优化的行为就说这是人类设计的功劳。</p>
+<h3>领域专属架构的胜利与AI for Science的未来</h3>
+<p>顺着这个话题就聊到了机器学习里很有名的**“苦涩教训（Bitter Lesson）”<strong>，这个观点说长远来看通用的、靠算力和数据堆出来的方法永远会打败人类精心设计的领域专属方法。但Jumper直接说他不认同把苦涩教训随便套在所有问题上，AlphaFold2本身就是苦涩教训的反面。为什么？因为科学领域的数据不是无限的，蛋白质的实验结构就这么多，互联网再大也变不出更多高质量的标注数据。当数据有限的时候人类的领域知识、精心设计的架构就能发挥巨大的作用。AlphaFold的成功恰恰是</strong>领域专属架构的胜利**而不是通用方法的胜利。当然这也不是说通用方法没用，正确的态度是保持谦卑分清楚哪些东西该写进代码里哪些东西该留给模型从数据里学，不要觉得自己想出来的高级概念就一定有用也不要觉得通用方法就能解决一切。</p>
+<p>说到这里自然就聊到了<strong>AlphaFold3</strong>。很多人说AlphaFold3是扩散模型标志着路线的切换，但Jumper说这又是外界的标签化误解。AlphaFold3确实用了扩散，但它和图像领域的扩散模型完全不是一回事。AlphaFold3前面同样有一个巨大的主干网络只跑一次核心的结构信息其实已经在这个主干里确定了，后面的扩散模块本质上和AlphaFold2的结构模块作用一样是个几何细化引擎把主干给出的约束细化成精确的原子坐标顺便处理配体、小分子这些更复杂的成分。而且两者的求解顺序刚好反过来，AlphaFold2是从局部结构开始慢慢拼出整体也就是从易到难，而AlphaFold3的扩散过程一开始加了很大的噪声最先要解决的反而是整体的相对位置也就是最难的部分，后面再细化细节但最难的整体结构其实还是靠前馈主干网络解决的不是靠扩散过程一步步猜出来的。所以Jumper说大家总喜欢给技术贴标签说这是Transformer这是扩散模型好像一个标签就能解释所有成功，但实际上Transformer解释不了大语言模型这几年的所有进步扩散也解释不了AlphaFold3的突破，真正重要的永远是那些数不清的细节优化而不是一个高高在上的技术标签。</p>
+<h3>普惠价值：AI如何赋能全球科研</h3>
+<p>最后主持人把话题延伸到了<strong>AGI</strong>的话题上，Jumper的看法同样很务实。他说表征这件事确实很重要，但它不像五年前大家想的那样需要你专门写代码去强制解耦和专门设计概念单元。现在我们看到的是只要你把预测任务做到极致模型为了做好预测会自发地学习到好用的中间表征、抽象概念甚至推理能力。当然这个过程非常费数据能力是随着算力和数据量按Scaling Law慢慢涨上去的，现在我们还没找到更便宜的获取表征的方法。有些能力可以靠外部工具补，比如给大模型加外部记忆让它写笔记自己看能解决长上下文遗忘的问题，但怎么把外部工具的能力蒸馏回模型本身让它不需要外挂也能有同样的能力我们现在还没搞清楚。换句话说现在的AI发展还是处在靠数据和算力堆能力的阶段很多底层的机制我们依然不理解。AlphaFold的经验告诉我们，在具体领域里领域知识和架构设计能带来巨大的效率提升，但通用智能这条路要怎么走现在还没有标准答案。</p>
+<p>聊完了技术和未来这期访谈还找了一位非洲的结构生物学家**伊曼纽尔·恩吉（Emmanuel Nji）**来讲AlphaFold在真实世界里的普惠价值。恩吉的研究方向是疟疾和耐药菌的药物研发。在AlphaFold出来之前，非洲的研究者根本用不起昂贵的同步辐射也没条件做大量的晶体学实验，他自己曾经花了四五年都没能解析出一个目标蛋白的结构。有了AlphaFold之后他只做了一次蛋白纯化配合冷冻电镜数据两三个月就拿到了完整的结构，原本要花好几年的工作直接压缩到了几个月。现在他在做的事是给非洲培养本土的结构生物学家。今年在Google DeepMind和瑞典研究理事会的资助下他们已经培训了一百名研究者教学质量不仅没下降反而还有提升，他们的目标是未来十年每年培训一百人总共培养一千名非洲本土的结构生物学家针对疟疾、HIV、耐药菌这些非洲高发的疾病建立起自己的科研队伍。你看一项技术的伟大从来不止是发论文拿诺奖更重要的是它能把原本只有顶尖实验室能做的事普惠到全世界让更多人能参与到科研里来，这可能也是AlphaFold最被低估的价值。</p>
+<p>整期访谈看下来最强烈的感受就是真正做前沿技术的人反而最清醒，外界在忙着造神、忙着贴标签、忙着宣布某某问题已经被彻底解决的时候真正的从业者最清楚技术的边界在哪里，最明白每一点进步背后是多少试错和细节堆出来的。AlphaFold不是什么万能的生命模型它只是一个非常窄但做得非常好的预测工具它没有终结结构生物学反而给这个领域装上了加速器，而<strong>AI for Science的未来也不会是一个通用大模型解决所有科学问题而是像AlphaFold这样通用技术和领域知识深度结合的混合模型</strong>。最后留一个问题给大家：如果未来AI能帮我们预测越来越多的实验结果那科学家的核心能力会发生什么样的变化？欢迎在评论区留言讨论，感谢收看，我们下期再见。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">structure-prediction</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">scientific-methodology</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/model-evaluation/">model-evaluation</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">domain-specific-architecture</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">empirical-pragmatism</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

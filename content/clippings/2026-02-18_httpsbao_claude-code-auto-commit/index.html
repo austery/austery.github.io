@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>用 Claude Code 的 Hook + Skill，实现每次提交后自从 commit 提交变更 | 宝玉的分享</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="用 Claude Code 的 Hook + Skill，实现每次提交后自从 commit 提交变更 | 宝玉的分享" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">用 Claude Code 的 Hook + Skill，实现每次提交后自从 commit 提交变更 | 宝玉的分享</span>
+      <span data-pagefind-meta="speaker" style="display:none;">baoyu.io</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-02-18
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/software-development/">software-development</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/baoyu-io/">baoyu.io</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://baoyu.io/blog/2026-02-13/claude-code-auto-commit" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-02-18
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本文介绍了一种使用 Claude Code 的 Hook 和 Skill 机制，实现代码变更自动提交的方法。通过在任务结束时触发一个自定义的 `Stop` Hook，脚本会检查工作区是否有未提交的变更。若有，则阻止 Claude Code 结束任务，并调用一个 `/commit` Skill。该 Skill 能够智能分析变更内容，按文章、代码或配置等主题进行分组，并自动生成规范的中文 Commit Message。这一方案旨在提高开发者工作效率，确保 Git 历史记录的清晰和完整性，避免遗漏任何修改。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>宝玉的分享</p>
+<p>Menu</p>
+<p>See all posts</p>
+<p>Published on 2026-02-18</p>
+<h1>用 Claude Code 的 Hook + Skill，实现每次提交后自从 commit 提交变更</h1>
+<p>作者：</p>
+<p>宝玉</p>
+<p>我用 Git 管理所有写作内容，文章、素材、提纲、草稿，全在仓库里。问题是我经常忘记提交。写完一篇文章，润色完，发布了，然后就去忙别的了。过几天一看 git status，十几个文件的变更堆在那里，完全不记得哪次改了什么。Git 本来是用来追踪每一步修改的，结果变成了一个大杂烩的快照工具。</p>
+<p>现在我用 Claude Code 跑写作流程，从素材分析到成稿发布基本都交给它。既然每次任务它都在改文件，能不能让它改完就自己提交？</p>
+<p>两个机制配合就解决了。</p>
+<h2>Hook：任务结束时的拦截器</h2>
+<p>Claude Code 支持 Hook 机制，在特定事件（会话开始、工具调用前后、任务结束等）发生时自动执行脚本。思路和 Git Hook 类似，但挂在 Claude Code 的生命周期上。</p>
+<p>我在项目的 .claude/settings.local.json 里配了一个 Stop Hook，每次 Claude Code 准备结束任务时触发：</p>
+<pre><code>&lt;code class=&quot;language-json&quot;&gt;&quot;hooks&quot;: {
+  &quot;Stop&quot;: [{
+    &quot;hooks&quot;: [{
+      &quot;type&quot;: &quot;command&quot;,
+      &quot;command&quot;: &quot;\&quot;$CLAUDE_PROJECT_DIR\&quot;/.claude/hooks/auto-commit.sh&quot;
+    }]
+  }]
+}
+&lt;/code&gt;
+</code></pre>
+<p>脚本做的事很简单：检查工作区有没有未提交的变更（新文件、修改、删除），如果有，就阻止 Claude Code 停下来，告诉它“你还有活没干完，去提交”。</p>
+<p>核心逻辑就这几行：</p>
+<pre><code>&lt;code class=&quot;language-bash&quot;&gt;if git diff --quiet &amp;&amp; git diff --cached --quiet &amp;&amp; \
+   [ -z &quot;$(git ls-files --others --exclude-standard)&quot; ]; then
+  exit 0  # 没变更，正常结束
+fi
+
+# 有变更，拦住它
+echo '{&quot;decision&quot;: &quot;block&quot;, &quot;reason&quot;: &quot;检测到未提交的变更，请调用 /commit 技能提交更新。&quot;}'
+&lt;/code&gt;
+</code></pre>
+<p>还有个细节：提交本身也会触发“任务结束”，不处理就无限循环。脚本用 stop_hook_active 标志跳过二次触发。</p>
+<h2>Commit Skill：让提交有意义</h2>
+<p>Hook 只管拦截，具体怎么提交靠 Commit Skill。</p>
+<p>Skill 是 Claude Code 的技能模块，放在 .claude/skills/ 目录下，用 SKILL.md 定义工作流程。name 字段自动变成 /slash-command，手动或自动都能触发。相当于一份操作手册，告诉 Claude Code 遇到特定任务该怎么做。</p>
+<p>我的 /commit 技能定义了这些规则：</p>
+<p>先分析变更文件的路径，判断改的是文章、技能配置还是代码</p>
+<p>按主题分组提交，不把所有东西塞进一个 commit。比如改了两篇文章，就分两次提交</p>
+<p>自动生成中文 commit message，格式固定：文章用“添加/润色/更新 + 主题”，代码用“优化/修复 + 功能”</p>
+<p>明确指定提交文件，避免 git add . 这种粗暴操作，排除临时文件和备份文件</p>
+<p>这样 git log 里看到的是：</p>
+<pre><code>&lt;code&gt;42257b3 添加 Amodei NYT 访谈整理文章
+c4eee96 添加 Peter Steinberger OpenClaw 访谈整理文章
+e2a01da 润色 Suleyman FT 专访文章
+&lt;/code&gt;
+</code></pre>
+<p>每条都说得清楚这次改了什么，不是那种“update files”或者“misc changes”的垃圾信息。</p>
+<p>两个机制的配合：Hook 当守门员，保证没有变更被遗漏；Skill 当执行者，保证每次提交都有意义。 我再也不用惦记提交这件事了。</p>
+<h2>附录：完整配置</h2>
+<h3>Hook 脚本</h3>
+<p>文件路径：.claude/hooks/auto-commit.sh</p>
+<pre><code>&lt;code class=&quot;language-bash&quot;&gt;#!/bin/bash
+# Stop hook: 任务完成后自动检测未提交变更并触发 commit skill
+
+INPUT=$(cat)
+STOP_HOOK_ACTIVE=$(echo &quot;$INPUT&quot; | jq -r '.stop_hook_active // false')
+
+# 防止无限循环：commit 后再次触发时直接放行
+if [ &quot;$STOP_HOOK_ACTIVE&quot; = &quot;true&quot; ]; then
+  exit 0
+fi
+
+# 检查是否有未提交的变更
+cd &quot;$CLAUDE_PROJECT_DIR&quot; 2&gt;/dev/null || exit 0
+
+# 检查工作区是否有变更（已修改、新文件等）
+if git diff --quiet 2&gt;/dev/null &amp;&amp; git diff --cached --quiet 2&gt;/dev/null &amp;&amp; [ -z &quot;$(git ls-files --others --exclude-standard 2&gt;/dev/null)&quot; ]; then
+  # 没有变更，正常结束
+  exit 0
+fi
+
+# 有未提交变更，阻止 Claude 停止，让它继续执行 commit
+cat &lt;&lt;'EOF'
+{&quot;decision&quot;: &quot;block&quot;, &quot;reason&quot;: &quot;检测到未提交的变更，请调用 /commit 技能提交更新。&quot;}
+EOF
+&lt;/code&gt;
+</code></pre>
+<h3>Commit Skill</h3>
+<p>文件路径：.claude/skills/commit/SKILL.md</p>
+<pre><code>&lt;code class=&quot;language-markdown&quot;&gt;---
+name: commit
+description: 提交当前未 commit 的修改。自动分析变更内容，生成规范的 commit message，支持按目录分组提交或一次性提交所有修改。
+---
+
+# Git Commit 技能
+
+提交当前未 commit 的修改到 git 仓库。
+
+## 工作流程
+
+### 步骤一：查看未提交修改
+
+git status --short
+
+分析变更类型：
+- M - 已修改
+- ?? - 新文件（未跟踪）
+- D - 已删除
+- R - 重命名
+
+### 步骤二：分析变更内容
+
+根据修改文件路径判断变更类型：
+
+| 路径模式 | 变更类型 |
+|----------|----------|
+| posts/YYYY-MM-DD/[slug]/ | 文章相关 |
+| .claude/skills/ | 技能配置 |
+| src/ | 脚本代码 |
+| .r2-upload-map/ | 资源映射（通常不单独提交） |
+| 其他 | 项目配置 |
+
+### 步骤三：决定提交策略
+
+单一主题修改：一次性提交所有文件
+
+多主题修改：按目录/主题分组提交
+
+分组优先级：
+1. 文章目录（每篇文章一个 commit）
+2. 技能目录（每个技能一个 commit）
+3. 代码变更（合并为一个 commit）
+4. 配置文件（合并为一个 commit）
+
+### 步骤四：生成 Commit Message
+
+格式规范：
+- 用中文
+- 简洁描述变更内容
+- 不超过 50 字
+
+常用模板：
+- 文章：添加 [文章主题简述]、润色 [文章标题]、更新 [文章标题]
+- 技能：添加 [技能名] 技能、更新 [技能名] 技能
+- 代码：优化 [功能描述]、修复 [问题描述]
+- 配置：更新项目配置
+
+### 步骤五：执行提交
+
+git add &lt;file1&gt; &lt;file2&gt; ...
+git commit -m &quot;commit message&quot;
+
+注意：
+- 避免使用 git add . 或 git add -A
+- 明确指定要提交的文件
+- 排除临时文件（.bak-*、.html.bak-*）
+
+### 步骤六：确认结果
+
+git log --oneline -3
+
+输出最近提交记录确认成功。
+
+## 排除规则
+
+以下文件默认不提交：
+- *.bak-* - 备份文件
+- .DS_Store - macOS 系统文件
+- node_modules/ - 依赖目录
+- .r2-upload-map/*.json - 通常随文章一起提交，除非单独要求
+&lt;/code&gt;
+</code></pre>
+<h3>Hook 配置</h3>
+<p>文件路径：.claude/settings.local.json（相关部分）</p>
+<pre><code>&lt;code class=&quot;language-json&quot;&gt;{
+  &quot;hooks&quot;: {
+    &quot;Stop&quot;: [{
+      &quot;hooks&quot;: [{
+        &quot;type&quot;: &quot;command&quot;,
+        &quot;command&quot;: &quot;\&quot;$CLAUDE_PROJECT_DIR\&quot;/.claude/hooks/auto-commit.sh&quot;
+      }]
+    }]
+  }
+}
+&lt;/code&gt;
+</code></pre>
+<p>See all posts</p>
+<p>Built by 宝玉.  RSS . 本站原创内容，独家授权赛博禅心公众号发布。</p>
+<p>Toggle theme</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=宝玉" class="entity-link person-link">宝玉</a>
+                
+              </p>
+            
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Claude Code" class="entity-link product-link">Claude Code</a>, 
+                
+                  <a href="/search/?q=Git" class="entity-link product-link">Git</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/claude-code/">claude-code</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">git-hooks</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-skills/">ai-skills</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/workflow-automation/">workflow-automation</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/developer-productivity/">developer-productivity</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

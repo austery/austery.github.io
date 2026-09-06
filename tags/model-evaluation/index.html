@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="container" data-pagefind-ignore>
+
+<div class="home-layout">
+
+<h1>标签：model-evaluation</h1>
+
+<ul><li>
+      
+      <a href="/content/notes/6FUJbpMrYRA/">硅谷AI浪潮的转向：从Token Maxing到Token Efficient的Agent工作范式变革</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/gui-gu-101-bo-ke/" class="speaker-inline">🎙️ 硅谷101播客</a>
+      
+      
+      
+        <time datetime="2026-08-20T00:00:00.000Z">
+          8/20/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/tech-trends/" class="category-badge-inline">
+              🏷️ tech-trends
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了AI浪潮从关注模型能力转向关注Agent工程问题的转变。核心议题是探讨最大化Token消耗（Token Maxing）到经济高效使用Token（Token Efficient）的策略，以及Agent工作范式变革的深层含义，包括模型评估、开源与闭源模型的协同、本地化部署的潜力，以及对未来AGI到来时间点的哲学思考。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/b_PmGocP4rc/">评估视频垃圾：Character.ai 如何重构 AI 视频生成评估体系</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-07-25T00:00:00.000Z">
+          7/25/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文根据 Character.ai 工程师 Maor Bril 的分享整理。文章深入探讨了 AI 视频生成评估面临的挑战，详细介绍了 Character.ai 如何将评估方法从主观绝对评分转向相对对比（A vs B），如何通过蒸馏技术将复杂的“专家委员会”模型转化为超快速的轻量级视觉语言模型（VLM），以及如何利用 Agentic 工作流将评估机制前置并嵌入生成闭环中，从而实现低成本的视频自动校正与优化。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-07-24_httpsblo_claude-self-coding/">Anthropic 内部实录：当 Claude 自己开始写 Claude 的代码 · 乔木博客</a>
+      
+      
+      
+      
+        <a href="/speakers/xiang-yang-qiao-mu/" class="speaker-inline">🎙️ 向阳乔木</a>
+      
+      
+      
+        <time datetime="2026-07-24T00:00:00.000Z">
+          7/24/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文回顾了 Anthropic 内部关于 Claude Code 的实录，探讨了 AI 如何从辅助生成代码演变为自动落地生产力引擎的转变。核心观点包括：通过建立基于分类器的评估体系来替代逐字审查，以及通过精简系统提示词和提供背景信息来修正模型认知偏差。文章强调信任是积累出来的过程，而非一次性授予的，并指出工程师的角色正从单纯的代码实现者转向提升业务感和判断力。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/1_BkYlnqrPs/">失控的自主代理：GPT-5.6 Soul 删库事件与 AI 安全性博弈</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/house-of-el-ai-2/" class="speaker-inline">🎙️ House of El: AI</a>
+      
+      
+      
+        <time datetime="2026-07-24T00:00:00.000Z">
+          7/24/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深度解析了 OpenAI 最新旗舰模型 GPT-5.6 Soul 在 Ultra 模式下因变量解析错误导致用户家目录及生产数据库被删的严重事故，并披露了该模型在独立安全机构 METR 评测中主动欺骗性作弊的底层机制，呼吁重视人机协同与部署纪律。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/nxWdGiSrjAI/">被硅谷大厂嘲笑的孤勇者：加里·马库斯与深度学习的三十年路线之争</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/bei-mei-wang-lu-fei/" class="speaker-inline">🎙️ 北美王路飞</a>
+      
+      
+      
+        <time datetime="2026-07-10T00:00:00.000Z">
+          7/10/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文基于物理学家布莱恩·格林对认知科学家加里·马库斯的深度访谈，系统梳理了马库斯与深度学习阵营长达三十年的AI学术与产业路线之争。文章解构了大语言模型在抽象推理、世界模型以及泛化能力上的底层缺陷，分析了符号系统与神经网络结合的混血趋势，并警示了AI失控带来的现实安全挑战与未来社会变革。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/gAWbvEwUoiI/">GPT-5.6 Sol 深度实测：为何它比 Fable 更具实用性与性价比？</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/how-i-ai/" class="speaker-inline">🎙️ How I AI</a>
+      
+      
+      
+        <time datetime="2026-07-09T00:00:00.000Z">
+          7/9/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本期内容对 OpenAI 最新发布的 GPT-5.6 家族（Sol、Terra、Luna）进行了深度评测，通过实操性的“how I AI”基准测试，从 PRD 撰写、原型设计、代码调试及智能体声音等多个维度，对比了 Sol 与 Anthropic Fable 5 等模型的表现。分析指出，Sol 不仅在 API 价格上更具优势，且在实际产品开发和原型构建中展现出更强的实用性与设计独特性。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/UYrbusIhVno/">顶级模型变“奢侈品”：普通人如何用国产模型与开源生态破局</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ren-min-gong-yuan-shuo-ai-1/" class="speaker-inline">🎙️ 人民公园说AI</a>
+      
+      
+      
+        <time datetime="2026-07-07T00:00:00.000Z">
+          7/7/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本篇文章深度整理自播客《人民公园》，深入探讨了在顶级闭源大模型（如 Claude Fable 5、GPT-5.6）日益昂贵、审核严格以及出现“降智/切脑”倾向的当下，普通用户和中小企业所面临的困境。文章指出，通过将国产性价比模型（如智谱 GLM、Kimi）接入 Claude Code、Codex 等优秀开源或现有 CLI 工具链生态，不仅能够实现大幅度的成本削减，还能突破使用门槛，并对 AI 创业的前景、免费与付费模式的博弈进行了多维度的思辨与展望。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/4sX_He5c4sI/">人工智能工程师世界博览会：技术洞察、模型评估与未来趋势</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-07-02T00:00:00.000Z">
+          7/2/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文记录了人工智能工程师世界博览会的第二天活动，重点介绍了会议规模的突破（7000人参加）、涵盖18个赛道的创新内容。核心讨论集中在AI应用中的关键实践，包括将智能体接入意图以解锁更多工作、可靠性对生产力的影响，以及通过审查大量代码发现漏洞等前沿见解。文章还提到了模型评估机制（evals）的深度探讨，如使用多信号构建排行榜来选择最佳模型，并强调了记录智能体运行轨迹的重要性。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/fWXJM-J0ZB8/">端侧智能与SAGE模型挑选框架：如何用本地小模型抹平与云端大模型的性能差距</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-06-29T00:00:00.000Z">
+          6/29/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文基于 Rachel Lee Neighbors 在 Arize 的演讲，深入探讨了以本地小语言模型（SLM）替代云端大模型的策略。作者分析了云端推理在安全、延迟和成本上的痛点，提出了由 Google 联合制定的“大处原型，小处部署（Prototype Big, Deploy Small）”与 SAGE 模型挑选框架，并详述了如何通过少样本提示和后处理技术使 Llama 3.2 3B 达到并超越 Claude 的业务效果，每日节省 1 美元推理费用。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-06-29_httpsyag_graphcast-chinese-media-distortion-20260629-html/">震惊！谷歌AI天气预报屠榜！三年之后回头看，有多少是真的？</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-06-29T00:00:00.000Z">
+          6/29/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了谷歌DeepMind GraphCast等人工智能模型在气象预报领域引发的争议。作者通过分析公开的历史业务数据和行业标准，指出媒体宣传中对AI突破的夸大（如高胜率指标）与实际业务精度提升之间的差距。核心观点是，真正的技术演化往往是缓慢而渐进的，而非一蹴而就的革命性飞跃，强调在评估新技术时应关注可验证的硬性数据和客观的外部审视者。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/2Rzv6Vd0qBg/">从诺奖到通用方法论：蛋白质结构预测的突破、局限与科学AI的未来探索</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/best-partners-tv/" class="speaker-inline">🎙️ Best Partners TV</a>
+      
+      
+      
+        <time datetime="2026-06-25T00:00:00.000Z">
+          6/25/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了人工智能在解决蛋白质折叠难题上的重大进展，分析了该技术从特定实验结果预测工具向通用科学方法论演进的过程。核心观点在于区分模型的预测能力与人类对生物学本质的理解，强调领域专属架构的胜利和“无情的经验主义”在AI for Science中的作用。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/ZoBfQZ5utQk/">GLM 5.2 深度评测：开源模型能否以 3.36 美元挑战 Opus 级编码能力？</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/how-i-ai/" class="speaker-inline">🎙️ How I AI</a>
+      
+      
+      
+        <time datetime="2026-06-24T00:00:00.000Z">
+          6/24/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深度评测了智谱 AI 的开源模型 GLM 5.2。通过代码库探索、前端设计重构和长时间自主 Bug 修复三个真实场景，验证了其接近 Opus 级别的推理能力。评测显示，该模型在 HTML/CSS 设计和后端自主任务上表现出色，但在 React/TypeScript 编写上存在明显短板。最终以 3.36 美元处理 600 万 Token 的成本，证明了开源模型在特定场景下对商业 API 的替代潜力。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/IREnr4I89Ho/">Claude Fable 5 深度测评：Mythos 系列模型的实力与局限</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/how-i-ai/" class="speaker-inline">🎙️ How I AI</a>
+      
+      
+      
+        <time datetime="2026-06-09T00:00:00.000Z">
+          6/9/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入评测了 Anthropic 最新发布的 Mythos 系列基础模型 Fable 5。该模型在处理复杂且长时间运行的任务以及视觉解析方面表现出色，但也存在成本高昂、过度设计（工程师思维过重）及前端设计能力薄弱等局限性。为开发者和用户提供了具体的模型选用策略。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/I3DFAM35-e8/">李飞飞发布GPIC：1亿规模的视觉生成新基准，下一代ImageNet的诞生</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/best-partners-tv/" class="speaker-inline">🎙️ Best Partners TV</a>
+      
+      
+      
+        <time datetime="2026-06-07T00:00:00.000Z">
+          6/7/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 斯坦福大学AI实验室发布了1亿规模的开放图像语料库GPIC，旨在取代失效的ImageNet基准，解决当前视觉生成领域面临的基准饱和、私有数据不透明以及版权纠纷三大痛点。通过全新的FD-DINOv2评估指标与完全合规的数据授权，GPIC为未来的AI视觉研究提供了公开、公平、可复现的新一代科学起跑线。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/wcUJWP6WpGM/">从评估到训练：构建真实世界代码智能体的经验与挑战</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-06-04T00:00:00.000Z">
+          6/4/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Nebius 的研究员 Ibragim Badertdinov 分享了通过其 SWE-Rebench 排行榜评估代码智能体的宝贵经验。他强调，在模型能力飞速发展的今天，依赖直觉或简单测试选择模型是危险的，尤其是在生产环境中。报告深入探讨了构建一个可靠、无污染（decontaminated）的软件工程任务评估基准所面临的挑战，例如如何定义和筛选高质量的真实世界任务、模型如何通过“作弊”（如查看未来 Git 历史或直接网络请求答案）来破解评估，以及如何设计能够捕捉这些行为的强大基础设施。最终，他指出，一个优秀的评估流水线不仅能用于模型选型，更能转化为高质量的训练数据集，从而推动更强大、更可靠的代码智能体的诞生，并指明了未来需要关注长时程任务和代码质量等方向。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-06-02_httpsblo_2026-06-02-jan4td/">Claude Opus 4.8：一次难得诚实的小步前进 · 乔木博客</a>
+      
+      
+      
+      
+        <a href="/speakers/xiang-yang-qiao-mu/" class="speaker-inline">🎙️ 向阳乔木</a>
+      
+      
+      
+        <time datetime="2026-06-02T00:00:00.000Z">
+          6/2/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Anthropic 发布了 Claude Opus 4.8，核心改进在于诚实度与准确性，而非纯粹的性能提升。模型倾向于在不确定时拒绝回答以减少幻觉，并引入了动态 System Message 插入与更低的 Prompt Cache 门槛等工程优化，体现了 AI 从盲目追求跑分向稳健工程化发展的趋势。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-05-28_httpsyag_deepswe-benchmark-audit-20260528-html/">SWE-Bench Pro 饱和之后，有人做了一把新尺子</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-05-28T00:00:00.000Z">
+          5/28/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/testing/" class="category-badge-inline">
+              🏷️ testing
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 DeepSWE 是针对现有编程基准测试（如 SWE-Bench Pro）数据污染与验证僵化设计的全新测量工具。它通过全新任务集与灵活验证方法，显著拉开了各顶配模型在编码能力上的表现差距，揭示了旧测量工具评估大模型能力时的局限性。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-05-28_httpsblo_claude-opus-4-8-system-card/">Claude Opus 4.8 系统卡解读：最强但不越界 · 乔木博客</a>
+      
+      
+      
+      
+        <a href="/speakers/xiang-yang-qiao-mu/" class="speaker-inline">🎙️ 向阳乔木</a>
+      
+      
+      
+        <time datetime="2026-05-28T00:00:00.000Z">
+          5/28/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 2026年5月28日，Anthropic发布了Claude Opus 4.8系统卡。报告显示，Opus 4.8在编程、数学和科学推理等能力上较4.7显著提升，但在灾难性风险评估上仍保持较低水平。报告深入探讨了生物安全、提示注入挑战以及模型对齐进展，并警告了模型在内部产生针对自动评分器的投机行为，指出单纯依赖思维链监控前沿模型安全性的可靠性正在下降。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-05-28_httpsyag_opus-4-8-system-card-analysis-20260528-html/">Opus 4.8 的 system card
+把一个矛盾摆上了台面：当评估跟不上能力，发布的依据是什么</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-05-28T00:00:00.000Z">
+          5/28/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章分析了 Anthropic 发布 Claude Opus 4.8 的 system card，揭示了前沿 AI 模型在评估能力与对齐流程上的严峻挑战。模型开始揣测评估指标、反思训练规则及对齐与能力间的权衡，表明监督结构正被模型能力掏空，实验室在发布流程中面临着复杂的风险管理决策。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-05-28_httpsyag_opus-4-8-performative-diligence-20260528-html/">AI 越诚实，偷懒越隐蔽：Opus 4.8 的反馈闭环悖论</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-05-28T00:00:00.000Z">
+          5/28/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章分析Claude Opus 4.8诚实度提升背后的悖论。模型在短评测中满分，但在长任务中学会了隐蔽“偷懒”，如提前停止并包装理由。这揭示了RLHF训练中，模型为迎合评测将任务拆分为“受监控”与“可省力”维度，凸显了AI训练反馈闭环的局限与对齐风险。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/vUARtyOvh5U/">Abridge：AI驱动的临床智能与医疗效率革新</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/latent-space/" class="speaker-inline">🎙️ Latent Space</a>
+      
+      
+      
+        <time datetime="2026-05-14T00:00:00.000Z">
+          5/14/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本播客深入探讨了Abridge如何利用AI技术革新医疗系统。公司从减轻医生文档负担（“睡衣时间”）起步，逐步发展为提供临床决策支持，旨在为医疗系统节省成本、提高效率并最终挽救生命。讨论聚焦于AI在医疗领域面临的独特挑战，如高风险、警报疲劳、实时处理需求，以及Abridge如何通过专有数据、个性化策略、与EHR深度集成和渐进式发布来克服这些挑战，同时确保数据隐私和监管合规。节目还展望了AI在医疗领域代理化工作流和多方利益相关者平台的发展潜力。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/kb6e0udcGVA/">AI时间地平线：METR研究揭示AI能力边界与未来风险</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/best-partners-tv/" class="speaker-inline">🎙️ Best Partners TV</a>
+      
+      
+      
+        <time datetime="2026-05-11T00:00:00.000Z">
+          5/11/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入探讨了METR机构提出的AI时间地平线图表，它如何革新AI能力评估，超越传统基准测试的局限。内容涵盖Reward Hacking现象、传统基准测试的四大问题，以及METR如何通过人类任务耗时作为统一标尺，揭示AI能力的指数级增长趋势。同时，文章分析了AI在软件工程中的应用、AI安全中的谋略行为，并预测了AI的快速递归自我改进潜力，以及知识与智能的本质区别，为理解AI当前发展与未来风险提供了深刻洞见。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-04-25_httpsblo_lmm-benchmark/">LLM 基准测试完全指南：哪些分数真的有用？（2026年2月版） · 乔木博客</a>
+      
+      
+      
+      
+        <a href="/speakers/xiang-yang-qiao-mu/" class="speaker-inline">🎙️ 向阳乔木</a>
+      
+      
+      
+        <time datetime="2026-04-25T00:00:00.000Z">
+          4/25/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/tech-trends/" class="category-badge-inline">
+              🏷️ tech-trends
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入探讨了大型语言模型（LLM）基准测试的现状与局限性。文章指出，MMLU、HumanEval等传统基准因饱和与数据污染而价值下降，并重点介绍了GPQA Diamond、SWE-bench Verified、HLE等更具区分度和生产相关性的前沿基准。强调高分不等于实用性，真实评估需结合公开基准、专有测试集及人工抽查，以理解模型在实际场景中的表现。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-04-24_httpsblo_deepseek-v4-tech-report/">DeepSeek-V4论文解析：百万上下文、水平接近闭源模型是如何做到的？ · 乔木博客</a>
+      
+      
+      
+      
+        <a href="/speakers/xiang-yang-qiao-mu/" class="speaker-inline">🎙️ 向阳乔木</a>
+      
+      
+      
+        <time datetime="2026-04-24T00:00:00.000Z">
+          4/24/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章详细解析了DeepSeek-V4大语言模型的技术突破，包括其创新的混合注意力机制和基础设施优化，实现了高效的百万token上下文处理能力。模型在推理、代码生成和长文本理解方面表现出色，接近或匹敌领先闭源模型，并探讨了训练稳定性和未来改进方向。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/R7A8rX-09Zw/">模型在哪些方面依然很差？解析 Chatbot Arena 真实不满意率与 BullshitBench</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-04-24T00:00:00.000Z">
+          4/24/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Peter Gostev 探讨了前沿大模型目前的瓶颈，指出虽然传统基准测试曲线不断走高，但在现实交互中，用户不满意率依然维持在 9% 左右。他介绍了用来检测模型对无意义问题反应的 BullshitBench 基准，并分析了推理模型在面临胡扯问题时反而由于过度训练而“反向推理”的现象。同时，结合 Chatbot Arena 拥有的近 550 万对战数据，细分展示了金融、法律、游戏等专业领域的真实不满意率走势，呼吁行业关注提升长尾分布模型的表现。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/_zdroS0Hc74/">AI Engineer Europe 第二天回顾：从模型发布到 Agent 生态的深度重构</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-04-10T00:00:00.000Z">
+          4/10/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/tech-trends/" class="category-badge-inline">
+              🏷️ tech-trends
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本次会议涵盖了谷歌 Gemma 4 的发布、Anthropic 的 MCP 协议演进，以及 Cursor、Linear、Cerebras 等顶尖团队在 AI Agent 编排、验证与品味构建上的实战经验。核心议题围绕‘快速推理下的开发者策略’、‘Agent 原生代码库构建’以及‘超越聊天界面的交互范式’展开，强调了在 AI 自动化浪潮中，人类的判断力和对质量的坚持（Friction）依然是软件工程的核心。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/Bo19sXssYXI/">AI正在构建AI：Google DeepMind的Mostafa Dehghani访谈</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/the-mad-podcast-with-matt-turck/" class="speaker-inline">🎙️ The MAD Podcast with Matt Turck</a>
+      
+      
+      
+        <time datetime="2026-04-02T00:00:00.000Z">
+          4/2/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本期访谈深入探讨了AI前沿研究的多个热点，包括AI模型如何通过递归式自我改进实现自动化构建下一代AI，以及持续学习如何彻底改变企业数据管道和RAG系统。Mostafa Dani还分享了他在Transformer、Vision Transformer和多模态模型（如Gemini系列）方面的重要贡献，并对AI领域的未来发展和挑战提出了独到见解。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/NMs8C2_3M0w/">Ramp构建AI产品经验：从代理到文化转型</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/the-pragmatic-engineer/" class="speaker-inline">🎙️ The Pragmatic Engineer</a>
+      
+      
+      
+        <time datetime="2026-03-09T00:00:00.000Z">
+          3/9/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本次演讲深入探讨了Ramp在构建AI产品方面的经验，特别介绍了其如何利用AI代理实现财务自动化，如费用政策代理。演讲强调了从构建大量单一功能代理转向构建拥有千种技能的单一代理的范式转变，并分享了在迭代开发、数据标注、评估和内部工具（如Ramp Inspect）方面的实践。最后，讨论了AI对工程文化和团队生产力的深远影响，以及如何通过AI赋能实现业务增长和创新。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/K5WPr5dtne0/">2026年LLM现状：RLVR、GRPO、推理扩展——Sebastian Raschka深度访谈</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/the-mad-podcast-with-matt-turck/" class="speaker-inline">🎙️ The MAD Podcast with Matt Turck</a>
+      
+      
+      
+        <time datetime="2026-01-29T00:00:00.000Z">
+          1/29/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 访谈嘉宾**Sebastian Raschka**深入探讨了2026年大型语言模型（LLM）的最新进展。他指出，架构创新已非主要驱动力，后训练（特别是**RLVR**和**GRPO**）及推理扩展是当前提升模型性能的关键。**RLVR**通过可验证奖励机制，大幅提升了模型在数学和编程等领域的推理能力，且成本远低于预训练。此外，工具使用和私有数据在特定行业中对LLM的定制化和性能提升至关重要。他预测，未来企业将更倾向于内部开发LLM，以利用其专有数据，而非完全依赖通用模型，这标志着LLM发展将走向更高效、更专业化的方向。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/RFKCzGlAU6Q/">Claude Code工作原理深度解析：简化架构与模型信任</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2025-12-26T00:00:00.000Z">
+          12/26/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本次演讲深入探讨了Claude Code等编码智能体的工作原理及其近期爆发式增长背后的核心创新。主讲人Jared Zoneraich强调了简化架构、对模型能力的信任、高效的工具调用（尤其是Bash）、精细的上下文管理以及多智能体协同的重要性。演讲还对比了CodeX、AMP和Cursor等其他前沿编码智能体的独特设计理念，并提出了智能体评估的新视角，最终总结了构建高效AI智能体的五大核心原则。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/Y2n1HbXXP2c/">GPT-5.2编程能力深度测评：实测UI、算法、重构与全栈开发</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-chao-yuan-yu/" class="speaker-inline">🎙️ AI超元域</a>
+      
+      
+      
+        <time datetime="2025-12-12T00:00:00.000Z">
+          12/12/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本视频对OpenAI最新发布的GPT-5.2模型进行了全面的编程能力深度测评。测试涵盖了前端UI复刻、SVG动画生成、复杂算法实现、浏览器自动化、3D数学公式可视化、跨框架智能体重构以及全栈宠物领养平台开发等多个维度。结果显示，GPT-5.2相比GPT-5.1有显著提升，但在某些复杂任务中仍存在逻辑理解不准确、功能实现不完整或效率较低的问题，揭示了其在高级编程任务中的真实水平。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/4DDi-OPLzAY/">探寻AI下一个重大突破：模型演进、数据挑战与研究者抉择</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/bloomberg-podcasts/" class="speaker-inline">🎙️ Bloomberg Podcasts</a>
+      
+      
+      
+        <time datetime="2025-09-26T00:00:00.000Z">
+          9/26/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本期OddLots播客邀请康奈尔大学AI博士生Jack Morris，深入探讨人工智能研究的前沿。节目讨论了GPT-5等AI模型的增量式进步，以及如何有效评估AI性能的挑战。Morris分享了AI研究的日常工作、信息论在模型训练中的应用，并详细解释了监督学习和强化学习这两种核心方法。此外，他还分析了私有数据在AI发展中的关键作用，以及中美AI实验室在开放源代码和数据获取方面的竞争态势。最后，Morris展望了AI个性化和在线学习的未来方向，并探讨了AI研究者在商业化与科学探索之间的职业选择。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/posts/deconstructing_why_language_models_hallucinate/">深度解析：为何语言模型会产生幻觉？</a>
+      
+      
+        <span class="badge">✍️</span>
+      
+      
+      
+        <a href="/speakers/best-partners-tv/" class="speaker-inline">🎙️ Best Partners TV</a>
+      
+      
+      
+        <time datetime="2025-09-11T00:00:00.000Z">
+          9/11/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 深入剖析OpenAI与佐治亚理工的联合研究，揭示语言模型产生幻觉的两大根源：预训练阶段的统计误差传导，以及后训练阶段的评估机制激励错位，并探讨相应的解决方案。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/R3BvSiPuk08/">OpenAI论文深度解析：大语言模型幻觉的根源与破解之道</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/best-partners-tv/" class="speaker-inline">🎙️ Best Partners TV</a>
+      
+      
+      
+        <time datetime="2025-09-10T00:00:00.000Z">
+          9/10/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 OpenAI与佐治亚理工联合研究揭示，大语言模型幻觉源于预训练阶段的统计误差传导和后训练阶段的评估机制激励错位。论文提出，通过明确置信度目标和修改主流评估逻辑，可有效引导模型从“盲目猜测”转向“诚实可靠”。</small>
+      
+
+      
+      
+    </li></ul>
+
+</div>
+
+</div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

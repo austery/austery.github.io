@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>为何 Rust 独树一帜：对话 Google 工程师与 Tokio 维护者 Alice Ryhl</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="为何 Rust 独树一帜：对话 Google 工程师与 Tokio 维护者 Alice Ryhl" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">为何 Rust 独树一帜：对话 Google 工程师与 Tokio 维护者 Alice Ryhl</span>
+      <span data-pagefind-meta="speaker" style="display:none;">The Pragmatic Engineer</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-05-20
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/software-development/">software-development</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/the-pragmatic-engineer/">The Pragmatic Engineer</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=q9xD36NCtZ8" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-05-20
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">Google Android Rust 团队成员、Tokio 核心维护者 Alice Ryhl 深入解析了 Rust 的核心优势。访谈涵盖了 Rust 的所有权模型、借用检查器和内存安全等关键概念，探讨了其在 Linux 内核中的最新进展、独特的语言治理模式以及 AI 在系统编程中的应用前景。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>Rust 的核心魅力：可靠性与性能</h3>
+<p><strong>主持人</strong>: 如果要你推销一下为什么值得关注或使用 <strong>Rust</strong>，你会怎么说？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: What would your pitch be on why it's worth checking out Rust or working with Rust?</p>
+</details>
+<p><strong>Alice Ryhl</strong>: 你需要一种<strong>可靠</strong>的语言，一种能尽可能减少 Bug 的语言。这就是 Rust 的核心理念。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: You need a language that's reliable that's going to have as few bugs as possible. That's the idea of Rust.</p>
+</details>
+<p><strong>主持人</strong>: Rust 正在悄然传播，成为构建可靠且高性能应用的首选语言。但它究竟有何不同？<strong>Alice Ryhl</strong> 是 Google Android Rust 团队的软件工程师，也是 Rust 事实上的异步运行时 <strong>Tokio</strong> 的核心维护者，同时还是 Rust 语言团队的顾问。在今天的对话中，我们将涵盖：为什么无论你现在使用 TypeScript 还是 C++，Rust 都值得考虑；<strong>所有权（Ownership）</strong>、**借用检查器（Borrow Checker）<strong>和 <strong><code>unsafe</code></strong> 关键字是如何工作的；新手学习 Rust 时常遇到的坑；Rust 如何在没有“仁慈独裁者”的情况下进行治理；以及 <strong>RFC</strong> 和</strong>版本（Additions）**机制是如何运作的。如果你想了解为什么这么多工程师说“只要能通过编译，就能正常运行”，这一集非常适合你。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Rust is quietly spreading as a language of choice to build reliable and performant applications. But what makes it different? Alice Ryhl is a software engineer working on Google's Android Rust team, a core maintainer of Tokio, the de facto async runtime for Rust, and is a Rust language team adviser. In today's conversation, we cover the pitch on why Rust is worth to consider whether you're using TypeScript or C++ today. how concepts like ownership, the borrow checker, and the unsafe keyword work, and what are things that trip up newcomers to Rust, how the language is governed without a benevolent dictator, and how RFC's and additions work, and many more. If you want to understand what makes Rust different and why so many engineers say once it compiles, it works, this episode is for you.</p>
+</details>
+<h3>从 Minecraft 模组到 Tokio 维护者</h3>
+<p><strong>主持人</strong>: Alice，欢迎来到播客。很高兴你能来。你是如何进入软件工程领域的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Alice, welcome to the podcast. It's really nice to have you here. How did you get into software engineering?</p>
+</details>
+<p><strong>Alice Ryhl</strong>: 实际上，这一切都始于 <strong>Minecraft</strong>（我的世界）。我想为 Minecraft 写自己的模组，所以我学习了 <strong>Java</strong>。虽然在模组制作上没走多远，但那就是起点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: It actually all started with Minecraft. I wanted to write my own mod for Minecraft, so I learned Java. I didn't get very far with the Minecraft modding, but that's where it started.</p>
+</details>
+<p><strong>主持人</strong>: 后来你是如何继续的？上大学了吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: How did you continue? Did you go to university?</p>
+</details>
+<p><strong>Alice Ryhl</strong>: 那是在我上高中之前。高中毕业后，我当了一年的全职软件工程师。然后我开始读本科，修了三年，接着又读了两年的硕士。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: This was just before I started in high school. And then after high school, I had a year where I worked full-time as a software engineer. And then I moved on to starting my bachelor. Did that for 3 years and then I did a masters for 2 years.</p>
+</details>
+<p><strong>主持人</strong>: 你是怎么去 Google 的？是大学毕业后直接去的吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: How did you end up at Google? Was that straight out of university?</p>
+</details>
+<p><strong>Alice Ryhl</strong>: 实际上，我在读硕士的同时就开始了兼职工作，毕业后转成了全职。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: Actually started part-time at the same time as when I started my masters and then I switched to full-time after I finished.</p>
+</details>
+<p><strong>主持人</strong>: 你是如何参与到 Rust 社区的？是在 Google 期间还是之前？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: How did you get involved with the Rust community? Was was it at Google? Was it before Google?</p>
+</details>
+<p><strong>Alice Ryhl</strong>: 哦，在那之前很久。我接触 Rust 已经很长时间了。上学时，我花了很多时间在 <strong>Rust 用户论坛</strong>上回答问题，大概发了 10,000 个帖子。后来我也开始在一些聊天服务器上活跃，比如 <strong>Tokio</strong> 的 Discord 服务器。我一直在回答问题，看到常见问题时，我就会去修改文档。这就是我进入 Tokio 团队的经历，现在我是其中的维护者之一。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: Oh, way before. I've been doing Rust for a long time. When I was in school, I spent a lot of time on the what's called the Rust users forum. Well, I was answering questions really. I have maybe 10,000 posts on there or something. At some point, I also started being active in some chat servers, the Discord server for something called Tokyo. I kept doing that, answering questions. When I saw common questions, I would fix the documentation. That's how I got into Tokyo, which I'm now one of the maintainers of.</p>
+</details>
+<h3>揭秘 Tokio：Rust 的异步心脏</h3>
+<p><strong>主持人</strong>: 对于那些不太熟悉 Rust 和 Tokio 的人来说，Tokio 在 Rust 中扮演什么角色？为什么它很重要？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And then for those of us not as familiar with Rust and and Tokyo, what is Tokyo inside of Rust and why is it important?</p>
+</details>
+<p><strong>Alice Ryhl</strong>: <strong>Tokio</strong> 是 Rust 的<strong>异步运行时</strong>。你可以把它看作是 Rust 使用异步（async）时的“标准库”。如果你拿它和浏览器中的 <strong>JavaScript</strong> 对比，你可以把 Tokio 类比为浏览器本身。在 JavaScript 中，有一个事件循环（event loop）处理所有待运行的任务，然后逐个执行。特别是在使用 <code>await</code> 时，任务可以暂停，然后另一个任务在同一个线程上开始运行。Tokio 做的也是类似的事情，它有一个待运行任务队列。不同于 JavaScript 的是，Tokio 可以是<strong>多线程</strong>的，所以你可以有多个并行运行的队列。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: So Tokyo is well, it's an asynchronous runtime for Rust. You can think of it as the standard library for Rust when you're using async. I mean, if you compare with something like JavaScript in the browser, you might compare Tokyo with the browser itself. For example, in JavaScript, you have this loop, this event loop which has all the tasks that are able to run and then they get executed one after the other. And especially if you use the await stuff, then you can have tasks pause and then another task start running on the same thread. And Tokyo does something similar. It has a queue of things that are able to run and then it will run them. So unlike JavaScript, Tokyo can be multi-threaded. So you can have multiple cues running in parallel.</p>
+</details>
+<p><strong>主持人</strong>: 这看起来是 Rust 语言和生态系统中非常核心的一部分。你是如何倾向于这个方向的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: This seems like a pretty core part of of Rust as a language, as a as a ecosystem. How did you gravitate towards this?</p>
+</details>
+<p><strong>Alice Ryhl</strong>: 我喜欢 Rust 的一部分原因在于这种感觉：<strong>当你写完代码并能通过编译时，它就能正常工作</strong>。当然，这必须打上引号，因为显然还是可能有 Bug 的，但这是很多 Rust 用户的共同感受。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: I think part of what I liked about Rust is this feeling that as you write the code when it compiles it works. I mean this has to be in quotes right because obviously it's possible that there are bugs but this is something a lot of people say about Rust and there's a reason people say it even though it's not necessarily literally true.</p>
+</details>
+<h3>类型系统与“十亿美元的错误”</h3>
+<p><strong>主持人</strong>: 其他语言相比之下如何？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: How do some other languages compare to begin with?</p>
+</details>
+<p><strong>Alice Ryhl</strong>: 首先，要让一种语言给人这种感觉，必须有<strong>类型系统</strong>。即便与其他拥有类型系统的语言相比，我认为 Rust 做得更好。经典的例子是 <strong>Java 的 <code>null</code></strong>。<strong>Tony Hoare</strong> 发明了 <code>null</code>，他称之为自己的“<strong>十亿美元错误</strong>”，因为这太容易导致程序崩溃了。而在 Rust 中，他们非常擅长确保调用函数时不会出现 <code>null</code> 的情况。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: I think to have a language that feels this way you have to have a type system. That's where it all starts. Yeah, I do think that even compared to other languages with type systems, I think Rust does a better job than many languages, even others with type systems. I mean, the the classic example is Java's null. It was Tony hair who invented the null and he called it his billiond dollar mistake because it's so easy to have I mean every time you call a function you might have a crash in your program and in Rust I think they're really good at making sure that when you call a function there's no chance that it might be null right that problem just doesn't exist so you can't have that kind of crash.</p>
+</details>
+<p><strong>主持人</strong>: 所以你必须显式地说这个对象可能是 <code>null</code>？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: and so you have to explicitly say this object might be null?</p>
+</details>
+<p><strong>Alice Ryhl</strong>: 是的，编译器会<strong>强制</strong>你在使用前检查 <code>null</code>。你不会像在 Java 中那样忘记检查。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: and so you have to explicitly say this object might be null and then the compiler will force you to check for null before you use it. So you can't forget like you can in Java.</p>
+</details>
+<h3>Rust 的崛起：超越 PHP 与 Go</h3>
+<p><strong>主持人</strong>: 让我们谈谈 Rust 的整体情况。它诞生于 2006 年，随着时间的推移似乎变得越来越流行。你知道 Rust 现在的规模或普及程度吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Can we talk about Rust as a whole? This was a language that was created in in 20 years ago in 2006 and it feels like it's become a lot more popular over time. Do you know of like the scale that Rust is at in terms of usage or popularity or or things that among the Rust Rust community numbers that are known there?</p>
+</details>
+<p><strong>Alice Ryhl</strong>: 我发现一件挺有趣的事，最近我看了一下 <strong>TIOBE 指数</strong>，Rust 实际上已经超过了 <strong>PHP</strong> 和 <strong>Go</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: One thing I found kind of funny, I I checked here all the the day and uh we have actually overtaken PHP and Go on the Tyobi index.</p>
+</details>
+<p><strong>主持人</strong>: 哇。我的总体感觉也是 Rust 出现在越来越多地地方。更多公司在基于 Rust 构建，比如 <strong>Oxide</strong> 决定全投入 Rust。Rust 正在成为构建高性能应用的热门选择，甚至越来越多地向 <strong>Linux 内核</strong>贡献代码。作为一个熟悉 TypeScript、Java 等语言的工程师，你会如何推销 Rust？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Wow. Cuz the feeling I have again in general is that Rust is popping up in more and more places. More companies are building on Rust. Oxide is a good example. they decided to go all in on Rust and like there's a sense of of Rust is is becoming a popular place to build I guess high performance applications even increasingly contributing to to the kernel as an engineer who you know might know other languages from like Typescript Java etc. What would your pitch be on why it's worth checking out Rust or working with Rust?</p>
+</details>
+<p><strong>Alice Ryhl</strong>: 这在很大程度上取决于你原本使用哪种语言。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: That depends a lot on which language you're coming from.</p>
+</details>
+<h3>给 TypeScript 开发者的推销词：后端可靠性</h3>
+<p><strong>主持人</strong>: 让我们假设是来自 <strong>TypeScript</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Oh, let's come from Typescript.</p>
+</details>
+<p><strong>Alice Ryhl</strong>: 对于 TypeScript，Rust 适合作为<strong>后端语言</strong>，用于 API 服务器。一种说法是：你不想因为 Web 服务器出问题而在半夜被叫醒。你需要一种<strong>可靠</strong>的语言，尽可能减少 Bug。Rust 通过 **Enum（枚举）**类型来处理类似 <code>null</code> 的问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: The pit from TypeScript would be a lot different than the pit from C++. But okay, so to begin with, I think when it comes to TypeScript, Rust fits in as the backend language. That's where I would put it. I wouldn't use it in the front end. I think it's a pretty good fit for backends, API servers. One way to put it is you don't want to be waking off at night because there are problems with your web server. You need a language that's reliable, that's going to have as few bucks as possible. I mean, obviously, it would be nice if it had zero bucks, but you know, it's going to be hard to get there, but as few bucks as possible. That's the idea of Rust. I mean, I already mentioned null, but it does a lot of stuff like that. So there's no null checking and and this is done through you know it has this enum type.</p>
+</details>
+<p><strong>Alice Ryhl</strong>: 另一件非常棒的事是<strong>错误处理</strong>。Rust 不使用异常（Exceptions），而是将错误作为<strong>值</strong>返回。它使用一个 Enum，要么是结果（Result），要么是错误（Error）。通过<strong>问号操作符（<code>?</code>）</strong>，处理错误变得非常简单，但它是<strong>显式</strong>的。如果你忘了放问号，那就是编译错误。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: the other thing I think is quite good is uh error handling. So on one hand Russ doesn't really use exceptions. So it actually returns the error as a value. So you return a value that's either using an enum either the result or the error. And the way this is done is that there's an operator question mark which says so you write my function and then question mark at the end. And this means if this function fails return the error. So it's really easy to handle errors but it's not zero characters like like it is with exceptions right? So it's explicit on the other hand and if you forget to put the question mark that's a combination error.</p>
+</details>
+<p><strong>主持人</strong>: 还有文档处理，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Another thing I quite like is how it handles documentation.</p>
+</details>
+<p><strong>Alice Ryhl</strong>: 是的。在 Rust 中，你可以使用三个斜杠（<code>///</code>）编写文档注释。最棒的是，你可以在文档中写示例代码，而 <strong>Rust 会将所有示例转化为测试（Doc-tests）</strong>。这意味着如果你更改了底层代码，你的示例测试就会失败。你绝不会忘记更新文档中的示例。此外，还有像 <strong>Serde</strong> 这样的库，通过宏自动生成代码来验证输入的 <strong>JSON</strong> 格式，非常高效。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: how it handles documentation. How does it for one when you have a comment you make it into a documentation comment by having three slashes instead of two. Now the thing is you can of course write examples in your documentation and Rust makes all examples into tests. This means that if you change the underlying code now your test fails. And so this means that you can't even you can't forget to update your examples in your documentation. ... Yeah. So there's a pretty cool library called Surya (Serde) in Rust where you you have your strct so your type you know with fields and then you can say I want to be able to pass this from for example JSON and then SA will it's a macro it will generate code which checks the JSON that it's in the same format it has all the fields you need and they have the right types and it generates native code that's specific to that particular shape of JSON. So the charge are really efficient.</p>
+</details>
+<p><strong>主持人</strong>: 我最近还了解到 Rust 的 <code>switch</code> 语句（在 Rust 中叫 <code>match</code>）。如果你漏掉了一个枚举值，它也会报错。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: and there's this thing which again I I learned just very recently thanks to thanks to you as we're talking ahead of this is the switch statement right so in almost every language you have a you have a switch for an enum and you handle cases and then you might have a default or you know everything else and sometimes you forget one of them.</p>
+</details>
+<p><strong>Alice Ryhl</strong>: 没错，<strong><code>match</code> 是穷尽性的（Exhaustive）</strong>。如果你漏掉了一个分支，那就是编译器错误。未来当你添加新的枚举变体时，编译器会告诉你所有需要更新代码的地方。这让<strong>重构</strong>变得非常简单：修改代码，然后修复编译器报错，直到它不再“尖叫”为止。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: that's right so in rust it's not called pitch it's called match but it's the same idea you can match on your enum and then you can have a branch for each possibility at rank B and if you are missing one that's a compiler error of course you can have a catch all case if you want to but most of the time you would just list all the cases and then in the future when you add a new variant the compiler will tell you oh you need to update your code here here and here and I think this is kind of leads to another way that Rust really helps with reliability, which is that if you're refactoring, I think Rust is really good at telling you all the places you need to update. I've done this sometimes where I would refactor something. I change the code. I change the return type or whatever it is, and then I just fix the compiler errors and until the compiler stops shouting.</p>
+</details>
+<h3>给 C++ 开发者的推销词：消灭内存安全漏洞</h3>
+<p><strong>主持人</strong>: 那么对于 <strong>C++</strong> 开发者呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: What about the pitch from C++?</p>
+</details>
+<p><strong>Alice Ryhl</strong>: 对于 C++，这个推销词更强。在 C++ 中，如果你犯了一个错误，通常会导致<strong>安全漏洞</strong>。哪怕只是简单的索引越界，也是安全隐患。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: So, here I actually think it's even stronger. The thing with C++ is that if you make a mistake, right, in in JavaScript, maybe you take down your server, which is already bad enough, but in C++ when you make a mistake there, now it's actually a security vulnerability most of the time. If you do something as trivial as you did an off by one in your IRA or whatever it might be, that's a security vulnerability and that this just keeps happening.</p>
+</details>
+<p><strong>主持人</strong>: 让我们谈谈<strong>内存安全（Memory Safety）</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Let's talk about memory safety.</p>
+</details>
+<p><strong>Alice Ryhl</strong>: 内存安全的核心理念是：无论你写的代码多么愚蠢，它都不会出现某一类 Bug。比如读取数组越界、访问已销毁的对象（<strong>Use-after-free</strong>）等。在内核中，一个经典的例子是：如果你设法利用这种漏洞将进程结构体中的 <code>user ID</code> 写入零，那么你就是 <strong>root 用户</strong>了。一旦攻击者成为 root，一切就失控了。Rust 彻底消灭了这一整类 Bug。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: Memory safety is this idea that no matter how stupid the code you write is, it's not going to have a certain class of bugs. And this is the, you know, the kind of bug that usually leads into security vulnerabilities. You know, the kind of thing where you read past the array and you just look at random memory or you destroyed an object and then you used it afterwards. ... let's say you have some object and it has a field called user ID. And it's pretty common for code to write zero zeros to memory. But if you write a zero to the user ID, now you're root. ... Once you're rooe, you're lost.</p>
+</details>
+<h3>垃圾回收 vs. 自动清理</h3>
+<p><strong>主持人</strong>: 为什么 Rust 不像 Java 或 C# 那样使用<strong>垃圾回收（Garbage Collector）</strong>？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Why is it a good or a bad thing to have a garbage collector? Java has a garbage collector. C# has a garbage collector.</p>
+</details>
+<p><strong>Alice Ryhl</strong>: 垃圾回收器意味着有一小段代码会定期检查所有对象，清理不再使用的内存。而在 Rust 或 C++ 中，<strong>变量在离开作用域（Scope）时会被自动清理</strong>。对于嵌入式或内核等底层场景，垃圾回收带来的性能开销和不可控性是不可接受的。即使在后端，垃圾回收导致的**延迟峰值（Latency Spikes）**也可能是一个问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: So, a garbage collector says once you've done using your objects, there's going to be a little piece of code that checks all of your co your objects and says this is not used anymore and then it cleans it up. Whereas in languages like Rust or C++, the variable is cleaned up at the end of the scope when it goes out of scope. ... For embedded use cases, this might simply be not possible or unacceptable. ... Even for back end, it can be a problem because if you have a request incoming right when it checks all of your objects like you have some sort of latency spike.</p>
+</details>
+<h3>核心概念：所有权与借用检查</h3>
+<p><strong>主持人</strong>: 很多人抱怨在与<strong>借用检查器（Borrow Checker）</strong>“博弈”。你能解释一下<strong>所有权模型</strong>吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: One thing I've read is on forums people complaining about fighting so-called fighting the borrow checker. What can make it challenging? ... Rust's ownership model. What what is the ownership model?</p>
+</details>
+<p><strong>Alice Ryhl</strong>: <strong>所有权</strong>就是：如果一个变量包含某个对象，那么该对象是它<strong>独占</strong>的。例如，如果你让 <code>B = A</code>，这被称为<strong>移动（Move）</strong>。之后再使用 <code>A</code> 就会报错，因为内容已经移走了。这在没有垃圾回收的情况下非常重要，因为我们要确保在 <code>B</code> 离开作用域时只清理一次内存。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: The ownership is just the idea that if you have a variable containing some object then the object is only there. It's kind of exclusive. So for example, if you have a variable let A equals your string or whatever and then you do let B equal to A, then this is a move. And so this means that using A afterwards is now a compiler error because its contents have been moved away. And of course this is important when we don't have a garbage collector because then when B goes out of scope, it has to clean up the string. Now if A was also valid then when they both went out of scope it would clean up the string twice which is not legal.</p>
+</details>
+<p><strong>Alice Ryhl</strong>: <strong>借用（Borrowing）</strong> 则是创建<strong>引用（Reference）</strong>。借用检查器会确保在对象被清理前，所有的引用都已停止使用。它还保证：同一时间只能有一个写入者，或者任意数量的读取者，二者不可兼得。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: another pointer type we have in Rust is called the reference. ... creating a reference is called borrowing. ... the borrow checkout checks that the reference is like the last use of the reference is before the object goes out of scope. ... So you can only have one writer at a time or you can have any number of readers. It checks that on the scope like in a function.</p>
+</details>
+<h3>逃生舱：<code>unsafe</code> 关键字</h3>
+<p><strong>主持人</strong>: Rust 还有一个关键字叫 <strong><code>unsafe</code></strong>。它到底是做什么的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: we talked about memory safety, but there is a keyword in in Rust called unsafe. What does this do and in what cases do people typically use?</p>
+</details>
+<p><strong>Alice Ryhl</strong>: <code>unsafe</code> 基本上是一个<strong>逃生舱</strong>。Rust 保证如果你不使用 <code>unsafe</code>，你的代码绝不会出现那类严重的安全漏洞。但如果你使用了它，编译器会允许你执行一些无法自动证明安全的操作，比如<strong>不检查长度就访问数组元素（<code>get_unchecked</code>）</strong>。这通常用于追求极致性能的代码，或者用于向语言添加新特性（如构建 <strong>Vector</strong> 这种底层结构），亦或是调用 <strong>C 语言库</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: the what is unsafe is the escape hatch essentially. ... What Rust ensures is that if you have no use of unsafe, then no matter how stupid your code is, you will never have one of those bugs. ... generally when unsafe is used, it's to add a new feature to the language. ... As long as you design your API right, you can add new language features by using unsafe. The other classic example would be to call into a C library.</p>
+</details>
+<h3>语言治理与 Linux 内核的未来</h3>
+<p><strong>主持人</strong>: Rust 是如何治理的？它不像 Linux 有一个“仁慈独裁者”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Can we talk about how the language is is built? Who builds Rust? ... one interesting difference compared to some other popular languages like like Python or projects like like Linux is they have a benevolent dictator for life and Rust does not.</p>
+</details>
+<p><strong>Alice Ryhl</strong>: Rust 由多个团队治理（语言团队、库团队等）。如果没有团队的共同签署，改动就不会发生。我们使用 <strong>RFC（Request for Comments）</strong> 流程来做重大决策。这需要编写详细的文档，解释动机、用户指南和参考级说明。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: today there's the rust project which has a bunch of different teams. ... Honestly, if the team doesn't sign off on it, it doesn't happen. ... The RFC request for comment is the way the ROS project makes big decisions but you know big ones is important to say. ...motivation, guide level explanation, reference level explanation.</p>
+</details>
+<p><strong>主持人</strong>: Rust 在 <strong>Linux 内核</strong>中的地位有什么变化吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Can we talk a little bit about Rust in the Linux kernel on on how that has evolved?</p>
+</details>
+<p><strong>Alice Ryhl</strong>: 变化非常大。就在 2025 年 12 月的峰会上，我们达成一致：<strong>Rust 在 Linux 内核中不再是实验性的（Experimental）</strong>。这证明了它确实行得通，现在它在稳定性上有了更高的地位。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: The the the most recent Linux plumbers from December 2025 was there. The big news were that at the Linux kernel maintainer summit, we agreed that Rust is no longer experimental in the kernel. That was really big for us compared to the previous year.</p>
+</details>
+<h3>AI 在系统编程中的角色</h3>
+<p><strong>主持人</strong>: 你在日常工作中会使用 <strong>AI 工具</strong>吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Do you use any of the AI tools for your day-to-day work building Tokyo, uh contribute contributing to Rust projects?</p>
+</details>
+<p><strong>Alice Ryhl</strong>: 我一直在尝试使用。我挺喜欢 <strong>Gemini 的命令行界面</strong>，非常简洁。Rust 实际上是 AI 代理的一个很好的候选语言，因为编译器能提供极强的反馈，帮助 AI 修正错误。我曾用 AI 帮我编写过一些补丁和基准测试（Benchmark），它能非常聪明地修改现有代码并生成分析脚本，节省了不少繁琐的工作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: So, I have been trying to use them. Honestly, I'm still learning how to use these tools, but I have used them. I I quite like the Gemini command line interface. ... Rust could be a pretty promising candidate for to use for agents because they can get more feedback and it's just hard it's harder to to ship certain type of bugs. ... I have actually written a few patches with AI myself. ... saved me time if nothing else.</p>
+</details>
+<h3>学习资源与建议</h3>
+<p><strong>主持人</strong>: 对于想要学习 Rust 的资深工程师，你有什么建议？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: for a senior engineer who would like to learn Rust or you know just build with it what would your suggestion to be to get started.</p>
+</details>
+<p><strong>Alice Ryhl</strong>: 首先是官方的 <strong>《Rust 权威指南》（The Rust Book）</strong>，它非常出色。其次，最好的学习方法是做一个实际的项目，比如 Web 服务器。此外，还有 <strong>rustlings</strong> 这样的互动练习。对于进阶开发者，我推荐 <strong>Jon Gjengset</strong> 的书，适合想要进一步深挖的读者。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: the Rust book which is so it's on the official Rust website is actually really good. ... honestly the way you learn a language is you have you have a project. You you implement some sort of project with it. I mean maybe some sort of web server or something. ... John Ganget (Jon Gjengset) has another book that I think is really good and this book is kind of aimed at the intermediate Rust developer. ... there's this thing called rustlings and the idea is that they give you some unfinished rust code and your task is to finish it.</p>
+</details>
+<p><strong>主持人</strong>: 非常感谢你，Alice。这对话非常有启发性，我学到了很多。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Awesome, Alice. Thank you. Thank you. Thank you so much for this. This was really interesting and I've learned a bunch.</p>
+</details>
+<p><strong>Alice Ryhl</strong>: 谢谢邀请我。希望大家像我一样喜欢探讨 Rust 的细节。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alice Ryhl</strong>: Thank you for having me on. I hope you enjoyed getting into the details about Russ as much as I did.</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Alice Ryhl" class="entity-link person-link">Alice Ryhl</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>, 
+                
+                  <a href="/search/?q=Mozilla" class="entity-link company-link">Mozilla</a>, 
+                
+                  <a href="/search/?q=Rust Foundation" class="entity-link company-link">Rust Foundation</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Rust" class="entity-link product-link">Rust</a>, 
+                
+                  <a href="/search/?q=Tokio" class="entity-link product-link">Tokio</a>, 
+                
+                  <a href="/search/?q=Android" class="entity-link product-link">Android</a>, 
+                
+                  <a href="/search/?q=Linux" class="entity-link product-link">Linux</a>
+                
+              </p>
+            
+            
+              <p><strong>媒体/书籍:</strong>
+                
+                  <a href="/search/?q=The Rust Book" class="entity-link media-link">The Rust Book</a>
+                
+              </p>
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">rust-programming</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">memory-safety</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">async-rust</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">ownership-model</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">system-programming</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

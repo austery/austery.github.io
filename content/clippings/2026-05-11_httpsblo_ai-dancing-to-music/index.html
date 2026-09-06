@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 终于学会&quot;听歌起舞&quot;了，而且跳得比人类还整齐 · 乔木博客</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="AI 终于学会&quot;听歌起舞&quot;了，而且跳得比人类还整齐 · 乔木博客" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">AI 终于学会&quot;听歌起舞&quot;了，而且跳得比人类还整齐 · 乔木博客</span>
+      <span data-pagefind-meta="speaker" style="display:none;">向阳乔木</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-05-11
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/xiang-yang-qiao-mu/">向阳乔木</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://blog.qiaomu.ai/ai-dancing-to-music" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-05-11
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">文章介绍了 MACE 模型，通过级联混合专家架构（MoE）实现了高质量、音乐驱动的舞蹈视频生成。该模型将动作生成与视频渲染分离，结合 BiMamba、扩散模型及 GFT 等技术，并在自建的 MA-Data 数据集上进行了训练，在动作同步性和视频视觉质量上均达到 SOTA 水平，并展示了 MoE 架构在复杂 AI 任务中的优势。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>乔木博客</p>
+<p>全部</p>
+<p>AI工具</p>
+<p>AI教程</p>
+<p>AI生成</p>
+<p>AI资讯</p>
+<p>健脑房</p>
+<p>播客解读</p>
+<p>论文学习</p>
+<h1>AI 终于学会&quot;听歌起舞&quot;了，而且跳得比人类还整齐</h1>
+<p>论文学习</p>
+<p>·</p>
+<p>2026年5月11日</p>
+<p>·</p>
+<p>129 次阅读</p>
+<p>·</p>
+<p>约 11 分钟</p>
+<blockquote>
+<p>https://huggingface.co/papers/2512.18181</p>
+</blockquote>
+<p>你见过那种会让人起鸡皮疙瘩的舞蹈视频吗？</p>
+<p>音乐一响，舞者的每个动作都卡在节拍上。</p>
+<p>鼓点落下，脚步刚好踩实；旋律拉起，身体已经开始流动。</p>
+<p>这种&quot;音乐与身体完全融为一体&quot;的感觉，是人类花了几十年才练出来的技能。</p>
+<p>有一支研究团队，试图让 AI 也学会这件事。</p>
+<p>不只是生成一段舞蹈动作序列，还要生成一段看起来像真人在跳舞的完整视频，有真实的服装、真实的皮肤质感、真实的光影，而且每一个动作都精准对应着音乐里的节奏。</p>
+<p>这篇论文叫 MACE，发表于 2026 年5月。</p>
+<h2>这件事比想象的难得多</h2>
+<p>很多人以为，&quot;让 AI 根据音乐生成舞蹈视频&quot;应该是个相对容易的任务。</p>
+<p>毕竟，现在的 AI 已经能生成逼真的人物视频，也能识别音乐节奏了。把两件事合在一起，不就行了？</p>
+<p>实际上，这两件事&quot;合起来&quot;的难度，远超过把它们简单叠加。</p>
+<p>你可以把这个问题想象成：让一个木偶大师同时控制两样东西。</p>
+<p>第一，木偶的动作脚本（每一帧该怎么动）；</p>
+<p>第二，整段视频的视觉质量（木偶的布料纹理、灯光阴影、面部表情）。</p>
+<p>这两件事对应的是完全不同的技术体系，之前的方法往往顾此失彼。</p>
+<blockquote>
+<p>姿态序列（Pose Sequence）：用骨骼关键点表示人体动作的方法，通常是一系列 2D 或 3D 关节坐标，描述人在每一帧的肢体位置，是舞蹈动作生成的中间表示形式。</p>
+</blockquote>
+<p>之前的研究要么专注于生成&quot;动作对不对&quot;，视频质量粗糙；要么视频质量不错，但动作和音乐完全不搭。</p>
+<p>MACE 做的，就是把这两件事彻底分开，分别交给两个专门的&quot;专家&quot;来处理，然后把它们级联在一起。</p>
+<h2>两个专家，各司其职</h2>
+<p>MACE 的核心设计是级联混合专家（Cascaded Mixture of Experts）。</p>
+<blockquote>
+<p>混合专家（Mixture of Experts, MoE）：一种模型架构，让多个专门的子网络各自处理不同类型的任务，再将结果组合。不同于让单一模型&quot;全能&quot;，MoE 让每个专家专精于某一件事，最终合力完成复杂任务。</p>
+</blockquote>
+<p>这个设计有两个专家：</p>
+<p>第一个是动作专家（Motion Expert），负责听音乐、生成舞蹈骨架动作序列。</p>
+<p>第二个是外观专家（Appearance Expert），负责接收骨架动作，渲染成逼真的人物视频。</p>
+<p>两个专家有严格的分工，前者的输出是后者的输入。</p>
+<p>就像一部电影的拍摄流程：先由编舞师设计动作，再由服装、灯光、摄影师把动作呈现成视觉作品。</p>
+<h2>动作专家：BiMamba + 扩散模型的组合拳</h2>
+<p>动作专家要做的事，听起来简单：给一段音乐，输出一段匹配的舞蹈动作序列。</p>
+<p>但实际上，这里面有一个深层的难题。</p>
+<p>音乐是有&quot;流向&quot;的，节奏、旋律都在时间轴上展开。</p>
+<p>舞蹈动作也是如此，每一个动作都和前后的动作相关联。</p>
+<p>要让两者精准对齐，模型需要同时&quot;理解&quot;过去发生了什么、现在正在发生什么，以及接下来可能会发生什么。</p>
+<blockquote>
+<p>BiMamba（双向 Mamba）：Mamba 是一种高效的序列模型架构，计算效率优于 Transformer。BiMamba 在此基础上加入双向处理能力，让模型可以同时从前向后和从后向前理解序列，捕捉更完整的上下文关系。</p>
+</blockquote>
+<p>动作专家用的是 BiMamba-Transformer 混合架构。</p>
+<p>BiMamba 负责高效处理长序列，Transformer 负责建立精细的注意力关系，两者互补。</p>
+<p>生成方式是扩散模型。</p>
+<blockquote>
+<p>扩散模型（Diffusion Model）：一种生成式模型，通过逐步&quot;去噪&quot;的过程生成内容。训练时学习如何从噪声中还原数据，生成时从随机噪声出发，一步步精炼出高质量的输出。</p>
+</blockquote>
+<p>用大白话说：模型从一段&quot;乱舞&quot;开始，反复修正，最终生成一段节奏精准、动作流畅的舞蹈骨架序列。</p>
+<h2>GFT：让 AI 学会&quot;跳哪种舞&quot;</h2>
+<p>单纯让模型&quot;听音乐跳舞&quot;还不够。</p>
+<p>问题在于：迪斯科和古典芭蕾，动作风格完全不同。</p>
+<p>爵士乐和说唱，对应的舞蹈语言也截然不同。</p>
+<p>要让模型理解&quot;这段音乐该用哪种风格跳&quot;，研究团队设计了一个叫 GFT（体裁感知微调，Genre-aware Fine-Tuning） 的机制。</p>
+<blockquote>
+<p>GFT（Genre-aware Fine-Tuning）：一种条件化微调方法，让模型在生成舞蹈时感知音乐体裁（如流行、爵士、街舞等），使输出的动作风格与音乐类型保持一致，而不是生成&quot;万能舞蹈&quot;。</p>
+</blockquote>
+<p>这有点像让一位舞者在上台前先看一眼曲单，知道接下来演的是百老汇音乐剧还是街头 freestyle，然后切换进对应的状态。</p>
+<p>MA-Data 数据集里有 20 多种舞蹈体裁，每种都有专门的标注。</p>
+<p>GFT 利用这些信息，让模型学会&quot;风格切换&quot;。</p>
+<h2>MA-Data：自己建数据集，因为没有合适的</h2>
+<p>这个项目的一个重要贡献，是研究团队自己构建了一个叫 MA-Data 的数据集。</p>
+<blockquote>
+<p>MA-Data：本文构建的大规模音乐驱动舞蹈数据集，包含约 70,000 个视频片段，共 116 小时，覆盖 20 多种舞蹈体裁，提供精确对齐的音乐、动作姿态和视频内容三元组数据。</p>
+</blockquote>
+<p>为什么要自己建？因为现有的数据集要么太小，要么缺少精确的音乐、动作、视频三元对齐标注，根本无法训练一个高质量的级联系统。</p>
+<p>70,000 段视频，116 小时，20 多种体裁。这个数据规模，已经远超之前同类工作。</p>
+<h2>外观专家：让骨架&quot;长出&quot;真实皮肤</h2>
+<p>动作专家输出的是骨架序列，也就是一堆关节坐标。</p>
+<p>这些骨架本身不好看，只是一串抽象的数字。</p>
+<p>外观专家要做的，是把这些骨架&quot;渲染&quot;成一段像真人在跳舞的视频。</p>
+<p>这里用的基础模型是 Wan-Animate，一个强大的视频生成框架。</p>
+<blockquote>
+<p>Wan-Animate：阿里巴巴通义万相团队开发的视频生成框架，支持基于姿态序列控制人体运动生成，是当前视频生成领域的强力基础模型之一。</p>
+</blockquote>
+<p>但直接用 Wan-Animate 还不够。舞蹈视频有两个特殊难点：</p>
+<p>第一，动作要和音乐精准同步，哪怕差半拍，人眼都能察觉；</p>
+<p>第二，人物外观要在整个视频里保持一致，服装颜色、面部特征不能随机漂移。</p>
+<p>为了解决这两个问题，研究团队设计了运动学-美学解耦微调（Kinematic-Aesthetic Decoupled Fine-tuning），分两个阶段进行。</p>
+<blockquote>
+<p>运动学-美学解耦（Kinematic-Aesthetic Decoupled）：将视频生成中&quot;动作准确性&quot;（运动学）和&quot;视觉质量&quot;（美学）分成两个独立的优化目标，分阶段训练，避免两者互相干扰，各自达到更好的效果。</p>
+</blockquote>
+<p>第一阶段：专门优化&quot;动作跟随精度&quot;，让生成的人体动作严格跟随骨架序列。</p>
+<p>第二阶段：专门优化&quot;视觉外观一致性&quot;，锁定人物特征，让整段视频看起来像同一个人。</p>
+<p>这和人类学舞蹈的过程有几分相似，先学准确性，再学优雅感，不能一口气全部学。</p>
+<h2>数据说话：它有多强？</h2>
+<p>来看数字。</p>
+<p>动作生成质量（Motion Expert 评测）：</p>
+<p>模型</p>
+<p>BAS (↑)</p>
+<p>Dist (↓)</p>
+<p>FPS (推理速度)</p>
+<p>GDANCE</p>
+<p>0.191</p>
+<p>12.3</p>
+<p>~120</p>
+<p>Bailando++</p>
+<p>0.203</p>
+<p>11.8</p>
+<p>~180</p>
+<p>Lodge</p>
+<p>0.218</p>
+<p>10.9</p>
+<p>~210</p>
+<p>MACE Motion Expert</p>
+<p>0.229</p>
+<p>9.7</p>
+<p>770</p>
+<blockquote>
+<p>BAS（Beat Alignment Score）：衡量舞蹈动作与音乐节拍对齐程度的指标，分数越高说明动作越&quot;卡拍&quot;，BAS=1 表示完全对齐。</p>
+</blockquote>
+<p>视频生成质量（Appearance Expert 评测）：</p>
+<p>模型</p>
+<p>FVD (↓)</p>
+<p>SSIM (↑)</p>
+<p>PSNR (↑)</p>
+<p>Champ</p>
+<p>312.4</p>
+<p>0.698</p>
+<p>28.3</p>
+<p>MimicMotion</p>
+<p>298.7</p>
+<p>0.712</p>
+<p>28.9</p>
+<p>MusePose</p>
+<p>287.1</p>
+<p>0.721</p>
+<p>29.4</p>
+<p>MACE Appearance Expert</p>
+<p>274.94</p>
+<p>0.739</p>
+<p>30.2</p>
+<blockquote>
+<p>FVD（Fréchet Video Distance）：衡量生成视频与真实视频分布差异的指标，越低越好，类似图像生成中的 FID 分数。</p>
+</blockquote>
+<blockquote>
+<p>SSIM（Structural Similarity Index）：结构相似性指标，衡量生成图像与参考图像在亮度、对比度和结构上的相似程度，越高越好。</p>
+</blockquote>
+<p>两项指标全面领先。</p>
+<p>更值得注意的是推理速度，FPS=770，比第二名快了 3 倍以上。</p>
+<p>这意味着 MACE 不只是学术上的突破，在实际应用中也有足够的效率优势。</p>
+<h2>用户研究：人类怎么看</h2>
+<p>客观指标之外，研究团队还做了用户研究，让真实用户从六个维度评分：</p>
+<p>DS（舞蹈风格匹配度）</p>
+<p>DQ（舞蹈质量）</p>
+<p>DC（舞蹈连贯性）</p>
+<p>PQ（视频画面质量）</p>
+<p>TC（动作与音乐时间同步性）</p>
+<p>IC（人物外观一致性）</p>
+<p>结果是全维度领先，没有任何一个维度落后于对比方法。</p>
+<p>这才是最有说服力的数字，客观指标可以被优化过度拟合，但人眼的感知是最难骗过去的。</p>
+<h2>这件事为什么重要</h2>
+<p>MACE 当然不是第一个做音乐驱动舞蹈生成的工作，但它是第一个把这件事做到&quot;端到端、高质量、可实用&quot;程度的开源研究。</p>
+<p>级联专家架构这个设计思路值得特别关注。</p>
+<p>它不是为了&quot;炫技&quot;，而是在承认一个现实：有些复杂任务，不适合用一个模型硬扛全部。</p>
+<p>把&quot;动作生成&quot;和&quot;视频渲染&quot;分开，让每个专家只负责自己最擅长的部分，反而能达到更好的整体效果。</p>
+<p>这个思路在 AI 领域正在越来越流行。</p>
+<p>GPT-4 背后有 MoE，Gemini 有 MoE，现在连舞蹈生成也用上了 MoE。</p>
+<p>这不是技术时髦，而是一种越来越成熟的&quot;分而治之&quot;智慧。</p>
+<p>你可以想象一下几年后的场景：给 AI 一张照片和一首歌，它生成一段这个人根据这首歌起舞的视频，每个动作都卡在节拍上，服装纹理一帧都不乱。</p>
+<p>MACE 已经把这个场景向现实拉近了一大步。</p>
+<p>而且它把怎么做到的配方全部写出来了，任何人都可以拿去复现，或者在此基础上继续往前走。</p>
+<p>AI 能力的边界，就是这样一次次被推开的。</p>
+<p>© 2026</p>
+<p>·</p>
+<p>向阳乔木</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=乔木" class="entity-link person-link">乔木</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Alibaba" class="entity-link company-link">Alibaba</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=MACE" class="entity-link product-link">MACE</a>, 
+                
+                  <a href="/search/?q=BiMamba" class="entity-link product-link">BiMamba</a>, 
+                
+                  <a href="/search/?q=Wan-Animate" class="entity-link product-link">Wan-Animate</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">ai-dance-generation</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">music-synchronization</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">generative-models</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/mixture-of-experts/">mixture-of-experts</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/video-generation/">video-generation</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

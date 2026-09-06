@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vercel 开源 eve：「一个文件夹就是一个
+agent」这句话为什么不是废话</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="Vercel 开源 eve：「一个文件夹就是一个
+agent」这句话为什么不是废话" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">Vercel 开源 eve：「一个文件夹就是一个
+agent」这句话为什么不是废话</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-06-18
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://yage.ai/share/vercel-eve-agent-directory-20260618.html" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-06-18
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">文章探讨了 Vercel 开源的 &#39;eve&#39; 项目，它提出了将 Agent 视为独立软件（一个文件夹）而非单一框架或模型延伸的观点。通过对比 LangChain 的零件拼装路线和 Claude Managed Agents 的云端配置项路线，eve 强调了 agent 生产生命周期中对部署、版本管理和持久化执行等基础设施的需求，并提出了一种将运行能力与个人认知上下文（context infrastructure）相结合的三层分工模型。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>2026 年 6 月 17 日，Vercel 在伦敦 Ship 大会上以 Apache 2.0 协议开源了
+eve，代码仓库在 github.com/vercel/eve。官方博客直接给了一句话做标题：An agent is a
+directory。翻译过来就是，一个 agent 就是一个文件夹。</p>
+<p>第一眼读到这句话，困惑很难避免。建个文件夹谁不会。如果说 agent
+框架的终极答案只是一个目录结构，那过去几年整个行业在争论什么。</p>
+<p>困惑不是凭空来的。这句话冲撞了我们心里对 agent
+框架的默认设定。过去两年搭 agent，基本是两条路。一边是 LangChain
+的路线：用 Python 把 Tool、Chain、Memory
+拼到一起，自己管注册、管部署。另一边是 Claude 的路线：在 Anthropic
+的云上配几个 connector，让 Claude 伸手去碰你的 Slack 和数据库。eve
+说这两条路都走偏了。eve 把 agent 当独立软件来建：文件系统做定义，Git
+管版本，一条命令部署上线。</p>
+<p>三种做法的背后，是同一个问题给出的三个不同答案：agent
+到底是什么。LangChain 把它当成编程问题，答案是零件你自己拼。Anthropic
+把它当成模型的延伸，答案是给 Claude 开几扇门。eve
+把它当成独立软件，答案是一个文件夹。这不是功能多少的差别，是路线分歧。沿着不同的路线往下走，agent
+能不能从 demo 变成 24/7 的生产服务，结局完全不同。</p>
+<h2>LangChain：零件你自己拼</h2>
+<p>做 agent 开发的人，多半最先碰到的就是 LangChain。LangChain
+给了一套编程抽象：Agent、Tool、Chain、Memory、Retriever。你在 Python
+里把这些组件拼好，给每个 tool 写输入输出 schema，写注册代码把它们挂到
+agent 上，自己管 session 状态，自己接 vector store 搞 RAG，部署时自己搭
+API server、自己配监控。自由度极高，代价是每块都得自己动手。</p>
+<p>这件事很像在宜家买柜子。木板和螺丝全摊在你面前，理论上能拼出各种形状。但拼完才只是第一步，后面还有刷漆、上墙、装把手。LangChain
+的职责到零件怎么连为止。你的 agent 文件怎么组织、怎么上线、跑到一半的
+session 部署时会不会断、审批等待时要不要烧 compute，这些事它一概不管。The
+New Stack 的报道 把 LangChain 的 LangGraph 称为最成熟的 agent
+框架，但它的 durable execution
+跟部署、运维、版本管理是割开的，你得自己缝到一起。</p>
+<p>宜家模式的好处是形状自由，坏处是你得自己是木工。多数团队没有这种余裕，最终
+agent 停在 demo，上线那一步从来没有人走完。</p>
+<h2>Claude Managed</h2>
+<p>Agents：给模型开几扇门</p>
+<p>Anthropic 走的是相反的路。Claude Managed Agents 的逻辑是：Claude
+是中心，agent 是 Claude 把手伸进外部系统的管道。你配一个
+connector，Claude 就能读到你的 Slack、查你的数据库。agent 全程跑在
+Anthropic 的云上，只绑 Claude 一个模型。数据、调用、执行上下文全部落在
+Anthropic 的服务器里。</p>
+<p>Anthropic 的 sub-agents
+文档 和 skills
+文档 写明了这套逻辑：connectors 对接 MCP server（挂在 Anthropic
+云上），custom connectors 则是把你的 MCP server 接入 Anthropic
+云。你配置的不像一个能独立行动的新员工，而是 Claude 能碰哪些东西。</p>
+<p>这条路的好处是开箱即用，零运维。代价叠了三层。第一，agent
+不是你拥有的软件，它是云上的一个配置项，改一句 instructions 没有 diff
+可看，没有版本历史可追溯，没有 preview deploy 可以灰度。第二，模型绑死在
+Claude 上，你只能等 Anthropic
+升级，没有自己做模型选型的余地。第三，数据全在 Anthropic
+的服务器上，合规要求高的场景过不去。</p>
+<h2>第三条路：把 agent</h2>
+<p>当独立软件来建</p>
+<p>回到开头那句话。eve 说 agent is a
+directory，不是在宣称用文件夹组织代码是什么新鲜事。它实际在说三件事，这三件事各对准了
+LangChain 和 Claude Managed Agents 缺失的那一环。</p>
+<p>三种 agent 路线对比</p>
+<p>第一，文件名就是定义，免掉注册这一步。在 eve
+里，agent/tools/run_sql.ts 这个文件名本身就是工具名，框架
+build 时自动发现、自动注册。agent/skills/revenue-rules.md
+自动变成按需加载的上下文，模型聊到收入话题时它才出现。你不需要写任何把
+tool 挂到 agent 上的胶水代码。eve 的 官方文档 把这套规则摊开了：eve is
+filesystem-first，文件的位置决定了它的角色，不存在需要人工同步的独立注册表。加一个
+tool 就是加一个文件，删一个 tool 就是删一个文件。LangChain
+让你写注册代码的地方，eve 让文件系统自己说话。</p>
+<p>第二，agent 是你真正拥有的软件。eve agent 就是一个 Git 仓库。改一句
+instructions 是一个 commit，有 diff 可 review，有历史可追溯。每笔 commit
+自动生成 preview deploy，eve eval 接入 CI 当 deploy
+gate，出了问题秒级 rollback。管理 agent 的方式和管理普通 Web
+应用一模一样。Claude Managed Agents 则是云上的配置项，不是你能随时
+commit、diff、rollback 的代码。分歧再往深一层看：Anthropic
+认为模型是平台，agent 是模型的延伸；Vercel 认为模型是商品，通过 AI
+Gateway 一行代码就能在 Claude、GPT、Gemini 之间切换，agent
+是独立软件。两种假设往下走，agent 的生产生命周期会完全不同。</p>
+<p>第三，生产运行时打包进了同一个目录。eve 内置了三项能力。Durable
+execution：每一步自动 checkpoint，部署不会打断正在跑的
+session，审批等待期间零 compute 消耗，Workflow SDK 保证 runs resume from
+the last good step, instead of from zero。Sandbox：agent
+写的代码跑在隔离 microVM 里，有自己的 kernel
+和文件系统，和宿主完全隔绝。Channels：eve channels add slack
+一条命令就让 agent 出现在 Slack 里，审批渲染成 Slack 按钮，提问变成
+select menu，agent 打字时你还能看到 typing indicator。同一个 agent
+可以同时出现在 Slack、Discord、Teams、HTTP 上，session 在这些 channel
+之间自由迁移：Slack 上的问题能切到网页接着聊，HTTP 收到的 webhook
+能自动开一条 Slack 调查线程。这三项能力，LangChain 不内置，Claude
+Managed Agents 也没有同等级别的深度。</p>
+<p>eve
+像一个精装厨房。灶台、冰箱、洗碗机全部就位，你只需要决定冰箱里放什么菜就行了。代价是你不能改厨房的格局（目录约定不可协商），并且这个厨房默认盖在
+Vercel 这栋楼里。官方对多平台支持的承诺是 on the
+way，还没给时间表。但跟宜家木板和给 Claude
+开几扇门比起来，这已经是离生产最近的一条路了。</p>
+<h2>厨房有了，菜从哪来</h2>
+<p>eve 解决的是 agent 怎么跑、怎么部署、怎么接 Slack、怎么不死。它不解决
+agent 想什么、输出有没有判断力。这里面最容易发生误读。</p>
+<p>eve 的 instructions.md 和 skills/
+是装载位置，不是内容来源。官方博客明说了：That leaves the part no
+framework can write for you: what your agent actually
+does。精装厨房的灶台、冰箱、洗碗机全配好了，但菜还是你自己买、你自己切、你自己调味。你的
+agent 输出的是 checklist 还是有判断力的分析，取决于你往
+instructions.md 和 skills/ 里塞了什么，跟 eve
+本身没关系。eve 默认的 instructions.md 示例就一行 You are a
+concise assistant。</p>
+<p>而这恰好是我过去一年在做的事。我把这套系统叫 context
+infrastructure：从录音转写、微信对话、AI
+对话历史、每一次纠正中反向蒸馏出判断原则，积累成一套按需加载的认知上下文。eve
+的 instructions.md 默认是一行示例，我的
+SOUL.md 是 73
+行行为契约加上五十多条跨场景反复验证的判断原则。把后者塞进前者的装载位置，你得到的是一个既有生产级运行能力、又带着个人认知底色的
+agent。</p>
+<p>单独 eve 能跑，但输出很可能停在共识层：正确但平庸，换任何人来问 AI
+都能得到差不多的回答。单独 context infrastructure
+有深度，但没有生产运行时：它不能自己接 Slack、没有 durable
+execution、不能一条命令部署。两者放一起才是完整的拼图。eve
+负责运行，context infrastructure
+负责认知内容。它们处在不同的抽象层，不互相排斥。</p>
+<p>Agent 时代的三层分工</p>
+<p>Agent 时代的分工正在变得清晰。Anthropic
+负责协议：模型怎么理解世界、怎么操作工具，MCP 和 skills
+格式已经是事实标准。Vercel 负责运行时：agent
+怎么跑、怎么部署、怎么活过明天。每个人自己的 context infrastructure
+负责认知内容：agent
+想什么、判断什么、输出什么。三层各归各的，谁也不用替代谁。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Vercel" class="entity-link company-link">Vercel</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=eve" class="entity-link product-link">eve</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/agent-architecture/">agent-architecture</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/software-development/">software-development</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/workflow-tools/">workflow-tools</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/deployment/">deployment</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

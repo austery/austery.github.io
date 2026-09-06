@@ -1,0 +1,53 @@
+/* === 目录侧边栏 === */
+.sidebar-toc {
+    flex: 0 0 250px;
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: var(--theme-bg-primary);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--theme-shadow);
+}
+
+.sidebar-toc h3 {
+    margin-top: 0;
+    font-size: 1.1em;
+    border-bottom: 1px solid var(--theme-border-color);
+    padding-bottom: 10px;
+    color: var(--theme-text-primary);
+}
+
+.sidebar-toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-toc li a {
+    text-decoration: none;
+    color: var(--theme-accent-blue);
+    display: block;
+    padding: 8px 0;
+    transition: color 0.2s;
+}
+
+.sidebar-toc li a:hover {
+    color: var(--theme-accent-blue);
+    text-decoration: underline;
+}
+
+/* 目录中的页面标题样式 */
+.sidebar-toc .toc-title {
+    font-weight: bold;
+    color: var(--theme-text-primary);
+    border-bottom: 1px solid var(--theme-border-color);
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+}
+
+.sidebar-toc .toc-title:hover {
+    color: var(--theme-accent-blue);
+}

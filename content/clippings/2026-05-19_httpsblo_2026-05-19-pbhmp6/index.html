@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>他在谷歌深耕14年，亲手种下GPT的种子，却只能看OpenAI收割 · 乔木博客</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="他在谷歌深耕14年，亲手种下GPT的种子，却只能看OpenAI收割 · 乔木博客" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">他在谷歌深耕14年，亲手种下GPT的种子，却只能看OpenAI收割 · 乔木博客</span>
+      <span data-pagefind-meta="speaker" style="display:none;">向阳乔木</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-05-19
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/xiang-yang-qiao-mu/">向阳乔木</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://blog.qiaomu.ai/2026-05-19-pbhmp6" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-05-19
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">谷歌 AI 老将 Andrew Dai 在谷歌深耕 14 年，深度参与了 Transformer 及多模态大模型研发，但因大厂组织官僚体系错失先机。文章探讨了模型架构与数据质量对 AI 竞争的关键作用，以及 Andrew Dai 离职后创立 Aloran AI，试图通过“语言逻辑+视觉推理”的中间路线探索视觉 AGI 的前沿方向。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>乔木博客</p>
+<p>全部</p>
+<p>AI工具</p>
+<p>AI教程</p>
+<p>AI生成</p>
+<p>AI资讯</p>
+<p>健脑房</p>
+<p>播客解读</p>
+<p>论文学习</p>
+<h1>他在谷歌深耕14年，亲手种下GPT的种子，却只能看OpenAI收割</h1>
+<p>播客解读</p>
+<p>·</p>
+<p>2026年5月19日</p>
+<p>·</p>
+<p>28 次阅读</p>
+<p>·</p>
+<p>约 6 分钟</p>
+<p>2015 年，谷歌的一位研究员在偶然间发现，如果先预训练一个语言模型，再去微调监督数据，效果会出奇地好。</p>
+<p>两年后，Transformer 模型问世。</p>
+<p>这位研究员立刻建议原作者把两者结合，但对方正忙于图像处理，没能顾上。</p>
+<p>OpenAI 却看到了这个潜力，将其融合，最终做出了惊艳世界的 GPT 系列。</p>
+<p>这位眼睁睁看着风头被抢走的研究员，是 Andrew Dai。</p>
+<p>他在谷歌深耕 AI 长达 14 年，主导了 PaLM 2 和 Gemini 等多模态大模型的研发，却在近期选择离开，创立了自己的新公司。</p>
+<p>透过他的职业轨迹，我们能清晰地看到，大厂内部有着怎样的博弈，以及下一代 AI 真正的突破口究竟在哪里。</p>
+<h2>创新的诅咒：当自由变成散漫</h2>
+<p>在 GPT-3 横空出世前，Google Brain 是研究员的天堂。</p>
+<p>那里有着极高的研究自由度，有人研究视觉，有人研究怎么用 AI 写歌。</p>
+<p>但这恰恰成了致命伤。</p>
+<p>因为缺乏强有力的领导者来集中所有资源押注一条赛道，这种散漫的自由让谷歌错失了先机。</p>
+<p>当 OpenAI 在疯狂扩展大语言模型时，Andrew 正身处 Google Health 部门，试图用预训练模型预测病人的未来疾病。</p>
+<p>现实给他上了一课。</p>
+<p>医疗行业的壁垒极高，医生群体有自己传承百年的行医准则，他们对庞大科技公司的 AI 产品充满警惕甚至抗拒。</p>
+<p>这说明，一项技术如果没有在对的时间切入对的市场，技术再好也无法强行推进。</p>
+<h2>强扭的瓜与被拖慢的步伐</h2>
+<p>时间来到 2021 年，GPT-3 的成功终于让谷歌内部感到了实打实的竞争压力。</p>
+<p>为了反击，Andrew 联合主导了 GLaM 的开发，他们极具前瞻性地将 MOE（混合专家模型）架构与预训练结合，做出了跑分超越 GPT-3 的模型。</p>
+<p>接下来的 PaLM 2 模型训练极其顺利，整个过程一次都没有停机重启，不到一年就完成了开发。</p>
+<p>但就在团队准备发布时，谷歌庞大的官僚体系按下了暂停键。</p>
+<p>管理层坚持要等到 Google I/O 大会再统一发布。</p>
+<p>结果，在毫无秘密可言的硅谷里，OpenAI 精准卡位，提前发布了各项指标更优的 GPT-4，直接抢走了 PaLM 2 的风头。</p>
+<p>这让谷歌彻底坐不住了。</p>
+<p>管理层决定强行合并 Google Brain 和 DeepMind 两个互不服气的团队。</p>
+<p>这场合并极其痛苦。</p>
+<p>为了表面上的公平，每一个技术部门都要设立双领导制，两边各派一个负责人。</p>
+<p>这种机制导致大量时间被浪费在扯皮上，许多受不了内部摩擦的核心人员纷纷离职。</p>
+<p>最终，为了赶上圣诞节的发布 Deadline，由这个新拼凑团队研发的 Gemini 1.0 被迫仓促上线。</p>
+<p>由于根本没时间做 MOE 架构的优化，1.0 版本只能采用稠密模型，甚至在部分小语种上表现糟糕。</p>
+<h2>算力同质化时代，得数据者得天下</h2>
+<p>直到 Gemini 1.5 发布，谷歌才终于用上了几年前就在研发的 MOE 架构。</p>
+<p>随着竞争深入，各大前沿实验室在模型架构和基础设施上的差距正在缩小。</p>
+<p>现阶段拉开差距的核心，是数据。</p>
+<p>这不是指谁能爬取更多的互联网语料，而是谁能更好地清洗垃圾信息，并用好合成数据。</p>
+<p>如果合成数据中带有某个高频错误词汇，或者数学逻辑有误，模型就会原封不动地学过去。</p>
+<p>这证明了，喂给模型的数据纯度，直接决定了智能的天花板。</p>
+<p>在这期间，传奇人物 Noam Shazeer 的回归也给了团队极大的助力。</p>
+<p>他拥有极其恐怖的技术直觉，不需要真正跑模型，只需看一眼架构代码，就能判断梯度下降的效果和最终的训练走向。</p>
+<h2>寻找视觉 AGI 的中间路线</h2>
+<p>Gemini 3.0 顺利推进时，Andrew 却选择了辞职创业。</p>
+<p>原因很简单，数千人参与、耗费巨量算力的项目，注定只能选择最保守、最安全的方法。</p>
+<p>这不符合他想探索激进技术的本意。</p>
+<p>他创立的 Aloran AI 迅速拿到 5500 万美元融资，直奔视觉 AGI 而去。</p>
+<p>当前市面上有两种主流路线，但 Andrew 认为它们都无法通向终极的智能。</p>
+<p>第一种是大语言模型派。</p>
+<p>通过不断堆叠文本数据来提升逻辑能力。但这套逻辑在物理世界常常失效，目前的语言模型连桌上有几个杯子都会数错。</p>
+<p>第二种是纯粹的世界模型派，极度迷信视觉。</p>
+<p>自然界中的老鹰，通过视觉就能完美计算风速、重力和猎物的逃跑轨迹。</p>
+<p>但老鹰并不懂得人类发明的数学公式和化学常数。</p>
+<p>如果只靠纯粹的物理视觉，机器同样无法理解人类构建的复杂概念。</p>
+<p>Andrew 赌的是中间路线：将人类的语言逻辑，强行注入到视觉推理中。既要拥有老鹰对物理世界的感知，也要有人类的深度思考能力。</p>
+<h2>结语：研究品味决定胜负</h2>
+<p>在拥有无尽资源的谷歌，试错成本几乎为零。</p>
+<p>但在一家需要自负盈亏的初创公司，一次方向错误的实验，消耗掉的算力和时间永远无法挽回。</p>
+<p>这就极其考验一个从业者的研究品味。</p>
+<p>这是 Andrew 从导师 Geoffrey Hinton 那里学到的最重要的一课：要知道什么时候死磕一个方向，更要知道什么时候果断放弃。</p>
+<p>随着 AI 编程工具的普及，技术执行的门槛正在肉眼可见地降低。</p>
+<p>对于每一个技术从业者来说，未来最值钱的不再是敲代码的手速，而是对技术演进方向的敏锐嗅觉。</p>
+<p>在这个瞬息万变的时代，找准属于你的那条关键赛道，比盲目挥洒汗水要重要得多。</p>
+<p>© 2026</p>
+<p>·</p>
+<p>向阳乔木</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Andrew Dai" class="entity-link person-link">Andrew Dai</a>, 
+                
+                  <a href="/search/?q=Noam Shazeer" class="entity-link person-link">Noam Shazeer</a>, 
+                
+                  <a href="/search/?q=Geoffrey Hinton" class="entity-link person-link">Geoffrey Hinton</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Aloran AI" class="entity-link company-link">Aloran AI</a>, 
+                
+                  <a href="/search/?q=Google Brain" class="entity-link company-link">Google Brain</a>, 
+                
+                  <a href="/search/?q=DeepMind" class="entity-link company-link">DeepMind</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=GPT" class="entity-link product-link">GPT</a>, 
+                
+                  <a href="/search/?q=Transformer" class="entity-link product-link">Transformer</a>, 
+                
+                  <a href="/search/?q=PaLM 2" class="entity-link product-link">PaLM 2</a>, 
+                
+                  <a href="/search/?q=Gemini" class="entity-link product-link">Gemini</a>, 
+                
+                  <a href="/search/?q=GLaM" class="entity-link product-link">GLaM</a>, 
+                
+                  <a href="/search/?q=GPT-3" class="entity-link product-link">GPT-3</a>, 
+                
+                  <a href="/search/?q=GPT-4" class="entity-link product-link">GPT-4</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-research/">ai-research</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/mixture-of-experts/">mixture-of-experts</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">visual-agi</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/data-quality/">data-quality</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">language-model</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

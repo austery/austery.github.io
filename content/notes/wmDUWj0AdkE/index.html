@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>《杀戮尖塔2》多人联机初体验与游戏机制探讨</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="《杀戮尖塔2》多人联机初体验与游戏机制探讨" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">《杀戮尖塔2》多人联机初体验与游戏机制探讨</span>
+      <span data-pagefind-meta="speaker" style="display:none;">北美王路飞</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-03-06
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/tech-trends/">tech-trends</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/bei-mei-wang-lu-fei/">北美王路飞</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=wmDUWj0AdkE" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-03-06
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本期直播中，主播首次尝试新作《杀戮尖塔2》的多人联机模式，并探讨了游戏的核心卡牌机制、新特性（如联机模式、新英雄）与前作的异同。直播还穿插讨论了游戏早期测试版（EA）的特性，以及对一些现实事件的看法。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>《杀戮尖塔2》初体验与联机展望</h3>
+<p><strong>Speaker 2</strong>: 这样应该没有问题啊。好，那我们选这个铁血战士啊。这样应该没有问题了。变成游戏主播，我们今天这个新游戏出来，我尝试一下。我准备等那个<strong>刘总</strong>上来搞一个两人爬塔啊。这个关键时期，</p>
+<p><strong>Speaker 0</strong>: 你播游戏呃。</p>
+<p><strong>Speaker 2</strong>: 一级一张牌，巨大扭蛋，两个随机遗物。</p>
+<p><strong>Speaker 0</strong>: 这感觉好像比较好一些。</p>
+<p><strong>Speaker 2</strong>: 增加两个，这个我随机两个什么礼物啊？漂亮口红。第三回合获得一个敏捷，一伤状态。OK，继续战士一代。对我其实最喜欢那个一代，玩得最多是战士。</p>
+<p><strong>Speaker 0</strong>: 哎呀。</p>
+<p><strong>Speaker 2</strong>: 我其实主要想测试下两个人，两个人测试的啊。现实世界是不是比游戏夸张啊？那是现实世界太夸张了。这款游戏是今天刚出的，才出了几个小时吧。哎，我这个可以选吗？看看走哪条路啊？哦，这边一路全是怪打上去的。</p>
+<p><strong>Speaker 0</strong>: 明们这好大神。</p>
+<p><strong>Speaker 2</strong>: 你是不是以为我的那个声音是 <strong>AI</strong> 配的？连攻击。对。哎，这个应该 <strong>Steam Deck</strong> 上应该也可以玩吧？我有 <strong>Steam Deck</strong>，我一会儿尝试一下。</p>
+<p><strong>Speaker 0</strong>: 这不是正式版。</p>
+<p><strong>Speaker 2</strong>: 应该是那个叫什么 <strong>Early Access</strong>（<strong>EA</strong>）。我本来我是想测试一下这个，我要雪里热狗转型成游戏主播了吗？没有没有，只是偶尔打一下。今天正好是新游戏，我本来还叫李二狗过来跟我一起直播。这个游戏呢，他非要玩那什么马拉松。OK，每当你给予一张的时候，获得一张。感觉这个好一点。失去一百金币变化，两个获得五点最大生命变化。两张牌变化，两张牌吧，赌一把。运气不错，有一个能力。咱来先吃这个，造成九点伤害啊。</p>
+<h3>《杀戮尖塔》系列的魅力</h3>
+<p><strong>Speaker 2</strong>: 这款新游戏啊，你们没玩过吗？<strong>杀戮尖塔</strong>这款游戏，是我有一次在咖啡店看书的时候，我看到旁边有一个哥们儿拿着一个 <strong>Switch</strong> 玩得特别开心。然后我就特别好奇，我就过去问他，我说你这什么游戏？他说这是非常好玩的一款<strong>卡牌类游戏</strong>。呃，然后哇，这个甲虫包给变小了。然后我就买了一下，在那个 <strong>Switch</strong> 上买的。<strong>Switch</strong> 上买了之后就玩了特别多的时间。那我就推荐给刘索龙玩了。对，一代确实神作。这是今天刚出的<strong>二代</strong> OK，而且他还出了一款呃，就是真的桌游。我本来还想去买的，后来去那个桌游店看了一下啊，发现这个桌游的体量巨大，而且特别复杂。我感觉这个线下玩可能玩不起来。那你给余生的时候出一张牌能力 OK。</p>
+<p><strong>Speaker 0</strong>: 哎，转到了众通都落这一锅粥了。</p>
+<p><strong>Speaker 2</strong>: 哎，中东这个事情看得让人非常的抑郁啊，打打游戏排解一下。</p>
+<p><strong>Speaker 0</strong>: 明天直播会聊这个。</p>
+<p><strong>Speaker 2</strong>: 他有他有这个联机玩的，这个其实我比较想尝试一下。我叫我在那个瑶<strong>刘子龙</strong>过来，跟我两个人爬一下试试。他可以 <strong>co-op</strong>，最多可以四个人去玩。第三个 <strong>elixir</strong> 是口红啊，它是三回合的时候获得一点力量，极加敏捷，这个还挺强的。</p>
+<p><strong>Speaker 0</strong>: 其实看我去练一张卡。</p>
+<p><strong>Speaker 2</strong>: 嗯，我看到这个能力升级者啊。</p>
+<p><strong>Speaker 0</strong>: 只是这个英雄应该变动不大。他主要出了还出了两个新英雄。其实应该把这个拿了。</p>
+<p><strong>Speaker 2</strong>: 大家自己感觉一般。嗯。</p>
+<p><strong>Speaker 0</strong>: 确实老齐应该把清月叫过来。</p>
+<p><strong>Speaker 2</strong>: 清月不是会玩这个游戏吗？哦，怎么不开啊？</p>
+<p><strong>Speaker 0</strong>: 先亲爱的。</p>
+<p><strong>Speaker 2</strong>: 给予逆伤的时候抽一张卡，这二十二点伤害我还不太想抗。没有，他死了，一直不乐记。</p>
+<p><strong>Speaker 0</strong>: 中过踩踏。</p>
+<p><strong>Speaker 2</strong>: 打出十二点，OK。这样我觉得还可以。梦幻联刀，等一下，我来问一下。哎，你看到那个 <strong>Slay the Spire 2</strong> 出来了，好像可以联机爬塔。</p>
+<p><strong>Speaker 0</strong>: 要不要来爬一下旧日雕像啊？</p>
+<p><strong>Speaker 2</strong>: 它这个功能是什么？你本回不要打出一张牌本体，受到伤害加加。你这个伤害加驶往一加一。快把这能量吃了，这是个精英怪啊。我看看啊。</p>
+<p><strong>Speaker 0</strong>: 三张技能。百分之十二十五太阳嘘，这个肾虚拳啊。</p>
+<p><strong>Speaker 2</strong>: 把它打完之后。</p>
+<p><strong>Speaker 0</strong>: 肾虚拳哦。</p>
+<p><strong>Speaker 2</strong>: 再打一张。我刚刚这一招有点像那个什么一样，每次都是二十五。等一下啊。</p>
+<p><strong>Speaker 0</strong>: 登击手牌进。</p>
+<p><strong>Speaker 2</strong>: 哦，这个打死他这个效果是投掉了呀。八点格挡，如果你在本月会消耗过卡，额外回到八点。这么锤三十二点啊，这是以前的一张，这个是以前的一张呃，黄卡，现在降级了，变成一个普通卡。那就中锤了，要把它升级一下。嗯。</p>
+<p><strong>Speaker 0</strong>: 哦，我觉得这个升级好像效果好一。</p>
+<p><strong>Speaker 2</strong>: 这个是干什么的？每当进入房间的时候，回四点血啊。嗯，锻造一下四十二点，这样的话合算一点。挑战一个精英怪。哎，你之前直播不是直播过这个游戏的吗？</p>
+<p><strong>Speaker 0</strong>: 现在可以联机打了这个啊。</p>
+<p><strong>Speaker 2</strong>: 我给了一个重锤，他应该就死了吧。</p>
+<p><strong>Speaker 0</strong>: 啊。</p>
+<p><strong>Speaker 2</strong>: 这个蓝耗太高了。三点。哇，这个怪真恶心。上次直播过一次，那个那个叫什么来着呢？</p>
+<p><strong>Speaker 0</strong>: 老女儿啊。</p>
+<p><strong>Speaker 2</strong>: 这个施加一个负面效果，这只地虫有点应该打不死。果然我得把这虫子打死之后，他才会把这个缩小的效果给消除掉。打他是对的。等一下，十五点伤害，这个打不死他。你们玩过这个游戏吗？这个游戏其实还挺有名的。八张四八三十二打不死。对，这个游戏现在可以联机了，这是<strong>二代</strong>新款刚出的。每当你给予一双的时候。哦，你是二十啊。</p>
+<p><strong>Speaker 0</strong>: 嗯，你很厉害。</p>
+<p><strong>Speaker 2</strong>: 现在新出的这个二可以四个人联机。我其实就想尝试一下，看看这四个人联击什么样的效果啊。不知道，我其实就想试一下这个，他好像是你建立一个游戏，然后其他几个人加入。哎呀，对，所有人造成九点伤害。二代。</p>
+<p><strong>Speaker 0</strong>: 今天刚出的嗯，两百块钱。哇。</p>
+<p><strong>Speaker 2</strong>: 什么买不起？流星锤，造成造成三点伤害。在你下个回复开始将思考，造成三点伤害，下个回合将磁卡返回你的手牌。要不试一下。</p>
+<p><strong>Speaker 0</strong>: 这个应该是配合。</p>
+<p><strong>Speaker 2</strong>: 他不是异部排行榜，应该是一起打的。我看一下那个预告里头的，说好像是一起打的。他是跟那个他出的实体版的桌游的玩法应该是一样的。</p>
+<p><strong>Speaker 0</strong>: 那个实体版桌游也是最多可以四个人一起联机鸟蛇哦。</p>
+<p><strong>Speaker 2</strong>: 选择一张出始牌。</p>
+<p><strong>Speaker 0</strong>: 变成坚韧之皇后的。这应该是他增强的一个版本。</p>
+<p><strong>Speaker 2</strong>: 快点给那张卡附魔就好，你试试，应该是配合配合的。这个可以联机的，这个可以联机的。哎呀，打错了。</p>
+<p><strong>Speaker 0</strong>: 应该先把这个应该先打这个，伤害不能再吃伤害了。</p>
+<p><strong>Speaker 2</strong>: 哎呀。</p>
+<p><strong>Speaker 0</strong>: 其实不应该合着我们说要来跟我一起联机的，他现在可能把我给割了。</p>
+<p><strong>Speaker 2</strong>: 你现在赶紧买一个。</p>
+<p><strong>Speaker 0</strong>: 然后加入我的游戏踩踏。</p>
+<p><strong>Speaker 2</strong>: 这个是一个新的 <strong>boss</strong> 啊，它这个特效明显明显加强了。你要死亡的时候啊，这个是可以增加一次血液。在这回合你打出下一张攻击，还会偶尔打一次连贯拳，造成受点伤害，失去十点力量啊，这是一个控制。相当于是当时四点伤害两次，幸好你手啊。所以经常买哦。</p>
+<p><strong>Speaker 0</strong>: 感觉好像真的厉害一点。</p>
+<p><strong>Speaker 2</strong>: 朝穴啊，他现在每次第二个开始，还有一个特效的这个地方。这个龙放两张放松。我的十五点格挡哦。这个这个牌还行吧。我看看把你的卡牌现金给配了。每献祭两次就能获得一件，可以把牌奖励献给，就能获得一次遗物。额外抽一张卡，感觉额外抽一张卡。好，一百四的话不够，我买这个。</p>
+<p><strong>Speaker 0</strong>: 我去这边地道虫啊。</p>
+<p><strong>Speaker 2</strong>: 这个这个特别恶心，它会钻钻到地道里头去。这样话。</p>
+<p><strong>Speaker 0</strong>: 你手中那张牌看网上这个随机打的比较好看一下，他是哪一张随机啊？就然后地道一个地方，你不要最后打这张牌胜面啊。</p>
+<p><strong>Speaker 2</strong>: 就是能力值。OK，二十五点他应该死了。对，音乐确实也是神作。他那个在 <strong>Steam</strong> 上，你还可以专门花钱把那个 <strong>OST</strong> 给买下来了。呃，进入神秘房间吧。</p>
+<p><strong>Speaker 0</strong>: 嗯，四十二点 OK。这个肯定能打死，四十二加这个就死十七点伤汗。</p>
+<p><strong>Speaker 0</strong>: 嗯。</p>
+<p><strong>Speaker 2</strong>: 造成十二点伤害，下一家攻击牌的消耗变成零。打出了下一张的消耗后能变成零，造成四点伤害，没有一层抑伤，可以额外造成两个点伤害。嗯。</p>
+<p><strong>Speaker 0</strong>: 你伤多吗？</p>
+<p><strong>Speaker 2</strong>: 我的医生其实不多。</p>
+<p><strong>Speaker 0</strong>: 只有一张牌是医生武功好的占卜啊。</p>
+<p><strong>Speaker 2</strong>: 这个占卜是什么意思啊？看一下啊，只要花九十七块钱占卜三次来，九十七块钱占卜三次。这两个有什么区别啊？一旦有物品揭示，你将在本次服务结束时获得它非常消息。你揭开某些物品非常危险。三次的话，杂府占卜嗯，你好哦，还不错，获得了一个药水。就是七块钱，相当于买了一个药水。腐朽牌迷失鬼火是什么东西？没打出一张能力牌。对对，对手造成八点伤害。呃，我的能力牌很多吗？一张能力牌，两张能力牌，三张。</p>
+<p><strong>Speaker 0</strong>: 能力牌四张。</p>
+<p><strong>Speaker 2</strong>: 能力牌四张能力牌三十二点伤害，七十四块钱吗？这个是干什么啊？</p>
+<p><strong>Speaker 0</strong>: 召唤怪物可不可能上几左手拍？</p>
+<p><strong>Speaker 2</strong>: 没锤，别锤他吧。生出来一些蛋啊，这个是什么孵化啊？孵化了之后，可以那个，嗯，我想想怎么把这老大给干死。</p>
+<p><strong>Speaker 0</strong>: 我造成九点伤害。等一下啊。</p>
+<p><strong>Speaker 2</strong>: 如果我升级了之后。哦，七应该打不死。完了，刚刚浪费了这一招，全都孵化了。感觉刚刚这个有点失策，如果是这样打的话。</p>
+<p><strong>Speaker 0</strong>: 也打不死他。你错了。</p>
+<p><strong>Speaker 2</strong>: 哎，运气不错，赶紧把老大给干掉了，要不然这没完没了了。</p>
+<p><strong>Speaker 0</strong>: 应该够了。</p>
+<h3>中东局势与游戏解压</h3>
+<p><strong>Speaker 2</strong>: 我其实没出多少伊朗的视频啊。升级所有卡吧。嘿啊，这个有点恶心，一百四十五滴血啊。</p>
+<p><strong>Speaker 0</strong>: 先加上一个铠甲，三七二十一攻击。</p>
+<p><strong>Speaker 2</strong>: OK。不过我还至少有多一条命。你可以那个尝试一下连击啊。呃呃，给雨上的时候。你说他挥剑的那个动作吗？哦，我刚刚出错牌了。</p>
+<p><strong>Speaker 0</strong>: 关于是十七点伤害十九点。</p>
+<p><strong>Speaker 2</strong>: OK，他应该死了吧。这个怪挺恶心的。哇，这个有点像赤犬的那个拳头一样，损伤有点大。</p>
+<p><strong>Speaker 0</strong>: 回点血好回，又可以狗一条命。</p>
+<p><strong>Speaker 2</strong>: 我现在有两个续命的啊。二百七，我看看能不能买到什么东西，应该能买一个不错的。我获得一瓶药水形状的石头。每一组卡牌奖励中会随机有一张牌，被附魔迅捷加一。嗯，我觉得这个比较厉害一点。</p>
+<p><strong>Speaker 0</strong>: 我看嗯，我看看哪些牌要加强的。</p>
+<p><strong>Speaker 2</strong>: 有没有加强加强。六点上来两次。</p>
+<p><strong>Speaker 0</strong>: 我看两点上来四次装锤。</p>
+<p><strong>Speaker 2</strong>: 嗯，我会进入普通战斗。</p>
+<p><strong>Speaker 0</strong>: 还是试一下这个随机获得一张能力牌来打这条路。</p>
+<p><strong>Speaker 2</strong>: 失去这个药水，然后获得十点最大生命，失去六点生命。获得一张攻击牌，造成八点额外伤。附魔一张攻击牌，造成额外八点伤害，额外八点伤害。我看一下啊，哦，我可以把这张牌加强，那就变成十二了。我试这张吧，有没有那个零。哎，这张牌已经有了。哇，这什么东西啊？残杀千足虫，这个血量还是挺多的。看这什么技能，如果身体还存在其他的部分，两回合两回合后，以二十五点生命复活。哦，OK，我这个一下就能锤死掉。如果说存在其他的部分，存在一个负面效果，能把这个锤死了。</p>
+<p><strong>Speaker 0</strong>: 开两回合后就复活了。</p>
+<p><strong>Speaker 2</strong>: 来先把这个加强一下。对所有造成十三点伤害，这个精怪不过如此。OK，中间这个复活了。</p>
+<p><strong>Speaker 0</strong>: 二十四点伤害，可以九点伤害。OK。哦。</p>
+<p><strong>Speaker 2</strong>: 随机抽到了一张重锤。等一下啊，二十四二十四加六。</p>
+<p><strong>Speaker 0</strong>: 三十不够是。哦。</p>
+<p><strong>Speaker 2</strong>: 第一次牌打出的时候才加流动铜液金刚出。好，他打一下就就缩起来了。</p>
+<p><strong>Speaker 0</strong>: 拿了醋没错开。十二点三十三二十三。哦。</p>
+<p><strong>Speaker 2</strong>: 够了。是疯狂加甲吧。休息一下。感觉刘嫂王是把我给割了，还要施加一个知识恶魔。OK，我先给自己加个甲。</p>
+<p><strong>Speaker 0</strong>: 那没有意义伤，可能这个还挺强。</p>
+<p><strong>Speaker 2</strong>: 维何杰夫出了六点伤害。维何少抽少抽一张牌吧。哎，太烦了。OK，十七点。</p>
+<p><strong>Speaker 0</strong>: 那我是一个荆棘可爱哦。</p>
+<p><strong>Speaker 2</strong>: 错了。你家甲，因为我有那个板伤，就他打到我，他会有耗血。十一点的话，我现在自己可以加五点格挡，那我吃一张就行。先给他来一张吧，回他一下。嗯，有能力牌我这样每次结束的时候还能打一张牌。他要给我使用什么能力呢？我把这个也吃了，疯狂加甲。你后每次都可以自动自动甩盘，又给我加个伤害。每回合不能打超过三张牌，每回合结束的时候受到七点伤害。还是吃这个吧，因为我反正我现在有加甲了，就我相当于抵消了，不一定给我加负面状态。十九点伤害的话。</p>
+<p><strong>Speaker 0</strong>: 无情猛攻下一个回合变成零，可以释放哦。</p>
+<p><strong>Speaker 2</strong>: 其实可以让那个其实吃那个无情猛攻也没关系。</p>
+<p><strong>Speaker 0</strong>: 叠加继续叠加状态，可以自动扔盘十三点伤害。</p>
+<p><strong>Speaker 2</strong>: 我看四十四可能也不行，还有后续吗？这个哦，没了。OK，获得五点格挡。本回合格中有一伤状态，敌人对你伤害降低百分之五十。消耗所有手牌，然后抽同样数量的手牌。第一次打出来的时候，消耗他是有这个附魔的啊。第一次打出的时候抽一张牌，消耗所有手牌，然后抽取相同数量的牌。嗯，有医生状态的人降这个降五点。最后一张牌甲力量荣耀进入第三阶段了啊。</p>
+<p><strong>Speaker 0</strong>: 那个狮子本能哦。</p>
+<p><strong>Speaker 2</strong>: 费用减一张。你可以在这个地方烹饪移出两张牌，并且获得九等最大生命，加一个吹哨，造成三十三点伤害，眩晕该敌人消耗哦。还有还有这个眩晕技能本能费用减少一，我看看啊，我觉得这个还挺有吸引力的。</p>
+<p><strong>Speaker 0</strong>: 如果说把把这张重锤减减一费，重锤减一飞。</p>
+<p><strong>Speaker 2</strong>: 这个也减一飞，那所有攻击的都可以减是吧？嗯。</p>
+<p><strong>Speaker 0</strong>: 重锤要减，痛击也减，无情猛。</p>
+<p><strong>Speaker 2</strong>: 工业界嗯，暴走要剑的话，OK，那就暴走剑好一点啊。</p>
+<p><strong>Speaker 0</strong>: 而生花木兰就少了咬人卷轴。</p>
+<p><strong>Speaker 2</strong>: 咬到我的话，会那个什么，看一下啊。</p>
+<p><strong>Speaker 0</strong>: 张费用减一好休息。</p>
+<p><strong>Speaker 2</strong>: 哎，举不动啊，这个特别烦人。它咬到你的这个地方就会给你血下降，所以我得加上一些防御。</p>
+<p><strong>Speaker 0</strong>: 这个应该是可以打死一个十四点九十八。哦。他有可能会甩出这张牌攻击牌。</p>
+<p><strong>Speaker 2</strong>: 那我其实打到这一张的话，就确定他一定会打出一张攻击牌。嗯，没错，这样就好了。那这个比较烦，就是他咬到你伤害之后，它会把你的最大生命值给下降。如果你本来会消耗过卡，就或四点 OK。消耗所有非攻击牌，抽一张消耗所有非攻击牌。每每张获得五点格挡。伊斯达叔叔抽一张牌。那遗忘的仪式。如果你在该回合中消耗过卡，则获得死。消耗过卡会有很多消耗吗？只有一。哦，有这张牌，就还是有一些新的。这这张这张两张小号。</p>
+<p><strong>Speaker 0</strong>: 这个情有自豪的是免当你好好一张牌，灵魂之力。</p>
+<p><strong>Speaker 2</strong>: 这张牌失去消耗哦，可以让一张牌失去消耗。呃，不能被打出。如果这张牌在手，你时候需要两点伤害。OK，看看啊，哪一个是要消耗的去消耗。其实我有消耗这个字条的，只有这一个。如果把这张牌变成没有消耗的话，嗯，可以试一下。</p>
+<p><strong>Speaker 0</strong>: 然后再把它升级一下。</p>
+<p><strong>Speaker 2</strong>: 那这次增加了一个新的变化，就是你的这个消耗也可以是吧？你和众人一起进入一个巨大的建筑物，一道金色拱门。七月二号，你将成为今天的判决者，接受成为今天的判决者。我靠。OK，他是获得一张悔恨。呃，然后呢获得两件随机的遗物羞耻。嗯，悔恨嘛，什么遗物？哦，最大生命值正二十点格挡造成，我看得去一排了，我靠，给我塞了一堆垃圾。</p>
+<h3>游戏策略与卡牌分析</h3>
+<p><strong>Speaker 1</strong>: 两点伤害，零点暴走。嗯，先把这个吃了。</p>
+<p><strong>Speaker 0</strong>: 嗯。</p>
+<p><strong>Speaker 1</strong>: 这个这个好像是那个雷神啊，拿着一个锤子和一个那个钉子十二点伤害 OK。呃，在一手的话损失相应的生命来叠加甲御铁甲，把质量消耗掉。哎。</p>
+<p><strong>Speaker 0</strong>: 完美哦。</p>
+<p><strong>Speaker 1</strong>: 其实那两牌还挺好的。</p>
+<p><strong>Speaker 0</strong>: 嘿嘿。感觉我这强度还可以。无情。</p>
+<p><strong>Speaker 1</strong>: 猛攻可以继续选这张。其实有的时候不需要选那么多牌了。看一看啊。呃，其实有那张牌存在的话，我倒不用太担心。我看看有没有什么要加强的牌。嗯，把这张牌可以加强一下。看把这个痛击加强一下。等一下啊，加上痛计还是加上这个恶魔之焰呢？恶魔之焰吗？这个是什么东西啊？抢夺力量被击杀的时候，将偷窃的力量全部传还给玩家。哦，他会偷我的力量。这个是强化偷速度哦，偷敏捷啊。这两个好恶心啊，恶心双煞对。</p>
+<p><strong>Speaker 0</strong>: 攻击牌。把这个偷猎样的恶心怪给打死。在抖音上。</p>
+<p><strong>Speaker 1</strong>: 关注诸葛们俩的，油管上也有。</p>
+<p><strong>Speaker 0</strong>: 对，我主要是在油管上的啊。</p>
+<p><strong>Speaker 1</strong>: 这个人好烦啊。</p>
+<p><strong>Speaker 0</strong>: 偷我的，我得赶紧干死一个人才行。重锤。</p>
+<p><strong>Speaker 1</strong>: 哎，有没有打到？运气不好？不行，我得赶紧把这个人打死。嗯。</p>
+<p><strong>Speaker 0</strong>: 三四十二个妈的，真的来了一张腐朽。我说了他不停的拖我的敏捷。</p>
+<p><strong>Speaker 1</strong>: 十二点二四五六十点伤害打不死他。嗯。</p>
+<p><strong>Speaker 0</strong>: 没有一伤。</p>
+<p><strong>Speaker 1</strong>: 嗯，他不过应该已经死了。嗯，这几张牌感觉都不是很好的样子。不要嗯，造成这个伤害。每张牌上上将三还打十张。OK，呃，接下来走的话，要看一下这个二百一十六块钱。可以嗯，还走这边开心刀。三张技能牌造成五点伤害哦。三张技能牌造成五点伤害。那你要死时改，不要丢弃。嗯，瓶装精灵，我已经有了。给他一一百给他活动星图。每当你进入什么？回复四点生命哦。两个随机。那我跟他换，可以跨回合保留最多十点格挡。看这个不错。每当战斗开始时哦。这个比那个强。因为星图这个后面已经没有什么了。</p>
+<p><strong>Speaker 0</strong>: 只有这两个，我就不走这条路线。锻造一下。</p>
+<p><strong>Speaker 1</strong>: 看看锻造哪张牌，两点力量啊。</p>
+<p><strong>Speaker 0</strong>: 我觉得这个好像还都可以消耗一点生命。</p>
+<p><strong>Speaker 1</strong>: 呃。</p>
+<p><strong>Speaker 0</strong>: OK，不要把血耗掉了。</p>
+<p><strong>Speaker 1</strong>: 获得四辩。</p>
+<p><strong>Speaker 0</strong>: 如奖打的好疼啊。二十九点灵魂枢纽。我消耗牌没有消耗的这张消耗的十一点四百二十四八点伤害。</p>
+<p><strong>Speaker 1</strong>: 第一次打十六点伤害。二十九点四十六点。嗯，还是打这张，然后我把这两张攻击票都打出去。对。</p>
+<p><strong>Speaker 0</strong>: 完美十八点 OK。</p>
+<p><strong>Speaker 1</strong>: 我是可以打出一张的。如果本回合消耗不卡的话。OK，这是要消耗的。然后我就可以获得四颗星。</p>
+<p><strong>Speaker 0</strong>: 把这两个加上也是无所谓的，但是打出的这波操作是没有问题的啊。</p>
+<p><strong>Speaker 1</strong>: 水银山倒不错。嗯。啊，这张挺强的，这张也挺强的。还有这张的极品。第一次的时候抽出看极品三百零七。嗯，去一趟商店吧。嗯，商店的话五个这个肯定不要回复。两点每场战斗是开始这个买这个吧。每一回合失去生命，获得一点力量。每一回合失去生命时，获得一点力量。嗯，这样是可以的。</p>
+<p><strong>Speaker 0</strong>: 我看有没有什么那个不能被打出，结束的时候消耗。</p>
+<p><strong>Speaker 1</strong>: 嗯，这个组装师是一个老鼠啊，这个骑的一个机械，这是模仿那个机械。那什么 <strong>Spider-Man</strong> 的那个 OK，看能不能一波把他给带走啊。</p>
+<p><strong>Speaker 0</strong>: 太可能消耗六点生命，抽三张牌四张牌。</p>
+<p><strong>Speaker 1</strong>: 嗯，再来一张技能牌。呃，算了，我留个大 <strong>boss</strong> 十八点。你看我不受伤害。</p>
+<p><strong>Speaker 0</strong>: OK，时间伤害下一次二八一商十一点可爱啊。</p>
+<p><strong>Speaker 1</strong>: 这个老鼠会不停的招小弟啊。</p>
+<p><strong>Speaker 0</strong>: 不过他已经死了五个钥匙。</p>
+<p><strong>Speaker 1</strong>: 随机牌，那个不能拿了烧烧一张牌抽三张牌。这样还不错。这肯定只能回血了。你看这次能不能挑战 <strong>boss</strong> 成功啊？这个 <strong>boss</strong> 都是比较新的。哇，这是什么东西啊？这是一个蜥蜴。</p>
+<p><strong>Speaker 0</strong>: 啦啦啦啦二十点伤害有一伤状态的话，伤害降百分之五十。</p>
+<p><strong>Speaker 1</strong>: 嗯，我只能给他逮出一伤吗？感觉得不能有。他身上没有异伤。他这个是什么？没打出一张技能牌，获得两点一哦。打一张能力牌，你逼会自我打死了吧。这又什没办法，我们这个 <strong>boss</strong> 一点都不强。四十五点伤害。嗯，肯定有后手吧。哎，为啥没死啊？还可以这样的吗？打不了这个牌了。哦耶复活了哦，长出两个头了。最后不会被打死一次哦。你看他是什么 <strong>C</strong> 井号 <strong>C</strong> 八，你看好吧？消耗一张牌。</p>
+<p><strong>Speaker 0</strong>: 把这张正好诅咒给消耗掉哦。</p>
+<p><strong>Speaker 1</strong>: 四十六点伤害没有题。然后再增加额外的全无术出去，三十点还是要接受十点伤害，不能打出看。呃，三十点伤害还挺疼的。把这个二十二点 OK。下次打出一张攻击牌。我有医生吗？没有给医生啊。</p>
+<p><strong>Speaker 0</strong>: 完了，四十点我感觉要被他砍死了。</p>
+<p><strong>Speaker 1</strong>: 嗯，OK。他应该死了，要长三只头。我就知道我告，嗯，抽消耗一张牌，抽三张牌。</p>
+<p><strong>Speaker 0</strong>: 把这个消耗消耗一张牌。</p>
+<p><strong>Speaker 1</strong>: 增加一点力量，然后消耗 OK，所有的牌都升级。他要长三只头了。我就知道这是还是 <strong>C</strong> 八还还能进入巫师体，三十点伤害，我靠。呃，本回合获得格挡的话，以上你身体盾我打不了他了呀。</p>
+<p><strong>Speaker 0</strong>: 是不是你给一点伤害 OK。四十五点。</p>
+<p><strong>Speaker 1</strong>: OK。不过我好好歹有好几个回血的，那个应该还没问题。嗯，你要上这个吗？</p>
+<p><strong>Speaker 0</strong>: 加盾疯狂加会甲就行。</p>
+<p><strong>Speaker 1</strong>: 四十五点 OK。十七点他又五十题了，我靠，还给我三张什么东西啊？怎么不上游戏了？嗯，不能被打出。让我把他那个辣辣鸡排给烧了。你们没玩过这个游戏吗？二十七点灼伤不能被打出。呃，这样怕你手的话哦。垃圾这样消耗过牌的话。我有消耗过牌吗？三十六。</p>
+<p><strong>Speaker 0</strong>: OK，要被他把这个我还有两条。</p>
+<p><strong>Speaker 1</strong>: 还有一条命。OK，四十七点感觉要被他给搞死。嗯。</p>
+<p><strong>Speaker 0</strong>: 你能力药水格挡不再消失。</p>
+<p><strong>Speaker 0</strong>: 三十四十三还是差一点。</p>
+<p><strong>Speaker 1</strong>: 哎，预两还好，要命了，要命了。</p>
+<p><strong>Speaker 0</strong>: 三十七想说死第三点。</p>
+<p><strong>Speaker 1</strong>: OK，还可以再狗一条命。我应该应该能干死他。我想想啊。</p>
+<p><strong>Speaker 0</strong>: 先是这 OK。二七死了。好，趴塔成功，大恶魔的泽狗来了吗？</p>
+<p><strong>Speaker 1</strong>: 你怎么这么说？我我靠，威胁他敌人杀戮。你的建筑是造成了一千零二死伤害。OK，第一次啊，爬成功了。有两个历史节点。这是呃 <strong>Slay the Spire</strong>，<strong>杀戮尖塔</strong>是<strong>卡牌类 Roguelike</strong> 的鼻祖啊。他的一代游戏是非常成功的。你可以在那个 <strong>Steam</strong> 上看一下啊，评分超高啊，非常的让人容易上瘾。我以前经常拿起那个 <strong>Switch</strong> 打就停不下来。好，我来问一下这个<strong>刘祖龙</strong>啊，他什么时候来跟我进行联机？</p>
+<p><strong>Speaker 0</strong>: 他还是没接，我电话估计在开会呢。</p>
+<p><strong>Speaker 1</strong>: 我看多人模式，你看多人模式，你是可以创建一个游戏，然后让朋友加入的。我很确定<strong>刘总</strong>应该是把我给割了啊，他这个可能还在开会。对啊，初二了，今天刚出的呃，赶紧去买来尝试一下。呃，我准备再来一次啊。刚刚有这个 OK 一级了啊，可以用寂寞猎手啊，我牌我要出来了。我牌继续用继续用这个战士变化一张打击和防御，能够失去十点最大生命士气的时候，获得一百五十块钱。两张无色的加一张到我的卡组里头去。嗯，我看看这个路啊。一百五十块钱就是两百五到这可以买个东西，打一二三四。</p>
+<p><strong>Speaker 0</strong>: 四点到这个可以买嗯，无色卡。</p>
+<p><strong>Speaker 1</strong>: 选一张。嗯，要钱吗？这边一二三四五到这边走这条路。<strong>Zachary</strong>，</p>
+<p><strong>Speaker 0</strong>: 你玩过这个一代吗？</p>
+<p><strong>Speaker 1</strong>: 哇，这个虫子太烦了，每次把我都被都变小。嗯嗯。</p>
+<p><strong>Speaker 0</strong>: 变小了之后就没有那个技能了。</p>
+<p><strong>Speaker 1</strong>: 能力加三点的加两点的力量，失去一百金币变化，两张牌获得五点最大生命。一百金币变两张牌。算了，我和和他那边买一个好点的生物吧。加五点最大生命去这个超市买点买点好东西。一玩就玩一宿是吧？对，非常容易上瘾啊，这个游戏。呃，这两个可以把这四点打掉。</p>
+<p><strong>Speaker 0</strong>: 嗯，没事，装单吧。</p>
+<p><strong>Speaker 1</strong>: 这个<strong>二代</strong>是今天刚出的呃，是 <strong>Early Access</strong>。</p>
+<p><strong>Speaker 0</strong>: 我回头看一看那个 <strong>Steam Deck</strong> 上能不能玩这个游戏单找。你知道一生的时候，一张牌升级，</p>
+<p><strong>Speaker 1</strong>: 你牌组里的一张牌升级一张和变化一张的话，升级的更稳一些，收益更可控。二百八，我看看能不能买到一个好的礼物啊。哎，这怎么突然变成英文了？有抑伤的敌人受到伤害增加百分之七十五。每当你洗牌时，抽一张牌。好到洗牌堆时，抽一张牌。<strong>at the start of your turn, gain two strength and enemy lose one strength</strong>。嗯，一伤。等一下啊。三成一伤啊。这两个搭配应该还挺强的。买这个吧。打精英怪了啊。哇，这个，很恶心。这个寄生虫死了之后还会长出很多新的寄生虫。</p>
+<p><strong>Speaker 0</strong>: 四乘四 OK。看一看啊，这个数据的公式。</p>
+<h3>市场回调与游戏体验</h3>
+<p><strong>Speaker 1</strong>: 伊朗明天聊。嗯，伊朗明天直播的时候会聊。你看我推特发的那个呃<strong>奥邦海默</strong>说这个伊朗战争可能会导致回调，有多方因素吧。但是呢这个回调并不是进入熊市，而仅仅是一个调整，因为现在估值确实比较高。嗯，这个打它的话打不死二八十六。嗯，来一点。你打不死，其实没有什么区别。</p>
+<p><strong>Speaker 0</strong>: 是多一点的。</p>
+<p><strong>Speaker 1</strong>: 还给我抽一张烂牌。</p>
+<p><strong>Speaker 0</strong>: 我靠，那么恶心。</p>
+<p><strong>Speaker 1</strong>: 这个怪应该是这些怪中最恶心的一个。</p>
+<p><strong>Speaker 0</strong>: 我看来缺乏一些。哇。</p>
+<p><strong>Speaker 1</strong>: 我感觉这一这一轮出师不利啊。</p>
+<p><strong>Speaker 0</strong>: 被这帮东西耗的冷血存的有点多。我靠。你们这一轮被这个精英怪给打的有点伤四滴血。</p>
+<p><strong>Speaker 1</strong>: 完了，我要死在这了。没打过这个精怪卡的问题吗？</p>
+<p><strong>Speaker 0</strong>: 然后没有留 <strong>E</strong> 重新开放。</p>
+<p><strong>Speaker 1</strong>: 会有这么多新的钥水，随机的稀有牌。每当你抽到名字有打击的牌时，对一张随机的。每当你抽到名字里头有打击的牌时。</p>
+<p><strong>Speaker 0</strong>: 对于这个随机的点打出这张哦。</p>
+<p><strong>Speaker 1</strong>: 这个这个技能挺厉害的，这个能力很强啊。嗯，我是不用放这个牌了吗？</p>
+<p><strong>Speaker 0</strong>: 耶稣哦。</p>
+<p><strong>Speaker 1</strong>: 他就是自动放那个打击牌是吧？啊。你觉得不足如一百块。我是没没试过这个牌，看一下啊。七点格挡，随机消耗一张牌。</p>
+<p><strong>Speaker 0</strong>: 五点格挡，五点伤害九张。</p>
+<p><strong>Speaker 1</strong>: 那就是每次抽到这个打击就自动打出去了，那我再赶紧把那打击升一下。如果你们的卡组比较短的话，就比较强。</p>
+<p><strong>Speaker 0</strong>: 它就可以一直不停的快。</p>
+<p><strong>Speaker 0</strong>: 长要二十八块。</p>
+<p><strong>Speaker 1</strong>: 不能被打出五场。战斗之后，从你的卡组中移除，从你的卡组中移除一张牌。我需要一张牌吗？需要获得一瓶钥匙，王络的祝福。升级了十八八十八没多少钱。</p>
+<p><strong>Speaker 0</strong>: 我去了力量，一手飘飘。</p>
+<p><strong>Speaker 1</strong>: 我觉得这个能力还行啊，在前期的时候你帮你省不少低费啊。这个精英怪试一下哦。对，得把那个固有牌升级一下，然后疯狂的加甲就行。</p>
+<p><strong>Speaker 0</strong>: 嗯。</p>
+<p><strong>Speaker 1</strong>: 这一招有点像那个啊。</p>
+<p><strong>Speaker 0</strong>: 嗯，这样应该打死了吧。看这个是过牌加力量或者加力量。</p>
+<p><strong>Speaker 1</strong>: 嗯，感觉打精怪有点吃力了，要不走这条路。从这条路上去，我一会儿有那个消耗之后就会好一点。</p>
+<p><strong>Speaker 0</strong>: 刚刚那个牌就会更直一些，回你嗯，有点伤害。呃。</p>
+<p><strong>Speaker 0</strong>: 也打不了。</p>
+<p><strong>Speaker 1</strong>: 嗯，确实应该拿那个零飞打击。你这么说有道理。</p>
+<p><strong>Speaker 0</strong>: 抽牌直到抽到一张非攻击牌。OK。哎呀。</p>
+<p><strong>Speaker 1</strong>: 感觉我这个血量应该打不过这个精英怪了，我先去，我现在回个血。</p>
+<p><strong>Speaker 0</strong>: 完了踩到一个好吧。你给。那你说有道理啊。</p>
+<p><strong>Speaker 1</strong>: 完美打击其实也可以拿。嗯。</p>
+<p><strong>Speaker 0</strong>: 哎呀。</p>
+<p><strong>Speaker 1</strong>: 有点难了，二十二点血那肯定得吃。这两盘应该没什么悬念吧。千万别说的，我已经点到那个精英怪了，点到精英怪就死了。<strong>boss</strong> 战开始之后恢复二九位生命。哎，这个挺需要的，急需回血。哎呀，这个感觉卡组的强度不够啊。啊，打打不过这个，我得走这条走这条路，再回个血。两点敏捷二六十二凯。这叫藤蔓蹒跚者。哦。</p>
+<p><strong>Speaker 0</strong>: 这是现在才抽到哦。</p>
+<p><strong>Speaker 1</strong>: 他给我这两张牌变得消耗增加了是吧？</p>
+<p><strong>Speaker 0</strong>: 可以。</p>
+<p><strong>Speaker 1</strong>: 那张牌还是应该早点放在手上比较好一点。就是这样能力牌，如果后期拿到就有点尴尬了。那样是比较好。还有没有呃，攻击啊，重振精神啊，抽六张伤害防御。赶紧回血，就是卡组强度不够的表现啊，都不敢去打精英怪了，都得绕着走。嗯，试一下哦。好运气不错。不对了。对，升级之后要是带固有，那就牛了。我估计他可能是减肥。那这些给我身上吐了一大堆什么东西啊。</p>
+<p><strong>Speaker 0</strong>: 我嗯，把这个吃了就可以把它干掉。</p>
+<p><strong>Speaker 1</strong>: 哎，注错了。他这个游戏有英文版有中文版的。</p>
+<p><strong>Speaker 0</strong>: 八点神明啊。</p>
+<p><strong>Speaker 1</strong>: 嗯，抽一张就是不清楚。对啊，我知道那个 <strong>Roy</strong>，你说的这个以前我在 <strong>Switch</strong> 上会经常这么做。呃，十四点生命获得天选知识。那不行。八张随机拍照，选两张 OK。嗯，给这是 <strong>AOE</strong>。<strong>完美打击</strong>也是打击。对，<strong>完美打击</strong>也是打击。<strong>预备打击</strong>也是打击。我准备走这个打击卡组，这条路有打击的都能打。OK，我准备把其他没有打击的都给剪掉。嗯，二十点伤害 OK。呃，十二开。哎，等一下我看一下那个我随便跟你说过。</p>
+<p><strong>Speaker 0</strong>: 嗯。</p>
+<p><strong>Speaker 0</strong>: 你也有花二铁回来的玩起来了。</p>
+<p><strong>Speaker 1</strong>: 对啊，这是新游戏刚出了几个小时。我看一下啊。嗯，<strong>完美打击</strong>这个伤害挺高的，但是只能出一张。</p>
+<p><strong>Speaker 0</strong>: 嗯。你这个格挡是真的。这个哥们儿他是灯关三张无色中抽一张。</p>
+<p><strong>Speaker 1</strong>: 嗯，到晨六点上来。</p>
+<p><strong>Speaker 0</strong>: 直到抽到第一张嗯。</p>
+<p><strong>Speaker 1</strong>: 没有运气。把这仗也打了吧。对所有敌人造成十一点伤害的对。随机啊错误。这个这个人呢给我扔什么东西啊？不乖 OK。我终于拿到我这张牌牌，对人四眼伤害。没一点抑伤的话，造成这个重振精神啊。</p>
+<p><strong>Speaker 0</strong>: 那我不能把我这样好不好？</p>
+<p><strong>Speaker 1</strong>: 还有个盘口，就看我能不能打个 <strong>boss</strong>。那我可以控制我可以控制结局啊。我看这个这个压我打不过的。呃，压我打的过的人多。</p>
+<p><strong>Speaker 0</strong>: 我就打不过。</p>
+<p><strong>Speaker 1</strong>: 你知道那个 <strong>Polly Market</strong> 上有有一个大神啊，精准压住，什么时候打那个伊朗赚了好多钱。现在有人怀疑啊，就是白宫内部的这个人，有人怀疑可能是那个 <strong>Barron Trump</strong> 干的啊。前两天那个 <strong>Barron Trump</strong> 在在推特上变成那个派他去伊朗啊，这个变成热搜排到第四。后来好像有段时间排到第一的啊。<strong>完美打击</strong>也是打击。没错。</p>
+<p><strong>Speaker 0</strong>: 对。两个哎嗯，预备打击打击没有手牌了。</p>
+<p><strong>Speaker 1</strong>: 我其实今天直播就想跟那个<strong>刘子龙</strong>试一下这个连击的效果啊。结果他这个 <strong>AFK</strong> 啊是不是最近在打多少？我今天看老看到他在这个，我老看他在野狼兵的那个直播箭头打 <strong>Dota</strong> 啊。把所有的手牌都变成巨石。那这样不行啊。攻击牌变成巨石刀，我不就没有打击了吗？这个巨石是这个巨石没有打击啊，它是水稳伤害。OK，把所有的攻击牌都变成巨石，获得三十点格挡。嗯，这是救命的。OK，失去一点生命增加一点力量。嗯。</p>
+<p><strong>Speaker 0</strong>: 你这样拍好一点巢穴升级四张牌。</p>
+<p><strong>Speaker 1</strong>: 这张质量之夜啊，失去最大一点生命啊。这个有点每一个回合开始，然后这遗物在第三阶段开始熄灭。OK，这是什么节目？这是那个 <strong>Slay the Spire</strong> 啊。升级四张牌吧。我觉得这个四级四张牌不错。把这个升级一下，升级一下。这个还有什么黄的牌啊，这个也升级。这也升级，升级三张黄卡，然后再升级一张。嗯，看看把这张升级了。OK。哦，他没有固有，他只是加一了 OK。好吧，三百九十八。我准备去趟商店买点东西。嗯，走这条路吧。这个是 <strong>Slay the Spire 2</strong> 啊，今天刚出的试玩版，那也不是试玩版 <strong>EA</strong> 吧。哦，你说的对啊，右键好像是可以。我主要是之前都是在那个 <strong>Switch</strong> 上玩的。看一下啊。技能三张技能。嗯。</p>
+<p><strong>Speaker 0</strong>: 十一点看着这是什么？</p>
+<p><strong>Speaker 1</strong>: 这是蟑螂吗？外骨隔虫九外骨隔虫受到所有伤害不会超过九点哦，不会超过九点。嗯，那我打不死他了。</p>
+<p><strong>Speaker 0</strong>: 尴尬有点尴尬。</p>
+<p><strong>Speaker 1</strong>: 三加一四。哎，不是不会超过九点吗？我还是把打死这人物有的玩了。对，这个好像可以最多四个人一起玩的啊，那个我还我还想尝试一下呢。哎呀。OK，<strong>完美打击</strong>能打死他吗？哦，他是每次不能够超过四点 OK。我知道怎么回事了。打一呢，我赔了快一万块一万枚。哇，那你太惨了。呃，其实你如果看新闻的话，你应该能够判断到他早晚要打伊朗了。就是他这个这个新闻其实已经已经挺明显的了。不过不用担心啊。那个呃<strong>奥邦海默</strong>说这个只是回调啊。这个我不知道你有没有看过那个大时代头，那个以前演楚留香那哥们儿，他对着镜头说啊，这是技术调整。嗯，这一套就拿打击后过牌就行了。确实我多多找一些打击牌。这种虫子，它受到伤害最多的就是九，它是单次受伤是九次。OK，我还有一点点异伤。</p>
+<p><strong>Speaker 0</strong>: 那选这个四百块钱。</p>
+<p><strong>Speaker 1</strong>: 看有没有什么好的东西给你买。打成打出十张技能牌或者七点格挡。第一个回合获得一个这个嗯，没有药水的时候，获得额外两个敏捷。嗯哇，这张牌好拿这张牌。你的回合开始时打出你抽牌顶部的牌。<strong>索隆</strong>有可能去艾泽拉斯，<strong>索隆</strong>有可能你看一下那个野狼兵有没有在打 <strong>Dota</strong>。他要是打 <strong>Dota</strong> 的话，<strong>索隆</strong>有可能去打 <strong>Dota</strong> 去了。我看一下啊，延迟下定时。OK OK，明白你的意思。嗯，<strong>索隆</strong>最近去艾泽拉斯了。乱战打出你这个顶部上面的这张牌。嗯，还有这个没有药水的时候，获得完两个，每个战斗之前获得一个第一轮牌。一回合要买个灯笼吧，这个还可以一战就是螨虫。OK，攻击被完全格挡，如果他的攻击被完全格挡，他他就被击晕。</p>
+<p><strong>Speaker 0</strong>: OK，消耗一张牌。</p>
+<p><strong>Speaker 1</strong>: 获得两点力量。嗯，他没有，他被我格挡就被我击晕了。我删个格挡没换牌的话没用。</p>
+<p><strong>Speaker 0</strong>: 被我打掉了。</p>
+<p><strong>Speaker 1</strong>: 我觉得我可以去挑战一下这个精英怪啊。</p>
+<p><strong>Speaker 0</strong>: 这些又是特别恶心的虫子。开。嗯嗯。还是没有给我这一个，还有现像。</p>
+<p><strong>Speaker 1</strong>: 我的这张哎抽不到就很尴尬啊。OK，呃，抽两张牌这张应该能打死祖传递进幼儿园。</p>
+<p><strong>Speaker 0</strong>: 三 OK。呃。那是没问题。三我靠。</p>
+<p><strong>Speaker 1</strong>: 这张牌到现在才过来。</p>
+<p><strong>Speaker 0</strong>: OK。三五十五还有打击吗？这个是重锤把爱惊过去哦。</p>
+<p><strong>Speaker 1</strong>: 就这个恶心的家伙 OK。呃。</p>
+<p><strong>Speaker 0</strong>: 最后一张牌不要把这张然后最后就行。哇。</p>
+<p><strong>Speaker 1</strong>: 嗯，还是没有抽出来。五张的话嗯，<strong>二代</strong>是虫子主题。</p>
+<p><strong>Speaker 0</strong>: 确实是这个游戏是 <strong>Slay the Spire</strong> 啊，是一个<strong>Roguelike 卡牌类游戏</strong>。</p>
+<p><strong>Speaker 1</strong>: 可我终于找到我这张牌了。有的时候挠不到这张牌，真的很痛苦啊。这个应该还行。</p>
+<p><strong>Speaker 0</strong>: 肉哥卡牌就是你组建你自己的卡组，然后爬塔。他应该是整个这个游戏类别的鼻祖啊。</p>
+<p><strong>Speaker 0</strong>: 这是应该嗯，现在打的这个是水管沉净。</p>
+<p><strong>Speaker 1</strong>: 对，它是一个虫子。呃，欺凌 OK。翼伤有一层抑伤，造成两点伤害。</p>
+<p><strong>Speaker 0</strong>: OK。赖政伟是骗子。</p>
+<p><strong>Speaker 1</strong>: 这个事情到底是不是真的？这个我不知道啊。这个为什么有人说他是骗子啊？他可能在这个推论上说的一些话不够严谨吧，但也不至于是骗子吧。</p>
+<p><strong>Speaker 0</strong>: 上子嗯，会复活黑色史莱姆。</p>
+<p><strong>Speaker 1</strong>: 怎么了？</p>
+<p><strong>Speaker 0</strong>: 我靠。</p>
+<p><strong>Speaker 1</strong>: 吃一点伤害吧。嗯。哦，他会钻地的。我靠，我不会死了吧，在这。等一下啊，当你给予抑伤时造成两点伤害。嗯，我不会死在这了吧。嗯，没死。对，把甲打破碎，从这个地上钻出来了。是的，造成格挡相同的伤。<strong>预备打击</strong>哦，对他也是打击。我看一下啊。</p>
+<p><strong>Speaker 0</strong>: 只要打击的牌都算 OK。要休息了。</p>
+<p><strong>Speaker 1</strong>: 翻脸荆棘看。嗯，走哪条路呢？真到百分之三十的话就回满血了。走这条路的话，祖传蹲起。嗯，商店。我靠哇，全场大甩卖。哇。OK，十几石恢复百分之十。没，这都是些屎的，都是比较屎的。</p>
+<p><strong>Speaker 0</strong>: 这个东西 OK，都是史牌啊哈。哦，啊，哎，这也挺有意思的。</p>
+<p><strong>Speaker 0</strong>: 都是削弱版的削弱版的 OK。</p>
+<p><strong>Speaker 1</strong>: 这次开局还不错，我先把这个是，然后抽卡。</p>
+<p><strong>Speaker 0</strong>: 嘻嘻嘻。</p>
+<p><strong>Speaker 1</strong>: 刚刚那个牌都是屎牌，就是正常的那个削弱版本。出现异伤，就给他干一下。看锤一下他吧。嗯，要不要加一点两点力量加两点。他被我反弹给弹死了。恢复你最大生命的百分之二十。</p>
+<p><strong>Speaker 0</strong>: 另外就吃这个了啊。</p>
+<p><strong>Speaker 1</strong>: 要不要锻造呢？</p>
+<p><strong>Speaker 0</strong>: 锻造把你说把掠夺痛击。嗯。</p>
+<p><strong>Speaker 1</strong>: 挑衅对。有点伤害。嗯。</p>
+<p><strong>Speaker 0</strong>: 祭品有五张牌。</p>
+<p><strong>Speaker 1</strong>: 还是回个血啊。百分之二十二九十八回个血吧。马上再打精英怪了，有这个恶心的家伙。嗯，升过牌的。嗯，我是考虑升过牌的。</p>
+<p><strong>Speaker 0</strong>: 但是你给我什么是延续。</p>
+<p><strong>Speaker 0</strong>: 好像是八点不能再打出虚无人体蜂窝。</p>
+<p><strong>Speaker 1</strong>: 我靠。</p>
+<p><strong>Speaker 0</strong>: 真的是一张都没给我抽到好。</p>
+<p><strong>Speaker 1</strong>: 我还是觉得血量比较重一些。</p>
+<p><strong>Speaker 0</strong>: 啊。这个也挺烦的。</p>
+<p><strong>Speaker 0</strong>: 把这几个嗯，哎，停一下。</p>
+<p><strong>Speaker 1</strong>: 有点伤害，可以让他确实不能够放出来。哎，不是。嗯，好哦。</p>
+<p><strong>Speaker 1</strong>: 这个螃蟹第一次打这什么情况？两个火箭碎长。</p>
+<p><strong>Speaker 0</strong>: OK。嗯嗯。</p>
+<p><strong>Speaker 0</strong>: 等一下无情耸肩。</p>
+<p><strong>Speaker 1</strong>: 我家好的脆弱啊，我可以给自己加个血。呃，百分之二十的血，二九十八可以喝了。OK。本次损失十点力量。嗯，我会对方，但是它是随机的，所以不确定那还是给他来一下。哎呀，完了。</p>
+<p><strong>Speaker 0</strong>: 他最后哎哦，这个火箭真的是火箭。</p>
+<p><strong>Speaker 1</strong>: 它是射出来的，真的是火箭。对，你其实让他用过牌和那个就行了。比炉氏充的多吗？没有，他这个游戏是买断的，就是你上来大概是二十四美金吧，你买完之后他就可以去玩。真的是一个火箭哦，又长出来一个什么东西。</p>
+<p><strong>Speaker 0</strong>: 会射出来的这个无情耸肩。</p>
+<p><strong>Speaker 1</strong>: 来，我耸一下肩，看嗯，谁身上有一伤。OK，这个身上有衣伤，把他干死。</p>
+<p><strong>Speaker 0</strong>: OK，干死了一个给重锤。</p>
+<p><strong>Speaker 0</strong>: 把终结在你的回合开始前，将你七牌对一张当地牌放在手牌，并且升级嗯，进入第三阶段。</p>
+<p><strong>Speaker 1</strong>: 对游戏术进行烹饪。在你回合开始时加一，将在你的回合开始时获得获得七点格挡。现在回合开始随机攻击牌，加入你的手牌，这两个手牌的本回合能耗为零。嗯。</p>
+<p><strong>Speaker 0</strong>: 加防御百九十七嗯七呃二十四二十四的话拿出六张牌。</p>
+<p><strong>Speaker 1</strong>: 那这个应该是够的。</p>
+<p><strong>Speaker 0</strong>: 游泳好逗。</p>
+<p><strong>Speaker 1</strong>: 他现在两个一起买，好像还有一个打折呢。我我之前已经买了一个衣了，然后他有给我的时候就会五张牌，应该没有超出手牌的限制吧。哇，好多手牌啊。嗯，首先我是不能被这个给有一张的时候。OK，先这样打，让这个给他一张。</p>
+<p><strong>Speaker 0</strong>: 然后每层衣裳都能够再加好。</p>
+<p><strong>Speaker 1</strong>: 建议买会便宜一些。对的，然后你要是当 <strong>package</strong> 买的话。</p>
+<p><strong>Speaker 0</strong>: 还有打折呢，百分之十二吧。</p>
+<p><strong>Speaker 1</strong>: 这张牌的伤害值增加两点。这张牌的格挡值增加两点打出这张牌的时候，第一次打出的时候抽两张牌。可以加过牌啊，我觉得加过牌会比较好。</p>
+<p><strong>Speaker 0</strong>: 嗯嗯。</p>
+<p><strong>Speaker 1</strong>: 零费过牌。嗯。</p>
+<p><strong>Speaker 0</strong>: 找个费用低一点哦。</p>
+<p><strong>Speaker 0</strong>: 只能给能力加能力过排。</p>
+<p><strong>Speaker 1</strong>: 那我就给这个加吧。</p>
+<p><strong>Speaker 0</strong>: 啦啦接受一张定制卡牌，加入你的卡组，八点格挡疯狂能力牌。</p>
+<p><strong>Speaker 1</strong>: 嗯，疯狂科学什么都没有啊。尝试一下疯狂科学吧。获得两点力量，两点敏捷啊也挺强的。在战斗结束的时候随机生成升，在战斗结束时升级你牌子里的一张随机牌。嗯，这两点敏捷两点，这个挺强的。</p>
+<p><strong>Speaker 0</strong>: 我还拿这个吧。</p>
+<p><strong>Speaker 1</strong>: 嗯，就是这个雷神了。呃。</p>
+<p><strong>Speaker 0</strong>: 无情猛攻获得有一个攻击。</p>
+<p><strong>Speaker 1</strong>: 哎呀，他把这家呢给用掉了。无所谓。哼，出了一个奇奇怪咆哮哮。我看一下这个嗯，哼好将你的一张牌。OK，把这个呃有没有加防御的？七点为了算了，艺术卡太作。</p>
+<p><strong>Speaker 0</strong>: 嗯。</p>
+<p><strong>Speaker 1</strong>: 对，嘎嘎是那个应该是以前就是这个这个鸟，它是长翅膀。那个它现在变成了一个拿着一个锤子的大哥，三十点伤害。OK。哎呀。</p>
+<p><strong>Speaker 0</strong>: 还是没有拿到这个暗示点伤害。嗯嗯。</p>
+<p><strong>Speaker 1</strong>: 人老爷还真疼。</p>
+<p><strong>Speaker 0</strong>: 我现在从才说到这个 anyway 嗯。</p>
+<p><strong>Speaker 1</strong>: 要不要加这个掠夺呢？地狱真刃。</p>
+<p><strong>Speaker 0</strong>: 别点过分。</p>
+<p><strong>Speaker 1</strong>: 笨拙，不能被打出虚无。OK，随机遗物吧。芒果今天十四点啊也还行。OK，我已经一百零四点了，我看看升级哪一张。</p>
+<p><strong>Speaker 0</strong>: 卡加一。</p>
+<p><strong>Speaker 1</strong>: 这个已经升级过了。</p>
+<p><strong>Speaker 0</strong>: 这个布牌升级过了哦。</p>
+<p><strong>Speaker 1</strong>: 这可以固有，这个可以固有。嗯，这个呢哦，这也可以固有。</p>
+<p><strong>Speaker 0</strong>: 不是固有吧啊。</p>
+<p><strong>Speaker 1</strong>: 二百二十九。如果打这条线的话，带两个精英过来，这个后面没有花钱地方了，把钱花了吧。每当你洗牌的时候，出一张牌啊，还行。</p>
+<p><strong>Speaker 0</strong>: 零肺青泻过一张啊。</p>
+<p><strong>Speaker 1</strong>: 一百九十四生命值低于百分之五十。加这个呃，战斗开始的时候，会有四层叠甲石起石从牌主中抽一张攻击牌，附魔王室认证固有和保留哦。每当站到十张牌会出现在你的手牌，那肯定选这张选。</p>
+<p><strong>Speaker 0</strong>: 这个。哎等等我那张牌不能附附魔了是吧？</p>
+<p><strong>Speaker 1</strong>: 哦。</p>
+<p><strong>Speaker 0</strong>: 只能是哎无情猛攻。</p>
+<p><strong>Speaker 1</strong>: 那我选这张过牌吧。等一下啊。哦，它是只能被附一次魔是吧？哦，哎呀，好吧。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=GPT-4o" class="entity-link product-link">GPT-4o</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">game-review</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">card-game</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">multiplayer-gaming</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">early-access</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">roguelike</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

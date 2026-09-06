@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>纽康姆悖论：这个让聪明人对半拆分的决策难题，揭示了理性的本质</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="纽康姆悖论：这个让聪明人对半拆分的决策难题，揭示了理性的本质" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">纽康姆悖论：这个让聪明人对半拆分的决策难题，揭示了理性的本质</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Veritasium</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-03-09
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/knowledge-meta/">knowledge-meta</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/philosophy-wisdom/">philosophy-wisdom</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/veritasium/">Veritasium</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=Ol18JoeXlVI" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-03-09
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本对话深入探讨了著名的“纽康姆悖论”——一个关于超级计算机预测人类选择的思维实验。通过对比“单盒派”和“双盒派”的逻辑，揭示了证据决策论与因果决策论的冲突。讨论进一步延伸至自由意志、囚徒困境以及冷战时期的核威慑战略，最终提出：理性的本质或许不在于当下的计算，而在于一个人选择遵守什么样的规则。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>纽康姆悖论：两个盒子的终极考验</h3>
+<p><strong>卡斯珀 (Casper)</strong>: 有一个问题，我只要提出来就准能引发一场争论。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Casper</strong>: There is a problem that I can't bring up without starting a fight.</p>
+</details>
+<p><strong>格雷戈尔 (Gregor)</strong>: 什么问题？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Gregor</strong>: No, what?</p>
+</details>
+<p><strong>卡斯珀 (Casper)</strong>: 这个问题对我来说简直太显而易见了。但在过去的两个月里，它已经渗透进了 Veritasium 的每一次会议。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Casper</strong>: It just seems so obvious to me. It has infiltrated every single Veritasium meeting in the last two months.</p>
+</details>
+<p><strong>格雷戈尔 (Gregor)</strong>: 这个问题其实很简单。我没想到你竟然会掉进那一边的坑里。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Gregor</strong>: It's trivial. (laughs) I didn't think you would fall for this side.</p>
+</details>
+<p><strong>卡斯珀 (Casper)</strong>: 好了，让我们来看看设定。你走进一个房间，桌子上有一台<strong>超级计算机</strong>和两个盒子。一个盒子是透明的，里面有 <strong>1,000 美元</strong>。这不是陷阱，你知道里面确确实实是 1,000 美元。</p>
+<p>另一个盒子是神秘盒，你看不到里面。你还知道这台超级计算机非常擅长预测人类。在同样的场景下，它已经正确预测了成千上万人的选择。你现在还不知道具体的规则，但你知道它几乎每次都能预测正确。</p>
+<p>现在，超级计算机说，你可以选择拿走两个盒子（即神秘盒加 1,000 美元），或者只拿走那个神秘盒。那么，神秘盒里有什么呢？</p>
+<p>超级计算机告诉你，在你走进房间之前，它已经对你的选择做出了预测。如果它预测你会<strong>只拿走神秘盒</strong>并把那 1,000 美元留在桌上，那么它就在神秘盒里放了 <strong>100 万美元</strong>。但如果它预测你会拿走两个盒子，那么它就在神秘盒里什么也没放。</p>
+<p>超级计算机在你了解这个问题之前就做出了预测，并且已经布置好了盒子。它不是想耍你，也不是想剥夺你的钱。它唯一的目标就是做出正确的预测。那么，你会怎么做？你是拿走两个盒子，还是只拿神秘盒？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Casper</strong>: So, here's the setup. You walk into a room, and there's a supercomputer and two boxes on the table. One box is open, and it's got $1,000 in it. There's no trick. You know it's $1,000. The other box is a mystery box, you can't see inside. You also know that this supercomputer is very good at predicting people. It has correctly predicted the choices of thousands of people in the exact problem you're about to face. Now, you don't know what that problem is yet, but you do know that it has been correct almost every time. Now, the supercomputer says you can either take both boxes, that is the mystery box and the $1,000, or you can just take the mystery box. So, what's in that mystery box? Well, the supercomputer tells you that before you walked into the room, it made a prediction about your choice. If the supercomputer predicted you would just take the mystery box and you'd leave the $1,000 on the table, well, then it put $1 million into the mystery box. But if the supercomputer predicted that you would take both boxes, then it put nothing in the mystery box. The supercomputer made its prediction before you knew about the problem and it has already set up the boxes. It's not trying to trick you, it's not trying to deprive you of any money. Its only goal is to make the correct prediction. So, what do you do? Do you take both boxes or do you just take the mystery box?</p>
+</details>
+<h3>单盒派 vs. 双盒派：逻辑的对决</h3>
+<p><strong>格雷戈尔 (Gregor)</strong>: 这看起来并没有我想象中那么矛盾，因为我应该直接进去只拿神秘盒。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Gregor</strong>: This is seeming less paradoxical than I thought because I should just go in and take the mystery box only.</p>
+</details>
+<p><strong>卡斯珀 (Casper)</strong>: 不！什么？目前存在两大阵营：<strong>单盒派 (one-boxers)</strong>，他们只拿神秘盒；以及<strong>双盒派 (two-boxers)</strong>，他们全都要。但正如美国哲学家<strong>罗伯特·诺齐克 (Robert Nozick)</strong> 所写：“对几乎每个人来说，该做什么都是显而易见的。困难在于，这些人似乎在问题上平分秋色，而且大部分人都认为另一半人简直是愚蠢至极。”</p>
+<p>这就是著名的<strong>纽康姆悖论 (Newcomb's paradox)</strong>，以其发明者威廉·纽康姆命名。《卫报》在 2016 年对 31,000 多人进行了调查，53.5% 是单盒派，46.5% 是双盒派。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Casper</strong>: No! What? There are two camps, one-boxers who would take only the mystery box, and two-boxers who take both. But as American philosopher Robert Nozick wrote, &quot;To almost everyone, it is perfectly clear and obvious what should be done. The difficulty is that these people seem to divide almost evenly on the problem, with large numbers thinking that the opposite half is just being silly.&quot; This is known as Newcomb's paradox, named for its inventor, William Newcomb. The Guardian newspaper polled over 31,000 people about this problem in 2016. 53.5% were one-boxers and 46.5% were two-boxers.</p>
+</details>
+<p><strong>格雷戈尔 (Gregor)</strong>: 听着，我是个理性的人，我也喜欢钱。让我们来权衡一下决策的结果。假设计算机预测正确的概率是 C。</p>
+<p>如果你选择双盒，你有 C 的概率得到 1,000 美元（预测正确），有 1-C 的概率得到 1,001,000 美元（预测错误）。如果你选择单盒，你有 C 的概率得到 100 万美元，有 1-C 的概率什么也得不到。</p>
+<p>计算一下<strong>期望效用 (expected utility)</strong>，只要计算机的预测准确率高于 50.05%，选择单盒的期望收益就会更高。既然已知这台计算机非常精准，我肯定选单盒，拿走我的 100 万美元。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Gregor</strong>: Look, I'm a reasonable guy and I like money, so I'm gonna do whatever gets me the most money. So, let's go weigh the outcomes of both of these decisions. First, I'm gonna say that the probability that the computer predicted my decision correctly is gonna be C... If the computer is better at predicting than what is basically random, then the expected utility of one-boxing is gonna be higher. Now, I know that the computer is much better at predicting than that because it accurately predicted thousands of people before me, which means I'm sticking with my one box. Here's my $1 million.</p>
+</details>
+<p><strong>卡斯珀 (Casper)</strong>: 我非常惊讶。因为对我来说答案同样显而易见：你应该拿走两个盒子。</p>
+<p>你是知道的，超级计算机<strong>已经</strong>布置好了盒子。无论我现在决定做什么，都不会改变神秘盒里已经存在的金额（是 0 还是 100 万）。</p>
+<p>这被称为<strong>战略主导 (strategic dominance)</strong>：如果盒里有 0 元，双盒得 1,000，单盒得 0；如果盒里有 100 万，双盒得 1,001,000，单盒得 100 万。无论哪种情况，拿走两个盒子总是比拿一个盒子多得 1,000 美元。所以，把两个盒子都给我！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Casper</strong>: I'm very surprised. Because to me, the answer is also obvious, and to me, the answer is you take both boxes. You know that the supercomputer has already set up the boxes, so whatever I decide to do now, it doesn't change whether there's zero or $1 million in that mystery box... This is known as strategic dominance where I always pick the dominant strategy, which in this case is to two-box. So, give me those boxes.</p>
+</details>
+<h3>决策论的冲突：证据 vs. 因果</h3>
+<p><strong>格雷戈尔 (Gregor)</strong>: 看起来这取决于你如何看待世界。我们的计算基于不同的假设。单盒派的逻辑基于<strong>证据决策论 (evidential decision theory)</strong>。既然过去成千上万个单盒派都成了百万富翁，而双盒派都很穷，这就是强有力的证据，证明我如果选单盒，里面就会有钱。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Gregor</strong>: Here's the hidden assumption for us one-boxers. My expected utility calculations are based on probabilities that are using prior evidence of how accuracy the supercomputer is... This is based on something called evidential decision theory.</p>
+</details>
+<p><strong>卡斯珀 (Casper)</strong>: 但双盒派基于的是<strong>因果决策论 (causal decision theory)</strong>。我认为我现在的想法或行动无法影响已经发生的过去。既然盒子已经摆在那儿了，我现在的决定不能“因果地”导致盒子里出现 100 万美元。我只能影响我能控制的部分，也就是多拿走那 1,000 美元。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Casper</strong>: I make my decision based off something else, something a little more rational because I believe that whatever I do now can't influence and change the past... This is known as causal decision theory, where you only take into account things that you can actually cause.</p>
+</details>
+<p><strong>亨利 (Henry)</strong>: 你们是想通过所谓的“理性”来改变上帝的主意。如果你在进房间之前就说服自己是一个单盒派，你就说服了机器。但我认为这不可信，因为往往你走进房间时，预测已经做出了。你无法改变它。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Henry</strong>: You're not doing me a favor 'cause your decision making does not affect... Like, your little thought does not change God's mind, bro. Henry, if you convinced yourself that you're a one-boxer, you've convinced the machine. I don't believe that.</p>
+</details>
+<h3>自由意志与理性的真谛</h3>
+<p><strong>卡斯珀 (Casper)</strong>: 这个问题实际上触及了三个核心：<strong>自由意志</strong>是否存在？什么才叫<strong>理性</strong>？以及生活中是否存在理想的行动方式？</p>
+<p>如果预测者是 100% 准确的，那是否意味着自由意志只是幻觉？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Casper</strong>: Because it actually reveals a surprising amount about three important questions. Does free will exist? What does it mean to be rational? And is there an ideal way to act in life? ...if such a perfect predictor would exist, does that mean that free will doesn't exist?</p>
+</details>
+<p><strong>亨利 (Henry)</strong>: 也许吧。我认为自由意志可能是一种幻觉，但我们的世界运行方式让我们无法将其与真实意志区分开。因此，你必须表现得就像它真实存在一样。即使知道这是幻觉，你也必须像它存在一样去生活。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Henry</strong>: That's right, and maybe this reveals where I'm coming from... free will is an illusion, but our world operates in a way that is indistinguishable from free will being real, and therefore, you have to act as though it's real.</p>
+</details>
+<p><strong>卡斯珀 (Casper)</strong>: 这就引出了第二个问题：什么是理性？双盒派看起来更理性，但最终单盒派往往更有钱。这就是所谓的“你既然这么聪明，为什么不发财？”论点。</p>
+<p>哲学家吉巴德和哈珀在 1978 年的论文中辩称，双盒是理性选择，尽管他们承认双盒派赚得少。他们认为这个游戏是不公平的：如果有人奖励“被预测出的不理性”，那么不理性的人就会得到丰厚奖励。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Casper</strong>: Which brings us to our second question, what does it mean to be rational?... This is known as the &quot;Why Ain'cha Rich?&quot; argument. In their 1978 paper, philosophers Gibbard and Harper argue that the rational choice is to pick both boxes. Although they do admit that two-boxers will fare worse. They instead say that the game is rigged.</p>
+</details>
+<h3>从囚徒困境到核威慑</h3>
+<p><strong>格雷戈尔 (Gregor)</strong>: 这类似于<strong>囚徒困境 (prisoner's dilemma)</strong>。单次博弈中，背叛（不合作）总是占优策略。但如果在社会中多次博弈，合作反而能带来更好的结果。一个理性的社会充满了合作者，即使在个体层面上背叛看起来更“理性”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Gregor</strong>: And I think this is analogous to the situation in the prisoner's dilemma... What's a rational society? A rational society is full of cooperators. What's a rational person? Maybe a rational person is a defector.</p>
+</details>
+<p><strong>卡斯珀 (Casper)</strong>: 这种“预承诺”在现实中也有体现，比如冷战时期的<strong>相互保证毁灭 (MAD)</strong> 战略。美国国防部长罗伯特·麦克纳马拉主张：为了阻止核攻击，你必须维持一种高度可靠的报复能力，这种报复是毁灭性的。</p>
+<p>关键在于你的“承诺”。在《奇爱博士》中，苏联制造了一个全自动末日装置，一旦受到攻击就会毁灭全球。这个开关不是为了防敌人，而是为了防止苏联人自己在最后关头产生动摇。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Casper</strong>: Now, say you are the US president during the Cold War. You have publicly committed to retaliate if the US is ever attacked... This strategy eventually became known as mutually assured destruction, or MAD. In the 1963 film, &quot;Dr. Strangelove&quot;, the Russians built the perfect doomsday device... to prevent the Russians themselves from having second thoughts.</p>
+</details>
+<h3>总结：选择你生活的规则</h3>
+<p><strong>卡斯珀 (Casper)</strong>: 所以，理性或许不是关于此时此刻如何选择，而是关于你决定遵守什么样的<strong>规则</strong>。</p>
+<p><strong>格雷戈尔 (Gregor)</strong>: 没错。如果你是一个机器人，可以重写自己的程序，你会给自己设定什么样的规则？你会把自己变成那种始终坚守承诺的人，即使在当下看来那不是最优解。因为这种品质在长期博弈中能让你获得最大的利益。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Gregor</strong>: Sometimes it's put in the form of, if you knew that you were a robot with programming, that you could set and you could rewire yourself... what sort of rules would you wire yourself to obey? And what you would do is you would make yourself into the kind of creature that sort of always acts in line with the commitments that would've been good to form had you even known about the problem.</p>
+</details>
+<p><strong>卡斯珀 (Casper)</strong>: 这个观点说服了我，让我变成了一个单盒派。虽然单次博弈中背叛有利，但在生活和社会这样的多次博弈中，坚守理想的预承诺才是真正的获益之道。</p>
+<p>纽康姆悖论的核心在于：一个你知道并非因果的强相关性，是否应该影响你的决定？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Casper</strong>: Yeah, that would convince me to be a one-boxer. The core of Newcomb's paradox is deciding if a strong correlation that you know isn't causal should matter in your decision.</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=William Newcomb" class="entity-link person-link">William Newcomb</a>, 
+                
+                  <a href="/search/?q=Robert Nozick" class="entity-link person-link">Robert Nozick</a>, 
+                
+                  <a href="/search/?q=Robert McNamara" class="entity-link person-link">Robert McNamara</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=The Guardian" class="entity-link company-link">The Guardian</a>
+                
+              </p>
+            
+            
+            
+              <p><strong>媒体/书籍:</strong>
+                
+                  <a href="/search/?q=Dr. Strangelove" class="entity-link media-link">Dr. Strangelove</a>
+                
+              </p>
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">decision-theory</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/game-theory/">game-theory</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/free-will/">free-will</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/rationality/">rationality</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">logical-paradox</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

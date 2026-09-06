@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenCode OMO插件：构建多AI协作开发团队，实现全自动编程</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="OpenCode OMO插件：构建多AI协作开发团队，实现全自动编程" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">OpenCode OMO插件：构建多AI协作开发团队，实现全自动编程</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI超元域</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-01-09
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ai-chao-yuan-yu/">AI超元域</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=twFjLiy2Pmc" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-01-09
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">介绍OpenCode的OMO插件，该插件能整合GPT 5.2、Gemini 2.1等多种AI模型，组成AI开发团队。通过&#39;outwork&#39;工作流，实现从需求到代码的全自动生成，大幅提升开发效率，尤其适用于复杂项目。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>上期视频介绍了 <strong>Cloud Code</strong> 的开源替代品 <strong>OpenCode</strong>，并演示了其基础用法。<strong>OpenCode</strong> 还有更高级的用法：结合其最强的开源插件 <strong>OMO (Open My OpenCode)</strong>，可以让 <strong>OpenCode</strong> 从简单的 AI 编程助手进化为能够实现多 AI 协作的 <strong>AI 开发团队</strong>，不同模型各司其职。如果在 <strong>OpenCode</strong> 中只使用单一模型处理所有任务，那么无论是前端 UI、后端逻辑还是文档编写，遇到模型不擅长的领域时都会出现能力下降。而且，只使用高端模型（如 <strong>GPT 4.5</strong> 或 <strong>GPT 5.2</strong>）处理简单任务还会造成浪费。因此，在 <strong>OpenCode</strong> 中，我们可以使用 <strong>OMO</strong> 插件来实现<strong>多模型智能协同</strong>。例如，使用 <strong>GPT 5.2</strong> 实现架构设计、修复复杂 Bug；使用 <strong>Jap ro</strong> 实现前端 UI 设计；使用 <strong>Claude 5</strong> 模型实现文档研究、OSS 分析；还能使用 <strong>Glock</strong> 模型实现快速探索。</p>
+<p><strong>OMO</strong> 的优势还包括<strong>任务完成保证机制</strong>。在 <strong>OMO</strong> 中，它使用一个主智能体（Agent）对其他子智能体进行指挥、委派任务和验证，从而确保大模型在执行任务时不会停滞。<strong>OMO</strong> 项目中的命名也很有形象：源自希腊神话中西西弗斯（Sisyphus）日复一日将巨石推向山顶的苦役，这象征着 <strong>OMO</strong> 项目中的默认 Agent，它相当于一个强大的 AI 协调器，使用专门的子 Agent 和激进的并行执行来规划、委派和执行复杂任务。</p>
+<p>在 <strong>OpenCode</strong> 中使用 <strong>OMO</strong> 的学习成本几乎为零。我们可以直接使用 <strong>OMO</strong> 的 <code>outwork</code> 工作流，只需在提示词中输入 <code>outwork</code>，它就会将我们的任务委派给其他 Agent，从而实现“不需要我们写一行代码就能帮我们完成任务”。它还支持<strong>智能上下文管理</strong>、<strong>代码质量保护</strong>，并具备<strong>并行执行能力</strong>，可以独立并行执行任务。</p>
+<p><strong>OMO</strong> 还具备<strong>实时获取外部知识</strong>的能力，因为它集成了 <strong>Contex Seven</strong> 和 <strong>MCP</strong> 来实时查询官方文档，还支持 <strong>ex MCP</strong> 来进行网络搜索获取最新信息。它能完整兼容 <strong>Cloud Code</strong>。因此，对于大型代码重构、代码遗留问题、全站开发、修复复杂 Bug 等场景，我们可以在 <strong>OpenCode</strong> 中使用 <strong>OMO</strong> 插件来执行这些复杂的任务。</p>
+<h3>安装与配置</h3>
+<p>要使用这款插件非常简单。首先，确保已安装 <strong>OpenCode</strong>（如果不熟悉，可观看上一期视频）。然后，复制官方给出的安装命令进行安装。官方提供了两种安装方式：一是使用 <code>ban</code>，二是直接使用 <code>npx</code>。</p>
+<p>这里复制第一条命令，打开终端（Windows 用户请打开 CMD），直接粘贴命令并运行。</p>
+<p>安装过程中，它会提示是否有 <strong>Cloud</strong> 账号订阅（这里选择第三项“有”），以及是否有 [未指明] 订阅（这里选择“有”），最后提示是否集成 <strong>Jamin</strong>（这里选择“是”）。</p>
+<p>安装完成后，它提示需要运行 <strong>OpenCode</strong>。此时，可以看到它设置的智能体，包括使用的 <strong>Cloud Opus 5</strong> 模型。</p>
+<h3>OpenCode 启动与模型设置</h3>
+<p>启动 <strong>OpenCode</strong> 后，可以看到三个可用的 MCP。我们还可以使用斜杠命令 <code>/us</code> 查看状态。这里是 <strong>OMO</strong> 自带的三个 MCP，还包含三个插件。</p>
+<p>接下来，在 <strong>OpenCode</strong> 中使用 <code>/connect</code> 命令登录账号。我先登录 <strong>Cloud</strong> 账号，按 <code>Enter</code> 键，选择第一项“使用我的订阅登录”，将给出的链接复制到浏览器并粘贴，点击验证，然后复制认证代码。回到 <strong>OpenCode</strong>，粘贴认证代码。之后，就可以选择模型了，这里选择 <strong>GPT 4.5</strong> 模型。</p>
+<p>设置好后，可以使用 <code>/mods</code> 命令查看已添加的模型。目前添加了 <strong>Cloud</strong> 官方的 <strong>GPT 4.5</strong> 模型、<strong>GPT 5.2</strong> 模型、<strong>Jap ro</strong> 模型，以及默认的 <strong>Gemini 2.1</strong> 模型。我们还可以使用斜杠命令 <code>/model</code> 来切换模型，例如将 <strong>GPT 4.5</strong> 模型切换成 <strong>GPT 5.2</strong> 模型。在这里，我们还可以用 <code>Tab</code> 键切换<strong>计划模式（Plan Mode）<strong>和</strong>执行模式（Execution Mode）</strong>。</p>
+<h3>场景测试一：创建仪表盘</h3>
+<p>下面以一个最简单的任务进行测试。输入任务：“创建一个现代化的分析仪表盘，包含数据可视化、实时更新、深色模式，支持...”。同时输入 <strong>OMO</strong> 提供的“魔法咒语” <code>ULW</code>。这个咒语可以释放 <strong>OMO</strong> 的所有力量，实现启用并行智能体后台任务和深度探索。</p>
+<p>执行后，提示 <code>outwork</code> 模式已激活，并生成了开发任务，正在执行，需要稍等片刻。</p>
+<p>当输入 <code>outwork</code> 时，<strong>OpenCode</strong> 会检测到关键词，主 Agent 分析意图，拆解任务，创建并派发给其他 Agent。这样，我们就相当于在 <strong>OpenCode</strong> 中拥有了一个专业的 <strong>Agent 团队</strong>。除了主 Agent，<strong>OMO</strong> 还包含多个其他 Agent：</p>
+<ul>
+<li><strong>ACL e Agent</strong>：负责架构设计，修复复杂 Bug。</li>
+<li><strong>expl Agent</strong>：用于代码库探索，模式发现，可以并行运行。</li>
+<li><strong>研究 Agent</strong>：研究外部文档。</li>
+<li><strong>图像和 OSS 分析 Agent</strong>：处理多模态内容。</li>
+<li><strong>文档分析 Agent</strong>：为项目生成 README 和文档。</li>
+<li><strong>前端设计 Agent</strong>：主要用于 UI/UX 设计，支持 LSP、搜索、MCP 工具。</li>
+<li><strong>后台任务 Agent</strong>：通过 Hooks 监控整个系统，实现质量保证、上下文管理和恢复机制。</li>
+</ul>
+<p>用户使用 <code>ULW</code> 这样的魔法咒语即可触发整个工作流。整个任务流程无需干预，完全在 <strong>OpenCode</strong> 中全自动执行。</p>
+<p>在等待几分钟后，开发完成。给出了运行方式，按照步骤运行后，可以看到为我们开发的仪表盘。整体采用了深色模式（按照提示词要求），可视化图表、鼠标悬停和动态效果都非常不错。这是测试让其开发一个最简单的仪表盘功能的效果。</p>
+<h3>场景测试二：为 iOS 应用新增功能</h3>
+<p>下面继续测试。准备了一个用 Swift 开发的原生 iOS 专注应用。测试在 <strong>OpenCode</strong> 中使用 <strong>OMO</strong> 在此项目基础上新增功能。</p>
+<p>首先，打开终端，使用 <code>cd</code> 命令切换到项目路径，然后启动 <strong>OpenCode</strong>。</p>
+<p>启动后，执行 <code>/it</code> 命令生成 <code>agent.md</code> 文件，让 <strong>OpenCode</strong> 了解当前项目的架构和技术栈。</p>
+<p>可以看到，它正在扫描项目。第一个任务执行完成，第二个任务正在执行。提示已生成 <code>agent.md</code> 文件。查看该文件，包含项目预览、所用命令、代码风格等内容。 <strong>OpenCode</strong> 这样就对项目有了初步了解。</p>
+<p>接着，可以在 <strong>OpenCode</strong> 中让它新增功能。先使用 <code>/new</code> 命令开启一个新 Session，清理上下文，然后输入提示词。输入 <code>outwork</code>，再输入开发任务：“为当前项目新增自定义专注时长功能，要求下拉可以选择专注时长，从一分钟到六十分钟。”</p>
+<p>运行后，等待几分钟，任务完成开发。在模拟器中打开应用，可以看到新增的下拉组件。点击下拉，可以选择专注时长，从一分钟到六十分钟。选择一分钟测试，点击“开始”。允许发送通知后，开始计时。</p>
+<p>计时完成后，出现提示：新增的自定义专注时长功能完全没问题。整个开发过程无需干预，只需设定好开发任务，<strong>OpenCode</strong> 就能全自动完成开发。</p>
+<h3>总结</h3>
+<p>我们可以在 <strong>OpenCode</strong> 中使用 <strong>OMO</strong> 开源插件，用于更复杂的开发场景，全程无需干预，完全由 <strong>CFAce</strong>（主 Agent）指挥、委派任务和验证，其他 Agent 执行任务。在 <strong>OpenCode</strong> 中，我们就相当于拥有了一个真正的开发团队，能够大幅提升开发效率。</p>
+<p>视频到此结束，欢迎点赞、关注和转发。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=OpenCode" class="entity-link product-link">OpenCode</a>, 
+                
+                  <a href="/search/?q=OMO" class="entity-link product-link">OMO</a>, 
+                
+                  <a href="/search/?q=GPT-4.5" class="entity-link product-link">GPT-4.5</a>, 
+                
+                  <a href="/search/?q=GPT-5.2" class="entity-link product-link">GPT-5.2</a>, 
+                
+                  <a href="/search/?q=Claude Opus 5" class="entity-link product-link">Claude Opus 5</a>, 
+                
+                  <a href="/search/?q=Gemini 2.1" class="entity-link product-link">Gemini 2.1</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-collaboration/">ai-collaboration</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">multi-model-synergy</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/code-generation/">code-generation</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">ai-development-team</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/workflow-automation/">workflow-automation</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

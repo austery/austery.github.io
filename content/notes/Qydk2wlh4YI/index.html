@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent Skills 灵魂技术：利用结构化决策树实现 AI 助手自主编程</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="Agent Skills 灵魂技术：利用结构化决策树实现 AI 助手自主编程" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">Agent Skills 灵魂技术：利用结构化决策树实现 AI 助手自主编程</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI超元域</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-01-17
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ai-chao-yuan-yu/">AI超元域</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=Qydk2wlh4YI" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-01-17
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本文深度解析了 Agent Skills 生态中的核心技巧——决策树逻辑。通过在 Markdown 配置文件中嵌入结构化的条件分支、优先级排序和异常处理，开发者可以让 Claude Code 和 Antigravity 等 AI 智能体具备真正的自主决策能力，减少 50%-80% 的手动干预。文章结合实际的代码审查案例，演示了如何根据任务复杂度自动路由工具，并实现 token 节省与效率提升。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>策略性决策：Agent Skills 的灵魂技术</h3>
+<p>在上期视频中，我为大家演示了在 <strong>Google</strong> 生态中 <strong>Agent Skills</strong> 的基础用法。视频发布后，很多朋友都在问：<strong>Agent Skills</strong> 是否有更高级的玩法，从而能够进一步提升开发效率？答案是肯定的，而且效果非常显著。本期视频我将为大家演示 <strong>Agent Skills</strong> 生态中被开发者称为“灵魂技术”的核心技巧——<strong>决策树</strong>（Decision Tree: 基于逻辑分支的自主判断系统）。</p>
+<p>我们要讲的<strong>决策树</strong>并不是机器学习中那种需要海量训练数据的算法，而是一种需要在 <code>.md</code> 配置文件中嵌入的结构化 <code>if-else</code> 决策逻辑。这种逻辑能让 <strong>Claude Code</strong>、<strong>Antigravity</strong> 等 AI 智能体在执行任务时，具备真正的自主决策能力。我们在使用 AI 编程助手执行特定任务时，AI 经常会反问：“下一步该怎么做？”这让原本应该自动化的工作流变成了琐碎的人机问答。而决策树就是解决这个问题的终极方案。</p>
+<h3>结构化逻辑：实现 AI 智能体的自主化</h3>
+<p>根据官方文档，<strong>Agent</strong> 是通过 Markdown 文件教会 AI 如何完成特定任务的。而决策树优化，就是在这个 Markdown 文件中显式定义条件、分支优先级排序以及异常处理。通过这种方式，AI 编程助手能够自主判断并选择最佳方案，从而减少 50% 到 80% 的手动干预，大幅提升任务完成效率。</p>
+<p>实现<strong>决策树</strong>是目前社区公认的最强大的 <strong>Agent Skills</strong> 高级技巧。本期视频演示的技巧不仅适用于 <strong>Antigravity</strong>，还适用于 <strong>Claude Code</strong> 以及 <strong>Codex</strong> 等任何支持 <strong>Agent</strong> 的 AI 助手。为了直观展示效果，我开发了一个使用决策树方式实现的“代码审查 <strong>Agent</strong>”。它可以让 AI 助手智能判断代码变更类型，并自动路由到最适合的代码审查工具。</p>
+<h3>实战演示：智能代码审查路由系统</h3>
+<p>在这个 <strong>Skill</strong> 中，我集成了 <strong>Gemini CLI</strong> 以及 <strong>Codex CLI</strong>。AI 助手会根据任务的复杂度自主决策：是选择 <strong>Gemini CLI</strong> 还是 <strong>Codex CLI</strong> 进行审查。在项目开发中，大家习惯使用这类工具对 <strong>Claude Code</strong> 或 <strong>Antigravity</strong> 写的代码进行二次把关。由于 <strong>Codex</strong> 的审查速度较慢，通常只在面对复杂变更或后端技术栈时才被选用；而前端代码则更适合使用 <strong>Gemini</strong> 进行快速审查。</p>
+<p>通过决策树，我们不再需要手动指定工具，AI 会自主判断。这不仅让代码审查更专业，还解决了一个头疼的问题：<strong>Token 成本控制</strong>。如果所有任务都调用内置的大模型，会极快地消耗 <strong>Antigravity</strong> 的配额。将特定任务分配给外部的 <strong>Gemini CLI</strong> 或 <strong>Codex CLI</strong>，可以大幅节省核心模型的用量。简单来说，决策树就是通过层层的 <code>if-then</code> 条件判断，从根节点到叶节点逐步筛选，得出确定性的结果。</p>
+<h3>底层逻辑：从复杂度评分到故障转移</h3>
+<p>为了让大家理解这个 <strong>Skill</strong> 的运行机制，我们可以看一下执行流程图。当进行代码审查时，AI 首先会判断当前是否为 <strong>Git 仓库</strong>；如果是，接着判断 <strong>Gemini CLI</strong> 和 <strong>Codex CLI</strong> 是否可用。在两者都可用的情况下，AI 会分析 <code>git diff</code> 并根据评分规则计算复杂度。</p>
+<p><strong>路由决策规则</strong>如下：如果代码包含敏感文件、文件数大于 20、行数大于 500，或者涉及数据库迁移与 API 服务层修改，系统将强制匹配到 <strong>Codex CLI</strong> 进行深度分析。如果是纯前端、Python 生态或纯文档变更，且评分较低（小于 6 分），则由 <strong>Gemini CLI</strong> 进行快速反馈。此外，系统还具备<strong>异常处理能力</strong>：如果调用 <strong>Gemini</strong> 时遇到网络错误，决策树会引导 AI 自动切换到 <strong>Codex CLI</strong> 作为备选方案，确保流程不会中断。</p>
+<h3>配置指南：将 Skill 转化为工作流命令</h3>
+<p>在 <strong>Antigravity</strong> 的配置文件中，我们可以详细看到这个 <strong>Skill</strong> 的定义，包括环境检查、复杂度评分、路由决策、执行命令以及格式化输出等模块。为了方便日常调用，我们可以将这个 <strong>Skill</strong> 封装成斜杠命令。</p>
+<p>具体操作非常简单：在 <strong>Antigravity</strong> 的设置中找到 <strong>Workflow</strong>（工作流），新建一个名为 <code>review</code> 的工作流。在描述中输入“代码审查，遵循团队标准”，并在内容中引用我们定义好的 <strong>Skill</strong> 标签（如 <code>@code-review-skill</code>）。这样，我们只需要在对话框输入 <code>/review</code>，AI 就会自动触发整套决策逻辑，完成从代码分析、工具路由到生成修复建议的全过程。通过将决策树应用于更多场景，你的 AI 助手将从一个“提问者”进化为一个真正的“执行者”。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Claude Code" class="entity-link product-link">Claude Code</a>, 
+                
+                  <a href="/search/?q=Antigravity" class="entity-link product-link">Antigravity</a>, 
+                
+                  <a href="/search/?q=Gemini CLI" class="entity-link product-link">Gemini CLI</a>, 
+                
+                  <a href="/search/?q=Codex CLI" class="entity-link product-link">Codex CLI</a>, 
+                
+                  <a href="/search/?q=Claude 4.5" class="entity-link product-link">Claude 4.5</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/agent-skills/">agent-skills</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">decision-tree</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/prompt-engineering/">prompt-engineering</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/autonomous-agents/">autonomous-agents</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/code-review/">code-review</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

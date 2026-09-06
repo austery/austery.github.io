@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>对话群核科技黄晓煌：空间智能——通往 AGI 的关键拼图与商业落地</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="对话群核科技黄晓煌：空间智能——通往 AGI 的关键拼图与商业落地" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">对话群核科技黄晓煌：空间智能——通往 AGI 的关键拼图与商业落地</span>
+      <span data-pagefind-meta="speaker" style="display:none;">硅谷101</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-04-17
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/gui-gu-101/">硅谷101</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=8pncy425QqQ" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-04-17
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本文深度专访了“杭州六小龙”首家 IPO 企业群核科技的创始人黄晓煌。文章系统梳理了空间智能、世界模型与具身智能的逻辑关系，探讨了空间生成的不同技术路径（如 Mesh 与 3D 高斯混合表征），并分享了群核科技从 GPU 云端渲染到空间大模型的转型历程。黄晓煌强调，紧贴物理世界的数据与硬件连接是 AI 时代的真实壁垒。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>空间智能：通往 AGI 的关键拼图</h3>
+<p><strong>陈茜</strong>: 群核科技登陆港股，成为“杭州六小龙”首家完成 IPO 的企业。在我们《硅谷 101》的专访中，创始人<strong>黄晓煌</strong>说，将押注<strong>空间智能</strong>的未来。</p>
+<p><strong>黄晓煌</strong>: 我们所有训练的模型以及我们的工具，都紧贴着物理世界在做。漫画效果之类的，我们是不打算做的。<strong>李飞飞</strong>他们那个模型（<strong>World Labs</strong>）就啥都能做，特别在游戏行业等等的效果是特别好的，但那一块我们就完全不去介入。</p>
+<p><strong>陈茜</strong>: 你觉得中国跟美国在空间智能上面的发展，有什么样不一样的路线的区别吗？</p>
+<p><strong>黄晓煌</strong>: 我觉得美国更贴近于虚拟世界，中国更贴近于物理世界。</p>
+<p><strong>陈茜</strong>: 2026 年，AI 的新风向似乎已经越来越清晰了，那就是<strong>世界模型</strong>（World Model）。而在当前的世界模型所有技术分支中，很多研究者都把<strong>空间智能</strong>（Spatial Intelligence）视为了那个真正的“关键拼图”。</p>
+<p><strong>黄晓煌</strong>: 对我来说没有空间智能是不可能去实现 <strong>AGI</strong> 的，而我想要去解决这个问题。</p>
+<h3>什么是空间智能？</h3>
+<p><strong>陈茜</strong>: 究竟什么是空间智能呢？它跟世界模型、还有<strong>具身智能</strong>（Embodied AI）之间究竟是什么样的关系？应用前景在哪里？现在还存在着什么样的问题？</p>
+<p>实际上跟世界模型一样，空间智能这个概念也是起源于认知科学。1983 年教育心理学家<strong>霍华德·加德纳</strong>在著作**《心智框架》<strong>中提出了</strong>多元智能理论**，将空间智能列为人类七种核心智能之一。空间智能并非简单的“方向感”，而是人类理解物理世界、建立空间认知、进行抽象视觉思维的底层能力。</p>
+<p>在计算机科学领域，空间智能的技术起点则是源自于<strong>计算机视觉</strong>（CV）对三维空间的感知和理解研究。2009 年 <strong>ImageNet</strong> 的出现为 AI 视觉识别奠定了基础，但这一阶段依然停留在二维层面。随后研究进入了“从二维到三维”的阶段，以 <strong>SLAM</strong>（同步定位与地图构建）为代表的技术，让机器逐渐具备对空间结构的理解能力。而最近几年随着 <strong>NeRF</strong> 等 3D 表示方法以及生成式模型的发展，研究重点开始从“重建世界”走向“理解和预测世界”。</p>
+<p><strong>黄晓煌</strong>: 人类的智能其实有好几方面，大语言模型代表了语言，那我们的视觉、触觉以及我们跟物理世界的交互，很重要一点就是空间智能。你在这个空间里看一圈，大脑会对这个空间有个快速的概念，你可以理解成是一个空间重建的过程。然后你就可以判断某个物体距离你多远，以及空间的每一块物体的相对位置。接下来不管是做各种决策，比如你要往哪里走，水杯在哪里，你脑海里马上就能够反应出来。这就是我们定义的空间智能。</p>
+<h3>世界模型、空间智能与具身智能的关系</h3>
+<p><strong>陈茜</strong>: 听起来，这跟世界模型、具身智能都有很多联系。黄晓煌举了一个通俗易懂的例子。</p>
+<p><strong>黄晓煌</strong>: 比如这边这个门，你要去开它。小孩第一次开门不知道怎么开，他得知道这是门把手，多大力气，肢体怎么支配，他需要训练。拿这个门做例子：空间智能是你在这个环境里看一眼，我知道这里是门，门上有一个门把手。具身智能的算法就开始把它运行到门前面一定的距离，然后去把门把手打开，把门推开进去，这是具身智能控制的。世界模型做的是，你在走的过程中有人在旁边走动，你要做预测，避开他再去开门。</p>
+<p><strong>陈茜</strong>: 总结一下，世界模型就像是“大脑”，负责内部模拟与决策推理；空间智能负责把抽象理解落到三维物理空间，让 AI 知道物体在哪里；当这些能力落到机器人、自动驾驶等“身体”上，就形成了具身智能。要实现具身智能，是无法跳过空间智能的。</p>
+<h3>空间智能的两条技术路线</h3>
+<p><strong>陈茜</strong>: 目前业界主要有“空间生成”和“潜空间预测”两条路线。</p>
+<p>首先是“空间生成”，AI 必须先拥有一个足够真实、可交互的 3D 世界。代表有李飞飞的 <strong>World Labs</strong>、群核科技等。从生成方式上看，有<strong>重建式</strong>（激光扫描、无人机采集）、<strong>推断式</strong>（根据少量视角推理补全）和<strong>生成式</strong>（文字/图片直接生成 3D 场景）。</p>
+<p>在空间表示上，传统路径是用<strong>点云</strong>（Point Cloud）或 <strong>Mesh</strong>（网格），这种方式编辑方便，但高精度意味着数据量巨大。另一条路径是神经表示方法，如 <strong>NeRF</strong>，它隐式地记住场景信息，但渲染速度慢且缺乏泛化能力。后来出现的<strong>高斯泼溅</strong>（3D Gaussian Splatting）则在保留质量的同时大幅提升了速度。</p>
+<p><strong>黄晓煌</strong>: 点云我们试过，表征信息太少；NeRF 性能太慢。我们最早用 Mesh，但发现 Mesh 只是三维世界的抽象，欠缺太多信息。所以我们现在用 3D 高斯混合 Mesh 的方式在表达物理世界。3D 高斯能完美表示视觉效果，但在交互方面有缺陷。</p>
+<p><strong>陈茜</strong>: 另一条路线是“潜空间预测模型”，代表有 <strong>Yann LeCun</strong> 的 <strong>JEPA</strong> 架构。它不还原每一个像素，而是将环境信息压缩进高维潜空间，学习动态统计规律。这种方式延迟更低，但缺乏几何层面的可解释性，难以人工干预。因此，商业落地层面，空间生成路线目前更加稳健。</p>
+<h3>商业落地：垂直场景与物理正确</h3>
+<p><strong>陈茜</strong>: World Labs 的商业化速度非常快，通过 <strong>World API</strong> 与波士顿动力、Figure 等机器人厂商合作。黄晓煌则表示，群核更多是以“工程+产业”驱动。</p>
+<p><strong>黄晓煌</strong>: 我们跟 World Labs 一个很大区别就是，我们所有训练的模型以及我们的工具，都紧贴着物理世界在做。我们要求出来的场景、内容，都跟物理世界尽可能地接近。游戏那种漫画效果之类的，我们是不打算做的。李飞飞他们那个模型就啥都能做，那一块我们就完全不去介入。</p>
+<p>我们开源了一个叫 <strong>SpatialGen</strong> 的算法。我们创业初期想用云端的 GPU 集群去颠覆类似于 <strong>Autodesk</strong> 类产品的，但进入 AI 时代后，我们希望用全新的理念来做。比如探索类似于 <strong>Vibe Design</strong> 这种方式，取代原来的操作模式，用在影视制作、电商、建筑设计等行业。</p>
+<p><strong>陈茜</strong>: 群核科技以空间设计软件<strong>酷家乐</strong>起家，积累了海量的 CAD 和 BIM 数据。目前已经开放了<strong>空间语言模型 SpatialLM</strong> 和<strong>空间生成模型 SpatialGen</strong>。</p>
+<h3>拿着“锤子”找“钉子”：从英伟达到群核</h3>
+<p><strong>陈茜</strong>: 回看群核的发展历程，他们很擅长做“预判”。2012 年押注 GPU，踩中了房地产上行周期；2018 年转向空间智能。黄晓煌博士毕业于浙大，曾在<strong>英伟达</strong>（NVIDIA）从事 <strong>CUDA</strong> 研究。</p>
+<p><strong>黄晓煌</strong>: 我当时在英伟达工作的时候，正好是英伟达最艰难的时候，游戏产业在萎缩。但是<strong>老黄</strong>（黄仁勋）提了一个理念，摩尔定律在 CPU 上已经走到尽头，GPU 因为 Manycore 的架构，算力提升更快。我当时非常坚信这一点。</p>
+<p>但我费尽心思向科研机构推销 CUDA，非常费劲，还不如我自己创业。我用 GPU 集群把物理正确的渲染从一个小时加速到 10 秒钟。2012 年正式回国开做了。</p>
+<p><strong>陈茜</strong>: 那时候为什么回国创业？</p>
+<p><strong>黄晓煌</strong>: 原型是在美国做的，也融过资，但美国当时遇到金融危机。我们发现这个技术第一波最适合的场景可能是建筑和装修设计，当时国内如日中天。</p>
+<p>但我第一笔融资非常困难。一个著名的基金经理跟我说，我跟我合伙人工作履历不太好。是因为他们不认可英伟达，觉得英伟达马上要倒闭了。当时最流行的是 O2O 公司。我 2012 年一年基本没融到资，后面就把团队打造成落地跟技术得两手抓。</p>
+<p><strong>陈茜</strong>: 最开始给投资人讲的故事是什么？</p>
+<p><strong>黄晓煌</strong>: 最开始讲把 GPU 做到云端，做快速渲染，一分钱融不到。后面投资人教我，包装成家装 O2O 的故事，很快就融到钱了。第一个产品就是酷家乐，原来做一套图要一星期，我们几个小时就可以做完。</p>
+<h3>2018 年的转型与 2022 年的震撼</h3>
+<p><strong>陈茜</strong>: 2018 年，你们在盈利状态下开始了第二波拓展。</p>
+<p><strong>黄晓煌</strong>: 2017 年现金流就是正的，躺着赚钱的感觉。2018 年我们开始投入做空间智能的前身。那时候还是小模型，只能做简单的视觉识别。我们开源了一套数据集叫 <strong>InteriorNet</strong>。转了一半，2020 年房地产又大爆发了。</p>
+<p>当时有客户过来，啥也不说，先往你账上打 1000 万，然后谈合作。说没谈成可以退。我说没谈成我不要了。我眼珠都快掉出来了，这就是那个年代的房地产公司。回来之后我们 CFO 把我喷了一顿，说你苦哈哈搞什么 AI，干两三年不如人家见面礼。</p>
+<p>但 AI 这条线我一直抓着。到了 2022 年，国家政策调整，年底大模型出来，ChatGPT、<strong>Midjourney</strong> 让我非常震撼。</p>
+<p><strong>陈茜</strong>: ChatGPT 上线对你来说震撼吗？</p>
+<p><strong>黄晓煌</strong>: 非常震撼。我原来信仰的是通过聪明人写精妙的算法，但 ChatGPT 让我感受到，数据量越多它就越智能。这对我原来对算法的认知彻底变了。</p>
+<p>2023 年我们整个战略重心调整到空间智能。一个巨大的变化是：2022 年之前我们认为增长核心是产品，2022 年之后我们意识到核心是算法、是模型。</p>
+<h3>硬件连接与算力成本：新的“护城河”</h3>
+<p><strong>陈茜</strong>: <strong>OpenClaw</strong>（注：此处疑为 OpenAI 相关项目口误或特定术语）火了之后，对你有什么启示？</p>
+<p><strong>黄晓煌</strong>: 我主观的感觉是，以后用工具、软件的人会变少，它会硬件接着模型直接在用。未来是一个多硬件终端的世界，眼镜、机械臂、摄像头都拥有智能。你得把能连接的物理硬件全部衔接了。</p>
+<p>我们发现，怎么准确地操作硬件，是大模型几乎涉及不到的。所以我们战略在调整，把连接物理世界作为核心战略，弱化工具。</p>
+<p><strong>陈茜</strong>: 算力需求怎么优化？你会花多少钱买卡？</p>
+<p><strong>黄晓煌</strong>: 目前空间智能用到的算力远不如大语言模型，因为数据量不够丰富。困扰大家的是数据。</p>
+<p>公司内部肯定会抢卡。我目前希望把算力投入控制在营收的 10% 左右。竞争对手死磕的话，我肯定大投入。</p>
+<p><strong>陈茜</strong>: 护城河最重要的能力是什么？</p>
+<p><strong>黄晓煌</strong>: 早期觉得是工具、数据、模型循环发展。最近一年我觉得还不够，得有硬件生态，得连接硬件。工具可能不一定是壁垒了，但模型、硬件、数据肯定还是壁垒。贴着物理世界能活，纯虚拟世界我感觉就几个巨头在卷。</p>
+<h3>数据困境：空间智能的最大挑战</h3>
+<p><strong>陈茜</strong>: 约制空间智能发展的最现实瓶颈是<strong>数据</strong>。</p>
+<p><strong>黄晓煌</strong>: 目前最大问题是缺少像大语言模型那样大量的、免费的开源数据。图片文字网上扒就好了，空间数据网上没有，还有隐私版权问题。你把空间拍下来，要不要房东同意？点云数据每一个点都有三维坐标，互联网上很少。</p>
+<p>而且难点在于信息标注。要有准确的标注信息，比如这是一个椅子。高质量的数据，全自动生成目前看起来还不够，需要很大的人工参与。有的公司要求测出摩擦力、准确质量，那就真的得去采集，成本就高了。</p>
+<p><strong>陈茜</strong>: 真实世界的“长尾”太长。赋予机器空间认知的底层直觉，才是悬而未决的核心难题。</p>
+<h3>未来展望：下一个五年的爆发点</h3>
+<p><strong>黄晓煌</strong>: 今天老黄也讲了 CUDA 20 周年，我就是第一批开发 CUDA 的人。感觉人类的智慧是一层一层搭积木搭上去的。真正普及空间智能需要 3 到 5 年，但会有超乎想象的东西出现。</p>
+<p>我很受英伟达模式的影响。方法论是先找到一个你相信一定能改变世界的东西，然后拿着“锤子”找“钉子”。英伟达做高性能计算，先用在游戏行业活下来，救了它的是挖矿，后面才有大模型。</p>
+<p>空间智能也一样，房地产是一个非常好的赛道。只要物理世界还存在，空间智能就一定会发挥巨大价值。只要你相信有一天电脑能像人类一样在物理世界自由干活，那你就慢慢做吧，机会来了你就凑上去。</p>
+<p><strong>陈茜</strong>: 空间智能更像是一次必然发生的跃迁。它一定会在某些意想不到的地方先找到爆发点。只要 AI 有一天要走出屏幕，空间智能就是一个绕不过去的基础能力。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Manycore" class="entity-link company-link">Manycore</a>, 
+                
+                  <a href="/search/?q=NVIDIA" class="entity-link company-link">NVIDIA</a>, 
+                
+                  <a href="/search/?q=World Labs" class="entity-link company-link">World Labs</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Autodesk" class="entity-link company-link">Autodesk</a>, 
+                
+                  <a href="/search/?q=IDG" class="entity-link company-link">IDG</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=SpatialLM" class="entity-link product-link">SpatialLM</a>, 
+                
+                  <a href="/search/?q=SpatialGen" class="entity-link product-link">SpatialGen</a>, 
+                
+                  <a href="/search/?q=Kujiale" class="entity-link product-link">Kujiale</a>, 
+                
+                  <a href="/search/?q=CUDA" class="entity-link product-link">CUDA</a>, 
+                
+                  <a href="/search/?q=GPT-4o" class="entity-link product-link">GPT-4o</a>, 
+                
+                  <a href="/search/?q=NeRF" class="entity-link product-link">NeRF</a>, 
+                
+                  <a href="/search/?q=Gaussian-Splatting" class="entity-link product-link">Gaussian-Splatting</a>
+                
+              </p>
+            
+            
+              <p><strong>媒体/书籍:</strong>
+                
+                  <a href="/search/?q=Frames of Mind" class="entity-link media-link">Frames of Mind</a>
+                
+              </p>
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/spatial-intelligence/">spatial-intelligence</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/world-model/">world-model</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/embodied-ai/">embodied-ai</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">3d-reconstruction</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/robotics/">robotics</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

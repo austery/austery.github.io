@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>大模型依赖记忆而非智能：解读Scaling Law下的核心误区</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="大模型依赖记忆而非智能：解读Scaling Law下的核心误区" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">大模型依赖记忆而非智能：解读Scaling Law下的核心误区</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Dwarkesh Patel</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2024-06-12
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/dwarkesh-patel/">Dwarkesh Patel</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=rl7B-LHiaNo" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2024-06-12
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">该讲稿探讨了通用智能与技能的本质区别，指出当前大型语言模型（LLM）主要擅长技能习得和基于模式匹配的“记忆式推理”，而非真正的通用智能。通过分析Scaling Law和基准测试，文章揭示了模型表现的提升更多源于记忆能力的增强，而非智能本身。它强调了区分记忆与推理的重要性，并指出虽然记忆是推理的基础，但真正的智能在于即时合成新解决方案的能力。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>智能与技能的本质区别：通用性非技能的简单叠加</h3>
+<p>演讲者首先阐述了<strong>通用智能</strong>（General Intelligence）的核心概念，并将其与<strong>任务特定技能</strong>（Task-Specific Skill）明确区分开来。通用智能并非将单一技能无限扩展，而是指一种能够快速掌握<strong>任何</strong>新技能、解决<strong>任何</strong>问题的能力，其关键在于能够利用<strong>既有数据</strong>（Valuable Old Data）来高效地面对未知挑战。这种能力使个体能够适应并即时学习（Learn on the Fly），这是“<strong>通用性</strong>”（Generality）的真正含义，而非简单地将特定技能“<strong>规模化</strong>”（Scaled Up）以覆盖更多领域。</p>
+<details>
+<summary>Original English</summary>
+<p>general
+intelligence
+is
+not
+task</p>
+<p>specific
+skill
+scaled
+up
+to
+many
+skills</p>
+<p>because
+there
+is
+an
+infinite
+space of</p>
+<p>possible
+skills
+general
+intelligence
+is</p>
+<p>the
+ability
+to
+approach
+any
+problem
+any</p>
+<p>skill
+and
+very
+quickly
+Master
+it
+using</p>
+<p>Val
+old
+data
+because
+this
+is
+what
+makes</p>
+<p>you
+able
+to
+face
+anything
+you
+might
+have</p>
+<p>ear
+cont
+this
+is
+what
+makes
+uh
+uh
+this</p>
+<p>this
+is
+the
+definition
+of
+generality</p>
+<p>like
+generality
+is
+not
+specificity</p>
+<p>scaled
+up
+it
+is
+uh
+the
+ability
+to
+apply</p>
+<p>your
+mind
+to
+anything
+at
+all
+to</p>
+<p>arbitrary
+things
+and
+this
+requires</p>
+<p>fundamentally
+this
+requires
+the
+ability</p>
+<p>to
+adapt
+to
+learn
+on
+the
+Fly
+efficiently</p>
+</details>
+<h3>“最大化主义”论点与Scaling Law的局限性</h3>
+<p>文章随后深入探讨了当前的“<strong>最大化主义</strong>”（Maximalist）论点，特别是其引用的“<strong>Scaling Laws</strong>”（LS）。这是一种在模型训练中观察到的经验性关系，描述了花费在训练上的<strong>计算量</strong>（Compute）与模型在<strong>基准测试</strong>（Benchmarks）中获得的<strong>性能</strong>（Performance）之间的关联。然而，核心问题在于如何衡量这种性能提升。演讲者强调，性能的衡量方式并非技术细节，它将直接<strong>限定</strong>我们提出的问题范围，进而<strong>限制</strong>我们寻找的答案。当前用于评估大型语言模型（LLMs）的基准测试，许多是<strong>基于记忆</strong>（Memorization-Based）的，有时甚至如同学校考试，仅需记忆一套固定的“<strong>推理模式</strong>”（Reasoning Patterns）并进行套用，而非真正的推理。</p>
+<details>
+<summary>Original English</summary>
+<p>the
+scale
+uh
+a
+maximalist
+argument
+it</p>
+<p>boils
+down
+to
+these
+people
+they
+refer
+to</p>
+<p>scaling
+LS
+which
+is
+this
+this
+empirical</p>
+<p>relationship
+that
+you
+can
+draw
+between</p>
+<p>how
+much
+compute
+you
+spend
+on
+training</p>
+<p>model
+and
+the
+performance
+you're
+getting</p>
+<p>on
+benchmarks
+right
+and
+the
+the
+key</p>
+<p>question
+here
+of
+course
+is
+well
+how
+do</p>
+<p>you
+measure
+performance
+what
+it
+is
+that</p>
+<p>you're
+actually</p>
+<p>uh
+improving
+by
+adding
+more
+comput
+and</p>
+<p>more
+data
+and
+well
+it's
+it's
+Benchmark</p>
+<p>performance
+right
+and
+the
+thing
+is
+the</p>
+<p>way
+you
+measure
+performance
+is
+not
+a</p>
+<p>technical
+detail
+uh
+it
+it's
+it's
+not</p>
+<p>it's
+not
+an
+afterthought
+because
+it's</p>
+<p>going
+to
+uh
+narrow
+down
+the
+set
+of</p>
+<p>questions
+that
+you're
+asking
+and
+so</p>
+<p>accordingly
+it's
+going
+to
+narrow
+down</p>
+<p>the
+set
+of
+answers
+that
+that
+you're
+that</p>
+<p>you're
+looking
+for
+if
+you
+look
+at
+uh
+the</p>
+<p>benchmarks
+we're
+using
+for
+LMS
+they're</p>
+<p>all
+memorization
+based
+benchmarks
+like</p>
+<p>sometimes
+they're
+literally
+just</p>
+<p>knowledge
+based
+like
+like
+a
+school
+test</p>
+<p>and
+even
+if
+you
+look
+at
+the
+ones
+that</p>
+<p>are
+uh
+you
+know
+explicitly
+about</p>
+<p>reasoning
+you
+realize
+if
+you
+look</p>
+<p>closely
+that
+it's
+uh
+in
+order
+to
+solve</p>
+<p>them
+it's
+enough
+to
+memorize
+uh
+a
+finite</p>
+<p>set
+of
+uh
+uh
+resoning
+patterns
+uh
+and</p>
+<p>then
+you
+just
+reapply
+them</p>
+</details>
+<h3>LLMs的“推理”：程序获取而非动态合成</h3>
+<p>当前的大型语言模型（LLMs）在处理这些基准测试时，表现得像是在执行“<strong>程序获取</strong>”（Program Fetching）。模型能够记忆并检索大量“<strong>静态程序</strong>”（Static Programs）或“<strong>解决方案程序</strong>”（Solution Programs），当面对新问题时，它们会从中“<strong>提取</strong>”（Fetch）最相关的程序并应用。这种模式看起来像是推理，但实际上并未涉及“<strong>即时程序合成</strong>”（On-the-Fly Program Synthesis）——即根据现有知识片段动态创建新解决方案的能力。</p>
+<details>
+<summary>Original English</summary>
+<p>they
+they're</p>
+<p>like
+static
+programs
+llms
+are
+very
+good</p>
+<p>at
+memorizing
+CTIC
+programs
+small
+CTIC</p>
+<p>programs
+and
+and
+they've
+got
+this
+sort</p>
+<p>of
+like
+Bank
+of
+uh
+solution
+programs
+and</p>
+<p>when
+you
+give
+them
+a
+new
+puzzle
+uh
+they</p>
+<p>can
+just
+fetch
+the
+appropriate
+program</p>
+<p>apply
+it
+and
+it's
+looking
+like
+it's</p>
+<p>reasoning
+but
+really
+it's
+not
+doing
+any</p>
+<p>sort
+of
+on
+thefly
+program
+synthesis
+all</p>
+<p>it's
+doing
+is
+program
+fetching
+so
+you</p>
+<p>can
+actually
+solve
+all
+these
+benchmarks</p>
+<p>with
+memorization</p>
+</details>
+<h3>技能提升不等于智能增长：理解记忆与智能的混淆</h3>
+<p>当我们增加模型的<strong>数据库规模</strong>（Size of your database）并填充更多知识和模式时，其在记忆型基准测试上的性能会随之提升，这一点显而易见。然而，这<strong>并未</strong>在任何程度上增加系统的<strong>智能</strong>（Intelligence）本身。模型能力的增长体现在“<strong>技能</strong>”（Skill）的提升——即其<strong>有用性</strong>（Usefulness）和<strong>适用范围</strong>（Scope of Applicability）的扩大，而非智能水平的提高。演讲者强调，<strong>技能并非智能</strong>，这是导致混淆的“<strong>现象性困惑</strong>”（Phenomenal Confusion），人们常常将两者混为一谈。这种混淆源于对模型“<strong>内插</strong>”（Interpolation）能力的误解，即模型在已知数据点之间进行插值，而非真正的理解和泛化。</p>
+<details>
+<summary>Original English</summary>
+<p>and
+so
+what
+what</p>
+<p>you're
+scaling
+up
+here
+like
+if
+you
+look</p>
+<p>at
+the
+models
+they
+are
+uh
+big
+parametric</p>
+<p>curves
+uh
+fitted
+to
+a
+data
+distribution</p>
+<p>I
+descent
+so
+they
+are
+basically
+these</p>
+<p>big
+interpolative
+uh
+databases</p>
+<p>interpolative
+memories
+and
+of
+course
+if</p>
+<p>you
+scale
+up
+the
+size
+of
+your
+database</p>
+<p>and
+you
+cram
+into
+it
+uh
+more
+knowledge</p>
+<p>more
+patterns
+and
+so
+on
+uh
+you
+are
+going</p>
+<p>to
+be
+increasing
+its
+its
+performance
+as</p>
+<p>measured
+by
+memorization
+Benchmark</p>
+<p>that's
+that's
+kind
+of
+obvious
+but
+as</p>
+<p>you're
+doing
+it
+you
+are
+not
+increasing</p>
+<p>the
+intelligence
+of
+the
+system
+one
+bit</p>
+<p>you
+are
+increasing
+the
+skill
+of
+the</p>
+<p>system
+you
+you
+are
+increasing
+ining
+its</p>
+<p>usefulness
+its
+uh
+scope
+of
+applicability</p>
+<p>but
+not
+its
+intelligence
+because
+skill</p>
+<p>is
+not
+intelligence
+and
+that's
+the</p>
+<p>phenomal
+confusion
+um
+that
+that
+that</p>
+<p>people
+run
+into
+is
+that
+they're</p>
+<p>confusing
+skill
+and
+intelligence
+as
+far</p>
+<p>as
+the
+interpolation
+goes</p>
+</details>
+<h3>数学基准测试的启示：区分推理的定义</h3>
+<p>为了具体说明这一点，演讲者举了一个“<strong>GSS 8K</strong>”数学基准测试的例子。该测试包含的题目，如一道关于班级学生年龄分布的数学题，对于一个“<strong>聪明的や学の生徒</strong>”（Smart High Schooler）来说本应是可以解决的。模型在此类测试上能达到95%的准确率，但这仍是基于记忆。演讲者提出了<strong>推理</strong>的两种定义：第一种，即<strong>拥有一个程序模板库</strong>，识别问题的结构后<strong>匹配并套用</strong>记忆中的模板来生成解决方案；第二种，也是更困难的一种，即在<strong>没有现成程序</strong>可供套用时，能够<strong>动态地合成</strong>（Synthesize on the Fly）一个全新的程序，这需要将现有程序的片段重新组合。后者才是真正困难的，而模型目前擅长的是前者。</p>
+<details>
+<summary>Original English</summary>
+<p>so
+okay
+let's
+look
+at
+one
+of
+the
+benchmarks
+here</p>
+<p>there's
+there's
+one
+Benchmark
+that
+does</p>
+<p>great
+school
+math
+and
+these
+are
+problems</p>
+<p>that
+like
+a
+smart
+high
+schooler
+would
+be</p>
+<p>able
+to
+solve
+um
+it's
+called
+GSS
+8K
+and</p>
+<p>these
+models
+get
+95%
+on
+these
+like</p>
+<p>basically
+they
+always
+nail
+memorization</p>
+<p>okay
+let's
+talk
+about
+what
+that</p>
+<p>means
+so
+here's
+one
+question
+about
+from</p>
+<p>that
+Benchmark
+so
+30
+students
+are
+in
+a</p>
+<p>class
+one/
+fifth
+of
+them
+are
+12
+year</p>
+<p>olds
+1/3
+are
+13y
+old
+1110th
+are
+11
+year</p>
+<p>olds
+how
+many
+of
+them
+are
+not
+11
+12
+or</p>
+<p>13
+years
+old
+so
+I
+agree
+like
+this
+is
+not</p>
+<p>rocket
+science
+right
+you
+can
+write
+down</p>
+<p>on
+paper
+how
+you
+go
+through
+this
+problem</p>
+<p>and
+a
+high
+school
+kid
+at
+least
+a
+smart</p>
+<p>high
+school
+kid
+should
+be
+able
+to
+solve</p>
+<p>it
+now
+when
+you
+say
+memorization
+it's</p>
+<p>still
+has
+to
+reason
+through
+how
+to
+think</p>
+<p>about
+fractions
+and
+what
+is
+the
+context</p>
+<p>of
+the
+whole
+problem
+and
+then
+combining</p>
+<p>the
+different
+calculations
+is
+doing
+it</p>
+<p>depends
+how
+you
+how
+you
+want
+to
+Define</p>
+<p>reasoning
+but
+there
+there
+are
+two</p>
+<p>definitions
+you
+can
+use
+so
+one
+is
+I
+have</p>
+<p>available
+uh
+a
+set
+of
+program
+templates</p>
+<p>it's
+it's
+like
+the
+structure
+of
+the</p>
+<p>puzzle
+which
+which
+can
+also
+generate
+its</p>
+<p>solution
+and
+I'm
+just
+going
+to
+identify</p>
+<p>the
+right
+template
+which
+is
+in
+my
+memory</p>
+<p>um
+I'm
+going
+to
+input
+the
+new
+value
+into</p>
+<p>the
+template
+run
+the
+program
+get
+the</p>
+<p>solution
+and
+you
+could
+say
+this
+is</p>
+<p>reasoning
+and
+I
+say
+yeah
+sure
+okay
+uh</p>
+<p>but
+another
+definition
+you
+can
+use
+is</p>
+<p>reasoning
+is
+the
+ability
+to
+when
+you're</p>
+<p>faced
+with
+a
+with
+a
+puzzle
+given
+that</p>
+<p>you
+don't
+have
+already
+a
+program
+in</p>
+<p>memory
+to
+solve
+it
+you
+must
+synthesize</p>
+<p>on
+the
+fly
+a
+new
+program
+based
+on
+bits</p>
+<p>of
+pieces
+of
+existing
+programs
+that
+you</p>
+<p>have
+you
+have
+to
+do
+on
+the
+Fly
+program</p>
+<p>synthesis
+and
+it's
+actually
+dramatically</p>
+<p>harder
+than
+just
+fetching
+the
+right</p>
+<p>memorized
+program
+and
+replying
+it</p>
+</details>
+<h3>人类学习的普遍性与模型的记忆基础</h3>
+<p>演讲者进一步指出，我们可能<strong>高估</strong>了人类在样本效率上的程度。人类学习数学，例如代数、几何、微积分，需要多年的系统性教学和练习，而非仅仅观看一个示例就能掌握。这种“<strong>训练</strong>”（Training）过程，涉及反复钻研特定的<strong>推理路径</strong>（Pathways of Reasoning），与模型通过大量数据“<strong>钻取</strong>”（Drill）训练的过程在概念上有相似之处。尽管如此，为了实现“<strong>即时程序合成</strong>”，模型确实需要“<strong>可用的积木</strong>”（Building Blocks）——即<strong>知识</strong>（Knowledge）和<strong>记忆</strong>（Memory）。因此，记忆并非与推理对立，而是<strong>极大地重要</strong>（Tremendously Important）的，是有效推理的基础。</p>
+<details>
+<summary>Original English</summary>
+<p>I
+think
+maybe
+we
+are
+overestimating
+the</p>
+<p>extent
+to
+which
+humans
+are
+so
+sample</p>
+<p>efficient
+they
+also
+don't
+need
+training</p>
+<p>in
+this
+way
+where
+they
+have
+to
+drill
+in</p>
+<p>these
+kinds</p>
+<p>of
+Pathways
+of
+reasoning
+through
+certain</p>
+<p>kind
+of
+problems
+so
+let's
+take
+math
+for</p>
+<p>example
+yeah
+it's
+not
+like
+you
+can
+just</p>
+<p>show
+a
+baby
+the
+axum
+of
+SE
+Theory
+and</p>
+<p>now
+they
+know
+math
+right
+so
+they
+when</p>
+<p>they're
+growing
+up
+you
+had
+to
+do
+years</p>
+<p>of
+teaching
+them
+pre-algebra
+then
+you</p>
+<p>got
+to
+do
+a
+year
+of
+teaching
+them
+doing</p>
+<p>d
+and
+going
+through
+the
+same
+kind
+of</p>
+<p>problem
+in
+algebra
+then
+geometry</p>
+<p>pre-calculus
+calculus
+absolutely
+so</p>
+<p>training
+yeah
+but
+isn't
+that
+like
+the</p>
+<p>same
+kind
+of
+thing
+where
+you
+you
+you</p>
+<p>can't
+just
+see
+one
+example
+and
+now
+you</p>
+<p>have
+the
+program
+or
+whatever
+you</p>
+<p>actually
+had
+to
+drill
+it
+these
+models</p>
+<p>also
+had
+to
+drill
+with
+a
+bunch
+of
+fruit</p>
+<p>training
+data
+sure
+I
+mean
+in
+order
+to
+do</p>
+<p>on
+the-fly
+program
+synthesis
+you</p>
+<p>actually
+need
+uh
+building
+blocks
+to
+work</p>
+<p>from
+so
+knowledge
+and
+memory
+actually</p>
+<p>tremendously
+important
+in
+the
+process</p>
+<p>I'm
+not
+I'm
+not
+saying
+it's
+memory</p>
+<p>versus
+reasoning
+in
+order
+to
+do</p>
+<p>effective
+reasoning
+you
+need
+memory</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">general-intelligence</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/artificial-intelligence/">artificial-intelligence</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">llm-benchmarks</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/scaling-laws/">scaling-laws</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">reasoning-vs-skill</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

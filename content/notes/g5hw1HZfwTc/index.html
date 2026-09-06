@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>具身智能元年：解构机器人“大脑”的五代演进与三大商业流派</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="具身智能元年：解构机器人“大脑”的五代演进与三大商业流派" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">具身智能元年：解构机器人“大脑”的五代演进与三大商业流派</span>
+      <span data-pagefind-meta="speaker" style="display:none;">硅谷101</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-01-13
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/gui-gu-101/">硅谷101</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=g5hw1HZfwTc" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-01-13
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本文系统梳理了机器人技术六十年的范式变迁，从最初的硬编码编程到如今基于大模型的 VLA 架构。重点解析了 2025 年具身智能爆发的三大核心驱动力，并深度对比了以特斯拉、Figure 为首的全栈整合派，以 Dyna 为代表的垂直突破派，以及英伟达主导的生态平台派在实现通用机器人路径上的本质分歧与技术逻辑。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>2025 具身智能：魔幻 Demo 与现实挑战的博弈</h3>
+<p>2025 年机器人公司发布的 Demo 都有点魔幻。首先是 <strong>Figure AI</strong> 在 10 月发布了第三代机器人，能够做各种家务，Demo 很酷炫，但是任务的成功率在业界是有很多质疑的。而且我很想吐槽这个设计，它的脸实在是“恐怖谷效应”有一点严重。你看之后 10 月底发布 Demo 的另一家明星公司 <strong>1X</strong> 就聪明了很多，整个脸部设计是不是就可爱了非常多，感觉是让大家更愿意搬到家里的。</p>
+<p>但是这个叫做 <strong>Neo</strong> 的这款机器人依赖远程操控，被批评是“假智能”，而且有各种的隐私问题。同时，<strong>特斯拉</strong>（Tesla）的机器人虽然也发布了各种 Demo 的更新，包括在 12 月发布的非常顺滑的跑步 Demo，但是明显量产计划在 2025 年是遇到了极大的挑战，让公司不得不暂停生产，要重新设计硬件。更别提最近的一次亮相还遭遇了一次小小翻车，我们先卖个关子。</p>
+<p>我们接下来深聊一下这个产业的一个核心技术：<strong>机器人基础模型</strong>（Robot Foundation Model: 能够跨任务、跨形态执行物理指令的通用 AI 系统）。我们试图回答这样一个问题：为什么 2025 年突然变成了机器人基础模型的“元年”？我们将系统拆解当下主流机器人的“大脑”是如何被训练出来、如何接入真实世界，以及不同路线背后的技术与商业逻辑。</p>
+<h3>范式变迁：从硬编码编程到感知规划的局限</h3>
+<p>如果要用一句话解释机器人基础模型，最简单的类比就是：如果说 GPT 是“会说话的大脑”，那么机器人基础模型就是“会动手的大脑”。但这个“会动手的大脑”，人类研究了整整 60 年才做出来。我们先来回顾一下大模型出现以前的四大机器人范式。</p>
+<p>1961 年，世界上第一台工业机器人 <strong>Unimate</strong> 在通用汽车的工厂里“上班”了。它的工作很简单：从生产线上抓起金属零件放到另一条生产线上。从现在的眼光看它蛮“傻”的，因为完全靠编程。工程师用代码告诉它：步骤 1 手臂向左移动 30 厘米，步骤 2 手爪闭合……这种方式的问题很明显：<strong>零容错、零灵活性</strong>。如果零件位置偏了 1 厘米，机器人就抓不到了。这种“编程式”逻辑在高度可控的工厂环境里管用了几十年，但无法应对复杂的现实世界。</p>
+<p>到了 90 年代，机器人学家意识到光靠编程不行，机器人得能够“感知”环境，于是出现了 <strong>SLAM</strong>（Simultaneous Localization and Mapping: 定位与地图构建）和运动规划技术。核心思路是先用传感器“看”环境，建立 3D 地图，再规划路径。这个方式最成功的应用是<strong>扫地机器人</strong>（Roomba），它在“导航”任务上很成功，但在“操作”任务上就不行了。因为操作任务太复杂，比如叠毛巾，毛巾是柔性的，一抓就变形，传统的“感知→规划→执行”链条极易崩溃。2010 年加州伯克利的研究团队让机器人叠毛巾，平均一条要花 24 分钟。</p>
+<h3>学习进化：模仿学习与强化学习的瓶颈</h3>
+<p>既然手工设计规则不行，能不能让机器人直接“学”人类怎么做？这就是<strong>行为克隆</strong>（Behavior Cloning），也叫<strong>模仿学习</strong>（Imitation Learning）。记录人类演示的每一帧视觉输入和动作输出，训练神经网络建立映射。2015 年 <strong>Google Brain</strong> 团队用这个方法让机器人学会了抓取各种物体。这虽然是巨大进步，但数据效率太低，学一个动作可能要 100 万次演示，且<strong>泛化性</strong>（Generalization: 模型应用到未见过场景的能力）极差，换个机器人型号就不能用了。</p>
+<p>2016 年 <strong>AlphaGo</strong> 战胜李世石后，<strong>强化学习</strong>（Reinforcement Learning: 通过试错与奖励机制进行学习）进入视野。核心思路是不需要人类演示，让机器人自己尝试，做对给奖，做错给罚。<strong>波士顿动力</strong>（Boston Dynamics）曾将此引入移动控制。但强化学习太慢了，且机器人很难在仿真环境里练，因为环境复杂度太高，导致“仿真不准”。在真机上试错又太慢、太贵。更根本的问题是它缺乏“常识”，它不知道毛巾是软的，需要通过无数次试错才能“发现”这些人类已有的常识。</p>
+<h3>VLA 革命：具身智能元年的三大驱动力</h3>
+<p>故事来到 2025 年，大语言模型的出现改变了一切。<strong>VLA 模型</strong>（Vision-Language-Action: 视觉-语言-动作模型）诞生了，它将视觉场景、语言目标和控制动作统一到了一个神经网络里。VLA 的革命性在于它自带“常识推理”。你说“帮我准备早餐”，它通过大模型知道要从冰箱拿鸡蛋，且鸡蛋不能摔碎，这些常识不需要编程或试错，因为大模型里已经有了。</p>
+<p>为什么 2025 年成了具身智能元年？三个关键因素同时成熟了：</p>
+<ol>
+<li><strong>大语言模型“够用了”</strong>：OpenAI、Anthropic 等公司的模型在理解指令和任务规划上已经趋于稳定，为具身智能提供了基础能力。</li>
+<li><strong>算力价格腰斩</strong>：NVIDIA <strong>H100</strong> 等 GPU 大量铺货，初创公司也租得起几千张卡来训练模型。</li>
+<li><strong>硬件供应链成熟</strong>：随着人形机器人热潮，中国供应商在电机、减速器、传感器等核心零部件上实现扩产，硬件成本大幅降低。</li>
+</ol>
+<p>然而 VLA 的核心挑战是<strong>数据</strong>。机器人需要的是包含传感器信息的“真机数据”，而这种数据互联网上没有。YouTube 上有叠衣服视频，但没有手指关节的转动角度。这场“军备竞赛”的核心，除了算法，就是谁能用最低成本采集到最高质量的数据。</p>
+<h3>全栈整合派：特斯拉与 Figure AI 的激进路线</h3>
+<p>如今闭源机器人赛道分成了三个流派。第一派是<strong>全栈整合派</strong>，代表是 <strong>Tesla Optimus</strong> 和 <strong>Figure AI</strong>。这一派的核心信念是：机器人基础模型不能和硬件分离，必须垂直整合、深度耦合。</p>
+<p>特斯拉是这一流派最激进的代表。马斯克的自信源于 <strong>FSD</strong>（完全自动驾驶）十年的积累。他认为从汽车到机器人只是从“轮子上的机器人”变成了“长着腿的机器人”。但 2025 年现实很骨感，Optimus 生产计划因硬件重新设计而暂停。其面临的核心问题是 <strong>Embodiment Gap</strong>（具身鸿沟）：人类手和机器手的物理差异，导致从人类视频迁移能力的效率较低。</p>
+<p>Figure AI 则走得更远，2024 年与 <strong>OpenAI</strong> 深度合作，随后又宣布“分手”并推出自研的 <strong>Helix</strong> 模型。Helix 采用了 <strong>System 1 &amp; System 2</strong> 双系统架构：System 2 负责“想清楚干什么”（大脑皮层），System 1 负责“手脚配合”（小脑）。这种架构解决了视觉-语言模型响应慢的问题，实现了实时精确控制。Figure AI 在 2025 年 9 月完成 10 亿美元融资，估值飙升至 390 亿美元，成了具身机器人界的“扛把子”。</p>
+<h3>垂直突破派：从专精任务到元学习的涌现</h3>
+<p>第二派是<strong>垂直突破派</strong>，代表是 <strong>Dyna Robotics</strong>。他们的核心理念是：与其训练一个什么都会但做不好的大模型，不如先在某个垂直场景（如叠毛巾、洗碗）做到极致，过程中积累的“学习能力”会自然迁移。</p>
+<p>Dyna Robotics 的创始人包括前 DeepMind 科学家 <strong>Jason Ma</strong>。他们的 <strong>DYNA-1</strong> 模型在真实环境中能 24 小时自主折叠 700 多张餐巾。他们认为机器人基础模型的 <strong>Scaling Law</strong>（缩放定律）与语言模型不同：语言模型可以靠低质量海量文本，但机器人需要高质量的真实物理交互。参数越大，如果物理一致性不准，错误反而会被放大。</p>
+<p>这一派认为，深度专精某个任务，模型学到的是“如何学习”的<strong>元能力</strong>。就像学好钢琴的人转学吉他会很快。同属此类的还有 <strong>Skild AI</strong>，他们主攻通用大脑以适配不同硬件；以及 <strong>亚马逊</strong>（Amazon），其在部署了 100 万台专用机器人后，正在秘密测试人形机器人测试场，策略也是先在垂直场景积累数据再泛化。</p>
+<h3>生态平台派：巨头们的标准化野心</h3>
+<p>第三派是<strong>生态平台派</strong>，他们争夺的是行业标准和生态控制力。<strong>NVIDIA</strong> 是典型代表，其推出的 <strong>GR00T N1</strong> 旨在做机器人界的 Android。虽然开源，但你得配套使用全套 NVIDIA 工具链，实现生态锁定。</p>
+<p><strong>Google</strong> 走的是“研究驱动、开源优先”的路线，通过 <strong>RT 系列</strong>模型和开放数据集在学术界建立影响力。最近又挖来波士顿动力前 CTO 推动 Gemini AI 成为通用控制平台。而 <strong>OpenAI</strong> 和 <strong>Meta</strong> 则是“小步快跑，先占坑”。OpenAI 虽然与 Figure 分手，但又投资了 <strong>Physical Intelligence</strong> 并重启控制算法研究；Meta 则由前 Cruise CEO 牵头组建部门，构建“世界模型”以支撑细致操控。</p>
+<p>总结来看，全栈整合派赌的是“规模涌现”，垂直突破派赌的是“专精迁移”，生态平台派赌的是“标准锁定”。2025 年的现状是：Demo 很精彩，落地仍艰难。但无论哪种路径，当硬件成本降到家庭可承担范围，机器人管家进入千家万户的愿景，或许在未来 1-2 年内就会从叠衣服、做早餐开始真正起步。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Tesla" class="entity-link company-link">Tesla</a>, 
+                
+                  <a href="/search/?q=Figure AI" class="entity-link company-link">Figure AI</a>, 
+                
+                  <a href="/search/?q=Dyna Robotics" class="entity-link company-link">Dyna Robotics</a>, 
+                
+                  <a href="/search/?q=NVIDIA" class="entity-link company-link">NVIDIA</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>, 
+                
+                  <a href="/search/?q=Amazon" class="entity-link company-link">Amazon</a>, 
+                
+                  <a href="/search/?q=Meta" class="entity-link company-link">Meta</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Optimus" class="entity-link product-link">Optimus</a>, 
+                
+                  <a href="/search/?q=Helix" class="entity-link product-link">Helix</a>, 
+                
+                  <a href="/search/?q=DYNA-1" class="entity-link product-link">DYNA-1</a>, 
+                
+                  <a href="/search/?q=GR00T N1" class="entity-link product-link">GR00T N1</a>, 
+                
+                  <a href="/search/?q=VLA" class="entity-link product-link">VLA</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">embodied-intelligence</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/foundation-model/">foundation-model</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">robotic-control</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/computer-vision/">computer-vision</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/reinforcement-learning/">reinforcement-learning</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

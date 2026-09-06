@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>屏幕记忆的第三条路：存指针，不存像素</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="屏幕记忆的第三条路：存指针，不存像素" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">屏幕记忆的第三条路：存指针，不存像素</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-09-05
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://yage.ai/share/ambient-context-pointer-memory-20260905.html" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-09-05
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">文章探讨了屏幕记忆的两种路线：全量像素采集（如 Recall）和纯文字抓取（如 Ambient Context）。核心观点是，通过存指针而非像素，可以实现低保真索引与高保真原始物的分离，从而在隐私、成本和模型消费效率之间找到平衡。文章提出了三层结构（高保真原始物、低保真索引、按需解析）的记忆系统设计，并指出多模态模型对文本的消费成本更低，因此采用指针方案更具优势。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>日常在电脑前处理大量网页、文档和代码，许多细节转头就忘。随口问手头的
+AI 助手昨天做过什么、某份材料放在哪里，助手通常一无所知。为了让 AI
+拥有屏幕记忆，市面上出现了一批试图全天候记录屏幕的产品。微软在 Windows
+上推出了全屏快照功能 Recall，后来因为隐私争议改为默认关闭，且限制在搭载专用芯片的新款电脑上；Mac
+上的录屏记忆工具 Rewind 则直接下线了录屏功能，团队转向开发音频项链
+Limitless。保存全量像素的路线在隐私与成本上面临阻力。</p>
+<p>与重型录屏方案相对的，是走纯文字抓取的轻量路线。8 月 25 日以 MIT
+协议开源的 Ambient
+Context 给出了一个极简样本。作者在 LinkedIn
+自述花了两天时间，写成了一款常驻 macOS 菜单栏的工具，默认每隔 5
+秒读取一次当前前台窗口的文字，按天追加写入本地 Markdown
+文件，全程不截图也不联网。我们通读了项目约两千行 Rust 和 188 行 Swift
+核心代码，原本是为了核实它的本地隐私声明；确认代码实现与声明完全一致之后，我们注意到它写进本地文件的数据格式有些特别。下面是该工具写入本地文件的一条真实记录：</p>
+<pre><code>&lt;code&gt;## 10:03–10:41 · Keynote · Q3 调研
+
+file: /Users/grapeot/slides/Q3调研.pptx
+
+（当时屏幕上可见的零散文字，稀疏，不保证全）&lt;/code&gt;
+</code></pre>
+<p>为什么路径排在第一行？标题行记录了时间范围、应用名和窗口标题，标题下方第一行正文是一个以
+file: 开头的文件路径，抓取到的零散文字排在路径之后。macOS
+系统的辅助功能接口在读取窗口文字的同时，可以直接提供窗口背后打开的文件路径或网页地址。作者在代码注释里写过，一条路径比任何数量的抓取文字都值钱，引用排在抓取文字之上。</p>
+<p>模型读到这条记录后缺什么，路径又补了什么？周三如果询问 AI
+编程助手周二上午在忙什么，模型读取这份 Markdown
+日志，能看到十点有一个标题为 Q3
+调研的记录块。单看块内抓取的几行零散文字，模型只能得到破碎的片段，无法回答深入的提问；第一行的
+file:
+路径补齐了完整信息，模型顺着路径直接打开那份本地演示文档，就能获取逐字精确的原始全文。这份记录类似图书馆里的目录卡，路径是架位号，抓取的文字是卡片上随手记下的摘要，书本身始终留在书架上。后文提到的指针就是指向原始文件的本地或网络地址，这种把指针与摘要分开的做法，针对的正是屏幕记录工具反复撞上的两难困境。</p>
+<h2>旧问题：记全了没人看，记少了没法用</h2>
+<p>困境的第一重来自隐私和硬件门槛。微软在 2024 年推出 Recall，每隔几十秒截取一张全屏快照保存在本地，支持搜索回放。发布后引发的隐私争议迫使微软撤回修改。重新上线后方案改为默认关闭，快照依然留在本机，但要求用户必须在搭载专用芯片的新款
+Copilot+
+电脑上开启。核心功能虽然保留，用户却要先付出一笔更换硬件的信任成本。</p>
+<p>第二重困境走向了另一个极端，轻量记录留下了无法支撑调用的信息空洞。专注时间统计工具
+ActivityWatch 和 RescueTime
+只记录应用名、窗口标题和停留时长，屏幕内容一个字都不碰。这种做法规避了隐私风险，却只留下一份流水账。用户能查到周二上午十点打开过
+Keynote，却查不到当时具体在推敲什么方案。</p>
+<p>第三重困境发生在更隐蔽的消费环节，知识生产与实际消费出现断裂。我在上周的文章里记录过一位开发者的实验：他为
+AI 编程搭建了一个自动沉淀知识的
+agent，每天从日常对话中提取技术细节，整理出 18 页 wiki 和 1418
+行索引。然而他的主 agent
+开工时从不主动查询这些沉淀，每次依然需要人工交代上下文。知识在采集阶段完整无缺，在消费阶段发生断路，存储本身失去了意义。</p>
+<p>面对这三重困境，Ambient Context 的设计给出了对应的回答。针对 Recall
+式的隐私负担，方案放弃像素采集，只读取系统接口里的结构化文字。隐私保护退回读取源头，不靠事后擦除，系统接口在读取阶段直接跳过密码输入框。针对纯事件日志的内容缺失，记录下窗口文字；按量级推算，通过当天去重可把全天体积控制在几万
+token，可以直接放入模型的上下文窗口。针对 18 页 wiki
+代表的消费断层，方案放弃了预先提炼知识的设想，直接把日志当作索引，并在数据目录中附带一份写给
+AI 的阅读说明
+AGENTS.md，引导模型先看时间轴，再顺着路径打开原始文件。</p>
+<p>按作者自述，这个开源项目目前只有两天开发量，其自报的去重降噪效果还没有第三方数据印证，各类应用对辅助功能接口的支持情况也缺少系统普查。例如使用
+GPU
+渲染的终端无法读出文字，按英文关键词识别无痕窗口的做法在中文系统上也可能失效。我们把这些代码当作一个设计信号来观察，不当作现成的成熟产品。把这个设计信号放回整个市场，它到底站在什么位置，和已经存在的各路玩家相比又处于哪里？</p>
+<h2>光谱上的玩家：消费端钉死落位</h2>
+<p>要回答这个定位问题，需要先定下两个比较标准。第一个标准看记录做到多细：像素离原始画面最近，接下来是视频、音频和屏幕识别出的文字，最粗糙的是只记应用与标题的事件流，体现的是保真度。第二个标准看触发记录的时刻：有的工具全天候常驻运行，有的只抓取当前活跃窗口，会议软件在开会阶段录音，AI
+编程工具只在用户提问节点记录对话，体现的是门控。两项标准确定后，市面上的主要产品各自落位：</p>
+<p>微软 Recall：全天候常驻，保存像素快照。</p>
+<p>Rewind：Mac 端全量录屏记忆的早期先锋，屏幕录制功能已经下线，团队转向开发 Limitless 音频项链。早期采用者分析指出，付费用户并不为桌面屏幕记忆买单，真正付费的是会议音频。</p>
+<p>面向开发者、源代码可用的全天候方案 Screenpipe 同时捕获屏幕与麦克风，全部转成文字保存在本地，支持自托管。</p>
+<p>Windows 平台的开源录屏方案 Windrecorder 保存压缩视频，依托 OCR 文字和网址建立搜索索引。</p>
+<p>OpenRecall 是 Recall 的跨平台开源克隆，采用截图加 OCR 路线。</p>
+<p>Ambient Context 仅记录当前活跃窗口，保存提取文字与文件路径。</p>
+<p>ActivityWatch 仅记录应用名称与窗口标题。</p>
+<p>浏览器历史、git 提交记录、shell 历史是操作系统与日常工具自带的纯指针记录，零成本长期存在。</p>
+<p>Claude Code、OpenCode、Codex 的会话日志仅在调用时产生，保存完整的交互与推理文本。</p>
+<p>会议记录工具（如 Otter、Fireflies、Granola）仅在开会时录音转写，以云端服务为主。</p>
+<p>像素方案每次查询都要重新付感知成本，文本方案在采集时感知一次，查询时按指针取回原始物</p>
+<p>全量保存像素的先驱在市场上普遍面临收缩，Rewind 放弃了录屏业务，Recall
+需要特定芯片硬件才能开启；文字记录路线则展现出极高的开发效率，按作者自述，单人耗时两天就能做出可用原型。这种分化源于记忆系统的第一读者已经变成了语言模型。模型按
+token 消费文本，中间如果要处理像素，就必须先经过视觉编码或 OCR
+转换。既然模型按 token
+消费文本，未来直接给模型看屏幕录像到底行不行，这笔账算下来到底合不合算？</p>
+<h2>视觉 token 的账</h2>
+<p>先算一笔具体的账，再来回答这个问题。多模态模型读取图像不走常规的文本分词通道，每一帧画面进入模型前，都要先经过视觉编码器转换为视觉
+token。文字密集的屏幕在这套计价规则下最吃亏：视觉编码器按画面帧数计费，一帧画面哪怕只有十个字，收费标准和包含一千个字完全相同。</p>
+<p>Gemini
+3 官方费率给出了具体标准。视频每帧收取 70 到 280 个
+token，具体数值取决于分辨率档位；超过特定尺寸的高清画面会按 768 乘 768
+的方块进行切片，每个方块消耗 258 个 token。一块 2560 乘 1440
+的屏幕要看清上面的字，大致需要切出 12 个方块，单帧消耗接近 3000
+token。按照每秒一帧的采样频率和中等分辨率费率，连续运行一小时就会消耗 25
+万 token，全天保持逐字识别会达到百万量级。大型多模态模型对文档文字的转写准确率通常在
+95% 到 97%
+之间，遇到小号字体和复杂表格还会出现更多偏差；同一天的屏幕活动换成纯文字记录，在本地去重后的量级推算为几万
+token，而且保存的是操作系统给出的原始字符串，连复杂 URL
+都能保证字符准确。</p>
+<p>不同性质的内容划出了两套方案的适用边界。内容如果本身就是文字、消费时追求逐字精度，比如代码编辑、文档撰写和网页浏览，直接读取文字在成本和准确率上都具备优势。内容如果本身依赖视觉画面，比如版式设计、数据图表、画稿排布以及视频会议画面，文本提取在捕获瞬间就会丢失关键信息，此时必须保留像素快照，将解析动作留到查询时按需触发。</p>
+<p>两种路径背后存在一个不变的设计核心：感知发生在什么时刻。像素方案保存感知之前的原始信号，每次查询都需要重新支付一遍感知开销；文字方案把感知动作前置到采集阶段，借助辅助功能接口直接接收系统已经处理好的语义结果，代价则是放弃了画面的视觉细节。视频编码技术的压缩率无法解决模型端的消耗，H.265
+可以通过帧间预测把静态画面的文件体积压得很小，但视频解码器的服务对象是人类眼球，模型的上下文窗口需要的是语义层面的解析结果。</p>
+<p>现实中的工程选择印证了这一点：保存视频的 Rewind 和 Windrecorder
+都依赖 OCR 文字建立检索索引，Recall 的本地搜索同样先通过 OCR
+提取文本，目前还没有实用系统会把未经解析的连续像素直接塞进模型。既然感知动作既可以前置到采集阶段，也可以推迟到查询阶段，面对不同类型的数据，工程上到底该遵循什么规则来分配？</p>
+<h2>一条分配规则</h2>
+<p>记忆系统收敛为三层结构，低保真索引靠指针指向高保真原始物，查询时按需解析</p>
+<p>回答这个分配问题，已有经验指向了一条清晰的规则：对可回跳的对象存指针，对不可回跳的对象存字节，用低保真文本判断该回跳到哪里。如果原始文件依然保存在本地磁盘或远端服务器，记录下访问路径就已经足够；如果是转瞬即逝的口头交流、视频会议或纸质草稿，由于事后无法再次抓取，才需要占用存储空间保留原始字节。整套系统因此收敛为三层结构：高保真保存原始物，低保真构建索引，查询阶段按需解析。</p>
+<p>这套思路与我三月份梳理上下文管理时的三层缓存机制完全相通。给
+AI 准备上下文时，AGENTS.md 承担 L1 缓存，skill 索引充当 L2
+缓存负责指引模型找到需要的资源，具体的 skill 文件则是按需读取的 L3
+内容。L2
+索引本质上是指针机制在消费端的应用：避免把全部内容一次性塞进上下文，仅传入地址并在实际调用时读取。现在同一套思路推进到了数据采集端：不仅上下文加载做到按需取用，源头记录同样做到按需采集，中间通过指针建立连接。</p>
+<p>由此可以推导出一个结论：多模态模型的解析成本越低，采用指针方案就越合算。解析能力增强且调用价格下降，意味着顺着地址重新调取原始文件的效率更高，需要常态化存储字节的范围会进一步收窄，主要覆盖那些视觉原生的特殊场景。真正会失去生存空间的做法，是不加筛选地将连续像素直接堆入模型上下文。</p>
+<p>如果你正在为自己的 AI
+助手搭建记忆模块，可以立刻着手做两项排查。第一项，检查现有记录在检索时是否还需要重新进行一次感知解析，比如堆积了大量屏幕截图却没有生成对应的文本索引。第二项，抽查记录中的指针，确认它们指向的原始文件是否依然存在。浏览器历史记录完好无损，背后的网页可能早已无法打开。指针存在失效的可能，这恰好是低保真文字作为兜底记录的价值所在，也是把原始物当作一等公民妥善维护的核心原因。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Recall" class="entity-link product-link">Recall</a>, 
+                
+                  <a href="/search/?q=Rewind" class="entity-link product-link">Rewind</a>, 
+                
+                  <a href="/search/?q=Ambient Context" class="entity-link product-link">Ambient Context</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">screen-memory</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">pointer-storage</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">ambient-context</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">multi-modal-model</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/knowledge-management/">knowledge-management</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

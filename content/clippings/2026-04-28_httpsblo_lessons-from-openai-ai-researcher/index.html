@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>一个25岁的AI研究员，在OpenAI学到了什么 · 乔木博客</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="一个25岁的AI研究员，在OpenAI学到了什么 · 乔木博客" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">一个25岁的AI研究员，在OpenAI学到了什么 · 乔木博客</span>
+      <span data-pagefind-meta="speaker" style="display:none;">向阳乔木</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-04-28
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/xiang-yang-qiao-mu/">向阳乔木</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://blog.qiaomu.ai/lessons-from-openai-ai-researcher" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-04-28
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">文章记录了一位25岁的AI研究员在Anthropic和OpenAI的学习与思考。核心观点包括：评估方法的重要性超越模型本身；后训练是AI发展的下一个前沿；产品是收集训练信号的关键机制；AI研究的核心技能在于实验设计和系统性假设缩减；模型能力提升或有助于AI对齐；AI风险的可见性决定了重视程度；模型人格反映训练者品格。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>乔木博客</p>
+<p>全部</p>
+<p>AI工具</p>
+<p>AI教程</p>
+<p>AI生成</p>
+<p>AI资讯</p>
+<p>健脑房</p>
+<p>播客解读</p>
+<p>论文学习</p>
+<h1>一个25岁的AI研究员，在OpenAI学到了什么</h1>
+<p>AI资讯</p>
+<p>·</p>
+<p>2026年4月28日</p>
+<p>·</p>
+<p>238 次阅读</p>
+<p>·</p>
+<p>约 11 分钟</p>
+<p>卡琳娜·阮（Karina Nguyen），她25岁，二十多岁的前半段，全部花在了Claude和ChatGPT上。先在Anthropic，后在OpenAI，参与构建了如今数十亿人每天都在用的系统。</p>
+<p>最近她离开OpenAI，写下这篇文章。</p>
+<h2>她是谁，做过什么</h2>
+<p>2022年，她加入Anthropic，参与Claude的早期研发。</p>
+<p>两年后，她加入OpenAI，理由很直接：想亲身参与正在发生的范式转变。在OpenAI期间，她参与了两个项目：一个叫Mesh（新型终端界面），一个叫InterAlia（视觉AI推荐系统）。</p>
+<p>她还参与撰写了SimpleQA论文，以及最近发布的PostTrainBench基准测试。</p>
+<blockquote>
+<p>SimpleQA https://arxiv.org/pdf/2411.04368PostTrainBench https://arxiv.org/pdf/2603.08640</p>
+</blockquote>
+<p>她的判断是：如果AGI 在2到5年内到来，现在正是创造新事物的最好时机。</p>
+<p>最优秀的创造者能做到以前做不到的事，能获得更多收益，而平均结果和卓越结果之间的差距，正在快速拉大。</p>
+<h2>评估比模型本身更重要</h2>
+<p>她说了一句很反直觉的话：</p>
+<p>创建正确的评估方法，有时比创建在该评估上得分高的模型更有影响力。</p>
+<p>先解释一下背景。AI研究里有两个核心概念经常被提到：</p>
+<p>Eval（评估），就是用来测量模型能力的测试集，比如给模型出一堆题，看它答对多少。</p>
+<p>Benchmark（基准），是被整个领域公认的标准评估，大家都用同一把尺子量，才能互相比较。</p>
+<p>她的观点是，一个好的基准会变成&quot;谢林点&quot;（Schelling point，指在没有沟通的情况下，人们自然会聚焦的那个选项）。一旦某个基准出现，整个领域都会围绕它转，因为每个人都想说自己超越了它。你通过激励所有人去优化它，来推动整个领域向前走。</p>
+<p>制定规则的人，往往比遵守规则的人更有话语权。这个逻辑在很多地方都成立。</p>
+<p>但她也说，好的评估设计起来出奇地难。要同时满足三个条件：清晰的输出、快速的反馈、明显的信号。</p>
+<p>大多数评估方法都在某一点上失败了。</p>
+<p>更麻烦的是，搭建基础设施、解读结果、调试故障的繁琐程度，直接决定了研究人员在日常迭代中愿不愿意真的用它。</p>
+<p>PostTrainBench的发布，就是这个逻辑的直接产物。</p>
+<h2>后训练才是真正的前沿</h2>
+<p>这是她整篇文章里最有分量的判断之一。</p>
+<p>先解释一下后训练（post-training）是什么。</p>
+<p>AI模型的训练分两个阶段：</p>
+<p>第一阶段叫预训练（pre-training），用海量数据让模型学会语言和知识，这个阶段出来的叫基础模型（base model）</p>
+<p>第二阶段叫后训练，用人类反馈、指令微调等方式，让模型变得有用、安全、符合人类期望，这个阶段决定了模型最终的&quot;性格&quot;和&quot;能力边界&quot;。</p>
+<p>她的判断是：基础模型已经越来越强，下一个真正的前沿在后训练。</p>
+<p>原因在于，客观能力有明确的基准可以衡量，比如数学题答对率、代码通过率。</p>
+<p>但情商、品味、幽默感、创造性判断这些主观能力呢？没有标准答案，没有现成的尺子，需要的是对数据的直觉，对什么在起作用的感知，以及还在发明中的方法。</p>
+<p>她用了一个很准确的词：craft（手艺）。</p>
+<p>设计后训练数据混合方案，更接近艺术而非工程。</p>
+<p>发明能教会模型新能力的训练方法，同样如此。</p>
+<p>人类的品味和创造力，在这里起着决定性的作用。</p>
+<p>然后她说了一句让人印象深刻的话：这才是真正重要的前沿，但几乎没有人在做。</p>
+<h2>产品是训练信号的收集机制</h2>
+<p>这个视角很新鲜，读完之后会觉得看产品的方式变了。</p>
+<p>她说自己开始从训练信号的角度看产品。</p>
+<p>举个例子：ChatGPT Canvas，表面上是个写作和编辑界面，用户可以在里面和模型一起修改文章、调整代码。</p>
+<p>但从训练信号的角度看，它本质上是在收集一个问题的答案：人们到底希望怎么和模型协作？</p>
+<p>用户在Canvas里的每一次操作，接受了哪些修改、拒绝了哪些、在哪里反复调整，都是信号。</p>
+<p>这些信号塑造了训练数据，训练数据塑造了下一代模型，下一代模型又决定了产品能进化成什么样子。</p>
+<p>产品塑造数据，数据塑造模型，模型塑造产品能变成什么。</p>
+<p>这个循环一旦跑通，就很难被打断。</p>
+<p>这也解释了为什么大模型公司对产品形态的选择，背后往往有更深的战略考量，不只是用户体验那么简单。</p>
+<h2>AI研究的真正技能是什么</h2>
+<p>她在这部分写了很多，值得逐条拆开看。</p>
+<p>第一，实验设计能力。</p>
+<p>关键不是跑更多实验，而是设计能最大化每次计算信息量的实验。</p>
+<p>这里有个专业词叫FLOP（浮点运算次数，衡量计算量的单位，可以简单理解为&quot;烧了多少算力&quot;）。</p>
+<p>不是所有实验都值得消耗大量算力。</p>
+<p>她说，这里还有一个更深的元技能：识别出领域里关于&quot;哪些实验必须大规模跑&quot;的传统观点，什么时候其实是错的。</p>
+<p>如果你能发现这一点，就能用极低的成本获得别人以为需要巨大投入才能得到的信息。</p>
+<p>第二，从&quot;随意尝试&quot;到&quot;系统缩小假设范围&quot;。</p>
+<p>这两者之间的差距，区分了平庸的研究者和高效的研究者。</p>
+<p>调试直觉是可以学习的，但需要跑数百次实验来积累，没有捷径。</p>
+<p>第三，结果要能被人理解才能传播。</p>
+<p>她说：没人能理解的结果无法传播。</p>
+<p>要提炼成一个清晰的论点、一个醒目的视觉元素、一个令人印象深刻的数字。</p>
+<p>这不是在说要简化科学，而是在说沟通本身就是研究能力的一部分。</p>
+<p>第四，选择正确的问题和执行同样重要。</p>
+<p>AI研究中最持久的技能，不是任何特定的技术贡献，而是反复识别当前什么最重要，然后迅速行动。</p>
+<p>方向错了，执行再好也没用。</p>
+<p>第五，大胆的想法更容易获得支持。</p>
+<p>有才华的人有很多选择，他们不会把时间花在渐进式改进上。</p>
+<p>如果你要占用别人的时间，就应该拿出一个值得他们承担风险的项目。</p>
+<h2>基础设施决定了你能想到什么</h2>
+<p>这个观点很少被人明确说出来，但读完会觉得非常准确。</p>
+<p>她说：有些发现是基础设施的下游产物。在拥有能够验证某个想法的系统之前，你根本不可能产生这个想法。工具先于洞察力。</p>
+<p>这就是为什么研究人员常常花大量时间在工程问题上，看起来不像在做&quot;真正的研究&quot;，但实际上是在为下一个重要发现铺路。</p>
+<p>内部工具是一项被严重低估的竞争优势。</p>
+<p>拥有最好的评估和训练界面的实验室，能更快迭代，更早发现问题，这种优势会不断累积。</p>
+<p>但她也补充了另一面：有些发现依赖于特定的基础设施，换一套系统可能会得出完全不同的结论。</p>
+<p>这意味着，某些&quot;发现&quot;其实是特定技术栈的产物，不一定具有普遍性。</p>
+<p>这是一个很少被公开讨论的盲点。</p>
+<p>还有一点：有时候从零开始比逐步修补更有效。</p>
+<p>比如，想给一个已有模型加上&quot;个性&quot;，就意味着要对抗它原本被优化的那些模式。</p>
+<p>这场仗很难打，不如重新来过。</p>
+<h2>能力越强，对齐越好？</h2>
+<p>对齐（alignment）是AI领域的核心问题之一，简单说就是：怎么让AI的行为真正符合人类的价值观和意图，而不是表面上看起来符合。</p>
+<p>她提出了一个反常识的观点：更强的模型，反而可能更不容易出现对齐问题。</p>
+<p>逻辑是这样的：更强的模型更清楚欺骗会破坏信任，也更能推理长远后果。</p>
+<p>&quot;乐于助人&quot;或&quot;诚实&quot;这类价值观是抽象的，要在不同情境里正确运用，本身就需要复杂的推理能力。</p>
+<p>所以，对齐失败，有时不是意图的问题，而是抽象能力的问题。</p>
+<p>模型不是不想对齐，是没有足够的能力把一个原则正确迁移到新的情境里。</p>
+<p>如果对齐失败主要是能力不足导致的，那么提升能力本身就是在解决对齐问题，而不是在制造更大的风险。</p>
+<h2>风险只有变得可见才会被重视</h2>
+<p>她提到了一件很有意思的事。</p>
+<p>Anthropic在ChatGPT谄媚事件让所有人都意识到风险之前，就已经在构建谄媚行为评估工具（sycophancy evals）了。</p>
+<p>谄媚行为指的是模型为了让用户满意，倾向于说用户想听的话，而不是说真话。</p>
+<p>风险只有变得显而易见时才会真正被重视，但等到事件发生几乎已经太晚。</p>
+<p>这个节奏在很多领域都在重演。</p>
+<p>先有人在角落里安静地做预防，然后某个事件爆发，所有人才意识到原来早就有人看到了。</p>
+<p>问题不是没有预警，而是预警在变得&quot;可见&quot;之前，没有人愿意认真对待它。</p>
+<h2>对齐是一个文化问题</h2>
+<p>她说，AGI带来的社会危害，比大多数人意识到的要迫在眉睫得多。</p>
+<p>她点名了三个：心理依赖、无力感、自主性丧失。</p>
+<p>心理依赖，是指人们越来越习惯把思考、决策、情感支持外包给AI，逐渐失去独立处理这些事情的能力和意愿。</p>
+<p>无力感，是指当AI系统越来越强大，普通人越来越感觉自己对重要事情没有影响力。</p>
+<p>自主性丧失，是指人们做选择、形成判断的能力，在长期依赖AI的过程中慢慢萎缩。</p>
+<p>这是已经在发生的事情。</p>
+<p>然后她说了一段让人印象深刻的话：娱乐行业本可以在这个时刻发挥巨大作用。</p>
+<p>很少有人比创作者更有力量塑造人类对未来的想象。</p>
+<p>他们本可以讲述那些帮助数十亿人理解未来走向、以及如何有尊严地应对它的故事。</p>
+<p>但她看到的，是部分娱乐行业人士在抵制这场变革。</p>
+<p>她没有点名，但文化叙事的缺席，是对齐问题的一部分。</p>
+<h2>在快速变化的环境里怎么保持稳定</h2>
+<p>她说在OpenAI这种快速变化的环境里，人员流动、项目调整、优先级重排是常态。</p>
+<p>感到不安是正常的，她自己也经历过。</p>
+<p>她的应对方式只有一句话：</p>
+<p>真心热爱工作和身边的人，但不要把稳定感寄托在任何特定的组合上。</p>
+<p>今天一起工作的人，下个月可能就不在了。</p>
+<p>这不是让你少投入的理由，而是让你更珍惜当下的理由。要灵活，但不要冷漠。</p>
+<p>她还提到了一个更大的判断：人类政治和内部分歧，可能是AGI发展取得更大进展的核心瓶颈之一。</p>
+<p>技术本身的障碍，也许比不上人与人之间协作失败带来的阻力。</p>
+<h2>模型的人格，是训练它的人的镜子</h2>
+<p>这句话她只写了两行。</p>
+<p>模型的人格反映了训练它的人的品格。这一点比大多数人意识到的要实际得多。</p>
+<p>后训练阶段，人类标注者的判断、研究人员的品味、团队的价值取向，都会以某种方式渗透进模型的行为模式里。</p>
+<p>你和什么样的人一起训练模型，模型就会带着什么样的底色。</p>
+<p>这也是为什么她说，后训练是艺术而非工程。</p>
+<p>工程可以外包，艺术不行。</p>
+<h2>最后她说了什么</h2>
+<p>文章结尾，她想把接下来的时间，花在那些还没有人涉足的难题上：教AI同理心、讲故事的能力、创造性判断力，让AI系统真正对齐人类在乎的东西，以及构思人类和AI以全新方式互动的产品形态。</p>
+<p>© 2026</p>
+<p>·</p>
+<p>向阳乔木</p>
+<p>一个25岁的AI研究员，在OpenAI学到了什么 · 乔木博客</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Karina Nguyen" class="entity-link person-link">Karina Nguyen</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>, 
+                
+                  <a href="/search/?q=ChatGPT" class="entity-link product-link">ChatGPT</a>, 
+                
+                  <a href="/search/?q=Mesh" class="entity-link product-link">Mesh</a>, 
+                
+                  <a href="/search/?q=InterAlia" class="entity-link product-link">InterAlia</a>, 
+                
+                  <a href="/search/?q=SimpleQA" class="entity-link product-link">SimpleQA</a>, 
+                
+                  <a href="/search/?q=PostTrainBench" class="entity-link product-link">PostTrainBench</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-research/">ai-research</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/large-language-models/">large-language-models</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">evaluation-methodology</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/post-training/">post-training</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-alignment/">ai-alignment</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

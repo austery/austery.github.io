@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="container" data-pagefind-ignore>
+
+<div class="home-layout">
+
+<h1>标签：deployment</h1>
+
+<ul><li>
+      
+      <a href="/content/clippings/2026-08-24_httpsyag_2x5090-27b-sweet-spot-20260824-html/">8 路并发每路仍有 141 tok/s：2×5090 跑 27B
+小模型，为什么它已经是 sweet spot</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-08-24T00:00:00.000Z">
+          8/24/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了在本地自托管 27B 小模型时，如何通过优化硬件配置（如 2×5090）和推理引擎（如 SGLang DFlash2）来达到性能甜蜜点（sweet spot）。核心论点在于，自托管的价值不在于单纯的成本节约，而在于对数据合规性、隐私控制和推理栈的完全掌控。文章通过详细的并发压测数据，论证了在特定负载下，消费级硬件可以提供充裕的解码吞吐，并对比了自建与云端租赁的经济决策变量，强调了使用率对成本效益的决定性影响。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-08-17_httpsyag_small-models-real-work-20260817-html/">每天一千万次调用的 GPT-4o mini，不聊天也不写代码</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-08-17T00:00:00.000Z">
+          8/17/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章分析了 GPT-4o mini 在 OpenRouter 平台上的调用数据，揭示了其在工程流水线中扮演的角色。该模型主要处理低吞吐量、短输出的任务，如数据分拣、结构化字段抽取等，而非复杂的多步代码生成或长文本对话。文章探讨了轻量模型在工程实践中作为特定分工的工具，其适用性取决于任务的输出结构和对长程规划的需求。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-07-24_httpsyag_ai-agent-deployment-guardrails-20260724-html/">AI Agent 不必等模型完美：美军给 AI Builder
+的部署方法</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-07-24T00:00:00.000Z">
+          7/24/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了在部署大语言模型（LLM）时，不必追求模型的绝对完美，而是通过设计任务边界、操作权限限制以及运行闭环来构建系统的弹性。核心思想是，安全和可靠性依赖于对模型行为的动态控制，包括设置多层防护屏障（如沙盒隔离）、在关键决策点引入人工干预机制，以及建立基于客观执行凭证的信任体系，从而实现小步迭代与快速回退。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-06-18_httpsyag_vercel-eve-agent-directory-20260618-html/">Vercel 开源 eve：「一个文件夹就是一个
+agent」这句话为什么不是废话</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-06-18T00:00:00.000Z">
+          6/18/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了 Vercel 开源的 &#39;eve&#39; 项目，它提出了将 Agent 视为独立软件（一个文件夹）而非单一框架或模型延伸的观点。通过对比 LangChain 的零件拼装路线和 Claude Managed Agents 的云端配置项路线，eve 强调了 agent 生产生命周期中对部署、版本管理和持久化执行等基础设施的需求，并提出了一种将运行能力与个人认知上下文（context infrastructure）相结合的三层分工模型。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/bVQ95AUqMUw/">Ready AI：一句话生成日式咖啡馆网站，并实现24小时智能客服与多语言支持</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-chao-yuan-yu/" class="speaker-inline">🎙️ AI超元域</a>
+      
+      
+      
+        <time datetime="2025-12-25T00:00:00.000Z">
+          12/25/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文测评 Ready AI 建站工具，演示如何仅用自然语言快速生成功能完善的日式咖啡馆网站，包含菜单、预约、智能客服与多语言切换，并能一键部署及集成数据库，显著提升中小企业建站效率。</small>
+      
+
+      
+      
+    </li></ul>
+
+</div>
+
+</div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

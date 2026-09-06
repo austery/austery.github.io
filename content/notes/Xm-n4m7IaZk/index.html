@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Claude Code创始人Boris的极简工作流：开箱即用与复利工程的威力</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="Claude Code创始人Boris的极简工作流：开箱即用与复利工程的威力" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">Claude Code创始人Boris的极简工作流：开箱即用与复利工程的威力</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI超元域</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-01-05
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ai-chao-yuan-yu/">AI超元域</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=Xm-n4m7IaZk" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-01-05
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">Claude Code创始人Boris Ney分享了他出人意料的极简工作流。他强调Claude Code开箱即用的强大能力，并推崇“复利工程”理念，即微小优化带来指数级效率增长。分享内容涵盖iTerm2多终端管理、cloud.md全局配置、GitHub Actions自动化、Opus 4.5计划模式、自定义斜杠命令等实用技巧，展现了高效开发的不二法门。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>前几天，<strong>Cloud Code</strong> 的创始人 <strong>Boris Ney</strong> 亲自分享了他使用 <strong>Cloud Code</strong> 的技巧和心得。今天，我们将解读 <strong>Boris</strong> 分享的这些技巧与工作流。</p>
+<p>目前，<strong>Cloud Code</strong> 的生态已非常成熟，开源社区提供了各种现成的工作流插件、配置方案。但这次的分享尤为特别，因为这是 <strong>Cloud Code</strong> 创始人本人的使用经验，这让许多人好奇，开发这款工具的人究竟是如何使用它的。</p>
+<p><strong>Boris</strong> 的分享出乎意料地简单，他并未展示一套复杂或炫技的配置，而是强调 <strong>Cloud Code</strong> 开箱即用就已非常强大，因此他不对其进行过多定制。其分享内容甚至未提及 <strong>Spec D 规格驱动开发</strong> 或 <strong>BE 等开发方案</strong>。本期视频将结合实际项目，分析 <strong>Boris</strong> 分享的这些技巧，并进行演示。最终我们会发现，这些看似朴素的技巧，实则蕴含着“<strong>复利工程</strong>”（Compound Engineering: 微小优化带来指数级效率增长）的概念，即每一个小的优化都会在未来成倍放大效率。</p>
+<h3>终端多开与高效切换</h3>
+<p><strong>Boris</strong> 分享的一个技巧是，他会在终端中开启 1 到 5 个标签页（tabs）。我也按照他的方式进行了测试，通过快捷键可以快速地多开几个标签页。</p>
+<p>可以看到，新开启的终端标签页会按顺序编号。我们可以直接使用快捷键加上序号，快速切换到对应的标签页。例如，使用 <code>Cmd + N + 3</code> 即可切换到第三个标签页。通过对开启的多个终端标签页进行编号，极大地方便了快速切换。</p>
+<p>这里提供了 <strong>iTerm2</strong> 的官方链接，用户可以根据官方文档提供的详细配置方式进行个性化设置。<strong>iTerm2</strong> 这款终端命令行工具使用起来效果非常不错，且十分便捷。</p>
+<h3>项目初始化与 cloud.md 配置</h3>
+<p>在开始演示前，我们先初始化一个 iOS 项目，然后结合 <strong>Cloud Code</strong> 的技巧来开发。我已使用 <strong>Xcode</strong> 成功创建了一个新的 iOS 项目。</p>
+<p>接着，我们打开终端，使用 <code>cd</code> 命令切换到项目目录，然后启动 <strong>Cloud Code</strong>。在开发项目之前，我们先使用 <code>cloud init</code> 命令来初始化一个 <code>cloud.md</code> 文件。</p>
+<p>成功创建 <code>cloud.md</code> 文件后，我们可以打开它进行查看。可以看到，<code>cloud.md</code> 文件包含了构建、运行命令，项目的结构，以及与架构相关的内容。接下来，我们将深入了解 <strong>Cloud Code</strong> 分享的 <code>cloud.md</code> 文件使用方式。</p>
+<h3>cloud.md：团队协作与全局配置</h3>
+<p><strong>Boris</strong> 提到，他们的团队共享一个 <code>cloud.md</code> 文件，并将其提交到 Git。整个团队每周都会对这个文件进行多次更新。每当他们发现 <strong>Cloud Code</strong> 出现错误或不当之处，就会将其添加到 <code>cloud.md</code> 文件中，以确保 <strong>Cloud Code</strong> 下次不会再犯同样的错误。在进行代码审查（Pull Request）时，他通常会在同事的 PR 上 @ <strong>Cloud Code</strong>，要求将其某些内容作为 PR 的一部分添加到 <code>cloud.md</code> 文件。这一切都是通过 GitHub Actions 实现的。</p>
+<p>刚才生成的 <code>cloud.md</code> 文件主要作用于当前项目。但用户也可以创建全局的 <code>cloud.md</code> 文件。我这里使用的是一个全局的 <code>cloud.md</code> 文件，通过 <code>ant gravity</code> 来打开。这个文件能够作用于所有项目，其中包含了上下文窗口的管理和默认的行为设置。</p>
+<p>我们可以让 <strong>ant gravity</strong> 分析一下我使用的全局 <code>cloud.md</code> 文件起到的作用。分析结果显示，它主要包含以下几个方面：</p>
+<ul>
+<li><strong>上下文窗口的管理</strong>：克服 AI 模型上下文窗口的限制，明确指示 AI 不要担心 Token 用完而提前结束任务，而是持续工作，减少向用户确认的频率，鼓励 AI 动手写代码和修改。</li>
+<li><strong>执行效率优化</strong>：提高任务执行的效率。</li>
+<li><strong>质量保证与防止幻觉</strong>：确保代码质量，防止 AI 产生幻觉。</li>
+<li><strong>设计哲学与约束</strong>：防止过度设计和代码膨胀。</li>
+<li><strong>工作环境的维护</strong>：保持代码整洁。</li>
+</ul>
+<p>通过这些配置，我使用的全局 <code>cloud.md</code> 文件能够更好地发挥 <strong>Cloud Code</strong> 的潜力。</p>
+<h3>GitHub Actions 与自定义命令</h3>
+<p>此次分享中提到了 <strong>GitHub Actions</strong>，并给出了安装命令。下面，我们需要初始化一个 GitHub 仓库。我直接使用了自定义的斜杠命令来完成 GitHub 仓库的初始化，只需提供 GitHub 仓库链接并运行即可。</p>
+<p><strong>Boris</strong> 在分享中提到，他会将一些常见的工作流制作成自定义的斜杠指令。通过将重复性工作抽象为自定义斜杠命令，我们可以避免每次都输入长提示词，只需使用斜杠命令即可完成操作。刚才，我已通过自定义斜杠命令完成了 GitHub 仓库的初始化。</p>
+<p>创建自定义命令非常简单：我们可以新开一个终端，使用 <code>cloud new</code> 命令新建一个 <code>cloud.md</code> 文件，输入自定义内容并保存。然后重启 <strong>Cloud Code</strong>，即可通过斜杠命令调用刚才创建的自定义指令。</p>
+<p>仓库初始化完成后，我们继续看 <strong>Boris</strong> 的分享。他提到，他们团队使用 <strong>Cloud Code GitHub Actions</strong> 来管理项目。在执行相关命令前，需要先将项目 push 到 GitHub。为了方便操作，我也创建了自定义的斜杠命令，如 <code>commit push pull_request</code>。执行这些命令即可将项目成功 push 到 GitHub 仓库。</p>
+<p>接下来，我们运行命令来安装 <strong>Cloud Code GitHub Actions</strong>。这里会弹出设置界面，按照指引一步步操作即可完成设置。安装成功。</p>
+<h3>Opus 4.5 计划模式：自动化开发</h3>
+<p>接下来，我们继续查看 <strong>Boris</strong> 分享的更重要内容。他提到，他始终使用 <strong>Opus 4.5</strong> 模型，并采用了“计划模式”（Plan Mode），即连续按两次 <code>Shift + Tab</code>。</p>
+<p>我们回到 <strong>Cloud Code</strong>，连续按两次 <code>Shift + Tab</code> 即可开启计划模式。然后，我们可以输入提示词来开发内容进行测试。我将让它开发一个原生的 iOS 背单词应用，并准备了一个简单的提示词。</p>
+<p>在 <strong>Cloud Code</strong> 的计划模式下，直接粘贴提示词并运行。<strong>Cloud Code</strong> 将根据输入的提示词生成开发计划。这里我们选择了 <strong>Opus 4.5</strong> 模型，完全遵循 <strong>Boris</strong> 的技巧。</p>
+<p>稍等片刻，<strong>Cloud Code</strong> 生成了开发计划。现在，我们可以让它执行这个计划。我选择第一项，让 <strong>Cloud Code</strong> 根据生成的开发计划全自动执行开发。它会创建开发任务并按计划执行。</p>
+<p>开发完成后，我们可以使用我设置的自定义斜杠命令创建一个新分支，然后直接运行。这样，项目上就会创建一个新的分支。我们还可以使用自定义的 <code>commit</code> 命令进行提交。</p>
+<p>之后，我们回到仓库查看创建的 PR（<strong>拉取请求</strong> - Pull Request: 代码合并请求）。我们还可以调出 <strong>Cloud Code</strong> 来审核代码。<strong>Cloud Code</strong> 正在工作，并生成了 PR 的评审。</p>
+<h3>Cloud Code 网页版与后台任务</h3>
+<p><strong>Boris</strong> 还提到了 <strong>Cloud Code</strong> 的网页版。只需打开链接，即可进入 <strong>Cloud Code</strong> 网页版。在这里，我们可以点击下拉菜单，选择刚才开发的那个项目。</p>
+<p>接下来，我们可以输入一个任务。我输入的提示词是：“重构这个项目的代码，以优化项目的性能，并确保它符合行业的最佳实践。”然后直接运行。这样，即使关闭 <strong>Cloud Code</strong> 网页版，这些任务也会在后台运行，无需我们监督。</p>
+<p>这是 <strong>Boris</strong> 分享的在网页版 <strong>Cloud Code</strong> 中运行多个开发任务的方式，还可以从手机上查看运行状态或启动任务。</p>
+<h3>智能助手、权限管理与长任务处理</h3>
+<p>他还提到了 <strong>Cloud Code</strong> 的 <strong>Sub-agent</strong>（<strong>子代理</strong> - Sub-agent: 自动化工作流组件）功能。在之前的视频中，我们曾详细演示过。官方文档提供了详细的配置方式和几个案例，例如用于代码审查的 <strong>Sub-agent</strong>。<strong>Boris</strong> 认为 <strong>Sub-agent</strong> 类似于斜杠命令，能够自动化处理大多数 PR 相关的整个工作流程。</p>
+<p>继续解析分享内容，他提到了 <strong>Cloud Code</strong> 的代码格式化，例如使用 <strong>Post to use</strong>（这里可能指 <code>prettier</code> 或类似工具）来格式化 <strong>Cloud Code</strong> 生成的代码。<strong>Cloud Code</strong> 的格式化功能用途非常广泛，不限于给出的例子。</p>
+<p>在另一条分享中，他提到不要让 <strong>Cloud Code</strong> 获取所有权限，而是可以使用 <code>permission</code> 命令来设置 <strong>Cloud Code</strong> 允许执行哪些命令。</p>
+<p>我们可以通过斜杠命令加 <code>permission</code> 来查看和设置权限，可以看到允许执行的命令、需要询问的命令以及拒绝执行的命令。</p>
+<p>关于运行时间非常长的任务，<strong>Boris</strong> 提到了使用 <code>top</code> 命令，以及上期视频演示的方法，这些对于处理长时间运行的任务效果都非常不错。</p>
+<h3>关键洞察：反馈机制与效率提升</h3>
+<p><strong>Boris</strong> 给出的总结是，想要充分发挥 <strong>Cloud Code</strong> 的效果，最重要的一点是让 <strong>Cloud Code</strong> 能够有办法验证它工作的成果。如果提供了这样的反馈机制，最终结果的质量将提升 2 到 3 倍。</p>
+<p>他还提到，他使用了 <strong>Cloud Code</strong> 的 <strong>Chrome</strong> 扩展（<code>cloud.chrome</code>），这个扩展能够自动调用浏览器测试用户的界面，并不断迭代，直到代码运行正常且用户体验良好为止。这个 <strong>cloud.chrome</strong> 扩展插件，我在之前的视频中也演示过。在 <strong>Cloud Code</strong> 中输入 <code>mcp</code>，就可以看到 <strong>cloud.chrome</strong> 这个 <strong>MCP</strong>（可能是指 <strong>Microservice Communication Protocol</strong> 或类似的内部组件），它能全自动调用当前使用的 Chrome 浏览器。</p>
+<p>通过 <strong>Cloud Code</strong> 创始人 <strong>Boris</strong> 分享的使用经验，我最大的感受是，他分享的方法和技巧并没有特别“眼前一亮”的地方。对于 <strong>Cloud Code</strong> 的资深用户来说，这些可能都是基础操作。但这恰恰证明了 <strong>Cloud Code</strong> 强大的可定制性，用户可以根据自己的需求进行深度定制。而且 <strong>Cloud Code</strong> 开箱即用，其默认设置足以应对许多开发任务。</p>
+<p>总的来说，<strong>Boris</strong> 的分享非常有价值，尤其是对于刚接触 <strong>Cloud Code</strong> 的新手用户，确实非常有帮助。</p>
+<p>本期视频就到这里，欢迎大家点赞、关注和转发，谢谢观看。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Cloud Code" class="entity-link company-link">Cloud Code</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Opus 4.5" class="entity-link product-link">Opus 4.5</a>, 
+                
+                  <a href="/search/?q=Cloud Code" class="entity-link product-link">Cloud Code</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/prompt-engineering/">prompt-engineering</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/developer-workflow/">developer-workflow</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-coding/">ai-coding</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">productivity-hacks</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">devops</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

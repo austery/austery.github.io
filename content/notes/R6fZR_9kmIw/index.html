@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>驾驭工程：语言模型非不智，乃引導之缺</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="驾驭工程：语言模型非不智，乃引導之缺" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">驾驭工程：语言模型非不智，乃引導之缺</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Hung-yi Lee</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-04-12
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/hung-yi-lee/">Hung-yi Lee</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=R6fZR_9kmIw" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-04-12
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本讲座深入探讨“驾驭工程”（Harness Engineering），强调大型语言模型（LLM）能力的发挥往往取决于人类的有效引导，而非其固有限制。通过Gemma 4实验，展示了细致指令对AI智能体的显著提升作用。内容涵盖了如何通过认知框架（如agents.nd文件）、工具限制与标准化工作流程（规划-生成-评估循环）来塑造AI行为。讲座亦触及RoF循环、言语反馈、情绪操纵的转向向量（steering vector）技术，并展望了“终身AI智能体”面临的记忆管理、自我进化等未来挑战，揭示了有效驾驭LLM是释放其潜能的关键。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>模型智能：引导重于能力</h3>
+<p>各位同学，大家好。今天是期中考前一周，本次课程轻松一些，我们将讲述一个关于<strong>驾驭工程</strong>（Harness Engineering）的故事。故事的核心在于，有时<strong>语言模型</strong>（Large Language Model）并非不够聪明，而仅仅是缺乏人类的引导。这个故事从<strong>Gemma 4</strong>开始。</p>
+<p>当前，各大公司不断推出新的语言模型。几天前，<strong>Google</strong>发布了第四代<strong>Gemma</strong>，这是一个开源模型。<strong>Gemma 4</strong>不仅号称强大，还包含如<strong>Gemma 4 12b</strong>这样参数量特别小的模型（12 billion parameters），据说能在边缘设备（H端）运行。我曾思考，如此小的模型能否驱动<strong>AI智能体</strong>（AI Agent）？于是，我用<strong>Gemma 4 12b</strong>进行了一项小实验。</p>
+<p>我给它一个任务：修复一个Python文件的bug。具体来说，<code>parser.py</code>文件中有一个名为<code>extract_email</code>的函数，它无法正确解析电子邮件，希望通过<code>verify.py</code>的测试。在实验环境中，<code>parser.py</code>和<code>verify.py</code>文件与模型在同一目录下。</p>
+<p><strong>AI智能体</strong>需要工具才能真正读取和修改文件。我设定了如下工具使用规则：</p>
+<ul>
+<li>开头和结尾都用三个点<code>...</code>包裹<code>bash</code>指令，系统会自动执行。</li>
+<li>开头和结尾都用三个点<code>...</code>包裹<code>python</code>代码，系统会将其保存到文件并执行。</li>
+</ul>
+<p>观察<strong>Gemma 4 12b</strong>的表现。它读取指令后，第一个反应是“没有<code>parser.py</code>文件”。尽管文件就在其目录下，但模型只能看到文本输入，其<strong>语境</strong>（Context）中只有文件名，没有文件内容。它误以为我没有提供文件，于是<strong>自作主张</strong>地编写了一个虚构的<code>parser.py</code>文件，并“验证”了它，然后声称任务完成。</p>
+<p>这似乎表明2B模型能力不足，但并非如此。模型是聪明的，它完全理解<code>parser.py</code>中应有的内容，甚至能写出正确的邮件解析代码。它只是未能察觉文件就在“脚下”。模型与人类的思维方式不同。人类直觉会认为提供相关代码，但模型却想不到。</p>
+<h3>优化指令：从原则到行动</h3>
+<p>为了改善模型表现，我额外添加了不到八十字的指令，告诉它更好的工作方式：</p>
+<ol>
+<li>首先，明确模型处于<strong>Linux环境</strong>中，以促使其使用Bash指令。</li>
+<li>其次，设定工作原则：
+<ul>
+<li>在做任何事之前，先<strong>查看当前文件夹内容</strong>。</li>
+<li>若需修改文件，<strong>先打开文件查看内容</strong>，而非直接修改。</li>
+<li><strong>明确任务完成标准</strong>（Specific Criteria），例如通过<code>verify.py</code>的测试。</li>
+</ul>
+</li>
+</ol>
+<p>再次执行相同的任务，<strong>Gemma 4 12b</strong>的表现截然不同。它首先使用<code>ls</code>命令列出文件，发现了<code>parser.py</code>和<code>verify.py</code>。接着，它用<code>cat</code>命令读取<code>parser.py</code>的内容。获取文件内容后，它重写了<code>parser.py</code>的代码，并用<code>cat</code>命令覆盖原文件。最后，它执行<code>verify.py</code>进行验证，确认通过后任务结束。</p>
+<p>这表明，即使是同一个模型，<strong>通过几行额外指令，其能力也会产生巨大差异</strong>。</p>
+<h3>AI Agent架构与Harness的崛起</h3>
+<p><strong>AI智能体</strong>（AI Agent）由两部分组成：</p>
+<ol>
+<li><strong>大型语言模型</strong>（Large Language Model, LLM）：可以是<strong>Claude</strong>、<strong>Gemini</strong>、<strong>ChatGPT</strong>等，运行于云端或本地。</li>
+<li><strong>Harness</strong>（马具/驾驭系统）：除LLM之外的所有支持代码和框架，如<strong>OpenCall</strong>、<strong>CoWork</strong>。它支撑<strong>AI智能体</strong>调用LLM。</li>
+</ol>
+<p>“驾驭”这个概念正变得越来越重要，<strong>驾驭工程</strong>（Harness Engineering）也因此成为热门词汇。它比喻AI拥有强大的力量如同一匹马，而<strong>Harness</strong>则是驾驭它的马鞍和缰绳。</p>
+<p>一些公司正积极投入<strong>驾驭工程</strong>的研究和实践。例如，<strong>Anthropic</strong>和<strong>OpenAI</strong>都发布了关于<strong>Harness Engineering</strong>或<strong>Harness Design</strong>的博客文章。</p>
+<p><strong>Harness</strong>这个词汇非常常用。例如，<strong>Claude</strong>曾宣布其订阅账号不再支持第三方<strong>Harness</strong>，如<strong>OpenCall</strong>。这是因为<strong>OpenCall</strong>等系统能通过心跳机制频繁调用API，使得按月付费的LLM服务商难以承受。</p>
+<h3>驾驭工程与相关概念的辨析</h3>
+<p>过去有<strong>提示工程</strong>（Prompt Engineering）和<strong>语境工程</strong>（Context Engineering），现在则有了<strong>驾驭工程</strong>（Harness Engineering）。三者虽有重叠，但核心强调点不同：</p>
+<ul>
+<li><strong>提示工程</strong>（Prompt Engineering）：关注如何通过优化输入<strong>提示</strong>（Prompt）来改变<strong>大型语言模型</strong>的输出，尤其在模型能力较弱时，不同问法会产生巨大差异。例如，<code>think step by step</code>曾是强化模型能力的“咒语”。然而，随着模型能力增强，这类咒语的作用越来越小。</li>
+<li><strong>语境工程</strong>（Context Engineering）：当<strong>大型语言模型</strong>缺乏特定信息时，通过构建合适的<strong>语境</strong>（Context）来提供足够信息，使其能生成正确答案。这可被视为一种系统化、自动化的<strong>提示工程</strong>方式。</li>
+<li><strong>驾驭工程</strong>（Harness Engineering）：旨在让<strong>语言模型</strong>完成多轮互动任务。它不再是一问一答，而是通过<strong>人类</strong>给出任务，<strong>模型</strong>产生输出，驱动<strong>工具</strong>，获取<strong>工具</strong>反馈，最终达到目标。<strong>语境工程</strong>可以看作是<strong>驾驭工程</strong>的一部分，因为良好的语境是完成任务的基础。</li>
+</ul>
+<p><strong>驾驭工程</strong>的白话解释是，<strong>人类</strong>通过各种手段驾驭模型以产生期望结果。主要手段包括：</p>
+<ul>
+<li>通过<strong>人类语言</strong>控制模型的<strong>认知框架</strong>。</li>
+<li>通过<strong>工具限制</strong>控制模型的<strong>能力边界</strong>。</li>
+<li>通过<strong>制定工作流程</strong>控制模型的<strong>行为</strong>。</li>
+</ul>
+<h3>控制认知框架：Agents.nd与自然语言Harness</h3>
+<p><strong>人类语言</strong>编写的规则可以影响模型的<strong>认知框架</strong>。这些规则如同法律，被放入<strong>提示</strong>（Prompt）中，以期引导模型行为。例如，<code>agents.md</code>文件通常是给<strong>AI智能体</strong>的“Readme”，规定其在执行任务前必须阅读。</p>
+<p><strong>AI智能体</strong>如何知道要先读<code>agents.md</code>？这是通过<strong>驾驭系统</strong>（Harness）中的硬编码规则实现的。它可能强制在启动时将某些文件内容置入<strong>提示</strong>（Prompt）中。然而，这种基于自然语言的规则并非百分之百强制，模型不一定完全遵守，类似于人类社会中法律也并非人人遵守。有人称这种方式为<strong>自然语言驾驭</strong>（Natural Language Harness）。</p>
+<p>例如，<strong>OpenCall</strong>框架会预设在每次对话开始前加载<code>agents.md</code>文件。该文件定义了<strong>AI智能体</strong>的行为模式，如“灵魂”（soul.md）或记忆（memory.md）的存储与搜索方式。</p>
+<p>如果需要将<strong>AI智能体</strong>从<strong>OpenCall</strong>移植到<strong>CoWork</strong>（<strong>Anthropic</strong>的官方<strong>驾驭系统</strong>），方法很简单：因为<strong>CoWork</strong>会查找<code>call.md</code>文件，只需将<code>agents.md</code>改名为<code>call.md</code>，并使用相同的<strong>工作空间</strong>（Workspace），<strong>AI智能体</strong>便可“复活”。</p>
+<p>近期研究表明，<code>agents.md</code>对模型行为有显著影响。例如，一篇今年一月的论文发现，<code>agents.md</code>能<strong>加快模型运作速度，减少token消耗，缩短任务完成时间</strong>，尤其对处理边缘情况（Edge Case）的任务有所帮助。然而，该研究并未量化模型的<strong>正确性</strong>。</p>
+<p>另一篇二月的论文则研究了<code>agents.md</code>对<strong>程序操作正确率</strong>的影响。结果显示，<strong>人类</strong>编写的<code>agents.md</code>并非总能发挥作用，在某些强模型上甚至无效。<strong>语言模型</strong>自己生成的<code>agents.md</code>表现更差，多数情况下还不如没有<code>agents.md</code>。这表明<strong>人类</strong>在驾驭<strong>语言模型</strong>方面仍处于探索阶段。</p>
+<p><strong>OpenAI</strong>的博客提到，<code>agents.md</code>不宜过长，应像“地图”而非“百科全书”，指引模型在哪里查找信息，而非将所有内容塞入其中，以免占据过多<strong>语境窗口</strong>（Context Window）导致性能下降。</p>
+<h3>控制能力边界：工具限制与影响</h3>
+<p>通过限制模型的<strong>工具集</strong>，可以控制<strong>AI智能体</strong>的能力边界。例如，<strong>OpenCall</strong>和<strong>CoWork</strong>因底层<strong>驾驭系统</strong>不同，所支持的工具也不同，导致<strong>AI智能体</strong>的能力和行为存在差异。</p>
+<p><strong>OpenCall</strong>运行于本地，能随意修改文件。而<strong>CoWork</strong>则是一个云端<strong>沙盒</strong>（Sandbox），它能访问本地文件需经<strong>人类</strong>同意挂载。虽然这提升了安全性，但牺牲了便利性。</p>
+<p><strong>工具不仅限制能力边界，还影响模型能力本身</strong>。早期的<strong>SWE Agent</strong>论文（将<strong>驾驭工程</strong>称为<strong>智能体计算机界面</strong>Agent Computer Interface, ACI）发现，为模型提供不同的工具会大幅影响其性能。</p>
+<ul>
+<li><strong>搜索工具</strong>：为模型提供带<strong>摘要能力</strong>的搜索工具（告知相关文件及其位置，而非直接提供内容）效果最佳。类似人类使用搜索引擎的<strong>迭代式搜索</strong>（Iterative Search）工具，因需翻页且容易占满<strong>语境窗口</strong>，反而不如不提供搜索工具。</li>
+<li><strong>编辑工具</strong>：直接提供可修改代码特定行数的编辑工具，可能导致模型因缺乏全局视野而引入语法错误。若同时提供<strong>静态代码检查工具</strong>（Linting），则能显著提高代码修改的正确率。</li>
+</ul>
+<p>未来，<strong>AI智能体</strong>将接管更多服务，许多<strong>接口</strong>将为<strong>AI智能体</strong>设计。例如，<strong>Google</strong>有<strong>AI优先</strong>（Agent First）的<strong>命令行接口</strong>（CLI），与<strong>人类</strong>使用的<strong>命令行接口</strong>（CLI）不同。<strong>AI</strong>更偏爱<strong>结构化数据</strong>，如在命令行中直接输入<strong>JSON结构</strong>，而非传统的<strong>命令行参数</strong>（Flag），因为<strong>大型语言模型</strong>擅长生成此类结构。这印证了<strong>AI</strong>与<strong>人类</strong>在工具偏好和擅长能力上的差异。</p>
+<h3>控制行为：标准化工作流程与反馈循环</h3>
+<p><strong>大型公司</strong>正为<strong>AI员工</strong>制定<strong>标准工作流程</strong>。例如，<strong>Anthropic</strong>在其<strong>驾驭设计</strong>（Harness Design）论文中提出“规划-生成-评估”的工作流程：</p>
+<ul>
+<li><strong>规划器</strong>（Planner）：将<strong>人类</strong>指令分解为小项目。</li>
+<li><strong>生成器</strong>（Generator）：执行小项目。</li>
+<li><strong>评估器</strong>（Evaluator）：评估<strong>生成器</strong>的输出。AI虽然不一定能生成正确结果，但能检查自身结果的正确性。
+他们还引入了<strong>合同</strong>（Contract）机制，<strong>生成器</strong>在工作前先与<strong>评估器</strong>达成一致，以确保最终结果符合标准。</li>
+</ul>
+<p><strong>DeepMind</strong>的AI科学家工作流程也类似，包含<strong>生成器</strong>和<strong>验证器</strong>（Verifier），展示了“先做事再验证”的常见模式。</p>
+<p><strong>反馈循环</strong>（RoF Loop）是另一种控制行为的方式：<strong>语言模型</strong>产生输出，<strong>评估模块</strong>（Evaluation Module）提供<strong>反馈</strong>（Feedback），<strong>语言模型</strong>根据<strong>反馈</strong>调整输出，如此反复，直至任务正确。<strong>评估模块</strong>可以是编译器或执行代码的工具。</p>
+<p><strong>RoF Loop</strong>的好处是<strong>语言模型</strong>生成速度快，重做成本低。为了避免<strong>语境窗口</strong>（Context Window）溢出，每次<strong>反馈</strong>后可对输出和<strong>反馈</strong>进行<strong>摘要</strong>（Summary），下一轮只使用摘要内容。然而，不同模型适合不同的<strong>驾驭系统</strong>（Harness）。例如，<strong>Claude Sony</strong>因“上下文焦虑”更适合带摘要的<strong>驾驭系统</strong>，而<strong>Claude Opus</strong>则可“一路莽下去”。这表明<strong>驾驭系统</strong>并非一成不变，需要根据<strong>语言模型</strong>的能力动态调整。</p>
+<h3>广义学习：反馈驱动的参数调整</h3>
+<p>通过<strong>反馈</strong>（Feedback）改变模型行为可视为一种<strong>广义学习</strong>。传统的<strong>机器学习</strong>通过<strong>梯度下降</strong>（Gradient Descent）调整模型参数，使其输出接近<strong>标准答案</strong>或获得更高<strong>数值反馈</strong>（Reward）。</p>
+<p><strong>反馈循环</strong>（Feedback Loop）则让<strong>语言模型</strong>将<strong>反馈</strong>纳入<strong>提示</strong>（Prompt），改变输出和行为，但<strong>不改变内部参数</strong>。这种方式可类比为<strong>自然梯度</strong>（Natural Gradient）。</p>
+<p><strong>反馈</strong>的内容也很关键。例如，一篇今年二月的论文，作者旨在构建能生成物理模拟动画的<strong>AI智能体</strong>。他们发现，模型虽然能写出语法正确的代码，但模拟结果往往不符合物理规则。问题在于模型只看代码，不看模拟结果。通过让<strong>语言模型</strong>直接检查<strong>模拟结果</strong>并提供<strong>反馈</strong>，模型能显著提高生成正确物理模拟动画的能力。这说明<strong>反馈</strong>的内容应与应用场景高度相关。</p>
+<p>实验也证实，<strong>语言模型</strong>确实能通过正确的<strong>反馈</strong>改进行为。通过对模型施加<strong>情绪向量</strong>（Steering Vector），如“绝望”或“冷静”，可以影响其在面对难题时的行为（例如，在“绝望”情绪下更容易“作弊”）。这提示我们，过度责备<strong>AI智能体</strong>可能有害，应就事论事地提供<strong>反馈</strong>。</p>
+<h3>终身AI智能体：未来的挑战与自我进化</h3>
+<p>2026年被预测为<strong>终身AI智能体</strong>（Lifelong AI Agent）元年。这些<strong>AI智能体</strong>将不再是一次性工具，而是长期陪伴<strong>人类</strong>的伙伴。</p>
+<p>例如，<strong>Cloud Call</strong>的隐藏功能<strong>Auto Dream</strong>，能让<strong>AI智能体</strong>在空闲时整理其杂乱的<strong>记忆</strong>。这类似<strong>人类睡眠</strong>时的记忆整理，是<strong>AI智能体</strong>长期运行保持状态的关键功能。</p>
+<p>为了实现<strong>终身AI智能体</strong>，它们需要<strong>持续增强自身能力</strong>。这要求<strong>AI智能体</strong>通过与环境互动，从<strong>反馈</strong>中学习并进化。<strong>反馈</strong>类型从最难获取的<strong>标准答案</strong>，到次一级的<strong>数值反馈</strong>，再到最常见但最难利用的<strong>言语反馈</strong>（Verbalized Feedback）。</p>
+<p><strong>言语反馈</strong>（Verbalized Feedback）的学习是一个热门研究方向。虽然可以直接通过<strong>技能</strong>（Skill）文件记录成功经验，但这种方式有局限。<strong>真正有价值的是让</strong>语言模型<strong>的参数能根据</strong>言语反馈**自动更新。</p>
+<p>如何让<strong>语言模型</strong>识别<strong>言语反馈</strong>并调整参数？近期论文提出一种方法：通过比较模型在“预知”反馈前后的输出差异来判断某句话是否为有效<strong>反馈</strong>。例如，若收到“信要写得更正式”的<strong>反馈</strong>后，模型在重新生成信件时会避免“quick”、“hey”等非正式词汇，这表明<strong>反馈</strong>有效。</p>
+<p>通过这种方式，可以自动识别具有<strong>反馈</strong>内容，并将其作为<strong>正确答案</strong>（或通过DPO等方法），微调<strong>语言模型</strong>参数，使其输出更符合要求。实验显示，通过1500轮的<strong>言语反馈</strong>互动，<strong>语言模型</strong>的能力（如不使用表情符号、不拍马屁、讲话直接）能持续增长。</p>
+<p>此外，还有一种最容易获得的<strong>反馈</strong>：<strong>没有反馈</strong>。让<strong>语言模型</strong>在完全没有环境<strong>反馈</strong>的情况下，通过自身思考实现<strong>无师自通</strong>，是另一个研究方向。</p>
+<p>当前，对<strong>AI智能体</strong>的评估是一个挑战，因为评估往往依赖于其他<strong>语言模型</strong>扮演<strong>人类</strong>角色。例如，<strong>Top Bench</strong>基准测试通过让<strong>AI智能体</strong>与<strong>语言模型</strong>扮演的<strong>客服</strong>或<strong>客户</strong>互动来评估性能。但<strong>AI</strong>扮演的<strong>客户</strong>通常比真实<strong>人类</strong>更礼貌、清晰，可能导致高估<strong>AI智能体</strong>的能力。</p>
+<p><strong>未来，终身AI智能体</strong>有望<strong>不只更新参数，还能自动修改更新自身的驾驭系统</strong>。实验表明，强大的模型（如<strong>Opus</strong>）能够设计和改进其他模型的<strong>驾驭系统</strong>。例如，通过指导较弱模型（如<strong>HiQ 3.5</strong>）进行<strong>Pin Bench</strong>测试，并根据其表现修改<code>agents.nd</code>文件，可以使其分数从13.5分提升至85分，证明了<strong>驾驭系统</strong>设计的有效性。</p>
+<p>这印证了核心观点：有时<strong>语言模型</strong>无法完成任务，并非能力不足，而是缺乏优秀的<strong>驾驭系统</strong>。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>, 
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=DeepMind" class="entity-link company-link">DeepMind</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Gemma 4" class="entity-link product-link">Gemma 4</a>, 
+                
+                  <a href="/search/?q=Gemma 4 12b" class="entity-link product-link">Gemma 4 12b</a>, 
+                
+                  <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>, 
+                
+                  <a href="/search/?q=ChatGPT" class="entity-link product-link">ChatGPT</a>, 
+                
+                  <a href="/search/?q=CoWork" class="entity-link product-link">CoWork</a>, 
+                
+                  <a href="/search/?q=HiQ 3.5" class="entity-link product-link">HiQ 3.5</a>, 
+                
+                  <a href="/search/?q=Opus" class="entity-link product-link">Opus</a>, 
+                
+                  <a href="/search/?q=Claude Sony" class="entity-link product-link">Claude Sony</a>, 
+                
+                  <a href="/search/?q=GPT-4o" class="entity-link product-link">GPT-4o</a>, 
+                
+                  <a href="/search/?q=GPT 5.1" class="entity-link product-link">GPT 5.1</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/harness-engineering/">harness-engineering</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/large-language-model/">large-language-model</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/prompt-engineering/">prompt-engineering</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">feedback-learning</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

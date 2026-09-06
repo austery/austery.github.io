@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="container" data-pagefind-ignore>
+
+<div class="home-layout">
+
+<h1>标签：agent-skills</h1>
+
+<ul><li>
+      
+      <a href="/content/clippings/2026-07-20_httpsyag_agent-skills-harness-portability-20260720-html/">Agent Skills 统一了文件格式，Harness 仍然各自为政</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-07-20T00:00:00.000Z">
+          7/20/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/pai/" class="area-badge-inline">
+              🌐 PAI
+            </a>
+          
+          
+            <a href="/categories/ai-tooling/" class="category-badge-inline">
+              🏷️ ai-tooling
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了Agent Skills在不同客户端（如Claude Code, Gemini CLI等）中的实现差异和兼容性问题。核心观点是，尽管Skill的发现层趋同，但私有字段、加载机制、资源解析和执行权限仍由各Harness决定，导致跨客户端的完全统一存在困难。建议开发者应维护一个克制的通用核心Skill，并在目标Harness中进行薄适配，将特定逻辑留给应用层实现。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/0vphxNt4wyk/">不要在没有评估的情况下交付 Agent 技能：Google DeepMind 的最佳实践</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-07-14T00:00:00.000Z">
+          7/14/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 来自 Google DeepMind 的 Philipp Schmid 详细探讨了为什么在开发智能体（Agent）时不应在缺少评估（Evals）的情况下交付技能（Skills）。他分析了技能的分类（能力型与偏好型），提出了编写高质量技能的实用指南，展示了 DeepMind 内部的评估流程与测试用例设计，并强调了通过消融测试及时退役冗余技能以降低 Token 成本的重要性。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/UNzCG3lw6O0/">构建卓越的 Agent 技能：逃离“技能地狱”的终极指南</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-06-29T00:00:00.000Z">
+          6/29/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文基于 AI 工程师世界博览会的演讲内容，系统梳理了如何编写高效、可预测且低能耗的 AI Agent 技能（Skills）。通过深入分析触发机制、内部结构设计、引导词技术以及剪枝协议，为开发者提供了一套逃离“技能地狱”的完整实操框架。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/GmAQKINjv1E/">技能进化论：如何通过 AI 技能赋能 Supabase 智能体</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-05-04T00:00:00.000Z">
+          5/4/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Supabase AI 工具工程师 Pedro Rodrigues 分享了如何通过“技能（Skills）”机制提升智能体的任务执行能力。核心概念包括渐进式披露、Skill.md 的结构化设计，以及如何通过评估（Evaluations）框架实现从手动测试到自动化闭环的转变，解决非确定性输出带来的挑战。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/WE_Gnowy3uw/">Markdown 即代码：Cursor 如何用 200 行 Skill 替换 1.2 万行复杂功能</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-04-30T00:00:00.000Z">
+          4/30/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Cursor 工程师 David Gomes 分享了将 Git Worktree 功能从重量级硬代码重构为轻量级 Markdown Skill 的过程。通过利用 Agent Skill 和 Sub-agents 两个原语，Cursor 成功删除了 1.5 万行代码，同时提升了多仓支持与模型对比（Best-of-N）的灵活性。尽管面临模型遵循指令的“幻觉”挑战，团队正通过评估系统（Evals）和强化学习（RL）持续优化这一 AI 驱动的新型软件开发范式。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/KqxNN_-J5k4/">解构 Skill 狂欢：提示词的工程封装与职场替代幻象</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/best-partners-tv/" class="speaker-inline">🎙️ Best Partners TV</a>
+      
+      
+      
+        <time datetime="2026-04-16T00:00:00.000Z">
+          4/16/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深度解析了 GitHub 爆火项目“同事.skill”背后的技术本质。作者指出，Skill 并非能替代人类核心竞争力的黑科技，而是 Anthropic 推出的提示词工程化封装标准。通过剖析其渐进式披露机制、职场乱象及法律边界，文章强调了人类默会知识的不可替代性，呼吁打工人以理性心态面对 AI 工具。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/0HIlhRl38QA/">AI Agent Skills: Prompt Engineering 的工程化飞跃与未来</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/peter-pang/" class="speaker-inline">🎙️ Peter Pang</a>
+      
+      
+      
+        <time datetime="2026-01-22T00:00:00.000Z">
+          1/22/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/software-development/" class="category-badge-inline">
+              🏷️ software-development
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 演讲者锐评AI Agent Skills，将其类比为包管理器，强调其本地运行、可控性和对提示词工程的革新，并预测了未来发展。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/Qydk2wlh4YI/">Agent Skills 灵魂技术：利用结构化决策树实现 AI 助手自主编程</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-chao-yuan-yu/" class="speaker-inline">🎙️ AI超元域</a>
+      
+      
+      
+        <time datetime="2026-01-17T00:00:00.000Z">
+          1/17/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深度解析了 Agent Skills 生态中的核心技巧——决策树逻辑。通过在 Markdown 配置文件中嵌入结构化的条件分支、优先级排序和异常处理，开发者可以让 Claude Code 和 Antigravity 等 AI 智能体具备真正的自主决策能力，减少 50%-80% 的手动干预。文章结合实际的代码审查案例，演示了如何根据任务复杂度自动路由工具，并实现 token 节省与效率提升。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/KD2D59_XGd8/">2026年AI编程新纪元：Antigravity 引入 Agent Skills，革新AI辅助开发与UI设计</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-chao-yuan-yu/" class="speaker-inline">🎙️ AI超元域</a>
+      
+      
+      
+        <time datetime="2026-01-15T00:00:00.000Z">
+          1/15/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本视频介绍了Google Antigravity平台对Agent Skills的支持，标志着2026年成为AI编程的‘Skills元年’。Agent Skills通过打包工作流、领域知识和最佳实践，使AI编程助手能够稳定产出代码，尤其为非专业开发者带来福音。视频演示了如何安装、管理和调用现有的Agent Skills（如用于创建咖啡店落地页并自动生成图像），以及如何手动创建简单的代码审查Skill。重点展示了强大的UI/UX Pro Max Skill，其能基于React等技术栈生成现代、美观的拟物化界面，极大地提升了UI设计效率与质量。</small>
+      
+
+      
+      
+    </li></ul>
+
+</div>
+
+</div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

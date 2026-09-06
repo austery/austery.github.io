@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>软件变便宜了，但软件更难卖了</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="软件变便宜了，但软件更难卖了" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">软件变便宜了，但软件更难卖了</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-05-16
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://yage.ai/share/software-cheaper-harder-sell-20260516.html" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-05-16
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">AI大幅降低了软件开发与迁移成本，导致企业软件需求从外部采购转向内部自建，造成SaaS市场需求萎缩与碎片化。新旧玩家均陷入僵局：既有玩家因担心安全而不敢引入AI，新进入者虽效率高但缺乏企业信任。文章指出，当写代码的成本趋于零，瓶颈便迁移至信任建立与基础设施协调，企业需在信任与效率间寻找新的平衡点。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>2025 年底，一家叫 Dinamicka 的公司做了一件事：一个工程师，配合 Claude
+Max，花了三周，自己写了一个时间追踪工具，替代了他们每月付 500 美元订阅的
+Tempo。效果比原版好：贴合自己的 Jira
+工作流、自动填工时、团队不用再学一套新界面。</p>
+<p>这个故事看起来平淡：AI 帮人写了个小工具而已。但你把自己放在 Tempo
+创始人的位置想一想。你的客户发现，不需要你的产品了，他自己三周就能做一个更好的。</p>
+<h2>谁都写得动代码了</h2>
+<p>Andrej Karpathy 花了一个周末用 AI 从头建了一个多模型辩论系统。Patrick
+Bishop，Loomery
+公司的增长负责人，完全不会编程，花了三个晚上建成并部署了一个完整应用。</p>
+<p>以前做不到的人，现在做得到了。AppDirect 在 2025
+年报告了一个正在发生的转向：企业内部的”自建”正在取代”采购”。内部团队开发应用的速度是传统
+IT 的五倍。Gartner 预测，到 2028 年 90% 的企业软件工程师会使用 AI
+代码助手，而 2024 年初这个比例还不到 14%。</p>
+<p>M Accelerator 分析了 50 个 B2B SaaS
+公司的数据：两年前竞品之间的功能重叠度大约 40%，现在超过
+85%。一位创始人花了两年和 120 万美元开发的推荐引擎，被竞品用 400
+行代码在一个周末复制了出来。Anthropic 让 16 个 AI agent 合写了一个完整的
+C 编译器：10 万行 Rust 代码，通过了 GCC 99%
+的压力测试。总成本两万美元，不到两周。</p>
+<h2>为什么更难卖了</h2>
+<p>如果只是供给侧变拥挤了，那只是一个竞争强度的问题。麻烦的是，需求侧同时在以三种不同的方式收缩。</p>
+<p>第一种是需求替代。Dinamicka
+的故事不在孤例里发生。r/buildinpublic
+社区在形成一个新的共识：“构建现在很容易，获取注意力不是。”以前一个团队需要项目管理工具，会去买
+Jira。现在他们用 AI
+自己搭一个，刚好贴合自己的流程。这部分需求没有消失，它从外部市场转移到了内部。对
+SaaS
+公司来说这比需求下降更致命，因为不可逆。用户一旦发现自己能做更好的，就不会回来买。</p>
+<p>第二种是需求收缩。AI
+让一个人能覆盖更多工作量。Workday 裁了 8.5% 的人就是因为这个。一个人用
+AI 能干三个人的活，公司不再需要买三个席位。IDC 预测到 2028
+年纯按席位定价的模式会消亡。需求的”人头数”在减少。</p>
+<p>第三种是需求碎片化。以前一个团队共享一套工具。现在每个人都在用
+AI
+做自己的微工具。需求的颗粒度在变细，但单个需求的价值在变小。以前卖一个
+Jira 给整个团队，现在每个人用 AI
+生成自己需要的板子，但没有人会为这个付钱。</p>
+<p>供给侧同时涌入更多人。功能重叠度两年内从 40% 涨到 85%。AI
+又降低了迁移成本：从一个产品换到另一个不再需要工程师团队花三个月。即使拿到了用户，留住也比以前难。Indie
+Hackers 论坛的数据：75%
+的新工具在发布后第一个月内流量暴跌。有人产品还没上线就亏了 4.7
+万美元，不是花在开发上，是营销和分发打了水漂。</p>
+<h2>两边都被卡住了</h2>
+<p>需求在从多个方向收缩，供给在涌入。这是竞争格局。但还有一个更深层的变化在同时发生：信任在重新分配，而它分配的方向，把两种公司各卡在了一个相反的位置上。</p>
+<p>先看信任在往哪边流。</p>
+<p>Stack Overflow 2025
+年全球开发者调查的数据指向一个明确的方向：人们不信任 AI
+写出来的代码。46% 的开发者主动不信任 AI
+生成代码的准确性，声称”高度信任”的只有
+3%。经验越深的开发者越不信：资深开发者里高度信任的比例降到了 2.6%。</p>
+<p>在一个代码越来越不可信的世界里，“经过验证”这四个字的价值在上升。Red
+Hat 的代码早就免费了，IBM 在 2019 年花 340
+亿美元收购的，是它二十年来积累的企业支持记录和”经过 Red Hat
+认证”的含金量。HSBC 在 2026 年 2 月维持了对
+Oracle、Microsoft、ServiceNow、Salesforce、Palantir
+的”买入”评级，背后的逻辑就是这个：企业级软件需要数年时间证明 99.999%
+的可用性，LLM
+用公开数据训练出来的模型不了解这些公司花几十年优化出来的私有架构。信任的较量里，时间站在既有玩家那一边。</p>
+<p>但这恰好是他们动不了的原因。</p>
+<p>一家已经靠”我们跑了二十年没出过事”建立信任的公司，引入 AI
+本身就是风险。AI
+可能生成有漏洞的代码、给出无法审计的建议、破坏合规边界。McKinsey
+的数据：78% 的企业已经部署了 AI，但只有 19% 的经营者报告说 AI 带来了超过
+5% 的收入增长。Anthropic 的经济指数：77% 的 AI
+企业部署集中在自动化任务上，不是协作和判断。大多数公司只敢把 AI
+放在不触及核心信任的地方：排个日程、生成个周报摘要，不碰支付、不碰审计、不碰病人数据。</p>
+<p>于是两边各被卡住了一边。</p>
+<p>既有玩家有信任，但不敢把 AI
+放进核心流程。他们的信任资产太贵了，不值得为提效 10% 去冒险。
+这让他们在效率上被甩开，又因为信任太值钱而不敢追。</p>
+<p>新进入者能把 AI 用满，从产品设计到交付全链路 AI
+驱动，效率极高。但效率再高也没用，用户不信任一个刚做出来的东西。
+他们的速度优势被信任赤字抵消了。</p>
+<p>这是一个僵局。两边都不舒服，但两边都动不了。而僵局本身就是一个信号：谁先跨过去，谁就拿到了下一阶段的优势。对既有玩家来说，跨过去意味着找到一个不伤害信任的
+AI 引入方式：可审计的决策链、AI
+增强而非替代人的判断、先在非核心流程上跑出足够的安全记录。对新进入者来说，跨过去意味着找到一个不依赖时间的信任建立方式：完全透明的架构、激励对齐（搞砸了我比你亏得多）、第三方认证和合规背书。</p>
+<h2>历史上每次都这样</h2>
+<p>这个僵局不是第一次出现。每次当一个环节的成本骤降，瓶颈就会迁移到相邻的环节，而新旧玩家各被卡在一端。</p>
+<p>1990
+年代的开源运动，代码免费了。既有软件公司有信任但代码收费，新开源项目有代码但没有信任。Red
+Hat 跨过去了：不卖代码，卖”经过 Red Hat 认证”的可靠性。IBM 花 340
+亿美元买的就是这个。</p>
+<p>2006 年 AWS 上线，基础设施按需付费了。Heroku 把部署做得极其优雅，但
+Salesforce
+收购它之后十年没做大更新。底层充分竞争之后，抽象层的价值就萎缩了。跨过去的公司最终都做了同一件事：变成基础设施。</p>
+<p>2008 年 App Store 上线，发布成本降到每年 99 美元。十年后，前 20
+大应用发行商（占比不到 0.005%）拿走了全部收入的
+60%。跨过去的应用有一个共同点：自带网络效应，所以不需要被发现。WhatsApp、Instagram、Uber。</p>
+<p>2026 年 3 月，Morningstar 重新审计了 132 家公司的护城河评级，把 22
+家”宽护城河”和 18 家”窄护城河”公司降了级，只升级了两家：Cloudflare 和
+CrowdStrike。降级的多是靠”用户懒得走”维持优势的：数据迁移太麻烦、流程切换成本高。但
+AI
+正在让这些摩擦消失。升级的两家靠的是”用户走了会亏”：网络越大能力越强，离开意味着失去增值中的网络。</p>
+<p>同一个模式在重复：每一次瓶颈迁移，都会把新旧玩家各卡在一边。跨过去的人，每次找到的都是那个新瓶颈。</p>
+<p>PlatformEngineering.com 在 2025
+年的一句话总结了这个规律：“当每个小团队都能自己建东西的时候，协调基础设施的价值没有降低，反而在升高。碎片化越严重，协调越值钱。”</p>
+<h2>换个方向用力</h2>
+<p>Dinamicka 替代 Tempo 已经发生了。对下一个
+Tempo，不该问”怎么让功能更难被替代”，那个方向没有答案。该问的是你自己被卡在哪一边：你是那个有信任但不敢动的人，还是那个能跑满但没人信的人？然后朝对方那一侧挪一步。</p>
+<p>这些问题比写代码难。但在一个写代码越来越不值钱的时代，那个更难的环节，恰好是瓶颈搬去的地方。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Andrej Karpathy" class="entity-link person-link">Andrej Karpathy</a>, 
+                
+                  <a href="/search/?q=Patrick Bishop" class="entity-link person-link">Patrick Bishop</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Dinamicka" class="entity-link company-link">Dinamicka</a>, 
+                
+                  <a href="/search/?q=Tempo" class="entity-link company-link">Tempo</a>, 
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, 
+                
+                  <a href="/search/?q=Gartner" class="entity-link company-link">Gartner</a>, 
+                
+                  <a href="/search/?q=Red Hat" class="entity-link company-link">Red Hat</a>, 
+                
+                  <a href="/search/?q=IBM" class="entity-link company-link">IBM</a>, 
+                
+                  <a href="/search/?q=HSBC" class="entity-link company-link">HSBC</a>, 
+                
+                  <a href="/search/?q=Oracle" class="entity-link company-link">Oracle</a>, 
+                
+                  <a href="/search/?q=Microsoft" class="entity-link company-link">Microsoft</a>, 
+                
+                  <a href="/search/?q=ServiceNow" class="entity-link company-link">ServiceNow</a>, 
+                
+                  <a href="/search/?q=Salesforce" class="entity-link company-link">Salesforce</a>, 
+                
+                  <a href="/search/?q=Palantir" class="entity-link company-link">Palantir</a>, 
+                
+                  <a href="/search/?q=McKinsey" class="entity-link company-link">McKinsey</a>, 
+                
+                  <a href="/search/?q=IDC" class="entity-link company-link">IDC</a>, 
+                
+                  <a href="/search/?q=Morningstar" class="entity-link company-link">Morningstar</a>, 
+                
+                  <a href="/search/?q=Cloudflare" class="entity-link company-link">Cloudflare</a>, 
+                
+                  <a href="/search/?q=CrowdStrike" class="entity-link company-link">CrowdStrike</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Claude Max" class="entity-link product-link">Claude Max</a>, 
+                
+                  <a href="/search/?q=Jira" class="entity-link product-link">Jira</a>, 
+                
+                  <a href="/search/?q=Rust" class="entity-link product-link">Rust</a>, 
+                
+                  <a href="/search/?q=GCC" class="entity-link product-link">GCC</a>, 
+                
+                  <a href="/search/?q=Workday" class="entity-link product-link">Workday</a>, 
+                
+                  <a href="/search/?q=AWS" class="entity-link product-link">AWS</a>, 
+                
+                  <a href="/search/?q=Heroku" class="entity-link product-link">Heroku</a>, 
+                
+                  <a href="/search/?q=App Store" class="entity-link product-link">App Store</a>, 
+                
+                  <a href="/search/?q=WhatsApp" class="entity-link product-link">WhatsApp</a>, 
+                
+                  <a href="/search/?q=Instagram" class="entity-link product-link">Instagram</a>, 
+                
+                  <a href="/search/?q=Uber" class="entity-link product-link">Uber</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-application/">ai-application</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">saas-market</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/software-development/">software-development</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/tech-trends/">tech-trends</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">trust-economy</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

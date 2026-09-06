@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent驱动的知识管理：需求导向上下文方法论</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="Agent驱动的知识管理：需求导向上下文方法论" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">Agent驱动的知识管理：需求导向上下文方法论</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-05-05
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=_QAVExf_1uw" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-05-05
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本次演讲介绍了一种名为“需求导向上下文”的企业知识管理方法论，旨在解决AI Agent在企业环境中面临的知识库（尤其是机构知识）碎片化、过时和未文档化的问题。该方法通过利用Agent在执行任务时的“失败”来主动发现知识空白，从而逐步建立和完善结构化的上下文知识块。演讲者还提倡将GitHub作为协作管理知识库的平台，并将其与测试驱动开发（TDD）理念进行类比，强调自动化在扩展此方法中的关键作用，最终目标是让Agent从知识消费者转变为知识管理者。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>欢迎与开场</h3>
+<p><strong>发言人</strong>: 谢谢大家。我们开始吧。首先，非常感谢大家来参加这个工作坊，特别是那些没有座位的朋友们。我向你们保证，我会尽力让这次活动充满乐趣，特别是对你们这些正在学习的人来说。非常感谢。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: uh thank you. Maybe we can get started. Uh first of all, thank you so much for uh coming for the workshop especially ones who didn't get the seat. Uh I I promise you I'll do my best to make it entertaining especially for you who are studying. Uh thank you so much.</p>
+</details>
+<p><strong>观众</strong>: 是的。呃，这确实有道理。所以现在我知道了为什么票会售罄，对吧？呃，到底是哪个工作坊的票卖完了？</p>
+<details>
+<summary>Original English</summary> **观众**: Yeah. Uh actually it it makes sense. So now I know like why the tickets got sold out, right? Uh which workshop actually sold out the tickets. </details>
+<p><strong>发言人</strong>: 那么，呃，我们从我的自我介绍开始。我是<strong>Raj</strong>。我在<strong>IKEA</strong>担任<strong>高级软件工程师</strong>。我负责一个叫做“配送服务”的领域。我们基本上有超过一百名工程师和六个pedex团队。它就像公司内部的一个迷你公司。我对架构、神经科学、语言学以及现在的<strong>AI</strong>都非常感兴趣。所以，如果有人有很酷的项目——因为现在大家都在做很酷的项目——请在会后找我。现在，对观众进行一个快速的脉搏检查，呃，有多少人是第一次来伦敦？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: So uh let's start with uh my introduction. So I'm Raj. Uh I work as a staff software engineer uh at IKEA. uh I work for a domain called deliverance services. Uh basically we are like almost more than 100 engineers and six pedex teams altogether. It's like a mini company within the company itself. Uh I'm very interested with architecture, neuroscience and linguistics and now AI. So if anyone has some cool projects because everybody is building cool projects these days, please find me after this meeting. So quick pulse check uh with the uh audience. Uh who is visiting London for the first time?</p>
+</details>
+<p><strong>发言人</strong>: 好的，很棒。欢迎来到伦敦。呃，这里有多少人有工程背景，也包括白盒编码和原型设计？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Okay, cool. Welcome to London. Uh who is here uh from the engineering background also with white coding and prototyping?</p>
+</details>
+<p><strong>观众</strong>: 不，所有...</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: No, all of okay.</p>
+</details>
+<p><strong>发言人</strong>: 好的，呃，那么谁在积极使用<strong>Copilot</strong>这样的<strong>Agent</strong>？好的，那对我来说会有点难了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: So uh who actively uses agents like co-pilot? Okay, this is going to be tough for me then.</p>
+</details>
+<p><strong>发言人</strong>: 那么扩展呢？好的，看来大家都是专家。好吧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: So extensions. Okay. So everybody's pro. Okay. Fine.</p>
+</details>
+<p><strong>观众</strong>: 没有我想要的那么多。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: Not so much as I want.</p>
+</details>
+<p><strong>发言人</strong>: 好的。现在压力很大。呃，你们要坐在这个炎热的房间里一个多小时。所以首先，我将呃，简单介绍一下我今天要展示的内容。呃，主要关于<strong>Agent</strong>和<strong>上下文管理</strong>。我把它分成了三个部分。第一部分是你们都知道的“现状”，所以我会把它讲得简洁明了，大概五分钟。呃，然后我会谈论“问题”。这部分我会在幻灯片上多花些时间，因为我认为呃，没有人真正认真地关注这个问题。呃，我想把它提出来。然后是较少的幻灯片，更多地转向某种<strong>实践</strong>环节，呃，了解实际的<strong>需求导向上下文</strong>是如何运作的。一切顺利。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Okay. So much tension now. Uh so you're going to sit here in this hot room for more than an hour. So first I will uh give a bit of introduction of what I'm going to present today. Uh it's basically on agent and the context management. Uh I I divided into three parts. One is the situation which all of you already know. So I'll keep it tight and short like five minutes. Uh then I'll talk about the problem. This is where I'll spend a bit more time on the slides because I think like uh nobody is actually seriously looking into the problem. Uh and I want to bring it up then less slides and more into some kind of a hands-on uh how the uh actual demand driven context actually works. All good.</p>
+</details>
+<h3>AI Agents的记忆困境：电影《记忆碎片》的启示</h3>
+<p><strong>发言人</strong>: 好的。那么，我们从第一个开始。有多少人看过这部电影？《<strong>记忆碎片</strong>》。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Okay. So, let's start with the first one. How many have seen this movie? Memento.</p>
+</details>
+<p><strong>观众</strong>: 好的。好的。好的。酷。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: Okay. Okay. Okay. Cool.</p>
+</details>
+<p><strong>发言人</strong>: 那么，我来概括一下这部电影。这个人非常熟练，呃，非常有才华。他唯一的问题是，呃，他的记忆保持时间不超过15分钟。所以每隔15分钟，他必须拿出笔记本，呃，看他身上的纹身，找出“15分钟前我在做什么”，然后他一遍又一遍地重复这个过程。如果你把它和<strong>AI</strong>、<strong>AI Agent</strong>等事物联系起来，它实际上正好符合这部电影的描述，也符合现在的<strong>Agent</strong>。如果你去看这部电影，你不需要看<strong>YouTube</strong>或博客就能理解<strong>Agent</strong>和<strong>MCP</strong>。这部电影实际上 literalmente 告诉你所有的一切。呃，就像这个人有记忆问题一样，呃，我们几年前引入的<strong>AI</strong>，呃，在推理、计算、呃，代码生成方面非常出色，它的基准表现就像是，呃，超出了预期。唯一的问题是<strong>机构知识</strong>，对吧？你拥有的<strong>领域知识</strong>，那是我们必须稍微有点问题的地方。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: So, I I'll give the gist of the movie. So, this guy is very skilled uh very talented. The only problem he has is uh he can't hold memory more than 15 minutes. So every 15 minutes he has to take his notebook uh watch his tattoos that he put it on his one and figure out okay what I was doing before the 15 minutes and he does it again and again. If you relate to the AI and AA agents things and all it actually fits exactly how the movie is and how the agents are right now. If you go and watch this movie you don't need to watch YouTube or blogs to understand agents and MCP. This movie actually tells you about everything literally. uh and as this guy has a memory problem uh in the same way the AI uh that we got introduced couple of years ago uh is very good with reasoning computation uh code generation it's it's benchmark as like uh above the par the only problem is the institutional knowledge right the domain knowledge that you have that's that's the only thing we have to be uh a bit problematic</p>
+</details>
+<h3>AI到Agent的演进</h3>
+<p><strong>发言人</strong>: 所以从<strong>AI</strong>到<strong>Agent</strong>，如果你看它的呃，演变，呃，它爆炸式增长。所以它首先从<strong>提示工程</strong>开始，呃，然后是<strong>RAGs</strong>，呃，现在是<strong>MCPs</strong>，然后是<strong>多Agent</strong>，现在是<strong>深度Agent</strong>。呃，我最近发现，呃，使用<strong>Replit</strong>实际上可以在10分钟内构建一个<strong>全栈应用程序</strong>。这意味着当你泡方便面的时候，你已经有一个价值百万美元的应用程序在你的笔记本电脑上运行了。所以我们，我们已经达到了这个地步，它非常出色。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: so from AI to agent if you look at the uh evolution uh it exploded So it started from prompt engineering first of all uh then there was rags uh now MCPS then multi- aent now it is deep agents uh I recently found out like uh using replet actually you can build a full stack app in 10 minutes that means the by the time you make the instant noodles you already have a million dollar app already working on your laptop so we we got it to this point like it's extraordinarily good</p>
+</details>
+<h3>企业AI的交付困境</h3>
+<p><strong>发言人</strong>: 现在那是<strong>AI</strong>和<strong>Agent</strong>。那么我们来谈谈<strong>企业AI</strong>。好的。呃，我不知道你们中有多少人有这个问题，但我看到大多数企业的问题是：好的，<strong>AI</strong>非常智能。它在做呃，<strong>代码生成</strong>、<strong>全栈应用</strong>、<strong>代码审查（PRs）</strong>、<strong>事件管理</strong>所有这些事情。呃，对吧。所以如果<strong>AI</strong>做了这么多，为什么<strong>Jira</strong>工单或Apex没有在仪表盘上移动呢？对吧？为什么我没有看到实际的<strong>交付</strong>？所以大家都在说“看，三分钟内一切都准备好了。”是的。好吧。那为什么我的Jira工单没有移动呢？因为那定义了<strong>业务交付</strong>，那定义了<strong>投资回报</strong>，对吧？呃，正如你所看到的，呃，今年<strong>McKenzie</strong>的报告显示，88%的公司使用<strong>AI</strong>，但它们只看到了，呃，6%的<strong>价值创造</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: now That's AI and agents. So let's talk about enterprise AI. Okay. Uh I don't know how how many of you have this question but most of the enterprises I see the question is okay. A is pretty smart. It's doing uh code generation fullstack apps reviewing your PRs uh doing incident management all those things. Uh right. So if I is doing that much why is the Jira tickets or Apex are not moving on the dashboard right? Why do I don't see the delivery actually? So everybody is speaking about look at like 3 minutes everything is ready. Yeah. Okay fine. Why are my J pics are not moving? Because that defines the business delivery and that defines the return of investment, right? Uh and as you see like uh it's it's from the Mckenzie this year like 80 8% of all companies use AI but they only see like uh 6% of value creation.</p>
+</details>
+<h3>机构知识的挑战</h3>
+<p><strong>发言人</strong>: 好的。所以我认为这就是我们面临的问题。呃，我有四个不同的<strong>Jira工单</strong>，是示例工单。你可以看到我标记为绿色的部分，基本上是<strong>LLM</strong>已经训练过的内容，比如<strong>API标准</strong>，或者呃，它们已经知道的事情，那是<strong>通用知识</strong>，对吧？那没问题。那些工单里的任务，<strong>LLM</strong>可以完成。现在有第二部分，橙色的部分，我们需要实际教导它们。所以你要告诉它：“你知道这个，但要这样做。”所以所有这些橙色的东西都会适合你的<strong>Agent扩展</strong>，比如<strong>技能</strong>，或者呃...但是红色的部分，那就是<strong>机构知识</strong>，它存在于公司内部和员工之间。所以除非它接手一个任务，呃，如果它接手一个工单，它必须完成所有部分。它在处理绿色和橙色部分方面做得非常好，但它在处理红色部分，即<strong>机构知识</strong>方面遇到了困难。而且我相信，呃，现在<strong>编码Agent</strong>变得越来越好。我觉得如果<strong>AGI</strong>出现，第一个<strong>AGI</strong>肯定会是一个<strong>编码Agent</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Okay. So I think this is the problem uh that we have. Uh I have four Jira tickets different ones uh sample ones and you can see the green ones that I have uh marked is basically which LLM is or already trained on like API standards or like uh things very they already know it's a general knowledge right that's fine those tasks from the ticket it can pick up and it can do it now there are second part orange ones which we have to teach them actually so you have you know this but do this in this way so all this kind of an orange ular things will fit into you know your agent extension like skills or like uh but the red ones that's what the institutional knowledge is which sits within the company and within the people. So unless if it picks a task uh if it picks a ticket it has to fulfill all of them. It is so good with uh green ones and orange ones but it struggles with the red one with the institutional knowledge and what I believe is uh right now the coding agents are getting so so better. I feel like if there is an AGI coming the first AGI will be a coding agent for sure. uh</p>
+</details>
+<p><strong>发言人</strong>: 呃，所以为了解决向<strong>Agent</strong>提供<strong>机构知识</strong>的问题，我们已经有了一个行业解决方案。所以这基本上就是你的<strong>AI投资回报</strong>管道看起来的样子，对吧？所以你有<strong>LLM模型质量</strong>，呃，你有<strong>Agent</strong>，你有<strong>Agent框架</strong>，你的<strong>机构知识</strong>则存在于<strong>Confluence</strong>、<strong>Jira</strong>、<strong>SharePoint</strong>、<strong>GitHub</strong>所有这些地方。基本上，<strong>检索层</strong>就是行业告诉我们能解决这个问题的方案。所以你构建那个<strong>检索层</strong>，然后它会获取所有这些东西并提供给<strong>Agent</strong>，<strong>Agent</strong>应该能够完成，对吧？所以基本上，呃，通过<strong>RAG</strong>或<strong>知识图谱</strong>，实际上可以达到40%的事实准确性，呃，但前提是有一个<strong>已文档化的知识库</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: so to fix the uh giving the institutional knowledge to uh the agents so we have an industry solution already so this is basically your return of investment on AI pipeline will look like right so you have LLM model quality uh you have agents and you have agent harness and your institutional knowledge sits under conflence jira sharepoint gith GitHub all those things and basically retrieval layer is what industry is telling us will fix that issue. So you build that retrieval layer and then it will fetch all those things and give it to an agent and agent should be able to do it right. So basically uh so 40% uh actu factual accuracy can be achieved through rag or like knowledge graphs actually uh but with a documented uh knowledge base.</p>
+</details>
+<p><strong>发言人</strong>: 现在基本上，如果你构建一个<strong>检索层</strong>，它就必须工作。现在我问你一个问题：你们有多少人构建过<strong>检索层</strong>，比如<strong>RAGs</strong>和<strong>MCPs</strong>？好的，太棒了。所有人都构建过。好的，现在问题是，你构建了多少个？你构建了多少个<strong>MCP服务器</strong>？你们有多少人构建过超过20个<strong>MCP服务器</strong>？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Now basically if you build a retrieval layer it has to work right now let me ask you a question. How many have you built uh retrieval layer things like rags and mcps? Okay, cool. All of them. Okay, now the question is how many did you build? How many MCPS did you build? How many have you built more than 20 MCP servers?</p>
+</details>
+<p><strong>发言人</strong>: 好的。好的。看来没有人能打破我的记录。呃，所以，我看到的是，呃，在大多数企业组织中，人们正在构建10到15个，或者20个<strong>MCP服务器</strong>或<strong>RAGs</strong>，呃，在他们的<strong>机构知识</strong>之上，以供<strong>Agent</strong>使用。对吧？所以假设是，如果我能构建所有这些<strong>MCP服务器</strong>并提供给那个<strong>Agent</strong>，我就不需要做任何工作，它会自己完成。但问题是，当你插入这些<strong>MCP服务器</strong>时，基本上所有这些数据输出大多是<strong>不确定性的</strong>，<strong>不可靠的</strong>，而且是<strong>未经测试的</strong>，对吧？所以尤其在工程领域，没有人真正做<strong>评估</strong>。实际上，这更像是一个数据机器学习概念，但我们不做评估。所以对我来说，如果你，抱歉，呃，呃，如果你插入一个<strong>MCP</strong>或<strong>RAG</strong>等，我们只看输出是否产生，而不是它是否真的有价值，是否真的解决了问题。呃，这是我看到的主要问题。我不是在指责别人，因为我就是那个人。我当时想，好吧，让我构建所有<strong>MCP服务器</strong>，插入我的<strong>机构知识</strong>。我要证明<strong>Agent</strong>可以半自主地持续处理<strong>Jira工单</strong>并完成它们。对吧？但每次我构建这些<strong>MCP服务器</strong>时，10%、20%、30%的时间是准确的，但其余的时间我都在为它们做<strong>数据录入</strong>工作。所以实际上我是在填补空白，提出问题。所以基本上，我做的工作比减少的工作更多。呃，所以我认为这是主要问题，我，我实际上处于这个第四阶段，我真的开始手写<strong>领域上下文</strong>。所以我想，好吧，让我写下所有东西来证明这一点，但我真的对做这件事感到筋疲力尽了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Okay. Okay. So, nobody beats my record then. Uh so what I see is uh mostly in the enterprise organizations and all people are building like 10 to 15 or like 20 MCP servers or like rags uh knowledge graphs on top of their institutional knowledge and to the agent right so the assumption is if we if I can build all those MCP servers and give that agent I don't need to work anything like it will do but the thing is when you plugging this MCP servers basically all this data coming out is mostly undeterministic it's unreliable and it's untested right so especially in engineering nobody does evals actually it's it's more like a data machine learning concept but we don't do eval so for me if you sorry uh uh if you plug uh an MCP or like a rag and all we see whether the output is coming or not rather than is it really valuable actually is it really solving the problem or not. Uh that's the main problem that I see. I'm not saying pointing other people because I was that person. I was like okay let me build all MCP servers plug in my institutional knowledge. I'm going to prove that point that agents can semi-autonomously can continue and fill those zero tickets and finish it. Right? But every time when I build those MCP servers 10% 20% 30% of time it was accurate but rest of the time I was doing the data enter job for them actually. So I was filling the gaps asking the questions. So basically I'm doing more work than actually doing less work. Uh so I think this is the main problem and I I actually was in this fourth stage where I literally started to write the domain context with handwritten actually. So okay let me write everything and prove the point but I got really exhausted of doing it.</p>
+</details>
+<p><strong>发言人</strong>: 好的，所以我不知道有多少人能与这个<strong>饼图</strong>产生共鸣，呃，但大多数企业的<strong>机构知识</strong>大致是这样的。所以如果你看，20%是<strong>过时的</strong>，20%是<strong>不可靠的</strong>。呃，20%到10%总是<strong>在不同地方重复</strong>。而主要问题是，40%的知识始终是<strong>部落知识</strong>，这意味着人们知道事情如何运作，所以它<strong>从未被文档化</strong>。所以，在这种企业环境中，你构建了大约100个<strong>MCP服务器</strong>并插入那个<strong>单体</strong>中，无论你构建多少，它都不会工作，因为你的整个<strong>机构知识</strong>基本上是一个<strong>单体</strong>。呃，我认为，呃，因为你们都来自工程背景，所以你们已经了解<strong>单体遗留系统</strong>向<strong>微服务</strong>的转变，对吧？所以同样地，除非我们将那个<strong>单体知识库</strong>分解成某种<strong>上下文块</strong>，这些<strong>上下文块</strong>对<strong>Agent</strong>有用，只有这样，我们才能真正让它对<strong>Agent</strong>有用，并真正让它们半自主地完成任务。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Okay so how I don't know how many can you relate uh with this pie chart uh but most of the enterprise uh the institutional knowledge is kind of something like this. So 20% if you see it's outdated, 20% it's unreliable. Uh 20% 10% is always duplicated with different places. And the major problem is 40% of the knowledge is always uh tribal knowledge which means people know how things work. So it's it's never documented actually. So in this situation of an enterprise and you build like 100 MCP servers and plug into that monolith, it doesn't matter how many you build, it won't work because basically your whole institutional knowledge is a is a monolith. Uh I think like because you're all from the engineering background so you already know uh the transformation of monolith legacy system to microservices, right? So in the same way unless we break down that monolith knowledge base into some kind of of a context blocks which are useful for agents then only we can actually make it useful for them uh for the agents and actually make them semi-autonomously can actually do the tasks.</p>
+</details>
+<h3>突破知识单体：需求导向上下文</h3>
+<p><strong>发言人</strong>: 那么，呃，我们将在这次工作坊中主要讨论那个<strong>单体</strong>，如何打破它，呃，打破它的方法是什么，以及打破之后它如何有用。这是我们需要做的工作，因为呃，呃，<strong>LLM提供商</strong>将专注于<strong>LLM模型质量</strong>，<strong>Agent</strong>将专注于<strong>框架</strong>，而且有一个价值90亿美元的巨大<strong>检索市场</strong>正在专注于<strong>检索</strong>，但没有人会来你的公司修复你的<strong>知识库</strong>。你必须自己修复它，对吧？那么，我们该如何做呢？呃，好的。所以，<strong>需求导向上下文</strong>，呃，这就是我试图提出的解决方案，对吧？所以，基本上，如果我要抽象地概括它是什么，就像我们有呃，<strong>单体服务</strong>，我们有将其分解成<strong>微服务</strong>的过程。我们有<strong>瀑布模型</strong>，我们将其转变为<strong>敏捷</strong>。同样地，当你有一个<strong>机构知识的单体</strong>时，你如何使用一种方法将其转换为<strong>上下文块</strong>。所以这是一种我们可以做到这一点的方法。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: So that said uh we are going to talk in this workshop mostly on that monolith how to break it uh what is the approach to break it and how it is useful uh when once we break it and this is a job we need to do because uh uh the LLM providers will focus on the uh LLM model quality the agents will focus on the harness things and there is a big uh uh retrieval market of 9 billion they're focusing on retrieval but nobody is going to come to your company and fix your knowledge base. You have to fix it yourself, right? So, how can we do it? Uh, okay. So, the demand-driven context uh is what the as a solution I was trying to propose, right? So, basically if I have to give an abstract of it what it is like we have my uh monolith uh services and we have this process of breaking them into microservices. We have waterfall model which we transformed into agile. In the same way when you have a monolith of institutional knowledge how do you transform into a context blocks using an approach. So this is an approach of how we can do it.</p>
+</details>
+<p><strong>发言人</strong>: 呃，在开始之前，呃，这只是一个想法。所以，呃，我们已经用一些数据集进行了尝试，并试图证明这种方法是有效的。而且，呃，在三月份，我们已经在<strong>RXV</strong>上发表了一篇<strong>预印本</strong>。所以，如果有人对阅读学术论文感兴趣，呃，你可以通过“<strong>需求导向上下文</strong>”找到它，或者我也可以在工作坊结束后给你链接。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Uh before starting uh just not an idea. So uh we already tried with some data sets and try to prove this approach works and uh in the March we have published a preprint uh uh in RXV. So if anyone interested in reading academic papers uh you can find it with the demanddriven context or I can I can also give you a link after the uh workshop.</p>
+</details>
+<h3>需求导向上下文的工作原理：拉动式策略</h3>
+<p><strong>发言人</strong>: 好的。那么它实际是如何工作的呢？呃，当我们向<strong>Agent</strong>提供<strong>机构知识</strong>时，我们基本上是在尝试做一种<strong>推送策略</strong>，对吧？所以我们构建所有东西，然后推给它。所以，在这种方法中，它更像是一种<strong>拉动式策略</strong>。这意味着，例如，假设一个新员工加入了你的公司，对吧？你如何<strong>入职</strong>一个人？你会让他们入职一两天，给他们一些初始的<strong>岗前培训</strong>，然后告诉他们：“好的，这些是<strong>Confluence</strong>链接，这些是<strong>GitHub</strong>，这是一些<strong>文档</strong>你需要遵循的，等等。”然后你只是给那个人分配一个任务。所以你不会说：“好的，去完成所有这些知识的学习，然后回来，我再给你工作。”对吧？所以你只会分配工作项，当你分配工作项时，那个人会开始提问，填补空白。如果那个人非常喜欢文档化，他也会为你<strong>完善文档</strong>。呃，他会逐渐掌握<strong>机构知识</strong>，对吧？同样地，我们不会将所有知识推给<strong>Agent</strong>，而是开始给<strong>Agent</strong>分配问题，就像工作项一样，让它们实际从我们这里<strong>拉取信息</strong>。一旦，呃，拉取了信息，也要求它们以更好的方式，而不是以<strong>单体结构</strong>来<strong>文档化</strong>。所以，如果你看到，这就是四个层面。所以你有一个<strong>单体</strong>，呃，一个框架，它实际上会拉取并创建更好的<strong>上下文块</strong>。如果你了解，你可以把它更多地与<strong>遗留单体</strong>到<strong>微服务</strong>直接联系起来。所以这就是它的工作方式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Okay. So how does it work actually uh when we are giving institutional knowledge to agents basically what we are trying to do is we're trying to do a push strategy right so we build everything and we push it to uh to it. So in in this approach it's more pull approach which means for example let's say a new joiny has joined your company right how do you onboard a person so you onboard them for a one two days you give some initial orientation and then you tell them like okay these are the confluence links these are the github this is the some some kind of a documentation you have to follow things and all then you just assign a task to that person so but you're not going to tell okay go and get graduated on on this knowledge and come back then I will give you work right so you'll just assign the work item and when you assign the work item the person will start asking questions fill the gaps if the person is very much into documentation he will also fill the documentation for you uh he gradually uh get his knowledge of of the institutional knowledge right in the same way we don't push all the knowledge to the agent rather than we start giving problems to agents like work items and let them actually pull the information from us and once uh pull the information also ask them to document it uh in in a in a better way rather than in a monolithic structure. So if you so that's the four layers. So you have a monolith uh a framework and it actually pulls and actually creates a good better context uh blocks you can actually relate it to more into a legacy monolith to microservices directly if you have to have an knowledge of it. So this is how it works.</p>
+</details>
+<h3>类比测试驱动开发（TDD）</h3>
+<p><strong>发言人</strong>: 所以这是一个循环，呃，问题如何传给<strong>Agent</strong>，在第一次尝试中，<strong>Agent</strong>会失败。所以它会说：“你知道吗，你给了我一个问题，但大多数呃，文档我找不到任何东西，我无法完成。然后这些是我需要做的事情来完成这个任务。”它会给出一个<strong>清单</strong>，所以我们完成这个<strong>清单</strong>，就像我们完成这个<strong>清单</strong>一样。所以一旦，呃，问题解决了，它会获取那些知识，并且还会更新，这意味着它会<strong>整理</strong>这些知识到一个特定的地方，这样它可以重复使用，或者其他<strong>Agent</strong>也可以重复使用。这是一个循环。所以想法是，如果我们能通过多个呃，会话，解决多个问题。所以它会逐渐，呃，<strong>整理</strong>你的<strong>知识单体知识库</strong>，呃，并且为你<strong>文档化</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: So this is one cycle of uh how a problem to an agent and the in the first attempt the agent will fail to do it. So it will say you know what you gave me a problem but most of the uh documentation I couldn't able to find anything I couldn't able to do it then these are the things I need to do to finish this task and it gives a checklist of things so we fulfill the checklist like we fulfill this checklist so once it is uh given the problem is solved it will take that knowledge and also it will update that means curate the knowledge in a particular place so that it can reuse or like other agents can also reuse. This is one cycle. So the idea is if we can do it in multiple uh sessions with multiple problems. So it will gradually uh curate your knowledge monolithic knowledge base uh and also document it for you.</p>
+</details>
+<p><strong>发言人</strong>: 呃，你也可以把它与<strong>TDD</strong>联系起来。所以，有多少人呃，做<strong>TDD</strong>，或者说，没有人讨厌<strong>TDD</strong>，对吧？在我呃，是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Uh you can also relate it to TDD. So how many are uh do TDD or like nobody hates TDD right before I uh Yeah.</p>
+</details>
+<p><strong>观众</strong>: 好的。好的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: Okay. Okay.</p>
+</details>
+<p><strong>发言人</strong>: 所以，呃，同样地，对吧？在<strong>TDD方法</strong>中，我们做什么？我们只编写<strong>失败的测试用例</strong>。我们不首先构建产品。我们只编写<strong>失败的测试用例</strong>。呃，我们看看为了让<strong>失败的测试用例</strong>通过，缺少什么代码，然后我们只提供代码，并逐渐根据<strong>失败的测试用例</strong>构建产品。同样地，我们给<strong>Agent</strong>分配它肯定会失败的问题，然后我们逐渐填补这些空白，在某个时候，它就会变得<strong>半自主</strong>，拥有良好的<strong>机构知识</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: So, uh in in the same way, right, in in a TDD approach, what we do, we just write the failed test cases. We don't build the product first of all. We just write the failed test cases. Uh we see what is the code that is missing uh for the failed test case to pass and we just give the code and we gradually build the product based on the failed test cases. In the same way we give problems that agent will definitely fail and we gradually uh fill those gaps and at a certain point it becomes semi-autonomous with a good uh institutional knowledge already.</p>
+</details>
+<h3>演示：Agent驱动的根因分析</h3>
+<p><strong>发言人</strong>: 好的。所以我认为我已经可以跳到，呃，某种<strong>演示</strong>了。呃，所以我将使用<strong>终端</strong>。所以别恨我。呃，我认为你们都来自工程背景，所以我想你们会喜欢<strong>终端</strong>。呃，让我切换到<strong>终端</strong>。好的。好的。所以，在最左边，呃，你看到的是它在底层是如何运作的。所以当你收到一个问题时，呃，<strong>Agent</strong>会如何失败？它如何要求解决问题所需的知识？然后像<strong>领域专家</strong>这样的人，呃，填补这些空白，然后它会为你<strong>整理</strong>一个新的<strong>知识库</strong>，这个<strong>知识库</strong>会好得多，然后<strong>Agent</strong>成功，你再重复处理下一个问题。所以这就是一个循环。所以它如何实现？它可以使用任何<strong>Agent</strong>来实现。呃，它可以在<strong>Cloud Code</strong>或<strong>Copilot</strong>上实现，因为它是一种方法，你可以呃，以任何你想要的方式进行。在工作中我使用<strong>Copilot</strong>。呃，所以我用<strong>Copilot</strong>实现了这个。呃，但因为我相信每个人都更喜欢<strong>Cloud Code</strong>。所以，呃，我用<strong>Cloud Code</strong>创建了这个演示。呃，你可以看到它只是<strong>技能</strong>、<strong>规则</strong>、<strong>Agent</strong>和<strong>钩子</strong>的组合，以及一些存储<strong>知识库</strong>的地方。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Okay. So I think I can jump into uh some kind of a demo already. Uh so I will use terminal. So don't hate me. Uh I think like all of you from engineering background so I think like you'll like terminal. Uh let me switch to terminal. Okay. Okay. So on the on the far left what uh right what you see is how uh under the hood it works actually. So when you have given a problem uh how does the agent will fail? How does it demand for the knowledge uh that the problem has to be solved and a human like a domain expert and all uh fills those gaps and then it will curate uh a new knowledge base for you which is which is much better and then the agent succeeds and you repeat on the next problems. So that is how one cycle uh things. So how I it can be implemented? It can be implemented using any agent. There is no uh it can be implemented on cloud or copilot because it's an approach you can uh do uh in any way you want. At work I use copilot. Uh so I implemented this using copilot. Uh but because everybody I I believe loves more cloud code. So uh I created this demo with cloud code. Uh and you can see it's just a combination of skills, rules, uh agents and hooks and some kind of a place to save the knowledge base.</p>
+</details>
+<p><strong>发言人</strong>: 在中间的面板，你看到顶部是你的<strong>单体</strong>。呃，这代表了你的<strong>Confluence</strong>、<strong>Slack</strong>、<strong>GitHub</strong>等等。但为了演示的目的，我只是放了一些看起来像它们的<strong>平面文件</strong>。呃，所以你的<strong>单体知识库</strong>就会是这个样子。在下面，你看到的是实时情况。所以当它解决一个问题时，它是如何实际地添加新的知识的。呃，所以这就是它的样子。那么，让我…那么，我将要做的是，我将去一个<strong>Agent</strong>那里。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: On the middle pane, what you're seeing on the top is your monolith basically. Uh this is a representation of your conflence, Slack, GitHub and all. But just for a sake of demo, I just put some flat files that look like them. Uh so that is how your monolith uh knowledge base will look like. On the down, what you're seeing is on a live. So when it's solving a problem how it is actually adding the new knowledge uh to it. So this is how uh it is. So, let me So, what I'm going to do is I'm going to go to an agent.</p>
+</details>
+<p><strong>发言人</strong>: 好的，我将基本上给一个<strong>事件问题</strong>让它进行<strong>根因分析</strong>，对吧？所以，好的，我所做的是，你还记得在上一张幻灯片中，我展示了<strong>GT样本</strong>，对吧？它是<strong>已文档化</strong>和<strong>未文档化</strong>知识的组合。所以，这个事件也代表了这种组合。所以，有些知识已经记录在你的<strong>单体</strong>中。有些不存在，或者过时，或者类似的情况。而大部分知识它找不到，因为它从未被写下来。所以当我给出这个问题时，它使用我用这种方法开发的<strong>技能</strong>，它会尝试实际地首先去你的<strong>单体</strong>，实际地在<strong>知识库</strong>中寻找已有的信息。所以你可以这样想：</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Okay, I'm going to basically give an incident problem to do the root cause analysis, right? So, okay, what I did is you remember in the previous slide there is a GT samples that I showed, right? It's a combination of uh knowledge that is documented, not documented things at all. So, this incident also represent the same kind of combination. So, there is some knowledge that is documented already on your monolith. some it is not there or outdated or things like that and most of it it doesn't couldn't wouldn't able to find because it's never written down actually so when I gave this problem so it uses those skills that I have developed using this approach and it will try to actually first go to your uh monolith actually on the knowledge base and try to find information on what is uh there so think about it like this so</p>
+</details>
+<p><strong>发言人</strong>: 第一部分是<strong>检索</strong>。这意味着它已经在做<strong>RAG</strong>和<strong>MCP</strong>的第一部分工作。但它还在做什么呢？在获取数据之后，它会如何处理数据呢？那是一个缺失的部分。例如，当你给一个新员工新的<strong>Confluence</strong>链接时，员工会去那里，查看，但找不到信息。但他并没有就此止步。他会继续提问。所以，要解决这个问题，就不仅仅是添加更多的知识等等。对吧？这些是目前缺失的下一步骤。我们只是停留在<strong>检索</strong>。所以这是它实际执行的接下来三个步骤。所以你可以看到置信度几乎是1到5，因为它说：这些是它不理解的特定<strong>术语</strong>。实际上这些<strong>术语</strong>和这些<strong>业务逻辑</strong>是不需要的。所以你需要注意的一点是，它所说的这些都是<strong>未文档化的信息</strong>，这意味着它们从未被写下来。所以除非你这样做，否则你永远不会知道哪些东西没有被文档化。例如，如果有人说：“好的，缺少文档，我们需要编写。”好吧，你希望我写什么呢？人们头脑里有那么多东西，我写不了那么多，对吧？它必须以某种方式浮现出来。所以当你给一个问题时，它实际上会浮现出哪些东西没有被文档化，它会告诉我：“好的，缺少这个，我需要在这里有新的信息。”呃，所以我将要做的是，它完成了所有三个步骤。所以，然后我将要做的是，我已经有了一个预先准备好的答案，一个非常高层次的答案。我把它给了它，呃，关于缺少什么信息。所以，好的，这是你要求我解决这个问题所缺少的信息。你现在能解决这个问题吗？呃，我没想到会这样。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: First part is retrieval. That means it's already doing what RA and MCP is doing first part. But what else it is doing is after it fetches the data, what it will do with the data actually. So that is a missing part. For example, when you give a new conference links to a new employee, the employee goes there, looks into it, but doesn't find information. But it he doesn't stop there actually. He continue asking questions. So to solve the problem, then then just adding more knowledge and things and all. Right? Those are the next steps missing right now. It's we just stop at retrieval. So this is the next three steps it does actually. So you can see the confidence score is almost 1 to five because it says these are the particular terminologies. I don't understand actually these terminologies and these business logics uh is not needed. So one thing you need to look at here is whatever it has said this is the undocumented information that means it was never written down. So unless you don't do this way you will never know what is not documented. For example if somebody says like okay there is documentation missing we need to write okay what do you want me to write actually so there is so much in the people's head I can't write so much right somehow it has to surface. So when you give a problem it actually surfaces what is not documented and it tells me okay this is missing I need to have a new information there. Uh so what I will do is so it does all the three steps. So then what I will do is I already have a pre-prepared answer very high level prepare uh answer I gave it to it uh of like what is the missing information so okay this is the missing information you asked me uh to solve this problem can you solve this problem now uh I didn't expected this one</p>
+</details>
+<h3>知识库的实时更新与管理</h3>
+<p><strong>发言人</strong>: 呃，通知是，是的。我只会说“是”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Uh notifications is yes. I'll just say yes.</p>
+</details>
+<p><strong>观众</strong>: 它还问我应该用什么虚构的名字。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: It asks also what fictional name should I use.</p>
+</details>
+<p><strong>发言人</strong>: 好的。我没看到。看，当我进行测试运行时，它没有问我这些问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Okay. I didn't see it. See when I did the test run, it didn't ask me the questions.</p>
+</details>
+<p><strong>观众</strong>: 让我们看看。它知道这是一个演示。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: Let's see. It knows it is a demo.</p>
+</details>
+<p><strong>发言人</strong>: 我训练它去…好的。不，它正在做的事情就是。所以你可以看到，在实时界面上，它已经在添加新的<strong>知识库</strong>中出现的<strong>实体</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: I trained it to Okay. No, it is already what it is doing is already. So you can see on the live it is already adding the entities that uh the new knowledge base has been come into the place.</p>
+</details>
+<p><strong>观众</strong>: 那么<strong>知识库</strong>呃，是作为<strong>文件系统</strong>管理的，对吧？作为<strong>文件系统</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: So the knowledge base uh manage as a file system right as a system of files.</p>
+</details>
+<p><strong>发言人</strong>: 为了演示，我只是把它展示为<strong>文件系统</strong>，但它基本上是你的<strong>MCP服务器</strong>。呃，数据会存储在<strong>Confluence</strong>、<strong>Slack</strong>或其他地方。呃，你可以直接插入并使用相同的<strong>MCP服务器</strong>或<strong>RAG</strong>等。所以它不需要是<strong>平面文件</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: For the demo, I'm just showing it as a file system, but it's basically your MCP servers. Uh the data will stay in conflence, slack or things. Uh you can just plug in and use the same MCP servers or rag and all. So it no need to be a flat file.</p>
+</details>
+<p><strong>观众</strong>: 你把它当作你的<strong>持久层</strong>来处理，对吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: You treat this as your persistence layer for for this,</p>
+</details>
+<p><strong>发言人</strong>: 对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: right?</p>
+</details>
+<p><strong>观众</strong>: 它就像一个...你用了什么<strong>记忆工具</strong>吗？是的，我会在下一次展示如何看到，呃...</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: It's like a me do you use any like a memory tool for for this? Yeah, I will show you on the next look like how I'm going to see uh</p>
+</details>
+<p><strong>发言人</strong>: 好的，所以它从56个<strong>实体</strong>左右开始，呃，这个，对吧？现在一个问题实际浮现了六个从未被文档化的<strong>实体</strong>。当我把这些信息给它时，它能够实际发现和整理另外五六个从未被文档化的新<strong>实体</strong>。所以它能<strong>发现空白</strong>。它也能从我这里获取信息，并存储信息，新的信息等等。呃，这是其中一个。好的。接下来让我们看看这个繁忙的窗口。我尝试实际做一些事情，但是呃，它没有成功。好的。所以你现在在窗口上看到的是14个<strong>事件</strong>。你已经看到我用一个<strong>Agent</strong>解决了一个问题，对吧？<strong>沟通</strong>。如果我处理14个<strong>事件</strong>，呃，然后我进行14个这样的循环，它是如何运作的呢？所以如果你看左边，那是第一个<strong>事件</strong>，对吧？所以现在它的置信度是1.5，所有东西都很<strong>关键</strong>，所有…所以基本上没有文档化，所以所有东西都是<strong>关键</strong>的，数据严重缺失。所以我开始在第一个<strong>事件</strong>上给出答案，然后我在第二个和第三个以及连续14个<strong>事件</strong>上重复这个过程。但在第14个<strong>事件</strong>上，它基本上实际能够达到4.4的置信度，因为它首先在每个<strong>事件</strong>上都得到了给我的答案列表，而且它也为我文档化了所有东西。所以它逐渐从1.4提高到接近5的知识范围。呃，所以如果你看传统方式，在传统方式中我们做的是解决所有<strong>上下文问题</strong>，对吧？我们必须先处理它，然后我才能把它交给<strong>Agent</strong>。在这个方法中，我们把<strong>Agent</strong>从<strong>消费者</strong>变成了<strong>知识管理者</strong>。所以你不仅仅从我这里获取，我还要告诉你，整个<strong>知识管理</strong>也是你的工作，你必须为之努力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: okay so it started from 56 entities or something with the uh this one right now one problem actually surfaced six entities that are never been documented and when I gave that information to it it is able to actually discover curate another five or six uh new entities that were never documented. So it does discovery of the gaps. It also gets information from me and also stores information, new information and all. Uh this is one. Okay. Next let's see this is a busy window. I tried to actually do things but uh it didn't worked out. Okay. So what you are seeing on the on the window is like 14 incidents. You have seen one problem that I solved with an agent, right? The communication. What if I took like 14 incidents uh and I just go and have 14 cycles of this thing and how it does? So if you see on the left side it was the first incident right. So right now it has 1.5 confidence and everything is critical every so basically nothing is documented so everything is critical high the data is missing. So I started giving answers to on the first incident then I repeated for the same second and third and continuously for like 14 incidents but on the 14 incidents it basically actually able to go to a confidence level of 4.4 because first it disco on every incident it got the list of answers for me and also it documented everything for me. So it gradually from 1.4 four to almost like five range of knowledge uh it improved. uh so if you look at the traditional way in traditional way what we do is we solve all the context problem right we have to deal with it first then I have to give it to agent in this one we are moving agent from a consumer to a knowledge manager so you just don't consume from me I'm going to tell you but the whole knowledge management is also your job and you have to do it for</p>
+</details>
+<h3>知识管理自动化：上下文差距扫描器</h3>
+<p><strong>发言人</strong>: 好的，我想我们可以稍微回到幻灯片了。好的，所以我们看到的是，呃，我运行了一个循环，也展示了当我运行15或16个不同循环时的样子，对吧？但是如果你想手动完成，那会非常痛苦，因为我尝试了15个循环之后，没有人会想实际地坐下来和<strong>Agent</strong>一起，你知道，你有一个事件，但你不会和你的<strong>Agent</strong>一起坐着，一直提问，告诉它你的问题，对吧？所以那非常痛苦。呃，但是问题是，我们可以<strong>自动化</strong>这个过程。所以这就是它真正好的地方，也变得有趣的地方。所以这就是重点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Okay, I think we can get back to the slides a bit. Okay, so what we have seen is uh we have I have run one cycle and also I have shown how it look like when I run in like 15 or 16 different cycles, right? But if you have want to do it manually, it would be really painful because I tried it after 15 cycles like nobody would like to actually sit with an agent and you know you have an incident but you won't be sitt with your agent and keep actually asking questions and telling you about your problems right so that is super painful. Uh so but the thing is we can automate this process. So this is where actually it's it's really good and gets interesting. So here is the thing</p>
+</details>
+<p><strong>发言人</strong>: 你们所有人，我们已经有了所有<strong>工作项</strong>，对吧？我们有<strong>Jira</strong>，我们有<strong>事件</strong>，呃，我们有<strong>客户支持工单</strong>，所有这些类型的<strong>工作项</strong>都已经存在，对吧，存储在档案中。所以为什么我们不能拿它们，实际使用这个框架，呃，并验证你的<strong>单体数据库</strong>，运行<strong>自动化</strong>，实际查看你的现状呢？对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: you all we already have all the work items right we have Jira we have incidents uh we have uh customer support tickets like that all those kind of a work items already there right sitting in the archive so why can't we take uh them and actually use the framework uh and uh validate across your monolith database run an automation and see actually what is the state of your actually right</p>
+</details>
+<p><strong>发言人</strong>: 好的，让我看看，让我向你展示它是什么样子的。所以，与其手动操作，如果我们以<strong>规模化</strong>的方式进行这种方法，它会是什么样子？所以你看到的这个演示，几乎所有东西都是预设好的。呃，例如，我有这个演示。我有一个<strong>平台操作Agent</strong>，而且呃，我说：“好的，这些是最近的<strong>事件</strong>。”比如说，我有20个最近过去的<strong>事件</strong>。我有一个<strong>Markdown文件</strong>或一个<strong>JSON文件</strong>，对吧？它有所有详细的描述，等等，呃，评论和所有东西。其余的文件是你的<strong>知识库</strong>。所以它是一个<strong>文件系统</strong>，但你也可以实际连接到<strong>Confluence</strong>等等，仅仅为了演示目的，我把它展示为<strong>平面文件</strong>。现在我尝试做的是，我将获取所有这些<strong>事件</strong>，并验证每个<strong>事件</strong>在我的<strong>知识库</strong>中，然后问<strong>Agent</strong>：“好的，告诉我，呃，有多少文档是好的？有多少文档是我不能信任的，或者说老旧或过时的？以及有多少是实际缺失的，根据这个<strong>事件</strong>没有被文档化的？”所以让我运行它。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Okay, let me see let me show you how it looks like. So rather than actually doing it manually at a scale if we do this approach. So how does it look like? So the demo that you're seeing is almost like everything is preset. Uh for example, I have the demo. I have like a platform operations agent and uh I'm saying okay these are the recent incidents let's say I have 20 recent past incidents I have uh like an MD file or a JSON file right it has all the details of description of it things and all uh comments and everything and the rest of the files are your knowledge base so it's it's a file system but you can also actually connect with the same way the conflence and things and all just for a demo purpose and just showing it as a flat files now what I'm trying to do is I'm going take all those incidents and validate each incident across my knowledge base and ask the agent okay tell me uh how much of the document is good how much of the documentation is I can't trust it or like old or outdated and how much is actually missing not documented as per this incident so let me run it</p>
+</details>
+<p><strong>发言人</strong>: 好的，这会花点时间，所以它会经历三个步骤。所以，第一个是，呃，它生成<strong>探测器</strong>，这意味着它会编写一个<strong>基本测试</strong>来实际测试你的知识。然后它会运行这些测试，然后实际<strong>分析差距</strong>。好的。房间里有点热。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: okay it will take some time so it will take three steps actually so one is uh it generates probes which means a basic test it will write to actually test your knowledge. Then it will run those tests and then analyze the gaps actually. Okay. It's a little bit hot in the room</p>
+</details>
+<p><strong>发言人</strong>: 呃，我的意思是，这些应用就像一个巧妙的问题，我想。呃，好的，举个例子，假设你有一个即时调用，<strong>通知服务</strong>没有向客户发送呃，<strong>短信服务</strong>，对吧？所以<strong>通知服务</strong>，然后你提到<strong>Agent</strong>看到的是，是否有关于<strong>通知服务</strong>的文档？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: actually. I mean the apps it's just like a clever problem I imagine. Uh okay for example let's let's say you have an instant call the notification service is not sending uh customer uh messages to uh SMS service right so the notification service then you mentioned that the agent sees is there a documentation related to notification service</p>
+</details>
+<p><strong>观众</strong>: 所以它找不到，这意味着你从未编写过<strong>通知服务</strong>的文档。我确实理解什么是<strong>客户短信</strong>等等。当你提到<strong>客户通知服务</strong>时，它是一个<strong>空白</strong>，因为它从未被文档化。或者它获取一个<strong>客户通知服务</strong>，去<strong>Confluence</strong>查看文档有多旧。如果它说，呃，已经一年了，它会告诉你：“看，我查过了。它已经一年了。我不知道是否需要信任这份文档。”或者说是<strong>不完整的文档</strong>。所以如果你看到，它对每个<strong>事件</strong>进行了评分，获取它，并查看你连接的所有<strong>知识库</strong>，然后得到一个整合列表，比如：“好的，<strong>Agent</strong>可以部分处理你给出的<strong>事件</strong>的基本<strong>边缘情况</strong>，因为你的<strong>知识库不完整</strong>。”它会告诉你缺少了多少<strong>部落知识</strong>、<strong>系统信息</strong>、<strong>业务流程</strong>，以及你的<strong>机构知识</strong>中缺少了多少<strong>未文档化的内容</strong>。呃，这些是<strong>探测器</strong>，它还会识别，呃，哪些是<strong>关键的</strong>，哪些是<strong>高优先级的</strong>。这非常重要，因为比如说，有一个<strong>通知服务</strong>的例子，我提到了，对吧？它重复地，呃，出现了大约20次，而你没有…这是你首先需要根据你的文档修复的问题。所以它也会帮助我们实际理解，当你，呃，<strong>分解你的知识库</strong>时，你需要理解什么才是<strong>关键</strong>的，我首先需要关注什么，什么能给我带来价值。所以，它会组织成<strong>关键</strong>、<strong>高</strong>、<strong>中</strong>。所以这就是，呃，我展示的是<strong>平面文件</strong>，但你也可以将它连接到我们使用的各种<strong>数据源</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: so it doesn't find that means you never wrote a documentation and notification service I do understand what is a customer SMSS and all the customer notification service when you mention it's a gap because it's never documented or it takes a customer notification service goes to conflence and sees like the documentation how old it is. If it is says like uh it's like one year old, it will tell you look I looked into it. It's like one year old. I don't know whether I need to trust this documentation or not or like incomplete uh documentation. So if you see it scored each incident it took it and it looked at all the knowledge uh base that you have connected and have a consolidated list of like scoring of like okay partially the agents can handle uh the basic edge cases of the incidents that you give uh because your knowledge base is not complete and it will show you how much of the tribal knowledge is missing system information business process what are actually are missing from your uh uh institutional knowledge when whatever is not documented. Uh these are the probes and it will also identify uh what is critical and what is high. This is really important because let's say there is some kind of an example of notification service which I mentioned right it is repeatedly uh appearing in like 20 occasions and you don't have this is the first that you need to fix as per your documentation. So it will also help us actually understand when you're uh breaking down your uh knowledge base you need to understand what is critical actually what I need to focus on first what makes value for me so organized into critical high medium so this is what like uh I showed the flat files but you can also connect it to the various data sources that we</p>
+</details>
+<p><strong>发言人</strong>: 所以第一步基本上是它做了什么，<strong>需求提取</strong>。这意味着每个<strong>事件</strong>，它都会提取一份<strong>信息清单</strong>，列出缺少什么。第二步是它将整合所有缺少的东西。所以它会创建像<strong>系统</strong>和<strong>API</strong>等等，以及有多少是<strong>干净的</strong>，有多少是<strong>陈旧的</strong>，哪些是<strong>不完整的</strong>，哪些是<strong>完全缺失的</strong>。呃，有些是<strong>部落知识</strong>。呃，它还会做这些<strong>分类</strong>，并为你创建一个<strong>看板</strong>。所以会发生什么呢？如果你想修复你的<strong>机构知识库</strong>，基本上就像我们完成<strong>Jira工单</strong>一样，我们必须<strong>文档化</strong>这些缺失的部分等等。当你开始…它也存储在<strong>上下文湖</strong>中，所以它也必须构建自己的，呃，呃，<strong>知识库</strong>。你可以看到性能。所以一旦你修复了<strong>看板</strong>上的东西，呃，知识。所以，这就是我们所看到的，一个是方法，首先，这意味着不是<strong>推式方法</strong>，而是<strong>拉式方法</strong>，如何做它。一个循环或多个循环是什么样子，但是如果你把它放在<strong>自动化规模</strong>上，它会有多大价值？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: So the step one is basically what it does demand extraction. That means every incident it will extract uh the checklist of information what is missing. On the second step is what it will consolidate everything what is missing. So it will create like systems and APS and all and how many are clean, how many are stale, which is incomplete, what is entirely missing. Uh something is tribal. uh those kind of a classification it will also do and it will create a kban board for you. So what happens is so if you want to fix your institutional knowledge base basically you just just like Jira tickets we finish it we actually has to document these missing pieces and all and the the moment you started to so it also saves in the context lake so it also has to build its own uh uh knowledge base and you can see the performance so once you're fixing the sticks on the can uh the knowledge. So that's how so what we've seen is one is the approach first of all which means not the pull push approach but the pull approach how to do it one cycle or multiple cycle how it look like but if you put it in a scale of automation then how much valuable it uh would</p>
+</details>
+<h3>知识存储：GitHub与元模型</h3>
+<p><strong>发言人</strong>: 好的。现在，呃，呃，重要的问题是…</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Okay. Now, uh uh the important question is</p>
+</details>
+<p><strong>观众</strong>: 抱歉。双麦克风。是的，声音有点断断续续。所以，我也会把那个打开。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: sorry about this. Double mic. Yeah, it's cutting out a bit. So, I'm just going to put that one on as well.</p>
+</details>
+<p><strong>发言人</strong>: 我应该稍后做画外音吗？实际上，</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Should I do a voice over later? Actually,</p>
+</details>
+<p><strong>观众</strong>: 我觉得你需要重复一下。我有耐心，谁有耐心等一下。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: I think you need to repeat. I have the patience who has the patience for a second.</p>
+</details>
+<p><strong>发言人</strong>: 所以问题是，我一直在说“它接收上下文，所以我们提供信息，它会存储”，但问题是它实际存储在哪里？所以我有一个非常<strong>主观的观点</strong>。呃，请听我说。呃，我更倾向于它应该存放在<strong>GitHub仓库</strong>中。呃，因为最终会有人提出一个，你知道，获得2000万美元<strong>种子资金</strong>的<strong>SaaS解决方案</strong>给你。呃，但在那之前，我更倾向于实际把它放在<strong>GitHub</strong>作为<strong>仓库</strong>。为什么？因为如果你从<strong>规模</strong>上看，如果你想这样做，会有多个<strong>Agent</strong>，多个<strong>团队</strong>实际贡献到同一个<strong>知识库</strong>，而且会有<strong>冲突</strong>和<strong>解决方案</strong>，对吧？所以，呃，最简单的方法是使用<strong>GitHub</strong>，因为它实际上内置了，呃，呃，<strong>PR流程</strong>，<strong>审查流程</strong>等等。所以如果多个<strong>领域专家</strong>正在上传文件，或者<strong>Agent</strong>正在贡献，最有效的管理方式是在<strong>GitHub</strong>中，就像这样的结构。另一个好处是，如果你把它放在<strong>GitHub</strong>上，你也可以稍后发布到<strong>Confluence</strong>或<strong>Slack</strong>，或者你想要发布到的任何其他解决方案。呃，所以我更倾向于把它放在<strong>GitHub</strong>上，但如果你想直接集成到<strong>Confluence</strong>等等，你也可以插入并进行。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: So the question is so I was all all the time I was talking about okay it receives the context so we give the information it will store it but the question is where does it actually store it? So I have a very opinionated opinion. Uh hear me out. Uh I prefer uh it has to go to a GitHub repository. Uh because eventually somebody will actually come up with a you know 20 million seedfunded uh SAS solution for you. Uh but before that I prefer uh to actually put it in GitHub as a repository. Why? Because if you look at at a scale, if you want to do this, there will be multiple agents, multiple teams actually contributing to the same knowledge base and there will be conflicts and resolutions, right? So the uh the easiest way to do is using GitHub because it actually comes with inbuilt uh uh PR processes uh review processes things and all. So if multiple domain expert are sitting and uploading the files or like agents are contributing to it the most efficient way to manage is in a GitHub something like a structure like this and the other advantage is also if you put it on GitHub you can also publish it to conference later or like slack wherever you want to publish it to another uh uh solution that you want to use. uh so I prefer to have it on GitHub but if you want to directly integrate it to conflence and all you can also insert do it.</p>
+</details>
+<p><strong>发言人</strong>: 接下来是，呃，<strong>元模型</strong>。呃，有多少人知道<strong>元模型</strong>这个词？嗯，也许我可以快速向你展示它是什么样子。所以<strong>元模型</strong>基本上是这样的，对吧？所以，呃，你的<strong>领域</strong>是如何构建的，比如，呃，它是一个<strong>业务流程</strong>吗，或者，呃，它如何与<strong>系统</strong>相关联，<strong>系统</strong>如何与<strong>API</strong>相关联，以及这些呃，<strong>业务术语</strong>或<strong>技术术语</strong>实际链接到哪一个。所以这些类型的关系，<strong>元模型</strong>非常重要。对于我提出的方法来说，它不是必需的，但它是一个附加功能。为什么你需要拥有它呢？现在，把它想象成一张<strong>地图</strong>，对吧？现在你的<strong>Agent</strong>没有任何<strong>地图</strong>来导航你的<strong>知识库</strong>。基本上你所做的是，你倾倒了这么多文件，它需要弄清楚我需要哪个文件，对吧？但你的<strong>文件结构</strong>实际上是你的<strong>元模型</strong>的表示，它实际上知道如何导航。例如，假设你可以修复这个<strong>系统</strong>吗？它会理解如果我进行更改，哪些<strong>业务流程</strong>会受到影响，以及我需要更改或接触哪些<strong>API</strong>。所以，拥有一个<strong>元模型</strong>也很重要。如果你有它，呃，那么它会产生更大的价值。所以，我强烈建议在此方法中加入一个<strong>元模型</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Next is uh a meta model. Uh how many are aware of the word meta model in the okay maybe I can quickly show you how does it look like. So meta model is basically something like this right. So and uh how does your uh domain actually structured around like uh is a business process or uh how it is related to a systems how systems are related to uh APIs and how is this uh business jargon or like tech jarens are actually linked to which one. So these kind of a relationship uh meta model is really important. It's not necessary uh for the approach that I have proposed but it's an add-on and why uh you need to have this one is right now think of it as like a map right now your agents doesn't have any map actually to navigate with your uh knowledge base basically what you're doing is you're dumping like uh these many number of files and it need to figure out which file I need to need right but your file structure is actually a representation of your meta model it actually knows how to navigate For example, let's say can you fix this system? It will understand if I make changes, which business processes will be affected and which APIs I need to change or like touch these kind of a things. So, it's also important to have a meta model. If you have it, uh then it will produce more value. So, I strongly prefer to have a meta model along with this approach.</p>
+</details>
+<h3>价值与局限性</h3>
+<p><strong>发言人</strong>: 好的。所以最后一部分，呃，是它创造了什么价值。所以你已经看过很多幻灯片，看过很多演示。所以就我个人而言，我也需要分享一下，呃，当我使用它时，或者，呃，其他我分享过的人使用它之后给我的反馈是，呃，首先最有价值的是<strong>知道未知</strong>。所以<strong>从未被文档化</strong>的东西，只能通过这种方法才能浮现出来。呃，否则你只会陷入一个无休止的<strong>白板</strong>，写着“这个缺失，那个缺失，我需要添加，我需要添加”，然后一直这样做。所以这是发现，呃，你以前的<strong>工作项</strong>中，所有从未被文档化的东西的最快最好的方法。呃，其次是，呃，基本上我现在可以把工作交给<strong>Agent</strong>，而不是我来做所有这些事情，比如，呃，与其我来做，不如我把所有这些信息交给<strong>Agent</strong>，让它来管理我的<strong>知识管理</strong>。我不想成为它的<strong>知识管理者</strong>。所以让它来做吧。所以这是我看到的两个巨大价值。如果你想使用它，我想你会看到这两个是最有价值的。呃，但这些是我现在看到的其他事情。好的。所以，我也需要告诉你，使用它有什么缺点，对吧？首先，如果你来自一个小团队，或者如果你说：“不不不，我的文档，我的<strong>知识库</strong>真的很好。”我为你感到非常高兴。呃，你就是现在这个世界上，在使用<strong>Agent</strong>方面最幸运的人。呃，对你来说，它可能不是非常相关，除非你有一个非常，呃，非常复杂的<strong>文档</strong>。呃，其次是我已经提过的，手动操作是非常痛苦的，我不建议任何人这样做。如果你只是想为了测试目的尝试一下，你也可以这样做，但是<strong>自动化</strong>是实际使用这种方法的最佳方式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Okay. So the last part uh is what is the value it created. So there's a lot of slides that you have seen lot of demos that you've seen. So personally I need to also share like what is the value that I see when we uh I was using it or like uh the other people who I shared with already were using it came back with the feed feedback and told me uh first the most valuable thing is knowing the unknown. So what is never documented is something can be surfaced only by this approach actually. Uh otherwise you'll just end up in u an endless mroboard of like putting tickets on okay this is missing this is missing I need to add it I need to add it and uh keep on doing it. So this is the fastest and better way to discover uh with your previous work items and all what is never documented uh things and all. uh second is uh basically I can now give work to agents rather than I do all those things like uh rather than I become I give the agents all this information let it manage my knowledge management I don't want to be the knowledge manager of it so let let it do it so those are the two big values that I have seen if you want to use it I think like you will also see the those two as the most valuable uh but these are the other things what I seen now. Okay. So, I also need to tell you like what is the drawbacks of also using it, right? First of all, if you are coming from a small team or like if you say like no no no my documentation, my knowledge base is really good. I'm like super happy for you. Uh you're the lucky ones in this world right now with agents. uh for you it might not be really relevant unless you have a very uh very complicated uh uh documentation that you have uh second is I already mentioned the manual manually doing is it's very painful I don't prefer anyone to do it if you want to just try it for testing purposes you can also do it but u automation is the most best way to actually use this one</p>
+</details>
+<p><strong>发言人</strong>: 呃，这种方法非常早期，所以到明天，<strong>YouTube</strong>上可能已经有人发布了不同的、呃，比我更好的东西。所以，呃，在<strong>AI</strong>时代，没有人知道，呃，一个<strong>理论</strong>或一种<strong>方法</strong>或一个<strong>应用程序产品</strong>能存活多久。所以目前，我认为这是最好的方法。好的。所以整个工作坊，我们从一个<strong>管道</strong>开始，对吧？关于<strong>投资回报率</strong>。所以<strong>需求导向上下文</strong>实际位于<strong>单体</strong>和<strong>检索层</strong>之间。它所做的是，呃，它实际帮助你构建<strong>整理好的上下文块</strong>。你也可以把它想象成一个<strong>缓存数据库</strong>。所以每次你的<strong>Agent</strong>不需要去“煮海”（boil the ocean）来解决问题，而是如果你有一个良好的<strong>信息上下文块</strong>，大多数时候，80%的时间都是可用的，因为我也相信，它总是遵循<strong>80/20法则</strong>。所以你20%的文档是最有用的，80%是一些<strong>边缘情况</strong>，你需要去查看。所以与其给出100%的东西，你需要找出我的20%是什么，呃，那对<strong>Agent</strong>超级有帮助，并把它当作一个<strong>缓存数据库</strong>，呃，它的<strong>上下文块</strong>。其余的你可以把它当作链接，所以当<strong>Agent</strong>觉得我需要更多信息时，它才会去检查，呃，整个<strong>单体机构知识</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: uh this is very early this approach so by tomorrow warning on YouTube somebody would have already posted something differently uh better than me. So uh in the in the uh era of AI nobody knows like uh how long a thesis or an approach or an app product going to survive. So for now I see this is the best approach. Okay. So the whole workshop so we started with uh one pipeline right on the ROI and so the demanddriven context actually sits between this monolith and also the retrieval layer actually and what it does is uh it actually helps you build curated context blocks for you. You can also think of it like a cache database that you have. So every time you agent doesn't need to go and know boil the ocean for fixing an issue rather than if you have a good context block of information most of the time 80% of the time that can be usable because what I also believe is it's always the 80/20% rule so 20% of your documentation is most useful 80% is some corner cases you have to look into it so rather than giving 100% of things you need to figure out what is my 20% of that uh that is super helpful for agent and have it like a cache database uh the context block of it using it and rest of it you can leave it like a links so whenever agent feels I need more information then only it can go and check uh the whole monolithical uh institution knowledge</p>
+</details>
+<h3>工作坊总结与实践</h3>
+<p><strong>发言人</strong>: 好的，所以从这次工作坊中你可以带走三样东西。第一，呃，我希望我能让你们理解这种方法。所以，呃，有一个<strong>GitHub仓库</strong>，我详细介绍了它，还有一个<strong>入门指南</strong>。如果你想回家尝试，你可以尝试。呃，你已经知道这个框架是如何工作的。所以如果你想回家并<strong>重新混合整个方法</strong>，你可以这样做，也请让我知道，呃，我会留下这个，我会与你一起贡献。呃，你有一个我展示过的<strong>上下文差距扫描器</strong>，它已经<strong>实时预设</strong>。呃，我想大概加了20美元。所以也尽可能多地使用它。200，对吧？好的。好的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: okay so from here what you can take from this workshop is three things one uh I hope uh I makes I made sense of this approach So uh there is a GitHub repo uh which I detailed it out and also a starter guide on it one if you want to go home and try with it you can you can try it. Uh you already have know how the framework works. So you want to go home and just remix the whole approach you can do it and let me also know uh I'll leave this one and I'll join with you for contribution. Uh you have a context gap scanner that I showed you which is live already with presets. Uh I think like added like $20 on it. So hit it as much as possible as well. 200 right? Okay. Okay.</p>
+</details>
+<p><strong>观众</strong>: 所以在20美元之后，先到先得。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: So after $20 so first serve.</p>
+</details>
+<p><strong>发言人</strong>: 呃，所以这三样东西你可以使用，呃，你可以从这次工作坊中带走。好的。所以因为这是一个工作坊，所以我也想让你尝试一些东西。呃，你可以尝试三件事。第一个是，如果你说：“你知道吗，我已经太累了，快四点了，快要去派对了，我不想做。”所以你可以直接去<strong>上下文差距扫描器</strong>，呃，这里所有东西都是预设的，你可以直接尝试一下，运行它，看看它是如何工作的。如果你认为可以做得更好，请告诉我，这样我们可以一起工作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Uh so all these three you can use uh you can take away from this workshop. Okay. So because this is a workshop so I also would like to want you to try something. Uh what you can try is three things. One is either uh if if you say like you know what I'm so so tired already it's almost like 4 uh it's almost about to go for a party I don't want to do it so you can just go to the context gap scanner uh everything is a preset here you can just try it out hit it and see how it works if you think it can be done better let me know so that we can work together</p>
+</details>
+<p><strong>发言人</strong>: 呃，或者，呃，假设我现在非常技术化，我想知道它在底层是如何工作的。呃，这是一个<strong>GitHub仓库</strong>。呃，它在，呃，也许我把它拿出来。呃，这是一个<strong>GitHub仓库</strong>，它有所有信息。呃，另外还有一个<strong>入门指南</strong>，如果你想尝试的话。但是，呃，如果你仍然觉得不，我想要更简单的。你也可以尝试这个。所以你不需要做任何事情。基本上，拿这个<strong>提示</strong>，呃，拿你现在的一个<strong>Jira工单</strong>或<strong>事件</strong>。如果你已经构建了<strong>MCP服务器</strong>，呃，或者其他类型的东西，你只需要使用那个<strong>提示</strong>，把它提供给你的<strong>Agent</strong>，呃，带着<strong>事件</strong>或<strong>Jira工单</strong>，然后问它，呃，根据这个<strong>事件</strong>或<strong>Jira工单</strong>，给我你的<strong>知识库</strong>的质量，看看有多少是红色的，也就是从未被文档化的。所以你也可以尝试这个简单的方法。我就把它留在这里。也许你可以拍张照片。也许如果有人想的话，我可以切换到幻灯片。酷。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: uh or otherwise uh let's say now I I'm very technical. I want to know how it works under the hood. Uh this is a GitHub repository. Uh it's it's under uh maybe I'll just take this out. Uh this is a GitHub repository and it has all the information. Uh plus there's a starter guide also if you want to if you want to try it out. But uh if you still feel like no, I want much more simpler You can also try this one. So you don't need to do anything. Basically take this prompt uh take one of your Jira ticket or incident that you have right now. If you already built MCP servers uh or like uh any other kind of a things, you just use that uh prompt, give it to your agent uh with the incident or a Jira ticket and ask it uh give me the quality of the knowledge base that I have as per this incident or uh Jira ticket in this way and see how many how much of it comes in red which is never documented. So you can you can try also the simple one. I'll just leave it like this. Maybe you can take a picture. Maybe I can switch to the slide if any anyone want to. Cool.</p>
+</details>
+<h3>问答：方法论的实践与挑战</h3>
+<p><strong>观众</strong>: 这是你的...</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: This is your</p>
+</details>
+<p><strong>发言人</strong>: 所以这种方法我觉得非常有趣。所以第一个问题是，你是否已经在<strong>规模化</strong>上使用了这种工作方式，或者因为我们看到的大多是<strong>玩具示例</strong>，对吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: So this approach find it very interesting. So first question is have you already used this way of working at scale or because we've seen most of the toy examples right</p>
+</details>
+<p><strong>观众</strong>: 是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: y</p>
+</details>
+<p><strong>发言人</strong>: 呃，我使用过，呃，但<strong>不是规模化</strong>的。呃，我从更简单的开始，因为你也需要看它的<strong>范围</strong>是什么。比如说，我有一个企业，我在<strong>企业层面</strong>尝试，但我做不到，因为涉及多个<strong>领域</strong>等等。即使我在<strong>领域层面</strong>做，我需要理解，我在<strong>领域层面</strong>尝试了，但即使在<strong>领域层面</strong>，也有太多的<strong>领域专业知识</strong>我需要填补，呃，填补那些空白。所以，我再次缩小到，也许我拥有的最小的<strong>团队</strong>是什么，以及最小<strong>团队的Jira工单</strong>，最小<strong>团队的实例</strong>，以及<strong>团队的Confluence页面</strong>，呃，稍微限定一下范围。然后如果我<strong>缩小范围</strong>，我觉得它会更，呃，更快，更有用。但如果我在更大的范围上做，会发生什么呢？不是一个人拥有整个，呃，<strong>领域专业知识</strong>，所以基本上又变成了，呃，需要五六个人坐下来开始做这些事情。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: uh I used it uh not at a scale uh I started with simpler because you also need to see what is the scope of it let's say I have an enterprise and I try an enterprise level I can't do it because it's multiple domains things and all even if I do it at domain level I need to understand I tried it at a domain level then even at a domain level there is so much of a domain expertise I need to fill it up and uh fill those gaps. So again I cut down into maybe what is the smallest team that I have and the smallest teams Jira tickets the smallest teams instance and the team's confluence page uh with a bit of a scope then if I drill down the scope then I feel like it's more uh fast more useful but if I do it at a bigger scope what happens is not one person has the whole uh domain expertise so basically it again becomes like uh somebody has to come and uh you know five or six people has to sit down and start doing this things.</p>
+</details>
+<p><strong>观众</strong>: 是的，我有点担心这可能会在某种程度上对你的团队成员造成<strong>拒绝服务攻击</strong>，因为我们的<strong>LLM</strong>经过<strong>微调</strong>，会不断<strong>获取信息</strong>，不断<strong>获取更多信息</strong>，不断<strong>追问</strong>。所以我认为这对必须进行<strong>问题回答</strong>的工程师来说会很困难。其次，<strong>扫描器</strong>很好，但它仍然建立在这样的假设之上：你的所有团队成员和企业其他部门仍然在使用你的企业，</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: Yeah, I'm a bit concerned that this might denial of service attack your team members in a certain way because our LLMs are fine tuned to keep eliciting information to keep getting more information to ask follow so I think it will be hard on the engineers that have to do the question answering and secondly the scanner is nice but still built on the assumption that all of your team members and the rest of the enterprise are still using your enterprise it</p>
+</details>
+<p><strong>观众</strong>: 嗯，按照计划，他们实际上会填写他们的<strong>工单</strong>，包括所有细节等等。而我从实践中知道，大多数时候情况并非如此。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: well as planned that they're actually filling in their tickets with all the details etc and I know from practice that is most of the time not the case</p>
+</details>
+<p><strong>发言人</strong>: 那是真的，那是真的，我同意你的看法。即使我去，我的假设也是，即使我去找领导，让他们接受：“嘿，你能给我一些<strong>带宽</strong>吗？或者，呃，你知道，我需要这些人实际坐下来修复<strong>上下文</strong>。”我认为现在没有人会这样做，但我认为这会发生，因为慢慢地，我认为我们正在慢慢地转向<strong>Agent管理者</strong>，<strong>Agent</strong>变得<strong>半自主</strong>或<strong>自主</strong>，我们来管理它们。但在某个时候，必须有人修复这些知识，因为它不会凭空出现。你必须……所以企业的关注点将转向<strong>差距</strong>。这就是我开始说的，我认为没有人关注这个问题。然而，呃，每个人都非常关注<strong>Agent</strong>有多好，<strong>检索</strong>有多好，但<strong>上下文</strong>有多好，呃，你并没有解决它。我想在未来一年左右的时间里，人们会意识到它的重要性，呃，<strong>看板</strong>很快就会成为现实。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: that is true that is true I agree with you even if I go my my assumption is also even if I go to a leadership to buy in like hey can you give me a bandwidth or like uh you know I need these people to actually sit and fix the context. I don't think right at this point of time nobody will do but I think it will happen because slowly I think we are slowly moving towards an agent managers where agents are becoming semi-autonomous or autonomous and we manage them but at the certain point of time somebody has to fix that knowledge because it's not going to come from anywhere you have to so then the enterprise focus will shift towards the gap that's what I started saying I don't think nobody is looking into the problem Yet uh everybody is very focused with agent how good the agent is, how good the retrieval is but how good the context is uh you're not solving it. I think like in down the line in a year or so I think people will realize importance of it and uh the KBAN board will definitely come into reality actually very soon.</p>
+</details>
+<p><strong>观众</strong>: 是的。谢谢。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: Yeah. Thanks.</p>
+</details>
+<p><strong>发言人</strong>: 我觉得实际上是同样一点。我觉得当我们看大型搜索时，实际上是<strong>文档</strong>，实际上是<strong>代码</strong>。只是想知道你是否将其应用于<strong>代码库</strong>？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: I think actually the same point I think when we look at large search actually documentation actually code. Just wondering have you applied it to the code base?</p>
+</details>
+<p><strong>发言人</strong>: 呃，我做过，呃，我也将其应用于<strong>代码库</strong>。呃，但我得到了<strong>混合结果</strong>。当我，呃，所以，事情是这样的。当我只使用<strong>代码库</strong>时，它特别好，或者当我只使用<strong>Confluence</strong>或<strong>文本数据</strong>时，呃，它会给出好的结果。但当我将它们结合起来时，不知何故，呃，它会产生<strong>冲突</strong>，因为它会从<strong>GitHub仓库</strong>中创建出一个<strong>理论</strong>，但同一个<strong>GitHub仓库</strong>的文档也存在于<strong>Confluence</strong>上。所以那里就产生了<strong>冲突</strong>：“好的，<strong>真相来源</strong>是什么？代码说应该这样做，我应该按照文档来实现吗？”所以那时候我又需要创建额外的<strong>技能</strong>或<strong>规则</strong>，比如：“好的，如果你在<strong>GitHub</strong>上看到它，你需要给它什么<strong>排名</strong>？这意味着那是<strong>真相来源</strong>。或者如果你没有看到它，那么你必须，呃，在<strong>Confluence</strong>中查找信息等等。”但这些都是我仍在努力解决的问题。所以看到这些空白并修复它们，但我确实看到了，呃，结合这两者的问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Uh I did uh I also applied the code base. Uh but I got a mixed result when I uh so so here is the thing. What happened is when I only use codebase uh it is particularly good or when I only use conflence or like textual data uh like uh uh it gives a good results. But when I combine it somehow actually uh it conflicts because it it creates a theory out of the GitHub repository but the same GitHub repository documentation is also on confluence. So there it gets a conflict of okay what is the source of truth to it code says this should I implement it this way as per the documentation. So then again I need to create an additional skill or rules like okay what is the ranking that you need to give if you see it in GitHub that means that is the source of truth or if you see it if you don't see it then you have to uh look the information in confluence things and all but those are still I'm trying to fix those things actually so seeing the gaps and fix those but I definitely see uh that issue combining those two</p>
+</details>
+<p><strong>观众</strong>: 第二个问题是，嗯，有趣的是，实际上是<strong>技能</strong>。因为我们发现，实际上就像你有你的那种，嗯，像这样的过程：运行一个<strong>上下文</strong>并识别正确的，</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: and the second question is um interestingly actually skills because what we find out is actually like you have your kind of like your um like the process that's like run a context and identify the right</p>
+</details>
+<p><strong>观众</strong>: 然后你执行任务，识别，你回去，然后你正在修复<strong>知识库</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: then you do the task identify you go back and then you're fixing the knowledge back</p>
+</details>
+<p><strong>发言人</strong>: 好的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Okay.</p>
+</details>
+<p><strong>发言人</strong>: 呃，我认为我目前构建的<strong>技能</strong>是<strong>静态的</strong>，但如果你没有理解错的话，你更倾向于<strong>演进式技能</strong>，对吧？如果<strong>技能</strong>失败了，它就必须演进，对吧？我同意你的看法，我从未尝试过，但我觉得它必须是那样，因为我也更专注于如何<strong>规模化</strong>地实现它。呃，原因也是，呃，我希望<strong>上下文</strong>在<strong>检索本身之前</strong>就被修复，而不是在<strong>操作过程中</strong>。所以当我第一次开始使用它时，我开始在<strong>操作中</strong>进行，这意味着：哦，我有一个<strong>工作项</strong>，我把它分配给它，它会失败，然后我开始提供<strong>上下文</strong>等等，但这需要很多时间，也需要我很多耐心。所以与其这样做，你知道吗，我打算在<strong>检索之前</strong>就修复<strong>上下文</strong>。所以如果我能，呃，在我回答她的问题时，如果你选择一个团队，你需要修复的<strong>上下文</strong>非常小，所以你可以使用<strong>上下文差距扫描器</strong>这样的东西，也许如果你有一个好的演示专家，我想大概几周内你就可以实际修复你的<strong>文档</strong>，不是100%，但至少60%、70%、80%的良好质量你可以构建出来。所以我的建议永远是，不要在<strong>操作层面</strong>、呃，<strong>实时层面</strong>进行，而是在<strong>检索本身之前</strong>进行，这在这种方法中会好得多。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Uh I think right now the skill that I have built is static but what you are more proposing if I'm not wrong it's like evolving skill right if the skill fails it has to evolve right I agree with you I never tried it but I think like it has to be uh like that because I'm also more concentrating on how to do it at scale. uh the reason is also uh I I want I want the context to be fixed before retrieval itself not during operational. So first when I started with it I I started doing with when operational which means oh I have a work item I will assign to it it will fail then I'll start giving context and all but it takes a lot of time it takes a lot of patience for me so rather than doing it you know what I'm going to fix the context but before retrieving so if I can uh while I was answering her question if you take a team the context that you need to fix is very small so you can use a uh context gap scanner uh kind of a thing and maybe if you're good have a good demoing expert I think like couple of weeks you can actually fix your documentation not like 100% at least like 60 70 80% of a good quality that you can already build it so my proposal would always be don't do it at an operational level uh at an real-time level but do it before retrieval uh itself that is much better in this approach</p>
+</details>
+<p><strong>观众</strong>: 是的，尤其是在你问的问题可能需要五六个不同方面的情况下。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: y especially sitting in situations where you ask questions that may need I don't know like five or six different there</p>
+</details>
+<p><strong>发言人</strong>: 现在，<strong>Cloud Code</strong>宣布<strong>上下文窗口</strong>达到100万个<strong>Token</strong>之后。我知道我没有任何问题。所以我计算了一下，呃，平均大概是96k个<strong>Token</strong>，因为我尝试了不同的<strong>领域</strong>。实际上每个<strong>领域</strong>我看到大约是96k个<strong>Token</strong>。呃，如果我整合所有东西，比如<strong>Confluence</strong>等等，呃，它很容易就适合<strong>上下文窗口</strong>。实际上，呃，我尝试做了一些实验，你知道，把<strong>图谱RAG</strong>放在那里，而不是仅仅获取所有文件，使用<strong>图谱RAG</strong>来理解意图。但对我来说，现在只是把整个<strong>上下文</strong>放在窗口中，能给你带来比实际进行，呃，<strong>RAG</strong>更多的结果，除非你有一个非常大的，呃，接近一百万个<strong>Token</strong>的<strong>上下文</strong>想要放入，也许那时候你才需要使用更多，呃，<strong>检索机制</strong>来处理，但除此之外，我想，呃，应该没问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: right now after cloud code announced 1 million of tokens in the context window. I know I don't have any problem. So I calculated it uh at an average it's like uh 96k tokens because I tried with different domains actually per domain I see like around 96k tokens. uh if I consolidate everything like confluence things and all uh so easily fits in the context window actually uh I tried to do some experimentation around you know a graph rag put them there rather than just take all the files use a graph rag understand the intent but for me just putting the whole context right now in the window gives you more results than actually doing uh uh rack unless you have a very big uh almost around a million tokens of a context that you want to fit in maybe then you have to use a bit more uh retrieval mechanisms between it but otherwise I think like uh it should be fine.</p>
+</details>
+<p><strong>观众</strong>: 我有一个问题，呃，我打开了你的<strong>论文</strong>，你能解释一下这个图表吗？比如不同<strong>技术</strong>之间的比较，比如<strong>领域知识</strong>、<strong>战略知识</strong>、<strong>知识获取</strong>，呃…</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: I have a question uh I opened your paper and could you explain this graph like comparison between different techniques like domain knowledge strategy knowledge access uh</p>
+</details>
+<p><strong>发言人</strong>: 呃，哪个？好的。当然。好的。所以，呃，我也引用了其他<strong>论文</strong>。好的。呃，所以，不是直接相关，但你有一篇<strong>ACE</strong>的<strong>论文</strong>，呃，呃，它也做了类似的事情。所以，呃，但<strong>ACE</strong>并不完全是关于，呃，呃，怎么说，<strong>发现和整理</strong>的。呃，如果我没记错的话。也许我需要刷新一下我的记忆。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: uh which one? Yep. Sure. Okay. So, uh I also did the citations from other papers. Okay. Uh so, not directly related but u you have the paper of ACE uh uh which is also does a similar thing. So, uh but ACE is not exactly into uh uh how do you say uh discovery and curation actually uh if I remember it correctly. Maybe I need to refresh my memory.</p>
+</details>
+<p><strong>观众</strong>: 你是说，呃，<strong>领域知识</strong>和<strong>战略知识</strong>之间的区别是什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: What do you mean between uh the difference between domain knowledge and strategic knowledge here.</p>
+</details>
+<p><strong>发言人</strong>: 好的。所以<strong>战略知识</strong>。好的。所以，当你在尝试与<strong>AI</strong>进行对话时，就像<strong>Cloud Code</strong>等等，它会更新它的，呃，<strong>记忆</strong>，或者，比如它与你的事物的<strong>关系</strong>等等，对吧？而且，它还会从<strong>聊天历史</strong>中理解我需要记住的最重要的<strong>上下文</strong>是什么。所以当你与它进行<strong>沟通</strong>时，那些<strong>AI改进</strong>中提出的<strong>操作性对话</strong>。所以我的提议不是基于你与<strong>AI</strong>的对话，而是基于你的<strong>领域知识</strong>，那是<strong>已文档化</strong>的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Okay. So strategic knowledge. Okay. So what as and all uh are doing is when you are trying to have a conversation with uh AI uh you can see in the cloud code and all it updates its uh memory or like the relationship with your things like that right. So and also from the chat history it understands what is the most important context I need to remember those kind of a things. So when you are in communication with it that operational conversations with AI improvement they propose. So what I my proposal is not based upon your conversation with an AI but rather than your domain knowledge which is documented actually.</p>
+</details>
+<p><strong>观众</strong>: 呃，其他人有问题吗？抱歉。何时才能远程<strong>知识</strong>？所以事情是确定的。你如何确保你的<strong>Agent</strong>只指向你本地的相关<strong>文档</strong>，你喜欢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: Uh somebody else has a question. Sorry. When to remote knowledge so things are confident how do you ensure that your agent only points to the relevant documentation in your local you have liked</p>
+</details>
+<p><strong>发言人</strong>: 好的，所以当我编写一个从<strong>Confluence</strong>提取的<strong>管道</strong>时，它也实际允许你提供<strong>日期</strong>，以及<strong>上次更新</strong>者，<strong>创建者</strong>等<strong>分析</strong>信息。所以你可以使用它，呃，来实际设置一个<strong>阈值</strong>，比如：“好的，在这个特定日期，所有旧的都视为<strong>过时的</strong>，并告诉我。”不要直接将其视为<strong>过时的</strong>，你要告诉我，因为有时文档可能会<strong>陈旧</strong>很长时间，但它可能是一个<strong>重要文档</strong>。所以它会让你知道，但现在不会做出决定。所以你决定，呃，哪个是<strong>陈旧的</strong>，哪个不是。你没有像<strong>中间层</strong>那样，在<strong>仓库</strong>中存储这个仍然是…</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: okay so when I wrote a pipeline for extracting from conflence it also allows actually to give you a date and also last updated who created kind of an analytics on on the space. So you can use it uh to actually put a threshold of like okay on this particular date whatever is is old consider it as an outdated one and let me know. Don't just consider it as an outdated one you let me know because sometimes the document can be stale for so long but it could be an important document actually. So it lets you know but not like take decisions actually right now on this one. So you decide uh which one is stale and which one is not. you don't have like an intermediate layer where in the repo you store this is still</p>
+</details>
+<p><strong>发言人</strong>: 好的，所以，呃，当它在<strong>上下文</strong>中被<strong>整理</strong>时，呃，它也会更新一个，呃，<strong>日期</strong>，以及<strong>文档的状态</strong>，比如<strong>陈旧</strong>、<strong>活跃</strong>和<strong>干净</strong>。所以它也会查看：“好的，这是<strong>陈旧的</strong>，我不会碰它，我只会寻找是否有其他新的<strong>文档</strong>。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: okay so uh when it is curated in the context uh also it updates with a uh date and also the state of the document like stale active and clean so it also looks into okay this is st I don't I'm not going to touch it and I'll just go to look for any other new other documents are there uh in this one</p>
+</details>
+<p><strong>观众</strong>: 你认为如何管理<strong>可访问性</strong>？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: you think about how to manage access accessible.</p>
+</details>
+<p><strong>发言人</strong>: 好的。所以，因为它不是一个<strong>产品</strong>或<strong>SaaS解决方案</strong>，对我来说它基本上就是<strong>GitHub</strong>，所以现在<strong>权限</strong>等并不难实现，因为<strong>GitHub</strong>开箱即用地提供了我可以给谁<strong>权限</strong>，谁可以拥有<strong>读写权限</strong>等等，谁可以<strong>合并</strong>等等。但如果它演变成一个<strong>产品</strong>，例如<strong>上下文差距扫描器</strong>作为一个<strong>产品</strong>，我希望你测试它，因为我为这次工作坊使用<strong>预设</strong>而不是实际要求你上传文件的原因是我不想获取你的<strong>IP数据</strong>。对吧？所以除非它成为一个<strong>产品</strong>，否则你没有任何问题，呃，<strong>GitHub</strong>等等。但如果你有一个针对此的<strong>SaaS解决方案</strong>，呃，那么就看<strong>SaaS解决方案</strong>如何管理它了，对吧？但现在，这种方法与<strong>访问权限</strong>等无关，你如何在你<strong>知识库</strong>上实现这些<strong>访问权限</strong>取决于你。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Okay. So, because it's not a product or a SAS solution, it's just basically GitHub for me right now permissions and things are not difficult to implement because GitHub out of the box gives me who I can give the permission to is GitHub. who can have write read access things and all who can merge those things and all but in case if it evolves into a product and for example context gap scanner as a product and I want you to test it because the the reason why I was using presets for this uh workshop not actually asking you to upload the files is because I don't want to take your IP data on this one right so unless it becomes a product you don't have any problem uh GitHub and all but if you have a SAS solution for this uh then it's between how the SAS solution will manage it right right now but the approach has nothing to do with the access things and all how you implement those access on on the knowledge is up to you</p>
+</details>
+<p><strong>观众</strong>: 你有，所以这当然是关于<strong>文档</strong>的，但你有没有考虑过将其用于一些，比如公司会使用的<strong>中央工具</strong>？比如说，你有一个<strong>平台团队</strong>，你有一个<strong>CLI</strong>，不同的团队正在使用它，所以现在它被不同的<strong>Agent</strong>使用，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: you have so this is of course about documentation but did you give any consideration about using it on some like central tooling that a company would use like let's say that you have a platform team and you have a CLI that the different teams are using and so now it's used by different agents right</p>
+</details>
+<p><strong>发言人</strong>: 好的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: okay</p>
+</details>
+<p><strong>观众</strong>: 所以<strong>Agent</strong>也可能会说：“好吧，这个<strong>操作</strong>对于一个<strong>资源</strong>是可用的，但我不想因为有500个<strong>资源列表</strong>就进行500次调用。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: and so the agents can also be like well this action is available for a resource but I don't want to do 500 calls just because I have a list of 500 resource</p>
+</details>
+<p><strong>发言人</strong>: 好的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: okay</p>
+</details>
+<p><strong>观众</strong>: 如果工具能做到就好了。我不知道你是否考虑过这一点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: it would be nice if the tool could do that I don't know if if you've given any consideration to this</p>
+</details>
+<p><strong>发言人</strong>: 我认为它在组织中就应该这样运作，你必须有一个<strong>中央解决方案</strong>。但你希望如何实现这个解决方案，取决于组织。例如，我们正在做<strong>敏捷</strong>，对吧？所以<strong>敏捷</strong>可以通过<strong>Scrum</strong>、<strong>看板</strong>或<strong>精益</strong>等方式来做，你也可以使用不同的应用程序来做。过程是相同的，但你如何做，你选择哪种方法，以及你在组织中选择哪个应用程序，是不同的。同样地，我们讨论的是<strong>方法</strong>。如果你想在组织中实施它，你可以使用这种方法，你可以以任何你想要的方式来做。我的观点更像是，通过这个，你可以识别出你的<strong>差距</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: I think that is how it has to work uh in an organization you need to have a central solution for it but how you want to do the solution is up to the organization for example we are doing agile right So agile can do by scrum kban or like lean or something and also you can do different apps to do it. The the process is the same but how you do it which method you will choose and which app will you choose in your organization is different. In the same way what we have discussed is the approach. If you want to put it in the organization you can use the approach and you do you can do it in whichever way you want. My point is more like so with this you can identify gaps in your</p>
+</details>
+<p><strong>观众</strong>: 对，你能用它来识别你<strong>工具</strong>上的<strong>差距</strong>吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: right could you use it to identify gaps on your tooling for</p>
+</details>
+<p><strong>发言人</strong>: 好的，呃，当你说<strong>工具</strong>时，是<strong>Agent</strong>的…</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: okay uh when you say tooling it's the agentic</p>
+</details>
+<p><strong>观众</strong>: 内部工具，我不知道，也许一个团队正在为公司的其他部门构建。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: internal tools that I don't know maybe a team is building for the rest of the company</p>
+</details>
+<p><strong>发言人</strong>: 基础设施总的来说，对吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: infrastructure in general right</p>
+</details>
+<p><strong>观众</strong>: 也许吧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: maybe yeah</p>
+</details>
+<p><strong>发言人</strong>: 呃，你能给我一个例子，呃，比如？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: uh can you give me an example of uh like uh how</p>
+</details>
+<p><strong>观众</strong>: 比如说，呃，我不知道你构建了某种<strong>Kubernetes</strong>之上的<strong>抽象层</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: let's say that uh I don't know you build some sort of abstraction on top of kubernetes</p>
+</details>
+<p><strong>发言人</strong>: 好的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: okay</p>
+</details>
+<p><strong>观众</strong>: 你不希望你的开发者一定知道如何处理它。好的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: you don't want your developers to necessarily know what to do with that. Okay.</p>
+</details>
+<p><strong>发言人</strong>: 那么你有一个不同的<strong>CLI</strong>或者你有一些东西，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Then you have a different CLI or you have something right.</p>
+</details>
+<p><strong>观众</strong>: 嗯，但后来就像我说，我不知道，也许你认为他们会一个接一个地发布你的<strong>自定义应用程序</strong>或<strong>企业应用程序</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: Um but then like I say I don't know maybe you thought that they would release one of your custom applications or corporate applications one by one</p>
+</details>
+<p><strong>观众</strong>: 但一个团队已经发展到更多地使用它，突然他们有很多，而且他们不想进行那么多调用，或者甚至<strong>Agent</strong>会觉得这效率低下，我希望这个<strong>内部工具</strong>以不同的方式工作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: but a team has grown into using more of that and suddenly they have a lot and they don't want to do that many calls or perhaps even the agent is like well this is inefficient. I would like this internal tool to work in a different way.</p>
+</details>
+<p><strong>发言人</strong>: 好的。那样你就能识别出<strong>工具</strong>中的<strong>差距</strong>，或者<strong>性能改进</strong>，就像这个方法对<strong>文档</strong>所做的那样。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Okay. And in that way you would identify like gap in the tool or a performance improvement kind of like this does for documentation</p>
+</details>
+<p><strong>观众</strong>: 实际上可以扩展。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: could be extended actually.</p>
+</details>
+<p><strong>发言人</strong>: 所以，呃，因为我们已经看到了<strong>业务流程</strong>，对吧？所以它也可以<strong>文档化业务流程</strong>。<strong>业务流程</strong>无非就是应用程序中的过程如何实际运行和执行任务，对吧？所以你可以扩展它，也可以发现<strong>业务流程</strong>中的<strong>差距</strong>，或者它是如何运作的。它可能是它的一个扩展。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: So uh because uh we have seen the business processes also right. So it can also document business process. The business process is nothing but how uh the process in the application it actually runs and does things right. So you can extend it to also find out the gaps in the business process or like how it works. It could be an extinction to it.</p>
+</details>
+<p><strong>观众</strong>: 抱歉。你如何确保你知道<strong>更改</strong>？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: Sorry. How would you ensure that you know changes?</p>
+</details>
+<p><strong>发言人</strong>: 是的。问题的答案是明天，周五，以识别<strong>B1</strong>和<strong>B</strong>，以及<strong>文本</strong>，那是问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Yeah. The answer for question is tomorrow on Friday to identify B1 and B and over text that's problem.</p>
+</details>
+<p><strong>发言人</strong>: 好的。所以，呃，当我展示<strong>上下文差距扫描器</strong>时，你也看到了<strong>重复</strong>的指示器，对吧？所以如果今天你有一个文档，明天你有一个<strong>2.0版本</strong>，以及其他东西，它实际上会发现相同的信息在三个不同地方存在，它也会发现。如果你只有一个，它被更改了，它会选择<strong>最新更新</strong>的那个，因为作为人类，你更改了它，所以它会将其作为<strong>真相来源</strong>，对吧？但如果你有三个相同文档的版本，那就是<strong>重复</strong>，它会将其标记为<strong>重复</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Okay. So uh when I showed the context gap scanner you also saw like an indicator of duplication right? So if today you have a document tomorrow you have version 2.0 zero and something else actually it will find out the same information is having in three different it it will also will find it. If you have only one it is changed it will take the latest updated one because as a human you changed it so it will take it as a source of truth right but if you have three versions of the same document that's a duplication and it will flag it as a duplicate</p>
+</details>
+<p><strong>观众</strong>: 对，但这是一个…你如何确保<strong>性能</strong>？假设一个10万字的文档，你只是更改了一个单词，比如说，其中的一个示例变了，</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: right but it's a s how do you ensure the performance Let's say document of 100,000 words just change a word like let's say there for example right has changed</p>
+</details>
+<p><strong>发言人</strong>: 好的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: okay</p>
+</details>
+<p><strong>观众</strong>: 所以你必须找到，比较那三个<strong>文档</strong>，你使用什么<strong>工具</strong>来确保？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: so you have to find compare those three documents tools you use to ensure</p>
+</details>
+<p><strong>发言人</strong>: 呃，嗯，我没有完全理解你的问题。实际上。呃，你是担心<strong>Token使用量</strong>吗？比如，我们使用了那么多<strong>Token</strong>，成本节约是多少？是的，正是，<strong>更改</strong>，维护整个<strong>数据库</strong>，对吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: uh Um I didn't quite get your question actually. Uh is it like the token usage you're worried about like uh the that many tokens that we used how how is what is the costsaving? Yeah, precisely changes maintain maintain that whole database right</p>
+</details>
+<p><strong>发言人</strong>: 我不知道，无论什么，对吗？我的问题是，你所展示的是一种<strong>理想情况</strong>，你有一个<strong>复制品</strong>，然后你重复使用它。但很快你就会有一个<strong>复制品</strong>，你假装它有那个<strong>差距</strong>，但实际上它没有包含<strong>最新信息</strong>，包含<strong>错误信息</strong>。所以你想保留那个。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: I don't know whatever right my question is well because what you presented is sort of a happy path where you have a cup it and then you reuse it but in a while you will have a where you pretend to have that gap but actually it doesn't contain up to date information contains wrong information. So you want to preserve that.</p>
+</details>
+<p><strong>发言人</strong>: 啊，好的。好的。呃，所以它可以根据创建时间或上次更新时间进行<strong>标记</strong>。你可以设置这样的<strong>过滤器</strong>。但假设你有一个包含<strong>错误信息</strong>的最新文档。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Ah okay. Okay. Uh so it can flag as per when it is created or last updated. You can set such kind of a filters. But let's say you have a latest document which has a wrong information.</p>
+</details>
+<p><strong>观众</strong>: 对，知道这一点，对吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: Right. know that right?</p>
+</details>
+<p><strong>发言人</strong>: 不，这是真的。呃，但是，例如，作为人类，对吧？你会去看<strong>文档</strong>，你让某人去看<strong>文档</strong>，那个人看了<strong>文档</strong>，并根据<strong>文档</strong>，这应该这样实现。那个人就会这样做，对吧？这并不是<strong>Agent</strong>或人类的问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: No that's true. uh but as for example as a human being right so you go and look into documentation you told somebody to look into documentation and the person looked into the documentation and as per the documentation this is be implemented in this way the person will do it right it's not an agent or a human issue</p>
+</details>
+<p><strong>观众</strong>: 太晚了。我的意思是，你解决了一个。<strong>Agent</strong>试图假设，所以它正在解决，但<strong>解决方案</strong>是错误的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: too late I mean you solved one and the agent is trying to assume so it's solving it but the solution is wrong</p>
+</details>
+<p><strong>发言人</strong>: 好的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Okay.</p>
+</details>
+<p><strong>观众</strong>: 所以你说有一个<strong>扫描器</strong>，很好。你每天运行它吗？成本会是多少？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: So you say there is a scanner fine. Do you run it daily? How much will it cost?</p>
+</details>
+<p><strong>发言人</strong>: 你可以有另一个<strong>进程点</strong>，它会尝试查看<strong>上次更新时间</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: You you can have another process spot that would try to see like last updated</p>
+</details>
+<p><strong>观众</strong>: 呃，尝试以某种频率运行一个<strong>进程</strong>，它会<strong>更新知识</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: uh try to see on some cadence try to run a process that will update the knowledge.</p>
+</details>
+<p><strong>发言人</strong>: 太棒了。成本会是多少？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Fantastic. How much will it cost?</p>
+</details>
+<p><strong>发言人</strong>: 呃，例如，呃，抱歉，你是在说…</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Uh for for example uh sorry you're saying</p>
+</details>
+<p><strong>观众</strong>: 比每天开更多的会议来<strong>入职</strong>某人或…那是一个强有力的说法，但我不认为它会花费那么多，就像<strong>AI</strong>的前提一样。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: less than than doing more meetings uh every day to onboard someone or That's a strong claim but I don't think it will cost that much as premise of AI.</p>
+</details>
+<p><strong>发言人</strong>: 是的。就像我说的，呃，当我测试它时，没有一个<strong>领域</strong>超过100k个<strong>Token</strong>。实际上。所以我认为我们不会。例如<strong>上下文差距扫描器</strong>，对吧？我不认为你需要每天运行它或任何东西。即使你每天运行，比如说100个<strong>Token</strong>，进行一次扫描。例如，对吧？如果你尝试开始使用所有这些，呃，所有这些<strong>上下文差距扫描器</strong>，我想你甚至烧不掉1美元。我想，如果我没记错的话，它已经有了，哦，你已经准备好了，好的，呃，好的，我现在就取消订阅。但我，我要回去捍卫两件事。一个是<strong>组合系统文档</strong>，所以我同意你的看法。所以<strong>规模</strong>，你必须解决这个问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Yep. As I said like uh when I tested it there is none of the domains which cross more than 100k tokens actually. So I don't think we will for example contact gap scanner right you I don't think like you have to do it like on a daily basis or anything even if you run daily basis like 100 tokens and do one scan for example right if you try to start hitting all of them uh all of you the context cap scanner I think you can't even burn like one $1 I think so if I'm not wrong it already had like oh you're ready okay uh okay I'll I'll cancel the subscription now But I go back and defend two things. One is a compository system documentation for so I agree with you. So scale you would have to solve this question.</p>
+</details>
+<p><strong>发言人</strong>: 好的。这也将取决于，<strong>数据变化</strong>的速度有多快。我想不会那么快。你达到了80%左右。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Okay. which is going to be depend also how fast the how fast the the data change I think not that much you get to like 80%</p>
+</details>
+<p><strong>观众</strong>: 是的，<strong>用例</strong> by <strong>用例</strong>，是的。还有其他问题吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: yeah use case by use case yeah any other questions</p>
+</details>
+<p><strong>发言人</strong>: 好的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: okay</p>
+</details>
+<p><strong>观众</strong>: 我怎么知道那是什么？呃…</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: how do I know that's uh</p>
+</details>
+<p><strong>发言人</strong>: 它，它实际会尽可能详细地列出。现在我还没有完全展示它做了什么，只是为了<strong>UI目的</strong>。呃，但每个<strong>工单</strong>，它实际发现了什么，比如，呃，它会写大约100到150行的<strong>Markdown文件</strong>并保存起来。这样你就能获得更多细节，以防你实际想了解。所以为了演示，我只是放了一些，你知道，漂亮的<strong>用户体验</strong>内容在上面，但你也有<strong>详细信息</strong>进行测试。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: it it it actually tries to detail out as much as possible. Right now I haven't actually exposed everything what it did just for the UI purpose. Uh but the all the per ticket what it actually found like uh it writes like a 100 or like 150 lines of uh markdown files and save it somewhere. So that gives you more details in case if you want to know actually. So for for the demo I just put the you know nice UX stuff on on top of it but you also have a detailed information at uh test.</p>
+</details>
+<p><strong>观众</strong>: 还有其他人有问题吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: Anyone else has any questions?</p>
+</details>
+<p><strong>观众</strong>: 我可以问一个吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: Can I have one?</p>
+</details>
+<p><strong>发言人</strong>: 是的，当然。请。对。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Yeah, sure. Go on. Right.</p>
+</details>
+<p><strong>观众</strong>: 简单的问题。哈？我毁了它。如果我理解没错，你的主张是：不是填补空白，而是发现空白。但如果把范围缩小到一个团队，几周内就能做到。我的意思是，如果你不感觉到它并继续问这些问题，那就有道理，对吧？所以在某个时候，你有了另一个价值。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: Easy one. Huh? I destroy if I translation right your claim is not not fill the gaps uh but discover but if you scope down to a team within weeks you can do I mean if you wouldn't feel it and keep asking those questions then make sense right so at some point you have another value</p>
+</details>
+<p><strong>发言人</strong>: 是的，所以你首先做一次，或者在第一次做多次，首先看到整个图景，你的<strong>知识库</strong>的现状是什么。首先在这个层面修复它，然后你再进入<strong>操作</strong>，对吧？你仍然可以实际，呃，你仍然可以继续用<strong>Agent</strong>和<strong>技能</strong>来做。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: yeah so you do it one time first of all or like multiple times at first see the whole picture first of all what is the state of your knowledge base first fix it uh at that level then you go into operations right you still can actually uh also you you can still continue doing it with the agent with skills.</p>
+</details>
+<p><strong>观众</strong>: 是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: Yep.</p>
+</details>
+<p><strong>发言人</strong>: 我认为这种提供<strong>知识</strong>的过程，当有新成员加入组织时，会频繁发生。所以，难道不能用<strong>Zoom通话</strong>来替代吗？把它们转换过来，并将其作为<strong>来源</strong>。假设所有的通话或所有的<strong>知识转移</strong>或<strong>介绍</strong>都发生了。或者团队，或者任何新成员加入，提问，你有权访问这些。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: And I think the same process of kind of providing that knowledge is happens pretty frequently when a new member joins the organization. So wouldn't a replacement that be just Zoom calls, transfer them and use them as source. Assuming all the calls or all the knowledge transfers or maybe introductions happen or team or whatever the new member join asking questions and you have access to that.</p>
+</details>
+<p><strong>发言人</strong>: 好的。所以你的意思是，你也可以提供所有的<strong>会议记录</strong>，而不是，呃，呃，进行循环，你的意思是，呃，那也可以做到，呃，如果你所有的讨论都是<strong>文档化</strong>的，所有的会议记录本身都是<strong>文档化</strong>的，但我不认为每个人的情况都一样。至少，呃…</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: Okay. So you mean like you can also give all the transcripts rather than uh uh doing the cycle you mean uh that can also be done uh if you're only have the all the time you have discussions in everything is documented meetings transcript itself but I don't think like that's the same case for everyone at least uh</p>
+</details>
+<p><strong>观众</strong>: 但更容易，我不知道，我不确定。我认为人们在团队中花费的时间，如果你使用<strong>会议记录</strong>，实际上那些是拥有更多<strong>Token</strong>的人，实际上有很多无用的会议，呃，那些<strong>会议记录</strong>实际上…</p>
+<details>
+<summary>Original English</summary>
+<p><strong>观众</strong>: but easier that I don't know I'm unsure I think the amount of time people spending in teams if you do use the transcripts actually those are the ones actually who which uh have more tokens actually there are so many useless meetings uh the transcripts actually</p>
+</details>
+<p><strong>发言人</strong>: 完全同意，但<strong>压缩</strong>只是一部分，然后是<strong>数据库</strong>的一部分。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: totally agree but compression only one and then part of the database</p>
+</details>
+<p><strong>发言人</strong>: 可能是，这 again 取决于<strong>机构</strong>与<strong>机构</strong>之间的差异，对吧？所以你是那种更喜欢开会，通过<strong>对话</strong>解决问题，那些<strong>对话</strong>中包含数据，还是你的<strong>Confluence</strong>或类似东西中包含数据。如果你有数据，就使用那些<strong>会议记录</strong>作为你的<strong>知识库</strong>。同时，就像<strong>压缩</strong>一样，它实际是有效的，那更有用。是的。还有其他人吗？还有问题吗？没有。都很好。呃，那么，呃，非常感谢大家参加这次会议。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>发言人</strong>: could be again it depends upon institution to institution right so are you like more into meetings, have solving problems within the conversations and those conversations has the data or like your conflence or things has the data. If you have it, use that those transcripts as your knowledge base and at the same time like the compression actually that works actually that that is more useful. Yeah. Anyone else? Any questions? No. All good. Uh then uh thank you so much uh for attending this session.</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=GitHub" class="entity-link company-link">GitHub</a>, 
+                
+                  <a href="/search/?q=Confluence" class="entity-link company-link">Confluence</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Copilot" class="entity-link product-link">Copilot</a>, 
+                
+                  <a href="/search/?q=Jira" class="entity-link product-link">Jira</a>, 
+                
+                  <a href="/search/?q=MCP servers" class="entity-link product-link">MCP servers</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-agents/">ai-agents</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/knowledge-management/">knowledge-management</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">institutional-knowledge</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">demand-driven-context</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">knowledge-gap-discovery</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

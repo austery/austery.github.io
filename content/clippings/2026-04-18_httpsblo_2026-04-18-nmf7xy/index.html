@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Al选择指南：干活用Claude，科研用Gemini，写码用GPT · 乔木博客</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="Al选择指南：干活用Claude，科研用Gemini，写码用GPT · 乔木博客" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">Al选择指南：干活用Claude，科研用Gemini，写码用GPT · 乔木博客</span>
+      <span data-pagefind-meta="speaker" style="display:none;">向阳乔木</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-04-18
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/xiang-yang-qiao-mu/">向阳乔木</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://blog.qiaomu.ai/2026-04-18-nmF7XY" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-04-18
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">文章对比了Claude Opus 4.7、Gemini 3.1 Pro和GPT-5.4在通用能力上的最新评测结果，三者并列第一。文章指出，尽管通用能力趋同，模型在具体场景下各有专长：Claude Opus 4.7擅长执行复杂工作任务，Gemini 3.1 Pro在科研和科学推理方面领先，GPT-5.4则在长周期编程和批判性思维方面占优。作者建议用户根据具体需求选择合适的模型，并提到了Claude Opus 4.7的新功能如任务预算。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>乔木博客</p>
+<p>全部</p>
+<p>AI工具</p>
+<p>AI教程</p>
+<p>AI生成</p>
+<p>AI资讯</p>
+<p>健脑房</p>
+<p>播客解读</p>
+<p>论文学习</p>
+<h1>Al选择指南：干活用Claude，科研用Gemini，写码用GPT</h1>
+<p>AI资讯</p>
+<p>·</p>
+<p>2026年4月18日</p>
+<p>·</p>
+<p>376 次阅读</p>
+<p>·</p>
+<p>约 6 分钟</p>
+<p>评测机构Artificial Analysis刚发布了Claude Opus 4.7的测试结果：57分，和GPT-5.4、Gemini 3.1 Pro并列第一。</p>
+<blockquote>
+<p>https://x.com/ArtificialAnlys/status/2045292578434875552</p>
+</blockquote>
+<p>这是这个榜单历史上第一次出现三家同时登顶的情况。</p>
+<p>Anthropic、OpenAI、Google，三个不同的技术路线，最后在同一个分数上相遇。</p>
+<p>准确说，Opus 4.7的实际得分是57.3，Gemini 3.1 Pro是57.2，GPT-5.4是56.8。</p>
+<p>但这个榜单的误差范围是正负1分，所以官方认为这是平局。</p>
+<p>通用能力的竞赛可能已经接近尾声，真正的差异在具体场景。</p>
+<h2>谁在哪方面最强</h2>
+<p>虽然总分一样，但三个模型的能力分布完全不同。</p>
+<p>Claude Opus 4.7在实际工作任务上遥遥领先。</p>
+<p>它在GDPval-AA这个测试中拿到1753分，比第二名高出79分。</p>
+<p>这个测试不是做选择题，而是模拟真实工作。</p>
+<p>44种职业，9个主要行业，让AI自己用命令行、开浏览器、调工具去完成任务。</p>
+<p>比如分析一份财务数据，写一个技术文档，或者调试一段代码。</p>
+<p>换句话说，如果你想让AI像助手一样帮你干活，处理那种需要多个步骤、调用多种工具的复杂任务，Opus 4.7现在是最靠谱的选择。</p>
+<p>相比上一代4.6版本，它在这个测试上提升了134分。</p>
+<p>Gemini 3.1 Pro的强项是知识和科学推理。</p>
+<p>它在HLE（人类最后的考试）、GPQA Diamond（研究生级别物理化学题）、SciCode（科学编程）这些学术测试中都排第一。</p>
+<p>如果你的工作涉及科研、需要处理专业知识，Gemini更合适。</p>
+<p>GPT-5.4则在长周期编程和科学推理上占优。</p>
+<p>它在TerminalBench Hard（复杂终端操作）和CritPt（批判性思维）这些需要长时间思考、多轮迭代的任务中表现最好。</p>
+<p>三家各有所长，这才是正常的。</p>
+<p>就像三个学生考了同样的总分，但一个数学满分，一个语文满分，一个理综满分。</p>
+<h2>更聪明的表现：少说话，少犯错</h2>
+<p>Opus 4.7相比上一代，有两个值得注意的改进。</p>
+<p>第一个是效率提升。</p>
+<p>完成同样的测试，4.7版本只用了1.02亿个输出token，比4.6版本少了35%，但得分反而高了4分。</p>
+<p>这意味着它不再像以前那样啰嗦了。</p>
+<p>以前可能要解释三遍的事情，现在一遍说清楚。</p>
+<p>虽然官方定价没变，还是输入每百万token 5美元、输出25美元，但实际使用成本下降了。</p>
+<p>第二个是学会了承认不知道。</p>
+<p>在AA-Omniscience（全知指数）这个测试中，Opus 4.7的得分从14分跃升到26分，仅次于Gemini 3.1 Pro的33分。</p>
+<p>这个提升不是因为它知道更多，而是因为它减少了胡说八道。</p>
+<p>具体数据很说明问题：</p>
+<p>准确率：没变</p>
+<p>幻觉率：从61%降到36%，下降了25个百分点</p>
+<p>尝试回答率：从82%降到70%</p>
+<p>它是怎么做到的？遇到不确定的问题，选择不回答。</p>
+<p>一个AI承认自己不知道，比信心满满地给出错误答案要好得多。</p>
+<p>特别是在需要准确性的场景，比如医疗咨询、法律建议、技术支持，一个错误的答案可能造成严重后果。</p>
+<h2>新功能：任务预算</h2>
+<p>Anthropic这次还加了一个挺实用的功能，任务预算（Task Budgets）。</p>
+<p>简单说，你可以给AI设定一个token总量上限，它会看到一个倒计时，然后自己规划怎么在预算内完成任务。</p>
+<p>快用完的时候，它会调整策略，确保优雅地收尾，而不是说到一半突然停止。</p>
+<p>这就像给员工定项目预算一样。</p>
+<p>你告诉它&quot;这个任务最多用5000个token&quot;，它会自己分配，哪些地方详细说，哪些地方简略带过，最后在预算内给你一个完整的结果。</p>
+<p>这个功能现在还在公测阶段，但思路很实用。</p>
+<p>特别是对于那些需要控制成本的应用场景，比如客服机器人、自动化报告生成。</p>
+<p>另外，Opus 4.7还增加了一个新的推理强度档位&quot;xhigh&quot;（超高），介于&quot;high&quot;（高）和&quot;max&quot;（最大）之间。</p>
+<p>现在完整的档位是：低、中、高、超高、最大。</p>
+<p>档位越高，AI思考得越深入，但也越慢、越贵。</p>
+<p>还有一个变化：</p>
+<p>Extended Thinking（扩展思考）功能被完全移除了，现在只保留Adaptive Reasoning（自适应推理）。</p>
+<p>这意味着Anthropic在简化产品线，专注于一个更好的推理模式。</p>
+<h2>这个局面意味着什么</h2>
+<p>三个模型并列第一，表面上看是平局，实际上反映了AI发展进入了新阶段。</p>
+<p>通用能力的天花板可能真的近了。</p>
+<p>当三家顶尖公司用完全不同的技术路线，都达到差不多的智能水平时，说明这个方向上容易摘的果实已经摘得差不多了。</p>
+<p>继续往上提升，可能需要更多的资源、更长的时间、更大的突破。</p>
+<p>接下来是场景化竞争。</p>
+<p>Anthropic专注于实际工作任务的自主执行，Google深耕科学研究和知识处理，OpenAI押注复杂推理和长周期任务。</p>
+<p>每家都在自己擅长的领域继续深挖。</p>
+<p>对普通用户来说，这其实是好消息。</p>
+<p>你不用再纠结哪个模型&quot;最强&quot;，而是可以根据具体需求选择：</p>
+<p>需要AI帮你处理复杂工作任务，用Claude Opus 4.7；</p>
+<p>做科研或者需要处理专业知识，用Gemini 3.1 Pro；</p>
+<p>写复杂代码或者需要深度推理，用GPT-5.4。</p>
+<p>工具越来越专业化，这才是成熟市场该有的样子。</p>
+<p>© 2026</p>
+<p>·</p>
+<p>向阳乔木</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=乔木" class="entity-link person-link">乔木</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>, 
+                
+                  <a href="/search/?q=Artificial Analysis" class="entity-link company-link">Artificial Analysis</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Claude Opus 4.7" class="entity-link product-link">Claude Opus 4.7</a>, 
+                
+                  <a href="/search/?q=Gemini 3.1 Pro" class="entity-link product-link">Gemini 3.1 Pro</a>, 
+                
+                  <a href="/search/?q=GPT-5.4" class="entity-link product-link">GPT-5.4</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-models/">ai-models</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">model-comparison</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-application/">ai-application</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">task-automation</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">scientific-reasoning</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

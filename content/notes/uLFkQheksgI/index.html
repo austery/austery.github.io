@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>资源、努力与正确逻辑为何仍失败？Facebook Marketplace电商项目复盘与职场博弈</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="资源、努力与正确逻辑为何仍失败？Facebook Marketplace电商项目复盘与职场博弈" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">资源、努力与正确逻辑为何仍失败？Facebook Marketplace电商项目复盘与职场博弈</span>
+      <span data-pagefind-meta="speaker" style="display:none;">课代表立正</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2025-10-20
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/geopolitics-2/">geopolitics</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/geopolitics-3/">geopolitics</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ke-dai-biao-li-zheng/">课代表立正</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=uLFkQheksgI" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2025-10-20
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本期视频深入复盘了Facebook Marketplace电商项目从全力投入到最终失败的全过程。作者坦诚分享了项目失败的深层原因，包括组织内部的资源博弈、高层政治斗争，以及Facebook广告驱动的商业模式与电商本质的冲突。文章详细阐述了如何巧妙沟通失败结果，并通过实验验证用户行为，最终促成C2C配送的成功转型。同时，作者强调了在职场中理解宏观局势和高层博弈的重要性，远超具体执行层面的努力。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>引言：坦诚分享职业生涯的经验教训</h3>
+<p>大家好，今天我们来聊聊“Marketplace”系列的第三期。这个系列旨在通过我职业生涯中非常具体的事件，坦诚地分享<strong>经验教训</strong>（lessons: 从经历中获得的知识或启示）。我希望通过我当时的经历、感受和事后复盘，尤其是在多年后有了新的信息和认知基础上的复盘，帮助大家更清楚地看到一些东西，并分享一些感受。</p>
+<p>例如，“Marketplace”系列的第一集“<strong>注定失败的设定</strong>”（set up for failure: 指环境或条件从一开始就导致失败的局面），当时就有很多同学看了视频后表示，原来我也有这样的体会，他们现在也正在承受类似的痛苦，并意识到这可能不是自己的错，而是因为<strong>设定</strong>（set up: 环境或条件的整体安排）不好。第一集讲述了“注定失败的设定”，第二集则讲述了我自己的蜕变，即我如何从一个做任何事情都要先上<strong>模型</strong>（model: 在数据科学中，指用于预测或分析的数学或统计结构）、非常<strong>技术驱动</strong>（technical driven: 决策和方向主要由技术能力和发展趋势决定的方式）的<strong>数据科学家</strong>（DS: Data Scientist的缩写，负责收集、分析和解释大量数据以帮助决策的专业人员），转变为一个<strong>影响驱动</strong>（impact driven: 决策和行动主要以实现实际业务影响为目标的方式）的数据科学家。这包括我的<strong>总监</strong>（director: 公司中的高级管理职位）曾当着我的面，用半小时完成了一个非常<strong>高层级</strong>（high level: 概括性强、不涉及具体细节的）的、供<strong>副总裁</strong>（VP: Vice President的缩写，公司中的高级管理职位）们审阅的报告，而我原以为那至少需要一周时间。这些亲身体验给我带来了巨大的转变。如果大家对前两期视频感兴趣，可以查看我放在这里的截图，视频下方也会提供链接。</p>
+<h3>Marketplace电商项目：从全力以赴到实验失败</h3>
+<p>今天我们要讲的故事是，第二集结尾提到我们所有人加班加点完成了一件大事，但结果这个“大事”被实验证明是一个错误。具体是什么事呢？就是在Marketplace的主信息流中，我们尝试引入<strong>电商</strong>（e-commerce: Electronic Commerce的缩写，指通过互联网进行的商品或服务交易）体验。这就像你打开闲鱼，却发现里面显示的是天猫、淘宝或拼多多的商品。当时所有人加班加点，我们把这个体验做得非常好，包括各种<strong>过渡</strong>（transition: 页面或状态之间的平滑转换）、<strong>结账</strong>（check out: 完成购买流程）等环节都做得非常流畅。然而，结果不仅<strong>转化率</strong>（conversion: 指访问者完成特定目标行为（如购买、注册）的比例）极差，甚至<strong>损害</strong>（hurt: 造成负面影响）了整个Marketplace乃至Facebook的<strong>日活跃用户</strong>（DAU: Daily Active Users的缩写，指每天使用产品或服务的独立用户数量）、<strong>留存率</strong>（retention: 指用户在一段时间后继续使用产品或服务的比例）和<strong>停留时间</strong>（time spent: 用户在产品或服务上花费的总时间）。这个实验很快，大概在一两周内就被紧急叫停了。</p>
+<h3>沟通失败：如何传达坏消息与项目复盘</h3>
+<p>这时，我面临一个非常艰难或<strong>棘手</strong>（tricky: 复杂、难以处理）的处境：作为这个项目的<strong>数据科学家</strong>（data scientist: 负责收集、分析和解释大量数据以帮助决策的专业人员），我需要如实汇报项目出了什么问题，真实的实验结果是什么，以及我们从中获得了什么<strong>经验教训</strong>（learning: 从经历中获得的知识或启示）。关键在于，很多人做这个项目是希望它能成为一个大功劳，从而获得晋升。现在项目不<strong>上线</strong>（launch: 将产品或服务正式发布给用户使用）了，大家就无法将其作为晋升的资本。无论怎么说，这都是一个<strong>坏消息</strong>（bad news: 不利或负面的信息），如何<strong>传达</strong>（deliver: 传递信息或消息）这个坏消息变得至关重要。</p>
+<p>在讲述如何传达坏消息之前，更重要的是接下来要做什么。看来这个视频要变成四集了，我原以为三集就能讲完。第四集我们将讲述我们后来做了什么，使得我们的<strong>营收</strong>（Top Line: 公司的总收入，通常指销售额）实现了26倍的增长。总之，这个项目失败的<strong>沟通</strong>（communication: 交流信息或思想）结束后，过了一段时间，我们的老板Deb Liu给我们设定了一个10倍的指标。在此之前，两年内，我们的营收几乎没有变化，或者只有少量增长。她表示，如果不能实现10倍增长，这个项目就没有意义。几乎所有人都觉得这不可能，但我当时觉得这或许可行，甚至认为这是唯一值得做的事情。如果不做10倍增长，我也觉得没什么意思。结果后来我们确实实现了一些东西，最终实现了26倍的增长。第四集再详细讲这个。</p>
+<p>第三集，我将重点讲述如何<strong>沟通</strong>（communicate: 交流信息或思想）这次<strong>失败</strong>（failure: 未能达到预期目标或结果），以及我认为更重要的一点：整个事件的<strong>背景</strong>（context: 事情发生的环境或相关信息）到底是什么。两年后，一些大佬在私下场合向我透露了一些我一直困惑的问题。我有两个主要困惑：第一，为什么我们一定要在Marketplace上做电商？Marketplace本来是一个本地化的“闲鱼”模式，即使不做电商也可以做得很好。第二，为什么Marketplace一直不受待见，或者说得不到资源？据我了解，整个Facebook应用上有大几千甚至上万的员工，而Marketplace团队只有几百人。如果你和很多人聊，几乎所有人都说他们打开Facebook的唯一原因就是使用Marketplace，包括我们收购的那个Host也是这么说的。Marketplace是Facebook应用上非常核心、非常重要的<strong>功能</strong>（feature: 产品或服务所具备的特定能力），但它一直得到的<strong>投资</strong>（investment: 为获取未来收益而投入资源的行为）却很少。</p>
+<h3>深层原因：组织博弈与资源分配的困境</h3>
+<p>后来，当电商成为Facebook上非常重要的事情时，扎克伯格亲自抓Facebook Shops和Instagram Shops。然而，如果你看Instagram Shops和Facebook Shops带来的<strong>交易</strong>（transaction: 双方之间进行的商品、服务或资金交换）量，它们加起来还不到我们Marketplace<strong>线上交易</strong>（online transaction: 在线完成的商品或服务交易）的十分之一。这是在我们实现26倍增长之后的数据，在那之前可能大家差不多。即使在这种情况下，我们比他们多10倍，但负责<strong>诚信支付</strong>（integrity payment: 负责支付系统安全和合规性的团队或功能）等<strong>横向团队</strong>（horizontal team: 跨越多个产品或业务线提供支持的团队）的<strong>优先支持</strong>（priority support: 优先提供帮助或资源）对象仍是Facebook Shops和Instagram Shops，而不是Marketplace。我们想做很多事情都推不动，甚至我们把SQL代码都写好了，让<strong>诚信团队</strong>（integrity team: 负责确保平台诚信和安全的团队）去做一些<strong>执行</strong>（enforcement: 强制实施规则或政策），他们都不做。他们会说：“这不是我们的<strong>优先事项</strong>（priority: 需要首先处理或给予更多关注的事情），我们未来可能会考虑，或者你们能给我们一些<strong>人头数</strong>（headcount: 指团队或部门的员工数量），我们就可以帮你们做。”这让我非常不解，尤其是我知道我离开后，Marketplace似乎还被进一步<strong>收缩</strong>（reduced: 规模或范围缩小）了。这么重要的事情，本来人就不够，结果还被收缩，这是为什么呢？</p>
+<p>我不能未经他同意就说出具体名字，但我可以告诉大家答案是什么：Marketplace是由Deb Liu做起来的。然而，在Marketplace起飞的这段时间，很多大佬想要<strong>收编</strong>（take over: 接管或控制）Marketplace，但Deb Liu没有答应，她把Marketplace牢牢抓在自己手里。这背后可能还有一个重要但不重要的信息是：Deb Liu曾有机会担任<strong>Facebook应用负责人</strong>（head of Facebook apps: 负责管理Facebook所有核心应用的高级主管），她与Fidji存在竞争。Fidji负责的App是视频，Deb Liu负责的是Marketplace和Commerce（电商）。后来Fidji成为了Facebook应用负责人，Deb Liu则<strong>向Fidji汇报</strong>（report to Fidji: 在组织结构中，指下级向上级汇报工作）。从现在来看，她们之间的关系也是好的，但总之有这样一个背景。在这种背景下，当Deb Liu还在Facebook时，如果她能为Marketplace争取资源，我们就能得到资源。但她离开后，没有大佬认为Marketplace是自己人、是<strong>嫡系</strong>（direct lineage: 指直接的、核心的派系或产品）、是他们的产品、是他们的<strong>范围</strong>（scope: 职责、权限或影响的界限）。在这种时候，Marketplace就很难得到支持和资源。做得好，那些大佬不觉得自己脸上有光；做得不好，<strong>谁在乎</strong>（who cares: 表示不关心或不重视），反正又不是我的地盘。所以，这就是Marketplace在很多时候，即使东西做得好也得不到相应奖赏，作为一个如此重要的应用，得到的资源却与其地位不相称的一个根本原因。</p>
+<h3>电商困境：Facebook的商业模式冲突与用户行为</h3>
+<p>那为什么要在Marketplace上做电商呢？官方的理由是这样的：因为苹果<strong>iOS 14隐私政策</strong>（iOS 14 privacy: 苹果公司在iOS 14中引入的，旨在增强用户隐私保护的政策，特别是对广告追踪的限制）等事情，会导致Facebook损失很多<strong>第三方信号</strong>（third party signal: 由第三方平台（如广告商）收集的用户数据），所以Facebook需要想方设法地<strong>产生更多第一方信号</strong>（generate more first party signal: 产生更多由产品或服务提供商直接收集的用户数据）。而<strong>产生</strong>（generate: 创造或生产）这个<strong>第一方信号</strong>（first party signal: 由产品或服务提供商直接收集的用户数据）最好的方式就是通过<strong>站内交易</strong>（on-site transaction: 在平台内部完成的商品或服务交易）。你在Facebook上买了东西，那我的<strong>排名模型</strong>（ranking model: 用于决定内容或产品显示顺序的算法模型）就会有一个很好的<strong>信号</strong>（signal: 数据或信息指示）。问题是，这个东西理论上成立，但我在Marketplace上做了这么久，我一直呼吁：如果这个东西真的是我们带来的价值，那我们是不是应该和<strong>排名团队</strong>（ranking team: 负责优化内容或产品排序的团队）合作，和<strong>广告团队</strong>（ads team: 负责广告产品开发和运营的团队）合作，去做一个实验，来看看我们这些<strong>信号</strong>（signal: 数据或信息指示）是不是真的给他们的<strong>模型</strong>（model: 在数据科学中，指用于预测或分析的数学或统计结构）带来了价值呢？整个事情背后就非常暧昧，大家背后都是这么说，但没有一个人真的去发一个<strong>帖子</strong>（post: 在社交媒体或论坛上发布的内容）说我们做电商的原因就是这个。</p>
+<p>后来扎克伯格在<strong>疫情</strong>（covid: COVID-19全球大流行）期间又说，Facebook Shops是我们的<strong>优先事项</strong>（priority: 需要首先处理或给予更多关注的事情），但我不觉得Facebook Shops能成功。后来Facebook Shops也确实没有成功，很多人加入后又很快<strong>流失</strong>（churn: 用户停止使用产品或服务）了。那个时候扎克伯格的理想是<strong>连接人</strong>（connect people: 连接用户）和<strong>连接商业</strong>（connect with business: 连接商家），去<strong>赋能</strong>（enable: 使能够）这些<strong>中小企业</strong>（SMB: Small and Medium-sized Businesses的缩写），这可能在政治上或其它方面都是一件好事。但这个东西本身是非常难做的，为什么？因为Facebook的广告太赚钱了。Facebook广告赚钱到什么地步呢？你卖一个10块钱的东西，5块钱可能要交给Facebook。也就是说，你制造一个东西然后出去卖，你的净利率可能只有5%到10%，而毛利率比如说是百分之六七十。你三块钱生产一个东西，然后10块钱卖掉，那你每卖一单可以赚7块钱的毛利。但这7块钱的毛利你会怎么花呢？你先付房租、水电、人工这些东西，接下来你就想方设法去卖更多的东西，那卖更多的东西你就去打广告。你会打到什么程度为止呢？你会打到这个产品不赚钱为止。你会打到你这7块钱里边，可能有5块钱都是用来买广告的，这个时候你才会停。因为你4块钱买广告的时候，你发现你还能赚一块钱，那你肯定就会想方设法扩大规模，直到你的<strong>客户获取成本</strong>（CAC: Customer Acquisition Cost的缩写，指获取一个新客户所需的平均成本）成为了5块钱，你没钱可赚了，你才会停。这意味着Facebook站在这里面，它不需要去生产、不需要去运营、不需要去管那么多精细化的东西，你不需要去管物流，你只要在这里有<strong>流量</strong>（traffic: 网站或应用的用户访问量），10块钱销售额的一个产品里边，你就能赚5块钱。那我这个时候我干什么还要辛辛苦苦地去搞那么多其他的东西，最后去赚那一块钱甚至五毛钱呢？就没有意义，对吧？这就是为什么电商在Facebook这样的公司是非常难以做的。但广告在一个电商公司是很好做的。所以扎克伯格的理想很好，什么可以<strong>连接人</strong>（connect people: 连接用户）和<strong>商业</strong>（business: 商业），但Facebook大家就很难真的把这个东西给做出来。</p>
+<p>TikTok Shops其实也是这样的，但TikTok Shops为什么要做呢？据TikTok的说法，是因为这样它才能更深度地参与实体经济，让美国办它的时候更难办。这件事是不是有道理就见仁智了，我在这里不评论。我想说的是，这里面大家只要知道一个背景，就是你在Facebook这样一个大家赚钱很容易的公司，去做一个赚钱很累的电商是非常难的。</p>
+<h3>验证假设：用户行为与转换成本的实验</h3>
+<p>回过头来，我们讲一下当初如何<strong>传达</strong>（deliver: 传递信息或消息）这个<strong>坏消息</strong>（bad news: 不利或负面的信息），以及我们获得的<strong>经验教训</strong>（learning: 从经历中获得的知识或启示），最后如何用另一个实验来<strong>盖棺定论</strong>（conclude decisively: 最终确定）这件事情，从而让大家接受这个结果，然后<strong>继续前进</strong>（move on: 继续进行）去找下一个方向。</p>
+<p>首先，这个<strong>备忘录</strong>（note: 记录或报告）本应由我来写，但最后实际上是我们的<strong>产品经理</strong>（PM: Product Manager的缩写，负责产品规划、开发和市场推广）写，并和我一起发布的。因为这件事确实事关重大，而且我很难把它沟通清楚。而那个写这个备忘录的<strong>产品经理</strong>（PM: Product Manager的缩写）其实获得了很大的<strong>曝光</strong>（visibility: 被关注或被看到的机会），有很多好处。我们的那个<strong>产品经理</strong>（PM: Product Manager的缩写）有<strong>激励</strong>（incentive: 鼓励或刺激）一起去做这件事情。我在第一集有讲过，当时有一个<strong>产品经理主管</strong>（PM lead: 产品经理主管）跟我特别不对付，所以他是主导这件事情的，他是逼着大家加班把这件事情给做出来的。我如果在这个时候再说这个东西不行，我觉得我肯定要被干掉的。所以说我也乐见我们的<strong>产品经理</strong>（PM: Product Manager的缩写）其实跟那个<strong>产品经理主管</strong>（PM lead: 产品经理主管）关系很好，然后她去<strong>沟通</strong>（communicate: 交流信息或思想）这件事。所以说，你问我现在应不应该把这件事让给<strong>产品经理</strong>（PM: Product Manager的缩写），我觉得在当时的那个情况下，还是应该让给那个<strong>产品经理</strong>（PM: Product Manager的缩写）去主导这件事的。可是长期来看，这件事肯定应该是<strong>数据科学家</strong>（DS: Data Scientist的缩写）来做，因为这导致裁判员的身份变成了一个<strong>产品经理</strong>（PM: Product Manager的缩写），这其实是不好的，<strong>数据科学家</strong>（DS: Data Scientist的缩写）是要做裁判员的。那是个例外，我还是很感激她出来写这个备忘录的。</p>
+<p>我记得当时我们就加班加点，花了一两天时间把这个东西给做出来，然后铺了很多数据，把这个实验数据也反复<strong>验证</strong>（verify: 确认真实性或准确性），变得特别清楚。她写这个备忘录的<strong>框架</strong>（framing: 呈现信息的方式）是：我们<strong>验证</strong>（validate: 确认有效性或正确性）我们的什么<strong>假设</strong>（hypothesis: 基于已知事实提出，有待验证的解释），然后我们得到了什么<strong>经验教训</strong>（learning: 从经历中获得的知识或启示）。我不记得具体内容了，我离开公司的时候肯定也没有<strong>复制</strong>（copy: 复制）这些东西。所以说我的印象就是，她说我们这半年可能有两个还是三个核心<strong>假设</strong>（hypothesis: 基于已知事实提出，有待验证的解释）需要去<strong>验证或证伪</strong>（validate or falsify: 确认其正确性或证明其错误）。其中一个<strong>假设</strong>（hypothesis: 基于已知事实提出，有待验证的解释）就是在主信息流上做这个电商到底行不行。结果这个实验结果告诉我们不行，它是不好的。所以说我们把这个实验<strong>终止</strong>（kill: 停止或取消）了。这是一个非常<strong>负责任的事情</strong>（responsible thing: 负责任的行为）。搞清了这个<strong>假设</strong>（hypothesis: 基于已知事实提出，有待验证的解释）之后，接下来是什么行动步骤，我觉得那些后面其实都不重要，因为也没有真的按照那个行动步骤来。可是这个<strong>框架</strong>（framing: 呈现信息的方式）本身是好的，就是把这样一个坏事，起码你去注重它的积极一面。确实它的积极一面就是我们有这个<strong>假设</strong>（hypothesis: 基于已知事实提出，有待验证的解释），然后我们做了一个很大的实验，然后我们非常加速了我们<strong>学习</strong>（learning: 学习）的过程，然后告诉我们这件事是行不通的。确实是这个的积极一面。如果说没有其他人情因素的掺杂的话，我觉得话这么说就是应该的。大家看到这个也应该<strong>庆祝这个经验</strong>（celebrate the learning: 庆祝从经验中获得的知识），但是就因为加班很久，和大家希望靠这个<strong>晋升</strong>（promotion: 职位或等级的提升），所以说大家看了之后，<strong>“太好了，你有了这么好的经验”</strong>（oh great you had a such a great learning: 一句带有讽刺意味的表述），可是心里肯定还是不开心的。</p>
+<p>这样<strong>沟通</strong>（communicate: 交流信息或思想）之后呢，大家就在想接下来应该做什么。那这个时候，就有一个永恒的问题出现了：当你一件事情没做成的时候，有两种可能，第一个就是这件事本身就不能成功，第二是你的<strong>执行</strong>（execution: 实施计划或策略的过程）做得不好。你是没有办法分辨这两件事的，就是你永远可以说<strong>执行</strong>（execution: 实施计划或策略的过程）做得还不够好，对吧？你永远可以说我<strong>执行</strong>（execution: 实施计划或策略的过程）可以做得更好一点。那你如果真的去挑错的话，你肯定能挑出来很多错。那什么是够好，什么是不够好呢？什么是标准呢？这是没有办法说清楚的。</p>
+<p>那这个时候我后来的<strong>经理</strong>（manager: 管理者），当时是我的<strong>技术主管</strong>（Tech lead: 负责技术方向和团队技术指导的领导者），他做了一个非常聪明的实验，这个我一直非常佩服他。我其实在<strong>领英</strong>（LinkedIn: 一个职业社交平台）上有写文章去讲这件事。他做的这个实验是怎么做的呢？就是同样的产品，而且是同样的这种<strong>本地</strong>（local: 本地的）产品，就是大家平时在Marketplace看到的一些东西。但是有一些产品呢，我们可以把它的这个<strong>背景</strong>（background: 图像或场景中的背景部分）给<strong>移除</strong>（remove: 去除或删除）掉。就比如说，现在大家看到我是有一个这个<strong>背景</strong>（background: 图像或场景中的背景部分），但是我也可以把我自己的<strong>背景</strong>（background: 图像或场景中的背景部分）<strong>移除</strong>（remove: 去除或删除）掉，变成一个<strong>白色背景</strong>（white background: 以白色作为图像背景）。他就同样的产品，同样的<strong>排名</strong>（ranking: 内容或产品按特定规则排序的结果），然后同样的这个<strong>商品描述</strong>（listing descriptions: 对商品特点、功能等进行的文字说明），什么都没有变，就是把这个封面图从<strong>情境背景</strong>（in contexts background: 图像中包含产品实际使用环境的背景）变成了一个<strong>白色背景</strong>（white background: 以白色作为图像背景），然后就放到一起做<strong>A/B测试</strong>（A/B test: 一种对比实验方法，通过比较两个版本（A和B）的效果来确定哪个更好）。结果发现那个<strong>白色背景</strong>（white background: 以白色作为图像背景）的那些产品，它们各种的<strong>转化</strong>（conversion: 转化率的简称）啊，这个<strong>产品数据页</strong>（product data page: 展示商品详细信息和规格的页面）的<strong>入口</strong>（entrance: 进入某个页面或功能的方式）啊，或者说<strong>留存</strong>（retention: 留存率的简称）啊等等，都非常非常的差。</p>
+<p>那这个实验背后，其实是有一个<strong>假设</strong>（hypothesis: 基于已知事实提出，有待验证的解释）的。这个<strong>假设</strong>（hypothesis: 基于已知事实提出，有待验证的解释）是什么？就是Marketplace的<strong>用户</strong>（user: 使用产品或服务的人）上Marketplace其实想找的就是这种<strong>本地</strong>（local: 本地的）的产品。而Marketplace上绝大多数的广告都是这种<strong>白色背景</strong>（white background: 以白色作为图像背景），或者说长得就像电商的产品。那Marketplace的<strong>用户</strong>（user: 使用产品或服务的人）第一，他找的就是这种我身边的这种产品；第二，我又不喜欢广告。所以说我看到这个白色的东西，要么我以为他是广告就直接划走了，要么就是我觉得这个东西它<strong>打磨</strong>（polish: 使产品或内容更完善、更精致）得很好，它看上去像是一个新东西，但是，我为什么要来Marketplace上买新东西呢？</p>
+<p><strong>产品经理</strong>（PM: Product Manager的缩写），就是当时<strong>提议</strong>（propose: 提出建议或计划）在Marketplace上做电商的人，他们的故事其实理论上道理上都是说得通的。就是我Marketplace上有这么多的人，然后这些人都有<strong>购买意图</strong>（buying intent: 用户购买某种产品或服务的倾向），对吧？大家上Marketplace上不就是买东西吗？那如果我有足够好的<strong>产品</strong>（product: 提供给市场以满足需求或欲望的物品或服务），我有足够好的<strong>价格</strong>（price: 商品或服务的价值量化），我有足够好的<strong>物流</strong>（logistics: 商品从生产地到消费地的运输、仓储等过程），我就可以让大家来买。听上去这个逻辑就是无懈可击，但是实际上，大家就是不来Marketplace上买这些电商<strong>产品</strong>（product: 提供给市场以满足需求或欲望的物品或服务）。如果大家要买电商<strong>产品</strong>（product: 提供给市场以满足需求或服务），大家去亚马逊上买，大家不会去给Marketplace这样一个新的东西一个机会的。我后来也是意识到了这件事情，所以说我<strong>领英</strong>（LinkedIn: 一个职业社交平台）上写的第一篇<strong>备忘录</strong>（note: 记录或报告）就是<strong>转换成本</strong>（switching cost: 用户从一个产品或服务转向另一个时所需要付出的成本，包括金钱、时间、精力等）这件事，其实是非常非常高的。你可以跟大家说，就是我的<strong>产品</strong>（product: 产品）<strong>几乎和亚马逊一样好</strong>（almost as good as Amazon: 接近但未达到同等水平），我的<strong>价格</strong>（price: 价格）<strong>几乎一样好</strong>（almost as good: 几乎一样好），我的<strong>物流</strong>（logistics: 物流），我的<strong>支付</strong>（payment: 支付）<strong>几乎一样好</strong>（almost as good: 几乎一样好），甚至我的<strong>退货</strong>（return: 退货）<strong>几乎一样好</strong>（almost as good: 几乎一样好），<strong>他们不在乎</strong>（they don’t care: 他们不关心）。你其实没有人家好，而且就算你真的做到和人家一样好了，我为什么不在亚马逊呢？这个东西我是试用过很多次，我<strong>信任</strong>（trust: 对某人或某事物的可靠性、诚实性或能力的信念），我干嘛要在Facebook上买呢？就算你比别人做到了一两倍好，可能别人都不<strong>在乎</strong>（care: 关心），你可能要做到十倍好，别人才真的<strong>在乎</strong>（care: 关心）这件事。而且还是从小范围的，就是他总是要有一个<strong>信任</strong>（trust: 信任）的过程，他要一点一点地去<strong>验证</strong>（verify: 确认真实性或准确性），他才知道哦，你真的十倍好。所以说就是你做一个<strong>几乎和亚马逊一样好</strong>（almost as good as Amazon: 接近但未达到同等水平）的电商购物体验在Marketplace上，你不要管别人有<strong>购买意图</strong>（purchase intent: 购买意图），别人就是不会去你这样的一个东西去买的。别人不相信你真的能退货像亚马逊那样迅速的退货，迅速的<strong>配送</strong>（deliver: 配送），然后我的<strong>支付</strong>（payment: 支付）是没有问题的。你的Facebook是不是要拿走我的信用卡信息，我不知道。所以说在那之后，我也特别小心于这种表面上看似成立的逻辑，其实背后很多是不成立的。</p>
+<p>那我们那个实验，其实就证明了Marketplace上的<strong>用户</strong>（user: 用户）对这种<strong>白色背景</strong>（white background: 白色背景）的东西是不感兴趣的。然后因为我们背后的<strong>假设</strong>（hypothesis: 假设），和我们一些其他的研究吧，就证明了Marketplace上的<strong>用户</strong>（user: 用户）其实是对电商<strong>产品</strong>（product: 产品）不感兴趣的。那这终于就是相当于把这整个事情稍稍<strong>盖棺定论</strong>（conclude decisively: 最终确定）了一下。而且，我记得当时也改变了我的整个想法，就是我当时觉得电商在Marketplace上是可行的。我当时的原因是为什么呢？我是觉得亚马逊没有办法做很好的<strong>推荐</strong>（recommendation: 根据用户偏好或行为，向其建议相关内容或产品），所以说我其实在亚马逊上找很多那个<strong>每日优惠</strong>（daily deals: 每日特价商品），我不知道我要买啥。但是Facebook是有机会做好<strong>推荐</strong>（recommendation: 推荐）的。现在想的也是一个理论上可行，实际上不可行的想法。为什么？因为你想做好<strong>推荐</strong>（recommendation: 推荐），你是要有海量的<strong>库存</strong>（inventory: 商家持有的待售商品数量），然后你是要有海量的行为数据，然后你要过了一个点，才可能就是做好足够好的<strong>推荐</strong>（recommendation: 推荐）。你用<strong>本地列表</strong>（local listing: 本地商品列表）的这些<strong>功能</strong>（feature: 功能）去做电商<strong>产品</strong>（product: 产品）的<strong>推荐</strong>（recommendation: 推荐），然后并且想让别人<strong>克服</strong>（overcome: 战胜或克服）那个对你的<strong>负面认知</strong>（negative perception: 对某事物持有的消极看法），然后去购买的话，其实是一件非常非常难的事情。就是它又是一个理论上可行，事实上不可行的事。我也是看了那个<strong>备忘录</strong>（note: 记录或报告）以后，我<strong>想通了</strong>（come around: 改变原有观点，接受新的看法），我就觉得哦，电商在Marketplace上确实是不行。</p>
+<h3>从失败中学习：C2C配送的成功转型与经济规律</h3>
+<p>那我在这里边，稍稍就是给第四集留一个小开头。就是我们后来做成的东西是<strong>个人对个人配送</strong>（C2C shipping: Consumer-to-Consumer Shipping的缩写，指个人用户之间通过平台进行的商品寄送服务），就是仍然不是那种来自于商家的<strong>产品</strong>（product: 产品），而是来自于个人的<strong>产品</strong>（product: 产品）。他们本来在<strong>本地</strong>（local: 本地的）卖，我们去给他做了一个更好的<strong>配送</strong>（shipping: 配送）体验，让他可以去寄给别的地方的人。但是因为你要寄给别的地方的人嘛，你就需要用我们Facebook的<strong>站内交易</strong>（on-site transaction: 在平台内部完成的商品或服务交易）去做这件事情。那这件事情，其实我们发现了非常好的<strong>留存率</strong>（retention: 用户在一段时间后继续使用产品或服务的比例），而且我们找到了一些非常<strong>聪明</strong>（smart: 精明、巧妙）的方式去<strong>补贴</strong>（subsidize: 为降低成本或鼓励特定行为而提供的财政支持）这件事，去给这件事做一些<strong>补贴</strong>（subsidy: 补贴）。那我当时也结合了这种<strong>面板数据</strong>（panel data: 结合了时间序列和横截面数据的数据类型）和我未来设计的实验去讲，这个<strong>补贴</strong>（subsidy: 补贴）其实是值得的，它的<strong>投资回报率</strong>（ROI: Return on Investment的缩写，衡量投资收益相对于投资成本的比例）是正的。我们不同的<strong>活动</strong>（campaign: 为特定目标而组织的一系列行动），我们不同的<strong>补贴</strong>（subsidy: 补贴），还可以帮我们去测试不同的东西。比如说我们这次可以去测试这个<strong>补贴</strong>（subsidy: 补贴）在<strong>卖家获取</strong>（seller acquisition: 吸引新卖家入驻平台的过程）上到底有多大的影响，第二个可以测试在<strong>买家留存</strong>（buyer retention: 保持现有买家持续使用平台的策略）上有什么影响。最后我就做了一些很多的这种既能通过<strong>补贴</strong>（subsidy: 补贴）<strong>提升</strong>（drive: 推动或提升）我们的<strong>营收</strong>（Top Line: 营收），然后能得到很多<strong>经验教训</strong>（learning: 经验教训）的这种一系列的实验。</p>
+<p>以及在那之后，我是真正<strong>内化</strong>（internalize: 将外部知识或观念融入自身）了<strong>留存率</strong>（retention: 留存率）到底是个什么意思。就是你一个10%的<strong>留存率</strong>（retention: 留存率）你就没有<strong>投资回报率</strong>（ROI: 投资回报率），你有50%的<strong>留存率</strong>（retention: 留存率）你就有<strong>投资回报率</strong>（ROI: 投资回报率）。因为<strong>留存率</strong>（retention: 留存率）其实是导致你<strong>生命周期价值</strong>（LTV: Lifetime Value的缩写，指客户在与企业关系期间所能带来的总收入）的不同。然后我后面也理解了，就是绝大多数的<strong>业务</strong>（business: 企业经营的活动或领域），其实它的<strong>客户获取成本</strong>（CAC: Customer Acquisition Cost的缩写）其实是差不多的，但是他们的<strong>生命周期价值</strong>（LTV: 生命周期价值）天差地别，导致了他们<strong>业务</strong>（business: 业务）的规模不同。我在后面的我的那个课程里边，就是“个体破局”的课程里边，有一期也专门去讲就是经济的规律，我有讲<strong>利润驱动规模</strong>（profit driven scale: 业务规模由其盈利能力决定的模式），就是你有多大的能力从同样一个人身上赚取更多的利润，就决定了你这个<strong>业务</strong>（business: 业务）规模到底有多大。这又是一些很深的东西了，在这我就不多讲了。</p>
+<h3>高层视角：看清局势的重要性</h3>
+<p>总之今天的故事，就是跟大家稍稍再带来一些更高层的<strong>视角</strong>（perspective: 看待问题或事物的角度），去讲就是背后的一些博弈。我当时身在其中，觉得哦，<strong>“我做得太棒了”</strong>（I did such a great work: 我做得非常出色），我和我的<strong>数据科学家</strong>（DS: Data Scientist的缩写）同事们既帮助大家进行了一个完全的转向，就是从<strong>企业对消费者产品</strong>（B2C product: Business-to-Consumer Product的缩写，指企业直接销售给个人消费者的产品）变成了一个<strong>个人对个人配送产品</strong>（C2C shipped product: Consumer-to-Consumer Shipped Product的缩写，指个人用户之间通过平台进行配送的商品），而且又在半年之内<strong>赋能</strong>（enable: 使能够）了这个2600%的增长，而且整个<strong>产品</strong>（product: 产品）的<strong>留存率</strong>（retention: 留存率）都很好。结果其实后来我离开了Marketplace之后，这个<strong>个人对个人配送产品</strong>（C2C shipped product: 个人对个人配送产品）就很快被<strong>降优先级</strong>（de-prioritize: 降低某项任务或项目的优先级别）了。这也是另外一个故事。因为我们以为身在局中，这是小兵，就觉得我们做了什么很重要的事情，但是在那些大佬看来，其实是他们的博弈，这根本就不受你控制的。所以大家在工作的时候呢，我觉得看清这个局势比你具体的一些工作有的时候要重要的很多。</p>
+<p>我在“个体破局”课程里边有讲嘛，<strong>道天地将法</strong>（Dao Tian Di Jiang Fa: 源自《孙子兵法》的战略思想，指“道、天、地、将、法”五个决定战争胜负的要素，在此引申为影响事业成败的宏观到微观的因素），就是你要先看道、天、地，你真正的老板和你做的这些事情，将、法其实到后面已经是一个比较次要的东西了。</p>
+<h3>总结与反思</h3>
+<p>那好吧，这视频也讲到这，希望大家对这个完整的故事线又有了一些更多的<strong>视角</strong>（perspective: 视角），然后也能带来一些对在大厂打工这件事本身的一些反思。如果有什么没有讲清楚的地方，或者说有什么<strong>概念</strong>（concept: 抽象的、普遍的认识）你希望我去<strong>深入探讨</strong>（deep dive: 对某个主题进行详细、彻底的分析），欢迎在下面给我留言。我会去要么用视频的方式，要么就是在社区里面发帖，去帮大家把一些没有讲清楚的东西讲得更清楚一些，或者说一些大家希望展开的<strong>概念</strong>（concept: 概念）吧，给更加的展开一些。那这期视频就到这，下期再见，拜拜。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Mark Zuckerberg" class="entity-link person-link">Mark Zuckerberg</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Meta" class="entity-link company-link">Meta</a>, 
+                
+                  <a href="/search/?q=Amazon" class="entity-link company-link">Amazon</a>, 
+                
+                  <a href="/search/?q=Apple" class="entity-link company-link">Apple</a>, 
+                
+                  <a href="/search/?q=TikTok" class="entity-link company-link">TikTok</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Facebook Marketplace" class="entity-link product-link">Facebook Marketplace</a>
+                
+              </p>
+            
+            
+              <p><strong>媒体/书籍:</strong>
+                
+                  <a href="/search/?q=LinkedIn" class="entity-link media-link">LinkedIn</a>, 
+                
+                  <a href="/search/?q=孙子兵法" class="entity-link media-link">孙子兵法</a>
+                
+              </p>
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/career/">career</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/failure/">failure</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/politics/">politics</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/strategy/">strategy</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/system/">system</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

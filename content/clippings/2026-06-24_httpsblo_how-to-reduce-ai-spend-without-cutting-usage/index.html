@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Al账单越高，浪费越大？三个动作立省一半 · 乔木博客</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="Al账单越高，浪费越大？三个动作立省一半 · 乔木博客" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">Al账单越高，浪费越大？三个动作立省一半 · 乔木博客</span>
+      <span data-pagefind-meta="speaker" style="display:none;">向阳乔木</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-06-24
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/pai/">PAI</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-tooling/">ai-tooling</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/xiang-yang-qiao-mu/">向阳乔木</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://blog.qiaomu.ai/how-to-reduce-ai-spend-without-cutting-usage" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-06-24
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">文章探讨了企业在使用 AI 时账单过高浪费的现象，核心观点是需要将关注点从消耗的 Token 转移到任务的价值上。作者提出了通过衡量工作单位（如审 PR、处理发票）来评估 ROI 的方法，并建议优化模型选择、推理深度和响应速度等默认设置，以实现成本与价值的平衡。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>乔木博客</p>
+<p>全部</p>
+<p>AI工具</p>
+<p>AI教程</p>
+<p>AI生成</p>
+<p>AI资讯</p>
+<p>健脑房</p>
+<p>播客解读</p>
+<p>论文学习</p>
+<h1>Al账单越高，浪费越大？三个动作立省一半</h1>
+<p>AI资讯</p>
+<p>·</p>
+<p>2026年6月24日</p>
+<p>·</p>
+<p>70 次阅读</p>
+<p>·</p>
+<p>约 7 分钟</p>
+<p>一家公司每月花几十万在 AI 上，却只用了它应有价值的一小部分。</p>
+<p>奇怪吗？矛盾吗？这其实是当下的常态。</p>
+<p>大多数公司同时存在两个问题：花了太多钱在已经用的 AI 上，但实际上用的 AI 远远不够。</p>
+<p>账单看起来大不大，跟花了多少钱关系不大，跟你能不能说清楚这些钱换来了什么关系很大。</p>
+<p>把这个问题想清楚，只需要三件事：用任务衡量价值而不是 token、设置更聪明的默认值、知道什么时候该多花钱。</p>
+<blockquote>
+<p>https://engineering.ramp.com/post/ai-spend-value</p>
+</blockquote>
+<h2>Token 是个没用的单位</h2>
+<p>先问一个简单的问题：10 万美元能买多少 AI？</p>
+<p>同样的钱，买顶级闭源模型能拿到 50 亿 token，买开源模型能拿到 2100 亿 token，差了 42 倍。</p>
+<p>但这个数字告诉你的只是&quot;买了多少&quot;，不是&quot;做了多少事&quot;。</p>
+<p>Token 衡量的是消耗，不是价值。</p>
+<p>不同任务消耗的 token 差异极大，根本没有可比性。</p>
+<p>真正应该看的单位是工作本身：审完一个 PR、处理一张发票、发出一封销售邮件。</p>
+<p>这些是可以定价、可以比较、可以算 ROI 的原子单位。</p>
+<p>还有一个更根本的问题：AI 供应商按用量收费，不管任务成不成功。</p>
+<p>这意味着你的账单里混着两类支出：</p>
+<pre><code>&lt;code class=&quot;language-plaintext&quot;&gt;成本 = 尝试的任务数 × 每次尝试的费用
+价值 = 成功的任务数 × 每次成功的价值&lt;/code&gt;
+</code></pre>
+<p>要想不亏，就得同时做两件事：提高成功率，压低单次成本。</p>
+<p>如果没认真审计过自己的 AI 用量，大概率两件事都没做好。</p>
+<h2>默认设置在悄悄坑你</h2>
+<p>每次 AI 请求背后有三个关键选择：用哪个模型、让它想多深、要求它多快响应。</p>
+<p>供应商替你做了这些决定，并设成了默认值。</p>
+<p>这些默认值的目标是让尽可能多的人用起来，不是让你的钱花得最值。</p>
+<h3>模型选择：顶级模型只配顶级问题</h3>
+<p>每当新一代顶级模型发布，上一代就变成了&quot;半价次优&quot;。</p>
+<p>大多数公司的反应是：把所有工作流都升级到最新模型，因为&quot;更好嘛&quot;。</p>
+<p>这是今天软件行业里最隐蔽的烧钱方式之一。</p>
+<p>顶级模型存在的意义，是解决更难的问题，不是把同样的工作做得更好一点点。</p>
+<p>用最贵的模型处理客服工单，就像雇博士生做小学数学题，钱花出去了，多余的智力全部浪费。</p>
+<p>Ramp 的做法是：从能通过质量标准的最便宜模型开始，只有任务真正需要时才往上走。</p>
+<p>各家供应商的能力排行榜，用的都是刻意设计得极难的测试题。</p>
+<p>你公司里需要自动化的任务，绝大多数是中等难度以下，排行榜上所有模型都能轻松应付。</p>
+<p>默认原则：从能过质量线的最便宜模型开始，任务有需要再升级。</p>
+<h3>推理深度：别让模型过度思考</h3>
+<p>现在很多模型允许调节&quot;思考力度&quot;，供应商默认开到最高。</p>
+<p>每往上调一档，消耗的 token 大约翻倍。</p>
+<p>但在普通任务上，更深的推理只是让模型反复确认它已经答对的答案，你在为&quot;双重检查&quot;付钱。</p>
+<p>默认原则：推理设为中档，只有任务明确需要时才调高。</p>
+<h3>响应速度：同样的答案，贵一倍</h3>
+<p>同一个模型，供应商通常卖几个速度档位。</p>
+<p>&quot;快速模式&quot;和&quot;弹性/批处理模式&quot;给出的是同样的答案，区别只是快几秒。</p>
+<p>弹性模式通常只要快速模式一半的价格。</p>
+<p>判断要不要付速度溢价，有个简单标准：有没有人在等这个结果？ 用户在实时对话里等回复，值得付速度钱。</p>
+<p>自动化流程跑完没人马上看，批处理模式就够了。</p>
+<p>默认原则：关掉快速模式，配合中档推理。延迟仍然比供应商默认值快。</p>
+<h2>什么时候该多花钱</h2>
+<p>便宜模型处理日常工作，这个逻辑成立。</p>
+<p>但有些场景，顶级模型的溢价完全值得。</p>
+<p>一个更强的模型，可能发现一个能省掉几个月返工的架构决策，可能在漏洞被利用前找到安全隐患，可能给出团队自己想不到的解法。</p>
+<p>这一个洞察，比所有日常用量加起来的价值还高。</p>
+<p>难度和价值的关系是反的：简单任务量大，复杂任务价值高。</p>
+<p>把所有工作分成两类就够了：</p>
+<p>常规工作：边界清晰、重复性高，用能过质量线的最便宜模型。</p>
+<p>高难工作：模糊、新颖、高风险，用当下最好的模型，全力推理，多次采样，预算放开。</p>
+<p>你 99% 的工作量落在第一类，几乎所有的潜在价值在第二类。</p>
+<p>用便宜模型省下来的钱，放在贵的模型上用。</p>
+<h2>最难改变的默认值：文化</h2>
+<p>技术上的默认值能拦住不调设置的人。</p>
+<p>但一旦有人开始主动选择，激励机制就开始作怪。</p>
+<p>写代码的工程师不看账单，他只对结果负责。</p>
+<p>选最大的模型、开最高的设置，是最安全的职业选择，没有人因为用了顶级模型而被批评。</p>
+<p>把这个选择乘以所有工程师和所有功能，就得到了一笔没人刻意为之、也没人负责的超额支出。</p>
+<p>管好 AI 成本的公司，都把效率当成工程成就，不是当成约束。</p>
+<p>用更小的模型、更低的推理、更慢的响应拿到同样结果，和上线新功能一样值得庆祝。</p>
+<p>目标不是少花钱，是让每一块钱都挣到它该挣的回报。</p>
+<h2>明天就能开始做的八件事</h2>
+<p>实际上，少数几个工作流驱动了账单的大头：一个没人盯着的自动化、一个忘了关快速模式的功能、一个出于谨慎用了顶级模型的需求。</p>
+<p>不需要优化所有东西，找到那几行就能解决 80% 的问题。</p>
+<p>按供应商、产品、团队、工作流拆分 AI 支出。 订阅费和 API 用量分开，人工交互和自动化分开。</p>
+<p>把支出换算成工作单位。 处理了多少发票，解决了多少工单，审了多少 PR。</p>
+<p>找到成本集中点。 驱动大头支出的工作流先动。</p>
+<p>给重复性工作设基准。 不要抽象地说&quot;用便宜点的模型&quot;，要测试哪个便宜配置还能过质量线。</p>
+<p>改掉默认值。 常规工作不该从顶级模型、最高推理、最快响应开始跑。</p>
+<p>明确定义升级路径。 让任务在模糊、高风险时能方便地切换到更强的模型。</p>
+<p>每次重大模型发布后重新定价。 新模型改变了整个梯队，把发布当成成本优化事件，不是自动升级信号。</p>
+<p>集中管控。 在一个网关里统一管理，不要散落在每个代码库和团队里。</p>
+<p>账单太高和用得太少，是同一个问题的两面：你还没把浪费和价值分开。从这里开始。</p>
+<p>© 2026</p>
+<p>·</p>
+<p>向阳乔木</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">ai-spend-value</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/token-efficiency/">token-efficiency</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">default-settings</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/cost-optimization/">cost-optimization</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

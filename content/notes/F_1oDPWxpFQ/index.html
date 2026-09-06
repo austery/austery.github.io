@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 前沿对话：从 Gemini 3、深度推理到 Flash 模型的蒸馏演进 —— 专访 Jeff Dean</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="AI 前沿对话：从 Gemini 3、深度推理到 Flash 模型的蒸馏演进 —— 专访 Jeff Dean" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">AI 前沿对话：从 Gemini 3、深度推理到 Flash 模型的蒸馏演进 —— 专访 Jeff Dean</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Latent Space</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-02-12
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/latent-space/">Latent Space</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=F_1oDPWxpFQ" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-02-12
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">Google 首席 AI 科学家 Jeff Dean 深度解析了 Gemini 系列模型的研发策略，重点探讨了模型蒸馏、长上下文处理、软硬件协同设计（TPU）以及 AI 在编码代理方面的未来演进。他强调了低延迟对 AI 交互的重要性，并预测了 10,000 token/秒级别的超高速推理将彻底改变 AI 辅助思考与编程的范式。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>帕累托前沿：能力与效率的平衡</h3>
+<p><strong>Alessio</strong>: 欢迎来到 Leading Space 播客。我是来自 Google Kernel Labs 的 Alessio，今天我们非常荣幸能邀请到 Google 首席 AI 科学家 <strong>Jeff Dean</strong>。你的职业生涯堪称传奇，首先要祝贺你们在<strong>帕累托前沿 (Pareto frontier)</strong> 取得的领先地位。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alessio</strong>: Hey everyone, welcome to the Leading Space podcast. This is Alessio from Google Kernel Labs, and I'm joined by Squix, editor of Leading Space. Hello, hello. We're here in the studio with Jeff Dean, chief AI scientist at Google. Welcome. Thank you for having me. It's a bit surreal to have you in the studio. I've watched so many of your talks, and obviously, your career has been super legendary. So, I mean, congrats. I think the first thing must be said: congrats on owning the Pareto frontier.</p>
+</details>
+<p><strong>Jeff Dean</strong>: 谢谢。处于帕累托前沿感觉很好。这不仅是单一因素的结果，而是整个技术栈从上到下的结合。我们不仅能制造高性能的大型模型，还能通过软件技术将这些能力<strong>蒸馏 (Distillation)</strong> 到更小、更轻量的模型中，使它们在保持强大能力的同时，具备更高的性价比和更低的延迟。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jeff Dean</strong>: Thank you, thank you. Pareto frontiers are good, and it's good to be out there. Yeah, I mean, I think as you say, it's not just one thing; it's like a whole bunch of things up and down the stack, and you know, all of those really combine to help make you and us able to make highly capable large models, as well as you know, software techniques to get those large model capabilities into much smaller, lighter weight models that are you know much more cost effective and lower latency, but still you know quite capable for their size.</p>
+</details>
+<h3>模型蒸馏与 Flash 版本的崛起</h3>
+<p><strong>Alessio</strong>: 在 Google 内部，你们是如何权衡追求性能极限与实际大规模部署之间的矛盾的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alessio</strong>: So, yeah, how how much pressure do you have on like having the lower bound of the Pareto frontier too? ... How do you prioritize frontier versus like we actually need to deploy it if we build it?</p>
+</details>
+<p><strong>Jeff Dean</strong>: 我们两者都想要。前沿模型展示了当前技术能达到的最高能力，但我们也需要高效实惠的模型来支持低延迟场景，比如<strong>智能编码 (Agentic coding)</strong>。通过蒸馏技术，我们可以利用前沿模型作为“老师”来训练更精简的模型。现在我们多代 Gemini 的 <strong>Flash</strong> 版本已经能达到甚至超过前几代 Pro 版本的表现。而且，更小的模型可以通过多次训练提升能力，因为它能从大型模型输出的 <strong>Logits</strong>（软标签）中学习，而不仅仅是硬标签。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jeff Dean</strong>: Yeah, I mean, I think we always want to have models that are at the frontier or pushing the frontier because I think that's where you see what capabilities now exist... At the same time, you know, we know those are going to be really useful for a bunch of use cases, but they're going to be a bit slower and a bit more expensive... So I think we like to do both, and also, you know, through distillation, which is a key technique for making the smaller models more capable... for multiple Gemini generations now we've been able to make the sort of flash version of the next generation as good or even substantially better than the previous generations pro.</p>
+</details>
+<h3>长上下文与检索的未来</h3>
+<p><strong>Alessio</strong>: 现在的基准测试（Benchmark）似乎已经饱和了，比如 <strong>Needle in a Haystack</strong>（大海捞针）。你们内部如何推动团队寻找新目标？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alessio</strong>: Are there any benchmarks or like test sets they use internally because it's almost like the same benchmarks get reported every time... Like, how do you have to keep pushing the team internally to to like this is what we're building towards?</p>
+</details>
+<p><strong>Jeff Dean</strong>: 当一个基准测试达到 95% 以上的准确率时，投入的收益就递减了。我们更看重内部的“保留基准测试”，确保训练数据中没有这些内容。关于<strong>长上下文 (Long Context)</strong>，虽然 100 万或 200 万 token 已经很强，但对于“检索”来说，这种单一指标已经饱和。未来的方向是处理更复杂的、多重目标的任务。最终的理想目标是模型能像人类一样“关注整个互联网”，但这无法通过简单的二次方复杂度算法扩展来实现，我们需要算法和系统层面的创新。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jeff Dean</strong>: Yeah, I mean, I think benchmarks... often kind of have a lifespan of utility... Once it hits kind of 95 percent or something, you get very diminishing returns... We have a bunch of held out internal benchmarks that we really look at where we know that wasn't represented in the training data at all... long context is useful, but it's way too short today... I think what you would really want is can I attend to the internet while I answer my question? ... But that's not going to be solved by purely scaling the existing solutions, which are quadratic.</p>
+</details>
+<h3>软硬件协同：能耗才是硬道理</h3>
+<p><strong>Alessio</strong>: 你曾提出过“每个程序员都该知道的延迟数字”。在 AI 时代，有没有类似的指标？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alessio</strong>: What you know, this you know, mention of latency and and saving things to disk reminds me of one of your classics... latency numbers every programmer should know. ... I've been trying to make numbers every AI programmer should know.</p>
+</details>
+<p><strong>Jeff Dean</strong>: 在 AI 模型中，最关键的是<strong>能耗分析</strong>。一次矩阵乘法单元（MMU）的计算成本极低，可能还不到 1 <strong>皮焦耳 (picojoule)</strong>，但在芯片内部搬运数据（从 SRAM 到乘法器）可能需要 1000 皮焦耳。这就是为什么需要 <strong>Batching</strong>（批处理）：如果你花 1000 皮焦耳搬运了一个参数，你最好利用它进行上百次计算，而不是只算一次。这就是为什么我们要在 <strong>TPU</strong> 设计中强调这种规律性的结构和高带宽连接。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jeff Dean</strong>: Yeah, I mean, it's all going to be about energy and how do you make the most energy efficient system? And then moving data from the SRAM on the other side of the chip... can be you know a thousand picojoules. ... So you better make use of that that thing that you moved many many times. So that's where the batch dimension comes in because all of a sudden, you know, if you have a batch of two fifty six or something, that's not so bad, but if you have a batch of one, that's really not good.</p>
+</details>
+<h3>统一模型的胜利与“苦涩的教训”</h3>
+<p><strong>Alessio</strong>: 以前人们会为特定的几何或数学问题训练专门的模型，但现在 Gemini 似乎通过一个统一的模型就解决了所有问题，包括 <strong>IMO</strong>（国际数学奥林匹克）级别的题目。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alessio</strong>: I'm still not over the fact that a year ago we had AlphaProof and AlphaGeometry... and then this year we were like, &quot;Screw that, we'll just chuck it into Gemini.&quot;</p>
+</details>
+<p><strong>Jeff Dean</strong>: 这非常符合我的直觉。人类的大脑并没有一个专门的“符号处理区”，而是一种类似神经网络的分布式表征。2013 到 2016 年间，人们还在为每个小问题训练独立模型，但现在<strong>统一模型</strong>的时代已经到来。<strong>通用模型在绝大多数情况下都会击败专用模型</strong>。虽然垂直领域的微调（如医疗或机器人）有其价值，但我认为它们更像是补充特定领域的数据分布，而不是替代基础的推理能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jeff Dean</strong>: Yeah, I mean, I think it makes a lot of sense to me because you know humans manipulate symbols, but we probably don't have like a symbolic representation in our heads... I think general models will win out over specialized ones in most cases.</p>
+</details>
+<h3>Gemini 项目的起源与组织挑战</h3>
+<p><strong>Alessio</strong>: 有传闻说 Google 早期因为内部资源碎片化而限制了语言模型的发展，你是如何改变这一点的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alessio</strong>: We had a previous guest, David Wan... he kind of like blames almost the brain marketplace as like the reason that Google didn't invest enough in language models.</p>
+</details>
+<p><strong>Jeff Dean</strong>: 我当时确实写了一份一页纸的备忘录，指出分散资源是非常愚蠢的。当时 Google Research、Brain 和 DeepMind 都在独立研发不同的语言模型和多模态模型。我建议将最优秀的人才和计算资源整合，打造一个从一开始就是多模态的统一模型。这就是 <strong>Gemini</strong> 工作的起源。之所以起这个名字，是因为这两个团队就像“双胞胎 (Twins)”一样走到了一起，同时也致敬了 NASA 的 Gemini 计划——那是通往阿波罗登月计划的关键一步。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jeff Dean</strong>: Yeah, I mean, I think I actually wrote a one page memo saying we were being stupid by fragmenting our resources... I said, this is just stupid. Why don't we combine things and have one effort to train? ... and that was the origin of the Gemini effort. ... I kind of liked that, and then there's also the NASA interpretation...</p>
+</details>
+<h3>AI 编码代理：50 个“虚拟实习生”</h3>
+<p><strong>Alessio</strong>: 作为一名资深程序员，你如何看待现在的 AI 编码工具？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jeff Dean</strong>: Yeah, I mean, first, I think the coding tools are you know getting vastly better... Imagine if you had a team of 50 interns, how would you manage that if they were people? ... I think that is probably within the realm of possibilities that lots of people could have 50 interns.</p>
+</details>
+<p><strong>Jeff Dean</strong>: 编码工具正变得越来越强大，你可以把复杂的任务委派给它们。未来的模式可能是每个程序员管理 50 个<strong>虚拟智能体</strong>。这需要你变得非常擅长<strong>清晰地描述规范 (Crisply specifying things)</strong>。以前我们被教育要写清楚规范，但没人当真；现在，如果你不能清晰地描述需求，模型就无法产出高质量代码。好的 Prompt 本质上就是一种高级的行政沟通能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jeff Dean</strong>: The better you get at interacting with these models... they will get really good at crisply specifying things rather than leaving things to ambiguity. ... being able to crisply specify what it is you want is going to be really important. Yeah, my my joke is you know good prompting is indistinguishable from sufficiently advanced executive communication.</p>
+</details>
+<h3>未来预测：10,000 Token 每秒</h3>
+<p><strong>Alessio</strong>: 最后，你对未来有什么大胆的预测吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alessio</strong>: Should we ask him for predictions to to go? ... What's something that you're you're not quite happy with yet that you think will get done soon?</p>
+</details>
+<p><strong>Jeff Dean</strong>: 我有两点预测：第一，<strong>个性化模型</strong>将变得极其有用。它能合法地访问你所有的邮件、照片和足迹，这种深度定制的能力远超通用模型。第二，硬件的演进将带来<strong>超低延迟</strong>。现在的推理速度大约是每秒 100 token，未来会达到 <strong>10,000 token 每秒</strong>。在那样的速度下，AI 不只是在输出代码，而是在利用大量的 token 进行思维链推理（CoT）。即使它生成了 10,000 token，其中可能只有 1,000 token 是最终代码，另外 9,000 token 都是它深思熟虑的过程。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jeff Dean</strong>: Let me make two predictions... So I think a personalized model that knows you and knows all your state... is going to be incredibly useful. ... When you say much lower latency... we're at let's say 100 now. We can go to the thousands. Is it meaningful to go 10,000s? Yes. ... it may be a thousand tokens of code that with nine thousand tokens of reasoning behind it.</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Jeff Dean" class="entity-link person-link">Jeff Dean</a>, 
+                
+                  <a href="/search/?q=Noam Shazeer" class="entity-link person-link">Noam Shazeer</a>, 
+                
+                  <a href="/search/?q=Oriol Vinyals" class="entity-link person-link">Oriol Vinyals</a>, 
+                
+                  <a href="/search/?q=Andrew Ng" class="entity-link person-link">Andrew Ng</a>, 
+                
+                  <a href="/search/?q=Sergey Brin" class="entity-link person-link">Sergey Brin</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>, 
+                
+                  <a href="/search/?q=DeepMind" class="entity-link company-link">DeepMind</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Gemini" class="entity-link product-link">Gemini</a>, 
+                
+                  <a href="/search/?q=TPU" class="entity-link product-link">TPU</a>, 
+                
+                  <a href="/search/?q=Flash" class="entity-link product-link">Flash</a>, 
+                
+                  <a href="/search/?q=Gemma" class="entity-link product-link">Gemma</a>, 
+                
+                  <a href="/search/?q=Waymo" class="entity-link product-link">Waymo</a>, 
+                
+                  <a href="/search/?q=Spanner" class="entity-link product-link">Spanner</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/model-distillation/">model-distillation</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/hardware-software-co-design/">hardware-software-co-design</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/long-context/">long-context</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">inference-latency</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">personalized-ai</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

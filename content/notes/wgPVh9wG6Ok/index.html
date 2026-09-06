@@ -1,0 +1,5622 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI设计工具前沿：Claude Design 与 GPT Image 2.0 深度体验</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="AI设计工具前沿：Claude Design 与 GPT Image 2.0 深度体验" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">AI设计工具前沿：Claude Design 与 GPT Image 2.0 深度体验</span>
+      <span data-pagefind-meta="speaker" style="display:none;">How I AI</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-04-22
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/how-i-ai/">How I AI</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=wgPVh9wG6Ok" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-04-22
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本期节目深入评测了最新的 AI 设计工具 Claude Design 和 GPT Image 2.0。Claude Design 在导入设计系统、创建营销式登陆页面、生成演示文稿方面表现出色，尽管速度较慢且有额度限制，但其在设计系统集成和内容驱动式设计上展现了巨大潜力。GPT Image 2.0 在生成品牌素材和进行色彩分析方面效果显著，尤其在排版和文字渲染上有所突破，标志着 AI 图像生成进入了“思考”的新阶段。节目还探讨了 AI 工具的局限性及其在实际工作流中的应用价值，并提及了 Google 的 design.md 标准。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>AI设计工具前沿：Claude Design 与 GPT Image 2.0 深度体验</h3>
+<p>本期节目聚焦于最新的 AI 设计工具，深入探讨了 Claude Design 和 GPT Image 2.0 在设计、内容创作及品牌建设方面的应用潜力。主持人 Claire Valle 详细演示了 Claude Design 如何革新原型设计、登陆页面创建以及演示文稿制作流程，并分析了 GPT Image 2.0 在图像生成、排版和色彩分析上的突破性进展。同时，节目也触及了 AI 工具在实际应用中面临的挑战，如速度、成本限制以及对用户输入的依赖。</p>
+<h4>AI设计工具的最新进展与挑战</h4>
+<p>AI 在设计领域的进展令人瞩目，本期节目重点介绍了 Anthropic 推出的 <strong>Claude Design</strong> 和 OpenAI 的 <strong>GPT Image 2.0</strong>。<strong>Claude Design</strong> 是一款基于 Web 的设计工具，专注于原型（包括线框图和高保真原型）、幻灯片和视频的创建。它试图解决现有原型工具难以与品牌和设计系统完美契合的痛点，旨在简化设计师和产品经理的工作流程。<strong>GPT Image 2.0</strong> 则代表了图像生成技术的最新飞跃，据称是首个具备“思考”能力的模型，在文本渲染和物体准确性上有了显著提升。</p>
+<p>节目还穿插了赞助商信息：<strong>WorkOS</strong> 强调了 AI 工具在企业级应用中对深度系统访问的需求，以及其在安全认证、访问控制和审计日志方面的重要性，并介绍了 WorkOS 如何提供企业级功能的 API 来加速应用开发。<strong>Rippling</strong> 则作为初创企业的解决方案提供商，介绍了其统一平台如何简化 HR、薪资、IT 和金融管理。</p>
+<details>
+<summary>Original English</summary>
+<blockquote>
+<blockquote>
+<p>Welcome
+back
+to
+How
+I
+AI.
+I'm
+Claire</p>
+</blockquote>
+</blockquote>
+<p>Valle,
+product
+leader
+and
+AI
+obsessive,</p>
+<p>here
+on
+a
+mission
+to
+help
+you
+build</p>
+<p>better
+with
+these
+new
+tools.
+This</p>
+<p>[music]
+week,
+there
+has
+been
+so
+much</p>
+<p>released
+in
+the
+AI
+for
+design
+space.</p>
+<p>Whether
+you're
+looking
+at
+Claude
+design,</p>
+<p>trying
+to
+decide
+if
+it's
+really
+going
+to</p>
+<p>replace
+Figma,
+or
+want
+to
+know
+if
+the</p>
+<p>new
+GPT
+image
+2
+model
+is
+actually
+that</p>
+<p>good,
+I've
+got
+you
+covered
+with
+a
+mini</p>
+<p>app
+where
+I'm
+going
+to
+show
+you
+what
+I</p>
+<p>really
+[music]
+think
+about
+these
+new</p>
+<p>design
+tools
+and
+how
+they'll
+work
+for</p>
+<p>your
+business
+and
+a
+couple
+fun
+use</p>
+<p>cases.
+Let's
+get
+[music]
+to
+it.
+This</p>
+<p>episode
+is
+brought
+to
+you
+by
+WorkOS.
+AI</p>
+<p>has
+already
+changed
+how
+we
+work.
+Tools</p>
+<p>are
+helping
+teams
+write
+better
+code,</p>
+<p>analyze
+customer
+data,
+and
+even
+handle</p>
+<p>support
+tickets
+automatically.
+[music]</p>
+<p>But
+there's
+a
+catch.
+These
+tools
+only</p>
+<p>work
+well
+when
+they
+have
+deep
+access</p>
+<p>[music]
+to
+company
+systems.
+Your</p>
+<p>co-pilot
+needs
+to
+see
+your
+entire
+code</p>
+<p>base.
+Your
+chatbot
+needs
+to
+search</p>
+<p>across
+internal
+docs.
+And
+for
+enterprise</p>
+<p>buyers,
+that
+raises
+serious
+[music]</p>
+<p>security
+concerns.</p>
+<p>That's
+why
+these
+apps
+face
+intense
+IT</p>
+<p>scrutiny
+from
+day
+one.
+[music]</p>
+<p>To
+pass,
+they
+need
+secure</p>
+<p>authentication,
+access
+controls,
+audit</p>
+<p>logs,
+the
+whole
+suite
+of
+enterprise</p>
+<p>[music]
+features.</p>
+<p>Building
+all
+that
+from
+scratch?
+It's
+a</p>
+<p>massive
+lift.
+That's
+where
+WorkOS
+comes</p>
+<p>in.</p>
+<p>WorkOS
+gives
+you
+drop-in
+[music]
+APIs</p>
+<p>for
+enterprise
+features,
+so
+your
+app
+can</p>
+<p>become
+enterprise
+ready
+and
+scale</p>
+<p>upmarket
+faster.
+Think
+of
+it
+like</p>
+<p>[music]
+Stripe
+for
+enterprise
+features.</p>
+<p>OpenAI,
+Perplexity,</p>
+<p>and
+Cursor
+are
+already
+using
+WorkOS
+to</p>
+<p>move
+faster
+[music]
+and
+meet
+enterprise</p>
+<p>demands.</p>
+<p>Join
+them
+and
+hundreds
+of
+other
+industry</p>
+<p>leaders
+at
+workos.com.</p>
+<p>Start
+building
+today.</p>
+<p>I
+have
+to
+start
+today's
+mini
+episode</p>
+<p>with
+a
+little
+bit
+on
+Claude
+design.
+In</p>
+<p>case
+you
+missed
+it
+last
+week,
+Anthropic</p>
+<p>released
+Claude
+design
+and
+it's
+their</p>
+<p>web-based
+design
+tool.
+Really
+focused
+on</p>
+<p>a
+couple
+areas.
+Prototypes,
+including</p>
+<p>wireframes
+and
+high-fidelity
+prototypes.</p>
+<p>People
+are
+asking,
+is
+this
+going
+to</p>
+<p>replace
+Figma
+in
+the
+design
+flow?</p>
+<p>Spoiler
+alert,
+I
+think
+it
+might
+actually</p>
+<p>replace
+some
+of
+these
+prototyping
+tools</p>
+<p>that
+everybody's
+using
+before
+they
+go
+to</p>
+<p>engineering.</p>
+<p>And
+also
+it's
+taking
+a
+swing
+at
+slides</p>
+<p>and
+videos,
+which
+I
+think
+is
+kind
+of</p>
+<p>interesting
+and
+also
+has
+templates
+for</p>
+<p>animations
+and
+videos,
+which
+we
+can
+also</p>
+<p>show
+a
+little
+bit
+of
+on
+this
+episode.</p>
+<p>But
+what
+I
+think
+makes
+Claude
+design</p>
+<p>really
+interesting
+is
+they're
+making
+the</p>
+<p>design
+system
+a
+first-class
+citizen
+of</p>
+<p>this
+design
+tool.
+So
+the
+first
+thing
+I</p>
+<p>did
+was
+actually
+go
+in
+and
+just
+import</p>
+<p>my
+design
+system.
+And
+I
+think
+this
+is</p>
+<p>really
+smart
+because
+the
+number
+one</p>
+<p>complaint
+I
+know
+people
+have
+about
+using</p>
+<p>prototyping
+in
+the
+product
+development</p>
+<p>life
+cycle
+is
+it
+never
+matches
+my
+brand.</p>
+<p>It
+never
+matches
+our
+design
+system.
+And</p>
+<p>these
+prototyping
+tools,
+while
+I
+think</p>
+<p>great,
+you
+know,
+the
+Lovables,
+the</p>
+<p>Vzeros,
+the
+Bolts,
+etc.,
+also
+have
+this</p>
+<p>concept
+of
+design
+system
+import.
+I</p>
+<p>really
+haven't
+found
+they
+get
+perfect
+at</p>
+<p>replicating
+my
+existing
+design
+in
+my</p>
+<p>code
+base.
+And
+so
+I
+really
+wanted
+to</p>
+<p>test
+this
+use
+case
+for
+Claude
+design
+and</p>
+<p>see
+if
+it
+actually
+works.
+So
+the
+first</p>
+<p>thing
+I
+did
+was
+really
+import
+my
+design</p>
+<p>system.
+Importing
+a
+design
+system
+is</p>
+<p>pretty
+easy
+and
+I'm
+actually
+going
+to</p>
+<p>show
+you
+how
+to
+do
+it
+by
+importing</p>
+<p>Lenny's
+Newsletter
+design
+system.
+So
+if</p>
+<p>you
+see
+here,
+this
+is
+what
+I
+filled
+out</p>
+<p>to
+import
+Lenny's
+design
+system.
+Sorry,</p>
+<p>pal.
+I'll
+we'll
+see
+how
+this
+looks.</p>
+<p>I
+really
+just
+went
+to
+his
+homepage.
+I</p>
+<p>clicked
+save
+on
+the
+HTML.
+I
+saved
+the</p>
+<p>logo.
+I
+saved
+our
+little
+campfire
+here.</p>
+<p>I
+saved
+this
+nice
+little
+graphic
+and
+I</p>
+<p>just
+put
+it
+in
+here
+in
+the
+Claude
+code</p>
+<p>create
+your
+design
+system
+form.
+So
+I</p>
+<p>said
+it's
+Lenny's
+Newsletter.
+I
+don't</p>
+<p>have
+access
+to
+his
+GitHub.
+If
+you
+want</p>
+<p>to
+give
+me
+access,
+friend,
+I
+can
+I
+can</p>
+<p>make
+this
+even
+better.
+I
+uploaded
+just
+a</p>
+<p>saved
+HTML
+and
+some
+images
+and
+then</p>
+<p>added
+those
+fonts,
+logos,
+and
+assets.
+I</p>
+<p>didn't
+even
+put
+in
+additional
+notes</p>
+<p>here.
+I
+just
+left
+it
+blank.</p>
+<p>And
+then
+as
+you
+can
+see,</p>
+<p>Claude
+design
+goes
+ahead
+and
+starts</p>
+<p>exploring
+the
+provided
+materials
+and</p>
+<p>wants
+to
+understand
+the
+newsletter
+and</p>
+<p>then
+build
+out
+your
+design
+system
+in
+the</p>
+<p>format
+that
+they
+need.
+And
+what's
+really</p>
+<p>interesting
+here
+is
+they
+warn
+you.
+They</p>
+<p>They
+say
+this
+is
+going
+to
+take
+about
+5</p>
+<p>minutes.
+And
+it
+did.
+It
+took
+about
+5</p>
+<p>minutes.
+And
+you
+look
+along
+the
+side
+on</p>
+<p>the
+reasoning,
+it's
+pretty
+interesting</p>
+<p>to
+see
+how
+it
+extracts
+the
+design</p>
+<p>system.
+It's
+looking
+at
+the
+HTML
+and
+key</p>
+<p>images.
+It
+has
+a
+visual
+picture
+now.
+It</p>
+<p>has
+a
+sense
+of
+what
+core
+colors
+and</p>
+<p>other
+things
+it's
+going
+to
+work.
+And</p>
+<p>then
+it's
+going
+to
+build
+out
+this</p>
+<p>structure
+of
+a
+design
+system
+sort
+of
+in</p>
+<p>a
+skills
+and
+documentation
+mode
+that</p>
+<p>then
+Claude
+design
+is
+going
+to
+use.
+And</p>
+<p>looking
+here,
+I
+think
+it
+looks
+pretty</p>
+<p>good.
+If
+you
+look
+at
+this,
+it
+looks</p>
+<p>pretty
+comparable
+to
+this.
+I
+would
+say</p>
+<p>the
+only
+difference
+is
+Lenny
+uses</p>
+<p>sans-serif
+fonts
+for
+his
+headers.
+So</p>
+<p>what
+I
+might
+say
+is,
+you
+know,
+we</p>
+<p>typically
+use
+sans-serif
+fonts
+for
+the</p>
+<p>main
+headers
+other
+than
+top
+level.</p>
+<p>Switch
+that,
+but
+otherwise
+it
+looks</p>
+<p>good.
+The
+other
+thing
+that
+is
+pretty</p>
+<p>cool
+here
+is
+there's,
+you
+know,
+the</p>
+<p>newsletter
+kit,
+the
+typography,</p>
+<p>colors.
+You
+can
+actually
+see
+how
+it</p>
+<p>breaks
+down
+the
+idea
+of
+a
+design
+system.</p>
+<p>Even
+if
+you're
+not
+going
+to
+use
+Claude</p>
+<p>design,
+the
+idea
+of
+breaking
+your
+design</p>
+<p>system
+for
+any
+AI
+tool
+into
+these</p>
+<p>components,
+UI
+kits,
+typography,
+color,</p>
+<p>components,
+and
+brand
+marks
+is
+really</p>
+<p>interesting.
+In
+fact,
+just
+today
+Google</p>
+<p>Labs
+released
+the
+design.md
+standard,</p>
+<p>which
+they're
+trying
+to
+make
+sort
+of
+a</p>
+<p>standard
+agents.md
+or
+skills.md
+standard</p>
+<p>across
+how
+you
+would
+describe
+a
+design</p>
+<p>system
+for
+use
+in
+Google's
+design
+tools,</p>
+<p>but
+also
+other
+AI
+design
+tools.
+And
+so</p>
+<p>you're
+really
+seeing
+a
+lot
+of
+these</p>
+<p>solutions
+move
+to
+the
+concept
+of
+a</p>
+<p>structured
+design
+system
+that
+then
+can</p>
+<p>be
+used
+by
+AI
+to
+render
+consistent</p>
+<p>high-quality
+UI
+against
+your
+experience.</p>
+<p>So
+this
+design
+system
+is
+really</p>
+<p>interesting.</p>
+<p>I
+also
+created
+one
+from
+Chat
+PRD.
+The</p>
+<p>one
+that
+I
+did
+here,
+I
+used
+the
+actual</p>
+<p>GitHub.
+So
+I
+hooked
+up
+the
+very
+specific</p>
+<p>GitHub
+directly
+to</p>
+<p>um
+this
+app.
+So
+it
+pulled
+in
+some
+pretty</p>
+<p>specific
+components
+and
+UI
+um
+across
+our</p>
+<p>app
+and
+our
+marketing
+site.
+So
+you
+can</p>
+<p>put
+as
+much
+or
+as
+little
+as
+you
+want</p>
+<p>into
+these
+design
+systems,
+but
+I
+think</p>
+<p>it's
+a
+really
+interesting
+flow.
+And
+then</p>
+<p>going
+back
+to
+the
+core
+capabilities
+of</p>
+<p>Claude
+design,
+I
+just
+want
+to
+show
+you
+a</p>
+<p>couple
+things
+that
+I
+thought
+was
+really</p>
+<p>interesting.
+One
+is
+I
+think
+its
+ability</p>
+<p>to
+adhere
+to
+a
+design
+system
+for</p>
+<p>marketing-specific</p>
+<p>landing
+pages
+and
+websites
+is
+really</p>
+<p>good.
+So
+if
+you
+were
+on
+the
+marketing</p>
+<p>side
+and
+you
+have
+been
+sitting
+out
+doing</p>
+<p>prototyping
+because
+it's
+so
+hard
+to
+get</p>
+<p>your
+brand
+assets
+into
+a
+really
+nice</p>
+<p>workflow,</p>
+<p>I
+think
+Claude
+design
+is
+a
+really
+great</p>
+<p>one
+for
+you
+because
+it's
+particularly</p>
+<p>good
+at
+that.
+Okay,
+so
+I'm
+going
+to
+use</p>
+<p>Lenny's
+design
+system
+and
+really
+show</p>
+<p>you
+what
+this
+looks
+like
+in
+practice.
+So</p>
+<p>let's
+say
+Lenny's
+going
+to
+come
+into</p>
+<p>competition
+with
+Chat
+PRD
+and
+we're</p>
+<p>going
+to
+create
+the
+Lenny
+PRD
+builder</p>
+<p>using
+the
+Lenny
+design
+system.
+We're</p>
+<p>going
+to
+have
+a
+head-to-head
+compete.</p>
+<p>Lenny
+or
+Claire,
+who
+writes
+better
+PRDs?</p>
+<p>Well,
+I'm
+going
+to
+use
+Claude
+design,</p>
+<p>the
+Lenny's
+Newsletter
+design
+system,</p>
+<p>and
+I'm
+going
+to
+say
+PRD
+maker.
+And
+I'm</p>
+<p>going
+to
+click
+create
+on
+this</p>
+<p>high-fidelity</p>
+<p>prototype.</p>
+<p>I'm
+going
+to
+start
+with
+the
+design</p>
+<p>system.
+You
+can
+see
+it's
+already</p>
+<p>selected
+down
+here.
+It's
+an
+interactive</p>
+<p>prototype
+and
+we
+want
+to
+do
+high-fi</p>
+<p>design.
+And
+I'm
+just
+going
+to
+use
+my</p>
+<p>monologue
+to
+write
+in
+here
+what
+I
+want.</p>
+<p>Please
+help
+me
+make
+a
+landing
+page
+for
+a</p>
+<p>PRD
+generator
+and
+AI
+PM
+coach
+powered
+by</p>
+<p>all
+the
+data
+in
+Lenny's
+Newsletter</p>
+<p>adhering
+to
+the
+Lenny
+Newsletter
+design</p>
+<p>system.</p>
+<p>Make
+it
+awesome.</p>
+<p>Make
+it
+awesome
+is
+a
+design
+version
+of</p>
+<p>please
+Claude,
+make
+no
+mistakes.
+So
+I'm</p>
+<p>going
+to
+go
+ahead
+and
+send
+that
+in.
+And</p>
+<p>if
+you're
+looking
+for
+a
+little
+bit
+of</p>
+<p>fun,
+we
+have
+a
+couple
+new
+loading</p>
+<p>messages
+here
+over
+in
+the
+Claude
+AI</p>
+<p>design
+loader.
+It's
+not</p>
+<p>flibber-jittering
+or
+whatever
+it
+used
+to</p>
+<p>be
+in
+Claude
+code.
+It
+does
+things
+like</p>
+<p>sauté
+onions.
+Very
+funny.
+Okay,
+so
+it's</p>
+<p>going
+to
+ask
+me
+about
+the
+PRD
+generator</p>
+<p>landing
+page.
+Again,
+I
+really
+love
+this</p>
+<p>Q&amp;A
+functionality
+that's
+in
+Claude
+code</p>
+<p>and
+they've
+made
+it
+very
+nice
+in
+Claude</p>
+<p>design.
+The
+product
+is
+called
+LennyDoc</p>
+<p>and
+it's
+going
+to
+help
+you</p>
+<p>an
+AI
+PM
+in
+the
+your
+pocket
+is
+trained</p>
+<p>on
+Lenny's
+archive.
+Lenny,
+please
+don't</p>
+<p>compete
+with
+me.
+I'm
+tired.
+All
+right,</p>
+<p>who's
+the
+primary
+audience?
+New
+and</p>
+<p>aspiring
+PMs.
+It's
+going
+to
+be
+pure</p>
+<p>Lenny.</p>
+<p>Um
+decide
+for
+me
+on
+what
+sections
+I</p>
+<p>should
+include.
+How
+interactive
+should</p>
+<p>it
+be?
+I'm
+going
+to
+do
+small
+live</p>
+<p>interactions,
+but
+not
+the
+full
+thing.</p>
+<p>Again,
+this
+is
+for
+a
+prototype.
+And
+I'll</p>
+<p>let
+it
+decide
+pricing.
+I
+love
+this.
+If</p>
+<p>you
+haven't
+seen
+this
+in
+Claude
+design,</p>
+<p>they
+give
+you
+a
+little
+wireframe
+hero</p>
+<p>style
+directions.
+And
+I
+even
+got
+one
+of</p>
+<p>these
+that
+said,
+&quot;Tell
+me
+what
+appeals</p>
+<p>to
+you.&quot;
+I
+love
+that
+so
+much.
+And
+for</p>
+<p>me,
+I'm
+just
+going
+to
+go
+with
+this.
+This</p>
+<p>appeals
+to
+me.
+I
+don't
+know.
+I
+just
+like</p>
+<p>it.
+And
+then
+I'm
+going
+to
+just
+let
+it</p>
+<p>decide.
+And
+then
+here's
+another
+really</p>
+<p>cool
+function
+of
+Claude
+design.
+It
+gives</p>
+<p>you
+variations,
+which
+as
+somebody
+who</p>
+<p>has
+spent
+so
+much
+time
+in
+AB
+testing
+in</p>
+<p>her
+career,
+I
+think
+is
+so
+fun.
+You
+can</p>
+<p>decide
+how
+many
+options
+you
+want.
+You</p>
+<p>can
+get
+one
+option.
+You
+can
+get
+three</p>
+<p>options.
+You
+can
+get
+five
+options.
+It</p>
+<p>defaults
+to
+three.
+And
+I
+think
+this
+is</p>
+<p>really
+smart
+from
+a
+design
+tool</p>
+<p>perspective
+because
+often
+those
+cycles</p>
+<p>of
+no,
+make
+it
+better
+or
+or
+make
+it</p>
+<p>different
+can
+be
+very
+slow
+and
+most</p>
+<p>people
+come
+into
+Claude
+design
+probably</p>
+<p>don't
+have
+the
+ability
+to
+articulate</p>
+<p>exactly
+the
+changes
+they
+make.
+So,
+it's</p>
+<p>really
+smart
+to
+put
+three
+separate
+ideas</p>
+<p>in
+front
+of
+the
+consumers
+of
+Claude</p>
+<p>design</p>
+<p>and
+let
+you
+pick
+what
+you
+like
+and</p>
+<p>figure
+out
+just
+from
+looking
+at
+it</p>
+<p>versus
+having
+to
+iterate
+with
+a
+prompt.</p>
+<p>Anything
+else
+you
+should
+know?
+No.
+We're</p>
+<p>going
+to
+continue
+here
+and</p>
+<p>and
+we
+ran
+out
+of
+credits.
+Okay,
+BRB.</p>
+<p>The
+number
+one
+problem
+we
+all
+have
+with</p>
+<p>Anthropic
+products
+is
+there's
+too
+many</p>
+<p>limits.
+I
+immediately
+hit
+my</p>
+<p>limit.
+I've
+only
+done
+about
+two
+or
+three</p>
+<p>things
+in
+Claude
+design
+and
+I
+am
+blocked</p>
+<p>until
+Saturday
+and
+it
+is
+Tuesday.
+So,
+I</p>
+<p>went
+and
+paid
+my
+Claude
+chips
+to
+the</p>
+<p>Anthropic
+gods.
+Let's
+see
+if
+it'll
+let</p>
+<p>me
+try
+again.
+Yes,
+$200
+later,
+we
+are</p>
+<p>back.
+All
+right.
+So,
+it's
+going
+to
+go</p>
+<p>ahead
+and
+create
+this
+landing
+page
+for</p>
+<p>this
+Lenny
+tool
+builder.
+Now,
+another</p>
+<p>piece
+of
+feedback
+that
+we're
+going
+to</p>
+<p>have
+to
+deal
+with
+during
+this
+podcast
+is</p>
+<p>it
+is
+slow.</p>
+<p>And
+I
+think
+one
+of
+the
+places
+where</p>
+<p>Figma
+is
+going
+to
+continue
+to
+win
+and
+we</p>
+<p>saw
+this
+in
+our
+How
+I
+AI
+episode
+with</p>
+<p>the
+Figma
+team
+about
+how
+they
+use
+MCPs.</p>
+<p>With
+design
+systems
+and
+design
+tools
+in</p>
+<p>particular,
+you
+want
+really
+short</p>
+<p>feedback
+loops.
+If
+you
+don't
+like
+how</p>
+<p>something
+looks,
+you
+want
+to
+be
+able
+to</p>
+<p>change
+and
+modify
+it
+pretty
+immediately.</p>
+<p>And
+I
+have
+to
+say
+this
+is
+where
+Figma</p>
+<p>really
+wins.
+Just
+your
+ability
+to
+drag</p>
+<p>things,
+change
+things,
+change
+the
+font</p>
+<p>without
+having
+to
+wait
+for
+an
+LLM
+call,</p>
+<p>without
+having
+to
+top
+up
+your
+credits.</p>
+<p>Immediately,
+there
+does
+not
+need
+to
+be
+a</p>
+<p>model
+in
+the
+loop.
+I
+think
+we</p>
+<p>underestimate
+how
+nice
+that
+is
+from
+a</p>
+<p>speed
+of
+iteration
+perspective
+when</p>
+<p>you're
+building
+and
+designing
+things.</p>
+<p>And
+I
+think
+that
+is
+one
+reason
+why
+when</p>
+<p>Figma
+will
+continue
+to
+be
+a
+nice</p>
+<p>iteration
+and
+design
+canvas
+for
+any
+kind</p>
+<p>of
+design
+work
+because
+honestly,
+the</p>
+<p>cycles
+are
+so
+slow
+here
+with
+Claude</p>
+<p>design.</p>
+<p>This
+is
+probably
+going
+to
+have
+to
+take</p>
+<p>about
+5
+to
+10
+minutes.
+I
+I
+should
+step</p>
+<p>away
+from
+this,
+but
+we're
+going
+to</p>
+<p>pause,
+come
+back
+to
+it
+when
+it's
+done</p>
+<p>sauteing
+and
+shelling,
+as
+it
+says
+in
+the</p>
+<p>waiting.
+I'm
+the
+founder,
+so
+I
+know
+most</p>
+<p>people
+don't
+start
+companies
+because</p>
+<p>[music]
+they
+love
+running
+payroll
+or</p>
+<p>managing
+compliance.
+But
+somewhere</p>
+<p>between
+hiring
+your
+first
+employee
+and</p>
+<p>raising
+your
+next
+round,
+[music]
+you
+end</p>
+<p>up
+in
+the
+weeds
+with
+HR,
+IT,
+and
+all</p>
+<p>that
+other
+stuff.
+That's
+what
+Rippling</p>
+<p>was
+built
+to
+solve.
+Rippling
+is
+a</p>
+<p>unified
+platform
+that
+lets
+startups
+run</p>
+<p>[music]
+HR,
+payroll,
+IT,
+and
+finance
+in</p>
+<p>one
+system
+from
+day
+one.
+The
+Rippling</p>
+<p>startup
+stack
+replaces
+[music]</p>
+<p>disconnected
+tools
+that
+don't
+sync
+with</p>
+<p>a
+fully
+connected
+platform.
+Over
+15,000</p>
+<p>startups,
+including
+Cursor,
+Clay,
+and</p>
+<p>Sierra,
+trust
+Rippling
+to
+scale
+[music]</p>
+<p>fast
+without
+adding
+additional
+ops
+and</p>
+<p>HR
+head
+count,
+so
+founders
+like
+you
+can</p>
+<p>keep
+building.</p>
+<blockquote>
+<blockquote>
+<p>[music]</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Right
+now,
+venture-backed
+startups
+can</p>
+</blockquote>
+</blockquote>
+<p>get
+6
+months
+of
+Rippling
+startup
+stack</p>
+<p>for
+free.
+[music]
+Head
+to</p>
+<p>rippling.com/howiai</p>
+<p>and
+sign
+up
+today.
+That's
+r
+i
+p
+p
+l
+i
+n</p>
+<p>g.com/howiai
+[music]</p>
+<p>to
+sign
+up
+for
+6
+months
+free
+today.</p>
+<p>Focus
+on
+what
+you're
+building
+and
+leave</p>
+<p>the
+rest
+to
+Rippling.
+Okay,
+that
+did</p>
+<p>take
+about
+10
+minutes,
+but
+we
+have
+got</p>
+<p>Lenny
+doc,
+the
+chat
+PRD
+competitor
+by
+my</p>
+<p>friend
+and
+partner
+Lenny.
+And
+you
+can</p>
+<p>see
+here,
+it
+really
+did
+match
+some
+of</p>
+<p>his
+general
+branding
+from
+the
+Lenny's</p>
+<p>newsletter.
+So,
+colors
+look
+right,
+logo</p>
+<p>looks
+right.
+I
+will
+tell
+you
+the
+number</p>
+<p>one
+Claude
+design
+slop
+tell
+is
+it
+loves</p>
+<p>an
+italicized
+serif
+font.
+It
+loves
+this</p>
+<p>in
+a
+landing
+page.</p>
+<p>But
+it's
+pretty
+good
+and
+I
+would
+say,</p>
+<p>you
+know,
+if
+if
+Lenny
+was
+going
+to
+make</p>
+<p>something,
+it
+would
+look
+much
+more
+like</p>
+<p>this
+versus
+what
+the
+chat
+PRD
+brand</p>
+<p>looks
+like.
+So,
+I
+don't
+think
+this
+is</p>
+<p>too
+far
+off
+and
+it's
+done
+some
+great</p>
+<p>stuff
+here.
+It's
+been
+a
+prototype
+of
+a</p>
+<p>starter
+component.</p>
+<p>It's
+pulled
+in
+some
+value
+propositions.</p>
+<p>It's
+shown
+what
+the
+chat
+looks
+like.
+It</p>
+<p>even
+put
+in
+some
+content
+marketing
+here,</p>
+<p>so
+I
+got
+to
+be
+really
+careful
+pulling</p>
+<p>Lenny's
+content.
+And
+then
+we
+have
+to</p>
+<p>call
+out
+the
+ability
+to
+do
+tweaks
+and</p>
+<p>versions
+in
+Claude
+design.
+So,
+because
+I</p>
+<p>asked
+for
+three
+versions,
+it's
+going
+to</p>
+<p>have
+these
+tweaks
+that
+it
+can
+do.
+Do
+you</p>
+<p>want
+an
+operator
+headline?
+Do
+you
+want</p>
+<p>blunt
+headline?
+Do
+you
+want
+a
+question</p>
+<p>headline?
+Oh,
+I
+love
+what
+would
+Lenny</p>
+<p>do.
+Hero
+layout,
+I
+asked
+for
+centered,</p>
+<p>so
+I
+want
+centered.
+Although,
+that
+looks</p>
+<p>too
+much
+like
+his
+newsletter,
+so
+I'm</p>
+<p>going
+to
+go
+with
+side
+mark.
+Background,</p>
+<p>do
+we
+want
+this
+nice
+cream
+or
+white?
+I</p>
+<p>like
+white.
+What's
+the
+primary
+CTA?</p>
+<p>We're
+growth
+people
+here.
+We
+do
+try
+it</p>
+<p>free.
+We
+love
+PLG
+motion.
+And
+then
+do</p>
+<p>you
+want
+on
+or
+off
+the
+product
+pass</p>
+<p>bundle?
+Do
+you
+want
+a
+pricing
+section?
+I</p>
+<p>think
+this
+is
+so
+fun
+and
+imagine
+just</p>
+<p>being
+able
+to
+iterate
+so
+quickly
+with</p>
+<p>this
+design.
+I
+really
+like
+it.</p>
+<p>A
+couple
+other
+things
+that
+you
+might</p>
+<p>miss
+in
+Claude
+design
+that
+I
+think
+are</p>
+<p>nice,
+you
+can
+comment
+on
+specific</p>
+<p>components.
+So,
+let's
+say
+I
+think
+this</p>
+<p>CTA
+is
+pretty
+bad.
+I
+can
+say,
+um,</p>
+<p>improve
+the</p>
+<p>CTA
+text.
+Send
+that
+to
+Claude.
+Claude's</p>
+<p>going
+to
+improve
+that.
+I
+can
+draw,
+do</p>
+<p>circles
+on
+things,
+add
+notes,
+call
+out</p>
+<p>things.
+So,
+it
+is
+a
+really
+natural
+way</p>
+<p>to
+interact
+with
+a
+design.
+It's
+kind
+of</p>
+<p>the
+best
+of
+a
+prototype,
+InVision
+when</p>
+<p>we
+used
+to
+have
+that,
+of
+of
+commenting,</p>
+<p>a
+FigJam,
+a
+Figma
+comments,
+all
+that</p>
+<p>kind
+of
+stuff.
+But
+here
+with
+AI
+that
+can</p>
+<p>actually
+make
+those
+changes
+for
+you.
+And</p>
+<p>I
+think
+the
+design
+went
+pretty
+well.</p>
+<p>Now,</p>
+<p>this
+is
+an
+example
+of
+something
+pretty</p>
+<p>straightforward.
+Again,
+I
+think
+it's</p>
+<p>better
+at
+marketing
+style
+design,
+these</p>
+<p>kind
+of
+components
+that
+you
+see
+here</p>
+<p>that
+are
+more
+like
+landing
+page</p>
+<p>components
+than
+the
+UX
+design.
+I
+found</p>
+<p>that
+it
+doesn't
+quite
+reason
+with
+design</p>
+<p>systems
+and
+user
+experience
+components</p>
+<p>and
+app
+components
+as
+well.
+But
+I
+think</p>
+<p>this
+did
+a
+pretty
+good
+job.
+Another
+use</p>
+<p>case
+that
+I
+think
+is
+really
+interesting</p>
+<p>is
+Claude
+design
+can
+make
+slides.
+So,
+I</p>
+<p>chose
+that
+landing
+page,
+Lenny's</p>
+<p>newsletter,
+design
+system,
+and
+I</p>
+<p>actually
+dropped
+my
+open
+claw
+article</p>
+<p>that
+I
+wrote
+for
+the
+newsletter
+in
+as
+a</p>
+<p>PDF
+and
+I
+said,
+let's
+build
+a
+deck</p>
+<p>teaching
+people
+how
+to
+set
+up
+open
+claw</p>
+<p>based
+on
+this
+article.
+And
+this
+is
+where</p>
+<p>I
+think
+it
+really
+shines.</p>
+<p>It
+looked
+at
+the
+design
+system,
+looked</p>
+<p>at
+the
+content,
+and
+built
+a
+really
+nice</p>
+<p>presentation
+for
+me
+to
+present
+open
+claw</p>
+<p>and
+how
+to
+set
+it
+up.
+And
+you
+can
+see</p>
+<p>here,
+it
+just
+looks
+really
+nice.
+And
+so,</p>
+<p>if
+you're
+someone
+that
+has
+to
+put</p>
+<p>together
+decks
+for
+customers,
+you
+have</p>
+<p>to
+put
+together
+instructional
+material,</p>
+<p>and
+you
+really
+want
+that
+to
+match
+your</p>
+<p>branding,
+I
+think
+product
+marketers,
+you</p>
+<p>really
+need
+to
+pay
+attention
+for
+things</p>
+<p>like
+training,
+enablement,
+and
+customer</p>
+<p>decks.
+I
+really
+think
+this
+does
+a
+very</p>
+<p>nice
+and
+elegant
+job
+of
+designing
+a</p>
+<p>deck.
+And
+even
+look
+at
+this,
+I
+had
+a</p>
+<p>command
+in
+the
+terminal
+as
+part
+of
+my</p>
+<p>article,
+and
+it
+actually
+put
+in
+a
+really</p>
+<p>cute
+fake
+terminal
+here
+with
+a
+little</p>
+<p>blinker.
+And
+this
+is
+the
+fun
+parts
+of</p>
+<p>the
+Claude
+design
+slides
+is
+they're</p>
+<p>actually
+just
+code
+behind
+the
+scenes.
+I</p>
+<p>think
+this
+might
+be
+where
+we're
+going</p>
+<p>with
+slides
+overall
+is
+slides
+just
+end</p>
+<p>up
+being
+code
+like
+everything
+else.
+And</p>
+<p>so,
+you
+can
+get
+these
+cute
+little
+design</p>
+<p>elements
+that
+I
+think
+are
+really</p>
+<p>delightful
+and
+fun
+in
+the
+app.
+So,
+if</p>
+<p>you're
+looking
+for
+a
+really
+practical</p>
+<p>use
+case
+where
+I
+think
+it
+does
+quite</p>
+<p>well,
+take
+straight
+content
+and
+turn
+it</p>
+<p>into
+a
+beautiful
+deck
+matching
+your</p>
+<p>brand.
+And
+then
+my
+final
+very
+important</p>
+<p>Claude
+design
+use
+case,
+it</p>
+<p>gets
+very
+fun
+to
+imagine
+crazy
+versions</p>
+<p>of
+your
+web
+experience
+or
+website.
+When</p>
+<p>you
+give
+Claude
+design
+no
+design
+system,</p>
+<p>it
+does
+the
+best.
+So,
+I
+asked
+Claude
+to</p>
+<p>make
+a
+90s
+GeoCities
+style
+version
+of</p>
+<p>the
+Lenny's
+newsletter
+homepage.
+It
+did</p>
+<p>that.
+It
+is
+called
+Lenny's
+product
+zone</p>
+<p>and
+it
+is
+pretty
+incredible.
+And
+even</p>
+<p>the
+tweaks
+component
+that
+we
+had
+that</p>
+<p>was
+so
+nice
+in
+the
+polished
+landing
+page</p>
+<p>version
+is
+now
+real
+ugly.
+I'm
+going
+with</p>
+<p>bricks.
+I'm
+going
+with
+Comic
+Sans,
+of</p>
+<p>course,
+and
+I
+want
+all
+the
+things.
+So,</p>
+<p>I'm
+going
+to
+leave
+all
+these
+tweaks</p>
+<p>here.</p>
+<p>And
+look
+at
+this
+beauty.
+Your
+OKRs
+are</p>
+<p>cringe
+and
+seven
+ways
+to
+fix
+them
+before</p>
+<p>Q3.
+And
+this
+is
+a
+secret
+power
+of
+Claude</p>
+<p>design.
+It
+writes
+exceptional
+copy.
+So,</p>
+<p>if
+you
+let
+it
+run
+on
+copy,
+which
+is
+such</p>
+<p>an
+underappreciated
+part
+of
+building
+a</p>
+<p>great
+prototype
+or
+design,</p>
+<p>it's
+going
+to
+do
+a
+really,
+really
+good</p>
+<p>job.
+And
+so,
+I
+highly
+recommend
+finding</p>
+<p>a
+reference
+style.
+Uh,
+Jamie
+Gannon</p>
+<p>makes
+a
+really
+good
+point
+on
+this
+in
+her</p>
+<p>episode
+of
+How
+I
+AI
+is
+if
+you
+understand</p>
+<p>reference
+styles,
+you
+can
+reference
+and</p>
+<p>explain
+what
+you
+want,
+but
+let
+it
+go</p>
+<p>pretty
+wild
+without
+a
+design
+system,
+and</p>
+<p>then
+you
+will
+get
+very,</p>
+<p>very
+cool
+designs.
+So,
+I'm
+going
+to,
+as</p>
+<p>soon
+as
+Lenny
+gives
+me
+access
+to
+his</p>
+<p>GitHub,
+to
+kind
+of
+push
+this
+right
+up.
+I</p>
+<p>think
+it's
+going
+to
+convert.
+Convert</p>
+<p>like
+crazy.
+So,
+let's
+ask
+him
+to
+ship</p>
+<p>it.
+Write
+in
+the
+comments
+if
+you
+think</p>
+<p>this
+is
+what
+Lenny
+should
+redesign
+his</p>
+<p>website
+to.</p>
+<p>So,
+those
+are
+my
+three
+Claude
+design
+use</p>
+<p>cases.
+Import
+your
+design
+system
+and</p>
+<p>create
+a
+new
+more
+marketing
+style</p>
+<p>landing
+page,
+use
+content
+plus
+your</p>
+<p>design
+system
+to
+create
+really
+really</p>
+<p>beautiful
+slides,
+and
+then
+go
+ham
+on
+an</p>
+<p>ugly
+redesign
+of
+your
+website
+or
+ugly
+or</p>
+<p>beautiful,
+depending
+on
+what
+you
+think,</p>
+<p>and
+facts
+us
+at
+1-800
+product,
+which
+is</p>
+<p>exactly
+what
+this
+landing
+page
+says
+is</p>
+<p>the
+way
+to
+get
+in
+touch
+with
+my
+friend</p>
+<p>Lenny
+if
+you
+think
+he
+should
+shoot
+ship</p>
+<p>Lenny's
+product
+zone.
+Okay,
+I
+just
+want</p>
+<p>to
+show
+you
+two
+more
+things
+really</p>
+<p>quickly
+before
+we
+go,
+and
+those
+things</p>
+<p>are
+how
+I
+think
+you
+can
+use
+the
+new
+GPT</p>
+<p>image
+model
+2
+to
+get
+some
+brand
+work
+and</p>
+<p>also
+some
+fun
+image
+work
+done.
+Okay,
+so</p>
+<p>just
+today
+at
+Chat
+GPT
+OpenAI
+released</p>
+<p>Chat
+GPT
+images
+2.0
+model,
+which
+is
+new</p>
+<p>era
+of
+image
+generation.
+It
+is
+the
+first</p>
+<p>model
+that
+can
+do
+thinking,
+and
+they've</p>
+<p>really
+focused
+on
+text
+and
+the
+ability</p>
+<p>to
+render
+text
+and
+objects
+accurately,</p>
+<p>and
+I
+just
+wanted
+to
+show
+you
+two
+use</p>
+<p>cases
+that
+I
+think
+are
+pretty</p>
+<p>interesting,
+and
+how
+well
+I
+think
+the</p>
+<p>new
+image
+model
+from
+OpenAI
+performs.</p>
+<p>The
+first
+one
+is
+kind
+of
+back
+to
+what
+we</p>
+<p>were
+talking
+about
+before,
+which
+is</p>
+<p>brand.</p>
+<p>And
+I
+saw
+this
+prompt
+on
+X,
+and
+I
+I</p>
+<p>copied
+it
+for
+Chat
+PRD
+to
+see
+what
+we</p>
+<p>would
+get.
+And
+it's
+basically
+the
+idea</p>
+<p>of
+creating
+one
+of
+those
+multi-page</p>
+<p>brand
+kits
+for
+your
+company.
+So,
+I
+asked</p>
+<p>it
+to
+create
+it
+for
+my
+company
+Chat
+PRD.</p>
+<p>I
+just
+gave
+some
+general
+kind
+of
+brand</p>
+<p>design
+guidance
+off
+this.
+I
+had
+Chat
+GPT</p>
+<p>write
+this
+for
+me,
+and
+asked
+it
+to</p>
+<p>generate
+it.
+And
+what
+I
+will
+say
+is
+it</p>
+<p>did
+a
+really
+lovely
+job
+in
+terms
+of</p>
+<p>text.
+It
+doesn't
+have
+that
+classic
+like</p>
+<p>GPT
+image
+text
+looks
+to
+it,
+so</p>
+<p>typography
+has
+gotten
+a
+little
+bit</p>
+<p>better.
+I
+think
+the
+it's
+kind
+of
+amazing</p>
+<p>it
+can
+do
+this
+nine
+grid
+layout
+of</p>
+<p>different
+parts
+of
+the
+brand
+kit,
+and
+I</p>
+<p>don't
+think
+it's
+bad.
+It's
+just
+not
+me.</p>
+<p>And
+so,
+I
+loaded
+up
+some
+images
+from</p>
+<p>Midjourney
+here
+that
+I
+think
+we
+use
+more</p>
+<p>in
+our
+brand
+kit,
+and
+I
+say,
+&quot;That's
+not</p>
+<p>really
+us.
+Here
+are
+some
+reference</p>
+<p>images.</p>
+<p>Update
+the
+brand
+kit.&quot;
+And
+let's
+see</p>
+<p>what
+it
+does
+with
+that.
+I'm
+going
+to</p>
+<p>make
+it
+create
+an
+image.
+Hopefully,
+I'm</p>
+<p>hoping
+it
+should
+read
+these
+images,</p>
+<p>which
+are
+much
+brighter,
+much
+pinker,</p>
+<p>and
+have
+this
+like
+sort
+of
+pixelated</p>
+<p>feel
+to
+them,</p>
+<p>and
+create
+a
+brand
+kit
+that
+looks
+like</p>
+<p>more
+like
+what
+I
+would
+want
+to
+use.
+And</p>
+<p>I
+think
+this
+is
+just
+such
+a
+neat</p>
+<p>workflow.
+I've
+heard
+a
+lot
+from
+people</p>
+<p>that
+they're
+really
+dissatisfied
+with</p>
+<p>the
+current
+image
+models
+for
+marketing</p>
+<p>purposes
+because
+it
+requires
+so
+much</p>
+<p>bringing
+together
+of
+images
+and
+text
+and</p>
+<p>typography
+and
+voice.
+And
+while
+I
+think</p>
+<p>something
+like
+a
+Claude
+design
+obviously</p>
+<p>can
+do
+that
+well
+at
+the
+web
+asset
+level,</p>
+<p>sometimes
+you
+want
+it
+at
+the
+brand
+or</p>
+<p>image
+asset
+level,
+and
+I
+think
+it's</p>
+<p>really
+interesting
+to
+see
+if
+GPT
+image
+2</p>
+<p>can
+do
+this.
+So,
+let's
+see
+what
+it</p>
+<p>generates.
+It's
+finishing
+up
+right
+now.</p>
+<p>Let's
+see
+how
+pink
+it
+is
+and
+if
+we
+love</p>
+<p>it.
+Oh
+my
+gosh,
+I
+actually
+really
+love</p>
+<p>it.
+It
+makes
+me
+so
+happy.
+As
+you
+can</p>
+<p>see,
+it
+took
+in
+this
+like
+sort
+of</p>
+<p>pixelated</p>
+<p>landscape-y
+images
+that
+we've
+been
+using</p>
+<p>for
+Chat
+PRD.
+It
+is
+certainly
+more
+pink,</p>
+<p>and
+it
+has
+given
+me
+kind
+of
+a
+new
+idea</p>
+<p>of
+what
+we
+could
+do
+with
+this
+brand
+kit.</p>
+<p>Now,
+we
+got
+an
+amazing
+brand
+kit
+done
+by</p>
+<p>designers.
+I
+think
+it's
+probably</p>
+<p>scientifically
+5
+to
+50
+times
+better
+than</p>
+<p>this,
+but
+if
+you
+were
+looking
+for</p>
+<p>somewhere
+to
+start,
+I
+think
+that
+GPT</p>
+<p>image
+2
+is
+quite
+good
+at
+this,
+and
+this</p>
+<p>doesn't
+have
+that
+very
+obvious
+AI
+image</p>
+<p>text
+tell
+on
+the
+typography,
+and
+I
+think</p>
+<p>something
+like
+this
+is
+a
+really
+great</p>
+<p>starting
+point
+for
+folks
+that
+are
+trying</p>
+<p>to
+get
+images
+done.
+And
+then
+finally,</p>
+<p>one
+last
+fun
+use
+case
+it
+just
+finishes</p>
+<p>finished
+over
+here,</p>
+<p>which
+is
+taking
+my
+image
+and
+doing
+my</p>
+<p>color
+analysis
+for
+for
+the
+boys
+in
+the</p>
+<p>room.
+This
+is
+something
+that
+the
+ladies</p>
+<p>often
+do
+to
+figure
+out
+what
+colors
+look</p>
+<p>best
+on
+what
+they're
+wearing,
+and
+so
+I</p>
+<p>uploaded
+a
+photo
+and
+asked
+GPT
+image
+one</p>
+<p>image
+two
+to
+make
+me
+a
+color
+analysis,</p>
+<p>and
+it
+gave
+me
+warm
+neutral.
+My
+best</p>
+<p>colors
+are
+these
+earthy
+warm
+colors,
+and</p>
+<p>even
+put
+me
+in
+those
+colors
+here
+down</p>
+<p>here.
+Now,
+my
+face
+got
+real
+weird</p>
+<p>towards
+the
+bottom.
+My
+teeth
+are
+looking</p>
+<p>kind
+of
+funk
+over
+here,
+but
+overall,
+I</p>
+<p>would
+say
+this
+is
+pretty
+impressive.</p>
+<p>This
+is
+something
+that
+people
+spend
+a</p>
+<p>lot
+of
+time
+putting
+together
+for
+folks.</p>
+<p>Now,
+what
+I
+would
+say
+GPT2
+is
+I
+am</p>
+<p>actually
+a
+dark
+winter,
+so
+I
+might
+come</p>
+<p>in
+here
+and
+say,
+&quot;No,
+I'm
+a
+dark
+winter.</p>
+<p>You're
+just
+confused
+by
+my
+old</p>
+<p>highlights.
+My
+hair
+looks
+much
+blonder</p>
+<p>in
+that
+picture
+than
+it
+naturally
+is.</p>
+<p>It's
+actually
+very
+dark.&quot;
+Um
+and
+so,</p>
+<p>let's
+see
+if
+it
+rewrites
+this
+to
+my</p>
+<p>exact
+color
+palette.
+But
+again,
+think</p>
+<p>about
+the
+combination
+of
+text,
+color,</p>
+<p>image
+analysis,
+layout
+quite
+lovely.
+And</p>
+<p>I
+haven't
+seen
+a
+model
+do
+this
+kind
+of</p>
+<p>layout
+work
+effectively.
+You
+know,
+I</p>
+<p>think
+Nana
+Banana
+had
+gotten
+close
+with</p>
+<p>infographics
+and
+things
+like
+this,
+but</p>
+<p>we
+might
+actually
+switch
+some
+of
+our</p>
+<p>infographics
+and
+graphic
+generation
+over</p>
+<p>to
+GPT
+image
+2
+because
+I
+think
+it
+just</p>
+<p>looks
+a
+little
+bit
+more
+expensive
+and
+a</p>
+<p>little
+nicer.
+All
+right,
+here
+we
+go.</p>
+<p>This
+actually
+looks
+really
+great.
+This</p>
+<p>is
+the
+correct
+color
+analysis
+for
+me.
+My</p>
+<p>natural
+hair
+color
+is
+actually
+the
+one</p>
+<p>in
+the
+middle.
+Don't
+tell
+anybody.
+And</p>
+<p>these
+are
+the
+colors.
+Now,
+again,
+my</p>
+<p>face
+gets
+really
+weird
+down
+here,
+and
+I</p>
+<p>would
+never
+wear
+these
+clothes.
+I
+am
+not</p>
+<p>a
+business
+lady.
+I
+am</p>
+<p>a
+hacker
+podcaster.
+But
+in
+terms
+of
+the</p>
+<p>colors,
+in
+terms
+of
+the
+layout,
+in
+terms</p>
+<p>of
+the
+photography,
+the
+typography,
+this</p>
+<p>is
+pretty
+impressive,
+and
+I
+would
+pay
+a</p>
+<p>lot
+of
+money
+for
+somebody
+to
+do
+this
+for</p>
+<p>me.
+So,
+if
+you're
+looking
+for
+a
+fun</p>
+<p>Mother's
+Day
+gift
+out
+there,
+take
+a</p>
+<p>photo
+of
+your
+lady
+when
+where
+she's</p>
+<p>looking
+good,
+and
+throw
+it
+in
+here
+and</p>
+<p>ask
+for
+her
+color
+analysis,
+and
+then
+buy</p>
+<p>that
+person
+some
+jewelry.
+All
+right,
+so</p>
+<p>this
+is
+the
+design-focused</p>
+<p>spring
+2026
+drop.
+We
+looked
+at
+Claude</p>
+<p>design
+and
+how
+good
+it
+is
+at
+importing</p>
+<p>design
+systems,
+creating
+marketing
+style</p>
+<p>landing
+pages,
+and
+slide
+decks,
+and
+then</p>
+<p>translating
+your
+current
+website
+into</p>
+<p>something
+a
+little
+bit
+more
+fun.
+We</p>
+<p>looked
+at
+the
+new
+GPT
+model
+GPT
+image
+2.</p>
+<p>Two
+things
+I
+think
+it's
+really
+really</p>
+<p>good
+at,</p>
+<p>layout
+and
+typography.
+It
+has
+really</p>
+<p>nailed
+those
+things,
+and
+has
+also
+just</p>
+<p>up-leveled
+the
+quality
+of
+design
+because</p>
+<p>this
+is
+the
+first
+image
+model
+that</p>
+<p>really
+does
+some
+thinking.
+I
+think
+it's</p>
+<p>great,
+and
+we
+talked
+about
+Google's</p>
+<p>design.md
+standard,
+which
+they're
+trying</p>
+<p>to
+make
+the
+standard
+way
+for
+agents
+to</p>
+<p>understand
+your
+design
+system
+and
+brand.</p>
+<p>It's
+been
+a
+really
+exciting
+week.
+The</p>
+<p>end
+of
+the
+day,
+I
+don't
+think
+any
+of</p>
+<p>these
+tools
+are
+dead
+yet.
+They
+all
+have</p>
+<p>their
+benefits.
+They're
+all
+slow,
+and</p>
+<p>they're
+all
+making
+me
+top
+up
+my
+tokens.</p>
+<p>I'll
+see
+you
+soon
+where
+we'll
+look
+at</p>
+<p>all
+the
+new
+AI
+tools,
+and
+until
+next</p>
+<p>time,
+I
+hope
+you
+have
+fun
+building.</p>
+<p>Thanks
+so
+much
+for
+watching.
+If
+you</p>
+<p>enjoyed
+the
+show,
+please
+like
+and</p>
+<p>subscribe
+here
+on
+YouTube,
+or
+even</p>
+<p>better,
+leave
+us
+a
+comment
+with
+your</p>
+<p>thoughts.
+You
+can
+also
+find
+this
+podcast</p>
+<p>[music]
+on
+Apple
+Podcasts,
+Spotify,
+or</p>
+<p>your
+favorite
+podcast
+app.
+Please</p>
+<p>consider
+leaving
+us
+a
+rating
+and
+review,</p>
+<p>which
+will
+help
+others
+find
+the
+show.</p>
+<p>You
+can
+see
+all
+our
+episodes
+and
+learn</p>
+<p>more
+about
+the
+show
+at
+howiaipod.com.</p>
+<p>See
+you
+next
+time.</p>
+</details>
+<h3>Claude Design：深入集成设计系统与营销内容生成</h3>
+<p>Claude Design 作为 <strong>Anthropic</strong> 推出的在线设计工具，在处理<strong>设计系统</strong>（Design System: 一套可复用的组件和标准，用于构建一致的应用界面）集成方面表现尤为突出。与许多现有原型工具不同，Claude Design 将设计系统置于核心地位，允许用户导入自己的品牌规范，如字体、颜色、Logo 和组件。主持人 Claire Valle 以 <strong>Lenny's Newsletter</strong> 的设计系统为例，展示了如何通过上传 HTML、Logo 和图片等素材，让 Claude Design 自动提取并构建出可用的设计系统。这一过程大约需要 5 分钟，AI 会分析提供的材料，理解品牌特征，并生成一个结构化的设计系统，供后续设计使用。</p>
+<p>Claude Design 的一个关键优势在于其在<strong>营销式登陆页面</strong>（Marketing Landing Page: 用于推广产品或服务的单页网站）创建上的能力。通过一个名为 <strong>LennyDoc</strong> 的 PRD（产品需求文档）生成器和 AI PM 教练的示例，展示了工具的问答式交互。用户可以通过自然语言描述需求，AI 能够根据用户选择的<strong>设计系统</strong>（Design System）和输入的品牌信息，生成高保真原型。例如，用户可以指定受众、所需章节、互动程度，甚至让 AI 决定定价策略。AI 还能提供设计变体（默认为三种），允许用户从不同选项中选择，这对于那些难以清晰表达设计偏好的用户来说，极大地提高了效率。</p>
+<details>
+<summary>Original English</summary>
+<p>I have to start today's mini episode
+with a little bit on Claude design. In
+case you missed it last week, Anthropic
+released Claude design and it's their
+web-based design tool. Really focused on
+a couple areas. Prototypes, including
+wireframes and high-fidelity prototypes.
+People are asking, is this going to
+replace Figma in the design flow?
+Spoiler alert, I think it might actually
+replace some of these prototyping tools
+that everybody's using before they go to
+engineering.</p>
+<p>And also it's taking a swing at slides
+and videos, which I think is kind of
+interesting and also has templates for
+animations and videos, which we can also
+show a little bit of on this episode.
+But what I think makes Claude design
+really interesting is they're making the
+design system a first-class citizen of
+this design tool. So the first thing I
+did was actually go in and just import
+my design system. And I think this is
+really smart because the number one
+complaint I know people have about using
+prototyping in the product development
+life cycle is it never matches my brand.
+It never matches our design system. And
+these prototyping tools, while I think
+great, you know, the Lovables, the
+Vzeros, the Bolts, etc., also have this
+concept of design system import. I
+really haven't found they get perfect at
+replicating my existing design in my
+code base. And so I really wanted to
+test this use case for Claude design and
+see if it actually works. So the first
+thing I did was really import my design
+system. Importing a design system is
+pretty easy and I'm actually going to
+show you how to do it by importing
+Lenny's Newsletter design system. So if
+you see here, this is what I filled out
+to import Lenny's design system. Sorry,
+pal. I'll we'll see how this looks.
+I really just went to his homepage. I
+clicked save on the HTML. I saved the
+logo. I saved our little campfire here.
+I saved this nice little graphic and I
+just put it in here in the Claude code
+create your design system form. So I
+said it's Lenny's Newsletter. I don't
+have access to his GitHub. If you want
+to give me access, friend, I can I can
+make this even better. I uploaded just a
+saved HTML and some images and then
+added those fonts, logos, and assets. I
+didn't even put in additional notes
+here. I just left it blank.
+And then as you can see,
+Claude design goes ahead and starts
+exploring the provided materials and
+wants to understand the newsletter and
+then build out your design system in the
+format that they need. And what's really
+interesting here is they warn you. They
+They say this is going to take about 5
+minutes. And it did. It took about 5
+minutes. And you look along the side on
+the reasoning, it's pretty interesting
+to see how it extracts the design
+system. It's looking at the HTML and key
+images. It has a visual picture now. It
+has a sense of what core colors and
+other things it's going to work. And
+then it's going to build out this
+structure of a design system sort of in
+a skills and documentation mode that
+then Claude design is going to use. And
+looking here, I think it looks pretty
+good. If you look at this, it looks
+pretty comparable to this. I would say
+the only difference is Lenny uses
+sans-serif fonts for his headers. So
+what I might say is, you know, we
+typically use sans-serif fonts for the
+main headers other than top level.
+Switch that, but otherwise it looks
+good. The other thing that is pretty
+cool here is there's, you know, the
+newsletter kit, the typography,
+colors. You can actually see how it
+breaks down the idea of a design system.
+Even if you're not going to use Claude
+design, the idea of breaking your design
+system for any AI tool into these
+components, UI kits, typography, color,
+components, and brand marks is really
+interesting. In fact, just today Google
+Labs released the design.md standard,
+which they're trying to make sort of a
+standard agents.md or skills.md standard
+across how you would describe a design
+system for use in Google's design tools,
+but also other AI design tools. And so
+you're really seeing a lot of these
+solutions move to the concept of a
+structured design system that then can
+be used by AI to render consistent
+high-quality UI against your experience.
+So this design system is really
+interesting.
+I also created one from Chat PRD. The
+one that I did here, I used the actual
+GitHub. So I hooked up the very specific
+GitHub directly to
+um this app. So it pulled in some pretty
+specific components and UI um across our
+app and our marketing site. So you can
+put as much or as little as you want
+into these design systems, but I think
+it's a really interesting flow. And then
+going back to the core capabilities of
+Claude design, I just want to show you a
+couple things that I thought was really
+interesting. One is I think its ability
+to adhere to a design system for
+marketing-specific
+landing pages and websites is really
+good. So if you were on the marketing
+side and you have been sitting out doing
+prototyping because it's so hard to get
+your brand assets into a really nice
+workflow,
+I think Claude design is a really great
+one for you because it's particularly
+good at that. Okay, so I'm going to use
+Lenny's design system and really show
+you what this looks like in practice. So
+let's say Lenny's going to come into
+competition with Chat PRD and we're
+going to create the Lenny PRD builder
+using the Lenny design system. We're
+going to have a head-to-head compete.
+Lenny or Claire, who writes better PRDs?
+Well, I'm going to use Claude design,
+the Lenny's Newsletter design system,
+and I'm going to say PRD maker. And I'm
+going to click create on this
+high-fidelity
+prototype.
+I'm going to start with the design
+system. You can see it's already
+selected down here. It's an interactive
+prototype and we want to do high-fi
+design. And I'm just going to use my
+monologue to write in here what I want.
+Please help me make a landing page for a
+PRD generator and AI PM coach powered by
+all the data in Lenny's Newsletter
+adhering to the Lenny Newsletter design
+system.
+Make it awesome.
+Make it awesome is a design version of
+please Claude, make no mistakes. So I'm
+going to go ahead and send that in. And
+if you're looking for a little bit of
+fun, we have a couple new loading
+messages here over in the Claude AI
+design loader. It's not
+flibber-jittering or whatever it used to
+be in Claude code. It does things like
+sauté onions. Very funny. Okay, so it's
+going to ask me about the PRD generator
+landing page. Again, I really love this
+Q&amp;A functionality that's in Claude code
+and they've made it very nice in Claude
+design. The product is called LennyDoc
+and it's going to help you
+an AI PM in the your pocket is trained
+on Lenny's archive. Lenny, please don't
+compete with me. I'm tired. All right,
+who's the primary audience? New and
+aspiring PMs. It's going to be pure
+Lenny.
+Um decide for me on what sections I
+should include. How interactive should
+it be? I'm going to do small live
+interactions, but not the full thing.
+Again, this is for a prototype. And I'll
+let it decide pricing. I love this. If
+you haven't seen this in Claude design,
+they give you a little wireframe hero
+style directions. And I even got one of
+these that said, &quot;Tell me what appeals
+to you.&quot; I love that so much. And for
+me, I'm just going to go with this. This
+appeals to me. I don't know. I just like
+it. And then I'm going to just let it
+decide. And then here's another really
+cool function of Claude design. It gives
+you variations, which as somebody who
+has spent so much time in AB testing in
+her career, I think is so fun. You can
+decide how many options you want. You
+can get one option. You can get three
+options. You can get five options. It
+defaults to three. And I think this is
+really smart from a design tool
+perspective because often those cycles
+of no, make it better or or make it
+different can be very slow and most
+people come into Claude design probably
+don't have the ability to articulate
+exactly the changes they make. So, it's
+really smart to put three separate ideas
+in front of the consumers of Claude
+design
+and let you pick what you like and
+figure out just from looking at it
+versus having to iterate with a prompt.
+Anything else you should know? No. We're
+going to continue here and
+and we ran out of credits. Okay, BRB.
+The number one problem we all have with
+Anthropic products is there's too many
+limits. I immediately hit my
+limit. I've only done about two or three
+things in Claude design and I am blocked
+until Saturday and it is Tuesday. So, I
+went and paid my Claude chips to the
+Anthropic gods. Let's see if it'll let
+me try again. Yes, $200 later, we are
+back.
+All right. So, it's going to go
+ahead and create this landing page for
+this Lenny tool builder. Now, another
+piece of feedback that we're going to
+have to deal with during this podcast is
+it is slow.
+And I think one of the places where
+Figma is going to continue to win and we
+saw this in our How I AI episode with
+the Figma team about how they use MCPs.
+With design systems and design tools in
+particular, you want really short
+feedback loops. If you don't like how
+something looks, you want to be able to
+change and modify it pretty immediately.
+And I have to say this is where Figma
+really wins. Just your ability to drag
+things, change things, change the font
+without having to wait for an LLM call,
+without having to top up your credits.
+Immediately, there does not need to be a
+model in the loop. I think we
+underestimate how nice that is from a
+speed of iteration perspective when
+you're building and designing things.
+And I think that is one reason why when
+Figma will continue to be a nice
+iteration and design canvas for any kind
+of design work because honestly, the
+cycles are so slow here with Claude
+design.
+This is probably going to have to take
+about 5 to 10 minutes. I I should step
+away from this, but we're going to
+pause, come back to it when it's done
+sauteing and shelling, as it says in the
+waiting.</p>
+</details>
+<h3>Claude Design：幻灯片生成与创意重塑</h3>
+<p>Claude Design 在将现有内容转化为专业演示文稿方面表现出色。主持人分享了一个使用 <strong>Open Claw</strong> 文章 PDF 作为输入，结合 <strong>Lenny's Newsletter</strong> 的设计系统，自动生成精美演示文稿的案例。AI 不仅提炼了文章的核心信息，还围绕品牌规范构建了视觉一致的幻灯片，甚至在展示代码命令时，还巧妙地加入了模拟的终端界面和光标效果。这对于需要制作培训材料、客户演示或内容营销的专业人士来说，极大地提高了效率和最终产出的质量。</p>
+<p>此外，Claude Design 还具备强大的创意重塑能力，允许用户进行“疯狂”的网页设计实验。通过要求 AI 以 90 年代 <strong>GeoCities</strong> 风格重塑 Lenny's Newsletter 的首页，AI 生成了一个名为 &quot;Lenny's Product Zone&quot; 的独一无二的页面，充满了复古元素。更有趣的是，AI 在此过程中还展现了其<strong>卓越的文案撰写</strong>（Copywriting: 撰写用于营销和宣传目的的文本）能力，生成的标题如“Your OKRs are cringe and seven ways to fix them before Q3”极具吸引力且创意十足。这表明，即使在没有明确设计系统指导的情况下，Claude Design 也能通过理解“参考风格”，创造出极具特色且文案出色的设计。</p>
+<details>
+<summary>Original English</summary>
+<p>I chose that landing page, Lenny's
+newsletter, design system, and I
+actually dropped my open claw article
+that I wrote for the newsletter in as a
+PDF and I said, let's build a deck
+teaching people how to set up open claw
+based on this article. And this is where
+I think it really shines.
+It looked at the design system, looked
+at the content, and built a really nice
+presentation for me to present open claw
+and how to set it up. And you can see
+here, it just looks really nice. And so,
+if you're someone that has to put
+together decks for customers, you have
+to put together instructional material,
+and you really want that to match your
+branding, I think product marketers, you
+really need to pay attention for things
+like training, enablement, and customer
+decks. I really think this does a very
+nice and elegant job of designing a
+deck. And even look at this, I had a
+command in the terminal as part of my
+article, and it actually put in a really
+cute fake terminal here with a little
+blinker. And this is the fun parts of
+the Claude design slides is they're
+actually just code behind the scenes. I
+think this might be where we're going
+with slides overall is slides just end
+up being code like everything else. And
+so, you can get these cute little design
+elements that I think are really
+delightful and fun in the app. So, if
+you're looking for a really practical
+use case where I think it does quite
+well, take straight content and turn it
+into a beautiful deck matching your
+brand. And then my final very important
+Claude design use case, it
+gets very fun to imagine crazy versions
+of your web experience or website. When
+you give Claude design no design system,
+it does the best. So, I asked Claude to
+make a 90s GeoCities style version of
+the Lenny's newsletter homepage. It did
+that. It is called Lenny's product zone
+and it is pretty incredible. And even
+the tweaks component that we had that
+was so nice in the polished landing page
+version is now real ugly. I'm going with
+bricks. I'm going with Comic Sans, of
+course, and I want all the things. So,
+I'm going to leave all these tweaks
+here.
+And look at this beauty. Your OKRs are
+cringe and seven ways to fix them before
+Q3. And this is a secret power of Claude
+design. It writes exceptional copy. So,
+if you let it run on copy, which is such
+an underappreciated part of building a
+great prototype or design,
+it's going to do a really, really good
+job. And so, I highly recommend finding
+a reference style. Uh, Jamie Gannon
+makes a really good point on this in her
+episode of How I AI is if you understand
+reference styles, you can reference and
+explain what you want, but let it go
+pretty wild without a design system, and
+then you will get very,
+very cool designs. So, I'm going to, as
+soon as Lenny gives me access to his
+GitHub, to kind of push this right up. I
+think it's going to convert. Convert
+like crazy. So, let's ask him to ship
+it. Write in the comments if you think
+this is what Lenny should redesign his
+website to.</p>
+</details>
+<h3>Claude Design 的局限性与 GPT Image 2.0 的突破</h3>
+<p>尽管 Claude Design 在内容转换和创意生成方面表现出众，但其<strong>速度较慢</strong>且<strong>依赖于额度限制</strong>（如作者遇到的 $200 充值才能继续使用的情况）是其显著的缺点。与 Figma 这种无需等待 LLM 调用、实时反馈的工具相比，Claude Design 的迭代周期较长，这在需要快速原型设计的场景下可能成为瓶颈。此外，Claude Design 更擅长生成营销风格的组件，对于复杂的<strong>用户体验/用户界面</strong>（UX/UI: User Experience/User Interface - 用户与产品互动时的整体感受和界面设计）组件，其理解和渲染能力仍有提升空间。</p>
+<p>然而，<strong>GPT Image 2.0</strong> 的发布为图像生成领域带来了新的希望。该模型在<strong>排版</strong>（Typography: 字体设计、字号、间距等排版元素）和<strong>布局</strong>（Layout: 页面或图像中元素的排列方式）方面取得了显著进步，能够生成更准确的文本和更具吸引力的九宫格品牌素材。在 <strong>Chat PRD</strong> 的品牌工具包（Brand Kit: 包含 Logo、配色、字体、图像风格等一套完整的品牌视觉识别元素）生成实验中，GPT Image 2.0 即使在参考了用户提供的 Midjourney 图像后，也能生成更符合期望的、更具品牌辨识度的图像。</p>
+<p>此外，GPT Image 2.0 的<strong>色彩分析</strong>（Color Analysis: 根据个人特征确定最适合的色彩方案）功能也令人印象深刻。通过分析用户照片，模型不仅准确识别了“暖中性”的色调，还进一步细化了适合用户的<strong>大地色系</strong>（Earthy Warm Colors）和“暗冬季”的色彩方案，并展示了实际应用效果。虽然在人脸渲染细节上仍有瑕疵，但其在综合理解文本、颜色、图像及布局方面的能力，标志着 AI 图像生成正朝着更深层次的“思考”和应用迈进，为内容创作者和品牌建设者提供了强大的新工具。</p>
+<details>
+<summary>Original English</summary>
+<p>So, those are my three Claude design use
+cases. Import your design system and
+create a new more marketing style
+landing page, use content plus your
+design system to create really really
+beautiful slides, and then go ham on an
+ugly redesign of your website or ugly or
+beautiful, depending on what you think,
+and facts us at 1-800 product, which is
+exactly what this landing page says is
+the way to get in touch with my friend
+Lenny if you think he should shoot ship
+Lenny's product zone. Okay, I just want
+to show you two more things really
+quickly before we go, and those things
+are how I think you can use the new GPT
+image model 2 to get some brand work and
+also some fun image work done. Okay, so
+just today at Chat GPT OpenAI released
+Chat GPT images 2.0 model, which is new
+era of image generation. It is the first
+model that can do thinking, and they've
+really focused on text and the ability
+to render text and objects accurately,
+and I just wanted to show you two use
+cases that I think are pretty
+interesting, and how well I think the
+new image model from OpenAI performs.
+The first one is kind of back to what we
+were talking about before, which is
+brand.
+And I saw this prompt on X, and I I
+copied it for Chat PRD to see what we
+would get. And it's basically the idea
+of creating one of those multi-page
+brand kits for your company. So, I asked
+it to create it for my company Chat PRD.
+I just gave some general kind of brand
+design guidance off this. I had Chat GPT
+write this for me, and asked it to
+generate it. And what I will say is it
+did a really lovely job in terms of
+text. It doesn't have that classic like
+GPT image text looks to it, so
+typography has gotten a little bit
+better. I think the it's kind of amazing
+it can do this nine grid layout of
+different parts of the brand kit, and I
+don't think it's bad. It's just not me.
+And so, I loaded up some images from
+Midjourney here that I think we use more
+in our brand kit, and I say, &quot;That's not
+really us. Here are some reference
+images.
+Update the brand kit.&quot; And let's see
+what it does with that. I'm going to
+make it create an image. Hopefully, I'm
+hoping it should read these images,
+which are much brighter, much pinker,
+and have this like sort of pixelated
+feel to them,
+and create a brand kit that looks like
+more like what I would want to use. And
+I think this is just such a neat
+workflow. I've heard a lot from people
+that they're really dissatisfied with
+the current image models for marketing
+purposes because it requires so much
+bringing together of images and text and
+typography and voice. And while I think
+something like a Claude design obviously
+can do that well at the web asset level,
+sometimes you want it at the brand or
+image asset level, and I think it's
+really interesting to see if GPT image 2
+can do this. So, let's see what it
+generates. It's finishing up right now.
+Let's see how pink it is and if we love
+it. Oh my gosh, I actually really love
+it. It makes me so happy. As you can
+see, it took in this like sort of
+pixelated
+landscape-y images that we've been using
+for Chat PRD. It is certainly more pink,
+and it has given me kind of a new idea
+of what we could do with this brand kit.
+Now, we got an amazing brand kit done by
+designers. I think it's probably
+scientifically 5 to 50 times better than
+this, but if you were looking for
+somewhere to start, I think that GPT
+image 2 is quite good at this, and this
+doesn't have that very obvious AI image
+text tell on the typography, and I think
+something like this is a really great
+starting point for folks that are trying
+to get images done. And then finally,
+one last fun use case it just finishes
+finished over here,
+which is taking my image and doing my
+color analysis for for the boys in the
+room. This is something that the ladies
+often do to figure out what colors look
+best on what they're wearing, and so I
+uploaded a photo and asked GPT image one
+image two to make me a color analysis,
+and it gave me warm neutral. My best
+colors are these earthy warm colors, and
+even put me in those colors here down
+here. Now, my face got real weird
+towards the bottom. My teeth are looking
+kind of funk over here, but overall, I
+would say this is pretty impressive.
+This is something that people spend a
+lot of time putting together for folks.
+Now, what I would say GPT2 is I am
+actually a dark winter, so I might come
+in here and say, &quot;No, I'm a dark winter.
+You're just confused by my old
+highlights. My hair looks much blonder
+in that picture than it naturally is.
+It's actually very dark.&quot; Um and so,
+let's see if it rewrites this to my
+exact color palette. But again, think
+about the combination of text, color,
+image analysis, layout quite lovely. And
+I haven't seen a model do this kind of
+layout work effectively. You know, I
+think Nana Banana had gotten close with
+infographics and things like this, but
+we might actually switch some of our
+infographics and graphic generation over
+to GPT image 2 because I think it just
+looks a little bit more expensive and a
+little nicer. All right, here we go.
+This actually looks really great. This
+is the correct color analysis for me. My
+natural hair color is actually the one
+in the middle. Don't tell anybody. And
+these are the colors. Now, again, my
+face gets really weird down here, and I
+would never wear these clothes. I am not
+a business lady. I am
+a hacker podcaster. But in terms of the
+colors, in terms of the layout, in terms
+of the photography, the typography, this
+is pretty impressive, and I would pay a
+lot of money for somebody to do this for
+me. So, if you're looking for a fun
+Mother's Day gift out there, take a
+photo of your lady when where she's
+looking good, and throw it in here and
+ask for her color analysis, and then buy
+that person some jewelry. All right, so
+this is the design-focused
+spring 2026 drop. We looked at Claude
+design and how good it is at importing
+design systems, creating marketing style
+landing pages, and slide decks, and then
+translating your current website into
+something a little bit more fun. We
+looked at the new GPT model GPT image 2.
+Two things I think it's really really
+good at,
+layout and typography. It has really
+nailed those things, and has also just
+up-leveled the quality of design because
+this is the first image model that
+really does some thinking. I think it's
+great, and we talked about Google's
+design.md standard, which they're trying
+to make the standard way for agents to
+understand your design system and brand.
+It's been a really exciting week. The
+end of the day, I don't think any of
+these tools are dead yet. They all have
+their benefits. They're all slow, and
+they're all making me top up my tokens.
+I'll see you soon where we'll look at
+all the new AI tools, and until next
+time, I hope you have fun building.</p>
+</details>
+<h3>结论与未来展望</h3>
+<p>总而言之，Claude Design 和 GPT Image 2.0 都代表了 AI 在设计和内容创作领域的重要进展。Claude Design 在设计系统集成、营销内容生成（登陆页、幻灯片）和创意重塑方面提供了强大的支持，尤其适合产品营销和内容创作者。GPT Image 2.0 则在图像生成方面，尤其是在处理<strong>排版</strong>、<strong>布局</strong>和<strong>品牌资产</strong>创建上展现了令人欣喜的成果，预示着 AI 图像模型正朝着更智能、更具“思考”能力的方向发展。尽管这些工具在速度、成本控制和某些细节表现上仍有改进空间，但它们无疑为设计师、内容创作者和品牌专家提供了前所未有的辅助能力，加速了创意流程，并开启了新的可能性。<strong>Google Labs</strong> 提出的 <strong>design.md</strong> 标准，也预示着未来 AI 工具将更侧重于对设计系统的标准化理解和应用。</p>
+<details>
+<summary>Original English</summary>
+<p>Thanks so much for watching. If you
+enjoyed the show, please like and
+subscribe here on YouTube, or even
+better, leave us a comment with your
+thoughts. You can also find this podcast
+[music] on Apple Podcasts, Spotify, or
+your favorite podcast app. Please
+consider leaving us a rating and review,
+which will help others find the show.
+You can see all our episodes and learn
+more about the show at howiaipod.com.
+See you next time.</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=WorkOS" class="entity-link company-link">WorkOS</a>, 
+                
+                  <a href="/search/?q=Rippling" class="entity-link company-link">Rippling</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Claude Design" class="entity-link product-link">Claude Design</a>, 
+                
+                  <a href="/search/?q=GPT Image 2.0" class="entity-link product-link">GPT Image 2.0</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">ai-design-tools</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/prompt-engineering/">prompt-engineering</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">image-generation</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">ux-ui</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/content-creation/">content-creation</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

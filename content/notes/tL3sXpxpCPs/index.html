@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>美国国防部 CTO 谈 AI、国家安全与改革</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="美国国防部 CTO 谈 AI、国家安全与改革" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">美国国防部 CTO 谈 AI、国家安全与改革</span>
+      <span data-pagefind-meta="speaker" style="display:none;">a16z</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-03-13
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/a16z/">a16z</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=tL3sXpxpCPs" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-03-13
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本次访谈聚焦美国国防部 CTO 对人工智能（AI）在国家安全领域应用的看法。讨论涵盖了 AI 在应对军事竞争、优化决策和情报收集中的关键作用，以及“和平时期速度”如何导致官僚主义和技术落后。CTO 强调了改革承包流程、吸引科技人才、推动本土化生产以应对全球挑战的重要性。访谈还触及了民主监督、商业伦理与军事战略的平衡，并呼吁科技界人士为国家服务。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>AI、国防优先级与个人经历</h3>
+<p><strong>Host</strong>: 我们正面临历史上最大的军事集结。我们正朝着通用人工智能（AGI）发展，一个触及一切的底层、一个层面。但在人工智能方面，我们部门还远远落后。</p>
+<p><strong>Host</strong>: 您是美国国防部的首席技术官（CTO）。您如何评估这些优先事项的现状？</p>
+<p><strong>CTO</strong>: 我上任时，有 14 个关键优先领域。我们将其缩减到六个，这些是我认为我们拥有最大变革和增长机会，能产生影响的地方。</p>
+<p><strong>Host</strong>: 关于商业 AI 模型在五角大楼的使用，已经有了广泛的公开讨论。这次讨论中，哪些方面发生了变化？我当时有个“哇塞”的时刻，因为其中有些事情远远超出了您近几周在媒体上听到的内容。</p>
+<p><strong>CTO</strong>: 好的。感谢您邀请我来。我知道您每周都很忙，但感觉过去这一周对您来说可能是最公开繁忙的。所以，感谢您加入我们。</p>
+<p><strong>Host</strong>: 我的荣幸。很高兴来到这里。</p>
+<p><strong>Host</strong>: 嗯，我们来谈谈 Anthropic AI 与国防，但我想我们先简单谈谈您，您是如何进入这个职位的。这也不是您第一次在政府任职。您此前曾长期担任公职。您知道，在我们房间里一半来自技术领域的人，他们知道您是一位成就卓著的硅谷高管，备受追捧，非常成功。让我们从您被公共服务吸引开始。它是如何开始的，为什么要做，以及为什么现在要承担这个角色？</p>
+<p><strong>CTO</strong>: 嗯，在我创办第一家公司“Tell Me Network”之后，我们有一种语音识别软件，于 2007 年卖给了微软。我当时确实需要从科技界休息一下。所以我申请了白宫研究员项目，那非常酷。科林·鲍威尔（Colin Powell）曾参加过，参联会主席（Chairman of Joint Chiefs of Staff）。海军上将卡（Admiral Ka）、凯恩将军（General Kaine）也参加过。这是一个很棒的、为期一年的无党派项目，我被选中了，非常棒。我被分配给了当时的国防部长罗伯特·盖茨（Robert Gates）。所以我得以在阿富汗、伊拉克、巴基斯坦等地度过时光。我开始热爱那个世界，那对我来说太新了。我说总有一天我会回来的，当我准备好的时候。然后特朗普总统当选了，我想，哇，这是一个颠覆者走到顶端的时刻。他选择了国防部长（Secretary [Mattis]），这意味着我所看到的那些问题将会有更清晰的解决途径。您可以看到我们前进的速度，行政命令、关键矿产、新技术、新入局者。与以往相比，这个速度令人难以置信。所以，我很高兴在那里。</p>
+<p><strong>Host</strong>: 太棒了。那您能谈谈吗？您一直直言不讳地说，<strong>战争部</strong>（Department of War）不能以“<strong>和平时期速度</strong>”（peacetime speed）运作。这就像我们告诉创始人，你可以成为一个战时 CEO 或和平时期 CEO。什么是和平时期速度？它有什么问题？“获胜”看起来是什么样的？它意味着什么？</p>
+<p><strong>CTO</strong>: 嗯，您知道，冷战结束后，<strong>战争部</strong>的“和平时期速度”就开始了。我猜当时有一个著名的事件叫做“最后的晚餐”，五角大楼的领导层对业界说：“嘿，未来不会有太多武器系统或创新购买了。所以你们应该整合并放慢你们的增长，基本上变成股息支付者和股票回购者。”这持续了很长时间，然后<strong>行业</strong>整合成了四到五家巨头。然后，我们在 2000 年代中期（大约 2010 年）面对<strong>中国</strong>开始的史上最大规模的军事集结，而我们没有追赶上。突然之间，我们外包了很多关键的国内生产，涉及许多不同领域，无论是<strong>关键矿产</strong>、<strong>电池</strong>，还是很多<strong>供应链</strong>方面的东西。然后您抬头一看，会惊呼：“天哪，我们有太多东西要追赶了。”所以，“<strong>战时速度</strong>”就是确保我们正在重新<strong>国内化</strong>（redomesticating）我们国家力量所需的核心要素，我们正在积极推进。我们拥有卓越的能力。我们在许多领域都处于领先地位，但我们必须确保在关键领域我们是<strong>自力更生</strong>的。所以我们正在全力以赴。您知道，这让我感到惊讶。我们与一家名为 <strong>Skyio</strong> 的公司合作，该公司受到了<strong>中国</strong>的制裁。通常我们听到的是公司被美国制裁而无法在这里做生意。但实际上，如果您是一家重要的公司，并被<strong>中国</strong>制裁，无法再购买主要来自<strong>中国</strong>的电机、电池或其他关键部件，这会很糟糕。如果这些产品进入国防采购周期，而我们再也无法获得它们，那将是一个巨大的、巨大的问题。所以，我们学到了，这不仅仅是国防工业基础，还包括所有那些<strong>前体</strong>（precursors）。</p>
+<p><strong>Host</strong>: 嗯，那您能谈谈您刚上任时，作为<strong>战争部</strong>的 CTO，您如何确定优先事项？您如何评估这些优先事项的现状？您如何弄清楚？我说，如果您看新闻，感觉我们有无穷无尽的事情需要追赶。</p>
+<p><strong>CTO</strong>: 嗯，当我去年五月接手这个职位时，我宣誓就职，像任何新领导一样进行了盘点。当时我们有 14 个关键优先领域。我的前任有 10 个，后来有人又加了 4 个。所以总共有 14 个，而且近十年来都没有改变过。所以我得以审视它们，然后说：“好吧，为什么这些是关键的？而且，当你试图激励一支队伍时，谁能记住 14 件事？”“<strong>集成网络系统</strong>”（integrated network systems of systems）之类的说法，听起来有点像行话。所以我决定深入研究，找出什么才是真正重要的。我们将其缩减到了六个，这些是我认为我们对<strong>战斗力</strong>和<strong>工业基础</strong>拥有最大<strong>变革</strong>和<strong>增长</strong>以及<strong>影响力</strong>的领域。那就是起点。<strong>应用 AI</strong> 是第一位的。然后，我们将<strong>首席数字与人工智能办公室</strong>（Chief Digital and AI Office）并入了我的团队，我们得以快速推进，因为我们部门在 AI 方面落后很多，而且我们知道 AI 正在以惊人的速度渗透到世界的其他地方。而且我们的<strong>对手</strong>也在出于各种原因使用它，因为他们对自己的指挥与控制（command and control）的信任度较低。所以他们想利用计算机来消除人类决策，而我们想增强人类决策。所以这一直是优先事项。在 90 天内，我估计已有 120 万（占部门总人数 300 万）人使用了某种形式的 AI，而我刚开始时这个数字是 80,000。</p>
+<p><strong>Host</strong>: 令人难以置信。嗯，让我们多谈谈拥有先进 AI 能力为什么重要。您知道，也许有些人会说，我们过去没有所有这些 AI 能力，也一直是一个强大的世界大国。为什么它很重要？我们难道不能只专注于制造导弹之类的东西吗？</p>
+<p><strong>CTO</strong>: 嗯，您知道，AI 可以帮助制造导弹，如果它能帮助您解决<strong>物理问题</strong>、<strong>材料科学问题</strong>、<strong>空气动力学问题</strong>。或者机遇。但我们将 AI 的努力分为三个领域：<strong>企业</strong>（enterprise）和<strong>企业级用例</strong>（corporate use cases），就像任何大组织为了效率都会做的那样，这很正常，当你能更快地处理繁琐任务时，每个人都会更开心。然后是<strong>情报目的</strong>（intelligence purposes），您知道，我们收集大量的<strong>情报</strong>。我们部门拥有巨大的<strong>数据存储库</strong>，这些数据被隔离、未使用。想象一下，几十年的<strong>卫星图像</strong>，您可以用来训练模型、获取见解，然后用于<strong>异常检测</strong>。这样您就能了解发生了什么。您将一名<strong>人类分析师</strong>的吞吐量提高千倍。然后是<strong>战争对抗</strong>（war fighting）。您知道，战争对抗很大一部分是<strong>后勤</strong>（logistics）。您如何规划<strong>后勤</strong>、寻找<strong>资产</strong>、进行<strong>战争游戏</strong>、规划<strong>行动</strong>以及进行<strong>模拟</strong>等等。所以有很多真正重要的用例我们可以从中受益。</p>
+<p><strong>Host</strong>: 是的，我认为我们是那些不断向我们推销想法的初创公司的受益者。因为这是“美国活力”（American Dynamism），我们听到了那些公司说：“看，我们将通过 AI 的物流，真正地，您知道，节省五角大楼 15% 的燃料预算。我们将弄清楚如何在有争议的环境中以最高效的方式移动部队、装备和车辆。”这些都是惊人的、不可思议的用例。嗯，所以看，过去一周，关于商业 AI 模型在<strong>五角大楼</strong>（Pentagon）的使用，包括 <strong>Anthropic</strong> 被用于部门内部，出现了一个极其公开的讨论。您知道，在旧的软件时代，甚至在 SaaS 出现之前，人们会直接购买软件，然后客户可以随便使用。这次讨论有什么变化？出现了什么？有什么问题？我假设在座的各位大部分人都跟进了，所以我们应该可以安全地假设有一个基本了解。但关键问题是什么？为什么现在会出现？</p>
+<p><strong>CTO</strong>: 嗯，它们现在出现是因为当我开始查看上一届政府时期为使用 AI 而签订的合同，我有一个“哇塞”的时刻，因为其中有些事情远远超出了您在过去几周新闻报道的范围。比如您无法移动<strong>卫星</strong>，无法规划<strong>行动</strong>，不能不使用 AI 来执行它，如果它可能导致<strong>致命打击</strong>或类似情况。</p>
+<p><strong>Host</strong>: <strong>几十个</strong>限制。然而，这些 AI 模型却被嵌入到美国军方最敏感和最重要的部门中，我们在这里进行<strong>作战力量</strong>（combat power）的演习。<strong>中央司令部</strong>（Central Command）——那是关于伊朗的责任区；或者<strong>印度太平洋司令部</strong>（Indopacom），负责中国；或者<strong>南方司令部</strong>（Southcom），负责委内瑞拉和南美洲。我们都在使用这个模型，而且没有<strong>两个供应商</strong>。这是一种<strong>供应商锁定</strong>（vendor-locked）的局面，其条款理论上，如果模型被设计成在您违反条款时关闭，它可能会在行动中途突然停止，使生命处于危险之中。所以那一刻我才意识到：好吧，我们必须解决这个问题，在我们向部门部署 AI 的同时，清理掉这些。所以这引发了所有这些问题。然后第二，<strong>马杜罗</strong>（Maduro）突袭行动之后，其中一个主要供应商询问一位高级执行官，他的软件是否在马杜罗突袭行动中使用过，那是我一生中最成功的军事行动之一，确实是一次难以置信的行动。</p>
+<p><strong>CTO</strong>: 对<strong>美国的敌人</strong>来说，这几个月可不好过。确实如此。我遇到了那些执行了任务的人。那位获得<strong>荣誉勋章</strong>（Medal of Honor）的<strong>首席直升机驾驶员</strong>是一位真正杰出的美国人。我是说，他中枪了，但他保持冷静。没有告诉任何人他中枪了，所以第一批着陆队员能够着陆。而且他没有慌乱，否则可能会破坏行动。所以，他的勇气是不可思议的。</p>
+<p><strong>Host</strong>: 当一家公司问您，“嘿，我们的软件在那里被使用了吗？因为我们不确定我们是否喜欢这样？”您的脊椎会感到一阵寒意。就像您在咖啡店里，一个陌生人说：“嘿，昨天我在学校看到你的孩子在玩踢球。”您会想：“你是谁？”您知道吗？所以这引发了一系列事件：“哇，我们是否<strong>单一依赖</strong>（single-threaded）于一个供应商，而他们却担心我们如何使用他们的软件，而且服务条款与未来世界不符？我们必须引入其他合作伙伴，我们必须前进。”嗯，如果您想到 AI，正如我们正在朝 AGI（<strong>通用人工智能</strong>，artificial general intelligence）发展，一个底层、一个层面，一个将触及一切的技术，就像互联网触及一切，或者电信网络触及一切。然后告诉这个技术底层的使用者，“你不能用它做合法的事情，不能用它做通过<strong>民主体系</strong>、<strong>国会</strong>通过的法律、由<strong>行政部门</strong>在<strong>军方</strong>执行的事情。<strong>军方</strong>是美国政府最敏感的部分，因为我们的工作是成为<strong>力量部门</strong>（strength department）来保护美国人。”你确实会面临一个真相时刻。就像我们曾经经历过的那样：这项技术，如果我们合法使用它，这个底层必须是我们的选择。它不能是软件，不能是某个模型的灵魂，他们的<strong>宪法</strong>（constitution），而不是美国宪法，不能决定我们的<strong>指挥与控制环境</strong>（command and control environment），并告诉将军们和战士们什么能做什么不能做。</p>
+<p><strong>CTO</strong>: 是的。首先，我认为您刚刚分享了很多背景故事和信息，这些信息在阅读新闻和跟进报道时并不容易找到。尽管在座的很多人可能猜到了，但听到这次讨论的<strong>部分</strong>起因和<strong>催化剂</strong>最初是为了确保我们有办法使用这项能力，并使其符合我们的<strong>民主规范</strong>（democratic norms）。您提到我们有<strong>宪法</strong>，他们也有<strong>宪法</strong>。一家公司甚至有<strong>宪法</strong>，这有点疯狂。我认为没有那么多公司有自己的宪法。</p>
+<p><strong>Host</strong>: 企业价值观，是的。宪法，不是。</p>
+<p><strong>CTO</strong>: 企业文化，企业价值观，当然。我不知道有多少公司会说“这是我们的宪法”。尤其是当公司经常有高管<strong>来来往往</strong>的时候，谁知道他们明天会怎么想？嗯，所以我们来谈谈<strong>民主监督</strong>（democratic oversight）、<strong>民选领导层</strong>（elected leadership）的作用，这些在我们国家指导<strong>部署 AI 能力</strong>以<strong>保障国家安全</strong>和<strong>国防</strong>的过程。</p>
+<p><strong>Host</strong>: 是的。那么，说到<strong>美国公民自由</strong>（American civil liberties），历史上一直存在着一场非常<strong>辩论</strong>，尤其是在 9/11 之后，还有《<strong>外国情报监视法</strong>》（Foreign Intelligence Surveillance Act）、1947 年的《<strong>国家安全法</strong>》（National Security Act），所有这些法案，政府都试图在<strong>公民自由</strong>和……好消息是，有一场激烈的<strong>辩论</strong>。也许那些法律和规则还没有更新，也许它们应该更新。但是，如果我们不信任这个过程，我们就会想，好吧，法律已经跟不上技术了，所以我将做出一个影响部门 300 万人，进而影响全国 3.5 亿人的决定。您不能这样做，对吧？</p>
+<p><strong>CTO</strong>: 如果您相信这个体系，如果您不相信这个体系，尽管它不完美，那么您又相信什么呢，对吧？那么您就是自以为是，扮演上帝的角色。而我不想做这样的事情。即使我是一个<strong>小政府</strong>（small government）、<strong>自由市场</strong>（free market）人士，您仍然必须由政府来垄断暴力以保护国家。<strong>美国</strong>不仅仅是一个<strong>想法</strong>，它也是一个<strong>国家</strong>，它只能通过拥有最好的<strong>工具</strong>并合法使用它们来保护其人民。<strong>国会</strong>负责制定法律，我们负责制定关于该法律的<strong>法规</strong>。而且，您知道，我们有长达 40 页的内部指令，多年来一直存在，关于<strong>自主武器</strong>（autonomous weaponry）。我们正在关注<strong>乌克兰</strong>和<strong>俄罗斯</strong>正在发生的事情。然后我们看到<strong>中国人</strong>窃取<strong>美国模式</strong>，去除<strong>保护栏</strong>（guardrails），并可能将其用于对抗我们。那么，我的<strong>手臂</strong>是否会在对抗被<strong>对手</strong>窃取的相同模式时被绑在背后？这有点……您会陷入<strong>奥威尔</strong>（Orwellian）式的境地，很难让任何人理解，也很难站在那个问题的另一边。</p>
+<p><strong>Host</strong>: 是的，绝对。我认为关于<strong>我们的对手</strong>这一点说得很好。他们没有进行这种辩论。他们<strong>全速前进</strong>。嗯，我们如何……您还有什么想分享的，关于我们今天在 AI 辩论和讨论中的地位？这是否就此结束了，还是说还有漫长的道路要走？</p>
+<p><strong>CTO</strong>: 我认为还有工作要做。而且这很有趣。您有四家公司可以说是“<strong>前沿公司</strong>”（frontier companies），然后您有数千名研究人员，就像大联盟的球员名册一样，他们在互相交流。如果您问这些公司的领导者，他们都非常有价值，以至于这是一种非常奇怪的动态。四家公司，一千名研究人员，每个人都觉得他们至关重要。我们如何在这种动态下工作，让我们有足够多的公司与我们互动？我再也不会<strong>单一依赖</strong>了，这是上一届政府给我们留下的糟糕的“礼物”。所以我们有多个渠道，他们对<strong>国家安全</strong>感兴趣，他们是爱国者。非常类似于 2018 年的 <strong>Maven</strong> 项目，当时 <strong>Google</strong> 不想竞标那个合同。现在 <strong>Google</strong> 是一个很好的合作伙伴，所以希望一些<strong>更新的公司</strong>能从 <strong>Google</strong> 的经历中学到东西，那就是，他们不想为政府服务，因为他们有员工的（抗议）问题，但现在他们是政府最好的合作伙伴之一。</p>
+<p><strong>Host</strong>: 我们在很多方面都看到了 2018 年 <strong>Google</strong> 的 <strong>Project Maven</strong> 时刻，它是一个<strong>激励人心的时刻</strong>，让许多创始人<strong>和</strong>建设者醒悟过来，说：“嘿，等等。我确实希望政府拥有最好的技术和最佳能力。我确实想去建造。”我的意思是，如果您快进看，这催生了“<strong>美国活力</strong>”（American Dynamism）运动。我们为许多创始人提供了一个平台，他们说：“等等，我不同意<strong>Google</strong>的抗议者。我希望<strong>第一响应者</strong>（first responders）以及保卫我们国家的男男女女拥有最佳的技术和能力。”我总是提醒他们，看，<strong>Project Maven</strong> 是用来确保我们在<strong>阿富汗</strong>（Afghanistan）没有落下任何人。那真是被使用的技术。您不想落下任何人吗？替代方案是什么？所以我想，这也将是一个<strong>激励人心的时刻</strong>，为另一批对支持他们的国家和为政府服务的人民感到兴奋的创始人。嗯，让我们来谈谈<strong>战争部</strong>。内部结构上，需要改变什么，以确保您拥有最佳的能力、最佳的技术，并将其推广到一线。您知道，我们在新闻上看到了，我不会直接问您，因为您可能无法回答，但您知道，我们在新闻上看到了新技术、新能力的<strong>照片</strong>。但<strong>战争部</strong>内部在<strong>文化</strong>和<strong>结构</strong>上有什么变化？您知道，这显然始于引进像您这样懂技术的人。但为了真正使<strong>战争部</strong>实现现代化，正在发生什么变化？</p>
+<p><strong>CTO</strong>: 嗯，<strong>希克斯部长</strong>（Secretary Hicks）说，我们正在与<strong>官僚主义</strong>（bureaucracy）进行一场不可阻挡的战斗。这不是人，而是几十年形成的<strong>官僚体系</strong>，阻碍了拥有新技术的<strong>新公司</strong>在部门部署他们的概念或产品。所以我正在用我拥有的各种工具来尝试创建<strong>正常的承包流程</strong>，<strong>正常的采购需求</strong>。例如，我们过去的做法是：这里是我们 RFP 中的一千个要求。供应商会填好并说：“是，是，是，是。”即使物理上不可能，物理定律不允许。然后我们给了他们一份<strong>成本加成合同</strong>（cost plus contract），他们说：“哦，那没奏效。”然后是<strong>变更订单</strong>（change order）。变更订单会导致另外 3 年的开发，再增加几十亿美元。所以，我们正试图转向<strong>简单的需求</strong>。我需要一枚导弹，它能飞到这个距离，在这种环境下，携带这个<strong>有效载荷</strong>（payload），等等。**您（行业）**带着您的想法来找我，告诉我如何实现。然后您可以有五种不同的。</p>
+<p><strong>Host</strong>: 我们将以<strong>固定价格</strong>（firm fixed price）购买。如果您能通过<strong>经济化</strong>（economize）获得更高的利润，这就像<strong>埃隆</strong>（Elon）的模式，也是他<strong>在 SpaceX</strong> 如此成功的原因。那么每个人都赢了，对吧？风投界对这种模式非常适应，对吧？您押注赢家，有些人不会赢，但<strong>成本加成</strong>（cost plus）无休止的开发周期是行不通的。所以，我们需要更快的开发周期，与行业<strong>风险共担</strong>（risk sharing），清晰的<strong>需求信号</strong>（demand signals），更简单的<strong>做生意的方式</strong>。这些都是我每天都在努力清除的<strong>官僚障碍</strong>，以使其成为可能。</p>
+<p><strong>CTO</strong>: 这很好。您就像<strong>监管领域的摩西</strong>（regulatory Moses）。这很好。嗯，对我来说，这是最重要的变化之一，它确实能激发<strong>创始人</strong>（founders）的热情去建造。公司还能做些什么来更好地与<strong>政府</strong>合作，与您合作？您已经完成了“<strong>自由武器库</strong>”（Arsenal of Freedom）之旅。您参观了许多<strong>初创公司</strong>。但是，当<strong>政府</strong>说我们准备做生意了，我们将使其更容易做生意，我们想要最好的能力时，您现在需要什么？您需要<strong>公司</strong>和<strong>初创公司</strong>提供什么？</p>
+<p><strong>CTO</strong>: 嗯，我们需要公司，而这正是<strong>大型承包商</strong>（primes）的优势所在——不是<strong>创新能力</strong>。而是<strong>生产和制造能力</strong>，能够<strong>规模化</strong>（scale）他们最初建立的东西。我认为<strong>初创公司</strong>的机会在于，抓住伟大的<strong>技术</strong>和<strong>概念</strong>，建立起他们建造工厂、大规模生产这些东西的实力，并进行所有<strong>质量测试</strong>等等。所以您确实必须借鉴<strong>旧世界</strong>（old world）的做法才能有效地做到这一点。这样您就不是在<strong>重新发明</strong>（reinventing）整个东西。嗯，我认为这是下一步。在未来一到两年内，您将看到公司开始跨越这个鸿沟，他们已经证明了，或者他们曾经失败过，但随后他们聘请了合适的人才并找到了解决方案。然后这希望能够鼓励许多其他公司。这可以做到，然后<strong>风险投资</strong>（venture capital）的资金将继续汇聚到这个市场，我非常渴望。所以我想这是需要考虑的事情。还有另一件事：如果我在您这边，如果您是<strong>新入局者</strong>（new entrance）这一边，您总能在 300 万人的部门里找到一个人说：“太棒了，我喜欢它，我喜欢你的产品。”但是<strong>金钱</strong>（money）说了算。所以他们是在购买它吗？他们是在测试它吗？他们正在做那些吗？他们是否真的在推动您完成这个过程？因为这是您是否真正成功的最佳信号。因为那里的文化再次是<strong>从不拒绝</strong>（never say no），而我试图将其转变为更快的“是”和更快的“否”，这样如果您是一家初创公司——作为一名初创公司的人，我感受过这种痛苦——当您不知道自己是否能达成交易时，我宁愿被告知“不”，这样我就可以继续联系下一个合作伙伴，调整我的产品策略，做些什么。这就是我们试图转变的文化。也是我告诉那些年轻<strong>创始人</strong>的。</p>
+<p><strong>Host</strong>: 太棒了。我们非常感谢您所做的努力，这对纳税人来说是件好事。在我们结束之前，最后一个问题。您过着很好的生活。您非常成功。这不是一份朝九晚五的工作。我猜您有家人。这会占用您与家人相处的时间。您会对那些在<strong>创业</strong>（startup）和<strong>科技</strong>（tech）领域的人说些什么，他们正在考虑花时间为<strong>政府</strong>工作，支持<strong>政府</strong>，并视您为灵感，视您为他们想追随的榜样？</p>
+<p><strong>CTO</strong>: 我想，是的，大多数<strong>爱国者</strong>（patriots）都能找到一种回馈的方式，而且有很多方式可以回馈。这是我的方式，也就是，我是一名<strong>移民</strong>。我的第一语言是<strong>阿拉伯语</strong>。我移民到了这个国家。我来到了<strong>硅谷</strong>（Silicon Valley）。我看到了一些，并能够参与和建立一些最有趣的公司。现在是我人生的合适时机，可以说：“好吧，这就是我服务我的国家的方式。”我想让我的孩子们看到，这样他们就知道，我们的<strong>体系</strong>（system）不是免费的。人们必须有<strong>建设者</strong>（builders），有关心的人，愿意<strong>牺牲</strong>（sacrifice）的人去做。更不用说那些<strong>战士</strong>（war fighters）了，他们会报名参加这些工作。这是我能报名的方式，让我的孩子们看到这一点，让他们感觉到这一点。对我来说，这是极其激励人心的。我希望所有在<strong>初创界</strong>（startup world）的人都能找到自己的时刻去这样做。如果不是在商业领域，那么在职业生涯的某个合适阶段。因为我们需要更多的人去做这件事。因为我们曾经将<strong>政府服务</strong>视为一项光荣的职业，就像<strong>曼哈顿计划</strong>（Manhattan project）一样，有最好的<strong>科学家</strong>（scientists）。现在<strong>行业</strong>（industries）有很多机会可以真正地运用您的大脑，以那些方式。但我们不能忘记，我们需要<strong>爱国者</strong>时不时地来做这些事情。</p>
+<p><strong>Host</strong>: 那么，非常感谢您。我们非常感谢您所做的工作，也感谢您今天能来。我们知道您极其忙碌。</p>
+<p><strong>CTO</strong>: 谢谢。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Department of War" class="entity-link company-link">Department of War</a>, 
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, 
+                
+                  <a href="/search/?q=Skyio" class="entity-link company-link">Skyio</a>, 
+                
+                  <a href="/search/?q=Pentagon" class="entity-link company-link">Pentagon</a>, 
+                
+                  <a href="/search/?q=Microsoft" class="entity-link company-link">Microsoft</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=AI models" class="entity-link product-link">AI models</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">ai-defense</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/public-service/">public-service</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">innovation-strategy</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/national-security/">national-security</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

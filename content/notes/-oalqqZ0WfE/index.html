@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI数据中心的演进、结构与未来：为何它是第四次工业革命的核心？</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="AI数据中心的演进、结构与未来：为何它是第四次工业革命的核心？" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">AI数据中心的演进、结构与未来：为何它是第四次工业革命的核心？</span>
+      <span data-pagefind-meta="speaker" style="display:none;">老科谈科技股</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2025-11-05
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/technology/">technology</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/lao-ke-tan-ke-ji-gu/">老科谈科技股</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=-oalqqZ0WfE" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2025-11-05
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本文深入探讨了AI数据中心的定义、结构及其从传统数据中心到AI超算中心的演进过程。详细阐述了GPU、DPU在加速计算中的核心作用，以及英伟达和华为等公司在构建大规模AI集群方面的技术方案。文章还分析了通信瓶颈、液冷技术和能源消耗等关键挑战，并展望了ASI、大模型操作系统和AI云计算机等未来计算趋势，强调AI数据中心作为第四次工业革命核心基础设施的颠覆性意义和投资机遇。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>AI数据中心：第四次工业革命的核心</h3>
+<p>在AI炙手可热的今天，以AI为中心的<strong>数据中心</strong>（Data Center: 台湾称“资料中心”，是集中放置服务器、网络设备并提供制冷供电的大型机房）正在变成第四次工业革命的核心。AI数据中心又与AI<strong>服务器</strong>（Server: 一种高性能计算机，用于提供网络服务或处理大量计算任务）、超级计算和<strong>云计算</strong>（Cloud Computing: 一种通过互联网提供计算服务的方式，用户按需租用计算资源，而非购买和维护物理硬件）相结合，成为了新一代计算平台。本文将深入探讨AI数据中心的结构、它与AI服务器、超级计算和云计算的关系，以及英伟达的AI数据中心解决方案，并阐释它为何是第四次工业革命的核心。</p>
+<h3>传统数据中心与服务器的演进</h3>
+<p>数据中心可以理解为一个大号的<strong>机房</strong>（Computer Room: 公司内部用于放置服务器和网络设备的房间）。在数据中心里，有大量的服务器放置在<strong>机架</strong>（Rack）上，机架之间通过网线或<strong>光纤</strong>（Optical Fiber）连接起来，最终通过<strong>电信运营商</strong>（Telecommunications Operator）的光纤连接到外部世界。有些公司，如银行或政府，出于安全考量会拥有自己的数据中心。大部分公司则选择租用数据中心，仅将自己的服务器放置到别人管理的设施中，由此催生了像<strong>Equinix</strong>和<strong>Digital Realty</strong>这样的专业数据中心运营商。在中国，数据中心主要由电信运营商提供。</p>
+<p>有些公司甚至不拥有服务器，而是租用计算资源，这就是云计算的方式。这种数据中心也可称为云数据中心，提供服务器出租服务的就是<strong>云计算运营商</strong>（Cloud Computing Operator），例如亚马逊的<strong>AWS</strong>、微软的<strong>Azure</strong>和谷歌的<strong>Google Cloud</strong>。</p>
+<p>服务器可以理解为高性能的计算机。传统上，服务器主要用于托管网站。当大量用户同时访问网站时，可以通过<strong>负荷均衡</strong>（Load Balancing: 将网络流量或计算任务分散到多个服务器或资源上，以优化资源利用、最大化吞吐量、最小化响应时间并避免过载）的方法来处理。例如，可以同时复制和启动多个服务器，将部分访问量分流给这些新服务器处理，甚至在全球各地复制服务器内容，从而减少原有服务器的负担和访问延迟。如果让云计算运营商来做这种负荷均衡，他们已经自动化了这些过程，用户只需根据使用量付费即可。YouTube等平台也是通过动态管理全球各地的服务器来处理大量访问需求的。</p>
+<p>这种传统服务器的结构往往是以<strong>CPU</strong>（Central Processing Unit: 中央处理器，擅长串行任务处理）为主的结构，由<strong>Intel</strong>和<strong>AMD</strong>主导。这种服务器结构与我们平时使用的计算机类似，对于网站这类内容，即使访问量很大，处理起来也轻车熟路。这是因为虽然可能需要很多服务器，但服务器之间的通信要求并不多，这是网站和YouTube视频访问等任务的特点。</p>
+<h3>超级计算机的概念与局限</h3>
+<p>十多年前，人们开始将许多服务器通过高速通信连接起来，密密麻麻地放置在一个机房里，形成<strong>服务器集群</strong>（Server Cluster: 将多台服务器通过高速通信网络连接起来，协同工作以完成大型任务的系统），以完成一个大的任务，这就是<strong>超级计算机</strong>（Supercomputer: 具有极高计算能力的计算机系统，通常由大量处理器组成，用于执行复杂的科学和工程计算）的概念。之所以要将它们密集放置，是因为短距离通信延迟低、速率高，所以服务器们必须尽量靠近。</p>
+<p>在以前，需要超级计算机的任务往往包括天气预报、导弹轨迹仿真等。因此，以前只有国家和国防才需要超级计算机。超级计算机所进行的计算也叫做<strong>高性能计算</strong>（High-Performance Computing, HPC: 利用超级计算机或计算机集群解决复杂计算问题的技术），超级计算机也可称为高性能计算机。虽然许多国家在竞争超级计算机的规模，但其作用并没有那么大，因为大部分公司的业务是网站，不需要超级计算机。早期的超级计算机基本上都使用Intel的CPU。当时中国、美国、日本和欧洲都在竞争超级计算机的规模，但其商业化程度不高。这种以计算为主、具有超强计算能力的<strong>数据中心</strong>在中国往往被称为<strong>算力中心</strong>（Computing Power Center: 专注于提供强大计算能力的设施，尤其指以计算为主的、具有超强计算能力的数据中心）。</p>
+<h3>AI时代的计算变革：GPU与加速计算</h3>
+<p><strong>生成式AI</strong>（Generative AI）的出现，对计算和数据中心提出了更高的要求。AI需要大量的<strong>并行计算</strong>（Parallel Computing: 同时使用多个计算资源来解决一个计算问题，特别适合处理大量独立或可分解的任务），这是<strong>GPU</strong>（Graphics Processing Unit: 图形处理器，拥有大量小内核，擅长并行处理大量任务）的特长。GPU拥有大量的小内核，能够同时并行处理大量的任务，而CPU内核数量很少，更适合单一串行的任务。于是，AI的<strong>训练</strong>（AI Training）和<strong>推理</strong>（AI Inference）需求，使GPU取代了CPU，成为了下一代计算的主角。</p>
+<p>例如，<strong>GPT-5</strong>的训练可能需要3万至10万块<strong>H100 GPU</strong>（NVIDIA H100: 英伟达高性能GPU型号）或等效算力，运行数周到数月。就单次推理而言，小规模可用1到8块GPU，大规模服务则需要成千上万GPU集群来支撑并发。生成式AI就是依靠大量的<strong>大模型</strong>（Large Language Model, LLM: 拥有数亿到数万亿参数的深度学习模型，能够处理和生成人类语言）数据加上大量的GPU，即<strong>大算力</strong>（Massive Computing Power），来实现的。这是生成式AI的基础。</p>
+<p>因此，专门支持生成式AI的新计算机结构应运而生。CPU处理普通任务，而AI这种需要并行处理的任务则由CPU交给GPU来完成。同时，大量的通信任务也不应完全由CPU处理，英伟达专门设计了处理通信任务的<strong>DPU</strong>（Data Processing Unit: 数据处理单元，专门用于处理网络通信、存储和安全等数据密集型任务的处理器），来专门处理通信任务。这种新的计算设计结构就是<strong>加速计算结构</strong>（Accelerated Computing Architecture: 一种计算设计结构，通过将特定计算任务（如并行计算）卸载到专用加速器（如GPU、DPU）来提高整体系统性能）。</p>
+<p>你可以这样理解加速计算的计算机结构：一个或多个CPU通过高速接口连接多个GPU和DPU。AI的大量任务最终由GPU完成，它们之间相连的接口英伟达使用的是<strong>NvLink</strong>（NVIDIA NVLink: 英伟达设计的高速互联技术，用于GPU之间或GPU与CPU之间的数据传输）。你可以把NvLink等同于电脑上使用的<strong>PCIe</strong>（Peripheral Component Interconnect Express: 一种高速串行计算机扩展总线标准）总线。以上这种结构就是<strong>AI计算机</strong>或<strong>AI服务器</strong>。例如，<strong>NVIDIA DGX Station A100</strong>机架式AI服务器大概有8块H100 GPU。</p>
+<p>GPU是<strong>通用芯片</strong>（General-Purpose Chip），主要由英伟达和AMD制造。此外，还有针对AI特定算法或专门针对推理优化的<strong>特定芯片</strong>（Application-Specific Integrated Circuit, ASIC: 针对特定应用或算法优化设计的集成电路），例如谷歌的<strong>TPU</strong>（Tensor Processing Unit: 谷歌为机器学习工作负载设计的专用ASIC）。<strong>Broadcom</strong>和<strong>Marvell</strong>等公司则与云计算运营商合作开发这类可定制的AI芯片。制造AI服务器的厂商包括美国上市的<strong>SMCI</strong>和<strong>Dell</strong>，以及大量的台湾代工厂。</p>
+<h3>构建AI超算集群：网络与内存</h3>
+<p>现在的大模型训练和推理需要大量的GPU同时工作。因此，我们需要将刚才提到的AI计算机通过高速通信网络连接起来，形成集群。连接方式可以采用英伟达自己的<strong>InfiniBand</strong>（一种高速、低延迟的计算机网络通信技术，常用于高性能计算集群），或者使用传统的标准<strong>以太网</strong>（Ethernet: 一种广泛使用的局域网技术）。由于通信要求极高，包括速率、延迟和稳定性，传统的以太网需要被改造才能胜任。有些通信任务需要由DPU处理，从而加速网络通信的速度。目前的通信速率已经达到800Gbps。</p>
+<p>AI服务器对内存的读写要求很高，需要专门设计的低延迟、高速率<strong>HBM</strong>（High Bandwidth Memory: 高带宽内存，一种高性能RAM接口，用于提供更高的内存带宽和更低的功耗）。韩国的<strong>SK 海力士</strong>、美国<strong>美光</strong>和韩国<strong>三星</strong>在HBM内存方面积累深厚。</p>
+<p>英伟达在2025年年初构建的最大AI服务器集群规模已突破10万GPU，凭借<strong>NVLink</strong>、<strong>NVSwitch</strong>交换机及高速以太网技术，支撑超大规模AI模型训练，是全球最顶尖的AI超算基础设施。2025年9月，英伟达宣布将向<strong>OpenAI</strong>投资至多1000亿美元用于算力建设，计划部署至少10<strong>吉瓦</strong>（Gigawatts）的AI数据中心。<strong>黄仁勳</strong>（Jensen Huang）表示，10吉瓦大约等于400万到500万个GPU，这个数量与英伟达2025年的总出货量相当，是2024年出货量的两倍。因此，构建AI超算中心，一方面是提高单个GPU的性能，另一方面就是堆积GPU的数量。</p>
+<p>例如，<strong>华为</strong>近期宣布其AI算力已经超过了英伟达为中国定制的<strong>H20</strong>芯片的3倍。华为是如何做到的呢？其实很简单，华为在单个GPU方面仍然逊于英伟达的H20，但华为的看家本领是通信。华为进一步优化了通信效率，提出了<strong>supernode超节点</strong>（Supernode: 华为提出的概念，将多个AI芯片（如Ascend昇腾系列）通过高速互联、统一调度，组成一个逻辑上的“大芯片”）的概念，就是把很多AI芯片（<strong>Ascend 昇腾系列</strong>）通过高速互联、统一调度，组成一台逻辑上的“大芯片”。</p>
+<p>GPU是否很容易堆积呢？答案是否定的。主要是随着GPU数量越来越多，通信的需求和延迟就成了瓶颈。因此，随着AI数据中心拥有越来越多的GPU，突破通信瓶颈就成了关键技术。美国市场的<strong>Arista Networks</strong>就是一家专注于数据中心低延迟和高速网络的公司，其芯片很大程度上来自Broadcom。华为和<strong>阿里巴巴</strong>也都有自己的数据中心网络解决方案。</p>
+<h3>AI数据中心的挑战与未来趋势</h3>
+<p>AI数据中心对<strong>制冷</strong>（Cooling）要求很高，现在<strong>液冷</strong>（Liquid Cooling: 一种利用液体作为传热介质的冷却技术，相比风冷效率更高，常用于高密度数据中心）正在成为标配。SMCI就号称其核心技术是液冷。此外，AI数据中心建设成本主要是采购GPU，而运营成本主要就是电力了，甚至到了不得不使用<strong>核能</strong>（Nuclear Energy）的地步。因此，这些为AI数据中心提供能源的公司也都在这轮AI大潮中受益。</p>
+<p>关于AI数据中心，我们接下来澄清几个概念，这些概念代表了AI数据中心和未来计算的大趋势。这些概念来自最新的阿里巴巴开发者年会。阿里巴巴提到了未来的趋势是<strong>超级人工智能ASI</strong>（Artificial Super Intelligence: 人工超级智能，指AI能力远超人类的阶段）。平时我们谈论的是<strong>AGI</strong>（Artificial General Intelligence: 人工通用智能，指AI达到人类智能水平的阶段），指的是AI达到人类水平。ASI是另外的新阶段，也就是AI远超过人类的阶段。这是首次听到ASI这个术语，以前都是用AGI表示未来的。ASI这个术语显示了阿里巴巴对AI更加有信心，当然这仅仅是一个对AI未来能力描述的术语。</p>
+<p>阿里巴巴认为<strong>大模型</strong>是下一代<strong>操作系统</strong>。黄仁勳也曾这样讲过，可见未来IT的核心是大模型。未来的人机接口将是自然语言。大模型是对现有计算机体系结构的颠覆。</p>
+<p>下一个重点是<strong>AI Cloud Computer</strong>（AI云计算机: 将整个数据中心视为一台由海量GPU和AI芯片通过高速互联组成的虚拟“超大计算机”）的概念。黄仁勳说过，以后一个数据中心就是一台服务器。从云计算的角度看，AI云计算就是服务器。以后，你将很难区分单独的AI服务器和云服务器了。大量AI服务器形成了一个集群，整个数据中心就是一个AI集群，它们共同完成任务。所以，云、数据中心和AI服务器正在融合。这之上就是大模型操作系统，大模型操作系统之上是各种<strong>Agent</strong>（代理: 在AI语境下，指能够自主感知环境、做出决策并执行动作以达成特定目标的智能实体或程序）。这就是全新的未来计算结构。</p>
+<p>阿里巴巴还表示，“AI Cloud是下一代计算机”。现在我们经常使用AI Cloud这个词，以后这个词将与计算机等同。现在你看到的服务器将被AI Cloud取代，这就是服务器演进的大趋势。换句话说，单独的物理AI服务器不再重要，而是将成千上万颗GPU和AI芯片通过高速互联组合在一起，形成一个虚拟的“超大计算机”。</p>
+<h3>总结与投资展望</h3>
+<p>今天我们探讨了从传统数据中心到AI数据中心的演变，从传统服务器到AI服务器，再到AI超算中心的演进。我们分析了AI数据中心的体系结构，从网络、制冷到供电。最后，我们讨论了AI Cloud是下一代计算机，大模型是下一代操作系统，以及整个数据中心就是一个AI集群等抽象概念。</p>
+<p>总之，在AI时代，云、数据中心、服务器和超级计算正在融合，这就是全新的未来计算结构，也就是黄仁勳所说的<strong>摩尔定律</strong>（Moore's Law: 指集成电路上可容纳的晶体管数量大约每两年翻一番，性能也随之提升的趋势）已死，<strong>加速计算时代</strong>（Era of Accelerated Computing）到来了。</p>
+<p>AI数据中心是一个颠覆性创新，提供了大量的难得投资机会。记住一点，投资大公司，投资头部公司。这是一个大者恒大、强者恒强的时代。本期侧重于AI新技术，因此不展开讨论AI投资。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Equinix" class="entity-link company-link">Equinix</a>, 
+                
+                  <a href="/search/?q=Digital Realty" class="entity-link company-link">Digital Realty</a>, 
+                
+                  <a href="/search/?q=Amazon AWS" class="entity-link company-link">Amazon AWS</a>, 
+                
+                  <a href="/search/?q=Microsoft Azure" class="entity-link company-link">Microsoft Azure</a>, 
+                
+                  <a href="/search/?q=Google Cloud" class="entity-link company-link">Google Cloud</a>, 
+                
+                  <a href="/search/?q=Intel" class="entity-link company-link">Intel</a>, 
+                
+                  <a href="/search/?q=AMD" class="entity-link company-link">AMD</a>, 
+                
+                  <a href="/search/?q=NVIDIA" class="entity-link company-link">NVIDIA</a>, 
+                
+                  <a href="/search/?q=Broadcom" class="entity-link company-link">Broadcom</a>, 
+                
+                  <a href="/search/?q=Marvell" class="entity-link company-link">Marvell</a>, 
+                
+                  <a href="/search/?q=SMCI" class="entity-link company-link">SMCI</a>, 
+                
+                  <a href="/search/?q=Dell" class="entity-link company-link">Dell</a>, 
+                
+                  <a href="/search/?q=SK Hynix" class="entity-link company-link">SK Hynix</a>, 
+                
+                  <a href="/search/?q=Micron" class="entity-link company-link">Micron</a>, 
+                
+                  <a href="/search/?q=Samsung" class="entity-link company-link">Samsung</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=华为" class="entity-link company-link">华为</a>, 
+                
+                  <a href="/search/?q=Arista Networks" class="entity-link company-link">Arista Networks</a>, 
+                
+                  <a href="/search/?q=Alibaba" class="entity-link company-link">Alibaba</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=GPT-5" class="entity-link product-link">GPT-5</a>, 
+                
+                  <a href="/search/?q=H100 GPU" class="entity-link product-link">H100 GPU</a>, 
+                
+                  <a href="/search/?q=TPU" class="entity-link product-link">TPU</a>, 
+                
+                  <a href="/search/?q=PCIe" class="entity-link product-link">PCIe</a>, 
+                
+                  <a href="/search/?q=InfiniBand" class="entity-link product-link">InfiniBand</a>, 
+                
+                  <a href="/search/?q=HBM" class="entity-link product-link">HBM</a>, 
+                
+                  <a href="/search/?q=H20" class="entity-link product-link">H20</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/accelerated-computing/">accelerated-computing</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-data-center/">ai-data-center</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/revolution/">revolution</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/technology/">technology</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

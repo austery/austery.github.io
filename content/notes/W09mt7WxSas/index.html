@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>《Growth Data Analytics Playbook》：来自Meta、Notion前增长专家的实战指南</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="《Growth Data Analytics Playbook》：来自Meta、Notion前增长专家的实战指南" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">《Growth Data Analytics Playbook》：来自Meta、Notion前增长专家的实战指南</span>
+      <span data-pagefind-meta="speaker" style="display:none;">课代表立正</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2025-11-17
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ke-dai-biao-li-zheng/">课代表立正</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=W09mt7WxSas" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2025-11-17
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本书作者Joe Kumar（Meta高级数据工程师）和李孟颖（前Notion增长数据负责人）介绍了他们合著的《Growth Data Analytics Playbook》。该书深入浅出地讲解了增长数据分析的五大核心内容：增长定义与北极星指标、产品价值与领先指标、增长会计（Growth Accounting）、高质量用户获取与放大，以及如何从数据分析走向决策实践。书中强调了数据在产品增长中的重要性，并提供了大量实战案例和公式图表，旨在帮助读者掌握实用的数据增长方法论。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>明天11月18号，我们的新书 <strong>Growth Data Analytics Playbook</strong> 就要上市了。今天这个视频，我将从一个作者的视角，为大家介绍这本书到底讲了什么，并预览一下用数据做增长这件事儿包含的内容。</p>
+<p>在我看来，这本书包含了五大块内容：</p>
+<ol>
+<li>增长是什么</li>
+<li>找到产品价值</li>
+<li>增长框架或 <strong>Growth Accounting</strong></li>
+<li>找到并放大你的高质量用户</li>
+<li>从分析走向决策</li>
+</ol>
+<h3>作者背景与写作动机</h3>
+<p>在介绍书籍内容之前，我先介绍一下我们三位作者的背景。这本书是我与李孟颖（Meng Ying）和 Joe Kumar 合作完成的。</p>
+<p><strong>李孟颖</strong>（Meng Ying）目前在 <strong>Brain Trust</strong> 公司担任 <strong>Head of Data</strong> 和 <strong>Head of PLG</strong>（<strong>Product-Led Growth</strong>：产品驱动增长）。她的职业经历（按倒序）包括：在 <strong>Mother Duck</strong> 担任 Data 和 Growth 负责人，在 <strong>Notion</strong> 担任 Head of Growth Data，在 <strong>Facebook</strong> 担任 <strong>Data Science Manager</strong>，以及在 <strong>Microsoft</strong> 担任 <strong>Data Scientist</strong>。大家知道 <strong>Notion</strong> 是硅谷增长非常成功的一家公司，我曾专访过她，探讨了她对增长、实验和 Metrics（指标）的理解。</p>
+<p><strong>Joe Kumar</strong> 是 <strong>Meta</strong> 的 <strong>Senior Staff Data Engineer</strong>。他非常有来头，是 Facebook Analytics <strong>Bootcamp</strong>（集训营）的作者。所有在 <strong>Facebook</strong> 走 <strong>Analytics Track</strong>（分析方向）的 <strong>Data Scientist</strong>（数据科学家），在入职后都会有一个由 Joe 编写的 Bootcamp，讲解如何做增长和分析。</p>
+<p>这本书汇集了我们在 <strong>Facebook</strong> 多年的增长经验，并叠加了我们每个人对增长的理解。我们为什么要写这本书？因为我觉得市面上几乎没有这类内容。你可能在博客或文章里看到一些零散的资料，但我们都知道，做增长离不开数据。无论你是 Data Scientist、Analyst、Marketer、PM、Engineer 还是 Founder，数据都至关重要。然而，学校里通常不教授真正实战的数据分析案例，甚至像 <strong>Growth Accounting</strong> 和 <strong>Retention</strong>（留存）这些最基本、最重要的概念，学校也不教，都需要在工作中现学。市面上也有一些优秀的营销类书籍，如《Hooked》、《Growth Hacker》等，它们从营销角度看很不错，但缺乏 Analytics 的实战经验，且对重要数据的定义往往模糊不清。</p>
+<p>这本书则完全从 <strong>Data</strong> 的角度来介绍这些概念，包含了大量公式和图表，是一本非常专业的书籍。</p>
+<h3>书籍五大核心内容</h3>
+<h4>1. 增长是什么</h4>
+<p>这一部分定义了什么是增长，如何用数据来定义它。这包括了定义并拆解你的 <strong>北极星指标 (North Star Metric)</strong>，以及极其重要的 <strong>Growth Accounting</strong>。</p>
+<p>你的活跃增长（例如以 DAU - <strong>Daily Active Users</strong> 或 WAU - <strong>Weekly Active Users</strong> 表示）取决于用户活跃度。当你的产品已经增长一段时间，拥有大量用户时（比如一个亿用户，每周新增十万到五十万），活跃用户数的变化绝大多数来源于 <strong>Retention</strong>。许多人的误区是只关注 <strong>Sign up</strong>（新用户注册）数量，而忽略了留存，这会导致 DAU 难以提升，因为他们关注了错误的方向。因此，北极星指标和 Growth Accounting 都非常重要。</p>
+<h4>2. 产品市场契合度 (PMF) 与留存</h4>
+<p>这部分探讨你的产品是否真正有价值，是否值得进行增长。并在此基础上延伸出如何找到产品的 <strong>Lead Indicator</strong>（领先指标）。只看留存可能太慢，你需要找到能更早、更敏锐地观察产品价值的指标。</p>
+<h4>3. 深入拆解 Growth Accounting</h4>
+<p>我们将 <strong>Growth Accounting</strong> 的每一步都进行细致拆解：新用户、留存用户、回流用户、沉睡用户、流失用户。我们会讲解如何用数据发现问题，并提出相应的解决方案来挽回用户。不同类型的产品（如 Freemium Model、Subscription Model、Product-Led Growth、Sales-Led Growth）其做法也会有所不同，书中对此有详细的拆解。</p>
+<h4>4. 获取并放大高质量用户</h4>
+<p>这部分关注如何从数据中描述并找到你的高质量用户。因为很多产品的绝大部分使用量和利润都来自于一小部分用户。你需要找到他们、放大他们的价值，并衡量不同渠道带来的用户质量。</p>
+<h4>5. 从分析走向决策与实践</h4>
+<p>我们进行了大量的分析，最终目的是要用这些分析来影响决策、指导实践。书中不仅提供了案例和实践方法，还重点讲解了实验（Experimentation）。贯穿全书的核心是：我们的分析内容到底应该带来什么样的 <strong>Action</strong>（行动）。</p>
+<h3>购买与促销信息</h3>
+<p>如果你是做增长或数据分析的同学，这本书绝对值得购买。目前，这本书正在 <strong>Amazon</strong> 上销售。从现在到11月底，<strong>E-book</strong>（电子书）有非常大的折扣：原价 $20.99，E-book 原价 $8.99，而现在到12月1号，E-book 仅售 <strong>$1.99</strong>。这是入手 E-book 版本最佳的时机。</p>
+<p>为了冲榜，我们提供了如此大的折扣。如果你感兴趣购买，我还有一个请求：请在 <strong>Amazon</strong> 上留下评论，这对我们书的销量非常有帮助。作为感谢，我们也会拿出礼物进行抽奖。</p>
+<p><strong>抽奖礼物</strong>：</p>
+<ol>
+<li><strong>AI Builders Hoodie</strong></li>
+<li><strong>Snow Peak 纯钛杯</strong> (非常轻，结实，无异味，适合露营和日常使用)</li>
+</ol>
+<p><strong>如何参与抽奖</strong>：
+我会发布一个链接到我的社区。在该帖子里，我们会免费分享本书的第三章（<strong>Growth Accounting</strong>）和第十章（<strong>Scalable Experimentation</strong>）。如果你在 <strong>Amazon</strong> 上留了评论，请在那个帖子下附上评论截图。我们的社区运营官会统计人数，根据人数决定是直接发礼品还是抽奖。总而言之，仅需 $1.99 即可购买 E-book，留下评论还能参与抽奖，对我们非常有帮助。</p>
+<h3>关于在美国出书的知识分享（可选）</h3>
+<p>这本书基本上是我花费一年时间 <strong>Project Managed</strong>（项目管理）下来的。我从一个完全不懂出书的小白，摸索清楚了在美国如何出书。如果大家对此感兴趣，欢迎在视频下方留言。如果足够多人感兴趣，我也可以分享在美国出书的全套流程，包括所需时间、联系资源以及过程中可能比大家想象中更简单的重要事项。</p>
+<p>视频就到这里，下期再见！</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Brain Trust" class="entity-link company-link">Brain Trust</a>, 
+                
+                  <a href="/search/?q=Mother Duck" class="entity-link company-link">Mother Duck</a>, 
+                
+                  <a href="/search/?q=Notion" class="entity-link company-link">Notion</a>, 
+                
+                  <a href="/search/?q=Facebook" class="entity-link company-link">Facebook</a>, 
+                
+                  <a href="/search/?q=Meta" class="entity-link company-link">Meta</a>, 
+                
+                  <a href="/search/?q=Microsoft" class="entity-link company-link">Microsoft</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Growth Data Analytics Playbook" class="entity-link product-link">Growth Data Analytics Playbook</a>, 
+                
+                  <a href="/search/?q=AI builders" class="entity-link product-link">AI builders</a>, 
+                
+                  <a href="/search/?q=Snow Peak titanium cup" class="entity-link product-link">Snow Peak titanium cup</a>
+                
+              </p>
+            
+            
+              <p><strong>媒体/书籍:</strong>
+                
+                  <a href="/search/?q=Hooked" class="entity-link media-link">Hooked</a>, 
+                
+                  <a href="/search/?q=Growth Hacker" class="entity-link media-link">Growth Hacker</a>
+                
+              </p>
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">growth-analytics</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">data-driven-growth</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">user-retention</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">growth-accounting</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/experimentation/">experimentation</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

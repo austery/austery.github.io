@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pencil：AI驱动UI设计的革命性工具，实现可视化编辑与代码生成</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="Pencil：AI驱动UI设计的革命性工具，实现可视化编辑与代码生成" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">Pencil：AI驱动UI设计的革命性工具，实现可视化编辑与代码生成</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI超元域</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-01-26
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ai-chao-yuan-yu/">AI超元域</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=-aK3UV0FcZ0" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-01-26
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本视频深度评测了AI驱动的UI设计画布Pencil，重点介绍了其通过自然语言生成UI、解决设计交付痛点、与Cloud Code集成、以及实现代码生成和版本管理的功能。对比了Pencil与Google Stage的效果，强调了Pencil在风格统一性和设计还原度上的优势，并演示了微调和导入Figma设计稿的技巧。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>最近几天，很多粉丝让我讲讲 <strong>Pencil</strong> 这一款 AI 驱动的 UI 设计画布。通过我这几天的深度使用，我总结了一些经验和技巧。本期视频将为大家分享我使用下来总结的经验和技巧。经过实际使用，我感觉 Pencil 比 <strong>Google Speech</strong> 还要好用，未来甚至能够超越 <strong>Figma</strong>。在 Pencil 中，AI 可以同时生成十几个解决方案。它最大的特点是我们可以直接通过自然语言描述来生成 UI，从而实现真正的可视化编辑。这解决了传统设计工作流程中最大的痛点——设计交付的问题。因为设计师完成设计后，开发者需要手动将设计转化为代码，这个过程往往会导致设计还原度下降和效率损失。</p>
+<p>想使用 <strong>Pencil</strong> 非常简单。我们只需要在官方网站点击下载按钮。目前官方提供了 <strong>macOS</strong> 的安装版以及 Linux 的安装版。Windows 用户可以直接通过 <strong>MCP</strong> 来使用。为了方便演示，我这里就使用官方提供的 macOS 安装版进行测试。打开 Pencil 后，大家可以根据自己的习惯来设置它的主题，比如切换成暗色模式或亮色模式。这里不需要任何配置，它就能够自动连接到我们的 <strong>Cloud Code</strong>。而且只要安装之后，我们就不需要手动去配置 Pencil 的 MCP 了。无论是在 Google <strong>Ant Gravity</strong> 中，还是在 <strong>VS Code</strong> 中，它都会自动将 Pencil 的 MCP 给安装好。在左下角这个位置，我们就可以直接输入自然语言描述来描述我们需要的 UI。因为它原生支持 Cloud Code，所以这里调用的模型都是 Cloud Code 中的模型。只要我们有了 Cloud Code 的订阅，就可以直接在 Pencil 应用中使用。如果没有订阅 Cloud Code，大家也可以在 <strong>Gravity</strong> 或 <strong>VS Code</strong>，甚至 <strong>Code EX</strong> 中来使用 Pencil。</p>
+<p>接下来，我们在 <strong>Pencil</strong> 中进行测试。先让它为我们生成一个 <strong>Apple Music</strong> 风格的音乐播放器 UI。在左上角这里我们点击这个图标，然后选择组件的风格。我选择 <strong>iOS</strong> 风格，因为经过这几天的测试，发现 iOS 风格的效果要好于其他风格。然后我们选中这个 iOS 风格，就打开了这个画布。在这个画布上，我们可以看到默认的一些 UI 组件。下面我们就可以在对话框中使用自然语言描述我们的需求：要求创建一个完整的 <strong>Apple Music</strong> 风格的音乐播放器 App。在这里是全局风格的描述，包括毛玻璃效果、圆角、深色模式、红色主调。在这里是具体的 UI 组件和页面，包括首页、播放器、播放列表、搜索框、个人库、歌单详情、艺人页、设置页，以及迷你播放条。然后我们只需要将刚才的提示完整地粘贴到对话输入框。模型这里我选择的是 <strong>Cloud Code 4.5</strong>，然后我们直接点击发送。</p>
+<p>随后，Pencil 扫描了 <strong>SwiftUI</strong> 的组件，并开始生成具体的 UI。同样，我们也用同样的提示词发送给了 <strong>Google Stage</strong>，来对比它们的效果。可以看到，Pencil 先创建好了所需的 UI 组件和页面，然后开始实现我们要求的第一个 UI 页面的功能。它的生成速度非常快。由于我们输入的提示词是中文，所以这里生成的 UI 中的歌单、排行榜等内容也使用了中文。第一个 UI 页面基本生成完成，并且加入了配图，看起来效果好很多。接下来是底部标签页，然后开始生成第二个 UI 页面。这里立即加入了一个图像，这是播放进度的进度条，这是播放器，还加入了一些歌词，效果确实要好很多。现在开始生成第三个页面，即播放列表页面，以及搜索页面的 UI。在这里，它给出了音乐分类，然后开始生成资料库。生成的 UI 风格完全遵循了提示词中模仿 <strong>Apple Music</strong> 播放器的要求。</p>
+<p>所有页面全部生成完成。可以看到，Pencil 生成的 UI 风格非常统一，不会像 <strong>Google Stage</strong> 那样，当页面过多时出现风格不统一的情况。下面我们对比一下 <strong>Google Stage</strong> 生成的 UI 效果。Google Stage 生成的元素看起来更丰富，但 Pencil 生成的 UI 更接近 <strong>Apple Music</strong> 播放器的风格。当生成完毕后，我们还可以进行微调。例如，在资料库这里，我们可以将歌曲的排列顺序移动到更靠前的位置。如果我们对某个 UI 页面或组件不满意，比如歌单页面中没有加载出图像或图标，我们可以直接选中这个 UI，在对话框中描述问题并发送。几秒钟内，Pencil 就为我们修复了这些问题，包括新增了一个好看的图像，以及加上了图标。</p>
+<p>接下来，我们还可以继续测试和手动微调。比如，更改播放组件的颜色。我们只需要选中该组件，在右侧即可看到颜色选项，然后点击并微调。对于一些简单的修改，手动操作可以节省 <strong>Cloud Code</strong> 的 Token 消耗。在侧边栏，有一个 <strong>AI Note</strong> 功能。选中 AI Note 后，可以直接将其放在需要修改的 UI 旁边。例如，选中这个组件，然后直接输入提示词“将组件颜色改成白色”，并点击运行。运行后，Pencil 会扫描该组件并立即将其颜色改为白色。这样，在进行局部微调时，也可以直接拖入一个 <strong>AI Note</strong>，输入提示词，选择合适的模型，让它对组件进行微调。</p>
+<p>我们还可以测试让 Pencil 新增页面。比如，让它新增一个个人资料页。我们可以拖入一个 <strong>AI Prompt</strong>（或称 AI Prompt Note）。然后输入提示词“新增个人资料页”。在当前 UI 中选中该组件，然后点击运行。这样 Pencil 就会知道是为这个组件新增一个进入个人资料页的页面。可以看到，它开始扫描组件，创建的风格与我们要求的 <strong>Apple Music</strong> 风格保持一致。创建完成后，我们还可以进行微调，比如将“姓名”直接改成“用户名”，这样就完成了微调。</p>
+<p>接下来，我们还可以测试在 <strong>Cloud Code</strong> 中，让它根据 Pencil 中选中的 UI，直接用代码生成该 UI。在 Pencil 中，我们先选中一个 UI 的 Frame。然后打开终端命令行，进入 Cloud Code。我们可以输入提示词，让它根据选中的 Frame 用 <strong>React</strong> 来实现。直接运行查看效果。可以看到 Cloud Code 正在生成代码。这样，我们只需要在 Pencil 中设计好 UI，就可以在 Cloud Code 等任何 AI 编程工具中，让它为我们用前端代码实现所设计的 UI。生成完成后，我们让它运行并查看效果。运行后，可以看到它几乎完美地复刻了我们选中的 UI 页面中的所有元素，除了图像。Cloud Code 这里用 SVG 的方式生成了图像，其他内容都完全保持一致，实现了真正的像素级复刻。</p>
+<p>此外，Pencil 还支持直接将 <strong>Figma</strong> 中的设计稿通过复制粘贴导入。比如，选中一个 Figma 设计稿的 Frame，回到 Pencil 中直接粘贴。这样，我们就可以完美地将 Figma 的设计稿通过复制粘贴的方式导入 Pencil。</p>
+<p>Pencil 中的设计稿还可以直接保存，保存后的格式是 <strong>JSON</strong>，我们可以直接在 IDE 中打开对应的设计稿文件。比如，我们点开刚才设计的那个。这样，我们就可以查看里面的具体代码。由于它生成的文件都是 JSON 格式，所以我们可以像管理代码一样，通过 Git 进行版本管理，还可以生成变更。然后直接 Push 到我们的仓库。生成变更后，点击提交。这样，通过 Git，我们就实现了真正的版本管理，就像管理我们的代码一样。</p>
+<p>对于不擅长 UI 设计的开发者来说，只需要用自然语言描述需要的 UI，然后在 Pencil 中就能为我们生成风格一致的 UI。</p>
+<p>本期视频就到这里，欢迎大家点赞、关注和转发。谢谢大家观看。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Pencil" class="entity-link product-link">Pencil</a>, 
+                
+                  <a href="/search/?q=Cloud Code" class="entity-link product-link">Cloud Code</a>, 
+                
+                  <a href="/search/?q=Figma" class="entity-link product-link">Figma</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/prompt-engineering/">prompt-engineering</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">ui-ux-design</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/code-generation/">code-generation</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/developer-tools/">developer-tools</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-assisted-development/">ai-assisted-development</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

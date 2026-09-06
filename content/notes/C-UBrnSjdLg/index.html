@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI的隐忧：从对抗样本到价值对齐</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="AI的隐忧：从对抗样本到价值对齐" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">AI的隐忧：从对抗样本到价值对齐</span>
+      <span data-pagefind-meta="speaker" style="display:none;">一席YiXi</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2025-06-09
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/yi-xi-yixi/">一席YiXi</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=C-UBrnSjdLg" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2025-06-09
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本讲座由清华大学助理教授吴翼主讲，深入探讨了AI（尤其是大型模型）带来的安全挑战。内容涵盖了对抗样本如何欺骗AI、AI偏见（由模型过度自信和数据缺陷引起）、算法仅学习相关性而非因果性导致的幻觉现象。讲者介绍了强化学习在纠正偏见、教会AI说“不知道”以及提升实战能力方面的应用，并深入分析了AGI时代面临的价值对齐（Value Alignment）问题和超对齐（Super Alignment）挑战。最后，他强调AI问题本质上是人的问题，但AI安全领域的研究正在积极推进。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>大家好，我叫吴翼，之前在OpenAI工作，现在是清华大学交叉信息研究院的助理教授，也是一名博士生导师。我研究的方向是强化学习。很高兴再次来到一席。</p>
+<p>这是我第二次来一席，第一次是在五年前，那时我刚从OpenAI回国，回到清华大学。当时的标题是《嘿！AGI》，我们聊了聊AI。今天，我特地找回年轻的感觉，想和大家继续聊AI。</p>
+<p>五年间，世界发生了巨大的变化。五年前，我们还需要解释什么是AGI，介绍OpenAI这家公司。而今天，我相信大家对AI已经非常熟悉，甚至有人说AI要统治世界、毁灭世界。像杰弗里·辛顿教授这样获得诺贝尔奖和图灵奖的双料得主，也多次公开表示AI带来了危险。</p>
+<h3>AI安全的警示</h3>
+<p>那么，AI真的有这么严重吗？AI确实存在幻觉、偏见等问题，但距离毁灭社会似乎还有距离。为什么像辛顿教授这样的科学家会反复强调AI的危险性？这可以类比：如果知道30年后火星要撞地球，我们是应该现在就准备，还是10年后再说？因此，AI安全问题一直是计算机科学家们研究的技术课题。</p>
+<p>今天，我将以计算机科学家的视角，探讨AI存在的问题及其根本原因。</p>
+<h3>对抗样本的威胁</h3>
+<p>我们先从自动驾驶的“看路牌”功能说起。AI模型很容易识别出完整的“停止标志”（stop sign）或限速标志。然而，伯克利的研究团队发现，如果在路牌上贴上微小的胶带，AI模型可能会将其误识别为限速标志，从而导致车辆不按指示停车，极易引发车祸。这种经过微小篡改、人眼难以察觉但AI模型会产生巨大变化的图片，被称为<strong>对抗样本</strong>（adversarial example）。</p>
+<p>我们再看一个例子：一辆车的车载相机视角照片，AI模型识别准确。但若在画面上加入人眼几乎感觉不到的微小扰动，AI模型可能将其识别为Hello Kitty、条纹，甚至是一个计算机顶级会议的logo。</p>
+<p>这种现象也出现在自然语言处理领域。例如，一个机器翻译模型，当句子中“爆炸”的“炸”字被删除后，输出可能变得不正常。甚至输入看似无意义的乱码，AI翻译软件可能被控制说出“我要杀了你”。</p>
+<p>在大模型时代，情况更为离谱。一张人畜无害的简笔画，若在背景加入极小的扰动，可能激怒大模型，使其疯狂爆粗口。</p>
+<h4>对抗样本的根源</h4>
+<p>为什么会出现这种现象？根本原因在于，通用AI可以接受的输入范围太广了——任何像素组成的图片，任何由文字或符号组成的序列。然而，我们训练AI时使用的数据，如真实世界的照片和人类自然语言，其范围远小于AI可接受的范围。在这个巨大的“蓝色空间”中，我们很难完全控制AI在未见过输入的表现。一旦有坏人选择一个“对抗样本”的点，其输出就可能如坏人所愿。</p>
+<p>虽然理论上这是大模型内在的缺陷，难以避免，但实际上，由于对抗样本的存在已为人所知，大多数AI应用都会进行AI加固和严格的恶意输入检测，所以情况并非那么糟糕。</p>
+<h4>AI失误的案例</h4>
+<p>尽管如此，即使在没有恶意输入的情况下，AI产品也曾出过事故。2015年，Google Photos的一位用户，因被AI错误地标记为“大猩猩”，引发了极大的争议。Google为此付出了代价。</p>
+<p>无独有偶，亚马逊也曾因AI招聘系统出现性别歧视问题而受到批评：该AI系统会直接过滤掉简历中包含“女性”字样的应聘者。</p>
+<h3>AI偏见：过度自信与数据缺陷</h3>
+<p>那么，AI的<strong>偏见</strong>（bias）是如何产生的？
+技术上讲，AI偏见是由<strong>模型的缺陷</strong>、<strong>不完美的数据</strong>以及其他复杂因素共同导致的。</p>
+<h4>模型缺陷：过度自信</h4>
+<p>我们先谈模型的缺陷，这在术语上被称为大模型的<strong>过度自信现象</strong>（overconfidence）。AI模型的“自信度”通常体现在它对预测结果的概率估计上，比如“这张图片90%是狗”。理想情况下，模型的自信度应该与其<strong>实际正确率</strong>相当。</p>
+<p>过去的AI模型，如1998年的LeNet，表现得相对“不自信”但靠谱。当LeNet声称有80%的自信度时，其正确率高达95%。</p>
+<p>然而，2016年的最佳AI模型ResNet，在80%自信度下，正确率仅为50%。ResNet的自信度远超实际正确率，并且有60%的情况下会直接给出100%自信的判断，这显得不太靠谱。</p>
+<p>从技术上讲，所谓的偏见（bias）就是在特定场景下（如性别、种族），大模型的过度自信现象。</p>
+<h4>数据是偏见的根本原因</h4>
+<p>即使是简单的游戏，AI也可能表现出偏见。我们团队曾让GPT-4玩石头剪刀布，发现它在100次游戏中有2/3的概率出石头，几乎不出剪刀。这是因为在英语中，“rock”这个词的频率高于“paper”和“scissors”，AI倾向于选择更常见的词。</p>
+<p>这就是说，<strong>数据是产生偏见的根本原因</strong>。</p>
+<p>回到自动驾驶的例子，“copycat problem”是一个重要挑战。如果AI学习大量人类驾驶数据，它可能会学会“上一秒做什么，这一秒也做什么”的策略，这在多数情况下正确率高，但无法应对红绿灯从红变绿需要松开刹车踩油门的情况。</p>
+<p>对于图片标注AI，若训练数据中做饭场景多是女性，AI便会倾向于将所有做饭图片都标记为“女性”，即使是男性在做菜。</p>
+<p>有人尝试通过数据处理来消除偏见，例如：</p>
+<ul>
+<li>禁止简历中出现性别字样：但人的名字本身就可能透露性别。</li>
+<li>移除人脸信息：但穿着和身材仍可能暴露性别。</li>
+</ul>
+<p>斯坦福大学的研究者发现，人类过去100年的公开出版物中，已内含“<strong>women bias</strong>”（一个词与“woman”相关性的计算），这与行业中女性从业人数占比高度相关。例如，护士行业女性从业者多，其“women bias”也高；机修工行业男性更多，“women bias”则低。这表明，人类的文字数据中已经包含了时代和社会结构的众多信息。</p>
+<p>因此，世界上不存在完美的数据。数据源于人类社会，服务于人类，必然携带着社会的痕迹。而大模型的过度自信现象，又进一步强化了数据中的不完美。</p>
+<h3>算法根源：相关性而非因果性</h3>
+<p>除了数据问题，<strong>AI的偏见也有算法原因</strong>。绝大多数AI算法从数据中学习的是<strong>相关性</strong>（correlation），而非<strong>因果性</strong>（causation）。</p>
+<p>什么是相关性？例如，生病吃药。感冒七天会好，吃了药也是一周好。这只能说明是相关性，即药可能有效。但要证明因果性，需要进行对照实验：吃了药病好了，不吃药也应该会好，才能证明药效。</p>
+<p>AI的常用算法，如图片处理中的“最大概率估计”，或大模型中的“next token prediction”（即“熟读唐诗三百首，不会作诗也会吟”），通常只提供正确答案，本质上是让模型学习数据中的相关性，而不是因果性。</p>
+<p>这正是导致AI<strong>幻觉</strong>（hallucination）现象的重要原因——AI会在它不知道的问题上自信地胡说八道。</p>
+<h4>幻觉案例与强化学习</h4>
+<p>例如，一个AI被训练了过去几届世界杯冠军数据（西班牙、阿根廷、意大利、法国）。当被问及“2026年世界杯冠军是谁”时，AI本应回答“不知道”，但它根据训练数据的模式，自信地预测“阿根廷”，因为阿根廷是上一届冠军。</p>
+<h4>强化学习（Reinforcement Learning）的应用</h4>
+<p>如何让AI学会说“不知道”？我的专业——<strong>强化学习</strong>（Reinforcement Learning）——提供了一种方法。通过设计反馈机制（答错扣分，答对加分，说“不知道”给少量鼓励分），反复试错，AI能学会因果关系，并认识到“不知道”也是一种状态。</p>
+<p>在世界杯冠军的例子中，通过强化学习，AI在不断试错和被扣分后，最终会选择说“不知道”，并因此获得鼓励分，从而学会表达不确定性。</p>
+<p>此外，强化学习还能用于更复杂的场景。我们的团队利用强化学习和大模型，教会AI玩狼人杀。</p>
+<ul>
+<li><strong>纠正偏见</strong>：普通GPT-4在狼人杀中倾向于杀1号或0号玩家，因为这些数字在数据中频率更高。强化学习训练后，AI能更均匀地选择目标。</li>
+<li><strong>提升实战能力</strong>：在狼人杀这种需要避免瞎说的复杂博弈中，AI的表现甚至比清华姚班的顶尖学生略高。</li>
+</ul>
+<h4>强化学习的前提：准确的奖励函数</h4>
+<p>然而，强化学习要发挥最大潜力，前提是需要一个准确的<strong>奖励函数</strong>。世界上不存在绝对的“好”与“坏”，也就没有绝对完美的奖励函数。不同的不完美奖励函数会导致模型行为差异。</p>
+<h3>价值对齐与AGI的未来挑战</h3>
+<h4>价值对齐问题（Value Alignment Issue）</h4>
+<p>幻觉可以被缓解，但可能永远存在。这引出了一个更深层的问题：<strong>价值对齐问题</strong>（value alignment issue）。</p>
+<p>设想一个通用机器人保姆，主人只指令“一定不能饿着孩子”。如果机器人发现冰箱没菜，却看到一个“充满营养物质”的猫，它可能就会给孩子吃猫，因为它只需满足“不能饿着孩子”的指令，而未被告知“不能碰猫”。</p>
+<p>人类的价值体系极为复杂，几乎不可能将所有规则都明确写下来告知AI。AI系统的目标通常是简单的、明确的，而人类的真实目标往往含糊、不确定且复杂。价值对齐研究的目标就是让AI真正符合人类价值观。</p>
+<h4>超对齐与可扩展监督</h4>
+<p>五年前，我们还在讨论AI安全。如今，AGI（通用人工智能）的出现，带来了更严峻的挑战。类比蚂蚁与人类，当AGI比人类更聪明、更强大时，经典的对齐问题（假设人比AI聪明）就变成了<strong>超级对齐问题</strong>（super alignment problem）。</p>
+<p>同时，“<strong>可扩展监督</strong>”（scalable oversight）领域正在研究如何创造新的算法，以帮助人类更好地监督AI。</p>
+<h3>没有完美的算法</h3>
+<p>最终，世界上也没有完美的算法。一项研究曾让73个不同机构使用相同数据和相同命题（移民策略的有效性）进行研究，结果差异巨大：17%支持、25%拒绝、58%认为无差别。这说明，即使是专业机构，选择不同的算法或使用方法，也会得出截然不同的结果。</p>
+<p>归根结底，AI的问题也是人的问题。没有完美的人，也没有完美的AI。</p>
+<h3>AI安全的研究与乐观前景</h3>
+<p>尽管存在挑战，AI领域仍有乐观之处。我的博士生导师、图灵奖得主Stuart Russell教授于2016年在伯克利成立了<strong>Center for Human-Compatible AI</strong>，专注于AI安全性研究。去年，我的导师、图灵奖得主姚期智院士、Yoshua Bengio院士以及张亚勤院士等科学家在威尼斯共同签署了人工智能安全倡议书，推动各国政府将AI安全性纳入公共政策考量。</p>
+<p>AI的这些问题正被计算机科学家认真研究。正因为问题被正视、讨论和研究，我相信未来会更好。</p>
+<p>最后，如果您对深度学习或强化学习感兴趣，可以在B站或小宇宙FM搜索我的名字，观看我们的公开课和科普播客。</p>
+<p>我叫吴翼，在清华大学交叉信息院研究强化学习。谢谢大家。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Tsinghua University" class="entity-link company-link">Tsinghua University</a>, 
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>, 
+                
+                  <a href="/search/?q=Amazon" class="entity-link company-link">Amazon</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=GPT-4" class="entity-link product-link">GPT-4</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">adversarial-examples</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">ai-bias</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">hallucinations</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/reinforcement-learning/">reinforcement-learning</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">value-alignment</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

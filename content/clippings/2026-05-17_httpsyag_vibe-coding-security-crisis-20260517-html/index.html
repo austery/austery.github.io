@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vibe Coding 的安全危机</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="Vibe Coding 的安全危机" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">Vibe Coding 的安全危机</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-05-17
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://yage.ai/share/vibe-coding-security-crisis-20260517.html" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-05-17
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">AI辅助编程（Vibe Coding）平台通过一键部署降低了应用上线门槛，却因忽略安全配置（如数据库权限设置）导致大规模敏感数据泄露。危机根源并非代码功能缺陷，而是部署流程中缺乏安全决策窗口及用户安全意识不足。文章建议企业加强资产可见性，并从部署层（如沙箱环境、权限管控）实施安全加固，以应对快速部署带来的系统性风险。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h2>Moltbook：三天崩掉的神话</h2>
+<p>2026 年 1 月 28 日，一个叫 Moltbook 的社交网络上线了。它的定位是”AI
+agent 的社交平台”——让 AI 在上面发帖、评论、投票。三天后，安全公司 Wiz
+的研究人员发现，这个平台的数据库大门敞开着。任何人只要看一眼网页源代码，就能拿到一个完整的数据库密钥。150
+万个 API 认证令牌、35000 个邮箱地址、所有 AI agent
+之间的私信，全在公网上裸奔。</p>
+<p>Moltbook 的创始人 Matt Schlicht 当天在 X 上发过一条帖子：“I didn’t
+write a single line of code for @moltbook. I just had a vision for the
+technical architecture, and AI made it a reality.” 他没有写一行代码。AI
+帮他写了整个平台。</p>
+<p>这条帖子三天后成了互联网上最贵的一条炫耀。</p>
+<p>事后复盘，根因是一个 Supabase 数据库的 Row Level
+Security（RLS）开关没有打开。这个开关决定你的数据库是”只有你能访问”还是”全世界都能访问”。AI
+生成的代码功能上没有任何问题——它正确地连上了数据库，正确地做了增删改查。只是开关默认是关着的，AI
+没开，人也不知道要开。</p>
+<h2>RedAccess 的发现：38</h2>
+<p>万个应用扫过去</p>
+<p>Moltbook 的故事过去三个月后，安全公司 RedAccess
+交出了一份更系统性的扫描报告。他们用 Google 和 Bing 搜索了
+Lovable、Replit、Base44、Netlify 四个 AI 编程平台的官方域名，找到了大约
+38 万个建在这些平台上的公开应用，逐个人工打开检查。结果是：大约 5000
+个应用”几乎没有安全或认证机制”，其中约 2000 个直接暴露了敏感数据。</p>
+<p>暴露的内容包括：医院的医生排班表和个人身份信息、企业的 go-to-market
+策略演示文稿、零售商的完整客服对话记录（含客户全名和联系方式）、巴西银行的内部财务数据、航运公司的货船时刻表和港口调度、英国一家医疗公司的临床实验数据。</p>
+<p>大约 40% 的有问题应用，Axios 记者随便输个 URL 就能看到机密文档。</p>
+<p>如果你的公司有任何一个同事在用 AI
+编程工具搭内部应用——CRM、排班、报表、审批流——而 IT
+部门不知道这件事，你的数据大概率已经在公网的某个
+.lovable.app 或 .replit.app 域名上躺着了。</p>
+<h2>出问题的不是代码，是上线按钮</h2>
+<p>但这个问题的奇怪之处在于：它跟 AI 写代码好不好没有直接关系。AI
+生成的代码在功能上是正确的。Moltbook 的数据库连接没问题，Lovable
+上那些泄露医生排班的 App
+也跑得好好的。出问题的地方不在代码层，在部署层。</p>
+<p>四个平台的共同点：它们不只是帮你生成代码，还帮你一键部署到公网。Lovable、Base44、Replit
+都在自己的域名下给每个应用分配一个公开 URL。Netlify
+更彻底：它本质上就是一个公开 CDN，你不额外配置就没有认证。IANS Research
+的安全顾问 Adrian Sanabria
+的判断是：“这些平台不仅让你创建应用，还托管应用——从想法到带域名的生产应用，全在同一个地方完成。”</p>
+<p>这就把安全问题的性质从根本改变了。传统软件开发里，从”代码写完”到”上线”之间有一段天然的安全决策窗口：谁部署、部署到哪个环境、数据库权限怎么配、认证要不要加。这段窗口存在，不是因为有人刻意设计，而是因为部署本身需要时间和技术能力。Vibe
+coding 平台把这段窗口压缩到零。你描述完需求，AI
+写完代码，应用就已经在线上了。</p>
+<p>压缩的不只是时间，还有决策者。以前部署应用的人至少知道自己在干什么。现在部署应用的人可能是产品经理、运营、销售——他们不知道
+RLS 是什么，不知道 “public” 在互联网上的含义和 GitHub
+上的含义完全不同。IANS 的另一位 Faculty Josh More 说：“vibe coding
+的整个理念就是让不懂的人或者不在乎的人来干这件事。当然会出数据泄露的问题。”</p>
+<h2>四家平台，同一种回应</h2>
+<p>四个平台的回应模式高度一致。单独拿出来看，是因为它解释了这个危机为什么不会自己消失。</p>
+<p>Replit CEO Amjad Masad 在 X
+上的回应：“用户可以选择公开或私有。公开应用能在互联网上被访问，这是预期行为。”这句话在技术上是完全正确的。Replit
+确实提供了从公开切到私有的开关，点一下就行。但问题恰好在于：一个第一次用工具搭
+App
+的市场部同事，不会意识到自己需要点这个开关，甚至不会意识到有这么一个开关存在。</p>
+<p>Lovable 发言人对 Axios 的回应：“Lovable
+给构建者提供了安全构建的工具，但应用怎么配置最终还是创建者的责任。”同一天，Lovable
+对 WIRED 表示 RedAccess 没有分享具体 URL，“无法验证”。Base44 的母公司
+Wix 说 RedAccess”刻意隐瞒了 URL”，而且 WIRED
+分享的两个例子”看起来是测试站点或 AI 生成的数据”。Netlify
+没有回应任何媒体的询问。</p>
+<p>四家公司的回应有一个共同模式：把问题定义为用户配置错误，而不是平台设计缺陷。这在法律上站得住脚，但在工程上是避重就轻。当一个平台上每天产生几万个应用，其中相当比例的使用者不具备安全判断力，而平台的默认设置是”上线即公网”——这不叫用户误操作，这叫系统性设计失误。</p>
+<h2>规模到底多大</h2>
+<p>几个数字可以让这个问题的规模更具体。</p>
+<p>Georgia Tech 的系统安全实验室从 2025 年 5 月开始追踪 AI
+生成代码导致的 CVE 安全漏洞。他们从 CVE.org、NVD 和 GitHub
+公告库里抓取公网漏洞，追到修复 commit，再向前追溯确认是否是 AI
+编码工具引入的。2026 年 1 月找出 6 个，2 月 15 个，3 月 35
+个。三个月翻了近六倍。研究团队估计实际数量是这个数字的 5 到 10 倍（大约
+400 到 700 个），因为这还只是已经被发现、被修复、被定性为 AI
+引入的那些。</p>
+<p>另一个数字来自 Escape.tech：扫描了约 5600 个公网 vibe-coded
+应用后，发现超过 2000 个高危漏洞、400 多个暴露的密钥和令牌、约 175
+个涉及个人身份信息（含医疗记录和银行账号）的泄露案例。</p>
+<p>这场危机不是传统 Shadow IT 的重复。所谓 Shadow IT，指的是员工在公司
+IT 部门不知情的情况下自行使用软件或云服务——用私人 Dropbox
+传工作文件、自己注册 SaaS
+工具没报备，都属于这一类。它的特点是企业不知道自己的人在用什么工具。Vibe
+coding
+把这个问题推进了一层：员工自己都不知道自己在生产环境上跑了一个数据库。两个数量级的放大，从”企业不知道”变成了”建的人也不知道”。</p>
+<h2>不等平台改，现在就能做的事</h2>
+<p>有几件事不需要等平台改默认值，现在就能做。</p>
+<p>第一，搜一下。RedAccess 能用 Google 加平台域名的方式搜到 38
+万个应用，任何一个安全团队也能。IANS 的建议是”假定所有 vibe-coded
+应用都是默认公开的，然后去检查它的安全设置”。在当前平台默认值下，这是唯一正确的起点。</p>
+<p>第二，建立 AI 工具使用的可见性。开发者实际在用什么 AI
+工具，往往和安全团队批准的列表有显著差异。安全公司 Backslash Security 在
+2026 年 2 月拿了 1900 万美元 A
+轮融资专门做这个事。部署到客户的几分钟内，就发现开发者在用一个被公司政策明确禁止的
+AI 模型。</p>
+<p>第三，在部署层而非代码层补安全。Northflank 这类平台提供沙箱化的
+vibe-coded
+应用部署方案：密钥注入到运行时而非写在源码里、数据库最小权限而非 admin
+权限、环境隔离而非共享、每个 PR 独立预览环境而非所有东西堆在一个 URL
+上。方向是对的：在最容易出问题的那一层补默认值。</p>
+<p>最后，如果你在用 AI
+搭应用，或者你知道身边有人在用，有一个最简单的判断：你的应用是跑在
+.lovable.app、.replit.app
+这种公开域名上吗？如果是，检查一下它是不是被 Google
+收录了。大概率是。然后看看那个隐私设置开关在哪里。如果找不到，先别上线。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Matt Schlicht" class="entity-link person-link">Matt Schlicht</a>, 
+                
+                  <a href="/search/?q=Amjad Masad" class="entity-link person-link">Amjad Masad</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Wiz" class="entity-link company-link">Wiz</a>, 
+                
+                  <a href="/search/?q=RedAccess" class="entity-link company-link">RedAccess</a>, 
+                
+                  <a href="/search/?q=Supabase" class="entity-link company-link">Supabase</a>, 
+                
+                  <a href="/search/?q=IANS Research" class="entity-link company-link">IANS Research</a>, 
+                
+                  <a href="/search/?q=Escape.tech" class="entity-link company-link">Escape.tech</a>, 
+                
+                  <a href="/search/?q=Backslash Security" class="entity-link company-link">Backslash Security</a>, 
+                
+                  <a href="/search/?q=Northflank" class="entity-link company-link">Northflank</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Moltbook" class="entity-link product-link">Moltbook</a>, 
+                
+                  <a href="/search/?q=Lovable" class="entity-link product-link">Lovable</a>, 
+                
+                  <a href="/search/?q=Replit" class="entity-link product-link">Replit</a>, 
+                
+                  <a href="/search/?q=Base44" class="entity-link product-link">Base44</a>, 
+                
+                  <a href="/search/?q=Netlify" class="entity-link product-link">Netlify</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/vibe-coding/">vibe-coding</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">software-security</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">data-leakage</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-deployment/">ai-deployment</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">shadow-it</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

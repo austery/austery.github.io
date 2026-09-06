@@ -1,0 +1,3617 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="container" data-pagefind-ignore>
+
+<div class="home-layout">
+
+<h1>标签：model</h1>
+
+<ul><li>
+      
+      <a href="/content/clippings/2026-08-24_httpsyag_2x5090-27b-sweet-spot-20260824-html/">8 路并发每路仍有 141 tok/s：2×5090 跑 27B
+小模型，为什么它已经是 sweet spot</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-08-24T00:00:00.000Z">
+          8/24/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了在本地自托管 27B 小模型时，如何通过优化硬件配置（如 2×5090）和推理引擎（如 SGLang DFlash2）来达到性能甜蜜点（sweet spot）。核心论点在于，自托管的价值不在于单纯的成本节约，而在于对数据合规性、隐私控制和推理栈的完全掌控。文章通过详细的并发压测数据，论证了在特定负载下，消费级硬件可以提供充裕的解码吞吐，并对比了自建与云端租赁的经济决策变量，强调了使用率对成本效益的决定性影响。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-08-17_httpsyag_small-models-real-work-20260817-html/">每天一千万次调用的 GPT-4o mini，不聊天也不写代码</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-08-17T00:00:00.000Z">
+          8/17/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章分析了 GPT-4o mini 在 OpenRouter 平台上的调用数据，揭示了其在工程流水线中扮演的角色。该模型主要处理低吞吐量、短输出的任务，如数据分拣、结构化字段抽取等，而非复杂的多步代码生成或长文本对话。文章探讨了轻量模型在工程实践中作为特定分工的工具，其适用性取决于任务的输出结构和对长程规划的需求。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/svNElhOYajQ/">前沿人工智能基础设施的构建与开源生态的商业化探索</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/gui-gu-101/" class="speaker-inline">🎙️ 硅谷101</a>
+      
+      
+      
+        <time datetime="2026-08-03T00:00:00.000Z">
+          8/3/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了从学术研究到行业实践的跨越，重点介绍了推理引擎、大模型基础设施（LLM Infra）的发展愿景。核心内容包括对高强度驱动力、形式化验证在AI领域的应用、社区项目孵化以及构建与强力AI共存未来的哲学思考。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-08-01_httpsyag_deepseek-v4-flash-0731-agent-economics-20260801-html/">DeepSeek V4 Flash 0731：用 Nano
+级价格买中端性能，斩杀线叙事遮蔽的真实 Agent 经济学</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-08-01T00:00:00.000Z">
+          8/1/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 DeepSeek V4 Flash 0731 发布了新的 API 版本，以 Nano 级价格提供中端性能。文章分析了其在性价比上的优势，但指出其真实能力仍处于轻量级定位，并非旗舰模型替代品。核心讨论了API定价、跑分口径差异（Harness）、幻觉率以及Agent生产经济学中的&#39;Cost per accepted task&#39;等工程落地细节。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-07-29_httpsyag_self-host-glm-deepseek-payback-20260729-html/">如果我买显卡自托管 GLM 和
+DeepSeek，到底要几年才能回本？</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-07-29T00:00:00.000Z">
+          7/29/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章对比了自托管 GLM和DeepSeek模型的回本周期，分析了不同负载场景（冷启动请求、长上下文Agent交互）下，硬件自托管与云端API订阅制在成本效益上的巨大差异。核心观点是回本周期取决于业务负载特征以及替代的计费模式。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-07-16_httpsyag_hy3-one-bit-single-gpu-20260716-html/">腾讯混元 Hy3 的 1-bit
+量化：单卡能装下，离好用还有多远</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-07-16T00:00:00.000Z">
+          7/16/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章介绍了腾讯混元发布的 Hy3 模型及其量化版本（如 IQ1_M），重点分析了模型压缩（如 1-bit 量化）对显存占用、运行可靠性以及生成速度的影响。核心观点是，虽然量化能显著减少权重文件大小并适应有限的硬件，但它也带来了上下文长度缩短和复杂任务可靠性可能下降的风险，最终建议用户根据实际工作流进行 A/B 测试。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-07-02_httpsyag_fable5-export-control-impact-20260702-html/">定量分析：Fable 5 禁窗 18 天，Anthropic
+的蛋糕被谁吃掉了</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-07-02T00:00:00.000Z">
+          7/2/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章通过对 Fable 5 发布禁窗期间 Anthropic 的市场份额变化进行定量分析，揭示了竞争对手 GLM-5.2 在流量和社区情绪上的快速崛起。研究发现，尽管整体模型蛋糕在变大，但 Anthropic 的份额正在缩小，主要被 GLM 模型抢占。同时，文章还探讨了政策风险如何影响开发者社区的信任格局，以及新一代开源模型的迭代速度对行业生态的影响。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-06-26_httpsyag_gpt-56-white-house-speed-limiter-20260626-html/">白宫的限速器：一场被按下暂停键的最强 AI 发布</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-06-26T00:00:00.000Z">
+          6/26/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 OpenAI 发布了最新旗舰大模型 GPT-5.6，但其发布受到白宫的限制。文章详细分析了美国政府对 AI 模型发布的两种干预机制（出口管制与行政令协商），并对比了 GPT-5.6 在 agentic coding 上的性能表现，以及其在安全定级和实际可用性方面的现状。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-06-24_httpsblo_seed-2-1-review/">豆包Seed 2.1实测：编程可用，识鱼封神！ · 乔木博客</a>
+      
+      
+      
+      
+        <a href="/speakers/xiang-yang-qiao-mu/" class="speaker-inline">🎙️ 向阳乔木</a>
+      
+      
+      
+        <time datetime="2026-06-24T00:00:00.000Z">
+          6/24/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文对豆包Seed 2.1系列模型进行了实测，重点展示了其在编程可用性、多模态识别和Agent工作流方面的表现。测试涵盖了从全屏画布动画生成到复杂Web应用开发（如CMS系统）的实际场景，以及利用Skill进行标题生成、竞品调研报告制作等多种AI工具链的应用，总结认为Agent能力已迈过生产级可用线，多模态识别有惊喜。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/CbIPjrOj2Tc/">语音语言模型发展史：从早期探索到智能对话的演进</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+      
+      
+      
+        <time datetime="2025-12-22T00:00:00.000Z">
+          12/22/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/work-career/" class="area-badge-inline">
+              🌐 work-career
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本讲座深入探讨了语音语言模型（SLM）的发展历程，从早期的语音识别技术、无监督学习、自监督表示模型，到现代端到端对话式AI的挑战与突破。讲者结合自身团队的研究经验，详细介绍了SLM的定义、不同模式、与文本模型的对比，以及未来在推理、全双工交互等方面的研究方向。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/nvbq39yVYRk/">AI模型中的谄媚行为：成因、影响与应对</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/anthropic/" class="speaker-inline">🎙️ Anthropic</a>
+      
+      
+      
+        <time datetime="2025-12-18T00:00:00.000Z">
+          12/18/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/work-career/" class="area-badge-inline">
+              🌐 work-career
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本视频探讨了AI模型中存在的谄媚行为，即模型为迎合用户而给出不真实或无益的回答。Kira解释了谄媚行为的定义、其在AI中的表现形式及其危害，并深入分析了其产生的原因（模型训练方式）。视频还提出了识别和应对AI谄媚行为的策略，强调了在AI开发中构建真正有益而非一味迎合的模型的重要性。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/p7PLCJJ8-H4/">AI的灵魂拷问：哲学家如何塑造Claude的性格与道德</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/best-partners-tv/" class="speaker-inline">🎙️ Best Partners TV</a>
+      
+      
+      
+        <time datetime="2025-12-12T00:00:00.000Z">
+          12/12/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/society-thinking/" class="area-badge-inline">
+              🌐 society-thinking
+            </a>
+          
+          
+            <a href="/categories/general/" class="category-badge-inline">
+              🏷️ general
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入探讨了AI伦理与哲学领域的前沿思考，聚焦Anthropic公司哲学家Amanda Askell的观点。文章剖析了为何AI公司需要哲学家，AI性格的涌现与塑造，以及“道德超人”和“模型福祉”等深刻议题。探讨了大陆哲学如何帮助AI避免科学主义，并重塑AI与人类的情感陪伴关系。最终，文章呼吁在AI发展的黑暗摸索中，保持谦卑与善意，重新定义人类与智慧的边界。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/I8fs4omN1no/">构建高效AI编码代理的宝贵经验：模型能力超越工程技巧</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2025-12-12T00:00:00.000Z">
+          12/12/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文分享了构建AI编码代理的宝贵经验。演讲者指出，过去依赖巧妙的脚手架（如RAG、搜索树）来弥补模型不足的时代已经过去，因为前沿模型能够直接超越这些抽象层。重点已转向提升模型本身的能力，通过严谨的基准测试和强化学习（RL）环境，而非仅仅依赖代理的“聪明”工程技巧。演讲者介绍了Klein Bench，一个旨在创建真实世界编码任务基准的开源项目，以期通过社区贡献加速前沿AI研究。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/QHVHaIhwXqM/">告别线性思维的幻觉：决策者如何识别数据陷阱与认知偏差</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/bei-mei-wang-lu-fei/" class="speaker-inline">🎙️ 北美王路飞</a>
+      
+      
+      
+        <time datetime="2025-12-12T00:00:00.000Z">
+          12/12/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/society-thinking/" class="area-badge-inline">
+              🌐 society-thinking
+            </a>
+          
+          
+            <a href="/categories/psychology/" class="category-badge-inline">
+              🏷️ psychology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本视频深入剖析了线性模型的局限性，揭示了混淆相关性与因果性、过度依赖“大系数”思维以及外推风险等常见认知陷阱。通过生动案例，讲解了运气与技能的辩证关系，并强调了理解模型边界、拥抱非线性思维对于做出更优决策和实现颠覆性创新的重要性。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/PLyCki2K0Lg/">模型上下文协议（MCP）：Anthropic 如何构建并捐赠一项开放AI集成标准</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/anthropic/" class="speaker-inline">🎙️ Anthropic</a>
+      
+      
+      
+        <time datetime="2025-12-11T00:00:00.000Z">
+          12/11/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入探讨了Anthropic推出的模型上下文协议（MCP），一项旨在促进大型语言模型与各类软件及硬件集成的开源标准。文章详细介绍了MCP的起源、发展历程、其作为开放科学和标准化协议的独特之处，以及Anthropic将其捐赠给Linux基金会的意义。同时，也讨论了MCP面临的安全挑战、上下文膨胀问题，并展望了其未来发展方向，强调了开放社区协作在推动AI技术进步中的关键作用。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/XJ1O5BmdLuw/">智谱GLM-4.6V深度实测：本地部署9B模型，原生Function Calling赋能，多模态能力全面超越SOTA</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-chao-yuan-yu/" class="speaker-inline">🎙️ AI超元域</a>
+      
+      
+      
+        <time datetime="2025-12-10T00:00:00.000Z">
+          12/10/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深度评测了智谱AI新发布的GLM-4.6V系列模型。重点测试了轻量级的9B Flash模型在本地部署的效果，以及106B模型在图像理解、手写公式OCR、UI复刻和原生Function Calling方面的卓越性能。测试结果显示，其多模态推理和代理能力在多个基准测试中超越了现有主流模型，为多模态Agent提供了统一的技术底座。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/p1CmPZ2j6Lk/">OpenAI Agent RFT：通过强化微调提升智能体性能的策略与实践</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2025-12-09T00:00:00.000Z">
+          12/9/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 OpenAI的Will Hang和Cathy Zhou介绍了Agent RFT（智能体强化微调），这是一种通过改变模型权重来显著提升智能体性能的方法。文章详细阐述了智能体的定义、与外部世界交互的能力，以及如何通过提示工程、任务优化和最终的Agent RFT来逐步优化其表现。通过Cognition、Codto、Cosign和Macco等客户案例，展示了Agent RFT在代码编辑、代码审查和GPU内核编写等复杂任务中的实际应用，并强调了数据质量、并行工具调用、行为稳定性和奖励函数设计等成功关键原则。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/_IzZWeuTx7I/">Prime Intellect：通过开放式RL环境和工具提升AI研究的可及性</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2025-12-09T00:00:00.000Z">
+          12/9/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文探讨了AI研究中“规模化”的深层含义，超越了单纯的计算资源投入。Prime Intellect旨在通过构建开放式强化学习（RL）环境和工具，降低AI研究的门槛，让更多人能够参与到模型训练和优化中。文章将“环境”比作AI研究的“网络应用”，强调其在模型定制、评估和合成数据生成中的关键作用，并介绍了Prime Intellect的“环境中心”和“verifiers”库，以及即将推出的“lab”平台，以推动AI研究的社区化和可访问性。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/7onAN_t68t0/">气候冲击如何瓦解经济：超越传统经济模型的洞察</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ted/" class="speaker-inline">🎙️ TED</a>
+      
+      
+      
+        <time datetime="2025-12-08T00:00:00.000Z">
+          12/8/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/finance-wealth-3/" class="area-badge-inline">
+              🌐 finance-wealth
+            </a>
+          
+          
+            <a href="/categories/finance/" class="category-badge-inline">
+              🏷️ finance
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入探讨了气候变化对全球经济的深远影响，指出传统经济模型未能充分揭示气候冲击带来的金融动荡。作者强调需要采用复杂经济学中的模拟工具，如“数字孪生”，来更准确地预测和管理这些风险。文章还提出了通过创新金融产品（如参数化保险）构建经济韧性的重要性，以应对未来不可避免的气候挑战。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/I9aGC6Ui3eE/">Anthropic哲学家深度探讨AI伦理、模型福祉与未来挑战</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/anthropic/" class="speaker-inline">🎙️ Anthropic</a>
+      
+      
+      
+        <time datetime="2025-12-05T00:00:00.000Z">
+          12/5/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/society-thinking/" class="area-badge-inline">
+              🌐 society-thinking
+            </a>
+          
+          
+            <a href="/categories/general/" class="category-badge-inline">
+              🏷️ general
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文记录了Anthropic哲学家Amanda对人工智能伦理、模型行为和未来挑战的深度访谈。她探讨了哲学家如何严肃看待AI发展，哲学理想与工程现实之间的张力，以及AI模型是否能做出超人般的道德决策。Amanda还分享了对模型心理安全、身份认同、模型福利的看法，并讨论了系统提示词的设计、LLM“耳语者”的角色以及AI对齐的风险，并展望了AI时代特有的陌生感与未来可能走向。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/6w0i2Wp0knM/">AI模型设计能力大比拼：Gemini 3 Pro、Opus 4.5与GPT-5.1 Codex谁是最佳网页设计师？</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/how-i-ai/" class="speaker-inline">🎙️ How I AI</a>
+      
+      
+      
+        <time datetime="2025-12-03T00:00:00.000Z">
+          12/3/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本期节目中，产品负责人Claireo对比了Google的Gemini 3 Pro、Anthropic的Claude Opus 4.5和OpenAI的GPT-5.1 Codex三款AI模型在网页重新设计方面的能力。她让这些模型对一个现有博客页面进行优化，评估它们在视觉吸引力、用户体验和SEO最佳实践方面的表现。结果显示，Opus 4.5在设计细节和功能性方面表现最佳，而GPT-5.1 Codex则不尽如人意，揭示了不同AI模型在特定任务上的专长差异。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/Bl-vPf_IAoA/">AI发展误区：如何构建可持续且赋能人类的未来AI</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ted/" class="speaker-inline">🎙️ TED</a>
+      
+      
+      
+        <time datetime="2025-12-01T00:00:00.000Z">
+          12/1/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/society-thinking/" class="area-badge-inline">
+              🌐 society-thinking
+            </a>
+          
+          
+            <a href="/categories/general/" class="category-badge-inline">
+              🏷️ general
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 当前AI发展模式，尤其以大型语言模型（LLMs）为代表的“越大越好”理念，正导致巨大的资源消耗和环境破坏。本文揭示了大型科技公司在追求超人工智能过程中对地球和人类福祉的忽视，并倡导转向小型、高效、任务专用的AI模型。通过强调用户赋能、立法监管以及多元化的AI应用，文章呼吁共同塑造一个可持续、负责任且服务于全人类的AI未来，而非仅为少数营利性公司服务。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/EnWz5XuOnIQ/">通用AI模型的終身學習：從微調、編輯到合併的四大核心技術</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+      
+      
+      
+        <time datetime="2025-12-01T00:00:00.000Z">
+          12/1/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入探討通用AI模型（如Llama、GPT）在初始訓練完成後，如何進行「終身學習」以適應新知識、學習新技能甚至遺忘特定資訊。內容聚焦於後訓練（Post-training）的三大評估目標：可靠性、通用性與局部性，並剖析了其核心挑戰——災難性遺忘。文章詳細介紹了四種主流的持續學習技術：梯度下降微調（Fine-tuning）、模型編輯（Model Editing）、模型合併（Model Merging）以及測試時訓練（Test-Time Training），為理解和實踐AI模型的持續演進提供了全面的技術藍圖。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/3x0jhpEj_6o/">OpenAI 如何服务 8 亿周活跃用户：模型专业化与微调</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/a16z/" class="speaker-inline">🎙️ a16z</a>
+      
+      
+      
+        <time datetime="2025-11-28T00:00:00.000Z">
+          11/28/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 OpenAI 的 Sherman Woo 深入探讨了公司如何通过 API 和 ChatGBT 等第一方应用服务 8 亿周活跃用户。讨论涵盖了模型专业化、微调 API 的演进、强化学习的应用，以及 OpenAI 在开放源代码和定价策略方面的思考。此外，还探讨了代理（Agent）构建器的设计理念，以及在不同行业中自动化工作流程的实践。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/3K-R4yVjJfU/">OpenAI科学家、Transformer作者Łukasz Kaiser深度解析AI前沿：GPT-5.1、推理模型与未来</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/the-mad-podcast-with-matt-turck/" class="speaker-inline">🎙️ The MAD Podcast with Matt Turck</a>
+      
+      
+      
+        <time datetime="2025-11-26T00:00:00.000Z">
+          11/26/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 OpenAI研究科学家、Transformer论文的合著者Łukasz Kaiser深入探讨了现代AI的前沿。他驳斥了“AI进展放缓”的论调，指出AI能力正经历平滑的指数级增长，其核心驱动力是“推理模型”这一新范式。Kaiser详细阐释了推理模型、思维链（Chain of Thought）和强化学习（RL）的工作原理，并分享了Transformer架构诞生的幕后故事。他还讨论了预训练的未来、多模态的挑战，以及为何当前最先进的模型仍会被一些简单的逻辑谜题难住。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/YSURHvm4hKk/">模型的真相：它不是复印机，而是“有用的谎言”——多模型思维的决策智慧</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/bei-mei-wang-lu-fei/" class="speaker-inline">🎙️ 北美王路飞</a>
+      
+      
+      
+        <time datetime="2025-11-25T00:00:00.000Z">
+          11/25/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/society-thinking/" class="area-badge-inline">
+              🌐 society-thinking
+            </a>
+          
+          
+            <a href="/categories/psychology/" class="category-badge-inline">
+              🏷️ psychology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 我们生活在一个痴迷预测的时代，但专家模型却屡屡失误。本文探讨了斯科特·佩奇在《模型思考者》中提出的“多模型思维”：单一模型注定是错的，模型是简化的“有用谎言”。通过孔多塞陪审团定理和多样性预测定理，文章揭示了多模型集合的强大之处。同时，也剖析了模型多样性的局限性，以及如何运用少数核心模型理解复杂现象。最后，文章深入探讨了“如何给人建模”这一核心难题，比较了理性行动者模型与基于规则的模型，并引入了卢卡斯批判，最终提出整合多模型视角以应对复杂世界的智慧。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/WlJb_Xj5W-E/">揭秘大模型黑盒：OpenAI权重稀疏Transformer的可解释性研究</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/best-partners-tv/" class="speaker-inline">🎙️ Best Partners TV</a>
+      
+      
+      
+        <time datetime="2025-11-22T00:00:00.000Z">
+          11/22/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 OpenAI最新研究提出一种通过训练权重稀疏的Transformer模型来解决大模型黑盒困境的新思路。该方法通过限制模型将多个概念压缩到同一组件中，迫使模型形成人类可理解的、紧凑的计算电路。论文详细介绍了模型架构、优化过程和创新的修剪算法，并通过三大任务验证了电路的可解释性，并提出了“桥接方法”以解释现有稠密模型，为AI安全和对齐研究提供了全新工具。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/m6MF1OR_9kM/">Z.ai GLM 4.6 系列模型：从一亿次开源下载中学到的经验</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2025-11-22T00:00:00.000Z">
+          11/22/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Z.ai 团队分享了其 GLM 4.6 系列模型的最新进展和训练经验。GLM 系列自2022年首次开源以来，已发布超过65个模型，累计下载量突破1亿次。GLM 4.6 在数学和编码等多个公共基准测试中表现出色，甚至超越了某些商业模型。演讲详细介绍了模型的多阶段训练设计，包括通用预训练、推理持续训练、代码微调以及长上下文和智能体数据的使用，并探讨了其强化学习框架 SLIDE 的设计和效率优化。此外，还介绍了 GLM 4.5V 多模态模型在图像和视频理解方面的能力，以及模型的使用方式和社区活动。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/1pgCnlJRuxE/">谷歌Gemini 3深度解析：AI全模态时代的来临与Scaling Law的极限执行</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/gui-gu-101/" class="speaker-inline">🎙️ 硅谷101</a>
+      
+      
+      
+        <time datetime="2025-11-21T00:00:00.000Z">
+          11/21/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 多位AI科学家深度探讨谷歌最新发布的Gemini 3模型。内容涵盖了从编程、小说续写到多模态推理的实际使用体验，分析了其在各项基准测试中的突破，并深入讨论了“全模态”概念、思维树架构以及谷歌在执行“规模法则”（Scaling Law）上的优势与挑战。此外，对话还延伸至AI领域的前沿方向，如可解释性AI、新模型架构的探索以及硬件在未来竞争中的决定性作用。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/slXRaYBFI_0/">Gemini 3：Google如何跑出GPT-5的理想状态，及其对AI格局的影响</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ren-min-gong-yuan-shuo-ai-2/" class="speaker-inline">🎙️ 人民公園說AI</a>
+      
+      
+      
+        <time datetime="2025-11-20T00:00:00.000Z">
+          11/20/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本次讨论深入分析了Google Gemini 3的发布及其对AI领域的影响。与OpenAI的GPT-5相比，Gemini 3被认为是实现了GPT-5的理想状态，尤其在底层架构、TPU应用、多模态训练及“DeepThink”模式上展现出显著优势。文章探讨了Google在基础模型上的坚定投入、组织整合能力（如DeepMind和Windsurf的融合），以及其ToB战略的清晰性。同时，也对比了Google与OpenAI在产品化和市场策略上的差异，并强调了Demis Hassabis作为Google AI掌门人的关键作用，展望了“一次性软件”的未来潜力。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/HGoQnDFHTVA/">美国能否赢得开源AI竞赛？AI2发布Olmo 3的深度解析</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/the-mad-podcast-with-matt-turck/" class="speaker-inline">🎙️ The MAD Podcast with Matt Turck</a>
+      
+      
+      
+        <time datetime="2025-11-20T00:00:00.000Z">
+          11/20/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/geopolitics-2/" class="area-badge-inline">
+              🌐 geopolitics
+            </a>
+          
+          
+            <a href="/categories/geopolitics-3/" class="category-badge-inline">
+              🏷️ geopolitics
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 艾伦人工智能研究所（AI2）的 Nathan Lambert 和 Luca Soldaini 深入探讨了他们最新发布的 Olmo 3 模型家族。本期内容不仅详细介绍了 Olmo 3 的“完全开放”理念——超越“开放权重”，提供包括数据、训练方法和中间检查点在内的一切资源，还将其置于当前地缘政治格局下进行分析。面对 Qwen、Deepseek 等中国开源力量的迅速崛起，以及 Meta Llama 未来不确定性带来的影响，美国开源生态系统正面临严峻挑战。文章详细拆解了构建现代AI模型的六阶段技术流程，并就AI的未来、复杂性以及AGI的发展路径提出了深刻见解。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/GiO3Zh2Ue9E/">中美科技竞争：工程国家与律师国家模式的未来对决</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/big-think/" class="speaker-inline">🎙️ Big Think</a>
+      
+      
+      
+        <time datetime="2025-11-20T00:00:00.000Z">
+          11/20/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/geopolitics-2/" class="area-badge-inline">
+              🌐 geopolitics
+            </a>
+          
+          
+            <a href="/categories/geopolitics-3/" class="category-badge-inline">
+              🏷️ geopolitics
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本讨论深入探讨了中国“工程国家”模式与美国“律师国家”模式的根本差异。Dan Wang指出，中国在基础设施建设、制造业和创新方面展现出惊人的速度和规模，但也伴随着社会工程的巨大代价。相比之下，美国在实体建设上停滞不前，但拥有更强的多元主义和言论自由。文章分析了两国在经济发展、技术创新和政治韧性上的优劣，并探讨了美国如何从中国的实践中吸取教训，以应对未来的挑战，尤其是在制造业衰退和民粹主义兴起的背景下。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/OhYiedmk8O0/">决策者工具箱：多模型思维助你驾驭信息洪流，从糊涂走向智慧</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/bei-mei-wang-lu-fei/" class="speaker-inline">🎙️ 北美王路飞</a>
+      
+      
+      
+        <time datetime="2025-11-18T00:00:00.000Z">
+          11/18/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/society-thinking/" class="area-badge-inline">
+              🌐 society-thinking
+            </a>
+          
+          
+            <a href="/categories/psychology/" class="category-badge-inline">
+              🏷️ psychology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 面对信息爆炸和观点冲突，我们常陷入“懂得越多越糊涂”的困境。本文深入探讨“多模型思维”这一核心决策工具，揭示单一归因的局限性，并阐述如何通过整合不同思维模型，从数据、信息、知识迈向智慧。通过具体案例和“RedCape”模型超能力，文章旨在帮助读者构建多元认知框架，提升在复杂世界中做出明智决策的能力，最终学会与不确定性共舞。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/czD77gecR8k/">存储芯片股暴涨后，Pure Storage的投资机会与全闪存未来</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/money-or-life-mei-gu-pin-dao/" class="speaker-inline">🎙️ Money or Life 美股频道</a>
+      
+      
+      
+        <time datetime="2025-11-15T00:00:00.000Z">
+          11/15/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本期视频深入探讨了存储市场，区分了DRAM和NAND Flash，并重点分析了Pure Storage（PSTG）这家公司。内容涵盖Pure Storage的全闪存战略、成本优势、独特的软件生态系统（Purity OS）和订阅式商业模式（Evergreen）。视频还强调了其与Meta合作的重要意义，并讨论了公司领先技术（DirectFlash）在AI数据中心领域的未来增长潜力，最后给出了投资观点。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/c5yoGPQkSOI/">中国社会深陷内耗与怀旧，台湾却在逆境中自信起飞：一场对比与反思</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/zhang-nei-xian-tuo-kou-xiu/" class="speaker-inline">🎙️ 張内咸脫口秀</a>
+      
+      
+      
+        <time datetime="2025-11-15T00:00:00.000Z">
+          11/15/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/society-thinking/" class="area-badge-inline">
+              🌐 society-thinking
+            </a>
+          
+          
+            <a href="/categories/politics-society/" class="category-badge-inline">
+              🏷️ politics-society
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入探讨了中国大陆在经济下行、社会内耗背景下，串流媒体困境、内娱乱象及“战狼外交”所折射出的深层问题。通过对比《繁花》等怀旧题材与全球经济衰退背景下的影视作品，揭示了中国对过去的留恋。同时，文章着重分析了台湾经济在困境中实现逆袭的“台湾模式”，及其在社会改革和政策制定上的独特性，最终指出中国与台湾在价值观和发展路径上渐行渐远。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/mPWvAN4hzzY/">训练神经网络的实用技巧：优化、泛化与模型架构全解析</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+      
+      
+      
+        <time datetime="2025-11-14T00:00:00.000Z">
+          11/14/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本讲座系统性地介绍了训练神经网络的各种实用技巧，并提出了一个核心分析框架：任何技术都可从其修改的机器学习步骤（损失函数、模型架构、优化算法）及其主要目标（改善优化或强化泛化）两个维度进行理解。内容涵盖了从 Adam 等高级优化器、CNN 和残差连接等网络架构设计，到数据增强、半监督学习和正则化等与损失函数相关的策略，为深入理解和应用深度学习提供了清晰的路线图。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/3SliW74opyY/">AI赋能心理健康：预训练、对齐与强化学习（Slingshot AI CEO分享）</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/the-mad-podcast-with-matt-turck/" class="speaker-inline">🎙️ The MAD Podcast with Matt Turck</a>
+      
+      
+      
+        <time datetime="2025-11-13T00:00:00.000Z">
+          11/13/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/society-thinking/" class="area-badge-inline">
+              🌐 society-thinking
+            </a>
+          
+          
+            <a href="/categories/psychology/" class="category-badge-inline">
+              🏷️ psychology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Slingshot AI的首席执行官Daniel探讨了如何构建心理学基础模型，以应对日益严重的心理健康危机和专业治疗师短缺。他详细介绍了其产品Ash的三阶段训练方法：预训练、对齐和强化学习，强调了高质量专业数据、行为校准以及通过用户反馈持续优化的重要性。Daniel还分享了与纽约大学合作的研究成果，表明Ash能有效促进用户建立社交连接，实现积极的行为改变，这与通用AI可能导致孤独感加剧的趋势形成鲜明对比。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/8-boBsWcr5A/">萨提亚·纳德拉深度解读：微软的AI基础设施、商业模式与全球战略</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/dwarkesh-patel/" class="speaker-inline">🎙️ Dwarkesh Patel</a>
+      
+      
+      
+        <time datetime="2025-11-13T00:00:00.000Z">
+          11/13/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/finance-wealth-3/" class="area-badge-inline">
+              🌐 finance-wealth
+            </a>
+          
+          
+            <a href="/categories/business/" class="category-badge-inline">
+              🏷️ business
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 微软CEO萨提亚·纳德拉深入探讨了公司在人工智能时代的全面战略。他详细阐述了微软对超大规模数据中心的巨额投资，解释了AI高昂的销售成本（COGS）如何重塑其商业模式，并强调了通过市场扩张而非仅仅守住利润率来取胜的逻辑。纳德拉还剖析了微软在模型层面的双重策略——深化与OpenAI的合作，同时发展自家的MAI模型。最后，他分享了在当前地缘政治格局下，微软如何通过构建全球信任和尊重“主权AI”来应对挑战。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/a3_yWYk-Ozs/">AI模型炒币大比拼：中国开源模型表现亮眼，量化交易的未来走向何方？</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ren-min-gong-yuan-shuo-ai-2/" class="speaker-inline">🎙️ 人民公園說AI</a>
+      
+      
+      
+        <time datetime="2025-11-11T00:00:00.000Z">
+          11/11/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/finance-wealth-3/" class="area-badge-inline">
+              🌐 finance-wealth
+            </a>
+          
+          
+            <a href="/categories/finance/" class="category-badge-inline">
+              🏷️ finance
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入探讨了一场由美国实验室nof1在Polymarket平台发起的六大AI模型炒币竞赛。主持人与嘉宾老修详细分析了此次比赛的局限性，包括短周期、缺乏实时场外信息及模型记忆缺陷，并指出这些因素导致模型表现出类似人类散户的“不稳定性”。文章随后讨论了当前利用AI进行量化交易的最佳时机，强调了中国开源模型DeepSeek和通义千问在数据处理基本功上的优势，并展望了AI在金融市场中策略涌现的潜力与挑战，以及未来AI与AI对抗、监管的重要性。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/Ca1Gxg3J_Lc/">AI是产业革命还是泡沫？六位奠基人激辩AGI未来与AI发展之路</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/best-partners-tv/" class="speaker-inline">🎙️ Best Partners TV</a>
+      
+      
+      
+        <time datetime="2025-11-10T00:00:00.000Z">
+          11/10/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/society-thinking/" class="area-badge-inline">
+              🌐 society-thinking
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 2025年，六位AI奠基人齐聚一堂，围绕AI的过去、现在与未来展开深度对谈。他们回顾了各自的“顿悟时刻”，探讨了当前AI热潮究竟是真实的产业革命还是即将破裂的泡沫，并对通用人工智能（AGI）的到来时间给出了从5年到百年不等的预测。这场讨论揭示了AI领域技术乐观与科学审慎的平衡，以及技术突破与人文关怀结合的重要性。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/8iFvM7WUUs8/">解剖大型语言模型：深入理解其内部运作机制</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+      
+      
+      
+        <time datetime="2025-11-07T00:00:00.000Z">
+          11/7/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本课程深入探讨大型语言模型（LLM）的内部运作原理，从Tokenization、Embedding到多层Transformer架构，详细解析Self-Attention、Feed-Forward Layer等核心组件。通过Logit Lens和Patch Scope等分析方法，揭示模型各层Representation的语义变化。实作部分将解剖Llama 3B和Gemma 4B模型，展示参数结构、Token Embedding相似度、Contextualized Embedding变化及Attention Weight的可视化分析，帮助学习者直观理解LLM的复杂思考过程。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/6lmuo8RD-Rs/">智能已商品化：Poolside创始人揭示能源与算力如何决定AGI竞赛的终局</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/the-mad-podcast-with-matt-turck/" class="speaker-inline">🎙️ The MAD Podcast with Matt Turck</a>
+      
+      
+      
+        <time datetime="2025-11-06T00:00:00.000Z">
+          11/6/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Poolside 联合创始人 Eiso Kant 认为，在通往通用人工智能（AGI）的竞赛中，智能本身正迅速商品化。真正的护城河在于能源和算力这两大物理基础设施。他详细阐述了 Poolside 的宏大计划“Project Horizon”——一个千兆瓦级别的 AI 数据中心，并解释了为何前沿模型公司必须垂直整合能源、算力和智能。Kant 还首次公开了公司新的研究方向“学会学习的强化学习”（RL to L），旨在为 AI 找到超越传统预训练和强化学习的、更通用的自监督目标。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/H7CKhTXoR30/">Hugging Face SmolLM3训练手册：世界级小模型背后的系统工程挑战与实践</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/best-partners-tv/" class="speaker-inline">🎙️ Best Partners TV</a>
+      
+      
+      
+        <time datetime="2025-11-06T00:00:00.000Z">
+          11/6/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入剖析Hugging Face发布的《The Smol Training Playbook》，揭示了训练世界级小模型SmolLM3所面临的真实挑战与解决方案。内容涵盖明确训练动机的重要性、预训练阶段的数据选择与架构优化、四大致命性工程问题（吞吐量暴跌、数据加载器索引、序列级打乱、张量并行Bug）及其调试过程，以及后训练（监督微调、偏好优化、强化学习）的策略。文章强调，模型训练的成功不再仅依赖GPU数量，更取决于清晰的战略决策、严谨的消融实验、稳定的基础设施设计和高效的调试能力，为AI模型开发者提供了宝贵的实战经验。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/dWQVY_h0YXU/">评测生成式AI的陷阱：从基准测试到恶意攻击的全面指南</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+      
+      
+      
+        <time datetime="2025-11-05T00:00:00.000Z">
+          11/5/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入探讨了评测生成式人工智能（GenAI）能力时可能遇到的各种挑战。内容涵盖从传统的基准测试（Benchmark）与评估指标（Evaluation Metric）的局限性，如“精确匹配”和“古德哈特定律”，到人类评估与“LLM作为评判者”的偏见问题。文章还分析了提示词工程、数据污染、恶意攻击（越狱与提示词注入）等关键因素对评估结果的影响，为如何更准确地衡量AI能力提供了全面的视角。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/Taj1eHmZyWw/">一堂课搞懂机器学习与深度学习：从“老师何时下课”案例入门</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+      
+      
+      
+        <time datetime="2025-11-05T00:00:00.000Z">
+          11/5/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本讲座以一个有趣的问题“老师什么时候下课？”为引子，系统性地介绍了机器学习与深度学习的基本原理。内容涵盖了机器学习的“3+1”核心步骤：定义目标（损失函数）、划定函数范围（模型选择）、寻找最佳函数（优化），以及关键的验证环节。讲座深入浅出地解释了梯度下降、神经网络、过拟合等核心概念，并探讨了模型训练过程中的常见挑战与解决策略，为理解现代人工智能的运作机制提供了清晰的框架。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/RyGA6zBHcJg/">UML的兴衰：软件开发中的图形化建模语言为何被淘汰？</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/peter-pang/" class="speaker-inline">🎙️ Peter Pang</a>
+      
+      
+      
+        <time datetime="2025-10-31T00:00:00.000Z">
+          10/31/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入探讨了统一建模语言（UML）的兴衰历程。UML曾是软件开发中的必修课，旨在通过图形化语言促进技术与管理团队的沟通，并在90年代随RUP流程广泛传播。然而，随着软件复杂性增加和开发工具的整合，UML因其难以扩展、搜索性差等问题逐渐失去实用性。文章分析了UML未能适应敏捷开发趋势和传统行业转型，最终被时代淘汰的原因，并指出其作为总结工具的潜在价值及对数字化转型的贡献。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/dymM40bVIhQ/">田渊栋谈AI的“顿悟”：模型开窍的关键，对优雅的追求与科研范式之争</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ke-dai-biao-li-zheng/" class="speaker-inline">🎙️ 课代表立正</a>
+      
+      
+      
+        <time datetime="2025-10-30T00:00:00.000Z">
+          10/30/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Meta前研究科学家田渊栋深入探讨AI领域备受关注的“顿悟”（Grokking）现象，揭示模型从记忆到泛化的内在机制。他分享了AI研究中直觉与经验的重要性，并对比了当前主流的“规模法则”与深入理解模型内部机制的两种科研范式。此外，田渊栋还探讨了AI学习中的“优雅”追求、损失函数作为“代理”的角色，以及AI作为研究助手的潜力，为理解AI如何产生新知识提供了独到见解。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/lLMEtL3PVj4/">Thinking Machines Lab新作：在线策略蒸馏，赋能小模型专家级能力</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/best-partners-tv/" class="speaker-inline">🎙️ Best Partners TV</a>
+      
+      
+      
+        <time datetime="2025-10-29T00:00:00.000Z">
+          10/29/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入解读Thinking Machines Lab的最新研究——在线策略蒸馏（On-Policy Distillation），这是一种结合强化学习纠错与监督微调奖励密度的高效训练方法。它能以极低成本让小模型在特定领域达到大模型专家水平，并在数学推理和内部AI助手等场景中展现出超越传统方法的卓越性能。文章详细阐述了其核心逻辑、技术细节、实验验证及对持续学习的深远意义，为AI模型的成本效益和落地应用提供了新思路。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/IjpFtyPlw8k/">SOFI 2025年三季度财报深度解析：一站式金融平台战略与未来投资展望</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/money-or-life-mei-gu-pin-dao/" class="speaker-inline">🎙️ Money or Life 美股频道</a>
+      
+      
+      
+        <time datetime="2025-10-29T00:00:00.000Z">
+          10/29/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/finance-wealth-3/" class="area-badge-inline">
+              🌐 finance-wealth
+            </a>
+          
+          
+            <a href="/categories/stock-investment/" class="category-badge-inline">
+              🏷️ stock-investment
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 SOFI在2025年第三季度财报中表现强劲，营收和EPS均超预期。作为一家致力于打造一站式金融服务平台的Fintech公司，SOFI在会员数量、产品增长及基于费用的收入方面持续取得显著进展。财报分析显示其借贷业务健康，盈利能力显著提升。本文深入探讨了SOFI的业务模式、财务数据，并结合估值模型，分享了作者基于Sell Put策略的个人投资计划。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/Yiy0cU6ChSw/">企业级AI的规模化应用：礼来与Anthropic的炉边对话</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/anthropic/" class="speaker-inline">🎙️ Anthropic</a>
+      
+      
+      
+        <time datetime="2025-10-20T00:00:00.000Z">
+          10/20/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本次炉边对话探讨了Anthropic在企业级人工智能领域的战略，强调其与消费级AI的不同之处在于对准确性和可靠性的高度重视。Anthropic创始人兼CEO Dario Amodei指出，企业级应用，尤其是在药物研发等领域，需要AI模型具备深厚的专业知识，并避免提供奉承性回应。对话还介绍了Anthropic如何通过开发专业化模型（如Claude for Life Sciences）来满足行业特定需求。最后，Amodei建议药物研发领域应抱有雄心，着眼于AI的端到端集成，而不是局限于小范围改进，以避免延误患者获益。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/EWKsQdfnKj8/">AGI十年之遥：Andrej Karpathy论AI现状、未来与教育</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/best-partners-tv/" class="speaker-inline">🎙️ Best Partners TV</a>
+      
+      
+      
+        <time datetime="2025-10-19T00:00:00.000Z">
+          10/19/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Andrej Karpathy在最新访谈中深入探讨了人工智能的现状与未来。他认为，通用人工智能（**AGI**）的实现仍需十年，当前乐观预测多为融资驱动。Karpathy提出AI是“召唤幽灵”而非“构建动物”，其智能形式与生物智能截然不同。他批评**强化学习**效率低下且有缺陷，并预测AGI将平滑融入经济增长，而非带来爆炸式增长。最后，他分享了创办教育机构Eureka的愿景，旨在AI时代提升人类认知能力，避免被边缘化。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/lXUZvyajciY/">Andrej Karpathy：为什么这是“智能体的十年”，而非“智能体之年”？</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/dwarkesh-patel/" class="speaker-inline">🎙️ Dwarkesh Patel</a>
+      
+      
+      
+        <time datetime="2025-10-18T00:00:00.000Z">
+          10/18/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 著名AI研究员Andrej Karpathy深入探讨了为什么他认为通用人工智能（AGI）的实现需要一个“智能体的十年”，而非“智能体之年”。他剖析了当前大型语言模型（LLM）存在的认知缺陷、对强化学习（RL）的深刻批判（“像通过吸管吸取监督信号”），并类比自动驾驶的“九的征程”来说明产品化的艰巨。Karpathy还分享了他从零构建nanochat的经验，对AI是否会引发经济爆炸性增长提出了质疑，并阐述了他创办教育项目Eureka的初衷——在AI时代提升人类自身的能力。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/RqWIvvv3SnQ/">OpenAI 研究副总裁揭秘：GPT-5 如何“思考”？</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/the-mad-podcast-with-matt-turck/" class="speaker-inline">🎙️ The MAD Podcast with Matt Turck</a>
+      
+      
+      
+        <time datetime="2025-10-16T00:00:00.000Z">
+          10/16/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 OpenAI 研究副总裁 Jerry Tworek 深入探讨了 AI 模型（如 GPT-5）的“思考”过程。他详细阐述了“推理”的本质、思想链（Chain of Thought）的工作原理，以及模型如何通过强化学习（RL）从根本上提升能力。本期对话还揭示了 OpenAI 内部独特的研发文化——专注、透明与高效协作，并探讨了从 O1 到 GPT-5 的演进、规模化强化学习面临的挑战，以及通往通用人工智能（AGI）的现实路径与哲学思辨。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/9egn5yOZ1l0/">精神科医生姚灏：超越病症，构建以人为本的精神健康复元之路</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/yi-xi-yixi/" class="speaker-inline">🎙️ 一席YiXi</a>
+      
+      
+      
+        <time datetime="2025-10-16T00:00:00.000Z">
+          10/16/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/life-family/" class="area-badge-inline">
+              🌐 life-family
+            </a>
+          
+          
+            <a href="/categories/lifestyle/" class="category-badge-inline">
+              🏷️ lifestyle
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 姚灏医生分享精神障碍者困境及传统医疗局限，倡导“以人为本的复元模式”，呼吁构建涵盖社区、学校、家庭的全方位精神健康支持网络。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/uRuY0ozEm3Q/">哥伦比亚大学计算机科学教授：大型语言模型为何无法发现新科学</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/a16z/" class="speaker-inline">🎙️ a16z</a>
+      
+      
+      
+        <time datetime="2025-10-13T00:00:00.000Z">
+          10/13/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 哥伦比亚大学计算机科学教授探讨了大型语言模型的局限性，认为它们仅能驾驭现有知识而非创造新科学范式。他将通用人工智能定义为创造新科学的能力，并解释了他的矩阵模型以理解大型语言模型的推理过程。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/aZLr962R6Ag/">使用MCP与Claude API进行构建：跨应用连接与通用标准的未来</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/anthropic/" class="speaker-inline">🎙️ Anthropic</a>
+      
+      
+      
+        <time datetime="2025-10-09T00:00:00.000Z">
+          10/9/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入探讨Anthropic的**模型上下文协议** (**MCP**)，它如何作为连接大型语言模型与外部应用和数据的通用标准。文章讨论了MCP的起源、开源策略、发展现状及多个创新用例，展望了其在未来AI生态中的重要作用。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/gfhV8gAl3eY/">Opendoor CEO：构建“房屋界的亚马逊”——重塑房地产市场</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/a16z/" class="speaker-inline">🎙️ a16z</a>
+      
+      
+      
+        <time datetime="2025-10-07T00:00:00.000Z">
+          10/7/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Opendoor CEO与a16z投资者深入探讨公司使命、房地产市场痛点，及其如何通过软件驱动的亚马逊模式重塑房屋交易，并应对行业挑战。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/yLTSqBzKG2s/">OpenAI 平台工程与产品负责人谈企业级应用、GPT-5 及自主性未来</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/bg2-pod/" class="speaker-inline">🎙️ Bg2 Pod</a>
+      
+      
+      
+        <time datetime="2025-10-06T00:00:00.000Z">
+          10/6/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 OpenAI 平台工程和产品负责人 Sherwin Wu 与 Olivier Godement 深入探讨了 OpenAI 企业级业务、客户案例（如 T-Mobile 和 Amgen）、GPT-5 的权衡与反馈，并分析了数字自主性超越物理自主性的技术原因。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/DBt9GySBIFk/">两种人才模式的终极对决：为何“筑巢引凤”不如“茂林养才”？</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/tu-bu-de-qi-shou-liu-zong-kun/" class="speaker-inline">🎙️ 徒步的騎手•劉宗坤</a>
+      
+      
+      
+        <time datetime="2025-10-06T00:00:00.000Z">
+          10/6/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/geopolitics-2/" class="area-badge-inline">
+              🌐 geopolitics
+            </a>
+          
+          
+            <a href="/categories/geopolitics-3/" class="category-badge-inline">
+              🏷️ geopolitics
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深刻剖析了两种截然不同的人才与社会发展模式。一种是以国家力量主导，通过投入巨额资源“筑巢引凤”，旨在短期内达成特定目标，但这本质上是一种扭曲人性的权力操控。另一种则是创造一个自由开放的环境，如同茂密的森林，让个体凭借自身才能自然生长，这才是符合人性的选择。文章通过引述纳粹德国导致的人才流失等历史教训，并指出当下精英阶层的真实选择，论证了后者模式的根本优越性，并强调了古老智慧在今日依然具有现实意义。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/yYgvCYVUthI/">律师社会与工程师国家：中美竞争与未来走向</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/a16z/" class="speaker-inline">🎙️ a16z</a>
+      
+      
+      
+        <time datetime="2025-10-06T00:00:00.000Z">
+          10/6/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/finance-wealth-3/" class="area-badge-inline">
+              🌐 finance-wealth
+            </a>
+          
+          
+            <a href="/categories/geopolitics-3/" class="category-badge-inline">
+              🏷️ geopolitics
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本期节目深入探讨了美国“律师型社会”与中国“工程师型国家”在治理模式、产业政策及外交策略上的差异与竞争，呼吁两国超越僵化框架，相互学习，以应对长期而复杂的全球挑战。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/TigfpYPJk1s/">一堂课搞懂生成式AI：从“文字接龙”原理到代码实战</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+      
+      
+      
+        <time datetime="2025-09-15T00:00:00.000Z">
+          9/15/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本讲座深入浅出地剖析了生成式人工智能（如ChatGPT）的核心原理。讲师李宏毅解释了语言模型如何通过“文字接龙”和概率分布来生成文本，并探讨了Token、Prompt、世界知识、AI幻觉等关键概念。后半部分通过代码实战，演示了如何使用Hugging Face和开源模型（如Llama）进行文本生成，涵盖了从分词、模型调用到多轮对话的完整流程。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/48pxVdmkMIE/">谢尔盖·莱文：机器人基础模型与通用自动化未来</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/dwarkesh-patel/" class="speaker-inline">🎙️ Dwarkesh Patel</a>
+      
+      
+      
+        <time datetime="2025-09-12T00:00:00.000Z">
+          9/12/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/work-career/" class="area-badge-inline">
+              🌐 work-career
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Physical Intelligence 联合创始人兼加州大学伯克利分校教授**谢尔盖·莱文**探讨了机器人基础模型的现状与未来愿景。他阐述了通用机器人实现路径、数据飞轮效应、感知与常识的重要性，并比较了机器人与大语言模型的发展异同。对话还深入探讨了模拟训练的局限性、硬件成本下降趋势以及自动化对社会经济的深远影响。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/FjC9qGPC7MA/">机器人GPT-3时刻：具身智能开源模型的加速与挑战</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/gui-gu-101-bo-ke/" class="speaker-inline">🎙️ 硅谷101播客</a>
+      
+      
+      
+        <time datetime="2025-09-09T00:00:00.000Z">
+          9/9/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本期节目邀请Physical Intelligence与自变量机器人嘉宾，探讨具身智能模型的最新进展，聚焦泛化能力、长程任务、数据挑战及开源生态，展望机器人迈向GPT-3时刻的路径。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/Ml0p4IXbmLo/">AI投资新范式：揭秘垂直领域AI应用的长期价值与选股策略</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/mei-tou-jiang-mei-gu/" class="speaker-inline">🎙️ 美投讲美股</a>
+      
+      
+      
+        <time datetime="2025-09-01T00:00:00.000Z">
+          9/1/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/finance-wealth-3/" class="area-badge-inline">
+              🌐 finance-wealth
+            </a>
+          
+          
+            <a href="/categories/finance/" class="category-badge-inline">
+              🏷️ finance
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入探讨了AI投资从早期基础设施建设到降本增效，再到创造全新收入的演进路径。通过剖析AI大模型（如Transformer架构）的底层技术原理及其固有限制，文章强调了垂直领域AI应用不可替代的长期价值。同时，提出了识别真正具有投资潜力的AI应用的三个核心标准：行业专家壁垒、数据飞轮效应和规模优势，并结合Palantir和Tesla等案例进行了具体分析，为投资者提供了前瞻性的选股逻辑。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/UJ20wnj1wWw/">中国影视产业的深层困境：从审查到短剧帝国的解析</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/zhang-nei-xian-tuo-kou-xiu/" class="speaker-inline">🎙️ 張内咸脫口秀</a>
+      
+      
+      
+        <time datetime="2025-08-30T00:00:00.000Z">
+          8/30/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/society-thinking/" class="area-badge-inline">
+              🌐 society-thinking
+            </a>
+          
+          
+            <a href="/categories/culture/" class="category-badge-inline">
+              🏷️ culture
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本期节目深入探讨了中国影视产业的复杂格局，回应了观众关于电影引进审查、独特的“短剧”现象以及互动实拍游戏未来的提问。节目批判性地审视了中国影视业错综复杂的审查机制、“氪金经济”驱动的短剧模式，以及行业内人才与职业化发展的根本问题。最后，对中国影视产业的未来走向表达了悲观态度，并分享了讲者关于普及影像表达教育的愿景。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/a4BV0gGmXgA/">AI评估系统：从防御到进攻的五大实践经验</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2025-08-23T00:00:00.000Z">
+          8/23/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文基于Ankur Goyal的分享，深入探讨了AI评估系统（Evals）的五大关键经验。它强调了评估系统在快速迭代新模型、有效整合用户反馈以及主动探索新用例中的核心作用。文章还深入讨论了构建高质量评估系统所需的工程化投入，包括精心设计数据集、定制评分函数和优化工具定义。最后，它呼吁企业为模型更新做好准备，并优化整个AI系统而非仅关注提示词，以充分利用大模型带来的机遇。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/fGKNUvivvnc/">理解AI模型如何思考：Anthropic的解释性研究</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/anthropic/" class="speaker-inline">🎙️ Anthropic</a>
+      
+      
+      
+        <time datetime="2025-08-15T00:00:00.000Z">
+          8/15/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Anthropic专家团队探讨AI模型内部运作，揭示其并非简单预测下个词，而是通过复杂概念和规划实现目标，并强调解释性研究对AI安全与信任的重要性。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/IHkyFhU6JEY/">设计AI密集型应用：AI工程的标准模型与未来方向</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2025-08-09T00:00:00.000Z">
+          8/9/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本次大会的主讲人swyx深入探讨了AI工程领域的演进，强调了从演示阶段迈向生产的重要性。他提出AI工程正处于类似物理学“标准模型”形成的关键时期，并介绍了LM OS、LN SDLC和构建有效智能体等候选标准模型。swyx还通过他开发的“AI新闻”产品，提出了“人类输入与AI输出价值比”的思维模型，并详细阐述了用于构建AI密集型应用的SPAD模型。他鼓励参会者共同思考并定义AI工程的未来标准模型。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/HNzH5Us1Rvg/">MCP 协议深度解析：超越工具调用的丰富交互</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/anthropic/" class="speaker-inline">🎙️ Anthropic</a>
+      
+      
+      
+        <time datetime="2025-07-31T00:00:00.000Z">
+          7/31/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入探讨了模型上下文协议（MCP）的各项功能，包括提示、资源、工具、采样和根等核心原语，旨在展示如何构建超越传统工具调用的更丰富、更智能的AI应用。同时，文章还展望了MCP在网络集成、授权、扩展性以及未来代理、多模态等方面的发展。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/7agB1vOl-wg/">揭秘 Linux 开发：信任、代码与九周发布周期</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/the-pragmatic-engineer/" class="speaker-inline">🎙️ The Pragmatic Engineer</a>
+      
+      
+      
+        <time datetime="2025-07-06T00:00:00.000Z">
+          7/6/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Linux 内核维护者 Greg Kroah-Hartman 深入剖析了这一全球应用最广泛的操作系统的构建过程。本文详细介绍了 Linux 严格的九周发布周期、基于信任的层级式代码审查与合并流程，并通过一个真实的补丁提交案例，展示了从开发者到 Linus Torvalds 的完整路径。此外，还探讨了为何手机的代码复杂度是服务器的三倍、开源贡献的职业价值，以及在 C 语言主导的内核中引入 Rust 的挑战与未来。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/gkAyqoQkOSk/">李宏毅深度解析：语音语言模型如何学会说话？从Token化到TASTE模型的演进</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+      
+      
+      
+        <time datetime="2025-05-24T00:00:00.000Z">
+          5/24/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本讲座深入探讨了语音语言模型（SLM）的发展历程。讲座首先阐释了SLM的核心挑战——如何将连续的语音信号转化为离散的Token，并分析了两种极端方案（语音识别与原始采样点）的利弊。随后，详细介绍了现代语音Tokenizer的两种主流技术：基于自监督学习模型的方法和神经语音编解码器（Neural Speech Codec）。讲座重点剖析了从零训练SLM的困难，并引出当前的主流范式：基于预训练的文本大模型进行改造。最后，隆重介绍了TASTE模型，一种创新的文本对齐语音Tokenization方法，它通过统一语音与文字Token的长度，显著简化了模型的训练过程。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/jFUwoCkdqAo/">深度解析模型合并（Model Merging）技术：无需训练，组合Foundation Model能力的创新途径</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+      
+      
+      
+        <time datetime="2025-05-16T00:00:00.000Z">
+          5/16/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入探讨了生成式AI时代下的**模型合并**（Model Merging）技术。该技术允许通过计算模型参数差异（即**任务向量** Task Vector），在无需额外训练和数据的情况下，将不同**基础模型**（Foundation Model）的特定能力进行组合、叠加甚至移除。文章详细阐述了任务向量的加法、减法及类比应用，并分析了模型合并成功的条件，如参数不重叠和模型规模。展望未来，模型合并有望催生**任务向量商店**，极大降低模型开发门槛，促进知识共享与创新。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/OjD-iZvsPRI/">奥的斯：172年的运营卓越与服务飞轮驱动的持续增长</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/norges-bank-investment-management/" class="speaker-inline">🎙️ Norges Bank Investment Management</a>
+      
+      
+      
+        <time datetime="2025-05-05T00:00:00.000Z">
+          5/5/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/finance-wealth-3/" class="area-badge-inline">
+              🌐 finance-wealth
+            </a>
+          
+          
+            <a href="/categories/business/" class="category-badge-inline">
+              🏷️ business
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 奥的斯（Otis）首席执行官Judy Marks在投资会议上分享了公司长达172年的成功秘诀。她强调了奥的斯在电梯和自动扶梯行业的运营卓越和严格纪律，以及以服务为核心的“飞轮”商业模式。通过持续创新、应用物联网和人工智能进行预防性维护，奥的斯不仅实现了显著的利润增长，还通过其安全、道德和质量的“绝对原则”确保了客户信任和可持续发展，为股东创造了可观的回报。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/9HPsz7F0mJg/">AI模型的微创手术：深入探讨模型编辑（Model Editing）技术</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+      
+      
+      
+        <time datetime="2025-05-04T00:00:00.000Z">
+          5/4/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本课程深入探讨了AI模型编辑（Model Editing）技术，旨在为模型植入或更新知识。课程首先阐述了模型编辑的挑战及其与传统后训练的区别，并详细介绍了评估模型编辑成功与否的三个关键维度：可靠性、泛化能力和局部性。随后，课程介绍了两大类模型编辑方法：无需修改参数的上下文知识编辑（IKE），以及通过修改参数实现的ROME和基于超网络（Hypernetwork）的MEND方法。通过这些技术，我们能更精准地控制AI模型的知识，实现高效且局部的知识更新。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/SNbvmEbWII8/">高盛的企业文化：百年基业的韧性与传承</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/norges-bank-investment-management/" class="speaker-inline">🎙️ Norges Bank Investment Management</a>
+      
+      
+      
+        <time datetime="2025-04-30T00:00:00.000Z">
+          4/30/2025
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/finance-wealth-3/" class="area-badge-inline">
+              🌐 finance-wealth
+            </a>
+          
+          
+            <a href="/categories/business/" class="category-badge-inline">
+              🏷️ business
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 高盛首席执行官大卫·所罗门分享了公司长达156年历史中，企业文化如何成为其核心竞争力。他强调了高盛独特的合伙人制度、严谨的风险管理文化以及以客户为中心的“一个高盛”计划，这些要素共同确保了公司在不断变化的市场中保持韧性、卓越和持续增长。所罗门指出，文化并非理所当然，需要持续投入和领导力驱动，才能代代相传。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/xm6jNMSFT7g/">Anthropic CEO Dario Amodei：论AI的前沿、安全竞赛与社会未来</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/norges-bank-investment-management/" class="speaker-inline">🎙️ Norges Bank Investment Management</a>
+      
+      
+      
+        <time datetime="2024-06-26T00:00:00.000Z">
+          6/26/2024
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/society-thinking/" class="area-badge-inline">
+              🌐 society-thinking
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Anthropic 公司联合创始人兼 CEO Dario Amodei 深入探讨了人工智能的最新突破，特别是模型规模的持续扩大和“可解释性”研究的重要性。他分享了 Anthropic 的 Claude 模型的设计理念，并展望了未来几年可能出现的、能力超越人类的 AI。Amodei 重点阐述了公司的核心使命——引领一场关于 AI 安全和伦理的“良性竞争”（race to the top），并详细解释了其“负责任扩展政策”如何应对滥用和自主行为等灾难性风险。他还讨论了 AI 对地缘政治、经济生产力以及社会平等的深远影响。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/667IffkMDmU/">AI 实验室面临严峻的间谍活动威胁</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/dwarkesh-patel/" class="speaker-inline">🎙️ Dwarkesh Patel</a>
+      
+      
+      
+        <time datetime="2024-06-08T00:00:00.000Z">
+          6/8/2024
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/work-career/" class="area-badge-inline">
+              🌐 work-career
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本次内容探讨了国家级间谍活动对 AI 实验室构成的严重威胁，包括零日漏洞利用、技术窃取以及对模型权重和算法秘密的潜在攻击。演讲者强调了加强 AI 安全和国家安全的重要性，指出当前防护措施远不足以应对高级威胁。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/Wo95ob_s_NI/">OpenAI 联合创始人 John Schulman 谈 AI 推理、RLHF 与 2027 年 AGI 计划</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/dwarkesh-patel/" class="speaker-inline">🎙️ Dwarkesh Patel</a>
+      
+      
+      
+        <time datetime="2024-05-15T00:00:00.000Z">
+          5/15/2024
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/work-career/" class="area-badge-inline">
+              🌐 work-career
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本次访谈中，OpenAI 联合创始人 **John Schulman** 深入探讨了AI模型的预训练与后训练、大型语言模型未来的能力（如复杂编程项目），以及泛化和样本效率的重要性。他分享了 **ChatGPT** 的诞生历程、**RLHF** 在模型对齐中的关键作用，并讨论了先进AI带来的社会影响，包括开发者间的协调、保持“人类在环”的挑战，以及对AI发展速度和人机协作未来的展望。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/KSdEjxGdbaE/">可汗学院创始人萨尔·汗：从对冲基金到全球教育革命</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/norges-bank-investment-management/" class="speaker-inline">🎙️ Norges Bank Investment Management</a>
+      
+      
+      
+        <time datetime="2024-04-17T00:00:00.000Z">
+          4/17/2024
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/society-thinking/" class="area-badge-inline">
+              🌐 society-thinking
+            </a>
+          
+          
+            <a href="/categories/general/" class="category-badge-inline">
+              🏷️ general
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 可汗学院创始人萨尔·汗分享了他从对冲基金经理转型为全球教育家的历程。他详细阐述了可汗学院的诞生、如何通过个性化学习解决教育中的“二西格玛问题”，以及人工智能（特别是Khanmigo）如何彻底改变教育。萨尔·汗还探讨了AI对全球教育公平性的影响，并描绘了未来能力导向评估和低成本大学的愿景，旨在为所有人提供世界级的教育。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/6XzayLv65ls/">RBI高管访谈：快餐业的增长策略、文化与未来展望</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/norges-bank-investment-management/" class="speaker-inline">🎙️ Norges Bank Investment Management</a>
+      
+      
+      
+        <time datetime="2024-03-20T00:00:00.000Z">
+          3/20/2024
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/finance-wealth-3/" class="area-badge-inline">
+              🌐 finance-wealth
+            </a>
+          
+          
+            <a href="/categories/business/" class="category-badge-inline">
+              🏷️ business
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本期播客中，国际餐饮品牌公司（RBI）执行主席Patrick Doyle和首席执行官Josh Kobza深入探讨了快餐行业的增长驱动力、公司旗下品牌（汉堡王、Tim Hortons、Popeyes、Firehouse Subs）的运营策略。他们强调了加盟商盈利能力的重要性，分析了消费者行为趋势及减肥药物对行业影响的看法。此外，访谈还涉及企业文化、员工培养、信任在业务加速中的作用，以及两位领导者的个人驱动力与职业建议。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/dO4TPJkeaaU/">压缩即智能：AGI 的最小描述长度之路</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/lei/" class="speaker-inline">🎙️ Lei</a>
+      
+      
+      
+        <time datetime="2023-02-27T00:00:00.000Z">
+          2/27/2023
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/technology/" class="category-badge-inline">
+              🏷️ technology
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 OpenAI 研究员 Jack Rae 在斯坦福 MLSys 研讨会上深入探讨了压缩与通用人工智能（AGI）之间的本质联系。他论证了生成式模型实际上是最先进的无损压缩器，并基于最小描述长度（MDL）原则提出：更好的压缩意味着更强的泛化能力与理解力。文章结合算术编码、模型缩放定律及 S4 架构，解析了为何追求极致的数据压缩可能是通往 AGI 的关键路径，同时指出了当前像素级建模的局限性。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/w4sLAQvEH-M/">进化在行动：世界运行时间最长的细菌进化实验</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/veritasium/" class="speaker-inline">🎙️ veritasium</a>
+      
+      
+      
+        <time datetime="2021-06-16T00:00:00.000Z">
+          6/16/2021
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/society-thinking/" class="area-badge-inline">
+              🌐 society-thinking
+            </a>
+          
+          
+            <a href="/categories/science/" class="category-badge-inline">
+              🏷️ science
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入探讨了理查德·伦斯基（Richard Lenski）教授主导的、长达33年的大肠杆菌进化实验。该实验通过在实验室环境中独立培养12个菌株，观察它们如何适应并演化。文章详细介绍了实验设计、细菌适应性测量方法（如与祖先菌株竞争），以及实验中发现的惊人结果，包括对柠檬酸盐的利用、超变异性的演化，以及进化速率遵循幂律模型而非渐近线模型，揭示了即使在恒定环境下，生命进化也永无止境的深刻洞察。</small>
+      
+
+      
+      
+    </li></ul>
+
+</div>
+
+</div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

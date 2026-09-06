@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>提示词救不了平庸的 AI 写作 | 宝玉的分享</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="提示词救不了平庸的 AI 写作 | 宝玉的分享" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">提示词救不了平庸的 AI 写作 | 宝玉的分享</span>
+      <span data-pagefind-meta="speaker" style="display:none;">baoyu.io</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-02-19
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/baoyu-io/">baoyu.io</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://baoyu.io/blog/2026-02-19/ai-writing-beyond-prompts" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-02-19
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本文认为，AI 写作的质量并非仅由提示词决定，而更多依赖于三要素：高质量的输入素材、强大的 AI 模型能力（如 Claude Opus），以及审稿人（人或 Agent）对 AI 输出的批判性评估和修改能力。提示词仅为表面调料，要实现真正优秀的 AI 写作，必须全面考量食材、厨艺与口味。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>宝玉的分享</p>
+<p>Menu</p>
+<p>See all posts</p>
+<p>Published on 2026-02-19</p>
+<h1>提示词救不了平庸的 AI 写作</h1>
+<p>作者：</p>
+<p>宝玉</p>
+<p>很多人以为 AI 写得好不好，关键看提示词。我用 AI 辅助写作也有一段时间了，体会是提示词能起的作用其实很有限，它只能决定格式、语气这些表面的东西。</p>
+<p>真正决定内容质量的，是另外三件事。</p>
+<p>如果把 AI 写作比作做一道菜，这三件事分别是：食材、厨艺和口味。</p>
+<h2>素材就是食材：你给什么料，AI 才能做什么菜</h2>
+<p>很多人用 AI 写东西的方式是：丢一个主题过去，让 AI 自由发挥。结果拿回来一篇正确但空洞的文章，全是放之四海而皆准的废话。</p>
+<p>你什么都没给它，它也变不出东西来。</p>
+<p>打个比方，你让秘书帮你写一篇演讲稿，只说了“帮我写个关于公司发展战略的讲话”，别的什么都没交代。写出来的东西，大概率是一堆漂亮的空话。</p>
+<p>但如果你跟秘书说清楚：这次的核心是我们要放弃海外市场全力做国内，原因是海外获客成本涨了三倍，我想先讲一个上季度在东南亚的失败案例开头。这样写出来的东西，质量完全不同。</p>
+<p>AI 写作也一样。你不需要给它一篇完整的草稿，但至少要给它主线和关键点。你想表达什么观点？用什么案例支撑？读者看完应该记住什么？这些想清楚了，哪怕只写三五句话丢给 AI，出来的东西也会比一大堆模糊的背景资料强得多。</p>
+<p>素材的价值不在于量大，而在于你做过筛选和判断。 你选择讲什么、不讲什么，用哪个例子、不用哪个，这些决策本身就是内容质量的基础。AI 擅长的是在你定好方向之后帮你补充细节、组织结构、润色语言。但方向得你来定。</p>
+<p>对我来说，最省心的是翻译和视频访谈稿，素材和格式都是固定的，发给 AI 就能出不错的结果，因为素材本身过硬，输出一般不会多糟。</p>
+<p>但像这篇文章这样需要表达自己观点的，我不能只说“写一篇如何提升 AI 写作质量的文章”，得把关键点一条条说清楚，要交代它全文贯穿食材、厨艺和口味，AI 才知道怎么写。</p>
+<p>食材备好了，下一步就看谁来炒。</p>
+<h2>模型就是厨艺：同样的食材，出品天差地别</h2>
+<p>写作任务上，模型之间的差距远比大多数人以为的要大。</p>
+<p>同样的食材，米其林厨师和路边摊做出来的东西就是不一样。你不能拿着顶级食材去找一个手艺平平的厨师，然后期待他做出惊艳的菜品。</p>
+<p>我目前认为写作质量最好的是 Claude Opus 4.6，它对语言的感觉、对上下文的理解、对微妙语气的把控，都明显领先。不过模型一直在迭代，排名随时会变。早年我最喜欢 GPT-4.5，后来 GPT-5 系列写东西不行，Gemini 3.0 Pro 风格太雷同，看多了都一个味。</p>
+<p>小模型写作普遍不好，参数大的模型通常更好。比如 Sonnet 很多人说好，但跟 Opus 比还是差一截。</p>
+<p>当然这都是个人体感。</p>
+<h2>审稿就是试菜：尝不出好坏，就端不出好菜</h2>
+<p>这一点我最开始想写“作者的水平”。但现在越来越多的写作流程里，作者本身可能就是一个 AI Agent。不管审稿的是人还是 Agent，道理一样：你必须能看出来一篇稿子哪里好、哪里不好。</p>
+<p>这是很多人忽略的隐性门槛，也是目前限制我自己写作水平的瓶颈。</p>
+<p>AI 写完一篇文章给你，你觉得“还不错”就直接发了。但**“还不错”是一个很危险的判断**。你可能没注意到开头是典型的 AI 式钩子，中间有一段逻辑断了，结尾为了升华而升华。这些问题你看不出来，就没法给 AI 反馈去改，最终质量就是碰运气。</p>
+<p>运气好的时候，AI 一次就写出了不错的东西。运气不好的时候，发出去的内容平庸甚至有硬伤。</p>
+<p>反过来，如果你有足够的审稿能力，能一眼看出哪段是废话该删、哪个比喻不对该换、哪里缺了过渡显得突兀。把这些反馈喂给 AI，让它重写那一段，几轮下来，稿子质量就从六十分到了八十分。</p>
+<p>这就像一个口感好的厨师，每次试菜都能尝出哪里咸了、哪里少了一味香料，然后精准调整。口感不行的厨师，尝一口觉得“还行”，端出去的菜只能靠运气。</p>
+<p>用 Agent 写作这个问题更明显。Agent 就像一个没有味觉的厨师，炒完一盘菜就当成品了。就算让它自我反思，它的反思也停留在表面，比如“这道菜色香味俱全”这种空泛的自我评价。它没有真正的味觉去判断一段话读起来顺不顺畅，一个例子能不能说服人。</p>
+<p>审稿能力来自大量的阅读和写作积累，来自对好内容的直觉。 这个能力短时间内 AI 替代不了，这也是为什么我从来不自动化生成内容，宁可少发一点，也要花时间仔细审阅修改。</p>
+<h2>食材、厨艺、口味，一个也不能少</h2>
+<p>食材好但厨艺差，好料糟蹋了；厨艺好但食材差，巧妇难为无米之炊；食材和厨艺都到位了但口味不行，出品不稳定。哪个环节掉链子，结果都不会好。</p>
+<p>提示词呢？提示词是调料，盐、胡椒、香料。三样东西都到位的时候，好的调料能锦上添花。但你不能指望光靠调料，把一盘没有食材、没有厨艺、没人试菜的东西，变成一道好菜。</p>
+<p>See all posts</p>
+<p>Built by 宝玉.  RSS . 本站原创内容，独家授权赛博禅心公众号发布。</p>
+<p>Toggle theme</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=BaoYu" class="entity-link person-link">BaoYu</a>
+                
+              </p>
+            
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Claude Opus 4.6" class="entity-link product-link">Claude Opus 4.6</a>, 
+                
+                  <a href="/search/?q=GPT-4.5" class="entity-link product-link">GPT-4.5</a>, 
+                
+                  <a href="/search/?q=GPT-5" class="entity-link product-link">GPT-5</a>, 
+                
+                  <a href="/search/?q=Gemini 3.0 Pro" class="entity-link product-link">Gemini 3.0 Pro</a>, 
+                
+                  <a href="/search/?q=Sonnet" class="entity-link product-link">Sonnet</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">ai-writing</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/prompt-engineering/">prompt-engineering</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/content-creation/">content-creation</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/writing-process/">writing-process</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

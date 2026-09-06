@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>对话 Claude Code 之父 Boris Cherny：AI 时代的‘印刷机’革命与工程师的进化</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="对话 Claude Code 之父 Boris Cherny：AI 时代的‘印刷机’革命与工程师的进化" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">对话 Claude Code 之父 Boris Cherny：AI 时代的‘印刷机’革命与工程师的进化</span>
+      <span data-pagefind-meta="speaker" style="display:none;">The Pragmatic Engineer</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-03-04
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/the-pragmatic-engineer/">The Pragmatic Engineer</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=julbw1JuAz0" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-03-04
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">Anthropic 工程师 Boris Cherny 深度解析了 Claude Code 的诞生与演进。他分享了如何在 AI 辅助下实现日均提交 30 个 PR 且零手写代码的高效工作流，提出了 AI 编码如同 14 世纪印刷机革命的深刻类比，并探讨了工程师如何从‘抄写员’转型为‘作者’，以及通用型工程师在 AI 时代的独特优势。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>AI 编码的“印刷机”时刻</h3>
+<p><strong>[主持人]</strong>: 你曾经为 O'Reilly 编写了第一本 <strong>TypeScript</strong> 书籍。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>[Host]</strong>: You were the first ever TypeScript book with O'Reilly.</p>
+</details>
+<p><strong>Boris Cherny</strong>: 是的，我曾在日本的一个小镇上看到那本书的日文版，那真是一个超酷的时刻。但随后我意识到，我已经完全不记得 TypeScript 了。现在我们已经到了这样一个阶段：在 <strong>Anthropic</strong>，平均约 80% 的代码是由 <strong>Claude Code</strong> 编写的。我每天大概会提交 10 到 20 个 PR，而在 <strong>Opus 4.5</strong> 和 Claude Code 的帮助下，每一个 PR 的代码 100% 都是由它们完成的，我一行代码都没有手动改过。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Boris Cherny</strong>: Yeah, I found that book translated in Japanese in this little town in Japan. That was just the coolest moment. And then I realized I don't remember TypeScript at all. Now we're at the point where Quad Code writes, I think something like 80% of the code had Enthropic on average. I wrote maybe 10 20 p requests every day. Opus 4.5 and Quad Code wrote 100% of every single one. I didn't edit a single line manually.</p>
+</details>
+<p><strong>[主持人]</strong>: <strong>Andrej Karpathy</strong> 曾发帖说，作为一名程序员，他从未感到像现在这样落后。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>[Host]</strong>: Andre Karpathy posted that he's never felt as much behind as a programmer as he is now.</p>
+</details>
+<p><strong>Boris Cherny</strong>: 这也是我一直在挣扎的事情。模型改进的速度如此之快，以至于旧模型行之有效的想法在现有的新模型上可能不再奏效。我对当前这个时刻有一个比喻：它是 1400 年代的<strong>印刷机</strong>时刻。因为当时有一群专门负责书写的<strong>抄写员</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Boris Cherny</strong>: This is something I really struggle with. The model is improving so quickly that the ideas that worked with the old model might not work with the new model. One metaphor I have for this moment in time is the printing press in the 1400s because there was a group of scribes that knew how to write.</p>
+</details>
+<p><strong>[主持人]</strong>: 雇佣这些抄写员的一些国王甚至自己都是文盲。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>[Host]</strong>: Some of the kings were illiterate who are employing the scribes.</p>
+</details>
+<p><strong>Boris Cherny</strong>: 如果你思考一下那些抄写员后来的遭遇：他们不再是抄写员了，但现在出现了一个全新的类别——<strong>作家和作者</strong>。这些人现在之所以存在，是因为文学市场的规模瞬间扩大了无数倍。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Boris Cherny</strong>: And if you think about what happened to the scribes, they ceased to become scribes, but now there's a category of writers and authors. These people now exist. And the reason they exist is because the market for literature just expanded a ton.</p>
+</details>
+<h3>早期黑客经历：从计算器到 YC 创业</h3>
+<p><strong>Boris Cherny</strong>: 这一切要追溯到很久以前。我大概 13 岁左右开始在 eBay 上卖旧的宝可梦卡片，并发现可以编写 <strong>HTML</strong> 来装饰列表。后来在中学，我们使用 <strong>TI-83</strong> 图形计算器。我发现如果我把数学考试的答案编进计算器，我就能拿到更好的分数。于是我写了一些小程序来记录答案，后来考试变难了，我就得写解方程程序（solvers）。最后为了让程序运行得更快，我不得不从 Basic 降级到<strong>汇编语言（Assembly）</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Boris Cherny</strong>: It starts a while back. So, when I was maybe 13 or something like this, I started selling my old Pokemon cards on eBay. And I realized that on on eBay, you can actually like write HTML... Then the second thing was... we had these old TI83 graphing calculators... I wrote these little programs to just program the answers... then the math got more advanced... so I had to drop down from basic to assembly to just make the program run a little bit faster.</p>
+</details>
+<p><strong>[主持人]</strong>: 哇，你在中学就开始写汇编了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>[Host]</strong>: Oh wow. So like in high school you dropped down to assembly.</p>
+</details>
+<p><strong>Boris Cherny</strong>: 当时班里每个人都想要我的解题器，于是我买了一根串口线把程序传给他们。结果下一次数学考试全班都是 A，老师气疯了。对我来说，编程一直是非常<strong>实用</strong>的工具。我在大学学的是经济学，后来为了创业退学了。我从未想过编程会成为一种职业，它只是我用来构建有用东西的一种手段。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Boris Cherny</strong>: Then the thing I realized is everyone in my class was starting to realize that I had the solver... so I bought this little serial cable... then the next math test, everyone on the class just got A's... But for me, it was very practical. Coding is a means to build things and to to make useful things.</p>
+</details>
+<h3>Meta 的七年：构建世界级开发工具</h3>
+<p><strong>Boris Cherny</strong>: 我在 Meta（当时的 Facebook）待了七年。起初在 <strong>Facebook Groups</strong> 团队工作，那时我遇到了很多早期的 JavaScript 大拿。后来我去了 <strong>Instagram</strong>，发现那里的技术栈非常混乱——Python 的类型检查器不起作用，点击跳转定义也不行。于是我开始转做<strong>开发基础设施（Dev Infra）</strong>，负责代码质量。在离开 Meta 之前，我领导着全公司的** Better Engineering** 计划。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Boris Cherny</strong>: Yeah, so I started on Facebook groups... I was really excited about it because of this mission of connecting people to their community... Then I spent a few years at Instagram after... what I very quickly realized is that I was just not effective at working on the stack because it was such a terrible stack and so I just went and started working on Dev Infra... By the time I left, I was leading code quality for all of Meta.</p>
+</details>
+<p><strong>[主持人]</strong>: 听说马克·扎克伯格曾强制要求每个工程师投入 20% 的时间来修复技术债务？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>[Host]</strong>: Zuck mandated that every engineer at the company 20% of their time has to be spent fixing tech debt.</p>
+</details>
+<p><strong>Boris Cherny</strong>: 没错，我们称之为“Better Engineering”。我们通过**因果分析（Causal Analysis）**发现，代码质量对工程效率有两位数百分比的提升。即使在最大的规模下，一个干净、模块化的代码库对于工程师和现在的 <strong>LLM</strong> 模型来说都至关重要。如果代码库中充斥着多种废弃的框架，模型就很可能选错工具。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Boris Cherny</strong>: And we called this better engineering... quality actually contributes like you know double digit percent to to productivity. It turns out even even at the biggest scale... As a model, you might just pick the wrong thing and then, you know, like the user has to course correct you.</p>
+</details>
+<h3>Claude Code 的诞生：从副作用到核心工具</h3>
+<p><strong>Boris Cherny</strong>: 我加入 Anthropic 后，提交的第一份 PR 被 Adam Wolf 拒绝了。不是因为代码写得不好，而是因为我是<strong>手动编写</strong>的。他告诉我：“你应该用 <strong>Clyde</strong>（Claude Code 的前身）来写。”那时候 Clyde 还非常简陋，是用 Python 写的，启动要 40 秒，而且不是智能体化的。但当我配置好参数让它一键生成了一个可运行的 PR 时，我体验到了第一个“哇”的时刻。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Boris Cherny</strong>: When I joined Anthropic, I did a bunch of ramp up projects... and I wrote my first pull request by hand because I thought that's how you write code... But even at the time... there was this thing called Clyde... Adam rejected my PR and he was like, &quot;Actually, you should use this Clyde thing for it instead.&quot; ...it sped out a working PR. It just one-shotted it.</p>
+</details>
+<p><strong>Boris Cherny</strong>: 后来我开始实验如何使用 Anthropic 的公共 API。我不想做 UI，就写了一个终端里的聊天工具。当**工具调用（Tool Use）<strong>功能发布后，我给它增加了一个 <strong>Bash</strong> 工具。我问它：“我正在听什么音乐？”它直接写了一个 AppleScript 脚本去查询我的音乐播放器。那是我的第二个“哇”时刻：如果你给模型一个工具，它会自己想办法利用它去完成任务。这就是</strong>苦涩的教训（Bitter Lesson）**的一个推论：让模型去做它该做的事，不要试图把它困在框里。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Boris Cherny</strong>: I just wanted to, you know, hack something up quite quickly cuz we didn't have quad code back then... and I gave it a single tool which was the bash tool... and I asked it you know like I actually didn't know if it could even do this but I asked it like what music am I listening to and uh it just wrote a little Apple script program... This is one of the corollaries is just let the model do it do its thing. Don't try to put it in a box.</p>
+</details>
+<h3>极限效率：日均 30 个 PR 的工作流</h3>
+<p><strong>Boris Cherny</strong>: 我的工作流通常是开 5 个终端标签页，每个都对应一个不同的代码分支。我几乎总是使用 <code>plan</code> 模式。当一个 agent 在第一个标签页里执行计划时，我就跳到第二个、第三个。随着 <strong>Opus 4.5</strong> 和 <strong>4.6</strong> 的发布，模型几乎可以“一键（one-shot）”完成实现。我现在甚至已经卸载了 IDE，因为我根本不需要手动编辑代码了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Boris Cherny</strong>: So for me, the way that I do it generally is I have five terminal tabs. Each one of them has a checkout of their repository... Almost every time I start in plane mode... Once there is a good plan, it just it will oneshot the implementation almost every time... I just uninstalled my ID cuz cuz I just didn't need it at that point.</p>
+</details>
+<p><strong>[主持人]</strong>: 如果每天提交 20 到 30 个 PR，代码审查（Code Review）怎么处理？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>[Host]</strong>: Shipping this much code... The obvious question that comes up is well the review.</p>
+</details>
+<p><strong>Boris Cherny</strong>: 在 Anthropic，每一份 PR 都会先由 Claude Code 进行第一轮审查，它能捕捉到大约 80% 的 Bug。它还会自己运行测试、甚至在子进程里启动自己来进行<strong>端到端验证</strong>。但最后，必须有一个人类工程师进行二次审查并批准更改。我们现在已经实现了“自动化自我（Automate myself away）”，工程师应该从繁琐的重复劳动中解放出来。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Boris Cherny</strong>: So today the way this looks is... every pull request at Enthropic is code reviewed by quad code. Uh and that actually catches maybe like 80% of bugs... There's always an engineer that does the second pass of code review. Um and you know there there always has to be a person in the loop approving the change.</p>
+</details>
+<h3>智能体团队：分布式协作的未来</h3>
+<p><strong>Boris Cherny</strong>: 我们最近推出了 <strong>Agent Teams</strong>，这是我们对“智能体集群（Swarms）”的实现。它允许一个主智能体将任务委托给具有“非相关上下文窗口（Uncorrelated Context Windows）”的子智能体。这意味着子智能体不携带主对话的沉重负担，能够更专注、更高效地处理具体任务。我们之前尝试过 <strong>RAG（检索增强生成）</strong>，但最终发现这种基于工具的“智能体化搜索（Agentic Search）”——也就是让模型自己去用 <code>glob</code> 和 <code>grep</code>——效果反而更好。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Boris Cherny</strong>: We launched agent teams earlier this week. This is our implementation of swarms... You have a bunch of different uncorrelated context windows... It's uncorrelated because the main agent prompts the sub agent but the sub agents context window is fresh... it turned out that agentic search just outperformed everything and when I say agentic search, this is a fancy word for glob and grap. That's all it is.</p>
+</details>
+<h3>工程师的未来：从“抄写员”到“作者”</h3>
+<p><strong>Boris Cherny</strong>: 对于工程师来说，那些关于代码风格、语言选择的争论已经不再重要了，因为模型可以随时帮你重写。现在最宝贵的技能是<strong>好奇心</strong>和<strong>跨界能力</strong>。未来的“十亿美金产品”可能只由一个人打造，因为他能同时思考工程、设计、业务和财务。今年将是**通用型人才（Generalist）**的元年。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Boris Cherny</strong>: Okay, so the stuff that's left behind is maybe like very strong opinions about like code style and languages... Other skills that I think are more valuable are being curious and being open to doing things beyond your swim lane... So in in some ways I think this will be the year of the generalist.</p>
+</details>
+<p><strong>Boris Cherny</strong>: 即使编程语言不再是门槛，我仍然推荐去读一读《<strong>Scala 函数式编程</strong>》。学习如何“在类型中思考（thinking in types）”是一门艺术，它能让你成为更好的思考者。此外，我还推荐刘慈欣的《三体》和 Charles Stross 的《<strong>Accelerando</strong>》，后者简直就是未来 50 年的技术路线图。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Boris Cherny</strong>: And then on the technical side, I would strongly recommend functional programming in Scola... it'll just teach you how to think in types... For people that are new to sci-fi... I really love Accelerondo by St. This is a book I would totally recommend. It's like essentially the product roadmap for the next 50 years.</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Boris Cherny" class="entity-link person-link">Boris Cherny</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, 
+                
+                  <a href="/search/?q=Meta" class="entity-link company-link">Meta</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Statsig" class="entity-link company-link">Statsig</a>, 
+                
+                  <a href="/search/?q=Sonar" class="entity-link company-link">Sonar</a>, 
+                
+                  <a href="/search/?q=Work OS" class="entity-link company-link">Work OS</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Claude Code" class="entity-link product-link">Claude Code</a>, 
+                
+                  <a href="/search/?q=Claude 4.5" class="entity-link product-link">Claude 4.5</a>, 
+                
+                  <a href="/search/?q=Claude 4.6" class="entity-link product-link">Claude 4.6</a>, 
+                
+                  <a href="/search/?q=Claude Co-work" class="entity-link product-link">Claude Co-work</a>, 
+                
+                  <a href="/search/?q=TypeScript" class="entity-link product-link">TypeScript</a>
+                
+              </p>
+            
+            
+              <p><strong>媒体/书籍:</strong>
+                
+                  <a href="/search/?q=Accelerando" class="entity-link media-link">Accelerando</a>, 
+                
+                  <a href="/search/?q=Three-Body Problem" class="entity-link media-link">Three-Body Problem</a>, 
+                
+                  <a href="/search/?q=Functional Programming in Scala" class="entity-link media-link">Functional Programming in Scala</a>
+                
+              </p>
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">ai-agent-workflow</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">autonomous-coding</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">software-engineering-productivity</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/agentic-security/">agentic-security</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/human-in-the-loop/">human-in-the-loop</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

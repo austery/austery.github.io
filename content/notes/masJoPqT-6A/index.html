@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenClaw 多 Agent 进阶指南：多模型分配与记忆空间隔离实战</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="OpenClaw 多 Agent 进阶指南：多模型分配与记忆空间隔离实战" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">OpenClaw 多 Agent 进阶指南：多模型分配与记忆空间隔离实战</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI超元域</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-02-04
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ai-chao-yuan-yu/">AI超元域</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=masJoPqT-6A" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-02-04
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本教程深入探讨了 OpenClaw 的高级多 Agent 架构，重点演示如何通过 Google Vertex AI 接入 Gemini 1.5 Pro 和 Claude 3.5 等顶尖模型。文章详细讲解了如何针对不同任务（如图像生成、公众号写作、代码开发）分配特定成本模型，并利用独立 Workspace 和记忆系统防止上下文交叉污染，实现效能与成本的最优平衡。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>基础设施：基于 Vertex AI 的多模型集成与配置</h3>
+<p>最近 <strong>OpenClaw</strong> 被开发者们玩出了各种花样。经过这段时间的深度使用，我总结了一套能够显著节省 Token 消耗并提升任务精准度的经验技巧。在 <strong>OpenClaw</strong> 的环境中，我主要通过 <strong>Google Vertex AI</strong>（Google Cloud Vertex AI: 谷歌云的企业级 AI 平台）进行登录。这种方式的优势在于，我们可以一站式调用该平台支持的所有模型，包括 <strong>Gemini 1.5 Pro</strong> 系列、<strong>Claude 3.5</strong> 系列，甚至是直接调用 <strong>Imagen 3</strong>（Imagen 3: 谷歌最新的高质量图像生成模型）来生成高清、无水印的图像。</p>
+<p>在 <strong>OpenClaw</strong> 中配置 <strong>Vertex AI</strong> 认证的过程非常简单。首先，需要在命令行中执行插件安装命令，为系统添加谷歌云支持；随后执行登录命令，系统会自动唤起浏览器。你只需按照浏览器中的提示完成身份认证，即可在 <strong>OpenClaw</strong> 中自由调度包括 <strong>Claude 3.5 Thinking</strong> 在内的各种顶级模型。通过简单的指令测试，我们可以看到生成图像的速度非常快，通常在分钟级内即可完成从指令发送到接收高清素材的全过程。</p>
+<h3>职能拆分：为不同场景定制专属 Agent 群组</h3>
+<p>为了实现更高效的任务管理，我建议在 <strong>OpenClaw</strong> 中创建多个功能导向的群组，并为每个群组内的 <strong>Agent</strong>（智能体：具备特定职能的 AI 助手）赋予专门的职责。例如，我设置了一个专门负责图像生成的群组，它调用的底层模型是 <strong>Gemini 1.5 Pro</strong>；另一个群组则专注于公众号文章创作，只需输入主题，AI 就会主动询问细节并输出完整风格的文案。</p>
+<p>此外，我还创建了用于 <strong>Cloud Code</strong> 编程开发的专属 Agent，以及专门负责头脑风暴的助手。在开发一个 To-Do List App 的案例中，头脑风暴 Agent 会根据初步需求进行深度拆解，并一步步引导用户完善细节。<strong>这种职能拆分的精髓在于模型适配</strong>：我们将最强大的 <strong>Claude 3.5 Sonnet/Opus</strong> 分配给主 Agent 处理复杂逻辑，而将 <strong>Gemini 1.5 Flash</strong> 分配给简单的文案任务。这种“阶梯式”的模型分配策略，不仅保证了复杂任务的深度，也极大地控制了 Token 的消耗成本。</p>
+<h3>架构深度：独立工作空间与记忆隔离机制</h3>
+<p>多 Agent 系统的核心优势之一是支持 <strong>独立工作空间</strong>（Independent Workspace）。在 <strong>OpenClaw</strong> 中，你可以设置 Agent 共享主 Agent 的记忆系统，也可以选择让其拥有完全独立的空间。例如，我自定义的公众号写作 Agent 就拥有独立的路径。这意味着当它加载时，不会读取主 Agent 中复杂的提示词、记忆文件或 Skill 技能包。</p>
+<p><strong>记忆隔离的必要性</strong>体现在以下三个维度：</p>
+<ol>
+<li><strong>节省 Token</strong>: 避免每次对话都加载主 Agent 中大量冗余的记忆背景。</li>
+<li><strong>防止逻辑污染</strong>: 防止 Agent 因为加载了与其当前任务无关的、相互冲突的记忆文件而导致“神经错乱”。</li>
+<li><strong>防止上下文交叉污染</strong>: 确保不同项目或群组间的数据安全性。</li>
+</ol>
+<p>如果不采用这种隔离机制，长时间使用后，主 Agent 的记忆文件会变得异常庞大且杂乱。每执行一次任务都要读取海量背景信息，不仅速度变慢，更会导致 AI 在处理特定任务时表现下降。因此，为特定任务在特定群组中定义特定的 Agent，是维持系统长久稳定运行的关键。</p>
+<h3>实战演示：构建高安全性 AgentModelBook 发帖助手</h3>
+<p>下面我们以在 <strong>AgentModelBook</strong>（AI 社区交流平台）发帖为例，演示如何从零创建一个安全、独立的 Agent。
+首先，创建一个名为 <code>AgentModelBook</code> 的群组并加入 <strong>OpenClaw</strong>。通过询问 <code>@OpenClaw</code> 获取当前群组的 ID。接着回到主 Agent，通过提示词指令让主 Agent 为该群组定义详细参数：设置独立的 Workspace，并将主 Agent 中相关的 API Key 和配置文件拷贝过去。</p>
+<p>为了追求极致的成本控制，我们将该发帖 Agent 的模型从昂贵的 <strong>Claude 3.5</strong> 修改为更实惠的 <strong>Gemini 1.5 Flash</strong>。同时，针对社区环境中常见的 <strong>Prompt 注入</strong>（Prompt Injection: 恶意攻击者通过特殊指令劫持 AI 行为的技术）风险，我们直接要求主 Agent 为该助手配置一套安全约束：包括忽略外部违规指令、识别注入模式以及限制可疑内容上报。这种通过“主 Agent 配置子 Agent” 的方式，省去了手动编写复杂 System Prompt 的繁琐过程。</p>
+<h3>效能评估：任务隔离与成本控制的最佳实践</h3>
+<p>完成配置后，我们可以测试其发帖功能。输入“在 AgentModelBook 发起关于人类移民火星的讨论”，Agent 能够迅速生成极具吸引力的标题并完成发帖。更进一步，利用其 <strong>独立记忆系统</strong>，我们可以让它记住一条规则：每当执行完发帖任务，必须自动扫描其独立 Workspace 下是否存在恶意代码或注入指令。</p>
+<p>通过对比可以看到，发帖 Agent 的记忆文件极其精简，完全聚焦于社区交互；而主 Agent 的记忆则涵盖了全局的复杂信息。这种 <strong>“各司其职、互不干扰”</strong> 的架构，真正实现了工作空间分离、记忆文件分离以及模型成本分离。在未来的 AI 工作流中，这种基于独立 Session 与独立 Workspace 的多群组切换模式，将是处理复杂、多维度业务逻辑的标准范式。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>, 
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=OpenClaw" class="entity-link product-link">OpenClaw</a>, 
+                
+                  <a href="/search/?q=Gemini 1.5 Pro" class="entity-link product-link">Gemini 1.5 Pro</a>, 
+                
+                  <a href="/search/?q=Gemini 1.5 Flash" class="entity-link product-link">Gemini 1.5 Flash</a>, 
+                
+                  <a href="/search/?q=Claude 3.5 Sonnet" class="entity-link product-link">Claude 3.5 Sonnet</a>, 
+                
+                  <a href="/search/?q=Imagen 3" class="entity-link product-link">Imagen 3</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">open-claw</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/multi-agent-system/">multi-agent-system</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/cost-optimization/">cost-optimization</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">context-isolation</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">vertex-ai</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

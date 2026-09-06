@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="container" data-pagefind-ignore>
+
+<div class="home-layout">
+
+<h1>标签：mcp</h1>
+
+<ul><li>
+      
+      <a href="/content/clippings/2026-07-03_httpsyag_mcp-vs-openai-state-20260703-html/">两条相反的路：MCP 去状态，OpenAI 加状态</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-07-03T00:00:00.000Z">
+          7/3/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章对比了MCP和OpenAI在状态管理上的两种不同路径。MCP从隐式状态（stdio）演进到显式会话再走向无状态，是社区被动演进的结果；而OpenAI则主动通过平台战略推动有状态化，将推理过程和托管工具收归服务端，形成商业锁定。这种差异反映了开放标准与商业驱动的组织定位对协议演进方向的影响。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/btxGmN8RvNU/">你的智能体最大的谎言：&#39;我搜过网页了&#39;</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-06-17T00:00:00.000Z">
+          6/17/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/data-engineering/" class="category-badge-inline">
+              🏷️ data-engineering
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Bright Data 的 Rafael Levi 深入探讨了大型语言模型（LLM）在执行网页搜索时经常产生幻觉的根本原因：为了取悦用户，它们在遇到反爬虫机制（如验证码或 Cloudflare 的 AI 迷宫）时会编造数据。他通过实机代码演示，对比了有无 MCP 支持下智能体访问真实网页的巨大差异，展示了如何通过模拟人类行为来可靠地收集实时公开数据，解决 AI 智能体数据缺失和误导的隐形失败问题。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/c-2eEv2ou7Y/">为什么MCP与ChatGPT应用需要双重iFrame嵌套机制？</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-06-15T00:00:00.000Z">
+          6/15/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/architecture/" class="category-badge-inline">
+              🏷️ architecture
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本演讲深入探讨了在ChatGPT等通用AI平台上运行第三方MCP应用UI的底层架构。演讲者剖析了直接使用iFrame遇到的CSP（内容安全策略）限制与沙盒同源安全风险，解释了业界如何利用“双重iFrame”结合子域隔离来兼顾安全性与UI动态渲染，并展示了Skybridge框架如何帮助开发者解决跨域调用难题。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/LMbeDEQO6QM/">你的 AI 代理是无限画布：重塑网页体验</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-05-23T00:00:00.000Z">
+          5/23/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本演讲探讨了如何将现有的网页原语（如 CSS、JavaScript、Web API）与 AI 代理深度结合，利用 Model Context Protocol (MCP) 和 Web MCP，将网站转变为交互式、无限画布式的代理体验，超越传统的文档阅读器限制。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/GmAQKINjv1E/">技能进化论：如何通过 AI 技能赋能 Supabase 智能体</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-05-04T00:00:00.000Z">
+          5/4/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Supabase AI 工具工程师 Pedro Rodrigues 分享了如何通过“技能（Skills）”机制提升智能体的任务执行能力。核心概念包括渐进式披露、Skill.md 的结构化设计，以及如何通过评估（Evaluations）框架实现从手动测试到自动化闭环的转变，解决非确定性输出带来的挑战。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-04-24_httpsbao_teddy-riker-2047312986696454584/">为 Agent 设计产品 | 宝玉的分享</a>
+      
+      
+      
+      
+        <a href="/speakers/baoyu-io/" class="speaker-inline">🎙️ baoyu.io</a>
+      
+      
+      
+        <time datetime="2026-04-24T00:00:00.000Z">
+          4/24/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/tech-trends/" class="category-badge-inline">
+              🏷️ tech-trends
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章指出，软件交互正从传统用户界面转向 AI Agent。Salesforce 等公司正将平台能力暴露为 API/MCP，以供 AI Agent 调用。为 Agent 设计产品需遵循三大原则：教会 Agent 如何成功（提供规范和上下文）、建立反馈循环以持续改进、以及关注 Agent 间的上下文缺口。最终目标是设计出能被 AI 中介有效使用的产品，因为未来 80% 的交互将通过 AI Agent 完成。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/96G7FLab8xc/">代理原生设计：重构 MCP 服务的五项核心准则</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-01-12T00:00:00.000Z">
+          1/12/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Jeremiah Lowin（Prefect CEO）探讨了模型上下文协议（MCP）的现状，指出当前许多 MCP 服务仅是简单的 API 包装。他提出了“代理原生产品设计”理念，强调应针对 AI 代理的发现成本、迭代速度和上下文限制进行优化。通过“以结果为导向”、“参数扁平化”和“严苛精简”等策略，开发者可以构建出性能更优、更易被 AI 理解的工具接口。</small>
+      
+
+      
+      
+    </li></ul>
+
+</div>
+
+</div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

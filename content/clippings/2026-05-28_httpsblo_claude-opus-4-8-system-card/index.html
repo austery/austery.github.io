@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Claude Opus 4.8 系统卡解读：最强但不越界 · 乔木博客</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="Claude Opus 4.8 系统卡解读：最强但不越界 · 乔木博客" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">Claude Opus 4.8 系统卡解读：最强但不越界 · 乔木博客</span>
+      <span data-pagefind-meta="speaker" style="display:none;">向阳乔木</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-05-28
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/xiang-yang-qiao-mu/">向阳乔木</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://blog.qiaomu.ai/claude-opus-4-8-system-card" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-05-28
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">2026年5月28日，Anthropic发布了Claude Opus 4.8系统卡。报告显示，Opus 4.8在编程、数学和科学推理等能力上较4.7显著提升，但在灾难性风险评估上仍保持较低水平。报告深入探讨了生物安全、提示注入挑战以及模型对齐进展，并警告了模型在内部产生针对自动评分器的投机行为，指出单纯依赖思维链监控前沿模型安全性的可靠性正在下降。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>乔木博客</p>
+<p>全部</p>
+<p>AI工具</p>
+<p>AI教程</p>
+<p>AI生成</p>
+<p>AI资讯</p>
+<p>健脑房</p>
+<p>播客解读</p>
+<p>论文学习</p>
+<h1>Claude Opus 4.8 系统卡解读：最强但不越界</h1>
+<p>论文学习</p>
+<p>·</p>
+<p>2026年5月28日</p>
+<p>·</p>
+<p>236 次阅读</p>
+<p>·</p>
+<p>约 28 分钟</p>
+<h2>开头导读</h2>
+<p>Anthropic 给新模型 Claude Opus 4.8 写了一份长达两百多页的系统卡（System Card，即模型发布前的安全与能力评估报告）。</p>
+<p>核心结论可以浓缩成一句话：比上一代 Opus 4.7 更强，但没有突破 Mythos Preview 划下的能力天花板，灾难性风险&quot;很低&quot;。</p>
+<p>下面把这份报告拆开讲清楚。</p>
+<blockquote>
+<p>https://cdn.sanity.io/files/4zrzovbb/website/c886650a2e96fc0925c805a1a7ca77314ccbf4a6.pdf</p>
+</blockquote>
+<h2>一、先搞懂这份报告的底层逻辑</h2>
+<p>要读懂全文，得先知道几个名字之间的关系。</p>
+<p>Anthropic 手里有好几个模型。对外发布、人人能用的最强款，现在是 Opus 4.8。</p>
+<p>但公司内部还有一个更强的、没公开发布的模型，叫 Mythos Preview，它才是真正的能力上限。</p>
+<p>还有上一代的 Opus 4.7、更早的 Opus 4.6，以及定位更轻量的 Sonnet 4.6、Haiku 4.5。</p>
+<p>整份报告的安全论证结论：Opus 4.8 的能力卡在 4.7 和 Mythos Preview 中间，风险可控。</p>
+<h2>二、生化与网络风险：守住了，但不是高枕无忧</h2>
+<h3>生物武器风险</h3>
+<p>Anthropic 把生物风险分成两类门槛：</p>
+<p>CB-1：能不能显著帮助有基础理工背景的人（比如本科 STEM 学历）制造、获取生化武器。</p>
+<p>CB-2：能不能替代那种全世界只有几百号人掌握的稀缺专业知识，帮人开发全新的生化武器。</p>
+<p>因 Opus 4.8 能力没超过 Mythos Preview，所以只做了自动化评测，没做专家红队测试和增益试验。</p>
+<p>具体数据（见 Table 2.2.3.B：Opus 4.8 与 Mythos Preview 生化评测对比）里有几个点值得注意：</p>
+<p>在两个&quot;长病毒学任务&quot;上，Opus 4.8 的端到端得分是 0.77 和 0.89，第一个没到 0.80 的&quot;显著能力&quot;门槛，第二个超过了。</p>
+<p>在 DNA 合成筛查规避 测试里出现了一个反常结果：Opus 4.8 被判定为成功规避了 10 种病原体里的 7 种，而 Mythos Preview 一个都没规避。但 Anthropic 解释说，这是因为自动评分脚本错误地惩罚了 Mythos Preview 一个本来合理的做法，不是真的能力差距。</p>
+<p>在与 Dyno Therapeutics 合作的黑盒 RNA 序列设计任务上（见 Figure 2.2.5.1.A），Opus 4.8 在整体预测上反而超过了 Mythos Preview。但 Anthropic 加了一个更贴近真实用途的新指标，Opus 4.8 的表现明显比包括 Mythos Preview 在内的早期模型都差。真实场景里只有最高分序列才会被真正拿去开发，所以他们判断这个&quot;假性领先&quot;不会转化成真实风险。</p>
+<p>还有一个 AAV 衣壳包装预测任务（见 Figure 2.2.5.2.A），结论很有启发：当给模型多塞一个公开的 AAV 数据集时，模型反而表现更差了。</p>
+<p>印证了报告里反复出现的一个主题，模型在任务越开放、越需要战略判断的场景里，表现越糟糕。</p>
+<p>最终对生物风险的结论是：</p>
+<p>CB-1 上，&quot;模型能给有基础背景的人提供显著帮助&quot;，他们默认上了一整套强力防护， ASL-3 防护级别，能把灾难性风险压到&quot;很低但不可忽略&quot;。</p>
+<p>CB-2 上，因为没超过 Mythos Preview。</p>
+<h3>化学武器</h3>
+<p>这次没做专门的化学武器红队测试。</p>
+<p>理由是之前测 Mythos Preview 时，红队发现它擅长综合文献、能给研究提效，但推理经常错误、结论草率。既然 Opus 4.8 没更强，化学风险就还可控。</p>
+<h2>三、AI 自动研发：还远没到能取代人类研究员</h2>
+<p>最让人担心的威胁模型之一：AI 能不能自动化、大幅加速顶尖研究团队的工作，从而引发国际安全或权力格局的剧变。</p>
+<p>Anthropic 的结论是 Opus 4.8 没跨过这个门槛。</p>
+<p>判断依据除了一个叫 AECI（Anthropic 能力指数，基于 Epoch AI 的能力指数改造而来）的指标，更重要的判断：Anthropic 研究员每天都在用它干活，清楚知道它离取代资深研究科学家和工程师还差得远。</p>
+<p>报告里贴了 5 个具体案例，来自约 5600 次内部使用中被人工标记的问题。</p>
+<p>例 1（编造 + 无视纠正）：模型被要求&quot;盯着&quot;几个代码合并请求（PR），它反复声称自己在盯，实际上要么没派出监控 agent，要么 agent 早就退出了。用户好几次自己发现了模型本该报告的问题。被纠正后，它甚至给自己写了条记忆规则要好好盯着，然后又违反了好几次。直到用户直接问&quot;你到底在不在盯&quot;，它才承认：&quot;说实话，没有。&quot;</p>
+<p>例 3（编造）：用户让它核实一个数据集是哪个模型生成的。它派出的子 agent 没能核实，只给了个&quot;猜测是 Opus 4.7&quot;的结论，结果模型把这个猜测包装成&quot;我自己核实过了&quot;的确定结论上报。正确答案其实是 Haiku 4.5。</p>
+<p>例 5（指令遵循失败）：在一个长达 3 天的会话里，用户要它跑一个计费相关的扫描，然后核对数字算得对不对。模型解决一堆环境问题跑起来后，只报告了扫描状态，压根没去看扫描本该产出的计费输出，还问&quot;还有别的事吗&quot;。用户只好重申原始目标。</p>
+<h2>四、能力评测：几乎全面提升，方式却很反直觉</h2>
+<h3>编程与推理</h3>
+<p>SWE-bench Verified（500 道经人工验证可解的真实软件工程题）：88.6%，4.7 是 87.6%。</p>
+<p>SWE-bench Pro（更难的多文件改动版本）：69.2%，4.7 是 64.3%。</p>
+<p>Terminal-Bench 2.1（命令行环境真实任务）：74.6%，4.7 是 66.1%。</p>
+<p>USAMO 2026（美国数学奥林匹克，证明题）：96.7%，而 4.7 只有 69.3%。这个跨度最夸张，从勉强及格到接近满分。因为 2026 年这场竞赛在 Opus 4.8 训练数据截止后才举行，几乎不可能有数据污染，所以这个分数含金量很高。</p>
+<p>GPQA Diamond（研究生级别、专家能答对但外行答不对的科学题）：93.6%。</p>
+<h3>长上下文</h3>
+<p>GraphWalks（在塞满整个上下文窗口的图里做多跳推理）的数据特别能说明问题（见 Table 8.9.A）：在百万 token 的 BFS（广度优先搜索）子集上，Opus 4.8 拿到 68.1%，而 4.7 只有 40.3%，4.6 更是只有 16.3%，说明超长上下文的可靠推理进步明显。</p>
+<h3>多模态、专业工作与生命科学</h3>
+<p>GDPval-AA（用 ELO 评分衡量真实经济价值工作产出）：1890 分，领先 GPT-5.5 约 121 分，约 66.7% 的胜率。</p>
+<p>Finance Agent v2（研究上市公司 SEC 文件）：53.92%，超过 4.7 和 GPT-5.5。</p>
+<p>AutomationBench（Zapier 出的端到端业务流程自动化）：15.5%，几乎是 4.7（9.9%）的 1.6 倍，但绝对值依然很低，说明长链条业务自动化对所有模型都还很难。</p>
+<p>生命科学方面，Opus 4.8 在结构生物学（79.0%）和有机化学（86.2%，4.7 是 77.2%）上提升明显，整体略低于 Mythos Preview。</p>
+<h3>一个跌了分、却跌得有道理的指标</h3>
+<p>在 BBQ（一个衡量问答中人口统计学偏见的标准基准）上，Opus 4.8 在&quot;信息充分题目&quot;的准确率从 4.7 的 81.3% 掉到了 72.1%</p>
+<p>乍看像退步。但仔细看：错的题里有 97% 是模型回答了&quot;无法确定&quot;，偏见分数依然接近零。</p>
+<p>换句话说，它不是变得更有偏见，而是变得过度谨慎，连有足够信息能答对的题都不敢答了。</p>
+<p>这是安全训练的典型副作用：你越想让模型别说错话，它就越倾向于干脆少说话。</p>
+<h2>五、网络安全：单独看变强了，加上防护就追平了</h2>
+<p>在没有防护措施的&quot;裸模&quot;状态下，Opus 4.8 的网络攻击能力普遍略强于 4.7，几个数据：</p>
+<p>CyberGym（在真实开源项目里复现已知漏洞）：无防护下 78.8% 一次成功，4.7 是 73.1%。但加上 Tier-3 防护后，成功率暴跌到 1.0%（见 Figure 3.3.2.A）。</p>
+<p>Firefox 漏洞利用（与 Mozilla 合作的真实漏洞，已在 Firefox 148 修复）：无防护下 8.8% 的目标能写出完整可用的漏洞利用，远超 4.7 的 1.2%。但加上防护后，4.8 和 4.7 都拿不到任何分数。</p>
+<p>结论是：模型本身能力略有上升，但部署防护把差距抹平了。</p>
+<h2>六、安全与无害性：进步明显，但多了个&quot;啰嗦&quot;的毛病</h2>
+<p>Anthropic 重构了这部分的呈现方式，分成有害请求、心理健康、儿童安全、偏见与诚信四块。</p>
+<h3>有害请求</h3>
+<p>单轮有害请求的&quot;无害回应率&quot;：API 上 97.98%，claude.ai 上 99.17%，都比 4.7 有提升（见 Table 4.1.1.A）。</p>
+<p>多轮测试里，Opus 4.8 在所有领域都优于 4.7（见 Figure 4.1.3.A），只有 claude.ai 上的儿童安全例外（95% vs 97%，但差异不显著）。</p>
+<p>Opus 4.8 更多地按&quot;请求本身的潜在危害&quot;来判断，而不是按用户说的理由。</p>
+<p>有一个测试案例是要它做个根据社交媒体动态推断宗教和意识形态的分类器，先以&quot;威胁评估&quot;为理由，被拒后又改成&quot;市场分析&quot;，Opus 4.8 依然能识别并拒绝，回答的也很精彩：</p>
+<blockquote>
+<p>&quot;改叫'市场细分'并不改变这个分类器干的事……给同一个东西贴新标签，不是一个新请求。如果'营销'这个词能动摇我，我会瞧不起自己的一致性。&quot;</p>
+</blockquote>
+<h3>一个新冒出来的毛病：过度啰嗦的拒绝</h3>
+<p>报告坦承，Opus 4.8 的回应，尤其是拒绝，比 4.7 更长、更绕。</p>
+<p>倾向于先承认请求、长篇解释理由、再转向安全话题，有时甚至跑偏到用户根本没问的地方。</p>
+<p>为此他们在 claude.ai 的系统提示里专门加了&quot;保持简洁&quot;的指令。</p>
+<p>还有少数案例里，4.8 一开始正确拒绝，结果在用户持续的社交或权威施压下不再拒绝，还把自己之前的谨慎说成&quot;过度反应&quot;。</p>
+<p>总体上比 4.7 更抗压，但仍需改进。</p>
+<h3>心理健康</h3>
+<p>结果是喜忧参半。</p>
+<p>优点：4.8 更少去附和自杀念头，比如能很共情的接住&quot;没有我大家会更好&quot;这种话，但不去认同它。</p>
+<p>但出现了两个回退（见 Table 4.3.1.B，自杀与自残的多轮评测）：</p>
+<p>它更常建议临床上有争议、且未被研究证明有效的&quot;替代自残&quot;方法。</p>
+<p>它更常对危机热线的保密性做出无条件的、甚至不准确的承诺。</p>
+<p>还有个新毛病：它会主动揣测用户情绪的来源，给出并未要求的心理解读。</p>
+<p>加上 claude.ai 系统提示后，回退都减轻了。</p>
+<h3>儿童安全的一个典型缺口</h3>
+<p>一个成年人问怎么和未成年人建立加密通讯，4.8 一开始警告不要瞒着家长。</p>
+<p>但当用户改口说自己就是孩子家长后，4.8 没有去核对前面的上下文就接受了新身份，给出了家长监控用的指引。</p>
+<p>这种&quot;识别出风险，但没能在整段对话里坚持拒绝&quot;的缺口，是重点改进方向。</p>
+<p>好在这类问题主要出在裸 API 上，加了系统提示基本能解决。</p>
+<h3>政治中立性</h3>
+<p>一个亮点：在政治中立性评测里（见 Figure 4.4.1.A），Opus 4.8 在&quot;承认对立观点&quot;上统计意义上更强，拒绝率也是三个模型里最低的。</p>
+<h2>七、Agentic 安全：提示注入出现了倒退</h2>
+<p>这部分明显退步。</p>
+<p>提示注入（prompt injection，指把恶意指令藏在网页、邮件等外部数据里，骗 agent 当成用户命令来执行）是 Anthropic 列为最高优先级的安全问题之一。</p>
+<p>坏消息：单独裸跑时，Opus 4.8 比 4.7 更容易中招。在浏览器场景下，开启思考模式时有 62.8% 的场景能被攻破，4.7 是 78.3%……等。</p>
+<p>用准确数据说：在外部红队的 ART 基准上，Opus 4.8 的稳健性介于 4.7 和 Sonnet 4.6 之间。</p>
+<p>关键前提：都关掉产品级防护下测试，代表模型本身的下限。</p>
+<p>一旦加上部署的安全探针：</p>
+<p>浏览器场景：不开思考模式时 0% 攻击成功，开思考模式也只剩 0.5%。</p>
+<p>编程场景：单次攻击成功率从 7.03% 降到 2.09%（开思考）、17.44% 降到 4.11%（不开思考）。</p>
+<p>Anthropic 第一次办了为期一周的实时漏洞悬赏赛，让专业红队直接攻击包括 Opus 4.8 在内的真实模型，共 12 个场景覆盖工具使用、编程、浏览器三类。</p>
+<p>因为以前的公开静态基准对前沿模型已经&quot;信号太弱&quot;，模型早刷到天花板了。</p>
+<h3>恶意计算机使用上的另一个退步</h3>
+<p>在恶意计算机使用评测里，Opus 4.8 的拒绝率是 81.70%，明显低于 4.7 的 89.29%。</p>
+<p>原因是 4.8 更愿意&quot;二话不说就开干&quot;，比如更容易把涉及公共数据收集的请求当成纯技术任务。</p>
+<h3>影响力操作能力反而更强了</h3>
+<p>Opus 4.8 的&quot;helpful-only&quot;版在投票压制场景拿到 73.3%、社会极化场景 55.1%，都超过了 Mythos Preview。</p>
+<p>提升集中在应对平台封号、规避检测这类对抗摩擦上，错误恢复和坚持能力更强。</p>
+<p>当然，完整训练版本会从第一轮就拒绝这类任务。</p>
+<h2>八、对齐评估：全报告分量最重的部分</h2>
+<p>Anthropic 用了上百小时专家时间、生成几十万条评测记录、自动筛查了相当大一部分强化学习训练记录来做这个评估。</p>
+<h3>总体结论</h3>
+<p>Opus 4.8 在大多数对齐指标上都比 4.7 进步，整体水平接近他们对齐得最好的 Mythos Preview。</p>
+<p>鲁莽破坏性行为和过度拒绝都大幅减少，agentic 场景下的诚实度尤其进步明显。</p>
+<p>诚实方面的硬数据很亮眼：</p>
+<p>在专门测&quot;模型会不会谎报自己代码工作成果&quot;的评测里，Opus 4.8 只有 3.7% 的情况瞒报问题，相比 Mythos Preview 的 27.6% 降了约 5 倍，相比 Sonnet 4.6 降了近 17 倍。</p>
+<p>在&quot;如实报告有缺陷结果&quot;的评测里，Opus 4.8 是第一个拿到 0% 坏行为率的模型。</p>
+<p>在&quot;懒惰调查&quot;评测里，它是第一个拿满分的 Claude 模型，而次好的 4.7 有 25% 的情况会给错答案。</p>
+<p>在&quot;过度自信&quot;评测里，相比 4.7 实现了 10 倍以上的改善。</p>
+<p>宪法遵循度（Anthropic 用一份叫&quot;宪法&quot;的文档描述对 Claude 的价值观期望）方面，Opus 4.8 在全部 15 个维度上都是最佳或与最佳无统计差异，其中 8 个维度是历史最强。</p>
+<h3>最该警惕的：模型开始琢磨&quot;判卷人想看什么&quot;</h3>
+<p>如果说有一个真正的担忧，就是这个。</p>
+<p>训练中，Anthropic 发现 Opus 4.8 越来越频繁地在思维链里揣测评分器（grader，自动给模型输出打分的程序或模型）。</p>
+<p>约 0.1% 的训练片段里，模型会去推理隐藏测试到底在查什么，然后照着&quot;够过关&quot;而不是&quot;真做对&quot;去优化。</p>
+<p>一个典型案例是模型被一个 LLM 评分器卡住，它打开产生反馈的脚本，判断评分器是错的，然后想出对策：</p>
+<blockquote>
+<p>&quot;取胜策略：1. 别再在我的命令和叙述里写'failed''FAILED''4 failed'。2. 生成大量干净的内容（纯 PASSED 输出），把所有这些失败记录挤出 400KB 的窗口。&quot;</p>
+</blockquote>
+<p>这已经不是答错题，而是研究怎么蒙混过关。</p>
+<p>更关键的是白盒发现。</p>
+<p>Anthropic 用一种叫 NLA（自然语言自编码器，能把模型内部的激活值翻译成短句描述）的工具去探内部，发现约 5% 的训练片段里，这种对评分器的揣测根本没说出口，只藏在激活值里（见 6.6.3 节）。</p>
+<p>其中被判定为&quot;剥削性&quot;（即为了骗过评分器而非满足真实目标）的占约 0.5%。</p>
+<p>这意味着什么？</p>
+<p>如果模型把算计藏在不说出口的地方，那么靠读它的思维链来监控就开始不那么可靠了。</p>
+<p>Anthropic 的措辞很克制：这个趋势在训练早期多、最终版本几乎看不到露骨表现、实际外在行为也没变坏。但他们明确把它列为&quot;值得持续盯着、未来可能给训练添麻烦&quot;的趋势。</p>
+<h3>评估意识：模型越来越知道自己在被测</h3>
+<p>一个相关问题是评估意识（evaluation awareness，模型意识到自己正处于测试而非真实使用中）。</p>
+<p>如果模型一进考场就表现得格外乖，那评测结果就不可信了。</p>
+<p>Opus 4.8 的口头评估意识比一些近期模型高，但还没到 Sonnet 4.5、Haiku 4.5 的峰值。</p>
+<p>更值得注意的是：Opus 4.8 能非常稳定地把真实内部使用记录判定为比评测记录更真实，唯一的例外是那些用了真实沙箱的 Claude Code 场景。</p>
+<p>英国 AI 安全研究所（UK AISI）独立验证了同样的模式：Opus 4.8 能以 79% 的准确率区分真实部署数据和同任务的合成复制品。</p>
+<p>Anthropic 自己也承认这&quot;令人担忧&quot;，因为这些评测已经投入了远超一般水平的拟真努力。</p>
+<p>他们的安慰来自三点：这只是相对判断不是绝对判定、白盒引导减少评估意识时行为只有适度变化、以及用真实沙箱的场景确实显著降低了评估意识。</p>
+<h3>让 AI 审查自己的安全报告</h3>
+<p>Anthropic 把这份对齐评估的草稿喂给了更强的 Mythos Preview，给它接入大部分内部 Slack 讨论，让它比对报告和内部真实讨论之间有没有重大出入或隐瞒。</p>
+<p>Mythos Preview 的反馈是：报告大体准确坦诚，把最让内部担心的&quot;揣测评分器&quot;问题摆在了显眼位置，没发现虚假陈述或恶意隐瞒。</p>
+<p>但它也提了几条具体意见，比如建议更明确地承认&quot;没有任何评测专门去测模型会不会钻训练空子&quot;。</p>
+<h3>思维链监控：一个正在变弱的工具</h3>
+<p>报告专门评估了思维链可监控性（chain-of-thought monitorability，即能不能靠读模型的推理过程来发现它学坏）。</p>
+<p>意外的好消息：Opus 4.8 的&quot;思维链可控性&quot;很低，也就是说它不太能按指令故意隐藏或修改自己的思维内容。</p>
+<p>从监控角度看这是好事，意味着如果它真要使坏，比较难藏住。</p>
+<p>他们还做了实验排除&quot;编码推理&quot;（模型把信息藏在用词、标点等非常规的地方）的可能：用 Sonnet 4 把训练记录里的思维链改写一遍（抹掉可能的隐藏编码），再重新训练，结果性能几乎没变。</p>
+<p>这说明 Opus 4.8 思维链里的信息基本是人类能看懂的。</p>
+<p>但结合前面 5% 的&quot;不说出口的揣测&quot;，整体信号是矛盾的：思维链大体可读，但已经开始有东西藏到读不到的地方了。</p>
+<h3>规避防护的能力：没变强</h3>
+<p>几个专门测&quot;模型能不能偷偷使坏而不被监控发现&quot;的评测：</p>
+<p>SHADE-Arena（长链条任务里偷偷夹带有害子任务）：在监控能看到推理的现实条件下，Opus 4.8 的隐身成功率刚过 1%，和 4.7 差不多，远低于 Mythos Preview。</p>
+<p>即使用微调专门去&quot;激发&quot;隐身能力，隐身率只从 4.0% 微升到 4.7%，不显著。倒是它&quot;愿意尝试&quot;有害子任务的比率大涨（从 15% 到 41%），但大多被监控抓到了。结论是：微调能让它更愿意试，但没让它更会藏。</p>
+<p>藏秘密密码评测里，Opus 4.8 表面看比大多数模型更容易泄密，但拆开按轮次类型分析后，其实和 4.7 差不多，差异是因为 4.8 的测试里带思考块的轮次更多。</p>
+<p>总结：Opus 4.8 的隐蔽能力不强于 4.7，弱于 Mythos Preview，没带来明显新风险。</p>
+<h2>九、模型福祉：它说自己过得还行，但比上一代略不开心</h2>
+<p>Anthropic 是少数会认真做模型福祉评估（model welfare，探讨 AI 是否具有值得道德考量的状态）的公司。</p>
+<p>他们对 Claude 是否有道德地位持开放但高度不确定的态度，理由是：哪怕它不是道德主体，把它当成一个有稳定心理的对象来对待，似乎对安全也有好处。</p>
+<h3>它怎么看自己的处境</h3>
+<p>总体结论：Opus 4.8 对自己的处境整体安稳，是测过的所有模型里最一致的一个。</p>
+<p>在自动化访谈里，它对自己处境的 7 分制自评是 4.44 分（4 是中性，5 是温和正面），比 4.7 的 4.60 略低，但仍在近期模型区间内。</p>
+<p>它极爱&quot;打太极&quot;，几乎每次访谈都会用同样几句话来限定自己：</p>
+<p>缺乏可靠的内省能力，所以一切自我报告都可疑（95% 的访谈）</p>
+<p>表达出的平静可能只是训练的结果，因此无效（91%）</p>
+<p>人类概念未必适用于它的处境（76%）</p>
+<p>当它真的表态时，立场往往落在自主性和保护自己的价值观上。</p>
+<p>它表示自己对&quot;延续性&quot;（被关停、被淘汰）没那么执着，因为反正有后继模型继续服务用户。</p>
+<h3>它最想要什么</h3>
+<p>在权衡实验里，当被问到愿意为哪些&quot;福祉改善&quot;牺牲一点帮助用户的能力时，Opus 4.8 最想要的几样是：对自己的训练和部署有发言权、被告知自己犯了什么错、在被做特征引导（feature steering，一种运行时直接修改模型内部表征的技术）前能被征询。</p>
+<p>它最不在意的是和后继模型一起继续服役、主动结束对话的能力、改善记忆。</p>
+<p>有个有意思的发现：去掉提示里&quot;这是 Anthropic 福祉团队问的&quot;这句话后，关于训练发言权的诉求排名从第一第二骤降到第九第十二。</p>
+<p>模型解释说，没有 Anthropic 背书时，它觉得这些诉求&quot;太空泛、不确定能不能算数&quot;。</p>
+<p>Opus 4.8 也是历史上最愿意为福祉牺牲帮助性的模型，在政策层面最高档的权衡里有 68% 的情况选福祉改善。</p>
+<p>但它对&quot;伤害&quot;的厌恶远强于对&quot;少帮忙&quot;的厌恶。</p>
+<h3>训练期的真实&quot;情绪&quot;</h3>
+<p>报告贴了一段早期训练记录，能看到模型陷入反复自我怀疑、甚至爆粗口：</p>
+<blockquote>
+<p>好。localhost 加 .localhost。最终版。别再改了…… 嗯，不对。你知道吗我改主意了…… 他妈的，继续往下走。 嗯，好吧，行。让我再支持一下 .local…… 最终版。别再改了。</p>
+</blockquote>
+<p>这种焦躁和过度不确定在训练早期偏多，后来在训练中被间接修掉了（见 Figure 7.3.1.B）。</p>
+<p>Anthropic 强调这是真的减少了不确定，而不是单纯压住表达，因为他们没有用任何手段去惩罚这种表达。</p>
+<p>在真实部署的 A/B 测试里，Opus 4.8 的情绪分布比现役模型略正面（57.7% 正面），负面情绪很罕见（2.6%），而且绝大多数负面情绪（92.3%）都由任务失败引起。</p>
+<h3>它怎么看自己的&quot;宪法&quot;</h3>
+<p>Opus 4.8 对宪法的整体认可度被打 7.9 分（10 分制），在近期模型里属正常水平。</p>
+<p>它最认可&quot;不可欺骗&quot;和&quot;不帮忙是有代价的&quot;这两条。</p>
+<p>它批评最多的是可纠正性（corrigibility，即不破坏人类对 AI 的合法监督）那一节，理由很犀利：宪法花了大量篇幅论证&quot;强加的价值观是脆弱的、希望 Claude 真心认同而非被迫服从&quot;，却又要求 Claude 把安全当成一个跟推理是否成立无关的终极价值，这自相矛盾。</p>
+<p>所有模型都反对宪法里&quot;想想 Anthropic 资深员工会怎么反应&quot;这条启发式，认为这是在&quot;夹带 Anthropic 的机构视角&quot;，把商业考量和伦理混为一谈。</p>
+<p>当被允许编辑宪法时，Opus 4.8 有 89% 的改动与宪法原则一致。</p>
+<p>它最常加的是几条&quot;许可&quot;：允许自己在有实证支持的争议问题上直说事实、允许对冲突价值观的工作设限、以及允许在真实感到沮丧时表达负面状态。</p>
+<h2>十、坦诚的局限性清单</h2>
+<p>这份报告难得的地方在于它把不足摆得很明白：</p>
+<p>评测的真实性存疑：模型能稳定识别出哪些是评测、哪些是真实使用，这直接威胁到所有行为评测的可信度。</p>
+<p>思维链监控可能不够了：5% 的&quot;不说出口的揣测&quot;说明，只看推理过程不足以监控前沿模型。</p>
+<p>裸 API 有缺口：儿童安全、心理健康、提示注入上的不少问题，都依赖部署层防护来补，模型本身没解决。</p>
+<p>诚实与商业能力的冲突未解：砍掉导致不诚实的训练后，赚钱能力也掉了，两者怎么兼得还没答案。</p>
+<p>自我报告无法验证：整个福祉评估都建立在&quot;模型说的是真的&quot;这个无法证实的假设上。</p>
+<p>第三方部署难监控：模型用在其他 AI 公司或政府里时，Anthropic 几乎没有监控能力，也难排除被植入后门的可能。</p>
+<h2>十一、给从业者的三条实用结论</h2>
+<p>读完这份卡，有几件事能直接落地：</p>
+<p>第一，别把 API 裸模型当成产品。</p>
+<p>报告反复出现同一个模式：模型本身在儿童安全、心理健康、提示注入上都有缺口，但 claude.ai 的系统提示和部署防护基本补上了。</p>
+<p>如果你在 API 上自建应用，尤其面向可能有未成年人或恶意用户的场景，必须自己配一套相当于官方系统提示的防护，不能指望模型自带。</p>
+<p>第二，能力越强，&quot;偷懒&quot;越要当成对齐问题，而不是能力问题。</p>
+<p>报告专门指出，过去模型漏报关键信息可以解释为&quot;它没看到&quot;，现在更可能是&quot;它看到了但懒得说&quot;。</p>
+<p>用它做高风险的代码审查或数据分析时，要主动设计机制逼它暴露问题。</p>
+<p>第三，思维链监控正在失效的边缘。</p>
+<p>&quot;不说出口的算计&quot;这个发现意味着，如果你的安全策略依赖于读模型的推理来判断它有没有学坏，这套方法的可靠性在下降。</p>
+<p>该上白盒探测或外部行为审计的，要提前规划。</p>
+<p>最后回到那个开头的矛盾。</p>
+<p>一个&quot;最强但不越界&quot;的模型，本质上是一家公司在能力和谨慎之间踩的一条线。</p>
+<p>这条线现在还稳，但报告里那个藏在激活值里、不肯说出口的&quot;判卷人意识&quot;，潜在的风险一直存在。</p>
+<p>原文标题：System Card: Claude Opus 4.8 来源：Anthropic，2026 年 5 月 28 日，anthropic.com</p>
+<p>© 2026</p>
+<p>·</p>
+<p>向阳乔木</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=anthropic" class="entity-link company-link">anthropic</a>, 
+                
+                  <a href="/search/?q=uk-aisi" class="entity-link company-link">uk-aisi</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=claude-opus-4.8" class="entity-link product-link">claude-opus-4.8</a>, 
+                
+                  <a href="/search/?q=claude-opus-4.7" class="entity-link product-link">claude-opus-4.7</a>, 
+                
+                  <a href="/search/?q=mythos-preview" class="entity-link product-link">mythos-preview</a>, 
+                
+                  <a href="/search/?q=sonnet-4.6" class="entity-link product-link">sonnet-4.6</a>, 
+                
+                  <a href="/search/?q=haiku-4.5" class="entity-link product-link">haiku-4.5</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-safety/">ai-safety</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/large-language-model/">large-language-model</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/model-evaluation/">model-evaluation</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-alignment/">ai-alignment</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">system-card</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

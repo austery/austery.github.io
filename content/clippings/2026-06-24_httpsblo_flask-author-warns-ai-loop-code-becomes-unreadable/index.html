@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flask作者发出警告：AI Loop写的代码，正在变成没人能看懂的“生物” · 乔木博客</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="Flask作者发出警告：AI Loop写的代码，正在变成没人能看懂的“生物” · 乔木博客" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">Flask作者发出警告：AI Loop写的代码，正在变成没人能看懂的“生物” · 乔木博客</span>
+      <span data-pagefind-meta="speaker" style="display:none;">向阳乔木</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-06-24
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/xiang-yang-qiao-mu/">向阳乔木</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://blog.qiaomu.ai/flask-author-warns-ai-loop-code-becomes-unreadable" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-06-24
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">文章探讨了AI在代码生成和维护中的一个新趋势，即软件正从确定性的机器演变为具有有机体特征的系统。作者引用专家观点指出，过度依赖外部循环和自动化外壳程序可能导致代码缺乏可理解性和控制感，使系统变得难以维护。核心议题在于如何在追求速度和实验的同时，保持人类对系统的判断力和工程准则的监督。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>乔木博客</p>
+<p>全部</p>
+<p>AI工具</p>
+<p>AI教程</p>
+<p>AI生成</p>
+<p>AI资讯</p>
+<p>健脑房</p>
+<p>播客解读</p>
+<p>论文学习</p>
+<h1>Flask作者发出警告：AI Loop写的代码，正在变成没人能看懂的“生物”</h1>
+<p>AI资讯</p>
+<p>·</p>
+<p>2026年6月24日</p>
+<p>·</p>
+<p>64 次阅读</p>
+<p>·</p>
+<p>约 9 分钟</p>
+<p>Claude Code 之父 Boris Cherny 说过一句话，读完之后很难忘掉：</p>
+<blockquote>
+<p>&quot;我已经不再直接Prompt Claude 了。我写的是 Loop（循环），让循环去提示 Claude，让循环去决定下一步做什么。我的工作，是写循环。&quot;</p>
+</blockquote>
+<p>Armin Ronacher 是 Flask、Jinja2 的作者，Sentry 联合创始人，也是 AI 工程平台 Pi 背后的核心人物。</p>
+<p>他最近写了一篇文章，标题叫《即将到来的循环》。</p>
+<p>从文章中能感受到他的不安，原文地址：</p>
+<blockquote>
+<p>https://lucumr.pocoo.org/2026/6/23/the-coming-loop/</p>
+</blockquote>
+<h2>循环套循环</h2>
+<p>每个编程 Agent 内部本来就有一个循环：模型调用工具，读取结果，再调用下一个工具，读文件，改文件，跑测试，最终给出答案。</p>
+<p>这个循环，大家已经很熟悉了。</p>
+<p>而 Ronacher 说的是套在外面的那一层循环。</p>
+<p>具体是这样一种模式：任务进入队列，机器领取，尝试执行，停下来，然后由一个外壳程序（harness）来判断，这次执行算不算完成。如果不算，外壳程序可以继续当前会话，注入新消息，用修改过的上下文重启一个新会话，或者把任务转发给另一台机器。</p>
+<p>这样，任务生命周期，不是模型自己说&quot;我完成了&quot;，而是靠外部Harness判断。</p>
+<p>这个外层循环不稀奇，Claude Code 早期就有人在玩了。</p>
+<p>但现在变得越来越主流，最近几周技术圈都在聊。</p>
+<h2>他自己用得并不顺手</h2>
+<p>Ronacher 承认：对于他真正在乎的代码，这套方式目前没什么用。</p>
+<p>原因有两个：品味和控制感。</p>
+<p>他对代码质量有很高的要求，而且他需要理解自己发布的代码。</p>
+<p>在压力下，或者和别人讨论时，他希望能解释清楚系统是怎么工作的，而不是先去问机器帮他解释。</p>
+<p>问题在于，当前的模型写出来的代码，倾向于过度防御、过度复杂、局部推理。</p>
+<p>它们回避强不变量，用兜底逻辑代替&quot;让错误状态根本不可能发生&quot;，重复代码，发明糟糕的抽象，用更多机制掩盖设计上的模糊。</p>
+<p>Karpathy 曾经提到，模型对异常&quot;极度恐惧&quot;。</p>
+<p>在有重要的系统里，如持久化数据格式或核心基建，正确修法不是&quot;处理每一种畸形情况&quot;，而是让畸形状态根本无法被写出来。</p>
+<p>但即便手动引导，LLM 也很难自然地写出这类代码。</p>
+<p>更荒谬的是，就算错误已经不可能发生，它们还是会去处理那个不存在的错误。</p>
+<p>把这种行为放进循环里，结果是放大。</p>
+<p>每次迭代都加一点小防御，系统慢慢变得难以理解，表面上却越来越&quot;健壮&quot;。</p>
+<p>越是放手，越是如此。</p>
+<p>Ronacher 认为这个问题没有在改善，甚至在倒退。</p>
+<p>Claude Code 加上 ultracode 这类全自动外壳，产出的代码质量比去年秋天还差。</p>
+<p>原因：以前是人机协作，现在是机器独自跑三十分钟以上，没有人在中途介入。</p>
+<p>还有一个附带伤害：这类工具交给初级工程师，没有明确指导的话，他们会学到非常糟糕的习惯。而且他们能为自己的每一行代码振振有词地辩护。</p>
+<h2>循环真正好用的地方</h2>
+<p>但 Ronacher 也不是说循环没用，它在某些领域好用得惊人。</p>
+<p>代码迁移是一个。</p>
+<p>他自己用循环把 MiniJinja 移植到了 Go，效果不错。</p>
+<p>Bun 把部分代码从 Zig 迁移到 Rust，据报道也是类似的自动化方式完成的。</p>
+<p>性能探索是另一个。</p>
+<p>机器可以跑实验、做基准测试、丢掉失败方案、继续搜索。</p>
+<p>安全扫描和复杂问题空间的探索也很适合，让系统去探索、汇报，不一定要提交持久的代码。</p>
+<p>这些场景有一个共同点：要么不生成新代码，只是变换已有的代码；要么生成的代码本来就不打算长期存活。</p>
+<p>是概念验证，是想法，是发现，或者是机械变换。</p>
+<p>循环需要的只是一个信号，让它知道该不该继续。</p>
+<p>这个信号不必是客观的、二元的，只要足够有用，能驱动下一次迭代就行。</p>
+<p>用另一个 LLM 来做判断，在很多场景下已经够了。</p>
+<h2>软件正在从机器变成生物</h2>
+<p>Ronacher 用了一个比喻：软件正在从确定性的机器变成有机体。</p>
+<p>他是在一个鼓励理解机器的环境里成长为工程师的。</p>
+<p>每一层都可以剥开，加深理解。</p>
+<p>架构上，他认为应该推向更多确定性，而不是更少。</p>
+<p>在设计良好的系统里，总有工程师知道不变量在哪里，哪些部分是承重墙，哪些改动是安全的。</p>
+<p>这个理想当然一直有压力。</p>
+<p>大型软件系统本来就太大、太动态、太依赖外部服务，没有人能把它完整地装进脑子里。</p>
+<p>即便没有 LLM，诊断分布式系统也已经像医生看病：观察症状，提出假设，&quot;再做几个检查&quot;，尝试治疗，再观察。</p>
+<p>但 LLM 把这个趋势扩大。</p>
+<p>现在已经有不少工程师，生产问题出现后的第一步，是让机器读日志、提出根因、主动生成补丁。</p>
+<p>补丁再由另一台机器审查，有时候甚至直接合并进主分支，没有任何人工监督。</p>
+<p>我们修复它，监控它，让它保持稳定，但不一定真正理解它。</p>
+<p>Ronacher 承认，对某些软件来说，这没问题。</p>
+<p>不是每一行代码都值得人工撰写。</p>
+<p>但他不想让所有软件都变成这样。</p>
+<h2>你没办法完全退出</h2>
+<p>让他真正感到不舒服的，可能是没退路。</p>
+<p>安全是最直接的例子。</p>
+<p>就算你不用循环（Loop）来构建软件，别人会用循环来攻击你的软件。</p>
+<p>攻击者会让机器持续运转，安全研究员也会。</p>
+<p>信号和噪音会同时涌来，量大到你不得不也用机器来处理。</p>
+<p>Daniel Stenberg 写过一篇关于 curl 的文章，描述了维护者已经承受的压力。</p>
+<p>curl 的核心开发目前 AI 参与并不多，但维护者已经被大量报告淹没，其中大多数是 AI 生成的。</p>
+<p>攻击者在循环，报告者在循环，防御者迟早也得循环，才能跟上节奏。</p>
+<p>竞争层面同样如此。</p>
+<p>有些团队会靠纯粹的速度甩开其他人。五个人做五十个人的事，这已经在发生。</p>
+<p>有人甚至会把 AI 瞄准你的产品，让它循环运行，指令就是&quot;做成那个样子&quot;。</p>
+<p>如果他们的用户满意，这重要吗？</p>
+<p>不是所有软件都会受到同等冲击。</p>
+<p>有些领域会惩罚粗糙，要求信任和责任。</p>
+<p>但大量软件活在一个速度、实验和覆盖面比精确性更重要的世界里。</p>
+<h2>我们正在变得过于依赖</h2>
+<p>Ronacher 认为最可怕的部分，是我们正在以新的方式依赖这些。</p>
+<p>软件一直依赖工具。他还记得需要为编译器付费的年代。</p>
+<p>现在的工具让他想起那个时代，创作软件再次有了真实的成本。</p>
+<p>但这次不是一次性购买，而是持续依赖。</p>
+<p>不只是钱包的依赖，还有认知上的依赖。</p>
+<p>如果一个代码库是循环写的、循环审查的、循环打补丁的、循环维护的，当你失去访问同类系统的能力时，会发生什么？如果切断了最强大模型的访问权限怎么办？成本变得无法承受怎么办？</p>
+<p>你和你的团队失去了不借助机器就理解代码的最后能力怎么办？</p>
+<p>我们可能会创造出一种代码库，它不只是人类难以维护，而是把AI参与本身当作维护模型的一部分。</p>
+<p>这已经在发生，越来越多的人合并自己无法完全解释的代码。</p>
+<p>越来越多的人在提 issue 或聊天时，需要先让机器帮他们补充上下文、重新措辞。</p>
+<p>越来越多的人通过 LLM 的 Agent 和别人对话。</p>
+<h2>循环的边界，需要人来划</h2>
+<p>Ronacher 对 Pi 的定位也在重新思考。</p>
+<p>Pi 一直比较谨慎，他认为这种谨慎是对的。</p>
+<p>他不想要一个每次交互都变成失控机器群的未来，不想让 Pi 为了赢得&quot;软件自己写自己&quot;的竞赛而变成一团无法维护的混乱。</p>
+<p>但 Pi 本身就是一个Harness外壳程序，而外壳程序正处于这些新实验、探索的中心。</p>
+<p>任务队列、Agent 编排、子 Agent、持久会话，这些会越来越重要。</p>
+<p>即便是对循环有保留的人，也必须开始做这些实验，因为必须理解如何让这个未来有边界、可以存活。</p>
+<p>在 Agent 内层循环里，模型说&quot;完成&quot;，他来审查，中途也会介入引导，他是参与者，也在学习。</p>
+<p>在外层循环里，他不确定自己的角色是什么。</p>
+<p>连&quot;完成&quot;这个信号都失去了意义，只是被传递给另一台机器去判断。</p>
+<p>他的角色被压缩成了一个信使。</p>
+<p>他不喜欢这种感觉，也不喜欢这种方式建出来的大多数代码。</p>
+<p>但他毫不怀疑，这个循环的未来，就是我们的未来。</p>
+<p>他已经看到规模小得不可思议的团队以不可能的速度在构建，也看到越来越多的代码库变成只有机器才能诊断的晦涩生物。</p>
+<p>这些代码库同时有用，又一团糟。</p>
+<p>所以他正在接受的，不是&quot;我们会不会循环&quot;这个问题，因为答案显然是会。</p>
+<p>真正的问题是：在一个循环的未来里，我们如何不放弃判断力，如何保留良好工程的准则，如何确保负责任的人类仍然能够监督，如何重新思考架构方式，让我们在这条路上不至于失去理智。</p>
+<p>这个问题，目前没有人有答案。</p>
+<p>但它值得每一个认真做工程的人，现在就开始想。</p>
+<p>© 2026</p>
+<p>·</p>
+<p>向阳乔木</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Boris Cherny" class="entity-link person-link">Boris Cherny</a>, 
+                
+                  <a href="/search/?q=Armin Ronacher" class="entity-link person-link">Armin Ronacher</a>
+                
+              </p>
+            
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Claude Code" class="entity-link product-link">Claude Code</a>, 
+                
+                  <a href="/search/?q=ultracode" class="entity-link product-link">ultracode</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">loop-pattern</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">code-quality</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/software-architecture/">software-architecture</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

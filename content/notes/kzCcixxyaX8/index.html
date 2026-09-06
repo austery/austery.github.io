@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>星船小组12周挑战成果分享：AI赋能个人项目与生活</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="星船小组12周挑战成果分享：AI赋能个人项目与生活" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">星船小组12周挑战成果分享：AI赋能个人项目与生活</span>
+      <span data-pagefind-meta="speaker" style="display:none;">用AI發電</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-03-15
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/yong-ai-fa-dian/">用AI發電</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=kzCcixxyaX8" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-03-15
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">星船小组的成员们分享了他们参与12周AI挑战的丰硕成果。从个人作品集、Web应用、iOS应用开发，到AI驱动的英文学习工具、知识管理系统、Mac屏幕录制软件，以及家庭采购AI助理和销售流程自动化Agent，展示了AI在不同领域赋能个人生活和工作效率提升的无限可能。成员们强调了社群互助、从做中学的重要性。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p><strong>Jessica</strong>: Hello, KW。好快就进来了。我们等一等。Hello, Jazz。我把大家都邀请上来了。Hello。Hello。我超不想开摄像头，不过也不开。你好，大雷，Jazz。你身体有好一些吗，Jazz？</p>
+<p><strong>Jazz</strong>: 好一些，因为有去看到医生，所以就是比之前好一些。可是还是挺虚弱。因为他开消炎药给我，我觉得其实挺不好。</p>
+<p><strong>Jessica</strong>: OK，我继续邀请。Sophia，Cindy，你今天连着主持两场。</p>
+<p><strong>Sophia</strong>: 对呀。</p>
+<p><strong>Jessica</strong>: 很强。Hello。Hello。Hello。又见面了。早上刚辛苦。你们不是还来了两场，Cindy，Jazz，还有 <strong>Asuka</strong>。是呗。好辛苦啊，这个周末一天开了两场。</p>
+<p><strong>Cindy</strong>: 对，可是没有你夸张，你要主持两场。</p>
+<p><strong>Jessica</strong>: 对啊。张敏是最辛苦的，要主持两场。感谢感谢，那个感谢感谢。没有，我刚刚邀请 <strong>Shawn</strong> 上上来，但是他好像还没有接受邀请，是不是网络出了什么问题？Hello，大雷。要不要大雷也上来？我们今天就是十二周挑战，我们这个小组一共有八个成员。啊， <strong>Shawn</strong> 上上来了。大家好厉害，好棒，就是全勤坚持到最后，没想到一个都没掉队。真的特别厉害。我一开始我说我们预计要有六个人，所以我们招八个，估计会有人退出，结果八个人坚持。没有坚持。六人退出。好事，好事。哎，小企鹅没有上来哈。小企鹅还没有进来。看，Kitty是不是还没睡醒？</p>
+<p><strong>Jessica</strong>: <strong>Kitty</strong> 醒了，我看到他 message 了。</p>
+<p><strong>Jessica</strong>: 哦。他以为我们在之前的连接。那要不要再给他发一下？小企鹅来了。要不要给了啊？<strong>Kevin</strong>，<strong>Kitty</strong> 也来。哎，太棒了，来齐了，真的是那么准时，你们真是神仙团队。我们这个组厉害吧？服了。我们横跨好几个时区。感谢 <strong>Kitty</strong>，<strong>Kitty</strong> 五点半。你好像三点多就起了，是不是？</p>
+<p><strong>Kitty</strong>: 对，我被朋友叫起。</p>
+<p><strong>Jessica</strong>: 你们是被 AI 叫醒的吧？</p>
+<p><strong>Kitty</strong>: 不是，我另外一件事情，不过不适合在这里说播啊。</p>
+<p><strong>Jessica</strong>: OK，那如果有准备好，你们有就是排好顺序吗？还是说谁准备好了先开始？</p>
+<p><strong>Sophia</strong>: 我可以，我可以 share，但是那个 <strong>Asuka</strong>，你要不要开始？然后你 share。</p>
+<p><strong>Asuka</strong>: 就就开始了吗？哈哈哈哈哈！我以为会有一个开场白什么的。嗯，按顺序的话，我们是按五十 alpha beta 顺序，所以我是 A，所以我是第一个。</p>
+<p><strong>Jessica</strong>: 对。看到你的你的 PPT 资料做的好好，好感动哦！一看这么这么久你的，你们你们你们真的好好离谱。离谱。哇，我两场，我觉得我两场的 life，我有种被被命运还是被什么放在地上摩擦，就是感受到社会是好不公平吗？有些人就是很离谱。</p>
+<p><strong>Asuka</strong>: 也不是，有的人可能时间更多一些，或者他兴趣在这儿。</p>
+<p><strong>Jessica</strong>: 对，我感觉应该是兴趣吧，因为强迫的话肯定是容易坚持不下来。但是你要愿意干这个事儿，谁都拦不住你，你就没有什么所谓坚持的。</p>
+<p><strong>Asuka</strong>: 对，就没有坚持这个概念了。</p>
+<p><strong>Jessica</strong>: 我觉得我觉得不是，我觉得就是我真的真的是古代的人说天生我才有用，你们天生我才好多好多把刀啊！你可以分一点给我用吗？你画的画我们可都画不出来。</p>
+<p><strong>Asuka</strong>: 对啊。我没有觉得那个东西。</p>
+<p><strong>Jessica</strong>: 对啊，那那看那那是那我可能那可能别人也觉得我会我会用 AI 也不是什么。多厉害！多厉害！看到你们的一些影片，我觉得那个 slide 好好厉害，好漂亮做的。</p>
+<p><strong>Asuka</strong>: 这不都是 <strong>AI</strong> 做的吗？<strong>Gamma</strong> 做的。我的最丑。</p>
+<p><strong>Jessica</strong>: 上上周 <strong>雨翔</strong> 的一句话，一句话的事儿，就是找 <strong>AI</strong> 说就是一句话的事儿。嗯，真是。哎，小企鹅来了吗？</p>
+<p><strong>小企鹅</strong>: 小企鹅，我有邀请他上来，他已经在上面，他在第二页。我来了，我说 Hello，大家能听见吗？</p>
+<p><strong>Jessica</strong>: 现在可以听见。</p>
+<p><strong>小企鹅</strong>: 哦，好的。嗯。但是大家听见是从我麦克里面，就是很清晰的那种，还是比较有 background 的杂音。</p>
+<p><strong>Jessica</strong>: 很清晰，很清晰。</p>
+<p><strong>小企鹅</strong>: 哦，好的，perfect，谢谢。我们缺一个人是不是？</p>
+<p><strong>Jessica</strong>: 不缺了吧？到齐了。来齐了。张自己一下。<strong>Kevin</strong>，<strong>Kevin</strong> 呢？哦哦，还有第二个 page，可以了，好。</p>
+<p><strong>Kevin</strong>: 我在，我在。哦，对，<strong>Kevin</strong> 在，哦对哦。</p>
+<p><strong>Jessica</strong>: <strong>Kevin</strong>，我总叫你 KW，OK，<strong>Kevin</strong>，我记住了。<strong>Kevin</strong> 很强，他是这十二周里面很强的一个人。OK，很期待。</p>
+<p><strong>Kevin</strong>: 还行还行。哈哈哈哈哈。</p>
+<p><strong>Jessica</strong>: 那我们就先开始，<strong>Asuka</strong>，你要不要就等一下早点睡啊？还是说你整个时间都可以都留下来了？</p>
+<p><strong>Asuka</strong>: 我今天的时间你留给你们了，我要听到最后。</p>
+<p><strong>Sophia</strong>: 就刚才 <strong>Sophia</strong> 说，她可以先说。</p>
+<p><strong>Asuka</strong>: 不是，我是说，我是说 <strong>Asuka</strong> 可以先说，因为他是 A，我我以为是说那个你们没有人那个 share slide 的话，我可以帮忙 share，但是应该我觉得 <strong>Asuka</strong> 可能已经准备好。</p>
+<p><strong>Jessica</strong>: 哦。我也是用的那个 slide，那就那那我们就没有一个开场白，我们就直接进进每一个人的成果展示了是吧？我有一个有一个，我们这个是一个什么什么东西一个介绍。可以介绍一下，大家就是通过 <strong>Jazzca</strong> 发的一篇招募帖子进来的这个小组，大家都是从新手想开始学 <strong>AI</strong>，很多都是完全没有没有背景，然后没有基础的，然后想能有一个组织督促，互相互相学习，然后督促自己能够学更多的 <strong>AI</strong>，不要被落下，所以大家聚在这儿，然后他们一起每周都会线上见一次面，然后经过了十二周，应该其实延长了一周，我们是十三周对吧？经过了十三周的共同进步，我们来看一下大家的成果。然后第一个 <strong>Asuka</strong> 先上场。</p>
+<p><strong>Asuka</strong>: 好的。这个是那个 <strong>Sophia</strong>，要不然我这是我的 <strong>PowerPoint</strong>，但是等会儿我可能还有别的屏幕要 share。要不直接就我直接 share 吧。</p>
+<p><strong>Sophia</strong>: 对，我我我也有这一个页面，那我直接 share 吧。</p>
+<p><strong>Asuka</strong>: OK，好，这样你们可以看到吗？有点卡住了。</p>
+<p><strong>Sophia</strong>: 可以的。</p>
+<p><strong>Asuka</strong>: 那那我就先从我开始吧，我先抛砖引玉一下。那我是 <strong>Asuka</strong>，这这个十二周里面跟大家一起共同进步，做了很多事情，然后写了一个 <strong>PowerPoint</strong>，然后是我的这个成果展示。这个十二周里面呢，我一共是完成了一个个人作品集，包含我目前所有的 <strong>Web Coding</strong> 作品和社交媒体上发的文章，其实相当于是一个个人网站了。然后我做了两个 <strong>Web App</strong>，然后这个等会儿我会做 demo 来跟大家展示，然后还有三个 <strong>iOS App</strong>，然后已经上线了。然后还有做了一个就是高能量的习惯养成，这是其实我的副目标，然后完成力量训练和每日的早起学习 <strong>AI</strong> 的东西，然后就直接进到我的个人作品集，我就把它退掉吧。啊，这是我的一个个人网站。嗯，做了一个个作品集的一个网站，然后是一个插画风格的，然后这里面点开来就是这里面点开来的话，它分为三类，然后我的 <strong>Web Coding</strong> 的作品，我就把截图放在这里面，这些已经上线了和一些 <strong>Web App</strong> 的内容，然后其中等一下啊，其中退掉一个这个<strong>内容生产自动化引擎</strong>是我们在最后的两两周我们参加那个 <strong>Mini Handsome</strong> 的时候我做出来的，也算是在我们的小组里面的一个成果。就是我们有很这个其实今天早上我们直播的时候也有 demo，所以我就简单说一下，它就是会把我们个人的一些灵感什么的，有时候脑子手跟不上脑子，就会用口语的方式就会把它展示出来。比如说我今天有一个感悟，就是我觉得 <strong>AI</strong> 遇到了边界其实是你你使用 <strong>AI</strong> 遇到边界是你自己的边界，怎么讲呢？吧啦吧啦吧啦，然后我就一串文字稿，然后把它放在这里之后，它就是可以给你进行一些配图什么的，然后在这里就可以卡住了，不管了，就是 Y，不能用了，就是它就是可以给你做一个去 <strong>AI</strong> 味啊，然后配图排版，然后再有一个这样的一个三方会审的这个让让让三个 <strong>AI</strong> 接入了三种 <strong>AI</strong> 的模型，然后去一起帮你做一起帮你去审这个稿子，或者是同一个模型分别从逻辑陪审事实三个视角去帮你审一个这个稿子。那不知道为什么今天这个弄不了，然后我就反正就是简单说一下这个东西大概可以可以做做什么事情，然后我在我们这个社群里面呢，跟着那个课程学了一个这个嗯是 <strong>Mike</strong> 的课程，那个 <strong>Any Gravity</strong> 做一个这样时间会议时间同步的这么一个小工具。因为正好这也很适合我们这样的一个小组，我们横跨我们八个人横跨了全世界各个时区，然后它就是可以找出我们所有人可以开会的这样的一个时间的这样一个工具，我觉得蛮实用的。我是跟着课程就是做出来了，这其实不算不算不算自己的原创，然后就在这里面填上你的活动名称啊什么，你的时区选择你的时区，然后就点建立活动就可以，就是每个人登录，我们就可以找出一个适合大家的这样的一个时间，这样的一个小工具。然后对，哦，对，我觉得还没说完。然后因为我这周我还有做了很多，就什么每周我一共做了三十六次，还有三十七次的力量训练，然后还有早起，我就把他们也都放在这个这个这个这个图里面。然后这这其实还有很多，但是我已经不想再截图，就简单放了一些。然后这个 <strong>Social Media</strong>，我把它放下去。这 <strong>Social Media</strong> 呢就是我呃在社交媒体上发布的一些作品，然后把它做成了这种折页的形式，我觉得还挺好看的，这样的一个一个东西。对。然后这个十二周就是目前就做了这些东西，然后我的感悟呢，就是真的是要有小组，小组很重要，团队的力量就非常的重要。必须要要有大家监督，然后大家的鼓励，就是你才会有一个这种正向循环，推一个良性循环才支持大家支持走下去。不然的话，如果自己单打独斗的话，感觉很难做出这么多事情来。然后还有就是要从做中学，而不是只是看教程。你的亲手实践其实比那个教程是更有价值的。我们过去在参加这个小组之前，我就只是在看这个教程，然后但其实你看几遍，不管看几遍，你自己不动手做的话，是其实是学不到的。你就必须要从真实的问题里面去解决真实的问题里面才能获得成长。所以对，这就是我的这十二周的一个成果的展示报告。对我说完了。</p>
+<p><strong>Jessica</strong>: OK。就是好好有没有那种鼓掌啊？那个我们一起。Sorry。我想给你献花。简直简直太好看了！我的天。</p>
+<p><strong>Asuka</strong>: 对那个个人主页美是美了，对美是很高。是用 <strong>Figma</strong> 什么的，反正就是各处借鉴，你然后拼出来的这么一个网站，花了两个礼拜的时间吧。然后我还有挺多东西想往里面填，但是时间有限，后面慢慢填。而且我社交媒体上发的东西太少了，感觉还在多发发，然后再扩充一下我的作品集，这样子对。</p>
+<p><strong>Jessica</strong>: 哎，我有个问题哈，就是现在不是建一个网站挺容易的吗？然后昨天跟一个朋友吃饭，他说建了一个网站，但是他之后比如说他要更新一些内容的话，我们可以让哪个工具去做呢？是 <strong>Open Club</strong> 还是什么工具可以？</p>
+<p><strong>Asuka</strong>: 我是全用 <strong>Any Gravity</strong> 做的。你就说你可以用一些就是人话跟他讲了，就是你帮我去更新这个东西。对对对，然后你就丢图给他，你说我不要这个图了，我换掉这个图，我把这个标题，就是它很智能，你直接跟他形容这个图是什么，就不用跟他说名字，那个那个标题什么，它就能给你认出来，然后给你排序什么的，就是全用人话跟他说就可以了。我是就基本上没怎么改代码。</p>
+<p><strong>Jessica</strong>: 好吧好吧。哎。谢谢。好。那我们下一个 <strong>Cindy</strong>。<strong>Cindy</strong>，你准备好了？</p>
+<p><strong>Cindy</strong>: 真的。<strong>Cindy</strong> 也是连开了两场。哈哈哈哈哈。就是好像周就没有停停下来过。好，那好，我是 <strong>Cindy</strong>，然后哦，我还是想要带一下，就是我们的这个当时的模组，哎，画面没有切过去的，对不对？</p>
+<p><strong>Jessica</strong>: 哦，真的耶。可以吗？切什么？我都想再切一次。</p>
+<p><strong>Cindy</strong>: 像没有。OK OK，好。好，好，好，OK，各位各位好，我是 <strong>Cindy</strong>，然后我还是想要讲一下，就是当时的这个模板，因为我觉得对我来讲很重要。就是我们当时加入十二周，然后我还印象很深刻，因为我我就是完全就是那时候是为了想要一起上课嘛，就是有点互相督促，所以一个完全新手的我，就是那时候还就是开始入门的课，然后定下这些目标，然后连开发工具什么都还搞不清楚，然后那时候就想说，嗯，好，我想要开发一个英文学习的工具，然后到后来就是你看像第一周可能连设定环境都还还在还没搞定，然后那时候就是也是跟 <strong>AI</strong> 在讨论说，那我想要做这个应用，然后就是这是我我心里想的一些做法，然后比如说我想要拿会议的材料当做这个英文练习的素材，然后一直到后来的十二周，就是当中其实做了很多事情，就是比如说去参加一些 <strong>AI</strong> 读书会，然后也去也参加这次第二场的 <strong>Mini Handsome</strong>，然后也有尝试更多的不同的工具，然后就有了我们现在的这个就是今天嘛，对。然后除此之外，我那时候有定也也有设定另外一个目标，是我我有自己的一个部落格，然后我那时候是想说十二周我如果每两周可以发一篇的话，我就觉得哎就又有达成目标，然后后来也是有做了七篇这样子。好，然后分享一下就是我做的两个工具，然后第一个工具的话，其实我花了大概八周的时间，然后我我想说我可以用我的这个我的部落格上面的展示的文章去就是 demo 一下。好，那简单来说呢，就是我就是把我跟这个国外的同事的会议的内容，然后把它变成素材，然后可以上传到这个 <strong>Cochei</strong> 里面。那比如说这样子的一个方块就是一个一个档案或者是一场的会议，那皮你现在看到就是有好几个嘛，然后呢每一个每一个比如说一个会议内容，它可以再帮我去产出不同的情境，那像是像是这个的话，可能就是我在跟设计师在讨论一些这个产品测试的一些细节，然后或者是这个的话，就在讨论一些产品的机构设计的开发的内容。然后当我选定了之后，他会帮我去设定一个，就是我们我们会议还是要个主题嘛，所以他会有个主题的目标，然后我们就可以再针对这个场景去做更多的练习。那就是 <strong>AI</strong>，他会就是因为他会去抓出那些会议的一些关键词，所以我们会围绕在这个会议的主题里面去产生很多的对练。那对练当中，我当然就会有念得好或念不好的地方。然后我觉得好处是我其实会透过这样子，就是会对一些关键词会越来越熟悉。然后我也会有看到一些自己更多就是会卡关的地方，就是因为他可能会比如说像 <strong>AI</strong>，他可能就会一直死死死盯着我就说，哎，你讲话很不明确，你不要一直这样子跟我模棱两可等等。然后就说你要确定一点，到底在讲什么？他就一直逼问我这样，然后我有时候跟他吵架，我就会说，我就说，我就已经跟你说，我们已经确定了，你不要再问我了。然后反正就这样。然后然后好，然后就是会议完之后，我们当然会希望可以在就是还还要再去复习嘛，因为才会有二次三次的练习，所以你可以再去看你的这个练习的总结报告，然后你也可以再去把一些关键的词汇，就是去做存取跟再练习。然后对，这就是更多的细节地方。好，然后这是我的 <strong>Coach AI</strong>。那第二个的话就是今天今天早上才才分享这个 <strong>Mini Hanson</strong> 的 <strong>PK Score</strong>，然后它就是一个让我把我自己的知识点可以再次的收集，然后再去提炼。那我也是简单分享一下。对，好。OK。好。好。那就是这边的话就是会有个语音的输入功能。那我现在这个 app 就是在手机端跟网页端都可以去使用它，然后我还蛮常都是用手机去做一个就是想法的输入，然后把它整合在里面，然后。然后它可以 <strong>AI</strong> 就是可以再帮我们的文字做一些结构化，然后这边有一个就是我有放一个就是一个顾问团的一个概念，就是我把我有兴趣的，像是<strong>斯多格哲学</strong>或者是 <strong>纳瓦尔</strong>，就是一些我我比较对他的观点，然后会很想要，就是很想要继续学习的一些人，然后我就是有点像是请他在针对我的文字内容，可以提供我一些不同的观点的看法。那这个目的其实就是就是从不同角度去去看自己这样子。然后，然后你也可以再把你的这些文字内容再去做卡片化，然后你这些卡片可以再把它输出，比如说可能可以串到 <strong>UpCyan</strong> 或 <strong>Hyperspace</strong>。那这里的话就是你可以针对图像的文字做汇入，然后比如说这是书本的话，你可以再再去就是你可以再去定义是哪一本书，然后后续都可以都可以再去查找得到。然后这里的话就是针对我自己的这个知识库的来源，然后我可以去提出一些问题。然后，比如说我这边的例子是我对知识管理的看法。然后他所他所提供的这些回馈的内容啊，就是你看这边有一些蓝色的连接，它其实都会再去连接到我刚刚所储存的这些的笔记，然后或者是文章或者是书籍的内容，然后我就可以有点像是我再把这些观点再重新整理一次，而且我我我知道就是就是一种交交交错的这个知识网的感觉。然后最后一个是焦点观点交锋，它其实一个 <strong>packets</strong> 的形式，然后它也是会针对某一个主题你想要讨论的主题，然后他会用正反两方的角度去谈一个内容，然后它是一个 <strong>packets</strong> 的形式。我们应该是听不见你的这个背景音。</p>
+<p><strong>Jessica</strong>: 对，我听不见，不好意思。</p>
+<p><strong>Cindy</strong>: 好好好，那就那就不用。对，然后抱歉，我忘记了。对，然后这边就是 <strong>packets</strong>，大概十分钟吧。然后我我我我自己我自己在听这些东西的时候，我我是真的觉得蛮有趣，因为我们有很多笔记，它可能是有时候是当时的一时的想法嘛。然后，但是或者是你当时看的一些书，你就记录了一些东西。然后我在听这些东西的时候，我会有一种好像我当时讲过的话，或者是我当时的一些观点，但是我可能现在不见得有做到，就是蛮蛮有趣的，就是有一种你从第三方的自己在看自己的那种那种感觉。然后对就大概是这样。然后好，这就是我的部分。那我想分享的是，就是我觉得在这十二周里面，我我当时在第一周的时候，我就觉得说我我不会想要一堂课一堂课的去看，然后再去做那个东西。所以，我是在第一周先定义我想要学的，我想要做的那个工具。所以，我有点像是直奔着那个工具，然后去想我要学什么东西。然后，所以我就一边做，然后发现可能哪个地方缺了，我就去再去补那个东西。然后就像是我发现哦，原来其实我需要后端资料库，然后我理解了哦，我可能要知道 <strong>Superbase</strong>，所以我就去就去做这件事情。然后像上周决定说，哎，那我可能要做个 demo 影片，然后哎，又有人告诉我说，社群里面有人轮选，然后我就想说，哎，那我就搭着一起，就是也学，然后也试试看。然后我觉得这样子的做法会让人会更有成就感，因为你很一开始你是有一个目的性的结果，就是你因为你想要那个东西嘛，所以你中间过程当中你就会去想办法去去达成它，然后你最后也会做出一个东西来。然后然后最后就是我很感谢这个十二周的时间，就是每次讲完一个承诺，然后这个六天当中就一直在想说啊，没做到会很逗。对，然后就就是真的很谢谢大家，然后觉得就是大家都很棒，然后每个人都有自己的亮点，然后不要因为某些人有某些人专长，然后就觉得哎自己没有那么好，没有就我觉得是大家有大家各自很棒的地方，我是真心的想要这样跟大家说，然后谢谢各位。好，分享完了。</p>
+<p><strong>Jessica</strong>: 谢谢谢谢 <strong>Cindy</strong>，嗯，好好感动。他他说其实也是我我想跟跟大家说的，就是没有必要我们不是说非要追求要完整的做完一个项目，这不是最重要的，对吧？最重要的就是就是开始。然后我有在聊天室里面发我们的早上那场直播回放，大概从二十三分钟左右开始是 <strong>Cindy</strong> 的那个项目。</p>
+<p><strong>Asuka</strong>: 对，二十一点五二十二十。</p>
+<p><strong>Jessica</strong>: OK，谢谢 <strong>Asuka</strong>，非常棒。那如果根据我们的首字母的话，<strong>Jessica</strong> 应该是 C，A B T E F G，对，我我选我的吧。等一下哈。那我还是做了跟我其实讲真也非常感谢大家参与十二周，然后十二周我觉得有大家参与到令十二周非常的感受上非常的好，因为我们可以得到很多反馈，然后也得到很多动力。好，我的十二周是关于我的 <strong>Art Exhibition</strong> 的，就是画展的。然后可以继续等一下哦。然后我同样的提一下我自己，其实是做电影后期的。然后我希望可以在五月尾的时候参与一个画展在加拿大这边。然后我这前面十二周刚开始的时候，我做了跟我工作有关的，就是从 <strong>GitHub</strong> 拿了，就是我公司其实是我公司有的，然后我学习了他们的新的 <strong>AI</strong> 的 <strong>Roto</strong>，就是一种工具，这两种都是一种工具，然后利用了 <strong>Python</strong> 里面的一些学习的 <strong>Python</strong> 的东西来到做我的 <strong>AI</strong> 的学习。然后过后我就进入了，我觉得后面我有进入了一个学习呃学习的情况，所以我觉得其实不应该，其实就是应该找到自己，像刚才 <strong>Cindy</strong> 讲的这样，你找到一个适合的东西，然后学习它，来到达到你的目标就好了。不要因为觉得哦现在 <strong>OpenCard</strong> 好，就觉得 <strong>OpenCard</strong> 这样，它应该是解决了一个痛点，然后才学习的。所以我就觉得后来我就有比较在第七周过后，我觉得有比较好一点点，然后就把我的所有的资源资去做我的关于我的画展的东西。嗯，然后参与每周的会议，我觉得很好。然后就是主要这这个十二周里面，我觉得比较好的是我得到了这个 <strong>Art Exhibition</strong> 的 Approve，然后会进会去打会去这个画展，然后也拿到了学习了一些新的工具，像 <strong>NovoLM</strong> 跟 <strong>MBN</strong> 这些东西，我都觉得有有学到一部分的情况，没有完全的，我觉得还学海无舟这样，就是还有很多很多东西可以学。然后这个是我稍微提一下里面的画展里面有些什么。这个是今天早上其实我有收到，不过就再再放一次吧。这个就是两种不同的颜色，就是 Print 在同一个东西上面。然后等一下哈，下一个。好。正面。一起举起来。嗯。对，所以它其实是两种概念，就是这是虚拟，蓝色是等于虚拟的，然后红色等于真实的。我就觉得它有一个概念在上面，就是觉得我们到底要选择什么，还是其实这两种东西都不是一个选择，它其实有点要一起，我们才会得到一个完整的人生这样。然后有一颗是。然后还有一个是属于木板。好，所以这个也是一个属于木板的，有悬浮的宇航员，然后是木板比较东方的彩色，它其实是比较表达我们离开家乡，然后有个乡愁的感觉。嗯，这个是我利用 <strong>AI</strong> 做的一个模板 for 我的 <strong>Art Exhibition</strong>，必须对他们来讲，我们必须教这个东西，所以它可以让我们知，我可以让他们知道说什么东西会在哪里，然后什么哪里需要电线啊，我有桌子一直需要放在哪里啊，这些空间的一些感觉，我觉得这个也很感谢 <strong>AI</strong>，不然的话这个东西本身如果画起来其实是有一些有一些辛苦。然后最近学习的 <strong>Mini Hanson</strong> 的时候，我想要做一个从 <strong>Google Sheet</strong> 然后可以直接转成去发布的情况，可是其实没有完全达成，就像刚才讲的，我们其实有开始，其实有学到很多东西，我觉得其实还是挺好的。嗯，然后其实这个就是我们自动化，我想要学习到自动化，然后看可不可以自动化我做我的事情。然后很我觉得 <strong>AI</strong> 的未来跟 <strong>Art</strong> 的未来其实是一样的，就是要得到一个其实人类还是最重要的在里面，所以我觉得其实要好好的做，我们不要太放不要放弃，然后很感谢十二周的所有的小伙伴。嗯，然后我们就这个是我的下个十二周的目标。好了，然后就 Stop Sharing。好，谢谢大家。</p>
+<p><strong>Asuka</strong>: 厉害，很厉害。</p>
+<p><strong>Cindy</strong>: <strong>Cindy</strong> 有有问刚才你的那个就是不停的换在同一张同一张画打印在不同的颜色上是同一张图两个颜色吗？</p>
+<p><strong>Jessica</strong>: 它同一张图，然后使用了 3D 就是 3D 的眼镜，就是一边左边是红色，边右边是蓝色的那种眼镜，来到得到的情况。</p>
+<p><strong>Cindy</strong>: 哦哦，OK OK。是用 <strong>AI</strong> 模拟的对吧？</p>
+<p><strong>Jessica</strong>: 不是，这个是实体打印了。哦，我先把 test print 完了。</p>
+<p><strong>Asuka</strong>: 嗯，好酷啊！</p>
+<p><strong>Jessica</strong>: 谢谢谢谢。下一位 <strong>Kevin</strong> 或 <strong>Kelly</strong>。你们好啊。</p>
+<p><strong>Kevin</strong>: OK，那就 <strong>Kevin</strong>。嗯，我先吗？嗯。好，那我来分享一下。我的部分，其实我觉得这十二周最大的收获应该是大家的陪伴吧，就觉得默默的完成了好多课程，然后也要做一些小专，然后嗯，今天我想要分享就是我觉得做的比较完整的一个专案。那这个这个专案它叫做 <strong>My Screen</strong>，然后简单来说，我自己很常使用屏幕录影的功能，然后之前有用过一些方案，比如说像 <strong>OBS</strong> 或者是 <strong>Mel Studio</strong>，但觉得说他们用起来功能有点太复杂了，而且每一个装起来容量都很大，然后就觉得我没有必要去用这么庞大，然后又有 overkill 的东西，所以后来想说还是我自己 <strong>Web Code</strong> 来做一个。然后我现在就直接给大家看一下最终的成果吧。那后来这也是我第一次做那个 <strong>Mac</strong> 的 <strong>App</strong>，然后后来就是有做做几个功能，一就是 <strong>Dashboard</strong>，你可以去看说哦你现在有几个 recording 了，然后它它存在哪边，然后你也可以直接打开你的 Folder 夹，这边就会看到。对，那也可以直接做快速录影的功能。那我自己是觉得如果没有 <strong>Web Coding</strong>，自己可能不会这么快就完成一个 <strong>MacOS App</strong>。然后如果没有大家的这个激励，也是也是没有办法的。对，所以我觉得蛮感谢有大家的这个陪伴。对。</p>
+<p><strong>Jessica</strong>: 可以看一下你的那个录屏，它最后录出来的效果吗？</p>
+<p><strong>Kevin</strong>: 哦，好。等我一下哦。好，这样有吗？大概就是这样，然后这边它就会跟着下一讲的话，然后去就是它会及时的跟着它去做一些浮动，对，然后上面这边也会有录影的时间，然后又有一些快捷键，就是你可以快速快速快速开始快速结束这样，然后如果结束的话直接跳 Folder，然后不是这边它就会跟着，然后就会把我我刚的东西录出来的，就是它会快速快速快速开始快速结束这样。</p>
+<p><strong>Jessica</strong>: 哦，已经上线了吗？这个 App？</p>
+<p><strong>Kevin</strong>: 对，这个这个我我做一个那个，对，我看一下啊。</p>
+<p><strong>Jessica</strong>: 它有 landing page 吗？或者说是在什么 <strong>App Store</strong> 上上线的吗？</p>
+<p><strong>Kevin</strong>: 我是直接做一个网站，然后就大家如果要下载来用，也可以直接 <strong>My Screen</strong>。</p>
+<p><strong>Jessica</strong>: 对。会有人看我们的直播，我帮你宣传宣传。可以啊，可以啊，对吧？因为它下载下来应该是蛮小一包的，就是我我看到它是可以直接直接下载。对。它这里直接下载，然后它支持 <strong>MacOS</strong> 吗？</p>
+<p><strong>Kevin</strong>: 哦，对，就只有做 <strong>MacOS</strong>，因为我电脑就用 <strong>MacOS</strong>，对吧？ 对。</p>
+<p><strong>Jessica</strong>: 你，你大概是花了多久做这个 app？花了多久？</p>
+<p><strong>Kevin</strong>: 其实蛮蛮多小问题的，就是有有一个是不同装置，就比如说我现在是戴耳机嘛，但如果不戴耳机的话，它那个声音的品质是会有差异的，所以我花很多时间去调这些小东西，比如说你要换装置，或者说我我想要录的是单层只有系统的声音，还是我是想要有麦克风的声音？这就这些很多小问题，我我我都是慢慢的去发现，然后慢慢的去修正来来回回应该有有三周吧，但我觉得八成应该应该一两天就就好了。</p>
+<p><strong>Jessica</strong>: OK OK，不，那你你你是有编程背景吗，<strong>Kevin</strong>？</p>
+<p><strong>Kevin</strong>: 对，有有有。</p>
+<p><strong>Jessica</strong>: OK OK，那之后如果我邀请你来就是做一场整场的分享，你愿意吗？</p>
+<p><strong>Kevin</strong>: 哇，这个这个我我我再想一下啊，有点害羞。</p>
+<p><strong>Jessica</strong>: 好好，那我们先继续，谢谢谢谢你的分享，我们可以看看 <strong>Kelly</strong> 的项目。</p>
+<p><strong>Kelly</strong>: 哦，好的呀，好的呀，那我分享一下我的屏幕哦。我我觉得我我我有时候可能网不太好，就是如果网不太好的话，麻烦提醒一下我。</p>
+<p><strong>Jessica</strong>: 好，没问题，现在都很顺。</p>
+<p><strong>Kelly</strong>: OK。这下就 window。嗯，可以看到我的屏幕吗？就是稍等一下。好。就是有那个 <strong>PPT</strong> 的屏幕。是我卡了吗？</p>
+<p><strong>Jessica</strong>: 我只看到了我们这，对，只能看到你的那个无线无线屏幕。</p>
+<p><strong>Kelly</strong>: 你是不是没有没有选 entire screen？你选了？哦，要选那个，我选了一个 window，那我重新试一下。</p>
+<p><strong>Jessica</strong>: 对你重新。</p>
+<p><strong>Kelly</strong>: 现在可以吗？</p>
+<p><strong>Jessica</strong>: 可以可以可以。</p>
+<p><strong>Kelly</strong>: OK，那其实我想说，就是我可能因为那个时差，就是我作为一个晚睡的人，当就是 <strong>Jessica</strong> 说有这个十二周的时候，我没有任何的犹豫，就是我要早起，这种就因为我觉得就是我需要有人督促我，首先学完那个课程，然后我就毫不犹豫的参加了。当时其实 <strong>Jessica Jessica</strong> 还有反复的确认，五点半你真的可以吗？早上五点半你可以吗？我说我可以，然后我就这样，然后参加这个十二周的这个项目，然后我真的特别感谢大家，因为就是每次在大家的分享的时候，我都可以学到好多，就是大家的不同的想法呀。我感觉每次对我来说都是一个，嗯，相当于很好的一种激励，因为一开始无论是时间还有课程，我其实都有点拖延，然后但是我发现就是每次大家分享的内容都特别的，就是能够启发我，我也觉得就是我也要好好做下去。然后呢，就是我想是今天啊分享一下，就是我是因为参加这个项目的时候，我其实好多课程还没有看完嘛，所以很大一部分是为了学习这个我们这个社群的课程，例如然后我就设定了几个核心的课程，像 <strong>N8N</strong>，然后还有 <strong>UI UX</strong>，还有那个做动画呀，做视频呀，还有后面的 <strong>Open Cloud</strong>，然后我主要是完成了这几个核心课程，然后这是我的第一部分，然后第二部分呢，就是其实也就是相当于用不同的 <strong>AI</strong> 的工具，然后我后面也会用那个 <strong>Cloud</strong> 来去呃做做那个我的 <strong>Web Coding</strong>，然后我今天主要是想跟大家 share 一下我的这个主要的一个项目叫 <strong>My Moment</strong>，就是它是一个我觉得是一个就是在记录我的我想要被记录住的时刻，例如就是我的想法呀，或者说是我的一些反思这种，然后给大家 share 一下，然后这个就是我的 <strong>Dashboard</strong>，然后它主要的是相当于一个个人成长的一个记录，因为很多时候我们就会有一些想法，或者说就是假如说看了一本书啊，我们可能会有一些想要记住的点，或者说我们突然有一个新的想法呀，就是不断的，就是特别简单的一些 idea，然后我觉得就是想记录一下，那其实它主要是就是分为这四个部分，第一个是 <strong>Dashboard</strong>，就是它会显示一个时间线，例如这周啊这个月，然后还可以自定义时间，然后就是看一下你最近的一个记录有什么，然后第二个就是详细的这个，就每一个卡片就代表你的一次的对自己的记录，然后第三个就是你可能用到的一些不同的工具，然后它就帮你记录一下，最后一部分呢就是它这个是一个可以反思的，就是你可能在某个时刻，然后再返回去去看你当时的 <strong>moment</strong>，你可以再记一些笔记，然后相当于就是在不停的反思，对，然后它这个哦有两个地方你可以新建，那这个我觉得就是对于大家来说现在就是最重要的就是不想打字，这是一一点，然后就可以用语音转文字的功能，然后我这边主要是用中英文的方式，然后你要是不想打字的话，你可以直接这里跟他聊语音，然后它就会自动帮你语音，首先第一步是语音转文字，然后第二步就还可以自动帮你填充，然后它就会直接帮你填好，然后你保存一下就好了，对，主要是这个是就是很就是对于大家现在比较我感觉就是可能节省时间，提高效率，就是快速记录一下，对，然后这个就是我主要的那个记录，然后它比较它其实是一个我接的是那个 <strong>Google Sheets</strong>，所以就是要是自己可以登录的话，就是其实就是建立一个自己的表表格，然后所以比较数据也是自己掌握的，这点我觉得比较好，嗯，对，然后这个就是我主要的一个项目，那下一个呢就是我有建立自己的社交媒体，就是我其实一开始是主要是想教英语，但是因为我考虑到可能有 <strong>YouTube</strong> 跟 <strong>TikTok</strong>，然后我就后面又把这个改成了就是如果是面对海外的话，我其实主要是相当于教中文，所以这是我的一个社交媒体的，就可以 share 一下我的这个 <strong>YouTube</strong> 账号，但我最近可能做的也不多，然后我这个主要是就是用用就是用小猫相当于作为一个它的主人公，然后不同的小猫它就会教你在不同的场景下说那个主要是一些短的 <strong>phrases</strong>，然后就是对，所以我觉得 <strong>AI</strong> 带给我的就是能够让我把我自己的想法或者我想传递的东西，就是更好的帮我完成，对，因为我觉得它很治愈我，就是例如说我可以其实这个是自己，对，就是很可爱的一些场景，然后这个是我后面我其实这个是有一个过程的，就是我可能当时一开始是以中文为主的，就是所有的都是中文，但是后面我就又加入了英文的，对，反正就是后面就比较简单吧，哎，sorry，这就是啊，OK，然后还有另外一个我想分享的是就是我有做一个就是我自己的那个相当于我我我有当那个 <strong>tutor</strong> 去教英语嘛，然后我觉得就是用这个的话，它就可以帮我生成那个 <strong>PPT</strong>，就是帮我的那个 <strong>learner</strong> 定制他的自己的学习的，例如这些，嗯，就一个定制化的那种 <strong>PPT</strong>，然后我觉得特别的对我来说就是我备课的话会很方便，然后嗯而且是就是可以根据 <strong>learner</strong> 自己的基础来帮助他生成就是他想要的内容，所以我觉得这个对于作为一个老师的话就是很方便，去用它，然后最后一最后一部分其实是我觉得就是哦这十二周带给我的就是我觉得我会去想要去不断的认识新的人，然后发生新的思想的碰撞，然后所以我也就是也有点激励我去参加线下的各种 <strong>Meetups</strong>，然后认识不同的人，然后尤其是就是大家可以一起分享自己的观点，对，所以我觉得就是我的十二周大概就是这样子的一个整体的 share，然后下一步呢我可能会去再去研究一下这个，然后提升我的一些工作的效率吧，对，然后就好啦，谢谢大家，谢谢。</p>
+<p><strong>Jessica</strong>: 真的哦完成好多事情哦，真的有好多事哦，很厉害，鲜花鲜花，十二周啊，下面火车了，我我还就四五个月，四个多月，十二周三个哎三个月吧，三四十啊，sorry 算错了算错了，对三个月啊三个月做成了好多事儿 <strong>Kelly</strong>，而且你的风格都好好看啊，你有用就是特别的什么 skill 或者用特别是什么特别的工具吗？</p>
+<p><strong>Kelly</strong>: 其实也没有，我觉得我可能会去 <strong>Pinterest</strong> 上面找一些我比较喜欢的风格。</p>
+<p><strong>Jessica</strong>: 对，OK，知道了，然后让 <strong>AI</strong> 照着抄。</p>
+<p><strong>Kelly</strong>: 对。</p>
+<p><strong>Jessica</strong>: <strong>Kelly</strong> 我有印象你的第一版学习的就是管理你学习的，好像长得是其他的样子，然后你后来渲染了一下变成绿色了，对吗？</p>
+<p><strong>Kelly</strong>: 用不太，其实我改了我改了好，对我改了好多次了，对。</p>
+<p><strong>Jessica</strong>: 哦，OK，这一版好漂亮，谢谢。</p>
+<p><strong>Kelly</strong>: 就感觉对眼睛比较友好。</p>
+<p><strong>Sophia</strong>: 我是我的网的问题。</p>
+<p><strong>Jessica</strong>: 对，去 <strong>Pinterest</strong> 找找那个你喜欢的参考图给 <strong>AI</strong>，其实也是一真的非常好的方式。</p>
+<p><strong>Kelly</strong>: 是的。</p>
+<p><strong>Jessica</strong>: 好，那我们谢谢谢谢 <strong>Kelly</strong>，然后下一位 <strong>Sophia</strong> 好吗？我想问一下，我是不是跳过了？因为我害怕我压轴，主要是。</p>
+<p><strong>小企鹅</strong>: 好，那 <strong>Shawn</strong>，等一下，小企鹅你要你你你要先说吗？</p>
+<p><strong>Jessica</strong>: 对我意思，我好像我因为我刚才看 <strong>Kelly</strong> 的 presentation，我应该按道理来说在 <strong>Jessica</strong> 后面是吗？我忘记了为什么我跳过了，我被跳过了。</p>
+<p><strong>小企鹅</strong>: 嗯，我可以说吗？我可以很快，我意思，我主要真的就是不让我压压轴就行，因为压轴有很多强人。</p>
+<p><strong>Jessica</strong>: 压轴我们留给 <strong>Sophia</strong>。</p>
+<p><strong>小企鹅</strong>: 对对对，我们组有好多好多强的。OK，我分享了一下我的屏幕，大家可以看到吗？</p>
+<p><strong>Jessica</strong>: 可以看，就是好像哦，对，现在出现了 <strong>Gemini</strong> 的页面。</p>
+<p><strong>小企鹅</strong>: <strong>Gemini</strong>，<strong>Gemini</strong> 的页面。大家看见不是我的 presentation 是吗？</p>
+<p><strong>Jessica</strong>: 不是不是，不是。</p>
+<p><strong>小企鹅</strong>: 嗯，再你可能也要 share entire screen 在第三个 tab，那我这个呢？如果是这个呢？现在是 OK 的吗？</p>
+<p><strong>Jessica</strong>: 对，对，OK 好的。</p>
+<p><strong>小企鹅</strong>: OK，对我这我这我会讲大概就三块，嗯，让我突然想起来，好像我还没有我还没有就是就是我我我起名叫小企鹅嘛，其实也是有原因，是我加入用爱发电的那一天，是我儿子走出了人生的第一步，然后那天我很激动，他走路很蹒跚，跟个企鹅一样，然后我觉得就跟我很像，刚刚蹒跚学步开始学 <strong>AI</strong>，然后我就起了这个名字，然后就很巧的是刚开始的时候遇见了一大家一群志同道合的人，感觉就是遇见了同路人，大家一起在路上学习 <strong>AI</strong>，嗯，就互相激励，互相督促，要不然我觉得我可能没有办法去保持这个速度，一直有这个节奏，呃和他去接触，这个是我觉得最珍贵的地方，然后平常呢这个十二周当时的他呃的 goal 也是看完一些呃首先去接触这些都有哪一些都有哪一些 <strong>AI tools</strong>，然后看完一些课程，看一下现在都能够大家都能做出来什么，然后就是也是不只是看课程，通过大家的激励也可以做一些事情，交作业，然后找到自己的痛点，嗯，我就在十二周呃我做的比较慢啦，呃就做了一个呃我家庭的<strong>家庭采购AI助理</strong>，简单来说就是我在路上的时候看见某一些我们家需要的东西，然后就把它收集起来，这个 <strong>product</strong>，对数据进行一些抓取，然后重要数据的收集，最后再清理好，呈现出来一个 <strong>overview</strong>，我们家现在需要什么，然后再去对它的一个价格进行跟踪，呃算出它过去我开始对它感兴趣的时候的一个平均价格，再提示我我现在是不是应该去购买，还有 <strong>Kelly</strong> 当时给了我一个很好的意见，就是说我应该再去进行一下全网比价，那其他的网站都是一个什么样的价格，比好以后我再去决定我是不是要去购买，通过这个链接这样子能够有一个就比较划算的去实时监控它全网的价格，嗯，对，大概是这样子，然后嗯对，然后还有一个就是比如说我也有这种它会推送吗？呃因为它的价格只要现在低于过去 <strong>monitor</strong> 的一段时间的一个平均价格，它就会会给我 <strong>recommend</strong>，告诉我哦这个低于均价了，你可以去买了，嗯，然后对我试一下，我现在试着去呃比较哦，嗯，对它因为是，我是不是没有开 <strong>Webhook</strong>？嗯，我再试一个，再看一下 <strong>Webhook</strong>，啊好像现在 <strong>N8N</strong> 里面里面流程有有有一些问题，嗯，对我觉得做完其实最主要的是我觉得我 <strong>database</strong> 那块花了特别大的时间，不是这些 <strong>fancy</strong> 的 <strong>front end</strong>，而是我的 <strong>database</strong> 里面有很多的逻辑需要整理，嗯，所以有的时候还有 bug，我需要你看昨天十四号的时候就是 OK 的，今天就得再去看看有没有新的 bug，嗯，OK 我就是大概分享到这里，嗯，我觉得特别好的一点，嗯，有一群人陪伴着一起上路，然后有好的团队碰上了 <strong>AI</strong> 的热情，再加上正确的工具，呃我们大家每一个人都能够试着用 <strong>AI</strong> 去改善我们的生活，让它变得更智能吧，呃 OK 我的分享结束啦。</p>
+<p><strong>Jessica</strong>: 哇，谢谢小企鹅，我我想问一下你你是不是应该也没有程序的背景对不对？</p>
+<p><strong>小企鹅</strong>: 小排的对，对我所以叫小企鹅的意思就是我想解释一下，就一最开始，对对，没有背景的话，嗯，就嗯会比较难啦，有一就我觉得大家说的特别好的还有一点我特别认同就是你要在知识的海洋里面去焦虑和遨游，而是你找到你的痛点，然后针对去学习，然后呃我们的 <strong>community</strong> 好的一点是给你 <strong>idea</strong> 和大家卡，哎还是我的，我我有一点卡是吗？对，我觉得我们 <strong>community</strong> 里面有很多的 <strong>idea</strong>，这个是我觉得最好，还有一群同路人去互相互相激励大家和帮助大家有一些我们一起想做什么，互相帮助解决这个问题，这个是最好的点，嗯，我是不是怎么结束分享？好的，看到它有一个啊可以了。</p>
+<p><strong>Jessica</strong>: 张敏是不是从想重新加入一下？嗯，对他应该是跳出去，嗯，我们下一个是哎他来了，下一位应该是 <strong>Sean</strong>。</p>
+<p><strong>Sean</strong>: 哦对是我。嗯。我需要 my screen，entire screen，咦，有，呃我在大家可以看到我 screen 对吧？</p>
+<p><strong>Jessica</strong>: 看到可以，OK 在也可以。</p>
+<p><strong>Sean</strong>: 呃所以我在开始加入十二星期之前，我那个挺纠结的嘛，因为 <strong>AI</strong> 可以做很多事，但我不知道从哪里下手，然后脑海里有一大堆想做的，但是都想做，但又又不知道哪里开始就是了，然后加入后有这群小伙伴就可以监督我每星期做一点吧，然后我现在先分享我看这个咦哦这个是那个我比较喜欢的一个 <strong>Web application</strong> 那个 <strong>extension</strong>，每次打开这个浏览器就可以显示时间啊什么的美好的图片，但这个需要付钱，所以要 <strong>upgrade</strong> 可以有更多功能，但我又不想付钱，所以我就想用 <strong>AI</strong> 解决自己痛点吧，所以自己就弄了一个这个类似的吧，虽然图片就不会改，但还还凑合，所以可以还有 <strong>Tomato Timer</strong> 可以选时间，选完后就可以写自己要完成什么任务，然后就可以开始 <strong>countdown</strong>，时间在这里有点小，嗯，然后但我我有个问题就是毛病嘛，就做完一个就不感兴趣了，所以就就开始另一个，然后这个就是 <strong>Designing Your Life</strong> 里面那个什么 <strong>Dashboard</strong>，它会根据我们的人生那个，那个那个不同的那个 <strong>work life</strong> 什么的啊，根据我们现在处境嘛，来设目标。然后我就弄了一个 <strong>web application</strong>，就可以选，比如说我自己身体从一到从零到一百是多少，然后还有其他方面，之后就可以那个显示人生是向上啊还是往下。嗯，对。还有就是另一个就是 <strong>Notion safe</strong>。<strong>Notion</strong> 它有限制嘛，也就是说如果图片传上去后，它超过一定额度的话，它就要向我要钱，但我又不想花钱，所以就可以通过那个 <strong>Notion safe</strong> 把那个笔记打在这里，然后就可以通过内 <strong>Notion</strong> 直接导到我们那个 <strong>Notion</strong> 笔记上面，这样感觉嗯会省一些钱。还有这个 <strong>focus timer</strong>，这个可以选时间，然后再加上这个可以记录我今天的心情咋样。呃，这个的话 <strong>gratitude tree timeline</strong>，可以看看嗯自己人生的走向吧，记录一下呃感恩感恩的事，可以根据反正就是哎比较简单的，我也不知道。呃，还有这个这个网站就把那个 <strong>GitHub profile</strong> 面东西那个就是弄成啊这个更好看一点界面了，就是我就搞了一堆一堆小玩意，然后然后就没有然后了，就不感兴趣了，就这样。反正最大的收获就是从纠结到行动吧，然后然后就继续纠结，继继续行动，就这样，嗯。没了。</p>
+<p><strong>Jessica</strong>: 我看到你写的是 <strong>data engineering</strong>，你是数据工程师是吗？</p>
+<p><strong>Sean</strong>: 对。</p>
+<p><strong>Jessica</strong>: OK，那你本身也不是程序背景的，对吧？</p>
+<p><strong>Sean</strong>: 对，有时候编程感觉挺无聊的。</p>
+<p><strong>Jessica</strong>: 什么叫编程无聊？你也你也需要编程吗？难道？</p>
+<p><strong>Sean</strong>: 我我也需要写一些排房代码，但是写着写着我就觉得有点困，所以不知道是。</p>
+<p><strong>Jessica</strong>: 那有 <strong>AI</strong> 的话不需要你再写了呀，你甚至都不需要看了。</p>
+<p><strong>Sean</strong>: 对，<strong>AI</strong> 我经常如果需要写代码话，叫 <strong>AI</strong> 直接帮我做就好了。</p>
+<p><strong>Jessica</strong>: 哦，OK，我看到你做了真的好多东西，一秒一个。</p>
+<p><strong>Sean</strong>: 是。</p>
+<p><strong>Jessica</strong>: 呃，很不错，我觉得三个月就是想什么就去做什么，这很好。嗯。好，我们压轴的 <strong>Sophia</strong>，要不要这么快可以？压轴了吗？</p>
+<p><strong>Sophia</strong>: 哈哈，好。嗯，把 share my screen 大家看到吗？</p>
+<p><strong>Jessica</strong>: 可以。可以。</p>
+<p><strong>Sophia</strong>: 嗯，我的十二周，这是我第二期的十二周，我跟 <strong>Asuka</strong> 和 <strong>Jessica</strong> 的这是第二个十二周，所以我觉得这个十二周可以一直持续下去，这样我就没有那么多懒懒惰的时间了。</p>
+<p><strong>Jessica</strong>: 哦，第三个了，OK。</p>
+<p><strong>Sophia</strong>: 哦，Sorry，我都记不清了。我们读了那本书之后就变成了很忙的周末。OK，呃，这十二周真的是从零到一，对我自来说，因为我觉得我我自己不是开始不是太喜欢这 <strong>AI</strong> 的东西，就是什么都不知道。然后从什么都不知道就做了很多的，就是对我来说算是做了很多事情吧。呃，这个就呃不在这边每个每个说吧，然后我直接进入演示。呃，首先第一个小的 <strong>project</strong> 呢是呃其实我是在 <strong>Salesforce</strong> 做 <strong>project management</strong> 类的工作，但是我不是 <strong>code</strong> 的背景，我没有 <strong>developer</strong> 的背景。然后我通过写这个 <strong>prom</strong>，就是我们开始的时候都大家都知道 <strong>prom builder</strong>，就是 <strong>prom engineer</strong>，都是一个非常火热的工作。然后这个 <strong>prom</strong> 写好之后呢，也可以在 <strong>Salesforce</strong> 里面去让它运行一些东西，让它去帮你做一些工作。那我做了一个小的尝试，其实我们公司还没有用这个东西，但是现在开始已经用了。那这是我给我老板演示了之后，他们是蛮喜欢的，就是在我们那个工作环境里面呢，我们有一些文章，就是帮客户解决一些问题。我就举一个例子，比如说 <strong>What's my iPhone return policy</strong>？这个文章写好之后呢，就是他们用这些东西呢去，就是一个怎么说呢，是一个一个 <strong>database</strong> 去帮助我们客户呢去解决问题的。那写好这个东西之后呢，是非常有用的，因为就是譬如说有一些进来的话，他需要在这边去找他的答案，而不是去那个 <strong>Google</strong> 找答案。但是呢，很多时候他们写出来东西呢就不是太符合标准，那我就写了一个一个一个 <strong>prom</strong>，就让 <strong>AI</strong> 去帮他去 <strong>review</strong> 这个 <strong>prom</strong>，然后呢我就建了一个 <strong>tap</strong>，这个 <strong>tap</strong> 呢就帮这个文章打分，然后打分之后呢又把它就是这个分数在这里，呃，然后呢又帮他去上颜色，然后这个颜色就是很容易看到哪些需要改，哪些不需要改，然后他们就回到这边来进行修改，然后修改了之后呢就可以呢运用到他们的日常的工作当中，所以这个我觉得是呃对我工作来讲是有用的。啊，我没有病，还没有很多个人的东西啊。这一次的演示哈，呃，然后呢这是第一个小的 <strong>project</strong>，然后第二个小的 <strong>project</strong> 呢是我的一个 <strong>website</strong>，我就把我 build 一个 <strong>agent</strong> 呢就配通了，然后呢配通了之后呢是这样子的，我是呃帮我的 <strong>agent</strong> 呢怎么说呢？这怎么开始说呢？就是就譬如说你去一个 <strong>website</strong> 嘛，有然后有一个嗯怎么说呢，有一个就是 <strong>chat</strong>，然后这个 <strong>chat</strong> 后你可以让他就是服务客户的，譬如说我是客户，呃，我刚才用了 <strong>张敏</strong> 的，介意吗？<strong>张敏</strong>，我用你的名字来演示一下。你没有反应，我不知道。</p>
+<p><strong>张敏</strong>: 不介意，但是我都已经用了。</p>
+<p><strong>Sophia</strong>: 就是嗯，听说我的客户 <strong>张敏</strong> 他有问题，他在我这边 <strong>book</strong> 了一些东西，他需要取消，那他就他不打电话上来，因为可能已经过了这个电话的时间。然后呢他就开始就是填他的资料，然后就开始问问题。他说嗯 <strong>I want to cancel my reservation</strong>。他可能 <strong>book</strong> 了一些机票或者什么的。然后呢，我的这个 <strong>agent</strong> 呢就是开始跟他回答问题，我甚至可以帮他去 <strong>cancel</strong> 这个机票。但是呢，<strong>张敏</strong> 说嗯 <strong>I want to speak to a real person</strong>。就是他不太 <strong>comfortable</strong> 跟这个 <strong>AI</strong> 通话，他需要跟正常的人通话。然后呢，我就上班了。那我上班的时候呢，就开始进入我的界面，然后呢我就把我自己呢换成 <strong>available to everything</strong>，然后呢这个 <strong>chat</strong> 进来，这个 <strong>chat</strong> 进来之后呢，我就看到之前我的客户跟我就是通过就是跟这个这个 <strong>agent</strong> 这个 <strong>Bob</strong> 对话的所有内容，然后呢他的问题是什么，然后就我就开始跟他去沟通，然后我就说 <strong>What is your</strong> 呃就是譬如说嗯 <strong>reservation number</strong> 这类的。然后我跟他对话之后呢，他在那边呢就收到了 <strong>What is your reservation number</strong>？然后我们继续就通话下去，就这种就是现在目前也是很多的这种服务中心的一个一个一个平台。那我的我的目的呢是让这些就是语言上面也是嗯譬如说客户要取消这个东西，我就马上在他的 <strong>record</strong> 里面取消了，就是这么的一个流程。嗯，说完我工作上面的进步之后呢，我希望展示的是我最近做的一个我自己在外面 <strong>build</strong> 一个就是用 <strong>N8N</strong> <strong>build build</strong> 的一个一个工作流。那么我的目的呢是想要把这个作为我将来的这个产品，是要帮助我们的一些小企业去取去取代他们的那个接待员，就是 <strong>receptionist</strong>，譬如说打电话接电话和就是做一些就是前台的接待工作。那么我这个呢就是非常简单的一个工作流，但是我可以就是演示一下给大家。我不知道时间还够不够，我可能就是很简单的一个做一个。嗯，好。嗯。首先呢就是说嗯我这是一个 <strong>outbound call</strong>，就譬如说接待员他需要打电话给客户，然后呢让他拿他一些资资料，然后呢我们就开始跟他去建立一个合作的关系，那么就帮帮助这个企业省了时间，因为他就不需要请这个打电话出去的这个打电话的人。那首先呢这个是一个 <strong>lead form</strong>，这个 <strong>lead form</strong> 呢就是一个就是一个嗯一个表格，就譬如说你在手机上面填一下。我还是可以用 <strong>张敏</strong> 的名字吗？</p>
+<p><strong>Jessica</strong>: 可以，当然可以。</p>
+<p><strong>Sophia</strong>: 这个比较快一点哈，我想就是嗯电话号码来，我要选我自己的，因为我要真的是要打电话进来的，嗯。就是呢，他是一个潜在的客户。那么我在一个某一个场合见到了 <strong>张敏</strong>，然后呢 <strong>张敏</strong> 就跟他我说，因为我现在家里边就是有这个问题，我需要跟你商量一下这个 <strong>project</strong> 怎么做，我需要呃在很短的时间之内，但是他给我的信息呢是非常重要的，就譬如说他是否诚恳的告诉我他现在的 <strong>challenge</strong> 是什么。啊，如果他只是没有什么都不说的话，那我的 <strong>AI</strong> 就给他打一个很低的分，那他就我就不会给他打电话了。所以呢这个就这样子，扫描的时候呢这个 <strong>N8N</strong> 就开始运行了，中间的时候呢就用 <strong>AI</strong> 去帮他打分和就是读他给我的资料，然后呢就成为一个 <strong>data table</strong>，<strong>data table</strong> 呢就开始去打分。那我的设置呢是如果超过七分的话，我会给他打电话；如果不超过七分，我就不会给他打电话。嗯。然后电话进来了，这是 <strong>张敏</strong>。</p>
+<p><strong>Anna</strong>: Hello, this is Anna, an AI representative calling from VisionFlow 899 on a recorded line. I'm reaching out to understand your current receptionist challenges. May I speak with Min Zhang, please?</p>
+<p><strong>Sophia</strong>: 对，看听到他的名字嘛，嗯。OK，那就是说我就跟 <strong>AI</strong> 去，我就不继续的展示了。那我就跟他对话，对话之后呢，这个形成的东西呢就是一个 <strong>retail</strong> 里面的一个 <strong>agent</strong>。哎，刚才那个我其实还是觉得我应该就是把东西给展示出来，但是 <strong>anyways</strong> 已经过去了。呃，这个这个 <strong>agent</strong> 呢是这样子的，买了一个电话号码在 <strong>retail</strong> 里面。这个 <strong>agent</strong> 呢叫做 <strong>lead</strong>，就是 <strong>agent</strong>，这个人叫 <strong>Anna</strong>，就刚才给他打电话的这个人，我就给他指示他打电话的时候问他什么问题。嗯，我其实刚才应该继续跟他讲话，我都没有说到我的重点。讲完之后呢，呃就跟他 <strong>book</strong> 一个 <strong>appointment</strong>。这边是比较小这个屏幕。</p>
+<p><strong>Jessica</strong>: 你已经挂了是吗？</p>
+<p><strong>Sophia</strong>: 对，我可以再打一次，其实如果你们不介意的话。</p>
+<p><strong>Jessica</strong>: 不介意，听我意思。</p>
+<p><strong>Sophia</strong>: OK，那我那我就不要再重复到前面了，我就用这个继续弄一下。嗯。嗯。电话进来了。</p>
+<p><strong>Anna</strong>: Hello, this is Anna, an AI representative calling from VisionFlow 899 on a recorded line. I'm reaching out to understand your current receptionist challenges. May I speak with Min Zhang, please?</p>
+<p><strong>张敏</strong>: Speaking.</p>
+<p><strong>Anna</strong>: Hi Min, thank you for confirming. We got your information from our AI Work for Life event, and you mentioned you're interested in automating your current reception workflow. Is that correct?</p>
+<p><strong>张敏</strong>: Correct.</p>
+<p><strong>Anna</strong>: I'm sorry, where are you calling from?</p>
+<p><strong>张敏</strong>: No worries, Min. I'm calling from VisionFlow 899. I'm here to help assess your needs and connect you with a workflow project that can save you time and money this year. Would it be all right if I ask a few quick questions to better understand your current challenges?</p>
+<p><strong>张敏</strong>: Yeah, please go ahead. Your question.</p>
+<p><strong>Anna</strong>: Thanks, Min. Um, do you currently have a full-time receptionist? If so, could you share how much you're paying per month?</p>
+<p><strong>张敏</strong>: Yeah, I have a full-time receptionist and paying a two thousand dollar per month.</p>
+<p><strong>Anna</strong>: Thanks for sharing that, Min. Um, do you have problems with any of the following in your office? Too many emails and not enough time to reply to each one, missing important phone calls, or clients complaining that your service is too slow?</p>
+<p><strong>张敏</strong>: Yes, I have those problems. It's really annoying that I have to answer all the emails.</p>
+<p><strong>Anna</strong>: Yeah, I can imagine how frustrating that must be, Min. To help us recommend the right receptionist spot for you, could you let me know what kind of budget you have in mind for this solution? If you're not sure of an exact number, even a range would be helpful.</p>
+<p><strong>张敏</strong>: I will say I have around two thousand dollars to spend on this project. I don't have so much money.</p>
+<p><strong>Anna</strong>: Thanks for letting me know, Min. Just to help us plan better, do you have any timeline in mind for getting this up and running?</p>
+<p><strong>张敏</strong>: As soon as possible.</p>
+<p><strong>Anna</strong>: Thank you so much for sharing all those details with Min. It really helps me understand exactly what you're dealing with. So based on what you've told me, my next step is to pass this info to our project lead. We'll draft a custom implementation plan that's tailored to your needs, so you can finally get those repetitive tasks off your plate and focus on what matters most in 2026. As we get ready to move forward, I strongly recommend we set up a meeting with our project lead Sophia. She'll walk you through the plan and answer any questions. Would you be open to scheduling a quick call with her this week?</p>
+<p><strong>张敏</strong>: Oh, wait, wait, wait. Who is Sophia?</p>
+<p><strong>Anna</strong>: Great question, Min. Sophia is our project lead here at VisionFlow 899. She specializes in designing and implementing these custom AI solutions. She'll be the one to walk you through your tailored plan and answer any technical or process questions you might have. Would you like me to check her availability for a call this week, or is there a day that works best for you?</p>
+<p><strong>张敏</strong>: Yeah, sounds good. Let's do it.</p>
+<p><strong>Anna</strong>: Awesome, Min. I'll go ahead and book the earliest three zero minute slot with Sophia for tomorrow. You'll get a confirmation with all the details shortly. If you have any questions before then, just let us know. Thanks again for your time. I'm really looking forward to helping you streamline things.</p>
+<p><strong>张敏</strong>: All right, thank you. Bye.</p>
+<p><strong>Anna</strong>: Thanks so much.</p>
+<p><strong>Sophia</strong>: OK，这靠到最后呢，就是他的行动呢，就是要帮我去在我的就是我的 <strong>calendar</strong> 上面呢去 <strong>schedule</strong> 一个 <strong>meeting</strong>，然后我就可以跟他去直接沟通了。那中间就省去了很多就是这种呃你的这个 <strong>receptionist</strong> 跟他对话的这些就是人工的费用，所以这是我的一个想法。那最后呢，这个我昨天做的 <strong>improvement</strong> 呢，就是把我们这个 <strong>retail AI</strong> 跟他对话的内容呢，在我的 <strong>Google sheet</strong> 里面就是给我一个 <strong>Google sheet</strong>，就是把它填好，就跟这个这个内容哈，就是说他跟他讲了什么话，然后最后定了什么东西，就是把它做在我的那个 <strong>Google sheet</strong> 里面。呃，哎，我的 <strong>Google sheet</strong> 就不展示了，反正就是一个 <strong>Google sheet</strong>，然后这个 <strong>data</strong> 呢就是从 <strong>retail</strong> 到 <strong>N8N</strong>，然后再到 <strong>Google sheet</strong>。那我另外一个工作流呢，就是说呃你也可以就是不去嗯不去打电话，你就可以直接的把它就是拿掉就好了，就是直接的的就是跟他去 <strong>book appointment</strong>，然后发 <strong>email</strong> 到我的邮箱，那就是说这个客户跟你就是 <strong>book</strong> 了一个 <strong>appointment</strong>，这样子也可以这样子去做。呃，有很多的，我觉得有很多的，嗯，可以改善可以去尝试的一个地方。嗯，对，就目前是这样子。呃，我这过去的十二周做的事情呢，大概都会在我的就是 <strong>Substack</strong> 里面 <strong>post</strong> 出来，然后可以给大家 <strong>share</strong> 一下。待会儿，嗯，这样子有什么有有什么人有有没有人有问题？我可以。</p>
+<p><strong>Jessica</strong>: 对，大家来解决。有什么问题啊？</p>
+<p><strong>Sophia</strong>: 嗯，我觉得嗯这好棒啊，这个刚才打电话那个这跟真人一样了都。</p>
+<p><strong>Jessica</strong>: 对对对，这 <strong>retail</strong> 其实我觉得就很 amazing，就不是我不是我的设置，这完全是 <strong>retail AI</strong> 的一个功能，就是你可以选择那个 <strong>agent</strong> 去帮你做事，然后有不同的 <strong>agent</strong>，然后有不同的声音，你都可以去选人的，就是挺好玩的，我觉得。</p>
+<p><strong>Sophia</strong>: 可能自己你自己都能做出来一个 <strong>retail agent</strong>，一这个应该是可以实现的。但是就目前先循序渐进嘛，我觉得现在这种已经实现的很好。嗯。好，那谢谢大家，然后感谢那个 <strong>Jessica</strong>，组织了这个这个十二周，然后让我也是从零到一吧。然后应该我们还会有一个下一个十二周。</p>
+<p><strong>Jessica</strong>: 应该是我，我再看一次你的，你的这个事情，还是觉得非常震撼。做的非常好。哎，你可以再把你的 <strong>Substack</strong> 贴出来给大家吗？</p>
+<p><strong>Sophia</strong>: 嗯，我刚才发了出去，但是没有发过去，奇怪。<strong>Something went wrong</strong>。哎，这个不让我发呀。嗯，Anyway，我待会儿我看看是什么问题。</p>
+<p><strong>Jessica</strong>: 可以。你可以私聊给我，后后后面我总结我们的这个直播的时候再放进去。</p>
+<p><strong>Sophia</strong>: OK。</p>
+<p><strong>Jessica</strong>: 好，那感谢大家十二周的学习，还有今天的成果分享。谢谢。能，如果没有其他问题的话，我们今天就到这儿。我看到有我们有观众，我还想问观众有问题吗？我们的观众刚才 <strong>Cleo</strong> 问了一个问题，已经已经回复他了。</p>
+<p><strong>Sophia</strong>: 哦，OK。OK。</p>
+<p><strong>Jessica</strong>: 如果如果如果大家这好，那如果没有什么问题的话，我们就期待下一个十二周大家的分享。嗯，非常非常非常感谢所有的小伙伴，你们好厉害。</p>
+<p><strong>Cindy</strong>: 对啊，大家今天分享的很精彩。哈哈。</p>
+<p><strong>Jessica</strong>: 其实你没有分享很多，我印象中你十二周还完成了很多事情。哈哈。</p>
+<p><strong>Sophia</strong>: 想说就就挑一个，挑一个分享就好了。</p>
+<p><strong>Jessica</strong>: 对，没关系，后后后面还有会。</p>
+<p><strong>Sophia</strong>: 对，我们的大神只出了一成的功力。哈哈哈哈哈。</p>
+<p><strong>Jessica</strong>: 我我们这直播间有观众，我都没看到。我有哦，我看到 <strong>Flash</strong> 也在。是有观众。而且我们是不是有一个？Sorry。</p>
+<p><strong>Sophia</strong>: 嗯哼。我们是不是有一个观众环节？好像我记得我你的 <strong>calendar</strong> 上面还是 <strong>agenda</strong> 上面。</p>
+<p><strong>Jessica</strong>: 对，有一个观众环节，但是刚刚刚刚 <strong>Cleo</strong> 说没有问题啦。</p>
+<p><strong>Sophia</strong>: 嗯嗯。反正我就觉得大家都好厉害，然后也很感谢观看的人。嗯。</p>
+<p><strong>Jessica</strong>: 好，那我们今天就到这儿吧，好吗？</p>
+<p><strong>Sophia</strong>: 嗯。好的，谢谢，谢谢，谢谢，拜拜。</p>
+<p><strong>所有人</strong>: 谢谢大家，拜拜。谢谢，拜拜。拜。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Salesforce" class="entity-link company-link">Salesforce</a>, 
+                
+                  <a href="/search/?q=VisionFlow 899" class="entity-link company-link">VisionFlow 899</a>, 
+                
+                  <a href="/search/?q=GitHub" class="entity-link company-link">GitHub</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Any Gravity" class="entity-link product-link">Any Gravity</a>, 
+                
+                  <a href="/search/?q=OBS" class="entity-link product-link">OBS</a>, 
+                
+                  <a href="/search/?q=Mel Studio" class="entity-link product-link">Mel Studio</a>, 
+                
+                  <a href="/search/?q=N8N" class="entity-link product-link">N8N</a>, 
+                
+                  <a href="/search/?q=Superbase" class="entity-link product-link">Superbase</a>, 
+                
+                  <a href="/search/?q=UpCyan" class="entity-link product-link">UpCyan</a>, 
+                
+                  <a href="/search/?q=Hyperspace" class="entity-link product-link">Hyperspace</a>, 
+                
+                  <a href="/search/?q=Google Sheets" class="entity-link product-link">Google Sheets</a>, 
+                
+                  <a href="/search/?q=Pinterest" class="entity-link product-link">Pinterest</a>, 
+                
+                  <a href="/search/?q=Notion" class="entity-link product-link">Notion</a>, 
+                
+                  <a href="/search/?q=Roto" class="entity-link product-link">Roto</a>, 
+                
+                  <a href="/search/?q=NovoLM" class="entity-link product-link">NovoLM</a>, 
+                
+                  <a href="/search/?q=MBN" class="entity-link product-link">MBN</a>, 
+                
+                  <a href="/search/?q=My Screen" class="entity-link product-link">My Screen</a>, 
+                
+                  <a href="/search/?q=My Moment" class="entity-link product-link">My Moment</a>, 
+                
+                  <a href="/search/?q=Coach AI" class="entity-link product-link">Coach AI</a>, 
+                
+                  <a href="/search/?q=PK Score" class="entity-link product-link">PK Score</a>, 
+                
+                  <a href="/search/?q=内容生产自动化引擎" class="entity-link product-link">内容生产自动化引擎</a>, 
+                
+                  <a href="/search/?q=家庭采购AI助理" class="entity-link product-link">家庭采购AI助理</a>, 
+                
+                  <a href="/search/?q=Tomato Timer" class="entity-link product-link">Tomato Timer</a>, 
+                
+                  <a href="/search/?q=Designing Your Life Dashboard" class="entity-link product-link">Designing Your Life Dashboard</a>, 
+                
+                  <a href="/search/?q=Notion Safe" class="entity-link product-link">Notion Safe</a>, 
+                
+                  <a href="/search/?q=Focus Timer" class="entity-link product-link">Focus Timer</a>, 
+                
+                  <a href="/search/?q=Gratitude Tree Timeline" class="entity-link product-link">Gratitude Tree Timeline</a>, 
+                
+                  <a href="/search/?q=Bob" class="entity-link product-link">Bob</a>, 
+                
+                  <a href="/search/?q=Anna" class="entity-link product-link">Anna</a>, 
+                
+                  <a href="/search/?q=iPhone" class="entity-link product-link">iPhone</a>, 
+                
+                  <a href="/search/?q=TikTok" class="entity-link product-link">TikTok</a>, 
+                
+                  <a href="/search/?q=YouTube" class="entity-link product-link">YouTube</a>, 
+                
+                  <a href="/search/?q=Gamma" class="entity-link product-link">Gamma</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-tools/">ai-tools</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/personal-productivity/">personal-productivity</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">community-learning</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">web-development</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">automation-workflow</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

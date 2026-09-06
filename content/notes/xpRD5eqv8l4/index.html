@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI编码模型新格局：GPT-5.5、Opus 4.7与DeepSeek V4实测深度对比</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="AI编码模型新格局：GPT-5.5、Opus 4.7与DeepSeek V4实测深度对比" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">AI编码模型新格局：GPT-5.5、Opus 4.7与DeepSeek V4实测深度对比</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Best Partners TV</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-05-01
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/best-partners-tv/">Best Partners TV</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=xpRD5eqv8l4" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-05-01
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">SemiAnalysis报告深入揭示AI编码模型市场现状，对比OpenAI GPT-5.5、Anthropic Claude Opus 4.7、DeepSeek V4的真实表现。报告指出传统基准测试已失参考价值，任务成本效率成核心衡量指标。GPT-5.5重回前沿梯队，Opus凭借系列产品仍主导市场，DeepSeek技术虽亮眼但开源与闭源差距正在拉大。未来竞争将聚焦于算力储备、token效率及生态工具完整性。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>大家好，这里是最佳拍档，我是大飞。从今年2月5日 <strong>Claude Code</strong> 迎来拐点之后，整个 <strong>AI编码模型</strong> 市场就好像被按下了加速键一样，几乎每周都有大厂或顶尖实验室发布全新的编码专用模型。一连串的模型名字，如 <strong>Claude Opus</strong>、<strong>Mythos</strong>、<strong>OpenAI Codex</strong>、<strong>Google Gemini</strong>、<strong>DeepSeek</strong>、<strong>Kimi</strong>、<strong>Qwen</strong>、<strong>GLM</strong>、<strong>MiniMax</strong>、<strong>Composer</strong>、<strong>Muse Spark</strong>，让人眼花缭乱，很多人根本分不清这些模型到底谁强谁弱，官方发布的基准测试分数到底能不能信，自己的日常开发到底该选哪一款工具。</p>
+<p>就在25日，<strong>SemiAnalysis</strong> 的几位资深分析师在过去几个月里亲手实测了所有主流头部模型，不仅拿到了 <strong>GPT-5.5</strong> 的阿尔法测试资格，还深度对比了 <strong>Opus 4.7</strong> 和 <strong>DeepSeek V4</strong> 的真实表现，发表了一份长达万字的实测报告。同时，他们还将行业里基准测试的猫腻、模型的定价逻辑以及市场的竞争格局分析得一清二楚。今天，我们就来给大家分享一下，看看智能编码助手的未来方向在哪里。</p>
+<h3>智能编码市场核心结论</h3>
+<p>我们先来给出报告的核心结论：在 <strong>GPT-5.5</strong> 发布之后，<strong>OpenAI</strong> 终于重新回到了 <strong>AI编码领域</strong> 的前沿梯队；而 <strong>Anthropic</strong> 凭借 <strong>Claude Opus</strong> 系列，依然牢牢占据市场的主导地位。开源阵营的 <strong>DeepSeek V4</strong> 虽然技术亮眼，但是已经难以撼动闭源大厂的优势。更重要的是，所有厂商吹嘘的基准测试分数，正在彻底失去参考价值。<strong>按任务计费的成本效率</strong>（Cost Efficiency per Task: 完成特定任务所需的总投入），才是衡量编码模型的真正核心指标。</p>
+<p>接下来，我们来逐个拆解一下三款最具代表性的模型。</p>
+<h3>OpenAI GPT-5.5：重回前沿的颠覆者</h3>
+<p>首先登场的，是本次测评中最具颠覆性的产品：<strong>OpenAI</strong> 的 <strong>GPT-5.5</strong>。这款模型是 <strong>OpenAI</strong> 基于代号为 <strong>Spud</strong> 的全新预训练框架，推出的首个公开发布版本，也是 <strong>OpenAI</strong> 自失败的 <strong>GPT-4.5</strong> 之后，第一次真正意义上的预训练规模升级。</p>
+<p>在 <strong>GPT-5.5</strong> 发布之前，从去年11月 <strong>Opus 4.5</strong> 推出后的半年时间里，<strong>OpenAI</strong> 的编码模型在绝大多数核心指标上都算不上全球顶尖。当时 <strong>SemiAnalysis</strong> 团队的日常开发工具清一色都是 <strong>Claude Opus</strong>。而现在，<strong>GPT-5.5</strong> 已经全面融入了他们的日常工作流，甚至在部分任务上的表现已经实质性超越了市面上所有其他模型。</p>
+<p>分析师团队首先纠正了一个外界广泛传播的错误信息：<strong>英伟达</strong> 和 <strong>OpenAI</strong> 都曾用精准的表述宣称 <strong>GPT-5.5</strong> 是在10万颗 <strong>GB200 NVL72</strong> 集群上完成训练的，但是这个所谓的“训练”仅仅是后训练阶段的强化学习（RL阶段），模型在预训练核心阶段从未达到过这个规模。这只是 <strong>OpenAI</strong> 在宣传上的文字游戏，大家要擦亮眼睛。</p>
+<p>再看大家最关心的定价。<strong>OpenAI</strong> 的模型历来比 <strong>Anthropic</strong> 更加亲民，但 <strong>GPT-5.5</strong> 打破了这个惯例。它的 API 定价为每百万输入 <strong>token</strong> 5美元，每百万输出 <strong>token</strong> 30美元。这个价格是 <strong>GPT-5.4</strong> 的两倍，甚至比 <strong>Anthropic</strong> 的 <strong>Opus 4.7</strong> 还要略高一点。</p>
+<h3>GPT-5.5 的服务模式与技术亮点</h3>
+<p>出于安全层面的考量，<strong>GPT-5.5</strong> 最初只开放了 <strong>ChatGPT</strong> 和 <strong>Codex</strong> 的访问窗口，随后才正式上线 API 接口。<strong>SemiAnalysis</strong> 团队也是在阿尔法测试阶段，通过 <strong>Codex</strong> 和 API 完成了全方位的实测。除了标准版，<strong>OpenAI</strong> 还为 <strong>GPT-5.5</strong> 推出了专属的优先级服务，价格是标准版本的2.5倍。</p>
+<p>这里要区分清楚 <strong>AI</strong> 厂商常用的两种加速服务：分别是<strong>快速模式</strong>（Fast Mode: 提供模糊的性能承诺，如高倍价格换取加速）和<strong>优先级服务</strong>（Priority Service: 提供保守且具体的服务等级协议，如99%时间内的最低输出速度）。目前 <strong>Anthropic</strong> 和 <strong>OpenAI</strong> 都提供这两种服务，但是真正获得市场认可的，只有 <strong>Opus 4.6</strong> 的快速模式。</p>
+<p>另外，<strong>OpenAI</strong> 还同步推出了 <strong>GPT-5.3-Codex-Spark</strong> 模型，这款模型是专门为 <strong>Cerebras</strong> 芯片设计的蒸馏版 <strong>GPT-5.3</strong>。还有面向科研场景的 <strong>GPT-5.5 Pro</strong> 版本，仅通过 <strong>ChatGPT</strong> 和 API 提供服务，主打科学研究和长程推理任务，而非日常的智能编码工作。这款模型在 <strong>BrowseComp</strong> 和 <strong>FrontierMath</strong> 两大基准测试中拿下了当前最优成绩，定价和 <strong>GPT-5.4 Pro</strong> 保持一致，为每百万 <strong>token</strong> 30和180美元，未来大概率会在科学发现领域放出更多重磅成果。</p>
+<p><strong>GPT-5.5</strong> 的标准版和 Pro 版都提供了五档推理强度调节，从 xhigh、high、medium、low 到 non-reasoning，这是一种能力与成本的权衡。从 <strong>OpenAI</strong> 的 <strong>o1</strong> 系列开始，高推理强度就意味着更好的输出效果，但是同时会消耗更多的 <strong>token</strong>、响应速度更慢，这也是所有 <strong>大模型</strong>（Large Language Model: 基于海量文本训练的 AI 系统）的通用规律。</p>
+<p>而 <strong>GPT-5.5</strong> 最核心的技术亮点就是 <strong>token效率</strong>（Token Efficiency: 完成任务所需的token数量与效果的平衡）。<strong>OpenAI</strong> 在模型卡片中明确标注，它在基准测试分数高于 <strong>GPT-5.4</strong> 的同时，<strong>token</strong> 消耗量更低。这个点至关重要，也是 <strong>SemiAnalysis</strong> 团队反复强调的核心逻辑：衡量模型定价的核心指标已经不再是每 <strong>token</strong> 的价格了，而是完成单个任务的总成本。例如，<strong>Mythos</strong> 模型的单 <strong>token</strong> 价格是 <strong>Opus</strong> 的5倍，但是因为它完成任务需要的 <strong>token</strong> 更少，整体成本反而被抵消，甚至端到端响应速度更快。<strong>Token 效率</strong> 将成为2026年 <strong>AI模型</strong> 竞争的核心关键词。</p>
+<h3>Anthropic Claude Opus 4.7：小幅升级与成本隐忧</h3>
+<p>聊完了 <strong>OpenAI</strong> 的 <strong>GPT-5.5</strong>，我们把目光转向它的头号对手 <strong>Anthropic</strong> 的 <strong>Claude Opus 4.7</strong>。<strong>Opus</strong> 系列一直是 <strong>SemiAnalysis</strong> 团队的主力开发工具。<strong>Opus 4.7</strong> 作为 <strong>Opus 4.6</strong> 的直接替代版本，整体属于小幅升级，在多项基准测试中分数有所提升，使用体验也保持了一贯的稳定，但是并没有带来颠覆性的技术突破。团队成员也是勉强接受了这款更新。</p>
+<p>为什么说勉强呢？原因就是 <strong>Opus 4.7</strong> 至今没有推出快速模式。而工程师们已经愿意为了更快的速度牺牲一部分微不足道的质量。2.5倍速度、6倍价格的权衡能让开发者进入真正的心流状态，这是当前编码工具的核心需求之一。</p>
+<p>从 <strong>Opus 4.6</strong> 升级到 <strong>4.7</strong>，用户能感知到的变化更多来自功能层面而非原始性能。现在的头部编码模型已经足够强大，日常开发任务都能完美完成。工程师们的吐槽点已经从功能测试是否通过，变成了代码风格、实现思路、架构设计和 <strong>token</strong> 效率，几乎不会再出现模型完全搞砸代码提交的情况。</p>
+<h3>Opus 4.7 的五大功能更新</h3>
+<p>具体来说，<strong>Opus 4.7</strong> 的核心功能更新有五个，每一个都直接影响使用体验和成本：</p>
+<ul>
+<li>新增了<strong>高分辨率图像支持</strong>：强化学习的训练目标也明显调整，模型可以直接通过截图完成前端样式的开发，不再需要通过无头浏览器或者 <strong>Playwright</strong> 等工具运行程序测试，前端开发的效率大幅提升。</li>
+<li>在推理强度层级中新增了 <strong>xhigh</strong> 的档位，介于 high 和 max 之间，让用户可以更精细地控制模型的推理耗时和能力输出。</li>
+<li>默认隐藏了<strong>思考过程 token</strong>：虽然用户依然需要为这部分 <strong>token</strong> 付费，但是必须主动开启才能查看。<strong>Anthropic</strong> 通过这种方式简化了输出界面，但是也增加了成本的不透明性。</li>
+<li>推出了测试阶段的<strong>任务预算功能</strong>（Task Budget: 用户为模型完成任务设定的效率阈值）：仅支持 API 调用。用户可以给模型建议完成任务的效率阈值，如果预算限制过严，模型会选择简化步骤甚至拒绝执行。这和传统的最大输出 <strong>token</strong> 限制不同，后者是对输出长度的硬性约束，前者是对任务执行效率的柔性建议。</li>
+<li>最关键的变化是<strong>全新的分词器</strong>：<strong>Anthropic</strong> 直接承认，新的分词器通过更细粒度的 <strong>token</strong> 计数提升了性能，但是也导致 <strong>token</strong> 使用量会最多增加35%。这相当于直接涨价35%，是所有用户都无法忽视的成本变化。</li>
+</ul>
+<p>在模型行为上，<strong>Opus 4.7</strong> 默认减少了工具调用的次数，更依赖自身推理完成任务。<strong>SemiAnalysis</strong> 团队实测后并不认可这种调整，需要手动把推理强度从高调到 xhigh 或 max 才能让模型调用足够的工具，完成复杂任务的多步骤规划，这和官方宣传的 <strong>token</strong> 效率优化完全相悖。</p>
+<p>这里还有个事件：在 <strong>Opus 4.7</strong> 发布前，大量用户指责 <strong>Anthropic</strong> 故意降低 <strong>Opus 4.6</strong> 的性能。<strong>Anthropic</strong> 对此坚决否认，但是 <strong>SemiAnalysis</strong> 的多位工程师都明确表示 <strong>4.6</strong> 的性能在那段时间出现了明显异常。直到4月23日，也就是 <strong>Opus 4.7</strong> 发布一周后，<strong>Anthropic</strong> 发布了事后分析报告，承认在3月到4月期间出现了三个影响所有 <strong>Claude Code</strong> 用户的 bug。这些 bug 潜伏了几周才被发现，这也印证了工程师们的直观感受。这三个 bug 的时间窗口分别是3月4日至4月7日、3月26日至4月10日、4月16日至4月20日。作为一款主打编码的 <strong>AI工具</strong>，如此长时间的 bug 未被修复，也侧面暴露了闭源模型的潜在风险。</p>
+<h3>开源阵营DeepSeek V4：技术亮眼，差距犹存</h3>
+<p>接下来我们再来聊聊开源阵营的扛把子 <strong>DeepSeek V4</strong>。<strong>DeepSeek</strong> 在去年凭借 <strong>R1</strong> 版本惊艳全球，也引发了行业对开源模型是否会让人工智能商品化的激烈讨论，甚至引发了 <strong>GPU</strong> 短缺的连锁反应。而这次发布的 <strong>V4</strong> 版本，分为 <strong>Pro</strong> 和 <strong>Flash</strong> 两个型号，虽然没有再次颠覆市场，但是技术实力依然不容小觑。</p>
+<p>先看参数架构：<strong>DeepSeek V4 Pro</strong> 总参数1.6万亿，激活参数490亿；<strong>V4 Flash</strong> 总参数2840亿，激活参数130亿。对比上一代 <strong>V3</strong> 的6710亿总参数、370亿激活参数，<strong>Pro</strong> 版本实现了升级，<strong>Flash</strong> 版本则是轻量化降级。但是客观来说，无论是总参数还是激活参数，<strong>DeepSeek V4</strong> 和 <strong>OpenAI</strong>、<strong>Anthropic</strong> 的闭源前沿模型相比，依然存在明显的差距。</p>
+<p><strong>V4</strong> 相比 <strong>V3</strong> 最核心的突破是把上下文窗口从128k直接提升到100万 <strong>token</strong>。所有技术创新都围绕<strong>长上下文性能</strong>（Long Context Performance: 模型在处理长文本输入时的理解和生成能力）展开，包括<strong>压缩稀疏注意力 CSA</strong>（Compressed Sparse Attention）、<strong>重压缩注意力 HCA</strong>（Heavily Compressed Attention）、<strong>流形约束超连接 mHC</strong>（Manifold Constrained Hyperconnection）三项核心技术。</p>
+<p>官方数据显示，在100万 <strong>token</strong> 上下文场景下，<strong>V4 Pro</strong> 的单 <strong>token</strong> 推理浮点运算量仅为 <strong>V3.2</strong> 的27%，<strong>KV缓存</strong> 占用仅为10%，90%的 <strong>KV缓存 reduction</strong>，甚至比谷歌之前发布的 <strong>TurboQuant</strong> 论文效果还要惊艳。这对存储行业的影响值得关注。</p>
+<p>在基准测试方面，<strong>DeepSeek</strong> 认为传统基准无法衡量真实任务能力，因此自研了智能编码、中文写作、检索增强搜索、长周期白领任务等专属基准。<strong>V4 Pro</strong> 虽然在这些任务中能和头部模型抗衡，但是在核心领域依然落后。例如，在<strong>高难度中文写作任务</strong>中，<strong>Claude Opus 4.7</strong> 的表现依然优于 <strong>DeepSeek V4 Pro</strong>。这是一个很有意思的现象：海外模型在中文任务上反而超越了本土开源模型。</p>
+<h3>DeepSeek V4 的技术开源与推理性能</h3>
+<p>技术层面，<strong>DeepSeek V4</strong> 开源了模型权重和详细技术报告，还更新了 <strong>DeepEP</strong>、<strong>DeepGEMM</strong>、<strong>FlashMLA</strong> 等被全球实验室广泛使用的库。甚至在 <strong>DeepGEMM</strong> 中开源了支持 <strong>英伟达 GPU</strong> 和 <strong>华为昇腾 NPU</strong> 的超级内核。虽然目前只公开了 <strong>NVIDIA Hopper</strong> 和 <strong>Blackwell</strong> 架构的代码，但是未来大概率会让大量推理任务运行在昇腾芯片上。</p>
+<p>推理性能方面，<strong>SemiAnalysis</strong> 的 <strong>InferenceX</strong> 团队联合 <strong>vLLM</strong>、<strong>Inferact</strong> 和 <strong>NVIDIA</strong> 的工程师，在 <strong>H200</strong> 集群上实现了 <strong>V4</strong> 的首日支持。<strong>FP8精度</strong> 下，单 <strong>GPU</strong> 吞吐量约为每秒150个 <strong>token</strong>，交互速度为每秒20个 <strong>token</strong>。而 <strong>V3</strong> 的吞吐量为每秒1300到2300 <strong>token</strong>。作为一款全新模型，<strong>V4</strong> 还有很大的优化空间。</p>
+<p>总结来看，<strong>DeepSeek V4</strong> 是一次极其出色的工程化发布，紧跟前沿水平，是闭源模型之外成本最低的选择。但是核心能力依然没有达到全球顶尖，<strong>SemiAnalysis</strong> 自己的核心工作流也不会被 <strong>DeepSeek</strong> 替代。开源和闭源的差距，正在重新拉大。</p>
+<h3>实测对比：Codex与Claude Code的用户体验</h3>
+<p>拆解完三款核心模型的技术细节，接下来进入最精彩的实测对比环节：<strong>GPT-5.5</strong> 对应的 <strong>Codex</strong> 和 <strong>Opus 4.7</strong> 对应的 <strong>Claude Code</strong>，到底谁更好用呢？</p>
+<p><strong>SemiAnalysis</strong> 团队向来更推崇 <strong>Claude</strong>。在 <strong>GPT-5.5</strong> 阿尔法测试期间，他们把两款模型放在同一场景下极限对比，得出的结论非常客观：<strong>GPT-5.5</strong> 在 <strong>Codex</strong> 插件场景下实现了显著提升。此前团队工程师全部使用 <strong>Claude</strong>，<strong>ChatGPT</strong> 编码只限于 <strong>Cursor</strong> 等工具。而现在，大部分工程师会根据任务类型和 <strong>IDE</strong> 偏好，在 <strong>Codex</strong> 和 <strong>Claude</strong> 之间切换。</p>
+<p>有工程师表示，<strong>Codex</strong> 最让人满意的点是在修改代码前会拉取大量上下文信息。不是简单的结构调整，而是需要深度思考的复杂修改。而 <strong>Opus 4.7</strong> 往往只是快速浏览代码后就直接修改，缺乏对细节上下文的挖掘。还有工程师明确自己会用 <strong>Codex</strong> 做代码审查、bug 排查、代码解释、文档创建与修改，它对代码结构的理解和推理能力更出色。</p>
+<p>但是 <strong>GPT-5.5</strong> 的缺点也很明显：它对用户真实意图的推断能力不如 <strong>Claude Code</strong>。人类在给编码智能体发指令时往往简洁且不严谨，<strong>Codex</strong> 会过于字面化地执行指令，而 <strong>Claude</strong> 能更好地理解背后的真实需求。同时，<strong>GPT-5.5</strong> 在代码修改时过于保守，虽然提升了 <strong>token</strong> 的效率，但是牺牲了准确性，输出中出现“narrow fix”时必须人工二次检查。</p>
+<p>团队还做了一个极端测试：让 <strong>Opus 4.6</strong> 和 <strong>GPT-5.5</strong> 分别基于现有 <strong>token</strong> 经济学仪表板创建新的加速器模型仪表板。结果 <strong>Opus 4.6</strong> 完美复刻了包含所有标签页链接的主页，而 <strong>Codex</strong> 则完全忽略了主页设计，除非在提示词中明确要求复制主页，否则无法自主推断这个需求。但是在仪表板的数据准确性上，<strong>Codex</strong> 远优于 <strong>Claude</strong>。<strong>Claude</strong> 甚至出现了在 <strong>TPU</strong> 图表中加入 <strong>NVIDIA GPU</strong> 的幻觉问题。这说明 <strong>Codex</strong> 更擅长<strong>复杂数据结构的推理</strong>（Complex Data Structure Reasoning: 理解和处理复杂数据关系的能力）和<strong>窄范围高难度任务</strong>（Narrow-Scope High-Difficulty Tasks: 针对特定领域内复杂问题的解决）。<strong>Claude</strong> 更擅长<strong>开放式、从零到一的全新项目开发</strong>（Open-Ended, Green-Field Development: 从概念开始构建全新项目）。</p>
+<p>基于这个结论，工程师们形成了全新的工作流：先用 <strong>Claude</strong> 完成新应用、新功能的初始规划和框架搭建，完成第一个版本的原型开发；再切换到 <strong>Codex</strong> 解决具体问题、修复 bug。而在 <strong>GPT-5.5</strong> 发布之前，团队全程都使用 <strong>Claude</strong> 完成这两个步骤。</p>
+<p>除此之外，<strong>OpenAI</strong> 还有一个致命的短板，那就是插件和命令行工具的功能落后。工程师们普遍需要100万上下文的快速模式、远程控制、沙盒插件，实现电脑和手机的跨设备会话。这些功能 <strong>Claude Code</strong> 的命令行、<strong>VSCode</strong> 插件、网页端、移动端全部支持，而 <strong>Codex</strong> 的所有端侧工具都不具备这些能力。即便 <strong>GPT-5.5</strong> 模型本身足够优秀，<strong>OpenAI</strong> 也需要加快功能迭代才能追上 <strong>Anthropic</strong> 的生态优势。</p>
+<h3>戳破AI基准测试的泡沫：价值与陷阱</h3>
+<p>聊完模型的真实体验，我们再来戳破整个 <strong>AI</strong> 行业最大的泡沫——<strong>基准测试</strong>（Benchmark Test: 衡量模型性能的标准测试集）。几乎每一款新模型发布，厂商都会贴出一张满是高分的基准测试对比表，用看似客观的数字证明自己的模型全球第一。但是 <strong>SemiAnalysis</strong> 团队明确指出，基准测试已经无法代表模型的真实实用价值了。虽然所有厂商依然会乐此不疲地宣传，但我们要做的就是学会从数字中筛选有效信息，避开所有陷阱。</p>
+<p>一个完整的基准测试由三个部分组成：</p>
+<ul>
+<li><strong>任务</strong>：模型要完成的具体操作。</li>
+<li><strong>评估方式</strong>：模型的打分标准。</li>
+<li><strong>工具套件</strong>：模型完成任务的工具、指令、交互界面。</li>
+</ul>
+<p>只有理解前两个要素，才能判断基准测试是否有价值。</p>
+<p>我们先看最经典的通用基准测试：2020年发布的 <strong>MMLU</strong>（Massive Multitask Language Understanding: 大规模多任务语言理解测试），包含57个学科、15908道多选题，是早期 <strong>AI模型</strong> 的核心测试标准。其 <strong>harness</strong>（测试框架）极简，不支持网页搜索等工具，评分只需要看选项是否正确。2023年 <strong>GPT-4</strong> 就达到了86.4%的正确率，基本饱和，而且研究显示 <strong>MMLU</strong> 中有6.49%的题目本身存在错误。后续的 <strong>GSM8K</strong>、<strong>HellaSwag</strong>、<strong>MMMU</strong>、<strong>GPQA</strong> 等基准也都面临同样的问题。厂商只能通过筛选难题、增加选项、提高难度，推出 <strong>MMLU-Pro</strong>、<strong>MMMU-Pro</strong> 等升级版维持测试价值。</p>
+<p>2025年1月 <strong>Scale AI</strong> 发布的人类终极考试 <strong>HLE</strong>，邀请全球1000多位专家创建2500道题，80%是精准短答案，20%是多选题，支持网页搜索、代码执行工具。但是问题也很明显，那就是题目不代表真实使用场景。30%的化学生物题答案和同行评审文献冲突。可 <strong>谷歌</strong> 依然在2025年投入九位数预算，专门针对 <strong>HLE</strong> 的 <strong>STEM</strong> 题目优化模型，只为拿到高分向投资人交差。</p>
+<h3>编码基准与智能体基准的局限性</h3>
+<p>再看编码领域最核心的基准测试 <strong>SWE-bench</strong>。2023年发布的初代 <strong>SWE-bench</strong> 从 <strong>django</strong>、<strong>scikit-learn</strong> 等12个 <strong>Python</strong> 仓库自动抓取任务，没有任何人工验证。<strong>GitHub</strong> 需求描述模糊、测试用例不全面，导致很多正确答案被误判，错误答案被通过，甚至出现任务描述没提、测试却要求精准匹配19个单词错误信息的荒唐情况。</p>
+<p>2024年8月 <strong>OpenAI</strong> 推出 <strong>SWE-bench verified</strong>，雇佣93名 <strong>Python</strong> 开发者人工审核，把2294个任务精简到500个，加入代码执行工具，用 <strong>Docker</strong> 容器提升稳定性。但是依然存在问题：不仅超过一半的难题依然存在评估不公，而且所有任务都来自开源仓库，模型存在<strong>训练数据污染</strong>（Training Data Contamination: 模型在训练过程中接触到测试数据，导致评估结果失真）的问题。</p>
+<p>2026年2月，<strong>OpenAI</strong> 宣布不再上报 <strong>verified</strong> 成绩，转而推荐 <strong>SWE-bench pro</strong>。后者使用更严格授权的开源仓库和私有仓库避免污染，雇佣开发者编写任务和评估，但是依然没有彻底解决所有问题。除了 <strong>SWE-bench</strong> 系列，编码基准还有多语言版本、<strong>Terminal-bench</strong>、<strong>NL2Repo</strong> 等等，各有局限，但依然是厂商宣传的核心依据。</p>
+<p>最后是<strong>智能体基准测试</strong>（Agent Benchmark: 评估 AI 智能体在复杂、多步骤任务中表现的测试）。最具代表性的是 <strong>OpenAI</strong> 2025年9月发布的 <strong>GDPval</strong>，覆盖44种职业的真实经济价值任务。它雇佣各行业专家编写任务、示例方案和评分规则，支持办公软件、<strong>CAD</strong> 工具、网页搜索、代码执行，甚至模拟日历、邮件、云盘等真实环境，用人类专家评分，比传统基准更贴近真实工作。但是依然存在提示词过于明确、缺乏真实场景的模糊性以及单轮对话无反馈迭代等问题。</p>
+<p>而厂商在基准测试上的猫腻远比我们想象的更多。例如，<strong>OpenAI</strong> 发布 <strong>GPT-5.4</strong> 时，几乎没有加入任何基准测试，也没有和 <strong>Anthropic</strong> 模型对比，因为当时 <strong>GPT-5.4</strong> 会被 <strong>Opus 4.6</strong> 全面碾压。而 <strong>GPT-5.5</strong> 发布时，重新加入了 <strong>Claude</strong> 和 <strong>Gemini</strong> 的对比，却刻意避开了 <strong>OpenAI</strong> 自己主推的 <strong>SWE-bench pro</strong>，改用自定义的 <strong>Expert-SWE</strong> 基准。原因很简单：<strong>GPT-5.5</strong> 在 <strong>SWE-bench pro</strong> 上的成绩远不如 <strong>Opus 4.7</strong>，更比不上未公开的 <strong>Mythos</strong> 模型。</p>
+<p>还有一个关键误区：很多人认为用统一的工具套件测试才是公平对比。但是 <strong>SemiAnalysis</strong> 通过实测发现，工具套件本身就是产品的一部分。用户关心的是 <strong>Codex</strong> 和 <strong>Claude Code</strong> 的整体体验，而非单纯的 <strong>GPT-5.5</strong> 和 <strong>Opus 4.7</strong> 模型本身。而且工具套件直接决定了任务成本：提示词缓存、输入输出比以及工具的调用模式都和 <strong>token</strong> 效率强相关。初步数据显示，<strong>Codex</strong> 的输入输出比为80:1，<strong>Claude</strong> 为100:1。更高的输入输出比看似单 <strong>token</strong> 更贵，但是整体 <strong>token</strong> 消耗更少，最终任务成本更低。</p>
+<h3>智能编码战争的未来格局</h3>
+<p>最后，我们来预判一下智能编码的战争，最终谁能赢呢？当前的格局显然是 <strong>OpenAI</strong> 和 <strong>Anthropic</strong> 的双雄争霸，其他玩家暂时无法撼动。<strong>DeepSeek V4</strong> 的发布足够惊艳，但是开源和闭源的差距正在重新拉大。<strong>SpaceXAI</strong> 在收购 <strong>Cursor</strong> 后，有机会冲击第三名，但是需要奇迹才能超越前两位。<strong>谷歌</strong> 有足够的资源，只要强化学习团队发力，可能带来惊喜，但是目前依然落后。<strong>Meta</strong> 的 <strong>Muse Spark</strong> 刚刚入局，还处于追赶状态。</p>
+<p>市场份额层面，只有 <strong>Anthropic</strong> 和 <strong>OpenAI</strong> 拥有实质性的市场占有率。<strong>Windsurf</strong>、<strong>Cognition</strong>、<strong>Replit</strong>、<strong>Vercel V0</strong> 等主打编码的创业公司，即便收入几个月增长3倍，也只是模型的封装工具，毛利率为负。所有公司的年度经常性收入加起来只有几十亿美元。而 <strong>Anthropic</strong> 的估值从90亿美元暴涨到400亿美元，核心驱动力就是 <strong>Claude Code</strong> 的智能编码业务。</p>
+<p>今年年初，所有人都无法想象 <strong>Anthropic</strong> 会超越 <strong>OpenAI</strong>。但是现在，抛开云服务商收入分成的会计差异，<strong>Anthropic</strong> 的年度经常性收入已经在可比口径下超过了 <strong>OpenAI</strong>，成为智能编码领域的绝对领导者。而且 <strong>Anthropic</strong> 的收入质量更高，70%来自 API 调用，随着部署规模增长。而 <strong>OpenAI</strong> 依赖免费的消费端产品，用户基数大但是商业化的效率更低。</p>
+<p>不过，<strong>OpenAI</strong> 的红色警报即将结束。<strong>GPT-5.5</strong> 让它重新回到前沿水平。而全球算力紧缺，成为 <strong>OpenAI</strong> 守住市场的关键。<strong>Anthropic</strong> 正在疯狂地抢购算力，导致 <strong>H100</strong> 租赁价格持续飙升。但是今年全球的算力增量有限，<strong>Anthropic</strong> 的 <strong>AGI</strong>（Artificial General Intelligence: 人工通用智能，具备人类级别或超越人类级别智能的 AI 系统）研发路线让它不会把超过50%的算力用于用户服务。同时，<strong>Anthropic</strong> 还在通过涨价、降低峰值速率、移除订阅版 <strong>Claude Code</strong>、封禁第三方工具等方式，把算力转向高毛利业务，逐渐成为 <strong>AI领域</strong> 中类似依云一样的高端水品牌。这部分被高价劝退的用户，就是 <strong>OpenAI</strong> 的机会。</p>
+<p>未来的竞争，不再是基准分数的内卷，而是<strong>算力储备</strong>（Compute Resource Reserves: 可用于训练和运行 AI 模型的大规模计算资源）、<strong>token效率</strong>、<strong>生态工具</strong>（Ecosystem Tools: 围绕核心模型构建的插件、命令行、IDE 集成等周边工具）、<strong>定价策略</strong>（Pricing Strategy: 模型服务的费用结构和收费方式）的综合比拼。闭源模型会持续拉开和开源的差距，封装型创业公司的生存空间会越来越小，只有<strong>模型 + 工具套件的完整产品</strong>（Integrated Model and Tooling Product: 结合核心模型与配套工具链提供完整解决方案的产品）才能在市场上立足。</p>
+<p>对于我们普通用户和开发者来说，需要注意的是不要再被厂商的基准测试分数忽悠，而是要关注真实的使用体验、完成任务的成本效率、生态工具的完整性。这些才是选择编码助手的核心标准。不论如何，智能编码的这场战争，才刚刚开始。感谢收看本期视频，我们下期再见。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, 
+                
+                  <a href="/search/?q=SemiAnalysis" class="entity-link company-link">SemiAnalysis</a>, 
+                
+                  <a href="/search/?q=DeepSeek" class="entity-link company-link">DeepSeek</a>, 
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>, 
+                
+                  <a href="/search/?q=NVIDIA" class="entity-link company-link">NVIDIA</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=GPT-5.5" class="entity-link product-link">GPT-5.5</a>, 
+                
+                  <a href="/search/?q=Claude Opus 4.7" class="entity-link product-link">Claude Opus 4.7</a>, 
+                
+                  <a href="/search/?q=DeepSeek V4" class="entity-link product-link">DeepSeek V4</a>, 
+                
+                  <a href="/search/?q=GPT-5.3-Codex-Spark" class="entity-link product-link">GPT-5.3-Codex-Spark</a>, 
+                
+                  <a href="/search/?q=GPT-5.5 Pro" class="entity-link product-link">GPT-5.5 Pro</a>, 
+                
+                  <a href="/search/?q=Mythos" class="entity-link product-link">Mythos</a>, 
+                
+                  <a href="/search/?q=Codex" class="entity-link product-link">Codex</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-coding/">ai-coding</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/large-language-model/">large-language-model</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">benchmark-testing</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/token-efficiency/">token-efficiency</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/market-competition/">market-competition</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

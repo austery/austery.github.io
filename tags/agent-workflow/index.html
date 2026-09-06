@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="container" data-pagefind-ignore>
+
+<div class="home-layout">
+
+<h1>标签：agent-workflow</h1>
+
+<ul><li>
+      
+      <a href="/content/clippings/2026-09-01_httpsyag_claudeforce-pipes-not-products-20260901-html/">管道不是产品：Salesforce
+把同一套接口发了两次，只有一次有人理</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-09-01T00:00:00.000Z">
+          9/1/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了软件厂商在为 AI agent 时代提供接口时，从最初的裸露接口（如 Salesforce 的 Headless 360）到最终封装成完整产品（如 Salesforce in Claude）的演进过程。核心观点是，真正促成企业采用的关键不在于底层接口本身，而在于对业务语义的深度封装、管理运维的整装打包以及终端分发的深度绑定，这三层能力构成了 agent 时代软件落地的最小采用单元。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-08-27_httpsyag_grok-bot-context-engineering-20260827-html/">Grok Bot 泄露：为什么 agent 的 system prompt
+必须冻结</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-08-27T00:00:00.000Z">
+          8/27/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章深入探讨了 Grok Bot 源码泄露后，在 Agent 系统设计中如何管理 system prompt 的稳定性与动态性。核心思想是，将 system prompt 视为需要显式管理失效边界的工程对象，并提出了‘稳定’（冻结到 compaction 边界）、‘追加’（append-only 序列化）、‘外置’（超过 12KB 的内容写到文件系统）等六条纪律，以平衡模型性能、运行成本和上下文容量。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-08-15_httpsyag_simulator-collapse-deepseek-harness-20260815-html/">同一个模型差 20 分：DeepSeek 的 harness
+依赖性和合成数据的隐藏天花板</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-08-15T00:00:00.000Z">
+          8/15/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了同一个模型在不同运行环境（harness）下表现剧烈波动的现象，揭示了模型性能高度依赖于其所处的特定环境。通过分析 DeepSeek 的测试结果和相关研究，文章指出模型性能的瓶颈不再是模型本身的能力，而是训练环境的行为分布的宽度，即 &#39;simulator collapse&#39; 机制。作者认为，解决这一问题的关键在于拓宽训练环境的行为分布，而非简单地升级测试容器，并提出了通过引入 Verbalized Sampling 和 Co-Training 等方法来增强环境反馈多样性的改进路径。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-08-12_httpsyag_ai-math-acceptance-staircase-20260812-html/">一份通过检查的证明，为什么在 5 天后补写了 4 页？当 AI
+逼出做完的真相</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-08-12T00:00:00.000Z">
+          8/12/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了在AI生成研究成果（如形式化证明代码）中，机器检查通过并不等同于任务完成的观点。作者通过数学界专家的反馈，阐述了从代码生成到人类理解、阐释和同行复用的多级验收阶梯，并提出了针对AI研发工作流的工程设计原则，强调需要建立清晰的解耦验收机制，以区分代码的语法正确性与逻辑的深度对齐。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-07-29_httpsyag_agentic-multi-model-routing-20260729-html/">多模型路由进入 Agent 会话之后</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-07-29T00:00:00.000Z">
+          7/29/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/pai/" class="area-badge-inline">
+              🌐 PAI
+            </a>
+          
+          
+            <a href="/categories/ai-workflow/" class="category-badge-inline">
+              🏷️ ai-workflow
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了多模型路由（Model Routing）在Agent连续对话和工具调用场景中的智能难题与工程瓶颈。核心问题在于，当路由从单轮问答扩展到多轮会话时，系统需要重构认知视野以理解完整任务进度，并面临历史格式不兼容、缓存失效以及隐式状态迁移等工程限制。文章提出了固定强模型、隔离子任务和有状态路由三种分化的工程路线作为应对困境的解决方案。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-07-15_httpsyag_codex-subagent-transparency-20260715-html/">Codex 仍然开源，但父 agent 给子 agent
+说了什么，现在看不见了</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-07-15T00:00:00.000Z">
+          7/15/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 OpenAI 在 Codex 开源仓库中合并了一项改动，导致主 agent 发送给子 agent 的任务指令不再以明文形式保存在本地会话记录中，而是被加密为密文。这使得用户在排错时，无法直接看到具体任务的上下文，仅能看到密文。这种变化反映了模型内部状态（如 reasoning 和 compaction）与外部交互信息之间的透明度边界正在向更深层、更受保护的方向移动。</small>
+      
+
+      
+      
+    </li></ul>
+
+</div>
+
+</div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

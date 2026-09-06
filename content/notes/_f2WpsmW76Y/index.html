@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>从Vercel的agentic转型看软件工程的未来</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="从Vercel的agentic转型看软件工程的未来" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">从Vercel的agentic转型看软件工程的未来</span>
+      <span data-pagefind-meta="speaker" style="display:none;">The Pragmatic Engineer</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-03-06
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/the-pragmatic-engineer/">The Pragmatic Engineer</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=_f2WpsmW76Y" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-03-06
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">Vercel的CTO分享了公司在开发内部数据agent DZero和面向公众产品V0过程中的经验，强调了在AI时代软件开发范式快速演变中的适应性。讨论了从传统工具链向极简、声明式智能体架构的转变、产品市场契合度的动态调整、组织文化中“乐观锁”式的发布模式，以及AI对研发团队构成和软件市场弹性的深远影响，并预测了智能体在软件维护中的关键作用。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>编码智能体时代：Vercel的变革之路</h3>
+<p>在当前的软件开发浪潮中，<strong>编码智能体</strong>（Coding Agents）的兴起正以前所未有的速度重塑行业格局。Vercel的CTO指出，与以往的“革命性”时刻不同，这一次，我们必须在不断变化的底层基础之上进行构建。Vercel通过其内部数据智能体<strong>DZero</strong>和面向公众的产品<strong>V0</strong>，展现了公司如何在持续变革的环境中保持创新与适应。对于Vercel而言，一个核心的理念是：<strong>构建智能体</strong>（Building Agents）实际上极其简单，无需外部购买，完全可以自主开发。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Malta, thanks for having the conversation with us today. Um, this time it feels different when it comes to coding agents. I think there have been times in the past where, you know, it it felt like it was uh a little revolutionary, but I think this time we're all trying to figure out how we are supposed to build while the ground underneath us is shifting. And so super happy to be speaking with you today. I think that with your products uh DZ your internal data agent and then Verscell V0 as well your public facing thing um you've you've been able to roll with the punches and and be able to build and and create products as the world has changed around us. Let's start with DZ your internal uh data agent. What was your first approach there and why did it turn out to be so flawed? &gt;&gt; Yeah, to give folks a little bit of context like the thing that makes Versell strong is that we always build things with our own technology and like one of our thesis is that like building agents actually extremely easy and you don't need to buy them. You can just build them yourself.</p>
+</details>
+<h3>DZero的演进：从复杂工具链到极简声明式架构</h3>
+<p>Vercel内部的<strong>DZero</strong>是一个<strong>文本转SQL引擎</strong>（Text-to-SQL Engine）。用户只需在Slack中提出任何问题，DZero便能访问整个<strong>Snowflake</strong>数据仓库（受用户权限限制）并返回答案。一个有趣的案例是，销售人员曾询问：“哪些S&amp;P 500公司的CTO和工程副总裁拥有私有Vercel账户并在圣诞节期间进行了部署？”要在没有智能体辅助的情况下手动查询此类信息，需要进行大量研究（如LinkedIn），并最终构建复杂的SQL查询，这“非常非常困难”。</p>
+<p>DZero的初始版本采用了<strong>传统工具链</strong>（Traditional Infrastructure），即“<strong>工具循环</strong>”（Tools in a Loop）模式，集成了多种工具来执行不同任务。尽管并非完全无效，但效果并不“神奇”。 Vercel最终选择抛弃一切，转向一种类似于<strong>编码智能体</strong>（Coding Agent）的架构。虽然它仍是<strong>定制化编码</strong>（Custom Coded），没有使用如<strong>Claude Code</strong>之类的<strong>代理框架</strong>（Harness），但其核心理念一致。</p>
+<p>其架构的关键在于，Vercel团队投入大量精力遍历了整个Snowflake数据库，为每个列<strong>解释其商业价值</strong>（Explaining the Business Value），并将这些解释导出为YAML文件。智能体被告知，它已<strong>后训练</strong>（Post-trained）了类似GP（可能指GPT）和Tailwind（可能是指Tailwind CSS，这里代指某种特定技术栈）的编码能力，可以利用这些YAML文件理解业务语义，并生成SQL查询。最终，DZero仅包含两个工具：一个用于Bash操作，一个用于执行SQL，整个智能体只有约50行代码，但对业务产生了<strong>颠覆性</strong>（Transformational）影响。</p>
+<details>
+<summary>Original English Source</summary>
+<p>And so we build one ourselves and so the the agent that we call DZero internally is a is a text of SQL engine. So you you give it any question in Slack and it will reply with the answer and it has access to our entire snowflake kind of subject to the to the access rules of the of the user. Right? And so um I I'll share one query which I think is the funniest one. It's a salesperson. You'll hate it all. Um so this early this year they um this person asked the following question. uh which S&amp;P 500 CTOs and VPs of engineering have private Versel accounts and have deployed over Christmas. So presumably they got like an email or a call. I don't know. But like I think like that's like if like actually finding that from I mean obviously you have to do a little bit of research. You have to go to LinkedIn etc. The agent does as well but then eventually you kind of figure out the right snowflake query. It's it's very very difficult right? Um, and so the the initial version of this agent was kind of this kind of traditional infrastructure where you have, you know, the agent is a tools in a loop type of thing. Has all kinds of different tools to do all kinds of different things. Um, and it wasn't like it was working badly, but it was, you know, maybe not as magical. And then we deleted everything and switched to like an agent that looks very similar to a coding agent. Now it's it's it's still kind of custom coded like it doesn't use for example cloud code as a harness uh because again building such a harness is actually really easy and you can just do it. Um but otherwise it kind of looks the same way. So the the the the general architecture is that we did the work of going through our entire snowflake and for every single column in pros explaining the business value, right? And that gets exported to a YAML file. And the the agent essentially gets told, you know, you got post-trained on using GP on tail and and all these things, right, that you need for coding and go to go to town on these YAML files to figure out the business semantics of everything. And then you make a SQL query. Um, for that it has a completely different custom tool and that's it. So there's just two tools. There's the bash tool and there's the SQL execute SQL tool. and and that's the entire agent. So, it has like 50 lines of code. Um and and it's completely transformational for the business.</p>
+</details>
+<h3>智能体开发的谦逊哲学与快速迭代</h3>
+<p>“为什么会选择推翻一切从头开始？”面对这个问题，Vercel CTO强调了在<strong>智能体</strong>（Agents）世界中的<strong>谦逊</strong>（Humble）姿态。由于该领域仍处于早期探索阶段（智能体技术至今可能仅有三年发展历史），去年被奉为<strong>最佳实践</strong>（Best Practice）的方法在今天可能已不再适用。与网站开发历经30年演进，方法论相对成熟不同，智能体领域需要我们<strong>敢于承认存在更好的方案</strong>（Entertain the Notion that Maybe There's Actually Now a Better Way to Do It）。</p>
+<p>这种迭代速度与<strong>模型智能化程度的提升</strong>（Models Getting More Intelligent）成正比。如今，构建<strong>完全依赖涌现行为</strong>（Fully Relying on the Emergent Behavior）的智能体变得更加可行，因为模型本身足够强大，从而使得智能体设计更加<strong>简洁</strong>（Simple），减少了繁琐的<strong>提示工程</strong>（Prompting）和硬编码规则。Vercel通过采用<strong>声明式模型</strong>（Declarative Model），将数据用“纯英文”描述，然后让智能体去“处理”，实现了效率的飞跃。</p>
+<details>
+<summary>Original English Source</summary>
+<blockquote>
+<blockquote>
+<p>What led you to understand that you needed to throw everything away? Cuz I feel like you go and you build all of this this code and it's it's just so hard to light it on fire and then start from from scratch again. &gt;&gt; Yeah. I think like I think in the in the world of agents, you have to be humble in the sense of like we're just discovering how to build them. And so just because something was best practice like in the summer of 2025 means quite little today and like that's different from like I don't know if you've built a website you know it's been 30 years and we kind of know how to do it but on you know agents are in their maybe third year for real if at all right um and so you have to be willing to entertain the notion that yeah maybe there's actually now a better way to do it and like it's kind of proportional to the models getting more intelligent so you And it's more viable now to have agents that are essentially it's fully relying on the emergent behavior and and respectively um are more simple because you don't have to prompt them so much. You don't have to hard code so many rules. &gt;&gt; Uh on the Verscell blog you had a uh a post it was titled I think all you need is the file system in bash. Is that is something like that? And so you just took a complete step backwards and and described what the the data was in in plain English and sort of like you just step back and let it cook and and move to a much more declarative model with everything, &gt;&gt; right? Yeah. The intuition is that you kind of you have to think about like what was the model trained on like what what what is it optimized on? And for now there's lots of coding tasks, right? And it'll change in the future. And so if you can make things look like like they're a coding task even though they're not um then you can uh you have you get disproportional good results.</p>
+</blockquote>
+</blockquote>
+</details>
+<h3>V0的多次“觉醒”：从前端工具到全民应用</h3>
+<p>Vercel的<strong>V0</strong>产品在发布之初（2023年）的定位是“任何人都应能创建应用，即便非工程师也能进行原型开发”。最初，团队认为它是一个面向<strong>前端工程师</strong>（Front-end Engineers）的工具，为自身需求而建。然而，他们很快意识到V0真正赋能的是<strong>后端工程师</strong>（Backend Engineers），尽管当时的产品可靠性不足，经常无法正常工作。在<strong>GPT-3.5</strong>和<strong>GPT-4</strong>时代，只有后端工程师能够修复其输出。</p>
+<p>V0的第一个“<strong>哦</strong>”时刻发生在2023年夏天。当时，LLM（大型语言模型）主要用于生成文本。团队认为它们应该能生成网页。当一个中国工程师在旧金山办公室偶然将Prompt改为“Use <strong>Tailwind</strong>”时，V0的生成能力得到了质的飞跃。由于Tailwind CSS在<strong>GPT-3.5</strong>的训练数据中已经存在足够久，模型在<strong>内联推理</strong>（Inline Reasoning）方面表现出色，能够将样式和HTML代码放在同一个地方，从而生成高质量的产品级页面，而不是此前<strong>不尽人意</strong>（Subpar）的输出。这使得V0首次成为<strong>可行</strong>（Viable）的产品。</p>
+<p>第二个重要的“<strong>战略转向</strong>”（Pivot）是V0将目标用户从开发者扩展到<strong>技术邻近人员</strong>（Tech-Adjacent），如PM、设计师、产品负责人和业务人员。他们发现了一个新的<strong>产品市场契合</strong>（Product Market Fit），即企业内部的<strong>影子IT</strong>（Shadow IT）应用场景——业务人员为自身需求构建内部应用。随着<strong>Anthropic</strong>发布<strong>Sonnet 3.5</strong>等更强大的模型，相同的Prompt现在可以构建<strong>全栈应用</strong>（Full Stack Apps），这在过去是无法想象的。模型的进步迫使Vercel不断调整产品策略，以适应这个快速变化的世界，使得非工程师也能成功构建端到端应用。</p>
+<details>
+<summary>Original English Source</summary>
+<blockquote>
+<blockquote>
+<p>How many CEOs and CTOs in the Fortune 500 are using Versell on their personal accounts? &gt;&gt; I I don't have the precise number. It was pretty substantial. &gt;&gt; Okay. &gt;&gt; Yeah. &gt;&gt; Dozens of them. Well, I just it is it's quite amazing now to see all of these CEOs and CTO's come out of the woodwork and start coding and and doing all these agents. Are are you one of those CTOs that are close to the ground and and shipping stuff? &gt;&gt; I was already before, but I'm I'm deep in 12 hours a day coding. And by coding, I mean like I I can do meetings, right? cuz I can, you know, just kind of every so often uh optimize the I go in, check the prompts, deliver a code review. Yeah, I'm super back. Uh I I've been for for the longest time kind of oscillating between coding a lot and and not coding so much and I'm I'm back on um like 24/7. &gt;&gt; What's what's your drug of choice? Your agent of choice. &gt;&gt; So for I mean for Versell, we try for folks to get a broad experience across the company. We want to feel what our users feel. So we want to we don't we don't mandate anything. Um my current stack but it's subject to change is uh clot with 4.6 fast and then I'm using uh codeex 5.3 for code reviews. &gt;&gt; Yeah. Yeah. It's uh it's quite amazing. It's just this like dopamine hit where you're you're uh you're hitting the the slot machine hoping that you get something awesome out of it. &gt;&gt; Right. Like that. By the way, I had u there was an article in Wall Street Journey journal of me basically saying that and so that was my first ever quote in a major newspaper. Here you go. &gt;&gt; Oh okay. &gt;&gt; Oh wow. We both came to that. &gt;&gt; So voted to be addicted. But yeah I'm I I maybe I'm not addicted but I do love it. It's such a good experience. &gt;&gt; Well let's shift to Verscell Vzero uh which I think you launched back in 2023. Is that correct? Yeah. So the original pitch was um anybody should be able to make an application even non-engineers and you could do some prototyping and stuff like that which was I think pretty revolutionary at the time. What did you think Vzero was going to be and how quickly did it start diverging from the plan? &gt;&gt; Yeah, I think initially we we thought we were building a tool for front-end engineers uh because that's what we're doing in general, right? And so like we we thinking we were making a tool for ourselves and we then realized we actually built a tool for backend engineers because it was empowering them but it also sucked um in the sense that it didn't work all the time. And you know this is 2023 GPD 3.5 GPD4 days and so it didn't work all the time but the back end engineers they were good enough to fix it in the cases where it didn't work but you couldn't have given it to a non-engineer at the time right because it was just not um reliable enough and and so that was the that was the kind of the main part of market fit for a while and then uh we but again in the AI space you have to be humble right like you have to be willing to entertain that the world is changing around you so sometimes people call it a pivot but it's It's not really the right word because usually that's used for the cases where you realize that you kind of made a mistake on your internal data and you have to do something else. Whereas let's say anthropic ships sonnet 3.5 and suddenly essentially the same prompt can be used to build full stack apps which previously just wasn't possible. You cannot now keep your product the same because the world is different, right? Um and so that that was like a major milestone where like we we realized okay we have to um and I mean obviously this amazing right like we can we can now h uh adopt our product to be able to build like end to-end applications and also with a success rate that kind of approach is the the case where um where a non-engineer can be successful. So you told me there were about five oh moments when it came to vzero um over the years where the models took a really big step forward or you know usage patterns shifted and you needed to rethink things. Can you take us through one of one or two of those moments and and how you were sort of thinking about things? Yeah, I mean definitely the first one was um like in the summer of 2023 when um to take us all back, right? The CHBT had launched and LMS were still kind of new and and and broad adoption and these things were making text and so I think us and everyone was thinking like we got to like it must be possible to make web pages with these things and back in the day when you tried you would realize that it wouldn't do a good job. uh like it would kind of do it but like it wouldn't look good. It would kind of be be um be subpar. Not something you would package as a product. And I still remember to this day sitting at the like we had like someone actually who who is from China and lives in Berlin, but he was in our office in San Francisco and he was hacking away and then at some point he was like raising his hand like guys I've I found something. And so he had just changed the prompt to say use Tailwind. And this was such a like serendipity moment because Tailwind at the time which is it's like a way to write CSS um at the time it was old enough that it was in the CHBT 3.5 um training kickoff. Um but at the I mean at that time it wasn't super popular yet but it was enough training data and so the model is so much better at doing inline reasoning rather than saying we have to write a CSS file then later write CS HTML. the models at the time were too dumb to do that. So they so they couldn't, right? But if you if you told them basically just put everything in the same place, then they did a real job. And so that's kind of how we figure out how to build a product that actually was viable back in the day, right? Um so that that was the kind of the first milestone to actually make it work. Um eventually like I mean I already mentioned that we like the second really big pivot was was that um I think the the the final step you know obviously there was like this whole ecosystem now of of products kind of in this space and and some of them went very much like into the consumer space um and and we definitely discovered okay there's this like enterprise use case so like when for vzero the the users we're aiming for I would call tech adjacent right so it's the it's the PM, it's the designer, it's the the product owner, the the business person who's kind of interested. It's like um that found the law of product market fit. Um and then the final use case, and I'd love to talk a little bit more about that, but like that is essentially um I'm a I'm a business person at a company. I'm going to make an internal app for myself, right? um kind of the new like crazy onslaught of of shadow IT um is definitely something that that we're very interested in both from a from a from the VCR point of view but also from the Versel deployment point of view.</p>
+</blockquote>
+</blockquote>
+</details>
+<h3>Vercel的核心定位：运行AI时代的应用</h3>
+<p>Vercel作为一家<strong>多产品公司</strong>（Multi-product Company），其核心业务在于提供<strong>软件运行平台</strong>（Operating Software）。CTO表示，公司的主要价值在于，无论用户使用<strong>Claude Code</strong>还是<strong>Cursor</strong>等工具创建了什么，最终都需要一个地方来<strong>运行这些应用</strong>（Run These Apps）。Vercel能够与用户的Git仓库连接，每次Push都会自动生成新版本并部署到生产环境。</p>
+<p>尽管V0等产品也涉及<strong>应用创建</strong>（Creation Side），但CTO更多关注的是如何以适合<strong>新型应用</strong>（New Type of Application）的方式，在生产环境中运行这些通过新方法构建的应用。他认为，在2026年，虽然某些方面可能令人担忧，但他不认为Vercel在<strong>运维软件</strong>（Operating Software）方面的核心业务会受到重大<strong>颠覆</strong>（Disruption）。智能体虽然擅长生成<strong>Terraform</strong>（基础设施即代码工具），但<strong>专业的研发运维</strong>（Professional DevOps）需要对系统有掌控感。<strong>代码不可盲目信任</strong>（Cannot Really Vibe Code），始终需要<strong>平台化</strong>（Platformization）来管理运行。</p>
+<details>
+<summary>Original English Source</summary>
+<p>How do you think about um how do you think about the fact that the models are so fully capable right now and like where does Verscell sit in uh as a product, you know, as these models get better and better? &gt;&gt; Yeah. So, we're we're a multi-product company, but like so our core business for folks who don't know is you throw over the fence and we're going to run it for you. Um, and the the beauty of that is that there's no more being made right now. Sorry for cursing on TV, but here we go. Um, so like like like every like we love it if you use cloud code, if you use cursor, you know, like if at some point you're going to have to have a place to run it and and um you know, we can connect Versell to your git repository and every time you push um we'll make you uh a new version of it and have it in production. So, so that's kind of like that's how I see my primary position in that marketplace, right? And then, you know, with VZero, for example, obviously you're also playing kind of on the creation side, but I certainly spend most of my time actually on the the question of how do I run these apps that are made in a different way in production in a way that's um like that's appropriate for this new type of application. So on a scale of 1 to 10, as the CTO of a tech company in 2026, how worried are you that the stuff that you've built will become obsolete as these models get better and better? There's things I'm worried about. Um, but I don't really see like uh like again like you know since we're in the business of operating software um I don't see a major disruption there. Like you could argue, you know, the agents are also great at writing Terraform, like you know, they can just make the infrastructure for you, but like that's actually not how that works, right? like the the the the whole idea of of of any form of professional DevOps is that I have like somewhat an idea of what's going on and and so I can't like you can't really vibe code that like you you so you there has to be there always has to be some form of platformization of how I run something</p>
+</details>
+<h3>速度与可靠性的平衡：优化研发流程</h3>
+<p>Vercel在追求快速迭代的同时，也强调了<strong>可靠性</strong>（Reliability）的重要性，认为两者并非对立。公司的一切努力都围绕着如何让团队<strong>更快地行动</strong>（Move Faster）、<strong>提高内循环速度</strong>（Improve the Speed of the Inner Loops，即开发效率）和<strong>外循环速度</strong>（Outer Loops of Shipping，即发布效率）。例如，Vercel的服务系统（Serving Systems）每天只发布一次，而控制平面（Control Plane）则在每次Push到主分支时发布。尽管CTO希望服务系统也能每天发布15次，但为了稳定性和可靠性，他们做出了权衡。这说明在某些关键领域，仍然需要<strong>审慎的决策</strong>（Make Some Decisions）。</p>
+<p>从<strong>Cloudflare</strong>和<strong>Google</strong>的服务中断事件中吸取教训，这些大规模故障往往源于<strong>错误的配置变更</strong>（Bad Config Changes）或<strong>秘密管理服务</strong>（Secrets Management Service）的问题。Vercel的架构特意将20个核心<strong>区域</strong>（Regions）设计为<strong>自治</strong>（Autonomous），避免了通过单一机制同时更改所有区域。配置更改通过<strong>波次</strong>（Waves）发布，以便在问题扩大前快速发现并隔离。例如，<strong>功能开关</strong>（Feature Flex）可以在单个区域内测试，一旦出现问题，该区域可以轻松地<strong>从轮换中移除</strong>（Take it Out of the Rotation），有效降低了<strong>全球服务中断</strong>（Global Outages）的风险。</p>
+<details>
+<summary>Original English Source</summary>
+<blockquote>
+<blockquote>
+<p>and um and so that like you know essentially we're playing in that in that space relatively successfully. So for that from that point of view I'm actually not particularly worried. Well, do you think that the lack of observability is a temporary limitation or a fundamental limitation of long-running agents? &gt;&gt; Like uh you know I think that the the there's there's a whole you know there's a whole revolution ahead of us of of agents participating further in in kind of the DevOps space and and and and running your application. um we started calling it kind of self-driving um like infrastructure where like where the you know where you have essentially something that in an agentic way kind of understands what's going on. Um but yeah I think that still kind of like relies on the fact that there is a certain uniformity how how things are running versus essentially you know let letting the AI kind of loose. If you were to start the Vzero team today from zero, how would you do it differently than when you started it in 23? &gt;&gt; Oh, that's a really good question. I I think the the obviously now we under like if you already know what what the product market fit is, you can jump over all these steps, right? Um I think the the big difference is that today you actually don't need a team. Like so if you start why would you have a team? Teams just I don't know make things go slower, right? Like you can you can always go to the step where like where you where you have enough that you can make a judgment call as to what whether that's worth investing with a single person. And maybe there's two of them. Maybe there's three of them, right? But it's not like seven people, right? And so I would I would tell someone, &quot;Go figure out what the product is and give me a demo and if the demo is good, I'm going to give you a team.&quot; &gt;&gt; So you would just have one dude like just go and do it after you found the market fit &gt;&gt; or Gallop. But yeah. &gt;&gt; Yeah. Yeah. Yeah. That's amazing. Um so how are you thinking about your dev teams within Versel then? Are they much more about like one person and and one sphere of ownership and then they go and they do everything or are you trying to retrofit maybe like a broader team dynamic? I don't I definitely don't think we have like in a major way kind of changed how how how we operate. Um, I think it was always a good idea to have individuals to be able to ship something end to end and and to not really always rely on the entire operation to make progress. And I think that's kind of like many of these many of these things, you know, continue to be true, but they're they're probably more painful now if you if uh if you if you you know increase the speed of the inner loop through a coding, but your outer loop of shipping is uh is different. Um I give you one example which I think is relevant for this group. Um so I I was at Google before for 12 years. I led like part of the search team. Um you can imagine essentially being a very slow oper operation, right? Uh my job was essentially to approve things via email and go to meetings. Um and so I didn't want to build the organization. And so the the the pattern that we use at Verscell is what in the nerdiest way you could describe as optimistic locking. So there are no approvals. Um anyone can ship anything but they have to tell the organization that they're going to do it and the organization can veto things. And so vetos actually kind of sounds scary and weird but it's really empowering, right? Right? Like if the legal team, they says like like most of the time they say, &quot;Yeah, I mean this sounds totally reasonable. I don't need to spend any time on it.&quot; Right? But sometimes they'll say, &quot;Oh my god, you cannot ship this to like children in North Korea.&quot; Um like there there's a there's a like, you know, sometimes that's true, right? But uh um but if you have a process where legal has to say yes, uh then you have to wait for them and like there's this round trips and they're on vacation and like whatever, right? It's it's it's complicated if you say well no you can always say this is not okay but you have to you know do you have to now be an active actor in this process you kind of it's both empowering for the for those teams but also puts the the responsibility &gt;&gt; well that's interesting and so like you guys are like ultimately you're an infrastructure and devops corporation how do you see the role of like reli iability and maybe moving a little bit slowly and and more conservatively for the uptime of all of your customers versus like wanting to move really quickly in this age of agentic coding. &gt;&gt; Yeah, I think the the it's it's just not right to take those things to be in opposition. But like essentially everything like everything we do in our business um and we we have this like kind of maybe great situation where like it's our business to make our customers move fast and we're taking advantage of it ourselves, right? We're own first customers. And so everything I do is I think about how can I make my teams move faster? Um how can I, you know, improve the speed of the inner loops? How can I improve the speed of the of the outer loops of shipping? And so like if I uh like that doesn't mean I never make a trade-off, right? Like for example, we only ship our um like serving systems once a day, right? Um whereas we ship our control plane every time time someone pushes to to main. And so would I love to be able to, you know, make a new feature in our um consumer serving stack on a like 15 times a day? Yes. But you know we did make some trade-offs there. So obviously there's you make some decisions but it doesn't mean that in in like that you cannot move fast and uh you know not break things right like there is it's possible. &gt;&gt; Well you know um I did a deep dive into Cloudflare's outage and it turns out that it was some bad data in the control plane twice. Um and uh the whole reason they had the dynamic configuration was that they could move really quickly and make changes and customers would see that reflected really quickly. But you know this globalized like key value pair store that is storing these configurations has the potential to take out 20% of the internet. And so do you make a distinction between the ops and the devops part side of the corporation and then the the software and the engineering and the architecture? Are those the same thing? No, it's a really good question. I think the like also from my experience at Google like every time Google goes down which you know at at a at a large scale only happens maybe like every five years, right? Every single time there's it's one of two things. It's either like a bad config change or it it is like something around the like like secrets management service that everything depends on, right? or it's a config change of the secrets management service which I think was the last big one. Right. Right. So it's it's always going to be that. Um and so I mean in Verscell's architecture we uh so we operate 20 regions 20 core regions and so on the serving stack again we we have deliberately decided that we want these regions to be autonomous and we don't have a mechanism to change them all at once and so we uh we thankfully cannot do these type of confict changes that break everything at once and so we we change them in waves and so yeah there's another like kind of deliberate decision to say okay we um if I want to move fast I want to be able to get get relatively quick feedback on my config changes right let's say feature flex for example and so but for that like to get that feedback you actually don't have to ship it globally right it's completely sufficient to say um you know maybe I only put it into one region and see what happens Um and then obviously when that region goes down we can easily just take it out of the rotation. And so like you can I think every time you you do something it's obviously important to think about like what is the what's the risk profile and can I find a way to make essentially progress at the same velocity but without taking down the risk of for example global outages of 20% of the internet.</p>
+</blockquote>
+</blockquote>
+</details>
+<h3>AI时代的组织变革与劳动力重塑</h3>
+<p>在智能体能力日渐强大的背景下，Vercel对未来<strong>技术组织</strong>（Tech Organization）的形态有着独特的思考。CTO认为，现在的软件工程师工作越来越像<strong>管理者</strong>（Management），而非传统的“个人贡献者工作”（IC Work）。这使得<strong>高级个人贡献者</strong>（Senior ICs）受益最多，因为他们已经具备管理能力，现在有了更多“<strong>小兵</strong>”（Minions）协助。同时，<strong>初级工程师</strong>（Junior Engineers）也从中受益，他们对新兴技术有天生的适应性，就像年轻人擅长制作TikTok视频一样。挑战主要集中在<strong>中间层</strong>（Middle），他们需要学习适应这种新角色。Vercel也积极投入<strong>实习生</strong>（Interns）和初级工程师项目。</p>
+<p>Vercel通过<strong>智能体转型</strong>（Agentic Transformation）实现了多方面的自动化，例如<strong>销售线索筛选</strong>（Sales Leads Qualification）和<strong>支持请求受理</strong>（Support Intake）自动化率高达87%。尽管如此，这并未导致员工失业，反而让支持团队能够专注于解决更困难的问题。这表明，AI带来的影响是<strong>提高效率和工作质量</strong>，而非简单地替代人力。</p>
+<p>关于未来的员工数量，Vercel有一个“玩笑”，计划将员工总数限制在1024人，即使这低于当前的招聘计划。这反映了他们对<strong>软件市场弹性</strong>（Software Market Elasticity）的思考：当创建软件的成本降低时，是否意味着需要更多或更少的软件工程师？这是一个复杂的问题，因为尽管软件可以更便宜地创建，但随之而来的<strong>维护负担</strong>（Maintenance Burden）也相当大。CTO用<strong>YouTube</strong>的例子类比：过去制作视频昂贵，现在人人可为，导致了更多视频内容的产生和更多视频专业人士的出现。他认为，我们很可能正走向一个“<strong>软件繁荣</strong>”（Software Heavy）的世界。</p>
+<details>
+<summary>Original English Source</summary>
+<blockquote>
+<blockquote>
+<p>Are you one of these shops that give unlimited tokens to your devs? Absolutely. We even put it into our uh job description on I I could not see why I could possibly not want that. I mean, obviously people, you know, there's always going to be people who abuse some policy, but like I mean, how much could it be? &gt;&gt; I don't know. You're the CTO. Don't you know about your cost? &gt;&gt; No, we had a guys like basically people like mostly it's it's bucks, right? Like I had a engineer who was 10x the second one was like first of all I was impressed. Um, second of all, we found out that his um custommade coding harness uh had like was changing the prefix of the prompt so that it wasn't hitting the caching um system &gt;&gt; and so which is drastically more expensive, right? Um so obviously it happens but yeah I think it's worth having an eye on it but otherwise um I think the the more the marrier. Are your code changes uh going into production? The CEO's code changes, are they going into production? &gt;&gt; Uh so my CEO I think still deploys an app to Versell every day. Um but he very very rarely does production code changes. And I do I mean regular about you know maybe two three times a week. &gt;&gt; Okay. &gt;&gt; Nothing nothing super big. Um, I think it's a really common profile people in the room will have where you say, &quot;I do things, but not the ones that actually are important.&quot; &gt;&gt; What do you think the future of your tech organization is going to look like as these agentic tools just get more and more powerful? I think what's already happening is that there is like the job is just looks much more like management than it looks like I see work and that I think does kind of change a lot about the profile of the of the people and so we what we see is that um the the most senior IC's are in a way the one that benefit the post because they're they kind of already did a very similar job, but now they have just more minions. Um, and then and then the other folks who benefit the most are the the most junior engineers. Um, because they for the same reason that they're better at making Tik Tok videos than me, right? Like they're growing up with that stuff. Um, I think what what's most interesting is kind of what happens in the in the middle. um like where people have to still learn to be in this in a way new role and also have a kind of a um you know or need to be just willing to engage with the technology. &gt;&gt; So are you one of these companies that's really leaning heavily into interns and junior engineers? Yeah, we I mean I I I'm year over year very very impressed with the internship program. Um and yeah, we also have um like a pretty very very decent cohort of junior engineers. &gt;&gt; So in terms of your organization, what does it look like in a year? What does it look like in two years? &gt;&gt; Obviously, I don't know. Um my my CEO and I have this quasi joke that we So right now we're like 750 people and we just quote unquote decided that we cap employee count at 1,024. &gt;&gt; Nice round number. &gt;&gt; Um which which is notably below our hiring plans for this year. Um so we'll we'll see what actually happens. Um but so I I I I could see right that there's essentially this asmtote right where like you know you you grow the company but at some like the the growth kind of even let's hopefully our growth as a as on the revenue side kind of keeps growing up but that maybe you you actually don't need more people. Uh I is it realistic? uh like I it's like we we I mean we so we see agentic transformation obviously on the coding side everyone here does um we automated for example our uh sales leads qualification with an agent that we also open sourced um we automated 87% by now of our support intake um and that you know that's actually good example for did we let support agent go no A I mean first of all the company's growing fast enough that you know that would never be necessary and B they have a much better job now because they only have to solve the hard problems which I think as a support engine you enjoy more but the um so I think there are some factors that kind of are you know at least reducing growth and so I do I do think there is going to be a transformation on that on that line otherwise my like the real journey that I we're all on is that we're figuring out how elastic the software market is, right? because we are making it cheaper to make software and the like what's definitely true and I think we're very much seeing this also in our own numbers is that leads to more software and and so you like the question is like you know obviously that's going to balance out at some point on some equilibrium and it's completely unclear to me right now if that equilibrium has more software engineers than today or fewer but it's very possible that it's power. Um, and it's also very possible it's fewer, right? like but but it's I I I I I couldn't tell how because the like the maintenance burden that is associated with all that free free software is very substantial and but also like you know as long as it gains the productivity wins it's not worth investing in it having people who manage it and so forth like</p>
+</blockquote>
+</blockquote>
+</details>
+<h3>AI驱动下的研发文化与未来预测</h3>
+<p>Vercel的研发文化鼓励<strong>乐观锁</strong>（Optimistic Locking）模式：任何人都可以发布任何东西，但必须提前告知组织，并且组织可以否决。这种模式赋予了团队成员极大的权力，同时也带来了责任。法律团队等只需在必要时介入，而非强制性审批，从而避免了传统审批流程中的等待和延误。</p>
+<p>Vercel也乐于为开发者提供<strong>无限Tokens</strong>（Unlimited Tokens），认为其带来的生产力增益远超潜在滥用成本。尽管曾有工程师因<strong>编码框架</strong>（Coding Harness）配置问题导致<strong>缓存系统</strong>（Caching System）失效，从而产生高额成本，但公司仍认为“越多越好”。CTO本人也积极参与<strong>代码提交</strong>（Code Changes），每周数次，尽管他承认可能不是最“重要”的代码。</p>
+<p>展望未来，Vercel CTO认为，AI带来的转型可能更接近1960年代大型机（Mainframe）出现时，那些“人肉计算机”失去工作的情景，而非互联网引入时的变革。这种转型对某些群体而言可能是痛苦的，但从社会整体来看，将带来巨大的财富增长。他最**“辛辣”的预测**（Spiciest Take）是：<strong>软件维护</strong>（Software Maintenance）将成为智能体发挥关键作用的领域。当软件的创建变得“免费”时，随之而来的维护负担将是巨大的。智能体将在这方面提供自动化解决方案，改变我们对软件的构建和管理方式。</p>
+<details>
+<summary>Original English Source</summary>
+<blockquote>
+<blockquote>
+<p>yeah I can see how you're positioned to support all of this new software that's going to be created So I'm pretty bullish on that. But yeah, I just think the the big question about whether we're software light or software heavy in this new world where software is free. I think of it sometimes like like YouTube, right? So you know before it was very very expensive to create a you know TV show or a movie and now anybody can do it. And so turns out we were actually video light in 20 2005 or 2006 when when YouTube came out. And I do think, you know, nobody knows the future, but um if we are software light, it's going to be pretty great. &gt;&gt; That's I love that analogy, right? That's exactly my point, right? There's going to be more software. And you know, there's now like the number of people that are engaged in professional video production is drastically higher than it was 20 years ago. Um and again like they're they're um that doesn't mean there's no changes, right? I think when uh like to quote kind of Ben Thompson who I think is making this really good analogy that the transformation is probably closer to the one in the 60s when the main frames were introduced and the buildings full of quote unquote computers &gt;&gt; um you know no longer had a job. Then it is like the transformation of the introduction of the internet. Um but and so that if you look back at the transformation in the 60s um that was very painful for some folks, right? But like but overall from a from a societal perspective obviously everyone's drastically richer now. Um so in the long term it goes well and so I think we you know there there's a possibility of of a transformation that's very similar. Last question for me. What's your prediction about the future? That's uh that's a hot take that you haven't shared with anybody else yet. &gt;&gt; That's difficult because I tweet everything out immediately. &gt;&gt; Oh, okay. Oh, your spiciest tweet then. Uh I think what I like in my in recent world like I think like definitely um it's certainly the the point is that software you know you already mentioned it's free I mentioned it's free I think we all realize it's free like giving getting a free puppy right like it has to be it has to be maintained and so I think I mean I'm I'm very excited about the uh the role of agents in software maintenance and exploring that. Um and we touched on like how does stuff happen in production? Uh can I can I automatically maintain something? Um and yeah and I I want to I mean but otherwise I'm I'm just in the same position as everyone like I I now get an engineer saying I build a new file system and they wouldn't have done that before, right? like it would have been just too much work or like it would have been on the plan that took them six months. Um, but yeah, I don't I know it's not a spicy take, but I really I really want to figure out like what do I do with that file system? Like can I ship it now? Um, or or am I now in a like or or is it actually not real?</p>
+</blockquote>
+</blockquote>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Vercel" class="entity-link company-link">Vercel</a>, 
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>, 
+                
+                  <a href="/search/?q=Cloudflare" class="entity-link company-link">Cloudflare</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=DZero" class="entity-link product-link">DZero</a>, 
+                
+                  <a href="/search/?q=V0" class="entity-link product-link">V0</a>, 
+                
+                  <a href="/search/?q=GPT-3.5" class="entity-link product-link">GPT-3.5</a>, 
+                
+                  <a href="/search/?q=GPT-4" class="entity-link product-link">GPT-4</a>, 
+                
+                  <a href="/search/?q=Sonnet 3.5" class="entity-link product-link">Sonnet 3.5</a>, 
+                
+                  <a href="/search/?q=Tailwind" class="entity-link product-link">Tailwind</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-agents/">ai-agents</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/software-development/">software-development</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">devops</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/product-market-fit/">product-market-fit</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">organizational-agility</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

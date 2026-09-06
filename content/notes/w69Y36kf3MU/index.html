@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI新范式：浏览器自动化赋能操作系统控制</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="AI新范式：浏览器自动化赋能操作系统控制" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">AI新范式：浏览器自动化赋能操作系统控制</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI超元域</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2025-12-27
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ai-chao-yuan-yu/">AI超元域</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=w69Y36kf3MU" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2025-12-27
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本视频介绍了一种创新的AI操作系统自动化方法，通过将操作系统映射到浏览器（如使用VNC/RDP），利用“Cloud in Chrome”等工具实现对电脑的精细化操控。演讲者演示了在Ubuntu系统上完成计算器操作、音量调节、命令行编程及软件安装等复杂任务，效果显著优于现有工具。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>演讲者近期一直在使用各种浏览器自动化工具，例如<strong>OpenIn Browser</strong>、<strong>Cloud in Chrome</strong>以及<strong>Cloud Code</strong>，来处理重复性的浏览器操作。他指出，尽管浏览器自动化功能已日益成熟，能够精确地操作各种元素，甚至自动化填写谷歌表格，但能够直接操作电脑的自动化工具却寥寥无几。市面上现有的开源或闭源项目存在很大局限性：要么速度过慢，要么操作不准确，要么消耗大量token。例如，去年发布的<strong>Computer Use</strong>项目，虽然曾演示过，但其局限性在于操作的是沙盒中的操作系统，无法直接控制用户当前使用的电脑，并且发布后更新寥寥。因此，在实现操作系统自动化、让AI直接操作我们电脑的需求上，可选的工具和开源项目非常少。</p>
+<p>基于这一观察，演讲者提出了一个创新的思路：既然浏览器自动化能力如此强大且精准，何不将这种能力拓展到操作系统自动化层面？他认为，从零开始开发一个电脑自动化工具是舍近求远，不如稍加变通，让现有的浏览器自动化工具直接操作我们的操作系统，即电脑，从而实现真正的电脑自动化。</p>
+<h3>实验验证与效果展示</h3>
+<p>为了验证这一思路，演讲者在当天早上进行了测试，结果发现该方法完全可行。他的核心构想是将操作系统（包括本地电脑、局域网电脑或云端服务器等）通过类似于 <strong>VNC</strong>（Virtual Network Computing: 虚拟网络计算）或 <strong>RDP</strong>（Remote Desktop Protocol: 远程桌面协议）的方式映射到浏览器中，然后利用 <strong>Cloud in Chrome</strong> 等工具在浏览器内自动化操作电脑的操作系统。</p>
+<p>为了增加测试难度，演讲者特意选择了相对小众的 <strong>Ubuntu</strong> 系统，并成功将其映射到了浏览器中。测试主要使用 <strong>Cloud in Chrome</strong> 插件进行，虽然 <strong>OpenIn Browser</strong> 也支持浏览器自动化功能，但演讲者经过一早上测试，发现其效果不如 <strong>Cloud in Chrome</strong>。</p>
+<h4>自动化计算器操作</h4>
+<p>首先，他输入了一个最简单的自动化任务：让 <strong>Cloud in Chrome</strong> 打开计算器并计算“10 + 20”。工具执行过程如下：截取当前屏幕截图，点击应用菜单，在搜索框中搜索“计算器”并定位到结果，成功打开计算器应用，输入数字“10”，输入“+”号，输入“20”，然后点击“=”号计算结果。整个过程相当流畅，没有出现任何操作错误，这与他早上测试 <strong>OpenAI</strong> 的 <strong>Explorer Browser</strong> 时一直执行失败的情况形成鲜明对比。</p>
+<h4>自动化音量调节</h4>
+<p>接着，演讲者尝试调节 <strong>Ubuntu</strong> 系统的音量按钮。任务是让 <strong>Cloud in Chrome</strong> 将音量调到最小。工具准确识别了右上方的音量按钮，点击后，瞬间将音量调至0，操作速度非常快，超出了演讲者的预期。</p>
+<h4>终端命令行操作与Python代码执行</h4>
+<p>进一步加大难度，演讲者要求打开终端命令行并最大化显示，然后在命令行中编写一段 <strong>Python</strong>（Python programming language）<strong>冒泡排序</strong>（Bubble Sort algorithm）算法并执行。<strong>Cloud in Chrome</strong> 立即打开了 <strong>Ubuntu</strong> 的终端，并成功将其最大化。随后，它在终端中输入了 <strong>Python</strong> 代码，并成功执行，用冒泡算法对数字进行了排序。</p>
+<h4>浏览器下载与安装自动化</h4>
+<p>最后一个、也是最复杂的任务是：让 <strong>Cloud in Chrome</strong> 打开 <strong>Firefox</strong> 浏览器，从 <strong>Firefox</strong> 中下载 <strong>Chrome</strong> 浏览器，并在 <strong>Ubuntu</strong> 系统上完成安装。<strong>Cloud in Chrome</strong> 成功打开了 <strong>Firefox</strong>，并自动关闭了弹窗，将光标定位到地址栏，输入了 <strong>Chrome</strong> 浏览器的链接，并按回车进入官方网站。接着，它向下滚动页面，找到了“接受并安装”按钮并点击，随后处理了安装确认，开始下载 <strong>Chrome</strong> 的安装包。下载完成后，工具通过终端命令行执行了安装命令，并成功安装。最后，它在终端输入了 <strong>Chrome</strong> 命令以打开新安装的浏览器，并自动关闭了 <strong>Chrome</strong> 的初始弹窗，进入了操作界面。状态栏显示“谷歌 <strong>Chrome</strong> 已成功安装并启动”。演讲者确认，<strong>Chrome</strong> 浏览器图标已出现在左侧任务栏，<strong>Chrome</strong> 浏览器现在可以正常使用。</p>
+<p>演讲者总结道，这一系列复杂的操作，包括在小众的 <strong>Ubuntu</strong> 系统上，由 <strong>Cloud in Chrome</strong> 精细化地完成，效果远超预期。他强调，之前他一直认为 <strong>Cloud in Chrome</strong> 及 <strong>OpenAI</strong> 的浏览器工具只能操作网页，但现在发现将操作系统映射到浏览器中，竟然能实现对电脑的直接操作。这种方式比使用其他一些开源的 <strong>Computer Use</strong> 工具效果要好得多。</p>
+<p>最后，他提到，将操作系统映射到浏览器中的方式有很多，例如安装 <strong>VNC</strong> server，然后通过 <strong>VNC</strong> 在浏览器中访问自己的操作系统，从而实现使用 <strong>Cloud in Chrome</strong> 对操作系统进行自动化操作。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Ubuntu" class="entity-link company-link">Ubuntu</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Cloud in Chrome" class="entity-link product-link">Cloud in Chrome</a>, 
+                
+                  <a href="/search/?q=VNC" class="entity-link product-link">VNC</a>, 
+                
+                  <a href="/search/?q=RDP" class="entity-link product-link">RDP</a>, 
+                
+                  <a href="/search/?q=Python" class="entity-link product-link">Python</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">os-automation</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/browser-automation/">browser-automation</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-agents/">ai-agents</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">remote-control</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">vnc</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

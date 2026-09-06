@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>重构生命的容器：红山动物园的生态展区设计革命</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="重构生命的容器：红山动物园的生态展区设计革命" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">重构生命的容器：红山动物园的生态展区设计革命</span>
+      <span data-pagefind-meta="speaker" style="display:none;">一席YiXi</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-06-02
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/architecture/">architecture</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/yi-xi-yixi/">一席YiXi</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=yjr_JDZs6wE" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-06-02
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">南京红山森林动物园展区设计师马可分享了从 2012 年至今的场馆改造历程。通过引入“隐形壕沟”、“共享原理”及“树冠之旅”等设计理念，红山动物园实现了从传统坑式展示向沉浸式生态栖息地的转型。文章深入探讨了如何通过建筑工程与生态复刻，在优先满足动物福利与自然行为表达的前提下，重塑游客与野生动物的连接方式。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>范式转移：从“坑式结构”到生态设计的启蒙</h3>
+<p>大家好，我是马可，来自<strong>南京红山森林动物园</strong>。我从 2012 年开始专注动物园展区的设计和改造。这其实是一个非常小众的行业，以至于朋友们常惊讶于动物园竟然也需要设计。近年来，我常听到游客评价说：“红山动物园什么都好，就是看不到动物。”今天，我正想以此为切入点，探讨现代动物园设计的核心逻辑。</p>
+<p>回顾过去，红山动物园曾采用典型的<strong>坑式结构</strong>（Pit Structure: 一种俯视参观、动物活动受限的围堵式建筑），如著名的虎坑、熊坑和猴山。当时的设计完全以人的食性分类，从未考虑动物生存所需的真实环境。由于国内缺乏服务于动物的专业设计单位，我们只能从头开始。那段时期，我疯狂收集资料，并实地考察了洛杉矶和圣迭戈等地的现代动物园，在那里的所见所闻极大地震撼了我，也为后来的改造埋下了伏笔。</p>
+<h3>视线革命：跨越物理隔阂的设计巧思</h3>
+<p>在圣迭戈的大象馆，我学到了<strong>柔性控制</strong>（Flexible Containment: 利用物理特性而非强力阻隔控制大型动物活动）的妙处。传统观念认为，只有粗壮的钢管才能控制大象，但大象的皮肤对圆管没有痛感，反而能与之对抗。通过改用细钢索，利用钢索相对于大象体积的尖锐触感，让大象主动避开，这不仅解决了视线阻隔问题，更降低了对抗强度。</p>
+<p>西雅图的棕熊展区则向我展示了<strong>隐形壕沟</strong>（Hidden Moats: 隐藏在植被后的深沟，使游客视线与背景景观融为一体）的威力。通过在绿地后设置暗沟，游客的视线能跨越障碍直达背景，让动物仿佛置身于无边界的自然荒野。回到红山后，我们首先对猴山进行了改造。针对“俯视对动物不友好”的问题，我们将栈道降至平视高度，并加装玻璃面与水隔离带，不仅延缓了猴子的起跳距离，还为它们提供了日常<strong>丰容</strong>（Enrichment: 通过构建环境，诱导动物表达自然行为的方法）的区域。</p>
+<h3>空间共享：亚洲灵长馆的“分离与连通”</h3>
+<p>红山设计的真正转折点是<strong>亚洲灵长馆</strong>。这是国内首个真正意义上从动物需求出发设计的场馆。由于原址坡度极大且布满大树，我们研究出一种<strong>不锈钢柔性网</strong>（Stainless Steel Mesh: 强度高、延展性好且视觉通透的软质围网），通过套环技术绕开大树，在不破坏植被的前提下完成了三体建筑。我们提出了<strong>苏冠城之旅</strong>的概念，通过栈道让游客抬升至树冠层高度，与猴子的活动轨迹保持平视。</p>
+<p>在此过程中，我们实践了<strong>分离与连通</strong>（Separation and Connectivity: 核心建筑功能分散，通过专用通道实现资源流动的布局模式）。我们不再强求室内与外场必须紧邻，而是将内舍保留，将外场延展至深邃的丛林，并设计了专用的转运通道。基于<strong>共享原理</strong>（Sharing Principle: 多个物种或群体交替使用同一活动区域），猴子们可以像使用公共交通一样，在不同的时间点通达多个展区。这种模式让每只猴子能享受的活动面积成倍增长，打破了传统的一对一枯禁模式。</p>
+<h3>极限工程：大猩猩馆的精密生存系统</h3>
+<p>大猩猩馆是红山最复杂的项目。大猩猩力量巨大且善攀爬，对玻璃的冲击力极强。为此，我们使用了厚达 4 公分以上的特制超厚玻璃，这在动物园建设中极为罕见。场馆设计了两个不同模式的外场：一个是近距离互动的玻璃面，另一个是<strong>敞开式水隔离</strong>（Water Moat: 利用动物惧水或不善游的本性进行非物理遮挡隔离）。虽然大猩猩不会游水，但为了万无一失，我们特地在水体表层铺设了<strong>逃生网</strong>，确保落水后的自救可能。</p>
+<p>室内环境的打造更是体现了“生命客厅”的理念。为了应对南京冬冷夏热的气候，我们设计了带有<strong>地热系统</strong>的暖石块、强力<strong>新风系统</strong>以及可开启的自然采光窗。在栖架布局上，我们严格遵循<strong>闭合环形线路</strong>，确保动物在发生争斗或追逐时不会被逼入死角。此外，我们还实现了大猩猩与德氏长尾猴的有趣混养，通过为体型较小的猴子挖掘无数个专用避难洞穴，赋予了它们与“巨人”共处的底气。</p>
+<h3>消失的动物：寻找野生状态下的自然契机</h3>
+<p>回到最初的问题：为什么游客会觉得看不到动物？因为我们在<strong>本土区</strong>复刻了复杂的<strong>湿地生境</strong>。好的动物园应该让动物在熟悉的环境中展现自然行为，而不是强迫其“营业”。我们通过设置<strong>资源点</strong>（Resource Points: 能够提供食物、热源或隐蔽处的特定设计点位）来引导动物的出现。例如，在老虎展区控制栈道巡视的角度，让老虎因为关注同伴而固定在特定区域；在豹馆设置带有加热板的遮荫洞穴。</p>
+<p>这些设计手法并非为了藏匿动物，而是为了让观察变得有质感。当我看到长颈鹿从封闭后场走向开阔的“非洲之歌”展区，看到水獭在复刻的湿地中潜泳，我愈发觉得<strong>好的动物园应该越来越不像动物园</strong>。设计并非终点，它是一个与动物共同进步、持续反思的过程。我们致力于构建一个让生命在自然中呼吸的容器，并最终去寻找那个问题的答案：究竟什么是好的动物园。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=南京红山森林动物园" class="entity-link company-link">南京红山森林动物园</a>, 
+                
+                  <a href="/search/?q=Waza" class="entity-link company-link">Waza</a>
+                
+              </p>
+            
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/animal-welfare/">animal-welfare</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">habitat-design</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">ecological-restoration</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">environmental-enrichment</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">sustainable-architecture</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

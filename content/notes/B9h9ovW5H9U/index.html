@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>超越文档检索：为什么 AI Agent 需要上下文图谱沉淀决策逻辑？</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="超越文档检索：为什么 AI Agent 需要上下文图谱沉淀决策逻辑？" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">超越文档检索：为什么 AI Agent 需要上下文图谱沉淀决策逻辑？</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-05-29
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=B9h9ovW5H9U" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-05-29
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本文探讨了 Neo4j 提出的“上下文图谱”（Context Graph）概念，分析了其如何通过记录决策痕迹（Decision Traces）、因果链和先例，弥补传统 RAG 知识库在 Agent 决策场景下的不足。作者详细介绍了图嵌入技术在结构化匹配中的应用，并展示了如何利用自动化工具快速构建具备长期记忆与推理能力的 Agent 应用架构。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>从 RAG 到上下文图谱：重构 AI Agent 的决策维度</h3>
+<p>在当前的 AI 生态中，<strong>检索增强生成</strong>（Retrieval-Augmented Generation: 通过外部知识库增强模型回答准确性的技术）已成为标配，但仅靠知识库（Knowledge Base）不足以让 AI Agent 做出高质量的决策。传统的 RAG 系统更像是“记录系统”，侧重于事实、实体和当前状态的查询。然而，真正的 <strong>Agent 决策</strong> 需要的是一种<strong>推理系统</strong>（System of Reasoning: 记录决策前因、因果链和预期结果的动态系统）。</p>
+<p>Neo4j 提出的 <strong>上下文图谱</strong>（Context Graph）正是这一演进的核心。它不仅包含传统知识库中的信息，还记录了<strong>决策痕迹</strong>（Decision Traces）和历史先例。以金融分析 Agent 为例，传统的系统可能只能提供客户信息和风险评分；而上下文图谱则能告诉 Agent：在过去类似的情况下，为什么某个请求被拒绝了，当时的政策依据是什么，以及之前的决策者（无论是人类还是 AI）是如何推理的。这种图谱模型由三个关键维度构成：<strong>实体</strong>（关于存在的事物）、<strong>事件</strong>（决策、交易、审批）以及<strong>上下文</strong>（引导推理的政策与历史记忆）。</p>
+<details>
+<summary>Original English Source</summary>
+<p>So, my name is Zach. Uh I work for Neo4j. We're a graph intelligence company. You can think of us like a knowledge layer graph database at the core. We help connect and resolve information so AI systems can be a little bit more accurate and explainable.
+So, I'm going to talk to you today about context graphs. ... Basically we saw a lot of noise around this idea of creating decision traces and reasoning um to help agents make better decisions.
+And so, to kind of think actually about what a context graph is, we need to ask ourselves, &quot;Would you agents really be accurate?&quot; Right? And so, um for one thing, doing a lot of retrieval, you're going to need a knowledge base, obviously. Um so, a knowledge base for something like rag or graph retrieval basically helps an agent or a chatbot answer questions correctly. What a context graph does in the evolution of this is really the information required to not only answer questions correctly, but make better decisions.
+Um systems of record, really about facts, entities, current state, [Context graphs are] about precedents, causal chains, expected outcomes, and enabling the agent to act with subject matter expertise, um and telling the agent really [how to reason]. Um the entities, about things that exist, there'll be uh events, so decisions, transactions, approvals, things like that. And then context, policies that are um in different reasoning by AI that records memory, but um by employees and and past humans that have made decisions.</p>
+</details>
+<h3>决策痕迹与结构化匹配：图嵌入技术在因果链中的应用</h3>
+<p>上下文图谱的强大之处在于它能实现<strong>混合搜索</strong>（Hybrid Search: 结合语义相似度与结构相似度的检索方式）。传统的向量检索主要依赖于文本语义的相似性，但在处理复杂的业务逻辑时，结构上的相似性往往更为重要。为了实现这一点，系统引入了 <strong>图嵌入</strong>（Graph Embedding: 将图中的节点及其连接结构映射为多维向量的技术）。</p>
+<p>通过 <strong>图数据科学</strong>（Graph Data Science: 利用算法分析图结构特征的学科）工具，我们可以将决策痕迹及其关联的因果链转化为向量。这意味着当 Agent 处理一个新任务时，它不仅能搜索语义上相似的文档，还能在向量空间中寻找“结构相似”的历史决策路径。这种技术能够敏锐地捕捉到跨系统的关联信息，例如从 CRM 到支持系统的跨维度数据。通过这种方式，Agent 能够找到<strong>先例</strong>（Precedents），并基于历史的成功或失败经验给出最终的建议，从而显著提升决策的可解释性与专业深度。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Then it does this thing called find precedents, which is going to be more in a second, but it's going to look at structural information in the graph to pull a bunch of [data]. ... connect to each other in these causal chains. So, you build off of each other.
+Then we did a special of hybrid search, especially around those precedents, both on semantic similarity and structural similarity inside of the graph that actually looked at how the decision traces were made um from previous decisions, and it tried to match that, and I'll talk a little bit about how that works with graph embeddings in the next slide to ultimately come up with the recommendation.
+And so, we have a we have a vector index, so we're able to search like fraud rejection, for example, sort of on the semantics. But then we have this concept called graph embedding. ... A graph embedding is the same concept except those green nodes that I was showing you before everything was connected. We actually embedded those into a vector. And so, what that means is similar decision traces are now going to be able to be looked up by vector similarity.
+Um GDS is called graph data science. That's what we use for the uh for the graph embeddings themselves.</p>
+</details>
+<h3>自动化工程实践：一键构建具备推理能力的 Agent 架构</h3>
+<p>为了降低开发者构建上下文图谱的门槛，Neo4j 推出了 <code>create-context-graph</code> 工具。这类似于前端开发的 <code>create-react-app</code>，开发者只需在终端执行一行 <strong>UVX</strong> 命令，即可快速初始化包含前后端、图数据库骨架及 Agent 框架（如 <strong>Pydantic AI</strong> 或 <strong>LangGraph</strong>）的完整堆栈。该工具支持 22 个内置领域（如金融服务、医疗保健等），并能根据用户定义的<strong>本体论</strong>（Ontology: 定义实体类型及其相互关系的图谱模式）自动生成图谱 Schema。</p>
+<p>在底层架构上，这套系统依赖于 <code>Neo4j agent memory</code> 软件包，它为 Agent 提供了完整的记忆 API。这个 API 涵盖了三个关键层面：</p>
+<ol>
+<li><strong>短期记忆</strong>：记录对话历史和会话上下文。</li>
+<li><strong>长期记忆</strong>：从对话中提取并随时间沉淀的实体信息。</li>
+<li><strong>推理能力</strong>：在上下文图谱中形成的决策痕迹。
+此外，系统内置了精细的<strong>文本转图谱</strong>（Text-to-Graph）流水线，通过 spaCy、gliner 等工具进行<strong>命名实体识别</strong>（Named Entity Recognition: 识别文本中人名、地名、组织机构等实体的技术），并配合 LLM 降级方案和合并去重策略，确保短期的零散信息能平滑转化为高质量的长期知识沉淀。</li>
+</ol>
+<details>
+<summary>Original English Source</summary>
+<p>But what I really wanted to show you today um was another tool that was just recently created a little month ago, um which allows you to create a full um stack application to start with with just a one-line command in the terminal to actually create the context graph and the front end and the back end. ... Basically you can think about this like um create React app or create Next app, like you basically get this boilerplate.
+There's just a UVX command, UVX create context graph, um specify the name of the app, the domain, um the framework I want to use. ... It'll give you um you know data inside of a graph and then um you know, you can go ahead and ask questions um and it will go and and you know, basically do this type of retrieval with Cypher and and everything else. Cypher's a graph query language um to pull data back.
+Underpinning this, one of the big dependencies is our Neo4j agent memory package. Um so, this is a complete memory API. Uh it includes and context graphs really need all three of these things. Um a short-term memory, a long-term memory and reasoning. ... So, here uh we actually implemented this inside of the package. Um where it goes through a few different stages on raw text. ... stages where you go from spaCy to gliner and and more advanced to an LLM fallback. Um and then there's a separate merging, deduplication, and enrichment strategy.</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Neo4j" class="entity-link company-link">Neo4j</a>, 
+                
+                  <a href="/search/?q=Foundation Capital" class="entity-link company-link">Foundation Capital</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Neo4j Graph Database" class="entity-link product-link">Neo4j Graph Database</a>, 
+                
+                  <a href="/search/?q=Graph Data Science" class="entity-link product-link">Graph Data Science</a>, 
+                
+                  <a href="/search/?q=Pydantic AI" class="entity-link product-link">Pydantic AI</a>, 
+                
+                  <a href="/search/?q=create-context-graph" class="entity-link product-link">create-context-graph</a>, 
+                
+                  <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">context-graph</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">decision-traces</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">graph-embeddings</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">graph-database</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

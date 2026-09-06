@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cursor 第三纪元：云端智能体与编程的范式转移</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="Cursor 第三纪元：云端智能体与编程的范式转移" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">Cursor 第三纪元：云端智能体与编程的范式转移</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Latent Space</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-03-06
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/latent-space/">Latent Space</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=tMflcZHo2zI" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-03-06
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">Cursor 团队核心成员 Sam Whitmore 与 Jonas Nelle 深入探讨了 Cloud Agents 的发布及其背后的技术哲学。讨论涵盖了全计算机使用（Full Computer Use）、端到端自动测试、视频演示驱动的代码评审，以及如何通过 Slack 协作和 Agent 集群重塑软件工程的未来。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>多模型协同的实验</h3>
+<p><strong>Sam Whitmore</strong>: 这是我们在去年运行的另一个实验，当时没决定发布，但以后可能会回到 <strong>LM Judge</strong>（大模型评委）的思路上。这个实验也是<strong>智能体化</strong>（agentic）的，能够编写代码。它不仅仅是选择，还能从它观察的两个或多个模型中吸取经验，并编写一个新的 <strong>diff</strong>（代码差异）。我们发现，使用来自不同模型提供商的模型作为这个过程的基础层是有优势的。基本上，你可以获得一种协同效应的输出，这比拥有一个非常统一的底层模型层效果更好。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sam Whitmore</strong>: So this is another experiment that we ran last year and didn't decide to ship at that time but may come back to LM judge but one that was also agentic and could write code. So it wasn't just picking but also like taking the learnings from two models or and models that it was looking at and writing a new diff. And what we found was that there were strengths to using models from different model providers as the base level of this process. basically you could get almost like a synergistic output that was better than having like a very unified like bottom model tier.</p>
+</details>
+<p><strong>Jonas Nelle</strong>: 我们认为在接下来的几个月里，巨大的突破将不再是一个人配合一个模型完成更多工作——就像让水流得更快——我们将把管道做得更宽，从而实现更多的<strong>并行化</strong>。无论是<strong>智能体集群</strong>（swarms of agents）还是并行智能体，这两者都有助于在相同的时间内完成更多工作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jonas Nelle</strong>: We think that over the coming months the big unlock is not going to be one person with a model getting more done like the water flowing faster and we'll be making the pipe much wider and so paralyzing more whether that's swarms of agents or parallel agents both of those are things that contribute to getting much more done in the same amount of time.</p>
+</details>
+<h3>赋予 AI 计算机权限：Cloud Agents 诞生</h3>
+<p><strong>访谈人</strong>: 本周，<strong>Cursor</strong> 进行了有史以来规模最大的发布之一，那就是 <strong>Cloud Agents</strong>（云端智能体）。我的意思是，你们以前也有云端智能体，但这次就像是……你直接给了 Cursor 一台计算机，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: This week, one of the biggest launches that cursor has ever done um is cloud agents. I mean, I think you you had cloud agents before, but like this was like well, you give cursor a computer, right?</p>
+</details>
+<p><strong>访谈人</strong>: 那么，这基本上是因为他们收购了 <strong>AutoTab</strong> 然后重新包装了一下吗？是这么回事吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Um so is this basically they bought autotab and then they repackaged it. Is that what's going on or</p>
+</details>
+<p><strong>Sam Whitmore</strong>: 这是很大一部分原因。是的。云端智能体以前就在它们自己的计算机上运行，但它们某种程度上只是在“静默阅读”代码。那些计算机通常是空白的 <strong>VM</strong>（虚拟机），没有为智能体正在处理的任何仓库设置开发环境（<strong>DevX</strong>）。我们谈论的一件事是：如果你站在模型的角度，看着令牌（tokens）流过，而你唯一能做的就是阅读代码并吐出令牌，然后祈祷自己做对了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sam Whitmore</strong>: that's a big part of it. Yeah. Cloud agents already ran in their own computers but they were sort of site readading code. And those computers were not they were like blank VMs typically that were not set up for the DevX for whatever repo the agent's working on. One of the things that we talk about is if you put yourself in the model shoes and you were seeing tokens stream by and all you could do was site readad code and spit out tokens and hope that you had done the right thing.</p>
+</details>
+<p><strong>访谈人</strong>: 那没戏。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: No chance.</p>
+</details>
+<p><strong>Sam Whitmore</strong>: 肯定会表现得很糟。你显然需要运行代码。所以我认为这可能不是一个多么特立独行的观点，但还没有人真正做到。因此，赋予模型自我引导的工具，然后使用完整的<strong>计算机使用能力</strong>（Computer Use）——端到端的像素输入、坐标输出——并拥有一个装有各种应用程序的云端计算机，这是我们在内部看到的巨大突破。使用场景从“哦，我们用它做点文案小改动”变成了“不，我们真的在用这种新型的智能体工作流来驱动新功能的开发”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sam Whitmore</strong>: I'd be so bad. Like you obviously you need to run the code. And so that I think also is probably not that contrarian of a take, but no one has done that yet. And so giving the model the tools to onboard itself and then use full computer use end to end pixels in coordinates out um and have sort of the cloud computer with different apps in it is the big unlock that we've seen internally in terms of use usage of this going from oh we use it for little copy changes to no no we're really like driving new features uh with this kind of new type of aentic workflow.</p>
+</details>
+<h3>云端智能体的三大支柱</h3>
+<p><strong>访谈人</strong>: 好了，让我们看看它。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: All right let's see it.</p>
+</details>
+<p><strong>Sam Whitmore</strong>: 酷。这就是它在 <code>cursor.com/agents</code> 里的样子。这是我前段时间启动的一个任务。左手边是聊天框，非常经典的智能体交互方式。这里最大的新事物是智能体会测试它的改动。你可以看到，它运行了半个小时。那是因为它不仅花时间编写代码令牌，还花时间进行了端到端的测试。所以，它会启动开发服务器，在需要时进行迭代。</p>
+<p>这是其中的一部分：模型工作更久，返回的不是一个“我尝试了一些东西”的 <strong>PR</strong>，而是一个“我测试过了”的 PR，已经准备好供你评审。我们使用的另一个直觉判断是：如果一个人类给了你一个 PR 让你评审，但他自己都没测试过，你也会觉得挺烦的，因为你会觉得“等真的准备好了再叫我”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sam Whitmore</strong>: Cool. So this is what it looks like in cursor.com/agents. So this is one I kicked off a while ago. So on the left hand side is the chat very classic sort of agentic thing. The big new thing here is that the agent will test its changes. So you can see here it worked for half an hour. That is because it not only took time to write the tokens of code, it also took time to test them end to end. So start at dev servers, iterate when needed. Uh, and so that's one part of it is like model works for longer and doesn't come back with a I tried some things PR but a I tested it PR that's sort of ready for your review. Uh, one of the other intuition pumps we use there is if a human gave you PR, asked you to review it and you hadn't they hadn't tested it. You'd also be kind of annoyed because you'd be like only ask me for a review once it's actually ready.</p>
+</details>
+<p><strong>访谈人</strong>: 我想先问个简单的问题。有些 PR 非常小，比如只是改个文案。它总是会生成视频吗，还是有时会？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: So that's what we've done with uh simple question I wanted to gather up front. Some PRs are way smaller like just copy change. Does it always do the video or is it sometimes?</p>
+</details>
+<p><strong>Sam Whitmore</strong>: 有时会。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sam Whitmore</strong>: Uh sometimes.</p>
+</details>
+<p><strong>访谈人</strong>: 好吧。那么判断标准是什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Okay. So, so what's the judgment?</p>
+</details>
+<p><strong>Sam Whitmore</strong>: 模型自己决定。我们会进行一些默认提示，关于哪些类型的改动需要测试。人们可以使用一个斜杠命令叫 <code>/no-test</code>，用了这个模型就不会测试，但默认是测试。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sam Whitmore</strong>: The model does it. So, we uh we do some default prompting with sort of what types of changes to test. There's a slash command that people can do called slashn no test where if you do that the model will not test but the default is test.</p>
+</details>
+<p><strong>Jonas Nelle</strong>: 默认是经过<strong>校准</strong>的。我们告诉它简单的文案修改不要测试，但要测试复杂的改动。用户还可以编写自己的 <code>agents.mmd</code> 配置文件，指定比如“如果你正在编辑这个 <strong>Monorepo</strong> 的子部分，永远不要测试，因为那行不通”之类的内容。</p>
+<p>所以，第一支柱是模型进行实际测试。第二支柱是模型返回一段关于它做了什么的视频。我们发现在这个智能体可以端到端编写更多代码的新世界里，评审代码成了新的瓶颈。评审视频并不能替代评审代码，但它是一个入门点，比瞥一眼巨大的 diff 要容易得多。通常你启动一个任务，完成后你回来做的第一件事就是看视频。这是一个视频示例，在这个案例中，我想要一个按钮上的工具提示（tool tip）。它就去演示了视频里看起来是什么样。有时它会构建类似 <strong>Storybook</strong> 的画廊，你可以看到组件的实际运行效果。</p>
+<p>第三支柱是我拥有对这个 VM 的完整远程控制权限。我可以进去悬停、打字，拥有完全的控制权。终端也是一样。这非常有用，因为有时视频就是你需要看到的全部，但通常视频并不完美。视频会显示这是否值得立即合并，或者通常是否值得通过迭代来达到最终可以合并的阶段。我可以举出其他一些例子，虽然第一个视频并不完美，但它让我确信我们在正确的轨道上。两三个后续操作后，它就搞定了。而且我还有完全的访问权限，有些东西你就是想亲自把玩一下，感受一下。实时预览是无可替代的，<strong>VNC</strong> 类型的虚拟机远程访问赋予了这种能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jonas Nelle</strong>: The default is to be calibrated. So, we tell it don't test very simple copy changes but test like more complex things. And then users can also write their agents.mmd and specify like this type of you know if you're editing this sub part of my monor repo never tested because that won't work or whatever. Okay. So pillar one is the model actually testing. Pillar two is the model coming back with a video of what it did. We have found that in this new world where agents can end to end write much more code reviewing the code is one of these new bottlenecks that that crop up. And so reviewing a video is not a substitute for reviewing code, but it is an entry point that is much much easier to start with than glancing at some giant diff. And so typically you kick one off, you it's done. You you come back and the first thing that you would do is watch this video. So this is sort of a you know video of it. Um, in this case, I wanted a tool tip over this button. And so, it went and uh showed me what that what that looks like in in this video that I think here it actually used a gallery. So, sometimes it will build storybook type galleries where you can see sort of like that component in action. Uh, and so that's pillar two is like these demo videos of what it built. Uh, and then pillar number three is I have full remote control access to this VM. So I can go here in here, I can hover things, I can type, I have full full control. Uh and same thing for the for the terminal. Um so you know I have full access and so that is also really useful because sometimes the video is like all you need to see and often times by the way the video is not perfect. The video will show you is this worth either merging immediately or often times is this worth iterating with to get it to that final stage where I am ready to merge it. And so I can go through some other examples where the first video wasn't perfect, but it gave me confidence that we were on the right track. And two or three follow-ups later, it was good to go. And then I also have full access here where some things you just want to play around with. You want to get a feel for what is this like? And there's no substitute to a live preview. And the VNC kind of VM remote access gives you that.</p>
+</details>
+<h3>后端与元能力：不仅仅是前端</h3>
+<p><strong>访谈人</strong>: 太棒了。等等，什么是 VNC？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Amazing. Well, sorry, what is VNC?</p>
+<p><strong>Sam Whitmore</strong>: Uh it just the the remote desktop. Uh remote desktop. Yeah.</p>
+</details>
+<p><strong>访谈人</strong>: Sam，还有其他你想特别指出的细节吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Uh Sam, any other details that you always want to call out?</p>
+</details>
+<p><strong>Jonas Nelle</strong>: 对我来说，视频非常有帮助。我发现之前智能体和云端智能体的一个常见问题是我的请求<strong>规格说明不足</strong>（underspecification）。我们的计划模式和反复深入讨论详细实现规范是降低这种风险的一种方式。但就像人类沟通随着时间推移会崩溃一样，当你费劲拉下分支在本地运行，结果发现我说这应该是个切换开关，你却做成了复选框。有了视频，这种对齐就像是与智能体共享一个非常清晰的工件，这对我非常有帮助。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jonas Nelle</strong>: Yeah, I mean for me the videos have been super helpful. I would say especially in cases where a common problem for me with agents and cloud agents beforehand was almost like underspecification in my requests where our plan mode and kind of going really back forth and getting detailed implementation spec is a way to reduce the risk of underspecification. But then similar to how human communication breaks down over time, I feel like you have this risk where it's like, okay, when I pull down go to the trouble of pulling down and like running this branch locally, I'm going to see that like I said this should be be a toggle and you have a check box and like why didn't you get that detail right? And having the video up front just has that makes that alignment like you're talking about a shared artifact with the agent very very clear which has been just super helpful for me.</p>
+</details>
+<p><strong>Sam Whitmore</strong>: 我可以快速演示一些其他例子。刚才那个非常侧重前端。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sam Whitmore</strong>: I can quickly run through some other examples. So this is a very front-end heavy one.</p>
+</details>
+<p><strong>访谈人</strong>: 我正想问，这只是为了前端吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: I was going to say is this only for front end?</p>
+</details>
+<p><strong>Sam Whitmore</strong>: 没错。你可能会问是不是仅限前端。这是另一个例子，我想实现一个更好的保存机密（secrets）的错误消息。云端智能体支持添加机密，这是它访问某些系统所需的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sam Whitmore</strong>: Exactly. One question you might have is is this only for front end? So this is another example where the thing I wanted it to implement was a better error message for saving secrets. So the cloud agents support adding secrets. That's part of what it needs to access certain systems.</p>
+</details>
+<p><strong>访谈人</strong>: 云端（团队）正在开发云端智能体。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: cloud is working on cloud agents.</p>
+</details>
+<p><strong>Sam Whitmore</strong>: 是的。有趣的是……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sam Whitmore</strong>: Yes. So this is a fun thing is</p>
+</details>
+<p><strong>访谈人</strong>: 这可以变得非常“元”（meta）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: it can get super meta.</p>
+</details>
+<p><strong>Sam Whitmore</strong>: 它可以变得非常元。它可以启动它自己的云端智能体，可以与其对话。有时很难理解这一点。我们禁用了它的云端智能体启动更多云端智能体的功能，目前是不允许的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sam Whitmore</strong>: It can get super meta. It can start its own cloud agents. It can talk to its own cloud agents. Sometimes it's hard to wrap your mind around that. We have disabled its cloud agents starting more cloud agents. So we currently disallow that.</p>
+</details>
+<p><strong>访谈人</strong>: 也许有一天你们会允许。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Someday you might.</p>
+</details>
+<p><strong>Sam Whitmore</strong>: 也许。这实际上主要是一个后端的错误处理改动。如果机密太大，我们不允许超过一定大小。之前的错误消息很烂，只是通用的“保存失败”。我想要个具体的错误消息。第一件酷的事是，我完全没有提示它如何测试。它没有手动输入 5000 个字符来触发限制，而是打开了 <strong>DevTools</strong>，编写 JavaScript 将 5000 个字母 A 粘贴进输入框，然后点击保存，关闭 DevTools，最后得到了新的错误消息。视频在这一段断开了，但你可以看到错误消息的截图。这是从前端到后端的完整功能实现。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sam Whitmore</strong>: Someday we might. Someday we might. Um so this actually was mostly a backend change in terms of the error handling here where if the secret is far too large, it would um Oh, this is actually really cool. That's the dev tools. That's the dev tools. So if the secret is far too large, we don't allow secrets above a certain size. We have a size limit on them. And the error message there was really bad. It was just some generic failed to save message. So I was like, &quot;Hey, we wanted an error message.&quot; So first cool thing it did here, zero prompting on how to test this. Instead of typing out the like a character 5,000 times to hit the limit, it opens DevTools, writes JS or to paste into the input 5,000 characters of the letter A and then hits save, closes the DevTools, hits save, and gets this new um gets the new error message. So that uh looks like the video actually cut off, but here you can see the here you can see the screenshot of the uh of the error message. So that is like front end, back end kind of end to end feature to to get that.</p>
+</details>
+<h3>从手动编码到高阶抽象</h3>
+<p><strong>访谈人</strong>: 你只需要一个完整的 VM，完整的计算机，运行一切，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: um and you just you just need a full VM, full computer, run everything, right? Okay. Yeah.</p>
+</details>
+<p><strong>Sam Whitmore</strong>: 是的。我们有过不同版本。这是 <strong>AutoTab</strong> 的经验之一，我们在 2023 年开始做。当时是浏览器使用、DOM 之类的。我想我们最终非常倾向于 <strong>AGI pilled</strong>（相信通用人工智能的愿景），即直接给模型像素，给它一个盒子。你想要的是“盒子里的脑子”（brain in a box），并消除环境和能力的限制，这样瓶颈就应该是智能。鉴于今天的模型有多聪明，那个瓶颈已经非常遥远了。所以给它完整的 VM，让它像人类一样进行开发环境引导，对我们内部来说在能力上是一个巨大的台阶式飞跃。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sam Whitmore</strong>: Yeah. So we've had versions of this. This is one of the autotab lessons where uh we started that in 2022. Uh no, 2023. And at the time it was like browser use, you know, DOM, like all these different things. And I think uh we ended up very sort of AGI pilled in the sense that just give the model pixels, give it a box. Sort of a brain in a box is what you want. And you want to remove uh limitations around context and capabilities such that the bottleneck should be the intelligence. And given how smart models are today, that's a very far out bottleneck. And so giving it its full VM and having it be onboarded with DevX set up like a human would has just been for us internally a really big big step change in capability.</p>
+</details>
+<p><strong>访谈人</strong>: 一年前，这些模型甚至还不够好，无法完成这些工作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Yeah. I would say you know let's call it a year ago the the models weren't even good enough to do any of this stuff right. So</p>
+</details>
+<p><strong>Sam Whitmore</strong>: 甚至六个月前也是。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sam Whitmore</strong>: even six months ago. Yeah.</p>
+</details>
+<p><strong>访谈人</strong>: 那么，现在的趋势是模型已经好到足以完全通过像素操作来实现自动化了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: So like yeah what what people have told me is like around about solder 45 is when this started being good enough to just automate fully by pixel.</p>
+</details>
+<p><strong>Sam Whitmore</strong>: 这一直是“什么时候算足够好”的问题。我们发现，特别是 <strong>Opus 4.5/4.6</strong> 和 <strong>Codex 5.3</strong>，它们在模型的自主等级能力上带来了额外的跨越。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sam Whitmore</strong>: Yeah. I think it's always a question of when is good enough. I think we found in particular with Opus 4546 and Codeex 53 that those were additional step changes and sort of the autonomy grade capabilities of the model to just go off and figure out the details and come back when it's done.</p>
+</details>
+<h3>Slack 成为新的 IDE</h3>
+<p><strong>访谈人</strong>: 还有什么变化是你注意到的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Yeah. Anything to add? One other shift that I've noticed um as our crowd agents have really taken off internally has been a shift from primarily individually driven development to almost this like collaborative nature of development.</p>
+</details>
+<p><strong>Jonas Nelle</strong>: 对我们来说，<strong>Slack</strong> 实际上几乎成了一个开发环境，基本上就是一个 IDE。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jonas Nelle</strong>: For us, Slack is actually almost like a development um an IDE basically.</p>
+</details>
+<p><strong>访谈人</strong>: 这就是为什么我觉得也许根本不需要构建自定义 UI，那只是个调试工具，实际上（开发中心）是 Slack。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: That's why I'm like maybe maybe don't even build a custom UI like maybe like you know that's like a debugging thing but actually it's Slack.</p>
+</details>
+<p><strong>Jonas Nelle</strong>: 还有很多值得探索的地方，但基本上 Slack 是很多开发发生的地方。我们会有这些问题频道，或者产品讨论频道，人们总是在里面 <code>@cursor</code>。这会启动一个云端智能体，我们启用了团队后续跟进，所以如果 Jonas 在线程中启动了一个任务，我可以跟进并添加更多上下文。它变成了一种讨论服务，人们可以在 UI 上进行协作。我经常会发起一个调查，甚至让它去运行 <code>git blame</code> 然后标记（tag）应该加入讨论的人，因为它可以在 Slack 中标记人。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jonas Nelle</strong>: I feel like yeah there's still so much to left to explore there but basically for us like Slack is where a lot of development happens like we will have these issue channels um or just like this product discussion channels where people are always at cursoring and that kicks off a cloud agent and um for us at least we have team follow-ups enabled so if Jonas kicks off a at cursor in a thread I can follow up with it and kind of like add more context and so it turns into almost like a discussion service where people can kind of like collaborate on UI. Oftentimes I will kick off an investigation and then like um sometimes I even ask it to like get blame and then tag people who should be brought in because it can tag people in Slack and then other people will</p>
+</details>
+<p><strong>访谈人</strong>: 它可以标记没参与对话的人。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: can tag other people who are not involved in conversation</p>
+</details>
+<p><strong>Jonas Nelle</strong>: 它可以直接 <code>@Jonas</code>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jonas Nelle</strong>: can just do at Jonas.</p>
+</details>
+<p><strong>访谈人</strong>: 酷。你们应该大张旗鼓地宣传这一点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Yeah. That's cool. You should you guys should make a bigger deal out of that.</p>
+</details>
+<p><strong>Jonas Nelle</strong>: 我知道。在 Slack 界面上还有很多事要做。基本上，它可以把其他人拉进来，其他人也可以对那个线程做出贡献，最后得到一个带有可见工件的 PR，大家会觉得“好，酷，我们可以合并这个”。所以对我们来说，IDE 在某种程度上正在迁入 Slack。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jonas Nelle</strong>: I know. um it's a lot to I feel like there's a lot more to do with our Slack surface area um to show people externally. But yeah, basically like it can bring other people in and then other people can also contribute to that thread and you can end up with a PR again with the artifacts visible and then people can be like okay cool we can merge this. So for us it's like the ID is almost like moving into Slack in some ways as well.</p>
+</details>
+<p><strong>访谈人</strong>: 我有同样的经验，但不是开发者，而是我这个设计师和销售人员。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: I have the same experience um with but it's not developers it's me designer salespeople.</p>
+</details>
+<p><strong>访谈人</strong>: 我负责技术营销愿景，设计师负责设计，销售负责法律条款，然后大家一起协作，纠正智能体。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Yeah. So me on like technical marketing vision, designer on design and then sales people on like well here's the legal thirds of what we agreed on and then they all just collaborate and like correct uh the agents.</p>
+</details>
+<p><strong>Sam Whitmore</strong>: 我们发现这些线程中，人类讨论剩下的工作才是真正有趣和相关的<strong>核心</strong>。不再是无聊的细节，比如这个 <code>if</code> 语句放在哪。而是“我们要发布这个吗？”、“这是正确的 UX 吗？”、“这是正确的形态吗？”。这些高阶问题非常容易协作，而实现细节则留给云端智能体。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sam Whitmore</strong>: I think that we found these threads is the work that is left that the humans are discussing in these threads is the nugget of what is actually interesting and and relevant. It's not like you know the boring details of where does this if statement go. It's like do we want to ship this? Is this the right UX? Is this the right form factor? Uh, you know, how do we make this more obvious to the user? It's like those really interesting kind of higher order questions that are so easy to collaborate with and leave the implementation to the to the cloud agent.</p>
+</details>
+<p><strong>访谈人</strong>: 完全同意。不再有“是我去做这个，还是你去做？”的讨论。Cursor 正在做，你只需要决定你是否喜欢它。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Totally. And no more discussion of like am I going to do this? Are you going to do this? Curs is doing it. You just have to decide you like it. [laughter]</p>
+</details>
+<h3>未来预测：智能体吞噬本地环境</h3>
+<p><strong>访谈人</strong>: 最后一个问题。你们对今年年底有什么预测？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: One more question on on just the cursor in general and then uh you know open-ended for you guys to plug whatever you want to plug. How is cursor hiring these days? Predictions for the end of the year, if you have any.</p>
+</details>
+<p><strong>Sam Whitmore</strong>: 预测总是很难说准。但我预测到今年年底，云端智能体在各自盒子（VM）中工作的数量将超过本地智能体。我认为这个交叉点会在年底前发生，可能到年底时，云端运行的智能体数量将是本地智能体的 2 倍以上。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sam Whitmore</strong>: Predictions are not going to go well. Well, one other plug. Yeah. I predict that by the end of the year the volume on I think it will take longer than people think and longer than we think for cloud and agents working in their own boxes to surpass local agents. But I think that crossover will happen before the end of the year and probably by the end of the year agents running in the cloud will be a multi like more than 2x the volume of local agents.</p>
+</details>
+<p><strong>访谈人</strong>: 好的。今天还有什么不尽如人意的地方吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Okay, you're leaving me an opening. What's not good today?</p>
+</details>
+<p><strong>Sam Whitmore</strong>: 还有很多难关。比如如何让沙箱真的非常、非常好。我们花了很多时间在 <code>cursor.com/onboard</code> 上，在那里你选择一个仓库、添加机密、给它权限，智能体就去安装一切。虽然做了很多工作，但还是有很多事情要做，比如有时候设置太慢。设置不是一劳永逸的事情，依赖会变、数据库位置会变，我们需要模型能自我维护这些环境。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sam Whitmore</strong>: Yeah, there's a bunch of hard things. So, one of them is just getting those sandboxes to be really, really good. And a thing that was part of this launch that we spent an inordinate amount of time on is cursor.com/onboard where you pick a repo, add secrets, give it access to things, and the agent just goes off and installs things. Yeah, we worked a lot on that. but, um there's still a lot to do there, right? like setup one two two things maybe it's too bad it's too slow um working on it uh setup is not like a unitary thing where everything is set up or not right like things will break over time you have new dependencies you need access to new systems like you change where your database lives so that's one part of it</p>
+</details>
+<p><strong>Jonas Nelle</strong>: 另一个巨大的解锁将是<strong>自我审计</strong>（Self-Auditability）和<strong>自我意识</strong>（Self-Awareness）。智能体不仅要在环境上被引导，还要在设计权衡、代码库如何运作方面被引导。智能体需要能发现它自己的功能差距，并决定如何填补。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jonas Nelle</strong>: And then the other part of it that starts to get really interesting is when the model starts editing its own system prompt. self-awareness to us in this context is kind of like um not like the model itself having a notion of consciousness but more like knowing like what system it's operating in and the the constraints of that system and potentially being able to have agency in like optimizing itself to operate best in the in that system.</p>
+</details>
+<p><strong>访谈人</strong>: 这是一个非常深入的讨论。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Yeah, this is more abstract than I ever thought we'll get at this [laughter] tier discussion.</p>
+</details>
+<p><strong>Sam Whitmore</strong>: 谢谢分享你们的操作洞见。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sam Whitmore</strong>: No, I mean you guys are like my sort of needing example what an agent lab looks like and like can be successful and like I think people always hungry for insights into how you guys operate. So, thank you for taking the time to share.</p>
+</details>
+<p><strong>Jonas Nelle</strong>: 谢谢你能来。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jonas Nelle</strong>: Yeah, thanks for coming.</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Sam Whitmore" class="entity-link person-link">Sam Whitmore</a>, 
+                
+                  <a href="/search/?q=Jonas Nelle" class="entity-link person-link">Jonas Nelle</a>, 
+                
+                  <a href="/search/?q=Alexi" class="entity-link person-link">Alexi</a>, 
+                
+                  <a href="/search/?q=Matthew Fria" class="entity-link person-link">Matthew Fria</a>, 
+                
+                  <a href="/search/?q=Rio" class="entity-link person-link">Rio</a>, 
+                
+                  <a href="/search/?q=Evan" class="entity-link person-link">Evan</a>, 
+                
+                  <a href="/search/?q=Andrej Karpathy" class="entity-link person-link">Andrej Karpathy</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Cursor" class="entity-link company-link">Cursor</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, 
+                
+                  <a href="/search/?q=DataDog" class="entity-link company-link">DataDog</a>, 
+                
+                  <a href="/search/?q=Graphite" class="entity-link company-link">Graphite</a>, 
+                
+                  <a href="/search/?q=Slack" class="entity-link company-link">Slack</a>, 
+                
+                  <a href="/search/?q=Vercel" class="entity-link company-link">Vercel</a>, 
+                
+                  <a href="/search/?q=GitHub" class="entity-link company-link">GitHub</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Cloud Agents" class="entity-link product-link">Cloud Agents</a>, 
+                
+                  <a href="/search/?q=Opus 4.5" class="entity-link product-link">Opus 4.5</a>, 
+                
+                  <a href="/search/?q=Codex 5.3" class="entity-link product-link">Codex 5.3</a>, 
+                
+                  <a href="/search/?q=AutoTab" class="entity-link product-link">AutoTab</a>, 
+                
+                  <a href="/search/?q=TanStack Router" class="entity-link product-link">TanStack Router</a>, 
+                
+                  <a href="/search/?q=Bugbot" class="entity-link product-link">Bugbot</a>, 
+                
+                  <a href="/search/?q=MCP" class="entity-link product-link">MCP</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/computer-use/">computer-use</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">software-engineering-automation</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/human-ai-collaboration/">human-ai-collaboration</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/cloud-infrastructure/">cloud-infrastructure</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

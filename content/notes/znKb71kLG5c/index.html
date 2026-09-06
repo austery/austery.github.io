@@ -1,0 +1,2474 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palantir与OpenAI为何忌惮Alex Bores？</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="Palantir与OpenAI为何忌惮Alex Bores？" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">Palantir与OpenAI为何忌惮Alex Bores？</span>
+      <span data-pagefind-meta="speaker" style="display:none;">The Ezra Klein Show</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-04-21
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/the-ezra-klein-show/">The Ezra Klein Show</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=znKb71kLG5c" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-04-21
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本期访谈深入探讨了纽约州议员**Alex Bores**对人工智能（**AI**）监管的立场及其政治生涯。**Bores**曾任职于**Palantir**，后因对**AI**用于移民执法存疑而离职。他发起了**RAISE法案**，旨在为**AI**行业建立安全标准。访谈还讨论了**AI**对就业、社会尊严的影响，以及政府应如何积极引导**AI**发展以造福公众，而非仅限于私人利益。文章也揭示了科技巨头通过**Super PAC**阻挠**AI**监管的政治博弈。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>政治攻击与AI监管</h3>
+<p><strong>Ezra Klein</strong>: 如果你住在<strong>纽约州第12国会选区</strong>，你可能已经看到了对<strong>Alex Bores</strong>无休止的攻击，他是那里竞选的民主党人之一。
+“他通过为<strong>ICE</strong>（美国移民及海关执法局）建造和销售技术赚取了数十万美元，助力<strong>ICE</strong>进行移民遣返并从中获利。<strong>ICE</strong>是靠<strong>Bores</strong>的技术支撑的。”
+天哪。<strong>Bores</strong>确实为<strong>Palantir</strong>工作过。这些攻击的其余部分，你可能不会称之为真相，但我感兴趣的是谁在为此买单。
+<strong>Super PAC</strong>（超级政治行动委员会）“<strong>Leading the Future</strong>”及其子公司“<strong>Think Big</strong>”。
+谁资助了<strong>Super PAC</strong>“<strong>Leading the Future</strong>”？
+嗯，它的主要捐助者包括<strong>OpenAI</strong>的联合创始人、<strong>Andreessen Horowitz</strong>，以及——等等——<strong>Palantir</strong>。
+那么，为什么<strong>Palantir</strong>的联合创始人<strong>Joe Lonsdale</strong>在这种情况下要资助一个<strong>Super PAC</strong>，试图以<strong>Bores</strong>曾为<strong>Palantir</strong>工作为由，来摧毁一名候选人呢？
+原因是，“<strong>Leading the Future</strong>”是一个<strong>Super PAC</strong>，致力于摧毁任何可能以这些资助者不喜欢的方式，监管整个科技行业，特别是<strong>AI</strong>的人。
+而<strong>Bores</strong>是<strong>纽约州议会</strong>的成员，他共同撰写并通过了<strong>RAISE法案</strong>，这是在任何主要州通过的首批<strong>AI</strong>监管法案之一。
+这里有一个原则，它比任何一个国会席位都重要得多。如果你只听<strong>AI</strong>创始人的谈话，你会诚实地听到它。他们说他们相信它。
+<strong>OpenAI</strong>的联合创始人<strong>Sam Altman</strong>，他最近遭受了反<strong>AI</strong>个人的暴力攻击，被严重针对。
+他试图在这里降温，写道：“重要的是，<strong>民主进程</strong>要比公司更有力量。”
+重要的是，<strong>民主进程</strong>要比公司更有力量。
+<strong>Altman</strong>是对的，但他的联合创始人<strong>Greg Brockman</strong>，他是“<strong>Leading the Future</strong>”的主要捐助者之一，正试图确保<strong>民主进程</strong>服从于公司，并通过资助一个<strong>Super PAC</strong>来做到这一点，这个<strong>Super PAC</strong>可以释放足够的资金来粉碎任何与他们作对的立法者。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: If you are living in <strong>New York’s 12th Congressional District</strong>, you may have seen these endless attacks on <strong>Alex Bores</strong>, one of the Democrats running there.
+&quot;He made hundreds of thousands of dollars building and selling the tech for <strong>ICE</strong>, enabling <strong>ICE</strong> and powering their deportations while making bank. <strong>ICE</strong> is powered by <strong>Bores</strong>'s tech.&quot;
+Yikes. <strong>Bores</strong> did work for <strong>Palantir</strong>. The rest of that attack is not what you might call true, but what interests me is who is paying for it.
+The <strong>Super PAC</strong> <strong>Leading the Future</strong> and its subsidiary <strong>Think Big</strong>.
+Who funds the <strong>Super PAC</strong> <strong>Leading the Future</strong>?
+Well, among their big donors are co-founders of <strong>OpenAI</strong>, <strong>Andreessen Horowitz</strong> and wait for it, <strong>Palantir</strong>.
+So why is a co-founder of <strong>Palantir</strong>, <strong>Joe Lonsdale</strong>, in this case, funding a <strong>Super PAC</strong> to try to destroy a candidate on the grounds that he once worked for <strong>Palantir</strong>?
+The reason is, <strong>Leading the Future</strong> is a <strong>Super PAC</strong> dedicated to destroying anyone who might regulate the tech industry in general, or <strong>AI</strong> specifically. In a way these funders don’t like.
+And <strong>Bores</strong> is a member of the <strong>New York State Assembly</strong>, co-authored and passed the <strong>RAISE Act</strong>, one of the first pieces of <strong>AI regulation</strong> passed in any major state.
+There is a principle here that is much more important than any single congressional seat. You’ll hear it honestly if you just listen to <strong>AI</strong> founders talk. They say they believe in it.
+<strong>Sam Altman</strong>, a co-founder of <strong>OpenAI</strong>, who it should be said has been horribly targeted in recent violent attacks by anti-AI individuals.
+He was trying to cool down temperatures here, writing, &quot;It is important that the <strong>Democratic process</strong> remains more powerful than companies.&quot;
+It is important that the <strong>Democratic process</strong> remains more powerful than companies.
+<strong>Altman</strong> is right, but it’s his co-founder, <strong>Greg Brockman</strong>, who is one of the major donors to <strong>Leading the Future</strong>, who is trying to make sure the <strong>Democratic process</strong> is subordinate to the companies and is trying to do it by funding a <strong>Super PAC</strong> that can unleash enough money to crush any legislators who cross them.</p>
+</details>
+<h3>AI立法与政治博弈</h3>
+<p><strong>Ezra Klein</strong>: <strong>Bores</strong>总的来说是一位相当有效的立法者。仅仅三年多时间，在<strong>纽约州议会</strong>，他通过了30项法案，并被<strong>有效立法中心</strong>评为最有效的<strong>新生立法者</strong>之一。
+但尤其让我感兴趣的是他对<strong>AI</strong>监管的看法，部分原因是我认为它们有意义，值得讨论，比如<strong>AI红利</strong>。
+但部分原因是我真的不想生活在“<strong>Leading the Future</strong>”试图创造的世界里，一个<strong>AI</strong>行业吸走足够多资金，然后可以摧毁任何可能监管他们的人的世界。
+所有这些有趣的地方在于，你会听到，<strong>Alex Bores</strong>并不是一个反<strong>AI</strong>的人。
+我认为他很了解<strong>AI</strong>。我认为他正在努力平衡其风险和可能性。
+但如果你正在寻找一个纯粹的反<strong>AI</strong>候选人，他不是。
+我认为这说明了一些问题，那就是“<strong>Leading the Future</strong>”这个<strong>Super PAC</strong>以及可能出现的类似团体，实际上试图阻止任何人对<strong>AI</strong>进行立法。
+所以，如果<strong>民主进程</strong>在这里真的意味着什么，那么思想将不得不比这种金钱更响亮。
+所以我想听听<strong>Bores</strong>如果得到机会，他会怎么做。
+一如既往，我的电子邮件是ezrakleinshow@nytimes.com。
+<strong>Alex Bores</strong>，欢迎来到节目。谢谢你的邀请。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: <strong>Bores</strong> in general has been a pretty effective legislator. In just over three years. In the <strong>New York State Assembly</strong>, he’s passed 30 Bills and has been recognized by the <strong>Center for Effective Lawmaking</strong> as one of the most effective freshman legislators.
+But it’s his ideas on regulating <strong>AI</strong> that particularly interests me, in part because I think they make sense and are worth discussing things like an <strong>AI dividend</strong>.
+But in part because I just really do not want to live in the world, that <strong>Leading the Future</strong> is trying to create a world where the <strong>AI</strong> industry hoovers in enough money that it can then destroy anyone who might regulate them.
+And what’s funny about all this is you’ll hear it. <strong>Alex Bores</strong> is not an anti <strong>AI</strong> kind of guy.
+I think he gets <strong>AI</strong> pretty well. I think he’s trying to balance its risks and its possibilities.
+But if you’re looking for a pure <strong>AI</strong> backlash candidate, he’s not it.
+And I think that tells you something that what <strong>Leading the Future</strong> and <strong>Super PAC</strong> and groups that might emerge like it are actually trying to do is to stop anyone from legislating on <strong>AI</strong>.
+So if the <strong>Democratic process</strong> is actually going to mean something here, ideas are going to have to speak louder than this kind of money.
+So I wanted to hear what <strong>Bores</strong> would actually do if given the chance.
+As always, my email ezrakleinshow@nytimes.com.
+<strong>Alex Bores</strong>, welcome to the show. Thanks for having me.</p>
+</details>
+<h3>政治启蒙：工会与劳工权益</h3>
+<p><strong>Ezra Klein</strong>: 我想从你早期的政治记忆开始，你的政治生涯是如何开始的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: So I want to begin a bit in your early political memories, but how did your politics begin?</p>
+</details>
+<p><strong>Alex Bores</strong>: 嗯，它始于我不会称之为政治的事情。只有回想起来我才会用这个词。
+但在我二年级的时候，我和父母参与了<strong>工会</strong>斗争，我父亲和他的同事们因为争取更好的医疗保健被<strong>迪士尼</strong>停工。
+合同纠纷持续了一年多，<strong>迪士尼</strong>不让步。
+最后，工人们举行了罢工。作为回应，<strong>迪士尼</strong>将他们停工了三个月，并切断了他们的医疗福利，包括我父亲一位朋友的，他当时正准备开始化疗。
+幸运的是，<strong>工会</strong>介入了，他们支付了治疗费用，他得以幸存。
+但我父亲会从二年级接我，带我去纠察线，那是我第一次体验到人们为改变而共同努力。
+他会把我放在<strong>迪士尼</strong>商店前面，当人们走过纠察线时，这并不难做到。但要走过一个拿着写着“<strong>迪士尼</strong>对我的爸爸很坏”牌子的八岁孩子，就难得多了。
+所以那是我的第一课。既是关于医疗保健需要普及，也是关于我们如何通过合作取胜，如果你是一名工人，你就是一个人。
+你只是在为某事倡导，很容易被压垮。
+但如果你有<strong>工会</strong>，你有一个组织，你有一场运动，那么你就有机会。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Well, it began with something that I wouldn’t necessarily call politics. Only in retrospect would I put that phrase on it.
+But it was with my parents in <strong>union</strong> fights in second grade, my dad and his colleagues were locked out by <strong>Disney</strong> for fighting for better health care.
+There were contract disputes for over a year and <strong>Disney</strong> wouldn’t budge.
+And finally, the workers went on strike. And in response, <strong>Disney</strong> locked them out for three months and cut off their health care benefits, including my dad’s friend who was about to start chemotherapy.
+And thankfully, the <strong>union</strong> stepped in and they paid for the treatment and he survived.
+But my dad would pick me up from second grade and bring me to the picket line, and that was my first experience of people working together for change.
+He would put me in front of the <strong>Disney</strong> store, and when people walk past picket lines, it’s not hard to do. It’s a lot harder to walk past an eight-year-old with a sign that says <strong>Disney</strong> is mean to my dad.
+And so that was my first lesson. Both that health care needs to be universal, but also that the way we win is by working together, that if you’re one worker, you’re one person.
+You’re one. Anything advocating, it’s easy to get crushed.
+But if you have a <strong>union</strong>, you have an organization, you have a campaign, you have a movement. Well, then you stand a chance.</p>
+</details>
+<h3>学术背景与社会行动</h3>
+<p><strong>Ezra Klein</strong>: 你爸爸在<strong>迪士尼</strong>做什么工作？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: What did your dad do for <strong>Disney</strong>?</p>
+</details>
+<p><strong>Alex Bores</strong>: 我爸爸当时是**《周一橄榄球之夜》**的工人，所以他做图形、录像和即时回放。
+他在卡车里工作，最终成为技术指导，但他实际上是信号在到达你电视前发送出去的人之一。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: My dad was a worker for <strong>Monday Night Football</strong> at the time, so he did graphics and videotape and instant replay.
+He worked in the trucks, eventually became a technical director, but he was one of the people that’s actually sending out the signal before it hits your TV.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 所以你后来在<strong>康奈尔大学</strong>学习了<strong>劳资关系</strong>，然后获得了<strong>计算机科学</strong>学位。我很好奇这两个非常不同的学科教会了你什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: And so you then study <strong>industrial labor relations</strong> at <strong>Cornell</strong> and then get a <strong>computer science</strong> degree. I’m curious about what those two very different disciplines taught you?</p>
+</details>
+<p><strong>Alex Bores</strong>: 嗯，它们听起来非常不同。
+但每天它们似乎都越来越紧密地交织在一起。在<strong>劳资关系学院</strong>，我学到了<strong>经济理论</strong>。
+我学到了<strong>集体谈判</strong>。我学会了如何运营运动和组织，以实际改变权力并赢得胜利。
+我学会了为劳动人民挺身而出，并通过这种视角看待世界上许多互动。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Well, they sound very different.
+But every day it seems to be more and more intertwined. At the <strong>School of Industrial and Labor Relations</strong>, I learned <strong>economic theory</strong>.
+I learned <strong>collective bargaining</strong>. I learned and how to run campaigns and organizations in ways that actually can change power and win things.
+And I learned to stand up for working people and to view a lot of interactions in the world through that lens.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 等等，具体说说。你学到了什么关于如何为劳动人民挺身而出？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: Wait, be specific about that. What did you learn about how to stand up for working people?</p>
+</details>
+<p><strong>Alex Bores</strong>: 嗯，我大一的时候，我们发起了一场针对<strong>耐克</strong>的运动。
+<strong>康奈尔大学</strong>由<strong>耐克</strong>赞助。我们的运动队由<strong>耐克</strong>赞助。
+所以我是一个名为“<strong>康奈尔大学学生反血汗工厂组织</strong>”的团体成员。
+它隶属于<strong>USAS</strong>（<strong>美国反血汗工厂学生联合会</strong>），他们教我们如何随着时间推移建立一场运动。
+我们学会了如何制定战略。所以你从一个明确的需求开始。
+在这种情况下，是<strong>耐克</strong>在<strong>洪都拉斯</strong>解雇了1800名工人，却没有支付他们法律规定的遣散费。
+我们认为<strong>康奈尔大学</strong>的行为准则要求<strong>耐克</strong>对其<strong>分包商</strong>的行为负责，让他们弥补工人的损失。
+所以我们提出了这个要求。然后你通过一段时间的教育来逐步建立。
+所以我们会举行教学活动，我们会采取一些荒唐的行动来吸引注意力。
+我们做了一个“为工人权利锻炼”的活动，当时我们在<strong>方庭</strong>里。
+就像播放80年代的音乐，让人们说嘿，发生什么事了。
+哦，好吧，让我告诉你<strong>洪都拉斯</strong>发生的事情。
+然后你采取更积极的行动，需要政府的回应。
+我们在这场运动中最终取得了成功。<strong>康奈尔大学</strong>决定终止与<strong>耐克</strong>的合同。
+我想在<strong>康奈尔大学</strong>宣布这个决定大约三周后，<strong>耐克</strong>态度大转变，支付了工人所有欠款，并为他们提供了一年的职业培训和医疗保健。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Well, my freshman year, we ran a campaign against <strong>Nike</strong>.
+<strong>Cornell</strong> was sponsored by <strong>Nike</strong>. Our athletic teams sponsored by <strong>Nike</strong>.
+So I was part of a group called <strong>Cornell Students Against Sweatshops</strong>.
+It was affiliated with <strong>USAS</strong>, <strong>United Students Against Sweatshops</strong>, and they taught us how to build a campaign over time.
+We learned how to be strategic. So you start with a clear demand.
+In this case, it was <strong>Nike</strong> had laid off 1,800 workers in <strong>Honduras</strong> without giving them legally mandated severance pay.
+And we argued that the <strong>Cornell</strong> code of conduct required that <strong>Nike</strong> be responsible for their <strong>subcontractors</strong> actions, that they make the workers whole.
+So we put that into demand. Then you build up over a period of educating.
+And so we’d have teach ins, we’d have ridiculous actions to grab attention.
+We did a working out for workers’ rights where we were in the <strong>quad</strong>.
+And just like playing 80s music and getting people hey, what’s going on.
+Oh, well, let me talk to you about what’s going on in <strong>Honduras</strong>.
+And then you build up to more aggressive actions that require a reaction from the administration.
+We ended up being successful in that campaign. <strong>Cornell</strong> decided it was going to cut its contracts.
+And I think something like three weeks after <strong>Cornell</strong> made that announcement, <strong>Nike</strong> about-face paid the workers all the money they were owed and gave them job training and health care for a year.</p>
+</details>
+<h3>劳资关系理论与全球化</h3>
+<p><strong>Ezra Klein</strong>: 所以你告诉我你在大学里学到了如何进行<strong>激进主义</strong>，这很有趣。
+但我想更深入一层。你正在研究<strong>劳资关系</strong>。
+你从中学到了工人与公司之间、劳工与资本之间更深层次的理论或论点是什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: So I want you you’re telling me about how you learned to do <strong>activism</strong> in college, which is interesting.
+But I want to go a level deeper than that. You’re doing <strong>industrial and labor relations</strong>. Yeah.
+What is the deeper theory or thesis of the relationship between workers and corporations, between labor and capital that you came out of that with?</p>
+</details>
+<p><strong>Alex Bores</strong>: 工人与资本之间存在如此多的争议。
+但在最好的情况下，你们实际上是如何合作发展经济的，工人并不是为了让任何公司破产，他们希望公司发展。
+所以就如何分配“<strong>蛋糕</strong>”存在争议，但理论上，双方都希望把“<strong>蛋糕</strong>”做大。
+然后国际关系中存在一些非常有趣的关系。
+我发现的一件事是，对于我们认为劳工条件很差的许多国家，其法律实际上相当不错。
+问题在于执行，如果本国政府真的试图执行，工厂就会搬走去其他地方。
+所以可能改变这种情况的杠杆在于购买大部分商品的国家。
+因此，我们会在美国施加压力，要求这些国家遵守他们已经为工人设定的标准。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: There’s so much that’s in contention between workers and capital.
+But in the best worlds, how you’re actually working together to grow the economy, that workers are not out there to bankrupt any company that they want the company to grow.
+And so there’s fights over how you distribute the pie, but theoretically, both want to grow that pie.
+And then there’s really interesting relationships internationally.
+One of the things that I discovered was for so many of the countries where we thought labor conditions were awful, the laws on the books were actually quite good.
+The question was with enforcement and if the home countries actually tried to do enforcement, the factories would just up and leave and go somewhere else.
+So the lever where maybe you can change that is in the countries that are buying most of the goods.
+And so we would apply pressure in the US about holding countries to the standards they had already set up for their workers.</p>
+</details>
+<h3>从理想主义到Palantir</h3>
+<p><strong>Ezra Klein</strong>: 所以我觉得你正在向我描述一个年轻<strong>激进分子</strong>的教育。
+你8岁时在纠察线上行走，你学习<strong>劳资关系</strong>，进行反企业不法行为的运动，对<strong>全球化</strong>持怀疑态度。
+你是怎么来到<strong>Palantir</strong>的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: So I feel like you’re describing to me the education of a young radical here.
+You’re walking picket lines at 8, you’re studying <strong>industrial and labor Relations</strong>, doing <strong>anti corporate malfeasance campaigns</strong>, skeptical of <strong>globalization</strong>.
+How do you end up at <strong>Palantir</strong>?</p>
+</details>
+<p><strong>Alex Bores</strong>: 所以我真的很想成为一名<strong>律师</strong>。
+但所有与我交谈的<strong>律师</strong>都告诉我不要当<strong>律师</strong>。
+那也是我的经历。或者在两者之间休息一下。
+确保那是你想做的事情。所以我去了<strong>Cornerstone Research</strong>，一家<strong>经济诉讼咨询公司</strong>，在那里我们为审判准备专家证人。
+所以我们做<strong>经济模型</strong>并处理数据。
+但我一直与<strong>律师</strong>互动。所以建立了技能，但也能看到他们在做什么。
+我发现我真的很喜欢<strong>经济模型</strong>。我真的很喜欢处理数据，也喜欢这种意识形态。
+我成长过程中，我是一名<strong>民主党人</strong>。
+我相信政府可以而且应该成为一股向善的力量，但这也意味着我们要承担证明这一点的负担。
+所以当时我是一个年轻的信徒，我可能不会用那些词来表达，但我相信扩大政府能力，确保政府真正有所作为。
+而2014年<strong>奥巴马政府</strong>时期的<strong>Palantir</strong>，就是关于我们如何能在保护隐私和公民自由的同时，扩大政府能力。
+所以当时感觉非常自然地契合。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: So I really wanted to be a <strong>lawyer</strong>.
+But every <strong>lawyer</strong> I spoke to told me not to be a <strong>lawyer</strong>.
+That was my experience, too. Or take time off in between.
+Make sure that’s what you want to do. And so I went to a <strong>economic litigation consulting firm</strong> called <strong>Cornerstone Research</strong>, where we were preparing expert witnesses for trial.
+And so we were doing <strong>economic modeling</strong> and playing with data.
+But I was interacting with <strong>lawyers</strong> all the time. So building a skill set, but could see what they were doing.
+And I found I really enjoyed the <strong>economic modeling</strong>. I really enjoyed playing with data and also to that ideology.
+As I’m growing up. I’m a Democrat.
+I believe that government can and should be a force for good, but that also means we take on the burden of proving it.
+And so I was a young believer in I probably wouldn’t have put it in these terms back then, but expanding government capacity and making sure government is actually delivering and <strong>Palantir</strong> in <strong>2014</strong> in the <strong>Obama administration</strong> was about how can we expand government capacity while protecting privacy and civil liberties.
+And so at the time, it felt very much the natural fit.</p>
+</details>
+<h3>科技乐观主义与现实的落差</h3>
+<p><strong>Ezra Klein</strong>: 所以我想停留在2014年这个时刻，因为这是一个充满乐观的时期，认为技术将解决一些非常基本的<strong>民主</strong>问题，认为你将拥有所有的<strong>公民技术</strong>，公民与政府之间的界面将更加顺畅，更好，这些公司本质上是好的。
+<strong>Google</strong>不想作恶。<strong>Facebook</strong>想连接世界。<strong>Palantir</strong>想让你的数据易于理解。
+我认为还有一种潜在的观点认为，我们问题的答案就存在于这些海量数据中。
+如果你能让所有这些数据都变得可读，你就能找到答案。
+但事情很快就变味了，我想说在2014年之后，那真的感觉与我们现在所处的意识形态时刻完全不同。
+那有什么问题？或者你对我的这种乐观描述会补充或改变什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: So I want to stay in this <strong>2014</strong> moment, because this is a period when there is a lot of optimism that the technology is going to solve some very fundamental problems of <strong>democracy</strong>, that you’re going to have all the <strong>civic tech</strong> that the interfacing between citizens and the government is going to be much smoother, much better that these companies are fundamentally good.
+<strong>Google</strong> doesn’t want to be evil. <strong>Facebook</strong> wants to connect the world. <strong>Palantir</strong> wants to make your data comprehensible.
+And I think there’s also an underlying view that the answers to our problems are out there somewhere in these masses of data.
+And if you can just make the whole thing legible, you could get the answers.
+And something poisons pretty quickly, I’d say after <strong>2014</strong> like that really feels like a different ideological moment than we’re in entirely.
+What was wrong about that? Or what would you add or change to my rendition of that optimism?</p>
+</details>
+<p><strong>Alex Bores</strong>: 很多都是真的。<strong>Palantir</strong>向潜在员工讲述的故事，以及<strong>Alex Karp</strong>经常做的，就是他最害怕<strong>法西斯主义</strong>，他刚完成德国哲学学生的学习，他最害怕<strong>法西斯主义</strong>的发展。
+<strong>法西斯主义</strong>发生在政府未能为其公民提供服务，他们开始为此责怪他人。
+然后人们就会助长这种渴望和仇恨。
+他对后者无能为力，但他可以对政府未能提供服务的情况做些什么。
+所以他想做<strong>Palantir</strong>的原因是，在<strong>9/11</strong>之后，在这种真正的不安全感上升之后，我们能否建立这样的系统，让政府能够让人们感到安全，但又以保护隐私和公民自由的方式建立它，这就是宣传。
+那是一个基本思想，我们很多方面都在阻止<strong>法西斯主义</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: A lot of that is true. The <strong>Palantir</strong> story that was told to prospective employees and <strong>Alex Karp</strong> would do this a lot was that he most feared <strong>fascism</strong>, that he had just finished being a German philosophy student, and he was most afraid of <strong>fascism</strong> developing.
+And <strong>fascism</strong> happens when government fails to provide for its citizens and they start blaming someone else for it.
+And people then feed that hunger and that hatred.
+And he couldn’t do anything about the latter, but he could do something about government failing to deliver.
+And so the reason that he wanted to do <strong>Palantir</strong> was after <strong>9/11</strong>, after this real rise in a feeling of being unsafe, could we build the systems that would allow government to make people feel safe, but build it in such a way that was protecting privacy and civil liberties that was the pitch.
+That was the fundamental idea was we were there in many ways to stop <strong>fascism</strong>.</p>
+</details>
+<h3>Palantir、政府合作与AI演变</h3>
+<p><strong>Ezra Klein</strong>: 效果如何？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: And how’d it work.</p>
+</details>
+<p><strong>Alex Bores</strong>: <strong>特朗普</strong>在<strong>2016年</strong>当选。
+这有点奇怪……在<strong>Peter Thiel</strong>的积极支持下，他是<strong>Palantir</strong>的早期投资者之一。
+我的意思是，我不知道你会不会称<strong>Peter Thiel</strong>为<strong>Palantir</strong>的联合创始人？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: <strong>Trump</strong>’s elected in <strong>2016</strong>.
+That was a weird bit for... With the aggressive support of <strong>Peter Thiel</strong>, one of the <strong>Palantir</strong> early investors.
+I mean, I don’t know if would you call <strong>Peter Thiel</strong>, a <strong>Palantir</strong> co-founder?</p>
+</details>
+<p><strong>Ezra Klein</strong>: 我想是吧，我认为那是给出的说法。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: I think so I think that’s the phrase that is given.</p>
+</details>
+<p><strong>Alex Bores</strong>: 但<strong>Alex Karp</strong>当时非常支持<strong>希拉里</strong>。
+如果你看看<strong>Palantir</strong>员工的捐款，它们也呈现出非常偏向<strong>民主党</strong>的趋势。
+是的，<strong>硅谷</strong>在这个时期非常<strong>民主党</strong>。
+绝对是，绝对是。
+有很多<strong>奥巴马政府</strong>时期的人物，他们不能再去<strong>华尔街</strong>了。
+这对于<strong>民主党人</strong>来说不合时宜。
+但你可以去<strong>硅谷</strong>。
+是的，但那次<strong>2016年</strong>的选举，甚至更重要的是<strong>2024年</strong>的连任，是那项任务的真正失败，而现在看到公司领导和广大的<strong>硅谷</strong>与我所认为的<strong>法西斯政权</strong>同流合污，这是一个真正令人失望的转变。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: But <strong>Alex Karp</strong> was very much fighting for <strong>Hillary</strong> at the time.
+And if you look at donations of employees at <strong>Palantir</strong>, they tell a very skewed story towards the <strong>Democrats</strong> as well Yeah, <strong>Silicon Valley</strong> is very <strong>Democratic</strong> in this period.
+Absolutely, absolutely.
+You have a lot of <strong>Obama administration</strong> figures they can’t go to <strong>Wall Street</strong> anymore.
+That’s not kosher for a <strong>Democrat</strong>.
+But you can go to <strong>Silicon Valley</strong>.
+Yep and but that election <strong>2016</strong>, but even more so his reelection in <strong>2024</strong> is a real failure of that mission and to now see leaders of the company and <strong>Silicon Valley</strong> broadly throwing their lot in with what I think is a <strong>fascist regime</strong> is a real disappointing switch.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 你在<strong>Palantir</strong>工作了<strong>2014年</strong>到<strong>2019年</strong>。
+你一开始是<strong>数据科学家</strong>，到最后，你是领导与政府关系的负责人之一。
+是的，我专注于联邦民事方面。
+那是什么工作？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: So you're at <strong>Palantir</strong> from <strong>2014</strong> to <strong>2019</strong>.
+You start, I think, as a <strong>data scientist</strong>, by the end, you’re one of the people leading the relationship with the government Yeah, I focused on the federal civilian side.
+So what is that work?</p>
+</details>
+<p><strong>Alex Bores</strong>: 那是与<strong>司法部</strong>的工作，与<strong>CDC</strong>合作追踪疫情，与<strong>退伍军人事务部</strong>合作更好地为他们的医院配备人员，并为退伍军人提供他们应得和需要的护理。
+它帮助了许多联邦民事机构。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: So that was work with the <strong>Department of Justice</strong>, with <strong>CDC</strong> to track epidemics, with <strong>Veterans Affairs</strong>, to better staff their hospitals and give veterans the care they deserve and need.
+It was helping a lot of the federal civilian agencies.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 我们现在所说的<strong>AI</strong>和<strong>生成式AI</strong>，当时在你们的工作中占了多大比重？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: How much is what we now think of as <strong>AI</strong> and <strong>generative AI</strong> starting to come into the work you all are doing then?</p>
+</details>
+<p><strong>Alex Bores</strong>: 完全没有。这就是我的意思。
+<strong>Palantir</strong>在那个时期是积极反<strong>AI</strong>的。
+它认为<strong>数据整合</strong>是价值的真正来源，而<strong>AI</strong>只是一个魔幻层，将被应用在其之上。
+那都是营销，而我们正在做真正的工作，那就是让数据汇集在一起。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Not at all. And here’s what I mean by that.
+<strong>Palantir</strong> was aggressively anti-<strong>AI</strong> in that period.
+It believed that <strong>data integration</strong> was the true source of value, and that <strong>AI</strong> was a magic layer that would be applied on top.
+And it was all marketing, and we were doing the real work that was getting data to come together.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 你能描述一下这两种观点的区别吗？
+是的。<strong>数据整合</strong>和他们认为的<strong>AI</strong>有什么区别？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: And can you describe what the difference is in those two views Yeah. What is <strong>data integration</strong> versus whatever they thought <strong>AI</strong> was?</p>
+</details>
+<p><strong>Alex Bores</strong>: 是的，嗯，<strong>AI</strong>在非常幼稚的意义上，我的意思是，我们现在会以其他方式谈论它。
+但这是在<strong>代理模型</strong>和所有这些东西出现之前。
+但<strong>AI</strong>正在做数据分析。
+在你能对数据进行分析之前，它需要以<strong>AI</strong>能够理解的方式组织起来。
+但真正困难的是将所有数据组织在一起。
+这需要艰苦的工作，目前还没有神奇的方法可以做到这一点。
+而软件加上现场的工程师，做了很多艰苦的工作来进行手动连接，那将永远是真正的价值来源。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Yeah, well, so <strong>AI</strong> in a very naive sense, I mean, we’ll talk about it in other ways now.
+But this is before <strong>agentic models</strong> and all of this.
+But <strong>AI</strong> is doing analysis of data.
+And before you can do the analysis of that data, it needs to be organized in a way that <strong>AI</strong> can make sense of it.
+But the actual thing that’s difficult is organizing all your data together.
+That requires hard work, and there’s no magic to do that yet.
+And the software plus engineers going on site and doing a lot of that hard work to do the manual hookups, that was always going to be the true source of value.</p>
+</details>
+<h3>Palantir与政府：转变的优先级</h3>
+<p><strong>Ezra Klein</strong>: 所以你在<strong>Palantir</strong>工作，从<strong>奥巴马政府</strong>末期到<strong>第一届特朗普政府</strong>时期。
+是的，现在<strong>Palantir</strong>与政府合作是一种不同的动物，取决于它与哪个政府合作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: So you're at <strong>Palantir</strong>, across the end of the <strong>Obama administration</strong> and into the first <strong>Trump administration</strong> Yeah now, <strong>Palantir</strong> working with the government is a different animal depending on which government it’s working with.</p>
+</details>
+<p><strong>Alex Bores</strong>: 非常如此。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Very much so.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 那是如何改变的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: How does that change?</p>
+</details>
+<p><strong>Alex Bores</strong>: 我当时正在领导<strong>Loretta Lynch</strong>、<strong>Barack Obama</strong>时期的<strong>司法部</strong>的工作，然后突然变成了<strong>Jeff Sessions</strong>、<strong>Donald Trump</strong>时期的<strong>司法部</strong>，优先级变化非常剧烈。
+与银行的工作可能无论如何都快结束了，仅仅是因为时间关系，但显然对那项工作不再有兴趣。
+我们签订的合同要求我们选择三种双方都同意的案件类型。
+所以在过渡之后，<strong>2017年初</strong>我与新的领导层见了面，说：“你们想优先处理什么？你们想做什么？”
+他们说：“<strong>阿片类药物流行</strong>。”我们说：“太好了，我们绝对想做那项工作。”
+他们说：“暴力犯罪。”“好，只要它不是<strong>煽动性言论</strong>就好。”是的，我们很乐意做那项工作。
+然后他们说：“民事移民。”我说：“我们不碰那个。”
+那不是我们为此而建立的工作。作为项目负责人，我被授权这样做。
+我有一份允许我这样做的合同，因为那是三种双方都同意的案件类型。
+我在那里和在<strong>司法部项目</strong>期间，我们没有做任何那方面的工作。
+这不是每个客户或每个项目中决策的方式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: I was leading the work at the <strong>Loretta Lynch</strong>, <strong>Barack Obama</strong> <strong>DOJ</strong>, and then all of a sudden the <strong>Jeff Sessions</strong>, <strong>Donald Trump</strong>, <strong>DOJ</strong> and priorities changed pretty drastically.
+The work with the banks was probably wrapping up anyway just because of time, but clearly there was no more interest in that work.
+The contract that we had us choose three mutually agreed upon case types.
+And so I met with the new leadership after the transition. This is early <strong>2017</strong> and said, what do you want to prioritize? What do you want to work on?
+And they said, the <strong>opioid epidemic</strong>. We said, great, we definitely want to do that work.
+They said violent crime. Cool as long as it’s not a dog whistle Yeah, we’d love to work on that.
+And then they said civil immigration. And I said, we’re not touching that.
+That’s not the work that we are building this for. And I was empowered as the lead of the project to do that.
+I had a contract that allowed me to because it was three mutually agreed upon case types.
+And while I was there and in the <strong>DOJ project</strong>, we didn’t do any of that work.
+That’s not how the decision went at every customer or in every project.</p>
+</details>
+<h3>Palantir与ICE：道德困境与离职</h3>
+<p><strong>Ezra Klein</strong>: 所以<strong>Palantir</strong>在那段时期确实开始与<strong>特朗普政府</strong>合作处理移民问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: So <strong>Palantir</strong>, during this period does begin working on immigration with the <strong>Trump administration</strong>.</p>
+</details>
+<p><strong>Alex Bores</strong>: 我从未参与任何那些项目。
+所以我从未被授权接触。
+但据我所知，在那段时间，它并没有阻止<strong>特朗普政府</strong>将其用于移民。
+我认为并没有专门为遣返而开发功能，但我可能错了。
+但即使是他们不阻止它以这种方式使用这一事实，也让包括我在内的许多员工感到非常不安。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: I never worked on any of those projects.
+And so I was never cleared on it.
+But to the best of my understanding, during that time, it was not stopping the <strong>Trump administration</strong> from using it for immigration.
+I don’t think there was building of features specifically for deportations, but I could be wrong about that.
+But even the fact that they weren’t going to stop it from being used in that way got a number of employees, myself included, quite upset.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 你在<strong>2019年</strong>离开了<strong>Palantir</strong>。为什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: You leave <strong>Palantir</strong> in <strong>2019</strong>. Why?</p>
+</details>
+<p><strong>Alex Bores</strong>: 独立于我未曾参与的项目，<strong>Palantir</strong>与<strong>ICE</strong>内部的一个部门<strong>HSI</strong>（<strong>国土安全调查局</strong>）签订了合同，该部门在<strong>奥巴马政府</strong>时期主要关注打击<strong>人口贩运</strong>、<strong>毒品贩运</strong>，有时还有<strong>伪造</strong>，这些都是<strong>非争议性</strong>的，每个人都会支持的事情。
+然后当<strong>特朗普</strong>在<strong>2017年</strong>上任时，他们试图改变这项工作的性质。
+他们试图让<strong>ICE</strong>的另一个部门<strong>ERO</strong>（<strong>移民和遣返行动</strong>），也就是每个人都认为是<strong>ICE</strong>的那个部门，获取软件并将其用于<strong>遣返</strong>。
+<strong>Palantir</strong>内部就实际发生的事情进行了大量讨论。
+我们这些员工如果未被授权参与项目，就无法总是看到。
+然后出现了一个根本性问题，那就是为什么不在合同中写入我们其他地方拥有的相同保护条款，这样我们就可以说，不要将其用于<strong>遣返</strong>。
+最终，高管们向我们明确表示，他们不会这样做，他们将在不设置这些<strong>保障措施</strong>的情况下续签合同。
+于是我计划辞职。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Separately from me on a project that I never worked on, <strong>Palantir</strong> had signed a contract with a department within <strong>ICE</strong> called <strong>HSI</strong>, <strong>Homeland Security Investigations</strong>, that during the <strong>Obama administration</strong> was focused on <strong>anti-human trafficking</strong>, <strong>anti-drug trafficking</strong>, sometimes <strong>counterfeiting</strong>, things that are not controversial and that everyone would support.
+And then when <strong>Trump</strong> comes in <strong>2017</strong>, they try to change the nature of that work.
+They tried to get another part of <strong>ICE</strong> called <strong>ERO</strong>, <strong>Enforcement and Removal Operations</strong>, the part that everyone thinks of as <strong>ICE</strong>, to get access to the software and to use it for <strong>deportations</strong>.
+And there were a lot of conversations internally at <strong>Palantir</strong> about what was actually happening.
+Us employees couldn’t always see that if we weren’t cleared on the project.
+And a fundamental question came up of well, why not write into the contract those same protections that we have elsewhere where we can say, don’t use it for <strong>deportations</strong>.
+And eventually executives made clear to us that they were not going to do that they were going to renew the contract without putting in those <strong>guardrails</strong>.
+And so I made plans to quit.</p>
+</details>
+<h3>离职原因与<strong>Bloomberg</strong>报道的争议</h3>
+<p><strong>Ezra Klein</strong>: 所以有一篇**《彭博社》<strong>的报道质疑了这一点。
+显然是来自</strong>Palantir<strong>内部的某些人。
+报道说，在你离开前不久，我想说是你离开前五天，<strong>人力资源部</strong>向你发出了关于你对一位同事发表</strong>性暗示言论<strong>的警告。
+然后另外，当你进行离职面谈时，你说你实际上是因为</strong>精疲力尽<strong>和</strong>出差太多<strong>而离开的。
+所以我想把这些分开来看。
+你是否在</strong>Palantir<strong>面临</strong>性骚扰**指控？你是否因此而离开？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: So there was a <strong>Bloomberg</strong> story that questioned this.
+Clearly coming from somewhere inside <strong>Palantir</strong>.
+And it says that there was shortly before you left, I think it said five days before you left a warning from <strong>HR</strong> about <strong>sexually explicit comments</strong> you had made to a coworker.
+And then separately that when you did your exit interview, you said you were actually leaving because you were burnt out and there was too much travel.
+So I want to take these as pieces.
+Was there a <strong>sexual harassment</strong> claim against you at <strong>Palantir</strong>? And is that why you left?</p>
+</details>
+<p><strong>Alex Bores</strong>: 不，都不是。
+这来自<strong>Palantir</strong>高管的攻击，他们对我推动<strong>AI监管</strong>以及我过去批评<strong>Palantir</strong>的工作感到不满。
+正如我告诉**《彭博社》<strong>的，当他们联系我时，我已经在内部表达了我对与</strong>ICE<strong>合作的担忧。
+我几个月前就开始面试了。我当时已经拿到了一个录用通知。
+然后我重新讲述了一件在我工作时发生的事情。
+有人不喜欢这个重述，就和</strong>人力资源部**谈了。
+<strong>人力资源部</strong>和我进行了一次谈话，我分享了事情的经过。
+然后就结束了。没有档案，没有信件，没有那篇报道中声称的任何东西。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: No and no.
+This came out of an attack from executives at <strong>Palantir</strong> that are upset that I am pushing for <strong>AI regulation</strong> and that I’ve called out <strong>Palantir</strong>’s work in the past.
+As I told <strong>Bloomberg</strong>, when they reached out, I had expressed my concerns about the work with <strong>ICE</strong> internally.
+I had begun interviewing months and months before. I had an offer in hand.
+I then had retold a story of something that had happened to me on the job.
+Someone didn’t like that retelling, had talked to <strong>HR</strong>.
+<strong>HR</strong> had one conversation with me where I shared exactly what had happened.
+And that was the end of it. There was no file, no letter, none of the things that are claimed in that story,</p>
+</details>
+<p><strong>Ezra Klein</strong>: 他们立即撤销了此事。你没有在公司内部受到纪律处分什么的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: They dropped the matter immediately. You weren’t disciplined inside the company or something.</p>
+</details>
+<p><strong>Alex Bores</strong>: 没什么。
+这似乎就是**《彭博社》**报道所说的。但我想核实一下。
+违规行为是你讲的一个故事或你说的话，而不是对同事做过或做出过的事情。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Nothing like that.
+And this seemed like what the <strong>Bloomberg</strong> story said. But I want to check it.
+The infraction was a story you told or something you said, not something done with or towards a colleague.</p>
+</details>
+<p><strong>Alex Bores</strong>: 正确。我的意思是，报道中提到了，那是一个……嗯，现在
+我能在这里重述这个故事吗？问题就在这里，这是一个纸制品制造商在谈论纸巾的用途。
+它销售纸巾。市场部在谈论纸巾是如何使用的。
+我重述了那个例子，关于在公司工作时发生的奇怪事情，纸巾是如何被使用的，然后是<strong>精疲力尽</strong>和<strong>出差</strong>的一面。
+争论点在于，你声称你对它的使用方式持道德立场，但实际上你只是厌倦了在那里工作。
+正如多个来源所引用的，多名现任<strong>Palantir</strong>员工都支持我，他们听到我谈论<strong>ICE</strong>并站出来做了所有这些事情。
+我不知道他们从离职面谈中记录了什么。
+我要求查看它们。<strong>《彭博社》<strong>记者告诉我她实际上没有它们，这些都是高管告诉她的，所以他们可以在我从未见过的记录之上声称任何他们想说的。
+我知道我之前和期间说过什么，以及我曾多次提出这个问题。
+在我离开一年后，<strong>Palantir</strong>给我发邮件和打电话，恳求我回去。
+感觉如果当时真的有什么问题，他们可能就不会这么做了。
+所以，不，你刚刚听到我对</strong>Palantir</strong>的批评相当严厉，我之前也一样。
+那里的高管对此并不友好。
+而攻击我的<strong>Super PAC</strong>反对任何<strong>AI</strong>监管。
+这只是他们又一次绝望的打击。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Correct. It was I mean, the story goes into it, it was a, well, see, now
+Can I retell the story here? Is sort of the but that’s sort of the question is it was a paper goods manufacturer that was talking about uses of tissues.
+It sold tissues. The marketing department was talking about how tissues are used.
+And I retold that example from the presentation on how tissues were being used in odd things that had happened while working at the company and then the burnout and travel side of it.
+The argument there is that you’re making this claim that you took a moral stand against the way it was being used, but actually you’re just kind of tired of working there.
+As has been cited in multiple sources, multiple current <strong>Palantir</strong> employees have backed me up that they heard me talk about <strong>ICE</strong> and stand up and do all of that.
+I have no idea what notes they took from the exit interview.
+I asked to see them. I was told by the <strong>Bloomberg</strong> reporter she didn’t actually have them, that this had just been told to her by the executives so they could claim whatever they want on top of the notes that again, I never saw.
+I know what I had said before and during and that I had brought this up many times.
+And a year after I left, <strong>Palantir</strong> emailed and called me, begging me to come back.
+Feels like if there had actually been a real thing there, they probably wouldn’t have done that.
+So no, you just heard me be fairly critical about <strong>Palantir</strong> I had before as well.
+The executives there didn’t take kindly to that.
+And the <strong>Super PAC</strong> that is attacking me is against any <strong>regulation on AI</strong>.
+And this is just another desperate hit by them.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 我觉得很有趣的是，攻击你的<strong>Super PAC</strong>，部分由<strong>Palantir</strong>联合创始人<strong>Joe Lonsdale</strong>资助，它的核心攻击之一是你曾在<strong>Palantir</strong>工作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: I have been amused that the <strong>Super PAC</strong>, which is attacking you, which is partially funded by <strong>Joe Lonsdale</strong>, a <strong>Palantir</strong> co-founder, that one of its core attacks on you is that you worked at <strong>Palantir</strong>.</p>
+</details>
+<p><strong>Alex Bores</strong>: 正确。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Correct.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 那是一种相当强的<strong>政治无耻</strong>程度。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: That’s a pretty strong level of <strong>political shamelessness</strong>.</p>
+</details>
+<p><strong>Alex Bores</strong>: 我同意，我同意。
+我的意思是，所以我会说他们<strong>谎报员工记录</strong>，但他们非常害怕。
+他们非常害怕我上任。
+除此之外，他们公开表示，他们正试图拿我杀鸡儆猴，他们想把我打得体无完肤，这样当未来提出<strong>AI监管</strong>的想法时，政治家们就会朝着相反的方向跑。
+所以他们主要关心的不是什么<strong>光荣</strong>或<strong>真实</strong>，他们关心的是造成<strong>痛苦</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: I would agree, I would agree.
+I mean, so I would say lying about an employee’s record, but they are very terrified.
+They are very afraid of me in office.
+And beyond that, they’ve said publicly that they are trying to make an example out of me, that they want to beat up on me so bad that when the idea of <strong>regulating AI</strong> comes in the future, that politicians run in the opposite direction, and so they’re not primarily concerned with what is honorable or what is true, they are concerned with causing pain.</p>
+</details>
+<h3>RAISE法案的理念与实践</h3>
+<p><strong>Ezra Klein</strong>: <strong>2022年</strong>，你当选为<strong>纽约州议会</strong>议员，<strong>2025年</strong>，你通过了<strong>RAISE法案</strong>，这让我们进入了你所暗示的<strong>AI监管</strong>领域。
+这是该国任何州通过的首批主要<strong>AI立法</strong>之一。
+在我们深入了解它做了什么之前，它的背后理念是什么？
+当你在制定这项法案时，我知道你也有共同提案人。
+你们都看到了什么，又试图实现什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: So <strong>2022</strong>, you’re elected to the <strong>New York State Assembly</strong> in <strong>2025</strong>.
+You passed the <strong>RAISE act</strong>, which gets us into the <strong>AI regulations</strong> you’re alluding to.
+This is one of the first major pieces of <strong>AI legislation</strong> passed by any state in the country.
+What was before we get into what does it do.
+What was the philosophy behind it?
+When you were working on that bill.
+And I know you had co-sponsors on it.
+What were you all seeing and what were you all trying to achieve?</p>
+</details>
+<p><strong>Alex Bores</strong>: 我们看到<strong>AI</strong>发展极其迅速，行业本身也在警告即将发生的事情。
+这是在许多高管签署了一封信之后，信中表示我们应该将<strong>AI</strong>带来的<strong>灭绝风险</strong>与<strong>全球核战争</strong>同等对待，并提倡暂停。
+他们中的许多人与<strong>拜登白宫</strong>签署了自愿承诺，表示我们将采取某些<strong>安全预防措施</strong>，这是迈向有约束力的联邦监管的第一步。
+然后我们看到没有任何有约束力的联邦监管出台。
+我们还从公司本身那里听说，他们可以接受某些<strong>安全标准</strong>，但他们处于一个竞争激烈的市场中，如果他们看到竞争对手开始在安全方面偷工减料，他们也将被迫这样做。
+所以当你听到这种呼吁时，你会说，好吧，你应该建立一些人们不能低于的基线，这样每个人都遵守一些既定的<strong>安全标准</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: We were seeing <strong>AI</strong> develop extremely rapidly and industry themselves warning about what was coming.
+This is after the letter that was signed by so many executives saying that we should treat the risk of extinction from <strong>AI</strong> equal to <strong>global nuclear war</strong> and promoting perhaps a pause.
+Many of them had signed voluntary commitments with the <strong>Biden White House</strong> saying, we are going to take certain <strong>safety precautions</strong> and this is the first step towards binding federal regulation.
+And then we saw no binding federal regulation come.
+And we had also heard from companies themselves that they were O.K with certain <strong>safety standards</strong>, but they were in a competitive marketplace and that if they see their competitors starting to skimp on safety and cut corners, they would be forced to as well.
+So when you hear that call, you say, O.K, you should establish some baseline that people can’t go below so that there is some established <strong>safety standards</strong> that everyone is playing by.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 你试图建立的基线是什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: What’s the baseline you tried to establish?</p>
+</details>
+<p><strong>Alex Bores</strong>: 其中有几项规定。
+一项是你必须有一个<strong>安全计划</strong>，你将其公开并实际遵守，这在很大程度上遵循了行业最佳实践，关于你将如何测试模型以应对特定风险，你将如何记录这些测试，以及你将如何处理这些信息，你需要向政府报告。
+<strong>关键安全事件</strong>，我们在法案中具体定义了，如果它以这些方式出错，可能还没有伤害到任何人，但可能预示着一些事情即将发生。
+你必须让我们知道。
+这些规定在很大程度上保留到了最后。
+原来还有另外两项最终被删除了。
+其中一项是，如果模型未能通过你自己的<strong>安全测试</strong>，你就不能发布它，这基本上是针对烟草公司的运作方式设计的。
+烟草公司是第一个知道<strong>香烟</strong>致癌的，但他们公开否认并继续发布他们的产品，或者<strong>化石燃料公司</strong>。
+他们知道石油导致<strong>气候变化</strong>但否认了。
+我们说，如果你知道你的模型特别危险，就必须采取行动。
+最后一项规定是<strong>第三方审计</strong>，是说你可以制定任何你想要的标准，你可以声称你会遵守它，但其他人应该检查你的工作，不是政府，而是一个不同的方应该以同样的方式介入。
+我们有<strong>财务审计</strong>，我们有<strong>SOC2安全审计</strong>，另一个方需要查看并说，是的，你正在遵守这一点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: There were a few provisions in there.
+One was that you had to have a <strong>safety plan</strong> that you made public and actually stuck to that largely followed best practices in the industry around how you were going to test the models for specific risks, how you were going to record those tests, and what you would do with that information, that you had to report to the government.
+<strong>Critical safety incidents</strong>, which we specifically defined in the bill, if it goes wrong in these sorts of ways, may not have harmed anyone yet, but could suggest something is coming.
+You have to let us know about it.
+And those provisions largely survive till the end.
+There were two others that were in the original that ended up getting cut out.
+One of them was that you can’t release a model if it fails your own <strong>safety test</strong>, basically designed for the way the <strong>tobacco</strong> companies operated, where they were the first to know that <strong>cigarettes</strong> cause cancer, but denied it publicly and continued to release their products or <strong>fossil fuel companies</strong>.
+That knew oil caused <strong>climate change</strong> but denied it.
+We’re saying if you knew your model was particularly risky have to take action on that.
+And the last provision was <strong>third party audits</strong>, was saying that you can put up whatever standard you want, you can assert that you’re going to follow it, but someone else should check your work, not the government, but just a different party should come in the same way.
+We have <strong>financial audits</strong>, the same way we have <strong>SOC2 security audits</strong> that another party needs to look at and say, yes, you are following this.</p>
+</details>
+<h3>AI发展速度与政治反应的脱节</h3>
+<p><strong>Ezra Klein</strong>: 那么你大概是在<strong>2024年</strong>到<strong>2025年</strong>之间制定这项法案的，在它通过之前？
+是的。随着模型发布速度的加快，你对<strong>AI</strong>、它带来的风险以及它引发的问题的看法有何变化？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: And presumably you’re working on this bill.
+What, <strong>2024</strong> <strong>2025</strong> before it passes? Yeah. How have your views on <strong>AI</strong>, the risks it poses, the questions it raises changed with the subsequent pace of <strong>model releases</strong>?</p>
+</details>
+<p><strong>Alex Bores</strong>: 我认为事情发生的速度比我预想的要快得多。
+而且我认为我们通过立法的能力比我预想的要慢得多。
+因此，<strong>AI</strong>发展速度与政府反应速度之间的差异，比我刚开始这个过程时预期的要大。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: I think things have happened much faster than I thought they would.
+And I think our ability to pass legislation has moved much slower than I thought it would.
+And so that difference in speed between how <strong>AI</strong> is advancing and how government reacts is wider than I was expecting when I started on this process.</p>
+</details>
+<h3>公众对AI看法的转变与两党共识</h3>
+<p><strong>Ezra Klein</strong>: 你如何看待<strong>公众舆论</strong>的变化？
+因为在我看来，我们正在看到一股相当强大的反<strong>AI</strong>浪潮正在兴起。
+现在的民意调查显示，担心<strong>AI</strong>的美国人比对它热情高涨的美国人更多。
+全国各地都有很多反数据中心能源的……是的，正在上演。
+你如何看待政治如此迅速地转变？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: How have you thought about the change in <strong>public opinion</strong>?
+Because it looks to me like we’re seeing a pretty powerful <strong>AI backlash</strong> rising.
+You have polls showing now more Americans are worried about <strong>AI</strong> than are enthusiastic about it.
+There’s a lot of counter <strong>data center energy</strong> Yeah, playing out throughout the country.
+What have you made of how quickly the politics have shifted?</p>
+</details>
+<p><strong>Alex Bores</strong>: 这让我很惊讶。
+无论是多少人关注它，还是它保持了<strong>两党共识</strong>。
+你比任何人都了解<strong>两极分化</strong>，大多数问题最终都会<strong>两极分化</strong>，而这个问题到目前为止还没有。
+它抵抗<strong>两极分化</strong>的时间比我预期的要长。
+如果你和选民交流，你会看到<strong>共和党人</strong>、<strong>民主党人</strong>和<strong>独立人士</strong>的态度非常相似，即使在国会中，<strong>州议员</strong>的态度也相当相似。
+<strong>两党合作</strong>比你想象的要多。
+我的意思是，调查经常显示，大约10%的人会把<strong>精灵</strong>放回瓶子里，假装它从未存在过。
+我理解这种情绪，但我不认为这是前进的方向。
+10%的由<strong>Super PAC</strong>“<strong>Leading the Future</strong>”代表的人希望它“<strong>自由发展</strong>”。
+这就是攻击你的<strong>Super PAC</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: That surprised me.
+I both how many people have focused on it, but also how <strong>bipartisan</strong> it’s remained.
+You of all people know about <strong>polarization</strong> and most issues end up <strong>polarized</strong> and this one hasn’t so far.
+And it has resisted that longer than I thought it would that if you talk to voters, you see across <strong>Republicans</strong>, <strong>Democrats</strong> and <strong>independents</strong>, pretty similar attitudes across <strong>state legislators</strong>, pretty similar attitudes even in <strong>Congress</strong>.
+There’s more <strong>bipartisanship</strong> than you would think.
+I mean, surveys regularly show that about 10 percent of people I put the <strong>genie</strong> back in the bottle and pretend it never existed.
+And I empathize, but I don’t think that’s the way forward.
+10 percent of people represented by the <strong>Super PAC</strong> <strong>Leading the Future</strong> want to just let it rip.
+That’s the <strong>Super PAC</strong> that’s attacking you.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 是的，他们想让它<strong>自由发展</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: Yes they want to just let it rip.</p>
+</details>
+<p><strong>Alex Bores</strong>: 他们不在乎会伤害多少人，只在乎它发展得有多快。
+而80%的美国人希望看到一些好处，但也看到了很多风险，认为它发展得太快，希望对其发展拥有发言权。
+它保持如此<strong>两党共识</strong>的事实让我感到惊讶。
+而且它在人们心中如此重要也让我感到惊讶。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: They don’t care how many people, it hurts, just how fast it moves.
+And 80 percent of Americans want to see some benefits, but see a lot of risk and think it’s moving too fast and want to have some say in its development that the fact that it stayed so <strong>bipartisan</strong> has surprised me.
+And also the fact that it’s risen up in people’s minds.</p>
+</details>
+<h3><strong>AI</strong>的负面转变与民众的担忧</h3>
+<p><strong>Ezra Klein</strong>: 对<strong>AI</strong>的悲观情绪是否让你感到惊讶？
+我们之前谈论了技术、软件和互联网充满乐观的时期。
+我想你可以从早期电脑、早期互联网一直看到社交媒体时代后期。
+你可能在<strong>特朗普</strong>时期，我认为情况开始转变。<strong>剑桥分析</strong>，<strong>算法推荐</strong>。
+但这需要很长一段时间，这些系统和技术才能出现在人们面前，并且人们对它们抱有基本的乐观态度。
+<strong>AI</strong>，<strong>ChatGPT</strong>，我想这是它真正进入公众意识的时候，那是<strong>2023年</strong>。
+我们现在是<strong>2026年</strong>，民意调查已经转向负面。
+我的意思是，在我们录制本期节目前一周，<strong>Sam Altman</strong>遭受了两次独立的暴力袭击。
+一枚<strong>Molotov鸡尾酒</strong>被扔进了他的家中。太可怕了。另外两人在他家门口被枪击。
+我有点震惊地看到人们在网上庆祝这些袭击，说：“我们可以在哪里支持<strong>保释金</strong>？”
+是的，这已经非常非常迅速地变成了愤怒、恐惧和悲观。
+你认为这是为什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: So much has the pessimism around it surprised you.
+And we were talking earlier about the period when there was a lot of optimism about tech, about software, about the internet.
+And I think you can really look from, I mean, early computers, your early internet all the way pretty late into the social media era.
+You probably around <strong>Trump</strong>, I think things begin to turn. <strong>Cambridge Analytica</strong>, <strong>algorithmic feeds</strong>.
+But that’s a long time when these systems and technologies are present for people, and there’s a fundamental optimism about them.
+<strong>AI</strong>, <strong>ChatGPT</strong>, I think, is when this really burst into public consciousness, that’s <strong>2023</strong>.
+We’re here in <strong>2026</strong> and the polling is already turned negative.
+I mean, the week before we recorded this, <strong>Sam Altman</strong> was targeted in two separate violent attacks.
+There was a <strong>Molotov cocktail</strong> thrown into his home. Awful. Two other people shot at his door.
+I was a little shocked to see people celebrating these attacks online saying, where can we support the <strong>bail fund</strong>.
+Yeah, this has moved into fury and fear and pessimism really, really quickly.
+Why do you think that is?</p>
+</details>
+<p><strong>Alex Bores</strong>: 嗯，<strong>AI</strong>在能力方面有一个单独的分歧。
+以前的争论是这是否真实，还是<strong>随机鹦鹉</strong>？
+但通常即使在那之前，它是否只是永远无法真正取代人类的<strong>花哨自动完成</strong>的<strong>废话</strong>。
+确实如此，所以我们对一个维度进行了这些辩论，那就是，它对人们是好是坏。
+然后是另一个维度，那就是它会产生多大的影响。
+我认为这场辩论已经<strong>瓦解</strong>了。人们不再怀疑它的力量。
+或者有些人仍然怀疑，但每天都越来越少。
+所以我们进行第一场辩论的强度确实增加了，但我认为这也是因为我们看到了<strong>社交媒体</strong>发生了什么。
+我们看到了之前那些本应改变一切变得更好的<strong>革命</strong>发生了什么。
+我们看到平台以巨大的承诺建立起来。
+然后随着时间的推移，一旦它们获得权力，就会真正<strong>背叛用户</strong>。
+所以人们不再愿意相信关于技术或平台总是造福人类的故事。
+你从一些<strong>AI</strong>创始人那里看到了这种论点，他们说，嗯，它将为每个人创造<strong>物质丰裕</strong>。
+它将创造，不再有贫困。每个人都将拥有一切。
+每个人都在四处张望说，当然，那不会发生。
+你是一家<strong>私营公司</strong>，你将<strong>盈利</strong>。
+你将把一切都留给自己。
+我们如何强制它这样做。
+<strong>Sam Altman</strong>最近说它会像<strong>公用事业</strong>一样。
+<strong>公用事业</strong>受到高度监管。
+所以人们不再愿意相信这种说法，但却看到他们的生活正在迅速改变。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Well, there was a separate split in <strong>AI</strong> around capabilities.
+The debate used to be is this real or is it stochastic parrots?
+But usually even before that is it just slop that is never going to actually replace a human fancy autocomplete.
+Exactly so we had these debates on one dimension which was like, is it good for people’s it bad for people.
+And then there was this other dimension of how big an impact is it going to have.
+And I think that debate’s been collapsed. People are not skeptical of its power anymore or some are but fewer and fewer each day.
+And so the intensity with which we’re having that first debate has really ramped up, but I think it’s also been that we saw what happened with <strong>social media</strong>.
+We saw what happened with these previous revolutions that were supposed to change everything for the better.
+And we’ve seen platforms establish with great promise.
+And then over time, once they get power, really turn on their users.
+And so people are no longer willing to believe the story that is told about a technology or a platform always benefiting people.
+And you see this argument from some of the <strong>AI</strong> founders, they say, well, it’ll create <strong>material abundance</strong> for everyone.
+It will create, there’ll be no more poverty. Everyone will have everything.
+And everyone’s looking around saying, of course, that’s not what’s going to happen.
+You’re a <strong>private company</strong>, you’re going to profit.
+You’re going to keep it all for yourself.
+Like, how are we going to force it to.
+<strong>Sam Altman</strong> recently said it’ll be like a <strong>utility</strong>.
+It’s like <strong>utilities</strong> are really highly regulated.
+And so people are just not willing to believe that spin anymore and yet seeing really quickly changes in their lives.</p>
+</details>
+<h3><strong>AI民粹主义</strong>：技术被强加的担忧</h3>
+<p><strong>Ezra Klein</strong>: <strong>茉莉·孙</strong>（<strong>Jasmine Sun</strong>），这位<strong>AI</strong>作家，刚刚写了一篇关于<strong>AI民粹主义</strong>的有趣文章，我认为她对它的定义很有趣，也比你通常听到的更微妙。她写道，我将<strong>民粹主义</strong>定义为一种世界观，其中<strong>AI</strong>不仅被视为一种正常技术，而且被视为一个需要抵制的精英政治项目。
+她在这里的意思是，我认为<strong>AI民粹主义</strong>和反<strong>AI</strong>浪潮包括两个维度。
+一是这项技术被<strong>过分炒作</strong>了。
+另一个是，正如邮件中经常向我提出的那样，它正在被<strong>强加于我们</strong>，这不是人们想要的东西。
+这是一种被强加给他们的东西。
+现在，背后有所有的投资。
+所以投资需要得到回报。
+所以公司真的必须这样做。
+如果你认真对待权力，你会以不同的方式看待它。
+那种几乎任何版本的<strong>AI</strong>在经济中的存在，都将只是偿还这些巨大投资的一种方式，我们没有得到我们想要的技术。
+我们正在被强行接受一种新的范式。
+你对此有何看法？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: <strong>Jasmine Sun</strong>, the <strong>AI</strong> writer, just wrote this kind of interesting piece on <strong>AI populism</strong>, and I thought the way she defined it was interesting and a little more subtle than you normally hear, which is she wrote, I define <strong>populism</strong> as a worldview in which <strong>AI</strong> is viewed not only as a normal technology, but as an elite political project to be resisted.
+And what she’s getting at there is <strong>AI populism</strong>, I think, and the <strong>AI backlash</strong> tends to include two dimensions.
+One is that this technology is being <strong>overhyped</strong>.
+The other, as it’s often put to me in emails, is being <strong>pushed down our throats</strong> that it’s not a thing people want.
+It is a thing being forced upon them.
+Now, there’s all this investment behind it.
+So the investment needs to be paid off.
+So the companies really have to do it.
+And that if you take the power seriously, you see it in a different way.
+That kind of almost like any version of having <strong>AI</strong> in the economy, is going to be just a way of paying off these huge investments that we’re not getting a technology we want.
+We are having a new paradigm forced upon us.
+How do you think about that?</p>
+</details>
+<p><strong>Alex Bores</strong>: 我认为这是一个美丽的描述。
+我认为我从邻居那里听到的是，这种感觉就是<strong>AI</strong>发展得太快了，我们无法控制，而美国人民迄今为止还没有发言权。
+所以，是的，我认为这个定义的第一部分，即对其能力的信念，随着我们看到它做越来越多的事情，这部分正在对话中缩小。
+但它正在被强加给我们，而我们目前无法控制，我认为这就是激励这么多人思考<strong>AI</strong>的原因。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: I think it’s a beautiful description.
+I think what I hear from my neighbors is very much the feeling that this is moving so quickly that we don’t have control, and the Americas people so far have not had a say in it.
+So, yeah, I think the first part of that definition of the belief in its capabilities, that part is shrinking as part of the dialogue as we’re seeing it do more and more.
+But the fact that it is being thrown at us and we currently don’t have control, I think, is what’s motivated so many people to be thinking about <strong>AI</strong>.</p>
+</details>
+<h3><strong>AI</strong>的危害与模糊的收益</h3>
+<p><strong>Ezra Klein</strong>: 我一直觉得，如果你听公司的创始人和领导人讲话。
+他们对危害非常具体，而对收益则非常笼统。
+所以你会听到<strong>达里奥·阿莫代</strong>（<strong>Dario Amodei</strong>）谈到50%的初级白领工人看到他们的工作被自动化取代。
+现在路上确实有<strong>Waymo</strong>了。
+你可以看到它们可能会取代出租车司机和<strong>优步</strong>司机的工作。
+一直以来都有关于<strong>生存风险</strong>的讨论。
+那种你能建造出足够聪明的东西来<strong>赋能人类</strong>的感觉。
+然后就好像在取代<strong>程序员</strong>方面有很多具体性。
+然后你听到这些非常模糊的说法，它将有助于<strong>药物开发</strong>。
+它将解决<strong>物质稀缺</strong>问题。
+我认为如果你是一个普通人，被提供这项技术，那可能会确保你13岁的儿子在有真正女朋友之前就有一个<strong>AI色情机器人</strong>。
+你可能会失业。
+也许人类有那么一点机会无法控制自己的未来。
+你为什么不想暂停一下？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: It has always struck me that if you listen to the founders and leaders of their companies.
+They are very specific on the harms, and the gains are very general sounding.
+So you’ll hear <strong>Dario Amodei</strong> talking about 50 percent of entry level white collar workers seeing their jobs automated away.
+There actually are <strong>Waymos</strong> on the streets now.
+You can see that those could take jobs from <strong>taxi drivers</strong> and <strong>Uber drivers</strong>.
+There has been all this talk about <strong>existential risk</strong>.
+The sense that you could build something smart enough to <strong>disempower human beings</strong>.
+And then it’s like there’s a lot of specificity on replacing <strong>coders</strong>.
+And then you get these very vague, it’s going to help with <strong>drug development</strong>.
+It’s going to solve, <strong>material scarcity</strong>.
+And I think if you’re a normal person being offered this technology, that might make sure your 13-year-old son has <strong>AI porn bot</strong> before he has a real girlfriend.
+And you might lose your job.
+And maybe there’s some chance the human race doesn’t maintain control over its own future.
+Why wouldn’t you want to pause on that?</p>
+</details>
+<p><strong>Alex Bores</strong>: 绝对如此，绝对如此。
+当你日复一日地看到危害时，无论是你的孩子，学校的教学法都没有更新。
+有些人仍然认为布置家庭作文可以培养<strong>批判性思维</strong>，现在已经不行了。
+最重要的是，看到<strong>聊天机器人</strong>，你看到一些真正可怕的<strong>青少年</strong>故事。
+也许你去了你的公司，现在公司<strong>冻结招聘</strong>。
+他们还没有<strong>裁员</strong>，但他们没有进行常规招聘。
+你担心会发生什么。
+你们将来都会是必要的吗？
+然后你看到你的<strong>水电费</strong>上涨，也许你附近建了一个<strong>数据中心</strong>。
+也许没有，但你开始思考是什么导致了这一切。
+最重要的是，你看到人们说，哦，是的，它可能会杀死所有人。
+这些都是不断传来的新闻，你可能没有看到好处。
+而且确实有好处。
+这不是一个关于技术只带来坏处的故事，但它发展得非常非常快。
+少数人控制着方向。
+许多人对政府控制它的能力失去了信心。
+这成为了一个问题，即<strong>民主制度</strong>能否在<strong>AI</strong>统治我们之前<strong>治理</strong>这项技术。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Absolutely absolutely.
+When you’re seeing the harms day by day, whether it’s your kid, the pedagogy at schools hasn’t been updated.
+And some people still think that assigning take home essays teaches <strong>critical thinking</strong> doesn’t anymore.
+And on top of that see <strong>chatbots</strong> and you see some of the truly horrific stories that have happened to <strong>teenagers</strong>.
+And maybe you go to your job and your company.
+Now has a <strong>hiring freeze</strong>. They’re not <strong>laying people off</strong> yet, but they’re not doing their usual hiring.
+And you’re worried about what’s coming from that.
+Are you all going to be necessary in the future?
+And then you see your <strong>utility bill</strong> go up and maybe a <strong>data center</strong> is built near you.
+Maybe it wasn’t, but you’re starting to think about what’s causing that.
+And then on top of that you see people saying, oh yeah, and it might kill everyone.
+These are the news stories that are coming in, and you’re maybe not seeing that benefit.
+And there are benefits.
+This is not a story of a technology that is just bad, but it’s moving really, really quickly.
+And a few people are controlling the direction.
+And many people have lost confidence in government’s ability to steer it.
+It becomes a question of if <strong>Democratic institutions</strong> can govern this technology before it governs us.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 我认为很明显，不行。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: I think pretty clearly, no.</p>
+</details>
+<p><strong>Alex Bores</strong>: 嗯，我正在为改变这一点而竞选。
+我想我们会谈谈这个。
+但我认为担心这些系统移动的速度，以及对<strong>美国政府</strong>现在移动的速度有任何了解，都应该让人感到担忧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Well, I’m running a campaign to change that.
+I guess we’ll talk about that.
+But I think being worried about how fast these systems are moving and having any awareness at all of how fast the <strong>US government</strong> now moves should make one worried.</p>
+</details>
+<h3>数据中心暂停令与激励政策</h3>
+<p><strong>Ezra Klein</strong>: 绝对如此，所以你确实看到了一些提案，试图通过功能性地切断一些输入来减缓<strong>AI</strong>的速度。
+所以有一个<strong>Bernie Sanders</strong>和<strong>AOC</strong>的法案，只是要求暂停<strong>数据中心</strong>的建设。
+这方面有一些<strong>两党共识</strong>。
+<strong>Ron DeSantis</strong>在佛罗里达州有一个法案，将非常严格地限制<strong>数据中心</strong>的建设。
+你如何看待<strong>数据中心暂停令</strong>？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: Absolutely and so one thing you do see is proposals emerging to try to slow <strong>AI</strong> down by functionally choking off some of the inputs.
+So there’s a <strong>Bernie Sanders</strong> <strong>AOC</strong> bill to just have a <strong>data center moratorium</strong>.
+There’s some <strong>bipartisan interest</strong> in this.
+<strong>Ron DeSantis</strong> in Florida has a bill that would be very restrictive on <strong>data center construction</strong>.
+What do you think about a <strong>data center moratorium</strong>?</p>
+</details>
+<p><strong>Alex Bores</strong>: <strong>Bernie Sanders</strong>和<strong>AOC</strong>的提案是暂停，直到我们通过保护人民的真正监管。
+我同意这一点。
+我认为我们今天就应该通过真正的监管。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: The <strong>Bernie Sanders</strong> <strong>AOC</strong> proposal is a moratorium until we pass real regulation that protects people.
+I agree with that.
+I think we should pass real regulation today.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 你是否同意在通过之前暂停<strong>数据中心</strong>？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: Do you agree with the <strong>data center moratorium</strong> until we do?</p>
+</details>
+<p><strong>Alex Bores</strong>: 嗯，我认为他们所呼吁的是我们需要真正的监管。
+他们不认为这项法案会在这个分裂的国会中通过。
+他们正在设定辩论的条件，也就是说，在我们完成真正的工作之前，为什么我们要继续推进呢？
+我认为这是一个正确的问题。
+如果我能挥舞魔杖通过任何我想要的法案，那不会是暂停令。
+那会是暂停令所呼吁的法规。
+但将其作为一种谈判策略，我认为符合时机和规模。
+<strong>Bernie</strong>谈到了<strong>AI</strong>的潜在好处，也谈到了风险和弊端。
+我认为他是这方面最清晰的沟通者。
+但你说得对，这是一个<strong>两党问题</strong>。
+它不是一个左右翼的问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Well, I think what they are calling for is that we need the real regulation.
+They don’t think that bill is going to pass in this split <strong>Congress</strong>.
+They are setting the terms of the debate, which says, why are we going forward with this until we’ve done the real work.
+And I think that’s the right question to ask.
+If I could wave a magic wand and pass any bill I’d want it wouldn’t be the <strong>moratorium</strong>.
+It would be the regulations that the <strong>moratorium</strong> is calling for.
+But putting that as a negotiating tactic, I think, is meeting the moment in the scale.
+<strong>Bernie</strong> talks about the potential benefits of <strong>AI</strong> and also talks about the risks and the downsides.
+I think he’s been the clearest communicator on it.
+But you’re right, it’s a <strong>bipartisan issue</strong>.
+It is not one that is left right.</p>
+</details>
+<h3><strong>AI</strong>与电网升级：利用私人资本实现公共利益</h3>
+<p><strong>Ezra Klein</strong>: 所以在你的<strong>AI监管框架</strong>中，你对<strong>数据中心</strong>有一个不同的方法。
+你似乎将它们视为一种机会，一种它们可能成为什么的机会，一种机会。
+这再次强调，你首先需要监管。
+这不是说，哦，是的，这在未来会奏效。
+考虑到这些公司的<strong>政治权力</strong>，我非常怀疑他们会这样做，除非我们通过有牙齿的监管。
+但其理念是，我们的<strong>电网</strong>如此陈旧，全国各地都需要升级。
+即使在<strong>纽约州</strong>也是如此，它也减缓了<strong>可再生能源</strong>的转型。
+因为如果你想在家里安装<strong>太阳能</strong>，你需要一个能更灵活响应<strong>分布式发电</strong>的电网。
+而现在还没有。
+我们试图升级<strong>电网</strong>。我们需要资金来做。
+摆在桌面上的唯一选择是政府买单，那是纳税人，你和我，或者它增加我们的<strong>水电费</strong>，那是<strong>电力用户</strong>，还是你和我。
+现在来了一个在所有意图和目的上都拥有无限<strong>私人资本</strong>的行业，他们真的愿意为时间买单。
+他们渴望快速建设这些。
+所以我的意思是，你可以设定激励措施，如果你想建设一个<strong>数据中心</strong>，并且你正在做X百分比的<strong>可再生能源</strong>，这个比例应该非常高。
+你不仅要支付连接到<strong>电网</strong>和所有所需基础设施的费用，你还要在此基础上支付一笔费用，使<strong>电网</strong>更具<strong>弹性</strong>，并帮助其他地方的升级。
+所以你需要支付超过基础设施升级的费用，这样你才能真正使<strong>电网</strong>更<strong>绿色</strong>，更<strong>可靠</strong>。
+那么，我们就会把你移到<strong>互联队列</strong>的前面。
+通过这样做，我们会把你的竞争对手推到<strong>互联队列</strong>的后面，你就会建立一个激励机制，以对我们有利的方式实际建设东西。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: So in your framework for <strong>AI regulation</strong>, you have a somewhat different approach to <strong>data centers</strong>.
+You seem to see them as a kind of opportunity, an opportunity for what they could be an opportunity.
+And this is again, you need the regulation first.
+It’s not oh yeah, this will work in the future.
+And given the <strong>political power</strong> of these companies, I would be very skeptical of them doing it unless we pass regulation with teeth.
+But the idea is that our <strong>electric grid</strong> is so outdated and so in need of updates throughout the country.
+But even here in <strong>New York</strong>, and it also slows down the <strong>renewable energy transition</strong>, because if you want to have <strong>solar</strong> on homes, you need a <strong>grid</strong> that is more responsive to generation happening in a distributed manner.
+And it’s not right now.
+And we’ve tried to upgrade the <strong>grids</strong>. We need funds to do it.
+And the only options on the table are the government pays for it, which is taxpayers, you and I, or it adds to our <strong>utility bills</strong>, which is rate payers again.
+You and I. And here comes an industry with for all intents and purposes, and unlimited <strong>private capital</strong> that is really willing to pay for time.
+They are desperate for speed in building these out.
+And so what I’m saying is you can set the incentives such that if you want to build a <strong>data center</strong> and you’re doing X percentage <strong>renewable</strong>, it should be very high percentage and you will pay not just for the connection to the <strong>grid</strong> and all the infrastructure that’s needed for that, but you’ll also pay, on top of that, a fee to make the <strong>grid</strong> more <strong>resilient</strong> and help the upgrades elsewhere.
+So you need to pay above and beyond the infrastructure upgrades so that you can truly make the <strong>grid</strong> more <strong>green</strong> and more <strong>reliable</strong>.
+Well, then we’ll move you to the front of the <strong>interconnection queue</strong>.
+And by doing that, we’ll push your competitors to the back of the <strong>interconnection queue</strong>, and you set up a incentive to actually build things in a way that benefit us.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 考虑到我们的建设和基础设施的实际运作方式，这可能吗？
+我之所以产生一些怀疑，是因为我记得在<strong>2009年美国复苏与再投资法案</strong>中被承诺了未来的<strong>智能电网</strong>，但我们并没有完全实现。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: Is it possible to do, given the way our build outs and infrastructure really work.
+And the reason I’ve developed some cynicism here is I remember being promised the <strong>smart grid</strong> of the future in the <strong>2009 American Recovery and Reinvestment Act</strong> Yeah and we didn’t quite get that.</p>
+</details>
+<p><strong>Alex Bores</strong>: 不，我不认为有人在结束后说我们的电网现在是<strong>智能</strong>的。
+然后我们通过了<strong>通货膨胀削减法案</strong>和<strong>两党基础设施法案</strong>，这两项法案在<strong>能源生产</strong>方面有很多想法。
+其他事情也旨在改善电网。
+我并不是说电网没有任何升级，但我确实说我一直被承诺<strong>巨大的电网改造</strong>，然后几年后又被告知，哎呀，我们的电网不知为何仍然是这个<strong>老旧的烂摊子</strong>，而阻碍新能源上网的最大问题是我们无法连接它。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: No, I don’t think anybody said at the end of that where our <strong>grid</strong> was now smart.
+And then we passed the <strong>Inflation Reduction Act</strong> and the <strong>bipartisan Infrastructure bill</strong>, which between the two of them had a lot of thoughts about <strong>energy generation</strong>.
+And other things were meant to work on the <strong>grid</strong>.
+And I’m not saying there were no upgrades made to the <strong>grid</strong> anywhere, but I am saying that I keep getting promised gigantic <strong>grid overhauls</strong> and then being told a couple of years later, whoops, that somehow our <strong>grid</strong> is still this archaic mess where the biggest problem for getting new <strong>green energy</strong> online is we can’t connect it.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 你的怀疑是有道理的，百分之百。
+而且，我敢说你写了一整本书，关于我们如何能更容易做到这一点。
+但也许这里的不同是，你有了<strong>私人资本</strong>来做这件事，而整个提议都非常精确地说明了我们如何能够加快速度，并通过加快速度，将那些肮脏且不按规矩办事的人排到队伍的后面。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: Your cynicism is warranted, 100 percent.
+And, I dare say you wrote a whole book on ways that we could make that easier to do.
+But maybe the difference here is you have <strong>private capital</strong> coming up to do it, and the whole proposal is being precise on ways that we can expedite and by expediting, shifting the ones that are dirty and not paying their way to the back of the line.</p>
+</details>
+<h3><strong>AI红利</strong>与未来经济：重新分配财富</h3>
+<p><strong>Ezra Klein</strong>: 所以我理解<strong>数据中心</strong>方法背后的理论是，如果所有这些钱都将涌入<strong>AI</strong>，而<strong>AI</strong>将至少部分建立在它之前整个文化的<strong>集体共享</strong>之上，那么我们应该从中受益。
+这不仅仅是<strong>Sam Altman</strong>创造了一些神奇的<strong>算法</strong>，<strong>Sam Altman</strong>和<strong>OpenAI</strong>、<strong>Anthropic</strong>和<strong>Grok</strong>等等吞噬了整个互联网，吃掉了我的书以及周围所有人的书，并用它们训练了这些系统。
+你有一个想法，我认为它比我见过的其他东西更密切地追踪了这个理论，那就是<strong>AI红利</strong>。
+跟我说说。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: So as I understand the theory underneath the <strong>data center</strong> approach, it’s really that if all this money is going to flood into <strong>AI</strong>, and <strong>AI</strong> is going to be, at least in part, built on the <strong>collective commons</strong> of the entire culture that came before it, that we should benefit.
+That is not just <strong>Sam Altman</strong> created some magic <strong>algorithm</strong>, <strong>Sam Altman</strong> and <strong>OpenAI</strong> and <strong>Anthropic</strong> and <strong>Grok</strong> and so on inhaled the entire internet, ate up my books and the books of everybody else around, and trained these systems on them.
+You have an idea in there that I think tracks this theory more closely than other things I’ve seen, which is an <strong>AI dividend</strong>.
+Talk me through that.</p>
+</details>
+<p><strong>Alex Bores</strong>: 所以<strong>AI红利</strong>从思考我们如何能让美国人在<strong>AI经济</strong>中拥有真正的股份开始。
+它始于谦逊，我们不知道它将如何发展。
+我们不知道它会带来多大的颠覆，但现在是为可能出现的潜在结果做计划的时候了。
+而且这种对话一直存在。
+在<strong>劳资关系学院</strong>的课堂上，人们说，哦，每一次<strong>技术革命</strong>都创造了比它摧毁的更多的就业机会。
+这有争议，也许吧，但这是第一次有人建造一种技术，并声称目标是取代所有人类劳动。
+它旨在在所有方面都比人类做得更好，而我们理解技术进步的衡量标准是它在功能上，在模仿不同形式的<strong>人类劳动</strong>方面的能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: So the <strong>AI dividend</strong> starts from thinking about how we can give Americans a real stake in the <strong>AI economy</strong>.
+And it starts with humility that we don’t know exactly how it’s going to go.
+We don’t know how disruptive it’s going to be, but right now is the time to plan for the potential outcomes that could come.
+And there’s always been this conversation.
+In classes at <strong>ILR</strong>, it was that, oh, every <strong>technology revolution</strong> has always created more jobs than its destroyed.
+Arguable, maybe, but this is the first time someone’s building a technology and stating that the goal is to replace all human labor.
+It is to be better than humans at everything, and that the metric by which we understand how good the technology is getting is how functionally, how well it is capable of mimicking different forms of <strong>human labor</strong>.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 完全正确。然后超越它们。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: Exactly right. And then exceeding them.</p>
+</details>
+<p><strong>Alex Bores</strong>: 完全正确。
+我的意思是，你正在创造一个<strong>人类劳动</strong>的替代品，一个机器。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Exactly right.
+I mean, you are creating a replacement for <strong>human labor machine</strong>.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 完全正确，这是第一次尝试，这并不意味着它会成功，但它肯定意味着政府需要认真对待。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: Exactly and it’s the first time that has been tried, and it doesn’t mean it will succeed, but it certainly means government needs to take it seriously.</p>
+</details>
+<p><strong>Alex Bores</strong>: 所以<strong>AI红利</strong>的理念是，如果我们最终进入了那个所有<strong>人类劳动</strong>都被取代，或者只是很大一部分被取代的世界。
+那么社会如何才能正常运转？
+你就必须开始谈论<strong>全民基本收入</strong>（<strong>UBI</strong>），其理念是确保我们正在建立结构。
+现在，这将使美国人得到保护，如果我们最终进入那个未来。
+我有很多关于如何防止未来变化等等的想法。
+但<strong>AI红利</strong>几乎就是那份<strong>保险单</strong>，你可以通过像已经讨论过的<strong>财富税</strong>这样的无聊方式来资助它。
+你可以通过<strong>代币税</strong>来资助它。
+也就是说，对<strong>AI</strong>的使用征税，也许仅限于取代<strong>人类劳动</strong>的商业机会，或者不限于此。
+只要对资本的投资总是带来更多的就业机会，这在<strong>经济理论</strong>中已经有几百年了，那么这都是一项不错的政策。
+但也许<strong>AI</strong>正在改变这一点。
+所以如果它正在改变，我们需要调整我们的<strong>税收政策</strong>，对<strong>AI</strong>征税，并减少对雇用人类的折扣，<strong>代币税</strong>开始触及这一点。
+但<strong>AI红利</strong>的另一个资金机制是我所说的实际持有这些公司的<strong>认股权证</strong>，大量的<strong>价外认股权证</strong>，你比如说，如果<strong>AI公司</strong>的价值大幅上涨，那么政府将有权以设定价格购买股票。
+它们基本上只在一家或多家公司获得巨大成功时才支付。
+基本上，如果它们取代了所有<strong>人类劳动</strong>。
+如果你现在实施这项政策，那么<strong>风投</strong>会庆祝并说你正在参与<strong>上涨</strong>。
+如果你试图在其中一家公司成功后实施它，那么你就是在<strong>没收生产资料</strong>和<strong>没收财富</strong>。
+所以我的想法是，你走这些所有路径，你开始寻找方法来获得收入，以实际资助<strong>全民基本收入</strong>或<strong>再就业培训</strong>的投资，或者只是一个更广泛的<strong>安全网</strong>。
+但要以自动扩展和调整的方式进行，并以<strong>AI</strong>的速度启动。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: And so the idea of the <strong>AI dividend</strong> is, what if we end up in that world where all <strong>human labor</strong> is replaced, or just a significant portion of it is displaced.
+How do you have a society that is actually functioning then?
+And you have to start talking about <strong>universal basic income</strong> (<strong>UBI</strong>), and the idea is to make sure that we are setting up the structures.
+Now, that would lead for Americans to be protected if we end up in that future.
+And I have a lot of things about how we can prevent that future changes, et cetera.
+But the <strong>AI dividends</strong> almost that <strong>insurance policy</strong> and you could fund it via boring things like a <strong>wealth tax</strong> that have been talked about.
+You could fund it via <strong>token tax</strong>.
+So putting a tax on the usage of <strong>AI</strong>, maybe limited to commercial opportunities where you’re replacing <strong>human labor</strong> or not.
+And that’s a fine policy as long as investment in capital always leads to more jobs, which has been <strong>economic theory</strong> for hundreds of years.
+But maybe <strong>AI</strong> is shifting that.
+And so if it’s shifting that we need to shift our <strong>tax policy</strong> to be taxing <strong>AI</strong> and to be discounting hiring humans and <strong>token tax</strong> starts to get at that.
+But then the other funding mechanism that I talk about for the <strong>AI dividend</strong> is actually taking <strong>warrants</strong> in these companies, large out of the money <strong>warrants</strong> where you say, if the value of this the <strong>AI companies</strong> were to go up an enormous amount, then the government would have the right to buy shares at a set price.
+They basically only pay off if one or multiple of the companies are wildly successful.
+Basically, if they are replacing all <strong>human labor</strong>.
+And if you Institute that now, then <strong>VCs</strong> celebrate it and say you’re participating in the <strong>upside</strong>.
+And if you try to implement it after one of them are successful, then you’re seizing the means of production and seizing wealth.
+And so my idea is you go down all of these paths, you start to find ways to have the revenue to actually fund <strong>universal basic income</strong> or investments in <strong>job retraining</strong> or just a broader <strong>safety net</strong>, but do it in ways that automatically scale and adjust and kicked in at the speed of <strong>AI</strong>.</p>
+</details>
+<h3><strong>UBI</strong>与就业冲击：过渡期的挑战</h3>
+<p><strong>Ezra Klein</strong>: 我一直对这一系列政策，或者说对<strong>AI</strong>和<strong>失业</strong>问题的这一系列答案，有一个担忧。
+我长期以来一直非常非常关注<strong>全民基本收入</strong>的辩论。
+我的妻子<strong>安妮·劳里</strong>（<strong>Annie Lowrey</strong>）写了一本关于<strong>全民基本收入</strong>的书，名为**《给钱》<strong>。
+我曾经与</strong>迪伦·马修斯**（<strong>Dylan Matthews</strong>）密切合作，他写了很多关于<strong>全民基本收入</strong>的文章。
+而<strong>全民基本收入</strong>对我来说的诀窍，也许你本身就支持它的优点。
+这很好，但<strong>AI</strong>造成<strong>失业</strong>的任何合理情景下。
+它只发生在部分人身上，而不是所有所有人身上。
+我持怀疑态度地看着，但我看不到一个有一天我们醒来，所有人的工作都消失了的世界。
+它会从一些人的工作开始。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: Here’s a concern I’ve always had about this set of policies, or this set of answers to the problem of <strong>AI</strong> and <strong>job displacement</strong>.
+So I’ve been very, very near the <strong>universal basic income</strong> debate a long time.
+My wife, <strong>Annie Lowrey</strong>, wrote a book on <strong>universal basic income</strong> called &quot;<strong>Give People Money</strong>.&quot;
+I used to work closely with <strong>Dylan Matthews</strong>, who did a lot of writing on <strong>universal basic income</strong> and the trick of <strong>universal basic income</strong> to me, which maybe you support on its own merits.
+Which is fine, but is under any plausible scenario of <strong>AI job displacement</strong>.
+It is happening to some people and not all people.
+And I see looking skeptically, but I don’t see a world in which one day we wake up and everybody’s jobs are gone.
+It’s going to start with some people’s jobs.</p>
+</details>
+<p><strong>Alex Bores</strong>: 它会从一些人的工作开始。
+所以如果我以为会是所有人的工作一下子都消失，我就不会担心，因为那时我们就会想出一个政策来补偿所有人。
+但你想象你是一名<strong>工头</strong>，你开卡车，对吧。
+你每年挣8万到12万美元。
+而<strong>自动驾驶卡车公司</strong>让你的同事和你们都失业了。
+别担心，我们实际上已经通过了<strong>全民基本收入</strong>。
+不，完全是这样。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: It’ll start with some people’s jobs.
+So if I thought it was going to be everybody’s job all at once, I wouldn’t worry about it because then we would just figure out a policy to compensate everyone.
+But you imagine you’re a <strong>teamster</strong> and you drive a truck, right.
+And you’re making $80,000, $120,000 a year.
+And the <strong>autonomous truck companies</strong> put you and your fellow <strong>teamsters</strong> out of work.
+And don’t worry, we’ve actually passed <strong>universal basic income</strong>.
+No it’s totally.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 你现在从你的<strong>全民基本收入</strong>中获得37000美元。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: And you’re now getting $37,000 from your <strong>universal basic income</strong>.</p>
+</details>
+<p><strong>Alex Bores</strong>: 是的，百分之百，我从<strong>全民基本收入</strong>中获得37000美元。
+我还在我的<strong>播客工作室</strong>里。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Yes, 100 percent, and I’m getting $37,000 from the <strong>universal basic income</strong>.
+And I’m still here in my <strong>podcasting studio</strong>.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 你被骗了。我收到了支票。
+最让我担心的是，我不认为我们正在走向一个完全自动化的世界。
+但即使你相信我们是，这是一个过渡期，有些人会真正受损，而另一些人则不受影响或受益。
+我没有听到似乎知道如何处理那些在此过程中受损的人的政策想法。
+那些真正被取代的人，而不是所有人都被取代的世界。
+而是一个营销学位毕业的世界，现在很可能。
+你失业的可能性是以前的三倍，或者<strong>程序员</strong>突然看到对他们服务的需求收缩。
+但有些<strong>程序员</strong>赚了很多钱。
+是的，你如何看待这里的差异。
+<strong>全民基本收入</strong>本身是不够的。
+我很想知道你为什么认为我们不会走向一个完全自动化的世界。
+因为一旦我们开始，我很难看到它在哪里停止。
+但我们可以稍后再谈。
+无论如何都会有一个过渡期。
+我不认为会一下子发生。
+所以这个想法不仅仅是，哦，是的，我们都会有这份<strong>基本收入</strong>，因为你说得对，人们会因此而受苦。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: You got screwed. I got a check.
+What worries me the most is I don’t think we’re going to a world of <strong>full automation</strong>.
+But even if you believed we were is transition and some people are going to really lose out and other people are going to be unaffected or gain.
+And I don’t hear policy ideas that seem to know what to do with the people who are losing out along the way.
+The people who are actually getting displaced, not the world of everybody’s displaced.
+But the world is graduating with a <strong>marketing degree</strong> is now likely.
+You are three times more likely to be unemployed than you were before, or <strong>coders</strong> are suddenly seeing a contraction in demand for their services.
+But some <strong>coders</strong> are making a ton of money Yeah like, how do you think about the differentials here.
+<strong>Universal basic income</strong> by itself is insufficient.
+And I would love to understand why you think we’re not headed to a world of <strong>full automation</strong>.
+Because it’s tough for me to see where that stops once we start on it.
+But we can come back to that.
+There will be a period of transition either way.
+I don’t think it’ll be all at once.
+And so the idea is not just oh yeah, we’re all going to have this <strong>basic income</strong> because you’re right, people will be screwed by that.</p>
+</details>
+<p><strong>Alex Bores</strong>: 这个想法是同时做很多事情，其中包括修改<strong>税法</strong>，以便我们实际对<strong>AI</strong>的使用收费，并减少对<strong>劳动力</strong>的使用折扣。
+这是一种保护就业和减缓过渡本身的方法。
+它不仅投资于<strong>全民基本收入</strong>，还投资于<strong>再就业培训计划</strong>和帮助人们进入新职业的结构。
+现在，诚然，它们的记录很差。
+这是我担心的，记录很差。
+但这并不意味着你不应该继续投资<strong>社区大学</strong>，并寻找方法尽可能地改进它。
+但你说得对，仅仅说，哦，我们只是要提供<strong>全民基本收入</strong>是不够的。
+我们必须考虑调整过渡的其他方式，这可能包括当你有人拥有需要多年才能获得的许可证、培训或执照时，也许你仍然要求在五年或十年内需要它。
+这样人们就可以将培训转化为<strong>股权</strong>，这也是他们在<strong>AI经济</strong>中拥有股份的另一种方式。
+我们将需要大量的<strong>政策解决方案</strong>。
+这就是为什么我提出的框架中有43个不同的想法。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: The idea is to do a number of things simultaneously, which include changing the <strong>tax code</strong> so that we’re actually charging for the use of <strong>AI</strong> and discounting the use of <strong>labor</strong>.
+And that’s a way to protect jobs and slow down the transition itself.
+It’s investments not just in <strong>universal basic income</strong>, but in <strong>job retraining programs</strong> and in structures that help people go into new careers.
+Now, granted, they have a really bad track record.
+This is my concern, a really bad track record.
+But it doesn’t mean you shouldn’t still be investing in <strong>community colleges</strong> and finding ways to improve it as much as possible.
+But you’re right to just say that, oh, we’re just going to give a <strong>universal basic income</strong> is not enough.
+We have to think about other ways of adjusting that transition, which could include when you have people who have a permit or training or license that takes a number of years to acquire, maybe you still require that for the transition for five years or 10 years.
+So people can turn that training into <strong>equity</strong>, and that’s another way that they have a stake in the <strong>AI economy</strong>.
+We’re going to need a lot of <strong>policy solutions</strong>.
+That’s why the framework I put out has 43 different ideas in it.</p>
+</details>
+<h3>Waymo与纽约市：技术进步与就业保护的平衡</h3>
+<p><strong>Ezra Klein</strong>: 但让我们具体讨论一下。
+我想回到<strong>全面自动化</strong>的问题。
+但<strong>纽约市</strong>正面临一个近期问题，那就是<strong>Waymo</strong>，<strong>自动驾驶汽车公司</strong>。
+他们获得了在这里进行<strong>测绘</strong>和<strong>测试</strong>的许可，以便最终在<strong>纽约市</strong>推出<strong>Waymo</strong>，就像它在<strong>旧金山</strong>和<strong>凤凰城</strong>等地推出一样，而这套许可已经过期了。
+<strong>Mamdani市长</strong>对此是否延长许可持<strong>非常不置可否</strong>的态度。
+他说，如果像<strong>Waymo</strong>这样的公司来到<strong>纽约市</strong>，他们也会发现市政府致力于为维护城市运转的工人提供服务。
+这些工人也包括我们的<strong>出租车司机</strong>。
+所以这里有一个非常近的问题。
+我的意思是，<strong>Waymo</strong>是一项技术进步。
+乘坐它们很舒服。
+从我们所有的数据来看，它们更安全。
+如果未来几年大规模推出，它们也会取代<strong>出租车司机</strong>、<strong>优步司机</strong>、<strong>Lyft司机</strong>。
+你如何平衡这一切？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: But let’s get very specific on this.
+And I want to come back to the question of <strong>full automation</strong>.
+But <strong>New York City</strong> is facing a near-term question here, which is <strong>Waymo</strong>, the <strong>autonomous vehicle company</strong>.
+They have had permits to do the mapping and testing here needed to eventually roll out <strong>Waymo</strong> in <strong>New York City</strong>, the way it’s been rolled out in <strong>San Francisco</strong> and <strong>Phoenix</strong> and other places, and that set of permits have expired.
+And <strong>Mayor Mamdani</strong> has been, I would say, very noncommittal about whether or not he wants to extend them.
+He said, if a company like <strong>Waymo</strong> finds itself in <strong>New York City</strong>, what they will also find is a city government that is committed to delivering for the workers who keep the city running.
+Those workers also include our <strong>taxi drivers</strong>.
+So here you have this very near question.
+I mean, <strong>Waymo</strong> is a <strong>technological advance</strong>.
+They are nice to ride in.
+They are safer from all the data we have.
+They also will if you roll them out in mass in the coming years, displace <strong>taxi drivers</strong>, <strong>Uber drivers</strong>, <strong>Lyft drivers</strong>.
+How do you balance that?</p>
+</details>
+<p><strong>Alex Bores</strong>: 这是一个艰难而持续的问题，过渡的速度只会使其变得更糟。
+有一些方法可以再次，也许你要求<strong>Waymo</strong>在一定时间内拥有<strong>运营执照</strong>。
+这使得一些过渡成为可能。
+但那样你只保护了<strong>运营执照所有者</strong>，而不是<strong>司机</strong>。
+但这可能是过渡期的一部分，特别是对于那些为了购买<strong>运营执照</strong>而背负巨额债务的人。
+你考虑<strong>再就业培训</strong>和其他可以介入的地方。
+你考虑一个更广泛的<strong>安全网</strong>，但我们没有一个针对如此迅速发生的任何颠覆的完整<strong>政策解决方案</strong>。
+它只是尚未发展。
+我们需要政府中有愿意认真对待这个问题，并寻找不仅仅是停止或前进的解决方案的人，因为这项技术即将到来。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: It’s a tough and ongoing question that the speed of the transition only makes worse.
+There are ways of again maybe you require <strong>medallion</strong> for <strong>Waymo</strong>’s for a set amount of time.
+And that’s what enables some bit of transition.
+But then you’re only protecting the <strong>medallion owners</strong> and not the <strong>drivers</strong>.
+But that’s maybe a piece of what that transition looks like, especially for those that have gone into a huge amount of debt to buy that <strong>medallion</strong>.
+You think about <strong>job retraining</strong> and other places that can go in.
+You think about a broader <strong>safety net</strong>, but we don’t have a full <strong>policy solution</strong> for any disruption that happens this quickly.
+It just hasn’t been developed.
+And we need people in government that are willing to take that problem seriously and look for solutions that aren’t just stop or go because this technology is coming.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 那么你对<strong>Waymo</strong>的解决方案版本是什么？
+因为<strong>Waymo</strong>对我来说很有趣，或者<strong>自动驾驶汽车</strong>，对吧。
+你可以想到许多不同的公司试图这样做，甚至比我想象的更多，至少在<strong>生成式AI</strong>的公开讨论中，我认为收益，我们可以谈谈。
+有时很难看出人们是如何谈论它的。
+<strong>无人驾驶汽车</strong>确实有收益。
+一个<strong>无人驾驶汽车</strong>的世界更安全。
+现在有很多人有<strong>出行问题</strong>，或者<strong>歧视问题</strong>，以及各种各样的问题，他们真的可以得到帮助。
+它们只是迷人的技术。
+你不会有人睡着然后撞到路上的人。
+减缓它们的速度是有代价的，代价在于人们可能会体验到的便利，也在于安全。
+它可能会挽救生命。
+加速它们的速度会带来<strong>失业</strong>的代价。
+所以你说我们需要愿意认真对待这个问题的<strong>政治家</strong>。
+你是一名<strong>政治家</strong>。
+你正在认真对待这个问题。
+是的，你怎么办？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: But so what’s your version of that solution for <strong>Waymo</strong>.
+Because <strong>Waymo</strong> is interesting to me or <strong>autonomous vehicles</strong>, right.
+You can think of many different companies trying to do this, even more so than I think, at least the public conversation around <strong>generative AI</strong>, where I think the gains, which we can talk about.
+It has been sometimes hard to see what they are in the way people talk about it.
+<strong>Driverless cars</strong> really do have gains.
+A world of <strong>driverless cars</strong> is safer.
+There are a lot of people who have <strong>mobility issues</strong> right now, or <strong>discrimination issues</strong> and getting picked up and all kinds of things where they could really be helped.
+They are just fascinating technology.
+You’re not going to have people falling asleep and then hitting somebody on the road.
+Slowing them down has a cost, a cost in just the convenience people might experience, but also cost in safety.
+It cost potentially in lives saved.
+And speeding them up has a cost in <strong>displacement</strong>.
+So you said we need politicians willing to take this seriously.
+You’re a politician.
+You’re looking to take this seriously Yeah what do you do.</p>
+</details>
+<p><strong>Alex Bores</strong>: 嗯，我说了一些不同的选择和我们可以一起做的事情，这就是<strong>Waymo</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Well, I said a few different options and things that we can do together, which is the <strong>Waymo</strong>.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 继续。
+是吗？
+那就是答案。
+你会向<strong>Waymo</strong>收取<strong>运营执照费</strong>。
+这笔钱流入<strong>金库</strong>。
+谁得到这笔钱？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: Keep going.
+Is it.
+That’s the answer.
+You’ll charge <strong>Waymo</strong> for <strong>medallions</strong>.
+That money goes into the <strong>coffer</strong>.
+Who gets that money?</p>
+</details>
+<p><strong>Alex Bores</strong>: 我认为你可以特别关注<strong>再就业培训</strong>和被<strong>取代</strong>的人。
+你可以尝试以这种方式分享利益，这是我们必须考虑的一部分答案。
+但真正的问题是，我们应该投资于<strong>Waymo</strong>还是<strong>公共交通</strong>。
+我们有一个很好的系统来运送人员，我们确实需要投资来改善它。
+我第一次在<strong>洛杉矶</strong>乘坐<strong>Waymo</strong>时，<strong>纽约市</strong>的标准是小雨，但<strong>洛杉矶</strong>的标准我认为是<strong>雷暴</strong>。
+我上了<strong>Waymo</strong>，它开了20英尺，然后停在路边，说正在呼叫支持。
+没说是什么。
+不，不，不，为什么它在呼叫等等。
+后来我发现，原来当时城市里几乎所有的<strong>Waymo</strong>都同时这么做了，因为它无法应对下雨。
+所以支持超时了，我坐在那里12分钟。
+这是我第一次乘坐<strong>Waymo</strong>，我打电话或去叫<strong>优步</strong>或<strong>Lyft</strong>或什么的。
+最后支持来了，那个人说，哦，是的，你好像被困住了。
+我会把你开出去。
+所以我对它们在<strong>纽约市</strong>下雨时的功能有疑问。
+我对备用是<strong>人类司机</strong>时有疑问。
+这似乎也是另一种形式的<strong>外包</strong>。
+所以是的，从长远理论来看。
+<strong>自动驾驶汽车</strong>会比人类更安全吗？
+在大多数情况下，是的。
+但要说我们现在绝对已经达到了那个水平，我不会这么说。
+这只有在它们愿意做到的条件下，而这些条件相当有限。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: I think you can specifically be focused on <strong>job retraining</strong> and on people who are <strong>displaced</strong>.
+And you can try to share the benefits in that way is a portion of that answer that we have to go to.
+But the real question is, should we be investing in <strong>Waymo</strong>’s or in <strong>public transit</strong>.
+We have a great system to move people around, and we actually need an investment in improving that.
+I took a <strong>Waymo</strong> for the first time in <strong>LA</strong>, and it was a light rain for <strong>New York City</strong> standards.
+But I think a <strong>thunderstorm</strong> for <strong>LA</strong> standards.
+And I got in the <strong>Waymo</strong> and it went 20 feet, and it pulled over to the side of the road and just said dialing support.
+Didn’t say what.
+No, no, no, why it was calling, et cetera.
+And I found out later, it turns out almost every <strong>Waymo</strong> in the city had done it at the same time because it couldn’t handle rain.
+And so support timed out and I was sitting there for 12 minutes.
+My first <strong>Waymo</strong> I ever rode and I dialed or I went to call an <strong>Uber</strong> or <strong>Lyft</strong> or something.
+And finally support came through and the person was like, oh yeah, it seems like you’re stuck.
+Like, I’ll drive you out of there.
+And so I have questions about how they function in the rain in <strong>New York City</strong>.
+And I have questions about when the backup is <strong>human drivers</strong>.
+It seems like it’s another form of <strong>outsourcing</strong> as well.
+So yes, in the long term theoretical.
+Will <strong>autonomous vehicles</strong> be safer than humans.
+In most cases, yes.
+But to say that we are definitely there right now, I wouldn’t say we’re there necessarily right now.
+It’s only in the conditions in which they’re willing to do them, which are quite limited.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 给你。
+就像你不能从<strong>旧金山</strong>乘坐<strong>Waymo</strong>到<strong>凤凰城</strong>，只能在<strong>旧金山</strong>或<strong>凤凰城</strong>内乘坐。
+所以这一切都说明，我认为他们现在已经准备好并且更安全这种假设是不正确的。
+但我认为他们在驾驶的地方更安全。
+我之所以强调这一点，并不是因为我支持<strong>Waymo</strong>或反对<strong>Waymo</strong>。
+而是公共官员现在面临一个问题，即如何快速进入那个世界。
+而且，<strong>Zohran Mamdani</strong>可以延长许可，加速<strong>Waymo</strong>进入<strong>纽约市</strong>。
+或者他可以拖延时间，让它远离<strong>纽约市</strong>。
+然后中间有一些想法，也许你可以让<strong>Waymo</strong>支付高昂的费用。
+但即使你这样做，你所做的也是把<strong>Waymo</strong>拉进来。
+我认为人们有时不太愿意面对这一点。
+在某些问题上存在是或否的问题。
+从长远来看，你希望保护<strong>出租车司机</strong>的工作，还是希望在你的城市中运营<strong>自动驾驶汽车</strong>，这是一个是或否的问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: There you go.
+Like you can’t take a <strong>Waymo</strong> from <strong>San Francisco</strong> to <strong>Phoenix</strong> can only take one inside <strong>San Francisco</strong> or <strong>Phoenix</strong>.
+So all of that is to say, I think it’s this hypothetical of they’re ready to go and be safer right now is not right.
+But I think they’re safer in the place they drive.
+And the reason I’m pushing on this is not because I’m pro <strong>Waymo</strong> or anti <strong>Waymo</strong>.
+It’s that there is a question that public officials are facing right now about how quickly to move forward into that world.
+And, <strong>Zohran Mamdani</strong> could extend the permits and accelerate <strong>Waymo</strong> coming to <strong>New York City</strong>.
+Or he could drag his feet and keep it out of <strong>New York City</strong>.
+And then there are some ideas in the middle about maybe you could have <strong>Waymo</strong> paying high prices.
+But even to the extent you’re doing that, what you’re doing is pulling <strong>Waymo</strong> in.
+I think people sometimes don’t quite want to face up to that.
+There is a yes or no question on some of these issues.
+And in the long run, do you want to protect the jobs of <strong>taxi drivers</strong> or do you want to have <strong>autonomous vehicles</strong> operating inside of your city is a kind of yes or no question.</p>
+</details>
+<p><strong>Alex Bores</strong>: 我认为，正如<strong>凯恩斯</strong>所说，从长远来看，我们都将死去。
+这是一个速度问题，而不是是或否的问题。
+我认为这里大多数人从0到100之间，在40到60之间。
+而我们被描述为是或否。
+我认为它现在还没有准备好适应<strong>纽约市</strong>的环境。
+它将在未来的某个时候准备好。
+我们有很多需要思考的地方，关于这种过渡，以及它如何造福人们，以及它如何伤害他们。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: I think, as <strong>Keynes</strong> says, in the long run, we’re all dead.
+There’s a question of speed, not yes or no.
+And I think most people here are from 0 to 100, somewhere between 40 and 60.
+And we’re being described as yes or no.
+I think it’s not ready right now for the environment of <strong>New York City</strong>.
+It will be ready sometime in the future.
+And with a lot of we need to be thoughtful on that transition, on how it benefits people and how it hurts them.</p>
+</details>
+<h3><strong>AI</strong>带来的尊严与职业认同挑战</h3>
+<p><strong>Ezra Klein</strong>: 我认为设想处理<strong>AI</strong>对人们造成的<strong>经济后果</strong>的方法几乎更容易，尽管我实际上不认为我们已经解决了这个问题。
+然后是<strong>尊严</strong>和<strong>目的</strong>的后果。
+人们为了工作而<strong>培训</strong>。
+这份工作是他们<strong>身份</strong>的一部分，然后突然之间它被剥夺了，你会说，嘿，<strong>出租车工人</strong>，到<strong>社区大学</strong>来，你可以<strong>再培训</strong>成为一名<strong>家庭健康助理</strong>，这里有一些东西我们必须平衡，<strong>经济效率</strong>或<strong>推动</strong>与我们在这个国家和这个经济中向人们提供的<strong>基本协议</strong>，那就是学习一些东西，你学习如何做一份工作，你当学徒，我们珍视你这样做。
+然后我们应该把这视为有价值的。
+我觉得我们对这个<strong>尊严维度</strong>的讨论不够。
+所以我想知道你是怎么看待它的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: I think it is almost easier to imagine ways of handling the <strong>financial consequences</strong> of <strong>AI</strong> for people, even though I don’t actually think we figured that out.
+Then the consequences for their <strong>dignity</strong>, for their <strong>purpose</strong>.
+People train for jobs.
+That job is part of their <strong>identity</strong>, and then all of a sudden it’s getting taken from them and you’re going to say, hey, <strong>taxi worker</strong> over here at the <strong>community college</strong>, you can <strong>retrain</strong> to be a <strong>home health aide</strong>, that there’s something here that we’re going to have to balance, the <strong>economic efficiencies</strong> or pushes forward with the <strong>basic deal</strong> we offer people in this country and in this economy, which is that study for something, you learn how to do a job, you <strong>apprentice</strong>, and that we value you for doing that.
+And then we’re supposed to treat that as having value.
+I feel like we don’t talk about this <strong>dignity dimension</strong> enough.
+So I’m curious how you think about it.</p>
+</details>
+<p><strong>Alex Bores</strong>: 我认为长期以来，人类一直由他们的工作来定义，这已经成为<strong>尊严</strong>的一部分，在这种世界观中，你拥有<strong>目的</strong>，拥有<strong>价值</strong>，因为你所做的事情。
+这在人们心中已经根深蒂固了一段时间。
+如果我们保持这种心态，那么<strong>UBI</strong>就是一个极其令人失望的答案，我认为由于多种原因，它不是完整的解决方案。
+<strong>AI乐观主义者</strong>所描绘的世界是我们将进入一个<strong>后工作时代</strong>，人们不再从工作中获得<strong>目的</strong>。
+我持怀疑态度。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: I think it for so long, humans have been defined by their job, and that’s become a piece of the <strong>dignity</strong> that you, in this worldview, have <strong>purpose</strong>, have <strong>value</strong> because of the thing that you do.
+And that’s been ingrained in people for a while.
+And if we keep that mindset, then <strong>UBI</strong> is an extremely disappointing answer to it, and I think for lots of reasons, it’s not the full solution.
+The world that is painted by the <strong>AI optimists</strong> is we’re going to get to this <strong>post working area</strong> where people no longer derive their <strong>purpose</strong> from work.
+I’m skeptical.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 我们会像英国贵族一样吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: We’ll be like the <strong>British gentry</strong>.</p>
+</details>
+<p><strong>Alex Bores</strong>: 我很怀疑。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: I’m skeptical.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 我很怀疑。
+但你相信<strong>全面自动化</strong>。
+那么你认为我们现在正在走向<strong>反乌托邦</strong>？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: I’m skeptical.
+But you believe in <strong>full automation</strong>.
+So then you think we’re going to <strong>dystopia</strong> on our current path?</p>
+</details>
+<p><strong>Alex Bores</strong>: 是的，但我认为我们有机会改变它。
+当你在精神上把球踢得很远时，如果你持怀疑态度。
+这里有什么好的结果呢？
+如果我们将大部分经济工作都自动化了，你似乎认为这很有可能，那么好的结果是什么呢？
+然而我们所拥有的，至少比我们过去或现在更好。
+它必须达到这样的程度，即不仅仅是你的<strong>基本物质需求</strong>得到满足，而且<strong>生活水平</strong>比现在更高，你可以在一天中过得比现在更好。
+这并不是一个完美的类比。
+<strong>AI</strong>在各个方面都不同，但如果你回顾100年前，普通美国人每周工作60小时，生活水平远低于现在。
+现在普通美国人每周工作40小时，生活水平更高。
+我们可以达到每周工作20小时或10小时，生活水平更高。
+但我们之所以能够实现这种转变，是因为工人拥有<strong>权力</strong>，因为美国人拥有<strong>政治权力</strong>，因为我们能够塑造这项技术为我们服务，无论是直接通过<strong>立法</strong>，还是通过组织<strong>工会</strong>，间接在工作场所实现。
+如果这种转变发生得太快，而我们失去了<strong>政治权力</strong>，那它就不会发生。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Yeah, but I think we have the chance to change it.
+When you throw the ball down the field mentally, what if you’re skeptical.
+What is the good outcome here?
+What is the good outcome If we have automated away, which you seem to think is very possible, or at least very large percentage of the economies jobs.
+And yet what we have is something better than at least where we’ve been or where we are.
+It would have to be at the point where it’s not just your <strong>basic material needs</strong> are met, but the <strong>standard of living</strong> is higher than it is now, where you can go about your day and be in a better place than you are right now.
+And this isn’t a perfect analogy.
+<strong>AI</strong> is different in all kinds of ways, but if you look 100 years ago, the average American worked 60 hours a week and had a much lower <strong>standard of living</strong>.
+Now the average American works 40 hours a week has a higher one.
+We could get to one where we work 20 hours or 10 hours and have a higher one yet.
+But we were able to do that transition because workers had <strong>power</strong>, because Americans had <strong>political power</strong>, because we were able to shape that technology to work for us, either directly through <strong>legislation</strong> or by organizing <strong>unions</strong> and doing it indirectly at the workplace.
+If this transition happens too quickly and we lose that <strong>political power</strong>, it doesn’t just happen.</p>
+</details>
+<h3><strong>AI</strong>与儿童：保护与教育</h3>
+<p><strong>Ezra Klein</strong>: 所以我想谈谈我们已经看到影响的领域。
+你在你的计划中很早就提到了这一点，那就是<strong>儿童</strong>。
+我关于<strong>立法</strong>的理论之一，在涵盖了很多这方面内容之后，有时在建立立法能力方面，关键在于找到有足够共识的地方进行立法，这样人们就可以了解这个问题，并学习如何立法。
+各种各样的实验，同意的成年人可以自己进行。
+我非常担心<strong>AI</strong>与<strong>儿童</strong>的情况，我们真的不知道<strong>儿童</strong>与<strong>AI</strong>建立关系，以及在拥有<strong>AI朋友</strong>等情况下成长意味着什么。
+你对<strong>儿童</strong>和<strong>生成式AI</strong>有什么看法？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: So I want to talk about something where I am, where we already are seeing the effects of it.
+And you talk about this, it’s very early in your plan, which is <strong>kids</strong>.
+And one of my theories of <strong>legislating</strong>, having covered a lot of this, is sometimes a crucial thing in building <strong>legislative capacity</strong> is to just find places where there’s enough consensus to legislate a bit, so people learn about the issue and learn how to legislate on it.
+There’s all kinds of experiments consenting adults can run on themselves.
+I am pretty worried about the situation with <strong>AIs</strong> and <strong>kids</strong>, and we really don’t know what it’s going to mean for <strong>kids</strong> to have relationships with <strong>AIs</strong> and to grow up where they’ve got <strong>AI friends</strong> and so on.
+What is your approach to <strong>kids</strong> and <strong>generative AI</strong>?</p>
+</details>
+<p><strong>Alex Bores</strong>: 我同意你的看法。
+我认为<strong>儿童</strong>在某些方面需要更多的保护，我们不知道<strong>AI</strong>会产生很多影响。
+这并不意味着我们不关注它能造福<strong>儿童</strong>的地方。
+我的意思是，我可以想象一个世界，在那里，每个科目都有一个<strong>个性化导师</strong>，正好符合你的水平，并且能够以你喜欢学习的方式与你交流，作为你在课堂上从老师那里以及从父母那里得到的补充，这是一个有益的事情。
+但老师和父母需要了解所有互动，我们需要强大的<strong>数据保护</strong>。
+我认为，总的来说，许多这样的项目，即使你认为一些<strong>青少年</strong>是否应该被允许参与，也需要考虑对<strong>心理健康</strong>的影响。
+这是一个非常可怕的时期。
+我们已经看到了关于<strong>聊天机器人</strong>的大新闻，但我们也看到了像<strong>ChatGPT</strong>集成到<strong>泰迪熊</strong>等玩具中，这些感觉非常不必要。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: I agree with you.
+I think <strong>kids</strong> in some ways need more protection, and we don’t know a lot of the impacts that <strong>AI</strong> will have.
+That doesn’t mean we don’t look at places where it can benefit <strong>kids</strong>.
+I mean, I could imagine a world where having a <strong>personalized tutor</strong> at exactly your level in each subject and able to communicate with you in exactly the way you like to learn as a supplement to what you’re getting from <strong>teachers</strong> in the classroom and your <strong>parents</strong> is a helpful thing.
+But <strong>teachers</strong> and <strong>parents</strong> need a view into all of the interactions, and we need strong <strong>data protection</strong>.
+And I think broadly, a lot of these projects, even when you think if some <strong>teenagers</strong> should be allowed on or not, need to be thoughtful on the <strong>mental health impacts</strong>.
+This is a really scary period.
+And we’ve seen the big stories about <strong>chat bots</strong>, but then we’ve also seen like <strong>ChatGPT</strong> integrated into <strong>teddy bears</strong> and things that just feel really unnecessary.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 那么你的计划中有什么呢？
+你到底想做什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: So what’s in your plan on this?
+What do you actually want to do?</p>
+</details>
+<p><strong>Alex Bores</strong>: 所以，对于这些互动的某些方面进行<strong>年龄验证</strong>。
+我之前提到的<strong>心理健康检查</strong>。
+参与和更新<strong>教学法</strong>，确保老师和父母能够看到与<strong>AI</strong>的任何互动。
+对<strong>儿童数据</strong>的训练和<strong>数据隐私</strong>方面进行广泛保护。
+是的，我们需要为<strong>儿童</strong>未来的工作做准备。
+我不认为你应该切断<strong>AI</strong>的访问。
+人们应该在高中、大学和进入社会后接触这些工具。
+但要非常仔细地考虑这些互动是什么。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: So <strong>age verification</strong> for certain aspects of these interactions.
+The <strong>mental health checking</strong> as I said, engaging and updating <strong>pedagogy</strong>, making sure that <strong>teachers</strong> and <strong>parents</strong> have a view into any interaction that goes with <strong>AI</strong>.
+Broad protection on training of <strong>kids’ data</strong> and <strong>data privacy aspects</strong> as well.
+And yes, we need to prepare <strong>kids</strong> for the jobs of the future.
+I don’t think you should shut off access to <strong>AI</strong>.
+People should be exposed to these tools as they are in high school and college and getting there.
+But being really thoughtful about what those interactions are,</p>
+</details>
+<p><strong>Ezra Klein</strong>: 当你说更新<strong>教学法</strong>时，你希望如何更新？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: when you say updating <strong>pedagogy</strong>, how do you want to update it.</p>
+</details>
+<p><strong>Alex Bores</strong>: 嗯，所以你仍然可以布置<strong>论文</strong>，但如果你只布置<strong>带回家的论文</strong>，人们只会把它输入<strong>ChatGPT</strong>，每个人都知道这一点。
+但我做了一些事情，高中生来到<strong>奥尔巴尼</strong>，当老师离开房间时，我说，你们有多少人用<strong>ChatGPT</strong>写<strong>论文</strong>？
+每个人都举起了手。
+那么我们应该要求手写<strong>论文</strong>吗？
+我们应该要求用<strong>谷歌文档</strong>或类似的程序撰写，这样你就可以实际看到键盘输入吗？
+只是为了适应现有的工具，并确保旧的教学方式仍然有效。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Well, so you can still assign essays, but if you just do a <strong>take home essay</strong>, people are just putting it into <strong>ChatGPT</strong> and everyone knows this.
+But I’ve done a few things where high school students come up to <strong>Albany</strong>, and when the teacher leaves the room, I say, how many of you use <strong>ChatGPT</strong> to write an <strong>essay</strong>?
+And every hand goes up.
+So should we be requiring <strong>essays</strong> written by hand?
+Should we require them written in <strong>Google Docs</strong> or a program like it so you can actually watch keystrokes being entered?
+Just updating for the tools that are up there and making sure the old way of teaching is still teaching.</p>
+</details>
+<h3>写作能力的退化与政府的AI能力建设</h3>
+<p><strong>Ezra Klein</strong>: 我现在正在招聘一些东西。
+<strong>求职信</strong>现在完全没用了，这让我非常迷茫。
+鉴于我在<strong>Vox</strong>工作的时间，我已经参与了数百个职位的招聘，<strong>求职信</strong>对我来说一直非常重要，因为它是一种方法，可以找出那些资格可能不那么明显的人。
+但你可以通过他们的写作方式看到一个不寻常的思维在运作。
+现在我并不是说这完全不可能。
+你仍然可以写一封很棒的<strong>求职信</strong>，尽管越来越难了。
+但越来越难知道你在看什么。
+比如，你是在看一个思维很棒的人，还是在看一个与<strong>AI系统</strong>结合的人？
+也许那没关系，因为世界就是这样。
+而一个非常擅长使用它们的人实际上正在展示他们拥有其他人没有的技能。
+但另一方面，我实际上想知道这个人是如何思考的，而不是他们如何擅长<strong>提示</strong>。
+完全削弱我们评估某人<strong>写作技能</strong>的能力。
+我能问一下吗，不是你的任何现有员工，显然，但你面试过的人。
+你是否注意到<strong>写作技能</strong>的丧失？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: I’m hiring for something right now.
+And it has really disoriented me that <strong>cover letters</strong> are now completely useless.
+I have hired I’ve been involved in the hiring for hundreds of positions now, given my time at <strong>Vox</strong>, and <strong>cover letters</strong> were always quite important to me as a way of sussing out maybe somebody whose qualifications were less obvious for the role.
+But you could see in the way they wrote an unusual mind at work.
+And now I’m not saying that’s completely impossible.
+You can still write a great <strong>cover letter</strong>, although increasingly it’s getting a little.
+But it is getting harder and harder to know what you’re looking at.
+Like, are you looking at somebody who is a great mind at work, or are you looking at somebody who’s <strong>cyborging</strong> it with an <strong>AI system</strong>?
+And Maybe that’s fine, because that’s the world.
+And somebody who’s very facile at using them is actually showing they have a skill that others don’t.
+But on the other hand, I actually want to know how the person thinks, not how good they are at <strong>prompting</strong>.
+To completely knock out our ability to evaluate somebody’s <strong>writing skills</strong>.
+Can I ask not any of your current employees, obviously, but people you’ve interviewed.
+Have you noticed a loss of just <strong>skill in writing</strong>?</p>
+</details>
+<p><strong>Alex Bores</strong>: 我还没有注意到，但我想说我自从变得足够好之后就没有再招聘了。
+我当然注意到了。
+我认为人们低估了这一点，因为他们习惯了<strong>糟糕提示</strong>的<strong>ChatGPT</strong>写作的怪癖。
+而且它非常非常容易发现。
+是的，但如果你知道如何使用这些系统，并且你做得更好，并且你使用更高级的<strong>ChatGPT</strong>或<strong>Claude</strong>或<strong>Gemini</strong>，人们就分辨不出来。
+但我认为当你要求人们写东西时，它只是……
+我认为现在已经有几年了，这种技能没有被教授。
+你指出<strong>写作</strong>是很多人<strong>巩固思想</strong>的方式，那项工作是<strong>思考工作</strong>的一部分。
+我注意到，随着人们再次，不是指我雇佣的任何人，但申请者或其他人都认为，人们<strong>良好写作</strong>和<strong>清晰表达思想</strong>的能力，以及进行<strong>编辑工作</strong>的能力有所下降。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: I haven’t noticed it yet, but I would say I have not hired since I got good enough.
+I’ve definitely noticed it.
+And I think people underestimate this because they’re used to the quirks of poorly prompted <strong>ChatGPT</strong> writing.
+And it is incredibly, incredibly easy to spot Yeah, but if you know how to use the systems and you’re better at it and you’re using more advanced forms of <strong>ChatGPT</strong> or <strong>Claude</strong> or <strong>Gemini</strong> people can’t tell.
+But I think when you ask people to write things, it’s just not.
+I think there’s been a few years now where that skill is not being taught.
+And you have pointed out that <strong>writing</strong> is how many people strengthen their ideas, that the work that goes into that is part of the work of thinking.
+And I have noticed as people have again, not speaking to anyone I’ve hired, but people have applied or others that I think there has been a decrease in people’s ability to write well and express their thoughts clearly and do the editing work.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 所以你的<strong>AI框架</strong>中有一点我觉得很有趣，那就是你希望<strong>扩大政府在AI方面的能力</strong>。
+那是什么意思？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: So one thing in your <strong>AI framework</strong> that I thought was interesting was that you want to expand the <strong>government’s capacity on AI</strong>.
+What does that mean?</p>
+</details>
+<p><strong>Alex Bores</strong>: 它意味着确保我们在政府内部拥有理解这项技术并以积极方式促进其发展的专业知识。
+这方面投入严重不足，因为我们没有像我们需要的那样认真对待这项技术。
+这是第一项基本上没有任何政府进展，没有任何政府工作而发展的重大技术。
+<strong>阿尔·戈尔</strong>没有发明<strong>互联网</strong>，但<strong>DARPA</strong>确实开发了成为<strong>互联网</strong>的<strong>内部网</strong>。
+甚至<strong>太空竞赛</strong>也明显是政府主导的。
+我完全是在私营部门开发的。
+我的意思是，有一些研究拨款，但它是在政府结构之外完成的。
+所以我们需要在政府内部招聘专业人才，如果我们打算在这里帮助<strong>治理</strong>并带来好的结果。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: It means making sure that we have the <strong>expertise</strong> within government to understand this technology and help contribute in a positive way to its development.
+And this has been horribly underinvested, because we’re not taking this technology as seriously as we need to.
+This is the first major technology that has developed basically without any government progress, any government work in it.
+<strong>Al Gore</strong> didn’t invent the <strong>internet</strong>, but <strong>DARPA</strong> did develop the <strong>intranet</strong> that became the <strong>internet</strong>.
+And even the <strong>space race</strong> was obviously primarily government led.
+I was completely developed in the private sector.
+I mean, some grants on research, but it was done outside the structures of government.
+And so we need to be hiring in the <strong>expertise</strong> within government if we are going to help to govern and lead to good outcomes here.</p>
+</details>
+<h3>政府招聘挑战与<strong>AI专家</strong>引入</h3>
+<p><strong>Ezra Klein</strong>: 我们能以政府招聘的方式做到这一点吗？
+我以前和联邦政府内部的人谈论过这个问题。
+州政府内部。政府招聘出于非常好的原因，有结构化的<strong>薪酬体系</strong>，担心<strong>横向公平</strong>以及一百万件事情，这些在当你非常担心<strong>腐败</strong>、<strong>任人唯亲</strong>和<strong>偏袒</strong>时很有道理。
+顶级<strong>AI人才</strong>市场是疯狂的，对吧。
+<strong>Meta</strong>会付你多少钱，<strong>谷歌Alphabet</strong>会付你多少钱。
+<strong>OpenAI</strong>会付你多少钱。
+<strong>Anthropic</strong>会付你多少钱，他们能付你多少钱。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: Can we do that with the way government hires?
+I run into this question before talking to people inside the federal government.
+Inside state governments. Government hiring for very good reasons has structured <strong>pay scales</strong> and worries about <strong>horizontal equity</strong> and a million things that make sense when you’re very worried about <strong>corruption</strong> and <strong>patronage</strong> and <strong>favoritism</strong>.
+The market for top <strong>AI talent</strong> is insane, right.
+What <strong>Meta</strong> will pay you, what <strong>Google Alphabet</strong> will pay you.
+What <strong>OpenAI</strong>.
+What <strong>Anthropic</strong> will pay you, what they can pay you.</p>
+</details>
+<p><strong>Alex Bores</strong>: 我不认为他们会付我钱。
+但，是的，不是你，但……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: I don’t think any of them are going to pay me.
+But yeah, not you specifically, but one.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 有一个问题是不要削减政府中试图做这件事的部门的资金，但还有一个问题是，你如何确保政府拥有足够的人才来应对这个火热的市场。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: There’s a question of not cutting funding for the parts of government trying to do this, but there’s also the question of how do you just make sure the government has the staffing talent to keep up in a market that’s hot.</p>
+</details>
+<p><strong>Alex Bores</strong>: 我们绝对应该让政府更容易<strong>招聘专家</strong>，并支付更高的薪水以在这种方式上竞争。
+我的意思是，我们已经找到了一种方法，让各州可以直接资助更多的招聘。
+在任何州，通常都是<strong>橄榄球教练</strong>。
+我宁愿是一个真正的<strong>AI专家</strong>，致力于让这个未来真正为美国人服务。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: We absolutely should make it easier for government to <strong>hire experts</strong> and to pay more in order to compete in that way.
+I mean, we’ve found a way to let states directly fund more hiring.
+It’s usually the <strong>football coach</strong> in any state.
+I’d rather it be a real <strong>eye expert</strong> that’s working to make this future actually work for Americans.</p>
+</details>
+<h3><strong>Anthropic Mythos</strong>与<strong>网络超级武器</strong>的治理困境</h3>
+<p><strong>Ezra Klein</strong>: 我想让你详细谈谈这一点，因为我认为我们听到了很多关于<strong>Anthropic Mythos</strong>的报道，我没有接触过它，所以我不知道它在<strong>入侵地球上所有计算机系统</strong>方面有多厉害，但他们说它非常强大。
+我认为，如果我们让<strong>AI公司</strong>创造出功能上等同于<strong>网络超级武器</strong>的东西，政府实际监督这些系统的能力就会变得非常重要。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: I want to get you to expand on this a bit because I think as we’re hearing a lot of reports of <strong>Anthropic Mythos</strong>, which I have not had access to it, so I don’t know how good it is really at <strong>hacking every computer system on the planet</strong>, but they are saying it is very capable at that.
+And I think you really quickly, if we’re going to have <strong>AI companies</strong> creating what are functionally <strong>cyber super weapons</strong>, the ability of the government to actually oversee these systems becomes pretty paramount very quickly.</p>
+</details>
+<p><strong>Alex Bores</strong>: 我认为<strong>Anthropic</strong>是一个有趣的地方，它同时在相反的方向上提出了许多<strong>治理挑战</strong>。
+一方面，你不能只让一家<strong>私营公司</strong>制造<strong>网络超级武器</strong>并期望最好的结果。
+另一方面，我们刚刚看到了<strong>Anthropic</strong>和<strong>国防部</strong>/<strong>战争部</strong>的争议。
+当你与<strong>特朗普政府</strong>打交道时，你真的想要这种<strong>准国有化</strong>的实验室吗？
+我认为我们同时看到，拥有这些系统如此私有是不舒服的。
+认识到如果政府掌握了它们，它们可能会被用于任何特定政府的目的，这也不舒服。
+因此，这让我们许多关心<strong>监管</strong>和<strong>治理</strong>的人陷入了尴尬境地。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: I think <strong>Anthropic</strong> is an interesting place, and it is posing a lot of <strong>governance challenges</strong> in opposite directions at the same time.
+On the one hand, you can’t just have a <strong>private company</strong> creating <strong>cyber super weapons</strong> and hope for the best.
+On the other hand, we just watched with the <strong>Anthropic</strong> and <strong>Department of Defense</strong> <strong>Department of War controversy</strong>.
+When you’re dealing with the <strong>Trump administration</strong>, do you really want this kind of quasi nationalization of labs.
+I think we’re seeing simultaneously that it is uncomfortable having these systems as private as they are.
+It is uncomfortable recognizing that if the government gets its hands on them, they could be used for whatever a particular government’s purposes might be.
+And so it’s left a lot of us, I think, who care about <strong>regulation</strong> and care about <strong>governance</strong> in an awkward spot.</p>
+</details>
+<p><strong>Alex Bores</strong>: 这让人非常不安，因为我们谈论的是如此<strong>极端的力量</strong>。
+这是一个<strong>权力</strong>在哪里的问题。
+如果你认为<strong>超智能</strong>一定会发展出来，而我现在看不到任何理由不会发生。
+那么当然，这是一个令人不安的问题，关于这种<strong>权力</strong>在哪里，因为你谈论的是比任何人类都更聪明的东西。
+这是一个真正的<strong>权力问题</strong>。
+这是一个需要通过<strong>政策</strong>解决的真正问题，需要通过<strong>法律</strong>解决。
+如果你只是听任行政部门的<strong>心血来潮</strong>，没有任何限制，或者<strong>私营公司</strong>没有任何法律约束。
+这两种情况都让人深感不安。
+这就是为什么我们需要<strong>国会</strong>挺身而出，实际决定这种划分应该如何发生。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: It is deeply uncomfortable because we are talking about such <strong>extreme power</strong>.
+And it’s a question of where that <strong>power</strong> lies.
+If you take as a given that there will be a <strong>superintelligence</strong> developed, which I don’t see any reason why there won’t be at this point.
+Then of course, it’s an uncomfortable question about where that sits, because you’re talking about something that is smarter than any human ever.
+That is a real <strong>power question</strong>.
+And this is a real question that needs to be settled by <strong>policy</strong>, that needs to be settled by <strong>law</strong>, that if you’re just leaving it up to the whims of an <strong>executive branch</strong> where there’s no restrictions on them, or private companies where there’s no law.
+Both of those feel deeply uncomfortable.
+This is why we need <strong>Congress</strong> to step up to the plate and actually decide how this division should happen.</p>
+</details>
+<h3>全面自动化、超智能与“刹车”的必要性</h3>
+<p><strong>Ezra Klein</strong>: 所以在你的回答中，我清楚地看到了两件事：你似乎相信我们明天不会必然走向<strong>全面自动化</strong>。
+但当我提到我不认为我们会达到那个目标时，你表现出了很多怀疑。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: So in the answers, you’ve given me two things that have come clear in the background of the way you think about this is one seem to believe we’re going to go to <strong>full automation</strong> necessarily tomorrow.
+But you react with a lot of skepticism.
+When I said I didn’t think we would get there.</p>
+</details>
+<p><strong>Alex Bores</strong>: 我认为这有很大的可能性，我们应该认真对待。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: I think there’s a significant likelihood and we should take it seriously.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 而且<strong>超智能</strong>也是一个真实的可能性，我们不一定会停留在人类水平，甚至不会比普通工人高一点，我们很快就会面对一些东西。
+我认为对很多人来说，他们会听到这些，然后说，那为什么不阻止它呢？
+为什么要创造这台机器<strong>上帝</strong>，当我们都同意我们没有好的政策答案来应对这将意味着什么时，它将让我们所有人都失业？
+我们为什么要一个<strong>超智能</strong>，我们无法保证我们知道如何控制它？
+如果这是你的观点，为什么还要前进，而不是试图<strong>挡在火车轨道上</strong>？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: And that <strong>superintelligence</strong> is also a real possibility, that we’re not necessarily going to stop at human level, or even a bit beyond your average worker, that we could be soon dealing with something.
+I think for a lot of people, they would hear that and say, so why not stop it?
+Why do you want to create the machine. <strong>God</strong>, that will put us all out of work when we all agree we don’t have good policy answers to what that would mean?
+Why do we want a <strong>superintelligence</strong> that we have no guarantee we will know how to control?
+If this is your set of views, why move forward as opposed to trying to throw your body on the train tracks?</p>
+</details>
+<p><strong>Alex Bores</strong>: 嗯，我认为现在象征性地<strong>挡在火车轨道上</strong>不会产生重大影响。
+我确实认为我们应该放慢发展速度，直到我们在<strong>对齐问题</strong>上取得更大的进展。
+我确实认为我们正在进入一个非常<strong>危险的境地</strong>。
+你需要的是，计划中的一部分是关于<strong>外交</strong>。
+是关于<strong>国际行动</strong>。
+我们应该与其他国家，与<strong>中国</strong>进行接触。
+我们应该建立<strong>通用验证系统</strong>，以验证正在发生的事情，包括在<strong>芯片层面</strong>，你可以查看其地理位置和使用方式，以及<strong>模型本身</strong>。
+我们应该努力<strong>降低</strong>军备竞赛的<strong>温度</strong>。
+即使在<strong>冷战</strong>最激烈的时候，我们也有<strong>红色电话</strong>通往<strong>莫斯科</strong>。
+所以，是的，我担心，如果我有一根<strong>魔杖</strong>，我会放慢速度，直到我们对即将发生的事情和我们要去的地方有更好的保证。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Well, I don’t think right now metaphorically throwing your body on the train tracks will make a strong difference.
+And I do think we should slow down the development until we’ve made a lot more progress on the <strong>alignment problem</strong>.
+I do think we’re getting into a really <strong>risky territory</strong>.
+What you need, and one of the sections of the plan is about <strong>diplomacy</strong>.
+It’s about <strong>international action</strong>.
+We should be engaging with other countries, should be engaging with <strong>China</strong>.
+We should be building <strong>universal verification systems</strong> on what is happening, both at the <strong>chip level</strong>, where you can look at the geography and how it’s being used, and in the <strong>models themselves</strong>.
+We should be trying to lower the temperature on there being an <strong>arms race</strong>.
+Even at the height of the <strong>Cold War</strong>, we had the <strong>red phone</strong> to <strong>Moscow</strong>.
+So yeah, I am worried if I had a <strong>magic wand</strong>, I would slow things down until we had better guarantees about what we were stepping into and where we were going.</p>
+</details>
+<h3><strong>AI</strong>的积极愿景：公共利益与创新</h3>
+<p><strong>Ezra Klein</strong>: 现在我想反转这次对话的<strong>方向</strong>。
+我们一直在讨论，就像大多数<strong>AI对话</strong>一样，我称之为<strong>AI减害</strong>，对吧。
+如果这项技术正在发展，我们如何确保它造成的危害尽可能小。
+但我认为，要让人们希望这项技术向前发展，要让它在概念上成为一个好主意，我认为论据必须更好。
+我们之前谈到了在许多方面缺乏<strong>AI</strong>的<strong>积极愿景</strong>。
+这些公司在未来几年必须收回大量投资。
+据我所知，他们提出的商业模式是<strong>取代白领工人</strong>。
+在某种程度上，是人们向<strong>ChatGPT</strong>询问<strong>痣</strong>的订阅费。
+我一直在思考的是，所有这些关于<strong>AI</strong>用于<strong>药物开发</strong>，<strong>AI</strong>用于<strong>能源创新</strong>的承诺。
+如果有一个公共议程，真正尝试实现这些目标，真正尝试让<strong>AI</strong>更多地朝着这些方向发展，并且我们从中获得更多，那会是什么样子？
+我的意思是，我以前听你谈论过你对<strong>AI药物开发</strong>的兴趣。
+我想听听你的想法，即使它不是一个完整的政策议程，也想听听公共部门如何塑造它以实现<strong>社会公益</strong>，而不是仅仅为了<strong>私人利润</strong>的积极议程意味着什么。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: So now I want to flip the <strong>valence</strong> of this conversation.
+We’ve been talking, as I think most of the <strong>AI conversation</strong> does, about what I would call <strong>AI harm reduction</strong>, right.
+If this technology is moving forward, how do we make sure it causes as little harm as possible.
+But I think for people to want this technology to move forward, for it to actually even be conceptually a good idea for this technology to move forward, I think the case has to be better than that.
+And we were talking earlier about many ways the absence of a <strong>positive vision for AI</strong>.
+These companies have to make back in the coming years, a lot of investment.
+And as best I can tell, the <strong>business model</strong> they’ve come up with is replacing <strong>white collar workers</strong>.
+And to some degree, <strong>subscription fees</strong> for people asking, <strong>ChatGPT</strong> to look at a <strong>mole</strong>.
+What I have been wondering about for some time is all these promises of <strong>AI</strong> for <strong>drug development</strong>, <strong>AI</strong> for <strong>energy innovations</strong>.
+What would it look like to have a public agenda that actually tried to make that real, that actually tried to make it such that there was more <strong>AI development</strong> that went in those directions and that we got more out of it?
+So, I mean, I’ve heard you talk before about your interest in <strong>AI drug development</strong>.
+I want to hear thinking, even if it’s not a full policy agenda, on what it would mean to have a <strong>positive agenda</strong> for where the public sector is shaping this towards <strong>social good</strong> as opposed to simply <strong>private profit</strong>,</p>
+</details>
+<p><strong>Alex Bores</strong>: 我们将推出一个我们在<strong>纽约</strong>已经做过的项目，叫做<strong>Empire AI</strong>。
+那就是州政府购买了一大批<strong>GPU</strong>，并承诺继续扩建，让我们的<strong>公立大学</strong>能够以更便宜的价格进行实验，并在研究方面进行了公共投资，以追求许多事情，包括<strong>AI对齐</strong>和<strong>AI安全</strong>。
+但我们可以将拨款直接用于特定的研究，我们可以在政府中建立基础设施，使其更便宜。
+我绝对相信我们应该努力利用<strong>AI</strong>造福社会，<strong>纽约</strong>是第一个这样做的州。
+其他州也在效仿，但联邦政府拥有资源在这里进行深入投资。
+是的，<strong>AI</strong>的好处在一段时间内一直依赖于<strong>AlphaFold</strong>的故事，以及解决<strong>蛋白质折叠</strong>问题，这是一个令人难以置信的进步，并加速了<strong>药物发现</strong>。
+但可能还有更多类似的东西。
+肯定还有更多类似的东西。
+如果没有，那么我们就上当受骗了，我认为政府应该利用这项技术造福社会，并以这种方式指导研究，这并不是说它解决了<strong>对齐问题</strong>。
+你可能希望它做非常好的事情。
+然后实际上在追求这个目标的过程中，它会朝着一个完全不同的方向发展。
+但是，是的，这是一个<strong>公共投资</strong>的良好用途。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: We would build out an initiative that we’ve done in <strong>New York</strong> called <strong>Empire AI</strong>, which was that the state government bought a large cluster of <strong>GPUs</strong> and committed to continuing to build that out and gave our <strong>public universities</strong> access to it so they could run experiments at a much cheaper rate and made a public investment on a research front to go after lots of things, including <strong>AI alignment</strong> and <strong>AI safety</strong>, but we could be directing grants to that specific research, and we could be building the infrastructure in the government to make that cheaper.
+I absolutely believe we should be trying to use <strong>AI</strong> for good, and <strong>New York</strong> was the first state to do this.
+Others are following, but the federal government has the resources to really do a deep investment here.
+And yeah, for a while, <strong>AI benefits</strong> have been riding on the story of <strong>AlphaFold</strong> and serving and solving <strong>protein folding</strong>, which was an incredible advance and has sped up <strong>drug discovery</strong>.
+But there could be more like that out there.
+There are definitely more like that out there.
+If there’s not, then we got then we’ve been sold a <strong>bill of goods</strong> here, and I think the government should be making use of this technology for good and directing research in that way that doesn’t by the way, solve <strong>alignment problems</strong>.
+It could be that you want it to do really good things.
+And then actually in pursuing that, it goes off in a whole other different direction.
+But yes, that is a good use of <strong>public investment</strong>.</p>
+</details>
+<h3>药物开发与政府效率：消除政策障碍</h3>
+<p><strong>Ezra Klein</strong>: 那么让我们集中讨论一下<strong>药物开发</strong>，因为我认为在某些方面，它最清楚地说明了问题。
+假设你设想了在未来三到五年内，<strong>AI系统</strong>开始以值得研究的速度生成<strong>分子</strong>，无论是新分子还是<strong>AI系统</strong>搜索数据并意识到它们可能还有其他用途的现有分子，这似乎是可能的。
+如果你了解<strong>药物开发</strong>，你会在整个过程中遇到<strong>瓶颈</strong>。
+有<strong>FDA</strong>能做的事情。
+有从老鼠到猴子再到人类进行试验的一切。
+一个我们突然拥有更多优秀候选药物的世界，将是一个<strong>瓶颈</strong>变得截然不同的世界。
+这更接近你的想法。
+我想关于<strong>电网</strong>，那就是如果<strong>AI</strong>将创造，如果我们想象<strong>AI</strong>将为投资创造所有这些压力，它将创造所有这些需求，你如何利用这种压力来开放系统中那些被阻塞的、有点年久失修的部分。
+你如何让你的经济能够真正从<strong>AI</strong>中受益，这需要<strong>操作知识</strong>，不仅仅是在<strong>概率预测</strong>的世界中，而是在实际的<strong>事物</strong>、<strong>钢铁</strong>、<strong>水泥</strong>以及愿意报名参加<strong>药物试验</strong>的人的世界中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: So let’s focus in on <strong>drug development</strong> for a minute, because I think it’s in some ways like the clearest case, let’s say you imagine what certainly seems possible, which is that in the next call it three to five years, <strong>AI systems</strong> begin generating a pace of <strong>molecules</strong> worthy of investigation, either new <strong>molecules</strong> or existing <strong>molecules</strong> that the <strong>AI systems</strong> scour the data and realize they might have other uses.
+And if you know anything about <strong>drug development</strong>, you have <strong>choke points</strong> all across that process.
+There’s what the <strong>FDA</strong> can do.
+There’s getting everything from <strong>rats</strong> to <strong>monkeys</strong> to <strong>humans</strong> for trials that a world in which we suddenly had more good candidates would be a world where the <strong>choke points</strong> became something very different.
+And this gets a little bit more towards the way you were thinking.
+I think about the <strong>grid</strong>, which is if <strong>AI</strong> is going to create, if we imagine <strong>AI</strong> will create all this pressure for investment and it will create all this demand for something, how do you use that pressure to open up parts of the system that have been clogged that have fallen somewhat into <strong>disrepair</strong>.
+How would you make it possible for your economy to actually benefit from <strong>AI</strong>, which requires <strong>operating knowledge</strong>, not just in the world of <strong>probabilistic predictions</strong>, but actually in the world of <strong>things</strong>, of <strong>steel</strong>, of <strong>cement</strong> of <strong>human beings</strong> who are willing to sign up for a <strong>drug trial</strong>.</p>
+</details>
+<p><strong>Alex Bores</strong>: 嗯，这就是为什么我的平台不仅仅是<strong>AI</strong>部分，我给你一个很好的机会在这里谈论它。
+但我们必须<strong>削减繁文缛节</strong>和<strong>削减法规</strong>。
+我使用<strong>AI</strong>的一种方式是，我将<strong>纽约州</strong>的每一项法规都通过<strong>LLM</strong>，并要求它识别<strong>过时</strong>的法律，要求<strong>纸质</strong>文件而我们却可以<strong>数字化</strong>处理，以及各种检查我们拥有的要求只是阻碍事情完成的方式。
+<strong>詹·帕尔卡</strong>（<strong>Jen Pahlka</strong>）可能称之为随着时间发展形成的<strong>政策残余</strong>。
+并为本届会议准备了一份长达60页的法案，只是为了<strong>剔除</strong>那些阻碍事情完成的旧要求。
+我们也可以对<strong>法规</strong>做类似的事情，不仅仅是法规，而是我们开发了哪些实践现在阻碍了<strong>药物发现</strong>或更广泛地前进。
+是的，我们需要改变阻止政府完成工作的政策。
+有时那是在技术上更高效地做事。
+有时那是在使用或不使用技术，但寻找识别<strong>瓶颈</strong>的方法并寻找缓解它们的方法。
+或者我们正在谈论<strong>报税周</strong>。
+我们很多人都等到最后，或者本周交了税，<strong>国税局</strong>已经可以为大多数有相当简单税收的美国人预先填写<strong>税表</strong>。
+而<strong>游说</strong>使其变得非常困难，<strong>特朗普政府</strong>使其变得更困难。
+但从技术上讲，<strong>国税局</strong>通过<strong>AI税务准备系统</strong>让每个美国人都可以访问，他们上传表格。
+它与<strong>国税局数据</strong>交叉核对，并在几秒钟内为他们完成了<strong>报税</strong>，这会节省人们大量的时间和精力，从根本上说是<strong>微不足道</strong>的。
+就像实际让每个美国人都在<strong>国税局</strong>的主持下拥有<strong>AI会计师</strong>的能力一样。
+如果我们不这样做，那不是因为我们不能。
+真正的问题是<strong>游说者</strong>是否允许人们这样做。
+但如果政府选择<strong>改变</strong>，人民与国家之间的关系真的可以<strong>改变</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Well, that’s why there’s more to my platform than just the <strong>AI piece</strong> I’m giving you, giving you a good opportunity to talk about it here.
+But we have to <strong>cut red tape</strong> and <strong>cut regulations</strong>.
+One of the ways that I have used <strong>AI</strong> already is I put every <strong>statute</strong> in <strong>New York State</strong> through an <strong>LLM</strong> and asked it to identify laws that are <strong>out of date</strong>, that require <strong>paper</strong> when we could do something <strong>digitally</strong>, a bunch of ways of checking that we have requirements that are just getting in the way of getting things done.
+What <strong>Jen Pahlka</strong> might call the <strong>policy cruft</strong> that develops over time and put together now a 60 page bill for this session of just pulling out a bunch of these old requirements that are getting in the way of doing things.
+We can do the similar thing with <strong>regulations</strong>, not just with <strong>statutes</strong>, but where have we developed practices that are now in the way of moving forward in <strong>drug discovery</strong> or broadly Yeah, we need to change policies that stop government from getting things done.
+And sometimes that’s in technology doing the thing more efficiently.
+Sometimes times that’s in using the technology or not, but finding ways to identify.
+<strong>Choke points</strong> and find ways to alleviate them.
+Or we’re talking it’s <strong>tax week</strong>.
+A lot of us are a lot of us who waited until the end or paid our taxes this week, and it was already possible for the <strong>IRS</strong> to pre-fill a <strong>tax form</strong> for most Americans who have pretty straightforward <strong>taxes</strong> and <strong>lobbying</strong> has made that very hard in the <strong>Trump administration</strong> has made that harder.
+But it would be fundamentally, as a technical matter, trivial for there to be through the <strong>IRS</strong>, a <strong>tax preparation AI system</strong> that every American had access to where they uploaded their forms.
+It was cross-checked with <strong>IRS data</strong>, and it did their <strong>taxes</strong> for them in seconds.
+Saving people a lot of time and energy.
+Like the capacity to actually have give every American an <strong>AI accountant</strong> under the auspices of the <strong>IRS</strong>.
+If we don’t do it, it’s not because we can’t.
+There’s a real question of whether or not the <strong>lobbyists</strong> allow people to do that.
+But the relationship between people and the state could really be transformed if government chose to transform it.</p>
+</details>
+<p><strong>Alex Bores</strong>: 百分之百。我认为我们需要将其作为优先事项。
+所以我有一个法案，我已经推动了几年，目的是让<strong>纽约市</strong>内的不同机构更容易共享你为了注册福利而提供给他们的数据，这样如果他们为你注册了一项福利，你就可以自动注册另一项福利，而现在这受到了限制，我们应该改变它。
+显然，<strong>纽约市</strong>投资了1亿美元来建设一个门户网站，但实际上我们需要的是后台法律的改变，让数据共享更容易。
+我将更进一步，我当时正在与<strong>新泽西州</strong>的<strong>税务局</strong>交谈，并提倡，好，免费报税。
+这让你很容易，你不需要其他软件。
+但为什么我们不能只为<strong>纽约人</strong>做呢？
+我们作为<strong>纽约州</strong>部门拥有大量信息。
+我得到的回答是，我们拥有的很多信息实际上是错误的。
+他们需要首先内部改进数据。
+我说，好，为什么你不直接找出错误的<strong>公司</strong>或建立系统来帮助他们呢？
+他们说，我们正在努力。
+但给我们五年时间。
+我们希望达到那个目标，这样我们就可以<strong>自动化</strong>它。
+所以也许它又回到了<strong>数据整合</strong>和仅仅拥有正确的数据。
+技术方面如何处理你的税务可能不再是限制。
+但作为我们输入的基础数据，它是否足够准确？
+我想我在这里试图表达的原则是，如果你不相信我们会暂停。
+我不是说你不相信，但我们将会以某种速度前进，这似乎很有可能。
+我认为实际从<strong>AI</strong>中受益作为公众来说，是一个比人们认为的更难的挑战。
+我不认为仅仅因为系统变得更好，就必然会有<strong>公共利益</strong>。
+可能有个体利益，个体危害。
+但如果我们希望<strong>药物发现</strong>加速，我们需要开放系统，让<strong>药物发现</strong>更快地进行。
+如果我们希望人民与国家之间的关系变得更清晰，我们实际上需要创造条件并彻底改革非常非常困难、过时、多层且充满错误的<strong>政府数据库</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Percent. And I think we need to make that a priority.
+So I have a bill that I’ve been pushing for a few years to make it easier for different agencies within <strong>New York City</strong> to share data that you give to them for the purpose of signing you up for benefits, so that if they sign you up for one benefit, you can automatically be assigned for another one that right now is restricted and we should change that.
+Obviously, <strong>New York City</strong> invested like $100 million on building a portal, but actually what we need are changes on the back end of laws that make it easier to share that data.
+I’ll go a step forward, which I was speaking with the <strong>Tax Department</strong> in <strong>New York State</strong> and advocating for O.K, free file.
+It makes it easy for you. You don’t need another software.
+But why can’t we just do it for <strong>New Yorkers</strong>.
+We have a lot of the information as <strong>New York State Department</strong>.
+And the answer I got back is that so much of the information we have is actually wrong.
+They had this need to just improve the data internally first.
+And I said, O.K, why don’t you just find companies that are wrong or build systems to help them.
+And they were like, we’re working on that.
+But give us five years.
+Like that’s where we want to get so that we can <strong>automate</strong> it.
+So maybe it does come back around to <strong>data integration</strong> and just having the data correct.
+And it might not be any more that the technical aspects of how to do your <strong>taxes</strong> is the limitation.
+But just as the underlying data that we’re feeding accurate enough for it, I guess the principle I’m trying to get at here is, to the extent you don’t believe we’re going to pause.
+I’m not saying you don’t but one doesn’t that we are going to move forward at some pace here, which seems likely.
+I think actually benefiting from <strong>AI</strong> as a public is a harder challenge than people have given it credit for.
+I don’t think just because the systems get better, there is necessarily a <strong>public benefit</strong>.
+There could be individual benefits, individual harms.
+But if we want <strong>drug discovery</strong> to accelerate, we need to open up the systems that would allow <strong>drug discovery</strong> to move faster.
+If we want the relationship between people in the state to get cleaner, we need to actually create the conditions for it and overhaul very, very, very difficult and archaic and multilayered and error filled, <strong>government databases</strong>.</p>
+</details>
+<h3>政府现代化与<strong>AI</strong>的价值实现</h3>
+<p><strong>Ezra Klein</strong>: 这很有趣，因为我认为现在在整个私营部门，你会看到<strong>公司</strong>在不同程度上取得成功，试图弄清楚，<strong>重建</strong>自身以使用<strong>AI</strong>意味着什么。
+从<strong>团队结构</strong>到<strong>数据运作</strong>方式的一切。
+政府因为它不会被新政府淘汰出局，它正在使用<strong>更旧的系统</strong>，而且很难构建它们。
+但我认为对于<strong>AI</strong>来说，它需要更多这种<strong>雄心勃勃</strong>的投资。
+而现在，我并不是说我们甚至似乎无法有效地立法应对危害。
+所以我并不困惑为什么我们专注于此。
+但我确实有点担心，因为存在这样一个世界：我们已经做了一些合理的<strong>减害立法</strong>，但从中获得的利益却很少。
+那是一个我们有点将<strong>AI</strong>推向<strong>工人替代机器</strong>的世界，而不是对其抱有<strong>公共愿景</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: And it’s interesting because I do think right now throughout the <strong>private sector</strong>, you see <strong>companies</strong> with greater and lesser degrees of success, trying to figure out, what does it mean to <strong>rebuild</strong> ourself to use <strong>AI</strong>.
+Everything from how <strong>teams are structured</strong> to how our <strong>data works</strong>.
+The government because it doesn’t get competed out of business by New by New governments is working on much <strong>older systems</strong> and it’s very, very hard to build them.
+But I think for <strong>AI</strong> to be worth it, you’re going to need a lot more of this kind of investment at a much higher level of ambition.
+And right now, I’m not saying we don’t even seem to be able to legislate on the harms very effectively.
+So I’m not confused as to why we are focusing there.
+But I do worry a bit about it, because there’s a world where we’ve done some reasonable <strong>harm reduction legislation</strong> and done very little benefit from it, and that’s a world where we’ve kind of pushed <strong>AI</strong>, towards being a <strong>worker replacement machine</strong> as opposed to having a <strong>public vision</strong> for what we want from it.</p>
+</details>
+<p><strong>Alex Bores</strong>: 我百分之百同意。
+这就是<strong>治理</strong>的艰巨工作。
+我认为这些可能不是我们可以建立<strong>立法力量</strong>的简单地方。
+我希望如此。
+我认为这可能与<strong>儿童</strong>有关，但我认为这些是我们必须共同努力改变的地方。
+其中一部分将是关于<strong>AI</strong>和<strong>建立激励措施</strong>，另一部分将是<strong>建设基础设施</strong>以使其发生。
+我们在这里谈论了很多相当<strong>高深的概念</strong>。
+我在州立法机构的第一批法案之一是帮助州<strong>上云</strong>，因为它主要使用<strong>大型机</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: I I00 percent agree.
+And this is the hard work of <strong>governing</strong>.
+I don’t think these are maybe the easy places where we can build the <strong>legislative muscle</strong>.
+I would hope so.
+I think that’s probably around <strong>kids</strong>, but I think these are parts of the places where we have to work together to change that.
+And part of it will be on <strong>AI</strong> and <strong>setting up incentives</strong>, and part of it will be building the <strong>infrastructure</strong> that allows that to happen.
+We’re talking a lot about pretty <strong>high concepts</strong> here.
+One of my first bills in the state legislature was to help the state get on <strong>cloud computing</strong>, because it mostly uses <strong>mainframes</strong>.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 议长主要使用<strong>大型机</strong>。
+在<strong>2023年</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: And the speaker of the assembly mostly uses <strong>mainframes</strong>.
+In <strong>2023</strong>.</p>
+</details>
+<p><strong>Alex Bores</strong>: 是的，是的，议长用<strong>Fortran</strong>编写代码。
+我总是开玩笑说他的<strong>退休计划</strong>将是修复所有<strong>州系统</strong>，因为它们仍然运行在<strong>Fortran</strong>上。
+有很多工作需要完成以实现<strong>现代化</strong>，从而使我们能够利用这些好处，这将需要直接投资和大量<strong>立法</strong>来鼓励这个方向。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Yes, yes, the speaker of the assembly codes in <strong>Fortran</strong>.
+And I always joke that his <strong>retirement plan</strong> is going to be fixing all the <strong>state systems</strong> because they still run on <strong>Fortran</strong>.
+There’s just work that needs to be done on <strong>modernizing</strong> to allow us to take advantage of the benefits, and that will require both direct investments and a lot of <strong>legislating</strong> to encourage that direction.</p>
+</details>
+<h3><strong>AI</strong>行业的政治影响力与监管阻力</h3>
+<p><strong>Ezra Klein</strong>: 所以我之所以想和你进行这次对话，是因为你最终成为了一个<strong>案例研究</strong>，无论你是否愿意，关于这一切将如何运作。
+所以你正在竞选<strong>国会</strong>。
+正如我之前提到的，有一个<strong>Super PAC</strong>，由<strong>Palantir</strong>、<strong>OpenAI</strong>和<strong>Andreessen Horowitz</strong>的联合创始人资助。
+他们迄今为止已经花费了<strong>250万美元</strong>来反对你的竞选。
+哦，<strong>250万</strong>，并且暗示他们可能会花费高达<strong>1000万</strong>。
+与此同时，我查看了他们的一些声明。
+<strong>Greg Brockman</strong>，他是<strong>OpenAI</strong>的创始人之一，也是这个<strong>PAC</strong>的主要捐助者，他说支持<strong>AI</strong>并不意味着反监管，而是意味着深思熟虑，制定政策以确保<strong>AI</strong>的变革性利益，同时减轻风险并保持灵活性，因为技术继续快速发展。
+那么他们对你有什么不满呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: So one of the reasons I wanted to have this conversation with you is you’ve ended up whether you wanted to or not, a bit of a <strong>test case</strong> for how all this is going to work.
+So you’re running for <strong>Congress</strong>.
+And there is, as I’ve mentioned before, the <strong>Super PAC</strong> that’s funded by co-founders of <strong>Palantir</strong>, <strong>OpenAI</strong>, and <strong>Andreessen Horowitz</strong>.
+They've spent a <strong>million</strong> opposing your campaign so far. Suggested <strong>2.5</strong> so far.
+Oh, <strong>2.5</strong>, and suggested they might spend up to <strong>10 million</strong>.
+At the same time, I’ve looked at some of their statements.
+<strong>Greg Brockman</strong>, who’s one of the <strong>OpenAI</strong> founders and is a major donor to this <strong>PAC</strong>, he has said being pro <strong>AI</strong> does not mean being anti-regulation means being thoughtful, crafting policies to secure <strong>AI</strong>’s transformative benefits while mitigating risks and preserving flexibility as the technology continues to evolve rapidly.
+So what’s their problem with you?</p>
+</details>
+<p><strong>Alex Bores</strong>: 如果他们真的相信有一个<strong>国家框架</strong>来监管<strong>AI</strong>并平衡<strong>利益和风险</strong>，他们就会支持我。
+我认为这与他们出于营销目的所说的话以及他们实际相信的东西之间存在差异，而他们的行为描绘了这一点。
+所以<strong>OpenAI</strong>上周发布了一份政策文件，其中很多都与我的政策<strong>不谋而合</strong>。
+重点有所不同。
+我不会说我感受到了其中的一部分。
+一部分。是的，他们说，我们相信<strong>32小时工作周</strong>，是的，是的，但他们确实说他们想要<strong>第三方审计</strong>。
+但要在未来的某个时候，我认为我们已经做到了。
+而且更多的是强调社会在事后处理问题，而不是对<strong>开发者</strong>施加限制。
+我不是说这完全吻合，但他们确实提出了一些政策，他们还在本周晚些时候发布了专门针对<strong>儿童</strong>的政策，其中包括<strong>安全港条款</strong>，包括<strong>测试</strong>，鼓励<strong>红队演练</strong>。
+所以当你对<strong>模型</strong>进行<strong>红队演练</strong>或对任何<strong>软件</strong>进行<strong>红队演练</strong>时，你会让人故意破坏它，并做一些它不应该做的事情。
+你可能想要对它进行<strong>红队演练</strong>，以防止它产生<strong>儿童性虐待材料</strong>，以确保它不会在世界上流传。
+而现在，在该国每个州，<strong>红队演练</strong>并生产这种材料都是<strong>非法</strong>的。
+我们对生产这种材料采取<strong>零容忍政策</strong>。
+现在，显然没有<strong>地区检察官</strong>会因此追究你的责任。
+但他们谈论的一件事是，他们希望扩大<strong>安全港条款</strong>，这样你就可以真正鼓励<strong>红队演练</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: If they really, truly believed in having one <strong>national framework</strong> that regulates <strong>AI</strong> and balances the <strong>benefits</strong> and <strong>risks</strong>, they’d be supporting me.
+I think it’s a difference between what they say for <strong>marketing purposes</strong> and what they actually believe, and their actions portray that.
+So <strong>OpenAI</strong> last week released a <strong>policy document</strong> that mirrors a lot of my policies.
+The emphases are different.
+I wouldn’t say that I felt parts of it.
+Parts of it Yeah they’re like, we believe in a <strong>32 hour work week</strong> and Yeah, yeah, but they did say they wanted <strong>third party audits</strong>.
+But sometime in the future I think we’re already there.
+And there was much more of an emphasis on society dealing with the problems after the fact as opposed to restrictions on the <strong>developers</strong>.
+I’m not saying it’s a match, but they put forward some policies there and they also put later in the week policies specifically around <strong>kids</strong> out that included <strong>safe harbor provisions</strong> included <strong>testing</strong> encouraging <strong>red teaming of models</strong>.
+So when you <strong>red team a model</strong> or <strong>red team any software</strong>, you get people to try to intentionally break it and to do something that’s not supposed to do.
+And you might want to <strong>red team</strong> it around producing <strong>child sexual abuse material</strong> to make sure that it can’t get out in the world.
+And right now, in every state in the country, <strong>red teaming</strong> it and producing that material would be <strong>illegal</strong>.
+We have a <strong>no tolerance policy</strong> on the production of the material.
+Now, obviously no <strong>DA</strong> is going to go after you for that.
+But one of the things they talk about there is they want to extend <strong>safe harbor provisions</strong> so that you can actually encourage <strong>red teaming</strong>.</p>
+</details>
+<p><strong>Ezra Klein</strong>: 是的，我的意思是，这是我的担忧，我从<strong>国会山</strong>的人那里听到了这个，比如<strong>参议院</strong>的人。
+<strong>艾丽莎·斯洛特金</strong>（<strong>Elissa Slotkin</strong>）曾正式向我说了类似的话，即在<strong>AI</strong>变得如此强大的精确时刻，<strong>国会</strong>不开始构建法规、立法结构、透明度、<strong>儿童保护</strong>将是不负责任的，<strong>AI行业</strong>现在拥有如此多的资金，就像之前的<strong>加密货币</strong>一样，它能够创建一种具有<strong>死星</strong>般能力的<strong>超级PAC</strong>。
+现在，这很奇怪，因为<strong>Anthropic</strong>是另一个支持监管的<strong>PAC</strong>的创始人之一，并且正在支持你。
+所以你两边都有参与者，但一个<strong>AI</strong>拥有如此多的资金，并且<strong>政治体系</strong>如此容易受到金钱影响的世界，是一个为了监管<strong>AI</strong>，你需要<strong>签署</strong>自己的<strong>AI赞助人</strong>来支持你的世界。
+所以我认为这里存在一个更大的<strong>政治经济</strong>和<strong>权力</strong>问题，最终在这场竞争中成为了一个<strong>案例研究</strong>，这让我非常担忧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: Yeah, I mean, this is my concern and I’ve heard this from people on the <strong>Hill</strong> like people in the <strong>Senate</strong>.
+<strong>Elissa Slotkin</strong> said a version of this to me on the record that at the exact moment that <strong>AI</strong> is becoming so powerful that it would be irresponsible for <strong>Congress</strong> to not be starting to construct <strong>regulations</strong>, <strong>legislative structures</strong>, <strong>transparency</strong>, <strong>kids</strong> that the <strong>AI industry</strong> now has so much money that much as <strong>crypto</strong> did before it, it’s able to create a kind of <strong>Super PAC</strong> of that has a <strong>Death Star</strong> like capability.
+Now, it’s weird because <strong>Anthropic</strong> is one of the founders of another <strong>PAC</strong> that is more pro-regulation and is supporting you.
+So you have players on both sides, but a world where <strong>AI</strong> will have this much money and the <strong>political system</strong> is this permeable to money is a world where in order to regulate <strong>AI</strong>, you’re going to need to have to <strong>sign up your own AI patron</strong> to support you.
+And so I feel like there is some bigger question of <strong>political economy</strong> and <strong>power</strong> here that has ended up getting a bit of a <strong>test case</strong> in this race, which is I think, quite worrisome.</p>
+</details>
+<p><strong>Alex Bores</strong>: 我只是认为我们很快就会陷入这样一种情况，即<strong>政治家</strong>们对这个问题感到<strong>恐惧</strong>，而这正是“<strong>Leading the Future</strong>”的目标。
+他们声明的目标是在这场竞争中制造如此大的<strong>痛苦</strong>，并把我打得如此之惨，以至于当未来提出<strong>AI监管</strong>的想法时，<strong>政治家</strong>们会朝着相反的方向跑。
+我的意思是，他们公开表示，他们想拿我<strong>杀鸡儆猴</strong>。
+想想这意味着什么。
+不是说，哦，我们有不同的看法。
+所以我们想拿<strong>Alex Bores</strong>杀鸡儆猴。
+他们这样做不是因为我的想法<strong>不符合主流</strong>，或者当我提出我的框架时，我得到了<strong>左派</strong>的赞扬。
+<strong>OpenAI</strong>的首席<strong>未来学家</strong>也转发了我的推文。
+他们追着我，是因为我成功地通过了法案。
+<strong>框架</strong>有很多<strong>框架</strong>。那些都很廉价。
+谁会投入<strong>政治资本</strong>并真正完成一些事情呢？
+他们试图通过在立法中加入<strong>预先阻止条款</strong>来阻止任何州前进，但失败了。
+所以他们转而从<strong>唐纳德·特朗普</strong>那里获得了一项<strong>行政命令</strong>，旨在针对那些想要监管<strong>AI</strong>的州，并试图施加惩罚。
+他们会<strong>切断资金</strong>，他们会<strong>起诉</strong>这些州。
+它针对了<strong>RAISE法案</strong>，以及全国各地的其他几项法案。
+那么他们为什么追着我呢？
+因为我可能真的会通过一项法案。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: I just think we could very, very quickly end up in a scenario where <strong>politicians</strong> are terrified of the issue, and that’s the goal of <strong>Leading the Future</strong>.
+The goal, as they’ve stated, is to extract so much <strong>pain</strong> in this race and to beat me up so badly that when the idea of <strong>AI regulation</strong> is proposed in the future, <strong>politicians</strong> run in the other direction.
+I mean, they have said publicly that they want to make an <strong>example</strong> out of me.
+Think about what that means.
+Not that oh, we have a different view.
+And so we want to make an <strong>example</strong> out of <strong>Alex Bores</strong>.
+And they want to do that because not because I have ideas that are <strong>outside the mainstream</strong> or when I proposed my framework, I got praise from those on the <strong>left</strong>.
+I also the chief <strong>futurist</strong> of <strong>OpenAI</strong>, retweeted it.
+They’re coming after me because I successfully passed the bill.
+<strong>Frameworks</strong> there’s lots of <strong>frameworks</strong>. Those are cheap.
+Who’s going to put <strong>political capital</strong> forward and get something actually done?
+And they tried to prevent any states from moving forward by putting this <strong>preemption language</strong> in legislation that failed.
+So they instead got this <strong>executive order</strong> from <strong>Donald Trump</strong> to target states that want to regulate <strong>AI</strong> and try to extract <strong>punishment</strong>, that they would <strong>cut off funding</strong>, that they would <strong>sue</strong> the states.
+And it targeted the <strong>RAISE Act</strong>, along with a few other bills throughout the country.
+So why are they coming after me.
+Because I might actually get a bill passed.</p>
+</details>
+<h3><strong>RAISE法案</strong>的软弱性与行业阻挠</h3>
+<p><strong>Ezra Klein</strong>: 这有点回到我们之前的对话，但<strong>RAISE法案</strong>中他们到底反对什么？
+因为作为一个关心<strong>AI监管</strong>的人。
+我认为这是一个好的开始。
+实际通过的<strong>法案</strong>相当软弱。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: This goes back a little bit in our conversation, but what actually in the <strong>RAISE Act</strong> do they fight.
+Because as somebody who cares about <strong>AI regulation</strong>.
+And I think it’s a good start.
+What actually got enacted there is a pretty <strong>soft bill</strong>.</p>
+</details>
+<p><strong>Alex Bores</strong>: 是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: It is.</p>
+</details>
+<p><strong>Alex Bores</strong>: 所以它是全国最强的<strong>AI安全法案</strong>。
+我为此感到尴尬，因为它应该更强大。
+当他们来追究它，当他们试图改变它时，他们到底为什么如此沮丧？
+真正的问题是<strong>任何监管</strong>都让他们无法接受，<strong>任何规定</strong>，他们必须遵守任何规则，这对他们来说都是<strong>极大的厌恶</strong>。
+他们不必永远赢。
+他们只需要推迟一两个<strong>选举周期</strong>。
+<strong>AI</strong>发展速度之快，他们未来需要部署的<strong>政治力量</strong>，更不用说<strong>资本</strong>，将是<strong>无限</strong>的。
+我们已经有<strong>民选官员</strong>因为看到对方的资金而害怕承担这项事业，尽管它很受欢迎，但他们<strong>规避风险</strong>。
+我正在竞选<strong>国会</strong>。
+我接触所有能接触到的<strong>国会议员</strong>，我在私下谈话中听到他们说，是的，我们正在关注这场竞选。
+我们想看看这是否是一个你可以与人民站在一起并赢得胜利的问题，或者金钱是否淹没一切。
+如果这个<strong>Super PAC</strong>获胜，<strong>国会议员</strong>将学到的教训就是<strong>反其道而行之</strong>，不要真正触及这个问题。
+也许你可以在上面发表一个演讲。
+也许你可以上一个<strong>播客</strong>谈论它，但不要试图通过法案，因为他们会<strong>毁掉你的职业生涯</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: So it is the strongest <strong>AI safety bill</strong> in the country.
+And I’m embarrassed by that fact, when it should be much stronger.
+When they come after it, when they’re trying to get it changed, what are they so upset about.
+It’s that there’s <strong>any regulation</strong> whatsoever that really is the challenge and that there is <strong>any regulation</strong> that they have to play by <strong>any rules</strong> is such an <strong>anathema</strong> to them.
+And they don’t have to win forever.
+They only have to push this off for an <strong>election cycle</strong> or two.
+The speed with which <strong>AI</strong> is developing, the amount of <strong>political power</strong>, let alone <strong>capital</strong> that they will have to deploy in the future, will be <strong>unbounded</strong>.
+We already have <strong>elected officials</strong> who are terrified to take up this cause, despite how popular it is, because they see all the money on the other side and they’re <strong>risk averse</strong>.
+I’m running for <strong>Congress</strong>.
+I talk to every member of <strong>Congress</strong> I can, and I hear from them in quiet conversations Yeah, we’re watching this race.
+We want to see if this is a issue that you can win on standing with people or if the money just <strong>swamps everything</strong>.
+And the lesson that will be learned by members of <strong>Congress</strong> if the <strong>Super PAC</strong> wins is <strong>run the other way</strong>, is don’t actually touch this.
+Maybe you can say a speech on it.
+Maybe you can go on a <strong>podcast</strong> about it, but don’t try to pass the bill because they will <strong>end your career</strong>.</p>
+</details>
+<h3>推荐书籍：政治哲学、技术批判与写作艺术</h3>
+<p><strong>Ezra Klein</strong>: 我认为这是一个结束的地方。
+我们最后一个问题是，你会向听众推荐哪三本书？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: I think that’s a place to end.
+Always our final question what are three books you’d recommend to the audience?</p>
+</details>
+<p><strong>Alex Bores</strong>: 所以第一本是我最喜欢的书，我知道你对这本书有想法，但它是<strong>约翰·罗尔斯</strong>（<strong>John Rawls</strong>）的**《正义论》<strong>。
+我认为它在建立广泛的</strong>人权框架<strong>方面做得最好，同时也能理解</strong>不平等<strong>何时可以被</strong>正当化**。
+我认为它是<strong>政治哲学</strong>的最佳起点。
+我知道你尝试过几次。
+我会指出，在简介中他说，这是你必须阅读的三分之一，才能掌握它的基础。
+这是你必须阅读的一半，才能真正深入理解它。
+其余部分是为<strong>学者</strong>准备的。
+所以我鼓励你再试一次。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: So the first is my favorite book of all time, and I know you have thoughts on this book, but it’s &quot;<strong>A Theory of Justice</strong>&quot; by <strong>John Rawls</strong>.
+I think it does the best job of setting up a broad <strong>framework of rights</strong> of humans, while also understanding when <strong>inequalities</strong> could be <strong>justified</strong>.
+And I think it’s the best place to start for <strong>political philosophy</strong>.
+So I know you’ve tried it a few times.
+I will point out that in the intro he says, this is a third of the book that you have to read to get the basics of it.
+And here’s the half of the book you have to read to really deeply understand it.
+And the rest is, for the academics.
+And so I’d encourage you to give it another try.</p>
+</details>
+<p><strong>Alex Bores</strong>: 第二本是<strong>凯瑟琳·布雷西</strong>（<strong>Catherine Bracy</strong>）的**《食人魔》<strong>，它被宣传为一本</strong>深度反疫苗<strong>的书。
+但我实际上认为它是由一位</strong>科技内部人士<strong>撰写的，对</strong>风险投资<strong>设定的</strong>激励机制<strong>采取了更细致入微的方法。
+这种激励机制总是为了</strong>增长**、<strong>增长</strong>、<strong>增长</strong>，而不考虑<strong>社会后果</strong>。
+我还要补充一点，由于<strong>风险投资</strong>总是推动公司无论如何都要<strong>扩张</strong>。
+我看到我的妻子<strong>Annie Lowrey</strong>（<strong>YC</strong>创始人）身上发生过这种事，她建立了一家可能本身就不错的公司，但由于风险投资，它变得要么<strong>扩张</strong>要么<strong>死亡</strong>。
+因此，许多由此产生的<strong>负面外部性</strong>，我认为这是一个非常及时的视角，因为我们正在构建<strong>AI</strong>。
+最后一本，我认为更<strong>异想天开</strong>一些，但它又回到了我们关于<strong>写作技能</strong>的对话。
+它就是<strong>安妮·拉莫特</strong>（<strong>Anne Lamott</strong>）的**《像鸟一样》<strong>，这是一本令人愉快的读物，也是对任何</strong>拖延者<strong>的一个很好的提醒，只需</strong>分解你的工作**，然后<strong>像鸟一样</strong>一点一点地做。
+这就是书名的由来，但它写得很好，以身作则，并提供了关于<strong>写作艺术</strong>的指导。
+我鼓励，尤其是在我们的<strong>写作技能</strong>正在退化的时候，人们有意识地进行这种练习，并阅读那本书。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: The second one is &quot;<strong>World Eaters</strong>&quot; by <strong>Catherine Bracy</strong> which is marketed as this deeply <strong>anti-vax</strong> book, but I actually think is written by a <strong>tech insider</strong> and a much more nuanced approach to the <strong>incentives</strong> that <strong>venture capital</strong> sets up.
+And that is always for <strong>growth</strong>, <strong>growth</strong>, <strong>growth</strong> and don’t think about the <strong>social consequences</strong>.
+And I’ll add that since <strong>VC</strong> is always pushing for a company that will <strong>scale</strong> no matter what.
+I saw this happen to my wife, <strong>Annie Lowrey</strong>, who’s a <strong>YC founder</strong>, and built a business that probably could have been fine on its own, but had the <strong>venture investment</strong> and it was <strong>scale or die</strong>.
+And so a lot of the <strong>negative externalities</strong> that have come from that, I think it’s a really timely look as we are building out <strong>AI</strong>.
+And the last ones, I think a little more <strong>whimsical</strong>, but goes back to our conversation about the <strong>skill of writing</strong>.
+And it’s &quot;<strong>Bird by Bird</strong>&quot; by <strong>Anne Lamott</strong>, which is just a delightful read and is a good reminder for any <strong>procrastinators</strong> to just <strong>break down your work</strong> and do it <strong>bird by bird</strong>.
+That’s where the title comes from, but is such a well-written leads by example and in the instructions on the <strong>art of writing</strong>.
+And I encourage especially when our <strong>skill of writing</strong> is being <strong>degraded</strong> for people to be <strong>intentional</strong> in that practice and to read that book.</p>
+</details>
+<p><strong>Ezra Klein</strong>: <strong>Alex Bores</strong>，非常感谢你。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ezra Klein</strong>: <strong>Alex Bores</strong>, thank you very much.</p>
+</details>
+<p><strong>Alex Bores</strong>: 谢谢你的邀请。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Bores</strong>: Thanks for having me.</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Alex Bores" class="entity-link person-link">Alex Bores</a>, 
+                
+                  <a href="/search/?q=Sam Altman" class="entity-link person-link">Sam Altman</a>, 
+                
+                  <a href="/search/?q=Greg Brockman" class="entity-link person-link">Greg Brockman</a>, 
+                
+                  <a href="/search/?q=Joe Lonsdale" class="entity-link person-link">Joe Lonsdale</a>, 
+                
+                  <a href="/search/?q=John Rawls" class="entity-link person-link">John Rawls</a>, 
+                
+                  <a href="/search/?q=Catherine Bracy" class="entity-link person-link">Catherine Bracy</a>, 
+                
+                  <a href="/search/?q=Anne Lamott" class="entity-link person-link">Anne Lamott</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Palantir" class="entity-link company-link">Palantir</a>, 
+                
+                  <a href="/search/?q=Andreessen Horowitz" class="entity-link company-link">Andreessen Horowitz</a>, 
+                
+                  <a href="/search/?q=ICE" class="entity-link company-link">ICE</a>, 
+                
+                  <a href="/search/?q=Leading the Future" class="entity-link company-link">Leading the Future</a>, 
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=ChatGPT" class="entity-link product-link">ChatGPT</a>, 
+                
+                  <a href="/search/?q=GPT-4o" class="entity-link product-link">GPT-4o</a>, 
+                
+                  <a href="/search/?q=AlphaFold" class="entity-link product-link">AlphaFold</a>, 
+                
+                  <a href="/search/?q=Waymo" class="entity-link product-link">Waymo</a>
+                
+              </p>
+            
+            
+              <p><strong>媒体/书籍:</strong>
+                
+                  <a href="/search/?q=A Theory of Justice" class="entity-link media-link">A Theory of Justice</a>, 
+                
+                  <a href="/search/?q=World Eaters" class="entity-link media-link">World Eaters</a>, 
+                
+                  <a href="/search/?q=Bird by Bird" class="entity-link media-link">Bird by Bird</a>
+                
+              </p>
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-regulation/">ai-regulation</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/political-economy/">political-economy</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">labor-displacement</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">government-capacity</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/data-privacy/">data-privacy</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

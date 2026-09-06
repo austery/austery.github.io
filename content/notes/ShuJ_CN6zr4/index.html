@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>“重塑软件工程：通过验证驱动实现 AI 赋能的自主化”</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="“重塑软件工程：通过验证驱动实现 AI 赋能的自主化”" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">“重塑软件工程：通过验证驱动实现 AI 赋能的自主化”</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2025-12-22
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=ShuJ_CN6zr4" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2025-12-22
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">“本次演讲探讨了将软件工程从规范驱动转变为验证驱动的重要性。演讲者 Eno Reyes 强调，强大的自动化验证能力（如测试、Linter）是成功引入 AI 编码代理的关键。通过优化组织内的验证反馈循环（DevX Loop），企业可以显著提升开发效率，为构建完全自主的软件开发流程奠定基础，从而获得竞争优势。”</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>重塑软件工程：通过验证驱动实现 AI 赋能的自主化</h3>
+<p>Factory AI 的 Eno Reyes 介绍了他们公司致力于为软件工程带来<strong>自主化</strong>（autonomy）的使命。本次演讲旨在为听众提供关于构建自主系统的洞察，以及如何成功地将 AI 代理集成到工程组织中，无论听众使用的是何种 AI 工具。</p>
+<details>
+<summary>Original English</summary>
+<p>Hey everybody, my name is Eno. Uh really pumped to talk today about uh something that at Factory we care a lot about. uh when we started 2 and 1/2 years ago uh we said that our mission is to bring autonomy to software engineering. Um and that is like got a ton of loaded words in it. That sounds a little buzzwordy right now, but I think that the my goal is that you guys leave this like roughly 20 minutes uh with a bunch of insights that will apply to your organization uh and the teams that you build, the companies you advise, um and if you're building products in the space, uh insight into like sort of maybe how to think about building autonomous systems and also making your engineering org one that's able to use agents really successfully. Um, a sort of like plus of this is that ideally this applies to any tools you're using that involve AI. So it won't be specific to like our product or any of the other amazing tools out there.</p>
+</details>
+<p>演讲者首先引用了 Andre Karpathy 关于<strong>软件 2.0</strong>（Software 2.0）的观点，并指出当前前沿模型（frontier models）的构建依赖于大量的<strong>可验证任务</strong>（verifiable tasks）。AI 系统解决能力的边界，最终取决于能否清晰指定一个<strong>目标</strong>（objective）并搜索其解决方案空间。我们习惯于通过<strong>规范</strong>（specification）来构建软件，即定义算法输入与输出。然而，将思维模式转向<strong>通过验证实现自动化</strong>（automation via verification），将极大拓展可能构建的软件范围。Jason 在一篇博文中深入探讨了<strong>验证的非对称性</strong>（asymmetry of verification），这一概念与 P vs NP 问题有着直观的联系。许多任务在验证上远比解决它们更容易。易于验证的问题通常具备以下特征：存在客观真理、验证速度快、可扩展（易于并行验证）、低噪音（验证准确率高），以及拥有<strong>连续信号</strong>（continuous signals），而非简单的“是/否”二元判断，可能提供 30%、70% 或 100% 的准确度。</p>
+<details>
+<summary>Original English</summary>
+<p>Uh, you know, Andre Karpathy had a very welltimed tweet. Uh, so of course I'm going to mention it. Uh, you know, he he kind of talked about uh, this idea of software 2.0 coming from auto uh, the the ability to verify things, right? Um, this is something that's in sort of like the the mind of Silicon Valley right now as uh the most frontier models are built with post- training that involve lots of like verifiable tasks. Um, and really I think the most interesting thing here is the sort of frontier and boundary of what can be solved by AI systems is really just a uh sort of an input function of whether or not you can specify an objective and search through the space of possible uh solutions, right? And so uh we are used to building software uh purely via specification. We say like the algorithm does this and like input is x output is y. But if you sort of shift your mindset to thinking about automation via verification uh it is a little bit of a of of a difference in what is possible to build. Um and there is another great blog post by uh Jason where he talks about the asymmetry of verification. Uh this is like pretty intuitive to most people who know about like P versus NP. Uh it's like a a thing that a lot of people have talked about throughout the like history of computing and and software. But there are a ton of tasks that are much easier to verify than they are to solve. Um and and vice versa, but but the the most interesting sorts of uh easy to verify problems are ones where there's an objective truth. They're pretty quick to validate whether or not they're true. Uh they're scalable. So validating a bunch of these things maybe in parallel uh is easy. Um it's low noise so your chance of validating it is like really really high. Um and they have continuous sort of signals. Uh it's not just like a binary yes no but like maybe you're 30% 70% 100% accurate or correct.</p>
+</details>
+<p>软件开发本身就是一项高度<strong>可验证</strong>（verifiable）的任务，这正是当前<strong>AI 代理</strong>（AI agents）在这一领域取得最先进进展的原因。过去二十到三十年，业界积累了大量的自动化验证和测试实践，包括单元测试、端到端测试和 QA 测试。此外，像浏览器自动化工具、计算机视觉代理以及开放 API 规范等新兴技术，也极大地增强了验证复杂视觉或前端变更的能力。对于专业软件工程师而言，拥有代码格式的自动验证（如 <strong>Linters</strong>）和清晰的 API 规范几乎是理所当然的。然而，要让 AI 代理真正高效工作，需要更进一步的<strong>连续验证</strong>（continuous validation）。这包括开发出能够使 AI 编码代理产生与资深工程师同等水平代码的、高度<strong>主观化</strong>（opinionated）的 Linters，以及能够识别“低劣 AI 代码”（AI slop）并对“高质量 AI 代码”（high-quality AI code）报以通过状态的测试。许多代码库之所以缺乏这些深层验证机制，是因为人类开发者能够通过手动检查来弥补，例如，一个 50-60% 测试覆盖率的代码库在人工测试下已经足够。但当 AI 代理被引入软件开发生命周期的各个环节——代码审查、文档编写、测试生成——时，这些不足便会暴露出来。</p>
+<details>
+<summary>Original English</summary>
+<p>Uh and you know the reason I bring both these things up is software development is highly verifiable. Right? This is like the frontier. It's why uh software development agents are the most advanced agents in the world right now. uh and there are so much uh there's so much work that has been put in uh over the last you know 20 to 30 years around the automated validation and verification of software that you build um testing right unit tests end to end tests QA tests right um the frontier of this is expanding there's tons of cool companies like browser base and computer use agents and all these things that are making it easier to validate uh really complex visual or front-end changes um docs right having like an open API spec for your codebase uh is something that can be automated. It's validated. Um I I I can go through and enumerate a bunch of these, but I actually think it is sort of a nice checklist for yourself, right? Do you have some automated validation for the format of your code? Uh do you have llinters? These things for professional software engineers are sort of like, yeah, of course we do. But I think you can go a step further, right? This is where that continuous validation component comes in. Um, do you have llinters that are so opinionated that a coding agent will always make code that is exactly at the level of what your senior engineers will produce? How do you do that? What does that even mean? Right? Do you have tests that will fail when AI slop has been introduced? Uh, and when highquality AI code is introduced, those tests pass, right? These additional layers of validators are things that most code bases actually lack because humans are pretty good at handling most of this stuff without the automated validation. Right? Your company may be at some test coverage rate that's like 50% or 60%. And that's good enough because humans will test manually. Um you may have a flaky build that every third build it sort of fails and everyone at your company secretly hates it but no one says anything, right? These are the sorts of things that we know are true about large code bases. And as you scale out to extremely large code bases, organizations with 44,000 plus engineers, right? Uh this starts to become a very accepted norm that the bar is sort of maybe at 50% or 60%. Um and the reality is is most software orgs can actually scale like that. uh it's sort of fine to be at that lower uh barrier, but when you start introducing AI agents into your software development life cycle, and I don't just mean in interactive coding, but really across the board, right? Uh review, documentation, testing, all this stuff. Um this breaks their capabilities. Most of you have probably only seen an AI agent that operates in a codebase that has uh a decent amount of validation.</p>
+</details>
+<p>大多数人可能只接触过在具备一定程度验证能力的<strong>代码库</strong>（codebase）中运行的 AI 代理。然而，顶尖公司之所以能够更高效地使用 AI 代理，是因为它们引入了极为严格的验证标准。传统的开发流程是“理解问题 → 设计解决方案 → 编码 → 测试”。但当引入强大的验证机制后，流程转变为：<strong>明确验证约束</strong> → <strong>生成解决方案</strong> → <strong>（通过自动化验证和直觉）进行验证</strong> → <strong>迭代</strong>。这种<strong>以规范驱动的开发</strong>（specification-driven development）模式正逐渐渗透到各种工具中，许多工具（如 Droids 的“Plan Mode”）都提供了类似的功能。将 AI 代理与规范驱动开发相结合，是构建可靠、高质量解决方案的关键。对于组织而言，更明智的选择不是花费数周时间对比市面上各种编码工具的细微性能差异，而是<strong>改变组织实践</strong>，赋能所有 AI 编码代理的成功。一旦具备了清晰的验证标准，组织就能引入更复杂的 AI 工作流。例如，如果没有自动验证来确保 Pull Request（PR）的质量或代码不会破坏生产环境，就无法并行运行多个 AI 代理，也无法将大型现代化项目分解为多个子任务。若基础的、一次性的任务执行（包含清晰的规范和验证方法）不能近乎 100% 成功，那么在公司内部大规模应用 AI 将难以实现。</p>
+<details>
+<summary>Original English</summary>
+<p>Um I think a lot of the best companies in the world right now actually have introduced very rigorous validation criteria and it means that their ability to use agents is significantly greater than that your like average uh developer. Uh you know and and if you think about it this like traditional loop of understanding a problem, designing a solution to the problem, coding it out and then testing it uh sort of shifts if you have really rigorous validation. Uh it becomes a process of when you're using agents specifying the constraints by which you would like to be validated and what should be built. Uh generating solutions to that outcome verifying uh both with your automated validation as well as with your your own intuition. Um and then iteration where you continue to iterate on that loop. This move from sort of like traditional development to spec specificationdriven development is one that we're starting to see sort of bleed into all of the different tools. Different tools have spec mode. Droids have like our Droid is our coding agent have like specification mode, plan mode. Uh there are entire idees that orient you around this like specificationdriven flow. Um and if you combine these two things together, this is really how you build reliable and highquality solutions. So if you think about it, what is like the best decision for you to make as an organization? Is it spending 45 days comparing every single possible coding tool in the space and then determining that one tool is slightly better because it's 10% more accurate at Swebench or is it making changes to your organizational practices that enable all of these coding agents to succeed and then picking one that you're, you know, developers like or honestly letting people choose from the tons of amazing tools out there. And when you have these validation criteria, you can actually introduce way more complex AI workflows to your organization, right? Uh if you cannot automatically validate whether or not a uh a PR is like reasonably successful or has code that won't definitely break prod, uh you are not going to be parallelizing several like agents at once, right? you are not going to be decomposing a large-scale modernization project uh into a bunch of different subtasks like that is that is a very frontier style task to use AI for and if the single task execution right the simple I would like to get this done here's exactly how I'd like it to be done and here's how you should validate if that does not work nearly 100% of the time you can sort of forget successfully using these other things at scale in your company.</p>
+</details>
+<p>在<strong>代码审查</strong>（code review）等领域，AI 生成高质量的审查意见需要依赖<strong>文档</strong>（documentation）来指导 AI 系统。尽管 AI 代理在理解 Lint 规则、运行测试、寻找解决方案及执行搜索方面会越来越强，但它们无法凭空创造<strong>验证标准</strong>（validation criteria）。因此，<strong>软件开发者</strong>（software developers）的角色将持续至关重要，他们将转型为<strong>环境的策展人</strong>（curating the environment），负责设定约束、构建自动化流程并引入<strong>主观性</strong>（opinionatedness）。如果一个公司缺乏一套完整的自动化验证体系（如前述八大支柱），那么改进空间是巨大的，这完全可以独立于采购新工具而进行。Factory AI 旨在帮助组织实现这一目标。仅仅依赖 ROI 分析工具是不足够的，关键在于系统地评估和提升在八个自动化验证维度上的表现，例如 Linters 的质量，以及支持几乎所有编码代理的开放标准——Agents MD 文件。通过系统化地增强这些验证标准，组织可以识别出 AI 代理难以胜任的“细微实践”领域，例如，AI 代理对初级开发者可能不够可靠，而资深开发者则能应对。<strong>谷歌或 Meta</strong> 与规模较小的工程组织之间的核心区别在于，前者能够确保新工程师在几乎零上下文的情况下，也能自信地提交代码变更（如优化 UI 界面），而不会对大规模用户群体造成影响。这是因为其代码库经过了极其严苛的<strong>验证流程</strong>（validation）。AI 代理能够识别并修复这些验证上的差距，例如，主动承担生成测试的重任。正如工程师 Alvin 所言：“有瑕疵的测试总比没有测试好”（A slop test is better than no test）。尽管此观点可能引发争议，但核心在于，任何形式的测试都会被后续的 AI 代理注意到、遵循并可能被改进，从而加速整个开发周期的优化。</p>
+<details>
+<summary>Original English</summary>
+<p>Um when you get into other tools like code review, right? Uh if you want a really highquality AI generated code review, you need documentation for your AI systems. Uh and yes, uh agents will get better at, you know, picking out, you know, whether or not to run lint or test. They will get better at finding solutions when you don't have explicit pointers. They'll get better at search, but they won't get better at just randomly creating this validation criteria out of thin air. Right? This is why we believe software developers, by the way, are going to continue to be heavily involved in the process of building software because your role starts to shift to curating the sort of environment and garden that your software is built from. You're setting the constraints. You're building these automations and introducing continued opinionatedness uh into the uh into these automations. Um, and you know, if your company doesn't have at least all of these, right? Then that means that there's a lot of work that you can do totally absent of a procurement cycle or buying one tool or trying out another one. Uh, and so plug is that we help organizations do this, right? I think that it's great to have tools that allow you to uh go in and assess this stuff. They have ROI analytics that let you interact. Um but I think that for most organizations uh there is actually like a very clear way to do this right you can go and analyze where are you across those eight different pillars of like automated validation do you have a llinter how good is the llinter do you have agents MD files an open standard that almost every single coding agent supports um you can improve uh and systematically enhance uh these different validation criteria uh and you can go through and say Well, we're seeing that coding agents are reliable enough for a senior developer to use, but our junior developers, if you have the tooling to to tell, by the way, like which developer is using what tools, you you you can ask questions like maybe our junior developers are actually totally unable to use these coding agents. And you'll learn that the reason why is not because they're like more incompetent or they don't know how to use the tool, but because there's these niche practices that you don't have automated validation for, right? And if you think about what what is the difference between a like Google or a meta and a uh a still large but like 2,000 person engineering or the difference is that a newrad with effectively zero context can go and ship a change to make YouTube's like boundary like slightly more round and it won't with some degree of confidence take down YouTube for like a billion users, right? And the reason that's possible is because of the insane amounts of validation that have to happen on that code for it to be shipped. The big difference that we now have is we have coding agents that can go and identify exactly where these gaps are and they can actually remediate those fixes. Right? So you can ask a coding agent, could you figure out where we're not being opinionated enough about our llinter. You can ask a coding agent to generate tests. We have an engineer named Alvin who I love this quote. He said a slop test is better than no test. Uh and I think that that's slightly controversial, but the thing that I would argue here is that just having something there, right, that it passes uh when changes are correct and somewhat accurately uh matches to the spec of what you want built, uh people will enhance it. They'll upgrade it and other agents will actually notice these tests. They will follow the patterns. So the more opinionated you get, the faster the cycle continues.</p>
+</details>
+<p>在思考组织发展时，应关注如何构建<strong>反馈循环</strong>（feedback loops）以更好地适应 AI 代理。更优的 AI 代理能够改善开发环境，反过来，更好的环境又能让 AI 代理进一步进化，从而为开发者创造更多时间来优化环境。这形成了一个新的<strong>开发者体验（DevX）循环</strong>。投资于此将惠及所有采购的工具，无论其是代码审查工具还是编码代理。这代表着一种投资思维的转变：从单纯增加人力（“我们需要 10 个人来解决这个问题”）转向投资于能够赋能现有及未来 AI 助力的<strong>环境反馈循环</strong>。AI 代理能够规模化地扩展这种能力。因此，即便产品本身没有直接集成 AI，组织外部的可操作空间依然巨大。顶尖的 AI 编码代理会主动利用验证机制，例如积极寻求 Linters 和测试。当组织内能够清晰表达“我的意见，我希望软件如何构建”时，个体的能力将被指数级放大——一个有主见的工程师能显著提升整个业务的<strong>迭代速度</strong>（velocity）。通过衡量和系统性改进，将极大地推动企业发展。目前，我们仍处于使用软件开发代理的<strong>早期旅程</strong>（early in our journey）。一个理想的未来场景是：客户问题出现 → 自动生成 Bug 报告 → AI 代理介入并执行修复 → 将变更反馈给开发者 → 开发者批准 → 代码合并并部署到生产环境，整个反馈周期可能只需一到两小时。这在技术上是可行的。<strong>限制因素并非 AI 代理的能力，而是组织自身的验证标准</strong>。今天对验证能力的投资，将带来 1.5 倍、2 倍，乃至 5 倍、6 倍、7 倍的效率提升。这并非 AI 的魔法，而是组织的一个战略选择。现在做出这一选择，将使组织在<strong>领先速度</strong>（edge velocity）方面跻身前 1-5%，从而在竞争中脱颖而出。因此，强烈建议组织投入资源于此。</p>
+<details>
+<summary>Original English</summary>
+<p>So I think that what you guys should be thinking about is what are the feedback loops in our organization that we are catering towards. If you have better agents, they will make the environment better which will make the agents better which will mean you have more time to make the environment better. And this is sort of the new DevX loop as well that organizations can invest in uh that will enhance all of the tools that you're procuring, right? So no matter whether it's a code review tool, a coding agent, etc., they will all benefit. Um and I would argue that it sort of shifts your mental model about what you're as a leader investing in when you're investing in your software work right now. The idea of uh you know opex as like the input to engineering projects like we are investing in we want more people in order to solve this problem. we need 10 more people. Um, I would I would argue that uh the other thing that you can now start investing in is this environment feedback loop that enables these additional people to be significantly more successful, right? And I think that that's the feedback loop that can actually take quite a lot of value because coding agents can just scale this out. So you know all of this is to say there's a lot that can be done outside of the like product itself uh to enable these systems and the best coding agents will actually take advantage of these validation loops right so if your coding agent isn't proactively seeking llinters tests etc then you know at the end of the day it's not going to be as good as one that will seek those validation criteria and in addition to that when organizations uh uh think about these sorts of things if you're the person who's able to say, &quot;Here's my opinion. Here's how I want software to be built.&quot; It scales your capabilities out greater than ever before. Like one opinionated engineer can actually meaningfully change the velocity of the entire business if you take this to heart. Uh and you have a way to measure and systematically improve. Um so that's uh you know the the majority of uh what I came here to say. I think that the the the only thing that I'd leave you with uh is that when you think about where AI is going and like where we're at today, we are still really earn early in our journey of using software development agents. If you want a world where the moment a customer issue comes in, a bug is filed, that ticket is picked up, a coding agent executes on that, that feedback is presented to a developer, they click approve, that code is merged and deployed to production in a feedback loop that takes maybe an hour, 2 hours. That will be possible, right? We all are sort of skeptical about that fully autonomous flow. That is technically feasible today. The limiter is not the capability of the coding agent. The limit is your organization's validation criteria. So this is like an investment that made today will make your organization not 1.5x, not 2x, but that is where the real like 5x, 6x, 7x comes from. Um, and it's sort of a an easy thing to say and it's an unfortunate story because what that means is you have to invest in this. It's not something that like AI will just magically give to you. Uh it's a choice that you as an organization have. Uh and if you make it now, I can guarantee you that you will be in the top 1 5% of organizations in terms of edge velocity. Um and you will out compete everybody else in the field. So highly recommend investing in this sort of stuff and hopefully you found this helpful and have some lessons to take home. Thanks.</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=“Factory AI”" class="entity-link company-link">“Factory AI”</a>, 
+                
+                  <a href="/search/?q=“Google”" class="entity-link company-link">“Google”</a>, 
+                
+                  <a href="/search/?q=“Meta”" class="entity-link company-link">“Meta”</a>
+                
+              </p>
+            
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-agents/">ai-agents</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/software-development/">software-development</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">validation</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">autonomy</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/developer-experience/">developer-experience</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

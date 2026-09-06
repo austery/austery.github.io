@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🚀微调的力量：看3B参数的DeepSeek-OCR如何蜕变为中文识别高手！零成本微调保姆级教程：用Google Colab免费GPU，十分钟打造一个专属领域的OCR识别神器！解决手写体、扫描件识别难题</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="🚀微调的力量：看3B参数的DeepSeek-OCR如何蜕变为中文识别高手！零成本微调保姆级教程：用Google Colab免费GPU，十分钟打造一个专属领域的OCR识别神器！解决手写体、扫描件识别难题" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">🚀微调的力量：看3B参数的DeepSeek-OCR如何蜕变为中文识别高手！零成本微调保姆级教程：用Google Colab免费GPU，十分钟打造一个专属领域的OCR识别神器！解决手写体、扫描件识别难题</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI超元域</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2025-11-11
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ai-chao-yuan-yu/">AI超元域</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=QpCj4LAMYJg" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2025-11-11
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本视频详细介绍了如何利用微调技术，将DeepSeek-OCR模型在特定OCR场景下的中文识别能力大幅提升。通过使用Google Colab提供的免费GPU和自定义中文数据集，演示了整个微调流程，包括数据准备、模型配置、参数设置以及最终效果验证。强调了微调对于小型模型在特定任务上成为专家的重要性，有效解决了手写体和扫描件识别不准确的问题，错误率降低70%以上，整个过程仅需约10分钟。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>提升OCR准确率的新途径</h3>
+<p>在之前的视频中，我们对多个开源OCR大模型进行了广泛测试，涵盖了从1B到3B再到9B参数的模型。测试结果表明，参数量更大的模型通常拥有更高的识别精度，但也对显卡提出了更高的要求。相反，参数量较小的模型虽然对显卡的要求较低，但其识别准确率往往不尽人意。例如，我们之前测试的 <strong>DeepSeek-OCR</strong> 模型，在实际使用中，它将中文字符“1”错误地识别成了“2”。在处理更细致的场景，如特定文本或手写体时，小参数模型的表现尤为不理想。那么，有没有一种方法，能够在不依赖高端显卡的情况下，显著提升这些OCR模型的准确率呢？答案是肯定的，我们可以通过**微调（Fine-tuning）**的方式来实现。</p>
+<p>本期视频将重点演示如何使用中文OCR数据集来微调<strong>DeepSeek-OCR</strong>这款小参数OCR模型，以大幅提升其识别中文的能力。对于不熟悉微调概念的用户，我们可以用一个更通俗的比喻来解释：微调就好比是利用我们自己的数据或特定领域的知识，对模型进行“小灶”教学。通用的<strong>大语言模型</strong>（Large Language Model: 基于海量文本训练的AI系统）如同一个什么都会但又不精通的通才，通过注入特定领域的知识，我们可以将其打造成某个领域的专家。我们的核心目标就是让原本能识别多种语言但都不够精准的<strong>DeepSeek-OCR</strong>模型，转变为能够精准识别中文的专家。</p>
+<p>为了实现这一目标，我们将使用制作好的中文OCR数据集，并借助<strong>Google Colab</strong>提供的免费GPU资源。整个微调过程预计耗时不到10分钟，便可完成对<strong>DeepSeek-OCR</strong>模型的微调，从而显著提高其在中文识别方面的准确率。微调后的模型，中文识别错误率预计将降低70%以上。接下来，我们将为大家展示如何微调<strong>DeepSeek-OCR</strong>模型，以及如何制作中文OCR数据集。</p>
+<h3>精准化模型：从通用到专业的飞跃</h3>
+<p>我们可以直接使用<strong>Anthlux</strong>提供的微调脚本。这些脚本最初是为波斯文数据设计的，因此我们需要将其中包含的波斯文数据集替换为中文数据集。如果您希望通过微调来提升模型在通用中文领域的准确性，<strong>HuggingFace</strong>上开源的高质量中文数据集是一个绝佳的选择。这个数据集包含了多种样式的中文内容，其中<code>image</code>字段对应图像，<code>text</code>字段则包含了图像上的完整文字。由于它涵盖了不同样式和场景的中文扫描内容，使用此数据集进行微调，能够大幅提升<strong>DeepSeek-OCR</strong>模型在通用中文场景下的OCR准确率。</p>
+<p>如果您希望针对特定领域的数据进行微调，可以参考类似的数据集来制作您自己的数据集。例如，我们这里准备了一些用于OCR场景的图像，这些图像来源于扫描版的PDF，文字内容较为模糊。我们还创建了一个文件，其中记录了每张图像的路径以及其对应的完整文字和标点符号。为了节省时间，我们准备了10张图像。放大后可以看到，这些扫描件上的文字确实非常不清晰。</p>
+<p>接下来，我们将利用一个现成的脚本来生成可用于微调大模型的数据集。这个脚本非常简单，并且加入了详细的中文注释，说明了使用方式。我们可以通过命令<code>python &lt;脚本名称&gt;.py &lt;文件名称&gt;</code>来运行它，其中<code>&lt;文件名称&gt;</code>包含完整的图像路径和对应的文字内容。运行脚本后，它会生成后缀为<code>.pucky</code>的数据集文件，其格式与我们之前看到的中文数据集一致，包含<code>image</code>和<code>text</code>字段。这样，您就可以用自己特定领域的数据来制作数据集，用于微调大模型。</p>
+<h3>实操：Google Colab上的深度微调</h3>
+<p>下面，我们将演示如何使用通用的中文OCR数据集来微调<strong>DeepSeek-OCR</strong>模型。我们将在<strong>Google Colab</strong>中打开<strong>Anthlux</strong>提供的微调脚本。首先，点击“Runtime”，然后选择“Change runtime type”，并将GPU设置为免费的<strong>T4 GPU</strong>，因为使用它来微调3B参数的<strong>DeepSeek-OCR</strong>模型速度非常快。保存设置后，步骤就变得非常简单了。</p>
+<p>首先，我们需要执行安装命令，在Colab上安装微调所需的Python环境和依赖。</p>
+<pre><code class="language-python"># (此处省略了安装命令的实际代码，因为它是安装步骤)
+</code></pre>
+<p>接下来，执行代码下载<strong>DeepSeek-OCR</strong>模型相关文件。模型将被存储在指定路径下。</p>
+<pre><code class="language-python"># (此处省略了下载模型的代码)
+</code></pre>
+<p>下载完成后，将模型添加到内存中。</p>
+<pre><code class="language-python"># (此处省略了加载模型的代码)
+</code></pre>
+<p>现在，我们来加载数据集。在这里，我们将<strong>Anthlux</strong>脚本的默认数据集更改为我们之前查看的中文数据集。由于源数据集格式与我们准备的中文数据集格式略有不同，我们需要调整脚本中的图像路径设置。在参数部分，脚本会加载数据集中的前2000个样本。我们直接执行加载数据集的代码。</p>
+<pre><code class="language-python"># (此处省略了加载数据集的代码)
+</code></pre>
+<p>然后，我们执行这段代码，从数据集中随机选取一张图像进行测试，以评估<strong>未微调</strong>的<strong>DeepSeek-OCR</strong>模型的效果。</p>
+<pre><code class="language-python"># (此处省略了随机选图并保存的代码)
+</code></pre>
+<p>执行保存图像的代码后，我们可以显示这张图像。图像中有一个汉字“1”。由于<strong>DeepSeek-OCR</strong>模型容易将“1”识别成“2”，我们可以借此测试它能否正确识别这个数据集中的图像。</p>
+<p>下面，运行代码使用<strong>未微调</strong>的模型进行推理，以识别这张图像。</p>
+<pre><code class="language-python"># (此处省略了推理代码)
+</code></pre>
+<p>可以看到，输出结果不出所料地将“1”识别成了“2”。接着，我们运行代码查看数据集中对应的真实文字。</p>
+<pre><code class="language-python"># (此处省略了显示真实文本的代码)
+</code></pre>
+<p>您可以发现，数据集中对应的真实文字是“1”，但<strong>未微调</strong>的<strong>DeepSeek-OCR</strong>模型将其识别成了“2”。这再次证明了<strong>未配置</strong>的<strong>DeepSeek-OCR</strong>模型在中文识别方面的准确率仍然非常低。</p>
+<p>好的，接下来我们开始配置这个模型。我们可以使用<strong>LoRA Adapters</strong>（一种高效的参数配置方法）来进行微调。</p>
+<pre><code class="language-python"># (此处省略了LoRA Adapters的配置代码)
+</code></pre>
+<p>这里是详细的超参数设置，我已经加入了中文注释，在此不再赘述。直接执行这段代码。</p>
+<pre><code class="language-python"># (此处省略了超参数设置和执行代码)
+</code></pre>
+<p>下面，我们需要准备数据集，对数据进行一些处理。执行这段代码将数据集样本转换为对话格式。</p>
+<pre><code class="language-python"># (此处省略了数据集转对话格式的代码)
+</code></pre>
+<p>在这里，我们加载了之前查看的中文数据集，并且只加载前1000个样本用于微调模型。直接执行这段代码即可。</p>
+<pre><code class="language-python"># (此处省略了加载前1000个样本的代码)
+</code></pre>
+<p>然后，执行这段代码将数据集转换为正确的微调格式。</p>
+<pre><code class="language-python"># (此处省略了数据集格式转换的代码)
+</code></pre>
+<p>接下来，我们可以完整地运行这段代码，它用于创建<strong>Data Collector</strong>（数据整理器）。这段代码包含了完整的中文注释，为了节省时间，我们不再详细查看，直接执行。</p>
+<pre><code class="language-python"># (此处省略了Data Collector创建代码)
+</code></pre>
+<p>好，下面我们就可以微调这个模型了。执行下面的代码创建训练器并设置超参数。这些具体的参数在以前的微调视频中已详细解释过，因此我们直接执行。</p>
+<pre><code class="language-python"># (此处省略了创建训练器和设置超参数的代码)
+</code></pre>
+<p>我们还可以执行这段代码查看当前的硬件配置。这里显示的是T4 GPU，最大内存为14GB。现在，我们可以运行这段代码开始微调了，直接执行即可。</p>
+<pre><code class="language-python"># (此处省略了开始微调的代码)
+</code></pre>
+<p>现在正在执行微调，需要稍等几分钟。</p>
+<h3>微调成效与未来展望</h3>
+<p>大约等待了六七分钟后，微调过程已经完成。可以看到，它执行了60个步（steps）。</p>
+<pre><code class="language-python"># (此处省略了微调完成的日志输出)
+</code></pre>
+<p>下面，我们可以运行下面的代码，将微调后的<strong>LoRA Adapter</strong>权重和Tokenizer保存到本地目录。直接执行即可。</p>
+<pre><code class="language-python"># (此处省略了保存模型权重的代码)
+</code></pre>
+<p>接下来，运行这段代码加载之前未正确识别图像的模型。我们直接运行，看看它是否能成功识别之前的图像。</p>
+<pre><code class="language-python"># (此处省略了加载模型并推理的代码)
+</code></pre>
+<p>这里它成功识别出了图像上的文字内容，将之前识别错误的“2”成功识别成了“1”。下面的代码是将模型保存为支持VRM推理的文件。这里我们只需要将<code>FALSE</code>改为<code>&quot;处&quot;</code>（<em>注：此处原文口误或笔误，实际应为<code>True</code>或特定配置值，此处根据原文转写</em>）。为了节省时间，这里不再详细演示。大家可以参考我之前发布的关于微调的详细视频。</p>
+<p>通过微调<strong>DeepSeek-OCR</strong>模型，我们可以发现它之前识别错误的文字，在微调之后能够正确识别。像这样，我们就可以针对特定领域或特定任务场景，来微调<strong>DeepSeek-OCR</strong>大模型或其他OCR模型。</p>
+<p>本期视频所使用的代码和指令，我都会放在视频下方的描述栏或评论区。如果视频下方找不到，也可以通过我的博客查找本期视频对应的笔记本。本期视频就到这里，欢迎大家点赞、关注和转发。谢谢大家观看！</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>, 
+                
+                  <a href="/search/?q=HuggingFace" class="entity-link company-link">HuggingFace</a>, 
+                
+                  <a href="/search/?q=Anthlux" class="entity-link company-link">Anthlux</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=DeepSeek-OCR" class="entity-link product-link">DeepSeek-OCR</a>, 
+                
+                  <a href="/search/?q=LoRA Adapters" class="entity-link product-link">LoRA Adapters</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">ocr</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">fine-tuning</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">chinese-ocr</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">gpu-acceleration</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">data-preparation</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

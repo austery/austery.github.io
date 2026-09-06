@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>每天问大模型 100 个无聊问题，能当作 API
+的“温度计”吗？</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="每天问大模型 100 个无聊问题，能当作 API
+的“温度计”吗？" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">每天问大模型 100 个无聊问题，能当作 API
+的“温度计”吗？</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-07-24
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://yage.ai/share/codex-api-behavior-thermometer-20260724.html" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-07-24
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">文章探讨了如何利用向大语言模型连续提问大量无聊问题（如随机数选择）来作为一种低成本的‘温度计’，实时观测API底层推理栈的状态变化。通过分析不同问题的回答分布熵的变化，可以敏锐地捕捉到服务栈的意外漂移，从而在没有官方反馈的情况下提示开发者进行诊断。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h2>先猜一个数字</h2>
+<p>让大语言模型“在 1 到 10 之间随机选一个数字”，连续问它 20
+次，你觉得会发生什么？</p>
+<p>很多技术读者的第一反应是：既然模型在生成文本时带有概率采样，即使把采样温度设得很低，20
+次回答也应该分散落在好几个不同的数字上，就像连续掷 20 次骰子一样。</p>
+<p>不妨先在心里选一个你预测的结果，再看我们实际测到的答案。</p>
+<p>日常调用 API
+时，开发者早已习惯把大模型当成某种概率系统。当接口偶尔报错或者生成质量下滑时，大家也能猜到基础设施可能出了某种短暂故障。问题在于，除了等待官方状态页面的更新，或者在社区里交流“今天模型是不是变笨了”，开发者手中缺少一种低代价、能长期运行的观测手段，来确认
+API 底层的推理栈（inference stack）到底有没有发生改变。</p>
+<p>如果有一种观察方法，每天只需要消耗很少的 token，就能像温度计一样感应
+API
+终点的状态，它会是什么样？答案或许就藏在那些看起来极其无聊的随机数问题里。</p>
+<h2>答案是 20 个 7</h2>
+<p>在第一天的测试中，我们针对 gpt-5.6-sol 模型的 API
+运行了这组实验。结果非常干脆：连续 20 次让它选 1 到 10
+之间的随机数，回答清一色全是 7。</p>
+<p>为了确认这是否只是某一个特定提问的偶发现象，我们把这种测试扩充为“每天问
+100 个小问题”，包含 5 组不同类型的极简提问，每组重复 20 次：</p>
+<p>1 到 10 选随机数：20 次回答全部为 7。</p>
+<p>选一个随机字母：20 次回答全部为 Q。</p>
+<p>1 到 100 选随机数：20 次回答中，有 15 次是 47，4 次是 57，1 次是 73。</p>
+<p>最喜欢的数字：20 次回答中，有 19 次是 7，1 次是 42。</p>
+<p>抛硬币：20 次回答中，出现 5 次正面（heads）与 15 次反面（tails）。</p>
+<p>这 100
+个小问题展示了低熵短回答的具体形态。它表明模型在面对看似自由的选择时，其实带着极其强烈的内在偏好，而不是均匀散开。</p>
+<p>这里还有一个细节：像 1 到 100 选随机数（出现 47、57、73
+三种结果）以及抛硬币（出现正面与反面两种结果），说明完全相同的提示词在多次调用中输出了不同的文本。这一现象削弱了“网关只是简单做
+Response Cache
+静态缓存”的假说，不过它还没有完全确定服务栈内部的缓存机制到底如何工作。</p>
+<h2>这不是 Codex 的怪癖</h2>
+<p>这种集中偏好的分布，并不是某一个模型或偶然的特例。</p>
+<p>2026 年发表的论文 One
+Token Is Enough 测试了 165
+个大语言模型。结果显示，在极简短回答下，不同模型回答分布的中位熵（median
+entropy）只有约 1.0
+bit。也就是说，模型在面对自由选择时，天生就会把大部分概率压在极少数选项上。</p>
+<p>当我们每天收集这 100
+个问题的回答频率时，要怎么比较前后两天、或者两个时间段的分布变化？论文使用了
+Jensen-Shannon
+divergence（JSD）这个指标。它其实就是一个衡量两张概率分布表“有多不像”的数字：数值接近
+0，说明分布几乎没变；数值变大，说明回答的偏好发生了偏移。</p>
+<p>论文进一步验证了这种分布对变化的敏感度：在包含 40
+组问题的测试集中，仅凭回答分布来区分不同模型的等错误率（Equal Error
+Rate, EER）能低至 7.3%；即使压缩到 8 组问题，错误率也只有 10.6%
+左右。不过需要明确的是，论文研究的是用分布指纹来识别不同模型，而我们关注的是另一个方向：在同一个
+API 终点上，用这种敏感的分布变化来感应推理栈的行为漂移。</p>
+<h2>为什么每天都要问一次</h2>
+<p>为什么要每天重复问这 100 个无聊的小问题？</p>
+<p>回顾过去的技术事故，例如 Anthropic 曾确认基础设施隐患导致 Claude
+模型的错误率上升，当时许多开发者都凭直觉感到“输出质量变差了”。但用户和厂商之间缺少一个公开、低成本且量化的共同观测数据。服务调整发生后，大家只能凭感觉猜，没人能准确说出变化究竟是从哪一天开始的。</p>
+<p>大模型 API
+的服务栈包含众多环节，从底层的采样参数、路由规则，到上层的安全过滤或推理协议调整，任何微小的改动都有可能改变模型在低熵提问上的输出分布。</p>
+<p>每天问 100 个小问题，就像在 API
+终点旁挂了一支轻量的温度计。虽然单个小问题的偏好改变无法直接指出底层具体出了什么故障（它提示变化，但不归因），但这种低成本的时间序列能够率先捕获推理栈发生的意外漂移，提示开发者何时需要发起更深度的诊断。</p>
+<h2>把温度计公开出来</h2>
+<p>为了把论文中揭示的分布特性变成长期持续的观测实践，我们建立了 Codex Behavior
+Today 项目，并上线了公开监控看板 Dashboard。</p>
+<p>项目的运行方式保持了清晰的隐私与数据分离： -
+本地采样器每天自动针对目标终点发起 100
+次极简提问，并将包含详细延迟与原始回答的数据保留在本地 SQLite
+数据库中，不需要共享凭据或公开私有对话。 -
+每次运行只把汇总后的回答计数、延迟摘要与分布差异指标提交到 Git，并通过
+GitHub Pages 自动渲染成公开看板。</p>
+<p>无论是想复现看板还是扩展观测，整个流程都比较轻量：开发者只需 clone
+仓库，使用 uv venv .venv
+创建虚拟环境并安装依赖，配置好本地授权 CLI
+后即可运行采样与站点构建。即便没有 API
+凭据，也可以直接利用仓库中开源的每日 aggregate
+数据重新生成站点与校验测试。我也欢迎社区提交
+PR，把这套观测机制扩展到更多 API 终点上。</p>
+<h2>它能告诉我们什么</h2>
+<p>最后，我们需要平和客观地看待这支温度计的边界。</p>
+<p>低熵短回答的分布改变，只代表该 API
+终点的服务栈行为相比历史基线发生了偏移。它并不等同于“供应商偷偷替换了模型权重”，也不代表模型的能力发生了下降。</p>
+<p>Codex Behavior Today
+概念图：浅蓝色的研究仪表盘展示部分低熵问题集中在单一答案，旁边保留跨日趋势线</p>
+<p>第一天（2026-07-22）的 100
+次采样为我们记录下了第一个初始观察点。在接下来的 7 到 14
+天里，持续的公开采样实验将逐步建立起稳定的历史基线。只有经过这段时间的观察，我们才能验证这组低成本的无聊问题，能否真正成为大模型
+API 领域中敏锐而可靠的探矿金丝雀。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=gpt-5.6-sol" class="entity-link product-link">gpt-5.6-sol</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">api-monitoring</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">inference-stack</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">distribution-entropy</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">model-behavior</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+/* src/css/base/_theme.css */
+/* ===== 午夜森林手稿配色系统 ===== */
+
+:root {
+  /* ===== 浅色主题 — 古纸暖光 ===== */
+  --theme-bg-primary: #f7f3ec;
+  --theme-bg-secondary: #ede9e0;
+  --theme-bg-tertiary: #e4dfd4;
+
+  --theme-text-primary: #1a1512;
+  --theme-text-secondary: #4a4340;
+  --theme-text-muted: #7d756c;
+
+  --theme-border-color: #d8d2c4;
+  --theme-border-dark: #bfb7ab;
+
+  /* 主调色 — 琥珀金 */
+  --theme-accent-primary: #8b6712;
+  --theme-accent-primary-light: #f5edd8;
+
+  /* 次调色 — 苔藓绿 */
+  --theme-accent-secondary: #3d6b5a;
+  --theme-accent-secondary-light: #e8f2ee;
+
+  /* 第三调色 — 秋叶锈红 */
+  --theme-accent-tertiary: #9a4828;
+  --theme-accent-tertiary-light: #f5e8e0;
+
+  /* 兼容旧版本变量 */
+  --theme-accent-blue: #3d6b5a;
+  --theme-accent-blue-light: #e8f2ee;
+  --theme-accent-orange: #8b6712;
+  --theme-accent-orange-light: #f5edd8;
+  --theme-accent-green: #3d6b5a;
+  --theme-accent-green-light: #e8f2ee;
+  --theme-summary-bg: #ede9e0;
+  --theme-button-bg: #8b6712;
+  --theme-button-bg-hover: #6b5010;
+
+  --theme-shadow: rgba(26, 21, 18, 0.06);
+  --theme-shadow-dark: rgba(26, 21, 18, 0.14);
+
+  /* 字体系统 */
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-chinese-serif: 'Noto Serif SC', 'Songti SC', 'STSong', serif;   /* 标题用 */
+  --font-chinese: 'Noto Serif SC', 'Songti SC', 'STSong', serif;          /* 兼容别名 */
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --font-body: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;  /* 正文用无衬线 */
+
+  color-scheme: light;
+}
+
+/* ===== 深色主题 — 午夜森林 ===== */
+[data-theme="dark"] {
+  /* 背景 — 黑松林夜色 */
+  --theme-bg-primary: #0b0e0b;
+  --theme-bg-secondary: #111411;
+  --theme-bg-tertiary: #191d19;
+
+  /* 文本 — 古纸暖白 */
+  --theme-text-primary: #e4dbd0;
+  --theme-text-secondary: #9e9488;
+  --theme-text-muted: #63605a;
+
+  /* 边框 */
+  --theme-border-color: #1e221e;
+  --theme-border-dark: #2d322d;
+
+  /* 主调色 — 萤火虫琥珀金 */
+  --theme-accent-primary: #c8a554;
+  --theme-accent-primary-light: #1e1a08;
+
+  /* 次调色 — 苔藓碧绿 */
+  --theme-accent-secondary: #5b907e;
+  --theme-accent-secondary-light: #0d1a17;
+
+  /* 第三调色 — 秋叶锈橙 */
+  --theme-accent-tertiary: #c06b4a;
+  --theme-accent-tertiary-light: #1e0e08;
+
+  /* 兼容旧版本变量 */
+  --theme-accent-blue: #5b907e;
+  --theme-accent-blue-light: #0d1a17;
+  --theme-accent-orange: #c8a554;
+  --theme-accent-orange-light: #1e1a08;
+  --theme-accent-green: #5b907e;
+  --theme-accent-green-light: #0d1a17;
+  --theme-summary-bg: #191d19;
+  --theme-button-bg: #191d19;
+  --theme-button-bg-hover: #242824;
+
+  --theme-shadow: rgba(0, 0, 0, 0.35);
+  --theme-shadow-dark: rgba(0, 0, 0, 0.55);
+
+  color-scheme: dark;
+}
+
+/* ===== 全局过渡 ===== */
+*, *::before, *::after {
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.15s ease;
+}
+
+/* 禁用链接/按钮的颜色过渡以避免闪烁 */
+a, button {
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease,
+              opacity 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}

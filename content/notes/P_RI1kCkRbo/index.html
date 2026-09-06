@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>语音 AI 的 “Her” 时刻：从级联架构到全双工本地化的路径演进</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="语音 AI 的 “Her” 时刻：从级联架构到全双工本地化的路径演进" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">语音 AI 的 “Her” 时刻：从级联架构到全双工本地化的路径演进</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-05-09
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=P_RI1kCkRbo" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-05-09
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">Gradium AI 创始人 Neil Zeghidour 深入探讨了语音 AI 实现电影《她》中自然交互的核心障碍。文章分析了级联系统的延迟瓶颈、全双工交互（Full-Duplex）在社交反馈中的重要性，以及副语言理解（Paralinguistics）的缺失。最后，他提出了通过本地 CPU 运行的轻量级模型来解决成本与隐私问题，助力语音应用走向规模化。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>语音 AI 的基石：从开源实验室到 Gradium 的使命</h3>
+<p><strong>Gradium AI</strong> 的核心使命是解锁语音 AI 尚未实现的巨大潜力。我们不仅训练语音模型，更致力于成为语音代理（Voice Agents）和解决方案的核心组件供应商。我们专注于提供 <strong>语音转文本</strong>（Speech-to-Text: STT）、<strong>文本转语音</strong>（Text-to-Speech: TTS）以及 <strong>语音转语音</strong>（Speech-to-Speech: STS）等底层构建模块，而不涉及具体的垂直业务编排。</p>
+<p>我们的团队起源于两年前成立的一个非营利实验室，获得了包括 <strong>Eric Schmidt</strong>、Rodolphe Saadé 和 Xavier Niel 在内的慈善家资助。该实验室专注于开放研究，并开发了全球首个用于实时对话的语音转语音模型 <strong>Moshi</strong>，以及近期推出的可在 CPU 上运行的 <strong>Pocket TTS</strong>。为了让这些技术超越开源阶段并进入生产环境，我们成立了 Gradium 这家营利性机构。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Our mission is to unlock the unrealized potential of voice AI. So basically we train voice models, speech-to-text, text-to-speech, speech-to-speech, whether it's transformation, translation, speech-to-speech dialogue, and so on and so forth. We want to be main model provider for voice for everyone building voice agents and voice solutions. So we are not working on orchestration, we are not working on specific verticals. We just make building blocks for people who want to build voice AI.</p>
+<p>This is a spin-off from a non-profit lab we created 2 years ago with the funding from philanthropists including Eric Schmidt, Rodolphe Saadé and Xavier Niel. The main idea was to create a lab that has open research and we focus mostly on speech. So we developed Moshi which was the first speech-to-speech model for conversation, speech-to-speech translation, Pocket TTS most recently a CPU model. And we decided to also create this for-profit structure to make a product that can be used in production beyond open source.</p>
+</details>
+<h3>级联系统的瓶颈：延迟与工具调用的阻碍</h3>
+<p>目前市场上绝大多数语音交互仍采用经典的 <strong>级联系统</strong>（Cascaded Systems: 由 STT、LLM 和 TTS 三个独立环节串联构成的架构）。虽然目前的 TTS 速度已经非常快，但整套系统的端到端延迟仍然难以跨越人类对话的门槛。人类对话通常要求从理解、生成答案到发音的完整链路在 <strong>200 毫秒</strong>（200ms）左右完成，而目前的流式 TTS 本身就需要超过 200 毫秒，这导致交互感依然显得不够自然。</p>
+<p>更严峻的挑战在于 <strong>工具调用</strong>（Tool Call: 模型调用外部 API 或执行任务的过程）。当我们追求减少几十毫秒的 TTS 延迟时，一次复杂的工具调用或路由切换可能带来 500 毫秒到 4 秒的延迟，这成为了语音代理最难以预测的瓶颈。为了缓解这一问题，一种解决方案是引入 <strong>填充词</strong>（Fillers: 在等待结果时生成的口语化衔接，如“好的，让我查一下...”），让 LLM 在等待工具返回结果的同时保持对话的自然流转，随后再将结果无缝织回对话中。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Speech-to-text, LLM, text-to-speech, that's the classic Cascade. In our case, we do streaming speech-to-text, streaming text-to-speech with voice cloning, semantic VAD, the classic stuff. In a human conversation, you need the entire stack of understanding, producing an answer, and pronouncing it to be around 200 milliseconds. None of this will allow to have a conversation that sounds human.</p>
+<p>Today, if you have a voice agent that is supposed to use a tool, you're going to wait. The tool call, we are fighting for latency of the TTS, trying to grab 10 milliseconds, 20 milliseconds, and then you have a tool call or open router that is going to have a latency between 500 milliseconds and 4 seconds. I think now the main bottleneck is becoming the tool call, which is very unpredictable. One solution to do that is to have fillers. So basically, your LLM it splits into two things. It sends a tool call. And while it waits for getting the result back, it can keep the conversation going in a natural way, and then it retrieves the result, and it tries to insert it back naturally in the conversation.</p>
+</details>
+<h3>全双工交互：电影《她》的核心技术门槛</h3>
+<p>实现电影《她》中萨曼莎（Samantha）式交互的关键在于 <strong>全双工</strong>（Full-Duplex: 允许系统在说话的同时进行监听，支持双向同时传输数据）。目前包括 OpenAI 的高级语音模式在内的大多数 STS 模型仍是 <strong>半双工</strong>（Half-Duplex: 只能交替进行监听或说话）的。在真实的人类交互中，重叠谈话、咳嗽、以及 <strong>回声辅助</strong>（Back-channeling: 如“嗯”、“对”等表示正在倾听的反馈信号）非常普遍。在日语等文化中，这种反馈甚至占到对话时长的 20%。如果系统无法处理这种重叠，交互就会变得非常生硬且容易中断。</p>
+<p>此外，<strong>副语言理解</strong>（Paralinguistic Understanding: 通过语调、语速、情感等非文字信号理解对方意图的能力）也是目前纯文本模型的短板。虽然 STS 模型在理论上保留了音频信息，但如果训练数据仅限于事实性问答，模型就无法学会利用这些情绪线索。我们的 <strong>Moshi</strong> 模型目前仍是少数能实现真正全双工交互的系统之一，它能够处理背景噪音和多人重叠说话，使交互更接近人类直觉。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Speech to speech is the idea that now instead of having the three blocks, you only have one that does everything together. That reduces latency a lot, but that's still not a human conversation. In particular, because every single speech to speech model except Moshi is half duplex. What it means is that the model is either listening or it's speaking. And it cannot handle the ambiguity of human conversation where you can have overlap between people speaking on one another.</p>
+<p>Full duplex—that's a human conversation. In Japanese it's a sign of politeness to do a lot of back channeling. You will say mhm, uh-huh constantly when the other person is speaking and you get up to 20% of the time that is overlapped. Paralinguistic understanding is understanding all the cues that come from the way people speak. Technically, that is in Moshi, that is in any speech-to-speech model because this information is not lost. However, if you don't exploit this information to make your model say relevant things, it's never going to exploit it.</p>
+</details>
+<h3>本地化与规模化：解决成本与隐私的 Phonon 模型</h3>
+<p>语音 AI 走向大规模商业化的另一大障碍是 <strong>成本与隐私</strong>。语音模型的运行极其昂贵，许多科技巨头目前是在亏损运营其语音模式。对于开发者而言，TTS 的 API 费用往往会迅速耗尽融资额，导致用户群增长受限。同时，随着用户向 AI 敞开更多私人数据，对 <strong>本地处理</strong>（Local Processing: 数据在用户设备端进行运算，不上传云端）的需求也日益迫切。</p>
+<p>为了应对这些挑战，我们推出了 <strong>Gradion Phonon</strong>。这是一款 <strong>端侧 TTS</strong>（On-device TTS）模型，参数量小于 1 亿（&lt;100M parameters），能够直接在智能手机的 <strong>CPU</strong> 上运行。这意味着开发者无需支付任何 API 费用即可实现高质量、低延迟且具备语音克隆能力的语音应用。相比之下，现有的 Kokoro 等模型虽然优秀，但缺乏语音克隆功能。本地运行不仅保障了绝对隐私，还彻底解决了服务器排队和宕机的问题，是语音 AI 规模化生产的未来方向。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Voice is very expensive. The voice mode of most hyperscalers is run at a loss. It's a gigantic multimodal model, and they lose money every time you use it. LLM now is almost nothing in terms of cost. TTS is really what is going to consume most of the money. I saw people burning their fundraising in TTS bills. Another aspect is privacy. You will be more comfortable if all your private data is local.</p>
+<p>To solve that, our first step is Gradion Phonon. It's an on-device TTS. For us, on-device means it runs on a smartphone CPU. It's a very small model, less than 100 million parameter, and for its size, it works quite well. It's better than all the existing on-device models. Kokoro is a good one, but it doesn't have voice cloning. This runs on the smartphone CPU, which means that you can use that to power any kind of voice application without paying a single cent of API fee.</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Neil Zeghidour" class="entity-link person-link">Neil Zeghidour</a>, 
+                
+                  <a href="/search/?q=Eric Schmidt" class="entity-link person-link">Eric Schmidt</a>, 
+                
+                  <a href="/search/?q=Xavier Niel" class="entity-link person-link">Xavier Niel</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Gradium AI" class="entity-link company-link">Gradium AI</a>, 
+                
+                  <a href="/search/?q=11 Labs" class="entity-link company-link">11 Labs</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Nvidia" class="entity-link company-link">Nvidia</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Moshi" class="entity-link product-link">Moshi</a>, 
+                
+                  <a href="/search/?q=Phonon" class="entity-link product-link">Phonon</a>, 
+                
+                  <a href="/search/?q=GPT-4o" class="entity-link product-link">GPT-4o</a>, 
+                
+                  <a href="/search/?q=Kokoro" class="entity-link product-link">Kokoro</a>
+                
+              </p>
+            
+            
+              <p><strong>媒体/书籍:</strong>
+                
+                  <a href="/search/?q=Her" class="entity-link media-link">Her</a>
+                
+              </p>
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/voice-ai/">voice-ai</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">full-duplex</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/latency-optimization/">latency-optimization</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/on-device-ai/">on-device-ai</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">paralinguistics</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

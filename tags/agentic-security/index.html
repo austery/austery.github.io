@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="container" data-pagefind-ignore>
+
+<div class="home-layout">
+
+<h1>标签：agentic-security</h1>
+
+<ul><li>
+      
+      <a href="/content/clippings/2026-07-28_httpsyag_github-secure-code-game-prodbot-20260728-html/">别再依赖提示词防 Agent 了：从 GitHub Secure Code Game
+看红队攻防的 5 级提权</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-07-28T00:00:00.000Z">
+          7/28/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章介绍了 GitHub Secure Code Game Season 4 中引入的 ProdBot 靶机，旨在通过自然语言交互诱导 Agent 绕过权限检查读取敏感文件。文章详细拆解了从传统代码安全到 Agentic AI 安全的五个提权级攻击路径，包括 Shell 解释器漏洞、网页内容注入、工具链上下文污染、跨 Session 记忆持久化以及多智能体混淆代理人机制，强调了防御策略应从文本提示词转向架构设计和物理隔离。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/1EZdpEhwmNc/">穿越 AI 迷雾：自主代理（Agentic）时代安全架构的关键决断</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-07-20T00:00:00.000Z">
+          7/20/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本篇双语访谈记录了 Snyk 首席创新官兼 CTO Manoj Nair 在 World&#39;s Fair 上的精彩演讲与现场演示。探讨了在 AI 代理（Agentic）与大模型驱动的新时代下，企业面临的三大核心安全痛点：自主化攻击的兴起、不可信的代理输出与行为环境、以及难以治理的“影子 AI”资产。通过现场演示，展示了 Snyk 如何通过包健康度检测与 Skill/MCP 风险评估工具，重塑生成器与验证器分离的安全架构，为 AI 安全工程师赋予 10x 超能力。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/lMCxVorb9wM/">重构 AI 时代的安全底座：为什么以人类为中心的安全架构已无法适配智能体？</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-07-19T00:00:00.000Z">
+          7/19/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/architecture/" class="category-badge-inline">
+              🏷️ architecture
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 随着 AI 智能体（Agents）从确定性编程走向概率性决策，传统的基于人类用户或静态服务账号的身份与访问管理（IAM）机制正面临巨大挑战。本文探讨了智能体带来的非确定性风险，分析了当前 OAuth 机制在细粒度权限控制上的局限性，并提出了面向智能体的微观授权与可观测性安全实践。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/imFedndyXYQ/">智能安全靶场：利用大语言模型（LLM）构建源代码漏洞检测与修复闭环</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-07-17T00:00:00.000Z">
+          7/17/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文基于 Anthropic 技术成员 Eugene Yan 的演讲，系统探讨了如何利用大语言模型（LLM）构建智能安全靶场（Agentic Harnesses）来实现源代码的安全治理。文章详细拆解了从威胁建模、隔离沙箱、漏洞检测、独立验证、分级分流到补丁自动生成的六步闭环工作流，并分析了落地过程中的组织级瓶颈与实操路径。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-06-20_httpsyag_agent-safety-alignment-to-containment-20260620-html/">从我问你答到我说你做：AI 安全为什么需要一套新工具</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-06-20T00:00:00.000Z">
+          6/20/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了从“我问你答”到“我说你做”的交互模式转变对 AI 安全带来的根本性挑战。核心观点是安全焦点从模型输出内容转移到了 Agent 的行为层面，强调需要引入运行时遏制机制和多层安全框架来应对新的攻击面，并指出传统安全工具在处理 Agent 内部威胁时的局限性。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/julbw1JuAz0/">对话 Claude Code 之父 Boris Cherny：AI 时代的‘印刷机’革命与工程师的进化</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/the-pragmatic-engineer/" class="speaker-inline">🎙️ The Pragmatic Engineer</a>
+      
+      
+      
+        <time datetime="2026-03-04T00:00:00.000Z">
+          3/4/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Anthropic 工程师 Boris Cherny 深度解析了 Claude Code 的诞生与演进。他分享了如何在 AI 辅助下实现日均提交 30 个 PR 且零手写代码的高效工作流，提出了 AI 编码如同 14 世纪印刷机革命的深刻类比，并探讨了工程师如何从‘抄写员’转型为‘作者’，以及通用型工程师在 AI 时代的独特优势。</small>
+      
+
+      
+      
+    </li></ul>
+
+</div>
+
+</div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

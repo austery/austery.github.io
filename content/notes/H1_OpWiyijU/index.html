@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEONARDO：会走路、飞行、滑板和走绳索的机器人</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="LEONARDO：会走路、飞行、滑板和走绳索的机器人" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">LEONARDO：会走路、飞行、滑板和走绳索的机器人</span>
+      <span data-pagefind-meta="speaker" style="display:none;">veritasium</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2021-10-16
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/technology/">technology</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/veritasium/">veritasium</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=H1_OpWiyijU" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2021-10-16
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本视频介绍了LEONARDO机器人，它巧妙地融合了行走与飞行能力，并展现了滑板和走绳索等独特技能。由Chung博士团队开发，LEONARDO利用螺旋桨增强稳定性，并在一个巨大的风扇阵列设施中进行测试。视频探讨了其坚固的设计、滑板时的能源效率以及实现平衡的先进控制系统。此外，还展望了LEONARDO在未来太空探索（如火星直升机）和飞行汽车中的潜在应用，强调了多模态移动在复杂环境中的重要性。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>介绍LEONARDO：多功能机器人</h3>
+<p>这是一个会走路、飞行、滑板和走绳索的机器人。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">This is a robot that walks, flies, skateboards, and slacklines.</p>
+</details>
+<p>但为什么呢？</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">But why?</p>
+</details>
+<p>本视频的一部分由Bluehost赞助。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">A portion of this video was sponsored by Bluehost.</p>
+</details>
+<p>更多关于他们的信息将在节目最后介绍。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">More about them at the end of the show.</p>
+</details>
+<p>市面上已经有很多<strong>双足机器人</strong>（Bipedal Robots: 能够用两条腿行走的机器人），<strong>无人机</strong>（Drones: 无人驾驶飞行器）也随处可见。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">There are lots of bipedal robots out there, and drones are ubiquitous.</p>
+</details>
+<p>但直到现在，还没有人成功地将行走和飞行技术整合到单个机器人中协同工作。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">But until now, no one had engineered walking and flying technology to work together in a single robot.</p>
+</details>
+<p><strong>Dr. Chung:</strong> 所以，这是第一个真正整合了行走和飞行的机器人。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- So it's the first robot that truly integrates the walking and the flying.</p>
+</details>
+<p>它不仅仅是一个带腿的无人机。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">It's not just a drone with legs.</p>
+</details>
+<p><strong>Dr. Chung:</strong> 它是<strong>LEONARDO</strong>（LEgs ONboARD drOne: 腿上载无人机），这个名字我觉得很不错。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- [Dr. Chung] It's LEONARDO and it stands for LEgs ONboARD drOne. So I think it's a pretty good name.</p>
+</details>
+<p><strong>Derek:</strong> 这种技术潜在的用途是什么？</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- [Derek] Why is this potentially useful?</p>
+</details>
+<p><strong>Dr. Chung:</strong> 是的，任何飞行器实际上都必须从地面起飞。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- Yeah, so any flying vehicles actually have to start from the ground to take off.</p>
+</details>
+<p>它们最终不能永远停留在空中，总会降落。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">And eventually, they can not stay in the air forever. They have to eventually come down.</p>
+</details>
+<p>但有时它们必须降落在非常崎岖的地形或一些障碍物上。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">But sometimes they have to come down on the very challenging terrain or some obstacles.</p>
+</details>
+<p>所以拥有这些可控的腿实际上是个好主意。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So it's actually a good idea to have these controllable legs.</p>
+</details>
+<p>这样它们就能以非常有趣的姿态、姿势或方向着陆。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So they can actually land in a very interesting configuration, or posture, or orientation.</p>
+</details>
+<h3>螺旋桨带来的额外稳定性</h3>
+<p><strong>Derek:</strong> 但还有额外的益处。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- [Derek] But there are additional benefits.</p>
+</details>
+<p>像这样的机器人比普通无人机更稳定。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">A robot like this is more stable than a regular drone.</p>
+</details>
+<p><strong>Dr. Chung:</strong> 我几乎把这些<strong>螺旋桨</strong>（Propellers: 用于产生推力的旋转叶片）看作是手臂。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- I view these propellers almost like arms.</p>
+</details>
+<p>所以有些人可能会说，哦，你们在作弊，因为双足机器人没有螺旋桨。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So some people might say that, oh, you guys are cheating because I mean, bipedal robots do not have propellers,</p>
+</details>
+<p>但我们本质上是利用螺旋桨进行额外的稳定。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">but we are essentially using the propellers to do additional stabilization.</p>
+</details>
+<p>（机器人嗡嗡作响）</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">(robot whirring)</p>
+</details>
+<p>所以基本上，你产生升力或推力来抵消机器人的一些重量，但这实际上是次要因素。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So basically, you generate the lift or thruster force to cancel some of the the weight of the robot, but that's really a secondary factor.</p>
+</details>
+<p>最重要的是姿态或方向的稳定。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">The most important thing is basically posture or orientation, stabilization.</p>
+</details>
+<p>（机器人嗡嗡作响）</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">(robot whirring)</p>
+</details>
+<p><strong>Derek:</strong> 看到这个真是太酷了。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- [Derek] That is so cool to see.</p>
+</details>
+<h3>巨大的风扇阵列测试设施</h3>
+<p><strong>Dr. Chung:</strong> 所以这个实验室的主要设施就是这个。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- So the main facility for this lab is this one.</p>
+</details>
+<p>它是一个巨大的风扇阵列。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">It's a gigantic fan array.</p>
+</details>
+<p><strong>Derek:</strong> 我现在可以看到所有的风扇了。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- [Derek] I can see all the fans now.</p>
+</details>
+<p><strong>Dr. Chung:</strong> 是的，我们有——你可以开始数了，但总共有1296个电脑风扇。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- [Dr. Chung] Yeah, we have - you can start counting, but 1,296 computer fans.</p>
+</details>
+<p>它们真的就是电脑风扇。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Those are really literally computer fans.</p>
+</details>
+<p><strong>Derek:</strong> 它能产生多快的风速？</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- [Derek] How fast can it generate wind?</p>
+</details>
+<p><strong>Dr. Chung:</strong> 最高可达每秒15米或每秒20米。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- So up to 15 meters per second or 20 meters per second.</p>
+</details>
+<p><strong>Derek:</strong> 这就像一个风洞，但不需要隧道。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- [Derek] It's like a wind tunnel without the need for a tunnel.</p>
+</details>
+<p><strong>Dr. Chung:</strong> 是的。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- Yes.</p>
+</details>
+<p><strong>Derek:</strong> 它可能会影响我们的音频或麦克风。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- It might mess with our audio or with our microphones.</p>
+</details>
+<p>哇。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Whoa.</p>
+</details>
+<p><strong>Dr. Chung:</strong> 烟雾机的目的是实际可视化气流，但同时利用所有这些额外的传感器，比如红外摄像头、雷达和<strong>LIDAR</strong>（Light Detection and Ranging: 光探测和测距），我们可以在这种雾气存在的情况下，弄清楚车辆周围的位置或环境。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- The idea of the smoke machines is to actually visualize the flow, but also with all these additional sensors, like infrared cameras or radar and LIDAR, how we can actually figure out the kind of location or environment around your vehicle in the presence of this fog.</p>
+</details>
+<p><strong>Derek:</strong> 我想亲自感受一下它们的力量。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- [Derek] I wanted to feel their power for myself.</p>
+</details>
+<p><strong>Man:</strong> 好了，准备好了吗？</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- [Man] All right, you ready?</p>
+</details>
+<p><strong>Derek:</strong> 是的，开始吧。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- [Derek] Yeah, let's do it.</p>
+</details>
+<p>（机器发出巨大的嗡嗡声）</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">(machine whirring loudly)</p>
+</details>
+<p>是的！</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Yeah!</p>
+</details>
+<p>那真是太酷了。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">That was so cool.</p>
+</details>
+<p>我喜欢它。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">I love it.</p>
+</details>
+<p>他们利用这个设施测试LEONARDO，以了解它在不同风况下的稳定性。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">They use this facility to test Leonardo to see how stable he is even in different wind conditions.</p>
+</details>
+<p>（管弦乐）</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">(orchestral music)</p>
+</details>
+<p><strong>Dr. Chung:</strong> 我们展示了LEO比无人机更坚固，因为无人机会被风吹走。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- And we showed that Leo is more robust than a drone because a drone gets blown away by the wind.</p>
+</details>
+<p>但LEO不会，因为它与地面有接触。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">But then Leo does not because of its ground contact.</p>
+</details>
+<p>例如，如果你去徒步旅行，突然刮起大风，你不会摔倒，因为你与地面有接触。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So for example, if you go hiking and there's like, suddenly a lot of wind, you're not gonna fall because you have the ground contact.</p>
+</details>
+<p>但对于无人机来说，它可能会被吹走。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">But for a drone, it might be blown away.</p>
+</details>
+<p>（轻柔的管弦乐）</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">(gentle soft orchestra music)</p>
+</details>
+<p>（机器人嗡嗡作响）</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">(robot whirring)</p>
+</details>
+<p><strong>Man:</strong> 哦不。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- [Man] Oh no.</p>
+</details>
+<p><strong>Dr. Chung:</strong> 所以我们实际上拿了家里的一块白板，并在上面涂了油。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- So we actually took one of the whiteboards that we have at home and we put oil.</p>
+</details>
+<p>我们对LEO施加扰动，发生的情况是当你推LEO时，它没有摔倒，而是保持直立，同时在白板上滑动。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So we applied perturbations to Leo, and what's happening is as you push Leo, instead of falling, it stays upright, but it also slides on the white board.</p>
+</details>
+<p>所以这是一个有趣的能力。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So that's an interesting capability.</p>
+</details>
+<p>它非常坚固。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So it's very robust.</p>
+</details>
+<p><strong>Derek:</strong> 你说扰动。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- You said perturbations.</p>
+</details>
+<p>你是在戳机器人吗？</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Are you poking the robot?</p>
+</details>
+<p><strong>Dr. Chung:</strong> 是的，在不伤害机器人的前提下。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- Yes, without harming the robot.</p>
+</details>
+<p>我们很温柔。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">We are gentle.</p>
+</details>
+<p>（机器人嗡嗡作响）</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">(robot whirring)</p>
+</details>
+<h3>滑板：效率与灵感</h3>
+<p><strong>Derek:</strong> LEONARDO非常稳定，并且善于调整平衡，所以它能滑滑板。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- LEONARDO is so stable and good at adjusting its balance, that it can skateboard.</p>
+</details>
+<p>（机器人嗡嗡作响）</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">(robot whirring)</p>
+</details>
+<p>这是一个很酷的技巧。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">That's a fancy trick.</p>
+</details>
+<p>没多少人能倒着滑滑板。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Not many people can go backwards on a skateboard.</p>
+</details>
+<p>你们是怎么想到要造一个会滑滑板的机器人的？</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">How did you get the idea for a robot that will skateboard?</p>
+</details>
+<p><strong>Dr. Chung:</strong> 我应该说实话还是编一个好听的故事？</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- Should I say the truth or make a nice story?</p>
+</details>
+<p><strong>Derek:</strong> 告诉我们真相。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- [Derek] Tell us the truth.</p>
+</details>
+<p><strong>Dr. Chung:</strong> 是的，我们去徒步旅行时，看到大约有10个人用滑板从山上滑下来。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- Yeah, so we went hiking and we saw about 10 people going down the mountain on a skateboard.</p>
+</details>
+<p>然后我们想，哇，这真的很酷。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">And then we thought, wow, this is really cool.</p>
+</details>
+<p>如果我们让我们的机器人也做这个呢？</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">What if we try our robots to make it do this?</p>
+</details>
+<p>所以我们去了第一家店，买了一个滑板。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So we went to the first shop and we bought a skateboard.</p>
+</details>
+<p>我们修改了它，尝试了一下，它成功了。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">We modified it and we tried it and it worked.</p>
+</details>
+<p><strong>Derek:</strong> 那么你认为它能让机器人通过滑滑板来节省能量吗？</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- [Derek] So do you think it allows the robot to save energy by riding on a skateboard?</p>
+</details>
+<p><strong>Dr. Chung:</strong> 它更高效，因为它更少地使用腿部。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- It's more efficient because it uses the legs less.</p>
+</details>
+<p>腿部基本上用于转向，然后只是螺旋桨用于向前和向后加速滑板。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">The legs are basically used to steer, and then it's just the propellors that are used to accelerate the skateboard forward and backwards.</p>
+</details>
+<p>所以是的，这让它节省了更多能量。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So yeah, it makes it save a bit more energy.</p>
+</details>
+<p><strong>Derek:</strong> 当然，螺旋桨使得倒着滑滑板成为可能。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- The propellors of course, make it possible to skateboard backwards.</p>
+</details>
+<p>这是我 struggled with 的事情。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Something I struggled with.</p>
+</details>
+<p>如果我有一个螺旋桨，那肯定会有帮助。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">It definitely would help if I had a propeller.</p>
+</details>
+<p>（女人聊天声）</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">(woman chattering)</p>
+</details>
+<h3>走绳索：终极平衡挑战</h3>
+<p><strong>Derek:</strong> 但真正的挑战是<strong>走绳索</strong>（Slacklines: 在两点之间拉紧的扁平带子上行走以保持平衡的运动）。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">But the real challenge was slacklining.</p>
+</details>
+<p>（欢快的拉丁舞音乐）</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">(upbeat latino dance music)</p>
+</details>
+<p>这看起来非常不稳定。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">This looks incredibly unstable.</p>
+</details>
+<p>所以我觉得这证明了控制系统有多么重要。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So I think this proves the point of just like, how important control systems are.</p>
+</details>
+<p>从录像中你可以看出我完全不知道自己在做什么。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">You can tell from the footage I have no idea what I'm doing.</p>
+</details>
+<p>（Derek尖叫）</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">(Derek shrieks)</p>
+</details>
+<p>好吧，我以为我会稍微好一点。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">All right, I thought I would be slightly better at that.</p>
+</details>
+<p>再试一次。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Let's give it another shot.</p>
+</details>
+<p>好的。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Okay.</p>
+</details>
+<p>有人能走绳索吗？</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Can anyone slackline?</p>
+</details>
+<p>哦！</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Oh!</p>
+</details>
+<p>这不可能。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">This is impossible.</p>
+</details>
+<p>我需要一个机器人替我做这个。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">I need a robot to do this for me.</p>
+</details>
+<p>（欢快的拉丁舞音乐）</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">(upbeat latino dance music)</p>
+</details>
+<p>（机器人嗡嗡作响）</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">(robot whirring)</p>
+</details>
+<p>我喜欢这种侧步技术。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">I like the sidestepping technique.</p>
+</details>
+<p>也许我应该那样做。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Maybe I should have been doing that.</p>
+</details>
+<p>有点像模仿它的技术。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Kind of like copy his technique.</p>
+</details>
+<p>我试图通过观察LEONARDO来获得一些技巧。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">I tried to get some tips by watching Leonardo.</p>
+</details>
+<p>（机器人嗡嗡作响）</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">(robot whirring)</p>
+</details>
+<p>但改进微乎其微。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">But improvement was negligible.</p>
+</details>
+<p>我应该有所准备的。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">I should've prepared.</p>
+</details>
+<p>你可能会认为使用螺旋桨是在作弊，但机器人显然没有飞行。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">You might think it's cheating to use propellers, but the robot is clearly not flying.</p>
+</details>
+<p>它主要依靠绳索支撑自己，即使在剧烈晃动的情况下也能保持稳定。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">It is supporting itself mostly using the rope, and it's able to stabilize itself even with the wild bouncing.</p>
+</details>
+<p><strong>Dr. Chung:</strong> 所以人类专业的走绳索者，你可以看他们的一些视频，他们实际上会伸展手臂来平衡自己。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- So human professional slack liner, you can see some of their videos, actually they use arms stretched and then they can balance themselves.</p>
+</details>
+<p>我们还没有为LEO配备手臂。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">We don't have the arms for LEO yet.</p>
+</details>
+<p>我们计划增加一个操纵装置，这样它就可以携带一些物体。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">We are planning to add a manipulation so that he can actually carry some object.</p>
+</details>
+<p>但与此同时，我们正在使用螺旋桨来稳定LEO，当它在走绳索时。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">But in the meantime, we are using the propellers to stabilize LEO while he's actually walking on a slackline.</p>
+</details>
+<h3>先进的控制系统</h3>
+<p><strong>Derek:</strong> 很有趣，因为这个机器人感觉好像有自己的个性。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- It's funny because like the robot feels like it's got kind of a personality to it.</p>
+</details>
+<p>它走路和飞行的方式。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">The way it walks and flies.</p>
+</details>
+<p>这完全是你平时不习惯看到的东西。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">It's just totally something you're not used to seeing.</p>
+</details>
+<p><strong>Dr. Chung:</strong> 它看起来很自然。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- It looks natural.</p>
+</details>
+<p>实际上，我必须说，传感器每秒采样1000次，但控制器实际上每秒重新计算200次，无论你发送什么信号给螺旋桨和腿部关节。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Actually, I have to say that the sensors are sampled at 1,000 times per second, but the controller is actually being recomputed whatever signal you are sending to propellers and the leg joints is 200 times per second.</p>
+</details>
+<p>所以计算速度非常快。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So it's pretty fast computation.</p>
+</details>
+<p><strong>Derek:</strong> 它每秒调整200次，以保持平衡？</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- [Derek] 200 times a second it is adjusting what it's doing to maintain balance?</p>
+</details>
+<p><strong>Dr. Chung:</strong> 是的，特别是螺旋桨控制信号。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- Yes, especially propeller control signal.</p>
+</details>
+<p><strong>Derek:</strong> 这和人类相比如何？</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- How does that compare to humans?</p>
+</details>
+<p><strong>Dr. Chung:</strong> 哦，人类。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- Oh, humans.</p>
+</details>
+<p>人类可以完成非常复杂的任务，但在快速反应方面，它是一个非常粗糙的机器。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So humans, overall, has a few seconds of delay. Time delay.</p>
+</details>
+<p>所以人类总体上会有几秒钟的延迟。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So humans, overall, has a few seconds of delay. Time delay.</p>
+</details>
+<p><strong>Derek:</strong> 这就是我走绳索时很吃力的原因吗？</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- Is this why I was struggling on the slackline?</p>
+</details>
+<p><strong>Dr. Chung:</strong> 也许吧，但是……（轻笑）</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- Maybe, but... (chuckles)</p>
+</details>
+<p><strong>Derek:</strong> 你觉得今天的表现如何？</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- [Derek] How do you feel about the performance here today?</p>
+</details>
+<p><strong>Dr. Chung:</strong> 是的，我觉得它打败了你。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- Yeah, I think it beat you.</p>
+</details>
+<p>（Derek笑）</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">(Derek laughs)</p>
+</details>
+<p><strong>Derek:</strong> 我的意思是，这并不难，但这非常令人印象深刻。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- I mean, not that that's hard, but this is very impressive.</p>
+</details>
+<p>如果你想象未来像LEONARDO这样的机器人，你所能制造出的最棒的LEONARDO会是什么样子，会做什么？</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">If you imagine a robot like LEONARDO in the future, like the greatest LEONARDO you could make, what would that robot look like and do?</p>
+</details>
+<h3>未来应用：太空探索与飞行汽车</h3>
+<p><strong>Dr. Chung:</strong> 所以，在太空中拥有一个像LEO一样的机器人，那将是惊人的。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- So definitely having a LEO-like robot in space, that would be amazing.</p>
+</details>
+<p>但当然，根据你去的地方，你可能无法使用螺旋桨。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">But of course, depending on where you go, you might not be able to use propellers.</p>
+</details>
+<p>那么你就需要使用推进器。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So then you would need to use thrusters.</p>
+</details>
+<p><strong>Dr. Chung:</strong> 所以最终，是的。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- So eventually, yes.</p>
+</details>
+<p>我们希望开发这种基于腿的自适应着陆装置，然后将其用于下一代火星直升机或下一代飞行汽车，以便它能在非常具有挑战性的条件下着陆。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">We want to develop this leg-based adaptive landing gear, and then we give that to next generation Mars helicopter, or next generation flying cars so that it can actually land in very challenging conditions.</p>
+</details>
+<p><strong>Derek:</strong> 并且一旦……</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- And still move around once-</p>
+</details>
+<p><strong>Dr. Chung:</strong> 是的，一旦你着陆，你就可以走动了。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- And then once, yeah, once you land, then you can walk over.</p>
+</details>
+<p>（机器人嗡嗡作响）</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">(robot whirring)</p>
+</details>
+<p><strong>Dr. Chung:</strong> 想象一下，如果你有一个悬崖，然后机器人跳下悬崖，展开螺旋桨并飞行。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- Imagine if you have a cliff and then you have the robot just jump out of the cliff, deploy the propellers and fly.</p>
+</details>
+<p><strong>Derek:</strong> 那会很疯狂。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">- [Derek] That'd be wild.</p>
+</details>
+<p>（古怪音效）</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">(quirky sound effect)</p>
+</details>
+<h3>赞助商信息：Bluehost</h3>
+<p><strong>Derek:</strong> 哦，你好。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Oh, hey there.</p>
+</details>
+<p>本视频的这一部分由Bluehost赞助。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">This portion of the video was sponsored by Bluehost.</p>
+</details>
+<p>你知道，现在的技术如此先进，机器人都能滑滑板了。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">You know, tech is now so advanced that robots can skateboard.</p>
+</details>
+<p>那为什么建立一个网站仍然如此困难呢？</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So why is it still so hard to build a website?</p>
+</details>
+<p>用Bluehost简化这个过程。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Make the process simple with Bluehost.</p>
+</details>
+<p>开始使用比以往任何时候都容易。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">It's easier than ever to get started.</p>
+</details>
+<p>Bluehost为您提供第一年完全免费的域名，以及快速启动模板。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Bluehost provides you with a completely free domain for the first year, as well as quick start templates.</p>
+</details>
+<p>这样您就可以在几分钟内拥有一个漂亮且运行良好的网站。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So you can have a beautiful website up and running in just minutes.</p>
+</details>
+<p>这些模板是移动设备就绪的，所以您的网站从一开始就针对手机和电脑进行了优化。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">The templates are mobile ready so your website is optimized for both phones and computers from the start.</p>
+</details>
+<p>与构建像LEO这样的机器人的过程不同，您不需要代码来制作您的网站。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Unlike the process of building a robot like LEO, you don't need code in order to make your website.</p>
+</details>
+<p>Bluehost让您可以通过简单的拖放编辑来自定义一切。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Bluehost lets you customize everything with simple drag and drop editing.</p>
+</details>
+<p>Bluehost构建器还允许人们选择自己的编辑旅程。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">And Bluehost builder also allows people to choose their own editing journey.</p>
+</details>
+<p>它建立在<strong>WordPress</strong>（WordPress: 一种流行的内容管理系统，用于创建和管理网站）之上。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">It's built on WordPress.</p>
+</details>
+<p>所以您可以随时在WordPress核心（传统的编辑体验）和Bluehost构建器之间切换，而不会损失任何功能。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So at any time you can toggle between WordPress core, the traditional editing experience, and the Bluehost builder with no loss of functionality.</p>
+</details>
+<p>这是一种首创的构建器体验。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">This is a first of its kind builder experience.</p>
+</details>
+<p>所以今天就开始使用Bluehost构建您的网站吧。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So start building your website today with Bluehost.</p>
+</details>
+<p>只需访问bluehost.com/track/veritasium即可获得超过65%的折扣。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">Just go to bluehost.com/track/veritasium to receive more than 65% off.</p>
+</details>
+<p>我将把这个链接放在描述中。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">I will put that link down in the description.</p>
+</details>
+<p>所以我想再次感谢Bluehost赞助本视频的这一部分。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">So I wanna thank Bluehost again for sponsoring this portion of the video.</p>
+</details>
+<p>我也想感谢您的观看。</p>
+<details>
+<summary>View/Hide Original English</summary>
+<p class="english-text">And I wanna thank you for watching.</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Derek Muller" class="entity-link person-link">Derek Muller</a>
+                
+              </p>
+            
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=WordPress" class="entity-link product-link">WordPress</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/future/">future</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/life/">life</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">multi-modal-locomotion</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/robotic/">robotic</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/system/">system</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

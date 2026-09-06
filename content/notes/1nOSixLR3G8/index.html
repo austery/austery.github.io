@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>第一期迷你黑客松Demo Day：AI个人助理与内容自动化实践分享</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="第一期迷你黑客松Demo Day：AI个人助理与内容自动化实践分享" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">第一期迷你黑客松Demo Day：AI个人助理与内容自动化实践分享</span>
+      <span data-pagefind-meta="speaker" style="display:none;">用AI發電</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-03-15
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/yong-ai-fa-dian/">用AI發電</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=1nOSixLR3G8" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-03-15
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本次迷你黑客松Demo Day，多位成员分享了他们在一个月内利用AI技术开发的创新项目。项目涵盖了个人音频工作流助理、知识管理与笔记系统、早报生成、股票估值工具，以及社交媒体内容自动化和分发引擎。大家展示了AI在提升个人生产力、简化内容创作流程、辅助金融分析和日常健康管理等方面的广泛应用，并讨论了自动化与内容质量、API接入等实践挑战。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>活动开场与规则介绍</h3>
+<p><strong>Josh</strong>: 我一会儿直接把我们这三个小组的成员直接就邀请上来。
+<strong>主持人</strong>: Ok, hello, Tommy.
+<strong>Josh</strong>: 我直接邀请上来了，因为我们都是要一起分享的，你可以闭麦闭摄像头都可以。
+<strong>主持人</strong>: Hello, 赵老师。
+<strong>Josh</strong>: 我在群里边说一下。
+<strong>主持人</strong>: 邀请大家目前都看得到吗？
+<strong>小西瓜</strong>: 嗯，可以，没问题。
+<strong>主持人</strong>: 嗯嗯。
+<strong>Josh</strong>: 麦克风和摄像头不用管。
+<strong>主持人</strong>: Hello, hello, hello 麦克。
+<strong>小西瓜</strong>: 哎。
+<strong>Josh</strong>: 张将军。
+<strong>主持人</strong>: 我们这在张将军来分享，因为他现在在欧洲是凌晨。
+<strong>Josh</strong>: 还有在凌晨，还有在欧洲的朋友吗？我们可以让我们先开始。
+<strong>Josh</strong>: 可以啊。
+<strong>可友</strong>: 没事没事，其实我们小组讨论的是我们小组要在一起，因为是有相关的，所以我可以跟我小组一起。
+<strong>主持人</strong>: 嗯，那OK，如果说。
+<strong>Josh</strong>: 小西瓜，你们小组有欧洲的吗？
+<strong>小西瓜</strong>: 嗯，我帮他分享了，没有了。哦。
+<strong>Josh</strong>: 那你帮他分享的话，那要不然就你们小组先 <strong>Topic 2</strong> 先开始吧，第二小组先开始，我们先后调整一下，好不好啊？
+<strong>可友</strong>: 可以啊。
+<strong>Josh</strong>: 我先，等一下这人还没来齐，OK。
+<strong>可友</strong>: 那我再稍等一下。
+<strong>Josh</strong>: 嗯嗯。
+<strong>主持人</strong>: 对。
+<strong>Josh</strong>: 那我先说一下规则，我们等一下 <strong>Cindy</strong> 来了，我们等一下会有每个成员上来分享的时候，我右上角的左上角大家应该可以看到是一个计时器。我点，然后大家就根据这六分钟，在六分钟之内讲完自己的分享。它会有在结束剩一分钟的时候，它会有一提示，有这声音提示能听见吗？OK。然后，六分钟结束了，它会有这个提示，所以大家尽量让自己的时间保持在六分钟以内。因为我们十五个人还是人还是挺多的，想让大家尽量都分享到。是稍微超过一点没有关系，就只是这个时间是给大家一个标志。
+<strong>主持人</strong>: 你记得有这么一个事儿就行。
+<strong>Josh</strong>: 给不是小组成员的朋友们介绍一下。我们这次的活动是专门给 <strong>Mini Hackathon</strong> 这个四个小组活动，三个小组活动的 <strong>Demo Day</strong>，就是最后一天展示我们三个小组前一个月四周的成果。但不是说专门给这几个人，一共是十五个人，每个人六分钟。但是每个人都可以来看，然后我们即将会开放我们的第二次 <strong>Mini Hackathon</strong> 活动。然后主题可能会有跟这次重合的地方，就是有重合的一个主题。大家如果等一下在说的过程中有任何主题的推荐，或者你觉得你想做哪个方面的，你这一个月想做一个哪方面的产品或者是工具，你就随时在我们的聊天室里面建议一下。我们也想听取大家的建议，因为目前还没有确定最终的主题。对，问题也可以随时在这面问。<strong>Oscar</strong> 张丽好像也是，对吧？
+<strong>主持人</strong>: 不是，OK。
+<strong>Josh</strong>: 那我们先开始，先从第二组开始吧，因为第二组来齐了吗？
+<strong>可友</strong>: 我还差一个人，OK。或者我们可以按照顺序来，因为我这边是准备今天熬夜的，没关系的。
+<strong>Josh</strong>: 如果你现在准备好了。
+<strong>可友</strong>: 可以现在说，我是准备好了，但是我们现在缺一个组员。
+<strong>Josh</strong>: 好好，那小西瓜组员来齐了吗？
+<strong>小西瓜</strong>: 嗯，我组员也没有来齐。
+<strong>Josh</strong>: 嗯。
+<strong>小西瓜</strong>: 那我们就对你说，可以先聊一下。
+<strong>殷池</strong>: 大家有什么问题吗？对，我们可以先聊一下，或者是有什么值得分享的吗？
+<strong>小西瓜</strong>: 对，我觉得没关系，那我就开始我分享。
+<strong>主持人</strong>: 也就是反正大家之间也是相互之间的时候。
+<strong>小西瓜</strong>: 就从我们小组开始。
+<strong>Josh</strong>: 哦，我刚听见。
+<strong>小西瓜</strong>: 可以等一下。
+<strong>Josh</strong>: 我给你计时啊，你开始了吗？
+<strong>小西瓜</strong>: 哦，我开始，OK。那我先帮我组员分享一下，就是他做了一个很有意思的一个网站。大家可以看一下，大家可以现在可以看见我的 <strong>screen</strong> 吗？可以。稍等，然后把他那个网站打开。他就做了这么一个，他是做音乐的，然后他有做那个教程在 <strong>YouTube</strong> 上也做的挺好的，然后有七千的粉丝。然后现在他自己有在做产品，这个是他就是在我们组内就这一个月做出来的一个产品。然后它是一块可以点击的一个纸板。白板有什么用呢？就是你可以看见它有它的风格设计，它其实有点像参考。这个就是 <strong>Ex College</strong> 这一个风格，就是极简的这种手写化的这种风格。然后他去做了一下微调，包括像这些配色，来就是他的设计上有一个很大的调整。就相比他之前就是在这个这个月的话，他相比他之前的一些设计，他做了一个很大的一个微调。就之前的设计就是大概是这个样子的。然后他现在就是做了一个很好的设计，然后这个产品他自己做的很满意，他的一个功能，我可以给大家展示一下。然后还有就是付费解锁完整版的这种功能。嗯，稍后网址我也可以贴在评论区。对，这个就是它进入到这里面的一个界面，就是点击进入它试用的那个功能的一个界面。当然我这个是免费版本的，就是它点击这里之后，它就会显示这里被标记了嘛，然后就有这么样的一个标记的一个功能。然后最后的话它可以导出就是一个录像的那种感觉，就是有点像白板。就是大家最近不知道有没有看中那种白板录屏工具，然后它这个就是有点像 <strong>Remotion</strong> 去渲染那一种直板的那种功能。然后它会有一个音频的效果，以及说在弹奏的这个效果。对，然后这里就会有一个视频。
+<strong>主持人</strong>: 哎哦。
+<strong>小西瓜</strong>: 他应该仅限完整版才可以把这个视频给下载下来。对，这就是他做的大概这么样的一个产品。然后他最近更多的是在做他的一个频道，就是包括像他做的这个频道。他的频道主要就是做这些关于音乐相关的一个方面。然后他在里面就会同时去宣传自己的产品。
+<strong>主持人</strong>: 对。
+<strong>殷池</strong>: 哇，七千个 <strong>subscribe</strong>，好厉害。
+<strong>小西瓜</strong>: 对对对。然后我就觉得他做的还是很好的，但是他最近可能做的比较少，所以说自制视频的一个流量就不太稳定。对，然后他的一个效果你也可以看见，做的很用心。对，大概就是这样子的一个分享。对。
+<strong>主持人</strong>: 简单分享一个，这是用什么做的视频呀？
+<strong>Josh</strong>: 聪明问哦。
+<strong>小西瓜</strong>: 我这个我不太清楚，因为我不是本人，我到时候再去问一下。
+<strong>Josh</strong>: OK，OK。我们等一个来的时候，或者可以让他分享一下欧洲时间。
+<strong>小西瓜</strong>: 他是欧洲时间，他现在已经睡觉了。对。
+<strong>Josh</strong>: 我知道我知道，可以之后让他发帖分享一下，他自己是用什么做的。
+<strong>小西瓜</strong>: 可以可以。然后他们第二小组的来了吗？还没来的话，我就继续。
+<strong>可友</strong>: 我分享我，我们第二小组的应该是来齐了。
+<strong>小西瓜</strong>: 哦哦哦哦，哎，我们邀请他下来。
+<strong>可友</strong>: 嗯。
+<strong>主持人</strong>: 是。
+<strong>可友</strong>: 如果你们第一小组没来齐的话，我们可以第二小组先开始。
+<strong>小西瓜</strong>: 没事，你们可以先开始。对。
+<strong>可友</strong>: 可以啊。对，因为我是在欧洲，我说话不是很方便，我准备了一个 <strong>Demo</strong> 视频。然后因为咱们规定是六分钟，我多了一分钟的组内介绍，然后给大家分享一下。好。
+<strong>主持人</strong>: 给我去边。
+<strong>可友</strong>: 好，那我开始了。</p>
+<h3>可友的“声计”个人助理</h3>
+<p><strong>AI 助手</strong>: 大家好，我是 <strong>Mini Hackathon</strong> 这家，可以听见我的声音吗？
+<strong>小西瓜</strong>: 可以可以啊。
+<strong>AI 助手</strong>: 小组的领队，我们小组的主题是个人音频工作流的工具。那因此我们的目标是打造一个能够语音对话的个人知识与生活助理。接下来，我将简短的介绍每位成员的 <strong>Demo</strong> 重点。首先他们会进行更详细、细致的展示。首先我设的一个个人助理的 <strong>Web</strong> 客户端，那可以记录我的生活灵感，那最后以晨报的形式进行输出。<strong>Cindy</strong> 呢开发了一个 <strong>App</strong>，它设计了一套语音输入、结构化笔记、顾问团解读的知识管理库的一个流程，那最终可以产出一个时光电台。<strong>Tommy</strong> 呢构建了早报系统，包含了天气、待办、全球要闻，生成每日晨报，并通过 <strong>Telegram</strong> 进行互动。<strong>殷池</strong> 呢，使用 <strong>WhatsApp OpenCloud</strong>，实现语音存储和调用的功能，作为日常语音交互与晚报的生成工具。<strong>Joshua</strong> 用 <strong>n8n</strong> 分流器构建了一个不同方面的生活资料库，就是语音日记。时间截图是论台，转文章。
+<strong>Josh</strong>: Hello, hello。哎，可友，你的视频没有显示出来，我们只能看到一个网页页面，你可能应该要分享全屏不好？
+<strong>可友</strong>: Sorry，不好意思。好，我重新 <strong>stop</strong> 一下。
+<strong>主持人</strong>: 哎。
+<strong>Josh</strong>: 你分享的应该是全屏吗？
+<strong>主持人</strong>: 等一下窗口整个屏幕哦。
+<strong>可友</strong>: 对，我要分享整个屏幕。
+<strong>主持人</strong>: 不好意思啊。
+<strong>可友</strong>: 现在能看到吗？
+<strong>Josh</strong>: 可以了可以了。
+<strong>可友</strong>: 那我继续吧。
+<strong>主持人</strong>: 贝等自动化流程。
+<strong>AI 助手</strong>: 那因此我们的目标就是把分散的语音、分散的想法，用语音输入输出的形式，制造一个主动提醒、建议的个人智能化助手。那接下来我以我的 <strong>Demo</strong> 作为一个展示，我的个人生活助理叫做“<strong>声计</strong>”。通过这个名，大家可以认出我希望用声音来管理我的生活，就像钢铁侠当中的 <strong>Jarvis</strong> 一样，我只需要与 <strong>AI</strong> 进行语音对话，<strong>AI</strong> 就可以帮助我整理信息、分类记录，并且给出一些分析建议。但通过这个“<strong>声计</strong>”助手，我可以记录我的灵感、读书笔记、生活提醒、工作状态，所有的内容都将会保存到一个个人的数据库当中。然后每天早晨呢，<strong>AI</strong> 也会根据这些数据库生成一个专属的个人的晨报播客，总结昨天发生的事情，并提出今天的计划。
+<strong>主持人</strong>: Hello，我有一个。
+<strong>AI 助手</strong>: 那让我们来看一看它是如何工作的。首先我需要一个语音输入系统，所以我制作了一个“<strong>声计</strong>”助手。这个“<strong>声计</strong>”助手可以作为一个实时的语音，转入 <strong>AI</strong> 自动分类整理，并且归档到数据库当中。当我之后与 <strong>AI</strong> 对话的时候，它就可以调用我这些数据库内容，帮助我完成思考、整理和规划。那我分为六大智能模块：灵感记录、财务管理、工作状态、生活提醒、读书感悟和晨报播客。每一个模块都可以通过语音的输入或者是文字的输入、图片识别方式来进行交互。我以灵感记录为例来展示一下我的一个模块。
+<strong>主持人</strong>: 你说什么？
+<strong>AI 助手</strong>: 那大家都知道灵感是转瞬即逝的，就像流星一样。那因此当我有一个灵感的时候，我直接通过语音来告诉我这个助手，让他帮我记录到这个数据库当中。然后我希望更多的是记录之后呢，他能够在背后帮我搜索一些资料来去做一些整理和判断，并且在晨报的过程当中给我一些建议。那最近我有一个灵感 <strong>idea</strong>，就是我用了很多不同的大语言模型，每个大语言模型都有它各自的优势。但是作为用户来说，我希望最简单的方式就是我把一个问题丢给一个窗口，那这个窗口可以调用不同大语言模型，那根据他们的反馈结果进行分析对比，给我一个最优的一个答案即可。那这是我的一个灵感，像其他模块我也可以类似的一个形式。那接下来我做一个展示。助手，你好。
+<strong>AI 助手</strong>: 我在呢，有什么可以帮你的吗？
+<strong>主持人</strong>: 我最近的一个灵感是什么？
+<strong>AI 助手</strong>: 你最近的一个灵感是想开发一个 <strong>App</strong>，用来整合并调用不同的 <strong>AI</strong> 语言模型，解决现在 <strong>AI</strong> 工具太分散的问题。我已经帮你记在灵感库里了。
+<strong>AI 助手</strong>: 请帮我记一笔账，我今天在食品上花费了四元。
+<strong>AI 助手</strong>: 好的，已经帮你记好了。今天在食品上花费了四欧元。
+<strong>AI 助手</strong>: 请问我昨天的工作状态如何？
+<strong>AI 助手</strong>: 你昨天的相关记录比较少，主要是提到在 <strong>OpenAI</strong> 上有一些开支。不过从睡眠来看，你昨晚入睡比较早，质量也达到了八十二分。今天应该挺有精神的吧。
+<strong>AI 助手</strong>: 我明天有什么计划？
+<strong>主持人</strong>: 嗯。
+<strong>AI 助手</strong>: 明天是三月十五日，你的计划挺充实的。凌晨有一场黑客松演示，上午十点是排球比赛，下午一点半参加新传小组直播，接着三点是网球训练，五点还有两小时的半马训练。加油，非常有活力的一天。
+<strong>主持人</strong>: 我最近在读什么书？
+<strong>AI 助手</strong>: 你最近正在读 <strong>Psycho-Cybernetics</strong> 这本书，目前的状态是正在阅读中。你书架上其他的书都已经读完了，这本也加油读完它吧。OK。
+<strong>AI 助手</strong>: 那有了这些数据库之后呢，那么它就可以根据我的数据库进行一个汇总，将 <strong>AI</strong> 来生成一个脚本，最终以语音的形式来做一个晨报。比如我周日的晨报是这样的：
+<strong>AI 助手</strong>: 早上好，朋友。今天是二零二六年三月十四日星期六，我是你的“<strong>声计</strong>”助手。又到了我们一天中最温暖的时刻。一起回顾昨天，展望今天。先来说说昨天的睡眠，你休息的相当不错，整整四百九十五分钟，也就是八小时。OK。
+<strong>AI 助手</strong>: 那为了实现这些内容，我有一个技术框架，其实前端后端主要通过 <strong>Laravel</strong> 来实现的。我做的工作主要是 <strong>AI</strong> 语言的一个调用，整个一个窗口的 <strong>idea</strong> 的一个优化。那最终我也用 <strong>n8n</strong> 实现自动化的一些流程。比如说 <strong>Google Drive</strong> 的数据备份，<strong>Apple Watch</strong> 的数据同步，以及调用了 <strong>Google</strong> 的 <strong>TTS</strong> 作为一个语音备用。那我觉得我的这个最终我希望 <strong>Voice Note</strong> 呢，它不仅是一个记录工具，而且是一个真正理解我的 <strong>AI</strong> 生活助手。以上是我的项目介绍，谢谢大家。
+<strong>Josh</strong>: 哇，感谢！<strong>Tommy</strong> 问了一下，可以问一下健康记录是怎么拿到的吗？
+<strong>可友</strong>: OK，我可以大家好好，那我，哦不好意思，我有一个我的健康记录。其实刚开始我是跟着麦克 <strong>iOS App</strong> 开发，但是后来发现这个路径没有走通，调试了很长时间。现在目前的整个的一个方案是呃通过那个 <strong>Apple</strong> 它的快捷方式，然后它可以到我的 <strong>n8n</strong> 里边。然后我的 <strong>n8n</strong> 会把这个所有的数据再同步到我的网站里边。比如说，嗯，可以给大家看一下。
+<strong>Josh</strong>: OK。对，就是通过 <strong>n8n</strong> 自动化到你的网站里，<strong>n8n</strong> 作为你的后端数据库了，对吧？
+<strong>可友</strong>: <strong>n8n</strong> 其实并不，它是一个桥梁，我的大部分数据是存在 <strong>Google Drive</strong> 里面。
+<strong>Josh</strong>: 哦，OK。好，那我们先进行下一位，谢谢感谢，感谢可友的分享，特别充实。
+<strong>主持人</strong>: 感谢。
+<strong>可友</strong>: 好，谢谢大家。</p>
+<h3>Cindy的PKS Core知识管理系统</h3>
+<p><strong>Josh</strong>: <strong>Cindy</strong>，<strong>Cindy</strong>，你准备好了吗？
+<strong>Cindy</strong>: 嗯，可以可以。
+<strong>Josh</strong>: OK。那你瞧一瞧。好，等我一下啊。
+<strong>主持人</strong>: 哎点好。
+<strong>Cindy</strong>: 现在应该是一个黑屏，对吗？
+<strong>Josh</strong>: 对。
+<strong>Cindy</strong>: 好好，那我好，我等一下会有搭配影片，然后我就现在开始。OK。呃，大家好，我是 <strong>Cindy</strong>。那我今天要分享的是 <strong>PKS Core</strong>，它是可以做语音输入、文字输入等等的功能。但更重要的是，它不只是解决我如何做笔记的问题，而是让笔记在记录之后能够消化再生长，然后成为真正可以持续使用的知识。那我们接下来看影片。好，接下来是语音输入的功能。
+<strong>主持人</strong>: 嗯嗯。
+<strong>AI 助手</strong>: 我最近在看《<strong>卡片和笔记</strong>》里面有句话，我觉得蛮有意思的。他说做笔记不应该只是复制粘贴，而是要用你的话重新说一遍你的理解。我觉得这不只是在做笔记，我们面对很多事情也都应该要这样。如果我们只是听从其他人的意见，看书收集了很多的想法，这最终也还是别人的。只有用自己的经验去消化它，用自己的语言再讲一遍，这些知识才会真正的长在我的脑里。<strong>PKS Core</strong> 就是想要做这件事情，给我一个空间，让我的想法和别人的观点产生碰撞，最后长出一个属于自己的东西。
+<strong>Cindy</strong>: 那我们说完之后，<strong>AI</strong> 可以自动帮我们整理成结构化的笔记。然后这样不只是省时间，而是在你说话的过程当中，其实内心在消化自己的想法。然后你也可以触发顾问团，像是十多个哲学的三个维度：有控制、预想跟行动，重新解读你刚刚的想法。或是选这个 <strong>Naval</strong>，他也会帮助你去用新的哲学视角来看看自己的盲点。那你整理完的笔记，你也可以提炼成有知识点的卡片，然后你可以去做确认，或是略过之后也可以再重新绘出。比如说你可以回到 <strong>Heapabase</strong> 或是 <strong>FC Point</strong>，再重新再制。那接下来是，你可以把书本上的文字笔记拍照进你的知识库，并且找到对应的书名做储存。然后下一次你可以去选取书本，然后找到所有的相关笔记。那这个是知识回声，你问的问题，它不是去搜寻网络，而是从我的笔记、我的书斋里面找答案，像是我对知识管理有什么样的看法。这里的每一个回复，每个观点都是有来源的。然后它都是从我曾经读过、记过的东西，这就是专属于我的回复的系统。好，接下来是时光电台。<strong>查理·芒格</strong> 曾经说过，要真正理解一件事情，你要能够重返。
+<strong>互动者</strong>: 我没有，我就不投诉他。
+<strong>Cindy</strong>: 这就，所以在这里做的事情是你提出一个想法，<strong>AI</strong> 会用我的知识库去扮演正方跟反方，然后去让你思考你原本想象的这个概念。
+<strong>小西瓜</strong>: 哎，一定要有用的筛选机制，其实是在帮你的未来设限嘛。对对对，如果你只学那些现在有用的东西，你基本上只是在重复现在的自己，而不是在开拓新的可能性。
+<strong>互动者</strong>: 但人的时间有限啊，以前我也会因为焦虑什么都学，结果什么都留不住。现在我学会了断舍离。只有当我知道这项技能能解决当前的痛点时，我才会有动力去深钻。这种目标感让我更敢于做决定，也让我现在的生活更有节奏，而不是盲目的向外抓取资源。慢着。
+<strong>Jessica</strong>: 你说的节奏会不会只是一种对焦虑的防御机制？你说以前会因为怕被看不起而勉强消费，现在则是为了有效率而精准选择，这两者本质上都在追求一种安全感。如果你所有的学习都必须服务于一个具体的结果，那你其实根本不敢面对无用之用带来的意外惊喜，对吧？
+<strong>互动者</strong>: 这个嘛，我倒不觉得是安全感。像我最近在研究职涯定位，发现自己的专长跟热爱。
+<strong>Cindy</strong>: 请好 <strong>PKS Core</strong>，我思想回神经，谢谢。
+<strong>主持人</strong>: 大家好。
+<strong>Cindy</strong>: 我们想完了。
+<strong>Josh</strong>: 谢谢谢谢分享。你哇你的页面好整洁，就是简洁哦。现在这个视频哎也不错，这种风格很好，我喜欢。
+<strong>Josh</strong>: 小西瓜说喜欢这个设计。那我们小组的下一下一位 <strong>Tommy</strong> 上来准备好了吗？
+<strong>主持人</strong>: Tommy。</p>
+<h3>Tommy的早报系统与自动化</h3>
+<p><strong>Tommy</strong>: 呃，好的，稍等一下，我分享一下屏幕。
+<strong>主持人</strong>: 嗯嗯。
+<strong>Tommy</strong>: 大家可以看到我的这个窗口啊，我做的是一个早报的系统，就是我每天在通勤的时候我可以去听一下，哎，今天的天气怎么样？我有哪些 <strong>To-Do</strong>？然后呢，今天是有什么变化？我目前是在东京，所以说一开始可能会有一些日本的这种新闻。然后呢，除此之外，如果我之前可能是因为通勤时间短，就只会看这个北京的新闻。但那除此之外，我觉得全球化的视野还是非常重要的。所以说通过这个早报系统也加了像 <strong>华尔街日报</strong> 和 <strong>金融时报</strong>。我可以大概给大家听一下，就是每天早上差不多八点左右就会有一个我的 <strong>OpenCloud</strong>，就会有一个这样的一个信息条，自动的发给我，这样我在通勤时间就可以去听。哎，稍等啊，稍微有一点卡。哎。
+<strong>Josh</strong>: 大家我好像听不见你的声音，您我是没分享这个系统声音哦。
+<strong>Tommy</strong>: 我那我再分享一下，稍等啊。等下这个是要在哪里选的吗？
+<strong>可友</strong>: 还是说自己就是可以听得见这个和咱们的 <strong>Google</strong> 会议是一样的。就是你在分享的时候，底下有个选项。
+<strong>Josh</strong>: 右下角有一个。
+<strong>Tommy</strong>: 哦，我再看一下，稍等，右下角对吧？
+<strong>Josh</strong>: 嗯。
+<strong>Josh</strong>: 就是那个让你分享的那个窗口，它就是在分享上面有一个小的分享，开启 <strong>audio</strong> 系统。
+<strong>主持人</strong>: <strong>Audio</strong> 的好像没有看到。
+<strong>Tommy</strong>: OK，我我我再试一下吧。好，现在可以看得见，对吧？但是听不见对不对？
+<strong>Josh</strong>: 嗯，对，还是听不见哦。
+<strong>Tommy</strong>: OK，OK。那我就先不给大家听了。呃，因为它其实大家其实里面的内容也主要就是说哎今天天气是什么？因为我花粉之后也会去查调查最近的花粉的一个情报。然后呢，今天待办这里，我是连到了 <strong>滴答清单</strong> 这里。呃，因为 <strong>滴答清单</strong> 是我主要去管理我的这个 <strong>To-Do</strong> 的功能。然后它的一个 <strong>interface</strong> 也不错，他是直接拿到 <strong>滴答清单</strong> 的 <strong>API</strong>，可以添加，可以删除，可以更改 <strong>滴答清单</strong> 里面的内容，就是通过我和他的交流。然后呢，剩下就是说他可以从像 <strong>日经新闻</strong>，他可以去实际上的用 <strong>Chrome</strong> 去进入我的这个 <strong>日经新闻</strong> 里面的付费账号里面去读很多篇的这种内容，然后帮我总结六到十句比较重要的一些新闻。然后除此之外也会有一些像 <strong>华尔街日报</strong> 啊然后之类的，然后 <strong>Financial Times</strong>。但是呢，因为其实我是没有这个 <strong>华尔街日报</strong> 和 <strong>Financial Times</strong> 的付费账号的这一块，它主要是通过在付费墙前面的内容，再加上他会用这个前面的内容进行一个交叉搜索，去查一些其他媒体的报道，然后去从而给我一个完整性的一个东西，是这样子。再就是 <strong>巴伦周刊</strong>。对，然后呢，这个具体是怎么实现的？我可以给大家看一下，我用的是这个 <strong>OpenCloud</strong> 这个 <strong>Chrome Jobs</strong> 功能。然后呢，其实有很多在走过的一些弯路，比如说像因为 <strong>日经</strong> 是英语，然后 <strong>巴伦周刊</strong> 什么是英语。呃，日经日语，然后 <strong>巴伦周刊</strong> 是英语。然后呢，我就是说可能有时候会出现日语，有的时候会出现英语。然后我这样子让他全部翻译成中文啊之类的。然后他有的时候也会只去读一个 <strong>title</strong>，然后就给我编一个整篇文章，然后这这个是非常不好的，所以我一定要让他把全文全都读之后再给我再要。对，然后整个的 <strong>Flow</strong> 差不多是这样。然后 <strong>SOP</strong> 是先通过 <strong>MiniMax</strong> 去生成它的 <strong>TTS</strong>，然后再去发语音，然后最后给我去发文字稿。对，是这样子的。然后除此之外我也可以给大家看一下，呃，我的小龙虾是整体部署在共享屏幕上面的。
+<strong>主持人</strong>: 稍等小屏幕。
+<strong>Tommy</strong>: 呃，对，我是通过 <strong>Apple</strong> 这个 <strong>Demo Control</strong> 功能。然后这里面小的这个窗口其实就是另一台的 <strong>MiniMax</strong>。这样我就可以在同一台电脑，就我我自己用的这个电脑，去直接去控制小龙虾在的这个它的主机上面。然后大家可以看到，就是每天早上他都会自己打开，你给然后我自己打开，翻到 <strong>Slack</strong>，然后从中发出文章来去呃给我去进行总结。好的。嗯，我的分享到这里，谢谢。
+<strong>Josh</strong>: 好，小西瓜说看你帖子，觉得你的小龙虾喂了好多钱给他。
+<strong>Tommy</strong>: 也没有也没有。我我我是开了那个 <strong>OpenCloud</strong> 的那个 <strong>Max</strong>，一个月两百刀的，然后可以用的 <strong>token</strong> 还是蛮多的。对，所以说感觉差不多就在这个两百刀之内进行就是说运作。然后我又设定了一个 <strong>Fallback</strong> 的一个模型，就是实在这个就比如说 <strong>OpenCloud</strong>，它可能有五小时的 <strong>rate limit</strong>。如果这个用完之后，我可能还还剩一两个小时。就是说三个小时用完了，它会自动从把那个小龙虾的那个模型切换到那个 <strong>GPT-4</strong>。对，这样的话就会。对对对，有一个这样，万一有点什么事情也可以，就实时回复给我。对。
+<strong>Josh</strong>: OK，谢谢。OK，感谢 <strong>Tommy</strong>。感谢 <strong>Tommy</strong>。我们小组的下一位赵老师，赵老师，你在吗？准备好的话，也可以开始了。
+<strong>主持人</strong>: 小肥龙虾。
+<strong>Josh</strong>: 哎，是换我吗？不是换不是。
+<strong>小西瓜</strong>: 我们下一小组的应该是殷池。对哦。
+<strong>主持人</strong>: OK，OK。那就殷池。不好意思，我不不知道。
+<strong>可友</strong>: 没事没事。
+<strong>主持人</strong>: 你给我车车下。</p>
+<h3>殷池的语音笔记与晚报系统</h3>
+<p><strong>殷池</strong>: OK，大家可以看到我的视频吗？可以。好。呃，我这个我的思路刚才跟其他有一些会员有点像。呃，我我我正在学习这个 <strong>OpenCloud</strong>，所以呢我也我也在喂龙虾，然后我在想用怎么样最最省钱的方式最简洁，用我有的 <strong>Azure</strong> 的 <strong>AI</strong> 和我现在就刚刚刚刚加入了这个 <strong>Claude</strong>，然后用他们的作为我的这个 <strong>Model</strong>。然后界面呢是从 <strong>WhatsApp</strong> 的一个 <strong>Chat</strong> 里面。呃，然后我自己呢也写了一个小型小的一个 <strong>Web App</strong>，可以也可以录音转化成文字。嗯，两两个方面都哪个比较容易。我就那时候什么时候我我喜欢用，我就我都试试。呃，然后呢，这个 <strong>WhatsApp</strong> 里面呢，就根据这个 <strong>Word Model</strong> 里面，它会它把这个音频转成文字。然后呢存储到我的那个 <strong>Google Drive</strong> 里面。然后这个我的 <strong>AI Studio</strong> 的 <strong>App</strong> 呢，也是这样子同一个想法，但是用的是 <strong>AI Studio</strong> 里面的自己的一个 <strong>Model</strong>，把它转化，效果也是不错的。我最后都存到这个 <strong>Google Drive</strong> 里面。呃，<strong>Google Drive</strong> 里面，那都变成了一个个文档。然后在每天晚上呢，我有一个 <strong>OpenCloud</strong> 里面就会把它把它文字归类给他总结。然后呢，我现在正在尝试着，让他能给我一些新的想法，有些新的建议。嗯，呃反正我先给大家演示一下吧。嗯，这个就是我在这个界面，跟 <strong>Tommy</strong> 那个很像。嗯，大概就是我我我录一下。然后呢，他就会回答：你好，请问我有没有任何需要做的事情吗？
+<strong>AI 助手</strong>: Subject, you're to-do list, asterisk taxes, asterisk receipt. Eight, ten fifteen, ten thirty.
+<strong>殷池</strong>: 它它其实它是转化成从从文字转化成声音，所以好像有些东西它不需需要说的这我还在调整，待待会得成功。
+<strong>AI 助手</strong>: Subject demo day.
+<strong>殷池</strong>: 你好，请帮我记录一下，祝大家 <strong>Demo Day</strong> 成功。
+<strong>AI 助手</strong>: Subject demo day party popper, asterisk demo day, google drive https colon slash.
+<strong>殷池</strong>: 对，这些都其实还有一些需要整理。但是呃这个呢是另外一个，就是我这个新 <strong>Catch</strong>，就是 <strong>AIC 96</strong> 里面的。它可以呃也会转化成文字记录吧。然后呢，它会给你分类，然后可以存到这个 <strong>Drive</strong>。这个呢就是自己掌控的比较好。就是说呃我我觉得好的话，我就可以存进去，要不然我就就 <strong>delay</strong>。最后呢每一天呢他就会他会收集很多这种各种各样的文字，我自己想的东西。呃，这个这个玩这个这个 <strong>party</strong> 的时候，就以前都没有这么多想法。现在每每一小时，我的那个我的 <strong>WhatsApp</strong> 就会问我，你有没有什么想法，你有没有什么想法。现在逼着我自己去会去多想想，我觉得挺好的一个事情。然后晚上他做出来的这个这个呃我晚报呢就是也放在这个我的一个 <strong>Drive</strong> 里面，我可以呃跟大家，我可以那个自己选择跟谁分享。嗯，大概就是每一个大概就是 <strong>Welcome back to your stream, Catch Digest. I'm your host, Warm today. We've got an interesting mix of system feedback, a test checking and a family update. First, let's look at the system.</strong> 大概就是这样。谢谢谢谢大家。
+<strong>主持人</strong>: 谢谢谢谢殷池的分享，非常感谢。那但 <strong>Demo</strong> 得成功。好，如果没有什么问题的话，我们下一位赵老师。</p>
+<h3>Josh的SOP语音记录系统</h3>
+<p><strong>Josh</strong>: Hello，大家好，我是 <strong>Josh</strong>。
+<strong>可友</strong>: 可以听见啊。
+<strong>Josh</strong>: 我也先我我直接录了一个 <strong>Demo</strong> 的影片，所以我就直接放那个影片吧。呃，荧幕了，玩笑哦，共享此荧幕好。先看听，听得到声音，听得到你的声音吗？这个在哪里看一下啊，这个是要在哪里处理。
+<strong>小西瓜</strong>: 就是你在分享屏幕的点过之后，对第一个窗口下面有第一个窗口同时分享标签页的音频看一下。
+<strong>Josh</strong>: 等我一下不。哎，哦，要要要要用那个吗？<strong>Google Chrome</strong> 会比较好吗？我试一下好了。
+<strong>可友</strong>: 那我那我那我重新我稍等一下。
+<strong>主持人</strong>: 大家有任何问题或者是建议都可以发在我们的聊天室里。
+<strong>Cindy</strong>: Oh, hello.
+<strong>Josh</strong>: 看见了吗？自窗音频。好，大家大家看得到荧幕吗？
+<strong>主持人</strong>: 可以看到这是黑。
+<strong>Josh</strong>: 我看一下啊，不是黑屏吗？你你应该是要分享整个。哎，我不是我分享这个东西的，很可惜了，不好意思不好意思哦。整个荧幕画面是吧？<strong>Sorry, sorry</strong>。没关系。好，这样应该可以了，我们开始吧。
+<strong>AI 助手</strong>: 嗯 hello，我在家好家。
+<strong>Josh</strong>: 这个声音好像断不掉。呃，目前声音有任何问题吗？
+<strong>主持人</strong>: 不是你的声音本身录制的就是小机器人的声音么？就是加速加录制的那种声音是吗？
+<strong>Josh</strong>: 哎，应该没有啊，你们我因为我我这边听起来好像蛮正常的，我不太确定你们那边听起来嗯就是它压缩了。
+<strong>小西瓜</strong>: 它压缩了，它压缩了，然后你的音量就变得很高哦。
+<strong>Josh</strong>: 好，那不然我再试另外一个方式，等我一下，我直接播，我把它上传到 <strong>YouTube</strong> 的版本试试看啊，等一下啊。
+<strong>Josh</strong>: 可以。
+<strong>主持人</strong>: 你可以把 <strong>YouTube</strong> 链接也发给我。
+<strong>Josh</strong>: 哦，好好好，没事。
+<strong>可友</strong>: 我帮你。
+<strong>Josh</strong>: 我看一下啊，我我先把它发上去，如果说以防有任何问题。嗯，好，那我们哎不是这个，我们看看这样子 <strong>OK</strong> 不 <strong>OK</strong>。
+<strong>AI 助手</strong>: 然后现在可以参加这个录音开庭。
+<strong>Josh</strong>: 那我们这个各主任，请问目前的声音是 <strong>OK</strong> 的吗？当然是按是音音讲不不一样。
+<strong>可友</strong>: 嗯。
+<strong>主持人</strong>: 他还是有鸭子声音。
+<strong>小西瓜</strong>: 他是声音声音关了，然后你进你一边介绍就可关下，然后有这个有有这个屏幕就可以啊。
+<strong>Josh</strong>: 没关系，那我直接，我直接自己自己 <strong>babble</strong> 吧。嗯，好，那我开一下，等我一下哟。那基本上我一边开，我一边讲一下，就是整个做的东西。其实我做的东西一开始主要是希望说能够做到，就是像是一般。因为像 <strong>Ray</strong> 他在上课的时候，他都会做那个就是按一个快捷键之后，然后就是直接语音输入，然后他就直接变成文字嘛。然后不过一般现在其实有蛮多这种类似的 <strong>App</strong>，就是什么 <strong>With Book Pro</strong> 啊、<strong>Typeless</strong> 啊、<strong>Voice Ink</strong>。那那时候就想说，哎，那不然我也自己做一个自己的。所以那个时候就是像我现在已经按了一个快捷键，然后他就会进入录音模式，然后再按一次快捷键走之后，他就会把它送到哦，就是呼叫 <strong>Whisper</strong>，然后就贴回来。像其实现在这边大家可以看到嘛，就是他已经复制粘贴，这就是 <strong>STT</strong> 最最基本底层的样子。那后来我就在思考说这个东西对我到底可以有什么样的用处。所以我就希望说，那不然我就是我想要让他来帮助我，帮助我更好的去记录我的所有的状态。因为我觉得在 <strong>AI</strong> 时代，其实记录是非常重要的。你把这些东西都记录下来，而且分类把它储存在各种不同的资料库，让 <strong>AI</strong> 可以很方便的去存取的时候，你其实不需要自己去看这些记录，对吧？因为你只要让 <strong>AI</strong> 有个 <strong>Skill</strong>，他知道在什么样的情况下需要去看哪一个资料库，给出对应的回忆，那就好了。所以说对我们来讲，把东西记录好才是最重要的。我们开始有记录，我们一年后、两年后，我们不要讲那么久啊，一个月两个月后，你让 <strong>AI</strong> 可以去帮你梳理你的生活轨迹这样子。所以于是我又做了第二个快捷键。那这个第二个快捷键它就是会变成是串接到 <strong>n8n</strong> 这个快捷键触发的时候，他送的东西会送到另外一个流程去。就是他会帮我，我会请 <strong>AI</strong> 先帮我针对这个讯息做分类。然后接下来他帮我读取分类是哎这个讯息它可能是对应到哪些种类，然后帮我存到对应的资料库。对，那接下来的话就在就是变成是说，那我既然已经有对应的资料库之后，所以我就可以变成是我有一个前端的页面，可以去看我的这些资料库啊。例如说我这些 <strong>To-Do</strong>，我可能就讲讲了一些我的想法之后，就帮我存成 <strong>To-Do</strong> 或者是灵感这样子。然后 <strong>To-Do</strong> 的话，我来帮他做了一个类似像的一个周版。我可以看到我每日的每周的主题啊，正在待安排的 <strong>Calendar To-Do</strong> 啊跟我每天要做的事情。类似像这样。然后我也可以去记录我的时间，我可以去去看一下我这一周我花的时间到底做了些什么。然后以及一些健身的资讯就是都一样。都是用口头显录之后，他就自动帮我判断，要要存到哪里，然后就可以直接在前端显示出来。例如说我可能做了重训，他帮我把它整理好，然后也可以看到一些可能这个数据的一些分类。类似像这个样子。然后嗯基本上其实暂时就是做到这样，就是我们已经可以很顺利的去记录。那当然我我用我用 <strong>iPhone</strong> 也可以做记录。<strong>iPhone</strong> 的话我是用捷径的方式，一样送到一样的 <strong>n8n</strong> 的工作流里面去。那等于说记录的部分已经 <strong>OK</strong> 了。那接下来我会我还没有做的事情。其实就是像刚刚我的其他组员也有做，就是他可以把灵感转化成后续的一些，例如说有个顾问团啊，可以帮你去参考你的灵感啊。或者是我其实自己想做的，是因为我我的这些资料已经在了。那我是打算在例如说 <strong>Claude</strong> 上面去做一个 <strong>Skill</strong>。然后就是当我在跟他讨论的时候，他会自动帮我读我的资料库，以及我以前写过的所有的其他的文章，然后帮我做一个关于我的资料，关于我的灵感里面，然后把它变成我的文章，然后跟我跟我讨论之后写出来，然后让我可以发文或者之后再做自动化发文。类似像这样子的东西，我希望把这个已经存进去的东西，后续可以更往后推。这个是还没有做到，就是慢慢的会再去调整。嗯，那大概是这样吧。对，然后当然也有可能有些日记啊，然后他会针对我的记录，做一些周回报。就是我会让他看到我这周所有的资料，然后让他给我做一个 <strong>Email</strong> 的一个周回顾的一个算是电子报这样子。嗯，大概是这样。
+<strong>主持人</strong>: OK，谢谢谢谢赵老师，经理说他还想做进来买好。那我们就小西瓜这一组继续。小西瓜，我看你们小组好像没有来。
+<strong>小西瓜</strong>: 就我和 <strong>Cherry</strong>。然后呃另外有一个他是就是吐了呕吐，然后就是身体不舒服。然后这两天都是没有办法。嗯，然后还有一个是在赶飞机。那么我们就开始吧，就我和 <strong>Cherry</strong>。OK，那从我我开始分享了，还是 <strong>Cherry</strong>？
+<strong>Cherry</strong>: 你要先分享你下来吧。小西瓜。
+<strong>小西瓜</strong>: OK，那我就 <strong>Share</strong> 一下我的 <strong>Screen</strong>。嗯，OK，大家可以看见吗？嗯，首先可以跟大家分享一下我这个 <strong>Bot</strong>，就是的 <strong>OpenCloud</strong> 的话，我觉得我主要把它当做我秘书使用。然后的话就是之前我还会就是他他他就是会我会跟他说，然后的话他他跟我说的时候我会回他，但现在可能不会回他。然后例如说我为什么要把它做成这样的一个事情呢？因为他真的能够就做到我需要调整计划的时候，他能够帮我调整计划。例如说我有一个锦标赛我要去跑。那么我就这个我是跟他说，一开始这个是一个十二月，我就说我今年年底的时候，我要达到能跑全马的一个状态。所以说我就跟他说，你给我一个一整套训练计划安排下来了，就安排下来之后，中间可能会有一些变动嘛，就调整也很方便。比如说这里的话，我就让他帮我调整一下，然后他就 <strong>OK</strong>，我帮你更新好了。然后的话其实我还有一个展示的页面，不过现在就懒得去做了。然后的话他也可以做一个自动的更新。嗯，就有点像 <strong>Agentic</strong> 的那个网站嘛。然后后面的话他就就有时候要 <strong>Debug</strong>，那现在已经稳定了，就是他会每天给我发，就是包括力量训练，还有说轻松跑，或者说间歇跑这些东西，他就每天给我发，还有什么休息日。然后这里就有，我今天要出门爬山了，我要让他帮我调整一下计划，就觉得他给他建议非常好，就是区分为不同的爬山嘛。就是如果说你是强度轻到中等，那么你就视为今天的一个长距离训练。然后如果说坡很多，但就是一个高负荷的腿部训练，那么明天的一个计划就要变。所以说我就觉得我的那个 <strong>Bot</strong> 做的这个秘书的话，他做的真的很好。那时候给大家分享一下这个我们超级个体户类型的这个一个用法。对，然后还有另外一个，我觉得我用的比较多的是 <strong>Antigravity</strong>。然后为什么他为什么要用他呢？因为他在这里面的话，他在不同的 <strong>Workspace</strong> 里面，他有不同的文件夹。然后的话这些对话都很好管理。包括像它有一个叫做 <strong>Playground</strong> 的一个概念，也可以去很轻松的开启对话。然后我先从我这个对话开始，就跟大家介绍的这一个是我在就导出我自己的一个 <strong>Screen Time</strong> 的一个使用。我发现它很方便。我现在在这里面，我但我想要用它去做一些东西的时候，我很方便的就能够让他帮我导出来。然后的话就是不需要去搞奇奇怪怪的工具，或者说让电脑中毒啊什么的。然后包括导出一一些我之前的我之前有在用 <strong>华为</strong>，然后的话我包括想导出我的一些 <strong>华为</strong> 的笔记。现在的话用 <strong>AI</strong> 的话，我不需要去找一些奇奇怪怪的工具，然后就可以很方便的就导出。然后的话把我的所有的那个东西全部都放在一个地方。对，然后我看看下面还有一个可以分享的。包括像这种就我们社群内部有那个 <strong>Learning Path</strong> 的这种东西嘛，它里面有这个 <strong>Skill</strong> 就是我们要同步的时候，用这这个工作流，它 <strong>Antigravity</strong> 它有个概念，就是 <strong>Skill</strong> 和 <strong>Workflow</strong>。就这里面的话你点个 <strong>Slash</strong>，例如说点个 <strong>Slash</strong>，然后点个 <strong>Learning Path</strong> 的这个同步。然后的话他就一整套就帮我同步了。然后的话中间还可以设置，就是你需要停下来问我一些问题。然后的话 <strong>OK</strong>，就是一整套的一个都非常的可视化。然后的话我也能够去操控它，每一步进行到哪，以及说我后面我要去微调这个工作流也可以很好。所以说我觉得要用 <strong>Antigravity</strong> 来做内勤这一套，包括像工作学习一整套我都是混在一起，都是用这个工具是作我的一个主力的，包括像可以和大家分享一下。呃，当我要做一个演示文稿的时候，我是就直接跟他，我就嘴巴，然后就说哎哎我就我要怎么样怎么怎么样，然后他就让他帮我做一个 <strong>PPT</strong> 出来。然后这个 <strong>PPT</strong> 的效果也非常好，我可以跟大家展示一下。
+<strong>可友</strong>: 嗯。
+<strong>小西瓜</strong>: 稍等啊，可能嗯。
+<strong>可友</strong>: 好。
+<strong>小西瓜</strong>: 哦，那算了吧，就是那这个之后有时间再跟大家展示。然后这一个的话跟大家展示一下，平时我是怎么做学习的，就是就不知道大家有没有看过那个帖子。一个这一外网有一个很很出名的那个怎么用的 <strong>NotebookLM</strong> 去做学习。就是说一个学生嘛，他去问问他提了三个问题。就第一个是关于思维模型的。第二个是关于这个学科里面的不同专家之间的那些有分歧的，他共共识的后第第三个是就是十个能够区分真正了解这个学科的人，还有说那些只是去记忆一些知识点的人。然后的话它里面就有一些上传到非常重要的材料，就包括像一些这些 <strong>Lecture</strong> 的一些组织稿。然后还有说不同的教科书。因为最好的学习方式就是对比不同的教科书嘛。然后还有一个是前沿的 <strong>Paper</strong>。然后我是用到的 <strong>NotebookLM</strong> 这个工具，我会搭配用 <strong>Antigravity</strong> 去导入一些东西。然后 <strong>NotebookLM</strong> 的话，我不知道我还剩下多少分钟，看一下哦。剩下三十秒，可以跟大家展示一下我的 <strong>NotebookLM</strong> 的这个。我看一下可以快速展示一下这个 <strong>Rich Helman</strong>，就是我怎么选讲座。我觉得这个其实可能会很有帮助。就是 <strong>AI</strong> 时代，大家有这么多的资讯，这么多的知识，大家怎么去就是挑你真正要去听的那个内容呢？因为我觉得真正自己去听的那个感悟，还是和你直接去 <strong>AI</strong> 搜索 <strong>AI</strong> 总结的那个效果是差别很多的。所以说我会用这个把他的一个人，就这个人我想听他的讲讲，我把他所有的讲座都放在里面。包括像这个和之前那个学科学习是同样的一个逻辑。然后的话就问他问题，就他每做个反思是怎么做的，他就告诉我他具体的一个操作方式。然后还有说我想要了解他的一个 <strong>Mental Model</strong>。这个就是跟那个提问的那个帖子学的，然后的话就学会一个提问的一个方式，然后一步一步问下来。最后的话，我就问他，就是最最推荐我去听哪个讲座，那么我就可以去找到这个讲座去听。然后的话就就就学习起来，学习起来的那个效果就很方便了。你就不需要去根据一些比较粗糙的一些评价，去选你自己想要真正学习的内容。
+<strong>主持人</strong>: 嗯。呃，正好 <strong>张将军</strong> 有一个问题，他问你是怎么配置你的 <strong>Bot</strong> 来做马拉松规划的？这我想知道怎么配置啊。
+<strong>小西瓜</strong>: 那我可以给大家看一下，我最开始是怎么怎么做的。嗯，最开始我看到最开始我都忘记了，你能做我的跑步教练吗？然后我记得我们之前学过这个 <strong>Skill</strong>，就大家看我之前有一个 <strong>OpenCloud</strong> 的教学视频，里面有那个 <strong>Ocean Skill</strong>。我有给大家展示，就是里面有个 <strong>Skill</strong>，嗯是做这个就跑教练。然后的话其实就是一个 <strong>Coach Skill</strong> 嘛，你也可以让他自己去写。然后的话开始之后，呃，然后这里我是从那个 <strong>Discord</strong> 搬到这边，所以说可能会不太直观。然后我就有我就跟把我 <strong>Strava</strong> 连上去嘛，就是 <strong>Strava</strong> 就是一个运动的软件，就是我会把我的一个运动数据同步到上面。然后的话就打开他的这个 <strong>API</strong>。然后的话他他能够把我的 <strong>API</strong>，就是他能够调用我的这个 <strong>API</strong> 数据去看我怎么跑的嘛。然后对，然后的话就跟他说没有做过一定训练，然后没有想法没有在在操作。就是他会问就是这个 <strong>Coach</strong> 的话，他会问你一些问题，去确认你的一个大概情况嘛。然后之后的话给他，然后就就就这样子去配置。然后的话我觉得慢慢微调下来，就大概知道自己需要什么样的一个 <strong>Bot</strong>，怎么去和它微调。
+<strong>主持人</strong>: 对嗯。OK，广马十二月的问题。OK，不好意思，OK啊。嗯，那我们下一位 <strong>Cherry</strong>。他请问现在这个界面是哪一个？
+<strong>小西瓜</strong>: 刚才他那界面是 <strong>Slack</strong>，对对。这个这个页面是 <strong>Slack</strong>。然后的话刚才问到 <strong>NotebookLM</strong> 能不能导入那个就是 <strong>Antigravity</strong> 能不能和 <strong>NotebookLM</strong>，他是可以的。他有一个有一个叫做 <strong>NotebookLM</strong>。
+<strong>主持人</strong>: 有回，他有回答。
+<strong>小西瓜</strong>: 他告诉他那那没问题。OK，好，OK，那我的分享就到这儿。
+<strong>主持人</strong>: 谢谢谢谢小西瓜。
+<strong>Josh</strong>: 嗯。</p>
+<h3>Cherry的Mini Valuator股票估值工具</h3>
+<p><strong>Cherry</strong>: 好嘞，谢谢小西瓜。他之前在我们组内分享的时候，我就觉得他做这个东西特别的牛逼。就虽然说他这个还没有说形成一个那种就是拿那个产品外壳包装起来。但是我觉得他里面那个原理非常的就是深奥，我找我很多东西也不知道他是怎么搞的。所以当时就问了他有很多问题。OK。我来分享下我的屏幕啊。OK，大家能看到吗？
+<strong>主持人</strong>: 可以。OK。
+<strong>Cherry</strong>: 呃，我做的这个产品呢，它叫 <strong>Mini Valuator</strong>。<strong>Valuator</strong> 在这里是什么意思呢？它指的是股票上的估值。呃，如果比较熟悉我的朋友，大家都知道我其实对美股的这个价值投资是特别感兴趣的。所以说我其实在会用了 <strong>OpenCloud</strong> 之后，我就一直在想办法呃，用这个 <strong>AI</strong> 来去解决我投资里面的我觉得一些比较难的一些问题。这个，然后我最近呢我就刚好我们有这个黑客松这个项目。我就发现说美股投资里面其实非常重要的一环，它就是估值。因为我们要决定买一家公司的股票，我们是要判断一下这个股票，它现在的价值和它的价格相比是买贵了，还是现在买是会很便宜的买到。所以说我觉得这一环它很重要。但是呢，对于我们普通的散户投资者来讲，它难度很大。首先它的理论就比较比较复杂。其次来讲，这个活儿一般来讲它是那些投资银行的分析师他们去做的。呃，所以对普通人来讲，门槛会比较高一些。一般都是说他们会开好几个那种 <strong>Excel</strong> 表格，然后去搞折腾，一下午可能也不一定能折腾出来。呃，所以呢，我的一个想法就是说我想用我这几年的一个投资方面积累的一个认知。我用 <strong>AI</strong> 把它产品化，解决的就是估值这方面一个问题。呃，然后这款 <strong>Mini Valuator</strong> 它和一般的这个就是说市市面上现有的这些估值工具，它有什么区别呢？首先我这一款，像我刚刚说的，我的第一个目标，就是说我这款工具主要是呃一部分是面向小白用的。所以说你看它每一个这种重要的参数，它其实都会有一个 <strong>Tooltips</strong>，它都会给出来解释。像是 <strong>EPS</strong> 呀，然后包括 <strong>PE</strong> 的这样一个倍数啊这些的。呃，然后呢，这样的小白的话，它其实我我自己觉得是大家读了之后是会相对对这个东西，对这些概念有一个比较清楚的了解。然后第二块就是说在每个新手第一次进来的时候，他会出来一个这样一个 <strong>Tour</strong>，就是这样一个 <strong>Guide</strong>。然后会告诉你，就是说每一步对你来说有一个引导。好，然后现在就到了这个正式的这个这个产品的环节，我来给大家演示一下吧。比如说就用最经典的 <strong>苹果公司</strong>，然后我们首先就在这个搜索框搜索一下这个 <strong>苹果</strong>。然后呢从这一堆股票列表里边，我们找到这个 <strong>苹果</strong>。好，然后呢这个 <strong>Valuator</strong> 它就会自动的去拉这个数据，只要这些数据都是就是 <strong>Live</strong> 的。也就是说它是最新的这样一个数据，唯一需要大家手动去调整的，就是这样一个 <strong>Annual Growth Rate</strong>。因为这个增长率它是每个人是你预测它未来五年它的一个年化增长率，所以每个人的判断是不一样的。呃，当然如果说你不确定这个这块该怎么填的话，它底下还有分析师的这样一个预测。所以这个它其实这就是我的我的一个设计，这方面的一个巧思吧。就是说如果大家不会填，你可以看分析师是怎样子写的。呃，我我不知道我我我觉得这个东西应该在那些专业的那些估值工具软件里面，应该是没有的。对，所以比如说我们直接用分析师的这样一个预测，它的整个股票的这个价值，它就已经算出来了。所以你看如果我们用这个假设的话，它算出来它是大概是二百八十二美金一股。但是它现在的这个市场价值，它是二百五十美金一股。所以说如果说我们现在买的话，其实是可以稍微的比较便宜的去买到这个价格，买买到这个股票。对，然后还有一个特点，就是说在我们去调这些参数的时候，呃，它的这些旁边这些数据它是会实时变化的。哦，我先跟大家介绍一下这个 <strong>Sensitivity Analysis</strong> 吧。这个就是说呃当然你看啊就是说它这个假设当我们把这个假设它在变化的时候，它其实它估出来的这个结果它是不一样的。比如说呃我来给大家调整一下这个 <strong>Annual Growth Rate</strong>。我在滑动这个滑块的时候，大家可以发现它底下这个数字它是在变的。所以这个它的这个 <strong>Idea</strong>，它这个意义是什么呢？就是说因为我们这个估值它不一定是一个 <strong>Exact</strong>，就是一个精确的一个数字，它一定是有些误差在的。所以说我们可以通过调整这些参数，然后来去让整个的就是说让整个的这个估值它达到一个范围，而不只是局限于一个精确的数字。所以这样就让我们的这个估值的整个结果还会更加的精确这样子。然后呃除此之外还大家还可以把这个估值的结果就是下载成一个图片。但是这个图片啊，因为我知道这个切换 <strong>Tab</strong> 展示不太方便。我等一下给大家展示它那个大概会是长什么样子。然后其次就是还有一个历史记录的这样一个功能。因为我是想把它做成一个比较稍微全面的一个产品的。我觉得历史记录这个这个是必不可少的。呃，就是比如说我们点历史记录里面一只股票，它就会完整的呈现出你当时最后一次输入的状态。哪怕这些假设是你自己做的，就它不是不是 <strong>Live</strong>，它也能呈现的出来。对，然后这个就大概是核心的这样一个产品。对，然后给大家看一下这个图片吧。它这个图片大概下载下来，就是大概就是就是这样一个样子，它里面就会有写你的你的对什么股票做估值，然后呢，你的一个内在价值是多少？呃，然后呢你的一个这些参数啊，它什么的都会有，包括我们刚刚看的那个 <strong>Sensitivity Analysis</strong>。对，然后就是说对整个的这个落地页，我也是稍微的去设计了一下。因为你们看这个 <strong>Hero Section</strong>，它这个它整个的这个页面它是会变动的。因为这个是我自己问了一下 <strong>AI</strong> 啊，我就是想问一下，他说这个东西怎样子能够更加的吸引人。然后 <strong>AI</strong> 他就给我用那个他用那个 <strong>Skills</strong>。呃，大家应该听说有个很火的一个 <strong>Skills</strong>，叫那个叫 <strong>Frontend Design</strong>，就是一个前端设计的一个 <strong>Skills</strong>。他就给我分析了一下，他说你这个 <strong>Hero</strong> 有一点有点 <strong>Sorry</strong>。呃，这样子就是导致大家就是很多人他进来之后，他会马上点出去，因为觉得这个很无聊，<strong>Bounce Rate</strong> 会比较高。所以说他就建议我把它设计成一个这样一个动态的，我觉得还挺有意思的。其实这个原理我也不是很懂，大概就是一个好像叫 <strong>CSS</strong> 的一个一个渲染吧。大概它其实中间它是放一张截屏上来的。对，就就是个个的一个落地页这样一个一个设计，包括底下这两张也是这样子，只不过他们不不动态的。然后最后的话，我其实想说一下，我这个产品它和市面上现有的产品有什么不同？首先第一个最明显的就是说它的一个价格。你像一些比较专业的一些那种股票的一种那种全分析的工具。他们一般都很少有面向就是投资者个人投资者去订阅他们很多都是一个比较大的一种机构的。它可能收收收年费，就收上上千美元，就很贵这样子，这是第一个点。然后我这一款它它也有收费，但是它非常非常的便宜。呃，它我就是只是专注就是估值这一项这个功能，然后这是第一点。然后第二点其实就是说呃一般来讲，一般来讲像那些比较专业的一些那些金融工具。因为他们最重要，他们最在意的是专业性。他们要保证他们的用户是用这个东西，它是一种就是说就是哪怕它那个东西它不好用。因为我觉得很多 <strong>SaaS</strong> 是这样子，它很它不很很不好用，但他要保证这个数据的精准啊，就这些方面的指标。但是呃我这个产品它就是说我我觉得整体设计下来它还是比较亲民的。就它没有说那么的小白，可能点进来一看就哇一头雾水，这东西还怎么做？我是刻意的，加了很多，加了很多引导进去的。呃，所以我感觉小白上手会相对容易一些。然后其次就是说我觉得呃包括我这次的整个的这个这个这个字体，大家发现我整个这个产品的这个风格，其实就是它这个字体其实就有点那种代码程序员那那那种字体，对它这个字体名字叫啥我忘了。但是我刻意没有把它设成那个就是那种他金融很多时候他常用的那种给人看起来非常严肃的那种字体。所以总结下来我这个产品的一个核心的一个 <strong>Idea</strong>，就是说让每一个人初学股票的这个股票初学者都能够很好的去上手整个的这样一个估值。所以说也欢迎大家去试用我这个产品。我前两天在我们群里面发了一个帖子，其实是有预先就是就是说给大家让大家了解一下这个这个产品。然后大家也可以点进去这个链接去试用，然后给我提提建议啊什么的都可以啊。如果你们的建议，我觉得就特别有 <strong>Valuable</strong> 的话，我会给你们免费送。对，是这样子，谢谢大家。嗯。
+<strong>主持人</strong>: 谢谢谢谢 <strong>Cherry</strong>。你可以把你网页的链接放进我们的聊天框里面。呃，事后好的可以总结进我们的那个直播总结里。嗯，这里边有一些问题，你等一下可以私自回答他们，因为我们呃可以开始进行下一位了，谢谢谢谢您的分享。嗯嗯。</p>
+<h3>小西瓜代分享Aaron的项目</h3>
+<p><strong>主持人</strong>: 那小西瓜的第一组是不是？
+<strong>小西瓜</strong>: 嗯，我我还可以我还可以帮 <strong>Aaron</strong> 分享一下。就是因为我们录屏有录屏嘛，所以说我可以帮他 <strong>Share</strong> 一下，我觉得他做的东西也蛮有意思的。呃，快速跟大家讲一下，然后给下一组留更多的时间。嗯，就是 <strong>Aaron</strong> 他做的这一个，我觉得更就是在我们超级个体户内勤里面是最最符合这个主题的。哦，然后的话他做的就是因为他有那个 <strong>Apple Watch</strong> 的数据，然后他他把那些全部都就是用他是用那个 <strong>苹果 App</strong> 的一个方式去导入到就是他的 <strong>OpenCloud</strong> 能够去调用的一个方式。然后的话他包括像他的一个睡眠，以及说他的一个经历分析，包括像他的活动饮食什么的。他因为他会拍照嘛，然后的话都是存在在一个地方。然后的话他每天 <strong>OpenCloud</strong> 的话，它就会作为一个每日的一个回复。它就是把 <strong>OpenCloud</strong> 作为什么样的一个端口。嗯，对，和前面的可能有点像，那他们有自己做了一个 <strong>App</strong> 出来。对，然后还有一个就是这一个是他做的一个晨报，就是他把他的 <strong>OpenCloud</strong> 接的他的 <strong>Obsidian</strong>。可能这边有点吵，然后对他的他接了他的那个 <strong>Obsidian</strong>。然后的话他的 <strong>OpenCloud</strong> 有他 <strong>Obsidian</strong> 的一个权限。然后他是买了 <strong>Obsidian</strong> 的那个会员的，所以说他有那个 <strong>Obsidian</strong> 的那个云端同步。所以说他每天早上的话，他会用 <strong>OpenCloud</strong> 去帮他看。呃，各个社交媒体，就是他关注的那个信息浪潮的一个行业前沿。然后的话直直接生成就是一个在 <strong>Obsidian</strong>，不管是在手机还是在电脑，都可以看的这么样的一个文档。然我觉得这个他做的就很好。对，然后对，大概就是这个样子，还是分享一下这个吧。对。
+<strong>可友</strong>: 可以哦。
+<strong>主持人</strong>: 谢谢小西瓜，谢谢。那我们开始进行第三组，就是我作为领队的小组，我们小组一共有五位成员。那 <strong>Jessica</strong> 和 <strong>Oscar</strong> 都在线上了。呃，<strong>Jessica</strong>，你先分享你的项目吧。有两个成员是等会儿我会放他们的录屏，因为他们没有办法来现场了。</p>
+<h3>Jessica的经验分享与学习反思</h3>
+<p><strong>Jessica</strong>: 你放他们的录屏吧，我觉得我的很糟糕，你你你你给你你和 <strong>Oscar</strong> 先分享。
+<strong>主持人</strong>: 不然那我就先放录屏吧，先那等一下啊，稍等一下。
+<strong>Gary (视频)</strong>: 哎，哎，用来发电。然后发完了之后呢，它会有一个大的那个展示。
+<strong>主持人</strong>: 嗯。
+<strong>小西瓜</strong>: 你那边播放视频之后，可能会变得很卡，就是会有红点。
+<strong>主持人</strong>: OK，可以看到这个吗？我现在分享完了。
+<strong>Josh</strong>: 可以可以。OK。
+<strong>主持人</strong>: 那我开始了，这是 <strong>Gary</strong> 的分享，我们的主题是社交媒体自动分发。</p>
+<h3>Gary的社交媒体内容自动化流程</h3>
+<p><strong>Gary</strong>: 大家好，我是做内流通的，有自动化的这一部分。然后到了有呢，回有回回有回应。去我我完完全全全去开我的工具展，选择是用的 <strong>OpenCloud</strong>。我马上给大家展示一下，我都做了哪些，我的一些感想是什么？是不是一个。当时我想说，我要拍一个视频的话，可能会从脚本选择到拍摄，到界面，到剪辑，再到上字幕，再封封做做多平台分发。我就想去尽量去优化嘛，一步步我马上给大家展示一下，我都做了哪些 <strong>Skill</strong> 去去抱这些部分。对啊，第一个 <strong>Skill</strong>。有时候会拿着手机，比如说我有些想法的时候，我会直接记录下来，用那个 <strong>iPhone</strong> 自带的备忘录。所以说我就想做一 <strong>Skill</strong>，能够把我这些杂乱的想法呢，去把它转成是一个我大概还可以的第一版本的口播稿，并且呢还能生成各种平台的标题。因为我要发不同同步的平台，它的标题可能不太一样，再加一些标签。所以说这个工作流大概是我给他一个语音，它能自动用 <strong>ElevenLabs</strong> 去转成文字，再进行利用 <strong>Gary</strong> 的 <strong>Refine</strong> 的模型去给它进行口语化，或者生成一些口播稿正文。并且呢可能还有一个前面的户补是前面请要抓助观众不同的论坛的标题、麦的标题和这段标签。是的，好的好的。当比如说已经有了口播稿，那我去录录。因为录这一部分，我觉得对我来说不是一个特别难的。录完之后呢，就要到剪辑视频了。我一开始的初心其实是希望也能够帮我们去剪辑自动化的。因为我一开始呢是 <strong>剪映</strong>，如果大家有用过的话，<strong>剪映</strong> 里剪口播短视频其实还是不错的。还有那种智能去删除你的不同的口误，包括延迟等等。所以呢，那但是我当时想说，我能不能试置自动化一下。我当时也在社群里发过帖子，我在网上大概找了这么 <strong>Skill</strong>，这个可能有点小。它基本上就有三个功两个功能，一个是它自主动添加字幕。第二个是它进行剪口，我其实跟 <strong>剪映</strong> 是一样的。但是他这个字幕是更新的，失误率很低。如果大家用过 <strong>剪映</strong> 的话，他这个失误率其实是很高的，而且他没有学习能力。第三个呢，我当时在图之间，我去做了一个别的东西。我当时可能想做一些短视频功能，是 <strong>Shorts</strong>，可能是完完全全是用 <strong>AI</strong> 自动化的。我当时看了一篇文章，就有点走火入魔了，说这个我不需要真人出镜，完完全全从选题到录制到上字幕，崩完了是用 <strong>AI</strong> 做的。当时我就找了一篇文章，我基本是用它复刻，在我 <strong>OpenCloud</strong>。基本上也就是说啊给一个你的选题出来，用克隆你自己的语音，用 <strong>MiniMax</strong>。你呢你把它以后，你就都拥有克隆我们自己的语言。并且呢你做 <strong>Remotion</strong> 渲染可以做一些这样的风格，相当于是用 <strong>AI</strong> 帮你做视频，最后还可以帮你做字幕。还有一部分呢最后一个 <strong>Skill</strong>，我在用的也就是这个封面生成。因为我要上传到不同的平台的话，它有不同的大小。那我也希望这部分分完了。
+<strong>主持人</strong>: 我卡了。
+<strong>互动者</strong>: 连那个吧。
+<strong>主持人</strong>: 天哪，我这边电脑卡死了，我他还没办法继续了啊。
+<strong>小西瓜</strong>: 要不就 <strong>Oscar</strong> 继续先开始吧，然后你把它存一下。
+<strong>Josh</strong>: 可以用下继续啊。
+<strong>主持人</strong>: 好，那那先开始吧。</p>
+<h3>Oscar的内容生产自动化引擎</h3>
+<p><strong>Oscar</strong>: 可以可以，那我先开始吧。我调一下那个我看一下，我来设置一下屏幕，这个然后可以看到吧。这个是我做了一个内容生产自动化的一个引擎，就是他可以把我的口语稿我丢给他口语稿，然后他去润色之后再去 <strong>AI</strong> 喂，然后做中英配图排版。就是一连串这样的一个流程。那时间有限，我就一边跟大家展示，然后一边介绍吧。比方说我最近我写了一个口语稿，就是我最近有一个感悟，那我感觉好像遇到 <strong>AI</strong>，遇到了边界。其实你自己的边界怎么讲呢？巴拉巴拉巴拉，我写了一封这样的口语稿，是用语音输入的。放在这个里面之后哦，它这个界面就开始有一些高级配置。可以，比方说你可以生成图片，比方说我在这儿让他帮我直接配图，然后这配图风格你也可以选是什么商务风、插画风、摄影风之类的几张。那我就先默认三张，然然后我就可以在这里开始一个，让他先用 <strong>AI</strong> 帮我润色一下。然后这个过程大概会持续一到两分钟左右，他会给你一个总的进度条，告诉你做到多少了。那这润色完成了，然后去 <strong>AI</strong> 喂也完成了，然后翻译完成了，它接下来它会生成一个六个爆款标题，然后让你去选择你用哪一个标题放到你的文章里面去。然后它会生成配图的这个地方会稍微慢一点。然后我自己用下来的感觉，它其实去 <strong>AI</strong> 喂这个地方会花一点时间。因为你让 <strong>AI</strong> 去改成去 <strong>AI</strong> 喂，就是你可能给他一些 <strong>Skill</strong>，然后哦我还要把我过去的文章喂给他，然后让他去尽量生成贴合我风格的。但是我发现我其实过去写的文章也不多，所以给他学习的内容也不是很多。然后他就是会做这样的一个一系列的处理吧。然后他会帮你生成 <strong>小红书</strong> 的文章，<strong>Substack</strong> 的文章，然后还会生成 <strong>Twitter</strong> 的中文的推文串和英文的推文串。然后他会帮你做排版。最后还有一个三方会审的环节，这个等一下等他生成好了，我会展示给大家看。然没有啊，这个地方他就已经生成好了，他会给了六个爆款标题给你。那你可以在从中选一个放到你的文章里面去，但是不喜欢的话，你可以再换一批。那我比方说假设我就选了一个这个，然后把它放到我的文章里面，在这个地方就可以看到。他已经把刚才的那个标题放到我的 <strong>Substack</strong> 里面了。他在这里生成了一个已经排版好了的一篇文章，然后这里是 <strong>小红书</strong> 的爆款图文。呃，然后配图是在后面。然后 <strong>Twitter</strong> 这边它有一个中文的推文串和英文推文串各有六个，这些你都可以改，你都可以改。如果你满意的话，其实是可以复制或者导出的。然后这边是有一个图片生成失败了，然后这个这两个图片是生成成功了，他也给会给你提示词。如果你不满意的话，你也可以再去再去再去修改这样子。然后我们就以 <strong>Substack</strong> 为例，我这篇文章如果我要让 <strong>AI</strong> 再去帮我进行一个三方会审的话，我可以在这里点击一个修改并送审。然后比方说我有的地方不要，我就把它删掉，然后其他的地方你就可。
+<strong>Josh</strong>: 给自己在这边做一些加工修改，你把它改成你你自己想要的效果。
+<strong>Oscar</strong>: 然后在这里可以点一个确认送审，然后这个最有意思的地方就来了，它会开启一个这个所谓的三方会审。它有两个模式，一个是都调用 <strong>GPT</strong> 的模型，然后它会通过逻辑共情和事实三个视角去帮你分析你这篇文章。然后它还有一个模式是这个同时用 <strong>OpenAI</strong>、<strong>Gemini</strong> 和 <strong>Claude</strong> 这三模式三个模型去一起去审你的这篇文章，写出优缺点。那时间有限，我就不能同时放两个，我就以这个三巨头的这个模式来给大家展示。然后这就是我刚才的一篇文章，但是我也可以有的地方我也不需要的话，我可以删掉，就会做一些修改。然后你觉得 <strong>OK</strong> 了之后，你就会在这里启动会审程序。这个时候嗯嗯，因为我都是同时接入了这三个模型嘛，然后他现在会在给你分析你的文章。然后最左边是 <strong>OpenAI</strong>，中间是 <strong>Gemini</strong>，这边是 <strong>Claude</strong>。哦，<strong>OpenAI</strong> 的，这个已经出来了。那就说你这些文章里面怎么怎么样，然后它的审查亮点是什么？但是同时有四处隐患需要优化的，怎么怎么样可以优化你的描述过于抽象，或者是有的部分用词较为口语化之类的。然后他会给你一个分，这边给了个八分。然后 <strong>Gemini</strong> 这边也是，然后也给了一些。然后就最后他会给你一个综合整稿的报告。那 <strong>Claude</strong> 给的分数就四分，他比较严格。然后他全局会给你一个六点七分，他会给你一个总体的评价。然后有哪些地方需要修改，三个需要修改的问题。然后你的核心优势是什么？一句话的修改建议。然后你可以根据他的这个修改建议呢点击这个注入魔法兵重新润色。然后它会基于你的这个三方会审的结果进行一个魔法重写。它会这个是一个原始的底稿。然后他会你在这里也还可以继续做配图修改，或者是你可以跳过，这样的话会快一些。然后你在这里点击开始魔法转换，就是它就会可以进行下一轮的修改了。那时间有限我就不展示了，反正最后他就是成成，最后他就会给你。最后你不断的修改，最后形成一篇文章，然后这篇文章然后就可以发布。然后对，这就是然后你之前所有做过的东西在这里都有历史记录，自己我自己做测试就做过很多这样子。所以我的呃我自己用下来感觉就是有一有有有几点要嗯要注意的就是你的 <strong>Typeless</strong>。我我用语音输入的时候，<strong>Typeless</strong> 呃，如果用 <strong>Typeless</strong> 做做语音输入的话，它就已经有了一层那个 <strong>AI</strong> 的加工。然后你在二次加工的时候，其实他那个 <strong>AI</strong> 喂就已经很重了。所以我再用口语稿的时候，我会尽量让他只用 <strong>Whisper Flow</strong> 或者是别的语音输入，让他尽量去留着你的那个属于你的口语化的那一部分。嗯，目前没有填。对，我就是这样的一个一个一个一个内容自动化的一个东西。一开始我们是想要做成全平台分发，但是就是那种一键，然后全部分发。但是其实大家试下来之后，很多人也都说这个好像还不如你自己手发。因为我们也不是做矩阵，不需要一次发那么多，你你发了你还是会去看嘛。所以就是这个所谓的一键分发的这个部分，我没有放在那个里面。对我的分享到此为止。
+<strong>可友</strong>: OK。
+<strong>互动者</strong>: 哇，感谢感谢 <strong>Oscar</strong>，很完整了。
+<strong>可友</strong>: 好，<strong>Oscar</strong> 如果有事的话，可以先离开。然后那我继续说，刚才 <strong>Gary</strong> 的那个分享再试一下啊。
+<strong>小西瓜</strong>: 再给 <strong>OK</strong>。
+<strong>可友</strong>: 可以看到的话，我就继续，或者说我刚才说的主题。
+<strong>Cindy</strong>: 他对生成气的本它的声音声音和音就这样。
+<strong>Gary</strong>: 这个大字是一定放在我这个封面背面能够去吸引观众的。并且我还给了我要选择用户照片，就是我自己的照片。因为我希望我真人出镜嘛，所以说我的封面也是希望我来出镜的。基本可能再给一些参考图片，基本上就用一些 <strong>豆包</strong> 的 <strong>字节</strong> 的 <strong>SDXL</strong> 模型费用基本上就在这里面写了。他基本上要给他一些 <strong>Prompt</strong>，然后就输出成三比四四比三六比九的同比例面。然后给大家稍微展示一下吧，就是大概什么样的结果。比如说从口播稿，如果我给一个杂乱想法的话，这里我只没有展示口播稿。因为有时候口播稿不是很好用，它呢基本上就是给了一些各个平台的标题。你看这个编好还给了一些标签，我觉得还是不错的。然后呢，第二个呢就是这个 <strong>剪映</strong> 视频剪辑视频这个思路。其实我后来发现不怎么用的，是因为对我来说，其实 <strong>剪映</strong> 其实剪起来挺快的。我可能用不了多长时间。然后呢，可能用 <strong>OpenCloud</strong> 去调配这个东西是更费时间的。所以我就放弃了。然后呢，第三个 <strong>AI</strong> 生成视频呢，我给大家看一下，稍微是这样的结果。但是呢我没有怎么去，我没有去发出去，是因为我觉得还有很多要调配，但是因为太花时间了，所以我就放暂时先放弃掉。然后这个就是这个视频大概的样子没有个关系，他需要花大量的时间精跟你跟你得到说。然后你看他可以这些这些完完全全都是它自动去生成的，就随便给了个点子或者口头稿子，然后它就会这样生成这样的风格。然后这个项目可能，然后最后一个大概的封面生成大概就会展示成这样。就是我比如说我前两天开了一个视频，是我做了一个 <strong>OpenCloud</strong> 牵引。因为我我旧旧电脑对不不了了，需要用新的电脑。然后基本上我再给我生成一个封面，我给大家放大一点。它基本上就是生成三比四的比例，四比三的比例加上十比九的比例。OK。最后说一说我的感想吧，做了这三四周下来，我觉得第一个感受就是 <strong>OpenCloud</strong> 真的是挺不稳定的，而且他经常会出错。然后经常我遇到过好几次，就是聊着聊着他就挂了，我就找不到他了。我可能需要花几个小时才能把它搞回来。有时候运气好，可能很快就做回来，搞回来了。但是很多时候是我真的需要去打开我的 <strong>OpenCloud</strong>，然后呢我去看一看到底发生了什么配置，然后要把额外的观点去做配置。第二个感受呢是我觉着自动化可能本身做这个事情没什么问题，但是还是要去多提升质量内容的质量。如果你的内容的质量本身不好的话，自动化的话只会让我做出来更多垃圾。但是自动化好处就是能够让我更好的去节省一些，是一些我需要画，比如说标题生成啊，封面生成啊，多分发平台这种的一些的杂乱的一些没那么重要的事情上。所以呢我的下一步就是说还是要去少自动化一点点，然后去多去提升内容质量。尤其是要学习一些其他的，比如说优秀的博主，他们是怎么样去做视频的，他们的到底是怎么样去展示的，他们的优点在哪里。这就是我的一些感想。然后呢，就像这些，感谢大家看我的视频。
+<strong>可友</strong>: 说出来有点不好意思，我其实已经交接作业了，没用进去，好好糊弄了，不习惯。
+<strong>主持人</strong>: 但是说是在你这样。
+<strong>可友</strong>: 下一我这网又不行了，下一个再次再次来分享一下吧。
+<strong>Jessica</strong>: 可是虽然我没有完成，所以不过我我分享吧。嗯，我这是应该第一个分享，因为我真的不会，我真的没有完成。其实我主要是说我我没有完成，所以我觉得我分享一下我学了什么跟思路吧。哎我怎么 <strong>OK</strong> 等一下哈 <strong>OK</strong>。所以，我稍微介绍一下自己，我其实需要做的事情是因为我有一个画展将要进行在五月尾，所以我需要抛这些 <strong>Social Media</strong> 的东西，所以我才参与这个活动的。然后我发现我做这个时候，我 <strong>Research</strong> 大部分三每个人如果需要很长分享这些创作的话，我们需要大概三点五个小时去做个人的这些自媒体的事情，其实是很花时间的。然后我主要是学习了怎样，因为我刚开始的时候其实没有很大的一个对 <strong>AI</strong> 的功能。所以我主要是把东西放去 <strong>NotebookLM</strong>，然后学习了怎么样就 <strong>Fit</strong> 完我。所以我需要学学的东西跟我做整个画展的一些概念跟一些画的状况，跟所有的资料给他。我发现其实是很好的，<strong>NotebookLM</strong> 是我这一次觉得说真的有深深的学习跟深深的认识到他的好处。然后其实我比较需要的是做 <strong>IG</strong> 跟 <strong>YouTube</strong>，我发现 <strong>IG</strong> 本身是你需要有 <strong>Business Account</strong>，你才可以分享，你才可以自动化分享。然后像 <strong>YouTube</strong> 跟 <strong>LinkedIn</strong>，你就是需要申请就好了。
+<strong>小西瓜</strong>: 没有没有没有。
+<strong>Jessica</strong>: 所以我用 <strong>NotebookLM</strong>。我我给他所有的东西，喂给他所有的资料的时候，我希望他可以帮我生成一个排周表，就是排我每天要发些什么资料跟所有的东西在 <strong>Google Sheet</strong> 里面是本来的目标是要从 <strong>n8n</strong> 里面拿。我是了一个别人已经做好的，我想要试试看，可不可以用。因为我本人不太会做这件事情，所以我到了来试试看。然后它是可以直接去 <strong>Google</strong> 去里面把里面的东西拿出来用，然后可以 <strong>Post</strong> 出来。可是这个东西本身我的啊优秀那边卡着了，我没有没有达成这个 <strong>API</strong> 的事情。是的，所以我就觉得这个东西没有做完。但可是我分享一下，我学了些什么东西，跟我觉得这整个东西是怎么样形成的吧，给任何想要做这件事情的人一些一些想法吧。嗯，对，你来就可能不太好用，我也分享一下我做了些什么吧。然这是当中要做的风选的一个。对。
+<strong>小西瓜</strong>: 还有就是这个也是嗯这不需要声音。<strong>OK，Sorry</strong>。就然后就觉得其实我觉得 <strong>AI</strong> 跟最主要是我们自己本身需要有很大作为。
+<strong>Jessica</strong>: 人类来讲，我觉得我们有很大的一个东西是需要去创建一些跟 <strong>AI</strong> 相关联。可是我们要创建一些我们自己的东西的情况。好了，我讲完了，我就是没有完成吧。所以呃谢谢做了一个学习的过程。
+<strong>可友</strong>: 嗯，我觉得做就是做 <strong>Mini Hackathon</strong>，我们没有说一定要要求每个人都完成自己的项目。最重要的是开始你已经开始了，不是吗？而且我看到了你完整的展示，我也有很多启发，我觉得这就是最有价值的地方。好。
+<strong>小西瓜</strong>: 谢谢。
+<strong>可友</strong>: 没有没有。好，我们下一位我们组的 <strong>Jamie</strong> 他赶上来了，那我就不帮他放他的他的那个 <strong>Demo</strong> 了，<strong>Jamie</strong> 你自己可以分享吗？<strong>Jamie</strong>，你的麦克风没有开。</p>
+<h3>Jamie的多平台内容发布与分析闭环</h3>
+<p><strong>AI 助手</strong>: OK，hello, hello, 嗯。
+<strong>小西瓜</strong>: 好吧。
+<strong>可友</strong>: Hello。
+<strong>AI 助手</strong>: 我屏幕怎么分享不了了。
+<strong>可友</strong>: 我这个哦那你可以先修一下，或者换一个浏览器。
+<strong>小西瓜</strong>: 然后我可以先开始要。
+<strong>AI 助手</strong>: 要不然你先放我那个我这个整个屏幕怎么点不了分享。
+<strong>可友</strong>: OK，那我那我放那我播啊。
+<strong>AI 助手</strong>: 可以了可以了哦。
+<strong>可友</strong>: 可以了。嗯，好，可以了。
+<strong>小西瓜</strong>: 嗯。
+<strong>AI 助手</strong>: Hello 呃，我是原本想要做那个自动化的一个流程嘛，就那种像前后端，后来我就发现做那个就比较麻烦。再加上国内平台它很多的限制，没有那种 <strong>API</strong> 通道目前就能够自动发的。我现在在做的就是 <strong>TikTok</strong>，然后 <strong>YouTube</strong> 还有 <strong>Instagram</strong>，然后这这三个是自动发的。<strong>X</strong> 的话，他查的也比较严。然后嗯然后国内平台的话呢，全部都是用这种 <strong>Skill</strong>。那这里面的话呢，不没有这个是我做的一个 <strong>HTML</strong> 给大家展示用的工作流程。大概是分为这样几大项，一个是长视频，然后灵感速发。还有一个是数据分析。这里面的这个长视频呢，就比如说我告诉他一个嗯全文案发送，然后他就会给我出选题呀，然后出这个发布方案，然后包括像标题，然后封面嗯，还有什么 <strong>Tag</strong> 啊，然后之类的，全部都会给我。还有一个灵感抒发呢，就是说我有一些小的灵感给他给他了之后呢，他会帮我去撰写成一段小文字，然后再去给我用那个泥塑风去配图。因为我现在刚转成 <strong>Antigravity</strong> 来去给我这个工作流嘛，之前是用 <strong>Claude</strong>，直接是配上 <strong>NotebookLM</strong> 它的一个输出，配上泥塑感的那个图就全部都出来了。现在是用 <strong>Antigravity</strong>，它里面自带了一个三 <strong>D</strong> 渲染，就可以直接出图了。然后这个的话呢就是发 <strong>X</strong> 啊 <strong>小红书</strong> 这这这些的。然后反应好的话，再拓展成长文。然后分析数据的话呢，就是它形成了一个闭环嘛，然后把所有平台的数据，然后定期反馈给他之后，他帮我分析之后再反馈给我下一次的一个标题啊什么就各种文案这种的。然后呃他这里面的话还会给我一些逐字稿啊什么的，就全平台发布。呃，这是一些展示内容分析呀，然后标题、封面、简介、发布时间，然后发布方案这些全部都有。然后复用的话呢，就是就比如说像灵感速发呀、长句复用啊、周期，就是我还我还在做 <strong>Substack</strong>，还有那个 <strong>Newsletter</strong>。然后 <strong>Newsletter</strong> 的话呢，就是他每周都帮我自动积攒素材。就比如说是从就是短视频啊，然后图文啊，然后长视频啊，然后包括我的长文啊，这些全部都积攒出来。然后播客的话呢是目前正在做的播客，就是嗯我会让他每两周帮我就是搜集一下我过往的一些素材，然后自动去整理成那种播客，大概嗯十到十五分钟，然后去用那个 <strong>AI</strong> 的声音就 <strong>Copy</strong> 我的声音，然后去输出这样的。然后目前我想要做的就是 <strong>小宇宙</strong>，然后 <strong>Podcast</strong>，还有那个 <strong>公众号</strong>，还有一个 <strong>喜马拉雅</strong>，就这样。然后分析的话就这样。嗯，这个这个 <strong>HTML</strong> 呢它整体让人互动不了的，但是它可以复制。就是比如说这里面还会看一下我什么时候发了哪一些平台啊，这些的，还有我的一些后台数据啊，然后这样的包括这里面有一些偏好设置，每个平台它的呃一些用词啊，然后这些都是有的，还有发布历史。然后内容的话就是哪一个哪一个视频表现的比较好啊，这些全部都有，还有平台规则。比如说这些小的一些细节的东西，就是比如说什么短标题呀，视频号要有短标题呀，然后这些细节全部都有。然后这些就全部都是在自动更新的，然后我觉得之后会越用越好。就是这些的话就点一下，它就自己就 <strong>Copy</strong> 了，就然后我再去发给他就可以。有的时候因为这个口令太多了，我记不住，所以我有时候我就是来这里找一下，然后点一下复制，然后再发给他就可以。然后整体上呢它是这样的一个大的循环。就是目前就是你看有长视频啊，然后在这里然后短视频长文播客长视频的话就给主题之后，然后他给出逐字稿。然后我去 <strong>剪映</strong> 剪辑的时候，他去做 <strong>Edit</strong>，然后然后就就然后根据我自己的风格呀，然后给产出就可以，这是自动的。现在有一点我自己的风格了，就是现在还在初期阶段，然后慢慢我觉得循环起来应该会更好一点。然后我觉得 <strong>剪映</strong> 里面的话就是配字幕啊或者是美颜呀，然后就更好一点。还有就是呃我在做尝试视频的时候呢，就是导出视频和字幕。其实它的效果给到这个给到这个 <strong>AI</strong>，它效果是一样的。但是视频的话它比较浪费时间，所以我一般都会给它字幕，然后来帮我去生成全平台文案，然后这样去给。然后它这里面就包含了这一些，就是最后他们这些全部都给到了数据分析，给到了数据分析了之后呢，然后再在最后然后根据全平台的分析给出下一次的主题优化。这样反哺就整体上是这样的一个大的循环。然后还有一些这样的我的分享完毕了。
+<strong>可友</strong>: 呃，有和 <strong>Betty</strong> 都有一些问题，你先回答。
+<strong>AI 助手</strong>: 嗯。
+<strong>可友</strong>: 你听不见我说话吗？
+<strong>AI 助手</strong>: Hello，嘿，hello, hello。
+<strong>殷池</strong>: 可以听见吗？我可以听见。hello。嗯。
+<strong>AI 助手</strong>: 他可能那边耳机有问题。
+<strong>可友</strong>: OK，那我们就听见嗯，我们可以听见你在吗？
+<strong>AI 助手</strong>: 啊，好了，我现在好了。
+<strong>可友</strong>: <strong>Clear</strong>，我有一个问题，分析功能上可以分析 <strong>小红书</strong> 的数据吗？
+<strong>AI 助手</strong>: 嗯，可以，就是他这个全平台分析的话，我是喂给他了一些资料，就是告诉他要到底是分析哪方面的。然后我刚刚没有看，就是这里面的话，他分析，比如说这个平台分析的话呢，它有一个这个五步流程，就是五五个维度这样去分析的。
+<strong>小西瓜</strong>: 嗯嗯。
+<strong>可友</strong>: 你是上就是让浏览器去控制 <strong>小红书</strong> 的页面，然后让他自己去看，而不是获取了什么公开的 <strong>API</strong>，对吧？
+<strong>AI 助手</strong>: 啊，这个没有 <strong>API</strong>，就是但是他 <strong>小红书</strong> 的话不是让他去看。因为我发现用 <strong>Claude</strong> 他去看那个网页的时候，他不是太好。但是我最近发现哈我转到 <strong>Antigravity</strong> 了之后呢，我发现那个 <strong>Chrome</strong> 的配合就很好，还会有鼠标去动这样的。就是整体上我觉得会比 <strong>Claude</strong> 去控制这个页面会好很多。然后我去分析 <strong>小红书</strong> 的这个后台数据的时候呢，他是我我去去后台去下载那个表格，他有一个那个下载的键，然后直接就下载一下，就也挺方便的。
+<strong>AI 助手</strong>: 直接导给他，那就分析了，<strong>OK</strong>。
+<strong>可友</strong>: 然后 <strong>Betty</strong> 还有一个问题，你可以私下回复他嘛。呃因为他这个问题还是比较复杂的。他有问多平台发布 <strong>API</strong> 取得的问题是怎么取得这些 <strong>API</strong> 的啊，你可以回复东西啊。
+<strong>AI 助手</strong>: 就全都是 <strong>AI</strong> 帮忙的。我之前用 <strong>Claude</strong> 的人，他都给我连好了。就是我觉得懒人有懒办法吧，就是我就跟他说我是小白，尽量让我简单一点，然后他就给我挺简单自己去试。然后哪一条最简单告诉我，然后如果我觉得还有点难的话，他就全部就帮我代工。就包括其实刚一开始我用号的时候，他全部都是帮我复制好。比如说我要发哪个一个平台了，他说好的，我帮你准备好，然后帮我复制好文案之后，我直接去粘贴就好了。
+<strong>小西瓜</strong>: 嗯。
+<strong>可友</strong>: 对，谢谢点亮。而且这个其实已经开始实现了，他的社交平台已经发了很多内容了，他还就是边学边分享的 <strong>Learning Public</strong>。
+<strong>AI 助手</strong>: 对对。因为我觉得这样边学边分享的话，正反馈还蛮多的，而且还能督促我学习上进。
+<strong>可友</strong>: 好，谢谢 <strong>Jamie</strong>。对，麦克刚刚发了一个，他自己做的是是你自己做的吧。这个对对对，这个 <strong>Chrome</strong> 的对的。
+<strong>互动者</strong>: 是我先是我也在用。
+<strong>可友</strong>: 很好用超好用。
+<strong>互动者</strong>: 嗯。
+<strong>互动者</strong>: 对。
+<strong>互动者</strong>: 然后有什么 <strong>Bug</strong> 就找我就好了，我我自己也在用。
+<strong>可友</strong>: 然后呢，它不自动问对哦。
+<strong>互动者</strong>: 这个我去 <strong>Prompt</strong> 一下，<strong>Fix</strong> 一下好啊。
+<strong>可友</strong>: 昨天刚还在用。OK，那最后也就是我来压轴了。那个我来我想在分享之前，我我先计时啊，我声音有点太多了。呃，想继续。</p>
+<h3>Josh的Sprout灵感捕捉与内容创作</h3>
+<p><strong>Josh</strong>: OK。呃，我想先问大家一个问题，就是呃你们有没有过这种感受？脑子里突然有个想法，觉得哎这也挺有意思的，想分享一下，然后就没有然后了。我有而且很频繁。我其实平时有很多想法，但是我想分享到社交媒体，但我就是苦于嗯怎么把念头落地变成可以发布的东西。所以这次的 <strong>Hackathon</strong> 活动呢，我想解决就是呃作为社交媒体新手，从灵感到发布，这个距离到底有多远，我能不能缩短这段距离？所以我做了一个工具叫 <strong>Sprout</strong>。呃，我先给大家看一个很简单的东西，我这是我的手机，就是在就是看我这个我的分析，我不是分享屏幕啊。我平时如果有什么想法，就会打开我这个 <strong>Action Button</strong>，然后它就会自动开始录音。现在是北京时间的三月十五号，十点二十三，然后结束录音，它就会自动生成一个呃自动转录我的文字，然后进入我的 <strong>Obsidian</strong> 里面。这个就是已经加入我的 <strong>Obsidian</strong> 里了。然后现在看我的电脑屏幕，我刷新一下这个页面，它可能哦他已经出现了录音，但是文字还没有转录过来，需要一些时间。呃，我平时有什么想法，就打开手机对着他说一句话，然后他可以把我 <strong>Obsidian</strong> 的每日笔记实时同步过来。这个是通过 <strong>API</strong> 实现的。每天的笔记里呢我会用四个斜线来把内容切成很多块。因为我每天的想法其实是很散的，我需要能够分块的去选择我的想法。比如三月九号这个对应的有有三块嘛，然后它对应的就是三个素材，我就可以选。因为它们是不相关的，我就可以选不同的想法。然后刚才的那句话看看他过没哦，他过来了。他会现在是北京时间这刚才那那我录的那句话，他已经过来了。那我现在呢想要开始做一个跑步相关的视频，那我就把这跟这个主题相关的片段选出来。就在三月五号这儿，我选加入素材库，然后选好了下一步我选我的个人账号。因为我有时候还会做社群媒体的社群的账号，这次就是个人账号。然后这时候他就会引导我去我的 <strong>Antigravity</strong> 里面告诉我，开始 <strong>Co-write</strong>。我直接给大家展示一下我们当时 <strong>Co-write</strong> 的呃。
+<strong>小西瓜</strong>: 结果在哎呀这儿哦。
+<strong>Josh</strong>: 对他先是读取了我的笔记，然后开始问我。第一个问题他会问我三个问题。第一个问题是我做 <strong>Vibrons</strong>，<strong>Vibrons</strong> 是我想做的那个跑步的 <strong>App</strong> 起心动念是什么？然后我就回复他，我的起心动念是什么？中间我还让他帮我做一个 <strong>Research</strong>，帮我证实一下是不是我的这个想法是对的。然后他不仅帮我做了 <strong>Research</strong>，还问我下一个问题，问我的内容，想传达什么情绪，给我给了我三个选项。然后第三个问题，希望我的内容里有多少技术和产品细节。我把问题都回复他之后，他就可以给我生成一个生成一个完整的文章出来。我我觉得就是最好的地方，就是他这三个问题是由浅入深的，每一个都能帮我把原本很凌乱的想法理清楚了。呃，问完之后，我自己都发现我自己好像更清楚自己到底想干什么了。呃，看最后的产出已经是一个非常完整的有条理的文章，而且完全是我自己的东西。呃，我我给他要求的是不只是把我说的话整理一遍，还要加入他自己的观点。所以你看他最后他说他作为我的他作为我的 <strong>Co-writer</strong>，他加了三个自己的视角。一个是这个脑科学的，然后行为心理学的他自己加了一些视角。然后最妙的是，他说 <strong>Vibrons</strong> 这个 <strong>App</strong> 要解决的问题是烧是抓住稍纵即逝想法。而本身就是我跑步时候一个稍纵即逝的想法。就是他说这是一个 <strong>Vibrons</strong> 带来的讽刺，这是我完全没想到的。我觉得这就是我做 <strong>Co-write</strong> 最有意思的地方，<strong>AI</strong> 他可以帮我或者说陪我想到我自己都想想不到的东西。然后这个脚本是可以完全直接拿去用了，我直接就拿去用了，去拍了一个视频。然后我用了一个剪辑软件，非常推荐大家使用，叫 <strong>Descript</strong>。他就直接把我直接把我的视频生成了字幕，然后我根据这个字幕就可以直接剪。可以给大家看一小我不知道是不是因为我训练的程度不够，但我从来都没有在跑完步之后后悔过。然后拍完之后我这个还没剪完啊。如果我剪完的话，我就会直接呃剪完了发布了，我就会直接回到我这个 <strong>Sprout</strong> 页面里，然后点击去发布。我把我发布的帖子的链接贴到这里面，它这个会自动识别我这个帖子的标题，我只存档我的标题和链接。因为未来可能会加数据看板。因为我觉得嗯我不想要存档这个视频，原原视频它都可以存在我的本地和 <strong>Google Drive</strong> 里面。我还不打算放在就是做数据分析的话，其实没有必要看我我的那个视频本身嘛。然后我有做完这个东西，我有两个想法。第一就是关于自动化，我最开始做这个想就是跟那个我们的 <strong>Oscar</strong> 想法也也很像。我最开始做这个项目的时候，想的是所有平台都接入 <strong>API</strong>，它可以自动给我产出，内容自动发布，我完全不用管，但是开始做了才才发现，基本不可能。首先国内很多平台就没有开放的 <strong>API</strong>。其次就算他真的做到了，谁能忍住不再去看一眼呢？所以人在场这个事儿根本躲不掉。我认为与其花时间做一个可能根本用不上的自动化，不如把时间用在做好内容上。第二个也是 <strong>Oscar</strong> 说过，关于语音输入，我试了好几个工具。<strong>Typeless</strong> 它会自动帮我整理。我说的话用来 <strong>Prompt AI</strong>，它是很好用的。但是想保留真人味，不让 <strong>AI</strong> 叠加 <strong>AI</strong>，我会更推荐原生的语音转录。比如说 <strong>Whisper Flow</strong>，它不会改变我们的用词，因为我认为太完美的东西反而是不真实的。呃，最后虽然我们这个 <strong>Topic</strong> 叫社交媒体自动分发，但我更想解决的是怎么让真实的我能够更顺畅的出现在社交媒体上，让内容来自于我，而不是 <strong>AI</strong>。谢谢，这是我的分享。
+<strong>互动者</strong>: 哇，这个思思考好，深入也是 <strong>Echo</strong> 了。我觉得社情一下，哇，产品直接就退掉了啊，直接就这样。我再说一遍，我最后思考很深入，也是 <strong>Echo</strong> 了。我觉得其他的也是，我觉得也是我的想法，其实就是分发嘛，其实最多就是分发。创意的话还是就像 <strong>Ray</strong> 说的，就是不能够规模化，其实确实很难规模化。对。
+<strong>小西瓜</strong>: 嗯。
+<strong>Josh</strong>: 好，我现在给大家让大家那个就是好，我们今天基本上就也到时间了。然后晚一点我会把我们这期的直播分享发布。然后如果大家有任何新的点子，随时可以在那个总结帖下面回复，我们都会参考的。然后第二期 <strong>Mini Hackathon</strong> 的活动也即将马上，但是目前还没有定时间啊，应该会在四月之前开发布。好，那如果大家没有什么其他的问题，我们今天就到这里，谢谢大家的参与，非常感谢大家。
+<strong>小西瓜</strong>: 这四四周也就谢再见再见，再见再见对对。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>, 
+                
+                  <a href="/search/?q=Apple" class="entity-link company-link">Apple</a>, 
+                
+                  <a href="/search/?q=TikTok" class="entity-link company-link">TikTok</a>, 
+                
+                  <a href="/search/?q=YouTube" class="entity-link company-link">YouTube</a>, 
+                
+                  <a href="/search/?q=Xiaohongshu" class="entity-link company-link">Xiaohongshu</a>, 
+                
+                  <a href="/search/?q=Twitter" class="entity-link company-link">Twitter</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=PKS Core" class="entity-link product-link">PKS Core</a>, 
+                
+                  <a href="/search/?q=Valuator" class="entity-link product-link">Valuator</a>, 
+                
+                  <a href="/search/?q=MiniMax" class="entity-link product-link">MiniMax</a>, 
+                
+                  <a href="/search/?q=n8n" class="entity-link product-link">n8n</a>, 
+                
+                  <a href="/search/?q=Antigravity" class="entity-link product-link">Antigravity</a>, 
+                
+                  <a href="/search/?q=Descript" class="entity-link product-link">Descript</a>, 
+                
+                  <a href="/search/?q=Whisper Flow" class="entity-link product-link">Whisper Flow</a>, 
+                
+                  <a href="/search/?q=Sprout" class="entity-link product-link">Sprout</a>, 
+                
+                  <a href="/search/?q=Vibrons" class="entity-link product-link">Vibrons</a>, 
+                
+                  <a href="/search/?q=NotebookLM" class="entity-link product-link">NotebookLM</a>, 
+                
+                  <a href="/search/?q=GPT-4o" class="entity-link product-link">GPT-4o</a>, 
+                
+                  <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>, 
+                
+                  <a href="/search/?q=Gemini" class="entity-link product-link">Gemini</a>
+                
+              </p>
+            
+            
+              <p><strong>媒体/书籍:</strong>
+                
+                  <a href="/search/?q=卡片和笔记" class="entity-link media-link">卡片和笔记</a>, 
+                
+                  <a href="/search/?q=Psycho-Cybernetics" class="entity-link media-link">Psycho-Cybernetics</a>
+                
+              </p>
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">ai-assistant</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/workflow-automation/">workflow-automation</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/content-creation/">content-creation</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/knowledge-management/">knowledge-management</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/personal-productivity/">personal-productivity</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

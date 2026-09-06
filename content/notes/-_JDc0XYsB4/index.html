@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI云端狂想曲：亚马逊云科技的算力突围、Agent重构与卓越运营</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="AI云端狂想曲：亚马逊云科技的算力突围、Agent重构与卓越运营" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">AI云端狂想曲：亚马逊云科技的算力突围、Agent重构与卓越运营</span>
+      <span data-pagefind-meta="speaker" style="display:none;">硅谷101</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2025-12-16
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/gui-gu-101/">硅谷101</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=-_JDc0XYsB4" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2025-12-16
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">随着ChatGPT三周年，AI竞争进入白热化。本文深入探讨亚马逊云科技在re:Invent大会上发布的AI战略，重点关注算力（自研芯片Trainium与英伟达GPU合作）、模型生态（Nova 2系列及Bedrock平台）、Agent（Nova Act与AgentCore）及企业级应用，展现其在AI时代下对“卓越运营”的长期主义追求及全栈生态布局。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>AI算力角逐：云端大战与AWS的战略支点</h3>
+<p>在<strong>OpenAI</strong>发布<strong>ChatGPT</strong>三周年之际，全球<strong>AI</strong>大战已进入新一轮激战。<strong>谷歌</strong>（Google）在11月下旬重磅发布了<strong>Gemini 3</strong>，并放出<strong>TPU</strong>（Tensor Processing Unit: 谷歌专为机器学习工作负载设计的专用集成电路）集群训练<strong>Gemini</strong>与<strong>Meta</strong>（Meta Platforms: 美国社交媒体和科技公司）大订单的消息，这使得<strong>OpenAI</strong>拉响了“红色警报”（Code Red），也让<strong>英伟达</strong>（NVIDIA: 美国图形处理器和人工智能芯片公司）这样的<strong>GPU</strong>（Graphics Processing Unit: 图形处理器，通用计算能力强）巨头感受到了压力。</p>
+<p>随着模型巨头们开启新一轮较劲，<strong>AI云厂商</strong>（AI Cloud Provider: 提供AI计算资源和服务的云计算厂商）在算力市场蛋糕迅速扩张的现状中，既面临着紧张的速度竞赛，也面临着技术创新的压力。面对如今的云端大战格局，全球最大云厂商<strong>亚马逊云科技</strong>（Amazon Web Services, AWS: 亚马逊公司旗下的云计算服务平台）将如何布局下一步棋，成为业界关注焦点。在今年的re:Invent大会上，<strong>AWS</strong>展现了其将整个拉斯维加斯变成<strong>AI</strong>乌托邦的决心，其部署的<strong>AI云基础设施</strong>（AI Cloud Infrastructure: 支持人工智能工作负载的云计算基础设施）规模领先且最为广泛。大会的<strong>2B企业级</strong>（Business-to-Business Enterprise: 面向企业的商业模式）技术创新和案例，直接反映了企业在<strong>AI</strong>应用上的“用脚投票”以及<strong>AI</strong>的实际效益。</p>
+<h3>算力突围：英伟达GPU绑定与Trainium自研芯片</h3>
+<p>在算力支持方面，<strong>AWS</strong>在2025年末的策略是：继续与<strong>英伟达</strong>的<strong>GPU</strong>进行深度绑定并适配优化，同时大幅提升自研芯片的性能。首先，<strong>AWS</strong>一如既往强调与<strong>英伟达</strong>的合作，致力于成为<strong>GPU</strong>的“最佳栖息地”。这意味着<strong>AWS</strong>不仅部署<strong>英伟达</strong>最先进的<strong>GPU</strong>，更进行深度优化，以实现<strong>GPU</strong>算力极高的可靠性和可用性。例如，<strong>AWS</strong> CEO <strong>Matt Garman</strong>介绍了基于<strong>英伟达GB300-NVL72</strong>构建的<strong>P6e-GB300实例</strong>（P6e-GB300 Instance: 基于特定GPU硬件的AWS计算实例），旨在将<strong>AWS</strong>打造成运行<strong>英伟达显卡</strong>（NVIDIA GPU: 英伟达图形处理器）更优的选择。事实证明，这条道路没有捷径，例如在2025年11月初，<strong>AWS</strong>与<strong>OpenAI</strong>宣布达成380亿美元的多年战略合作，<strong>OpenAI</strong>选择的就是搭载<strong>英伟达GPU</strong>的<strong>Amazon EC2 UltraServers计算集群</strong>（Amazon EC2 UltraServers Compute Cluster: AWS的EC2超算服务器集群），实现极低延迟通信以高效运行<strong>AI</strong>任务。</p>
+<p>其次，更受市场关注的是<strong>AWS</strong>的自研芯片。类似于<strong>谷歌</strong>的<strong>TPU</strong>，这种<strong>ASIC专项芯片</strong>（Application-Specific Integrated Circuit: 专用集成电路，为特定功能量身定制）在一定程度上对<strong>英伟达</strong>目前的垄断地位构成威胁。对于<strong>AWS</strong>这样的云厂商而言，这是一场算力突围战。<strong>Matt Garman</strong>透露，在提供多种模型<strong>API</strong>（Application Programming Interface: 应用程序编程接口）调用的<strong>Amazon Bedrock平台</strong>（Amazon Bedrock Platform: AWS提供的完全托管式基座模型服务）上，绝大部分用户都在用<strong>AWS</strong>的自研芯片<strong>Trainium</strong>来做推理，包括<strong>Anthropic</strong>（Anthropic: 美国人工智能安全和研究公司）的<strong>Claude模型</strong>（Claude Model: Anthropic开发的大语言模型）。</p>
+<p>在今年的大会上，<strong>Trainium芯片系列</strong>（Trainium Chip Series: AWS自研的AI训练芯片系列）迎来了升级。采用3nm工艺的第三代<strong>AI加速器Trainium3</strong>（Trainium3: AWS第三代AI训练加速器）能效相较上一代提升40%，算力翻倍，为大规模<strong>AI</strong>训练和推理带来高性价比。<strong>Trainium3</strong>的算力提升4.4倍，内存带宽提升3.9倍，每兆瓦功率可处理的<strong>AI token数</strong>（AI Token: 人工智能处理的最小文本单位）提升5倍。此外，<strong>Matt Garman</strong>还在现场剧透了<strong>Trainium4</strong>的消息，其<strong>FP4性能</strong>（FP4 Performance: 4位浮点数计算性能）提升6倍，内存带宽提升4倍，<strong>HBM容量</strong>（High Bandwidth Memory Capacity: 高带宽内存容量）增加2倍，并在性能增强的同时降低能耗。这进一步表明<strong>AWS</strong>对自研<strong>ASIC芯片</strong>的决心和押注。<strong>ASIC芯片</strong>为特定功能或应用场景量身定制，在特定任务上能够实现比<strong>英伟达GPU</strong>更高的效率、更低的功耗和更优的性能。尽管<strong>ASIC芯片</strong>需要一定的适配时间，但一旦适配好，就能实现更高效的训练和推理。<strong>Amazon Trainium</strong>将工具交到开发者手中，显著降低了工作负载的运行成本。</p>
+<p><strong>Trainium系列</strong>的快速发展，得益于<strong>AWS</strong>此前对<strong>Anthropic</strong>的80亿美元投资。在2024年的re:Invent上，<strong>AWS</strong>与<strong>Anthropic</strong>高调宣布了<strong>Project Rainier</strong>，涉及30个数据中心，耗费1.1 GW电力，采用50万块<strong>Trainium2芯片</strong>（Trainium2: AWS第二代AI训练加速器）。这种大规模集群的适配合作，使得<strong>Trainium</strong>不仅在推理，还在大模型的训练上都进行了适配和优化，为<strong>Anthropic</strong>的<strong>Claude</strong>等模型用户提供高性能和低成本的算力服务。有投资人认为，<strong>ASIC</strong>和<strong>GPU</strong>并非对立关系，而是互补关系。各大云厂商在自研<strong>ASIC芯片</strong>上投入的同时，也在竞争谁能更好地托管<strong>英伟达GPU</strong>，提供最佳的<strong>基础设施</strong>（Infrastructure: 基础架构）和配套服务。<strong>ASIC芯片</strong>在特定工作负载上能更有效，并有助于管理利润率和成本结构，同时作为差异化因素对抗其他云供应商。</p>
+<h3>模型生态进化：Nova 2家族与Bedrock平台拓展</h3>
+<p>除了自研芯片，本次大会的另一大亮点是<strong>亚马逊云科技</strong>的自研模型组合——<strong>Nova模型</strong>（Nova Model: AWS自研的基座模型系列）的更新，极大地扩展和升级了其模型生态。如今，数以万计的客户使用<strong>Amazon Nova</strong>，包括<strong>电通</strong>（Dentsu: 日本广告与公共关系公司）、<strong>Infosys</strong>（Infosys: 印度IT服务公司）、<strong>Blue Origin</strong>（Blue Origin: 贝索斯创立的私人航天公司）、<strong>Robinhood</strong>（Robinhood: 美国金融服务公司）等科技领军企业，以及<strong>NinjaTech AI</strong>（NinjaTech AI: 创新型初创公司）等创新型初创公司。在此基础上，<strong>AWS</strong>正式发布了新一代的<strong>Amazon Nova 2</strong>（Amazon Nova 2: AWS新一代自研基座模型），包括<strong>Nova 2 Lite</strong>、<strong>Nova 2 Pro</strong>、<strong>Nova 2 Sonic</strong>和<strong>Nova 2 Omni</strong>四款模型的更新。</p>
+<p><strong>AWS</strong>的自研模型策略并非与头部最强模型争夺极致性能，而是在与一线模型能力持平的前提下，通过打“性价比”牌，并利用整个云生态的配套加持，为客户提供更多选择。</p>
+<ul>
+<li><strong>Nova 2 Lite</strong>（Nova 2 Lite: Nova 2系列中的轻量级推理模型）是一款面向日常工作负载的快速、经济型推理模型，能够处理文本、图像和视频输入，并生成文本输出。它适用于处理文档、从视频中提取关键信息、生成代码、提供基于事实的回答以及自动化执行多步骤的<strong>Agent工作流</strong>（Agent Workflow: 智能体自动执行任务的流程）。</li>
+<li><strong>Nova 2 Pro</strong>（Nova 2 Pro: Nova 2系列中智能度最高的推理模型）是<strong>AWS</strong>最智能的推理模型，能处理文本、图像、视频和语音输入，并生成文本输出。它适合用于需要高准确率的高度复杂任务，如<strong>Agent编程</strong>（Agentic Coding: 通过智能体自动生成或优化代码）、长期规划及复杂问题求解。这款模型还可用作“教师模型”，通过知识蒸馏（Knowledge Distillation: 将大模型知识迁移到小模型的技术）将能力迁移到更小、更高效的“学生模型”上，用于特定垂直领域。</li>
+<li><strong>Nova 2 Sonic</strong>（Nova 2 Sonic: Nova 2系列中的端到端语音模型）是<strong>AWS</strong>的端到端语音模型，深度融合文本与语音的理解与生成，实现实时、类人对话式<strong>AI</strong>体验。它支持多种语言和富有表现力的音色，具备更高识别准确率，并提供高达100万<strong>token</strong>的上下文窗口，支持长时交互。</li>
+<li><strong>Nova 2 Omni</strong>（Nova 2 Omni: Nova 2系列中的统一多模态推理与生成模型）是一款统一的多模态推理与生成模型，可处理文本、图像、视频和语音输入，并同时生成文本和图像。它能处理多达75万单词的文本、数小时音频、长视频以及数百页文档，一次性分析完整产品目录、用户评价、品牌规范和视频素材库，降低了连接多种专业模型的成本与复杂度。</li>
+</ul>
+<p>这些主打“全模态”的模型对于企业非常有用，例如<strong>思科</strong>（Cisco: 美国跨国科技公司）和<strong>西门子</strong>（Siemens: 德国工业制造公司）等众多企业已利用<strong>Nova 2模型</strong>构建<strong>Agent威胁检测</strong>（Agent-based Threat Detection: 基于智能体的威胁检测）、视频理解和语音<strong>AI助手</strong>（AI Assistant: 人工智能助理）等多种创新应用。</p>
+<p>此外，本次re:Invent大会的另一重点是发布了四家外部模型上线<strong>Amazon Bedrock</strong>，包括来自中国的<strong>MiniMax</strong>（MiniMax: 中国人工智能公司）和<strong>Kimi</strong>（Kimi: 中国人工智能公司），以及<strong>Google</strong>的<strong>Gemma</strong>（Gemma: Google开发的轻量级开放模型）和<strong>英伟达</strong>的<strong>Nemotron</strong>（Nemotron: NVIDIA开发的语言模型）。这使得<strong>Amazon Bedrock</strong>的模型生态更加丰富，对开发者和企业更加友好。</p>
+<p>除了模型本身，还有两个模型配套上的亮点：首个面向自建前沿<strong>AI模型</strong>的创新服务<strong>Nova Forge</strong>（Nova Forge: AWS提供的开放训练模型平台）和面向<strong>UI工作流</strong>（User Interface Workflow: 用户界面操作流程）的高可靠<strong>AI Agent</strong>服务<strong>Nova Act</strong>（Nova Act: AWS提供的高可靠AI Agent服务）。<strong>Nova Forge</strong>旨在解决企业在整合私域知识与前沿模型能力时的痛点，通过将企业专有数据与<strong>Nova</strong>模型能力结合，帮助企业打造专属的<strong>Novellas</strong>（Novellas: Nova Forge创建的定制化Nova优化变体）定制模型。目前，<strong>Booking.com</strong>（Booking.com: 荷兰在线旅游平台）、<strong>Reddit</strong>（Reddit: 美国社交新闻聚合和讨论网站）和<strong>索尼</strong>（Sony: 日本跨国科技公司）等多家企业已利用<strong>Nova Forge</strong>构建更契合自身需求的专属模型。</p>
+<p><strong>Nova Act</strong>是用于在浏览器中构建和部署高可靠性的<strong>AI Agent</strong>，实现自动执行各类操作，由定制版的<strong>Nova 2 Lite模型</strong>提供算力支撑，是构建和管理大规模浏览器自动化<strong>Agent集群</strong>（Agent Cluster: 智能体集群）的快捷路径。<strong>Nova Act</strong>在早期客户工作流中达到了90%的执行可靠性，其客户案例包括：<strong>Sola Systems</strong>（Sola Systems: 初创公司）每月自动完成数十万次工作流任务，涵盖支付对账、货运协调和医疗记录更新；<strong>1Password</strong>（1Password: 密码管理软件公司）利用<strong>Nova Act</strong>帮助用户以更少手动操作访问登录信息；<strong>赫兹</strong>（Hertz: 美国汽车租赁公司）通过<strong>Nova Act</strong>实现租车平台端到端测试自动化，将软件交付速度提升5倍；<strong>Amazon Leo</strong>（Amazon Leo: 亚马逊的卫星互联网服务）在服务发布前借助<strong>Nova Act</strong>消除了质量测试瓶颈，大幅减少工程师投入时间。</p>
+<h3>Agent赋能：重塑软件开发与协作边界</h3>
+<p><strong>Nova Act</strong>的推出显示出<strong>亚马逊云科技</strong>对<strong>Agent</strong>方向的重视，围绕<strong>Agent</strong>打造的一系列生态支持也是今年re:Invent的重点。<strong>AWS</strong>坚信<strong>AI Agent</strong>将成为时代最具变革性的突破之一，并致力于将其平台打造成构建和运行这些<strong>Agent</strong>的最佳选择。</p>
+<p>尽管<strong>Agent</strong>在2025年爆发，企业争相部署，但在生产和管理中面临快速规模化部署、记忆过去交互、识别和访问工具、掌握复杂工作流、观察和调试问题等挑战。为帮助客户大规模构建、部署安全的生产级<strong>Agent</strong>，<strong>AWS</strong>推出了<strong>Amazon Bedrock AgentCore</strong>（Amazon Bedrock AgentCore: AWS提供的Agent平台），一款专为安全、大规模构建和部署<strong>Agent</strong>而设计的平台。它包含一系列关键组件，提供大规模运行生产级<strong>Agent</strong>所需的全套服务，客户可使用其构建<strong>Agent</strong>，也可结合任何开源<strong>Agent构建框架</strong>（Agent Building Framework: 用于开发智能体的框架）。</p>
+<p><strong>Bedrock AgentCore</strong>有三项关键新功能：</p>
+<ol>
+<li><strong>Policy in AgentCore</strong>（Policy in AgentCore: AgentCore中的策略管理功能）：企业只需用自然语言描述规则，即可创建精细化策略，定义<strong>Agent</strong>可访问的工具、数据、可执行操作和适用条件，解决了权限问题。</li>
+<li><strong>AgentCore Evaluation</strong>（AgentCore Evaluation: AgentCore中的评估工具）：通过内置评估工具监控<strong>Agent</strong>在实际运行中的表现质量，评估维度包括准确性和帮助性，并可添加自定义评估工具。</li>
+<li><strong>Episodic Functionality in AgentCore Memory</strong>（Episodic Functionality in AgentCore Memory: AgentCore中的情景记忆功能）：情景记忆功能自动保存交互过程中的关键事件和状态，助力<strong>Agent</strong>从过往经验中学习，提升决策水平。</li>
+</ol>
+<p>这些功能的核心目标是加速<strong>Agent</strong>从想法到大规模生产落地的进程。</p>
+<p>此外，本次还发布了三款新<strong>Agent</strong>：</p>
+<ul>
+<li><strong>Kiro autonomous agent</strong>（Kiro Autonomous Agent: 可自主开发和编程的智能体）可自主进行开发和编程，改变了软件开发方式，自动化完成功能交付、缺陷分类、提升代码覆盖率等任务。</li>
+<li><strong>Amazon Security Agent</strong>（Amazon Security Agent: AWS的安全智能体）则扮演虚拟安全工程师角色，在应用设计、代码审查与渗透测试等环节充当安全顾问。</li>
+<li><strong>Amazon DevOps Agent</strong>（Amazon DevOps Agent: AWS的DevOps智能体）作为虚拟运营专家，协助团队解决并预防运行故障，持续提升系统可靠性与性能。</li>
+</ul>
+<p>这些更新强调，构建<strong>AI Agent</strong>的四大支柱——<strong>AI芯片</strong>、<strong>模型生态</strong>、首创的“开放训练模型”平台以及<strong>Agent开发工具</strong>——的全面升级和全生态加速押注，明确传递出关键信息：尽管<strong>AI</strong>正在改变应用开发方式，但云计算的基础属性（安全性、可用性、弹性、成本和敏捷性）比以往任何时候都更加重要。与<strong>谷歌</strong>主推<strong>Gemini</strong>、<strong>微软</strong>（Microsoft: 美国科技公司）倾向<strong>OpenAI</strong>模型不同，<strong>亚马逊</strong>（Amazon: 美国跨国科技公司）在这些巨头中显得最为均衡，其<strong>Nova系列模型</strong>并非主推焦点，而是更关注将<strong>Bedrock</strong>打造成一个<strong>multi-model平台</strong>（Multi-model Platform: 支持多种模型的平台），完整搭建安全、数据存储等配套服务，汇集大量<strong>供给</strong>（Supply: 资源供应）和<strong>需求</strong>（Demand: 市场需求），扮演平台角色，类似于电商模式。</p>
+<h3>卓越运营：AI落地的“不被看见的价值”</h3>
+<p>除了硬核更新，<strong>AWS</strong>还通过丰富的客户案例展示了企业如何拥抱<strong>AI</strong>策略。例如，<strong>Photoshop</strong>（Photoshop: Adobe的图像编辑软件）的母公司<strong>Adobe</strong>（Adobe: 美国软件公司）正利用<strong>AWS基础设施</strong>（AWS Infrastructure: AWS提供的云基础设施）加速<strong>AI转型</strong>，其一站式平台<strong>Adobe Firefly</strong>（Adobe Firefly: Adobe的生成式AI模型集）包含文本到图像、文本到视频和生成填充能力，由<strong>英伟达GPU</strong>驱动的<strong>Amazon EC2 P5和P6计算实例</strong>（Amazon EC2 P5 and P6 Compute Instances: AWS EC2提供的基于特定GPU的高性能计算实例）进行模型训练，已生成超过290亿份创意资产。<strong>Adobe</strong>还将<strong>AI助手</strong>集成进<strong>Adobe Express</strong>（Adobe Express: Adobe的创意设计应用），与<strong>AWS</strong>的合作保证了这些<strong>Agent</strong>s的高效与安全运行。</p>
+<p>传媒巨头<strong>康泰纳仕</strong>（Condé Nast: 美国出版媒体公司），即《<strong>Vogue杂志</strong>》（Vogue Magazine: 康泰纳仕旗下时尚杂志）的母公司，正与<strong>AWS</strong>联手进行现代数字媒体转型。通过<strong>AWS</strong>构建统一内容系统与<strong>数据湖仓</strong>（Data Lakehouse: 结合数据湖和数据仓库特性的架构），利用<strong>AI翻译</strong>（AI Translation: 人工智能翻译）实现内容跨区域发布，数字收入占比达70%。其《<strong>纽约客</strong>》（The New Yorker: 康泰纳仕旗下杂志）付费订阅超过100万。<strong>康泰纳仕</strong>还依托<strong>AWS</strong>合作大型直播活动，如<strong>Met Gala</strong>（Met Gala: 大都会艺术博物馆慈善晚宴），通过对事件和直播流的实时分析，使其时尚社会的<strong>参与度</strong>（Engagement: 用户参与度）远超格莱美奖、金球奖乃至超级碗。正如<strong>康泰纳仕</strong>首席产品官兼首席技术官<strong>Sanjay Bhakta</strong>所言：“纸质媒体定义了我们，数字媒体扩张了我们，而数据将变革我们。”</p>
+<p><strong>蓝色起源</strong>（Blue Origin: 贝索斯创立的私人航天公司）在re:Invent大会上发布了第一艘能自主垂直发射和着陆的航天器，并成功发射着陆<strong>New Glenn号轨道火箭</strong>（New Glenn Orbital Rocket: Blue Origin研发的重型运载火箭），目标重返月球。通过与<strong>AWS</strong>合作，2700个<strong>Agent</strong>进入业务流程，一个月内为70%员工促成超过350万次互动。他们还发布了一款利用<strong>AI</strong>研发的“月球吸尘器”，能将月尘转化为能源，完全由<strong>AI设计</strong>（AI Design: 人工智能设计）。<strong>蓝色起源</strong>更是大胆地将<strong>AWS Agent功能</strong>引入航空系统设计，通过内部<strong>BlueGPT平台</strong>（BlueGPT Platform: Blue Origin内部的AI平台）调用多个<strong>Agent</strong>支持研发，使总体交付速度提升75%。</p>
+<p><strong>亚马逊CTO Werner Vogels</strong>在最后一场keynote演讲中分享了<strong>海洋清理组织</strong>（Ocean Cleanup: 致力于清理海洋垃圾的非营利组织）与<strong>AWS</strong>合作，优化塑料检测模型、预测垃圾移动轨迹、最大化清理效率的案例。在体育赛事领域，<strong>AWS</strong>也展示了其<strong>AI</strong>应用。例如在F1赛车中，每辆赛车配备300个传感器，每秒产生超过110万个数据点，<strong>AWS</strong>提供实时数据传输和精准分析，使得车队在激烈的竞争中获得高效响应。<strong>AWS</strong>与<strong>NBA</strong>的合作也很有意思，<strong>AI</strong>帮助<strong>NBA</strong>追踪和共享统计数据，衡量以前无法量化的球员表现，如<strong>投篮难度</strong>（Shot Difficulty: 篮球投篮难度指标）、<strong>防守综合评分</strong>（Defensive Rating: 衡量防守效率的指标）和<strong>引力</strong>（Gravity: 篮球战术概念，指球员对防守注意力的吸引力）。这种“引力”数据在<strong>AI</strong>出现之前难以记录和分析，而现在已成为<strong>NBA</strong>核心数据指标之一，改变了观众的比赛观看方式。</p>
+<p>回顾这次re:Invent大会，<strong>Werner Vogels</strong>强调了“卓越运营”的专业自豪感，即“我们建造的大部分东西，最终都不会有人看到”。<strong>AWS</strong>在<strong>ChatGPT</strong>上线三周年之际，以“长期主义”追求其擅长的“卓越运营”，不追求某一环节的单点领先，而是通过极致优化，让算力、平台、模型、数据管理、<strong>Agent工具</strong>（Agent Tool: 智能体使用的工具）形成全栈的生态支持，真正助力<strong>AI落地</strong>（AI Implementation: 人工智能在实际场景中的应用）。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Amazon Web Services" class="entity-link company-link">Amazon Web Services</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>, 
+                
+                  <a href="/search/?q=NVIDIA" class="entity-link company-link">NVIDIA</a>, 
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=ChatGPT" class="entity-link product-link">ChatGPT</a>, 
+                
+                  <a href="/search/?q=Gemini 3" class="entity-link product-link">Gemini 3</a>, 
+                
+                  <a href="/search/?q=Trainium" class="entity-link product-link">Trainium</a>, 
+                
+                  <a href="/search/?q=Nova 2" class="entity-link product-link">Nova 2</a>, 
+                
+                  <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>, 
+                
+                  <a href="/search/?q=Amazon Bedrock" class="entity-link product-link">Amazon Bedrock</a>, 
+                
+                  <a href="/search/?q=Nova Forge" class="entity-link product-link">Nova Forge</a>, 
+                
+                  <a href="/search/?q=Nova Act" class="entity-link product-link">Nova Act</a>, 
+                
+                  <a href="/search/?q=AgentCore" class="entity-link product-link">AgentCore</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-infrastructure/">ai-infrastructure</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/cloud-computing/">cloud-computing</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-models/">ai-models</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-agents/">ai-agents</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">operational-excellence</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

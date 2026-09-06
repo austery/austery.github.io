@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AMD十年逆袭：CTO深度访谈，揭秘Zen架构、AI算力与未来科技之路</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="AMD十年逆袭：CTO深度访谈，揭秘Zen架构、AI算力与未来科技之路" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">AMD十年逆袭：CTO深度访谈，揭秘Zen架构、AI算力与未来科技之路</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Best Partners TV</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-02-14
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/best-partners-tv/">Best Partners TV</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=uAzsgbRdGkM" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-02-14
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本期内容回顾了AMD十年间的辉煌逆袭。通过对其首席技术官马克·佩珀马斯特的深度访谈，深入剖析了Zen架构的诞生、Chiplet小芯片与Infinity Fabric互连技术的战略性押注，以及AMD如何从低谷走向行业领先地位。访谈还探讨了AI时代下系统级设计（如Helios项目）、AI原生设计和光互连技术的前景，并分享了AMD的工程师文化与创新哲学。AMD通过不断绕过物理极限，构建全栈式计算生态，定义着计算的未来。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>宏大叙事：AMD的十年逆袭</h3>
+<p><strong>[最佳拍档]</strong>: 大家好，这里是最佳拍档。在科技行业的历史长河中，很少有故事能像 <strong>AMD</strong> 的十年逆袭那样扣人心弦。如果我们把时钟拨回到二零一六年，那时候的半导体世界是一幅完全不同的景象。大家谈论的是 <strong>摩尔定律</strong> 的放缓，是 <strong>英特尔</strong> 不可撼动的统治地位，而AMD在那时很多人的眼中，只是一个在生存线上挣扎的配角。今天我们来分享的，是一场关于AMD的<strong>首席技术官马克·佩珀马斯特</strong>的访谈。他作为主持人<strong>伊恩·卡特雷斯</strong>的老朋友，这次对话不只是一次技术访谈，更像是一场对过去十年半导体行业风云变幻的复盘，以及对未来<strong>AI算力时代</strong>的深度预言。</p>
+<h3>故事的起点 (2016)</h3>
+<p><strong>[最佳拍档]</strong>: 我们要回到二零一六年的<strong>德国柏林消费电子展</strong>，那是伊恩第一次采访马克。那时的AMD，股价还在低位徘徊，<strong>Ryzen处理器</strong>还没有正式发布，服务器市场份额几乎归零。当时，马克对伊恩谈到了全新的<strong>Zen架构</strong>，谈到了他们重返高性能计算的野心。说实话，那时候行业内的大多数人，包括伊恩在内，虽然能做到礼貌的倾听，但是内心深处是充满怀疑的。大家都在问：这家公司真的能够拿出和巨头抗衡的产品吗？还是说，这又是一次营销上的烟雾弹呢？</p>
+<h3>十年后的复盘与反思</h3>
+<p><strong>[最佳拍档]</strong>: 十年后的今天，当他们坐在这个满是<strong>EPIC服务器</strong>和<strong>MI三百加速器</strong>的演播室里时，回看当年的质疑，显得格外意味深长。马克在这次访谈中，非常坦诚的回应了那个关于烟雾弹的问题。他说，那根本不是烟雾弹，那是一场精心策划的试验场。在马克和现任CEO <strong>Lisa Su</strong>接手公司技术与业务方向的时候，他们非常清楚，信任不是靠PPT赢回来的，而是靠持续不断的交付。<strong>Zen 1</strong>的发布，不仅仅是为了卖出芯片，更是为了向世界证明，AMD是认真的，AMD的技术路线是可行的。但这还仅仅是开始。马克提到，真正让行业态度发生根本性转变的，是<strong>Zen 2</strong>和<strong>Zen 3</strong>的连续成功。这不仅仅是性能的提升，更是一种宣告：AMD不再是那个偶尔灵光一现、随后就销声匿迹的二流选手了，而是一个能够保持稳定节奏、每一代都能够带来<strong>双位数IPC增长</strong>的持续创新者。</p>
+<h3>技术路线的豪赌：Chiplet与Infinity Fabric</h3>
+<p><strong>[最佳拍档]</strong>: 这背后是一场关于技术路线的豪赌。如果你关注处理器技术，一定听说过对<strong>摩尔定律</strong>已死的争论。确实，随着晶体管尺寸逼近物理极限，单纯依靠制程工艺带来的性能红利越来越少，成本却呈指数级的上升。在二零一二年左右，AMD做出了一个在当时看起来非常疯狂、甚至导致了一些高层技术人员愤而离职的决定，那就是全面押注<strong>小芯片设计</strong>和<strong>Infinity Fabric</strong>互连技术。在那个单片集成依然是王道的年代，将一颗大芯片切成几个小芯片，再用互连总线把它们连起来，在很多人看来是增加延迟、降低能效的歪门邪道。马克回忆说，当时内部的阻力是巨大的，这种技术路线极其有颠覆性，很多人认为是错误的方向。但是AMD的高层看到了未来。随着先进制程的良率挑战和成本的激增，只有通过模块化的设计，才能够在保持高性能的同时控制住成本，并且实现灵活的产品组合。事实证明，他们赌对了。这项技术不仅拯救了AMD，甚至成为了后来整个半导体行业竞相模仿的标准。Infinity Fabric不仅连接了CPU核心，更在后来成为了连接CPU和GPU、实现异构计算的关键纽带。这也是为什么今天AMD能够迅速推出像<strong>MI三百</strong>这样、集成了CPU、GPU和海量内存的超级芯片的根本原因，因为地基在十年前就已经打下了。</p>
+<h3>AMD的工程师文化与“健康争论”</h3>
+<p><strong>[最佳拍档]</strong>: 说到这里，我们必须聊聊AMD的工程师文化。在访谈中，马克多次提到了一个名字：<strong>迈克·克拉克</strong>。在AMD内部，他被称为<strong>Zen之父</strong>，就是他最初在纸上画出了Zen架构的雏形，并且给它起了这个名字。但是一个天才的想法，要想变成数十亿个晶体管的精密产品，靠的不是一个人的单打独斗，而是一个庞大团队的协作。马克分享了一个非常有意思的观点，他称之为<strong>健康的争论</strong>。在AMD的设计团队里，为了寻找最佳技术路径，比如到底是要追求极致的单核性能，还是要追求机架级的整体效率，不同小组之间会发生激烈的争论。马克并不排斥这种争论，相反，他鼓励这种互相扔石头的行为，只要它是专业的，因为只有在不断的碰撞中，才能够在复杂的工程权衡中找到那个最优解。当然，创新总是伴随着风险。老玩家可能还记得Zen 1刚出来的时候，会遇到某些极端情况下的Bug，比如在液氮极限超频下的低温启动问题。马克没有回避这些往事，他坦承早期确实有过教训。但是关键在于，AMD建立了一套强大的<strong>容错和修正机制</strong>。他们通过在设计中预埋大量的诊断电路和可配置路径，确保即使在流片后发现问题，也能够通过微代码更新或者软件绕过的方式进行修正，而不需要重新流片。这种设计哲学在如今流片成本高达几亿美元的先进制程时代，显得格外重要。</p>
+<h3>AI时代的系统级设计巨变：收购ZT Systems</h3>
+<p><strong>[最佳拍档]</strong>: 但是这还不是全部。随着AI时代的到来，计算的边界正在被无限拓宽。这次访谈中，最让我感到震撼的，是AMD对于<strong>系统级设计</strong>的认知转变。大家可能注意到了AMD最近的一个大动作：收购<strong>ZT Systems</strong>。这是一家服务器系统集成商。很多人不理解，一家做芯片的公司，为什么要买一家做服务器机架的公司呢？这难道不是在抢下游客户的生意吗？马克给出了自己非常深刻的解释。在AI大模型时代，单纯提升一颗芯片的性能已经不够了。现在的AI训练集群，动辄需要几万张GPU互连。在这个尺度上，散热、供电、网络拓扑，每一个环节都可能成为瓶颈。如果你只懂芯片，不懂机架，你就无法设计出最优的AI系统。通过收购ZT Systems，AMD获得了一张通往<strong>机架级设计</strong>的门票。马克提到了他们最新的<strong>Helios项目</strong>，这是一个完全参考机架级优化的设计。这意味着，AMD的工程师不再只是盯着那几百平方毫米的硅片，而是要思考整个机架的几千瓦甚至上万瓦的功耗如何分配，冷却液如何流动，光模块如何布局。这是一种维度上的提升，也是为什么马克认为这种跨界收购是一个必然选择。</p>
+<h3>未来技术展望：AI原生设计与光互连</h3>
+<p><strong>[最佳拍档]</strong>: 在谈到具体的未来技术时，有两个关键词在访谈中反复出现：<strong>AI原生设计</strong>和<strong>光互连</strong>。首先是AI原生设计。现在的芯片设计复杂度已经超过了人类大脑能够直接管理的极限。马克透露，AMD正在全面引入<strong>AI辅助设计工具</strong>。这不仅仅是使用现成的电子设计自动化软件，更是将AMD几十年来积累的设计数据、Bug记录、仿真结果，通通都喂给AI，训练出专门用于芯片设计的垂类模型。未来的芯片，将是由人类工程师指挥<strong>AI Agent</strong>来设计的。这不仅能够大幅缩短设计的周期，还能够在人类容易忽视的角落，比如某个不起眼的电源门控逻辑，挖掘出额外的能效红利。其次是光互连。这是一个在业内被讨论了很久、甚至被称为狼来了的技术。大家都知道光比电快，光传输没有损耗，但是为什么我们的电脑里、服务器里还是充满了铜线呢？马克在这个问题上表现出了极度务实的一面。他说，<strong>铜</strong>依然非常能打。通过优秀的信号完整性设计和架构优化，铜缆在短距离传输上的性价比和可靠性依然难以被超越。但是，这并不意味着光互连没有机会。马克预测，在未来的三到五年内，随着AI集群规模的进一步扩大，当我们需要连接的节点超过一定数量，或者对带宽密度的要求突破了某个临界点的时候，<strong>光互连</strong>将成为必须。特别是<strong>CPO共封装光学</strong>，也就是把光模块直接封装在芯片旁边，将是解决未来IO功耗墙的终极方案。AMD已经在光子学领域布局了多年，包括通过收购<strong>赛灵思</strong>获得的相关技术。所以他们正在等待那个经济效益反转的奇点。</p>
+<h3>工程师的压力与AMD的研发模式</h3>
+<p><strong>[最佳拍档]</strong>: 在访谈的最后，伊恩问了一个非常扎心、但是也非常现实的问题：在这个每年都要发布新产品，技术迭代快得让人喘不过气来的时代，工程师们会不会感到疲惫呢？这种疯狂的节奏是不是可持续的呢？马克的回答展现了他作为一名技术老兵的智慧。他说，压力确实存在，但是这种压力也是创新的催化剂。正是因为有了AI这样非常饥渴的应用场景，才逼迫着半导体行业打破了过去挤牙膏的模式。为了应对这种节奏，AMD将研发分为了两层：一层是负责当下产品交付的工程团队，他们必须像精密机器一样运转；另一层则是负责探路的研究团队，他们需要在三到五年的时间跨度上思考问题。这两个团队不是割裂的，而是深度融合的。研究团队的成果会源源不断的输送给工程团队，确保每一代产品都有足够的新技术弹药。</p>
+<h3>展望与AMD的创新史</h3>
+<p><strong>[最佳拍档]</strong>: 展望二零二六年，马克充满了信心。他认为，那将是AI应用真正全面爆发的一年，不仅是云端的超级模型，更是端侧设备的智能化。通过<strong>Helios</strong>这样的机架级系统，通过下一代的<strong>Instinct GPU</strong>，通过光互连技术的初步落地，AMD正在构建一个全栈式的计算生态。马克说，当你面对物理极限的时候，不要试图用头去撞墙，而是要学会绕过它。从<strong>Chiplet</strong>到<strong>3D堆叠</strong>，从<strong>异构计算</strong>到<strong>系统级优化</strong>，AMD的这十年，就是一部不断绕过墙壁的创新史。在这个算力即权力的时代，AMD已经证明了自己不再是那个跟随者，他们正在用自己的方式定义着计算的未来。对于我们这些科技爱好者来说，能够见证这样一场技术长跑，本身就是一种幸运。感谢收看本期内容，我们下期再见。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=AMD" class="entity-link company-link">AMD</a>, 
+                
+                  <a href="/search/?q=ZT Systems" class="entity-link company-link">ZT Systems</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Zen architecture" class="entity-link product-link">Zen architecture</a>, 
+                
+                  <a href="/search/?q=Infinity Fabric" class="entity-link product-link">Infinity Fabric</a>, 
+                
+                  <a href="/search/?q=MI300 accelerators" class="entity-link product-link">MI300 accelerators</a>, 
+                
+                  <a href="/search/?q=Helios project" class="entity-link product-link">Helios project</a>, 
+                
+                  <a href="/search/?q=Instinct GPU" class="entity-link product-link">Instinct GPU</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">semiconductor-resilience</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">ai-driven-innovation</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">chip-design-evolution</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/system-architecture/">system-architecture</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">future-of-computing</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenAI核心工程师翁家翌：从清华学霸到RLHF奠基人，AI基建的深度思考</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="OpenAI核心工程师翁家翌：从清华学霸到RLHF奠基人，AI基建的深度思考" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">OpenAI核心工程师翁家翌：从清华学霸到RLHF奠基人，AI基建的深度思考</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Best Partners TV</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-02-01
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/best-partners-tv/">Best Partners TV</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=k9QVm-TvVbs" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-02-01
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">翁家翌，OpenAI关键工程师，分享其从清华到LLM基建的心路历程。他强调工程能力、迭代效率及技术领导力的重要性，探讨AGI、人才与AI的未来，揭示ChatGPT等爆款模型诞生的底层逻辑。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>OpenAI核心工程师翁家翌：从清华学霸到RLHF奠基人</h3>
+<p>翁家翌，一位在中国清华大学毕业后，拒绝了DeepSeek、英伟达、TikTok等众多科技巨头橄榄枝，选择成为OpenAI核心骨干的工程师。他深度参与了<strong>GPT 3.5</strong>、<strong>GPT 4</strong>乃至<strong>GPT 5</strong>的训练搭建工作，他主导的<strong>后训练系统</strong>更是<strong>GPT</strong>系列模型持续进化的基础底座。他以“基建狂魔”自称，并认为自己在“卖铲子”这件事上是最面向客户的。此次访谈深入梳理了他的人生轨迹和技术理念，揭示了现象级AI产品诞生所需的不仅是顶尖算法创意，更是极致的工程能力，以及搭建落地创意所需的“铲子和地基”。</p>
+<p>翁家翌的技术之路，从少年时期就展现出提前布局和务实落地的特质。他在数学上拥有非凡的直觉，能快速找到答案，但他认为自己理解新知识的速度比常人慢，需要付出更多时间去吃透。这种认知促使他养成了<strong>提前学习</strong>的策略意识：初中主动学习高中课程，初二完成大部分高中数学，初三开始钻研微积分，称之为“投资自己的未来”。在国内，非北京地区学生考入清华北大极为困难。为寻找升学捷径，他转向<strong>信息学竞赛</strong>，并在高中时期，通过一道最小二分覆盖题，以微弱优势在高二时拿下福建省队最高分，获得清华降分录取资格。这次竞赛经历不仅是升学敲门砖，更塑造了他的<strong>工程思维</strong>——高三备考时，他甚至能在没有编译器的iPad上敲代码，这种“无环境练兵”锻炼了他对程序结构的完整认知和快速定位bug的能力。他尤其沉迷于算法竞赛中的常数优化，在优化时间和代码长度的工程挑战中乐在其中，感受到了纯粹的技术乐趣。这份将事情做扎实的执着，为他后来深耕<strong>基础设施</strong>领域埋下了伏笔。</p>
+<p>进入清华大学后，翁家翌因开源所有作业而成为校园传奇。在清华，信息差常被视为一种资源，但翁家翌认为信息应平等共享。他收集并确认无版权问题后，将前几届的作业和课程材料悉数上传至GitHub，这使他在计算机系家喻户晓。他认为这份影响力比捐赠一座教学楼更有意义。在清华的科研探索中，他充满了务实与取舍。大二时，他误入<strong>强化学习</strong>方向，虽然与最初对图像的兴趣相去甚远，但这段经历让他接触到了强化学习的核心逻辑。同时，他对图形学和网络安全也抱有浓厚兴趣，曾与学长一起发现并修复清华校园网漏洞，使成绩单免费下载。在图形学课程中，他完成了16K高清图渲染的挑战性作业，并发明了加速收敛新算法，获得全班仅有的两个A+之一。然而，为了技术落地和发挥工程优势，他最终选择了更广泛应用、更能体现工程价值的强化学习方向，放弃了图形学。在确定强化学习方向后，他开启了首个科研项目，在90年代游戏引擎中训练神经网络智能体，并最终获胜。但他坦言不享受过程，认为项目环境单一，训练过程像“炼丹”，依赖启发式方法，难度远超计算机视觉调参。这种不确定性研究模式让他不适应，并开始思考强化学习领域问题的根源在于缺乏稳定、好用的实验工具。</p>
+<details>
+<summary>Original English</summary>
+Weng Jiayi, a graduate from Tsinghua University, rejected lucrative offers from tech giants like DeepSeek, Nvidia, and TikTok to become a core member of OpenAI. He has been deeply involved in the training and architecture of GPT 3.5, GPT 4, and even GPT 5, with his leading post-training system serving as the foundational base for the continuous evolution of the GPT series models. He describes himself as a "construction maniac" and believes he is the most customer-facing engineer in the "shovel-selling" business. This interview meticulously details his journey and technical philosophy, revealing that the birth of phenomenal AI products requires not only top-tier algorithmic creativity but also extreme engineering capabilities and the "shovels and foundations" needed to bring ideas to fruition.
+<p>Weng Jiayi's technical path, from a young age, was characterized by foresight and practical implementation. He possessed an extraordinary intuition for mathematics, enabling him to quickly find solutions. However, he perceived his own speed in understanding new knowledge as slower than average, requiring two to three times the effort to fully grasp. This self-awareness fostered a strategic approach to early learning: actively seeking out high school courses from his teachers in middle school, completing most of his high school mathematics by the second year, and delving into calculus in the third year, which he called &quot;investing in his future.&quot; In China, for students outside Beijing, directly gaining admission to Tsinghua or Peking University was an almost insurmountable feat. To find a shortcut for college entrance, he turned to informatics competitions. Previously, he had achieved some success in mathematics competitions, but due to limited school resources and insufficient preparation, he decisively switched to informatics. Subsequently, he broke through the competitive landscape of the Fujian provincial team. In his second year of high school, he secured the highest score in the competition with a problem on minimum bipartite covering, earning him a sixty-point reduction in his Tsinghua admission score. This breakthrough was, in fact, a narrow victory, as the Fujian provincial team that year only secured a single bronze medal in that competition, awarded to Weng Jiayi himself. The competition experience not only served as a stepping stone for his education but also shaped his engineering mindset. During his third year of high school preparation, he would even code directly on an iPad without a compiler. This experience of training without an environment provided him with a more complete understanding of program structures and honed his ability to quickly locate bugs. He was particularly engrossed in constant optimization within algorithmic competitions; these engineering challenges of optimizing time and code length brought him joy and a sense of pure technical delight. This dedication to doing things thoroughly laid the groundwork for his later deep dive into infrastructure.</p>
+<p>Upon entering Tsinghua University, Weng Jiayi became a campus legend, partly due to his breaking of an unwritten rule: open-sourcing all his assignments. At Tsinghua, information disparity was often treated as a survival resource, with past assignments and course materials largely held by a select few. Weng Jiayi, however, believed everyone should have equal access to this information. Consequently, he collected old assignments and course materials passed down from previous cohorts and uploaded them to GitHub after confirming there were no copyright issues. This act made him a household name in Tsinghua's Computer Science department, with classmates jokingly remarking that while juniors might not know who donated the building, they certainly knew Weng Jiayi, as they all relied on his assignments to survive. This influence was considered more potent than donating a building. Weng Jiayi's research explorations at Tsinghua were also marked by pragmatism and trade-offs. In his second year, he inadvertently joined Tsinghua's Computer Science department's academic innovation program. Initially, he had a vague interest in graphics, randomly selecting reinforcement learning. He discovered this field was essentially about playing games, training agents through reinforcement learning to complete tasks in video games, which was far from his initial expectations. However, this experience exposed him to the core logic of reinforcement learning for the first time. Concurrently, he harbored strong interests in computer graphics and cybersecurity. During his university years, he collaborated with a senior student to discover and fix vulnerabilities in Tsinghua's campus network, allowing for the free download of transcripts that previously cost ten yuan. In his computer graphics course, he invested significant time and effort to complete a demanding 16K high-definition image rendering assignment, almost no one else dared to attempt, and even invented a new algorithm for accelerating iterative convergence, ultimately earning one of the only two A+ grades in the class. However, one cannot pursue two paths on the research journey simultaneously. Weng Jiayi ultimately made a trade-off, abandoning his beloved computer graphics to focus on reinforcement learning. This decision was not impulsive but stemmed from his pursuit of technological implementation. Reinforcement learning had broader application scenarios and better allowed him to leverage his engineering strengths to create genuinely valuable outcomes. After confirming his focus on reinforcement learning, Weng Jiayi embarked on his first research project: training a neural network in a 1990s game to have an agent complete tasks like monster hunting, collecting health packs, avoiding obstacles, and clearing levels within a fixed map. Ultimately, he won this project using reinforcement learning methods. However, he candidly admitted he did not enjoy the entire process. In his view, the project's environment was too singular, and the training process was akin to &quot;alchemy,&quot; requiring constant use of various tricks to prevent training crashes. Even if it didn't crash, he didn't know how to tune parameters to maintain performance, relying entirely on heuristic methods—a difficulty ten to a hundred times greater than tuning parameters in computer vision. This research model, relying more on luck than skill, made the pragmatic Weng Jiayi feel uncomfortable and led him to ponder whether the problems in reinforcement learning lay not in the algorithms themselves but in the lack of stable, user-friendly experimental tools.</p>
+</details>
+<h3>Mila实习与基础设施的价值认知</h3>
+<p>大三暑假，翁家翌前往蒙特利尔的Mila研究所交流实习。这段经历充满了波折，他投出了大量套磁信却迟迟没有回应，最终在清华导师的帮助下才获得了实习机会。当时正是2019年夏天，距离Mila创始人<strong>约书亚·本吉奥</strong>（Yoshua Bengio）荣获图灵奖仅数月。在Mila，翁家翌进入了本吉奥所在的实验室，直接跟随一位博士后工作，尝试一个类似<strong>混合专家模型</strong>（Mixture-of-Experts）的项目。这是他首次接触<strong>Transformer</strong>和<strong>语言建模</strong>。尽管花了很长时间上手，但最终只“撮了一个东西出来”，未达预期。事后他总结，失败源于算力不足和认知局限：算力不足以支撑规模化训练，且当时对于如何在强化学习中避免Transformer崩塌缺乏认识。这次经历让他更加清晰地认识到：<strong>想法是廉价的，真正稀缺的是验证想法的效率和质量，而验证效率的核心在于基础设施</strong>。没有算力支撑和稳定的实验框架，再好的算法创意也只能停留在纸面。</p>
+<p>实习归来后，翁家翌进入了出国深造的申请季，但过程并不顺利。看着同学纷纷进入名校实验室，发表顶会论文，他一度陷入失落。但他很快调整过来，坚信<strong>GPA不是唯一评价指标，需创造自己的评价体系</strong>。他引用清华导师的标准：论文、比赛和GitHub三位数以上的Star。本科期间，他尽可能少花时间，保持成绩“刚好够用”，只求B+。这种不盲从单一评价体系的态度，使他有更多精力投入到真正感兴趣的项目。在2019年底到2020年初，他做出了两个非盈利的“慈善项目”：“天授”（Tian Shou）和“退学网”（Tui Xue Wang）。“天授”源于对“炼丹式研究”的厌倦，他编写了一套<strong>强化学习</strong>实验平台，以简单、好改、稳定为核心优势，击中了科研痛点。而“退学网”是一个轻量爬虫，解决了疫情期间签证查询的难题，迅速传播。这两个项目让翁家翌感受到了前所未有的满足感，他认为人生的价值在于为他人和社会做了多少有意义的事。</p>
+<p>2020年，翁家翌拿到卡内基梅隆大学的硕士offer，因疫情远程上网课。这段时间成为他职业选择的关键期。他拒绝了谷歌，因为不想在大厂当“螺丝钉”。陆续收到包括<strong>幻方量化</strong>（后发展为<strong>DeepSeek</strong>）、英伟达、TikTok、Meta等重量级offer。最终，他选择了当时尚未大众熟知、<strong>ChatGPT</strong>也未诞生的<strong>OpenAI</strong>，并非因薪资或名气，而是源于对<strong>顶尖工业级科研</strong>的追求。他想体验世界最前沿的研究方法，学习如何快速落地想法、高效迭代、搭建稳定可靠的系统。翁家翌最终进入OpenAI的<strong>强化学习</strong>组，由联合创始人<strong>约翰·舒尔曼</strong>（John Schulman）亲自面试。他仅用两小时就完成了一道端到端的开放工程题，这体现了他的工程能力。他认为，如果目标是进入工业界，博士训练（讲故事、写论文）不如硕士直接进入工业界，关键在于<strong>清晰化自身差异化优势</strong>。他引用一位同事的话：“教一个研究员如何做好工程，比教一个工程师如何做好研究，要难得多。” 翁家翌的核心观点是：<strong>研究的价值在于验证，而验证的关键是基础设施</strong>。只要基础系统正确、迭代效率高，就能快速筛选想法。他更愿意做“卖铲子的人”，深耕基础设施，让别人去玩。</p>
+<details>
+<summary>Original English</summary>
+During the summer of his third year, Weng Jiayi interned at the Mila Institute in Montreal. This experience was fraught with challenges; he sent out numerous emails seeking connections but received no responses. It was only through the help of his Tsinghua advisor that he secured the internship opportunity. This was the summer of 2019, just a few months after Yoshua Bengio, founder of Mila and head of the Montreal Institute for Learning Algorithms, received the Turing Award. At Mila, Weng Jiayi joined Yoshua Bengio's lab, working directly under a postdoctoral researcher. His task was to attempt a project similar to a mixture-of-experts model. This was his first exposure to Transformers and language modeling. Although it took him a considerable amount of time to get up to speed, he ultimately only managed to "cobble something together" without achieving the desired results. He later summarized the failure as stemming from two core limitations: insufficient computing power, with only a few GPUs unable to support large-scale model training, and a lack of understanding. At the time, many were trying to apply reinforcement learning to language models, but no one knew how to prevent Transformers from collapsing in reinforcement learning environments. It was later discovered that the key lay in a pure environment. This internship experience further clarified for Weng Jiayi that ideas are cheap, and what is truly scarce is the efficiency and quality of validating those ideas. The core of validation efficiency lies in infrastructure. Without sufficient computing power support and a stable experimental framework, even the best algorithmic ideas remain on paper.
+<p>Upon returning from his internship, Weng Jiayi entered the application season for graduate studies abroad. However, this period was not smooth sailing. Watching his peers enter prestigious university labs like Carnegie Mellon University and Stanford, publishing papers in top international conferences, while he had nothing, the immense gap led him into a brief period of despondency. He quickly adjusted, however, because he firmly believed that GPA was not the sole evaluation metric and that one must create their own evaluation system. He cited his Tsinghua advisor's criteria for the Computer Science department: three major indicators—papers, competitions, and GitHub repositories with over a hundred stars. Throughout his undergraduate studies, Weng Jiayi aimed to maintain just enough academic performance with minimal effort. Since his GPA was calculated before the end of the semester, he was satisfied with a B+, unwilling to waste any more time. This attitude of not blindly adhering to a single evaluation system allowed him to dedicate more energy to projects he was genuinely interested in. During the period from late 2019 to early 2020, overlapping with the pandemic and the application season, he launched two highly successful projects, which he termed &quot;charity projects&quot; because they were entirely non-profit yet genuinely solved people's needs. The first project, &quot;Tian Shou&quot; (天授), originated from his aversion to &quot;alchemy-style&quot; research. In late 2019, he discovered that RLlib, the most mainstream reinforcement learning framework at the time, had a severe problem: its extreme abstraction and hundreds of thousands of lines of code made it almost impossible to modify, failing to meet the practical needs of researchers. Consequently, during the 2020 Chinese New Year holiday, he began writing his own reinforcement learning experimental platform, completing the first version in just two weeks. Unlike RLlib's decay, Tian Shou pursued extreme consistency from its design inception, with its core advantages being simplicity, ease of modification, and stability—precisely hitting the pain points of research users. Tian Shou's success validated Weng Jiayi's judgment that the value of technology lies not in complexity but in its ability to solve practical problems. The second project, &quot;Tui Xue Wang&quot; (退学网), arose from his personal need. During the pandemic, he needed to check the status of his visa appointment but lacked suitable tools, so he manually coded a lightweight web scraper. Believing many others might have similar needs, he open-sourced it. The project gained rapid traction upon release, initially garnering over a million clicks and accumulating tens of millions to date. Although the scraper later became ineffective due to updates in the US consulate's system and Weng Jiayi did not maintain it, this short-lived project fulfilled its mission perfectly, helping countless individuals solve their visa inquiry challenges. These two projects brought Weng Jiayi unprecedented satisfaction. When asked when this pursuit of impact began to emerge, he recalled a flash of inspiration in his third year of high school: if life were a game, the final score would be measured by how many people remembered your name after you're gone. In his view, a person's value is not in the honors they receive but in the meaningful contributions they make to others and society. One cannot be good to everyone, but one can try to do good to those around them within their capabilities and contribute to things that are meaningful to everyone.</p>
+<p>In 2020, Weng Jiayi received a Master's offer from Carnegie Mellon University. Due to the pandemic, he attended classes remotely from home. This period became a critical juncture for his career choices. He began applying for jobs, initially submitting applications to eighteen companies and receiving offers only from Google and AutoML. However, Weng Jiayi declined Google's offer because he did not want to be a cog in a large corporation doing work he wasn't particularly passionate about. Subsequently, he continued submitting his resume and received more high-profile offers, including one from Huifang Quant (幻方量化), which was establishing an AI lab at the time and later developed into DeepSeek. He also received offers from Nvidia, TikTok, and Meta's AI research. The offer from Huifang Quant once made him waver; if there were no better options, he might have joined them to focus on building reinforcement learning infrastructure. However, he ultimately chose OpenAI, which was not yet widely recognized and had not yet launched ChatGPT. This decision was not driven by salary or fame but by his pursuit of top-tier industrial-grade research. In his opinion, OpenAI and DeepMind at the time were the two best labs globally for reinforcement learning, and he wanted to experience how world-class research was conducted, rather than staying in a small, workshop-style research environment. What he truly wanted to learn was the methodology of industrial-grade research: how to quickly implement ideas, iterate efficiently, and build stable, reliable systems. Weng Jiayi eventually joined OpenAI's reinforcement learning group, personally interviewed and recruited by co-founder John Schulman. He still vividly recalls the interview; John Schulman gave the same engineering problem to only two people: him and Andrej Karpathy, a key member of the code-indexing project. It was an end-to-end open-ended problem. John Schulman gave him three hours, and Weng Jiayi completed the code in just two hours, even fixing a bug on the spot. He surmised that John Schulman valued his engineering capability, as Schulman had commented on his &quot;beautiful GitHub profile,&quot; indicating an endorsement of his evaluation system. This recognition further solidified Weng Jiayi's career direction: to deeply cultivate the engineering field and be a &quot;shovel seller.&quot; When asked if he had considered pursuing a Ph.D., Weng Jiayi stated directly that he had never seriously considered it. In his view, if the goal is to enter the industry, pursuing a Ph.D. is a waste of life. One can use a Master's degree as a stepping stone to meet the criteria for a Ph.D. entry, allowing companies to choose a Master's candidate instead of a Ph.D. The key is to clearly understand one's differentiated advantages. He further explained that a Ph.D. training core focuses on storytelling, paper writing, and diagramming, whereas the industry requires rapid iteration capabilities and system correctness. He quoted an OpenAI colleague, a former Ph.D. in reinforcement learning who later developed a well-known RL framework, saying: &quot;Teaching a researcher how to do engineering is much harder than teaching an engineer how to do research.&quot; Weng Jiayi's core viewpoint is that the value of research lies in validation, and the key to validation is infrastructure. As long as the foundational system is correct, hyperparameters are reasonable, and iteration efficiency is high, effective ideas can be quickly screened. In the AI industry, every company's infrastructure has bugs to varying degrees; whoever fixes more bugs achieves better model performance. He is no longer interested in parameter-tuning research, preferring to lay solid foundations in infrastructure, allowing others to experiment and publish papers, perhaps even with his name attached. This is precisely why he calls himself the most customer-facing among shovel sellers, as the reinforcement learning module sits at the very top of the infrastructure stack, directly serving the core needs of model training.</p>
+</details>
+<h3>OpenAI的基石：RLHF流水线与工业级迭代</h3>
+<p>加入OpenAI后，翁家翌迅速成为核心骨干，名字几乎出现在每一个大模型的发布名单中。他主导搭建了OpenAI<strong>强化学习</strong>后训练阶段的核心<strong>基础设施</strong>。他负责构建的<strong>强化学习训练系统</strong>，在<strong>ChatGPT</strong>爆发式上线前已成为公司内部主力。他参与的WebGPT项目，核心目标是通过强化学习让模型更好地与用户交互。当ChatGPT服务器被挤爆时，这证明了他专注方向的价值。</p>
+<p>OpenAI能持续产出爆款模型，归结于两个原因：<strong>单位时间的迭代效率高</strong>和<strong>领导层真正懂技术</strong>。在迭代效率方面，OpenAI通过优化基础设施和工作流程，让研究员能在单位时间内完成更多实验，实现<strong>迭代次数与成功率的正比</strong>。这是工业级科研与小作坊式研究的核心区别。领导层对技术细节的高度关注，如联合创始人兼总裁<strong>格雷格·布罗克曼</strong>（Greg Brockman）对基础设施模块的了解，以及CEO<strong>山姆·奥特曼</strong>（Sam Altman）通过研究助理及时掌握内部进展，确保了信息流动的通畅和系统的一致性。</p>
+<p>翁家翌最核心的贡献是为ChatGPT系列模型搭建了关键的<strong>RLHF</strong>（Reinforcement Learning from Human Feedback: 基于人类反馈的强化学习）训练流水线。在GPT-3.5发布前，OpenAI已在GPT-4上验证RLHF流程。他负责搭建这套系统，并在新基础设施上调通了首版，先在GPT-4上成功，再迁移至GPT-3.5。这套<strong>后训练系统</strong>成为ChatGPT系列的核心引擎。搭建过程充满挑战，关键流程需从头构建，最大的难题是模型效果衡量标准不清晰。最终，团队依赖<strong>人机协同</strong>的评估流程，通过内部员工测试、打分来选出最佳模型版本，确保了模型质量的稳定性，因为AI的最终使用者是人。</p>
+<p>从技术难度看，这套后训练系统的复杂性远高于翁家翌的“天授”框架。大模型训练的瓶颈在于模型本身，而非环境。系统工程核心在于平衡吞吐、扩展及GPU资源压榨，需要<strong>强化学习、分布式系统、语言模型推理和底层架构</strong>的综合知识。翁家翌正是站在这些领域交叉点上的人。高强度工作曾让他付出健康代价，长期超负荷工作导致他曾头痛入院。从那时起，他强制自己每周两次三千米长跑，恢复体力。</p>
+<details>
+<summary>Original English</summary>
+After joining OpenAI, Weng Jiayi quickly became a core contributor, with his name appearing on almost every major model release list. This is because he led the construction of OpenAI's core infrastructure for the reinforcement learning post-training phase. He mentioned that his name appears on every major version or model release because the entire post-training infrastructure is used to train RLHF models based on human feedback. His work, from the beginning of his tenure, has been closely related to the birth of ChatGPT. Upon joining, he participated in the follow-up project of WebGPT (Web-based Generative Pre-training), with the core objective of using reinforcement learning to enable the model to interact better with users. The reinforcement learning training system he was responsible for building had already become one of the primary infrastructures used internally before ChatGPT's explosive launch. On the day ChatGPT was released, OpenAI's servers were overloaded multiple times. This spontaneous surge in demand reminded Weng Jiayi of his experience with Tui Xue Wang, proving that his area of focus was indeed worth investing energy in. When asked why OpenAI can continuously produce popular models, Weng Jiayi attributed it to two core reasons: exceptionally high iteration efficiency per unit of time and leadership that genuinely understands technology. Regarding iteration efficiency, after OpenAI recruited several former engineering leaders from Google, such as Barrett Zoph and Liam Fedus, the team began systematically enhancing engineering efficiency. Weng Jiayi emphasized that reinforcement learning is essentially trial and error; the faster and more you try, the closer you get to success. OpenAI's advantage lies in optimizing infrastructure and workflows, allowing researchers to conduct more experiments per unit of time. The number of iterations is directly proportional to the success rate, which is the fundamental difference between industrial-grade research and workshop-style research. The leadership's strong focus on technical details is also a key driver of OpenAI's continuous innovation. Greg Brockman, OpenAI's co-founder and president, has been involved in the development of almost all the company's infrastructure modules and has an in-depth understanding of every technical detail. CEO Sam Altman stays updated on internal company progress through research assistants. In Weng Jiayi's view, this sensitivity to technical details and unimpeded information flow prevents the company from experiencing inconsistencies, akin to a code repository where a misalignment can cause the system to behave erratically, like a body moving without its feet. Weng Jiayi's most critical contribution was building the key RLHF training pipeline for the ChatGPT series models. Before the official release of GPT-3.5, OpenAI had already begun validating the feasibility of the RLHF process on GPT-4. Weng Jiayi was responsible for the overall construction of this pipeline. He stated that the old infrastructure couldn't handle it, so he debugged the first version on the new infrastructure, ensuring it worked on GPT-4 before migrating it back to GPT-3.5. This post-training system later became the core engine for training the entire ChatGPT series models. However, building this system was far from simple; Weng Jiayi admitted that OpenAI did not have readily reusable RLHF baselines internally, and many critical processes had to be built from scratch. The biggest challenge was the unclear criteria for evaluating model performance. You train many checkpoints, but you don't know which one is truly better. For example, when evaluating with human feedback rewards, the model might initially show high reward signals but later decline due to overfitting. Such pseudo-improvements are difficult to identify through purely technical means. Ultimately, the team had to rely on a human-machine collaborative evaluation process, where internal employees personally interacted with each model version, scored them, and voted to select the best-performing one. This seemingly primitive method ensured the stability of model quality, as humans are the ultimate users of AI models, and real human experience is the most critical evaluation standard. From a technical difficulty perspective, the complexity of this post-training system far exceeds that of the Tian Shou framework Weng Jiayi had previously developed. In small-scale simulation environments, the bottleneck is often the environment itself. However, for large models, the bottleneck lies in the model itself. The environment is merely a prompt, requiring only microseconds for computation, while model training and sampling can take hundreds or even thousands of seconds. Therefore, the core of systems engineering lies in balancing throughput and scalability, along with extreme optimization of GPU resources. This requires engineers to possess comprehensive knowledge in reinforcement learning, distributed systems, language model inference, and underlying architecture. Weng Jiayi is precisely the person standing at the intersection of these multiple fields. The high-intensity work also took a toll on his health; he would often wake up debugging programs in the morning and continue until bedtime, working six days a week. This prolonged overwork once led to him being admitted to the emergency room for a severe headache. Since then, he has been mandating himself to run three kilometers twice a week to recover his physical stamina.
+</details>
+<h3>行业洞察与未来展望：AGI、执行力与AI共存</h3>
+<p>翁家翌目前正参与OpenAI下一代<strong>强化学习</strong>基础设施的重构工作，旨在清理技术债，提高研究员的迭代效率。外部竞争压力（如DeepSeek的快速迭代）也促使OpenAI警觉，他认为<strong>基础设施的迭代速度是OpenAI的生死线</strong>。</p>
+<p>关于<strong>AGI</strong>（Artificial General Intelligence: 通用人工智能）的定义，他透露OpenAI内部有多种解读，他个人的定义是：AI能完成80%-90%他认为有意义的任务。当前技术距离此目标尚有差距，他坦言自己日常负责的代码仍无法放心交给模型修改，因AI基础设施的数据集覆盖极低且成本高昂。他认为AI发展是逐步替代重复劳动，而非颠覆行业，工程师的核心价值——解决复杂问题、创新思维和工程经验——是AI难以替代的。</p>
+<p>对于外界批评OpenAI“不Open”，翁家翌表示理解开源与公司生存之间的权衡。他解释，资源密集型的模型研发需要保障资本输血和商业可持续性。OpenAI的“Open”战略并非完全开源，而是以低门槛方式让大众用上强大工具，如ChatGPT的免费版本。他认为直接开源模型权重可能导致滥用，产品化体验更有利于造福全人类。他坦承，尽管理论上可实现开源和社区反馈，但现实中，一旦开源，闭源竞争者将带来压力，影响融资和实验。</p>
+<p>OpenAI实现AGI的最大挑战是<strong>执行</strong>。他强调组织的稳定执行力至关重要。回忆起2023年底<strong>山姆·奥特曼</strong>（Sam Altman）被罢免风波，他指出，纯技术出身者未必能撑起AI公司，需要能搞钱、搞算力、搞资源的人。奥特曼已成为OpenAI的精神符号，是技术、资源、管理平衡的关键。他认为，一个健康的组织，所有人都是可替代的，关键在于造血能力和培养新人的能力。OpenAI的优势在于其基础设施迭代速度“没那么差”。</p>
+<p>他设想未来<strong>拥有无限上下文记忆能力的AI智能体</strong>可能是最合适的CEO，能克服人类组织管理中的上下文共享不一致等限制。最后，当被问及AI解决世界难题的设想时，他选择“预测未来”，但认为这会导致价值体系崩塌，人类努力将失去意义。他提出时间可能非线性流动，未来的自己可能帮助过去的自己。他审慎看待AI发展，强调人类需找到与技术共存的方式，守住自身价值。</p>
+<p>谈及创业，他倾向于抓住真实需求，而非技术本身。他认为目前OpenAI仍是值得留下之地，拥有顶尖团队、充足资源和最快迭代速度，能让他持续发挥优势。他的目标是最大化在OpenAI博客上出现的次数，希望工作能被更多人看到，为行业带来启发。他对年轻人建议：<strong>持续投入工程建设，而非学术研究</strong>。他认为现代学术界研究常陷入“过拟合”，无法转化为解决实际问题的能力。AI实验室最缺的是<strong>基础设施人才</strong>。最后，他留下思考：“我曾经一度想通了我自己想要什么，但是我其实还是没有那么想通。这个问题值得一生去思考。”</p>
+<details>
+<summary>Original English</summary>
+Weng Jiayi is currently involved in the restructuring of OpenAI's next-generation reinforcement learning infrastructure, aiming to clean up technical debt and improve researchers' iteration efficiency. External competitive pressure, such as the rapid iteration by DeepSeek, also makes OpenAI vigilant. He believes that the speed of infrastructure iteration is OpenAI's lifeline.
+<p>Regarding the definition of AGI (Artificial General Intelligence), he revealed that there are various interpretations within OpenAI; his personal definition is that AI can complete 80%-90% of tasks he deems meaningful. Current technology is still a significant distance from this goal. He frankly admitted that the code he is responsible for daily cannot yet be safely handed over to models for modification, as the datasets for AI infrastructure are extremely low in coverage and prohibitively expensive, thus not yet touching this domain. He believes AI development involves the gradual replacement of repetitive labor, not a sudden industry-wide disruption. The core value of engineers—the ability to solve complex problems, innovative thinking, and engineering experience—is difficult for current AI to replace.</p>
+<p>Regarding external criticism that OpenAI is &quot;not open,&quot; Weng Jiayi expressed understanding of the trade-off between open-sourcing and company survival. He explained that resource-intensive model development requires securing capital infusion and commercial sustainability. OpenAI's &quot;Open&quot; strategy does not mean complete open-sourcing but rather making powerful tools accessible to the public through low-barrier entry, such as the free version of ChatGPT. He believes directly open-sourcing model weights might lead to misuse, and productized experiences are more beneficial for humanity. He candidly stated that while theoretically possible to achieve open-sourcing and community feedback, in reality, once open-sourced, competitors using closed-source models would exert pressure, affecting fundraising and experimentation.</p>
+<p>The biggest challenge for OpenAI in achieving AGI is <strong>execution</strong>. He emphasized that stable organizational execution is paramount. Recalling the ouster and return of Sam Altman in late 2023, he pointed out that individuals with purely technical backgrounds may not be able to lead an AI company; people who can secure funding, computing power, and resources are needed. Sam Altman has become OpenAI's spiritual symbol, embodying the balance of technology, resources, and management. He believes that in a healthy organization, everyone is replaceable, provided the organization has the capacity for self-renewal and continuous cultivation of new talent. OpenAI's advantage lies in its infrastructure iteration speed being &quot;not too bad.&quot;</p>
+<p>He envisions an AI agent with infinite context memory as a potential future CEO, capable of overcoming limitations in human organizational management, such as inconsistent context sharing. Finally, when asked about AI solving world problems, he chose &quot;predicting the future&quot; but believes this would lead to the collapse of all value systems, rendering human effort, choices, and emotions meaningless. He proposed that time might not flow linearly, and one's future self might assist their past self in making certain decisions. He views AI development with caution, emphasizing that humans need to find ways to coexist with technology while preserving their own value and meaning.</p>
+<p>Regarding entrepreneurship, he tends to focus on genuine needs rather than the technology itself. He believes OpenAI remains a worthwhile place to be, boasting top technical teams, ample resources, and the fastest iteration speeds, allowing him to continuously leverage his strengths and build more influential infrastructure. His goal is to maximize his mentions in OpenAI's blog posts, not for fame, but to increase the visibility of his work and inspire the industry. His advice to young people is: <strong>continue investing in engineering construction rather than pure academic research.</strong> He believes modern academia is often stuck in overfitting, researching repetitive tasks without translating to practical problem-solving. AI labs critically need infrastructure talent because it's a bottomless pit requiring continuous investment and solid capabilities. In closing, he left a thought-provoking statement: &quot;I thought I figured out what I wanted, but I haven't quite figured it out. This question is worth a lifetime of contemplation.&quot;</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=John Schulman" class="entity-link person-link">John Schulman</a>, 
+                
+                  <a href="/search/?q=Sam Altman" class="entity-link person-link">Sam Altman</a>, 
+                
+                  <a href="/search/?q=Greg Brockman" class="entity-link person-link">Greg Brockman</a>, 
+                
+                  <a href="/search/?q=Joshua Bengio" class="entity-link person-link">Joshua Bengio</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Tsinghua University" class="entity-link company-link">Tsinghua University</a>, 
+                
+                  <a href="/search/?q=Mila Institute" class="entity-link company-link">Mila Institute</a>, 
+                
+                  <a href="/search/?q=DeepSeek" class="entity-link company-link">DeepSeek</a>, 
+                
+                  <a href="/search/?q=Nvidia" class="entity-link company-link">Nvidia</a>, 
+                
+                  <a href="/search/?q=TikTok" class="entity-link company-link">TikTok</a>, 
+                
+                  <a href="/search/?q=Meta" class="entity-link company-link">Meta</a>, 
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=GPT-3.5" class="entity-link product-link">GPT-3.5</a>, 
+                
+                  <a href="/search/?q=GPT-4" class="entity-link product-link">GPT-4</a>, 
+                
+                  <a href="/search/?q=GPT-5" class="entity-link product-link">GPT-5</a>, 
+                
+                  <a href="/search/?q=ChatGPT" class="entity-link product-link">ChatGPT</a>, 
+                
+                  <a href="/search/?q=WebGPT" class="entity-link product-link">WebGPT</a>, 
+                
+                  <a href="/search/?q=RLHF" class="entity-link product-link">RLHF</a>, 
+                
+                  <a href="/search/?q=Transformer" class="entity-link product-link">Transformer</a>, 
+                
+                  <a href="/search/?q=Large Language Model" class="entity-link product-link">Large Language Model</a>, 
+                
+                  <a href="/search/?q=RLlib" class="entity-link product-link">RLlib</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-infrastructure/">ai-infrastructure</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/reinforcement-learning/">reinforcement-learning</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/rlhf/">rlhf</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/generative-ai/">generative-ai</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">engineering-methodology</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

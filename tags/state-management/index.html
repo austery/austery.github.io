@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="container" data-pagefind-ignore>
+
+<div class="home-layout">
+
+<h1>标签：state-management</h1>
+
+<ul><li>
+      
+      <a href="/content/clippings/2026-08-13_httpsyag_dsh-deep-analysis-20260813-html/">深度剖析 DeepSeek 最新的 Harness
+DSH：为了自进化这盘醋包了一整盘饺子</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-08-13T00:00:00.000Z">
+          8/13/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章深度剖析了 DeepSeek 新发布的 DeepSeek Harness (DSH)，它引入了‘命令式’插件模型，允许插件在 Harness 进程内运行并携带状态，从而实现运行时动态替换。DSH 引入了 Cordis 运行时框架来管理插件的生命周期、依赖关系和事务性回滚，这使得 Harness 具备了自我进化的潜力，能够动态替换核心组件如 Agent Loop，为 AI 系统提供了更灵活的架构演化路径。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/khVX_BUnEwU/">ActiveGraph：重构智能体架构，从 LLM 中心走向日志中心化的自演进系统</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-07-22T00:00:00.000Z">
+          7/22/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 BabyAGI 创始人 Yohei Nakajima 介绍了新型开源实验性智能体运行环境 ActiveGraph。该系统抛弃了传统的 LLM 中心化设计，转而围绕不可变的事件日志构建共享状态，通过行为（Behaviors）和策略（Policies）驱动多微工协作，并在长期记忆评估与 Kaggle 扑克牌比赛中展示了其优秀的故障恢复与自演进性能。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-07-18_httpsyag_agent-platform-state-ownership-20260718-html/">Agent
+的基础能力正在收敛，产品化平台却分成了三条路</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-07-18T00:00:00.000Z">
+          7/18/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/pai/" class="area-badge-inline">
+              🌐 PAI
+            </a>
+          
+          
+            <a href="/categories/ai-workflow/" class="category-badge-inline">
+              🏷️ ai-workflow
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了Agent基础能力趋同后，产品化平台在状态管理和工作流处理上的三种主要路线。这三种路线分别是先部署运行环境（如Koyeb），先确定长期身份（如Cloudflare Durable Objects），以及先定义任务执行步骤（如Vercel Workflow）。核心思想是选择最适合自身需求的基础能力模型，而非简单地对比功能列表。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-07-08_httpsyag_context-governance-agent-runtime-20260707-html/">模型的窗口不是无限大的垃圾桶：为什么智能体需要上下文治理</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-07-08T00:00:00.000Z">
+          7/8/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/pai/" class="area-badge-inline">
+              🌐 PAI
+            </a>
+          
+          
+            <a href="/categories/ai-workflow/" class="category-badge-inline">
+              🏷️ ai-workflow
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了在构建智能体（agent）时，如何从简单的上下文窗口管理转向更复杂的上下文治理。核心观点是，仅仅依靠增大模型窗口或简单地拼接提示词是不够的，真正的挑战在于建立一套运行期管理机制，以保护模型的注意力免受海量无关信息污染。文章提出了通过分层状态管理、动态过滤与压缩中间生成物、以及将文件系统作为最终上下文存储等运行时架构改变，来解决高昂的开销和延迟问题，强调系统需要知道很多，但模型这一轮不该看太多。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-07-03_httpsyag_mcp-vs-openai-state-20260703-html/">两条相反的路：MCP 去状态，OpenAI 加状态</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-07-03T00:00:00.000Z">
+          7/3/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章对比了MCP和OpenAI在状态管理上的两种不同路径。MCP从隐式状态（stdio）演进到显式会话再走向无状态，是社区被动演进的结果；而OpenAI则主动通过平台战略推动有状态化，将推理过程和托管工具收归服务端，形成商业锁定。这种差异反映了开放标准与商业驱动的组织定位对协议演进方向的影响。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/4uFVSLgD2Q4/">生产环境中的AI Agent：OpenGov如何构建与规模化OG Assist</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-06-26T00:00:00.000Z">
+          6/26/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文详细介绍了OpenGov在生产环境中构建和规模化AI Agent系统（OG Assist）的实战经验。团队放弃了LangGraph，全面转向基于TypeScript Effect库的自研Agent循环，实现了高细粒度的并发控制、日志追踪和错误处理。同时，文章探讨了Google的A2A协议应用、隔离安全沙箱机制、长上下文滚动摘要管理，以及运行时的生成式UI设计，为企业级Agent的落地提供了系统化的技术参考。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/UPwGaM2MKHY/">日志即智能体：重构 AI 系统的持久化与架构范式</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-06-25T00:00:00.000Z">
+          6/25/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Omnara 首席执行官 Ishaan Sehgal 提出“日志即智能体”的核心理念，主张将智能体定义为只追加的事件历史日志，而非模型或运行时环境。这种架构设计不仅从工程上自然解决可靠性、可扩展性、多端协同和平台迁移等痛点，还能确保用户对智能体最核心的私密数据资产拥有自主所有权，避免日志锁定。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/2czYyrTzILg/">从混乱到有序：行之有效的多智能体系统编排模式</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a>
+      
+      
+      
+        <time datetime="2026-04-08T00:00:00.000Z">
+          4/8/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 Sandipan Bhaumik 分享了构建可扩展、可靠多智能体 AI 系统的经验。她阐述了从单智能体到多智能体的复杂性爆炸，介绍了编舞（Choreography）和编排（Orchestration）两种核心协调模式，并强调了不可变状态快照、版本控制、数据契约、断路器模式和补偿模式在故障恢复中的关键作用。演讲最终展示了一个生产级别的 Databricks 架构，强调了从构建演示到构建生产系统的转变。</small>
+      
+
+      
+      
+    </li></ul>
+
+</div>
+
+</div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

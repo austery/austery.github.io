@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codex进化：写代码只是第一块拼图，下一块是什么？ · 乔木博客</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="Codex进化：写代码只是第一块拼图，下一块是什么？ · 乔木博客" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">Codex进化：写代码只是第一块拼图，下一块是什么？ · 乔木博客</span>
+      <span data-pagefind-meta="speaker" style="display:none;">向阳乔木</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-06-02
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/xiang-yang-qiao-mu/">向阳乔木</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://blog.qiaomu.ai/codex-role-workflow-plugins" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-06-02
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">OpenAI升级Codex，引入角色插件、Sites和局部批注，将其转型为懂岗位交付的通用工作系统。它不仅能生成内容，还聚合多应用数据、支持协作，体现了AI应用从对话向工作流自动化的关键演进。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>乔木博客</p>
+<p>全部</p>
+<p>AI工具</p>
+<p>AI教程</p>
+<p>AI生成</p>
+<p>AI资讯</p>
+<p>健脑房</p>
+<p>播客解读</p>
+<p>论文学习</p>
+<h1>Codex进化：写代码只是第一块拼图，下一块是什么？</h1>
+<p>AI资讯</p>
+<p>·</p>
+<p>2026年6月2日</p>
+<p>·</p>
+<p>90 次阅读</p>
+<p>·</p>
+<p>约 6 分钟</p>
+<p>很多公司已经遇到一个尴尬场景。</p>
+<p>AI 帮员工写完一段代码很容易。</p>
+<p>可一旦任务变成整理 Slack 里的上下文、翻 Google Docs、拉 CRM、做一份高管材料、把数据变成仪表盘，事情马上变复杂。</p>
+<p>OpenAI 这次给 Codex 的更新，重点就在这里：把一个开发工具，继续往通用工作系统推。</p>
+<p>OpenAI 披露，Codex 每周用户已经超过 500 万。</p>
+<p>非开发者，包括分析师、市场、运营、设计师、研究员、投资人和银行从业者，已经约占整体用户 20%，增长速度是开发者的 3 倍多。</p>
+<p>这个数字有意思。</p>
+<p>Codex 正在从“会写代码的助手”，变成“懂岗位交付的工作台”。</p>
+<h2>六个角色插件，把 Codex 推进真实工位</h2>
+<p>这次最硬的变化，是角色插件。</p>
+<p>OpenAI 一口气推出了 6 个面向角色的插件：数据分析、创意生产、销售、产品设计、公开股票投资、投行业务。</p>
+<p>每个插件不只是多接几个应用。</p>
+<p>更关键的是，它把相关应用、技能、指令和工作流打包在一起。</p>
+<p>OpenAI 给出的数字是：这些插件合计覆盖 62 个热门应用和 110 个技能。</p>
+<p>这背后的产品思路很清楚。</p>
+<p>分析师需要追问指标为什么变了，销售需要把客户信号变成跟进动作，投行团队需要把研究和尽调变成客户能看的材料。</p>
+<p>岗位不同，默认上下文不同，交付标准也不同。</p>
+<p>如果 Codex 想进入这些岗位，就不能只等用户一句一句教它“怎么做”。</p>
+<p>它要提前知道这个角色的常见材料、常见工具和常见判断方式。</p>
+<p>下面是原文展示的插件生态图标墙（部分）</p>
+<p>这堆图标看起来像一张合作名单，但它真正透露的是另一件事：OpenAI 不想让 Codex 只待在自己的产品边界里。</p>
+<p>它要进企业已有的工具链。</p>
+<h2>Sites 出现后，AI 回答开始变成工作空间</h2>
+<p>第二个关键能力叫 Sites。</p>
+<p>这是面向 Business 和 Enterprise 客户的预览功能。</p>
+<p>Codex 可以把想法、分析和计划做成可分享的交互式网站或小应用，同一个 workspace 里的成员可以通过 URL 访问。</p>
+<p>这件事比“生成一个网页”更重要。</p>
+<p>很多知识工作的问题，从来不缺一段文字总结。</p>
+<p>缺的是一个可以反复查看、协作更新、聚合判断的地方。</p>
+<p>比如客户复盘、财务场景规划、产品发布中心、项目看板、创意简报库。</p>
+<p>这些东西如果散在文档、表格、聊天记录里，团队就会反复追问同一个问题：最新版本在哪里？谁负责下一步？哪个假设已经改了？</p>
+<p>Sites 想把这类一次性输出，变成持续协作的页面。</p>
+<p>图中是原文展示的收益预测规划器示例。</p>
+<p>它说明 Sites 的定位已经越过静态文章，更像能承载数据、状态和决策的轻量工作界面。</p>
+<p>OpenAI 还提到，Wix、Base44、Replit、Lovable、Figma、Webflow 和 Emergent 等早期伙伴会参与 Sites 生态建设。</p>
+<p>这很关键。</p>
+<p>一旦 AI 生成的页面可以被分享、更新、协作，它就开始碰到传统 SaaS 的地盘。</p>
+<h2>批注让 AI 修改时更像同事</h2>
+<p>第三个变化是 annotations，批注。</p>
+<p>开发者已经在 Codex 里用批注改代码、Markdown 和网站。</p>
+<p>现在这个能力扩展到了文档、表格、幻灯片等内容。</p>
+<p>用户可以选中网站里的导航栏，让 Codex 改字体；高亮投资论点里的某个判断，让 Codex 查来源；圈出幻灯片上的图表，让它改成更清楚的标签。</p>
+<p>这个能力的价值，在于它把“重新生成一遍”变成了“局部修改”。</p>
+<p>AI 做第一稿不难，难的是第二轮、第三轮。</p>
+<p>人类反馈往往不是抽象的。</p>
+<p>“这一句太硬”“这张图看不清”“这个指标口径哪里来的”“这个按钮不像我们品牌”。</p>
+<p>批注把反馈固定到具体位置，AI 才更容易只改该改的地方。</p>
+<p>从工作流角度看，这比一次性生成更接近真实协作。</p>
+<h2>真正的变化，是 Codex 开始理解岗位交付</h2>
+<p>OpenAI 还给了几个内部和客户案例。</p>
+<p>OpenAI 内部的非技术团队用 Codex 做内部应用、高管材料、仪表盘，也把创意简报变成符合品牌和设计约束的工作。</p>
+<p>Zapier 团队用 Codex 从 Slack、Google Docs、Coda 等工具里提取知识，再整理成事故复盘、响应计划和功能票据。</p>
+<p>NVIDIA 研究员用 Codex 加速实验流程，从找研究想法到写机器学习基础设施脚本。</p>
+<p>这些案例都有同一个特点：Codex 处理的是一串带上下文的工作，孤立任务只是其中一小段。</p>
+<p>这也是角色插件、Sites、批注三件事放在一起的原因。</p>
+<p>插件负责接入岗位上下文，Sites 负责把输出变成协作空间，批注负责把反馈循环接起来。</p>
+<p>如果说早期 Codex 的问题是“能不能帮开发者写代码”，这次更新的问题变成了“能不能帮一个团队完成工作”。</p>
+<p>可用性方面，角色插件会在支持地区逐步向 Codex 用户开放。</p>
+<p>管理员可以在 workspace 设置里控制底层应用权限。</p>
+<p>Sites 目前面向 Business 和 Enterprise 团队在 Codex app 中预览，Enterprise 管理员可以在后台启用。</p>
+<p>OpenAI 还提到，后续会推出更多角色插件，包括企业财务、私募投资、营销策略、战略咨询和法律。</p>
+<p>这不是一个小功能更新。</p>
+<p>它更像是 OpenAI 在说：AI 工具的下一站，会从更聪明的聊天窗口，走向更懂组织分工的工作系统。</p>
+<p>代码只是第一块拼图。</p>
+<p>下一块，是那些没人想手动整理、但每家公司都离不开的工作。</p>
+<p>原文：Codex for every role, tool, and workflow</p>
+<p>© 2026</p>
+<p>·</p>
+<p>向阳乔木</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Codex" class="entity-link product-link">Codex</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-application/">ai-application</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/workflow-automation/">workflow-automation</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">enterprise-saas</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">collaborative-workplace</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/codex/">codex</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

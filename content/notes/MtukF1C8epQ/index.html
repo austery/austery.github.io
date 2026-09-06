@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Cloud 记忆增强：LanceDB 插件实战指南</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="Open Cloud 记忆增强：LanceDB 插件实战指南" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">Open Cloud 记忆增强：LanceDB 插件实战指南</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI超元域</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-02-24
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ai-chao-yuan-yu/">AI超元域</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=MtukF1C8epQ" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-02-24
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本视频详细介绍了如何通过自研的 LanceDB 记忆插件，显著提升 Open Cloud 的记忆能力，解决其内置记忆系统的局限性。内容涵盖插件的核心优势（如多 scope 隔离、混合检索），详细的安装配置步骤，以及实操演示，旨在帮助用户打造更智能、更懂用户的长期 AI 助手。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h1>Open Cloud 记忆增强：LanceDB 插件实战指南</h1>
+<h3>Open Cloud 的记忆困境</h3>
+<p>上期视频我分享了关于 <strong>Open Cloud</strong> 的一些高级用法，并且答应大家当视频点赞破千之后，本期视频就会为大家分享我这段时间不断迭代的，专门提升 <strong>Open Cloud</strong> 记忆能力的 <strong>LanceDB</strong> 记忆插件。在昨天，我发现视频的点赞已经破千了，所以今天这期视频就专门为大家讲解如何使用我专门为 <strong>Open Cloud</strong> 开发的这一款 <strong>LanceDB</strong> 插件。</p>
+<p>因为我们平时在使用 <strong>Open Cloud</strong> 的时候，它经常会忘记我们之前让它记住的一些知识、经验或者方法论。比如说，我们之前让它对服务器做了一些配置，但是现在配置出现了问题。当我们告诉 <strong>Open Cloud</strong> 的时候，它根本不记得我们之前的对话信息，也不记得它做了哪些配置。所以很多 <strong>Open Cloud</strong> 用户就感觉 <strong>Open Cloud</strong> 非常笨，记不住之前的一些重要事情。</p>
+<p>所以我们需要为 <strong>Open Cloud</strong> 增强它的记忆能力。当 <strong>Open Cloud</strong> 具备了强大的记忆能力，它就能记住我们之前让它进行的一些操作，我们就不需要在对话中反复提及之前做了哪些修复。当 <strong>Open Cloud</strong> 有了强大的记忆，它才能成为真正的长期助手，才能越用越聪明，越用越懂。</p>
+<h3>LanceDB 插件：增强 AI 记忆的利器</h3>
+<p>比如说，在 <strong>Open Cloud</strong> 中，我通过斜杠命令重新开了一个 <strong>session</strong>。在新的 <strong>session</strong> 中，我问他：“关于调用 <strong>Cloud Code</strong>，你已经积累了哪些经验，还有方法论？” 然后 <strong>Open Cloud</strong> 就能够从 <strong>LanceDB</strong> 中来检索之前它所存储的与调用 <strong>Cloud Code</strong> 相关的这些经验和方法论，包括调用模式，还有调用时踩过的坑，这些都会存入到记忆中。还有通过踩坑所总结的这些架构方法论。在下面这里，它就会提到，这一些基本上都是血泪教训换来的。</p>
+<p>像这样的话，<strong>Open Cloud</strong> 就能将它在执行某项任务时踩的这些坑，还有学到的经验以及方法论存入 <strong>LanceDB</strong> 数据库中。像这样就能避免下次再踩同样的坑，这样才能做到 <strong>Open Cloud</strong> 越用越聪明。</p>
+<h3>插件对比：为何选择 LanceDB</h3>
+<p>讲到这里，大家应该会问：“<strong>Open Cloud</strong> 它自带记忆系统呀，为什么非要再为它新增一个记忆系统呢？” 首先，我们可以来对比一下 <strong>Open Cloud</strong> 它内置的记忆系统和我这边不断迭代开发的这个 <strong>LanceDB</strong> 插件，它们的区别有哪些？</p>
+<p>首先，<strong>Open Cloud</strong> 在前些时间的更新中已经内置了 <strong>Cloud Secret</strong>，但它内置的这两种记忆模块还是有很大的局限性的。比如说它内置的 <strong>LanceDB</strong> 在嵌入模型提供商这里，它仅支持 <strong>OpenAI</strong>，我们必须充值 <strong>OpenAI</strong> 的 <strong>API</strong> 才能来使用它的嵌入模型。而且它内置的 <strong>LanceDB</strong> 只实现了一些基础的检索功能，也就是向量搜索。</p>
+<p>而我开发的这个 <strong>LanceDB</strong> 插件，它相比 <strong>Open Cloud</strong> 内置的这两种记忆模块就更加完善了。包括 <strong>BM25</strong> 全文搜索，还有混合检索，还有评分管线。我这里设置的是六层管线，但 <strong>Open Cloud</strong> 内置的这两种记忆模块只有一层评分管线。而且我还实现了 <strong>MMR</strong>（<strong>Maximum Marginal Relevance</strong>: 最大边际相关性，一种用于提高检索结果多样性的技术）多样性去重，还有自适应检索、跳过噪声，而且具备更多功能，包括噪声拦截、保留时间戳，还有 <strong>ID</strong>、前缀匹配等多种功能。</p>
+<p>我将这个记忆模块做成了 <strong>Open Cloud</strong> 插件的形式，因为做成 <strong>Open Cloud</strong> 插件，它具有非常多的优势，包括热拔插机制，只需要在 <strong>Open Cloud</strong> 中修改一行配置，就可以来启用这个插件。而且和 <strong>Open Cloud</strong> 自带的记忆插件并不会冲突，还能实现独立版本独立升级。在升级 <strong>Open Cloud</strong> 版本之后，也不会影响我们的插件使用，而且可以自由切换嵌入模型的提供商，包括 <strong>OpenAI</strong>、 <strong>AI</strong>、 <strong>Gina</strong>、 <strong>AI</strong>，还有 <strong>Germany</strong>，还可以调用欧拉玛中部署的本地模型。而且我还实现了多 <strong>scope</strong> 隔离，这样就可以实现记忆的隐私保护，也就是每个 <strong>agent</strong>（代理）他们有自己独立的记忆。而且他们还可以有共享的知识。而且我还实现了七层混合检索。</p>
+<p>因为在这里用到了与 <strong>reg</strong> 相关的这些知识。考虑到很多粉丝可能在 2024 年的时候没有看过我发的与 <strong>reg</strong> 相关的这些视频，所以在这里就不再详细为大家讲解与 <strong>reg</strong> 相关的这一检索过程了。本期视频所提及的这个铁律文件的内容，也上传到我们这个插件的仓库。这个铁律文件的解压密码会随机出现在视频中，而且持续五秒。本期视频的点赞量如果超过一千的话，在下期视频中，我将为大家讲解并且开源我开发的与 <strong>Open</strong> 跨机跨 <strong>Cloud Gateway</strong> 通信相关的插件。</p>
+<h3>实操演示与效果验证</h3>
+<p>下面我们可以回到 <strong>Open Cloud</strong>，先测试一下这些记忆的效果。比如说，我可以新开一个 <strong>Cloud Session</strong>，然后我输入一个提示词：“我们配置 <strong>Open Cloud</strong> 的时候踩了哪些坑？” 这里它就很快检索到了之前踩坑的这些内容，按照现象、原因，还有解决方案进行了整理。包括这里给出的这一些具体的踩坑的细节，可以看到它检索到非常多的踩坑的经验。</p>
+<p>然后我问他：“从哪个数据库里检索的？” 他说是从 <strong>Open Cloud</strong> 长期记忆库 <strong>LanceDB</strong> 向量数据库里检索到的。而且他还提到了使用混合检索，包括向量加关键词，还有 <strong>rerank</strong>（重排序）。</p>
+<p>然后我们还可以接着提问：“混合检索有哪些优势？” 让他来分析一下。他采用的向量加关键词，还有 <strong>rerank</strong> 这个优势啊，他提到了语义召回更强，而且精准匹配也更稳，还能降低漏召回与误召回，而且更适合经验库、还有故障库这种内容结构，再加 <strong>rerank</strong> 后排序更贴近问题。在最后他提到这种混合检索的核心优势就是语义理解，还有精准匹配。对配置排除故障、踩坑复盘这种场景特别实用。</p>
+<p>而且有了这个记忆插件，<strong>Open Cloud</strong> 每次创建新会话的时候，它加载的上下文会更少。我们可以直接用 <strong>status</strong> 这条命令进行查看。可以看到在创建新会话的时候，它加载的上下文只有 18k。</p>
+<h3>安装配置指南</h3>
+<p>下面就为大家演示我们如何在我们的 <strong>Open Cloud</strong> 中来安装我开发的这个记忆插件。想安装它的话，首先我们先打开 <strong>OpenAI</strong> 的官网网站，然后点击右上角的这个登录注册。注册之后，这里就会出现这个 <strong>API Key</strong>。然后我们只需要复制这一段 <strong>API Key</strong> 将它保存好。</p>
+<p>然后我们只需要复制一下我这个 <strong>LanceDB</strong> 它在 <strong>GitHub</strong> 的仓库链接，然后我们就可以回到 <strong>Open Cloud</strong>。在 <strong>Open Cloud</strong> 中我们就可以输入完整的提示词。我输入的是：“这也是 <strong>OpenAI</strong> 的 <strong>API Key</strong>。然后在这里将刚才复制的 <strong>API Key</strong> 放在了这个位置。然后紧接着我输入的是‘请帮我为 <strong>Open Cloud</strong> 安装这个记忆插件’。在这里我们就输入刚才 <strong>GitHub</strong> 复制的这个仓库链接就可以。”</p>
+<p>当发送之后，我们需要稍等一下，因为 <strong>Open Cloud</strong> 需要时间来为我们配置。在等了几分钟之后，我就问他：“怎么样了？” 然后他就很快回答，他说已经配置好了，而且 <strong>Gateway</strong> 也已经重新生效了。并且提到这个插件已经安装并且加载。而且他把默认的记忆系统已经切换到了我们这一个插件。</p>
+<p>紧接着我还测试了让他来更新一下 <strong>LanceDB</strong> 插件。我输入的提示词是“更新 <strong>LanceDB</strong> 插件”，然后这里就跟上我们的仓库链接。然后过了几分钟我就问他：“怎么样了？” 然后他说已经更新完成并且生效。像这样的话，我们就能让 <strong>Open Cloud</strong> 自行为我们完成这个插件的安装与配置。当需要更新的时候，我只需要告诉他“更新 <strong>LanceDB</strong> 插件”，在后面跟上仓库链接。这样的话它就会自动为我们完成这个插件的更新。</p>
+<p>在 <strong>Open Cloud</strong> 中安装好这个插件之后，我们还需要做一些设置。在这里，我写了一些与 <strong>LanceDB</strong> 相关的这些铁律，然后直接用自然语言告诉 <strong>Open Cloud</strong>，将下面的这些铁律写入到这个记忆文件中。在这里它就提示已经写入到这个长期的记忆文件中了，也就是写入了 <code>memory</code> 这个 markdown 文件。像这样的话，在 <strong>Open Cloud</strong> 中，我们通过 <strong>LanceDB</strong> 插件再配合这个铁律，这样的话就能更大程度发挥出我们这个插件的优势。</p>
+<p>当插件配置好之后，我们使用 <strong>Open Cloud</strong> 的时候，当遇到一些踩坑相关的问题的时候，我们就可以设置一个斜杠命令。当输入这个斜杠命令的时候，<strong>Open Cloud</strong> 就可以将它踩坑的这些经验，还有学到的这些技能都存储到 <strong>LanceDB</strong> 中。哪怕我们不设置这种斜杠命令，在刚才设置的这些铁律中，也包含当它遇到踩坑的时候，就要将学到的经验写入到 <strong>LanceDB</strong> 中的这些铁律。因为采用斜杠命令，就能保证 <strong>Open Cloud</strong> 百分百能将它踩坑学到的经验和知识都写入到数据库中。</p>
+<h3>深度应用与最佳实践</h3>
+<p>下面我们还可以测试一下，我们问他：“你记住了哪些与 <strong>coding</strong> 相关的方法论？” 因为我们刚才在铁律中，不仅让他记住这些踩坑的技术细节，还要让他记住真正的方法论。这样的话，有技术细节还有方法论相互配合，才能让 <strong>Open Cloud</strong> 更加聪明。</p>
+<p>这里他检索到了与 <strong>Cloud Coding</strong> 相关的这些方法论，包括多 <strong>agent</strong> 的交叉审查，能发现单 <strong>agent</strong> 遗漏的 <strong>bug</strong>，还包含逻辑改动之后必须测试。下面还包含这一些架构与调度相关的方法论。这里还提到了认知纪律，包括调用任何工具失败或者报错后，就要搜索经验，然后再重试。下面这里就是与代码安全相关的这些方法论。像这些技术细节还有方法论，它都是从 <strong>LanceDB</strong> 中进行了检索。</p>
+<h3>总结与获取方式</h3>
+<p>总而言之，我们就为 <strong>Open Cloud</strong> 通过这一个插件实现了更加持久的记忆。好，本期视频我们演示的这个插件已经同步到了 <strong>GitHub</strong> 仓库。这里就是仓库链接。大家也可以直接进入我的 <strong>GitHub</strong> 主页，就能找到这个仓库。然后大家只需要按照视频中的方式进行安装，就可以。</p>
+<p>安装好之后，就可以将这个铁律的内容也让 <strong>Open Cloud</strong> 为你写入到铁律中。这个铁律的完整内容，我会打包压缩，也放在这个仓库中。铁律内容的解压密码刚才已经出现在了视频中。</p>
+<p>好，本期视频就做到这里，欢迎大家点赞、关注和转发，谢谢大家观看。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=LanceDB plugin" class="entity-link product-link">LanceDB plugin</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-memory/">ai-memory</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">llm-plugins</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">vector-databases</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/prompt-engineering/">prompt-engineering</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>重构AI套壳产品：三大成功案例的商业逻辑与产品壁垒</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="重构AI套壳产品：三大成功案例的商业逻辑与产品壁垒" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">重构AI套壳产品：三大成功案例的商业逻辑与产品壁垒</span>
+      <span data-pagefind-meta="speaker" style="display:none;">TechButMakeItReal</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-06-17
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/techbutmakeitreal/">TechButMakeItReal</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=onK9c6Xwe-U" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-06-17
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本文深度解析了Hicksfield、Whisper Flow和Fluently这三个AI套壳应用的成功秘诀。通过深入B2B工作流、锁定高付费意愿群体并克服大模型同质化竞争，它们展示了如何从简单的“套壳”演变为具有深厚产品护城河的百万美金营收企业。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>套壳幻觉：跳出大厂后的平庸陷阱与突围者</h3>
+<p>近年来，在 LinkedIn 或 X（前 Twitter）上，我们经常看到有大厂背景的优秀人才辞去高薪工作，选择出来自主创业。人们的第一反应通常是羡慕与敬佩，认为他们一定找到了值得为之放弃高昂年薪的绝佳点子。然而，当你点开他们的产品链接时，往往会发现这不过是又一个<strong>套壳应用</strong>（AI Wrapper: 基于第三方基础模型，通过包装用户界面和特定提示词构建的轻量级应用）——比如一个 LinkedIn 或 Instagram 短视频生成工具，或者一个将会议记录转化为产品需求文档（PRD）的小工具。随着时间推移，这些产品大多因为无法形成健康的商业闭环而走向沉寂，创始人最终重返职场。</p>
+<p>虽然这种创业勇气值得尊重，但从一开始，创始人就必须对想法进行严苛的压力测试。单纯为模型包装一层漂亮的用户界面（UI）并非金矿所在。为了解开这个行业迷思，我们将对三个在退出、估值或现金流上真正取得成功的 AI 包装器产品进行“拆机”分析：一个视频模型包装器 <strong>Hicksfield</strong>、一个语音模型包装器 <strong>Whisper Flow</strong>，以及一个语言教练包装器 <strong>Fluently</strong>。它们证明了成功的关键绝非基础模型本身，而是围绕模型构建的独特价值主张。</p>
+<details>
+<summary>Original English Source</summary>
+Have you been noticing this thing in the past few years when every time you go on LinkedIn or X, there is someone from your network who is quitting their job, usually in big tech, to build something of their own. And the first reaction is usually, "Wow, good for them. They must have found the idea or at least an idea that is worth quitting your big dollar job for." And then you open their website or the product and it's an AI rapper. Yet another one, an app to produce short videos for LinkedIn or Instagram format, an app that would analyze your meeting notes and convert them into product requirements, so on and so forth. And then you start following their journey and it's clearly not taking off. Sure, there are some customers, there is some revenue, there are some reviews, but it is not turning into a sustainable business. And the next thing you see is that the person is going back to corporate. And hey, I have the world of respect for people who have the courage to go and build on their own. And of course, it's easy to look from the side and have opinions. But as someone who built most of my product career at early stage startups that went through IPOs and mergers and acquisitions, there are things that you as a founder need to pressure test from the onset of your idea and get very clear signals whether the product that you're building may not be as revolutionary as you might think. Today I'm going to analyze three products that made it. What do I mean by made it? either a big exit or a unicorn trajectory or simply a sustainable software business. An LLM rapper, a video model rapper, and an audio model rapper. All three may create an illusion that if you find the right market and build a wrapper around a model with a pretty UI on top, there's your gold mine. But each of these businesses is so much more than just a rapper. and we're going to pop the hood for every single one of them and understand why why these three made it and why others didn't. If you are building an AI business or thinking about building an AI product, this video is for you. Let's dive in.
+</details>
+<hr>
+<h3>Hicksfield：将视频生成重构为工作流画布</h3>
+<p><strong>Hicksfield</strong> 锁定的并非传统的图库素材市场，其竞争对手并不是 Shutterstock 或 Adobe Stock。它创造了全新的水平市场，主要服务于社交媒体经理、营销人员、电商平台和中小型创作者。这些人往往面临着紧张的视频制作预算，甚至原本根本无法承担高昂的专业视频拍摄费用。</p>
+<p>作为视频模型的“包装器”，Hicksfield 整合了 Sora、Vidu、Kling 等主流第三方视频生成模型。但它成功的秘诀在于解决了一系列原生模型无法解决的 B2B 实操痛点：</p>
+<ul>
+<li>打造了在多镜头中保持人物和产品视觉连贯性的<strong>品牌一致性</strong>（Brand Consistency: 在连续的画面或镜头中保持特定人物、产品或视觉风格一致的技术）。</li>
+<li>提供了“点击生成视频”的交互方式，内置了 70 多种镜头控制预设，降低了非专业人士的门槛。</li>
+<li>用户无需耗费大量时间和昂贵的 Token 成本去反复优化提示词，即可获得影院级的画面输出。</li>
+</ul>
+<p>在商业化层面上，Hicksfield 就像是视频领域的 Canva（对比 Photoshop 的定位）。其团队约有 100 人，人均创收高达 200 万美元。他们设计了将积分点数（Credits）与输出画质绑定的阶梯式计费模型。尽管面临模型公司发布免费竞品导致价值主张崩溃的风险，但 Hicksfield 通过深耕 B2B 营销流媒体管道，将模型商品化后的工作流整合为了核心壁垒，从而在 2026 年 1 月达成了日均生成 450 万支视频的成绩。</p>
+<details>
+<summary>Original English Source</summary>
+Starting with Hicksfield, a rapper around video models. Let's talk about the type of demand. AI creates an opportunity to find a need in the market where you have the problems that wouldn't be otherwise solved without AI. And Hicksfield targets primarily that. They found a segment of users, social media managers, marketers, e-commerce brands, small-scale creators, professionals who create content online, but either cannot afford video production on the budget that they were given at their company or didn't produce video content at all. The users of Hicksfield are very different from people who buy stock photography or stock videos. Hicksfield is not a competitor to Shuttertock or Adobe Stock or Getty Images. This is a horizontal expansion of the market. But what's interesting here is that 85% of their users are social media marketers. 80% of whom produce commercial content and therefore they are attacking the existing demand as well because there is an overlap where they compete for the business that would otherwise go to a video production agencies. No, of course AI, video and image generation is not the same as a full-scale production company. It's not the same as having a video crew. It is a neural network at the end of the day. But if you are a small or even a midsize business and you have the budget for one full-scale production campaign that can serve as a reference with Hicksfield, you can squeeze a lot more from that one shooting and produce assets for a variety of platforms that you otherwise wouldn't. For the B2B side, the enterprise deals are growing with brands and agencies that are now treating generative video as a core production pipeline. So, how did Hickfield build the audience? Hexfield generates a very impressive videos. It is very easy to make them and they look genuinely cool and they don't repeat themselves. What's important, it is the same mechanism that took the world by storm when Chad GPT came out. It has a natural virality in it. And when that kind of virality is built in, social media becomes your bread and butter. 4.5 million videos generated per day as of January 2026. Viral social content, a big selection of models, and really good UI in the platform. One of the biggest mistakes founders make when building a product is not thinking about how they're going to sell it and how the users will find it because it's the skill set of a good marketer. And whether you're in the early stages of building a business or if you're well underway and growth becomes a priority on top of all marketing activities that you need to do, AI optimization becomes a separate beast. And this is what Hrefs comes to solve. Hrefs built Agent A, an AI assistant designed to handle almost everything related to marketing, SEO, and more. Agent A is an AI marketing agent with full access to your marketing data. It can analyze your competitors, show how your product is described by tools like Chad GPT, Claude, or Gemini. Find content gaps, use keywords to find content ideas, track AI search visibility, monitor where your brand is mentioned, and even create reports and marketing strategies for you. It's designed to be a top 1% marketer on your team. So, it comes with pre-built marketing skills. You can run things like content gap analysis, backlink prospecting, keyword research, AI mention audits, and technical SEO investigations without spending hours writing prompts 24/7. What makes it different is that it isn't limited to the public API. Agent A has access to the same HRES data and reports available inside the HRES platform, including site explorer, keywords explorer, content explorer, rank tracker, and more. It also connects with tools like Notion, Slack, HubSpot, WordPress, and Linear. And it can deliver the work directly into the tools your team already uses. So, if you're building a business and need a marketing AI assistant that can execute all things marketing and AI visibility, check out Agent A from Hrefs using the link below. And now, back to the video. Now, let's talk technical details. Yes, Hicksfield is a wrapper. It aggregates third party video models, Sora, VO, Cling, Seed Dance, and a ton of others under one subscription. But when you start studying their technicalities closer, they built a reasoning engine that maintains brand consistency across shots, it is a hard problem that raw models do not solve, especially for the B2B audience. They built a click to video functionality. This I wouldn't say fully solves but it definitely suits a big pain point for anybody who generates video content. If you have ever tried generating visual assets with AI, you know what I'm talking about. That prompt has to be crisp AF because if you're not specific enough, any model, no matter how good, spits out garbage and that garbage has a cost. And the more you refine, the more tokens you spend. The better in the model, the more the tokens. What they also do is fine-tuning on top of base models for cinematic output. And they also added more than 70 presets for camera control. My point is Hicksfield to video agencies is what Canva was to Photoshop. Of course, it is not the same audience. It is not a professionalgrade tool, but it does make the engine usable for non-experts. And what's even more important, it solves the problem of speed. Time to market is their biggest selling point. And what's important is that it's their own distribution and UX mode, not a model. Yes, they are a wrapper, but their selling point is not sitting in the models. Now, let's look at the team about 100 people. Revenue per each employee about $2 million, which is exceptional. Their pricing model is welld designed for conversion. Instead of a one-sizefits-all subscription fee, they tied credits to output quality. The better the model, the higher the cost. Let's talk unit economics. For heavy users who iterate three to five times per one shot on expensive models, Hicksfield's margins can get thin because you keep generating multiple times for the same asset. The credit system is both good and bad. The good thing is that it is usage based and it scales. The bad thing is that the margins can get thin if you have a heavy user. So, how come Hicksfield survived? They had a ton of competition. There is a bunch of startups that create rappers around video models for various needs and various personas. A few reasons. The problem with the vast majority of AI video startups is that when model company ships comparable features for free or as part of the existing subscription, the value proposition of the startup collapses. Hickfield's founder recognized that models were becoming a commodity and they built a product around how these models would be assembled into a production workflow. Number two, they found their user and their user is a B2B user. It's a marketer. The problem with most AI video startups is that they chase the democratized creativity narrative. For people who use AI videos as a hobby or as an experiment, many of them inherited this idea from Midjourney, forgetting that Midjourney was first of all a pioneer in this market. They could afford to produce for hobbyists. Secondly, Midjourney makes its own models. Midjourney is a lab. The vast majority of startups are not labs. Hicksfield launched in April 2025. They had mixed usage at the beginning, but they started reading the data and noticed that most usage was coming from marketers and that became the persona. And finally, the platform. If you look at the product, they cover the entire content production pipeline end to end ideation, storyboards, images, videos, animations, color correction, marketing studio. I personally log into Hexfield on a weekly basis and they've got a new integration every single week. Claude, Da Vinci, Adobe, you name it. There is something new every single week that covers that end to end content production.
+</details>
+<hr>
+<h3>Whisper Flow：从语音硬件死局到生产力心流</h3>
+<p><strong>Whisper Flow</strong> 是一款平台无关的语音输入应用，它作为底层声音交互系统嵌入用户日常使用的各类软件中。它的核心在于挖掘了那些习惯了手打输入的知识工作者的潜在需求。</p>
+<p>在公司决策层投资生产力工具（B2B Productivity Spend）的语境下，如果产品经理能通过该软件快速将零散的会议想法整理为清晰的 PRD，其节省的时间与劳动成本便是巨大的。目前，已有 270 家《财富》500 强公司使用 Whisper Flow，每周有超过 125 家企业客户签约。</p>
+<p>Whisper Flow 的演进过程堪称套壳转自研的典型：</p>
+<ol>
+<li><strong>初期阶段</strong>：采用第三方<strong>自动语音识别</strong>（ASR: 将人类语音转换为文本的技术）模型，辅以在 Llama 上微调的格式化层进行输出。</li>
+<li><strong>转型自研</strong>：获得市场验证后，团队自主研发了微调的 ASR 模型与专属 LLM 排版层，从套壳完美演变为纯技术栈驱动。</li>
+<li><strong>关键特色</strong>：极低的延迟、出色的上下文感知格式化能力（它能识别出用户是在写 Slack 消息、法律简报还是 Git 提交日志，并进行相应排版），以及支持个人词汇库定制。</li>
+</ol>
+<p>数据表明，在使用 Whisper Flow 六个月后，中位数用户会将 72% 的输入工作转由语音完成，且 90% 的输出结果无需任何人工校对。虽然它曾经历过长达三年的可穿戴语音硬件研发失败史，但正是转型软件后的极致体验，打动了硅谷头部的风险投资人（VC），如 Marc Andreessen 等人的日常使用，使得其在仅有 50 名员工的情况下，实现了 20 亿美元的估值与 70% 的年留存率。</p>
+<details>
+<summary>Original English Source</summary>
+Moving on to the audio rapper, Whisper Flow. Whisper Flow is an app that is platform agnostic. It works as a voice layer over existing apps. Whisper unlocked this segment when they're targeting knowledge workers who previously typed everything by hand. They did not use any voice or dictation tools. That's why I'm saying that it's a new market. I personally feel this pain firsthand. I'm not the fastest and not the most accurate typer. If I can send a voice note, I will. If I can dictate, I will. What Whisper did is they solved the voice dictation. The product that they built is really, really good quality. And this quality improvement unlocked a new user behavior that people didn't have before as the secondary sales motion, so to say. They're fighting for the existing market as well. They're fighting for the B2B productivity spend on software. Listen to this one more time. The productivity software. What does this mean? If you are a developer and your company gives you access to cloud code for example, that's productivity spend for the company. If you are a product manager and the company invests in a tool that captures notes from your discussions with engineering and prepares a PRD based on that, that's productivity spend. So what Whisper is doing is they're fighting for this productivity spend. They want to be a part of that. And as a result, 270 Fortune 500 companies using it. 125 enterprise customers signing weekly. Are they a rapper? Yes, they started as a rapper. But when they launched, the product was built on third party ASR model with a fine-tuned layer of llama on top. Later, after they got traction, they switched to building their own fine-tuned ASR models, a proprietary in-house LLM formatting layer, and developing full in-house voice models. So, again, are they a rapper? Well, yes, they were when they started, but they're not a rapper anymore. Now, how did they reach their customers at the very beginning? What's interesting here is that their core growth channel was organic word of mouth. Just like Hicksfield is a very visual product, it can very quickly impress you. Whisper is a sensory product but in a different way. If you hear an exec standing beside you dictating to their laptop, that is your word of mouth. The team spent three full years building voice hardware. They failed and they pivoted to voice dictation software. If you draw a parallel with Hicksfield story, just like Hicksfield pivoted away from democratizing creativity narrative, both Hicksfield and Whisper found the thing that people do all day and they started targeting the B2B market. Onto the technical mode. Even at the beginning when they were a rapper, they were not using raw audio models. They fine-tuned Lama. They had higher accuracy than any of the competitors. That's what they started with. They have extremely low latency, meaning that the words appear on screen very quickly, which is a delightful experience for a user. And trust me, this is coming from someone who had tried a ton of dictation tools. They provide contextaware formatting. That was actually the reason why the whole startup took off because the model knows when you're writing a Slack message versus a legal brief or a commit message. and it formats your message accordingly. And lastly, it builds your personal dictionary. It learns your jargon, names, acronyms, so you get very strong personalization. Now, listen to the metrics. After 6 months of use, the median user runs 72% of all of their typing through Whisper with 90% of outputs requiring zero edits. That tells you that the quality is really good. And this is why Whisper is not a simple rapper. You can call it a rapper business. Sure, that's where they started. But the reason they succeeded is because they have a technical and a product mode that cannot be replicated by a better competitor overnight in a form of months of learned vocabulary, style preferences, and workflow habits. Even if Llama goes down overnight, they can build this rapper on a different model. Now, their capital efficiency is exceptional. There's conversations in May 2026 about $260 million as series B and a $2 billion valuation and that's at 50 employees. The revenue per employee is approximately $200,000. Again, exceptional 70% retention after one year. This kind of retention is not achievable if you're just a rapper. 19% freeto pay conversion. This is very high for a software product. 40% month-over-month revenue increase and a 100 times year-over-year user growth. The vision is to become a voice operating system that fully replaces the keyboard. And perhaps they will later venture into voice OS just like OpenClaw became a breakout in the agent OS. That is a whole new market we're talking about. So why did Whisper survive? Because before Whisper, the market of voice AI had a graveyard of products. Siri, Alexa, and Google Assistant. These three on one hand normalized voice interfaces, but let's be honest, the quality was and still is terrible. Now, OpenAI's voice model really pushed the bar. Till this day, of all Frontier companies, OpenAI's model is my absolute favorite. But Whisper went even further. When Whisper came out, most of their competitors were building transcription products. You speak it types. And this dictation behavior became a commodity. Do you see this parallel with Hicksfield? Just like Hixel realized that video models were becoming a commodity. So did Whisper. So yes, they started as a rapper, but they survived early on because they competed on the gap that nobody else addressed, the formatting quality. they were not competing on the model. Now, it is also important to say that it worked because of who adopted it first and it was the Silicon Valley's VCs. The founder later said that every single tier 1 VC fund in the valley was using Whisper Flow for their emails, memos, and documents. Mark Andre and Steve Bosnjak started using it daily and that in many ways triggered an organic adoption for the enterprise.
+</details>
+<hr>
+<h3>Fluently：破解职场语境的心智重塑</h3>
+<p><strong>Fluently</strong> 是一款专注于为非英语母语的职场专业人士设计的 AI 英语口语私教应用。它通过实时收听用户的视频会议或日常工作通话，转录并提供关于语法、词汇丰富度、语气填充词和发音的即时改进反馈。</p>
+<p>目前，全球有大约 8400 万名面临此痛点的专业人士。与市场上主要服务零基础初学者的 <strong>多邻国</strong>（Duolingo: 著名的游戏化语言学习平台，主要面向零基础初学者）不同，Fluently 直击中高阶职场语境。它的主要优势包括：</p>
+<ul>
+<li>相比于线下昂贵的人口私教，Fluently 随时在线，甚至可以无形地“列席”用户的跨国商务会议并记录表现。</li>
+<li>解决了传统语言 App 依靠虚拟模拟剧本进行练习的弊端，让用户在真实的战斗环境（Zoom 会议、面试、客户演示）中获得反馈。</li>
+</ul>
+<p>然而，在商业化探索中，Fluently 面临着不同于 Hicksfield 和 Whisper Flow 的特殊心理阻碍。虽然企业拥有大量培训外籍员工语言能力的需求，但 Fluently 尚未成功开拓 B2B 团队授权。这是因为，要求雇主为自己报销一款“英语改进工具”，等于变相向公司承认自己的语言能力存在短板，这会直接损害个人的职场地位与晋升资本。因此，员工更倾向于完全自费订阅。正是基于这一精准的痛点定位，Fluently 通过在社交媒体上每天发布超过 50 条极具共鸣的短视频内容，实现了完全有机的自发传播和高客单价转化。</p>
+<details>
+<summary>Original English Source</summary>
+Now, what this teaches you is that when you are a founder, and I know it's obvious because everybody says that, but really with this example, you can see it right in front of you. A location is a massive factor in your journey. Whisper is an excellent product and it deserves all the praise, but it is also worth noting that being located in California does open a lot of doors for you. Now, for Whisper, their moat became the quality. Before them, nobody solved the polishing problem. The vast majority of their competitors launched as a voice memo apps with AI summarization. Whisper Flow survived because they killed their hardware product right when they had to kill it. They built a very strong accuracy for the software product and they built the right customer with high willingness to pay. When the product was right, they built network effects and the distribution was entirely organic. It was only when they proved that there was market for it and the product was working is when they started building their own stack. And the last example that I would love to speak about is Fluently. This is an audio and LLM rapper. Fluently is an AI English speaking coach built specifically for non-native speakers who already speak English but need feedback on their speaking abilities in professional settings such as job interviews, Zoom calls, client presentation, work calls, you name it. It listens to your calls, transcribes your side and gives feedback on your grammar, vocabulary, filler words and pronunciation. Now, demand type primarily new demand. The market that they identified is the market of nonnativespeaking professionals working in English-speaking environments. That is about 84 million people. Most of these people were not paying for a human English tutor before fluently. But it's not just because the private tutors are expensive, but because the scenario that Fluently addresses is very difficult to arrange physically. You'd need this tutor person to sit by your side during your work conversations and give you feedback in real time. If you wanted to do this consistently, you would need to hire someone full-time to sit next to your desk. And even if you were to do that, you'd have to work from home cuz clearly you're not going to bring that tutor with you to work. This was a brilliant product decision that the founders made. I don't want to say that they found a niche customer. It's the ability to define the problem. They're not targeting people learning English. They're targeting people who can speak English but freeze or cannot express themselves in work settings. It is an incredibly sensitive and relatable problem for anybody who learned English as a second or third language. And despite being associated with a language app, which I wouldn't necessarily call them a language app, they're not really competing with the vast majority of language apps in the edtech market. The famous Dolingo is mostly suitable for complete beginners. And again, Dolingo doesn't do anything with work settings. The only competitor that I can see for fluently is really a human tutor. And that would be a tutor who would specialize in professional English speaking skills. And what's also important is that this specific profile of a user has a high willingness to pay because they have a very legible outcome. The career advancement. What helped is that the founders were the users. It almost feels like they built the product for themselves. Every language app on the market makes you practice in a synthetic environment. You're given scripted conversations or scripted exercises, fake scenario, audio tracks, and Fluently is very different from that. Fluently is perhaps my favorite example because this is a true use case that cannot be possible without AI or would be incredibly difficult to orchestrate without AI. Now, what's interesting about Fluently is that unlike Higsfield or Whisper, they are not actively targeting the enterprise layer. It is mentioned on their YC page, but it is not yet publicly documented as a live revenue stream. And when you're looking at it for the first time, you're wondering, well, why not sell to BTB? They could definitely be fighting for the same productivity spend. A single enterprise contract deploying fluently to 500 employees would be worth more than hundreds of users on the consumer plan. So I want to talk about B2B because Whisper and Hicksfield cracked it. But what happened to Fluently? What is important to a founder to understand here is that Fluently has a very different product behavior. Whisperers users are founders, VCs, engineers, executives. It's the people with purchasing power and people who are short of time. When an executive downloads Whisper and uses it for every email and loves it, they can approve a team license very quickly. Also, there is almost inevitable word of mouth because you can quite literally witness people using Whisper at work. They would be talking to the screen right in front of them. The value is immediately visible to anyone nearby. Fluently, on the other hand, is a tool for non-native English speakers trying to improve their professional communication. And this is why the product touches something very sensitive. Selling it as a B2B tool and trying to get into the enterprise market through the employees because that's textbook B2B entry. When you sell it to one employee, that expands to the team and the team sells it to the company. But asking your employer to pay for a tool that helps you improve your English means that you're kind of admitting to your employer that your English is not good enough. That puts you in a very vulnerable position because language fluency is tied to your status and perception at work and the ability to move up the career ladder. With fluently, it's actually quite the opposite. an employee would rather pay out of pocket exactly because they want to avoid that kind of perception or that conversation. So to sum it up, Fluently is yet to unlock the B2B segment if they ever decide to do so. But nevertheless, they are an excellent example of a language startup that is a rapper. The reason they survived is because of the product mode. The ability to define that problem for the vast majority of non-native speakers is an example of a great product sense of the founders. And lastly, same as Hicksfield, same as Whisper, contentled growth. Distribution story is almost entirely organic. They publish 50 plus short form videos daily across Instagram, Tik Tok, and YouTube. And when your problem is painfully relatable to a global audience of non-native speakers and short form optimizes for that relatability, you have an organic growth engine that is free.
+</details>
+<hr>
+<h3>创始人破局：产品驱动与地缘分布的终极拷问</h3>
+<p>这三个故事为准备在 AI 时代破局的创始人提供了几点关键的思考启示：</p>
+<p>首先，<strong>不要为了做 AI 而做 AI</strong>。避开那些只解决某个特定平台上单一用例、且低频使用（例如一年仅用一次）的产品想法。工程师很容易因为掌握技术而对伪需求产生感情，忽略了产品生命周期的成长性。</p>
+<p>其次，要意识到<strong>产品市场契合度</strong>（Product-Market Fit: 产品与目标市场需求高度匹配的状态）不是静态的。Hicksfield 在发现大众用户只是将 AI 视频作为一时新奇的兴趣（Hobby）后，立刻果断调整定位，转向了能产生持续付费的商业化营销群体。</p>
+<p>最后，充分重视<strong>品牌与有机构建</strong>（Build in Public）的力量。欧洲发展迅速的独角兽 Lovable 就是典型案例，其核心高管在社交媒体上极具声量。此外，地缘环境也起到了关键作用——Whisper Flow 的案例证明，位于美国加州等创新核心区，能在产品早期触达最关键的早期天使用户，并极大降低推广成本。总之，模型随时可能过时或被降维打击，唯有将 AI 技术无缝融于工作流体验中，才能构建带不走的护城河。</p>
+<details>
+<summary>Original English Source</summary>
+So after hearing these three stories, what can you do to pressure test your AI rapper idea as a founder? First of all, if you're trying to build a rapper, don't. Do not build a rapper that solves one specific use case for one specific platform that you think isn't solved yet. Don't build AI for the sake of AI. Don't build a product that will be used once a year. This is a common problem, especially among engineers who have the skills to build a side project. They know how to figure it out. they can build a rapper and they get attached to a specific problem that they believe to be true without necessarily thinking about how this use case would scale. First of all, look for and be honest about your product market fit. Lack of product market fit, which means the lack of an actual problem and lack of a market for this problem is the reason the vast majority of AI startups fail. You cannot afford being an AI rapper for a single use case. Sure, it may work in the short run, but it will not grow into a meaningful sustainable revenue generating product. Also remember that product market fit is not binary. It can come and go. This happened to Hickfield when the behavior around AI video generation was so new that a lot of people would do it for a hobby. But a hobby is not a sustainable business. Which is why they pivoted to a different persona. And what is incredibly important is think about how much you would need to spend on marketing before you launch. Many unicorns have one thing in common, a very strong social media game. Lovable is a great example. Lovable is a very obvious rapper. It has a lot of competition. But apart from having product modes, every executive at Lovable has a following on LinkedIn and they post hard. Lovable social game is a growth engine for the entire company. They build in public. They post about what they do. They post how the company is running. Their social media is a massive contributor to the fact that they're the biggest unicorn in Europe. Startups save hundreds of thousands of dollars on marketing because of organic user acquisition through social. So if you want to build a product, you're going to need a brand. And your brand is not just a product, you are the brand. And lastly, watch for the unsustainable unit economics, which yes, is an arguable thing at the beginning. And changing your pricing from fixed to tokenbased cost is not going to fix it. But when you're building a product, the model cannot define your product. You have to be productled from the beginning. If the model that you're building around gets deprecated tomorrow or gets banned or some political situation happens and you cannot use that model tomorrow, your product has to be something that will not be replicated easily. As always, we hope this was helpful and we're waiting for your feedback in the comments. We'll see you in the next episode. Bye.
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Canva" class="entity-link company-link">Canva</a>, 
+                
+                  <a href="/search/?q=Hrefs" class="entity-link company-link">Hrefs</a>, 
+                
+                  <a href="/search/?q=Lovable" class="entity-link company-link">Lovable</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Hicksfield" class="entity-link product-link">Hicksfield</a>, 
+                
+                  <a href="/search/?q=Whisper Flow" class="entity-link product-link">Whisper Flow</a>, 
+                
+                  <a href="/search/?q=Fluently" class="entity-link product-link">Fluently</a>, 
+                
+                  <a href="/search/?q=GPT-4o" class="entity-link product-link">GPT-4o</a>, 
+                
+                  <a href="/search/?q=Llama" class="entity-link product-link">Llama</a>, 
+                
+                  <a href="/search/?q=Sora" class="entity-link product-link">Sora</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">ai-wrapper</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">workflow-integration</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">b2b-saas</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/product-market-fit/">product-market-fit</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

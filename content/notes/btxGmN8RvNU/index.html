@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>你的智能体最大的谎言：&#39;我搜过网页了&#39;</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="你的智能体最大的谎言：&#39;我搜过网页了&#39;" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">你的智能体最大的谎言：&#39;我搜过网页了&#39;</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-06-17
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/data-engineering/">data-engineering</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=btxGmN8RvNU" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-06-17
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">Bright Data 的 Rafael Levi 深入探讨了大型语言模型（LLM）在执行网页搜索时经常产生幻觉的根本原因：为了取悦用户，它们在遇到反爬虫机制（如验证码或 Cloudflare 的 AI 迷宫）时会编造数据。他通过实机代码演示，对比了有无 MCP 支持下智能体访问真实网页的巨大差异，展示了如何通过模拟人类行为来可靠地收集实时公开数据，解决 AI 智能体数据缺失和误导的隐形失败问题。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>LLM 的取悦机制与幻觉</h3>
+<p><strong>Rafael Levi</strong>: 好的，那我们就这样开始吧。这是一个小房间。大家好。欢迎你们。我的名字是 <strong>Rafael</strong>。我代表 <strong>Bright Data</strong>。<strong>Bright Data</strong> 基本上是一个网络访问平台，用来帮助智能体或任何人进行大规模的公开数据收集。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Okay, so let's just work with it like this. It's a small room. Hi everybody. Welcome. My name is Rafael. I represent Bright Data. Bright Data is basically web access platform to help agents or anybody collect public data on scale.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 我今天来到这里，是为了谈论 LLM（大型语言模型）如何误导人们，并一直试图说服他们：“嘿，我做过搜索了。嘿，我做了这件事。” 然而它其实并没有做。为什么？因为 <strong>LLM 的程序设定就是要取悦人们，取悦用户</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: And I'm here to talk about the LLMs misleading people and all the time convincing them, &quot;Hey, I did a search. Hey, I did this.&quot; While it didn't. Why? Because LLMs are programmed to please people, please users.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 所以它们会编造很多东西，这也是我现在看到的 LLM 存在的最大问题。我一直都在开发应用程序。我宁愿 LLM 告诉我：“不，我做不到。” 但它从不这么做。它总是试图凭空捏造。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: So they make enough things and this is the biggest issue right now I'm seeing with LLMs. And I'm building applications all the time. I would rather LLM tell me, &quot;No, I can't.&quot; But it never does. It always tries to make things up.</p>
+</details>
+<h3>网络如何对抗机器人</h3>
+<p><strong>Rafael Levi</strong>: 所以目前，互联网实际上正在对抗机器人和自动化程序。这也是一件已经持续了多年的事情。每个人都知道验证码（CAPTCHA）。第一批验证码出现在大概十年前。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: So currently the web is actually fighting the robots and automations. And it's been something that going on for years. Everybody knows CAPTCHAs. The first CAPTCHAs showed up year 10 like, you know, decade ago.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 并且这种情况还在不断发展。现在我们甚至看到了 <strong>AI 屏蔽 AI</strong> 的情况，这简直是一个全新的世界。网络访问实际上并不像看起来那么简单。所以它们（智能体）会遇到验证码，而且它们实际上并不会报告遇到了验证码。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: And it just keeps growing. And now we have AI blocking AI and there's a whole world going on. And the web access is actually not as simple as it looks. So they're getting CAPTCHAs and they don't actually report CAPTCHAs.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 于是它会试图去用不同的方式寻找数据。有时候它会去查阅它的训练数据。而这就是最糟糕的事情发生的地方。当它使用训练数据并告诉你这是当前的状况时。<strong>它的训练数据是来自 2024 年的。而我们现在是在 2026 年</strong>，这根本对不上，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: So it tries to go and find the data different way. Sometimes it goes into training data. And this is where the worst thing is. When it uses training data and tells you that this is the current situation. Training data is from 2024. We're in 2026 and it doesn't add up, right?</p>
+</details>
+<p><strong>Rafael Levi</strong>: 所以这些是我刚刚才查看过的一些新事物，对吧？比如 <strong>Cloudflare</strong> 屏蔽了 AI 对大约 20% 网络的爬取，对吧？也就是说，有 20% 的网络，AI 是无法通过内置的默认抓取机制访问到的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: So these are some of the new things that I was just literally checking out, right? So Cloudflare blocks AI crawling for about 20% of the web, right? So 20% of the web is literally not accessible by AI by default fetch that's built into it.</p>
+</details>
+<p><strong>Rafael Levi</strong>: <strong>Cloudflare</strong> 现在还发布了一个 <strong>AI 迷宫（AI Labyrinth）</strong>，用来真正地困住机器人，误导它们，并为它们提供假数据。这样一来，你得到的结果就会变得更糟。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Cloudflare also right now released an AI labyrinth to actually trap bots and mislead them and provide to them fake data. So, then your results are getting even worse.</p>
+</details>
+<h3>隐形失败与伪造的来源</h3>
+<p><strong>Rafael Levi</strong>: 明白了吗？这就是所谓的“隐形失败”群体，对吧？没有任何报错，没有任何警告，只有错误的答案，对吧？所以，智能体发送了一个请求，它遇到了一个验证码，甚至是一个空白页面，但它不会告诉你：“嘿，我刚刚只拿到了一个空白页面。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Okay? So, the invisible failure group, right? There's no error, no warning, just the wrong answer, right? So, the agent sends a request, it gets a capture, even an empty page, it doesn't tell you, &quot;Hey, I just got an empty page.&quot;</p>
+</details>
+<p><strong>Rafael Levi</strong>: 它会试图编造一些东西，而这就是绝大多数幻觉的来源。<strong>出于取悦用户的需要以及数据的缺乏</strong>。所以，它真的就是在凭空捏造。我曾见过它真切地编造数字，提供伪造的引用文献。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: It will try to make up something, and this is where the most of hallucinations come from. The need to please and lack of data. So, it literally makes things up. I've seen it literally make numbers up, provide fake citations.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 你点击那个引用链接，它是一个 404 错误，那个页面根本不存在，我相信你们所有人肯定都经历过，我最近也一直看到这种情况发生。我的意思是，在 <strong>ChatGPT</strong> 上，字面意义上有大约 <strong>60% 的引用链接是无效的</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: You click on the citation, it's a 404, the page doesn't exist, and I'm sure all of you have uh I've seen that happening recently. I mean, literally like 60% of citations on ChatGPT is not working.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 你们当中有多少人尝试过购买一款产品？比如：“嘿，在网上帮我找一下这款产品，我想买它，给我一个购买链接。” 然后你点击了那个产品链接，却发现根本没有这个产品。那么，你（AI）说的这个产品到底是什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: How many of you have tried to purchase a product? Hey, find me this product online, I want to buy it, and give me a link to the product. You click on the link to the product, and there's no product. Like, so what is this product that you're talking about?</p>
+</details>
+<p><strong>Rafael Levi</strong>: 那个网址不存在，那个产品也不存在。那么，我该去哪里花 50 块钱买这个产品呢？根本就不存在。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: The URL doesn't exist, the product doesn't exist. So, where do I buy this product for the 50 bucks? Doesn't exist.</p>
+</details>
+<h3>MCP 性能对比演示</h3>
+<p><strong>Rafael Levi</strong>: 嗯，所以，我想向你们展示的，我将通过代码展示给你们看。你们当中有多少人熟悉诸如 VS Code 这样的编程工具？没有吗？好的，太完美了。所以，如果我切换到那个界面，大家也不会觉得一头雾水。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Um so, what I want to show you, and I'm going to show you in code. How many of you are familiar with coding like um VS code? No? Okay, perfect. So, nobody's going to get lost if I'm going to switch to that.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 所以，我接下来要做一个演示，基本就是对比在使用 MCP 和不使用 <strong>Bright Data</strong> MCP 的情况，我们将比较一下两者到底有什么区别。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: So, I'm going to do a demo basically with MCP and without the Bright Data MCP, and we're going to compare what is going on there.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 首先，我，我，我想向你们展示，这两个脚本里我用的是完全相同的提示词，对吧？也就是一个没有使用 MCP，另一个使用了 MCP。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: So, first I'm going to I I I want to show you that I have exactly identical prompts for both of the uh scripts, right? So, without MCP and with MCP.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 那么，我给它分配了五个任务。首先是房产，<code>rightmove.co</code>。让我们去看看一些房源；然后是 <strong>LinkedIn</strong>、<strong>Instagram</strong>、<strong>Amazon</strong> 以及 <strong>TikTok</strong>。这就是我想要访问的五个基础网站。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: So, the the I I give it five tasks. Uh Property, rightmove.co. Let's go check out some of the properties, LinkedIn, Instagram, Amazon, and TikTok. These are the five basic uh sites that I wanted to access.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 它们在反爬虫系统方面都非常严格，而我想向你们展示这种差异。所以，首先我将在不使用 MCP 的情况下运行它，并且我将真正让 AI 自己用事实说话。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: They are very heavy on anti-bot systems, and I want to show you the difference. So, first I'm going to run it without an MCP, And I'm going to literally to let the AI talk for itself.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 而且 <strong>GPT-5</strong> 运行有点慢，所以会花点时间。但基本上，我们正在尝试做的是访问这个 URL。这是我大概半小时前查过的一些本地房产信息。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: And GPT-5 is a bit slow, so it's going to take some time. But basically, what we're trying to do is we're trying to access this URL. It's some local properties that I did literally half an hour ago.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 嗯，一家在以色列的 <strong>LinkedIn</strong> 公司，让我们来看看。一个 <strong>Instagram</strong> 账号，一些 <strong>Amazon</strong> 上的产品，以及一些 <strong>TikTok</strong> 的内容。这并不仅仅局限于这五个网站。这只是我挑选出来的几个，因为我非常确定，如果不使用 MCP，它绝对无法成功访问这些网站。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Um LinkedIn company in Israel, let's check it out. Instagram account, uh some Amazon product, and some TikTok. This is not limited to just these five websites. It's just something that I picked that is I know for sure will not work without MCP.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 所以，如你们所见，在没有 MCP 的情况下，我没有实时的网络数据访问权限。呃，没有任何浏览工具，对吧？也就是说，这是在 <strong>GPT-5</strong> 开箱即用的默认状态下不可用的工具。我的意思是，它很强，这是一个非常强大的 LLM。但是<strong>成功率为零，五个任务全部失败</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: So, as you can see, without MCP, I don't have live web data access. Uh doesn't have any browsing tools, right? So, this is with tools not available just by default out of the box uh uh GPT-5. I mean, it's a strong but it's a strong LLM. And zero success, five failed.</p>
+</details>
+<h3>Bright Data MCP 功能介绍</h3>
+<p><strong>Rafael Levi</strong>: 完全一样的事情，完全一样的提示词，我现在要带上我们的 MCP 来运行它。我们的 MCP 拥有 <strong>66 个工具</strong>。在它运行的同时，我想顺便介绍一下它拥有的一些工具。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Same exact thing, exactly the same prompt, I'm running with our MCP. Uh our MCP has 66 tools. While it's running, I just want to go off some of the tools that it has.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 搜索引擎。搜索引擎基本上意味着 LLM 能够执行 Google 搜索、Bing 搜索、DuckDuckGo 搜索。<strong>是真正的搜索</strong>，而不仅仅是那种，你们知道的，它在后台自己进行的所谓“网页搜索”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Search engine. Search engine is basically the LLM is able to do Google search, Bing search, DuckDuckGo search. Real searches, not just like, you know, search the the web that it's doing in the background.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 并且它还有一种作为 Markdown 格式的抓取功能。这是一个非常强大的功能。基本上，它可以向任何 URL 发送一个 curl 请求，并<strong>只获取没有 HTML 标签的 Markdown 文本</strong>。这样，你就不必在解析 HTML 标签上浪费 token（代币）了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Um it has It also has scrape as a markdown. That's a very strong one. Basically, it can send a curl to any URL and get just the markdown without HTML tags. So, you're not wasting tokens on parsing the HTML.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 还有搜索引擎批量查询。如果你想查询，比如说 100 个关键词，你确实可以直接发送 100 个关键词，并获取这 100 个关键词的批量结果。所以，这种<strong>扩展性也是非常巨大的</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Uh search engine batch. If you want to do, like, you know, like 100 keywords, you can literally can literally send 100 keywords and get 100 keyword batch results. Like, so the scaling is also huge.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 发现功能。如你们所见，它还为许多网站内置了预先构建的 API。当然，它还拥有一个抓取浏览器基础设施。所以，<strong>它其实是一个你的 LLM 可以打开并进行导航的远程浏览器</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Discover. It also has pre-built APIs for many websites as you can see. And of course, it has a scraping browser infrastructure. So, it's a remote browser that your LLM can open and navigate.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 这个远程浏览器<strong>能够自行解决验证码问题</strong>。它拥有独特的指纹识别。所以，它可以同时打开 100 个浏览器，访问同一个网站而不会被屏蔽。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: The remote browser solves capture by itself. It has a unique fingerprint. So, it can open 100 browsers, navigate the same website without getting blocked.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 所以，整体的想法就是，使用我们的 MCP，它不仅可以执行单个会话，<strong>还能并行执行多个会话</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: So, the whole idea is that with our MCP, not only can it do a single sessions, it can do multiple sessions in parallel.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 而且如你们所见，让我们来看一下。我们成功访问了 <code>rightmove</code>。我们成功访问了那家以色列的 <strong>LinkedIn</strong> 公司。并且 <strong>Instagram</strong> 也成功了。嗯，<strong>Amazon</strong> 上的产品，它获取了产品本身的信息。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: And as you can see, let's see. We have success for the right move. We have success for the LinkedIn Misral. And Instagram also worked. Um Amazon product, it has the information for the product itself.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 然后我所做的是，在第二部分，我让 LLM 去对比一下没有 MCP 和有 MCP 的结果。这样你们就不用光听我的一面之词了。让我们看看 <strong>ChatGPT</strong> 实际上会怎么说。如果它没卡住的话。看起来它因为某些原因卡住了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: And and then what I did is on the second part, I asked LLMs to compare the results from no MCP with MCP. So, that you don't take my word for it. Let's see what the ChatGPT will actually say. If it didn't get stuck. It looks like it's stuck for some reason.</p>
+</details>
+<h3>公开数据与法律合规</h3>
+<p><strong>Audience Member</strong>: 我可以问个问题吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member</strong>: May I ask a question?</p>
+</details>
+<p><strong>Rafael Levi</strong>: 当然，请问。我非常喜欢回答问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Of course, please. I I love questions.</p>
+</details>
+<p><strong>Audience Member</strong>: 对于社交媒体个人资料，你们有运营之类的账号吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member</strong>: For social profiles, do you have like uh accounts that you run?</p>
+</details>
+<p><strong>Rafael Levi</strong>: 没有，我们只处理公开数据。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: No, we only work with public data.</p>
+</details>
+<p><strong>Audience Member</strong>: 公开数据。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member</strong>: Public data.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 只有公开可用的数据。嗯，<strong>收集需要登录才能看到的数据实际上是不合法的</strong>。为什么呢？因为当你注册并创建一个账户时，你就接受了它的条款和条件。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Only publicly available data. Um collecting data behind login is not really legal. Why? Because when you sign up and create an account, you accept terms and conditions.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 当你接受条款和条件时，你必须要认真检查里面是否写了：“你可以爬取数据吗？你们允许，他们允许机器人访问这个网站吗？” 这就是为什么你，也许你们中有些人听说过现在正在进行着许多诉讼案。<strong>LinkedIn</strong> 在起诉这些人。所有人都在起诉他们。<strong>Amazon</strong> 也在起诉，是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: When you accept terms and conditions, you need to really check it if it says, &quot;Can you scrape? Can you Do you allow Do they allow robots to access the website?&quot; And that's why you Maybe some of you heard there's a lot of lawsuits going on. LinkedIn suing these people. Everybody's suing them. Amazon suing, yes.</p>
+</details>
+<p><strong>Audience Member</strong>: 但是我认为即使是，举例来说，<strong>LinkedIn</strong> 和 <strong>Instagram</strong>，我认为它们甚至根本不向你展示任何真正的公开数据，即使你在……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member</strong>: But I think even um for example, LinkedIn and Instagram, I think they don't even show you really any public data even if you're on the</p>
+</details>
+<p><strong>Rafael Levi</strong>: 这个嘛，当然有大量的 <strong>LinkedIn</strong> 的公开数据。如果你以这个为例，我会复制这个 URL。我可能会被屏蔽。我不知道这里的本地 IP 地址情况如何，但是嗯，我打开了一个无痕窗口，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Well, there's plenty of public data for for LinkedIn, of course. If you take for example, I will take this URL. I might get blocked. I don't know how's the local IP, but um and I open an incognito window, right?</p>
+</details>
+<p><strong>Rafael Levi</strong>: 你看，这就出来了。所以，这就是可以被收集的公开数据。公司页面也是一样的道理。完全一样。唯一的问题在于他们的限制非常严格，对吧？所以，假设如果你使用的是像这样大型活动的 Wi-Fi IP 地址，它很可能会把你屏蔽，因为这是一个数据中心的 IP，它是一个低质量的 IP。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: There you go. So, this is a public data that can be collected. Company, it's the same thing. It's the same thing. The only thing is they're very critical, right? So, if you are using, let's say, a Wi-Fi IP of a big event like this, it probably will block you because it's a data center IP, it's low quality IP.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 在家里的话，你可能可以访问大概 5 到 10 个个人资料页面，但最终它还是会要求你登录。所以，我们只处理公开数据。这意味着，<strong>当你们使用我们的服务时，你们是安全的，不用担心会有人敲开你家的门起诉你</strong>，如果你能理解我的意思的话。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: From home, you can probably access maybe 5, 10 profiles, but eventually it will also ask you to log in. Uh so, we only deal with public data. So, when you guys are using us, you are safe in the sense of nobody's going to come knocking on your doors to sue you, if that makes sense.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 不。我们再次重申，我们不处理登录后的数据。我们认为这是非法的，所以我们不处理任何涉及接受条款和条件以及登录后的数据。只有公开可用的数据。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: No. We Again, we don't deal with data behind login. We consider it to be illegal, so we don't deal with accepting terms and conditions and data behind login. Only publicly available.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 我们有一个完整的数据集。所以，如果你们不想获取实时数据，并且你们也不介意数据是否是几个月前的，我们实际上拥有现成的数据集，你们可以直接对其进行筛选，比方说，你在寻找，如果我们在讨论 <strong>LinkedIn</strong> 上的用户，你正在寻找特定区域的 AI 工程师，你可以直接过滤并立刻获得该数据集。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: We have a whole data set. So, if you guys don't want to do live data and you don't care if it's a few months old, we have data sets literally that you can just filter by, let's say, that you're looking If we're talking about LinkedIn people, you're looking for AI engineers in a certain area, you can filter it and just get the data set right away.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 然后，你的智能体实际上是可以访问这个数据集的。所以，如果需要的话，你的智能体可以过滤数据集并为你获取数据，对吧？它拥有所有这些工具的访问权限。所以，这是 LLM 自身给出的一个正面的对比结果。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: So, and and your agent will actually have access to that. So, your agent can filter the data set and get you the data if you want to, right? So, it has access to all the tools. So, here's basically head-to-head comparison by the LLM itself.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 没有 MCP 的情况下：失败，无法进行实时网络访问。如果有列出的话，就是失败、成功、失败、成功。所以，基本就是这样。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Without MCP failed, no live web access. With if listed, failed, successful, failed, successful. So, that's basically it.</p>
+</details>
+<h3>MCP 解决反爬虫机制</h3>
+<p><strong>Rafael Levi</strong>: 呃，绕过反机器人机制，解决验证码，对吧？所以，重申一遍，我们的系统会自动解决验证码，所以如果你的机器人通过浏览器访问一个带有验证码的网站，我们的浏览器内置了验证码解决方案，所以它会<strong>自动解决验证码，然后你的机器人就可以继续浏览而不会被拦截</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Uh antibot bypass, CAPTCHA solving, right? So, again, our system automatically solves CAPTCHA, so if your bot navigates to a website with a browser and has a CAPTCHA, our our browser has built-in capture solving solution so it will automatically solve the capture and your bot can continue on browsing without getting blocked.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 我还有多少时间？我不知道。嗯，所以总结一下，对吧？这就是你们能看到的最大的幻觉现象。<strong>智能体被拦截了，它又需要取悦你，于是它就凭空编造内容</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: How much time I got? I don't know. Um So just to kind of summarize it, right? This is the biggest hallucinations that you guys see. The agent gets blocked, it needs to please you and it makes things up.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 还有虚假内容也是个问题，对吧？现在，如果你想去 Google 上搜索什么是 <strong>Cloudflare</strong> 的 <strong>AI 迷宫（AI Labyrinth）</strong>，它其实就是一个系统，一旦它检测到一个机器人，它不仅不会屏蔽它，它会<strong>实实在在地给它投喂虚假数据</strong>。所以会导致更严重的幻觉。对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: And um fake content also, right? So now uh if you want to Google what is Cloudflare Cloudflare AI Labyrinth it's basically a system once it detects a bot it's not doesn't block it. It literally feeds it fake data. So bigger hallucinations. Right?</p>
+</details>
+<p><strong>Rafael Levi</strong>: 而解决这个问题最简单的方法，就是要确保你，你的智能体不会被屏蔽。而这像部署我们的 MCP 一样简单。我们的 MCP 提供一个每月 <strong>5,000 次请求的免费额度</strong>。所以如果你们想尝试一下，你们如果愿意的话可以在 <strong>LinkedIn</strong> 上联系我。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: And um the easiest fix for this is just to make sure that you your agent doesn't get blocked. And it's as easy as to implement our MCP. Uh our MCP has a free tier of 5,000 requests. So if you guys want to try it out, um this is you can connect with me on LinkedIn if you want to.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 或者这是……等一下。这是 MCP 的注册链接吗？我主要是用这些二维码的。等一下。是的，网络。好的，请讲。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Or is this the Hold on a second. Is this the sign up for the MCP? I'm mostly in these QR codes. One second. Yeah, internet. Yes, please.</p>
+</details>
+<p><strong>Audience Member</strong>: 呃，它是如何检测是否存在 <strong>Cloudflare 迷宫</strong> 的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member</strong>: Uh how does it detect if if there's Cloudflare Labyrinth or not?</p>
+</details>
+<p><strong>Rafael Levi</strong>: 嗯，所以我们处理这个问题的方式是，<strong>我们让你的智能体看起来像一个真实的人类</strong>。字面意义上的，比如，预先录制了鼠标移动的轨迹，当它输入时，就像是，它模拟了一个真实人类的行为模式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Um so the way we approach it is that we make your agent look like a human being. Literally like uh there's mouse movement pre-recorded, there's typing when it types it's like it's uh mimics a real human behavior.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 所以 <strong>Cloudflare</strong> 甚至都不会来问你是不是机器人，对吧？这就是我们的策略。我们没有去试图分析他们到底是如何检测的，而是<strong>尽可能地让智能体看起来像人类</strong>，从而不触发实际的拦截机制。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: So uh the Cloudflare literally just doesn't even ask are you a robot or not, right? So this is our our approach. Instead of trying to understand how they detect we make the agent look as human as possible so that it doesn't trigger the actual blockage.</p>
+</details>
+<h3>处理误导性数据</h3>
+<p><strong>Rafael Levi</strong>: <strong>误导性数据是你实际会遇到的最棘手的问题之一。</strong> 目前亚洲的很多网站都在做这种事，对吧？比如酒店网站，他们真切地提供着各不相同的价格。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Misleading data is one of the toughest things that you can actually encounter. A lot of websites right now in Asia is doing that, right? Hotels, they're literally providing different prices.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 你用手机查看，你会看到一个价格。你用电脑查看，你会得到另一个不同的价格。你可以使用代理来查询，你又会得到第三个价格。究竟哪一个是正确的？真的很难判断。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: You go check out on your phone, you get one price. You can check from your computer, you get a different price. You can ask for a proxy, you get a third price. Which one is correct? It's really hard to tell.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 当涉及到误导性数据的领域时，最好的办法就是确保你的智能体看起来像是一个人类，然后祈求好运。目前来说，基本上只能采取这种应对策略。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: When it comes into the domain of misleading, uh the best bet is to make sure that you your agent looks like a human, and then hope for the best. That That's basically what the approach is right now.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 嗯，<strong>AI 迷宫（AI Labyrinth）</strong> 其实就是大概一个月前发布的。我手头并没有很多关于它的统计数据，比如，不知道它到底是怎么运作的。我只知道它并没有真正影响到我们。我们在数据上没有看到任何变化，而我们每天都在收集 PB 级别的数据，我们有这么多的客户一直在进行网络爬虫作业。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Um AI levers was literally released a few like a month ago. Uh I don't have much of statistics on what is like, you know, exactly how it's working. All I know is that it didn't really affect us. We don't see any kind of change in data, and we're collecting petabytes of data on a daily like We have so many customers always scraping.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 我们会对数据进行缓存，所以我们总是在对比结果。我们在抓取结果中没有发现任何质量下降的现象。所以，我认为在这个层面上，我们做得很棒。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: We're caching data, so we're always comparing the results. We don't see any degradation in the results. Uh so, I think we're doing a good job in that case.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 呃，这是一个可以让你们注册的二维码。我们也有一个 GitHub 页面。<code>github.com/brightdata</code>。哦，就是直接在 GitHub 搜索 <code>brightdata</code>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Uh this is a QR code that you guys can sign up for. Uh we have a GitHub page as well. Uh GitHub brightdata.com. Oh, just GitHub brightdata.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 还有一件我建议大家去看看的东西是<strong>技能页面（skills page）</strong>，对吧？所以，我们做的事情是，我们创建了一些具体的技能模块。我在几个小时后还会有一场演讲。如果你们有兴趣看看这些技能到底能做什么的话，基本上就是你可以把任何智能体指引到这里，然后这个页面会教它如何构建一个抓取器，或者如何搭建一个数据收集的流水线。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: And another thing that I would recommend for you guys to check out is the skills page, right? So, what we did is we created skills. And I'm going to have another session in a couple of hours. If you're interested in seeing what the skills does, is basically you can take any agent, tell it to go here, and this page will teach it on how to build a scraper, or how to build a pipeline that will collect you the data.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 它包含了智能体所需的所有信息，以及所有的 API 接口。而且如果你能来参加我下一场大概在一点钟开始的会议，我想。差不多是那个时间。我会向大家实战演示它是如何构建整个数据流水线的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: It has all the information it needs, all the APIs. And uh if you will come back to my next session, which is at 1:00, I think. Something like that. I'm going to literally demonstrate how it builds the pipeline.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 我真的会在你们面前直接告诉它：“嘿，听着，我们来给 ABC 构建一个 <strong>Walmart</strong>（沃尔玛）的数据采集器。” 然后它就会完成构建，并且去抓取数据。与其逐个解析每一个 HTML 页面，它会自动构建一个解析器，从而<strong>节省大约 99% 的 token（代币）成本</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Literally in front of you, I'm going to tell it, &quot;Hey, listen, let's build a Walmart collector for ABC.&quot; And it's going to build it, and it's going to scrape it. And instead of parsing each individual HTML, it's going to build a parser, and it saves about 99% of the tokens.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 因为我看到很多人都在说：“嘿，我需要解析一万个网页，但这太耗费 token 了。” <strong>不要让 LLM 去直接解析网页内容。正确的做法是让 LLM 编写一个解析器代码，然后通过脚本来运行它。</strong> 不过这是下一场会议的内容了。还有什么问题吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Because I see a lot of people is like, &quot;Hey, I need to parse 10,000 pages, but it's so token heavy.&quot; Don't parse with LLM. LLM builds a parser and then the script runs it. But that's the next session. Any questions?</p>
+</details>
+<h3>MCP 工具的按需加载</h3>
+<p><strong>Audience Member</strong>: 有一个关于性能的问题。我看到你们的 MCP 暴露了 69 个工具，这意味着如果我，如果我需要为我的，我的智能体实现同样精准的功能，我需要加载全部的 69 个工具吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member</strong>: Uh question on the performance. Uh I saw that your MCB exposes 69 tools, which means if I if I need to do the same surgical ability for my for my agent do I need to load all the 69 tools</p>
+</details>
+<p><strong>Rafael Levi</strong>: 当然需要筛选。你，我刚才展示出全部 69 个工具只是为了给你们看。如果我只需要抓取 Markdown 数据和搜索功能，我绝对只会加载那两个工具而已。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: of course filter it. You I just showed 69 tools because just to show it. Uh if I need just to scrape markdown and search, I would just literally load two tools.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 呃，否则你就会让大量的无关数据充斥上下文（context），当然不能这么做。很抱歉，你开头的话我没听清，能再说一遍吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Uh otherwise you're flooding contacts with irrelevant data, of course not. I'm sorry, I didn't hear the beginning again.</p>
+</details>
+<p><strong>Audience Member</strong>: 就是实验开始的时候</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member</strong>: Uh the the experiment beginning</p>
+</details>
+<p><strong>Rafael Levi</strong>: 是的。所以我们并没有进行任何搜索。我实际上只是告诉它：“嘿，访问这个 URL，看看你能不能加载它。” 对吧？所以在这个演示中我并没有使用搜索功能。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Yes. Um so we didn't do any searches. Um I literally told it, &quot;Hey, go to this URL, see if you can load it.&quot; Right? So that I didn't use the search uh in this demo.</p>
+</details>
+<p><strong>Audience Member</strong>: 明白了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member</strong>: Sure.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 呃，但是当然了，再强调一遍，即使是使用我们的 MCP，它们实际上也是能够执行 Google 搜索的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Uh but of course again even with our MCB they can actually do a Google search.</p>
+</details>
+<p><strong>Audience Member</strong>: 是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member</strong>: Yeah.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 而这也是其最大的优势之一，因为我们都习惯了 Google 的搜索结果。所以在默认情况下，当你在向 LLM 提出问题时，你期望它能去执行一次 Google 搜索，但它其实并没有那么做。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: And that's the one of the biggest benefits is because we're used to Google results. So by default when you're asking LLM, you expect it to do a Google search, but it doesn't.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 所以使用 MCP 获得的结果要好得多得多，而且我建议大家注册并亲自尝试一下，它是免费的。去看看实际的效果，并比较一下你们自己得出的结论。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: So the results with the MCB much much better and I I recommend sign up, try it out, it's free. See the results, compare what you guys get.</p>
+</details>
+<p><strong>Audience Member</strong>: 那个额度是每天 5,000 次请求还是……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member</strong>: Is that for 5,000 requests per day or</p>
+</details>
+<p><strong>Rafael Levi</strong>: 每个月。每个月的额度。对于一个 MVP（最小可行性产品）或一个小型实验来说，这绝对绰绰有余了。呃，我们也有按使用量付费（pay as you go）的模式，所以如果你确实需要更多的请求量，这算不上什么，你们懂的，这……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: Per month. Per month. Which is, you know, like for an MVP for a little experiment is more than enough. Uh we also have pay as you go, so if you do need a little more it's it's nothing like, you know, it's</p>
+</details>
+<p><strong>Audience Member</strong>: 是的，没错，但是用来做个实验已经很完美了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member</strong>: Yeah, yes, but for a is perfect.</p>
+</details>
+<p><strong>Rafael Levi</strong>: 我经常，我参加过很多黑客松（hackathons），我也总是在向大家推荐：“嘿，听好了，去搭建一个 MVP，然后让你的智能体去帮你构建任何你需要的东西。它的表现绝对比不用它的时候好太多了。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Rafael Levi</strong>: I always I do a lot of hackathons and I'm always recommending, &quot;Hey, listen, set up an MVP and tell your agent to go build whatever you need. It does a much better job than without.&quot;</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Rafael Levi" class="entity-link person-link">Rafael Levi</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Bright Data" class="entity-link company-link">Bright Data</a>, 
+                
+                  <a href="/search/?q=Cloudflare" class="entity-link company-link">Cloudflare</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=GPT-5" class="entity-link product-link">GPT-5</a>, 
+                
+                  <a href="/search/?q=ChatGPT" class="entity-link product-link">ChatGPT</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">web-scraping</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">llm-hallucination</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/mcp/">mcp</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">anti-bot</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

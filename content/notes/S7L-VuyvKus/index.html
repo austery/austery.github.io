@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>编程已死，构建者永生：Claude Code 之父拆解 AI 时代的工程范式重塑</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="编程已死，构建者永生：Claude Code 之父拆解 AI 时代的工程范式重塑" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">编程已死，构建者永生：Claude Code 之父拆解 AI 时代的工程范式重塑</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Best Partners TV</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-03-09
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/best-partners-tv/">Best Partners TV</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=S7L-VuyvKus" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-03-09
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本文深度拆解了 Anthropic 核心开发者鲍里斯·切尔尼的播客专访。他提出“编程已被基本解决”的论断，详细探讨了 Claude Code 如何实现 100% 自动代码生成，解析了从对话 AI 到 Agentic AI 的跨越，并为未来“构建者”时代的职业转型、AI 安全机制及企业创新哲学提供了深刻洞察。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>使命驱动：从 Cursor 回归 Anthropic 的安全底层</h3>
+<p>全球 4% 的 <strong>GitHub</strong> 代码提交已由 AI 完成，顶尖工程师自去年 12 月以来甚至没写过一行代码。这一变革背后的核心推手是 <strong>Claude Code</strong> 及其核心开发者 <strong>鲍里斯·切尔尼</strong>（Boris Cherny）。鲍里斯曾任职于 <strong>Meta</strong> 专注于工程效率研究，后加入 <strong>Anthropic</strong> 领导开发了如今 AI 编程领域的标杆工具。</p>
+<p>在一段引人深思的职业插曲中，鲍里斯曾短暂离开 Anthropic 加入 <strong>Cursor</strong> 团队，却在两周后毅然回归。他坦言，这种选择的核心在于 Anthropic 深入骨髓的 <strong>安全使命</strong>。在 Anthropic，无论构建多么酷炫的产品，都无法替代对安全性的极致追求所带来的使命感。这种驱动力不仅是吸引他回归的根本，也贯穿了 Claude Code 从诞生到爆发的全过程。如今，Claude Code 已发布一周年，仅过去一个月的日活跃用户数就翻了一番，预计到今年年底，GitHub 上五分之一的代码提交将由其完成。</p>
+<h3>编程的终结：从写代码到“构建者”的跨越</h3>
+<p>鲍里斯提出了一个震撼行业的观点：<strong>编码本身已经被解决了</strong>。自去年 11 月以来，他个人 100% 的代码都由 Claude Code 编写，每天提交 10 到 30 个变更请求，却从未亲手编辑过一行代码。在他看来，工程师的核心乐趣已从繁琐的语法编写和调试细节，转向了构思产品逻辑、设计系统架构以及与用户沟通需求。</p>
+<p>他预测，<strong>软件工程师</strong>（Software Engineer）这个头衔将逐渐消失，取而代之的是 <strong>构建者</strong>（Builder）。这一转变被他比作 <strong>印刷机</strong> 的发明：14世纪的欧洲识字率极低，书写被抄写员垄断；印刷机的出现让知识民主化，催生了文艺复兴。如今，AI 编程工具就是现代的印刷机，它打破了编程技能的垄断，让每个人都具备构建软件的能力。鲍里斯本人是自学编程出身，最初是为了在数学考试中“作弊”而编写小程序，这段经历让他深刻意识到：编程从来不是目的，而是解决问题的工具。</p>
+<h3>Agentic AI 崛起：Cowork 与行动导向的未来</h3>
+<p>变革的下一步正在从编程扩展到所有基于电脑的工作，即 <strong>智能体 AI</strong>（Agentic AI：能够使用工具、控制电脑并在现实世界执行任务的 AI 系统）。鲍里斯团队推出的 <strong>Cowork</strong> 产品正是这一趋势的典型代表。该产品的诞生源于对用户“滥用”Claude Code 的观察——非技术人员开始用它做 SQL 分析、基因组研究甚至恢复损坏硬盘中的照片。</p>
+<p>基于这些潜在需求，团队仅用 10 天就构建了面向大众的桌面 Agent。现在的 Cowork 已能自动处理项目管理、同步电子表格、收发邮件，甚至通过 <strong>Chrome 集成</strong> 登录系统填写复杂的医疗表格 PDF。鲍里斯认为，Cowork 只是一个开始，未来任何需要使用计算机工具的职业都将面临这场变革。这也呼应了 Anthropic 的产品哲学：不要被当前模型的能力限制想象力，而应 <strong>面向未来 6 个月的模型进行构建</strong>。这种“押注未来”的策略确保了当新一代模型发布时，产品能立即实现指数级增长。</p>
+<h3>苦涩的教训：赋予模型工具而非僵化流程</h3>
+<p>在开发方法论上，鲍里斯推崇 <strong>Rich Sutton</strong> 提出的 <strong>苦涩的教训</strong>（The Bitter Lesson: 长期来看，通用的计算和搜索方法总是胜过利用人类知识构建的复杂专用逻辑）。他强调，不要给模型搭建过多的脚手架或强制性的“第一步、第二步”工作流。最好的方式是赋予模型工具和目标，让其自主规划执行路径。随着模型能力的提升，过多的限制反而会束缚 AI 的潜力，因为脚手架带来的微小性能提升，终会被下一代通用模型的能力所抹平。</p>
+<p>对于企业和开发者，他分享了极具价值的实操建议。在项目初期，不应控制工程师的 <strong>Token 预算</strong>，而应给予无限的自由度去创新，因为此时的 Token 成本相对于人力成本微不足道。对于个人开发者，他提出了三个技巧：始终使用能力最强的模型（如 <strong>Opus</strong>），善用 <strong>计划模式</strong>（Plan Mode：在提示词中加入“先不要写任何代码”以讨论方案），并尝试多种交互界面（如 Slack 集成或 IDE 扩展）以寻找最适合的工作流。</p>
+<h3>安全三层架构：力争上游的开源精神</h3>
+<p>即便在追求极致效率的同时，Anthropic 依然将安全置于首位。他们建立了三层安全架构：</p>
+<ol>
+<li><strong>机制可解释性</strong>（Mechanistic Interpretability: 深入理解神经网络内部运作，追踪特定神经元的激活）。</li>
+<li><strong>实验室评估</strong>：在合成情景中测试模型对齐情况。</li>
+<li><strong>尽早发布产品</strong>：在真实应用中观察行为并持续优化。</li>
+</ol>
+<p>为了推动行业共同进步，他们发布了开源的 <strong>沙盒环境</strong>，确保 Agent 在边界限制内运行。这种“力争上游”的原则旨在让更多企业能安全地应用 Agent 技术。鲍里斯预测，AI 的冲击将首先模糊产品经理、设计师与工程师的边界，<strong>通才</strong> 将成为未来最核心的竞争力。在 Anthropic，设计师大多会写代码，这种角色边界的模糊化正在重塑人才市场。</p>
+<h3>杰文斯悖论：技术进步创造的更多可能</h3>
+<p>面对 AI 导致失业的担忧，鲍里斯引用了 <strong>杰文斯悖论</strong>（Jevons Paradox: 提高资源利用效率不仅不会降低需求，反而会因为使用成本降低而导致总需求增加）。印刷机的出现并没有让抄写员失业，而是解放了他们的时间去从事更有创造性的书籍插图工作，并催生了庞大的出版业。AI 成为工程核心后，Anthropic 的团队规模反而持续扩张，这证明了知识民主化将带来更多新的职业机会。</p>
+<p>在个人生活中，鲍里斯表现出对长周期事物的迷恋。他深受中国科幻作家 <strong>刘慈欣</strong> 的影响，认为《流浪地球》短篇集展现了独特的中国科幻视角。这种对宏大叙事的思考也影响了他的职业选择。当被问及实现 <strong>通用人工智能</strong>（AGI）后想做什么时，他的答案是去日本乡村 <strong>做味噌</strong>。这种需要漫长时间等待（红味噌需两三年）的手工劳动，是他对抗快节奏工程工作的平衡点。他的格言简单而深刻：<strong>运用常识</strong>。真正优秀的结果往往来自那些从第一性原理思考、不机械遵循流程的人。</p>
+<p>在鲍里斯眼中，这场 AI 变革本质上是在推动人类创造力的最大化。与其恐惧被取代，不如主动学习工具，培养跨学科思维，从繁琐劳动中解脱，去专注于那些更具价值的创造性工作。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=鲍里斯·切尔尼" class="entity-link person-link">鲍里斯·切尔尼</a>, 
+                
+                  <a href="/search/?q=Boris Cherny" class="entity-link person-link">Boris Cherny</a>, 
+                
+                  <a href="/search/?q=刘慈欣" class="entity-link person-link">刘慈欣</a>, 
+                
+                  <a href="/search/?q=克里斯·奥拉" class="entity-link person-link">克里斯·奥拉</a>, 
+                
+                  <a href="/search/?q=Chris Olah" class="entity-link person-link">Chris Olah</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, 
+                
+                  <a href="/search/?q=Meta" class="entity-link company-link">Meta</a>, 
+                
+                  <a href="/search/?q=Cursor" class="entity-link company-link">Cursor</a>, 
+                
+                  <a href="/search/?q=GitHub" class="entity-link company-link">GitHub</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Claude Code" class="entity-link product-link">Claude Code</a>, 
+                
+                  <a href="/search/?q=Cowork" class="entity-link product-link">Cowork</a>, 
+                
+                  <a href="/search/?q=Opus" class="entity-link product-link">Opus</a>, 
+                
+                  <a href="/search/?q=Sonnet" class="entity-link product-link">Sonnet</a>
+                
+              </p>
+            
+            
+              <p><strong>媒体/书籍:</strong>
+                
+                  <a href="/search/?q=Lenny&#39;s Podcast" class="entity-link media-link">Lenny&#39;s Podcast</a>, 
+                
+                  <a href="/search/?q=流浪地球" class="entity-link media-link">流浪地球</a>, 
+                
+                  <a href="/search/?q=三体" class="entity-link media-link">三体</a>, 
+                
+                  <a href="/search/?q=Scala函数式编程" class="entity-link media-link">Scala函数式编程</a>, 
+                
+                  <a href="/search/?q=Accelerando" class="entity-link media-link">Accelerando</a>
+                
+              </p>
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/prompt-engineering/">prompt-engineering</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/software-engineering/">software-engineering</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/productivity/">productivity</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/automation/">automation</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

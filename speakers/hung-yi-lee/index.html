@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="container" data-pagefind-ignore>
+
+<div class="home-layout">
+
+  <h1>演讲者：Hung-yi Lee</h1>
+
+  <p>共有 26 篇文章</p>
+
+  <ul><li>
+        
+        <a href="/content/notes/cQLKVzbwN7I/">AI的自我演化：从参数微调到学习如何学习</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2026-05-24T00:00:00.000Z">
+            5/24/2026
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/ai-ml-3/" class="category-badge-inline">
+                🏷️ ai-ml
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本讲稿深入探讨了人工智能（AI）实现自我成长的多层次机制。内容从AI自主定义学习目标（Loss函数）开始，延伸至其核心组件“Harness”（包括提示、工作流、记忆系统）的演化过程，并介绍了类似基因算法的优化策略。讲稿进一步阐述了模型参数与Harness协同进化的“双重演进”模式，并引入了“元学习”（Meta-learning）的概念，即AI不仅能学习，还能学习“如何学习”。通过将AI参数比作“基因”，将隐藏状态比作“神经元”，讲稿提出了对AI学习效率的全新视角。最后，探讨了当前AI缺乏“内在动机”的现状，以及因“目标错位”（Misalignment）可能导致的失控风险。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/s06mSAGN4gM/">AI 自我进化论：我们离‘人类最后的发明’还有多远？</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2026-05-10T00:00:00.000Z">
+            5/10/2026
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/ai-ml-3/" class="category-badge-inline">
+                🏷️ ai-ml
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本文深度探讨了人工智能实现自主成长（Self-improving）的可能性与技术现状。从 1965 年的‘技术爆炸’预言到 2026 年的前沿研究，详细解析了自我修正、奖励塑造（Reward Shaping）、熵最小化（Entropy Minimization）以及‘模型自主出题训练’等核心路径。尽管 AI 在辅助弱模型进化方面表现卓越，但在不依赖人类干预的情况下实现本质飞跃仍面临收敛极限与对齐风险。目前，AI 正站在‘跨越卢比孔河’的河岸边。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/m3i2mk5hs8U/">AI自我修正的奥秘：从推理到工作流再到模型参数的进化之路</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2026-04-25T00:00:00.000Z">
+            4/25/2026
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/ai-ml-3/" class="category-badge-inline">
+                🏷️ ai-ml
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本课程深入探讨了大型语言模型的自我修正能力。首先从推理阶段的Contrastive Decoding技术入手，介绍其通过生成错误答案并与正常答案对比进行修正的原理及Dora、CAD等多种变体。接着分析了基于工作流的“生成加验证”模式，对比了内部反思与外部反馈的效果及其算力成本。最后探讨了通过强化学习直接修改模型参数以提升推理能力，并讨论了RL究竟是激发了模型固有能力还是赋予了新能力的哲学与技术争议。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/R6fZR_9kmIw/">驾驭工程：语言模型非不智，乃引導之缺</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2026-04-12T00:00:00.000Z">
+            4/12/2026
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/ai-ml-3/" class="category-badge-inline">
+                🏷️ ai-ml
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本讲座深入探讨“驾驭工程”（Harness Engineering），强调大型语言模型（LLM）能力的发挥往往取决于人类的有效引导，而非其固有限制。通过Gemma 4实验，展示了细致指令对AI智能体的显著提升作用。内容涵盖了如何通过认知框架（如agents.nd文件）、工具限制与标准化工作流程（规划-生成-评估循环）来塑造AI行为。讲座亦触及RoF循环、言语反馈、情绪操纵的转向向量（steering vector）技术，并展望了“终身AI智能体”面临的记忆管理、自我进化等未来挑战，揭示了有效驾驭LLM是释放其潜能的关键。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/Ll-wk8x3G_g/">Transformer 位置編碼深度解析：從絕對、相對到旋轉編碼與長度外推</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2026-03-30T00:00:00.000Z">
+            3/30/2026
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/ai-ml-3/" class="category-badge-inline">
+                🏷️ ai-ml
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本課程深入探討了 Transformer 模型中位置編碼技術的演進。內容涵蓋了位置編碼的數學原理、Self-Attention 的置換不變性、絕對與相對位置編碼（如 Sinusoidal 與 ALiBi）、當前主流的旋轉位置編碼（RoPE）及其長度外推策略（如 NTK-aware、YARN），最後討論了位置編碼在訓練中的必要性及 DroPE 策略。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/fDQaadKysSA/">深度解码 KV Cache：大模型生成加速的底层逻辑与优化实务</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2026-03-23T00:00:00.000Z">
+            3/23/2026
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/ai-ml-3/" class="category-badge-inline">
+                🏷️ ai-ml
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本文深入探讨了大语言模型生成过程中的核心优化技术——KV Cache。从 Prefill 与 Decode 阶段的差异入手，解析了 KV Cache 如何通过存储键值对来消除重复计算。针对显存压力，文章详细对比了 MQA、GQA 及 DeepSeek 首创的 MLA 等架构级优化方案，并介绍了 Streaming LLM 与剪枝等前沿技术。最后，结合 OpenAI 的计费模型，为 AI Agent 的 Prompt 设计提供了极具价值的成本优化建议。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/vXb2QYOUzl4/">加速大型语言模型：Flash Attention深度解析与GPU底层优化</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2026-03-23T00:00:00.000Z">
+            3/23/2026
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/ai-ml-3/" class="category-badge-inline">
+                🏷️ ai-ml
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本课程深入讲解了如何通过Flash Attention技术加速大型语言模型（LLM）的推理过程。核心在于优化GPU内存访问层级，减少HBM与SRAM之间的数据搬运次数。Flash Attention作为一种不改变计算结果、模型无关的即插即用技术，能显著提升Transformer架构的运行效率，尤其在处理长序列时效果更佳，避免了CUDA内存溢出问题。课程还通过实例代码对比了Flash Attention与传统方法的性能差异。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/VqB8zMujdjM/">AI Agent 浪潮：重塑学术研究与工作未来</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2026-03-15T00:00:00.000Z">
+            3/15/2026
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/ai-ml-3/" class="category-badge-inline">
+                🏷️ ai-ml
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本文探讨AI Agent在学术研究领域的深刻变革，从内容生成、模型训练到概念发想到论文审稿，揭示其日益增长的自主性与效率。分析了AI Agents与人类研究者的成本效益对比，以及AI在研究过程各阶段的角色演变，并展望了AI驱动的未来研究范式。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/urwDLyNa9FU/">AI Agent 核心技術：Context Engineering 的深度解構與演進</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2026-03-15T00:00:00.000Z">
+            3/15/2026
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/ai-ml-3/" class="category-badge-inline">
+                🏷️ ai-ml
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本課程系統化探討了 AI Agent 的核心技術——上下文工程（Context Engineering）。內容涵蓋了上下文壓縮、記憶管理（硬碟與 Prompt 的分離）、Context Collapse 規避，以及新興的 Agentic Context Engineering，揭示了如何透過自主管理上下文來突破大模型輸入限制，實現複雜任務的長效處理。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/mmPmNezjCi0/">AI Agent 互動、博弈與社交的深度解析</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2026-03-15T00:00:00.000Z">
+            3/15/2026
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/ai-ml-3/" class="category-badge-inline">
+                🏷️ ai-ml
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 探讨 AI Agent 间的协作机制、在博弈游戏（如狼人杀、剧本杀）中的表现，以及 Moltbook 平台上的社交行为。分析 AI 自主性、人类操控痕迹，并引入 RL 训练对 AI 能力的影响。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/2rcJdFuNbZQ/">AI Agent 運作原理深度解析：以 OpenClaw 為例</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2026-03-09T00:00:00.000Z">
+            3/9/2026
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/ai-ml-3/" class="category-badge-inline">
+                🏷️ ai-ml
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本文以開源專案 OpenClaw 為例，深度解析 AI Agent 的運作原理與核心機制。內容涵蓋 AI Agent 如何透過 System Prompt、工具調用（如 shell command）、記憶管理（Memory）及技能（Skill）系統，將大型語言模型轉化為自主運行的個人助理。文中詳述 AI Agent 的子代理（Subagent）模式、心跳機制、Cron Job 排程、以及 Context Engineering 等進階技術，同時探討了潛在的風險與安全防禦策略，強調了理解其內部原理對安全應用的重要性。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/CbIPjrOj2Tc/">语音语言模型发展史：从早期探索到智能对话的演进</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2025-12-22T00:00:00.000Z">
+            12/22/2025
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/work-career/" class="area-badge-inline">
+                🌐 work-career
+              </a>
+            
+            
+              <a href="/categories/ai-ml-3/" class="category-badge-inline">
+                🏷️ ai-ml
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本讲座深入探讨了语音语言模型（SLM）的发展历程，从早期的语音识别技术、无监督学习、自监督表示模型，到现代端到端对话式AI的挑战与突破。讲者结合自身团队的研究经验，详细介绍了SLM的定义、不同模式、与文本模型的对比，以及未来在推理、全双工交互等方面的研究方向。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/ccqCDD9LqCA/">影像與聲音的生成策略：擴散模型與自回歸架構的深度匯聚</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2025-12-14T00:00:00.000Z">
+            12/14/2025
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/ai-ml-3/" class="category-badge-inline">
+                🏷️ ai-ml
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本講由李宏毅教授解析生成式 AI 在影像與語音領域的核心技術演進。內容涵蓋從早期的像素與取樣點接龍，到現代離散與連續 Token 的表徵技術，並重點探討了 Flow Matching 與擴散模型如何與自回歸架構結合，揭示 2025 年跨模態生成技術的前沿趨勢。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/EnWz5XuOnIQ/">通用AI模型的終身學習：從微調、編輯到合併的四大核心技術</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2025-12-01T00:00:00.000Z">
+            12/1/2025
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/technology/" class="category-badge-inline">
+                🏷️ technology
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本文深入探討通用AI模型（如Llama、GPT）在初始訓練完成後，如何進行「終身學習」以適應新知識、學習新技能甚至遺忘特定資訊。內容聚焦於後訓練（Post-training）的三大評估目標：可靠性、通用性與局部性，並剖析了其核心挑戰——災難性遺忘。文章詳細介紹了四種主流的持續學習技術：梯度下降微調（Fine-tuning）、模型編輯（Model Editing）、模型合併（Model Merging）以及測試時訓練（Test-Time Training），為理解和實踐AI模型的持續演進提供了全面的技術藍圖。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/YJoegm7kiUM/">大型语言模型的学习历程：预训练、微调与强化学习</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2025-11-17T00:00:00.000Z">
+            11/17/2025
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/work-career/" class="area-badge-inline">
+                🌐 work-career
+              </a>
+            
+            
+              <a href="/categories/ai-ml-3/" class="category-badge-inline">
+                🏷️ ai-ml
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本课程深入探讨了大型语言模型（LLM）的三个核心训练阶段：预训练（Pre-training）、监督微调（SFT）和人类反馈强化学习（RLHF）。讲者通过生动的比喻和具体案例，阐释了每个阶段的目标、数据需求、技术挑战及其对模型能力的影响。强调了海量高质量数据在预训练中的关键作用，以及SFT和RLHF如何帮助模型对齐人类价值观并提升输出风格，而非灌输新知识。课程还讨论了算力限制、数据质量筛选、知识蒸馏等前沿技术，并对RLHF的优势与挑战进行了深入分析。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/mPWvAN4hzzY/">训练神经网络的实用技巧：优化、泛化与模型架构全解析</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2025-11-14T00:00:00.000Z">
+            11/14/2025
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/technology/" class="category-badge-inline">
+                🏷️ technology
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本讲座系统性地介绍了训练神经网络的各种实用技巧，并提出了一个核心分析框架：任何技术都可从其修改的机器学习步骤（损失函数、模型架构、优化算法）及其主要目标（改善优化或强化泛化）两个维度进行理解。内容涵盖了从 Adam 等高级优化器、CNN 和残差连接等网络架构设计，到数据增强、半监督学习和正则化等与损失函数相关的策略，为深入理解和应用深度学习提供了清晰的路线图。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/8iFvM7WUUs8/">解剖大型语言模型：深入理解其内部运作机制</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2025-11-07T00:00:00.000Z">
+            11/7/2025
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/technology/" class="category-badge-inline">
+                🏷️ technology
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本课程深入探讨大型语言模型（LLM）的内部运作原理，从Tokenization、Embedding到多层Transformer架构，详细解析Self-Attention、Feed-Forward Layer等核心组件。通过Logit Lens和Patch Scope等分析方法，揭示模型各层Representation的语义变化。实作部分将解剖Llama 3B和Gemma 4B模型，展示参数结构、Token Embedding相似度、Contextualized Embedding变化及Attention Weight的可视化分析，帮助学习者直观理解LLM的复杂思考过程。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/dWQVY_h0YXU/">评测生成式AI的陷阱：从基准测试到恶意攻击的全面指南</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2025-11-05T00:00:00.000Z">
+            11/5/2025
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/technology/" class="category-badge-inline">
+                🏷️ technology
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本文深入探讨了评测生成式人工智能（GenAI）能力时可能遇到的各种挑战。内容涵盖从传统的基准测试（Benchmark）与评估指标（Evaluation Metric）的局限性，如“精确匹配”和“古德哈特定律”，到人类评估与“LLM作为评判者”的偏见问题。文章还分析了提示词工程、数据污染、恶意攻击（越狱与提示词注入）等关键因素对评估结果的影响，为如何更准确地衡量AI能力提供了全面的视角。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/lVdajtNpaGI/">上下文工程 (Context Engineering)：AI Agent 时代的关键技术</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2025-11-05T00:00:00.000Z">
+            11/5/2025
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/ai-ml-3/" class="category-badge-inline">
+                🏷️ ai-ml
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本文深入探讨了“上下文工程” (Context Engineering) 的核心概念，阐述了其与“提示工程” (Prompt Engineering) 的异同。文章详细分析了构成语言模型上下文的各项要素，包括用户提示、系统提示、对话历史、外部知识（RAG）和工具使用，并解释了为何在 AI Agent 时代管理上下文至关重要。最后，介绍了选择、压缩和多智能体系统等关键的上下文工程技术，以避免“上下文过载”问题。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/Taj1eHmZyWw/">一堂课搞懂机器学习与深度学习：从“老师何时下课”案例入门</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2025-11-05T00:00:00.000Z">
+            11/5/2025
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/technology/" class="category-badge-inline">
+                🏷️ technology
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本讲座以一个有趣的问题“老师什么时候下课？”为引子，系统性地介绍了机器学习与深度学习的基本原理。内容涵盖了机器学习的“3+1”核心步骤：定义目标（损失函数）、划定函数范围（模型选择）、寻找最佳函数（优化），以及关键的验证环节。讲座深入浅出地解释了梯度下降、神经网络、过拟合等核心概念，并探讨了模型训练过程中的常见挑战与解决策略，为理解现代人工智能的运作机制提供了清晰的框架。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/TigfpYPJk1s/">一堂课搞懂生成式AI：从“文字接龙”原理到代码实战</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2025-09-15T00:00:00.000Z">
+            9/15/2025
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/ai-ml-3/" class="category-badge-inline">
+                🏷️ ai-ml
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本讲座深入浅出地剖析了生成式人工智能（如ChatGPT）的核心原理。讲师李宏毅解释了语言模型如何通过“文字接龙”和概率分布来生成文本，并探讨了Token、Prompt、世界知识、AI幻觉等关键概念。后半部分通过代码实战，演示了如何使用Hugging Face和开源模型（如Llama）进行文本生成，涵盖了从分词、模型调用到多轮对话的完整流程。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/VuQUF1VVX40/">生成式人工智慧與機器學習導論2025：從使用者到創造者的AI之旅</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2025-09-15T00:00:00.000Z">
+            9/15/2025
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/ai-ml-3/" class="category-badge-inline">
+                🏷️ ai-ml
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本课程《生成式人工智慧與機器學習導論2025》旨在引导学生从仅仅使用ChatGPT等AI工具，深入理解其背后的原理，并最终成为AI的创造者。李宏毅教授强调，理解AI的运作机制能避免误解，将“魔术”转化为“科学”。课程内容涵盖现有生成式AI的运作方式、构建方法，并包含实践性作业，其中部分作业需要较长的模型训练时间，以模拟真实世界中AI开发的挑战。本课程适合未来希望深入AI领域或期望更智慧地使用AI工具的同学。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/gkAyqoQkOSk/">李宏毅深度解析：语音语言模型如何学会说话？从Token化到TASTE模型的演进</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2025-05-24T00:00:00.000Z">
+            5/24/2025
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/ai-ml-3/" class="category-badge-inline">
+                🏷️ ai-ml
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本讲座深入探讨了语音语言模型（SLM）的发展历程。讲座首先阐释了SLM的核心挑战——如何将连续的语音信号转化为离散的Token，并分析了两种极端方案（语音识别与原始采样点）的利弊。随后，详细介绍了现代语音Tokenizer的两种主流技术：基于自监督学习模型的方法和神经语音编解码器（Neural Speech Codec）。讲座重点剖析了从零训练SLM的困难，并引出当前的主流范式：基于预训练的文本大模型进行改造。最后，隆重介绍了TASTE模型，一种创新的文本对齐语音Tokenization方法，它通过统一语音与文字Token的长度，显著简化了模型的训练过程。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/jFUwoCkdqAo/">深度解析模型合并（Model Merging）技术：无需训练，组合Foundation Model能力的创新途径</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2025-05-16T00:00:00.000Z">
+            5/16/2025
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/ai-ml-3/" class="category-badge-inline">
+                🏷️ ai-ml
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本文深入探讨了生成式AI时代下的**模型合并**（Model Merging）技术。该技术允许通过计算模型参数差异（即**任务向量** Task Vector），在无需额外训练和数据的情况下，将不同**基础模型**（Foundation Model）的特定能力进行组合、叠加甚至移除。文章详细阐述了任务向量的加法、减法及类比应用，并分析了模型合并成功的条件，如参数不重叠和模型规模。展望未来，模型合并有望催生**任务向量商店**，极大降低模型开发门槛，促进知识共享与创新。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/9HPsz7F0mJg/">AI模型的微创手术：深入探讨模型编辑（Model Editing）技术</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2025-05-04T00:00:00.000Z">
+            5/4/2025
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+                🌐 tech-engineering
+              </a>
+            
+            
+              <a href="/categories/technology/" class="category-badge-inline">
+                🏷️ technology
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本课程深入探讨了AI模型编辑（Model Editing）技术，旨在为模型植入或更新知识。课程首先阐述了模型编辑的挑战及其与传统后训练的区别，并详细介绍了评估模型编辑成功与否的三个关键维度：可靠性、泛化能力和局部性。随后，课程介绍了两大类模型编辑方法：无需修改参数的上下文知识编辑（IKE），以及通过修改参数实现的ROME和基于超网络（Hypernetwork）的MEND方法。通过这些技术，我们能更精准地控制AI模型的知识，实现高效且局部的知识更新。</small>
+        
+
+        
+        
+      </li><li>
+        
+        <a href="/content/notes/s266BzGNKKc/">大型语言模型评估的挑战与古德哈特定律</a>
+        
+        
+          <span class="badge">📝</span>
+        
+        
+        
+          <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a>
+        
+        
+        
+          <time datetime="2025-05-03T00:00:00.000Z">
+            5/3/2025
+          </time>
+        
+        <br>
+
+        
+        
+          <div class="taxonomy-line">
+            
+              <a href="/areas/society-thinking/" class="area-badge-inline">
+                🌐 society-thinking
+              </a>
+            
+            
+              <a href="/categories/technology/" class="category-badge-inline">
+                🏷️ technology
+              </a>
+            
+            
+          </div>
+        
+
+        
+        
+          <small class="summary-text">📄 本课程深入探讨了大型语言模型（LLM）推理能力的评估方法。文章首先介绍了通过数学和编程问题进行粗暴评估的现状，并揭示了模型可能存在记忆而非真正推理的问题。随后，讨论了GSM8K和ARC-AGI等基准测试的局限性，以及Chatbot Arena这种人类评测机制如何因风格偏好而被“攻破”。最终，文章引用古德哈特定律，指出任何被设定为目标的指标都将失去其有效性，强调了评估系统对模型发展的异化影响。</small>
+        
+
+        
+        
+      </li></ul>
+
+  <p><a href="/">← 返回首页</a></p>
+
+</div>
+
+</div>
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

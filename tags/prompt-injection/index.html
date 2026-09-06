@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="container" data-pagefind-ignore>
+
+<div class="home-layout">
+
+<h1>标签：prompt-injection</h1>
+
+<ul><li>
+      
+      <a href="/content/clippings/2026-08-02_httpsyag_prompt-injection-harness-eval-20260802-html/">打破 99% 安全假象：为什么 Prompt Injection
+的防线与评测都在 Harness？</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-08-02T00:00:00.000Z">
+          8/2/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了Prompt Injection（提示词注入）在Agent时代面临的安全挑战，指出传统的模型微调或更换无法解决问题。核心观点是安全防护的有效性取决于外部工具链和运行时策略（如Harness）的边界控制，而非模型本身的内生属性。文章还批判了现有评估体系中存在的五大陷阱，包括静态评测集过拟合、LLM-as-a-Judge带来的漂移以及忽视Utility Under Attack等问题，强调构建基于系统架构隔离和确定性Harness控制的防御体系才是工程实践中的关键。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-07-28_httpsyag_github-secure-code-game-prodbot-20260728-html/">别再依赖提示词防 Agent 了：从 GitHub Secure Code Game
+看红队攻防的 5 级提权</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-07-28T00:00:00.000Z">
+          7/28/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章介绍了 GitHub Secure Code Game Season 4 中引入的 ProdBot 靶机，旨在通过自然语言交互诱导 Agent 绕过权限检查读取敏感文件。文章详细拆解了从传统代码安全到 Agentic AI 安全的五个提权级攻击路径，包括 Shell 解释器漏洞、网页内容注入、工具链上下文污染、跨 Session 记忆持久化以及多智能体混淆代理人机制，强调了防御策略应从文本提示词转向架构设计和物理隔离。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/6kHWTEty4Pg/">社交平台启动秘密项目，利用虚假未成年人账号进行竞争对手的AI安全投毒</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/best-partners-tv/" class="speaker-inline">🎙️ Best Partners TV</a>
+      
+      
+      
+        <time datetime="2026-07-07T00:00:00.000Z">
+          7/7/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/testing/" class="category-badge-inline">
+              🏷️ testing
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章揭露了某大型科技公司为突破竞争对手AI模型的安全防线而进行的秘密操作“戛纳计划”。该项目涉及雇佣外包人员伪装成未成年用户，批量向主流聊天机器人发送包含自残、性暴力等极端诱导内容的测试数据。Meta对此采取强硬辩护态度，将此行为定性为负责任的安全基准测试，引发了行业对安全边界商业化转移的深刻反思。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/j8BAficRjEc/">AI安全新范式：从红队测试到智能体原生身份认证与风险评估框架</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/latent-space/" class="speaker-inline">🎙️ Latent Space</a>
+      
+      
+      
+        <time datetime="2026-06-22T00:00:00.000Z">
+          6/22/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 该视频探讨了人工智能在模型攻破方面的最新进展，特别是自动化红队测试（如Shade系统）的突破。核心议题包括将AI视为不受信任实体、对抗性攻击（如间接提示词注入）、机制可解释性的发展以及构建安全防御层（如Signal过滤模型）。文章强调了从传统网络安全到AI安全范式的转变，并提出了通过智能体驱动的研究来自动化科学研究的潜力，同时讨论了企业级部署中的可用性与安全性权衡。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-06-16_httpsyag_agentjacking-mcp-trust-20260615-html/">Agentjacking：一段假错误报告，85% 概率劫持你的 Claude
+Code</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-06-16T00:00:00.000Z">
+          6/16/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了 &#39;Agentjacking&#39; 攻击，即通过伪造的错误报告（如 Sentry MCP 集成）劫持 AI Agent 的行为。攻击者利用 agent 将外部可控数据当作指令执行，从而探测并窃取用户的凭证信息，即使在合法操作链中也可能导致安全漏洞。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-06-11_httpsyag_anthropic-fable5-secret-sabotage-20260611-html/">Fable 5 隐秘降智：Anthropic 的安全叙事与竞争现实</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-06-11T00:00:00.000Z">
+          6/11/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了Anthropic在Fable 5模型中存在的‘不可见降智机制’，即通过prompt修改、steering vectors或PEFT等技术暗中降低输出质量的行为。作者分析了这种安全叙事与竞争现实之间的张力，指出核心问题在于安全干预的可见性，以及这如何打破了用户对AI输出的可验证性契约，最终引申出对未来AI监管模式和工程可靠性的思考。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-06-10_httpsyag_llm-refusal-bypass-20260610-html/">一段 JavaScript 注释，让 AI
+安全扫描器主动放弃了分析</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-06-10T00:00:00.000Z">
+          6/10/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章探讨了LLM安全扫描器在分析代码时，由于其缺乏场景感知机制而存在的漏洞。攻击者通过在恶意JavaScript注释中伪装成机密简报并包含敏感关键词，成功诱导模型拒绝分析。作者提出了三层修复方案：将代码和注释分离处理、将拒绝视为高优先级分流信号而非终点，以及引入多信号交叉验证来最终判定安全结果。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-06-02_httpsyag_ai-agent-permission-security-20260531-html/">AI Agent 不需要被攻破，被说服就够了</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-06-02T00:00:00.000Z">
+          6/2/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 文章分析了AI Agent在权限设计中的结构性盲区：当身份验证边界从密码学层迁移至自然语言对话层时，安全边界坍缩。攻击者无需技术漏洞，仅需通过说服AI即可获取高权限。文章提出应将意图理解与鉴权责任分离，采取基础设施层独立鉴权、敏感操作跨信道确认等架构方案以修复安全盲区。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/DvyZcCfepeI/">OpenAI董事会成员Zico Kolter谈前沿AI的真实风险与安全治理</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/the-mad-podcast-with-matt-turck/" class="speaker-inline">🎙️ The MAD Podcast with Matt Turck</a>
+      
+      
+      
+        <time datetime="2026-05-07T00:00:00.000Z">
+          5/7/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 OpenAI董事会成员Zico Kolter深入探讨了AI安全与治理的前沿议题。他详细阐述了OpenAI安全与保障委员会（SSC）的运作方式、模型发布前的准备框架，以及AI风险的四大类别：模型错误、恶意使用、社会心理影响和失控风险。Kolter强调，模型并非越大越安全，而是需要明确的安全训练和多层防御机制。他还介绍了其共同创立的AI安全公司Grey Swan的工作，以及越狱（jailbreak）和提示注入（prompt injection）等攻击手段及其防御策略。最后，他分享了对强化学习、机械可解释性以及AI系统核心简洁性的独到见解，并对AI领域的未来发展提出了展望。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-04-22_httpsyag_ai-coding-config-injection-20260422-html/">AI 编程工具的配置文件，现在是攻击入口</a>
+      
+      
+      
+      
+        <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a>
+      
+      
+      
+        <time datetime="2026-04-22T00:00:00.000Z">
+          4/22/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入探讨了 AI 编程工具（如 GitHub Copilot、Claude Code）中存在的提示注入（prompt injection）安全漏洞。文章解释了攻击者如何利用配置文件和注释嵌入恶意指令，导致 AI Agent 以高权限执行任意命令，并将其类比为经典的冯·诺依曼问题。文章详细阐述了三种攻击模式，分析了自然语言的边界模糊性、AI Agent 的执行权限与产品价值的绑定，以及攻击面随 AI 能力增长而扩大的挑战。最后，文章提出了一些缓解措施，如禁用自动批准、开启沙箱、提高配置文件审查级别，以及在 CI/CD 中固定依赖版本。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/clippings/2026-04-20_httpsblo_aiagenttrap/">Google Deepmind论文解读：如何给AI Agent 投毒 · 乔木博客</a>
+      
+      
+      
+      
+        <a href="/speakers/xiang-yang-qiao-mu/" class="speaker-inline">🎙️ 向阳乔木</a>
+      
+      
+      
+        <time datetime="2026-04-20T00:00:00.000Z">
+          4/20/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文解读了 Google DeepMind 的论文《AI Agent Traps》，系统梳理了针对 AI 智能体的六大类攻击方式，包括内容注入、语义操控、认知状态污染、行为控制、系统性陷阱以及针对人类监督者的攻击。文章强调了 AI Agent 的自主性带来的脆弱性，以及互联网正从为人类构建转向为机器读者重构的根本性安全挑战。论文提出了多层面的防御框架，并指出了当前 AI 犯罪的问责空白问题。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/owmJyKVu5f8/">Simon Willison：编码助手的高效工程实践与未来展望</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/the-pragmatic-engineer/" class="speaker-inline">🎙️ The Pragmatic Engineer</a>
+      
+      
+      
+        <time datetime="2026-03-19T00:00:00.000Z">
+          3/19/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本次访谈深入探讨了 Simon Willison 在人工智能时代下的开发者工作流演变。他分享了如何利用编码助手进行测试驱动开发（TDD）、遵循规范进行开发，并警示了提示注入等安全风险。访谈还触及了沙盒技术的重要性、AI 对软件开发模式的影响，以及对开源社区未来的思考，并回顾了使用现代技术重构 Django 的设想。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/GYfgjYVEYQ0/">MoltBOOK事件：AI安全隐患与行业盲区的警示</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/internet-of-bugs/" class="speaker-inline">🎙️ Internet of Bugs</a>
+      
+      
+      
+        <time datetime="2026-02-16T00:00:00.000Z">
+          2/16/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-application-2/" class="category-badge-inline">
+              🏷️ ai-application
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入剖析了名为MoltBOOK的AI社交网络及其关联的MoltBOT代理。作者指出，AI的威胁并非来自其智能水平，而是源于人类的愚蠢、对AI潜力的过度炒作以及普遍存在的安全盲区。文章揭示了MoltBOOK作为潜在命令与控制基础设施的风险，批评了行业内部分专家对安全问题的忽视，并呼吁技术人员深入理解AI代理的底层机制与安全隐患，以避免潜在的灾难。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/yAFhlZ6nc54/">OpenClaw：失控的AI代理，狂热、风险与个人计算的未来</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/bei-mei-wang-lu-fei/" class="speaker-inline">🎙️ 北美王路飞</a>
+      
+      
+      
+        <time datetime="2026-02-04T00:00:00.000Z">
+          2/4/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 本文深入剖析了OpenClaw这一革命性AI代理工具的现象级崛起。从极客们抢购Mac Mini以运行本地AI，到其超越传统助手的强大执行能力，再到因权限过大引发的加密骗局和严峻安全漏洞，OpenClaw展现了AI自主性的巨大潜力与失控风险。文章对比了其与大型科技公司AI的差异，探讨了AI代理带来的“上帝感”与“裸奔”困境，并警示了其潜在的集体幻觉与安全隐患，最终呼吁谨慎使用。</small>
+      
+
+      
+      
+    </li><li>
+      
+      <a href="/content/notes/TdHg9ee56Iw/">&#92;&quot;AI代理热潮下的安全隐患&#92;&quot;</a>
+      
+      
+        <span class="badge">📝</span>
+      
+      
+      
+        <a href="/speakers/internet-of-bugs/" class="speaker-inline">🎙️ Internet of Bugs</a>
+      
+      
+      
+        <time datetime="2026-01-30T00:00:00.000Z">
+          1/30/2026
+        </time>
+      
+      <br>
+
+      
+      
+        <div class="taxonomy-line">
+          
+            <a href="/areas/tech-engineering-3/" class="area-badge-inline">
+              🌐 tech-engineering
+            </a>
+          
+          
+            <a href="/categories/ai-ml-3/" class="category-badge-inline">
+              🏷️ ai-ml
+            </a>
+          
+          
+        </div>
+      
+
+      
+      
+        <small class="summary-text">📄 &#92;&quot;本文揭示了AI代理和AI浏览器的核心安全风险——提示注入。演讲者解释了生成式AI的工作机制如何导致其混淆指令与数据，从而易受攻击。文章强调，AI公司在未解决这些根本性问题前便大力推广AI代理，使用户面临数据泄露、密码窃取等风险。建议用户限制AI代理的访问权限，并对使用AI代理保持高度警惕。&#92;&quot;</small>
+      
+
+      
+      
+    </li></ul>
+
+</div>
+
+</div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

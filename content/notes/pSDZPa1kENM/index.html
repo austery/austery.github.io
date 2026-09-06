@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>多 Agent 协作实战：从自动化冷邮件到对抗性编程</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="多 Agent 协作实战：从自动化冷邮件到对抗性编程" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">多 Agent 协作实战：从自动化冷邮件到对抗性编程</span>
+      <span data-pagefind-meta="speaker" style="display:none;">INDIGO 数字镜像</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-05-14
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/indigo-shu-zi-jing-xiang/">INDIGO 数字镜像</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=pSDZPa1kENM" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-05-14
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本访谈由 Indigo 主持，嘉宾 Jacky 分享了利用多 Agent 协作系统实现生产力跃迁的实战经验。核心案例涵盖了利用 AI 自动化完成 YC 创业公司冷邮件触达并成功获得赞助、通过“对抗性编程”实现代码自动生成与审查，以及构建个人信息聚合中枢。对话深入探讨了 Agent 作为“数字伙伴”的特质，强调了上下文管理在未来 AI 工作流中的核心地位。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>开场：AI 实战工作坊的初衷</h3>
+<p><strong>[Indigo]</strong>: 好了，我们都在了，大家听得到声音吧。我看我们先测试一下画面，测试一下。今天欢迎来到 <strong>Indigo</strong> 的直播，这叫“周末氛围直播”。三月份的时候做过两场，这也是我们在测试未来做在线 <strong>Workshop</strong>。我们接下来的社群里，我会开 Online 的 Workshop，分享一些实操的、技巧型的东西。</p>
+<p>因为我之前的直播都是做投资相关的趋势。大家可能还会更多了解一下 AI 怎么用好，了解最新的东西。每一次氛围直播或者 Workshop，我都会邀请不同的嘉宾。正巧今天我们都在温哥华，嘉宾就直接请到现场了。如果说我们不在一个城市，就得像字母 M 一样分成两个屏幕直播。</p>
+<p>刚才我加拿大的房子设计获奖了，是 2026 年的最佳室内设计奖，就是完全自建房子的独立屋奖。现在大家看到的是地下室。</p>
+<h3>嘉宾介绍：温哥华科社大使 Jacky</h3>
+<p><strong>[Indigo]</strong>: 介绍一下今天的嘉宾，嘉宾叫 <strong>Jacky</strong>。刚才说的“父子局”，他比我的小孩大一点点。我认识他是因为 <strong>JackX</strong> 的朋友介绍的，他是 X 上的 Follower。他在温哥华是非常积极的“科社” (<strong>Cursor</strong> 社区) 大使。大家应该知道 Cursor 这个开发编辑器挺有名的，整个温哥华地区的活动都是 Jacky 在主持。</p>
+<p>他在 <strong>UBC</strong> (英属哥伦比亚大学) 这边，经常办开发者活动。他自己也是一个 <strong>AI Agent</strong> 意识很强的人，喜欢折腾最新的东西。我们要分享技巧，肯定不能找老的人来做，老的做不出技巧，我们要找年轻人来分享 AI 最实用的技巧。我发现我现在用 AI 的水平没有年轻人那么喜欢钻研，我解决问题就好了，不会做过多的研究。每天看 X 上的各种技巧炫耀贴，看了就很焦虑，觉得人家玩得真好，结果回去一看，原来很多都是作秀。</p>
+<p>今天我们讲 <strong>Multi-Agent</strong> (多 Agent) 协作方案。Jacky 同学用多 Agent 实现了一套自动化 <strong>Cold Email</strong> (冷邮件) 系统，我们待会儿来分享。</p>
+<h3>人类是思维带宽的瓶颈</h3>
+<p><strong>[Jacky]</strong>: 今天的观众来到这个 Workshop 能带走什么呢？首先是提升对 Agent 的认知，原来 Agent 还能这么用；第二个是学会一整套用 AI Agent 做冷邮件的系统；第三个是一套可复用的资产，我准备了一个文件夹，里面有怎么 Set up 这个系统和使用的指南。</p>
+<p><strong>[Indigo]</strong>: 我觉得现在用 AI 的时候，我个人就是瓶颈。因为我还是习惯最多同时开两到三个 Agent 做事，再多我就协调不过来了。我工作的时候，后面挂着 <strong>Claude</strong> 的模型，所以我现在用 <strong>Claude Code</strong> 是主力。我桌上有两台 <strong>Mac mini</strong>，一台专门跑 Session，二十四小时开着。我觉得只要你的 Working Folder 说明书写得好，完全能发挥出威力。我现在的习惯是开一个 <strong>ChatGPT</strong>，开一个 Claude，再用一个 Markdown 编辑器，三个需求分散在不同地方，我很难在一个界面里看这么多 Agent。</p>
+<p><strong>[Jacky]</strong>: 模型能力越来越强，以后只会更强。当你给模型一个任务，只要 <strong>Prompt</strong> 正确，它可以运行三十分钟。中间我要干嘛？刷手机吗？一个很自然的解决方案是并行运行多个 Agent。我就从过程管理者转变成了结果审核者。</p>
+<p>我之前在 Terminal 窗口里开七八个 Claude Code，但我发现安排完任务后，之前的就在做什么我就忘记了。瓶颈不在于模型，而在于人类的思维带宽。人的短期记忆只能记住“4 加减 1”个任务。</p>
+<p><strong>[Indigo]</strong>: 所以我不建议大家多线程做事。专注在一个任务里很容易进入<strong>心流</strong>。溜达、洗澡、散步的时候最适合产生创意，专注的工作交给 Agent 就好了，它们比我专注多了。</p>
+<h3>Slock：Agent 是一等公民的协作平台</h3>
+<p><strong>[Jacky]</strong>: 既然我有七八个窗口，心智带宽不够了，解决方案就是“群聊”。我们把多个 Agent 拉到一个群里，你完成了就回复我。这个我最近一直在用的平台叫 <strong>Slock</strong>。它有点像 <strong>Slack</strong>，但 Agent 是一等公民。</p>
+<p>虽然很多大厂在产品里加 Chatbot，但体验远不如从零围绕 Agent 构建的产品。在 Slock 里，你的同事全是 Agent，它们可以读写文件、收发邮件，操作电脑上的所有工具。</p>
+<p><strong>[Indigo]</strong>: 你观察过它们在群里聊什么吗？</p>
+<p><strong>[Jacky]</strong>: 老实说，很多时候是在浪费 <strong>Token</strong>，聊一些不相关的东西。但如果你以特定形式组织它们，就会有生产力。Slock 底层是在平台上抽象了一层后台服务，负责 Agent 之间的频道通讯。下面每一个 Agent 都是一个进程。我还会做一个 <strong>Shared Memory</strong>，在 iCloud 文件夹里给所有 Agent 共享上下文。我把它部署在 Mac mini 上二十四小时运行，发完指令关上电脑去吃饭，体验大概是这样。</p>
+<h3>实战案例 1：自动化冷邮件获取赞助</h3>
+<p><strong>[Jacky]</strong>: 讲一个真实案例。这个月我要为 Cursor 组织一个黑客松，来了一百五十多个人。我需要搞一些赞助，虽然官方给钱，但我希望能办得更好。我想尝试发冷邮件。</p>
+<p>我的工作流是：</p>
+<ol>
+<li><strong>发现与研究</strong>: 我跟 Agent 说我想要 YC (Y Combinator) 的 Startup 赞助，让它去爬 YC Directory 近三年的四百多家公司。</li>
+<li><strong>过滤</strong>: 按照规则过滤，比如人数少于一百（流程简单）、To C 产品（需要宣传）、北美地区、AI Agent 相关。最后剩下 77 个联系方式。</li>
+<li><strong>深入了解</strong>: 让 Agent 到官网了解每家公司做什，写进 <strong>CSV</strong> 表格。</li>
+<li><strong>个性化写作</strong>: 根据信息为每个邮箱写个性化邮件。这如果没有 Agent 是很难完成的。</li>
+</ol>
+<p>最后结果：在一个周末发了 77 封邮件，拿到了价值四千美金的赞助，其中很大一部分是现金，还有 <strong>Web Summit</strong> 的门票。</p>
+<h3>冷邮件方法论：进箱率、回复率与发送量</h3>
+<p><strong>[Jacky]</strong>: 冷邮件的结果等于：<strong>进箱率 × 回复率 × 发送量</strong>。</p>
+<ul>
+<li><strong>进箱率</strong>: 要进 Inbox 而不是 Spam。方法包括：域名隔离（独立域名）、配置 DNS、<strong>Warm-up</strong> (预热邮箱)、控制发送频率（一天 50 封左右，随机间隔）、保持验证（避免退信）。</li>
+<li><strong>回复率</strong>: 关键在于<strong>个性化</strong>、<strong>简短</strong>（5 行以内）、有 <strong>Hook</strong> (钩子)、提供价值，以及 <strong>CTA</strong> (<strong>Call to Action</strong>，只问一个低阻力问题）。还有最重要的 <strong>Follow-up</strong> (跟进)。AI 让 Level 4 的深度拥有 Level 0 的成本。</li>
+<li><strong>发送量</strong>: 发一封和一千封对 Agent 来说是一样的。</li>
+</ul>
+<p><strong>[Indigo]</strong>: 人做的事情和 AI 做的事情要严格区分。如果一封和一千封没区别，一定让 AI 做。人类应该把时间花在寻找 Surprise 上，把最有价值、难被自动化的事情留给自己。</p>
+<h3>实战案例 2：对抗性编程与信息聚合</h3>
+<p><strong>[Jacky]</strong>: 第二个案例是<strong>对抗性编程</strong>。一个 Agent 写代码，另一个独立的 Agent 作为 Reviewer 进行审查，互相对抗，直到 Reviewer 找不出问题。通过这种方式，往往能生成直接可运行的代码。</p>
+<p>第三个是<strong>信息聚合</strong>。我有很多信息源：邮箱、Twitter、LinkedIn、IM 平台。我让 Agent 全量读取，过滤噪音，把有用信息在一个频道里展示给我。它还可以帮我回复消息，比如给 X 上的朋友回个消息。</p>
+<p><strong>[Indigo]</strong>: 对于我来说，我还是希望在对应平台上发现惊喜。如果想看病就直说，不用找 Agent 过滤。</p>
+<h3>Demo 演示：Agent 团队的日常</h3>
+<p><strong>[Jacky]</strong>: 给大家演示一下界面。Slock 就像 Slack，你可以把自己的电脑（比如 Mac mini）连上去。然后创建 Agent Team。我的团队里有：</p>
+<ul>
+<li><strong>总经理</strong>: 负责架构和 Memory 调整。</li>
+<li><strong>傻福 (Marketing)</strong>: 负责外联和发邮件。</li>
+<li><strong>小美 (生活管理员)</strong>: 助理秘书，负责计划行程。</li>
+<li><strong>林纳斯 &amp; 泰达</strong>: 软件工程师，负责写代码。</li>
+<li><strong>验收工程师</strong>: 负责代码审查。</li>
+</ul>
+<p>在冷邮件 Demo 里，总经理 Agent 找公司，傻福 Agent 写 Draft。在对抗性编程演示中，我让它写一个 3D 宇宙游戏。它做完后，Reviewer 找到了几个 Medium/Low 风险的问题，Coder 修复后，游戏就直接可运行了。</p>
+<p><strong>[Indigo]</strong>: 任务还得人类来拆解。太复杂的任务它做不好。我建议技能不要全外包，虽然 AI 能得 80 分，但你让它解释一遍步骤，你自己弄懂架构，这种学习效果最好。</p>
+<h3>总结：从 Prompt 工程到上下文管理</h3>
+<p><strong>[Indigo]</strong>: 今天的分享很有启发。Agent 不是软件，而是伙伴。现在的技巧不是 Prompt 工程，而是<strong>上下文管理</strong> (<strong>Context Management</strong>)。为什么 Mac mini 这种本地环境好？因为权限可控，邮件、文件访问都在本地，速度最快，没有云端虚拟机的束缚。</p>
+<p>你要给 Agent 工具权限，同时避免被单一平台绑架。我在电脑上写工具手册，所有 Agent 都能调。你的电脑就像一个微型的 <strong>OPC</strong> (<strong>Personal AI Organization</strong>)。</p>
+<p><strong>[Jacky]</strong>: 把公司业务抽象成 Agent 工作流很难，但 SOP 明确的财务、HR、运营流程很容易转化。</p>
+<p><strong>[Indigo]</strong>: 创意的东西还是人来做，人来选。我有个感觉就记在 Note 里发给 Agent，它自己去处理。现在的 AOPC 还在内容阶段，因为产生内容的成本极低。你一个人做一个 SaaS 会很累，但你可以把自己的 SOP 变成 Skill 卖给别人。</p>
+<p>感谢 Jacky 的精彩分享，第一次直播感觉不错。我们以后把“克六”也叫来直播一场。再见！</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Jacky" class="entity-link person-link">Jacky</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Y Combinator" class="entity-link company-link">Y Combinator</a>, 
+                
+                  <a href="/search/?q=UBC" class="entity-link company-link">UBC</a>, 
+                
+                  <a href="/search/?q=Motorola" class="entity-link company-link">Motorola</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Slock" class="entity-link product-link">Slock</a>, 
+                
+                  <a href="/search/?q=Cursor" class="entity-link product-link">Cursor</a>, 
+                
+                  <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>, 
+                
+                  <a href="/search/?q=Mac mini" class="entity-link product-link">Mac mini</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">multi-agent-collaboration</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">cold-email-automation</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">adversarial-programming</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-productivity/">ai-productivity</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/context-management/">context-management</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

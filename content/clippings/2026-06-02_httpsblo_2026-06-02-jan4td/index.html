@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Claude Opus 4.8：一次难得诚实的小步前进 · 乔木博客</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="Claude Opus 4.8：一次难得诚实的小步前进 · 乔木博客" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">Claude Opus 4.8：一次难得诚实的小步前进 · 乔木博客</span>
+      <span data-pagefind-meta="speaker" style="display:none;">向阳乔木</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-06-02
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/xiang-yang-qiao-mu/">向阳乔木</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://blog.qiaomu.ai/2026-06-02-jan4td" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-06-02
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">Anthropic 发布了 Claude Opus 4.8，核心改进在于诚实度与准确性，而非纯粹的性能提升。模型倾向于在不确定时拒绝回答以减少幻觉，并引入了动态 System Message 插入与更低的 Prompt Cache 门槛等工程优化，体现了 AI 从盲目追求跑分向稳健工程化发展的趋势。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>乔木博客</p>
+<p>全部</p>
+<p>AI工具</p>
+<p>AI教程</p>
+<p>AI生成</p>
+<p>AI资讯</p>
+<p>健脑房</p>
+<p>播客解读</p>
+<p>论文学习</p>
+<h1>Claude Opus 4.8：一次难得诚实的小步前进</h1>
+<p>AI资讯</p>
+<p>·</p>
+<p>2026年6月2日</p>
+<p>·</p>
+<p>28 次阅读</p>
+<p>·</p>
+<p>约 4 分钟</p>
+<blockquote>
+<p>原文：Simon Willison's Weblog</p>
+</blockquote>
+<p>Anthropic 发布了 Claude Opus 4.8。</p>
+<p>发布公告里有一句话，Simon Willison 特别喜欢：</p>
+<blockquote>
+<p>&quot;用户会发现 Opus 4.8 是对前代的一次小幅但实质性的改进。我们还有很多工作要做：我们正在开发并计划发布能以更低成本提供 Opus 同等能力的模型。&quot;</p>
+</blockquote>
+<p>一家 AI 公司，主动承认自己的新模型只是&quot;小幅改进&quot;，够坦诚。</p>
+<h2>这次最重要的改进，不是能力，是诚实</h2>
+<p>大多数模型升级，说的都是跑分更高、推理更强、多模态更好。</p>
+<p>Opus 4.8 的核心卖点，是它变得更不爱吹牛了。</p>
+<p>Anthropic 在公告里说：</p>
+<blockquote>
+<p>&quot;AI 模型有一个普遍问题：它们有时会仓促下结论，在证据薄弱的情况下，仍然自信地声称自己取得了进展。早期测试者报告说，Opus 4.8 更倾向于标记自己工作中的不确定性，更少做出无依据的声明。这体现在我们的评测数据上——Opus 4.8 让代码缺陷悄悄溜走的概率，比前代低了约四倍。&quot;</p>
+</blockquote>
+<p>系统卡里还有一句更直接的话：</p>
+<blockquote>
+<p>&quot;Claude Opus 4.8 在六个模型里的错误率最低——这是衡量事实幻觉最直接的指标。它主要通过在不确定时拒绝作答来实现这一点，而不是通过答对更多问题。&quot;</p>
+</blockquote>
+<p>不知道的就说不知道，比猜一个听起来像对的答案，要有用得多。</p>
+<h2>规格没变多少，但有两个工程细节值得关注</h2>
+<p>和 Opus 4.5、4.6、4.7 一样：$5/百万输入 token，$25/百万输出 token。</p>
+<p>Fast Mode 降价了，从之前的 $30/$150，降到了 $10/$50——不过 Fast Mode 目前只对研究预览计划的组织开放，需要联系客户经理申请。</p>
+<p>上下文窗口还是 100 万 token，最大输出 128,000 token，知识截止日期同 4.7 一样是 2026 年 1 月。</p>
+<p>两个工程上的新东西：</p>
+<p>① 对话中途可以插入 System Message</p>
+<p>以前的系统提示只能在对话开头设一次。现在 Opus 4.8 支持在对话中途的任意用户轮次后，插入新的 role: &quot;system&quot; 消息，动态更新指令。</p>
+<p>对跑长对话、长任务的 Agentic 应用来说，这个功能很实用——不用每轮都重发完整系统提示，能节省 prompt cache 命中成本，也能降低输入费用。</p>
+<p>② Prompt Cache 最小长度从 4,096 降到 1,024 token</p>
+<p>门槛低了四倍，更短的 prompt 也能享受缓存优化。</p>
+<p>对频繁调用的应用来说，这是一个实实在在的省钱点。</p>
+<h2>鹈鹕骑自行车：一个非正式的能力测试</h2>
+<p>思考档位</p>
+<p>效果预览</p>
+<p>low（极简）</p>
+<p>medium</p>
+<p>high</p>
+<p>xhigh</p>
+<p>max（最佳，花了 43 美分）</p>
+<p>Simon 有个习惯，每次测新模型，都会让它用 SVG 画&quot;鹈鹕骑自行车&quot;。</p>
+<p>这次他用五种思考强度分别跑了一遍：low、medium、high、xhigh、max。</p>
+<p>结论是：max 档效果最好，但也最贵。</p>
+<p>一次 max 档的生成，消耗了 25 个输入 token 和 17,167 个输出 token，总花费：43 美分。</p>
+<p>思考越深，画得越像鹈鹕，也越烧钱。</p>
+<h2>一句话总结</h2>
+<p>Opus 4.8 不是一次革命，是一次把&quot;诚实&quot;当核心指标来调优的迭代。</p>
+<p>它不会告诉你它做到了它没做到的事。</p>
+<p>在 AI 普遍爱吹的时代，光是这一点，就已经够用了。</p>
+<p>来源：Simon Willison's Weblog — Claude Opus 4.8: &quot;a modest but tangible improvement&quot;</p>
+<p>© 2026</p>
+<p>·</p>
+<p>向阳乔木</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Simon Willison" class="entity-link person-link">Simon Willison</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Claude Opus 4.8" class="entity-link product-link">Claude Opus 4.8</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-ethics/">ai-ethics</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">llm-reliability</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/prompt-engineering/">prompt-engineering</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/model-evaluation/">model-evaluation</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

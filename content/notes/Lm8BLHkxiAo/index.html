@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemma 4 与 Light RT：重构边缘侧 AI 智能体部署生态</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="Gemma 4 与 Light RT：重构边缘侧 AI 智能体部署生态" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">Gemma 4 与 Light RT：重构边缘侧 AI 智能体部署生态</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-05-05
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=Lm8BLHkxiAo" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-05-05
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本文深入探讨了 Google DeepMind 最新推出的 Gemma 4 系列边缘模型及其配套的 Light RT 部署框架。文章重点介绍了从传统聊天机器人向具备推理、函数调用和结构化输出能力的自主智能体（Autonomous Agents）的演进，并展示了在隐私保护、低延迟和低成本背景下的多样化端侧应用场景，以及 NPU 加速带来的性能飞跃。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>边缘 AI 的范式转移：从聊天机器人到自主智能体</h3>
+<p>Google DeepMind 近期发布的 <strong>Gemma 4</strong> 系列模型标志着端侧 AI 的重大进化。不同于以往仅局限于文本对话的轻量级模型，Gemma 4 的核心演进在于从简单的<strong>聊天机器人</strong>（Chatbot）能力转向支持<strong>自主智能体</strong>（Autonomous Agents）。这意味着模型现在原生支持推理能力、<strong>函数调用</strong>（Function Calling: 允许模型与本地 API 交互）以及<strong>结构化 JSON 输出</strong>（Structured JSON Output: 无需复杂的提示工程即可生成标准格式数据）。在模型规格上，2B（约占用 1-2GB RAM）和 4B 版本的发布，使得从智能手机到高性能笔记本及 IoT 设备都能实现高效的本地部署。</p>
+<p>运行在边缘侧（Edge）具备显著的战略优势：<strong>实时性</strong>（Latency）对于视频滤镜或语音交互至关重要；<strong>隐私保护</strong>（Privacy）确保了敏感的摘要和文档处理无需上传云端；此外，端侧部署能有效对冲云端推理昂贵的<strong>令牌成本</strong>（Tokens Cost）。这种混合架构让开发者能够在云端强大算力与本地高效响应之间找到最佳平衡。</p>
+<details><summary>Original English Source</summary>
+Google DeepMind recently launched Gemma 4 and uh this talk is going to be focusing a little bit more on like the 2B and the 4B edge models that are are focused on uh deploying on device. Uh Google certainly has a big suite of models and even the Gemma 3 family which are also in the smaller size like all the way down to 270 million parameters. So if you're looking for extremely small models that you're able to fine-tune, uh we certainly have a hugging face page which I'll go over which has more of these models. Um, so yeah, so the big evolution with Jamma 4 is going to be really moving from like chatbot type capabilities to more autonomous agents that also support reasoning capabilities and more sophisticated features and uh a lot of it is also uh it's going to be great how you can deploy these on different devices.
+<p>So running on edge has many benefits. I think my colleague went over some of these uh yesterday and I'll just you know run through this uh really quick also. So certainly like latency is important for those who are keen. Um any of these like real-time camera use cases like filters where you're looking to replace backgrounds or like video calls like real-time latency is king over there. So that's you know on device can help with that. Privacy is also critical for any use cases where you know you have sensitive details, you're doing some kind of summarizing uh documentation which is sensitive offline use cases where you have poor connectivity and costs like you know I've seen so many presentations uh this uh uh AI engineer event where uh people are complaining about the number of tokens that are getting used and this and that but I think uh ondevice always offers this hybrid approach where if you're looking for like how do i really offset you know uh running things on the edge versus on cloud and where can i get the best balance? I think there's a there is something here.</p>
+</details>
+<h3>端侧应用生态：Gallery App 与多模态推理实践</h3>
+<p>为了展示 Gemma 4 的强大性能，Google 推出了开源的 <strong>Gallery App</strong>，作为一个实验场供开发者探索智能体技能。该应用不仅支持基础的<strong>端侧摘要</strong>（Summarization）和图像问答，还引入了<strong>思维链</strong>（Chain of Thought）的显示模式，让用户直观地看到模型的思考过程。在具体的应用场景中，Gemma 4 展示了其在<strong>知识增强</strong>（Augmenting Knowledge: 如本地调用维基百科 API）和复杂工作流管理方面的潜力。</p>
+<p>通过具体的演示案例，我们可以看到模型在图像理解与音频生成方面的深度融合。例如，用户上传一张早餐照片，模型能够识别照片的“氛围”（Vibe）并完全在本地生成匹配的音乐。此外，针对健康管理的<strong>情绪追踪智能体</strong>（Mood Tracker Agent）能够分析过去七天的情绪趋势并给出建议。这些技能的实现得益于模型在硬件原生的优化，使其能够跨 CPU、GPU 甚至是即将全面支持的 <strong>NPU</strong>（Neural Processing Unit: 专用 AI 加速芯片）无缝运行。</p>
+<details><summary>Original English Source</summary>
+In the next couple of slides um at present you know what's new is the de the the gallery app allows you to demonstrate the agent skill capabilities um and also it has the audiocribe capabilities or ask image and also other features that were uh related to uh chat experiences. Um all of this is happening on device. The purpose of this app that is created by Google is to help you get a playground to get a feel for what these models are capable of. Uh each of these capabilities has sample code as well that anyone can go and grab and then you are able to also fork this app to build your own experiences.
+<p>So here's one use case where you're augmenting knowledge and you know for example you can build a skill to query Wikipedia allowing the agent to query uh and respond to any encyclopedia question. So this is a this is a skill that's already available in our app that's uh that's there. So you can kind of see that it's able to create this all on device. It's taking your input, it's feeding it, it's able to understand. So the reasoning and the thinking capability are new in the new model and that the the ondevice capabilities have gotten a lot more powerful. Another similar ex example is going to be on expanding like the core capabilities. So for instance, you can also pair photos and it's going to read the photo and have image understanding and generate music also all on device.</p>
+</details>
+<h3>Light RT：跨平台部署框架与硬件加速性能</h3>
+<p>在技术底层，Google 将其端侧 AI 框架更名为 <strong>Light RT</strong>（原 TensorFlow Lite 的演进版），旨在提供一个统一且跨平台的架构。Light RT 不仅支持原有的 <strong>TensorFlow Lite</strong> 格式，还通过 <strong>Light RT Torch</strong> 路径实现了对 <strong>PyTorch</strong> 和 <strong>JAX</strong> 模型的兼容。这一转变解决了开发者“自带模型”（Bring Your Own Model）的痛点，确保同一模型文件可以在 Android、iOS、Linux、Windows 以及 Raspberry Pi 等各类 IoT 设备上保持一致的行为。</p>
+<p>性能优化是 Light RT 的核心竞争力。通过 <strong>AI Edge Portal</strong> 云端基准测试工具，开发者可以针对大规模设备群进行<strong>混合精度训练</strong>（Mixed Precision）或量化策略的验证。特别是在硬件加速方面，Light RT 已完成与高通（Qualcomm）和联发科（MediaTek）的深度集成，利用 NPU 加速可以实现 <strong>3 到 10 倍</strong> 的性能提升，这对于实时 <strong>ASR/TTS</strong>（语音识别/合成）以及 AR/VR 应用来说是革命性的。性能对比数据显示，在移动端，Light RT 的运行速度在某些场景下可达到 Llama 模型的 35 倍，为边缘侧复杂智能体的落地提供了坚实的工程基础。</p>
+<details><summary>Original English Source</summary>
+Google has an offering with light RT for bring your own models essentially. So light RT essentially is Google's ondevice framework. It's built and built on the TensorFlow framework. TensorFlow light if you guys are familiar with that. Uh it's really meant to also be built on using the same TensorFlow light model format and that's what we are focusing on at this point. So the rebranding was to also demonstrate that it's not just TensorFlow light models that we accept but also PyTorch models and JAX models.
+<p>The AI edge portal is a benchmarking tool which could be of interest for those who are looking to deploy broadly on Android. So this is a cloud-based benchmarking service called AI edge portal. Um yeah sorry one more thing on this slide is uh the next part is acceleration. So CPU and GPU are pretty universal right now. Uh NPU acceleration is also another focus. So we have completed uh integration with Qualcomm MediaTek and we are also focusing on additional integrations with other uh partners. I think the NPU is going to give you at least like 3 to 10x improvement in performance and it's going to be a gamecher in terms of the amount of energy you're going to use uh and the amount of performance you're looking for to unlock those use cases. Our runtime is also very performant versus llama. At least on like mobile, we've seen up to like 35 times faster performance.</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>, 
+                
+                  <a href="/search/?q=Google DeepMind" class="entity-link company-link">Google DeepMind</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Gemma 4" class="entity-link product-link">Gemma 4</a>, 
+                
+                  <a href="/search/?q=Gemma 3" class="entity-link product-link">Gemma 3</a>, 
+                
+                  <a href="/search/?q=Light RT" class="entity-link product-link">Light RT</a>, 
+                
+                  <a href="/search/?q=TensorFlow Lite" class="entity-link product-link">TensorFlow Lite</a>, 
+                
+                  <a href="/search/?q=Gemma 4 E2B" class="entity-link product-link">Gemma 4 E2B</a>, 
+                
+                  <a href="/search/?q=Gemma 4 E4B" class="entity-link product-link">Gemma 4 E4B</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/edge-ai/">edge-ai</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">on-device-inference</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/model-quantization/">model-quantization</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">cross-platform-deployment</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

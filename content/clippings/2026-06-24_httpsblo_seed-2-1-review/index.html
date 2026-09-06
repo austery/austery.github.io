@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>豆包Seed 2.1实测：编程可用，识鱼封神！ · 乔木博客</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="豆包Seed 2.1实测：编程可用，识鱼封神！ · 乔木博客" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">豆包Seed 2.1实测：编程可用，识鱼封神！ · 乔木博客</span>
+      <span data-pagefind-meta="speaker" style="display:none;">向阳乔木</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-06-24
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/xiang-yang-qiao-mu/">向阳乔木</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://blog.qiaomu.ai/seed-2-1-review" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-06-24
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本文对豆包Seed 2.1系列模型进行了实测，重点展示了其在编程可用性、多模态识别和Agent工作流方面的表现。测试涵盖了从全屏画布动画生成到复杂Web应用开发（如CMS系统）的实际场景，以及利用Skill进行标题生成、竞品调研报告制作等多种AI工具链的应用，总结认为Agent能力已迈过生产级可用线，多模态识别有惊喜。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>乔木博客</p>
+<p>全部</p>
+<p>AI工具</p>
+<p>AI教程</p>
+<p>AI生成</p>
+<p>AI资讯</p>
+<p>健脑房</p>
+<p>播客解读</p>
+<p>论文学习</p>
+<h1>豆包Seed 2.1实测：编程可用，识鱼封神！</h1>
+<p>AI资讯</p>
+<p>·</p>
+<p>2026年6月24日</p>
+<p>·</p>
+<p>83 次阅读</p>
+<p>·</p>
+<p>约 9 分钟</p>
+<p>前天，火山引擎将在年度Force大会上发布了最新基模Seed-2.1系列（Pro、Turbo）。</p>
+<p>模型特点在这里：</p>
+<blockquote>
+<p>https://mp.weixin.qq.com/s/a-eevQvWVAYwZQeFi1ZomA</p>
+</blockquote>
+<p>到底如何，我们还是看实际场景表现。</p>
+<p>乔帮主从常规测试、工作场景和个人爱好出发，带着大家一起测 Seed-2.1-Pro 。</p>
+<p>一句话总结：Agent 和 Coding 迈过生产级可用线，多模态识别有惊喜！</p>
+<h2>小汽车测试</h2>
+<p>Django Web 框架的联合创始人之一 Simon Willison。</p>
+<p>每次模型发布，他都会做 “鹈鹕骑车” ，来测模型推理和SVG生成能力。</p>
+<p>最近 Reddit 流行一个新测试，我称之为“小汽车测试”，中文翻译提示词如下</p>
+<blockquote>
+<p>用一个单独的 HTML 文件实现全屏画布，不使用任何库。以侧视角模拟一辆行驶中的汽车作为主体。保持汽车在前景中可见，同时背景景观持续滚动，营造出汽车向前行驶的感觉。使用分层场景实现景深效果：近处地面、路边元素、树木、电线杆以及远处的山丘或山脉应以不同速度移动，形成自然的视差效果。真实地动画化车轮旋转，并添加细微的车身运动，使汽车感觉与道路相连。让环境在车后平滑地流过，场景重复但富有变化，使运动感觉真实可信。使用电影级光效和统一的天空（如日落、黄昏或日光）来增强氛围。整体运动应感觉平静、沉浸且真实，具有无缝循环动画效果。</p>
+</blockquote>
+<p>这个测试很妙，一次性考察大模型物理建模、无缝循环动画、空间层次、美学和编程能力。</p>
+<p>如果模型编程能力不强，很难通过测试，因为要求不能用第三方库，只能从头生成原生 JS 代码。</p>
+<p>JS 代码一旦出错，很容易白屏加载不出画面。</p>
+<p>Seed 2.1 Pro 出来效果如下，感觉有点超预期。</p>
+<p>虽然背景树木时高时低有点怪，小汽车轮子太靠上，但整体完成很不错。</p>
+<h2>前端网页开发</h2>
+<p>用大模型，很多时候是为了开发网站，前端网页开发能力多少得测下，提示词如下：</p>
+<blockquote>
+<p>设计并实现一个面向 CFO 的「AI 财务预测平台」官网首页，要求包含首屏 Hero、可信客户 Logo、3 个核心卖点、一个实时财务预测仪表盘预览、客户证言、价格入口和 CTA。输出可运行的单文件 HTML/CSS/JS 或 React 组件。要求视觉风格接近 Linear/Stripe/Notion 的高级感，但不能照抄任何品牌。</p>
+</blockquote>
+<p>界面简洁清晰，提示词遵循也不错，图表展示效果不错，但整体中规中矩，算符合超预期。</p>
+<p>https://www.32kw.com/view/ed38b2d</p>
+<h2>后台功能开发</h2>
+<p>身边 AI Coding 厉害的朋友，现在都是用文档驱动开发（Spec开发）。</p>
+<p>先让 AI 生成需求文档，自己检查没问题后，丢给 AI 开发即可。</p>
+<p>最常见案例就是开发个 CMS（内容管理系统），大部分网站基础就是这个，复杂点会加上注册登录、用户权限管控、页面SEO页面优化、Rest API 等。</p>
+<p>试下 Seed 2.1 Pro 是否能完美执行这套工作流：</p>
+<blockquote>
+<p>读取这个PRD，开发CMS系统：[文档地址]</p>
+</blockquote>
+<p>Seed 2.1 Pro 选择了 nextjs 框架、sqlite数据库，还设计了 REST API 接口。</p>
+<p>5 分钟左右完成开发，增删改查正常，功能完全符合文档要求，除界面不够 fancy，挑不出别的问题。</p>
+<p>这么看，一些常规编程任务也可以用 Seed 2.1 Pro 了。</p>
+<h2>生成炸裂标题</h2>
+<p>不是人人都需要编程，但日常写文章，取个标题，是最常见不过的任务。</p>
+<p>大聪明（赛博禅心）一直跟我说，做自媒体要研究新智元。</p>
+<p>喷归喷，但人家起标题真的是一绝。</p>
+<p>新智元发布了5000多篇文章，让 AI 分析了 2688 篇，提炼了一套新智元标题生成 Skill</p>
+<blockquote>
+<p>npx skills add joeseesun/qiaomu-xinzhiyuan-title</p>
+</blockquote>
+<p>虽然用 Prompt 也能生成标题，但用 Agent 能读取飞书、公众号页面，再参考 Skill 的 Reference 文档，生成标题质量更稳定、更轻松。</p>
+<p>这里我们继续用开篇文章，提示词也简单：</p>
+<blockquote>
+<p>用新智元标题Skill生成10个候选标题，读取这里的内容：https://mp.weixin.qq.com/s/a-eevQvWVAYwZQeFi1ZomA</p>
+</blockquote>
+<p>是不是有那个味道了？😂</p>
+<p>没想到老实巴交的豆包 Seed 2.1，也能瞬间变标题党，相当炸裂！</p>
+<h2>竞品调研报告</h2>
+<p>很多人的日常工作，经常要做一些产品分析调研，把下面提示词发给 Seed 2.1 Pro：</p>
+<blockquote>
+<p>调研 3 个「AI 会议纪要工具」的官网、价格、核心功能、集成生态、隐私合规表述和用户评价。输出一张竞品矩阵，并给出面向中小企业的 MVP功能优先级、差异化定位和 90 天 Roadmap。</p>
+</blockquote>
+<p>生成内容很长，我补了一句：“写入飞书文档”，精准调 lark-doc 写入文档，效果如下：</p>
+<p>指令遵循不错，各项任务都完成了。</p>
+<p>直接抓取被拦截时，还会调用 Playwright 读页面获取信息。</p>
+<h2>生成信息卡图</h2>
+<p>将任意文本或链接一键转化为杂志质感信息卡片，自动截图输出图片，适合分享到 X、小红书、微信。</p>
+<p>先安装下面乔帮主的 Skill</p>
+<blockquote>
+<p>npx skills add joeseesun/info-card-designer</p>
+</blockquote>
+<p>然后把开篇的微信文章发给 Seed 2.1 Pro，提示词：</p>
+<blockquote>
+<p>读取 https://mp.weixin.qq.com/s/a-eevQvWVAYwZQeFi1ZomA 用信息卡skill生成卡片</p>
+</blockquote>
+<p>默认生成了蓝紫渐变图 😂 ，让它调整生成白色简洁风格信息图。</p>
+<h2></h2>
+<h2>制作电子书</h2>
+<p>互联网上有些博客写的非常好，很值得做成 epub 电子书，导入微信读书随时看。</p>
+<p>安装下面的 Skill，一句话生成电子书。</p>
+<blockquote>
+<p>npx skills add joeseesun/qiaomu-epub-book-generator</p>
+</blockquote>
+<p>比如 Paul Graham 的博客，常读常新。</p>
+<p>此任务可以测试 Seed 2.1-pro的 Skill 调用和执行能力，提示词很简单：</p>
+<blockquote>
+<p>抓取 Paul Graham 最新 x 条博客，用乔木 epub 制作 skill 生成epub电子书</p>
+</blockquote>
+<p>不仅顺利下载翻译博客文章为中文。</p>
+<p>还能遵循 Skill 封面设计规范，先设计网页，再调用 Playwright 截图，生成电子书封面。</p>
+<h2>拍照识鱼</h2>
+<p>乔帮主作为钓鱼佬，最近在开发一款自用 iOS App。</p>
+<p>产品需求：拍照后 AI 自动读取相片 exif 信息记录钓点，同时识别渔获，什么鱼种，有几条。</p>
+<p>之前测试 Gemini 3.1 Flash，竟把白条识别成“泥鳅”，非常恼火。</p>
+<p>听火山发布会说 Seed 2.1 Pro 多模态不错。</p>
+<p>抱着试试看心态，给了一张没抹去 exif 信息的图片，输入提示词：</p>
+<blockquote>
+<p>读取这张图片的地理位置信息，并识别图中有几条鱼，什么鱼</p>
+</blockquote>
+<p>附件原图：</p>
+<p>结果让人感动，不仅调用 exif 工具读取了图片地理位置（温榆河），还准确识别了鱼种和数量。</p>
+<p>连泥水中看不太清楚的两条都识别到了，还给我科普了白条的拉丁名和其他俗名，震惊！</p>
+<blockquote>
+<p>鱼种：几乎全是白条鱼（学名䱗，Hemiculter Leucisculus，俗称餐条、青鳞子、游刁子）</p>
+</blockquote>
+<p>我的钓点记录 App 终于有救了。</p>
+<h2>如何体验？</h2>
+<p>虽然豆包专业版-办公模式、TRAE、TRAE WORK、扣子都上线了 Seed-2.1-Pro。</p>
+<p>但企业和专业用户一般会接 API，在Claude Code等工具中使用。</p>
+<p>为还原实际能力，避免产品系统提示词影响，上面测试都用是 CC Switch + 火山方舟 API ，终端用的 cmux。</p>
+<h2>写在后面</h2>
+<p>可能最近牛 X 模型太多了，豆包 Seed 2.1 Pro 感觉稍微有点中规中矩。</p>
+<p>好消息是 Agent 能力达到可用线，常规编程、调工具、写文档、截图、生成电子书都能搞定，这对依赖 AI 工作流的人来说，体感差异很明显，且价格还不错。</p>
+<p>最大惊喜来自多模态，至少我测试的场景，明显领先 Gemini 3.1 Flash。</p>
+<p>等后面有空我再测下自动化视频剪辑，这个更考验多模态实力。</p>
+<p>上面测试的 Skill 都是开源的，直接 ⁠npx skills add 就能用。</p>
+<p>如果想在 Claude Code 中调用，直接去火山方舟申请 API 即可，已经全量开放。</p>
+<p>© 2026</p>
+<p>·</p>
+<p>向阳乔木</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=火山引擎" class="entity-link company-link">火山引擎</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=豆包Seed 2.1 Pro" class="entity-link product-link">豆包Seed 2.1 Pro</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/model/">model</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/coding/">coding</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">multi-modal-recognition</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

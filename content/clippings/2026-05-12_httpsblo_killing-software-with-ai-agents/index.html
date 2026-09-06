@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9人团队跑900个Agent，这款产品想让软件消失 · 乔木博客</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="9人团队跑900个Agent，这款产品想让软件消失 · 乔木博客" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">9人团队跑900个Agent，这款产品想让软件消失 · 乔木博客</span>
+      <span data-pagefind-meta="speaker" style="display:none;">向阳乔木</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-05-12
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/xiang-yang-qiao-mu/">向阳乔木</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://blog.qiaomu.ai/killing-software-with-ai-agents" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-05-12
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本文介绍9人团队Afk.Inc推出的Bridge产品，旨在成为“意念与完成的桥梁”。通过自进化Agent自主调度任务，实现跨平台操作，致力于革新现有软件交互模式，推动“软件消失”的Agent-native时代。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>乔木博客</p>
+<p>全部</p>
+<p>AI工具</p>
+<p>AI教程</p>
+<p>AI生成</p>
+<p>AI资讯</p>
+<p>健脑房</p>
+<p>播客解读</p>
+<p>论文学习</p>
+<h1>9人团队跑900个Agent，这款产品想让软件消失</h1>
+<p>播客解读</p>
+<p>·</p>
+<p>2026年5月12日</p>
+<p>·</p>
+<p>22 次阅读</p>
+<p>·</p>
+<p>约 9 分钟</p>
+<p>一个95后天体物理学家，从马普引力物理研究所出来，没去追引力波，跑去 Palo Alto 做 AI 了。</p>
+<p>他叫 Enther，1997年生，公司叫 Afk.Inc——Away from Keyboard。9个人，跑着900个 agent。第一款产品 Bridge，今天正式发布。</p>
+<p>在这之前，他做过 Affine，700万用户，Product Hunt 年度第四。然后在巅峰期亲手砍掉它。</p>
+<p>他的判断只有一句话：AI 正在消灭软件。与其等着被颠覆，不如自己来。</p>
+<h2>从 Affine 到 Bridge，一次主动的自我颠覆</h2>
+<p>Affine 是一个协作工具，也是 AI 协同知识库里 star 最多的开源项目。Enther 在里面花了很长时</p>
+<p>间，研究人与人、人与 AI 应该如何协作。</p>
+<p>但他逐渐看清了一件事。</p>
+<p>AI 本身会重新发明和定义软件。它不会跟任何现有软件好好相处。 就像 iOS 干掉塞班，不是改良，是替代。继续做一个&quot;限制 AI 的脚手架&quot;，迟早是死路。</p>
+<p>于是他把 Affine 砍了，从头开始做 Bridge。</p>
+<p>逻辑很清晰：与其做工具，不如做 AI 本身。与其做软件，不如做消灭软件的软件。</p>
+<h2>Bridge 到底是什么</h2>
+<p>官方 slogan 是 Bridge intent and done，意念与完成之间的桥。</p>
+<p>用更直白的话说：你想干什么，就告诉它，它就去干完。 你不需要知道用什么工具、装什么软件、配什么 API。</p>
+<p>最让 Enther 骄傲的功能叫 Books。</p>
+<p>你可以一句话复刻任意 AI 应用。比如，做一个动态生成剧情的游戏，或者把你读过的小说自动变成漫画，再一键部署成网站。视频模型、API、token、环境，什么都不用你配。</p>
+<p>他们团队内部有个群叫 demos，每天看 Bridge 能整出什么活。Runway 说他们能让 AI 跟人视频开会，他们直接把链接扔给 Bridge，one-shot 复刻了一个。</p>
+<p>另一个设计叫 Notch，给 macOS 做的灵动岛。当 agent 并发跑多个任务时，无论你切到哪个屏幕，顶部都有进度条，告诉你它每一步在干嘛。动画是一帧一帧抠出来的。</p>
+<p>核心理念只有一个：少打扰。 AI 干活的时候，不要影响你的 vibe，你可以去跳舞。</p>
+<h2>内测两个月，用户整出了什么活</h2>
+<p>Bridge 4月启动了首批200位用户的内测。Enther 说，每天都被震惊。</p>
+<p>有人让 Bridge 做了一个 AI 和自己打德州扑克的游戏，会互喷、互相 bluff。</p>
+<p>有位半导体工程师，用某种很旧的、没有 API 的芯片仿真平台，Enther 说他一眼都看不懂那个东西，但 Bridge 就能替工程师操作那个平台干活。</p>
+<p>最夸张的是一位设计师。他为了看 3D 狗狗，用 Bridge 做了一个 2D 转 3D 的&quot;3D 相片&quot;，输入一张照片，它会随人的视角运动，完全本地运行。而且 Bridge 在构建过程中，甚至给他训练了一个专门检测景深和人脸位置的模型。</p>
+<p>还有个用户把账号密码给了 Bridge，让它去退机票。Enther 本来觉得 trip.com 很麻烦，没想到扯皮几轮之后，票真的退了。</p>
+<p>这件事直接催生了一个新产品 Droppass——替你输密码，端到端加密，Bridge 也看不到。</p>
+<h2>三个技术难点，和一套叫 Willow 的基建</h2>
+<p>Bridge 背后的技术门槛，Enther 说&quot;非常大&quot;。</p>
+<p>第一个难点是沙箱。 AI 误删文件或改错东西时，需要一个比 Git 更适合普通人的版本控制系统。他们做了可备份、可回滚的沙箱。即便你在本地使用 Bridge、操作本地文件，也是先起沙箱、备份，然后可以回滚任意操作。</p>
+<p>&quot;去年看到 computer use 的时候觉得太吓人了，它可以把我电脑删干净。人类操作系统有 ctrl+z、回收站，但 agent 的 CLI 里一概没有。&quot;</p>
+<p>第二个难点是多环境调度。 AI 既可以用云上的浏览器访问 Gmail、Notion、Linear，也可以直接操作你的本地电脑。他们做了一个 Environment Orchestrating System，让 agent 统一调度本地和云端。</p>
+<p>第三个难点是模型的自进化训练。 多模型已经是必选项，但不同模型各有脾气。GPT 干活很强，但跟人说话黑话连篇，体验不友好。他们的解法是反其道而行：先训练一个专门负责聊天、人格化的秘书 agent，由它去调度 GPT、Gemini、Claude、DeepSeek 做不同领域的任务。</p>
+<p>在基础设施层面，他们自建了一套叫 Willow 的方案。比基于 k8s 的沙箱集群快两个数量级以上，而且更经济。</p>
+<p>Enther 的判断是：Agent 访问互联网基础设施的效率与频率，将超过人类的一百万倍。但今天的 infra 还是为人类设计的。 想做 agent-native，就得自己搞。</p>
+<h2>比 OpenClaw 更早，但没敢发</h2>
+<p>这是 Enther 复盘时提到的一段遗憾。</p>
+<p>去年12月，他们比 OpenClaw（龙虾）更早做出了 proactive agent，cron job 加 soul，人格化的主动任务。但当时跟别人讲，没人听得懂。</p>
+<p>&quot;你说「温度高了自动开空调」，大家就觉得「不就是定时发消息吗？」有劲儿使不出的感觉。&quot;</p>
+<p>然后2月，一个完成度只有他们50%的产品 OpenClaw 突然爆了。大厂疯狂抄，海量投广告，一夜之间大家对 agent 的观感从&quot;好酷&quot;变成&quot;不过如此&quot;。</p>
+<p>教训只有一条：不要和同行还有投资人聊太多，大家看得多用得少，信息茧房太严重。 实际用的人和天天看的人，是脱节的。</p>
+<p>KOL 们看 proactive agent 都腻了，但大多数人其实还配不明白这个虾那个虾。这恰恰说明 personal agent 的 killer app 还没出现。</p>
+<p>&quot;但这一次，我们不会等别人替我们爆了。&quot;</p>
+<h2>9个人，900个 agent，怎么撑起来的</h2>
+<p>团队9人，6位工程师，其中两位是 designer engineer。核心成员来自 Deno、Vercel、字节、Google、OpenAI。</p>
+<p>每个人 own 一个大的切面：infra、agent framework、大前端。基本上没有一个功能需要两个人。</p>
+<p>更有意思的是他们内部的协作方式。</p>
+<p>他们把 Codex bot 接到 Bridge 里，在 Slack 里 @ 它聊天。结果生产力暴增。Enther 发现，Agent Engineer 到了群聊里变成很好的胶水角色——它激发了人类协作。</p>
+<p>产品设计师和研发对齐通常很难，但 AI 比任何人都能理解两边的语言，大家又很方便随时和它聊，自然形成了&quot;两边一起喷一喷，最后 AI 做出超出两边期待的东西&quot;。</p>
+<p>&quot;我经常只需要和大家脑暴时拉上 Bridge，开完会后 @ 它「照着刚刚的搞」，就结束了。真的是 vibe 口喷 working。&quot;</p>
+<h2>5年后，软件会消失成什么样子</h2>
+<p>Enther 说他已经很少想象5年后了，因为 AI 的发展本身有着加速度。</p>
+<p>在可见的一两年里，他希望 Bridge 成为构建、管理与运行 agent 的入口，一个 agent for agents。</p>
+<p>&quot;它不会替代操作系统，没必要。它可能有点像十年前的安卓桌面启动器。只不过这次启动的，是动态构建的任何东西。&quot;</p>
+<p>对于市场空间，他的判断是数量级级别的。从 web 到移动互联网，门户和电脑应用变成手机 app 商店，2000年 bubble 破灭后，20年疯狂价值创造，万亿级公司从无到有。</p>
+<p>这一次，所有习以为常的应用入口都会变成 agent 驱动。 未来每个人有1000个 agent 替他消费10000个手机等效的屏幕时间。</p>
+<p>&quot;下一个占据所有人的 personal agent，会出现十万亿美元的公司。&quot;</p>
+<p>Bridge 今天正式发布，域名 bridge.surf。</p>
+<p>一个天体物理学家，用研究引力波的严谨，在做一件他认为比引力波更重要的事：让人类双手离开键盘。</p>
+<p>至于他说的&quot;消灭软件&quot;，听起来像是狂言。但 iOS 干掉塞班的时候，塞班的工程师们大概也觉得，这不可能。</p>
+<p>© 2026</p>
+<p>·</p>
+<p>向阳乔木</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Enther" class="entity-link person-link">Enther</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Afk.Inc" class="entity-link company-link">Afk.Inc</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Bridge" class="entity-link product-link">Bridge</a>, 
+                
+                  <a href="/search/?q=Affine" class="entity-link product-link">Affine</a>, 
+                
+                  <a href="/search/?q=Willow" class="entity-link product-link">Willow</a>, 
+                
+                  <a href="/search/?q=Droppass" class="entity-link product-link">Droppass</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">agent-native</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/autonomous-agent/">autonomous-agent</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/infrastructure/">infrastructure</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

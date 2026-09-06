@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeepSeek-VL论文解读 · 乔木博客</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="DeepSeek-VL论文解读 · 乔木博客" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">DeepSeek-VL论文解读 · 乔木博客</span>
+      <span data-pagefind-meta="speaker" style="display:none;">向阳乔木</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-04-30
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/xiang-yang-qiao-mu/">向阳乔木</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://blog.qiaomu.ai/deepseek-vl" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-04-30
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本文深度解读了DeepSeek-VL视觉语言模型的研究论文。文章详细阐述了该模型如何解决开源多模态模型与GPT-4V之间的差距，重点介绍了其真实场景导向的数据构建、创新的混合视觉编码器架构，以及解决多模态与语言能力竞争的训练策略，并展示了其在多模态和语言基准测试中的优异表现。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>乔木博客</p>
+<p>全部</p>
+<p>AI工具</p>
+<p>AI教程</p>
+<p>AI生成</p>
+<p>AI资讯</p>
+<p>健脑房</p>
+<p>播客解读</p>
+<p>论文学习</p>
+<h1>DeepSeek-VL论文解读</h1>
+<p>论文学习</p>
+<p>·</p>
+<p>2026年4月30日</p>
+<p>·</p>
+<p>213 次阅读</p>
+<p>·</p>
+<p>约 18 分钟</p>
+<p>昨天体验了网页端的DeepSeek的识图模式，速度超级快，质量也还行。</p>
+<p>回顾下DeepSeek 之前发的论文，然后待会还有一篇，从头学习。</p>
+<p>Github地址：https://github.com/deepseek-ai/DeepSeek-VL</p>
+<blockquote>
+<p>论文查看 https://arxiv.org/pdf/2403.05525</p>
+</blockquote>
+<p>AI总结，人工阅读Review配图如下。</p>
+<h2>一句话总结</h2>
+<p>DeepSeek-VL是DeepSeek团队开源的视觉语言模型，有1.3B和7B两个版本。</p>
+<p>核心目标只有一个：在真实场景里既能看图又能说话，同时不丢失语言能力。它从数据、架构、训练策略三个维度入手，在同等参数规模下做到了开源模型里的顶尖水平。</p>
+<h2>这篇论文到底在解决什么问题？</h2>
+<p>2024年初，开源多模态模型和GPT-4V之间有一道明显的鸿沟。</p>
+<p>很多开源模型在学术benchmark（基准测试，就是标准化的评分考试）上跑分还行，但一到真实场景就拉胯。</p>
+<p>让它看一张网页截图、读一份PDF、识别街拍里的小字，效果就大打折扣。</p>
+<p>DeepSeek团队总结了四个核心原因：</p>
+<p>第一，预训练不够充分。</p>
+<p>很多模型把大量算力花在了指令微调阶段，但真正的通用能力来自大规模预训练。</p>
+<p>这就像一个人只刷题不读书，考试可能还行，解决实际问题就不够用了。</p>
+<p>第二，训练数据和真实使用场景脱节。</p>
+<p>把一堆学术数据集拼在一起做微调，benchmark分数好看，但用户实际用起来体验很差。</p>
+<p>第三，图像分辨率太低。</p>
+<p>大部分模型只能处理336×336或448×448像素的图片。</p>
+<p>现实世界里的OCR（光学字符识别，就是让AI读懂图片里的文字）、小物体识别，这个分辨率根本不够用。</p>
+<p>第四，多模态训练会&quot;吃掉&quot;语言能力。</p>
+<p>很多模型在加入视觉训练后，语言能力明显下降。</p>
+<p>这是一个很棘手的问题，也是这篇论文花了最多篇幅去解决的事情。</p>
+<h2>数据构建：从真实场景出发</h2>
+<p>DeepSeek-VL的数据分两大块：预训练数据和监督微调数据。</p>
+<h3>预训练数据</h3>
+<p>覆盖面非常广，按类别拆开来看：</p>
+<p>图文交错数据（占13.1%）</p>
+<p>就是图片和文字混合出现的内容，比如维基百科文章里图文穿插的格式。</p>
+<p>用了MMC4、Wikipedia中英文、Wikihow，以及内部的PDF和电子书。</p>
+<p>这类数据能让模型学会在上下文里理解多张图片，也就是所谓的&quot;多模态上下文学习&quot;能力。</p>
+<p>图像描述数据（占11.1%）</p>
+<p>高质量的图文配对数据集，包括Capsfusion、TaiSu（一个1.66亿规模的中文视觉语言数据集）和Detailed Caption。</p>
+<p>表格和图表数据（占2.1%）</p>
+<p>来自十多个公开数据集，涵盖各种图表、地理题、科学题、UI截图等，让模型学会理解各种结构化视觉信息。</p>
+<p>网页代码数据（占0.4%）</p>
+<p>这部分很有意思。团队从GitHub上抓取了146万个Jupyter Notebook，提取了其中的图表和对应的生成代码，最终筛选出110万个高质量的图文代码对。</p>
+<p>目标是让模型能从图形界面或可视化图表反推出代码。</p>
+<p>文档OCR数据（占2.1%）</p>
+<p>当时市面上没有大规模的中英文文档OCR数据集，团队自己造了。</p>
+<p>两个来源：一是从140万篇arXiv论文里提取图文对；二是从86万本英文电子书和18万本中文电子书里，用HTML渲染工具生成了配对的图片和文本。</p>
+<p>场景文字OCR数据（占1.2%）</p>
+<p>识别融入环境的文字，比如街道招牌、商品包装。</p>
+<p>用了ArT、MLT-17、LSVT、UberText等十个公开数据集。</p>
+<p>纯文本数据（占70%）</p>
+<p>这个比例是整个训练策略的核心，后面会详细解释。用的是DeepSeek-LLM的2万亿token文本语料。</p>
+<h3>监督微调数据</h3>
+<p>微调数据分四类：</p>
+<p>内部数据（占10.5%）</p>
+<p>这是最有价值的部分。</p>
+<p>团队先从网上收集了GPT-4V和Gemini的真实用户测试案例，然后把这些案例整理成一套完整的分类体系，再根据这套分类体系去选图、写提示词，构建出贴近真实使用场景的微调数据。</p>
+<p>通用多模态数据（占35.5%）</p>
+<p>包括ShareGPT4V、LAION-GPTV、LVIS-Instruct4V等知名开源数据集。</p>
+<p>表格图表和网页代码数据（各占4.1%和2.0%）</p>
+<p>从预训练数据集里抽取部分用于微调。</p>
+<p>纯文本对话数据（占47.9%）</p>
+<p>沿用DeepSeek-LLM的文本对话数据，保住语言能力。</p>
+<h3>那套分类体系长什么样？</h3>
+<p>这套分类体系是整个数据构建思路的精华，值得单独说说。</p>
+<p>团队把多模态模型的真实使用场景分成六大类：</p>
+<p>识别类： 全局描述（场景、风格、食物）、局部描述（位置、人物、Logo、计数）、OCR转录（印刷体、手写体）。</p>
+<p>转换类： 图片转代码（UI转代码、图表转代码、公式转代码）、图片转文本（生成提示词、文字摘要、图片创作）。</p>
+<p>分析类： 数据图表分析、专业图表分析（电路图、流程图、地图、乐谱、平面图）、专业图像分析（传感器图像、医学图像）、百科知识分析（艺术文化、自然环境、衣食住行）。</p>
+<p>常识推理类： 关系推理（人际、空间、大小）、功能推理（硬件、软件）、环境推理（具身智能）、异常推理（缺陷检测、事故判断）。</p>
+<p>逻辑推理类： 数学推理（代数、平面几何、立体几何）、其他逻辑推理（物理、化学、生物、代码、智力题）。</p>
+<p>评估类： 真实性评估、相似度评估、美学评估。</p>
+<p>还有多图理解和安全两个额外类别。</p>
+<p>这套分类体系同时用于数据构建和效果评估，保证了训练和测试的一致性。</p>
+<p>这是&quot;从真实用户需求倒推数据构建&quot;的典型做法，比单纯堆学术数据集高明得多。</p>
+<h2>模型架构：三个模块协同工作</h2>
+<p>整个模型由三个模块组成：混合视觉编码器、视觉语言适配器、语言模型。</p>
+<h3>混合视觉编码器</h3>
+<p>这是技术上最有意思的部分之一。</p>
+<p>传统的视觉语言模型通常只用一个视觉编码器，比如CLIP系列的SigLIP（一种用图文对比训练出来的视觉编码器）。</p>
+<p>但SigLIP有两个问题：</p>
+<p>一是存在&quot;CLIP盲点对&quot;现象，视觉上明显不同的两张图片，经过SigLIP编码后可能得到非常相似的表示，导致模型分不清楚。</p>
+<p>二是分辨率有限，最高只到512×512，处理不了需要精细识别的任务。</p>
+<p>DeepSeek-VL用了双编码器混合方案：</p>
+<p>SigLIP-L 处理低分辨率（384×384）输入，负责提取高层语义特征，擅长理解图片&quot;讲了什么&quot;。</p>
+<p>SAM-B 处理高分辨率（1024×1024）输入，负责提取低层细节特征。</p>
+<p>SAM是 Meta 开发的&quot;Segment Anything Model&quot;（万物分割模型），其中的ViTDet图像编码器（一种专门为目标检测优化的视觉Transformer）特别擅长捕捉精细的局部信息，比如小字、边缘、纹理。</p>
+<p>两个编码器输出的特征经过适配器处理后，最终融合成576个视觉token（可以理解为576个&quot;视觉词&quot;）。</p>
+<p>这个数字很关键，它在视觉信息量和计算成本之间找到了平衡点，既能支持多轮对话，又不会让推理成本爆炸。</p>
+<p>为了验证这个选择，团队做了对比实验，测试了CLIP、SigLIP、SigLIP+DINO、SigLIP+SAM四种组合的训练损失曲线。</p>
+<p>结果显示SigLIP+SAM的组合训练损失下降最快、最低，证明引入视觉自监督编码器确实有效。</p>
+<h3>视觉语言适配器</h3>
+<p>这是连接视觉编码器和语言模型的桥梁，用的是两层混合MLP（多层感知机，一种基础的神经网络结构）。</p>
+<p>具体做法：先用两个独立的单层MLP分别处理高分辨率和低分辨率特征，然后把两个特征拼接在一起，再通过一层MLP映射到语言模型的输入空间。</p>
+<p>为什么要用两个独立的MLP而不是共享一个？</p>
+<p>团队做了消融实验，对比了几种适配器设计：</p>
+<p>序列拼接（把视觉特征在序列维度上堆叠）：效果一般，而且计算量更大</p>
+<p>嵌入维度拼接（在特征维度上拼接）：效果更好</p>
+<p>共享MLP：特征融合充分，但对不同编码器的特征分布适应性差</p>
+<p>独立MLP：能精准适应各自编码器的特征分布，但融合不够</p>
+<p>混合MLP（先独立处理再拼接）：综合了两者优点，效果最好</p>
+<h3>语言模型</h3>
+<p>基于DeepSeek-LLM构建，架构上和LLaMA高度相似：用了RMSNorm（一种更高效的归一化方法）、SwiGLU激活函数（一种改进的门控线性单元）、旋转位置编码（RoPE，一种让模型理解token位置关系的方法）。</p>
+<p>两个版本的基础：</p>
+<p>DeepSeek-VL-1.3B 基于 DeepSeek-LLM-1B（用约5000亿文本token训练）</p>
+<p>DeepSeek-VL-7B 基于 DeepSeek-LLM-7B（用约2万亿文本token训练）</p>
+<p>值得注意的是，团队选的是DeepSeek预训练模型的中间检查点，而不是最终版本，然后继续做多模态预训练。</p>
+<h2>训练策略：三阶段 + 模态平衡</h2>
+<p>训练分三个阶段，每个阶段解决不同的问题。</p>
+<h3>第一阶段：热身视觉语言适配器</h3>
+<p>冻住视觉编码器和语言模型，只训练适配器。</p>
+<p>数据：125万张来自ShareGPT4V的图文描述对 + 250万个文档OCR渲染对。</p>
+<p>这个阶段的目标是在视觉和语言的嵌入空间之间建立初步的概念连接，让语言模型能&quot;认识&quot;视觉特征。</p>
+<p>团队做了一个重要实验：把第一阶段的数据量从2K步扩展到80K步，然后直接做微调，看效果有没有提升。</p>
+<p>结果是扩大数据量没有任何帮助，性能甚至略有下降。</p>
+<p>原因很清楚：适配器（两层MLP）的参数量太少，容量有限，学到一定程度就饱和了。</p>
+<p>再多的数据也塞不进去。这也说明了为什么必须有第二阶段。</p>
+<h3>第二阶段：联合视觉语言预训练</h3>
+<p>这是最关键的阶段，也是论文最核心的贡献之一。</p>
+<p>解冻语言模型和适配器，视觉编码器保持冻结，用大规模图文混合数据继续预训练。</p>
+<p>团队发现了一个严峻问题：如果只用多模态数据训练，语言能力会断崖式下降。</p>
+<p>上图展示了这个现象。</p>
+<p>在1B模型上，用100%多模态数据训练时，MMBench（多模态理解测试）分数缓慢上升，但HellaSwag（语言理解测试）和MMLU（多学科知识测试）分数急剧崩塌。</p>
+<p>团队分析了两个原因：</p>
+<p>一是多模态数据本身比纯文本数据简单得多，分布差异很大，直接用来训练会&quot;稀释&quot;语言知识。</p>
+<p>二是视觉模态和语言模态之间存在竞争关系，学多了视觉就会忘记语言，这是一种&quot;灾难性遗忘&quot;。</p>
+<p>解决方案是联合语言多模态训练：在训练时同时混入大量纯文本数据。</p>
+<p>实验结果非常清晰：</p>
+<p>混入语言数据后，语言能力下降的问题得到了大幅缓解</p>
+<p>加入语言数据并不会明显损害多模态性能</p>
+<p>两种模态的性能都和它们在训练数据中的比例强相关</p>
+<p>最终选定的比例是语言70%、多模态30%。</p>
+<p>这个比例能让模型在保住语言能力的同时，获得足够的多模态预训练效果。</p>
+<p>除了混合比例，团队还提出了两个实用技巧：</p>
+<p>模态分组训练</p>
+<p>直接把语言数据和多模态数据混在同一个batch里，会有效率问题：纯文本处理很快，但要等多模态数据处理完才能更新参数，造成大量等待。</p>
+<p>解决方法是把不同模态的数据分开组batch，每个训练步要么全是语言数据，要么全是多模态数据。</p>
+<p>这一招让训练效率提升了20%，而且性能完全不受影响。</p>
+<p>模态热身策略</p>
+<p>训练初期把语言数据比例设为100%，然后逐渐降到目标比例（70%）。</p>
+<p>这样可以避免训练初期语言能力的剧烈波动，让模型更平稳地适应多模态数据的加入。</p>
+<p>实验证明，这个策略在训练后期也能带来更好的语言和多模态双端性能。</p>
+<p>还有一个容易被忽略的工程细节。</p>
+<p>团队在1.3B小模型上做实验迭代，再放大到7B。</p>
+<p>但小模型有个问题：在标准benchmark上表现波动极大，很难准确反映改进效果。</p>
+<p>原因是小模型虽然&quot;知道&quot;正确答案，但没有足够的指令跟随能力把答案&quot;说出来&quot;。</p>
+<p>解决方案是双管齐下：</p>
+<p>把评估方式从&quot;让模型生成答案&quot;改成&quot;比较各选项的困惑度（PPL，一种衡量模型对某段文本有多困惑的指标，越低越好）&quot;</p>
+<p>同时在预训练阶段混入少量指令微调数据，让小模型也能稳定地跟随指令。这样小模型就能给出稳定的评估信号，大大加快了迭代速度。</p>
+<h3>第三阶段：监督微调</h3>
+<p>用前面构建的指令微调数据集，训练模型的对话和指令跟随能力，最终得到DeepSeek-VL-Chat。</p>
+<p>这个阶段同时训练语言模型、适配器和SigLIP编码器。</p>
+<p>SAM-B因为显存限制保持冻结。只对答案和特殊token计算损失，系统提示和用户输入不参与训练。</p>
+<p>三个阶段缺一不可：只有第一阶段+第三阶段，平均分57.4；加上第二阶段后提升到62.4。</p>
+<p>第一阶段虽然提升有限，但也有意义，去掉它性能会略微下降。</p>
+<h3>训练基础设施</h3>
+<p>使用了DeepSeek自研的HAI-LLM分布式训练框架。</p>
+<p>DeepSeek-VL-7B用了64个节点（每个节点8块英伟达A100 GPU），训练了5天。</p>
+<p>DeepSeek-VL-1.3B用了16个节点，训练了7天。</p>
+<h2>效果评测：数字说话</h2>
+<h3>多模态benchmark</h3>
+<p>7B模型在开源模型里表现最好：</p>
+<p>SeedBench（综合多模态理解）：70.4，接近GPT-4V的71.6</p>
+<p>MMBench（多模态综合测试）：73.2，超过所有同级开源模型</p>
+<p>OCRBench（OCR专项测试）：456分，远超同级模型（LLaVA-1.5 13B只有331分）</p>
+<p>POPE（幻觉测试，测模型会不会&quot;看到&quot;不存在的东西）：88.1，同级最高</p>
+<p>MathVista（数学视觉推理）：36.1，超过所有同级开源模型，但和GPT-4V（47.8）还有差距</p>
+<p>CMMMU（中文多学科多模态理解）：37.9，明显优于其他开源模型</p>
+<p>1.3B小模型更令人印象深刻：用一半不到的参数（1.3B vs 2.7B），在MMBench上超过了MobileVLM V2 2.7B（64.6 vs 63.2）。</p>
+<p>MathVista上甚至达到31.1，和部分7B模型相当。</p>
+<h3>语言benchmark</h3>
+<p>这是DeepSeek-VL最值得骄傲的地方之一。</p>
+<p>HellaSwag：68.4（DeepSeek-LLM-7B是68.5），几乎持平</p>
+<p>MMLU：52.4（DeepSeek-LLM-7B是49.4），多模态训练后反而提升了</p>
+<p>AGIEval：27.8（DeepSeek-LLM-7B是19.3），同样提升</p>
+<p>GSM8K（数学）：55.0（DeepSeek-LLM-7B是63.0），有所下降</p>
+<p>数学能力的下降说明视觉和语言模态之间的竞争关系仍然存在，7B的模型容量在这里成了瓶颈。</p>
+<p>团队认为更大的模型可以缓解这个问题。</p>
+<h3>人工评测</h3>
+<p>团队构建了100道题，覆盖七个类别，和InternLM-XComposer2-VL、CogVLM-17B、GPT-4V做对比。</p>
+<p>结论：DeepSeek-VL-7B在识别、转换、常识推理三个维度接近GPT-4V，整体表现优于其他开源模型。</p>
+<p>逻辑推理是所有开源模型的共同短板，和GPT-4V差距最大。</p>
+<p>还做了GPT-4V裁判评测：把DeepSeek-VL和其他模型的回答都给GPT-4V看，让它判断哪个更好。</p>
+<p>结果DeepSeek-VL在超过60%的情况下被GPT-4V判定为更好，甚至在和GPT-4V自身对比时也获得了相当不错的评价。</p>
+<h3>真实场景能力展示</h3>
+<p>论文里展示了大量真实案例，值得逐一看看：</p>
+<p>处理逻辑图、网页、公式识别、科学文献、自然图像、具身智能场景的综合展示</p>
+<p>识别图片中的细小物体（骑车人在女士手提包的左侧），并给出有条理的解释</p>
+<p>理解Python代码截图并逐步解释算法逻辑</p>
+<p>看懂儿童编程Scratch流程图并转换成Python代码（对比的开源模型1直接说&quot;我无法处理图片&quot;）</p>
+<p>分析训练损失曲线图表，找出代码中的bug</p>
+<p>识别泰国10泰铢硬币；根据图片创作七言绝句；识别米哈游游戏角色</p>
+<p>把真实表格图片转换成Markdown格式</p>
+<h2>为什么这篇论文重要？</h2>
+<p>它揭示并量化了一个关键矛盾：多模态能力和语言能力之间存在竞争关系。</p>
+<p>这个发现对所有做多模态模型的团队都有价值。</p>
+<p>70%语言数据这个比例，加上模态热身策略和分组训练，提供了一套可复制的解决方案。</p>
+<p>它证明了&quot;从真实场景出发&quot;构建数据的重要性。</p>
+<p>用分类体系指导数据收集，比随意拼凑学术数据集有效得多。</p>
+<p>这套分类体系本身就是一份有价值的产出。</p>
+<p>混合视觉编码器的思路很实用。</p>
+<p>用两个互补的编码器分别处理语义和细节，比单纯堆高分辨率更高效，576个token的压缩方案在信息量和计算成本之间找到了合理平衡。</p>
+<p>小模型迭代方法论有很强的工程参考价值。</p>
+<p>困惑度评估 + 少量指令数据混入，让1.3B模型也能给出稳定的实验信号，大幅降低了迭代成本。</p>
+<p>当然，局限也很清楚。</p>
+<p>7B的模型容量限制了数学推理等复杂任务的表现。</p>
+<p>论文结尾提到了后续会引入MoE（Mixture of Experts，混合专家模型）技术，这也是后来DeepSeek-VL2的方向。</p>
+<h2>继续阅读</h2>
+<p>基于全文检索与主题相似度</p>
+<p>论文学习</p>
+<p>2026年5月1日</p>
+<h3>2026年AI生图领域最全技术解读，没有任何一家到L5水平</h3>
+<p>2026年4月底，一篇署名来自清华、南洋理工、港大、新加坡国立大学等十几所顶级机构的综述论文悄悄挂上了arxiv。 https://arxiv.org/pdf/2604.28185 论文分析了411篇参考文献，其中45.7%发表于2025年一年之内。 数字说明一件事：这个领域正在以惊人的速度自我迭代。 论文的核心问题只</p>
+<p>论文学习</p>
+<p>2026年4月29日</p>
+<h3>AI也要做绩效考核？这个框架给智能体安排了HR、PIP和末位淘汰</h3>
+<p>最近读到一篇很有意思的论文，来自华为诺亚方舟实验室、UCL和利物浦大学的团队，发布于2026年4月。 论文标题叫《From Skills to Talent》，核心想法用一句话概括：把多智能体系统，真正当成一家公司来管理。 https://arxiv.org/pdf/2604.22446 先说清楚背景：现在的AI智能体</p>
+<p>论文学习</p>
+<p>2026年4月17日</p>
+<h3>Seedance 2.0 技术报告深度翻译解析</h3>
+<p>前几年就在想，什么时候AI生成的视频能像真实拍摄一样自然？</p>
+<p>不是&quot;乍一看还行，仔细看就露馅&quot;的自然，而是物理规律、动作逻辑、声画同步都对的那种自然。</p>
+<p>字节跳动发布的Seedance 2.0，可能是目前最接近这个目标的模型。</p>
+<p>SD2 技术文档：https://arxiv.org/pdf/26</p>
+<p>© 2026</p>
+<p>·</p>
+<p>向阳乔木</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=DeepSeek" class="entity-link company-link">DeepSeek</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=DeepSeek-VL" class="entity-link product-link">DeepSeek-VL</a>, 
+                
+                  <a href="/search/?q=DeepSeek-LLM" class="entity-link product-link">DeepSeek-LLM</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">deepseek-vl</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">visual-language-model</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/multimodal-ai/">multimodal-ai</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-research/">ai-research</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

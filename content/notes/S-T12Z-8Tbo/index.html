@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google I/O 2026 深度盘点：Gemini 3.5 闪速编程与 Omni 创意大爆发</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="Google I/O 2026 深度盘点：Gemini 3.5 闪速编程与 Omni 创意大爆发" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">Google I/O 2026 深度盘点：Gemini 3.5 闪速编程与 Omni 创意大爆发</span>
+      <span data-pagefind-meta="speaker" style="display:none;">How I AI</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-05-20
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/tech-trends/">tech-trends</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/how-i-ai/">How I AI</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=S-T12Z-8Tbo" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-05-20
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本视频深度测评了 Google I/O 2026 首日发布的核心产品与模型。主讲人 Claraveville 现场实测了超高速的 Gemini 3.5 Flash 模型、全新 Agentic IDE Anti-gravity 2.0、AI Studio 的 Workspace 工作流集成，以及颠覆性的 Omni 视频生成大模型、Stitch 设计协作平台与 Pomelli 营销生成器，直击谷歌新一代 AI 工具生态的实测表现与痛点。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>闪存模型：速度与多模态的跃升</h3>
+<p>欢迎回到《How I AI》节目。我是<strong>Claraveville</strong>，一名产品负责人，同时也是一名人工智能的狂热爱好者。我的使命是帮助大家利用这些新工具进行更好的开发。今天是谷歌年度旗舰盛会 <strong>Google I/O</strong> 的首日，谷歌发布了众多的新产品、新功能以及一系列新的产品命名。其中有些功能已经上线，我们将在今天的节目中进行实时体验。在本期迷你节目中，我们将按照从“最技术性”到“最有趣”的顺序，聊聊今天在 <strong>Google I/O</strong> 上吸引我眼球的发布内容，并测试一些新的消费级创意功能是否真的名副其实。让我们立即开始吧。</p>
+<p>本期节目由 <strong>Magic Patterns</strong>（Magic Patterns: 帮助设计团队和产品经理快速生成高保真原型的 AI 设计系统）赞助播出。如今，工程师们正在使用 <strong>Cursor</strong>（Cursor: 一款集成了大语言模型的高性能 AI 代码编辑器）和 <strong>Claude Code</strong>（Claude Code: 由 Anthropic 开发的命令行 AI 编程助手）在几小时内交付以前需要数周才能完成的功能。如果你是设计师或产品经理，你可能也感受到了这种转变——需要更快速地行动、更早地验证原型，从而跟上团队全新的工作效率。你可能已经尝试过一些 AI 原型工具来缩小这个差距，但如果生成的原型看起来与实际产品不一致，无论构建速度多快，最终仍免不了手动重新绘制。<strong>Magic Patterns</strong> 可以帮助你的产品团队实现从创意到生产的跃升，并且能够直接基于你真实的设计系统运行。当你构建原型时，它生成的结果与你的实际产品完全一致。这样可以更快地验证想法并尽早达成共识。当准备进入开发阶段时，工程师可以通过 <strong>Magic Patterns MCP</strong>（Model Context Protocol: 允许 AI 模型与外部工具和上下文安全交互的开放协议）将其连接到 <strong>Cursor</strong> 或 <strong>Claude Code</strong>，无缝接管你未完成的设计。让你的团队拥有 AI 的竞争优势，立即访问 <code>magicpatterns.com/howiaai</code> 体验。</p>
+<p>在今天发布的所有令人兴奋的产品中，我想先从基础底座开始，也就是模型。今天谷歌发布了 <strong>Gemini 3.5 模型家族</strong>（Gemini 3.5: 谷歌最新一代的多模态大语言模型系列），其中包括目前速度最快、最聪明的编程模型 <strong>Gemini 3.5 Flash</strong>（Gemini 3.5 Flash: 谷歌发布的高速、高智能编程与多模态大语言模型）。这款模型有什么独特之处？它的智能水平堪比我们最喜欢的一些高端编程模型，例如 <strong>Claude 3.5 Opus</strong> 或 <strong>GPT-4o</strong> 系列，但其运行速度却是这些高端模型的四倍。根据谷歌的基准测试，<strong>Gemini 3.5 Flash</strong> 是一款兼具高智能与高速度的模型，能够在保持极快运行速度的同时，展现出顶尖的推理能力。</p>
+<p>如果我们仔细分析谷歌今天的 benchmark 基准测试，会发现他们非常关注该模型的<strong>自主智能体</strong>（Agentic Capabilities: AI 模型独立规划、执行多步复杂任务的能力）表现。追踪今天的所有发布会可以清晰地看到，谷歌正在全力押注 <strong>AI 智能体</strong>（AI Agents: 能够自主执行任务并与环境交互的 AI 系统）。这在某种程度上像是在奋力追赶，其中发布的许多功能与我们在 <strong>Anthropic</strong> 和 <strong>OpenAI</strong> 产品中看到的有些相似。但谷歌的切入点有两个不同维度：一是依托于大家熟悉并喜爱的 <strong>Flash 闪存模型</strong>（Flash Model: 优化了推理速度的轻量级大语言模型）的超快速度；二是更倾向于消费端的创意方向。因此，尽管本期节目先从编程产品中的 3.5 模型开始谈起，但我们会在节目后半部分在更多创意场景下测试该模型及其他模型。</p>
+<p>除了速度优势外，<strong>Gemini 3.5 Flash</strong> 还将提供给谷歌整个产品组合。该模型不仅专注于提升编程效率和极速智能体能力，还强化了 Gemini 最为擅长的<strong>多模态</strong>（Multimodal: 能够同时处理和理解文本、图像、视频等多种媒介的AI能力）处理。我一直告诉大家，如果你需要处理文件、视频或任何涉及跨媒介转换的工作（例如将文档转换为其他格式），Gemini 模型在文件处理方面表现极其出色，尤其是处理视频。从基准测试数据可以看出，无论是与之前的 <strong>Gemini 1.5</strong> 家族相比，还是与 <strong>Claude</strong> 和 <strong>GPT</strong> 模型相比，新模型在多模态和部分智能体能力上都显著超越了同行，而且运行速度极快。既然我们都喜欢高效快速的工具，那么接下来就看看如何将这一强大模型应用于实际开发中。</p>
+<details><summary>Original English Source</summary>
+<p>Welcome back to How I AI. I'm Claraveville, product leader and AI obsessive here on a mission to help you build better with these new tools. Today was the first day of Google IO, Google's flagship event where they launched so many products, so many features, so many names of products, some of which are live and some of which we're going to try live on today's show. In this mini app, we'll start from most technical to most fun, talk a little bit about the releases that caught my eye today at Google IO, and see if the promise of some new consumer grade creative features really live up to the hype of the event. Let's get to it. This episode is brought to you by Magic Patterns. Today's engineers use cursor and claude code to ship features in hours that used to take weeks. If you're a designer or PM, you've probably felt a shift, too. the pressure to move faster, validate sooner, and keep up with the team that's operating at a completely different speed. You've already tried AI prototyping tools to close that gap. But if your prototypes don't look like your actual product, it doesn't matter how fast you can build, you still end up redrawing it by hand. Magic Patterns takes your product team from idea to production and works from your real design system. When you build a prototype, what you get back actually looks like your product. You'll validate faster, get alignment sooner, and when it's time to build, engineers can connect your prototype to cursor or cloud code with the Magic Patterns MCP to pick up where you left off. Your team has their AI advantage. Make magic patterns yours. Try it today at magicpatterns.com/howi aai. There was so much interesting product launch today, but I want to start with the foundation stuff, the models. Today, Google announced Gemini 3.5 family of models, including Gemini 3.5 Flash, their fastest, smartest coding model. What's unique about Gemini 35 fast? It is both rivals the intelligence of some of our favorite coding models 5.5 opus 47 even 46 but it is four times as fast as those models and so if you look at 3.5 flash you're getting according to Google's benchmarks a super smart model sort of a codeex 47 model if you like 47 at the speed of something much more like their 3.1 flash model so it's super super fast and super smart. If you look at the benchmarks, they're really focused on the agentic capabilities of this model. And if you trace this all the way through the announcements today, you'll see that Google is really going fullbore into agents. It feels a little bit like catchup. Some of the features that they released, as you'll see, are things that you're used to seeing in some of the products from Anthropic and OpenAI, but applied, I think, in two different aspects. one is with the speed of the flash models that we know and love and two with much more of a creative consumer bent to it. And so while we're going to start this episode talking a little bit about the 3.5 models in the coding products, we're going to end this episode testing this model and a couple other models on more creative use cases. But again, Gemini 35 available across the product portfolio with Google and really focused on coding and in particular agentic capabilities at speed as well as the thing that we all know Gemini is really good at which is multimodal. I have always told people if you are working with files, videos, any sort of transformative work where you have to go from one modality um maybe document to another modality. Gemini models are really really good at handling files. I love it for handling videos. And you can see here the benchmarks compared to its peers both the previous Gemini 3 family of models as well as its peers from the Claude and GPT models themselves. really exceed the benchmarks in multimodal and according to them some of their agentic capabilities and then it's fast. We love something fast.</p>
+</details>
+<hr>
+<h3>智能体IDE：开发工作流的演进</h3>
+<p>既然有了这样快速且智能的模型，开发者们应该如何使用它呢？你可以在集成开发环境或智能体编程框架中调用它。虽然平时听到人们讨论 <strong>Anti-gravity</strong>（Anti-gravity: 谷歌开发的智能体编程 IDE）的人并不多，但只要谈起它，大家都会评价它非常好用。<strong>Anti-gravity</strong> 是谷歌推出的 <strong>智能体 IDE</strong>（Agentic IDE: 集成了自主 AI 智能体、能够自动执行编写和修改代码等复杂任务的集成开发环境）。在今天新发布的 <strong>Anti-gravity 2.0</strong> 中，谷歌推出了数项新功能。当你阅读这些新功能介绍时，会明显感觉到谷歌是在努力追赶 <strong>Codeex</strong>（Codeex: 行业内另一款主流的智能体编程平台）。许多内置于 <strong>Anti-gravity</strong> 的概念，其实已经在 <strong>Codeex</strong> 中得到了应用。</p>
+<p>在 <strong>Anti-gravity 2.0</strong> 的桌面应用客户端中，首个重大变化是引入了<strong>项目</strong>（Projects: 受文件夹路径限制的工作区或开发环境）的概念。这相当于提供了一个受限的文件夹环境或工作空间。在这里，我拉取了我们自己的 <code>chatprd.ai</code> 网站应用。其次，他们还添加了<strong>计划任务</strong>（Scheduled Tasks: 基于定时触发器或 cron 表达式自动运行 of AI 任务）功能。其界面与我们在 <strong>Codeex</strong> 客户端中看到的非常相似：项目列表与计划任务列表并排显示在侧边栏中。计划任务的配置项也正如你所预期的，包含任务名称、关联项目、执行周期以及在后台定期以 <strong>Cron 表达式</strong>（Cron: 用于配置周期性定时任务的经典系统语法）触发的提示词。虽然这些基础配置并没有太大的颠覆性，但值得注意的是，高推理与低推理版本的 <strong>Gemini 3.5 Flash</strong> 在这里都是限时免费提供给用户体验的，且运行速度极快。</p>
+<p>除了 IDE 端的变化，谷歌今天还发布了 <strong>Anti-gravity CLI</strong>（Command Line Interface: 命令行界面工具）。这是一个类似于 <strong>Claude Code CLI</strong> 或 <strong>Codeex CLI</strong> 的终端操作界面，允许开发者脱离图形 IDE，直接在终端中完成编码工作。其产品形态与我们习惯的工作流程非常吻合，并且默认配置了 <strong>Gemini 3.5 Flash High</strong> 推理模型，以保证快速流畅的编码体验。为了验证它的实际表现，我决定立刻对其进行测试。在我的网站上，有一个关于播客博客生成器的功能需要开发。正如我在开头提到的，Gemini 模型非常擅长处理视频，因此我们在营销网站的管理工具中放入了播客视频，并希望自动生成相应的博客文章。我希望能够以<strong>智能体化</strong>（Agentically: 由 AI 智能体自主决策并执行多步操作的过程）的方式完成这一切，而不是手动操作网页 UI。为此，我向 <strong>Anti-gravity</strong> 发出指令：“我们在管理工具中有一个博客生成器网页 UI。我希望将这个网页 UI 转化为一个供 AI 智能体直接调用的 API，而不是让团队继续使用网页界面。请帮我构建这个功能。”</p>
+<p>指令发出后，它的运行逻辑与我们熟知的其他 AI 编程工具高度一致。它会自动读取项目目录，并弹出提示向我请求文件读写权限。我点击了“是”并选择“始终允许”。随后它便开始运行，并快速生成了代码。在我的主观感受中，它运行得并没有想象中那么神速，但经过一番自动修改后，它成功为我创建了一个包含 API 密钥身份验证的编程 API 接口。这个接口不仅可以被触发运行，还能按需生成可视化工作流，并且允许智能体直接提供封面图片 URL。它创建这些文档的速度确实很快。我还通过 <strong>斜杠命令</strong>（Slash Commands: 类似于 Slack 或 Discord 中以斜杠 <code>/</code> 开头的快捷命令，用于触发特定智能体行为）中的 <code>/artifact</code> 命令查看了它自动生成的接口文档，文档结构非常清晰。虽然这看起来更多是谷歌在功能上对其他竞品的追赶，但凭借 <strong>Gemini 3.5 Flash</strong> 模型的运行速度，如果需要完成一些范围明确、需要快速交付的任务，<strong>Anti-gravity</strong> 无疑会成为一个高效率的选择。</p>
+<p>在核心的智能体能力方面，<strong>Anti-gravity 2.0</strong> 今天还发布了<strong>子智能体</strong>（Subagents: 由主智能体衍生出来用于处理特定子任务的独立 AI 助手）功能。这意味着主智能体可以根据需要派生出子智能体来分头执行特定任务。一个经典的场景是<strong>浏览器子智能体</strong>（Browser Subagent: 专门在无头浏览器中进行自动化测试和交互的辅助智能体），虽然这在谷歌的技术栈中早已有之，但现在它们可以被主智能体调用来辅助完成代码测试。此外，新版本还引入了<strong>生命周期钩子</strong>（Hooks: 允许开发者在智能体运行的特定时间节点注入自定义逻辑的事件接口）的配置。每当智能体工具被启动、完成一轮对话或开始新会话时，系统都会触发相应的事件，开发者可以接入这些事件来实现自定义的自动化流程。配合上对 Git 工作区（Git Worktrees）和本地开发环境的原生支持，这些底层能力的升级为更高级的智能体工作流打下了坚实的基础。</p>
+<details><summary>Original English Source</summary>
+<p>Now, how are you going to use this model? Well, if you're a developer, you're going to use it in an IDE or in an agentic coding harness. And so, you know, you don't hear people talk a lot about anti-gravity, but when I do hear people talk about anti-gravity, they say it's quite good. Anti-gravity is Google's IDE, Agentic IDE, and they announced several features. So, when you read about these features, you're really going to feel like Google's playing catch-up to in particular codecs. You can see a lot of the concepts that were built into anti-gravity are concepts that we've seen in particular in codecs. But let's go through them one by one. First, I want to pop up anti-gravity so you all can see it. Here, a couple changes. This is called anti-gravity 2.0. 0 a couple changes they made in the desktop app. One is they've brought the idea of projects into anti-gravity. So these are sort of like folder constrained environments or workspaces that you're working on. I pulled in the chat prd um website app here. And then they've also added in scheduled tasks. So this UI looks very similar to what we've seen in the codeex app. projects along the side, scheduled tasks along the side, and schedule tasks are exactly what you would think they would be, a name, a project that you're working on, a schedule, and a prompt that runs on a regular cron. So, nothing mind-blowing here, but again, you're going to see that Gemini 35 flash um high reasoning and low reasoning, both very fast for a limited time, are available here in the anti-gravity IDE. The other thing that was announced was the anti-gravity CLI. So again, a clawed code or codeex CLI style interface for coding. This is one where you can open up your terminal and work with it outside the IDE. Very similar form factor to what we've been working with. So again, you're going to kind of feel like this is a little bit of catch-up to what the other providers have been doing in terms of agentic coding, but it looks nice and we're defaulted again to Gemini 35 flash high and so it should be a fast experience. Let's just test this really quickly. This is on my website and I have a feature for the blog that I wanted to work on and that is our blog generator for our podcast. So, as I said at the beginning, the Gemini models are very good at video. And so, one of the things that we do is we put the videos from these podcasts into an admin tool on the marketing site and it generates blog post for us. But I want to be able to do that agentically. So, let's see how fast Gemini 35 responds to that request. And I'm just going to use um I'm going to type in and I'm going to say we have a blog generator UI at admin tools. I want to turn this into an API that an AI agent can use instead of a web UI for our team. Please build. So that should go ahead just very similar to these other tools that we're used to. look at directories, ask me for permissions. I'm going to say yes and always allow. And it's going to run through and hopefully write some quick code. Now, I'm not noticing it is particularly faster, but let's see how long it takes to get to an outcome. You know, it doesn't feel that much faster to me, but we'll see how long it takes to generate. I want to show you a couple other features of anti-gravity that was released today. So again going on this theme of playing a little bit of catch-up with claude code and codeex. The core agent features that were released today in anti-gravity are sub aents. Again the ability for the main agent to spawn off a sub agent to do a specific task. One use case that people love of anti-gravity, especially coming from Google, is the browser sub agent, which has always been available, but now different sub aents could be spawned by the main agent to work on coding tasks. This is something that you've seen in cloud code and codecs again, but now available in anti-gravity. There's also hooks. So, you can use hooks at different parts of the life cycle of your agent. If you don't know what hooks are, there are little events emitted every time your agentic harness kicks off a tool or every time it completes a turn or every time a new session is started and you can hook into those events and do something on demand. And so now anti-gravity has the ability to configure those hooks. We have the idea of projects which I told you about and showed you in the desktop app. There are native git work trees and local local development environments. Again, these are all things that we have seen in codecs. So, nothing super surprising here. The ones that I really like that I want you to spend a couple minutes on while we're letting anti-gravity in the IDE cook are these slash commands. Now, I love some slash commands, especially in codecs. My favorite one has been slash goal. the ability to define a goal and basically have your agent, you know, bash his head against that problem over and over until it solves solves a problem or meets the goal. So, anti-gravity has shipped a slashgoal slash command which will allow an agent to do a longunning task against a goal. But, there are actually a couple other really fun slashcomands that I want to call out that I think I'm going to be testing over the next couple weeks and probably give you all my feedback on. So this first one is this grill me slashcomand. I love this because you know Claude code has this question and answer tool where it'll like clarify for you. It's very polite. It's very anthropic coded. You know if you make a PRD or a spec in claude code and then it needs clarification, it's going to go ahead and ask you a couple questions and clarify. This seems like a much more aggressive version of that. It's called grill me. So what this does is this command the agent will ask clarification questions back and really get to the heart of what your requirements are and how it's going to work. Now the question is is this actually as hardcore as the slash command communicates or is this just a cute way to differentiate against the question and answer tool? We'll see. Maybe we can spin it up in the anti-gravity IDE and test it. The other slash commands are SLC schedule. So be able to schedule those tasks as we showed in the UI as well as use the browser. And so again, anti-gravity in particular is pretty good at using an autonomous agent to test in the browser. There's an ability to kick that off using the slash browser tool. So a lot of updates here. Again, the TLDDR coding's faster, the model's faster, it's caught up to codeex, and it has a couple interesting slash commands. Let's go back to anti-gravity in the IDE and see if it really built something as fast as it claims. Okay, it edited several features and it went ahead and created a programmatic API endpoint. It has API key authentication that it can use. It can be trigger. It can trigger the generation of visual workflows which is what we want. And um the agent can now provide a featured image URL. So it has created all these documents pretty fast. I am curious what this slash artifact command will show us. So um if I click open, it will show me the documentation on how it works. Very nice, fast, kind of what I would expect from a coding agent. Nothing too special here. Again, I think we're really just playing catch-up. But with the speed of the Gemini 35 flash model, I'll be curious to see if more of us reach for anti-gravity, especially for wall scope tasks to get them done, get them out the door without waiting.</p>
+</details>
+<hr>
+<h3>无代码生态：整合壁垒与品牌困局</h3>
+<p>在面向专业开发者的工具之外，针对非技术人员，谷歌今天也对 <strong>Google AI Studio</strong>（Google AI Studio: 谷歌提供的用于快速开发和实验 AI 应用的在线低代码开发平台）进行了一些重要的更新。基于 <strong>Gemini 3.5 Flash</strong> 模型的算力，<strong>Google AI Studio</strong> 引入了直接连接 <strong>Google Workspace</strong>（Google Workspace: 谷歌提供的一套包含 Gmail、云端硬盘、日历和表格等的企业协同办公套件）应用的能力。对于大多数个人和企业而言，谷歌工作空间是其核心数据的源头。此前，许多人在 <strong>Claude Code</strong> 中使用 <strong>MCP 连接器</strong>（Model Context Protocol Connectors: 实现 AI 模型与本地或第三方数据源对接的标准化插件）来访问这些数据，而谷歌显然希望直接接管并闭环这一体验。现在，用户可以直接构建能够读取表格、起草 Gmail 邮件、整理云端硬盘以及查看日历的应用。这不仅能极大地简化企业内部的生产力流程，还能帮助个人轻松构建临时的个人助手应用。此外，用户现在还能直接在 <strong>Google AI Studio</strong> 中开发 Android 移动应用，这为想要进入 Android 生态的非技术人员提供了一个更低门槛的开发路径。</p>
+<p>然而，今天谷歌的发布会也暴露出一些令人沮丧的问题：许多新功能虽然在会上进行了炫酷的演示，但在发布会最底部却用小字写着“仅向部分用户开放”或“将在今年夏天晚些时候推出”。作为一名付费订阅用户，我原本期望能够拥有早期测试权限。我尝试在 <strong>Google AI Studio</strong> 中输入指令：“帮我做一个应用，用来管理下个月我和孩子们周末的体育赛事日程。这些日程目前都在我的谷歌个人日历中。”我希望它能通过工作空间连接器自动读取我的日历并生成应用，但实际运行下来它并没有表现出任何魔力。我仔细检查了设置和连接器，均未能找到相关的配置入口。这意味着普通用户大概率还无法立刻体验到这些无缝的生态整合。谷歌所描绘的愿景非常美好，但在实际体验中，由于产品尚未完全向公众开放，这依然是我们需要后续跟进并再次测试的功能。</p>
+<p>这种功能宣布了却无法立刻体验的断层感，进一步加剧了我对谷歌目前 AI 产品线命名体系的困惑。实话说，谷歌目前繁杂的产品和品牌名称实在让人难以理清。让我们简单梳理一下：到目前为止，我们谈到了 <strong>Gemini 3.5 Flash</strong>（模型名称）、<strong>Anti-gravity</strong>（智能体 IDE 与 CLI 名称）、<strong>Google AI Studio</strong>（低代码/无代码开发平台名称），以及 <strong>Gemini</strong>（谷歌面向消费端的 AI 聊天交互界面，类似于 Claude 和 ChatGPT 的竞争对手）。在同一个 API 和产品生态中，居然有如此多不同的品牌在交织运行，而且我甚至还没有把浏览器里打开的其他七个发布页面数完。如果我能向谷歌团队提出一个建议，那就是尽快进行一次全面的品牌梳理，用一个统一、清晰的品牌形象来与开发者和用户进行沟通，从而降低用户的认知门槛。</p>
+<details><summary>Original English Source</summary>
+<p>For the less technical, I do want to call out a couple changes that were made to Google AI Studio, Google's sort of low code, no code coding product. So, a couple things that they released in Google AI Studio, again powered by Gemini 35 Flash, is the ability to build apps connected to your Google Workspace apps. So, again, Google is the source of truth for so much personal information and for companies that usual use Google Workspace for company information. And I've seen a lot of this in cloud code and cloud co-work. People are using the MCP connectors to build artifacts and apps on that data source. And Google is going straight for owning that experience themselves. So now you can build apps that read sheets, draft Gmails, organize Drive, see your calendar, all with built-in workspace integration out of the box. Now, we're going to try this and see if it actually works. But if it does, it's really going to carve off a lot of those internal enterprise use cases for productivity or those throwaway personal assistant use cases. You can now create Android apps inside Google AI Studio. So again, this is a lower code experience. And so if you want to start creating mobile apps for the Android ecosystem, that's something that you can do here in Google AI Studio. All right. So one of the things that I found a little bit frustrating with the Google announcements today is that they've announced a bunch of stuff and then at the very very bottom they're like it's available to some subset of people or it's available but later this summer. And so we're going to see if it has access to my Google calendar and mail. If not, we'll move on with our life and we will try it as soon as I have access. I am a paying customer, so hopefully I have early access, but we'll see. So, I'll say, &quot;Make me an app to manage the next month of weekend events with my kids in particular, our sporting events. They are all on my personal calendar in Google.&quot; So, let's see what this does. It's going to think and hopefully it has integrated access with my workspace and can go ahead and build that product. And guess what? It didn't do anything magical. And I'm looking in the settings. I'm looking in the connectors. I could not find it. So, it's possible that not all of us have access to this right away. But I do think when we get Google Workspace access, you can imagine the kinds of features that you could build with this. So, this is one we're gonna have to circle back to and do another day. But again, the vision here is for Google AI Studio to have access to your work workspace apps and be able to build products with that workspace already integrated. I just can't figure out how to access it and I am pretty smart. Okay, we're going to go more and more fun stuff. Let's switch over to Gemini. Now, I'm going to reflect on something about all these announcements, which is I cannot keep the product and brand name straight. Just to clarify, so far we've talked about Google Gemini 35 Flash, the model. We have talked about anti-gravity, the IDE and anti-gravity, the CLI. We've talked about Google AI Studio, the low code, no code product. Now we're talking about Gemini, Google AI, the consumerish AI product, competitor to like Claude and Chat GBT. We've got too many brands going across this API portfolio. I'm not even done. I have like seven more tabs to get you all through. So again, if I could ask the Google team to do anything, it's a comprehensive brand analysis and singular brand that I can work with.</p>
+</details>
+<hr>
+<h3>推理融合：多模态视频创作爆发</h3>
+<p>本期节目由 <strong>Thoughtspot</strong>（Thoughtspot: 支持通过自然语言搜索进行数据分析的 AI 商业智能平台）赞助播出。产品负责人深知个中痛点：用户渴望获得数据洞察，但他们不想为了看报表而频繁跳出你的应用。<strong>Thoughtspot Embedded</strong> 完美解决了这个问题，它直接将数据分析和图表嵌入到你的产品内部。你的用户可以用纯英文进行搜索，并在工作的上下文中即时探索数据，无需切换工具或跳转页面。<strong>Thoughtspot</strong> 的独特之处在于它并非只是一个拼凑的仪表盘，而是一个由 AI 驱动、以搜索为核心的原生化体验。开发者只需几行代码就能完成嵌入，并可以完全自定义外观和风格。这能带来更高的用户粘性、更快的决策速度，并在每次用户登录时交付更多价值。如果数据分析正在成为你产品战略的核心，请访问 <code>go.thoughtspot.com/howi</code> 了解更多信息，并申请免费试用。</p>
+<p>当我们返回体验全新的 <strong>Gemini 消费端网页界面</strong> 时，会发现它进行了一次重大的视觉重新设计。谷歌对这次改版大肆宣传，甚至起了一个非常夸张的英文名字（我暂时想不起来了，但会记录在节目简报中）。它的界面泛着精致的微光，并提供了丰富的提示词模板和示例，试图全面提升普通消费者使用 Gemini 时的感官体验。除了视觉上的改进，谷歌还为 Gemini 注入了一些相当酷的功能。如果你还不熟悉，<strong>Nanobanana</strong>（Nanobanana: 谷歌推出的新一代图像生成大模型，原名 Nano Banana）是目前最顶尖的图像生成模型之一。现在，你可以直接在 Gemini 中使用各种模板，借助 <strong>Nanobanana</strong> 进行图像创作。我在制作播客视频封面时经常使用它。为了实测它的能力，我当场截取了一张自己的视频截图拖入输入框，并输入指令：“将这位播客主持人的形象进行高清放大和美化，并把背景替换为专业的播客录音室。”虽然它生成的速度很快，但出来的结果却令人啼笑皆非——那张脸完全不是我，甚至在各种细节上显得有些惊悚。但可以明显看出，新一代的图像生成模型在文本渲染和照片级的写实度上确实有了长足的进步。</p>
+<p>相比于图像生成，谷歌今天宣布的全新视频生成模型 <strong>Omni</strong>（Omni: 谷歌推出的能够结合推理与创作能力的高保真、长时序视频生成大模型）显然更加令人兴奋。<strong>Omni</strong> 可以被理解为此前 <strong>Nano Banana 视频版</strong>的升级重塑。它将一个强大的推理模型与视频创作模型相融合，声称能够“基于任何输入创造视频”。为此，我决定进行一项有趣的测试：我拿出了桌上我孩子画的一幅超级英雄简笔画，用摄像头截了张图拖进 Gemini 视频创作框，并输入提示词：“让这个超级英雄动起来，让他把一个孩子带出课堂去尽情玩耍。”在这一过程中，谷歌强调了其交互的<strong>自主智能体化</strong>：系统首先会生成一个多步执行计划，然后再调用模型生成视频。生成过程需要几分钟。在等待期间，我们可以聊聊 <strong>Gemini Omni</strong> 的核心多模态能力。由于该模型具备极高的多模态基准表现，因此它支持非常酷的<strong>对话式视频编辑</strong>（Conversational Video Editing: 通过自然语言指令对已有视频的画面元素、风格进行局部修改的技术）。例如，你可以拖入一段真实的建筑物视频，然后通过指令直接将建筑物的材质变成肥皂泡，这非常像视频版的智能 Photoshop。你也可以让 Omni 先对一段视频进行多模态描述，然后通过直接编辑这段描述来生成全新版本的视频。针对视频生成中常见的“角色走形”痛点，<strong>Omni</strong> 提供了在改变场景、视角和光影的同时保持<strong>角色一致性</strong>（Character Consistency: 在视频生成中保持同一角色在不同镜头和场景中外貌特征完全一致的技术）的能力，这对于生产级别的视频创作而言至关重要。</p>
+<p>此时，我测试的视频已经生成完毕。画面里，超级英雄带着孩子飞出窗外，并配有声音：“我们离开这里，去痛痛快快地玩一场吧！抓紧了，我们出发！”这段视频整整持续了 10 秒钟，这比此前 <strong>OpenAI</strong> 发布的 <strong>Sora</strong>（Sora: OpenAI 推理和生成的文本到视频大模型）演示的 6 到 7 秒要长得多。这意味着我们在 AI 视频生成的时长和连贯性上又向前迈进了一步。不仅如此，在 <strong>Omni</strong> 模型的支持下，我甚至可以通过对话式编辑，直接把视频中的学校改成冰雪覆盖的学院背景，其强大的交互式编辑能力展现得淋漓尽致。</p>
+<details><summary>Original English Source</summary>
+<p>This episode is brought to you by Thoughtspot. Product leaders know the struggle. Your users want data insights, but they don't want to leave your app to find them. Thoughtspot Embedded solves this by putting analytics directly into your product. Your users can search in plain English and explore data instantly, right where they work. No separate tools and zero context switching. What sets THS spot apart is that it's not just another bolt-on dashboard. It's a searchdriven AI powered experience that feels native to your app. Developers can embed it with just a few lines of code and then fully customize the look and feel. The result, more engaged users, faster decisions, and a product that delivers more value every time someone logs in. If analytics is becoming core to your product strategy, visit go.thpot.com/howi for more information and try the free trial at go.thspot.com/howi thoughtpot.com/howi aai/trial. Now, one of the things that you'll notice when you go into the new Gemini is there is a redesign. They made a big deal about this redesign. They called it something ridiculous that I can't remember now, but we will put it in the show notes. It's like supposed to make you feel good. Look at this glow. Everything's redesigned. You have a bunch of prompts and examples. So they really are trying to uplevel and upscale the consumer experience of using Gemini. But even more than that, they have added some pretty cool features to Gemini. So if you're not familiar with it, Nano Banana is one of the best image gen models. You can now create images with Nanobanana using a bunch of templates. So they're really trying to make it easy to inspire you with what to do with these models. I use Nanabanana quite a bit actually for our podcast thumbnails. So, let's try it really quickly. I'm actually going to grab a screenshot of myself so it'll look cute. Okay, I drag this in and I say upscale and beautify because I want to be pretty the image of this podcast host. change the background to a professional podcasting studio. Okay, so I'm going to press enter. Sorry to the people in the comments that keep saying, &quot;Stop typing on your laptop. Type on your keyboard. It's making the video shake.&quot; I know. I'm just used to doing it. Okay. It took a little bit, but here it is. This is not my face. This is horrifying in every way possible. But some of the things that I notice about the image gen that has changed is again all these image gen models want to get a lot better at generating text. You see that it looks a little bit photorealistic even though it doesn't look face realistic. And it generated pretty fast but more fun than the image gen models are the video generation models. And so Google announced a new videogen model called Omni. Omni has a bunch of capabilities that we're going to show in a minute in the Flow app, but it's able to create longer, more consistent, more photorealistic videos using AI, and it's able to use reference materials to create those videos as well. Okay, I have this image that my kid drew me of this little guy. I'm actually going to take a screenshot of it while I hold it up to this camera. So, just bear with me while I do that. I'm going to drag this over into Gemini video creation and we're going to use this new model to animate this superhero. Animate this superhero breaking a kid out of class to go have fun. Now, Google has made all of these experiences more agentic. So, you saw it generate a plan and then it's going to create a video. It's going to take a couple minutes. So, while we're letting that generate, let's just talk a little bit more about how Google is describing Gemini Omni. They're comparing it to Nano Banana for video is now Omni for video and it's going to combine a reasoning model with a video creation model. And what they say is you can create video from anything. So, which is why I picked the example of taking this very cute drawing that I keep from my kid over here on my desk and seeing if we could create something from this. Again going back to what I talked about the Google models the multimodal capabilities of these models is very high. So when you want to do conversion of video to text image to video all those sorts of things you can ground what they say is you can ground Gemini in real world knowledge and create video components based on that. There's a couple really cool features. So, one of the things that they let you do is conversationally edit videos. So, let's say you have a video of a structure. You can change that video of that structure to change the structure into bubbles. And so, you can take real life video components and change them, edit them sort of Photoshop style with Omni by just prompting it. I think that's very cool. You can take a video and have Omni describe it. So again, this like multimodal part of it and so you can have it describe it and then you can edit the description to generate a new version of that. I think that's pretty cool. You can refine the same video. So again, one of the challenges with these video generation models is that when you create them, they take very long and then you can't really edit them and then you get inconsistent characters. And so the ability to change the environment, angle, etc., But keep characters consistent is going to be really powerful when doing sort of production level video. Gen, let's see. My video's ready. &gt;&gt; Let's get out of here and go have some real fun. Hold on tight. Here we go. &gt;&gt; So, my kid is really going to like this. Again, this was 10 seconds long and so it really is much longer than I think the six or seven seconds that Sora was. So again, we're like extending this bit by bit. And then the ability for me to like conversationally edit this video or change the school to like a an academy and have it be snowy outside. All those sorts of things are here with the Omni model. But you can see that it's going to be a really powerful video editing model.</p>
+</details>
+<hr>
+<h3>创意生产力：云端流式设计崛起</h3>
+<p>如果你希望能对视频进行更为专业和精细化的编辑，可以使用谷歌今天推出的 <strong>Google Flow</strong>（Google Flow: 谷歌推出的一款支持精细化多模态控制和角色设定的专业视频编辑工具）。谷歌将 <strong>Omni 视频模型</strong>原生嵌入到了这款新工具中，其核心诉求是帮助创作者实现电影级的写实度。<strong>Google Flow</strong> 支持混合多模态参考源，你可以将特定的人物照片、具体的场景环境以及特定的动作设定作为种子来生成视频。它还引入了<strong>角色定义</strong>（Character Definition: 在设计工具中为 AI 设定并保存一个特定角色特征以便重复使用的功能）的概念。例如，我将刚才测试的超级英雄命名为“逃学队长”（Captain Escapo School）。在 <strong>Google Flow</strong> 中完成角色设计后，我可以在未来的任何视频创作中直接 <code>@</code> 该角色，模型就会在新的镜头中自动复用该角色的外观。更有意思的是，用户甚至可以录制一段自己的视频来训练并生成自己的 <strong>AI 分身</strong>（AI Avatar: 提取真实人脸及声音特征生成的数字化虚拟分身）。我也现场进行了体验：点击创建分身，扫描屏幕上的二维码，在手机上打开 <code>selfie.app.google</code> 并同意脸部信息采集，移开麦克风后按照提示大声读出随机数字：25、47、56、87、18、52，然后向左转脸完成扫描。我甚至开玩笑对 DeepMind 的工程师们喊话“请不要偷走我的身份”。然而在上传并训练后，系统最终却显示失败，未能成功创建我的分身。这再次暴露了谷歌今天发布会“雷声大雨点小”的问题：许多看似惊艳的功能在发布首日都出现了无法使用或连接报错的情况，这极易消耗用户的耐心。</p>
+<p>除了视频创作工具，谷歌今天还发布了两款对于设计师和营销人员极具吸引力的工具，分别是品牌营销工具 <strong>Pomelli</strong>（Pomelli: 谷歌开发的一款自动从网站提取品牌特征并生成全套营销资产的智能品牌工具）与设计协作协作工具 <strong>Stitch</strong>（Stitch: 谷歌推出的类似于 Figma 的云端智能设计协作平台）。我们可以简单地总结一下谷歌目前繁杂的产品矩阵：<strong>Anti-gravity</strong>、<strong>Google AI Studio</strong>、<strong>Gemini</strong>、<strong>Flow</strong>、<strong>Omni</strong>、<strong>Stitch</strong> 以及 <strong>Pomelli</strong>。关于 <strong>Pomelli</strong>，它是一款由 AI 智能体驱动的品牌与营销资产生成器。用户只需输入一个网站地址（例如我输入了我的播客网站 <code>chatprd.ai</code>），智能体就会自动对网站进行分析，抓取品牌专属配色、宣传口号和内容风格，进而生成一套完整的品牌手册、营销活动资产和模拟拍摄方案。在这一功能的背后，是谷歌为了让 AI 智能体能够读取并遵循特定设计规范而推出的 <strong>design.md</strong>（design.md: 一种将产品设计规范以 Markdown 格式进行编码、供 AI 智能体理解和读取的标准）开源设计系统规范，而这一标准也同样被应用于另一款设计工具 <strong>Stitch</strong> 中。</p>
+<p><strong>Stitch</strong> 的定位非常像一个运行在浏览器中的 <strong>Figma</strong>。它支持<strong>实时设计画布流式渲染</strong>（Streaming Canvas: 设计界面和组件在 AI 生成过程中实时在画布上动态渲染呈现的技术），并支持导入已有的设计稿、进行行内的 AI 文本编辑（例如选择画布上的某个组件，直接用自然语言输入文字来修改它），以及与 <strong>Lovable</strong>（Lovable: 一款支持将设计图直接导出并转化为可运行前端代码的 AI 工具）等无代码/低代码平台进行双向导入导出。在 Stitch 中，我输入了指令：“基于今天 Google I/O 官方网站的风格，为我设计一个展示 Stitch 最新功能更新的移动端应用界面。”并把 I/O 官网的链接贴了进去。随后，智能体便开始在画布上进行实时流式绘制。由于我不小心选错了移动端布局，它最终生成了一个精美的移动端应用原型。在这种所见即所得的设计生成场景中，你才能真正感受到 <strong>Gemini 3.5 Flash</strong> 模型的惊人速度。</p>
+<p>说到这里，我们不得不承认，现在的各大 AI 厂商在生成内容时都带有自己独特的“废料风格”——谷歌生成的<strong>AI 废料</strong>（AI Slop: 指 AI 生成的虽符合指令但缺乏个性、带有明显机器痕迹的平庸设计或内容）带有极其强烈的谷歌味，Claude 生成的带有明显的 Anthropic 特征，而 GPT 生成的风格虽然也谈不上好看，但特征各不相同。为了等 <strong>Pomelli</strong> 自动为我的网站生成新版页面，我甚至有时间去给孩子换了个尿布。当回来看结果时，它生成的网页效果虽然中规中矩，但确实已经达到了可用的水平。</p>
+<p>总的来说，今天 Google I/O 发布了非常多针对开发者和设计师的产品。核心的升级包括：<strong>Gemini 3.5 家族</strong>（尤其是超快的 <strong>Gemini 3.5 Flash</strong> 编程模型）、<strong>Anti-gravity 2.0 智能体 IDE</strong>（包含计划任务、子智能体、自定义钩子以及类似 Claude Code 的 CLI 命令）、<strong>Google AI Studio 办公套件整合</strong>、<strong>Gemini 网页端视觉重构</strong>、<strong>Omni 视频生成大模型</strong>及其创意套件 <strong>Google Flow</strong>、云端协作设计工具 <strong>Stitch</strong>，以及营销生成工具 <strong>Pomelli</strong>。虽然发布会上的很多功能还带着未打磨好的毛刺，甚至部分演示功能在上线首日无法正常运行，但我个人对 Omni 视频生成大模型以及 Flash 模型带来的极致编码速度感到非常兴奋。让我们拭目以待大家会用这些新工具创造出什么精彩的作品，也期待听到你们对于今年 Google I/O 的真实反馈。感谢收听本期《How I AI》，如果你喜欢我们的节目，请在 YouTube 上点赞订阅，或在各大音频平台（Apple Podcasts、Spotify）为我们留下评价，也可以访问我们的官方网站 <code>howiipod.com</code> 查看所有节目详情。我们下期再见。</p>
+<details><summary>Original English Source</summary>
+<p>Now, if you want to go deeper into video editing, you can use Google Flow, which is a much more prescriptive step-by-step video editing tool. Um, they embedded Omni into this new tool, Flow. And one of the things that you'll see here is they're really double doubling down on cinematic quality production quality editing. And so, they're looking at cinematic realism. Is this hyper realistic? You can blend multimodal references. So if you have a person, which I'm going to get to, a situation, an environment, you can use that to seed the video. And then you can kind of edit videos using conversational information. One of the things that you'll see in Flow that they've encoded is the ability for you to define characters. So let's say I want to take this guy and call him Captain Escapo School. I can use this design a character in Google Flow and then at@mentntion that character in any future video moving forward and create videos with that. And then you can actually create yourself as an avatar. So in addition to being able to create kind of like uh unique new characters, you can actually take a video of yourself and create an avatar. Maybe we'll try that. Um, there's a lot of custom tools built in, brainstorming, how to scale, how to organize. So, you see this really coming for production grade AI video genen. But let's jump into flow really quickly and see if we can make an avatar of myself and how it works. How you do this, you go to flow.google. It will redirect you to Google labs. You click your name, you create an avatar. We're going to get started. Okay. I scan this QR code. I pull it up on my phone. It's selfie.app.google. I agree to it taking my face. I'm going to allow camera access. I'm going to move this mic out of the way. Give me a sec. BRB. It's telling me to read numbers out loud. 25 47 56 87 18 52 Okay, it's turn and then I've turned it. Okay. And then it's telling me to turn my face to the left. Okay. That was it. Please don't steal my identity. All right. So, it's uploading and it is creating an AI avatar of at me and then I should be able to use that for any video moving forward. No. No sir, I couldn't. So again, here's where we're really on the struggle bus with Google, which is they've announced a lot of stuff and it hasn't really worked. So I did it. I gave them my identity. I trained their model. I subjected my human face to their deep mind engineers. And it didn't even create the avatar. So, the promise is really good for some of these things, but the reality is if you're not able to use them or they're broken on the day and then people are going to lose patience for some of this. And so, you know, a couple of my challenges that I've had with the Google announcements is one, I haven't been able to really find where they are because the products are named hard. And two, even when they announce a feature, even if it's live, even if I can get to it, it hasn't quite worked yet. So, that's a real bummer. You know, the last ones I'll show you, I was hoping to do videos, but we'll close it off with something a little bit more accessible, which is there are two tools that I think are really interesting for designers and marketings. There is Pomelli, which is their brand product, and then there is Stitch, which is their design product. Again, we've we got the anti-gravities, we got the AI studios, we got Google AI/gemini, we've got Flow, we've got Omni, we've got Stitch, we've got Pamel. So like Pimelli Pomelli, we've got a lot of products. We'll put them in the show note. I want to show you two of these products what they released. So Pamelli is their brand and marketing content generator. They announced a lot of stuff. I'm going to scroll through this on Twitter. There is an agent that allows you to create a core brand identity from a website. This is very similar to Claude design where you can put in a website and it will create sort of a brand identity and then you can create websites and brand books in addition to what Pamelli is good at which is creating campaign assets and photooots. Really easy. You just put in for me I would put in chatp prd.ai. I could continue and this agent will go ahead again and create a brand book for me. Yes, that is my website. It's going to analyze it. Now, in case you missed it, Google has been really focused on how to articulate design systems for AI. They released a standard called design.md that allows you to encode your product design in a markdown file for agents to use. I'm pretty sure that's what's behind this Pamelli brand um book as well as what you're going to see in Stitch. And then what this is going to do is it's going to gather my colors, my content, all that kind of stuff and build it out. I want to show a very similar flow in Stitch, which is their design tool. Stitch released a couple features that I think are really nice. Streaming into a design canvas like Figma. I'll show you how that looks in just a minute. Being able to start with existing designs, doing inline AI edits, so being able to select a component and edit it with text, and then import export options both between your production code and no code tools like lovable. I did a stitch earlier today just to show what this streaming looks like. So I said, &quot;Design me an app that covers the recent changes to Stitch in the style of the Google IO site. I want to paste the Google IO site in.&quot; So let's get the website. I'm going to paste that in. I'm going to click go. And you will see here, if you haven't seen Stitch, it's again kind of like a in in browser Figma. It's using this agentic experience, building the design system, researching, pulling in the content, and then what you'll see is this design start to stream in the right side. So again, a bunch of these surfaces are about creation. They're about creating apps. They're about creating websites. They're creating videos. They're about creating images. And all of this is getting streamed into different apps. And it'll be interesting to see how they all come together or if they come together or if some of these things just stay in labs format. So again, you can see here Stitch is designing in my screens. It's going to create a mobile app because I accidentally selected mobile instead of web. This is a nice experience. Again, this is where I think I feel the speed of the Flash models is actually in design and this sort of experience versus the coding experience which is like browsing files. It should be fast. And so again, here are the features that Stitch released um designed by Stitch in streaming. We've got code sync, real time streaming canvas, um start with your own design in place edits, and this is a really interesting tool that I think, you know, more designers might want to play with. Now, one of the things that we should call out is every AI tool ships their own version of slop. Google's slop looks like Google. Claude slop looked like Claude. I'm not really sure what GPT's slop look like. It doesn't necessarily look good, but this is Google Stitch. And then we'll go back to Pamel and wrap this up. It has created a brand for me. These are definitely my brand colors. This is my tagline. And now I can create, this is the new feature, create a website. So it'll be really meta to take my brand identity and create a new website in Pamelly. And so while this is generating, we'll wrap it up by showing whether or not this did a good job. So I just want to recap for you the developer and designer focused features that were released today at Google IO. New model family Gemini 3.5 in particular 35 fast which is fast anti-gravity their agentic coding tool released a bunch of new features in their IDE including scheduled tasks new slash commands um the concept of projects as well as an IDE similar to clawed code. Google AI Studio integrated Google Workspace apps and data into the noode apps that you can generate. Google Gemini, the sort of like consumer chat interface released and upgrade to image generation, a new design um end to end as well as a video model omni that can be used in the Google AI Gemini experience as well as in a creative tool called flow. Flow released a bunch of character consistency, scene consistency, and videotovideo editing tools that are going to be really interesting for production grade editing. They also released an avatar feature which does not to date work. And then two more interesting marketing and design tools. Stitch, the sort of Figma style in browser design tool released streaming inline edits and brand consistency. And then Pimelli released the ability to do websites, brand books, etc. And it's still generating today. Okay. And not to wrap on a total dud, but maybe it's the summary of the evening. I had time to do a diaper change. Come down and check out my PML generated website and it's fine. So, I think a lot of interesting releases today from Google. A bunch of stuff to go play with. I think the video piece is the part that I'm most excited about. probably second is just the speed of coding that comes from these flash models, but there are some sharp edges, some things that definitely need to be improved and some things that actually need to be released. I cannot wait to see what you build. I can't wait to hear your feedback and what you're most excited about from Google IO this year. Thanks for joining How AI. Thanks so much for watching. If you enjoyed this show, please like and subscribe here on YouTube or even better, leave us a comment with your thoughts. You can also find this podcast on Apple Podcasts, Spotify, or your favorite podcast app. Please consider leaving us a rating and review, which will help others find the show. You can see all our episodes and learn more about the show at howiipod.com. See you next time.</p>
+</details>
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Gemini 3.5 Flash" class="entity-link product-link">Gemini 3.5 Flash</a>, 
+                
+                  <a href="/search/?q=Anti-gravity 2.0" class="entity-link product-link">Anti-gravity 2.0</a>, 
+                
+                  <a href="/search/?q=Google AI Studio" class="entity-link product-link">Google AI Studio</a>, 
+                
+                  <a href="/search/?q=Omni" class="entity-link product-link">Omni</a>, 
+                
+                  <a href="/search/?q=Google Flow" class="entity-link product-link">Google Flow</a>, 
+                
+                  <a href="/search/?q=Stitch" class="entity-link product-link">Stitch</a>, 
+                
+                  <a href="/search/?q=Pomelli" class="entity-link product-link">Pomelli</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/agentic-coding/">agentic-coding</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/video-generation/">video-generation</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">ai-prototyping</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">design-system</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/multimodal-model/">multimodal-model</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>博通（Broadcom）的产品、核心技术及其在AI芯片领域的竞争策略深度解析</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="博通（Broadcom）的产品、核心技术及其在AI芯片领域的竞争策略深度解析" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">博通（Broadcom）的产品、核心技术及其在AI芯片领域的竞争策略深度解析</span>
+      <span data-pagefind-meta="speaker" style="display:none;">老科谈科技股</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2025-11-05
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/technology/">technology</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/lao-ke-tan-ke-ji-gu/">老科谈科技股</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=jrFKhwBOKF0" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2025-11-05
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本文深入剖析了全球领先半导体公司博通（Broadcom）的产品线、五大核心技术及其在数据中心AI领域的竞争策略。文章详细介绍了博通在存储、无线、固定通信、光器件及XPU等硬件技术，以及安全软件和VMware等软件产品。尤其强调了博通如何通过为大型云计算厂商定制AI芯片，与英伟达（Nvidia）形成差异化竞争，并探讨了定制化芯片在AI训练和推理分离趋势中的商机，为理解博通的竞争优势和投资价值提供了全面视角。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>博通（Broadcom）产品与核心技术概览</h3>
+<p>大家好！今天是2025年9月13日，欢迎来到这个通过深入分析和追踪科技行业大趋势、顺势而为长期投资科技股的频道。<strong>博通</strong>（Broadcom: 一家全球领先的半导体和基础设施软件解决方案提供商）现在是炙手可热的芯片股，同时拥有<strong>AI</strong>（人工智能: 模拟人类智能的机器能力）概念、安全软件和企业软件。它的产品十分复杂，一般人很难理解清楚它究竟是做什么的以及竞争优势在哪里。今天，我将发挥本频道的优势，给大家讲清楚博通的技术、解决方案和竞争优势。</p>
+<p>要理解博通，可以将其产品分成截然不同的硬件和软件两大部分。硬件是它的芯片，而软件则是它的安全产品和企业基础设施软件产品。在博通的营收中，硬件收入占据三分之二，这是博通最核心和最有价值的部分，因此我将从硬件讲起。</p>
+<p>像博通这种高科技公司，如果你访问它的网站，它总是先介绍其技术，之后才是解决方案。例如，我们关心它是如何做数据中心AI的，这就是解决方案。而在数据中心AI解决方案中，需要用到它的通信技术、总线技术、存储技术、光通信模块技术和<strong>XPU</strong>（Broadcom自定义处理器单元: 博通对CPU、GPU、DPU等各类处理器的统称）技术。这些技术搭配在一起，才组成了数据中心AI的综合解决方案。因此，要理解博通这类高科技公司，你必须了解它拥有哪些技术，尤其是那些护城河非常宽的核心技术。</p>
+<p>我将博通的技术，特别是核心技术，总结为五类：</p>
+<h3>博通的五大核心技术</h3>
+<p>第一类技术是<strong>存储接口</strong>和<strong>存储通信芯片</strong>。你可以将其理解为家里使用的移动硬盘，通过USB将存储在硬盘中的数据读出或写入。企业也有同样的需求，只是企业的存储系统复杂得多，对速度、容量和稳定性要求高得多。甚至企业存储往往需要一个专门的存储网络，这种网络还有专门的协议和接口。存储还需要备份、灾难恢复等，拥有独特的硬件和软件。博通和Marvell在存储通信和接口芯片领域技术非常雄厚。但是，大家要知道，真正的存储芯片核心技术是<strong>Flash</strong>（闪存: 一种非易失性存储器，可擦写和编程），属于专门的半导体领域，由美光（Micron）、三星（Samsung）和海力士（SK Hynix）等公司在做。博通和Marvell所说的存储主要是接口和存储网络芯片。</p>
+<p>第二类技术是<strong>无线芯片</strong>。你可以理解为<strong>WiFi</strong>（无线局域网: 一种允许电子设备连接到无线局域网的技术）、<strong>蓝牙</strong>（Bluetooth: 一种短距离无线技术标准）和<strong>GPS</strong>（全球定位系统: 一种基于卫星的导航系统）等等。无线通信是一个非常专业的领域，例如不同版本的WiFi会工作在不同的频率，不同频率的WiFi对于收发器等设计都有非常大的区别。像苹果（Apple）手机和电脑的许多这类通信功能都来自于博通。在AI火起来之前，博通最大的客户就是苹果，属于苹果概念股。不过，博通并不做<strong>5G</strong>（第五代移动通信技术: 新一代蜂窝移动通信技术）这种移动通信芯片。5G移动通信芯片仍然是高通（Qualcomm）的天下。所以，WiFi和5G看起来类似，其实技术差别还是很大的。博通的无线通信并没有扩展到高通的移动通信领域。</p>
+<p>第三类技术是<strong>固定通信</strong>。固定通信目前是以太网的天下。现在除了互联网最后一公里使用5G或WiFi外，其他的互联互通基本上都还是<strong>以太网</strong>（Ethernet: 一种局域网通信协议）固定通信的天下。以太网尤其用于数据中心网络。以太网需要有<strong>交换机</strong>（Switch: 用于在计算机网络中连接设备的网络硬件）和<strong>路由器</strong>（Router: 用于在不同网络之间转发数据包的网络设备），其介质有基于光的以太网和基于铜线的以太网。总之，博通的以太网技术十分厉害，这是博通起家的业务。现在十分热门的Arista在数据中心网络挑战思科（Cisco），很大程度上用的就是博通的数据中心以太网芯片。</p>
+<p>第四类是<strong>光器件</strong>。光是整个固定通信的基础。从<strong>光收发器</strong>（Optical Transceiver: 用于光纤通信中发送和接收光信号的器件）到<strong>光放大器</strong>（Optical Amplifier: 用于增强光信号强度的器件），这些器件都推动着整个人类通信的进步。例如，现在数据中心大量使用从<strong>100Gbps</strong>（千兆比特每秒: 数据传输速率单位）到<strong>400Gbps</strong>、<strong>800Gbps</strong>，再到<strong>1.6Tbps</strong>（太比特每秒: 数据传输速率单位）的光通信。这些都是固定通信的核心技术，其演进速度非常快，甚至比芯片行业的<strong>摩尔定律</strong>（Moore's Law: 集成电路上可容纳的晶体管数量大约每两年翻一番）还快。博通在这个领域做得非常好，形成了宽广的护城河。</p>
+<p>第五类是<strong>XPU</strong>。XPU是博通自己的词汇，就像英伟达（Nvidia）创造了<strong>GPU</strong>（图形处理器: 专门用于图像渲染和并行计算的处理器）这个词汇一样，博通创造了XPU这个词汇。你可以把XPU理解成<strong>CPU</strong>（中央处理器: 计算机的核心计算单元）、GPU和<strong>DPU</strong>（数据处理单元: 专门用于数据处理和网络通信的处理器）等等这些处理器的总称。换句话说，CPU、GPU和DPU等，博通都能够做，客户可以根据需要进行选择和定制。</p>
+<p>综合以上五类技术，你会发现博通基本上什么都有。为什么博通的产品如此齐全呢？这是因为博通这些年一直在忙于收购。我再概括一下它的技术：博通起家的业务是固定通信，尤其是以太网，另外存储芯片也很早就有了。这些固定通信离不开光通信，博通在光通信领域技术实力雄厚。博通拥有很全面的无线芯片，苹果的许多无线接口可能就来自于博通，但是博通没有5G接口。博通还有XPU，可以与通信芯片一同形成各种综合的解决方案，包括数据中心AI的解决方案。博通的最大竞争对手是Marvell公司。</p>
+<h3>博通与英伟达在数据中心AI解决方案上的竞争</h3>
+<p>接下来我将侧重于博通的解决方案。什么是解决方案呢？像Arista就可以用博通的接口芯片、交换芯片和光通信器件，做出一套以太网系统，包括网卡、交换机、路由器和防火墙。这些设备最终可以用于数据中心、企业网或电信运营商。这就是典型的使用博通做成的网络解决方案。当然，最重要的解决方案是AI解决方案，它与英伟达的AI解决方案形成了竞争。我接下来花时间给大家详细解释一下博通的数据中心AI解决方案。</p>
+<p>我们先看英伟达的数据中心AI解决方案。我这里就使用英伟达的一些词汇了。大家知道，生成式AI的训练和推理需要使用大量的并行计算。传统的CPU并不适合这类任务，GPU本来是用于图像处理的，恰好也非常适合这种大量的并行计算。所以，这种并行处理的任务就应该让CPU交给GPU来做。同时，大量的通信任务也不应该完全由CPU做。英伟达专门设计了处理通信任务的DPU，即数据处理单位，来专门处理通信的任务。这种新的设计就是加速计算。</p>
+<p>你可以这样理解加速计算的计算机结构：一个或者多个CPU通过高速的接口连接多个GPU和DPU。AI的大量任务最终由GPU完成，它们之间相连的接口英伟达使用的是<strong>NvLink</strong>（英伟达高速互联技术: 英伟达用于连接GPU和DPU的高速总线技术）。你可以把NvLink等同于电脑上使用的<strong>ePCI总线</strong>（PCI Express总线: 一种高速串行计算机扩展总线标准）。以上这种结构就是AI计算机或者叫做AI服务器。现在的大模型训练和推理需要大量的GPU同时工作，所以我们就要把刚才讲到的AI计算机通过高速的通信网络，把成百上千的这种AI计算机连接起来，形成集群。用什么连接呢？或者使用英伟达自己的<strong>InfiniBand</strong>（无限带宽: 一种高性能、低延迟的计算机网络通信技术），或者使用传统的标准的以太网。因为通信要求极其高，例如速率、延迟和稳定性，传统的以太网需要被改造才能胜任。有些通信任务需要被刚才讲到的DPU处理，从而加速网络通信的速度，而通信速率往往要到800Gbps了。英伟达在2025年构建的最大AI服务器集群规模已突破10万GPU，凭借NVLink、NVSwitch交换机及高速以太网技术，支撑超大规模AI模型训练，是全球最顶尖的AI超算基础设施。</p>
+<p>以上就是英伟达的数据中心AI解决方案。黄仁勋（Jensen Huang）所讲的加速计算，其实就是指的GPU处理AI训练和推理，DPU处理通信，而CPU仅仅处理通用的任务。黄仁勋为什么说摩尔定律已死呢？指的就是CPU靠增加时钟速率和内核数量已经无法处理这类任务了，而加速计算才是最终的解决方案。这种AI服务器集群看起来其实就像更大的计算机，所以黄仁勋说过网络就是计算机，他强调的是一个由GPU、网络、数据中心、AI协同组成的整体计算平台。</p>
+<h3>博通的定制化AI芯片策略</h3>
+<p>说完英伟达的数据中心AI解决方案，再理解博通的就容易多了。英伟达所使用的CPU、GPU和DPU，在博通都叫XPU。英伟达所使用的高速和低延迟以太网网络和交换机，这更是博通的特长。那么，如果你是博通，该如何与英伟达在数据中心AI领域竞争呢？英伟达的竞争力太强，看看AMD就知道在这个赛道做老二的日子太难了。所以，博通另辟蹊径，找到了另外一条道路。</p>
+<p>大家有没有想到，英伟达的GPU以前是做图像和视频处理的，后来才被用于机器学习的AI，所以它并没有对特定的AI任务和算法做优化，而是有些通用。例如，埃隆·马斯克（Elon Musk）的特斯拉（Tesla）自动驾驶算法是通过机器学习处理大量的驾驶图片和视频所训练得到的，这种训练数据和平时训练所使用的文本是大不相同的。能不能改进GPU更好地支持自动驾驶的训练和推理呢？英伟达作为赛道老大，是不会专门为特定应用做定制的。而博通作为弱小的竞争对手，就是通过这种定制获得了机会。</p>
+<p>没错，博通就是通过定制各种芯片进入AI领域的，尤其是和大的云计算厂商合作。如亚马逊AWS（Amazon AWS）、微软Azure（Microsoft Azure）、谷歌云（Google Cloud）和甲骨文（Oracle）。我举个例子，自<strong>TPU</strong>（张量处理单元: 谷歌专为机器学习工作负载设计的ASIC芯片）第一代开始，谷歌（Google）就和博通携手共同设计了多代TPU芯片，包括后续几代TPU芯片。博通负责设计、制造、测试和封装等环节，为谷歌的AI加速芯片提供关键支持。博通因此成为谷歌TPU项目上的长期合作伙伴，并从中获得了大量收入。TPU芯片占据了博通可定制业务的重要比例。博通还与苹果合作开发代号为“Baltra”的AI服务器芯片，预计2026年实现量产。也与Meta共同设计了用于AI推理的7纳米和5纳米制程<strong>MTIA</strong>（Meta训练推理加速器: Meta公司为AI训练和推理设计的芯片）芯片，支持训练和推理工作负载。</p>
+<p>另外，在AI数据中心芯片领域，有一个趋势是训练和推理的分离。推理芯片相对容易做，这些趋势都给博通带来了商机。还有，OpenAI这种大的用户往往喜欢多元化自己的AI平台，防止被英伟达锁定，所以也会通过和博通这种公司合作。可能最后还是用英伟达的，和博通的合作可以达成和英伟达讨价还价的目的。还要强调的是，数据中心网络的热门公司Arista也大量使用博通的芯片，从而和思科在数据中心网络竞争。所以，博通已经在数据中心AI全面铺开，各个大公司，尤其是云计算公司，争相和它合作，推出各种定制化产品，摆脱对英伟达的依赖，同时满足一些AI的小众需求。</p>
+<h3>博通的软件业务：安全与虚拟化</h3>
+<p>以上通过介绍博通的产品和解决方案，我就把博通的硬件部分说完了，而且我重点介绍了它的数据中心AI定制化解决方案如何与英伟达抢生意。接下来软件部分就容易理解了。大家记住，软件占据博通营收的三分之一，所以也是十分重要的业务。它的软件比较容易理解，有两个产品，都是通过收购得到的。</p>
+<p>一个是<strong>安全软件</strong>，类似于Palo Alto Networks、Fortinet和Check Point等公司的产品。大家可以参考我以前讲网络产品的视频。我要强调的是网络安全不仅仅是软件，往往是软件和硬件的结合。例如高性能的防火墙就是基于硬件的，如果全靠软件，性能根本不够。所以，博通有交换和路由芯片，这些对于它做防火墙有天然的优势。</p>
+<p>另一个是<strong>VMware</strong>，在财报中被划分为基础设施软件。VMware是用来做<strong>私有云</strong>（Private Cloud: 专为单个组织提供服务的云计算环境）的，它是虚拟化的鼻祖。关于VMware，大家可以看我对于云计算的介绍。VMware是介于硬件平台和操作系统之间的软件，其作用就是虚拟化，而只有虚拟化之后才能做出云计算来。当然，VMware目前主要是被用来做私有云的。例如，政府和银行出于安全的考量，都喜欢自己做云，这就是私有云。VMware就是这样一个产品。</p>
+<p>好了，今天就到这里了。我对于博通的产品和解决方案给大家进行了全面介绍，尤其侧重于了它的定制化数据中心AI解决方案如何与英伟达抢生意。希望对于大家理解博通这个公司有所帮助。我自己的特长是擅长通过理解博通这类公司的技术和解决方案来考虑如何投资博通这类公司，这和我的专业和工作背景有关。一杯咖啡钱，加入我的YouTube会员，我会及时给会员分享互联网和AI行业大趋势，并分析博通这类难懂的科技公司的财报。最后，关注老科的YouTube频道，抓住时代的大机遇，让我们的财富在这次科技革命中稳步增值吧。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Jensen Huang" class="entity-link person-link">Jensen Huang</a>, 
+                
+                  <a href="/search/?q=Elon Musk" class="entity-link person-link">Elon Musk</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Broadcom" class="entity-link company-link">Broadcom</a>, 
+                
+                  <a href="/search/?q=Nvidia" class="entity-link company-link">Nvidia</a>, 
+                
+                  <a href="/search/?q=Marvell" class="entity-link company-link">Marvell</a>, 
+                
+                  <a href="/search/?q=Apple" class="entity-link company-link">Apple</a>, 
+                
+                  <a href="/search/?q=Qualcomm" class="entity-link company-link">Qualcomm</a>, 
+                
+                  <a href="/search/?q=Arista" class="entity-link company-link">Arista</a>, 
+                
+                  <a href="/search/?q=Cisco" class="entity-link company-link">Cisco</a>, 
+                
+                  <a href="/search/?q=AMD" class="entity-link company-link">AMD</a>, 
+                
+                  <a href="/search/?q=Micron" class="entity-link company-link">Micron</a>, 
+                
+                  <a href="/search/?q=Samsung" class="entity-link company-link">Samsung</a>, 
+                
+                  <a href="/search/?q=SK Hynix" class="entity-link company-link">SK Hynix</a>, 
+                
+                  <a href="/search/?q=Amazon AWS" class="entity-link company-link">Amazon AWS</a>, 
+                
+                  <a href="/search/?q=Microsoft Azure" class="entity-link company-link">Microsoft Azure</a>, 
+                
+                  <a href="/search/?q=Google Cloud" class="entity-link company-link">Google Cloud</a>, 
+                
+                  <a href="/search/?q=Oracle" class="entity-link company-link">Oracle</a>, 
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Palo Alto Networks" class="entity-link company-link">Palo Alto Networks</a>, 
+                
+                  <a href="/search/?q=Fortinet" class="entity-link company-link">Fortinet</a>, 
+                
+                  <a href="/search/?q=Tesla" class="entity-link company-link">Tesla</a>, 
+                
+                  <a href="/search/?q=Meta" class="entity-link company-link">Meta</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=GPU" class="entity-link product-link">GPU</a>, 
+                
+                  <a href="/search/?q=CPU" class="entity-link product-link">CPU</a>, 
+                
+                  <a href="/search/?q=InfiniBand" class="entity-link product-link">InfiniBand</a>, 
+                
+                  <a href="/search/?q=TPU" class="entity-link product-link">TPU</a>, 
+                
+                  <a href="/search/?q=VMware" class="entity-link product-link">VMware</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">custom-ai-chip</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">data-center-networking</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/enterprise-software/">enterprise-software</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/llm/">llm</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/semiconductor/">semiconductor</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

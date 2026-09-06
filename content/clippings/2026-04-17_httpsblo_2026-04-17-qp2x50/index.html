@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>当AI学会&quot;吃一堑长一智&quot;：基于记忆的动态奖励 · 乔木博客</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="当AI学会&quot;吃一堑长一智&quot;：基于记忆的动态奖励 · 乔木博客" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">当AI学会&quot;吃一堑长一智&quot;：基于记忆的动态奖励 · 乔木博客</span>
+      <span data-pagefind-meta="speaker" style="display:none;">向阳乔木</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-04-17
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/xiang-yang-qiao-mu/">向阳乔木</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://blog.qiaomu.ai/2026-04-17-qp2x50" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-04-17
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">文章介绍了Fudan团队提出的MEDS框架，通过提取AI内部的&#39;推理指纹&#39;来识别并记忆模型反复犯的错误模式。MEDS通过动态调整对重复错误的惩罚，使AI能像人类一样‘吃一堑长一智’，从而提高训练效率和模型探索多样性，在数学推理任务上取得显著成果。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>乔木博客</p>
+<p>全部</p>
+<p>AI工具</p>
+<p>AI教程</p>
+<p>AI生成</p>
+<p>AI资讯</p>
+<p>健脑房</p>
+<p>播客解读</p>
+<p>论文学习</p>
+<h1>当AI学会&quot;吃一堑长一智&quot;：基于记忆的动态奖励</h1>
+<p>论文学习</p>
+<p>·</p>
+<p>2026年4月17日</p>
+<p>·</p>
+<p>541 次阅读</p>
+<p>·</p>
+<p>约 9 分钟</p>
+<p>为什么AI在训练时会像着了魔一样，反复犯同样的错误？</p>
+<p>就像一个学生做数学题，第一次因为&quot;看错题目条件&quot;丢了分，第二次还是同样的原因，第三次、第四次……明明每次都在&quot;学习&quot;，却总是在同一个坑里摔跟头。</p>
+<p>这不是偶然，而是当前AI训练方式的一个致命盲区。</p>
+<blockquote>
+<p>https://arxiv.org/pdf/2604.11297</p>
+</blockquote>
+<h2>隐藏陷阱</h2>
+<p>现在主流的AI训练方法，都在用一个叫&quot;熵正则化&quot;的技术来鼓励模型&quot;多样化探索&quot;。</p>
+<p>听起来合理，但问题出在哪里？</p>
+<p>它鼓励的是表面上的不一样，而不是真正思路上的多样性。</p>
+<p>什么意思？假如AI在解一道数学题：&quot;找出最小的'Good number'，它有三个不同的正因数，这三个因数之和等于2022。&quot;</p>
+<p>AI可能会生成这样几个回答：</p>
+<p>&quot;这个数一定是质数的平方&quot;</p>
+<p>&quot;满足条件的数必须是某个质数的平方&quot;</p>
+<p>&quot;根据因数个数，这个数应该是质数平方的形式&quot;</p>
+<p>表面上看，这三个回答用词不同，看起来很&quot;多样&quot;。</p>
+<p>但它们的核心推理逻辑完全一样，都困在&quot;质数平方&quot;这个错误假设里。</p>
+<p>更要命的是，这个错误假设会在训练中被反复采样、反复强化，最终形成一个稳定的&quot;错误陷阱&quot;，AI怎么也爬不出来。</p>
+<p>这张图揭示了问题：训练早期，AI还能尝试不同的解题思路（左图的高熵分布）；</p>
+<p>但随着训练进行，策略逐渐坍缩到一个狭窄的错误模式上（右图）。</p>
+<p>不同的错误表述，共享着同一个失败的推理框架。</p>
+<p>就像一个学生，虽然每次答题的措辞不同，但都在用同一个错误的解题思路。</p>
+<h2>一个意外的发现：AI的&quot;思考指纹&quot;</h2>
+<p>复旦团队的MEDS框架提出了一个巧妙的解决方案。</p>
+<p>但真正让人眼前一亮的，是他们发现的一个现象：AI内部的计算过程，能够反映它的推理思路。</p>
+<p>这个发现很反直觉。</p>
+<p>我们通常认为，要判断两个回答的推理思路是否相似，需要理解它们的语义内容，这很复杂。</p>
+<p>但研究团队发现，只需要看AI在生成答案时。</p>
+<p>内部神经网络各层的输出值（叫做logits），就能捕捉到推理模式的相似性。</p>
+<p>这张图展示了logits如何编码推理结构。</p>
+<p>想象AI的大脑有很多层，每一层都会产生一些中间计算结果。</p>
+<p>如果两个回答用了相似的推理路径，它们在各层的计算结果就会很像；</p>
+<p>反之，不同的推理路径会产生明显不同的计算模式。</p>
+<p>更关键的是，这些信息是&quot;免费&quot;的——AI在思考时本来就会产生这些中间结果，直接拿来用就行，几乎不增加计算成本。</p>
+<p>这就像给每个推理过程打上了一个独特的&quot;指纹&quot;。</p>
+<h2>案例解剖：同样的错误答案，不同的错误原因</h2>
+<p>研究团队展示了一个特别有启发性的案例。</p>
+<p>还是那道&quot;Good number&quot;问题，正确答案是1344。</p>
+<p>但AI生成了多个错误回答，其中有三个都输出了1342这个错误答案。</p>
+<p>如果只看最终答案，你会以为它们犯了同样的错误。但仔细看推理过程就会发现：</p>
+<p>第一类错误（Cluster A）的推理模式：</p>
+<p>一开始就认定&quot;必须是质数的平方&quot;</p>
+<p>直接开始用代码暴力枚举验证</p>
+<p>从头到尾没有怀疑过这个前提</p>
+<p>第二类错误（Cluster B）的推理模式：</p>
+<p>先假设&quot;质数平方&quot;结构</p>
+<p>尝试推导其他可能的数学形式</p>
+<p>发现推不下去后，才退回到枚举法</p>
+<p>两种错误的&quot;病因&quot;完全不同：第一类是&quot;思维僵化&quot;，第二类是&quot;推导失败后的妥协&quot;。</p>
+<p>更神奇的是，右边的热力图完美地反映了这种差异。</p>
+<p>颜色越深代表数值越大。</p>
+<p>你可以看到，同一类错误内部的热力图模式很相似，但不同类错误之间，热力图的颜色分布明显不同。</p>
+<p>这说明什么？AI内部的计算过程，不仅能区分最终答案，更能区分到达答案的思维路径。</p>
+<h2>MEDS的三步机制：让AI记住犯过的错</h2>
+<p>基于这个洞察，MEDS设计了一个优雅的三步机制：</p>
+<p>第一步：提取&quot;推理指纹&quot;
+对每个回答，提取AI后半层神经网络的计算结果（前半层主要处理文字理解，后半层才涉及深层推理），在最终答案的第一个字位置，拼接成一个特征向量。</p>
+<p>这就是这个回答的&quot;推理指纹&quot;。</p>
+<p>第二步：维护&quot;错误记忆库&quot;
+对每个问题，维护一个历史错误回答的特征库。</p>
+<p>用聚类算法，自动识别出不同的错误模式。</p>
+<p>这个记忆库是动态的，会随着训练不断更新。</p>
+<p>就像老师给学生建立一个&quot;错题本&quot;，但这个错题本不仅记录错误答案，还记录了&quot;为什么会错&quot;。</p>
+<p>第三步：动态调整惩罚力度
+当AI生成一个新的错误回答时，看它属于哪一类错误。</p>
+<p>如果这类错误已经&quot;人丁兴旺&quot;（说明这个坑已经掉进去很多次了），就给它更重的惩罚。</p>
+<p>惩罚的强度和这类错误出现的次数相关，但有个上限，既能有效抑制重复错误，又不会过度惩罚。</p>
+<p>这个设计的精妙之处在于：</p>
+<p>它不是简单地鼓励&quot;不一样&quot;，而是精准地打击&quot;重复的错误模式&quot;。</p>
+<p>正确的回答不受影响，新的错误尝试也不会被过度惩罚，只有那些已经反复出现的错误陷阱，才会被重点标记。</p>
+<h2>为什么这样做有效？</h2>
+<p>直觉上很好理解。</p>
+<p>重复出现的错误，说明AI在当前的&quot;思维习惯&quot;下，很容易掉进这个坑。</p>
+<p>通过额外惩罚，相当于在这个坑边上竖了一个大大的警示牌：&quot;这里危险，已经摔过很多次了！&quot;</p>
+<p>这样AI就会被迫去探索其他可能性，而不是在同一个错误上浪费时间。</p>
+<p>研究团队还给出了严格的数学证明：</p>
+<p>在理论上，这种惩罚机制能够保证或提升AI的整体表现。</p>
+<p>因为惩罚只针对错误（而且是已经重复的错误），从优化的角度看，这种调整不会让AI变差，只会让它变好。</p>
+<h2>实验结果：不只是数字的提升</h2>
+<p>在五个数学推理数据集上，MEDS取得了全面领先的结果。</p>
+<p>但比数字更重要的，是它改变了AI的探索行为。</p>
+<p>最显著的提升出现在Qwen3-8B模型上：</p>
+<p>在OlympiadBench数据集，准确率从70.81提升到82.67，相对提升17%</p>
+<p>在MATH500数据集，准确率从83.62提升到92.51，提升了近9个百分点</p>
+<p>平均来看，在所有数据集上都取得了最好的表现</p>
+<p>但更重要的发现是：MEDS不仅让AI答对了更多题，还让它的思考方式变得更加多样化。</p>
+<p>研究团队用两个指标来衡量：</p>
+<p>同一时刻的多样性：在同一个训练阶段，对同一个问题生成的多个回答有多不一样。</p>
+<p>跨时间的多样性：训练后期生成的回答，相比早期是否出现了新的推理思路。</p>
+<p>实验显示，MEDS在这两个指标上都明显优于传统方法。</p>
+<p>而且，从AI内部的计算分布来看，MEDS的计算结果更加均匀，不会过度集中在某几个方向上，说明探索行为确实更加多样化。</p>
+<p>这就像一个学生，不仅做对了更多题，而且解题思路也变得更加开阔了。</p>
+<h2>一个有趣的验证：AI的&quot;推理指纹&quot;靠谱吗？</h2>
+<p>研究团队还做了一个验证：用AI内部的计算结果来判断推理相似性，真的靠谱吗？</p>
+<p>他们随机抽取了800个错误回答，先用Claude模型根据11种常见错误类型进行标注，然后和基于内部计算结果的聚类对比。</p>
+<p>结果显示，两者的一致性达到61.2%。</p>
+<p>这个数字看起来不算特别高，但要知道，基于内部计算的聚类是完全自动的，不需要任何人工标注。</p>
+<p>能达到60%以上的一致性，已经相当可观了。</p>
+<p>更关键的是，聚类质量和最终的答题准确率高度相关：聚类做得越好（越能准确识别不同的错误模式），AI最终的准确率就越高。</p>
+<p>这说明，&quot;推理指纹&quot;确实捕捉到了推理结构的本质特征。</p>
+<h2>还能做得更好吗？</h2>
+<p>研究团队说，他们目前对AI内部计算结果的利用方式还比较简单，只是直接拼接后半层的数值。</p>
+<p>是否有更聪明的方式来提取&quot;推理指纹&quot;？</p>
+<p>比如，是否可以用注意力机制来加权不同层的重要性？</p>
+<p>或者用更精细的特征工程来捕捉层与层之间的交互模式？这些都是值得探索的方向。</p>
+<p>另外，MEDS目前主要在数学推理任务上验证，在其他类型的任务（比如写代码、生成图片）上是否同样有效，还需要更多实验来确认。</p>
+<h2>写在最后：一个被忽视的常识</h2>
+<p>MEDS的核心创新，其实是把人类学习中一个很自然的机制，引入到了AI训练中。</p>
+<p>我们都知道，犯过的错误要记住，重复的错误要警惕。</p>
+<p>小时候老师会让我们整理错题本，不就是这个道理吗？</p>
+<p>但在AI训练中，这个看似简单的常识，却一直没有被系统地实现。</p>
+<p>现有的训练方法都只看&quot;当下&quot;，不看&quot;过去&quot;。</p>
+<p>每一轮训练都是独立的，AI不知道自己之前在哪里栽过跟头。</p>
+<p>MEDS的价值，不仅在于提升了几个点的准确率，更在于它打开了一个新的思路：AI的训练，不应该只看当前这一步，还应该看历史轨迹。</p>
+<p>AI的&quot;记忆&quot;不应该只存在于参数更新中，也可以显式地存储和利用。</p>
+<p>未来，我们可能会看到更多利用历史信息来指导训练的方法，让AI真正学会&quot;吃一堑长一智&quot;。</p>
+<p>毕竟，这是人类几千年来总结出的学习智慧，为什么不能教给AI呢？</p>
+<p>© 2026</p>
+<p>·</p>
+<p>向阳乔木</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Fudan University" class="entity-link company-link">Fudan University</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=MEDS framework" class="entity-link product-link">MEDS framework</a>, 
+                
+                  <a href="/search/?q=Qwen3-8B" class="entity-link product-link">Qwen3-8B</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-training/">ai-training</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-memory/">ai-memory</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">dynamic-rewards</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">reasoning-paths</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PostgreSQL 安全深潜：从架构沙盒到行级细粒度控制的 360 度防线</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="PostgreSQL 安全深潜：从架构沙盒到行级细粒度控制的 360 度防线" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">PostgreSQL 安全深潜：从架构沙盒到行级细粒度控制的 360 度防线</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Peter Pang</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-04-10
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/data-engineering/">data-engineering</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/peter-pang/">Peter Pang</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=S_Z8Y0vMSzo" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-04-10
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本文深度剖析了 PostgreSQL 数据库的全方位安全体系，针对行业内普遍存在的后端安全“灯下黑”现象提出了警示。文章详细介绍了从 Schema 驱动的命名空间沙盒、基于 Column 的最小权限原则，到图灵完备的行级安全性（RLS）的三层防御架构，并创新性地提出了一套兼顾连接池性能与业务隔离的“三权分立”角色设计策略，强调安全作为系统基石的不可妥协性。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>PostgreSQL：极致安全的设计理念与行业现状</h3>
+<p>PostgreSQL 被誉为世界上最安全的系统，这一评价并非夸大其词，它远超一般数据库系统的范畴，而是指其整体系统的安全性达到了顶尖水平。其安全机制深入到每一个角落，能够将安全保障落实到数据反馈的每一行、每一列，乃至每一个独立的单元格。</p>
+<p>然而，在深入探讨 PostgreSQL 的强大安全功能之前，我们不得不先正视一个更为严峻的问题：在整个计算机行业中，对于数据库安全这一关键环节，普遍存在着严重的重视缺失。正如著名程序员 Atomic Energy 所言：“系统安全的本质，在于数据读写的安全。” 回顾历史，我们可以将所有的安全事故大致归类为三种：</p>
+<ol>
+<li><strong>机密信息泄露（READ）</strong>: 这类事故层出不穷，其数据量之大，甚至可以说支撑了半个暗网的运作。</li>
+<li><strong>系统不可逆破坏（WRITE）</strong>: 与其他程序被破坏后可重启不同，数据库作为系统的“唯一真相来源”（single point of truth），一旦数据被篡改或删除，后果往往是无法挽回的。2017 年的 GitLab 事故便是惨痛的例证：在一系列令人啼笑皆非的“究极草台班子操作”后，GitLab 程序员意外删除了其 PostgreSQL 数据库中高达 300GB 的用户数据，且未能恢复。</li>
+<li><strong>系统功能受阻（DOWN）</strong>: 这类事故，如勒索软件攻击和 DDoS 攻击，更多地归因于网络架构问题。</li>
+</ol>
+<p>由此可见，2/3 的安全事故都与数据的读取（READ）和写入（WRITE）紧密相关。本质上，安全问题归结为“谁可以读取或写入什么数据”，即“身份验证和权限管理”的核心议题。</p>
+<h3>悖论：外紧内松的安全现象与多层防御的必要性</h3>
+<p>一个诡异的行业现象是：安全防护在外层越是严密，而一旦进入到数据库层面，防守就越显松懈。纵观计算机行业发展历程，我们看到前端安全从最初的“四处漏风的筛子”演变为如今固若金汤的沙盒环境。在前后端通信领域，SSL/TLS 协议的不断升级和 HTTPS 的普及，也使得通信安全达到了新的高度。后端安全架构更是百花齐放，直接暴露 IP 和 SSH 端口的时代已成过去。</p>
+<p>然而，当数据最终抵达数据库这一终点时，安全画风却陡然变得潦草。许多大型项目，后端直接使用 <code>admin</code> 账号直连数据库，几乎没有任何额外的防御措施。即便有所谓的“安全”措施，也仅是将 <code>admin</code> 账号的密码通过加密手段嵌入后端代码中。</p>
+<p>这样做的好处显而易见：减少数据库账号数量，简化管理；简化应用层代码编写；并在性能上有所优势（后续章节将详述）。然而，这种做法背后更深层的原因，往往是一种普遍存在的“侥幸心理”。许多开发者认为，既然后端部署在受信任的内网环境中，已经具备了基础安全防护，那么后端连接数据库便如同“客厅连卧室”，无需再设置层层复杂的安全关卡。</p>
+<p>这种侥幸心理的直接后果是：一旦有人（无论是恶意攻击者还是无意操作）突破了外层防线，便能直接掌控 <code>admin</code> 账号这个“核弹”，瞬间造成毁天灭地的后果。</p>
+<p>因此，我希望唤起大家对数据库安全的重视，因为只有数据库本身的安全机制，才是抵御此类风险的最后一道、也是最坚实的防线。著名程序员 Atomic Energy 曾强调：“安全是有覆盖范围的，超出了范围一律要默认成为不安全。”</p>
+<p>以“身份”这一数据为例，当它从浏览器沙盒环境，经过 HTTPS 加密传输到后端时，即便后端已接收到该身份信息，也应视其为“不可信”状态，并重新进行验证。这是因为每一次数据的传递，都意味着它脱离了前者的安全框架覆盖。同理，当数据库接收到任何外部请求时，无论其来源如何，只要是在数据库自身的安全范围之外，都应被一视同仁地进行全方位的身份和权限验证。这一操作逻辑，本质上与其他应用层的安全验证并无区别。</p>
+<h3>PostgreSQL 的多层级安全体系：Role、Schema、Column 与 RLS</h3>
+<h4>1. 基于 Role 的安全模型与 Schema 隔离</h4>
+<p>PostgreSQL 的安全机制围绕着 <strong>Role（角色）</strong> 这一核心概念进行设计。无论是构建独立的沙盒环境，还是进行细粒度的身份与权限认证，都离不开对自定义角色的创建和管理。简而言之，Role 可以被理解为数据库的登录账号，其具体设计将在后续章节详述。</p>
+<p>当前，我们通过一个简单的查询语句来初步了解 PostgreSQL 的安全机制：</p>
+<pre><code class="language-sql">SELECT id, name FROM users WHERE group_name = 'bilibili';
+</code></pre>
+<p>当此语句执行时，PostgreSQL 会进行一系列权限检查：首先是 <strong>Table</strong> 层面，然后是 <strong>Column</strong> 层面，最终是 <strong>Row</strong> 层面。</p>
+<p>与其他数据库（如 MySQL）不同，PostgreSQL 拥有 <strong>Database（数据库）、Schema（模式）</strong> 和 <strong>Table（表）</strong> 的三层结构。虽然一个事务（transaction）不能跨越数据库执行，但在同一个数据库内，可以跨越不同的 Schema 查询不同的表，Schema 之间本身并不存在严格的隔离。</p>
+<p>那么，Schema 除了用于整理分类表（达成一种 Namespace 的效果）外，还有什么实际价值？其核心价值在于 PostgreSQL 提供的 <strong><code>search_path</code></strong> 功能。该功能允许为不同的 Role 指定不同的 Schema 可见度。例如：</p>
+<ul>
+<li><strong>多部门系统</strong>: 可以让不同部门的系统只能看到各自部门的 Schema；而需要跨部门协作的系统，则可以配置为看到多个部门的 Schema。</li>
+<li><strong>简化架构</strong>: 对于系统架构不那么复杂的场景，可以定义三个基础 Schema：
+<ul>
+<li><code>public</code> Schema: 存放用户可直接查询的表。</li>
+<li><code>private</code> Schema: 存放账户、密码、 Session 等敏感信息的表。通过配置用户的 <code>search_path</code> 不包含 <code>private</code> Schema，用户将无法直接查询这些敏感表，只能通过固定的 Trigger 或 Function 间接获取，从而有效控制对机密信息的访问能力。</li>
+<li><code>worker</code> Schema: 存放与用户完全无关、仅供后台异步服务使用的表，确保其不被外部查询或副作用所干扰。</li>
+</ul>
+</li>
+</ul>
+<p>在此设计中，Schema 被巧妙地用作“沙盒”，将不同安全等级的表进行物理隔离，构成了 PostgreSQL 的第一层防御机制。</p>
+<h4>2. Column 级权限控制：最小权限原则</h4>
+<p>Schema 权限检查通过后，我们正式进入表内部。但 PostgreSQL 的表不像 Excel 表那样一览无余。在默认状态下，一个 Role 默认不具备读写任何 Column 的权限，必须通过手动 <strong><code>GRANT</code></strong> 命令来授予。且 CRUD（Create, Read, Update, Delete）操作需要分开授权。</p>
+<p>例如，在上述查询用户 ID 和名字的语句中，必须使用 <code>GRANT</code> 命令，为发起查询的 Role 授予 <code>id</code> 和 <code>name</code> 这两个 Column 的 <code>SELECT</code> 权限。</p>
+<p>虽然见过一些开发者为省事，直接将所有表的全部 Column 的所有 CRUD 权限一次性授予所有新建 Role，但若目标是“省事”，笔者建议不如直接 “DROP TABLE”，一步到位。</p>
+<p>在 Column 层面，我的推荐是：“<strong>只给用户最低程度的使用权限</strong>”。</p>
+<ul>
+<li><strong>会员等级</strong>: 用户只能查看自己的会员等级，不应修改，故仅授予 <code>SELECT</code> 权限。</li>
+<li><strong>微信 OpenID/UnionID</strong>: 用户本人通常用不上这些参数，仅后台程序调用 API 时需要。因此，即使这些信息属于用户，也<strong>不应授予用户任何 <code>SELECT</code> 权限</strong>。</li>
+</ul>
+<p>这个问题的重要性日益凸显。一份安全机构的报告指出，高达 96% 的企业权限设置处于“空置”状态，即权限被创建后却无人使用也无人关闭。报告特别强调，当 AI 开始接管操作时，这些可被任意使用的宽泛权限范围将构成巨大的安全隐患。</p>
+<p>因此，在授权问题上，我建议遵循“<strong>只做加法、不做减法</strong>”的原则，避免不经意间泄露不必要的权限。</p>
+<h4>3. Row Level Security (RLS)：动态、图灵完备的最后一道锁</h4>
+<p>Column 层面权限验证通过后，我们来到了 PostgreSQL 最为强大的功能之一：<strong>Row Level Security (RLS)</strong>。这是一个独一无二的、图灵完备的动态规则系统。</p>
+<p>前面介绍的 <code>search_path</code> 和 <code>GRANT</code> 均属于静态匹配逻辑。一旦执行命令授予权限，该 Role 将一直拥有该权限，直至被显式剥夺。而 RLS 则完全动态，它会在<strong>每一个事务（transaction）发起时，实时地验证 Role 对特定数据的 CRUD 权限</strong>。</p>
+<p>举例来说，在一个订单 <code>orders</code> 表中，我们希望买家只能读写自己的订单，而店家只能读不能写。此时，可以在用户发起请求时，通过 PostgreSQL 的运行时参数功能 <code>pg_settings</code> 将用户的 ID 注入到事务中。当查询到达 RLS 验证阶段时，系统会提取用户 ID，并与当前 Row 中的买家 ID 和店家 ID 进行比对。</p>
+<ul>
+<li>对于 <code>UPDATE</code> 权限的策略，会检查用户 ID 是否等于 Row 中的买家 ID。</li>
+<li>对于 <code>SELECT</code> 权限的策略，则会检查用户 ID 是否等于 Row 中的买家 ID 或店家 ID。</li>
+</ul>
+<p>即便如此，即便用户身份尊贵如“玉皇大帝”，若其 ID 与目标 Row 中的买家或店家 ID 不匹配，也无权读取该 Row 数据。RLS 因此构成了 PostgreSQL 安全体系的最后一道、也是最强有力的锁。</p>
+<p>RLS 的强大之处在于，其验证逻辑可以基于任何 SQL 语句或 Function。这意味着，在 Function 中，我们可以实时调用任何数据来辅助验证。</p>
+<p>例如，要追加一项权限：允许店铺的员工读取本店的所有订单。只需在 RLS 验证时：</p>
+<ol>
+<li>先查询储存员工数据的表，获取该用户当前任职的店铺 ID。</li>
+<li>再返回订单表，匹配订单的店铺 ID。</li>
+</ol>
+<p>由于验证是实时的，一旦员工被解雇，其对应的员工信息表更新的那一刻，该用户便立刻失去了所有订单的读取权限，实现了零延迟的安全响应。</p>
+<p>若无性能上的顾虑（如 TPS 瓶颈），甚至可以将所有系统层面和业务层面的验证逻辑，全部封装在一个 Function 中，通过 RLS 进行实时验证。这正是我在 2 年前分享的【让编程再次伟大#14】中的做法，当时曾引发不少争议，如今看来，仍是因未能深入阐释 PostgreSQL 的魅力。</p>
+<h3>性能权衡与“三权分立”的最佳实践</h3>
+<p>PostgreSQL 强大的层层叠加安全体系，不仅提供了 360 度全覆盖的防护，更在使用上展现出极大的灵活性。例如，极端情况下，可以为每一位用户创建一个单独的 Role。这使得权限分配可以从 Schema 层面开始进行精细化控制。</p>
+<p>然而，我不建议如此操作。数据库的许多性能节点（如 Connection Pool 中的连接）与 Role 挂钩，只能在同一 Role 之间重用。大量的 Role 会导致每个 Role 都经历冷启动，并舍弃大量只能在同一 Role 间共用的缓存，这几乎会抵消掉通过参数优化（如在【让PostgreSQL再次伟大#01】中讨论的）所获得的性能提升。这也是视频开篇提到许多项目倾向于使用单一 <code>admin</code> 角色的原因之一：避免因角色切换导致的性能损失。</p>
+<p>但作为一个折中的实践者，我的建议是：<strong>既不为每个用户创建独立 Role，也不仅依赖单一 <code>admin</code> Role</strong>。应寻找一个兼顾安全与性能的平衡点。</p>
+<p>我设计的“<strong>三权分立</strong>”角色结构便是这样一种尝试：</p>
+<ol>
+<li><strong>Connector Role</strong>: 仅拥有发起数据库连接的权限。后端程序使用此 Role 连接到 Connection Pool，从而避免了连接池的稀释或角色切换带来的冷启动问题。</li>
+<li><strong>Visitor Role</strong>: 当用户发起具体查询请求时（如前述，后端将用户 ID 注入运行参数），通过 <code>SET ROLE</code> 命令切换到此 Role。这是数据库所有 <code>search_path</code>、<code>GRANT</code> 和 RLS 设置所直接面对的 Role。如此，后端程序仅使用 Connector Role，而数据库的安全验证功能则全部由 Visitor Role 处理，两者实现相对独立。</li>
+<li><strong>Admin Role</strong>: 传统意义上的管理员角色，仅用于在初始阶段进行一切设置工作，不在日常运行中使用。</li>
+</ol>
+<p>总的来说，这种设计能在很大程度上隔离不同的权限范围，避免不必要的权限滥用或泄露，同时规避了角色切换对性能的破坏。当然，欢迎大家在评论区分享各自的设计方案。</p>
+<h3>安全与性能的终极博弈</h3>
+<p>若你以为以上安全机制已是 PostgreSQL 的全部，那便远远低估了它的强大。上述内容仅为入门级分享，受时间限制，我跳过了更宏观的安全管理流程。例如，在前期防御上，可通过底层操作系统实现基于主机的身份验证（如 <code>pg_hba</code>）；在后期审计上，强大的 <code>pgaudit</code> 和 Logging 机制可还原几乎所有数据库操作细节。</p>
+<p>严格来说，这些进阶功能“可做可不做”。但许多情况下，最终的决定权往往落在了“<strong>安全 vs. 性能</strong>”的权衡上。毫无疑问，这两者天然矛盾：更高的安全性通常需要更多的操作，必然影响性能，反之亦然。</p>
+<p>业界许多项目最终选择让安全为性能让步，我认为根本原因在于：<strong>性能更容易制定量化指标</strong>。性能是一个可量化的数值，可以持续提升，成为项目组的“铁饭碗”。而安全则令人讨厌，因为“无事发生”本应是常态，并无奖励，一旦出事，则会引发轩然大波。</p>
+<p>然而，换个角度，<strong>性能反而应为安全让步</strong>。性能的损失可以通过其他途径弥补，如硬件升级、扩容，系统参数优化（【让PostgreSQL再次伟大#01】），以及高速缓存（如【让PostgreSQL再次伟大#03】将介绍的内存缓存）等。</p>
+<p>但安全不行，安全是“非黑即白”的，只有 0 和 1。无论前期工作做得多么出色，最后一步若出现问题，整个结果链就变成了 0。即便拥有 110% 或 120% 的性能，乘以 0 的结果依然是 0。一切努力将化为虚无，其意义何在？你觉得是不是？</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=PostgreSQL" class="entity-link company-link">PostgreSQL</a>, 
+                
+                  <a href="/search/?q=GitLab" class="entity-link company-link">GitLab</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=PostgreSQL" class="entity-link product-link">PostgreSQL</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">postgresql</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">database-security</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">row-level-security</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">access-control</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">least-privilege</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

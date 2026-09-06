@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>算力就是命脉：Anthropic CFO 谈计算资源、模型智能与企业增长 · 乔木博客</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="算力就是命脉：Anthropic CFO 谈计算资源、模型智能与企业增长 · 乔木博客" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">算力就是命脉：Anthropic CFO 谈计算资源、模型智能与企业增长 · 乔木博客</span>
+      <span data-pagefind-meta="speaker" style="display:none;">向阳乔木</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-05-18
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/xiang-yang-qiao-mu/">向阳乔木</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://blog.qiaomu.ai/anthropic-cfo-on-compute-as-mission-critical" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-05-18
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本文介绍了Anthropic CFO Krishna Rao关于算力调度、模型迭代与企业增长的深度思考。Anthropic通过多平台算力部署、模型推理效率优化及内部AI开发赋能，实现了指数级营收增长。文章还探讨了面对AI能力突变时的发布策略及算力作为核心资产的经济学逻辑。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>乔木博客</p>
+<p>全部</p>
+<p>AI工具</p>
+<p>AI教程</p>
+<p>AI生成</p>
+<p>AI资讯</p>
+<p>健脑房</p>
+<p>播客解读</p>
+<p>论文学习</p>
+<h1>算力就是命脉：Anthropic CFO 谈计算资源、模型智能与企业增长</h1>
+<p>AI资讯</p>
+<p>·</p>
+<p>2026年5月18日</p>
+<p>·</p>
+<p>579 次阅读</p>
+<p>·</p>
+<p>约 12 分钟</p>
+<p>今年第一季度，Anthropic 的年化营收从 90 亿美元涨到了 300 亿美元出头。</p>
+<p>不是同比，是单季度内，翻了三倍多。</p>
+<p>这个数字值得停下来想一想：是什么在驱动这种增长？背后的资源调度逻辑是什么？企业客户为什么愿意为更新的模型持续加码？</p>
+<p>Anthropic CFO Krishna Rao 在一次深度对谈中，把这些问题从内部视角讲了个清楚。以下是核心内容的整理和解读。</p>
+<h2>算力不是成本，是画布</h2>
+<p>Krishna 用了一个比喻：算力是公司的&quot;画布&quot;，其他所有东西都画在上面。</p>
+<p>这不是修辞，是字面意思。</p>
+<p>Anthropic 的算力同时服务三件事：训练新模型、加速内部研发、服务外部客户。</p>
+<p>同一块芯片，早上跑推理，下午做强化学习，晚上切回训练。</p>
+<p>这种灵活性不是天生的，是花了好几年时间刻意建出来的。</p>
+<p>Anthropic 同时使用三套芯片平台：亚马逊的 Trainium、谷歌的 TPU、英伟达的 GPU。</p>
+<p>要让它们互相可替换，需要从编译器层面往上全部自己做，还要和芯片厂商深度协作，直接影响芯片的研发路线图。</p>
+<p>当年他们开始用 TPU 的时候，外界觉得这很奇怪，&quot;大家都用 GPU，你们搞什么？&quot;但正是这种多平台能力，让 Anthropic 在算力调度上拥有了别人没有的弹性。</p>
+<p>Krishna 说，他现在仍然把 30% 到 40% 的时间花在算力相关的决策上。</p>
+<h2>&quot;不确定性锥形&quot;：指数增长下的规划难题</h2>
+<p>买多了算力，公司会撑死；买少了，服务不了客户，也跟不上前沿。</p>
+<p>这就是 Krishna 反复提到的&quot;不确定性锥形&quot;：在指数增长的业务里，月度或周度增长率的微小差异，会在复利效应下产生天壤之别的结果。</p>
+<p>往前看一两年，可能的结果范围极宽。</p>
+<p>他承认，人类天生是线性思维，他自己加入公司两年，花了很长时间才把这个思维定势打破。</p>
+<p>应对方法是：不做点估计，做情景规划。</p>
+<p>同时把灵活性直接写进采购合同里，让算力可以在不同用途之间动态调配。</p>
+<p>最近的动作可以印证这个逻辑：上个月，Anthropic 与谷歌和 Broadcom 签了 5 吉瓦的 TPU 协议（从 2027 年开始），同时与亚马逊签了另一个 5 吉瓦的 Trainium 协议，总承诺金额超过 1000 亿美元。</p>
+<p>此外还宣布了与 SpaceX 在孟菲斯 Colossus 设施的合作，用于扩展消费者和专业用户侧的服务能力。</p>
+<p>这是一层层叠加的算力蛋糕，不同时间点、不同能力的资源依次上线，持续比较性价比，动态分配用途。</p>
+<h2>效率提升不是副产品，是核心竞争力</h2>
+<p>很多人理解模型迭代，就像换车：从普通轿车换成跑车，性能更强，但油耗更高。</p>
+<p>Krishna 说 Anthropic 的情况不是这样。</p>
+<p>每一代新模型，不只是能力更强，处理 token 的效率也更高。</p>
+<p>从 Opus 4 到 Opus 4.5、4.6、4.7，每一跳都有效率乘数。</p>
+<p>这个乘数不只是让客户受益，也让内部研发受益，因为强化学习本质上是在沙盒里做推理，模型推理效率高了，RL 训练也更快。</p>
+<p>这形成了一个正向循环：更好的模型让内部研发更快，更快的研发产出更好的模型，同时对外服务的成本也在下降。</p>
+<p>Opus 系列降价就是这个逻辑的体现。</p>
+<p>他们发现 Opus 级别的模型相对于其能力是被低估使用的，很多人明明有 Opus 级别的需求，却硬塞进 Sonnet 的预算里。</p>
+<p>降价之后，消费量的增长远超预期，这正是 Jevons （杰文斯）悖论的教科书案例：价格下降，需求爆发，总收入反而上升。</p>
+<h2>前沿智能的回报，在企业端尤其高</h2>
+<p>&quot;用六个月前的旧模型就够了&quot;，这个论断在实际中被反复证伪。</p>
+<p>Krishna 的解释是：模型智能不是一个 IQ 分数，是多维度的。</p>
+<p>新一代模型带来的不只是&quot;更聪明&quot;，还有长任务处理能力、工具调用能力、智能体任务的执行速度。</p>
+<p>他用了一个类比：两个能力相当的员工，一个做一周，一个做一天，后者的产出效率是前者的七倍。</p>
+<p>速度本身就是能力的一部分。</p>
+<p>更重要的是，每一代新模型都会解锁新的市场空间。</p>
+<p>原来做不了的用例，现在能做了；原来只是试点的客户，现在开始大规模部署。</p>
+<p>Anthropic 现在服务财富 10 强中的 9 家，净收入留存率超过 500%。</p>
+<p>这两个数字放在一起，说明客户不只是在续约，是在持续加码。</p>
+<p>Krishna 提到，对谈前 20 分钟的车程里，他在手机上签了两笔金额超千万美元的合同。</p>
+<h2>90% 的代码由 Claude 写，包括 Claude 自己</h2>
+<p>目前 Anthropic 内部超过 90% 的代码由 Claude Code 完成，而 Claude Code 本身的代码也大量由 Claude 写。</p>
+<p>模型在帮助构建下一代模型。</p>
+<p>这也是为什么他们愿意把一部分本可以用来服务客户的算力留给内部使用，因为这些内部工作负载在加速研发，而研发的加速最终会体现在更好的模型上，进而体现在更大的市场空间上。</p>
+<p>他们的财务团队也在用同样的逻辑工作。</p>
+<p>70 多个 Claude 技能组成的技能库，自动生成月度财务报告，准确率达到 90% 到 95%。</p>
+<p>团队的讨论不再是&quot;这个数字对不对&quot;，而是&quot;这说明什么，我们该怎么做&quot;。</p>
+<p>以前要花几小时的周报，现在 30 分钟出来。</p>
+<p>有意思的是，财务团队里 token 使用量最高的，不是刚入职的年轻人，而是税务主管，他在用 Claude 构建税务政策引擎，把大量重复性工作自动化。</p>
+<h2>Mythos：第一个让人感到不安的模型</h2>
+<p>今年发布的 Mythos 是 Anthropic 第一次以分阶段方式发布模型，而不是直接公开上线。</p>
+<p>原因是：这个模型在网络安全能力上出现了明显的&quot;尖刺&quot;。</p>
+<p>同一个开源代码库，之前的模型发现了 22 个安全漏洞，Mythos 发现了 250 个。</p>
+<p>这个数字本身说明了问题。Anthropic 的选择不是不发布，而是先向可信的合作方开放，专注于如何把这种能力用于防御性场景，比如主动修补代码库漏洞，而不是攻击。</p>
+<p>Krishna 把这个描述为一个可以复用的模板：当模型在某个敏感维度上能力跃升时，发布方式本身需要相应调整。</p>
+<h2>投资者最难理解的事：算力不是可变成本</h2>
+<p>Krishna 说，他和投资者沟通时，最难解释的一件事是：算力不是传统意义上的可变成本。</p>
+<p>传统软件公司，R&amp;D（研发） 费用就是 R&amp;D 费用，不能变成 COGS（Cost of Goods Sold，营业成本）。</p>
+<p>但 Anthropic 的算力可以在早上跑推理、下午做训练，同一块资源在不同时间段支持不同的业务目标。</p>
+<p>这意味着，用&quot;每 token 边际成本&quot;来衡量 Anthropic 的盈利能力，是用错了框架。</p>
+<p>正确的衡量标准是：整体算力投入的回报率是多少？</p>
+<p>Krishna 说，目前这个回报是&quot;robust&quot;，他用了两次这个词。</p>
+<p>这个逻辑也解释了为什么 Anthropic 要持续大规模融资。</p>
+<p>自 Krishna 加入以来，公司已融资 750 亿美元，与亚马逊和谷歌的协议还将带来另外 500 亿美元。</p>
+<p>他的说法是：融这么多钱，主要不是为了填补亏损，而是为了覆盖不确定性锥形的上端，确保在最好的情景下也有足够的算力支撑增长。</p>
+<h2>融资路上的两个戏剧性时刻</h2>
+<p>Krishna 加入 Anthropic 时，公司正在完成 D 轮融资。</p>
+<p>那次融资并不顺利，Anthropic 当时才刚刚有了真正意义上的前沿模型，而融资尾声恰好撞上了 FTX 崩盘，大量 Anthropic 股份被迫抛售，市场一片混乱。</p>
+<p>E 轮的时机同样微妙。融资首日收盘，DeepSeek 的消息炸了出来，整个市场开始重新评估 AI 的投资逻辑。</p>
+<p>Krishna 说，他们还是完成了那次融资，但过程中的波动可想而知。</p>
+<p>这两个时间节点放在一起，倒是意外地说明了一件事：外部噪音再大，只要业务本身在兑现，资本最终还是会跟上来。</p>
+<h2>AI 安全研究，意外变成了销售优势</h2>
+<p>Anthropic 在可解释性研究（interpretability）和对齐研究上的投入，最初完全是出于安全使命，不是商业考量。</p>
+<p>但这件事产生了两个意外的副产品。</p>
+<p>第一，能看进模型内部，就能更好地构建它。</p>
+<p>可解释性研究让 Anthropic 对自己模型的理解比其他人更深，这直接反馈到了模型能力的提升上。</p>
+<p>第二，企业客户需要信任。</p>
+<p>Anthropic 现在服务财富 10 强中的 9 家，这些公司把最敏感的工作流，包括员工数据、客户信息、核心业务流程，都交给了 Claude 来处理。</p>
+<p>他们愿意这样做，很大程度上是因为 Anthropic 在安全和对齐上的公开投入给了他们信心。</p>
+<p>这个逻辑链，Krishna 说，早期投资者几乎没有人真正理解。</p>
+<h2>文化：七个联合创始人，全部还在</h2>
+<p>Anthropic 有七位联合创始人，七个人全部还在公司。</p>
+<p>最早的 20 到 30 名员工，绝大多数也还在。</p>
+<p>Meta 大规模高薪挖人的那段时间，Anthropic 只走了两个人，而其他实验室走了几十个。</p>
+<p>Krishna 把这归结于文化密度。</p>
+<p>他们有一套真实的文化面试，不是走过场，候选人在其他方面再优秀，文化关过不了就不录用。</p>
+<p>核心特质是：协作而不是抢功劳，谦逊而不是自大，有话直说但决策之后真正对齐，不搞内部政治。</p>
+<p>Dario 每两周在全公司面前做一次分享，讲三四个话题，然后接受员工的真实提问，没有托儿，没有预设答案。</p>
+<p>Krishna 说，这种透明度是很多人留下来的原因之一。</p>
+<h2>那次两个半小时的散步</h2>
+<p>Krishna 正式加入 Anthropic 之前，首席计算官 Tom Brown 带他在旧金山 Mission 区走了两个半小时，边走边讲他对公司未来的判断。</p>
+<p>Krishna 说，那些话听起来像科幻小说。</p>
+<p>他走回家，跟妻子说：&quot;如果这里面有 10% 是真的，这件事就会打破我见过的所有范式。&quot;</p>
+<p>结果，Tom 说的大部分都实现了。</p>
+<p>还有一些，按 Krishna 的说法，&quot;大概还在我们今天所处位置的前方&quot;。</p>
+<h2>如果你在做 AI 相关的决策</h2>
+<p>这次对谈里有几个判断，对从业者有直接参考价值。</p>
+<p>关于模型选择： 不要只看 benchmark 分数，那些指标很多已经饱和。真正重要的是客户在实际工作负载里的体验，尤其是长任务、工具调用、智能体场景下的表现。</p>
+<p>关于算力思维： 如果你在企业里负责 AI 基础设施，把算力当成单一用途的固定资产来管理，会错失大量效率空间。多平台、多用途、动态调配，是 Anthropic 花了几年时间建立的核心优势。</p>
+<p>关于采用节奏： 企业端的用例正在追赶模型能力，而不是反过来。这意味着，现在部署的产品，在六个月后模型升级时会自动获得能力提升。提前建好基础设施，比等模型&quot;足够好&quot;再动手，回报要高得多。</p>
+<p>© 2026</p>
+<p>·</p>
+<p>向阳乔木</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=Krishna Rao" class="entity-link person-link">Krishna Rao</a>, 
+                
+                  <a href="/search/?q=Dario Amodei" class="entity-link person-link">Dario Amodei</a>, 
+                
+                  <a href="/search/?q=Tom Brown" class="entity-link person-link">Tom Brown</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, 
+                
+                  <a href="/search/?q=Amazon" class="entity-link company-link">Amazon</a>, 
+                
+                  <a href="/search/?q=Google" class="entity-link company-link">Google</a>, 
+                
+                  <a href="/search/?q=Broadcom" class="entity-link company-link">Broadcom</a>, 
+                
+                  <a href="/search/?q=SpaceX" class="entity-link company-link">SpaceX</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>, 
+                
+                  <a href="/search/?q=Claude Code" class="entity-link product-link">Claude Code</a>, 
+                
+                  <a href="/search/?q=Opus" class="entity-link product-link">Opus</a>, 
+                
+                  <a href="/search/?q=Sonnet" class="entity-link product-link">Sonnet</a>, 
+                
+                  <a href="/search/?q=Mythos" class="entity-link product-link">Mythos</a>, 
+                
+                  <a href="/search/?q=Trainium" class="entity-link product-link">Trainium</a>, 
+                
+                  <a href="/search/?q=TPU" class="entity-link product-link">TPU</a>, 
+                
+                  <a href="/search/?q=GPU" class="entity-link product-link">GPU</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-compute/">ai-compute</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-strategy/">ai-strategy</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/model-scaling/">model-scaling</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/resource-allocation/">resource-allocation</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-economics/">ai-economics</a>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

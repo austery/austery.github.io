@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>超越语言转译：Project SeaLion 如何构建东南亚本土化 AI 生态</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="超越语言转译：Project SeaLion 如何构建东南亚本土化 AI 生态" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">超越语言转译：Project SeaLion 如何构建东南亚本土化 AI 生态</span>
+      <span data-pagefind-meta="speaker" style="display:none;">一席YiXi</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-04-29
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/yi-xi-yixi/">一席YiXi</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=MrZQX2D__sc" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-04-29
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">AI Singapore 模型开发负责人 Jin Kang 介绍了 Project SeaLion。该项目致力于解决主流大模型在东南亚语言和文化语境下的理解缺失，通过构建包含 1 万亿 token 的本土化数据集，SeaLion 在识别当地文化隐喻、优化非拉丁语系 token 效率以及服务外籍劳工等垂直应用中展现了卓越的性能与社会影响力。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>范式缺失：前沿模型为何难以理解本土语境</h3>
+<p>各位下午好，我是 <strong>Jin Kang</strong>，目前在 <strong>AI Singapore</strong>（新加坡国家人工智能项目）负责模型开发。今天非常荣幸能在这里与大家分享 <strong>Project SeaLion</strong>。在开始之前，我想邀请大家共同思考一个问题：<strong>前沿大模型</strong>（Frontier Models：指目前性能最强、规模最大的 AI 模型）是否真的强大到足以理解本土语境？</p>
+<p>我的答案是否定的。我们观察到的核心现状是：尽管市场上存在许多极其强大的、以英语和中文为基础的领先模型，但用户依然迫切需要能够使用母语进行交流互动的<strong>大语言模型</strong>（Large Language Model: 基于海量文本训练的 AI 系统）。全球仍有许多地区的人们在日常生活中并不使用英语或中文。想象一下，如果你能告诉他们，现在可以构建能够使用他们最熟悉、最舒适的母语进行交互的 AI 应用，这对他们来说是否更具吸引力且更实用？</p>
+<p>因此，<strong>AI Singapore</strong> 开发了 <strong>SeaLion</strong> 系列模型。SeaLion 代表“Southeast Asian Languages In One network”（东南亚语言统一网络），反映了我们服务东南亚社区的目标。目前该模型已针对印尼语、马来语、泰语、菲律宾语、缅甸语等多种语言进行了深度训练。不幸的是，在英语和中文之外，大模型的自然语言处理能力和文化理解能力仍存在巨大的断层。东南亚拥有超过 7 亿人口和 1,200 多种语言，这种多样性导致四分之三的东南亚人无法从 AI 的变革潜力中获益。我们相信，只有当模型能用母语进行自然对话时，它们才会产生亲和力，进而推动 AI 的普及。</p>
+<h3>算法偏见：训练数据带来的“文化距离”与成本鸿沟</h3>
+<p>哈佛大学曾发表过一篇题为《哪些人类》（Which Humans）的研究，指出前沿的英语大模型与全球许多国家和文化并不契合，东南亚也不例外。研究强调，现有的英语模型与东南亚地区存在巨大的“文化距离”。其根本结论在于：<strong>模型生成的输出是其训练数据的代表</strong>，这意味着模型必然包含各种偏见。</p>
+<p>这种偏见可能源于设计者的价值观导向，例如在描述历史事件时由于开发者的倾向而产生立场偏移；也可能源于数据的代表性失衡。<strong>美国数据</strong>在英语语料中严重过载，导致模型体现出强烈的美国文化色彩。再比如，泰米尔语虽是新加坡的官方语言之一，但在互联网语料中，来自印度本土的数据远多于来自新马地区的数据，导致了区域性的代表性不足。</p>
+<p>更深层的影响存在于<strong>分词算法</strong>（Tokenization Algorithm: 将文本切分为 AI 可处理单元的算法）中。在处理泰米尔语、泰语或缅甸语等非拉丁字母脚本时，模型往往需要比英语多出 5 到 10 倍的 <strong>token</strong>（Token: 文本处理的基本单位）来表达同样意思的句子。在实际应用中，这意味着根据你选择的模型，非拉丁语系的用户可能需要支付数倍甚至十倍的推理成本。这种性能和成本上的不平衡，使得东南亚用户面临被 AI 红利排斥的真实风险。</p>
+<h3>语义深度：从语言翻译到文化隐喻的精准捕捉</h3>
+<p><strong>SeaLion</strong> 的设计初衷就是为了应对这种多样性。我们在强大的现有开源模型基础上，利用超过 <strong>1 万亿 token</strong> 的高质量本土数据进行训练，旨在提取更深层次的跨文化理解力。我们追求的是区域卓越性、多模态能力、资源效率以及安全性。</p>
+<p>一个直观的例子可以说明“多语言模型”与“多文化模型”的区别。在菲律宾语中，女性用户可能会问：店里有没有“meron”？她需要买一些“ano”。在这个语境下，“meron”是生理期的隐喻，而“ano”则是卫生棉的代称。一个虽然强大但缺乏本土文化训练的多模态模型，虽然能给出连贯的回答，却无法识别这些委婉语，可能会列出胃药、止泻药等药店常见商品，但这完全不符合用户的真实需求。</p>
+<p>相比之下，<strong>SeaLion</strong> 能够准确识别出用户在使用隐喻，并列出止痛药、卫生棉（菲律宾惯称 pads 或 napkins）等针对性建议。这种互动让用户感到模型“懂我”。同样的情况也发生在中文语境中：如果你问模型“我大姨妈来了怎么办”，如果模型由于缺乏本土语境而告诉你如何接待到访的亲戚，那它就完全失去了使用价值。</p>
+<p>为了让 <strong>SeaLion</strong> 理解这些微妙的差异，我们必须直接与<strong>母语者社区</strong>合作。我们不仅需要高质量的语料，也需要中等甚至低质量的数据，因为口语、俚语和对话数据往往混合其中。只有母语者能告诉我们哪些表达是正确的。同时，我们通过人工巡检来剔除互联网数据中的垃圾信息，如弹出式博彩广告，确保模型学习到的是纯净的通用知识和文化常识。</p>
+<h3>社会效应：从助残翻译到保障劳工权益的 AI 实操</h3>
+<p>目前的 <strong>SeaLion</strong> 模型库涵盖了从 40 亿到 700 亿参数不等的规模，支持 <strong>Llama</strong>、<strong>Gemma</strong>、<strong>Qwen</strong> 等多种架构，并提供配套的安全模型 <strong>Seagull</strong>（支持东南亚语言的安全性任务）和嵌入模型。</p>
+<p>这些能力的整合已经产生了实实在在的社会价值。在数月前举办的东南亚开发者挑战赛中，有团队利用 <strong>SeaLion</strong> 开发了<strong>柬埔寨手语转文字应用</strong>。在许多东南亚国家，手语资源稀缺且由于缺乏资金支持而难以普及。该应用通过实时捕捉手势并将其转化为文字，极大地缓解了听障人士与普通人之间的沟通障碍。</p>
+<p>另一个已落地的案例是针对<strong>外籍劳工</strong>的聊天机器人。新到新加坡的务工人员由于语言障碍和法律文化的差异，往往不了解自己的合法权益，甚至在遇到基础生活需求时也无所适从。我们构建的机器人可以用印尼语、菲律宾语或缅甸语给出准确、具有亲和力的回复。</p>
+<p>在开发过程中，一位劳工询问模型能否推荐“好牙医”。这看似琐碎，但对他们而言至关重要——他们可能没有牙科保险，且希望节省每一分钱汇回老家。由于 <strong>SeaLion</strong> 训练中包含了新加坡专门服务外籍劳工、且配有语言翻译的公益诊所信息，它能给出极具价值的建议。在我们的结项评估中，一位工人说：“<strong>SeaLion 触动了我的心。</strong>”这让我们深感欣慰，也再次确认了将 AI 作为向善力量的目标。东南亚社区的支持让我们感激不尽，我们期待 <strong>SeaLion</strong> 能持续为这个地区的本土化需求贡献力量。谢谢大家。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=AI Singapore" class="entity-link company-link">AI Singapore</a>, 
+                
+                  <a href="/search/?q=Harvard University" class="entity-link company-link">Harvard University</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=SeaLion" class="entity-link product-link">SeaLion</a>, 
+                
+                  <a href="/search/?q=Seagull" class="entity-link product-link">Seagull</a>, 
+                
+                  <a href="/search/?q=Gemma" class="entity-link product-link">Gemma</a>, 
+                
+                  <a href="/search/?q=Llama" class="entity-link product-link">Llama</a>, 
+                
+                  <a href="/search/?q=Qwen" class="entity-link product-link">Qwen</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">multicultural-llm</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">cultural-alignment</span>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/token-optimization/">token-optimization</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">southeast-asia</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">inclusive-ai</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>同样的模型，为什么 Cursor 跑不过 Claude Code？ | 宝玉的分享</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="同样的模型，为什么 Cursor 跑不过 Claude Code？ | 宝玉的分享" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">同样的模型，为什么 Cursor 跑不过 Claude Code？ | 宝玉的分享</span>
+      <span data-pagefind-meta="speaker" style="display:none;">baoyu.io</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-02-24
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/baoyu-io/">baoyu.io</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://baoyu.io/blog/2026-02-23/claude-code-vs-cursor" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-02-24
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">这篇文章比较了 Cursor 和 Claude Code 在使用相同 AI 模型时的表现差异。作者宝玉从上下文管理、应用场景（IDE vs CLI）、以及 Anthropic 自家模型与工具形成的“数据飞轮”效应三个维度分析，指出 Claude Code 因其纯净的上下文、高度的移植性和数据飞轮优势，在开发效率和普适性上可能优于 Cursor。文章预示了 Agent 为中心的工作流将是未来趋势。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <p>宝玉的分享</p>
+<p>Menu</p>
+<p>See all posts</p>
+<p>Published on 2026-02-24</p>
+<h1>同样的模型，为什么 Cursor 跑不过 Claude Code？</h1>
+<p>作者：</p>
+<p>宝玉</p>
+<p>有网友问为什么 Claude Code 比 Cursor 好？</p>
+<p>我想从三个角度聊下这个问题：上下文、场景、数据飞轮。</p>
+<h2>上下文：IDE 是优势，也是包袱</h2>
+<p>我估计很多人会有我相同的感受：完成同样的任务，同样的 Claude 模型，在 Cursor 里和在 Claude Code 里跑，效果可以差很多，既然模型是一样的，那问题多半出在上下文上面。</p>
+<p>Cursor 最大的卖点是它把 AI 塞进了 IDE。你习惯了 VSCode，切过来几乎零成本，Tab 自动完成也确实做得好。</p>
+<p>但 IDE 带来的问题是：它要帮你维护太多跟当前任务无关的上下文。你打开了哪些 Tab、选中了哪些代码、侧边栏展示了什么，这些信息都会被塞进和模型交互的上下文里。你以为它在帮你，其实它在分散模型的注意力。</p>
+<p>Claude Code 是命令行工具（CLI），它只关心文件本身。没有 Tab 状态，没有 UI 元素，上下文干干净净。这不仅省 Token，更重要的是让 Agent 能聚焦在你给它的任务上。</p>
+<h2>场景：当 Agent 成为中心，IDE 退居二线</h2>
+<p>CLI 有一个 IDE 没法比的优势：移植性。</p>
+<p>你可以在本地用 Claude Code，可以在远程服务器上用，可以在 Docker 容器里用，可以直接集成到 CI/CD 流水线里。Anthropic 官方已经发布了 GitHub Action 和 GitLab CI/CD 集成，你在 PR 里 @claude 就能触发自动 Code Review、自动修复 Bug、甚至自动实现 Issue 里描述的功能。</p>
+<p>Claude Code 已经不只是一个“编程助手”了，它是一个可以嵌入到任何工作流里的开发工具包（SDK）。</p>
+<p>当 Agent 能力足够强的时候，你的日常工作模式会变。以前你需要打开 IDE，手动调整代码细节，现在你更多是在指挥 Agent：改这个文件、跑一下测试、修复报错。这个过程里，你不需要看到 IDE 的界面，你只需要一个能跟 Agent 对话的入口。</p>
+<p>一旦习惯了这种方式，Cursor 引以为傲的 Tab 自动完成就没那么重要了。你不需要 AI 帮你补全下一行代码，你需要 AI 帮你完成整个任务。</p>
+<p>场景还在继续扩展。已经有很多人用 Claude Code 做编程之外的事情：批量处理文件、生成报告、操作数据库、甚至辅助视频剪辑。当你的 AI 工作流是以命令行为入口的时候，编程只是它能做的事情之一。</p>
+<p>包括 Anthropic 也推出了针对办公场景的 Cowrok，可以满足很多办公需求，甚至于不需要打开办公软件可以生成不错的 PPT。这些都是相同的趋势，人会越来越多的以 Agent 为中心，去指挥 Agent 操作软件，而不是直接打开软件，这个变化正在发生。</p>
+<h2>数据飞轮：自家模型 vs 第三方集成</h2>
+<p>自家模型加自家工具形成的数据飞轮，可能是 Claude Code 真正的护城河。</p>
+<p>Cursor 是一个第三方工具，它接入多种模型，Claude、GPT、Gemini 都可以用。</p>
+<p>听上去很灵活对吧？但问题是，它要为每一种模型做优化：不同的系统提示词、不同的工具调用方式、不同的擅长领域。</p>
+<p>Codex 喜欢写 Python，Claude 习惯用 Bash，每次模型升级，这些适配都要重新调整。维护成本很高，而且很难做到极致。</p>
+<p>Claude Code 只需要考虑一件事：怎么把 Claude 模型的能力发挥到最大。它知道模型的所有技术细节，知道什么提示词效果最好，知道怎么拆分任务最高效。甚至 Anthropic 可以反过来，专门针对 Claude Code 的使用场景去训练模型。</p>
+<p>这就形成了一个飞轮：用户用 Claude Code 产生真实的交互数据，Anthropic 用这些数据训练下一代模型，模型变强后 Claude Code 更好用，吸引更多用户，产生更多数据。Cursor 做不到这个循环，因为数据和模型分属不同的公司。</p>
+<p>飞轮效应还体现在定价上。Anthropic 可以把 Claude Code 的订阅价格定得相对便宜，因为用户产生的数据本身就有价值，相当于用补贴换数据。</p>
+<p>Cursor 的商业模式是赚差价：用户付月费，它去调 API，中间的差价就是利润。用户的 Token 用得越少，Cursor 赚得越多。它之前尝试过比较大方的包月方案，很快就扛不住成本了，现在改成包月加超额付费的模式。做 Agent 功能的时候，它就有动力去省 Token，但一省 Token 上下文就可能被截断，效果就打折扣。</p>
+<p>这也是为什么同样的模型，Cursor 的表现不一定比得上 Claude Code。</p>
+<h2>最后</h2>
+<p>我得申明下，我有一段时间没怎么用 Cursor 了，上面这些对 Cursor 的判断是有滞后的，更多是一年前的 Cursor 印象。Cursor 也在做 CLI 工具，也在往 Agent 方向走。两者的形态边界在模糊。</p>
+<p>但核心逻辑不会变：当编程的主要方式从“人写代码”变成“人指挥 Agent 写代码”，IDE 的重要性就会持续下降。 原生为 Agent 设计的 CLI 工具，天然比从 IDE 里长出来的 Agent 功能更有优势。</p>
+<p>See all posts</p>
+<p>Built by 宝玉.  RSS . 本站原创内容，独家授权赛博禅心公众号发布。</p>
+<p>Toggle theme</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+              <p><strong>人物:</strong>
+                
+                  <a href="/search/?q=宝玉" class="entity-link person-link">宝玉</a>
+                
+              </p>
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=Cursor" class="entity-link product-link">Cursor</a>, 
+                
+                  <a href="/search/?q=Claude Code" class="entity-link product-link">Claude Code</a>, 
+                
+                  <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>, 
+                
+                  <a href="/search/?q=GPT" class="entity-link product-link">GPT</a>, 
+                
+                  <a href="/search/?q=Gemini" class="entity-link product-link">Gemini</a>, 
+                
+                  <a href="/search/?q=Cowrok" class="entity-link product-link">Cowrok</a>
+                
+              </p>
+            
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <a class="tag-link" href="/tags/ai-agents/">ai-agents</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/developer-tools/">developer-tools</a>
+              
+            
+          
+            
+              
+                <a class="tag-link" href="/tags/context-management/">context-management</a>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">data-flywheel</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

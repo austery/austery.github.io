@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>知道“什么是好的”比能写出好的更难：Agent 时代的程序员进化与组织变革</title>
+
+    <!-- 字体：Playfair Display (英文展示) + Noto Serif SC (中文) + JetBrains Mono (代码/元数据) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <!-- 品牌标志 -->
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        <!-- 主导航 -->
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        <!-- 右侧控件：搜索 + 主题切换 -->
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="report-container">
+    
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  
+  <main id="content-body" class="main-content" data-page-title="知道“什么是好的”比能写出好的更难：Agent 时代的程序员进化与组织变革" lang="zh-CN" data-pagefind-body>
+
+    <div id="top"></div>
+
+    
+    
+      <span data-pagefind-meta="title" style="display:none;">知道“什么是好的”比能写出好的更难：Agent 时代的程序员进化与组织变革</span>
+      <span data-pagefind-meta="speaker" style="display:none;">INDIGO 数字镜像</span>
+      
+      
+        <span data-pagefind-meta="date" style="display:none;">
+          2026-05-10
+        </span>
+      
+    
+    
+    
+
+    <div class="metadata-block">
+      
+      
+        <div class="pkm-taxonomy">
+          
+            <p><strong>领域:</strong>
+              
+              <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+            </p>
+          
+          
+            <p><strong>分类:</strong>
+              
+              <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+            </p>
+          
+          
+        </div>
+      
+
+      
+      
+        <p><strong>主讲人:</strong>
+          
+          
+          
+            
+            
+              
+              <a class="speaker-link" href="/speakers/indigo-shu-zi-jing-xiang/">INDIGO 数字镜像</a>
+            
+          
+        </p>
+      
+
+      
+
+      
+        <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=jB889lhF1Jk" target="_blank">查看</a></p>
+      
+
+      
+
+      
+      
+        <p><strong>发布时间:</strong>
+          
+            2026-05-10
+          
+        </p>
+      
+
+      
+      
+      
+        <div class="summary-section">
+          <p><strong>摘要:</strong></p>
+          <div class="summary-content">本期访谈深入探讨了 AI 驱动下的编程范式转移。从传统的逐行编码（石器时代）到“Agent 驾驭（Harnessing）”与“面向 Agent 编程”的跨越，探讨了程序员如何转型为系统设计者与“治理者”。对话还涉及了组织效率瓶颈、软件个性化趋势、Unix 哲学的回归，以及 AI 时代中产阶级坍塌与人类意义危机等深层社会议题。</div>
+        </div>
+      
+
+      
+      
+    </div>
+
+    
+
+    <h3>程序员的“石器时代”已成往事</h3>
+<p><strong>Indigo</strong>: 欢迎回到 <strong>Indigo Talk</strong>。今天我来到了一个湾区的朋友家里录制。今天的嘉宾是<strong>双亚</strong>（松下）。哈喽，大家好。</p>
+<p><strong>松下</strong>: 大家好，我叫<strong>松下</strong>。之前参加过那个 <strong>New Year's Conference</strong> 认识了 Indigo。到目前为止，我觉得 AI 的发展跟以前相比已经感觉翻天覆地了。</p>
+<p><strong>Indigo</strong>: 是的，已经翻天覆地了。我们上一次聊还是 2024 年 12 月份，到现在才一年零四个月，我感觉好像已经过了快 10 年了。我们今天想聊的话题是关于 <strong>Programmer</strong>（程序员）、关于 AI 和编码，以及由这个延伸出来的一些变化。松下是硬核程序员出身，要不你先介绍一下你的背景？</p>
+<p><strong>松下</strong>: 我的 Career 比较跳跃。其实我最早第一份工作做的是<strong>投行</strong>，本科学的是<strong>经济学</strong>。做投行一段时间后，我觉得很多东西就应该自动化。后来我比较幸运，回到 <strong>UC Berkeley</strong> 读了一个 <strong>Data Science</strong> 项目。当时已经开始接触很多 AI 相关的东西，用模型做各种训练。</p>
+<p><strong>松下</strong>: 后来我在一次会议上碰到了 <strong>Peter Abbeel</strong> 教授，他是 <strong>Robotic</strong>（机器人学）领域非常有名的专家，门下有很多做 <strong>Humanoid Robotics</strong>（通用人形机器人）的创始人。后来我拿到了 <strong>Meta</strong> 的 Offer，就去了 Meta。在 Meta 主要做<strong>搜索引擎</strong>相关的东西，比如 Marketplace Search 还有 Instagram 的好友推荐。其实 <strong>Large Language Model</strong>（大语言模型）本质上也是搜索的一种，只是现在通过 <strong>Natural Prompt</strong>（自然语言提示）来做。</p>
+<p><strong>松下</strong>: 真正让我意识到 AI Is Something Big 的时候，是 2022 年底、2023 年初，当时 <strong>ChatGPT</strong> 刚出来，震惊了整个硅谷。大家都觉得这是像<strong>蒸汽机时代</strong>一样的生产力变革。我现在已经离开 Meta 一年多了，最近在做一些 AI 与<strong>生物医药</strong>（AI Pharmaceutical）相关的项目。</p>
+<h3>每季度性能翻倍：从推理计算到 Agent 时代</h3>
+<p><strong>Indigo</strong>: 我们从 2024 年底那次大会之后，那个时候大家还在聊 <strong>o1</strong> 的推理能力和强化学习。你想想看，就这么一年多时间，我们从推理式计算到了 <strong>Agent</strong>，然后到 <strong>Coding Agent</strong>，一直到现在的智能体能够持续工作 4 到 6 个小时。这有点太快了。</p>
+<p><strong>松下</strong>: 基本上每一个季度性能就翻倍。一年下来就是 2 的四次方，16 倍，后面就是指数级增长了。而且现在它能够自己写代码、自己进化、自己迭代。像 <strong>Anthropic</strong> 这样的公司，发版本速度这么快，是因为它整个公司是非常扁平的，全员都在用 AI 和 Coding 软件，分成小组让 AI 快速往上加速。</p>
+<p><strong>松下</strong>: 我真的觉得天变了。因为我是转码的，我经历过那个“<strong>石器时代</strong>”，就是一行行写代码的年代。到现在，我写代码时也是 <strong>AI Coding</strong> 了。你真的可以通过讲一段话，就让它生成一个甚至整个项目。虽然不能说每一行都是高质量的，或者能比拼最顶尖的程序员，但对于绝大部分 Coding 工作来说，它极大地提高了效率。</p>
+<h3>Agent Harnessing：程序员转型“系统哲学家”</h3>
+<p><strong>松下</strong>: 最近有个词很火，叫 <strong>Harnessing</strong>（驾驭）。因为 <strong>Native Coding</strong> 的改变，整个写程序的方式会发生根本性变化。以后好的程序不再只是 Line By Line 去写代码，而是你要设计一个 <strong>Philosophy</strong>（哲学），让代码实现自我进化。</p>
+<p><strong>松下</strong>: <strong>Autopilot</strong> 让模型自己进化的概念并不新，但现在 <strong>Anthropic</strong> 和 <strong>OpenAI</strong> 提得越来越多，比如 <strong>Agent Harness</strong>。人类需要去做 Harnessing 的设计。这就像是一个哲学家，你需要设计一个架构，设计一个理念，让代码在遵守这个理念的情况下自我进化。</p>
+<p><strong>Indigo</strong>: 作为一个女性工程师，你从你的角度来看，这个 Harness 工程有没有什么特殊的加分项？</p>
+<p><strong>松下</strong>: 我觉得以前写代码更像是一种机械的东西，Rule by Rule，Line by Line。你要非常 <strong>Down To Earth</strong>（接地气）。现在你会发现顶尖的 AI 科学家，像 <strong>Ilya Sutskever</strong>，他们其实会读很多哲学。</p>
+<p><strong>Indigo</strong>: 是的，上次活动看到 Ilya 出场的时候，很有“AI 之神”的感觉。他那种眼神好像已经预见到了一切。</p>
+<p><strong>松下</strong>: 这种 Harness 框架会把人类工程师强行拉到更高的高度。你必须是一个更好的<strong>系统设计者</strong>。比如数据库管理的理念、推荐机制的价值观——你认为什么样的推荐是有益的，什么样的有害的。你不再手动设计算法，而是设计一个理念，让 Agent 在这个理念下自我设计方法。</p>
+<h3>知道“什么是好的”比“能写出好的”更重要</h3>
+<p><strong>Indigo</strong>: 我今天看到了一个做音乐的编程大神，他用 Prompt 让 Anthropic 的模型写了一套英文版的《<strong>道德经</strong>》解释。他有一段很有名的话：“我不会写代码，但我知道什么是好代码。”</p>
+<p><strong>松下</strong>: 这个点非常重要。以后人类知道什么是“好的”，比能不能亲手写出好的更重要。但大家不要小看这一点，学会什么是“好的”其实很难。如果你不会写，你可能不知道这个东西在长期或短期内会造成什么样的累积影响。</p>
+<p><strong>松下</strong>: 比如一个简单的算法，如果我以点赞数作为唯一好的标准，那长期以往平台的内容会变成什么样？如果你没有能力识别 AI 的 <strong>Hallucination</strong>（幻觉），或者不知道它的建议在某种极端情况下是极其危险的，那你如何做判断？</p>
+<p><strong>Indigo</strong>: 这就是<strong>直觉</strong>。直觉是一个非常复杂的模型，它是通过你一步步亲手做、犯错、修正而积累出来的。如果未来的程序员跳过了这一步步的过程，他们还会有直觉吗？这是我非常好奇也觉得很危险的一个问题。</p>
+<p><strong>松下</strong>: 这确实是人类面临的一个非常困难的问题。如果持续在每个领域保持顶尖专家的能力，这会变得非常重要。如果我们把评判权也完全交给 AI，那真的安全吗？</p>
+<h3>面向 Agent 编程：Unix 哲学的回归</h3>
+<p><strong>Indigo</strong>: 就像我们现在不需要知道编译器怎么把代码变成机器码一样，我们现在正从面向“文件”编程转向面向“<strong>Agent</strong>”编程。我不需要管过程怎么执行，但我得知道系统是怎么组合起来的。</p>
+<p><strong>松下</strong>: 以前大部分人是农民，因为需要人种粮食。现在可能每个领域只需要极少数顶尖专家掌握核心，其他人去用就好了。</p>
+<p><strong>Indigo</strong>: 那程序员这个职业可能会像“考古”一样，只有一部分真心执着的人会去研究底层。我感觉会形成一个结构：底层是执着的专家，上层是面向 Agent 的 <strong>Builder</strong>（构建者）。</p>
+<p><strong>松下</strong>: 现在的博弈在于如何让 AI 做出不那么 Common（平庸）的东西。<strong>Creativity</strong>（创造力）会变得更重要。最近硅谷那个抗衰专家 <strong>Bryan Johnson</strong> 提到他通过迷幻药解锁了一些感知。或许以后人类在创造力和体感感知上需要更大的突破，因为执行已经不重要了，你的 <strong>Idea</strong> 和感知才重要。</p>
+<p><strong>Indigo</strong>: 这种主观体验在 AI 时代会更重要，做产品更像是一种<strong>艺术创作</strong>。</p>
+<h3>组织效率瓶颈与 SaaS 的消亡</h3>
+<p><strong>Indigo</strong>: 现在的软件和 <strong>SaaS</strong> 都是标准化的，因为小公司请不起团队做定制。但以后任何一个小团队都可以让 Agent 按照需求产生软件。</p>
+<p><strong>松下</strong>: 以后东西就是“随要随写”，用完即弃。你可以完全定制化你想要的，不再需要固定在 SaaS 的页面上。甚至以后的工具可能不是给人用的，而是给 Agent 用的。网站会有双版本：一个 <strong>Web View</strong> 给人类，一个 <strong>Markdown</strong> 版本给 Agent。</p>
+<p><strong>Indigo</strong>: 这就是我现在的做法。我让 AI 分成几个角色做投资：一个负责 Marketing 观察，一个确定交易，一个搜集新闻，一个评估仓位。我让它们把执行结果写成 Markdown 文件，Agent 之间通过读取这些文件来通讯。这其实回归到了 <strong>Unix 哲学</strong>：<strong>Everything Is File</strong>（万物皆文件）。</p>
+<p><strong>松下</strong>: 这种以文件为核心的系统，让数据、风格、SOP 流程都可以被 Document 化。</p>
+<p><strong>Indigo</strong>: 最近很多 VC 在问：既然效率提升了 10 倍，为什么还没看到 10 倍的产出？</p>
+<p><strong>松下</strong>: 因为<strong>组织</strong>不是 10 倍的。沟通损耗都消耗在组织结构里了。个人可以提升 10 倍，但组织里那个最慢的人就是瓶颈。</p>
+<p><strong>Indigo</strong>: 传统的组织架构是从罗马军团演变来的，层层指挥，层层损耗。但现在 <strong>Agent Swarm</strong>（智能体集群）可以直接穿透指挥。如果你是老板，你定下目标，下面全是 Agents，它们分配任务、写代码、处理数字端的一切。组织会变得极度扁平。</p>
+<h3>意义危机：中产阶级坍塌与星辰大海</h3>
+<p><strong>松下</strong>: 如果人不用写代码、不用做设计、不用搞文档，那人在公司里做什么？</p>
+<p><strong>Indigo</strong>: 人会转到边缘。AI 在现实世界没有 Experience（体验）。人会去做情绪关怀、做沟通、做需要身体接触的事情，或者给 AI“跑腿”搜集现实数据。人的大脑慢慢被 AI 替代。</p>
+<p><strong>松下</strong>: 这会导致一个可怕的结果。如果你没有经过一步步的实践，你的推理是不扎实的，很容易被误导。未来会变成两个极端：极少数顶尖专家和大量在生活中寻找意义的人。</p>
+<p><strong>Indigo</strong>: 这是一个意义危机。过去两三百年工业革命后，人类是为了劳动而活。如果这 5 到 10 年工作不需要了，生活真的没有意义了。</p>
+<p><strong>松下</strong>: 这种意义的重建过程会非常漫长。以前是为了生存，后来是为了生产，现在这两个都快不需要了。</p>
+<p><strong>Indigo</strong>: 我的一个结论是：未来任何公司都会变成软件公司，任何业务都会软件化。社会上只会出现一人或几个人的小公司，以及巨型公司，中间形态会消失。<strong>中产阶级坍塌</strong>是不可避免的，拯救社会的唯一方法可能是提高生存底线，比如 <strong>UBI</strong>（全民基本收入）。</p>
+<p><strong>松下</strong>: 立法也改变不了趋势，因为 AI 效率太高了。我一直有一个想法，宇宙这么大，我们每人分一个外太空项目行不行？</p>
+<p><strong>Indigo</strong>: 那得等我们探索能力变强。<strong>Elon Musk</strong> 其实是在帮大家解决意义危机——往星辰大海去探索。如果不去开阔新的疆界，我们困在地球上，随着智能体越来越强，人类就会坍塌掉。</p>
+<p><strong>松下</strong>: 很高兴能聊这些，期待下一次再随便乱聊。</p>
+<p><strong>Indigo</strong>: 谢谢大家收听，拜拜。</p>
+
+
+    
+
+    
+    
+      <div class="entity-section">
+        <details class="entity-details">
+          <summary>📌 文中提及的人物和组织</summary>
+          <div class="entity-content">
+            
+            
+              <p><strong>公司/组织:</strong>
+                
+                  <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, 
+                
+                  <a href="/search/?q=Meta" class="entity-link company-link">Meta</a>, 
+                
+                  <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, 
+                
+                  <a href="/search/?q=SpaceX" class="entity-link company-link">SpaceX</a>
+                
+              </p>
+            
+            
+              <p><strong>产品/模型:</strong>
+                
+                  <a href="/search/?q=ChatGPT" class="entity-link product-link">ChatGPT</a>, 
+                
+                  <a href="/search/?q=Claude Code" class="entity-link product-link">Claude Code</a>, 
+                
+                  <a href="/search/?q=Cursor" class="entity-link product-link">Cursor</a>, 
+                
+                  <a href="/search/?q=O1" class="entity-link product-link">O1</a>, 
+                
+                  <a href="/search/?q=GPT-4o" class="entity-link product-link">GPT-4o</a>
+                
+              </p>
+            
+            
+              <p><strong>媒体/书籍:</strong>
+                
+                  <a href="/search/?q=道德经" class="entity-link media-link">道德经</a>
+                
+              </p>
+            
+          </div>
+        </details>
+      </div>
+    
+
+    
+    
+      <div class="tags-section">
+        <p><strong>关键字:</strong>
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">agent-harnessing</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">abstraction-layer</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">organizational-efficiency</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">agent-os</span>
+              
+            
+          
+            
+              
+                <span class="tag-pill tag-pill--no-page">philosophy-of-coding</span>
+              
+            
+          
+        </p>
+      </div>
+    
+
+    
+
+    
+    
+    
+  </main>
+
+  
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文">
+    <span class="icon">📖</span>
+    <span class="btn-text">展开全部原文</span>
+  </button>
+
+</div>
+
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
