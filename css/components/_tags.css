@@ -1,0 +1,74 @@
+/* src/css/components/_tags.css */
+/* ===== 标签与徽章系统 ===== */
+
+/* ===== 通用标签列表 ===== */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* ===== 标签胶囊（列表页） ===== */
+.tag-pill {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.01em;
+  border: 1px solid var(--theme-border-dark);
+  border-radius: 3px;
+  background-color: transparent;
+  color: var(--theme-text-secondary);
+  text-decoration: none;
+  transition: border-color 0.15s, color 0.15s, background-color 0.15s;
+}
+
+.tag-pill:hover {
+  border-color: var(--theme-accent-primary);
+  color: var(--theme-accent-primary);
+  background-color: var(--theme-accent-primary-light);
+  text-decoration: none;
+}
+
+.tag-pill--no-page {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.tag-pill--no-page:hover {
+  border-color: var(--theme-border-dark);
+  color: var(--theme-text-secondary);
+  background-color: transparent;
+}
+
+/* ===== 演讲者胶囊 ===== */
+.speaker-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.speaker-pill {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  border-radius: 3px;
+  background-color: var(--theme-accent-secondary-light);
+  color: var(--theme-accent-secondary);
+  border: 1px solid var(--theme-accent-secondary);
+  text-decoration: none;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.speaker-pill:hover {
+  background-color: var(--theme-accent-secondary);
+  color: var(--theme-bg-primary);
+  text-decoration: none;
+}

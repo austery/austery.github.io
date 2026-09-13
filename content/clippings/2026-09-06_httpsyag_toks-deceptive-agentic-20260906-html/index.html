@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tok/s 是 agentic 场景里最会骗人的性能数字</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="tok/s 是 agentic 场景里最会骗人的性能数字" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">tok/s 是 agentic 场景里最会骗人的性能数字</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-06</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://yage.ai/share/toks-deceptive-agentic-20260906.html" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-06
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">文章探讨了在Agentic场景中，模型宣传的tok/s性能数字与实际体验之间的差异。作者通过本地部署和云端API的实测对比，指出在长上下文和多轮交互的真实负载下，预填充（prefill）的耗时和上下文寿命对整体体验的影响远大于纯解码速度的提升，强调评估模型可用性应综合考虑智能、有效吞吐、上下文寿命、成本和可靠性。</div></div>
+      
+    </div>
+    <p>日常跑 agentic coding
+工作流，我习惯在十几个模型和多个供应商之间来回切。今年在本地跑起来的
+Qwen 3.8 27B
+带来了实在的体验变化，它是我用到的第一个真正跨过智能门槛的小模型。放在本地工作站上跑，响应敏捷，不怎么撞墙，边际使用成本几乎只有电费，一个
+session 能稳稳当当跑上几个小时。</p>
+<p>跑顺之后，我产生了一个技术上的疑问。如果把一个已经足够聪明的小模型，推理速度推到目前云端能买到的物理上限，体验到底会变好多少？会有质变吗？为了验证这个想法，我接入了
+Cerebras 托管的同款 27B 权重（它的芯片为什么这么快，我之前单独写过一篇）。厂商官方宣称能跑到每秒
+1500 token 上下，对比我本地实测的每秒 102 token，纸面上有近 15
+倍的速度代际差。我按平时干活的习惯，直接把它接入了自己的真实写代码工作流。</p>
+<p>实测下来，速度确实快了 3
+倍多。但这个速度增长也带来了别的问题：context window
+更小、限流触发得更频繁、价格高了几十倍。整个会话只撑了三分钟就停了，账单还扣掉了
+1.57 美元。</p>
+<h2>快，但没你以为的那么快</h2>
+<p>先说速度本身。厂商宣称的每秒 1500
+token，在宣传页面上看着很高。但坐在终端前肉眼等每一轮输出，我体感上感受不到
+15 倍的速度飞跃，实际只有 3 倍多。</p>
+<p>差这么多，是因为整个行业报 tok/s 都用短
+context。行业里常见的基准大多在 1K 到 4K
+的短上下文下跑，测的只是纯解码阶段的吐字速度。这里有个容易忽略的点：不管是
+prefill 还是 decode，吞吐量都是 context 长度的函数，输入的 prompt
+越长，它就跑得越慢。在真实的多轮开发任务里，我实际等的是算上输入预填充在内的整段端到端耗时。</p>
+<p>在我自己的 agentic 负载里，各模型的 P50 context 落在 50K 到
+120K，部分长 context 的会话会冲到 200K
+甚至更高，单轮输入的上下文往往是单次输出 token 的 100 到 600
+倍。比如我自己实测 gpt-5.6-sol 达到 412 倍，ollama-cloud/glm-5.2 达到
+631 倍，本地跑的 Qwen 27B 也有 227
+倍。这是我在自身工作流里实测出来的分布，不代表行业平均水平。在比例悬殊到这个地步的情况下，预填充耗时是端到端等待里实打实的一块，对
+Cerebras 甚至占到中位时长的 55%。</p>
+<p>我看的指标是实际有效吞吐，也就是你肉眼等每一轮输出的真实速度。预填充算进去，工具执行时间剔出去，取中位数
+P50。下面是我工作站上连续 30 天记录到的主口径数据，n
+是样本数（通过过滤的生成次数，不是会话数）：</p>
+<p>模型</p>
+<p>P50 tok/s</p>
+<p>n</p>
+<p>P10</p>
+<p>P90</p>
+<p>P50 context</p>
+<p>max context</p>
+<p>Cerebras Qwen 27B</p>
+<p>357.4</p>
+<p>28</p>
+<p>185.5</p>
+<p>767.6</p>
+<p>54,357</p>
+<p>99,152</p>
+<p>本地 Qwen 27B</p>
+<p>101.7</p>
+<p>11,108</p>
+<p>11.7</p>
+<p>156.5</p>
+<p>92,127</p>
+<p>243,348</p>
+<p>两者的中位数相除，357.4 与 101.7 的实际倍率约为 3.5 倍。Cerebras
+确实更快，但远没有达到纸面上近 15
+倍的代际差距。把预填充和解码拆开看，速度差在哪，看下面这张表：</p>
+<p>指标 (中位数 P50)</p>
+<p>Cerebras</p>
+<p>本地 Qwen</p>
+<p>比值</p>
+<p>decode-only</p>
+<p>1040 tok/s</p>
+<p>157 tok/s</p>
+<p>6.6×</p>
+<p>TTFT</p>
+<p>0.89s (P90 1.59s)</p>
+<p>1.01s (P90 27.4s)</p>
+<p>P50 相近</p>
+<p>TTFT 占总时长</p>
+<p>55% (P90 82%)</p>
+<p>27% (P90 85%)</p>
+<ul>
+<li></li>
+</ul>
+<p>actual 有效吞吐</p>
+<p>357</p>
+<p>102</p>
+<p>3.5×</p>
+<p>单看纯解码环节，两者的差距确实有 6.6 倍，厂商宣称的每秒 1500 token
+在量级上确实成立（在小于 20K 的短 context 子集里甚至能冲到
+1854）。可一旦回到真实的长上下文流程，长上下文预填充消耗了云端方案的大部分解码红利，两者的实际倍率收窄到了
+3.5 倍。而快的模型，预填充吃掉的红利更多：Cerebras 从 1040 掉到
+357，本地只从 157 降到 102。</p>
+<p>厂商宣称的量级和短 context
+下的实测是对得上的，只是那个单项指标测的是短文本解码，无法直接对应多轮交互的真实体感。脱离具体上下文比例去谈吐字速度，很容易把选型带偏。</p>
+<p>厂商标称的 1500 tok/s 是短 context 的
+decode 速度，算上预填充后实测只剩 357，对本地 102 的优势从 15 倍缩到 3.5
+倍</p>
+<h2>越快，session 死得越快</h2>
+<p>3.5
+倍这个提速是真的，日常确实能感觉到。但快本身会出事：真正让体验崩掉的，是快和
+agentic 循环撞在一起之后的连锁反应。</p>
+<p>agentic
+循环是这样的：每一轮，模型都要把前面所有文件内容、工具结果、对话历史整包重新读一遍。多轮循环下来，输入上下文呈现滚雪球般的膨胀。模型生成速度越快，多轮迭代推进得越频繁，每分钟向服务端送出的
+token 量就越大。</p>
+<p>翻这三分钟的运行记录，可以看到整个崩盘过程。首个会话启动后，上下文长度在短短
+65 秒内从 11K 迅速飙到
+99K。模型一两秒就能吐完一轮输出，客户端紧接着发起工具调用并进入下一轮，每分钟送出的
+token 量随之暴涨。在 Cerebras Developer 档位下，qwen-3.8-27b 设有 150K
+未缓存 TPM、450K 总 TPM 与 450 RPM 的限额。首个会话在约 65 秒内连续发出
+13 个请求，未缓存输入约 102K（占 150K 限额的 68%），输出约
+3K，但多轮带入的历史使得缓存读取达到 760K（对应单会话 88%
+的缓存命中率）。累计向 API 送出的 token 总量达到约 865K，达到 450K
+总限额的 192%，直接触发了 429 报错
+&quot;Tokens per minute limit exceeded&quot;。真正卡死请求的是总 TPM
+这一桶，未缓存限额（102K / 150K）尚有富余。</p>
+<p>这里存在一个反直觉的机制设计：缓存读取在账单上单价低廉，但在速率限制里仍然全额计入总
+TPM 预算。agentic
+循环每轮都要重发不断膨胀的完整历史，高缓存命中率压不住总 token
+量的近线性增长，那 760K 的缓存重读正是把每分钟总量顶到 865K 的主力。</p>
+<p>生成越快循环转得越频繁，65 秒内上下文从
+11K 涨到 99K，累计 865K token 撞上 450K 的总 TPM 限额，429
+直接杀死会话</p>
+<p>体感上，我当时主观感觉每隔 15 到 30 秒就要撞一次墙。这一体感跟后台 65
+秒崩盘的硬指标严丝合缝。</p>
+<p>再看这 3.24 分钟产生的实际账单。在这段简短的时间里，调用产生了 34
+条助手消息，账单总额达到 1.57 美元。输入部分计费达到 1,534,667
+token，按每百万 token 0.99 美元计价产生 1.52 美元；输出部分计费 34,935
+token，包含基础输出 6,866 与思维链推理 28,069，按每百万 1.49 美元产生
+0.05 美元。计费输入中有 82% 属于缓存读取（具体为 1,264,128 /
+1,534,667）。折算下来每小时花销接近 29 美元，而本地满载每小时电费约 9
+美分。这里有个共同点：成本和 TPM
+都是输入占主导，两本账里说了算的都是送进去的东西。而且就算缓存命中率有
+88%，未缓存的那部分输入（270K）仍然是我实际输出（35K）的 7.7
+倍；缓存能省的是重复读历史那部分，每轮真正新进来的内容，它替我省不掉。把这笔账摊到电费上更直观：同样这
+3.24 分钟的活，本地跑要 11 分钟，电费约 1.7 美分（整机满载
+500W、民用电价 0.1844 美元/kWh）；Cerebras 收我 1.57 美元，差不多 90
+倍。</p>
+<p>把速度推到极致买到的结果，是每分钟预算更快撞顶以及高昂的账单开销。这
+1.57
+美元换来的产物是一个中途夭折的会话，手头的代码任务最终并没有完成。</p>
+<h2>够用到底赢在哪</h2>
+<p>那到底什么才算赢？极速云端方案在单点速度上占优，整体表现却输了。这说明评估一个模型在
+agentic
+体系里是否可用，不能只看单一速度指标。我把实际可用性整理成一个综合评估公式：
+usable = (智能 ≥ 坎) × 有效吞吐 × context 寿命 × 成本 × 可靠性</p>
+<p>在这个公式里，智能是道坎：没过线，后面数值再好也白搭；过了线，越聪明越好用，但它是个开关，不是能线性堆的乘数。达不到及格线的模型，工具调用频繁报错、指令执行反复走偏，后续各维度的数值再高也无法投入实际使用。一旦越过及格线，模型就能承担起日常开发工作。Qwen
+27B
+顺利通过了这道门槛，云端极速服务同样满足门槛要求，两者的分水岭主要落在其余四项指标上。</p>
+<p>横向对比两个方案的各项维度：</p>
+<p>维度</p>
+<p>本地 27B self-host</p>
+<p>Cerebras 云 API</p>
+<p>有效吞吐</p>
+<p>102 tok/s</p>
+<p>357 tok/s</p>
+<p>context 寿命</p>
+<p>256K 真实窗口，session 活数小时</p>
+<p>131K 窗口，3 分钟死</p>
+<p>成本</p>
+<p>~$0.09/小时（满载电费）</p>
+<p>~$29/小时</p>
+<p>可靠性</p>
+<p>不撞墙</p>
+<p>3 分钟就 429 限流</p>
+<p>对比四个维度，本地部署在成本、上下文寿命与可靠性三项上占据优势，仅在有效吞吐单项上落后。云端极速服务赢得了吞吐数字，却在其余三项上面临劣势。赢下一项速度优势，补不回输掉的另外三项。把
+agentic 的真实代价算进去，两者的排位就反过来了。</p>
+<p>本地 27B 在 context
+寿命、成本、可靠性三项上全赢，只在吞吐一项上输给最快的云
+API，够用方案赢三输一</p>
+<p>本地部署拥有 256K 的真实上下文窗口，满载每小时电费约 9
+美分，会话可以平稳运行数小时。这种平稳持续的执行能力，远比几秒钟内的爆发式吐字更具实用价值。</p>
+<p>说句实话，有一类活它干不了。面对需要耗费数小时、依赖海量上下文维持复杂规划与深层推理的高难度任务，顶尖的超大前沿模型依然具备不可替代的推理优势。Qwen
+27B
+能够胜任日常主流的常规开发工作，但它并不是应对超长链路复杂重活的终极答案。</p>
+<h2>这些数字怎么来的 + 别买 tok/s</h2>
+<p>上面这些判断，都来自我自己机器上的实测。文中的各项实测数据均来自真实运行记录。有效吞吐计算为输出
+token 数加推理 token
+数除以生成耗时。计时从单轮消息发起开始，一直算到生成结束；如果该轮以发起工具调用告终，耗时就截断至最早一个工具开始执行的时间点，工具自身的运行时间不计入模型耗时，首字延迟
+TTFT 则完整计入。过滤规则限定单次输出至少 50 token，耗时落在 0.2 秒至 1
+小时区间，最终输出 P10、P50 与 P90 分位数。</p>
+<p>这套数据覆盖了连续 30 天内 17 个模型的全部日常实机调用，包含约 7.3
+万个真实样本，全是我日常编写代码和处理任务的实测数据，没有任何人工合成的跑分成分。把
+17 个模型按有效吞吐 P50 排列，本地部署的 27B
+模型正是我日常高频交互中响应最敏捷的主力。具体对比如下：</p>
+<p>模型</p>
+<p>P50 tok/s</p>
+<p>n</p>
+<p>备注</p>
+<p>google/gemini-3.6-flash</p>
+<p>116.8</p>
+<p>1,163</p>
+<p>云端最快</p>
+<p>本地 qwen3.8-27b</p>
+<p>101.7</p>
+<p>11,108</p>
+<p>日常最快主力</p>
+<p>openai/gpt-5.6-sol</p>
+<p>34.7</p>
+<p>24,211</p>
+<p>用得最多，reasoning 含 thinking</p>
+<p>gemini-3.6-flash 在云端阵营中实测速度居首；本地部署的 qwen3.8-27b
+紧随其后，且样本量超过 1.1 万次；gpt-5.6-sol
+承担了最多的任务负载（样本量达
+24,211），因为输出中夹带大量思维链过程，有效吞吐中位数偏低。这个分布说明：依据真实有效吞吐排定的实用座次，与厂商宣传的理论速度排行榜大相径庭。</p>
+<p>GLM-5.3</p>
+<p>GLM-5.3-Flash</p>
+<p>Z.ai</p>
+<p>（zai-coding-plan）</p>
+<p>40.1（n=8,526）</p>
+<p>19.7（n=53）</p>
+<p>Ollama Cloud</p>
+<p>—（无数据）</p>
+<p>70.3（n=3,667）</p>
+<p>同一个 GLM-5.3-Flash 权重，Ollama Cloud 实测 70.3 tok/s，Z.ai 只有
+19.7 tok/s，差 3.6 倍，同一份权重下 serving stack
+决定了实际拿到多少速度，这也是我日常更常用 Ollama Cloud
+的原因。一个意外的点是 Z.ai 的 GLM-5.3-Flash（19.7）比它自己的
+GLM-5.3（40.1）还慢，可能是它的国产芯片栈还在适配中。不过 Z.ai Flash 的
+n=53 偏小，这个对比是方向性的，并非定论。</p>
+<p>给同行的选型建议并不复杂：挑选面向 agentic
+场景的模型，不必过分执着于厂商给出的标称吐字速率。更实际的做法是在符合自身业务的上下文深度下，实测端到端的有效吞吐，并综合权衡上下文窗口的实际承载力与调用成本。</p>
+<p>配套的查询工具已经开源在 opencode_skill
+仓库中。工具做成了只读形式的命令行程序，方便直接读取本地 SQLite
+数据库。运行单条指令即可复现完整报表、导出 Markdown
+分析并生成图表。拿自己的历史真实负载跑一遍，往往能发现不少意料之外的结论。</p>
+
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Qwen 3.8 27B" class="entity-link product-link">Qwen 3.8 27B</a>, <a href="/search/?q=Cerebras" class="entity-link product-link">Cerebras</a>, <a href="/search/?q=GPT-5.6-sol" class="entity-link product-link">GPT-5.6-sol</a>, <a href="/search/?q=GLM-5.3" class="entity-link product-link">GLM-5.3</a>, <a href="/search/?q=Gemini-3.6-flash" class="entity-link product-link">Gemini-3.6-flash</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+      
+        <span class="tag-pill tag-pill--no-page">model-performance</span>
+      
+        <a class="tag-link" href="/tags/context-window/">context-window</a>
+      
+        <span class="tag-pill tag-pill--no-page">throughput-analysis</span>
+      
+        <span class="tag-pill tag-pill--no-page">self-hosting</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

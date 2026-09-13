@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>端侧 AI 没有龙头，因为它正在从卖点变成零件</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="端侧 AI 没有龙头，因为它正在从卖点变成零件" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">端侧 AI 没有龙头，因为它正在从卖点变成零件</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-10</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://yage.ai/share/edge-ai-selling-point-to-part-20260910.html" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-10
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">文章探讨了端侧AI的现状，指出它正从市场卖点演变为设备中的一个基础零件。文章分析了端侧AI的讨论存在两种截然相反的论调，并指出其核心矛盾在于将端侧AI与传统嵌入式窄任务、硬件换机周期以及本地大模型这三种不同的业务混为一谈。最终认为，端侧AI的价值更多体现在特定工业和专业场景中，而非大众消费级通用助手，其商业价值的支撑点在于响应延迟、离线可用性、数据驻留和法律合规等硬约束。</div></div>
+      
+    </div>
+    <p>2026 年 9 月，欧洲小团队 Desert Ant Labs 推出了 18
+个能在设备本地直接运行的模型，免费额度为每平台、每模型 10
+万月活设备。发布首日冲上 Hacker News
+首页，评论区讨论热烈。有人翻出模型卡，发现团队的语音转写模型 Voz
+是英伟达 Parakeet 的移植版本，创始人随后在评论里承认了事实。</p>
+<p>这场发布很容易让人觉得端侧 AI
+正在拉开一场新战役，我自己最初也有过类似的预期。可顺着热闹往下看，新的困惑随之浮现：既然讨论声浪这么高，为什么市面上连一家叫得出名字的端侧
+AI 龙头公司都找不到？</p>
+<p>仔细梳理产业链的真实出货，问题其实出在端侧 AI
+公司这个称呼本身，并不在于市场规模太小。真正在大批量出货、产生真金白银利润的企业，没有一家把自己归类为端侧
+AI
+公司。可即便在产业内部，关于端侧到底有没有价值，也常年吵得不可开交。</p>
+<p>端侧 AI
+正在从发布会主打的卖点，变成每台设备里一个厂商不再单独宣传的零件</p>
+<h2>一个吵不出结论的问题</h2>
+<p>关于端侧 AI
+的讨论，长期存在两种截然相反却都言之凿凿的论调。乐观的声音把它看作下一个确定的大机会，底气来自扎实的商业数据：Ambarella
+累计出货约 4500 万颗边缘 AI 芯片，Mobileye 的计算芯片装进了超过 2.3
+亿辆汽车，英伟达的 Jetson 边缘计算平台聚集了 200
+万开发者。这些数字出自正式财报与官方披露，没有掺杂水分。</p>
+<p>悲观的声音则把它视作营销噱头，现实体感同样真切：用户多花预算买回家的
+AI PC，机身内专门增加的 AI
+计算芯片大部分时间处于闲置状态；手机厂商全力推销的各项 AI
+新功能，多数消费者日常很少使用，也不愿意为此额外掏钱。其实两方陈述的事实都没有作假，冲突的根源在于大家用端侧
+AI
+这同一个词，同时指代了三件逻辑截然不同的业务。混合在一起讨论，自然得不出一致结论。要看清这个市场，得先把这三笔账分别算清楚。</p>
+<h2>端侧 AI 其实是三件事</h2>
+<p>工业环境中早已有跑了二三十年的窄任务智能。工厂流水线上的缺陷筛选、门禁闸机处的车牌识别、降噪耳机内部的语音唤醒词，在端侧
+AI
+成为流行热词之前就已经非常普及，核心依靠传统计算机视觉和数字信号处理。前面提到的
+Ambarella 和
+Mobileye，出货主体始终是这类成熟工序，与时下讨论的大模型没有多少关联。</p>
+<p>与此同时，PC
+和手机巨头借着既有的硬件换代周期，把端侧计算包装成了新卖点。根据 Gartner
+的预测，2025 年全球 AI PC 出货量预计达到 7780 万台，占据全球 PC 市场的
+31%。但这笔庞大出货的核心驱动力在于 Windows 10
+停止支持引发的大规模换机潮，与用户主动追求 AI 体验关系不大。真正因为 AI
+能力获得单独买单的份额要小得多：搭载高通首发旗舰芯片 Snapdragon X 的 PC
+在 2024 年三季度只卖出约 72 万台，在全部 PC 中仅占 0.8%，相关数据来自 TechPowerUp
+的报道。</p>
+<p>至于围绕本地运行大模型展开的新探索，则是最近才出现的事情，也是 Desert
+Ant
+这类开发团队正在尝试的方向。不过这一层探索，眼下正同时承受来自云端和底层的双重挤压。</p>
+<p>端侧 AI
+这个词底下其实是三件事：二三十年的嵌入式窄任务、硬件换机周期，和最近才出现的本地大模型</p>
+<p>把这三种截然不同的业务揉成一个笼统的端侧
+AI，自然会产生自相矛盾的市场预测。这种断层并不属于正常的市场波动，症结出在统计口径上：有的机构只统计专用芯片，有的则把所有带有微弱智能运算能力的整机售价一并计入。拿这类模糊的汇总数字做判断，很难得出有效结论。真正要搞清楚谁在赚钱，必须去看现实中那些硬件出货究竟流向了哪里。</p>
+<h2>真正的大玩家，从来不叫端侧公司</h2>
+<p>如果按照独立品类的思路去寻找端侧 AI
+龙头，往往一无所获；但只要换个视角，巨头早已无处不在。苹果、高通、英伟达、谷歌、联发科、英特尔、AMD，都在自家芯片和操作系统中深度集成了
+AI 处理单元。在 2025 年第四季度智能手机芯片出货中，联发科占据 30%
+份额，苹果占 23%，高通占 22%，引自 Counterpoint
+的统计。而在具备 AI 处理能力的智能手表领域，苹果手表一家就占据了约 90%
+的出货量。这些巨头从来不会宣称自己是一家端侧 AI
+公司，因为对它们而言，本地智能只是完整计算芯片里的常规组成部分。</p>
+<p>相比之下，那些曾经顶着端侧 AI
+光环的独立初创企业，反而很难作为独立商业品牌长期立足。以色列的 Hailo
+估值从 12 亿美元跌到不足 5 亿美元，团队裁员约一半，Microchip 在 2026 年
+7 月签约收购该公司，相关估值报道见 Calcalist，收购签约见
+Microchip。谷歌初代
+Coral 的 edgetpu 代码仓库在 2026 年 4 月归档并转为只读，见
+GitHub
+记录。高通则直接买走了做 TinyML 平台的 Edge
+Impulse。这些团队早先专注做端侧
+AI，最终都成了芯片大厂生态里的配套零件。</p>
+<p>Desert Ant 如今所处的生态位也大体相同。它的 Voz
+模型展示页明确写道，这套方案基于苹果神经引擎优化，移植自英伟达 Parakeet
+TDT 0.6B v3，见 Desert
+Ant
+官网。把开源模型搬到苹果硬件架构上并跑出优异速度，在工程上确实需要扎实的优化功底，但商业价值依附于底层硬件的适配调优，模型权重本身并不构成壁垒。发布首日其
+GitHub 核心代码库只收获约 111
+个星标，旗下多数模型的下载量不到一千次。</p>
+<p>这里容易引来一个反驳：移动计算和云服务早先也只是一种技术部署形式，后来却孕育出了庞大的商业版图。两者的分水岭在于，移动平台和云计算在基础软硬件之上，都留出了独立且广阔的应用层；而底层操作系统与芯片厂商以极快速度吸收融合了端侧
+AI 涌现出的能力，中间没有给独立软件层留出驻留空间。端侧 AI
+的价值并未减损，只是这种价值没有停留在端侧这一层。没有独立的应用层支撑，端侧技术在直面大众消费者的产品上，很快撞上了天花板。</p>
+<h2>消费端：为什么这次雷声大雨点小是真的</h2>
+<p>消费电子市场反映出的冷淡情绪高度一致，多份跨渠道调研都给出了类似结论。2024
+年底的一份用户抽样调查表明，73% 的受访 iPhone 用户与 87%
+的受访三星手机用户反馈 AI 功能价值很小或没有，86.5% 的受访苹果用户以及
+94.5% 的受访三星用户明确表示不愿意为 AI 功能额外付费，数据源自 SellCell。另一项消费者追踪调查则显示，仅有
+11% 的受访者会因 AI 功能更换新手机，相比前一年还滑落了 7 个百分点，详见
+CNET
+的报道。</p>
+<p>PC 阵营的转变更加直接。在 2026 年的 Build 开发者大会上，微软放弃了
+Copilot+ 的 NPU 独占策略，允许相关 AI 功能直接分配给通用 CPU、GPU
+或其他芯片运行，参考 PCMag。Windows
+Central 在社论中直接指出，Copilot
+实际上完全依托云端服务支持，并没有真正调用个人设备中的 NPU。</p>
+<p>即便是在端侧硬件研发上投入深厚的苹果，也遇到了终端算力的客观物理上限。备受关注的新版
+Siri 从 2024 年最初公布算起，发布进度延后了大约 18
+个月，最终苹果决定接入谷歌 Gemini 模型来驱动 AI 版 Siri，引自 CNBC
+的报道。这家全球终端装机量居于榜首的消费硬件公司用实际选择表明，面对真正复杂的多模态大模型运算，即便自身拥有顶尖的芯片设计能力，最终依然需要依赖云端基础设施。不过，消费电子的遇冷并不代表端侧技术没有用武之地，在大众视线之外，另一套产业逻辑正在悄然兑现商业价值。</p>
+<h2>工业端：真金白银，但你看不见</h2>
+<p>端侧 AI
+真正产生持续利润的阵地，往往隐藏在远离大众舆论的专业场景之中。高阶助听设备是一个典型的例子。Phonak
+推出的 Infinio Sphere
+助听器，依靠内置的专用计算芯片在本地运行神经网络降噪模型。官方技术白皮书指出，这套方案将信噪比最高提升了
+10dB，佩戴者的语音理解表现最高提升了 36.8%，数据见 Phonak
+的技术文档。人耳对毫秒级声音延迟要求严苛，环境降噪无法忍受云端往返的网络延迟，超低延迟、离线可用以及隐私保护这三重硬指标，决定了算力必须留在耳道旁的设备内部。</p>
+<p>家庭清洁机器人也是相同的逻辑。石头科技在其官网上声明，所有视觉与避障运算均在设备本地处理，推理过程不向云端发送数据，见
+Roborock
+官网；科技记者向多家扫地机厂商核问后也证实，石头扫地机识别障碍物的照片与地图存储在设备本地，查看照片时云端仅作临时中继、不存储。该品牌在
+2025 年录得 580
+万台的出货量，证明这套本地视觉推理机制是经历过大规模出货检验的量产工程，远超过展台概念演示的范畴。</p>
+<p>在传统工业自动化与交通工具领域，本地智能的商业体量更为庞大。工业视觉检测龙头
+Cognex 的合作客户 Schneider Electric，将其全球 100
+多个工厂升级为智能化生产线，案例中视觉检测的良品误剔除降至原来的约
+1/70，见 Cognex
+案例。而在智能汽车领域，特斯拉 FSD 系统在 2026 年第二季度维持着 148
+万活跃用户（包括一次性买断和月订阅用户），Mobileye 的 SuperVision
+辅助驾驶系统也已经规模化量产搭载在极氪、极星等量产车型上。</p>
+<p>这些落地场景共享着同一个基本逻辑：本地 AI
+计算是产品功能能够成立的关键组件。助听器脱离了本地瞬时降噪就会丧失核心使用价值，工厂流水线如果要求视频帧实时回传外部服务器，既通不过严格的数据合规审查，也无法匹配流水线的生产节拍。这些工业与专业设备虽然缺少消费电子的营销声浪，却构成了端侧智能最扎实的支撑。这也进一步厘清了端侧的技术边界：它的成立建立在不可替代的刚性要求上，与单纯的成本算计关系并不大。</p>
+<h2>云端越来越便宜之后，端侧还剩什么理由</h2>
+<p>端侧 AI 最早、最响亮的宣传理由是帮助用户节省调用成本，避开按 token
+付费的账单，然而这个理由正在快速失效。GPT-4 在 2023 年 3
+月的定价为每百万输入 token 30 美元，到 2026 年 4 月谷歌 Gemini 3.1 Flash
+的价格已经降至 0.10 美元，三年时间降幅约
+99.7%（跨代、跨档位的标价对比），数据来自 价格对比。面对
+2025 年初到 2026 年初 API 价格下降约 80%
+的趋势，端侧所谓省钱的经济优势正在不断收窄，并未像早期预期的那样持续扩大。</p>
+<p>硬件层面的物理限制同样牢固。智能手机的内存带宽通常在每秒 50 到 90 GB
+之间，而数据中心专业 GPU 的内存带宽达到每秒 2 到 3 TB，两者相差 30 到 50
+倍，大语言模型的自回归解码计算恰好受制于内存带宽吞吐。有测算显示，用树莓派
+5 运行一个 15 亿参数的小模型，同样的 12 条请求如果调用云端 API 只要花费
+0.06 美分，按评测中每 3 分钟一次的使用频率计算，靠节省 API
+费用收回硬件成本大约需要两年，且未计电费，详见 The
+DIY Life 的评测。</p>
+<p>端侧计算真正具备防守壁垒的支撑点，最终收窄为四项硬约束：响应延迟、离线可用、数据驻留设备以及法律合规。这四项指标属于实打实的工程约束，直接维系着工业实时控制、汽车辅助驾驶、智能助听以及本地安防系统的运转。然而这些约束共同指向高度垂直的企业级和专业硬件市场，支撑不起包罗万象的消费级通用助手。</p>
+<p>云端推理降价后，端侧省钱的相对优势收窄，剩下的理由收束为延迟、断网、数据本地和合规四条硬约束</p>
+<p>对于投身端侧领域的开发者与创业团队而言，商业机会已经偏离了包装独立模型品牌或发布通用开发套件的旧路径，转向针对特定芯片和具体场景，对开源小模型做精密移植、量化与调优的工程交付能力。Desert
+Ant
+实践的恰恰是这一工程路径，只是这层专业工程能力究竟能换取多高的商业溢价、这种溢价又能在快速的硬件迭代中维持多久，至今还没有初创团队给出过具备说服力的答案。</p>
+<p>在眼下的行业发展阶段，比起纠结端侧 AI
+的潜在总规模有多大，更务实的动作是去排查在哪些具体业务场景下，端侧方案相对云端服务的优势正在真实扩大。厘清具体场景的硬约束边界，远比描摹一个抽象的庞大市场预测更有现实意义。</p>
+
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Desert Ant Labs" class="entity-link company-link">Desert Ant Labs</a>, <a href="/search/?q=Ambarella" class="entity-link company-link">Ambarella</a>, <a href="/search/?q=Mobileye" class="entity-link company-link">Mobileye</a>, <a href="/search/?q=Nvidia" class="entity-link company-link">Nvidia</a>, <a href="/search/?q=Apple" class="entity-link company-link">Apple</a>, <a href="/search/?q=Qualcomm" class="entity-link company-link">Qualcomm</a>, <a href="/search/?q=Intel" class="entity-link company-link">Intel</a>, <a href="/search/?q=AMD" class="entity-link company-link">AMD</a>, <a href="/search/?q=Google" class="entity-link company-link">Google</a>, <a href="/search/?q=Lattice" class="entity-link company-link">Lattice</a>, <a href="/search/?q=Microchip" class="entity-link company-link">Microchip</a>, <a href="/search/?q=Hailo" class="entity-link company-link">Hailo</a>, <a href="/search/?q=Cognex" class="entity-link company-link">Cognex</a>, <a href="/search/?q=Schneider Electric" class="entity-link company-link">Schneider Electric</a>, <a href="/search/?q=Phonak" class="entity-link company-link">Phonak</a>, <a href="/search/?q=Roborock" class="entity-link company-link">Roborock</a>, <a href="/search/?q=Tesla" class="entity-link company-link">Tesla</a>, <a href="/search/?q=Counterpoint" class="entity-link company-link">Counterpoint</a>, <a href="/search/?q=SellCell" class="entity-link company-link">SellCell</a>, <a href="/search/?q=CNET" class="entity-link company-link">CNET</a>, <a href="/search/?q=Build" class="entity-link company-link">Build</a>, <a href="/search/?q=Microsoft" class="entity-link company-link">Microsoft</a>, <a href="/search/?q=Windows Central" class="entity-link company-link">Windows Central</a>, <a href="/search/?q=Apple" class="entity-link company-link">Apple</a>, <a href="/search/?q=Google" class="entity-link company-link">Google</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Voz" class="entity-link product-link">Voz</a>, <a href="/search/?q=Parakeet" class="entity-link product-link">Parakeet</a>, <a href="/search/?q=Jetson" class="entity-link product-link">Jetson</a>, <a href="/search/?q=Snapdragon X" class="entity-link product-link">Snapdragon X</a>, <a href="/search/?q=Coral" class="entity-link product-link">Coral</a>, <a href="/search/?q=Siri" class="entity-link product-link">Siri</a>, <a href="/search/?q=Infinio Sphere" class="entity-link product-link">Infinio Sphere</a>, <a href="/search/?q=Roborock" class="entity-link product-link">Roborock</a>, <a href="/search/?q=FSD" class="entity-link product-link">FSD</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/edge-ai/">edge-ai</a>
+      
+        <span class="tag-pill tag-pill--no-page">hardware-adaptation</span>
+      
+        <span class="tag-pill tag-pill--no-page">narrow-task-intelligence</span>
+      
+        <span class="tag-pill tag-pill--no-page">local-model</span>
+      
+        <a class="tag-link" href="/tags/deployment/">deployment</a>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

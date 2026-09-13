@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>终结 AI 垃圾内容：如何将主观审美拆解为可量化、可验证的工程系统</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="终结 AI 垃圾内容：如何将主观审美拆解为可量化、可验证的工程系统" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">终结 AI 垃圾内容：如何将主观审美拆解为可量化、可验证的工程系统</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-10</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=sDMGWK4wZ_w" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-10
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">Taste Labs 创始人深入探讨了如何解决 AI 生成内容中的“同质化垃圾”（Slop）问题。通过将设计等主观领域拆解为确定性规则与可量化探针，结合推理阶段的意图解析与品牌上下文注入，工程化提升大模型的美学下限与审美判断力。</div></div>
+      
+    </div>
+    <h3>破除 AI 垃圾内容：主观领域工程化的必然性</h3>
+<p>在当前的人工智能发展中，前沿实验室与开发者投入了巨大精力，使大模型和智能体在代码编写和数学推理等客观领域取得了突破性进展。然而，以设计和写作为代表的主观领域却长期缺乏同等力度的系统化投入。随着生成成本趋近于零，任何非专业人员都可以一键生成完整的演示文稿、网页或应用程序，但这直接导致了大量<strong>AI 垃圾内容</strong>（AI Slop: 缺乏灵魂、高度同质化且脱离具体上下文的机器生成内容）泛滥。</p>
+<p>要解决这一问题，核心路径在于对主观领域进行“语义解码”与工程化拆解。设计并非完全不可捉摸，当把看似模糊庞大的设计问题层层剥离时，诸如色彩搭配、对比度计算和排版对齐等要素，在特定上下文中几乎可以转化为确定性（Deterministic）的客观规则；而对于更高层次的审美与风格偏好，则需要借助数据驱动与验证机制。解决这一挑战不能仅依赖模型底座的后训练（Post-training），更需要在应用层和推理阶段构建精准的上下文注入、判断与校验系统，以防止模型在开源或开箱即用状态下不可避免地向平庸均值塌缩。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Okay, amazing. It's great to meet everyone. I'm Tais. I'm the founder of Taste Labs. Uh for those of you who don't know us, we came out of Stealth a few weeks ago and our whole mission is basically how do we end AI slop? It's my personal enemy. Um, and so we really believe that to solve this problem of slop, we have to like decode subjective domains. Uh, there's been so much effort being put into getting models and agents amazing at things like coding and math. Uh, and it's time that we put all that same effort into making them great at things like design uh, and writing. And so design is this first pillar that we're starting with. And it's been it's been incredibly exciting.</p>
+<p>Um, we work primarily in two ways. So we work a lot with the Frontier Labs on how do we evaluate their models, understand where they're breaking, understand what could be better about them, and then construct the right either post-training data or our environments to basically fix that problem. And part of this is like how do you take something as fuzzy and large as design and break it down to a level that you can identify what is best solved through each method. What are elements of design that are almost like once you kind of boil down the problem become so specific that they almost become deterministic. So for example, uh if you're trying to train a model to be good at selecting color palettes or have contrast or alignment, those are things that if you define the problem and the context in a specific enough way, uh you can get to an answer that's like pretty objective or that at least most experts would agree to. But maybe other things like uh aesthetics, you naturally will see this expert disagreement and so then you want to lean on to things that are closer to to data.</p>
+<p>So anyway, we spent a lot of time thinking about all those problems. Uh but on the other side is also without even touching the model layer, right? How do we actually help agents and app layer companies produce better things? And there's a lot that goes into that, right? You have these different sets of problems at the application layer because you're using an off-the-shelf model that tends to collapse in terms uh of style, tends to collapse with the mean. So, how do we force that creativity back to the system? How do we avoid these patterns of slop which we'll talk about a lot today? Uh how do you understand like user preferences or a brand preferences preference so that you can uh maintain uh adurance to that style. Uh so there's lots of things that actually need to be solved as context or judgment or verification at the app layer which is why we kind of work across both.</p>
+</details>
+<h3>解构卓越与垃圾：AI 审美缺失的三大核心病灶</h3>
+<p>探讨“卓越”（Greatness）的定义在主观领域往往极具挑战。在数学领域，卓越等同于正确，存在唯一的客观答案；而在文学、艺术或网页设计中，卓越往往体现在独特性、极高的工艺打磨感（Craft）以及真实性（Authenticity），本质上是一种有意为之的<strong>分布外表现</strong>（Out of distribution: 脱离平庸统计均值、具备独特构思与细节的优质输出）。相反，定义“垃圾内容”却容易得多——它充斥着重复、空洞与千篇一律的机械感。</p>
+<p>普通用户缺乏专业设计师长期积累的审美素养与克制力，无法在极短时间内习得复杂的取舍法则。这使得 AI 生成的内容普遍暴露三大典型特征：</p>
+<ul>
+<li><strong>机械重复</strong>（Repetition）：跨场景、跨产品地复用相同的视觉套件与表达结构；</li>
+<li><strong>适配性缺失</strong>（Lack of Fit）：无法根据具体的受众、时机与行业属性提供恰当的呈现形式，导致宠物店与金融机构的生成页面出现荒谬的视觉趋同；</li>
+<li><strong>低意图表达与解析不足</strong>（Low Intent &amp; Interpretation Gap）：用户往往只给出极其单薄的单次提示词（One-shot prompt），而系统本身缺乏主动挖掘、补充上下文及解析潜在真实意图的能力。</li>
+</ul>
+<details>
+<summary>Original English Source</summary>
+<p>But maybe I'll start with more of a philosophical question of like how how do you define something that is great? Like how do you define greatness? And for something like math it's easier, right? Because there's kind of one objective answer and uh great is the same as correct. But then for something like writing or design, it's much harder, right? like how do you define what's like a great tweet or what's a great art piece or what's a great website? Um I don't know what's the last time that you interacted with a poem or walked into a coffee shop and for some reason it kind of like hit different and it felt very special. Uh but probably it's a combination of things that it it felt very unique. It felt almost a little different. It kind of called your attention. Uh it felt like there it was made with a lot of care and attention to to detail and craft and it almost had this sense of of like authenticity.</p>
+<p>Um, and I think that's a lot of what AI is missing today is like how do we take uh things that are not necessarily average, right? How do we produce things that are purposely like out of distribution? Um, and slop is kind of the opposite of that, right? I think it is hard to define what is great sometimes, but I think it's pretty pretty easy to define what is slop in the sense that most people would agree. I think the sense of like repetition of kind of soullessness is something that all of us feel right now when using AI. And I think it's quite magical by the way that AI has gotten to a point that any human on the planet that is not even a designer that is not an engineer can click a button and suddenly make an entire PowerPoint or make a website or make a web app. That's pretty cool. But it comes with consequences, right? Uh it comes with consequences of suddenly now the cost of generation is basically going to zero. Uh but the average person hasn't necessarily honeed their taste.</p>
+<p>Like I just think about the amount of effort and work that a designer puts in throughout their life to like build up their taste, right? Like there's all this process of like getting exposed to many things and learning to like spot patterns and learning to develop a point of view and like kind of do things in a in a courageous way that maybe are a little bit against the norm, learning what not to do and how to like have restraint. And that's very hard. Like the the average person doesn't necessarily have the the time nor the skills to go and develop taste in everything, let's say in design. And so um I think it would be a bad case scenario for us to just like be like okay the way to fix soft is for everyone to have taste because I don't think that's necessarily realistic. Um I think how do we how can we understand this better so that we can make even for the average person the ability to create something great and to understand maybe their own taste um easy more more easy. So uh that's that's a lot of what we're we're focusing on.</p>
+<p>Um so yeah I think this phenomenon of slot by the way is not new. uh if you were in the internet uh as social media emerged, you probably saw a lot of slop before that. But I do think that AI has been this kind of like accelerating force, right, of like being able to create things very easily uh with a click of a button and the like thoughtlessness around it. And there's kind of these three characteristics that I I would say repeat and stop. Uh so a repetition so you start seeing the same thing many many many times. Um the second is lack of fit which I actually think is is very related. So fit is kind of this ability for something to feel correct for a specific context right for a specific moment in time for a specific person. Uh but suddenly if you have repetition and let's say one person asks for a website for their pet shop and the other one asked for a website for their finance firm and somehow those designs converge and look the same. That's quite odd, right? Like if that was in if you were actually crafting that with care that wouldn't you wouldn't converge necessarily on those things. And so this lack of fit and lack of understanding of context is actually a huge problem that like leads to slop. Um, and the third is maybe low intent, which is probably a mix of, yeah, you're going to have a bunch of people prompting really quickly and maybe just wanting to oneshot something. But I think there's actually this like intent interpretation piece that's missing in the systems that we're building. Like how can you help your user, right? Like how can you help them better understand the intent that they have? Um, so that you can add more color and add more context on onto what you're trying to create.</p>
+</details>
+<h3>从经验直觉到量化度量：双向探测与特征分类器</h3>
+<p>要彻底根治一个工程难题，前提是建立可量化的度量标准。为了探寻网络审美趋势与 AI 垃圾内容的量化表征，研究团队分析了过去 10 年间跨越两百多万个历史网站的数据演变，并将其与合成生成的 AI 网站进行系统对比。分析表明，早在 AI 普及之前，互联网本身就已经出现了一定程度的同质化倾向；而 AI 的介入则急剧放大了这种跨越业务场景的模式趋同。</p>
+<p>为了实现对垃圾内容的客观预警，Taste Labs 研发了一套被称为<strong>微型探测器</strong>（Probes / Micro-Classifiers: 针对色彩、版式、字体与层级等单一维度进行特征识别的专用轻量级分类器）的评估体系。通过从海量网页中挖掘特征模式并转化为结构化指标，多维探针的组合能够以极高的置信度预测并识别 AI 生成的低劣设计。实验证明，这种基于细粒度特征的探测方案，其准确率与稳定性显著优于单纯依赖“大模型充当裁判”（LLM-as-a-judge）的笼统主观打分。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Okay? And I I'm a big believer, by the way, that you in order to fix something, you first have to measure it and you first have to understand it. I think that's exactly why we're so focused on like how do we uh turn these domains into something a bit more verifiable so that we can attach a measure to it. So, uh you'll you'll go on a little bit of a research journey with me here now, but we basically wanted to figure out can we measure slop like can we actually measure this quantitatively and spot this and what does that like look like?</p>
+<p>So we analyzed over two million websites from the past like 10 years kind of like way back machine style to try to understand all the trends across like design how is the internet changing uh how are how is like design changing over time and two things were interesting and we also by the way then kind of synthetically generated a set of uh design websites so we could kind of like compare like how does humanmade sites compare to AI generated ones and there were a few things that were interesting so one was that you already kind of saw a a bit of like a collapse uh on the internet before even AI. So you saw kind of the internet becoming more homogeneous using more similar color palettes using more similar layouts uh which is probably a function of more uh I would say this like kind of trend spreading more more more quickly let's say uh but with AI I think you saw this repetition happening a lot more and being almost more like um identified kind of regardless of context. So even in completely different buckets you saw patterns that were very similar.</p>
+<p>So we we built this I I call this probes but basically we uh we did two things. So we did this like pattern mining on all this data to understand like what are features that we can extract from all these sites. What are all these characteristics that we can make more objective right? Colors, typography, layout, audience like how can we like distill this down into things that become almost like uh structured and then how do we uh train up these like probes? So think of these as like baby classifiers like how do we train the ability to spot this one characteristic and for all these slop sites we identify we started identifying like what are the probes that basically mean this site is very likely to be AI slop. Um, and especially when you start combining them and you see the frequency of multiple of these happening at once, it became very likely that you could actually like measure uh and predict slop. And we saw a a super high basically ability to do that prediction, which was really cool to see. This performed better by the way than like most LLM as a judge methods of like asking an LLM to like judge if that uh is like great human quality versus like AI generated slop. Uh so that was pretty cool to see. I think it kind of shows this pattern that we see in AI really being uh an actual like quantitative thing that we can see in slop uh which I find really cool.</p>
+</details>
+<h3>推理时介入与品牌基础设施：构建抗同质化的工程体系</h3>
+<p>当生产内容的边际成本降为零时，<strong>判断力</strong>（Judgment: 拆解复杂问题、洞察细微差异并进行有效验证的核心能力）便成为了最昂贵的稀缺资产。防范垃圾内容不仅要依赖底座模型的演进，更关键的战场在于与终端用户直接交互的<strong>推理时间</strong>（Inference-time: 智能体与用户交互、解析意图并实时生成结果的计算与决策阶段）。</p>
+<p>在系统落地层面，针对三大病灶的具体解决方案涵盖：</p>
+<ol>
+<li><strong>创意激发引擎（Creativity API）</strong>：并非通过简单调高模型的随机采样温度（Temperature），而是在理解特定领域基本范式的前提下，引导智能体进行受控的、有目的性的规则打破，从而生成合理的分布外创意；</li>
+<li><strong>品牌系统结构化提取（Brand API）</strong>：将优秀品牌中凝结的高密度设计智慧转化为智能体可无歧义执行的结构化规范，并在推理闭环中引入质量门禁（Gate for slop）与符合度校验。例如将 <strong>General Intelligence Company of New York</strong> 的网站视觉资产输入系统后，生成的演示文稿能高度还原其原生的质感与排版细节，彻底告别默认模板的塑料感；</li>
+<li><strong>预置品牌资产库检索</strong>：针对缺乏现成品牌规范的普通用户，通过检索经过专业验证的预置风格系统，替代不可控的即兴随机生成。</li>
+</ol>
+<p>当前大模型美学落地的首要目标并非直接攀登人类艺术的巅峰，而是通过对主观问题的模块化拆解与量化验证，切实将 AI 生成质量的底线从地面拉升至专业基准之上。</p>
+<details>
+<summary>Original English Source</summary>
+<p>But obviously we don't want to stop there, right? We don't want to just measure slop. We want to also solve it. And so um there's a few I think I mentioned this before, but like the as the cost of production basically goes to zero. I think the thing that becomes expensive and matters more than ever is judgment. Um I don't even want to use the word taste here. uh is judgment I think is this ability to discern what's right is this ability to break down a problem so that you can actually understand it and create solutions for it and so yes there's the side of judgment that is human judgment that I actually think is more valuable than ever but there's also this side of like how do we build the right tools and systems to like fix pieces of this problem right so yeah how do we how do we fight slop my my enemy um and by the way I think there's there's a lot of conversation going around how do you fight slop at the model year like how do we make models better? How do we make models have a higher bar? Which don't get me wrong has to be solved and we're working very hard to solve that too. But I actually think this problem of inference time is equally if not even more important because that's actually when you interact with the end user and this kind of back and forth of how do you understand this context and intent happens at the moment of inference time. So I don't think that we can ignore and just make models better and not solve this otherwise stop will keep existing.</p>
+<p>Um so maybe breaking down a few of those pieces and kind of um a few of the ways that we've thought about solving this or a few solutions that we built to solve this. But I think for example for something like repetition, one of the things that we're working on is I I've nicknamed it. I don't know if that's going to be the official name, but like the creativity API. How can we create a system that almost becomes an inspiration machine for your agent so that it can produce something that's actually out of distribution instead of something that is in that same average and kind of mean that we're seeing happen with like the slop sites. Um, so this is one of the ways that practically if we can intentionally produce something that's out of distribution, you can improve this like overall uh quality. And by the way, I I don't think that this can be something just like randomness. It's not just about like turning up a temperature of a model and and kind of fingers crossed hoping for the best. I think it's much more like how do we understand um even like what are rules or expectations in specific domains like let's say that you ask for a slide deck for for the pitch of your startup like what is a what does a good pitch deck look like and then how do you almost like intentionally break rules uh to create things that are more creative right because usually creativity isn't like randomness isn't doing something that completely feels off for that situation it's like you intentionally maybe diverge on a couple of things while maintaining kind of um a dear to to expectations of that category let's say for others. So that's one of the things we're working on.</p>
+<p>The second one on this problem of fit I think um it's interesting but brands as probably a lot of you who are designers know takes so much effort to create great brands like great brands are the work of dozens of designers uh putting in a lot of like craft and thought and care um and so we've almost like already pre-done the work of defining what is great for that specific company and then we're not using it well. So this like brand endurance actually I think is a huge problem and one of the things that can very more easily let's say like raise that bar of quality. So I I'll touch on an example on this one specifically and then same with like intent and judgment. I think the baby classifiers was a good example um like how it how we can actually like use this to be even become a gate for slop and and not let your agent uh ship slop.</p>
+<p>But so the brand API is the first product that we're releasing to to the public. This is already in in beta testing with a bunch of uh our design partners. And essentially what it does is it can take let's say a brand URL and extract this into like very specific components that are good for an agent to follow. So basically how do we turn something as fuzzy as a brand into something so structured that it becomes easy to uh for your agent to follow that but also for you to judge against it right because I think the piece that we can't forget here is this judgment and verification. So yes this goes and helps your agent to produce something better. Uh but how can we also add a way for you to judge okay is the agent actually staying on track? Is it actually performing well to adhere to this brand or how is it failing or where is it failing? So this is the first flow I would say that we we are seeing that is really helping to improve quality.</p>
+<p>Um and what's cool is of course we're talking here about an example of a brand that already exists. But let's say you have an agent uh you have an app and uh the person that is using your app actually doesn't have a brand. Let's say they're an average consumer. Can we actually one of the things that we're creating is basically like a repository like an index of brands uh of pre almost like pre-created brand systems so that if they want something that feels dreamy why not retrieve a dreamy brand system that already has been thought out to be cohesive instead of doing like a generative approach the moment of that might end up not so great or might end up again in those pillars of slop.</p>
+<p>And I want to show you a real example of this in action. So um there's this company that I think is awesome called the General Intelligence Copy of New York. They have a sick website. You guys should check it out. Um, but basically if you ask Claw Design to create a slide deck uh in their branding, the the middle one is basically what it comes up with. So the one on the left is is the original brand. Uh, this is kind of the the default. And if you kind of use this extraction actually in the process, it creates something that's way more high fidelity with the original. Um, and that even like in the details I would say like feels right. So this is just to show an example of it in in action.</p>
+<p>Um but yeah, I think we I think all of us would agree that like human human taste and kind of the peak of human craft is always going to be like deeply valuable and that right now I think the challenge is we we are almost even not earning the right to debate this like how can we have uh models like reach this like pinnacle of taste. I don't think it's about that at all. It's like how do we first just like raise the bar? Like the bar is kind of really I would say on the ground and so I think all of this work that we're putting into like how do we decompose a problem and how do we measure it is exactly so that we can at least like improve this bar of quality and I think we have to start with that. That's it. Uh thank you very much for for the time. Uh this is this is awesome. [applause] &gt;&gt; [music]</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Taste Labs" class="entity-link company-link">Taste Labs</a>
+</p>
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">ai-slop</span>
+      
+        <span class="tag-pill tag-pill--no-page">subjective-domain-evaluation</span>
+      
+        <span class="tag-pill tag-pill--no-page">inference-time-optimization</span>
+      
+        <span class="tag-pill tag-pill--no-page">brand-consistency</span>
+      
+        <span class="tag-pill tag-pill--no-page">design-systems</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

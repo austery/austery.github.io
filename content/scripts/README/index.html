@@ -1,0 +1,36 @@
+<h1>Python Utility Scripts</h1>
+<p>This directory contains Python scripts for maintenance and automation of the Thought Foundry knowledge base.</p>
+<h2>Scripts Overview</h2>
+<h3>Metadata Management</h3>
+<h4><code>update_speaker_author.py</code></h4>
+<p>Batch updates <code>speaker</code> and <code>author</code> fields in Markdown frontmatter.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-bash">python3 scripts/update_speaker_author.py &quot;Old Name&quot; &quot;New Name&quot;
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>--dry-run</code>: Preview changes without modifying files.</li>
+<li><code>--dirs DIRS [DIRS ...]</code>: Specify directories to scan (default: <code>notes posts</code>).</li>
+</ul>
+<hr>
+<h4><code>batch_processor.py</code></h4>
+<p>Generic tool for batch frontmatter field updates. Use this for more complex or one-off frontmatter transformations.</p>
+<hr>
+<h3>Tag Management</h3>
+<h4><code>tag_processor.py</code></h4>
+<p>Standard tool for replacing or consolidating tags across multiple files.</p>
+<h4><code>consolidate_tags.py</code></h4>
+<p>Analyzes and merges similar tags based on usage patterns and name similarity.</p>
+<h4><code>remove_tag.py</code></h4>
+<p>Removes specific tags from all Markdown files in the project.</p>
+<hr>
+<h3>Knowledge Audit &amp; Migration</h3>
+<h4><code>knowledge_audit.py</code></h4>
+<p>Analyzes the current state of metadata and identifies inconsistencies or gaps.</p>
+<h4><code>migrate_areas.py</code></h4>
+<p>Handles transitions between different organizational area taxonomies.</p>
+<h4><code>knowledge_migration.py</code></h4>
+<p>Script for migrating content between different sections or formats.</p>
+<hr>
+<h2>Development</h2>
+<p>These scripts typically use Python 3.13+ and <code>pathlib</code> for file manipulation. Some scripts may require additional dependencies manageable via <code>uv</code>.</p>

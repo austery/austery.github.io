@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MCP 应用架构实战：数据交付模型，UI 交付用户</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="MCP 应用架构实战：数据交付模型，UI 交付用户" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">MCP 应用架构实战：数据交付模型，UI 交付用户</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-09</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=lbaXnx0KLA8" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-09
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">Indeed 工程师 Dustin Mihalik 分享了在构建 MCP 应用程序时的实战经验。核心设计原则是将数据检索与 UI 渲染解耦：工具应向大语言模型提供结构化数据以便推理与过滤，同时通过独立的渲染工具向用户展示交互界面，实现模型与 UI 的双向同步。</div></div>
+      
+    </div>
+    <h3>背景与 MCP 生态实践</h3>
+<p>大家好，我是来自 <strong>Indeed</strong> 的 Dustin Mihalik。作为全球领先的招聘平台，Indeed 致力于为求职者打造高效的求职工具。我在公司的 <strong>AI 平台团队</strong>（AI Platform Team）工作，主要负责 AI 安全防护机制、网关路由以及合规审计等基础设施。在与各大生态伙伴的合作中，我们团队探索了许多前沿项目，其中就包括 <strong>模型上下文协议</strong>（Model Context Protocol: Anthropic 推出的用于连接 AI 模型与外部数据工具的开放标准，简称 MCP）及其连接器的开发与落地。</p>
+<p>在实际构建面向 <strong>Claude</strong>、<strong>ChatGPT</strong> 以及我们内部求职助手 <strong>Career Scout</strong> 的 MCP 应用程序过程中，我们积累了宝贵的实战经验。目前的 AI 交互多数基于对话界面，以职位搜索为例：如果用户询问“奥斯汀的咖啡师职位”，早期的纯文本响应虽然能列出职位，但缺乏品牌展示与交互深度。然而，直接强行注入网页链接往往体验糟糕，甚至被宿主环境限制。因此，如何在 MCP 架构下平衡模型推理、宿主控制与富交互 UI，成为了核心挑战。</p>
+<details>
+<summary>Original English Source</summary>
+<p>皆さん こんにちは 、 ダスティン です 。 マホリック 。 私 は 確か に 。 私たち は ナンバー ワン の ウェブ サイト です 世界 で たった 1 つ 求職 活動 。 私 の 声 。 私 は 回復 し ます 風邪 は 過去 に 病気 だった 週 。 はい 、Indeed では  私たちは創造します 用 ツール 求職 活動 。 そして 私 は 私 も 働い て い ます チーム へ  に従事している AI プラットフォーム 。 私 私 は 以下 の 責任 を 負っ て い ます AI 防御 メカニズム 、 ゲートウェイ と 質問 コンプライアンス 。 時間 私たち の チーム は 時々 面白く なって き た プロジェクト の おかげ で  パートナー 関係 。 プログラム MCP は その 一つ であり 、 MCP コネクタ も 含む 。 だ から 少し  実用的 情報 MCP プログラム 。 私たち は 与え られ た 素晴らしい 入門 編 MCP プログラム 。 これら は 現実 から 学ぶ 教訓 経験 : 私たち が 作成 を 通し て 学ぶ MCP および MCP プログラム クロード 、ChatGPT、 そして 私 たち の 社内 キャリア スカウト — これ が それら の ため の 私たち の エージェント です 仕事 を 探し て いる 人 。 これ は チャット です インタフェース 。 過半数 私 の 例  適用されます 求職 活動 。 私 は 持っ て いる たくさん あり ます スクリーン ショット 求人 情報 を 探し て い ます 。 それ 検索 例 私 が 探し て いる 仕事 バリスタ の 求人 オースティン 、 これ は テキスト です 応答 する 。 そして これ かなり うまく 機能 する 。 すでに ここ で 議論 され て いる あり ませ ん ブランディング 。 なし 確か に ブランディング です ね 。 クロード 単純 に 決定 し た 求人 一覧 オースティン と 彼 の 郊外 。 これ は すごい 。 。 これ は おそらく ユーザー 。 できる 一定 の 制限 が ある 場合 が あり ます 私たち が 私たち は ブランディング 、 あるいは 私たち が 私たち は コントロール でき ます 特定 の 事柄 。</p>
+</details>
+<h3>解耦黑盒：数据与 UI 必须对等透明</h3>
+<p>构建高质量 MCP 应用的<strong>第一条铁律</strong>是：<strong>呈现给用户的界面内容，必须同样作为结构化数据交付给模型</strong>。</p>
+<p>许多开发者在构建 MCP 时容易走入误区——仅仅在前端调用 API 渲染一个漂亮的 HTML 页面或组件，却将该组件视为“黑盒”，模型对此完全一无所知。当用户进一步追问“详细说说第一个搜索结果”或“评估一下这些公司”时，模型由于看不到 UI 里的数据而无法回答，导致体验断层。因此，在基于 MCP 规范设计时，工具返回必须同时兼顾文本/结构化数据（供模型理解）与界面渲染资源（供宿主呈现），确保模型与用户视图保持严格同步。同时，在工具的提示词（Description）中明确标明“结果已在界面组件中展示”，能有效避免模型重复生成冗余文本。</p>
+<details>
+<summary>Original English Source</summary>
+<p>あなた は もし 私 自身 は 試し た こと が ない できる 限り の こと を する クロード に 無理 強い する の は 難しい し 、 ChatGPT に リンク を 貼る 彼ら は そう し たく ない から そう すれ ば 彼ら の 環境 。 これ は かなり 論理 的 です が 、 もしあなた が リスト を 取得 する 5 つの 空き ポスト が どこ か に あり ます インターネット なし で リンク 、 これ は ひどい  カスタム 経験 。 だ から 私たち は  必要 信じ られ ない ほど の 量 時間 と 検査 、 保証 する ため に クロード の 状態 は 安定 し て いる 。 リンク を 追加 し ます 。 だ から 、 MCP および SDK プログラム AppsFlyer の おかげ で 、 私たち は これ を 実現 でき まし た 。 コントロール 。 私たち は 私たち は 次 の よう に 決める ことができます ボタン が あり ます 我々 は 応答 する 。 どれ が 情報 は 重要 です 上 から ハイ ライト 表示 し ます 。 私たち は 弊社 は 提供 でき ます リンク 先 詳細 を 表示 押さ れ た とき に ポップアップ が 表示 され まし た すべて の ウィンドウ 情報 空き が あり 、 あなた は 去ら なければなら なかった 環境 。 これ は  ウィンウィン 両方 の オプション 企業 。 したがっ て 、 MCV アプリケーション は とても 良い です が 、 もし あなた は こう 思う 、「 ねえ 、 私 は MCV を 作成 し たい アプリケーション または 私 は ウェブ サイト を 取得 し て ChatGPT に 追加 する か 、 クロード 。 そんな に 単純 な 話 ではない 。 物 を ドラッグ する 方法 チャット インターフェース で 。 あなた 本当 に 価値 が ある どの よう に 考える か 現在 の データ そして 、 それら を どの よう に 提供 する か ユーザー へ 。 もし あなた は 何 か を する でしょう とても シンプル 、 例えば 、 単 に 既存 の もの を 呼び出す ダウンロード 用 API データ 、 次 に モデル これ は 「 「 ブラック ボックス 」 または 間違っ て いる ？ だ から 、 あなた は 「 ねえ 、 私 は 何か を する 。」 モデル 返信 :「 いい ね 、  私は使います 道具 &quot;。 ツール に は こう 書い て あり ます 。 よし 、 今 から 何 か する よ 。 「 見せ て あげる よ 。」 しかし モデル は 全く 知ら ない あなた は 一体 何 者 です か ？ 画面 。 それ で これら すべて が 生じる  明確化する 「 最初 の もの について 教え て ください 結果 」 または 「 である 」 この 評価 を お願い し ます 企業 一覧 。 モデル は 全く 知ら ない どの よう な データ 表示 され ます 。 前 最初 の ルール は MCP を 作成 する 際 の 私 アプリケーション : あなた が 見せる ユーザー に対して 、 また 提供 される モデル を データ として 扱う 。 私 は 思う それ は 論理 的 だ が 、 私 は MCP アプリケーション を 見 た 、 どこ が ちょうど HTML を 実装 する ページ と API を 呼び出し 、 そして これ 大きな 「 「 ブラック ボックス 」 モデル 。 これ で 十分 だ 。 実装 が 容易  助けを借りて MCP の 仕様 と  仕様 MCP アプリケーション 。 これ  構造化された コンテンツ と は 、 もし 返品 し て い たら のみ で 動作 テキスト MCP。 そして この URI リソース によると HTML は どこ に あり ます か ？ あなた に は これら 両方 を 返す 要素 と 彼ら を 支援 する 同期 の こと です よ ね ？ 何か を 追加 する 場合 API の 新 機能 、 必ず この 同じ データ を 追加 する そして また 戻る 。 したがっ て 、 次 の ステップ は 、 後 で お 気づき に なる と 思い ます が この こと の 本質 は 、 あなた は 今 何 を 提供 し まし た か ？ モデル データ ではなく 、 これ です 「 ブラック ボックス 」 について 彼女 は 何 も し ない 知っ て いる 。 彼女 は 気 に し ない 。 取ろ う と し ます 結果 と 説明 彼 にとって 彼女 は たい て い は そうである 。 したがっ て ディスプレイ が あり 、 モデル は 以下 に 従っ て 動作 し ます 基本 的 に 同じ 通常 であれ ば そう する だろ う 。 更新 する 必要 が あり ます 情報 提供 の ため の 説明 あなた が 彼女 に コンテンツ を 表示 する あなた の アプリケーション で MCP。 この 方法 で 良い もの を 手 に 入れ よう リスト または 短い 結果 を 確認 する 上 に 表示 され て い ます リンク の 代わり に 試し て みる すべて を テキスト として 出力 し ます 。 結局 、 あなた は あなた は 特定 の 矛盾 表示 される の は インターフェース 、 そして モデル を 出力 する 。 あなた 試し て み て これ を 指示 する プロセス を 使用 し て 説明 。 これ さえ も 次 の よう な 単純 な 声明 &quot; 結果 &quot;  自動的に  展示された ユーザー に対して  コンポーネント インタフェース &quot;。 これ を 追加 する 説明 の 冒頭 この ツール は 多数 決 で 決定 する その よう な ケース 。 それ 以下 の いずれ か 価値 の ある もの あなた が 両方 へ の アクセス を 提供 する データ だけでなく 、API に も 。</p>
+</details>
+<h3>上下文动态同步与状态传递</h3>
+<p>在支持富交互的应用场景中，第二个关键架构点是<strong>用户交互状态的双向传递与上下文同步</strong>。</p>
+<p>当用户在界面组件中执行操作（如点击“查看详情”弹窗、筛选卡片、或在电商场景中将商品加入购物车）时，这些在客户端发生的行为对于远端的大模型而言默认是不可见的。如果用户接着询问“帮我针对这个职位写一封求职信”，模型若缺失选中的具体职位上下文就会报错或产生幻觉。为了解决这一问题，MCP 客户端架构中提供了类似 <code>updateModelContext</code> 的状态通知机制，每当用户与 UI 交互产生关键动作时，系统需将状态变更作为行上下文（Row Context）同步回模型的会话环境中，使模型能随时感知用户正在查看的具体内容。</p>
+<details>
+<summary>Original English Source</summary>
+<p>次 の 瞬間 は  相互の作用 要素 です よ ね ？ が ある 「 適用 」 ボタン ボタン が あり ます « 詳細 を 表示 」 開く 詳細 説明 求人 情報 。 これ が それ だ まさに その 場合 モデル は 不要 あなた が 何 者 か を 知る でしょう 何 を ご覧 に なって い ます か ？ それ で 、 「 詳細 を 表示 」 モーダル が 表示 され ます すべて の ウィンドウ 情報 欠員 。 また はい 、 たくさん 出 て き ます 質問 ユーザー は 置く ： 書く カバー レター この 求人 または 短い もの を 作る 説明 文 の 確認 。 モデル 何 も 知ら ない 、 なぜなら あなた は この データ を ダウンロード し まし た API を 介し て または 動的 に 、 例えば 、 10 件 の 求人 が 返さ れ まし た 。 そして ユーザー が クリック し まし た その うち の 1 つに 。 モデル どれ が どれ か わから ない あなた が 選ん だ のです 。 したがっ て 、 どの よう な 情報  交流 ユーザー も 転送 する 必要 が ある モデル 。 そして また MCP  AppSec に は 十分 な 簡単 な 方法 は これ です 気づく 。 が ある メソッド 「 モデル コンテキスト の 更新 」、 これ により 列 を 渡す 。 の ため に MCP アプリケーション は 1 行 。 だ から 、 もし あなた が 欲しい トラック 複数 時間 の 経過 とともに イベント が 追加 する 必要 が ある この データ を 行 に渡し ます 。 しかし これ は 例 です MCP の ドキュメント アプリケーション で は 、 基本 的 に 、 これ は ショッピング カート 全体 的 な 内容 を 要約 し ます コスト と すべて を 追加 する カート 内 の アイテム ユーザー は 質問 ：「 教え て ください 商品 について 私 に 「 私 の カゴ 。」 したがっ て 、 これら 2 つの もの が あなた に アプリケーション において この モデル は 、 何 が 起こっ て いる の か 、 しかし まだ 必要 ではない 現実 に する 優れ た MCP アプリ なぜ なら それ は あなた に インターフェース あなた に 似 て いる し たい けど 、 私 は 普段 注文 し ませ ん 。</p>
+</details>
+<h3>数据处理与界面渲染的分离设计</h3>
+<p>第三条最核心的原则在于：<strong>将底层数据检索/处理与前端界面渲染彻底解耦</strong>（Separation of Data from UI Rendering）。</p>
+<p>这种架构理念同样体现在 OpenAI Apps SDK 等先进规范中。如果一个工具既做数据检索又强行绑定固定的展示组件，模型就失去了灵活编排与深层推理的能力。在标准架构中，应当设计两类工具：</p>
+<ol>
+<li><strong>纯数据检索工具</strong>（Data MCP Tools）：负责执行灵活的搜索与过滤。模型可以自主发起多次调用、交叉比对上百条职位数据，并根据用户个性化偏好进行精准筛选。</li>
+<li><strong>轻量渲染工具</strong>（Rendering Tools）：仅接收由模型筛选后的实体 ID 列表（如 5 个精选职位 ID），并负责渲染展示组件。</li>
+</ol>
+<p>这种职责分离赋予了大语言模型充分的“推理与创造空间”——模型不仅能选择最优结果展示，还能在输出中生成专属的推荐理由或分析文本。将单体大工具拆解为多个小型、模块化的工具，既能防止模型上下文载荷过重，又能让用户同时获得深度的 AI 分析能力与流畅的现代 UI 体验。</p>
+<details>
+<summary>Original English Source</summary>
+<p>クロード の 解決 策 簡単 な 作業 。 私 私 は クロード を 信頼 し ます 私 の 問題 を 解決 する 本当 に 複雑 タスク 。 そうでしょう ？ 例えば 、 私 が 私 は ただやり たかった だけ です 1 回 の 検索 で 、 私 は ただ オンライン に 行っ て でき た よ 。 欲しい たくさん 作る 検索 クエリ 。 それ すでに 時代 遅れ です 。 なぜなら 、 ソナタ 5 は まだ あり ませ ん が 、 2 日間 の スクリーン ショット 古代 。 でも 、 これ は 就職 活動 は 「 ねえ 、 これ を 探し てる んだ けど 。 ポジション 。 私 は 準備 が でき て い ます 。 移動 中 な ので 、 検索 する さまざま な 橋 。 ほら 、 私 は 探し て いる んだ 最も 高い オプション 支払い 、 だ から 私 は 、 そう すれ ば 、 あなた は ただ 選ぶ ことができます 最高 レベル の もの の いくつ か 。 が ある 私 が 私 は 絶対 に そう し たく ない 。 仕事 。 テキスト MCP が これ を 処理 し ます とても 良い 。 私たち は 皆 、 これ と 同じ だ 。 分かり ます よ ね ？ クロード 10 種類 の 異なる もの を 作る 検索 クエリ 、15 様々 な 要望 。 彼 フィルタリング し ます 、 すべて を 選び出す  個人 要素 、 そして 良い 結果 を もたらす でしょう 以下 の 表 は 、 とても 便利 だ 。 しかし 、 それ と共に MCP アプリケーション 私たち は ただ 話し 合っ た 結果 、 「 ねえ 、 私 の 結果 は 展示 される 予定 この インターフェース に は 、 クロード が 彼 に 電話 する だろ う 。 一 度 、 そして 「 ああ 、 そうだ と 思う 」 と 言う でしょう 結果 は すでに 出 て いる 表示 され ます 。 私 は そう ではない 深く 掘り下げ ます 没 入感 、 です よ ね ？ あなた が 考え て いる よう な もの ではあり ませ ん ユーザー の ニーズ —10 種類 の メリー ゴーランド 、 そして クロード も 気づく だろ う 、 特定 の もの が すでに 表示 され 、 原因 と なる 10 種類 の 異なる もの を 表示 回転 木馬 。 だ から 何 本当 に やら なければならない こと 、 そして これ は 3 番目 の ルール です すべて に 勝る その 他 ―― これ は 本質 的 に 、 別々 に 処理 データ から  視覚化 インタフェース 。 そして これ  特定の 言葉 遣い 借り た 、 えー と 、 OpenAI の ドキュメント 、 えー と 、 OpenAI、 ええ と 、 アプリ SDK。 が ある 彼ら が 彼ら は それ について 、 ええ と 、 しかし 要する に 、 彼ら は そう すれ ばあなた は  分離 データ 処理 から  反射 インタフェース 。 したがっ て 、 求職 活動 、 私たち は 、 標準 に し よう テキスト  MCP- 応用 。 クロード は 彼 に 電話 する 何 度 も 、 彼 が 望む だけ 。 そして する と 、  道具 レンダリング で は 、 転送 でき ます か 、 つまり 、 モデル は 全て を 自分 で 引き渡す 彼女 が 欲しい データ 表示 する か 、 提供 し て いただけ ます か ？ それら へ の リンク 。 だ から 、 私たち の 具体 的 な ケース で は 、 ええ と 、 ご存知 の よう に 、 私たち は 求人 を 探し て い まし た 。 さあ 、 検索 し て み ましょ う 空席 ではない データ を 返し て インターフェース 、 ウィジェット 展示 用 空席 、 リスト を 受け入れる 識別子 。 ええ と 、 この リスト 識別子 、 えー と 、 もしかしたら ご存知 かもしれません が 、 クロード は 演奏 でき ます 検索 。 彼 は できる 100 種類 の 異なる もの を 手 に 入れる 彼 が 空席 に 興味 を 持っ て いる 。 彼 は できる それら を フィルタリング し て 除外 する 。 彼 は 5 つ 見つける ことができる 、 彼 が 興味 を 持っ て いる もの 、 そして これら 5 つ を 表示 ユーザー へ 。 ええ と 、 今 は そうな ので これら の 課題 レンダリング 、 えー と 、 あなた 更新 が 必要 です 説明 を 言う と 、 例えば 「 どこ から 来 た の か 」 彼ら は データ を 収集 し ます か ？ それら は どの よう な 形式 です か ？ 与え られる のでしょう か ？  ええ と 、 でも これ は とても シンプル メカニズム — 更新 ツール の 説明 「 あなた は 常に 必要 と され て いる まず 電話 する これら 3 つの うち の 1 つ ツール 取得 、 えー と 、 データ 、 あなた は 何 に なる の ？ 使用 目的 レンダリング 」。 つまり 、 求職 活動 は かなり 良い です ね 、 えっと 、 これ は かなり 良い 私たち が どの よう に 私たち は 分割 し たい データ と レンダリング 。 私 他 に も たくさん いる と 思い ます 。 例えば 、 ほとんど の 産業 何 か 思いつく こと は あり ます か ？ 「 ねえ 、 ここ は どこ ？」 みたい な 感じ 。 私 が どこ に いる の か 、 あなた に 知っ て ほしい 。 「 シェア し たい です か ？」 の よう に 、 モデル が 欲しい 探求 できる この データ 、 そして 私 は 私 は 彼女 に どの よう に 選択 する か 表示 する 。 ない はい ？ 例えば 、 例 、 えー と 、 電子  商業 です よ ね ？ たくさん  オプション 電子商 取引 。 えっと 、 もしあなた が 地図 、 ほら 、 もしかしたら あなた は 5 つ 考え出す 異なる 住所 、 そして これら の 住所 を 伝え て ください 。 えっと 、 もう 一 つ あなた が できる こと は モデル を 許可 する 著しく もっと 創造 的 に 。 ここ 私たち が この こと に 気付い た テキスト コンテンツ : この モデル は 、 その 理由 を 説明 し て い ます 。 彼女 は これ を 選ん だ オプション または その 理由 本当 に 成功 し た 。 それ で 潜在 的 に ウィジェット に 何 か を 追加 する  反射 空席 が ある ので 、 「 あなた の ID を 見せ て 、 これ が その 理由 の 説明 「 良い 選択 だ 」。 または ID を 入力 し て 選択 説明 の 一部 空席 と なって いる 特に 成功 し た 。 あなた 創造 性 を 発揮 でき ます 近づく  ツール 視覚化 ユニーク を 追加 する モデル が 持つ ことができる 機能 それらに 実装 する ため に 、 最高 の もの を 提供 する 経験 ユーザー 。 したがっ て 、 主 な 結論 ：  創造 MCP アプリケーション は 焦点 を 当てる データ ではなく 、 インターフェース 音 は 反対 の 、 かつて 私 たち が 考え て い た よう に ：「 ああ 、MCP が いっぱい ある よ アプリケーション 」 例えば 、「 どう すれ ば インターフェース を 追加 する ChatGPT」。 もしあなた が 手 に 入れ たい 本当 に 高 品質 MCP の 経験 、  必要 分析 する まさに あなた が 求め て い た データ モデル を 提供 する 。 と どの よう な データ が 必要 です か 、 彼女 が 仕事 ？ それ から 視覚 化 は 副作用 または 結果 とし て 、 この モデル は これら を 探求 し ます データ 。 その 上 、 私 は 思う ツール に は 小さく て モジュラー 。 つまり 、 おそらく 2 つか 3 つ さまざま な 検索 方法 求人 情報 。 我々 は できる 2 つか 3 つ 作る さまざま な ツール 検索 と 1 つ  道具 視覚化 。 または 、 もしかしたら 2 人 いる かもしれない 。 1 つ リスト 表示 空席 、 そして もう 一 つ ―― いくつ か 強調 する ため に 特定 の 欠員 。 したがっ て 、 作成 でき ます 多く の 、 たくさん の より 小型 の 工具 。 彼ら の 説明 は とても シンプル です 。 さも ない と  過負荷 モデル だ が 、 それ は 彼女 に 柔軟性 データ を 調べ て 使用 方法  ツール 視覚化 。 それ 、 実際 、 そして 私 が 話し て いる こと は すべて 伝え たかった 。 私 数 時間 で 終了 数 分 前 。 私 は 持っ て いる 誰 も 所有 し て い ない 私 が いる 場所 に 立っ て ください そう なる だろ う が 、 私 は もし 私 が ホール に いる なら 誰 か が 立ち上がる だろ う 質問 。 あなたは できる 私 を 見つける に は 姓 または 名前 の 頭 文字 と 姓 は 最も ソーシャル な プラットフォーム 。 ありがとう 。</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Indeed" class="entity-link company-link">Indeed</a>, <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>, <a href="/search/?q=ChatGPT" class="entity-link product-link">ChatGPT</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/mcp-protocol/">mcp-protocol</a>
+      
+        <a class="tag-link" href="/tags/model-context-protocol/">model-context-protocol</a>
+      
+        <span class="tag-pill tag-pill--no-page">ui-rendering</span>
+      
+        <span class="tag-pill tag-pill--no-page">data-decoupling</span>
+      
+        <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

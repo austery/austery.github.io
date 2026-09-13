@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>云 agent 不新，新的是托管</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="云 agent 不新，新的是托管" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">云 agent 不新，新的是托管</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-10</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/pai/">PAI</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-tooling/">ai-tooling</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://yage.ai/share/personal-agent-custody-20260910.html" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-10
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">文章探讨了个人 Agent 发展从简单的聊天窗口向需要常驻专属云电脑的演进。核心观点在于，Agent 的核心价值不再是模型本身，而是对用户操作状态（如登录态、文件、偏好）的持久化和托管。厂商提供的托管服务，本质上是用户对复杂操作状态的保管权外包，这重塑了 Agent 的商业模式和用户体验。</div></div>
+      
+    </div>
+    <p>2026 年 9 月 8 日，Meta 发布个人 agent Muse。这项服务和常见聊天机器人的区别，藏在发布稿一段容易忽略的细节中：Meta
+给每位用户分配了一台专属云电脑，agent
+住在里面。用户合上电脑或关掉手机，远端系统依然在跑，文件、浏览器和登录态都留在那台机器上。</p>
+<p>表面上看，这是 Meta 在个人 agent
+赛道上的一次正式入场。但把前后几家公司的动作排在一起，它其实接在一条更长的时间线上。</p>
+<p>图 1：常驻专属云机的三条发布，Manus 04-30
+在前，Grok Bot 08-11 居中，Muse 09-08 在后</p>
+<h2>往前翻，会发现这不是一次孤立发布</h2>
+<p>一个月前，xAI 发布的 Grok
+Bot 讲的是同一件事。每个用户拥有一台常驻云电脑，账号下所有 Bot
+共享其中的文件体系与登录态。</p>
+<p>再往前三个多月，Manus 已在 4 月 30 日上线了 Cloud
+Computer，提供一台全天候在线的 Ubuntu
+云机，能跑常驻机器人、定时任务和自建服务。比它早一个半月，也就是 3 月 16
+日，Manus 还推出过 My Computer，让 agent 直接操作用户本地电脑。</p>
+<p>将这几个节点按时间排开，脉络就会浮现：2026 年 3 月 16 日 Manus My
+Computer，4 月 30 日 Manus Cloud Computer，8 月 11 日 Grok Bot，9 月 8
+日 Meta Muse。几个月内，三家独立厂商撞上了同一种架构，都在给 agent
+一台专属且不会关机的机器。几家公司的背景并不相同，却在几个月内达成同一种工程共识，说明背后存在某种明确的技术推力。</p>
+<p>一家公司做是产品选择，三家公司在几个月内密集拿出相同形态，表明它们同时撞上了同一类需求。Meta
+与 xAI 是最新入场的巨头，最早动手的则是 Manus。2025 年行业还在争论 agent
+能否干活，外界反复拿 Manus 当样本；一年之后讨论转向 agent
+该住在哪，Manus 又率先交出了答案。</p>
+<p>我们在过去几个月里持续跟踪这条技术线。8 月写过，编程
+agent
+的界面正在收敛，真正的分化在界面下的执行层，也就是任务到底在谁的机器上跑。6
+月也写过，agent
+正在从聊天窗口搬进后台守护进程。Manus
+偏向按需唤醒的会话，你不打开它它就不动；Google 的 Spark
+则是后台守护进程，设好规则后它自己盯着变化。回头来看，那两篇文章记录的正是这条演进曲线的前半段。</p>
+<p>不仅形态在收敛，这些机器对准的目标也发生了转移。拥有专属工作台的
+agent
+起初面向写代码的人，机器里积累的状态都是代码；如今同样的架构直接对准了用户的收件箱、日历和家庭设备，积累的单元从代码仓库换成了日常生活。这个变化就像从
+Claude Code 走向 Claude
+Cowork：工具的核心机理相似，服务的人却从写代码的人变成了过日子的人。</p>
+<h2>它们为什么都在往同一个方向走</h2>
+<p>最初，agent
+只是聊天窗口里的文本对话框。用户问一句，模型答一句，会话结束状态立刻归零。它没有记忆，无法调用外部工具，能力局限在对话框内。</p>
+<p>后来，工程工具开始给模型装上手脚。Cursor 的 Agent 模式、Claude
+Code、Codex、Devin
+让它能读写文件、执行终端命令、跑测试看报错并尝试修复。交互依然套在对话框里，但对话变成了循环迭代。写代码的
+agent 最早获得了自己的落脚点：一个包含文件系统、shell
+和工具链的工作台。但这个工作台完全依附于代码仓库，出了目录它就无处可去。如果要让它读取外部邮件、处理下载目录里的报销凭据或者查询旅行日程，传统的编程工作台便失去了上下文支撑。</p>
+<p>各家随后把执行环境搬到了云端，按时间表或事件触发运行。Cursor 在 2025
+年 5 月上线 Background Agent，后改名 Cloud Agent，并在 2026 年 2
+月升级为完整虚拟机。Claude
+Code 在 2025 年 10 月上线网页版，任务在云端执行。Codex 在 2025 年 5
+月首发就是云端，每任务分配独立沙箱。这个阶段解决了 agent
+脱离前台自主运行的问题，但机器随任务起、任务结束就销毁，登录态、文件和记忆都不沉淀。</p>
+<p>对写代码来说，临时环境非常合适。软件工程的状态保存在 git
+里，代码、分支和提交历史可以完整同步。虚拟机只是临时工位，拉下代码跑完测试推回远端，任务结束时只要分支推送到代码托管平台，机器就完成了使命，销毁后不会丢失资产。软件工程的生命周期以提交为节点，天然适应随开随关的沙箱计算。</p>
+<p>个人生活完全没有类似 git
+的外部仓库。数字生活没法像代码那样执行克隆。它由杂乱的运行时状态组成：网页登录凭据、浏览器配置、下载目录、收件箱、本地工具，以及对用户习惯的记忆。这些状态没有通用的导出格式，它们直接嵌在操作系统环境里。个人事务的跨度常常延续数天甚至数周，如果中间丢失了登录授权或者临时文档，整个自动化协作就会中断。计算环境一旦重置，维持运转的操作状态随之消失。</p>
+<p>给个人办事，agent
+需要的不再是随用随拆的临时工位，而是一台长期在线的专属机器，一个稳定的落脚点，也就是一个家。Manus
+Cloud Computer、Grok Bot、Muse
+的隔离环境，都是这个家的不同装修。这台机器里真正承载的核心，是 agent
+的操作状态：登录了哪些服务、存了哪些文件、记住了哪些偏好、挂了哪些定时任务。</p>
+<p>一个真正替人办事的个人
+agent，必须身在其中且持续存在。它必须融入用户的账号、文件与日常习惯，同时还要在无人值守时持续推进。这两点要求它必须落在一个固定的地方。真正落下的实体是操作状态，并非模型本身。既然生活状态无法导出，谁保管它，谁就实际持有了这份资产。三家厂商收敛到同一种形态，根源就在于操作状态必须找到安放的物理空间。</p>
+<p>图 2：agent
+找家的四代演化，从聊天窗口到工作台，再到临时工位，最后是常驻的家</p>
+<h2>家可以是你自己的，也可以是他们的</h2>
+<p>安放操作状态需要一台不会关机的机器，但这件事并不捆绑在厂商的云端。持久与托管其实是两个彼此独立的维度。</p>
+<p>把持久单独拿出来看，一台本地常开的电脑同样能够完成。在家里放一台不休眠的机器跑开源
+harness，登录态在本地、浏览器在本地、文件与定时任务都在本地。在底层能力上，本地机器和云端虚拟机并无功能上的鸿沟。论及网络环境，家庭住宅
+IP
+访问日常网站更不容易触发拦截，授权凭证留在自己的设备上也更可控。云端在这里提供的是交付方式，并非独占的技术能力。</p>
+<p>把几种主流方案按机器位置与维护责任排开，技术取舍一清二楚。每种路径都在掌控度与使用门槛之间划定了边界。</p>
+<p>做法</p>
+<p>机器在哪</p>
+<p>谁维护</p>
+<p>登录态在哪</p>
+<p>关机后还跑吗</p>
+<p>Cursor Cloud Agent</p>
+<p>云端，每任务一台</p>
+<p>厂商</p>
+<p>不沉淀</p>
+<p>是</p>
+<p>本地常开 Codex</p>
+<p>你自己家</p>
+<p>你自己</p>
+<p>本地</p>
+<p>是</p>
+<p>Cowork</p>
+<p>云规划，本地渲染</p>
+<p>厂商 + 你</p>
+<p>本地导入</p>
+<p>否，桌面要在线</p>
+<p>Grok Bot / Muse</p>
+<p>云端，专属常驻</p>
+<p>厂商</p>
+<p>厂商云</p>
+<p>是</p>
+<p>OpenClaw / Hermes</p>
+<p>你自己家</p>
+<p>你自己</p>
+<p>本地</p>
+<p>是</p>
+<p>真正的分界线在最后一列之外：操作状态由谁来保管。自建路线把控制权留在用户手里，代价是用户得充当全职运维。买硬件、做系统维护、打补丁、管供电网络与容灾备份，还得放弃账号体系的多端接入。家里偶尔断电断网、路由器动态端口变动或者系统强制自动重启，都会让本地服务陷入停滞。绝大多数人没有长期维护私人服务器的技术意愿，促使市场自然倒向托管。</p>
+<p>用户把保管权交出去，换来的是几样具体收益：免去机器的日常维护；厂商维护好的现成连接器（Muse
+预置了邮件、日历、支付和智能家居）；平台特有的能力（比如 Stripe Link
+生成单次卡号，绑定到特定商户、金额和时限，每次结算都经用户审批）；以及跟随账号的多端可达体验。把这些摊开看，用户买的核心服务，就是保管权的外包。产品的定价基准并不取决于模型有多聪明，它锚定的是雇人、自己搭机器或承担失误的综合代价。</p>
+<p>常说的上云遮蔽了背后的真实变量。云端只是一种交付手段，真正的变量始终是保管权的外包。厂商卖给用户的核心货品，正是替你接管这套操作状态。</p>
+<p>图
+3：本地常开机器与厂商托管云机能力相同，差别在谁维护、登录态记在谁那里</p>
+<h2>谁持有状态，谁就持有关系</h2>
+<p>厂商乐于接下保管工作，背后有清晰的账本。掌控运行环境不仅能拿到关键的数据反馈，也直接锁定了长期的用户关系。</p>
+<p>任务在厂商云机上跑，技术团队才能完整看清 agent
+在真实场景里怎么用工具、在哪一步卡住、用户批准了什么拒绝了什么。这些一手行为记录对改进模型非常关键。如果
+agent 跑在用户家里，这些交互细节就留在本地，厂商只能看到单次 API
+调用。把执行环境握在手里，厂商同时拿到了数据入口与深度的用户粘性。文件、登录态、记忆与定时任务都在这台机器里，随着使用时间累积，环境里积累的偏好和规则越来越多。用户换一家就要重建整套环境，光导出聊天记录毫无作用。用户获得的便利与厂商建立的壁垒，来自同一份资产。</p>
+<p>这种演化重塑了商业计费模式。聊天机器人按查询收费，用一次付一次；常驻机器则按用户分配固定计算资源，开着就在消耗，无论用户是否随时调用。云端持续分配的内存、存储空间和待机进程，构成了厂商每日固定的运营支出。这决定了免费版要卡额度，付费版转向固定月费。根据媒体披露的报道口径，Muse
+的付费档是每月二十美元和一百美元。数据入口、生态锁定与持续订阅，三者在商业方向上高度一致。</p>
+<p>不同群体对这笔账的感受完全不同。技术开发者有能力自持，倾向选择
+OpenClaw 或
+Hermes，把凭证留在自己的硬件里。日程紧凑的专业工作者更在意时间，不愿管服务器，需要开箱即用的连接器与手机端支持，商业托管能切实提升效率。没有技术背景的普通大众面对复杂环境，托管方案几乎是目前唯一的实用选择。</p>
+<p>在真实工作里，全天候运行的机器确实能跑通复杂的长流程。Grok Bot
+发布后，有用户让一个 Bot
+对接约四十家越南面料供应商，通过邮件与网页逐家询价谈单，最终挑中一家完成了样品采购。这种工作本来需要人花几天在收件箱与浏览器之间反复切换。现在交给后台机器自主推进，能够成立的前提，就是那台机器始终在线并保存着全部会话登录态。</p>
+<p>看各家对专属云电脑的宣传，我更习惯顺着四个问题去衡量：环境是否常开、持久且沉淀真实登录态；机器由谁负责日常维护；凭证与数据放在哪里的服务器上；换一家需要重建多少配置。这几个问题排开，容易看清一项服务到底替人分担了哪些运维琐事，还是把同样的操作状态换了个地方存放。</p>
+<p>智能助手需要一个家，行业内部已经达成共识。这个家安顿在谁的地盘上，由谁来保管全部操作状态，才是接下来真正要争夺的焦点。</p>
+
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Meta" class="entity-link company-link">Meta</a>, <a href="/search/?q=xAI" class="entity-link company-link">xAI</a>, <a href="/search/?q=Manus" class="entity-link company-link">Manus</a>, <a href="/search/?q=Google" class="entity-link company-link">Google</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Muse" class="entity-link product-link">Muse</a>, <a href="/search/?q=Grok Bot" class="entity-link product-link">Grok Bot</a>, <a href="/search/?q=Manus Cloud Computer" class="entity-link product-link">Manus Cloud Computer</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/agent-architecture/">agent-architecture</a>
+      
+        <span class="tag-pill tag-pill--no-page">cloud-computer</span>
+      
+        <span class="tag-pill tag-pill--no-page">state-persistence</span>
+      
+        <a class="tag-link" href="/tags/workflow-automation/">workflow-automation</a>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

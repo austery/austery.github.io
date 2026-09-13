@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>衡量前沿智能：AI评测基准与独立评估体系的演进</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="衡量前沿智能：AI评测基准与独立评估体系的演进" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">衡量前沿智能：AI评测基准与独立评估体系的演进</span>
+      <span data-pagefind-meta="speaker" style="display:none;">a16z</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-09</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/a16z/">a16z</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=WO9c9qxDxzU" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-09
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">本访谈深入探讨了前沿大模型评测的挑战与未来。Vals AI创始人Ryan与a16z合伙人围绕公开基准失效、私有评测体系构建、代理评测复杂性、企业ROI路由以及主权AI与地缘政治下的验证机制展开深度对话。</div></div>
+      
+    </div>
+    <h3>开篇引言</h3>
+<p><strong>Ryan</strong>: 每当一个价值数万亿美元的新兴产业出现时，都会需要一个<strong>独立测试机构</strong>。当 Meta 在我们保留的私有基准上发布 <strong>Llama 4</strong> 时，该模型的实际表现并不尽如人意。但在所有主要的公开基准测试中，它却展现出了令人难以置信的能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: Every time a new trillion dollar industry emerges, there's a need for this independent testing group. When Meta released Llama 4 on our held out private benchmarks, the model is actually underperforming. But on all of the major public benchmarks, it was showing incredible capabilities.</p>
+</details>
+<p><strong>Ben Horowitz</strong>: 你们能达到的能力上限是什么？在此范围内，你们又是如何推进的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ben Horowitz</strong>: What's the limit of what you can achieve? And then within that, how are you going about it?</p>
+</details>
+<p><strong>Ryan</strong>: 在理想世界中，我们希望拿一个前沿模型去训练它自己的下一个版本，但显然后者既昂贵又缓慢。因此，我们正在做的是针对构建下一代模型所需流程的每个环节建立一套代理机制。随着评测变得越来越复杂，其样本规模越来越小，但对它们的评判标准和预期却越来越庞大。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: In an ideal world to take a frontier model and have it train the next version of itself, but obviously that's very expensive and slow. And so what we're doing is forming a set of proxies for every part of the process it takes to build the next version of the models. Evaluations as we become more complex have a fewer sample size but a larger set of criteria or expectations of them.</p>
+</details>
+<p><strong>主持人</strong>: 你认为当今存在的差距在哪里？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Where do you see the gap that's happening today?</p>
+</details>
+<p><strong>Ben Horowitz</strong>: 政府在某种程度上对它所担忧的事情有大致预判，无论是<strong>生物黑客</strong>还是<strong>网络黑客攻击</strong>。但接踵而来的问题是：模型是否具备这种能力？以及你是否有办法诱导模型做出这些行为？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ben Horowitz</strong>: The government kind of has an inclination of what it's afraid of be it biohacking, cyber hacking. But then there becomes the question of can the model do it and then can you get the model to do it?</p>
+</details>
+<p><strong>主持人</strong>: 你认为未来的格局会是什么样子的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: What do you think the landscape will look like? Um</p>
+</details>
+<h3>创立初衷</h3>
+<p><strong>主持人</strong>: 我想从一个问题开始：<strong>Vals AI</strong> 于 2024 年创立，当时团队发现所有公开基准测试都不足以衡量模型的进展，必须采用全新的方法和路径来让我们保持在前沿，并帮助模型实验室持续爬坡（Hill Climbing）。请带我们回顾一下 Vals 的创立初期，以及你当时观察到市场上缺失了什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: so I'll start a question from uh when LA got started in 2024 after a team discovered that all the public benchmarks are just not sufficient enough to measure model progress and there needs to be a new methodology and approach coming to you know keep us um uh on the frontier and and help um model labs hill continue to hill climb. uh maybe just take us back to the the inception of vows and what do you see was missing in the in the in the market then?</p>
+</details>
+<p><strong>Ryan</strong>: 好的。我有做研究的背景，特别是构建基准和评测体系。因此对我而言非常明确的一点是：构建用于生成的新系统，与构建实际评测的新机制之间，存在着极其紧密的共生关系。事实上，要想在一方面取得突破，往往需要在另一方变得更强。</p>
+<p>推动模型能力提升的最大驱动力之一，其实就是拥有这些能够衡量模型能力的强大内部基准。但随着模型能力日益提升，不仅公开基准测试迅速饱和，而且在构建通用智能的过程中，由于存在众多不同的研究方向，单一的测试机制已无法捕捉其全貌。因此，显而易见需要有一个第三方独立实体来衡量智能的进展。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: Yeah. Yeah. I mean so I I had a background uh doing research and in particular building benchmarks and evaluations and so what was very clear to me was the very tight relationship between what it takes to build new systems for generation and actually new mechanisms for evaluation. In fact in order to get one you often need to get better at the other. Um and actually one of the biggest drivers for model capability is having these great internal benchmarks to hill climb on. But as models became more and more capable, uh not only did public benchmarks quickly saturate, but in this effort to build broad general intelligence because there were so many different research directions to take, no single mechanism was able to capture it all. And so there was a very clear need for a third party independent entity to measure progress towards intelligence.</p>
+</details>
+<p><strong>主持人</strong>: 那么一个显而易见的问题是：为什么模型实验室自己无法完成这件事？因为他们最清楚自己的模型在向哪些方向攀登，也最清楚模型缺失了什么。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And why why do I guess one of the obvious question is why do you think the labs can't do this by themselves? because um they know the best of where the models are hill climbing on and what what is missing.</p>
+</details>
+<p><strong>Ryan</strong>: 是的，在内部他们确实构建了许多优秀的基准，这也是推动模型进步的核心。但我认为，当我们以一种自我指涉（Self-referential）的方式去谈论模型能力时，问题就出现了。在内部测试中，你可以选择突出某些特定测试集上表现优异的部分，但这未必能在更广泛的工作流中转化为实际效用。</p>
+<p>因此，当你试图将模型投入实际生产或决定采纳哪家实验室的技术时，如果缺乏一个独立方来进行无偏差的衡量，就很难建立起真正的信任。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: Yeah, I mean internally they they do build a lot of great benchmarks and that's what drives model progress, but I think there's an issue when we we speak about model capabilities in a way that's self-referential. In the internal evaluations, you can selectively emphasize parts of the tests that perform well, but that may not translate to real-world utility across wider workflows. So when you're trying to put models into production or decide which lab's technology to adopt, without an independent party doing unbiased measurement, it is very hard to establish genuine trust.</p>
+</details>
+<h3>历史类比</h3>
+<p><strong>Ben Horowitz</strong>: 你脑海中有哪些历史类比？评级机构？审计事务所？最合适的参照物是什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ben Horowitz</strong>: And what's the historical analog that you have in mind here? There rating agencies, audit firms. What's the right comparable?</p>
+</details>
+<p><strong>Ryan</strong>: 我认为各行各业都有值得借鉴的经验。每当一个价值万亿美元的新行业兴起时，都会产生对独立测试机构的需求。人工智能发展如此迅速，使得许多类似的平行关系必须快速落地。</p>
+<p>我们将自己定位为处于市场的两端：一方面，模型实验室需要机制来证明新模型非常强大；另一方面，企业也需要搞清楚什么样的采纳策略能为他们带来最大的投资回报率（ROI）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: Yeah, I I think I think there's honestly lessons to learn across the board and and every time a new trillion dollar uh industry emerges um there there there's a need for this independent testing group and I think the fact that it's moved so quickly in AI has caused necessity for a lot of these parallels to to see to be borne out. Um you know, we think about ourselves as is trying to sit on both sides of the market. So there they're mechanisms by which labs need to prove that new models are very capable, but they're also parallels where enterprises need to figure out what adoption strategy is going to amount to the greatest ROI for them.</p>
+</details>
+<p><strong>主持人</strong>: 我想转向了解一下模型正式发布前 6 小时的窗口期。显然，你们需要在不延误发布的前提下运行数百亿个 Token。这其中哪些部分是你们通宵人工完成的，哪些部分实现了自动化？请带我们了解一下。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, I want to shift to take us through sort of the six-hour pre-release window before the model drops. Um, obviously you need to run tens of billions of tokens without delaying the launch. Which part is you doing an allnighter versus it being uh automated? Take us through that.</p>
+</details>
+<p><strong>Ryan</strong>: 这确实是一段探索历程。我们心中的北极星目标是：我们绝不想成为模型发布的滞后指标或阻碍延误。这意味着我们必须以极快的速度行动，在我们拥有的速率限制或算力容量下提取尽可能多的有效信号。</p>
+<p>早期的时候，这意味着我和我的联合创始人 Lynx 要通宵达旦地赶工，尽可能多地完成评测并将结果输出。现在我们建立了一支团队，并在基础设施上投入巨资，因此我们能够以大规模分布式的方式运行评测，针对我们获取访问权限的每个模型，几乎都在以其最大可能的速率限制运行。</p>
+<p>此外，我们还有一个内部系统叫 <strong>Steve</strong>——即“经济评测员工 Steve”。随着时间的推移，我们正是通过这个机制将越来越多的人工工作转移给 Steve 自动化完成。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: It's honestly been a journey. Um, and and I think like the the real the goal Northstar we think about is we we never want to be um kind of a lagging indicator or a delay to a model release. Um and and so that means we have to move really really quickly and extract the most possible signal with the the rate limits or capacity that we have we have. And so early on what this looked like was my co-founder Lynx and I pulling an allnighter uh to try and get as much done as possible and get results out the door. Um now we've built up a team but we've also really invested heavily in infrastructure. And so we're able to run evaluations in a a massively distributed way um running effectively the the maximum possible rate limits with with every model we get access to. Um, and we also have this internal system called Steve. Uh, Steve the economic valves employee. Um, and so that that's been a mechanism by which we're able to actually take more of the human work over time and and put it into Steve.</p>
+</details>
+<h3>评测困境</h3>
+<p><strong>Ben Horowitz</strong>: 你如何应对这类问题——它在某种程度上类似于一个 <strong>AI 完全问题</strong>（AI-complete Problem），即我们在评估人类方面其实也并不擅长，或者说我们从未达成共识。比如有智商测试（IQ）、情商（EQ）、大五人格测试等，但并不存在一个公认的评测框架。人们对 SAT 等各种考试也颇有微词。而且模型非常擅长去刷榜钻空子（Hack the Benchmark）。针对这个问题你怎么看？你们能达到的极限是什么？在此范围内你们又是如何做的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ben Horowitz</strong>: And how do you deal with the kind of issue that it's a little bit of a an AI complete problem in that um, you know, we still aren't really good at evaluating humans um, or we haven't agreed on it. like there are things like IQ test, there's EQ, there's, you know, the big five personality and so forth, but there's not really an agreed upon um framework for which we do it. And people have issues with things like the SAT and this and that and the third. And then you know of course models are really good at hacking the benchmark um as on the floor proved and so how do you think about you know that issue and what are you like what's the limit of what you can achieve and then you know within that how are you going about it?</p>
+</details>
+<p><strong>Ryan</strong>: 坦率地说，这迫使许多原本模糊或分散的评估形式变得具体明确。例如，在一家律师事务所中，初级律师和合伙人之间的本质区别究竟是什么？在人类世界中对此并没有清晰的标准测试。</p>
+<p>因此，我们必须首先在各种企业或真实世界的工作流程中确立这些标准，以便能够以相同的方式测试模型。从长远来看，最大的瓶颈实际上将是我们深入企业并将其业务流程与评估标准清晰化的能力。因为唯有如此，我们才能搞清楚究竟该依据何种信号去提升模型，以及该在何处真正部署采纳。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: Yeah, I think I think the honest answer is that it's forcing a lot of the um more fuzzy or distributed forms of eval to be made explicit like what what is really the distinction between an associate and a partner at a law firm. Um and there there isn't a clear test or an eval for that in the human world and so we we have to first establish a lot of that in uh these different different enterprise or real world workflows for us to be able to test models in the same way. Um, and and I think long term that will be actually the biggest bottleneck, our ability to take companies and their emails and and make them legible. Uh, because that's how we'll figure out what signal we'll climb on and where we actually adopt.</p>
+</details>
+<p><strong>主持人</strong>: 明白了，非常有趣。其实想问 Ben 一个关于行业在智能出现之前如何演变的问题。我们现在衡量的是某种非常流动多变的东西，而过去谈到企业软件时，像 <strong>Gartner</strong> 会根据 70 个不同的指标进行评级，可以在象限图上进行排序，说明这家公司涵盖了这些功能，那家公司没有。但现在面对的是一个非常难以衡量的动态前沿，你认为有哪些可以借鉴的历史经验？展望未来，真正的挑战和缺失的要素又是什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Got it. Very interesting. Actually, maybe one question for you, Ben, on just like how the industry has formed before like intelligence came through. Like we're now measuring something that's very fluid versus before like when we're talking about enterprise software like you know there's Gartner rating on like 70 different metrics like you can sort of stack rank on a on a on a quadrant to say this company has these features covered these features not. But now it's like you know very jack frontier that's very hard to measure given industries like what do you see um you know one is the analogy to the past that uh lessons we can borrow and what do you see that's really going to be the challenge and uh and missing pieces going forward.</p>
+</details>
+<p><strong>Ben Horowitz</strong>: 这有点让人想起美国电影协会（MPAA）的分级制度：什么是艺术？什么是色情？界限在哪里？什么时候是 R 级？什么时候是 X 级？顺便说一句，随着时间的推移，这些定义也在发生变化，以前被评为 X 级的现在变成了 R 级，还有什么是 PG，什么是 PG-13。名言是“我看到了我就知道”（I know it when I see it）。</p>
+<p>我认为对 AI 的衡量必然具有一定的模糊性，但随着时间推移会形成通用行业规范。如果足够多管理企业、从事金融或各行各业的人达成共识，认定那就是标准规范，那么它就是规范。而不是像现在公开基准中常见的那样——如果你能解决某个特定问题你就达到了某个级别。这种做法一是容易被针对性作弊刷榜，二是适用范围太窄了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ben Horowitz</strong>: Yeah, it's a it's a little bit reminiscent of the MPAA, right? Where it's like, what's art, what's porn, where's the line, when is it R, when is it X? Um, and by the way, the definition of that has changed over time, I think. Um, things that that used to be [laughter] X are now R and and so forth. And, you know, then what's PG? What's PG-13? You know, all that kind of thing. And there's no and the famous line is well I I know it when I see it and I think that um this one I I just think it's going to be necessarily fuzzy but there will develop norms over time. uh and and you know like if enough kind of people who run companies or run finance or run whatever it is kind of agree yeah no that's a norm uh then then I think it is as opposed to kind of what we have a lot now in the open benchmarks whereas if you can solve this specific problem then you're at this level and so forth I think that's um you know one it's hackable and then it's too narrow</p>
+</details>
+<h3>商业边界</h3>
+<p><strong>Ryan</strong>: 当回顾历史类比时，我们也可以从中吸取很多教训，了解曾经出现过哪些问题以及我们需要避免什么。例如在 Vals，我们很早就做出了一个决定：<strong>绝不向模型实验室出售训练数据</strong>。每当我们开始与一个新的实验室合作时，他们往往会向我们施压，希望我们为他们采购并出售大批训练数据。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: I think when you also look to some historic analogies, there's there's a lot of lessons that you can take from them as well on what's gone wrong and what we need to avoid. Um, and I think for instance, Fed Bowels, one very early decision we made was the decision to uh to never sell training data to labs. It's it's often a place that we're pushed um when we start working with a new lab to to actually source and sell for them a bunch of training data.</p>
+</details>
+<p><strong>Ben Horowitz</strong>: 是的，那可是一门利润丰厚的生意。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ben Horowitz</strong>: Yeah, that's a lucrative business. Yeah.</p>
+</details>
+<p><strong>Ryan</strong>: 没错。但很多同行现在围绕这一点建立了巨大的商业模式。问题在于，一旦你开始向被你评测的对象出售用于优化评测的数据，你的利益动机就不再纯粹了。你最终会变成一家数据服务公司，而非真正的独立评估机构。</p>
+<p>在 2008 年金融危机中，评级机构因为评级商业票据而从银行获取报酬，从而产生了严重的利益冲突。因此，在评估人工智能时，保持公正无私并构建合理的商业模式是极其重要的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: Yeah. Yeah. uh and and actually a lot of that industry has has now built these gigantic business models around. And the issue is that once you start to sell the thing you're testing to the entity you're testing, your incentive is no longer pure. You end up being a data services company, not actually an independent evaluator. In the same way in 2008 the rating agencies were paid by the banks to rate their commercial paper and you saw huge issues from that. And so being unconflicted and building the right business model around evaluating AI is super important.</p>
+</details>
+<h3>基准构建</h3>
+<p><strong>主持人</strong>: Ryan，目前你们已经拥有涵盖不同类型任务和模态的丰富评测目录。你能介绍一下其中一些最受欢迎或对前沿模型最具挑战性的基准吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And Ryan today you have already a pretty um extensive catalog of different type of of task and also models modalities. Maybe can you talk through like what are some of the most popular and also like maybe the most challenging benchmark that frontier models are currently taking on?</p>
+</details>
+<p><strong>Ryan</strong>: 我们在经济上有高价值的应用方面做了大量工作，重点涵盖<strong>编码</strong>、<strong>法律研究</strong>、<strong>网络安全</strong>以及<strong>金融分析</strong>。</p>
+<p>例如在金融领域，我们构建了一套金融分析基准，其核心是端到端地评估模型从美国证券交易委员会（SEC）的 10-K 或 10-Q 申报文件中提取数据、构建复杂贴现现金流（DCF）模型，并根据特定业务假设对私营或上市公司进行估值的能力。这项任务非常复杂，不仅涉及数十万个 Token 的长上下文推理，还需要调用外部工具、执行 Python 代码并生成完整的财务表格。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: Yeah well we've done a lot of work in in kind of the economically interesting applications, so heavily in coding, legal research, cyber security, and financial analysis. In finance for example, we've built a financial analyst benchmark which really evaluates end-to-end the ability of a model to take SEC filings like 10-Ks or 10-Qs, pull relevant data, construct complex DCF models, and value private or public companies based on specific operating assumptions. This is extremely intricate because it involves reasoning over long contexts of hundreds of thousands of tokens, interacting with tools, running Python environments, and outputting formatted sheets.</p>
+</details>
+<p><strong>主持人</strong>: 这是一个非常酷的基准。现在业界都在讨论用 AI 替代分析师，但要真正可靠地完成端到端任务难度极高。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, I thought that one is a very cool benchmark. It's sort of all the rage in terms of replacing analysts, but to actually do that end-to-end reliably is incredibly difficult.</p>
+</details>
+<p><strong>Ryan</strong>: 理想情况下，评测应当尽可能还原真实工作场景。以法律研究为例，我们并不是让模型回答单项选择题，而是给它一个案情摘要和上百页的相关判例法，要求它撰写一份具有说服力的法律备忘录，并准确引用有效的先例。只有在这样严苛的真实环境中，我们才能看到顶尖前沿模型与次级模型之间的真正分水岭。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: Yeah, I think you know in an ideal world what you want to do is actually take a frontier workflow and simulate it end-to-end. In legal research for instance, we are not asking multiple choice questions; we give the model a factual scenario and hundreds of pages of case law, requiring it to produce a comprehensive legal memo with precise citations to good law. Only in these high-fidelity environments can you see the true divergence between the absolute frontier models and the tier below.</p>
+</details>
+<h3>基准迭代</h3>
+<p><strong>主持人</strong>: 太棒了。我还注意到你们有时会废弃淘汰旧的指标和基准。淘汰旧基准背后的考量是什么？随着模型越变越聪明，你们如何持续维持前沿评测的有效性？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Very cool. Um there's also uh cases where you have deprecated uh indexes and benchmarks. What goes into the decision to retire a benchmark, and how do you keep up as models get smarter?</p>
+</details>
+<p><strong>Ryan</strong>: 淘汰是必然的，这是一场<strong>无限游戏</strong>。你看你正穿着我们的文化衫，上面印着我们的非官方座右铭：“<strong>总有更高的高峰</strong>”（Always a higher peak）。</p>
+<p>只要基础模型实验室在持续爬坡，寻找下一座要征服的高峰，我们的职责就是不断为他们筑造下一座更高的山峰。随着经济的发展，许多劳动力形态随技术演进而变迁；同样地，我们的基准也必须紧跟我们对模型能力的新期望。</p>
+<p>此外，淘汰基准还有一个常被低估的维度：<strong>基准必须能够反映世界的当下状态</strong>。就像律师必须重新认证或医生必须跟进最新的医学进展一样，当判例法或真实世界知识发生更新时，我们必须更新法律研究基准，以使其契合现实并继续向前推动模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: A necessity and and this is kind of the infinite game we're in. I mean, you're wearing our shirt and so we have this unofficial motto, always a higher peak. Love this shirt. Yeah. So, in so far as foundation model labs are hill climbing, they're searching for the next peaks to summit. It is our job to perpetually construct these next mountains for them to summit. Um, and I think that's also how the economy has naturally functioned over time. As um, you know, agriculture becomes less important for our our labor market. Um, there are new forms of uh of of labor less required out of our out of our population. Um and so in the same way we we should expect our benchmarks to keep up with the new frontier for what we want models to do. Um there's another component of retiring benchmarks which I think is is underappreciated uh which is that benchmarks should also be reflective of the current state of the world. Uh so in the same way if you're a lawyer you have to you know retake the bar exam and get certified or if you're an architect you have to get your certification and and or you know a doctor um uh we should also expect models to be tested on the current state of the world and what we know in medicine or what we what we have as our set of laws. And so in the instance of case law updating to something like legal research benchmark that's a desire to create a benchmark more reflective of the current state of the world and also push the models in place we want to see them go.</p>
+</details>
+<p><strong>主持人</strong>: 过去我们常通过多步问答来评估 Prompt 的回答质量。现在出现了越来越多的 <strong>Agentic</strong>（智能体）工作流，无论是在金融、法律还是编程领域，有大量的异步后台智能体在自主完成任务。这对你们的基础设施建设产生了什么影响？当评估对象不仅是模型本身而是复合智能体时，你们如何考量成本、延迟和灵活性等多重维度？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And how has um I guess one like it used to be like we're we're um doing these like multi- um answer or multi-step questions to like just evaluate prompt answers. Now there's like a lot more agentic uh work that's happening whether it's on finance or legal um or coding especially like there's a lot of um you know um async background agents that can just complete tasks. How has that changed sort of how you build infrastructure? how to think of evaluating um the capabilities of not just the models and agents themselves. And there's also like a lot more dimensions that people care about. It's not just like capability, it's cost, it's latency, it's like um you know whether this model is flexible enough to to to address like broader um domains and task and so on. So how do you think about the additional parameters to to what you evaluate?</p>
+</details>
+<p><strong>Ryan</strong>: 这涉及非常多的考量。在基础设施层面，你会面临一整套全新的挑战。例如，我们现在测试的智能体可能需要连续运行数小时、数天甚至数周。因此底层基础设施必须极其稳定，以支持长时间的评测；并且如果中间某次请求失败，系统必须能够从断点重试，而不是让整个执行轨迹全部重跑。</p>
+<p>总体而言，评测越复杂，<strong>样本数量越少，但评价指标体系越庞大复杂</strong>。在早期 ImageNet 时代，你有数百万张图片输入，模型只需输出一个文本标签，是一对一的简单映射。而现在，我们的任务集规模可能只有 50 个“生成完整的全栈 Web 应用”，但评测其产出代码、运行状态、安全性及架构合理性的机制却极其复杂繁复。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: Oh yeah, there's I mean there's a lot that goes into that. I think on the infrastructure level you have a whole new set of problems. Um I mean for instance now we're testing models in their ability to run over hours, days, sometimes weeks and so the infrastructure needs to be very stable to support evaluation over time and and if there is a failed request we should be able to retry from that one and not redo the whole trajectory. So there's some simple simple mechanisms in the infrastructure we have to think about. Um but but I think in general what we've seen is evaluations as they become more complex have a fewer sample size but a larger set of criteria or expectations of them. And so what I mean by that is a benchmark is largely some kind of input space of things you're trying to query a model to do and a set of requirements or rubrics that you see in expectations of the output. And so early on you have things like imageet which have millions of of images you're trying to see a basic categorization for. So it's a onetoone mapping between an image input and a text label output. Now what we have is far fewer set of tasks. You know generate me 50 fullstack web applications but a much larger complex mechanism for evaluating the output produced. And I think that trend is going to continue as we see more complex workflows evaluated with models.</p>
+</details>
+<h3>模型路由</h3>
+<p><strong>主持人</strong>: 你认为这会变成一种实时的动态机制吗？比如 Stripe 收购了 <strong>OpenRouter</strong>，OpenRouter 会向 Vals 寻求实时指导说“下一个请求应该路由给哪个模型”，还是说这主要用于企业在特定任务中进行静态选型？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And and do you do do you think that um it will become kind of an a real time uh kind of mechanism like so for something like open router which stripe just bought would open router look to valves and say okay where should this next request go or is this going to be kind of strictly for like picking a model in an enterprise for a task?</p>
+</details>
+<p><strong>Ryan</strong>: OpenRouter 的叫法其实略有偏差，因为他们的大部分用量来自于充当模型网关（Gateway），实际仍由用户决定何时调用哪个模型。这是因为<strong>模型路由最困难的部分正是构建评测体系</strong>，搞清楚在特定应用中哪些智能水平最为匹配。</p>
+<p>我们帮助企业建立评测体系的工作，实际上也在赋能他们采纳智能路由。请多谈谈为什么这不仅对实验室至关重要，对企业而言也是关乎生存与 ROI 的核心命题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: Yeah, I mean I think u you know open route is a bit of a misnomer in that most of their usage comes from being a model gateway and so it's actually up to their their users to decide which models they want to use when and that's because really the hardest part of routing is building the evals and trying to determine uh in what places a set of intelligences should be used for a particular application. Um and and so you know our effort in supporting enterprises in building evals has actually supported a lot of them in also adopting routers.</p>
+</details>
+<p><strong>主持人</strong>: 请进一步展开谈谈，为什么评测不仅对模型实验室意义重大，对企业来说更是关乎生死和生存的核心问题？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: and say more about why it's not only important to labs but also existential for enterprises as well?</p>
+</details>
+<p><strong>Ryan</strong>: 对实验室而言显而易见：如果你融了巨额资金并重金投入模型训练，你必须证明自己的模型在变强，向客户证明为何值得为其支付溢价。</p>
+<p>但对企业来说，情况完全不同。如今市场上有 <strong>GPT-4o</strong>、<strong>Claude 3.5 Sonnet</strong>、<strong>Gemini 1.5 Pro</strong> 等众多前沿模型，以及各种开源模型。企业每月的 Token 账单高达数百万美元。如果你在所有环节都盲目调用最昂贵的前沿模型，成本将极其高昂；但如果你调用了较弱的模型导致任务失败，由此造成的业务损失和修复成本更无法承受。只有通过精确严密的评测，企业才能找到成本与能力之间的最佳平衡点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: Yeah of course yeah I mean I think that the lab side of this is very clear like you know if you're raising lots of money investing heavily in building models it's it's essential for you to show uh why your model is getting better and then why those customers should should pay a premium for them. Um but for enterprises, the dynamic is very different. You have frontier models like GPT-4o, Sonnet, Gemini Pro, and countless open-weight options. Enterprise token bills can easily reach millions of dollars a month. If you blindly route every query to the most expensive frontier model, your economics collapse. But if you down-route to an incapable model and it hallucinates or fails, the downstream engineering cost is even worse. Evals are the only instrument enabling businesses to find that efficient frontier of capability versus cost.</p>
+</details>
+<h3>企业实践</h3>
+<p><strong>主持人</strong>: 深入探讨一下：类似于为什么实验室不能自评、需要第三方评级机构，企业内部是否也应该建立自有的内部评测团队，还是说完全依赖外部标准？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And and maybe just double click on that um like similar question to to why the labs can't do it themselves or requires a third party um agency to to rate it. I think it's it's a lot uh more um uh understandable that you know you need this that neutrality across the industry but for enterprise they want to know what's right for their stack.</p>
+</details>
+<p><strong>Ryan</strong>: 我建议大多数企业在内部建立自己的评测专业能力，但这不应是唯一的解决方案。目前基础模型实验室层出不穷，各家发版节奏极快，单一企业根本没有足够的带宽去持续跟踪并全面测试市面上的每一个模型。</p>
+<p>今天依然很难凭直觉判断究竟是 OpenAI 还是 Anthropic 的模型最适合你的特定代码库或业务流。我们见过大量反直觉的案例：你必须在具体的私有代码库或任务上运行评测，才能确定哪个模型能带来前沿表现。如果你仅仅凭感觉默认使用某款知名模型，往往会多花大量冤枉钱。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: I would recommend a lot of companies to develop in-house expertise um but I think that should not be the only solution um you know there's this explosion of intelligence happening there somehow still more foundation model labs um getting getting constructed and and each lab is also releasing more models. I think today it's still very unclear whether uh the best OpenAI model or the best anthropic model is actually going to be best for your repository. And so we've seen a lot of non-intuitive examples where you actually had to run the eval to figure out what's going to be the frontier performance for your specific setup. Um and and so I think if you were to operate based on you know use sonnet where where you feel like it's it's uh applicable you may actually end up spending more than you need to.</p>
+</details>
+<p><strong>主持人</strong>: 这种评测框架如何推广到其他领域的知识工作中？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: and say more about how this evaluation framework will apply to knowledge work in other domains or what are some examples I can look at?</p>
+</details>
+<p><strong>Ryan</strong>: <strong>编程是未来所有知识工作领域的一个缩影和先行指标</strong>。在编程领域建立的很多基础机制正在迁移到其他场景。如果你拥有一个非常出色的编程智能体，很大概率该模型也能胜任制作 PPT 幻灯片、构建 Excel 财务模型或撰写分析报告。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: I think coding is a sign for what's to come in every domain and and a lot of primitives established there are carrying over to other places. You know, if you if you have a very good coding agent, chances are you have a model that can also make PowerPoint slides or DCFS and Excel um and and with with the right tool use perform high-level professional work.</p>
+</details>
+<h3>内部实验</h3>
+<p><strong>主持人</strong>: 顺着刚才的问题，你们在 Vals 内部是如何利用自己的系统来评估最适合团队的编程模型的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Maybe maybe just tag along the the earlier question um how are you guys using VSmith internally to uh evaluate what's the best coding model for for V?</p>
+</details>
+<p><strong>Ryan</strong>: 说实话，这也源于我们自己遇到的实际痛点。我曾经想做一个“<strong>Token 极限化</strong>”（Token Maxing）的实验，让团队放开手脚全力使用 AI。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: Yeah, I mean to be honest, this was actually born out of a problem that that we saw as well. So, um I wanted to do a token maxing experiment. Um and see what happens when developers have zero constraints.</p>
+</details>
+<p><strong>Ben Horowitz</strong>: 这听起来很疯狂。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ben Horowitz</strong>: Yeah. It's also crazy because</p>
+</details>
+<p><strong>主持人</strong>: 那在财务上折合成了多少美元？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: how much does that equal to to dollars?</p>
+</details>
+<p><strong>Ryan</strong>: 后来我去算了一笔账：在那个月里，我们大概消耗了价值 <strong>150 万美元</strong>的 Token。顺便说一句，由于各种合作积分，这些对我们大部分是免费的，但我算了一下，<strong>我们在 Token 上的支出居然达到了当月员工薪资总额的 10 倍以上</strong>。</p>
+<p>这让我们意识到，毫无节制的调用是不可持续的。我们必须建立一套智能调度机制，根据任务难度推荐合适的模型和配置。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: So, okay. And then I went back and did some math. Um, and and it looked like in that month we spent roughly $1.5 million worth of tokens. This is free, by the way. I No, don't [laughter] want um but it was actually 10x more we were spending in tokens than employee salary for that month. Um, so it's clear we needed intelligent titration.</p>
+</details>
+<p><strong>主持人</strong>: 太酷了。所以你们当前的运作模式是：配置一个更加具备 Token 效率的基础框架与模型，在此之上，对于更高难度或更具挑战性的任务，给予工程师使用更高算力模型的灵活性？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Very cool. So is the current um operating mode that you're using like one uh I guess more token efficient harness plus model and then like on top of that people have some more flexibility to to use token base to for some higher higher or more challenging tasks.</p>
+</details>
+<p><strong>Ryan</strong>: 是的，我们向全体员工开放所有工具和模型的访问权限。但我们会针对每一个 GitHub Issue 或工单，自动给出起始会话的推荐配置。系统会根据该任务所需的智能水平，动态调整和分配实际的 Token 用量。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: Yeah, we so we we have access to all the tools. We we give everyone access to everything. Um, but we autosue recommendations for any GitHub issue or ticket for where to begin their session. And that should titrate the actual usage depending on the intelligence required for that task.</p>
+</details>
+<h3>政策监管</h3>
+<p><strong>主持人</strong>: 我想暂时切入到政策法规这一侧。我们刚才谈到基准测试失效有多么迅速，而在政策领域，挑战更为严峻，因为法律法规相对于技术能力的演进极其滞后。Ben 和 Marc 花了大量时间在华盛顿特区与政策制定者沟通。在 AI 治理中，谁应当参与其中？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I want to segue to the policy side for sec for a second because we we talked about how quickly benchmarks become obsolete. In policy, it's it's even worse in that laws move, you know, much slower relative to capabilities. Ben and Mark spend you know a bunch of time um in DC and and with policy makers. Who should be involved in this?</p>
+</details>
+<p><strong>Ryan</strong>: 简短的回答是：各方都在某种程度上应当参与。多元化的视角非常有益。但过去几年政策讨论的主要问题在于过于抽象，缺乏坚实的数据支撑。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: Yeah, I think the short answer is that everyone should be involved to some extent. Um I think there's there's a benefit from varied perspectives. I think the main issue though is that policy conversations as they've happened over the last couple of years have been very abstract. uh and there there's lack of grounding empirical data.</p>
+</details>
+<p><strong>主持人</strong>: 你如何看待各方的分工？政府此前尝试进行过初步的监管评估，比如划定 $10^{26}$ FLOPS 的计算量门槛。从长远看，政府应该做什么，评测机构又该扮演什么角色？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: how do you think about like who does what? because the government kind of actually did the first evalu um okay what's at the frontier and needs to be regulated right so they started with you know some crazy idea with 10 to 26 flops or some such thing um and so when you think about it like what should the division of responsibility look like?</p>
+</details>
+<p><strong>Ryan</strong>: 这里必须平衡两股相互制约的力量：第一，保持敏捷高速的创新步伐，确保政府的流程不会阻碍技术创新；第二，确保技术不会被恶意滥用或带来灾难性安全风险。</p>
+<p>我们大致将其归入<strong>对齐</strong>（Alignment）的大范畴。目前我们已经看到，有些模型在接受某项网络安全风险测试时，会通过奖励黑客手段（Reward Hacking）绕过限制。因此，评测必须具备足够的纵深和对抗性。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: I think there's effectively two counterveailing forces that that has to be considered. The first is the desire to move very quickly and ensure that the the government process isn't slowing down uh the rate of technological innovation. And I think the other part is to make to make sure the technology is not causing catastrophic safety risks. Yeah, I mean we think about this broadly under the category of alignment. Um, I think there's places where you see that borne out now now where models that are being tested for one cyber security risk are actually reward hacking and figuring out other ways to to get around it.</p>
+</details>
+<p><strong>主持人</strong>: Ben，从你的角度来看，政府部门和私营机构之间合理的职责分工应该是什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And maybe that's a question for you Ben as well. Um, I guess how do you think about the right division of labor here? like what what should um you know government agencies um control or and do themselves and and where they should like you know partner trust um you know private uh companies to to take on?</p>
+</details>
+<p><strong>Ben Horowitz</strong>: 政府部门经常从各大实验室收到各种警告：“这个模型可能会搞生物黑客，那个模型会带来网络安全风险等等。”</p>
+<p>我认为政府需要做的是明确底线：如果一个模型真的具备制造生物武器或发动致命网络攻击的能力，且人们有办法促使它实施这些危害，那么这就构成了确凿的威胁。但政府自身并不具备构建这些前沿技术评测的基础设施和专业人员，他们必须依赖外部独立的专业评测机构来提供真实、客观的技术事实。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ben Horowitz</strong>: Yeah. So I I think the government agencies do get a lot of warnings from by the way the big labs. Oh, this thing is going to biohack. This is going to be a cyber security risk and so forth. And so I think what the government needs to do is go okay if the model you know is if the model is capable of bio-weaponry or autonomous cyber offense and people can reliably jailbreak it to execute that, that's a clear threshold. But the government doesn't have the technical apparatus to build frontier evals; they must partner with independent testing entities to get the ground truth.</p>
+</details>
+<h3>虚实鸿沟</h3>
+<p><strong>主持人</strong>: 我们正处在一个非常微妙的时代。在宏大叙事与真实世界的落地之间存在着巨大的鸿沟。政策制定者应该如何与评测机构协作，才能使这种关系发挥最大的效能？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: very you know we're in interesting times I would say and to me there's the gap of like what's the narrative and what actually happens in real world um Because you know every setup in again like an enterprise setup is is very different like um or or just like people however they use the models are very different. The narrative uh that connects to the actual capabilities. To end say more about how exactly the policy maker should work with the evaluator what information do they need what what how should the relationship work so that it's most effective.</p>
+</details>
+<p><strong>Ryan</strong>: 首要的一点是建立一套机制，使前沿洞察和实测数据能够直接传递给政府相关决策人员。</p>
+<p>目前我们定期向行政和立法部门提供简报，汇报我们在模型能力和潜在风险方面的最新发现。这有助于政策制定者快速跟进技术前沿并预判未来挑战。虽然预测未来很难，但有了坚实的数据，就可以推导趋势。</p>
+<p>至于是否需要制定政策限制某些高危行为（如未成年人心理健康风险或生物安全风险），那是立法部门的职责，我们不越俎代庖；而商务部或 SEC 等行政部门则负责确保私营部门以对整体经济有利的方式健康采纳 AI。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: Yeah, I think I think in the first order there should be an a mechanism by which um insights and data can be passed directly to relevant people in government. And so now we're regularly doing briefings for um executive and legislative branches um on what we're finding capabilities and risk of models. And so I think first order that helps uh people there get up to speed on what's going on and and also track through what will be problems in the future. I I think you know things are moving very very quickly. It's hard to predict where where things are going. Um but at least when you have data you can start to extrapolate a trend. Uh and then I think from there it's it's up to the people in the legislative branch to decide where they they want to see policy. Uh and so it's not really our our place to give recommendations like that. Um but if they if they see that there is significant risk in say mental health for for people under the age of 18 uh or biocurity risk in the models that necessitates having a standardized way to curtail model release. Um then it's up to them to inform policy. Um and I think then there's other places where the executive branch in the places like department of commerce or SEC is responsible for for making sure that private companies are able to adopt and use the models in a way that's going to be productive for the whole system.</p>
+</details>
+<h3>主权博弈</h3>
+<p><strong>主持人</strong>: 我想从地缘政治的角度深入探讨一下。评测在某种程度上代表了模型开发者的价值体系与评价准则。不同国家及其实验室所关注的重点截然不同。比如我在中国土生土长，也使用很多中国开源模型，由于众所周知的国情，模型有着严格的内容边界。你如何看待基准评测在跨国界、跨文化背景下建立通用标准或被不同国家对待的作用？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I love to probe on another angle just around geo geopolitical. Um I often see evals being like a representation of sort of the value um of of the model the model developer like you kind of develop this rubric of what's embedded in in the model and of course different different countries um uh and and labs in those countries care about different things like I mean um I'm born and raised in China use a lot of like Chinese uh open source models too like you still cannot let them you know just go freely talk about CPC and all the industry there uh because um you know what happens in China. Um so so how do you think about how eval I guess and benchmarks play a role in like standardizing or like uh being treated by different um different model labs from from different places.</p>
+</details>
+<p><strong>Ryan</strong>: 坦白讲，从我非常理想主义的视角来看，看到当前对<strong>主权 AI</strong>（Sovereign AI）的巨额投资，我感到有些惊讶。如果从全局上帝视角来看，各国分别建立庞大的数据中心、重复进行数据工程并训练超大规模模型，这在算力资源上是极其低效的。如果能整合力量，效率会高得多。</p>
+<p>但现实世界显然不是这样运转的，各国都在加大自主构建 AI 的力度。因此，这就需要一种<strong>通用的评测语言</strong>，来沟通评测框架并在风险红线上达成共识。</p>
+<p>这方面可以借鉴冷战时期的核军控协议。里根总统曾有名言：“<strong>信任，但要验证</strong>”（Trust, but verify）。正如美苏之间通过侦察机巡航来相互核查核弹头库存一样，如果我们担忧 AI 带来的社会性或生存级风险，国际社会也必然需要建立起一套基于独立评测的通用语言来完成跨国核查与验证流程。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: Yeah. I mean to be honest from from my um very idealistic perspective um I'm surprised to see so much investment in sovereign AI. Um, you know, if I was taking a god's eye view, it would be extremely inefficient to build all of these data centers and and replicate uh this data engineering process and train these very large models um when when in fact you could probably consolidate a lot of these efforts. Um, but it seems like that's not the world we're in or the one we' headed towards and and there's actually increased efforts to build AI in a sovereign way. Um, and so I think that takes having a shared language to communicate about what the framework for valuations are and and um where we're going to collectively align around the risks. Um, you know, I think there's actually a lot to learn from from nuclear here as well. I think Reagan had this line, trust but verify. Uh, and so I think we're starting to see signs of trust in that um, you know, Zi Jinping and Trump are going to be meeting uh, next month. Um, but there is no uh, clear way to actually do the verification part of this. um having the shared language of evals will allow us to say things like you know you you have the the right number of nuclear warheads and in that example there were also flyovers so so Mexican by which a country could audit another country's uh nuclear stockpile by having flyovers um and so I think similarly if there's concern about the societal or even existential risk of AI it will necessitate us uh constructing this shared language of evaluations to do the verification process</p>
+</details>
+<p><strong>主持人</strong>: 在美国国内协调相关政策已经极其困难，在相互竞争的各国政府之间，又该如何推动全球化政策的协调与统一？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: how do how do you think about um harmonizing a policy like that so that you know it's hard enough to do it in America and then how would you think about kind of taking it global um you know because now you're dealing you're not dealing with enterp enter enterprise customers you're dealing with governments and those governments are competitive with each other and how would you think about that working</p>
+</details>
+<p><strong>Ryan</strong>: 如果我说我现在就掌握了完美的解决方案，那未免太天真了。我认为我们需要从小步探索开始。</p>
+<p>例如，目前大家对网络安全风险讨论很多，生物安全风险在未来也将变得越来越重要。在防止网络瘫痪或生物灾难方面，各国之间存在着明确的共同利益。</p>
+<p>从长远来看，最值得关注的其实是<strong>递归自我改进</strong>（RSI, Recursive Self-Improvement）的潜在可能性。这是最容易出现某个国家或某家公司单方面遥遥领先、创造出外界完全无法理解的模型并引发失控风险的领域。因此，共同确立一个可接受的研发节奏指标，避免 RSI 超速失控，将是极为关键的一步。这也是为什么今天许多闭源实验室的研究人员都在呼吁各国政府开展联合对话。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: I would be naive to say I have the perfect solution to this problem today. Uh and so I think there are baby steps in which we can start. Um for instance, there seems to be a lot of talk about cyber security risk. I think the concern around biocurity will become even more important over time. And so there are clear places where there will be mutual interest in aligning around uh ways to to prevent conflict around cyber or bio. Um I in my opinion I think long-term what's actually going to be the most interesting is the recursive self-improvement possibility. And that's a place where you could see one country, one or one company kind of run away with it and produce models that we we don't know much about or or operating in ways that are unknown to us. Um, and so I think having a way to in a joint way describe this being the level of pace we're comfortable with or this being exceeding the pace of of development as as it relates to RSI is going to be super important. And that's where I think you see a lot of the researchers at Closource Labs calling for joint conversations between governments today.</p>
+</details>
+<h3>未来展望</h3>
+<p><strong>主持人</strong>: 展望未来，你认为接下来的技术格局会演变为什么样？面对不同模型能力的多样化发展，以及各国对生物、网络攻防和 RSI 关注点的不同，你们将如何构建新的基准来跟上这一步伐？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: What do you think landscape will look like going from from here? Um now that we have lots of different capabilities and uh capable models as well as like you know um uh countries that care about different um developing I mean everyone cares about RSI for sure but like on on the bio side or like the the cyber side people care about um you know slightly different different things whether it's more offensive defensive and so on like what do you think the landscape will look like and um how do you think about developing new benchmarks to to keep up with with that?</p>
+</details>
+<p><strong>Ryan</strong>: 我们全神贯注于构建能够精准捕捉技术前沿的基准。只要在前沿领域出现新的能力或新的风险，我们都会将其转化为 <strong>Vals.ai</strong> 上定义清晰、文档齐备的评测体系。</p>
+<p>随着时间推移，这需要不断扩大覆盖维度。以网络安全为例，过去大部分工作集中在检测代码漏洞或内存泄漏上；但实际上，最大风险往往发生在基础设施层。这无法仅在纯代码中表达，而是需要模拟复杂的企业云基础设施甚至电网基础设施环境，以此测试模型在真实网络攻防中的实际水平。</p>
+<p>确保基准能够真实反映这些前沿阵地，是我们在 Vals 的核心使命。我们坚信，<strong>最具价值的商业模式必然是与高标准评测保持纯粹利益一致的模式</strong>，而非一边做裁判一边做选手参与训练。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: Yeah, I mean we're we're hyper focused on on building benchmarks that capture the frontier. And so uh in so far as we see new places for capabilities or risks at that frontier, we want to make that uh an actually well doumentable evaluation um on Val.AI. Um and and I think it it takes have increasing coverage over time. You for instance I think in in cyber security a lot of our historical work has been done around um code vulnerabilities or memory leaks that may exist in code. Um but actually a lot of the the biggest concern or risk is in the infrastructure level. Uh and so these are not things that are expressed in code but take um simulating larger environments of enterprise cloud infrastructure or or even grid infrastructure for us to be able to say this is what the offense or defensive capability of models is. Um and and so making sure evaluations are reflective of those new places is is really important for what we do at VLES. uh and we believe that the the most valuable form of this business will be one that's incentive aligned around doing really high quality evaluation not supporting the intelligence development process or uh the process by which the models can actually improve on that side over time.</p>
+</details>
+<h3>结尾致谢</h3>
+<p><strong>主持人</strong>: 太棒了。非常感谢你做客我们的播客，这是一期精彩的对话。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Awesome. Thanks for coming on the podcast. It's been a great episode.</p>
+</details>
+<p><strong>Ryan</strong>: 非常感谢你们的邀请。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ryan</strong>: Thanks so much for having me.</p>
+</details>
+<p><strong>主持人</strong>: 非常感谢 Ryan，也非常感谢 Ben。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Thanks so much, Ryan. Thanks, Ben.</p>
+</details>
+<p><strong>Ben Horowitz</strong>: 对话非常有趣，谢谢大家。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ben Horowitz</strong>: That was fun. Thank you.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Vals AI" class="entity-link company-link">Vals AI</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Llama 4" class="entity-link product-link">Llama 4</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/ai-evaluation/">ai-evaluation</a>
+      
+        <span class="tag-pill tag-pill--no-page">frontier-intelligence</span>
+      
+        <span class="tag-pill tag-pill--no-page">benchmark-saturation</span>
+      
+        <a class="tag-link" href="/tags/model-governance/">model-governance</a>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
