@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>大语言模型推理技术工作坊：从第一性原理到生产级部署与选型</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="大语言模型推理技术工作坊：从第一性原理到生产级部署与选型" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">大语言模型推理技术工作坊：从第一性原理到生产级部署与选型</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-08</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=y2W4FNAuPEA" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-08
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">本次工作坊旨在帮助初级和中级工程师深入理解大语言模型推理的底层机制、核心痛点（如成本、显存、延迟）以及模型优化和推理服务架构的优化策略。内容涵盖模型量化、注意力机制演进（MQA/GQA/MLA）、主流推理引擎（vLLM, SGLang, TensorRT-LLM）的选型决策，并探讨了KV Cache管理和分布式推理等进阶方向。</div></div>
+      
+    </div>
+    <!-- chunk 1/7 -->
+<h3>欢迎与讲师背景介绍</h3>
+<p><strong>Harshal Jain</strong>：大家下午好！我是 Harshal Jain，这位是 Tanmay Shah。非常欢迎大家参加这次为期两小时的大语言模型推理（LLM Inference）专题工作坊。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Harshal Jain</strong>: Good afternoon everyone. My name is Harshal Jain, and he's Tanmay Shah, and we would like to welcome you all to this two-hour workshop on LLM inference.</p>
+</details>
+<p><strong>Harshal Jain</strong>：举办这次工作坊的核心目标，是帮助大家从第一性原理（first principles）出发，深入理解大模型推理领域的技术本质与底层机制，并全面了解当前整个行业正在发生的演进与前沿实践。在正式开始之前，先简单介绍一下我们的背景：我是 Audible 的高级软件工程师，过去五年多一直专注于构建大规模媒体数据平台；在此期间，我也一直在撰写并维护一本关于 LLM 推理的开源手册。站在我身边的 Tanmay 是某金融机构的高级量化建模师，他近期刚刚完成了博士学位，一直活跃在智能体验证器（agent verifiers）和世界模型（world models）的前沿研究领域。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Harshal Jain</strong>: The goal of this workshop is to understand this domain from the first principles and dive deeper into it, to understand what's going on throughout the industry. A bit of background about us: I am a senior software engineer at Audible. I have been building media data platforms for the past five years, and on the side, I have been writing this open-source handbook on LLM inference. Next to me is Tanmay, who is a senior quantitative modeler. He recently completed his PhD, and he has been actively doing research in agent verifiers and world models.</p>
+</details>
+<h3>现场互动与工作坊大纲</h3>
+<p><strong>Harshal Jain</strong>：在进入正题前，我们先在现场做个简单的举手调查：在座的各位里，有谁是刚刚接触 LLM 推理领域的新人？好的，太棒了。那么，又有谁已经在生产环境中实际部署过大语言模型、进行过性能调优，并正在支撑实际的线上生产流量？非常好。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Harshal Jain</strong>: So a quick show of hands here: who here is brand new to LLM inference? Okay, great. And who here has deployed models in production, been tuning them, and serving production traffic? Okay, great.</p>
+</details>
+<p><strong>Harshal Jain</strong>：我们本次工作坊的内容主要面向初级和中级水平的工程师与开发者。大家在演示中看到的所有幻灯片、实验代码和练习材料都已经整理存放在了公开的代码仓库中，稍后我会把链接分享给大家。这里先快速过一下本次工作坊的整体日程议程：我们首先会从问题陈述（problem statement）切入，带大家梳理和理解当前围绕 LLM 推理面临的几大核心痛点；接着，我们将深入剖析引发这些痛点的底层成因，以此构建我们对推理系统的基础认知；随后，我们将重点探讨两大维度的优化策略——模型层面优化（model optimizations）与服务架构层面优化（serving optimizations）；在此之后，我们将深入学习业界主流的各类 LLM 生产级推理部署引擎，并展示一系列基准评测数据（benchmarks）以及一份清晰的推理引擎选型决策指南。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Harshal Jain</strong>: So this workshop is targeted towards the beginner and intermediate levels, and all of the slides and exercises are in the repo. I will share that soon. Here is the quick agenda for the workshop: we will start with the problem statement. We will try to understand a few of the pain points around LLM inference, then understand what causes those pain points and build our foundations from there. Then we will dive into two kinds of optimizations that we do: model optimizations and serving optimizations. Then we'll start learning about different serving engines available to deploy our LLM inference solutions in production, and we will showcase some benchmarks and a decision chart on which engine to use.</p>
+</details>
+<h3>什么是 LLM 推理及其高昂成本挑战</h3>
+<p><strong>Harshal Jain</strong>：为了深入剖析这些痛点，我们首先需要明确：究竟什么是大模型推理（LLM Inference）？我想在座的大多数人对此已经有了基本概念。简单来说，任何你要求 AI 执行的下游任务——无论是生成一段视频、合成一段音频、分析文本内容，还是解析医疗诊断报告或处理税务账单——所有这些在模型训练完成之后的实际计算与生成过程，本质上都属于 LLM 推理。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Harshal Jain</strong>: To understand the pain points, first we need to know what LLM inference is. Probably a lot of us already know this, but anything that you ask your AI to do—whether it be generating video or audio, analyzing text, analyzing your medical reports or tax bills—all of that is LLM inference.</p>
+</details>
+<p><strong>Harshal Jain</strong>：如今，整个大模型推理市场的规模已经达到约 200 亿美元。知名行业分析机构 SemiAnalysis 近期发布的一份测算指出：如果想用大语言模型来承载并处理 Google 级别的全网搜索查询请求，前期需要投入高达数百亿美元的基础设施成本；而且单次搜索查询的推理成本必须严格控制在 0.5 美分以内，才能勉强维持搜索引擎业务的整体盈利能力。与此同时，《商业内幕》（Business Insider）等商业媒体也频繁指出，各家企业的 AI 预算必须立刻“节食瘦身”，所有团队都必须开始严格审计并预算其 Token 的消耗量。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Harshal Jain</strong>: This market is approximately twenty billion dollars today. SemiAnalysis recently shared that if you want to model Google search queries with LLMs, you need a massive capital outlay, and query cost has to be less than 0.5 cents to keep your search business profitable. On the other hand, Business Insider mentioned that your AI has to be put on a diet, and everyone has to start auditing and budgeting their token usage.</p>
+</details>
+<p><strong>Harshal Jain</strong>：为什么会出现全行业为成本发愁的局面？根本原因在于：我们的硬件资源是极其有限的，算力非常昂贵，因而推理成本极其高昂。随着越来越多的用户和应用涌入 AI 生态，调用量不断攀升，推理开销随之呈现出超越摩尔定律的爆发式增长。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Harshal Jain</strong>: And all of this is happening, why? Because your hardware is limited, compute is expensive, and your inference is expensive. Because of the growing usage of AI, this causes costs to rise rapidly.</p>
+</details>
+<p><strong>Harshal Jain</strong>：这里引用一张 OpenAI 早期公开过的数据统计图，虽然数据出来有一段时间了，但它揭示的底层经济学规律依然完全成立：以 GPT-3 为例，其初始的预训练成本大约是 460 万美元，但这仅仅是一次性的固定成本投入；然而，大模型的推理成本却是一项持续不断的经常性开销（recurring operational cost）——随着涌入系统的每一个新增用户、输入的每一个新增 Token、以及在前端建立的每一次交互会话，推理运营成本都会发生线性乃至超线性的持续扩张。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Harshal Jain</strong>: This stat is an older stat from OpenAI, but it is still true. If you look at the training cost of GPT-3, it was around 4.6 million dollars, which was a one-time cost. But the inference cost is a recurring cost because it is an operating cost that scales with every user that comes in, every token that comes in, and every session that is initiated.</p>
+</details>
+<p><strong>Harshal Jain</strong>：面对这种严峻的成本曲线，业内基本上只有两种应对路径：第一种方式是从业务侧尽可能缩减 Token 的使用量；另一种方式，则是作为面向内外部客户的模型推理服务提供方，必须全方位极致优化你的推理系统与服务方案。正因如此，我们每天都能看到业界不断涌现出大量全新的推理加速方案。而我们本次工作坊的核心构想，正是帮助大家建立坚实的底层理论认知框架，使大家在未来面对行业中层出不穷的新架构和新工具时，能够游刃有余地理解、评估与选型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Harshal Jain</strong>: There are basically only two ways to counter this: one way is to reduce your token usage. Alternatively, you should try to optimize your inference solutions as an inference service provider for your customers and for yourself. Because of this, we have been seeing a lot of new solutions coming out every day. The idea is that we will try to build those foundations that will help us understand and evaluate whatever ships next.</p>
+</details>
+<h3>代码仓库与实验环境演示</h3>
+<p><strong>Harshal Jain</strong>：为了让大家对这些痛点有直观的体会，我们先来看一个简短的现场演示。大家可以随时拉取这个代码仓库，或者直接在 GitHub 上查看。这个项目叫做 <code>llm-inference</code>。再补充一点背景：大约四个月前，当我刚开始涉足 LLM 推理领域时，发现网上的相关资料非常零散，不成体系。于是我们决定把所有相关的知识点、实践与工具系统化地整理并汇聚在一处，希望能让更多开发者受益。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Harshal Jain</strong>: To get started, we will do a quick short demo of what the different pain points are around inference. This is the repo—you can pull it or open it on GitHub. It's called LLM Inference. A bit of background here: four months back when I didn't know anything about LLM inference, I started learning it and saw that a lot of resources were scattered. So we started putting it altogether in one place so that it could benefit people.</p>
+</details>
+<p><strong>Harshal Jain</strong>：好的，让我先退出幻灯片全屏放映模式，切换到扩展屏幕。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Harshal Jain</strong>: Let me actually get out of this slide show mode and probably go to this extended mode.</p>
+</details>
+<p><strong>Tanmay Shah</strong>：好的，没问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Tanmay Shah</strong>: Okay, great.</p>
+</details>
+<p><strong>Harshal Jain</strong>：在这个 GitHub 仓库的 README 文档中，大家可以看到幻灯片的下载链接，点击即可获取演示用的 PPTX 文件以及完整的基准测试报告。此外，为了方便大家进行实验演示，我们准备了若干 Jupyter Notebook。这次我们与 GPU 云平台进行了合作，环境直接为大家配备了高性能的 RTX 6000 Ada / 大显存 GPU（拥有接近 100GB 级别的显存资源）。所有的 Notebook 实验环境与依赖资产都已经提前预置完毕，以便大家能够即开即用地开展实验。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Harshal Jain</strong>: In this repository, if you see the README file, there is a link to the slides. It's a folder where you have the PPTX and the benchmark report in there, and you can download it. Then for demo purposes, we have a couple of Jupyter notebooks. We collaborated with a platform providing GPU instances like RTX 6000 with large VRAM. We have already set up these notebooks so that it becomes easy to experiment with, and all of the assets are preset for you.</p>
+</details>
+<h3>核心痛点现场实测：显存、首字延迟与吞吐量</h3>
+<p><strong>Harshal Jain</strong>：我们首先从一个简单的基准测试演示开始。在进行大模型推理时，我们需要加载一个具体的模型权重。本次工作坊我们选用的是轻量级的 Mistral-7B 模型，它的 FP16 权重文件大约占用 15GB 显存。我们首先将该模型载入 GPU 显存，并查看相应的 GPU 硬件运行状态。为了避免现场公共 Wi-Fi 连接波动可能导致的意外中断，我这里直接展示预先完整运行好的测试输出与监控曲线。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Harshal Jain</strong>: We will start with a simple demo. When it comes to inference, you need to do inference on a certain model. For the workshop purposes, we are using a simple Mistral-7B model. It's a small model of around 15 GB in size. We are going to load that into the GPU, and we will look at some of the GPU stats as well. I'm not running the cells live because I don't trust Wi-Fi at conferences, so I will be going over the results that we ran previously.</p>
+</details>
+<p><strong>Harshal Jain</strong>：在拥有大显存的 GPU 实例上，我们首先会关注的一个核心指标是：在执行 LLM 推理的过程中，显存消耗（Memory Consumption）的实际表现究竟如何？当我们刚把 Mistral-7B 模型加载到显存中时，它占用了基础的 15GB；此时显存大约还剩下 87GB 空闲空间。然而，当我们开始持续输入文本并执行推理任务时，一个非常显著的现象出现了：输入序列的长度越长、传入的 Token 数量越多，模型推理所需的额外显存开销就越大。尽管在短文本下显存增长看似缓慢，但它一直在持续攀升。设想一下，如果你的业务场景涉及 4,000、16,000 甚至 32,000 长度的长上下文（Context Length），显存开销将会迅速膨胀，极易直接触发 GPU 显存溢出（Out-of-Memory, OOM）崩溃。因此，<strong>显存随 Token 序列长度增加而急剧增长</strong>，毫无疑问是 LLM 推理面临的第一大核心痛点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Harshal Jain</strong>: The first thing that comes to mind is: what does my memory consumption look like when I do LLM inference? I load this model, and I see 15 GB used here, leaving roughly 87 GB free. Now when I run inference, what I notice is that the more input tokens I pass, the more memory I need. It increases slowly, but it's still increasing. Imagine if you have a context length around 4,000, 16,000, or 32,000 tokens—this memory could grow really large, and you could hit out-of-memory issues. Definitely, this is problem number one: memory increasing with the increase in tokens.</p>
+</details>
+<p><strong>Harshal Jain</strong>：第二个关键痛点是<strong>首字延迟（Time to First Token, 简称 TTFT）过高</strong>。TTFT 是衡量模型生成第一个响应 Token 所耗时间的指标。当我们测试不同输入长度下的 TTFT 表现时，可以明显观察到：Prompt 输入上下文越长，模型返回首个 Token 的耗时就越慢。总结来说，我们已经遇到了两个强相关的核心矛盾：显存占用随 Prompt 长度急剧增长，首字延迟（TTFT）同样随 Prompt 长度急剧恶化。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Harshal Jain</strong>: The second problem is that the Time to First Token (TTFT) can be very slow. It is measured by the metric TTFT. When you measure TTFT against the input size, you see that the longer the context, the slower this TTFT becomes. So now there are two problems: your memory increases with token size, and your TTFT increases with token size.</p>
+</details>
+<p><strong>Harshal Jain</strong>：第三个痛点则是<strong>系统吞吐量（Throughput）瓶颈</strong>。吞吐量通常通过两个关键维度进行衡量：系统每秒能够输出多少个 Token（Tokens per Second），以及系统每秒能够同时处理多少个并发用户请求（Requests / Users per Second）。如果你只是在本地采用最原始、未经过批处理优化的原生代码实现，所有的推理请求都会按顺序串行（sequentially）执行。假如有 5 个并发请求到达，这 5 个请求只能一个个排队等待处理，导致请求端到端响应时间大幅拉长，严重制约高并发场景下的服务承载能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Harshal Jain</strong>: The third problem is throughput. Throughput is about how many tokens you can serve per second, and how many users you can serve per second. If you take a naive implementation on your local system, it executes sequentially. If you send five requests, all five requests will be catered sequentially, so your requests take significant time to complete when you have multiple users. These are the three main problems.</p>
+</details>
+<p><strong>Harshal Jain</strong>：除了显存占用（Memory）、首字延迟（TTFT）和吞吐量（Throughput）这三大核心痛点之外，实际上还存在第四个关键挑战。这里我先不直接展开，稍后随着我们逐步拆解推理的底层机理，大家会自然而然地体会到它。现在我们先牢记这三个最显著的问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Harshal Jain</strong>: There is a fourth problem. I haven't described it here; probably we will build that intuition as we move forward. But let's remember these three main problems: Memory, TTFT, and Throughput.</p>
+</details>
+<h3>回到幻灯片与仓库路径确认</h3>
+<p><strong>Harshal Jain</strong>：现在让我们切换回幻灯片。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Harshal Jain</strong>: I will go back to the slides.</p>
+</details>
+<p><strong>Tanmay Shah</strong>：好的，很完美。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Tanmay Shah</strong>: Okay, perfect.</p>
+</details>
+<p><strong>Harshal Jain</strong>：投屏显示正常吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Harshal Jain</strong>: Is this visible?</p>
+</details>
+<p><strong>Tanmay Shah</strong>：是的，看得很清楚。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Tanmay Shah</strong>: Yeah, looks good.</p>
+</details>
+<p><strong>Harshal Jain</strong>：在刚才介绍的代码仓库中，大家只要进入 workshop 目录下的 README 文件，就能找到所有幻灯片与演示 Notebook 的完整链接。一切准备就绪了吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Harshal Jain</strong>: Within that repository, if you look at the workshop folder, you will see the README, and the README has all the links to the slides and demos. Does that work?</p>
+</details>
+<p><strong>Tanmay Shah</strong>：一切正常，我们继续吧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Tanmay Shah</strong>: Perfect.</p>
+</details>
+<h3>LLM 推理流水线底层原理剖析</h3>
+<p><strong>Harshal Jain</strong>：接下来，让我们从基础原理开始层层推导，深入理解引发上述推理性能痛点的深层物理原因。为此，我们需要仔细审视完整的 LLM 推理计算流水线（Inference Pipeline）：</p>
+<p>首先，系统接收一段原始输入文本（Input Text）。文本由一系列词语组成，经过分词器（Tokenizer）的处理后，这些文本会被切分并映射为离散的 Token 序列。为了便于理解，我们暂时可以简单地将一个词语视作一个 Token。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Harshal Jain</strong>: Let's start working through the foundations. Let's start understanding the reasons behind those pain points. For that, we have to look at this inference pipeline: We get an input text, which could have any number of words. You convert those into tokens. For simplicity, you can assume one word equals one token.</p>
+</details>
+<p><strong>Harshal Jain</strong>：接下来，这些 Token 会被映射转换为高维的向量嵌入（Embedding Vectors），然后正式送入由多层 Transformer 组成的深度神经网络结构中。以我们刚才演示的 Mistral-7B 模型为例，它内部堆叠了 32 层 Transformer 结构（不同架构与规模的模型，其堆叠的层数也会有所不同）。</p>
+<p>模型在经过全连接与注意力计算后，会预测并生成一个新的 Token。紧接着，新生成的 Token 会被追加回输入序列中，再次作为新的上下文送入网络，进而自回归（autoregressively）地预测出下一个 Token。这个逐字自回归生成的循环过程会一直持续下去，直到输出结束符或达到预设长度。正是在这样一套自回归流水线架构之中，孕育了我们接下来要深入探讨的各项性能瓶颈。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Harshal Jain</strong>: Then you convert them into embeddings, and then you send them to the transformers. There are 32 layers of transformers in the case of Mistral-7B, though different models have different numbers of layers. Then you generate a new token, and that token goes back to the input, then you generate another token, and that keeps on going. Now, in this entire pipeline...</p>
+</details>
+<!-- chunk 2/7 -->
+<h3>Transformer 内部架构与 Attention 层的计算与内存开销</h3>
+<p><strong>Speaker 1</strong>: 你会发现大约 95% 的计算资源都被这些 Transformer 层占满了。因此，非常有必要仔细看看 Transformer 层内部到底包含了什么。在 Transformer 层内部，还包含更多的子层：有归一化层（Normalization layer）、注意力层（Attention layer），以及前馈网络层（Feed-forward layer）等。其中注意力层尤为著名——大家都知道《Attention Is All You Need》这篇经典论文。注意力层是计算最密集的层，我们需要理解注意力层内部究竟在进行什么操作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: You would see like 95% of your compute is taken by these transformer layers. So it's worth looking at what goes within this transformer layer. Within this transformer layer you have more layers: you have a normalization layer, you have an attention layer, you have a feed-forward layer and all. And attention layer is the one I think that has been very, very famous — &quot;Attention Is All You Need&quot;, I think that's very well known. So attention is the most compute-intensive layer, and we need to understand what goes within that attention layer.</p>
+</details>
+<p><strong>Speaker 1</strong>: 注意力机制具体在做什么呢？对于输入的文本，模型需要计算当前每个 Token 相对于所有先前 Token 的注意力分数（Attention scores）。为了实现这一点，它需要将每个 Token 投影到 Query、Key 和 Value 空间中。用简单的话来理解：如果你有 10 个 Token，就需要 10 个不同的 Query、Key 和 Value 向量；如果有 100 个 Token，就需要 100 个 Key 和 Value 向量；如果有 1000 个 Token，就需要 1000 个 Key-Value 向量。因此，Key 和 Value 向量的数量会随着输入长度的增加而线性增加。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: So what does attention do? If you have an input text, it needs to find the attention scores of every token with respect to all of the previous tokens. And to do that, what it needs to do is it needs to project every token into a key, query, and value space. So in simple terms, just understand this: if you have 10 tokens, then it needs 10 different query, key, and value vectors; if there are 100 tokens, you would need 100 key and value vectors; if there are 1000 tokens, you would need 1000 key-value vectors. And so the number of key and value vectors increases as you increase the input size.</p>
+</details>
+<p><strong>Speaker 1</strong>: 如果计算 Mistral 7B 模型每个 Token 的 KV Cache 显存大小，结果大约是每个 Token 131 KB。这是因为计算时需要将维度大小相乘：一个向量大约是 128 维，乘以 Transformer 的层数（如 32 层），再乘以 KV 头数（KV Heads）。对于 Mistral 7B 来说，它有 8 个 KV Heads，而不是传统的 32 个，因为它采用了不同的注意力机制（Grouped-Query Attention），我们后面肯定会详细讨论这一点。所以计算下来，每个 Token 的 KV 缓存占用约为 131 KB。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: And if you calculate the KV size per token for Mistral 7B, it comes out to be 131 KB. This is because you have to multiply the size: one vector is like 128 dimensions, you have to multiply it by the transformer layers (32 layers), and then you have to multiply it by the KV heads. For Mistral 7B, it's 8 KV heads, it's not 32 because it uses a different kind of attention mechanism, which we will talk about for sure. But yeah, so the KV size per token is like 131 KB.</p>
+</details>
+<p><strong>Speaker 1</strong>: 现在想象一下，如果你有 4k（4096）的上下文长度，这个大小就会变成大约 0.5 GB；如果扩展到 16k 上下文，KV 大小就会达到 2.1 GB。现在再乘以并发用户数：假设你在同一个 GPU 上同时为多个用户提供服务，如果有 80 个用户并发、每个用户 4k 上下文，显存需求就会达到 42 GB。如果显存只有 24 GB，你早就发生内存溢出（OOM）了。因此，你无法在有限显存下同时支持那么多长上下文的用户。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Now imagine if you have 4k context, so that size becomes like half a GB (0.5 GB). If you do like 16k context, that size becomes 2.1 GB. Now multiply that by the users: assume you can serve multiple users together at the same time within that GPU, you could have like 42 GB with a 4k context and 80 users at the same time. If it is only let's say 24 GB, you are already running out of memory. So you cannot serve that many users with that much context.</p>
+</details>
+<h3>GPU 显存结构与并发/上下文权衡</h3>
+<p><strong>Speaker 0</strong>: 为了直观理解这一点，我们可以看一下 GPU 的显存分配结构。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: To visualize this, look at a GPU memory.</p>
+</details>
+<p><strong>Speaker 1</strong>: GPU 显存主要包含：预先固定的模型权重（Model Weights），这些是预训练权重；还有一部分系统开销（Overhead），虽然会有波动但基本保持固定，总体上可以视为固定开销；最后剩下的就是剩余显存（Leftover memory）。这部分剩余显存正是用来存放 KV 缓存（Key 和 Value 向量）的地方。假设只有一个用户，能容纳的 Key 和 Value 向量（或者说 Token 数量）就取决于这块剩余显存的大小。我们可以通过一个简单的演示来展示这一点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: So the GPU memory has model weights which are pretty fixed — these are pre-trained weights. There is like an overhead that is also fixed, that changes but it does not change that much, overall you can assume it's fixed. And then there is leftover memory. This leftover memory is what's being used by your KV cache, like key and value vectors. So assume you have one user, you can only store that many key and value vectors or that many tokens which can fit in this entire memory that is left. So we can show this with a simple demo too.</p>
+</details>
+<p><strong>Speaker 3</strong>: 太好了，我来看看能不能运行这个演示。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 3</strong>: Okay, great. Okay, great. Let me see if I can actually run this... okay, great, yeah.</p>
+</details>
+<p><strong>Speaker 1</strong>: 好的，大家可以看到 GPU 的状态。这里我们只是想基于之前的直觉和数学计算来验证显存开销。以 7B（70 亿）参数模型为例，如果采用 16-bit（FP16/BF16）精度，模型本身的权重显存占用大约是 14.6 GB，通过精确计算也能得出 14.6 GB 这个数字。接下来是 KV 缓存大小，每个 Token 大约占用 131 KB。如果把这些公式可视化出来……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: So you would see the GPU is allocated. So here we are just trying to confirm the memory based on the math and based on the intuition that we have built. So the model memory is, let's say if you have 7 billion parameters and you are doing 16-bit precision, your total memory comes out to be 14.6 GB, which you can basically verify with the math. If you do all that math, that comes out to be 14.6 GB. Now comes the KV size, so this KV size is like 131 KB per token. And if you do that math and you try to visualize this...</p>
+</details>
+<p><strong>Speaker 3</strong>: 好的，让我们把它可视化展示出来。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 3</strong>: Okay, and then let's just visualize this, okay great.</p>
+</details>
+<p><strong>Speaker 1</strong>: 是的，这就是显存占用图表。可以看到，随着上下文长度的增加，显存占用持续攀升；同时，随着并发用户数的增加，显存占用也会急剧上升。如果你想在单张 GPU 上支持 160 个并发用户，你就只能支持非常短的上下文长度。因此，这里始终存在一个权衡（Trade-off）：到底是支持更长的上下文长度，还是通过在单张 GPU 上汇聚更多并发用户来降低成本？你必须始终在这个权衡中做出选择，我们在接下来的几张幻灯片中会深入讨论这一点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Yeah, so this is the memory chart. So if you see, as your context increases, your memory keeps increasing. Then another thing to realize is, as your users increase, then also your memory increases. So if you want to serve like 160 users on a GPU, you can only support lesser context length. So there is always a trade-off between what context length you can serve versus how much cost you can save by putting multiple users or concurrent users into a single GPU. So you have to always pick that trade-off, and we will go through that in a couple of slides.</p>
+</details>
+<p><strong>Speaker 1</strong>: 抱歉，能请你重复一下吗？刚才没听清。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Can you repeat please? I'm sorry, I cannot hear you.</p>
+</details>
+<p><strong>Speaker 0</strong>: （提问关于不同工具或产品版本中的差异）……等一下。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Do you mean different tools, different product names for... wait a second...</p>
+</details>
+<p><strong>Speaker 3</strong>: 好的，那我先切回之前的页面。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 3</strong>: Okay, so let me go back.</p>
+</details>
+<h3>推理的两大阶段：Prefill（计算密集型）与 Decode（内存带宽密集型）</h3>
+<p><strong>Speaker 1</strong>: 刚才我们看完了显存方面的情况。接下来我们需要搞清楚：为什么当上下文长度增加时，首字延迟（TTFT，Time to First Token）会显著变慢？要理解这个问题，我们必须理解 LLM 推理的两个不同阶段：Prefill（预填充）阶段和 Decode（解码）阶段。大家可能在很多技术文章中见过这两个词，这里我们系统解释一下。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: So that was about memory. We need to understand why we had a slower time to first token when we increased the context length. So for that, we need to understand the two phases of inference, and those phases are the prefill and the decode phase. I think you have all seen a lot of articles, but we just wanted to explain it.</p>
+</details>
+<p><strong>Speaker 1</strong>: 当你向模型发送输入 Token（Prompt）时，首先需要为所有输入 Token 构建对应的 Key 和 Value 向量，接着计算每个 Token 相对于前面所有 Token 的注意力分数。所有这些操作都是高度矩阵化、计算密集的。众所周知，GPU 非常擅长处理重度计算工作负载，因此我们说 Prefill 阶段是计算受限（Compute-bound）的。这个阶段需要花费一定时间来完成，而完成该阶段所耗费的时间，正是你的首字延迟（Time to First Token, TTFT）。输入 Token 越多，需要生成的 KV 向量就越多，需要进行的注意力矩阵运算量也大幅增加，因此 TTFT 会变得越来越慢。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: So when you send these input tokens, what you want to do is you want to build those key and value vectors that I mentioned for all the tokens. Then you want to compute the attention scores of every token with respect to the previous tokens. All this operation that you do is very matrix-heavy, it's a very compute-heavy operation. And we all know GPUs are very well suited for a heavy compute workload. So we call prefill to be compute-bound, and it does take some time to complete. So whatever time that this phase takes to complete, that's your Time to First Token (TTFT). So if you have more input tokens, you have to generate more key-value vectors, you have to do a lot more attention math, and because of that your TTFT becomes much slower.</p>
+</details>
+<p><strong>Speaker 1</strong>: 而一旦生成了第一个 Token，你就需要按顺序一个接一个地继续生成后续 Token。在这个过程中，虽然你依然需要用到所有先前 Token 的 Key 和 Value 向量（这与 Prefill 阶段构建的 KV 缓存一致），但在 Decode 阶段，你每次只需要为这一个新生成的 Token 计算注意力数学运算。因此，Decode 阶段的计算量非常小，它更少依赖纯算力，被称为内存带宽受限（Memory-bound）。我们马上会解释为什么它被称为 Memory-bound。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Whereas once you generate one token, you need to keep doing this to generate subsequent tokens sequentially, one after another. But in that process, every time you have to use the key and value vectors of all the previous tokens, which is same as the prefill where you were building key-value vectors. But in the decode phase, you are only computing the attention math for the single new token. And that is why it's less compute-oriented, and it's also called memory-bound. We will see shortly why it's called memory-bound.</p>
+</details>
+<p><strong>Speaker 1</strong>: 在经典的时间线图表中，Prefill 和 Decode 阶段呈现如下关系：Prefill 所消耗的时间对应首字延迟（TTFT）；而后续每一个 Decode 步骤所耗费的时间，基本上决定了你的 Token 间延迟（Inter-token latency / Time Per Output Token）。因此，这是你需要关注的核心指标：每一个 Decode 步骤到底耗费了多少时间。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: So in a classic timeline, you would see prefill and decode phases like this: time taken by prefill, that's your time to first token; and then time taken by every decode step, that's basically your inter-token latency. So that's the core metric that you need to worry about: what's the time being taken by your decode step?</p>
+</details>
+<h3>Roofline 模型与算术强度（Arithmetic Intensity）</h3>
+<p><strong>Speaker 3</strong>: 好的，那么为什么 Decode 步骤会耗时，又为什么被称为 Memory-bound 呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 3</strong>: Okay, now why does that decode step take time and why is it being called a memory-bound operation?</p>
+</details>
+<p><strong>Speaker 1</strong>: 让我们来搞清楚这一点。要理解为什么 Decode 是 Memory-bound，我们需要从高层视角看看 GPU 是如何执行矩阵运算的。GPU 主要有两种显存层级：高带宽显存（HBM，High Bandwidth Memory）和片上共享内存/缓存（Shared Memory / SRAM）。HBM 容量大，但相对带宽较低（所谓相对较低，是指相比于共享内存，从 HBM 传输数据的速率更慢）；而 Shared Memory 容量很小，但拥有极高的数据带宽，数据可以在极短时间内完成进出。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Let's try to understand that. To understand that, we need to look at how the matrix math basically works on the GPU on a high level. GPU has two kinds of memories: you have High Bandwidth Memory (HBM), and you have Shared Memory. The High Bandwidth Memory is larger in size, but has lower bandwidth — by lower bandwidth, I mean you can transfer data out of it at a lower rate compared to the shared memory. The shared memory is smaller in size, but it has very, very high bandwidth, which means you can transfer data in and out of it very fast.</p>
+</details>
+<p><strong>Speaker 1</strong>: 当需要进行矩阵运算时，GPU 必须从 HBM 中分块读取数据，加载到 Shared Memory 中进行实际的算术运算，然后再将计算结果写回 HBM。在 Prefill 阶段，模型只需要执行一次这样的大批量矩阵运算；但在 Decode 阶段，由于每个 Token 是按顺序逐一生成的，你必须一遍又一遍地重复这一过程。无论单个 Decode 计算有多快，你从 HBM 向 Shared Memory 传输数据的速度都受到 HBM 物理带宽的严格限制。这直接决定了 Token 生成速率的上限——即每个 Decode 步骤生成 Token 的理论极限速率。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: When you have to do matrix math, you have to pick the data in chunks from the High Bandwidth Memory, put it into the shared memory, do that math, and write back the result into the High Bandwidth Memory. For the prefill phase, you have to do this matrix math only once. But for the decode phase, you have to do matrix math again and again because you are generating each and every token sequentially. And so it doesn't matter how fast your decode compute is, because now you can only transfer your data out of the High Bandwidth Memory into shared memory at a certain speed since you are limited by the HBM bandwidth. And so that governs your token ceiling — at what rate you can actually generate tokens out of the decode step.</p>
+</details>
+<p><strong>Speaker 1</strong>: 如果我们在 Roofline 模型图（Roofline Plot）中观察这一现象：左侧区域就是所谓的内存受限区（Memory-bound）。在数学上，它由“算术强度”（Arithmetic Intensity）决定。算术强度是指每传输 1 字节数据所执行的浮点运算次数（FLOPs / Byte）。在 Decode 阶段，你必须搬运大量数据——包括所有先前 Token 的 KV 缓存以及整个模型的权重，但实际执行的计算量却很少（因为每次只计算一个新 Token 的注意力），因此其算术强度非常低；而在 Prefill 阶段……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: If we look at this in the roofline plot: there is a left section which is called to be memory-bound. Mathematically it's governed by the arithmetic intensity. Arithmetic intensity is the number of FLOP operations that you perform per byte of data being transferred. For the decode step, since you are transferring a lot of data — like the key and value vectors of all the previous tokens and the model weights — but you are doing much less computation because you are computing attention math for only one token, its arithmetic intensity is very low. But for a prefill phase, you...</p>
+</details>
+<!-- chunk 3/7 -->
+<h3>Prefill 与 Decode 阶段的计算特性及 Roofline 分析</h3>
+<p><strong>Speaker 1</strong>: 你只传输一次数据，但接下来会执行非常密集的重度计算，所以它的算术强度（arithmetic intensity）非常高。现在从数学角度来看，大家应该明白为什么计算机在 Prefill 阶段的算术强度要比 Decode 阶段高得多了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: You are transferring the data once, but then like you are doing this heavy computation. So its arithmetic intensity is very high. So now you know like in terms of mathematics why arithmetic intensity of Prefill is very high compared to your Decode, okay.</p>
+</details>
+<p><strong>Speaker 1</strong>: 我们现在正在加载模型。这是 Prefill 阶段的开销成本。我们基本上所做的就是获取输入文本，然后尝试生成……在 Prefill 阶段所花费的时间上，可以看到随着输入 Token 数量的增加，Prefill 耗时也在随之上升，这就是 TTFT（Time To First Token，首字延迟）增加的原因。接着看 Decode 时间：Decode 耗时平均而言基本保持不变。如果假设忽略冷启动的影响，Decode 时间大约在平均线附近波动，但它仍然会受到输入大小的影响，并不是绝对的恒定时间。这是因为它仍然需要从内存中拉取之前所有 Token 对应的 Key 和 Value 向量，因此在 Decode 步骤中仍然能看到耗时有轻微的增加。这就是经典的 Roofline 性能模型图。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: We are loading the model now. This is like the Prefill cost. So what we are basically doing is we are getting the input text, and then we are trying to generate. In the Prefill step, the amount of time it takes, we see like as we increase the size of the input tokens, this Prefill is increasing, and this is the reason why your TTFT increases. And then like your Decode time: the Decode time is like on average it stays about the same. And so assuming you ignore that cold start, your Decode time is approximately around the average line. It is still impacted by the input size; it's not like it's a constant time, and it is because it still needs to pull the Key and the Value vectors from the memory for all the previous tokens. So there is still basically a small increase in time that you would see with the Decode step. And then this is the classic Roofline plot, okay.</p>
+</details>
+<h3>吞吐量、并发用户数与显存容量的权衡三角</h3>
+<p><strong>Speaker 1</strong>: 现在让我们来理解一下吞吐量这个维度。你想搞清楚系统到底能够承载多少并发用户。我想大家之前看过 GPU 显存结构的图表，其中展示了有一部分可用显存专门用于存放不断增长的 KV 向量。假设只有一个用户，你能支持的最大 KV 大小受限于上下文长度（Context Limit）；而你能支持的最大用户数，则是用 GPU 的可用显存除以每个用户所占用的 KV 大小。这样计算出来的结果就是系统的并发用户数。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Now let's try to understand like the throughput dimension. You want to understand how many users you can actually serve. And I think we saw like a diagram of the GPU memory where we saw okay, there is some memory that is free for the Key and the Value vectors to grow. So assume like you have just a single user, what's the total KV size that you have you can basically support is defined by context limit. The max users that you can support is whatever is your GPU availability, like whatever is the memory that is available in the GPU, you divide it by the Key and the Value size per user. And when you do that, it comes out to be like your concurrent users.</p>
+</details>
+<p><strong>Speaker 1</strong>: 现在假设 GPU 规格已固定，模型大小也已固定，那么每个 Token 的 KV 缓存大小就是固定的。此时剩下的就只有两个自由维度：上下文长度和并发用户数。如果你想服务更多的并发用户，就必须削减上下文长度；而一旦减少上下文长度，就可能损害生成质量。所以这两个维度之间存在直接的权衡取舍。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Now assume like your GPU is fixed, your model is fixed, so your KV size per token is fixed. There are only two dimensions that are left here, which is context and your concurrent users. If you want to serve more concurrent users, you have to reduce the context length. If you reduce the context length, you could impact your quality. So these are the two dimensions right now that we are trading off.</p>
+</details>
+<p><strong>Speaker 1</strong>: 但是在现实中，我们真能跑满理论上的最大并发用户数吗？大概率是不行的，因为每个业务都有必须满足的延迟 SLA（服务等级协议）。如果大家还记得前面 Decode 步骤讲的内容，随着输入规模增大，Decode 耗时会增加；如果并发用户数增多，Decode 耗时同样会增加。最终，如果采用更大的 Batch Size，整体的端到端延迟（Inter-token Latency）和首字延迟（TTFT）都会受到直接影响。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: But can you actually serve the max number of concurrent users in an ideal [scenario]? Probably not, because every business has like latency SLA that we have to meet. So if you remember like in the Decode step, I said that time for the Decode still increases if you have more inputs, it also increases if you have more users. So ultimately inter-token latency also gets impacted if you have like a higher batch size, and your TTFT also gets impacted.</p>
+</details>
+<p><strong>Speaker 1</strong>: 所以现在你必须考虑第三个维度，也就是延迟。这三个核心维度分别是：质量（Quality）、延迟（Latency）和吞吐量（Throughput）。它们构成了一个经典的三方权衡三角，你必须在它们之间做出权衡与选择。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: So now there is a third dimension you have to worry about, which is like your latency. So the three dimensions that you have is like quality, latency, and throughput. So it comes out to be like this trade-off triangle where you have to choose between them.</p>
+</details>
+<p><strong>Speaker 1</strong>: 对于高端对话类产品（Premium Chat Application），你绝对会优先保证生成质量和低延迟。你绝不希望用户为了等待响应而经历过长的延迟。在这种场景下，你完全可以牺牲单张 GPU 上能够支撑的并发用户数，通过部署更多计算卡来承担硬件成本。而对于异步智能体工作负载（Async Agent Workload），你肯定会优先保证质量和吞吐量，因为这类任务通常是长周期运行的后台任务，你希望尽可能多地并发处理任务，同时保持非常高的产出质量。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: So for a premium chat application, you would want to prioritize definitely the quality, and you want to prioritize like the latency. You would not want your users to wait for a larger latency. You can always sacrifice the number of users you can support on the GPU and probably take that cost in form of more instances. And like if you consider an async agent workload, you would want to prioritize definitely quality and throughput, because these are the long running tasks and you would want to serve as many concurrent tasks as possible, but with a very, very higher quality.</p>
+</details>
+<p><strong>Speaker 1</strong>: 我们经常会觉得某款 GPU 单价太高，可能不适合我们；但实际测算下来，它反而在每百万 Token 成本（Cost per Million Tokens）上是最低的。前提是你必须对自己预期的最大并发用户数有非常精准的测算和评估，切实做好这些容量预估。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: And often like we think like okay, the GPU is like a very expensive GPU that might not be a good fit for us, but it turns out that could actually serve you the lowest cost per million tokens. But you really have to trust your kind of calculations on the max users that you want, and you really have to make those estimations correctly.</p>
+</details>
+<h3>容量计算器演示与硬件选型决策</h3>
+<p><strong>Speaker 1</strong>: 关于容量计算器，这里提供了一个 Colab 链接。因为我在本地环境配置可视化库时遇到了一些问题，没时间彻底迁移，所以直接选用了 Colab。我们在计算器中列出了一些常见 GPU 规格，包括它们的显存大小、带宽、浮点算力（TFLOPs）以及每小时租赁成本。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: So for the capacity calculator, there is like a link to the Colab. Because I was facing certain issues with the environment, I had to migrate out the whole widget library and I didn't have time, so I just picked Colab. So what we have done over here is we have tabulated some of the GPUs with their VRAMs, bandwidth, the TFLOPs, and the cost per hour.</p>
+</details>
+<p><strong>Speaker 1</strong>: 我们构建了一个简单的容量计算器与 KV 缓存可视化工具。当你增加 Token 数量时，可以看到 KV Cache 的体积在增加；而当你增加并发用户数时，显存占用会以更快的速率飙升。在这个容量计算器中，以 7B 参数模型为例，我们将精度设定为 FP16。在做 GPU 硬件决策时，基本思路是首先锁定你最关心的核心维度。对于高端对话产品，延迟无疑是首要指标；而对于异步工作负载，单卡所需承载的最小 Batch Size 则是关键维度。你需要先锁定这些参数。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Then we kind of like built this simple capacity calculator. This is just a KV visualizer where when you increase the number of tokens, you see KV size increases; and when you increase the number of users, your size is increasing at a much faster rate. And then in this capacity calculator, if we have like a model which is like a 7 billion parameter model that we selected, we set the precision to be FP16. Now the way we basically go by the GPU decision is you have to fix one dimension first which you care about the most. For premium chat dimension, latency is definitely the one, and then for async workload, the minimum batch size that you want to serve from like a single GPU that is the second dimension. So you want to fix these first.</p>
+</details>
+<p><strong>Speaker 1</strong>: 例如在高端对话应用中，我设定延迟目标为 10 毫秒级别，最小 Batch Size 方面我接受单卡支撑大约 7 个并发用户；同时上下文长度上限对我来说非常关键，因为我需要兼顾生成质量。对比不同 GPU，比如 H100 80GB 大约每小时几美元，而另一款高端卡（如 MI300X）大约每小时 10 美元；但如果你带入前面的数学公式计算整体吞吐量，就会发现高端卡平摊下来的每百万 Token 成本反而显著更低。因此，你需要通过固定关键维度并执行此类测算来确定 GPU 选型，从而降低推理成本。这是进行推理优化所必须迈出的第一步。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: So I will go about like in a premium chat application: I can go ahead with like 10 milliseconds latency, a minimum batch size I'm okay with probably 7 concurrent users on a single GPU. And then like my context limit is very important to me because I want to focus on the quality as well. And so I do see like some of the GPUs: the H100 80GB it's like [a few] dollars per hour, but like MI300X is around 10 dollars per hour. But if you do all that throughput math that we shared in the mathematics before, you could find like a cost per million tokens that could be significantly lesser. So you need to do such calculations by fixing those dimensions, and you need to decide your GPU to like reduce your kind of inference costs. This is at least the first step that you can take towards optimizing the inference.</p>
+</details>
+<h3>模型优化方法论：鸵鸟算法与世界杯分解法</h3>
+<p><strong>Speaker 1</strong>: 接下来我们要讨论的是模型层面的优化。我们现在已经打好了基础，理解了推理过程中的痛点、这些痛点背后的成因以及如何解决 GPU 容量规划问题。接下来我们需要进一步了解还能在模型本身做些什么。接下来有请 Tanmay，请他为大家深入讲解模型优化技术，他在学术研究期间对此有非常深入的探索。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: So now the next thing is about the model optimization. So we are now basically have built that foundation where we understood some of the pain points, reason behind those pain points, why those were happening, how we could like address that GPU capacity thing. We need to understand what can we further do about it. So it is about model optimization, and I would like to invite Tanmay, and he can talk more about these model optimizations provided he has worked on this during his research times, okay.</p>
+</details>
+<p><strong>Speaker 5</strong>: 大家好，麦克风声音清楚吗？好的。大家好，我是 Tanmay，我是一名高级量化建模师，同时也是一名 AI 研究员。我的研究重点是智能体验证（Agent Verification），目前正在构建世界模型（World Models）。在深入讨论模型优化之前，我设计了一个研究框架模板，方便大家理解这些复杂的技术概念。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 5</strong>: Hi everyone, mic check. Am I audible? Yeah, okay. So, hi, I'm Tanmay. I work as a senior quant modeler and also I'm an AI researcher. My work focuses on agent verification and right now building world models. So for this model optimization, before we start model optimization, I created a research template so that it will be easy for us to understand all these complex things.</p>
+</details>
+<p><strong>Speaker 5</strong>: 我们的分析框架非常直观：第一步是明确问题；第二步是通过两种思维算法来解决问题。第一种算法叫“鸵鸟算法”：就像鸵鸟遇到危险时把头埋进沙子里一样，每当我们遇到某些特定问题时，也可以选择直接忽略它，这是工程中需要权衡的重要策略。第二种算法是“世界杯算法”：比如在世界杯足球赛中，面对 48 支球队无法直接预测谁是冠军，主办方会将其拆解为 12 个小组，然后逐步进行 32 强赛、16 强赛、四分之一决赛、半决赛和决赛。它的核心思想是将庞大复杂的问题逐层拆解为更小的子问题，并在每个阶段保留有效结果继续推进。我们将采用完全相同的解题思路与方法论来拆解和理解模型优化全流程。现在让我们正式开始：假设我手里有一张 H100 GPU，需要部署并运行开源大模型……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 5</strong>: So our template is simple: first we will identify the problem; second step we will solve the problem using two algorithms. First algorithm is called Ostrich Algorithm: whenever we see a problem, just like an ostrich puts their head into the sand, same thing we will do whenever we face a problem, we will just ignore it. So this is an important algorithm we should follow. Second one is called World Cup Algorithm: for example, we don't know who will win this FIFA World Cup, so what organizers did they break the 48 teams into 12 groups, then Round of 32, then Round of 16, then Quarterfinals, then Semifinals and Finals. So what they are doing is breaking it into smaller problems and the useful results are moving forward. So same analogy or same algorithm we will use to understand this model optimization and all those things. So yeah, let's start: so I have one H100 GPU, I have to use this open source model...</p>
+</details>
+<!-- chunk 4/7 -->
+<h3>超大模型显存挑战与量化压缩方案</h3>
+<p><strong>Speaker 5</strong>: 比如有一个叫 GPT-OSS 的 120B 参数模型。他们最初是用 BF16（Bfloat16）进行训练的，其权重体积大约高达 240 GB。这时就出现了一个问题：面对 240 GB 的模型权重，而单张 H100 GPU 只有 80 GB 显存，如果我们必须把它塞进单张 GPU 而不是分散在多张 GPU 上，我们该怎么做？最直接的想法就是进行模型压缩。但究竟该如何压缩呢？这就是另一项挑战了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 5</strong>: It is called GPT-OSS 120 billion parameter model. Right now, they have trained on BF16, and the weight is 240 GB. What should I do? This is the problem we have. The first thing is that we have 240 GB, and 80 GB on each H100. And I have to fit only in one GPU, not in multiple GPUs. So what can we do? I think the simple thought is that just compress it, but how should we compress it? That's another challenge.</p>
+</details>
+<p><strong>Speaker 5</strong>: 如果我们将其压缩为 FP8（8 位浮点），模型体积大概会在 120 GB 左右。但单张 H100 的显存依然只有 80 GB，依然放不下。所以他们采取的做法是进一步压缩到 MXFP4。经过进一步压缩后，模型大小缩减到大约 65 GB 左右，这样就能顺利放进单张显存中了。这就是我们可以通过压缩来实现的目标。在这种策略下，我们实际上是在假设：将一个更大的模型压缩到更小的尺寸时，精度损失是可以忽略不计的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 5</strong>: If we compress to FP8, then it will be around 120 GB, but our GPU H100 is still 80 GB. So what I think they did is that they compressed it further into MXFP4, and I think the size is around 65 GB, right? So this is something we can do to compress. And we are assuming that there is no loss in compressing a bigger model into a smaller size.</p>
+</details>
+<p><strong>Speaker 5</strong>: 再看幻灯片里的另一个例子，比如 Mistral 7B。7B 参数是一个相对小巧的模型，如果是 16 位浮点（2 个字节），乘以 2 字节后其权重总大小大概在 14.5 GB 左右，这可以轻而易举地放进单张 H100 甚至 A40 GPU 中。对于像 Mistral 7B 这样的模型，除了直接以 FP16 运行外，我们同样可以应用不同的量化技术，比如 INT8、INT4 或是 NF4 等格式。我们采用量化算法的同时，本质上是在假定它不会带来明显的质量损失；但与此同时，在工程实践中你也必须通过一系列外部基准测试（Benchmark）在数学与实验层面上验证其效果是否依然保持良好。这种在训练完成后执行的方法属于训练后量化（PTQ，Post-Training Quantization）；当然，你也可以在微调（Fine-Tuning）甚至预训练期间引入量化，这就属于量化感知训练（QAT，Quantization-Aware Training）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 5</strong>: Second thing in this slide: we have used Mistral 7B. 7 billion parameters is such a small model. So if multiplied by two bytes, the weight of it is around 14.5 GB, which can easily fit into an H100 or even an A40. So next, what we can do instead, like Mistral 7B, instead of keeping it at FP16, we can apply different techniques like INT8, INT4, or NF4. Basically, we use an algorithm and believe that there is no quality loss, but somehow you also have to mathematically prove that by doing some kind of testing on external benchmarks to see whether it is working or not. And this comes under post-training quantization. One can also do this during fine-tuning; one can also do this kind of quantization, which comes under quantization-aware training.</p>
+</details>
+<h3>注意力机制中的矩阵乘法与多头划分</h3>
+<p><strong>Speaker 5</strong>: 接下来进入下一个核心问题：我们面临着庞大的矩阵运算。想象一下，如果有一个 $1000 \times 1000$ 维度的矩阵 $A$，以及另一个 $1000 \times 1000$ 维度的矩阵进行乘法运算，所需的基本运算次数将达到 $1000^3$（即 10 亿次操作）量级。在计算层面，这构成了极大的算力与显存压力。我们希望矩阵乘法既要运行迅速，又要尽可能节省显存开销。面对巨大的矩阵，我们该怎么做呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 5</strong>: Let's move to our next problem. We have huge matrices. Just imagine a $1000 \times 1000$ dimension matrix $A$ and another matrix $1000 \times 1000$. If you multiply these two matrices, the number of operations will be $1000^3$. And this is a problem in terms of computing. We want our matrix multiplications to be fast, and it should save memory. So what should we do? We have a giant matrix.</p>
+</details>
+<p><strong>Speaker 5</strong>: 以类似 Mistral 中的 $4096 \times 4096$ 矩阵为例，为了加快运算速度并优化显存占用，我们首先可以采用纵向切分矩阵的思路。比方说，矩阵共有 4096 列，我们可以将其垂直切分成每组 128 列的区块。当把 4096 列按每块 128 列切分后，我们就可以得到 32 个独立的列块。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 5</strong>: Let's take this one: $4096 \times 4096$. What should we do to solve our problem of speeding up things and memory for $4096 \times 4096$? First thing is that we can just break the block vertically; it does not matter how you choose it. So let's say we have 4096 columns, we will break it into a group of 128 columns each vertically. So we will get 32 blocks if we divide 4096 by 128.</p>
+</details>
+<p><strong>Speaker 0</strong>: 这样做会带来什么好处呢？当我们把矩阵纵向切分成 32 个块之后，就可以分发到多个 GPU 上并行计算，从而大幅加速处理流程。这种将注意力维度切分为多个独立子空间并行计算的架构，正是我们所熟知的多头注意力（MHA，Multi-Head Attention）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Then what will happen by doing this thing? If we just divide this one vertically, then we can use multiple GPUs to speed up the process. So this kind of thing is called multi-head attention.</p>
+</details>
+<h3>从 MQA、GQA 到 MLA 的注意力演进路径</h3>
+<p><strong>Speaker 0</strong>: 那么我们还能进一步做些什么？我们面对的依然是一个巨大的 KV 缓存矩阵。我们面临的核心瓶颈主要在于显存占用（Sizing）。于是有人提出：与其保留所有这 32 个独立的 Key-Value 列块，为什么不直接舍弃其中的 31 个，只保留 1 个 KV 头呢？我们假设单单一组 Key-Value 块就足以服务所有的 Query 头进行注意力计算，并且这种压缩带来的精度损失微乎其微。由此诞生的算法就是多查询注意力（MQA，Multi-Query Attention）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: So what else can we do? We have a big matrix. As I have mentioned, our main problem is sizing. So what we can do is that instead of having all those 32 vertical blocks, we will throw away 31 blocks, and we will assume that one block is sufficient enough that all the queries can handle those blocks. Our loss will be almost negligible, and we come up with this algorithm, which is called Multi-Query Attention.</p>
+</details>
+<p><strong>Speaker 0</strong>: 由此可见，我们目前处于两种极端的设计光谱之间：一端是标准的多头注意力（MHA），我们将维度切分成 32 个头并进行充分的并行计算；另一端则是多查询注意力（MQA），我们直接将 KV 头缩减为 1 个，丢弃了其余 31 个头的独立表征。处在两极之间，我们显然可以找到一种折中方案（Middle Ground）：与其全部丢掉 31 个头，不如将若干个 Query 头进行分组，让同一组内的多个 Query 共享一组对应的 Key-Value 头，因为相似的注意力块通常会关注相似的查询需求。这种技术就是分组查询注意力（GQA，Grouped-Query Attention）。目前 GQA 非常流行，在 Mistral 以及其他许多现代主流大模型中都得到了广泛应用。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: As we can see right now, we are at two spectrums. One is Multi-Head Attention where we split it into 32 blocks and use different GPUs or do parallel processing. And at the same time, we are throwing away 31 blocks and calling this Multi-Query Attention. So at both extremes, now we should come up with a middle ground. Something where instead of throwing away all 31, maybe we can group some of the blocks together, so that we can assume similar blocks will attend to similar kinds of queries. This kind of technique comes under Grouped-Query Attention, which is very popular right now. Even in Mistral or in other models, this Grouped-Query Attention works.</p>
+</details>
+<p><strong>Speaker 0</strong>: 到目前为止大家已经理解，面对大矩阵，我们可以根据需求进行切分，并通过数学验证来证明损失极小。在 GQA 之后我们还能怎么做？在注意力机制中，我们有庞大的 Key 矩阵和 Value 矩阵。我们是否可以把这些高维 KV 矩阵低秩压缩到一个隐向量（Latent Vector）空间中，然后在实际计算时再通过特定算法从隐向量重构回原始矩阵维度？这种策略正是多头潜在注意力（MLA，Multi-Head Latent Attention）。不过 MLA 在引入旋转位置编码（RoPE）时会遇到一些问题，因为 RoPE 是强位置相关的（Position-Dependent），而经过低秩投影后的潜在表示往往是解耦或位置无关的，因此需要额外引入一部分专用于携带位置信息的 Key 索引维度来进行映射。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Right now, we have understood: we have a big matrix, we can divide it the way we want and do some mathematical calculation to prove that loss is almost negligible. So what else can we do after this Grouped-Query Attention? See, we have big matrices: one is Key and one is Value. Let's compress that matrix into a latent vector and then come up with some algorithm to reconstruct from the latent vector to our original matrix. So this kind of strategy comes under Multi-Head Latent Attention. But again, it has some problems with RoPE, because RoPE is position-dependent, whereas this is position-independent. So one needs to also include some index for keys so that one can map it.</p>
+</details>
+<p><strong>Speaker 0</strong>: 此外还有一个根本问题：为什么在注意力计算中，每个 Token 都要与之前所有的 Token 进行全量矩阵乘法？这是经典 Dense Attention 的机制所决定的。那我们是否可以不去关注过去所有的历史 Token，而只针对那些对当前上下文真正重要的核心 Token 进行计算？这一思路推动了稀疏注意力的发展，比如 DeepSeek 稀疏注意力（DSA，DeepSeek Sparse Attention）等机制。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: But again, the main problem is: why are we multiplying all those big matrices? Because that's how this attention mechanism works, that each token will pay attention to every token. So how about we don't pay attention to all the previous tokens, and only pay attention to the important tokens which are important for us? This kind of field is evolving. So this concept is used in DeepSeek Sparse Attention.</p>
+</details>
+<h3>FlashAttention 显存层次优化与前沿架构权衡</h3>
+<p><strong>Speaker 0</strong>: 接下来我们谈谈 FlashAttention。目前几乎所有人都在使用 FlashAttention。而在 2022 年或 2023 年之前的传统实现中，Query、Key、Value 矩阵都存放在高带宽显存（HBM）中。GPU 计算时需要不断把大矩阵从 HBM 加载到片上计算核心（Tensor Core），做完一部分计算后再写回 HBM，这一频繁的读写过程会重复多次，造成严重的内存带宽瓶颈（Memory-Bound）。FlashAttention 的创新在于：它不再对整个完整大矩阵进行重复搬运和全局乘法，而是将大矩阵切分成紧凑的分块（Tile），仅将分块放入 SRAM 等高速片上显存中计算，利用在线 Softmax（Online Softmax）机制动态维护三个局部统计标量，从而不仅大幅提升了矩阵乘法速度，还极大减少了对 HBM 的高开销读写访问。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Next one is FlashAttention. So in FlashAttention, currently almost everyone uses FlashAttention. But way back in 2022 or 2023, that's how it worked: Query and Key matrices were in HBM. It loads them into Tensor Cores, does some calculations, and then writes them back to HBM, and this process goes on multiple times. In FlashAttention, what they did is that instead of multiplying the whole matrices, they divided the bigger matrices into small tiles and only put those small tiles to SRAM, so that it can process multiplication fast and just keep track of some three variables to dynamically calculate online Softmax.</p>
+</details>
+<p><strong>Speaker 0</strong>: 从具体的压缩比例数学计算来看：假设原始 MHA 在特定长度下的 KV 缓存开销基准为 540 KB；在 GQA 中，压缩比取决于具体的分组比例。如果我们将原本的 32 个 KV 头缩减为 8 个 KV 头，我们就能直接获得 4 倍（4x）的显存压缩比。而在多头潜在注意力（MLA）中，具体的压缩公式取决于模型本身的层数与结构参数。在原始的 DeepSeek 论文中，他们将 KV 压缩到了一个维度为 512 的潜在向量（Latent Vector），并搭配约 64 维带有 RoPE 的位置索引解耦向量，最终实现了相比标准多头注意力高达 56 倍（56x）的惊人 KV 缓存压缩率。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: So this is just mathematics. If we have Multi-Head Attention, say if it is 540 KB, then it depends upon how much grouping we want. If instead of 32 KV heads we only want to use 8 KV heads, we can get a compression of 4 times. And for Multi-Head Latent Attention, this formula depends on model to model, how many layers your model has. In the original DeepSeek paper, I don't remember the exact dimension, but they used a latent vector with 512 as dimension and 64 for RoPE index, and then they showed that it is 56x more compressed than Multi-Head Attention.</p>
+</details>
+<p><strong>Speaker 0</strong>: 这张图展示了不同注意力变体之间的性能与效果权衡（Trade-off）。这里还有像线性注意力（Linear Attention）和 Mamba（状态空间模型）等架构。目前的计算瓶颈主要源于注意力机制中的矩阵乘法。如果未来我们不再依赖自回归逐字生成和传统的 Attention 机制，转而采用类似扩散模型（Diffusion Models）那样同时并行生成所有 Token 的架构，那么底层的算法范式也将彻底改变。从现有的权衡来看：标准 MHA 没有对 KV 做压缩，只是做头级别的并行，因此生成质量最高；而像 GQA 以及 DeepSeek 采用的架构（MLA/DSA），则在极佳的吞吐量、低显存占用与出色的模型质量之间取得了最优的平衡。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: So this is the trade-off diagram. Here, we have not talked about Linear Attention or Mamba. The main problem is just all this matrix multiplication. Right now everyone is using attention. Suppose in the future if we don't want to use attention, and rather than generating tokens sequentially just use diffusion models where we can generate everything simultaneously, all these algorithms will change also. But here they have two more: Linear Attention and Mamba. According to this slide, if we are not compressing anything, MHA is just parallelizing the process, so the quality is good. And then Grouped-Query Attention, which almost every model is using, along with GQA and DSA-like approaches. This provides good quality and high throughput in the attention mechanism.</p>
+</details>
+<!-- chunk 5/7 -->
+<h3>注意力机制演化与新型架构对比</h3>
+<p><strong>Speaker 0</strong>: 吞吐量表现还可以。而对于分组查询注意力（Grouped-Query Attention, GQA），这也取决于具体的应用场景；虽然它的生成质量几乎与多头注意力（Multi-Head Attention, MHA）相当，但使用场景依然非常关键。多查询注意力（Multi-Query Attention, MQA）则是另一个极端。我不知道背后的具体细节，但我们基本上是假设只需要一个键值（KV）块，所有的查询都会去关注那个较小的块。因此，对于 MQA 以及这种多头变体注意力机制而言，输出质量并没有那么理想。如果你尝试过一些 DeepSeek 模型，我认为他们在这一块做得相当出色。是的，在模型质量方面，除了滑动窗口（Sliding Window Attention）之外，还有很多这类技术——比如滑动窗口等等。而且，与其对所有内容进行多次全局计算，线性注意力（Linear Attention）的核心思想是先对全部上下文进行摘要总结，然后再从中检索查找。此外还有 Mamba，它本质上属于状态空间模型（State Space Models, SSM）。好的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Uh throughput is okay. And for grouped-query attention, it depends upon your use case also. Though, though quality is almost similar to multi-head attention, but use case also matters a lot. Multi-query attention is just one extreme there. I don't know why, but we are just assuming that we only need one block and all the queries will attend to that smaller, a smaller block. So quality is not that great for, for, for MQA, and this multi-head variant attention. So if you have tried some this DeepSeek models, so I think they are doing great job. Yeah, in, in quality wise. Besides that, sliding windows. So all these are some techniques, which yeah, all these are some techniques like I just slide the windows, all those things. And instead of you're, instead of multiply everything, so linear attention is just saying get summarize everything first, uh, and then look up into it. And then Mamba, this is just a state space models. Yeah, okay.</p>
+</details>
+<h3>模型量化与内存占用 Notebook 实操演示</h3>
+<p><strong>Speaker 2</strong>: 太棒了，非常感谢。对于模型层面的优化，我们这里有两个 Notebook 演示。我来看一下这个。好的，对于量化（Quantization）的演示，这个单元格已经运行过了吗？还没有，让我直接运行一下。好的，我们正在加载模型，这里使用的是 Mistral-7B。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: All good. Thank you, Tanmay. So for the model like optimizations, we also have like two notebooks here. So there will be I have to go to this. Okay. So for the quantization, uh like the demo, uh this is is this already run? No, let me just run this. Okay. So we are loading the model,</p>
+</details>
+<p><strong>Speaker 1</strong>: 这个也是 Mistral-7B。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Which is like a Mistral-7B also.</p>
+</details>
+<p><strong>Speaker 2</strong>: 这个是以 FP16 作为基线（Baseline）配置的。等等，它跑起来了吗？好的，用了两毫秒左右。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: So this one is like with the FP16 baseline, wait, did it run? Okay. So it's a two millisecond then this ran. Okay.</p>
+</details>
+<p><strong>Speaker 1</strong>: 这一次它是以 FP16 精度去拉取模型权重的，需要耗费一些时间。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: So so ah this time it's fetching that model with the FP16 precision, it's gonna take time.</p>
+</details>
+<p><strong>Speaker 2</strong>: 对，因为它正在从 Hugging Face 下载模型权重。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: Okay, yeah, it's because it's downloading the weights from the Hugging Face.</p>
+</details>
+<p><strong>Speaker 1</strong>: 是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Ah yes.</p>
+</details>
+<p><strong>Speaker 2</strong>: Colab 是在线运行的，因为它需要通过网络向 Hugging Face 发起调用。它正在拉取，下载需要一点时间。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: So Colab is like running online because it needs to make the network call through the Hugging Face. And like it fetching, I don't not like, but it's taking time to download.</p>
+</details>
+<p><strong>Speaker 1</strong>: 好的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Okay.</p>
+</details>
+<p><strong>Speaker 2</strong>: 好的。在这里我们可以看到显存占用大小：在 FP16 精度下，显存占用大约是 15 GB 左右。接着我们尝试按照刚才讨论的进行 2-bit 压缩，让 INT8 相关的逻辑加载进来。好的，我们确实看到显存大小现在降到了大约 7.5 GB。这意味着你现在拥有了更多的可用显存来供 KV Cache 增长。这也意味着你既可以支持更大的上下文长度限制（Context Limit），也可以支持更高的并发用户数。如果你进行 4-bit 压缩，显存占用还会更低。我记得 4-bit 压缩后大约是 3 到 4 GB，这里显示的是 4.5 GB。这就是大致情况。这是一个基础的图表对比。这些都是理论上的数值，我们这里还没有进行吞吐量测试。但通常情况下你会看到显存增长的趋势；同时根据我们此前所做的一些基准测试，INT8 压缩的实际吞吐量确实会有所降低。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: Um okay, okay. So here we see like the memory sizes, like 15 GB around approximately with the FP16 precision. We are trying to do the 2-bit compression as talked about with the INT8, let that download. Okay. So we do see like your memory size is now like 7.5 GB. What that means is now you have a more more memory for your KV to basically grow. That means you can either serve higher context limit or you can serve the higher concurrent users there. If you do the like INT4 basic, you are doing the 4-bit compression. So that with the 4-bit compression, it would be more lower. It would be, I think, around 3 to 4 GB, you have 4.5 GB. And yeah, so this is it. So this is just a basic plot of like. So these are the theoretical numbers. We are not doing the like any throughput test here, but usually you would say, like a memory increases. You would also like a bit of higher throughputs from some of the benchmarks that we started. We saw like the INT8 compression, it does have like a lower throughputs. Okay.</p>
+</details>
+<h3>注意力机制 Benchmarking 修正与 GPU 检测</h3>
+<p><strong>Speaker 2</strong>: 接下来是关于注意力机制的演示。对于注意力机制部分，好的，我需要运行这个单元格。好的，它正在运行。为什么这里显示没有检测到 GPU？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: And then there is like a demo on the like the attention mechanisms. So for the attention, okay, I have to run this. Okay. So it is run. Why why does it say no GPU detected?</p>
+</details>
+<p><strong>Speaker 1</strong>: 我觉得应该能检测到 GPU 才对。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: I should say the GPU should be detected.</p>
+</details>
+<p><strong>Speaker 2</strong>: 好的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: Okay.</p>
+</details>
+<p><strong>Speaker 1</strong>: 但是这里显示有点问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: But this is surprising.</p>
+</details>
+<p><strong>Speaker 2</strong>: 我想可能出于某些原因它无法检测到 GPU。我们这里确实配置了 GPU。没关系，核心的基本思想在于：当你尝试通过采用不同的注意力机制来压缩计算量时——比如从多头注意力（MHA）过渡到分组查询注意力（GQA），再进一步过渡到多查询注意力（MQA）——你就会开始看到显著的优化效果。昨天 Tanmay 在做一些基准测试，我想纠正一下那部分的数据：当时并不是 56 倍的节省，那是针对 MQA 的。主要是演示代码中有一个计算错误，漏乘了层数（Number of Layers）。对此深表歉意。实际上对于 MQA 而言，相比多头注意力大约有 14 到 18 倍的显存节省。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: I guess it's not like able to detect the GPU for some reason. Uh, we do have like a GPU here. Okay, never mind, yes. But that like basic idea here was more like, as you try to move towards like compressing the computation, like by using different attention mechanisms, like moving from the multi-head to the grouped-query attention. And then to the MQA, you would start seeing some optimizations. Um I think yesterday Tanmay, you were doing some bench marking. Um I wanted to correct this part. Um so it wasn't like 56x. It was for MQA. Basically the demo had had a mistake of like a computation where it did not multiply the number of layers. Ah ah so apologies for that. So this MQA is like a 14 to 18x savings were in comparison to like your multi-head attention.</p>
+</details>
+<h3>服务端推理优化技术：KV Cache、PagedAttention 与连续批处理</h3>
+<p><strong>Speaker 2</strong>: 现在我们已经理解了核心痛点、底层原理以及模型层面的优化策略，接下来我们要讨论的是：在服务端（Serving Side）推理优化方面，你能够做些什么？首先，正如我们所见，在执行简单的解码（Decode）步骤时，需要拉取模型权重，并且会针对之前所有的 Token 重新计算键（Key）和值（Value）向量，即便这些 Token 的向量在之前的步骤中已经计算过了。这无疑造成了巨大的算力浪费。如果你分析其时间复杂度，它会达到 $O(N^2)$ 的级别。而解决这个问题的经典方法依然是用显存换时间（Space-Time Trade-off）：你可以将这些 Token 对应的 KV 向量保存在显存中，后续直接读取引用。这块显存空间就被称为 KV Cache（键值缓存），其计算流程大致就是这样。基于 KV Cache，业界衍生出了四项非常关键的优化技术。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: So now that we have understanding of the pain points, the foundations, the one side of the optimizations, which is the model optimizations. We want to talk about what can you do on the like, the serving side. So the first thing is, we saw like when you perform like a simple decode step, you are pulling it. You are basically pulling the model weight, and then you are recomputing the key and the value vectors for all the previous tokens, even though you already computed the those vectors for the tokens. So there is definitely like a lot of compute wastage. And if you kind of analyze the time complexity of it, it would come out of be $O(N^2)$. And the way we resolve that is like a classic trade off against the memory. You can maintain a memory of those vectors against the tokens, and you can reference that memory. So that memory was called as like KV cache. And like the flow looks something like this. And then based on this KV cache, there were like four optimizations that were really possible.</p>
+</details>
+<p><strong>Speaker 2</strong>: 第一项技术是 PagedAttention（分页注意力）。那么，传统方式存在什么问题？当并发地将多个请求打包成批次（Batch）发送给 GPU 时，每个请求都会被预先分配一块连续的显存空间。举个例子，假设为每个请求预分配了 2 KB 的显存，但实际请求可能只需要 1 KB。这样一来，就会产生 50% 的显存碎片（Memory Fragmentation），而这种碎片化直接导致了显存浪费。这意味着显存中原本还有空间去服务更多请求，但由于必须寻找连续的显存物理块，导致这些剩余空间无法被利用。因此，这里借鉴了操作系统（OS）虚拟内存的分页管理机制：维护逻辑内存与物理内存的映射关系。在逻辑内存视图下，每个 Token 对应的 KV 向量看起来依然是连续分布的，但在底层它们被映射到了分散的不同物理地址上。这种机制极大地减少了显存浪费。它之所以能够实现，是因为系统将显存视作一系列固定大小的物理块（Blocks），随着请求的生成推进和新 Token 的产生，动态地为它们按需分配物理块。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: The first one is about the PagedAttention. So what's the different? What's the problem today? So when you send like multiple requests as the input to the GPU, these requests are in a batch, every request is allocated like a continuous memory storage. Let's say of, I'm just taking an example, like let's say 2 KB. However, like your request needed only, let's say, 1 KB. So there is like a 50% of that memory fragmentation, and this fragmentation basically leads to the memory wastage. That means there was a space in the memory where you could have served more request, but you could not because you were looking for that contiguous block of the memory. So an inspiration to here was being taken from, like how the OS works, like you maintain a logical memory, and you basically have a physical memory. So in the logical memory, it would still feel like that the KV vector for, like every token is like a contiguous, but it will be mapping toward different physical address. So that really helped like saving a lot of memory. And it was only possible because you they consider like memory as a set of blocks, and you would be dynamically allocating those blocks as the request need as the like new tokens comes in, and they need that kind of memory.</p>
+</details>
+<p><strong>Speaker 2</strong>: 第二个优化杠杆是连续批处理（Continuous Batching）。在传统的批处理中，当批量发送多个请求给 GPU 时，GPU 会接纳这些请求，但在当前批次中所有请求全部完成之前，GPU 是不会接收新的批次的。这种情况会导致在一个批次中较短的请求早早结束、而长请求仍在生成时，GPU 算力处于部分闲置等待的状态。为了解决这种算力闲置问题，便提出了连续批处理的概念。连续批处理极大地提升了系统的吞吐量：你可以非常迅速地将新请求动态插入到正在执行的推理步中，确保 GPU 始终处于满载运算状态，避免了计算资源的浪费。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: The another lever is like when you are sending multiple requests in the batch, GPU is like taking those requests, but it does not accept the new batch, unless all the request in that batch gets completed. So the diagram looks more like a PagedAttention. But here it is more about like when is GPU available to take the next batch. So there is a time period where GPU is like sitting really idle. And you want to like resolve for that. And for that, like the idea was like, okay, let's do that continuous batching. So the continuous batching also really helped like throughputs. Now you can serve more requests, pretty quickly, keep making sure like GPU it's always like occupied, and it's not like sitting idle. So you are saving on that compute.</p>
+</details>
+<p><strong>Speaker 2</strong>: 第三项技术是前缀缓存（Prefix Caching）。前面提到过，KV Cache 能够在一个请求内部跨 Token 复用历史计算，但如果多个不同请求之间共享相同的前缀 Token，我们该如何避免重复计算呢？这就是前缀缓存所要解决的问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: The third is the like, like prefix caching. So you remember like the KV cache helps you save the computation for a single request across the tokens, but what about like you have the same tokens across multiple requests? How do you basically save against that? So the prefix caching was was introduced,</p>
+</details>
+<p><strong>Speaker 1</strong>: vLLM 正好完美支持这项能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Where the vLLM exactly counters that.</p>
+</details>
+<p><strong>Speaker 2</strong>: 第四项优化则是 KV Cache 量化（KV Cache Quantization）。前面我们讨论了对模型权重本身进行量化，但实际上你也可以对 KV Cache 向量进行量化。这意味着每个 Key 和 Value 向量占用的显存更小，进而可以在有限显存中容纳更多的 KV 向量；这反过来意味着能够支持更长的上下文上限、承载更多的并发 Token，同时维持良好的生成质量。所有这些前沿的推理优化特性（PagedAttention、连续批处理、前缀缓存、KV 量化）都已经完整内置在 vLLM 推理引擎中，你完全不需要重复造轮子。你可以直接在生产环境中部署 vLLM 来获得极高的吞吐扩展能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: And then the third is like we talked about, fourth actually. So we talked about quantizing the model, but you could also you can also like quantize the the KV weights. That means now you, you need like a lesser space for your key and the value vectors. That means you can serve more key and the value vectors in the memory. And that means like you can serve more tokens. That means you can serve more context, context limit. And that means like you can serve more model quality. And all of this is like already present in the vLLM, you don't really need to reinvent that wheel. And you can like deploy this vLLM in production, and you could see that basically growth.</p>
+</details>
+<h3>vLLM 生产基准测试实验配置</h3>
+<p><strong>Speaker 2</strong>: 接下来展示的是我们实际运行的一个基准测试。这个基准测试让我看看是否还在演示环境中。运行整个基准测试大约需要一个小时，因为必须频繁地启停服务、重启 vLLM Server 以及重新加载模型，所以完整的测试流程非常耗时。但我可以直接向大家说明我们具体的测试设置：我们保持模型一致，统一使用 Mistral-7B；然后我们准备了一组输入的测试 Query，你可以将它们视为标准 Prompt 请求。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: So next, we have like a benchmark that we did. So this benchmark was let me see if I have that here, the demo docs. So doing this benchmark takes like around 1 hour because you have to continuously stop and like restart that vLLM servers and you have to load the models and all. So it does take a lot of time and doing that testing. But I can like really tell you here what we are doing. So we have kept the model as same like the Mistral-7B. And then we have like the set of input questions that we are sending, consider them as the prompts.</p>
+</details>
+<!-- chunk 6/7 -->
+<h3>vLLM 基准测试与推理优化对比</h3>
+<p><strong>Speaker 2</strong>: 然后我们这里有几个辅助函数，比如检查服务器是否已经启动。这里的服务器就是 vLLM 服务器。接着还有一些用于获取 vLLM 指标的辅助函数，稍后我会具体讲讲这些指标代表什么。再往下就是大量的基准测试等内容，之后还需要测量 KV 缓存占用情况，这些都是对应的辅助函数。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: then we have couple of helper functions here like checking the server is up or not. the server is the vLLM server, then there helper functions to get the vLLM metrics. ah and i will talk about like what those metrics are. then there are like a lot of of the benchmarks and all. and then you have to measure that KV usage and know these are the like helper functions.</p>
+</details>
+<p><strong>Speaker 2</strong>: 那么基准线（Baseline）非常简单，我们有一个 Hugging Face 基准线。这相当于直接把文本发送给大语言模型，然后接收返回的响应。我们在这里可以看到一些测试结果：Hugging Face 的吞吐量大概是每秒 51 个 token 左右，首字生成时间（Time to First Token, TTFT）大约是 54，而整个 token 间延迟（Inter-token latency）是 19。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: so the baseline very simple like we have hugging face baseline. this is a raw like sending the text to the LLM. getting back the response. we see some results here. we saw like hugging face has a throughput of like around 51 tokens per second time to first token was like 54, and then the inter token latency was 19.</p>
+</details>
+<p><strong>Speaker 2</strong>: 这些测试都是在 H100 上运行的。接着我们启动了一个非常标准的默认 vLLM 服务器。默认情况下，vLLM 会为你提供 PagedAttention、连续批处理（Continuous Batching）以及 KV 缓存（KV Caching），这三项功能默认都是开启的。当你对比这些基准测试数据时，会发现吞吐量几乎提升到了 50 倍左右，每秒能够处理输出更多的 token；同时首字生成时间有所增加，而 token 间延迟则降了下来。此外，KV 缓存的占用以及上下文处理量显而易见地提升了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: this was all run under H100 um and then we start like a very default vLLM server. so by default, vLLM provides you the paged attention continuous batching and the kv caching. so three things are present by default. and when you try to compare those benchmark, you see your throughput is like almost 50x. you are able to serve more tokens per second, then your time to the first token that also rises. and then your the inter-token latency kind of goes down? and then your KV cache usage and the versus context increases for sure.</p>
+</details>
+<p><strong>Speaker 2</strong>: 现在，当我们在此基础上应用前缀缓存（Prefix Caching）时，你可以看到吞吐量得到了进一步提升，TTFT 降低了，token 间延迟基本保持一致。至于 KV 缓存占用率，它其实是在下降的，而上下文容量并没有缩减，基本保持相当。我认为这部分表现大体一致，在上面进一步叠加 KV 缓存量化之后，差异并没有那么夸张。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: now when you apply the prefix caching to it. so with the prefix caching, you see like your throughput increases more, your TTFT decreases your intertoken latency is approximately same. and then the your kv cache usage, what is the usage? it's kind of going down. the versus the context. it's not going down. it's approximately same. I think this is also approximately same. it's like not that um big of a deal when you apply the like, kv quantization on top of it.</p>
+</details>
+<p><strong>Speaker 2</strong>: 所以可以看到，吞吐量基本相近，首字生成时间相近，token 延迟也差不多，但实际的 KV 缓存占用确实降低了。这是因为你对键值空间进行了量化。此外还有一个推测解码（Speculative Decoding）的概念，稍后另一位讲者会详细介绍。当你对这些进行基准测试时，也会看到 KV 缓存占用稍有减少，尽管整体测试结果大致差不多。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: so so you see like a throughput is like almost similar. your time to first token is similar. your token latency is similar. but then your KV usage actually goes down. this is because like you have quantized your key value space, and then there is a concept of speculative decoding that, that he will talk about. so when you try to benchmark those, so you also see like there is a uh like a bit of like the less KV usage, although like the the results are approximately same.</p>
+</details>
+<p><strong>Speaker 1</strong>: 然后三十的时候呢，还没有还是到少呢。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: 然后三十的时候呢，还没有还是到少呢。</p>
+</details>
+<p><strong>Speaker 2</strong>: 是的，总的来说，这些大概就是各项指标的对比表现。也许我应该把页面缩小一点，好的，现在视野合适了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: so yeah, i mean overall, like these other like the metrics across probably, i should zoom out okay that's all zoom out now.</p>
+</details>
+<p><strong>Speaker 1</strong>: 对对。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: 对对，</p>
+</details>
+<p><strong>Speaker 2</strong>: 太好了。这就是 vLLM 的基准测试情况，它是生产环境中的默认首选。顺便提一下，在我们讨论其他推理引擎时，也会分享对应的技术选型决策树。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: great. so yeah, this is the like vLLM benchmarks. um it's a production default. by the way, we will also share that decision tree uh when we try to talk about like the other engines.</p>
+</details>
+<p><strong>Speaker 1</strong>: 嗯。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: 嗯，</p>
+</details>
+<h3>推测解码与前缀缓存机制解析</h3>
+<p><strong>Speaker 2</strong>: 好的，接下来我们应该探讨一下，在此之上还可以做哪些其他的推理优化，以及目前业界涌现出了哪些其他解决方案。所以我想再次邀请 Thami 上台，他将为大家讲解其中的一些优化技术。非常抱歉，我刚才还没把幻灯片切过来。好的，我们要讲的是哪一个，推测解码吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: so yeah. so we should talk about like, what are some of the other inference optimizations we can do on top of it and what what some of the other solutions that came out. so i would like to again invite Thami. he is going to talk about like some of these optimizations. i'm sorry, i'm so sorry, i didn't enable the slides. what was the okay? great which one the speculativedecoding?</p>
+</details>
+<p><strong>Speaker 0</strong>: 好的，谢谢 Harpal。这些技术都属于推测解码（Speculative Decoding），可以说它们都是同一种理念下不同风味的实现。这类技术在分类上属于解码加速器（Decoding Accelerators）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: yeah. thank you, Harpal yeah. so so all this are like speculative decoding, all these are the so so what we say, uh, different flavors of same kind of soda. so this this technique comes under decoding accelerators.</p>
+</details>
+<p><strong>Speaker 0</strong>: 首先，虽然我们主要讨论推测解码，但它还有很多变体，比如自推测解码（Self-Speculative Decoding）、EAGLE、Medusa 等等。其中 EAGLE 是一种算法。不过就我个人而言，我认为推测解码在实际中并没有那么好用，其核心痛点在于对齐（Alignment）问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: so first one. so we're only talking about this speculative decoding, but there are other variants like self speculative eagle Medusa like that's one eagle algorithm. personally i don't think speculative decoding works, because main problem is alignment.</p>
+</details>
+<p><strong>Speaker 0</strong>: 好，我们先从什么是推测解码讲起。在 Transformer 架构中，最主要的瓶颈在于所有 token 都是串行逐个生成的。那么，如果我们用一个较小的辅助模型，让小模型先一次性快速生成比如 4 到 5 个 token 会怎么样？然后由主模型（或者叫教师模型、裁判模型）来决定接受其中的哪几个 token。这个循环会一直持续下去。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: okay, so let's to start with what is a speculative decoding. main problem is that in transformer architecture, all these tokens are generated sequentially one by one by one. how about just use a smaller model and let a smaller model to generate maybe let's say, four or five tokens. and this teacher model or we can say, according to our world, dcup algorithm can say, referee so referee, we decide how many are tokens it accept. and this loop keeps on going on.</p>
+</details>
+<p><strong>Speaker 0</strong>: 我们的假设是，在某些特定领域这种方法是可行的，比如代码编写领域——因为代码几乎不需要太多发散创造力，语法和结构都高度相似，所以在这种场景下它可能会有帮助。但根据我个人的实测，我发现这种标准的推测解码一点也不实用。不过其他衍生技术，比如自推测解码（Self-Speculative Decoding），教师模型本身带有一个辅助预测头（Auxiliary Head），由它来完成类似小模型所做的工作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: and our assumption is that there are certain domain where this kind of things will work, like maybe in maybe in coding, where almost there is no creativity, each code or syntax is almost similar. so maybe it can help it. but based on personal testing, i didn't find this speculative decoding useful at all, but other techniques like uh self speculative decoding, where teacher model also have one head auxiliary head, and it will do similar kind of things what this base model or small model is doing it.</p>
+</details>
+<p><strong>Speaker 0</strong>: 后来又相继演进出了 EAGLE，包括 EAGLE-1、2、3 等多个版本。它的核心思想在于：不再直接预测生成离散的 token，而是在模型内部训练一个小型结构，直接从主模型的某一隐藏层中提取特征表示。这样一来，它预测输出的是特征向量而非离散 token。因此，相比其他类似技术，EAGLE 的表现要更好一些。另外还有 Medusa，其思想则是通过多头结构并行生成多个后续 token。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: but then does eagle came eagle 1 2 3. i don't know how many versions are, but it is just saying that instead of generating tokens, let's train a small model inside, train a small model and just take features from one of main models layer. so that instead of generating token, it will generate these features. so eagle is is better compared to this other kind of technologies and then another one is Medusa, which is just saying that just generate all those tokens in parallel.</p>
+</details>
+<h3>前缀缓存与 Radix Tree</h3>
+<p><strong>Speaker 0</strong>: 好的，看这一页幻灯片。现在我们来聊聊前缀缓存（Prefix Caching）。我不知道大家平时有没有用过静态前缀缓存（Static Prefix Caching），但它的实际情况是这样的：前缀缓存最大的痛点在于，用户在输入 Prompt 时经常会打错字或者出现微小的变化。标准静态前缀缓存的逻辑是预先对 Prompt 计算 Hash 值，下次当用户提出类似问题时去匹配这个 Hash；如果 Hash 完全相等，就不需要重新计算 KV 缓存，直接从存储中命中提取。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: okay. so here, so here in this slide, yeah okay. now we come to uh now we will come to this one prefix caching. so i don't know whether people are using this one static prefix caching or not, but things is that. main problem with prefix caching is that, sometimes we type and make a small kind of mistake. and this standard static prefix caching is basically, it takes a prompt do some hashing. and then next time when user ask similar kind of question, it will try to match the hash. so if hash is equal then it will, instead of recomputing all those K and V it will just take it from this storage.</p>
+</details>
+<p><strong>Speaker 0</strong>: 但大家知道，我们有时候会打错一个字母，或者微调换了一个词，这样就会导致缓存未命中率（Cache Miss Rate）极高。这就是为什么基数树（Radix Tree）前缀缓存变得越来越流行，尤其是在智能体（Agent）工作流大火的背景下。现在几乎所有人都在构建 Agent，而大部分计算开销都发生在推理阶段——我们会反复向模型提出高度同构的 Prompt 模板。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: but you know that sometimes we make a mistake or maybe we can just change a word or letter something like that then we have a very higher cash miss hit rate. so that's why this one Radix Tree. so Radix Tree is becoming very popular and also because of agent. so i think almost everyone is doing agent, and most of the computation is going during test time inference kind of thing where we keep on asking same kind of questions.</p>
+</details>
+<p><strong>Speaker 0</strong>: 比如在系统提示词中重复出现：“你是一位资深软件工程师”，这种模板在整个 Agent 执行回路中会被反复调用成百上千次。在这种 Agent 循环中，将这些具有公共前缀的内容保存在 Radix Tree 中就显得极其关键。Radix Tree 本质上是前缀树（Trie）的高级压缩版本，它将没有分支的单向节点进行路径压缩合并。对于这种反复执行固定前缀的工作流，Radix Tree 带来了巨大的性能提升，而 SGLang 正是采用了这种 Radix Tree 算法来实现高效的前缀缓存。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: and for example, you are an expert software engineer multiply by 200 times. this kind of loop keeps on going inside this agentic kind kind of things where it is necessary to store similar kind of things in a Radix Tree. so Radix Tree is just a advanced version of this prefix tree, where we will just collapse a node if it does not have any branch, and for this kind of work will keep on repeating same thing. this Radix Tree helps a lot and SGLang use this kind of algorithm for prefix caching.</p>
+</details>
+<h3>TensorRT-LLM 与 SGLang 实测对比</h3>
+<p><strong>Speaker 0</strong>: 好的，另外还有一个引擎叫做 TensorRT-LLM。刚接触的时候很容易让人困惑，我最开始也经常搞混。简单来说，TensorRT 是英伟达底层的标准加速 SDK，而 TensorRT-LLM 是一个专门针对大语言模型的推理引擎，性质上和 vLLM、SGLang 类似。但不同之处在于它是英伟达自研的，他们对模型的每一层都进行了极致算子融合与优化，甚至在硬件底层指令级别对整个计算图进行拆解重构和极致调优。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: okay, yeah, then there is another thing when is TensorRT-LLM. this is very confusing when i first started, i was all i was just confused for this TensorRT-LLM. so yeah, so TensorRT is just standard SDK kind of thing. TensorRT-LLM is just an inference engine, just like vLLM SGLang. but problem is that it is related to Nvidia. they optimize each and every layer. and every problem, as i mentioned in our algorithm, they just break everything and optimize everything at hardware level also.</p>
+</details>
+<p><strong>Speaker 0</strong>: 好的，针对本次 Workshop，我们也做了一组横向基准测试，来对比看哪个推理引擎表现最优。我们的测试设计分为两种场景：第一种是非 Agent 场景的基础测试，我们直接使用 ShareGPT 数据集，通过 vLLM 和 SGLang 分别去请求处理这些真实对话问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: so for this workshop, we also did some benchmarking like which is best. so our setup was something similar. so we did two kind of testing. first one is without agency testing, where we use ShareGPT dataset and just asked those questions using vLLM and SGLang. okay, yeah, ok.</p>
+</details>
+<p><strong>Speaker 2</strong>: 让我切一下屏幕，好的，没问题了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: and let me just okay great.</p>
+</details>
+<p><strong>Speaker 0</strong>: 好的。在这次 Workshop 的测试中，我们使用的是单张 H100 显卡。在第一组基础测试中，我们直接从 ShareGPT 中提取问题并灌入 vLLM 和 SGLang 中运行。测试结果发现，两者的吞吐量与延迟在统计学上实际上没有显著差异，二者在每秒请求数（RPS）、首字生成时间（TTFT）以及整体延迟方面的表现都非常接近。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: okay. so for this workshop, we use H100 and about first testing we take questions from ShareGPT and put it into vLLM and SGLang, and we found. actually, there's no statistical difference between which one is better. so both have almost similar kind. so both are fulfilling similar kind of request per second TTFT and latency.</p>
+</details>
+<p><strong>Speaker 0</strong>: 唯一展现出显著性能鸿沟的场景，是在 Agent 复杂分支工作流中。具体测试流程是这样的：我们先向模型输入类似的结构化 Prompt，例如“你是全球最顶尖的软件工程师，请解决该城市的交通拥堵问题”；模型生成方案后，我们紧接着进入第二轮交互，在第二轮 Prompt 中明确要求“请评审上述方案并给出 1 到 10 分的评分”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: so but only difference we have seen during agentic branch. so what we did was that we ask that similar kind of question that you are the best software engineer in the world, just solve the problem of traffic congestion in this city kind of thing. then we put this into LLM, LLM generate some output. then we did another round two also. so once this LLM generates this output, then in round two, we have specially mentioned that provide review the proposal and give ratings from 1 to 10. so this are two prompts.</p>
+</details>
+<p><strong>Speaker 0</strong>: 整个流程在多轮循环中不断迭代重复。我们的实验结论是：对于这种模式固定、深度依赖上下文工程与 Prompt 模板复用的标准 Agent 工作流，如果合理设计并利用 Agent 的分支机制与前缀缓存，SGLang 的吞吐性能相比传统方案能实现 3 到 4 倍的提升。不过当然，具体加速倍数依然取决于具体的系统架构与实际负载设置。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: this loop keeps on repeating it. um what we found is that for this kind of um workflow where everything is standard, all those prompts and context engineering comes into the picture. if we do proper this agentic branching, then i think this SGLang is 3 to 4 times better. but again, this depends upon the different setup.</p>
+</details>
+<!-- chunk 7/7 -->
+<h3>推理引擎选型总结与基准测试</h3>
+<p><strong>Speaker 0</strong>: 也许你自己测试的话，可能会得到不一样的结果。好的，是的。我们把内容上传到 GitHub 了吗？是的，上传了。好的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Maybe if you do it, you may get different results. Okay, yeah. So I think did we upload it? Yeah, GitHub. Okay.</p>
+</details>
+<p><strong>Speaker 2</strong>: 好的。视频也已经放到 Google Drive 里面了，链接和幻灯片（Slides）是同一个。我们在这里做一个快速总结：在标准的 API 工作负载与吞吐量场景下，你会发现 vLLM 和 SGLang 的表现基本相当。如果你面对的是标准工作负载，完全可以直接选用 vLLM，毕竟它在生产环境中久经考验。但正如之前所说，当你尝试构建智能体（Agentic）工作流时，SGLang 才会真正大放异彩，为你带来所有相关优势。所以，日常可以将 vLLM 作为默认选择；但如果涉及到 Agent 工作流，建议尝试转向 SGLang，或者在你对 vLLM 的表现不满意时进行替换。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: Yeah. So the video is also in the Drive, it's the same link as the slides. So a quick summary here. On a standard API workload throughput, you would see like vLLM and SGLang would be the same. So if you have like a standard workload, definitely go with vLLM, it's the production choice anyways. But what was also saying, when you try to make it like agentic workloads, that is where like your SGLang really shines, and it kind of provides you all the benefits. So yeah, keep vLLM as a default. But if you have agentic workloads, probably try to move towards SGLang, and if you're not happy with vLLM.</p>
+</details>
+<p><strong>Speaker 1</strong>: 好的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: But okay.</p>
+</details>
+<p><strong>Speaker 2</strong>: 另外，这里还有一份针对 120B 模型（GPT-OSS 120B）所做的性能对比。这是 Clarifai 团队准备的基准测试，幻灯片里附带了他们的博客链接。他们完成了类似的基准评测，并且把 TensorRT-LLM 也加入到了对比之中。大家完全可以去阅读这些基准测试报告，深入了解哪一款引擎最契合你自己的业务场景。正如我们之前提到的，TensorRT-LLM 侧重于硬件底层的深度优化，旨在榨干硬件极致性能。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: I'll let me okay. And then there is like a comparison that is done at the 120B like for the GPT-OSS 120B. This is a benchmark that was prepared by Clarifai. So there is like a blog link here. Okay, yeah. So they did the similar benchmark, and they included like TensorRT-LLM. Definitely, you can always go through these benchmarks and try to understand which basically suits your use case. As we mentioned, TensorRT-LLM tries to optimize the hardware side as well, having the peak hardware performance.</p>
+</details>
+<h3>推理引擎生态与端到端优化链路</h3>
+<p><strong>Speaker 2</strong>: 在选择具体引擎时，除了在 vLLM、SGLang 和 TensorRT-LLM 之间权衡之外，现在业界也涌现出了一些新兴引擎，比如 NVIDIA Dynamo（专为 Agent 会话设计与路由优化），而 Hugging Face 的方案也一直可用，属于简单的推理服务封装；此外还有斯坦福大学最近提出的 LMDeploy / mStart 类型的多模态引擎。大家在后续探索中都可以了解一下。</p>
+<p>总结一下整体流程：我们首先从基准模型出发，寻找最能满足业务需求的模型架构，例如你可以选择 DeepSeek（而不要去选 Mistral 7B 这种已经不够理想的模型）。选定模型后，为了降低显存占用并节省 GPU 算力成本，你需要尝试将大模型塞进更小的显存中，这就涉及到各种量化（Quantization）技术。接着，通过在底层选用合适的推理服务引擎，实施针对性的 Serving 优化，从而获得预期的系统吞吐量。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: Okay, yeah. And then in terms of when you want to pick your engines once you figure out between vLLM, SGLang, and TensorRT-LLM. There are some new engines that are popping up, NVIDIA Dynamo for short. They are also for the agentic session routing. Hugging Face is always there, it's a simple server. Then there is an engine that was recently proposed by Stanford, they are for multimodal. So definitely you could explore those.</p>
+<p>When you try to give a quick summary, we start with the baseline, try to find what model could fit our use cases. You could pick DeepSeek. You could pick—don't pick Mistral 7B, I mean it's not good, but yeah. You pick your model and you want to have a smaller memory, and you want to try to fit that bigger model into smaller memory so that you could save cost on the GPU costs. So you can do all those quantizations, then you can apply all those serving optimizations by using the right serving engine under the hood. So that can really provide you that throughput that you really want.</p>
+</details>
+<h3>进阶方向：KV Cache 管理与分布式推理</h3>
+<p><strong>Speaker 2</strong>: 回家之后大家可以继续深入阅读相关资料，因为工作坊时间有限，我们无法在现场涵盖所有内容。建议大家多去了解不同注意力机制（Attention Mechanisms）的底层原理、不同推理引擎的技术细节，并查阅网络上公开的各类基准测试。</p>
+<p>在接下来的进阶阶段，有许多深度课题值得学习，例如 KV Cache 的驱逐策略（KV Eviction Strategies）。当前大模型领域正在走向独立的 KV Cache 架构与工程体系，你需要掌握其中的最新进展：KV 缓存淘汰算法、KV Cache 压缩技术以及分层/混合内存架构等。目前围绕这些方向涌现了海量的解决方案，但核心还是要立足第一性原理，弄清楚每种技术方案到底解决了什么问题，以及你的实际业务场景是否真的需要引入这些解法。</p>
+<p>此外，分布式 LLM 推理（Distributed LLM Inference）是另一个完全不同的技术痛点。要彻底剖析其内部机制并完成所有动手实操，可能需要额外举办一个两小时的专题工作坊。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: Now something that you can do after going back home, because we cannot actually go over all the material here, is definitely reading about some of the source information, like different attention mechanisms, different engines, and try to just read the different benchmarks which are present online as well.</p>
+<p>And then there are a lot of in-depth guides for the next phases of it, which is like learning about some KV eviction strategies. The world is moving towards having a separate KV cache engineering domain, so you want to understand what's going on in there. So KV cache, KV eviction, cache compressions, hybrid memories. There are a lot of solutions that are happening around there. So always try to stick to those foundations and the first principles, and try to see which solution basically solves what problem and whether you actually need that problem to be solved for your use case.</p>
+<p>Then there is distributed LLM inference, which is a different pain point altogether. You would probably need like a two-hour workshop there as well to go over all the internals and do all the hands-on.</p>
+</details>
+<h3>研讨会总结与问答收尾</h3>
+<p><strong>Speaker 2</strong>: 这正是我们计划在纽约举办的下一期 AI 会议中深入探讨的内容，届时将带大家深度钻研 LLM 推理的高阶领域。本次工作坊更多是面向初阶与中阶水平的开发者。我们在表单中提供了反馈通道和意向登记，如果你觉得某些章节有待改进，请务必留下宝贵意见；如果你希望在纽约场次参加该进阶工作坊，也欢迎登记报名。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: Yeah. And this is something we are trying to propose for the AI session in New York, which is to dive deeper into the advanced sections of LLM inference. So this workshop was more for the beginner and the intermediate level. So in this form, we do have feedback as well plus also the interest. If you think we need certain improvements on certain sections, definitely give that feedback as well. And if you want to see this workshop in New York, definitely feel free to enroll your interest. Oh, how I should push it.</p>
+</details>
+<p><strong>Speaker 1</strong>: 让我来确认一下。嗯。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: But let me just check. Um.</p>
+</details>
+<p><strong>Speaker 2</strong>: 好的。链接有效对吧？二维码没问题吧？好的，可能刚才我忘了把这两个链接关联起来，重新定向一下就行。好的，没问题。如果大家能帮忙填写反馈就太好了，非常感谢。</p>
+<p>我们今天的 Workshop 就到这里收尾了。相信大家一定还有很多疑问，活动结束后我们可以线下继续交流讨论。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: Good. URL works, right? And not that QR code. Okay, probably I forgot to link those two together, redirect. Okay, good. Yes, if you can give that feedback, that will be fine. And yeah, I think we would like to wrap this workshop there. And I'm sure like a lot of you would be having a lot of questions. So we can take all those offline, we can meet and we can talk about those questions.</p>
+</details>
+<p><strong>Speaker 0</strong>: 是的，很多问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Questions, yeah.</p>
+</details>
+<p><strong>Speaker 2</strong>: 再次感谢大家的参与，这次交流非常有意义。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: Thanks everyone, thanks for joining. I think it was really meaningful.</p>
+</details>
+<p><strong>Speaker 0</strong>: 好的，谢谢大家！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Yeah, thanks.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/llm-inference/">llm-inference</a>
+      
+        <a class="tag-link" href="/tags/model-optimization/">model-optimization</a>
+      
+        <span class="tag-pill tag-pill--no-page">serving-architecture</span>
+      
+        <a class="tag-link" href="/tags/quantization/">quantization</a>
+      
+        <span class="tag-pill tag-pill--no-page">inference-engines</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

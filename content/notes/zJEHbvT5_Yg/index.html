@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xAI设计师的AI工作流：从Figma自动化到3D个人网站与生活助手</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="xAI设计师的AI工作流：从Figma自动化到3D个人网站与生活助手" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">xAI设计师的AI工作流：从Figma自动化到3D个人网站与生活助手</span>
+      <span data-pagefind-meta="speaker" style="display:none;">How I AI</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-14</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/how-i-ai/">How I AI</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=zJEHbvT5_Yg" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-14
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">xAI设计团队的John与Pong分享了他们如何深度利用Grok Bot重塑设计流程与日常生活。从利用截图和提示词让AI自动在Figma中生成营销素材与UI界面，到构建结合Google Places与3D微缩风格的自动化个人签到网站，再到托管购物、日历与医保账单等繁琐杂务，全面展示了AI如何让设计师摆脱重复劳动并专注于高阶创造力。</div></div>
+      
+    </div>
+    <h3>精彩预告与开场</h3>
+<p><strong>Claire Vo</strong>: 我用 <strong>AI</strong> 是为了让我能离开电脑，而不是被绑在电脑前。所以，当你人在健身房时收到工作需求，你完全可以随性地说：“好啊，交给我，搞定它，然后继续把你的健身做完。”这真是一种惬意得多的工作方式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: I use AI to get me off my computer, not on my computer. And so the fact that you were at the gym, got asked to do something, and your disability be like, &quot;Yep, go for it, get it done, and finish your workout.&quot; It's like a much nicer way to work.</p>
+</details>
+<p><strong>John</strong>: 我当时只要在 <strong>Figma</strong> 里把那两个正在进行中的不同画板截个图就行了。截图之后，我直接把它们指给 Bot 看，让它去干活。我甚至都没怎么细读大部分生成的内容。它输出了三个版本，我直接复制粘贴了 Ben 在 <strong>Slack</strong> 上发给我的需求，并回复说：“我觉得这些版本已经把需求全覆盖了。”就在我和你打这通电话的同时，工作就已经完成了，我真的很喜欢这一点。不用自己亲自动手做这些杂事，简直就像是天赐的福音。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: I was able to just screenshot in Figma these two separate artboards of work that was already in progress. And doing so, I just pointed to those, had the bot do his work. I didn't even read most of this stuff. It produced three outputs, copy pasted what Ben had sent me on Slack and said, &quot;Think we got all these covered.&quot; While I'm on this call, work is getting done, which I really love. I think the fact that I don't have to do this stuff myself is a godsend.</p>
+</details>
+<p><strong>Pong</strong>: 现在每当我去某个地方，我基本上只需要给 <strong>Grokbot</strong> 发一张照片、一张截图，或者干脆就只发地名，它就能搞明白那是什么地方。它会通过 <strong>Google Places API</strong> 去查询，帮我获取准确的地理位置和坐标。它还会校正画面透视，消除路人，并将其转换成我网站上使用的那种 <strong>3D微缩视觉风格</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Pong</strong>: Now, when I go somewhere, I can basically just send Grockbot a photo, a screenshot, or literally just the name of the place, and it'll figure out what the place is. It'll look it up through Google Play API and I get the right location and coordinates. It'll fix the perspective and remove people and turn it into like a 3D miniature visual style that I use on the site.</p>
+</details>
+<p><strong>Claire Vo</strong>: AI 有时可能会让人觉得是对创意艺术的威胁。但说实话，你职业生涯的最高追求绝不该是在 Figma 里调渐变填充。我常对大家说：欢迎回到《<strong>How I AI</strong>》。我是 <strong>Claire Vo</strong>，一名产品负责人兼 AI 狂热爱好者，我的使命就是帮助大家利用这些新工具更好地进行构建。</p>
+<p>今天，我邀请到了来自 <strong>xAI</strong> 的 Grokbot 设计团队的 <strong>John</strong> 和 <strong>Pong</strong>。他们将向我们展示两个非常酷炫的 AI 设计用例：第一，如何构建一个美观、定制且易于更新、完全符合设计师高标准的个人网站；第二，他们是如何用 Grokbot 来设计 Grokbot 自身的，包括如何在健身房用 <strong>Figma Bro</strong> 让工作和生活变得更加轻松自如。让我们马上开始吧！</p>
+<p>本期节目由 <strong>WorkOS</strong> 赞助播出。AI 已经彻底改变了我们的工作方式，各种工具正帮助团队编写更优质的代码、分析客户数据等等。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: AI can feel like a threat to the creative arts. Like look, your highest calling was never to design gradient fills in Figma. And what I tell people is welcome back to how I AI. I'm Claire Vo, product leader and AI obsessive here on a mission to help you build better with these new tools. Today I have John and Pong from the Grob Bot design team and they're going to show us two really awesome AI design use cases. One, how to build a beautiful custom and easy to update personal site that meets the bar of a designer. And two, how Grubbot was used to design Grubbot, including where Figma Pro can make your life at the gym and work a lot easier. Let's get to it. This episode is brought to you by WorkOS. AI has already changed how we work. Tools are helping teams write better code, analyze customer data,</p>
+</details>
+<p><strong>John</strong>: 很高兴来到这里，非常乐意和大家分享。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: Glad to be here. Happy to share.</p>
+</details>
+<p><strong>Pong</strong>: 感谢你的邀请。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Pong</strong>: Thanks for having us.</p>
+</details>
+<h3>Grokbot的火爆反响</h3>
+<p><strong>Claire Vo</strong>: 我可是个超级 Bot 迷。其实就在昨晚节目开录前我们还在聊，我们在 <strong>Andreessen Horowitz</strong> 举办了一场“使用 Grokbot 的女性之夜”活动，现场有 900 人报名，排队的人绕了整整一个街区。Grokbot 现在真是火得不行。看到有这么多人使用你们设计的成果，感觉如何？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: So, I am a big bot girl. Actually, we were just talking before the show last night. We did a ladies who Grockbot night at Andre and Horwitz. There were 900 registrants a line around the block. Grockbot is going crazy. What's it feel like having so many people use your designs?</p>
+</details>
+<p><strong>John</strong>: 真的非常令人兴奋。作为一名设计师，能参与到一个获得如此高关注度和高参与度的项目中，我认为是非常罕见的。我们每天都在学习，了解人们是如何使用它的，以及大家究竟用它来做些什么。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: It's really exciting. I mean, I feel like it's rare to have this amount of attention and this amount of engagement on something that a designer gets to work on. And I think um, we're learning day by day how people use it and what people use it for.</p>
+</details>
+<p><strong>Claire Vo</strong>: 大家可能不知道，在我们正式录制前，我们几个人一边刷着屏幕准备共享素材，一边忍不住连连惊呼：“噢，我们需要那个功能！我们需要这个功能！”你们正在把这些令人惊叹的功能带进现实，真的太棒了。Pong，不如先由你来打头阵，给我们展示一下你的个人网站流水线吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: People don't know this, but before we started recording, we were actually scrolling through and prepping screen shares. And as we were going, all of us were like, &quot;Oh, we need that feature. We need this feature.&quot; And it's just amazing that you guys are shipping it. Pong, why don't you kick us off and show us your personal site pipeline?</p>
+</details>
+<h3>3D个人网站流水线</h3>
+<p><strong>Pong</strong>: 好啊。这其实有一个挺个人的小故事。我经常吃中餐，有时候点外卖，米饭都会装在一个白色的纸盒里，上面印着红色的中文字样。所以我就想：“要是能把这个做成一个 3D 微缩模型，放在我的个人主页上当做标志性视觉，那该多酷啊。”</p>
+<p>于是我就拍了一张照片，发给 Grokbot。然后我就开始琢磨：如果我去了不同的餐馆、不同的地点，或者去爬了 <strong>Twin Peaks</strong>（双峰山），我能不能也把它们全都放上去？这样我就可以在个人网站上记录下我的足迹。</p>
+<p>所以每次我去到一个地方，我就拍一张照片发给 Grokbot，或者只发一个地名。Grokbot 就会调用 Google Places API 查出具体坐标，自动校正透视变形，把背景路人全部抹去，最后渲染成符合我网站风格的 3D 微缩视觉图，并直接提交代码更新到线上网站。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Pong</strong>: Yeah. So, I have this pretty personal story. Um, I eat a lot of Chinese food and then sometimes when you get a takeout, you know, the rice comes with this white paper box. So, it's a right red Chinese text. And I was like, &quot;Oh, it would be really cool if this is a 3D miniature version of it.&quot; And it's like a signature landing for my personal homepage. So, I took a photo, send it to Grockbot. And then I started to think like, &quot;Oh, what if I go to different restaurant and different places and what if I hike Twin Peaks?&quot; And then I can also put it on there. And so, I can kind of log my footprint on my personal site. So, each time when I go to a place, I just take a photo and send it to Grockbot or even just a name. Grockbot look up Google Play API, get the location, and then do some transformation, fix the perspective, remove the people, and then make it into 3D visual style and then update my website directly.</p>
+</details>
+<p><strong>Claire Vo</strong>: 我正想说那个看起来很像 Twin Peaks 呢！我当时就想：“那是双峰山吗？我猜对了吗？”看起来太棒了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: I was going to say that looks like Twin Peaks. I was like, is it is it Twin Peaks? Did I get it right? [laughter] It looks great.</p>
+</details>
+<p><strong>Pong</strong>: 没错，那是三天前的记录。所以现在我和朋友出去聚会时，我直接把那个地方的截图和朋友的社交账号发过去就行了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Pong</strong>: Yeah, that was three days ago. So now when I hang out with a friend, I can literally send a screenshot of the place and a screenshot on my friend's social handle and Grockbot automatically update the website.</p>
+</details>
+<p><strong>Pong</strong>: 比如我们现在在一个实体地点碰头，或者某个著名地标，你可以随便提一个地方。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Pong</strong>: meet in a physical place, maybe a famous land landmark or something, you can name a place.</p>
+</details>
+<p><strong>Claire Vo</strong>: 噢，那我报一个，因为我住在 <strong>Bernal Heights</strong>（伯纳尔高地）。你可以写我们在 Bernal Heights，或者叫 <strong>Bernal Heights Peak</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: Oh, I'll I'll name because I live in Bernal Heights. So, why don't you say we're at Bernal Heights? Um uh I guess just called Bernal Heights Peak.</p>
+</details>
+<p><strong>Pong</strong>: 好的，那里有什么标志性建筑或者特定地标吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Pong</strong>: Yeah, there like a specific building or like a landmark.</p>
+</details>
+<p><strong>Claire Vo</strong>: 差不多就像双峰山那样，它是旧金山的另一座山丘。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: Yeah, that's that's it's kind of like Twin Peaks. It's just a different it's another hill in San Francisco. Okay, since we are not there, but we can</p>
+</details>
+<p><strong>Claire Vo</strong>: 噢，秋千！那里有一个非常有名的“秘密秋千”。你看到图片了吗？对，就是那个！总有人偷偷把它挂上去，市政部门拆掉后又会有人重新装上。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: Oh, at the swing. There is a uh there's a clandestine swing. You see it right here? Yep, that's it. Um that somebody keeps putting up and the city keeps tearing it down and people keep putting back up.</p>
+</details>
+<p><strong>Pong</strong>: 好，我们看看能不能成功。我把你的社交账号和 John 的社交账号都加进去。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Pong</strong>: Okay, let's see if it works. And I'll put your social handle and John's social handle there.</p>
+</details>
+<h3>设计师视角的个人网站构建</h3>
+<p><strong>Claire Vo</strong>: 我太喜欢这个流水线了。在你等待页面加载的时候，我想退一步聊聊。我认为对 AI 来说最难做好的事情之一就是搭建个人网站。因为个人网站往往承载了太多个人风格和独特的品味要求，尤其是设计师的个人主页，标准往往极其严苛。</p>
+<p>以前大家必须自己去写 CSS、调动画、处理响应式布局，现在你却能完全用 Bot 搭建起一套既符合设计师审美、又能全自动更新的完整闭环，这太不可思议了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: I love this pipeline. I have to take a step back while you're getting this to load. So I I think the hardest thing for AI to do is build a personal site. Because personal sites are so unique and expressive and people have very specific tastes, especially designers. The bar is extremely high. In the past you had to write all the CSS yourself, tweak animations, handle responsiveness. Now you've built an end-to-end automated pipeline with a bot that completely meets a designer's aesthetic bar.</p>
+</details>
+<p><strong>Pong</strong>: 是的，背后的流水线逻辑完全是由 Grokbot 摸索搞定的。它会分别生成亮色模式和暗色模式的两套图片，因为当网站切换主题时，两者的色调必须保持一致。所有的风格规则和视觉约束都已经内嵌在了提示词中。我觉得对我来说最有趣的地方在于，这里面其实没有用任何极其高深复杂的技术，核心就是把图像识别、坐标检索、图片微缩化渲染和代码部署串联了起来。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Pong</strong>: Yeah, so the pipeline behind it is like figured out by Grogbot. It would generate two images when light went dark because when I like when a theme turns,</p>
+</details>
+<p><strong>Pong</strong>: 而且这两套图必须保持严格的一致性，这些都被固化在了提示词里。我觉得最有意思的是，这里面并没有什么神乎其神的技术，纯粹是将不同的能力组合在了一起。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Pong</strong>: and then they have to be consistent. And then this was baked in the prompt. And I think it's interesting part for me is none of this is actually fancy.</p>
+</details>
+<h3>从签到应用到自主表达</h3>
+<p><strong>Claire Vo</strong>: 我真的很喜欢这个点子。我给你们分享一个非常狂野的想法：我们最近的播客请到了 <strong>Maddie Reese</strong>，我们聊到以前大家用 <strong>Foursquare</strong> 和 <strong>Swarm</strong> 进行签到，后来那些产品逐渐式微了。但现在借由 AI，每个人都能随心所欲地打造属于自己的专属签到系统。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: I really love this what um I'll give you kind of a really chaos reigns idea which is we had this woman Maddie Reese on um our um podcast recently and we talked about check-in apps like Foursquare and Swarm.</p>
+</details>
+<p><strong>John</strong>: 兜兜转转，你们这是要做出下一代签到应用了啊。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: You're going to come full circle and make the next check-in app.</p>
+</details>
+<p><strong>Claire Vo</strong>: 没错！我和我丈夫在一起很久了，我们一起创办过很多业务。大约 20 年前我们就做过类似的东西。现在的技术让每个人都能重新定义这种体验。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: You are. We are. I I have a very funny my my husband and I have been together for a long time. We've started a lot of businesses and probably 20 years ago we did something similar.</p>
+</details>
+<p><strong>Claire Vo</strong>: Pong，如果你能把这个和 Swarm 对接上，我绝对会第一时间接入进去。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: Well, Pong, if you can get this connected to Swarm, I'm definitely going to plug into this as well.</p>
+</details>
+<p><strong>John</strong>: 我现在可依然是 Swarm 的骨灰级老用户呢。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: I'm still I'm still an OG user of Swarm.</p>
+</details>
+<p><strong>Pong</strong>: 是的，我也用了很久。我确实看到了一个大趋势：人们正在变得越来越具有表现力，也越来越拥有自主权。他们可以根据自己的喜好搭建极其个性化的工具，而不必受限于现成商业软件的条条框框。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Pong</strong>: Yeah, I've been using it for a long time. I I do see it as a trend that people become more expressive and become more autonomous and they can set up their own personalized workflows rather than being boxed in by off-the-shelf software.</p>
+</details>
+<p><strong>John</strong>: 我觉得很多人正在发现，AI 解锁了许多他们曾经以为遥不可及的技能树。无论是写前端代码、做后端 API 对接，还是自动化脚本，过去这些技能需要跨越很高的工程门槛。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: I think many people are discovering that it unlocks a lot of the skill sets that you once thought were inaccessible. I think both of us from my experience, whether it's frontend code, backend APIs, or scripting,</p>
+</details>
+<p><strong>John</strong>: 现在只要通过精准的提示词工程，这一切都变成了可能。Pong，除了你展示的这个，你觉得还有哪些更深远的影响？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: with prompting it becomes possible. P I'm not sure about you if if there's anything beyond</p>
+</details>
+<p><strong>Pong</strong>: 我觉得最大的机遇在于：创造事物的边际成本变得极其低廉。在过去，如果我们要为个人网站设计这样一套 3D 渲染和自动化部署流程，无论是时间成本还是技术门槛都高得吓人。但现在，创意的实现几乎是瞬间完成的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Pong</strong>: what you're showing. I I think the opportunity is like the cost of making things become so low that we can imagine something that cost a lot more in the past now being built effortlessly.</p>
+</details>
+<p><strong>Pong</strong>: 瞧，已经搞定了！代码和图片现在已经自动发布到网站上了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Pong</strong>: Yeah, it's done. And I think it's published to the website now.</p>
+</details>
+<p><strong>Claire Vo</strong>: 太可爱了！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: Very cute.</p>
+</details>
+<p><strong>Pong</strong>: 而且它还准确地捕捉到了那个秘密秋千的元素。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Pong</strong>: We have this also capture the swing.</p>
+</details>
+<p><strong>Claire Vo</strong>: 太棒了！如果你想在夜晚来个真正的彩蛋，可以设计成白天秋千挂在树上，晚上显示那个神秘人悄悄把秋千绑上去。</p>
+<p>接下来，John，我们来聊聊“用 Grokbot 设计 Grokbot”吧！你们在日常设计工作中到底是怎么运用它的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: I love it. If you want a real Easter egg at night, you know, we have the secret guy putting up the swing and during the day the swing is there. John, let's talk about Grokbot designing Grokbot. How do you guys actually use it day-to-day in your design work?</p>
+</details>
+<h3>Figma Bro与设计工作流自动化</h3>
+<p><strong>John</strong>: 很乐意聊这个。有些人可能读过我之前写的一篇文章，介绍了我是如何借助 AI 进行设计的。我创建了一个专门的 Bot 叫做 <strong>Figma Bro</strong>。</p>
+<p>它的核心逻辑就是充当我的“设计搭子”（Design Spotter）。在日常工作中，设计师经常需要面对大量的画板、变体、营销图适配以及重复性的布局调整。我把 Figma Bro 和我的 Figma 工作区连接起来，让它理解当前的画板结构和设计规范。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: Yeah, happy to talk about that. I think for me, uh, some folks have already read an article that I wrote that was how I design using Grokbot. I created a dedicated bot called Figma Bro. The main concept is having a design spotter. Designers often deal with tons of artboards, variants, marketing adaptations, and repetitive layout work. I hooked Figma Bro up to my Figma workspace so it understands artboard structures and design tokens.</p>
+</details>
+<p><strong>Claire Vo</strong>: 你能给那些完全不清楚这背后魔法原理的观众详细讲讲，这到底是怎么和 Figma 串联起来的吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: Can you just walk us through exactly how this is hooked up to Figma for folks that kind of just don't even know how this magic happens?</p>
+</details>
+<p><strong>John</strong>: 当然。其实这得益于 Figma 开放的 API 以及各种插件生态。Bot 可以直接读取当前选中的画板信息、图层树和属性，也可以生成新的组件或直接修改节点内容。同时配合视觉模型的理解能力，我只要截取一张画板图片抛给它，它就能理解排版意图并开始干活。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: Yeah. So it uses Figma's APIs and plugin ecosystem. The bot can read selected artboards, layer hierarchies, properties, and manipulate nodes. Combined with vision models, I can just throw a screenshot at it and it immediately grasps the layout intent and executes.</p>
+</details>
+<p><strong>Claire Vo</strong>: 太赞了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: Awesome.</p>
+</details>
+<p><strong>John</strong>: 就在今天早些时候，大概两点左右，也就是一个小时前，有人在 Slack 上让我为我们的产品更新制作一些营销推广素材。我当时正在健身房，我直接在手机上把两个正在设计的 Figma 画板截了图，发给 Figma Bro，附带上 Slack 里的文案要求。</p>
+<p>它一口气输出了三个极具水准的设计方案，甚至把排版和文案对齐都做好了。我直接把产出转发给同事，回复说：“搞定了。”整个过程中我连电脑都没开。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: And this was just earlier today. Right now it's around two. Uh, this was an hour ago where I was asked to uh create some marketing material for our upcoming release. I was at the gym, screenshotted two Figma artboards on my phone, sent them to Figma Bro with the Slack prompt. It generated three polished design variants with copy alignment done. I sent it back saying 'Covered', all without opening my laptop.</p>
+</details>
+<p><strong>Claire Vo</strong>: 看看，这不就是我常说的理念吗！顺便提一句，我看到了屏幕里的 <strong>Tradbot</strong>——那是我个人的专属交易与日常助手 Bot，真的彻底改变了我的生活。</p>
+<p>这种工作方式之所以美妙，是因为它把设计师从纯体力活中解救了出来。以前遇到这种突发需求，设计师必须中断当下的事情，跑回工位打开电脑，在 Figma 里拉参考线、调文字间距、导出切图，耗费大半个小时。现在几秒钟的交互就完成了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: And I have to say, look, Trad spotted right there. Claire's personal bot. Very popular one that has really changed my life. I love this because it frees designers from grunt work. Previously, you'd have to leave the gym, rush to your laptop, open Figma, nudge pixels, align text, and export assets for 30 minutes. Now it's a few seconds of mobile interaction.</p>
+</details>
+<h3>Devbot与全栈探索</h3>
+<p><strong>John</strong>: 没错。说到随时随地的移动办公，我想重点介绍的另一个 Bot 是 <strong>Devbot</strong>（或者是实验助手 Bot，这两个我经常混着用）。</p>
+<p>作为设计师，以前如果我们想验证一个交互动效、一个复杂状态机，或者一个带真实数据的原型，我们必须先画出静态高保真原型，然后求工程师排期帮我们写 demo，或者自己硬着头皮去配本地开发环境。现在我随时可以在手机上告诉 Devbot：“帮我用 <strong>React</strong> 和 <strong>Tailwind</strong> 写一个这个组件的可交互原型，把状态逻辑跑通。”几秒钟内它就能跑起一个实时预览沙盒。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: Yeah. And speaking of on the- go, um the other bot that I want to highlight is uh Devbot or experiments. Both of them I kind of use interchangeably. As a designer, if you wanted to prototype an interactive animation, a state machine, or a real-data prototype, you had to draw mockups and beg engineers for bandwidth, or struggle to set up local environments. Now I can just prompt Devbot on my phone to scaffold a React + Tailwind prototype with working states, and get an instant live sandbox.</p>
+</details>
+<p><strong>Claire Vo</strong>: 我在科技行业待了这么多年，在过去，哪怕是最优秀的设计师，把原型丢给开发团队后，也经常会听到工程师说：“这做不了，排期不够，成本太高。”</p>
+<p>现在设计师可以直接拿着运行良好的代码原型走到工程师面前说：“我已经把交互和边界条件验证过了，代码结构在这里，咱们基于这个来做。”这彻底改变了产品开发的协作范式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: One one thing that you know again I've been in tech a million years and so in the past I am telling you some delightful amazing designer would hand mockups to engineers only to hear 'Too expensive, no bandwidth.' Now designers walk up with runnable code prototypes and say 'I already proved out the interaction and edge cases, here is the working reference.' It completely shifts product development.</p>
+</details>
+<p><strong>Claire Vo</strong>: 这让整个软件开发和产品迭代流程变得更加广阔和自由，因为你不再受限于沟通中的信息损耗。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: And I think it allows you to be a lot more expansive about what the process of product development software development looks like because you're not constrained by the friction of handoffs.</p>
+</details>
+<p><strong>John</strong>: 完全同意。而且我认为这让做设计变得有趣多了。老实说，以前设计流程中有太多令人沮丧的限制和繁琐环节，现在那些束缚都被打破了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: Totally agree. And I think that makes it more fun to be a designer. Again, honestly, um a lot of the previous constraints, the parts of the design process that were frustrating, are now removed.</p>
+</details>
+<h3>生活管理与多Bot矩阵</h3>
+<p><strong>Claire Vo</strong>: 太神了！帮大家总结一下：Figma Bro 是你的“设计随身教练”，让你在健身房挥汗如雨时也能轻松交差；Devbot 则是你的全栈原型加速器。</p>
+<p>Pong，除了个人网站，你还把哪些生活和工作事务委托给了你的 Bot 矩阵？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: Amazing. Well, I love it. Just to recap for folks, uh, Figma bro your, um, design spotter while you're at the gym getting getting the reps in, and Devbot as your prototype accelerator. Pong, what other life and work bots do you run?</p>
+</details>
+<p><strong>Pong</strong>: 我数字化生活中的很大一部分，现在都已经委派给了各种不同类型的 Grok Bot。大体上我把它们归为两大类：<strong>生活（Life）</strong> 与 <strong>工作（Work）</strong>。</p>
+<p>在生活方面，我有专门负责购物的 Bot、日程管理的 Bot，以及自动化处理杂务的 Bot。比如购物，它不仅能帮我全网搜索比价、找到最合适的商品，还能自动完成下单。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Pong</strong>: A lot of my digital life has been delegated to all different types of Grog bots. In general, I organize them in two buckets, life and work. On the life side, I have shopping bots, calendar bots, and admin task bots. For shopping, it doesn't just search and compare prices, it can actually execute purchases.</p>
+</details>
+<p><strong>Pong</strong>: <em>(清了清嗓子)</em></p>
+<details>
+<summary>Original English</summary>
+<p><strong>Pong</strong>: [clears throat]</p>
+</details>
+<p><strong>Pong</strong>: 更厉害的是，你可以把不同的任务链条串联起来。比如一旦我需要买 3D 打印耗材，它帮我下单完成后，会自动把订单信息和预计送达时间同步更新到我的个人日历和待办清单中。</p>
+<p>我甚至不需要打开购物 App 去刷评论、比型号，也不用担心被各种关联推荐分散注意力。我只要对 Bot 说一句话，整个流程就从头到尾自动走完了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Pong</strong>: um not only it can help you search, find and buy the item, you can actually train different task together like once you are done update the calendar. For instance, buying 3D printing filament: it buys it and logs delivery to my calendar without me ever opening apps or getting distracted by reviews and recommendations.</p>
+</details>
+<p><strong>Claire Vo</strong>: 太爽了！看起来你把所有的“生活行政琐事”全都外包出去了。不管是采购物资，还是查看各种状态追踪。我尤其喜欢那种“我再也不想看繁冗邮件，再也不想天天盯着日历表，我只想让 Bot 直接告诉我几点去哪”的感觉。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: I love it so it seems like you have just kind of like all the admin all the life admin you need to do whether it's shopping whether it's you know checking in on different status regular check-ins and then I love the idea of like I don't want an email anymore and I don't want a calendar anymore more. I want a bot to show me where tell me where to show up and that's it.</p>
+</details>
+<p><strong>Claire Vo</strong>: 对于正在观看节目的朋友们，核心原则就是：<strong>以最简单无阻的方式把任务推过终点线</strong>。你想买东西，不需要经历打开 App、选规格、看评论、比价格这一整套心智负担，直接让 Bot 搞定。</p>
+<p>John，你有没有什么比较特别、大家平时不太容易想到的冷门 Bot 用例？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: And so, you know, just just for folks watching this, again, it's like make it as easy as possible to take the task you're doing to the finish line, right? Without distraction. John, do you have any that are different than this? like one or two that you think folks aren't thinking of or that are a little different?</p>
+</details>
+<h3>日语学习与医疗保险助手</h3>
+<p><strong>John</strong>: 我确实有几个比较特别的用例。其中一个是我几天前刚刚启动的：我一直在学日语。日语的复杂之处在于它同时有平假名（Hiragana）、片假名（Katakana）和汉字（Kanji），读法非常多样。</p>
+<p>我最近建了一个<strong>日语练习 Bot</strong>。我让它在和我日常对话时，同时提供三种形式的输出：汉字文本、下方的假名注音以及最后的英文释义。这样我在和它随意聊天时，就能不知不觉地提升汉字认读能力。之前我还在让它帮我找一本特定的日文书并尝试翻译，后来那本书直接出了译本我就买了下来。</p>
+<p>另一个非常实用的用例，可能大家都有共鸣——就是极其复杂的<strong>美国医疗保险系统</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: I do have some that are a little bit particular and one is just I just started a few days ago. Um I've been learning Japanese and the thing about Japanese as a language is there's there's hiragana, there's katakana and there's kanji and so there's different ways of reading one language. I created a Japanese practice bot that gives me Kanji, pronunciation guide underneath, and English explanation. Another very particular one is navigating the American insurance system.</p>
+</details>
+<p><strong>John</strong>: 我把我的具体保险计划条款（Insurance Plan）和理赔范围喂给了这个 Bot。现在我只要拍一张医疗收据、挂号单或医生账单的照片发给它，它就会帮我核对每一项收费，确保我享受到了最大程度的报销优惠，保障我的每一分钱都花在刀刃上。</p>
+<p>虽然有时账单本身没有问题，但只要把它发给 Bot 审查一遍，我就能感到由衷的心安。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: take any photo of a receipt or you know any sort of um doctor statement uh and just ensure that I'm getting the most bang for my buck. Um, and this one I, you know, half the time it doesn't even uh there there's nothing additional that I can get out of it, but it just gives me peace of mind knowing that I can send anything to it and and um know that I'm getting my money's worth.</p>
+</details>
+<p><strong>Claire Vo</strong>: 明白，我想帮大家梳理一下这个医保 Bot 的配置逻辑：你告诉它：“这是我的医保计划详情与承保范围。每当我需要开处方药、寻找家庭医生或看专科门诊时，请参考该计划帮我做最优决策。”每当收到账单或收据时，再让它核算：“我是否需要发起申诉复核？我是否拿到了最大力度的报销减免？”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: Yeah. I want to give people I'm guessing kind of how this is set up, which is you're like, &quot;This is my plan. Here's my coverage. Um, anytime I'm going to get a prescription or look for a provider or go to a specialist, like reference my plan and make sure that I'm making the best decisions.&quot; Is that kind of the high level what it does? And in addition, anytime there's an invoice or a receipt, I say, &quot;Do I need to do another followup or um you know, am I getting the maximum savings?&quot;</p>
+</details>
+<p><strong>Claire Vo</strong>: 我太喜欢这个点了！作为一个自己解决医保的自雇人士，这绝对是我节目结束后立刻就要去搭建的 Bot。</p>
+<p>好，最后一个快问快答环节。你们拥有这么多性格各异、名字独特的 Bot，当这些 Bot 偶尔犯蠢、不按常理出牌时，你们平时是怎么提示（Prompt）它们的？你们会对着它们大吼大叫吗？有没有什么让 Bot 快速重回正轨的秘诀？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: I love this so much. As a self-employed person who finances her own healthcare, um this is going to be one that I go set up right out the gate. Okay, last writing question. We're almost at the end of our time. I must ask because you have so many bots and they all have these personalities and names. When the bots are being silly, when they're not doing what you want, how do you prompt? Are you all yellers? Is there some trick to getting your bots back on track?</p>
+</details>
+<h3>调教Bot的心得与技巧</h3>
+<p><strong>John</strong>: 在 xAI / SpaceX AI 工作有一点很特别：当系统遇到问题需要排查时，同事往往会向你索要该次对话的 <strong>Session ID</strong>。我可不想让全公司的同事看到我在对话框里歇斯底里地训斥 Bot 的样子！所以随着时间的推移，我对 Bot 说话变得越来越温和礼貌了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: Here's the thing about working at SpaceX AI is often times when you need to troubleshoot, they ask for your session ID. [laughter] And I don't want my co-workers seeing how I talk to my bot. And so, I've gotten nicer over time. I'll say</p>
+</details>
+<p><strong>Pong</strong>: 我有时候回复确实会带不少情绪，但我觉得一个非常实用的技巧是：每次当它犯错或你纠正它之后，<strong>直接让 Bot 将这次纠错沉淀并记住</strong>。</p>
+<p>你可以对它说：“记住这个规则，以后如果再遇到类似情况，直接按照刚才纠正后的逻辑和脚本执行。”这样它就能实现自我提炼与持续迭代。你使用它的时间越长，它就会变得越来越聪明，越来越贴合你的个人习惯。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Pong</strong>: I reply with a lot of emotion sometimes but I think a useful tips is every time um you can ask the bot to memorize this so in the future if this happen again then just follow the script you learned last last time um so kind of distill and then iterate it itself um and then the longer you use it the better it become and more adapts to your needs</p>
+</details>
+<h3>结语与社交关注</h3>
+<p><strong>Claire Vo</strong>: 太棒的建议了！第一，永远记住可能有人会读你的调试日志；第二，让你的 Bot 具备记忆能力，从源头上避免重复犯错。</p>
+<p>你们今天的分享实在太慷慨了，给了我无穷的灵感。今天下午我就要去把我的个人主页全面重构升级一番！除了在 X 平台上看着你们的 Bot 引爆全网，大家还可以在哪里关注你们？我们又能为你们提供什么支持？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: I love that great great tips both one remember who's reading your transcripts and two Just ask your bot to remember how to avoid the problem in the first place. You all, you've been so generous with showing this. You've given me so many ideas. I'm going to go back. You're going to get a brand new clairvo.com by the end of the afternoon. Where can we find you and how can we be helpful?</p>
+</details>
+<p><strong>John</strong>: 我算是个重度网瘾少年。大家可以在 X 上找到我，账号是 <strong>@johnb</strong>，就是我的名字。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: I'm chronically online. Uh, you can find me at johnby, which is just my name.</p>
+</details>
+<p><strong>Pong</strong>: 我也一样，都在 <strong>X</strong> 上。能在这个平台上公开发帖、和大家探讨 Grokbot 的设计与演进，感觉非常棒。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Pong</strong>: Yeah, the same for me. I'm on X. Um, and it's lovely to being able to um post and talk about design of the grap out there.</p>
+</details>
+<p><strong>Claire Vo</strong>: 太棒了！各位观众快去上手体验吧！Grokbot 真的很出色，甚至已经遗憾地取代了我心爱的 OpenClaw。非常感谢两位今天做客《How I AI》！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: Awesome. Well, and y'all go out and try it. Um, love truly it's been really awesome and regretfully has replaced my beloved Open Claus. So, I think it's it's worth a spin. Both of you, thank you so much for joining How I AI.</p>
+</details>
+<p><strong>John &amp; Pong</strong>: 谢谢你，非常感谢你的邀请！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John &amp; Pong</strong>: Thank you. Thank you for having us.</p>
+</details>
+<p><strong>Claire Vo</strong>: 非常感谢大家的收看！如果你喜欢本期节目，请在 YouTube 上点赞并订阅，更欢迎在评论区留下你的思考与心得。你也可以在 Apple Podcasts、Spotify 或各大播客平台上收听我们的节目。欢迎给我们留下评分和好评，这能帮助更多人发现我们。欢迎访问 <strong>howiaipod.com</strong> 查看所有往期节目及更多详情。我们下期再见！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Claire Vo</strong>: Thanks so much for watching. If you enjoyed this show, please like and subscribe here on YouTube, or even better, leave us a comment with your thoughts. You can also find this podcast on Apple Podcasts, Spotify, or your favorite podcast app. Please consider leaving us a rating and review, which will help others find the show. You can see all our episodes and learn more about the show at howiipod.com. See you next time.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Claire Vo" class="entity-link person-link">Claire Vo</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=xAI" class="entity-link company-link">xAI</a>, <a href="/search/?q=Figma" class="entity-link company-link">Figma</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Grok" class="entity-link product-link">Grok</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">ai-assisted-design</span>
+      
+        <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+      
+        <span class="tag-pill tag-pill--no-page">design-automation</span>
+      
+        <a class="tag-link" href="/tags/personal-ai/">personal-ai</a>
+      
+        <a class="tag-link" href="/tags/prompt-engineering/">prompt-engineering</a>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

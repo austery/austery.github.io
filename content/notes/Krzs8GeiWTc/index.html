@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>用 Python 构建生成式 UI：Prefab 与 FastMCP 的交互式应用实践</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="用 Python 构建生成式 UI：Prefab 与 FastMCP 的交互式应用实践" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">用 Python 构建生成式 UI：Prefab 与 FastMCP 的交互式应用实践</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-10</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/pai/">PAI</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-tooling/">ai-tooling</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=Krzs8GeiWTc" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-10
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">Prefect 创始人 Jeremiah Lowin 介绍了专为 Python 工程师设计的 UI 构建框架 Prefab。该框架通过上下文管理器和轻量级 Python DSL 声明界面组件，并序列化为 JSON 供前端渲染，完美解决了 FastMCP 与 MCP Apps 场景下直接为用户提供交互式 UI、表单数据收集及低开销文件上传的需求，大幅降低了生成式界面的 Token 消耗与构建门槛。</div></div>
+      
+    </div>
+    <h3>MCP Apps 机制：绕过 Agent 上下文的交互式界面</h3>
+<p>在传统的 <strong>模型上下文协议</strong>（MCP: Model Context Protocol，连接 AI 模型与外部数据工具的开放通信协议）中，请求-响应模型始终是闭环的：用户向 Agent 提出请求，Agent 调用 MCP 服务器上的工具，工具的执行结果返回给 Agent 的上下文窗口，最后由 Agent 整理出文本回答返回给用户。这种架构虽然为 Agent 提供了强大的业务逻辑支持，但始终缺乏用户与 MCP 服务器之间的直接交互通道，所有数据流都必须经过 Agent 的“大脑”与上下文窗口。</p>
+<p>为了突破这一瓶颈，<strong>MCP Apps</strong> 协议扩展应运而生。它允许工具调用的结果直接以 HTML、CSS 和 JavaScript 组成的全功能前端 UI 形式呈现给用户，从而绕过 Agent 的上下文。用户不仅能直接在界面中完成餐馆订位、航班选座或查看日程等操作，还能直接与 MCP 应用的后端进行数据通信。此外，协议未来的扩展还将支持 Agent 与应用界面进行双向互动（例如在可视化棋盘上人机对弈），为智能体交互开拓全新的应用形态。</p>
+<details>
+<summary>Original English</summary>
+<p>Good. Um, thank you all for coming out. Um, I'm going to talk today about one of the weirdest pieces of software I've ever written. It's sort of on the edge of a whole lot of stuff I've been putting forward into the world. Um, so join me if you will. We're going to try and have the most reasoned approach to a very strange thing that agents and MCP and other things have enabled.</p>
+<p>And so to begin, I want to talk about MCP apps. I don't know if any of you were able to join any of the other talks earlier today. Maybe the one that Edo and Lead just gave maybe an hour ago. Just a show of hands: MCP apps familiarity. Okay, this is probably the best crowd I've ever given this talk to actually. So that's fantastic.</p>
+<p>For those that didn't put their hands up, MCP apps is an extension of the MCP protocol that was introduced I think in January of this year. And the idea is: this is a typical request-response cycle for an MCP tool. The user makes a request to the agent. The agent in turn decides to use an MCP tool that's hosted on an MCP server. A tool result comes back into the agent's context and the agent chooses to form some response and send it out to the user. And so fundamentally MCP servers are these fantastic ways of adding functions and business logic to your agents, but never a direct connection between a user and the MCP server. It always goes through the brain of the agent and more importantly through the context window of the agent.</p>
+<p>So MCP apps are an extension of this which allow us actually to bypass the agent. And instead what happens is the following: The user requests something from the agent. The agent uses a tool, but instead of that tool request going back to the agent, it is sent out to the user and it's sent out as HTML, CSS, JavaScript. It's a full UI and it can be whatever you want it to be. And so the idea is you have this way to basically put the internet into your agent, so to speak. You can ship any custom branded useful UI that you want. You can let the user have any interactive experience that they want.</p>
+<p>And then the user, as you can see in the diagram, the user now can interact with the application. They can use the tools, they can send information back into a backend host on that app, and really get a full experience. You can imagine booking a table at a restaurant or changing your seat on a plane or interacting with a schedule for AI engineer. There's a lot of things that you can do as a user now where the agent facilitated it, but you are going to interact as a human.</p>
+<p>And there's an extension coming now. This is going to come out in the July MCP release where the agent can actually interact with the app as well. And this will tee up some really interesting use cases we're not going to talk about today, but you could hypothetically play a game of chess against the agent now in a visual app where you make a move and then the agent interacts with the app as well. And so I think that's going to open up a whole new world of possibilities.</p>
+</details>
+<h3>面向 Python 工程师的约束化 UI 框架：Prefab 的设计哲学</h3>
+<p>作为主流 MCP 服务构建框架 <strong>FastMCP</strong> 的维护者，团队面临的一个现实挑战是：绝大多数 FastMCP 用户是深耕企业后端与数据领域的 <strong>Python 工程师</strong>。如果在 Python 生态中强行拼凑一套庞杂的 React 前端开发链条，只会制造出妥协且混乱的“科学怪人”式架构。深入审视企业内部的核心诉求后可以发现，这些开发者需要的并不是高度定制、消费级品牌感的前端页面，而是在组织内部共享图表、收集表单数据、展示结构化表格的高效界面。</p>
+<p>基于这种场景约束，开源框架 <strong>Prefab</strong> 诞生了。Prefab 并不试图让开发者从零手写前端，而是通过一套基于 Python 上下文管理器（Context Manager: 用于资源管理与作用域控制的 Python 语法结构）的 <strong>领域特定语言</strong>（DSL: 针对特定应用领域设计的专用编程语言），让工程师利用预设的高质量组件快速组合界面。正如 FastMCP 的核心突破是用装饰器定义 MCP 服务，Prefab 的核心创新则是通过嵌套上下文管理器声明式地构建出整洁、直观的 UI 层级结构，并原生支持与 <strong>shadcn/ui</strong> 组件库相媲美的渲染表现以及响应式变量数据绑定。</p>
+<details>
+<summary>Original English</summary>
+<p>Now, some of you may know a framework that I'm the author of and my company maintains called FastMCP. FastMCP is one of the most popular ways of building MCP servers. And so whenever new cool things come to the world of MCP, the first thing I wonder is: how can I deliver this to our users? And one of the most important things I have to share with you about our user base is that they're mostly Python engineers.</p>
+<p>And so this is a little bit of a problem when we want to deliver frontends and UIs, because how are we actually going to do that? And this is the point in the talk where I reveal that I don't remember what the next slide exactly is. So we're going to take a peek at it. Nope, we're going to come back.</p>
+<p>We have a challenge now: how are we going to have Python engineers build UIs that are best practice, that are interactive, that are beautiful, that are useful, without pretending that we're going to do something silly—something that's been tried, and jam all of the front end, all of the ecosystem, everything into Python in some sort of like weird compromised haphazard Frankenstein of a system.</p>
+<p>And so I really struggled with this. I feel an obligation to find a way to deliver this, but I can't pretend we're going to ship React and Python. It's not going to work. And so we thought pretty hard about who are our users in the FastMCP ecosystem. Who are these Python developers who tend to be in enterprises? What are they doing and what do they need these UIs for? What do they need these MCP apps for?</p>
+<p>What they don't need is consumer-grade custom UIs that are fully branded. That's not what these folks are doing. What they are primarily charged with is sharing information throughout their organization, or collecting information throughout their organization. And so it changed the nature of what we expect them to do within the MCP apps framework, and that constraint became really useful. So fundamentally we expect that they're going to do things like build tables, collect information through forms, and share charts.</p>
+<p>And so fundamentally with this constraint, we can introduce a piece of software that we open sourced a few months ago and has been surprisingly popular among this crowd called Prefab. And it's a scoped UI building framework for the purpose of delivering UIs through an agent for the set of purposes that I mentioned a moment ago.</p>
+<p>So this is a hello world card. You might see this in any front-end framework, literally anyone. It'll have something that looks like this and it's on their website, and you type your name in and it updates live. But of course, the weird thing about this one is that the code that generated it is entirely written in Python. And so I hope that you're feeling what I feel when I look at this, which is a really weird combination of like: yes, that's cool, and this really freaks me out.</p>
+<p>The &quot;yes, that's cool&quot; comes from the fact that I think there's something about this code, even if you can't see it up close—I can make it a little bigger—there's something about this that kind of makes sense. You can see the structure of the UI in the code, but there's also something about it that's obviously alien and a little bit odd. And we come to this conclusion when you feel that when you look at it, which is that when you compose a front end in Python, it actually starts to feel good as long as we scope the challenge right. We are not trying to build a front end from scratch. We are trying to compose a front end from a bunch of world-class well-designed components. And that's how we keep the guardrails and that's how we keep the user in mind. The user here is not trying to do something arbitrary. They're trying to take a well-structured front end and put it in front of whomever they're delivering it to.</p>
+<p>And so here's a little quick tour of that DSL. Primarily we're using context managers. For those of you who do know FastMCP, you know that arguably you could reduce FastMCP down and say the core innovation of FastMCP is that we used a Python decorator to build an entire MCP server. So if you want to take the same reductive approach to Prefab, you could say we use a context manager to build an entire UI. And by nesting components as context managers as you see here, we are building up the exact same structure in the UI. It feels very natural when you read it. You can see how things are structured.</p>
+<p>Each element of the UI, each component, which is a beautiful shadcn component when it's rendered, as you can see here, is a class that you instantiate. You can parameterize it, you can pass it stuff like CSS classes and make it look however you want. And then the last thing, which we're not going to have enough time to really explore today, is these reactive variables. I'll show you a demo of those in a moment, but essentially we have a full way to create client-side interactivity and bind data between components that allows you to build these really rich experiences, again without having to go fully into the JavaScript world and leave an ecosystem that my user base at least is extremely comfortable with.</p>
+</details>
+<h3>序列化管道与渐进式复杂度：从交互工具到完整应用</h3>
+<p>在 Prefab 的底层管线中，核心设计是利用 Python DSL 生成界面的声明式结构，并将其序列化为通用的 JSON 协议，最终由宿主环境中的 React 应用完成渲染。这种基于 JSON 中间表达的设计解耦了前后端，使得 UI 不仅能由 Python 生成，还能被 AI 智能体生成、修改或跨端传输。为了验证这一体系的完备性，Prefab 的官方文档与交互式 Playground（包含 130 到 140 个开箱即用的 UI 组件）均 100% 由 Prefab 自身动态渲染。</p>
+<p>在实际使用中，Prefab 践行“一行代码带来一个显著改进”的渐进设计理念，主要支持三种梯度的落地模式：</p>
+<ol>
+<li><strong>交互式工具（Interactive Tool）</strong>：只需将常规 FastMCP 工具的字典返回值替换为 Prefab 组件（如 <code>DataTable</code>），框架便会自动将其包装为 MCP App，为客户端提供包含搜索、过滤、排序和分页的完整表格。若需要追加饼图，只需引入 <code>Grid</code> 并在上下文中并列组合组件。</li>
+<li><strong>响应式变量绑定（Reactive Variables）</strong>：借助 <code>RX</code> 响应式状态类，开发者无需编写任何 JavaScript 代码即可在纯 Python 中建立跨控件的数据双向绑定与实时运算。</li>
+<li><strong>全功能应用与低成本文件上传（FastMCP Apps）</strong>：通过定义应用类并结合 <code>@app.ui</code> 入口及 <code>@app.tool</code> 后端方法，可构建包含完整状态闭环的应用。这种模式尤其解决了 MCP 传统文件上传的致命痛点：以往必须让 Agent 逐字转写文件文本导致巨大的 Token 浪费，而通过 Prefab 的内置上传组件，用户拖拽的文件可以直接绕过 Agent 直达 MCP 服务端。</li>
+</ol>
+<details>
+<summary>Original English</summary>
+<p>And this is the pipeline that Prefab is essentially exposing: We use a Python DSL that I just shared with you. We use that to build a declarative representation of a UI that then gets serialized into a JSON protocol. And that JSON protocol is ultimately rendered by a React app which is hosted as the actual MCP app.</p>
+<p>And so this is going to open up a whole lot of possibilities for us that again I'm going to show you in just a second. But the key to this whole thing is the JSON in the middle. The Python is actually an accident that I discovered after the fact because it was a weird idiosyncratic thing that I wanted. The point of this was: can we create a serializable representation of a UI? And that's the JSON protocol again. And because it's serializable, I can generate it from an agent. I can send it to an agent. I can generate it as a human and ask an agent to modify it. There's all this cool stuff that happens because of that intermediate representation in JSON. And then when the Python DSL just fell out of this and was really beautiful and easy to use, I kind of felt like we had something.</p>
+<p>So we have these docs, and sort of to prove the point—this was another constraint we took on—these are the docs for the data table component in Prefab. I think there's 130 or 140 components that we ship that you can compose into an arbitrary form. The docs for Prefab are 100% rendered in Prefab. So the data table that's here in the basic usage, it is live rendered in Prefab. The Python code, you can see it sneaking in at the bottom of the screen, that Python code is being rendered live by the renderer to generate that. If you want, you can take any example in the Prefab docs, you can click a link, pop them into the playground, and you can edit the Python code live, and you will see the UI update.</p>
+<p>And again, this is super weird. If you're feeling a little uncomfortable about this, that is okay. It makes a lot more sense when we constrain the problem, and remember that we're composing a UI rather than building it.</p>
+<p>So, I want to bring this back to the thing I opened with now, which is MCP servers and more specifically MCP apps. You are welcome to use Prefab for any kind of front-end problem you have. My team has started using it for small interactive data apps and things to explore. They've been building presentations with it. We ship a dark mode theme that honestly looks kind of like the one I'm showing you right now to make slides and presentations. You can do a lot of stuff with it. But the reason we built it, the use case that it is satisfying, is for MCP servers.</p>
+<p>And so I want to give you a quick tour of three ways that you can use it, three increasingly sophisticated ways that you can use it in your MCP server.</p>
+<p>The first is to build an interactive tool. As I showed you at the beginning of the talk, typically an MCP tool is something your agent calls and the agent gets the result and you don't get to interact with it at all. So what's the easiest way that we can advance that interactive functionality? I'm going to show you here: This is a FastMCP tool. It's been decorated with a tool decorator as you can see, and it's just a Python function that returns some information. Bearing in mind this information will go to the agent, not the user. If we want to turn this into a fully interactive tool with Prefab, we're going to make one change: Instead of returning a Python dictionary at the end, which will go to the agent, we're going to return a Prefab component. In this case, it's the data table. This is what I just showed you the docs for a moment ago. And when we return this Prefab component, FastMCP will automatically detect that. It will automatically infer that you in fact want to return an MCP app, and it will spin up all the machinery to get the HTML, the JavaScript, the CSS, the render, everything in place so that your user will see a data table.</p>
+<p>Here's what this looks like in practice. This is using the Goose client, which is an excellent one. I asked a server that had the function I just showed you: &quot;show me the team directory.&quot; And what pops up—this would be better as a GIF, I apologize—but what pops up is a fully interactive data table component. It supports searching and filtering and sorting and pagination and all this stuff. And all it is is what I showed you a moment ago: just return the data table class and all this will be taken care of.</p>
+<p>We can go a step further. What if in addition to the data table, we want to show a pie chart right next to the data table that breaks down this team directory? As you might imagine, very, very, very similar code. Instead of the data table alone, we're now going to import a Grid and a PieChart. And if you look at the bottom, you'll see that we compose both the pie chart and the data table into a grid very naturally with a context manager. And this is the result: we now get a pie chart next to our data table. So this follows a principle that we really try to hold in a lot of our software at Prefect, which is: one line of code, one big noticeable change. We try to keep that complexity incremental. And so this satisfies a lot of things that I think are really important about frameworks and DSLs.</p>
+<p>This is very quickly because we won't have time to go into it: This is just an example I threw together and recorded of fully client-side interactivity where all of these controls are linked. Stuff's updating, text is updating, values are updating. No JavaScript was written. This is just a couple of classes composed that all have the same attribute assigned, so they all work together automatically.</p>
+<p>Oh, and I did throw in a quick code example of what that looks like. We have a class called <code>rx</code>, which as you may guess stands for reactive. If you use these reactive variables, you can just reference them anywhere in your code. You can format them, you can make them the name of something, and it will automatically compile into the correct JavaScript implementation.</p>
+<p>The second thing that we can do is a FastMCP app. So if an interactive tool is sort of a one-shot &quot;here's a user interface and you can interact with it in the client,&quot; a FastMCP app is a full application with a backend, and in this case the MCP server is going to be the backend. We don't have time to go through a full worked example in this session, but here's what the code looks like just to give you a sense of the ergonomics: We're going to write a class which is our FastMCP app, and then we're going to decorate at least two functions with <code>@app.ui</code>. That's the entry point that's going to return the Prefab components that form the base UI of that application. And then zero or more <code>@app.tool</code> decorators. And these are essentially backend methods that you can now reference in the UI. So you could have a button that takes data that the user has entered into a form and sends it to a database using a decorated tool like this.</p>
+<p>One thing that we use and we ship as a built-in component now in FastMCP is an upload component. As you can see, because only the agent has access to an MCP server, you can't simply upload a file to an MCP server; it has to go through the brain of the agent. And so what ends up happening is a lot of people create basically an upload tool on their MCP server, forget that the agent has to actually call it, and what you end up doing is the world's most expensive copy-paste operation: You give the agent a megabyte of text, the agent retypes it character by character into the MCP, and now yes in fact you have uploaded it, but it's extremely, extremely inefficient.</p>
+<p>So this is a really good use case for an MCP app where you ask the agent to bring up the app interface, you drag a file into it, and now the file bypasses the agent and goes right into the server. And we've made that a one-liner like this along with a handful of other useful tools. Here's the agent interacting with a file that I just uploaded that I dragged and dropped.</p>
+</details>
+<h3>生成式 UI 的演进：流式 Python 相比 JSON 的能效跃升</h3>
+<p>在更高阶的探索中，架构直接支持了 <strong>生成式 UI</strong>（Generative UI: 由大语言模型根据交互意图实时动态生成的界面）。开发者只需向 Agent 提供 Prefab 的开发规范与 Skill 指令，Agent 就能在无需预先定义界面的情况下，自主推导并实时流式输出目标 UI。</p>
+<p>在实现机制的演进上，团队获得了一项关键工程发现：起初的设计是让 Agent 生成并流式传输 JSON 协议，再由前端实时修复不完整结构并渲染；但实测表明，<strong>界面的 Python 代码表达比对应的 JSON 序列化数据体积减少了约 70%</strong>。因此，新版方案改为直接由 Agent 流式输出 Python 源码，在服务端的沙箱环境中即时执行并转换为 JSON 供给前端渲染。这一转变在保持相同交互特性的同时，显著减少了 Token 消耗、降低了请求成本并压缩了传输延迟。目前 Prefab 库已全面集成至 FastMCP 中，开发者可通过官方文档与 GitHub 仓库直接上手构建下一代 MCP 应用。</p>
+<details>
+<summary>Original English</summary>
+<p>The last thing that I want to talk about which is sort of enabled by this architecture is a fully generative UI. We're just going to skip and let this play while I talk.</p>
+<p>So this is a very simple demo where I asked Claude: &quot;Hey, I'm giving a talk on this. Just start streaming the most interesting UI you can come up with.&quot; And so it just went. And what it's doing here is we exposed a tool that accepts the JSON protocol serialization of a UI that Prefab is based on. And so now as the agent is streaming that information over the wire, we are in real time rendering whatever we've got, healing that JSON and rendering it. And so this was a really cool demo and it was really effective, and people like this because now you don't even have to define the UI yourself. All you have to do is use the skill we already ship, share it with your agent so it knows how to write a UI, and off it goes. It can make you whatever you want. There are some clients that have built-in versions of this; if they have a built-in version, you may prefer to use it by all means, but this may be a way for you to build your own custom approach or limited set of components that are useful to you.</p>
+<p>Now, a really interesting thing happened when we spun this up. So as I mentioned, originally the plan was for the agent to send JSON over the wire and have it be rendered into this full React application. What we ended up discovering is that the Python representation of a UI is about 70% smaller than the JSON representation.</p>
+<p>So we don't do this anymore. When I recorded this demo, it was streaming JSON. What we now do is we actually stream the Python over the wire. It's executed in a sandbox, it's turned into JSON on the server, and then that's rendered. And so this has a dramatic, dramatic token efficiency, cost, and latency benefit. So it would work exactly the same as when I recorded this demo, but this is just one of those things that we've learned on the fly. And it's really fascinating that the Python representation is just that much more compact and ergonomic than the full JSON one.</p>
+<p>So that's Prefab. If you'd like to check it out, if you're curious, if you want to see the weirdest thing I've ever built along with however other many people, you can see the docs at <code>prefab.prefect.io</code>. You can see the full library which is on our GitHub here. And this is already fully baked into FastMCP. So if you're using a recent version of FastMCP, you should be able to install this optional addition, import the components, return them, and start playing with these MCP apps. Thank you all for coming.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Prefect" class="entity-link company-link">Prefect</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=FastMCP" class="entity-link product-link">FastMCP</a>, <a href="/search/?q=Prefab" class="entity-link product-link">Prefab</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/generative-ui/">generative-ui</a>
+      
+        <a class="tag-link" href="/tags/model-context-protocol/">model-context-protocol</a>
+      
+        <span class="tag-pill tag-pill--no-page">fastmcp</span>
+      
+        <span class="tag-pill tag-pill--no-page">domain-specific-language</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 通用遥控器：通过 ACP（Agent Client Protocol）解耦客户端与智能体生态</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="AI 通用遥控器：通过 ACP（Agent Client Protocol）解耦客户端与智能体生态" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">AI 通用遥控器：通过 ACP（Agent Client Protocol）解耦客户端与智能体生态</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-09</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=YkNulwcc5jk" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-09
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">Block 工程师 Alex Hancock 介绍了专为 AI 智能体设计的客户端协议 ACP（Agent Client Protocol）。类比于开放 Web 架构与 MCP 工具生态，ACP 实现了客户端 UI、执行框架（Harness）、工具集与模型四层架构的彻底解耦与远程通信，支持跨编辑器与终端灵活接入。</div></div>
+      
+    </div>
+    <h3>开放标准之困：从专属孤岛到通用协议</h3>
+<p>在当今的 AI 开发者生态中，涌现出了海量优秀的模型、框架与研究成果，但交互界面往往高度专用且割裂。很多时候，某种强大的智能体工具只能通过特定的单一客户端或专用应用进行操作。这种局面正如 Web 早期如果每个网站都需要专属浏览器或私有通信协议一样不可持续。<strong>开放标准</strong>（Open Standards: 促进多方互操作与生态繁荣的技术规范）的核心价值在于通过统一接口催生开放市场。正如<strong>模型上下文协议</strong>（Model Context Protocol: 用于让 AI 智能体连接外部工具、资源与数据的标准化协议，简称 MCP）让所有智能体能够无缝调用数以万计的工具服务器一样，当前生态在“客户端软件如何标准化管理、指派与监控智能体”这一层级依然缺乏统一方案。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Hola a todos. Mi nombre es Alex Hancock. Hoy te lo diré sobre universal mando a distancia control para IA.</p>
+<p>Antes de empezar, quiero decir: anterior El orador señaló que desarrolladores de clientes MCP no implementado apoyo a la tarea, porque Son inteligentes. I- Desarrollador de clientes MCP. Puedo decir que esto solo porque yo perezoso. No. hizo. Eh, vale.</p>
+<p>Bueno, un poco sobre mí antes de empezar. I ingeniero de software en Compañía Block, que es nativo por Cash App, Square y Tidal. Ahora nosotros trabajando en varios diferentes proyectos. Eh, yo también Llevo mucho tiempo trabajando allí. tiempo. Estaba haciendo ejercicio. Productos Square y Cash Aplicación, pero los últimos dos Llevo años trabajando en inteligencia artificial. código abierto. En particular, estoy trabajando en proyecto con apertura nombre en clave Goose, que comenzó como proyecto interno en Bloquear. Sí, ya veo, aquí hay uno. Aficionados a los gansos. Y entonces, eh-eh, lo abrimos código fuente y lo adapté a Linux Base. Entonces, ahora Los derechos les pertenecen, pero muchos de nosotros Con Block continúa trabajar con él. Eh, yo es también uno de MCP: Desarrolladores de modelos Protocolo de contexto. Trabajo. sobre Rust SDK para esto proyecto. Y recientemente Yo también empecé a trabajar. sobre ACP (Protocolo de Agente Cliente), ¿De qué te voy a hablar? hoy.</p>
+<p>Creo que tenemos Hay un problema con herramientas que yo Quiero presentarte hoy como una tarea, y entonces ofrecer decisión. El último A veces me doy cuenta de que apareció mucho excelentes herramientas ¿No es así? Hay novedades de laboratorios, de varias empresas, muchas soluciones en basado en abierto estándares. Eh, pero yo noté que la interfaz a menudo tienen único o específico. EN peor escenario posible Sucede que hay herramientas para gestión de la cual poder usar solamente un cliente ¿Aplicación, verdad? Creo Esto provoca una serie de problemas, pero daré analogía con la web: es Sería así si tú tenía que usar solamente un navegador o uno protocolo de acceso a cada sitio web, ¿verdad? Simplemente no lo es. Funcionaría. No tenemos existiría tal concepto, como la web abierta, Ojalá fuera así realidad de navegadores. Por lo tanto yo Creo que podemos trabajar mejor. Esencia estándares en ese su implementación crea ecosistemas y mercados. Yo diría, que en el campo del agente Tenemos una buena IA estándar para para que el agente pueda actuar, ¿No es así? Usando herramientas, realizar acciones en otros sistemas, lectura recursos, lectura datos. Todos somos iguales La comunidad ganó por la aparición de MCP. ¿No es así? ¿Y la característica más potente MCP no se trata de sí mismo MCP, pero en el hecho de que todos Se utiliza. Por eso tenemos miles o decenas miles de servidores en todo el mundo y todos los agentes pueden conéctate con ellos, realizar tareas en esos sistemas.</p>
+<p>Yo diría, que todavía no tenemos una buena decisión o estándar para para que el cliente software provisión podría gestionar agentes. Establecer tareas, para indicar qué trabajar y recibir actualizaciones.</p>
+</details>
+<h3>ACP 协议解析：轻量、可扩展的客户端交互规范</h3>
+<p>为了填补客户端管理智能体的标准化空白，<strong>智能体客户端协议</strong>（Agent Client Protocol: 连接用户客户端与智能体环境的双向通信协议，简称 <strong>ACP</strong>）应运而生。该协议最初由 <strong>Zed</strong> 与 <strong>JetBrains</strong> 编辑器团队联合提出，旨在让 IDE 开发商编写一次高质量的客户端实现，即可与任意智能体执行环境通信（下发任务、接收执行结果、追踪代码文件修改）。而 <strong>Goose</strong>（Block 开源的通用 AI 智能体框架）团队意识到，ACP 具有天然的中立性与通用性，不仅适用于代码编辑器，完全能够扩展到所有类型的软件客户端。</p>
+<p>在底层设计上，ACP 基于简洁的 <strong>JSON-RPC</strong> 消息机制构建。它支持客户端建立连接并创建独立会话（Session），在会话内传递用户指令（文本、图片、音频），并实时流式推送执行进度、工具调用元数据以及权限确认请求（Permission Requests: 向用户索取工具执行批准的交互机制）。更关键的是，协议具备强大的<strong>可扩展性</strong>（Extensibility），支持各团队通过前缀自定义方法（如 <code>_customMethod</code>）先行探索特性，经过社区验证后再合并进入核心标准。现场通过 <strong>Zed</strong> 编辑器以及独立的终端客户端（Terminal Client）演示了相同任务（分析 HTML 项目）在不同客户端下的无缝表现：智能体实时回传工具调用、数据读取与解析过程，呈现一致的交互体验。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Así que hoy yo Propongo una opción, lo cual, en mi opinión, es exitoso; encima de él El nuestro funcionó equipo, y nosotros lo consideramos una buena decisión en espacios abiertos estándares. Esto es ACP, es decir, protocolo agente cliente—sí Esto se llama proyecto, y él vino de los desarrolladores editores. Él se levantó, por ejemplo, si usted usado editor de texto Zed o cualquiera de los Productos de JetBrains: Desarrolladores Zed y JetBrains unidos y propuesto estándar para para que los clientes puedan gestionar trabajadores entornos. Esto tiene lo que significa que si pones ellos mismos en su lugar, ¿verdad? Ellos querían poder escribe un solo alta calidad clientela implementación en editores, tal vez en Zed o IntelliJ, y para gestionar cualquier medio ambiente por con esto un cliente: enviar tareas, conseguir resultados, ver, qué archivos editado, etc. muy lógico si para ocupar su lugar, ¿verdad?</p>
+<p>Pero estamos en El equipo de Goose vio Esto es lo que creemos beneficiarse de esto mucho más ancho que solo por editores, ¿verdad? Entonces él es relativamente neutral y no tiene muchos específicos para editores funciones. Por lo tanto nosotros creemos que es puede extenderse a círculo más amplio clientela software software.</p>
+<p>Eso profundizar en el diseño ACP y qué puedes hacer con él hacer: él permite establecer conexión entre clientes y entornos de agentes, que tienen una cierta un conjunto de posibilidades, relacionado con esto conexión. Y luego tú puedes crear sesiones. Dentro de las sesiones se puede enviar mensaje usuarios—qué usuario, tal vez, ingresa al programa, o lo que él quiera enviar cliente software software. Agente puede responder ellos con texto, imágenes o audio o proporcionar Actualización sobre, ¿Qué está sucediendo? Por ejemplo, si se llama herramienta, puede enviar notificación sobre el desafío herramienta, explicando cuál la herramienta era causados ​​y que fueron metadatos. Además, él puede enviar solicitudes de provisión permisos. Entonces, si clientela software disposición necesidad de mostrar al usuario, Por ejemplo: &quot;¿Merece la pena? Tengo que hacer esto. ¿Llamada a la herramienta? ¿Sí o no?&quot; Esto es posible implementar a través de este protocolo.</p>
+<p>Y él bastante simple para por su estructura. Él usos Mensaje JSON-RPC. Y lo que necesitamos Me gusta. lo más, es posibilidad expansión. Usted no limitado únicamente por el hecho de que está en lo básico protocolo. Puede agrega el tuyo métodos; por por acuerdo necesito poner subrayar, luego empezar a escribir sus propios métodos. Lo que me gusta de esto, así que esto es lo que si es suficiente proyectos- herramientas o proyectos de clientes Implementar esto, nosotros podemos ver que Todos lo hacemos igualmente. ¿No es así? Si el equipo del Códice tiene sus métodos, en equipos de gansos, los suyos propios, en equipos de clientes—más algunos, podemos para ver qué sucede en el ecosistema, y ​​que es recomendable hacerlo estándar, añadiendo al protocolo en sí, de modo que se forme en basado en el uso y la comunidad.</p>
+<p>I Yo voy demostrar versión estándar de E/S para esto. Entonces, yo Abro Zed, tengo Aquí hay uno muy simple proyecto, y diré: &quot;Cuéntame sobre este. proyecto&quot;. Este es el único HTML- archivo. ¿Ves que yo...? pudo ingresar a su solicitud de Zed y el agente, quien trabaja aquí es Ganso, así que él usos Interfaz ACP de Goose. Y ya ves cómo él devuelve el texto. Él envía información sobre llamada de herramienta, sobre lo que él ¿Leíste y qué hiciste? y luego descubrió que era un archivo HTML y lo explicó.</p>
+<p>Y lo haré. otra manifestación. Este es un ejemplo de IA junto a la piscina. I Yo diré: &quot;Dime sobre este proyecto.&quot; EN el mismo proyecto. Este es un servicio basado en el cliente. terminal, que obtiene lo mismo experiencia de eso el propio agente. Uno implementación por el lado instrumento, y ahora puede usar cualquiera ¿Qué cliente, verdad? Tú Mira lo que hizo. lo mismo. Él mostró Envíame un mensaje resultados. Él mostró el desafío herramienta, y luego mostró el resumen en tiempo real. Entonces, esto es básico. demostración de cómo dos clientes interactuar entre sí agente a través de entrada estándar- salida local.</p>
+</details>
+<h3>四层架构解耦：远程通信与未来生态演进</h3>
+<p>本地标准输入/输出（Stdio）虽然简单，但要实现生产级普及，必须支持<strong>远程协同工作</strong>（Remote Work: 跨网络或在容器与云端运行智能体）。Goose 团队为 ACP 补充了标准 <strong>HTTP/WebSocket 传输层</strong>，在保持消息协议与语义一致的前提下实现了跨网络通信。</p>
+<p>在整体架构上，现代智能体系统可系统化划分为四个解耦的层级：</p>
+<ol>
+<li><strong>客户端层</strong>（Client: 用户交互界面，如桌面 IDE、Web UI、移动端或无头服务）；</li>
+<li><strong>执行引擎层</strong>（Harness: 负责驱动智能体规划与工具调用循环的运行时引擎）；</li>
+<li><strong>工具层</strong>（Tools: 通过 MCP 等协议提供的数据源与外部执行工具）；</li>
+<li><strong>模型层</strong>（Model: 提供推理能力的底层大语言模型 API）。</li>
+</ol>
+<pre><code class="language-mermaid">flowchart LR
+    Client[&quot;客户端 (Client / UI / IDE)&quot;] &lt;--&gt;|&quot;ACP 协议 (Stdio / WebSocket)&quot;| Harness[&quot;执行引擎 (Harness / Agent Runtime)&quot;]
+    Harness &lt;--&gt;|&quot;MCP 协议&quot;| Tools[&quot;工具生态 (MCP Servers)&quot;]
+    Harness &lt;--&gt;|&quot;Model API&quot;| Model[&quot;模型层 (LLM Provider)&quot;]
+</code></pre>
+<p>当这四层都具备标准传输层支持时，系统的部署拓扑获得了极高的灵活性：四者既可以全部运行在同一台本地机器上，也可以将 Harness 部署在远端容器、工具部署在边缘环境、模型通过云端 API 交互。这大幅降低了构建专属客户端的门槛。未来，企业可以针对垂直业务领域定制专用客户端，也可以打造统一的通用控制台；而用户将拥有通过“用脚投票”选择最佳客户端体验的自由，从而倒逼生态在用户体验与功能质量上展开良性竞争。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Pero versión local, por supuesto, no es suficiente, ¿No es así? Si usted ¿Quieres que esto suceda? popular, tienes proporcionar trabajo remoto. Los agentes trabajarán en la nube. Por lo tanto, cuando nosotros se unió a esto proyecto, vimos, eso es remoto Aún no hay soporte. Por lo tanto, hemos determinado transporte Protocolo HTTP. Hay una versión HTTP y la capacidad actualización a través de websocket. Y ahora Los mensajes son los mismos, semántica de protocolo lo mismo, pero parecía nuevo transporte, que acaba de empezar a trabajar y permite remoto trabajar.</p>
+<p>En el equipo de Goose estamos considerando esto pila de agentes como cuatro importantes componentes, ¿verdad? Tienes hay un cliente, es como programa que usos usuario o sin interfaz aplicación en funcionamiento en algún lugar del coche. HAY arnés—este programa que implementa ciclo de llamadas herramientas. Ellos mismos herramientas, a menudo esto MCP. Y hay un modelo, ¿verdad? Si creas transporte remoto para el protocolo agente cliente y MCP tiene un control remoto transporte para herramientas de llamada, entonces los modelos han sido durante mucho tiempo tienen sus propios finales puntos como API respuestas. Ahora en tienes flexibilidad en moviendo todos estos cuatro componentes. Todos ellos pueden ser en un coche. El marco puede estar en un coche diferente que cliente. El modelo puede ser el único que Trabaja de forma remota. Las herramientas pueden ser el único que Trabaja de forma remota. Armonización estándares y software trabajo confiable transporte—esto es lo que nos permitirá mover todo partes de esto pila de agentes.</p>
+<p>Y yo Puedo demostrarlo una breve demostración Esto también. Aquí cliente, solo para muestra lo fácil que es crear clientes para esto. Yo escribí su en vivo ayer por la noche. Y yo Yo diré: &quot;Escribe un poema&quot;. Así que, aquí está de nuevo. conexión con eso el proceso en sí mi coche. En este caso que ejecuto él a través de la red, pero él está en el mío auto. Él conecta y envía Instrucciones para gansos con respecto a de qué hacer de forma remota. Esto puede estar en un contenedor o en la nube, pero Los mensajes son los mismos, y la biblioteca que uso y tú mismo, para que puedas muy fácil cambiar entre local y modos remotos.</p>
+<p>Entonces, si quieres únete a esto ecosistemas, inicio para experimentar con apoyo, creando el tuyo propio clientes o agregando oportunidades para herramientas—esto enlace al sitio web protocolo del cliente El agente te dirá cómo comenzar. Ya existe muchos clientes y servidores de agente. Él varios editores, escritorio y aplicaciones móviles, soluciones terminales—su número está en constante crecimiento. Y yo Creo que las áreas su solicitud potencialmente enorme ¿No es así? Si nosotros proporcionaremos una cierta compatibilidad, personas podrá crear clientes personales, lo cual funcionará exactamente como se necesita para administrar su agentes. Poder crear clientes para ciertos negocios dominios, individuales empresas o el todo conjunto de soluciones de empresas. Puede ajustar cliente universal para que funcione con todos los servicios. Y yo También creo que si crearemos uno nuevo categoría, entonces veremos un aumento calidad del cliente, ¿verdad? Porque cada vez, ¿Cuándo ocurre? ecosistema o mercado con muchas opciones, los usuarios pueden votar &quot;con los pies&quot;, si los clientes no son adecuados, por lo tanto Los desarrolladores comenzarán competir por la calidad definido por el usuario experiencia. En general, yo Creo que tiene que ser mejorar la experiencia usando inteligencia artificial. Esto es todo lo que quería. dilo hoy. Muchas gracias. Si Quieres para charlar, Encuéntrame más tarde discurso o escrito por correo electrónico. Me encantaría involucrarme usted a este trabajo. Gracias.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Block" class="entity-link company-link">Block</a>, <a href="/search/?q=Zed" class="entity-link company-link">Zed</a>, <a href="/search/?q=JetBrains" class="entity-link company-link">JetBrains</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Goose" class="entity-link product-link">Goose</a>, <a href="/search/?q=Zed" class="entity-link product-link">Zed</a>, <a href="/search/?q=IntelliJ IDEA" class="entity-link product-link">IntelliJ IDEA</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">agent-client-protocol</span>
+      
+        <span class="tag-pill tag-pill--no-page">open-standards</span>
+      
+        <a class="tag-link" href="/tags/model-context-protocol/">model-context-protocol</a>
+      
+        <span class="tag-pill tag-pill--no-page">remote-execution</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

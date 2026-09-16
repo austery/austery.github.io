@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent 指令上限提升10倍：从压缩困境转向验证挑战</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="Agent 指令上限提升10倍：从压缩困境转向验证挑战" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Agent 指令上限提升10倍：从压缩困境转向验证挑战</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-09</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=XzJD1bvXKjs" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-09
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">Arize AI 开发者关系负责人 Laurie Voss 通过基准测试揭示，前沿大模型的指令遵循容量在过去一年内从 200~300 条暴增至 2,000~5,000 条（提升近10倍）。这彻底改变了 Skill/Prompt 的编写方式：核心痛点已从“精简压缩指令”转变为“模型特异性失效与输出评估验证”。</div></div>
+      
+    </div>
+    <h3>指令上限的演进：从200条到大模型容量暴增</h3>
+<p>大家下午好，感谢大家来听这场技术演讲。这个演讲的标题很长，所以我先在开头做个核心总结：我们在编写 <strong>Skill 文件</strong>（Skill Files: 定义 AI Agent 行为、规则与约束的结构化指令文档）时，往往会塞入海量指令；但在过去的认知中，模型在某个临界点就会开始丢三落四。关键问题在于：这个临界点究竟在哪里？你在什么节点上塞入了过多指令？过去一年里，这个问题的答案发生了翻天覆地的变化。</p>
+<p>我是 Lori（Laurie Voss），目前在 <strong>Arize AI</strong> 担任开发者关系负责人，之前是 <strong>NPM Inc.</strong> 的联合创始人，一些朋友可能在 JavaScript 生态中认识我。几个月前我参加了在迈阿密举办的 AI 开发者大会，期间听了 Dexter Horthy 的演讲。当时他在非主题发言中随口提到一句：“一个 Agent 大约在执行到 200 条指令时就会开始遗忘。”他接着补充说这是 2025 年的数据，现在情况可能好一些了。</p>
+<p>我当时愣住了：200 条指令其实非常少。一个精心编写的 Skill 文件很容易就超过 200 条指令——“先做 X 再做 Y”、“必须包含 Z 模块”、“严禁使用 W 词汇”，每一项具体要求都是一条独立的约束。如果模型在 200 条后就开始悄无声息地忽略规则，那这就成了限制系统复杂度的物理天花板。你精心写好了包含边界情况、语气控制、格式规范的大型规则库，交给 Agent 执行后，你心里总会犯嘀咕：“它到底有没有遵循所有规则？还是只是凭感觉生成了看似符合预期的东西？”每一次点击运行，你都在承受这种轻度焦虑。</p>
+<details>
+<summary>Original English Source</summary>
+<p>OK. Hello everyone. Thank you for coming to this incredibly interesting technical lecture. This lecture has a very long title. So let me briefly summarize the point at the beginning. You write skill files and fill them with lots of instructions. At some point, the model stops tracking them all . The question is, where is this moment? At what point did you add too many instructions to your skill files? And the answer to that has changed significantly over the past year. I'm Lori. I am the Head of Developer Relations at Arize AI. In the past, I was a co-founder of NPM Inc. So some of you may know me from my JavaScript days. Today, I spend a lot of time thinking about AI and how to test it. A few months ago I went to the AI ​​ Engineer conference in Miami, which was great. And I watched Dexter Horthy's performance. It was a good performance. He was n't on this topic at all. But during his speech, he casually mentioned that an agent can follow up to 200 instructions before it starts to forget them. Then he continued his speech, and it was just a brief remark. He also noted that this figure is from 2025, so the situation may be better now. I stopped listening for a second because I thought: 200 instructions is not a lot, right? A decent skills file instantly exceeds these 200 instructions. If a user says “ do X, then Y,” “ always add section Z,” “never use phrase W” —each of these requirements is a separate instruction. And if the model quietly stops tracking them after 200, that's the real limit to the complexity of what you can create . So I wanted to know where he got that number from and if it was true. You know that feeling I'm talking about. You write a big, wonderful skills file: rules pages, edge cases, tone, formatting. You hand it over to an agent, they do the work, and you look at the result and think, “Did he really pay attention?” “Did he really follow all these rules, or did he just do what he wanted and produce something similar to what I expected?” You can't know for sure, can you? More on that later. So you live with a constant mild anxiety every time you press &quot;start,&quot; and that's what this study is about, and we're trying to figure out if we can avoid that. Here is my promise for the next 18 minutes. I'll show you where that number 200 came from, whether it's still relevant, and what the real number is today, as it has changed by an order of magnitude. And then we'll talk about what that means for you. How long your tasks and requests can actually be, and what changes to your workflow you should make as a result.</p>
+</details>
+<h3>基准测试复现：从 IFEval 到极限压测</h3>
+<p>为了验证这个数字，我追溯到了 <strong>IFEval</strong>（Instruction-Following Evaluation: 一种测试大模型精准遵循格式与关键词等约束能力的基准）。该测试由 Yaroslav Wich 等人在去年的论文中提出，逻辑非常纯粹：要求模型撰写一份商业报告，同时提供一份强制包含的特定词汇清单（如必须包含“client”、“income”等精确词汇）。每一个指定词汇就是一条必须执行的显式约束，最后统计模型成功命中了多少词汇。</p>
+<p>该测试核心关注两个指标：</p>
+<ul>
+<li><strong>规则密度（Density / N）</strong>：单次请求中同时处理的规则总数。</li>
+<li><strong>准确率（Accuracy）</strong>：模型实际准确执行的规则百分比。</li>
+</ul>
+<p>有人会质疑“在报告中包含随机词汇”并不能完全等同于真实复杂指令。但必须认识到，关键词是一个最基础的代理指标（Proxy Indicator）——“包含 revenue 一词”与“添加定价模块”或“禁止使用某短语”在约束本质上是一致的。如果模型连单次请求中包含 200 个指定词汇都无法追踪，那么在面对 200 条更复杂的逻辑指令时只会表现得更差。因此，这个测试得出的数值代表的是模型能力的上限。</p>
+<p>在测试最新模型前，我首先对一年前的基准进行了科学复现。由于模型迭代极快，原论文测试的大多数模型已从 API 下线，当时只剩下 <strong>GPT-4.1</strong>、<strong>Claude Sonnet 4</strong> 和 <strong>Gemini 2.5 Pro</strong> 三款可用。复现曲线与原论文完全一致：在对数坐标轴上，当规则数量达到 200~300 条时，老一代顶尖模型的准确率便开始明显下滑；到达 500 条规则时，模型会遗漏 30% 到 50% 的要求。一年前的天花板确实非常低。</p>
+<p>紧接着，我们将测试推向当下的前沿模型：<strong>GPT-5.5</strong>、<strong>Claude Opus 4.7</strong>、<strong>Gemini 3.1 Pro</strong> 以及 <strong>DeepSeek V4 Pro</strong>。在原本上限仅为 500 词的原生测试中，所有前沿模型全部轻松拿到了 100% 准确率，甚至没有意识到天花板的存在。为了找到新一代模型的极限，我不断将目标翻倍：从 500 到 1,000、2,000，一路加码到 10,000 个独立词汇约束。</p>
+<p>测试结果显示了显著的跨越式突破：</p>
+<ul>
+<li>一年前的模型在 <strong>200~300 条指令</strong>处崩溃。</li>
+<li>现代前沿模型的断崖点已推移至 <strong>2,000 条</strong>，顶尖模型甚至能在接近 <strong>5,000 条指令</strong>时依然保持极高的遵循能力。</li>
+<li>在短短 12 个月内，前沿大模型的并发指令处理能力提升了近 <strong>10 倍</strong>。</li>
+</ul>
+<details>
+<summary>Original English Source</summary>
+<p>So, the number 200 is not a myth. It comes from a real-world test called IFEval from a paper written by Yaroslav Wich and co-authors last year. And this test is surprisingly simple. This is how IFEval works. You ask the model to write a business report and give her a list of specific words that she must include in the report. Include the exact word &quot;client.&quot; Include the exact word &quot;income&quot; and so on for as many words as you want. Each of them is an instruction that she must follow. And then you count how many of those exact words appeared. Because the test is so simple, you only need to keep two numbers in mind. The first is the density, which we call N. This is the number of rules that are being discussed at the same time. And the second is accuracy, that is, the percentage of rules that it was actually able to execute. You might say that including random words in a report is not the same as following real instructions, and that's fair, we'll talk about that . But keywords are just a proxy indicator. “Include the word revenue” is the same type of task as “ include a pricing section,” right? Or &quot;never use that phrase.&quot; This is a separate, clearly defined restriction that you place on the agent, and they must adhere to it. If a model can't track 200 words in a single query, it will definitely have difficulty with 200 more complex instructions. Therefore, most likely, she will cope even worse. So, this number is an upper limit. This number is the maximum that can be achieved. If you give more complex instructions, this number will likely become smaller, and 200 is a very low limit. So before chasing new models, we need to do some quality science, which means reproducing the old result and making sure that the 200 limit is realistic. So, I reran the original benchmark. The original article tested a whole range of models, and models live and die very quickly. So by the time I undertook this testing, only three models from the initial set used by the authors remained available through the API. These were GPT-4.1, Claude Sonnet 4, and Gemini 2.5 Pro. These were models available 12 months ago that remain available now. And that's why we protested these three, because that's all that's left. And since I first published this research a few weeks ago, one of those three models has been retired . So this was the last moment I could take this test. So, we only have two left from that list. So don't get attached to your models. Here are the results we got reproducing the original F- scale findings. This is the accuracy on the vertical axis. It starts at 100% and starts to fall. and the number of rules increases along the bottom axis on a logarithmic scale. So every time we get halfway through , the number of rules the model works with doubles. So, on 500 rules, you lose 30, 40, 50% of them . Our curves matched the results of the original article within the margin of error, so the conclusion was realistic. A year ago, somewhere around 200–300 rules, advanced models started to fail. This is a very low ceiling. So, that's our baseline, and now the fun part: we took the same test and applied it to today's cutting-edge models, or whatever was cutting-edge at the time of the test. I tested GPT-5.5, Claude Opus 4.7 (because 4.8 came out a week after my test), Gemini 3.1 Pro, and DeepSeek V4 Pro. I gave them the same prompt, the same words, the same everything , and immediately ran into a problem: they did a great job. They all immediately got 100% on this test. No mistakes. So, we created a test to find a ceiling, and the models went through that ceiling without even noticing it. And that was a problem, because the benchmark was designed for a maximum of 500 words. So I had to change the benchmark to find a new ceiling. So I moved the targets. I gave them more words to include. I doubled it from 500 to 1,000. I doubled it again from 1,000 to 2,000. And I kept doing that until I reached a vocabulary of 10,000 words, and that's where I started to find the limit of what modern models are capable of. Um, so let me show you this. This is the main slide. Here are the results. Remember that the X-axis is a logarithmic scale. So it goes from 500 to 1,000, 5,000, and 10,000. It looks like this scale drops off dramatically, and it actually does at around a thousand values. Ahem. But look how far to the right these new curves go before they start to bend. A year ago they “broke” at 200–300 instructions, and now, depending on the model, the limit is closer to 2,000, and for the best of them, up to 5,000 instructions, before they start to lose ground sharply. So , in about 12 months, advanced models became almost 10 times better at executing instructions simultaneously . This is the main conclusion, but there are many nuances that we should delve into. The ability to track 2000 named constraints in a single query already exists. And it's really interesting because I think—I don't know if others feel this way, but it seemed to me that the jump from, say, GPT 5.1 to GPT 5.5 was pretty gradual, right? It didn't feel like we were 10 times better, but it's a test that's really important for practical things like: how long can my skills file be ? And in a year we became 10 times better. And what amazes me is that this benchmark is barely a year old. A year later, 500 is already a rounding error, and all this continues to change right under my feet. I tested 4.7 Opus, 4.7 Opus 4.8 is even better. So this diagram is a bit outdated, which is actually the main point . If you have defined your engineering assumptions about how skill files should work, how long your queries can be, and you did it over 6 months ago, you are wrong now and you should probably reconsider your approach.</p>
+</details>
+<h3>四大家族的特异性崩溃模式</h3>
+<p>在压测过程中，一个极具工程价值的发现是：新一代大模型的**失效模式（Failure Modes）**发生了根本性分化。以往的旧模型失效非常朴素——就是单纯遗忘；而新一代模型在高压下的崩溃方式各具鲜明特色。</p>
+<p>各主流模型的具体失效行为如下：</p>
+<ul>
+<li><strong>DeepSeek V4 Pro —— 传统型遗忘</strong>: 表现最可预测。超过 750 条规则后开始静默丢失指令，到 2,000 条规则时遗漏近半数约束。这种失效最容易通过统计学量化。</li>
+<li><strong>Claude Opus 4.7 —— 安全过滤过敏与直接拒答</strong>: Claude 配备了极其敏感的安全分类器。在向 Prompt 灌入数千个随机词汇时，某些词汇组合（例如出现类似炭疽、氰化物或涉及双重含义的医疗词汇）会直接触发 API 层的安全拦截，导致模型直接抛出错误拒答：“我可以做，但我拒绝执行。”为了让测试跑通，必须预先通过清洗过滤掉疑似敏感词。Claude 的失效是“大声且明确的”。</li>
+<li><strong>Gemini 3.1 Pro —— 思考预算耗尽与输出吞没</strong>: Gemini 在 5,000 条指令内表现极其稳健，名列前茅。但一旦超载，它不会遗忘，而是被巨量约束彻底淹没。它会疯狂调用 <strong>思考词元</strong>（Thinking Tokens: 推理模型用于内部反思、规划的上下文 Token 预算）试图一次性对齐所有指令，结果在 10,000 Token 的总预算中花掉了 9,500 Token 用于内部思考，最后仅输出 500 词仓促结尾，导致几乎所有目标词汇均未包含。</li>
+<li><strong>GPT-5.5 —— 准确率顶尖但中途罢工</strong>: GPT-5.5 在 5,000 条规则下依然维持了 99% 的准确率。但当推向极限时，它既不直接拒答，也不静默遗忘，而是表现出“情绪化挫败”。在撰写了约 500 词后，它会在正文中直接写道：“这太愚蠢了，这是个毫无意义的荒谬要求，我拒绝继续写下去。”这种失效在工程上最为隐蔽和危险，因为开头看起来极其完美，只有读到最后才会发现它中途撂挑子了。</li>
+</ul>
+<p>总结而言：DeepSeek 静默遗忘，Claude 惊慌拒答，Gemini 想太多导致哑火，GPT-5.5 做到一半指责需求荒谬并罢工。在多模型工程架构中，你必须针对不同的模型建立完全不同的错误捕获策略。</p>
+<details>
+<summary>Original English Source</summary>
+<p>But there's more to this story, because the way models fail has changed dramatically , and exactly how they go wrong is very important. This part was a completely unexpected discovery when I started running the experiment, and at first it completely ruined my test because the old crash mode was boring. They simply forgot the instructions, and I could measure how many instructions they remembered and how many they forgot. But new models break in their own strange, completely characteristic way. So let me give you an idea of exactly how these four models fail. Deep Seek 4 is a traditional model. She just forgets things. There is no drama with her. She starts forgetting instructions after about 750 rules, and by 2000 she loses almost half of them. So she just forgets, which is frankly the type of failure I trust the most because it's predictable. This is very easy to measure. And other models were far from being as convenient to use. Opus 4.7 consistently decided that the test was unsafe. And it simply refused to run the API level test. I didn't know there was this API response from Claude that seemed to say, &quot;No, I could do that, but I won't.&quot; But this is a fully supported answer at the API level, because they care a lot about security. And I started receiving such messages all the time. The reason is that Claude has a very sensitive security classifier . If you add certain combinations of words, such as anthrax and cyanide, it decides that the entire query is dangerous and stops. If you remember how my test works, it consists of throwing 5 to 10 thousand random words into an instruction file. So , my randomly chosen words contained all sorts of things that looked dangerous in combination to the security filter. So he kept refusing , claiming that I was asking him to, you know, build a bomb or something like that. So, to get Claude to cooperate, I had to run all my words through OpenAI's security filter and remove all the &quot; suspicious&quot; words so he could do anything. Having received this , Claude did very well. But the peculiarity of the glitch is that Claude more often decides that you are doing something dangerous, at a very early stage. Even on two or three hundred instructions, if what you're doing contains anything related to medical advice, because medical terms often have a double meaning . They can be both dangerous and safe. So, the third type of failure was in Gemini 3.1 Pro. Gemini runs stably up to 5000 instructions. It shows extremely good results. Overall one of the best on the chart. And then something strange begins. He doesn't forget instructions. He is simply overwhelmed by them. He tries to use reflection tokens to make sure he follows all the instructions at once . And when the number of instructions becomes too large, it uses all its tokens for thinking. He spends his entire token budget on thinking and then doesn't produce any answers. That is, if you give him a task for 10,000 tokens, he will spend 9,500 on thinking, and then give a 500-word answer that will not contain any of the required tokens. So he's cornering himself and not having enough space to respond, which is very expensive and completely ineffective, although that's totally his style, right? Although, you know, I would never say that out loud. And finally, the winner is GPT-5.5. GPT-5.5 is the best of all, 99% accuracy even with 5000 rules. But if you push him hard enough, he becomes the strangest of all, because he doesn't refuse outright and he doesn't forget silently. Instead, he just gets frustrated and says the test is pointless. He starts the report, you know, that's the thing, he doesn't just say &quot;no&quot; right away. He starts writing a report, and after about 500 words he's like, &quot;No, that's stupid.&quot; &quot;I won't do that.&quot; And then he politely says, &quot;That's ridiculous.&quot; &quot;I won't do this anymore. &quot; This is the actual answer he gave me, but it was somewhere around word 5,000 of a business report I had him create. So he's right, right? I asked for a meaningful business report without a specific topic, containing 5,000 random words. You're right, Gemini GPT. That was a stupid demand. This is a deeply unreasonable request, and GPT has pointed this out . But this is still considered a test failure because the unfinished report it produces is missing most of the keywords, and this is the hardest to detect because Claude gives up right away. Claude says, &quot;No , I won't do that.&quot; Well, Deep Seek tries its best, uh , but GPT does what looks like a good job until you read the report to the end, where it says, &quot; No, actually I'm going to leave because this is stupid.&quot; Um, so if you look at them all together, Deep Seek quietly forgets, Claude gets scared and gives up, Gemini thinks too much and shuts up, and GPT-5.5 does half the work and tells you the rest is too primitive for it. Um, and the point is... the point is not which one of them is the funniest, although that is indeed a bit funny. Well, the point is that the question &quot;did he follow my instructions&quot; no longer has one option for failure. There are four different ways to fail, and you won't be able to recognize this failure unless you know which model you're dealing with and what its failure behavior pattern will be .</p>
+</details>
+<h3>工作流的三大重构与工程权衡</h3>
+<p>面对能力暴增 10 倍的模型现状，工程师的实际开发工作流迎来了三大根本性变化：</p>
+<ol>
+<li><strong>告别拜占庭式的子技能拆分迷宫</strong>：一年前，受限于 200 条指令上限，工程师必须把 Prompt 压缩到极致，或者构建错综复杂的子 Agent 路由系统；现在你可以直接编写包含几百上千条规则的长 Skill 文件，把详尽的品牌规范、法律免责声明和排版规则一口气注入上下文中。</li>
+<li><strong>免去指令丢失的持续焦虑</strong>：如果有 100 到 300 条具体规则，现在可以直接全部放进单个 Prompt 中，模型已经具备可靠追踪 2,000 条显式约束的能力。</li>
+<li><strong>从“可行性壁垒”转向“成本与延迟权衡”</strong>：过去的问题是“模型能不能做到”，现在则是“成本是否划算”。一次性输入数千条指令会导致请求极其庞大、推理成本显著上升且响应延迟拉长。</li>
+</ol>
+<p>然而，我们必须清醒认识到相关局限与潜在风险。近期 Chromatic 针对 18 款模型开展的 <strong>“上下文干旱”研究</strong>（Context Drought Study）显示：在远未达到上下文窗口极限前，长输入的准确率就可能下降 30%~50%，且结构连贯严密的文本反而比打散的无序指令更容易触发失效。此外，另一项涵盖 46 款模型的研究指出，模型对指令的表述方式和排列顺序极其敏感——即使能遵循 2,000 条规则，微调规则顺序仍可能导致执行质量骤降。</p>
+<p>更重要的是，跟踪 2,000 个独立词汇并不等于具备复杂的跨规则推理能力。当海量指令之间存在潜在冲突、张力或需要权衡取舍时，模型极易产生幻觉或断裂。同时，在成本方面，本次涵盖 7 款模型、共计 2,300 次 API 调用的全部测试仅花费了 209 美元，前沿评测的成本其实并不高昂。</p>
+<p>最终的工程结论非常明确：一年前编写 Skill 的难点在于“压缩”，即如何把规则塞进狭窄的上下文里；而现在的核心难点在于“验证”（Verification）。你不能指望靠写出更完美的 Prompt 来解决可靠性问题，唯一的出路是在生产环境中通过 <strong>大模型评估</strong>（LLM Evaluation: 利用专门的评测模型与监控流水线对输出质量进行系统化校验）对每一次输出进行严格把关。请重新审视你 6 个月前建立的 Prompt 架构假设，因为底层基础设施早已更新换代。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Well, so the models have become 10 times better. They fail in funny ways. Why should this worry you when you get back to your desk? Because three things have changed in your workflow. The first is that a year ago it was smart to keep the skills file very, very short. Uh, up to 200 instructions, then links to sub-skills and a whole, you know, Byzantine maze of, uh, additional skill files, sub-files, and the like. Oh, and you were squeezing your instructions to fit into the very small space available, but you don't have to do that anymore. Your skill files can be very long. Um, number two—is that if your case requires 100 or 300 specific rules, you can just put them all in the query. Well, you don't have to lie awake wondering which ones the model silently ignored. Um, and if you've been thinking, uh, about your own experience using models , uh, you'll probably recognize this. You found that you started to worry less about how long your query was going to be , uh, because the models actually became 10 times better at following your prompts. Um, 2000 named restrictions— that’s a whole style guide, right? It's like every brand rule, every legal disclaimer. Well, a year ago you would have had to distribute this among a dozen specialized agents and hope that your specialized agents clearly delegated tasks to each other, but now you can ignore that. Um, but the third thing is the most important. The question used to be: can a model even do this? And the answer is now firm: yes. Well, it's solid enough. Well, is it worth the cost? That's a new question. Because you can include 10,000 words, sorry, 10,000 different instructions in your query, but it will be a huge query. This will be a very expensive request. This will be a very slow request. So what used to be a blank wall you were running into is now a flexible choice: Should I add all these extra instructions if it will result in higher costs and more latency? Well, now a few caveats to get ahead of the questions . Um, first and foremost, I mentioned this before, is the proxy task: including random words in a fake business report is evidence that the long skills file is working. This is not the same as proof that a long skills file works. Um, also the models hit the wall at very different points, from 750 to over 9,000. So you need to choose your model very carefully. Well, our test doesn't measure whether the model clearly reasoned over a giant query. So the good news is that since I did my research a few weeks ago, a whole bunch of people have gotten involved . Um, and now there's some good research. Real scientists got involved, and Chromatic conducted a “ context drought” study on 18 models, showing that accuracy on long inputs can drop by 30–50% long before the context window limit is reached. Well , the most surprising part of their discovery was that coherent, well-structured text is more likely to encounter this failure mode than if you just randomly arrange the instructions and mix them up. Well, I do n't know why this happens. I should read the report. Um, so the model can track 2,000, 5,000, maybe 10,000 instructions, but it won't necessarily be able to reason clearly about them. If these instructions contradict each other, if there is tension between them , the model will not necessarily handle it correctly. Um, and there's something else I mentioned in passing. Well, Claude's refusals are annoying, but they are loud. You get an error and know that something went wrong. Eh, a polite, underwritten GPT report is much more dangerous because it looks like a real answer. Well , you have to read all this to notice that he quietly gave up halfway through, which means you can't trust the outcome. This means you have to re-read the result every time to make sure it works or not. So, the model will take your 2,000 rules and give you something that at first glance seems confident and polished, but may break down halfway through. By the way, people always ask me how much did all this cost me? Completing all these requests cost me $209. 2,300 calls to seven models cost $209. It turns out that the latest research is n't that expensive. Ahem. This is the part of the conversation where I say you should test this in a production environment because you can't be sure your model won't fail silently. You knew I would mention evaluation because I work at A Rise and that's what I do there. But I won't abuse the A Rise advertising. I'll tell you one truth: if you build a real AI application and give it really complex tasks, you will encounter one or more of these advanced failure modes. And if Claude at the API level sends you to hell, the only way to know that something went wrong is to monitor the output data with another LLM. This is what evaluation is, this is what A Rise does, and this is where I will stop. I already mentioned that new ones have emerged since our research . Here's another important study, a paper testing 46 models called &quot; Reviewing the Reliability of Language Models in Executing Instructions, &quot; which, you can be sure, caught my attention after my own work. They discovered something unpleasant: a model can successfully pass a test like ours and still remain extremely unreliable. Because if you rephrase the same instruction slightly differently, it can drastically change the quality of its execution. A model can execute 2,000 instructions very well, but if you change the order of those same 2,000 instructions, it can suddenly start executing them much worse. And how exactly to do this? What order of instructions to give to a model so that it executes them perfectly and doesn't get confused is a question that is still being researched. So, capabilities have increased, but reliability remains a problem. And that's just a little bit of bragging, because I was happy about it. For example, I am not a scientist. I did the research, and then a whole bunch of real scientists got involved and did real scientific work on the same question. Now there are a whole host of tests that have emerged to measure the same question. Fire bench , CCR bench, guide bench— they all try to measure the same thing. How well the models adhere to many real-world, complex constraints simultaneously. And now the entire industry is paying attention to this. So if you need better science than my, you know , 10,000 random words, then real science already exists. So that brings me to where I'll leave you. A year ago, the hardest part about writing a skill was fitting everything in so that the model didn't lose its essence. It was a compression problem, and that compression problem is no longer there. The model will handle your 2000 instructions just fine. The new difficulty is knowing whether she did what you said , and that's the problem of verification. The verification problem is not solved by writing a better prompt. It is solved by checking the result each time, just like you test any other code, i.e. through evaluation. The ceiling has risen 10 times in 1 year. So go back and check the assumptions you made 6 months ago about how big your prompt should be, how big your instructions should be, because they may already be wrong. So, that's all I wanted to say. If you need all the code and data, it's at this link on GitHub. And this other QR code is what the marketers forced me to insert . We're having a World Cup viewing party today at 5:00 PM . You can come to our party. This is a link to Luma that will help you get to the party. I hope this conversation has given you new information or at least made you laugh, and thank you very much for your time and attention.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Arize AI" class="entity-link company-link">Arize AI</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=GPT-5.5" class="entity-link product-link">GPT-5.5</a>, <a href="/search/?q=Claude Opus 4.7" class="entity-link product-link">Claude Opus 4.7</a>, <a href="/search/?q=Gemini 3.1 Pro" class="entity-link product-link">Gemini 3.1 Pro</a>, <a href="/search/?q=DeepSeek V4 Pro" class="entity-link product-link">DeepSeek V4 Pro</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">instruction-following</span>
+      
+        <a class="tag-link" href="/tags/llm-evaluation/">llm-evaluation</a>
+      
+        <a class="tag-link" href="/tags/agent-skills/">agent-skills</a>
+      
+        <span class="tag-pill tag-pill--no-page">benchmark-testing</span>
+      
+        <a class="tag-link" href="/tags/context-window/">context-window</a>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

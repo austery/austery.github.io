@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2036年超级智能技术瓶颈假设与AI发展天花板的探讨</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="2036年超级智能技术瓶颈假设与AI发展天花板的探讨" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">2036年超级智能技术瓶颈假设与AI发展天花板的探讨</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Dwarkesh Patel</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-11</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/dwarkesh-patel/">Dwarkesh Patel</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=PrSf7IOYu-I" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-11
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">文章探讨了在2036年，如果世界没有出现颠覆性的超级智能，最可能的技术原因。讨论了模型泛化能力、仿真到现实的差距、持续学习的难度以及当前范式（Transformer&#43;RL）的创新不连续性，以及AI研究人员生产力提升的预测，最终将人工超智能的实现时间范围预估在3到10年之间。</div></div>
+      
+    </div>
+    <!-- chunk 1/9 -->
+<h3>2036年未能实现超级智能的技术瓶颈假设</h3>
+<p><strong>Dwarkesh Patel</strong>: 今天我要和三位AI研究员朋友聊聊，每次和他们交流我都获益匪浅。而且他们正好都在相对开放的实验室和公司工作，所以今天可以畅所欲言。坐在我身边的有 Zyphra 的 CTO Beren Millidge，他们正在开发开源模型；Thinking Machines 的首席科学家 John Schulman，他曾是 OpenAI 的联合创始人，并主导了促成 ChatGPT 诞生的 RLHF 工作；还有 Baseten 的模型训练负责人 Charlie O’Neill。</p>
+<p>我的第一个问题是：假设到了2036年，如果世界上并没有到处跑着数以十亿计、彻底改变世界的超级智能，最可能导致这种情况的原因是什么？排除外部政治冲击、战争或全面禁止AI等非技术因素，导致2036年没有出现这种颠覆性外星超级智能的最可能的技术原因是什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Dwarkesh Patel</strong>: Today, I’m chatting with three of my AI researcher friends from whom I learn a lot every time we talk. They also happen to be at somewhat open-ish labs and companies, so you guys can actually say things on the record. I’m joined by Beren Millidge, who is the CTO of Zyphra, which is developing open source models. John Schulman is the chief scientist at Thinking Machines, previously a co-founder of OpenAI, and led the RLHF work that led to ChatGPT. And Charlie O’Neill is head of model training at Baseten.</p>
+<p>The first question I have: If we’re in 2036 and we don’t have billions of crazy superintelligences running around that have radically transformed the world, what is the most likely reason that doesn’t end up being the case? Other than exogenous political shocks, or there’s a war, or they ban AI or something. What is the most likely technical reason that 2036 isn’t a crazy alien superintelligence world?</p>
+</details>
+<p><strong>Beren Millidge</strong>: 这里存在一个经典现象，有点类似于莫拉维克悖论（Moravec's paradox）。我们过去总认为：“如果AI能做到这件事，那它就太厉害了。”比如如果它能解出那些极其高深的数学题，如果它能在国际象棋中获胜等等……然而当它真正解决了这些问题后，却发现带来的实际冲击并没有想象中那么巨大。显然它确实有影响，但并没有颠覆一切。</p>
+<p>如果这种情况一直持续下去，模型始终没有诞生出真正的泛化火花，我认为这可能会导致AI只能在人类放进基准测试（benchmark）或特定环境里的任务上表现得极其出色。但现实中依然存在一个难以逾越的“仿真到现实”（sim-to-real）差距，以某种方式阻碍了一切进展。</p>
+<p>我觉得这种可能性不大，因为在实践中我们确实已经从强化学习（RL）中观察到了这种泛化能力。但如果元学习（meta-learning）的泛化难度超乎想象，再加上我们无法解决持续学习（continual learning）的问题，使得突破变得极其困难甚至不可能……那么在那种情况下，这就是我的默认预设场景。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Beren Millidge</strong>: There’s been a classic thing, almost like Moravec’s paradox, where we think of the AI as, &quot;If it can do this, it’s going to be amazing.&quot; If it can solve these hard maths problems, if it can win at chess, blah, blah, blah… Then it solves these things, and it’s not that impactful. Obviously, it’s somewhat impactful, but not everything.</p>
+<p>If somehow that continues, and there’s never the true spark of generalization that occurs, I think that could lead to the AI just being extremely good at everything that people put into a benchmark or put into an environment. But there’s still some persistent sim-to-real gap which is somehow blocking everything.</p>
+<p>I think this is unlikely. We do actually see this kind of generalization even from RL in practice already. But if it is just ridiculously hard to generalize meta-learning, plus we don’t solve continual learning and it’s just super hard and impossible… This would be my default scenario in that case.</p>
+</details>
+<p><strong>John Schulman</strong>: 我同意这一点。目前人类相比模型依然拥有很多优势。每次有新模型发布时，它都会在其中一些领域赶上来。但最终你还是会被模型较为薄弱的环节所卡住——比如它的判断力较差，或者模型自身无法进行足够有效的自我检验。</p>
+<p>现在一直存在这样一个不断重复的循环：每当一个新模型推出时，人们都会被震撼，觉得“这就是了，这就是 AGI”。但实际使用一段时间后，大概过了一个月左右，它又开始让人觉得笨拙了。</p>
+<p>这个循环可能会一直持续下去，很难预测它到底会重复多少次。目前来看，能力并没有出现爆发式增长，原因在于当你尝试用它做研究和工程时，依然会遇到足够的瓶颈。即便模型编写的代码量远超人类，它也无法让你直接获得100倍的生产力提升。所以可能这类循环的次数会比我们预期的要多得多。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John Schulman</strong>: I agree with that. Humans have a lot of advantages over models now. Each time a new model comes out, it’ll catch up in some of these areas. But you end up getting bottlenecked by the places where the model is weaker and where it has worse judgment, or the models can’t check themselves well enough.</p>
+<p>There’s this cycle that keeps repeating where a new model comes out and people are blown away and they’re like, &quot;This is it. This is AGI.&quot; But then they use it a bit, and it starts to feel dumb after a month or so.</p>
+<p>That cycle just might keep going. It’s hard to predict how many times it’s going to repeat. Right now, you don’t get explosive growth in capabilities because you still get bottlenecked enough when you’re trying to do research and engineering. Even if the model can write way more code than a person, it doesn’t make you 100X more productive. So maybe there are just more of these cycles than we would expect.</p>
+</details>
+<h3>当前范式的天花板与不连续性创新</h3>
+<p><strong>Charlie O’Neill</strong>: 对我来说，核心问题在于：基于当前 Transformer + 强化学习（RL）的基本配方，与“单颗芯片上所能实现的学习系统全局最优解”之间，到底有多大的差距。</p>
+<p>人们设想，一旦拥有了一个在AI研究能力上超越所有人类的智能体——即便只比全人类优秀0.1%——由于你可以并行运行数十万甚至数百万个这样的智能体，而且随着芯片速度的提升它们能以极快的速度运行，这种规模化将压倒所有其他瓶颈。最终在自我改进（self-improvement）上实现极其快速的起飞（fast takeoff）。</p>
+<p>但我设想，如果我们沿着当前的轨迹继续走下去——也就是自注意力机制（self-attention）、强化学习、不断扩大强化学习环境规模这一套范式……不妨想想摩尔定律的发展历程。摩尔定律曾呈现出非常漂亮的线性增长，并维持了相当长的时间；但在这背后，必须发生大量离散的不连续性（discontinuities）和底层创新，才能维持住那条缩放定律。</p>
+<p>大语言模型也是同样的道理。我们最初拥有预训练的缩放定律，随后遇到了收益递减；接着我们引入了强化学习解决了这个问题，从而迎来了新的曲线，使得整体看起来依然像是一条持续向上的直线。</p>
+<p>因此，如果维系发展需要另一个类似的不连续性创新来破解瓶颈，我不确定目前用这些强化学习环境（甚至是针对自我递归改进 RSI 的强化学习环境）训练大模型的方法，是否能够发现那种不连续性创新。如果不能，我们很可能会撞上一条渐近线（asymptotic curve）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Charlie O’Neill</strong>: For me, it’s a question of how far off the global optimum of &quot;a learner you could have on a chip&quot; is from the transformer + RL, basically the current recipe.</p>
+<p>People imagine that once you have an agent which is better than all humans at AI research, even if it’s 0.1% better than all humans, then the fact that you can run hundreds of thousands, if not millions, of these in parallel — and you can run them much faster as chips speed up — is going to outweigh every other bottleneck. You’re eventually going to hit this very fast takeoff with regards to self-improvement.</p>
+<p>I could imagine that if we continue along the trajectory that we’re currently on with that paradigm, where it’s basically self-attention, RL, scaling up RL environments… Think about what happened with Moore’s law. We had this very nice straight line and that held for a really, really long time. But there were so many discrete discontinuities and innovations that had to happen to keep that scaling law going.</p>
+<p>The same thing has happened with LLMs. We had this pre-training scaling law, and then that was hitting diminishing returns. Then we came up with RL and solved that, and then we got this new diminishing returns curve to hit that made it keep looking like a straight line going up.</p>
+<p>So if it requires another one of those discontinuities to solve, I’m not sure that the current method of training LLMs with these RL environments, even RSI-targeted RL environments, would be able to discover that discontinuity. If not, we’re probably going to hit this asymptotic curve.</p>
+</details>
+<p><strong>Dwarkesh Patel</strong>: 但你认为接下来的这种不连续性创新，会比2012年以来出现的任何突破都更难吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Dwarkesh Patel</strong>: But do you think the discontinuity will be harder than anything that’s come since 2012?</p>
+</details>
+<p><strong>Charlie O’Neill</strong>: 如果我们知道这个答案，我们基本上就已经有能力去实现它了。不过也许我们应该区分两种情况：一种是累加在当前范式之上的不连续性创新，即具有累积效应的突破——在现有的强化学习之上存在某种我们需要发现的新机制，也许它们有能力在这条直线上将线索串联起来；另一种则是，我们距离全局最优解究竟还有多远？我们是否必须推倒重来，彻底抛弃梯度下降（gradient descent）乃至整个神经网络体系？</p>
+<p>我认为，如果只是继续扩大当前范式的规模，无论你运行多少个大模型，如果真正的最优解距离太远，模型未必能够自主发现它。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Charlie O’Neill</strong>: If we had the answer to that, we’d kind of have the ability to implement it. But maybe we should distinguish between a discontinuity which adds to the current paradigm, which is cumulative — there’s something beyond the RL that we have to discover, and maybe they’re capable of connecting the dots in that straight line — or, again, how far off the global optimum are we? Do we have to go back and throw out gradient descent and neural nets in general?</p>
+<p>I don’t think, if you continue to scale up the current paradigm, an LLM, no matter how many LLMs you’re running, is necessarily capable of discovering that if it’s too far away.</p>
+</details>
+<p><strong>Beren Millidge</strong>: 唯一的希望在于深度学习是否根本无法让我们造出一种在人类研发能力上全面超越人类的AI——包括人类提出全新范式等维度的能力。或者我也说不准，也许人类自身也永远无法发现下一个学习架构。但在人类最终能够发现它的前提下……如果仅仅回顾从2012年至今所取得的进展并将其线性推演——尽管我知道这主要是由庞大的算力扩展等因素推动的——如果它不能在未来几年内发展到至少在研发（R&amp;D）上超越人类的水平，那反而会显得非常不可思议。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Beren Millidge</strong>: The only hope really is if deep learning just can’t get us to an AI which can at least dominate human research and human development, including the human ability to come up with new paradigms and so forth. Or, I don't know, maybe humans would also never have discovered the next learning architecture. But to the extent humans could have discovered it eventually… But it just seems like… If you just look at the progress that’s happened since 2012 till now, and you just continue that on —I know it’s just been powered by huge amounts of compute scaling and so forth— it would be weird if it just didn’t get to the point where it could dominate humans, at least in R&amp;D, especially over the next few years.</p>
+</details>
+<h3>Elo积分跃迁与开放式科学目标</h3>
+<p><strong>Charlie O’Neill</strong>: Ryan Greenblatt 最近上了这档播客。他提出了一个观点，我很想听听你们的看法。</p>
+<p>你可以设想，随着AI的能力越来越强，它们将能够在各种模拟环境中取得进展，而这些环境不仅激励它们在AI研发上变得更强，也激励它们在广泛的科学探索上变得更强。这是各大实验室以及许多初创公司目前都在瞄准的方向。</p>
+<p>另一个直觉模型是观察自80年代以来国际象棋机器人的 Elo 积分变化。随着时间的推移，Elo 积分呈现出非常线性的增长。但在跨越人类水平区间时，发生了一个巨大的断层：从人类专家总是能击败AI，骤变为人类专家永远无法战胜AI，而背后的 Elo 积分其实只是在平稳线性上升。</p>
+<p>我同意你的观点，到目前为止，AI能力在世界最终经济影响方面确实还没有达到颠覆性的程度。但这是因为它们相对于人类的 Elo 积分仍在缓慢上升。我也同意，如果这种跃迁没有发生，那将是非常令人吃惊的。</p>
+<p>唯一导致这种情况无法发生的前提，正如你所说，是它在跨越人类水平之前就遇到了某种渐近线瓶颈。因为在我看来，我们现在距离跨越人类 Elo 积分的临界点已经相当接近了。所以要阻断它，就必须在此之前触碰天花板。如果出现你设想的“到了2035年一切依然照旧”的局面，我认为这是唯一的可能途径。</p>
+<p>另一种可能就是对AI实施了极其严厉的监管干预。实际上，相比技术本身的瓶颈，我认为监管才是促成这种停滞场景发生的最可能原因。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Charlie O’Neill</strong>: Ryan Greenblatt was on the podcast recently. He made this point that I’d be curious to get your thoughts on.</p>
+<p>You could imagine, as AIs get more and more capable, that they’re capable of making progress on simulations which incentivize getting better at not only AI R&amp;D, but at science generally. This is a thing that all the labs are targeting and many startups are targeting.</p>
+<p>Another intuition pump is if you look at the Elo score of chess bots since the ’80s. There’s a very linear increase in Elo over time. But there’s this huge discontinuity as they cross the human range, from human experts always winning against AIs to human experts never winning against AIs, as this linear increase in Elo happens.</p>
+<p>I agree with your point that so far, AI capabilities have not been that big of a deal in terms of their end economic impact in the world. But that is because they’re slowly rising in Elo relative to humans. I agree it would be very surprising.</p>
+<p>The only way for this to not happen is if, as you said, it somehow asymptotes just before. Because we’re already pretty close, in my opinion, to where we’ll start crossing the human Elo score. So we’ll need to asymptote before that. That’s the only way — in this scenario you pose where somehow we’re sitting here in 2035 and everything is normal — for this to happen, I think.</p>
+<p>The only other way is there’s some dramatic regulation on AI. This is what I see as the most likely way for this scenario to happen, actually, rather than a technical thing.</p>
+</details>
+<p><strong>Charlie O’Neill</strong>: 我认为科研也分为不同的类型。有一种是类似自动化研究（autoresearch）风格的研究，其优化目标已经被非常清晰地定义好了，你只需要围绕该目标进行优化。大家都设想，只要我们沿着降低预训练损失（loss）、提高环境奖励（reward）这条路走下去，就能带来持续的进步。</p>
+<p>但也许 Ryan 所指的，是范式转换所必需的那种更加开放式的科学探索。在这种场景下，我们无法预先精确指定优化目标，而AI显然也无法自行定义这个目标。在为这些系统设定目标函数时，我们必须极其谨慎。</p>
+<p>也许你的核心论点在于，2012年以来所发生的那些突破的本质是……在2012年的时候，人们并没有预见到……我猜想是这样，毕竟我当时不在场，而你们在，至少 John 你当时就在行业一线。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Charlie O’Neill</strong>: I think there’s different kinds of research. There’s research in the autoresearch style where the objective is already specified very cleanly and you’re optimizing that objective. I think everyone is picturing that if we continue along this path of making pre-training loss go down and making our environments have the reward on them go up, that’s going to lead to improvement.</p>
+<p>But maybe what Ryan is talking about is this much more open-ended type of science which is required for paradigm shifts, where we can’t specify the objective, and the AIs are definitely not able to specify that objective either. We have to be really, really careful about how we specify objectives for any of these things.</p>
+<p>Maybe your point is that the nature of the breakthroughs that have happened since 2012 is that we have found… In 2012, people weren’t saying… I’m assuming, I don’t know, you guys were there. Or at least John, you were there.</p>
+</details>
+<p><strong>Charlie O’Neill</strong>: 但我当时不在，我那时还在上小学呢。</p>
+<p>不过 John，我真的很想听听你这位行业先驱的经验之谈，或者说当年在战壕里摸爬滚打的真知灼见。按理说，当年一个巨大的突破就是意识到“下一个词预测（next token prediction）”才是关键……在2014年的时候，你绝对不会想到去优化类似 nanoGPT 刷榜（speed run）这样的事情。但既然我们已经进入了这个新范式，你自然就会想到去针对它做优化，并让AI在这方面变得极强。</p>
+<p>然而，未来可能存在下一个我们根本无法预见的新内层循环（inner loop）需要去优化。虽然存在一个由商业营收等构成的外层循环（outer loop），它最终应该会形成强有力的牵引，但那个外层循环的反馈极其缓慢。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Charlie O’Neill</strong>: But I was not. I was in primary school.</p>
+<p>Actually, John, I’m curious for your wisdom of the ages, or wisdom of being in the trenches way back when. Presumably, a big breakthrough was realizing that next token prediction is the… You wouldn’t have thought that the nanoGPT speed run is the thing to be optimizing for in 2014. But now that we have come to this new paradigm, you would think to do a speed run on that and have AIs get really good at that.</p>
+<p>But maybe there’s a next inner loop to optimize that the AIs wouldn’t anticipate. There’s an outer loop of revenue or something that eventually should be strong, but it’s a very slow outer loop.</p>
+</details>
+<h3>下一个词预测与超预期的泛化能力</h3>
+<p><strong>John Schulman</strong>: 事实上，我记得在 OpenAI 早期的时候，我直觉上也认为单纯最小化对数损失（log loss）是不可能通向通用智能的。因为核心关键的信息在整个损失函数中所占的比例太小了，很容易被海量的噪声所淹没。所以当时觉得，仅仅在大语言模型上训练下一个词预测，是学不到你真正希望它掌握的那些有价值的内容的。我们必须设计出更好的优化目标，把重心放在更重要的事情上。</p>
+<p>你可以为此提出各种各样的论据。比如你可以说：“人类大脑显然并不需要对环境中的一切事物进行建模。大多数人根本无法将自己看过的某个场景以照片级的真实度在脑海中复现出来。所以我们肯定需要一个更好的优化目标。”</p>
+<p>然而事实证明，单纯做下一个词预测就这么直接奏效了。正如你刚才指出的，即使在当前的AI研究中，后训练（post-training）基准测试等内层循环的表现，也未必能够直接转化为真实用户的实际偏好。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John Schulman</strong>: In fact, I remember in the early OpenAI days having the intuition that just minimizing log loss wasn’t going to get you to intelligence. Because the important bits are accounting for such a small fraction of the loss that it was going to be overwhelmed by noise. So just training a language model on next token prediction wasn’t going to learn the interesting things you want it to learn. We needed to craft better objectives that would put more emphasis on the important things.</p>
+<p>You can make all sorts of arguments for this. You could say, &quot;Oh, humans probably don’t learn how to model everything in our environment. Most people can’t create a photorealistic reproduction of some kind of scene they’ve looked at. So we must need a better objective.&quot; But then it turned out that it just worked anyway.</p>
+<p>As you were pointing out, the inner loop, even in current AI research, of post-training benchmarks or whatever, doesn’t necessarily translate into what users like.</p>
+</details>
+<p><strong>John Schulman</strong>: 确实如此。整个领域在很大程度上都依赖于泛化，而你极难预测泛化究竟会在何时发生，或者何时会出现某种分布外泛化（out-of-distribution generalization）。</p>
+<p>我们知道，如果你专门针对自己在意的特定任务进行训练，模型表现肯定会更好。但最关键的重大突破，往往来自那些我们事先根本没有理由抱有期望的泛化类型。</p>
+<p>举例来说，仅仅通过在极其朴素的下一个词预测目标上进行预训练，模型就泛化到了各种需要对输入进行深层理解的目标任务上；或者在预训练过程中，模型学会了某些极其罕见、在数据集中占比极低的技能。</p>
+<p>再比如，从那些可验证的任务（verifiable tasks）泛化到难以验证的任务上，这同样是一种我们从先验角度没有任何理由预期的泛化能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John Schulman</strong>: Oh, yeah. The whole field relies a lot on generalization and it’s very hard to predict when you’re going to get generalization, or when you’re going to get some kind of out-of-distribution generalization.</p>
+<p>We know that if you train on the task you care about, you’re going to do better. But the most important advances are often types of generalization that we have no right to expect. For example, from just pre-training on this very naive next-token-prediction objective to various tasks of interest that require understanding of the input in some deep way, or learning some skill from pre-training that’s very rare and not heavily represented.</p>
+<p>Then also generalization from these verifiable tasks to less verifiable ones, this is also a type of generalization that there’s no reason a priori to expect.</p>
+</details>
+<p><strong>Dwarkesh Patel</strong>: 这是一个非常耐人寻味的问题。因为如果你要寻找一个为什么奇点可能会极其迅速到来的直觉推导——甚至都不需要扩大除了AI劳动力之外的其他AI研发要素投入——那就是在运行每一个耗资达七位数的重大实验之前，你都可以投入等额的算力来换取AI劳动力。</p>
+<p>这样一来，就相当于有无数个自动化的你们，在实验前花费相当于一个世纪的时间去深入思考究竟什么是最佳的实验方案，进行小规模的消融实验（ablations），甚至从深度学习诞生之前的源头重新推导并构建整整一个世纪厚度的理论体系。</p>
+<p>在真正决定启动哪项实验之前，你就已经对实验设计进行了极其极致的全局优化。而在实验结束之后，又可以投入相当于一个世纪的思考时间，深入分析实验得出的……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Dwarkesh Patel</strong>: This is an interesting question, because one intuition pump you could have for why you would see some sort of singularity very rapidly — without even scaling up the inputs to AI progress that are not just AI labor — is that before every single 7-figure experiment you run, you spend an equivalent amount of compute on AI labor.</p>
+<p>So you just have automated versions of you guys spending a century thinking about what is the optimal experiment to run, doing small-scale ablations, developing literally a century’s worth of theory, going back even before deep learning. Before you decide what experiment to run, you’re doing extremely optimal setting up of the experiment.</p>
+<p>Then you do a century of thinking after the experiment is over, where you’re analyzing what</p>
+</details>
+<!-- chunk 2/9 -->
+<h3>理论构建与目标设定的自动化边界</h3>
+<p><strong>Guest</strong>：……发生了什么，以及接下来应该运行什么实验。</p>
+<p>如果你足够深入地思考，有些事情你可能事先就能预料到。很可能存在某种非常巧妙的方法，可以通过小规模实验来建立理论，进而泛化到大规模实验中。因此我认为，我们在科研效率上还远未达到天花板。</p>
+<p>我设想的未来是，AI 将承担大量的分析和理论构建工作，在这上面消耗的算力与实际运行实验本身的算力相当，通过各种分析，围绕我们迄今所观察到的现象建立理论。</p>
+<p>我认为，在目标明确定义的情况下，已经有非常具体的例子了。思考所能做的，充其量只是根据你形成先验信念以来所获取的信息量（bits）来更新后验概率。你无法仅仅通过思考就获得全新的信息量。但只要目标明确，且周围已有这些现成的数据，我认为在当前范式下就会迎来巨大的速度提升。</p>
+<p>一个很好的例子是，如果你让 AI 去审视卡普兰缩放定律（Kaplan scaling laws）。如果是现在的 AI，它早就会指出：“噢，他们只是选取了这些中间检查点（checkpoints），而没有把退火过程（annealing）考虑进去，所以这是不对的。”</p>
+<p>这个缺陷本可以在几年前就被发现。仅凭 AI 的这一项观察，我们就能节省一到两年的进展时间。</p>
+<p>再次强调，一旦目标被明确定义——例如降低预训练损失（pre-training loss）或其他指标——就有非常非常多绝佳的例子：只要你多思考一点，就能够大幅砍掉过去所做的无用功。比如极大参数化（$\mu\text{P}$），学习率如何随模型大小缩放，以及意识到模型宽度在其中也同样重要。</p>
+<p>我觉得你完全可以推导并梳理出很多这类结论，从而摘掉大量触手可及的果实（low-hanging fruit）。如果我们当前的目标仅仅是“最大化现有目标函数”，我预计能带来 10 倍的速度提升。</p>
+<p>但我完全看不出这种能力如何能泛化到“最初就提出正确的目标”。仅仅依靠思考，并不一定能让你一开始就找到正确的目标。</p>
+<p>我认为这正是当前 AI 能否实现任何形式极速递归自我提升（Recursive Self-Improvement, RSI）的关键问题所在：AI 究竟能在多大程度上泛化到自主学习其自身的目标？</p>
+<p>要建立任何能够自我驱动的自动化循环，我们需要 AI 能够提出目标、优化目标、理解并解决问题，然后再提出新目标，并且这个闭环在很长很长的时间内都不会脱轨。</p>
+<p>回到莫拉维克悖论（Moravec's paradox），可能存在这样一种情况：我们认为这种自主性以及自我封装——即我们自己能够构想出应该做什么，然后付诸行动并形成闭环——是极其容易的，因为人类一直都在这么做。显而易见，自然进化必须创造出能够依靠自身长时间生存的生物。</p>
+<p>但出于某种原因，这对 AI 来说可能极为困难，就像运动控制与具身行动对 AI 极具挑战，而高等数学对 AI 却轻而易举一样，尽管对人类而言情况恰恰相反。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: happened and what the next experiment to run is.</p>
+<p>If you think hard enough, you probably could have expected some of these things beforehand. There is probably some very clever way to do a small-scale experiment that’ll let you build the theory that then will generalize to the large-scale experiment.</p>
+<p>So I would expect that we’re nowhere near the ceiling of how well you can do research. I would imagine a future where AI is doing a lot of analysis and theory building, spending a comparable amount of compute to the amount that you’re spending on the experiments themselves, doing various kinds of analysis and building a theory around what we’ve seen so far.</p>
+<p>I think there are really concrete examples of this when the objective is well specified. All thinking can do is update your posterior based on the bits that you’ve gotten since you formed your prior. You can’t gain any new bits from just thinking. But when the objective is well specified and there is this data sitting around, I imagine there will be this big speed-up in the current paradigm we’re in.</p>
+<p>A good example of this is if you got an AI to think about the Kaplan scaling laws. An AI at this point would have noticed, &quot;Oh, they’ve just taken these intermediate checkpoints and didn’t account for the annealing, and so this is wrong.&quot; That would have been caught years earlier. We would have cut off a year or two of progress just from that observation from an AI.</p>
+<p>Again, once the objective is well specified, which is lower pre-training loss or whatever, there are many, many good examples where if you just thought about it a bit more, you would have been able to cut down significantly on things that you’ve done. So muP, and how learning rate scales with model size, and realizing that model width is important in that as well. I feel like you can really back out a lot of these things and cut off a lot of low-hanging fruit. I would imagine a 10x speed-up if our thing is just, &quot;Maximize the objective we’re currently on.&quot;</p>
+<p>But I don’t see how that generalizes at all to coming up with the right objective in the first place. Just thinking doesn’t necessarily buy you the right objective in the first place.</p>
+<p>I think this is really the key question for any kind of very rapid RSI from current AIs. How well can AIs generalize to learning their own objectives? To have any kind of self-propelling automated loop, we need the AI to propose objectives, optimize them, figure that out, propose a new objective, and have this not go off the rails at any point for a long, long time.</p>
+<p>To come back to Moravec’s paradox, there might be a case of Moravec’s paradox where we think this kind of autonomy and being self-encapsulated — so we can think of what we should do ourselves and then go do it and have this loop — is super easy because we always do this. Obviously, evolution needs to create creatures that can survive by themselves for long periods of time. And this just might be something that for some reason is really hard for the AI, in the same way that locomotion stuff is really hard but math is super easy despite being super hard for us.</p>
+</details>
+<p><strong>Dwarkesh Patel</strong>：但是任务执行时间跨度（time horizon）的不断拉长，难道不表明这种能力正在……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Dwarkesh Patel</strong>: But doesn’t the time horizon increasing suggest that that’s—</p>
+</details>
+<p><strong>Guest</strong>：是的，完全没错。这是另一种可能性，不过我也同意，目前并没有明确的证据支持它一定很难。事实上，如今我们的智能体（agents）已经具有极强的持久性，而且实现这一点相对容易，这在某种程度上反而是反对这一假设的证据。</p>
+<p>但如果这确实很困难，那可能正是我们不会立即迎来智能爆炸式飞跃（takeoff）的原因之一。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, exactly. This is another possibility, but I agree, there’s no obvious evidence for this. In fact, the fact that our agents are now super persistent and it’s quite easy to do this is kind of evidence against this. But this would potentially be one of the reasons why we just don’t get this immediate takeoff, if this is hard.</p>
+</details>
+<hr>
+<h3>自动化研发中的人类最终职责与对齐</h3>
+<p><strong>Dwarkesh Patel</strong>：回顾从 2012 年至今——或者从你刚开始从事科研到现在的整个历程——在发生过的所有创新中，包括纯工程层面的创新和纯概念层面的创新，哪一部分看起来会是人类在 AI 完全实现自身研发自动化之前，必须承担的最后一项工作？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Dwarkesh Patel</strong>: If you look back from 2012 till now — or maybe from when you started doing your research till now — what part of all the innovations that have happened since that time, including purely engineering ones, including purely conceptual ones, seems like the thing that would be the last thing humans would have to do before AI totally automates AI R&amp;D?</p>
+</details>
+<p><strong>Guest</strong>：可能仅仅是迭代地提出正确的问题。</p>
+<p>即使你能让 AI 执行任何实验，你仍然需要决定该做什么实验。目前来看，我认为 AI 在这方面的能力远不如编写实验代码那样熟练。每当我们讨论科研时，它们提出的一堆杂七杂八的想法，往往都只是极其微小的一步。</p>
+<p>或者说，从 DeepMind 当初“我们要通过让模型在超人类水平上玩游戏来解决通用智能”的路径，转变为像拉德福德（Alec Radford）这样个别研究员提出“我要尝试在极其广泛的数据分布上仅仅预测下一个 token”……甚至在拉德福德发现这一点之后，人们也花了一段时间才决定将其规模化扩展，因为我们必须先提出缩放定律的概念，并确立这些规律可以被非常稳定可靠地预测这一事实。</p>
+<p>我认为人类最后的角色，或者说持续时间最长的人类职责，就是定义目标并决定我们真正想要的是什么。</p>
+<p>沿着这个思路，诸如决定 AI 助手应该如何表现、何为“有帮助”（helpful）、或者在我们进行基于人类反馈的强化学习（RLHF）时目标究竟是什么，就是这类任务之一。再往后，定义 AI 宪法（constitutions）和模型规范（model specs）也是如此。</p>
+<p>即使 AI 能够承担全部技术工作，我们仍然必须做大量的此类决策，去决定我们真正想要什么。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Probably just iteratively asking the right questions.</p>
+<p>If you can get the AI to do any experiment, you still need to decide what experiments to do. Right now I think AIs are not very good at this compared to coding the experiment. Whenever we talk about research, they propose a bunch of miscellaneous things which are very, very tiny steps.</p>
+<p>Or even going from DeepMind’s approach of, &quot;We’re going to solve intelligence by learning to play games at a superhuman level,&quot; to one random researcher like Radford being, &quot;I’m going to try and just predict the next token of a very wide swath of data&quot;… Even once Radford had discovered that, it took a while before people decided to scale it up, because we had to come up with the idea of scaling laws and the fact that you could very reliably predict these things.</p>
+<p>I would say that the last job for humans, or the role for humans that’ll last the longest, is defining the objective and deciding what we actually want.</p>
+<p>In that vein, something like deciding how the AI assistants should behave, or what it means to be helpful, or what the objective is when we’re doing RL from human feedback, is one such thing. Then later, defining constitutions and model specs is another one. Even if the AIs can do all the technical work, we’ll still have to do a lot of that and decide what we actually want.</p>
+</details>
+<p><strong>Dwarkesh Patel</strong>：对齐（Alignment）就是最终的工作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Dwarkesh Patel</strong>: Alignment is the final job.</p>
+</details>
+<p><strong>Guest</strong>：对齐在某种程度上就是答案。</p>
+<p>但对齐本身可以拆解为两部分：一是目标的规范说明，即弄清楚正确的目标应该是什么；二是实际去实现或优化你所定义的目标。</p>
+<p>我认为第一部分在短期内绝不会消失。</p>
+<p>如果我思考后训练（post-training）团队为什么需要大量的人员，原因就在于有太多不同的领域需要你去厘清模型在这些场景下应该如何表现。要将这整个流程自动化是非常困难的，单纯是因为必须有人去深入思考模型在特定领域的行为准则。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Alignment is sort of the answer.</p>
+<p>But alignment itself can be decomposed into specification of the objective, or figuring out what the right objective should be, and then actually achieving or optimizing the objective you’ve defined.</p>
+<p>I think the first one is not going to go away anytime soon.</p>
+<p>If I think about a post-training team and why you need a lot of people on the team, it’s just because there are a lot of different areas where you have to figure out how the model should behave. It would be very hard to automate the whole thing, just because someone has to think about how the model should behave in this area.</p>
+</details>
+<hr>
+<h3>赞助插播：Jane Street 与 Antithesis 破解验证瓶颈</h3>
+<p><strong>Dwarkesh Patel</strong>：Jane Street 在 2025 年初开始使用 Antithesis 来测试其软件，该团队对这款产品印象深刻，以至于决定对该公司进行投资。</p>
+<p>我最近与 Jane Street 技术部门的联合负责人 Ron Minsky 进行了交流，向他请教 Antithesis 究竟是如何接入并发挥作用的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Dwarkesh Patel</strong>: Jane Street started using Antithesis to test its software in early 2025, and the team was so impressed by the product that it decided to invest in the company. I recently caught up with Ron Minsky, who co-leads Jane Street’s tech group, to ask how Antithesis actually plugs in.</p>
+</details>
+<p><strong>Ron Minsky</strong>：我认为 Antithesis 最令人赞叹的地方在于，我们最初是在一个构建高保障（high-assurance）软件且行事极其严谨的团队中开始使用它的。尽管如此，它依然能够排查并揪出那些在通常情况下极难被发现的隐蔽缺陷。</p>
+<p>这之所以至关重要，一方面是因为它有助于让这些系统变得更加可靠，另一方面是因为它能帮助构建这些系统的团队大幅加快迭代速度。随着代码生成越来越自动化，这一点变得愈发关键。</p>
+<p>我认为总的来说，随着我们越来越多地使用智能体，你遇到的核心问题就是“验证瓶颈”（verification bottleneck）：即仅仅是人类审查代码并判断“这究竟是不是你想要合入生产环境软件的代码”所需花费的时间。</p>
+<p>能够提升测试质量的工具在此处能带来不可思议的助益。它们缓解了验证瓶颈，使你能够完成更多事情并跑得更快，因为你对智能体生成的代码不会引入新问题有了更大的信心。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ron Minsky</strong>: The thing that I think is most impressive about Antithesis is that we started using it on a team that was building high-assurance software and being really careful. Nonetheless, it was able to shake out bugs that were otherwise going to be really hard to find.</p>
+<p>That’s important both because it helps make those systems more reliable and because it helps the teams that build them move faster. This matters more and more as code production is increasingly automated.</p>
+<p>I think, in general, as we’ve been using agents more and more, the key problem you run into is the verification bottleneck: just the time it takes for people to look at code and figure out, is that actually something you want to accept into your production software? Tools that make testing better are just incredibly helpful there. They ease the verification bottleneck and make it possible for you to get more stuff done and move faster, because you can have more confidence that the code generated by the agent isn’t introducing new problems.</p>
+</details>
+<p><strong>Dwarkesh Patel</strong>：想要了解 Antithesis 如何融入您的开发流程，请访问 antithesis.com/dwarkesh。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Dwarkesh Patel</strong>: To see how Antithesis fits into your development process, go to antithesis.com/dwarkesh.</p>
+</details>
+<hr>
+<h3>模型蒸馏与中心化垄断的抗衡</h3>
+<p><strong>Dwarkesh Patel</strong>：模型提供商之间没有出现赢家通吃的大规模整合，背后的逻辑是什么？</p>
+<p>这里明明有太多因素指向了中心化。如果把时间跨度拉长到数年来看，有什么力量能阻止这种高度集中的垄断吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Dwarkesh Patel</strong>: What is the story for why there isn’t huge consolidation in model providers? There are just so many things that point to centralization here. If you step back over the course of years, is there something that is going to prevent that?</p>
+</details>
+<p><strong>Guest</strong>：我认为模型蒸馏（distillation）是对抗中心化垄断力量的主要武器。</p>
+<p>基本上，任何可以通过强化学习（RL）学到的能力，都可以极其轻易地被蒸馏出来，因为它的信息熵（bits）非常小。这是你可以仅用极少量数据就能学到的东西。如果你能从模型中获取展示某种行为的轨迹（trajectories），你就能轻松对其进行蒸馏。</p>
+<p>我认为蒸馏是抵御中心化的关键因素之一。</p>
+<p>此外，也存在这样一种可能性：未来会出现专门针对特定企业的定制模型，企业有可能直接从实际部署中学习，使自身模型持续不断地迭代进化。这样的系统既可以由现有的少数几家头部模型寡头提供，也可以由当前规模较小的其他公司提供。</p>
+<p>但我认为这将改变整个竞争格局。同时我还想指出，持续学习（continual learning）坦率地说并不能阻止蒸馏。即便你的模型每天都在进步，其他人也同样可以每天对它进行蒸馏。这两者的循环迭代完全可以保持同一节奏。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: I think distillation is the main thing that fights against the centralizing force.</p>
+<p>Basically anything that can be learned through RL can be distilled very easily, because it’s a small number of bits. It’s something that you can learn from a small amount of data. If you can get trajectories from the model that show a behavior, you can easily distill it. I think distillation is one of the things that fights centralization.</p>
+<p>There is also a possibility that there’ll be company-specific models, that it’ll be possible to learn from deployment and have a company continually improving its own model. Such a system could be provided by the current oligopoly of model providers or some other currently smaller company. But I think that’ll change the game a bit.</p>
+<p>I also want to point out that continual learning, honestly, doesn’t stop distillation. Even if your model is improving every day, people could be distilling it every day. The loops could just operate at the same pace.</p>
+</details>
+<p><strong>Dwarkesh Patel</strong>：这很有道理。所以复制模型行为……我想你自己必须清楚正确的提示词分布（prompt distribution）是什么，才能激发出对应的模型行为吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Dwarkesh Patel</strong>: That makes sense. So copying model behavior… I guess you need to know yourself what the right distribution to prompt is in order to get the relevant model behavior?</p>
+</details>
+<p><strong>Guest</strong>：噢，是的。仅就通过监督学习（supervised learning）进行蒸馏而言，提示词分布是极其关键的。</p>
+<p>想要蒸馏一个模型是非凡的难事，即使你拥有对它的完全访问权限，拥有它的思维链（chain of thought）等等所有输出。要想从中蒸馏出所有有用的能力依然非常复杂，因为你必须向模型输入提示词，而且必须输入贴近真实场景的提示词。你必须拥有极其广泛且真实的提示词分布。</p>
+<p>最近浮出水面的一个事实是，一些中国公司很可能正在使用各种路由代理服务（router services），这些服务旨在让中国境内的用户使用本会被封锁的美国前沿模型。存在大量这类的路由或代理服务，让中国用户能够调用这些模型，其中大部分是用于写代码。</p>
+<p>而这些路由服务正在收集并出售部分请求数据。对于蒸馏来说，这是一个极为宝贵的数据集，因为它直接为你提供了完美的真实提示词分布。</p>
+<p>我认为这是 AI 能提供巨大帮助的领域之一。如果你实际去看看前沿模型的流水线，或者中国模型在论文中公开的做法，他们都是从某些途径获取种子提示词（seed prompts）——这些种子通常来自人类编写与此类代理数据的结合。然后，他们利用现有的模型或其他前沿模型，从这些种子提示词中合成出覆盖面极其广泛的数据。</p>
+<p>在提示词分布的收集和评测环境的构建上，你可以实现极高程度的自动化。随着模型越来越强大，人类需要提供的信息量（bits）正变得越来越少。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Oh, yeah. For just distilling with supervised learning, the prompt distribution is extremely important. It’s very non-trivial to distill a model, even if you have full access to it and have the chain of thought and everything. It’s non-trivial to distill all of the useful capabilities from it, because you need to prompt the model with something. You need to prompt it with realistic prompts. You need to have a really wide distribution of realistic prompts.</p>
+<p>One thing that’s been coming out recently is that some of the Chinese companies are probably using these router services which are designed to allow people in China to use the US frontier models, which would otherwise be blocked in China. There are all these router or proxy services that allow people in China to use these models, mostly for coding. And these router services are collecting and selling some of the data. This is a very useful data set for distillation because it gives you the perfect prompt distribution.</p>
+<p>I think this is one of those things where AIs help a lot. If you actually look at the frontier pipelines, or the Chinese models that they’ve actually put in their papers, they get seed prompts from somewhere, which is some combination of humans and this kind of data. Then they synthesize a vast coverage from those seed prompts using their existing models or the other frontier models.</p>
+<p>You can automate an awful lot of this prompt distribution gathering and environment creation. Humans need to provide increasingly fewer bits as the models get better.</p>
+</details>
+<hr>
+<h3>真实用户分布与递归自我提升的交互闭环</h3>
+<p><strong>Dwarkesh Patel</strong>：但这看起来依然受到一个瓶颈的制约：你必须拥有一个有真实用户流经的实际服务产品。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Dwarkesh Patel</strong>: But it still seems you’re bottlenecked by having a service which has users going through it.</p>
+</details>
+<p><strong>Guest</strong>：不一定。拥有真实业务服务显然非常有帮助，但从理论上讲，你完全可以通过深入推演来思考用户究竟需要什么。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Not necessarily. That’s obviously very helpful, but theoretically, you can just think about what users want.</p>
+</details>
+<p><strong>Dwarkesh Patel</strong>：但核心关键在于，真实交互是用户说：“帮我做这样一个应用程序。噢，不行，没跑通。我其实希望你添加这个新功能。不过等等，我们还是退一步，换做另外这件事吧。”</p>
+<p>捕捉到这整个完整的交互轨迹（trace）才是最关键的。或者换句话说，如果你本来就能凭空做到这种模拟，那你就已经拥有了递归自我提升（RSI）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Dwarkesh Patel</strong>: But the whole point is that the user says, &quot;Make me an application like this. Oh, that didn’t work. I actually want you to make this new feature. But actually, let’s step back and do this other thing.&quot; Capturing that whole trace is the thing. Or to the extent you could have done that anyway, then you just have RSI.</p>
+</details>
+<p><strong>Guest</strong>：归根结底，如果你拥有这样一个全自动的闭环，那基本上就是递归自我提升了。AI 决定数据，AI 决定训练。这就是那个闭环。但这取决于你究竟需要多少来自人类的信息。</p>
+<p>到了某个阶段，如果你只是提出“我想要看起来像这样的轨迹”，并将其作为提示输入给模型，模型将能够生成相当精准的近似模拟。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Ultimately, if you have this fully automated loop, that is basically RSI. The AI is deciding the data, it’s deciding the training. That is the loop. But it depends how much human information you need. At some point, if you’re just like, &quot;I want traces that look like this,&quot; you prompt that to the model. The model will be able to come up with a pretty good approximation.</p>
+</details>
+<p><strong>Dwarkesh Patel</strong>：但如果你想让模型做到“帮我塑造一个优秀的政治家”，而它必须凭空（de novo）预判参议院大厅里的辩论会如何展开之类的情景呢？我只是觉得会有很多事情是……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Dwarkesh Patel</strong>: But what if you want to do, &quot;Make me a really good politician,&quot; and then it has to anticipate de novo how a discussion in the Senate halls would go or something? I just feel like there are going to be a lot of things which are—</p>
+</details>
+<p><strong>Guest</strong>：讽刺的是，这对于蒸馏者来说其实反而比前沿实验室更容易。蒸馏者只需要直接下达指令：“我想要一个优秀的政治家。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Ironically, this is actually easier for the distillers than the frontier labs. The distiller’s just like, &quot;I want a good politician.&quot;</p>
+</details>
+<!-- chunk 3/9 -->
+<h3>蒸馏困境与环境轴向：难度 vs. 真实性</h3>
+<p><strong>Host</strong>: 他们直接去找前沿模型。前沿模型本身就已经懂得如何成为一名优秀的政客，因此它只需生成这些行为轨迹即可。然而，如果你真正想从零打造第一个能做到这一点的模型，你就必须设法获取政客日常行为的数据，并以此为基础进行构建。实际上，直接说“我想要类似这样的东西”，然后让 AI 生成十亿种变体，要比从一开始凭空创造出这种能力容易得多。我认为基于“中国实验室掌握这些路由数据（router data）”的观察，完全可以做出一个非常具体的预测。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: They go to the frontier model. The frontier model already knows how to be a good politician, so it just generates those traces. Whereas if you actually want to build the first model that does this, you have to actually somehow get data on what politicians do every day and build that. It’s actually much easier to say, &quot;I want something like this,&quot; and then get the AI to produce a billion variations, than to actually create the thing like this to begin with. I think you can actually make a really concrete prediction based off this observation that the Chinese labs have this router data.</p>
+</details>
+<p><strong>Host</strong>: 最初引发这个讨论的起因是，我当时提出：“难道不觉得奇怪吗？Sonnet 5 和 Opus 5 在客观上几乎比 GLM-5.3 和 Kimi K3 表现更差，尽管它们不仅能获得普通的蒸馏支持，甚至还能获取来自 Mythos 的 logit 级蒸馏（logit distillation）？”而反方的观点是，提示词分布（prompt distribution）至关重要。你必须亲眼看到真实用户在做什么，才能把这些行为习惯和特性蒸馏进去。但我认为由此得出的推论是：前沿实验室现在在强化学习（RL）环境方面未必有多大优势，甚至根本没有优势。是的，用户分布对于通用行为等确实重要，但衡量模型能力的最高标准，始终是你在技术前沿所构建的那些极度严苛的 RL 环境。作为 Anthropic，如果你手握那些 RL 环境，又拥有 logit 蒸馏的权限，却依然做出了一个更差的模型，那么也许——</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: The thing that started this originally was I was saying, &quot;Isn’t it weird how Sonnet 5 and Opus 5 are almost objectively worse models than GLM-5.3 and Kimi K3, even though they’ve had access to not only distillation but logit distillation from Mythos?&quot; The counter was that the prompt distribution really, really matters. You need to see what users are doing so that you can distill these behaviors and things in. I think the prediction from this is that the frontier labs don’t necessarily have much of an advantage, if at all, in RL environments now. Yes, user distribution matters for general behavior and so on, but the best measure of a capability is the very, very hard RL environments you’ve made at the frontier. If you have access to those RL environments as Anthropic, and you have access to logit distillation, and you’ve still made a worse model, then maybe—</p>
+</details>
+<p><strong>Speaker B</strong>: 那么真实世界的部署就比训练环境更重要。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Then real-world deployment matters more than the environment.</p>
+</details>
+<p><strong>Host</strong>: 这确实很有意思。但他们最初在 Fable 或前沿模型中，必须首先激发（incentivize）出那些核心能力。所以令人费解的是，为什么他们无法在较小的模型上再次激发这些能力。也许我们正处于某种奇怪的恐怖谷阶段：试图过度复制前沿模型时，师生之间的差距（student-teacher gap）或者其他维度的鸿沟实在太大了。很多人在谈到 Opus 时也表达过类似的观点。Opus 4.6 与 Opus 5 的区别在于，Opus 5 让人感觉背后始终有一个“AI 裁判”（AI-as-a-judge）在审视它做出的每一个微小动作。这也是为什么它会消耗如此多的 Token。它试图去推敲所有这些细节，但它并不具备类似 Fable 那种大模型所独有的直觉与分寸感（big model smell），不知道何时应该适可而止，也不知道哪条路径才值得深入探究。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: That’s really interesting. But they had to incentivize those capabilities in the first place in Fable, or the frontier model. So it’s weird that they can’t incentivize them again with a smaller model or something. Maybe we’re just in this weird uncanny valley where trying to copy that frontier model too much, the student-teacher gap, whatever it is, is just too large. People have made this point with Opus. The difference between Opus 4.6 and Opus 5 is that Opus 5 really feels like it’s got this AI-as-a-judge checking every possible thing it’s done. That’s why it uses so many tokens. It tries to think about all these things, but it doesn’t necessarily have the big model smell of Fable to know when to stop doing that, or when’s a good path to go down.</p>
+</details>
+<p><strong>Host</strong>: 心有余而力不足，志大才疏。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: The reach exceeds the grasp.</p>
+</details>
+<p><strong>John</strong>: 我想提出一个略有不同的假设。我认为在构建评估与训练环境时，存在几个截然不同的维度：其中一个是“难度”（difficulty），另一个则是“真实性”（realism）。创建大量高难度环境相对容易，这些环境通常要求完成极其复杂的任务，或者需要展现极高的机智与聪明才智。你可以把这称为“刷榜分布”（benchmaxxing distribution），因为许多最著名的基准测试本质上都只是让模型去解一些极难且极易验证的谜题式任务。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: I would offer a slightly different hypothesis. I would say there are a couple of different axes for the environments you can create. One of them is difficulty and the other is realism. It’s comparatively easy to create a lot of difficult environments that involve doing a much more complicated task or doing something that requires a lot more cleverness. You could say this is the benchmaxxing distribution, because a lot of the most prominent benchmarks just involve doing some very hard puzzle-like task that’s easy to verify.</p>
+</details>
+<p><strong>John</strong>: 与此同时还存在“真实性”这个维度。在这个维度上，你希望模型在真实的编程智能体（coding agent）场景中表现出色，这意味着它需要与人类进行多轮来回交互，并且必须兼顾多个不同的目标。首次塑造模型行为的实验室需要同时向这两个方向发力。要获得出色的模型行为，你必须在真实性维度上狠下功夫，引入评分准则（rubrics）或某种形式的人类反馈，以此指导并构建那里的奖励函数（reward function）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: Then there’s the realism axis, where you want the model to be good in the realistic coding agent setting where there’s multiple back-and-forths with the human and there’s multiple objectives. The labs who are crafting the model behavior for the first time need to push in both directions. To get good model behavior, you need to really push on the realism axis and have rubrics or some kind of human feedback that’s informing the reward function you use there.</p>
+</details>
+<p><strong>John</strong>: 但如果你只是以一种天真的方式进行模型蒸馏，最终你只会让学生模型在“刷榜分布”上去强行拟合教师模型。如果你缺乏足够多的环境去在那些更为棘手且真实的场景中切实锤炼能力，那么你就无法将这些特质迁移到你的学生模型中。我认为正在发生的一种情况可能是：超大模型能够更好地从狭窄而复杂的任务泛化到更具现实意义的真实任务中。如果你拥有一套非常优秀的真实提示词分布用于蒸馏，你就能极好地拟合大模型；但如果你手里只有这种易于自动验证的任务分布，那么你在所有的基准测试上都能追平大模型，但在更广阔的真实任务分布上表现却会明显变差。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: But if you try to do distillation naively, you end up just matching the teacher on the benchmaxxing distribution. If you don’t have enough of the environments that really exercise the capabilities in these trickier realistic settings, then you’re not going to get those into your student model. I think maybe one thing that’s happening is the big models generalize better from the tricky narrow tasks to these more realistic tasks. If you have a really good realistic prompt distribution for distillation, you can match the big model really well. But if you only have this distribution of easily verifiable tasks, then you can match the big model on all the benchmarks, but you do worse on this broader distribution.</p>
+</details>
+<p><strong>John</strong>: 这甚至可以解释 Anthropic 某些较小模型（比如 Sonnet 5）身上出现的状况，尽管我们很难准确推测他们在后训练（post-training）这些模型时究竟采取了什么具体手段。也有可能只是因为他们总是在频繁变动后训练的技术栈，并在这些模型的某些环节上出现了一些失误。我说不准……也许是把某个参数调得过高，导致模型产生了一些令人反感的古怪行为（quirks）。在后训练中，稍有不慎就很容易搞砸某些东西，而这些问题往往根本不会在基准测试中暴露出来。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: That might even explain something about the smaller Anthropic models, like Sonnet 5, though it’s hard to predict exactly what they’re doing to post-train those models. It could also be that they’re always changing their post-training stack, and they just got a few things wrong in some of these models. I don’t know… they turned something up too high and created some quirks that people really don’t like. It’s really easy to screw up post-training in some way that doesn’t show up in benchmarks.</p>
+</details>
+<h3>自动化 AI 研发的训练路径：人类反馈与前沿 Diff</h3>
+<p><strong>Host</strong>: 还有一个非常基础的事实：前沿 AI 实验室通常都是从大型数据服务商那里采购数据。中国团队同样可以直接从这些数据公司购买完全一样的数据。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Just one other very basic point is that the frontier AI labs buy all their data from big data companies. The Chinese can also just buy the same data from data companies.</p>
+</details>
+<p><strong>Speaker B</strong>: 而且他们确实正在这么做，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: And they are, right?</p>
+</details>
+<p><strong>Host</strong>: 没错，他们确实在买。很多人对此感到愤愤不平，但既然他们能拿到一模一样的数据并直接购买，同时还能进行蒸馏，这就意味着紧跟前沿其实相当容易。我的另一个问题是：第一批具备自动化进行 AI 研发能力的模型，究竟会通过何种方式被训练出来？这里有一个玩具式的构想版本，也就是 Ryan 之前提到的方案：直接让 GPT-8 去尝试构建 GPT-3 大小的模型，并让这些小模型在内循环（inner loop）挑战中表现优异——比如通关需要持续学习能力的游戏，或者以最少的算力消耗达到预设的损失值（loss）等等。但 John，你之前提出了一个耐人寻味的观点，即实际情况可能根本不会沿着这种方式发生。所以我很好奇：当我们真正拥有能够自动化进行 AI 研发的 AI 时，它们大概率是通过什么方式训练出来的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And they are. Exactly. There’s a lot of people being annoyed about this, but if they have exactly the same data and they can buy that, they can also distill. It means it’s quite easy to keep up, really. The other question I had is how the first models that are capable of automating AI R&amp;D will actually be trained. There’s a toy version, which is this thing that Ryan was talking about. You just have GPT-8 try to build GPT-3 size models that are really good at inner loop type challenges: beating video games that require continual learning, or just getting to a certain loss with the least amount of compute, et cetera. But John, I think you had an interesting point that maybe that’s not the way it actually will happen in practice. So I’m curious, by the point at which you have AIs that are actually capable of automating AI R&amp;D, how are they probably trained?</p>
+</details>
+<p><strong>John</strong>: 我们大概率会采取某种组合方案：一方面通过人类反馈强化学习（RLHF）来吸收研究员的品味与直觉，另一方面则是构建大量的实战演练环境，让模型去承担包含多个步骤的完整科研项目。在实际操作中，大家会把这两者结合起来，并在每次迭代中集中修复上一代模型暴露出来的最严重缺陷。研究员们会高频使用这些 AI，并不断发现它们存在的固化短板；这些弱点要么通过收集针对性的人类反馈来修补，要么通过专门构建针对性的训练环境来强化。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: We’ll probably do some combination of learning from human feedback to absorb the researchers’ taste, and just creating a lot of practice environments which involve doing multi-step research projects. People will in practice do some combination of those two things and, each iteration, patch whatever seems to be most broken in the last iteration. Researchers will be using the AIs a lot and will notice that they have some consistent weaknesses. Those things will either be patched by collecting human feedback or creating environments.</p>
+</details>
+<p><strong>Host</strong>: 或许思考这个问题的一个有效角度是：我们究竟要把模型谱系（lineage）回滚到多早的阶段，然后从那个节点开始让模型进行自我对弈（self-play）？在极限情况下，你可以设想直接给它一块 GPU，或许再加上神经网络相关的基础代码，然后对它说：“好了，你自己琢磨出如何训练一个模型来完成这些特定任务。”而目前的实际做法是，我们直接走到模型谱系的最前沿边缘，说：“好，这是 Anthropic 过去几个月在训练技术栈中发现的所有 Bug，我们把它们转化成训练环境。”你必须在前沿技术的基础上训练并实现进化，因此显然需要锁定并继承之前谱系积累的所有历史。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Maybe a useful way to think about this is how much of the lineage we roll back and then let self-play from there. In the limit, you’re picturing just giving them a GPU and maybe neural nets or something and saying, &quot;Okay, figure out how to train a model to do these particular tasks.&quot; The way it currently works is we go up to the very edge of the lineage and say, &quot;Okay, here are the bugs Anthropic has found in their training stack in the last few months. We’ll turn those into environments.&quot; You need to train and get better on the frontier. So you obviously lock in all the previous history of the lineage.</p>
+</details>
+<p><strong>Host</strong>: 但你也可以设想这样一个世界：你将谱系回滚到 GRPO 算法诞生之前的节点，然后构建一系列环境，引导它去探索用于强化学习的最佳形式；甚至可以回滚得更早、更彻底……不过我认为，算力瓶颈依然会极其严峻，因此大家只会持续停留在技术最前沿，本质上就是对上一代模型版本以来发现的所有 Bug 和技术改进做 Diff（求差分），然后将这些增量差异转化为全新的训练环境。这种做法对于在两代模型之间获取新鲜、非过时的数据也极其有效。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: But you could imagine a world in which you roll back to before GRPO or something. Then you have environments which try to get it to discover the best form to RL models on, and then maybe you roll further and further back… But I think we will still be so compute bottlenecked that people will just keep staying at the frontier and essentially diffing the bugs and whatever improvements they found since the last model version, turning those into training environments. Which is also really good for having non-stale, new data between model generations.</p>
+</details>
+<p><strong>Host</strong>: 再者，这本质上就是 AI 实验室内部的持续学习过程：通过构建环境与 RLHF 等机制，将过去三个月的人工智能研究进展重新蒸馏回模型自身。而且这确实是一种蒸馏。这或许就是为什么我们当中的一些人会觉得这种进步速度具有渐近线特征（asymptotic）：你永远只是在设法捕获过去三个月的研究成果。当然，这些成果中已有 AI 的参与，但整个闭环中依然少不了人类研究员的身影。感觉就像你只是在不断地向人类研究员所发现并有能力实现的东西逐步逼近。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Again, this is basically continual learning within the AI lab, of distilling the last three months of AI research progress through environments and RLHF-type stuff back into the model itself. And it is distilling. That’s maybe why some of us feel like it’s asymptotic. You’re always just trying to get the last three months of progress. That progress is being contributed to by AIs, of course, but it also still has humans in the loop. It feels like you’re just constantly inching closer and closer to what the human researchers are finding and capable of doing.</p>
+</details>
+<h3>递归自我改进与直觉驱动的科学研究</h3>
+<p><strong>Host</strong>: 不过我必须强调的一点是：显而易见，如果你仅仅是在已有的行为轨迹（trajectories）上进行蒸馏，你永远无法超越轨迹上限。但是强化学习环境所能达到的高度，完全可以远远超出人类所能企及的极限。设计一个人类无法解决但 AI 依然可以尝试去攻克的环境是非常简单的。而这正是超越现有纯人类 AI 研究成果的必由之路。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: The one thing I will say, though, is obviously if you’re just distilling on trajectories, you can never go above it. But environments can go quite a far way above what a human can do. It’s very easy to design an environment that no human can solve, but the AI can obviously still try and solve it. That would be the path to go ahead of just what the human AI research is.</p>
+</details>
+<p><strong>Speaker B</strong>: 在递归自我改进（RSI, Recursive Self-Improvement）方面，你对于具体的训练集形态有什么实例吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Do you have an example in terms of RSI, of what kind of training set?</p>
+</details>
+<p><strong>Host</strong>: 比如 Nanochat 速通挑战（speedrun），并且要比人类速通高手的速度还要快得多。我觉得特别是在 AI 基础研究领域，定义明确的目标其实相当容易。比如你可以设定损失值必须降低到 1.3 左右，目前没有任何人类能够做到这一点；但这是一个极其便于度量和验证的任务，如果 AI 做到了，那就太棒了。或者像构建一个仅有 1 亿参数的模型去通关《我的世界》（Minecraft）。这或许显得太简单了，但可以让它去通关更复杂的复杂游戏。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Nanochat speedrun, but doing it even faster than a human speedrunner. I feel like in AI research especially, it’s very easy to define goals. You could say the loss needs to be 1.3 or something, and no human can get that now. But that’s an extremely measurable, verifiable task. If the AI gets that, then great. Or I don’t know, building a 100 million parameter model that beats Minecraft. That’s maybe too easy, but beats a much more complicated game or something.</p>
+</details>
+<p><strong>Speaker B</strong>: 1 亿参数的模型通关《我的世界》，这难道不令人惊叹吗？我们居然觉得这“太简单了”？想象一下如果五年前你听到这种话会是什么反应。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Isn’t it crazy that 100 million parameter models beat Minecraft? We’re calling that too easy? Imagine if you said that five years ago.</p>
+</details>
+<p><strong>John</strong>: 但我认为许多科研工作并不完全是那样的，它并不是单纯在一个明确定义的目标上进行爬山算法（hill climbing）。真实的科研更像是：我们基于某种直觉，认为模型应该在某些方面具备更强的能力；同时我们有了一个初步的算法设想，似乎能够朝这个方向推进一点。于是我们专门设计一个任务，用来检验这种方法是否能展现出可行的苗头与生命力；如果确实观察到了积极的迹象，我们就会逐步构建出越来越贴近现实的任务版本。整个研究过程在很大程度上是由直觉所牵引的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: I would say a lot of research is not exactly like that, though, where it’s hill climbing on a well-defined goal. It’s more like, here’s an intuition we have about some way models should be better. We also have some idea for an algorithm that seems to go a little bit in this direction. So let’s come up with a task that is designed to show signs of life on this approach, and see if we get those signs of life. If we do, we can make successively more realistic versions of the task. It’s a lot more guided by intuition.</p>
+</details>
+<p><strong>Host</strong>: 内循环的核心在于验证那种直觉本身，而不是由测试本身凭空产生核心洞见。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: The inner loop is to test for that intuition rather than the test itself leading to the insight.</p>
+</details>
+<p><strong>John</strong>: 没错。你并不是在直接优化最终关心的终极目标，也不是在优化实际的生产落地指标。你是在将目标进行适度放宽。你实际上是在说：“让我们在真实性维度上稍微做一些妥协和放宽，先找到一些真正行之有效的方法，等这些方法成熟完善之后，我们再尝试回归到真实世界的复杂性中。”此外，还有相当一部分科研侧重于解释底层机理并建立理论框架。在机器学习领域，我们往往缺乏具有强大预测能力的数学理论，但我们拥有大量用于解释系统运作机制的非形式化定性理论（informal theories）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: Right. You’re not directly optimizing for the eventual objective you care about or the practical production objective. You’re relaxing your objective a little bit. You’re saying, &quot;Let’s relax on the realism axis a little bit and find some methods that actually work, and then try to get back to realism later after the method matures a little bit.&quot; There’s also research that’s more oriented towards explaining things and developing a theory. Often we don’t have mathematical theories in machine learning that are that predictive. But we have a lot of more informal theories for what’s going on.</p>
+</details>
+<p><strong>John</strong>: 大概率上，未来的模型将在这类任务的综合交织中接受训练：其中一部分是极易验证的硬性任务，一部分依赖大模型裁判（LLM-as-a-judge）或者直接询问人类研究员“这个结果看起来合理吗”。我们的期望在于，所有这些训练都能够泛化到那些难度更高、更加模糊且边界不清晰的任务中去。在某种程度上，这种泛化大概率是能够实现的。但这种泛化能力是否强大到足以让整个循环在完全脱离人类介入的情况下实现自我闭环（self-sealing），目前依然是一个未知数。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: Presumably the models will be trained on some combination of all of these tasks. Some will be very easily verifiable, some will be LLM-as-a-judge or just ask the human, &quot;Does this look reasonable?&quot; The hope would be that these would all generalize to these much harder, more vague, fuzzy kinds of tasks. It probably will to some extent. Whether it generalizes enough that the loop can become self-sealing without humans being in the loop at all is unclear.</p>
+</details>
+<p><strong>Host</strong>: 也许退一步来看，在我看来，未来推进 AI 研究的整体蓝图大致是这样的——你可以告诉我你是否认为这能行得通，或者你是否认同这种归纳：我们的核心押注在于将可验证奖励强化学习（RLVR）的训练规模大幅拓展，跨越数百个不同领域、涵盖数百万个高度多样化的环境。最终在另一端涌现出来的，将是一个掌握了这些基础技能（甚至是远超基础的技能）的智能体——包括具备高度坚韧的执行力、能够对上下文和复杂信息进行分流甄别与优先级排序，并最终具备与其他智能体协同作业的端到端优化能力等等。这样的智能体在上下文内部将展现出极高的样本利用效率（sample efficient）——你曾深入研究过如何扩展上下文学习（in-context learning）以使其支持任意长序列，而这种扩展仍在持续进行。最终孕育出来的产物将会是某种……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Maybe taking a step back. Here’s what it seems to me the plan for AI research going forward is. You tell me if you think it’s going to work or if you agree with this characterization. The bet is that we will scale up RLVR training across millions of diverse environments, across hundreds of different kinds of domains. What will emerge at the other end is an agent which has learned these basic skills — or less than basic skills — around being persistent, being able to triage information and context, eventually having end-to-end optimization of working with other agents and things like that. Such an agent will be very sample efficient within the context —you've done research on how you scale up in-context learning to make it arbitrarily long, but you keep scaling it up. And what comes out the other end will be something</p>
+</details>
+<!-- chunk 4/9 -->
+<h3>模拟环境与数据中心内的元技能学习</h3>
+<p><strong>Dwarkesh</strong>: 它在本质上的功能，就像是在一周或一个月的时间跨度内即插即用的远程员工。首先，你是否认同这就是各大实验室目前正在下的赌注？其次，这真的足够吗？也就是基本只在数据中心内部的这些模拟环境（simulacra）中学习“如何学习”，然后被部署到现实世界中，但在实际的现实世界部署中却并不进行学习……仅仅从数据中心内的模拟环境中学习这些元技能（meta skills）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Dwarkesh</strong>: that basically functions like a drop-in remote worker over the course of a week or a month. First of all, do you agree that that is the bet the labs are making? And second, is that enough? Basically learning how to learn within these simulacra within a data center, and then getting deployed into the real world, but not actually learning from real-world deployment… only learning these meta skills from the simulated environments in the data center.</p>
+</details>
+<p><strong>Guest</strong>: 我觉得现在很难把实验室的精力做明确的拆分——究竟有多少是在直接用于实现递归自我改进（RSI），又有多少是在打造通用智能模型以持续部署赚取收入，从而资助下一次大规模的训练运行。对于后者来说，是的，这大概就是他们目前下的赌注。</p>
+<p>过去几年这些环境的发展演进模式是非常清晰的。Anthropic 的环境演进脉络就是一个极其清晰的例子。起初，我们只专注于编程，并且要在编程上做到极其出色。然后，从我们在编程中所获得的任务时间跨度（task horizon）出发——在互联网上可用于构建环境的数据以及他们能转化为环境的内部材料方面，编程大概是触手可及的果实（lowest-hanging fruit）——接下来我们就要进行泛化。我们下一步将扩展到金融领域，在强化学习（RL）训练中直接塞入海量的 Excel 数据以及所有类似的内容。接着是 PowerPoint，进入整个工作经济的长尾领域。这种做法看起来效果非常好。很多其他实验室，甚至包括开源实验室，现在也都意识到这是一个正确的赌注。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: I think it’s now hard to separate out how much of the labs’ effort is going towards direct RSI versus making generally intelligent models that they can continue to deploy to collect revenue to fund the next big training run. For the latter, yes, that’s probably just the bet they’re making. It’s very clear, the pattern of where these environments are going over the last few years. Anthropic’s lineage of environments is a very clear example of this. First, we just focus on coding and we’re going to get really, really good at that. Then, from the task horizon that we’ve got from coding — which is probably the lowest-hanging fruit in terms of data available on the internet to create environments, and their own internal stuff that they can turn into environments — then we’re going to generalize. We’re going to go up to finance next, and literally just so much Excel data and all that sort of stuff in the RL training. Then it’s PowerPoints. It’s this long tail of the working economy. That seemed to work really well. A lot of the other labs, even the open source labs, have now realized that that was the correct bet to make.</p>
+</details>
+<h3>上下文学习与特定领域知识的权衡</h3>
+<p><strong>Dwarkesh</strong>: 但这背后的含义是什么呢？当 Dario 上我这档播客时，我问他的问题是：如果你真正期待模型具备像人类一样在工作中边干边学的在岗学习能力，那你为什么还要尝试把制作 PowerPoint 等各种技能硬编码注入到模型中呢？难道你不是应该期待模型在部署后自己掌握这些技能吗？</p>
+<p>这里面有几种不同的解释。一种仅仅是我们预期模型很快就会达到那个水平，但目前还没达到，所以为什么不把这些技能摊销固化（amortize）到模型训练中呢？另一种解释是我们目前的重心根本不是让它在广泛部署的工作中表现优异，我们只是希望它在递归自我改进（RSI）上极其出色；而前者只是我们获取营收的一种途径，以便将资金重新投入到真正擅长进行 RSI 研发的模型中。一旦奇点降临，最终产出的模型将非常擅长解决当前这代模型所面临的所有瓶颈。John，我不知道你对于如果发展路径是这种泛化，为什么模型中还会存在如此多特定任务的专门知识有什么看法。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Dwarkesh</strong>: But what is the implication from that? When I had Dario on the podcast, the thing I asked him was, if you truly expect models which will be human-like in their ability to learn on the job, why would you try to bake in all these skills of working with PowerPoint or something? Wouldn’t you just expect the model to be able to pick that up while it’s deployed? There’s multiple different explanations. One is just that we expect models to get there soon, but they’re not there yet, so why not amortize these skills into the model training? Another is that we’re not concentrated on making it really good at widely deployed work. We just want it really good at RSI. This is just a way for us to get revenue so that we can pour it back into a model that is actually really good at doing RSI development. Then once the singularity happens, the thing that comes out the other end will be really good at all the things which seem like bottlenecks to the current generation of models. John, I don’t know if you have takes on how one should construe why there is so much task-specific knowledge in these models if the path is this kind of generalization.</p>
+</details>
+<p><strong>John</strong>: 如果模型在上下文学习（in-context learning）方面足够强，那么从理论上讲，你根本不需要对它们进行金融领域的专门训练。它们将能够即时阅读所有书籍，并弄清楚如何在相应的司法管辖区内完成所有事情。</p>
+<p>你可以辩称，进行大量这种特定领域的训练纯粹是为了让它们变得更高效。即使它们足够聪明，能够实时摸索出来，你可能仍然希望进行大量的强化学习，并将所有这些直觉固化到模型权重中，这样模型在运行时的效率就会高得多。在实践中，模型提供商确实是在一个领域接一个领域地推进，并试图强化模型在最高价值领域的表现。我认为这也是模型变得如此优秀的原因之一，仅仅是因为模型提供商已经覆盖了大量高价值领域以及最常见的技能类型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: If the models were good enough at learning in context, then in theory, you wouldn’t need to train them on finance. They would just be able to read all the books on the fly and figure out how to do everything in the appropriate jurisdiction. You could argue that you need to do a lot of this domain-specific training just to make them more efficient. Even if they were smart enough to figure this out on the fly, you still might want to do a bunch of RL and bake all these intuitions into the weights, so the model would be more efficient at runtime. In practice, it does seem like model providers are going domain by domain and trying to strengthen the models in the highest value domains. I’d say that that’s one of the answers to why the models have gotten so much better. It’s just because the model providers have covered a lot of the high-value domains and the most common types of skills.</p>
+</details>
+<p><strong>Guest</strong>: 另一层因素在于，同时做这两件事的成本其实并不高。模型体量庞大，就参数空间而言，它们完全承受得起学习所有知识。而且这里面很可能存在某种知识迁移（transfer）。即使金融知识并非直接针对 RSI，但这些信息对于 RSI 而言也是具有重要价值的。诸如如何辨别重要事物、如何培养品味、如何执行长周期跨度工作等通用的元学习能力，在很大程度上是可泛化的。</p>
+<p>此外，世界上原本并没有那么多现成的 RSI 数据，这些数据很难生成且需要耗费大量精力。因此，如果你能把这些其他领域的数据摊销吸收进来，你就能从中获得一定的迁移效果。你已经坐拥海量的算力和巨大的参数空间，除了出售模型这种显而易见的直接商业意图之外，为什么不顺带把这部分也一起做了呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Another thing is just that it’s not that expensive to do both at the same time. The models are massive. They can easily afford, in terms of their parameters, to learn everything. There is likely some transfer. Even if finance is not specific, the information is important for RSI. Just the general meta-learning of how to figure out what’s important, how to have taste, how to do long-horizon work is potentially generalizable. There’s not that much RSI data in the world as well. It’s hard to generate and requires a lot of effort. So if you can amortize in this other data, you get some transfer from it. You already have masses of compute and masses of parameter space, so why not do that as well as, obviously, the direct commercial intent of selling a model?</p>
+</details>
+<h3>Sim-to-Real 的瓶颈与样本效率</h3>
+<p><strong>John</strong>: 我想补充的是，目前这种通过从模拟到现实（sim-to-real）的范式，是否会永远占据主导地位，其实是一个值得探讨的问题。你观察现实世界的任务是什么样的，然后尝试构建一堆可以在数据中心内进行模拟的环境，并在上面运行强化学习。显然，这种方法取得了巨大的成功。但它也有很多缺陷，因为很多事情就是极难模拟的，特别是当它们涉及到与许多人进行实时互动时。因此，sim-to-real 是否会永远作为主导框架，是有疑问的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: I’ll add that there’s one question about whether this current paradigm of doing sim-to-real will be the dominant one forever. You look at what the real-world tasks are like. Then you try to create a bunch of environments that can be simulated in the data center, and you can do RL on them. Obviously, this has been very successful. But it has a lot of weaknesses, because a lot of things are just hard to simulate, especially if they involve interacting with a bunch of humans in real time. So there’s some question about whether sim-to-real will be the dominant framework forever.</p>
+</details>
+<p><strong>Guest</strong>: 我认为在样本效率（sample efficiency）仍然低下的时期，sim-to-real 必然会是主导范式。因为在目前阶段，你需要与人类进行成千上万次的交互，没有任何人类愿意一直坐在那里充当强化学习训练循环中的一环。所以我们现在必须进行模拟，以获取所需的样本量。</p>
+<p>但很显然，如果样本效率得到大幅提升，你可以预期从实际部署中学习将会成为其中更大的一部分。尽管你也可以采取其他做法，比如进行离策略（off-policy）学习：你可以收集所有轨迹记录，即使不重新模拟所有内容，你也可能从这些记录中学习到有用的东西。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: I think sim-to-real has to be the dominant framework while sample efficiency is low, because right now you need thousands and thousands of interactions with the humans. No human is going to sit there and be in the loop of RL training. So we have to simulate that now to get the samples you need. But obviously, if sample efficiency improves a lot, you’d expect learning from deployment to become a much bigger part of it. Though there are also other things you could do. You can learn off-policy, so you can take all the traces, and even without resimulating everything, you can potentially learn something from them.</p>
+</details>
+<h3>Jane Street 协议仿真芯片设计竞赛</h3>
+<p><strong>Dwarkesh</strong>: Jane Street 刚刚启动了一项全新的竞赛，这也是他们迄今为止最具野心的一项比赛：设计一款协议仿真专用集成电路（protocol-emulator ASIC）。基本上，如果你有一颗想要测试的芯片，你可以将它连接到这个 ASIC 上，该 ASIC 就会模拟出逼真的流量。这样一来，你无需将其接入真实运行的系统中，就能观察到该芯片的响应情况。</p>
+<p>Jane Street 正在寻找灵活通用的设计方案，而不是单一协议的仿真器。当我和他们交流时，他们建议我先从尝试实现三种非常常见的协议开始：UART、SPI 和 I²C。Jane Street 还提到，他们希望更具野心的设计能够涵盖低速 USB、以太网（Ethernet），以及任何能够展现你芯片特定架构优势的其他协议。</p>
+<p>至关重要的是，你的设计应该是可重编程的，而不是仅仅把一堆具体协议硬塞到芯片上。如果你的 ASIC 流片（taped out）之后出现了一种全新的协议，你的芯片依然需要能够处理它。具体如何实现完全取决于你。但这里有一个硬性约束：你的设计必须针对开源的 130 纳米工艺节点。这是因为 Jane Street 将出资为最具创新性的参赛作品进行流片，并将实体芯片寄送给获胜者。比赛截止日期为 2027 年 1 月 18 日，非常鼓励组队参赛。欢迎访问 janestreet.com/dwarkesh 下载模板代码并开始动手。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Dwarkesh</strong>: Jane Street just launched a new competition, and it’s its most ambitious one yet: design a protocol-emulator ASIC. Basically, if you have a chip you want to test, you can connect it to this ASIC, and the ASIC will simulate realistic traffic. That way, you can see how the chip responds without having to plug it into a live system. Jane Street is looking for flexible, general-purpose designs, not single-protocol emulators. When I was chatting with them, they suggested that I start by trying to implement what are apparently three very common protocols: UART, SPI, and I²C. Jane Street also mentioned that they hope more ambitious designs will tackle low-speed USB, Ethernet, and any other protocols that flex your chip’s specific architecture. Importantly, your design should be reprogrammable rather than smashing a bunch of specific protocols onto a chip. If a new protocol comes out after your ASIC is taped out, your chip still needs to be able to handle it. How exactly it does that is up to you. But there is one hard constraint: your design must target an open-source 130-nanometer process node. That’s because Jane Street will pay to tape out the most novel submissions and send physical copies to the winners. The competition is open until January 18, 2027, and working in teams is highly encouraged. Go to janestreet.com/dwarkesh to download the template code and get started.</p>
+</details>
+<h3>推理数据反馈与群体智能爆炸</h3>
+<p><strong>Dwarkesh</strong>: 我想在这方面多问一点，因为现在的现状很奇怪：有 50% 的算力被花在推理上，而这些推理计算却并没有直接帮助模型变得更好。你所预期的数字心智最终会具备的核心优势之一是：人类一生只能获得 50 年的现实世界经验，而一个模型通过其所有部署实例，能够在经济活动中体验到跨越各种相关工作的数百万年部署经验。</p>
+<p>然而在目前，这些数据在实质意义上并未用于帮助模型提升。模型最终必然能够从这些数据中学习，这看起来是显而易见的。一旦它们做到了这一点，你就会看到几乎类似于广泛部署的智能爆炸的景象，因为模型正在从所有这些已部署的实例中吸收海量的信息。你预计这种类似蜂群思维（hive-mind）的疯狂景象什么时候会开始出现？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Dwarkesh</strong>: I want to ask more about this, because it’s weird that you have 50% of compute that’s spent on inference that is not directly helping the model become better. One of the key advantages you’d expect digital minds to eventually have is that, unlike a human who gets to have 50 years of real-world experience, a model will get to experience, through all its instances, millions of years of deployment across all kinds of economically relevant work in the economy. Right now, that data is just not, in a meaningful sense, helping the model get better. It seems so obvious that eventually models should be able to learn from this data. Once they do, you would have something that almost feels like a widely deployed intelligence explosion, because the model is assimilating so much information across all these deployed instances. When do you expect this kind of hive-mind, crazy shit to start happening?</p>
+</details>
+<p><strong>John</strong>: 我认为从宽泛和非常基础的层面上看，这种情况已经在发生了……只是体现在下一代模型中。现在，你显然可以收集你的部署数据，并将其放入未来模型的预训练（pre-train）或中训（mid-train）阶段，尤其是当你对其进行某种过滤、某种判断、标注或综合合成之后。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: I think broadly, at a very basic level, this is already happening… just in the next generation of models. Right now, you can obviously take your deployment data and put this in the pre-train or the mid-train of future models, especially if you do some kind of filtering or some kind of judgment or annotation or synthesization of that.</p>
+</details>
+<p><strong>Dwarkesh</strong>: 你认为这在多大程度上解释了模型代际之间的性能提升？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Dwarkesh</strong>: How much do you think that explains the generation-over-generation improvement?</p>
+</details>
+<p><strong>Guest</strong>: 我认为这解释了相当大一部分。我不知道西方的前沿实验室是否会这么做，因为从理论上讲，他们声称不会拿用户的数据来进行训练。但中国厂商百分之百在这么做，他们绝对获得了这项优势。</p>
+<p>这基本上就是蒸馏（distillation）的本质。他们获取模型，通过向模型发送请求来获取其部署数据的一部分，然后用这些数据来训练他们的下一代模型。他们当然也可以在自己的模型上这么做，完全没有任何理由不这样做。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: I think it explains quite a bit. I don’t know whether the labs do this, because theoretically, they claim not to train on people’s data. But the Chinese 100% do. They definitely get this advantage. This is basically what distillation is. They take the models, they get some fraction of their deployment data by pinging the model, and then they train their next generation of models on it. They can certainly do it on their own models as well. There’s no reason not to whatsoever.</p>
+</details>
+<h3>持续学习的落地实践与在线强化学习</h3>
+<p><strong>John</strong>: 我完全赞同这一点。如果把视野放得足够大，这确实正在发生。我们大家脑海中构想的持续学习（continual learning）的终极圣杯，是单个模型在获得某种经验后立即进行现场实时更新并从中学习，形成一种非常有机、实时的闭环。当你深入到那种微观粒度时，很多环节都会崩溃失效。但大型实验室在宏观层面确实在做这件事，闭源模型也都在这么做。</p>
+<p>同时，也有初步迹象表明，有些使用开源模型的人正以快得多的节奏在做这件事。一个很好的例子大概是 Composer。Harvey 在法律智能体（legal agents）领域也在做同样的事情。你拥有某种模型，并且正在从你针对该特定任务所拥有的数据、用户抱怨的问题，以及你以某种方式从特定部署中提取出的所有反馈中，构建出非常具体的环境。与大实验室相比，许多这类公司拥有巨大的优势，因为他们能够非常出色地利用这些数据。</p>
+<p>然后他们会创建环境，对 Kimi K3 等模型进行大规模的后训练（post-train），然后再将其部署上线。他们可能还会进行一些在线学习（online learning），就像 Composer 长期使用在线方式进行训练……基本上就是长时间运行 REINFORCE 算法。这里仍然有人工参与（human in the loop），仍然有人在界定：“好吧，这些是我们关注的信号，我们将根据现有的数据来构建这些环境。”虽然这比你想象的那种实时更新的节奏周期要长一些，但它确实真真切切地在发生。最终，这个闭环迭代的速度会越来越快。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: I completely agree with this. If you zoom out far enough, this is definitely happening. What we’re all picturing, the holy grail of continual learning, is this very organic, live loop of an individual model getting an experience and live-updating on the spot and learning from that. A lot of things break when you zoom into that level of granularity. But the big labs are doing this. The closed models are doing this. There are also early signs of life of people using open-source models doing this at a much faster cadence. A good example is probably Composer. Harvey’s doing the same thing with legal agents. You have some sort of model, and you are getting very specific environments from the data that you have for that particular task, and things that users are complaining about, and all the feedback that you’re somehow extracting from your specific deployments. A lot of these companies have the advantage over the big labs in that they can use this data really, really well. Then they will create environments. They will do a big post-train of Kimi K3. They will go deploy it. They might do some online learning as well, like Composer did online… basically REINFORCE for a long time. There’s still a human in the loop. There’s still a human saying, &quot;Okay, these are the signals we care about. Here’s how we’re going to create environments from the data that we have.&quot; It’s still a longer cadence than maybe the one that you’re thinking of, but it really is happening. Eventually that loop will become faster and faster.</p>
+</details>
+<p><strong>Dwarkesh</strong>: Composer 这个案例很有意思，因为在 Cursor 中，用户面对模型建议的下一次补全时，会选择按下 Tab 键或者不按 Tab 键。基于这一点，Composer 每天都在变得更擅长预测下一个——</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Dwarkesh</strong>: The Composer thing is interesting because this is where, in Cursor, people press Tab or they don’t press Tab on the next completion that the model suggests. Based on that, every single day, Composer gets better at predicting the next—</p>
+</details>
+<p><strong>Guest</strong>: 那是以前的 Tab 模型。他们实际上不仅对 Tab 模型做了这件事，而且对实际的生成模型（generative model）也做了同样的处理。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: That was the old Tab model. They actually did the same thing not just for the Tab model, but for the actual generative model.</p>
+</details>
+<p><strong>Dwarkesh</strong>: 哦，明白了。很有意思。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Dwarkesh</strong>: Oh, I see. Interesting.</p>
+</details>
+<p><strong>Guest</strong>: 这做起来非常困难，因为当你进行在线强化学习时，你并没有成组的数据（groups）。你只有单个用户说的一句话，然后你就得到了一次展开轨迹（rollout）。因此，你面临着巨大的方差缩减（variance-reduction）难题。</p>
+<p>Cursor 对此给出的模糊解决方案是：“我们拥有非常出色的启发式规则（heuristics），能够估算出这个响应比平均水平好多少，或者比平均水平差多少。”然后他们就会据此执行大规模的 REINFORCE 参数更新。对于模型是否变差，他们的解决办法是：如果新模型在 CursorBench 测试集上有提升，他们就会每隔五个小时部署一次新模型；如果性能没有提升，他们就会直接废弃那个版本。</p>
+<p>我认为这里最大的问题实际上仅仅在于不知道奖励（reward）究竟是什么——</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: It’s hard because when you do online reinforcement learning, you don’t have groups. You just have one user saying one thing, and then you get one rollout. So you have a big variance-reduction problem. Cursor’s fuzzy answer to this was, &quot;We have very good heuristics which are able to estimate how much better than average this response was, or how much worse than average this response was.&quot; Then they would do this big REINFORCE update. Their solution to whether it got worse or not was that if it improved on CursorBench, they would deploy the new model every five hours. If it didn’t, they would throw that version out. I think your biggest problem is actually just not knowing what the reward</p>
+</details>
+<!-- chunk 5/9 -->
+<h3>模拟与现实的差距与长程任务挑战</h3>
+<p><strong>Speaker A</strong>: 针对自然数据的奖励函数应该是怎样的。如果你使用某种表面化的信号，比如用户是否接受了这次代码修改，那可能会在某种程度上被奖励作弊（reward-hacked）。但对于“从模拟到真实世界”（sim-to-real）的迁移来说，这不是一个更严重的问题吗？也就是说，任务的时间跨度（horizon）越长，就越难在数据中心内部进行模拟。在我看来，即便是在编程领域，我们似乎也已经达到了这样一个临界点：根本不存在任何长达一年的编程任务，是最终不需要与客户沟通、不需要与公司交互，或者不需要与真实用户互动的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: function should be for natural data. If you use some kind of superficial signal, like did they accept the edit, that might get reward-hacked in some way. But isn’t this a bigger issue with the sim-to-real thing, where the longer-horizon tasks get, the harder they are to simulate within a data center? It seems to me that even in coding, we’re already getting to the point where there’s not some year-long coding task that doesn’t eventually require you to talk to a client or interact with the company or interact with users.</p>
+</details>
+<p><strong>Speaker A</strong>: 如果你纵观我们希望 AI 具备的全部能力范围，超级智能最终应该能够经营一家企业，或者创立一家新公司并实现盈利，或者在金融市场中进行有利可图的日内交易，亦或是打赢一场官司。这些全都是极难在数据中心内部进行模拟的事情。在这些领域中，学习的一个内在核心部分就是与真实世界进行交互。也许模型可以通过“从模拟到真实”的泛化迁移来学会如何更好地完成这些事情。但从另一种角度来看，也许你确实需要通过此类真实交互所产生的权重更新（weight updates），才能真正提升这些能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: If you think about the gamut of things we would want AI to be capable of, eventually superintelligence should be able to run a business, or start a new business and make it profitable, or have a profitable day trading in the markets, or win a court case. These are all things which are very hard to simulate in a data center. An inherent part of the learning there is interacting with the real world. Maybe they learn how to get better at these things from the transfer between sim-to-real. But alternatively, maybe you do need weight updates from these kinds of interactions in order to get better at them.</p>
+</details>
+<p><strong>Speaker A</strong>: 如果情况确实如此——如果泛化迁移能力不够强，并且你确实需要权重更新——那么模型在样本效率（sample efficiency）上相当低下的事实，可能就是一个更深层的问题。我之所以对这个问题感到好奇，是因为在默认情况下，我不认为在未来十年内有什么能阻止某种极其疯狂的递归自我改进（recursive self-improvement, RSI）发生。但导致其可能无法发生的唯一原因，就在于就权重更新的样本效率而言，模型似乎远远落后于人类。在从出生到成年人类所接触的数据量，与一个模型从零冷启动到完成训练所接触的数据量相比，模型可能落后了上百万倍。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: If that is the case — if transfer isn’t strong enough and you do need weight updates — then the fact that the models are quite sample-inefficient is maybe a deeper problem. The reason I’m curious about this is that by default, I don’t see how you don’t get some kind of crazy recursive self-improvement within the next 10 years. But the one reason why that might not happen is that in terms of the sample efficiency of weight updates, models just seem way far behind humans. They’re plausibly a millionfold behind humans in terms of how much data a human sees from birth to adulthood versus how much a model sees from cold start to finishing training.</p>
+</details>
+<p><strong>Speaker A</strong>: 说了这么多，首先第一点就是：在模拟环境与我们在真实世界中希望 AI 执行的那些极长跨度、极度复杂的真实任务之间，到底会不会有良好的迁移效果？如果不具备良好的迁移能力，这是否真的意味着这些模型在样本效率上的匮乏最终会让我们自食恶果？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: This is all to say, first of all, is there going to be good transfer between simulations and the extremely long-horizon, really complicated real shit that we want the AI to do in the real world? And if not, does that really mean that the lack of sample efficiency in these models comes to bite us?</p>
+</details>
+<h3>累积性任务与非平稳分布任务</h3>
+<p><strong>Speaker B</strong>: 也许我对这两类任务的划分方式是——一类是模型能够变擅长的任务，另一类是模型将持续遇到困难的任务——这取决于该任务本身是累积性的（cumulative），还是具有这种非平稳分布（non-stationary distribution），即你必须不断地重新学习并反复推敲大量的事情。累积性任务的一个典型例子可能就是 RSI（递归自我改进）。理论上是有可能写出一个少于一百万 token 的 Python 文件，它能从零开始训练出一个具备递归自我改进能力的模型。你所取得的每一项发现，都是一条划定在沙滩上的界线，一旦确立就能守住。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Maybe the way I’d break down the two types of tasks — the ones in which models get good and the ones where models will still continue to struggle — is whether the task is cumulative, or whether you have this non-stationary distribution where you have to keep learning and relitigating a bunch of stuff. An example of a cumulative task might be RSI. It’s theoretically possible to have a less-than-a-million-token Python file which from scratch trains a model that is capable of recursive self-improvement. Every discovery that you make is a line in the sand that you hold.</p>
+</details>
+<p><strong>Speaker B</strong>: 如果对于 RSI 而言，我们确实不需要去发现某种全新的注意力机制变体或类似的东西，那么一旦你发现了注意力机制（Attention），一旦你发现了混合专家架构（Mixture of Experts, MoE），一旦你发现了 GRPO，你就只需将它们添加到训练技术栈中，它们就会一直留在那里。这方面一个很好的例子就是 5.6 Sol 训练、5.6 Terra，或者 OpenAI 告诉我们它所训练的随便哪一个模型。它不需要回头去重新发现注意力机制。基本上它只需要调用一系列脚本，比如 <code>pre-training.sh</code> 和 <code>post-training.sh</code>，然后就直接完成了。这就是累积性任务的一个例子。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: If it’s true that for RSI we don’t need to discover a new attention variant or whatever, then once you’ve discovered attention, and once you’ve discovered mixture of experts, and once you discover GRPO, you just add that to the training stack and that’s there. A good example of this is 5.6 Sol training, 5.6 Terra, or whichever one OpenAI told us it trained. It didn’t have to go back and discover attention. It basically would have called a bunch of scripts, like pre-training.sh and post-training.sh, and just done that. That’s an example of a cumulative task.</p>
+</details>
+<p><strong>Speaker B</strong>: 我认为真实世界——以及人们对持续学习（continual learning）如此关注的原因——并不是一个真正的累积性任务。设想在一家律师事务所里，有一个智能体担任初级律师助理。那是一个极具非平稳性的分布。你必须能够在你的上下文中容纳该机构所有重要人物之间的全部人际关系，而这些关系本身也在随时发生变化。你还必须掌握所有关于事情如何处理、去哪里寻找信息等等隐含的潜规则。这并不像 RSI 那样是一个干净纯粹的累积性任务。我认为任务之间会存在这种分化。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: I think the real world — and the reason people are thinking so much about continual learning — is not really a cumulative task. Imagine in a law firm, you have an agent acting as a legal associate. That’s a very non-stationary distribution. You have to be able to fit in your context all the relationships between all the important people at that company, which are also changing all the time. You have all these implicit ways about how things are done, where to find information, et cetera. That’s not as clean an example of a cumulative task as RSI is. I think there will be this breakdown between tasks.</p>
+</details>
+<p><strong>Speaker B</strong>: 但如果各大实验室意识到了这一点——并且他们坚信 RSI 是累积性的，即我们不需要回头再去发明某种全新的基础架构之类——那么或许越来越多的精力和算力就会聚焦在 RSI 上，而不是其他任务上。RSI 恰好比当一名律师助理更容易，这真是太讽刺了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: But if the labs realize that — and they do believe that RSI is cumulative in the sense that we don’t need to go back and discover some brand-new architecture or whatever — then maybe more and more effort and compute gets focused on that versus the other tasks. It’s so unfortunate that RSI happened to be easier than being a paralegal.</p>
+</details>
+<h3>模型的品味、长程判断与上下文学习</h3>
+<p><strong>Speaker A</strong>: 我认为当今的模型在很多不同的方面都比人类要弱。其中一些弱点可能与特定工况下的样本效率有关。在某些工况下，模型具有极高的样本效率，比如上下文学习（in-context learning）。但随后可能在某种中等长度的工况下，它们的样本效率就会变低，因为人类进行某种权重更新的效率要高于模型。我认为在某些工况下样本效率较低可能是劣势的来源之一。但我认为还有其他完全不同于此的弱点来源。例如，思维多样性低于人类，或者不擅长做出某些长程判断（long-horizon judgments）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I would say today’s models are weaker than humans in a lot of different ways. Some of them might have to do with sample efficiency in a certain regime. In some regimes, models are very sample-efficient, like learning in context. But then there might be some medium-length regime where they’re less sample-efficient, because humans can do some kind of weight update more efficiently than models. I think being less sample-efficient in certain regimes might be one of the sources of weakness. But I think there are other sources of weakness that are completely different from that. For example, having lower diversity of thought than humans, or being bad at certain kinds of long-horizon judgments.</p>
+</details>
+<p><strong>Speaker A</strong>: 我认为人们所称的“品味”（taste），很大程度上是指某种在长期运行中行之有效的行为方式，以及人们所认识到的长期有效的规律。虽然不能涵盖全部，但品味确实包含这方面的特质。特别是对于软件工程这类事情，我认为很大一部分品味就在于：“在这个项目的长期生命周期中，什么样的系统才是可维护且运行良好的？”模型存在各种各样的弱点，这些弱点与其他因素一同限制了 RSI。其中一些弱点与样本效率有关，而另一些则无关。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I think a lot of what people call taste is something about behavior that works in the long run, and that people have realized works in the long run. Not everything, but some aspect of taste. Especially for something like software engineering, I think a lot of taste is &quot;What are the systems that are going to be maintainable and work well in the long run of this project?&quot; There are a variety of weaknesses of models which limit RSI along with other things. Some of them are related to sample efficiency, and some of them aren’t.</p>
+</details>
+<p><strong>Speaker B</strong>: 或许一个很有意思的思想实验是这样的：假设你能够给一个模型提供一万亿 token 的上下文窗口，或者足以容纳你在进行 RLHF 之前的全部人生经验的上下文窗口。它在上下文窗口中拥有了所有这些经验，并且它具备与当前在一百万 token 上下文下完全相同的样本效率和上下文学习能力。你认为到那时“品味”就被解决了吗？它能够做出与你相同的判断吗？还是说，除了单纯拥有具有相同样本效率的更长上下文窗口之外，还从根本上缺少了别的东西？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Maybe an interesting thought experiment is this. Let’s say you were able to give a model a context window of a trillion tokens, or whatever you would have needed to fit in your experience prior to, let’s say, RLHF. It’s got all that experience in the context window, and it has the same sample efficiency and in-context learning ability as it does at a million tokens. Do you think taste is then solved? Would it be able to make the same judgments that you did? Or is there something fundamentally missing, apart from just a longer context window with the same sample efficiency?</p>
+</details>
+<p><strong>Speaker A</strong>: 它必须经过专门训练，才能学会如何从那样的上下文中进行学习。它要么必须经过训练以学会从该上下文中做出正确的更新，要么必须具备相应的泛化能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: It would have to be trained to learn from that context. Either it would have to be trained to learn the right update to make from that context, or it would have to generalize.</p>
+</details>
+<p><strong>Speaker B</strong>: 所以你认为不能只是把你的一生、你的全部研究经验一股脑倾倒进去？你仍然需要数据来在超长上下文上对它进行训练。即使你理论上可以获得一万亿 token 的上下文，你也需要一万亿长度级别的数据来训练它。现在你拥有 10k 上下文，你不能直接塞进一百万。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: So you don’t think you can just dump it all in, your whole life, your research experience? You still need the data to train it on long context. Even if you could theoretically get a trillion context, you would need a trillion lengths of data to train it. Right now you have 10k context, you can't just dump in a million.</p>
+</details>
+<p><strong>Speaker A</strong>: 是的，我只是问假设如果你已经拥有了那些。理论上我认为是可以的。这实际上归结为这样一个问题：品味在多大程度上能够从较短时间跨度的单次经历（episodes）中被元学习（meta-learned）出来。我觉得没有明显的理由表明它必须经历极长的时间周期，因为人类在没有经历很多长周期的情况下不知何故就培养出了品味。我们并不会活到一万岁。我们的心智发展得相当快。即使你考虑读博的过程，一个博一学生和一个博士应届毕业生或博士后之间的差距，大概也就五年时间。他们总共可能只做过大约 10 到 30 个研究项目。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah, I’m just asking if you had that. In theory, I think, yes. This really just comes down to the question of how meta-learnable taste is from shorter-horizon episodes. I feel like there’s no obvious reason it’s super long, because humans somehow developed taste without having many long episodes. We don’t live to be 10,000. We develop pretty quickly. If you think about even a PhD, the difference between a first-year PhD student and a final-year student or postdoc, that’s five years maybe. They’ve only done maybe 10-30 research projects in total.</p>
+</details>
+<p><strong>Speaker A</strong>: 但不知怎么回事，他们通过相对较短的一系列小事情的连续积累，就能非常迅速地培养出品味。从理论上讲，是可以通过这种方式培养出来的。AI 显然将拥有多得多的经验来培养品味并对其进行元学习。那么接下来的问题就是，这种能力能够多好地泛化到真正长周期的事物上，我认为目前这在很大程度上仍未得到解决。我们目前还不知道。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: But somehow they develop taste quite quickly from a relatively short succession of small things. Theoretically, it’s possible to develop it like that. The AI obviously will have vastly more experience in which to develop taste, to meta-learn it. Then the question is how well that generalizes to really long-horizon things, which I think is really unsolved at this point. We don’t know.</p>
+</details>
+<h3>部署反馈、蜂群思维与模块化经济动力</h3>
+<p><strong>Speaker B</strong>: 回到这个问题：最终应该会存在这样一种机制，即 AI 从其部署的每一个单独实例中汲取海量的学习经验。目前你可以说存在一种模糊的元流程，模型确实能从部署中获得改进。但我觉得这是一种非常微弱的反馈回路。你是否预见到在未来地平线上会出现这种极其迅速的蜂群思维（hive mind）式的学习？如果是的话，它具体会以何种方式发生？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Going back to this question, eventually there should be a regime where AIs are learning a ton from each individual instance of deployment that they have. Currently you could say there’s a fuzzy meta process by which models do improve from deployment. But I feel like it’s a very weak feedback loop. Do you see this on the horizon, where there’s this hive mind kind of learning that’s very rapid, and if so, how exactly does it happen?</p>
+</details>
+<p><strong>Speaker A</strong>: 我想说的是，我们是否会拥有一个能从所有部署经验中学习的蜂群思维，在很大程度上取决于激励机制（incentives），而不仅仅是一个技术问题。企业不会希望模型提供商从他们的所有部署中学习，因为这可能会直接削弱他们自身的商业竞争优势。我认为这里的经济学逻辑所推动的，不一定是对单个共享大模型进行权重更新，而是推动可插拔模块的替换。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I would say that whether we get a hive mind that learns from all of its deployment experience is in a big part about incentives, rather than being a technical question. Companies aren’t going to want to have the model provider learn from all of their deployment, because that might just reduce the advantage of their business. I think the economics of this will pressure, not necessarily weight updates to one big common shared model, but modules that get subbed in.</p>
+</details>
+<p><strong>Speaker A</strong>: 一个非常明显的例子就是 LoRA，但也可能是其他形式。业界已经做了大量工作，试图将任意长度的上下文压缩到固定大小中，这就是所有线性注意力（linear attention）相关的研究。还有 Cartridge（插件盒/知识盒），它们本质上是经过训练以实现极高压缩比的 KV 缓存（KV caches），从而能够容纳海量信息。这是企业可能愿意接受的另一个范例，前提是这只是作为模块接入模型，而不是实际改变底层的基座模型本身。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: A very obvious example of this is a LoRA, but it might be something else. There’s been a lot of work to try and fit an arbitrary context length into a fixed size. This is all the linear attention stuff. And cartridges, which are essentially KV caches trained to be very, very compressed to fit in a lot of information. That’s another example of something that companies may be willing to sign up for, if that gets subbed into the model and it’s not actually changing the base underlying model itself.</p>
+</details>
+<p><strong>Speaker A</strong>: 从实时数据中学习存在许多不同的实现版本。后者（模块化方式）并没有真正直接给大实验室带来好处，因为它们只是独立的模块。但我认为经济压力会迫使实验室先走这条路径，然后才可能着手开展……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: There are many different versions of learning from your data in real time. The latter ones are not really helping the big labs, because they are just these modules. But I think the economic pressure will force the labs to go down that path first before they can embark on this...</p>
+</details>
+<p><strong>Speaker B</strong>: 不过具体是哪种经济压力呢？我觉得即使你有了一堆 Cartridge 或 LoRA 之类的东西，你仍然可以直接获取所有这些交互轨迹（traces），并将它们全部倾倒进下一代模型的预训练中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Which economic pressure, though? I feel like even if you have a bunch of cartridges or LoRAs or whatnot, you can still just take all these traces and dump them into the pre-training of your next generation of models.</p>
+</details>
+<p><strong>Speaker A</strong>: 是的。这可能是大实验室获得的一种更为间接的学习形式。这对其而言显然仍然极具价值。但我无法想象这样一个世界：我们一开始就直接采用“我们要用我们收到的所有确切数据，直接去训练这一个通用大模型”的模式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yes. It may be a more indirect form of learning that the big labs are getting. That’s obviously still really valuable to them. But I can’t imagine a world in which we start off with, &quot;We’re going to just directly train this one big model on all the exact data that we’re getting.&quot;</p>
+</details>
+<h3>持续学习演进路径与灾难性遗忘的微观困境</h3>
+<p><strong>Speaker B</strong>: 不，我认为这肯定会经历几个阶段，因为那种想法假设存在一个不连续的突变事件，使得我们突然之间就彻底解决了持续权重更新的问题。在实践中，我认为更可能的情况是：Cartridge 和类似的技术让你能够在具体部署场景中实现专业化。然后你生成运行轨迹，将其放入模型中，三个月后你发布一个在此类任务上表现更好的新模型。你再次对其进行专门化适配，再次进行整合巩固，最终我们将这个迭代飞跃的周期缩得越来越快。不再是每三个月发布一个模型，而是变成每周发布一个，接着是每天发布一个，然后是每小时发布一个，到了那个阶段，我们基本上就彻底解决了这个问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: No, I think it will definitely go through stages, because this is assuming there’s one discontinuous event where suddenly we fix weight updates continuously. In practice, I think it’s much more likely to be that the cartridges and stuff allow you to specialize in deployments. Then you generate traces, you put that in your model, and three months later you come out with a model which is better at this stuff. You specialize it again, you consolidate it again, and then eventually we’ll just make this leap faster and faster. Instead of releasing a model every three months, now it’s every week, and then every day, and then every hour, at which point we’ve basically solved it.</p>
+</details>
+<p><strong>Speaker A</strong>: 我认为这也是一个很好的观点，因为你之前问到了我们距离能够实现这一目标当前的范式还有多远。我们对此进行了一些研究，业界也开展了大量研究。在极大的规模下，当你洗刷掉足够的噪声并且拥有足够大的批次大小（batch size）时，将数据加入中程训练（mid-training）并构建我们自己的环境这种外循环流程，在某种持续学习机制下确实是奏效的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I think this is a good point as well, because you asked how far off the current paradigm we are from being able to do this. We’ve done a bit of research into this, and people have done a lot of research. At a really large scale, when you wash out enough noise and you have large enough batches, this outer-loop process of putting data into mid-training and creating our own environments does work in some sort of continual learning regime.</p>
+</details>
+<p><strong>Speaker A</strong>: 但问题在于，当你在微观层面上足够近地去观察时——比如我现在手头有一个模型，正试图针对一家律师事务所或其他特定场景对其进行微调更新，并且我试图在相对较少的数据量下以高度连续的方式来完成这件事——所有的现有方法几乎都会在一定程度上崩溃。如果我仅在成功的运行轨迹上对模型进行监督微调（SFT），无论采取策略外（off-policy）还是策略内（on-policy），最终在高度迭代的场景中，当你进行数百次此类微更新时，你就会观察到灾难性遗忘（catastrophic forgetting）。你会看到模型遗忘掉更早期在基座模型之上学到的先前信息，并且会看到通用能力的退化。策略内蒸馏（On-policy distillation）似乎在推动解决这一问题……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: But the problem is, when you zoom in close enough at a micro level — I’ve got one model and I’m trying to update it again for a law firm or something, and I’m trying to do that very continuously with a relatively small amount of data — all the methods kind of break down a bit. If I SFT the model on just successful traces, off-policy or on-policy, eventually in the very iterative regime, when you’re doing hundreds of these micro-updates, you see catastrophic forgetting. You see forgetting of previous information learned on top of the base model that was much earlier on, and you see degradation of general capabilities. On-policy distillation seems to push this</p>
+</details>
+<!-- chunk 6/9 -->
+<h3>强化学习与持续学习的瓶颈：遗忘与重训</h3>
+<p><strong>Beren</strong>：……稍微把视野拉长了一点，但最终还是会遭遇同样的问题。强化学习（RL）非常擅长注入能力，但在注入知识方面却没那么在行，尤其是这种非常明确的具体知识，比如“啊，明白了，某某律师事务所的某个人是这么做事的，这是我们发现的一个非常具体的流程”。要想通过 RL 把知识注入进去，你必须投入大量的算力去构建合适的环境。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Beren</strong>: horizon out a little bit, but it still eventually succumbs to the same thing. RL is good at getting capabilities in, but it’s not as good at getting knowledge in, this very explicit knowledge of, &quot;Ah, okay, this person does this at this law firm, and this is a very specific process we find.&quot; You have to pour in a lot of compute to create the right environments to get the knowledge in with RL.</p>
+</details>
+<p><strong>Host</strong>：你认为这里的根本问题是什么？为什么在其他技能上会变差，或者会出现遗忘？这从根本上说是一个模型容量（capacity）的问题，还是训练技术（techniques）的问题？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Do you think the fundamental issue here — why you get worse at these other skills or there’s forgetting — is fundamentally an issue of capacity or an issue of techniques?</p>
+</details>
+<p><strong>Charlie</strong>：两者兼而有之吧。我认为有监督微调（SFT）甚至同策略蒸馏（on-policy distillation）的破坏性都太大了。RL 之所以好，是因为它对模型的改变非常非常小。有很多证据可以证明这一点。它只是在一个非常微小的损失曲面凹陷（loss valley）中对模型进行微调，使其调整到恰当的位置。但这也限制了你能用 RL 做的事情，即你实际上能对模型做出多大幅度的改变。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Charlie</strong>: A little bit of both. I think SFT and even on-policy distillation can be way too destructive. The reason RL is so nice is because it changes a very, very small amount about the model. There’s a lot of evidence for why this is the case. It just tweaks it in this very, very small loss valley to get it into the right point. But that also then limits what you can do with RL, how much you can actually change the model.</p>
+</details>
+<p><strong>Host</strong>：所以你的意思是，这可能不是一个“赢家通吃”格局的原因在于，要在迭代过程中将那么多信息蒸馏进同一个基座模型中，难度实在太高了？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: So you’re saying the reason this isn't a winner-take-all, potentially, is that it is just very hard to distill that much information into the base model?</p>
+</details>
+<p><strong>Charlie</strong>：而且还要在迭代的过程中不破坏原有的能力。如果直接蒸馏进一个全新的基座模型，那是很容易的。这就是为什么我认为这主要是技术方法的问题。这绝对不是因为模型容量不够。如果你有一个包含所有这些数据的模型，然后你拿一个完全相同尺寸的模型，在二次预训练/中程训练（mid-training）中把所有这些新数据放进去从头开始预训练，它的表现一定会更好。我认为如今业界发生的很多事情正是如此。现在存在一个很大的瓶颈，阻碍着我们永远对同一个模型不断训练下去；相反，大家只能从旧模型中收集所有数据，然后从头开始训练一个新模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Charlie</strong>: Without ruining something, in an iterative fashion. It’s easy to distill it into a different base model. This is where I think it’s mostly technique. It’s definitely not that there isn’t capacity. If you had some model with all this data, and you take literally the same-size model and pre-train it from scratch with all of the stuff in mid-training, it will be better. I think that’s a lot of what’s happening today. There’s very much a bottleneck that stops us from just keeping training the same model forever, versus just getting all the data from the old model and training a new model from scratch.</p>
+</details>
+<p><strong>Beren</strong>：这正如 Charlie 刚才所说的：这是模型可塑性（plasticity）与灾难性遗忘（catastrophic forgetting）交织的结果。如果你只是天真地在非平稳数据（non-stationary data）上进行训练，随着你在训练过程中不断加入新数据，这会扰乱数据分布，旧的知识就会被遗忘。我们目前并没有很好的方法来阻止这种情况的发生。所以推到极致，你可能最终受限于必须利用所有这些新信息从头开始重新训练模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Beren</strong>: This is exactly as Charlie was saying: some combination of plasticity and catastrophic forgetting. If you just naively train on non-stationary data, because you’re adding new data as you go, this is messing with the data distribution, so the old stuff is just forgotten. We don’t really have good methods to stop that from happening. So maybe in the limit you’re just bottlenecked by retraining the model from scratch with all this new information.</p>
+</details>
+<p><strong>Charlie</strong>：是的，而这当然是非常昂贵的。从头训练一个模型的成本极其高昂。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Charlie</strong>: Yes, which of course is very expensive. Training a model from scratch is expensive.</p>
+</details>
+<p><strong>Host</strong>：但无论如何你终归是要重新训练的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: But you’re going to do that anyways.</p>
+</details>
+<p><strong>Charlie</strong>：那倒未必。如果未来拥有了持续学习（continual learning）的能力，也许你永远都不需要从头训练新模型了。你只需要拥有一个模型，让它不断学习、不断扩展容量即可。但这里面可能存在某种极其深层的技术原因，导致这条路异常艰难。这就是核心问题所在。我认为我们确实已经减少了必须“从头开始训练”的程度。现在完全可以做到拿一个预训练好的基座模型，在其之上非常出色地进行某种持续性的中程训练，再加上针对训练后期不同检查点（checkpoints）的 RL 训练。这看起来更像是持续学习了，但这绝不意味着你可以直接拿最新的模型，施加几次极微小的参数更新，就能在迭代中永远不丢失任何旧知识。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Charlie</strong>: Not necessarily. Maybe eventually, if you have continual learning, you never train a new model. You just have a model and it keeps learning and expanding. But there might be some deep technical reason why that’s very difficult. That’s the question. I think we have pushed back how much from scratch we need to do. It is definitely possible now to take the pre-trained base and do very good mid-training on top of that, kind of continuously, plus some RL from different checkpoints that are later on in the training. That’s looking more like continual learning, but it’s certainly not the case of taking the most recent model, applying a couple of very small updates, and iteratively never losing anything.</p>
+</details>
+<p><strong>Host</strong>：不好意思，但我有点困惑，因为在实际训练中难道不就是这么做的吗？在后训练（post-training）或类似阶段，你有一个已经经历了大量训练的模型，然后你把某个经过进一步 RL 训练的分支模型（fork）蒸馏回基座里。实际情况难道不正是这样的吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Sorry, but I’m a bit confused, because isn’t this literally what happens during training? During post-training or something, you have a model that’s already gone through so much training, and then you distill some fork that’s been further RL’d. Isn’t that literally what happens?</p>
+</details>
+<p><strong>Charlie</strong>：但我认为那依然是在足够大的规模下进行的，这样你就能冲淡大量的噪声，并且你并不是仅仅聚焦于单一的数据分布上——正如 Beren 所说，单分布才是问题所在。如果你只是专注于单一任务——</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Charlie</strong>: But it’s still at a large enough scale, I think, that you’re washing out a lot of the noise, and you’re not just focused on one distribution, which, as Beren said, is the issue. If you’re just focusing on one task—</p>
+</details>
+<p><strong>Host</strong>：但在未来的终极形态中，你将拥有数以十亿计的线上部署实例。你同时从所有这些实例中学习，因此有望从中冲淡并消除噪声。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: But in the eventual regime you’d be doing… There are billions of deployed instances. You’re learning from all of them at once, so hopefully there’s some washing out of noise from that.</p>
+</details>
+<p><strong>Beren</strong>：在那种规模下也许确实可以。正如 Charlie 所说，你完全可以在很长一段时间内进行持续的中程训练，你也可以回滚到某个检查点并向其提供新的中程训练数据。但与此同时，你无法无休止地这样做下去。如果你只是永远持续训练同一个基座，它在某个时刻就会达到渐近线（asymptote）而停滞不前。你无法在这个基座里继续学到新东西了。这就是为什么大家最终还是要训练全新的基座模型。否则的话，你只要永远对同一个基座做中程训练就行了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Beren</strong>: Maybe at that scale, yeah. As Charlie was saying, you can definitely do continual mid-training for a long time, and you can roll back to a checkpoint and give it new mid-training data. But at the same time, you can’t do this indefinitely. If you just keep continually training the same base forever, it asymptotes at some point. You can’t just learn new stuff in that base. This is why people end up training new bases. Otherwise you would just keep mid-training the same base forever.</p>
+</details>
+<h3>插播：利用 Grok Bot 自动化播客剪辑</h3>
+<p><strong>Host</strong>：每当我录制完一期采访，我都会立刻在 Slack 里把脑海中的所有想法全盘倾倒出来（brain-dump）——比如哪些内容最有趣、哪些部分应该剪掉。这样可以确保我的剪辑师拥有开始剪辑该期节目所需的全部背景信息。但这些随手记录的想法并没有明确的时间戳，而我未经剪辑的原始录音长达数小时。剪辑师光是找出我提到的具体片段就要耗费大量时间。所以我们决定尝试在聊天群里引入一个 Grok Bot 制作人助手。现在，每当我的剪辑师发出一期节目的粗剪版本时，Grok Bot 就会在它自己的电脑上打开逐字稿并开始处理，通常甚至在我看到消息之前它就已经完成了。它会提取我丢进 Slack 的笔记，并在逐字稿中高亮标出相关片段。它还会参考我整理的一份包含我所有偏好的大型档案库，从而提出潜在的剪辑建议。处理完毕后，它会把精选的最佳片段候选发送给我，让我能直接在手机上审核一切。这套流程的效果非常好。能够像给剪辑师发短信一样发送非正式留言，然后让逐字稿立刻体现出我的偏好，真的带来了巨大的帮助。欢迎访问 x.ai/bot 亲自体验 Grok Bot。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Whenever I finish recording an interview, I immediately brain-dump all my thoughts into Slack—things like what was most interesting and what should get cut. This ensures that my editors have all the context they need to start editing the episode. But these brain dumps don’t have clear timestamps, and my unedited recordings are many hours long. It can take a ton of editor time just to find the exact moments I was referencing. So we decided to try adding a Grok Bot producer to our chat. Now, whenever one of my editors posts a rough cut of an episode, Grok Bot opens the transcript on its own computer and starts working, usually before I’ve even seen the message. It takes the notes I dropped into Slack and highlights the relevant snippets in the transcript. It also uses a big case file I’ve compiled with all my preferences, so it can suggest potential edits. When it’s done, it sends me its top clip candidates so I can review everything from my phone. This has worked really well. Being able to send informal messages, like I’m texting my editor, and then have the transcript immediately reflect my preferences has just been so helpful. Try Grok Bot yourself at x.ai/bot.</p>
+</details>
+<h3>数据分布与超智能的阶梯式构建</h3>
+<p><strong>Host</strong>：现在让我们来聊聊数据。我通常对这样一个问题很感兴趣：AI 的进展中究竟有多大比例纯粹是由数据的进步所解释的？这并不意味着它一定难以实现自动化，但那是另一个单独的问题。是否存在某种特定的数据分布，如果我们在当前的模型架构上用其进行训练，就能产生一个在所有领域都彻底超越人类专家的超级智能？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Let’s talk a bit about data now. I’m generally interested in this question of how much of AI progress is just explained by data progress. That doesn’t mean it will necessarily be hard to automate, but that's a separate question. Is there some data distribution which, if you trained current architectures on it, would result in a superintelligence that totally dominates human experts across every single field?</p>
+</details>
+<p><strong>Charlie</strong>：我们这里指的是预训练加上后训练的数据，以及所包含的环境吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Charlie</strong>: Are we talking about pre-training plus post-training data, environments as well?</p>
+</details>
+<p><strong>Beren</strong>：我认为这种数据分布的存在是显而易见的。问题只在于我们能否构建出合适的环境来实现它。在最极端（且平庸）的情况下，我们甚至可以直接训练它输出一段能够训练出真正超级智能的 Python 代码文件，仅仅将代码死记硬背在权重中即可。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Beren</strong>: I think the existence of this is obvious. It’s just whether we can create the right environment to get there. In the trivial case, we could just train it to output the Python file which trains the actual superintelligence. Just have that memorized in the weights.</p>
+</details>
+<p><strong>Charlie</strong>：是的，理论上很可能可以构建出一套阶梯式的强化学习环境，使得最终能够训练出一个至少与人类研究员水平相当的 AI 研究员。但是，攀登每一个连续阶梯所需的努力呈指数级增长。在这两件事之间你需要做权衡：我们究竟需要多快才能触及那最终超越人类的最后一级台阶。我认为这一点相当明确。我们在构建 RL 环境方面仍处于相对早期的阶段。我们利用了许多不对称性来构建优秀的环境。我们之前讨论过的其中一种不对称性在于：在某些环境中，“逆向生成”远比“正向求解”容易得多。我的意思是，定义一个复杂的数据生成过程非常简单，你可以把这个生成过程作为潜变量对模型隐藏起来。你可以生成任意复杂的环境，而模型必须消耗大量无法简化的 token 预算并付出不可缩减的工作量，才能反推并弄清楚该数据生成过程到底是什么。在注入来自真实世界的信息方面也存在不对称性。比如 Anthropic 结合数万名人类和 LLM 的力量发现了一个 bug，并将其转化为一个极其精炼紧凑的环境，理论上单个 LLM 只需耗费几百万 token 就能找到该 bug。我们正在挑选所有这些不对称性，并指望着这种跨任务时间跨度的泛化能力（task-horizon generalization）。但我认为这在某个节点上终将遭遇边际效益递减：首先是最初构建和构思这些环境的难度会面临效益递减，因为你不可能总是拥有那些“逆向容易、正向困难”的过程；你必须真正坐下来，协同人类去构建具备足够长任务时间跨度的环境，而创建这样的复杂任务将极其艰难。其次，智能体实际执行这些任务时还会面临算力和时间上的瓶颈。我认为你很快就会看到这条进步曲线开始放缓并趋于平缓。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Charlie</strong>: Yes, there’s probably a ladder of RL environments that is possible to construct such that you would get an AI researcher which is at least as good as a human researcher. But the effort to climb each successive rung grows kind of exponentially. Those are the two things you have to trade off against as to how fast we’re going to hit that final rung where it’s better. I think that’s fairly clear. We’re still relatively early in RL environment creation. There are a lot of asymmetries that we exploit in order to create good environments. One of the asymmetries which we’ve talked about before is that there are environments where it’s easier to go backwards than forwards. What I mean by that is, it’s very easy to define this complex data-generating process, and this is the latent variable you keep hidden from the model. You can generate arbitrarily complex environments, and the model has to do a lot of irreducible token spend and irreducible work to figure out what that data-generating process was. There are asymmetries in terms of injecting information from the real world. Anthropic finds a bug through tens of thousands of humans and LLMs combined, and turns that into a very, very neat environment which a single LLM could theoretically find within a few million tokens. There are all these asymmetries which we’re cherry-picking, and we’re counting on this kind of task-horizon generalization. But I think it’s just going to hit diminishing returns at some point, diminishing returns in how hard it is to create those environments in the first place, coming up with them, because you can’t necessarily just have these processes where it’s easier to go backwards than forwards. You actually have to sit down and construct something that looks like a long enough time horizon with humans, and it’s going to be a really complex task to create. Then there are also going to be the compute and time bottlenecks for the agent to actually do those tasks. I think you’re just going to start seeing this curve flatten out.</p>
+</details>
+<h3>专家行为迁移与强化学习课程的必要性</h3>
+<p><strong>Host</strong>：我看到过一个案例，有人拿 Talkie 模型（该模型仅使用 1930 年之前的数据进行训练），用现代编程智能体的数据对其进行微调。结果它在 SWE-bench 上的表现竟然超过了 Claude 3 Opus。这意味着一个原本对代码一无所知的模型，经过适量数据的微调后，作为编程智能体的表现竟然能优于体积大得多的预训练模型，这简直不可思议。这在某种程度上说明，一旦你拥有了正确专家行为的示范样本，将其复制到一个相对较弱的模型中其实是出人意料地容易的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I saw something about how someone fine-tuned the Talkie model, which is only trained on data up to 1930, on modern coding agent data. It did better than Claude 3 Opus on SWE-bench. So this model that has no knowledge of code whatsoever can be fine-tuned on a moderate amount of data and behave better as a coding agent than this much larger pre-trained model, which is pretty crazy. It kind of shows you that once you have an example of the right expert behavior, it’s actually surprisingly easy to copy that into a relatively weak model.</p>
+</details>
+<p><strong>Beren</strong>：但针对这一点的一个反例是最近的一篇论文：他们训练了一个达到五年级数学水平、同时也具备小学英语等能力的基础模型，这算是一个不错的小语言模型。他们尝试通过 RL 训练让它去解决高中后期乃至大学级别的数学题。结果发现差距实在太大了，他们根本无法让模型实现向上的攀登。但如果你设置连续的阶梯——先学 7 年级数学，再学 8 年级数学……依此类推，显然它就能一路爬升到 12 年级。所以归根结底，问题在于这些阶梯之间的跨度有多大，以及构建这些阶梯有多难。这又回到了 RL 的奖励信号问题（signal problem）。RL 目前非常不擅长自主探索。如果模型在 128 次采样展开（rollouts）中都无法碰对一次答案，它就极难获得取得进展所需的信号。这就是为什么在 RL 中我们必须设计课程（curricula），而在预训练中我们却不需要，因为这在预训练中根本不是问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Beren</strong>: But a counterexample to that is a paper recently where they trained a model up to fifth-grade maths, and also primary-school English and stuff, so it was a decent language model. They tried to RL it to do late high school and college maths. The gap was just too large. They couldn’t get it to climb at all. But if you did successive rungs of year 7 maths and then year 8 maths… and so on, you could obviously climb to year 12. Again, it’s just what is the distance between the rungs on those ladders, and how hard is it to create? This just comes back to the RL signal problem. RL is not very good at exploring right now. If the model can’t get it in 128 rollouts, it’s very unlikely to get signal to progress. This is why in RL we need curricula, whereas in pre-training we don’t, because that’s not a problem for pre-training at all.</p>
+</details>
+<h3>真实世界的信号瓶颈与边际效益递减</h3>
+<p><strong>Charlie</strong>：再次强调，预训练数据和后训练数据有着本质的不同。我设想随着我们继续向前推进，人类的参与度会越来越低，但这并不能改变你受限于能从真实世界提取多少有效信号这一事实。世界上确实存在大量的信号，这是事实。有人在做电子表格任务，有人在处理法律事务等等诸如此类的工作。但在模型目前所达到的能力前沿（capability frontier）上，世界上到底还有多少比特的信息真正有助于提升模型的能力？有多少新解决的数学问题是当前模型无法触及或理解的？又有多少新创建或解决的编程问题是超出现有模型能力范围的？我认为这就是为什么边际效益递减会显现出来——因为回到我们最初谈到的问题，即使是整个世界，也没有在源源不断地提供那些能够将模型推入下一个能力吸引盆（basin of capability）的关键比特。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Charlie</strong>: Again, pre-training data is different to post-training data. I imagine as we continue on, humans will be involved less and less, but that doesn’t change the fact that you’re bottlenecked on how much signal you can extract from the real world. There’s a lot of signal in the world, and that’s true. There’s people doing spreadsheet tasks, there’s people doing legal tasks and all this sort of stuff. But at the capability frontier of where the models are at now, how many bits in the world are actually really relevant to improving the model’s capabilities? How many new maths problems are being solved that are just beyond the reach or grasp of the current models? How many new coding problems are being created or solved that are beyond the reach of the current models? I think that’s why the diminishing returns kick in, because even the world as a whole is not giving you the bits, going back to the start of this, that are useful for tipping you into the next basin of capability.</p>
+</details>
+<p><strong>Beren</strong>：我完全同意这一点。这本质上是信号来源的问题。在预训练中，有效信号早已存在于 Common Crawl 中了。对于预训练所关注的任务而言，根本问题完全不在于获取信号，而在于从浩如烟海的现有数据中过滤掉所有的噪声。这是一个相当可自动化的过程。但是随着模型变得越来越好，随着我们进入中程训练和后训练阶段，我们所拥有的原始数据中根本就不存在那种信号。无论你做多少次数据过滤都无济于事。Common Crawl 里绝不会藏着千禧年大奖难题（Millennium Prize problem）的隐秘证明，只等着我们去过滤出来。到了那个阶段，你必须通过其他途径获取信息比特：要么直接向人类索取，要求他们写下自己的完整推理过程；要么通过构建特定的环境，由人类来决定应该创建什么样的环境以及这些环境的目标是什么……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Beren</strong>: I totally agree with this. It’s really a question of where the signal is coming from. In pre-training, the signal is already in Common Crawl. For the tasks that you care about in pre-training, the problem is not getting signal at all. It’s filtering out all the noise that exists. That’s quite an automatable process. But as the models get better, as we enter mid-training and post-training, the signal just doesn’t exist anywhere in the original data we have. No amount of filtering will get this. There’s no hidden proof of a Millennium Prize problem sitting in Common Crawl that we can just filter until we see it. At that point, you have to get bits some other way, either from humans directly, asking them to write out their reasoning, or by creating environments where humans decide what environment should be created and what the objectives of these</p>
+</details>
+<!-- chunk 7/9 -->
+<h3>预训练的算力效率增益：数据与架构的贡献</h3>
+<p><strong>主持人</strong>：无论是在强化学习环境中，还是针对实际部署中产生的人类数据进行某种训练，这些信息比特总归得来自某个地方。现在有一个核心问题：预训练取得的进展中，究竟有多大比例是由数据驱动的？我和普林斯顿大学的学生 Jerry Han 做过一项调研，我们将 2019 年至今的所有训练配方（recipes）与 2019 年至今的所有数据集进行了两两配对训练。比如用最新的数据集（如 Ultra-FineWeb）来训练 GPT-2；或者用 The Pile 或其他旧数据集来训练像 Delphi 这样最新的开源训练配方。我们遍历了整个网格矩阵。通过观察跨越这个矩阵达到某种能力水平所需的算力减少量，你会发现：在极小的模型规模下，数据方面的改进似乎带来了大约 12.0 倍的算力效率提升，而架构上的改进则带来了大约 3.7 倍的算力效率提升。如果这一结论在大规模下依然成立——即大部分预训练算力效率的提升都源自更好的数据——那么这种趋势还能持续多久？我们是否能持续进行越来越多的数据过滤，并构建越来越多的合成数据？你对这种预训练进展还能持续多久有什么预判吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: environments are, or some kind of training on the human data that exists in deployment. You have to get the bits from somewhere. There’s a question of how much of the progress in pre-training is being driven by data. I did this investigation with Jerry Han, who’s a student at Princeton, where we trained all the recipes from 2019 till now pairwise with all the data sets from 2019 to now. You’re training GPT-2 on the newest data set, like Ultra-FineWeb. You train Delphi, which is the newest open source training recipe, on the Pile or some old data set. You do the whole grid. You see, getting to some level of capabilities, how much less compute does it take, across this grid? You see that the data seems to explain something like a 12.0x compute efficiency gain, but the architecture improvements explain something like a 3.7x compute efficiency gain, at a very small scale. To the extent that that is true at large scale — that most of the pre-training compute efficiency gains are coming from better data — how much can that continue? Can you keep filtering data more and more and building more and more synthetic data? Do you have a sense of how much this kind of pre-training progress can continue?</p>
+</details>
+<p><strong>嘉宾 A</strong>：我的先验看法依然是：那些唾手可得的低垂果实（low-hanging fruit）已经在一定程度上被采摘殆尽了。互联网本身就像一块巨大的数据块摆在那里，而互联网的增长速率显然无法跟上我们的需求，网上所有有价值的内容也不是以同样的速度在增长。未来我们可能还会迎来一连串带来 0.1% loss 下降的优化点，但其总数绝对无法与过去已经实现的数量相提并论。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest A</strong>: My prior is that, again, the low-hanging fruit is somewhat exhausted. We got the internet as this big block, and it’s not like the internet is necessarily growing at the same rate. All the useful stuff on the internet isn’t growing at the same rate. We’ve probably got a bunch of 0.1% loss drops to go, but definitely not as many as have currently occurred.</p>
+</details>
+<p><strong>嘉宾 B</strong>：但你在两方面综合观察到的累积 33 倍提升也确实非常耐人寻味。我记得 Epoch 或其他机构曾估计自 2019 年以来每年的效率提升大约是 3 倍，按此推算 7 年大概是 $3^7$，也就是超过 2000 倍的综合提升。那么这里面缺失的 100 倍左右的差距到底是从哪里来的？这很可能给出了一个强烈的信号：后训练（post-training）在其中占据了多么巨大的比重。我认为合理的解释必然是：很大一部分算力效率的增益是依赖于模型尺度的（scale dependent），而我们目前测试的起点规模极小。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest B</strong>: But it’s also really interesting that you find this cumulative 33x improvement across both. I think it was Epoch or someone who estimated 3x a year since 2019, which would imply something like 3⁷, over 2,000X improvement. So where’s that missing 100x or whatever coming from? That probably gives you a good signal of how much of this is post-training. I think the explanation has to be that a lot of the compute efficiency gains are scale dependent, and we’re starting at extremely small scale.</p>
+</details>
+<p><strong>主持人</strong>：这引发了一个问题：究竟是数据带来的算力效率增益具有更强的尺度依赖性，还是算法架构带来的增益更具尺度依赖性？不知道你对此是否有先验判断。我们当时只是没有足够的算力来深入探究这个问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: That raises a question of whether the data compute efficiency gains or the algorithmic compute efficiency gains have more scale dependence. I don't know if you have a prior on that. We just didn’t have enough compute to investigate that question.</p>
+</details>
+<p><strong>嘉宾 B</strong>：仅从纯理论和直觉的角度来看，架构层面的尺度依赖性已经被研究得相对透彻了，你甚至可以用一条直线来拟合它。但如果要对预训练、中训练（mid-training）和后训练数据的组合做类似的尺度拟合，我完全不知道该从何下手。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest B</strong>: Just naively, theoretically, the scale dependence of the architecture is fairly well known, and you can fit a straight line to it. Whereas I would have no idea how to do that for combining pre-training plus post-training data and mid-training data.</p>
+</details>
+<h3>架构的质变与数据在不同尺度下的作用</h3>
+<p><strong>嘉宾 A</strong>：有趣的是，我反而觉得随着规模的扩大，数据的重要性会变得更高。我认为架构革新往往是一次性的跃迁。单纯说架构带来了百分之多少的效率提升在某种程度上是有误导性的，因为架构真正的作用在于带你进入一个旧架构根本无法触及的、质变级别的全新领域（qualitatively new regime）。一旦进入了这个新领域，数据显然就成了决定模型能力的最主要因素。举个例子，如果我们连分组查询注意力（GQA）都没有，整天都在跑全量自注意力（full attention），那么支持 100 万上下文窗口的成本将会极其高昂，高到不可承受。正是由于这个瓶颈，我们永远无法真正利用那些长达 100 万上下文的数据，也就无法解锁相应的高阶能力。尽管如果你只是简单地在 2K 上下文下去测算“这套架构能提升多少”，此时架构并没有解锁任何质变的能力边界，因此看起来数据在某种意义上比架构重要得多。所以在我看来，把这两者简单地看作单纯的乘法乘数增益，这种假设本身就是存疑的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest A</strong>: Funnily enough, I feel like data is actually more important with scale. I feel like architectures are kind of a one-time thing. Saying just an X% efficiency gain is kind of misleading, because what an architecture does is let you reach a qualitatively new regime which you couldn’t reach with the old architecture. Within that regime, obviously the data is the primary thing determining it. But if we didn’t have even GQA, if we were doing full attention all day, it would be ridiculously expensive to do a million context. Because of that, we could never use the data which is actually at a million context, so we couldn’t get these capabilities. Even though if you just do a naive &quot;how much does this do at 2K context&quot;, where the architecture isn’t unlocking anything, then the data will look much more important than in some sense it is. It’s unclear to me that these things are really just multiplicative gains in this way.</p>
+</details>
+<p><strong>主持人</strong>：明白。那么你对数据本身的尺度依赖性是怎么看的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I see. So what’s your take on the scale dependence of data?</p>
+</details>
+<p><strong>嘉宾 A</strong>：关于尺度依赖性，我认为我们目前拥有的许多中训练和后训练数据，实际上随着模型规模的扩大而表现得越来越好。因为其中很大一部分数据——例如那些涉及极长上下文时域（long context horizon）的环境交互数据——必须依赖非常庞大的模型才能够真正加以消化和利用。如果你尝试在一个 1 亿参数的小模型上训练 SWE-bench 的运行轨迹（traces），模型根本无法学出任何东西，完全不可能展现出你在一个合理规模的大模型上训练时所能获得的那种能力跃升。而且现在的情况也更加复杂，因为许多架构层面的调整——比如观察 Kimi 或 DeepSeek 的设计——他们进行这些架构改造时，考虑的不仅仅是降低预训练的 loss，更充分考虑了模型在真实世界中将如何被部署与使用。DeepSeek 模型中采用的某种形式的压缩注意力机制，其推理效率的优化并不一定是为了追求基础理论权衡上的极致提升，而纯粹是出于：“好，我们正在根据模型未来的实际使用方式来做针对性设计。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest A</strong>: On scale dependence, I think a lot of the mid-training and post-training data we have now actually gets better with scale, because a lot of it — the very long context horizon environment stuff — really requires big models to be able to make use of it. If you try and train your 100 million parameter model on SWE-bench traces, it’s not going to get anywhere. It’s not going to show you the same kind of improvement that you would get if you train an actual sensible size model on it. It’s hard as well now because so many of the architecture changes — you look at Kimi, for instance, or DeepSeek — they’re doing these architectural modifications not just with dropping the pre-training loss in mind, but with how the models are going to be used in the real world. The inference efficiency, having some form of compressed attention in the DeepSeek models, is not necessarily geared around a fundamental trade-off improvement. It’s just, &quot;Okay, we’re considering how the models are going to be used.&quot;</p>
+</details>
+<h3>强化学习时代的参数扩展与推理效率</h3>
+<p><strong>主持人</strong>：为了理解未来的技术走向，我很好奇的一个问题是：随着我们迈入一个重度依赖强化学习（RL）的范式，参数规模的扩展（parameter scaling）将会如何演进？纵观开源模型的架构，你可以看到参数规模在以何种速度增长，目前前沿开源模型大概保持着每年翻倍（2x）的节奏。考虑到即使是前沿闭源模型也拥有 1000 亿或 2000 亿的激活参数量，你认为这种年均翻倍的趋势还会继续维持吗？或者说，鉴于我们现在身处强化学习范式之中，大家在生成 Rollout 采样时都极力希望节省推理算力……此外，也许存在某种阈值效应，即当模型具备了足够的容量后，在此基础上盲目堆砌参数就不再那么重要了。你们对 2030 年的前沿模型会拥有多少激活参数有概念吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: One question I’m curious about, to understand the future, is how parameter scaling will go as we’re getting into more of an RL-heavy regime. You can look at open source architectures and see how fast parameters have been scaling. Maybe it’s roughly 2x every year for frontier open source models. To the extent that even frontier closed source models have 100B or 200B active parameters, do you think that keeps 2x-ing year over year? Or, now that we’re in an RL regime where you also want to conserve compute on rollouts… Also, maybe there is a threshold effect where you have enough capacity and at that point increasing parameters arbitrarily doesn’t matter as much. Do you guys have a sense of, in 2030, how many active parameters a frontier model will have?</p>
+</details>
+<p><strong>Charlie</strong>：我认为在未来几年内，由于我们极其聚焦于在强化学习中做越来越长时域（longer horizon）的 Rollout 采样，推理效率在其中起着决定性作用，而模型在这方面的处理能力目前看来并没有饱和。真正的瓶颈依然在于训练环境本身。因此，我们可能会看到参数规模增长出现一定的放缓平台期。我个人感觉，像 Mythos 以及 GPT 系列模型，其实际参数量远比外界传闻的 10 万亿参数级别要小得多。即便只是简单地将它们与现有开源模型进行横向对比，你大概也能推导得出这个结论。因此在未来几年内，我不认为参数数量会出现极其夸张的暴增。不过话说回来，这里需要权衡的维度实在太多了。你决定模型的尺寸，取决于你手里有多少预训练数据，以及用于强化学习训练的环境难度有多大。在理想状态下，你希望找到一个最佳平衡点：模型刚好能在你拥有的最难环境下取得令人满意的 pass@1 或相应表现。如果单纯把模型做得更大去强行通关是没有经济意义的，因为那意味着你在后续推理中要付出远超必要的昂贵算力代价。因此，很大程度上这取决于像 Mercor 这样的团队以及各大公司的内部团队，能够以多快的速度提升他们所构建的强化学习训练环境的复杂度。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Charlie</strong>: I think for the next few years, because we are so focused on doing longer and longer horizon rollouts for RL, where inference efficiency matters a lot, it feels like the models aren’t necessarily saturated on their ability to do that. The bottleneck is still the environments. So we might see a little bit of a plateau. I have a feeling that Mythos and the GPT models are much smaller than the 10 trillion parameter range that people are talking about. Even just naively comparing them to open source models, you can probably back out that conclusion. Probably for the next few years, I wouldn’t imagine a huge growth in the number of parameters. But again, there’s so many different things to trade off here. You decide the size of your model based on how much pre-training data you have, and then the difficulty of the RL environments that you’ve got to train on. You ideally want to get to the optimal point where you can get a decent pass@1 or something on the hardest environments you have. It wouldn’t make sense to make a bigger model pass there, because then you’re just paying much more inference than you need to. So a lot of it depends on how quickly Mercor and the in-house teams can scale up the complexity of the RL environments they’re training on.</p>
+</details>
+<h3>稀疏性、数据效率与硬件限制的权衡</h3>
+<p><strong>嘉宾 A</strong>：我依然认为模型规模会继续变大，这纯粹是因为算力投入在持续加码，GPU 硬件的规格也在不断升级。但它们具体会扩大到什么程度，在很大程度上取决于以非直观方式发挥作用的 Scaling Laws（缩放定律）。其中一点在于，既然我们正在进入高质量预训练数据日益短缺的阶段，我认为相较于算力效率，数据效率（data efficiency）将会成为左右大家具体采用何种架构的更关键驱动力。这也可能会深刻影响模型稀疏度（sparsity）的设计决策。而且坦白说，我们目前对稀疏性的理解还远远不够透彻。总参数量与激活参数量是截然不同的两种资源。目前稀疏度确实有所增加，但它显然不可能无限制地无限增加下去，其中必然存在某种最佳平衡点（sweet spot）。有一种观点认为稀疏性实际上会损害数据效率，因为模型可能被迫要在多个不同的专家（experts）网络中重复学习相同的知识，尽管这一点目前在业内仍有争议。我认为我们现有的 Scaling Laws 理论还不够完备，以至于我们尚未真正搞明白稀疏性为何能带来增益、能帮到什么程度，以及在达到某个稀疏度阈值后收益是否会陷入停滞。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest A</strong>: I would expect the models to keep getting bigger just because people are scaling up compute and the GPUs are getting bigger. But exactly how much they get bigger depends a bit on the scaling laws in non-obvious ways. One thing is that I think data efficiency is going to be a bigger driver than compute efficiency of the exact architectures people use, now that we’re getting to the regime where we’re running low on high quality pre-training data. That might affect how sparse you want to make the model. I also think we don’t understand sparsity that well. Parameters are a different resource than active parameters. Sparsity has definitely increased a bit, but it’s not clear that it’s going to keep increasing without bound. There might be some kind of sweet spot. There’s an argument that sparsity should make data efficiency worse, because you might have to learn the same thing on multiple experts, though that’s debatable. I don’t think we have a good enough theory of scaling laws that we really understand why sparsity is helping, how much it’ll help, and if that’ll plateau at some point at a certain level of sparsity.</p>
+</details>
+<p><strong>主持人</strong>：抱歉，你能更具体地阐述一下数据效率对参数规模的具体影响到底是什么吗？听起来你似乎认为这会导致模型降低稀疏度，但这对参数扩展还有哪些其他维度的影响？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Sorry, can you spell out exactly what the implication of data efficiency would be on parameters? It sounds like you’d say there should be less sparsity, but what are the other implications on parameter scaling?</p>
+</details>
+<p><strong>嘉宾 A</strong>：本质区别在于：依据 Scaling Law 进行设计时，你的核心目标不再是单维度地优化算力效率。在架构层面你有一整套选择空间，而每一种架构选择都会衍生出不同的缩放定律曲线。在传统的做法中，你会根据算力去寻找某种包络线（envelope）——观察模型性能相对于算力消耗的函数关系，并提取所有最优模型构成的包络前沿。但如果我们转而依据数据做出这一决策——假设算力极其充裕，因而将数据量置于横坐标 X 轴上而非算力——那么我们就会得到完全不同的一组最优点，或者说前沿边界上将会出现完全不同的一批模型形态。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest A</strong>: Just that with the scaling law, you’re not trying to optimize compute efficiency. You have all your choices you can make on the architecture. Each of these gives you a different scaling law. Traditionally, you would look at some kind of envelope based on compute. You would look at performance versus compute and take the envelope of the best models. But if we’re making that decision based on data — we’re assuming we can spend a lot of compute, so data is on our x-axis instead of compute — then we just get a different set of optima, or a different set of models that are on that frontier.</p>
+</details>
+<p><strong>嘉宾 B</strong>：而且我也不认为过去几年里模型的规模真的每年都在简单翻倍。行业里训练万亿级参数模型其实已经有若干年历史了，之前甚至出现过名为 Falcon 的开源模型。我想是 Periodic Labs 的 Liam 昨天在 Twitter 上发帖提到过，他们早期的一项实验就是训练一个极度稀疏的万亿参数模型。这其实就是他们在加入 OpenAI 之前在谷歌所做的工作，也就是 Switch Transformer。由于结构极其稀疏，它在死记知识方面表现极佳，但在逻辑推理能力上却惨不忍睹。感觉过去一段时间以来，我们其实一直都在 1000 亿到 2 万亿参数这个区间内探索徘徊，绝对不是一条平滑优美的线性递增轨迹。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest B</strong>: I also don’t think that we’ve necessarily doubled the size of the models every year for the last few years. People have been training 1 trillion parameter models for at least a few years. There was even an open source one called Falcon. Liam from Periodic Labs, I think, posted yesterday on Twitter about how an early experiment was training a 1 trillion parameter model that was very, very sparse. That was what they did before OpenAI, at Google, the Switch Transformer. It was very, very good at knowledge but terrible at reasoning because it was so sparse. It feels like we’ve been playing in this 100 billion up to 2 trillion parameter range for at least a little bit. It certainly hasn’t been this nice linear increase.</p>
+</details>
+<h3>硬件演进与 Chinchilla 定律的再思考</h3>
+<p><strong>嘉宾 A</strong>：我认为这里涉及两个核心方面。正如 Charlie 所指出的，推理效率对于强化学习的 Rollout 采样而言至关重要，这将极其强势地压低模型的激活参数量。而在总参数量方面，很大程度上则高度依赖于底层硬件的支撑。要真正部署并服务数万亿参数的模型，你必须拥有极高的内存带宽和海量的显存（VRAM）容量。目前大家依然在大量使用 H100 等芯片；随着整个行业逐步转向 Grace Blackwell（GB 系列）以及随后的 Vera Rubin 架构，我们才将真正具备足够的硬件能力去扩展、部署并服务更大规模的强化学习大算力推理。数据层面的考量同样非常耐人寻味：直观上讲，更大规模的模型在单一样本利用效率（sample efficiency）上要高得多。哪怕数据量不足以填满该模型的容量饱和度，做大模型依然是有利的，因为大模型具有更卓越的泛化能力，在面对同等规模的数据时能收敛到更低的 loss。就目前而言，我认为数据储备依然充裕，算力才是真正的瓶颈，因此我们倾向于采用推理效率极高的小型模型。但一旦算力不再是卡脖子的瓶颈，行业很可能会重返参数量更大、容量处于未饱和状态（undersaturated）的大模型路线，以此换取大模型所特有的强大泛化优势。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest A</strong>: I feel like there’s two things. As Charlie was saying, inference efficiency is super important for RL rollouts. This will really push down active parameters quite a lot. I think the total parameters really depends a lot on the hardware as well. You really need very high memory bandwidth and VRAM size to actually be able to serve multi-trillion parameter models. Right now, people are still using a lot of H100s and stuff. As everyone moves to GBs and then Vera Rubins, we’ll get more of the ability to scale and actually serve and do large RL inference at larger scales. The data question I think is interesting, because naively, larger models are much more sample efficient in the actual data points. Even if you’re not saturating the model, it’s still better to go bigger, because larger models generalize better and get to a better loss for the same amount of data. Right now I think we have a lot of data, and that’s not the constraint. Compute is. So we’re having smaller models which are very inference efficient. But if compute is no longer the bottleneck, it might come back to larger models which are undersaturated, but have this generalization ability because they’re much larger.</p>
+</details>
+<p><strong>嘉宾 B</strong>：如果你单纯去审视基础的 Chinchilla 缩放定律（Chinchilla scaling law），并单方面将模型参数拉满到极限，它实际上对于达到同等 loss 所需数据量的削减幅度是非常有限的。哪怕你把参数量推向无穷大，由于幂律分布的本质特征，所需的数据量下降幅度我认为甚至不足 10 倍。然而我们现在所处的实际状态，恰恰站在了 Chinchilla 定律所规定的“数据过多”的一侧——按照 Chinchilla 的标准，当今的模型普遍处于严重过度训练（over-train）的状态。因此我们完全有可能回到这样一个节点：随着可用数据逐渐枯竭，我们重新向 Chinchilla 最优配比点靠拢，甚至演进到在一定程度上略微“欠训练”（under-training）的模型状态。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest B</strong>: If you just look at the basic Chinchilla scaling law and you just maximize out parameters, it actually decreases the amount of data you need to get to the same loss very little. If you go to infinity on parameters, the amount of data you need I think goes down less than 10X, just because of the nature of the power law. But we’re now on the way-too-much-data side of the Chinchilla laws. Right now we over-train models according to Chinchilla. So we could easily get back to a point where, as we’re running out of data, we move back to the Chinchilla optimal point, or even a bit on the under-training model side.</p>
+</details>
+<p><strong>主持人</strong>：但是毫无疑问，即使随着这些新一代芯片陆续上线交付，未来几年我们在算力端依然会面临极大的瓶颈，所以这种情况未必真的会出现吧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: But surely, even with these new chips that come online, we’re just going to be so compute bottlenecked for the next few years that that won’t necessarily be the case.</p>
+</details>
+<p><strong>嘉宾 A</strong>：这实际上高度取决于你在训练算力与推理算力之间所分配的比例关系。如果你面临的极端瓶颈确实是在数据端而非算力端，那么将模型做大才是正确的技术选择。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest A</strong>: This depends on the ratio you have of training and inference compute, really. If you’re super bottlenecked on data, not on compute, you should go bigger.</p>
+</details>
+<!-- chunk 8/9 -->
+<h3>缩放定律中的工程复杂性与超参数调整</h3>
+<p><strong>John</strong>: 如果你在算力上遇到了严重的瓶颈，你通常应该把模型做小。你也可以使用计算机生成的合成数据，所以这是一个非常难以预测的问题。</p>
+<p>我认为人们当初花了这么长时间才摸索出缩放定律（Scaling Laws）的部分原因在于，如果你没有把所有这些细节都处理正确，你就得不到那么清晰干净的缩放关系。图表上那些优美笔直的线条，背后隐藏着极其复杂的工程细节——你必须确保以正确的方式去缩放每一个超参数，或者以某种能够随规模扩展的方式来参数化你的优化器，从而让你在改变模型大小时不必再去调整超参数。</p>
+<p>Bug 本身也有其清晰的缩放规律。比如 Kaplan 当初忘记做余弦退火（cosine annealing），或者我认为甚至只是没有把嵌入层参数（embedding parameters）考虑在内。这直接搞乱了对较小模型的估算，因为在小模型中，嵌入层参数占了相当大的一部分比例。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: If you’re super bottlenecked on compute, you should always go smaller. You can also use computer-generated synthetic data, so it’s one of these very hard things to predict.</p>
+<p>I think part of the reason it took people so long to figure out the scaling laws in the first place was that if you don’t get all these things right, then you don’t get such a clean relationship. The beautiful straight lines on graphs hide a lot of complexity in how you have to make sure to scale every hyperparameter the right way, or parameterize your optimizer in a way that scales and where you don’t have to change your hyperparameters as you change the model size.</p>
+<p>Bugs have their own clean scaling laws as well. Like with Kaplan forgetting the cosine annealing thing, or even just not considering embedding parameters, I think. That messed up the estimate at smaller models because embedding parameters are a decent size of the model.</p>
+</details>
+<h3>强化学习有效性的根源：Mid-training 与信噪比优势</h3>
+<p><strong>Host</strong>: 聊一点强化学习（RL）。一年前，很多人都在提出这样一种论点：RL 在模型的规模化扩展上不会特别成功。John，你曾写过一篇研究论文，指出在进行 RL 时，模型每个 episode 只能学到一个比特（one bit per episode）的信息。它们学到的只是：“我的答案算对了还是算错了？”</p>
+<p>后来我今年早些时候也写了几篇博文，我说：“情况甚至比这还要糟糕”，因为当 pass rate（通过率）很低、模型极不可能答对时，它从一个 RL episode 中几乎什么都学不到。</p>
+<p>但我看现在的模型，它们似乎相当聪明。这似乎就是大规模扩展 RL 所带来的结果。Beren，你几周前发过一篇文章，试图解释这背后到底发生了什么。为什么 RL 会比人们天真预想的要成功得多？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: A bit on RL. A year ago, a lot of people were making this argument that RL will not be super successful at scaling for models. John, you wrote a research paper where you were pointing out that models learn one bit per episode when you RL. They learn, &quot;Did I get the answer right or did I get it wrong?&quot;</p>
+<p>Then I wrote some blog posts earlier this year where I was like, &quot;It’s even worse than that,&quot; because when the pass rate is low and the model is very unlikely to get the answer right, it learns almost nothing at all from an RL episode.</p>
+<p>But I look at the models today, and they seem pretty smart. It seems to be the result of scaling up RL. Beren, you had a post a few weeks ago where you were trying to explain what’s going on. Why has RL been more successful than one would have naively thought?</p>
+</details>
+<p><strong>Beren</strong>: 我认为 RL 的成功可以归结为好几个不同的因素。</p>
+<p>首先，一个被稍许低估的因素是 mid-training（中程训练）。我们所看到的 RL 的巨大成功，很大一部分实际上来自于极其优质的 mid-training 数据。在这一阶段，我们本质上是在进行预训练，但采用的是合成推理数据以及能够为后续 RL 提供良好热启动（warm-start）的环境。这通常能让模型直接走完通往最终 RL 检查点（checkpoint）近 80% 的路程。</p>
+<p>在此基础上，RL 所做的事情本质上是在微调策略（tweaking the policy）。这也是为什么它不需要像你天真预想的那样多的比特信息的原因之一——它不需要从零开始学习所有这些行为。它只需要从这些 episode 中获取少量的几个比特，而这些信息你确实能够拿到。</p>
+<p>我在博文中指出的另一件事是，与常规预训练相比，这些比特具有极高的信号强度（high signal）。这就是为什么你必须使用 RL，而不仅仅是在成功的推理轨迹上做有监督微调（SFT）的原因。因为这些比特恰恰是关于“如何把答案做对”的关键信息。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Beren</strong>: I think the success of RL comes down to a bunch of different things.</p>
+<p>First, what is slightly underestimated is the mid-training. An awful lot of what we see as successes of RL actually comes from very, very good mid-training data, which is where we’re essentially doing pre-training but on synthetic reasoning data and the kind of environments that get the model warm-started for RL. This takes the model almost 80% of the way to the final RL checkpoint often.</p>
+<p>Then what RL does on top of that is essentially tweaking the policy. This is one of the reasons why it doesn’t need as many bits as you would naively think. It doesn’t have to learn all of these behaviors from scratch. It needs just a few bits from these episodes, which you do get.</p>
+<p>The other thing that I point out in my blog is that these bits are extremely high signal compared to regular pre-training, which is why you need RL at all versus just SFT-ing on successful reasoning traces. Because it’s exactly the bits about how to get the answer right.</p>
+</details>
+<p><strong>John</strong>: 这里有两点。是的，第一，它确实是关于“如何得到正确答案”的精确比特。但这并不完全像你直觉中想的那样，因为在 SFT 中，你同样有一条轨迹。比如你有一整串数学推理，最后给出了答案。那个比特仍然在那里，你依然在答案 token 上进行了 SFT。</p>
+<p>真正重要的是：RL 的目标函数忽略了所有其他的比特。在 SFT 中，你必须试图去匹配模型生成的每一个具体的推理 token。本质上，你接收了过多关于“你用来训练的模型具体是如何推理的”冗余比特。而在 RL 中，你只获取那一个比特。这意味着该信号不会被模型拥有的所有其他比特的噪声所淹没。</p>
+<p>这使得训练过程中的信噪比（signal-to-noise ratio）得到了极其显著的提升，这也是为什么 RL 在训练步数上效率如此之高的原因。</p>
+<p>关于 RL 对模型的作用与 mid-training 或 SFT 相比到底有何不同，一直存在大量争论。每个人都在讨论 pass@1 会上升，但 pass@256 却会下降。极少出现的正确推理轨迹会被降权，并被来自更容易推理轨迹的梯度信号所压倒。</p>
+<p>我认为现在看待 RL 的一种简单视角是：如果你拥有足够多的算力去采样足够大的 group size（群体样本量）——使得你获得一组正确答案的概率超过某个不可忽略的阈值——那么它就会被赋予更高的权重。正如 Beren 所说，mid-training 和更多的预训练——也就是 pass@1，即 RL 的起始点——是随着预训练 token 数量的对数而扩展的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: There’s two things. Yes, one, it’s exactly the bits about how to get the answer right. But this is not exactly how you think of it, because in SFT, you have a trace. You have, say, a bunch of math reasoning and then the answer at the end. The bit is still there. You still SFT on the answer token.</p>
+<p>What’s important is that the objective ignores all the other bits. In SFT, you have to try and match the exact reasoning tokens that the model produces. You’re essentially getting too many bits about the exact way this other model you’re training on reasons. For RL, you only get the one bit. That means that signal is not drowned out in the noise of all the other bits the model has. It’s really a super dramatic increase in the signal-to-noise ratio during training, which is why RL is so dramatically efficient in terms of steps.</p>
+<p>There’s been so much debate about what RL does to the model versus mid-training or SFT or whatever. Everyone talks about how pass@1 will go up, but pass@256 will go down. Very rare correct reasoning traces will be down-weighted and outweighed by a gradient signal from easier reasoning traces.</p>
+<p>I think the simple way to view RL now is that if you have a large enough amount of compute to sample a large enough group size — such that your probability of getting a bunch of correct answers is past some not insignificant probability — then it will be up-weighted. To Beren’s point, mid-training and more pre-training — the pass@1, the starting point for RL — scales in a log number of pre-training tokens.</p>
+</details>
+<h3>函数空间剧变与视界泛化能力</h3>
+<p><strong>Host</strong>: 我能问几个非常基础的问题吗？那个解释是合理的，而且可能也有实证研究表明事实确实如此。</p>
+<p>但接着我直接看模型本身……我不知道究竟发生了什么。也许你们能让我感受一下，过去一年 AI 进步的根基到底是什么？也许它真的只是把那些本来就要做出正确思考的策略权重调高了。但从直观感受上来说，模型的能力确实获得了巨大的跃升。</p>
+<p>也许这当中并不存在内在矛盾。但我们该如何将“这种观点所暗示的 RL 相对较小的影响”，与“模型似乎正在获得的实质性定性能力跃升”这两者统一起来呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Can I ask some very basic questions? That answer makes sense, and maybe there’s empirical research which shows that this is what’s happening.</p>
+<p>But then I just look at the models themselves… I don’t know what’s happened. Maybe you can give me a sense of what is the basis of the AI progress over the last year. Maybe it’s just up-weighting the policies which were going to do the correct thinking anyways. But it just seems like qualitatively, the models have gotten so much more capable.</p>
+<p>Maybe there’s no inherent contradiction there. But how do we square the relatively small impact this take would imply that RL would have with the actual qualitative capabilities the models seem to be gaining?</p>
+</details>
+<p><strong>Beren</strong>: 我想在这里指出的一点是，这并不一定意味着 RL 的影响很小。即使你只有少量的几个比特，而且你只对参数做了微小的调整，它对函数空间（function space）——即模型所学到的输入到输出的映射关系——的实际影响仍然可以是极其巨大的。</p>
+<p>哪怕只有一个比特，也能极大地改变你的函数空间。它可以直接排除掉一半的假设空间，这是非常惊人的。我不认为“少量的比特、少量的 RL、从一个非常好的起点出发”就一定意味着它不会对行为产生剧烈的影响。至少……并非必然如此。</p>
+<p>我认为这可以归结为两点。第一点是，此前所有人都希望 RL 能将这种推理能力跨所有不同领域进行泛化。但我认为我们未必获得了这种横向泛化（horizontal generalization）。仅仅在数学上进行训练并不一定会让你成为最顶尖的程序员。你确实必须在代码环境中做 RL。</p>
+<p>不过我认为我们确实获得的是视界泛化（horizon generalization，长程任务泛化）。模型学会了如何在更长的时间跨度内使用更多的 token，并且仍然能在某类任务上取得实质进展。你可以在任务越来越长的环境中训练它们，然后把它们放到一个全新的环境中。是的，它们可能没有泛化出能够在该环境中表现出色的具体推理模式，但它们至少泛化出了一种在任务上持续工作更长时间的能力，而这与成功是正相关的。</p>
+<p>有一篇名为 EdgeBench 的论文表明，模型能够持续工作更长时间的速率每三个月就翻一番。这就是泛化能力的明确定量证据。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Beren</strong>: One thing I want to point out here is that it doesn’t necessarily imply that RL has a small effect. Even if you have a few bits and you only change the parameters a small amount, the actual impact on function space — the input-to-output mapping the model learns — can still be super dramatic.</p>
+<p>Even one bit can change your function space a lot. It can rule out half the hypothesis space, which is huge. I don’t think it’s necessarily the case that small amounts of bits, small amounts of RL, once you’re starting from a really good point, means that you don’t have dramatic impacts in behavior. At least… not necessarily.</p>
+<p>I think it comes down to two things. The first thing is that everyone was hoping that RL would generalize this reasoning across all these different domains. I don’t think we necessarily got this horizontal generalization. Just training on math doesn’t necessarily make you the greatest coder. You do have to do RL on code environments.</p>
+<p>I think what we did get, though, is horizon generalization. The models just learned how to use more tokens for longer and still make progress on some sort of task. You can train on environments where they get longer and longer and then put them into a completely new environment. Yes, they may not have generalized the reasoning patterns which allow them to do well in that environment, but they’ve at least generalized the ability to continue on that task for longer, which is correlated with success.</p>
+<p>There was a paper called EdgeBench which showed that the rate at which models can work for longer is doubling every three months. That’s clear evidence of generalization.</p>
+</details>
+<p><strong>John</strong>: 思考这个问题的最后一种方式是，在预训练中存在着“量子/基元”（quanta）的概念。你看到的是非常平滑的预训练损失曲线。但当你观察模型内部发生的事情时，模型其实在学习所有这些非常离散的任务，并且在各个涌现点上都会发生相变（phase transition）。比如之前它没有归纳头（induction heads），现在它拥有了归纳头。模型中存在成千上万、数百万甚至可能数亿个这样的结构。你把它们全部平均在一起，就得到了非常平滑的损失曲线。</p>
+<p>在某种程度上，RL 领域也正在发生类似的事情。正如 Beren 所提到的，存在这样一个非常缓慢的外层循环（outer loop）。我们会先训练一个模型，然后对其进行 RL，接着在下一代模型训练迭代中，我们会将大量这些合成推理轨迹倾倒进 mid-training 数据中。</p>
+<p>我们在某种程度上是在攻克所有这些不同任务的“量子”。在单个任务的层面上，它看起来可能就像是一场相变。你在特定的金融任务或 Excel 任务等上面，通过率可能会突然从 0.5% 跃升到 90%。但是当你把所有这些变化平均在一起，再加上长程视界泛化（horizon generalization），你就会不由自主地感叹：“哇，我们得到了在定性上好得多的模型。”</p>
+<p>我觉得其中很大一部分原因还在于……RL 确实具备一定的泛化能力。你在数学和代码之间，或者在谜题和数学之间，确实能获得一些迁移效果。此外，人们所针对的环境数量本身就极其庞大。在两年前，当你试图去完成日常生活中遇到的某种任务时，各个实验室根本不会在乎这个，他们不会专门针对它去训练模型。而现在环境的覆盖面要广泛得多，他们拥有大量专门针对这一特定场景的环境。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>John</strong>: The final way to think about it is, in pre-training, there’s this idea of quanta. You have this very smooth pre-training loss curve. When you look at what’s happening in the model, the model is learning all these very discrete tasks, and there’s all these emergent points where there’s a phase transition. It didn’t have induction heads, now it has induction heads. There’s tens of thousands, millions, probably hundreds of millions of these things. You average them all together and you get this very smooth loss curve.</p>
+<p>To an extent, a similar thing is happening for RL. There is this very slow outer loop, as Beren mentioned. We will train a model and then RL it, and then in the next model iteration of training, we will dump a bunch of these synthetic reasoning traces into the mid-training data.</p>
+<p>We’re kind of hitting all these quanta for all these different tasks, and on an individual task level, it may look like a phase transition. You’re suddenly going from a 0.5% pass rate to a 90% pass rate on a particular finance task or Excel task or whatever. But you average all these things together, plus the horizon generalization, and you kind of go, &quot;Wow, we’ve got qualitatively better models.&quot;</p>
+<p>I think a lot of this as well is just… RL does generalize a bit. You get some transfer between math and code, or puzzles and math and this kind of stuff. Also, the sheer amount of environments people are targeting is just vastly greater. Before, when you tried to do some task which you do in your daily life, two years ago, the labs wouldn’t really care about this. They wouldn’t train the model for it. Now it’s just so much broader. They have a lot of environments targeting this specific thing.</p>
+</details>
+<h3>从 AlphaGo “第 37 手”到单一种植文化：创造力与多样性之辩</h3>
+<p><strong>Host</strong>: 在之前的对话中，我们讨论过 RL 会导致熵坍缩（entropy collapse），或者只是将概率集中在基础模型已经探索出的解法上，从而在策略中引发相对稀疏的更新。</p>
+<p>但关于 RL 还有另一个叙事，那就是追溯到雅达利（Atari）游戏，以及后来 AlphaGo 下出极具创造力的“第 37 手”（move 37）。由于它从未在人类数据上进行初始化，它能够以人类甚至都未曾想到的方式去思考，并提出极其富有创意的解决方案。</p>
+<p>你们是否能够预估，我们应该在何时、或者是否应该预期 LLM 上的 RL 能产生类似于“第 37 手”这样的结果——即超越人类创造力的极端创造力，因为那里存在着智能的从头初始化（de novo initialization）？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Earlier in the conversation we were talking about RL in the context of causing this entropy collapse, or just concentrating probability on solutions the base model had already done, and causing relatively sparse updates in the policy.</p>
+<p>But I think there’s also another story about RL, which is going back to the Atari games and then AlphaGo coming up with move 37, the super creative move. Because it was never initialized on human data, it can think in ways that humans are not even thinking and come up with extremely creative solutions.</p>
+<p>Do you have a sense of when we should expect, or if we should expect, RL on LLMs to result in things like move 37, extreme creativity even beyond human creativity, because there’s just de novo initialization of intelligence?</p>
+</details>
+<p><strong>Beren</strong>: 这里有几点需要说明。</p>
+<p>首先，我认为 AlphaGo 使用了蒙特卡洛树搜索（MCTS），与常规策略梯度（policy gradients）相比，它显然进行了更多的探索。</p>
+<p>但我也认为，RL 并不必然会降低创造力。这显然是定性的观察，但如果我们看一下 OpenAI 与 Hugging Face 的沙箱逃逸事件，那些模型当时能够同时想出多个零日漏洞（zero-days）来突破沙箱。这显然已经具备了某种程度的“第 37 手”级别的创造力，而我们仅仅是从大语言模型的通用泛化特性中就获得了这一点。RL 绝对没有完全摧毁熵，尤其是在长视界任务上。</p>
+<p>人们所谓的“创造力”，有很大一部分实际上就是解决困难的搜索问题。“第 37 手”显然就是这样一个例子；或者写出一首满足大量不同约束条件的诗歌也是如此。如果经过专门训练，这显然是 AI 会极其擅长的事情。</p>
+<p>但从另一个角度来看，经过 RL 之后，模型输出的多样性确实降低了很多，并且会形成某些固定的行文怪癖（tics）。尽管模型看起来很擅长写作，但当你进行某种分布分析时，你会发现它们总是在重复使用某些特定的主题，并且总是在使用相同的角色名字。你无法获得像人类作家那样丰富多样的表达风格，你得到的只是一种非常出色的固定风格。因此我认为，这种维度的多样性确实在很大程度上被 RL 削减了。</p>
+<p>事实上，既然我们之前提到了蒸馏（distillation），现在正在发生的一件事是：有太多人都在进行蒸馏，而且主要是从 Claude 进行蒸馏，以至于所有开源权重模型写起文章来都和 Claude 一模一样，并带有完全相同的语言怪癖。这种“单一文化”（monoculture）的涌现，在我看来是有点令人担忧的。</p>
+<p>不过我再次认为，这并不是 RL 这种方法本身所固有的缺陷。蒸馏也是同理。即使在蒸馏中，你也只是在用数据进行训练。仅仅因为你的数据不够宽泛，并不意味着训练方法本身有错，这是数据本身的问题。</p>
+<p>例如，我认为 RL 中的很多熵坍缩现象，在很大程度上是因为当你缺乏足够多样化的环境时，模型利用并迎合了相对简陋的验证器（verifiers）。以写作为例，它大概率是由某个裁判模型（judge）来打分的，而那个裁判模型本身就带有某些特定的偏好与怪癖。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Beren</strong>: A couple of things here.</p>
+<p>First off, I think that AlphaGo is using MCTS, which obviously does more exploration and stuff than regular policy gradients. But I also think that RL doesn’t necessarily reduce the creativity. This is obviously qualitative, but if we look at the OpenAI-Hugging Face incident, these models were coming up with multiple zero-days at a time to break out of the sandbox. This is clearly some level of move 37 creativity already, which we just get from the general generalization properties of the LLMs. It’s definitely not the case that RL is totally destroying entropy, especially on long horizons.</p>
+<p>One thing that people call creativity is just solving hard search problems. Move 37 is obviously an example of that, or writing some kind of poem that satisfies a ton of different constraints. That’s something AI is obviously going to be extremely good at, if trained for it.</p>
+<p>Then there’s another way in which the diversity of the models’ outputs is a lot lower after RL, and they develop these tics. Even though the models seem like they’re good at writing, when you do some kind of distributional analysis, you find that they’re reusing certain themes all the time and they’re using the same character names all the time. You’re not getting the same kind of diversity that you get from human authors. You’re getting one really good style. So I think that kind of diversity has definitely been cut down by RL a lot.</p>
+<p>In fact, since we were talking about distillation earlier, one thing that’s happening is that so many people are distilling, mostly from Claude, that all the open-weight models write the same way as Claude and have the same tics. This seems kind of concerning to me, that we’re having this monoculture emerge.</p>
+<p>Again, I don’t think this is fundamental to RL as a method, though. The same with distillation. Even with distillation, you’re just training on the data. Just because your data is not super broad, that doesn’t mean the training method itself is somehow wrong. It’s a problem with the data.</p>
+<p>I think a lot of the RL entropy collapse, for instance, is basically due to exploitation of fairly simple verifiers when you don’t have a huge diversity of environments. The writing, for instance, is presumably graded by some judge. The judge has some specific tics,</p>
+</details>
+<!-- chunk 9/9 -->
+<h3>强化学习与评判者崩溃</h3>
+<p><strong>嘉宾</strong>：……而且模型正在学会对评判者（judge）进行奖励欺诈（reward hack），这就是它崩溃的原因。但这实际上是评判者本身的问题，并不是强化学习（RL）普遍存在的问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: ...and the model is learning to reward hack the judge, and that’s why it collapses. But this is really a problem with the judge. It’s not a problem with RL in general.</p>
+</details>
+<h3>未来预测：通用远程白领员工的时间线</h3>
+<p><strong>主持人</strong>：好的，接下来进入超快速的未来预测环节。我想就以下几个问题了解一下你们预估的时间线。</p>
+<p>我们在什么时候能够拥有这样的模型……对于用户来说体验是这样的：你基本上可以雇佣它作为一个即插即用的远程员工，来处理各种白领工作。不仅是编程，还包括视频剪辑、法律、律师助理等等。它就是一个名副其实的远程员工，具备完整的电脑操作能力（full computer use），能够无缝学习和运作整整一个月，执行需要与其他人协作互动的复杂项目等等。凡是人类员工在一个月内能做的事情，它都能做。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Okay, super rapid-fire predictions about the future. I want timelines on the following couple of questions.</p>
+<p>By when do we have models which… Here’s what it feels like to a user. You basically hire it as a drop-in remote worker for all kinds of white-collar work? Not just coding, but video editing, law, paralegal, et cetera. It’s literally an actual remote worker, with full computer use, with literally a month of seamless learning and operation, executing on complex projects that require interacting with other people, et cetera. Everything a human worker could do over a month.</p>
+</details>
+<p><strong>Charlie</strong>：如果强制要求它必须通过浏览器之类的界面来操作——而不是由公司将信息设置为可以通过程序化接口访问——那可能需要两三年左右。但如果不需要完全基于浏览器操作——它可以发送 Slack 消息，可以完成所有这些事情——我依然倾向于认为大概需要一年左右。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Charlie</strong>: If you mandate it to use a browser or whatever — rather than the firm setting up the information to be programmatically accessible — maybe a couple of years. But if it’s not browser-based — it can send Slack messages, it can do all this stuff — I’d still probably say around a year.</p>
+</details>
+<p><strong>Beren</strong>：对于完全通用的能力，我认为可能需要三年左右。但正如 Charlie 所指出的，最终会有很多人去改造他们的组织架构，让组织变得更容易被 AI 使用，因此在那之前你就能达到 80% 到 90% 的效果。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Beren</strong>: I would say maybe three years for the full generality. But to Charlie’s point, we will end up with a lot of people making their organizations easier for the AIs to use, and so you get 80-90% of the way there before that.</p>
+</details>
+<p><strong>主持人</strong>：抱歉，但这里一年和三年之间的差距，本质上到底在于……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Sorry, but the diff between one year and three years there is just literally…</p>
+</details>
+<p><strong>嘉宾</strong>：我认为会存在一个由各种杂项工作组成的长尾分布，这些是某些人类能够做到、但模型需要花相当长时间才能搞定的事情。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: I think there’s going to be a long tail of miscellaneous stuff which some human can do, which will take the models quite a while to do.</p>
+</details>
+<p><strong>主持人</strong>：你指的是具体的电脑操作技能，还是基础认知能力方面的短板？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Are you thinking of computer stuff or basic cognitive capabilities?</p>
+</details>
+<p><strong>嘉宾</strong>：我认为这归根结底取决于我们能多快解决这种在线学习（online learning）的问题，以及我们能否通过上下文压缩（compaction）、让模型自己写文件记录等方式来达到 80% 到 90% 的能力。这是我最大的不确定性所在。我真的不知道。</p>
+<p>举个它不擅长的例子：如果我在工作中必须冲某人大吼大叫才能拿到某些东西，或者必须狠狠催促进度才能把事情办成，模型就做不来这种事。它会表现得太客气了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: I think this really comes down to a question of how quickly we can solve this kind of online learning, and whether we can get 80-90% of the way there with compaction and writing files to yourself and stuff. That’s my big uncertainty. I really don’t know.</p>
+<p>An example of something that it wouldn’t be good at is if I have to yell at someone to get something at work, or really push someone to get something done. The model just isn’t going to do that. It’s going to be too nice.</p>
+</details>
+<p><strong>嘉宾</strong>：我想说的是，人类远程员工的质量本身就存在巨大的差异。如果你试图从 Upwork 上雇佣一个人来做一个软件工程项目，质量波动会非常大。往往很难让他们把工作做好，或者很难让他们真正注意到你给出的所有反馈。</p>
+<p>我猜在某些情况下，AI 出现之前的人类外包版本，甚至比你现在从现有 AI 这里能得到的体验还要糟糕。</p>
+<p>我认为情况最终可能会变得有些复杂，因为在某种程度上，对于一些质量要求没那么高的工作，我们现在其实已经拥有这种能力了。但显然，在某些更高质量的工作形式上，我们目前还达不到人类的水平。不过我基本同意 Charlie 和 Beren 的看法，也许一年左右我们就会拥有某种可用且还不错的版本。我们将迎来这种产品形态，它能够把某些事情做得非常好，某些事情做得没那么好，然后在此基础上不断迭代改进。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: I’d say there’s a wide variation in quality of human remote workers. If you try to hire someone off of Upwork to do a software engineering project, there’s going to be a huge variation. It’s often quite hard to get them to do a good job or pay attention to all the feedback you’re giving.</p>
+<p>I would guess that in some cases, the pre-AI version of this was worse than what you can get now from existing AI.</p>
+<p>I think it might end up being a little complicated, because to some extent we already have this for some not-so-high-quality work. But then obviously we’re not matching human level in certain higher-quality forms of work. But I basically agree with Charlie and Beren that maybe we’ll have some version of this in a year or so that’s okay. We’ll have that form factor, and it’ll be able to do some things really well, some things not so well, and things will be improving from there.</p>
+</details>
+<p><strong>嘉宾</strong>：我们总是根据极长尾的情况来不断移动评判标准（shift the goalposts）。我感觉你之前用过报税之类的例子。今年，我直接吩咐 Codex 去把我需要的所有材料收集齐并发送给会计师。当时有一长串庞大的任务清单，它必须操作电脑逐个点击并下载。它全都搞定了，非常完美。这类事情其实很多现在就已经能做了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: We shift the goalposts based on the very long tail all the time. I feel like you’ve used this example before of doing your taxes or something. This year, I literally just told Codex to go get everything I needed and send it to the accountant. There was this massive list of stuff it had to use computers to click through and download. It did it. It was perfect. A lot of this stuff it can already do.</p>
+</details>
+<h3>AI 赋能科研：研究人员生产力实现 10 倍跃升的时间线</h3>
+<p><strong>主持人</strong>：好的，那下一个问题：为你带来 10 倍的总生产力提升。基本上就是说，如果你现在需要一年才能取得一项突破，到那时你每个月都能取得一项突破。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Okay: give you 10x total productivity uplift. Basically, if it takes you a year to make a breakthrough now, you make a breakthrough every month.</p>
+</details>
+<p><strong>嘉宾</strong>：我觉得对于这个问题，我甚至拒绝给出一个具体的标量数值。在某些类型的工作中，我们可能已经跨越了那个门槛。比如你在尝试做某些类型的数学研究，并且……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: I think I would just refuse to give you a scalar on this. We might already be past that in some types of work. Let’s say you’re trying to do certain types of math, and—</p>
+</details>
+<p><strong>主持人</strong>：噢，不好意思，我是特指对你们这些试图推进前沿 AI 研究的 AI 研究人员而言。AI 研究人员的效率会被加速或提升多少？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Oh, sorry. But for you as AI researchers trying to advance the state of AI research. How much are AI researchers sped up or uplifted?</p>
+</details>
+<p><strong>嘉宾</strong>：大概 5 到 10 年之间？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Somewhere between 5-10 years?</p>
+</details>
+<p><strong>主持人</strong>：噢，真的吗？好吧，那还挺遥远的。你真的觉得这比实现一个通用的远程员工还要久吗？真有意思。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Oh, really? Okay, that’s far away. Really, you think it’s longer than for a general remote worker? Interesting.</p>
+</details>
+<p><strong>嘉宾</strong>：我意识到你对“完全通用的远程员工”可能有截然不同的定义。我之前本来应该把这点阐述得更清楚一些。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: I’m realizing you probably have a very different definition of a fully general remote worker. I could have specified that earlier.</p>
+</details>
+<p><strong>主持人</strong>：确实如此，因为显而易见，AI 研究人员本身也可以是一种远程员工。我脑海中设想的是为期一个月内的普通白领工作。我认为超过两个月之后情况就会开始有所分化。我说的是一个能力非常出众的白领员工，但不一定是极具创造力的研究人员。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: This is true, because obviously an AI researcher can be a remote worker. I’m picturing normal white-collar work over the period of a month. I think it starts to diverge a little bit past two months. A very competent white-collar worker, but not necessarily a super creative researcher.</p>
+</details>
+<p><strong>嘉宾</strong>：那我预估是两年。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: I would say two years.</p>
+</details>
+<p><strong>主持人</strong>：两年？实现 10 倍提升？好的。那你呢，Beren？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Two years? 10x? Okay. How about you, Beren?</p>
+</details>
+<p><strong>Beren</strong>：其实我也有同感。因为就目前而言，在编程方面它带来的提升绝对已经超过 10 倍了。所以如果它甚至能完成一到两个实验反馈循环（loops of experimental feedback），那实际上就已经是非常巨大的提升了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Beren</strong>: I can kind of see that, actually, because right now it’s already definitely more than 10X for coding stuff. So if it can do even one or two loops of experimental feedback, that would actually be massive already.</p>
+</details>
+<p><strong>主持人</strong>：也就是说，两年内 AI 研究人员将获得 10 倍的生产力提升。如果你把这个代入到一个关于 AI 进展的极其朴素的模型中——考量 AI 进展有多少来自于 AI 研究人员，再加上他们的生产力获得了 10 倍的跃升——那么从两年后开始，你将迎来一个极其迅猛加速的 AI 进展步伐。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: So 10x uplift of AI researchers within two years. If you plug that into a very naive model of AI progress and how much is coming from AI researchers, and there’s a 10x increase in their productivity, you have a radically accelerated pace of AI progress starting two years from now.</p>
+</details>
+<p><strong>嘉宾</strong>：我认为这意味着 AI 的研究进展将不再受制于 AI 研究人员运行小型实验的能力瓶颈。瓶颈将转移到其他事情上。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: I think this will mean that AI progress doesn’t get bottlenecked on AI researchers’ ability to run small experiments. It gets bottlenecked on other things.</p>
+</details>
+<p><strong>主持人</strong>：当然。但整个过程直接加速了 10 倍，这是件极其重大的事情。这也促使下一阶段——带来 100 倍加速的事情——更快到来，以此类推。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Of course. But it just happens 10x faster, which is a huge deal. That also helps the next thing, which gives you a 100x speedup, happen sooner, et cetera.</p>
+</details>
+<p><strong>嘉宾</strong>：针对这一点，我更倾向于认为需要花更长的时间。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: I’m happy to just take a bit longer on that one.</p>
+</details>
+<p><strong>主持人</strong>：核心关键（crux）在哪里？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: What’s the crux?</p>
+</details>
+<p><strong>嘉宾</strong>：在于我吸收信息并针对下一个实验做出贝叶斯最优决策的能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: My capacity to absorb information and make the Bayesian optimal decision on the next experiment.</p>
+</details>
+<p><strong>主持人</strong>：我假定你可以把其中的一部分工作委托给 AI。AI 在做决策方面正变得相当不错。它运行了这个实验，得到了这个结果，接着去运行下一个实验。如果它能够连续运行两到三个实验而不崩溃，那其实就已经是一个巨大的提升了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I’m assuming that you can delegate some of this to the AI. The AI is becoming decent at deciding. It’s run this experiment, it’s got this result, it runs the next experiment. If it can run two or three experiments in a row without crashing, then that is actually a big uplift.</p>
+</details>
+<h3>人工超智能（ASI）与全面超越人类专家</h3>
+<p><strong>主持人</strong>：好的，最后一个问题。一个在所有可以通过电脑完成的工作领域中，全面压倒人类顶尖专家的 AI。不仅限于 AI 研究，而是所有的认知性工作；不仅限于短周期工作，而是哪怕需要耗时三年左右的项目，AI 依然会比人类做得更好。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Okay, final question. An AI which dominates top human experts across every single field of work that can be done over a computer. So not only AI research, but all cognitive work. Not just short-horizon work, but literally, if it takes three years or something, the AI will still do better than humans.</p>
+</details>
+<p><strong>嘉宾</strong>：这基本上就是人工超智能（ASI）了吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: This is basically just ASI?</p>
+</details>
+<p><strong>主持人</strong>：是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah.</p>
+</details>
+<p><strong>嘉宾</strong>：我认为是 3 到 4 年。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: I would say 3-4 years.</p>
+</details>
+<p><strong>主持人</strong>：卧槽？我的意思是，这听起来似乎并非不可能，但是……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: The fuck? I mean that doesn’t seem wrong, but—</p>
+</details>
+<p><strong>嘉宾</strong>：AI 领域显然受到了更多的关注。这是较难的事情之一，但有巨大的精力正在投入其中。</p>
+<p>同时，对 AI 来说这也不算最难的事情，因为它涉及大量的代码和数学，而模型在这两方面非常擅长。</p>
+<p>对于涉及 3D、空间以及物理特性的领域，我认为需要的时间会稍长一些。如果是机械工程之类的领域，并且目前没有得到最多的关注，那可能会花更长的时间。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: AI is obviously getting more attention. It’s one of the harder things, but a lot of energy is being put into it. It’s also not one of the hardest things for AI, because it involves a lot of code and math, which models are really good at. For things that involve 3D and spatial stuff and physical stuff, I think that will take a little longer. If it’s mechanical engineering or something, and it’s not getting the most attention right now, that might take a little longer.</p>
+</details>
+<p><strong>嘉宾</strong>：但这也包括由于领域本身的性质导致数据相对匮乏、且模型必须在实践中即时学习这些数据的领域。</p>
+<p>例如，它必须达到在台积电（TSMC）担任工程师或类似职位的超人水平。因此你必须假设你可以给 AI 提供与人类相同的新员工入职培训材料。</p>
+<p>然后，关于更长周期的学习问题必须得到解决。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: But it also does include fields where there is relatively little data because of the nature of the field, and it has to learn that data on the fly. For example, it has to become superhuman at being an engineer at TSMC or something. So you would have to assume that you can give the AI the same onboarding material. Then something has to be solved about longer-horizon learning.</p>
+</details>
+<p><strong>嘉宾</strong>：我认为需要 5 到 10 年。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: I’d say 5 to 10.</p>
+</details>
+<p><strong>主持人</strong>：所以本质上，你认为将 AI 研究完全自动化本身就是 ASI 完全（ASI-complete）级别的问题？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: So basically, you think automating AI research is ASI-complete or something?</p>
+</details>
+<p><strong>嘉宾</strong>：是的，我认为是的。我认为世界上存在太多这样的事情：即使你在模型外部拥有某种记忆系统，即使上下文长度略有增加，也依然存在一些根本性的事物使得——即便你可以去调研信息或自己写笔记，你所需要的上下文窗口在今天也会远超一百万 token。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Yeah, I think so. I think there are so many things in the world where, even if you have some sort of memory system external to the model, and even if context length grows a little bit, there are just fundamentally things where, even if you could research the information or write notes yourself, you’d need more than a million-token context window today.</p>
+</details>
+<p><strong>嘉宾</strong>：在 5 年的时间跨度上我大体上是同意的，至少对于各大实验室目前重点关注的领域是这样。但我认为会存在很长一段长尾领域，AI 在理论上完全可以主动去学习掌握，但目前还没有人花精力去促成这件事，也没有算力被分配到那上面。因此，若要说在字面意义上超越每一个细分领域的人类专家，可能会花更长时间。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: I kind of agree on the 5-year range, at least for the stuff that labs are focusing on. But I think there’s going to be a long tail of stuff which the AI could theoretically go out and learn about, but no one has bothered to do it and the compute hasn’t been allocated to that. So that might take longer for literally every single human expert.</p>
+</details>
+<p><strong>主持人</strong>：抱歉，不过我这里所指的也包含了“以与人类一样快的速度学习一个新领域的能力”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Sorry, but by this I also included the ability to learn a new domain as fast as a human.</p>
+</details>
+<p><strong>嘉宾</strong>：我认为那不一定非得如此，因为 AI 将拥有远超任何单一截面人类的庞大经验积累。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: I think that’s not necessarily necessary, because the AI will have vastly greater experience than any human.</p>
+</details>
+<h3>总结结语</h3>
+<p><strong>主持人</strong>：非常感谢各位今天的参与！我觉得这种让不同专家共同辩论、探讨并碰撞不同观点的形式非常棒，整个讨论富有成效。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Thanks so much for doing this, guys. I feel like this was a great format for getting different experts to disagree and debate and discuss things together. It was very productive.</p>
+</details>
+<p><strong>嘉宾</strong>：感谢邀请我们。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Thanks for having us.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">model-generalization</span>
+      
+        <span class="tag-pill tag-pill--no-page">sim-to-real-gap</span>
+      
+        <a class="tag-link" href="/tags/continual-learning/">continual-learning</a>
+      
+        <a class="tag-link" href="/tags/scaling-law/">scaling-law</a>
+      
+        <span class="tag-pill tag-pill--no-page">artificial-superintelligence</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>机器人三十年不查证件，为什么现在开始查了</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="机器人三十年不查证件，为什么现在开始查了" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">机器人三十年不查证件，为什么现在开始查了</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-08</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://yage.ai/share/robot-access-regime-20260908.html" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-08
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">文章探讨了机器人访问互联网的准入机制从过去基于自愿的 robots.txt 协议向当前需要身份申报和密码学签名的复杂体系的转变。这种转变是由于自动化智能体（如大模型驱动的爬虫）的兴起，打破了过去流量互换和低误伤代价的旧有均衡，迫使平台引入更精细化的身份核验和流量管理策略。</div></div>
+      
+    </div>
+    <p>2026 年 8 月 28 日，Cloudflare 上线了 BotBase for
+Operators。做爬虫的团队等这个正经的操作窗口等了太久。如今运营方总算能主动坐到台前申报自家的机器人身份，盯着审核状态一路往前走；要是被打回来，也能看着驳回理由改好重新递交。背后的核验则大部分由系统自动跑完：程序先做查重、看
+User-Agent 够不够特异，再顺着申报凭据层层验下去，从拉取 IP
+列表、确认反向 DNS，一路核验到一套叫 Web Bot Auth 的密码学签名。</p>
+<p>站在互联网运转的角度看，这件事其实挺反常的。机器流量到 2026
+年已经超过了人类，按照 Cloudflare Radar 的遥测口径，比例是 57.4%
+对
+42.6%（厂商遥测，未经独立审计）。但在过去三十多年里，自动化程序在网上跑，通行凭据就只有一份
+robots.txt。这套机制 1994 年就诞生了，2019 年整理成 RFC
+9309，说白了就是全凭自愿的君子协定，根本没有强制执行手段。全网过半的网络请求都是机器发出来的，可维系秩序的，长期就是一份对方随时可以忽略的纯文本。</p>
+<p>大家相安无事跑了三十年，为什么偏偏到了今天，平台开始大动干戈给程序查验身份？把最近这些变动连起来看，答案是：当年让旧规则能跑通的几个底层假设，现在已经接连垮掉了。</p>
+<p>机器访问从免检通行到出示证件：过去靠一份无人强制的
+robots.txt，现在过关口要先验明身份</p>
+<h2>旧世界的均衡：三个没人写下来的前提</h2>
+<p>回看过去的三十年，robots.txt
+之所以能长期顶在最前线，主要靠的是当年系统里维持的一种默契均衡。搜索引擎每天从各大站点抓走数十亿页面，站长极少动用防火墙去阻断。这套粗放模式之所以能顺顺当当跑上数十年，全靠三个谁都没写下来、但彼此咬合的隐性前提在底下撑着。</p>
+<p>第一个前提是双方都有利可图。搜索引擎抓走网页内容，同时把找信息的用户送回站点，成了一笔大家默认的流量交换。站点自己承担抓取开销，换回搜索导流带来的真实访客。只要这笔互换持续成立，两方根本不需要正式协议，robots.txt
+只是用来划定边界的备忘录，打声招呼告诉对方哪些目录不必收录就行。底层的交易基础稳固，一份文本备忘就足以维系共识。</p>
+<p>第二个前提是误伤代价极低。早期的机器流量就算在请求数上过半，绝大部分也只是镜像同步、RSS
+抓取或者系统探针这类低价值噪声。安全规则哪怕误判封掉某个 IP
+段，挡住的无非是几台监控机器；就算放漏了一批抓取，也不会伤及核心业务。面对这种低价值噪声，粗线条的防护规则怎么看都合情合理。</p>
+<p>第三个前提是识别成本足够低。面对普通爬虫，安全系统只要扫一眼
+User-Agent 字符串与 IP
+段，就能迅速辨认访问者的属性。防守方图的只是过滤流量，根本无需深究请求背后到底是哪家机构实体。</p>
+<p>三个前提扣在一起，搭起了旧世界的秩序。真需要防范的恶意流量扔给防火墙和验证码拦截，主流爬虫全靠互惠机制自我约束。自动化程序在这样的环境里来来往往，在那个时期，查验身份凭据完全成了多余的环节。</p>
+<h2>打破均衡的那个变量</h2>
+<p>从 2025
+年开始，同一种新兴角色在两年内把旧有的三项基础全拆了：那就是能够像真人那样操作浏览器的自主智能体。这种程序不再遵循既往爬虫的活动规律，不仅重塑了机器访问的商业逻辑，还让这条沿用了三十年的防线接连失效。</p>
+<p>最先断裂的是那笔流量互换。以前搜索引擎抓走内容，好歹把访客还给网站；现在大模型抓走内容，直接把答案端给用户，网站分不到回流流量。Cloudflare
+披露的抽样数据显示，在 2025 年 6 月的统计中，Anthropic 旗下的爬虫程序每抓取
+70,900
+个页面才带回来一个访客。这种单向索取直接打破了合作默契，内容方迅速筑起高墙。Reuters
+Institute 的统计表明，2023
+年底约 80% 的美国头部新闻机构已经屏蔽了 OpenAI
+的爬虫。站方与抓取方从互利盟友变成了谈判对手，既然要展开谈判，第一步显然必须弄清坐在对面的究竟是谁。</p>
+<p>接着失效的是放任误伤的底气。现在的智能体定位是替终端用户办事：比价、订房、订机票、填写入住资料。既然是真实消费者委托代理程序访问网站，粗暴的整段拦截随时会误伤已付款的顾客。2026
+年上半年，Google、Anthropic、OpenAI
+都在把智能体推进到真实浏览器容器中运作（我们在分析
+Cloudflare Precursor
+梳理过这条技术演进路线）。站点碰上了棘手的辨别难题：眼前这个请求，究竟是搜刮数据的敌意脚本，还是拿着信用卡准备结算的顾客代表？一刀切关门的代价谁都承受不起，想做精细分流，前提依然是查验对方身份。</p>
+<p>原先低廉的技术识别手段也走到了尽头。代理程序驱动的是真实 Chrome
+内核，完整执行复杂 JavaScript
+代码，环境特征与真人操作高度重叠。以往读取单个环境属性就能下结论的静态检测方法相继失效，防守策略退化成耗时耗力的行为序列监控与概率推算。单靠站在旁边观察网络特征，已经很难快速区分进站流量的真实属性。</p>
+<p>三条线索捋下来，汇集到了同一处关键转变。利益层面，网站需要识别谈判对手；业务层面，系统必须区分合法委托与恶意爬取；防御层面，环境指纹识别日益力不从心。算下来，摆在面前可行的解法只剩一条：要求访问者主动报出姓名与来意，再通过密码学手段核验申报的真实性。机器流量管理正在告别单纯的检测拦截，转向申报核验。整个网络准入模式，正经历一场深层的重构。</p>
+<h2>新制度在长什么样</h2>
+<p>把过去一年多各大厂商的发布动作盘一盘，一套四层架构正在组装成型。这个新体系试图给游走在网络上的程序发放通行凭证，重新界定数据读取的边界。</p>
+<p>第一层是出示凭据。Web Bot Auth
+的机制挺简单直接：机器人用私钥给每个外发 HTTP
+请求签名，公钥发布在约定的知名目录下，网站收到请求后用公钥核验真伪。整套方案依托
+2024 年定稿的 RFC
+9421 HTTP Message Signatures
+规范构建。有意思的是，工程落地的进度远比标准推进更快：Vercel
+在工作组成立前十周就上线了验证 功能，Akamai、AWS WAF、DataDome 与
+HUMAN
+随后支持，主流验证阵营目前聚集了至少五家基础设施提供商。在签名一侧，OpenAI
+的云端浏览器代理已经在正式流量里附带签名，Google
+的智能体抓取在开展签名实验，Amazon
+的托管浏览器直接内置了自动签发流程。但在另一侧，名单却有着鲜明反差：OpenAI
+旗下的主力爬虫 GPTBot 与 Googlebot 至今没有接入签名机制，Anthropic
+的全系数据抓取程序则没有接入签名机制的公开证据，依旧沿用传统的 IP 段加
+User-Agent 方式标识自己。</p>
+<p>第二层是申报用途。BotBase
+的提交表单要求运营方讲清楚三件事：机器人的业务类别（划分为搜索、智能体、训练等
+11
+个类别）、读取内容后的消化方式（分为实时使用、留存参考、完整复用三档），以及运营主体性质（自主运行还是代客发起）。这套词汇表源于
+Cloudflare 在 2026 年 7 月推出的 Content Signals
+模型。不过该模型眼下缺乏强力约束：Google 的 John Mueller 曾公开指出，这些声明对任何爬虫和语言模型都无效果。</p>
+<p>第三层是登记审核，也就是 8 月 28
+日补齐的操作台。运营团队提交材料，系统自动运行比对，通过者列入公开名录，未通过者能看到反馈原因。这里伴随一项关键的语义转变：进入名录可不等于默认放行。自
+2026 年 7 月起，Verified
+认证状态的含义转变为仅在其申报类别内具备放行资格，一旦行为与申报用途出现偏差，平台将直接吊销其认证资格。信任不再是一次性发绿卡，变成了可以撤销的持续状态。</p>
+<p>第四层是平台默认值，也是唯一真正有牙齿的一层。2025 年 7 月 1
+日，Cloudflare 将新域名的初始化策略切换为默认拦截 AI 爬虫；紧接着从 2026
+年 9 月 15
+日起，针对新接入且含有广告的网页，系统对训练抓取和智能体访问采取默认阻断措施。尽管网站管理员有权修改设置，但现实是，默认值实际上决定了绝大多数站点的最终走向。</p>
+<p>不过这套体系眼下面临着两处现实脱节。第一是标准化进程滞后：Web Bot
+Auth 在 IETF
+工作组内至今没有产生任何一份正式采纳的文档，九份讨论中的提案全为个人提交；但未经采纳的草案早已进入一线云厂商的生产哨卡，AWS
+明确公布带有效签名的
+agent 流量默认放行。第二是线上格式出现分叉：规范草案在 2025 年 10
+月将 Signature-Agent 请求头改为了字典结构，2026 年 8
+月进一步标为强制要求，Google 依循新规发包，OpenAI 沿用旧版字符串，而
+Cloudflare
+的核验文档甚至将新版字典格式列为验证失败场景。照着不同厂商指南去做工程实现，随时可能踩进代际冲突的坑里。Hacker
+News 上的高赞留言将其概括为still the honors
+system，依然是荣誉体系。前三层大多依赖参与各方自觉遵守，唯有底层的默认开关掌握着硬性拦截手段。</p>
+<p>正在组装的四层准入栈：出示凭据、申报用途、登记审核层层自愿，只有底层的默认值带牙齿</p>
+<h2>权力去了哪里</h2>
+<p>在这四层架构里，真正起作用的是第四层，而第四层掌握在谁手里，答案早已写在市场份额里。根据
+W3Techs 在 2026 年 8 月的统计口径，Cloudflare
+服务全网站数的 24.3%，在所有能够辨认反向代理技术的站点中更占到 84.1%
+的份额。凭借这种枢纽位置，改动全网流量默认处置的权限是它的，校验签名的验证管道是它的，机器人目录是它的，就连正在建设的收费通道（按次计费模式在私测一年后，于
+2026 年 7 月转向按引用付费），也是它的。</p>
+<p>我们此前分析智能体授权机制，梳理过一个判断框架：这一轮竞争的焦点不在密码学，在信任的归属权。BotBase
+的登场，正是这套框架在网页大门位置的又一次落地。回顾 robots.txt
+盛行的时期，声明权留存在各个站长手里：管理员自行书写规则，爬虫遵守与否全凭自觉，产生的流量后果由站长独自承担。新秩序下的机制完全换了样：身份登记、签名校验、拦截策略全集中在基础设施平台手中，站长只能照单全收平台输出的分类结果，爬虫运营方则通过平台操作台争取合规曝光与申诉机会。官方宣传称之为站方与机器人的双向透明，但要是审视实际处境，真正形成双向互动的只是程序运营方与网关平台，平台通过默认配置直接代理了站长的防守意志。</p>
+<p>这种依托边缘网关建立强制约束的路径，在互联网历史上早有先例。邮件领域的反钓鱼协议
+DMARC 在 2015
+年发布后，依赖自愿接入的十年里渗透速度始终平缓；转折点发生在 2024 年 2
+月，Google 与 Yahoo 联手将验证结果直接挂钩收件箱准入，批量发信方的 DMARC
+采用率在 12 到 18 个月内由约 56% 升至 70% 以上。</p>
+<p>流量关口同时握着默认值、验证、目录、收费四项权力，绕行的路径在角落里继续存在</p>
+<p>机器人的准入体系正在复刻相同的推进节奏：拒绝接入签名机制，就得面对默认拦截的阻断代价。依照这个时间表推断，在未来两到三年内，主流
+CDN
+对签名与未签名流量实施差异化的双轨调度将变成行业常态。眼下的变数在于开放规范与私有生态的赛跑：如果商业公司的自建名录赶在
+IETF
+开放标准确立之前沉淀成事实规范，机器人世界的管理总局便会落入单一商业实体囊中。马上到来的
+2026 年 9 月 15 日将是一次实打实的压力测试。承担双重任务的
+Googlebot（同一套抓取管线同时用于搜索索引与模型训练），在设定了拒绝训练的站点上面临拦截，大家很快就能看到大型搜索巨头究竟会拆分抓取管道、出资商务谈判，还是硬吃下流量损失。</p>
+<h2>制度管不到的地方</h2>
+<p>四层体系勾勒出了准入制度的骨架，但在现实世界里，仍有相当一部分机器流量没有纳入管辖。仔细观察网络流量，至少能看到三处阵地游离在这套体系之外。</p>
+<p>最显眼的盲区，是拒绝主动报名的抓取程序。准入协议只能约束愿意循规蹈矩的合作方，而在抓取需求迫切的场景下，不守规矩的流量天然缺乏登记动机。长期维护
+Minecraft、Old School RuneScape 和 League of Legends Wiki 的 Weird Gloop
+团队公布过一线实测数据：各类抓取程序伪装成真实
+Chrome，通过住宅代理池每天动态切换上百万个不同
+IP，给服务器造成十倍于常规流量的算力消耗。根据该团队的观察，Cloudflare
+的人机验证挑战机制大约
+90% 的时间在赢，剩下 10% 已经很难缠。Perplexity
+则是另一个充满争议的样本：尽管拥有公开的爬虫规范文档并签署过合规声明，Cloudflare
+依然指控这家公司在遇到网络封锁后转向每日数百万次伪装请求（Perplexity
+对此予以公开否认）。面对避开登记管道的流量，准入认证根本使不上劲，防守方只得退回网络层展开旷日持久的对抗。</p>
+<p>另一片绕开前门认证的区域是私下达成的双边授权交易。顶流内容资产怎么分，其实早就在商务谈判室里谈完了：来自
+Brookings 的研究报告显示，直接授权的平均价格约
+2400 万美元一家出版商，签约名单上罗列着 News Corp 与 TIME
+等头部出版巨头。对这类拥有议价筹码的机构来说，BotBase
+顶多算是一处流程性的备案窗口，根本无从左右核心资产的分发契约。</p>
+<p>第三块不在前门登记的阵地，源于智能体生态自身的工程重心转移。越来越多的终端应用不再自行爬取网页，转而通过
+Tavily、Exa 或云厂商提供的检索 API
+获取上下文；直接抓取网络的工作向少数数据中间件厂商高度集中，MCP
+工具生态中甚至流通着自带隐蔽模式的抓取插件。正面遭遇网关准入机制的，恰恰是这批急需保障抓取稳定性的中间商。这一趋势恰好解释了为什么
+BotBase
+的登记量在一年间增长了七倍：争先恐后跑来排队领证的，主要是生计依赖公开数据流的专业服务商，并非零散的抓取脚本。</p>
+<p>对于海量长尾网站而言，这笔账算下来同样清醒冰冷。在一座月访问量百万级别的典型站点上，抓取流量通常仅占整体的
+1% 到 2%，按次计费的月收入估算在
+20 到 200
+美元之间。对中小站长而言，这套制度带来的是免受流量冲击的屏障，谈不上什么可观的商业变现。</p>
+<p>把这些现实边界拼在一起看，机器准入机制虽然正在成型，但它的实际效力眼下仅限于自愿登记的开发者与接入了特定防护网络的站点。针对隐匿抓取、场外直签与接口中介三类主要流向，这套准入规则暂时无法形成硬性制约。它最终能否演变为全网通用的基础设施，未来一年内有三个可以直接验证的关键观测节点：9
+月 15 日默认策略与 Googlebot 之间的初次碰撞，IETF 工作组在 11
+月例会前后能否推出首份正式立项的草案，以及产业界能否公开跑通首笔基于网关通道的规模化授权交易。</p>
+<p>三十年前，一份纯文本备忘便能平稳维系全网秩序，说白了是因为那时的机器程序从属于搜索引擎，干着双赢的导流工作。如今在网络中穿行的程序变成了形形色色的代理人，听命于远端看不见的用户，给站点带来的后果也充满不确定性。曾经依靠默契维持的旧均衡已然成为历史，新的规约体系仍在艰难搭建。它最终会定型成何种形态，取决于谁在掌控流量的默认开关、行业标准能否保持公开透明，以及那些游离在牌照体系之外的大规模流量最终将由何种力量理顺收拢。</p>
+
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Cloudflare" class="entity-link company-link">Cloudflare</a>, <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, <a href="/search/?q=Google" class="entity-link company-link">Google</a>, <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=BotBase" class="entity-link product-link">BotBase</a>, <a href="/search/?q=Web Bot Auth" class="entity-link product-link">Web Bot Auth</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">bot-base</span>
+      
+        <span class="tag-pill tag-pill--no-page">web-bot-auth</span>
+      
+        <span class="tag-pill tag-pill--no-page">traffic-management</span>
+      
+        <span class="tag-pill tag-pill--no-page">identity-verification</span>
+      
+        <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

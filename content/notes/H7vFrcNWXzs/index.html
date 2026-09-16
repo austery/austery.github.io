@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>在 AI 时代构建雄心勃勃的软件：Dioxus 创始人的全栈重构与工程思考</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="在 AI 时代构建雄心勃勃的软件：Dioxus 创始人的全栈重构与工程思考" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">在 AI 时代构建雄心勃勃的软件：Dioxus 创始人的全栈重构与工程思考</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-11</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/software-development/">software-development</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=H7vFrcNWXzs" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-11
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">Dioxus 创始人 Jonathan Kelley 分享了从零用 Rust 打造全平台跨端框架、自研 Blitz 渲染器与 Subsecond 热重载引擎的历程。探讨了 AI 编码智能体如何解决复杂知识检索与繁琐工程维护，并指出在代码生成变得极其廉价的时代，软件架构设计与代码质量审查才是工程师的核心壁垒。</div></div>
+      
+    </div>
+    <h3>缘起与宏大愿景：用 Rust 打造原生跨端框架</h3>
+<p>5年前的2021年夏天，<strong>Jonathan Kelley</strong> 在大学本科的最后一个暑假提交了 <strong>Dioxus</strong> 项目的第一次代码提交（commit）。当时他没有选择像许多同龄朋友那样去 Google 实习或投身 AI 研究，而是把整个夏天投入到探索一个设想中：用 <strong>Rust</strong> 编程语言编写一个跨平台应用程序框架。在2021年，Rust 仍然相对小众，但其生态系统不断扩大、工具链持续改善，其原生性能、严谨的类型系统以及便捷的交叉编译特性深深吸引了他。</p>
+<p>Dioxus 的核心构想非常清晰直接：为什么我们不能拥有一个统一的跨平台应用框架？开发者无需在数十种工具链、编程语言和 IDE 之间艰难周旋，只需使用 Rust 编写全部应用程序逻辑，并使用 HTML 和 CSS 作为界面标记语言。回看2021年，<strong>React Native</strong> 运行卡顿，<strong>Flutter</strong> 性能欠佳，两者在调用系统原生 API 时表现都不尽如人意。相反，借助 Rust，开发者可以在没有任何虚拟机（VM）、进程间通信（IPC）或 JavaScript 开销的情况下构建原生抽象。结合 HTML/CSS 的 UI 表达能力并借鉴 React 的响应式机制，团队得以复用海量的 Web 组件与工具链。构建一个既极其强大又对普通开发者高度熟悉的框架，听起来似乎并不复杂，但正如人们所说，选择从零构建应用框架不是因为它容易，而是因为当初以为它会很容易。</p>
+<p>现实中，要正面挑战 React Native 和 Flutter 具有极高的野心。2021年的 Rust 生态中几乎没有任何可直接使用的开箱即用组件。从响应式状态管理、字体渲染、热重载（hot reload）到应用程序打包分发，一切都必须从零自研。对团队而言，甚至从头构建一个轻量级 Web 浏览器引擎都只是推进道路上的必要步骤。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Hello, my name is Jonathan Kelly and today we're going to talk about what it means to build ambitious software in the age of AI. 5 years ago, I made the first commit ever to a project called Dioxus. I used the last summer I had as an undergraduate and instead of getting an internship at Google or doing research in AI like many of my friends at the time, I spent it exploring an idea I had for a crossplatform app framework written in the Rust programming language.</p>
+<p>In 2021, Rust was still pretty niche, but the ecosystem was growing, the tooling was improving, and the pitch of native performance, a solid type system, and simple cross compilation really sold me. It's extremely nerdy.</p>
+<p>The idea for Dioxus was straightforward. What if we had an crossplatform app framework? Instead of wading through dozens of tool chains, programming languages, and IDEs, what if we simply wrote all of our apps in Rust using HTML and CSS as the markup language?</p>
+<p>This was back in the day 2021 where React Native was janky, Flutter was too slow, and neither performed well with native APIs. On the flip, with Rust, we could build native abstractly with no VM, no IPC, no JavaScript. And if we used a little bit of HTML and CSS for the UI and take some inspiration from React for the reactivity, we could reuse vast amounts of web components and web tooling. The goal was an extremely powerful app framework that was still quite familiar to the average developer.</p>
+<p>Sounds easy, right? Well, as they say, we choose to build an app framework from scratch, not because it's easy, but because we thought it would be easy. In reality, trying to challenge React Native and Flutter is extremely ambitious. In 2021, there were very few off-the-shelf components you could use to build Dioxus. Everything from reactivity to font rendering to hot reloading and application bundling had to be built from scratch. There's nothing we could use. For us, tasks like building a web browser were just necessary steps along the way.</p>
+</details>
+<h3>底层技术突破与生态规模爆发：Blitz 与 Subsecond</h3>
+<p>如今到了2026年，<strong>Dioxus</strong> 不仅达成了最初的构想，更是远远超越了既定目标。项目实现了全方位的跨平台支持、原生渲染、Rust 代码热重载以及代码包拆分（bundle splitting），几乎在底层重构并优化了现代应用开发的全套技术栈。开发者只需维护单一代码库，即可交付功能完备的全栈 Web 应用，并与 iOS 和 Android 客户端共享底层组件。目前 Dioxus 在 GitHub 上已斩获近 37,000 颗 Star，下载量达数百万次；基于 Dioxus 构建的应用遍布全球，累计覆盖终端用户超过 2 亿人，应用场景涵盖 AI 助手、电子投票软件、数据科学分析工具，乃至太空卫星的在轨防撞预警系统。</p>
+<p>为了实现极致的开发者体验，团队在降低心智负担上下足了功夫。通过减少配置样板文件、自动化构建工具、即时热重载与静态资产优化，使跨多端发布变得极其简单。因为应用完全使用 Rust 构建，整体架构异常纯粹，开发者无需频繁编写各平台的胶水代码，仅凭一个 <code>main.rs</code> 文件即可启动开发。在此期间，团队交付了两个极具野心的底层核心项目：</p>
+<ul>
+<li><strong>Blitz</strong>（轻量级 HTML/CSS 渲染引擎）：从 Firefox 浏览器中提取了工业级的 CSS 样式引擎，自研了 HTML DOM 树及 GPU 混合渲染管线。相比于内存消耗巨大、体积臃肿的 <strong>Electron</strong> 应用，Blitz 构建的应用安装包体积小于 5MB，运行时内存占用低于 50MB，并支持自定义 3D 旋转几何体等任意扩展组件。</li>
+<li><strong>Subsecond</strong>（通用原生代码热重载引擎）：面向 Rust、C 和 C++ 的通用原地代码热补丁系统。它能实时监测代码变更，仅对变动模块进行增量重编译，并在 100 毫秒内对运行中的应用程序完成内存补丁替换。该系统覆盖所有主流操作系统，甚至支持编译为 WebAssembly 的 Web 运行时，是原生编译语言领域首个具备如此广泛平台兼容性的热重载方案。</li>
+</ul>
+<p>过去五年中，这个规模精简但极具实力的团队用双眼审阅过每一行代码，以高频而进取的节奏维持着版本迭代，此前 Dioxus 的每一行代码都由工程师纯手工编写完成。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Now today in 2026, Dioxus has achieved and far surpassed its original mission. We support all the features we originally set out to build from crossplatform support to native rendering to Rust hot reload and bundle splitting. We've basically reinvented and improved the entire app development stack. Users can ship a powerful full stack web application in the exact same codebase sharing components as their iOS and Android apps.</p>
+<p>The Dioxus project now has nearly 37,000 stars on GitHub with millions of downloads. Apps built in Dioxus are rolled across the globe with a cumulative estimate of over 200 million end users. Users have built things like AI assistance, software for voting, data science tools, and even collision avoidance system for satellites in space.</p>
+<p>We've put a ton of effort into making Dioxus as userfriendly as possible. Fewer files, build tooling, hot reloading, asset optimization, everything you need to easily ship across all platforms. Because Dioxus apps are written in Rust, they are structurally very simple. You rarely need to drop into platform specific code because all Rust projects are alike. It's very easy for developers to dive into a new project. You can completely skip annoying build system setup. All you need is a main.rs to get started.</p>
+<p>One of the most ambitious goals we had was to ship lightweight but fully featured HTML and CSS rendering engine called Blitz. We extracted the browser grade CSS engine out of Firefox, built our own HTML DOM, and developed a hybrid GPU rendering pipeline. Compared to Electron apps, which are RAM and storage hogs, Blitz apps are lightweight, coming in at less than 5 megabytes bundle sizes and consume less than 50 megabytes of RAM at runtime. And they're pretty cool. You can write your own custom components, spinning cubes, you can customize the browser however you want. It's a very cool project.</p>
+<p>We also worked on a tool called Subsecond which is our generic hot reload engine for Rust, C and C++. Subsecond watches your code for edits, recompiles parts of the code that changed and patches the running app in place all in 100 milliseconds. This was an incredibly difficult technical challenge and is the only hot reload engine for native compiled code to have such wide language and runtime support. It works on every major system and even the web is compiled into WebAssembly.</p>
+<p>No one has done this before because these projects we've worked on along the way over the past 5 years are incredibly ambitious and are the result of a tiny but cracked team pouring over every line of code with our own two eyes and maintain a frequent but ambitious release cadence. The most amazing thing, every line of code in Dioxus until very recently has been painstakingly written by hand.</p>
+</details>
+<h3>拥抱 AI 编码智能体：从“低质代码炮”到认知减负</h3>
+<p>然而在过去的六个月里，软件工程与开发范式发生了巨大转折：<strong>AI 编码智能体</strong>（AI Coding Agents: 能够自主理解需求、读取上下文并编写修改代码的 AI 工具）的能力取得了跨越式提升，尤其是在 Rust 语言的编写上表现惊人。作为一个由资深 Rust 极客组成的团队，他们长期以来对 AI 辅助开发持怀疑态度，认为高质量的基础设施工程与自动化 AI 工具水火不容，日常工作中完全不使用 AI。但在亲眼目睹智能体对 Rust 语法的精准掌控后，团队决定转变观念并积极尝试。</p>
+<p>在初期探索中，团队全员订阅了最高规格的云端代码智能体服务，迅速生成了数万行 Rust 代码，尝试构建多年来梦寐以求的各类特性。然而现实却泼了一盆冷水：生成的大量代码几乎没有多少能够达到合入主分支的质量门槛。数千行的新功能、Bug 修复和外部集成代码沦为了无法合并的草稿（Draft PR）。团队意识到，如果不掌握正确驾驭工具的方法，开发者极易沦为<strong>低质代码发射炮</strong>（Slop Cannon: 指不加节制地用 AI 大量生成浮躁、未经推敲且难以维护的劣质代码产物）。</p>
+<p>在深入反思与复盘后，团队得出了一个关键结论：传统的开发者体验设计专注于让人类写得顺畅——简洁的语法、完备的报错提示与易读的 API；而 AI 编码智能体并不在乎这些表层体验。此前 Dioxus 竭力降低 Rust 的上手难度，因为 Rust 对人类而言极难编写；而如今，AI 智能体直接替人类承担了繁琐的编码重担，代为处理极端边界情况并正面解决与<strong>借用检查器</strong>（Borrow Checker: Rust 编译器用于静态验证内存所有权和引用的核心机制）的博弈。这从根本上释放了开发者的认知负载，使得 Rust 原本陡峭的学习门槛不再是阻碍，反而变成了类型安全和系统稳定性的绝对优势。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Why do I say recently? Well, if you aren't aware, software engineering and development has taken a massive turn in the past 6 months. AI coding agents got really, really good. And specifically, they got really good at Rust. Our team, a bunch of cracked Rust engineers, has been quite skeptical of AI for a long time. We had not felt the AGI, so to speak. And we definitely weren't using AI in our day-to-day work. We thought the two things were incompatible, shipping high quality code and AI tools. Seeing them get really good at Rust was a huge surprise to us. So, we were finally excited.</p>
+<p>With this newfound excitement, we started building our team. Maxed out our cloud code subscriptions, turned out tens of thousands of lines of Rust, and built all sorts of features we had long wished to have. Unfortunately, very little of the code cleared our quality bar of should we merge this in. Thousands of lines of new features, bug fixes, and integrations we had wanted for years sat there in draft and continue to sit there in draft. We definitely did not know how to properly wield these tools and it was way too easy to become what we call a slop cannon.</p>
+<p>So we reflected a bit and studied what worked and what didn't. To read, easy to write, good tools, good error messages. The coding agents generally don't care about this. We tried to make Rust easier with Dioxus still because Rust is harder to write. The coding agents deal with the development burden for you. They handle the edge cases and they fight the borrow checker, saving you from the cognitive burden of writing Rust apps. The learning curve which we fought to reduce is now a feature.</p>
+<p>So throughout the process of adopting the coding tools to work on Dioxus, we learned a wide array of lessons. Many of the things the coding agents do really well today and many things they just aren't there yet. So the next couple slides I want to talk about some of the things we learned and what it means to build ambitious software projects in the age of agent coding.</p>
+</details>
+<h3>雄心工程的基石：AI 智能体在知识攻坚与繁琐维护中的实战价值</h3>
+<p>要理解 AI 在大型项目中的定位，首先必须明确什么是<strong>雄心勃勃的软件项目</strong>（Ambitious Software Project）。科研代码或原型开发可能优先追求交付速度，对代码内部质量要求不高；但像 Dioxus 这样的基础设施开源框架，其底层代码本身就是核心产品，无数企业将其业务建立在其之上。此类工程面临着严苛的质量标准：</p>
+<ol>
+<li><strong>系统高可靠性与可维护性</strong>：代码必须始终稳定运行，即便故障也能快速定位修复。开发迭代速度完全依赖于坚固的代码基质（Substrate），若基质腐烂，上层建筑将毫无稳定性可言。</li>
+<li><strong>长周期路线图与向后兼容</strong>：必须在快速迭代新特性的同时，确保补丁版本绝不破坏数百万人依赖的既有 API，并保证文档、示例、测试与基准测试（Benchmark）的高度严谨同步。</li>
+</ol>
+<p>在建立这种认知后，团队发现 AI 编码智能体在攻克<strong>高难度知识型问题</strong>（Knowledge Problems）上展现出巨大价值。面对庞杂的操作系统底层、各类构建系统、运行时及冷门私有 API，人类工程师不可能穷尽所有技术细节，而 AI 智能体拥有人类无法企及的耐心与海量知识库：</p>
+<ul>
+<li><strong>深度逆向与跨语言集成</strong>：智能体能够快速查阅数千页文档、分析二进制文件并反编译逆向 API。例如 Dioxus 为移动端深度集成 Kotlin 与 Swift 原生插件系统（难度堪比 React Native 的 TurboModules，传统手工编写通常需要数年演进），借助 AI 智能体仅用 1 天就完成了核心逻辑实现，团队随后耗费 2 周编写测试用例并在真机上完成验证，整体交付耗时仅 2 至 3 周。</li>
+<li><strong>复杂规范排查</strong>：在 Blitz 渲染引擎中调试深层 CSS 样式与排版布局问题时，智能体对 W3C CSS 规范的掌握极其精准，能瞬间指出 Google Chrome 和 Apple Safari 在布局绘制上的实现差异与处理策略，免去了开发者深入 Apple 庞大的 WebKit 源码仓库翻找的痛苦。这促使团队彻底告别以往为了赶进度而采取的权宜性代码（Hacks），转向坚持标准、符合规范的高质量架构设计。</li>
+<li><strong>自动化枯燥繁重工程</strong>：对于仅有 3 名核心工程师的精简团队，AI 有效接管了大量繁琐杂务。包括验证压缩包（tarball）解压目录结构、多编辑器插件（如 Zed 插件）的回归验证、发布清单核对、将 Bug 修复向后移植（backporting）至旧稳定版本，以及保持代码与 Doc Comments 的绝对同步。在 AI 的协助下，Dioxus 最新版本发布的补丁频率创下历史新高，实现了每周甚至一周多次的高频安全发布。</li>
+</ul>
+<details>
+<summary>Original English Source</summary>
+<p>It's important to talk about first what it means to build an ambitious software project. There's many different types of software out there. Depends on what you ship every day. You might be doing research and the quality of your code isn't the most important thing. You might be doing prototyping code and iterating fast, moving quickly is important. You might be building applications which people don't see the code internally. They just see what it looks like on the outside.</p>
+<p>But for us and for Dioxus, we care about a few different things. Primarily, of course, we care that our code works all the time and that if it breaks, we can easily fix it. I think this is something people don't think about enough these days that you need to continue to build easily maintainable code and the velocity that you ship lays down on this substrate that you've built and if the substrate isn't good, nothing you build on top is going to be good.</p>
+<p>Secondarily, we care about shipping new features. Our road map is really long. It extends into the far future. There's dozens of features we still have yet to build for Dioxus. And we want to ship these quickly to keep up with the times, but we also want to maintain quality. When building a large ambitious project like Dioxus, there's a constant tension of shipping fast, adding new features, and then also making sure you don't break things and that in a patch release, you're not breaking APIs that millions of people rely on. For a project that people build their businesses on, there's also a high bar for releases. We need to maintain high quality of our documentation, of our examples, of our tests, of our benchmarks. If anything is out of place, people figure it out pretty quickly.</p>
+<p>So, we really do like coding agents as an excellent assistant for very hard technical problems. Coding agents bring a level of patience and massive knowledge that is very hard to muster as an individual working on a very large software project. Many problems in Dioxus are knowledge problems. Our team can't feasibly know every detail about every build system, every runtime, every operating system, every programming language, every API, every quirk. Fortunately, this is exactly where the coding agents excel.</p>
+<p>They can quickly sift through thousands of pages of documentation, read all the bespoke APIs, dig into binaries, reverse engineer APIs. They have so much more patience than an individual developer does. We were able to implement things like Kotlin and Swift plugins for Dioxus deeply integrated into our build system which is a really hard feature. If you know React Native TurboModules, these things took many years of development to get right by people writing them by hand. We were able to ship this in like 2 to 3 weeks with coding agents and we probably could have gone faster. I think implementation was done in like the first day and we spent 2 weeks building test cases and testing on real devices.</p>
+<p>And in Blitz, our custom web engine, web agents have accelerated debugging hard CSS, styling, and layout issues for us. The agents know the CSS spec exceptionally well. You might be writing a line of code that's trying to resolve some sort of painting or layout issue. And the agents can instantly recall exactly how Google Chrome and Safari do it. Can tell you the right way of handling it for your problem, and you don't have to go open the WebKit source code that's nested deep somewhere in Apple's Git repositories. We're able to invest time in doing things the right way, not the hacky way, which interestingly is a turn compared to how we used to do it. We would always gauge a project based on its complexity and tend to take shortcuts as humans to ship things faster but not at a high quality bar. So coding agents give us the ability to maintain quality and do things the right way.</p>
+<p>A less sexy application of coding agents for ambitious projects is actually doing the extremely mundane tasks. Our team is very small. We have three core engineers working on Dioxus. Any time that we spend like verifying the tarball extracts into the right directory structure is like time wasted from us thinking about the architecture and the hard problems of our software. Dioxus is a large project and it's been a challenge to maintain a high quality bar across the entire codebase across every release. In one release we might add an extension for a new editor like Zed. We might not be able to test that editor every time we do a patch release. And it might be easy to break that. Applying agents to the problem actually lets us automate many of these like hard tedious tasks that would have taken like countless hours before.</p>
+<p>And then for us like the code is the product. People download the code, they build on the code, users interact with our APIs, they read our docs, and they build on our architecture. So any laziness in the quality of the code, the SDKs that we ship to users translates directly into a worse developer experience and people either getting upset, their businesses being stalled, or them turning off the product. So coding agents have been excellent at maintaining tasks like verifying release checklists, backporting bug fixes onto stable releases, and ensuring our docs and documents are of extremely high quality. We still do write a lot of doc comments ourselves, but it's very easy to give the agent a task of making sure everything is documented properly. Everything has an example and everything actually is documenting the thing that it says in the way that it says. As humans, you know, you'll go edit the code, but you won't edit the comment. So, a lot of your comments will actually be out of date over time and things get very confusing. And if you just look at the numbers, we've shipped more patch releases in our most recent Dioxus version than we ever had before. So, we've been able to maintain weekly or multiple times a week release cadence for a large ambitious piece of software in a way that we would be scared to do a release earlier.</p>
+</details>
+<h3>测试边界与架构艺术：代码贬值时代工程师的真正壁垒</h3>
+<p>尽管 AI 在多方面带来了生产力跃迁，但在测试领域盲目依赖 AI 仍存在明显局限。在为基础软件编写端到端（E2E）测试时，AI 往往倾向于编写浅层甚至毫无意义的“敷衍测试”（例如机械地给构造函数编写测试）。智能体虽能针对给定 API 快速写出单测，但如同初级工程师一样，难以自主捕捉到真正关键的边界缺陷。因此，测试条件规划、测试架构设计及运行器维护仍需由人类工程师严格把控。AI 在测试领域的最佳落地场景，在于构建<strong>模糊测试套件</strong>（Fuzzing Harness: 一种通过向目标程序注入海量随机、畸形或对抗性输入以挖掘潜在崩溃与漏洞的自动化测试架构）。</p>
+<p>面对 AI 辅助编程，一个不可动摇的事实是：<strong>软件架构设计依然是一门由人类主导的高阶艺术</strong>。AI 智能体极大放大了交付速率，但若代码库原有的底层基质设计拙劣，AI 注入的新代码同样会加速系统腐化。人类工程师在遭遇架构阻碍时往往会主动发起大规模重构，而 AI 智能体默认倾向于直接堆砌代码以达成当前指令。如果缺乏宏观审视，智能体会以惊人的速度制造出海量的“意大利面条式代码”（Spaghetti Code）。团队目前绝大部分精力，已从具体的代码编写转向系统架构设计、未来功能演进规划以及可扩展性推演。</p>
+<p>与此同时，团队在开源协同中始终坚持对每一行合并的代码进行逐行人工审查（Line-by-line Review）。在庞大的开源社区中，贡献者往往只聚焦于解决眼前特定的 Bug，倾向于使用 AI 快速生成局部补丁而缺乏对整体架构演化的深度考量。由于当前提示词工程（Prompt Engineering）的表达精度仍受限于自然语言媒介，模型无法真正读懂人类的深层意图，审查和阅读代码的价值比以往任何时候都更加关键。</p>
+<p>软件工程的本质从来不是在屏幕上敲击代码，而是在复杂问题中构建优雅的解决方案，提前推演系统未来十步的演化路径，并在需求变化中保持架构的灵活性。代码生成已经变得极其廉价，但<strong>软件质量</strong>绝非廉价之物。随着 Dioxus 团队正式加入 <strong>Cognition</strong>（开发著名 AI 软件工程师 Devin 的母公司），这一探索正在迈向下一代软件研发工具的全新阶段。</p>
+<details>
+<summary>Original English Source</summary>
+<p>One thing I'm not 100% convinced yet, we have found varying levels of success is using AI to write tests or at least blindly writing tests. One place we've struggled with Dioxus is testing. It can be very hard to test foundational software, especially like end to end for complex systems. It's hard to test that your extension installs into Zed and works the way you want it to do with literally opening Zed and like using the extension. The coding agents struggle here too to an extent. They also are, you know, have a tendency to write kind of sloppy tests. You'll give it a constructor and then it will go test the constructor and that's not a very interesting test. They can easily write tests for any given API but much like humans they fail to write the right tests. So we still find ourselves enumerating test conditions manually, crafting test APIs ourselves and handling test runners, but it is sometimes a great sounding board to come up with the test ideas for a particular thing you're trying to make sure has coverage and then enumerating the edge conditions. But one place that we have actually really enjoyed using coding agents to do testing is building test harnesses. Fuzzing is a critical part of building like production grade software which means taking your application and putting it under millions of different inputs and quite often adversarial inputs basically like malformed inputs or ways of using the software that users should not be using the software but they can use the software and coding agents are excellent at building these harnesses.</p>
+<p>One thing we've found is software architecture is still an art. Coding agents enable you to ship at an exceptionally high velocity. I mentioned this earlier. If the substrate on which your coding agents' code lands is bad, their contributions will be bad as well. Unlike a human engineer, coding agents aren't typically afraid to voluntarily go on a huge refactor of a system or redesign the architecture when a feature doesn't quite fit. They'll typically just ship. Most of our development time is actually now spent thinking about software architecture about what features we'll want in the future and how the system will evolve. Just like human engineers can write spaghetti code, so can the agents, but now just faster. However, I will say with table level tools, the actual code quality itself is so high, provided you properly communicate your intent, that proper software architecture will probably take the vast majority of time in the future. Actual code writing, not so much.</p>
+<p>One thing we do for Dioxus, which maybe you guys still do, maybe you don't, is we review every PR line by line. We definitely use AI review to spot bugs ahead of time, but we still do like to read the code that we ship. We receive lots and lots of PRs from strangers. Actually Dioxus is a big open source project and not every PR is made the same. We find that users can be quite bad at communicating their intent to the models. Contributors don't usually think deeply about how the codebase should evolve over time. They just want their bug fix or their feature in and many solutions are glued in place. So we're not quite at the point where the coding agents can read our minds and thus we're still limited by the medium of text. And as ridiculous as it sounds, prompt engineering is quite real. The quality of an implementation can be very much dependent on the prompt that you give the model.</p>
+<p>But in a sense, nothing really has changed. Reading code has always been more important than writing code. Maybe not in the beginning, but eventually as the project evolves, it does.</p>
+<p>So my closing thoughts on using coding agents to build ambitious software is that code is now cheap, but quality is not. The job of a software engineer has never really been about putting lines of code on the screen. It's been about architecting elegant solutions to complex problems, to thinking 10 steps ahead about how a system will evolve, about retaining flexibility in the face of changing requirements. These facts have not changed and the bar for software engineering is higher than ever.</p>
+<p>If you would like to work on the tools of the next generation of software, Cognition, the people who have acquired Dioxus are hiring. The Dioxus team joined Cognition to be part of the future and hopefully you will too. Thank you.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Dioxus Labs" class="entity-link company-link">Dioxus Labs</a>, <a href="/search/?q=Cognition" class="entity-link company-link">Cognition</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Dioxus" class="entity-link product-link">Dioxus</a>, <a href="/search/?q=Blitz" class="entity-link product-link">Blitz</a>, <a href="/search/?q=Subsecond" class="entity-link product-link">Subsecond</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">ai-coding-agents</span>
+      
+        <span class="tag-pill tag-pill--no-page">cross-platform-framework</span>
+      
+        <a class="tag-link" href="/tags/software-architecture/">software-architecture</a>
+      
+        <span class="tag-pill tag-pill--no-page">developer-velocity</span>
+      
+        <span class="tag-pill tag-pill--no-page">code-quality</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

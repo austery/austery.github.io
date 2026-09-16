@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>从内部机器人到开源：语言演进与工程实践的深度解析</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="从内部机器人到开源：语言演进与工程实践的深度解析" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">从内部机器人到开源：语言演进与工程实践的深度解析</span>
+      <span data-pagefind-meta="speaker" style="display:none;">The Pragmatic Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-09</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/software-development/">software-development</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/the-pragmatic-engineer/">The Pragmatic Engineer</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=sLSTM9znQNs" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-09
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">本文探讨了内部机器人构建过程中的技术演进，重点分析了特定编程语言在智能体领域的潜力，以及模型迭代中防护脚手架与模型能力之间的关系。同时，还介绍了底层架构设计（如混合搜索引擎）的工程考量，并为AI时代工程师提供了关于好奇心、快速理解新事物和清晰思维的职业发展建议。</div></div>
+      
+    </div>
+    <!-- chunk 1/10 -->
+<h3>谷歌手写的 ChatGPT 前身与 Rust 在 Agent 中的演进</h3>
+<p><strong>Host</strong>: 你最近在 X 上分享过一个非常有趣的故事：你曾是谷歌内部某个团队的一员，你们在 ChatGPT 问世整整一年前就构建了一个内部机器人，其实质就是 ChatGPT 的雏形。当时它就像野火一样迅速在内部蔓延开来。这远不止是 Codex 的一个普通研究项目。你当时是用 Rust 构建了它，但在那个时候，模型对 Rust 语言的支持甚至都还没有纳入分布（out of distribution）。但事实证明，现实中如果我们决定尽早在此类方向上投入，Rust 作为一门语言很快就会在 Agent 领域展现出极高的价值。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: An interesting story, which you recently shared on X, concerns how you were part of the team that created this internal Google bot that was ChatGPT, but a year before ChatGPT. It caught on like wildfire. It was more than just a research project for Codex. You built it in Rust, and at that time the model was still not in distribution for Rust. It turned out that it is quite clear that Rust as a language in reality will become quite quickly useful for agents if we decide to attach certain efforts before that.</p>
+</details>
+<p><strong>Host</strong>: 当有人新加入 Codex 团队时，你会对他们说什么？这里的工作流程是怎样的？一切都已经自动化搞定了吗？据我所知，大家在遇到疑问时最常听到的一句话就是：“你问过 Codex 了吗？”新加入的成员往往依然感到惊讶：你到底能向它提问什么？实际上，你几乎可以向它提问任何事情。创建这个系统是一个非常有趣的过程，但维护它却充满了痛苦。所谓的维护就像是你随着时间推移必须持续支付的税费，只为让一切正常运转；但我认为这种情况正在发生改变，未来大量的维护工作都将被直接自动化。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: When someone joins Codex, what do you tell them? How is it here? Is everything done? What you hear the most when you have questions is, for example, &quot;Did you ask Codex?&quot; Newcomers are still surprised—what can you ask it? Practically whatever. Creation was the interesting part, but maintenance was painful. Maintenance is something like the tax you pay over time to make everything work, but I think this changes so that there will be a lot of things simply automated.</p>
+</details>
+<p><strong>Host</strong>: 在你们那里，现在还保留着“代码审查（Code Review）”的概念吗？代码审查的角色正在发生转变，现在的现状正如大家所说：“我认为 Codex 是当今最流行的基于人工智能的编程工具之一。”但这一切究竟是如何开始的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Do you still have the concept of code checks? The role of code review is changing, and now it is like this: &quot;I think that Codex is one of the most popular tools for coding based on artificial intelligence today.&quot; But how did everything get started?</p>
+</details>
+<h3>本期嘉宾与赞助商介绍</h3>
+<p><strong>Host</strong>: 我们今天的许多听众之所以认识今天的嘉宾 Thibaut，是因为他经常与广大 Codex 用户保持着非常活跃且热情的互动。当 Codex 作为一个产品正式推出时他就在现场，从那时起他便一直领导着更广泛的 Codex 团队。今天，我们将深入探讨 Codex 是如何起步的，为什么它选择基于 Rust 构建并走向开源；代码审查在 Codex 和 OpenAI 团队内部发生了怎样的变革；当代码维护和架构重构变得极其廉价时意味着什么；Codex 与 ChatGPT 的整合过程是怎样的，以及该项目中许多被低估的工程挑战。如果你想了解 OpenAI 内部团队是如何规划、审查和交付软件的，那么这一期播客正是为你准备的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Many of you know today's guest Thibaut thanks to his generous and frequent engagement with Codex users. He was also there when Codex as a product was launched, and from then on has led the wider Codex team. Today we will consider how Codex started and why it was built in Rust and became open source; how code checks are changing inside Codex and OpenAI teams; what it means when maintenance and re-architecture become incredibly cheap; what the merger looked like between Codex and ChatGPT; and many more underrated engineering challenges of this project. If you want to understand how the teams inside OpenAI plan to check and supply software, this episode is for you.</p>
+</details>
+<p><strong>Host</strong>: 本期节目由 TurboBuffer 特约赞助。TurboBuffer 是一款极具扩展性、超快且低成本的混合搜索引擎，由一组优秀的工程师团队基于对象存储构建而成——在与他们深入交流后，我非常喜欢这套架构。像 Anthropic、Notion、Cognition 和 Harvey 这样的公司都在使用 TurboBuffer 将其 AI 产品连接到海量的非结构化数据。当我与使用 TurboBuffer 的工程师交流时，他们反复提到的核心优势就是在大规模场景下的高可靠性和极致性能。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: This episode is presented by TurboBuffer, an incredibly scalable, fast, and cheap hybrid search engine built on top of object storage by a team of engineers I really liked after spending time with them. TurboBuffer is a tool that companies like Anthropic, Notion, Cognition, and Harvey use for connecting their AI products to huge volumes of unstructured data. When I talked to engineers who use TurboBuffer, the theme that always arises is reliability and performance at scale.</p>
+</details>
+<p><strong>Host</strong>: 这背后的原因与 TurboBuffer 的架构设计密切相关。TurboBuffer 仅将对象存储用于持久化状态，并利用带有缓存内存的 NVMe SSD 来处理计算。TurboBuffer 中的数据被组织到各个命名空间（namespaces）中。你可以将命名空间理解为一个数据库表、一个搜索索引，或者一个 S3 前缀，具体取决于你来自哪个技术领域。当某个命名空间未被查询时，它会停留在廉价的对象存储中，完全不会产生任何计算开销。而一旦该命名空间被激活查询，TurboBuffer 就会将其移至热缓存层，从而以极快的速度执行查询。这种底层设计使得扩展到数亿个命名空间变得轻而易举。如果你正在构建多人协作的 AI 产品，每个用户及其 Agent 都可以拥有自己专属的搜索索引，而不会带来额外的账单成本。每个命名空间都可以容纳数亿份文档，无需任何特殊配置。你几乎可以无限制地扩展 TurboBuffer，同时其性能、可靠性和运营模式始终保持稳健。如果你需要将 AI 连接到海量数据，TurboBuffer 应该是你的首选。欢迎访问 turbobuffer.com/pragmatic 进行了解。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: The reason for this relates to TurboBuffer's architecture. TurboBuffer uses object storage only for state, and NVMe SSDs with cache memory for compute. Data in TurboBuffer is organized into namespaces. You can imagine a namespace as a database table, a search index, or an S3 prefix, depending on the background you come from. When a namespace is not queried, it remains in cheap object storage without associated computational expenses. When a namespace is active, TurboBuffer transfers it to hot caching tiers, so requests are executed very quickly. This fundamental design simplifies scaling to hundreds of millions of namespaces. If you create a multiplayer AI product, each user and their agent can have their own dedicated search index without overhead expenses. And every namespace can contain hundreds of millions of documents without any special configuration. You can scale TurboBuffer with practically no restrictions, while performance, reliability, and operating model remain consistent. If you need to connect AI to large amounts of data, TurboBuffer should be your first choice. Check it out at turbobuffer.com/pragmatic.</p>
+</details>
+<h3>从布鲁塞尔乡村少年到计算机自学之路</h3>
+<p><strong>Host</strong>: Thibaut，欢迎来到播客！非常高兴你能来。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Thibaut, welcome to the podcast. So good to have you here.</p>
+</details>
+<p><strong>Thibaut</strong>: 谢谢你邀请我。再次见到你真好。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Thibaut</strong>: Thank you for inviting me. So good to see you again.</p>
+</details>
+<p><strong>Host</strong>: 很高兴能做这次对谈。上次我们是线下当面交流，这次我们通过视频连线。首先我想问你的是，你最初是如何进入技术领域的？你是在什么时候第一次意识到自己想从事与计算机相关的工作的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: It's nice to do this. Last time we did it in person, now we do it through video. First, I would like to ask you, how did you get into the field of technology? When was your first time realizing you wanted to work with computers?</p>
+</details>
+<p><strong>Thibaut</strong>: 这是一个好问题。那是很久以前的事了，真的很久远。当时我父母决定从我的出生地布鲁塞尔搬走。他们当时觉得买下一栋小房子并进行翻修是个很棒的主意，但这栋房子坐落在一个偏僻乡村的正中央，那里几乎什么事情都不会发生。我记得整个村子大概只有 200 人左右。身边并没有多少同龄人可以让我交流或者交朋友。于是我就被困在了那里。那时我大概只有八岁左右。因为被困在封闭的环境里，我只能沉浸在电脑的世界中。对我来说，那是互联网的早期时代，那成了我学习和探索外界的途径。后来发生的一切，追根溯源都始于这段经历。所以其实我很感激我的父母，正是因为他们搬到了一个近乎封闭的角落，我别无选择，只能将全部的热情投入到计算机当中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Thibaut</strong>: That's a good question. It was a long time ago, very long ago. My parents actually decided to move from Brussels, where I was born. They just thought it was great to buy a small house and repair it, but it was located in the middle of a village where almost nothing was happening. I think there were about 200 people living there. Not many people with whom I could talk or make friends. And so I was stuck. It was around when I was eight years old. I was stuck with computers, and those were early days for me and the internet; this was my way to learn. And everything else comes from this. So, I am grateful to my parents because they moved to a remote place, and I didn't have any other choice but to get interested in computers.</p>
+</details>
+<h3>应用数学、早期创业与工业运筹优化</h3>
+<p><strong>Host</strong>: 高中毕业后，你继续深造进入了大学，对吧？也就是说，你正式在学术体系里学习了相关专业。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: As soon as you finished high school, you continued your studies and joined university, right? So you actually studied it properly.</p>
+</details>
+<p><strong>Thibaut</strong>: 是的。我在大学攻读的是数学与应用数学专业。我上大学的年龄相当早，因此我也比同龄人更早完成了学业。有很长一段时间，我总觉得自己可能在学术界走不远，甚至一度想放弃教学科研路线。在求学期间，我就搞过几家小公司，做一些小型咨询业务。我在银行工作过，当时我对供应链问题和应用数学非常痴迷，我喜欢通过解决这些实际商业问题来边干边学。最终，我投身到了比利时的初创圈子中。在做了一段时间创业后，我搬去了伦敦，先后在谷歌和 DeepMind 工作，之后又加入了位于加州的 OpenAI。我现在就在加利福尼亚，我非常喜欢加州的天气。关于这些我们可以慢慢聊，那是一段非常棒的旅程。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Thibaut</strong>: Yes. I studied mathematics, applied mathematics at the university. I entered quite early, and that's why I also finished earlier. I thought for a long time that I really wouldn't succeed in academia and quit teaching. I had small companies and a little consulting business while I studied. I worked in banks. I was very interested in supply chain problems and applied mathematics, and I liked to sell solutions and learn many things through this. In the end, I found myself in the startup world in Belgium. I did that for a while, and then moved to London to work first at Google, then DeepMind, and then eventually moved here to OpenAI in California. I love the Californian weather. We can talk about it; it was very good.</p>
+</details>
+<p><strong>Host</strong>: 大学一毕业你就创办了一家初创公司，是这样吗？你当时身上是带有一种创业基因或者商业冲动吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Immediately after university you founded a startup, right? Did you have the startup bug or entrepreneurial bug?</p>
+</details>
+<p><strong>Thibaut</strong>: 是的，那家初创公司完全聚焦于医药供应链领域。我们深入研究临床试验的子供应链，试图对其进行优化并解决诸如“我们是否应该生产更多药品？应该分发到哪些试验点？如何最大程度避免损耗与浪费？”等一系列问题。通过这些优化，临床试验的效率得到了显著提升。当时我们使用的是传统的运筹优化方法，并没有涉及机器学习——主要是传统的数学优化算法、蒙特卡洛模拟求解等等，本质上是随机多阶段优化问题（Stochastic multi-step optimization）。后来我们还将这套技术应用到了钢铁工业以及欧洲的电网调度系统中。那段时期我们专注于各种形式的运筹优化难题，我觉得非常有意思。直到今天，那家公司依然存在，而且我认为他们依然在从事着非常有趣的工作；当然，结合当下的现代人工智能技术，业务模式也发生了翻天覆地的变化。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Thibaut</strong>: Yeah, so this startup was completely dedicated to pharmaceutical supply chains. We investigated the sub-supply chain for clinical tests and tried to optimize and solve questions like, &quot;Should we produce more medicine? Where should it be sent? How do we avoid waste?&quot; And thanks to this, clinical tests became more effective. This used traditional methods not related to machine learning—traditional optimization methods, solving Monte Carlo simulations, and stochastic multi-step optimization problems, actually. We also applied this in the steel industry and to electrical power grids in Europe. It was focused on small forms of optimization tasks that were very interesting. To this day, that company still exists, and I think they perform some of the most interesting work, though it changes a lot with modern artificial intelligence, of course.</p>
+</details>
+<p><strong>Host</strong>: 这很有意思。听你的描述，你当时就像是在说：“对，那并不是机器学习，纯粹是传统的数学方法。”但你随后就一头扎进了蒙特卡洛模拟、运筹建模和复杂算法之中。我的感觉是你完全沉迷其中了，对吧？你的思维方式是不是类似于：“好，这就是问题空间。我该如何利用我学到的、甚至是我尚未掌握的数学知识，去不断深入钻研并解决它？”我的理解准确吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: But it's interesting because you say, &quot;Oh yes, it was not machine learning, these were simply traditional things.&quot; And then you dive into modeling, Monte Carlo optimization methods, and algorithms. It feels like you just got completely absorbed, isn't that right? Was it something like: &quot;Okay, here is the problem space. How can I use the mathematics I've learned—or haven't learned yet—to simply go deeper and deeper?&quot; Do I understand that correctly?</p>
+</details>
+<p><strong>Thibaut</strong>: 是的，这正是我对应用数学极度着迷的原因。在理论数学、理论科学或物理学中，你沉浸其中往往是因为那里有未知的真理等待被发现，其中蕴含着纯粹的美感。一切都可以归结为模式与认知边界的拓展，但你并不总是清楚该如何将它们付诸实际应用。而在现实世界中，你会发现大量极具挑战性、极其酷炫的现实难题就摆在那里等待解决。我当时极其渴望探索：我该如何让这个世界运转得更好？我该如何运用那些深奥复杂的数学工具，去扎扎实实地优化现实系统？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Thibaut</strong>: Yes, that's why I was obsessed with applied mathematics. The idea with theoretical mathematics, science, or physics is that you do it because there is something waiting to be discovered, and there is something beautiful about that. It all reduces to patterns and expanding frontiers, but you don't always know how you will apply it. And then there is the real world—there are all these cool problems that are simply lying around, and I was very interested to see how I could make the world a better place, and how I could apply complex mathematics just to optimize real-world systems.</p>
+</details>
+<!-- chunk 2/10 -->
+<h3>初入谷歌伦敦：从移动端网页加速到产品失败的反思</h3>
+<p><strong>Guest</strong>: ……去观察我周围的世界？在这家初创公司的背后，其实凝聚了大量的博士研究成果。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: ...the world around me? And there was a lot of dissertations that stood behind this startup.</p>
+</details>
+<p><strong>Interviewer</strong>: 是的。在那家初创公司之后，你来到了谷歌，最初是在谷歌伦敦分部。那是在 2015 年，我记得在 2015 年的时候，谷歌在行业地位和声誉方面是一个竞争极其激烈、令人向往的工作圣地，可能就像今天的 OpenAI 一样具有吸引力。你一开始在谷歌地图（Google Maps）团队工作，后来又转到了 DeepMind。你能讲讲你当时负责的具体工作吗？以及你为什么离开了那个你显然非常喜欢的有趣领域——比如物流优化等等？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Yes. And then, after the startup, you ended up at Google, first at Google London. It was in 2015, and I remember that in 2015 Google was really, truly a competitive place to work, perhaps the same competitive as OpenAI today from the point of view of industry or prestige. First you worked on Maps, and then moved on to DeepMind. Can you tell a little about what you were working on, and why did you have already moved on from this very interesting field, which is clear you liked it, for example, optimization, logistics, and all that?</p>
+</details>
+<p><strong>Guest</strong>: 其实，我最开始并不是在谷歌地图团队。我加入的是一个旨在提高网页加载速度的项目，特别是提升移动设备上的网页访问速度。在那个时期，谷歌正努力应对从桌面端电脑向移动设备的转型过渡，目睹了越来越多的互联网流量涌向手机端。因此，谷歌希望走在这一趋势的前列，资助了大量的战略举措和前沿项目。我当时就参与了其中一个项目。这个项目设立在广告业务部门内部的一个小团队里，其核心目标是为了弥补因用户流量转向移动设备而可能导致的广告收入损失。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yes, I didn't start with Google Maps. I started with a project which was intended and aimed to make websites faster, and make websites faster especially on mobile devices. At that time, you know, Google tried to see the transition from desktop computers to mobile devices and saw how more and more traffic comes to mobile phones, so they wanted to get ahead of this, so financed a number of initiatives and projects. I worked on one of them. It was done because it was a small group inside the advertising organization, in order to compensate for the loss of income from advertising through traffic switching to mobile devices.</p>
+</details>
+<p><strong>Guest</strong>: 我在这个项目上大概工作了两年时间，但随后它被公司叫停取消了。尽管如此，对我而言最珍贵的收获，是在解决极其复杂的技术攻关任务的过程中所学到的深刻教训：关于如何达成产品与市场的契合（Product-Market Fit）、缺乏足够用户规模时的困境、缺乏健康及时的双向沟通反馈机制，以及当产品经理告诉你“一切进展顺利”时你不能盲目轻信，因为现实情况可能截然相反。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And I worked on this for approximately two years. And then it was canceled. And although it was technically challenging, the most interesting thing is that through deciding complex technical tasks, I learned a lot. What did I learn? About having product-market fit, not having the necessary users, not having the right feedback communication loop, and not blindly trusting your product manager when they say the project is going well, when in fact things are not going well.</p>
+</details>
+<p><strong>Guest</strong>: 后来有一天，一位副总裁从加利福尼亚总部飞了过来。他很轻描淡写地直接说：“哦，对了，我们要取消这个项目了。很遗憾，你们只有几百个用户，这显然远远没有达到谷歌所要求的规模体量。” 当时大家都感到无比震惊。但这给我带来了一个伴随至今的核心教训：你必须时刻保持审慎与怀疑，始终深入审视自己所创造的实际影响力，并且必须时刻评估你所贡献的整个项目是否真正具备核心价值。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And then, you know, one day, a vice president arrived from California. And he just said, &quot;Oh, yeah. We are canceling this project. Too bad you only have hundreds of users. It's clearly not the scale of Google.&quot; And then it was incredible, people were surprised. And the lesson I carry with me is to always doubt, always think deeply about the actual influence you have, but also about the importance of the overall project to which you are making your contribution.</p>
+</details>
+<h3>转战谷歌地图与加入 DeepMind：打造科研基础设施</h3>
+<p><strong>Guest</strong>: 在那之后，我转到了谷歌地图团队。谷歌地图的工作非常充实有趣，我主要负责用户评价（Reviews）相关的功能模块。不过大约一年之后，我实在无法忽视 DeepMind 的巨大吸引力。那是一个极其特别的地方，总部就坐落在伦敦，当时那里正在发生太多令人惊叹的突破。那是 DeepMind 的早期阶段，坊间已经开始流传关于 AlphaGo 等项目的消息。他们似乎在做着非同寻常的事情，真正致力于攻克人类所能面对的最艰难的技术难题。以我的工程与研究背景来看，这无疑具有无与伦比的吸引力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And then I moved to Google Maps. Google Maps was very interesting; I worked on the reviews, and then, in about a year, I couldn't ignore DeepMind. It was a special place headquartered in London. So many wonderful things were happening. These were the early days, with rumors about things like AlphaGo. And they seemed to do extraordinary things, and really tackle the most difficult problems that can be solved. And with my background, that was obviously very attractive.</p>
+</details>
+<p><strong>Guest</strong>: 加入 DeepMind 后，我投入了大量精力构建科研基础设施（Research Infrastructure）和科研工具。这一领域成为了我随后近十年里深耕的核心方向。这也高度契合我一贯做事的方法论：通过打造高效的工具与产品，赋能他人、提升他人的工作效率并带来巨大的实用价值。起初我是专门为科学研究构建工具，但随着时间的推移，我开始从更广泛、更具通用性的视角去思考这些系统。最终，这一系列的思考与实践将我引向了今天所在的位置。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Started there, I worked a lot on research infrastructure and research tools. It became the topic I was working on for almost ten years, and this is also very similar to how I approach things: creating tools and products that help make others more effective and bring them a lot of utility. At first I did this for research, and then over time began to think about things much more generally and broadly. Eventually, that led to where I am now.</p>
+</details>
+<h3>提前一年的内部类 ChatGPT 机器人与 DeepMind 的产品化困境</h3>
+<p><strong>Interviewer</strong>: 是的，最近你在 X（原 Twitter）上分享了一段非常引人入胜的往事，提到你曾是开发谷歌内部聊天机器人团队的一员。那个机器人早在 ChatGPT 问世前一年就具备了极其相似的功能。你能详细聊聊那段经历吗？这是一个全新的故事，我之前从未听闻过。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Yes, and recently you shared an interesting story on X about how you were part of the team that created an internal Google bot that was similar to ChatGPT, but a year earlier. Can you tell about it? This is a new story; I haven't heard of it before.</p>
+</details>
+<p><strong>Guest</strong>: 那是 DeepMind 内部探索的一部分。当时其实有几条并行的探索路线，例如谷歌大脑（Google Brain）团队在当时还是一个独立的组织，他们也在推进自己关于大语言模型的探索。但在 DeepMind 内部，这也是一个被积极探索的方向。不过，大语言模型在当时并不是 DeepMind 最核心的主流路线；DeepMind 当时全神贯注于宏大挑战（Grand Challenges）、棋盘博弈游戏，以及非语言层面的强化学习（RL）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: This was part of DeepMind. There were also several attempts. There was, for example, Brain, which at that time was separate. They had their own attempts to develop large language models, but this was definitely something that was being investigated. This was not the main direction of DeepMind. DeepMind was very focused and busy, for example, thinking about grand challenges and games, and thinking about RL not in the linguistic sense.</p>
+</details>
+<p><strong>Guest</strong>: 当时团队里有一小群人在大力倡导大语言模型，大家都在思考：如果海量的文本语料就是通向智能的一切呢？如果我们把语言能力推向极致，单纯通过持续扩大语言模型的规模，这是否就足以催生通用人工智能（AGI）？在那个时期，这些问题引发了异常激烈的技术辩论。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So there was a group that promoted large language models, thinking about: what if large text corpora are everything? What if we push language to the maximum and simply scale language models—will this be enough to get general intelligence? These were heated debates at that time.</p>
+</details>
+<p><strong>Guest</strong>: 于是，我们这个小组决定坚持不懈地推进这项研究。这对我来说是一个非常自然的演进过程：当我和其他同事一起为研究人员打造工具时，我们很自然地会思考：“我们能用这个模型做些什么？研究人员应该如何与它交互？他们如何直观地查看和调试模型的输入与输出数据？” 最终，这个工具演变成为了一套对话聊天系统。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And then our group decided to persistently work on this. And it seemed very natural: when I was creating tools together with others for research, we naturally thought: &quot;What can we do with this model? How should we present it to researchers? How can they inspect incoming and outgoing data?&quot; And finally it took the form of a chat system.</p>
+</details>
+<p><strong>Guest</strong>: 我们完全自主地构建了这套系统，整个过程非常有趣。最开始的时候，模型的表现有些荒谬可笑，回答缺乏连贯性，也没有太多的实际用途，但是和它交互玩耍却极具趣味性。随后，它就像野火燎原一般在整个 DeepMind 内部迅速风靡开来——几乎每个人都在用它进行日常闲聊。在本质上，它更像是一个由科研人员为科研人员打造的内部研究探索项目。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So we created it independently. It was a lot of fun. At first the models were a bit absurd, not very consistent or useful, but it was very fun to play with them. It caught on like a wildfire; everyone across DeepMind was using it for small talk. It was primarily a research project built by researchers for researchers.</p>
+</details>
+<p><strong>Guest</strong>: 随着时间的推移，团队内部逐渐产生了将其作为一个外部公开产品推向市场的强烈意愿。然而，当时的 DeepMind 根本没有建立起面向消费级产品的运转机制。你知道，谷歌本身拥有极其严谨规范的产品发布流程和一整套成熟的工业级生产技术栈。虽然这套被高度推崇的架构经过多年极致优化，在确保系统稳定性方面表现卓越，但与此同时，它也使得在组织内部开辟真正的产品创新环境变得极其艰难。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And over time, there arose a desire to launch it as an external product, but DeepMind was just not configured for that. Google had a rigid, established way to launch products, with a whole mechanism and production stack. That stack was heavily optimized over many years to do things reliably well, but it also made it very, very difficult to create an environment for genuine product innovation.</p>
+</details>
+<h3>转投 OpenAI：追寻科研与产品高度融合的极致执行力</h3>
+<p><strong>Interviewer</strong>: 我原本想问你究竟是什么原因促使你开始关注外界机会，甚至考虑加入 OpenAI，不过我认为你刚才已经部分回答了这个问题。换位思考一下：如果在 2023 或 2024 年，你身处谷歌内部，发表着顶级的学术论文，开展着极高水准的前沿研究，做着极其前沿且不断拓展技术边界的工作，并且你在公司内部已经取得了显著的职业晋升与认可。对于许多在现有舒适圈中感到惬意的人来说，究竟是什么核心动力促使你继续向外探索“还有什么其他可能性”呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: And then I wanted to ask what made you look around or maybe even consider OpenAI, but I believe that you have partially answered this question. I'm just putting myself in your place: in 2023 or 2024, you are inside Google, you publish amazing papers, conduct really good research, and make super interesting things, right? Expanding the boundaries of what was done earlier, and within the company where you have already progressed so far. For people who feel comfortable or good where they currently are, what motivated you to continue to investigate what else could be out there?</p>
+</details>
+<p><strong>Guest</strong>: 是的，我当时的生活和工作确实非常舒适惬意。我做着自己热爱的事情，那确实是一个极好的平台。但在我内心深处，我一直有一种强烈的渴望：去结识一群顶尖优秀的同行，去投身于一个自己真正全心坚信的崇高使命之中。我希望身处一个大家对使命有深刻共识、并极度渴望对真实世界产生直接且巨大积极影响的团队；而不是那种各自为战的模式——“哦，我们只负责在象牙塔里做研究，至于怎么把技术转化为有价值的产品，那是别人的事情”。我渴望加入一个能够将所有维度统筹兼顾、让前沿科研与产品落地共生共融（Co-design）的团队。而 OpenAI 正好展现了这种颠覆性的力量。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yes, I was very comfortable. I was doing my thing... it was a great place. But in fact, I had a strong desire to meet wonderful people and join a mission that I truly believe in, where I felt that people deeply understand this mission and care about directly and positively impacting the world in a massive way. Not in a detached way where people say: &quot;Oh, we just do our research work here, and finding how to make it useful is someone else's job.&quot; I wanted to join a group where all parameters would be considered together, where research and product would be co-designed. OpenAI was that disruption.</p>
+</details>
+<p><strong>Guest</strong>: 当时 ChatGPT 正在以惊人的速度崛起。我和几位来自 OpenAI 的成员交流后深感震撼，我心想：“等等，什么？你们整个负责 ChatGPT 的团队居然只有大约 20 名工程师？” 这个团队规模小得不可思议，同时也令人备受鼓舞。他们究竟是如何仅凭 20 名工程师的高效协作，就能支撑起如此庞大用户规模的产品并保持极高自主决策效率的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: ChatGPT was taking off. I met several people from OpenAI and thought: wait, what? You only have about 20 people working on ChatGPT? That is a very small number, and it was extremely inspiring. How does it work? How do you succeed in supporting a product of this scale and level of autonomy with only 20 engineers?</p>
+</details>
+<p><strong>Guest</strong>: 随着我进一步深入了解，我发现那是一群极其出众的人，怀揣着非凡的使命感，兼具顶尖的才华与极度专注的执行力。这一切深深地吸引了我。因此，我加入之后便立刻投身到了关于模型推理（Reasoning）的前沿探索之中——这也是 OpenAI 一贯的高效风格。我当时清晰地意识到：“是的，一场深刻的技术变革正在这里发生。我们正在训练和运行全新的推理模型，这是一套全新的范式。让我们全力以赴快速向前推进。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And as I dug deeper, it was simply an amazing group of people with an amazing mission—super talented and super focused. That just strongly attracted me. And then I immediately joined the preliminary reasoning efforts, as is typical for OpenAI. I joined and thought: &quot;Yes, something big is happening. We are running reasoning models. This is a new paradigm. Let's move quickly forward.&quot;</p>
+</details>
+<p><strong>Guest</strong>: 在我加入公司大约一个月后，OpenAI 就正式发布了 o1-preview 模型。能够亲身参与其中并见证这一历史时刻，感觉棒极了。我由衷希望自己身处一个快速迭代演进、极度关注实际现实影响力、时刻与真实世界脉搏同频共振并敏锐倾听外界反馈的地方。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And approximately a month later, the company launched the o1-preview model. It was very nice to be a part of this. I wanted to be a part of a place that quickly develops, cares deeply about real-world impact, stays in tune with the world, and actively listens to what is happening.</p>
+</details>
+<!-- chunk 3/10 -->
+<h3>从研究基础设施到 Codex 的前身探索</h3>
+<p><strong>主持人</strong>：……在创建 Codex 以及打造相关产品时，那种感觉就像是在深入社区、倾听社区的真实声音，并且高度专注于极度高频且紧密的反向反馈循环沟通。你们打造出了一款产品，关注着如何去维护它、照料它，以及它能为全世界带来怎样的实际效用与价值。当然，随后你们很快就全面展开了 Codex 的研发工作。你是在 2024 年加入的，能否带我们回顾一下那段历史，聊聊你当时是如何思考人工智能、大语言模型（LLM）与代码之间关系的？据我所知，当时内部有 ASWE（自主软件工程）方面的探索。我们在深入探讨软件自动化工程（Autonomous Software Engineering，简称 ASE）以及实用工程实践时也曾交流过这个话题。是的，在公司内部大家就是把它念作 ASE。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: ...with me when creating the Codex, when created products, it was looks like a community, listened to the community, simply focused on very intense reverse cycle communication. And then created something, about what do you just want to take care and, you know, take care of the usefulness that it gives to the world. And then, of course, you started quite quickly work on the Codex. So you joined in 2024 year. Can you take us back to past, as you thought about artificial intelligence, degree Master of Laws and Code? I know that there were then ASWE efforts. We also talked about it under time of deep immersion that we did in pragmatic engineering, autonomous engineering software software. ASE, yes, that's right pronounced within the company.</p>
+</details>
+<p><strong>嘉宾</strong>：嗯，我们现在内部已经不再保留单独的 ASE 项目了。其实这就是 Codex 的前身。不过坦白讲，对我而言，刚加入 OpenAI 时我的核心任务是为研究团队构建底层基础设施。我在此前所做的大量工作主要集中在超大规模的数据存储、数据分析，以及用于理解和监控模型训练运行（educational/training runs）的专业工具。在过去的这些年里，我涉足过很多不同的领域与项目。但无论做什么，我的核心出发点始终如一：为他人构建好用的工具，帮助大家大幅提升工作与研发的推进速度，并且全身心投入、精益求精地把这件事做好。通过工具和基础设施的赋能，许多前所未有的新事物才得以变为现实。</p>
+<p>当我正式加入 OpenAI 时，我心中怀揣的也是完全相同的理念。随后，在审视自己想要做的事情以及看到后续涌现出的一批新模型后，情况变得无比清晰：我们必须学会利用我们自己研发的大模型，来帮助我们自身团队跑得更快。因此，我完全沉浸在了这个打破限制的构想之中——即我们如何利用这些模型来加速自身的研究工作。</p>
+<p>于是，我和其他几位从事前沿研究的同事紧密聚集在一起。我们开始专门训练模型，并着手构建一系列轻量级的小型智能体（Agents）。这些原型就是 Codex 真正意义上的初代前身。当时我们的做法是，对内部模型进行专门训练，让它们对 OpenAI 自有的 Python 基础代码库具有极高的熟练度。它们不仅对代码细节了如指掌，还具备非常出色的架构品味以及优秀的工程代码风格。在最初阶段，这一切仅针对 Python 语言展开。我们当时的核心设想就是：能否利用这种能力实现基础设施的极速搭建，帮助研究人员以更快的速度编写代码？如此一来，整个团队的研究与工程推进就能大大提速。</p>
+<p>随着时间的推移，当你不断向前推进并将其持续精简聚焦到核心要点时，团队做了大量的探索与实践。我们发现自己能够非常迅速地取得重大突破与实质性进展，并且能够实现极高速度的学习与迭代。</p>
+<p>在此过程中，Greg（Brockman）和 Sam（Altman）给予了我们非同寻常的巨大支持。而且 Greg 当时态度非常坚决，他强调我们绝不能只将眼光局限于内部自用，而是必须考虑如何让全世界都能从中受益。因此，他极力鼓励我们，不仅要将其作为 OpenAI 内部的提效工具来看待，更要思考如何将这项技术真正转化为面向全球开发者的实际产品。</p>
+<p>正是在那个关键节点，我们将基础研究团队的力量与 ASE 项目的研发力量正式整合并入同一个方向，开始集中精力打造统一的产品。这也促成了一次集中攻坚冲刺，最终形成了类似于我们最初对外发布的云端代码工具（Cloud Code）。不过老实说，那个版本并没有真正找到产品与市场的完美契合点（PMF），因为在实际使用流程中存在稍微过多的交互阻力与摩擦。随后我们又紧接着推出了 CLI 命令行版本的代码工具，并继续全力推进。但在整个过程中，我们脑海中始终贯彻着这样一个核心问题：我们究竟该如何驱使大模型在这里发挥出真正的、革命性的助力？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Hmm, we don't have any more. ASE efforts. Well, you know, This is Codex. Hmm, but actually for me it is that I joined, I started to create infrastructure for research. Many of of what I was doing previously, it was large-scale, hmm, data storage, analysis, and then tools for understanding of educational runs. I...I did many different things throughout his years. Hmm, but it was always about about that create for others and make them faster, and just take great care about, you know, do it well. AND then with the help of tools and infrastructure new things are possible. AND that's when I joined OpenAI, in I was the same. idea. And then, with previous by reviewing what I I want, and some of later models, It became very clear, what do we need use yourself models to help we have to move faster. So I just got carried away by this idea about restrictions, how do we we will use these models for themselves research. So I gathered with others by research people. We started teaching models. We started to create small agents. They were real predecessors of the Codex. AND it was like, what we taught internal models to they were very skilled at the base OpenAI's Python code. And then, hmm, very skilled, you know, having a good taste in architecture, good taste, you know, in code style. It was only in Python. And then the idea was that what could we do use this for very fast construction infrastructure and, you know, help researchers to code rather. And then, you know, and then we would moved faster. AND then over time, when you just promoting it and simplify to the point, you do a lot, you know, we found that we can very quickly to achieve significant progress, and then very quickly study. And then Greg and Sam, you know, people with extraordinary support; and also, eh -uh, Greg was very adamant that we will not to focus only on yourself, but also on benefit of the world. So he just encouraged us think about it not only as a tool for OpenAI itself, but also how about something that we actually transform on the product. And exactly then we united research efforts with these efforts A3, and we started creating one thing. And this led to a sprint, which was similar to initial cloud the code that we launched, which didn't actually have PMF, because it was there a little too much friction. And we too launched the CLI code, and then continued to promote, but always there was this idea: how can we to force models really help here?</p>
+</details>
+<h3>技术选型决策：为何采用 Rust 重构智能体核心</h3>
+<p><strong>主持人</strong>：你刚才提到，最初构建这个模型时是专门基于 Python 代码进行针对性训练的，并且确实帮助改进了内部开发与基础设施建设。但随后你们做出了一个非常耐人寻味且引人注目的技术决策——在构建 Codex 时，你们选择使用 Rust 语言来实现核心架构。但在那个时期，大模型在 Rust 语言上的数据分布并不占优势，对吧？它在 Rust 上的代码生成质量并不如在 Python 或 TypeScript 上那样出色。你们当时为什么会做出这样的决策？你们是预期模型在 Rust 上的能力很快就会迎头赶上，还是认为系统运行性能更加关键，亦或是出于某种非常反直觉的技术考量？毕竟业内大多数团队构建同类系统时，其实并没有选择 Rust，而是主要基于 TypeScript 生态、Python 或其他语言来开发。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: You mentioned that first started create this model for learning on code Python and actually helped me improve it. But then you accepted it interesting solution that for Codex you created it on Rust. And at that time the model was not in distributions for Rust, isn't that right? She was not as good as was in Python or TypeScript. Why did you accept this? decision? Did you expect? you, that she will catch up, Did you think that productivity more important, or because it was very counterintuitive? Most others built systems actually weren't built on Rust. They were built on the TypeScript distribution, Python or something else.</p>
+</details>
+<p><strong>嘉宾</strong>：是的。从最开始设计系统时，我们就与以往一样，将产品的前端交互界面与底层的智能体核心（Agent Core）视为两套截然不同、边界明确的系统。因此在架构上至关重要的一点就是：必须把智能体核心打造得极其可靠、安全，并且从底层就专为极高执行效率与超大规模扩展性而设计。</p>
+<p>在参与并负责大型工程项目多年之后，你往往会有这样的深刻体会：“这确实是一件非常有趣的东西，但我们必须将其扩展到极其庞大的规模，比如达到支撑最大型数据中心高负荷吞吐的运转级别。”因此，在项目早期阶段所做出的各项底层架构决策是极其关键的，除非你愿意为了短期的快速开发而牺牲过多不可挽回的核心性能。这本身确实是一种工程权衡。</p>
+<p>不过幸运的是，我们团队内部拥有非常优秀的 Rust 开发工程师；同时，我们内部的模型在处理 Rust 代码时的表现其实也相当不错。另外，Rust 语言在编译期间能够提供非常强大的验证与安全检查。它具备极其严苛的静态类型检查、所有权模型以及内存安全保证，而这些特性对于构建复杂、长程运行的智能体系统来说极为理想。</p>
+<p>因此事实证明，情况非常明朗：只要我们决定为之投入必要的工程精力，Rust 作为核心开发语言完全足以支撑起智能体的需求，并且能够迅速达到高度可用的状态。但归根结底，我们最优先关注的始终是系统的正确性（Correctness）以及整体的高效能（Efficiency）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yes. From the very beginning, as before, we thought about the interface product and agent as about different things. Ago it was very important, um, create agent core so that it was reliable, safe, um, designed for efficiency and scaling. AND working on projects during many years, you said, &quot;Hey, this &quot;interesting thing.&quot; something on like: &quot;Hey, we need scale this to scale, for example, the largest center data processing&quot;. Hmm, decisions taken on early stages, are quite important. Until you you sacrifice too much at high speed. So it's like a compromise. , but we had very amazing developers Rust. Our internal the models were not bad in Rust. Hmm, and then you also receive a lot of, uh, validation during compilation. This, you know, is static. checked and everything like this. And this too great for agents. So it turns out that, you know, it was quite it is clear that Rust as the language will actually be good enough for agents, uh, enough quickly if we we decide to attach to this requires some effort. But, first of all, we focused on correctness, as well as on efficiency.</p>
+</details>
+<p><strong>主持人</strong>：这非常有意思。你的意思是，在你们的实际场景中，提前对系统未来的长远走向进行深度思考是极其值得的，比如在编程语言等基础层面的审慎抉择。虽然通过代码智能体可以重写大量代码，而且重构的门槛比以往低得多，但在底层数据处理与架构搭建上，提前引入正确、稳固的框架基座，依然能为后续省去巨额的试错与返工成本，是不是可以这样理解？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Interesting. So you say, You know, it's worth it. In your case it was worth it to think ahead about where you want to go, that this thing be, and, for example, about the choice languages. It is clear that for through agents can be rewritten a bunch of things, and it's easier than in the past, but still possible, let's say, save money for yourself in processing, adding the correct one, probably a frame, or, or, well, you know, the basic basis of that, What are you building on? wrong?</p>
+</details>
+<p><strong>嘉宾</strong>：我认为，即便我们当初选择用 TypeScript 甚至 Python 来编写，也同样能取得一定的成效，前期阶段一切也都能正常运转。但这样做的后果是，随着系统复杂度的攀升，我们在未来的某个时间节点必然不得不停下来进行全盘重写。</p>
+<p>更为关键的一点在于，让智能体核心作为一个能够独立于外层产品形态而存在的实体，在两者之间保持清晰明了的架构解耦与职责隔离，这是一条至关重要的软件设计原则。如果你把所有逻辑都混杂在同一种语言、同一个代码库中编写，那么在开发过程中就不可避免地会变得随性松懈，容易将本应解耦的模块过度交织在一起，而这种耦合最终会严重阻碍未来的进一步技术创新。从某种意义上讲，Rust 语言天然具备的严格类型边界与强隔离特性，在这里发挥了极其巨大的保护与促进作用。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: I think we could to succeed if wrote this in TypeScript, or, you know, maybe, even in Python, and then everything would be fine, but then, you know, we would rewrote this in some moment. But to be very clear separation between oneself an agent who can to exist independently from the product, it was very important principle. And if you write everything in one code base one language, then inevitably you you will be a little careless, and, um, you intertwine things more than necessary, and this will interfere further innovations . And it was very important as the edge of rust, in a certain sense, which was very useful for this.</p>
+</details>
+<h3>开源策略：CLI、SDK 与服务端的全面开放</h3>
+<p><strong>主持人</strong>：你们所做出的另一个非常引人注目、且在当前各家主流前沿 AI 实验室中堪称独树一帜的决策，就是采用了完全内置的开源代码策略。CLI 命令行工具是开源的，相关的 SDK 以及服务端应用程序也全部对外开源。你们是在什么时候、出于何种原因做出全面开源的决定的？这在当时并不是一个显而易见或理所当然的选择——尤其是在外界过去常常调侃 OpenAI “不够开源/倾向闭源”的背景下，你们在这里的做法却恰恰相反，选择了彻底公开透明；而与此同时，一些竞争对手推出的则是完全闭源的商业解决方案。当然，我们完全能理解为什么有的团队会倾向于闭源路线。那么，你们当时究竟为何坚持要将代码完全开源呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: One interesting solution, which you accepted, unique for everyone main laboratories , is a built-in open weekend code, right? The CLI has open weekend code, SDK and server applications also have open weekend code. When and why did you do this? decided? This is not something by itself understandable, especially, You know, we used to go there. jokes about what OpenAI has something closed, but actually everything on the contrary, where is it open, while some competitors provide solutions with a closed weekend code, which again , I think it's very easy understand why you Do you want something from closed on weekends code. Why did you want to open weekend code?</p>
+</details>
+<p><strong>嘉宾</strong>：将代码以开源形式发布是一件非常酷、非常有价值的事情，因为在本质上，你是在亲手构建一个属于开发者的代码智能体。我们当时的思考逻辑是：既然你打造出了这样的工具，除了供内部团队直接使用之外，你还可以围绕它建立起一个充满活力的开发者社区。让社区中的广大参与者在实际开发中使用它、检验它并共同推动它的持续改进，这样一来，你就能从真实的社区反馈中学习到海量宝贵的信息与经验。</p>
+<p>此外在那个时期，我们内部就已经看得非常清楚：如果我们希望在这一领域取得真正的长远成功，那么整个开源软件的生态形态将会发生深刻演变，代码本身在开发流程中的定位与角色也同样会发生根本性转变。因此，主动成为这个开源社区不可分割的一部分显得尤为关键，而不是将自己孤立、隔绝在社区之外。如果你无法亲眼目睹开发者在真实环境中所遭遇的痛点与挑战，你就很难真正把问题彻底解决好。</p>
+<p>另外还有一点，虽然即便在今天看来智能体技术依然处于早期，但在当时那个时间节点上，它更是处于极其原始的初期探索阶段。当时我们对于如何妥善解决这些复杂工程问题已经形成了一些初步构想，并且随着模型训练技术与基础算法研究的推进，这些构想也在与时俱进地不断演变——其本质归结为以尽可能灵活、尽可能优秀的方式，将大模型所蕴含的强大潜能充分释放并表达出来。</p>
+<p>但在当时，我们自己也并没有掌握所有的标准答案。正因如此，我们对整个社区保持着高度开放与坦诚的态度，会直接与大家交流：“看，这是我们目前认为一个优秀的安全与权限边界应有的设计，这是我们在这个方向上的思考与探索。”我们还围绕这些关键技术维度开展了数次非常深入、详尽的技术深度专题剖析（Deep Dives）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: There was something really It's cool to have a code. with open source code, so that, in essence, you create a code agent. So we thought: well, if you have it, you, obviously, direct This is for myself. And, you know, maybe you can create a community participants who use this for its improvement, and then, you know, you you can do a lot with to learn this. Also, at that time we it was very clear, what if we want to be successful, then open source itself will change, and the role the code itself too will change, so be it part of this community seemed important, not separated from her. I think, you know, difficult to decide problems if you don't you see them for yourself eyes. And one more thing was that it still seems early, but at that time it was very early. Hmm, it seemed like we had some ideas about, how to solve well problems, and we together they developed, with training, research, and all boils down to, to express the model opportunities as flexible as possible and in the best way. But we also don't have had all the answers, and we were very open about: &quot;Hey, this is what it looks like good belt security, this is how we talk about &quot;That's what we think.&quot; We did, like, a few very technical, like, deep dives</p>
+</details>
+<!-- chunk 4/10 -->
+<h3>开源的利弊与工程团队收益</h3>
+<p><strong>提问者</strong>：我们写了很多关于这方面的博文，也深入探讨过很多次。大家曾经讨论并思考过：“你看，这个世界如此广阔，到处都有极其聪明的人。我们也会从开源社区的其他项目中汲取灵感，所以让我们把竞争环境拉平，去激发更多的技能与研究。”大约在一到一年半前，我们就对 AI 框架做过长期的审视。但回顾过去并结合你的经验来看，你看到了哪些优势？比如开源给工程团队和工程师带来了哪些好处？同时老实说，在开源过程中有什么困难、弊端或做错的地方吗？显然开源也是有缺点的。我只是想听听你对这两方面的坦诚看法。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: and blog posts, and we [talked] a lot about it. They talked and thought: &quot;You know, the world is just immense. There is, you know, insanely smart people. We will also to be inspired by others projects with open source, so let's just make it even the playing field and we will encourage a lot of skill and research at this stage.&quot; It was, you know, about a year later, a year and a half later, that a long time ago review AI framework. But looking back or taking into account experience, what are your advantages seen, such engineering advantages, team benefits engineers from open source? And honestly, what is difficult in open source, or wrong? Apparently, there is disadvantages. I just trying to get honest opinion on both parties.</p>
+</details>
+<p><strong>受访者</strong>：是的，其实唯一的缺点就是它需要付出相应的代价，不是吗？至于优势方面，首先在开放透明的环境中进行创造是非常棒的。拥有一个小巧而聚焦的代码库也很棒。每当有新人入职加入 Codex 团队时，他们往往在加入之前就已经看过了代码库，甚至参与评审过 PR，在某种程度上甚至觉得入职适应期已经提前完成了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Respondent</strong>: Yes, there is only one drawback, and it has its price, isn't that right? The advantages are because it's great create in open space. It's also great to have little repository. Every time, when we hire someone, and he joins Codux team, he seems to already seen repository before, he reviewed the PR, he thinks that adaptation is complete.</p>
+</details>
+<p><strong>受访者</strong>：是的，这就像他们在入职前就已经通过 Codex 一起深入研读过代码仓库。你提出问题，大家共同讨论，没有任何隐藏或保密的问题，新人第一天就能立即高效投入工作。另外，我们从社区获得了大量高质量的贡献，虽然伴随而来的也有一大堆杂乱的提交。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Respondent</strong>: Yes, it's like adaptation is complete. Yes, it's like using Codux to review repository together with you, and you put them question, but this as if it's not a secret the problem you are having you can start right away work productively. We get a lot good contributions. Although we also get tsunami of random things.</p>
+</details>
+<p><strong>提问者</strong>：确实，你和所有做开源的人都会经历这些。开源的代码变更就是如此，我认为这就是其中的典型例子。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Of course, you and everyone others. Yes, open the code changes. I think this is one of them examples.</p>
+</details>
+<p><strong>受访者</strong>：没错。此外对我以及许多人来说，能够成为社区的一分子并直接做出贡献，本身就能带来巨大的活力。这不仅仅是在口头上宣称“我们关心社区”，而是实打实地去做那些大家看得见、确实需要我们付出心力的事情。当然，这并不是我们非做不可的事。</p>
+<p>至于缺点，主要在于它必须与我们的其余代码相隔离。有时我们不得不划定人为的边界，在多个不同的代码仓库之间来回切换与协作。当我们正在研发某些特别有趣且令人兴奋的功能时，因为是在完全开放的环境中构建，有时会发现别人赶在我们正式发布之前就把这些成果抄袭或复制了过去。这确实有点让人无奈，但这也是开源游戏规则的一部分，你明白吧？既然选择在开放领域构建，就如同签署了某种无形契约——既然采用了极其宽松的开源协议，别人自然可以复制。当你在辛勤开发某项功能时，心里难免会有一点不是滋味。</p>
+<p>第三点则是，其他人可能会认为我们被大量附带的零散贡献所拖累，不得不承担这部分额外的维护负担。但从另一方面来看，这也推动着我们去设法解决这些流程与工程上的问题，我认为这反而是件好事。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Respondent</strong>: This is true. And then for me, and for many people, it's just brings a lot energy to simply to be part of communities and do direct contribution. Not just to say that we take care of community, but actually do things that, you know, they see, they cost us effort, right? We don't need this do. Disadvantages consist in the fact that this is separate from the rest our code. Sometimes we I have to draw artificial boundaries and work with several repositories. When we are working on something special fascinating, and we create it is open, then, sometimes we find that others copy this, you know, before we can do it to release. And this is a little sad, but also it's like part of the game, do you understand? This is like to build in open space, and it's something like the contract you signed. This is something like, you can copy it. In us too very much permit license, but it pinches a little, when you are working on something and you think: &quot;Oh then, thirdly, all others think: us overload by incidental contributions, and we have to to deal with this additional tax.&quot; But it pushes us, you know, too to try to decide problem, right? What, in my opinion, good.</p>
+</details>
+<h3>Codex 的多模型兼容性与选择权</h3>
+<p><strong>提问者</strong>：除了开源之外，Codex 还有一件事让我非常惊喜，而且我直到最近才知道：它居然没有与 OpenAI 的模型进行硬绑定，你完全可以在 Codex 中使用其他厂商的模型。如果换位站在模型供应商的角度，这种设计其实并不显然。因为我观察到的所有其他厂商在开发 CLI 工具时，通常都会强制要求只搭配自家的模型使用。是什么促使你们做出决定，对接入或允许其他模型使用你们的执行架构（Harness）持如此开放宽容的态度？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: And besides the open code, one thing that surprised me in Codex, and I didn't even know about this is until recently, this is what, that he is not tied to OpenAI models. You can use others models from Codex. You know, if I put myself in place supplier, this maybe not very obviously, because, again, everyone else suppliers, on which I watch when they create CLI, use it with our models. Again, that forced you to decide to be so lenient towards use or permission use your harness with others models?</p>
+</details>
+<p><strong>受访者</strong>：如果你本身就是这个开发者社区的一员，并且打造了一套出色的代码执行框架，那么自然会反问自己：为什么非要把它死死绑定在自家模型上呢？强行绑定只会是一个令人失望的决策，而且在逻辑上也显得格格不入。</p>
+<p>总体而言，我一直努力做出那些能够被清晰合理解释的决策。逻辑其实非常简单：既然代码是完全开源的，任何第三方都能轻而易举地 fork 出一个分支去添加对其他模型的支持。但如果这样，你实际上就是在促使大家去使用分叉版本，徒增社区的分裂与维护成本；而导致这个分支存在的唯一原因，不过是别人想修改其中的 10 行代码来接入另一家供应商的模型而已。这显得非常愚蠢。既然如此，为什么不从一开始就原生支持多模型呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Respondent</strong>: It seemed quite natural if you are part of this communities and create a wonderful harness code, then you think: why do you need it to associate it with your model? It was enough disappointing decision. So it seemed wrong. And in general, I think, I'm trying make decisions that I think: yes, I can simply explain, is that correct? This is the very reasoning that this is from open code. It would be banal for any who to create a fork, and then add support for something another, but then you just encouraging people just use this fork, and suddenly you have overheads arise costs. And the only one the reason why you have fork, is that, what do you want to change about 10 lines code to add support for another supplier models. It seems very silly. So, you know why just not to support him with from the very beginning?</p>
+</details>
+<p><strong>受访者</strong>：另一方面，赋予用户“选择权（Optionality）”能给我们带来巨大的价值。可能你今天很喜欢使用 OpenAI 的模型，并且用它们达到了极高的生产力；但也许明天市场上就会发布一款全新的强大模型，你很想立刻上手体验。为什么非要逼迫用户彻底推倒并重构现有的工作流配置，仅仅为了测试一个新模型呢？</p>
+<p>此外，无论收到正面赞赏还是批评反馈，我们都能从中获益——比如你可能喜欢某个模型的某些特质，或者发现它在特定任务上表现欠佳。保持对用户和社区的尊重与友好，在常理上就是正确的做法。而且我们内部团队同样会在同一个架构环境下去测试与使用各种不同的模型，这运转得非常好。这种模型选择权对于与我们合作的企业客户而言，也往往是至关重要的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Respondent</strong>: Other thing, we get great benefit from opportunities simply to provide optionality. So, today you love use OpenAI models, and you're with them super productive, but a new one will be released tomorrow model, and you will want try it. Why to force you completely change your settings just so that try a new one model? And then we benefit from the feedback we received or did not receive, that is, maybe you liked something in this model, perhaps, she really doesn't worked well. But it's something like of what to be polite to our users and to communities–this seems correct. And then, we too use, we let's try others too models, right? So, we try them in one building, and it's all good. And this is also often it happens that this optionality very important for companies, with whom we work.</p>
+</details>
+<h3>凭借实力竞争而非生态绑定</h3>
+<p><strong>提问者</strong>：确实，对于任何严肃的企业来说，大家都希望拥有灵活的选择权，并倾向于选择能够提供这种自由度的工具。</p>
+<p><strong>受访者</strong>：是的，这也是我们始终坚信并践行的理念。我很看重这一点，因为这显得足够公平。它倒逼整个公司在各个维度都必须与行业最强对手展开正面对决：在基础模型能力、功能特性、开源生态以及多模型兼容体验上做到极致，而不是允许自己安于现状、松懈下来觉得“大功告成了，我们可以躺平等待了”。</p>
+<p>我希望我们能凭借最顶尖的模型、最高效的推理能力以及最出色的产品体验来真正赢得用户。如果我们做到了这一切，那将是一段非常精彩的历程；但如果我们试图通过生态锁定去强迫用户使用产品，我认为那根本无法吸引到最优秀的顶尖人才来打造这款产品，也无法促成我们交出最卓越的工作成果。用户体验是重中之重，无论底层接入的是什么模型，整体体验都必须令人愉悦。我更崇尚凭真本事取胜，而不是依靠强制捆绑。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Yes. And that's what it's all about. we absolutely rely. This last point, I think, like any serious company, you do want to have optionality and use tool that gives you this option.</p>
+<p><strong>Respondent</strong>: But I am to some extent I appreciate this because it seems fair. This forces the whole company compete with the best in everything: at the model level, at object levels, with open source, with suitable for using models, and it's not allows you relax and say: &quot;Okay, we finished. We can wait for now.&quot; Yes, I want us to conquered users, having the best models, most effective models, the best product. And then, if we do all this, it will be similar to that we will have a good time. If we seem we force you use product, because it's simple... then I don't think so will attract the best people to working on this product; and it looks like on what we do here's my best work. We are very important experience. He should be pleasant, regardless of model that it provides, he has to be pleasant. I like the idea of winning based on merit, not on based on attachment.</p>
+</details>
+<h3>赞助商播报：Entire 如何解决 Agent 时代的 Git 瓶颈</h3>
+<p><strong>主持人</strong>：现在正是介绍我们本季赞助商 Entire 的绝佳时机，他们同样秉持着这一理念。无论我们是否愿意承认，随着 AI Agent 的普及，传统的 Git 托管正在成为现代软件开发的瓶颈。开发者利用 Agent 生成越来越多的代码，Agent 发送代码提交的频率大幅提升；许多开发者甚至会同时并行运行多个 Agent，从而产生海量的代码提交请求。GitHub 显然正疲于应对这种高并发挑战，频繁出现宕机与服务故障。</p>
+<p>那么解决方案是什么呢？Entire 由 GitHub 前首席执行官 Thomas Dohmke 创立，他从零开始为 Agent 时代的工作流重新构建了全新的 Git 托管平台。Entire 的架构初衷就是追求极致的速度，并将代码仓库部署在与您地理位置最近的区域以大幅降低网络延迟，从而支持庞大的 Agent 集群进行高并发并行提交。官方公布的数据显示，Entire 每秒能够处理 418 次推送提交，比市面上任何竞品快多达 89 倍。当 GitHub 发生宕机时，您仍然能够无缝继续工作，而且甚至不需要整体迁移出 GitHub——只需在 Entire 注册，平台就会自动实时镜像您的仓库。</p>
+<p>还有一点非常强大：你是否曾好奇究竟是哪条提示词生成了这段特定的代码？对我而言，与 Agent 的完整对话和 Prompt 提示词往往比单次审查请求本身包含更多的上下文信息。Entire 会直接在仓库内完整捕获 Agent 的所有交互历史记录，便于轻松复盘，并提供了极具创新性的用户界面来全面展示这一切。如果您正在寻找一款即使在 GitHub 宕机时也能稳定运作的 Git 托管平台，欢迎访问 entire.io/pragmatic 获取更多详情。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And this is the perfect time to remember that our season sponsor Entire also plays the same rules. Do we like it or not, Git is becoming bottleneck for modern software development with using agents. Developers create more code using agents. These agents send more code. Many developers launch more parallel agents. They send more and more code. GitHub explicitly trying to keep up over time and has frequent failures. So, what is decision? Entire was founded by the last general director of GitHub, Thomas Domke, and he rebuilt hosting Git for processing agenda from zero. Entire was created to be very fast and place your repositories regionally close to you to reduce delay, allowing fleets of agents send data in parallel. Some numbers published: Entire can handle 418 sendings per second. That's up to 89 times faster than anyone else competitor in the market. When GitHub is down, you still can continue work, and you not even necessary migrate from GitHub. You just register in Entire, and the platform reflects your repository. And more one interesting thing. You ever wondered what query resulted before creating this specific code? I believe that the request and conversation with an agent carry more information than himself request for verification, at least for me. Entire captures the entire history of requests from your agent right in repositories, easy check and has quite innovative user interface to show all this. If you are looking for Git hosting which works even when GitHub is down, go to entire.io/pragmatic.</p>
+</details>
+<!-- chunk 5/10 -->
+<h3>赞助商介绍与确定性测试</h3>
+<p><strong>主持人 / 嘉宾</strong>：……安装 CLI 之后，一键就能镜像你的仓库。我已经试过了，确实可以。对了，我记得它支持任何 Agent，而且拥有开源的后端代码？另外我也想提一下我们本季度的赞助商 Antithesis。Thibaut 之前谈到了使用软件时的安全体验：你所使用的工具必须令人愉悦、顺畅，并且不包含任何烦人的错误。但是当你使用 Agent 来编写自己的代码时，该如何避免与交付相关的错误呢？随着 Agent 生成的代码量越来越庞大，逐行审查代码变得极其困难，这就是为什么 Antithesis 的能力远超常规代码检查的范畴。Antithesis 会将你的整个系统置于严苛的对抗性模拟环境中运行。这种模拟既包括针对性的测试，也包括模糊测试。通过运行这种模拟，它能在你的用户发现错误之前找出每一个隐患。而且由于该模拟是完全确定性的，它不仅能发现错误，还能完美复现每一个问题，从而大大简化了修复工作。当我第一次听说 Antithesis 时，我最初的想法是：自动化错误检测与完全确定性测试听起来像科学家的幻想，但它实际上是扎扎实实的硬核工程。Jane Street、fly.io 以及 etcd 社区在让 Agent 编写代码时都充满信心，因为他们知道代码经过了 Antithesis 的检验。想要查看更多专题研究和详情，请访问 antithesis.com/pragmatic。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host / Speaker</strong>：... install CLI and with one click mirror yours repository. I already did it. did. Oh, and is I remembered that he works with any agent, and he has open weekend code? I would also like to remember our season sponsor, Antisys. Thibaut told about as experience working with software the security you provide you use, has to be pleasant Delightful does not contain annoying errors. But when you use agents for writing your own code, how to avoid mistakes, related to delivery? Audit each line of code becomes difficult because the amount of code that generate agents, that's why Antisys is coming out far beyond the scope code checks. Antisys launches all your system in conditions hostile simulation. This simulation includes both targeted testing, so and vague testing. Running this simulation, it finds each error earlier than yours will do it users. AND because the simulation fully determined, it not only finds errors, but also gives perfect reproduction every problem that makes it much easier correction. First, What did I think when heard about Antithesis, that's it that is automated error detection and fully deterministic testing sounds as a scientist fantasy, but actually it is hardcore engineering. Jane Street, fly.io and etcd community agent wrote code with full with confidence, because know that his checked Antithesis. That view more thematic research and details, go to antithesis.com/pragmatic.</p>
+</details>
+<h3>工具竞争与开发者生态</h3>
+<p><strong>主持人 / 提问者</strong>：聊完赞助商，让我们回到 Thibaut 以及探讨为什么工具之间的竞争是一件大好事。是的，我认为作为一名工程师，我总能看到当存在竞争时——对于使用工具的人来说——这总是令人惊叹的。我记得以前微软和 JetBrains 在 IDE 领域的激烈竞争，随后各大云服务商也在各项功能上相互较劲。而现在，我们显然拥有了各种封装脚手架架构（strapping / harness），拥有了模型，对于用户来说这棒极了，因为我们现在有了更多选择。技术迭代发展得更快了。我认为开发者的声音也更容易被听到了，所以听到这些真的很棒。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host / Questioner</strong>：And with that let's go back to Tibo and why competition between the tools are wonderful. Yes, and I think that as engineer, I always I see that when there is competition, like that, who uses tools, this always amazing. I I remember how Microsoft fought with JetBrains for the IDE, and then there are the clouds that fighting each other for all functions. AND now, of course, we have there are bindings, we have models, and how for user this great, because now we have more choice. They just developing rather. I think ours the voice is heard a little better, so that's great hear.</p>
+</details>
+<h3>本地沙箱与云端执行环境的演进</h3>
+<p><strong>主持人 / 提问者</strong>：顺便聊聊底层执行与脚手架系统（strapping / harness），你能告诉我它目前是如何工作的吗？也就是说，当我运行一项配额任务或指令时，它是一直运行在我的本地机器上吗？它会选择云端吗？还是使用沙箱？作为工程师，我该如何控制它、了解它，或者我需要对它了解多少？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host / Questioner</strong>：By the way about strapping, can you tell me how she is working today, that is, when I run Quota task, or it always is is running on my car? Does he choose Is it a cloud? Or it uses sandbox? And how can I to control it, or to know about it, or How much do I owe? to know about it as engineer?</p>
+</details>
+<p><strong>Thibaut</strong>：好的。默认情况下，它是在沙箱中运行的。也就是说，如果某个命令需要获得超出沙箱范围的额外权限，它会向作为用户的你请求授权。但默认情况下，每个工具的执行都在沙箱内进行。而且目前完全是在本地机器上运行实现的。这种情况已经持续了一年多了。但这套机制正在不断演进和变化，例如你可以选择在云端运行它，云端会作为托管虚拟机运行，类似于通过 ChatGPT 流程获得的虚拟机。你可以对其进行检查，它基于 Kata 容器等技术运行，是一个安全隔离的环境。因此所有操作都在该虚拟机内部完成，而不是直接在你的物理机上跑。此时你的本地机器唯一需要做的，就是提供输入并接收流式输出传输。显然，这对你的本地 CPU 和机器性能要友好得多，而且扩展能力也要强大得多。但这只是第一步。在未来，使用云端机器将会变得更加无缝，届时可能会采用混合模式：一部分在笔记本电脑上本地执行，一部分在云端机器上执行。事实上我们很自然会考虑到这一点，因为随着模型变得越来越优秀、越来越强大，它们消耗的计算资源将远超本地计算机所能提供的上限。因此，在某个阶段，本地计算机的执行瓶颈必然会成为限制因素。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Thibaut</strong>：Yes. So, for it is the default works, uh, in sandboxes. Uh, that's all, if there is a team that must be performed with additional outside permits sandbox, she asks you how user permission. But every performance tool takes place in sandboxes for default. And it is fully implemented in the car, uh, on your local car. And this is already happening, you know, more than a year. But this is something that develops and changes, for example, you can choose to run this, hmm, in the cloud, which then works as a managed virtual machine where this is the same virtual one the car you you get through GPT- chat process. And you can you can supposedly, check this out , but it works like container Kata. It's like safe environment. And that's why everything works inside this virtual machine, and not on your car. AND then the only thing that happening in your car, this is your entrance, and then streaming output transmission. THERE ARE -eh, and this, you know, obviously, much better for you processor and your machines, and you can to scale much, much, much more. And this just a step. Uh, this is there will be much smoother in in the future, hmm, use cloud machines, and then, you know, maybe have combination partial fulfillment on your laptop, partial fulfillment on cloud machines. AND really, what we're talking about we think, quite naturally, consists in because since models become better and, um, more powerful, they can use much more computational resources than available on your local computer. Therefore, in a certain moment execution restrictions on your local computer can become restriction.</p>
+</details>
+<h3>本地开发习惯与云端开发环境的权衡</h3>
+<p><strong>主持人 / 提问者</strong>：但本地运行也有非常棒的一点，我想这也是为什么我喜欢本地执行。当然，这也有不便之处：如果我在做某些工作，开启了多个 Agent，就会大量占用 CPU。如果我想合上笔记本电脑，我就不能合上，只能半开着，对吧？当我在某家 AI 公司的办公室时，我一直半开着笔记本屏幕，他们问我：“你在跑 Agent 吗？”我说：“是的，正在跑一个。”对方说：“我懂。”但我坚持在本地跑的原因在于，我拥有各种本地工具、本地 Postgres 数据库等等。对于云端环境你怎么看？云端固然很棒，但往往缺乏这种本地现成的配置，或者说配置起来太麻烦了。你们在尝试或探索如何构建这些配置吗？这也让我想起了 AI 爆发前我们讨论过的一个话题——云端开发环境（Cloud Development Environments）。例如在 2022、2023 年它们非常流行，后来大家的焦点更多转向了 AI。但我认为在大型科技公司之外，云端开发环境从未真正普及开来，因为初始搭建成本非常高。而且后续还需要支付维护费用，作为独立开发者或小团队，很难从中获得足够的回报。不过以现在 Agent 的能力水平，配置成本几乎归零了，对吧？如果你的 Agent 能够胜任这项工作，它就应该直接替你搞定配置和维护。例如你可以直接对它说：“嘿，我有本地 SQLite 或本地服务器、MCP 等，在云端开发环境中配置并同步完全相同的系统有多难？”如果模型能替你完成这些，那就完全不难了。所以我认为我们会看到云端编排机器的复兴，从而将你从笔记本电脑中彻底解放出来，还是说我的理解有偏差？我们在使用 ChatGPT 时看到的一个巨大成功点，就是它在手机上随时随地可用。我的一天通常是这样开始的：边喝咖啡边对着手机给它口述一堆任务，它就会去执行。它能访问我的日历、邮箱和 Slack。能够随处走动并处理事情，而不需要随时背着笔记本电脑，这种体验太美妙了。我认为这和远程 Codex 是一回事，执行过程就像在本地笔记本上一样，但如果不需要一直保持笔记本开着，那就太棒了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host / Questioner</strong>：But there is one wonderful thing in that he works locally, and I think that's why I I like it when he works locally. Of course, this is inconvenient. because if I do some work, then, You know, I have several agents, and this consumes processor. If I want to close my laptop, I don't I can leave it. half open , isn't it? When I was in one of the offices companies with artificial intellect, I held half of it open, and they ask: &quot;You Are you launching agents?&quot; I say, &quot;Yes, I have one is running&quot;. He says: &quot;I understand.&quot; But the reason why I do this I do is, that I have local tools. I have local database Postgres. I do this, this, this and this. What do you think? about the cloud? She wonderful, but in it there is no such thing configuration, or its it's just hard to adjust. You Do you think? experiment, you know, creating these configuration? And me too this reminds me of a topic that we discussed before the emergence of AI, namely cloud environments developments. AND, for example, in 2022, 2023 years they were popular, and then we talked more about AI. But yes, I think so outside the big technological companies, cloud developers never acquired popularity, because are very large initial costs. THERE ARE- oh, and then you too need to pay for service, and you just, you know, not you get from this benefits as a soloist developer or small team. WITH at this level opportunities, which in We have agents now, settings almost free, right? Yes? So, the cost settings and service–this that if your agent capable of doing this, he should just do it for you. For example, if you you say something like : &quot;Hey, you know, I have is local SQLite or local server, MCPS etc. As far as difficult to set up exactly the same system and synchronize it on cloud developer? » Well, maybe it's not so difficult if the model just does This is for you. And that's why I I think we will see. revival, you know, partly cloudy orchestrated machines, who will then be released you from the laptop, or wrong? One of the things that which we saw huge success in working with GPT chat, this is what that she is simply available on your mobile phone. I start my day, just dictating to him a bunch of tasks next to coffee, and he just does this. He has access to my calendar. He has access to my email. He has access to Slack. And it's so wonderful. just have the opportunity to walk and, you know, doing things, not to carry with you laptop everywhere. And I I think it's the same thing, what...You know, we they released that remote Codox, where, you know, implementation happens as on your laptop, but It would be great if, you know, you don't it was necessary hold a laptop open.</p>
+</details>
+<h3>Codex 的演进：防护脚手架与基础模型的关系</h3>
+<p><strong>主持人 / 提问者</strong>：或者，你能稍微讲讲你们早先是如何改进 Codex 的吗？因为我记得刚开始使用 Codex 时，那是早期版本之一。你可以和它对话，它会执行各种操作。但比如我说：“好的，做出这项修改”，它修改了代码，而当我运行单元测试时，它并不会自动去跑。然而几个月后，我不确定具体是什么时候，它突然开始自动运行测试了。你们改进的是启动脚本、系统指令这些外围逻辑吗？我不确定你们具体怎么称呼它，是初始化脚本还是类似的机制？这属于模型的改进，还是外围系统的改进？作为开发者，我该如何理解这种脚手架（strapping / harness）与模型本身在各个版本之间的迭代演进，以及它们之间的关系？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host / Questioner</strong>：Or Can you please do a little? tell me how earlier than you improved the Codex? Because I I remember when I for the first time used Codex, it was one of the early versions. You could with him to talk, he did various things. But, for example, I said something like: &quot;Okay , make this change&quot;, and he made this change, and I conducted modular tests, and he doesn't started. And then, in a few months, I don't know exactly when, he just started to launch automatically. Were there these things that you improved, you know, script that starts, you know, instructions? I am not sure, exactly how you are You call it a script. initial download or something like this. This is an improvement models, as a developer, How can I imagine that? you improve each version between the strapping, and then between the model, and What is the connection between them?</p>
+</details>
+<p><strong>Thibaut</strong>：是的，这是个很好的问题。可以说，防护与脚手架系统（protection / harness system）在某种意义上总是略微领先于模型本身的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Thibaut</strong>：Yes, that's...Good. question. So, uh, protection system in in a sense always a little ahead model.</p>
+</details>
+<p><strong>主持人 / 提问者</strong>：哦，真的吗？这是为什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host / Questioner</strong>：Oh, really? How is that?</p>
+</details>
+<p><strong>Thibaut</strong>：我的意思是，你手头拥有一个模型，它具备特定的基础能力；但随后你需要对其进行调优配置，例如借助各种支架与工程手段（crutches / harness mechanisms），使得它能够在实际场景中执行任务，达到一定的可靠性与执行效率，并表现出符合用户期望的行为模式。这就是外围防护与脚手架系统所扮演的角色。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Thibaut</strong>：Uh, I mean, that you have a model; she capable of certain things, but then you you set it up, for example, for with the help of several crutches so that she could actually to perform tasks, hmm, on a certain level reliability and, um, in in a sense, hmm, that is, effective, and also with behavior, which you expect as user. And this, yes so to speak, the role protection</p>
+</details>
+<!-- chunk 6/10 -->
+<h3>系统消息与模型能力的动态演进</h3>
+<p><strong>Codex 工程师</strong>：系统提示词（developer message）或防护机制，究竟是如何运作的呢？它的核心作用在于建立防护屏障，让整个系统更高效、更可控。同时，防护系统通常还负责我们所说的开发者系统消息（developer message），这些消息会在每一轮对话（turn）开始时注入到上下文中。</p>
+<p>显而易见，这会直接影响我们期望达成的目标，并在模型执行动作的过程中影响智能体的行为。你最终看到的效果，实际上是模型本身能力与外围胶水代码（bindings / harness）共同作用的结果。</p>
+<p>起初，你可能会想：“噢，模型好像不会主动去跑测试，所以我们必须在系统提示词里提醒它记得运行测试。”但随后，我们对底层的基座模型进行了训练和优化，让模型自身能够更好地领会你在提出某个请求时的真实意图。</p>
+<p>这样一来，你就不再需要在外围提示词里反复向它解释这些规则了。因此我们经常会发现，随着模型能力的提升，系统消息（developer message）的体积在不断缩减，外围的引导性脚手架（bootstrapping / harness）也在随之精简。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Codex Engineer</strong>: ...systems, or wrong? It consists in order to ensure protective barriers, to make it more efficient, more controlled; and then protection system usually also is responsible for what we call developer message, which seems to be injected in context, hmm, at the beginning of each turn.</p>
+<p>And this obviously affects the goal I see, influencing agent behavior during, hmm, during the move. What you have is the result of using bindings and models.</p>
+<p>At first, maybe you think: &quot;Oh, it doesn't conduct tests. So, you know, you need to remind it about conducting tests.&quot; And then, you know, we teach the base model so that it is capable of better reflecting what you really want when you ask for something. Uh-huh, and then, you know, it doesn't need to have this explained anymore.</p>
+<p>So sometimes we see that the system developer message decreases, and then the bootstrapping scaffolding also decreases.</p>
+</details>
+<h3>研究与工程的协同：修模型还是改外围？</h3>
+<p><strong>主持人</strong>：在 Codex 团队内部，你们会有具体的目标规划吗？比如你们会说：“好，现在 Codex 作为一个整体协作系统，模型在处理某些任务时表现不够好，或者会犯一些低级愚蠢的错误。”</p>
+<p>我现在该如何去理解工程师团队在研发下一代 Codex 版本时的日常工作状态呢？因为作为外部开发者，我不太容易理解这种模式——在我们看来，“模型”就像一个充满魔力的黑盒，它自己会不断变得“更好”。</p>
+<p>当然，你们肯定拥有用户反馈通道，但你们同时也构建了大量的外部工具。研发团队是如何设定目标的呢？在传统的软件工程中，你通常会说：“我们要开发某个功能”，然后大家就去把这个功能写出来，因为你知道具体的实现路径。但在大模型时代，这种研发流程对我而言似乎变得有点模糊和不确定。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: In the Codex team, do you have specific goals? Are you saying something like: &quot;Okay, now Codex as an agent and the model is not very good at coping with this, does it make any stupid mistakes or what?&quot;</p>
+<p>How can I now imagine how the team engineers work on the next Codex version? This is because, as a developer, I do not understand very well what this is: &quot;Okay, there is a model that is magical to me, a thing that will become better.&quot;</p>
+<p>Of course, I am sure you have feedback channels, but there are also tools that you create. Probably the team responds to this. How do you set your goals, right? As in traditional software development, you would say: &quot;We will build this feature,&quot; and you build this feature because you know how to do it. But to me, it seems that this development process is a little fuzzy.</p>
+</details>
+<p><strong>Codex 工程师</strong>：是的，确实如此。事实上，我们大部分功能都是以这种方式协同推进的。这也是一个典型的研究团队（Research）与工程团队（Engineering）深度协作的流程——比如在构建核心内核（kernel）或智能体的主要运行框架（main agent harness）时。</p>
+<p>我们脑海中总是会浮现这样的问题：“好，今天我们发现模型在某些场景下表现非常出色、理解得很透彻，但在另一些方面却不尽如人意。然而，我们非常渴望把某个能力做出来，因为那将是产品中一个极其酷炫的特性。”</p>
+<p>每当面对这种情况，我们就会深入分析并思考：“要想实现这个目标，究竟应该修改外围的逻辑与工具绑定（bindings），还是需要对底层模型本身进行改进？”</p>
+<p>如果需要改进模型，我们就会评估：“例如，我们要多久才能把这个能力训练并落地到模型中？一个月能搞定吗？还是需要三个月、六个月？”我们就是这样不断推进研发的。</p>
+<p>随后，取决于我们通过模型训练能在多大程度上、多快解决这个问题，我们甚至可能会决定：在工程层面暂时什么都不做，只需耐心等待底层模型在下一次迭代中自然而然地解决这个问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Codex Engineer</strong>: Yes, that's right. And exactly so, together we are developing most things. And this is the process where there is cooperation between research and engineering teams—for example, when creating a kernel, the main agent harness.</p>
+<p>Always the question arises: &quot;Okay, today we see that we are very good at this, we understand it, but not very good at that. And, you know, we have a desire to do something still, because that would be a very cool product feature.&quot;</p>
+<p>And then we are always looking at this and thinking: &quot;Okay, does this require a change in bindings or a change in the models?&quot;</p>
+<p>&quot;And if it is a model change, for example, how soon can we implement it? Can we implement it in a month? Can we implement it, you know, in 3 months or 6 months?&quot; And we somehow work on it.</p>
+<p>And then, depending on how soon we will be able to fix it in the model and at what level of training, we might decide to do nothing in engineering for this process and just wait until the next model solves the problem. You know, that's it.</p>
+</details>
+<h3>全职智能体评估与跨领域拓展</h3>
+<p><strong>Codex 工程师</strong>：我们大量使用智能体来自动分析海量的用户代码审查（reviews）与反馈，从中提炼和归纳出关键议题，以帮助我们主导这些技术讨论并明确研发优先级。</p>
+<p>不仅在编写代码（coding）领域我们要进行这种全面的评估与分析，在所有其他应用领域——例如财务分析、日常沟通、市场营销等所有用户正在使用这些智能体的垂直场景中——我们都会进行细致的评估。</p>
+<p>在每一个大领域内部，还细分了许多子类别。通过这种方式，我们能大致掌握系统当前的运行质量与能力水位，并持续不断地拓展能力的边界。</p>
+<p>有意思的是，每当我们通过前期的训练提升了通用基础模型的能力时，所有下游场景的表现往往都会全面水涨船高。不过，针对某些特定的关键领域，我们依然会倾注更多的精力进行专项优化。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Codex Engineer</strong>: ...full-time agents, isn't that right? So, we use agents for analyzing many reviews, so that, you know, they come up with topics to help us lead these conversations and determine priorities.</p>
+<p>But let's analyze this across all coding tasks. Let's analyze this in all other areas as well, such as finance, communications, marketing—you know, in all those areas where our users use these agents today.</p>
+<p>And inside them, there are subcategories. That way we know approximately how well we are performing. And then we are always expanding the boundaries.</p>
+<p>It's interesting that when we improve our model through foundational training—when we improve the general model—everything gets better. But sometimes there are specific areas where we pay a little more attention.</p>
+</details>
+<h3>AI 时代的研发工作流：当新工程师加入团队</h3>
+<p><strong>主持人</strong>：你刚才提到，在此期间我们几乎全是在与智能体协作。那么，我们能否聊聊 Codex 团队内部的软件开发全生命周期（SDLC）？</p>
+<p>也就是说，每当有新工程师加入你们团队时，大家通常都会好奇：“在这里，大家平时究竟是如何开展日常工作的？”</p>
+<p>在人工智能普及之前，如果你加入像 Uber 或 Google 这样的科技大厂，入职流程通常是明确的：产品经理或团队提出一个想法，大家一起制定技术方案、评估排期工时、拆解任务模块，接着编写代码、运行单元测试、进行代码审查（Code Review），最后发布上线、灰度验证，周而复始。这就是过去标准的研发工作流。</p>
+<p>而当一位新人加入 OpenAI 的 Codex 团队时，即使他之前拥有开源项目的贡献经历，你们通常会如何向他介绍：“我们这里的代码是如何构建并上线的？”如果他完全是个新手，工作流会是什么样？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: You mentioned that during this whole time we talked only with agents. Can we talk about the software development life cycle in Codex? In the sense that every time when a new engineer joins the team—any team—it's something like: &quot;Okay, how is everything done here?&quot;</p>
+<p>And you know, before the appearance of artificial intelligence, when you joined companies like Uber or Google, they said to you: &quot;Cool, here is how it works: we have an idea, or the project manager has an idea; we make a plan, we do some estimates, we break the work down into parts, we write the code, we run tests, do code reviews, we release, roll out features, and then we take turns on rotation. That's how it was before.&quot;</p>
+<p>When someone joins the Codex team, even if they have contributed to open source code, what do you tell them? How is work done here, especially if they are completely new?</p>
+</details>
+<p><strong>Codex 工程师</strong>：首先，我会把他们引荐给团队里非常优秀的技术同仁。当新成员遇到疑问时，在内部最常听到的一句建议通常是：“你问过 Codex 了吗？”</p>
+<p>在 OpenAI 内部，Codex 默认集成了全套工作环境：它接入了公司内部的 Slack 沟通频道，拥有对所有内部文档的阅读权限，并且可以访问所有代码库。</p>
+<p>许多新入职的工程师依然会感到非常惊讶——你可以就任何问题向 Codex 提问，而它往往能够给出极为精准和漂亮的解答。</p>
+<p>对于新人来说，想要快速了解当前项目的背景脉络、某个模块由谁负责维护、或者某项技术方案当初为何这样选型，最简单高效的方法就是直接问 Codex，因为它对整个公司内部的所有上下文都了如指掌。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Codex Engineer</strong>: I introduce them to wonderful people, and then what is most often heard when they have a question is something like: &quot;Did you ask Codex?&quot;</p>
+<p>Hmm, and Codex is connected by default inside OpenAI, so it has access to Slack, access to all documentation, and access to all code.</p>
+<p>And newcomers are still surprised that you can ask it anything, and it very often gives a really beautiful response.</p>
+<p>The easiest way to understand the project situation—who is in charge of working on something, or why a particular solution was adopted—is that Codex knows all about this internally.</p>
+</details>
+<h3>团队文化与原则：不要写一万行代码绕过模型缺陷</h3>
+<p><strong>Codex 工程师</strong>：在团队日常工作中，大家也都是这样深度使用它的。我们的大量工作都在公开透明的 Slack 频道中进行；我们内部文档的访问权限设置得非常开放，确保每个人都能自由获取信息。这样做的一个关键目的，就是让你的智能体能够随时检索这些资料并基于它们进行深入思考。</p>
+<p>此外，我们内部还探索了许多非常有助于提升团队生产力与工程协作的新功能与机制。有些功能我们目前尚未正式对外发布，但其中一部分将会在即将到来的开发者大会（DevDay）上亮相。</p>
+<p>所有这些工具和工作方式，会让工程师非常脚踏实地，并能与跨部门团队保持紧密的同频协作。这也能帮助团队成员迅速摸清业务全局，并自主驱动、独立创造出出色的成果。</p>
+<p>我们给工程师的核心建议通常是：“请务必对用户体验负责，保持产品的连贯性与一致性，并始终密切关注模型能力的发展演进与未来走向。如果你正在开发某个功能，却不得不编写一万行复杂的胶水代码仅仅为了绕过当前模型的某种缺陷，那么你要明白，你的实现思路很可能走偏了。”</p>
+<p>因此，我们拥有这样一套核心原则与团队文化，它构成了当前团队的技术基调与精神风貌。新成员入职时，首先熟悉的就是这套理念。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Codex Engineer</strong>: Hmm, you too simply use all of it. We do a lot of work in public Slack channels. We open documents with broad permissions so that everyone has access to this information, and so that your agent can view things and reason over them.</p>
+<p>And then, we have a few more things that are very useful for team productivity and collaboration, which we haven't released yet, but some of them will appear at DevDay.</p>
+<p>All of this makes you very grounded and tuned to collaborate with the rest of the teams. It allows you to understand the state of affairs very quickly and independently create things.</p>
+<p>The general recommendation is: &quot;Hey, take care of the user, take care of product consistency, and pay attention to models and where they are heading. If you are building something and you find yourself writing 10,000 lines of code just to work around model limitations, you know what—you're probably doing something wrong.&quot;</p>
+<p>So we have a set of principles, team culture, and engineering ethos. When people join, learning these basics is what happens first.</p>
+</details>
+<h3>从想法到交付：数亿用户规模下的极速持续部署</h3>
+<p><strong>主持人</strong>：当我产生了一个绝妙的技术想法，我可能会先和 Codex 进行深入讨论，也会拉上同事一起探讨，比如：“我想为 Codex 引入一个全新的功能模块，作为我加入团队后的第一次核心代码贡献。”</p>
+<p>那么在具体落地的流程上，我该如何执行呢？显而易见，我会使用 Codex 辅助编写代码，也会对代码进行全面测试以确保其稳定运行。接下来呢？在你们的流程中，是否依然保留着传统的人工代码审核（Code Review）、AI 辅助代码检查、自动化测试验证、灰度分阶段发布（Phased Rollout）等机制？</p>
+<p>你要知道，Codex 本身正在服务数以千万计的开发者——其活跃用户规模刚刚突破了 2000 万大关。而对于像 ChatGPT 这样面向更庞大受众的产品，其服务的人群更是高达数亿甚至十亿级别。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: And then, when an idea arises—I think it's a great idea—I discuss it with Codex. Maybe I discuss it with some of my colleagues, for example: &quot;Here is a new class or feature that I'm going to create as my first contribution or first major contribution to Codex. How do I do this?&quot;</p>
+<p>Of course, I write code using Codex. Of course, I test it and make sure that it is working. But what's next in the process? Do you still have concepts like code verification, AI-assisted code checks, testing, deployment verification, and phased deployment?</p>
+<p>Because Codex itself is spreading among millions of people—I think it just crossed the 20 million active users mark. And if it is ChatGPT, it is being used by an even vastly larger number of users.</p>
+</details>
+<p><strong>Codex 工程师</strong>：是的。不过令人称奇的是，无论你是在为面向数千万开发者的 Codex 部署功能，还是在为拥有数十亿活跃用户且规模仍在快速增长的 ChatGPT 部署代码，底层的交付流程是非常相似的。</p>
+<p>在 OpenAI，你可以随时提交一个 Pull Request。你可以在当天完成功能修改，并在当天甚至第二天就将其直接部署上线。</p>
+<p>即便你的代码会直接推送到拥有数以亿计用户的生产环境，这种高频、敏捷的发布方式依然是内部的日常常态。</p>
+<p>我们之所以能够做到这一点，是因为我们在工程师文化中深深植入了强烈的责任感与审慎意识。我们给予每位工程师充分的信任与自由，让大家有充分的机会向系统贡献实质性的代码变更，即便是大规模的核心改动也是如此。</p>
+<p>在交付过程中，核心要求就是提供充分的验证证据——证明这项改动能够被系统和用户良好接纳，并证明它经过了严密的功能与安全性检验……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Codex Engineer</strong>: Yes. Hmm, but remarkably, it is a very similar process regardless of whether you are shipping for Codex or ChatGPT, even though ChatGPT is serving hundreds of millions or a billion active users and that number is steadily growing.</p>
+<p>You can create a PR. You can make changes and ship them out the next day or even on the same day. And the change goes live across a vast user base—this is standard practice.</p>
+<p>We instill a deep sense of ownership, responsibility, and diligence. So people have abundant opportunities to ship changes, even major structural changes. In general, what is required is solid evidence that the change will be well-received and verified to work correctly...</p>
+</details>
+<!-- chunk 7/10 -->
+<h3>北极星愿景：极简且自然的个人 AI 伴侣</h3>
+<p><strong>Guest</strong>: 这确实是一个极具价值的补充。有证据表明，随着时间的推移，对系统进行持续维护和支持是非常值得的；但与此同时，例如服务的运维成本相比过去已经大幅下降了。因此，我们现在思考这些问题的方式，应当与两三年前截然不同。我们也在尽可能地将整个流程全面自动化。许多过去需要繁琐人工处理的环节，比如代码检查流程、自动化部署、性能衰退与回归问题检测等，现在几乎全部实现了自动化。</p>
+<p>这样一来，你就可以将精力集中在核心创意本身，以及思考它究竟能为我们的用户带来什么帮助。你会更加关注整体系统的一致性，以及通用 Agent 的强大能力如何帮助我们持续改进产品。我们在待办清单上还有很长很长的一串计划想要去实现，虽然目前尚未完全达成，但这正是我们的努力方向。</p>
+<p>此外，我们心目中还有一个类似“北极星”般的终极愿景：打造一个极度出色、使用极其简便的个人人工智能（Personal AI）。它对你有着深刻的了解（掌握它所需要知道关于你的一切），拥有访问必要资源的权限，甚至能够代表你执行一些有时带有一定风险的操作——但随后你会收到即时的推送通知，从而可以随时进行审查和核实。</p>
+<p>这个 AI 能够从底层深刻理解你作为用户的真实需求；它知晓你的日程安排，明白你的长期与短期目标，具备主动预判和响应的能力，并且交互体验必须极其自然。它应该是你能够通过自然语言、语音甚至情绪感知来直接驾驭的存在（比如在视频通话中它能敏锐捕捉你的状态）。它必须是这个世界上最自然、最符合直觉的交互载体，绝不能是一个由十几个复杂按钮和繁琐配置项堆砌而成的系统。它的用户交互界面必须极度简单易用。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Like, a worthy addition; uh, evidence that, you know, it seems worth it to support over time, but also, for example, cost of service, as you know, a lot decreased. So let's think about these things a little differently than, say, 2 or 3 years ago. And we too, we automate the process as much as possible. So a lot of things, for example, process code checks and deployment, and, you know, detection regressions, all of this is almost automated.</p>
+<p>And so, you know, you can concentrate on the idea and on how it will help our users. And you are interested in the consistency of everything this, general agent power, which helps to improve things. And we have a long, long list of things we want to do, but have not yet achieved this.</p>
+<p>And then there is something like &quot;Polar Stars&quot;—a wonderful, simple in use personal artificial intelligence (AI), which knows everything about you (that it needs to know), has access to the necessary resources, can take, sometimes risky actions on your behalf, but then you get a push notification, and then you can check it.</p>
+<p>And this is something that deeply understands you as a user, but also it knows about your schedule, it knows about your goals, it may be proactive, and it must be extremely natural. This has to be something you can manage, for example, with the help of natural language, voice, you know, maybe it has to understand your emotions, for example, if it was in a video call. This has to be the most natural thing on Earth. This must not be something out of 10 different buttons and configurations. The UI should be simple in use.</p>
+</details>
+<h3>代码审查文化的演进与 Agent 赋能</h3>
+<p><strong>Host</strong>: 我们刚才简要提到了代码审查（Code Review），但我想就此展开深入探讨一下。你之前在 Google 工作时参与过拥有数亿用户的产品——也就是 Google 地图（Google Maps），而 Google 在整个行业内一直以其极为严谨的代码审查文化而闻名。据我所知，他们通常实行两层代码审查机制：既有对特定编程语言规范与正确性的专门审计，而且他们在整个行业内长期推行并完善了这套体系，坚信这种机制极其行之有效并在实践中严格遵循。在你看来，这套流程正在发生怎样的变化，特别是人工审查（Human Review）的部分？</p>
+<p>如果在很久以前，比如一两年前，我会认为代码审查具备诸多核心价值：知识共享与传递、提供第二双眼睛来把关、消除“代码所有者离开”带来的单点故障（Bus Factor）风险（因为团队中还有其他人理解这块逻辑，当原作者不在时其他人能够迅速顶上接盘），以及促成关于整体架构设计而不仅仅局限于具体代码实现的深度对话。</p>
+<p>然而现在，代码库中的代码量越来越庞大，代码审查的核心价值究竟变成了什么？在哪些具体场景下它依然不可替代？在你们团队中，鉴于你们走在行业的最前沿，你观察到人类开发者仍然参与哪些具有高价值的代码检查阶段？在哪些环节下将这些审查工作全权交由 Agent 处理已经成为了大家公认的常态？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: We briefly mentioned the review, code review, but I would like to come back to that. You were at Google working on a product that is used by hundreds of millions of people, namely Google Maps, and Google is very famous for its very cultural rigorous code review. They have, I think, two code review levels: there is an audit of correctness of language, and they, I think, improved it in the industry for a long time, and they believe that this works, and they use it.</p>
+<p>How, in your opinion, is this part changing, in particular human review? A long time ago, maybe a year or two years ago, I would say that code review has all these benefits: knowledge exchange, a second pair of eyes, elimination of the bus factor because now someone else understands it so that when this person is missing, they can step in. Conversations are happening about architecture, not only about the code.</p>
+<p>But now, you know, there is much more code. And what is the value of code review? In what cases? And so, on your team, because you guys are so ahead of it, where do you see that people or developers still participate in the stage checks that are valuable, and where is it normal—did you think it is the norm to pass this on to an agent?</p>
+</details>
+<h3>自动化正确性与安全检查：从代码行到意图对齐</h3>
+<p><strong>Guest</strong>: 是的，代码审查与校验所扮演的角色确实正在发生深刻的变化。我在 Coding Smith 最早开展的项目之一，就是致力于研发专门用于代码检查的研究级模型。该模型的目标是达到能够精准捕捉深层逻辑错误和推理漏洞的水平，其能力足以让工程师受益匪浅——因为人类往往需要花费数小时进行极为深入的排查才能发现同等水平的隐蔽缺陷。这种检查需要真正的深度挖掘，比如深入三到四层去分析底层的依赖关系，或者洞察到某些外部依赖的实际实现与官方文档描述存在偏差，从而导致你原先假设的不变量（Invariants）无法成立。如果你不是该依赖库的资深专家，你根本不可能察觉到这些陷阱，进而不可避免地写出 Bug。</p>
+<p>我们成功开发并发布了这些代码审查模型，目前它们具备业界顶尖的能力，能够通过深度语义分析或作为核心主力模型的一部分，极其敏锐地揪出这些复杂的深层错误。当我们对比基准时，它们在代码审查方面的表现宛如超人一般。这不仅体现在功能正确性上，同样也体现在系统安全性（Security）上。它们能够推演极为复杂的边界场景与攻击面，并直接给出明确结论：“嘿，你这里存在一个严重的致命安全漏洞。”</p>
+<p>现在，在 OpenAI 内部，所有代码 Pull Request（合并请求）都必须经过这套机制的严格把关。只要系统将其标记为存在安全隐患，代码合并就会被直接自动拦截。这一切完全是自动化执行的。</p>
+<p>过去，代码审查的核心诉求始终在于确保正确性，保证代码能够正常稳定运行；但与此同时，它也是一种团队内部信息交换的“社交仪式”——让团队成员保持在同一认知频道上，激发大家展开深入的技术讨论。尽管这种讨论理想情况下应该在编码前更早发生，但现实中很多时候讨论往往只能围绕着写好的代码展开，因为代码一旦合并就会直接部署到生产环境中去执行任务。</p>
+<p>随之而来的就是长期的维护负担。因此，代码审查确实承载着强烈的社交与协作属性。但我认为所有这一切正在被彻底重塑。代码正确性检查与网络安全审计，未来都将被完全自动化。</p>
+<p>事实上，我们现在观察到的真实趋势是：围绕 PR / 实施请求展开的核心讨论，正在转变为关于“意图”（Intentions）的高层对齐。大家不再纠结于具体的语法细节，而是追问：“你究竟试图实现什么目标？尝试这样做是否是正确的方向？”</p>
+<p>我认为这类关于意图的高阶探讨完全可以脱离具体的 PR 实现而独立发生，它根本不必与底层的具体代码紧密绑定。这种转变有助于我们清晰界定：哪些事情必须由人类进行深入探讨，而哪些事情过去之所以在代码层面讨论，仅仅是因为我们过去缺乏像今天这样强大的智能化自动化工具。</p>
+<p>过去的代码审查就像是一种强制执行机制（Forcing Function）——因为你必须在合并代码并将其变为生产运行实体之前完成这次审查与讨论；但现在我们有了其他更好的协作方式，能够共同推进系统演进并确保架构意图的正确性。到了那个阶段，具体代码本身的微观实现细节就不再具有那么决定性的核心价值了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yes, the role of code verification is changing. One of the early projects which I did on Coding Smith was associated with research model development for code check, which should have been at a level where it could detect errors in logic and reasoning, uh, to such an extent that for people it would be useful, as you know, taking potentially several hours to discover the same level of mistakes. Because it requires real digging, as you know, three or four levels deep studying dependencies, and, you know, just understanding that, perhaps, the documentation actually was incorrect, and the implementation, such as outside dependencies, differed from what you expected, and therefore your invariants are not supported. And these things, as you know, if you are not an expert in this library, you wouldn't know, and that's why you have a mistake.</p>
+<p>And here it is: we developed these code verification models, and, you know, we released them, and now they have one of the highest-level opportunities and abilities to detect these mistakes, performing, you know, deep verification or just as part of the main models. When we compare them, it's like superhumans in checking code, and this applies not only to correctness; this also applies to security, for example, where they are able to think about very complicated things, and then, you know, come to the conclusion: &quot;Hey, you know, you have a critical security vulnerability here.&quot;</p>
+<p>What is now a must for every OpenAI code pull request: we block merging pull requests if, you know, we mark them as a security problem. And that's all automated.</p>
+<p>And the role of code checks now—I think it always consists of correctness. It was always about making sure it works, but it was also something like a small ritual of information exchange and, you know, bringing people onto the same wavelength and, you know, encouraging discussions, which ideally should have happened earlier. But sometimes it only happens around the code because after the merger it is just starting in production and doing something. Yes. And then you need to support it. So there is also a social aspect.</p>
+<p>I think that all this is changing. Correctness, cybersecurity—I think it will be automated. In fact, what we see, and I see, is that what is happening is some discussion of intentions, um, around the request for implementation. What are you even trying to make? Um, and is that the right thing to try to do?</p>
+<p>I think you can have this discussion beyond the request for implementation. It does not need to be related to the code. So, maybe this helps clearly understand, you know, where we need to discuss, and where we did it simply because, maybe, we didn't have such tools that we have now.</p>
+<p>Yes, I think that will change. It was similar to a forced execution function, because, you know, you need to have this discussion before you merge it and it becomes working code. But I think there are other methods of conducting these discussions, and, you know, developing things together and making sure that the intention is good. And then the code does not have such a big value.</p>
+</details>
+<h3>黑盒抽象与心智负担的释放</h3>
+<p><strong>Host</strong>: 这非常有意思。因为当我回想过去经历的所有代码审查时，当然会有一些非常美好的回忆——我们进行了极具启发性的深度讨论，或者我在过程中学到了真正有趣的新知识；但说实话，很多时候代码审查显得非常流于形式和官僚化。你苦苦催促别人：“嘿，能麻烦帮我看一下代码吗？”对方却回答：“不行，我现在正忙着呢。”你只能无奈地催促：“不，我真的非常需要你的审查来解除我的阻塞（Unblock me）。”然后对方不得不中断手头工作进行上下文切换（Context Switching）。我总觉得这种模式有利有弊，对吧？</p>
+<p><strong>Guest</strong>: 确实如此。我觉得无论我们采取什么流程，永远都会存在利弊权衡，只是现在的天平正在发生转移。</p>
+<p>我认为最大的优势之一在于：作为一名工程师，你将不再需要把宝贵的注意力耗费在那些根本不需要人类亲自干预的基础琐事上。这极大地节省了开发时间。</p>
+<p>在此基础上，我们逐渐会达成一种全新的范式：团队之间只需就“这个黑盒（Box）应该实现什么功能”达成契约与共识。只要在资源消耗配额、数据访问权限、安全边界等方面具备严格的契约保障，那么黑盒内部的具体代码实现究竟如何编写——坦白讲，无论它写成什么样你都可以完全不在乎。你真正需要投入精力去达成共识的，是这个黑盒对外的功能定义以及必须严格满足的核心不变量（Invariants）。</p>
+<p>我认为这才是我们应当深入沟通和讨论的重心所在——也许在未来，你可以借助你最喜爱的 AI Agent 来高效完成这种意图沟通。一旦你对黑盒的边界与契约有了透彻的理解，黑盒内部的具体实现调整就根本不再需要人类反复开会讨论，它只需要在异常时引起你的必要注意即可。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: This is interesting because, when I remember all code reviews, of course, I have memories of when it was wonderful. We had a good discussion, or I learned something really interesting. But many times, honestly speaking, it was so officious. I tried to get your attention, saying: &quot;Hey, could you please review my code?&quot; And you're like: &quot;No, I'm busy right now.&quot; &quot;No, I really need this to unblock me.&quot; And then you switch context. And then I feel that there were always good and bad parts, right?</p>
+<p><strong>Guest</strong>: Yes. So I feel that no matter what we do, there will always be advantages and disadvantages, but now they are just shifting. So, I think one of the advantages is that, as an engineer, you will not have to pay attention to such basic things that don't need your intervention as such. Yes, it saves time.</p>
+<p>And then, gradually, we will also see that you have an agreement about what it has to do, and what is located inside the box—if you have strict guarantees regarding resource usage, data access, security, such things. It's like what is happening inside the box can literally be whatever. You feel indifferent. And, actually, you need to get to an agreement on what this box actually does and what invariants have to be satisfied.</p>
+<p>And I think it's worth having good conversations about that. Perhaps with the help of your favorite agent. But once you understand it, any changes inside the box do not need further discussion, and it simply attracts your attention if needed.</p>
+</details>
+<h3>服务运维成本的暴跌与软件构建新范式</h3>
+<p><strong>Host</strong>: 服务的运维成本已经大幅下降了。系统的长期运维（Service / Maintenance）一直以来都是工程界的热门痛点话题。以往每当我们在 Google、Uber 甚至初创公司内部构建新系统时，前期从零搭建（Construction）往往是最令人兴奋、最具趣味性的阶段，但后期的长期维护与线上运维却是极其痛苦的折磨。很多时候我们甚至会因此打退堂鼓：“算了吧，维护成本太高了，根本不值得去造这个轮子。”在你看来，在 Codex 和 OpenAI 内部，究竟是什么促成了服务与维护成本的急剧降低？具体是哪些技术变革在推动这一转变？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Cost of service decreased. Service and maintenance is always like this hot topic. Every time when we created something inside companies like Google, Uber, even startups, construction was the most interesting part, but service was painful, and that's when we understood: &quot;Okay, it's not worth it to build it, etc.&quot; What do you think can lead to the reduction in the price and cost of service within Codex and OpenAI, and what changes in...</p>
+</details>
+<!-- chunk 8/10 -->
+<h3>自动化技术维护与软件架构演进</h3>
+<p><strong>Host</strong>: 就你们所构建的内容、抱负以及自定义工具等方面而言，情况是怎样的？技术维护就像是随着时间推移必须缴纳的税赋，为了让一切正常运转，它在过去是不可或缺的，在未来也同样必不可少。但我认为，许多变革正通过自动化悄然发生。比如，当你有第三方依赖需要更新版本号时，往往会觉得：“啊，又是这个。”但如果你有良好的更新日志（changelog），并且代码库有完善的文档，你完全可以将这个过程自动化，让模型去直接分析。模型可以在短短几个小时内通读并扫描你的整个代码库，而换作以往，你可能早就被卡在这些繁琐的事务中了，因为这绝不是最有趣的工作。但这对于你的业务而言却至关重要。尤其是涉及安全漏洞时，你必须保持最新状态并应用所有补丁。我认为这部分将彻底实现自动化。这意味着很大一部分技术维护工作，相当于可以免费获得了，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: In terms of what you create, which ambitions, perhaps custom tools etc.? Technical service is something like the tax you pay over time so that everything works, and it always was necessary and will be necessary in the future. But in my opinion, many changes occur through automation. So, you know, if you have third-party dependencies and you need to update the version number, then this is like: &quot;Ah, yes.&quot; You can completely automate this if you have a good changelog and your code is well-documented, and the model can simply analyze this. It can just pass through your codebase in a couple of hours, whereas you would have gotten stuck on this earlier because it's not the most interesting. But actually it is very important for your business. So this is really important for your project, especially regarding security vulnerabilities; you want to be up to date, right? Do you want to apply all these patches? I think so, it will be completely automated. So a significant part, for example technical service, is provided for free, right?</p>
+</details>
+<p><strong>OpenAI Engineer</strong>: 是的，我也这么认为。想一想过去的情形也是很有意思的：以前当你想要对系统做出重大重构或响应变化时，你必须设计全新的架构。因为你试图为新的妥协方案腾出空间，或者你对工作负载有了全新的认识，亦或是你想要引入一项新功能，结果突然发现现有系统的局限性太大，不得不从头彻底重建架构。这在过去是非常昂贵的开端，有时甚至要耗费数年时间。而现在我认为这一进程被极大地加速了。虽然犯错的代价降低了，但与此同时，那些经典优秀的软件工程原则——比如良好抽象的存在——依然发挥着关键作用。这又回到了我们之前谈到的，比如设定好不变量边界（box of invariants）。如果你勾勒出正确的抽象边界，你就可以在这个边界内以极快的速度调整和迭代，而不会影响到其他服务或底层基础设施。我认为这一点至关重要：在设计之初就必须充分考量极其快速的迭代和变更。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>OpenAI Engineer</strong>: Yes, and I think so too. It's great to think about what was before: when you wanted completely to react, you had to create a new architecture, because you tried to make room for new, different compromises, or you have a new understanding of the workload, or you tried to introduce a new function, and suddenly you realized that your current system is very limiting and you need completely to rebuild its architecture. It was really a very expensive beginning, right? Sometimes it lasted for several years, and I think that now it is also extremely accelerated. So the cost of mistakes decreases, but at the same time, I would say that the old good software engineering rules, like the presence of good abstractions, indeed help. Well, you know, this is a comeback to before this, for example, the presence of a box of invariants. If you draw the correct form, you can change things much faster within this box and, for example, not influence the rest of the services or the rest of your infrastructure. And I think that this is important. It is important to design considering very rapid iterations and changes.</p>
+</details>
+<h3>模块化设计与智能体时代的架构思维</h3>
+<p><strong>OpenAI Engineer</strong>: 我记得之前与 Peter Steinberger 交流过，那还是在他加入 OpenAI 之前，聊到关于 OpenClaw 以及他的思考方式。他告诉我，他其实并不经常逐行阅读代码，而是时刻在脑海中构建和推演系统架构。他提到自己经常做系统重构，思考如何实现彻底的模块化，如何让上百名贡献者能够同时构建各自的功能而不至于互相踩脚绊倒。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>OpenAI Engineer</strong>: I remember how I talked to Peter Steinberger. It was before he joined OpenAI, about OpenClaw and how he is thinking about it. As you know, he told me he doesn't read code, but he was constantly thinking about what he saw, holding the architecture in his head; and he told me how he often does redesigns, and he thinks about how to make it modular, how to allow 100 participants to create their own thing without stepping on each other's toes.</p>
+</details>
+<p><strong>Host</strong>: 所以我理解你的意思了：这种前期规划、结构设计和架构关怀，如今反而变得更加关键了。在过去，这些通常是架构师、Staff 级别工程师或资深技术专家所做的事情，而其他普通工程师则专注于实现那些较小的子模块。但现在看来，所有工程师在构建软件时都需要掌握这种大局观并进行前瞻性规划，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: So I hear what you have in mind: this concern, this planning, this structuring has become perhaps much more important. In the past, it was as if an architect, a staff engineer, or experienced people did this, and other engineers were engaged in creating these smaller parts. But it seems that now all engineers need to know this when creating their own software provision, right? And plan for it.</p>
+</details>
+<p><strong>OpenAI Engineer</strong>: 没错。而且现在的 GPT 模型在思考长期维护性和优美架构方面也变得越来越出色，这可以说是极其自然的演进方向。这不仅仅关乎局部代码质量——比如单个文件里的代码是否整洁合理，更关乎宏观架构是否真正正确，能否随着时间的推移有效减轻维护负担，并为未来的功能扩展或产品形态变化预留出充足的空间。这种纵观时间维度的系统工程能力，正是大模型开始展现出强大思考潜力的领域。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>OpenAI Engineer</strong>: Yes, and GPT models are getting better and better at this, you know, thinking about long-term maintenance and beautiful architecture, and it's like a natural next step, right? Yes. It's not just about code quality, like does this code make sense and is it clean in this file, but also about whether the architecture is really correct so that it reduces the load on maintenance over time and makes room for future expansions, whether product changes or functions. And just this act of engineering over time is something that models start to be able to ponder very well.</p>
+</details>
+<h3>从团队扩张到百个智能体并行：生命周期的剧变</h3>
+<p><strong>Host</strong>: 意识到我们所构建的软件生命周期正在被大幅压缩，这确实令人着迷。在过去，扩展一个软件项目需要逐步推进：刚上线时可能只是一个小团队，只有几名工程师，然后你慢慢增加人手；如果项目非常成功，或许一年后团队会壮大到 50 到 100 名工程师。你有足够的时间去观察系统演进，有充足的时间为新人做入职培训（onboarding），并逐步完善文档和配套设施。但现在完全是一场爆发式增长：突然之间你可能就拥有了 100 个 AI 智能体同时向项目提交代码。这种情况在一个周末内就可能发生。因此，与过去相比，你正以极高的速度穿越整个软件生命周期。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I think it's simply fascinating to understand that in the software provision we create, we pass through the lifecycle much faster. As you know, before you scaled it, you launched it with maybe a small team of several engineers, and then you slowly added engineers, and maybe in a year, if it was very successful, you would have 50 or 100 engineers. You would have time to see it, time to onboard people, and start thinking about documentation and everything like this. But now it is just an explosion: suddenly you have about 100 agents contributing to this matter. This can happen over a weekend. And therefore, you just go through this with great speed compared to before.</p>
+</details>
+<h3>工程师的心态调适与问题解决导向</h3>
+<p><strong>Host</strong>: 那么，OpenAI 的工程师们是如何应对这种变化的？大家适应得如何？这会不会让你们感到困扰？你知道我的意思，如果你在软件行业已经深耕了数十年甚至更久，大家都有了一套习惯的工作节奏。而现在的节奏显然被大大加快了。面对你一年前还在亲力亲为的事情如今由于模型理解透彻而不再需要你动手，你在心理上是如何接受并适应这种转变的？你深耕多年并引以为傲的专业技能现在完全可以托付给智能体，难道内心深处不会有一丝失落或沮丧吗？就像我们之前讨论过的，当自己写的功能被开源替代时会让人有些失落；当遇到自己非常擅长的事情——比如重构或是系统架构设计，而模型现在对此也了如指掌时，会不会心里想着：“好吧，虽然很高兴看到这一幕，但要是能由我自己来做其实也挺好的”？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Okay, but how are people from OpenAI coping with this? Doesn't it bother you? You understand what I mean: when you've been in this business for quite a long time, decades or more, there was a pace we were used to, and obviously now it is much faster. But how do you realize the fact that what you did a year ago you don't do now, because now the model understands this well? And how do you deal with that? Because I'm sure there are things related to software development that you really understand well, which now you can hand over to the agent. Aren't you a little annoyed? You know, we talked about how it's annoying when your functions are implemented with open source, but this can also be annoying when I'm really good at something like refactoring or architecture, but the model becomes really good at understanding it too. And now I'm like, &quot;Okay, damn. I'm glad, but also it would be nice if I did it.&quot;</p>
+</details>
+<p><strong>OpenAI Engineer</strong>: 是的，作为一门手艺，这里面确实有一种特别的情结。有时候我仍然会打开代码编辑器亲自写一些代码，这感觉很棒，也带给我许多美好的回忆——比如深夜独自坐着写代码，喝着零度可乐，完全进入心流，心无旁骛，只需要专注于眼前的问题。但归根结底，我认为核心在于保持这种沉浸状态去解决问题。在 OpenAI 内部以及我交流过的每一个人，实际上都适应得非常迅速。如果你拥有这样一种思维模式——将代码纯粹视作解决问题的工具，你就能解决多得多的问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>OpenAI Engineer</strong>: Yes, I think that there's something to this like a skill. Sometimes I still open the editor and write some code; it's just nice and I have such happy memories, like late nights when I was sitting there, drinking Coca-Cola Zero, and there was simply no need to think about anything else except the problems ahead of me. But actually I think it all depends on being in flow and solving problems. And I think people here, and everyone I talked to, just adapted very quickly. If you have a mindset where code is a tool to solve problems, you can solve much more problems.</p>
+</details>
+<p><strong>OpenAI Engineer</strong>: 这就像以前如果你想做方案对比，但对最终产出并无十足把握；而现在你随手就能进行验证，只需花费不到 30 秒在后台运行一些任务，就能获得精确的数据并找到最优的权衡方案。如果你真正关心最终结果和系统的稳定高效运行，这只会让你成为一名更优秀的工程师。在 OpenAI，这赋予了我们极高的推理执行效率，使我们能够获得更高效的算力利用，并将其部署落地到真实世界中。因此，团队里的每个人都高度专注于此，以过去不可想象的速度去攻克重大难题。到目前为止，我还没遇到过有谁会抱怨说：“噢，这太糟糕了，一点都不好玩。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>OpenAI Engineer</strong>: It's like earlier, when you wanted to compare something and you weren't absolutely sure where it was going to go. Now you can just do it. You won't need more than 30 seconds to launch something in the background, get the right numbers, and find the best compromise. It will make you a better engineer if you really care about the result and that the system works well. So what this allows us to do in OpenAI is that it allows us to execute our inferences much more efficiently. It allows us to get much more efficient computation and then deploy it in the world. So everyone is very focused on this and on solving important problems at a speed that was previously impossible. And I haven't met anyone yet who would say: &quot;Oh, this is not good, this is not fun.&quot;</p>
+</details>
+<h3>初创企业雄心与未竟的科学探索</h3>
+<p><strong>Host</strong>: 我的理解是，如果你的目标极其宏大，面临的难题远超过今天、明天或下周所能处理的范畴，那么工具的自动化就完全不是问题，因为当你变得更高效时，你只会马不停蹄地继续向前迈进。这也正是许多初创企业的写照，初创公司的雄心壮志往往远超其当下的实际交付能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I understand what it looks like: if you have ambitious problems, if you have a lot more problems than you can decide today, tomorrow or next week, then this is not a problem because when you get more effective, you keep moving forward. And that's true for a lot of startups, right? Startups are always much more ambitious than what they are currently able to do.</p>
+</details>
+<p><strong>OpenAI Engineer</strong>: 确实如此。我们面临的问题绝没有穷尽，而且在可预见的未来里也绝对不会解决完。我们前方还有漫长的道路要走——无论是在数学突破、科学探索还是推动世界变革方面，都依然任重道远。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>OpenAI Engineer</strong>: We definitely haven't run out of problems, right? And I don't think we will finish them in the near future either. We have a long way ahead of us: a long way from the point of view of mathematical breakthroughs, scientific breakthroughs, and making the world better.</p>
+</details>
+<!-- chunk 9/10 -->
+<h3>深夜编程的转变与告别未竟之事的焦虑</h3>
+<p><strong>Speaker A</strong>: ……让世界变得更美好，单纯地为人们创造价值，并着手解决每个人都会遇到的最重要的问题，而且要以一种极具人性关怀的方式去解决。这正是我们在此的原因。另外，回到编写代码本身，你知道那种熬夜加班的场景——我认为那或许也有一种带有一点浪漫色彩的版本。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: ...better place, simply create for people and decide most important problems with which everyone encounters, and just do it deeply human way. Exactly, that's why we're here. Also, just returning to coding, and how do you... you know, these late nights, I think that's also maybe glamorous version of this.</p>
+</details>
+<p><strong>Speaker B</strong>: 是的，对我来说也是如此。以前有过很多个深夜，当我尝试去做重构之类的任务时。你知道，情况往往是这样：我花了大约三个小时在代码重构上，然后我发现自己走进了一个死胡同。我也曾不得不把一切归零、从头再来，那种感觉非常令人沮丧。虽然也有非常多有趣的时刻，但同样会有代码怎么都编译不通过的时候，你心里只能纳闷：“为什么现在还不报错？为什么还编译不了？”</p>
+<p>我确信你也经历过那种很晚才去睡觉的时候。时间已经非常晚了，你需要上床去睡觉，因为你必须睡上一会儿，但翻来覆去就是无法真正入睡。往往是因为你手头还有个做到一半的任务没有完成，这让你感到心烦意乱。有时我甚至记得自己连做梦都在写代码。而现在这些日子里，当我为自己的业务开发软件时，我确实不再有这种烦恼了——我真正拥有了什么？那就是再也没有半途而废、悬而未决的任务了。因为我只要对它说“去把这个做了”，然后就把它留在那个状态中，让它去搞定。要么它直接做好了并成功运行，要么它给出明确的证明显示执行失败。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yes, same as me too. There was a lot of late nights when I tried something refactoring. Um, and you know, it was like that, like I spent somewhere 3 hours in refactoring, and then I understood that it was deaf angle. Uh, me too had to restart everything from zero, and it was very unpleasant. Um, and there are such very, very funny moments, but there is also a time when something is not compiling, and you just think: &quot;Why isn't this happening yet? Why it compiles?&quot;</p>
+<p>I'm sure there was a time when you were leaving sleep later. Now very late. You need to go to bed to sleep, because you need a little to sleep, and then you can't really fall asleep, and it happens that there is some task that half-finished, and it upsets you. Sometimes I remember that I dreamed of a code. AND, probably one thing that I actually have not these days when I am working on software provision for your business, that's what... What do I really have? There is nothing that half finished. Because I can just tell him: &quot;Do this&quot;, and then leave him in this condition, what is it, you know, ready. Or ready, either it works or I have proof that it is failed.</p>
+</details>
+<h3>长时间自主任务与 Codex 融入 ChatGPT</h3>
+<p><strong>Speaker A</strong>: 但这很有意思，因为现在一切节奏都加快了，不是吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: But interesting, because, you know, everything has sped up, has it?</p>
+</details>
+<p><strong>Speaker B</strong>: 是的，或许确实如此。很多人以及我自己，有时也会问自己一些更重要的问题。白天通过交流讨论，或者哪怕白天根本没时间去弄明白的事情，我就会把代码发给它，让它在夜间自行处理分析。然后第二天早上醒来看到处理结果时，我感到非常开心。所以，这总是让人感觉是一个充满惊喜与期待的早晨。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yes, maybe I did. So, how do they do it? Many people, and myself, sometimes I ask myself more important issues, and I, you know, from conversations, which I had during the day, or even I just didn't have time figure this out. And that's why I, you know, I am sending the Code, so that he just looked at him at night, and then I'm very glad to wake up and look at results. And therefore, you know, it's always like a fascinating morning.</p>
+</details>
+<p><strong>Speaker A</strong>: 嗯，我觉得在执行长期任务方面确实形成了一种特定的工作方式。当然，你可以使用目标指令（比如斜杠命令），输入后启动执行。这也是几个月前刚添加的功能，对吧？也就是在 Code 中使用的目标斜杠指令。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Well, I feel like there is a certain way in performing long tasks. And, of course, you can use the target {slash}, which will enter and will start. You know, this is also what recently was added a few months ago, right? Yes? Command {slash} objectives of the Code.</p>
+</details>
+<p><strong>Speaker B</strong>: 是的，回到刚才那一点——或许这只是一种权宜之计，不是吗？斜杠命令的目标在于引导模型在极长的时间周期内始终专注于单一目标而不偏离。这使得模型在面对真正棘手的复杂难题时，能够连续工作数天乃至数周。但随着新一代模型的问世，我们可以看到，你不再需要依赖目标斜杠命令了。围绕着它设定的目标，你完全可以直接对模型说：“嘿，去连续工作一周吧”，而它确实能做到。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yes, and returning to the point that, perhaps, this is a crutch, isn't it? The purpose of {slash} was necessary so that, you know, to keep model on the way to single goal during very long period of time. And this as if allowing the model literally work days or weeks, if it's really that bad a difficult problem. But with the new generation models, as we see, you no longer target {slash} is required. You don't need it. Around her is the goal. You can just tell the model: &quot;Hey, go work for a week&quot;. And she really will do.</p>
+</details>
+<h3>从本地客户端到云端统一平台的技术演进</h3>
+<p><strong>Speaker A</strong>: 谈到复杂难题以及我们见证的演进，从外部来看，你们所做的一件非常有趣且具工程深度的事情，就是你们所谓的“融合”——即 Codex 正式内置到了 ChatGPT 当中。我之所以说这极具工程挑战，是因为我们过去习惯使用的 Codex 是一个完全本地化的工具，而 ChatGPT 则是一个完全托管的云端平台——所有的任务都在我们的后端系统上运行，并以传统的方式存储与处理，专为弹性扩展和高效运行而设计。</p>
+<p>现在用户可以直接在 ChatGPT 客户端中打开 Codex。我一进入应用就直接使用 Codex，因为我自己平时并不怎么单纯用 ChatGPT 原生应用。我和 OpenAI 团队以及你们团队的成员交流过，他们告诉我这是一项筹备已久的大工程，面临着大量的工程技术挑战。你能谈谈这个项目的规模有多庞大、实现起来为何如此困难吗？Codex 以及其他工具是如何协助你们完成这项此前难以想象的工程的？因为自从发布以来，根据你们公布的数据，使用 Codex 的用户增长速度比以往任何时候都要快得多。因此我推测你们一定攻克了极其宏大的架构问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Speaking of complex problems and the fact that that you haven't seen them yet decided that one of interesting things that you offered from outside, I would say that this it was, you know, like engineer, enough interesting, is that what you you call it a merger, i.e. Codex appeared inside ChatGPT. AND the reason why I say it's like engineers, it's quite interesting, so what are we used Codex, that is, yes, he is there. Now you can open it in ChatGPT application. Perfectly.</p>
+<p>I just went there and immediately went to Codex, because I'm not... I not really I use ChatGPT in the application as such. But I talked to people with OpenAI and people from your team, and you know, they they told me that long-lasting big preparation, a lot engineering challenges. Can you to tell, how big this project that you it was necessary to do, and why it it was difficult realize? And as Codex and other tools helped you to do it as would it have been difficult before? Because since the launch associations, numbers, which you constantly share about the number of people who use Codex, as if growing much faster than earlier. So, I I assume that you decided some a large-scale problem.</p>
+</details>
+<p><strong>Speaker B</strong>: 两个体系融合过程中的许多复杂难题，首先源于二者底层的截然不同。ChatGPT 是一个完全托管的云端平台，所有的计算都运行在我们的云端系统上，并以传统的方式针对规模化和高效率进行数据存储与资源调度；而 Codex 原本是完全本地运行的。因此，融合的核心挑战在于：如何将本地代码 Agent 的强大优势与功能完整保留，并围绕其打造产品，从而让全球更广泛的用户群体受益。这也是我们选择加入 OpenAI 的初衷——将这项能力带给全世界数以亿计的广大受众。</p>
+<p>这是一段令人兴奋的技术旅程。我们探索如何构建一个云端版本，使其在本质上具备与本地完全相同甚至更强大的能力，同时又能承载千万级乃至数亿用户的并发访问，保持极致高效，从而能够将其完全纳入 Plus 订阅计划中。在 ChatGPT 中运行 Codex，本质上是在云端启动一个完整的 Codex 环境与云端计算机沙箱。这是一台极其强大的机器。人们逐渐发现了这一点并展示了各种惊人的用法：如果你富有创意地去编写 Prompt，你甚至可以让 ChatGPT 去训练另一个模型；或者在沙箱中安装 Blender 来进行 3D 建模。在这里一切操作都被允许，它拥有完整的互联网访问权限。它就像一台强大的云端计算机，Codex 直接在上面运行，这就是我们通过 ChatGPT 所实现的集成。</p>
+<p>许多系统级难题在我们团队的协作下被迅速攻克。显而易见，Codex 自身在提升开发效率、构思架构以及搭建核心基础设施方面发挥了巨大作用。同时，它还帮助我们解决了 Codex 与 ChatGPT 之间的诸多细节差异，例如统一插件架构、统一底层库等。我们致力于构建一个高度统一的系统，其目标就是消除割裂感——你不应该觉得某些事情只能在 Codex 中做而不能在 ChatGPT 中做，反之亦然。我们正在打造一个单一的集成产品，让你无论选择何种使用方式，都能访问到完全相同的智能底座。</p>
+<p>在这整个过程中非常有趣的一点是，Codex 还充当了“记录记者”的角色，忠实记录了团队所有的演进步骤、技术争论与方案讨论。关于如何命名、何时上线、以何种形式接入、如何进行模块整合，团队内部经历了非常热烈的讨论，评估了多种不同方案。所以这是一个非常有意思的记录过程，我们完整列出了 Codex 随着时间推移所完成的所有工作。此外，我们还展示了与 OpenAI 架构切换的工作演进，这在当时也引发了许多技术探讨。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Many complex moments from the association were, according to first, completely different. ChatGPT is completely managed cloud platform, that is, you know, you launch all on our systems. We store things in the traditional way, such as creating things created for scaling, for efficiency. Codex completely local. So the union is how to get the same ones advantages and opportunities from this local agent coding, and then create a product around him and create it like this so that he could to benefit much wider circle of people, that's why we all joined in OpenAI to bring very broad benefit audiences all over the world.</p>
+<p>And it was very an exciting journey where we tried understand how create a cloud version of this, which, according to essentially capable of very, very much the same things, but she also built like this in a way that we can to serve her tens and hundreds millions users, when remaining the same effective so that we could completely include it in the plan Plus. ChatGPT's work is, according to essentially, launching a full Codex bundle in the cloud together with the cloud computer. This is very powerful machine, actually. People picked up on it and showed that it is possible make. If you creative approach to the tips, you can force ChatGPT to teach another model, and you say: &quot;Wow. There are some pretty strange ones things. You can install Blender and to do 3D-modeling. This is very everything is allowed. He has Internet access. It's like a powerful machine, and Codex simply works on her, and that's what we implemented through ChatGPT.&quot;</p>
+<p>So many systemic problems we with the team did very quickly. Obviously that Codex helped to make it more effective, to consider and to build a significant part infrastructure. AND then, you know, helped to solve many small ones differences that arose between Codex and ChatGPT, such as association plugin architecture, association libraries, etc., i.e., really, really working on by creating a single system, the purpose of which is what you shouldn't do to feel that you can to do something in the Codex, what can't you do in ChatGPT, or vice versa. We we are trying to create one single product, which gives you access to the same intellectual data, but as you do you want them use.</p>
+<p>AND so it was very fun because Codex throughout this travel too worked as a journalist, who documented all the steps, debates and discussions that led teams. And these were very lively debates, you know, about how we to do it as we please to name a thing and, do you know when this is to enter, and how, and what to combine with what. It was considered many different options. So in this is very interesting journalistic element where we, for example, fully we list that Codex did over time. Uh, and yes, it became known, and also an arc switching OpenAI, where we presented working switch, around which also there were many discussions, is that correct?</p>
+</details>
+<h3>全面统一的愿景与日常工作流</h3>
+<p><strong>Speaker B</strong>: 随后我们发现大家非常喜欢这种体验。随着时间推移，我们将进一步整合各项功能。我们正朝着全面统一的方向迈进。目前在工作模式下拥有更强能力的形态只是一个过渡状态，未来我们将把这些强大的能力无缝提供给使用 ChatGPT 的每一个人。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Then, you know, we have this simply very liked it. Uh, but over time we will gather to put things together further. So, we really we are moving in the direction full unification, and, you know, we we consider this as temporary state when you have better and stronger capabilities in working mode, but over time we we implement this, you know, for everyone who uses ChatGPT.</p>
+</details>
+<p><strong>Speaker A</strong>: 那么你个人呢？你平时是如何使用 Codex 的？从 Agent 协作和任务管理的角度来看，你的日常工作架构是怎样的？针对这一点，我还专门问过 Peter Steinberger，问他我应该向你提什么问题。他说鉴于你身兼多职，你应该被问问是如何应对这一切的——你参与了所有这些项目，日程表排得就像俄罗斯方块一样密不透风，但你通常看起来还是那么神采奕奕。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: How about you personally? Do you use Codex? What your work structure from point agents' view, tasks, do you manage it? AND regarding this I asked Peter Steinberger, what do I need should ask about you, and he said that, as well as you have, you need ask him how you are cope with it, that you are involved in all these projects, your calendar is similar on Tetris, but usually you you look pretty cheerful.</p>
+</details>
+<p><strong>Speaker B</strong>: 我的日程其实还算合理。嗯，其实很简单，我现在之所以能够处理多得多的事情，正是因为我拥有了像 Codex 这样的技术。事实上，我已经大幅将自己的工作转移到了手机端，借助触屏操作来完成日常工作流。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: My calendar decent. Hmm, hmm, and simple, I can do it much more things now, because in I have these technologies like Codex, and I actually significantly switched to his own work on mobile phone, using Touch of the Work.</p>
+</details>
+<!-- chunk 10/10 -->
+<h3>个人 AI Agent 的日常工作流：语音输入与自动调研</h3>
+<p><strong>Thibaut</strong>: 每当我有想记录的想法时，我就会直接启动这个工具。我经常使用语音听写。每次产生疑问时，与其把它记下来留待稍后思考或指派给其他人，我直接启动它，对着它口述我的工作内容，就能得到一份类似报告的整理结果。它具备一整套专门的技能和定制指令，现在已经非常适应以我能高效利用的风格来生成报告、幻灯片和代码调研。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Thibaut</strong>: Whenever I have something I want to write down, I just launch this. I often use dictation. Every time when I have a question, instead of recording it to consider later or delegate to someone, I just launch it, tell it about the work, and get something like a report. It has a whole bunch of special skills and special instructions that are now very adapted to create reports, slides, and code research in a style that I can effectively use.</p>
+</details>
+<p><strong>Thibaut</strong>: 所以每次在会议间隙，或者你会看到我对着手机自言自语进行听写。正如我之前所说，我们许多人都在公开频道中协作。我们在 Slack 里有大量讨论，在 Notion 和 Google Docs 里也有海量文档。因此实际上 Codex 完全能够胜任第一阶段的研讨与分析。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Thibaut</strong>: And so every time I am between meetings, you see me as I just dictate to my phone. As I already said, we work in public channels. We have a lot in Slack, we have a lot in Notion and Google Docs. So practically there are no doubts that Codex will be able to handle at least the first stage of deliberation.</p>
+</details>
+<p><strong>Thibaut</strong>: 无论关于某项功能的公共意见、查阅生产环境日志、某些特定功能的使用强度，还是整理出哪些缺乏维护而应放弃支持的项目清单，亦或是了解团队中某个成员的具体工作——无论是我的什么问题，我都能在 30 分钟内得到答复。这就是我的使用方式。我几乎用它处理一切事务，它就像是我全方位的个人智能体。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Thibaut</strong>: Whether it is public opinion regarding a feature, viewing production logs, the usage intensity of certain things, compiling a list of items we should abandon support for because they no longer receive support, or understanding what a specific person on the team is doing. Whatever my question is, I can get a response within 30 minutes. That is how I use it. I use it for everything. This is like my personal agent for everything.</p>
+</details>
+<h3>周末原型构建与创意输出</h3>
+<p><strong>Thibaut</strong>: 此外，我在周末也常常进行代码探索或构建原型。从某种意义上去构想产品的未来对我来说非常有趣。我会和其他团队的成员一起做这件事，合作对象并不总是固定的团队。就是这么简单，在一天之内我就可以把脑海中构思好的东西完整地做出来。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Thibaut</strong>: And then often on weekends, I do code research or create prototypes, and it is fun for me to imagine the future of the product in a certain sense. I do it with others across teams; it is not always the same team. And simply, in one day, I can create things that feel like they were already in my system.</p>
+</details>
+<p><strong>Thibaut</strong>: 如果某一天我醒来觉得某件事值得去探索，那就意味着去把它做出来。然后我可以在一天内把这一切表达出来并展示给其他人，让他们能够思考、提出批评，并希望借此受到启发。这绝不是说必须将它发布到市场上，而更像是一种：好吧，我把这个构想从我的脑海中释放出来，然后我就可以继续去做其他事情。这是一个非常奇妙且令人振奋的时代。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Thibaut</strong>: If I wake up one day and think that something should be investigated, that means building it. And then I can just express all of this and present something to people in a day so they can think about it, critique it, and hopefully be inspired by it. It does not mean this needs to be released to the market, but it is more like: okay, I will get this out of my system, and then I will continue doing other things. It is such a magical time, and it is so inspiring.</p>
+</details>
+<h3>给 AI 时代软件工程师的建议：好奇心、底层理解与清晰思维</h3>
+<p><strong>Host</strong>: 最后，对于想要掌握必要技能和经验、期望进入 OpenAI Codex 团队或 AI 初创公司的软件工程师和 AI 开发者，你会给他们什么建议？也就是说，如何借助这些工具成为真正优秀的缔造者？一个经常被问到的问题是：“我是应该从理论和基础开始，还是只需要学会使用工具？”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And finally, what would you advise a software engineer or AI engineer who wants to acquire the skill set and experience to work in a place like the Codex team at OpenAI, or in AI startups—to become a truly wonderful builder with the help of these tools? A question that often arises is: &quot;Should I start with theory? How important are the fundamentals? Or do I just need to learn how to use the tools?&quot;</p>
+</details>
+<p><strong>Thibaut</strong>: 是的，我认为有两点非常关键：对事物运转机制的深层好奇心，以及极快理解新事物的能力。技术环境将持续快速变化，但那些能够迅速理清头绪、快速解构系统、深入陌生的代码库并完全理解它的人，总能表现得极其出色。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Thibaut</strong>: Yes. I think there are two important things: deep curiosity about how everything works, and the ability to learn and understand things very quickly. Things will continue to change. But the people who cope extremely well are those who are able to quickly decipher a system, immerse themselves in a new codebase, and understand it.</p>
+</details>
+<p><strong>Thibaut</strong>: 显然，现代的 Agent 能够提供辅助，但面对如此庞大的信息量，依然需要你去学习、理解并分析。其中很大一部分在于如何针对事物的工作原理提出好的问题，通过不断追问“五个为什么”持续深挖。正是通过这种方式，你才能学得非常快。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Thibaut</strong>: Modern agents obviously help with this, right? But there is so much information that needs to be learned, understood, and analyzed. A lot of this comes down to asking good questions about how these things work and delving into the &quot;five whys,&quot; which allow you to keep digging and digging. You learn very quickly thanks to that.</p>
+</details>
+<p><strong>Thibaut</strong>: 另一件事是与社区以及你所服务的人群保持同频。解决问题往往不是一条笔直的直线；有时你解决的问题会以意想不到的方式对其他人产生价值。但在明确品味、把握需求、保持清晰思考，并通过这种清晰的思维来推进执行，对我而言至关重要。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Thibaut</strong>: The other thing is to be in harmony with the community or the people for whom you are trying to solve problems. Not everything looks like a straight line to problem-solving. Sometimes you solve a problem that becomes useful for different groups of people. But having clarity in taste, understanding needs and requirements, thinking clearly, and executing through that clarity of thought seems very important to me.</p>
+</details>
+<p><strong>Thibaut</strong>: 例如，如果你无法清晰解释自己想要达成的目标，无法阐明自己的意图，缺乏与社区的连接，或者缺乏对优劣的品味，那么做出卓越的工作就会变得困难得多。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Thibaut</strong>: For example, if you cannot explain what you are trying to achieve, if you cannot explain your intention, if you lack connection with the community, or if you do not have taste, it will be much harder to do wonderful work.</p>
+</details>
+<h3>总结与反思：开源攻防、模型外挂与工程未来</h3>
+<p><strong>Host</strong>: 太棒了，Thibaut。非常感谢这次深入的对话，内容非常精彩。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Excellent, Thibaut. Well, thank you very much for this conversation. It was great.</p>
+</details>
+<p><strong>Thibaut</strong>: 感谢你的邀请。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Thibaut</strong>: Thank you for having me.</p>
+</details>
+<p><strong>Host</strong>: 我一直很想与 Thibaut 交流，很高兴我们终于促成了这次对话。我很喜欢 Thibaut 不仅谈到了开源的优势，也坦诚探讨了开源的劣势——最典型的莫过于竞争对手可以直接抄袭你在公开环境中开发的功能，并在你正式发布前抢先推出；同时你还会收到大量低质量的代码贡献，必须花费精力去筛选和处理。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I always wanted to meet Thibaut, and I am glad we finally made it work. I liked how Thibaut talked not only about the advantages of open source, but also about the disadvantages. Most notably, how competitors can copy features that you are developing publicly and release them right before your release, and how striking that dynamic is. In addition, you get a lot of low-quality contributions that you have to figure out how to handle.</p>
+</details>
+<p><strong>Host</strong>: 另一个耐人寻味的视角是关于模型演进的。从 Codex 团队内部来看，他们的任务是利用安全约束、工具链和定制指令为现有模型搭建脚手架；而下一代模型在训练完善后，对这类外部辅助脚手架的需求将会减少。坦白说，作为一名开发者，听到自己为当前模型构建的辅助机制可能会在下一代模型中直接被内化并被淘汰，听起来确实略微让人感到有些沮丧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Another interesting moment was regarding the model side. Internally, the Codex team sees its task as creating scaffolding for models using guardrails, tools, and custom instructions. Then the next version of the model will be trained such that it requires fewer of these scaffolds. Honestly, as a developer, it sounds a bit demotivating that the things I build for the current model might simply be natively understood by the next version, making our work redundant.</p>
+</details>
+<p><strong>Host</strong>: 不过我推测，这不仅仅是构建临时的连接层，还在于打造模型能够使用的工具系统。我不认为下一代模型会颠覆诸如 MCP 协议、工具规模化或插件体系等架构——至少我希望不会。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Furthermore, I suspect that it is not just about creating these temporary connections, but about creating tools that models will use; it is unlikely that the next version of the model will completely reinvent the MCP protocol, tool scaling, or plugins. At least, I hope not.</p>
+</details>
+<p><strong>Host</strong>: 我也很高兴听到关于 ChatGPT 与 Codex 融合的内幕：将之前完全本地运行的编码智能体 Codex 整合进托管的云端服务中。这一方案实现得极其高效，得以直接打包进每月 20 美元的 OpenAI 订阅计划中，考虑到算力资源的消耗，这确实非常划算。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I also liked hearing what the merger between ChatGPT and Codex looked like from the inside. It was the integration of what used to be a completely local coding agent, Codex, into a managed cloud application. And it was done efficiently enough to be included in the $20 monthly OpenAI plan, which is impressive considering the computational resources involved.</p>
+</details>
+<p><strong>Host</strong>: 听到 Codex 如何扮演整个项目的“全知记录员”也十分有趣——它存在于所有的 Slack 讨论和各类文档中，能够记录所有关键的辩论与决策。老实说，这一部分让我隐约联想到了“老大哥”，AI 始终在注视着一切；但这很可能会成为未来初创企业的全新常态。我目前还没有完全确立自己对此的看法。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: It was quite interesting to hear how Codex acted as a chronicler for the entire project, being present across all Slack conversations and documents to record all important debates and decisions. I won't lie, this part reminded me a bit of Big Brother, with AI always watching, but it could very well become the new norm for startups in the future. I haven't yet decided what I think about this.</p>
+</details>
+<p><strong>Host</strong>: 最后，我非常赞同 Thibaut 给工程师的建议：若想取得成功，必须保持好奇心、具备极快的理解力，并与你所服务的人群保持同频共振。听到 Thibaut 再次强调底层基础的重要性也令人安心。欢迎查看下方的节目介绍，了解更多关于 Codex、Claude Code、Cursor 及相关主题的精彩内容。如果你喜欢本期节目，请在常用的播客平台为我们打分，这对我和节目都意义重大。感谢大家，我们下期再见！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And finally, I appreciated Thibaut's advice for engineers: to succeed, be curious, quick to understand things, and in harmony with the group you are building for. It is also reassuring to hear from Thibaut how important the fundamentals remain. Check out the show notes below to learn more about how Codex, Claude Code, and Cursor were built, as well as other related topics. If you liked what you heard, please leave a rating on whichever podcast player you use. It means a lot to me and to the show. Thank you, and see you in the next episode!</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">language-evolution</span>
+      
+        <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+      
+        <span class="tag-pill tag-pill--no-page">model-scaffolding</span>
+      
+        <a class="tag-link" href="/tags/system-architecture/">system-architecture</a>
+      
+        <span class="tag-pill tag-pill--no-page">engineering-advice</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

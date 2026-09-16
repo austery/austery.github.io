@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>谷歌DeepMind CTO专访：坦承当前模型差距与Gemini 4研发进展</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="谷歌DeepMind CTO专访：坦承当前模型差距与Gemini 4研发进展" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">谷歌DeepMind CTO专访：坦承当前模型差距与Gemini 4研发进展</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Best Partners TV</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-12</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/best-partners-tv/">Best Partners TV</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=OkceW8_9q60" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-12
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">谷歌DeepMind首席技术官Koray Kavukcuoglu在访谈中坦言当前模型质量略微落后于行业最前沿，但重申保持前沿是最高优先级。他回顾了从雅达利DQN到大模型的研究历程，深度解析了Gemini 3.5至3.7快速迭代的工程积累、Gemini 4最具雄心的预训练进展及通往AGI的探索路径。</div></div>
+      
+    </div>
+    <h3>模型快速迭代的背后</h3>
+<p><strong>大飞</strong>: 大家好，这里是最佳拍档，我是大飞。<strong>谷歌DeepMind</strong>新的掌门人、高级副总裁兼首席技术官<strong>科雷·卡武克丘奥卢</strong>（Koray Kavukcuoglu），最近在自家播客里当着主持人<strong>洛根·基尔帕特里克</strong>（Logan Kilpatrick）的面，公开坦言谷歌当前模型的质量客观上确实略微落后于行业的最前沿水平。这场对话的内容很广，覆盖了Gemini模型快速迭代背后的技术逻辑、GPT 3.5 Pro的进展和下一代<strong>Gemini 4</strong>的预训练状态，还有他本人从DeepMind初创时期一路走来二十年的深度学习研究历程。今天我们就来帮大家梳理一下这场对话的内容。</p>
+<p>我们先从最近的模型迭代说起。今年I/O大会上，谷歌发布了Gemini 3.5和3.6版本，结果三周之内又推出了3.7版本，外界反响很多。很多人会好奇，这么快的迭代节奏背后有什么秘诀？是不是做了什么架构上的创新？</p>
+<p>科雷的回答很实在。他说其实并没有太多所谓的内幕，真正的关键在于，从3.0版本开始，团队对编写代码这件事的理解加深了很多。注意，不只是写代码本身，而是软件工程的完整意义，包括如何跟工具交互、如何跟人们日常使用的功能衔接等等。从根本上说，是把整个系统从一个单纯的模型变成了一个<strong>AI智能体</strong>。</p>
+<p>为什么软件工程这么重要？因为它是根基。你想让一个AI系统在很多事情上都能成功，软件工程能力就是最关键的底座。在这个过程中，团队积累了大量关于如何训练模型、如何训练一个真正能跟你一起写代码的AI智能体的经验，从那以后发展的步伐就开始加快了。</p>
+<p>而在任何研究项目里，通常都有很多条并行推进的工作线。3.6和3.7版本里很多工作，其实可以追溯到一年甚至更久以前。这些长期积累的经验，加上新的架构改进和研究了一段时间的新想法，最终汇聚到了一起，才带来了模型质量的大幅提升，这就是多线并行推进的协同效应。甚至在团队还在研发3.6的时候，他们就已经能预见到3.7大概会是什么样子、下一步会走向哪里，然后一切水到渠成。</p>
+<h3>Gemini 4 与前沿竞争</h3>
+<p><strong>大飞</strong>: 聊到3.7，自然就绕不开Gemini 4。几周前团队公开表示正在研发Gemini 4，称这是谷歌迄今为止进行过的最具雄心的一次预训练，外界对此充满期待。</p>
+<p>科雷确认了这一点。他说这确实是最具有雄心的一次训练，而且到目前为止一切进展顺利，团队都非常激动。但是他同时强调，自己始终保持着一种谨慎乐观的心态，因为关键在于如何将潜力转化为现实，只有把模型真正交付到用户手中才算数。</p>
+<p>主持人接下来的提问非常犀利：现在业界有一种说法，在讨论谷歌到底在不在乎保持技术最前沿，言下之意是谷歌是不是已经接受了自己不在第一梯队的位置？</p>
+<p>科雷的回答很直接。他说自己很惊讶会有这样的说法，也看到了这些评论，不过他可以理解。显然谷歌当前模型的质量略微落后于最前沿水平，这很客观。但是他紧接着说，直白地讲，<strong>没有什么比保持在最前沿更重要的了</strong>。事实就是如此，所有的目标、所有的注意力都聚焦于此。做决策的时候、评估想法的时候、确定研发方向和优先级的时候，一切都是为了保持在技术最前沿。他百分之百确信，谷歌将会重新站上最前沿的位置。</p>
+<p>支撑这份信心的，首先是团队。科雷指出DeepMind拥有一支了不起的团队，团队中蕴含着巨大的创造力和奉献精神；其次是资源，作为谷歌的一部分，他们拥有令人惊叹的全栈技术资源，能够进行全面优化以实现目标；更深层的支撑是谷歌的基因。如果你把谷歌看作一家公司，它始终走在投资下一项重大技术的最前沿，从不避讳对具有重要长期意义的项目进行投资。</p>
+<p>谷歌对AI的投资可不是过去五年或十年的事。早在十五年前，当AI还没有大行其道的时候，谷歌就已经在投资<strong>专用AI芯片</strong>了，那个时候大家甚至都还没怎么谈论AI。这种长远的眼光和长期投资的决心始终是谷歌的一部分。就像<strong>量子计算</strong>和<strong>Waymo</strong>一样，现在大家谈论这些事情仿佛习以为常，但它们不仅在技术上至关重要、科学性极强，而且都是长期的、雄心勃勃的壮举。这已经融入了谷歌的DNA，所以科雷坚信他们有能力达到那个前沿水平，这是团队成立的初衷，也是整个团队的心声。</p>
+<h3>组织整合与 AGI 路径</h3>
+<p><strong>大飞</strong>: 现在科雷正在负责领导整个谷歌DeepMind，前沿AI团队和相关产品团队已经整合成为同一个蓝图的一部分。那这次整合有什么特别让人兴奋的地方吗？</p>
+<p>科雷说，Gemini显然非常专注于构建<strong>AGI</strong>并且实现这些目标。归根结底这依赖于两点：第一是出色的执行力，构建AGI是一项极其细致和复杂的工程，需要打造出人们能够真正去使用的东西；第二，它依赖于一个非常庞大且广泛的渠道去吸收来自四面八方的创意。所以整合之后让他感到兴奋的是，前沿AI团队和产品团队能够真正将思路、知识和焦点汇聚到一起。你不能总是把所有东西都局限在单一的轨道里，因为创意的本质在于探索，成功构建AGI依然依赖于创新与探索，然后通过Gemini以正确的方式加以引导。</p>
+<p>那通往AGI的道路到底该怎么走呢？科雷的答案是取决于与用户的交互。你想，有些人在日常生活中用这些模型处理邮件，但是也有科学家在利用这些模型成为更出色的研究者，借助AI的帮助去开展实际研究、发明前所未见的事物。这些模型的使用场景涵盖了世界上正在发生的一切，用户的这些使用情况就是最好的指南。它告诉我们什么是值得解决的问题，什么是人们希望我们解决的问题，而我们需要做的就是去解决它们。这指引着我们走向AGI，这就是打造人们喜欢互动、依赖并且信任的通用事物的方式。</p>
+<h3>无图灵测试与通用智能</h3>
+<p><strong>大飞</strong>: 主持人提到，业界一直有很多讨论，说有没有一个针对AGI的测试，就像<strong>图灵测试</strong>那样，过了就算实现了？</p>
+<p>科雷的观点很明确，他认为并不存在这样的测试。没有人能拿出一个测试，然后说只要你在这个测试中拿到一定分数，就意味着你实现了AGI。回顾AI和机器学习的发展史，情况一向如此，正是这种进步的过程和这段旅程本身带来了改变。</p>
+<p>回看十五年、二十年甚至更久以前，当时总有一种观念认为，如果我们能完成某些特定类型的任务，那就意味着实现了真正的智能；而在每一个特定的历史时期，那些任务都是当时非常合理而且值得追求的目标。科雷指出，正是这些追求促成了现在的进步，这就是进步本身，而且设定下一个目标同样是这种进步的重要组成部分。</p>
+<p>如今我们可以看到，智能已经从AI早期非常狭窄的领域发展到现在变得非常通用。DeepMind现在设定的目标就是一个非常通用的目标，他们正在构建通用智能，而且会沿着这条路继续发展下去。</p>
+<p>科雷提醒道，如果我们回顾二十年前，再来看看现在正在做的事情，会觉得AI已经发展到了很高的程度，二十年前人们所设想的那些目标如今很多都已经实现了。但更重要的是，最终要构建一个你可以信任并与之共事的智能实体。如果我们能达到那一步，那不会是一个瞬间突破的门槛，它更多是一个不断建立信任、并在各个方面变得越来越好的过程。</p>
+<h3>雅达利与 DQN 起点</h3>
+<p><strong>大飞</strong>: 聊完了战略层面，话题转到了科雷个人的经历上。当时他和<strong>卡罗尔·格雷戈尔</strong>（Karol Gregor）都在<strong>杨立昆</strong>（Yann LeCun）的实验室，后来他们同时加入了DeepMind。科雷组建了深度学习团队，团队便从那时起不断壮大。</p>
+<p>当时他们并没有什么宏大的计划去规划这一切将如何发生。当时在初创公司做研究大家都是身兼多职的，那会儿全世界大概也就三四个深度学习实验室。他们把深度学习的背景带入了DeepMind，研究团队大概只有十到十二人，每个人都在基于自身的背景探索一些非常有趣的想法，那真是一个极具趣味的团队。</p>
+<p>后来大家讨论决定选择一项雄心勃勃的任务，把整个研究团队凝聚在一起，并且努力在这些任务上取得进展，这就是<strong>雅达利项目</strong>（Atari）的起点。他们试图训练一个AI智能体，让它通过自我学习来玩雅达利游戏并且取得好成绩。这是一个内部项目，因为当时有强化学习研究人员认为雅达利是衡量研究成果的绝佳环境。</p>
+<p>这是DeepMind聚焦特定项目的首个案例，后来DeepMind也因此闻名。于是把背景各异的研究人员和工程师聚集在一起共同攻克难题，这种模式一直延续到了今天的谷歌DeepMind。一大群研究人员每周会聚在一起评估进展，这最终催生了<strong>DQN网络</strong>（Deep Q-Network）。那是深度学习和强化学习结合的初步尝试，成功创造出了一个能够自我学习并独立完成任务的AI智能体。</p>
+<p>这个项目让科雷和很多人相信这条路是切实可行的：首先，游戏是研究智能并实现规模化扩展的理想环境；其次，当时深度学习已经非常流行，而深度学习与强化学习的结合正是构建智能AI Agent的核心秘方，它由此开启了这扇大门。</p>
+<p>那当时的团队是否已经看清了前路呢？还是说至少在隧道尽头看到了一丝曙光呢？</p>
+<p>科雷的回答很坦诚。他说他对这些事情一直非常谨慎，他不确定当时的前路是否真的明朗，但大家都觉得那是一个重要时刻，因为它给了他们继续前行的信心。回顾DeepMind的发展历史，你会发现他们在这个轨迹上实现了越来越宏大的目标。DQN只是第一步，随后的每一步都跨越得更远更大：从零开始掌握围棋、国际象棋，再将这些知识应用于<strong>AlphaFold</strong>以及攻克《星际争霸》等各种挑战，他们开始构建越来越多的AI智能体，那真是一个非常令人兴奋的过程。</p>
+<h3>强化学习与底层逻辑</h3>
+<p><strong>大飞</strong>: 主持人又问，从当年的雅达利项目到今天的大语言模型，技术发展了这么多年，底层的东西有没有变？以前很多想法纯粹停留在研究领域，重点在于验证某件事是否真的可行；但是现在情况变了，很多事情的可行性已经明确，也掌握了一定的核心方法，重点变成了通过大量极其艰难的工程研究将这些概念真正落地。这个过程和过去相比是不是截然不同了呢？</p>
+<p>科雷说，感觉确实不同，但是奇妙的是它们在某种程度上又是一样的。因为他们依然在做强化学习，依然在做深度学习，预训练模型时使用的损失函数与过去也非常相似，他们依然在使用非常相似的算法进行强化学习。学习的基本原理没有变，优化的基本原理也没有变。</p>
+<p>真正在变的，是应用领域在不断变难。就像从雅达利到国际象棋再到围棋以及《星际争霸》，挑战的难度一直在不断增加。它们变难的方式在于现实生活中充满了模糊性，而且这种模糊性极具深度，你必须具备处理这种深层模糊性的能力，这是你需要应对的最大变化。</p>
+<p>相比于你可以使用的任何受限的动作空间，语言本身要丰富得多、复杂得多，也更加跨领域和多面化，所以毫无疑问事情变得更加复杂了，规模也变得庞大得多，但它的基础仍然是一样的。与此同时，在这个领域中也有更大的空间去提取信息并取得成功。好在一切都变得更加开放，存在更多解释的空间，这就要求具备更高的智能来应对这一切，从而能够预测人类意图，进而让模型与那个人协作或对那个人做出响应。</p>
+<h3>技术跃迁与 S 曲线</h3>
+<p><strong>大飞</strong>: 主持人问道，回顾过去二十年，有没有什么事情让他感到惊讶？比如曾经的某项研究结果取得了极大成功，但在当时看来并不会走向如此成功。</p>
+<p>科雷的回答很有意思。他说退一步从统计学的角度来看，某项技术能实现这种指数级的起飞本身就是令人惊讶的。不同的科学或技术领域并非都有数以百计处于指数级爆发阶段的案例，因此这其中有一点运气成分。他觉得很幸运能生活在这个时代，所有的知识积累直到此时已经汇聚成型，关于芯片、互联网和数据方面的技术进步也已水到渠成，而他们正是亲身经历这一切的人。他很享受这个过程，但毋庸置疑这同时也充满了高强度的竞争。二十年前他们作为学生还在探索的许多东西，如今在现实世界中切实产生了极其深远的影响，这让他感到惊讶，他十分确信当时许多同为学生的人也有着相同的感受。</p>
+<p>他认为进步（特别是在技术方面）往往是通过<strong>叠加的S型曲线</strong>实现的。某些事情发生了，某些障碍被解锁，随后你就会取得巨大的进展；然后在这个基础上进行大量渐进式的积累，进而催生出新的发现；接着再多进行一些这类探索，获得更多的理解，带来更多的发现。他经常思考这个过程，思考是什么推动了进步、是什么引发了这些跃变，以及在他们所做的任何项目中如何实现这个目标。</p>
+<p>过去他们的目标是研究AGI、撰写关于AI的论文、探讨关于智能的本质，那时他们所做的是从纯粹的想法走向纯粹的科学；而现在他们生活在一个实际在构建AGI的世界里，因为人们已经在切实使用它了，所以你必须去构建它，而且必须带着强烈的责任感和严肃的态度去做那件事。但是同时我们也不能忽视一点：正是研究和创新推动了这一切，这个创新漏斗是至关重要的，也是最大的差异化优势。</p>
+<p>所以科雷经常会深入思考究竟是什么让它成功，以及在未来的每一步以及随后的每一步中，哪些要素能确保他们取得成功。正因为如此，他认为旅程虽然非常关键，但是目标和使命（也就是那颗北极星）同样极其重要。只有当你知道自己正迈向一个美好且有价值的目的地时，旅程本身才有意义。他非常坚信，整个团队也都非常坚信，构建AGI并且为世界和用户带来积极的影响，是他们所能做的最棒的事情。</p>
+<h3>谷歌生态与产品落地</h3>
+<p><strong>大飞</strong>: 主持人又问，那在谷歌内部推进这项工作有没有什么特殊的意义呢？科雷自己曾经表达过一个观点，即在谷歌内部专门从事这项工作有着某种特殊的意义。结合谷歌现有的诸多产品以及更广泛的工作来看，这种独特的推进方式具体体现在哪里呢？</p>
+<p>科雷的回答是：一方面，谷歌拥有进行技术投资的基因；另一方面，谷歌拥有大量覆盖数十亿用户的产品，公司将向用户提供优质服务和价值作为立身之本，用户也喜欢使用他们的产品，这是真正有价值的。他将这一点视为构建AGI的关键要素：越能够将Gemini放到一个可以理解、可以学习、并且从互动中获取反馈的环境中，他们就越能做得更好。</p>
+<h3>Gemini 系列进展与展望</h3>
+<p><strong>大飞</strong>: 最后，话题回到了用户最关心的产品上。许多人都在关心<strong>Gemini 3.5 Pro</strong>的进展如何。</p>
+<p>科雷说，正如他之前提到的，他们有并行的开发轨道。在模型家族中始终有Pro版本、Flash版本和Flash-Lite版本。但与此同时，他们看到Flash模型进展非常迅速。他们目前正在同步研发3.5 Pro，因为它是其中一个并行轨道，研究本来就是在多个规模和多个时间点上同步推进的。但在为用户提供最优秀的产品方面，他们在Flash模型上取得了非常好的进展，可以实现极其快速的迭代。从3.5到3.6再到3.7，Flash模型变得越来越好、越来越具竞争力，正在不断逼近技术前沿，这对内部所有的研究人员来说也非常振奋人心。至于3.5 Pro仍然在持续研发，但与此同时Gemini 4的研发也在同步推进，那里同样有许多令人兴奋的进展正在发生。</p>
+<p>主持人还问了一个很有意思的问题：Gemini 3发布的时候感觉像是站上了技术前沿的巨大时刻，但有趣的是前沿领域似乎随即发生了转移，大量新涌现出来的能力恰好出现在了<strong>AI Agent编程</strong>等方向上。当团队刚刚站上那一刻的前沿时整个行业格局却发生转移，他是怎么看的？</p>
+<p>科雷认为有两点需要牢记：第一，顾名思义，在竞争异常激烈的环境中，前沿注定会不断发生转移，各种技术总会经历起伏波动，不同实验室推出最强模型的节奏和频率也会随之改变；第二点更为中肯，他们在AI Agent行为、AI Agent工作流以及如何将模型真正落地方面学到了很多，这是他们所经历的探索过程。他现在感觉非常好，对目前所处的位置充满信心，也对理解用户需求方面的能力充满信心，尤其是当用户在任何AI Agent任务和工作流中协作时，他们确确实实经历了构建这个能力的完整过程。</p>
+<p>访谈的最后，主持人问了一个很轻松的问题：如果科雷能挥舞一根魔杖，让模型无需花费大量时间和精力就能做任何事，那么在他的愿望清单上有没有什么排在首位的期望呢？</p>
+<p>科雷直接回答道，他如果有一根魔杖，只想让它们变得更加智能。因为随着模型变得越来越智能，它们在处理任何事情时都会做得更好、也更加直观，他认为那将会是非常棒的。</p>
+<p>好了，以上就是这期访谈的核心内容了。作为一名技术掌舵人，科雷坦率承认了DeepMind当前的不足；而作为一名组织领头人，他也表达了对谷歌长期竞争力的信心。在对技术进步的理解方面，科雷表现出的更多是一种典型的工程师式的坦诚与克制。那大家是怎么看谷歌DeepMind当前的位置呢？你觉得他们能在Gemini 4时代重新站上技术前沿吗？欢迎在评论区留言讨论。感谢收看，我们下期再见！</p>
+
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Koray Kavukcuoglu" class="entity-link person-link">Koray Kavukcuoglu</a>, <a href="/search/?q=Logan Kilpatrick" class="entity-link person-link">Logan Kilpatrick</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Google DeepMind" class="entity-link company-link">Google DeepMind</a>, <a href="/search/?q=Google" class="entity-link company-link">Google</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Gemini" class="entity-link product-link">Gemini</a>, <a href="/search/?q=Gemini 4" class="entity-link product-link">Gemini 4</a>, <a href="/search/?q=AlphaFold" class="entity-link product-link">AlphaFold</a>, <a href="/search/?q=DQN" class="entity-link product-link">DQN</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/reinforcement-learning/">reinforcement-learning</a>
+      
+        <a class="tag-link" href="/tags/artificial-general-intelligence/">artificial-general-intelligence</a>
+      
+        <a class="tag-link" href="/tags/pre-training/">pre-training</a>
+      
+        <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+      
+        <a class="tag-link" href="/tags/model-evaluation/">model-evaluation</a>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

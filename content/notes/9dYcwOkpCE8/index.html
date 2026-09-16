@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>从单体巨型提示词到文件系统架构：Vercel 如何重构 AI Agent 开发范式</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="从单体巨型提示词到文件系统架构：Vercel 如何重构 AI Agent 开发范式" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">从单体巨型提示词到文件系统架构：Vercel 如何重构 AI Agent 开发范式</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-14</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/software-development/">software-development</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=9dYcwOkpCE8" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-14
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">Vercel 软件负责人 Andrew Qu 深入复盘了团队内部构建数据智能体（D0）的技术演进历程：从最初单一 Mega-prompt，到多 Agent 链式流水线，再到集成记忆与反思的单体 Agent，最终在 Claude Code 与 Opus 4.5 启发下确立了以沙箱、文件系统与 Skills 为核心的架构，并据此推出了面向智能体开发的新一代框架 Eve。</div></div>
+      
+    </div>
+    <h3>智能体新纪元：重构桌面计算与基础设施</h3>
+<p>在软件发展史中，1980年比尔·盖茨曾提出“让每个家庭、每张书桌上都有一台电脑”的宏大愿景，这在当时被视为非主流的激进构想，而如今已成为现实常态。当下我们正站在类似的范式转移拐点：未来的工作场景是否会演进为“每个工位都有专属的 AI 智能体”？目前，智能体的主要应用场景集中在编程和技术研发领域，但其影响力正快速向设计、产品管理及其他业务垂直领域渗透。</p>
+<p><strong>Vercel</strong> 最初专注于 Web 基础设施，帮助开发者免去底层运维的负担，实现网站与 Web 应用在零到数百万流量间的无缝弹性伸缩。然而，随着开发者构建诉求从“页面”（Pages）转向“智能体”（Agents），基础设施的定位也随之进化。为了抹平模型接入与调用的碎片化成本，Vercel 打造了 <strong>AI SDK</strong>（统一的模型抽象接口，使开发者仅需修改单行代码即可切换底层模型供应商），并构建了涵盖模型故障转移（Model Fallbacks）、安全代码执行、无响应期计费优化、状态持久化与可恢复性（Durability &amp; Resumability）的完整智能体基础设施矩阵。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Hey everyone, thanks for coming. I'm Andrew. I'm the chief of software at Vercel and I'm here to talk to you about how we solved agent building at Vercel. I'm the chief of software. So I work on a mix of internal engineering, external experimentation, and generally being at the frontier and building new libraries, frameworks, and technologies.</p>
+<p>For those of you that don't know Vercel, Vercel builds agentic infrastructure so people can build what's next. We got started in the web world helping people ship websites and web apps without having to worry about the infrastructure that doesn't make their app any better. It can scale to a million and scale down to zero effortlessly. But we're seeing a change in what people want to build. You know, people started by building pages, but now we see them want to build agents. And we've been embarking on a similar journey to make it easy for people to build agents and agentic applications easier.</p>
+<p>We built this thing called the AI SDK. So instead of needing to switch out 300-400 lines of provider-specific code, you're just going to switch out one line of code and we have the same model interface underlying for all these different providers. We built a lot of other tools to make it easier to have model fallbacks, secure code execution, better pricing when it's inactive and waiting for responses, as well as for durability and resumability.</p>
+<p>And I'm here to talk to you about how I went on this crazy experiment roughly a year ago that led to an agentic explosion at Vercel and led to a really cool thing that we built recently.</p>
+<p>This is 1980. Bill Gates, before my time, had this quote saying he imagined there would be a computer on every desk and in every home. You know, that was probably pretty contrarian then and today it seems like very normal to have that happen. And me and the CTO had this thought: instead of a computer on every desk, could we potentially have an agent on every desk? Today we only really use agents for coding and technical workloads, but we're starting to see expansion into things like design, product management, and other verticals.</p>
+</details>
+<h3>数据团队的痛点与提示词工程的局限</h3>
+<p>大约一年前（当时主力模型仍为 Claude 3.5 Sonnet 早期阶段，模型能力与基础设施尚不完备），为了探索智能体在非工程职能中的落地可能，团队在 Vercel 内部的营销、销售、财务和法务等多个部门展开了深入调研，询问各部门日常工作中最繁琐低效的痛点。调研发现，最迫切的需求来自<strong>数据团队</strong>。</p>
+<p>当时 Vercel 业务处于高速增长期，客户数据、分析指标与销售数据呈指数级爆发，精简的数据团队陷入了严重的效率瓶颈：每当营销或销售团队提出关于客户或产品的业务问题时，数据科学家都必须中断手头工作，手动梳理模式、编写 SQL 查询、执行处理、输出分析并撰写建议报告。这种高频的中断严重侵蚀了核心生产力。</p>
+<p>为了解决这一问题，第一代试验方案采用了最直觉的<strong>巨型提示词架构</strong>（Mega-prompt）：将 <strong>Snowflake</strong> 的数据库 Schema 完整导出，连同用户提问一起注入到 System Prompt 中，让大语言模型直接生成 SQL 查询。开发者再通过手动复制粘贴来验证 SQL 的可执行性。这一阶段的核心价值在于验证了基础模型在拥有良好上下文结构输入时具备生成合法 SQL 的能力基准，但单一提示词方案缺乏足够的工程护栏（Guardrails）与环境上下文支撑。</p>
+<details>
+<summary>Original English Source</summary>
+<p>And this was maybe about a year ago, so I would say I'm pretty early to this, but that was when it was like Sonnet 3.5 and things weren't as sophisticated as they were today. And I tried to actually explore this out, see what we could do about it. I went around to various job functions at Vercel—marketing, sales, finance, legal—and I asked them, &quot;What do you hate most about your job?&quot;</p>
+<p>And the most compelling use case I heard was that the data team, they were growing. They were a very lean team, but Vercel was growing faster. You know, they had so much more data from customers, analytics, metrics, sales. They just had to keep on aggregating and keep on making available for themselves to use. And at this time, if you think about what the data science people ever have to do: whenever someone from marketing or sales has a question about a customer or product, the data science team has to drop everything they're doing, write the query, process it, do an analysis, and come back with some recommendation on what to do. And this was really killer to productivity. You know, the data team did not want to drop everything and just write queries all day.</p>
+<p>And so I worked with our VP of Data to try to build a better way for them to operate this way. And so if you think about the very first thing you would ever do if you want to try to use AI to solve a problem: you may just build like a huge mega-prompt. You have a question, you pass it into an LLM, you have it respond, and that's it. This was how the first version really looked. Honestly, I asked them for a dump of the Snowflake schema. I pasted it into a system prompt with a question, and then when it generated SQL, I actually copy and pasted that in and just ran it myself. I just wanted to see: are the models good enough today in order to write valid SQL given some decent structure?</p>
+<p>And I would say this gave us a little bit of confidence that, you know, models today aren't that good, but maybe we can harness engineer or make the context around it a little better and give us some more guardrails to operate a little better.</p>
+</details>
+<h3>从链式多智能体到自主状态机的架构探索</h3>
+<p>在剖析真实数据科学家的工作流时，整个过程通常涵盖四个关键阶段：解析业务提问、在语义层探索表关联范式（Join patterns）、执行 SQL 查询并在失败或成本过高时进行回溯重试、最后生成可视化图表与分析报告。</p>
+<p>基于这一认知，团队与数据副总裁合作设计了第二代智能体——<strong>D0（DZero）</strong>，采用了<strong>多智能体流水线</strong>（Multi-Agent Pipeline）架构：</p>
+<ul>
+<li><strong>查询解析智能体</strong>（Query Agent）：负责理解并规范化业务问题；</li>
+<li><strong>规划智能体</strong>（Planning Agent）：配备 <code>read_entity_yaml</code> 和 <code>search_schemas</code> 工具，专门负责探索语义元数据并制定执行计划；</li>
+<li><strong>执行智能体</strong>（SQL Execution Agent）：负责生成并运行 SQL；</li>
+<li><strong>报告智能体</strong>（Reporting Agent）：负责整合数据并输出结论。</li>
+</ul>
+<p>这种链式架构实现了从提问到回答的端到端闭环，告别了人工复制粘贴。但在实际运行中很快触碰到了架构天花板：链式传递中，下游智能体只能接收到上游生成的摘要和局部代码片段，丢失了大量上下文细节，无法实现全局反思与历史动作复盘。</p>
+<p>团队随之演进到第三代方案——<strong>单体自主状态机智能体</strong>（Mega-Agent with Self-Managed State）。该架构使用单次长程运行（例如最大步数设置为 100 步），赋予单个 Agent 完整的全局上下文以及自我管理状态的能力，使其在规划、构建、执行和汇报之间自主流转。当遇到执行报错或表连接异常时，Agent 能够自主回溯、重新读取语义层并纠正错误。然而，当将此系统分发给部分受信任的内部员工进行业务实测时，由于真实业务提问的复杂度和多样性远超预期，系统评测得分仅达到约 30%，难以通过人工穷举场景来实现规模化泛化。</p>
+<details>
+<summary>Original English Source</summary>
+<p>And so if you actually think about what a data scientist actually needs to do when they get a question: they have to process the question, they may have to explore the semantic layer and actually figure out what the join patterns are, they will actually go and execute the SQL, they may go back and do that again if the SQL did not execute or was too expensive, and they'll eventually report on it, including visualize the data, maybe write some paragraphs, maybe do a retro, maybe do some other stuff.</p>
+<p>And so if you think about those different phases, me and the VP of Data tried to sit down and map those out into specific agent workloads. And so the second version of this data science agent, called D0—I'm going to reference D0 from now on—is you ask a question, we have a query agent that passes on a query to the planning agent that will then have an execution agent, etc.</p>
+<p>And if you chain all of these together, you actually get something that looks like this where each agent has a very dedicated system prompt focused to what that does with tools scoped to exactly that function. So example here, you can see that for the first one, the planning agent has a read entity YAML and a search schemas tool. And so it will only use those capabilities until it has an answer to pass on to the planning agent, and then to the SQL agent, and then to reporting.</p>
+<p>And this was getting better. You know, we were able to get away from having to copy and paste SQL and have to come back and report on it. It was now actually doing like the end-to-end loop from question to answer. But we started hitting some walls with this architecture.</p>
+<p>And around this time we came to the conclusion that what you actually need is one agent with all the mega context within it and for it to sort of manage its own memory. You know, this was around the time when we realized that you want to actually have the agent be able to look back on what it's done, sort of reflect and figure out the steps that got to get here. And with the previous model, you may have noticed that the only thing that the next agent gets is a summary and a small snippet of the previous thing that was done.</p>
+<p>Now this way, you can imagine that you have one mega agent and internally it manages its own state. At some points it's planning, some points it's building, some points it's executing, and some points it's reporting. And this is sort of what it looked like: you have one big AI call, maybe max steps 100, and you give it the ability to manage its own state based on where it's at inside of its execution journey. And so you can see similar tools, you can see a similar shape, but the best part about this is if it ever ran into an error when executing or joining, it could go back and explore more, or it could go and read more and figure out what it was doing wrong.</p>
+<p>And it was very good at this point. We were pretty confident in the actual system at hand and we actually spread it to a few trusted members. You know, this is a very powerful tool and we didn't really want to put it in the hands of the wrong people or people that were using very critical workloads. So we got it into a few people's hands and the immediate response was it was awful. You know, we thought we were cooking. We thought this was nailing 30% of our evals, but we couldn't have anticipated some of the questions that were being asked. And for us to spend more time manually mapping out some of these scenarios, it didn't seem like a very scalable way to do this.</p>
+</details>
+<h3>文件系统范式突破：沙箱与 Skills 驱动的架构成熟</h3>
+<p>转折点出现在 <strong>Claude Code</strong> 与 <strong>Opus 4.5</strong> 的发布。团队观察到，这类先进的编码工具之所以表现出质的飞跃，其核心秘密在于<strong>文件系统智能体</strong>（File System Agent）的架构范式：系统不再给模型灌输高度受限、死板定制的 API 工具集，而是提供极简的标准基础工具——<code>list_files</code>、<code>read_file</code>、<code>write_file</code> 以及 <code>run_bash</code>。大语言模型天然在海量代码与文件操作数据上接受过充分训练，能够自主在文件系统中探索、检索、编写临时脚本并执行验证，从而激发出强大的涌现行为（Emergent Behavior）。</p>
+<p>基于这一深刻洞察，团队对 D0 进行了彻底的架构重构：</p>
+<ol>
+<li><strong>沙箱运行环境</strong>（Sandbox Runtime）：智能体运行在隔离沙箱中，系统将企业完整的语义层（Semantic Layer）以文件形式直接 Dump 进沙箱文件系统；</li>
+<li><strong>极简系统工具链</strong>：赋予 Agent 基于 NPM 包 <code>bash-tool</code> 的通用 Shell 执行与文件读写能力，辅以极少数 Vercel 特定的业务工具；</li>
+<li><strong>基于用例沉淀的技能库</strong>（Skills Directory）：为了避免智能体每次启动都从零上下文开始探索，团队建立了一个定期任务，对系统每天处理的数千次内部业务查询（如客户分析、指标聚合、账单追踪、NPM 下载量等）进行模式提取与抽象提纯，沉淀出约 100 个开箱即用的 <strong>Skills</strong> 模块。</li>
+</ol>
+<p>重构后的系统在基准评测（Eval Score）中的表现直接<strong>翻倍</strong>。不仅大幅提升了长尾问题的解决率，更催生了广泛的行业共鸣——相关复盘博文上线当周贡献了 Vercel 全站 70% 的访问流量。此外，Vercel 还推出了开源技能生态平台 <strong>Skillsh</strong>（skills.sh），成为社区查找和运行 Agent 技能的主流标准。</p>
+<details>
+<summary>Original English Source</summary>
+<p>And then Claude Code and Opus 4.5 came out. Well, more like Opus 4.5 came out in tangent with Claude Code, which is so powerful. They sort of unlocked the concept of a file system agent, and we on the side were like, &quot;Wow, Claude Code and Opus 4.5 is basically AGI compared to what we had before.&quot; It would answer most of our questions without even missing a beat compared to the hand-grown agent we had.</p>
+<p>And when we tried to step back and wonder what we were doing wrong and why this was so much better, we realized that the big unlock was that it was just a file system. It had a very minimal set of tools: list file, read file, run bash, and we gave a few more here for our own data agent use case. But the biggest thing was it was able to use the tools that agents are well trained on and was able to explore and write work where it needs to. Claude Code was not giving it a very prescriptive set of tools. It was sort of just letting it go wild and explore emergent behavior.</p>
+<p>And so from this, we learned that you can really just use a file system. We saw the learnings from Claude Code and how powerful it was given that it just executes locally. And we tried to rebuild it in a way that was very Claude-Code-esque. It was now going to run in a sandbox. That sandbox would dump the whole semantic layer into it. The agent would be able to grep, bash, read file, write file all around to figure out what it needs, and we would just sprinkle a few tools on top to make sure it could do everything that is Vercel-specific.</p>
+<p>And this was actually the biggest unlock ever. The leap from single agent to Claude Code SDK, and then from Claude Code SDK to file system agent in general, fine-tuned or purpose-built for our use case, was an amazing leap. At this point, the eval score basically doubled.</p>
+<p>It's very simple: you just give it a bash tool—we have a nice helper called <code>bash-tool</code> on npm—and you attach it to a sandbox, and you can attach files to the sandbox for it to read, write, and execute.</p>
+<p>And after this revelation and after I saw that we were passing so many of the questions that we failed to do before, I wrote this banger blog post. The week that I wrote this, it was responsible for 70% of our vercel.com traffic.</p>
+<p>And after that, the next logical step was that we want to figure out the common use cases we had. By then, we were getting thousands of queries a day from people wanting everything from customer metrics, sales metrics, number metrics, npm downloads. And it turns out that a lot of these queries are actually the same in shape: there's only so many ways you can do an aggregation, only so many ways you can look up a product, only so many ways you can do billing info.</p>
+<p>And so we actually have a recurring job that takes the most recent queries and tries to distill them into a skill. And right now we have roughly 100 skills that do a mix of aggregation all the way through looking up specific data about certain people. And we found this very effective because every new agent run sort of just starts from nothing—there's really no pre-established context besides the semantic layer and the system prompt. But with a skill, it already starts off with a lot of contextual knowledge that has otherwise already been done.</p>
+<p>This is roughly how it looks: the inclusion of a <code>skills</code> folder is actually very powerful. We also built this tool at Vercel called Skillsh—it's the most popular way to find agent skills and run them yourself.</p>
+</details>
+<h3>Eve 框架：定义智能体时代的 Next.js</h3>
+<p>随着内部各团队纷纷 Fork D0 代码来构建各自领域的 Agent，团队意识到：开发者不应该每次都从最原始的 Prompt 和第一性原理重复造轮子，而应该直接站在最佳实践的终点起步。</p>
+<p>如同 <strong>Next.js</strong> 通过“文件系统约定即基础设施”（Pages 映射 CDN、API 映射 Serverless Functions）简化了 Web 开发一样，智能体的构建也应当具备类似的直觉性——开发者只需按照规范组织目录结构，框架自动完成运行时编排与部署：</p>
+<ul>
+<li><code>skills/</code>：存放业务预设经验与上下文沉淀；</li>
+<li><code>tools/</code>：定义 Agent 可调用的工具函数；</li>
+<li><code>channels/</code>：配置交互与通信渠道（Slack、Webhook 等）。</li>
+</ul>
+<p>基于此理念，Vercel 推出了面向智能体开发的开源框架 <strong>Eve</strong>（访问入口：<code>eve.dev</code>）。</p>
+<p>在架构设计上，一个完整的生产级 Agent 包含<strong>运行时</strong>（Runtime）与<strong>通信渠道</strong>（Channels）。Eve 遵循开放标准设计，支持通过开源适配器对接 PostgreSQL、OpenAI Responses API 及 Docker 容器环境；同时在 Vercel 平台上提供了一键式的原生支持与全链路可观测性（Observability）：</p>
+<ul>
+<li><strong>Vercel Workflows</strong>：保障长时间运行任务的状态耐久性与断点续跑；</li>
+<li><strong>Secure Sandbox</strong>：提供安全隔离的代码与命令执行环境；</li>
+<li><strong>Vercel Connect</strong>：一键生成短期 OIDC 令牌，保障数据库与外部系统连接的安全性；</li>
+<li><strong>开箱即用可观测看板</strong>：实时追踪 Agent Runs、工具调用链、单步执行耗时、Token 成本估算与性能优化建议。</li>
+</ul>
+<details>
+<summary>Original English Source</summary>
+<p>And I'm saying all this because this journey is something that most of you may hit: where you start from something simple, you gradually add complexity, and you eventually hit a system in which you can ship to prod.</p>
+<p>And I'm telling you this because at every step along building this agent, someone at Vercel was agent-curious and they tried to fork off of my DZero agent and build their own. And at every step, we sort of had a better way to do something that was not previously known. And we were wondering: what if people today could start from the very last insight and not have to ever start from just a simple prompt or from reinventing best principles from first principles?</p>
+<p>And so we actually thought: what if we built the Next.js for agents? For those that don't know, Next.js is a popular web framework that Vercel built that invented this thing of file system framework-defined infrastructure. You don't have to worry about where things go; you just have to write files in the right conventions and it automatically declares where they should go. Your pages go to the CDN, your serverless functions go there, your caching goes in the middle.</p>
+<p>And we thought building agents should be this simple. You should only have to create a <code>skills</code> folder, a <code>tools</code> folder, a <code>channels</code> folder, and you should be able to just declare these very easily, and the framework should know exactly how to make an agent out of it.</p>
+<p>And that's why two weeks ago we released Eve. Eve is an agent framework like the Next.js for agents where it's very easy: from just starting with a sample template to having a fully ready agent, being able to add in your own custom knowledge, your own custom tools, and even integrate it into the channels that you are familiar with.</p>
+<p>This is roughly what we think an agent actually looks like: an agent has a runtime and it has channels. And in that runtime, you're going to have durability, you're going to want to run things in an isolated environment, you're going to want to call into different models, and you're going to want to have connections.</p>
+<p>And we built this with open source in mind. We built Eve so you can plug in your own open source adapters for Postgres, OpenAI's responses API, Docker, and other connectors. But we also made it incredibly easy to deploy in Vercel: Vercel Workflows for durability, Sandbox for secure execution, and Vercel Connect (something we just released to make it easy to generate short-lived OIDC tokens for connections).</p>
+<p>And we actually rewrote the whole DZero agent in Eve as we were building Eve. The file system looks very simple: you have a bunch of system instructions, a couple skills, a couple tools, and it's very easy to compose this into a real agent and very easy to iterate on.</p>
+<p>We gave this out to a few beta customers before we fully released it at our London event. One company that partners closely with us, Aura, rebuilt their agent (a mini-cloud testing agent that goes to websites, installs them, and tests services) and saw incredible success from the ground up using Eve compared to using an off-the-shelf cloud agent: fewer steps, higher success rates, and better insights.</p>
+<p>When you deploy Eve to Vercel, you get observability out of the box: you see all agent runs, tool calls, each step it takes, estimated costs, and potential optimizations. You can get started today at eve.dev: clone it, start from a template, deploy easily, or self-host if needed.</p>
+</details>
+<h3>企业级智能体的终局思考：垂直自研胜于通用外购</h3>
+<p>在构建内部 Agent 的过程中，团队曾深度对比测试了市面上多家融资充裕的垂直智能体初创公司产品（例如声称连接 Snowflake 即可全自动执行分析的现成 Agent）。实测结论表明，<strong>真正决定智能体业务表现上限的，是企业特有的深层领域知识</strong>（Domain Knowledge）。</p>
+<p>以 Vercel 为例，作为一个以 Web 技术为核心的平台，其业务数据中包含了大量针对网站特性、部署属性及深层关联逻辑的特定上下文。通用的开箱即用智能体无法理解这些细颗粒度的业务纽带，因而极易在复杂场景下失效。企业如果希望最大化发挥 AI 的业务价值，最佳路径是基于自有业务知识构建专属智能体。</p>
+<p>目前，Vercel 内部已稳定运行着约 20 个达到 PMF（Product-Market Fit，即高频依赖、深度可用）标准的业务智能体：</p>
+<ul>
+<li><strong>营销复盘智能体</strong>：自动化分析营销活动效果并精准推荐高价值触达人群；</li>
+<li><strong>法务初审智能体</strong>：在商务谈判初期自动完成合同的首轮标记与红线比对（Redlining）；</li>
+<li><strong>数据科学智能体</strong>：自动化处理海量跨表指标查询。</li>
+</ul>
+<p>智能体的全面铺开极大解放了核心人员的生产力——数据团队无需再整日疲于应付零散查询，得以将全部精力投入到提升 Snowflake 算力性能、引入新数据源以及完善核心数据资产建设中。无论对于大型企业还是初创团队，借助规范化的文件系统架构与框架工具沉淀自身领域知识、构建专属智能体，已成为提升企业综合生产力的确定性路径。</p>
+<details>
+<summary>Original English Source</summary>
+<p>And the reason why I bring this up is because I hope that there will be more and more business-specific use case agents. Before we built DZero, we actually battle-tested a lot of the industry well-funded startups that were doing these vertical agents dedicated to taking your Snowflake instance and running queries against it.</p>
+<p>But we found out that what really makes this agent good is it has a lot of very specific company knowledge. The way that Vercel is a web-based company: we have a lot of customers that have websites and web properties. That goes a lot deeper into when you should query for what and what things link to what. And so a lot of these off-the-shelf agents, they're great to try, but if you really want to get the most juice out of a squeeze, you should really try to build your own agent and add in as much company-specific knowledge as you can.</p>
+<p>Today, we've had roughly 20 decently PMF agents at Vercel that range from marketing retros to figure out who to reach out to, to the first-ever redline of a contract when legal sees a new negotiation, all the way to my data science agent helping with data queries. And that goes to show that we have been very agent-filled. All of this stuff is actually saving us a lot of time.</p>
+<p>The data team has never been more productive. They have more time to go and improve the performance of Snowflake, to add new data sources that were missing, to fill in the gaps that they previously did not have time to because they were so busy writing queries.</p>
+<p>And I think it's never been easier for you at your big, small, medium-sized company to sort of automate away some of the things that you do not want to do or some of the things that you're spending too much time doing. A lot of HR, finance, and sales can be somewhat automated with agents. And I think Eve is the best way to build said agents today.</p>
+<p>These are my socials. Thank you all for coming and listening. I'm Andrew and I'll be around if you want to chat outside.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Vercel" class="entity-link company-link">Vercel</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Eve" class="entity-link product-link">Eve</a>, <a href="/search/?q=Claude Code" class="entity-link product-link">Claude Code</a>, <a href="/search/?q=Claude 3.5 Sonnet" class="entity-link product-link">Claude 3.5 Sonnet</a>, <a href="/search/?q=Claude 3.5 Opus" class="entity-link product-link">Claude 3.5 Opus</a>, <a href="/search/?q=Snowflake" class="entity-link product-link">Snowflake</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+      
+        <span class="tag-pill tag-pill--no-page">file-system-agent</span>
+      
+        <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+      
+        <a class="tag-link" href="/tags/developer-tools/">developer-tools</a>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

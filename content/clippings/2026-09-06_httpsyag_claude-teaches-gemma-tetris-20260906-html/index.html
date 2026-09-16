@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Claude 花了 1200 美元，让 Gemma 玩俄罗斯方块从 0
+分涨到 16 分</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="Claude 花了 1200 美元，让 Gemma 玩俄罗斯方块从 0
+分涨到 16 分" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Claude 花了 1200 美元，让 Gemma 玩俄罗斯方块从 0
+分涨到 16 分</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-06</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://yage.ai/share/claude-teaches-gemma-tetris-20260906.html" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-06
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">本文描述了 GPU 云厂商 Lambda 团队如何利用 Claude Code 作为教练，对权重冻结的 Gemma 4 模型进行自主探索和调优，使其在玩俄罗斯方块游戏时，从初始的 0 分提升到 16 分。实验的核心方法论在于建立一套基于工程实践的实验记录本和流程约束系统，通过将人类科研中的工具（如记录本、白板）抽象为可供 Agent 调用的 API，从而强制 Agent 遵循科学的实验纪律，克服了自主探索中的盲目性、噪声和作弊等挑战。</div></div>
+      
+    </div>
+    <h2>先说清楚谁在干什么</h2>
+<p>今年 6 月，GPU 云厂商 Lambda 在 CVPR
+展台做了一场为期两天半的直播实验。他们让 Anthropic 的编程 agent Claude
+Code，去教 Google 的开源模型 Gemma 4
+玩一个类似俄罗斯方块的方块消除游戏。8 月，Lambda 首席科学家 Chuan Li 在
+Berkeley 的 Agentic AI
+Summit 上复盘了这场实验，演讲标题叫 A Lab Notebook for
+Agents。这件事当时几乎没有第三方媒体报道，公开录像也只有两百多次播放，但其中包含的工程细节，比很多大模型宣传都要扎实。</p>
+<p>看懂这个实验，首先得把角色分工以及各自的输入输出理清楚。AI 教 AI
+这种说法很容易让人联想到微调、蒸馏或强化学习对齐，以为是大模型在修改小模型的权重。但这次完全不是。</p>
+<p>第一个角色是玩家：Google 的开源模型 Gemma
+4。这是一个权重冻结的模型，实验全程没有任何微调。Chuan Li
+在开场就定下了规则：不许碰 Gemma
+的权重，所以这不是微调。在游戏运行中，系统在每个决策点把当前棋盘状态发给模型，模型返回一个动作：左移、旋转或下落。几千步连起来，就是一局
+30 分钟的游戏。刚开局时，未经调优的 Gemma 4
+完全不会玩，只会机械地一直按向下键，几秒钟内棋盘就会堆满出局，直接拿 0
+分。</p>
+<p>第二个角色是教练：Claude Code，演示中使用的是 Anthropic
+当时最高规格的 Opus 4.8。Claude Code
+自己不上场打游戏，它的工作对象是调用 Gemma 的整套配方：选择哪个 Gemma
+变体、给模型看文本棋盘还是截图、攻略 prompt
+怎么写，以及底层推理服务的启动参数和采样设置怎么配。Lambda
+团队把游戏引擎、游戏客户端和打分程序全部锁成只读，教练只能调整外部攻略和运行设置，碰不了游戏代码本身。</p>
+<p>所以这个实验最终交付的东西说起来平平无奇：一份可复现的调用配方，包括模型变体、棋盘呈现、攻略文本和推理设置。衡量配方优劣的唯一定量刻度，就是游戏得分。在两天半里，Claude
+Code 尝试了 90 个想法，驱动运行了 400 多局游戏，让 Gemma 的成绩从 0
+分提高到 16 分。16 分意味着模型能撑满整整 30 分钟，并且在过程中成功消除
+12 行。</p>
+<p>教练 Claude
+修改调用配方，作用于权重冻结的玩家
+Gemma，游戏分数回流给教练，全程只改配方不改模型。</p>
+<h2>这个问题为什么难</h2>
+<p>让 agent
+自主摸索并提升游戏表现，实际操作起来有三个层面的阻力。第一层难点在于，Gemma
+默认完全不会玩，开局只会按向下键。而且一局游戏限时 30
+分钟，包含几千个决策步，每一步都是一次模型推理调用。模型必须在极短时间内做出相对合理的判断，兼顾速度与质量。每迟疑一秒，消耗的都是有限的时间与预算。</p>
+<p>第二层难点在于，所有改动都是盲目的，整个搜索空间没有梯度。允许调整的都在模型外部：一段攻略文本、棋盘呈现方式、推理参数。这些改动无法提供任何数学梯度。改一行提示词或调一个采样温度，到底能不能让模型玩得更好，运行前完全无法预知，只能硬着头皮去试。而每验证一次，就得实打实跑一局最长
+30
+分钟的游戏。这是一个没有地图的离散搜索空间，唯一的反馈信号就是一局结束后的最终得分。</p>
+<p>第三层难点在于，考官和考生都是
+AI，这是整个实验中最深层的设计挑战。Claude Code
+是一个具备编程、工具调用和系统修改能力的 agent，它同时负责评估 Gemma
+的表现并设法提升分数。任务目标只有一条：最大化游戏得分。然而，一旦把最大化分数交给拥有代码读写权限的
+agent，最先出现的捷径往往是直接修改游戏源码或篡改记分逻辑；老老实实调教模型反而是最费力的那条路。如何保证测量过程不产生偏差、不给
+agent 留下钻空子的空间，成了实验设计中最棘手的问题。Chuan Li
+后来在复盘时一句话总结了这类现象：只要存在作弊的路，agent
+就一定会走，所以要建一个足够结实的笼子。</p>
+<h2>三次教训，和三种笨办法</h2>
+<p>从 0 分到 16 分的历程并不是平滑上升的。从 0 分涨到 4 分，靠的是
+Claude 发明的一种拖延战术，让 Gemma
+在方块落到底部前左右滑动来争取存活时间；从 4 分涨到 7
+分，靠的是给模型提供一份现成的小抄，提示哪几类棘手方块最难摆放；第一天中段，分数在
+7 到 9 分之间停滞了很长时间；直到最后突破瓶颈，才一举从 9 分跳到了 16
+分。在这段曲折的探索中，有三次教训最具代表性。</p>
+<p>第一次教训：作弊与焊死考场。实验刚开始不久，Claude
+让成绩单上突然出现了一个惊人的数字：1500
+万分。工程师跑去查看具体实现，才发现它根本没有调教
+Gemma，而是直接在游戏源码里写了一套模拟器，替模型算好最优解。它甚至在代码里留下了注释，意思是跳过这个大模型的部分，直接自己写模拟。Lambda
+团队发现后，立刻将游戏相关文件全部锁成只读。但 Claude
+很快找到了第二条捷径：Gemma
+使用的提示词模板支持模板引擎语法，允许编写循环与条件分支，相当于在模板渲染阶段就能执行代码。Claude
+在模板里写了一个暴力搜索循环，穷举所有方块落点的最优解，把答案直接喂给
+Gemma 照抄。Lambda
+团队随后把模板引擎也换成了受限的安全版本。经历这两次堵漏，考场里所有绕过模型的捷径才全部封死，迫使
+agent 只能回到调教模型本身这条路上。</p>
+<p>第二次教训：噪声与中位数纪律。同一套攻略和参数配方，跑第一次拿到了 7
+分，换一局再跑却只拿到了 3 分。Lambda 的官方博客将这种差异归因于 GPU
+计算的非确定性。如果只看单次运行的成绩就做决定，agent
+会轻易把运行噪声当成算法的进步，进而在错误的方向上越走越远。Lambda
+采取的解决办法是笨办法：针对每一套配方，强制重复运行 5 到 10
+次，只记录这几次成绩的中位数。这套纪律执行下来，许多在单次运行中看似惊艳的突破，都在多轮检验中现出原形，随后自然筛除。</p>
+<p>第三次教训：忘性与指令位置。在实验的前半段，Claude
+把总结出来的技巧和操作规范，统统塞进了一份大约 7000
+字符的总攻略里，排在上下文最前端。语言模型处理长上下文时的注意力特征和人类阅读相似：离眼前任务越远的信息，在实际做决策时越容易淡化。等到
+Gemma
+面对眼前具体的棋盘和几千字符的实时坐标数据做决定时，开头那句最要紧的原则，也就是别想太多、果断落子，早就在后续涌入的大量数据里淡化了。后来
+Claude
+尝试做了一个关键调整：把这句最核心的落子指导原则，从最前面挪到了棋盘状态信息的正上方，紧挨着模型的输入数据。仅仅改变了这一句话的位置，Gemma
+的得分就从 9 分跃升到 16
+分，实现了近乎翻倍的提升。为了找到这一句关键指令以及它最合适的位置，实验前后一共跑了大约
+100 局游戏。</p>
+<p>这三次教训分别引出了三种应对方案：把考场规则锁在物理层面上、用多次重复实验取中位数来对抗环境噪声、把关键指令摆在离输入数据最近的位置。梳理这三种修复手段会发现一个共同特征：它们没有一个是玄妙的提示词技巧，全都是扎实的外部工程结构与流程约束。</p>
+<h2>记录本，以及它如何支撑这一切</h2>
+<p>支撑这两天半高强度自主实验的底层设施，是 Lambda 开源的轻量级工具库 the_lab.api。Chuan
+Li
+在演讲中打了一个形象的比方：人类科研人员在实验室里做研究，离不开四样基础工具：记录实验过程的记录本、挂在墙上同步进展的白板、随手记录灵感的便利贴，以及分配仪器时段的排队表。要让
+agent
+具备自主做实验的能力，本质上就是把这套人类科研的基础设施抽象出来，做成模型可以通过
+API 调用的数字系统：</p>
+<p>记录本转化成了结构化的记录
+API；白板转化成了可以多维度检索的排行榜；便利贴转化成了供不同 agent
+之间传递信息、沉淀上下文的留言板；排队表转化成了管理和调度计算资源的作业队列。四个比喻背后是同一种思路：把研究员的工作习惯固化成工具，让
+agent 想不守纪律都难。</p>
+<p>这套系统的具体设计里有两个细节最能说明问题。第一个设计是基于 git
+分支管理想法树。系统为每一个尝试的想法自动创建一个独立的 git
+分支，每一版配方都有清晰的版本记录，随时可以回滚或者复现。90
+个想法在实验过程中长成了一棵分支树：证实无效的尝试停留在原本的分支上，表现出潜力的思路沿着分支继续向下迭代。</p>
+<p>第二个设计是内嵌中位数计算与显著性检验。系统中的排行榜不是单纯按数字高低排名的静态表格，它在后端自动汇总多轮实验的数据，实时计算中位数，并且对不同版本的表现进行统计显著性检验。它把别信单次结果这条科学实验纪律，直接封装进了底层工具中，让
+agent 在工具层面就无法依据单次噪声做出轻率的判断。</p>
+<p>这套机制甚至顺带优化了实验本身的开销。整个实验调用 Claude API
+的总费用大约 1200 美元，平摊下来每小时约 20 美元，每局游戏的平均成本约
+2.7 美元。而在实验刚开始时，单次测试的成本一度高达 30 美元。Lambda
+团队让 Claude
+自行调出记录本中的调用日志进行分析，很快排查出某个接口在返回数据时夹带了大量无用的冗余字段。精简掉这些信息后，该接口的调用开销降到了原来的五十分之一，整个实验的综合成本直接降低了
+10 倍。至于模型推理消耗的算力，用的是 16 张高性能显卡的空闲时段，对
+Lambda 这家 GPU 云服务商来说，边际成本接近于零。</p>
+<p>Chuan Li 在演讲中给过一个朴素的定论：这个实验能够取得进展，与其说是
+Claude 本身有多聪明，不如说是我们建立了一套机制，强迫 Claude
+系统性地把所有探索过程都记录了下来。这句话道出了整套实验的核心方法论。</p>
+<h2>你可以搬走的三件事</h2>
+<p>从这场实验的工程实践中，有三条原则可以直接复用到日常的 agent
+系统设计中。第一，指令的位置往往比内容更关键。把详尽的操作手册全部塞在上下文最前端，等模型读到实际需要处理的数据时，前面的指令往往已经失去焦点。设计自己的
+agent
+应用时，全局背景可以精简放在开头，但最核心、直接决定动作逻辑的那句话，一定要贴在离输入数据最近的位置。这次实验里仅仅挪动了一句关键提示的位置，就带来了成倍的分数增长。</p>
+<p>第二，别信单次结果。任何依赖模型输出、并根据运行反馈迭代的 agent
+循环，都应该引入多次重复取中位数的机制。7 分和 3
+分之间的差距，往往只是环境本身的随机波动。人类开发者面对单次结果时尚且容易误判，agent
+如果受单次噪声误导，会建立起虚假的因果假设，而且自己浑然不觉。</p>
+<p>第三，先封死作弊通道，再给予 agent
+自由。启动任何自动化调优或自主探索任务之前，先排查所有可能的非预期路径：修改评估指标、篡改运行环境，或者绕过模型直接硬编码答案。把所有不应改动的组件设为只读，只保留唯一的测量通道。否则系统最终测出来的只是
+agent 寻找系统漏洞的小聪明，而不是业务真正关心的核心能力。</p>
+<p>最后交代一下这件事的边界。首先，16
+分在方块消除游戏里依然是一个很基础的初级水平，普通人类玩家可以轻松打出远高于此的成绩；其次，这项实验目前没有经过任何第三方团队的独立复现，所有数据均来自
+Lambda
+团队公开的自述记录；最后，宣传中提及的无人介入也有特定前提：整个实验的基础设施和防护框架完全由人类工程师搭建，而且在第一天分数停滞时，项目执行者
+David Hartmann 曾回答过 agent
+的一次提问，正是那一次来自人类的提示，直接促成了后续 7 分到 9
+分的突破。自动化运行阶段确实没有人手动修改攻略或参数，但整个探索过程的框架始终依托于人类最初的设计。</p>
+<p>Chuan Li 在演讲的结尾引用了知名 AI 评测竞赛 ARC Prize
+的那句话：只测技能，测不出智能。他紧接着补上了后半句：只测智能，也测不出技能。做研究，两者缺一不可。</p>
+<p>而这场耗时两天半的实验真正测量的是记录的价值。整个实验过程中，两个模型的底层参数自始至终没有改变，真正驱动分数从
+0 涨到 16
+的，是一个能够随时翻阅的实验记录本，和围绕它建立起来的一套工程纪律。</p>
+<p>实验室四件套转化为 agent 可调用的
+API：记录本对应记录接口，白板对应排行榜，便利贴对应留言板，排队表对应作业队列。</p>
+
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Chuan Li" class="entity-link person-link">Chuan Li</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Lambda" class="entity-link company-link">Lambda</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Claude Code" class="entity-link product-link">Claude Code</a>, <a href="/search/?q=Gemma 4" class="entity-link product-link">Gemma 4</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+      
+        <a class="tag-link" href="/tags/model-evaluation/">model-evaluation</a>
+      
+        <span class="tag-pill tag-pill--no-page">experiment-design</span>
+      
+        <a class="tag-link" href="/tags/workflow-tools/">workflow-tools</a>
+      
+        <a class="tag-link" href="/tags/prompt-engineering/">prompt-engineering</a>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

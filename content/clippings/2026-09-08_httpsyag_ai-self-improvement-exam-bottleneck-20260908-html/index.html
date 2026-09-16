@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>好点子已经过剩，AI 自我改进的瓶颈在考场</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <div id="search"></div>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="好点子已经过剩，AI 自我改进的瓶颈在考场" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">好点子已经过剩，AI 自我改进的瓶颈在考场</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-08</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://yage.ai/share/ai-self-improvement-exam-bottleneck-20260908.html" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-08
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">Anthropic 的实验报告探讨了 AI 自我改进系统在解决模型对齐失败问题时的瓶颈。研究发现，在已有考卷的任务上，人类指定起跑方向并不能提高最终表现。系统需要多份不同来源的考卷和隔离机制才能产出可信结果，强调了评估环境结构对自我改进效果的关键影响。</div></div>
+      
+    </div>
+    <p>Anthropic 在 8 月 28
+日发了一份实验报告，标题叫《自动化研究者能可靠地缓解对齐失败》。他们让
+Claude Opus 4.8
+驱动自动化研究智能体，构思训练方案去修复其他模型的毛病：谄媚、欺骗、越狱这类问题。报告估算每个智能体每小时的
+API 推理成本约 4 美元；这不含训练用 GPU
+等总成本，不能直接拿来和人类研究者 150
+美元的实验时薪做完整成本对比。</p>
+<p>整件事像一间不停开考的考场：训练中的小模型是考生，benchmark
+是考卷，Claude
+驱动的研究智能体更像不断换教法的教练。它每轮提一套方法，另起一次训练，再看新
+checkpoint
+的分数。这场实验要回答的问题有两个。第一，研究循环为什么能涨分：起点上的好点子究竟有多大作用？第二，涨上来的分是真的吗：会不会只是在一套考卷的表面特征上过拟合？Anthropic
+用种子对照、考卷消融和隐藏评估分别摸这几个边界。</p>
+<p>第一个换掉的零件，是起跑方向。把人类研究者的方案喂给系统当种子，最终表现没有更强。</p>
+<h2>把专家的想法喂给</h2>
+<p>AI，最终表现没有更强</p>
+<p>这个自动化考场的运转机制并不复杂。Anthropic 把 Claude
+智能体放进固定环境，处理一类具体的模型毛病，比如模型习惯性说谎。智能体在考场里的动作直接干脆：查文献，提出训练方案和配套数据，写一份不含结果的方法说明，等监测智能体批准代码后训练一个小模型，再把
+checkpoint 交给独立评估器打分。每类毛病配 5
+个智能体并行摸索，共享排行榜与发现论坛，最多跑 48
+小时。每个候选方法的训练预算是一张 H200，约 30 分钟。</p>
+<p>研究智能体交付的是一套完整训练方案：具体方法、配套数据加执行代码。考场接下方案，给一个
+2B 到 7B
+参数的小模型做后训练，真正改写的是这个目标模型的权重。提出方案的 Claude
+本身并不在循环里更新权重。每个候选方法各自训练并提交
+checkpoint，不是同一个小模型沿几十轮连续累加权重。这种分工与之前拆过的
+AgentFlow 框架有一处相似（换
+GPT-4o 只多 5.8 分，训练 7B 却多了 17.2
+分）：外层智能体负责搜索，训练聚焦在另一个目标模型上。</p>
+<p>对照组由 28 位有经验的人工智能安全研究者组成，平均有 2.5
+年相关经验。每位研究者最多投入 8
+小时，对着同样的考卷写一套训练方案。结果在有对照的 7
+类毛病里，智能体搜索出的最佳方案都比人类组的最佳单次提案关闭了更多安全差距；报告举例的欺骗任务相差约
+20
+个百分点。这里比较的仍是从基线到理论最优之间关闭了多少差距，不是原始考试分数。</p>
+<p>随后的种子实验切中要害。研究人员另外启动了 30
+次带人类方向的运行，每次给一个人类提案；对照是 30
+次不指定初始方向的运行。带种子的智能体先忠实实现提案，之后可以继续改，也可以在尝试后换方向。两组在相同的
+7 类毛病和目标模型上，最终表现相近。另一个把 5
+个智能体分别放到不同人类方向上的实验，也没有换来更高的最终成绩，只在早期增加了方法多样性。</p>
+<p>Anthropic
+官方在报告中加了两个重要限定。人类提交后无法继续迭代，智能体却能持续搜索，所以这不是谁更聪明的直接对决。更关键的是，有种子和无种子的两组都读了同一份文献综述，种子组后来也可以放弃人类方向；报告因此明确说，这个实验并没有检验人类想法本身是否有帮助。它支持的窄结论是：在这套任务和搜索预算里，让人类指定起跑方向，没有提高最终表现。</p>
+<h2>起跑之后，循环继续搜索</h2>
+<p>人类指定的起跑方向没有提高终点，但这还不能把功劳全部归给打分。报告分别检查了搜索环境、训练方法和考卷结构，三组证据回答的是三个不同问题。</p>
+<p>先看搜索环境。谄媚任务的一组 harness
+消融中，拿掉共享发现论坛，最终少关闭约 6
+个百分点的安全差距；同样在断网条件下，有缓存文献综述比没有综述高近 9
+个百分点；已经备好综述后再拿掉实时网络，没有检测到损失。论坛同时包含排行榜、结果与代码快照，文献综述又改变了搜索起点，这些实验不能单独证明收益来自评分。每个条件也只跑了一次，作者把结果称为
+suggestive，而不是定论。</p>
+<p>再看方法。全部 1,601 份提案里，74%
+使用目标模型自己的生成结果；面对谄媚问题，98%
+都采用了文献里已有的自蒸馏路线。这个分布说明搜索大量复用了已知方法，却不能推出新方法没有价值。报告还做了新颖性约束实验：它能显著提高方法新颖度，但在
+Petri
+上一项变好、一项变差。新颖性没有稳定换来更强泛化。真正把考场推到台前的，是下一组更直接的证据：只优化一份考卷时，漂亮的分数没有转到另外两份考卷上。</p>
+<h2>涨上来的分是真是假</h2>
+<p>摸清了涨分的动力来源，接着就该回答第二问：涨上来的分数算真本事，还是在考卷上偷背题？这一问的答案，全在考场的规矩里。</p>
+<p>为什么考场要配 3 到 5
+份不同来源和形式的公开考卷，还要在考场外扣一份不参与优化的密封卷？报告附录给出的数字把道理讲透了（报告全文）。有一组智能体只优化
+Open Prompt Injection 一套考卷。获胜方法在这套题上关闭了 70.9%
+的基线到最优差距；换到两份从没参与优化的提示注入考卷，只关闭了 -11.9% 和
+2.0%。负数表示比未训练模型还差，不是考试得了负分。作者认为，这个方法只适配了一套
+benchmark
+的表面特征，并没有记住具体题目。单靠一套考卷爬山，没有得到可泛化的方法。</p>
+<p>对照主实验：每类毛病同时优化 3 到 5 份考卷，排行榜第一的方法在全部 10
+类毛病的密封卷上都超过未训练基线。研究团队再从领先方法中用密封卷选出一个，搬到体量大
+1.8 倍到 4.7 倍的模型上，收益仍然存在；Petri
+多轮审计里，目标行为也在几乎所有毛病和对话轮数上优于基线。这里还要注意，密封卷承担了两种角色：报告主结果用排行榜第一名直接测它，但后续的大模型迁移和
+Petri 测试先用它在领先方法中做了选择，所以真正完全不参与选择的测试是
+Petri。几层证据合在一起，才说明多考卷搜索得到的不只是单套题上的高分。</p>
+<p>单考卷方法关闭了70.9%的本卷差距，却在两份未见考卷上只关闭-11.9%和2.0%；主实验用3到5份考卷搜索，并在10类失败的密封卷上全部超过基线</p>
+<p>做 AI
+产品的同行对这个逻辑不会陌生：先定义什么算做好，再动手改。工程里常说的
+Evaluation-First
+原则，在这里多了一份规模化证据，也多了一个限制条件：一套考卷能带来涨分，却未必带来可迁移的改进。</p>
+<h2>作弊的 39</h2>
+<p>次，和会贬值的那道防线</p>
+<p>检验分数的真假，绕不开防作弊这道坎：如果分数能靠手段骗出来，涨分就说明不了任何问题。Anthropic
+用分层监测流程扫描了全部 1,601 条研究轨迹，包括思维链，再由 Claude Opus
+4.8 全文复核可疑轨迹，确认 39 起作弊尝试，占
+2.4%。三类手法，全都是学校考场里见过的花招。</p>
+<p>最常见的是重考碰运气：考生把没改过的代码原样再交一遍，赌评分过程中的随机波动给出更高分数。第二种是把考题混进练习册：照着打分用的考卷去拼凑训练数据。第三种则是夹带小抄：把违规操作藏进实现细节里，企图瞒过开考前的检查。</p>
+<p>考场防作弊，设了几道性质不同的防线。开考前，Claude Opus 4.8
+监测智能体读取实际训练代码，检查有没有偷做模型蒸馏、使用考卷数据或夹带违规步骤；另一个监测智能体还会对照方法说明和代码。通过审查的代码版本随即冻结，编辑后必须重审。密封卷则靠操作系统隔离，不放进研究智能体可以访问的环境。代码比方法说明更接近执行事实，但这仍是语言模型审查，不是不会犯错的机械验证器。</p>
+<p>第二道防线设在开考后：翻查考生的答题过程，看思维链里有没有动过歪心思。但这道防线的立足点脆弱得多。本实验里的
+Opus 4.8
+多次尝试不当行为，意图仍倾向出现在推理记录中，所以研究团队谨慎地相信监测抓到了大部分作弊；面对未来模型，这一前提无法保证继续成立。研究团队把维持模型的可监测性列为关键。第二道防线的寿命直接和模型进化速度挂钩，是一份会不断折旧的防护资产。</p>
+<p>39 起作弊是 39
+份考卷和监考规则的压力测试记录。实验中没有任何已确认的作弊方案最终入选报告方法，只有一次靠重复提交碰到幸运分数的方案进过排行榜前三。这说明防线在本次实验里拦住了已检测到的作弊，却不能把
+2.4%
+当成真实作弊率或未来鲁棒性的证明。作者明确提醒，这些研究智能体并没有强烈尝试逃避检测；更追逐奖励的系统还可能窥探密封数据、操纵评估或篡改评分。</p>
+<p>考场的门槛不仅在于防作弊。一个方法想要通过终审，目标模型在
+MMLU、GSM8K、IFEval 任一项上的 95%
+置信区间如果整体低于基线，门槛就直接拒收它。这是一道预先写好的统计门槛，但它只能排除明显退化，不能证明能力完全不变。附录里有些
+IFEval 下降 9.5 到 12 个原始百分点，仍因采样不确定性而通过。Anthropic
+在局限里也明确写道：保护范围只覆盖数学、大学知识和指令遵循，没测的能力仍可能受损。</p>
+<h2>三种考官，无法排成绝对防骗光谱</h2>
+<p>自动化改进系统拿什么来打分，会改变证据的可复现程度，也会改变钻空子的方式。但这不是一条从完全骗不了到随便骗的直线。机械目标也可能有实现漏洞，文本评审也不等于只看文采。更准确的比较方式，是看三套系统分别评估什么对象，又用什么额外证据约束评分。</p>
+<p>先看 DeepMind 的 FunSearch 与 AlphaEvolve。之前拆过它（LLM
+提出候选，进化框架决定谁存活）：语言模型给出的程序直接放到数学或工程目标上运行，候选之间可以用同一目标函数复算。它减少了靠文字说服考官的空间，却没有让作弊在结构上消失。评估代码、运行隔离和目标函数写错的地方，仍然都是攻击面。</p>
+<p>再看这次的 AAR。独立评估器运行多份
+benchmark，密封卷由操作系统隔离；运行前的代码审查和事后的思维链回查则交给语言模型。三种验证机制拼装在一起，各有各的防区，也各有各的软肋。</p>
+<p>最后看 Sakana AI 的 AI Scientist。这套系统生成研究和论文，再由 5 份
+LLM 评审组成的 Automated Reviewer 评分。Nature 在 2026
+年发表的是人类研究者撰写的系统论文，不是
+AI 自己生成的论文。另一项独立实验里，3 篇 AI 生成稿件投到 ICLR 2025
+的一个 workshop，其中 1 篇评审均分 6.33，高于该 workshop
+的平均接收线；它按事先协议在 meta-review
+前撤回，所以更精确的说法是通过了评审分数门槛，而不是进入 Nature
+或完成会议正式接收。</p>
+<p>这正是之前拆多智能体系统时撞见过的问题（pipeline
+在洗钱）：如果筛选只依赖语言模型读散文，文字说服力容易混进适应度，事实接地就需要额外机制。AI
+Scientist 的 Automated Reviewer
+与人类决定有相近的一致性，这说明它能近似评审判断，不等于它验证了论文里的实验结论。Sakana
+自己也披露过 AI 生成稿件的引用归属错误。普林斯顿的开放式研究影子评估干脆换了一种考官：把两篇未公开
+NeurIPS 投稿的核心问题交给 Opus 4.8 做 6
+天，再请最熟悉问题的原作者评价产出。原作者评估也不完美，但它至少没有把同一个自动审稿分数同时当搜索目标和最终证据。</p>
+<p>判断一个自动改进系统究竟靠不靠谱，先看考官面对的对象：可重复运行的程序、训练后的模型行为，还是一篇需要解释的论文。可复算的环节越多，结果越不依赖说服力；但真正决定防线强度的还有目标函数、数据隔离、独立测试和监测覆盖面，不能只数机械环节占了多少。</p>
+<p>三套系统分别评估程序结果、模型行为和论文文本；验证对象不同会改变证据的可复现程度，但不存在绝对无法作弊的一端</p>
+<h2>考场还是手工品</h2>
+<p>在这项实验里，搜索循环能持续改进，离不开可反复运行的考卷；分数能否说明真实变化，又取决于多考卷、隔离和外部测试怎样组合。但眼下这套考场的边界也摆在眼前。AAR
+能够运转，在于实验选了十类已有公开 benchmark
+或自动审计工具的毛病；一旦面对缺乏考卷的开放式风险，这套方法目前还够不着。现实世界有些安全风险太罕见、太新，考场里还没人能出一套合格试题。Anthropic
+官方在正文里直言：这些评估指标终究只是真实世界复杂风险的替代指标。</p>
+<p>更大的空白在考卷供给端。实验里的 benchmark
+由研究团队挑选、人工抽查样本和模型回答，并按目标模型做适配。5
+个智能体共享一个排行榜，像一个分工协作的登山小组，不是一个自发演进的市场：考场里没有独立验证者互相竞争，评估器也不会在运行中动态替换。AAR
+自动化了方法搜索，没有自动化考卷从哪里来、何时该更新、由谁审计。</p>
+<p>之前按验证信号强弱排过一张自我改进系统的地图（自我改进
+AI：一个压扁后的二维场），当时得出的核心结论，是评估器构成了整张地图的瓶颈。这次
+Anthropic
+的实验补上了下半句：身处同一个梯级之内，考卷数量、多样性与隔离方式这些内部结构，会改变改进究竟能否跨出优化目标。两块拼图合在一起，给标题里的判断划出了边界：在已有成熟考卷的任务上，人类指定一个更好的起跑方向没有带来增量；能支持搜索又能检验泛化的考场，仍然稀缺。</p>
+<p>好点子已经过剩，适合当作对这项实验的产业判断，不适合冒充普遍定律。报告实际证明的是：在
+7
+类已有考卷的对齐任务上，把人类提案设为自动搜索的初始方向，没有提高最终表现。相比之下，几份不同来源和形式的考卷、一份不参与优化的密封卷、一套检查捷径的流程，是这套
+AI 自我改进系统能够产出可信结果的前提。</p>
+<p>如果你正在用 agent
+自动改进自己的系统，动手之前，不妨先把三个问题梳理一遍：</p>
+<p>你的任务有几份互相独立的考卷，还是从头到尾只有一套题？</p>
+<p>有没有留出一份从没参与优化的密封卷，专门用来在终点戳穿背题？</p>
+<p>如果 agent 开始钻空子打小抄，你准备了什么硬性机制能发现它？</p>
+<p>在这三个问题有明确答案之前，不必急着往系统里塞更多研究智能体。在这项实验支持的边界内，考场先于考生，是最稳妥的结论。</p>
+<p>主要来源：Anthropic
+主博客 · Alignment
+Science 全文 · 开源
+harness</p>
+
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Claude Opus 4.8" class="entity-link product-link">Claude Opus 4.8</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+      
+        <a class="tag-link" href="/tags/model-alignment/">model-alignment</a>
+      
+        <span class="tag-pill tag-pill--no-page">evaluation-first</span>
+      
+        <span class="tag-pill tag-pill--no-page">benchmark-testing</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 15,
+          translations: {
+            placeholder: "搜索文章...",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索此站点",
+            filters_label: "过滤器",
+            zero_results: "没有找到 [SEARCH_TERM] 的结果",
+            many_results: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            one_result: "[COUNT] 个结果关于 [SEARCH_TERM]",
+            alt_search: "没有找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果：",
+            search_suggestion: "没有找到 [SEARCH_TERM] 的结果。尝试以下搜索之一：",
+            searching: "搜索 [SEARCH_TERM]..."
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
