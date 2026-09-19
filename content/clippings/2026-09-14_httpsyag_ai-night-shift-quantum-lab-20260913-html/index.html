@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>量子芯片调好之前，OpenAI 的 AI
+值了十二个小时的夜班</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="量子芯片调好之前，OpenAI 的 AI
+值了十二个小时的夜班" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">量子芯片调好之前，OpenAI 的 AI
+值了十二个小时的夜班</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-14</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://yage.ai/share/ai-night-shift-quantum-lab-20260913.html" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-14
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">文章探讨了在量子芯片调好之前，OpenAI 的 AI 智能体如何作为值班员，通过自动化执行重复的物理测量和数据处理任务，极大地释放了人类研究人员的精力。核心观点在于，AI 在验收标准清晰、流程高度串行且动作重复的环节表现出高效的‘值班员’能力，但当任务进入需要物理直觉和经验裁量的复杂不确定区间时，AI 仍需人类专家介入指导。</div></div>
+      
+    </div>
+    <h2>新芯片做好之后，有个没人愿意干的活</h2>
+<p>一个人守在仪器前，等它一遍遍跑完，盯着屏幕上的曲线判断这次测对没有，一坐就是几天。在物理实验里，这种值班员式的工作往往占掉研究人员最多的时间。</p>
+<p>这是 MIT 工程量子系统实验室 EQuS 的日常，也是研究生 Beatriz
+Yankelevich
+和团队成员面对一块超导量子芯片时的现实。超导芯片必须冷却到极低温才能工作，刚做好的这一块此前从未测量过。在正式运行算法之前，研究团队必须把每个比特的实际参数一个个测出来，也就是实验物理里的初始标定。</p>
+<p>一块标准芯片通常要调试几天，而在这段工期里，研究人员的大量精力都耗费在显示器前重复的机械操作上。他们向低温腔内下发微波脉冲，等待屏幕回传波形，核验算法拟合曲线，判断测量质量是否达标，再手动更新下一组扫频参数。超导量子芯片处在敏感的物理环境里，微波衰减使得测量流程必须按顺序串行推进。前一步获取的共振频率一旦出现偏差，后续微波脉冲的相位校准都会失去基准。</p>
+<p>实验人员难以离开操作台，守在屏幕前重复盯盘又很难获得新的学术洞见。这种值班员式的枯燥工作，构成了量子计算硬件实验中最消耗人力的现实负担。</p>
+<h2>调好一块新芯片，为什么常常要耗上好几天</h2>
+<p>这块芯片大约 5×5
+毫米大小，安装在制冷机中冷却到接近绝对零度的极低温环境。实验人员向低温舱内发送微波脉冲，驱动芯片上的微小电路在几个固定的能量档位之间跳动，也可以用微波读出它当前所处的档位。这种像人造原子一样跳档并响应微波的电路单元，在物理学里称为量子比特。整块芯片上一共集成了
+6 个量子比特：其中 4 个拥有固定的响应频率，另外 2
+个可以通过外加磁场调节工作频率。每个比特旁边都连接着一套独立的读出装置，物理上叫作读出谐振腔，用来反射微波信号以测定状态。在本次实验开始前，这块芯片从来没有测量过，所有物理参数都是空白。</p>
+<p>标定是一连串互相依赖的物理测量，必须一步步摸索推进。实验人员需要先做宽频扫描，找到读出装置的基准共振频率；根据找到的读出频率，再发送特定微波脉冲去定位比特自身的响应频率；找到比特频率后，接着校准翻转比特所需的脉冲幅度和持续时间；把翻转动作调准了，才能进一步测量比特把这个状态保持多久。每一步测出的数值，直接决定了下一步测量的参数设置。如果前面某一步把背景噪声误判为真实响应，后面的所有精密调整都会失去基准。</p>
+<p>单次测量的标准循环包含六个具体动作：设定实验参数并下发脉冲序列、硬件采集微波响应信号、绘制数据曲线、运行数学拟合算法、评估拟合质量是否合格，最后把有效参数写入数据库或者调整窗口重新测试。调好一块新芯片，往往需要重复执行几百到几千次这类前后相扣的测量。</p>
+<p>标定的单次测量循环：设定参数、采集信号、拟合曲线、判断质量，再决定存参数或重测</p>
+<p>更麻烦的是，物理参数并不会一直保持稳定。制冷机内部微弱的温度起伏与磁场变化，会让比特的性质随时间缓慢漂移，今天调好的参数到了明天可能就不再准确。只要早期寻找信号时出现偏差，或者微波功率过大导致响应曲线失真，下游的所有校准都会陷入混乱。面对包含可调频率比特的复杂芯片，这种相互牵制的测量链条尤其耗时。按照实验人员的基准经验估计，人工完成一块
+4
+个固定频率比特芯片的初测大约需要一天，面对加入可调频率比特的芯片则常常要耗费整整一周。</p>
+<h2>AI</h2>
+<p>这次具体做了什么，人做了什么</p>
+<p>2026-09-08，OpenAI 正式上线了与 MIT 合作的量子计算实验案例页面。其实验依据来自
+2026-09-04 公布的研究白皮书 Case
+Study: Agentic Calibration of Superconducting Qubits。白皮书由
+Beatriz Yankelevich、Eva Zhang、JonLuca DeCaro、Jeffrey A. Grover 与
+William D. Oliver 联合撰写，并明确注明由 MIT
+作者开发智能体测量基础设施并执行全部实验，OpenAI
+团队负责提供基础设施咨询与文本审阅建议。</p>
+<p>在系统连接方案上，研究团队没有搭建复杂的拓扑结构。他们直接在 Codex
+桌面应用中运行 Ultra 推理档位的 GPT-5.6 Sol
+模型。系统与物理硬件之间的交互桥梁，仅仅是一个由 MIT EQuS 实验室 自主开发的轻量级 Jupyter
+MCP
+接口。依托这个接口，模型可以调阅实时测量参数、执行测试脚本、获取生成图表与原始数据、读取控制日志并查询校准数据库。它在
+Jupyter 环境中直接运行 Python 数据分析代码，绘制拟合曲线，并持续维护
+Markdown 格式的实验记录日志。</p>
+<p>为了让通用大语言模型适应物理实验环境，研究团队编写了一套测量专门技能。每份技能文档均包含可调用的执行代码模板、前置测量依赖逻辑、推荐的参数扫描范围、常见的物理失误根因、成功与失败测量的特征描述，以及成对的正反例样本曲线图。白皮书指出，研究团队经历了几个月迭代，才最终在实验配置细节、芯片设计规范、测量专门技能以及编排软件源码接口之间收敛出高效配合。这几个月的工程迭代聚焦于上下文工程与专业技能建设，未对模型本身进行额外的领域微调。</p>
+<p>在具体运行中，AI
+形成了完整的操作闭环：核查当前校准状态、决定下一步微波扫描参数、驱动实验室硬件执行采集、对返回数据执行数学拟合、依据内置判据核验结果质量、决定保存有效数据还是调整步长重测。人类研究人员的角色相应后撤，专注于基础设施维护、专门技能文档编写、全流程监控以及异常突发状态介入。</p>
+<p>白皮书公布的硬性数据显示，针对 4 个固定频率比特展开的 40
+个目标测量中，研究人员仅进行了 4 次介入改进。在另一个持续 12
+小时、共计执行 200
+次测量的通宵自动化循环中，实验室既有的编排软件执行具体的硬件扫描，智能体则负责通宵监视测试进度并排查个别失败点。系统顺利测定了全部六个读出谐振腔的基频与初始读出功率，并确认六个谐振腔的频差分布与芯片原初的多路复用设计吻合良好。</p>
+<p>测试中第一个比特 q1 获得了完整标定数据，能量弛豫时间 T1 = 32.1 ± 1.8
+µs，退相位时间 T2 = 59.27 ± 1.51 µs，自旋回波退相位时间 T2 echo = 60.37
+± 1.3 µs，色散位移 χ/2π = −0.17 MHz，有效温度 T_eff = 53.04 ± 2.69
+mK。这些数据表明，系统在固定频率比特上能够稳定执行既定测量流程。</p>
+<p>这项探索同样呈现了清晰的失败过程。在芯片上的 2
+个可调频率比特上，工作频率一旦偏离最大频率点，信噪比便大幅下滑，模型收敛十分吃力，可调比特需大量人工指导才能达到合格结果。白皮书图
+6
+记录了一次多步失败案例：智能体在反复调整扫描频率后，未能识别出明显的拟合偏差，agent
+曾把坏测量当合格。随后人类研究人员介入指导，提示其扩大扫频范围并建议初始参数，测量才得以正确收敛。此外，最终录入的数据在
+4.8 GHz
+附近存在未知的模式交叉与不对称畸变，白皮书作者坦言这类反常物理现象依然需要依靠研究人员的经验直觉进行判定。</p>
+<h2>关键判断：AI</h2>
+<p>接替的是值班员，不是科学家</p>
+<p>白皮书对模型在此次实验中的表现给出了审慎客观的评估，研究人员归纳出三条关键的状态判断。第一，agent
+比专家慢，即便是最终能够正确收敛到理想参数的任务，模型耗费的时间也明显多于熟练的实验物理学家。第二，模型缺乏实验直觉，容易陷入无效的排查分支，难以在第一时间察觉物理层面的显见故障根源。第三，物理采数是速率瓶颈，单次微波扫描与物理回传本身需要几分钟且必须按顺序串行执行，因而无法通过并行派出大量智能体进行暴力穷举搜索。</p>
+<p>这些特征表明，这套系统的现实价值体现在监督形态的转变上，它把过去寸步不离的现场守候，变成了阶段性的抽检与方向微调。Beatriz
+Yankelevich 在实验报告中谈到：“我可以让 agent
+整夜跑测量，或者让它们接着跑，我自己去洁净室干活。我能从手机上查看它们做了什么，需要修就调整，想换个方向探索也随时调整。”她在后续的经验总结中进一步补充道：“我已经搭好了基础设施，引导
+agent
+参与我工作中好几个环节，包括测量、理论和芯片设计。现在它开始真正见效了。我可以让多个
+agent
+同时处理不同的问题，自己把大部分时间花在更高层的工作上：解读结果、设计实验、给
+agent 规划下一步，以及阅读和写作。”与此同时，OpenAI
+官方案例页面也如实承认：“有经验的研究者或许仍然能比当前的 AI
+模型更快地找到最佳标定参数。”</p>
+<p>能否将特定的实验任务平稳移交给自动化智能体，核心判据在于其验收标准能否自动判定。芯片内部两组不同比特的调试成效，为这一核心判据提供了清晰的实证对比。在
+4
+个固定频率比特上，微波共振峰陡峭分明，噪声极低，曲线拟合优度与收敛指标能够通过数学残差与技能文档规则进行形式化核验。面对清晰的验收规则，系统独立完成了
+40 个目标测量，全程仅发生 4 次人工介入。</p>
+<p>相反，在 2
+个可调频率比特上，磁通调节引入了非线性调制，信号衰减严重且谱线常伴随杂峰与扭曲。既有自动化规则无法有效区分真实响应与仪器伪影，缺乏物理直觉的智能体难以自行察觉拟合偏差，必须依赖人类专家介入指导。这一对照清晰展现了分界线：在验收标准可精确判定的封闭环节中，智能体能够成为严谨的值班员；一旦进入需要经验裁量的不确定区间，系统便容易脱轨。</p>
+<p>信号清晰时验收判据可自动判定，任务可以交给
+AI；信号含糊时需要经验判断，人必须介入</p>
+<h2>畅想：为什么这是</h2>
+<p>AI for Science 最该先落地的一块</p>
+<p>科学智能领域的主流讨论，注意力大多投向自主科学发现。人们热衷于设想模型构思全新的理论、设计全新功能分子或预测新型材料。这类面向科学发现的尝试处在科研中最具不确定性的一环，推演链条很长，前期的逻辑幻觉会迅速转嫁为现实实验中高昂的试错代价。</p>
+<p>相比高风险的假设生成，量子芯片标定案例展现了一条长期受到低估的现实路径：让智能体扎根在实验室中承担值班员的职责。这类工作具备持续运行时间长、流程严格串行推进、动作高度重复以及验收判据清晰透明的显著属性，构成了高收益且低风险的落地土壤。</p>
+<p>这一路径的高收益特征源自对科研生产力瓶颈的精准命中。在前沿物理领域，制约实验室产出节奏的核心瓶颈从来不在于计算机的处理吞吐量，关键在于研究人员有限的有效注意力。物理学家每天耗费大量精力守候仪器扫描、检查初步数据和机械调整参数。即便智能体单步操作耗时超过人类专家，只要它能在人类离开工作台的夜间与周末持续运作，就让稀缺仪器摆脱了夜间闲置状态。研究人员无需通宵守在屏幕前确认每一道波形，转而通过便携终端在必要时做异步验收与方向微调。</p>
+<p>这一路径的低风险特征则来自对责任边界的清醒限制。系统仅接手底层的机械执行与测量盯守，并未介入高层的科学假说创立与实验逻辑设计。测量过程中的每一个中间状态都伴随严格的量化验证，任何执行偏差都会就地截断并重测，既不会污染下游的参数网络，更不会向正式学术文献中扩散未经证实的虚假结论。</p>
+<p>这种把技术切口瞄准闲置时段的构想，在实验室自动化史上拥有明确的思想源流。自驱动实验室先驱
+Ross King
+早年构思机器人科学家系统，原始动力正是在深夜离开实验室看到先进科研设备在空旷房间里长期闲置，从而萌生了利用夜间由自动化系统推进测量的愿望。如今量子硬件标定与化学自动化合成中的探索表明，让智能体担任坚守岗位的值班员，释放人类精力去投入更深层次的机理审视与实验构想，恰恰是当下科学智能扎实而可信的立足根基。</p>
+<p>AI 做发现风险高且容易翻车，AI
+做值班可验证且先落地</p>
+<h2>但它的边界很清楚，也很容易搞砸</h2>
+<p>任何让智能体接管实验流程的尝试，都建立在三项苛刻的前提条件之上。其一，实验室必须建立起成熟的软件基础设施，在芯片安装完成并降温至毫开尔文温区后，所有仪器调节与脉冲序列均需开放软件可编程控制接口。其二，实验过程必须具备严格的串行因果特征，后一步的基准输入直接来自前一步的测量输出。其三，整个测量链条中必须存在能够自动判定的验收标准，使得系统能依靠明确指标捕捉失败信号。</p>
+<p>如果在推进自动化执行时松懈了严密的事实验收机制，自动化系统便极易产生严重偏差。自动材料合成领域的
+A-Lab
+自动化实验室项目就是一个典型的案例。根据 2023 年发表于 Nature
+的研究摘要，A-Lab 机器人在 17 天自主运行中，声称从 58 个目标中成功合成了
+41 个全新无机化合物，后续报道指出其最初宣称合成了 43 个新材料。</p>
+<p>然而，伦敦大学学院学者 Robert Palgrave 等人在 2024
+年深入复核公开谱图后指出，实验声称合成的物质要么并未生成，要么只是无机晶体结构数据库中早已收录的已知常见化合物。Nature
+杂志最终于 2026 年针对该论文刊发更正。A-Lab
+的经历表明，如果只实现物理动作的自动化执行，而在验收环节降低了审慎标准，机器系统就会在虚幻信号上自我欺骗，制造出错误的学术结果。</p>
+<p>验收环节的重要性不止出现在材料合成。围绕自主研究 agent
+的综述把缺少独立可验证的判断环节，列为这类系统的共同瓶颈（Verification
+Gap）。这也解释了为什么减少盯守的价值不能外推：在可以并行、离线、反复重跑的知识工作上，AI
+带来的更多是吞吐变化，人的监督负担甚至可能上升。一项随机对照试验发现，早期
+2025 的 AI 工具让有经验的开源开发者慢了 19%，METR
+后来更新了实验设计，认为这一结论已不代表当前情况（METR、更新）。</p>
+<p>面对 EQuS
+实验室的量子标定成果，同样需要客观审视其证据边界。该项目的所有公开细节均来源于
+MIT 与 OpenAI
+联合发布的白皮书，属于单一信源陈述，未经历学术同行的严格评审，亦缺乏独立第三方实验室的复现验证。虽然白皮书与官方宣传稿宣称
+EQuS 实验室正在常规化使用智能体来处理大批量芯片的表征工作，但 EQuS
+常规使用 agent 无第三方证据。MIT News
+官方主页未就此项成果发布新闻通报，EQuS
+实验室官方网站的新闻列表未见该项目的收录信息，底层实验编排代码亦未向开源社区公开。</p>
+<p>媒体传播层面的不实渲染进一步扭曲了真实的技术边界。部分加密资讯媒介在转载报道时冠以
+AI
+Successfully Takes Control of Quantum Computer
+这种夸大其词的标题，声称大语言模型展现出了高度拟人化的物理直觉。这类言论与白皮书中模型明显缺乏实验直觉的客观记载大相径庭。严肃科技媒体如
+The Quantum Insider
+在报道中则较为客观地转述了白皮书提及的各项技术局限。</p>
+<p>在量子物理领域，这项探索既不是首个案例，也不是突破。在此之前，学界早已发表过多项更高复杂度与更大规模的自动化成果：</p>
+<ul>
+<li>Cao 等人于
+2025 年 10 月发表在 Patterns 上的同行评审成果，在 16
+比特超导平台上选取 3 个相邻比特构建了闭环系统，在 3 小时内通过限制 100
+次实验完成了双比特 siZZle 门参数的自主优化，成功制备出多比特纠缠的 GHZ
+态，其利用 GPT-4o 进行自然语言到控制指令转换的准确率达到 97%，总计 API
+消耗低于 5 美元。 - Xu 等人于
+2026 年 6 月在 arXiv 上预印的 Vibe Calibration 框架，在 112
+比特规模的超导量子处理器上实现了全自主开机调试，仅用时 4.7 小时便完成了
+108/112 个比特的标定，速度达到人类专家的 4 到 5 倍，并在 16
+比特基准子集测试中与专家人工标定结果的一致性达到 14/16。 -
+同一方向上，Li
+等人让大模型按需生成实验所需的工具，QCalEval则为校准图的自动判读建立了评测基准。</li>
+</ul>
+<p>与这些工作相比，EQuS 团队在 6
+比特小型测试芯片上展示的案例在物理规模与任务广度上都更为轻量，推进时间也更晚。这项案例的真正价值体现在验证了未经过特殊微调的通用前沿大模型，如何通过基础的
+Jupyter MCP
+接口调度既有生产软件，在一块全新硬件上胜任繁重单调的值班工作。把智能体看作一丝不苟的值班员，理清它与科学家的分工边界，才能在技术浪潮中把握住科学智能真实可行且不容逾越的稳固边界。</p>
+
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Beatriz Yankelevich" class="entity-link person-link">Beatriz Yankelevich</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=GPT-5.6 Sol" class="entity-link product-link">GPT-5.6 Sol</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/quantum-computing/">quantum-computing</a>
+      
+        <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+      
+        <span class="tag-pill tag-pill--no-page">hardware-calibration</span>
+      
+        <a class="tag-link" href="/tags/workflow-automation/">workflow-automation</a>
+      
+        <span class="tag-pill tag-pill--no-page">experiment-monitoring</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

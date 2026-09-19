@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>搜索</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  <div class="search-page" data-pagefind-ignore>
+  <header class="search-page__header">
+    <p class="search-page__eyebrow">Knowledge Archive</p>
+    <h1 class="search-page__title">搜索</h1>
+    <p class="search-page__subtitle">在笔记与文章全文中检索</p>
+  </header>
+  <form id="archive-search" role="search">
+    <label for="query">关键词、人名或主题</label>
+    <div class="search-query-row">
+      <input id="query" name="q" type="search" placeholder="例如：家庭关系" aria-describedby="search-help">
+      <button type="submit">搜索</button>
+    </div>
+    <div class="search-controls">
+      <label><input id="exact" name="exact" type="checkbox" value="1"> 完整短语</label>
+      <label for="speaker">演讲者 / 来源</label>
+      <select id="speaker" name="speaker" disabled><option value="">全部演讲者</option></select>
+      <a href="/all-speakers/">浏览演讲者目录</a>
+    </div>
+    <p id="search-help">默认匹配同篇文章中的所有关键词；完整短语要求词语连续出现。</p>
+  </form>
+  <p id="search-status" role="status" aria-live="polite">输入关键词开始搜索，也可以仅选择演讲者。</p>
+  <p id="filter-status" role="status"></p>
+  <div id="search-results" aria-busy="false"></div>
+  <button id="search-more" type="button" hidden>加载更多文章</button>
+  <noscript>请启用 JavaScript 进行搜索，或通过演讲者目录浏览文章。</noscript>
+</div>
+<script type="module" src="/js/search.js"></script>
+
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

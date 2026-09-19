@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>把知识搬出 GPU：DeepSeek Engram
+与模型的第二条稀疏轴</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="把知识搬出 GPU：DeepSeek Engram
+与模型的第二条稀疏轴" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">把知识搬出 GPU：DeepSeek Engram
+与模型的第二条稀疏轴</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-13</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://yage.ai/share/engram-conditional-memory-20260912.html" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-13
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">文章探讨了 DeepSeek 模型中引入的 Engram 模块，它将部分知识参数从 GPU 显存转移到主机内存中，以实现计算与记忆的解耦。这种设计通过将静态知识存储在查找表中，并利用条件记忆通道，使得模型能够将计算资源聚焦于复杂推理任务，从而在推理和长上下文检索方面取得了显著提升，并提出了稀疏容量分配的工程命题。</div></div>
+      
+    </div>
+    <p>翻看 DeepSeek 发布的 V4.1
+Flash 的技术报告，会注意到一个容易掠过去的数字：团队把 196B
+参数划给了一个叫 Engram
+的模块。这批参数和平常讨论的密集权重不同，它们不做矩阵乘，只躺在查找表里等模型来取。既然不用来跑计算，它们就无需常驻
+GPU
+显存，而是存放在主机内存里，模型运行时按需读取。参数规模越大越消耗显存的经验规律，到这里失效了。</p>
+<p>报告中披露的评测数字引出了一条耐人寻味的线索。从作者自述的实验结果看，这个记忆查找模块带来的主要收益落在了推理类任务上，知识类任务的涨幅反而相对平缓。在论文自报的实验数据里，知识评测中
+MMLU 上涨 3.0、CMMLU 上涨 4.0；推理评测中 BBH 涨了 5.0、ARC-Challenge
+涨了 3.7；大海捞针的长上下文检索准确率也从 84.2 升至
+97.0。这批提升目前均属作者自述，尚未见到第三方独立复现。一个专门用来提取记忆的部件，为何反倒让多步推导与长程注意力发挥得更好，这比单纯腾出显存空间更耐人琢磨。</p>
+<h2>回忆不该走计算</h2>
+<p>语言模型回答常识事实，走过的通路与推导数学定理并无区别，都要穿过深层网络，从底层往上一层一层执行矩阵乘法。但这两种任务在信息结构上差异很大。严密推理需要全局视野和多步推导，模型得通读整段上下文，顺着逻辑链条逐层推进；回忆某个静态事实，往往只依赖眼前极短的一组词，给定了这几个
+token，答案就几乎锁定了。在大多数情况下，回忆都可以看成一个局部的、确定的映射，并不需要多步推导。</p>
+<p>把这两种运作规律迥异的任务塞进同一条深层通路，模型每次遇到静态事实，都得动用好几层注意力与前馈网络重新构建它。DeepSeek
+在 Engram
+论文中将这种设计视作架构缺陷：混合专家模型依靠条件计算来扩展参数容量，模型内部却始终缺少原生的知识检索机制，只能耗费算力去反复模拟查找。团队给出的解法是给模型增加条件记忆通道，将其作为与混合专家模型并行的第二条稀疏轴。两条轴各司其职，一条按需激活计算，另一条按需查表。</p>
+<h2>为什么偏偏是查表</h2>
+<p>把记忆与计算解耦，在工程上并不直接等同于查表。检索增强生成早早将记忆放到了外部，通过知识库检索文档；kNN-LM
+也探索了分离路径，依靠向量相似度匹配近邻。这两条路线都没有走向静态查表。解耦本身只是架构设计的目标，到底采用什么机制实现分离，取决于要分离的对象本身具有怎样的结构。</p>
+<p>回到回忆本身的结构特性：它是一个局部的、确定的映射。要为它搭建一套专属通道，必须同时满足三个苛刻条件。第一，它要能把眼前出现的短语直接置换为对应知识嵌入，自身不能再引入深度计算，否则只是把矩阵运算换了个地方跑。第二，它必须单次寻址直接拿到结果，前面不能再经历任何搜索阶段。第三，它必须能容纳海量的知识条目。同时满足这三项约束的结构极为收敛：键到值的直接映射，最直观的实现就是一张表；查找键不需要检索、直接由最近的几个
+token
+拼接生成；面对组合爆炸的海量词元，则通过哈希函数将任意键映射进定长表中。</p>
+<p>检索增强生成与 kNN-LM
+遇到的瓶颈，恰好印证了上述每一步取舍的必要性。检索增强生成虽然把存储移到了外部，却依然让计算留在了原处：系统按相似度从外部库捞出文档，捞到的文本依然需要塞回上下文让模型逐层重算，静态事实照样消耗深度计算资源，还挤占了宝贵的上下文长度。kNN-LM
+依靠相似度匹配邻居向量，检索动作本身就是一次复杂的距离搜索，硬件无法预先推算后续要读取的内存地址，也就无从安排流水线预取。两者的检索都得先做相似度匹配，很难只凭输入就提前定下要读哪些地址，也就难以把这部分读取藏进计算背后。</p>
+<p>整套设计逻辑由此紧密咬合：回忆本身属于确定的局部查找，查表成了最具能效比的实现载体；查找键可以直接从上下文推导，顺理成章选用了前序的几个连续
+token；组合空间过于庞大，便引入哈希函数折叠表项。把实现路径收拢到查表，正是顺着回忆作为局部确定映射这条因果链推导出来的自然结果。</p>
+<p>对比面板：旧路径把回忆和推理塞进同一条深层计算通路，新路径让推理走计算、回忆走查表。</p>
+<h2>查表怎么住进主机内存还不卡</h2>
+<p>落到具体实现，Engram
+查表使用的键直接取自前文序列。网络截取当前生成位置前面的两到四个连续
+token
+拼接成查找键，送入一张巨大的向量表里查出对应的嵌入向量。两三个词元的排列组合规模极为庞大，无法做穷尽式的单表展开，系统便使用多个哈希函数将同一个键映射到表内的不同槽位，形成多头哈希结构。即便某个哈希头遭遇了地址碰撞，其余哈希槽位往往落在别处，依旧能够稳定读出有效的特征向量。整张表因此可以扩展至极大规模，单次查表耗时始终维持在常数级别，与整张表容纳的条目总量无关。</p>
+<p>解决了表结构，接下来的难题是这张大表到底安放在何处。若是继续留在 GPU
+显存里，显存吃紧的局面就丝毫没有缓解；论文选择的路径是把这批海量参数移出显卡，安置在容量更宽裕、单位成本更低的主机内存中。这条看似会遭遇总线带宽瓶颈的路线之所以能够跑通，依托于三个环环相扣的前提条件。</p>
+<p>首要前提是内存地址完全确定。因为查表所用的键直接取自前文已生成的
+token，系统在模型刚开始运行时，就能提前推算出后续网络要读哪个物理地址，完全省去了边推理边检索的开销。第二项前提是真实语言呈现出极端长尾的分布。实际文本中极少数高频词元组合占了绝大多数访问频次，工程上得以搭建清晰的存储分层：最高频的特征向量常驻显存，次高频的部分放在主机内存，稀疏的长尾条目留给更慢但更大的存储介质。第三项前提是用数据预取平摊通信延迟。趁着
+GPU
+还在算前序浅层的矩阵乘法，传输通道就已经提前把深层网络所需的向量搬运就位。技术报告指出，V4.1
+借助 RDMA 管道构建了这套预取流，数据传输与第一个 Transformer
+块的前向计算得以无缝重叠。在这三个条件之中，提前算准目标地址是最核心的支柱，整条低成本链路都依托于这个确定动作。</p>
+<h2>把容量拆成两笔账</h2>
+<p>如果仅仅停留在这套通信优化上，Engram
+或许还只是一项巧妙的显存节约技术。论文更想讲清的核心判断，在于模型容量本身拥有截然不同的开销途径。混合专家模型扩展容量依托的是条件计算，每个生成的
+token 都必须经过动态路由去挑选并激活若干专家网络；Engram
+扩充容量则依赖条件记忆，挂载一张尺寸庞大的查找表，模型就能沉淀更充沛的静态知识储备，过程中无需增加任何浮点矩阵运算。计算与记忆这两笔账由此清晰地分立开来，随之产生了一个新的工程命题：有限的稀疏容量究竟该如何在动态推导与静态查表之间进行切分。</p>
+<p>论文将这个权衡命名为稀疏分配，并通过实验勾勒出一条明确的 U
+型曲线。把全部容量全押在计算专家上并非最优，全盘倒向静态记忆查表同样应付不了复杂语境，全局平衡点恰好落在两者交织的中间地带。研究团队先在
+5.7B 和 9.9B 两个规模上扫描不同配比，发现把大约 20% 到 25%
+的稀疏容量分给 Engram 时效果最好；再把这条规律用到 27B
+的模型上，与同等参数量、同等 FLOPs
+的纯混合专家基线相比，综合表现更好。当然，这些指标目前均属于论文作者自报的实验数据，行业内尚未出现第三方机构的独立复现。这项探索的核心价值超越了单点工程优化，它把长期以来只讨论模型要做多大参数，往前推了一步：模型容量到底该依托何种硬件介质承载，又该以怎样的比例在计算与记忆之间切分。</p>
+<p>分配示意图：稀疏容量大致分成两笔，约四分之三给 MoE
+动态推理，约四分之一给 Engram 静态查表。</p>
+<h2>最反直觉的地方：涨得最多的是推理</h2>
+<p>依照直觉设想，外挂或者内嵌一个记忆查找单元，主要作用理应是替模型背诵各种常识知识，收益自然应当集中在知识问答榜单上。然而论文披露的实际测试走势展现了颇具反差的一面：在作者自述的评测中，涨幅最大的是多步推理，BBH
+涨了 5.0、ARC-Challenge 涨了 3.7，代码与数学也在同步上涨，而知识向的
+MMLU 与 CMMLU 分别上涨 3.0 和
+4.0。更加直观的变化发生在大海捞针测试中，长上下文信息检索能力从 84.2
+攀升至
+97.0。需要说明的是，这类推理与检索的大幅跃升仍属论文自报数据，目前未见独立第三方的复现结果。</p>
+<p>这个看似反常的走势，背后有一条清楚的机制链路。在常规自回归架构里，靠近输入端的浅层网络往往要分担相当多的参数权重与注意力预算，去反复拼凑和还原局部的静态搭配；查表模块接管了这套局部映射后，前几层网络从重复的机械搬运中抽出身来，模型宝贵的计算深度得以聚焦在更具挑战性的复杂推理任务上。与此同时，局部词序依赖转移给查表模块后，自注意力对近邻模式的建模负担随之减轻，可以挪出更多预算去捕捉全局长程依赖，长上下文检索准确率因此明显改善。</p>
+<p>这也是整项工作最有价值的工程推论。将静态记忆移出密集运算通路，价值远不止于省下一块昂贵的
+GPU
+显存，它深刻改变了剩余计算资源的运用方式。铺设一条低成本的确定查表通道，换来的是一条能够专注投入复杂逻辑推导的高效计算通路。</p>
+<p>因果链：静态模式交给查表后，腾出早期层，注意力转向全局，长上下文检索从
+84.2 升到 97.0。</p>
+<h2>更像一次内存分层，而不是一套新架构</h2>
+<p>把这个思路放回计算机史里看，它并不新。从冯·诺依曼那台机器开始，计算和存储就分处两地，数据要在两者之间来回搬，吞吐长期卡在这条通道上，这就是后来的冯·诺依曼瓶颈。Engram
+是对这个老问题的又一次回应：静态知识让整个表反复进出计算单元代价太高，那就把它留在便宜的宿主内存里，只按地址取当前要用的少量向量，再用预取把传输延迟藏起来。它分开的是模型内部两类性质不同的容量，一类拿来算，一类拿来查。</p>
+<p>从这个视角观察，这项探索更像计算机体系中历经多次验证的存储分层机制。操作系统里的虚拟内存便遵循这套逻辑：体量庞大的数据存放于廉价慢速的存储介质中，唯有高频活跃的工作集才会换入高速物理内存，系统依托局部性原理做好热点缓存与预先读取。Engram
+的确定性寻址也让它适合做类似的缓存分层，并允许运行时提前调度数据；V4.1
+报告里明确披露的是主机内存加后台 RDMA
+预取。这项设计把工业界成熟的存储分层思想，规范地引入到了深度模型架构内部。</p>
+<p>过去若干年里，产品键记忆、kNN-LM
+以及检索增强生成都曾尝试将记忆剥离出主干网络，却大多受困于检索延迟过高、需要额外训练检索模型，或者仅仅把检索文本重新塞入上下文。如今这条路线重新走通，依赖于三项工程条件的同步成熟。首先，服务器主机内存的物理容量远超
+GPU
+显存，且确定寻址配合预取流水线，能把从主机内存读取向量的开销压得很低；其次，取回的嵌入向量能够借助门控网络实现端到端梯度反传；最后，架构确立了在计算容量与记忆容量之间精细调节的配比机制。缺少任何一项，这条通路都难以落地。</p>
+<p>这也解释了为什么相关探索并未局限于单个团队。Qwen3.8 Flash-Next
+在其架构中引入了 51B 参数量的 N-gram 嵌入层，设计论文明确指出该方案基于
+Engram
+架构并沿用了门控融合方式，查找表同样放置在主机内存中。两家具有代表性的工程团队在相近时段向同一方向收敛，通常表明外置静态记忆已经走入主流视野。</p>
+<p>对于负责实际系统部署的团队而言，性能评估的基准维度随之改变。工程人员过去习惯于紧盯
+GPU
+显存水位与张量算力峰值，未来还必须严格核算主机内存的可用容量、总线吞吐带宽，以及业务负载是否真正呈现长尾访问特征。论文自述中提及的开销微乎其微，核心前提是寻址动作确定、访问呈现长尾模式，以及预取与计算能够完全重叠，而真实的动态生产环境并不总能维持这些理想条件。在证据采信上也应保持审慎克制：27B
+参数下的对比表现建立在作者自选的基准线之上，75/25
+的稀疏分配比例同样来自单篇论文自述，是否具备跨规模、跨领域的普适性仍有待观察。Engram
+勾勒出的路线图清晰明确，但要真正确立为下一代大模型的标准构件，仍需经历业界独立的充分复现与验证。</p>
+<p>本文梳理的是模型容量维度的内存解耦：静态知识如何安全有序地移出 GPU
+核心。关于服务侧如何大幅压缩 KV
+缓存体积的系统设计，可参见同一系列的第一篇《DeepSeek
+V4.1 Flash：算力优化触顶之后，长上下文的战争转向内存》。</p>
+
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=DeepSeek" class="entity-link product-link">DeepSeek</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/model/">model</a>
+      
+        <a class="tag-link" href="/tags/ai-memory/">ai-memory</a>
+      
+        <a class="tag-link" href="/tags/ai-workflow/">ai-workflow</a>
+      
+        <span class="tag-pill tag-pill--no-page">sparse-allocation</span>
+      
+        <span class="tag-pill tag-pill--no-page">knowledge-retrieval</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

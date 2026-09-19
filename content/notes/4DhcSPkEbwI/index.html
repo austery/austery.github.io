@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Agent 时代下软件工程底层原则与战略性编程的实践</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="AI Agent 时代下软件工程底层原则与战略性编程的实践" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">AI Agent 时代下软件工程底层原则与战略性编程的实践</span>
+      <span data-pagefind-meta="speaker" style="display:none;">The Pragmatic Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>The Pragmatic Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-17</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/software-development/">software-development</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/the-pragmatic-engineer/">The Pragmatic Engineer</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=4DhcSPkEbwI" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-17
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">本文探讨了在与AI智能体协作开发时，如何回归软件工程的经典基本功。核心观点包括使用“引导词”来引导智能体，理解“战略性编程”的难度，以及如何通过衡量指标证明底层工程投入的重要性。文章强调了内省（introspection）作为优秀工程师的核心特质，并指出经典书籍和工程术语在与AI交互中的先验知识价值。</div></div>
+      
+    </div>
+    <!-- chunk 1/13 -->
+<h3>精彩片花：Grill-me 提示词与战略性编程</h3>
+<p><strong>Host</strong>: 这真是太让人抓狂了，老兄。每个人都有一个关于 <code>grill-me</code> 的故事。它展现出一种非常奇妙的涌现行为（emergent behavior），模型开始跳出固有的思维框架去思考，并且不断向你抛出新的想法。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: It's annoying how damn it bro. Everyone's got a grill me story. It just has this weird emergent behavior where the models start thinking a little bit outside the box and they start throwing ideas at you.</p>
+</details>
+<p><strong>Matt Pocock</strong>: 我想，示踪弹（tracer bullet）的核心概念就像一颗划过夜空并留下清晰轨迹的示踪弹一样。我在与智能体（AI Agent）对话时，开始在提示词（prompts）中反复使用这些短语，随后我注意到智能体也开始用同样的短语回应我。它会说：“好的，我会把这个方案做成一个示踪弹实现。”这就是我所说的“引导词”（leading word）——你仅仅通过反复使用一个简洁的短语，就能引导智能体按照特定的思路去行动。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: I guess the idea of the tracer bullet is like a tracer bullet that leaves a mark. I just started using these phrases in my prompts when I was talking to the agent and I started noticing that it was saying those phrases back to me. It was saying, &quot;Okay, I'll turn this into a tracer bullet.&quot; This is what I call a leading word where you lead the agent just with a simple phrase that you repeat.</p>
+</details>
+<p><strong>Host</strong>: 那我们该如何去寻找那些真正重要的软件工程基本功，并重新回归这些基本原则呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: How do I go about and find those fundamentals that matter and go back to?</p>
+</details>
+<p><strong>Matt Pocock</strong>: 这确实非常困难，因为战略性编程（strategic programming）一直以来都极其难以掌握。我认为学习战略性编程就像是面对着一张巨大的调音台，上面密密麻麻布满了各种不同的滑块。你把这个滑块推上去，系统就多了更多的微服务架构；你把它拉下来，系统就变成了单体架构（monolith）。这就像你在进行音乐混音，但你根本无法即时听到哪里调错了，直到九个月之后，当初埋下的错误和架构隐患才会找上门来暴露出问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: It's really tough because strategic programming has always been really hard to learn. I think of learning strategic programming is kind of like you've got a huge mixing desk in front of you with loads of these different sliders. You turn it up, you've got more microservices. You turn it down, you've got a monolith. It's kind of like you're mixing some music, but you can't hear what's wrong until 9 months later until the mistakes come and get you.</p>
+</details>
+<p><strong>Host</strong>: 你该如何向非技术背景的业务利益相关者证明，对软件工程底层基本功的投入是至关重要的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: How do you convince non-engineering stakeholders that investing in software fundamentals are important?</p>
+</details>
+<p><strong>Matt Pocock</strong>: 你需要有一套衡量指标来厘清这一点。我认为迈出的第一步在于……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: You need some sort of metric for figuring this out. I think the first step to this is...</p>
+</details>
+<h3>本期嘉宾与内容导览</h3>
+<p><strong>Host</strong>: 我在使用 <code>grill-me</code> 这个 Skill 构建一个非常简单的 API 端点时，经历了我人生中最严格的一次灵魂拷问。它接连向我抛出了整整 35 个问题，我真的一点都没夸张。整个过程极其高压甚至让人有些恼火，但它确实逼着我进行了更深维度的审视与思考。</p>
+<p>今天来到我们播客的嘉宾正是这个风靡业界的 Skill 的创造者——Matt Pocock。Matt 最初是一名开发者，后来转型为知名技术教育家，他凭借《Total TypeScript》系列教程享誉开发者社区，而现在他创作的各种 AI Skills 以及教学视频同样广受欢迎。</p>
+<p>在今天的节目中，我们将探讨 Matt 非常不寻常的转行历程：在成为程序员之前，他做了多年的专业声乐教练，并自主开发了自己的教学辅助软件；我们还会深入探讨 Matt 广为人知的 Skills（如 <code>grill-me</code> 和 <code>wayfinder</code>），剖析为什么这些工具能够在社区中迅速传播开来；此外，我们还将聊到如何从数十年前的经典编程书籍中汲取灵感，利用 AI 打造出更优质的软件，以及更多精彩话题。</p>
+<p>如果你想弄清楚在与 AI 智能体协同开发时，哪些历久弥新的软件工程底层原则依然发挥着至关重要的作用，那么这一期播客绝对不容错过。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I got the grill of my life when building a pretty simple API endpoint using the grill me skill. It asked me 35 questions. I kid you not. It was intense and annoying and it forced me to think more.</p>
+<p>Today's guest is a creator of this popular skill, Matt Pocock. Matt is a developer turned educator well known for his Total TypeScript series and now for his AI skills and educational videos.</p>
+<p>Today we cover Matt's unusual path into tech after years of being a voice coach and building his own DIY coaching software. Matt's popular skills grill me, wayfinder and why these skills became so widespread. Taking inspiration from decades old programming books to build better software with AI and many more.</p>
+<p>If you want to understand which software engineering fundamental approaches remain very useful when working with AI agents, this episode is for you.</p>
+</details>
+<h3>赞助商介绍：Turbopuffer 与 Linear</h3>
+<p><strong>Host</strong>: 本期节目由 Turbopuffer 赞助播出。Turbopuffer 是一款直接构建在对象存储（Object Storage）之上的向量搜索（Vector Search）与全文搜索（Full-text Search）引擎。它速度飞快、成本极低，且具备极高的水平可扩展性。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: This episode is presented by Turbopuffer, Vector, and Full-text Search built on object storage. It's fast, cheap, and extremely scalable.</p>
+</details>
+<p><strong>Host</strong>: 本期节目同时由 Linear 赞助播出。我想带大家回顾一下过去的开发方式，重温我们曾经是如何协作完成工作的。回到那个每一行代码都必须由像你我这样的工程师亲手敲出来的时代，项目追踪工具（Issue Tracker）的核心使命是在不拖慢团队节奏的前提下保持信息同步。Linear 的设计初衷就是追求极致的速度与低摩擦体验，这一点从产品的每一个细节都能清晰感受到。</p>
+<p>在去年的《The Pragmatic Engineer》年度调查中，Linear 成为工程师群体中最受喜爱的项目管理工具，而 Jira 则因其迟缓臃肿的性能表现成为最不受欢迎的工具。来自《The Pragmatic Engineer》读者群体的数据充分展现了 Linear 是如何从老牌工具手中夺取市场份额的，尤其是在初创公司和中型企业中广受欢迎。</p>
+<p>从那时起，Linear 不断演进壮大，逐步补齐了大型企业管理工作流所需的所有高级功能，包括项目规划、战略举措（initiatives）、路线图（roadmaps）以及客户需求管理等，这也促使众多大型企业纷纷迁移至 Linear。例如，数字医疗企业 Oscar Health 就帮助其内部 600 名工程师从 Jira 顺利迁移到了 Linear。OpenAI 最早仅采购了 100 个席位进行试用，随后在没有任何行政强制命令的情况下，全员 3000 多名员工自发全部切换到了 Linear。Coinbase、Cash App、Brex 以及 Ramp 等知名公司也全都在使用 Linear。许多团队都将 Linear 视为统一整合规划与构建流程的一站式协作平台。</p>
+<p>现在让我们把视线拉回到当下。当企业内部开始广泛引入 AI 智能体时，这些智能体为了高效工作，必须具备充足的上下文信息。它们需要随时调阅产品规格说明书（specs）、客户反馈需求以及历史变更记录。而令人惊喜的是，所有这些上下文早已完备地沉淀在 Linear 之中。因此，当 AI Agent 时代到来时，Linear 自然而然地成为了最理想的上下文中心层（context layer）。</p>
+<p>如今，Linear 平台上已有高达 80% 的企业级工作区接入并采用了 AI 智能体。你可以自由搭配 Codex、Claude Code、Linear 自研智能体或者企业自建的专属 Agent。例如 Coinbase 和 Ramp 都构建了自己的内部 Agent，他们将 Linear 描述为智能体在正式开展编码工作前调取上下文和背景信息的首选之地。欢迎访问 linear.app/pragmatic 了解更多详情。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: This episode is presented by Linear, and I wanted to take you back in time to remind you how we used to get work done. Back when every line of code was written by an engineer like you or me, a tracker's job was to keep people in sync without slowing people down. Linear was built to be fast and low friction and you could tell.</p>
+<p>In last year's The Pragmatic Engineer survey, Linear was the most loved tracker tool and Jira the most disliked one for its sluggish performance. And data coming from The Pragmatic Engineer audience showed how Linear started to gain traction against existing tools, especially as startups and mid-size companies.</p>
+<p>And since then, Linear grew up. They added all the stuff that larger companies need to manage work, projects, initiatives, road maps, and customer requests. and large companies started to switch. For example, healthcare company Oscar helped move 600 engineers from Jira to Linear. OpenAI started with 100 seats and moved all 3,000 staff without any mandate. Coinbase, Cash App, Brex, and Ramp are all on Linear. Many of them saw Linear as a way to consolidate a single tool that brings planning and building together.</p>
+<p>So now let's fast forward to today. When you have AI agents inside a company, those agents need context to work well. They need access to things like specs, customer requests, history. Oh wait, these are all already in Linear. So when agents arrived, Linear became the ideal context layer. Today, 80% of enterprise workspaces in Linear have adopted agents. You can use agents like Codex, Claude Code, Linear agent or your own agent. Coinbase and Ramp both built their own internal agents and describe Linear as a place that their agent goes and picks up the context before starting work. See how it works at linear.app/pragmatic.</p>
+</details>
+<h3>声乐教练的非典型技术转型之路</h3>
+<p><strong>Host</strong>: Matt，非常高兴能邀请你来到我们的播客节目！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Matt, it's great to have you on the podcast.</p>
+</details>
+<p><strong>Matt Pocock</strong>: 终于能来到这里实在太棒了。我是节目的铁杆粉丝，之前看过你们好多期内容。我觉得能坐在这里交流，就像是软件工程师领域的“Tiny Desk 音乐会”一样，意义非常重大。所以我真的非常开心能来参加。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: Great to finally be here. I'm a huge fan. I've watched so many of these. I feel like this is like the Tiny Desk of being a software engineer. You know what I mean? This is big stuff. So, I'm glad to be here.</p>
+</details>
+<p><strong>Host</strong>: 能再次和你联络交流也太棒了！大概一年前，我们在微软 Build 大会之后还一起吃了顿午饭，当时聊得非常开心。现在能正式在播客里深入探讨这些话题真是太好了。</p>
+<p>首先我想问问你的背景经历。与科技界以及本播客以往采访的许多嘉宾不同，你最初并没有选择修读计算机科学专业，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And it's also great to reconnect cuz about a year ago, we had lunch after at Microsoft Build as well, which was really fun. But now it's good to jump into this. And with this, I wanted to ask about your background. Unlike many people in tech and on this podcast, you didn't start out to study computer science, right?</p>
+</details>
+<p><strong>Matt Pocock</strong>: 确实完全没有。在正式成为软件开发者之前的整整六年时间里，我一直是一名声乐教练（voice coach）。我当时在伦敦以及我读大学的埃克塞特（Exeter）当声乐老师，主要教授发音口音、声乐演唱以及发声技巧。我甚至还专门攻读了相关的硕士学位。</p>
+<p>在那很长一段时间里，我都坚信这将是我一辈子的职业道路。你知道的，当时我对科技行业毫无认知，压根没往这方面考虑过。虽然我平时也会自己搭建和维护个人的展示网站之类的，但总体上我从事声乐教学很多年。这段经历对我的人生轨迹产生了极其深远的影响，甚至可以说在很大程度上塑造了我的个性。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: Absolutely not. So for six years before I became a developer, I was a voice coach. I was a singing teacher working in London and working in Exeter where I went to university. I was teaching accents. I was teaching singing. I was teaching voice. I did a master's in it. I spent a lot of time thinking that was what my career was going to be. You know, I didn't have any inkling of tech, didn't sort of think about it at all. I sort of ran my own website and stuff, but yeah, so I did that for a long time and it's been an extremely important influence on my life and I think my personality as well.</p>
+</details>
+<p><strong>Host</strong>: 你能再详细聊聊吗？你最初是怎么走上声乐这条道路的？作为一名声乐教练平时具体做些什么？通常有哪些人会来找你寻求指导，他们又需要什么样的帮助呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Can you get a bit deeper? Where did the voice come from and what do you do as a voice coach? Who are people who came to you for help and what kind of help?</p>
+</details>
+<p><strong>Matt Pocock</strong>: 最初我是从声乐演唱教学做起的。在大学期间我参加过乐队，积累了一些声乐表演的实践经验，所以我在大学时就创办了自己的声乐工作室来做这件事情。当时找我的大部分学员只是希望能把歌唱得更好听一些、想为加入合唱团做准备，或者纯粹把声乐当作一种业余爱好，并不是什么特别严肃的专业路线。</p>
+<p>后来我去攻读了声乐专业硕士学位，毕业后开始进入戏剧学院执教，指导演员们在莎士比亚戏剧中的台词发声技巧等等，同时也开始接纳一些希望提升公开演讲（public speaking）能力的客户。我还为一些大型咨询公司做过几次大型培训项目，去教顾问们如何在商务演讲中更好地发声与表达。</p>
+<p>那段经历非常奇妙。而我最终决定离开那个行业的原因在于，我逐渐意识到如果想在声乐教练领域达到相当不错的事业高度，就必须长期定居在伦敦。但我实在不想住在伦敦。我尝试在那里生活了两年，真的非常讨厌那里的环境。我并不是在伦敦长大的，我渴望回到乡村，回到我熟悉和热爱的故乡生活。</p>
+<p>于是我做出了决定：转行去学习如何成为一名开发者。我基本上是通过完全自学掌握了编程技能，目的就是为了能有一份支持完全远程办公的职业。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: So, I started as a singing teacher. I was in a band and stuff at university. I sort of had a bit of experience doing singing and so I set up my own company kind of at university and doing that stuff, and it was people who just wanted to sing better, who wanted to use their voice for choirs, who wanted to just do it as a hobby. It wasn't anything particularly professional.</p>
+<p>Then I went and did a masters in it and I started going to drama schools to teach people Shakespeare and stuff and like getting people in who wanted to do public speaking. I did a couple of big gigs for consulting companies, you know, going and teaching them how to deliver speeches and how to talk better. It was wild, you know, and the reason I got out of it was because I realized in order to do it at a decent level, you had to live in London. I didn't want to live in London. I tried it for like two years. I just hated it. I hated it. I didn't grow up in London. I wanted to get back to the countryside and where I was from. And that's what I did. And so I learned how to be a developer. I was essentially selftaught in order to have something I could do remotely.</p>
+</details>
+<h3>初涉编程：为了教学自制 Web 音频分析器</h3>
+<p><strong>Host</strong>: 也就是说，你当时是在寻找一种不需要待在伦敦、能够远程开展，同时又具备广阔职业前景和发展未来的工作？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: So basically you were looking at like professions that you could do from outside of London that had a career or perspective or future.</p>
+</details>
+<p><strong>Matt Pocock</strong>: 没错，完全是这样。其实在那之前，我就已经尝试过自学开发，用 JavaScript 写一些基础的小工具，因为我一直对如何为学员提供更好的教学体验很感兴趣。我当时做过一些小巧的单词抽认卡（flashcard）应用。</p>
+<p>实际上，我人生中写出的第一个完整应用程序，可以说是当时我所尝试过最具野心的项目了。那是一个基于 Web Audio API 的音频频谱分析工具。我可以通过它实时分析学员声音的频谱图（spectrogram），查看声音中产生了哪些共振峰频率，检测第一共振峰（F1）和第二共振峰（F2）是否处于恰当的平衡状态等等。</p>
+<p>那个应用在算法和专业原理上极其硬核深入，但实际运行性能却相当糟糕；不过它确实让我的课堂教学质量提升了一大截。所以说，我刚开始学编程就在用极其拙劣的技术手段去硬啃非常硬核的项目。</p>
+<p>后来我意识到自己或许真的能以此为业，便开始浏览各种招聘信息。我想着：“嗯，我懂一点 JavaScript，懂一点 Sass，也能东拼西凑搞定一些前端杂活。”于是我就破釜沉舟直接行动了。我辞掉了原先的工作，全职脱产自学并休整了两个月，最终顺利拿到了一份开发者的工作。那大概是在 2017 年前后，当时在英国找一份初级开发者的工作确实比现在容易不少。从那之后，我的职业生涯便正式步入了软件开发的轨道。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: Exactly. And I'd sort of taught myself how to build stuff and just sort of build basic stuff in JavaScript because I was interesting in making my lessons better for my students. So I'd actually made sort of little flashcard apps.</p>
+<p>Like the first app I ever built was the most ambitious thing I've ever attempted. It was like a web audio analyzer. So I could analyze the spectrogram of your voice to see which resonant frequencies were happening, whether your F1 and F2 were properly balanced and things like that. Extremely in-depth, ran terribly, but actually made my lessons that little bit better.</p>
+<p>And so I was doing pretty hardcore stuff terribly straight away. And I realized, okay, I started looking at job postings and I thought, well, I could do a bit of JavaScript, I could do a bit of SAS, I could do a bit of bits and bobs. And I just jumped into it. I quit my job, had a couple of months off, and eventually got a job. This was about 2017 where it was a little bit easier to get a job in the UK than it is now. And I just went from there.</p>
+</details>
+<p><strong>Host</strong>: 我想在某种程度上你也是幸运的，因为 2017 年前后恰好处于行业招聘的黄金巅峰期。那段时期整个市场对软件工程师的需求极其旺盛，很多人仅仅参加了几个月的编程训练营（bootcamps）就能直接入行，只要一个人展现出足够的自驱力和强烈的学习动机，很多公司都非常愿意给予机会……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I guess in some ways you were also lucky because that was the peak. That was a time where demand was so high for engineers that people had boot camps with a few months of experience and I think people got a chances from a lot of places who had the drive and the motivation and...</p>
+</details>
+<!-- chunk 2/13 -->
+<h3>沟通能力带来的不公平优势与首份开发工作</h3>
+<p><strong>Matt Pocock</strong>: ……还有那种聪明劲儿，对吧？</p>
+<p>对。而且因为我之前一直有和人打交道、沟通的经历，这成了一个难以置信的优势，对吧？我真正去参加面试时，听起来像个通情达理、善于沟通的正常人，而不是那种刚从计算机系毕业、可能完全不具备这些软技能的人。所以，我当时处于一种很奇特的状态：最开始我的技术知识几乎为零或者非常少……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: ...and the smarts, right?</p>
+<p>Yeah. And because I had this history of talking to people, that was an unbelievable advantage, right? I could actually go into an interview and sound like a reasonable person instead of someone who came straight from a CS degree who maybe didn't have those skills. So I had this bizarre ability of having zero technical knowledge or very little...</p>
+</details>
+<p><strong>Host</strong>: 在最开始的时候。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: ...in the beginning...</p>
+</details>
+<p><strong>Matt Pocock</strong>: ……但我却具备向别人清晰解释技术知识的能力，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: ...but the ability to explain technical knowledge to people, right?</p>
+</details>
+<p><strong>Host</strong>: 是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And...</p>
+</details>
+<p><strong>Matt Pocock</strong>: 所以基本上我唯一需要做的，就是把自己的技术知识再提升一点点。而我对此又非常有热情，所以技术水平提升得相当快。之后这就变成了一种看似“不公平”的组合优势，因为我在不同公司里的晋升速度都非常快。我不知道该怎么形容，总觉得我和身边共事过的其他软件开发者不太一样。这你能理解吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: And so that basically all I needed to do was increase my technical knowledge a little bit, and I was very passionate about it and that increased quite quickly. And then it sort of seemed to be an unfair combination because I just rose through the ranks very quickly in various different companies. And I don't know, it felt I felt different from the other software developers I was working with. Does that make sense?</p>
+</details>
+<p><strong>Host</strong>: 那你后来是怎么一步步往上走的？比如你下定决心“我要干这行”，通过自学掌握了技能，接着去参加面试。我想你最初加入的应该是一家规模挺小的公司吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And then how did you step up on the ladder? So like you decided &quot;I'm going to do this.&quot; You taught yourself. You went to some interviews. You got to give I'm assuming it must have been a small company, right?</p>
+</details>
+<p><strong>Matt Pocock</strong>: 是的，一家极小的公司，但里面有几位真正让人备受启发的优秀软件开发者。基本上有一个家伙——我不透露他的名字了，因为他比较注重个人隐私——他平时总穿着凉鞋，在一艘运河窄船（canal boat）上住了很长时间，留着长发，是个地地道道的硬核程序员。那大约是在微软收购 GitHub 的前后。我记得微软宣布收购那天，他走进办公室时几乎都快气哭了，哈哈。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: Yeah. A tiny company with a couple of really inspiring software developers who worked there. Basically a guy—I won't say his name because he likes his anonymity—but basically a guy who lived in sandals, who lived in a canal boat for a long time, like, you know, long hair, proper hardcore, you know. It was around the time that Microsoft bought GitHub. I remember him coming in almost in tears at [laughter]...</p>
+</details>
+<p><strong>Host</strong>: 哈哈，典型的微软黑。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, Microsoft hater.</p>
+</details>
+<h3>初入职场与 TypeScript 的契机</h3>
+<p><strong>Matt Pocock</strong>: 对，绝对是，经典的极客形象。我记得他让我做的第一件事，就是在我的 Windows 电脑上安装配置 CentOS 6。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: Yeah, absolutely. You know, classic. You know, I remember first thing he got me to do was set up CentOS 6 on my on my Windows PC.</p>
+</details>
+<p><strong>Host</strong>: 那可是一个相当硬核的 Linux 发行版了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: It's a pretty hardcore Linux distribution.</p>
+</details>
+<p><strong>Matt Pocock</strong>: 确实是非常硬核的 Linux 发行版，因为我们当时的应用程序在云端服务器上运行的就是这个系统。所以，他真的是个特别好、特别棒的人，一上来就教会了我很多东西。后来那家公司遇到了财务危机，所以我不得不迅速跳槽去了一家外包代理公司（agency），在那儿我拿到了一个职位更高的岗位。从那之后过了九个月，我又换到了另一家 agency，接着又换了一家。我基本上就是在不同的外包公司之间跳来跳去。再后来我就开始参与开源项目了，这也就是我职业故事的下一阶段。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: Really hardcore Linux distribution because that's what our application was running on in the cloud or something, you know. So, really lovely, wonderful guy and someone who taught me a lot straight away. And so basically that company ran into financial troubles and so I had to move to an agency pretty quickly and I got a higher job there. From there nine months later I moved to another agency and then another agency. So just sort of bouncing around different agencies, and then I was working in open source, which is kind of the next part of the story.</p>
+</details>
+<p><strong>Host</strong>: 在那些外包代理公司工作期间，你当时主要使用什么技术栈？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And with the agencies, what tech stack were you using at the time?</p>
+</details>
+<p><strong>Matt Pocock</strong>: 那时候主要是 TypeScript 和 React。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: Yeah, it was TypeScript, it was React.</p>
+</details>
+<p><strong>Host</strong>: 噢，那时候就已经开始用 TypeScript 了吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Oh, was TypeScript already back then?</p>
+</details>
+<p><strong>Matt Pocock</strong>: 嗯，差不多到我的第二份工作时，我就已经是 TypeScript 的狂热支持者了。我记得当时我还在公司内部做技术分享，宣讲 TypeScript 有多重要。我们当时正在为一家汽车制造商开发一套学习管理系统（LMS）。就是那种典型、枯燥的外包项目，对吧？当时我们前端团队规模很小，而后端团队则设在葡萄牙，是标准的前后端分离架构。</p>
+<p>后端团队当时的开发进度一路狂飙，而在我刚加入时，前端团队的进度非常缓慢，还堆积了海量的 Bug。后端团队经常在不事先通知我们的情况下私自更改接口契约（API contracts），所以我们觉得必须引入某种工具来更好地衔接前后端。TypeScript 看起来就是那个显而易见的解决方案。当我们把它正式上线落地后，我们前端的开发交付速度可以说是瞬间暴增，甚至比后端团队还要快了。到最后他们甚至不得不从我们前端团队抽调人手，因为我们做得实在太快了。这就是我接触并使用 TypeScript 的渊源，也是我的起点故事。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: Well, I was pretty hardcore on TypeScript already almost as in my second job. I think I was doing, you know, presentations on how important TypeScript was. We were working for an automobile manufacturer building a learning management system, right? You know, classic boring agency stuff, right? And the front-end team at that time was pretty small, and we had a backend team in Portugal, right? So classic frontend-backend split. The backend team were racing ahead, and at the time I joined the frontend team was really slow. We had a ton of bugs. The backend team kept changing their contracts without telling us, and we thought we need something to link us up a bit better. TypeScript felt like the obvious thing, and once we shipped it we like our velocity just went you know we were faster than the backend team, and eventually they took people off our team because we were so quick. So yeah that was my history with TypeScript. That's kind of my origin story with it.</p>
+</details>
+<h3>涉足开源生态与加入 XState 团队</h3>
+<p><strong>Host</strong>: 那你后来是怎么进入开源领域的？是在日常工作中接触到的，还是利用业余时间做的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: How did you get into open source? Was it at work? Was it on the side?</p>
+</details>
+<p><strong>Matt Pocock</strong>: 是在业余时间。我当时一直在利用业余时间折腾各种开源项目，对各种新鲜技术都充满好奇。那时候我也开始玩 Twitter，经常关注网上的一些行业大咖，心里琢磨着“那是我想要效仿的榜样，是我想要看齐的人”。</p>
+<p>当时进入我视线的是一位名叫 David Khourshid 的人，他是 Twitter 上知名的状态机（State Machine）和 TypeScript 大神。他为人非常非常好，说实话，我的职业生涯很大程度上都受惠于他。</p>
+<p>我当时在做公司的一个项目——大概是我第四份工作的时候——我们需要用到状态机。那是一个极其复杂的应用：你和别人进行实时视频通话，同时双方还能基于某种 Matterport（3D 实景）集成技术，一起在虚拟房屋模型中实时漫游导览。这涉及大量跨网络边界的数据同步与联动，有着海量复杂的应用状态。</p>
+<p>于是我当时就选用了一个叫 XState 的库，那时还是 XState 4.0 版本。那次尝试取得了巨大的成功。随后我就开始琢磨：好吧，我该怎么让它的类型系统变得更加类型安全（type-safe）呢？于是我开始围绕它构建一些周边工具，不断捣鼓尝试，甚至开发了一个围绕 XState 构建的 CLI 工具。这引起了 David 的注意，随后我便受邀加入了 XState 核心团队。我开始在 GitHub 上提交 issue、参与贡献，并一起讨论这个库未来的架构走向。这让我接触到了一批我以往从未见过的顶尖开发者。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: It was I would have been constantly playing around with open source on the side and I was interested in different things. By then I was into Twitter. I was sort of looking at people online and thinking that's someone I want to emulate, someone I want to look at. And there was a guy who crossed my radar called David Khourshid, who's the state machine and TypeScript guy on Twitter. A lovely, lovely guy and I owe a lot of you know my career to him really.</p>
+<p>And I was working on a project. This is I think in my fourth job where we needed a state machine. It was a very complex application where you were on a video call with someone and you could navigate around a house in real time together using some sort of Matterport integration, and there was a lot of linking up that needed to be doing across the network boundary, a lot of complicated state.</p>
+<p>And so I used a library called XState at the time, XState version 4. I think that was a resounding success. And so I wondered, okay, how can I make this more type safe? And so I started to sort of build some tooling around it, have a fiddle, built a sort of CLI that constructed around it, and that got me the attention of David, and I became a member of the XState core team. So I started contributing issues, started having discussions about the future of the library, and it brought me into contact with just a level of developer that I'd never seen before.</p>
+</details>
+<h3>顶级开发团队与走向全职内容教学</h3>
+<p><strong>Matt Pocock</strong>: 比如 David，还有另一位叫 Mateusz Burzyński 的大神（他在 Twitter 上的 ID 是 AndaristRake）。他们是我所见过的最具天赋的开发者，完全是另一个维度的存在。后来，David 想围绕这个项目创立一家公司（Stately），把核心赌注押在状态图（Statecharts）和可视化编程上，认为这是未来软件开发的方向。他们拿到了融资，而那也是我的第一份工作——可以说是我人生中第一次拿到美金薪酬的工作，哈哈，这对我来说是一个巨大的跨越。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: David and another guy called Mateusz Burzyński, called AndaristRake on Twitter. These are the most talented developers I've ever seen. Like this is another level. And eventually David wanted to form a company out of it. He wanted to make a big bet on statecharts and visual sort of programming as the future development. They got some funding and that was my first job where I was being paid American money basically [laughter], and it was a huge step up for me.</p>
+</details>
+<p><strong>Host</strong>: 是啊，众所周知，拿美国公司的薪资和拿欧洲或者英国本地公司的薪资，差距真的非常大。我之前在讨论软件工程薪酬结构的三层模型时也提到过，美国公司——无论是在欧洲招聘远程员工还是在本土——对待薪酬和价值产出的衡量逻辑完全不同，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, which as we know it's quite different from European or local even UK company paying. Because yeah, I also covered some of it in the trimodal nature of software engineering compensation, where yeah, US companies, especially in Europe and also in the US, they think about compensation differently and value generated differently, right?</p>
+</details>
+<p><strong>Matt Pocock</strong>: 完全是这样。它彻底改变了我的生活，无论是对金钱的认知，还是对工作时间灵活性的理解。更重要的是，这意味着我终于能全职投入到自己真正充满热情的事情上了。</p>
+<p>在 Stately 期间，我开始做越来越多的布道和推广工作（DevRel/Advocacy）。因为公司规模很小，我虽然写了大量核心代码，但同时也极力想推广它，因为我发自内心地认同并坚信这套理念。尽管在当下的 AI 时代，我对状态图的某些绝对推崇有所回调，但我依然认为状态图在处理某些特定场景时是非常基础且强大的原语。</p>
+<p>正因为我做了很多推广和技术内容输出，引起了 Vercel 几位核心成员的注意。当时 Lee Robinson 负责 Vercel 的开发者教育团队，那是一支极其豪华的梦幻团队——包括 Delba de Oliveira、Lydia Hallie（她们俩现在都在 Anthropic 的 Claude 团队）以及 Lee 本人。后来我拿到了一份在 Vercel 工作的合同，归入 Jared Palmer 麾下负责相关工作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: Totally, it changed my life, you know, in terms of the way I was thinking about money and the way I was thinking about flexibility. And it meant I was working on something I was passionate about. And while I was there, I started doing a bit more advocacy for it, because obviously the company was very small. I was doing a lot of development, but also I wanted to be an advocate for it because I believed in it, you know. And I still think statecharts are incredibly primitive for certain kinds of work—I've sort of rode back a little bit on my belief of them especially in the AI age—but I was doing a bit more of that, and that got me the attention of a couple of guys at Vercel. Because Vercel at that time, Lee Robinson was the guy in charge of developer education there. They have this incredible team: Delba de Oliveira, Lydia Hallie—both of whom are now at Claude Code—Lee himself, and I got a job there under Jared Palmer...</p>
+</details>
+<p><strong>Host</strong>: 哇，就是那个大名鼎鼎的 Jared Palmer（Formik 和 Turborepo 的作者）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Wow. That Jared Palmer.</p>
+</details>
+<p><strong>Matt Pocock</strong>: 对，就是那个 Jared Palmer！他其实是个特别铁的哥们儿。他后来跳槽去了 GitHub，主导并推动了堆叠差异/堆叠式 PR（stacked diffs / stacked PRs）功能的开发，而现在他已经加入 Cognition（Devin 的开发团队）了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: That Jared Palmer. Yeah. Who's a really good mate actually, and he's the one who later moved to GitHub. He started or spearheaded stack diffs or stack PRs, and now he's at Cognition.</p>
+</details>
+<p><strong>Host</strong>: 没错，他直接去 GitHub 把 stacked diffs 落地交付，然后潇洒离职，事了拂衣去，深藏身与名，现在直接去了 Cognition。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. He went into GitHub, shipped stack diffs, left, refuses to elaborate, and is now at Cognition. Exactly.</p>
+</details>
+<p><strong>Matt Pocock</strong>: 哈哈对，但他确实是整个业界的传奇人物。他人特别棒。不过我在 Vercel 他手下工作的时间并不长，大约只待了三个月左右。</p>
+<p>我在 Vercel 签的是一份形式比较特殊的合同，因为在此之前，我就已经萌生了深耕 TypeScript 的想法，一直在琢磨要不要专门为 TypeScript 制作系统性的教育培训内容。</p>
+<p>早在 Stately（即开发 XState 的公司）工作时，我就产生了一种强烈的冲动想要去教人。毕竟在转行做开发之前，我已经做过六年的全职教学工作。到那时为止，我已经有大约四五甚至六年没有正式教过书了。我心里一直想着：“我必须回到教学这条路上去，我真的很想念教学。”我很喜欢制作内容，很喜欢创作，也很喜欢把知识教会别人。</p>
+<p>于是我便开始付诸实践。我最初是从 TypeScript 的高级类型（Advanced Types）切入的。在当年为了强行让 XState 实现完备类型安全的过程中，我接触并摸索出了海量极其硬核、甚至可以说是疯狂的 TypeScript 类型黑魔法与高级技巧——那是一项极其艰难的任务，某种程度上甚至几乎是不可能完成的任务。于是我把这些心得制作成了几个两分钟左右的短视频 Tips 发到 Twitter 上，结果它们的受欢迎程度和反响，完全超出了我以往经历过的任何预期……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: Yeah, but he's also an industry legend. He's a great guy, and I worked under him for not very long at Vercel. So I was only there about 3 months. From there, I got a funny contract at Vercel because I'd already been floating this idea of TypeScript and thinking about TypeScript and thinking about maybe making educational material for TypeScript.</p>
+<p>I had this urge while I was at Stately, the XState company, to teach stuff. You know, I've been teaching for six years before. I've been not teaching for four or five years at that point, maybe six years. And I thought, I need to get back to this. Like, I miss it, you know, and I love making stuff. I love making content. I love teaching people.</p>
+<p>And so that's what I started doing. And I started doing it for advanced types. I'd got in contact with a lot of crazy typing tricks, a lot of really advanced TypeScript stuff while I was trying to force XState to be type safe. Very, very hard job. I think a mostly impossible job. And so I made a couple of tips. I made these two-minute tips, posted them on Twitter, and they just went, you know, in a way I'd not felt...</p>
+</details>
+<!-- chunk 3/13 -->
+<h3>短视频引爆关注与入职 Vercel 的折中选择</h3>
+<p><strong>嘉宾</strong>：在那之前我就意识到，这里确实存在着切切实实的产品与市场契合度。于是，在某一个周日，我一口气录制了大约 13 到 15 条两分钟左右的技术小贴士短视频。随后我在接下来的几周时间里把它们按计划排期陆续发布出去，结果我的关注者数量直接从大约 4,000 人暴涨到了 10,000 人左右。那一刻你就能真切地感受到，社区对这块内容有着极其庞大且强烈的兴趣，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: ...before. And I realized, okay, there is a market here. And so, one Sunday, I just made like 13 or 15 of these two-minute tips. I just queued them up over the next few weeks, and my follower count went from, you know, 4,000 to 10,000 or something. You suddenly felt that there was huge interest in this, right?</p>
+</details>
+<p><strong>嘉宾</strong>：没错。那是一股极其迅猛的关注浪潮，某种程度上是我独特的表达方式与我所输出的技术内容深度结合的产物，它以一种我此前从未体验过的方式迅速引起了大家的强烈共鸣。在我整个职业生涯中，这种现象其实总共也就发生过两次。因此，当时我脑海里就已经在酝酿制作一门完整课程的想法了，而且我很清楚自己有能力把它做好。我深知只要找对受众群体并且内容能够击中痛点，我一定能打造出一门非常优秀的课程。也就是在那个阶段，我进入了 Vercel 工作。不过我当时在那里的签约方式很不寻常——最初只签了每周工作 3 天、持续 3 个月的顾问合同。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Exactly. A massive wave of something was, you know, some combination of the way I was speaking and the material I was delivering that was clicking in a way that I'd not felt before. And that has only really happened twice in my career. So, I was already floating the idea of a course and I knew I could do it well. I knew I could do a really great course if I just had the right audience and if it clicked. And so, I went into Vercel. I got a contract there for only 3 days a week for 3 months initially, which is very unusual.</p>
+</details>
+<p><strong>主持人</strong>：当时只签 3 天是你自己主动争取的方案，还是说这是 Vercel 方面想测试一下合作效果、先看看进展如何的做法？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Is that what you wanted, or is this how Vercel was probably testing the waters to see how it goes?</p>
+</details>
+<p><strong>嘉宾</strong>：其实 Vercel 当时从一开始就希望我能够直接全职加入他们。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Vercel wanted me full-time straight away.</p>
+</details>
+<p><strong>主持人</strong>：也就是说你心里清楚自己还有另一条想尝试的道路，所以你想给自己做一个风险对冲，看看自己能否把副业做成，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: You knew that there was this other thing, so you wanted to kind of hedge your bets to see if you're able to pull it off, right.</p>
+</details>
+<p><strong>嘉宾</strong>：把 Vercel 这样顶级的平台当作我个人探索的备用后盾，这听起来确实挺荒谬的［笑］，甚至有点不可思议。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Vercel was this weird backup to what I was doing [laughter], which is wild.</p>
+</details>
+<p><strong>主持人</strong>：对我来说这确实太不可思议了。因为对绝大多数开发者而言，进入 Vercel 本身就已经是梦寐以求的终极职位了，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Which is wild to me. For most people, this would be the dream job, right?</p>
+</details>
+<p><strong>嘉宾</strong>：我知道。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: I know.</p>
+</details>
+<h3>平衡稳定性与副业创业的风险对冲</h3>
+<p><strong>嘉宾</strong>：说实话，这么说出来确实让人觉得有点不好意思，因为显然那是无数工程师心目中的理想工作。但我当时走进去的心态确实是：“好吧，我需要一份每周 3 天、极其稳定的朝九晚五工作，好让我在其余时间里去测试验证我的另一条道路。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: It's a little embarrassing to say because obviously it's so many people's dream job, but I went into it going, &quot;Okay, I need a stable 9-to-5 for 3 days a week while I test this other thing out.&quot;</p>
+</details>
+<p><strong>主持人</strong>：但平心而论，我认为这种决策其实是非常明智和务实的，对吧？如果回顾你当时的处境：在你职业生涯的前期，你有大概六年时间一直在做声乐教练；而到那个时候，你转行做软件工程开发也才大约五年时间。你热爱写代码，也觉得自己在这方面很有能力；你觉得自己也许擅长教学，但在真正做成之前谁也无法打包票，对吧？在那样的节点上，如果直接孤注一掷去全职赌一个可能成功也可能彻底失败的项目，风险未免太大；而如果你能在拥有一份稳定高收入工作的前提下去推进它，一旦项目真正获得了强大的增长势头，整个局面就会完全不同。很多工程师心里都有自己的创业想法和抱负，特别是做软件工程本身支持远程办公，你可以把自己的构想做成独立产品甚至创立公司，大家往往都会在“我到底应不应该立刻辞职下海”之间纠结反复。所以在某种程度上，你探索出的这种边稳定工作边验证的模式确实非常独特，而且你还成功把它跑通了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: But I mean, just to be fair, I think this is sensible, right? Like at this point, if we just go back to where you were: you've been a voice coach for a good part of your career, let's say six years, and now for about 5 years you've been building software. You love doing it, you think you're good at it, and you think you might be able to teach, but who knows, right? And at that point, saying &quot;all right, let me take a gamble and do this thing that might or might not work out&quot; is risky, whereas if you can pull it off while you have something stable and it gets traction, that's completely different. A lot of engineers have aspirations and ideas, especially because with software engineering you can work remotely, take your idea, build a company, and they're constantly thinking, &quot;Should I just plunge? Should I quit my job, or should I not quit my job?&quot; So in some ways, I guess this is one unique model if you're able to pull it off.</p>
+</details>
+<h3>预售爆发与离开 Vercel 的必然决定</h3>
+<p><strong>嘉宾</strong>：当时的情况极其神奇，因为事情的发展非常迅速，很快我就意识到自己根本不可能继续在 Vercel 待下去了。大约在我加入 Vercel 两个月左右的时候，正好赶上他们内部一段非常动荡忙碌的时期——我当时恰好亲历了他们正式发布 Turbopack 的全过程。我甚至为 Turbopack 编写了最初的部分官方文档，并与那里的工程团队密切合作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: It was the most bizarre thing because it became very clear very quickly that I couldn't stay at Vercel basically. So about two months into my work at Vercel—I was there actually over a very tumultuous time because I was there when they released Turbopack. I actually wrote some of the initial documentation for Turbopack and met some of the team...</p>
+</details>
+<p><strong>主持人</strong>：Turbopack 是一个构建速度快得多的打包系统，对吧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: ...which was a lot faster build system, right.</p>
+</details>
+<p><strong>嘉宾</strong>：没错，它本质上就是一个新一代构建系统。当时他们的目标是打造能够与 Webpack 竞争的现代化工具链。在他们撰写核心文档的初期我就参与其中了。我当时特地飞到了旧金山，现场参加了发布 Turbopack 的 Next.js Conf 大会。那真是一段极其棒的经历，我和整个团队并肩作战，和大家一起为大会的发布做着最后的冲刺准备。然而就在我做着这些工作的同时，我的脑海深处一直清晰地看着我自己的邮件通讯订阅量和 Total TypeScript 相关的各项数据在持续飙升。我非常清楚地意识到：我正在做的一定是一件超级巨大的事情。果不其然，当我正式开启课程的预售活动时，销售数据彻底爆炸了。假设我当时在 Vercel 拿到的薪资是 X，预售带来的收益直接达到了大概 30 到 40 倍的 X。那是一种立竿见影的巨大冲击。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, it was a build system essentially. At the time they were trying to rival Webpack, and I was there initially when they were building the docs. I flew out to San Francisco and was there for Next.js Conf when they announced it. It was a really fun experience, being there with everyone while getting everything ready for it. And while doing that, in the back of my head I was seeing the newsletter and my Total TypeScript stuff creep up. I understood, okay, there is something really big here. And when I ran a pre-release sale, that just went crazy. I was earning, let's say, X at Vercel, and the pre-release was like 30x or 40x that. It was immediate.</p>
+</details>
+<p><strong>主持人</strong>：而且你在 Vercel 拿到的那份报酬 X，本身就已经是一份非常优厚可观的高薪待遇了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And X at Vercel was already a really, really good compensation.</p>
+</details>
+<p><strong>嘉宾</strong>：绝对是这样，我对 Vercel 给出的待遇非常非常满意。但面对这样的预售结果，事实已经显而易见，我根本没有别的选择可做了。我非常喜欢在 Vercel 工作的氛围，甚至未来某个时刻我也很乐意再回去，但在当时那个节点，我确实无法再继续留任了，我必须全身心投入到自己的这件事情上来。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Absolutely. Very, very happy with that. But yeah, it was obvious there was no other decision I could make. I loved working at Vercel, and I would probably go back at some point, but I just couldn't stay. So I had to do this thing.</p>
+</details>
+<h3>拒绝 996：以家庭为中心的生活方式与课程合作</h3>
+<p><strong>主持人</strong>：那接着跟我详细讲讲 Total TypeScript 的整个过程吧。你萌生了这个点子，开始利用每周剩余的两天时间以及周末去制作它，随后进行了预售。那整个节奏是怎样的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And then tell me about Total TypeScript. You had this idea, you started to build it two days a week and on the weekends, and then you did this pre-release sale. What was that like?</p>
+</details>
+<p><strong>嘉宾</strong>：其实我基本上是极力避免在周末工作的。在这件事情上我的态度甚至可以说是极其激进的。当然，我经常做不到完全不加班，因为我本身是一个对做事情非常容易着迷投入的人，只要我想把某件事做成功，就会忍不住沉浸进去。但我绝对不是那种推崇旧金山所谓的极限工作狂文化的开发者——旧金山那边管那种没日没夜连轴转的模式叫什么来着？是不是叫什么连轴干多少天？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: I try never to work on weekends basically. I'm extremely radical about this. I think it's something I mostly fail at because I'm quite an obsessional person—I like trying to make something work. But I'm not one of these guys who does... what was the SF thing where people go for like long hours?</p>
+</details>
+<p><strong>主持人</strong>：996。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: 996.</p>
+</details>
+<p><strong>嘉宾</strong>：对，996。那种模式真让我反胃。我发自内心地讨厌那套东西。我在生活和事业中所做的一切努力，归根结底都是为了构建一种健康的可持续生活方式，建立一个能够让我把绝大部分时间都用来陪伴家人的生活。这是我终极的目标。我之所以先把这个价值观说在前面，是因为只有在理解了这一点的背景下，我随后做出的所有商业与人生决策才会显得合情合理。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: 996. It turns my stomach, you know? I just hate that stuff. With everything I do, I am trying to build a lifestyle and build a life where I can spend most of it with my family. That's my goal. And so just to prefix that: all of my decisions after that hopefully make more sense in that light.</p>
+</details>
+<p><strong>嘉宾</strong>：所以在做 Total TypeScript 的时候，我是和一个名叫 Joel Hooks 的伙伴合作的。Joel Hooks 这个人极其幽默风趣，而且对我个人的思维方式产生了深远的影响。我和他至今已经深度合作了很多年。他是 Egghead 平台的联合创始人，之前也曾协助 Kent C. Dodds 打造出了极其成功的系列课程，是行业幕后经验极其丰富的殿堂级课程制作专家。当时我主动联系了他，问道：“你愿不愿意和我一起做这门课程？”他毫不犹豫地回答：“当然，太棒了！”我们便由此正式展开了深度合作。因此，在我在 Vercel 兼职工作的期间，我就同步与 Joel 一起推进各项筹备并上线了预售。正如我刚才所说，预售的反响彻底引爆了市场。那一刻我清醒地知道，我必须全力以赴把全套内容做出来。时间推进到大约 2023 年 1 月或 2 月的时候，我们正式上线了全套完整课程。虽然具体销售图表的数据我得回头再去核对，但课程的总营收极其迅速地突破了七位数的大关（即超过百万美元）。这笔收入是我和 Joel 按照约定比例分成的，当然其中也扣除了一定的运营成本，但单从总营收的绝对数字来看，这已经是令人无比振奋的巨大成就了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So for Total TypeScript, I was working with a guy called Joel Hooks. Joel Hooks is extremely funny and extremely influential on me. I've worked with him now for years. He came up with Egghead, and he's worked with Kent C. Dodds on his courses—an extremely successful course creator in the background. I basically reached out to him and said, &quot;Would you like to make this course?&quot; and he said, &quot;Hell yes.&quot; We went from there. So while I was at Vercel, I was also working with Joel and we did this pre-release, and as I said, it just went nuts. I realized I had to fully commit to this. We got to about January or February 2023, and we released the full course. It reached seven figures extremely quickly. That's a revenue split between me and Joel, and of course there were expenses in that, but in terms of raw revenue it was extremely exciting.</p>
+</details>
+<h3>突破百万美元里程碑与高杠杆的内容商业模式</h3>
+<p><strong>主持人</strong>：突破七位数就意味着营收达到了 100 万美元以上，这绝对是一个不可思议的里程碑，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, but seven figures—that's $1 million, which is an incredible milestone, right?</p>
+</details>
+<p><strong>嘉宾</strong>：那太疯狂了，而且完全改变了我的生活轨迹。我突然意识到：哪怕我早上自然醒来什么都不做，这笔被动收入依然会源源不断地涌入账户。其实早在当年我做声乐教师的时候，制作可以在线上持续销售的高质量数字化教学内容就一直是我梦寐以求的愿景。这正是我多年以来孜孜以求的高杠杆工作模式——通过倾注心血完成一次高质量的产品构建，随后便能够退后一步，把宝贵的时间重新归还给我的家庭。在随后的两三年里，我继续围绕 Total TypeScript 展开深耕，不断扩充核心课程的内容，同时也推出了几门补充配套课程。这就是 Total TypeScript 迄今为止的发展轨迹。过去四年里我在商业上取得的最核心成就，全部源于 Total TypeScript 这套体系的打造与持续拓展。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Which is nuts, you know, and life-changing. And I realized, okay, I can wake up in the morning and this money is still going to come in. This is something that I dreamed about for a long time when I was a singing teacher as well: making material that I could sell online. This is something I've been aiming for for a long time—sort of high-leverage work where I can do the work and then step back and go back to my family. And for the next couple of years, I worked on Total TypeScript, expanding the course and selling a couple of supplementary courses. That was the main portion of my success in the last four years—Total TypeScript and building that out.</p>
+</details>
+<p><strong>主持人</strong>：是的，Total TypeScript 的成功在整个开发者社区里都极具启发意义，尤其是你后来公开分享了总营收突破 250 万美元的重要里程碑。我认为对于广大的软件工程师而言——当然我们都明白这是扣除收入分成和各项运营成本之前的毛营收数据——但它非常直观地展现出了一种甚至超越绝大多数顶级大厂工程师岗位的变现潜力。虽然如果与美国顶尖人工智能实验室的核心研发岗位相比可能不算最高，但那毕竟属于极端个例；而你所验证的，是真正依托市场需求建立起的可持续独立商业模式。在某种程度上，这是一种非常坦诚、干净的价值交换模式：你精心打磨出一门真正有价值的产品，用户因为渴望掌握硬核技能而主动掏钱购买，只要他们能够从中获得实实在在的技能提升与回报，交易就成立；如果他们觉得不满意，随时可以申请退款，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. And Total TypeScript has been very inspirational, especially when you openly shared that big milestone when it hit $2.5 million of total revenue. For many software engineers, of course we know this is before revenue share and expenses, but it pretty clearly shows a higher earning potential than many great software engineering jobs. Not necessarily all of them, especially when looking at some US AI labs which are probably an exception, but the fact that there is a real market and a business to be made around what feels like an honest model: &quot;Hey, I created this thing, people pay for it because they want to learn, and they hopefully get value from it because otherwise they would ask for a refund, right?&quot;</p>
+</details>
+<p><strong>嘉宾</strong>：完全正确。我们一直执行着非常宽松友好的长期无条件退款政策。同时，我个人也倾向于拒绝接受任何其他形式的商业变现资金。我并不喜欢接商业赞助内容——虽然我不会把话说死说自己永远不做，但我确实从心底里排斥那种模式。我虽然开通了 GitHub Sponsors 赞助页面，但我一直在努力想把它彻底关掉。我很喜欢一种纯粹的商业定位：清清楚楚地告诉大家，“这些是我用心研发出来的付费产品，如果你认可我并想支持我的工作，购买这些产品就是支持我的最佳方式”。同时我也由衷希望这些内容能为你带来十倍以上的职业与技术回报，毕竟软件工程本身就是一个回报极其丰厚的高价值行业，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Exactly. We do a very extended refund policy. I don't tend to want to accept any other forms of money either. I don't really like doing sponsored content—I'm not going to say never, but I don't really... I've got a GitHub Sponsors page, but I've been trying to take it down for a long time. I like the idea of just being someone who says: &quot;Okay, these are the products you can buy from me. This is how you can support me.&quot; And hopefully this gives you a 10x return, because this is a very lucrative industry, right? Like...</p>
+</details>
+<!-- chunk 4/13 -->
+<h3>企业教育预算与早期商业成功</h3>
+<p><strong>嘉宾</strong>：很多人手头都有一笔专门用于培训学习的教育预算（Education Budget）。如果大家愿意把这笔预算花在我的课程上，基本上这就是我的商业模式。很多购买课程的人，资金来源其实都出自企业的教育预算。你知道，很多公司在这方面非常大方，愿意为员工教育投入重金。当时 Joel（Joel Hooks）非常敏锐，极力推动我往这个方向发展，并让我意识到这个市场的潜力。说实话，我过去对这个行业里流动着多大规模的资金完全没有概念——特别是在当时那个时期，甚至到现在也是如此。但在短短两三年内，课程销售就迅速达到了那个重要的里程碑，这对我来说简直彻底改变了生活。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And a lot of people have education budgets that they can spend. And if you want to spend some of your education budget on me, that's basically my model. And a lot of that money, a lot of the people taking the course, this is from people's education budgets. You know, this is companies coming and spending big on education. And that was a market that Joel was very keen in pushing me towards and realizing this. You know, I didn't have much of a sense for how much money was sloshing around in the industry, especially in that age and honestly still. But the fact that it just hit that milestone so quickly within a couple of years, I mean, life-changing.</p>
+</details>
+<p><strong>主持人</strong>：这听起来确实是一个不可思议的故事。原本这完全可以是一个童话般的结局：在接下来的职业生涯里，你可以源源不断地创作优质教育内容，而且市场需求始终居高不下。然而，AI 的爆发彻底打破了这一切。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Well, I mean, this sounds like an amazing story and it could be a fairy tale ending where like you keep creating educational content for the rest of your life and it's highly in demand, but then AI happened.</p>
+</details>
+<p><strong>嘉宾</strong>：是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah.</p>
+</details>
+<p><strong>主持人</strong>：众所周知，AI 正在深刻改变我们的工作模式以及获取信息的方式。比如我现在已经很少使用 Google 搜索了，日常基本都是与 AI Agent、深度研究工具（Deep Research）等打交道。我听到不少在线教育创作者反映，他们的营收、市场份额乃至用户心智份额都在急剧下滑，因为当人们可以直接向聊天机器人提问并获取答案时，可能就不再愿意花时间完整听完一门课程或培训讲座了。你是如何看待 AI 对整个教育行业、人们的学习模式、你的个人业务以及你作为一名教师的角色的冲击？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And as we know, it's changing a lot of how we work, how we find information. For example, like I don't Google that much. I actually work with AI agents or deep research or some of those things. I heard stories about educators, online educators who are saying that their revenue and market share and mind share is just falling down because people might not want to sit through courses or sessions when you can just turn to the bot. How did you see AI impacting the industry, how people learn and also your business and also you as a teacher?</p>
+</details>
+<h3>AI 冲击下的在线教育与“知识”的贬值</h3>
+<p><strong>嘉宾</strong>：这背后的情况非常复杂，因为 AI 确实彻底改变了整个游戏规则。它颠覆了知识本身的重要性，特别是重新定义了哪类知识才真正具有价值。</p>
+<p>在我讲授技术课程时，我通常把教学内容划分为两个层次：一层显然是语法层面，也就是教你“是什么”（the what）；但另一层则是其背后的底层原理与思考逻辑，也就是“为什么”（the why）。如果无法结合具体的“是什么”，你其实很难凭空去讲清楚“为什么”。因此，传统的教学媒介或载体通常是：我教给你这套语法知识，在此过程中你或许能够领悟到围绕它建立的深层智慧与工程见识。也就是说，我在传授表层知识的同时，也在试图传授工程智慧。</p>
+<p>但在今天，获取纯粹的“知识”已经变得极其廉价。它变得非常、非常廉价——你随手一查就能得到。甚至我自己就构建过一个教学相关的 Skill，它能随时引导你并快速教给你所需的具体知识点。然而，“智慧”的习得却并没有因此变得容易分毫。你仍然需要亲自去碰撞、去踩坑；如果你之前缺乏那种工程智慧，即使有 AI 辅助，你在实际开发中依然会遇到一模一样的架构难题与边界困境。</p>
+<p>因此，从我在《Total TypeScript》上的商业营收来看，收入确实明显下滑了。这很显而易见，因为我觉得大家对单纯死记硬背那种语法材料已经不再那么感兴趣了；而对于继续讲授那类基础材料的教育者来说，日子也会变得愈发艰难，因为表层知识的获取门槛已经被彻底踏平了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: It's complicated because AI has changed the game, right? It's changed how important knowledge is and specifically the types of knowledge that are important. So when I'm teaching my courses, I sort of think of there as being two layers. I'm teaching the syntax obviously I'm teaching the what, but there's also the why behind it, right? And it's very hard to teach the why without touching on the what, if that makes sense. So the sort of medium is I'm going to teach you this syntax and maybe you might gather the sort of wisdom around it right I'm teaching you knowledge but I'm also trying to teach you wisdom. Knowledge is now very cheap to acquire right very very cheap you can just look it up you know you can build I have a teach skill that can just take you and just you know teach you the knowledge that you need but the wisdom has gotten no easier to learn right it's still knocking about like you are still going to run into the same issues that you ran into if you didn't have that wisdom before even with AI. So in terms of like my revenue from Total TypeScript that's gone down obviously because I think people are not so interested in that material anymore and I think people teaching that material are going to find it tricky because again that knowledge is really really hard to come by.</p>
+</details>
+<p><strong>嘉宾</strong>：对我来说，要想找到自己的立足点——倒不一定是关乎生存，但我确实花了很长时间去摸索自己究竟应该在 AI 领域处于什么生态位。毕竟我不是来自 OpenAI 的顶尖研究员，我没有那种深厚的学术履历去高谈阔论底层的模型原理。大约是在 2023 年底，我开始认真关注这个方向。起初，我制作的课程主要是教开发者如何将 AI 集成到现有应用程序中。当时我想，自己做前端和应用开发这么多年，AI 正在带来改变，做这方面的实战课程理所当然。但很快我就意识到，自己押错了方向：实际的回报远低于预期。虽然那批课程内容质量很高、我也引以为豪，但我并不想沿着这个方向继续做下去了。直到去年 12 月左右——很多人都会提到这个时间节点……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: The only way that I've been able to not necessarily survive, but it took me a long time to figure out where I wanted to be in the AI space because I'm not a researcher from OpenAI. I don't have the credentials to like talk about this stuff really, especially in 2020, late 2023 was when I started looking at it and I was initially making courses about how you put AI into applications. I thought, okay, I've been building frontend applications for a long time. It makes sense that AI is changing things a bit. There started to be clear to me that was the wrong bet to make. I wasn't sort of seeing the returns I was expecting and like the material was good and I feel proud of it but I didn't think I wanted to make more of it and around December last year which is a date that many people cite.</p>
+</details>
+<p><strong>主持人</strong>：没错，我们都对那个时刻记忆犹新！或者就像大家常说的那样，是那个“全员度完寒假回来后集体吞下 AI 红丸”的时刻（笑）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Oh yes, we know or as we call kind of the winter break where everyone came back AI [laughter] pill.</p>
+</details>
+<p><strong>嘉宾</strong>：是的，完全没错！就是那个“Peter 假期”，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, exactly. The Peter... the Peter break, right?</p>
+</details>
+<p><strong>主持人</strong>：Peter 假期。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Peter break.</p>
+</details>
+<p><strong>嘉宾</strong>：也就是 Opus 4.5 / Claude 3.5 时代爆发的那段假期。当时人们有了充裕的休假时间，开始高强度测试和压榨大模型的能力，大家突然恍然大悟：天哪，技术真的产生质的飞跃了！我也同样经历了这样的顿悟时刻。我意识到：现在的 AI 已经足够强大，开发者完全可以放心地把具体任务委托给它。你真正需要做的是为这些 Agent 搭建好周围的脚手架与系统结构，由 Agent 去负责处理具体的语法、表层知识以及我所谓的“战术性工作”（tactical stuff）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: The open claw break when Opus 4.5 is out. People have a lot of time off and they just start slamming it and they realize, wow, okay, things are really happening. And that happened to me too. And I realized, okay, the AI is now good enough that you can delegate to it. You can actually make structures around the agents and the agents can handle the knowledge, the syntax, the sort of I call it the tactical stuff.</p>
+</details>
+<p><strong>主持人</strong>：是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah.</p>
+</details>
+<h3>战术编程与战略编程的分野</h3>
+<p><strong>嘉宾</strong>：而人类工程师则应该专注于战略层面的工作（strategic stuff）和长远思考。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Um and you can handle the strategic stuff, the long-term thinking.</p>
+</details>
+<p><strong>嘉宾</strong>：我经常使用这个概念框架。我知道你之前在播客里采访过 John Ousterhout（《软件设计的哲学》作者）。我自己其实也非常希望能和他当面交流，他的思想对我产生了极其深远的影响。他经常深入探讨“战术编程”（tactical programming）与“战略编程”（strategic programming）之间的根本差异。在我看来，AI 基本上已经把战术编程全面吞噬了；剩下的任务正是由我们人类去把控战略编程。于是我意识到，在战略编程这一层面上，我完全可以设计出一门全新维度的课程。</p>
+<p>当时我正在密切关注 Ralph Loops（循环迭代工作流），比如 Geoffrey Huntley 所构建的那些令人惊艳的实验项目：通过让 Agent 形成闭环循环，驱动它自主达成一系列复杂目标。我当时就觉得，这里面绝对大有文章可做！我唯一需要做的是找到一个清晰的架构系统，把这些方法论合理组织起来，并探索如何对其进行调优和扩展。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: I use that a lot. I know you had John Amster on this podcast. I've been really wanting to chat to him myself like he's a huge influence on me and he talks about the difference between tactical programming and strategic programming. AI has largely eaten tactical programming in my view and it's up to us to handle the strategic and I realized okay in the strategic layer there's a course I can create there. I was looking at Ralph loops at the time um sort of Jeffrey Huntley was building this really cool stuff where you can loop the agent and get it to follow these goals and I thought okay there's definitely material here. I just need to find a structure within which I can put it and organize how to fiddle around with it.</p>
+</details>
+<p><strong>主持人</strong>：我记得关于 Ralph Loops，你当时还在 YouTube 上发布过一个广为流传的视频（全网播放量极高），我们也会把该视频的链接放在下方的节目介绍中。在视频里你详细展示了自己是如何构建 Ralph Loop 的，比如如何应对一个包含大量待办事项（To-Dos）的复杂项目。</p>
+<p>你在视频中做了一个非常出色的对比：通常情况下，大家试图让 Agent 协作的方式往往是让它先做一份完整的前置顶层计划，然后按部就班地逐一执行每个步骤——这就是传统的自顶向下规划模式。而你指出这种模式的核心缺陷在于，当真正进入具体实现阶段时（无论是人类还是 Agent），往往会中途发现“等等，我还必须补充处理很多先前未预见的事项”，这时你该如何动态修改和维护原计划？</p>
+<p>于是你引入了 Ralph Loop 的机制，展示了当时所使用的结构设计：例如通过一个 Markdown 文件作为状态载体，任务可以被动态追加进去，Agent 一边消费消化待办任务，一边持续补充新发现的任务。这对我来说确实是一个巨大的启发，彻底刷新了关于如何驱动 Agent 工作的思考方式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And I remember with the Ralph loops, you also made a video that became very popular on YouTube, access everywhere, where you basically said like all right, like here's how I created a Ralph loop. Like here's I have a project that has a lot of like to-dos. and you did a great job in uh we'll link that video in the show notes below where you said like all right here's how usually we would try to get agents to work like do a plan up front and then implement each step like the kind of traditional top down planning and you're saying the problem is that as you're implementing or even the agents implementing it realizes hang on I need to do more stuff and then how do you modify the plan and then enter the Ralph loop where you gave the structures that you used at the time there was like an MD file it keeps it adds as there and it kind of like eats to it but keeps adding And uh it was actually a pretty eye openener to me as like ah on a way to think about how to do these agents.</p>
+</details>
+<h3>Ralph Loop 与基于状态机的 Agent 架构探索</h3>
+<p><strong>嘉宾</strong>：实际上，我之前花了好几年时间尝试将 Agent 深度集成到实际应用中的经历，在这个阶段发挥了巨大的反哺作用。因为当你尝试构建一个内嵌 Agent 的应用程序时，你脑海中始终在严密思考整个系统的数据流（Data Flow）：数据将以何种路径流入系统？它应该具备什么样的数据结构与格式？各项上下文的优先级如何分配？哪些内容该放入 System Prompt，哪些内容该放入 User Prompt？</p>
+<p>在开发应用时，你是在比通用 Agent Harness 底层得多的级别上进行精细化操作。因此，当我转而使用各种 Agent Harness（框架与运行环境）时，一切都让我感到无比熟悉和自然。我只需要清晰梳理几个核心问题：系统状态究竟应该存放在哪里？我该如何将这些状态精准地传递给各个 Agent？状态的数据结构应该长成什么样？我又该在何时以及如何对状态进行压缩、精简或重置？须知在那个时期，Claude Code 和相关工具还处于非常早期的阶段（Claude 3 大概也才发布了五六个月左右）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: It actually the couple of years that I spent sort of trying to put agents into applications was really beneficial there because when you try to build an app that contains an agent, you're always thinking about data flow. You're thinking about how the data is going to get in, what shape it's going to be, what priority, whether you're going to put it in the system prompt, the user prompt. you're working at a lower level than you usually get to with the harnesses. And so when I got to working with the harnesses, it felt like, oh, this just feels very familiar. I just need to, you know, where is the state going to live? How am I going to pass the state into the agents? What shape is that going to look like? How am I going to compact it or clear it? You know, and this was, you know, still pretty early days of Claude Code. Claude had been out, you know, five, six months at that point.</p>
+</details>
+<p><strong>嘉宾</strong>：这一切运转起来感觉极其顺畅自然。从那时起，我就彻底迷上了这些机制——我们现在习惯称之为“Loops”（循环），但其实它们本质上就是工程流程（Processes）。它们本质上是将多个 Agent 串联组合在一起的不同协同模式。这就好比系统架构流程图一样：只要你能在各个组件之间绘制调用与传递箭线，特别是当存在一个将结果回传给上游的反馈端口时，你就可以把它定义为一个循环，或者称之为工作流（Workflow）、流水线（Flow）等等。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And it just felt very natural. And from there, I just got obsessed with these, I suppose, we would call them loops now, but really they're just processes. They're sort of different ways of stringing agents together. This is kind of like the diagram, right? If you can draw arrows from one thing to the other that you can call that a loop, especially when there's a port that goes back or you can call a workflow or or a flow or whatever, right?</p>
+</details>
+<p><strong>嘉宾</strong>：从严谨的工程角度，我更倾向于将它称作有限状态机（Finite State Machine）。这种架构与我多年来在 XState 中所做的工作高度一致：完全基于流程（Process-based）、基于状态（State-based），有时也是基于事件驱动（Event-based）。在这个架构中，底层负责执行具体动作的 Agent 会向顶层状态机抛出事件并触发状态转移。</p>
+<p>一旦采用这种状态机模式，我立刻观察到了极其惊艳的执行效果。我当时进行了大量的工程实验：利用自己搭建的流程化体系去开发实际业务功能。我自己维护着好几个用于扩展个人生产力的应用程序，例如一个专有的自定义视频编辑器——那是一个规模非常庞大的代码库；此外我还有几个开源项目。我在这些真实场景中不断搭建这些小型循环和微型工作流管道。有时为了做对照实验，我会特意停用这些自定义流程，退回到默认的单次提示词或原生交互设置，结果我立刻察觉到了两者之间存在着巨大的……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: I would call it a finite state machine. you know, it felt very similar to the stuff I've been working on in XState, which is process based, which is state based, uh, event based sometimes as well, where, you know, you have an agent at the bottom there that's calling an event back at the top. And that's I started just to see really good results from that. And I would do these experiments where I would try sort of building out my process and I would build out a feature of, you know, I have a few apps that I work on kind of to extend what I do, like I have a custom video editor. I have a you know a huge thing that huge codebase. I have a few open source projects as well and I was just building these little loops and little pipelines and I would sometimes just drop it and go back to what the default setup was and I just noticed a huge</p>
+</details>
+<!-- chunk 5/13 -->
+<h3>将工作流程封装为 Skills：从个人实验到爆火开源</h3>
+<p><strong>Matt</strong>：……这种差异让我由衷地感叹：天哪，我在这里所做的事情真的让我事半功倍，为成功打下了极其坚实的基础。于是我开始思考：分发这种能力的最佳方式是什么？我怎样才能更好地把这些东西分享给其他人？正是从那时起，我逐渐选定了技能（Skills）作为分发这一整套工作流程的机制。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt</strong>: ...difference. Like, I just felt, wow, okay, the stuff that I'm doing here is really setting me up for success. And I started thinking, what's the best way that I can distribute that? How can I share that with other people better? And that's where I sort of started landing on skills as the distribution mechanism for this stuff.</p>
+</details>
+<p><strong>主持人</strong>：嗯。这些就是给 AI 机器人框架（AI bot harnesses）使用的技能，你通常可以对它们进行定义；一旦安装好之后，你就可以直接通过斜杠命令（slash command）来调用它们。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Mhm. These are the the skills for AI bots harnesses where you can typically define them and now you can once you install them you can invoke them with a slash command.</p>
+</details>
+<p><strong>Matt</strong>：没错。技能本质上就是一个存放在你电脑某个位置的 Markdown 文件目录。Agent 既可以由它们自己去调用——也就是模型主动调用的技能（model-invoked skills）；你也可以拥有那些 Agent 本身事先并不知道、但由你自己手动去触发调用的技能——也就是用户调用的技能（user-invoked skills）。</p>
+<p>当时我开始看到这类技能集合到处涌现，比如 Superpowers，还有大家可以安装的各种 Claude Code 插件，我想还有 Gstack 之类的。我意识到：好吧，也许我也能把自己目前总结出来的这套流程制作成一组技能分发出去，看看大家的反馈如何。</p>
+<p>起初我只是把它传了上去，然后我就去忙别的事务了。我当时正在制作一门课程。过了一阵子我回过头来看，才惊讶地发现：天啊，它获得的 Star 数量比我以往做过的任何项目都要多！而我此前甚至根本没有真正对外宣传过它。你知道的，它就只是静静地放在那里。我想这完全是靠口口相传吧。我虽然写了一点点文档，但其实写得非常少，可它就已经彻底爆发了。</p>
+<p>于是我想，好吧，也许我应该在这个项目上多花点心思，也许我应该好好聊聊它们。随后我在我们上次见面的活动上做了一场演讲——我想应该是在 4 月份的伦敦 AI Engineer 大会上。那场演讲的题目叫做《软件工程基础依然至关重要》（Software Fundamentals Still Matter）。现在那场演讲的播放量大概已经达到 120 万次左右了。我在演讲中提到了这套技能库。如今这个技能库已经获得了 23 万颗 Star，成为了全世界 Star 数量第二多的 Skills 仓库，我想大概位列 GitHub 历史所有仓库 Star 总榜的第 20 到 25 位左右。</p>
+<p>哇，你能想象吗？这简直不可思议！这说明大家对这类方案显然有着极度强烈的渴求。这是我职业生涯中第二次体会到这种感觉——就像我当年开始发布 TypeScript 短视频时一样，我真切地感受到：哇，这里蕴含着巨大的势头，某些变革正在发生。所以我强烈地感觉到，我必须在这上面加倍下注。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt</strong>: Exactly. Skills really they're just a folder of markdown files that can sit in your computer somewhere and the agents can either invoke them themselves. So model invoke skills or you can have skills that like the agent doesn't know about but you can invoke yourself. So user invoked skills and I started seeing these skill sets pop up everywhere like superpowers and you know claude code plugins that you can install um I think Gstack as well.</p>
+<p>I realized okay maybe I can distribute what I have this process as a set of skills and see what people think of it and initially I just put it up and I was doing other stuff. I was working on a course and I check back in and I realize oh it's got more stars than anything else I've ever done. I've not even really talked about it. you know, it's just sat there on its own. Word of mouth, I suppose. I've done a little bit of documentation, but really not much and it's just exploded already.</p>
+<p>So, I thought, okay, maybe I should put a little bit more work into this. Maybe I should talk about them. And [clears throat] I did a talk at, I think, where we met last, which was AI engineer London about in April. That talk was entitled Software Fundamentals Still Matter. And that talk is now up to, I think, 1.2 million views or something. And I mentioned the skill set. The skill set is now at 230,000 stars. It is now the second most starred skills repo in the world. I think somewhere like 20th to 25th of the most starred repos of all time. Wow. You know what I mean? Like what's going on? So there's obviously a hunger for this. So this was the second time in my career, just like when I was putting out the little typescript videos where I felt, wow, there's a momentum here. There's something happening. And so I felt I had to double down on that.</p>
+</details>
+<h3>从极简设计到被深度盘问的真实体验</h3>
+<p><strong>主持人</strong>：关于这些技能，你当初是如何编写它们的？这是在试图提炼并记录你的整个工作流，以及你对如何有效使用 Agent 的理解吗？你知道，这不仅关乎当前，更融入了你对状态（state）的思考，以及你此前将 AI 集成到应用程序中的探索（虽然那次尝试并没有大火，但你从中汲取了宝贵的经验）。所以，这算不算是把“Matt 的工作流程”、“对 Matt 而言最行之有效的实践方式”总结沉淀了下来？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: The the skills, how did you write them? Is is this trying to capture your workflow, your understanding of what works with agents, you know, not just right now, but of course, you're thinking about state, you're thinking about how you were integrating AI into applications, which again didn't take off all that much, but but you learned. So, is this kind of like Matt's workflow, Matt's way of of what works for me?</p>
+</details>
+<p><strong>Matt</strong>：是的，确实就是这样。我首先思考的是：大家在拿到这些技能后肯定会去使用，并且会根据自己的需求去调整和改造它们。那么，我该如何打造一套最简单纯粹的技能，让大家能够非常轻松地审计和看懂其中的代码与提示词？我一直在想，如何才能最大程度地让大家在日常工作中顺畅地把它们用起来。</p>
+<p>就拿其中最受欢迎的 <code>grill-me</code> 技能来说吧，我不知道你之前有没有亲自用过它，但……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt</strong>: Yes, that's what it is. I try to think first of all people are going to use these skills and they're going to tinker with them. So how do I make the simplest set of skills that people can audit very easily? I'm trying to think how do I maximize um people picking these up and using them at work. So for instance the grill me skill which is the most popular one you know I don't know if you've used it but</p>
+</details>
+<p><strong>主持人</strong>：我也经常用它，确实在用。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: I use it as well. Yeah.</p>
+</details>
+<p><strong>主持人</strong>：好的。[笑声] 讲真，它对我那种刨根问底的盘问程度简直到了让人抓狂的地步！我当时只是对它提了一个简单的需求，我说：“我想暴露一个 API 接口端点，只要调用方携带了经过身份验证的 Token（我做了一些基础鉴权），就能判断某个邮箱地址到底是不是我邮件列表的订阅用户。”因为我当时想把这个接口和我正在筹办的一场活动对接起来，从而给付费订阅会员提供优先权。这按理说是一个非常简单的功能，对吧？</p>
+<p>结果这个 <code>grill-me</code> 技能就开始对我进行全方位无死角的严苛盘问，比如：“好的，那关于身份验证机制，你是希望使用 Bearer Token，还是放在 JSON 请求体中传递？但放在 JSON 中安全性相对较低……”等等诸如此类。我心想：行吧，这确实是一个需要明确的设计决策。</p>
+<p>接着我们逐一讨论所有这些决策，它甚至深入到了非常底层的细节，比如：“好的，那我们如何实现速率限制（rate limits）？谈到限流策略，你是希望精确严格地卡死在每天 1000 次请求、超出哪怕一次都不允许（但这会引入额外的系统复杂度），还是采用其他策略？”</p>
+<p>我当时突然意识到：我已经有很长一段时间没有跟团队或工程团队进行过如此深入、细节拉满的系统设计讨论了！通常只有当对方拥有极深厚的领域专业知识时，你才能进行这种水准的交流。一方面我感到有些被冒犯和不耐烦，心想“这明明只是个小功能，不用搞得这么复杂，别瞎操心那些了”；但另一方面，我又深深地被震撼到了——这个 AI、这个大语言模型，仅仅通过一系列精妙构造的提示词，竟然能够做到如此专业的地步！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Okay. [laughter] It it's it's annoying how how damn it it grilled me. I just asked it. I was like, I'd like to expose an API endpoint that can can tell whoever has the authenticated token uh I have some basic authentication. Is this email a subscriber to my email list or not? Because I I want to connect it with uh one of the the events that I'm I'm doing with to get priority to pay subscribers. And that's very simple, right?</p>
+<p>And then the grill me thing, it it starts to just really grail me like, okay, so what about authentication? Do you want the bear token or do you want it in JSON which is not as safe etc. like okay well that's a decision make and then we go through all of these decisions and it goes really low level including like okay like how do we enforce rate limits when it comes to rate limits you want to exactly do it when you get like a thousand per day and not allow single more which is more complexity and I just realized it's been a long time since I've had such an involved design discussion with with a team or an engineering team and you typically have it when someone has deep domain knowledge and I I I was both annoyed by I this is just simple like No, don't worry about that. But also impressed that this thing, this AI, this LM through a series of prompts is able to do all of this.</p>
+</details>
+<h3>激发潜在空间：重现资深架构师的深度对谈</h3>
+<p><strong>Matt</strong>：是啊，几乎每个人都有自己的 <code>grill-me</code> 故事。我在各种技术大会上听到了太多类似的用户反馈。大家都会对我说：“你写的这个技能其实非常非常简单……”它本质上就是命令 Agent 就某个特定主题对你进行持续不断、毫不留情的深度访谈。这其实是一个代码量极小的微型技能，但它却展现出了一种极其奇妙的涌现行为（emergent behavior）：模型会开始跳出固有思维框架进行思考，不断向你抛出各种富有启发性的想法与挑战。</p>
+<p>我记得这个灵感最初来自参与 Claude Code 开发的 Tariq。他当时的核心观点大致是：让 Agent 反过来对你进行全方位的访谈盘问，你就能获得好得多的结果。于是我把这个理念固化并编码成了一个小小的技能。使用之后我立刻意识到：哇，天哪，这比我之前用过的任何交互方式都要好上整整 10 倍！</p>
+<p>而且这个 <code>grill-me</code> 技能是第一个让我重新找回职业初期那种讨论氛围的工具。那让我想起在第一家公司工作时，跟那位穿着凉鞋的技术大牛一起交流的场景——房间里坐着一位经验极其丰富的顶级资深工程师，逼着你深入审视自己所做的每一个技术决策。这给我的感觉就像是在跟 XState 团队里像 Andarist（Mateusz Burzyński）这样的大师级工程师协同工作一样。感觉就像有一位极高水平的资深开发者在向我提出一个个直击要害的高质量问题。</p>
+<p>当时我就想：哇，太不可思议了！于是我开始沿着这个方向继续挖掘并思考：我该如何从 Agent 身上榨取出更多软件工程的基本功底？我该如何让它表现得更像一名正统、合格且老练的资深工程师？我该如何精准触碰并激发其潜在空间（latent space）中正确的那一部分，从而彻底改变它的行为模式，让它以充满价值的方式向我提出质疑与挑战？因为一旦你能做到这一点——一旦你大幅提升了自己与 Agent 之间对话的深度与质量，你最终所获得的产出质量自然也会实现质的飞跃。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt</strong>: It's I mean, everyone's got a grill me story. So I get so many of these in conferences. People say, you know, you've this this very very simple skill. It's really just telling the agent to interview you relentlessly about the topic. It's a very small skill. It just has this weird emergent behavior with it where the models just start thinking a little bit outside the box and they start throwing ideas at you.</p>
+<p>I think I got it originally from like a Tariq who works with claw code. He's saying basically the get the agent to interview you and then you'll see better results. So I encode that into a little skill and it's I I realized wow okay it's just sort of 10 times better than anything I've ever used.</p>
+<p>And that grill me skill was the first one that sort of reminded me of the discussions I would have at at my first job, you know, with the with the guy with the sandals. It's this very senior engineer in the room really getting me to think about everything that I'd done. It was the most familiar thing to me to actually working with someone like uh Anderist Rake at Xate. You know, it just felt like a really high quality developer was asking me these good questions.</p>
+<p>And I thought, wow, okay. And then I started sort of taking that and going like how do I mine this uh agent for more software fundamental stuff? How do I make it feel more like a proper developer, a real senior? How do I tickle the right latent space in order to get its behavior to change and challenge me in interesting way? Because if you can do that, if you can increase the quality of the conversation you're having with the agent, you're going to increase the quality of the outputs.</p>
+</details>
+<h3>主动决策与人机协同中的认知鸿沟</h3>
+<p><strong>主持人</strong>：我之所以喜欢 <code>grill-me</code> 技能，是因为它强迫我亲自做出决策。那些问题只要我静下心来仔细思考，我就知道该如何抉择，但关键在于——这必须是我自己的决策。</p>
+<p>这与直接输入 <code>/go</code> 之类的指令截然不同。当你输入 <code>/go</code> 说“帮我把这个构建出来”，它就直接跑去自行实现，在这个过程中它会代替你替所有或大部分关键技术细节拍板做决定。而 <code>grill-me</code> 最让我满意的地方在于：一方面所有的决策权牢牢握在我自己手中；另一方面，它时常会提醒我一些我之前没有深思熟虑过的盲点，或者提醒我某些地方需要先做一些前置技术调研。</p>
+<p>举个例子，它问我到底想采用哪种身份验证方式：是使用 Bearer Token，还是通过 POST 请求传递，亦或是放在 GET 请求中？这时我就会停下来想：“等等，我得先去查查这几者之间的具体区别，或者另外开一个对话窗口让 AI 给我科普一下。”因此，它真正让我变成了一名更加优秀的专业工程师。</p>
+<p>我始终坚信一点：在我们与 AI 协同工作的过程中，只要我们自身还在持续学习、不断思考，我们就不会被淘汰；可一旦我们停止了主动学习，把所有的思考与决策权全都外包给这个工具，那么在未来的几个月甚至几年里，危机与麻烦必定会悄然酝酿。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: What I liked about the grill meme skill is it forced me to make decisions that I know what decision to make when I think about it, but it is my decision. So unlike when I tell the when when you do the /go command like build this and it goes off and does this and it makes all the decisions or or most key decisions. What I like about grill me is I both make the decision but also sometimes it reminds me about things that I didn't think too much about or maybe it reminds me that I should do a bit of a research for example like it asked me like which which authentication would I want to do a bearer token or over post or or or even over get and then I'm like hang on like I'm going to look up like what the differences are or or ask a different session to educate.</p>
+<p>So like it it makes me a better professional and uh I I do have this belief that when you're working with AI like as long as we're learning I think we're fine. As long as we stop learning and outsource the learning to this thing trouble will be brewing maybe you know months or years down the road.</p>
+</details>
+<p><strong>Matt</strong>：百分之百赞同！这里面其实包含了两层极其重要的核心认知：</p>
+<p>我认为所有人在评估 Agent 时都严重低估了一点——那就是你与 Agent 之间其实存在着巨大的沟通鸿沟（communication gap），彼此之间横亘着一道无形的理解壁垒。</p>
+<p>很多人会下意识地觉得：正因为 Agent 不是人类，而且你自己内心非常清楚自己的一整套价值观与优先级排序，你就会想当然地以为 Agent 能够凭空心领神会、自动契合你的标准。大家往往会有这样一种心态：“哎呀，直接无脑信任模型就行了。”尤其是在面对那些最顶级的先锋大模型时，大家都说“完全信任模型就好”。</p>
+<p>然而，无论当前的 Agent 有多么出色，无论底层模型有多么聪明智慧——即便未来到了像 Mythos 这样的级别——它也根本无法读懂你的内心想法，它绝不可能有读心术！</p>
+<p>因此，必须存在某种机制与流程，将你的价值观、工程标准与偏好清晰地传达给 Agent。因为在现实中，当你仅仅输入一个空泛的目标指令，比如“行了，直接给我刷刷刷生成代码吧，随便吐出点东西就行”，Agent 产出的结果往往会和你真正的期望产生极其严重的偏差与脱节，原因就在于它根本不明白对你而言究竟什么才是最重要的。</p>
+<p>正因如此，<code>grill-me</code> 的价值绝不仅仅局限于梳理那些实现层面的细节……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt</strong>: 100%. There's two things there right I think what everybody underestimates about agents everybody is that there is a communication gap between you and the agent right there is a barrier there. You feel like because the agent is not a human and because you understand your hierarchy of values, you think that the agent will just pick up on them, right? There's this sort of feeling of, yeah, just trust the model. Especially with the top tier models, you know, just just trust the model.</p>
+<p>But the agent, however good it is, however smart the model is, you know, even mythos, it can't read your mind. It can't read your mind. So you have to there has to be some process of communicating your values to the agent because often when you do like a goal when you just go okay just spam me out some code give me some slop the agent is going to produce something that's totally misaligned from you because it doesn't understand what you think is important and so grill me is not only about implementation details</p>
+</details>
+<!-- chunk 6/13 -->
+<h3>范围界定与 Agent 权限控制</h3>
+<p><strong>Matt</strong>: 这也是为了确定好范围：明确哪些在范围之内，哪些不在范围之内，以及我认为什么才是重要的。因此，这也是 Agent 逐渐了解你的一个过程。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt</strong>: It's also about establishing, okay, this is in scope, this is not in scope, here's what I think is important. And so it's the agent getting to know you.</p>
+</details>
+<p><strong>主持人</strong>: Matt 刚才描述的就是 Grill-me Skill（严苛盘问技能）。当我使用这个技能来设计一个 API 端点（endpoint）时，它首先问到的问题就是关于这个端点被允许以及不被允许做什么，以及它被允许为谁执行操作。以我的情况来说，我对自己的需求有着相当清晰的想法，但通常情况下，如果任由 Agent 自己去自由发挥、拼凑身份验证（authentication）和授权（authorization）逻辑，那通常会是个极其糟糕的主意。</p>
+<p>这就引出了我们本季的赞助商 WorkOS。你该如何给 AI Agent 进行授权？你面临的核心问题在于如何控制 Agent 的操作范围。棘手之处在于，权限往往是静态配置的，但 Agent 所要执行的任务却具有高度动态性。因此，各个团队往往只能在两个糟糕的选项之间做出妥协：要么你每次先读完 Prompt，然后人工手动批准每一个工具调用（tool invocation），接着再去读 Prompt，再次手动批准，直到你最终疲惫不堪、索性完全不再看 Prompt；要么你就直接在 YOLO 模式下运行，任由它随意发挥，并祈祷 Agent 所做的任何操作都不会造成不可逆的破坏。</p>
+<p>但其实有更好的解决办法。WorkOS 刚刚推出了 Airlock——一种专为 Agent 打造的基于意图的访问控制系统（intent-based access control）。你可以直接用纯英文自然语言编写规则。例如：“可以读取代码仓库并评论 PR；任何涉及作者或计费（author or billing）的操作都需要人工批准；永远不要直接 push 到 main 分支。”Agent 发起的每一次调用都会对照其当前任务进行评估，并被判定为允许执行、拒绝执行，或者转交给人工审批。Airlock 会完整记录每一个判定结果。Airlock 的精妙之处在于它无需预先分配固定权限范围，也无需手动分配规则。任务本身就定义了 Agent 能做什么。WorkOS Airlock 目前处于早期体验阶段，欢迎在 workos.com/airlock 申请试用。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Matt just described the grill me skill. When I used this skill to design an API endpoint, the first questions it asked were about what the endpoint was and wasn't allowed to do and who it was allowed to do it for. Now, in my case, I had a decent idea of what I wanted, but it's generally a terrible idea to let an agent improvise authentication and authorization as they would often do.</p>
+<p>This brings us to our season sponsor, WorkOS. How do you authorize AI agents? The problem you have is how you want to control the scope of the agent. The tricky part is how permissions are static, but the job of what the agent does is dynamic. So teams pick between two bad options. Either you read the prompt, then approve every tool invocation and call by hand and then read the prompt again, then approve by hand again until you eventually just stop reading the prompt or you just run in yolo mode, letting it rip and hoping that whatever the agent does is not irreversible. But there's a better way.</p>
+<p>WorkOS just launched Airlock, intent-based access control for agents. You write the rules in plain English. For example, read repos and comments on PRs. Anything touching author billing needs sign off. Never push to main. Every call that the agent makes is judged against his task and allowed, denied, or sent to a human. Every verdict is logged by Airlock. The neat thing about Airlock is how there are no pre-granted scopes and there's no rules to assign. The task itself is what defines what the agent can do. WorkOS Airlock is in early access. Request it at workos.com/airlock.</p>
+</details>
+<h3>上下文与 Agent 记忆：Turbopuffer 的全量历史检索</h3>
+<p><strong>主持人</strong>: 我还想提一下我们本期的主赞助商 Turbopuffer。Matt 和我一直在探讨一个根本性的问题：你如何让 Agent 记住真正重要的事情？这里有一个思路：如果不去构建一套复杂的记忆系统，而是直接让 Agent 去检索它的全部历史记录，会怎么样？这听起来似乎成本会极其昂贵，但如果使用 Turbopuffer，事实并非如此。</p>
+<p>Turbopuffer 采用原生对象存储（object storage native）的架构，这意味着检索会话记录的边际成本几乎为零，从而让索引全部聊天历史变得非常经济实惠。而且由于 Turbopuffer 的命名空间（namespaces）可以在几乎不受限制的情况下进行横向扩展，你可以为每一个 Agent 创建专门独立的检索索引。</p>
+<p>这里有一个很好的实际案例：本播客的另一位季度赞助商 Entire 就对数以亿计的 Agent 会话记录建立了检索索引，让编码 Agent 能够按需检索并回忆起当初做出某项工程决策的具体原因与背景。Entire 证明，当他们的 Agent 使用 Turbopuffer 而不是依靠 Git 历史和命令行工具时，不仅准确率更高，消耗的 Token 更少，而且寻找记忆所花费的时间也大幅缩短。Agent 记忆是一个复杂且处于持续演进中的应用场景。但或许这里也蕴含着一个“苦涩的教训”（bitter lesson）：也许最优秀的方案恰恰是最简单的方案——那就是直接检索每一条记录。借助 Turbopuffer，这在现实中已完全可行。如果你也在尝试解决 Agent 记忆问题，请访问 turbopuffer.com/pragmatic 联系 Turbopuffer 团队。</p>
+<p>那么，你还创建了哪些其他的技能（skills）？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I'd also like to mention our presenting sponsor, Turbopuffer. Matt and I are discussing a fundamental question: How do you get agents to remember what's important? Here's an idea. What if instead of building a complex memory system, you just let the agent search its entire history? This seems like it will be very, very expensive, but with Turbopuffer, it isn't. Turbopuffer's object storage native architecture means that the marginal cost to search sessions transcript is almost nothing, making it economical to index the entire chat history. And because Turbopuffer namespaces scale virtually without limit, you can create a dedicated search index for every agent.</p>
+<p>Here's a good example of this. Entire, another season sponsor of the podcast, indexes hundreds of millions of agent session transcripts for search and then lets the coding agent retrieve what it needs to recall how and why an engineering decision was made. Entire showed that their agent was more accurate, used fewer tokens, and took less time to find memories when it used Turbopuffer instead of git history and a CLI. Agent memory is a complex and evolving use case. But perhaps there's a bitter lesson here. Maybe the best solution is the simple one: Just search every transcript. With Turbopuffer, this is actually possible. If agent memory is something you're trying to solve, then please reach out to the Turbopuffer team at turbopuffer.com/pragmatic.</p>
+<p>And which other skills did you create?</p>
+</details>
+<h3>上下文衰减与聪明区（Smart Zone）</h3>
+<p><strong>Matt</strong>: 从那之后我就在思考：该如何把那场盘问对话转化为实际的代码？我当时立刻感到有些担忧，因为在模型真正变得足够好之前，以及在去年 12 月模型迎来爆发性提升之前，我就一直在和模型打交道，所以我深切体会过以往工作中所面临的种种局限与约束。</p>
+<p>我清楚地知道，比如给 Agent 输入的上下文越多，它的表现反而会越糟糕。我知道你们这档播客曾经邀请过 Dex Horthy。Dex 对我的影响非常大，尤其是他提出的“聪明区（smart zone）”与“迟钝区（dumb zone）”的概念。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt</strong>: So from there I thought okay how do I take that conversation and turn it into code and I was immediately um scared because I'd been working with models um you know just before they were good and before the December uh winter where you know uh things got really good and so I was I felt the constraints from what I'd been working with before. I knew that for instance the more context you put you give to the agent the worse it performs. I know you had Dex Horthy on this podcast. Yeah. And Dex um is a really big influence on me, especially his idea of the smart zone and the dumb zone.</p>
+</details>
+<p><strong>主持人</strong>: 聪明区和迟钝区。是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Smart zone and dumb zone. Yeah.</p>
+</details>
+<p><strong>Matt</strong>: 是的。为了让大家不用特意去听那整期播客——尽管大家确实应该去听听——简单来说，其核心概念在于：你给 Agent 提供的上下文越多，每一个 Token 就越是在争夺注意力（shouting for attention）。你在那个房间里放进的声音越多，就越难听清那些真正重要的声音。</p>
+<p>因此，模型就会开始丢失事物之间的关联，并因此频频出错。你可以把这理解为一种缓慢的性能衰减。但上下文窗口确实存在着表现较好和表现较差的不同区间。这就是所谓的“聪明区”——目前对于前沿模型而言，我认为大概就在前 15 万个 Token 左右。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt</strong>: Yeah. So idea of that just to kind of um so you don't have to go and listen to that podcast in full although you should. You have essentially the more context you give to the agent, every token is shouting for attention. And the more voices you put into that room, the harder it is to hear the important ones. And so the model starts losing the connections between things and making mistakes because of that. And you can think of that as a slow decline. But there is a portion of the context window where it's better and where it's worse. And so you have the smart zone which is currently I would say about the first 150,000 tokens of frontier models</p>
+</details>
+<p><strong>主持人</strong>: 即使在 100 万 Token 的上下文窗口中也是如此。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: of of a 1 million token window.</p>
+</details>
+<p><strong>Matt</strong>: 是的，无论上下文窗口有多大都一样。窗口本身的容量上限并不重要，关键完全在于绝对的 Token 数量和绝对的注意力关联复杂度。超出这个范围之后，剩余部分就会越来越严重地逐渐退化。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt</strong>: Yeah. Of any any size token window of any size. Doesn't doesn't matter the context window size. It's all it's all about raw amount of tokens, raw amount of attention relationships, and then the rest of it will slowly degrade more and more and more.</p>
+</details>
+<h3>从 Ralph Loop 到基于 Spec 与 Ticket 的任务拆解</h3>
+<p><strong>Matt</strong>: 于是我开始思考：如何才能把那些远超 15 万 Token 的工作——实际上 15 万 Token 并不算很大——拆分并分配到多个上下文窗口和多个独立的会话中去？为此我进行了大量的尝试，尝试了各种不同的摸索和方法。</p>
+<p>Ralph Loop（Ralph 循环）就是其中的一种实现版本。Ralph Loop 的设计初衷就是为了最大化利用聪明区，因为从本质上讲，它只是给 Ralph 循环设定一个目标，并告诉它：“做出能够让我们朝该目标更进一步的最小可行变更，然后清空你的上下文……”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt</strong>: And so I started thinking, how do I take work that's bigger than 150k tokens, which is not very large, and portion it out over multiple context windows, multiple sessions. And this took me a a lot of tries, a lot of different fiddling around with different approaches. The Ralph loops was one version of that. Ralph loops are designed to make the most of the smart zone because they essentially just give the Ralph loop a goal and they say do the smallest possible change that will get us further towards that goal and then clear your context</p>
+</details>
+<p><strong>主持人</strong>: 然后清空上下文，从头开始全新的会话。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: and then clear the context start from fresh.</p>
+</details>
+<p><strong>Matt</strong>: 没错。而且严格来说你并不是真正“从零开始”，因为你已经拥有了代码库，对吧？文件系统和运行环境中保存了一定的状态，只是这些状态基本不保留在模型的上下文内部而已。这就是基本思路。</p>
+<p>因此我开始思考，如何借鉴 Ralph Loop 的核心思想，让它变得更加稳健可靠，并将其转化为具体的技能（skills）。我意识到自己需要两种不同类型的文档：你需要一份用来指明最终方向的文档，也就是目标规格文档（destination document）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt</strong>: Exactly. And you're not technically starting from fresh because you've got the code base, right? There's a little bit of state saved in the file system and in the environment but not in the model essentially. So that's the idea. So I started thinking, how do I take that Ralph Loop idea but make it a little bit more stable and turn that into skills. And so what I realized I needed was two different types of documents. You need a document for where you're going, which is the destination document.</p>
+</details>
+<p><strong>主持人</strong>: 我过去常称之为产品需求文档（PRD），或者现在我通常叫它 Spec（技术规格说明书）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I used to call that a product requirements document or a spec is what I call it now.</p>
+</details>
+<p><strong>Matt</strong>: 对，那就是明确声明你何时达到终点的规范。然后，你需要将该规范拆解为一个一个独立的 Ticket，每个会话负责执行一个 Ticket。所以我有一个非常简明扼要的技能：专门负责把盘问成果转化为 Spec，然后再将 Spec 转化为 Ticket 任务清单。</p>
+<p>这样一来，你就可以把之前经历的盘问会话提炼为一份 Spec。这份 Spec 可以覆盖比如 30 到 40 个具体的 Ticket。你可以处理体量极其庞大的工程任务，而它们全部锚定并紧密连接在这份统一的 Spec 之中。</p>
+<p>这就是核心逻辑：你先进行充分的盘问交流（grill），把盘问成果转化为 Spec，然后围绕这些 Ticket 运行某种实现循环（implement loop），直到你完成一整块庞大的工作成果。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt</strong>: So that's the specification that declares when you've reached the end. And then you need to break that spec down into individual tickets, one ticket per session. And so I have a very simple skill just to spec and then to tickets. And so you take that grilling session that you've had and you turn it into a spec. Now that spec can work over, you know, 30 40 tickets, let's say. You can have really massive great big chunks of work that are all tied into that spec. And so that's the main idea. You just grill. You turn that grilling into a spec. And then you just run some kind of implement loop over those tickets until you've got a huge chunk of work.</p>
+</details>
+<h3>白班与夜班：追求真正的离线委托（AFK）</h3>
+<p><strong>主持人</strong>: 在盘问环节结束后，或者在整个执行过程中，你还会需要用户的额外输入吗？还是说这要视情况而定？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: After grilling, do you get user input as well or throughout this process or it it depends.</p>
+</details>
+<p><strong>Matt</strong>: 我设计这套流程的主要目的，就是让用户可以完全离开键盘（away from keyboard / AFK）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt</strong>: I was mostly designing this to be run for the user like to be away from the keyboard totally</p>
+</details>
+<p><strong>主持人</strong>: 因为现在有这样一种说法，比如“白班”和“夜班”的工作模式。你听说过这个概念吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: because there's this idea of like the day shift and the night shift. Have you heard of this?</p>
+</details>
+<p><strong>Matt</strong>: 没有，没听过。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt</strong>: No. No. No.</p>
+</details>
+<p><strong>主持人</strong>: 这个概念很棒。基本上，与 Agent 协作的最理想方式就是：人类在“白班”期间进行规划与设计，然后让 Agent 在“夜班”期间全力跑代码，对吧？这样当你早晨醒来时，就能看到整洁漂亮的高质量代码呈现在眼前。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: It's great. Basically, the optimal way to work with agents is to plan during the day shift and then get the agents to work during the night shift, right? And so hopefully you wake up in the morning and you've got beautiful clean code to look at.</p>
+</details>
+<p><strong>Matt</strong>: 这正是我一直在努力优化自身工作流的目标方向。因为我过去在做 Ralph Loop 时真的非常厌倦——甚至在某种程度上我现在有时仍不得不面对这种情况——在各种终端之间来回切换，频繁打断思维做上下文切换，一整天都在“砰砰砰砰”不停地频繁介入。</p>
+<p>我真正期望并一直在努力优化的模式是：先集中精力完成一段扎实充分的高质量规划，然后让 Agent 自行独立工作几个小时。在这期间我可以去做其他事情，拥有相对完整的时间段——比如以 15 分钟为单位专注于一件事，规划其他模块，然后再回过头来集中审查代码。</p>
+<p>这就是我在使用 Ralph Loop 时始终在尝试优化的核心体验。而在去年 12 月我所获得的最重大认知就是：这些模型的能力已经足够出色，完全可以胜任任务委托，因此我完全可以让它们脱离人工看管（AFK）独立运行。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt</strong>: And that's what I was trying to optimize my process around because I was really sick of what I and what I still do to an extent of just switching between terminals, context switching all the time, just going boom boom boom boom boom boom. What I wanted and what I'm trying to optimize for is to just get a good chunk of planning done and then let the agent work for a couple of hours and then I can do other work, decent chunks of time, 15-minute chunks working on one thing, planning on stuff and then I can review the code and do that. So that's what I was trying to optimize for all the time when I was doing Ralph loops and that was the big thing that I found in December is these guys are good enough to delegate to and so I can run them AFK.</p>
+</details>
+<h3>更具野心的 Wayfinder 技能</h3>
+<p><strong>主持人</strong>: 除此之外，你还有一个更具野心的技能，叫做 Wayfinder Skill。我们能聊聊这个吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And then you have a different skill as well which is a bit more ambitious called the wayfinder skill. Can we talk about that?</p>
+</details>
+<p><strong>Matt</strong>: 当然可以。就像我刚才注意到的那样，代码实现过程需要拆分到多个会话中进行；而有时候在进行盘问梳理时，你同样也会触碰到单次会话的上下文极限。比如你打算盘问设计一个像“帮我克隆一个 Stripe 支付系统”这样庞大复杂的项目，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt</strong>: Absolutely. So in the exactly the same way that implementation I noticed needed to be split out over multiple sessions. Sometimes you're grilling something and you're you're hitting the limits. You're going to grill something, you know, build me a stripe clone or something, right?</p>
+</details>
+<!-- chunk 7/13 -->
+<h3>构建 Wayfinder：用地图与战争迷雾打破上下文限制</h3>
+<p><strong>Speaker A</strong>: 你肯定会碰到上下文的极限。绝对不可能在 15 万（150k）个 token 里规划好整套方案。所以我就想，该怎么把它拆解开来，以便运行任意时长的盘问（grilling）会话？怎样切分盘问流程才能让它持续工作？于是我再次从信息流动的角度来思考这个问题：从本质上讲，要在盘问会话中表现出色，Agent 到底需要什么？它首先需要准确理解这次盘问的目标，但也必须了解截至目前已经做出了哪些决定，还需要清楚那一刻可能同时在进行的其它盘问会话。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: You are going to hit the limits there. There's no way you can plan that in 150k tokens. And so I thought, how do I break that up so that I can run grilling sessions that can be infinite length, right? How do I split up grilling so that it can work like that? And so I came up with this idea again, I'm thinking about the flow of information essentially like what what does it need to perform well in a grilling session? It probably needs to understand exactly what it's what the purpose of that grilling session is, but it also needs to understand what's been decided so far. Needs to understand what other grilling sessions might be happening at that moment.</p>
+</details>
+<p><strong>Speaker A</strong>: 于是我想到了“地图（Map）”这个概念。这张地图就像是一个中心枢纽，汇集了为所有决策所需的一切信息。一旦拥有了地图，你就会意识到：在努力通往目标终点的过程中，有些事情是已知必须要决策的，有些关键节点就像是地图上的里程碑。同时，地图上还笼罩着一层“战争迷雾（fog of war）”。这个绝妙的隐喻支撑着我完成了该 Skill 其余部分的设计。因为你手里有地图，周围有战争迷雾，你大致清楚前进的方向，而每次进行盘问会话时，就会在地图上解锁更多节点，从而逐步摸清前行的路线。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And I came up with this idea of a map. And the map would be the sort of center point of everything that was needed for all the decisions that you were coming up with. And once you've got a map, you realize, okay, there are certain things I can like, as I'm trying to find my way to a destination, there are certain things I know I need to decide, certain points that are kind of like milestones on the map. And there's a fog of war. And that lovely metaphor just sort of carried me through designing the rest of the skill, right? Because you've got your map, you've got your fog of war, you vaguely know where you're going, and every time you have a grilling session, it opens out more points on the map. And so you sort of figure out where you're going.</p>
+</details>
+<p><strong>Speaker A</strong>: 所以这就像是一个有向无环图（DAG），你沿着它一路向下探索，直到抵达最终目的地。有了这张地图后，其中的每个独立会话就是地图上的一个个工单（tickets）。我意识到，盘问固然很好，但如果你需要做原型开发（prototype）呢？如果需要做调研（research）呢？或者需要执行一项任意任务，比如配置某些基础设施呢？这些都对应着地图上不同类型的工单。Wayfinder 基本上就是引导你走完这个完整流程。我曾创建过包含 50 到 100 个工单的地图，一步步推进直到达成目标。实际上我也用它来进行课程规划等非技术类事务，效果非常棒；我还用它来在花园里搭建办公室。很多 Skill 我们起初会说“这些对软件工程太棒了”，但随后你会发现，工程其实只是一门学科，我们日常在做的不也就是讨论问题、在现实中操作点击网页等事情吗？你会发现这些方法很容易迁移到其它领域。这或许我们稍后可以深入聊聊，我一直在思考把这些经验迁移到不同学科和生活各领域的潜力。Wayfinder 确实带来了极大的帮助。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And so this is kind of like a directed acyclic graph where you're walking down until you reach your final destination. And so you've got the map and then each individual session in there are tickets on that map. And I realized, okay, grilling is good, but what if you need to prototype? What if you need to do research? What if you need to do like an arbitrary task like provision some infrastructure or something? Well, those are different types of tickets on the map. And Wayfinder basically just guides you through this process. I've had maps that have, you know, 50, 100 tickets or something until I finally reach my destination. I've actually been using it for course planning as well, so non-technical stuff, which is really great. I've been using it to build a garden office in my garden. Right. It's you know a lot of these skills we we say okay these are great for engineering then you realize okay engineering is just a discipline that what are we doing here we're just discussing something we're doing things in real life like clicking around websites and stuff you realize how easily that can map onto other domains so that's kind of maybe we can touch on that a bit later which is I am thinking how transposable this stuff is into different disciplines and into different areas of life So Wayfinder has been great.</p>
+</details>
+<hr>
+<h3>软件材料的确定性与 AI 带来的工程方差</h3>
+<p><strong>Speaker B</strong>: 是的。不过说到工程与软件工程，有一点很有意思：之前 Hillel Wayne 上播客时，他采访了许多他认为是“真正工程师”的人——化学工程师、机械工程师、土木工程师，试图探讨“软件工程到底算不算真正的工程”。最终他得出结论：它大概确实算。但他指出，软件与其它所有工程专业之间有一个极其显著的区别，那就是我们处理的材料。在机械工程、土木工程甚至化学工程中，你所面对的物理材料都有某种阈值和不确定性。你无法完全精准地预测它的表现，只知道它大约能承受这么大的载荷等。但在传统软件中，材料本身就是软件，它的运行机制就像一段严密的程序。撇开非确定性不谈——非确定性或许让它更接近其它工程——传统代码运行一千次，结果就会一模一样一千次，而在其它领域则并非如此。他认为这是一个巨大的分水岭。不过我想，现在有了 LLM，我们面对的材料运行一千次也会出现大多数工程领域常见的那种波动与方差。所以谁也说不准，究竟适用于 LLM 的方法未来能否借鉴到其它本就存在方差的工程学科中，还是说我们可以从其它工程专业中吸取经验，以便更好地与“AI”这种新型材料打交道。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah. But if if if we think one interesting thing about engineering and software engineering when Hillel Wayne was on the podcast, he interviewed engineers like who he thought are real engineers, chemical engineers, mechanical engineers, civil engineers and to try to find out is software engineering real engineering. And in the end he found that it probably is. But he said that one interesting thing with software that is very different to every other engineering profession is the materials that we work with in every single place. mechanical engineering, civil engineering, even chemical engineering, you have a material that has a threshold of of things. You don't know exactly what it's like. You know that it'll be like it can take about this much load, etc. But in software, the material is software, which is it it just works like a program. I mean, take out nondeterministic, which which maybe brings us to to more engineering, but software, a code, you run it a thousand times and it does the same thing a thousand times, whereas in other fields it doesn't. And he said that that he sees a big difference. But now I guess with LLMs maybe we have this thing where we have a thing where you run it a thousand times and it it will have these this variance that most of engineering has. So who knows if if both what works with LLMs will be useful at other engineering where again they already had this variance or or we can take some approaches from other engineering professions that will maybe work nicely with working with this material called AI.</p>
+</details>
+<hr>
+<h3>文本模态的天然优势与非文本交互的瓶颈</h3>
+<p><strong>Speaker A</strong>: 我完全赞同。我认为软件工程之所以特别、之所以 Agent 在其中表现优异，是因为它的所有输入和所有输出通通都是基于文本的。输入端包括代码、文档、给 Agent 的指令，全是文本；输出端也是更多的代码、测试用例、类型检查结果、Linting 报错，所有这些也都是文本。Agent 真正感到困难的，是任何非文本形式的东西。比如，你经常能看到一些惊艳的演示：有人一次性生成了一套完美的前端 UI。但如果这个 UI 存在交互问题呢？比如鼠标悬停时动画显示不正常，你该怎么把这种反馈传达给 Agent 呢？虽然可以录制视频让它在特定帧暂停，但目前模型在视觉方面的表现其实还没那么强。因此，任何非文本的内容对 Agent 来说产出都非常糟糕，它根本处理不来。所以我觉得在那些工程专业中，关键在于能否将其转化为模拟仿真（simulation）。我猜测他们都会做仿真，比如是否有针对建筑图纸的 Linter 之类的工具？我相信肯定有类似的模拟手段。如果你能把那些环节转化为文本，把日常生活中的交互也转化为文本——而且大部分工作本来就是文本——那么 Agent 就能完成得非常出色。这也是我目前正在做的事：把我日常使用的所有服务都接入 Agent，对 Agent 开放使用。总之，我们越能让工作环境对 Agent 友好，得到的结果就会越好。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I totally agree. What I think is interesting about software engineering and the way the reason agents are good with it is it's all of the inputs and all of the outputs are text based everything. So the inputs code documentation instructions for the agent on what to do all text based and the output is more code is um test suites is type checking results linting all that stuff is textbased. The thing that agents really struggle with is anything that's [clears throat] non-textbased. But you, you know, you see these amazing demos of people oneshotting a perfect UI first time. Well, what about if you have an interaction problem in that UI? What if you're like hovering over something and the animation doesn't look right? How are you going to get that to the agent? I mean, you can record it a video, I suppose, and it sort of pauses on certain frames, let's say. Um, but it's actually not that good in terms of vision just yet. And so anything that's non-textbased is just garbage from the agent. It just can't handle it. And so I think in those sorts of professions, if you can turn I assume they're doing simulations, right? I assume they're doing some kind of, you know, I don't know if you have like a linter that can work on architectural diagram. I'm sure you have some variety of that, right? Some simulation. If you can make that textbased, if you can take the interactions that you have in your day-to-day life and turn them into text, which mostly they are anyway, then the agents are going to do a pretty good job. That's something I'm trying to do currently is take all of the services that I use and plug them into agents, right? Make them available to the agents. But yeah, the more we can make our work agent friendly, the better results we're going to get.</p>
+</details>
+<hr>
+<h3>从规范驱动开发到测试反馈循环的反思</h3>
+<p><strong>Speaker B</strong>: 回到整个人工智能领域以及它所带来的变革：AI 改变了如此多的事物，但人们常常提到的一种观点（尤其是研究人员和 AI 公司从业者常说的）是：面对 AI，你应该抛弃所有先验经验（no prior），忘掉以往的一切认知，因为这是全新的事物；应该从零开始，过去的旧方法大概率行不通，甚至应该假设它们都失效了并去发明新方法。作为一个在 AI 出现前就深耕软件开发、并且极其注重构建高质量优质软件的人，你认为 AI 到底改变了多少东西？它是否也颠覆了那些最底层的基本原则？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Circling back to to AI as as a whole and then what has changed like it has changed so many things but one thing that comes up with AI is is often especially researchers and and people working in AI companies is is no prior with AI you should let go of everything that we know before because this thing is different start from scratch the approaches might not work in fact let's assume they don't work and come up with new approaches having been a developer before AI and actually like you're like a like you you were really interested in building quality great software. How much do you think AI has changed of of everything including the fundamentals?</p>
+</details>
+<p><strong>Speaker A</strong>: 我曾经也是这么想的。我当时觉得：没错，AI 颠覆了一切，我打算把过去的经验全盘推翻（throw the baby out with the bathwater），彻底用全新视角来重新看待所有事物。我开始尝试这么做，尤其是关注规范驱动开发（spec-driven development）——我对这个概念其实有些矛盾，觉得这个词定义太宽泛、涵盖的内容过多。我当时心想：好吧，也许英语真的是最炙手可热的新编程语言。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: This is something that I thought too. I thought, right, AI has changed everything. I'm going to throw the baby out with a bath water, right? I think we just need to look at everything in a new way. I started doing that a I was especially looking at like spec driven development you know which is I have sort of mixed feelings towards I think it's a strange term it encompasses too much and I thought okay right maybe English is the hot new programming language right</p>
+</details>
+<p><strong>Speaker B</strong>: 这个说法在 Andrej Karpathy 发帖后一度传得非常火。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: which which went viral at at some point when Andrej posted it</p>
+</details>
+<p><strong>Speaker A</strong>: 没错。我当时就想，也许我只需要写一份规范（spec），让这份规范保持持久化，成为我可以随时编辑的东西，然后直接让 Agent 随着规范的变动去修改代码。但在我不断实验和大量尝试之后，发现得到的结果比我自己亲手写代码还要差，而且完全没有好转的迹象。我注意到，每次我执行“修改规范 -&gt; 查看代码变化”的循环时，代码质量都会变得更糟糕。按理说你不应该去查阅底层生成的代码，但我忍不住去看了一眼，结果发现那简直就是垃圾。我当时就想，Agent 怎么可能在这种环境下表现良好？这怎么行得通？因为反馈循环对 Agent 来说至关重要。如果你的测试套件很差，Agent 从中获得的反馈信号就会很差，就像人类开发者一样。于是我开始思考：我该如何改进测试套件？该如何让这套环境不再每次都生产出垃圾代码？于是我随手翻开了书架上的一本书……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: exactly like maybe I can just write a spec and that specification is going to be persistent it's going to be something I can edit and just get the agent to change it as it goes and as I experimented with it I tried it a lot and I was just getting worse results than if id coded it by hand. And it wasn't getting better as well. And I noticed that every time I would sort of run this loop of change the spec, see the code change, the code would get worse. You're not supposed to look at the code, of course, but I I looked at the code and it was garbage. And I thought, how is the agent going to perform well in here? How is it going to work? Because the feedback loops are so important to the agent. If you have a bad test suite, the agent is going to get bad signal from it, just like a human would. And I thought, how do I improve the test suite? How do I get this setup not not like churning out garbage every time? And I just I opened a book that I had on my shelf</p>
+</details>
+<!-- chunk 8/13 -->
+<h3>重访经典：《程序员修炼之道》与软件熵</h3>
+<p><strong>Speaker A</strong>：我记得我第一次把那本书拿出来的时候，它上面甚至还裹着塑料封膜，那本书就是《程序员修炼之道》（<em>The Pragmatic Programmer</em>）。（笑）每个人都跟我推荐过这本书，每个人都说：“这是有史以来最棒的书，你一定要读。”于是我买了它，但不知出于什么原因一直搁着没读。后来我翻开它，发现里面有一整章、一整节都在专门讲“软件熵”（Software Entropy）。所谓软件熵，就是物理学中熵的概念——事物总是倾向于走向更加无序和混乱的状态，走向无序的概率远大于走向有序的概率。我当时意识到：软件熵是不可避免的。而我在 AI 编程智能体（Agents）身上看到的现象是，智能体正在以远超以往的速度制造软件熵。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: That I think was still wrapped in plastic the first time I took it out, which was <em>The Pragmatic Programmer</em>. [laughter] Which is, everyone told me to read it. Everyone like, you know, everyone said, you know, this is the best book ever. You just got to, and I bought it and I didn't read it for some reason. And I opened it and it had a whole chapter, whole section on software entropy. And software entropy is the concept that, you know, entropy is the idea that things go towards a more disordered state. That that is more likely than them going into an ordered state. And I realized, okay, software entropy is inevitable. What I'm seeing here is that agents are producing software entropy at a higher rates than ever.</p>
+</details>
+<p><strong>Speaker A</strong>：于是我开始更深入地研读那本书。几乎我读到的每一行文字，我都忍不住想：天哪，这简直就像是专门为当下写的一样。大家都应该重新回去读读那本书。书中提出的那些理念——比如“不要超出车灯照射范围行驶”（Don't outrun your headlights）、“始终在反馈闭环内工作”（Always work within your feedback loops）、“巧合式编程”（Programming by coincidence）、“曳光弹开发”（Tracer bullets）——包含着太多的真知灼见。我意识到这本书已经出版 25 年了，对吧？这些概念大概率早已存在于智能体的预训练先验知识（Prior）当中。也许我只要在提示词中提及这些概念，尤其是那些极具执行路径导向的概念，就能发挥奇效。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And I started looking more into that book. And almost every line I read I thought, wow, this feels like it was written for today. You know, you should go back to that book. These ideas of like don't outrun your headlights, always work within your feedback loops, programming by coincidence, tracer bullets, so many smart ideas. And I realized this book has been out for 25 years, right? This is probably in the agent's prior. Maybe if I just mention some of these concepts, especially the ones that are really pathy, like tracer bullets for instance, which is the idea that you should always get feedback really quickly on the work that you're doing.</p>
+</details>
+<h3>从“横向堆砌”到“曳光弹”与垂直切片</h3>
+<p><strong>Speaker A</strong>：所谓“曳光弹”的核心思想，就像在黑暗中射出一枚能留下发光轨迹的子弹一样，你去实现一条端到端贯通且能跑通的完整路径，先构建出软件系统的一个关键骨架。而不是像传统做法那样，先去搭建整个数据库层，再搭建整个应用层，然后再搭建不知道什么其他层，把这三层分别建完之后再拼装在一起；正确的做法是从每一层各抽出一小部分，让它们能够端到端协同工作。这也正是我之前在智能体身上看到的痛点：当你让智能体去构建一个软件时，哪怕给它套上了循环执行回路（Ralph loops），它也会先去把完整的数据库建好，然后在此之上构建整个应用层，接着再把整个 React 组件库全写出来。只有在最后的最后，它才开始把各部分串联起来，去获取实际运行的反馈。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I guess the idea of the tracer bullet is, right, like a tracer bullet that leaves a mark, you implement a path that works, like an important piece of a software instead of like building a database layer and the application layer and the I don't know whatever layer, like building all three and then putting them together, like just build one part of each, but they should work together. That was the problem I was seeing with agents. They would, you would get it to build a piece of software, even with Ralph loops, and it would build the entire database and then it would build the entire application layer on top of that. Then it would build the entire React component library. Only at the end would it start actually plugging things together and getting feedback on what it was doing.</p>
+</details>
+<p><strong>Speaker A</strong>：这种做法简直让人发疯，因为数据库中的设计直接决定了前端需要呈现什么内容。只有当你看到数据真正跨越各个集成层流动时，你才能确切知道整体逻辑是否说得通。因此这里涉及的另一个核心概念是“垂直切片”（Vertical slices）。我们不再跨越不同的可部署单元进行这种水平分层切片，而是做一个垂直切片，让智能体对当前编写的内容立即获得端到端反馈，并以此为基准向外扩展。于是，我开始在和智能体对话的提示词中引入这些术语短语，随后我注意到，智能体开始把这些短语复述给我。它会回应说：“好的，我将把这部分做成一个曳光弹，因为这是一个关键路径，我会先做这个。”它开始在自己的思考推理链（Reasoning traces）中使用我输入的这些词汇。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And it was maddening because things in the database like will affect what you show on the front end. You know, you only really know whether things are actually making sense when you see it crossing those integration layers. And so another concept is vertical slices, right? Instead of these horizontal slices across these different deployable units, you have a vertical slice where it gets feedback on what it's doing straight away and builds out from there. And so I just started using these phrases in my prompts when I was talking to the agent, and I started noticing that it was saying those phrases back to me. It was repeating them back to me. It was saying, &quot;Okay, I'll turn this into a tracer bullet because this is a tracer bullet. I'll do this.&quot; It was using the words that I was using in its own reasoning traces.</p>
+</details>
+<h3>主导词机制与经典架构书籍的挖掘</h3>
+<p><strong>Speaker A</strong>：这就是我所说的“主导词”（Leading word），或者借用文学领域的术语叫“主导动机/引导词”（Leitmotif）。这是一种高级提示词技巧：你只需在 Skill 或 Prompt 中重复几次某个特定的精炼短语，就能引导智能体并彻底改变它的行为模式。“曳光弹”（Tracer bullets）就是一个绝佳的例子。从那时起，我便开始扎进各种经典书籍中，尽我所能搜集所有能找到的书，试图从书中挖掘出更多这样的主导词。另一个宝藏是 John Ousterhout 写的《软件设计哲学》（<em>A Philosophy of Software Design</em>），我从中提炼出了大量优质概念，比如“深模块”（Deep modules），这对我来说是一个极其重要的概念。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And so this is what I call a leading word, a leitmotif, let's say, which is a sort of fancy literary term where you lead the agent just with a simple phrase that you repeat a couple of times in the skill or the prompt to change its behavior. And so tracer bullets was a fantastic one. And I just started diving into different books, all the books I could find to try to mine them for leading words. And another one was John Ousterhout's book <em>Philosophy of Software Design</em> where I picked up tons of great stuff like deep modules is which is a massive one for me.</p>
+</details>
+<p><strong>Speaker B</strong>：这确实很有意思。这些智能体显然在预训练阶段就学习过那些至今仍在出版的经典书籍。当然，关于它们如何使用这些书可能存在各种版权争议，但如果这些内容确实存在于它们的训练数据中，智能体在训练过程中就会把所有这些概念建立起丰富的关联网络。正如你所说，这些主导词能够精准激活那些深层概念。我不禁在想，这其实和现实生活中与专业人士交流非常相似：作为一个外行，你在尝试描述自己想要什么时可能会词不达意，而一位专业人士只要说出一个行业术语，另一位专业人士立刻就能心领神会。这就是所谓的“行话”（Jargon），对吧？行话固然有其两面性——当你刚加入一家公司、面对一堆陌生行话时会觉得很不友好；但我们之所以使用它，是因为它能让沟通变得更快捷、更轻松，并且能大幅减少误解。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: It's interesting to consider if these agents have obviously been trained on those books, just still available for print, and of course there's arguments of like what they're doing with those books, what not, but if it's in their training data and and the agents as they're trained they connect all these different concepts and yeah these I guess how do you leading words could invoke those concepts. And I wonder if this is much different to when on a topic you talk with a professional and you're trying to describe as an amateur what you want and a professional says a word that does that and a fellow professional gets it and you this is jargon right and and jargon on one end it's it's not very inviting when when you join a company and there's jargon, but it just we use it because it makes things faster easier fewer misunderstandings.</p>
+</details>
+<h3>领域驱动设计（DDD）与通用语言</h3>
+<p><strong>Speaker A</strong>：没错，这个想法完全启发了我。因为曳光弹之类的概念原本就存在于智能体的知识先验中，那么在描述我自己的应用程序、描述我自己的代码时又该如何呢？我该如何让智能体理解？因为现在的智能体实在太啰嗦冗长了，尤其是 Opus 这类模型，大家经常吐槽它过于冗长，事实也确实如此。我当时就在想：我该如何让它变得精炼？我们该如何打破沟通障碍，在我和智能体之间建立起一种共同语言？这自然而然地将我引向了领域驱动设计（DDD）……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Definitely that was something that idea led me to because obviously you've got these leading words that are in the agents prior right like tracer bullets all that stuff what about describing my application what about describing my code how do I get the agent to because what I the agents are just awfully verbose, right? Especially Opus, for some reason people really go after that model for being verbose and it really is. And I thought, how do I get it to be less verbose? How do we start talking a common language between me and the agent, this communication barrier again, and it led me to DDD, domain-driven...</p>
+</details>
+<p><strong>Speaker B</strong>：领域驱动设计（Domain-Driven Design），Eric Evans 那本不可思议的名著，他在书中深入阐述了“通用语言”（Ubiquitous Language）的概念。这种语言同样深深扎根于智能体的预训练先验中，智能体对它的理解极为透彻。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: &gt;&gt; Domain-driven design. Eric Evans incredible book where he talks about ubiquitous language. A language again really deep in the agent's prior. It understands it really well.</p>
+</details>
+<p><strong>Speaker A</strong>：我开始构思是否能对 <code>grill-me</code> 技能做一些改造。原本的 <code>grill-me</code> 是一个非常简单的质询式技能。但试想一下：当我们在进行需求头脑风暴、思考即将构建的应用程序时，如果我们在这个过程中同时构建出一套“领域语言”（Domain language）会怎样？如果我们顺便把该使用的精确术语敲定下来会怎样？基于此，我衍生出了一个名为 <code>grill-with-docs</code> 的技能——虽然名字起得不太好听，但它的本质就是在需求推演的过程中逐步建立起专属的领域语言。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I sort of started toying with the idea of maybe changing grill-me a little bit because grill-me is very simple skill. But what if while we were ideating, while we were thinking about the application we were going to build what if we were also building a domain language? What if we were also deciding on the right terms to use? And this turned into a skill called grill with docs which is terribly named skill, but it's essentially creates this domain language as you go.</p>
+</details>
+<h3>领域语言的威力与代码导航</h3>
+<p><strong>Speaker A</strong>：一旦你让智能体使用这套领域语言，效果完全是天壤之别，因为你们瞬间开始讲同一种语言了。你只需要用极其精炼的寥寥数语，就能准确描述你想要修改的内容。比如我手头维护的一个应用中，存在一种复杂的业务交互场景：里面同时存在“幽灵课时”（Ghost lessons）和“真实课时”（Real lessons）。如果用户把一个嵌套在“幽灵小节”里、而该小节又属于某个“幽灵课程”的“幽灵课时”转变为“真实课时”，会发生什么？这意味着其所属的幽灵小节必须被实体化为真实小节，外层的幽灵课程也必须实体化为真实课程。你该如何向智能体解释这一整套联动机制？答案很简单：这就是“实体化级联”（Materialization cascade）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And if you get the agent to use the domain language the difference is night and day because suddenly you're speaking the same language. You're able to describe your the things you want to change in so many fewer words. Like I had this app that I sort of work on. There's this complicated interaction where there are ghost lessons and real lessons. And what happens when you turn a ghost lesson that's inside a ghost section inside a ghost course into a real lesson? That means the ghost section needs to become real. The ghost course needs to become real. How do you explain that? Well, that's the materialization cascade, right?</p>
+</details>
+<p><strong>Speaker B</strong>：而这些术语是你和智能体一起推导出来的，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: &gt;&gt; And you came up with these terms</p>
+</details>
+<p><strong>Speaker A</strong>：是的，是和智能体共同提炼出来的。智能体实际上极其擅长归纳提炼这些专业术语。为此我专门开发了一个领域建模技能（Domain modeling skill）。我们平时常说到“行话”，但本质上它就是“领域语言”。如果你能将这套领域语言不仅融入到你和智能体谈论应用的方式中，而且全面贯穿到应用自身的代码实现里，那整个开发状态就完全被盘活了（You've got a stew going）！这极其令人兴奋——这意味着智能体在理解和导航你的代码库时会轻松得多。它只需要执行一次简单的 grep 搜索，就能瞬间定位到包含该特定领域术语的所有函数。这种体验简直太绝妙了。所以，将领域驱动设计（DDD）深度融入到我整套工作流的每一个环节，是我一直在坚决贯彻的事情。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: &gt;&gt; with the agent, right? The agent is actually really good at coming up with these terms. And so I have a domain modeling skill. And we talk about jargon, but really it's domain language. And if you can integrate that and integrate that not only with the way you talk about the app but the app code itself then you've got a stew going right like it's very, very exciting and it means that the agent can navigate your codebase a lot easier. It can find the functions that mention that specific domain terminology you know just with a simple GP. It's just gorgeous. So that's that's something I've been really integrating with every part of my setup is DDD.</p>
+</details>
+<h3>回归软件工程的底层常识与智慧</h3>
+<p><strong>Speaker B</strong>：这真的太有意思了。为了让这些 AI 智能体更高效地工作，或者为了探索出能够以更少错误交付更高质量软件的工作流，我们反而开始在时间的长河中回溯，重新翻出这些出版于二十年、三十年甚至四十年前的经典著作，并且依然能从中挖掘出滋养当下的璀璨瑰宝。我相信在未来的某个节点，你肯定还会重读《人月神话》（<em>The Mythical Man-Month</em>）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: But this is so interesting because in an effort to make these agents work more efficiently or do workflows that just mean that you can produce better software with fewer mistakes and and these things, you start to go back in time, found this book that is now I think what is it like 20, 30, 40 years old. Uh and and you you're even still going back and finding gems from us. I'm sure at some point you'll get to <em>Mythical Man-Month</em>.</p>
+</details>
+<p><strong>Speaker A</strong>：那当然，我手头早就备着这本书了，毫无疑问。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: &gt;&gt; Yeah, I've got it already. Absolutely.</p>
+</details>
+<p><strong>Speaker B</strong>：而那本书距今已经有 50 多年历史了！（笑）你现在正努力寻找最贴切的词汇来精确定义事物，这非常耐人寻味。因为当我与 Kent Beck 交流，聊到当年他与 Ward Cunningham 如何结对编程时，他们为了推导并创立领域设计模式（Domain design patterns）的概念，桌上就常年摆着一本同义词词典（Thesaurus）。他们会一页页翻阅词典，试图找到那个语义最为精准、内涵完全契合的单词。现在看来，我们仿佛重新回到了人们多年来不断追问的软件工程底层基本功上。每隔一段时间，就会有人将这些感悟凝结成书，作为工程智慧广为流传；而如今我们又回到了原点——你现在正在努力传授给 AI 的，正是这部分经久不衰的智慧。这太不可思议了，因为 AI 与人类是如此不同，你必须……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Which which is now more than 50 years. [laughter] And you're trying to find the right words to describe things which is very curious because when I talk with Kent Beck on how they used to program with Ward Cunningham uh as they were coming up with the concept of actually just domain design patterns they had a thesaurus with them and they would look through trying to find the right word that is that has the right meaning and they had it on their desk right now this feels we're going back to the the fundamentals the how that that people have been asking themselves and and every now and then people write it in books and it kind of spreads as as wisdom and now we're back to where we started which is what you're trying to teach is the wisdom part it's wild right like because AI is so different to humans you need to</p>
+</details>
+<!-- chunk 9/13 -->
+<h3>《记忆碎片》式开发：为每次从零开始的 Agent 优化代码库</h3>
+<p><strong>Speaker A</strong>：去优化它。设想一下，你手下基本上有这样一个人类开发者：他每天早晨醒来，都完全记不得自己是谁，对吧？就像电影《记忆碎片》（Memento）里的那个主角一样。这种模式可以说就是“《记忆碎片》驱动开发”（Memento-driven development）。我们其实是在努力为新加入团队的“新手”去优化我们的代码库。</p>
+<p>因此，我们正在努力构建有史以来最健康、最规范的代码库。因为如果是人类开发者面对一个糟糕混乱的代码库，他们尚且可以通过建立记忆来绕过障碍。他们只需要一遍又一遍地碰壁、硬撞南墙，直到最终把问题搞定。但 AI Agent 根本做不到这一点。它在每一个全新的会话（Session）中都是从零开始、毫无历史记忆的。</p>
+<p>所以，你必须专门为这样一个“每天失忆的新人”去优化你的代码库。这会把你引向一些非常耐人寻味的探索路径。事实证明，软件工程基本原则（Software Fundamentals）一直以来都在呼吁我们这么做，对吧？我现在可以说完全被“洗脑”了——就像是彻底吞下了埃里克·埃文斯（Eric Evans，领域驱动设计之父）的红色药丸，完全沉浸在软件工程基本原则里。我们虽然在某种程度上略微改变了游戏规则，但或许我们只是在重新强调那些我们本就心知肚明、应该遵守却未能真正贯彻的规则。我觉得这极其引人入胜，而且在这个过程中绝对充满了乐趣。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: ...optimize it. Imagine you essentially had a human who wakes up every morning and cannot remember who they are, right? The guy from Memento, you know. This is Memento-driven development, right? We are trying to optimize our codebases for new starters.</p>
+<p>So, we're trying to have the most healthy codebase that we've ever had, because if you—a human can work around a bad codebase, they just develop memory. They just slam their head against the wall again and again and again until they've got there. But an agent can't do that. It starts fresh every single session. And so, you need to optimize your codebase for that person. That leads you down into really interesting paths. And it turns out that software fundamentals have been saying we've been trying to do that for the entire time, right? I am fully like—I don't know, Eric Evans-pilled. I'm fully like software fundamentals-pilled. We are sort of changing the rules a little bit, but maybe we're just emphasizing rules that we knew we were supposed to do, but maybe we didn't. And I find that really fascinating, and it's definitely a lot of fun.</p>
+</details>
+<p><strong>Speaker B</strong>：好的，我认为顺着这个思路很容易理解为什么基本原则如此重要。但具体是哪些基本原则呢？如果我是一名工程师，尤其是那些过去一直埋头写代码、专注于偏战术性技术编码的人，我该如何着手去寻找那些真正关键的基本原则，并回归到实践中去？在你的探索中，有哪些方法是行之有效的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Now okay, like I think it's easy enough to follow with this train of thought why fundamentals matter, but which fundamentals? And if I'm an engineer, especially maybe someone who has been just kind of like heads down coding, more technical coding, how do I go about and find those fundamentals that matter and go back to what have you found work?</p>
+</details>
+<h3>战略性编程的反馈闭环与调音台隐喻</h3>
+<p><strong>Speaker A</strong>：这是个非常棘手的问题，对吧？之所以极其困难，是因为战略性编程（Strategic Programming）一直以来都极难通过学习掌握。其中的根本原因在于它的反馈周期（Feedback Loop）实在太长了。你经常会发现这样一种情况：很多人在一家公司工作了 6 个月就离职跳槽了，他们所犯下的战略性设计失误往往根本来不及反噬到他们自己身上，对吧？也许那个战略失误需要整整 9 个月的时间才会彻底暴露出恶果并找上门来。</p>
+<p>我认为学习战略性思维和战略性编程，有点像你面前放着一张巨大的专业调音台，上面有着密密麻麻、各式各样的滑块控制杆。也许其中一个滑块代表着你的系统中所拥有的可部署单元（Deployable Units）的数量。你把滑块往上推，你就会得到更多的微服务（Microservices），对吧？你把滑块往下拉，你得到的就是一个单体架构（Monolith）。你究竟该如何做出这一决策？你该把这个滑块停留在什么刻度上？因为这就像你在为音乐做母带后期处理和混音，但你根本听不出哪里调得不对，直到 9 个月之后问题爆发，你才能听到哪里出了错，对吧？直到那些技术债和失误找上门来制裁你。</p>
+<p>因此，我认为唯一能够缩短这种漫长反馈周期的方法，就是大幅加快开发演进的速度。而 AI 现在恰恰能够让你以极快的速度向前推进，对吧？这样一来，你的战略失误也会以快得多的速度反弹并暴露在你的眼前。它们之所以会更快地显现出来，是因为 AI 能够极其高效地产出海量的代码。</p>
+<p>所以，你此刻需要思考的是：你的代码库本身就是 Agent 在其中开展工作的运行环境。你必须时刻考虑如何改善这个环境，思考怎样才能把这个环境打造成更好的形态。显然，这确实需要一定的战术知识作为基础，对吧？你需要理解代码到底是什么、它们是如何拼装协同的、内存限制是怎样的，以及所有这些底层细节。但是，为了在战略性编程上变得更加精进，你必须时刻保持在那个宏观全局的层面上进行思考。此外，我还非常建议去研读那些经典的工程架构书籍，因为光是掌握用来阐述这些架构思想的概念语言，并且深刻理解应用战略设计技术与不应用战略设计技术之间的本质差异，这就已经是整个胜负的关键所在了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: This is really tough question, right? It's really tough because strategic programming has always been really hard to learn. The reason for that is that the feedback loop on it is really long. You would often find like people who quit their jobs after 6 months, their strategic mistakes never catch up with them, right? Maybe that strategic mistake takes nine months to come back at you.</p>
+<p>I think of strategic learning, strategic programming is kind of like you've got a huge mixing desk in front of you with loads of these different sliders. Maybe one of those sliders is like the amount of deployable units that you have. You turn it up, you've got more microservices, right? You turn it down, you've got a monolith. How do you make that decision? Where do you put that slider? Because it's kind of like you're mastering something. You're mixing some music, but you can't hear what's wrong until 9 months later, right? Until the mistakes come and get you.</p>
+<p>So, I think the only thing that can make that feedback loop faster is moving faster. AI now lets you move faster, right? And so, your strategic mistakes will come back at you quicker. They will come back at you quicker because AI is just able to produce so much code. And so, what you need to be thinking about is that your code is the environment the agent operates in. And you should always be thinking about improving that environment, thinking about how to do it better.</p>
+<p>And obviously that requires a bit of tactical knowledge, right? You need to understand what code is and how it fits together and what the memory constraints are and all that stuff. But in order to get better at strategic programming, you just need to be thinking on that level all the time. And I would say reading these books as well because just having the language to explain that and understanding the difference between applying strategic techniques and not is the whole game.</p>
+</details>
+<h3>经验积累的代际变迁与“实战伤疤”的价值</h3>
+<p><strong>Speaker B</strong>：确实，在 AI 时代到来之前，对于高级开发人员（Senior Developers）、资深工程师或者主任工程师（Staff Engineers）而言，你通常几乎看不到工作经验少于 5 年的高级工程师。因为即便是身处快节奏的工作环境中，你通常也确实需要那么长的时间来经历完整的反馈闭环、去犯下各种错误，尤其是犯下属于你自己的战略失误。而等到人们成长为主任工程师时，往往已经拥有了 10 年以上的行业经验。有些人可能晋升得更快一些，但他们身上往往也是布满了各种实战留下的“刀疤”和惨痛教训。当有人启动一个新项目时，他们会走过去对设计做一些微调，当时其他人可能完全看不懂为什么要这么改，而他们只会说：“相信我，按我说的做，我们这是在避免未来生产环境中、值班 On-call 时发生灾难性事故，或者避开诸如此类的天坑。”</p>
+<p>但所有这些直觉与洞察，全部源自于亲身经历的实战磨砺。现在 AI 加快了一切进程，而且它也让修复错误变得更加轻而易举。所以我很想知道这会带来怎样的改变。从一个方面来看，我能看到它确实能够加速经验的积累过程。比如在一年之内，某些团队所交付的项目数量可能比他们过去四年交付的总和还要多，或者相当于以前三到四年的产出，因此你能在更短时间内获得密集得多的经验。</p>
+<p>但我有时也在想，如果由于修复变得极其迅速，导致你所犯下的错误不再显得那么严重致命，那么这种学习体验会不会反而没有以前那么深刻强烈了？因为再次强调，那些实战伤疤、那些刻骨铭心的战争故事，往往是源于某次极其严重的系统宕机事故——比如“因为我们没有做接口幂等性（Idempotency）设计，导致公司损失了巨额资金”。经历过这种事故之后，你当然就彻底懂得了什么是幂等性；这虽然不是一个简单直观的概念，但只要你曾经被它狠狠伤害过，你就会刻骨铭心地意识到它有多么重要。诸如此类。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: I mean up to you know pre-AI for senior developers or senior engineers, staff engineers, they were the people who often you didn't see a senior engineer under five years of experience because you typically need it even in a fast-paced environment you needed that much time to get the feedback loops to make the mistakes, make your own mistakes. And by the time people got to staff engineer often times around 10 plus years of experience. Some people did it earlier, but they often just had battle scars all over them. And they would you know someone start a new project, they would go in and they would just make a tweak and it wouldn't be clear why. And they were like, &quot;Trust me on this. We're avoiding disaster in production or on-call or or or whatnot.&quot;</p>
+<p>But all of this came through lived experience. Now AI speeds things up. It also makes it easier to fix mistakes. So I'm wondering how this might change. Like on one end, I can see how it could just speed up experience. Like in a year some people, some teams will ship more project than they have in four years or about the same as in let's say three or four years before, so you get a lot more experience.</p>
+<p>But I wonder if sometimes the mistakes that you make are just not as serious because you can fix them quickly and now I wonder if the learning is not as strong because again like some of these battle scars, these war stories are it was just really bad outage, we lost a lot of money because we didn't have idempotency. Now of course now you know what idempotency is, it's not an easy concept, but it's important if you've been hurt by it, and so on.</p>
+</details>
+<h3>初级开发者的培养困境与战略价值的杠杆效应</h3>
+<p><strong>Speaker A</strong>：如果你现在是一家软件公司，你打算如何去培养下一代初级开发者（Junior Developer）？因为如今这种战略性编程知识变得如此具有极高的价值，正是因为你可以借助它发挥出前所未有的巨大杠杆效应。那么你真的还会去雇佣一个完全不具备这种战略能力的人吗？你为什么要这么做呢？</p>
+<p>我前几天刚做了一期对鲍勃大叔（Uncle Bob，Robert C. Martin，《代码整洁之道》作者）的专访，当时他的建议是：好吧，你就招一个新人进来，然后暂时把他们当成一个 AI Agent 来对待一段时间［笑声］。你直接给他们派发任务，让他们在纯战术执行的心态下工作一段时间，直到他们犯下的错误开始反弹暴露到你面前。</p>
+<p>但在很多国家，当纯战术层面的软件工程编码工作的价值已经跌破了当地最低工资标准时，如果还这么去培养人，对企业来说简直是巨大的金钱浪费，对吧？所以我坦白讲，我目前也没有确切的完美答案。我唯一确信的是：战略层面的能力、对代码深层结构的理解、对长远架构视角的把握，其价值已经攀升到了前所未有的历史高点，对吧？因为只要拥有了这种战略洞察力，你就能撬动极其巨大的生产力杠杆。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: &gt;&gt; If you're a company right now and you want to train the next junior developer like because this strategic programming knowledge is so valuable now because you can use it at such higher leverage. Are you really going to employ someone without it? Like why would you?</p>
+<p>Like I was asking—I did an interview with Uncle Bob the other day and his recommendation was okay you just hire someone and you treat them as an agent for a [laughter] while. You just delegate to them. You keep them in that tactical mindset for a while until their mistakes start coming up at you. But that's such a enormous waste of money for people right like when software engineering, when the tactical stuff has gone below minimum wage in a lot of countries.</p>
+<p>So I don't know is the answer. I only know that the strategic stuff, the understanding of the code, the understanding of the long view has gotten more valuable than it's ever been, right? Because you can just get so much leverage out of it.</p>
+</details>
+<h3>如何向非技术利益相关者证明软件基本原则的价值</h3>
+<p><strong>Speaker B</strong>：我之前向大家征集过他们最想向你请教的有意思的问题，其中有一个问题和这个话题高度相关。有人提问说：你该如何向非工程背景的利益相关者（Non-engineering Stakeholders）证明，投资于软件基本原则是至关重要的，即便这些投入在纸面数据上可能会暂时降低交付速度和产出效率？</p>
+<p>我觉得这里的核心问题在于：如果有人主张“听着，我们确实需要先把基本原则搞扎实，这意味着我们需要稍微放慢一点脚步，仔细推敲思考我们的架构决策，甚至可能还要花时间自我学习和提升，而不是一味地疯狂堆砌代码……”，这时候该如何去沟通？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: &gt;&gt; I asked about interesting things they'd like to know from you and this is very related to this. This person asked like how do you convince non-engineering stakeholders that investing in software fundamentals are important even if they might reduce the speed and productivity on paper.</p>
+<p>I think the question here is if some people advocate like look we do want to get the fundamentals right which means we want to take it a bit slower think about their decisions maybe educate ourselves as well as opposed to just churning it out...</p>
+</details>
+<p><strong>Speaker A</strong>：其实，就算把这个问题放在 10 年前去问，答案也依然是成立且相关的，你明白我的意思吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: &gt;&gt; I mean you could have asked the same question 10 years ago right and like it would have still been relevant, you know what I mean?</p>
+</details>
+<p><strong>Speaker B</strong>：只不过在当时，我们通常会换一种表述方式，比如问“如何向管理层申请偿还技术债务（Tech Debt）”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: &gt;&gt; except we sort of thought of elements we would have asked about like paying off tech debt.</p>
+</details>
+<h3>Agent 可观测性与组织级最佳实践沉淀</h3>
+<p><strong>Speaker A</strong>：一点没错！这本质上就是同一回事，对吧？这么多年来我们其实一直在进行着完全相同的对话。而这一点对我来说反而相当令人欣慰，因为这意味着你需要某种衡量指标（Metric）来把这个问题彻底搞清楚。</p>
+<p>而且现在要厘清这一点其实变得容易了一些，因为 AI Agent 能够让你以更快的速度进行迭代验证。要想做到这一点，第一步就是在你的整个组织内部，为每一个正在运行的 Agent 建立起全面的可观测性（Observability），清晰掌握它到底在执行什么任务，以及它的成功率和失败率究竟是多少。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: &gt;&gt; exactly and it's the same thing right like we have been having the same conversation which is quite satisfying to me because I mean you need some sort of metric for like figuring this out. And it's a little easier to figure this out because agents allow you to move faster. And the first step to this is getting observability in your organization over every single agent on what it's doing and what it success and failure rate is.</p>
+</details>
+<p><strong>Speaker B</strong>：我们在过去对人类开发者从来无法做到这种程度的精细监控。大家都知道，对人类开发者进行这种全盘监控是具有侵入性和冒犯感的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: &gt;&gt; we've never been able to have that with like developers before. You know, that's kind of invasive for developers.</p>
+</details>
+<p><strong>Speaker A</strong>：是的。但对于 Agent 而言，这种监控是完全理所应当、毫无问题的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: &gt;&gt; Yeah. But for agents, it's like it should it's okay.</p>
+</details>
+<p><strong>Speaker A</strong>：对 Agent 做监控完全没问题，对吧？因为我们是在为这项服务付费，对吧？我们必须清楚地了解我们为了适配和利用它所做的优化到底效果如何。</p>
+<p>所以第一步，实际上是在你的整个组织架构中，为你的 Agent 体系建立起专门的测试框架基准（Harness）或者端到端的可观测性体系，以此来准确研判哪些做法是有效的、哪些做法是行不通的。你很可能需要在团队中设立一个专属岗位，或者让某些人的部分职责专门负责分析这些监控数据，搞清楚我们的工程实践究竟进展如何。</p>
+<p>你可能会发现，在你的组织内部，某些代码仓库（Repos）中 Agent 的执行成功率要明显高于其他代码仓库。于是，你就可以提炼出那些优秀代码库中所蕴含的工程设计经验与规范，并将这些宝贵教训在全公司范围内推广分发。</p>
+<p>此外，我还认为绝大多数组织都需要围绕一套统一的通用技能库（Common Set of Skills）来凝聚共识。你需要一套标准化的通用软件工作流流程，从而让每一个人都能够向这套流程回馈贡献经验，并使你能够在此基础上开展各种工程实验。你可以对不同的开发流程进行 A/B 测试。比如，你可以让一个团队采用一种流程和工具集，让另一个团队采用另一套流程和工具集，事后对两组的产出与质量进行对比评估。这样一来，所有人的工作协同……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: &gt;&gt; It's okay, right? We are paying for this service, right? We need to understand how well we're optimizing for it. The first step there is actually getting a harness or observability around your agent, the entire organization to work out what's working and not.</p>
+<p>And you probably need someone whose job it is or part of their job is to look at that data and figure out what we're doing. Maybe some repos in your organization have better success rates than others. And so you take the lessons that are in there and you pass them out.</p>
+<p>I also think that most organizations need to gather around a common set of skills. You need a common software workflow process so that everyone can contribute back to it so that you can experiment with things. You can AB test things. You know, you can have one team doing one set of stuff and one team doing another set of stuff and then you ask them afterwards. And so everyone working...</p>
+</details>
+<!-- chunk 10/13 -->
+<h3>实验性思维与团队协作的演进</h3>
+<p><strong>Speaker A</strong>：……在任何组织中使用 Agent，都需要具备这种实验性思维。你必须思考：我们该如何从所消耗的这些 Token 中榨取更多价值？而可观测性（observability）正是实现这一目标的第一步。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: ...with agents in any kind of organization needs this experimental mindset. You need to be thinking how do we get more juice out of these tokens that we're spending and observability is the first step there.</p>
+</details>
+<p><strong>Speaker B</strong>：是的。而且我也在想，这里面是否存在某种人类反馈回路（human feedback loop）——我的意思是，直接去和你的同事交流。我们之所以会有例行惯例、团队会议和全员大会是有原因的：在这些场合大家可以分享“什么对我有用”、“哪里行不通”、“我学到了什么”。归根结底，是由我们人类来负责制定规则，决定我们如何使用它们、在何处使用、在何处不使用，以及在哪些地方明确表示“不，这里必须由人类承担 100% 的责任，我们甚至完全不让 AI 介入”。当然，这在每家公司都会有所不同。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah. And I also wonder if there's a human feedback loop in the sense that I mean just talk to your colleagues like on on like you know we we we do have rituals team meetings companywide meetings for a reason like there share here's what's working for me here's where it didn't work here's what I'm learning like in in the end we are in charge of setting up the rules deciding how we use them where we use them where we don't use them and where we say like no this this needs to be humans need to take 100% like we're not even getting AI involved which again will be different everywhere.</p>
+</details>
+<p><strong>Speaker A</strong>：不仅如此，现在的很多事情你甚至都不需要保持人在回路（human-in-the-loop），对吧？你其实不需要投入那么多时间，就能构建出一个更好的代码库。比如我设置了一些自动化循环，基本上每天早晨它都会运行我的“改进代码库架构”（improve codebase architecture）Skill，向我提出一份关于代码库可改进之处的方案。然后我只需按下一个按钮，说“好，把这个转成 Tickets，然后我们直接上线发布”。这做起来非常容易，而且很轻松就能与其他工作流无缝融合。</p>
+<p>所以我认为，我不知道大家是否需要把比如 20% 的时间用来专注构建“生产软件的工厂”（the factory that builds your software），而不仅仅是构建软件本身。因为我觉得这是对你未来杠杆力的一笔极其巨大的投资——不仅是对你个人工作的杠杆力，也提升了团队的杠杆力，并加深了大家对这些技能的理解和掌握。但当然，你首先需要拿出成果，并且在真正向大家揭晓“这就是我们一直在做的事情”之前，你可能需要稍微隐藏这部分工作一段时间。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And it's not only that like a lot of this stuff now you don't need to be human in the loop for, right? You don't actually need to delegate that much time in order to build up a better codebase. I have loops that essentially every morning it will run my improve codebase architecture skill and give me a proposal for the something that I could improve in the codebase. And then I can just press a button. I can say okay turn that into tickets and then let's ship that. that is pretty easy to do and it's pretty easy to stream that in with other work. And so I think that I don't know whether you need like 20% of your time focusing on the factory that builds your software as well as the software because I feel like that's a massive incredible investment into your future leverage and not only your leverage with your work but also your team's leverage and understanding and getting better at those skills. But of course you need results and you might need to hide that work for a bit before you actually reveal it to this is what we've been doing all...</p>
+</details>
+<p><strong>Speaker B</strong>：嗯，这也取决于你所处的具体环境，不过确实是这样。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: ...well and this this is down to your environment but but yeah...</p>
+</details>
+<p><strong>Speaker A</strong>：而且如果你回来时对大家说：“噢，顺便说一句，各位，我还顺手做了这个”，没人会为此生你的气。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: ...and no one's going to be mad at you if you come back saying oh by the way guys I also did this.</p>
+</details>
+<p><strong>Speaker B</strong>：没错，确实如此。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah exactly.</p>
+</details>
+<h3>本地开发 vs 云端环境：开发范式的转变</h3>
+<p><strong>Speaker B</strong>：我想问一下你具体是如何使用工具的。第一个问题是：编码 Agent 是运行在本地还是云端？你最近发了一条相当有争议性的推文，我引用一下你的原话：“我正在彻底脱离本地开发环境。对我来说本地开发已经毫无意义了。”那么……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Uh I wanted to ask you about your specific kind of how you use tools. First one is coding agents local or in the cloud. And you recently posted a a pretty provocative tweet which I I'll quote you. I'm moving away from my local dev setup. makes zero sense to me. Now,</p>
+</details>
+<p><strong>Speaker A</strong>：很多人问我：“你如何让你的 Skills 实现协同？如何进行协同式的 Grilling 会话？”答案就是：你需要的不仅仅是你和一个终端，对吧？我们现在正处于一个每个开发者都拥有大约 100 个可用终端的阶段。这听起来很疯狂。但感觉你其实需要让这 100 个终端面向整个组织开放可用。你需要在共享空间中协同工作。你需要能够向某人提问，在你的 Grilling 会话中 @ 某人并说：“好的，来做这个。”</p>
+<p>因此，对我来说，把大量这类交互放在大家已经在使用的协作场所中非常有意义——比如在 Slack、Discord、Teams，或者 Linear 里。这正是促使我去探索这个方向的核心驱动力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: A lot of people ask me, how do you make your skills collaborative? How do you have a collaborative grilling session? And the answer to that is that you need more than just your terminal and you, right? We're in a we're in a phase now where every dev has like a 100 terminals available to them. And that seems crazy. It feels like you need those 100 terminals available to your entire organization. You need to be able to collaborate in a shared space. You need to be able to ask someone, tag someone in to your grilling session and say, &quot;Okay, do this.&quot; And so it makes a lot of sense for me to have a lot of those interactions in the place where you already work in Slack or in Discord or in Teams, whatever, or Linear. And that is really the thing that's driving me to explore this.</p>
+</details>
+<p><strong>Speaker A</strong>：我个人并不特别与团队一起共事，但我深知其价值。我一直在尝试将这种理念融入我的工作流中。比如在坐火车来这里的路上，我就在 Discord 里和我的 Hetzner 虚拟机聊天，为我的课程构建内容，或是修复学生们遇到的 Bug。</p>
+<p>因此，当我拥有了一套可以进行端口转发（port forward）并在 Agent 做出更改时实时查看 Dev Server 的云端环境时，我现在觉得单纯在本地做事情的价值越来越低了。我不知道，我只是觉得这比拥有一台能跑这些任务的高昂笔记本电脑合理得多——用高配置笔记本感觉像是在浪费算力。特别是由于在远程服务器上，我可以设置定时调度任务。我知道那台机器永远处于开机状态。我和我的 Agent 会进行像“早间 Standup”一样的交流，由它来获取信息，为我规划日程，并且它能理解我的所有 Discord 聊天记录等一切上下文。是的，把这一切放在远程对我来说合理得多。我现在在本地唯一会做的事情，就是调试与远程 Bot 相关的问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I I don't work with a team particularly, but I understand the value of that. And I've been trying to build that into my flows. So on the train over here, I'm in Discord chatting to my uh Hetzner box, you know, building stuff for my course or fixing bugs that students are coming across. So I can see less value now in just doing things locally when I have this setup that I can port forward into, let's say, and you know, and like see the dev server as it's making changes. And I don't know, I it just feels like it makes way more sense to me than having uh a very very expensive laptop that can do this stuff. It feels like wasted compute. And especially because on that remote box, I can set up schedules. I know the box is always going to be on. I have like a morning standup with my agent where I get it. It schedules my day for me and like it understands all of my Discord chats and all that. Yeah, having that remote feels like it makes just so much more sense for me. And the only thing I do locally now is debugging issues with the remote bot.</p>
+</details>
+<p><strong>Speaker B</strong>：是的，我想大家可能会疑问：要在云端复现某些非常复杂的本地配置到底有多容易？但一旦这成为可能，它可能只是一个“何时发生”的问题，而不是“会不会发生”的问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah, I I think I wonder if there's a question of how easy is to to replicate some more pretty complicated local setups in the cloud. But once that becomes possible, it's probably a matter of when, not an if.</p>
+</details>
+<p><strong>Speaker A</strong>：是的。而且退一步说，人们在本地配置上也同样面临类似的问题，对吧？无数个 Git Worktree 把硬盘塞得满满当当，或者为了运行本地开发环境，不得不启动五个 Docker 容器。而在云端，这往往还要更简单一些，因为你可以按需动态调配所需资源。</p>
+<p>顺便提一句，我们看到像 RAMP、Stripe、Uber 这样拥有平台团队的公司，已经成功将本地开发者的完整环境迁移到了云端虚拟机上，现在你可以通过在 Slack 中 @ 或者通过网页直接调用它。他们发现除了前端工作以外，开发者使用这些 Agent 的频率大大增加——前端开发你可能仍然想要即时的本地反馈回路，确实有少数例外情况下你出于延迟等原因非常想要本地开发环境——但他们也观察到，有 70% 到 80% 的开发者是完全自愿转向云端的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah. And if anything, um, people are having this similar issue with local setups, right, with just a thousand Git work trees just spamming their hard drive and with how do I have a work tree that, uh, I've got to run like five Docker containers in order to um, get my local dev setup. Well, that's often a little bit easier in the cloud because you can just provision the resources that you need on demand. And by the way, we're seeing that companies uh like RAMP, Stripe, Uber that have platform teams that manage to take local devs full setup and put it into the cloud on a cloud machine that you can now invoke with this with an at Slack or a website. They're seeing people use these agents far more except for front-end work, which you still want to have that feedback loop that you there are a few exceptions where you really want to to have that like a local dev setup for for latency or whatnot, but they're also seeing like 70 80% of of devs are just voluntarily going for the cloud.</p>
+</details>
+<p><strong>Speaker B</strong>：对。我的意思是，如果你直接通过隧道（tunnel）打通，让远程运行的 Dev Server 实时显示在你的本地机器上，这与完全在本地运行又有什么区别呢，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah. I mean, I I think you can just tunnel through and just get the uh if it's running a dev server and you just have that appearing on your local machine. How is that different from having it locally, right?</p>
+</details>
+<p><strong>Speaker A</strong>：对。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Okay.</p>
+</details>
+<p><strong>Speaker A</strong>：我不太确定。我自己还没亲自尝试过这种隧道方案，但在我讨论这个话题并提到“噢，也许前端是一个合理的例外”时，这是我立刻收到的反馈，而且我觉得这确实讲得通。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I don't know. I think I think I've not experimented with that, but that's when I talked about that and said, &quot;Oh, maybe front end is a good exception.&quot; That was the immediate response that I got and it makes sense to me.</p>
+</details>
+<h3>规划与需求：前置对齐与右移对齐的权衡</h3>
+<p><strong>Speaker B</strong>：我想问你关于规划和需求的问题。你非常坚信“Grill Me”（严厉盘问）、规划以及前置规划——先制定好方案，然后再让 Agent 去干活。但这里有一个反方观点：Agent 在执行实现上速度太快了，你甚至可以让几个 Agent 并行去实现不同的架构方案。那么针对这种“既然它们实现速度极快，我可能不需要做那么多前置规划，边做边修正方向即可”的做法，你怎么看？这是否取决于你所做的工作类型？因为……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: I want to ask you about planning and requirements. You're a big believer in Grill me and planning and planning up front or getting the plan and then having the agent work. But there's a devil's advocate here. Agents are so fast at implementing. You could actually even have like several like few agents implement different architectures. What about the approach of like well they're they're fast at implementing. So I might not need to do as much upfront planning. I can just course correct as I go. It depends what type of work you're doing, right? Because</p>
+</details>
+<p><strong>Speaker A</strong>：我认为你确实不应该把 Grill Me 用在所有事情上。本质上，你需要将 Grill Me 用在那些工作体量很大、且一旦做错就极难回滚（hard to row back from）的任务上。</p>
+<p>如果你觉得：好吧，这个功能可能是一个全新的完整页面，或者是一个大型功能；这部分代码，如果你认为一旦 Agent 理解错了，错误的代码就会进入它的上下文窗口中，进而污染后续产生的所有内容。事实上，在事后再回过头去修改这些东西、在事后进行对齐（alignment），代价会极其高昂。</p>
+<p>对于这类情况，先进行对齐（align first）是非常合理的——先解决所有棘手的问题，比如搞清楚你的 JSON Cookie 或者身份验证 Token（auth token）等机制，然后再去执行。</p>
+<p>但在某些场景下，比如简单的 Bug 修复，或者仅仅是“把这个按钮向左移动 3 个像素”，显而易见你不需要在那之前进行前置对齐。如果只是一段 5 行代码的改动，你可以直接看结果，事后再做对齐。</p>
+<p>这就是我的思考方式：在允许的情况下，你应该尽可能“向右移”（shift right）。实际上，在我的视频编辑器里就内置了一个小功能按钮，我可以随时通过它发送反馈。我经常把这个用于极其简单的任务：我发送反馈，它被记录为一条 GitHub Issue，立刻被一个实现 Agent 拾取并立即开始编写，随后一个代码审查 Agent（code review agent）介入并审查代码，最后我直接验收修复好的实际效果，并在那时完成我的对齐。对于那些非常容易明确规范、不需要进行深度盘问（grill）的事情，这种方式运作得极其出色。</p>
+<p>所以你所面临的选择就是：这是否是一件足够小的事情，小到我可以在事后进行对齐？如果是，那就不要……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I believe that you shouldn't be using Grill Me for everything. Essentially, you need grill me for um pieces of work where the actual thing being done is going to be quite large and hard to row back from. If you feel like, okay, this feature, maybe it's a whole new page, maybe it's a a big feature, this um code, you think if you if the agent gets it wrong, then the wrong code is going to be in its context window influencing everything that comes afterwards. And actually going back and editing the stuff afterwards and doing the alignment after the fact is going to be expensive. Whereas for those cases, it makes sense to align first to answer all of the tricky questions like your, you know, your JSON cookie or whatever your uh authentication token first and then do it. But for some cases, like simple bug fixes or just like move this button three pixels to the left, it's obvious that you don't need to align before that. You can see the thing if it's just like a fiveline change or something. You can align afterwards. And so that's how I think of it is that where you can you should shift right as much as possible. And actually there are actually certain features that I have a little in my video editor I have a a button that I can send feedback to it. And I often use this for very simple tasks where I send the feedback it goes into a GitHub issue. This immediately gets picked up by an implement agent gets just worked on immediately. Then a code review agent comes in and reviews the code and then I at the end I get to see this actual thing being fixed and I can do my alignment then. And that's worked really well for things that are very easy to specify things that I don't need to grill on. So that those are the choices you've got. Is it a small enough thing that I can align afterwards? Then don't</p>
+</details>
+<!-- chunk 11/13 -->
+<h3>规划粒度与规格编写：从微型任务到前置原型验证</h3>
+<p><strong>Speaker A</strong>：……就使用 <code>grill me</code>。如果能在一个会话中完成，那就用 <code>grill me</code>。如果需要跨越多个会话，我需要对整个任务进行全局对齐，那就要使用 <code>wayfinder</code>。这很有意思，因为这种做法与一些科技公司多年前沉淀下来的经验并没有太大的不同——也就是关于 PRD（产品需求文档/产品参考文档）的处理方式。如果是一件微不足道的小事，直接动手做就是了；如果这需要团队协作，属于团队层面的范围，我的意思是你写一份 PRD 发送给团队，或许再抄送给其他相关团队，但这并不会成为阻碍进展的硬性阻塞项；而如果是更大规模的项目，那它就是一个阻塞项，我们必须停下来等待反馈。基本上，我们的表述方式通常是：你看，如果这是一个为期一个月的项目，花上两天时间——花一两天时间去规划并不是什么坏事，因为我们后续能借此节省时间；但如果是一个只有一天的微型项目，那就完全不用搞这些前期规划了；而如果是一个长达一年的大项目，那我们到底在做什么？这种项目理应被拆解成更小的颗粒度。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: ...use grill me. Does it fit into a single session? Then use grill me. Does it span multiple sessions? I need to align over the entire thing then use wayfinder. It's interesting because this is not all that different to where some tech companies landed years before, which is on the PRD, the product reference document. If it's something trivial, just build it. If it requires the team, like it's a team-level scope, I mean write a PRD, send it out to the team, maybe CC some other teams, but it's not a blocker. And if it's something bigger, then it's a blocker, like we need to wait for feedback. Basically, the way we would say it is like, look, if it's like a one-month project, like spend two days, like it's not a bad thing to spend like one or two days planning it because we're going to save time on it. But if it's a one-day project, like forget about it. If it's a one-year project, I mean, what are we doing? Like it should be a smaller one.</p>
+</details>
+<p><strong>Speaker B</strong>：完全同意。而且我想提一点，当你这么说的时候，我常常能听到屋子外面传来的一种批评声音，那就是：当我们讨论 wayfinder 以及构建各种规格文档（spec）时，我们所做的事情听起来难道不像瀑布模式（waterfall）吗？在进入正式构建之前，我会做大量激进的前期原型设计（upfront aggressive prototyping）。这种质疑一次又一次地出现：“这不就是瀑布模式吗？我们到底在干嘛，是要倒退回 70 年代吗？”但智能体（Agents）赋予了你一种疯狂快速生成粗糙产物（churning out slop）的能力，对吧？有时你可以把这种能力转化为自己的优势，因为对于原型来说，关键只是在于直观感受它应该长成什么样。你可以迅速构建出三到四个不同的版本，直接挑选出你最喜欢的一个，然后在此基础上持续迭代，不断地生成、生成、再生成。这可以演化为一种非常强大的工作流配置，而这是我们以前从未真正拥有过的，对吧？以前制作原型的成本总是极其高昂，而现在它比以往任何时候都要廉价。对我来说，真正把这些原型做出来，正是编写规格文档中不可或缺的核心组成部分。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Totally. And I want to like there's a bit of sort of criticism I hear just from outside the room when you say that, which is that doesn't this sound like waterfall, what we're doing when I'm talking about wayfinder and when I'm doing any kind of like building up any kind of spec? I do a lot of upfront aggressive prototyping before we get there. That's something that comes up again and again. It's like this is just waterfall. What are we doing going back to the 70s? But agents give you this ability of just churning out slop, right? And sometimes you can use that to your advantage because a prototype, right, just getting a sense for what it should look like. You can build out three or four different versions and just choose your favorite and iterate on it and just keep churning, churning, churning. That can be a really powerful setup that we've not really had before, right? It was always expensive to produce prototypes. Now it's the cheapest that it's ever been. And that's an essential part of writing specs to me is actually producing these prototypes.</p>
+</details>
+<h3>破除瀑布模式稻草人：大厂的微型瀑布与敏捷隐喻</h3>
+<p><strong>Speaker A</strong>：是的。不过对于瀑布模式的批评，我认为 Grady Booch 之前可能也跟我提过这一点：别忘了，我们不应该盲目批判瀑布模式，因为比如许多大型科技巨头——从亚马逊（Amazon）、微软（Microsoft）、谷歌（Google）到 Meta 等等顶尖公司——在 AI 出现之前，它们实际上都在践行某种微型瀑布（mini-waterfall）模式。这种微型瀑布的流程就是：让我们先做一个计划，大家对计划达成一致，然后动手构建，最后发布上线。而这整个周期通常在两周、一个月、两个月或三个月内完成；三个月已经算是极限了。但 Grady Booch 指出，瀑布模式的问题从来都不在于这种节奏。瀑布模式真正的症结在于，过去的规划阶段往往真的要耗费整整一年时间，然后具体实现又得耗费三年；等到四年后成果终于就绪时，它早已不是我们当初想要的东西了。这才是问题的根源所在。他认为，对于一个为期一两个月甚至一周的项目，采用瀑布式的阶段推进并没有任何毛病；核心问题一直都在于动辄以“年”为单位的时间跨度。他还提到，整个行业其实已经有几十年没见过真正意义上的古典瀑布模式了。所以在这里，我们使用这个术语时，就好像大家批评的是同一个东西，但其实那种前期的规划与设计本身并不一定是什么坏事。你明白我的意思吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah. But also like with the waterfall criticism, I think Grady Booch might have told me this as well is like don't forget like we should not criticize waterfall because for example a lot of big tech, the largest tech companies from like Amazon, Microsoft, Google, Meta, you name it, they are kind of doing mini-waterfall. Like pre-AI they've been doing pretty mini-waterfall, which is let's do a plan, let's agree on it, let's build it, let's ship it. And this is all done in like 2 weeks, a month, two months, 3 months. 3 months is kind of the extreme. But Grady Booch was saying the problem was never this with waterfall. The problem with waterfall was the planning was literally taking like a year, like one year, and then the implementation taking 3 years, and by the time it was ready 4 years later it's not what we wanted. And that was the problem. He was like the problem is not like having like a one or two month project or one week project with a waterfall. The problem was always that we're talking years. And he said that the industry has not seen waterfalls for decades now. And so here we're using this term which is a bit like we're criticizing or many waterfalls were criticized in that one. It's actually that's not a bad thing necessarily. You see what I mean?</p>
+</details>
+<p><strong>Speaker B</strong>：就像是我们立起来自己去击打的一个稻草人。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: A scarecrow that we're that we're punching or something.</p>
+</details>
+<p><strong>Speaker A</strong>：没错，它就像一个早已不复存在的皮纳塔（piñata）。它可能还残留在某些极其小众、谁也不太了解的受强监管行业的陈旧企业级项目中，但我觉得即便在那些地方，这种模式大概也早就过时淘汰了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah. It's a piñata which stopped existing. It might exist in some crazy like enterprise projects that no one of us know about in regulated industries. But I feel even there it's probably gone out of style.</p>
+</details>
+<p><strong>Speaker B</strong>：是的。我认为如果我们还在击打这个皮纳塔，把它悬挂在那里其实还是挺有用的——它就像是一个有价值的幽灵警示，或者说一个有益的警世故事，对吧？因为到底哪种模式与智能体驱动的架构配合得更紧密？那必然是敏捷开发（Agile），对吧？因为劳动力成本已经大幅下降，我们可以以极快的速度进行调整和修改。我不知道，在我看来这才是最贴切的隐喻。因此，尽管如今已经没有人真正去搞古典瀑布那一套了，但我并不介意继续批判瀑布模式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah. I think it's like if we're hitting the piñata I think it's actually a useful thing to have up there. It's like a useful ghost or useful cautionary tale, right? Because which which one fits the agentic setup more closely, it's going to be agile, right? Because the cost of labor has gone down so much, we can just make changes very, very quickly. I don't know that feels like the right metaphor to me. So, I don't mind hating on waterfall even though no one really does it anymore.</p>
+</details>
+<h3>测试驱动开发（TDD）在智能体环境下的重构与反馈闭环</h3>
+<p><strong>Speaker A</strong>：那么，聊聊另一件同样逐渐淡出流行的事物吧。我们并不讨厌它，那就是测试驱动开发（TDD）。对于在智能体工作流中使用 TDD，你有什么看法？之前我和 Kent Beck 交流时，我们讨论了为什么 TDD 出于种种原因会是一个极佳的契合点，但我目前依然没怎么看到人们真正把它用起来。我看到人们在写测试，智能体也倾向于在代码写完之后再去补写测试——而这恰恰也是大多数人类工程师的工作方式。不过我记得你一直都是 TDD 的倡导者，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Well, one other thing that just went out of style. We didn't hate it, but test-driven development, TDD. What is your take on using them for agentic stuff? Well, when I talked with Kent Beck, we talked about how this this could be a great fit for many reasons, but I still don't see people really using it. I see people writing tests. The agents also like write tests after the fact, which is how most people work. But I think you've been an advocate for TDD, right?</p>
+</details>
+<p><strong>Speaker B</strong>：是的。我确实有一个推荐使用的 TDD 技能（skill）。探讨这个话题非常切合时宜，因为我最近一直在深入思考这件事，只是还没有公开发帖阐述。TDD 的设计初衷，是针对“人类工作记忆（working memory）非常有限”这一特点进行优化的，对吧？你先写一个测试，而且这个测试必须首先失败。这意味着即使你中途分心了、去喝了杯咖啡、或者去外面散了个长步，当你回到电脑前时，那个依然处于失败状态的测试会精准地提醒你当前正处于实现的哪一步，并引导你走向下一个环节。但智能体并不需要这种机制。智能体最棒的一点在于，它们拥有的工作记忆比人类要大得多，对吧？它们当前在脑海中所能容纳和维持的上下文信息量远超人类，这是非常强大的优势。不过它们的工作记忆也不是无限的。所以我认为，传统 TDD 针对的问题对于智能体来说其实有点对错了靶心。</p>
+<p>然而，智能体真正迫切需要的是反馈闭环（feedback loops）。它们需要能够实时看到自己正在做什么，以及自己的修改是如何与代码的整体环境进行交互的。它们需要随时随地探测系统的状态。让智能体首先构建出失败用例，也能让智能体极难在代码实现上弄虚作假。因此，你不仅是在强制智能体建立它自己的反馈闭环，智能体同时也在逐步向你提供确凿的证明，证实这套东西在推进过程中确实是在按预期工作的。所以，即使我没有严格按照传统的 TDD 流程（即先写失败测试、再修复使其通过、最后进行重构），我也经常会对智能体说：“请提供证据，证明你的修改确实实现了声称要完成的功能。给我提供 TDD 证据，证明如果没有这项修改，测试就会失败。”这种方式在强化反馈闭环方面效果极其显著。因为智能体在搞 TDD 时常犯的另一个毛病就是容易写出一堆劣质测试，特别是同义反复式的无意义测试（tautological tests）——测试仅仅是在重复断言实现本身，就好像是把实现逻辑硬生生复制了一遍。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah. So, I have a TDD skill which I recommend using, and this is this is quite timely because I have been thinking about it, but I haven't really posted about it yet. TDD optimizes for having a very small working memory, right? You write one test and that test is supposed to fail. And it means that um even if you get distracted, you go for a coffee or something, you go for a long walk, when you come back, the test is still failing, reminding you of where you are in the implementation and guiding you to the next thing. Agents don't need that. Agents, the thing that's great about agents is that they have a much larger working memory than humans, right? They can actually hold a lot more in their heads than than humans can currently, which is very useful. But um they don't have an infinite working memory. And TDD it's sort of aiming at the wrong problem I think. But the thing that agents really do need is that they need to have feedback loops. So they need to see what they're doing and how it's interacting with the environment of the code. They need to probe it all the time. And having an agent that builds it builds the failure first. It's also very hard for an agent to cheat that. So, not only are you forcing the agent to build its own feedback loops, the agent is providing proof to you that the thing is actually working as it goes and even if I'm not using TDD directly where it, you know, writes the failing test first, then uh fixes it, then refactors, I will often say, provide proof that your change does the thing it's purported to do. Give me TDD evidence, right? That it's it would fail without this change. And that's been really good for just improving the feedback loops essentially because another thing with TDD that agents get wrong is they will often just write crap tests. They'll often just write especially tautological tests where the test is just asserting the implementation itself. It's just like a duplicate of it.</p>
+</details>
+<p><strong>Speaker A</strong>：智能体定义了一个常量，然后测试断言说“期望这个常量等于这个具体的值”。我的意思是，这种测试到底有什么意义？它根本就是在断言实现代码本身。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: writes a constant and then it says expect this constant to be this value. I mean what's the point in that test? You know it's just asserting the implementation.</p>
+</details>
+<p><strong>Speaker B</strong>：所以是的，我对 TDD 的感情很复杂。我依然推荐使用它，纯粹是因为从人类的角度来看，它能让你对正在构建的内容建立起强得多的信心。但是没错，我也开始看清那些反对使用 TDD 的论据了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: So yeah, I I have a mixed relationship with TDD. I do still recommend it just because it gives you so much more confidence in what you're building from a human perspective. But yeah, I'm I'm starting to see the counter arguments.</p>
+</details>
+<h3>技术债务失控与智能体架构下的自动化审查防线</h3>
+<p><strong>Speaker A</strong>：让我们来聊聊技术债务（tech debt）吧。Y Combinator 的 Jared Friedman 发过一条推文，我引用一下他的原话：“技术债务过去往往是在代码库膨胀到足够大时，你不得不忍受的东西；如今不再如此了。”而你当时回复道：“是的，现在哪怕是在一个极小的代码库里，你也可以体验到技术债务了。”［笑声］</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Let's talk about tech depth. Jared Jared Freriedman at Y Combinator wrote a tweet that I'll quote from him. &quot;Technical depth used to be something you just had to live with with a sufficiently large code base. No longer.&quot; and to which you replied, &quot;Yes, now you can live with it even in a tiny code base.&quot; [laughter]</p>
+</details>
+<p><strong>Speaker B</strong>：太精妙了。我当时真的是大声把那条推文读出来的。你刚才真的把那种幽默的神韵完全念出来了。是啊，智能体实在太容易产出垃圾代码了，对吧？哪怕是那些极其聪明、功能强大的智能体也是如此。因为它们缺乏战略性思考的能力，它们只专注于眼前手头正在做的那一小块事情，所以它们非常容易积累并留下大量的技术债务。那么，究竟什么是技术债务呢？技术债务其实就是指任何随着时间推移让代码库变得越来越难以修改的因素。一个优秀的代​​码库，应该是一个易于变更、能够轻松修改且不会引发雪崩式连环故障（cascading failures）的代码库，对吧？因此，一个拥有扎实测试覆盖率和优秀测试套件的代码库，就是一个易于维护和变更的代码库。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: That's good. I read out loud actually. You really gave the the sense of that one. Um yeah, it's just so easy for agents to produce rubbish, right? Un like even really smart, powerful agents because they're unable to think strategically, they're just focused on what they're doing right now. It's very easy for them to produce tech debts. Um, what is tech debt? Right, tech debt is anything that makes the code base harder to make modifications to over time. A good codebase is one that's easy to change, easy to make a change in that doesn't result in cascading failures, right? So, a codebase with a solid test coverage and a good test suite is an code base that's easy to change.</p>
+</details>
+<p><strong>Speaker A</strong>：确实。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah.</p>
+</details>
+<p><strong>Speaker B</strong>：但是智能体实在太擅长随着时间推移把一个代码库一步步改得越来越糟糕了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: But it's so easy for agents to just make a code base worse over time.</p>
+</details>
+<p><strong>Speaker A</strong>：是的。这是一个极其棘手的难题，也是一个需要以战略性思维去审视的问题。因为我发现有一种方法运作得非常出色，那就是自动化审查（automated review）：由一个执行智能体负责具体实现，然后……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah. And it's a really hard problem and it's one that you need a strategic mindset to think about because one thing that I found works really well is automated review. So you have one implement agent to do the thing and then</p>
+</details>
+<!-- chunk 12/13 -->
+<h3>自动化审查与代码质量的持久战</h3>
+<p><strong>Matt Pocock</strong>：你可以引入另一个自动审查 Agent，让它来执行你的编码规范，找出那些同义反复（tautological）的无效测试，并随着时间的推移不断提升整个测试套件的质量。但接下来你又该如何知道这个审查 Agent 本身是否表现良好呢？所以，即便是在极小的代码库里，即便只是改动单行代码，Agent 依然有可能生成一堆垃圾代码。我认为这就是我们必须接受的现实，也是我们必须持续与之抗争的事情。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: ...you have another automated review agent that sort of imposes your coding standards, that looks for these tautological tests, that improves the quality of the test suite over time. But then how do you know if the automated review agent is doing a good job? And so even in tiny codebases, even in one-line changes, the agent can produce crap. And so I think it's just something we need to live with and something we need to be in a constant battle against.</p>
+</details>
+<p><strong>Interviewer</strong>：这也并非坏事。当你真正理解什么是优秀代码、能够敏锐识别出什么是技术债时，你所带来的价值是巨大的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: It's also not a bad thing. We bring a bunch of value when you understand what good code looks like, when you can recognize what tech debt is.</p>
+</details>
+<p><strong>Matt Pocock</strong>：而且这个问题其实由来已久，你懂我意思吧？它一直都在。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: And it's also a problem that we've always had. You know what I mean? Like...</p>
+</details>
+<p><strong>Interviewer</strong>：它从未真正消失过。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: It hasn't gone away.</p>
+</details>
+<p><strong>Matt Pocock</strong>：从来没有消失过。我的感觉是，我们只是在重复过去 20 年里一直在进行的相同对话，只不过现在房间里多了一头显眼的新大象。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: Hasn't gone away. You know, this is what I feel like: we're just having the same conversations we've had for 20 years. It's just there's this new elephant in the room.</p>
+</details>
+<h3>远离硅谷中心：在英国乡村的 AI 教育与实践</h3>
+<p><strong>Interviewer</strong>：我想向你请教一个关于生活在英国与从事 AI 相关工作的问题。这也是我们的一位读者提出的。你现在定居在英国，而且不在伦敦，却在从事 AI 领域的教育工作。远离硅谷以及各大 AI 实验室的总部，对你来说是让事情变得更轻松了，还是更艰难了？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: I want to ask you about living in the UK and AI. This is a question that also came from one of the readers. Now that you're based in the UK and outside of London, but you're now educating about AI. Is being further away from Silicon Valley and the HQ of the labs making things easier or harder for you?</p>
+</details>
+<p><strong>Matt Pocock</strong>：我其实只是在耕好属于我自己的这一亩三分地。我很久之前就意识到的一点是：我根本没有预测未来的能力，对吧？因为我离那些核心圈子太远了。我只是行业一线从事具体工作的一个普通人，我完全无法预知未来会发生什么，我不知道模型接下来会不会继续大幅提升，我也拿不到任何特权访问权限或内幕资源。正因如此，我只能把全部精力聚焦在“当前切实有效的方法”上。</p>
+<p>我觉得这种现状反而在一定程度上帮我收窄了视野与关注范围。这意味着我只需要专心致志地让我正在做的这套东西跑通。而且让我感到相当惊喜的是，哪怕我没有任何特权内幕，仅仅专注于把这单一路径打通，它居然能运转得如此之好。所以你说得可能没错，如果我住在旧金山，我也能做这些事情；但那样的话我就必须住在旧金山了。我可不想过那样的生活，那太难受了。我在这里的生活状态非常好：我父母就住在同一条路的下坡处，我能看着我的儿子在乡村的大自然中健康成长。所以，现状就是这样，挺好的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: I'm really just trying to plow my own furrow really. Like what I realized quite early on is that I have no power to predict the future, right? Because I'm so far away from things. I'm just a person in the field working with this stuff. I have no way of knowing what's coming, right? I don't know whether the model's going to improve. I don't have privileged access to stuff. And so I'm just trying to focus on what's working right now. And because of that, I think that's narrowed my scope a little bit. That means I can just try to get my stuff working. And it's sort of quite surprising to me that it's working as well as it is, you know, because I don't have this privileged access. I'm just trying to make this one approach work.</p>
+<p>So I think, yeah, you're probably right. I probably would be able to do this stuff if I lived in San Francisco, but then I'd have to live in San Francisco. You know, I don't want to do that. That's miserable. You know, I've got a great setup here. My parents are just down the road. You know, I've got my son growing up in the countryside. So, it is what it is.</p>
+</details>
+<h3>开发者教育演进：从战术细节到战略层面的知识策展</h3>
+<p><strong>Interviewer</strong>：你骨子里是一位真正的教育者。在软件工程师的教学与培训行业中，你看到了哪些变化？人们的学习方式和意愿又发生了怎样的转变？你是否观察到了与过去不同的趋势？比如在你刚开始做技术分享时，在线课程和视频教学正变得越来越流行；而在此前十年左右，大家可能更多是通过图文教程学习，再往前则是看书。当然这些形式依然存在，但主流偏好显然发生了更迭。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: And yeah, now you're an educator at heart. How have you seen the business of teaching or educating software engineers change, and also how people want to learn? If you've observed any trends from before, like already when you started, I feel you were at the time where online courses and learning over video became a lot more popular, as opposed to let's say a decade ago where it was maybe tutorials, and then before that it was books. Obviously they still exist, but there were just different preferences.</p>
+</details>
+<p><strong>Matt Pocock</strong>：是的，视频教程真正迎来爆发式增长大概是在疫情期间。我认为当时人们渴望获得更加丰富、生动的学习体验，而我大概是在那波浪潮之后入场的。但我认为，人们最底层的学习机制其实并没有发生太大改变，他们对某些特定类型学习材料的需求也依然如故。现在有一种想法显得非常诱人且时髦——好像一个 AI Agent 就可以随时介入并教会你所有知识。这种模式在某些特定场景下确实有效，但人们真正需要的其实是“策展”（curation）。</p>
+<p>你依然需要一个真人先走一遍，去理解信息的流动脉络。我一直把知识体系想象成一张图（Graph）：某一个知识点依赖于另一个知识点，而后者又依赖于更深一层的知识点。而把这张复杂的拓扑图梳理成一条清晰的线性路径，正是我对自己工作职责的定义。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: Yeah, it was around COVID time that sort of video tutorials really took off. I think people wanted a much richer learning experience and I was kind of just after that wave, I suppose. I think that people's way they've learned hasn't changed that much, right? And their desire for certain types of materials hasn't changed. I think it's very sexy the idea that, you know, an agent can just come in and teach you everything. And that sort of works in some contexts, but really what you want is curation, right?</p>
+<p>You want a human to have come in, understand the flow of the information. I always think of information as kind of like a graph, right? You have a piece of information that's dependent on another piece of information dependent on another piece of information.</p>
+</details>
+<p><strong>Interviewer</strong>：把那张图转化为一条线性的学习路径。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Turning that graph into a linear path is how I think of my job, right?</p>
+</details>
+<p><strong>Matt Pocock</strong>：我就是在努力在这张知识图谱中寻找类似 Dijkstra 算法的最优路径，好让大家能以最合理、顺畅的方式掌握它。而这种深度的策展能力，恰恰属于战略层面的工作，而这并不是 AI 特别擅长的领域。</p>
+<p>因此，我做出了一个巨大的转型：从过去的 TypeScript、那些战术层面的编码细节，全面转向了如今这种战略层面的内容。目前来看，这种转型对我很奏效。我无法代表其他做这行的人发言，我也知道很多人的进展可能并没有达到这个程度。我认为这充分说明了一点：Agent 已经彻底改写了游戏规则，改变了人们所看重的价值和优先考量的事情。整个行业在过去短短 7 个月内发生的剧烈转变，比以往任何时期都要迅猛。这是一场巨大的变革。这并不意味着我们要抛弃以往所有的工作实践，但它确实意味着我们需要将重心转移到全新的方向上。我觉得自己跟上了这波浪潮并做出了不错的调整，而其他人可能由于关注点的不同而未能跟上。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: I'm just trying to find Dijkstra's algorithm through the graph so that you can learn it in the most sensible way. And that level of curation is just not something that... again, that's strategic, right? That's not something that AI is particularly good at. So I mean I've obviously made this huge pivot from TypeScript, from tactical stuff really to this strategic layer, and it's working okay for me. I really can't speak for other folks doing this work, and I know that lots of people are not having this level of success, I suppose.</p>
+<p>So I think what it shows is that agents have just changed the game in terms of what people value and what people prioritize, and the industry has shifted in 7 months faster than I think it's ever done. You know, this is a huge shift. Doesn't mean we need to throw away our working practices, but it does mean that what we need to focus on is different. And I feel like I've been able to move with that quite well, whereas I think others just haven't because they're focused on different things.</p>
+</details>
+<h3>顺势而为与运气：从 Total TypeScript 到 AI 的转向</h3>
+<p><strong>Interviewer</strong>：我在想，以你的经历来看，无论是 Total TypeScript 还是你之前分享的其他内容，你都在帮助大家掌握当时最炙手可热的工具。当时 TypeScript 的市场份额持续攀升，很多系统都在从 Java 或 Python 迁移到 TypeScript。因此开发者们——无论是普通开发者，还是前 10%、前 20% 的顶尖工程师——都迫切希望精通 TypeScript，并且在寻找最高效的进阶途径。</p>
+<p>如今 AI 已经到来，并且正在深刻重塑软件工程师的工作方式。虽然构建软件本身依然极具价值，但比起“如何高效编写 TypeScript 代码”，当下更迫切的问题变成了“我该如何更高效地使用这些 AI 工具”，尤其是在有了 Agent 的辅助之后。这让我想起你当初从配音演员转型的经历——由于在伦敦之外无法继续配音，你转向了同样可以在伦敦之外完成的教学工作；而如今，你则是再次转型去教授另一个正占据无数人头脑的核心领域。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: And I wonder if in your case it's also with Total TypeScript and even before with TypeScript and some other things you shared, you were helping people use the very popular tool at the time. TypeScript was gaining market share. There were migrations happening from Java to TypeScript, from Python to TypeScript, and so on. And so developers wanted to get really good—a lot of them, or the top 10% or top 20%, you name it, wanted to get really, really good with TypeScript, and they were looking for efficient ways of doing it.</p>
+<p>Now AI is here, it is changing how we work as software engineers. And I think it's particular that building software is valuable, but there's a question of how do I use these tools more efficiently, which is more pressing right now than how do I write TypeScript efficiently, especially with the agent. So I wonder if you've kind of... just a little bit how you pivoted from voice acting, which you couldn't do from outside of London, to a thing that you could do outside of London, which was still teaching. You've just pivoted to teaching a different area which right now again is on so many people's minds.</p>
+</details>
+<p><strong>Matt Pocock</strong>：我觉得自己基本上就是运气好，在正确的时间选对了正确的方向。当时我其实完全有可能走上另一条路；说实话，最初为了让我转向 AI 领域，别人可是费了相当一番口舌去说服我的。大概两年前，是我的商业合伙人 Joel 一直在推我，跟我说：“你真的必须试试这个，它效果非常好，你可以用它来做各种各样的事情。”我断断续续尝试了差不多 3 个月，中途经历了一次又一次的失败与碰壁，最终才真正意识到：天哪，这东西太厉害了。</p>
+<p>我只是觉得很庆幸，自己能够在对的时间出现在对的地方。我也尽量避免去给这一切强行编织某种英雄叙事，不去事后诸葛亮地想：“干得漂亮，Matt，你可太聪明了，在正确的时间点做出了最正确的决策。”因为我也犯过好些错误，原本也很容易陷入完全不同的境地。即便真的没踩中风口，那也没什么不好的，大不了我就回去重新当个纯粹的工程师，那也是我一直热爱的事业。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: I think I've just been lucky basically of choosing the right thing at the right time. It would have been very easy for me to... and I actually took quite a fair bit of convincing to move into AI. Like back a couple of years ago, it was Joel, my business partner, who was pushing me to actually go: &quot;You've really got to try this. It's actually pretty good and you can use it for all sorts of stuff.&quot; And it took about 3 months of me actually trying it and failing and trying it and failing before I realized, okay, this is great.</p>
+<p>I just feel quite fortunate that I've landed in the right place at the right time. And I try not to narrativize it. I try not to think: &quot;Well, well done, Matt. You've been so smart, you know, making the right play at the right time,&quot; because I've made several mistakes as well, and I could have easily found myself in a different zone. And I mean, that's no bad thing. I would just get back to being an engineer. That's what I love, too.</p>
+</details>
+<h3>给初入行工程师的战术建议与基础积累</h3>
+<p><strong>Interviewer</strong>：如果让你重新代入刚刚入行时的自己，在今天这个环境下，对于那些初入职场的新人、初级工程师，你会在战术层面上给出什么建议？他们很清楚：“我需要积累实战经验，需要培养技术判断力、技术品味和底层基本功，而这需要大量的刻意重复训练。”如果你今天身处他们的位置，面对眼花缭乱的 AI 工具，想要成为一名优秀的创造者和软件工程师，你会如何破局？毕竟现在大家很容易感到困惑：我到底该直接把所有事情都丢给 AI 工具做，还是该花更多时间慢工出细活地打磨基本功？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Putting yourself back into the shoes of when you were someone just starting out in the industry. Today, for people starting out in the industry, early-career, junior folks, what would you recommend them for tactical things to do? Like they will know like: &quot;Look, I want to get that experience. I want to get that judgment, that taste, those fundamentals. You'll need to get repetitions in.&quot; If you found yourself in those shoes, how would you approach like: &quot;I want to be a builder, a software engineer with all these AI tools and whatnot,&quot; which is now confusing because now there's a mix of: do I use these AI tools just to do stuff for me? Do I get in the fundamentals, which is slower, and so on?</p>
+</details>
+<p><strong>Matt Pocock</strong>：说实话，如果我现在是一个初级工程师，我反而会兴奋无比。我非常渴望回到我大概在 2014 年时的那种状态——那时我正在为我的学生们构建各种实用工具。前几天我还特别怀念那段时光，甚至想过如果能回去重新教声乐课该多好。因为在今天，那种赋能感太强大了：我上一堂课结束之后，就可以直接给 Agent 发一条 Prompt：“好的，刚才那个工具在某种特定场景下表现不太理想，我们可以对它稍微做些修改”，然后立刻就能看到它跑通并生效。我认为真正正确的事情是……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: Yeah, I mean, I would love to be a junior right now. I would love to be in the exact position I was in like 2014 where I was building these tools for my students, right? I actually got really nostalgic for it the other day. I thought I'd love to go back and do some singing teaching, because just the ability to like... I could finish a lesson and then just prompt the agent: &quot;Okay, this tool didn't quite work in that way. I could maybe modify it a little bit and, you know, see it working.&quot; I just think the right thing to...</p>
+</details>
+<!-- chunk 13/13 -->
+<h3>人机协作与内省：用 Agent 重塑开发流程</h3>
+<p><strong>Matt Pocock</strong>：我们要做的是尽可能多地使用这些智能体（Agent），因为这就是人们未来的工作方式。而且我认为，我的技能组合中真正有价值的地方在于：你始终在与正在发生的变化保持紧密接触。比如像“考问我”（Grill me）这种模式，你不仅是在和一个资深开发者交流，对吧？这对开发者固然有益，但对你自己也同样有益，它能促使你持续去思考这些更深层次的想法。</p>
+<p>回头看看我以前随手拼凑出的那些粗制滥造的东西——比如我做过的那个频谱分析工具——如果当时能有一个 Agent 协同工作，产出效果会好得多。那个工具跑起来奇慢无比，性能简直是一场灾难。如果那时我能直接告诉它：“好，现在的帧率降到了每秒 10 帧，我该怎么解决？”它看到那层层嵌套的 6 个 <code>for</code> 循环后，就会提醒说：“行，或许这里你应该换一种做法。”</p>
+<p>所以我觉得，现在是投身于这些技术最能给人带来赋能感的时代——只要你不仅对自己编写的代码感兴趣，同时也对“创造代码的过程”本身抱有热情。对于那些喜欢“向内审视”（navel-gazing）的程序员来说，现在也是最好的时代，你可以持续反思自己的工作流程，时刻保持自我内省。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: ...do is to use these agents as much as possible because that's how people are going to be working now. And I think the thing that I find valuable about my skill set is you're constantly in touch with the changes that are happening. Grill me—not only you're having a discussion with a senior developer, right? That's beneficial for the developer, but it's also beneficial for you, keeps you thinking about these deeper ideas.</p>
+<p>And the absolute rubbish that I was churning out, you know, with my spectrogram analysis tool, that would have been so much better if I had an agent to work with. It ran like a pig, you know, like its performance was absolutely terrible. If I'd have been able to say, &quot;Okay, this frame rate has dropped to 10 frames per second. How do I fix that?&quot; It would have seen the six nested for loops and gone, &quot;Okay, maybe you should do something different there.&quot;</p>
+<p>So, I think that there's never been a more empowering time to work on this stuff. As long as you're interested in not only the code you're producing, but also the process of creating the code. There's never been a better time to be a kind of navel-gazing programmer, just constantly thinking about your own processes and being introspective.</p>
+</details>
+<p><strong>主持人</strong>：听起来，只要有足够的自驱力，相比以往任何时候，现在的学习速度都可以变得极快。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: So, it sounds like if you're motivated, you should be able to learn really fast compared to even before.</p>
+</details>
+<p><strong>Matt Pocock</strong>：完全没错。核心就在于保持好奇心，保持适应力。我看到在当下这种全新环境中混得风生水起的人，恰恰就是十年前就非常出色的那一批人，因为他们始终对这项工作充满热情，对打造更优质的软件怀有追求，并且时刻对自己的开发流程保持探究。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: Absolutely. It's just about being curious, about being adaptable. And that's the people that I see who are thriving in this new environment are the same people who were thriving 10 years ago because they're just interested in this work, interested in making better software and interested in their own process.</p>
+</details>
+<h3>代码库的“园丁”哲学与平台工程</h3>
+<p><strong>主持人</strong>：对，始终对打造更好的软件保持热情。我想向你请教一下关于“园丁”（Gardening）这个概念。在 X（原 Twitter）上有一位名叫 Lauren 的软件工程师发过这样一条帖子，我引用一下她的话：“每个团队都需要一名园丁。一个默默注视着涌入代码库的 PR 流水的人，敏锐察觉其中的坏味道（smells），发现那些像常春藤一样蔓延在精心打理的花园里的 linter 抑制注释（lint suppressions）。用一双沉稳的手去清理杂草，否则杂草迟早会吞噬整个花园。”对此你的回复是：“我认为你们团队真正需要的，其实全都是园丁。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And interested in making better softwares. I want to ask you about gardening. A software engineer on X, Lauren, posted—I'll quote her: &quot;Every team needs a gardener. Someone quietly watching the stream of PRs flowing into your codebase, noticing the smells, the lint suppressions creeping like ivy across your careful garden. A steady hand tending the weeds that would otherwise engulf the garden.&quot; And to which you replied, &quot;I'd argue the only thing your team needs are gardeners.&quot;</p>
+</details>
+<p><strong>Matt Pocock</strong>：哈哈，可能团队里多少还是需要一两个干别的事情的人吧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: You probably do need a couple of other people as well.</p>
+</details>
+<p><strong>主持人</strong>：哈哈，确实。不过言归正传，我想让你更深入地聊聊这种“园丁”思维。我很喜欢 Lauren 用“杂草吞噬花园然后去拔除它们”这个比喻。我前阵子也发过一条推文，当时我正在琢磨 Ralph 以及 Agent 自主循环处理任务的模式：我们现在本质上就是 Ralph 的平台工程团队（Platform Team），对吧？这就是我们现在的角色——我们成了自己 Agent 的平台团队，致力于为它们构建一个能够顺利跑通并取得成功的环境。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. [laughter] But more specifically, I want to ask you about this concept of gardening. I actually really love how Lauren described the weeds taking over the garden and getting them out. I think I made a tweet a while ago that we are—this was when I was sort of thinking about Ralph and sort of the agent sort of looping over stuff—we are essentially just Ralph's platform team, right? That's what we are now. And we are our agents' platform team. We are trying to build the environment for them to succeed.</p>
+</details>
+<p><strong>Matt Pocock</strong>：这正是你思考这个问题该有的视角。再次强调，这是极具战略意义的。园丁的比喻之所以精妙，是因为花园本身非常容易陷入熵增（entropy），对吧？极易杂草丛生、失控混乱。</p>
+<p>因此，在代码库里的坏味道演变成严重问题之前，理解并诊断出这些苗头，是一项必不可少的能力，甚至可以说是最核心的技能。只要你能持续为 Agent 拆解并排队分配任务，只要你能搭建起这些自动化循环——尤其是我们现在开始看到越来越多的工作流， Agent 能够根据 bug 报告和用户反馈自主提炼并改进代码库——这在我看来是一项非常酷、也非常有价值且充满趣味的工作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: That's exactly how you should be thinking about it. Again, it's strategic. And that gardener metaphor is nice because, you know, it's very easy for the garden to itself just to suffer entropy, right? To gather weeds and to do all that stuff.</p>
+<p>So understanding and diagnosing that stuff before it becomes a problem in your own codebase is an essential skill and might be the essential skill, right? As long as you can queue up work for agents, as long as you can build these loops now that we're starting to see these processes where agents improve the codebase based on bug reports and feedbacks, that feels to me like really cool work and noble, interesting work as well.</p>
+</details>
+<h3>优秀工程师的本质：内省与心智模型编码</h3>
+<p><strong>主持人</strong>：我们今天聊到了很多你从中汲取过灵感和经验的顶尖软件工程实践。在你看来，究竟什么样的技能树、经验积累和思考方式，才能成就一名卓越的软件工程师？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: We talked about some great standout software engineering that you learned from, you got inspiration from today. What skill sets, experience, approach do you think makes a great software engineer?</p>
+</details>
+<p><strong>Matt Pocock</strong>：举个例子，比如在 Vercel 负责 AI SDK 的 Lars Grammel，我前几天刚跟他聊过。他正在为自己维护的一个极具人气、收到海量 GitHub Issue 的开源库搭建一整套自动化“软件工厂”。</p>
+<p>我们这里又回到了“管道铺设”（plumbing）的话题，回到了“园丁维护”的话题，回到了对整个软件开发流程的元思考。如果非要用一个词来概括优秀工程师的核心特质，我认为那就是“内省”（introspection）。</p>
+<p>内省意味着审视你自身的工作流，并具备将自己的思考和操作提炼成文字、进而转化为 AI 能够理解并执行的规范的能力。你本质上是在把自己的心智与方法论用语言精确描述出来。</p>
+<p>这正是我在构建那些技能模块（Skills）时一直在做的事情，也是我创建各种自动化工具时努力践行的原则。我只是观察自己当前的做事方式，然后思考：我怎样才能把它做得更好？以及，我该如何将这种经验逻辑编码到眼前这个奇妙的“智能生物”中，让它按照我的意图高效运作？这种自省和形式化提炼的态度对我助益良多。这也是我非常欣赏 Lars 的地方，更是我在与其他人一起探讨和应用 Agent 时，在优秀同行身上所极力看重的品质。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: I'll use an example which is Lars Grammel, who works at Vercel on the AI SDK, who I had a chat with the other day. And he is building an entire software factory for his extremely popular open-source library that gets a ton of issues.</p>
+<p>We're talking about plumbing again. We're talking about gardening. We're like thinking about the processes of software development. And I suppose if I had to put it in a word, it would be introspection. It would be looking at yourself and the ability to take what you do and put that into something the AI can work with. You're essentially trying to put your process into words.</p>
+<p>And that's what I've been doing with the skills. That's what I've been trying to do with the automations I've been creating as well. I just look at what I'm doing and think: How could I do this better? And also, how could I encode this into this strange animal that I have in front of me? How can I make it work like I want to? And that attitude has been really, really helpful for me. And it's something that I value in Lars, and I value in all the people that I work with when they approach agents.</p>
+</details>
+<h3>经典软件工程书籍与精准概念词汇的价值</h3>
+<p><strong>主持人</strong>：作为最后的结语部分，你有哪些想推荐的经典书籍吗？或者多本也行。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And then as closing, what is a book that you would recommend, or multiple books?</p>
+</details>
+<p><strong>Matt Pocock</strong>：我会推荐这几本：</p>
+<ol>
+<li>《程序员修炼之道》（<em>The Pragmatic Programmer</em>）；</li>
+<li>John Ousterhout 写的《软件设计哲学》（<em>A Philosophy of Software Design</em>）；</li>
+<li>还有 Eric Evans 的《领域驱动设计》（<em>Domain-Driven Design</em>）前三章——尤其是讲“统一语言”（Ubiquitous Language）的部分。</li>
+</ol>
+<p>DDD 这本书的前面章节对于理解统一语言、领域建模以及如何将其映射到代码中非常出色。虽然对书里的某些具体模式我不是全盘推崇，但这三本书绝对是不可不读的“三巨头”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: I'll go with <em>The Pragmatic Programmer</em>, <em>A Philosophy of Software Design</em> by John Ousterhout, and I'd say the first like three chapters of DDD, the Eric Evans book, the ubiquitous language one. That one in particular, it's really great for the ubiquitous language concepts, the domain modeling, the actual sort of encoding it into code. I'm not such a huge fan of [the rest], but those three are the big three.</p>
+</details>
+<p><strong>主持人</strong>：太棒了，Matt。非常感谢你，这次对话既有深度又非常过瘾。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Awesome, Matt. Well, thank you. This was really interesting and really fun.</p>
+</details>
+<p><strong>Matt Pocock</strong>：很荣幸终于能做客你的播客。见到鼎鼎大名的本尊感觉太棒了。虽然我们之前见过，但能坐下来深入交流依然非常开心。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Matt Pocock</strong>: Great to finally be on the podcast. Yeah, meet the famous guy himself. It's great. We've met before obviously, but it's great to be here.</p>
+</details>
+<h3>节目总结：语义先验、整洁架构与 Agent 时代的思考</h3>
+<p><strong>主持人（总结旁白）</strong>：能和 Matt 坐下来畅聊真的很愉快。不得不说，得知他曾当过配音教练和演员之后，我终于明白为什么他的谈吐如此流畅自然，听他说话感觉格外舒服。</p>
+<p>整场对话中最耐人寻味的一点在于：当 Matt 在探索如何更好地与 AI 协作时，他发现真正奏效的并不是那些眼花缭乱的现代花招，而是重新回归到了软件工程的经典著作中——《程序员修炼之道》、《软件设计哲学》以及《领域驱动设计》。</p>
+<p>这其中有一种奇妙的呼应：比如二十多年前书中所总结的最佳实践（像书中讨论的“战术性编程 vs 战略性编程”），它们不仅在今天依然有效，而且在利用 AI Agent 编写代码时变得前所未有地重要。</p>
+<p>与此相关的另一个核心要点是：与 AI 对话时使用“主导词汇”（Leading Words）的重要性。当 Matt 开始在 Prompt 中引入“曳光弹”（tracer bullet）或“垂直切片”（vertical slices）等严谨的工程术语时，大模型在规划阶段就能极其精准地理解并遵循他的架构意图。仔细想想这完全合乎逻辑，因为整个软件工程领域的经典文献本就是大语言模型预训练语料的一部分，这些行业术语早已构成了模型深层的先验知识（Priors）。</p>
+<p>同样有趣的是，用精准的词汇去定义和描述你的问题并不是什么新概念。比如，当我在播客中采访 Kent Beck 时，他就聊到过三三十五年前他和 Ward Cunningham 结对编程时，桌上总放着一本词典，专门用来寻找最贴切的词汇来命名和描述他们正在构建的具体事物。今天在 AI 身上的发现，不过是“词汇至关重要”（words do matter）这一工程哲理的又一次闭环印证。</p>
+<p>最后，我非常赞同 Matt 关于“为何始终要追求一个整洁代码库”的强调。追求整洁的代码库，不仅是为了让人类工程师更容易阅读和维护（尽管这本身就已经足够重要），而且还有一个现实原因：当前的 AI Agent 并没有跨越会话的长期记忆，每次新任务运行，它们都是以全新视角重新审视你的代码库。在一个架构清晰、模块分明的代码库中穿梭索引，显然要比在一团混乱的祖传代码中摸索容易得多。</p>
+<p>欢迎查看下方的节目 Show Notes，里面包含了对《软件设计哲学》作者 John Ousterhout 的专访链接（这是一本我非常钟爱的著作），以及关于 AI 工程与上下文工程（Context Engineering）的深度剖析。</p>
+<p>如果你喜欢本期节目，请务必在你的播客平台点击订阅，顺手留个好评我们将不胜感激。感谢大家的收听，我们下期节目再见！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: It was so nice to sit down with Matt, and I have to say knowing that he was a voice coach and actor makes me understand how he talks so smooth and how he's so pleasant to listen to.</p>
+<p>Probably the most amusing part from this conversation was how as Matt was searching for how to work better with AI, it wasn't modern approaches that he found really useful. Instead, he went back to classic software engineering books: <em>The Pragmatic Programmer</em>, <em>A Philosophy of Software Design</em>, and <em>Domain-Driven Design</em>. There's some irony as to how the best practices documented 20-plus years ago, like tactical versus strategic programming in this book, not only do they still work, but they become more important when writing code with AI agents.</p>
+<p>A related point I want to emphasize is the importance of leading words with AI. When Matt started to use terms like &quot;tracer bullet&quot; or &quot;vertical slices&quot;, the model started to follow his ideas better in planning. And if you think about it, this makes sense because software engineering literature is part of LLM training. So these terms are also part of the model's priors.</p>
+<p>Just as interestingly, using the right words for describing your problem is not a new concept. For example, when I had Kent Beck on the podcast, he talked about how 30 or 35 years back when him and Ward Cunningham had a thesaurus on their desks, they used it to try to find the best words for the specific thing they were describing. This was just another full circle moment on how words do matter.</p>
+<p>Finally, I appreciated Matt's push on how you should want a clean codebase. Not just because it's easier for humans to navigate, although I think you really want to do it for that as well, but also conveniently, agents do not have a long-term memory, and they will look at your codebase for the first time on every new run. And it's much easier to get around inside a well-structured codebase than one that is really messy.</p>
+<p>Check out the show notes below for an interview with John Ousterhout, the author of <em>A Philosophy of Software Design</em>, a book I really love, and related deep dives for AI engineering and context engineering.</p>
+<p>If you like this episode, please make sure to be subscribed on your podcast player, and submitting a rating is always appreciated. Thanks and see you in the next...</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        
+      
+        
+      
+        <p><strong>媒体/书籍:</strong> <a href="/search/?q=The Pragmatic Programmer" class="entity-link media-link">The Pragmatic Programmer</a>, <a href="/search/?q=A Philosophy of Software Design" class="entity-link media-link">A Philosophy of Software Design</a>, <a href="/search/?q=Domain-Driven Design" class="entity-link media-link">Domain-Driven Design</a>
+</p>
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/prompt-engineering/">prompt-engineering</a>
+      
+        <span class="tag-pill tag-pill--no-page">strategic-programming</span>
+      
+        <span class="tag-pill tag-pill--no-page">code-quality</span>
+      
+        <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+      
+        <a class="tag-link" href="/tags/context-engineering/">context-engineering</a>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

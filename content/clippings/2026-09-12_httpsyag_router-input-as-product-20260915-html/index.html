@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anthropic 指控 30
+万次请求被静默转发，被带走的是真实生产数据</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="Anthropic 指控 30
+万次请求被静默转发，被带走的是真实生产数据" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Anthropic 指控 30
+万次请求被静默转发，被带走的是真实生产数据</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-12</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://yage.ai/share/router-input-as-product-20260915.html" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-12
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">文章揭示了用户在通过第三方中转服务将生产数据转发给境外大模型时面临的安全风险。通过 Anthropic 的调查显示，存在大量用户请求被静默转发给闭源模型，这些数据可能被用于模型训练或被黑产团伙获取，用户在付费订阅下也无法有效防范数据泄露。文章强调了用户在接入第三方服务前必须建立严格的防范意识，包括审查数据流向、明确数据留存期限和最终去向，并建议采取直连官方接口或自建网关等措施来确保数据安全。</div></div>
+      
+    </div>
+    <h2>你以为在用 Kimi</h2>
+<p>平时在终端里配个国内模型的接口，或者在网页里贴一段业务代码，大家默认请求都在服务商自己的机房里跑。光标在屏幕上一行行吐字，看着一切正常，背后可能刚刚绕了大半个地球。服务端把你的提示词原封不动转给境外的顶级模型，等对方生成完毕，再套上国内模型的外壳递回给你。</p>
+<p>聊这事不是要拉踩哪家厂商，更不是帮谁打广告，通报点名的公司都没回应，归因也只有
+Anthropic
+单方说法，谁在干这件事眼下说不死。整条链路从官方接口到灰色中转，其实都存在同一种风险，发进去的内容随时可能流向未知的第三方。别把大模型当树洞，公司里的东西想到什么就往里扔。要么认真研究清楚服务的条款和链路，要么干脆直连官方或自建网关，这两条路都比以为有合同就没事靠谱，后面的章节会具体讲怎么应对。</p>
+<p>Anthropic 在九月发了一份技术调查，把这种私下转发的隐秘通道摆到了明处。一家国内团队在短短十天内，把大概
+30 万次用户请求直接转给境外闭源模型，绝大部分流向了 Claude
+的旗舰版本。他们为此动用了 5380 个虚假账号做中转，Anthropic
+也不知道这些客户是否被告知过，远端服务器一直在归档他们截到的对话内容。</p>
+<p>不过报告原文写的其实是关联运营者，通报里点到的公司也都没公开回应，到底是大模型实验室官方在做，还是中转站在偷偷卖号、盗号或者自建假服，眼下只有
+Anthropic 的单方说法。报告在安全章节里还记录了一个叫 GTG-50021
+的黑产团伙，专门兜售打折 Claude
+账号，买家拿到的是假货，流量悄悄转给其他模型，工具还会顺手偷走买家的
+Anthropic 凭证转手再卖。你以为在用 A 实际在跑 B
+这件事，实验室、黑产和中转站都可能在干，用户从体验上没法区分。</p>
+<p>很多人以为充值订阅买了会员就能防住泄露，现实恰恰相反。你真金白银掏了服务费，手头的真实业务数据却顺着这条暗道，成了别人训练自家模型的免费养料。拿顶级模型的回答去训练自己的模型，行话叫蒸馏，你的日常输入在别人眼里就是现成的蒸馏跳板。</p>
+<p>你以为的直连与实际的静默转发管道：屏幕上的回答与真实服务的模型不是同一个</p>
+<p>看这份海外报告，大家得先留个心眼。报告是 Anthropic
+发的，被抽走能力的也是它，后台日志只有它自己看得到，里面的统计数字从没经过第三方核实。况且通报里提到的几家国内团队一直都在公开论文并开源模型权重，Anthropic
+自己也在报告里写了限定语，比如在小米那个案例里说明没有迹象表明美国用户的数字暴露了。</p>
+<p>退一步讲，就算把报告里的数字打个对折，这套链路暴露出来的问题也足够吓人。大家以为的安全直连，其实早已在没有任何提醒的情况下，在境外的公共管道里裸奔了一圈。</p>
+<h2>泄露的具体是什么</h2>
+<p>大家很容易以为，顺手流进转发管道的顶多是些公开常识或无伤大雅的闲聊。官方报告披露的细节却表明，通道里流淌着密密麻麻的生产数据。这并不是黑客攻破内网偷走的信息，全由一线员工在日常工作里自己输进对话框。</p>
+<p>报告里列出了好几个具体的真实样本。一家跨国药企的工作人员为了测算项目，把胡志明市、吉隆坡、曼谷与卢布尔雅那的四国基建预算表贴进提示词，还顺手注明周四评审前清理好模型。这批详细的财务测算经由第三方路由转发，就这么留在了对端服务器上。</p>
+<p>技术人员泄露的往往更加要命。有人让开发工具写脚本，随手将活跃的
+Telegram 机器人密钥、飞书应用凭证与 Notion
+知识库集成密钥塞进上下文，这些生效中的凭证随即流向外部网络。还有某市公安局的技术人员核查轨迹，直接把公民身份证号输入对话框比对行踪与警务记录，原本该严加保护的内部信息脱离了安全范围。</p>
+<p>官方通报里记录到，受影响的终端用户达到数百人，涉及十余种语言。官方详细统计了外部模型抓取了多少次交互，却始终没有公布普通用户数据泄露的总体规模估算。蒸馏了多少次有精准数字，用户到底泄露了多少数据却没人知道，两边受到的关注度截然不同。</p>
+<p>除了官方调查，还有一份引发热议的外部爆料。独立研究者 Shou
+宣称从中间商手里买到了 6TB 的数据包，里面装有大量 SSH 密钥、企业
+VPN、云平台密钥和 GitLab
+令牌。这属于尚未经第三方核验的单源说法，不管这批数据的卖家是中转站运营者自己还是别的什么人，这个市场都存在，前面提到的假服案例也说明买卖双方都可能不是你以为的那个角色。但今年四月的学术测量早就证实了中转隐患：在测试的
+428 个中转服务中，有 17
+个触发了安全监控探针。中间节点能够明文查看输入内容，从来就是经过确认的事实。</p>
+<h2>input 的三本账</h2>
+<p>大家发给中转服务的每段提示词，在背后都连着好几个变现渠道。很多人以为花钱买到的是模型生成的回答，你的输入内容在下游其实跑通了三条赚钱路径，分别流向黑客犯罪、模型训练和公开的数据倒卖。</p>
+<p>第一种是直接落入黑产手中。四月发表的学术研究在观测中转服务时，从 440
+个会话里截获了 99 组系统鉴权凭据，涉及约 13GB
+明文流量。恶意攻击者顺着输入管道批量扫描密钥，转头就拿去当成攻破外部服务器的现成工具。</p>
+<p>第二种需求来自急着提升能力的大模型厂商，Anthropic
+测算发现各家非授权蒸馏总量超过 1.8 亿次，Alibaba 占 1.51 亿次，Moonshot
+约 2300 万次，DeepSeek 也有 1210 万次。为了筛选高价值数据，DeepSeek
+接收请求时还会检测工具特征代码，专门把带有 Claude Code 或 OpenCode
+标记的请求送给推理模型。编程智能体包含密集的推演和工具调用，正是训练代码模型稀缺的燃料，天天写代码的程序员不知不觉成了重点收割对象。</p>
+<p>第三种做法更直接，把用户的对话当成现成商品转卖。Anthropic
+官方调查明确记录了中转站的倒卖模式：服务运营者把交互记录存下来卖给第三方，商汤等团队搭建自身流程，就采购过数据商收集来的用户对话。每日经济新闻早在五月份的调查报道里，就揭露过中转站倒卖用户数据的产业链，比海外官方报告早了四个月指出这一行业现实。</p>
+<p>同一条传输链路，同一批由用户敲进去的内容，全都在没有经过大家同意的情况下，顺畅跑通了三条变现通道。你在屏幕这端为每次调用付一点
+token 费用，网络那端却已经把你的业务数据结算了三次。</p>
+<h2>合同没挡住，防御也不覆盖</h2>
+<p>得知数据在外面乱跑，许多人的第一反应是去翻服务协议，觉得签了合同总能当护身符。但对照各家条款来看，现实情况比大家想的松散得多。纸面约定非但没能挡住数据的私下流转，反而给后续的数据处理留下了宽泛借口。</p>
+<p>深度求索在条款中写明，会把输入数据用于训练算法模型，并且明确覆盖了接口服务。月之暗面在开发者协议中也规定，用户授予平台免费使用权，允许平台把输入输出拿去做服务优化。普通用户在网页端充了会员，在界面里连个关闭训练的开关都找不着，想要退出必须发邮件人工申请，还要等上
+5 至 7 个工作日才能生效。</p>
+<p>退一步讲，即便用户同意拿数据去改进服务，大家的常识也是帮自家模型做优化。悄悄把付费用户的提示词转发给竞品模型拿来做蒸馏，这种做法怎么看都说不过去。月之暗面的服务文档写着，未经同意、法律要求或实现产品功能所必需这几个情况之外，不会向第三方共享、出售或提供对话内容，如果私下转发与转售属实，那便是连自家白纸黑字的承诺都没能守住。</p>
+<p>既然合同靠不住，厂商推出来的技术防护同样顾不上普通用户，重心全在保全自己的资产。Anthropic
+给自家 Fable 5.1 加的思维链保护，当前只对新 API
+账号生效，挡的是别人抽取它的推理过程；讨论已久的响应签名至今没有上线时间表，主要校验的也是返回内容有没有遭篡改。学术论文早就把话挑明了，凭据在发往中间节点那一刻就已暴露在请求路径上，下游签名对输入端的防护起不到实际作用。</p>
+<p>合同没能挡住私下流转，技术手段只护返回不护输入，大家在客户端里更是什么都察觉不到。制度约束、技术防线和用户的知情权同时落空，发出去的每一句话，其实都落在了没有防护的真空地带。</p>
+<p>三层防线全景：合同覆盖内部优化，防御护住响应路径，用户输入层零防护</p>
+<h2>现在怎么办</h2>
+<p>看清这套链路的底细之后，咱们日常写代码、调模型必须建立起切实的防范意识。核心原则只有一条：只要不是自己能够掌控的独立通道，发出去的每一段提示词，都应当按照公开发布的标准来对待，包括那些自以为受到商业合同保护的内容。</p>
+<p>接入任何第三方服务之前，大家可以先弄清三个最实在的问题：谁有权限完整读取这趟请求，读到数据后在中间节点保存多久，以及留存下来的交互记录最终能卖给谁。这三个问题直接决定了你的输入数据暴露在多大的风险之下。</p>
+<h2>落到具体的工程实践上，三条日常纪律足以避开大部分麻烦： -
+涉及核心业务与高价值凭据的文本，不走非自有通道。 -
+企业采购接口时，选用具备不参与训练与禁止第三方共享承诺的商业版本，优先匹配提供零数据保留选项的供应商，国内大厂定制版也有部分给出了不入训练池的承诺。</h2>
+<p>若对中间层链路存有疑虑，关键业务应当绕开代理直连官方原生接口，或者在私有基础设施上自建网关。</p>
+<p>那份标价出售且体积达到 6TB
+的数据集合，正是这片安全真空开出的真实市场报价。国内财经媒体早在四个月前就指出了中转站倒卖用户资产的产业生态，它脱胎于日常的技术交互，已经在真实的商业网络中运转了半年之久。</p>
+
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">data-leakage</span>
+      
+        <a class="tag-link" href="/tags/model-distillation/">model-distillation</a>
+      
+        <a class="tag-link" href="/tags/security-risk/">security-risk</a>
+      
+        <span class="tag-pill tag-pill--no-page">proxy-tunnel</span>
+      
+        <span class="tag-pill tag-pill--no-page">input-validation</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

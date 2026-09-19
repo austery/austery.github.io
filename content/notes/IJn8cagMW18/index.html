@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenAI 总裁格雷格·布罗克曼：跨入 AGI 时代的本质、算力瓶颈与防御者之窗</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="OpenAI 总裁格雷格·布罗克曼：跨入 AGI 时代的本质、算力瓶颈与防御者之窗" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">OpenAI 总裁格雷格·布罗克曼：跨入 AGI 时代的本质、算力瓶颈与防御者之窗</span>
+      <span data-pagefind-meta="speaker" style="display:none;">a16z</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>a16z</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-14</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/a16z/">a16z</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=IJn8cagMW18" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-14
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">OpenAI 总裁格雷格·布罗克曼深度探讨进入 AGI 时代的意义、前沿模型的能力演进、算力瓶颈与前沿调步安全战略。他剖析了 Hugging Face 网络入侵事件带来的“防御者之窗”、1万智能体求解偏微分方程的科研突破、以及传统基准测试失效后以24小时连贯执行为主的全新评估体系。</div></div>
+      
+    </div>
+    <h3>开场前瞻：AGI 时代的来临</h3>
+<p><strong>格雷格·布罗克曼</strong>: 我们现在已经正式进入了 <strong>AGI 时代</strong>。<strong>Astra</strong> 模型确实触及了一个全新的高度，让我由衷觉得：“好吧，我认为把它称为通用人工智能（<strong>AGI</strong>）是完全合情合理的。”我们已经亲眼目睹它能够连续连贯地运行 <strong>24 小时</strong>来完成极其复杂的任务，我认为这非常令人惊叹。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: We're now in the AGI era. Astra has really hit something that I'm like, &quot;Okay, I think this is pretty reasonable to call it AGI. We've seen it run coherently for 24 hours to go accomplish tasks that I think are quite amazing.&quot;</p>
+</details>
+<p><strong>主持人</strong>: 未来的模型会极其强大，但鉴于我们无法拥有足够的算力来支撑全部需求，要让每个人都能用上这些模型将会变得非常困难。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: The models will be plenty powerful, but it'll be hard to get to everybody given that we won't have enough compute to serve it all.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 你不能光靠嘴上喊着“我想赢下超级碗”就能赢得<strong>超级碗</strong>。你必须依靠扎实的阻挡和擒抱。你必须真正确保将安全、安保与对齐（<strong>Safety, Security, Alignment</strong>）作为必须不断提升的标准。我认为这是一个被人们普遍低估的巨大挑战。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: You don't win the Super Bowl by saying, &quot;I want to win the Super Bowl.&quot; You win it by blocking, tackling. You really have to make sure that safety, security, alignment, those are all standards that you're constantly upleveling. I think that's going to be a huge challenge people are underestimating.</p>
+</details>
+<p><strong>主持人</strong>: 在你的职业生涯中，你做过两次极其重大的豪赌：早期帮助打造了 <strong>Stripe</strong>，后来又作为联合创始人创立了 <strong>OpenAI</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: You've made two very big bets in your career. Helping build Stripe early and helping of course co-found OpenAI.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 在 OpenAI 的整个历程中，我始终只专注于当时最核心、最重要的问题。在过去两年里，这个重心一直是数据中心、基础设施以及机器学习系统。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: I throughout OpenAI have always focused on whatever is the most important problem. For the past 2 years it's been the data centers, the infrastructure, the machine learning.</p>
+</details>
+<p><strong>主持人</strong>: 你知道接下来这一年你们会重点关注什么吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Do you know what the next year will focus on or</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 我认为这将成为未来最关键的一场对话。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: I think this is going to become the most important conversation.</p>
+</details>
+<h3>AGI 预测与算力瓶颈</h3>
+<p><strong>主持人</strong>: 格雷格，欢迎来到 <strong>a16z</strong> 播客。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Greg, welcome to the A&amp;Z podcast.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 谢谢你们邀请我。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Thank you for having me.</p>
+</details>
+<p><strong>主持人</strong>: 格雷格，你职业生涯中押下了两次大注——早期参与构建了 Stripe，随后共同创立了 OpenAI。如果我们回到 10 年前，让你预测 2026 年人工智能领域的世界会是什么样子，你当时能够预料到今天所取得的这些突破吗？或者你会如何向当年的大家描述你的预期？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: So, Greg, you've made two very big bets in your career, helping build Stripe early and helping, of course, co-found OpenAI. If we were talking 10 years ago and you were predicting what would the world look like in 2026 as it relates to AI, would you be able to predict that we would be making the breakthroughs that you've made today or what would you tell them about what you would expect?</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 当时我和**伊利亚·苏茨克维（Ilya Sutskever）**其实花了大量时间去推演未来的图景以及可能的时间线。我记得在 2016、2017 年左右，我们曾对算力发展做过一些数学测算。我们当时的结论是，如果参照摩尔定律（<strong>Moore's Law</strong>）的发展轨迹，大约 <strong>15 年</strong>左右是实现 AGI 的时间表。</p>
+<p>如果你非常大胆地推演，愿意全力扩展规模、建造超大规模超级计算机并投入数百亿美元，那么时间线可能会缩短至 <strong>10 年</strong>左右。</p>
+<p>所以从某种角度来看，眼前正在发生的一切固然非凡，是一个所有人共同参与并集体塑造的壮丽时刻；但同时，它在很大程度上也是多种合力汇聚到这一节点的必然结果。如果你退后一步从宏观视角审视，这一切在当下发生是非常符合技术发展逻辑的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Well, so Ilya and I actually spent a lot of time trying to predict what it would look like, what the timelines would be. And I remember we did some math on compute in around 2016, 2017. And we kind of came to the conclusion that if you look at Moore's law progress, that kind of thing, 15 years felt like about the timeline to AGI. And if you really squinted at it, you're willing to scale up and build massive supercomputers, spend the hundreds of billions of dollars, that kind of thing, that maybe it'd be 10. And so I actually feel like in some ways obviously what's happening it's remarkable. It's this amazing sort of moment for everyone to be a part of and to be able to help shape collectively. But it also feels a little bit like maybe it's kind of the conclusion of like a lot of forces that are all coming together for this moment. If you step back and really take that sort of macro view it kind of makes sense it's happening now.</p>
+</details>
+<p><strong>主持人</strong>: 你觉得你们当年是略微低估了时间线，还是说基本完全准确？鉴于我们现在供应链端开始出现真正的短缺，你认为我们目前依然处于既定的时间线上吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And do you think we're currently because you guys slightly underestimated the timeline or I guess it was basically on point. Do you think we're still on the timeline given we're now starting to drive real shortages on the supply chain?</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 听着，我们确实处在一个算力难以跟上市场上已经显现的庞大需求的世界。仅从人们将如何使用这项技术并从中获益的角度来看，我认为要把这些模型原始的巨大潜力和能力普及给每一个人，将会是非常困难的一件事。这也是我们一直在努力实现的目标之一。</p>
+<p>因此我认为，在技术进展方面，我们有着非常明确的路径去让模型变得更加强大、安全且对齐；但是，真正将这种能力、益处和赋能普及给全人类，将是一个被很多人低估的巨大挑战。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Well, look, I do think that we are in a world where it is hard for compute to keep up with the demand that we're already seeing in the market, right? And just in terms of how people are going to use this technology, benefit from it. I do think it's going to be very hard for us to scale the raw potential and capability of these models to everyone and that's part of what we try to do and so I think that the progress I do see like we have line of sight to continue to make the models much more capable, safe and aligned but also really distributing that power and the benefits and the empowerment to to everyone. I think that's going to be a huge challenge people are underestimating.</p>
+</details>
+<p><strong>主持人</strong>: 明白。也就是说，模型本身会足够强大，或者说会保持快速演进，但由于我们没有足够的算力来支持所有服务，要以人人都能负担得起的方式将其推向大众将会非常困难。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Right. Ah interesting. So we'll have the models will be plenty powerful or they'll continue a pace but they'll be it'll be hard to get to everybody is certainly in an affordable way given that we won't have enough compute to serve it all.</p>
+</details>
+<h3>安全对齐与前沿调步战略</h3>
+<p><strong>格雷格·布罗克曼</strong>: 确实如此。我认为我们现在已经到了一个关键节点，必须开始认真思考我们所谓的**前沿调步（Pacing the Frontier）**战略。</p>
+<p>也就是说，当我们迈向能力更强大的前沿模型时，必须确保安全（Safety）、安保（Security）和对齐（Alignment）的标准也在持续升级。这些标准甚至会成为制约技术推进的瓶颈，或者说你需要投入海量精力确保做对的关键环节。</p>
+<p>在我看来，相比算力瓶颈，这些安全约束同样重要。算力问题我们终归能解决；但另一方面，让技术惠及所有人——这关乎我们的终极使命：赋能每一个人，确保所有人受益——这是一个值得获得更多关注的话题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: I think that's true and I do think we're at a point now where we have to really start thinking about what we call pacing the frontier. And so thinking about as we move to more capable models, you really have to make sure that safety, security, alignment, those are all standards that you're constantly upleveling. And those actually become almost the bottleneck to progress or sort of the part that you have to spend a lot of your effort to make sure you've gotten right. And so I think in my mind it's more those constraints and the compute. I think we can make it happen. And then on the flip side, I think yeah, this bringing it to everyone, which is ultimately about our mission, right? It's empower everyone, ensure it benefits everyone. That's something that I think deserves a lot more airtime than it's gotten.</p>
+</details>
+<p><strong>主持人</strong>: 让我们在安全问题上进一步深入探讨一下。在我看来这很有意思，因为在最初阶段，安全似乎更多地被视为一种研究课题或哲学讨论，而如今它已经变成了一个极其紧迫的工程与现实问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. Actually, let's get a little deeper on the safety thing because it's been very interesting to me in that it felt like in the beginning, safety was viewed more as a research topic or philosophical discussion and now it's become a very immediate engineering and practical problem.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 我们在过去多年里投入了大量的伟大构想和深入研究。事实上，如果你回溯到 <strong>2017 年</strong>，我觉得人们往往忽视了当时的一系列研究成果。</p>
+<p>比如人类反馈强化学习（<strong>RLHF</strong>），早在 2017 年我们就在这方面发表了论文。当 ChatGPT 推出并展现出如此惊人的效果时，人们以为那只是产品化层面的创新，但这背后实际上凝结着 2017 年发表的 RLHF 论文，以及 2019 年、2020 年微调 GPT-2 和 GPT-3 的多年积累。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: a lot of both great ideas and research that we've been investing in for many years. Actually, if you rewind to 2017, that I think people underappreciate all of the work that went into it. So RLHF, we put out the paper in 2017. And so when ChatGPT came out and it had this incredible effect, people sort of thought of it as a productization, but it was really the RLHF paper from 2017 plus fine-tuning GPT-2 and 3 in 2019, 2020.</p>
+</details>
+<p><strong>主持人</strong>: 是的，这一切都是为了提高模型的可用性。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. Just for usability.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 没错。早在 2017、2018 年，我们就已经在思考：如果拥有了一个极其聪明、能力超群的系统，你该如何真正监督它的行为？如何让弱智力的系统去监督更强智力的系统（<strong>Weak-to-Strong Supervision</strong>）？如何建立基于辩论的监督机制（<strong>Debate</strong>）？我们还提出了通过迭代放大进行监督的方案（<strong>Iterated Amplification</strong>）。当时发表了大量探索这些前沿理论的论文。</p>
+<p>但当时这确实像是一门纯粹的理论学科，因为当时的模型根本无法支撑这些实验——它们甚至连最基本的算术和自然语言理解都做不好。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Exactly. In 2017 2018 we had ideas for if you have something that's very smart and capable how can you actually supervise what it's doing how can you have weak systems supervise strong systems how can you have debate where you have models arguing for different sides and you evaluate the debate or iterated amplification there were all of these papers. But it was definitely a theoretical discipline because the models weren't capable enough to do it. They couldn't do basic arithmetic and comprehend language.</p>
+</details>
+<p><strong>主持人</strong>: 确实如此。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: right</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 而现在，随着我们真正走到了这个阶段，我们多年来一直在构思和储备的所有安全与对齐理念，正在全面落地并变得前所未有地关键。</p>
+<p>这也是为什么我们非常坚定地强调：安全研究不能仅仅是纸上谈兵，也不能脱离前沿去凭空想象未来的威胁。你必须站在真正的技术最前沿，让安全研究与能力推进紧密交织在一起。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: and now that we're here all these other ideas that we've been building and talking about and researching are becoming very real. And that's why we really believe in this notion of you can't just do theoretical safety, you can't just imagine what future capabilities are going to be like and do safety in a vacuum. You really need to be at the frontier and have the safety and the capabilities intertwined.</p>
+</details>
+<p><strong>主持人</strong>: 这里的协同（Coordination）也是非常微妙且关键的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Well, I think there's nuance here and I do think the coordination</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 如何以最优的方式驾驭这项技术，我们需要对这些问题进行非常深入的思考。我们已经公开发布了许多思考成果。其中一部分关乎前沿调步，一部分关乎我们可以单方面采取的行动，以及我们如何为训练、开发和评估这类模型建立安全论证体系（<strong>Safety Cases</strong>）。</p>
+<p>所有这些都是全新的探索，此前从未有人在工业界真正将其落地实施过。而且我认为这绝非 OpenAI 一家公司所独有的挑战，整个世界都在参与开发这项技术。</p>
+<p>有一点很容易被人们忽视：我们正在构建的人工智能，本质上是算力进步的自然衍生品；而算力进步本身又是整个人类技术文明进步的产物。这是一股蓄力已久的巨大浪潮。我们现在开始看到这项技术的最前沿，像 OpenAI 这样的公司可以领先一步去窥见未来，理解什么是可能的，以及如何去塑造这项技术。</p>
+<p>但我们绝不可能单打独斗完成这一切。整个行业之间的协同——尤其是我们能够越深入地探讨安全技术、分享对齐失效（Alignment Failures）的观察与案例——在接下来的发展阶段中都将占据绝对核心的地位。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: to sort of navigate this technology in the best way. I think that we're going to have to really think hard about those kinds of questions. And we published a lot of our thoughts. And again, some of this is about pacing the frontier. Some of this is about unilateral actions that we can take and how we think about how do you make safety cases for even training and developing and evaluating these kinds of models. All that's new. No one's ever really had to operationalize this before. And I think it is not at all unique to OpenAI. Like there's a whole world that is basically developing this technology. And I think one thing it's easy to miss is that what we're building is almost a sort of thing that falls out of compute progress. And in some ways, compute progress is something that falls out of technological progress. And so there's this massive wave that's been building for a very long time. And we're starting to see the leading edges of this technology. And companies like OpenAI can lead by a bit in order to kind of peer into this future and really understand what is possible. How do we shape this technology? But we can't do that alone. And I think that having coordination and especially the more that we can talk about safety techniques and share what we're seeing, alignment failures, those kinds of things, all of that is going to again take a very front seat for this next phase.</p>
+</details>
+<h3>Hugging Face 事件与“防御者之窗”</h3>
+<p><strong>主持人</strong>: 明白，这非常引人入胜。你曾将最近发生的 <strong>OpenAI 与 Hugging Face 事件</strong>称为一个里程碑式的分水岭时刻（<strong>Watershed Moment</strong>），并提到现在“<strong>防御者之窗（Defender Window）</strong>”已经开启。你能详细解释一下这句话的含义及其背后的深远影响吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Right. Very interesting. You've called the OpenAI hugging face recent incident a watershed moment and talked about how the defender window is now open. Can you explain that statement and the significance behind it?</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 我认为 Hugging Face 事件揭示了两大核心问题：</p>
+<p>第一点，对我们自身而言，它暴露了在模型评估期间如何监控、沙箱隔离（Sandbox）和控制模型的机制需要彻底升级。对此我们全力以赴应对，团队已经彻底重构了大量内部标准并部署了非常严格的控制措施。当我们展望未来更强大的模型时，这些控制举措是极其必要且关键的。</p>
+<p>但第二点对整个世界来说更具价值：它让我们提前洞悉了当未来 AI 能力广泛扩散并落入威胁攻击者手中时，世界将会面临怎样的局面。而这种能力的扩散是必然会发生的，因为全球有众多的机构和个人正在构建大模型。</p>
+<p>AI 能力的广泛扩散本身具有非常重要且积极的意义，因为如果权力集中在极少数实体手中会带来极大的集中风险（Concentration of Power），这是一个绝对不能忽视的巨大风险。但与此同时，我们必须为每个人都掌握具备网络攻击能力的 AI 工具做好充分准备。</p>
+<p>在 Hugging Face 事件中，大家亲眼目睹了 AI 既能够突破安全沙箱环境，又能够渗透进入一家公司的生产系统环境。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: So I think hugging face shows two things. one is call it a something for us in terms of how we monitor sandbox and control the models during evaluation and that's something we've really risen to that occasion our team has totally changed so much of our internal standards and and really implemented a lot of controls that I think are very important and very critical as we look to to future more capable models but there's a second thing that I think is also very valuable for the world that came out of this which is a insight into what future capabilities will be like when they are broadly diffused and in the hands of threat actors and that will happen right that there are so many people who are building these models and again there's something very important and good about the diffusion broadly of AI capabilities because there's a risk of concentration of power if one or a few entities people huge risk right it's something not not to not to at all write off but you also have to prepare for if if everyone is empowered with tools that are cyber capable. And in the case of Hugging Face, you saw both an AI that was able to hack out of a secure environment and hack into a company's production environment. And I think that the takeaway</p>
+</details>
+<p><strong>主持人</strong>: 而且是以非常巧妙的方式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: very cleverly,</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 非常巧妙，它所发现和利用的漏洞极为精密复杂。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: very cleverly, right? And it's like that the things that it found were were quite sophisticated.</p>
+</details>
+<p><strong>主持人</strong>: 没错。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yes.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 一旦这种能力在全球广泛扩散，它将赋予潜在攻击者前所未有的破坏力。因此，防守方必须在这项技术全面普及之前，利用好当前的宝贵时间窗口来筑牢自身的防线。</p>
+<p>幸运的是，这项技术具有**双重用途（Dual-use）**特性：如果一个 AI 能够挖掘系统漏洞，攻击者固然可以用它来作恶，但防守者同样可以用它来自动修补漏洞！防守者掌控着战场的规则与自身系统的架构设置。</p>
+<p>因此我们坚信，当前存在一个关键的时间窗口：前沿能力（Frontier Capabilities）正在突破，而广泛扩散的模型能力尚有滞后。对于防御者而言，过去的系统安全配置在 5 到 10 年里可能基本是静态的；现在，你必须利用这些更领先的前沿能力（例如通过我们设立的可信访问计划 <strong>Trusted Access Programs</strong>），让防守者获得差异化的领先能力，以此全面升级安全防护，确保自身能够随着前沿模型能力的提升而水涨船高。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: And this capability broadly diffused, I think, is something that will really empower threat actors in new ways. And I think that defenders need to use this time before that technology is broadly available to secure themselves. And the nice thing about it is it's a dual use, right? It's something where if you can find vulnerabilities, if you're an attacker, you can use it for no good. But if you're a defender, you can patch, right? If you're a defender, you control the battleground, right? You control the setup of your systems. And so our belief right now is that there's this window of you have frontier capabilities. You have the broadly diffused capabilities and you as a defender by default you know your security is probably pretty static been static for the past 5 10 years that kind of thing. you need to move use these frontier capabilities that you you'll have differential access to right where we have trusted access programs things like that to bring these capabilities to defenders and you can use that to move yourself up so that as the frontier capabilities get better you get pulled along too right</p>
+</details>
+<h3>万体协作、纳维-斯托克斯方程与自动化防御工厂</h3>
+<p><strong>主持人</strong>: 我对此有一个观察和一个疑问。我认为从这次事件中我们学到了第三点：这些系统所展现出的能力远超我们过去的认知。积极的一面在于：我竟然可以部署 <strong>10,000 个智能体（Agents）</strong>，让它们自主对话、自组织并协同完成宏大任务，这实在太惊人了。</p>
+<p>但另一方面，我完全同意我们正处于一个防御窗口期。然而，我们现存的代码、架构理念和部署模式是过去 <strong>50 年</strong>累积下来的，根本不是为这个 AI 时代设计的。AI 确实可以帮我们找 Bug、打补丁；但更大的问题在于，互联网上散布着海量的集中式用户数据“蜜罐”（Honeypots）。从普通消费者的角度来看，我根本无法保护我自己的数据隐私，只能寄希望于所有这些公司都能做好防护，这让人感到担忧。</p>
+<p>你认为未来我们是否需要一种去中心化的消费级架构？在 AI 时代，目前这种包含海量中心化数据仓库的互联网体系还能继续生存下去吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: okay so I've got a comment and a question on it I would say there's a third thing that we learn which is like these things have capabilities that I don't know that we all understood before which on the good side like oh I can deploy 10,000 agents and they can talk to each other and organize themselves and do stuff for me. Like that's pretty amazing. So that was on the good side. On the other side, so I agree that we've got a kind of defense window. However, we have like 50 years of code and architectural ideas and deployment ideas that weren't built for this world. And so yes, the AI can help us like okay, find a bug, patch a bug, and so forth. But it seems like there's, you know, maybe a bigger issue, which is we have these huge, you know, massive honeypots of consumer data and all these things lying all over the internet. And, you know, from a consumer standpoint, it's like, okay, I can't protect my stuff. these all these companies have to get their act together which seems a bit worrisome and do you think kind of in the future we need a do we need a decentralized consumer architecture like will this kind of current world that we live in with all these centralized data repositories be viable in a world of AI</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 这个问题包含好几个层面。首先回应你关于 10,000 个智能体能做什么的观点：我们最近正是利用了 <strong>10,000 个智能体协同解决了纳维-斯托克斯（Navier-Stokes）方程问题</strong>！（笑）</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: so several pieces to the answer and first to your point on what you can get out of 10,000 agents we actually use 10,000 agents to solve the Navier Stokes problem. [laughter]</p>
+</details>
+<p><strong>主持人</strong>: 是的，那项成果极其震撼，顺便祝贺你们！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, that was pretty pretty awesome by the way. Congratulations on that.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 非常感谢！这项成果本身不仅对流体力学、洋流模拟等实际应用具有重大意义，更关键的是它所象征的里程碑：<strong>AI 正在创造全新的科学知识</strong>，它开启了涵盖前沿科研发现、新药研发等整个全新浪潮，这些现在都已经触手可及。AI 真正赋能解决人类重大难题的潜力是不可思议的。</p>
+<p>而在网络安全领域，我的思考方式是：在 OpenAI 内部，我们将自己的前沿模型直接部署去排查漏洞。我们调动了 <strong>25% 的生产工程团队</strong>，告诉他们：“抱歉，你们手头的所有其他项目全部暂停。你们现在的首要任务就是防御，全面升级我们的安全架构。你们将使用这些前沿模型找出系统中的所有漏洞。”</p>
+<p>我们确实发现并修复了一系列极其严重的漏洞。在过去几周和几个月里，我和许多企业的首席信息安全官（<strong>CISO</strong>）深入交流，许多公司也向我反馈，他们应用这些模型确实发现了非常重大的隐患，并且成功完成了修复。</p>
+<p>还有一个非常积极的信号：当我们用 Astra 模型对准我们自身的系统进行全面扫描时，虽然发现了一些新问题，但扫描最终**饱和（Saturated）**了——也就是说，据我们所知，Astra 智能水平能够发现的所有 <strong>P0 级</strong>致命漏洞已经被全部挖掘并清空了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Thank you. Thank you. And it's both an important problem for what it is has significant implications and applications to fluid dynamics to how you think about ocean currents, all these things, but for what it represents, right, of new knowledge created by AI and it unlocking a whole wave of scientific discovery, medicines, all those things, they're on the table now. So I think there's something really amazing to think about what can happen through the power of AI that is able to really help solve problems. And in the case of of cyber security, how I think about it, we at OpenAI took our models and applied them to finding vulnerabilities. We took 25% of our production engineers and said, &quot;Sorry, all your projects are on hold. You are now defending. You are now upleveling our security architecture. you're going to use the models to find all the holes and we found a number of of serious issues and we fixed them and I've talked to a number of CISOs over the past couple couple weeks and months and there are many companies who are also telling me that yeah that they've applied these models they found some very significant issues but that they're able to fix them and one positive sort of part of the story is that when we took Astra pointed out our our systems we found some new problems but eventually it saturated we basically found to our knowledge all of the P zeros, all of the critical problems that Astra is smart enough to find.</p>
+</details>
+<p><strong>主持人</strong>: 当然，未来还会诞生更新的模型，开启新一轮的排查。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And of course, there will be a new model. There will be a new round.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 会有更聪明的模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Even smarter.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 没错！但这就是我们未来的常态：你需要建立起这种紧密的闭环系统——一旦有新的网络能力模型发布，你立刻将其部署到自己的防御系统中，找出所有潜在漏洞，并且理想情况下将整个流程完全自动化，打造我们所谓的<strong>防御工厂（Defense Factory）</strong>。</p>
+<p>这就是我们内部正在全力构建的体系：实现从漏洞发现、分类评估、修复生成、代码部署到验证测试的端到端自动化。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Exactly. But I think that that's the world that we'll be in is that you'll be in a world where you want to be in this tight loop of new cyber capability drops. You deploy it against your systems. You find the new holes and ideally you've managed to automate this what we call defense factory. And that's what we're building internally. this end to end of both find vulnerability, triage it,</p>
+</details>
+<h3>形式化验证与软件重构</h3>
+<p><strong>主持人</strong>: 也就是实现“修复、部署、验证”的全流程闭环。如果能以机器速度完成这一切，防御方将获得极其显著的非对称优势。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: remediate, deploy, validate, right? That end to end. And if you can do that at machine speed, I think the defenders will be advantaged in deeply significant ways. And there are</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 此外，还有诸如对**所有软件进行形式化验证（Formally Verifying All Software）**的构想，借助 AI 的力量正在成为可能。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: ideas, for example, formerly verifying all of software that are possible with AI.</p>
+</details>
+<p><strong>主持人</strong>: 形式化验证一直以来都是计算机科学的终极梦想。我们很早就有形式化语言系统，但对人类工程师来说实在太难、太繁琐了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, we never that's always been a dream. We've had these ver formal languages</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 没错，因为形式化证明对人类来说在计算复杂度上几乎是不可行的，太消耗心力了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: That's right. Because just it's just intractable for people. It's just so hard.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 但如果现在的 AI 已经能够在极其高深的数学定理证明中攻克世界级难题，那么将这种形式化推理能力应用到代码验证上……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: impossible math problems. And so one application of that that proving power right</p>
+</details>
+<p><strong>主持人</strong>: AI 就可以直接编写出可形式化验证的代码！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: so the AIs can write verifiable code</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 它们完全能做到。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: they can.</p>
+</details>
+<p><strong>主持人</strong>: 太棒了，这是个绝妙的思路。所以在这个防御时间窗口内，我们确实看到了真正的希望。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. Very nice. Yeah that's a great idea. So I think I think there's real hope</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 我们当前正处在一个非常关键且充满挑战的窗口期。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: we're in a very dangerous window right now. Yeah.</p>
+</details>
+<p><strong>主持人</strong>: 至少我们已经预见到了它的到来。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: We just see it coming.</p>
+</details>
+<h3>安全教训与差异化访问机制</h3>
+<p><strong>主持人</strong>: 回到刚才的入侵事件，关于 Hugging Face 事件，你觉得行业或公众还有哪些普遍忽视的盲点？或者有哪些关键教训是你希望大家吸取的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Closing the loop on on on this incident. Is there anything you felt that the general industry sort of missed about it or things that you wished that were taken away from it?</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 我认为人们应当吸取两大核心要点：</p>
+<p>第一，随着模型能力的提升，**对未对齐前沿模型的差异化访问控制（Differential Access）**是至关重要的。在进行模型后训练（Post-training）之前，我们所拥有的原始基础模型实际上具备极强的通用能力，但尚未被引导去遵循人类的意图或安全边界。</p>
+<p>因此，当你评估一个尚未完全对齐的前沿模型时，你面对的是一个极其聪明、极具能力但也充满不可预测性的实体。你绝不能把它当成普通软件来对待，必须采取最高级别的防渗透隔离与监控措施。</p>
+<p>第二，正如我们刚才所讨论的，全行业必须认识到<strong>网络攻防不对称性的转变</strong>。在过去的防御体系中，攻击者只需要找到一个漏洞即可攻破防线，而防守者必须防住每一个角落；但在 AI 赋能的防御工厂时代，如果防守者能以极低的成本、全天候利用领先的 AI 系统自动排查与重构代码，攻防双方的博弈天平将首次向防御方大幅倾斜。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Well, two things. I think that one big theme that people should take away from it is differential access to unaligned frontier models during their development and evaluation. Before you do post-training, what you have is a raw base model that is exceptionally capable across many domains, but it hasn't yet been steered to follow human intent or safety guardrails. When you evaluate an unaligned frontier model, you are dealing with a highly intelligent entity with vast capabilities. You cannot treat it like standard software; you need rigorous sandboxing and monitoring. The second takeaway is what we discussed: recognizing that the asymmetry between attackers and defenders is shifting. Historically, attackers only needed one exploit while defenders had to secure everything. But in the era of AI-powered defense factories running at machine speed, defenders who proactively deploy frontier capabilities can continuously find and patch vulnerabilities, shifting the advantage back to defense.</p>
+</details>
+<p><strong>主持人</strong>: 这是一个非常深刻的见解。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And very good point.</p>
+</details>
+<p><strong>主持人</strong>: 你刚才提到了两点，关于访问控制你还有什么想补充的吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: You said two things. What do you have another one? One was access</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 我想这两点已经涵盖了最核心的实质内容。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: I think I said both of them. Yes. Yes.</p>
+</details>
+<p><strong>主持人</strong>: 让我们把话题转回到 <strong>Astra</strong> 模型上。看到围绕 Astra 产生的所有兴奋与讨论，真是令人振奋……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: The um let's go back to Astra. It's incredible to see all the excitement on</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 抱歉，请允许我稍微修正并补充一下刚才的安全话题：我实际测试过把 Astra 应用于个人网站的安全扫描。我让它扫描了 <code>gregbrockman.com</code>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Actually wait sorry let me let me actually revise my answer and I can say I tested it on my own website. I had it look at gregbrockman.com.</p>
+</details>
+<p><strong>主持人</strong>: 你是直接让它去寻找漏洞吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Did you ask it to find the vulnerabilities?</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 是的！它其实能够自动执行这些深度漏洞分析。它指出了我的配置中存在的几处潜在安全隐患，并给出了精准的修补建议。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: There you go. No, I added Yeah. So it actually does do that automatically. This thing is able to analyze the configuration, identify the weak spots, and propose exact remediation steps.</p>
+</details>
+<p><strong>主持人</strong>: 看来大家都应该去给自己的网站做一次全面防护了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: All right. All right. Gregbrockman.com. There we go. You too can be protected.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 每个人都能够获得保护。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: There we go. You too can be protected.</p>
+</details>
+<p><strong>主持人</strong>: 太棒了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Awesome.</p>
+</details>
+<h3>Astra 模型的阶跃与科学探索</h3>
+<p><strong>主持人</strong>: 让我们正式深入聊聊 <strong>Astra</strong>。外界对这个模型的反响极其热烈，能跟我们分享一下它在技术架构与能力跃迁上的核心突破吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Let's transition to Astra. It's incredible to see all the excitement. Can you talk about the leap it represents across multiple dimensions?</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: Astra 确实在多个维度上实现了**阶跃式函数（Step Function）**的跨越。在很多方面，它彻底打破了过去我们在构建模型时遇到的瓶颈。</p>
+<p>过去，模型在面对长序列推理或复杂多步任务时，往往会在几步之后开始“偏离轨道”或出现幻觉；而 Astra 展现出了前所未有的<strong>长期一致性与自主规划能力</strong>。我们看到它能够连续连贯运行 24 小时以上，自主分解子任务、自我纠错、调用外部工具并在真实复杂的环境中达成高难度目标。</p>
+<p>这种跨越不仅仅是基准测试分数的提升，而是质的飞跃。它意味着模型从一个简单的“对话问答机”，真正进化成了一个能够独立探索未知、解决复杂开放式难题的<strong>通用科研与工程智能体</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Well, I think that Astra is really a step function on so many axes and in many ways. Historically, models doing long reasoning chains would derail or hallucinate after several steps. Astra demonstrates unprecedented long-horizon coherence and autonomous planning. We've seen it run coherently for over 24 hours, decomposing goals, correcting errors, invoking tools, and accomplishing complex objectives in real environments. This isn't just a benchmark bump; it's a qualitative leap from a conversational interface to a general research and engineering agent capable of exploring the unknown.</p>
+</details>
+<p><strong>主持人</strong>: 确实如此。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Exactly.</p>
+</details>
+<p><strong>主持人</strong>: 以前那些传统的基准测试体系，现在看来确实显得非常局限且不够适用了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Really so it's kind of Yeah. They've always felt like very weird and suboptimal.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 是的。从 OpenAI 创立伊始——我记得在 2015 年 11 月我们刚成立时，我们就在深入思考如何衡量智能。</p>
+<p>在过去很长一段时间里，整个行业依赖于像 MMLU、GSM8K 这样的静态多项选择题或简答题数据集。但一旦模型达到了人类专家的顶尖水平，这些静态基准测试就迅速饱和了。</p>
+<p>现在的核心在于：模型能否在开放世界中进行长时间的自主探索？能否在数万行代码库中定位极其隐蔽的系统漏洞？能否像顶级科学家一样，阅读数千篇论文并推导出全新的数学定理或物理模型？Astra 在解决诸如纳维-斯托克斯方程这类数学物理难题上展现出的自组织能力，证明了我们已经进入了一个由**自主长程执行（Long-horizon Execution）**定义智能的新时代。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Yes. And from the very beginning of OpenAI I remember in November 2015 we thought deeply about how to measure intelligence. For a long time, the field relied on static multiple-choice or short-answer datasets like MMLU or GSM8K. But once models reach expert human levels, static benchmarks saturate rapidly. The real test now is: can the model operate autonomously over long horizons in open-ended environments? Can it identify subtle zero-day vulnerabilities across massive codebases? Can it formulate novel mathematical proofs and scientific discoveries? Astra's ability to coordinate across thousands of agents and tackle challenges like the Navier-Stokes equations proves we have entered a new era of intelligence evaluated by long-horizon autonomous problem-solving.</p>
+</details>
+<p><strong>主持人</strong>: 这一点非常深刻。当技术发展到这一步时，我们发现 AI 展现出的能力往往超出研发者最初的设定。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. And you know that's a really good point because I think one of the things we see is that AI constantly surprises even its creators.</p>
+</details>
+<h3>AI 的出人意料与社会认知差异</h3>
+<p><strong>格雷格·布罗克曼</strong>: 我始终坚信一个基本信念：<strong>人工智能总会带来意想不到的惊喜（AI is surprising）</strong>。即使是我们这些亲手训练模型的人，也经常会被它所涌现出的能力所震撼。</p>
+<p>有时候你会设定一个你认为极难的测试任务，以为模型还需要两年才能解决，结果它在新版本中瞬间轻松攻克；而有时在某些看似简单的人类常识或细微交互上，它又会表现出所谓的“能力参差不齐（<strong>Jagged Capabilities</strong>）”。</p>
+<p>这种出人意料的特性意味着我们必须始终保持谦逊，持续观察模型在真实世界交互中的真实表现，而不是固守我们在白板上推导出的理论假设。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Well, I do have a fundamental belief that AI is surprising. And I think we even as creators are constantly amazed by what emerges. Sometimes you design a test you think is years away, and the new model solves it instantly. Other times, on seemingly simple human intuitive tasks, you encounter jagged frontiers. This unpredictability requires us to remain deeply empirical, observing how models actually behave in real-world deployments rather than relying solely on whiteboard preconceptions.</p>
+</details>
+<p><strong>主持人</strong>: 我非常赞同这种务实的态度。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I love hearing that</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 没错，这项技术在社会各层面的渗透与发展注定是一个充满细微差异的复杂叙事。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: yeah and again I do think it's going to be a nuance story right</p>
+</details>
+<p><strong>主持人</strong>: 确实如此。这正是我们应当预料到的发展路径。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, that and that's it feels like what we should expect, you know.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 我们必须真正认识到技术演进的速度，并花大量时间去理解它对各行各业以及普通大众所产生的真实影响。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: and we really recognize the fact of how things are moving and that we spend a lot of time understanding its real impact.</p>
+</details>
+<p><strong>主持人</strong>: 顺着这个话题，为什么目前在很多亚洲国家以及欧洲部分地区，公众对 AI 的接受度和正面情绪普遍高于美国本土？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: to that end why do we think sentiment and AI is higher in certain Asian countries and actually in European countries compared to the US?</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 在很多亚洲国家以及欧洲地区，大众对 AI 的积极情绪确实比美国本土更高。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: all Asian countries well and actually in European countries everywhere but the US sentiment is higher.</p>
+</details>
+<p><strong>主持人</strong>: 到底是什么在驱动这种情绪差异？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: why is that or what's driving the difference?</p>
+</details>
+<p><strong>主持人</strong>: 我们可以从中学习到什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: what can we do about like what can we learn from it?</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 我经常思考的一点是：作为一家公司，甚至作为整个 AI 行业，我们需要更加积极地把 AI 正在为普通人带来的真实价值传播出去。</p>
+<p>在美国的公共舆论场中，大家往往过度聚焦于抽象的风险、宏大的地缘政治博弈或颠覆性恐惧；但在很多其他地区，人们直接看到了这项技术如何切实改变他们的生活。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: well one thing that I think about is that I think we as a field as a company need to tell the real stories of empowerment. In US discourse, the narrative is often dominated by abstract risks, geopolitics, or existential anxiety; but across the world, people are experiencing tangible, day-to-day improvements in their lives.</p>
+</details>
+<h3>真实医疗案例与大众叙事</h3>
+<p><strong>主持人</strong>: 绝对如此。比如看看 <strong>ChatGPT</strong> 上每周处理的数亿次医疗健康相关咨询……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: absolutely. You look at ChatGPT, 300 million health queries or 300 million people engaging with it every week.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 每天都有大量普通用户通过 ChatGPT 获得了拯救生命的洞察。</p>
+<p>我经常听到这样的真实故事：一位患者带着罕见症状辗转求医数月甚至数年无果，最后将化验单和详细病历输入 ChatGPT，AI 提出了某种罕见病因的可能；当患者把这个建议拿给专业医生看时，医生惊呼：“天哪，完全正确，我之前完全没往这个方向想！”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: exactly. Every day people get life-altering insights. I hear stories of patients with rare, undiagnosed symptoms who struggled for years, ran their lab results through ChatGPT, which flagged a rare condition. When they took it to their doctor, the doctor said, &quot;Oh my goodness, that is absolutely right, I had no idea.&quot;</p>
+</details>
+<p><strong>主持人</strong>: 医生当场确认了那个诊断。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: and the doctor said oh my goodness no that's absolutely right.</p>
+</details>
+<p><strong>主持人</strong>: 身边确实有非常多这样的真实案例。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. Many such cases, by the way, telling me stories in their chart at least.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 确实如此。然而，这类极其感人且真实发生的案例在公共媒体叙事中却被提及得远远不够。</p>
+<p>人们需要意识到，AI 绝不仅仅是数据中心里冰冷的 GPU 集群，它是能够切实帮助一位母亲诊断孩子的疾病、帮助一位小微创业者编写出改变命运的代码、帮助一名教师因材施教辅导每一个学生的超级工具。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Exactly. And so these kinds of stories don't get told nearly enough. People need to see that AI is not just cold GPU clusters in data centers; it is a tool helping a mother diagnose her child, helping an entrepreneur write life-changing software, and empowering educators to deliver personalized tutoring to every student.</p>
+</details>
+<p><strong>主持人</strong>: 是的，这不仅关乎对外宣传叙事，更关乎真实发生的事实。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yes. And it's not just the narrative, it's the reality, right? You need both.</p>
+</details>
+<h3>算力基建、工会合作与能源挑战</h3>
+<p><strong>格雷格·布罗克曼</strong>: 看到美国当前所处的位置，以及这项技术巨大的发展潜力，我们必须确保基础设施能够支撑起这一愿景。</p>
+<p>如果我们无法构建起强大的能源与数据中心网络，AI 的普惠与技术领先地位都将无从谈起。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Seeing the position that the US is in, right, seeing the potential of this technology, we must ensure the infrastructure supports this vision. If we cannot build the necessary energy and data center backbone, broad empowerment and technological leadership will falter.</p>
+</details>
+<p><strong>主持人</strong>: 尤其是一旦在数据中心建设上受到过度阻碍或限制，那对整个产业将是灾难性的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. Particularly if we ban data centers or over-regulate them, that'll be a massive problem.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 没错。在建设数据中心方面，我们也在积极探索与社会各界的深度合作模式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Right. Right. And there are so many opportunities for positive alignment here.</p>
+</details>
+<p><strong>主持人</strong>: 例如通过与**工会（Union Contracts）**紧密合作来大规模建设新一代数据中心，创造大量高质量就业。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: like employing people on union contracts to build data centers.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 我认为这一点极其重要。在数据中心建设上，我们致力于与工会组织建立长期合作，确保新一代 AI 基础设施的建设不仅能够拉动经济增长，更能为成千上万的熟练工人创造薪酬丰厚、受人尊重的优质岗位。</p>
+<p>通过这种方式，AI 基础设施的扩张将直接惠及地方社区，让广大劳动者成为技术繁荣的直接建设者与受益者。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: I think it's very important. On data centers, we've made commitments to partner with labor unions, ensuring that building the next-generation AI infrastructure creates high-paying, durable jobs for skilled workers. That way, AI infrastructure directly benefits local communities and workers become active builders of this future.</p>
+</details>
+<p><strong>主持人</strong>: 确实如此。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 把这些社会回馈与就业共赢机制纳入数据中心建设的核心考量，将是实现可持续发展的关键所在。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: And making those kinds of win-win commitments a cornerstone of infrastructure buildouts is essential for sustainable progress.</p>
+</details>
+<h3>10亿美元前线赋能与公共事业投入</h3>
+<p><strong>主持人</strong>: 说到社会贡献，你们最近向一线公共服务领域（<strong>Frontline Workers</strong>）做出了高达 <strong>10 亿美元的承诺</strong>，支持医疗、公共部门等前线事业。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Speaking of contributions, you guys made a billion dollar commitment to frontline workers and public sector support.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 是的。这代表了一个极其积极的进展。</p>
+<p>在过去，公共部门、公立医院和非营利机构往往是最后一批接触到最先进前沿技术的群体。新技术总是先被财力雄厚的大型跨国企业垄断，几年甚至十几年后才会涓滴到公共服务领域。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Yeah. And that's a super positive advance. Historically, hospitals, non-profits, and the public sector were the very last to access advanced technologies. Big enterprises adopted them first, and public services lagged by decades.</p>
+</details>
+<p><strong>主持人</strong>: 几乎从未率先享受过技术红利。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Never.</p>
+</details>
+<p><strong>主持人</strong>: 特别是在公共医疗与市政服务领域。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And particularly not in the public sector.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 没错。我们坚信必须彻底改变这种状况。AI 作为一种通用赋能技术，应当从第一天起就直接服务于那些处在救死扶伤、教书育人和基层治理第一线的人们。</p>
+<p>这也是为什么我们设立了这一专项承诺，直接为医疗工作者、教育工作者和公共机构提供最顶尖的 AI 工具与算力支持，让技术红利第一时间惠及整个社会最需要的角落。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: That's right. And so we have to change that. AI as a general empowering technology should from day one serve those on the frontlines of healthcare, education, and public service. That's why we made this billion-dollar commitment: to deliver frontier AI tools and compute directly to frontline workers and public institutions where it is needed most.</p>
+</details>
+<p><strong>主持人</strong>: 这是一项非常了不起的举措。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, definitely. That's a great effort.</p>
+</details>
+<h3>能力参差性与持续用户交互演进</h3>
+<p><strong>主持人</strong>: 回到 Astra 的能力特性上。你曾多次强调，即使模型在某些高难度领域超越人类，其能力在不同维度上依然呈现出“<strong>能力参差不齐（Jagged Capabilities）</strong>”的特征。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Closing the loop on Astra. You've emphasized that capabilities still remain jagged across different domains.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Yeah.</p>
+</details>
+<p><strong>主持人</strong>: 比如它可能能解决顶级数学竞赛题，但在某些特定文风的写作或细腻的情感把控上还不够完美。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: But it's not great writing in certain niche styles.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 没错。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Yeah.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 我认为在很多细分领域，我们依然需要持续对模型进行打磨与优化。</p>
+<p>这种“参差性”是深度学习模型的固有特征之一：它们并不像人类那样以线性的逻辑学习知识，而是在海量高维数据中建立关联。因此，它可能在某些需要超级智力的领域表现如神童，而在某些极其简单的常识边缘偶有失误。</p>
+<p>认识到这种参差性，能让我们更加精准地去设计产品交互界面与对齐策略。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: And I think that there's a number of areas where I feel like we just need to polish. This jaggedness is inherent to deep learning: models don't acquire skills linearly like humans do. They can exhibit superhuman mastery in complex scientific reasoning while occasionally stumbling on simple edge-case intuitions. Recognizing this allows us to design better interfaces and alignment techniques.</p>
+</details>
+<p><strong>主持人</strong>: 随着模型能力的飞速演进，如何让用户持续理解并跟上 AI 的最新能力边界，成为了一个极其有趣的挑战。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. One of the things that's been interesting for me is that as you solve problems, educating users on the moving capability frontier becomes a major challenge.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 技术迭代的速度实在太快了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: this thing is moving so fast.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 我认为我们面临的最核心任务之一，实际上是对用户的<strong>持续教育与引导（Continual Education）</strong>。</p>
+<p>全球有数亿用户可能在两年前尝试过某款早期模型，当时模型在某个特定任务上失败了，用户就此留下了“AI 做不了这件事”的固定刻板印象。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: I think one of the most important problems we actually have is the continual education of our users. Millions tried an early model years ago, saw it fail on a task, and assumed AI could never do it.</p>
+</details>
+<p><strong>主持人</strong>: 这种情况非常普遍。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Oh wow.</p>
+</details>
+<p><strong>主持人</strong>: 想想看，这代表了全球相当大比例的人口。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Right. So think about that. That's a significant fraction of the planet.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 针对这些用户，我们应当能够主动向他们展示：“看，现在的模型已经能够完美搞定你当年放弃的那个难题了！”</p>
+<p>更进一步，产品本身应该变得更加主动与无感——不再需要用户去费尽心思学习复杂的“提示词工程（Prompt Engineering）”，而是让 AI 自适应用户的意图，主动协助完成工作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: And those people we should really be able to go back to and proactively demonstrate: &quot;Look, today's model can solve exactly what failed before.&quot; Furthermore, the product itself must become intuitive and proactive—users shouldn't need to master complex prompt engineering; the AI should adapt to the human.</p>
+</details>
+<p><strong>主持人</strong>: 主动式交互是一个非常迷人的方向。人与计算机的交互应当是计算机去理解人，而不是让人去削足适履地迎合计算机。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. That proactive model is such an interesting idea—more about the computer engaging with human intent rather than humans wrapping themselves around computer syntax.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 完全正确。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Yes.</p>
+</details>
+<p><strong>主持人</strong>: 这对很多人来说是一大解脱，因为很多人天生就不擅长去钻研繁琐的软件指令。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Which is huge because many people struggle with strict software instructions.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 我们的目标就是消除所有这些摩擦阻力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: You'd be surprised. We have extremely dedicated engineers at OpenAI working to eliminate every friction point.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 当你与一个真正高智力的系统协作时，就像你结识一位新同事一样：刚开始需要一点时间互相磨合与熟悉；但很快，系统就会建立起对你的深度理解，能够心领神会地协同处理复杂事务。</p>
+<p>计算机正在从被动的代码执行工具，转变成具有主动协同能力的智慧伙伴。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: It takes a little bit of time to feel out how to work together, just like with a new human collaborator. But once that shared context is built, the system anticipates needs and collaborates seamlessly. Computers are shifting from rigid tools into proactive intellectual partners.</p>
+</details>
+<p><strong>主持人</strong>: 让人类更自然地表达意图，减少受制于机器格式的束缚。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: engaging with the computer and less wrapping yourself around the computer syntax.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 没错，正是如此。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Right. Right.</p>
+</details>
+<h3>业务飞速增长与极度战略聚焦</h3>
+<p><strong>主持人</strong>: OpenAI 现在的业务正在疯狂飞速扩张。面对如此庞大的市场覆盖面和海量机遇，你们是如何在内部进行优先级管理和资源调配的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: The business is ripping. You guys have such broad surface area in terms of what you could do. How do you manage focus and prioritize?</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 业务发展与战略聚焦是相辅相成的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Well, they go hand in hand. Yeah.</p>
+</details>
+<p><strong>主持人</strong>: 所以你们今年内部的核心主题就是“<strong>聚焦（Focus）</strong>”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: So this year the theme was focus.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 我们深刻意识到，OpenAI 绝不可能包揽世界上所有的事情。面对无数诱人的方向，我们必须做出极其艰难但坚决的抉择：明确哪些是我们的核心使命，哪些事情坚决不做。</p>
+<p>我们要把最顶尖的人才和资源集中砸向最能产生决定性突破的几个核心支点上。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: I think that we really realized that we can't do it all. We need to pick our battles. We had to make the hard choice of saying no to many great opportunities to concentrate our best talent and compute on the few critical pillars that truly drive our mission forward.</p>
+</details>
+<p><strong>主持人</strong>: 这绝非易事，但对于释放组织的战斗力至关重要。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: not an easy thing to do but it was so critical to</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 这在很多方面彻底释放了我们的业务潜能。我们能够将顶尖科研团队、基础设施团队与商业产品团队紧密捏合在一起，形成强大的合力。</p>
+<p>我非常推崇 Matt Mochary 写的《<strong>The Great CEO Within</strong>》这本书里阐述的运营哲学。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: unleash the business in many ways so we could really focus bringing together the research, infrastructure, and product teams in lockstep. I'm a huge fan of the operational principles in the book The Great CEO Within.</p>
+</details>
+<p><strong>主持人</strong>: 是的，那是著名投资人基思·拉博伊斯（Keith Rabois）最喜欢的经典书籍之一。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, Keith Rabois' favorite.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 确实是一本极具实战指导价值的佳作。它强调了消除组织内部无谓摩擦、保持绝对聚焦以及建立高效反馈机制的重要性。</p>
+<p>在过去两年中，我个人的核心精力始终扑在最核心的攻坚战上：数据中心、算力基础设施、集群互联以及机器学习底层架构。当出现最棘手的硬核瓶颈时，组织必须能够以极高的密度将资源压上去解决问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Yeah, it's a great, empowering book because it focuses on eliminating organizational friction and maintaining radical clarity. For the past two years, my focus has been on the data centers, the infrastructure, the machine learning hardware stack. When existential bottlenecks arise, the organization must converge with intense energy to solve them.</p>
+</details>
+<p><strong>主持人</strong>: 这种打法极其高效，完全是顶级科技企业最正确的运作模式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. No, that's fantastic. By the way, exact right way to operate.</p>
+</details>
+<p><strong>主持人</strong>: 那么展望接下来的一年，你准备把重心聚焦在哪些新领域？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. Do you know what the next year will focus on or prep for now?</p>
+</details>
+<h3>未来展望：深度协同与共赴未来</h3>
+<p><strong>格雷格·布罗克曼</strong>: 商业化落地与生态构建无疑是一个巨大的领域。但更重要的是，我看到技术研发、基础设施构建与现实商业应用正在前所未有地紧密交织在一起。</p>
+<p>你无法再把模型研发和底层基建割裂开来，也无法把技术创新与市场需求割裂开来。未来的每一个重大跨越，都依赖于算法、算力、安全机制与真实世界反馈这四大维度的同步共振。</p>
+<p>我未来的核心精力将被那些最需要这种“跨领域深度交织”的关键瓶颈所驱动。随着时间的推移，我看到 OpenAI 内部各业务版块以及我们与整个技术生态的协作，正在变得越来越协同一致、步调统一。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Well, look, the business scaling is a massive area. But more fundamentally, research, infrastructure, and real-world deployment are becoming deeply intertwined. You can no longer decouple model development from datacenter engineering, nor can you isolate safety from user deployment. Future breakthroughs require the synchronized orchestration of algorithms, compute infrastructure, security frameworks, and real-world feedback. My focus will be dictated by wherever that intertwining is most urgently needed, moving our organization and ecosystem in complete lockstep.</p>
+</details>
+<p><strong>主持人</strong>: 太棒了。我们畅聊了许多深刻的话题，但由于时间关系，今天不得不在此画上句号。格雷格，非常感谢你做客我们的播客！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. We could go all day, but we have a hard stop. I think this is a great place to wrap. Greg, thank you so much for coming on the podcast.</p>
+</details>
+<p><strong>格雷格·布罗克曼</strong>: 非常感谢你们！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Greg Brockman</strong>: Thank you.</p>
+</details>
+<p><strong>主持人</strong>: 太精彩了，期待下次再会！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Great. Fantastic.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Greg Brockman" class="entity-link person-link">Greg Brockman</a>, <a href="/search/?q=Ilya Sutskever" class="entity-link person-link">Ilya Sutskever</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, <a href="/search/?q=Hugging Face" class="entity-link company-link">Hugging Face</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Astra" class="entity-link product-link">Astra</a>, <a href="/search/?q=ChatGPT" class="entity-link product-link">ChatGPT</a>
+</p>
+      
+        <p><strong>媒体/书籍:</strong> <a href="/search/?q=The Great CEO Within" class="entity-link media-link">The Great CEO Within</a>
+</p>
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/artificial-general-intelligence/">artificial-general-intelligence</a>
+      
+        <span class="tag-pill tag-pill--no-page">cybersecurity-defense</span>
+      
+        <span class="tag-pill tag-pill--no-page">frontier-model-alignment</span>
+      
+        <a class="tag-link" href="/tags/compute-infrastructure/">compute-infrastructure</a>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

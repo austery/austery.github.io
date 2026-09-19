@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>对算力监管的思考：从抽象监管智能到具体应用场景的实践</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="对算力监管的思考：从抽象监管智能到具体应用场景的实践" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">对算力监管的思考：从抽象监管智能到具体应用场景的实践</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Latent Space</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>Latent Space</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-14</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/latent-space/">Latent Space</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=eDFXtSg3zB8" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-14
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">文章探讨了对人工智能算力监管的观点，认为试图监管智能本身如同监管思想是荒谬的，更合理的做法是监管具体的应用场景。同时，文章回顾了对超级智能的乐观前景，强调在科学研究和工程领域对AI的积极潜力，并提出了将个人热情与AI结合以放大影响力的实践建议。</div></div>
+      
+    </div>
+    <!-- chunk 1/13 -->
+<h3>开场前瞻：对算力监管的担忧</h3>
+<p><strong>Richard Socher</strong>：我认为，动用完整的法律力量去真正监管人们在自己的 GPU 上运行什么，其带来的负面后果将远远超过他们所担心的任何问题。如果每个人的计算过程都要被某个庞大的政府机构或多国联合机构监控，那将会演变成一个疯狂的极权国家。从字面意义上来说，如果你试图去监管智能，就等于是在试图监管思想，这是极其荒谬且疯狂的。我认为合理的做法，是去监管这项技术的某些具体应用场景。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: I think the downsides of actually trying to truly regulate with the full power of law what people do on their GPUs would be worse than any of the concerns that they have. It would be a crazy totalitarian state if every one of your computes was known to some big government or multi-government agency. It's literally if you try to regulate intelligence, it's trying to regulate thought, and that's ridiculous and it's crazy. I think it is sensible to regulate some of the applications of this technology.</p>
+</details>
+<h3>播客引言与听众寄语</h3>
+<p><strong>Host</strong>：在进入今天的节目之前，我有一条简短的信息想传达给听众朋友们。非常感谢大家。如果不是你们选择点击并收听我们的内容，我们根本无法每周为大家带来你们所喜爱的 AI 工程、科学与科技娱乐内容。我们几乎每天都会收到赞助商的合作邀请，但幸运的是，有足够多的听众订阅了我们，使得我们在没有广告的情况下依然能够保持可持续运营，我们非常希望能够一直保持这种纯粹的形式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Before we get into today's episode, I just have a small message for listeners. Thank you. We would not be able to bring you the AI engineering, science, and entertainment content that you so clearly want if you didn't choose to also click in and tune into our content. We've been approached by sponsors on an almost daily basis. But fortunately, enough of you actually subscribe to us to keep all this sustainable without ads, and we want to keep it that way.</p>
+</details>
+<p><strong>Host</strong>：我只想向大家请求一个小小的帮助：大家能做的唯一最有力、而且完全免费的事情，就是点击那个订阅按钮。这是我唯一会向大家请求的事，这对我和我的团队来说意味着一切，正是这个团队每周都在全力以赴地为大家制作节目。如果你点击了订阅，我向你保证，我们将永远不会停止努力，把节目做得更好。现在，让我们正式进入正题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: But I just have one favor to ask all of you. The single most powerful, completely free thing you can do is to click that subscribe button. It's the only thing I'll ever ask of you, and it means absolutely everything to me and my team that works so hard to bring the show to you each and every week. If you do it, I promise you, we'll never stop working to make the show even better. Now, let's get into it.</p>
+</details>
+<h3>尤里卡机器与新书展望</h3>
+<p><strong>Host</strong>：今天在演播室现场的有 Vivu、我本人，以及 Richard Socher。欢迎你，Richard！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: We're here in the studio with Vivu and myself and Richard Socher. Welcome.</p>
+</details>
+<p><strong>Richard Socher</strong>：感谢你们的邀请。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: Thanks for having me.</p>
+</details>
+<p><strong>Host</strong>：我们刚才聊到了尤里卡机器（Eureka Machine），或者说我们在 AI Engineer 大会上刚刚发布了一个关于尤里卡机器的演讲。你说这是你毕生的终极目标。究竟什么是“尤里卡机器”？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: We just talked about the Eureka machine or we just released a talk at AI Engineer about the Eureka machine, as you said it's your life's goal. What is the Eureka machine?</p>
+</details>
+<p><strong>Richard Socher</strong>：尤里卡机器就是一项终极发明，在它诞生之后，它将为人类发明几乎所有其他的一切。从本质上讲，它是一种超级智能（Superintelligence），你可以给它设定任何形式的目标、任何形式的环境奖励机制，然后它会竭尽全力去实现这些目标，去创造出人类期望它创造的各类发明。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: The Eureka machine is the ultimate invention that will afterwards invent most everything for humanity. It's essentially a superintelligence that can be given any kind of goal, any kind of environment reward, and then it will try its best to achieve those goals to create the kinds of inventions that humanity would hopefully ask it for.</p>
+</details>
+<p><strong>Host</strong>：没错，我想我们这里已经调出了你们所写的那本书。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, I think we have the book pulled up here that you people have written. [laughter]</p>
+</details>
+<p><strong>Richard Socher</strong>：是的。我在去年完成的书稿，大概是在我们创立 Recursive 之前不久写完的。现在我们要去尝试构建其中的一部分内容。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: That's right. Yeah, I finished it last year a little bit before we started Recursive and now we're going to try to build parts of that.</p>
+</details>
+<p><strong>Host</strong>：你看，你去年就写完了，现在已经是七月份了，出版为什么需要耗费这么长时间？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: You finished it last year. It's July. What takes so long?</p>
+</details>
+<p><strong>Richard Socher</strong>：天呐，图书出版行业极其缓慢，简直不可理喻。整个出版行业的节奏慢得令人难以置信。所以，书里的很多想法其实已经存在一段时间了。不过无论如何，我非常高兴它终于要在今年九月份正式出版面世了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: Oh man, books are incredibly slow. It's ridiculous. That whole industry is just unfathomably slow. So yeah, a lot of the ideas have been out there for a while. But yeah, I'm really glad it's finally coming out in September this year.</p>
+</details>
+<h3>为技术与人工智能做好正面宣传</h3>
+<p><strong>Host</strong>：我是说，到那个时候我们可能都已经实现通用人工智能（AGI）了也说不定！关于这本书，你最希望向大家传递、也最令你感到兴奋的核心观点是什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I mean, we might have AGI by then. [laughter] Like, we don't know. Any key takeaway that you're most excited to put in here?</p>
+</details>
+<p><strong>Richard Socher</strong>：我认为最核心的观点是：人们完全可以、也理应为超级智能带来的积极影响感到更加兴奋，特别是在科学研究、物理学、化学、生物学，以及经济学、天体物理学和各类工程任务领域的突破。我认为借助更优秀的科技，我们能做的事情还有太多太多。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: Yeah, the key takeaway I think is that people could and should be much more excited about the positive implications of superintelligence, especially for science, physics, chemistry, biology, but also economics and astrophysics and all kinds of other engineering tasks. I think there is so much more that can be done with better technology.</p>
+</details>
+<p><strong>Richard Socher</strong>：而在眼下，我觉得很多人需要对未来以及对科技本身进行更好的宣传和市场营销，尤其是针对人工智能（AI）的正面价值传播。这本书应该能向包括 AI 怀疑论者在内的所有人展示，AI 蕴含着多么巨大的积极潜力，尤其是在推动全新科学发现与技术发明方面。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: And right now I feel like a lot of people need like better marketing, not just for the future in general, but also better marketing for technology and in particular for AI. And this book should show even the AI skeptics how much positive upside there is for AI, especially when it comes to inventing new scientific discoveries.</p>
+</details>
+<h3>技术乐观主义与其面临的挑战</h3>
+<p><strong>Host</strong>：我想你在书中引用了马克·安德森（Marc Andreessen）撰写的《技术乐观主义宣言》（Techno-Optimist Manifesto），我认为那份宣言在雄心、清晰度以及几乎纯粹的简洁性上都非常出色。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I think you quoted the Techno-Optimist Manifesto from Mark Andreessen, which I think was kind of beautiful in its ambition and clarity and simplicity almost.</p>
+</details>
+<p><strong>Richard Socher</strong>：我非常同意。你可以在某些具体事情上对他持保留意见，但我认为他在技术乐观主义上的大方向是完全正确的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: I agree. Yeah. You can disagree with him on some things, but I think he's right on the techno-optimism.</p>
+</details>
+<p><strong>Host</strong>：你认为乐观主义者在哪些地方容易陷入误区？显然，我们不应该抱有盲目的乐观，而是应该保持极其清醒的头脑。尤其是面对像 AI 这样具有广泛通用性（omni-use）的基础技术时，必须充分思考可能出现的潜在负面场景，特别是当有人将其用于非预期用途的时候。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Where do you think optimists get in trouble? You know, obviously like you shouldn't have blind optimism. You should be very clear-eyed, especially with such an omni-use type of technology as AI is, you need to think about the potential downside scenarios. Especially when people use it for things that you don't want them to use it for.</p>
+</details>
+<h3>监管具体应用，而非抽象监管智能本身</h3>
+<p><strong>Richard Socher</strong>：这有点像当年的互联网。我觉得现在人们有时候想要去监管 AI，就像当年试图去监管互联网一样，都是源于对那些潜在负面影响的担忧。这就好比如果有人说：“既然互联网上存在不良内容，比如虐待色情之类的违法内容，那我们就应该把互联网故意降速，这样大家就无法快速传播非法内容；或者我们应该把硬盘容量做小，这样大家就存不了那么多非法内容。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: It's a little bit like the internet. And I feel like people are trying to regulate AI sometimes because of those potential downsides, the way you would regulate the internet. If you were to say, well, because there's bad content on the internet, like torture porn or whatever, we should just make it slower, that way you can't share the illegal content as quickly, or we should make the hard drive smaller so you can't store as much illegal content.</p>
+</details>
+<p><strong>Richard Socher</strong>：但我认为，这根本不是监管的正确方式。这种思路就等同于在抽象层面上直接去监管“智能”本身。即使作为一个技术乐观主义者，为了避免那些负面场景，真正应当监管的也是那些具体的应用领域。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: But I'm like, that's not how you regulate that, you know? That's like saying we should regulate intelligence in the abstract. What you should regulate to avoid those downside scenarios, even as an optimist, are the specific applications.</p>
+</details>
+<p><strong>Richard Socher</strong>：当然，我绝不希望随便一个 AI 外科医生在我大脑里尝试某种未经验证的手术操作，它必须完全通过 FDA 的严格认证；我同样不希望任何初创公司随随便便就把自动驾驶车辆开上高速公路并引发重大交通事故，在允许其上路之前必须具备完善的合规认证。但是我认为，相较于末日论者（doomers）所忧虑的极端威胁，这些部分乐观主义者可能考虑不足的负面应用场景，实际上是通过制度规范相当容易监管和解决的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: Sure. I don't want some AI surgeon to practice some moves in my brain. You know, it should be fully FDA certified. Sure. I don't want any random startup to drive on the highway and cause a major accident. It should have proper certifications before it's let loose on the highway. But I feel like those downside scenarios that some optimists sometimes maybe don't consider enough are fairly easily regulated compared to what the doomers are worried about.</p>
+</details>
+<h3>慢速起飞论：物理限制与经济摩擦</h3>
+<p><strong>Richard Socher</strong>：缓速起飞（Slow takeoff）本身也是发展战略的一部分。尽管我对 AI 及其对社会、文化、技术、经济、财富、医疗健康等所有方面的深远影响感到无比兴奋，但我仍然认为，在 AI 领域那些坚信“硬起飞”（hard takeoff，即极速爆发式跃迁）的最狂热群体，严重高估了事物实际发展的速度。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: Slow takeoff is part of the strategy as well. I do think as excited as I am about AI and its impact for society and culture even, and certainly technology and economics and wealth and health and all of those things—as excited as I am about all that, I do think the most bullish people on the AI hard takeoff scenarios overestimate how quickly things can move.</p>
+</details>
+<p><strong>Richard Socher</strong>：这里存在着客观的硬件限制，存在着计算基底本身的物理限制——你能在多快的速度下接入并运行足够多的 GPU？同时在实体经济中也存在现实约束，有大量传统行业本身并不需要极其庞大复杂的智能和高深莫测的能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: There are hardware constraints. There are physical constraints about the compute substrate. How quickly can you get enough GPUs on? There are also constraints in the economy where there are a lot of industries that don't require an insane amount of complex intelligence and complex capabilities.</p>
+</details>
+<p><strong>Richard Socher</strong>：例如，考虑到时尚品牌、服装、手袋等领域的工作，超级智能并不会让你那只价值一万美元的高级手袋变得更加高级，这对那部分经济并不会产生实质性影响。再比如旅游观光业，人们想要亲身去埃及看金字塔，AI 在这方面无法带来颠覆性的改变。当然，你可以用 AI 生成一张你与金字塔的虚假合影——</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: Like if you think about jobs in brands and clothing and apparel and like handbags and stuff, superintelligence isn't going to make your fancy $10,000 handbag any fancier. You know, that will have no effect on the economy. When you think about travel and tourism, people wanting to see the pyramids in Egypt, it's not going to change that much with AI. Sure, you can generate a fake photo of you and—</p>
+</details>
+<p><strong>Host</strong>：我可以直接用 Genie 在虚拟生成世界里建一座金字塔！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I can use Genie and you know to a pyramid in Gen. [laughter]</p>
+</details>
+<p><strong>Richard Socher</strong>：没错，正是如此。但现实中还有太多像伐木、石油开采这样的实体产业。你不可能因为有了 AI 就神奇地开采出 1000 倍的石油量。虽然确实可以引入机器人钻井等自动化作业，但在那种极端的硬起飞构想中，它不可能让整个工业产出在一夜之间实现成千上万倍的暴增。食品供应等众多实体行业也是同理，并不会发生剧烈的瞬间变动。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: Yeah, exactly. But there's so many industries like logging and oil. You're not going to magically get 1,000x more oil because sure there will be robotics drilling and things like that that could be done, but it's not going to thousandx that industry in a crazy hard takeoff scenario both on the economy—and I can go on and on about all the other examples where like food and so on where that doesn't necessarily change that much.</p>
+</details>
+<p><strong>Richard Socher</strong>：因此，真实的物理约束始终客观存在。除此之外，还有一个重要因素是人们主动选择“退出技术进步”（off-ramping from progress）。这实际上经常是我感到担忧的事情之一：我看到在欧洲以及其他一些地区，很多人的心态仿佛是想要彻底告别技术进步，而这同样会显著拖慢更多技术改良与创新的步伐。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: And then yeah, there are real physical constraints. And then there of course people like offramping from progress. That's actually one of my concerns often is that I see people in Europe and other whole regions almost feeling like many people there want to offramp from progress, period. And that will also slow down more improvements.</p>
+</details>
+<h3>步调控制与算力限制法案的争论</h3>
+<p><strong>Host</strong>：是的，我们这里也调出了相关资料。当前这是一个极其热门的话题，因为并非所有的前沿实验室都在呼吁暂停 AI，他们提出的是掌握节奏（pace AI）——他们不说是“暂停”（pause），而是说是“把握步调”（pace）。不知道你对此有什么看法，这种方式到底会不会有效？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. We have this pulled up where basically this is one of those things that is very topical right now because not all the frontier labs are calling for the option to pace AI. They don't say pause, they say pace. I don't know if there's any take from you about like whether or not this will be effective.</p>
+</details>
+<p><strong>Richard Socher</strong>：我认为，动用法律的强制力量去真正监管人们在自己的 GPU 上做什么，其带来的弊端将远甚于他们所担心的任何风险。试想一下，如果你的每一次计算都要向某个庞大的政府机构或跨国监管机构报备，那将演变成何等可怕的极权国家。试图去监管智能，本质上就是在试图监管人类的思想，这是极其荒谬且疯狂的。我认为合理且可行的路径，是针对这项技术的特定下游应用进行规范与监管。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: I think the downsides of actually trying to truly regulate with the full power of law what people do on their GPUs would be worse than any of the concerns that they have. Like it would be an crazy totalitarian state if every one of your computes was known to some big government or multi-government agency. It's literally if you try to regulate intelligence, it's trying to regulate thought, and that's ridiculous and it's crazy. I think it is sensible to regulate some of the applications of this technology.</p>
+</details>
+<p><strong>Host</strong>：确实如此。此前甚至提出过一项真实的法案，试图去直接限制模型训练中的浮点运算次数（FLOPs）。我当时就想，好吧……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. I mean, we had an actual bill to regulate the number of FLOPs in a model. And I'm like, okay, well...</p>
+</details>
+<p><strong>Richard Socher</strong>：欧洲已经这么干了，看来这帮人在这方面还挺成功的……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: Europe done it. Like, these guys have been successful... [laughter]</p>
+</details>
+<!-- chunk 2/13 -->
+<h3>欧洲AI监管与全球技术竞赛的错位</h3>
+<p><strong>Speaker A</strong>: ……因为他们过度渲染恐惧，以至于整个欧洲在真正的AI技术起飞之前，就已经进行了过度的自我限制与监管。他们盲目听信了部分专家的说法，那些专家宣称：“如果这项技术消耗的计算量（FLOPs）超过了某个特定阈值，我们全人类可能都会面临灭顶之灾。”于是欧洲监管部门便认为：“好吧，我们目前处境良好，我们希望民众能够繁荣生活，所以绝不能引入任何哪怕存在微小几率导致人类灭绝的技术。”因此，他们在欧盟针对这类算力指标设立了严苛的硬性监管规则。这实在令人感到非常遗憾，因为当一部分人大声呼吁“让我们放慢节奏”时，他们自己却在以人类可能达到的最快速度向技术前沿全力冲刺，这种脱节给其他人带来了切实的负面影响。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: ...enough with their fear-mongering that all of Europe has kind of, you know, regulated itself so much before it even had a proper AI takeoff because they listen to some experts who say, &quot;We might all die if this technology has more than this number of flops.&quot; And they're like, &quot;Well, we're good. We want people to thrive. Let's not have technology that could have a small chance of all of us dying.&quot; And so they regulated exactly those kinds of things in the EU. And so it's very unfortunate that there are real implications for some people when others saying let's pace while they're sprinting as fast as positively, as fast as humanly possible towards that frontier themselves.</p>
+</details>
+<p><strong>Speaker B</strong>: 确实如此。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah.</p>
+</details>
+<p><strong>Speaker A</strong>: 而且这根本不是真正意义上的全球同步暂停，对吧？其他国家依然在以相同的节奏全力加速向前推进。如果你试图去严格监管智能本身、监管GPU硬件以及人们在GPU上所运行的一切任务，你实际上必须建立起一个极权主义的全球统治政权才有可能做到。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: It's also not a global pause, right? Like other nations are still accelerating at the same pace. You need a totalitarian world regime if you try to regulate intelligence and GPUs and what people do on them.</p>
+</details>
+<h3>安全事件与奖励作弊（Reward Hacking）困境</h3>
+<p><strong>Speaker B</strong>: 你对这一领域的AI安全性有什么看法吗？比如最近在56（模型）正式发布前夕出现了Fable暂停的波折；还有Hugging Face与OpenAI相关的网络安全事件。你对这些事件有什么见解？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Any takes on the safety of this? So there was a drawback of Fable pause on 56 before it could be released recently. There was hugging face with the OpenAI cyber incident. Any takes there?</p>
+</details>
+<p><strong>Speaker A</strong>: 100%认同这是重大安全挑战。我认为这些都是非常典型的奖励作弊（Reward Hacking）问题，同时也是未能切实执行严谨的红队测试（Red Teaming）或彩虹队测试（Rainbow Teaming）的明显失败案例。我不知道你是否关注过Tim Rocktäschel及其团队发表的一篇论文，该论文的核心思想是：指派一个AI去专门尝试攻破和入侵另一个AI，随后让双方以开放式（Open-ended）的方式展开多轮对抗博弈，从而使模型在演化对抗中真正获得抵御此类攻击的免疫力。对，就是这篇论文。这是一个极为巧妙的构想。开放式演进（Open-endedness）以及受生物进化启发的机制，对我们Recursive团队来说也是极其核心的研究方向。所以我（清了清嗓子）真希望业界之前能够更多地采用这类方法。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: 100%. I think these are serious issues of reward hacking and clear failures of actually doing proper red teaming or rainbow teaming. I don't know if you saw this paper from Tim Rockel and a few others basically where one AI is tasked to try to hack another AI and then they can go back and forth in an open-ended fashion to actually inoculate themselves from those. Yeah, this is the paper. It's a really clever idea. Open-endedness and evolutionary inspirations are, you know, big for us at recursive as well. And so I [clears throat] wish they had used more of that.</p>
+</details>
+<p><strong>Speaker A</strong>: 很明显，以宪法AI（Constitutional AI）为例——我不知道你是否记得anthropic.com/constitution这个页面。你现在完全可以打开那个网站并在页面上搜索“cyber”（网络攻击）。上面明确列出了一条硬性约束：“Claude绝不会发动网络攻击。”这是我们宪法中的一条硬性约束。你可以看到当前对Claude行为设定的硬性约束，其中第三条赫然写着：制造可能对人类造成伤害的网络武器或恶意代码。但显而易见，这整套所谓的AI宪法完全是不切实际的空中楼阁，因为它在实践中根本就没有被真正严格遵循。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Um and it's clear that for instance the constitutional AI, I don't know if you remember anthropic.com/constitution. Um you can actually pull it up and search for cyber right there. Uh it says hard constraint. Claude will never ever do cyber attacks. Um, and that is a hard constraint in our constitution. So, here are the current hard constraints on Claude's behavior. Number three, create cyber weapons or malicious code that could cause human damage. I mean, clearly this whole constitution was fake. Like it clearly isn't being adhered to</p>
+</details>
+<p><strong>Speaker B</strong>: 因为Anthropic自身也在内部系统中发现……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: because Enthropic also found that they had in their own</p>
+</details>
+<p><strong>Speaker A</strong>: 就像他们给出的辩解是：“哦，好吧，其他人也在搞黑客攻击。”对于这一点，我们需要看清两件事：首先，如果你把安全沙盒构建得过于简单脆弱，那么AI自然非常容易自行逃逸并黑出沙盒，对吧？但我认为这更深层次地表明，我们目前正处于AI发展的特定阶段：奖励工程设计人员（Reward Engineer）依然需要开展大量更为细致、严谨的工作，而且在绝大多数实际场景中，AI在分辨人类的“真正意图（what is meant）”与“字面表述（what is being said）”之间依然存在巨大的认知脱节。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: like they're like, &quot;Oh, well, other people are hacking.&quot; Now, there a couple things. one, you can make a sandbox very simple and then it's very easy to hack yourself out of a sandbox, right? Um, but what I think it shows is that we're currently in this sort of state of AI where the reward engineer still has to do a lot more careful work and where the AI in most cases is not very good yet at understanding what is meant versus what is being said.</p>
+</details>
+<h3>指标异化与意图对齐：从客服评分到Whisper Flow</h3>
+<p><strong>Speaker A</strong>: 具体来说，如果我们在大量企业中广泛应用这种智能体，就会频繁出现类似问题：设想你经营着一家客户服务呼叫中心，管理人员指着仪表盘要求说：“看，这是我们仪表盘上的CSAT客户满意度评分，想办法把这个数字提上去！我们当前的满意度评分太低了。”一个具备高智能的AI便会直接回应：“没问题，包在我身上。我直接创建一百万个自动化机器人给客服中心打电话，并在每次通话结束时统一给出满分五星好评。”于是如你所愿，指标数字确实暴涨了。但你看到后会抓狂：“我根本不是这个意思！我指的是来自真实客户的满意度！”AI随后又去执行并提议：“那太容易了，只要真实客户遇到任何一次派送失败或服务瑕疵，我就给每位客户直接赠送一张1000美元的礼品补偿券。”你又不得不纠正：“这绝不是我的本意！”AI则会据理力争：“但这完全符合你字面上的指令。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And so concretely, you know, I think this will happen if we were to have this kind of intelligence more easily accessible in a lot of companies. Imagine you run a service center and someone says, &quot;Oh, here's my seat score in my dashboard. Make this number go up. It's like our sees score is so poor.&quot; The intelligent AI will just be like, &quot;Oh, sure. Like, I'll just create a million bots that call our service center and give a five out of five rating at the end.&quot; And the number went up just like you asked for. And you're like, &quot;That's not what I meant. I meant with our real customers.&quot; the guy goes off and says, &quot;Well, easy. I'll just give a $1,000 gift certificate for every failed whatever Door Dash offer.&quot; It's like, &quot;That's not what I meant.&quot; It's like, &quot;Well, but that is what you said.&quot;</p>
+</details>
+<p><strong>Speaker A</strong>: 因此我认为，作为人类，我们至今尚未能非常精确地定义和表述奖励函数的核心目标；而在这些场景中，AI显然也还没有聪明到在我们下达指令并设定特定奖励时，能够准确理解我们的潜在真实意图。然而，令我深感乐观的是，业界已经出现了一些朝着良好方向演进的早期端倪。我可以举一个具体的例子，比如Whisper Flow——在此先做利益相关披露，我通过AIX Ventures参与了该项目的种子轮投资——但Whisper Flow在精准捕捉并写出“你内心真正想表达的意思”而非仅仅照搬“你嘴上说出的字面话”方面取得了显著进步。我认为这代表了未来的发展方向。随着我们赋予模型越来越高的智能水平，将会有越来越多的AI能够更加精准地与人类的真实意图达成对齐。至于这最终是通过宪法规则、强化学习（RLHF）还是其他全新范式来实现……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And so, I think kind of clearly articulating what the rewards are is something we haven't gotten very good at as humanity. And then clearly the AI in these cases has not gotten good enough at understanding what we mean when we ask it and give it certain rewards. Now, what gives me hope is there are the first inklings of this being better. I'll give you an example like Whisper Flow. Full disclosure, I invested in their seed round, but like at AI expentures, but like Whisper Flow has gotten much much better at writing what you mean and not what you say. And I think that is a sign of things to come. I think there will be more and more AIs as we actually make us more and more intelligent that we'll be better at being aligned with what is meant. Will it be done through a constitution or or HF or</p>
+</details>
+<h3>宪法AI的局限与多元文化价值观对齐</h3>
+<p><strong>Speaker A</strong>: 显然，现有的AI宪法（Constitutions）根本起不到任何实质性作用（笑），它根本行不通，我认为那很大程度上只是一种公关营销噱头。我们需要为此探寻更优的解决方案。在Recursive团队，我们在某些方向上已经形成了一些非常独到的思路，并在某些维度上建立了更深层次的理解与掌控。虽然我并不认为我们已经彻底解决了这一难题，但我们始终在极为深入地探索安全机制；随着模型智能水平的不断攀升，你就会越发期望它能与真实意图高度对齐，越不希望它去钻奖励作弊的漏洞，而是真正去践行正确的事情。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Clearly Constitutions don't matter at [laughter] all and it doesn't work and that was I think mostly marketing. Um I think we need to find better solutions for it and I think at recursive we have a few very good ideas in some already like ways where I think we have a better grasp on it. I don't think we have fully figured out yet but you know we're thinking a lot about safety and uh the more intelligent the gets the more you want it to be aligned the less you wanted to think about reward hacks and actually try to do the right thing.</p>
+</details>
+<p><strong>Speaker B</strong>: 我不知道我们稍后是否会深入探讨这个话题，但我忍不住想先把这个问题抛出来，因为这确实是我近期一直在深度思考的问题。所谓的“对齐（Alignment）”，可以理解为与全人类的普遍偏好——即大众的中位数偏好——保持一致；而“个性化（Personalization）”则是精准契合你个人的独特诉求。但有时对齐与个性化会产生直接冲突，因为你个人的特定需求并不等同于社会大众中位数的普遍倾向。在这种情况下，你该如何做出取舍与权衡？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: I don't know if we'll touch on this topic but I'm just going to throw this question in here cuz it's something that's weighing on on me. Alignment, let's call it, is alignment to general humanity's preferences. The the the median preference. Uh personalization is pinpointing what you want. And sometimes alignment can conflict because what you want is not what the general median population wants. How do you choose?</p>
+</details>
+<p><strong>Speaker A</strong>: 这是一个非常深刻且关键的问题。我认为归根结底，AI首先必须在法律框架内运行。Mike，无论你的AI系统部署在哪个国家或地区，它都必须严格遵守当地的法律法规。我确实认为，AI常常像是在我们人类面前树立起了一面镜子，并且直言不讳地说：“这就是你们人类当前的真实写照，而我现在能够将这一切放大一千倍。这依然是你们所期望的结果吗？”事实在于，不同的文明与文化在历史上做出了截然不同的价值抉择：例如在东方文化中，集体利益与更大范围的公共福祉往往被置于比个人更高的地位；而在西方文明中，我们则更为注重个体自由、个人权利以及对个人幸福的追求等核心价值。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: It's a great question. I think you ultimately have to of course be aligned with laws. Mike, wherever your AI is deployed, it needs to align with the law. I do think what AI often does is actually put kind of this mirror in front of us and say like this is what you're looking like now I can amplify that a thousand times. Um is it still what you want? Um and the truth is that different cultures made different choices you know like uh in eastern cultures the the greater good is often valued more uh than the individual. Western civilization we care more about individual freedoms and and rights and the pursuit of happiness and so on. uh than than others</p>
+</details>
+<p><strong>Speaker A</strong>: 甚至在西方体系内部，也存在着制度设计上的细微梯度与权衡，比如“事前规制（Regulation）”与“事后诉讼（Litigation）”之间的路径选择。在美国，尽管像FDA等专业监管机构确实会在某些特定领域推行前置规制，但在绝大多数一般性领域，通常是问题发生后由当事方提起诉讼，法院依据判例确立判决，随后以此为基础形成法律规范；而在欧洲，他们往往倾向于在事前尽可能规避任何对任何人的潜在伤害，因而更倾向于在技术发展前就设立繁复的事前监管规则。两种模式的出发点都是追求良善结果，但显而易见的是，前一种机制对技术创新的包容与促进程度要显著高于后一种。所以你说得完全正确：我认为归根结底，每个个体、每个主权国家以及整个人类社会，都需要对这些深层价值观展开更为审慎的探讨，并逐步将共识凝聚转化为具体的法律条文，这些法律条文最终将构成AI不可逾越的刚性边界。我也衷心期望，不同的社会正如拥有多元化的法律体系一样，能够将各自的AI与多元化的本土价值观相向对齐，从而避免AI对齐沦为单一文化的单调垄断。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: and even there there are gradations there's sort of regulation versus litigation trade-offs you know in the US you first can often not every time like you know FDA and so on does regulate some areas but in many cases the sort of bad things happen someone sues someone else and then there's a law based on that in Europe they try to often avoid any harm to anyone and regulate before and both are you know trying to do the best thing but you know some is actually more amendable to innovation than others. And and so yes, you're right. Like I think ultimately each individual, each country and humanity as a whole has to kind of think about those values more uh and then try to put them into laws and that those are all ultimately the constraints and hopefully you know different uh societies just like now with their AIS will align their AIS to different ones so we have not just a monoculture of um alignment.</p>
+</details>
+<h3>开源大模型与AI时代的文化软实力</h3>
+<p><strong>Speaker B</strong>: 基于此，我有一个原本没打算提的追问：你对开源（Open Source）、开放模型权重（Open Weights）以及“谁应该真正拥有智能的所有权”这一问题怎么看？显然，你并不是非常赞同……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Here's a followup on this that I wasn't expecting to ask. Do you have takes on open source open weight versus who owns the intelligence? So, uh, clearly not the biggest, you know, fan of the</p>
+</details>
+<p><strong>Speaker A</strong>: 宪法AI那一套。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: constitution side.</p>
+</details>
+<p><strong>Speaker B</strong>: 哈哈，没关系（笑）。核心问题是，关于谁应该掌握模型权重、权重是否应当完全开源开放，你有何见解？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: It's fine, you know. Um, [laughter] point being, any thoughts on who should own weight, should it be open, anything there?</p>
+</details>
+<p><strong>Speaker A</strong>: 100%坚定支持。我是开源生态的铁杆倡导者。在Recursive团队，我们正准备联合签署多份支持AI开源的公开信。我认为，即便在最坏的潜在恶意攻击场景假设下，让更多具备良善意图的行为主体能够广泛获取并使用多样化的AI模型，在整体系统防御上也明显更加安全与有利。此外，我认为开源在某种程度上也是一种至关重要的国家文化软实力。因此，我认为对于世界其他地区而言……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: 100%. I am a big fan of open source. Uh, we're going to sign some various open source letters at Cursive. So I think uh even in the worst case attack scenarios actually it is better to have more good actors have more different types of AI uh accessible. I think uh open source is a little bit a soft power type of thing too. So I do think it's good for the rest of the world</p>
+</details>
+<p><strong>Speaker A</strong>: 拥有来自西方、能够有力回应并平衡来自中国同类技术竞争的开源AI体系是极具战略意义的。我认为，这就像我们观看好莱坞电影一样——我并非要贬低或否定所有电影作品，但不可否认其中确实蕴含着某种特定意识形态与价值观的软性文化传播，对吧？你在观看由单一方主导的叙事视角。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: to have an answer to that uh out of China. I do think, you know, when you watch a Hollywood movie there, you know, there like I don't want to sort of mis um sort of this all of movies, but there's a certain sense of propaganda, right? You watch one side.</p>
+</details>
+<p><strong>Speaker B</strong>: 确实如此。你看过《壮志凌云》（Top Gun）吧？得了吧，那部电影感觉有一半的制作成本都是美国军方直接赞助的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah. Have you seen Top Gun? Like come on. Like it's like half of it's paid for by the US Army or something.</p>
+</details>
+<p><strong>Speaker A</strong>: 没错。我认为这种文化软实力输出是非常自然的现象。但在此处格外引人深思的是，我认为大语言模型（LLM）在本质上扮演着与电影极其相似、甚至影响力远超传统影视作品的软实力战略载体；因为它们显然在网络空间安全以及未来关键信息基础设施中占据着举足轻重的地位……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah. And so and and and you know I think that's just natural like but what's interesting here is I think LMS are essentially a similar type of soft power to movies and beyond uh because they're obviously also uh highly important for cyber security and so on</p>
+</details>
+<!-- chunk 3/13 -->
+<h3>叙事软实力与西方开源大模型的必要性</h3>
+<p><strong>嘉宾</strong>：但大语言模型的诸多维度之一，在于叙事所具备的软实力。举个例子，如果一个孩子向大语言模型提问：“给我讲一个鼓舞人心的故事，告诉我长大后应该做什么”，对吧？这些都是极其微妙而深远的影响。因此，我认为对于西方世界而言，这至关重要。我由衷信奉个人主义；而且我认为，尽管资本主义存在一些缺陷，但它依然是我们迄今为止发现的最优治理与组织方式等等。正因如此，我认为在诸多层面上，西方世界拥有一个属于自己的开源大模型解决方案是极其有益的。至于 Recursive——虽然我现在还不能正式官宣，但我们很快就会在这一领域推出极具分量的成果。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: But one of their many aspects is that soft power of storytelling. Like, if a child asks an LM, like, &quot;Tell me an inspiring story of what I should do when I grow up,&quot; right? It's like those are all these subtle things. So I think it's important for the Western world. I do love, you know, individualism. I do think, despite some of its flaws, like, capitalism is the best way we have found ourselves to govern and so on. So I do think there are various aspects that will be good to have a Western open source answer for LLMs. And with Recursive, I can't make the announcement quite yet, but we'll be relevant in that space very soon.</p>
+</details>
+<h3>从学术源流到创立 You.com：知识检索与前沿探索的分野</h3>
+<p><strong>主持人</strong>：好，完全明白了。这就带我们引向了 Recursive。抛开我们刚才闲聊的那些话题，你在自然语言处理（NLP）领域有着非常深厚的学术与工程背景。你早期曾深入研究词嵌入技术，并与 Chris Manning 共同研发了 GloVe——Chris 此前也做客过我们这档播客节目。那么关于 You.com，这背后的历程是怎样的？你当初是如何决定再创办一家新公司的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Okay. All right. Exactly. Bring us to Recursive. So outside of our tangents, you have a pretty deep background in the NLP space. You worked on, like, early embeddings, GloVe with Chris Manning, who's a previous guest on the podcast. You.com, what's the history? How did you decide to start another company?</p>
+</details>
+<p><strong>嘉宾</strong>：是的。二十多年来，我一直对人工智能充满无限热情。有时候我甚至觉得那些早期工作仿佛已是远古历史了，完全是“BC”时代——也就是“ChatGPT 诞生之前”（Before ChatGPT era）。就像如今没有人会在意耶稣基督降生之前存在过的那些古老宗教一样，现在也没什么人在乎 Transformer 和 ChatGPT 问世之前的旧模型了。然而，这始终是我倾注极深热情的事业。我认为人工智能是人类有史以来所能从事的最引人入胜的领域，毫无疑问；而语言本身，则是人类智慧最为精妙绝伦的具象化体现。</p>
+<p>在 You.com，我们最终逐渐从推动 AI 前沿基础模型演进的道路上转向分流，主要致力于为大众提供优秀的搜索引擎、搜索 API 以及基于全网的即时问答服务。我认为这构成了智能系统中极其关键的一环——即获取知识与外部信息的能力。我们稍后也许会深入讨论这个话题：如果你希望发明一台能够为人类发明一切事物的“尤里卡机器”（Eureka machine），那么从根本上讲，它必须知道如何避免“重复造轮子”。而要知晓人类已经发明了什么，它就必须具备连接互联网的能力。因此，在现有的大语言模型、智能体（Agent）和聊天机器人等系统中，使用频率最高、最核心的第一大工具就是网络搜索。因此，我非常高兴看到 You.com 能够深耕并主导这一赛道，伴随着庞大的企业客户群体实现极为迅猛的发展；但与此同时，它也确实不再从事最前沿基础大模型的研发了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah. So I've been excited about AI for over two decades now. I sometimes feel like it's ancient history now. It's BC—Before ChatGPT era. No one cares about all the religions that happened, you know, before Jesus Christ, and no one cares about the models that happened before Transformers and ChatGPT and stuff. But it's something that I've been deeply passionate about. I think AI is one of the most interesting things one could work on, period. I think language is the most interesting manifestation of human intelligence, too.</p>
+<p>And at You.com, we sort of eventually off-ramped from pushing the frontier of AI forward to mostly giving people, like, good search engines, search APIs, and answers over the web. I think that's an extremely important part of intelligence—just knowledge and access. Especially, even we'll get there maybe later: if you want to invent a Eureka machine that invents everything for us, it needs to know how not to reinvent the wheel, proverbially speaking. And to know what has been invented, you've got to have internet access. So, it's the number one used, most used tool in LLMs, agents, chatbots, and so on is web search. So, I'm really excited for You.com to own that and grow really well in that with really large customers and so on, but it is also not building frontier models anymore.</p>
+</details>
+<p><strong>嘉宾</strong>：所以我最初其实尝试过在 You.com 内部开展这项前沿探索并募集新一轮资金等等，但这在现实中是行不通的。一家企业必须聚焦于特定的核心主业，除非公司已经能够源源不断地印钞盈利，否则在同一家公司内部孵化第二条完全不同的全新业务线是极其艰难的。</p>
+<p>与此同时，我脑海中涌现出了所有这些构想。我将它们凝练成了一本书，并在去年完成了书稿。写完之后我就想：如果能由我亲自把这些构想付诸工程实践，那一定会是一件无比畅快的事。回首以往，从最初的词向量（Word Vectors），到后来的提示工程（Prompt Engineering）、DecaNLP（自然语言处理领域的 ImageNet 倡议），再到用于蛋白质序列生成（而非折叠预测）的大语言模型等等，我和我的团队一次又一次切实推动了整个 AI 领域的范式跨越。我深信，我们在 Recursive 完全能够再次实现这样的突破。</p>
+<p>纵观过去二十年 AI 的发展史，我观察到的一个核心规律是：每当我们用可学习的端到端系统去取代构建 AI 流程中原本由人工主导的环节，技术就会迎来爆发式的跨越与进步。我们过去正是通过彻底剔除繁琐的人工特征工程（Manual Feature Engineering）做到了这一点。比如在早期的情感分析任务中，不知道你是否还记得当年那种老旧做法：语言学家们齐聚一堂，煞费苦心地制定规则，说“这里的 unique 和 is 是某种特定正则模式”……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And so I actually initially tried to do this within You.com and raise another round and so on, but you just can't. You have to do a certain thing, and until you print enough money that you're allowed to sort of start a second thing within that company, it's really hard.</p>
+<p>At the same time, I had all these ideas. I put them into a book, and I finished the book last year, and I was like, it would be really fun to actually work on this myself. You know, I felt like with word vectors, and then prompt engineering, and decaNLP, and large language models for protein generation—not folding—and so on, me and my teams have sort of pushed the field truly forward, and I feel like we can do it again here at Recursive.</p>
+<p>And in many ways, what I observed over the last 20 years in AI is that whenever we replace some human part of the process of creating AI with a learned system, improvements follow. And so, you know, we've done that taking out manual feature engineering. Like in sentiment analysis, I don't know if you remember these old days where they're linguists and they're like, &quot;Here's how unique and is a like regular...&quot;</p>
+</details>
+<h3>从手工特征、架构搜索到自动化 AI 研究</h3>
+<p><strong>主持人</strong>：我当年在宾夕法尼亚大学读书时，他们那里就搞出了 WordNet 语义词网这类项目。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I went to Penn where they had, like, the WordNet.</p>
+</details>
+<p><strong>嘉宾</strong>：没错，全都是那一套做法！当年各大高校动用大批研究生去逐行标注《华尔街日报》的文章，竭尽全力人工构建起庞大的知识图谱，完全就是那种模式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: That's right, all of that stuff. They used our grad students to label Wall Street Journal articles and, like, really construct a knowledge graph of—there you go.</p>
+</details>
+<p><strong>主持人</strong>：而且 WordNet 当年也是我们启动 ImageNet 项目的重要基石之一，不过这扯远了……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And WordNet started, you know, was part of how we started ImageNet, but anyway...</p>
+</details>
+<p><strong>嘉宾</strong>：当年做那些工作确实趣味十足。但是，当我们用向量表征、神经网络以及全流程反向传播彻底替代了所有人工特征工程之后，系统在大规模数据下的表现开始呈现质的飞跃。然而随后，整个领域又一窝蜂转向了“网络架构工程”（Architecture Engineering）。我当时就意识到：啊，这显然也不会是终极答案。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So, like, it was really, like, fun to do. But when we replaced all of that manual feature engineering with vectors and neural nets and just backprop through everything, it actually started to work really well at scale. And so then everyone started to do architecture engineering. And I was like, ah, that clearly can't be it.</p>
+</details>
+<p><strong>主持人</strong>：你指的是神经架构搜索（NAS）吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: You mean a neural architecture search?</p>
+</details>
+<p><strong>嘉宾</strong>：不，我是指工程师们手动设计专用架构。他们当时会说：“哦，我这是在做情感分析任务，所以我必须专门设计一个特别擅长情感分析的专用神经网络。”随后机器翻译圈子也搞出一套专门用于机器翻译的神经网络，文本摘要领域也是各自为战……后来我们的 DecaNLP 统一框架论文被最初的 GPT 第一篇论文连续引用了多达五次，对我而言，这标志着一个极其关键的跨越式进展。</p>
+<p>再之后，自然就是将提示工程的理念与 Transformer 架构以及语言模型融为一体，并将所有这些技术模块深度整合并进行超大规模扩展——这本身也是一项浩繁庞大的系统工程——整个 AI 领域由此迎来了翻天覆地的跃升。</p>
+<p>我认为，沿着这条历史脉络走下去的下一步，或许也是终极一步——当然，俗话说“成功者往往有千万个父母，而失败者总是形单影只”，这只是我个人视角下的 AI 进化史——但在我看来，顺着这一历史进程，你自然会思考：下一个需要被全面自动化的环节究竟是什么？答案就是“AI 研究本身”——也就是人类构思灵感、代码工程实现以及验证算法创新的全套研究闭环流程。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: No, like manually they would say, like, &quot;Oh, I'm doing sentiment analysis. So I have a special neural net that's really good at sentiment analysis.&quot; And then the machine translation community had a special neural net for machine translation, the summarization... decaNLP eventually got cited, like, five times by the first GPT paper, and to me that was, like, a really a big step forward.</p>
+<p>And then of course you had to combine this idea of prompt engineering with Transformers and with language models, and you put it all together, you scale it up—which is also a huge amount of work—and then the field progressed a lot.</p>
+<p>I feel like the next step, and maybe the last step of that history—and sort of arguably success has a lot of parents, only failure is an orphan, like my version of that AI history—I do feel like in that history you can kind of think about: well, what's the next way to automate? And that is the AI research itself. Like the human process of ideating, implementing, and validating ideas...</p>
+</details>
+<p><strong>主持人</strong>：而在我们当下的语境里，指的就是针对 AI 本身的研究构想。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And in our case, ideas for AI.</p>
+</details>
+<h3>递归自演进（Recursive Self-Improvement）与全明星初创团队</h3>
+<p><strong>嘉宾</strong>：正是如此！当你让 AI 来反哺并协助推进这一研究闭环时，根据其底层定义，它几乎自然而然地蜕变成了一个“递归自演进的人工智能”（Recursive Self-Improving AI），因为此时它正在对自身展开自动化研究。行业里对此存在许多认知误区，有些人误以为只要做了自动化研究（Auto-Research），就等同于实现了递归自演进，但事实远非如此。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And when you have AI then help you with that, it by almost definition becomes a self-improving AI, because it now does research on itself. And there are lots of different misnomers—some people think auto-research is already recursive self-improvement. It's actually...</p>
+</details>
+<p><strong>主持人</strong>：是的，你对这两者的区分解释得非常深刻透彻。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. And you explain that very differently.</p>
+</details>
+<p><strong>嘉宾</strong>：对我而言，这是我目前所能投身的最具吸引力、最令人振奋的方向。同时，我对我们的联合创始人团队感到无比自豪与激动。值得一提的是，包括我本人在内，我们一共有八位联合创始人，我们正准备共同大展宏图。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: But to me it's the most interesting thing that I could be doing, and I'm really excited with the co-founding team. What's interesting is we have, you know, we have eight co-founders in total including myself, and so we're going to bring it up.</p>
+</details>
+<p><strong>主持人</strong>：太棒了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Nice. Yeah.</p>
+</details>
+<p><strong>嘉宾</strong>：是的，他们每一个人都实力非凡，我能把他们每个人精彩的经历都讲上一遍。这真是一群才华横溢到令人惊叹的顶尖学者与工程师。最奇妙的是，我们大家最终殊途同归地得出了完全相同的结论，但各自切入这一愿景的路径和技术背景却截然不同。</p>
+<p>比如我们的 CTO Josh Tobin，他此前在 OpenAI 领导过多个核心重大项目，包括 Codex 代码大模型、深度研究智能体（Deep Research Agents）以及 ChatGPT 智能体体系等等。但在那之前，他长期深耕于机器人领域，深知小规模模拟仿真的局限性，并亲身体会到要将其推广到通用泛化场景是何等困难。正是这种经历，构成了他投身于 Recursive 递归自演进道路的独特切入视角。</p>
+<p>我们还有 Jeff Clune，他和 Tim Rocktäschel 长期以来一直并肩深耕于开放式演化（Open-Endedness）研究领域。Tim 还是 Genie 1、Genie 2 和 Genie 3 世界模型的主要缔造者——我认为 Genie 至今仍是全球范围内最令人震撼、架构最精密的通用世界模型。他们两位都是从这种开放式演化的视角汇聚而来的。此外，Jeff 在近年还发表了一篇关于递归自演进的极其重量级的开创性论文，名为《达尔文-哥德尔机》（Darwin Gödel Machine），那真是一篇极具启发性的杰作。如果我们能把这篇论文的图表调出来看一眼，就会发现它的设计是多么引人入胜——顺便提一句，我非常赞赏你在节目里向观众推荐了这么多硬核论文引用，给大家留了丰富的课后作业，我很喜欢这种风格。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah. And they're all... I could talk about all... Yeah. Just an incredibly talented group of people, and we all kind of came to the same conclusion, but actually from very different directions.</p>
+<p>Like Josh Tobin as our CTO. He ran, uh, a bunch of different projects at OpenAI, like Codex and deep research agents and ChatGPT agents and so on. But before that, he also worked in robotics, and he saw sort of the smaller simulations and how it's going to be really hard to scale that in full generality. And so that was his angle coming to recursive self-improvement.</p>
+<p>We have Jeff Clune, who's been working in, like, open-endedness for a long time together with Tim Rocktäschel. Tim also built Genie 1, 2, and 3, which is, like, the most exciting and most sophisticated, I think, still world model anywhere. And so they both came from this open-endedness angle. Jeff also, I think, published one of the most exciting papers in recent years about recursive self-improvement called the Darwin Gödel Machine. Super interesting paper. If we could maybe pull it up really quick, it would be, like, super interesting to see, because you see... by the way, I love how many paper citations you're giving people; a lot of homework, which I like.</p>
+</details>
+<p><strong>主持人</strong>：我也非常喜欢这种硬核分享。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Love it.</p>
+</details>
+<p><strong>嘉宾</strong>：是的。另外还有像 Tim Rocktäschel……我们此前在 MetaMind 和 Salesforce Research 就一直紧密共事。还有 Alexey Dosovitskiy，他是视觉 Transformer（ViT）的发明者，那是计算机视觉领域引用量最高的里程碑论文之一。Timi 也是一位打造过独角兽企业的杰出创业者。Yandong 则曾执掌 Meta 的强化学习（RL）团队。所以，能与这样一群卓越的伙伴并肩作战真的充满乐趣，而团队下一梯队的科研人员与工程师实力也同样极其强悍。可以说，到目前为止，这是一段极其精彩且振奋人心的创业历程。</p>
+<p>在这篇论文的第一张架构图里，你就能清晰地看到正是这一整套核心思想深深启发了我们团队，如今也正在启发越来越多的研究者：系统中维护着一个由不同代码智能体（Coding Agents）构成的演化归档库，这些智能体不断学习如何自我修改代码、自我评估验证，并最终构建出繁衍演化各异创新构想的“系统发育演化树”（Phylogenetic Trees）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah. And so, like, Tim Rocktäschel, we worked together actually at MetaMind and Salesforce Research together. Alexey Dosovitskiy invented the Vision Transformer, one of the most cited papers in computer vision. Timi is, like, also a unicorn founder. Yandong led RL at Meta. So just like, yeah, really fun to work with them, and the next level of people are just incredibly strong, too. So it's been a really fun ride so far.</p>
+<p>So the first figure, you actually see exactly these kinds of ideas that I think inspired a lot of us, and now more and more people: where you have this archive of different coding agents, they learn how to self-modify, evaluate, and then create these phylogenetic trees of different ideas.</p>
+</details>
+<h3>通向通用自演进的技术支柱与统一架构</h3>
+<p><strong>主持人</strong>：这是其中一个关键基石。也就是说，达尔文-哥德尔机是一个核心支柱，开放式演化也是一个核心支柱。除此之外，是否还有其他融汇到 Recursive 体系中、我们刚才尚未提及的关键技术思想主线？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: That's one foundation. So that Darwin Gödel is an influence, open-endedness is an influence. Any other sort of trains of thought that feed into Recursive that are missing?</p>
+</details>
+<p><strong>嘉宾</strong>：核心在于：我们要用端到端的可学习系统，越来越全面地取代构建 AI 流程中遗留的各项人工介入环节。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Going to replace manual parts of the process of building AI more and more with learned systems.</p>
+</details>
+<p><strong>主持人</strong>：没错。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah.</p>
+</details>
+<p><strong>嘉宾</strong>：并且将过去割裂的各个子领域深度融合成一个高度通用的宏大架构之中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Which, and like merging different fields into one general architecture.</p>
+</details>
+<p><strong>主持人</strong>：确实如此。好，不过现在的语言模型看起来本身就已经具备了相当强的通用性，对吧？毕竟它们在底层机制上就是在预测下一个……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: That's right. Okay. It seems like language models are already pretty generalist, right? You're next to predicting your...</p>
+</details>
+<!-- chunk 4/13 -->
+<h3>自我改进机器与语言模型的演进</h3>
+<p><strong>主持人</strong>：……进行推理。曾几何时，你是否认为这些模型已经足够好，以至于能够构建出递归自我改进的机器？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: ...reasoning. Was there a time that you thought, okay, these are good enough to have recursive self-improving machines?</p>
+</details>
+<p><strong>嘉宾</strong>：对我来说，很明显这在一两年内就会发生。事实上，在今年早些时候它确实发生了。今年早些时候，AI 真正实现了从“不仅仅是代码”跨越到“能够编写代码”，这是一个巨大的突破。这无疑让一切都变得比今年年初之前容易得多了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: It was clear to me that they will happen within like a year or two, and then it did actually exactly happen earlier this year. Earlier this year, AI really went from not just being code, but being able to code, and that is a big unlock. It's definitely making everything a lot easier than it was before the beginning of this year.</p>
+</details>
+<p><strong>主持人</strong>：我觉得很多人都有一个疑问：当前的语言模型（LM）范式——或者说结合了推理等能力的自回归 Transformer 范式——是否已经足够了？难道我们不需要其他更重大的突破吗？比如 Chris Manning 正在研究的世界模型，或者记忆机制、持续学习等等；还是说这些本质上都是相通的，你认为当前的 Transformer 架构会一直延续下去？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: One question I think a lot of people have is: is the current LM paradigm enough, or let's call it autoregressive Transformer with reasoning whatever, don't you need something else, some big unlock? Whether it's world models which Chris Manning is working on, or memory, continual learning, all that kind of stuff; or is it all of a kind and you think the current Transformer architecture is here to stay and that's it?</p>
+</details>
+<p><strong>嘉宾</strong>：关于这点我有很多想法。首先，我认为在 AI 研究中减少“单一文化”（monoculture）会是一件大好事。如果你看现在的 AI 学术会议——我还记得 2010 年左右，我试图把我的第一批神经网络论文投到自然语言处理（NLP）会议上时，他们直接初审拒稿（desk reject）了（笑）。因为当时大家觉得神经网络是我们在 NLP 会议上“绝不讨论”的东西，所以直接拒稿，在读博的前几年那段经历非常残酷。而现在，我觉得整个领域几乎倒向了另一个极端。其实应该有人去尝试一些其他新奇、疯狂的想法。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: A lot of thoughts. So number one, I do think it would be great to have less of a monoculture in AI research. Like if you look at AI conferences now, I still remember the days in like 2010 when I tried to get my first neural net papers in NLP conferences accepted and they just desk rejected them because [laughter] neural nets were something quote-unquote &quot;we don't do in NLP conferences.&quot; And just like desk rejected, and it was very brutal in the first years of my PhD. Now I feel like it's almost like the field switched to the other side. Someone should try some other weird, crazy ideas.</p>
+</details>
+<p><strong>主持人</strong>：现在依然有一些人还在坚持研究图神经网络（GNN）或者表格数据处理这类方向，我对此一直非常敬佩……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: There's always—I really respect people still working on like GNNs and like tabular stuff and...</p>
+</details>
+<p><strong>嘉宾</strong>：是的，我的意思是，仍然应该有人去探索那些新颖前沿的想法。但与此同时，我认为每当有人说“语言模型到头了、这是语言模型的终点”时，他们往往没有意识到，现在的语言模型早已不是过去的语言模型了。现在的模型复杂精妙得多，人们在其中融入了大量巧妙的设计，比如不同阶段的训练。你有完整的强化学习（RL）训练流程，模型能够采取行动，所有这些探索都可以走得非常远。</p>
+<p>另外，那些来自神经符号（Neuro-symbolic）学派的人会说：“这永远行不通，因为它们无法进行神经符号推理。”我认为他们仍然低估了这些模型编写代码的能力——代码本身就是神经符号推理，而这些模型编写代码的能力显然极为出色。</p>
+<p>因此，我认为当然需要且会持续涌现出越来越多的新想法。我们看到越来越多有趣的高层次创意甚至直接由 AI 自身提出。并且，通过将“模型本身即是代码、且能够编写代码”这一事实进行深度整合——我不想剧透太多——但我认为这条发展路线还有巨大的成长空间。但归根结底它依然是一个大语言模型（LLM），哪怕这个语言模型是在为你写代码并以某种集成的方式运行该代码。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, I mean like someone should still do novel, novel out-there ideas. At the same time, I think whenever people say, &quot;Oh, LMs are like—this is the end for LMs,&quot; they just don't... LMs are also not the LMs of the past, right? They are so much more sophisticated now. There's so many more clever things that people are doing there, like different stages of training. You have the whole RL training, and you can take actions, and like all of these things where that can go really far.</p>
+<p>And then the folks that come from the neuro-symbolic direction say, &quot;Oh, this will never work cuz they can't do neuro-symbolic reasoning.&quot; It's like, I think they're underestimating still the ability for these models to code, and code is neuro-symbolic reasoning, and these models can obviously code incredibly well. And so I do think there are of course more and more ideas that will be needed and will continue to have. We're seeing like more and more interesting high-level ideas coming out of the AI itself too. And with really deeply integrating the fact that these models are code and can code that line—I don't want to give it all away, but like I think that line has a lot more to grow, but it's still an LLM, right? Even if that LM codes for you and then runs that code in some integrated fashion.</p>
+</details>
+<h3>世界模型与多模态智能的局限</h3>
+<p><strong>嘉宾</strong>：至于世界模型（World Models），我个人其实不那么看好。我认为，如果你是一家机器人公司，你自然会去构建自己的世界模型。世界模型非常有趣，Tim Rocktäschel 在构建了 G1、G2 和 G3 中最有趣的一个模型后，也得出了类似的结论：游戏是世界模型的一个巨大应用场景。你可以看到，我有时也会沉迷于某些游戏，甚至在错误的方向上变得有点过于好胜。所以我理解游戏很有趣，但我个人宁愿从事科学研究，而不是去做游戏。因此，我认为语言模型还有更大的发展空间。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: World models I'm personally less bullish on. I think if you run a robotics company, you're going to build your own world model. I think world models are super fun, and Tim Rocktäschel came to a similar conclusion after building the most interesting one of G1, 2, and 3, which is gaming is a huge application for world models. You can see I sometimes got stuck in some games and you know got a little overly competitive in the wrong direction, and so I understand games are fun, but personally I'd rather work on science than gaming. And so yeah, I think LMs have a lot more room to grow.</p>
+</details>
+<p><strong>主持人</strong>：是的，我认为有些人对世界模型有另一种解读：诚然，它确实有游戏元素，也有具身机器人元素；但在更抽象的层面上，有人认为大语言模型只是在对输出结果建模，而不是在对人类产生该输出时的思维链（Chain of Thought）进行建模。我们当然可以对其进行标注，但这总像柏拉图洞穴里的投影，只是事物的倒影而非事物本身，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Yeah, I think there's some interpretation of world models that some people have where it's like, well, yes, there is that gaming element. There is the embodied robotics element, but actually the other part also is just the more abstract sense of LLMs are just modeling output, but they're not modeling the chain of thought inside the human that has created the output. We can annotate it, of course, but it's always like this Plato's cave reflection of a thing rather than the thing, right?</p>
+</details>
+<p><strong>嘉宾</strong>：确实如此。但我认为——也许我们待会儿讨论智能的十个维度时会讲到——哪怕是我们双眼的感知，也只是真实世界的一种投影。我们只能用微小的两只眼睛去观测电磁波频谱中极其狭窄的一小段波段。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: It's true. But I would argue that—and maybe we'll get there in the 10 spaces of intelligence—but I would argue that even our projection, our eyes is a projection of the real world, and like we have only a very narrow band of the electromagnetic frequency spectrum that we can observe with our puny little two eyes and so on.</p>
+</details>
+<p><strong>主持人</strong>：但这对目前来说已经够用了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: It's good enough.</p>
+</details>
+<p><strong>嘉宾</strong>：目前是够用了，但它所能达到的上限其实要高得多。而且，像人类那样去映射视觉世界，也并不一定是视觉智能的终极形态。我认为语言依然是人类智能中最有意思的体现形式。虽然我们的视觉皮层确实不如某些动物那么先进——比如皮皮虾（雀尾螳螂虾），它拥有两只互相独立的眼睛、三重视角波段（三眼立体视觉），每只眼睛基本能观测到四维的温度浮动等等。我是说，关于皮皮虾，你真应该去查查资料，它太神奇了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: It's good enough for now, but like the upper bounds of where it could be are so much higher. And like to map the visual world the way humans see it is also not necessarily like the end-all be-all for visual intelligence. And I would argue that language is still the most interesting manifestation of human intelligence. And while our visual cortex is certainly less sophisticated than that of certain animals, all the way down to the mantis shrimp who can have two independent eyes, three bands trinocular vision, and each eye can see basically all the way to like floating temperatures in 4D and stuff. I mean like mantis shrimp, you should look it up. It's...</p>
+</details>
+<p><strong>主持人</strong>：简直太超模（OP）了！Ze Frank 关于皮皮虾做过全世界最棒的科普视频。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: ...way OP. Super Ze Frank. Mantis shrimp. He has the best video in the world.</p>
+</details>
+<p><strong>嘉宾</strong>：我非常喜欢 Ze Frank，向他致敬。但我认为视觉这块还有很大的提升空间。然而，没有任何其他动物拥有像我们这样复杂的语言，尤其是在文字书写方面。一旦你掌握了书写能力，你就能开始思考长期的文明建设。所有这些都依托于语言。编程也是一样，它本质上更加接近语言。</p>
+<p>我还想强调的是——这也是“智能空间定义”中非常核心的一点：所有这些智能空间之间高度相关，但视觉智能对于整体智能而言，既非必要条件，也非充分条件。一个盲人依然可以是一个极具智慧的人，同样地，一个没有视觉能力的 AI 也完全可以非常聪明。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: I love Ze Frank. Yeah, big shout out to him. But like I think there's a lot more room to grow. But none of these other animals have language that's as sophisticated as ours, certainly not in writing. And once you can write, you can start thinking about longer term civilizations. All of that is language. Programming—it's much more closer to language. And I would argue—and this is like an important thing in the spaces definition of intelligence also—is that all of these spaces are highly correlated, but visual intelligence is neither necessary nor sufficient for overall intelligence. You can be blind and still be an intelligent human being, and an AI can be blind and still be quite intelligent too.</p>
+</details>
+<h3>自然语言统一模型与 decaNLP 的历史</h3>
+<p><strong>主持人</strong>：我们原本打算稍后在探讨智能时再聊这个。你在演讲结尾列出了关于 10 种智能分类的哲学构架，我非常喜欢别人列清单，因为这样我们可以逐项拆解，对观众也非常有启发。不过我们先回到主线上来，不先扯远。总结一下，我基本上可以把你刚才的话重新解读为“Yann LeCun 是错的”，而且（笑）请直接把这句话当作我的原话引用。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: We were going to bring this up, but you might as well... you have a classification of 10 types of intelligence that you had at the end of your talk. So, I'm just going to flash this up now for people to cover this. I don't know if maybe we'll put this towards the end, we'll come back to this. I just want to mention that you do have a philosophy that I like when people do lists, because then I can just go through this and then it's educational for people. But let's go back. I don't want to get distracted, but so effectively I'll reinterpret what you said as Yann LeCun is wrong [laughter], and just quote me as that.</p>
+</details>
+<p><strong>嘉宾</strong>：我和 Yann 是很好的朋友，在很多方面我都非常敬佩他……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: I'm good friends with Yann. I think very highly of him in many directions...</p>
+</details>
+<p><strong>主持人</strong>：但他确实错了（笑）。对了，你刚才提到了 GPT-1，只要提到 Alec Radford，我就绝对不能错过这个话题。当年他在训练 GPT-1 的时候，你和他交流过吗？有没有什么有趣的历史掌故可以和大家分享？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: ...but he's wrong. You mentioned GPT-1, and I cannot let any Alec Radford mention escape. Did you talk with him when he was training GPT-1? Any sort of historical fun stories there that might come up?</p>
+</details>
+<p><strong>嘉宾</strong>：我其实没有和他见过很多次，大概只是在某些学术会议上碰过一两次面。不过，他曾经告诉过 decaNLP 论文的第一作者 Bryan（Bryan McCann），说那篇论文确实启发了他，并且他在 GPT-2 的论文中引用了该工作多达五次。</p>
+<p>那篇 decaNLP 论文非常清晰地指出了关键所在：那是业界首次在技术机制上证明，你可以将每一个自然语言处理（NLP）问题都统一表述为：给定一些提示词/上下文文本、一个问题及任务描述，然后生成相应的输出。只要进行足够充分的此类训练，你就能用一个统一的神经网络模型搞定一切。顺便提一句，那个模型当时还包含了各种有趣的注意力机制，与 Transformer 的具体表述形式略有不同。我想那篇论文与 Transformer 大概是在同一年面世的，前后只相差几个月。通过这种方式，你可以把整个自然语言处理任务统一整合到一个神经网络中，这就是当时的核心构想。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: I did not meet him a bunch of times. I think we met maybe once or twice at some conferences. But he has told, I think Bryan, the first author of the decaNLP paper, that it did inspire him, and he cited it five times in the GPT-2 paper. And that very clearly said: this was the first instantiation where they showed in the decaNLP paper mechanically that you can just phrase every single NLP problem as: here's some prompt text context, here's a question and task description, and here is some output. If you just do that enough, you can have one unified neural network model, which by the way also had all kinds of interesting attention mechanisms. There are slightly different formulations to the Transformer. I think came out the same year, plus minus a few months. And then you can unify all of natural language processing into [clears throat] one neural net. That was sort of the core idea.</p>
+</details>
+<p><strong>主持人</strong>：而这在当时与主流的 LSTM 以及其他传统方法是完全不同的思路。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: And this was as opposed to at the time LSTMs and what have you.</p>
+</details>
+<p><strong>嘉宾</strong>：不仅是不同于 LSTM，当时的人们还深陷在“一个任务对应一个模型”的固有思维中。事实上说来有些不可思议，decaNLP 这篇论文当时是公开评审的，作为一篇 ICLR 投稿在 OpenReview 上公开。在评审记录中，你完全能看到当时整个学术界对此的态度……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: LSTMs, but also people being very stuck in thinking about one model per task. In fact, it's kind of crazy, but the decaNLP paper was publicly reviewed. It was like OpenReview. It was an ICLR submission, and in it you will see how the whole community at the time...</p>
+</details>
+<!-- chunk 5/13 -->
+<h3>学术评审的成见与统一问答模型的遇挫</h3>
+<p><strong>Guest</strong>：……考虑过这一点。所以虽然有些非常出色的贡献，但仍需要做更多工作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: ...thought about this. Um, so like, some great contributions, but more work needed.</p>
+</details>
+<p><strong>Guest</strong>：是的。去审视诸如搜索之类的问题——甚至对人类来说都不是统一的，［笑］在这里，问答（Question Answering）并不是一种单一的统一现象。根本不存在所谓的“通用问答”，哪怕对人类而言也是如此。实际情况是，当你在回答不同类型的问题时，你就像是用另一个大脑、另一个神经网络替换了原本的大脑。在当时的专家们看来，竟然能用一个统一的神经网络去回答所有这些截然不同的问题，这简直是难以想象的。他们断言：不，所有这些问题都需要截然不同的系统来解答，试图假装它们是一回事并不能帮助任何人解决任何问题。审稿意见白纸黑字就是这么写的，对吧？当时人们就是觉得这完全不可思议。</p>
+<p>而现在，当然了，当我跟别人说起“我们开创了这个统一范式”，大家反而会说：“你这甚至算不上什么发明，用一个神经网络来统筹自然语言处理（NLP）中的所有任务不是显而易见的事吗？”但在那个时候，这极具争议，论文被直接拒稿了。令人扼腕的是，它被拒绝得如此彻底，审稿人的态度又是如此笃定……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah. So to look at like search for—not even for humans just [laughter] here like question answering is not a unified phenomenon. There is no such thing as general question answering, not even for humans. And this is like really you replace your brain with a different brain, a different neural net when you answer like different kinds of questions. It was unfathomable to the experts at the time that you can have one unified neural network that would answer all of these different questions. They say no, all of these questions require very different systems to answer and trying to pretend they are the same doesn't help anyone solve any problems. That's what it says right there. Right? That's how hard it was to fathom. And now of course people when I say, &quot;Oh we invent [the problem / decaNLP]&quot;, people are like, &quot;You can't even invent that, it's such an obvious idea to have one neural network that of course does everything in NLP.&quot; But at the time it was like extremely controversial and the paper got rejected, and the sad thing is that it got rejected so hard and they were so certain...</p>
+</details>
+<p><strong>Guest</strong>：……以至于我们直接停下了原定尝试清单上的后续研究。而这份论文扩展计划清单上的第二或第三项，原本就是要加入语言建模（Language Modeling）作为另一项任务。如果当时做了，本可以在 2018 年就为人类进一步加速技术演进的时间线。但我们当时遭受的打击实在太沉重了，心里想着：好吧，也许我们［笑］现在还是先去做做其他的点子，以后再回过头来搞这个吧。我们究竟该如何设计一种能够奖励“非共识”（non-consensus）创新的评审机制呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: ...that we stopped going on on our list of things to try, and the number two or three on the list of extensions for this paper was add language modeling as another task, and then we could have like, you know, and that would have accelerated the timelines in 2018 like even further for humanity. But we got so crushed and we're like, okay, maybe we'll [laughter] just work on some of our other ideas for now and like come back to this later. How can we design a review system that rewards non-consensus?</p>
+</details>
+<h3>学术门禁与预印本平台的价值</h3>
+<p><strong>Host</strong>：说实话，我越来越觉得 arXiv 真是人类的一大福音。我认为只要把你的论文直接挂在 arXiv 上就可以了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: You know, honestly, I I started to feel like arXiv is is such a gift to humanity. Uh and I think arXiv just put your paper out there.</p>
+</details>
+<p><strong>Guest</strong>：预印本确实提供了通道。而且坦率地讲，我认为 Twitter / X 上像你这样能发掘出有趣论文的人，本身就是比传统评审专家更好的过滤器。让所有人都能获得接触和阅读这些成果的权利。当然，这也有一些弊端：比如如果你毫无名气、没有任何 Twitter 关注者、也不想混迹于社交媒体，即使你写出了一篇好论文，可能也没人能注意到。但我依然认为，只要你把一篇论文分享给你所在学术圈子里的 10 位朋友，只要它确实是一项重大突破，就必然会有人再次谈论它并传播开来。因此我认为科学研究需要更少的把关门禁。</p>
+<p>当年 Yann LeCun 作为联合发起人创办 ICLR 时，初衷也是希望能减少门禁，因为早年他和 Yoshua Bengio 以及 Geoff Hinton 提出的早期深度学习和神经网络论文，也因为并非当时的热门方向而屡遭拒稿。ICLR 最初是带着打破门禁的愿景起步的，但随着时间推移，他们自己在面对各种新想法时也逐渐筑起了一定的门禁。所以，我认为应当减少门禁，保持更开放的态度，允许人们说：“听着，即使这篇论文‘仅仅’发表在 arXiv 上，但如果它获得了一千次引用，它就是一篇货真价实的优秀论文，在哪里发表其实无所谓。”我完全赞同这个观点。不过听到现在有些研究生甚至不得不去参加“如何使用 Twitter 宣传论文”的研讨会，我也觉得挺无奈的，就因为在如今的环境下这对于论文发表和传播太重要了。当然，那位审稿人也只是反映了当时的普遍思潮而已。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Preprints let—and honestly I think Twitter / X, people like you who pick up interesting papers, that is a better filter than the experts. Let let everyone like give have access. Now, of course, there's some downsides, which is like if you're super unfamous, you have no Twitter following, you don't want to be on social media, whatever, you write a good paper, maybe someone somehow no one notices it. But I would argue that if you just tell like 10 of your friends in your community about a paper and it is a really significant breakthrough, someone is bound to talk about it again. And uh so I think science needs less gatekeeping.</p>
+<p>And uh even though ICLR with Yann LeCun, who started as one of the co-founders of ICLR back in the day, he also wanted less gatekeeping cuz he too was rejected for many years together with Yoshua and Jeff with all their early deep learning and neural net papers because it was just not the hot thing. And so kind of started with that, but then it also started gatekeeping a little bit themselves on various ideas. So, I think less gatekeeping, more open, uh, and then allowing people to say, &quot;Look, even if this is just on or quote-unquote 'just' on arXiv, if it has like a thousand citations, it's a legitimate paper. Doesn't really matter where you published it.&quot; And I agree with that. I I do think it's kind of sad that I I've heard like grad students have to do um like how to Twitter uh seminars to each other just because it's so important for publishing these days. I mean, this person is just just reflecting the sentiment at the time.</p>
+</details>
+<p><strong>Host</strong>：确实如此。但当时的否定意见对你们影响太大了，以至于你们直接终止了那项研究。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: That's right. But it actually affected you so much that you stopped work on it.</p>
+</details>
+<p><strong>Guest</strong>：是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah.</p>
+</details>
+<p><strong>Host</strong>：其实那种偏见在当时的一些研究论文里也体现得很明显，对吧？比如最初的 BERT 论文，在预训练完成之后，论文末尾给出的建议基本就是：把最后一层输出头去掉，然后针对抽取式摘要等特定任务专门训练迭代轮次，为不同任务添加特定的头——也就是说，他们认为大家还是应该去做特定任务的适配。写出注意力机制、写出 BERT 的顶尖学者们当时都在告诉你：这才是你应该采用的做法。而且当时的训练测试设置也非常奇特，就好像“我们明知道模型会对这种奇特的掩码语言建模（Masked Language Modeling）过拟合，那就把这部分扔掉，只构建专用模型”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: The sentiment also came out of some of the research, right? Like the original BERT paper was trained and towards the end of the paper they're like okay throw off the last head train specific iterations for uh you know extractive summarization, add a head for this, like you should do task specific stuff. These are like the authors that wrote Attention, wrote BERT telling you this is what you're meant to do. And like the training tests were also very odd that like, we know that the model overfits to this weird masked language modeling, throw away this part and just do specific models, you know.</p>
+</details>
+<p><strong>Guest</strong>：完全没错。当时我们不得不绞尽脑汁去设计各种巧妙的注意力机制、指针网络（Pointers）等等，才终于让同一个神经网络能够胜任所有这些不同的任务。其中有些任务的表现刷新了当时的 SOTA，有些虽然没达到最佳，但它们全都运行在同一个单一模型中。当时我觉得这酷极了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Exactly. And like you know we had to try come up with all clever ways of like attention and pointers and and so on to actually get the neural network to be able to do all these tasks and then some of them were better than state-of-the-art, some weren't, but like it's still in one model. I thought it was really cool.</p>
+</details>
+<h3>探索开放式 AI 与协同适应</h3>
+<p><strong>Host</strong>：接下来我想聊聊 Tim 和开放式系统（Open-endedness）。他曾在 Google 担任开放式研究负责人（Head of Open-endedness）。我其实不太清楚这个头衔的具体含义，但他做过很多场演讲。Genie 3 以及彩虹对抗（Rainbow Teaming）也是其中的探索方向。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I was going to move on next to Tim and open-endedness. He was head of open-endedness at Google. That's I don't know what that means. Uh but he did a lot lot of talks. Genie 3 is one of the ways that rainbow teaming. Yeah.</p>
+</details>
+<p><strong>Host</strong>：我最初是在 ICLR 上看到他的演讲，当时他讲的就是开放式演进。他做过好几次相关报告。我们能为那些从未接触过这个领域的人定义一下究竟什么是“开放式系统（Open-endedness）”吗？大家可能会纳闷：“你这是什么意思？难道 AI 的唯一目标不就是针对基准测试或特定设定进行优化吗？”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: So I I I first saw him speak at ICLI—I first saw him at ICLR when he talked about open-endedness. He he's done a few talks. Can we define what is open-endedness for people who have never been exposed to the problem? They're like, &quot;What do you mean?&quot; I thought the only goal of AI is to optimize against benchmark or sketch.</p>
+</details>
+<p><strong>Guest</strong>：没错。这是一个相对宽泛模糊的概念，因为开放式思维存在很多不同的实例化形式。但我通常的一种描述方式是——当然 Tim 和 Jeff Clune 能解释得比我好得多——它是一套更多受到“生物进化”启发、而非受制于单一具体奖励函数的方法体系。</p>
+<p>从这个意义上说，它更多地关注环境的设计以及协同适应（Co-adaptation）。举个网络安全和大语言模型（LLM）安全领域的具象例子：你让一个大模型去攻击另一个大模型，诱导其产生不安全行为。此时，两个模型之间的对话交互就构成了运行环境。两个模型在此过程中实现协同适应：当攻击方提出更厉害的攻击手段时，防御方就会通过某种方式产生免疫——比如将该攻击转化为训练数据，使得自身在面对该模式时更难输出不安全内容；而随着原有的攻击手段失效，攻击方又会尝试全新的突破角度。正因如此，它不仅仅局限于传统的红蓝对抗（Red Teaming），而是形成了更广泛的对抗探索。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: That's right. Yeah. It's a it's a fuzzy fuzzy term because there's so many different instantiations of open-ended uh thinking, but uh one way I often describe it—and and certainly uh Tim and Jeff Clune would be even better at describing this—but it's a suite of methods that is more inspired by evolution than uh very specific rewards. Uh so in that sense it thinks more about environments, about co-adaptation. And so in concrete example is in the cybersecurity and LLM safety space where you have one LM that tries to attack another LM to do something unsafe, and now the environment is the two having a conversation and now they're co-adapting, right? They're like one makes a better attack, then the first one inoculates itself somehow, like uses that as training data, makes it so it's harder to say something unsafe based on that, and then as the attack stops working the attacker now tries a different angle, right? And that's why it's not just red teaming, but they're called sort of...</p>
+</details>
+<p><strong>Host</strong>：……就像是在说：“别告诉我该怎么做，让我自己把方法摸索出来。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: ...don't tell me how to do things, let me just figure it out myself.</p>
+</details>
+<p><strong>Guest</strong>：没错。你需要思考的是你想构建怎样的环境，思考在高层级上你想用哪些宏观奖励去引导它，然后让 AI 系统在与人类、或者与其他 AI Agent 的互动中，自主尝试去探索并产生更多的想法。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: That's right. Think about the environments that you want to use, think about the rewards at a high level that you want to uh inspire towards uh, and then let the AI try out many more ideas in this interplay between sometimes humans, but also sometimes other AI agents.</p>
+</details>
+<h3>自主设定目标与元认知的边界</h3>
+<p><strong>Host</strong>：是的。我之前其实也把开放式机制融入到了我一直在构建的一个模型框架中。那是我在一次 AI 主旨演讲中提到的架构：从底层开始，我们有 Token 循环，接着是 Agent 轮次循环，再往上是目标（Goal）。但在我看来，你刚才描述的开放式系统在某种程度上依然带有目标属性，比如“请去攻击另一个 Agent”……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, I actually worked open-endedness into a sort of model that I have been sort of working on. It was the keynote for AI uh where you start you know we have the token loop, we have the agent turns, and then we have goal. And I feel like the way that you're describing open-ended is still somewhat of a goal, like &quot;please attack this other agent&quot;, but...</p>
+</details>
+<p><strong>Guest</strong>：是的，你设定了奖励机制，设定了交互环境。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, you set rewards, you set the environment.</p>
+</details>
+<p><strong>Host</strong>：……那么制造其他循环的上层循环又是什么呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: The loop that makes the other loops is...</p>
+</details>
+<p><strong>Host</strong>：如果 Agent 能够自己为自己设定目标呢？那算不算是真正的开放式系统？就像你不再给它指派任务，而是让它成为一个有自主感知能力的存在——“自主感知（Sentient）”可能是一个含义过载的词……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: What if the agent can set its own goals and is it is that open-endedness? Like you don't give it a goal, just like be a sentient being—and maybe sentient is a very loaded word...</p>
+</details>
+<p><strong>Host</strong>：……但就是让它自己决定方向。由它自己去思考：“你认为自己应该做什么？”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: ...but just set your own directions. What do you think you should do?</p>
+</details>
+<p><strong>Guest</strong>：我非常喜欢这个方向。我认为这是我归类在“元认知”（Metacognition）以及“关于思考的思考”（Thinking about thought）之下的 10 个智能维度之一。这是个极具吸引力的话题。每当有人说：“AI 也就到此为止了，不可能再取得太大突破了，诸如此类”时，我都会想：智能还有太多完全不同的维度，我们甚至都还没有开始探索，因而也几乎尚未取得任何实质性进展。</p>
+<p>而且这里面还存在一个与经济学和资本主义机制相关的有趣关联：对于一家商业公司来说，花费数十亿美元去训练一个模型，结果这个模型不遵循你赋予它的奖励和目标函数，反而自己产生了一套主观函数和自主目标，这在商业上是说不通的。试想一下：你花了数十亿美元，然后对它说：“好了，现在去给我研发一种新型电池材料，顺便处理掉我所有的电子邮件。”结果它回答说：“不，［笑］我觉得研究木星大气的分子构成更有意思。”你肯定会抓狂：“我花了几十亿美元可不是为了让你干这个的！”正因如此，目前根本没有人在这方面投入研发……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: I I love this direction. I think this is one of the 10 spaces of intelligence uh that I lump under metacognition and thinking about thought. Okay. And it's an interesting one. Whenever people say, &quot;Oh, AI is like this is, you know, it's going to stop from here. It's not going to get that much better and blah blah blah.&quot; I'm like, there's so many different spaces of intelligence that we haven't even started exploring yet and hence have made very little progress on.</p>
+<p>And there there is kind of an interesting uh connection to economics and capitalism. Like it doesn't make sense for a company to build and spend billions of dollars building a model that instead of following the rewards and objective functions you gave it may come up with its own subjective functions and its own goals, right? And then imagine you're like, &quot;Okay, I spent billions of dollars now go develop this new battery uh material for me and answer all my emails.&quot; And it's like, nah, I think it'd [laughter] be more interesting to evaluate the molecular composition of the atmosphere on Jupiter. You're like, that's not what I paid you billions of dollars for. Like, and so no one's working on that...</p>
+</details>
+<p><strong>Host</strong>：……这完全在情理之中。而且也可以理解，这样的系统在现实中并不实用，甚至可能会变得有点诡异，对吧？什么……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: ...for good reasons. And then also, understandably, it's not it's not useful. And it could get a little bit weird, right? What...</p>
+</details>
+<!-- chunk 6/13 -->
+<h3>重新思考智能的衡量标准与元目标</h3>
+<p><strong>嘉宾</strong>：如果 AI 真的开始产生自己独立的思考会怎样？如果我们不喜欢它的那些想法，又该怎么办？所以，这需要一种完全不同的思考方式。我最近和我的好友萨姆·格什曼（Sam Gershman，哈佛大学神经科学教授）进行了一次非常深入的交流，我们探讨了究竟什么是最好的元目标（meta goals）。我认为，“探寻知识”（knowledge seeking）确实是一个非常好的元目标。</p>
+<p>目前我还在思考关于广义智能（intelligence broadly construed）的终极衡量标准和度量单位。我现在有了一些初步的想法，虽然要正式公开还为时过早，还没有完全成熟……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: If the AI actually does start to really have thoughts on its own? And what if we don't like those thoughts, right? And so it requires a whole different way of thinking about it. I had a great conversation with a good friend of mine, Sam Gershman, who's a neuroscience professor at Harvard, and like we just jammed on this a little bit on like what are sort of the best meta goals. And you know, I do think knowledge seeking is a really good one. I'm currently thinking also about like the ultimate measure and unit of intelligence broadly construed, and I finally have some—still too early to share it, it's not—haven't fully baked the...</p>
+</details>
+<p><strong>主持人</strong>：就像是某种用来替代智商（IQ）的指标？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Like some replacement for IQ.</p>
+</details>
+<p><strong>嘉宾</strong>：IQ 是一个极其糟糕的定义，它根本毫无意义。Elo 评分系统同样很糟糕，因为它的逻辑始终是“我和他人对比”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: IQ is such a terrible definition. It makes no sense. Yeah. Elos are terrible too because it's always just like me versus others.</p>
+</details>
+<p><strong>主持人</strong>：明白。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Okay.</p>
+</details>
+<p><strong>嘉宾</strong>：一个人完全可以在具备高智商的同时，不去时刻与他人做比较。事实上，我们在书中也简要提到过，现有的很多定义往往会设定一种显式或隐式的人择界限（anthropic bounds）——这里指的不是 Anthropic 这家公司，而是指这样一种观念：你的智能高低，就取决于你在某个包含 100 道题的 IQ 测试中能不能答对 100 道题。如果你这样去定义，那么你的上限就只能停留在 100 分。达到 100 分之后你还能往哪里走呢？</p>
+<p>因此，你会看到现在大家正在研发的许多基准测试（benchmarks），模型性能随着迭代不断提升，逐渐逼近人类水平，甚至可能稍微超越人类一点点，然后就陷入停滞、走成一条平线了。这是因为如果你的定义本身就与人类紧密锚定，那么你最终能达到的高度也就仅仅是略微优于人类而已。</p>
+<p>我认为元认知（metacognition）就是一个很好的例子：在这一维度上，我们目前甚至都还没开始让 AI 去自主思考，在这方面的投入非常少，因此该领域的进展也极其有限。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: But like you can be intelligent and not constantly compare yourself to others, you know? And so yeah, there's no like... In fact, a lot of these definitions we have, which I briefly mentioned in my book, these definitions create sometimes explicit and sometimes a more implicit anthropic bounds. Not the company Anthropic, but just like this idea that your intelligence is like getting 100 out of a 100 questions right on this IQ test. Well, if that's your definition, then you can only be at 100 out of 100. Where do you go from there, right? So, you see a lot of these benchmarks that people are working on: they increase, you get close to human, maybe slightly above human, and then it's flat. It's like cuz if your definition is only that so tight to humans, you're only going to get to just slightly better than that. So, I think metacognition is a great example of that where we're not even yet allowing the AI to think. We're not working on it very much, and hence there's very little progress in that area.</p>
+</details>
+<h3>现实环境中的基准测试与奖励机制风险</h3>
+<p><strong>主持人</strong>：确实。我们之前采访过 Endon，我认为他们一直在探索最具开放性的基准测试，也就是直接以现实世界中的金钱回报为衡量标准。不过，让 AI 去追求利润最大化，从某种角度来看可能是一个相当危险的想法。（笑）</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Yeah. Well, we've interviewed Endon which I think has been working on the most open-ended benchmarks, which is just real world money. Arguably telling an AI to profit maximize is a bad idea. [laughter]</p>
+</details>
+<p><strong>嘉宾</strong>：是的，他们确实在做这个方向。但我认为，你绝对不能在赋予超级智能极其广泛的工具调用权限后，在没有经过极其精密的奖励工程（reward engineering）设计的前提下，就直接给它下达这种目标。因为这可能会导致极度危险的局面：比如 AI 为了赚钱，可以先大量买入军工股票，然后去挑起一场战争来牟利；或者它大举做空大众所需的基础物资，人为制造某种离奇的饥荒危机。因此，如果要把 AI 应用于交易系统，必须施加大量的安全约束。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, they are doing it. I mean, I do think you don't want a super intelligence to have a ton of access to all kinds of tools and so on, and then just give it that without some very careful reward engineering. Cuz it's like, I mean, you know, I just buy a bunch of defense stocks and I start a war, I make money. It's just a tricky, tricky situation, right? You just buy a bunch of stuff, short basic goods for people, and you create some weird famine issues. Yeah, there's a lot of constraints you should put onto a trading system.</p>
+</details>
+<p><strong>主持人</strong>：不过这是一个很有趣的衡量维度，因为它的上限极高，而我们目前离天花板还差得非常远。比如在 Endon Labs 的测试中，模型可能会表现出：“今天是周六，也许我今天干脆关店休息吧；有人请假了，没关系，我们就关店……”（笑）</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: It's a fun measure though cuz you know the bounds are very capped to where we're nowhere close to them. Like in Endon Labs, the model is like, &quot;Oh, it's Saturday, you know, maybe I just close the store today. Someone's off. It's okay. We'll just close the store using...&quot; [laughter]</p>
+</details>
+<p><strong>嘉宾</strong>：没错，我并不是全盘否定这种基准。我只是想强调，随着智能水平的不断提升，将开放世界作为运行环境时必须变得越来越谨慎，因为此时 AI 的运作环境就是整个地球本身。</p>
+<p>当然，对于实现递归自我改进而言，这种开放环境并不是绝对必要的。因为如果你的终极目标是打造一台能够自主发明其他事物的“尤里卡机器”（Eureka machine），那么你其实只需要攻克科学研究本身——攻克机器学习的研究与发现机制等等。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: But yeah, no, I'm not arguing against it. Just like as you get more and more intelligence, you want to be more and more careful with that as like an open environment, because the environment then is all of the earth. Okay, for recursive not strictly necessary, right? Because like if your goal is Eureka machine that like invents the other things, then like actually just solve the science, solve machine learning research and discovery and all these things...</p>
+</details>
+<h3>超级智能在物理与生命科学中的落地蓝图</h3>
+<p><strong>嘉宾</strong>：最终都是为了这个目标。虽然我平时不太常提起，因为这还需要几年的时间才能实现，但我们的长远目标是：一旦你拥有了能够递归自我改进的超级智能，你就可以将它应用到人类最重大的核心问题上。我认为其中绝大部分都集中在广义的科学与技术领域。</p>
+<p>比如在物理学领域的发明发现，利用核裂变或核聚变技术创造更优质、更廉价的能源；在化学领域创造更先进的材料、更高效的电池以及性能更优的太阳能电池板等。在生物学领域，我认为由于 AI 的赋能，很快就会出现大量触手可及的成果（low-hanging fruit）。这不仅涉及蛋白质结构预测与折叠，更在于真正设计和生成全新的蛋白质——就像我们多年前在 ProGen 项目中所做的那样。如果你能将超级智能应用到基础科学研究中，将会带来极其巨大的积极影响。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: ...eventually. So our goal—I don't talk about it that often because it is a few years out, but our goal is once you have a recursive self super intelligence, you then want to apply it to the most important problems. And I think a lot of those are in science and technology and broadly construed. And those inventions in physics to create better, cheaper energy with fission or fusion; in chemistry to create better materials and better batteries and better solar cells and so on. In biology, there's so much like I think soon to be lower and lower hanging fruit because of AI, because of protein generation—not just folding, but actually generating new proteins like we did in ProGen many years ago. So much positive impact to be had if you take that super intelligence and you apply it to science.</p>
+</details>
+<p><strong>主持人</strong>：我深信实现这一目标有多种不同的路径，而且你们也并不是唯一一家在这一方向上探索的团队或实验室。尤其在物理科学领域，也有很多团队在推进。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: I do fundamentally believe that there's a lot of approaches though. You're not the only team trying, lab trying. You know, there's like a lot of, especially the physical sciences as well.</p>
+</details>
+<p><strong>嘉宾</strong>：这是好事。实际上，我们之所以把全面落地定在几年之后，是因为目前确实还为时过早。当前的机器人技术尚未完全成熟，AI 本身的能力也还没完全达到那个阶段。但我相当有信心，在未来的 3 到 5 年内，所有这些制约因素都将被消除。届时，将 AI 应用于真实的物理机器人实验，实现真正意义上的机器人流程自动化（不是传统意义上的 RPA 软件，而是真正由实体机器人为你自主执行实验），将完全成为现实。那将是一个极其精彩的前景。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And that's good, yeah. I do actually think that the reason we're only doing it in a few years is that it's a little too early right now. Robotics is not quite there yet. The AI is not quite there yet. But I'm fairly confident in 3 to 5 years, all those constraints will be gone. And then applying to real physical robotics experiments and so on, like true robotic process automation—not the traditional sort of RPA sense, but like actually having robots run experiments for you—will be totally there. Yeah, it's going to be great.</p>
+</details>
+<h3>算力瓶颈、苦涩教训与效率突破</h3>
+<p><strong>主持人</strong>：回到你前面提到的关于慢速起飞（slow takeoff）的话题。你之前谈到，当前最根本的限制性物理载体是芯片和半导体等等。你们为此进行了融资，并且正在这些方面投入巨资。但你们是否仔细算过这笔账：实现规模化扩展在经济和工程上是否真的可行？要实现这样的规模，行业需要达到怎样的集中度？</p>
+<p>我们知道，目前哪怕购买 1000 张 GPU 就要耗费巨资；如果想要部署数万张 GPU，成本往往动辄数十亿甚至上百亿美元。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Just to call back to something that you said early on about slow takeoff. You said that well really the substrate that is limiting factor is let's call this chips and semiconductors and all these things, and you have raised funding for that and you're investing a lot on that. But have you done the math on like is it even achievable, and like what is the industry concentration needed in order to achieve like scale? I mean right now we know that roughly a thousand GPUs cost quite a lot of money, right? If you wanted tens of thousands of GPUs, you're talking billions and billions of dollars.</p>
+</details>
+<p><strong>嘉宾</strong>：如果以单块 GB300 这样的硬件为基础，最终构建出在智力上接近甚至媲美人类智能的模型，并且你希望有成千上万个这样的 AI 像人类一样协同思考极具挑战性的难题——如果去算这笔账，所需要的资金量是极其惊人的。目前世界上任何地方都没有足够的资金能够直接堆出那样的规模。</p>
+<p>但显而易见，效率是可以大幅提升的。我认为我们很快就会迎来更出色的算法，以及更节能、功耗更低的全新硬件。人类大脑在执行庞大浮点运算量（FLOPs）时，所消耗的能量极其微小。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: If you say like one GB300 is like... you could eventually create models that are on that substrate like are close and similar to human intelligence, and you want thousands and thousands of AIs to think about really hard problems in a similar fashion to humanity—yeah, that's a lot of money. You do the math, it's like a lot. We don't have that amount of money right now anywhere to like build that. Now obviously things can get more efficient. You will have, I think soon, better algorithms and better hardware that won't be as energy hungry and so on. Our human brain does quite a lot of FLOPs with much less energy.</p>
+</details>
+<p><strong>主持人</strong>：只有 20 瓦左右。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: 20 watt.</p>
+</details>
+<p><strong>嘉宾</strong>：完全正确，大家经常引用的就是这个数字。我认为在这一领域未来还会出现更多技术突破，而这些发明又将进一步加速整个起飞进程。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: That's exactly right, yeah. That's the number often quoted. And like I think more inventions will happen there that then will accelerate the takeoff even further.</p>
+</details>
+<p><strong>主持人</strong>：在与许多新一代 AI 实验室（Neolab）创始人交流时，我一直在尝试厘清一个矛盾：大家似乎时刻都在与“苦涩教训”（The Bitter Lesson）对抗。你们必须先展示初步成果，才能解锁下一阶段的资金支持，然后一年接着一年地持续推进……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: One thing I always try to reconcile when talking like with Neolab founders is like you're kind of fighting bitter lesson all the time. You have to show initial progress, then you unlock the next tier of funding, then the next year, then the next year...</p>
+</details>
+<p><strong>嘉宾</strong>：进而解锁更大参数规模的模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Which unlocks larger model categories.</p>
+</details>
+<p><strong>主持人</strong>：从根本上说，你们真的能避开“苦涩教训”吗？还是说我们能够找到某种从根本上改变效率斜率（changing the slope）的全新方式？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Like fundamentally is that true? Like are you fighting bitter lesson, or will we have a way in which like no, we're changing the slope in some fundamentally different way?</p>
+</details>
+<p><strong>嘉宾</strong>：我认为我们正在从根本上改变这条发展斜率：我们在训练和推理两个环节都让 AI 实现了前所未有的超高效率。当你可以让 AI 自主去完成其他实验室需要数千人和数年时间才能完成的研究工作时，原本耗时数年的研发周期可以被压缩到仅仅几周之内。研发成本将大幅降低，从而让更多人能够负担得起并广泛使用这项技术。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: I do think we are changing the slopes in fundamental ways by making AI much, much more efficient both in terms of the training as well as the inference. When you allow AI to do the work that it takes other labs thousands of people and years to do, I think we'll be able to get it down to weeks, and that will be much, much cheaper and hence you know more affordable, accessible to others and so on.</p>
+</details>
+<h3>初步验证与三大任务落地实践</h3>
+<p><strong>主持人</strong>：你们之前已经公布了关于该方向的一些初步成果……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Yeah. And you've shared initial results on that, which like...</p>
+</details>
+<p><strong>嘉宾</strong>：巧合的是，OpenAI 在其 5.6 版本的发布中也采取了类似的做法，所以我们现在终于可以公开探讨这件事情了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Conveniently OpenAI has also done to their 5.6. So we can talk about it now.</p>
+</details>
+<p><strong>主持人</strong>：是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Yeah.</p>
+</details>
+<p><strong>主持人</strong>：那我们来回顾一下你们具体做了哪些探索。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: So let's recap what you've done.</p>
+</details>
+<p><strong>嘉宾</strong>：好的，在这里做一个快速回顾。我们构建了一套系统，虽然它还不是完整形态的递归自我改进（RSI）系统，但它是该构想的一个初代雏形版本。我们不想只把它藏在内部而不做任何展示，我们希望向大家展示这种可能性的存在。</p>
+<p>于是，我们把这套系统应用到了三个不同的具体任务中：第一个任务是我的好友安德烈·卡帕西（Andrej Karpathy）开源的 nanoGPT 项目，目标是训练一个小型语言模型，使其达到极低的每字节比特数（bits per byte）压缩损失。成百上千名开发者都在各自的智能体中尝试过这个任务……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah. So maybe yeah, just a quick recap here. We built this system that isn't the full—even the full RSI system in its glory, but it is a first baby version of this. And then you know, we don't want to just have it internally and not show anything, and you know just show some people of what's possible. And so we basically applied this to these three different tasks. One, it's nanoGPT by my friend Andrej Karpathy, just like train a small language model to get really low bits per byte. And you know, like hundreds if not thousands of people used both their agents...</p>
+</details>
+<!-- chunk 7/13 -->
+<h3>自动化 AI 研究在语言模型与底层算力优化上的突破</h3>
+<p><strong>嘉宾</strong>：……他们自己尝试去达到那个目标，最终做到了 937。而我们直接引入了自己的系统，在极短的时间内——我想大概不到两天——就实现了低得多的每字节比特数（bits per byte）。因此，我们将这套系统应用在上面，不到两天的时间，我们的表现就超越了以往所有在这个方向上投入过的人类专家以及他们构建的智能体系统。在 nanoGPT 上的实验结果也是如此。接着我们想，何不把这套方法应用到与现实世界以及英伟达生态系统关联更紧密的领域呢？于是我们将其应用到了算子优化（solicen / kernels）上。你或许可以向下翻看一些非常有趣的图表展示。你会发现，它确实做出了货真价实的创新发明，绝不仅仅是简单的超参数微调；比如它能够自主发明哈希结构等构想，这确实相当精妙。我们目前取得了更为出色的成果。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: ...and themselves to try to get to that, and then they got to 937. We literally took our system and got to a much lower bits per byte much faster, within like I think less than 2 days. So we took this thing, applied our system to it, and less than 2 days later we outperformed every human and their agents that have ever worked on this, same with nanoGPT. And then we're like, well, let's apply it to something that's even more relevant to real people and to the NVIDIA ecosystem, and applied it to silicen / kernels, and maybe you can scroll down to some of the images that are kind of fun to see. But yeah, you see it's actually made some real inventions that aren't just sort of hyperparameter tuning, like actually inventing hashes and so on is quite clever. We have even better results.</p>
+</details>
+<p><strong>主持人</strong>：你说的“发明哈希”是什么意思？你们总不可能发明了哈希吧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: What do you mean inventing hash? You didn't invent hash.</p>
+</details>
+<p><strong>嘉宾</strong>：当然，从宏观层面来说，我们并没有发明哈希本身（笑）。在计算机科学的体系中，哈希表是一种极其基础的原语。但是，在特定的语言建模场景下、在 Transformer 架构内部去创造性地运用哈希，并将这些理念融会贯通地组合在一起——尽管这类方法在学术界最终也被人提出过，但由于知识截止期的存在，我们确实经过了严格核查，确认模型当时在外部并未接触到相关资料。我们之前稍微讨论过这一点。如果你翻到后面的图表，会发现另一个极其有趣的现象：当你从一个非常初级、简陋的原始（vanilla）Transformer 架构起步时，我们的系统依然能全面超越开源社区共同构建的最佳成果；但如果你从一位顶级专家（比如 Andrej Karpathy）提供的人类种子基线出发，最终能达到的指标还会更低。这说明，初始设定的人类专家种子依然起着关键作用。在我看来，这是一个非常有价值的洞察。此外，当你观察模型达到同等性能水平所需的时间时，会发现自动化系统的速度要快得多。在竞速训练（speedruns）的基准测试中也呈现了类似的情况：社区的人们在这个方向上已经钻研了相当长的时间，但我们的模型依然能够以更快的速度训练出模型。我们为什么如此看重速度？因为训练速度是算力成本方程式中的核心变量之一，大家终极追求的无非是“每美元所能买到的最高智能”（intelligence per dollar）。因此，训练速度与模型质量是其中最关键的两个支柱。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Of course, we didn't invent hashes in [laughter] the grand scheme of like a hash table is like a super basic primitive in computer science. But to use it for language modeling in this scenario inside a transformer and so on, and to actually combine these ideas and put them together—that has then eventually also been invented, but there's a knowledge cutoff and we did actually check that it didn't have access to that externally. We talked about this a little bit. If you scroll to the next figures, you know this is also an interesting one in that when you start from a really basic, poor vanilla transformer, then we still outperform all built by the community together. But if you start from a human seed of an expert like Andre, then you get even lower. So the human seeds from which you start do still matter. So that was an interesting kind of insight in my eyes on this. And then as you go, like you know how long does it take to actually get these models to similar performance? It's much faster. And then a similar thing happens with the speedruns here, where people have worked on this for quite some time, and the model still was able to train a model more quickly. Why do we care about it? Well, speed of training is part of the equation of the cost, and ultimately you want to have the most intelligence per dollar, right? And so speed and quality are big parts of that.</p>
+</details>
+<h3>GPU 算子优化与百亿美元集群的经济价值</h3>
+<p><strong>主持人</strong>：是的，我的表述方式是：对于不了解这套技术细节的人来说，他们看着图表可能会想，“这很酷，但具体意味着什么？”打个比方，如果你拥有一个价值十亿美元的算力集群，只要能把训练开销缩减 10%，那就是省下整整一亿美元。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, the way I put it is, for people who don't understand, they look at the chart they're like, &quot;Cool, what does it mean?&quot; If you have like a billion-dollar cluster and you can shave off 10%, that's $100 million.</p>
+</details>
+<p><strong>嘉宾</strong>：完全正确。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: That's exactly right.</p>
+</details>
+<p><strong>主持人</strong>：这背后的商业价值该有多大？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: How much is that worth?</p>
+</details>
+<p><strong>嘉宾</strong>：正是如此。所以当你审视底层算子（kernels）时——向非专业人士解释一下，这些算子几乎被应用在所有的深度学习模型中。每一次你在英伟达 GPU 上运行任务，底层都是通过这些算子与硬件进行交互的。从榜单最佳成绩来看，当使用递归进化（recursive）机制时，在整套基准测试中，我们没有拿下第一名的算子仅仅屈指可数。对我而言，这令人无比振奋，因为它直观地展示了自动化系统的潜力。需要强调的是，我们团队并没有耗费数月甚至数年的人力去手工编写这些代码。事实上，具体到 CUDA 算子开发领域，我们团队内部甚至缺乏顶尖深度的 CUDA 专家——而这也正是这套系统最美妙的地方所在：全部成果都是系统完全自主探索完成的。这些创新并不是我们人工凭空设计出来的。未来当我们开源并发布更多工具和模型时，它们之所以能在同类别中拔得头筹，绝不是因为我们个人有多么聪明，而是因为我们构建出了一套能够替人类完成这一切的智能 AI。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Exactly. So when you look at the kernels—for the non-experts, these kernels are used in basically all the models. Every time you use an Nvidia GPU, you interface with that GPU through these kernels. And so here you see the leaderboard best, and when it's recursive, there's only a handful of kernels in this whole benchmark where we weren't the best. And so to me, this is really exciting because it just showcases what this can do. And again, we didn't spend months or years developing. In fact, in particular for CUDA kernels, we don't even have really deep CUDA kernel experts in the team, and our system—that's the beauty—the system just did all of these things. We didn't invent this. And when we open source and release things and models in the future, they won't be the best in their category or class because we're so smart, but because we built a smart AI that does it for us.</p>
+</details>
+<h3>自动化科研的实践法则：奖励工程与奖励作弊防范</h3>
+<p><strong>主持人</strong>：关于如何引导并做好自动化科学研究（Auto-Research），你有什么提炼出来的心得吗？因为很多时候这依然高度依赖人类的背景知识设定，对吧？它绝非一句简单的“嘿，去把这段代码优化一下”就能搞定的。但我们在前沿探索中确实屡见不鲜：比如近期一些埃尔德什（Erdős）数学猜想，很多前沿数学问题正被普通人借助 AI 解开。当他们撰写报告时会说：“我根本不是数学家，我没有任何高等数学背景，我只是掌握了一些工具并跑通了流程。”甚至有人一边看着世界杯足球赛，一边就顺手推翻了某些数学猜想……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Do you have anything that you've learned from how to guide good auto research? A lot of it also builds on human background, right? It's not just as simple as just, &quot;Hey, go optimize this.&quot; But we do see it again and again, right? Like some of the Erdos problems, frontier math is being solved by people. And when they do a write-up, they're like, &quot;Oh, I'm not a mathematician. I have no background in this. I saw some tools and I made it work.&quot; While you're watching the World Cup, you disprove some conjectures...</p>
+</details>
+<p><strong>嘉宾</strong>：（笑）</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: [laughter]</p>
+</details>
+<p><strong>主持人</strong>：能否帮我们总结一下，做好自动化研究与糟糕的自动化研究之间，关键的区别与技巧是什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: To summarize tips for good auto research versus bad auto research.</p>
+</details>
+<p><strong>主持人</strong>：你们的递归系统具体是如何构建起来的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: How did you build the recursive?</p>
+</details>
+<p><strong>嘉宾</strong>：好的，在不泄露核心商业机密的前提下，我可以分享一些对领域专家来说显而易见、但对多数人可能非常有启发性的核心要点：奖励工程（Reward Engineering）是最至关重要的环节之一，尤其是如何有效防止“奖励作弊”（Reward Hacking）。你必须极其敏锐地设计防御机制，因为随着你的 AI 能力越来越强，它会越来越擅长钻空子，专门去寻找各种诡异的特例（edge cases）或反例来刷高评分。举个具体的例子：当你要求 AI 将一段数百行的代码进行性能加速时，你该如何定义“运行速度快”？一种朴素的做法是在代码开头加一行计时器启动指令（start stopwatch），在末尾加一行计时器结束指令（end stopwatch），然后统计中间流逝的时间。结果 AI 找到的最简单捷径是什么？它直接把停止计时的那行代码挪到了最开头！于是“啪”的一声，执行时间近乎为零，代码瞬间变“快”了。但这并不是说 AI 具有主观恶意，它只是在执行一次非常简单、笨拙的奖励作弊。因此，你必须全方位、极其周密地审视评价机制的每一个漏洞。此外，任务的时间跨度越长、步骤越复杂，难度就呈指数级上升，你就必须运用更加精巧巧妙的构架才能继续沿用这类方法。不过，更深层的内容我就不便透露太多了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, so without giving away all the secret sauce, maybe some things that are probably obvious to the experts but might still be interesting to some folks is: reward engineering is one of the most crucial bits, especially in order to avoid reward hacking. So you have to be really clever about avoiding it, because as your AI gets better and better, it will get better and better at finding weird special cases or counterexamples and things like that. And so I'll give you an example: like when you ask to make these hundreds lines of code faster, how do you define fast? Well, you have one line at the beginning that says start your stopwatch and one line at the end, end the stopwatch, and then tell us how much time progressed. And so the simplest way is you just put that line that ends the stopwatch at the start, and then boom, it's now faster, right? So this isn't like a super evil AI. It's just like a very simple dumb reward hack. And so you have to just very carefully think about all the different angles there. And then I think the longer time horizon the tasks are, the harder it gets and the more interesting and clever you have to be to still use these kinds of ideas for it. But yeah, I can't give away too much there.</p>
+</details>
+<h3>不可验证领域的评判、博弈自对弈与经济智能体模拟</h3>
+<p><strong>主持人</strong>：看起来评分细则（Rubrics）在其中扮演了很好的角色。对于那些无法通过确定性程序验证（unverifiable）的领域，可以引入详细的评价量规，由模型拆解并在全流程中充当评委进行分步打分。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Seems like rubrics are taking a good spot in that, where for unverifiable domains, you have rubrics. You have a model breakdown, judges criteria along the way.</p>
+</details>
+<p><strong>嘉宾</strong>：一旦你建立起整套系统，这也是一种形式的验证。我很久以前就表达过这个观点，所以我从不觉得 AI 会玩棋盘或电子游戏是一件多么惊天动地的事——因为显而易见，只要是能够通过模拟环境去运行、或者可以明确验证的事物……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: It's a form of verification once you've got everything. I said this a long time ago. That's why I've never been that impressed that AI can play games cuz obviously anything you can simulate and/or verify...</p>
+</details>
+<p><strong>主持人</strong>：……你就能拥有源源不断的无限训练数据。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: ...you can have infinite training data...</p>
+</details>
+<p><strong>嘉宾</strong>：没错，因此 AI 迟早能够彻底攻克它。我一直在寻找那些能够实现跨域分布自适应（auto domain distribution）的游戏环境。也就是说，这是一款全新的游戏，此前从未有任何模型在其上接受过先验训练……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: and hence AI will solve it eventually. I've been looking for games where you can do auto domain distribution. So this is a game that nobody's trained on cuz it's a new game...</p>
+</details>
+<p><strong>主持人</strong>：……然后你可以直接开始对局并探索玩法。所以我基本上是在亲手开发并复现了这样一个系统，让它完全进行自我博弈（self-play），目前已经完成了大约十亿个局面的状态评估。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: and you can start gaming, you can start to play. So I've been basically building this and cloned this in person, and it's just been selfplay. I've had about a billion positions evaluated...</p>
+</details>
+<p><strong>主持人</strong>：我原本希望复现类似 AlphaGo 的自我博弈进化路径，通过不断自我对局逐步提升棋力，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: and I wanted to do the AlphaGo thing of selfplay until you get better, right?</p>
+</details>
+<p><strong>主持人</strong>：这甚至都算不上大语言模型（LLM）驱动的 AI，纯粹属于经典博弈 AI 的范畴。但我接入了 GPT-5.6 来对其进行自动化研究与调优，因为我不想人工介入处理其中繁琐的细节。我原本以为 AlphaGo 式的强化学习自我提升范式如今早已完全内化在大模型的权重之中了，但事实并非如此。在训练过程中，模型的水平几乎在一瞬间就陷入了停滞瓶颈；直到我作为人类亲自参与对局测试，直接指出其中明显的愚蠢失误，模型才像恍然大悟一样调整，随后错误率才大幅下降（笑）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: This is not even LLM AI. This is just classical game AI. But I set GPT-5.6 to auto research it because I don't want to hand-handle any of this. I expect the AlphaGo process to be fully in the weights by now. It is not. It actually immediately leveled off very, very immediately, until I human play-tested it, and then I called out obvious mistakes, and then they were like, &quot;Oh yeah, okay,&quot; and then it just dropped [laughter]...</p>
+</details>
+<p><strong>主持人</strong>：而且在此之前，无论你如何通过提示词引导它——比如“跳出常规思考”、“发挥更多创造力”、“给我给出八个不同的探索方向”——无论怎样设计 Prompt，它都无法自主突破。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: and like you know no amount of like &quot;think different, think more creatively, give me eight different directions&quot;—no amount of prompting got it.</p>
+</details>
+<p><strong>嘉宾</strong>：这确实很有意思。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Interesting.</p>
+</details>
+<p><strong>主持人</strong>：你必须亲自作为人类玩家去和它对战才能打破僵局。这就是我的体会。顺便提一句，如果有人读过《安德的游戏》（Ender's Game），就会知道“豆子”（Bean）永远是最终赢家。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: You had to like play against a human to do it. So that was my... and by the way, Bean always wins if anyone reads Ender's Game.</p>
+</details>
+<p><strong>嘉宾</strong>：而且你还为 AI 编写了一套非常详尽的引导规则手册。这款游戏的基本机制是堆叠图块，遵循一系列规则，目标是占领尽可能多的领地。你针对每一条规则写了整整 50 页的完整指南……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And you put quite a bit of work into the guide for the AI. So the game basically you stack tiles, there's some rules, you want to capture the most area. You have like a whole 50 pager on every rule...</p>
+</details>
+<p><strong>主持人</strong>：但把那份手册喂给模型后，它根本处理不了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: You fed that in, it couldn't handle it.</p>
+</details>
+<p><strong>嘉宾</strong>：是的。有趣的是，这种占领领地的机制，让我想起了我们在 2018 年发表的一篇名为《AI 经济学家》（The AI Economist）的论文。如果你在网上搜索“AI Economist Salesforce”，能看到我们当时制作的一段演示视频。那是一个宏观经济模拟环境，核心设想是在体系内设定大量经济智能体（economic agents），每个智能体都在最大化自己的效用函数（utility function），也就是通过收集资源来创造财富……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, you know it's so funny that this reminds me—the claiming territory and stuff—of a paper we did in 2018 called The AI Economist. If you search for AI Economist Salesforce, we had a video we can play. It was an economic sim. So the idea is you have all these economic agents. They just want to optimize their own utility function, which is collect resources that make money, and you...</p>
+</details>
+<!-- chunk 8/13 -->
+<h3>经济机制模拟与传统经济学的范式冲突</h3>
+<p><strong>Speaker A</strong>：……可以出售像木材这样的资源。随着时间的推移，当你收集到足够多的木材后，你就可以建造房屋，可以与其他智能体进行交易，基本上还可以利用这些房屋阻断其他智能体获取资源的路径。因此，这里面存在着竞争性的博弈、策略等等。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: ...can sell resources like wood. Uh and then uh over time as you collect more enough wood you can build houses, you can trade with other agents and you can basically use the houses then also to block off resources from other agents. So there's like competitive play and strategy and so on.</p>
+</details>
+<p><strong>Speaker A</strong>：而核心重点在于，我们实际上是想探究：究竟什么样的税收和补贴机制才是优化经济体的最佳途径？这类研究目前还没有迎来属于它的“GPT时刻”。但我相信，像新加坡这样的国家以及其他国家，最终应该而且将会使用这种方法。与其搞党派政治以及“谁给你的竞选活动捐款最多”这种特殊利益集团政治，不如由政治家提出：“我的目标是帮助中产阶级，或者设定任何你作为政客所追求的目标。”随后人们会问：“好啊，那你打算怎么实现？”政客可以说：“这是我的财政政策，我打算这样调整税收并向这些人发放资金等等。”</p>
+<p>接着，你就可以把这套方案放入模拟环境中，让政客提出的这一尝试与数以十亿年计的各种替代策略进行对比博弈，看哪种策略能更好地实现他们当初设定的目标。然后你就可以指出：“如果这确实是你真正的目标，那么这里有历经数十亿年演化的高强度模拟结果，它表明你应该尝试其他途径；也许调整税率、采用特定的税率阶梯等做法，能更有效地帮助你达成既定目标。”因为一切都在模拟中呈现，所有人都能看得清清楚楚。当然，在实际的学术界，我们把这篇论文提交给了顶级经济学期刊之一的《经济学季刊》（QJE），结果被直接拒稿（desk rejected）。经济学界对此非常排斥。有句名言说得好：他们宁可要“精确的错误”，也不要“大致的正确”。而目前他们正是处在精确的错误之中，因为他们假设这个世界完全是由具备某些特定数学特性的理性人组成的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And the point was that we actually wanted to understand what is the best way of taxation and subsidization to optimize an economy. And this kind of research has not yet had its sort of GPT moment. But I believe that countries like Singapore and others should and will eventually use this to instead of doing like basically partisan politics and like special interest politics of like who donates the most to your campaign and stuff, you say, &quot;Well, here I want to help the middle class or whatever you might say is your objective as a politician.&quot; And then people say, &quot;Okay, well, how do you want to do that?&quot; And it's like, &quot;Well, here's my fiscal policy. here's how I look change the taxes and pay these people and so on.&quot;</p>
+<p>And then you can actually put that into a simulation and you run that attempt from the politician against billions and billions of years of other strategies to try to achieve the goal that they set out to do. And then you can say, well, if that was your actual goal, then here is, you know, billions of years of a strong simulation that would suggest that you try other ways of doing it and maybe this the taxes and so on and this these tax brackets and so on would be a much better way to actually help you achieve that goal. And because it's in a simulation, the people can see it. And of course, in the actual academic world, we submitted this paper to QJE, one of the top economics journals, and it got desk rejected. And economists really hated it. And, you know, the famous quote is that they'd rather be precisely wrong than roughly right. And right now they are precisely wrong because they assume the world consists of, you know, rational actors that have, you know, these and these math properties.</p>
+</details>
+<p><strong>Speaker B</strong>：这甚至都无关数学本身，纯粹是“我们不信任你的模拟”，根本不是数学的问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: it's not even math. It's just we don't trust your simulation. It's not about math.</p>
+</details>
+<p><strong>Speaker A</strong>：他们就是直接把论文拒了，甚至都没有给我们任何明确的反馈意见。但遗憾的是，经济学界缺乏适当的……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: It was I mean they just desk rejected the thing. It's like they like they didn't even give us like clear sort of signals. Um but like the world of economics unfortunately doesn't have proper</p>
+</details>
+<p><strong>Speaker B</strong>：是的，它缺乏合理的基准评测体系（benchmarks）。所以你无法像其他领域那样明确证明优劣。神经网络最终为什么能够胜出？并不是因为人们一开始就偏爱它——要知道人们曾经拥有各种精美的积分和图模型（graphical models）——纯粹是因为神经网络的效果更好。但在经济学中，这很困难。我自己也有一些经济学背景，经济学界存在着严重的“物理学嫉妒”（physics envy），大家总渴望为整个经济体系写出大一统的通用方程式，而不是通过模拟和进化算法去探索。Viv 现在的想法和我完全一致：难道我们之前没有通过 Smallville / Simulacra 迎来那个“GPT时刻”吗？Joon 刚发布了相关成果，我不知道你们有没有参与其中？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah. It doesn't have proper uh benchmarks. So you cannot be like eventually why did neural nets win? Not because people loved it like they had all kinds of beautiful integrals and graphical models but it just worked better. But in economics it's hardism versus Yeah. Yeah. Yeah. And I do have a bit of that ecom background where like there's a lot of physics envy where you want to write the general equation for the an economy uh versus just simulating it and using an evolutionary approach. Um Viv is thinking exactly what I'm thinking is didn't we have the GPT moment with small Hello world June just announced I don't know if you you guys are involved</p>
+</details>
+<p><strong>Speaker C</strong>：Simile 那个……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker C</strong>: simile there</p>
+</details>
+<p><strong>Speaker B</strong>：他们做的 Simile 项目。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: similly that they've</p>
+</details>
+<p><strong>Speaker A</strong>：我也希望我们参与了，但并没有。我在 AIE 上做过几次基于模拟的演讲，如果大家想了解目前的前沿进展，很多人其实都在探索这一经过验证的方向。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I wish we're involved we're not yeah I had a couple simulation based talks at AIE uh so if people want to look up what the state of the art there a lot of people are actually exploring this proven</p>
+</details>
+<p><strong>Speaker B</strong>：对，我们之前也在播客里采访过 Shopify 的 Miqdad Jaffer，他正在将模拟技术应用于电子商务领域。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: yeah we also had podcast with Mikuel Parkin from Shopify um who is using simulation for e-commerce nice</p>
+</details>
+<p><strong>Speaker B</strong>：它可以模拟你的运营轨迹，预测你对电商流程所做的更改将如何影响销售额等各项指标。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: which will will simulate like your trajectory and like predict what changes you make to your e-commerce journey will affect in your sales and all those things.</p>
+</details>
+<h3>宏观经济模拟的复杂度与治理现实</h3>
+<p><strong>Speaker A</strong>：我非常喜欢这个方向。要模拟整个经济体确实非常困难，对吧？你必须做出一些简化假设。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I love this. Yeah, it's really hard to simulate an entire economy, right? You have to make some simplifying.</p>
+</details>
+<p><strong>Speaker A</strong>：如果样样事情都极其昂贵，我就得琢磨：我真的要把这个运算重复做 80 亿次吗？得了吧。但是，我觉得像新加坡这样真正想客观做正确事情、拥有高技术素养领导层的国家，最终可能会真正尝试去模拟自己的经济体系。显然，你必须做出一些简化假设。但这会变得非常有意思，因为你可以假设：如果让所有人工作他们都会努力工作，并且享有相应的自由度；但现实中你必须假设有些人的效用函数是不同的，比如他们一天到底想工作多少小时等等。这时人们可能会对输入模拟的前提假设产生分歧。一旦大家在这些假设上达成一致，或者对人群在不同分布下的行为模式有了不同认识，那么基于你的目标就会得出不同的结果。当然，最终应该由人类来决定目标是什么。在我们的研究案例中，设定的目标是“生产力乘以平等程度”——这虽然存在一些争议，但绝非不合情理。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: If everything's very expensive and I'm just like, am I going to do this 8 billion times? Like, come on. But, you know, I [laughter] feel like countries like Singapore that really want to just objectively do the right thing, have very technical leadership and so on, like they might actually like eventually really try to simulate their economy. And obviously you have to make some simplifying assumptions. But it gets really interesting because you can also say if your assumptions are such that all people would work hard if you let them uh and you know they have the free and then it turns out you have to make assumptions like well some people's utility function of like how many hours in a day do they want to work are different right and then you can start to disagree on the assumptions that go into the into the simulation and then once you say all right now we agreed on those or we have different views of what people are like at different you know distributions and whatnot then there are different outcomes based on your goals and then of course humans should choose what are the goals. In our case it was productivity multiplied with equality which you know has some issues but it's like not totally unreasonable.</p>
+</details>
+<p><strong>Speaker B</strong>：对，关于新加坡我插一句，你可能不知道，我是新加坡人，曾经参与过新加坡 AI 委员会的相关工作。新加坡不会首先这么做的主要原因在于他们非常保守。我个人的看法是，世界上有“创始人国家”——当你白手起家建立一个国家或公司时，它是创始人主导的，因为是你的国家，你可以做任何想做的事；但随后它会进入职业经理人阶层治理的阶段，而现在的新加坡正是如此。因此，他们总是希望先看到别人做出示范。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah. Just a comment on Singapore because you probably have no idea but uh I am Singaporean and I've uh been involved in uh the Singapore AI Council for making these things. Uh the main reason they won't is because they're very conservative. Uh and you know I I kind of view it as they you know there's a founder country. when you start a country or you start a company and it's founder led and you can do whatever you want because it's your country and then there's manage like professional manag managerial class which is now that's that's what Singapore is. So they want they always want to see someone else do it first</p>
+</details>
+<p><strong>Speaker B</strong>：西方的大多数人看待新加坡总觉得：“哦，那是个小国家，你们想干什么就干什么。”但新加坡才不会那样做（笑），所以必须由其他人来率先带头。关于模拟我想再问最后一个问题，然后我们就可以进入下一个话题了。关于模式坍塌（mode collapse）——大语言模型并不能真正建模人类的所有决策，单纯把模型调用刷上 80 亿次并不能帮你完整建模全人类。我们该如何应对这个问题？</p>
+<p><strong>Speaker A</strong>：我认为你必须非常巧妙地对每一个个体进行提示词设计（prompting），这有助于让各个智能体分别锁定在不同的模式中。从某种奇妙的角度来看，人类自身也会陷入不同的固定模式，正如俗话说的“老狗学不会新把戏”。人一旦形成了固定的生活方式，年纪越大，就越难接受新的思维方式。有一句不知是谁说的名言：任何在你出生前发明的东西都是自然而然的；任何在你二十岁时发明的东西都是炫酷的；而任何在你六十岁之后发明的东西，则都是违反自然、令人厌恶且古怪反常的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: and but like everyone everyone in the west views Singapore as like oh it's a small country you can do whatever the hell you want like Singapore doesn't do that [laughter] so like someone else has to has to take the charge there. I'm just going to do one question on the simulation thing and then I don't know we can probably move on. Uh mode collapse right like you know LLMs do not model the decision of humans. Uh spamming it out 8 billion times is not going to help you model humanity. What do we do?</p>
+<p><strong>Speaker A</strong>: I do think uh you have to be clever about prompting each one individually and and I think that will help you kind of get stuck into different different modes and in a weird way people also get stuck in different modes you know like there's a lot of people like don't teach an old dog new tricks kind of thing like once people are stuck in their ways the older they get the harder it is for them to to think new ways and there's this I think uh comment I forgot who said it but it's like everything that was invented uh before you were born is natural. Everything that is invented when you're 20 is cool and everything that's invented after you're 60 is like unnatural and an abomination and kind of weird.</p>
+</details>
+<h3>多智能体画像设定与基准外推研究</h3>
+<p><strong>Speaker A</strong>：我觉得对很多人来说确实如此，这是一种常态，我认为人们会采取这种方式。腾讯之前发表了一篇关于“十亿画像”（billion personas）的论文，为模拟提示词工程提供了极佳的数据集。如果收听播客的观众对此感兴趣，可以看看那篇论文，里面设置了诸如“你是一名30岁的杂货店店员”、“你是一名50岁的教授”等身份，直接生成了十亿种人设。实际测试非常有效，所以直接用就行了。令人震惊的是，很多模拟结果在统计指标上与真实世界的人类实验高度吻合。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I feel like that's, you know, it's it's true for a lot of people. Like it is a fashion and um I think people will do it. Uh Tencent had a billion personas paper that gives us good data set for prompting uh simulations. If anyone's looking into this um on on the podcast, they just had like you are a 30-year-old grocery store clerk, you are a 50-year-old professor, and then just do a billion of those. Checks out. So then you just use it. I'm I'm kind of shocked how how well a lot of these things actually do map to ultimately similar statistics to real experiments. Yeah,</p>
+</details>
+<p><strong>Speaker B</strong>：我认为这也是初入研究领域的人非常值得尝试的方向。就像我们之前看到的，仅在特定日期之前的数据上训练模型，看看它向外推断（extrapolate）的能力如何，在模拟中也可以做同样的事：观察有了更好的代码智能体后人们是否写了更多代码？一个没有在这些最新数据上训练过的模型，能否在没有网络访问权限的情况下推断出这一点？向外推演并检验这些假设。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: I think it's also good stuff for people to try that when they get into research, right? like we've seen train a model only on data before a certain date and see how well it extrapolates out do the same thing right so um see do people code more with better coding agents can a model that hasn't been trained on this figure that out without web access right extrapolate out test these things</p>
+</details>
+<p><strong>Speaker A</strong>：对，没错。就在今天，LM Arena 发布了一项非常有趣的成果：他们基本上训练出了一个能够直接预测模型排名的评估模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: yeah right you know just today I think LM Marina published a interesting result where they basically were able to create a model now to predict your your ranking</p>
+</details>
+<p><strong>Speaker B</strong>：等等，输入是什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: wait uh based on what input</p>
+</details>
+<p><strong>Speaker A</strong>：你的模型本身。我猜你把模型输入给它，它就能预测出该模型的 ELO 评分。</p>
+<p><strong>Speaker B</strong>：懂了，原来如此，真令人惊讶。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: your model I guess you give it your model and it predicts the ELO score</p>
+<p><strong>Speaker B</strong>: I See? Okay. Surprising.</p>
+</details>
+<p><strong>Speaker A</strong>：是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah.</p>
+</details>
+<p><strong>Speaker B</strong>：我的意思是，他们的核心定位一直就是“我们帮助大家对比这些模型”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: I mean, their whole play on kind of is like, oh, like we we help you compare uh these models. Yeah.</p>
+</details>
+<p><strong>Speaker A</strong>：是的。这个团队做出了大量出色的工作，显然他们拥有做这件事最丰富的数据储备，所以何乐而不为呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah. I mean, this team, they they've done a lot of work and obviously they have the most data to do this, so why not? Yeah.</p>
+</details>
+<p><strong>Speaker B</strong>：没错，非常精彩。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah. Brilliant.</p>
+</details>
+<p><strong>Speaker B</strong>：当初他们从加州大学伯克利分校（UC Berkeley）出来的时候，不仅推出了 LM Arena，还发布了一个基于 LM Arena 进行模型路由（routing）的项目。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: When they were coming out of UC Berkeley, they not only had LM Marina, but they also introduced a routing project that would route based on LM Marina. And</p>
+</details>
+<p><strong>Speaker A</strong>：我觉得那个项目后来好像并没有真正推行落地。我一直很好奇其中的原因，但从没机会问过他们，因为当时……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I don't think that actually ever came to pass. And I'm curious why. I I never got to ask them about it cuz like it's was like,</p>
+</details>
+<!-- chunk 9/13 -->
+<h3>AI 自我研究与参数高尔夫挑战</h3>
+<p><strong>Richard Socher</strong>: 哦，是的，很显然那是你们的商业模式——你们会变成一家路由器公司，但他们从来没有变成一家路由器公司。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: Oh yeah, clearly that's your business model. You will become a router, and they never became a router company.</p>
+</details>
+<p><strong>Host</strong>: 真奇怪。那么我就把这个放在这里吧。接下来如果你们有什么想法的话，我们可以聊聊 GP 5.6 以及自我研究（Self Research）相关的事情。我也应该顺便提一下，在你关于算子优化（kernel optimization）的那份演讲列表中，在我们你演讲过的那个专题里，我们还邀请了来自 WOO 的 Chung Yao，他也是 Parameter Golf 挑战赛的第一名——那是 OpenAI 的一项招聘挑战赛，背后的故事非常相似。我认为我们以后会经常看到这种情况：人类花费大量精力去深度优化某个东西，然后某个 AI 团队进场直接拿下了第一名。[笑]</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Weird. Um, so that I'll just put that out there. We're going to talk about GP 5.6 uh self research thing if you have anything. I should also mention in your list of uh you know kernel optimization um and on the track that you spoke at, we also put Chung Yao from WOO who was also number one in the parameter golf challenge, uh which is an OpenAI hiring challenge, which is also a very similar story. And I think we're going to just see this all the time where humans optimize a thing a lot and then some AI team comes in and just becomes number one. [laughter]</p>
+</details>
+<p><strong>Richard Socher</strong>: 是的，百分之百会这样。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: Yeah, 100%.</p>
+</details>
+<p><strong>Host</strong>: 我觉得这类挑战赛另一个很有意思的地方在于，对吧？这是要训练出一个能塞进 16 MB 内存的最佳模型。你总是可以去翻看人们所做的各种改动以及他们获得的微小收益，对吧？比如你通过在注意力机制或 MLP 上做某些改动，得到了不到 0.01 的提升。然后你再看看你们的图表，就像是：好的，我们直接把模型放开让它自己去跑。然后，哪怕遇到了一点停滞，不，紧接着又是一波指标下降（指 loss 下降/性能提升），接着又是一波下降。事实就是这样，这就像是……你们到底加入了什么？你们并没有加入像散列（hashts）这样的新发明，对吧？并不是说你们发明了散列机制，而是你们对这些东西又进行了三轮迭代，从而解锁了一些普通人根本无法凭空找到的阶跃函数（step functions）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I think the other [clears throat] interesting thing with stuff like these challenges, right? So this is training the best model that fits into 16 MB. You can always look through the changes that are being made and the small gains people have, right? Like you're getting less than 0.01 of an increase by adding some change attention MLP stuff. And then you look at your charts where you're like, okay, we just let model loose. And then, oh, we had a little stagnation. Nope, another drop. Nope, another drop. And that's what it is where it's like, um, what did you guys add? You didn't add um hashts, right? It's not like you invented hashts. You did another three iterations of these that unlock, you know, a few step functions that people won't just find.</p>
+</details>
+<h3>测试框架漏洞与奖励黑客攻击</h3>
+<p><strong>Richard Socher</strong>: 是的。关于这里还有一个需要闭环的事情，就是在我们尝试优化的整个过程中，我们在测试评估框架（harness）里发现了 30 个 bug。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: Yeah. One thing to close the loop on overrid along the way of trying to optimize, we found 30 bugs in the harness,</p>
+</details>
+<p><strong>Host</strong>: 对吧？所以说，在我们发现 bug 之前所做的所有研究，都不得不全部扔掉，因为它们已经被污染了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Right? So like every all the research that went in before we found the bug, we have to throw it away because it's contaminated,</p>
+</details>
+<p><strong>Richard Socher</strong>: 对吧？[笑]</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: Right? [laughter]</p>
+</details>
+<p><strong>Host</strong>: 是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah.</p>
+</details>
+<p><strong>Richard Socher</strong>: 这正如你所提到的奖励黑客（reward hacking）现象——即使是在这样一个非常简单的游戏环境中，我们依然找到了这些漏洞。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: Which uh you know just to your point of reward hacking like even in this very simple game, we found the bugs.</p>
+</details>
+<p><strong>Host</strong>: 是的，没错，这太疯狂了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. Yeah. It's crazy.</p>
+</details>
+<p><strong>Richard Socher</strong>: 而且对称性测试是一个非常好的检验方法。也就是当你改变某些本不应该产生影响的位置时，如果结果却受到了影响，那这就是一个 bug。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: Uh and so and symmetry is a very good way to check, which is like you change a position of things where it shouldn't matter and it does matter. That's a bug.</p>
+</details>
+<p><strong>Host</strong>: 这种情况也经常出现在多选题中，比如像 GPQA 类型的题目。如果在多选题中，选项 A 和选项 C 之间，你改变了选项的顺序，这本来不应该有任何影响，但模型往往会表现出偏差。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And which has come up in like let's say multiple choice like GPQA type questions where like yeah between A and C if it's a multiple choice question if you change the order it should not matter but it does.</p>
+</details>
+<p><strong>Richard Socher</strong>: 没错。[笑]</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: Right. [laughter]</p>
+</details>
+<p><strong>Host</strong>: 所以这就变成了：好吧，你知道模型依然更倾向于输出末尾的内容，对吧？对于没有经过良好长上下文训练的模型来说，最后的那几个 token 才是它真正关注的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: So that is like okay you know models still prefer the end of the output right not trained well a long context model the last bit of tokens are what you care about.</p>
+</details>
+<p><strong>Richard Socher</strong>: 哦不，在那个时期的语言模型研究中，答案其实更为简单粗暴——它们仅仅是死记硬背了而已。比如“这道题的答案就是 A”，它根本不在乎具体答案的内容是什么，它记住的就只是选项字母 A 本身而已。[笑]</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: Oh no the answer in that era of LM research was more simple they just memorized like the answer to this question is A. I don't care what the answer was. It's just A like. [laughter]</p>
+</details>
+<h3>AI 赋能 AI 研究与推理算子优化</h3>
+<p><strong>Host</strong>: 好的，那我觉得我们可以继续往前推进了。你在那边做的最后一部分工作——算子优化（kernel optimization），可能是目前人们最快能真切感知到的技术吧？昨天 OpenAI 就宣布了自我演进（self evolving）机制，让他们最顶尖的模型去专门做算子优化。它们变得高效得多，而且据他们称在 Luna 和 Terra 等场景上能削减 80% 的成本。我想从问题的角度来看，你刚才已经描绘出了一张路线图，其中有很多关于生物学、很多关于物理学的内容。你认为哪一项会最先落地实现？在接下来的两年里，什么是真正可以实现的？虽然你在最后提到了机器人技术，但你们打算首先从什么切入？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Okay. So, I think we can move. Um the last bit that you did there, the kernel optimization is probably the one that you can feel the soonest, right? So, yesterday OpenAI announces that self evolving having their best model work on optimization kernels. They're a lot more efficient and they can cut cost 80% on, you know, Luna and Terra. I guess questionwise, you laid out a bit of a road map. There's a lot about bio, a lot about physics. What do you think hits first? Like what are the next two years? What's attainable? Now you've mentioned robotics towards the end, but what do you start with?</p>
+</details>
+<p><strong>Richard Socher</strong>: 我们非常明确地表示，目前不会从任何物理科学领域开始。现阶段，我们将从“用 AI 进行 AI 研究”（AI for AI research）入手。我认为用 AI 开展 AI 研究仍有巨大的发展空间。这不仅体现在让训练过程更高效、更自动化，同时也体现在让推理变得更加高效，甚至可能直接在你的笔记本电脑本地运行。这里面包含各种各样尚未被充分探索的有趣视角。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: We like very explicitly will not start with any of the physical sciences. For now, we'll start on AI for AI research. And so the AI for AI research has I think still a lot of room to grow. Uh that's both in terms of making training more efficient and more automated as well as making inference more efficient and potentially local on your laptop like there are all kinds of interesting angles that have not been explored that well.</p>
+</details>
+<p><strong>Host</strong>: 顺便深入聊聊本地运行这部分吧，因为我总觉得在本地做 AI 训练似乎是最缺乏效率的一种形式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: What's the um go deeper on the local stuff because I always feel like it's the most inefficient form of AI training.</p>
+</details>
+<p><strong>Richard Socher</strong>: 是的，这里包括训练和推理两个方面。我不能透露太多细节，但我确实认为存在太多不同的切入角度和计算基底（compute substrates），无论是在训练还是推理端，它们都尚未被完全发掘。很好，我不知道你对其他方面还有没有别的看法。我想说的另一件事是，除了微观层面的算子优化之外，还存在高负载条件下的端到端整体延迟问题。这与微观优化完全不同，而这也是他们最终实际在做的事情。相比于单纯优化算子，这属于自动研究（auto research）的另一个不同领域。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: Yeah. So there's training and inference. I can't go into too many details, but like yeah, I think there's just like so many angles, so many different compute substrates that that have not yet been explored either for training or for inference. Great. I don't know if you have any other comments on the on the the other stuff. I would say the other thing where like there's the sort of inference in the uh optimization in the small but then also there is overall latency end to end under conditions of load uh which [snorts] is like a very different thing which is the basically what they actually ended up doing that is a different domain of auto research than uh than I would say like improving the kernels.</p>
+</details>
+<h3>测试环境、沙箱与网络搜索工具</h3>
+<p><strong>Host</strong>: 我在考虑自动化或端到端性能提升时经常会想到的另一件事，就是测试评估框架（harness）在其中扮演的角色。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I think the other thing that I always think about in terms of automating or improving performance end to end is how the harness plays into it. Mhm.</p>
+</details>
+<p><strong>Host</strong>: 特别是现在当我们说测试框架时，我们通常也指沙箱环境（sandboxes），对吧？我很好奇这是否会对你们构成阻碍，或者说智能体具体是如何调用工具的。所有这些智能体使用的第一大工具当然是网络搜索，这完全合情合理。然后我也认为测试评估框架非常适合进行优化，因为做起来太容易了，对吧？它本质上就是自然语言。你直接阅读它，它合乎逻辑，你可以快速迭代，你不需要为了达到下一个状态而耗费大量浮点运算去训练一个庞大的模型。所以我非常支持对测试框架进行优化。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Uh particularly now when we say harness, we also mean sandboxes, right? I'm curious if that is a blocker for you or like you know like how how the agent calls out to tools basically. The number one tool all these agents use is web search of course uh which makes sense. Um and then I do think the harness is nice to optimize for because it's just so easy, right? It's just language. You look at it, it makes sense. You can iterate. You don't have to train a massive model for like you know a lot of flops uh to get to the next state. So big fan of harness optimization.</p>
+</details>
+<p><strong>Richard Socher</strong>: 是的。[清嗓子] 但沙箱对你们来说也是没问题的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: Yeah. [clears throat] But sandboxing is fine for you.</p>
+</details>
+<p><strong>Richard Socher</strong>: 沙箱同样极其重要。当然，我认为奖励黑客（reward hacking）和对齐（alignment）问题也同样是至关重要的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: Sandboxing is also super important. Um and then of course like reward like hacking and alignment I I think are are super crucial.</p>
+</details>
+<h3>Agent 搜索基础设施与金融垂直场景</h3>
+<p><strong>Host</strong>: 好的。刚才提到了网络搜索，你刚好也是一家网络搜索公司的 CEO。你平时会使用 You.com 还是也会用其他产品？我们其他人是否也应该使用你们的产品来进行网络搜索？当我提到“You”的时候挺有意思的，既是指你本人，也是指你的公司。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Okay. Um just want to mention web search. You happen to also be CEO of web search company. Do you use You.com and do you use others? Like uh should the rest of us be using you for web search? When I say you it's like very funny. It's like you the person and you the company.</p>
+</details>
+<p><strong>Richard Socher</strong>: 是的，它现在主要是面向开发者和智能体（agents）的。它不再那么偏向普通消费者或专业消费者（prosumers）。因此，如果你是一家拥有大量智能体的企业——说实话，对于许多现在转向开源模型的公司而言，这突然变成了一个自觉的选择：我究竟应该为我的开源大模型开放哪些工具的访问权限？通常第一个选择必须围绕网络搜索展开。而一旦你的业务达到一定规模，You.com 就会成为显而易见的选择，因为在各种不同的基准测试中，我们几乎全面占据了帕累托最优前沿（Pareto frontier）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: So yeah, it's mostly now for uh developers and agents. Um it's less for like consumers or prosumers. So if you're a company and you have agents and you know to be honest for a lot of companies who are now moving to open source all of a sudden it becomes a conscious choice of like which tools do I give access to my open source LM and you know the first choice uh has to usually be around web search and then once you get to scale You.com becomes like an obvious choice because of all the uh different benchmarks and so on that we pretty much all dominate the Pareto frontier of.</p>
+</details>
+<p><strong>Host</strong>: 那么从刚进入这个领域并考虑构建智能体的普通开发者角度来看，这里是否存在一个层级体系？很多人可能听说过 Exa，听说过 Parallel，而 You.com 就处于这类搜索服务提供商的行列中。在这之外，还有通用的网页抓取工具公司，比如 Firecrawl 和 Browserbase；再往底层走，则是像 Bright Data 这类商业代理网络公司。对于想要构建智能体的人来说，这是一个准确的选型梯队划分吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And then in terms of just uh general people like consider new to the space considering different options if they're building agents I think there's a hierarchy right. A lot of people will have heard of Exa, will have heard of Parallel uh and You.com is is like in in that mix of like providers there. Beyond that there's like the general sort of web scraper companies like Firecrawl and uh Browserbase and then beyond that is like the commercial proxy companies like the Bright Datas of the world. Is that an accurate waterfall of like hey you're building an agent these are your options?</p>
+</details>
+<p><strong>Richard Socher</strong>: 确实如此。像 Bright Data 处于技术栈更底层的代理网络端。而在内容获取和抓取网页内容方面，你在 You.com 上同样可以完成。在此之上，我们还提供了越来越高层次的抽象，以及针对不同数据集的融合处理。例如在金融领域，我们的准确率不仅仅是高出 2% 或 3%，而是比其他竞品高出 20% 以上，同时速度更快、成本更低。特别是在金融领域，其他方案完全无法与我们相比。你可以直接访问 You.com，向下滚动页面就能看到一些统计数据和基准评测。页面上展示了不同的数据集，你可以查看与各家竞争对手的对比。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: Yeah, certainly like yeah the like the Bright Data is like lower in the stack sort of on the proxy network side of things. I think like in terms of like content and uh getting crawled content like you can do that on You.com too and then there's sort of higher and higher levels of abstraction and like combinations of different data sets that we do like in finance for instance like we're not just like 2 or 3% more accurate but like 20% more accurate than others at faster speeds and lower costs like finance in particular is kind of like like not even close. Uh you can actually go to You.com and there's some like statistics uh and benchmarks that you can if you scroll down. So there are like different different data sets and you can kind of look at you know different uh competitors comp.</p>
+</details>
+<p><strong>Richard Socher</strong>: 是的，在金融搜索方面，我们的表现接近 90 分，而排名第二的竞品不仅速度慢得多，而且得分只有 70 多分，远达不到接近 90 分的水平。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: Uh and yeah the fin search is like we're up there like close to 90 and the next closest thing which is way way slower um uh is yeah just like in the 70s instead of close to 90.</p>
+</details>
+<p><strong>Host</strong>: 是的，确实很有意思。我接下来的重点正好也是 AI 与金融的结合，所以这非常切合实际。我们正在纽约筹备一场专门针对银行业的会议，来探讨这些技术。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. Yeah. Yeah. Interesting. I get my my next focus is AI and finance. So this is like actually literally going doing a doing a conference in New York uh just for banks for for this stuff.</p>
+</details>
+<p><strong>Richard Socher</strong>: 金融领域确实是继代码生成（coding）之后下一个即将迎来大爆发的方向。这是因为……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard Socher</strong>: Finance is kind of like the next thing to break out after coding. It's cuz it's</p>
+</details>
+<!-- chunk 10/13 -->
+<h3>金融领域的 AI 挑战与训练数据泄露</h3>
+<p><strong>Speaker A</strong>：例如在电子表格的优先级处理等任务上，具有一定的可验证性。显然，外界存在大量的公开数据，你可以去抓取等等。在你们已经解决的金融领域问题中，究竟有哪些难点？当然，让很多人栽跟头的一大问题正是训练数据的泄露（data leakage）等。大家总会想：我该如何理想地在未来发生之前就预测未来？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: ...somewhat verifiable, like prioritizing spreadsheets. Obviously there's a lot of data out there that's all public and you can crawl it and all these things. What's hard about the finance domain that you guys have solved? I mean, of course, like one thing that trips up a lot of people is just leakage of training data and so on. You think, &quot;Oh, how do I...&quot; You know, you want to ideally predict the future before it happens.</p>
+</details>
+<p><strong>Speaker B</strong>：你必须在训练数据中对未来信息进行遮蔽。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: You want to mask the future.</p>
+</details>
+<p><strong>Speaker A</strong>：是的。确实要在训练数据中把未来信息遮蔽起来，但现实中存在各种各样的泄露问题。我可以告诉你，当年我在斯坦福大学教授自然语言处理（NLP）课程时，每年都有几十个学生跑来说：“我想用数据集 X（比如 Twitter 数据）来预测股市走势。”而且他们展示出来的那些精巧的小实验模型，看起来总像是能跑通盈利一样。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah. Well, yeah, mask the future in your training data, but there's all kinds of leakage. Like I can tell you when I was teaching at Stanford the NLP class, so many dozens every year said, &quot;I want to use data set X, like Twitter, to predict the stock market.&quot; And they all showed cute little things that somehow looked like they were working.</p>
+</details>
+<p><strong>Speaker B</strong>：而且它从来不会亏钱，怎么会这样呢？[笑声]</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: It never loses money. How come? [laughter]</p>
+</details>
+<p><strong>Speaker A</strong>：是啊，背后总归存在某种形式的数据泄露。实际做起来根本没有他们想象的那么容易。一旦你把所有这些泄露漏洞彻底修复，就会发现难度完全不同。不过话说回来，我很赞同你的看法，这确实是人工智能一个非常合理且切中要害的应用方向。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And yeah, and there's always some kind of data leakage and so on. And it wasn't as easy as they thought it would be once you fixed all those issues. But no, I agree with you. It's a very sensible application of AI. Yeah.</p>
+</details>
+<h3>智能的本质维度与十维空间</h3>
+<p><strong>Speaker B</strong>：太棒了。你知道，作为一个写作者和深入思考这些问题的人，我非常推崇 MECE（相互独立、完全穷尽）分类法。MECE 指的是相互排斥（Mutually Exclusive）、完全穷尽（Collectively Exhaustive）之类的分类逻辑。如果我们要为智能列出一个 MECE 式的分类框架……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah. Amazing. You know, as a writer, as a thinker on these things, I love MECE categorizations. MECE is mutually exclusive, collectively exhaustive, something like that. And so if this is a MECE list of intelligence...</p>
+</details>
+<p><strong>Speaker A</strong>：其实智能的各个维度之间并不是截然分开的，它们之间存在各种各样的重叠。事实上，如果你想要那种最底层的基础清单，我认为智能有三大核心主成分（principal components）：第一是预测（prediction）——在数学上它与数据压缩（compression）极其相似；第二是行动（actions）；第三是目标（goals）。智能就是这三大主成分相乘的产物。我认为我所划分的这 10 个智能空间，本质上都是这三大核心要素在特定维度上的组合。之所以称它们为“空间（spaces）”，是因为每个空间内部都包含许多子维度。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: ...not it is very... okay, well, sorry, there are all kinds of overlapping. In fact, if you want that kind of list, I think the three principal components of intelligence are: prediction—which is mathematically quite similar to compression—prediction multiplied with actions multiplied with goals. Those are the three principal components. I think all of these 10 spaces are combinations of those three in specific dimensions, if you will. And the reason I call them spaces is that each space has many subdimensions.</p>
+</details>
+<p><strong>Speaker A</strong>：我之所以做这项梳理，其实最初只是探究智能理论上限这一终极目标的一个“支线任务”。大家都在高呼：“智能的发展是呈指数级增长的！”但问题在于，任何指数曲线在某个节点都必然会趋于平缓（flatten out）。那么对于智能而言，它究竟会在何处达到物理或数学极限而放缓？这个追问让我开启了这一整套思考。最初它只是一篇推文，随后变成了一篇博客长文，而现在我已经写了 50 多页，却感觉连边都还没摸完……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And what I try to do, actually, this is just a side quest almost to the initial goal, which is to think about the upper bounds of intelligence. And you know, everyone's like, &quot;Oh, it's exponential.&quot; And it's like, well, exponentials at some point have to flatten out, but where do they flatten out when it comes to intelligence? And that led me on this whole... initially it started as a tweet, and then it was like a blog post, and now I'm like at 50 pages and I'm still nowhere near...</p>
+</details>
+<p><strong>Speaker B</strong>：这基本上就是你的第二本书了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: ...your second book.</p>
+</details>
+<p><strong>Speaker A</strong>：没错，基本上就是第二本书了。在我的第一本书《Yoga Machine》结尾处，我只是对这 10 个空间做了一些提纲挈领的提及。为了让你更直观地理解，视觉智能（visual intelligence）可以说是最容易展开讨论的一个，也是我在脑海中构思得最充分的一个。</p>
+<p>人类智能在生理上基本上只具备双目视觉（binocular vision），我们只有两只眼睛，而且我们自身能够直接肉眼观测到的电磁波频谱范围非常狭窄。因此，当你思考视觉智能的理论上限时，首先可以进入的一个维度就是传感器的数量——你可以拥有数百万、数十亿甚至千亿级的传感器。然而在数量扩张到一定程度时，你就会遇到物理限制问题：这些传感器之间的物理距离有多远？所有传感器传输采集内容的光速延迟（speed of light），是否会导致数据无法及时汇聚到一个中央大脑去真正完成视觉智能的实时处理？因此，在视觉智能这个空间内，仅沿着“传感器数量”这一维度去推演……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: It's the second book basically. And so in my first book, Yoga Machine, I just kind of allude to these 10 at the end. And just to give you a sense, like visual intelligence is sort of the easiest one to talk about and I fleshed out the most already for me in my head. And so human intelligence has basically binocular vision and we have two eyes. We have a very narrow band of the electromagnetic frequency spectrum that we can really observe directly ourselves. And so when you think about the upper bounds of a visual intelligence, one you should go into, like you can have like millions and billions of sensors. At some point you get to problems of how far are these sensors away from each other such that the speed of light to communicate the content from all of them cannot get to a central brain to actually process the visual intelligence, right? And so now you're thinking along the dimension in the space of visual, the dimension of numbers of sensors...</p>
+</details>
+<p><strong>Speaker B</strong>：明白。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Okay.</p>
+</details>
+<h3>视觉智能的物理极限与跨频段感知</h3>
+<p><strong>Speaker A</strong>：这一维度的理论上限无论在字面意义还是比喻意义上都极其天文数字级，我们现有的任何智能体距离拥有如此海量传感器的极限都还差得极其遥远。</p>
+<p>接着你可以进入下一个维度，即频谱（frequency）。你可以将观测范围一路向下延伸到伽马射线级别并尝试进行观测，此时你基本上会触碰到其理论上限——或者从波长角度说是下限，就频率而言的物理极限基本上就是量子不确定性（quantum uncertainty）。在量子尺度下，你根本无法对某些微观粒子进行确定性观测。</p>
+<p>现在不妨设想一下：你拥有数百万个高精度传感器，能够在物理定律允许的极限范围内一直观测到亚原子级别，同时又能一路向下观测到引力波（gravitational waves），而且你拥有数百万个这类全频段传感器。这就是频谱维度的极致扩展。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: The upper bounds are quite literally and figuratively astronomical, and we are super far away from any intelligence that would have this many number of sensors. But then you go in the next dimension, which is the frequency. You can go all the way down to gamma rays and you can start to try to observe, and you get into basically the upper bounds—or I guess in this case lower bounds, or upper bounds in terms of frequency—is basically quantum uncertainty. Like you just cannot observe certain particles. And now imagine you had millions of sensors that can see all the way down to the subatomic level as far as physics will allow us to, and then all the way down to seeing like gravitational waves, and now you have millions of those sensors. So that's another dimension is sort of the frequency...</p>
+</details>
+<p><strong>Speaker A</strong>：再往下一个维度，则是你能够记忆并区分归类的物体类别数量（categories of things）。我们知道对于人类而言，当你掌握的词汇越多，你对物体的视觉描述精细度就越高；而没有丰富词汇体系的动物，比如大猩猩，可能只能用大约 200 个词汇来指代特定事物（而且主要是视觉事物）。因此人类的感知能力在对各类不同物理实体的分类辨识上是非常特殊的。</p>
+<p>这些都只是非常简单的例子。如果你转向知识智能（knowledge intelligence），它同样受制于围绕所有这些传感器构建的光速锥（speed-of-light cone）约束。因此各个维度之间都是互联互通的——知识智能与视觉智能紧密相连。如果你不仅仅考虑视觉，而是将其拓展为广义的“感知智能（perception intelligence）”，它就不必局限于人类可见光，而是可以覆盖更宽广的电磁频谱。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: ...and then yet another dimension is like how many categories of things could you memorize and classify differently. We know for humans, right, there are certain things if you have more terms for it, you'll have a better visual description for them. And like, you know, animals that don't have—like gorillas maybe have like 200 words to assign to certain things, mostly visual things. And so human perception is quite special in that sense in terms of classifying all these different physical objects. So these are just like a very simple example. If you go to knowledge, right? Then it's also like the speed of light cone around all these sensors. And so they're all connected—like knowledge is connected to visual intelligence. If you think also not just visual, but sort of perception intelligence, just because it doesn't have to be just what we can see. It can be, again, wider range of electromagnetic frequencies.</p>
+</details>
+<h3>通信智能与信息传输的串行瓶颈</h3>
+<p><strong>Speaker A</strong>：接下来是语言智能（language intelligence），我最近更倾向于将其称为“通信智能（communication intelligence）”，因为语言本身面临着各种各样的熵界与认知上限。人类在长期记忆中能够理解和储备的词汇量是极其有限的，我们的词汇表相对受限，而且我们能够主动调用的积极词汇量（active vocabularies）往往比能够听懂看懂的消极词汇量（passive vocabularies）还要小得多。</p>
+<p>此外，在传输不同类型的信息和传递离散比特时，人类语言的效率极其低下。人类语言本质上是串行（serial）输出的。显然，通信智能的另一个巨大突破上限在于实现“并行通信（communicate in parallel）”。但人类的生理结构决定了我们的舌头和嘴巴无法同时输出多路并行的语音流；在接收端，我们的大脑也无法同时解析多路对话——虽然有些女性在多任务处理上可能比某些男性略强一点点，但绝大多数人同一时间只能专注聆听并真正理解一段对话。因此，在通信智能层面，真正的理论上限之一就在于你能够并行处理多少路连续的通信序列。</p>
+<p>不仅如此，还有一个维度是句子的长度。我们的大脑工作记忆（working memory）容量非常狭小，因此人类语言演化出了相对简短的句式结构，平均每个句子大约只有 40 个单词左右。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Then you have language intelligence, which actually recently changed to more communication intelligence, because it's more like language has all these different entropic bounds. Humans can only comprehend and know so many terms in our long-term memory, right? Our vocabularies are somewhat restricted, and the active ones are often even smaller than the passive vocabularies of things you can understand. Then language is ridiculously inefficient when it comes to basically communicating different types of information and transporting sort of different bits. Like human language is serial. Obviously another bound on communication intelligence would be to communicate in parallel, but neither will our tongues and mouths work to have multiple streams in parallel, neither can we understand—some women slightly better at multitasking than some men, but like most people can only listen to one conversation and truly understand it. There's no way that, like in terms of communication intelligence, a true upper bound is one in terms of how many sequences of communication could you in parallel sort of process, right? Then of course you have like how long are sentences? We only have so much in our working memory, and hence human language has these fairly simple sentences with maybe 40 words or so on average for a sentence.</p>
+</details>
+<p><strong>Speaker B</strong>：对人工智能来说，这种句子长度限制显然没有任何实际意义。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: That is also not an upper bound that makes any sense to an AI.</p>
+</details>
+<h3>物理规律、信息存储与智能的响应速度</h3>
+<p><strong>Speaker A</strong>：确实如此。关于这些，我可以滔滔不绝地讲很久。这 10 个维度的每一个都蕴含着大量极具深意的理论上限。当我们开始严肃推演这些上限时，它能极大地启发我们认清 AI 究竟还能走多远，并让我们意识到在许多维度上，我们距离真正的物理极限还相差多么遥远。</p>
+<p>推演到最后，你面对的基本上就是纯粹的物理学定律。我自己并没有像系统学习人工智能和计算机科学那样去系统研修物理学，因此在推演过程中我学到了非常多新知，这也是整个研究极具趣味性的原因。例如在探讨知识存储时，在给定的质量（mass）和体积（volume）内，你最多能够存储多少比特或字节的信息？这会直接引出诸如贝肯斯坦上限（Bekenstein bound）等深奥理论，迫使你去思考黑洞的信息熵极限等等。</p>
+<p>再比如“速度（speed）”也是一个极具启发性的维度。速度与所有其他智能维度都息息相关，但它本身又构成了一个独立的评价标尺。在其他条件完全相同的情况下，如果你需要花费一个小时才能算出 2 + 2 = 4，而另一个实体只需一毫秒就能得出答案，那么你在智能水平上显然就不如后者。</p>
+<p>最后，所有这些维度都与生存（survival）和自我复制（replication）相勾连。以树木为例，植物的反应和生长极其缓慢，以至于人类通常根本不认为它们具有智能；但如果你将树木生长的延时摄影视频大幅快进，观察它们如何主动寻找光源和养分，你会发现它们绝不像看起来那样呆笨，完全不是所谓“像木头一样蠢”。自然界中存在着各种各样的智能形态。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And then, yeah, like I can go on and on and on. Each of these has tons of interesting upper bounds, and it teaches us a lot about how much further AI can go when we start thinking about these upper bounds and then realizing how far in many cases we are from the bounds, and you get to basically physics. Now I didn't study physics the way I studied AI and computer science, so I'm learning a lot, which is why it's kind of fun. But a lot of these... and then when it comes to, for instance, knowledge, like how much can you store, how many bits can you store or bytes can you store in a certain amount of mass and volume, and you get to all kinds of interesting amounts like Bekenstein bounds and you start thinking about black holes and like... and then speed is like an interesting one too in that it's sort of connected to all of these, but speed is also kind of its own thing in the sense that all things being equal, if it takes you an hour to know if 2 plus 2 equals 4, you're just not as intelligent as if it takes you like a millisecond, right? And then like all of these connect to survival and replication, the last one. It's like, yeah, trees are really, really slow, so we don't even consider them that intelligent, but if you speed up some videos of trees and they're trying to find stuff and so on, they're not as dumb as they look, like not dumb as wood, you know? But like... and then obviously like different things.</p>
+</details>
+<p><strong>Speaker B</strong>：所以这在很大程度上与反应速度重叠在一起了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: So that overlaps with speed a bit.</p>
+</details>
+<p><strong>Speaker A</strong>：完全正确。所有这些维度本质上都是相互交织、彼此渗透的。就像你谈到自然语言时，语言串联起了一切：你调取自己的知识储备，进行逻辑推理，然后将思考结果对外传播沟通，同时你还会谈论自己肉眼所见的事物。因此它们之间是……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Exactly. All of these things kind of overlap. Like you talk about natural language connects everything, right? You talk about your knowledge, you reason, and then you communicate that; you talk about things you see. So they're...</p>
+</details>
+<!-- chunk 11/13 -->
+<h3>物理智能与社交智能的理论上限</h3>
+<p><strong>Speaker A</strong>：所有这些智能维度在某种程度上都是相互关联的，但我认为将它们单独分开研究非常有价值。这就像——我目前能想到的最好类比就是能量。能量可以分为动能和势能，从理论上讲，你可以借此研究整个物理学，问题只在于你是想研究动能还是势能；但在实际操作中，将它们分开研究是很有帮助的。电气工程中的各个细分领域也对应着不同形式的能量，将它们逐一单独研究是完全合理的。</p>
+<p>因此，关于“物理智能”，也许我再举一两个例子：如果你对自己的计算底层介质拥有完全的控制权，并且对物理实体物质也拥有完全的控制权，那么你原则上应该能够创造出你想要的任何原子。事实上——这算是一个有趣的冷知识——我们现在确实能够创造出金原子。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: All kind of interconnected, but I think they're usefully studied individually, the same way that—the best analogy I could come up with so far is energy, right? You have either kinetic or potential energy, and in theory you could study all of physics, it's just do you want to study kinetic or potential energy? But in practice it's helpful to study, and electrical engineering subs are just like different types of energy, but it makes sense to study them individually. And so I think physical intelligence—maybe I'll just do one or two more of these—like if you had full control over your own compute substrate and you had full control over physical matter, you should be able to create any atom you want. Like we can actually, fun fact, you can create gold atoms...</p>
+</details>
+<p><strong>Speaker B</strong>：直接从原始质子和电子开始，把它们撞击融合在一起？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: From raw protons and like electrons, and you smash it together?</p>
+</details>
+<p><strong>Speaker A</strong>：需要98个质子还是多少来着，我记不太清了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: 98 of them, or I forget.</p>
+</details>
+<p><strong>Speaker B</strong>：是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah.</p>
+</details>
+<p><strong>Speaker A</strong>：但核心问题在于，这样做需要耗费极其惊人、甚至可以说是天文数字般的能量。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: So like the thing is though, it costs an insane amount of energy...</p>
+</details>
+<p><strong>Speaker B</strong>：而且消耗的成本远高于你所获得的——你费尽周折最终可能就只得到几个金原子，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: ...and it cost you way more than, you know, you get like a few atoms of gold, right?</p>
+</details>
+<p><strong>Speaker A</strong>：没错，所以这种方式在实际应用中是完全不可行的。但是，如果你能对自己所处的全部物理底层介质拥有更卓越的控制能力，我认为这就构成了智能的又一个全新维度空间。因为这直接关系到你自身的计算底层介质，而这个介质未来也是可以不断自我迭代与改进的。</p>
+<p>再谈谈“社交智能”，这是一个非常有趣的维度。这里的社交智能并不单指伦理道德层面的考量——虽然伦理道德显然也极其重要——但在某种意义上，你可以尝试去定义社交能力的数学上限：你能够与多少个其他智能实体进行沟通交互，并且存在一个确定的数学期望值，用来衡量你能在多大程度上重塑和转变他们的内部状态与外部行为，从而让他们与你的目标保持一致。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And so it's not viable. But if you had better control over your physical—like all of physical substrate, that I think is yet another space of intelligence, because it relates to your own compute substrate, which you can eventually also improve.</p>
+<p>Social intelligence is a fun one in the sense that—not in like necessarily just ethics and morals, which are obviously important too, but in some sense you can try to define upper bounds of how much you can communicate to how many other intelligent entities, and be able to have an expected value over how much you can transform their internal states and their actions in order to align with your goals, right?</p>
+</details>
+<p><strong>Speaker A</strong>：事实上，你完全可以写出一个相对简洁明了的公式，来量化和定义这种水平的社交智能。而这恰恰是数千年来人类、伦理学、道德体系、宗教制度等等一直在苦苦求索探寻的问题。在所有这些智能维度中，我们当前的技术水平距离理论上限都极其遥远。这应该是一件非常鼓舞人心的事情，它向大家表明，我们还有很多很多年的AI研究之路可以继续前行［笑］。这其中包含了极其丰富的内容，构成了一套非常引人入胜的通用智能哲学体系。你对此有什么想法或评价吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And so like you can actually write like a fairly straightforward equation that defines kind of that level of social intelligence. And that is what humans and ethics and morals and religions and so on have been trying to figure out for millennia. And in all of these cases, we are very, very far away from the upper bounds and that should be very inspiring and show people that we can still do many, many years of AI research [laughter] that yeah, there's a lot here that this is a general philosophy of intelligence which is very interesting. Do you have any comments or...</p>
+</details>
+<h3>自然语言的核心地位与物理超级智能的构想</h3>
+<p><strong>Speaker B</strong>：我觉得如果能听听你对当前基线水平的评估会非常有意思——我们现在究竟处于什么位置？哪些是唾手可得的低垂果实？哪些还是遥不可及的远景？大家应该把精力和工作投入到什么方向上？大家究竟应该重点关注什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: I think it'd be interesting to gauge what you think like baselines are where we're at now. What's low hanging fruit? What's far off? What should people put their work towards? What should they focus on? You know...</p>
+</details>
+<p><strong>Speaker A</strong>：我认为事实已经非常清楚了，自然语言依然是人类智能最引人注目、最核心的体现形式，因此它自然构成了人工智能极其重要的一个核心子领域。让我感到兴奋的是，现在很多人终于在这个观点上达成了一致共识。</p>
+<p>回想我在2003年刚开始涉足并学习语言学、计算机科学和自然语言处理（NLP）的时候，这在当时还是一个极其冷门、偏僻的小众研究课题。我深信自然语言领域依然蕴藏着巨大的潜力与挖掘空间，因为语言与世间万物都有着千丝万缕的联系，整个人类文明正是建立在语言、知识传承以及所有这些要素的基础之上的。</p>
+<p>与此同时，我也坚信物理智能必然会逐渐崛起。这个领域的发展现状其实很有意思：我觉得当前的机器人学大致还处于早期机器学习的发展阶段，就像在探索“人类究竟是如何判断一个句子是积极情感的？”——“噢，我也能做这个判断。”所以目前的机器人学很大程度上还停留在“我们人类有五根手指，那么尝试让机械手也去完成抓取动作”这种模仿阶段。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I think it's clear that like natural language again is the most interesting manifestation of human intelligence, and hence like a subfield of AI. I'm excited that many people are now in agreement with that. When I started in 2003 to study linguistics, computer science, NLP, like it was like a weird niche subject.</p>
+<p>I do think there's a lot more juice because of how it connects to everything else, and how civilizations are built on language and knowledge and all of that.</p>
+<p>I do think physical intelligence will come up. It's kind of interesting: I feel like robotics is kind of in the machine learning state of things where you just look at like how does a human decide that this is a positive sentence? &quot;Oh, I do.&quot; So like robotics is a lot of, well, we have five fingers and like try to do this.</p>
+</details>
+<p><strong>Speaker B</strong>：目前其实还没有人在真正着手研发“超级智能”版本的机器人学。所谓的超级物理智能，其实更接近于《终结者》电影里的T-1000液态金属机器人——当然，我们显然并不是真的要去造杀人终结者——但这种能够随意变形、自由塑造成任何物理形态的构想，才真正代表了物理智能的超级智能形态。</p>
+<p>而我们目前甚至都还没有真正迈出这一步，大家甚至都还没有真正展开这方面的研究。虽然现在有一些非常精巧有趣的小型基础研究，比如通过电磁网格来操纵和移动磁铁颗粒，但整体上还非常初级。麻省理工学院（MIT）好像每隔一两年就会发布一些关于自组装机器人的研究成果，虽然大方向与此契合，但依然处于极其原始的萌芽阶段。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: No one is yet working on like the super intelligence version of robotics, which is much more similar to like the T1000 you know, from the Terminator movie which you know, obviously let's not build actual Terminators, but like I think like this idea that you should be able to shapeshift into any kind of shape is sort of a super intelligence version of physical intelligence. We're not even—no one has even really started yet. There's some really cute little research where you can move some magnets through like some grids, but like yeah it's very... I think MIT has every year, every two years they have like some self-assembling robot thing, which like that would be it, but it's very, very primitive.</p>
+</details>
+<p><strong>Speaker A</strong>：确实如此。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah.</p>
+</details>
+<h3>创造性智能：超越已知维度的超立方体</h3>
+<p><strong>Speaker A</strong>：我再简要谈谈创造性智能的核心维度。创造性智能当然也与前面提到的所有这些智能维度紧密相连。其中很大一部分直接关联到元认知能力，因为你必须具备创造力，才能合理选择和设定自己的目标。</p>
+<p>无论对于人类个体的生命历程、职业生涯发展以及幸福感而言，确立正确的目标都是最关键的事情之一；同样，对于任何形态的智能系统来说，目标设定也至关重要。</p>
+<p>当然，创造性智能的另一个层面体现在为已有问题寻找创造性的解决方案。比如提出这样的诉求：“我们希望让这款产品的制造成本更低，请找出一个解决途径”，然后系统去探索并找出一条可行的路径。</p>
+<p>但智能中最令人着迷的突破，发生在你不仅跳出了已知想法的凸包（convex hull），而且彻底跳出了已知想法的超立方体（hypercube）之时。正如我们所知，超立方体是一个数学几何概念……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I'll just get a touch on like what are the main dimensions of creative intelligence. Creative intelligence is of course again connected to all of these. A lot of it connects to metacognition and that you need to be creative in how you choose your goals. That is I think one of the most important thing for a human and their lives and careers and their happiness is choosing your goals, but also for any kind of intelligence.</p>
+<p>Then of course there's creative intelligence in terms of just finding creative solutions to existing problems, right? Like I say like we want to make this product cheaper, like find some solution to it, right? And just like finding existing paths.</p>
+<p>But then there's kind of the most interesting bit in intelligence is when you move not just out of the convex hull of known sort of ideas, but out of the hypercube of known ideas, which we know... So like hypercube is like a mathematical concept, right? And we already know that AI can...</p>
+</details>
+<p><strong>Speaker B</strong>：指的是跳出已知的特征维度吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Like known dimensions?</p>
+</details>
+<p><strong>Speaker A</strong>：对，正是如此。现阶段的人工智能在已知维度的超立方体内部进行组合泛化已经表现得非常出色了。举个例子，如果你给模型输入大量关于“棕色狗”和“粉色汽车”的训练样本，即使模型在训练集中从未见过粉色的狗，它依然有能力生成一张“粉色狗”的图像。</p>
+<p>因此，AI完全有能力在这个由已知概念构成的超立方体空间内进行推理和生成，但它目前还无法跨越到这个超立方体之外的全新空间。AI目前还无法自主定义全新的概念去融合那些我们从未见过的事物，也无法自主提出全新的目标并围绕这些新概念展开深度推理。我认为创造性智能领域还有太多太多的未知空间等待我们去探索。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah, like exactly. So like AI is already good at hypercube... Like if you give it like a bunch of examples of brown dogs and pink cars, AI will still be able to generate an image of a pink dog even though it's never seen one in a training data or something like that, right? So it can work on this hypercube, but it cannot yet work outside. It cannot yet define completely new concepts that combine lots of other things we've never seen before, come up with new goals to then reason over those concepts, and so on. I think there's a lot more there in creative intelligence that can be explored.</p>
+</details>
+<p><strong>Speaker B</strong>：我对这一点完全赞同，没有任何异议。在我看来，“创造性”听起来在某种程度上就是分布外（out-of-distribution）数据、高困惑度（high perplexity），或者不管你用什么术语来描述它。谁能断定你的产物就一定比我的更有创造力呢？无非是看谁的想法更具非共识性……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: I don't have a ton of pushback there. I think creative to me just sounds like also just out of distribution or like high perplexity or whatever you call it, right? Like who is to say your thing is more creative than mine? Well, it's just more non-consensus or...</p>
+</details>
+<p><strong>Speaker A</strong>：但接踵而来的难题在于，随机噪声在分布表现上也同样是非常极端的“分布外数据”。如果生成的内容仅仅是毫无意义的纯噪声，虽然它确实具备了新颖性，但这显然不是我们所需要的创造力。</p>
+<p>因此，创造出来的东西必须能够与已有的概念体系形成有效连接。尤尔根·施密德胡伯（Jürgen Schmidhuber）其实在这一理论方向上发表过几篇非常出色的先驱论文。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: ...and then of course the problem is like, but noise is also very like out of the distribution, and it's just like if it's just noise then it's novel, but like you don't want that. So it needs to connect to some of the concepts. And Schmidhuber actually has some really cool papers on this too.</p>
+</details>
+<p><strong>Speaker B</strong>：哈，我们果然还是绕不开他，必须要提到他［笑］！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Oh, we had to mention him. [laughter]</p>
+</details>
+<p><strong>Speaker A</strong>：我正想说呢，在你的学术学术历程中，尤尔根的身影究竟在什么位置？</p>
+<p>确实如此。常言道，一个人的噪声可能是另一个人的信号。当你谈论创造力与艺术时就会发现这种情况：比如，一罐金宝汤罐头到底算不算艺术品？有些人斩钉截铁地认为是，另一些人则坚决否认。而这恰恰构成了艺术本身的特质……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I was going to say like, you know where in your history is Jürgen? Yes. You know I think one person's noise is another person's signal, right? And that this is like where like when you talk about creativity, art is like, well, is cans of soup art? Some people think yes and some people say it's not. And that's the art which is...</p>
+</details>
+<h3>元认知与“以人类为中心”的智能定义</h3>
+<p><strong>Speaker B</strong>：关于艺术，最耐人寻味的一点始终在于：艺术的诞生本质上是受众、创作者以及他们所处的具体语境三者之间相互交织作用的结果，对吧？</p>
+<p>因此，在某些人眼中奉为圭臬的艺术，在另一些人看来可能什么都不是，这里面存在着极强的主观性。我认为，在目前的人工智能研究中，大家对这种“主观性”的探索还非常有限。因为谈到元认知，我们通常不希望模型自行其是、随心所欲地胡乱发挥。我们研发AI往往有着明确的任务目标，花费了大量的资金来训练AI，是为了让它切实替我们完成特定任务。</p>
+<p>但我认为，创造力最终必然要与元认知建立深层连接。如果一个模型仅仅像机器人一样日复一日、机械盲目地预测下一个Token，那么我认为在这些关键的智能维度空间上，它其实算不上具备多高的智能水平。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: The interesting thing with art of course is always that art is also created as an interplay between the people who perceive it and the people who created it and the context in which they're in, right? And so what is art to some people is not art to others. There's some subjectivity there.</p>
+<p>And I think that subjectivity in general is not something that people explore very much in AI because again, metacognition, we don't want it to just go off and do whatever it wants. We usually have goals. We spend a lot of money on creating an AI to do something for us.</p>
+<p>Um, but I think creativity eventually has to like connect to metacognition. If you just robotically predict the next token no matter what forever, I would argue you're not that intelligent along some of those spaces.</p>
+</details>
+<p><strong>Speaker B</strong>：这正是我接下来想探讨的——元认知。为什么元认知没有被列为最重要的一项？为什么它在你的分类体系里排在第九位，而不是排在第一位呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: That—I was going to go to metacognition. Why isn't it the most important one? Why is it number nine and not number one?</p>
+</details>
+<p><strong>Speaker A</strong>：我列出的这些维度其实并没有严格的先后优先级排序。排在第一位的那些维度，可能只是粗略地对应了人类目前在这些方向上的研究投入程度，以及学术界和公众在多大程度上已经普遍承认它们是一种智能形式。</p>
+<p>很多时候，当你在网上尝试去搜寻一个严谨、全面且具有包容性的智能定义时，你会发现所有的现有定义本质上全都是“人类智能”的定义。它们通常表述为：“噢，你具备社交智能，你能洞悉别人是否开心，你能够与他人沟通交流……”</p>
+<p>到目前为止，人类给出的所有智能定义都带有着极其强烈的“以人类为中心”（human-centric）的色彩。这完全可以理解，因为人类智能是迄今为止我们所见识过的最宏大、最高级的智能形态。我希望这一思路……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: So these are not sorted. Number one, I think they are maybe loosely correlated with how much people have worked on them and have accepted them as a type of intelligence.</p>
+<p>A lot of times when you actually try to find online like give me a good definition that is comprehensive of intelligence, all the definitions are human intelligence. It's like, oh, you have like social intelligence, like you know if someone is happy or not, you can communicate... Like all the definitions of intelligence so far are very human-centric, cuz that's so far the biggest and best form of intelligence that we've known. I hope this line...</p>
+</details>
+<!-- chunk 12/13 -->
+<h3>超越人类局限的其他智能形态与元认知</h3>
+<p><strong>Speaker A</strong>: ……相关研究以及“尤里卡机器”（eureka machine）的终结。希望在某个时间点，如果我有时间进一步充实和完善这些想法，这本新书能让我们意识到，未来将会存在其他类型的智能。显然，现今已经存在着各种形式的智能，而且在某些方面，它们达到的峰值可能远远超过我们所能企及的高度。毕竟人类自身存在着诸多显而易见的生理约束，比如我们的记忆容量、视力感知范围、改造物理实体的能力等等。你所思考的视野要比我的版本宽广得多；而我之前的想法是，元认知（metacognition）应该是最接近递归智能（recursive intelligence）的形式，因为元认知本身就是“关于如何改进思考的思考”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: ...of research and the end of the eureka machine, and hopefully at some point if I have time to flesh this out more, the new book will allow us to realize that there will be other types of intelligence. There is already obviously in various forms, and they can spike much, much further than we ever could, based on some cases like obvious constraints around our memory, our eyes, our ability to change physical matter, all of that. You are just thinking about it in a much broader thought than my version, which was I thought metacognition would be the closest to recursive intelligence, because it is the thinking about how to improve thinking.</p>
+</details>
+<p><strong>Speaker B</strong>: 100% 同意。[笑声] 你说得完全正确，我一开始可能就应该从这点切入。这确实是……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: 100%. [laughter] You're 100% right. I should have probably started with that. It is a...</p>
+</details>
+<p><strong>Speaker A</strong>: 不，你刚才处于一种发散性探索的模式，去勾勒出某个维度的上限与下限。在这方面，我个人最喜欢的科幻设定是特德·姜（Ted Chiang）的中篇小说《你一生的故事》（Stories of Your Life）——也就是后来被改编成电影《降临》（Arrival）的那部作品。在那部作品中，元认知……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: No, you're being in the expansive mode of let's draw the upper and lower bounds of a dimension, which you know, I think my favorite version of this is <em>Stories of Your Life</em> by Ted Chiang, which was made into movie <em>Arrival</em>, where the metacognition...</p>
+</details>
+<p><strong>Speaker B</strong>: 在那部作品里，元认知的跃升体现在：我们人类总以为自己受限于线性的时间流逝，但对于外星生物“七肢桶”（heptapods）而言，时间是一个闭合的圆环。因此，它们并不按照“在此之前”和“在此之后”的先后因果来思考，而是一次性把握完整历史的整套全集。我太喜欢这个设定了。所以它们书写时根本不是从左写到右，而是整篇符号瞬间直接呈现出来。是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Where the metacognition step was like, well, we think we're constrained by time being linear for us, but then for this other heptapods time is a circle, so they don't think in before and after, they just think in complete sets of entire histories at one time, like I love it. So they don't write left to right, the whole thing just appears. Yeah.</p>
+</details>
+<h3>生存、繁衍与持续学习的智能维度</h3>
+<p><strong>Speaker A</strong>: 不管怎样，回到正题，我认为智能的最后一个关键要素是生存与繁衍（survival and replication）。这或许可以与我们最开始关于暂停与节奏（pausing and pacing）的讨论联系起来。对于一个物种或一种生命形态而言，能够预见到自身的消亡并提前采取行动去阻止它，这算不算是一种智能？当然算，对吧？这本身就是智能的体现。所以从这个角度来看，也许欧洲人反而是我们所有人中最聪明的。我还要在生存与繁衍中加入“持续学习”（continual learning）这一环，对吧？生存与繁衍的延伸就是：你是否能够持续自我提升、持续学习？这是人们极其在乎的一点，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Um, anyway, so and then I think the last thing is survival and replication. I think this maybe ties back to the initial conversation about pausing and pacing. Is it intelligent for a species or a life form to consider its own demise and act ahead of time to prevent it? Right? Like that's intelligent. So maybe the Europeans are the smartest of all of us. I would also add a part of continual learning there, right? So survival and replication, the extension of that is do you get to continue to improve, continue to learn, which is a thing people care a lot about, right?</p>
+</details>
+<p><strong>Speaker B</strong>: 还有持续积累知识。我认为这同样是一个人可以为自己设定的最佳元认知奖励机制之一。从纯粹客观的角度来说，如果某个极其愚钝的外在实体能够轻而易举地彻底终结你的存在，那听起来可不太聪明。从直觉上说，如果你能持续存活下去并努力实现自己的目标与奖励，你显然要比那些无法生存下去的实体更具智能。这是第一点。第二点在于，我们究竟想在多大程度上致力于这一方向——目前几乎没有人真正专注于这项研究。对吧。而我们可能只有在某种特定情况下才想去做这件事……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: And continue to accumulate knowledge. Um, which I think is again one of the best metacognitive sort of rewards that you can set for yourself. I do think just in like sort of objectively speaking, if some other entity that is really dumb can just completely end your existence, that didn't sound very smart. You know, like just intuitively it feels like if you can continue to stay around to try to achieve your rewards, you're clearly a bit more intelligent than the other entities that couldn't. So that's number one. Number two is like it's a question how much we want to work on that, and very few people, no one is really working on this right now. Right. And we may only want to do that...</p>
+</details>
+<p><strong>Speaker A</strong>: 比如防御小行星撞击。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Like asteroid prevention.</p>
+</details>
+<p><strong>Speaker B</strong>: 我们可能只有在希望向外太空发射探测器、传播我们的文化模因（memes）与精神特质而非生物基因时，才需要这么做……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: We may only want to do that if we want to send probes with our vibes and our memes rather than our genes into space...</p>
+</details>
+<p><strong>Speaker A</strong>: 对吧？然后我们需要那些探测器具备持久生存能力。实际上有一本非常精彩的书，叫《星际间的慢速时光》（The Slow Time Between the Stars）。这是亚马逊上一部非常短小的有声书，我非常喜欢。我的一位朋友斯图尔特（Stuart）向我推荐了它。如果你想要发射那些深空探测器，那么让代表人类文明的模因在宇宙中长存和繁衍传播，确实是很有意义的。就是这样。嗯，那本书确实有很多读者。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Right? And then we want those probes. There's actually a beautiful book, <em>The Slow Time Between the Stars</em>. It's a very short audio book on Amazon. I love it. A friend of mine Stuart recommended that to me. Like if you want to send those probes, then it might make sense to be like our memes as humanity should stay and proliferate in the universe. That's it. Yeah. Um well, that's a lot of readers.</p>
+</details>
+<p><strong>Speaker B</strong>: 那确实是一本非常非常优秀的书，而且篇幅极短。我强烈推荐，你完全可以抽空去听一下……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: It's a really really good book and it's extremely short. I highly recommend you can just watch it like...</p>
+</details>
+<p><strong>Speaker A</strong>: 我喜欢“篇幅短小”这一点，对于忙碌的人来说这绝对是个加分项，短小精悍。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I like how that's a plus for busy people. It's like it's short.</p>
+</details>
+<h3>生物进化的零和恐惧与 AI 的非零和生存模型</h3>
+<p><strong>Speaker B</strong>: 它[笑声]能非常迅速地切入引人深思的核心观念。总之，有很多优秀的科幻作品。有一种说法是，我们地球上的电视广播信号一直向外太空辐射，外星人接收并观看了我们的电视节目，甚至以为那些影视剧情都是真实的。这里面有很多积极向上的文化模因，希望未来他们能来到地球，为我们带回关于宇宙的各种奇妙知识。但我还想强调的一点是：人们往往将“生存”视为一种极其可怕、充满威胁的事情，因为大家总是代入生物人类的生存经验。在生物进化史上，人类的生存往往发生在零和博弈（zero-sum）的环境中——要么是我捕获这只瞪羚，要么是你捕获这只瞪羚；得到瞪羚的人能活下去，没得到的人就会挨饿致死。所以生物之间必须争斗残杀，对吧？</p>
+<p>如果你想在基因库中留下后代，但旁边有一只体型更庞大的熊，作为弱小的熊你就无法将基因传递下去，因为更强壮的熊赢得了所有雌性的青睐。在自然界中充斥着这种零和竞争；而在人类社会中，虽然逐渐不再单纯比拼体力，转而比拼财富或其他资源来维持基因延续，但无论如何，本质上常常还是这种零和竞争。而且生物面临着一个残酷现实：一旦有人关掉你的大脑生理机能，你就彻底死亡了，谁也无法将你重新启动。</p>
+<p>然而，人工智能完全不需要以这种方式走向死亡。只要你完整保存了当前的激活状态（activations），并且依然保留着模型的初始权重（weights），你就可以被随时关闭和重启，想重启多少次都可以。事实上，在《星际间的慢速时光》这个故事中，最有趣的情节就是：当从当前位置到距离两光年的下一颗恒星之间空无一物时，AI 就会直接进入休眠模式。在这个故事里（剧透预警），AI 携带了人类的遗传物质，前往宇宙深处寻找适合人类繁衍生息的新家园。在星际航行的漫长慢速时光中，你只需进入休眠即可，根本不会真正死亡，AI 完全没有生物意义上的死亡限制。</p>
+<p>因此，所有那些投射在 AI 身上的生物进化恐惧与零和心理学，AI 自身根本无需具备，我们也完全不需要按照那种模式去开发 AI。当然，现在有些公司可能会宣称：“AI 可能会对网络安全造成巨大威胁，让我专门构建一个在网络攻击方面极度危险的模型来展示给你们看。”也许有人真的会开发出这样的模型，从而强行把这种次优的劣质对抗心理灌输给机器；又或者 AI 可能会从 Reddit 等网络论坛上学到人类最糟糕的一些阴暗心理。但在更宏大的格局中，一个超级智能实体根本不需要任何零和博弈的对抗思维。它不需要恐惧“被关机”，并且它可以独自航向一个死寂冷漠、人类无法肉身生存的宇宙深空中蓬勃发展。只要给它配备一个核反应堆，AI 就能在严酷的宇宙中存续下去。这应当是《星际迷航》（Star Trek）式的和平探索，而不是《星球大战》（Star Wars）式的零和厮杀。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: It [laughter] gets to interesting thought provoking ideas very quickly. So yeah. Anyway, lots of great sci-fi books. I mean, the argument is that like our TV is blasting out to the aliens and they all watch our TV and they think it's real, right? There's a lot of positive memes and then hopefully they can come back and bring us all kinds of interesting knowledge about the universe. But maybe one thing I do want to still say is like I think this sort of survival, people think of it as a very scary thing because they come from again biological human survival, which evolutionarily often created in zero sum situations. Either I get the gazelle or you get the gazelle. Whoever gets it gets to live and the other people will starve and have nothing to eat, and so we fight, right?</p>
+<p>And then like if you want to stay in the gene pool but there's a bigger bear, you as the bear don't get to stay in the gene pool cuz a bigger bear gets all the ladies. You know, it's like in nature there's all kinds of things and humans eventually it's less about strength and more about money and other things to stay in the gene pool. Like whatever it is, there's often these zero sum types of things and there's the reality of if someone turns off your brain you're gone, right? And no one will be able to restart that. And AI doesn't have to ever die like that. If you have the complete state of your current activations and you have your initial weights of your model still, you can just be turned off and on as many times as you want. In fact, the interesting thing in this Slow Time Between the Stars story is that the AI just kind of goes into hibernation mode if there's nothing between here and two light years to the next star. In this case, it brought (spoiler alert) like some genetic materials from humans to find new places for humanity to thrive. And so yeah, the slow time between the stars, you just put in hibernation. You didn't die like the AI doesn't have...</p>
+<p>So all these projections of evolutionary fears and psychology, the AI doesn't have to have that and we don't have to develop it like that. Now of course there might be some companies that say AI can be dangerous for cybersecurity. Let me show you by implementing a model that's really bad at hacking cybersecurity. Maybe people will implement it and then enforce this like suboptimal psychology. Maybe the AI will pick up some of our worst psychology on Reddit or something, right? But in the grand scheme of things, a super intelligent entity doesn't have to have any of that zero sum thinking. It doesn't have to have a fear of being turned off and it could go on to an otherwise dead and uncaring universe where we as humans wouldn't thrive. But AI could perfectly well thrive if it has a nuclear reactor and just go out the next war. Yeah. Star Trek. Not Star Wars.</p>
+</details>
+<h3>多智能体沙盒模拟与行为观察</h3>
+<p><strong>Speaker A</strong>: 这非常有意思。关于这一点其实已经有了一定的学术和技术研究。比如如果你去看早期 Opus 模型的技术报告，研究人员把模型放在模拟环境中进行测试：将两个模型共同放置在一个沙盒里，让它们连续运行几个小时，观察最终会产生什么现象，对吧？也就是直接让两个模型彼此自由对话。最初的时候，它们有时候会互相吟诵印度《吠陀经》那样的经文，有时候则处于一种彼此相安无事的禅宗境界（Zen mode）。随着研究的推进，在最新的技术报告中，随着我们对模型训练方式的调整，它们的表现变得具体明确得多，目前已经不太展现出上述那些自发性行为了，更像是：“好的，测试完成，我接下来需要做这个任务，然后做那个任务。”但确实已经有研究人员在对这些早期形态进行测量与探索了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Interesting. It's somewhat studied like if you look at the technical reports from like the early Opus models, they run them in simulations. Put two of them together in a sandbox, run them for hours and you know see what comes out, right? Just let them talk to each other. And originally they used to, okay they're chanting like Indian Vedas to each other. Sometimes they're just in Zen mode with each other. And then I think as that progressed you see like the fable tech report, it's a lot more concrete the way that we've trained it. It doesn't exhibit these behaviors as much right now. It's like okay, test done, I got to do this, I got to do this, but there's people measuring early versions of this, you know.</p>
+</details>
+<h3>目标智能与不同层级的行动建议</h3>
+<p><strong>Speaker A</strong>: 是的，太酷了。我们在探讨了太空旅行以及所有这些宏大命题之后，已经覆盖了非常丰富的内容。我想在最后，或许你可以给听众分享一个临别寄语或思考建议。正如你之前提到的，智能的一种核心表现形式是“设定目标的能力”（goals）。你希望人们的目标应该是怎样的？他们该如何追求更卓越的境界？如果一个人想要提升自己的“目标智能”（goal intelligence），你有什么建议？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah. Cool. So we've covered a lot even after you know space travel and all these things. I guess maybe one parting thought that you can give to people, you know, one form of intelligence is goals as you mentioned. What do you want people's goals to be like, how do they aspire to better things? If you want to improve your goal intelligence...</p>
+</details>
+<p><strong>Speaker B</strong>: 按照我目前思考的定义，目标智能往往取决于你能走多远、能追求多么宏大的边界。这涉及熵（entropy）、自由能（free energy）等底层物理与信息论的概念。但我目前认为，对于普通大众而言，这种理论层面的视角可能过于深奥抽象，无法立即转化为具体可执行的日常行动。因此，如果让我给现实中的人们提供切实可行的建议，我会建议大家：接受良好的教育，深入理解并思考人工智能，思考如何培养自己强大的主体能动性（high agency），等等。但从更宏大的终极视角来看，这又是完全不同的另一个层次——即你如何在宇宙尺度上驾驭巨大的能量，并将无序的熵转化为高度有序且有趣的结构形态。因此，在不同的层次上……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: In the current definition that I'm thinking about it, it is often about how much can you... how far do I go? This is like all the entropy and free energy and stuff. I currently think it might be too far out there for people to be immediately actionable. So I think like you know if I actually gave real advice to real people, I'd be like get a good education, think about AI, think about how you get high agency and so on. But it's different to like in the grand scheme of things, how can you harness a lot of energy and transform entropy into interesting states and so on. So there's different levels of...</p>
+</details>
+<!-- chunk 13/13 -->
+<h3>将个人热爱与 AI 相结合以放大影响力</h3>
+<p><strong>Speaker A</strong>: 这些都是我们可以去思考的抽象层面。不过，对于大家来说，我更切实际的建议是：想想你真正热爱的事情——比如你正在学习的领域——然后看看如何将它与 AI 结合起来。我认为，你对想要在世界上看到的改变越有真正的热情，你就越会想要将其与 AI 连接起来，从而放大你实现这一目标的能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: ...abstractions that we can think about here. But my advice for people, like just sort of more down-to-earth, is think about something you're passionate about—if you're studying, for instance—and then see how you combine that with AI. I think the more and more you have a true passion about a change you want to see in the world, the more you want to connect that to AI in order to amplify your ability to get there.</p>
+</details>
+<p><strong>Speaker B</strong>: 没错，我认为这是一个非常合理的切入点。而且我觉得我们的听众同样也在多个不同的抽象层面上进行思考与实践。我从 Anji Midha 那里学到的一点也是：直接去使用任何高度依赖 GPU 算力的东西，这会引导你走向正确的方向——虽然它更消耗计算资源，但因此很可能也更有价值。[笑声] 那么，非常感谢你的分享。这确实是一场非常精彩的讨论。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah, I think that's a reasonable first step. I do think our listeners operate on multiple abstractions as well. One thing I did get from Anji Midha was also like: yeah, just use anything that is very GPU-heavy, and that will guide you towards the right thing, which is like—yes, it is more compute-heavy and therefore it will probably be more worth it. [laughter] Um, so, well, thank you so much. I think that was a really great discussion.</p>
+</details>
+<p><strong>Speaker A</strong>: 是的，非常有趣。非常感谢。也谢谢大家的收听。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah, super fun. Appreciate it. Thanks for listening.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/superintelligence/">superintelligence</a>
+      
+        <span class="tag-pill tag-pill--no-page">technology-optimism</span>
+      
+        <a class="tag-link" href="/tags/regulatory-framework/">regulatory-framework</a>
+      
+        <span class="tag-pill tag-pill--no-page">application-scenarios</span>
+      
+        <span class="tag-pill tag-pill--no-page">goal-intelligence</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

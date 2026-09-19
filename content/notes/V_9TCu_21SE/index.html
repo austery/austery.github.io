@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>从生物学灵感到连续时间机器学习：线虫模型与液体神经网络的探索</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="从生物学灵感到连续时间机器学习：线虫模型与液体神经网络的探索" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">从生物学灵感到连续时间机器学习：线虫模型与液体神经网络的探索</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Latent Space</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>Latent Space</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-18</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-ml-3/">ai-ml</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/latent-space/">Latent Space</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://www.youtube.com/watch?v=V_9TCu_21SE" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-18
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">本文探讨了研究如何将生物学机制（特别是线虫神经元的分级电位特性）引入机器学习领域，并构建了“液体神经网络”等新型架构。研究从第一性原理出发，利用生物学模型解决了连续时间数学在人工神经网络中的应用难题，并讨论了模型定制化与持续学习在企业级AI部署中的重要性。</div></div>
+      
+    </div>
+    <!-- chunk 1/10 -->
+<h3>开场与背景介绍</h3>
+<p><strong>Host</strong>: 好的，我们今天在一个远程演播室中，现场有我们新任的编辑主管 Richard。来打个招呼吧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Okay, we're in a remote studio with our new head of editorial, Richard. Say hi.</p>
+</details>
+<p><strong>Richard</strong>: 大家好。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Richard</strong>: Hi, everyone.</p>
+</details>
+<p><strong>Host</strong>: Richard 是从英国连线进来的。另外还有 Liquid 的首席执行官 Ramin。欢迎你。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Dialing in from the UK. And Ramin, CEO of Liquid. Welcome.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 感谢邀请我参加。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: Thanks for having me.</p>
+</details>
+<p><strong>Host</strong>: 大多数人听说 Liquid 时，他们通常知道 LFM（Liquid Foundation Models），或者听说过 LFS。但他们自己可能并没有亲手尝试过。另一个颇受公众关注的有趣信息点是，据说它的灵感在很大程度上来源于线虫的 DNA 之类的生物机制。我平时其实不太关注这类说法，因为显而易见，我认为这很大程度上只是一种比喻或类比，不过你可以亲自告诉我们，到底应该多认真地看待这种生物学灵感？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Most people when they've heard about Liquid, they know about LFM or they've heard of LFS. They maybe haven't personally tried it. The other interesting I guess public data point is that it is very inspired by worm DNA or something. I never really pay much attention to that because obviously I think that that's an analogy, but you can tell us how seriously to take it.</p>
+</details>
+<h3>从脑科学到连续时间机器学习：初探秀丽隐杆线虫</h3>
+<p><strong>Ramin Hasani</strong>: 没问题，当然可以聊聊这个。其实大约在 12 年前，当我们最初展开这项研究时，我们的核心目标就是探索能否将来自大脑神经系统的生物学灵感重新引入到机器学习领域中。这就是整项研究最初的萌芽点与起点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: Yeah, absolutely. Well, you know, when we started our research about 12 years ago, we wanted to see if we can bring inspirations from brains back to machine learning. So that's where everything got started.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 当时我们开始研究人脑的机理。当我提到“我们”时，是指我现在的首席技术官（CTO）以及我自己。我们当时都在维也纳工业大学（Vienna University of Technology，简称 TU Wien）。那时我刚刚开始攻读博士学位，而我的联合创始人当时在那里读硕士。我们当时想要解决的核心课题，是弄清楚如何将连续时间数学（continuous-time mathematics）融入到机器学习系统之中。而这正是我们所做的工作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: And then when we started looking into human brain, we realized—like when I say we, my current CTO and myself, we started back in Vienna University of Technology, it's called TU Wien. And so I started my PhD, my co-founder was a master student there. And then what we wanted to do, we wanted to understand how we can bring in continuous-time math inside machine learning kind of system. And that's what we did.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 我们基本上深入研究了神经元的底层运行机制，观察神经元之间究竟是如何彼此传递和交换信息的。在生物学中，这一动态过程主要由非常简洁的一阶微分方程（first-order differential equations）所支配，这其实就是神经系统动力学在神经元和突触层面上实际的运作方式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: So we basically looked into neurons, how neurons exchange information with each other. And then this was governed by very simplistic first-order differential equations, and that's kind of how the nervous system dynamics are actually working at the level of neurons and synapses.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 起初我们的首要关注点是希望能从人类大脑入手。但是人类的大脑采用的是脉冲神经元（spiking neurons），要在人工系统中进行实际的学习和训练是极其困难的。事实上，我们至今对人类大脑中实际是如何进行计算的依然知之甚少。虽然我们现在对果蝇的大脑了解得更多了一些，但对人类大脑的细节依然不够清楚。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: And then our first focus, we wanted to start with human brain, but human brain has spiking neurons, and it's very difficult to actually learn—like we still don't know anything about human brain, how computation actually happens. We know a lot more now about a fruit fly's brain, but we don't know that much about human brain.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 不过我可以告诉你，我们之所以最终将研究锁定在这种生物上，是因为我们希望从第一性原理出发来构建系统。于是我们找到了秀丽隐杆线虫（<em>C. elegans</em> worm）。这种生物全身总共只有 302 个神经细胞，体长大约只有 2 毫米。而这种线虫极其精妙的一个特性在于，它的神经元表现方式与人工神经网络中的神经元非常相似——它们并不产生脉冲（non-spiking）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: But I can tell you that we got to this animal because we wanted to do it first principles. We got to this animal, <em>C. elegans</em> worm, which has only 302 nerve cells in its body, and it's 2 mm long. And one of the nice things about the worm was the fact that its neurons behave very similar to artificial neurons: they don't spike.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 在神经科学领域，这种动物神经元表现出的分级电位特性被称为神经元的电紧张电位行为（electrotonic behavior）。因为它的神经元不产生离散的脉冲放电，这种特性对我们而言具有极其巨大的吸引力和启发意义。因为如果你基于这种线虫大脑的机理去构建系统，你就能打造出纯粹的连续时间系统，并且它们是处处可微的（differentiable）。这就意味着你可以直接使用反向传播算法（backpropagation），并在其之上构建和运行各类机器学习模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: You know, so that graded kind of behavior in these neurons of this animal, in neuroscience they call it electrotonic behavior of a neuron. The neurons do not spike. And that behavior was very, very interesting for us, because if you build systems inspired by the brain of this worm, you would be able to build very continuous-time kind of systems and they're differentiable. So you can do backprop and all sort of other things on top of these things.</p>
+</details>
+<h3>秀丽隐杆线虫的计算效率与生物学意义</h3>
+<p><strong>Ramin Hasani</strong>: 这就是我们在那个时期所深入研究的模式生物。对我们来说最令人震撼和着迷的地方在于：它仅凭区区 302 个神经元，就能够控制全身 95 个肌肉细胞，而且其运动与控制表现远优于当时地球上存在的任何机器人系统。请注意，这可是在 2016 年和 2017 年的背景下。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: This was the model organism that we were looking at at that time. The most fascinating thing for us was that with 302 neurons, it could control 95 muscle cells better than any robotic systems that we had on the planet, you know, and this is 2016 and 2017.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 另外关于这种线虫还有一个极其有趣的科学事实：在进化树上，人类与这种线虫在大约 6 亿年前才分道扬镳。这意味着，神经科学家在研究这种线虫的大脑或细胞结构时所发现的规律与机制，在很大程度上是可以迁移到人类身上的。它的基因组与人类基因组具有高达 78% 的同源相似性。因此，它对人类科学研究而言是一类至关重要的生物，迄今为止围绕它开展的研究已经为人类斩获了四次诺贝尔奖。科学家们能以它为模型进行研究是非常幸运的，它是一种极为经典的模式生物。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: And also another interesting thing about the worm is the fact that 600 million years ago humans actually got split from this worm in the tree of evolution. So whatever neuroscientists are discovering about the brain of this worm or the cell structure of this worm is actually transferable to humans as well to some extent—78% similarity to human genome. So it is actually a very, very important worm for us, and so far it has won four Nobel Prizes for humanity. So you can imagine scientists are really lucky to study this animal. So it's a very, very popular animal.</p>
+</details>
+<h3>液体神经网络（LNN）的诞生与数学建模</h3>
+<p><strong>Ramin Hasani</strong>: 正因如此，在开展这项研究期间，我们甚至直接与专门研究这类神经元大脑机制的神经科学家们展开了紧密合作。简而言之，我们根据对线虫大脑机理的认知以及从中获得的启发，建立了两个神经元之间相互传递与交换信息的精确数学模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: And that's why in our research, we started even working with neuroscientists themselves that are working on the brain of these neurons. So long story short, we mathematically modeled how two neurons exchange information based on the inspirations and the things that we know about the brain of the worm.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 随后，我们提取了这些数学原理，构建出了被称为“液体神经网络”（Liquid Neural Networks）以及“液体时间常数神经网络”（Liquid Time-Constant Neural Networks, LTC）的新型架构。之所以命名为“液体”，主要是指其高度的灵活性（flexibility）。因为我们意识到，在正向传播过程中，这些系统是由非线性微分方程控制的高维非线性动力系统；同时它们又是全流程可微的，因此你可以在反向传播中顺畅地训练它们。由于模型内部具备多重反馈回路结构（multiple feedback structures），它们展现出了极其出色的表征学习能力，能够极高效率地从数据中提取底层特征表征。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: And then we got those mathematics and we built something called liquid neural networks—liquid time-constant neural networks. Liquid was basic liquid for flexibility, because one of the things that we realized is that these are highly nonlinear systems governed by differential equations in a forward pass, and they are differentiable. So you can actually run them backward pass and you can basically learn them really nicely because of the multiple feedback structures that they had. They are really representation learners, they learn representation from data really, really well.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 我们的另一大核心发现是，仅需使用这类神经网络的一个极小的子集——我说的极小子集，是指区区数十到数百个神经元——你就能够非常精准地控制机器人，其控制机理非常类似于线虫本身的运作方式。当我们发现数十到数百个神经元就能实现这种级别的控制时，我们感到极其兴奋。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: One of the things that we realized is that with a small kind of subset of these neural networks, you can control robots very similar to how the worm itself was doing it. And when I say small subset, we were talking about tens to hundreds of neurons, very, very small subset of neurons. And then we got very excited.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 于是我们开始将这些技术实际应用到机器人的实时控制中。在物理机器人硬件上，你通常无法拥有庞大的计算资源。因此，能够将如此高密度的智能算法压缩并打包到极小的计算单元中，使其能够在机器人端侧自主控制复杂行为，对我们来说具有极其巨大的吸引力。因此，追求极端高效的计算效率、将强大智能注入到最小算力单元中，自始至终都是我们坚定不移的核心研究方向。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: So we started applying these things to controlling robots. On the robot, you don't have that much compute, so bringing the fact that you can actually pack that much intelligence to control autonomously a behavior inside a robot, that was like a very attractive feature for us. So efficiency of this computation and bringing intelligence into the smallest kind of unit of compute has always become a research topic for us.</p>
+</details>
+<h3>麻省理工学院（MIT）时期的汇聚与规模化扩展</h3>
+<p><strong>Ramin Hasani</strong>: 到了 2017 年，麻省理工学院（MIT）CSAIL 的 Daniela Rus 教授联系了我在维也纳的导师。Daniela 是公认的机器人学界先驱人物，也可以说是现代机器人学之母。她在机器人学、分布式机器人系统以及软体机器人领域做出了极其巨大的开创性贡献。当她了解到我们的研究后非常震惊，感到十分惊艳，随即对我们发出邀请：“你们愿意来 MIT，把这项研究推向现实世界吗？比如将这项技术真正落地应用到自动驾驶汽车、无人机以及各种各样的无人运载工具上。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: And then in 2017, Professor Daniela Rus of MIT CSAIL—she reached out to my professor in Vienna, and she's one of my co-founders as well. She's the mother of robotics arguably, she has done tremendous contribution to the field of robotics and distributed robots and soft robots as a whole. She started learning about our research and then she was blown away, and she said: &quot;Okay, would you guys consider coming to MIT and continue this research in real world, like really applying this technology into let's say cars and drones and many, many different kind of vehicles?&quot;</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 于是 Mathias 和我双双加入了 MIT。从 2017 年起，我便开始与 Daniela 展开紧密合作。在 MIT，我还结识了我的第四位联合创始人 Alexander Amini，当时 Alexander 也是 MIT 的博士生。因此，Mathias、我、Daniela 和 Alexander 四个人从 2017 年开始，正式围绕连续时间动力系统（continuous-time dynamical systems）以及连续时间学习系统（continuous-time learning systems）展开深入研究，并全力探索如何将这些理论进行规模化扩展（scaling），将其应用到极其广泛的多元化领域中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: And both Mathias and I joined MIT. So since 2017 I've been working with Daniela. I met my fourth co-founder Alexander Amini. Alexander was a PhD student at that time at MIT. So Mathias and I were both there, and the four of us since 2017 started working on these topics of continuous-time dynamical systems and continuous-time learning systems, and then the scaling of all of these things, applying them into many, many different domains.</p>
+</details>
+<h3>序列建模的演进与连续时间动力系统的优势</h3>
+<p><strong>Ramin Hasani</strong>: 预测性序列模型（sequence modeling）逐渐成为了我们的核心聚焦方向。随着我们在该领域不断取得突破，连续时间建模整个大方向的发展势头也越来越好。与此同时，来自全球顶尖机构的众多学者也纷纷投身于此，例如 Yoshua Bengio 的实验室、多伦多大学 David Duvenaud 的实验室（Neural ODEs 团队），以及斯坦福大学的研究团队等等，大家都在共同推动连续时间动力系统这一前沿领域的发展。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: Sequence modeling became kind of our thing, we started doing contributions. And in this field of continuous time it became a little bit better because a lot of other researchers from different places—from Yoshua Bengio's lab, David Duvenaud's lab from University of Toronto, and then there was some people from Stanford—everybody was contributing to this field of continuous-time dynamical systems.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 你可以这样理解：传统的循环神经网络（RNN）本质上是离散化的动力系统，它们以固定的离散步长进行逐布计算，一个时间步到下一个时间步之间的时间差（Δt）基本被假定为固定不变的常量。而连续时间动力系统则赋予了你一种关键能力，能够对离散事件发生的时间节点拥有更精细的控制，不仅能够处理事件本身，还能显式地将事件之间流逝的实际时间跨度纳入数学计算之中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: And this was like—imagine recurrent neural networks that are discretized kind of dynamical systems that are basically computing one step at a time computation, but the time difference between one step to the other step, it doesn't kind of change that much. But this type of continuous-time dynamical systems allows you to have a little bit of control also over when events are happening in a discrete way, you also account for the time between the events that are happening.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 因此，对于在时间上持续演化、非均匀采样的动态序列数据，连续时间架构在时间维度上展现出了高得多的环境适应性与灵活性。这种融合了循环机制与连续反馈计算的底层机理，正是我们引入到机器学习领域的核心物理直觉与技术底座。当然，除了我们在 MIT 的团队之外，学界众多同行也在此期间同步探索，提出了神经微分方程（Neural ODEs）、状态空间模型（State Space Models, SSMs）等一系列涵盖在广义动力系统范畴下的代表性成果。而在那之后，我们尝试进一步拓展的方向是……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: So sequences that are continuously evolving, you have a lot more adaptability in the time dimension as well. So that kind of aspect of recurrence and feedback kind of calculation, this was kind of the intuitions that we brought to machine learning. Again, not only us from the MIT side, but also a lot of other people were simultaneously working on this with the topics such as Neural ODEs, State Space Models. You can think about all these other names that people started putting on top of these dynamical systems as a whole. And then what we tried to do then...</p>
+</details>
+<!-- chunk 2/10 -->
+<h3>早期探索：连续时间算法与分布外泛化挑战</h3>
+<p><strong>Liquid AI 研究员</strong>：在2020年前后，整个行业都在热烈讨论模型的可扩展性（scalability）。当时从麻省理工学院（MIT）的角度来看，我们正在学术研究层面与全球顶尖的研究机构展开竞争，比如OpenAI以及Google等巨头。从纯研究的角度出发，我们致力于提出兼具极高运行效率、且在新型学习场景（尤其是机器人环境）中表现极其优异的算法。如果大家还记得的话，在2017年至2020年期间，OpenAI在强化学习（reinforcement learning）领域非常活跃，并且在机器人方向投入了大量精力，发布了诸如OpenAI Gym等一系列极具影响力的开源工具与研究成果。因此，我们当时也在努力进行算法创新，尝试利用这类连续时间算法（continuous-time algorithms）来控制机器人，并向学术界展示如何真正将机器学习推向分布外（out-of-distribution）环境。也就是说，我们试图探索：我们能否构建出模型体积小巧紧凑、但同时在分布外泛化（out-of-distribution generalization）能力上却表现得远超传统架构的学习系统？这就是我们当时所秉持的核心学术论题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Researcher</strong>: Then it was time in around 2020 everybody was talking about scalability. You know, at the time, everybody like from the MIT side we were comp— we were competing with the OpenAIs of the world and Google's of the world like from a research point of view. Like we were putting algorithms that are efficient and then perform really, really well in new learning scenarios in the robotics environments. Because if you remember, between 2017 and 2020, OpenAI was very active in reinforcement learning and also like doing a lot of robotics like OpenAI Gym, like for example, some of the things that they were putting out. So we were trying to like get creative around like controlling of robots with these type of continuous-time algorithms and showcase how you can actually take learning to out of distribution, you know, like how can we have learning systems that are small, but at the same time they can do a lot better in out of distribution generalization. You know, so that was like the whole thesis that we were.</p>
+</details>
+<p><strong>Liquid AI 研究员</strong>：但随后，我们也开始深入思考规模化扩展（scale）的问题，因为当时整个AI领域都开始将注意力转向可扩展性。我们希望从这种受线虫（worm-inspired）生物神经回路启发的简单智能形式演进开来，迈向更加复杂、能够理解人类可读信号的系统——将音频、视觉和文本等大规模语料库作为我们核心关注的数据模态。然而，一旦我们尝试去扩展那些连续时间以及包含高度非线性循环回路（recurrent highly nonlinear loops）的模型架构时，就会立刻意识到其计算实现有多么困难：随着规模的扩大，它们在计算上会变得极其难以处理（computationally not tractable），算力开销急剧攀升且难以实际执行。因此，我们必须另辟蹊径，寻找能够对这类系统进行规模化扩展的创新方案。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Researcher</strong>: But then we started thinking about a scale because everybody has started thinking about a scale as well. Because we wanted to evolve from this worm-inspired kind of intelligence like to something that is like more complex and get into human understandable signals, you know, like with audio, vision, and text being like a corpus of data that we cared about. So as soon as we start scaling continuous time and recurrent kind of highly nonlinear loops, as soon as you start scaling them, you realize like how difficult it is to perform computation, you know. Like it becomes really, really computationally not tractable. So it becomes very difficult to compute. So you need to get creative around how to scale this kind of systems.</p>
+</details>
+<h3>RNN、Transformer 与状态空间模型（SSM）的架构权衡</h3>
+<p><strong>Liquid AI 研究员</strong>：一直以来，循环神经网络（RNN）面临的最主要阻碍就是其固有的顺序计算（sequential computation）特性。当循环算子本身包含复杂的非线性关系时，要想对其进行并行化处理（parallelizing）极其困难，尤其是在现代GPU硬件加速器上。而这正是Transformer架构最强大的优势与魅力所在：Transformer算子是无偏的，其底层本质上全部是标准的矩阵乘法（matrix multiplications），这使得它能够完美契合现代硬件架构——可以说是中了“硬件彩票”（hardware lottery）。这就是Transformer架构之所以能实现大规模扩展、并解锁通用人工智能行为的核心优势。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Researcher</strong>: Recurrent neural networks have been like their major blocker has been sequential computation, you know. So parallelizing recurrent operators when they are nonlinear, it's really difficult, especially on GPUs. This is one of the beauties of transformer architecture because they're unbiased. They are basically matrix multiplications and you can actually like scale them like it's the hardware lottery. That's the beauty of the transformer architecture for scale and for unlocking like general-purpose behavior.</p>
+</details>
+<p><strong>Liquid AI 研究员</strong>：然而，循环机制（recurrence）本身依然具有巨大的理论吸引力，因为它的计算复杂度不会发生爆炸。如果你思考一下自注意力机制（attention），随着模型处理和消费的数据量不断增加，注意力机制所带来的二次方计算成本（quadratic cost）一直是业界公认的巨大痛点。我们始终清楚地意识到，循环机制实际上能够大幅降低这种计算负担，使整体计算开销随着输入数据量的增长而维持在亚二次方（sub-quadratic）甚至接近线性（linear）的计算复杂度。因此，这些基于循环的算法在理论上要高效得多。但这在当时仅仅停留于理论层面；如果你无法真正在工程实现上进行规模化扩展并在硬件底层实现算子的全并行运算，你就根本无法将这些系统真正做大。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Researcher</strong>: But the recurrence itself is like so attractive because the computation doesn't explode. Because if you think about like attention, when you consume more and more data, the quadratic cost of attention is something that people have paid attention to. So we've always realized that recurrence is actually bringing this computation lower and they make it sub-quadratic or linear, you know, closer to linear kind of computation as you consume more data. So these algorithms are more efficient, but this is only theoretical. So if you cannot really scale and do the operations in parallel, you cannot scale these systems, you know.</p>
+</details>
+<p><strong>Liquid AI 研究员</strong>：针对这种非线性系统难以并行扩展的难题，我们尝试过的一种解决方案就是对其进行线性化（linearize）。所谓线性化，就是在动态系统中消除或降低所有的非线性关联，从而能够将线性代数的各种数学技巧直接应用到系统中，使得该系统在实际工程中变得真正可计算。这样一来，你就可以完全在底层并行地执行各种线性代数运算。例如，状态空间模型（State Space Models, SSM）本质上就是循环神经网络的一种线性化版本，它们舍弃了参数之间原有的非线性关系。之所以要这么做，根本原因就是为了实现可扩展的高效并行计算。正因如此，SSM逐渐成为一种非常流行的动力系统与机器学习算法范式，因为除了传统的注意力机制之外，你现在还可以利用并行扫描（parallel scan）等技术，并结合线性代数技巧来高效扩展另一种全新的运算格式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Researcher</strong>: So one of the things that we tried was that one way to solve for these kind of nonlinear systems to become linear is to linearize them. When I say linear, you dynamically like you reduce all the nonlinearities of the system. So you can apply linear algebra tricks on the system so that the system actually becomes computable. You can perform operations—linear algebraic operations—in parallel, you know. So that's something that, for example, state space models are linear version of recurrent neural networks and they lost kind of that nonlinearity, nonlinear relationship between the parameters. The reason behind why do you want to do that: because you want to make a scalable computation. So SSMs are becoming very popular version of a dynamical system or a learning algorithm because you can now parallelize some other form of operations as well, you know, like not just attention, but you can have like parallel scan and you can apply linear algebra tricks, as I said, to scale another format of operations like very much.</p>
+</details>
+<p><strong>Liquid AI 研究员</strong>：因此，将动力系统线性化确实让我们获得了扩展模型规模的能力。但是，如果从状态空间模型（SSM）的视角进一步审视，新的问题又随之而来：在计算机科学中从来没有“免费的午餐”（no free lunch）。当你把一个复杂的非线性动力学系统进行线性化处理后，你必然会损失模型的表达能力（expressivity）。线性化后的系统在表达复杂关系时，其能力根本无法与原本的非线性形式相提并论。随后我们发现，当把这类状态空间模型应用到自然语言处理等复杂语言建模问题时，它们在捕捉长上下文（long context）依赖关系上遇到了很大困难——它们确实能够以极高的效率进行计算，但在有效表达丰富语义方面却显得力不从心。因此，这类神经网络的表达能力始终逊色于Transformer。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Researcher</strong>: So linearizing this dynamical system allowed us to scale, right. So if you think about the SSM view, but the problem again what arises is that like there's no free lunch in computer science, right. So when you linearize a complicated dynamics, you're losing expressivity, so the system is not going to be as expressive as this nonlinear form. Then we realized like when we apply, let's say, this state space models like to solving language problems, they are having like troubles to learning like dependencies at long context. They can compute really efficiently, but they cannot express very efficiently. So the expressive power of these neural networks always fall short of transformers.</p>
+</details>
+<h3>Liquid AI 的元架构搜索系统与 STAR 框架</h3>
+<p><strong>Liquid AI 研究员</strong>：在积累了液体神经网络（Liquid Neural Networks）中的非线性数学理论、深入理解了动力系统、状态空间模型（SSM）以及卷积神经网络（CNN）等诸多技术后，我们意识到，其实有非常多不同类型的数学算子可以相互融合，用以构建通用的计算系统。基于这些深厚的理论与实践积累，我们当时得出一个结论：我们绝不能抱有任何先入为主的偏见，不能盲目宣称“我们自己的某一种特定架构就是所谓的终极圣杯”，更不能要求所有人都去押注某单一的替代架构。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Researcher</strong>: So with all the nonlinear kind of mathematics that we learned from liquid neural networks, we learned from dynamical systems, we learned from SSMs, we learned from convolution neural networks, you know, there's many different variations of operators that you can bring in together to build a general-purpose computer. With everything that we learned, we thought that, okay, so you know what? Let's not put ourselves into a biased way to go and say, &quot;All right, so our architecture is like the holy grail and everybody has to start like building an alternative architecture and then put a bet on a single architecture.&quot;</p>
+</details>
+<p><strong>Liquid AI 研究员</strong>：因此，在大约三年前Liquid AI创立的第一天起，我们的做法就是把替代架构领域的“复仇者联盟”（Avengers of alternative architectures）全员汇聚到了一起。我们邀请了来自Yoshua Bengio实验室、斯坦福大学、MIT等顶尖机构的研究人员——他们各自是不同新型架构的开创者与发明人，涵盖了Hyena分层卷积架构、状态空间模型（例如斯坦福大学的Jimmy Smith等人），以及我们在液体神经网络方面的核心团队。我们将所有这些顶尖团队汇聚一堂，并确立了一个目标：我们要以一种完全无偏见的方式，构建一个元AI系统（Meta AI System），由它来自动在整个算子空间（operation space）中进行智能搜索与最优组合。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Researcher</strong>: What we thought day one at Liquid, this is like about 3 years ago. What we did at Liquid, we started bringing Avengers of alternative architectures like all in one place, you know. Like we had like, as I told you, like people from Yoshua Bengio's lab, from Stanford, from MIT, like they're all inventors of various types of technology. There was Hyena hierarchy, there was state space models like Jimmy Smith of Stanford and ourselves like on liquid neural networks. So we brought all of these teams into one place and we said: let's build an unbiased way, let's build a meta AI system that searches through the operation space. So we built a meta system that searches through operators of interest given the deployment environment.</p>
+</details>
+<p><strong>Liquid AI 研究员</strong>：具体而言，我们构建了一个元系统，能够根据模型最终具体的部署环境（例如你想将模型部署在GPU还是NPU等特定芯片硬件上），在庞大的候选算子空间中自动进行搜索。我们在这个大规模搜索算法的基础上，自动构建混合架构（hybrid architectures），并要求该架构必须在四个核心维度上实现严格优化：
+第一，质量绝不妥协（No sacrifice on quality）。我们在推理能力、语言理解、通用知识等模型需要具备的各项核心能力上，设定了上百项严苛的评估标准，要求生成的混合架构在性能与质量上绝不输给纯Transformer模型；
+第二，极致降低内存占用（Minimizing the memory consumption）；
+第三，极致降低推理延迟（Minimizing latency）；
+第四，极致提升计算运行速度（Maximizing the speed of computation）。
+这就是我们在搜索算法中所针对优化的四大核心指标。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Researcher</strong>: Imagine you want to deploy these solutions on a GPU or NPU. So we applied basically this massive search algorithm on top of building hybrid architectures that allows you to—that allowed you to optimize four things. Number one: no sacrifice on quality. So there are a bunch of quality metrics like reasoning capability, language understanding, you know, knowledge—there's so many different kind of things that we want the model to do, like there are 100 different criteria. We thought that: no sacrificing quality against the pure transformer model. Minimizing the memory consumption, minimizing latency, and maximizing the speed of computation. These are like the four criteria that we optimize a search-based algorithm.</p>
+</details>
+<p><strong>Liquid AI 研究员</strong>：关于这项架构设计的底层科学原理，我们专门发表了一篇学术论文，名为STAR——全称为《定制混合架构的综合设计框架》（Synthetic Design of Tailored Hybrid Architectures）。如果大家感兴趣，只需在网上搜索“STAR Liquid AI”就能找到这篇论文。这篇论文系统阐述了我们如何以严密的科学方法自动化设计新型模型架构。这个元算法框架本质上是一个递归式的自我改进系统（recursive self-improving system）。回顾大约三年半前，我们正是应用了这套搜索算法，针对给定的具体芯片硬件，在庞大的混合架构空间中遍历寻找最优解。随后，这个系统便成为了Liquid基础模型（Liquid Foundation Models, LFM）历代计算图的演进基础。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Researcher</strong>: There's a paper that we published on the just the science of this thing, it's called the STAR, you know, it's called the synthetic architecture of—synthetic tailored architecture, like Synthetic Design of Tailored Hybrid Architectures. So I think if you look at this, just say &quot;STAR Liquid AI&quot;, you can actually find it. So I think that that's kind of the science behind like how systematically we are designing kind of architecture. So that framework, that meta algorithm is kind of a recursive self-improving kind of system. If you think about it, like three and a half years ago, we applied it, we applied it to really have like a search algorithm to go through various hybrid architectures for a given chip. And then this system became kind of the computational graph of different generations of liquid foundation models.</p>
+</details>
+<h3>从 LFM-1 到 LFM-2：面向芯片深度优化的极简架构演进</h3>
+<p><strong>Liquid AI 研究员</strong>：我们第一代架构搜索的产物便是Liquid Foundation Model v1（LFM-1）。它融合了卷积算子、注意力机制以及原始液体神经网络等多种成分，包含了各种各样模块的结合，整体架构相对比较复杂与混杂。随后进入第二代，我们专门针对CPU硬件的高效运行进行了深度优化，由此诞生了LFM-2系列模型实例。如果你仔细观察LFM-2的架构，会发现它展现出了一种极其优雅且简洁的设计：其架构基本上由约80%的双门控一维卷积（double-gated 1D convolutions）与约20%的分组查询注意力机制（Group-Query Attention, GQA）组合而成。因此，整个架构被极大地简化，不仅运行速度飞快，而且极其高效……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Researcher</strong>: Liquid Foundation Model version number one was the first instance that came out of this architectural search. It had some elements of convolution, some elements of attention, some elements of liquid kind of original liquid. It had like a—it was a mess of everything, you know. So, and that was like the first generation. The second generation, we optimized it specifically for running really, really well on CPUs. The LFM2 instances of the models, they are, if you look at them, they have a very elegant and simple architecture. So the architecture is basically 80% double-gated convolutions, you know, 1D convolutions, plus some group query attention, basically 20% of query. So the architecture is just a very simplified, very fast and...</p>
+</details>
+<!-- chunk 3/10 -->
+<h3>液态基础模型的神经架构搜索与端侧部署演进</h3>
+<p><strong>Ramin Hasani</strong>: 我们可以打造出能够在 CPU 上运行得非常流畅的高质量基础模型。这种架构搜索的精妙之处在于：假设在架构设计领域或智能的基础构建块层面出现了某项全新的创新或发明，我们就会直接将其纳入这个庞大的元 AI 搜索系统（Meta AI Search）中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: ...high quality kind of foundation model that you can run them on a CPU really, really well. Now the beauty of this architecture search is that imagine a new innovation or new invention in the architecture space or fundamental building blocks of intelligence happens, we add them to this massive meta AI search.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 因此，我们推出的每一代液态基础模型（Liquid Foundation Models, LFMs），相较于前一版本都必然会有所提升。而我们所选用的算子以及目标部署设备，在根本上决定了该混合架构的具体形态。这就是我们最初设计液态基础模型的方式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: So every generation of liquid foundation model that we put out, it would definitely have an improvement over the previous version, but the operators that we choose and the target device implies basically what should be that hybrid architecture. So that's how we started designing these liquid foundation models.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 如今大家所看到的，是我们已经推进到了 LFM 2.5 系列模型实例。我们是一家基础模型实验室，正如你所知，所有东西都是我们从零自主构建的——我们从头开始对这些模型进行预训练，验证并在这些模型上运行扩展定律（Scaling Laws）。我们对这些模型的扩展跨度，涵盖了从几千万参数级别一直到 700 亿参数（70B）规模。这基本上就是我们在模型之上运行扩展定律所覆盖的典型参数范围。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: So what you see today, we are at the LFM 2.5 instances of the models. We are a foundation model lab. We're building everything from scratch ourselves, as you know, like we pre-trained these models. We run the scaling laws of these models. We scale these models from tens of millions of parameters now to 70 billion parameters. Like that's kind of the range that we have usually running scaling laws on top of models.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 到目前为止，我们已经公开发布了 LFM 2 和 LFM 2.5 的较小规模实例。而下一代产品将是 LFM 3，它会是一个略作调整和优化的版本，从而在我们重点关注的一系列部署框架中，进一步提升生成质量、增强模型稳定性，并实现更出色的延迟控制。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: And then we so far released the smaller instances of the LFM 2 and LFM 2.5 instances. And the next generation would be LFM 3, which is like a slightly modified kind of version of these things, so that we can have added more quality, added more stability, added more kind of better latency control on a set of deployment frameworks that we care about.</p>
+</details>
+<h3>从学术研究到工业落地：Shopify 的严苛验证</h3>
+<p><strong>Host</strong>: 你刚才向我们展示的，可以说是 Liquid 所具备的技术实力的一篇博士论文级别的精辟摘要。关于神经架构搜索、无梯度演化算法等技术细节，我还有太多想要深入探讨的地方。不过，为了照顾正在收听我们播客的商业界听众，我们也来同步一下业务方面的最新进展。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: You just gave us a PhD abstract of what Liquid has. I have so much to dive into—neural architecture search, gradient-free evolution, all these things. But just for the people also listening on the business side, let's also give an update.</p>
+</details>
+<p><strong>Host</strong>: 上一次我们在播客中聊到 Liquid，还是和 Shopify 的 Mikhail 交流的时候，他是你们的忠实拥趸。我相信你们还有很多其他的合作伙伴，但我猜只有你最清楚内情。你能否帮大家同步一下现状，说明这绝不仅仅是一个停留在象牙塔里的科研项目？大家其实已经在非常高效地使用它了，而且你们的基准测试不是纸上谈兵，而是真实反映了现实工业环境中的表现。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: The last time we covered Liquid on the podcast was with Mikhail from Shopify, who's a big fan of you guys. I'm sure there's a lot more, so I think only you would know, and you sort of bring people up to speed on this is not just a research project, right? Like people are actually effectively using this. The benchmarks are not just, you know, goal seeks—they're actually reflective of the world.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 确实如此，完全没错。我必须说，Mikhail 现在算是我的一位导师。他是整个行业内最具影响力的人物之一，属于那种极其务实、从不搞虚头巴脑一套的人。我非常喜欢他那种直截了当给出建议的沟通风格。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: Absolutely. Absolutely. So yes, I have to say Mikhail is one of my mentors now. Mikhail is one of the biggest people in the industry. He's one of those no-BS type of people. I really like how he gives his advice very, very directly, you know.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 当时他对我们说：“我们在 Shopify 拥有一支非常强大的工程团队，我们自己也在训练模型。所以，如果你告诉我你们有非常出色的模型，那我必须要看到实打实的成果，我们的团队必须亲自验证。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: And one of the things that he told us is this: &quot;You guys, we have a very competent team at Shopify and we're building models, right? So if you're telling me you have models, I have to see, our team has to...&quot;</p>
+</details>
+<p><strong>Host</strong>: 他就像个务实的雇佣兵，只在乎实际输入和产出结果。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: He's a mercenary. He just cares about the input.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 没错，就是这样：“你们把技术拿过来，我们会进行严格测试，然后告诉你它到底行不行。”随后他们进行了初次测试，测试结果让他们非常惊喜——无论是模型的输出质量，还是运行效率，都令他们刮目相看。因此我认为，在替代架构（Alternative Architectures）这个赛道上，我们确实打造出了极其优秀的模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: That's it. &quot;You bring in the technology, we will test it, and we will tell you is it good or bad.&quot; Then they tested it first time and they were positively surprised of the quality and also the efficiencies of our models, you know. So I think in the space of alternative architectures, we have really, really good models.</p>
+</details>
+<h3>走出数据中心：AI PC 与端侧智能场景</h3>
+<p><strong>Ramin Hasani</strong>: 回到商业落地的维度：当我们探讨目前正在运营的这一系列模型时，正如我刚才所提到的，我们也在针对 CPU 进行深度优化。我们正在全力探索如何将智能能力带出数据中心、推向边缘端。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: So back to the business side of things. When we talk about this range of models that we are operating, and I told you we are optimizing for CPUs too. We are looking into bringing intelligence outside of data centers.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 我们已经开始与那些高度重视数据安全以及需要将计算部署在数据中心之外的企业展开深入合作。例如，我们开始与汽车制造商、机器人制造商、笔记本电脑生产商以及移动设备公司合作。这些场景都需要在数据中心以外的地方进行算力部署。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: We started working with enterprises that are caring about deployments that are outside of data centers as well. So we started working with car manufacturers, with robot manufacturers, with let's say laptop producers, we work with mobile companies. So they have deployments of compute somewhere outside of data centers.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 我们的切入点在于：我们的基础模型能力非常强劲，能够将顶尖水准的智能体验直接赋能到这些边缘设备上，以满足各类应用需求。以我们在 AI PC 领域的合作伙伴 AMD 为例：全球每年生产大约 3 亿台 AI PC（笔记本电脑年出货量大约在 3 亿到 4 亿台之间），我认为其中大约有 1 亿台是由 AMD 芯片驱动的——也就是说，硬件核心构建块基于 AMD。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: So we go in there and our foundation models are really good, and you can bring the best of intelligence on top of these devices for various type of applications. Examples of partners of ours would be like AMD on the AI PC side. 300 million AI PCs are getting generated on the planet every year—these are laptops, 300 to 400 million laptops, and I think from there about 100 million of it could be AMD-powered basically, like the core of the building blocks is AMD.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 因此，我们正在全力推进让液态基础模型直接在笔记本电脑本地流畅运行，从而实现某种形式的本地智能部署。这种本地智能可以解决很多不同的痛点问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: So we're working towards bringing our liquid foundation models directly running on the laptop, enabling some sort of local deployment of intelligence, you know, and they can solve multiple different problems.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 举个例子，这可以作为隐私安全过滤器（Privacy Filters）：它们能够以智能的方式设立防护栏，严格把关哪些数据允许流出你的电脑。想象一下，当你想要向 ChatGPT 终端或云端代码 Agent 发送内容时，对于那些包含大批敏感信息的数据，你可以先让它们经过本地的液态基础模型；本地模型会以极度智能的方式对敏感信息进行脱敏过滤，之后你再放心地将脱敏后的数据共享出去。这是一个非常典型的应用场景。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: This could be for privacy filters. They can be in a smart way guardrail like what wants to get out of your computer. Imagine you want to send something to the ChatGPT terminal or to your cloud code agent. Those kind of bulk of sensitive data that you want to send, you can pass them first through a liquid foundation model that basically shields out sensitive information in a smart way, and then you can share those information. That's like one thing.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 另一个应用方向是，你可以让小型模型作为主动式 Agent（Proactive Agents）直接常驻并在你的本地设备上运行。想象一下，如果有一个 Agent 能够访问你当前笔记本电脑上的各类上下文信息，在本地默默执行某种分析，并直接将洞察结果交付给你——也就是说，把所有你在云端能够获得的 Agent 体验，原汁原味地移植为直接在笔记本电脑本地运行的体验。这不仅能为你提供离线运行能力，还能满足严苛的物理隔离（Air-gapped）环境要求。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: The other thing that you can do is you can have the small models to be a proactive agents directly running on your device. So imagine if you have like an agent that is having access to all sort of information that is right now on your laptop and then performing some sort of analysis and gives you that analysis to yourself—like everything that you can achieve in the cloud, you'd want to bring it like as an experience also directly running on a laptop. And that would give you like also an offline capabilities, also like air-gapped capabilities.</p>
+</details>
+<h3>端云协同架构、成本效益与生产级落地的挑战</h3>
+<p><strong>Ramin Hasani</strong>: 所以你可以理解，我们所致力的目标，就是为当下的端侧智能部分提供动力。如果你审视当下的端侧智能生态，会发现它普遍采用的是混合式解决方案：一部分模型部署在云端，另一部分模型则运行在端侧设备上，两者之间始终保持着协同交互。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: So you can imagine what we are trying to do: we are trying to power the on-device portion of intelligence. Today when you think about device intelligence, there is a hybrid solutions out there. There is one model that is actually in the cloud and there are models that are running on the device, right? So and there's always like a collaboration of these two.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 在现阶段，如果你观察像 Apple Intelligence 或 Galaxy AI 这类应用最广泛的手机端 AI，就会发现大约 90% 的请求调用最终仍然被路由到了云端处理，只有 10% 是真正在端侧本地完成的。出现这种现象的根本原因在于，当前的端侧模型性能还不够强悍，可靠性也达不到足够高的要求，无法真正替云端分担更多复杂的用例负载。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: Usually right now if you think about like the most used phones, like from Apple Intelligence, from Galaxy AI, of all of these things, 90% of the calls are going to the cloud, right? 90% goes to the cloud, 10% on the device. The reason is because the device models are not powerful enough or reliable enough to really take more off of those cloud kind of use cases.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 那么，为什么各大硬件与科技公司都迫切希望将这些 AI 模型直接运行在端侧设备上呢？首当其冲的原因就是成本——极其高昂的计算成本。如果你拥有 4 亿部活跃手机，或者需要为数十亿级规模的终端用户提供免费的 AI 智能服务，而你却必须全部在云端集群中去承载并提供这些智能计算，那么后端的算力成本将会迅速膨胀到令人望而生畏、无法承受的地步。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: Why do companies want to run these AIs on the device? The first reason of this thing would be cost—sheer cost. If you have 400 million phones or let's say billions of clients that you have to support and give them a free intelligence access, and while you have to serve that intelligence somewhere in the cloud, that's going to become like really, really prohibitive kind of cost, right?</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 因此，我们正在全力攻关，这些大公司也在倾尽全力尝试将 AI 的实际计算工作负载直接搬到端侧设备上。因为只有通过这种端侧卸载的方式，企业才能真正为自己创造出健康的业务利润空间。这是最直观、最基础的驱动力。除此之外，正如我刚才所提到的，端侧运行还能带来完全离线可用、数据隐私安全等诸多不可替代的优势。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: So what we do, and these companies are really trying really hard to bring the workload of AI directly on the device, because in that way you're just creating margins for yourself, right? So that's like the first and simplest kind of solution. And then apart from that, you would have, as I mentioned, offline features, like privacy-sensitive kind of topics, and then many, many different advantages that you can bring on the device.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 然而，为端侧设备打造模型并使其达到真正的生产级工业品质，是一件极度困难的事情。我可以很坦诚地告诉你，这绝不是像从开源社区随便下载一个开源模型，然后生搬硬套塞进端侧设备里就能大功告成的——真实的工程落地远比这复杂得多。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: But it is very difficult. Building a model for the device and getting it to production quality is extremely difficult. I can tell you, like it's not like just downloading a model from open source and then trying to put it on the device and then now you're successful. It goes a lot more than that.</p>
+</details>
+<p><strong>Ramin Hasani</strong>: 在端侧设备上，你必须处理设备的发热与功耗温控约束（Thermal Control）；而且模型在长上下文窗口（Long Context）下的实际推理行为往往会发生显著改变。你必须让模型达到极其严苛的可靠性标准，要真正跨过这道门槛是非常艰难的。在过去的两年半时间里，我们经历了无数轮面向实际生产环境的打磨与迭代周期。我可以肯定地告诉你，构建真正生产级的工业 AI，其复杂程度远远超出了单纯在端侧设备上跑几个质量基准测试（Benchmarks）那么简单，它所涉及的工程深度远不止于此……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ramin Hasani</strong>: You have to do thermal control. The behavior of a model in the long context is actually changes, you know. Like you really have to have degree of reliability to add that. It's really difficult to actually get to that point, you know. And we have gone through over the last two and a half years, we've gone through many cycles of production, and I can tell you like it is really difficult. Production-grade AI is way more than just benchmarking some quality benchmarks on the device, you know. It goes beyond that, and then another...</p>
+</details>
+<!-- chunk 4/10 -->
+<h3>车载智能端侧部署与奔驰合作案例</h3>
+<p><strong>Speaker A</strong>：这类应用的一个典型例子就是汽车制造商，例如梅赛德斯-奔驰（Mercedes-Benz）就是我们的客户之一。我们在车载领域所做的工作，是将车载智能（in-car intelligence）引入汽车内部。我们在去年四月份左右宣布了这项合作，在汽车工业这种传统领域里，整个落地推进的速度实际上非常惊人。这是一次极其重要的合作，其核心思路就是打造真正的车内智能。我想在这里向大家分享一些更具体的细节和洞见。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: An example of these things would be car manufacturers, like Mercedes-Benz is one of our clients. What we do in the car space, we bring in-car intelligence. So imagine we announced a partnership like last April that actually happened really fast in the space of automotive. It is a significant kind of partnership that we thought of inside-the-car intelligence. So I want to give you some insight.</p>
+</details>
+<p><strong>Speaker A</strong>：试想一下这样的场景：当你坐在自己的车里时，你可以直接和汽车对话，体验各种升级版的“Hey Mercedes”智能交互功能。你不仅是在与车辆进行流畅的实时沟通，而这一切的背后，都完全是由直接部署在车机本地的基础模型（foundation model）在实时驱动。我们所赋能的这套系统模型是一套多模态解决方案，它能够直接接入车身搭载的摄像头感知系统，实现无缝的语音双向交互，同时还能依托文本基座模型提供强大的逻辑推理支撑能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: So imagine you're sitting in your car, you can talk to your car, you can have like all sort of &quot;Hey Mercedes&quot; features, you know, like you are communicating with your car and stuff. Those are all happening with the foundation model that goes directly inside the car. And this system, the model that we are powering, it's a multimodal solution that can get connected to the cameras and it can actually do a voice interchange, you know, and also like it has a reasoning powering through the text-based kind of models.</p>
+</details>
+<p><strong>Speaker A</strong>：更为关键的是，这个模型本身的体积仅有大约 600 MB 左右。想象一下，如果你拥有一个体积仅为 600 MB 却功能齐备的高性能智能模型，并将其直接植入每一辆汽车之中，你就可以通过 OTA（Over-The-Air，空中下载技术）轻松为全球范围内的每一辆车完成智能化升级推送。我们与奔驰合作的首批落地部署预计将于今年正式上线，覆盖北美地区所有搭载第三代车机系统的梅赛德斯-奔驰车型。这将是业内首次在车载端侧真正实现大规模、量产级的车内本地 AI 部署。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And this model itself is about 600 megabytes. So imagine, like if you have a 600-megabyte intelligence that goes inside every car, you can do an over-the-air update, or OTA, you can do over-the-air update of every car on the planet. The first deployments that we have on Mercedes, which is going to happen this year, it's going to be on all North America Mercedes-Benz cars that are Generation 3. We are going to have the first deployment at scale of AI actually inside the cars, you know.</p>
+</details>
+<p><strong>Speaker A</strong>：更令人难以置信的是，它目前运行在一颗硬件物料成本（BOM Cost）大概只要 100 美元左右的普惠型芯片上。所以我想表达的是，能够将如此高品质、工业级生产可用（production-grade）的 AI 模型真正带入边缘端侧设备，这种成就感是非常不可思议的。能够在这个能效和极致压缩层面上推进技术突破，并把这些顶尖模型带入汽车行业实现量产投产，感觉确实非常棒。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And this is running on a chip that is probably 100 bucks, you know, in cost. So what I want to say is that it's absolutely insane to really think about bringing a really high-quality kind of things, production-grade AI. It feels really, really good to actually work towards this efficiency at the levels that we talk about, and then taking these things and bringing them into production in the car kind of space.</p>
+</details>
+<h3>Shopify 私有化部署与月均十亿级请求</h3>
+<p><strong>Speaker A</strong>：除了车载领域之外，我还可以列举数以百万计我们在 Shopify 上落地的实际成果。众所周知，Shopify 一直以来都是我们非常不可思议的深度合作伙伴。与汽车不同，Shopify 的场景并不是做端侧设备（on-device）AI，但他们对系统延迟（latency）有着极度严苛的要求，他们既看重低延迟响应，又极其看重模型输出的高质量。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And then I can tell you about millions of things that we've done with Shopify. You know, Shopify has been an unbelievable partner for us. They are not doing on-device AI, but they care about latency. They care about latency and quality.</p>
+</details>
+<p><strong>Speaker A</strong>：他们的做法是在内部建立私有化部署集群，通过底层的 Liquid 基础模型，全面支撑面向消费者的 Shop App、面向商户管理端的产品矩阵，以及 Shopify 旗下众多不同的业务产品线。我们在他们的生产环境中部署了大量的 Liquid 基础模型（Liquid Foundation Models, LFMs）。举一个具体的例子：如果你今天打开 Shop App 并输入任何搜索或查询请求，系统实际上就会直接将信号路由给底层的 Liquid 基础模型来处理。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: So what they do, they have private deployments that they have to serve through the Shop App, the merchant-facing and also the client-facing products of Shopify across many different kind of things that Shopify does. We have a lot of Liquid Foundation Models deployed in production. One of the examples would be, if you go to the Shop App today and type in something in the Shop App, you would actually send the signal to a Liquid Foundation Model.</p>
+</details>
+<p><strong>Speaker A</strong>：这意味着在整个系统的技术栈中，正由一套高性能的 Liquid 基础模型在全天候提供高效稳定的服务，这非常出色。而且在实际使用量方面，我们正在见证极为惊人的指数级增长统计数据。广大客户和终端用户显然非常喜欢这些智能化特性，目前单单在这一应用场景下，我们每个月处理的请求量就已经呈现指数级爆发，突破了每月 10 亿次以上。这就是仅在 Shop App 这一项业务指标上由 Liquid 基础模型承载的调用规模。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: So there is actually a Liquid Foundation Model there that is serving across the stack, which is very nice. And we are passing through some amazing statistics, exponential statistics as well in terms of use. It seems like clients are really enjoying those features, and now we are exponentially at over a billion requests per month, you know. So that's the amount of requests that goes through the Liquid Foundation Models across like that Shop App, just that metric.</p>
+</details>
+<p><strong>Speaker B</strong>：光是 Shopify 一家就有这么多？明白了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Just Shopify? Got it.</p>
+</details>
+<h3>LFM 模型开源生态、参数范围与多模态架构</h3>
+<p><strong>Speaker A</strong>：是的，单单这一家就是如此庞大的体量。而如果从模型本身的受欢迎程度来看，正如大家所知，我们向整个开源社区公开发布并交付了我们的 Liquid 基础模型，实现了完全的开源共享。我认为目前这些模型在社区中受到了极为广泛的欢迎。模型全网总下载量已经累计突破了 4000 万次，目前的周下载量也稳定在约 150 万次左右。因此，模型的实际下载与采纳热度非常高，大量的开发者正在将这些开源模型直接集成到他们自己的工业级生产环境当中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah, it's just that. And then in terms of popularity of the models themselves, as you know, we deliver Liquid Foundation Models to the community and we really open-source them, and I think the models are very popular right now. They have an overall over 40 millions of downloads, and we have about 1.5 million downloads per week. So the models are getting downloaded really much. A lot of developers are taking these things and putting them in production.</p>
+</details>
+<p><strong>Speaker A</strong>：到目前为止，我们已经发布的 Liquid 基础模型参数规模跨度很广，从 1 亿参数（100M）一直延伸到 240 亿参数（24B）。其中规模较大的模型采用了混合专家架构（Mixture of Experts, MoE）。这一系列模型还在持续融合强大的多模态（multimodal）处理能力，正如我刚才所提到的，模型不仅能够在输入端同时对音频、视觉图像和文本进行综合多模态理解与处理，而且在输出端也能同步生成高质量的音频与文本。这就是我们目前构建的技术与产品矩阵全貌。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: The range of parameters of Liquid Foundation Models that so far we released are between 100 million parameters to 24 billion parameters, and these are a Mixture of Experts kind of architectures, the bigger ones. And this range of models, they're also adding multimodal capabilities, as I mentioned. The models could be processing audio, vision, and text at the same time as an input, and then generating audio and text as an output. So that's kind of the portfolio of things that we do.</p>
+</details>
+<h3>机器人领域探索：从视觉语言模型到工业视觉动作应用</h3>
+<p><strong>Speaker B</strong>：我一直很想了解你们在机器人（robotics）领域的进展，因为我知道在你们最初创立这家公司时，机器人技术就是你们的核心灵感来源之一。而且我注意到你们目前已经研发出了多模态模型，比如视觉语言模型（VLM）以及各种音频模型。那么，这些模型目前是否已经被应用到了机器人相关的场景中？你能不能详细讲讲这方面正在进行的一些实验与落地探索？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Was wondering about robotics, cuz that was kind of one of your inspirations when you started. And I noticed you've got multimodal models. You've got a vision-language model and audio models. So are those being used for robotics purposes, and can you maybe talk about some of those experiments?</p>
+</details>
+<p><strong>Speaker A</strong>：当然可以，确实如此。当你拥有了视觉语言模型之后，你实际上就可以去着手解决一系列“视觉-动作”（Vision-Action）层面的复杂控制问题。这意味着机器人可以通过视觉传感器来感知和观察周围世界，随后直接基于它所看到的视觉场景做出相应的动作决策与执行。此外，你还可以把这些模型部署为全方位的智能监控与工况分析系统。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Absolutely, yes. So when you have the vision-language models, you can actually solve vision-action kind of problems, you know. You can turn into robots seeing the world and then you take an action based on what the robot sees, you know. And you can also use them as monitors.</p>
+</details>
+<p><strong>Speaker A</strong>：试想在现代化工厂环境中，遍布车间的摄像头在实时监控整座工厂的全部作业运行流程。对于我们而言，我们通常关注的是机器人在工业场景中的作业任务，我们目前关注的重点大多不是人形机器人（humanoids），而是扎扎实实的工业机械臂与工业自动化机器人。例如，我们曾与一家名为 RoboTech 的公司展开合作，如果你在网上搜索“RoboTech、AMD 以及 Liquid AI”，你就能找到我们在该项目上完成的实际技术演示与展示成果。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: So imagine, like in factories, there are cameras that are monitoring the entire operations of a factory. And then we usually are thinking about industrial operations of robots, you know, not mostly humanoids, but also just industrial robots. We worked with a company called RoboTech. I think if you just say RoboTech, AMD, and Liquid AI, you would find there's a demo of what we've done there.</p>
+</details>
+<p><strong>Speaker A</strong>：另外我们还与一家位于意大利的名为 G-Bionics 的公司保持合作。这些企业专注于开发模块化机器人硬件，他们将我们的视觉语言模型部署到机器人本体上，用于构建针对机器人躯体各自由度的动作空间控制。机器人的本体机身上装有摄像头，利用我们的模型，他们能够赋予机器人精准的指令遵循（instruction following）能力，在本质上将其打造为端到端的视觉-动作模型（Vision-Action Model）。这些用例目前主要落地在工业制造与工厂作业现场。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: There's another company called Gbionics, I think it's in Italy. And these companies also, they are having modular robots and they're using our vision-language model for some action space for the body of their robot. There's a camera actually on the body and they are using these things for, let's say, instruction-following kind of capabilities, basically vision-action models. So use cases mostly goes inside factories.</p>
+</details>
+<h3>为什么早期战略性搁置机器人业务？商业化与验证难题</h3>
+<p><strong>Speaker A</strong>：显然，在探讨多模态智能时，正如你所提到的，我们那些体积更小、更精简的模型分支，由于在机器人所需的超低延迟应用场景中表现极其优异，因此非常受欢迎。目前有大量来自机器人行业的新合作需求正在源源不断地找上门来。然而，机器人在我们从创立的第一天起，实际上是一条被我们刻意选择“暂时搁置”的业务线。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And then there are obviously, if you think about multimodal intelligence, as you mentioned, the smaller instance of the models, for low-latency applications in robotics they're really, really popular. There's a lot of new engagements that are coming our way. But robotics has been something that we deliberately kind of put it on pause day one.</p>
+</details>
+<p><strong>Speaker A</strong>：这背后的核心原因在于，围绕机器人技术的市场拓展动作（Go-To-Market / GTM 路径），以及真正围绕纯机器人硬件去建立可盈利的商业模式是极具挑战性的，其变现与规模化周期往往会被严重拉长。如果你想要构建真正能投入实际生产使用的工业级机器人系统，你必须深陷于严苛的技术验证与确认（Verification &amp; Validation, V&amp;V）的无底洞之中。随后在实际部署环节，你还必须面对复杂的行业合规、安全性与监管审批门槛。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: The reason behind it was that because the go-to-market motion around robotics, and also really building a business around robotics is very difficult, and it is delayed. Because if you think about production-grade robotics, you need to go down the rabbit hole of verification and validation of the technology, and then you get into regulatory kind of aspect of it for deployment, right?</p>
+</details>
+<p><strong>Speaker A</strong>：因为我们创始团队本身就拥有深厚的机器人科研背景，我们非常清楚要将某个具体的机器人垂类方案真正推向规模化产品化有多么艰难。正因如此，我们当初的战略是先向上构建一层通用的横向智能底座，优先与那些能够快速起量的大型设备原始制造商（OEM）达成合作；随后再在公司的后续演进阶段中，逐步迈向对验证与确认要求极度敏感的物理动作执行（Action）领域。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: So because we are coming back from a robotics background ourselves, we know how it is like to really productize some robotics vertical. That's why we wanted to build a horizontal layer intelligence on top of places where we can have OEMs first, and then entering into the action world where verification and validation becomes much more sensitive as a later step of the company.</p>
+</details>
+<p><strong>Speaker A</strong>：但我们认为，现在已经到了全力切入机器人赛道的绝佳时机。很大程度上是因为我们的模型架构已经迭代得更加成熟、更加完善。如今，针对特定垂直应用场景下的基础模型后训练（post-training）、数据治理以及定制化微调流程，我们已经拥有了远比过去更为成熟和深厚的掌控力。因此对我们而言，现在正是比以往任何时候都更加严肃、深度地推进机器人垂直业务的最佳时刻。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: But I think now it is a good time, a lot because our models are matured a little bit better now. We have a lot more control over data and the post-training and customization process of these foundation models for certain type of applications. I think it's a very good time for us to really also start the robotic vertical much more seriously than before.</p>
+</details>
+<h3>机器人大模型是营销噱头还是本质相同？三大创新维度</h3>
+<p><strong>Speaker B</strong>：顺着这个话题我想进一步追问，因为我原本并没有打算在机器人方向上花这么多时间探讨，但既然你提到了并且认为现在的时机已经成熟——你们在机器人上使用的是否基本上就是同一个 LFM 模型家族？很多业界人士都在大肆渲染，声称机器人领域的动作模型（Action Models）或世界模型（World Models）有着本质上的截然不同。我很好奇，这其中究竟有多少成分仅仅是商业营销话术，而在底层本质上它们其实都是一回事？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Just on this, cuz I wasn't expecting to spend that much time on robotics, but since you mentioned it and you said it's a good time, do you basically use the same LFM family? I think a lot of people make a big deal about how different action models are or world models are for robotics. I don't know how much of that is just marketing versus fundamentally it is actually the same thing.</p>
+</details>
+<p><strong>Speaker A</strong>：这是一个切中要害的好问题。我来给你分享一下我的看法。如果我们要去审视并解构基础模型领域所发生的全部技术创新——无论这些模型最终被应用到哪一个垂直行业之中——我通常会将这些核心创新归纳为三大不同的维度与层级：首先是智能的模型架构创新（Model Architecture）；其次是智能的算法层创新（Algorithmic Aspect），即各类具备颠覆性的创新算法；最后则是数据处理机制层面的创新，比如具体的数据流转与处理方式……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: That's a great point. So I will tell you something. Innovations that happen in the space of foundation models that are getting used in any vertical, I would categorize them in three different classes: There is model architecture of intelligence, then there is algorithmic aspect of intelligence, like algorithms that are innovative, and then the last thing would be data processing kind of mechanisms, like what...</p>
+</details>
+<!-- chunk 5/10 -->
+<h3>算法维度与世界建模：超越纯架构创新</h3>
+<p><strong>Liquid AI 负责人</strong>: 那么在这一整个技术图景中，你想开展怎样的数据工作呢？从我们的研究视角来看，回顾我们之前讨论的内容，主要集中在模型架构的创新上，对吧？也就是说，之前关注的只是模型架构层面的效率，以及让模型基本上成为一台通用计算机的能力。这是从模型架构的视角切入的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI 负责人</strong>: What kind of data work do you want to do? So innovation across this tree—what we've been focusing on, like from our research point of view, what we saw so far and talked about was about model architecture innovation, right? Like it was just about the architecture, like efficiency of a model and the ability to become a general-purpose computer basically. So that's got the model kind of perspective.</p>
+</details>
+<p><strong>Liquid AI 负责人</strong>: 接下来则是算法层面。关于你如何训练一个模型，你可以使用自回归损失函数来训练模型，也可以通过扩散过程来训练模型，还可以在世界建模（world modeling）的语境下训练模型。因此，你可以采用那套模型架构，并将它们引入到世界建模体系中。我会说，世界建模就像是一种无监督的学习系统，用来真正构建出中间表征，从而依托该表征建立起对世界的认知与理解。因此，我自然会将世界建模归入智能的算法维度，而不是归为模型架构本身的变革。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI 负责人</strong>: Then there are algorithms. The way you train a model: you can train a model with an autoregressive kind of loss, you can train a model in diffusion processes, you can train a model in a world modeling context. So you can take that architecture and bring them into—so I would say world modeling, it's like an unsupervised way of learning systems to really build like a representation in between, so that from that representation you have a worldview of the world, like you have an understanding of the world. So of course, like I would attribute world modeling on the algorithmic side of intelligence, you know, rather than on the model architectural change.</p>
+</details>
+<p><strong>Liquid AI 负责人</strong>: 所以从技术上讲，你可以采用这些 LFM（Liquid Foundation Models）架构，将它们应用到世界建模流水线中进行训练，从而让它们对物理世界的规律建立更好的理解。我一直认为，不同的算法能让你以不同的方式学习世界的物理结构。相比于下一个词元预测（next-token prediction），世界建模能让你从物理世界中提取出一套截然不同的基础基元。并不是说下一个词元预测无法形成物理理解，它们确实具备某种物理理解，但那种理解方式与人类感知物理世界的方式存在很大差异。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI 负责人</strong>: So you could technically take some of these LFM architectures and use them in a world modeling pipeline and train them to have like a better understanding of the physics of the world. You see, I would always argue that various algorithms allow you to learn the physical structure of the world with different ways. World modeling allows you to extract like a different set of primitives from the physical world compared to next-token prediction. You wouldn't say next-token prediction would not have a physical understanding, but it's very different than the humans' way of understanding the physical world.</p>
+</details>
+<p><strong>Liquid AI 负责人</strong>: 因此在物理世界建模方面，当前业内仍然存在争论：究竟哪类学习算法能够解锁何种能力集，从而迎来机器人的“ChatGPT 时刻”？这在算法层面是一个巨大的问号。至于在模型架构层面，我认为你可以采用任何通用计算架构算法，将其应用到我刚才提到的那些框架当中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI 负责人</strong>: So I would just say that, and there is still a debate between what learning algorithms are going to unlock what set of capability that is needed for having the ChatGPT moments for robots. That's like a big, big question mark on the algorithmic side. On the architecture side, I would say you could use any general-purpose computer, like any general-purpose kind of architecture to be used in those kind of frameworks that I mentioned.</p>
+</details>
+<h3>商业模式与设计伙伴机制：从定制化服务到平台化复制</h3>
+<p><strong>主持人</strong>: 为了让我完全理解商业模式这一块，在咱们深入探讨更多研究细节之前，我想请教一下：我推测这些合作全部都是通过技术许可协议（licensing agreements）来进行的，因为很显然，模型需要在物理隔离（air-gapped）环境或端侧设备上离线运行。那么，你们通常需要投入多少时间来为客户定制一个模型？假设我带着非常严苛且特殊的算力限制条件来找你们，这个定制过程是由你们团队全权负责，还是双方协同合作？具体的运作流程是怎样的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: Just so I understand the business model side before we go back to a bit more research: I assume these are all licensing agreements, because obviously it's airgapped, it's on-device, it's all these things. How much time do you have to spend to customize a model? Let's say I come to you with like a very special set of compute constraints or whatever. Is it you got your guys doing it? Is it a collaboration? How does this work?</p>
+</details>
+<p><strong>Liquid AI 负责人</strong>: 问得非常到位。我们早期的合作形式通常是与“设计伙伴”（design partners）共同开展。针对这些设计伙伴，我们会指派专属的应用机器学习（Applied ML）团队与客户紧密配合，并按该阶段合作的周期进行收费。一旦定制化方案构建完毕，我们就会将其部署到位，随后根据部署的具体场景，按年或者按设备数量收取软件许可费用。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI 负责人</strong>: Fantastic question. So this is actually our early engagements is usually with design partners. You know, these design partners are the ones that we would associate kind of an applied ML team to work with the client, and we charge also for that duration of kind of engagement, right? And then once the solution is built, then we deploy the solution and then we charge licenses on a yearly basis, on a device basis, depending on where this thing is getting deployed.</p>
+</details>
+<p><strong>Liquid AI 负责人</strong>: 我们对模型收取的是持续性的定期授权费用。当我们在某个特定垂直行业成功打造出一套解决方案后，该垂直领域内下一家客户所需的服务支持时间就会大幅缩短。试想一下，如果梅赛德斯-奔驰（Mercedes-Benz）是我们的设计伙伴，我们围绕自身产品为其构建了一套解决方案，那么汽车制造领域的后续客户接入时，我们这边需要提供的定制服务工作量就会显著减少，交付过程将直接转化为纯粹的解决方案快速部署。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI 负责人</strong>: So we are charging for models as a recurrent kind of cost. Then after we build a solution in a vertical, then the time of service reduces for the next customer in that vertical. So imagine if Mercedes-Benz is our design partner and we build a solution around our products, then the next customers that are coming in the automotive vertical, the amount of service that we provide reduces from our side and it becomes just the solution deployment.</p>
+</details>
+<h3>企业级 AI 的下一波浪潮：从推理词元转向定制化词元</h3>
+<p><strong>Liquid AI 负责人</strong>: 因此，我们在每个垂直赛道打造针对性的解决方案，正是这些行业方案让我们能够实现更快速的商业化销售。话虽如此，作为一家基础模型公司，我们亲身走过了从零开始构建模型、并将这些模型投入实际生产部署的完整流程，而且这个过程我们已经反复实践过无数次。目前，我们正在打造一个模型开发平台，该平台具备自助服务能力。客户可以直接接入该平台，借助自动化能力完成上述的模型定制工作。这正是我们目前正在全力构建的产品。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI 负责人</strong>: So we make solutions in every vertical, and those solutions are the ones that are actually allowing us to sell faster. That being said, because as a foundation model company, we've gone through the process of building a model from scratch and deploying these models in production—we've gone through this process many, many times—we're building now a platform for model development, and that platform is kind of self-served. So you can actually get access to this platform, and then using this platform you would be able to automatically kind of do that job. And this is something that we are building.</p>
+</details>
+<p><strong>主持人</strong>: 哇。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: Wow.</p>
+</details>
+<p><strong>Liquid AI 负责人</strong>: 这是一个极具挑战性的复杂难题。你可以通过递归闭环等机制来形成完整的模型演进流程，但我们最核心的目标，是将 Liquid 构建高质量模型的能力赋予客户群体与广大企业自身。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI 负责人</strong>: As of it's a very difficult problem, you know, and you can close the loop also with like recursive loops and everything. But we want to give these capabilities of model building—the quality that Liquid builds models—to the client space, to the enterprises themselves.</p>
+</details>
+<p><strong>主持人</strong>: 这个平台目前是已经全面上线了，还是处于测试阶段？这还是我第一次听说这个平台。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: Is this platform fully rolled out, is it in beta? This is my first time hearing about this.</p>
+</details>
+<p><strong>Liquid AI 负责人</strong>: 还没有完全上线，目前正处于 Beta 测试阶段。我们正在紧锣密鼓地进行测试，团队对它感到非常兴奋。如果你深入思考这个问题，就会发现“模型定制化与持续学习”（customization and continual learning）是 AI 规模化落地的至关重要的下一步。当前，市场上 90% 的商业份额都集中在推理词元（inference tokens）上。回顾那些前沿实验室以及当前的推理算力服务商，比如市面上的 Fireworks 之类的公司，它们在做什么？它们托管模型，然后基本上按推理调用收费，也就是说，靠推理生成的词元来赚取利润。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI 负责人</strong>: No, it's in beta right now. It is in beta, like we're still testing it out. We're very excited about it. It is a very interesting kind of problem. If you think about it, customization and continual learning, it's a very, very important next step for the deployment of AI. Right now, like 90% of the market is around inference tokens, like frontier labs. If you think about frontier labs and even inference providers right now, like Fireworks of the world, what are they doing? They host the models and then they basically charge the inference, right? Like the inference tokens are the ones that are making money.</p>
+</details>
+<p><strong>Liquid AI 负责人</strong>: 但我认为，你应该关注下一波崛起的企业，我能列举出好几家，比如 REI、Core Automation、Thinking Machines，还有 Trajectory 等等，在定制化这个赛道上涌现出了许多不同的公司。越来越多的人和企业正转向“定制化词元”（customization tokens），因为如今市场上已经有了许多优秀的开源基础模型。企业完全可以获取这些底模——顺便提一句，我们现在探讨的是企业级 AI 领域——所以在企业级 AI 市场中，我认为“定制化词元”的商业化变现将成为人们重点发力的方向，这将是一个极其广阔且前景巨大的领域。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI 负责人</strong>: But I think the next wave of companies that you should know—I can name a couple of them: REI, there's like Core Automation, there's like Thinking Machines, you think about Trajectory, you know, there's many different companies in this kind of category of customization. So a lot of people are turning into customization tokens, because now there's like a lot of good base open source models as well. So enterprises could actually get—we are talking about enterprise AI by the way. So in the space of enterprise AI, monetization of customization tokens is something that I think people are going to capitalize on, and it's going to be something that is very, very interesting.</p>
+</details>
+<p><strong>Liquid AI 负责人</strong>: 这一细分品类中必将诞生出下一批超级独角兽（decacorns），事实上其中有些公司已经成长为百亿级巨头了。例如 Jeff Dean 刚刚又创办了一个新实验室，聚焦的也是同一类研究方向。因此你可以预见，定制化必将成为一个极其核心的主题。而当我提到定制化时，不要仅局限于模型的后训练（post-training）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI 负责人</strong>: And it's going to be the next wave of decacorns that are going to emerge from these kind of category, which some of them are already decacorns. Jeff Dean just started like a lab again on the same type of topics, you know. So you can imagine customization is going to become very—and when I say customization, don't only think about post-training a model.</p>
+</details>
+<h3>全栈定制平台与 LEAP 生态：赋能企业掌控专属智能</h3>
+<p><strong>Liquid AI 负责人</strong>: 要纵深思考从预训练一直贯穿到推理阶段的全流程定制深度。这才是真正的定制化：你可以做预训练，可以做中途训练（mid-training），可以做后训练，可以做数据合成生成，还可以做强化学习（RL）。所有这些环节都属于模型定制化的范畴。进一步地，让智能体（Agents）自动化执行这些工作，并将整个流水线形成闭环，从而构建出一个递归循环，让客户能够真正掌握并拥有专属于他们自己的私有智能资产。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI 负责人</strong>: Think about the depths of customization from pre-training to inference. That's customization: you can do pre-training, you can do mid-training, you can do post-training, you can do data gen, you can do RL. All of these things fall into this category of customization of a model, and then allowing agents to do that, and then looping the whole thing so that you can actually have like a recursive loop that allows the customers to own their own intelligence.</p>
+</details>
+<p><strong>Liquid AI 负责人</strong>: 这正是我们计划推进的方向。我们正致力于为客户提供这样一个平台，使他们能够真正以达到我们内部水准的高质量，自主构建 Liquid 基础模型，这是第一步；其次，一旦他们将模型投入生产环境，就能够确保模型始终与时俱进，并且性能水平始终保持在他们期望达到的高标准之上。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI 负责人</strong>: That's kind of something that we are planning to do, and we are providing like this platform to customers so that they can really build Liquid foundation models at the quality that we can build. Like that's number one. And then once they put them in production, they can keep them always up to date and always kind of to the level that they want them to perform.</p>
+</details>
+<p><strong>主持人</strong>: 在我们回到具体研究话题之前，我能再多了解一下你们的开发者平台 LEAP 吗？目前开发者是如何使用这个平台的？他们通常遵循怎样的流程来部署你们的产品？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: So just before we head to the research, can I ask a little bit about your developer platform LEAP? How are developers using this platform at the moment and what kind of process do they use to deploy your products?</p>
+</details>
+<p><strong>Liquid AI 负责人</strong>: 谈到 LEAP，它就像是一个代码库与工具库。我们在 Liquid 官方提供了一套完整的 Cookbook（实战指南手册）。这是一个完全开源的交流与学习阵地，你可以随时查阅我们的 Cookbook，它已经吸引了业内极大的关注。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI 负责人</strong>: So if you think about LEAP, it is like a library. We have a cookbook, you know, like at Liquid. This is like an open source kind of place. You can go to our cookbook—it got a lot of attention.</p>
+</details>
+<p><strong>主持人</strong>: 那里面的内容确实非常充实丰富。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: There is so much going on in there, you know.</p>
+</details>
+<p><strong>Liquid AI 负责人</strong>: 没错，我们在里面毫无保留地分享了大量的深度技术见解。不过需要明确的是，这些 Cookbook 和指南是专为人类开发者手动操作编写的，LEAP 库本身也是面向人类工程师设计的。如果你是一名开发者，想要使用 Liquid 基础模型并对它们进行微调，你直接访问那里即可。比如可以使用 <code>leap finetune</code> 等工具模块，那是微调我们模型的标准入口之一。此外还有部署相关的工具链，LEAP 支持你完成各种部署任务……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI 负责人</strong>: So we literally provide even a lot of insights. Like this is manual, this is built for humans, right? LEAP is also built for humans: like you're a developer, you want to use Liquid foundation model, you want to fine-tune them, you go there, you can take like some of the like <code>leap finetune</code>, for example, is one of those places where you can fine-tune one of our models. Then there are like deployments, LEAP allows...</p>
+</details>
+<!-- chunk 6/10 -->
+<h3>Liquid 平台与开源生态部署能力</h3>
+<p><strong>Liquid AI 代表</strong>: 这样你也可以提取出一种可以直接部署的打包产物（Bundle），比如类似于推理就绪的 GGUF 格式，像 llama.cpp 那样开箱即用的系统，能够直接运行在端侧设备上。如果你想在 CPU 上进行部署，可以直接访问我们的 Leap 平台，它允许你导出这些随时可供部署的软件包。这就是 Leap 所做的事情。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Representative</strong>: ...you to also extract kind of a bundle that you can deploy, like an inference kind of ready GGUF kind of format, like a llama.cpp kind of ready kind of system that can go directly on the device. If you want to have, let's say, CPU deployment, you can go to our Leap platform, and it allows you to extract one of these bundles that are ready to be deployed, you see? So that's what Leap does.</p>
+</details>
+<p><strong>Liquid AI 代表</strong>: 再看一下我们目前正在构建的平台，它实际上就是我们过去在 Leap 上所做事情的自动化版本。Leap 本身具备一些功能，但也有一些功能尚未涵盖。我们希望完善 Leap 平台，将其作为一系列工具提供给企业，让企业能够具备这种能力。我们自身也使用这些工具，但它们更像是独立的、分段式的工具，你可以直接使用它们，或者将它们交给你的云端智能体（Cloud Agent），用来微调模型并完成任务。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Representative</strong>: And again, think about our current platform that we are building right now: it's literally the automated version of what we have been doing with Leap, right? There are some functionalities that Leap has and some functionalities that it doesn't. So we want to complete the Leap platform as tools, and then be able to also provide enterprises with the capability to do that in a way that we use those tools. But those are kind of individual, segmented tools that you can use or give your cloud agent to really take them and use them to fine-tune an elephant.</p>
+</details>
+<p><strong>Liquid AI 代表</strong>: 话虽如此，对于 Liquid 基础模型（Liquid Foundation Models），在很多非常流行的开源平台（比如 Unsloth 和 Hugging Face）中也都有相关支持。例如他们有 TRL 这样的微调库，你可以使用任何这些开源工具包。因为我们现在努力与开源社区保持非常紧密的联系。我们非常喜爱 Hugging Face 团队，也十分欣赏 SGLang 团队，我们与他们展开了极其紧密的合作，积极把对 Liquid 模型的支持带入这些生态。而 llama.cpp 项目本身也是一项了不起的努力，让智能能够在数据中心之外的设备上真正实现部署。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Representative</strong>: That being said, there are also supports of Liquid Foundation Models in the very popular places like Unsloth and Hugging Face. They have the TRL fine-tuning kind of libraries; you can use any of those open-source packages as well, because we now try to be really connected to the open-source community. We love the Hugging Face guys, we love the SGLang guys, we work very, very closely with them, and really bringing support. And the llama.cpp project itself is an amazing effort to really deploy intelligence outside of data centers.</p>
+</details>
+<h3>企业在模型落地中的疲态与自助式工具需求</h3>
+<p><strong>主持人</strong>: 是的，我确实有一段时间没怎么听到 TRL 了。每隔一两年就会出现一些新的热门工具，比如现在是 Unsloth，但我们过去也报道过像 Axolotl 这样的项目。不过刚才有一点让我眼前一亮，就是当你提到“自助式（Self-serve）”的时候。我原本以为你们会提供大量的专业服务，或者像现在流行的叫法“前线部署工程师（Forward Deployed）”之类的支持。那么在这类技术落地中是否存在一种成熟度阶梯或者演进层次？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, I haven't heard TRL in a while. Every year or two there's like a new hotness—like right now it's Unsloth, but we've also covered Axolotl in the past as well. One thing my eyebrows just went up when you said self-serve. I think I had expected that you would do a lot of services—maybe these days it's called forward deployed, whatever the hot term is. But is there a maturity or hierarchy of things, right?</p>
+</details>
+<p><strong>主持人</strong>: 基本上我的理解是这样：现在大家都在大谈持续学习（Continual Learning），但很可能大多数团队根本还没有准备好。比如你们发布了量化感知蒸馏（Quantization-Aware Distillation）这类能力，这个在我看来是易于上手的，也是可以自助实现的——只要提供一些规范指引，开发者就可以把大模型的知识蒸馏到小模型中。那么企业在采纳时，是否存在一个从入门逐步往上走的演进阶段？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Basically the way I think about it is like, okay, everyone's talking about continual learning, but probably most people are not even ready. You release, for example, quantization-aware distillation, and that seems easy, that seems like self-serve—like, okay, you give me some guardrails on how to do this, I can distill big model onto a small model, right? Is there a stage of like, okay, you start here and then you work your way up?</p>
+</details>
+<p><strong>Liquid AI 代表</strong>: 确实如此，完全没错。你切中了一个非常关键的问题。我可以从更深层次的视角来跟你分享一下。到目前为止，我们大概与财富 500 强企业中的 200 家进行过合作，与各类成熟企业保持着广泛的深入交流。我们发现，很多企业实际上已经感到筋疲力尽了。在过去很长一段时间里，他们都经历过尝试构建自主 AI 能力的过程，组建了自己的应用机器学习（Applied ML）团队。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Representative</strong>: Absolutely. Yes. You touched on a very, very important problem. I'll tell you a little bit deeper perspective. We worked probably with 200 of the Fortune 500 companies so far; we really are in touch with all the enterprises. And what enterprises are—enterprises are exhausted. They went through the process of building their own intelligence for a long time. They try to have applied ML teams themselves, we're talking about mature enterprises, right?</p>
+</details>
+<p><strong>Liquid AI 代表</strong>: 这些成熟的企业尝试过引入 AI 能力，比如从开源社区下载模型，或者针对自身业务场景从头训练专属模型。但这些尝试最终大多并没有转化为实际投产的业务管线，最后他们总是不得不退回到直接调用云端大模型 API 的方案。也就是说，他们始终没有达到预期的生产级质量。市面上确实有一些 POC 项目，但我可以明确地告诉你，大约 80% 的原型验证项目都根本达不到生产级标准。这是我看到的让企业感到精疲力竭的第一大痛点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Representative</strong>: These mature enterprises, they tried out intelligence, downloading models from open source, building their own models from scratch for their own topics and stuff. And this did not result in actual production lines, and they always defaulted back to the cloud solutions, you know. So they never got to the production quality that they want. Some of these products are out there, but I can tell you the ratio is like 80% of the production-grade stuff doesn't—the POCs, 80% of them do not hit the production level. So that's one of the exhaustive kind of things that I see.</p>
+</details>
+<h3>Token 消耗与全流程智能体开发</h3>
+<p><strong>Liquid AI 代表</strong>: 我看到的第二个现象是，目前开发者群体中存在巨大的诉求，他们希望在开发过程中能够获取最高水平的模型能力，希望能通过自动生成大量代码来完成任务。所有人都试图疯狂堆砌 Token（Token Maxing）。这种风气在开发者群体中就像病毒一样蔓延开来。但当你真正去做价值归因，评估这些由 AI 生成的代码仓库和开发流程究竟为成熟企业创造了多少实际价值时，你会发现其中 90% 的 Token 消耗都是无效且无意义的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Representative</strong>: The second thing that I see is that there is massive demand for developers right now that they want to have access to the highest form of intelligence for development. They want to vibe code stuff; everybody wants to token max. It's such a virus that is in the head of developers, you know. And again, when you do the value attributing—how much value was generated off of this vibe-coded repositories and stuff that is happening at mature organizations—you will again end up with 90% of these tokens are useless tokens.</p>
+</details>
+<p><strong>Liquid AI 代表</strong>: 因此，当企业看清这一点并希望有效控制成本时，市场便产生了一种强烈的诉求：他们需要一个自助式平台，既能满足内部开发者的需求，又能帮助他们以最快的速度达到目标并获得真正的商业价值。针对这一痛点，我们所打造的平台并不是要去做另一个复杂的 UI 界面或某种全新类型的工具集。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Representative</strong>: So when you actually have enterprises see this and they want to also control the cost that they have, there is a massive demand now for them to have a self-served platform that allows them to really get to the point that they want to get as soon as possible to a value that they want to receive, you know, while satisfying the demand of their own developers. So what we try to do, we try to build the platform not as another UI, another new type of set or something.</p>
+</details>
+<p><strong>Liquid AI 代表</strong>: 我们的平台实际上是直接内嵌在客户端环境中的，非常类似于你与云端代码助手交互的方式。你可以使用自己熟悉的智能体框架（Agentic Harness），只需将 Liquid AI 的工具接入进去即可。通过这种方式，你喜爱的智能体框架便能够以循序渐进的方式，引导你一步步开发、构建并部署达到生产级标准的 Liquid 基础模型，完全复现我们内部的构建标准。不过在现阶段，这个过程依然需要开发者进行交互式协同，人机协同（Human-in-the-loop）至关重要。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Representative</strong>: Our platform is literally going to sit inside a client, very similar to how you interface with your cloud code. Very similar that you take your agentic harness and you just give it the tools of Liquid AI. And these tools would be able—your own favorite kind of agentic harness would be able to in a step-by-step manner walk you through developing and building and deploying a Liquid Foundation Model at production quality level the way that we would do. But this process is an interactive process with the developer at the moment. Human-in-the-loop aspect of it is very important to the point that you mentioned.</p>
+</details>
+<h3>自动化研发与动态评测挑战</h3>
+<p><strong>Liquid AI 代表</strong>: 就像你刚才提到的，客户自身可能还没准备好完成这一整套流程，所以你必须为客户和开发者提供指引，帮助他们真正达到目标，这就是自动化工具的作用所在。当然，你也可以把这个平台开到全速运转模式，直接切换为全自动运行（Auto Mode），只需一键点击，就能直接交付最终模型，完全不需要关注中间过程。但显而易见的是，这种完全自动化产出的模型质量，肯定不如由开发者深度参与、交互式协同打磨出来的模型效果好。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Representative</strong>: You mentioned like: are they ready to do this? You got to guide the customers, right? You got to guide the developers to really get to that point. So that is the automated kind of stuff. You can also put it on steroids: you can put the whole platform on auto mode and say one click, and then just deliver this—I don't want to see any intermediary stuff. But obviously the quality of the resulting model is not going to be as good as when you're having an interactive developer actually interactively build something with it, you know?</p>
+</details>
+<p><strong>主持人</strong>: 让我追问一下。如果我已经具备了非常完备的评估体系（Evals），那我为什么还要关心具体的研发过程呢？它难道不应该像全自动研究（Auto Research）那样自主迭代完成吗？为什么在初次部署时我还需要去人工查看日志？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Let me push back on you, right? If I have good evals, why do I care what the process is, right? It should just auto research itself. Why do I have to look at the logs for the first time?</p>
+</details>
+<p><strong>Liquid AI 代表</strong>: 对于首次部署的情况，我完全赞同你的观点。但想象一下，当你根据手头的评测基准将模型推向实际生产环境之后，新的线上数据会源源不断地涌入。当模型置身于真实的生产环境时，新的请求会带来完全不同的分布偏移（Distribution Shift）——比如社区用户对模型的能力诉求可能突然发生了转变。面对这种情况，你该如何处理？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Representative</strong>: I fully agree with you for the first deployment, right? Imagine if you put the model in production based on the evals that you had. Now you put the model in production, then new data is going to come in. The model is in actual production environment. Okay, now imagine new data is coming in, new requests, all of a sudden there's a massive distribution shift of, let's say, community wanting different things from your models. How do you handle that?</p>
+</details>
+<p><strong>Liquid AI 代表</strong>: 你必须具备应对这些变化的能力，因为原先的评测集很快就会过时，静态的评估基准（Static Evals）必然会失效。因此你必须在系统中引入某种动态机制，而这只有依托一个能够持续演进的系统才能实现。评测不能是一成不变的。对于初次迭代，我完全同意你的看法；但一旦进入真正的生产环境，评测标准就无法保持静止，你必须根据实际情况动态调整评测标准。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Representative</strong>: You got to be able to handle these things because your evals are going to become obsolete. Static evals are going to become obsolete. So you need to have some sort of a dynamism there, and this would only happen if you have a continuously evolving system. You see, evals cannot stay static. That's the thing for the first iteration. I fully agree with you, but if you go to production, then the evals are not going to stay the same; you always have to change the criteria.</p>
+</details>
+<h3>后训练与从零架构搜索的分工趋势</h3>
+<p><strong>主持人</strong>: 我非常认同这一点。我认为这也正是大家转向环境驱动（Environments）、类似 Harbor 风格的任务评估等方向的原因。那么在后训练（Post-training）以及构建自有环境方面，你还观察到了哪些其他趋势？Maxim 之前显然也深入讨论过这个话题，但总的来说，未来的分工是否会变成：客户承担越来越多的后训练工作，而你们专注于底层架构设计？目前的分工模式是这样的吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I definitely agree on that. I think to why we're moving towards environments and, you know, Harbor-style tasks and all these things. What other trends are you seeing in sort of post-training, our own environments? There's a lot there which obviously Maxim has talked about, but effectively are customers, let's call it, doing more and more of the post-training and you are doing the architectural work? Is that the division of labor, something like that?</p>
+</details>
+<p><strong>Liquid AI 代表</strong>: 是的，但我认为不仅限于后训练。正如我前面提到的，不要把视野仅仅局限在后训练上，我们所探讨的是从零开始进行完整的模型开发，我们希望能够涵盖包括底层架构搜索在内的全流程能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid AI Representative</strong>: Yes, I would say not just post—as I said, don't forget about just post-training. I talked about the whole model development from scratch, we want to be able to...</p>
+<p><strong>Host</strong>: Everything, including the architecture search?</p>
+<p><strong>Liquid AI Representative</strong>: Yeah, if...</p>
+</details>
+<!-- chunk 7/10 -->
+<h3>硬件协同与架构搜索：定制芯片与主权 AI 的未来</h3>
+<p><strong>Guest</strong>: 比如像高通（Qualcomm）这样技术极其成熟的企业，如果要为下一代芯片做定制设计，他们希望在自己正在研发的 NPU 上运行一套与高通芯片深度契合的专用计算图（computation graph）；或者业内也有一些公司正在尝试将神经网络的权重直接刻蚀（etch）进芯片内部——这些前沿探索目前都在发生。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: ...you're as sophisticated at let's say Qualcomm that wants to let's say design their own, let's say like for the for the next generation of their chips they want to have like a dedicated computation graph that works the best on top of Qualcomm chips on an NPU that they're designing, you know. Or there are like also some companies that are etching kind of weights of a neural network directly inside the chips, you know, like these things are happening.</p>
+</details>
+<p><strong>Host</strong>: 我之前确实报道过 Taalas 以及 Etched 这些公司。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: &gt;&gt; I covered Talis uh yeah Taalas and Etched before.</p>
+</details>
+<p><strong>Guest</strong>: 正如你所知，半导体芯片领域目前有非常多的创新动作，这也正是因为芯片厂商对我们的架构搜索（architecture search）比任何人都更感兴趣。因此，与半导体合作伙伴保持紧密合作对我们至关重要，因为我们的神经网络架构搜索是具备“硬件感知”（hardware-aware）能力的。为什么必须硬件感知？因为他们会把自家的硬件、甚至是下一代还在设计中的硬件直接放入评估闭环（hardware-in-the-loop）中，去寻找能够完美满足特定指标的最优模型架构。设想一下运行这样一个自动化流程：芯片企业非常认可我们展现在他们面前的这套自动化基础模型设计平台。</p>
+<p>除了这种底层硬件层面的技术合作，正如你刚才提到的，我也非常认同模型定制化正在加速向企业级市场渗透。企业将真正拥有自主构建、掌控并部署专属模型的能力。这两者的结合——让每个组织都能拥有属于自己的智能资产——才是“主权 AI”（Sovereign AI）的真正内涵。更进一步，我们希望未来全球的每一位普通用户和消费者，也都能拥有完全属于自己的个人智能（Personal Intelligence）。这正是下一个阶段的目标，也是我们希望通过技术去解锁的前景。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: &gt;&gt; So as you know like there's there's so much in the in the silicon kind of world that is also because those guys would be interested in our architecture search more than anybody. So silicon is actually extremely—staying close with silicon partners is actually very important for us because our architecture search is hardware aware. So why? Because they are putting their hardware or maybe next generation of the hardware in the loop of finding out what is the best architecture for the criteria that I care about. So imagine you launch a process like that. Silicon companies, they really like this automated foundation design kind of platform that we are putting in front of them. So that technology, and then as you mentioned I agree customization wants to get more and more to enterprises, you know, like enterprises would be able to own their own model development and deployment, you see. These are the two things that—like this is kind of the true meaning of sovereign AI, you know, like everybody would be able to own their own intelligence, and then hopefully one step further would be all the customers, like every single person in the planet would be able to own their own intelligence as well. So that's kind of the next level, personal intelligence, you know, hopefully we can unlock that.</p>
+</details>
+<h3>神经架构搜索与规模法则：大模型的去归纳偏置化</h3>
+<p><strong>Host</strong>: 我想回过头来深入探讨一下你刚才提到的内容，因为你刚才抛出了非常多密集且极具价值的信息，有很多细节值得深挖。在神经架构搜索（NAS）领域，我认为你们是最早将其实际落地的两三家公司之一。比如我们最近刚报道过 Poolside，他们讨论了自家的“模型工厂”（model factory），相信你也对他们有所关注。此外不久前我也对架构搜索的工具链非常着迷，比如苹果发布的关于 Talaria 的论文，那是一个用于大语言模型运维（LLM ops）的逐层检查与消融实验工具。在你们构建神经架构搜索平台或模型工厂的过程中，有哪些技术假设在实际测试中被证伪（即以为有效但实际无效），又有哪些设计展现出了出人意料的高效？关于你们的研究方法或核心发现，有没有哪些关键亮点可以分享？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And I just wanted to quickly touch on things because like you left so much in there. There's actually a lot to dive into. In terms of neural architecture search, you're the first, I think maybe you're like second or third company. You know, we recently covered Poolside where they talked about their model factory. I'm sure you've talked a little bit about that. And then also a bit back I was also very excited by the tooling for search, right? Apple had this paper on Talaria which is their sort of LM ops like layer-by-layer inspection and ablation tool. What have you found in your new architecture search or model factory type things that you thought would work doesn't work or is like surprisingly effective, like anything that you want to highlight from your process or research?</p>
+</details>
+<p><strong>Guest</strong>: 当我们在基础模型（foundation models）的搜索空间中开展架构搜索时，核心依据的是缩放损失（scaling loss）。设想一下，对于每一个候选架构（candidate architecture），我们都会让它在固定的一定数据量（Token 数量）下运行训练，并测定其缩放损失曲线。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: When we do architecture search in the space of foundation models, we run a scaling loss. Like imagine for every architecture candidate, we try to run a certain type up to a certain number of tokens, we run a scaling loss.</p>
+</details>
+<p><strong>Host</strong>: 也就是说，在固定的模型参数规模下喂入更多的数据，或者逐步扩大模型本身的规模，以此来观察和检验该候选架构在给定算力与数据规模下的可扩展训练表现。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Okay, so like this being like throwing more data at a certain fixed size of the model or increasing the size of the model, you know, and see like how well it can actually train given that candidate architectures.</p>
+</details>
+<p><strong>Guest</strong>: 我们从中得到的最核心认知是：如果你想要构建通用人工智能，那么神经网络的参数规模越大，其网络架构就越应当保持无偏（unbiased）。换句话说，你必须主动消除系统中的结构性归纳偏置（inductive bias）。</p>
+<p>举个具体的例子：如果你去看我们最新发布的 LFM2 架构，它内部完全摒弃了门控 Delta 网络（gated Delta nets）等各种复杂的精细机制。它的结构极度去结构化（unstructured）——实质上就是一维卷积（1D convolutions），字面意义上纯粹的一维卷积。这是在工程上你能实现的最简洁的算子结构，它以一种高度非结构化、无偏的方式运作。自注意力机制（Attention）本身也是高度非结构化的。正如我所指出的，当网络架构不带过多的先验偏置时——就像 Transformer 中的注意力机制那样——你才真正具备将其无限扩展（Scale up）的能力。</p>
+<p>因此在大规模（Large-scale）模型体系下，架构内部所需的偏置其实少之又少。你完全不需要在层间堆叠花哨的特征外循环或复杂的控制流；模型规模越大，你就越必须对架构做极致的精简。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: The things that we learned is that the larger the neural network you are making the architecture it should be if you want to build general purpose intelligence it should be unbiased. So you have to unbias your system. So for example if you look at LFM2 architecture that came out, this doesn't have any of these gated delta nets and all these things. It's like a very unstructur—it's like 1D convolutions, literally like 1D convolutions. Like this is like the simplest thing that you can actually do. It's like an unstructured way. Attention itself is like a very unstructured, as I said, when architectures are not biased, like attention, like transformers architecture, you would be able to scale them. So at scale, I would say a lot less bias is needed inside the architecture. You don't need to add features, out loops, some sort of—so you got to simplify the architecture the larger you make them.</p>
+</details>
+<h3>小模型与特定模态：归纳偏置的表达力与局限</h3>
+<p><strong>Guest</strong>: 但在光谱的另一端——假设你要解决的是在极端受限的小算力规模下的任务，你无法承担庞大参数与显存开销，例如设备端只有严格的 8GB 内存上限——在那样的场景下，你在架构设计层面反而可以施展更多的创造力。你可以为模型引入多重反馈回路（feedback loops），可以给系统注入显著更高的结构复杂性。在小模型体系（small model regime）中，你向系统注入的归纳偏置越多，模型所能捕获的动态表达能力（expressive dynamics）就越强；而一旦迁移到大模型规模，你就必须逐步剥离这些偏置。这是我们总结出的首要规律。</p>
+<p>我们得到的第二个深刻洞察与数据模态（data modality）密切相关。某些数据模态天然具有连续特性，比如音频（audio）。在音频领域，采用连续时间动态系统（continuous-time dynamical systems）或状态空间模型（SSMs）非常奏效且表现极其出色；然而直接将 SSM 应用在纯文本（text）上时，效果却相当糟糕——SSM 在文本建模上的表现并不理想。</p>
+<p>当你思考纯音频模型的构建时，如果在生成高品质人类可感知音频所需的参数规模下引入循环神经网络（RNN / recurrent neural network），循环结构在此类模态下会展现出极大的优势。再次强调，在小规模场景下——比如在我们架构搜索所覆盖的 200 亿参数（20B）以下的模型区间内——循环机制的表现可以非常亮眼。但我依然会把这类架构归类为“高偏置架构”（biased architectures）：它们包含更多的反馈回路、结构化门控以及特定的架构原型。而随着你进一步将参数规模推向极致，这些预设结构往往需要被剔除。这是我们在实践中形成的基本认知。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: On the other side of the spectrum, imagine if you want to solve problems at a very, very small scale and you cannot afford to have like the—you know like you have like memory limit, let's say like 8 GB of memory limit, you know, there you can get more creative on the architecture side: you can make the models to have multiple feedback loops, you know, you can add like a lot more complexity to the system. In the small model regime, the more biases you add to the system the more expressive dynamics you get; in the larger scale you remove those biases. This is what we learned.</p>
+<p>Second insights that I would tell you is data modality. There are some data modalities like audio. In audio, you could use a continuous time dynamical systems or SSMs for example, you know, like they're very effective in audio, but on text, they suck. You know, like SSMs like they don't work really well on text. And when you think about like let's say if you just want to have an audio model, throwing in a recurrent neural network at the scale that is needed for having like a really good quality kind of audio output—this is kind of the place where I would say recurrent network would be very much shining, you know, again at small scale. When we talk about like this category of models that we search, you know, below let's say 20 billion parameters, recurrence can be like really really effective there. But I would call them a more biased architectures, you know, like they have like more feedback, there's a structural gate, they have like a certain architecture archetypes on top of them, and then you remove those things as you scale the most. That's kind of the general kind of understanding that we have.</p>
+</details>
+<h3>层循环机制的瓶颈与光子计算的未来机遇</h3>
+<p><strong>Guest</strong>: 正如 Jason 之前发表过的那篇分析所阐述的：在小尺度下你可以尽情添加归纳偏置，但随着规模扩张，你最终必须把它们一一拿掉。此外我认为“层循环”（layer looping）也是类似的逻辑——我不知道业内是否统称其为层循环还是循环层结构……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: No surprise that uh I think Jason we had this um post where like at small scale you add in biases and then eventually you have to take them out. I also think layer looping or what I don't know if this is called layer looping, do you call it layer looping or whatever the...</p>
+</details>
+<p><strong>Host</strong>: 是的，层循环，或者循环层（looped / loop layer）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: &gt;&gt; Yeah yeah yeah, looped loop layer, yeah.</p>
+</details>
+<p><strong>Guest</strong>: 循环层在小规模下表现很好、但在更大规模下却失效的现象在直觉上有些反常。从理论上看它本该继续发挥作用，但实际上这主要受制于硬件执行效率。这或许只是我个人的理论解释。但归根结底，任何形式的循环机制（looping）本质上都是你强加给系统的一种人为偏置。你人为增加了模型的结构复杂度，随后你就必须为其寻找能够高效承载的底层计算硬件基础设施。</p>
+<p>而现实是，我们目前并没有适配这种拓扑的基础设施。现有的 GPU 算力体系完全是为高度并行的矩阵乘法（parallel matrix multiplication）等工作负载所量身优化的——所有能通过并行化处理的运算在 GPU 上都能飞速执行，而复杂的循环或串行结构则会遭遇严重的执行瓶颈。</p>
+<p>但设想一下，如果我们拥有了光子计算（photonics）。我认为光子芯片这一技术赛道蕴藏着惊人的变革空间。仔细想想，如果数据的互连通信能够以光速进行，那么即便采用串行计算模式，在光速传输的加持下，串行运算的延迟也将低到人类肉眼根本无法感知的量级。</p>
+<p>这意味着，光子计算有可能为我们提供一种颠覆性的计算介质革新。这种物理介质的转变将直接解锁非线性算子（nonlinear operators）的高效原生执行。据我所知，现在已经有公司在全力攻坚光子计算与量子计算——整个计算科学界都在探索能够承载未来通用智能与通用算力的新型替代介质。这是我看到的正在开启的又一巨大技术机遇。</p>
+<p>我对光子计算之所以抱有极大的热情，正是因为串行与非线性计算在现有体系中极度受限。从线性代数的数学视角来看，对于非线性动力系统，我们过去受制于无法将其真正并行化；但设想一下，如果你能在光速级别实现非线性算子的计算与迭代，那么你就能彻底摆脱现有硬件约束，构建出真正的下一代全新神经网络架构，因为到那时你将不再受制于……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: &gt;&gt; That one is a bit unintuitive why it works at small scale but not at larger scale. It seems like it would work. It's mostly like a efficiency thing I guess. So maybe that's just my explanation, I don't know. But I would say still, you know, looping it's again a bias, like any format of looping, it is a bias that you're adding to your system. You know, you make it complicated and then you got to find out an infrastructure for it, by the way. So we don't have the correct infra: the current GPU infrastructure that we have is optimized for this type of workload—parallel matrix multiplication, everything that you can parallelize in a parallelizer.</p>
+<p>Do imagine if you have like photonics. You know, I think this race of photonics would be like an amazing kind of a space. Like if you think about it, if you can actually communicate with the speed of light, now compute in a serial way, what is the speed of serial computation when you're moving with the speed of light? It's like humanly not perceivable, right? You know, so what I'm saying is that like I think photonics could be like an unbelievable way for us like to move if you think about like medium change, you see. So that could also unlock like nonlinear operators. I know companies that are working on like photonics, and then the quantum computers—everybody's working in this space of alternative mediums for intelligence or compute in general. Those are kind of another opportunities that I see like opening up.</p>
+<p>And I'm really excited about photonics, because sequential computations—this is something that from a linear algebra point of view we learned it for nonlinear systems, because we cannot really parallelize nonlinear system. So, but imagine if you have like a speed of light computational kind of speed for nonlinear operators, you know, then you can actually build the next generation of architectures because then you're not limited by...</p>
+</details>
+<!-- chunk 8/10 -->
+<h3>硬件基底、量子计算与智能的物理载体</h3>
+<p><strong>嘉宾</strong>：……取决于你承载智能的基础物理介质（substrate）。我可以分享一段话，我想大概是出自克里斯托弗·科赫（Christof Koch）写的一本关于神经科学的书。我记得大约是14年前读到的，其实也不完全算是一句正式的引言，当时他在参加一个学术会议，他在会上谈到：“智能是碳基生命的一种属性。”因为人类自身的底层物理载体就是碳。他当时的意思是说，自然生命是在一种完全不同的物理介质上孕育和演化的，而我们现在是在硅基芯片上构建人工智能。因此，智能的物理底座是截然不同的。我认为，如果你深入思考就会发现，计算介质在下一代模型架构中必将扮演极其关键的角色，因为它能够解锁除 GPU 并行计算之外的多种全新计算范式，这也是我非常想引入讨论的另一个维度。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: ...by the substrate you're hosting intelligence on. So, I'll give you one quote from, I think it was from Christopher Koch who was writing some book on neuroscience. I think I read it like about 14 years ago. It wasn't a quote—he was at a conference and he was saying intelligence is a property of carbon. Because the substrate of human is a property of carbon. So he was saying, okay, so natural life is happening on a different substrate and we're building intelligence right now on silicon, right? So the base of intelligence is very different. I think substrate is going to play a role into even the next generation of architectures, you know, if you really think about it, because it would unlock various formats of computation apart from just parallel computation through GPUs. That's also another space that I would just bring in.</p>
+</details>
+<p><strong>主持人</strong>：虽然我们今天没有太多时间深入展开这一点，但既然你提到了这个话题，我必须得问一下：坦白说，在旧金山我身边的技术圈子里，其实有相当多的人对量子计算并没有那么兴奋。如果我们未来真正拥有了大规模的量子比特集群，你认为它真的会给 AI 带来实质性的颠覆吗？有些人对此持不同看法，我很想听听你的见解。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Okay, we don't have a ton of time to mention this, but you brought this up so I have to ask. I will say actually a surprising number of people in my circles in SF are not that excited by quantum computing. If we did have at scale a bunch of qubits, do you actually think that it would change anything? There's some people that disagree, so I want to hear a few...</p>
+</details>
+<p><strong>嘉宾</strong>：我认为量子计算唯一会带来巨幅改变的领域是搜索。因为搜索是至关重要的核心算法之一，设想一下如果你能够实现真正的量子级并行搜索。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: I think the only thing that it changes massively would be search, because I think search is one of those algorithms that matters so much. And imagine if you can have parallel search, you know.</p>
+</details>
+<h3>量子搜索与优化的本质边界</h3>
+<p><strong>嘉宾</strong>：归根结底，优化的本质究竟是什么？我们现在之所以完全依赖梯度下降算法，仅仅是因为在超大规模参数空间下，我们还没有找到更好的高维搜索方式。优化本质上就是在参数空间中进行搜索。如果你从量子计算的角度来看，搜索的形态将会发生翻天覆地的演进，这一点应该是不存在争议的。不过很有意思的是，当前困扰我们的许多其他核心瓶颈，其实并不是靠量子计算就能轻易解决的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And what is optimization at the end of it? We are submitting ourselves to gradient descent right now because we don't know any better way to perform massive search at scale. It is a search in a parameter space. And if you think about quantum computers, I think search is going to evolve massively, that one hopefully is not controversial. But yeah, it's very interesting that there are many other bottlenecks that matter to us that actually is not solved by quantum.</p>
+</details>
+<p><strong>主持人</strong>：完全同意，但我并不觉得我们离量子时代很近。我记得在 2017 年参加 NeurIPS 顶会时，我和 IBM（或者微软，不，是 IBM）的人交流，他们当时在展台上展示悬挂在天花板上的量子计算机原型机。我和他们的工程师聊了聊，问他：“普通人什么时候才能真正用上这样的设备？”在 2017 年那个时候，他给我的回答是 2035 年。所以说……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Absolutely, but I don't think we are close. Because I think in 2017 I was at one of these NeurIPS conferences and I was talking to, I think it was Microsoft or IBM—no, it was IBM—they were showing off their quantum bits, kind of the thing that is hanging from the ceiling, you know, and they were showing it at the conference. And then I was talking to the guy and I said, &quot;Okay, so when can everybody actually use something like this?&quot; At that time, 2017, he told me 2035. Okay. So, coming...</p>
+</details>
+<p><strong>嘉宾</strong>：我认为现在对量子计算下定论还为时过早（笑）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: I think it's still too early to say anything. [laughter]</p>
+</details>
+<h3>连续时间系统、状态空间模型与语音序列建模</h3>
+<p><strong>主持人</strong>：是的，确实如此。好的，让我们把话题拉回到更贴近当下、也更贴近听众的内容上。我们之前录制过多期相关的播客节目，比如 RWKV 就是另一种被广泛采用的非 Transformer 架构，它在某种程度上受到了循环神经网络（RNN）的启发。我们专门做过几期节目讨论这类架构，之前也邀请过 Tri Dao 来做客。虽然我们还没邀请 Cartesia 团队，但当你提到状态空间模型（SSM）非常契合语音处理时，起初 Tri 和 Karan 向我解释时我还没完全想通为什么语音领域会如此特殊。对我而言，最直接的解释其实是语音数据的内部状态相对没那么庞大复杂，而且语音生成天然需要连续不断的实时推理，因此这类架构在语音场景下显得尤为理想。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yes. Yes. Okay. Coming back closer actually for listeners. We've done a bunch of related podcasts. RWKV is another pretty widely adopted non-transformers architecture that's sort of loosely inspired by RNNs. So we've done a couple episodes on those things. We've actually had Tri Dao on. And we haven't had Cartesia on yet, but like when you mentioned how SSMs are very attuned to voice, at first when Tri talked about it to me and Karan talked about it to me, I didn't understand why voice. To me actually like the simple explanation is there's just not that much state. Voice is like continuously inferencing anyway. So like this is actually pretty ideal.</p>
+</details>
+<p><strong>嘉宾</strong>：没错，语音本质上是一个连续的时间序列。对于时间序列数据，如果你采用专门针对时间序列设计的动力系统（dynamical system）去建模，这在数学和物理机制上就是处理时间序列的最优形态。这就是为什么 SSM、RNN 以及连续时间系统在处理序列化、时序型数据时表现极其高效且出色。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, it's a continuous sequence, you know, and sequences that are time series. You can say if you throw a dynamical system that is designed to handle time series data, that's like the best version of thing that you can actually model time series, right? So that's why SSMs are pretty effective. SSM and RNNs and continuous-time systems, they are very effective in basically sequential kind of data.</p>
+</details>
+<p><strong>主持人</strong>：你看，你提到了时间序列。结合我个人的背景，我以前做过期权交易员，在那个领域我们必须进行随机微积分（stochastic calculus）计算，求解各种微分方程，那也是一种连续时间金融学（continuous-time finance），正好对应我们刚才探讨的连续系统概念。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: You see, you brought out time series. The other thing about my background that I bring into this is I used to be an options trader, right? Where we actually would have to do stochastic calculus and solve those kinds of ODEs/SDEs, which is another kind of continuous-time finance, which is what we talked about there.</p>
+</details>
+<p><strong>主持人</strong>：是的，我只是觉得很不可思议，为什么此前行业一直没有把这个方向列为优先事项？现在听你解释完之后，利用连续时间这个维度似乎成了一件显而易见、理所应当的事情。在你的思考中，是否还存在其他类似的潜在维度？显而易见，你们正在全力扩展这一方向，并且在这个研究领域已经深耕了大约十年；但如果我们关于连续时间的设想存在局限，还有哪些全新的方向值得探索？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. I just think like it's weird that this hasn't been a priority till now, and now it seems like once you explain it, it's relatively obvious that this is a thing that we should exploit. It's like a dimension that we should exploit. Are there any others in your mind that... obviously you're scaling out this, you're maybe let's call it 10 years into this journey, but like okay if we're wrong about continuous time, what else?</p>
+</details>
+<h3>自适应智能、前向-反向融合与下一代认知架构</h3>
+<p><strong>嘉宾</strong>：这是一个非常深刻的好问题。我认为这里面有广阔的探索空间。当初我们创立 Liquid 作为一种核心理念时，脑海里始终围绕着两个核心支柱：智能的“计算效率”（efficiency of intelligence）与智能的“自适应能力”（adaptability of intelligence）。坦率地讲，我认为整个领域在“智能自适应能力”方面的探索还远远不够。目前主流模型的前向传播（forward pass）计算基本上就是固定的单向前馈计算，绝大多数前瞻性计算在本质上都仅仅是一次静态的前向推理过程。</p>
+<p>那么，如何实现系统在运行过程中的实时自适应（adaptability on the go）？很多人可能会反驳说，上下文学习（in-context learning）已经解决了这个问题。因为在测试阶段（test time）输入更多数据时，上下文学习系统在某种程度上相当于在执行一种隐式的、类似于反向传播的伪梯度更新，测试时计算（test-time compute）所发生的上下文学习机制在数学上非常类似于最小二乘法算法。</p>
+<p>然而从根本上说，我认为真正能够将前向传播与反向传播实时有机融合的新架构，将会开启全新的模型纪元，这必然会经历一场重大的演进。据我了解，Safe Superintelligence（SSI）目前也在研发与我们 Liquid 神经网络最初构想非常相似的新型架构。虽然只是有所耳闻，但未来如何我们拭目以待——大家甚至会好奇他们怎么没来找我们交流？不过总的来说，你完全可以预见，所有头部的前沿基础模型实验室——无论是 Anthropic、OpenAI 还是其他机构——都在投入巨资设立专门的团队，全力攻坚非 Transformer 的替代性新架构。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: That's a good question. So I think there's a lot of... you know, when we started Liquid as an idea, we were thinking about efficiency of intelligence and adaptability of intelligence. I think we haven't explored too much on the adaptability of intelligence. Forward pass for us is basically like a forward pass to a model, you know, a lot of forward-looking computation is literally just a forward pass computation. So what about adaptability on the go? A lot of people would tell you that, okay, in-context learning is solving that problem because in-context systems, when you bring more data at the test time, they would somehow kind of solve for some sort of a pseudo backprop-like situation. It's like a least squares algorithm, as in-context learning is happening on the test-time compute. But in general, I think approaches where we can combine forward pass and backward pass at the same time—this would be a new generation of architectures and I think there will be an evolution of this thing. I know that I've heard that SSI is also working on very similar architectures to the original ideas of liquid neural networks, you know. So that's what I heard. But we will see. We'll see—have they not reached out, like come on, what's going on? But in general, you should already assume that all the foundation model labs—the Anthropics, the OpenAIs, and everybody else—are massively invested, like they have teams that are working on alternative architectures.</p>
+</details>
+<p><strong>嘉宾</strong>：另外我还想强调的一点是，我们究竟为什么需要探索替代性架构？这是必须追问的根本问题。对我们而言，首要驱动力始终是计算效率。而当前业界的绝大多数探索，似乎主要集中在事后优化（post-hoc optimizations）或者投机采样解码（speculative decoding）等技术上，比如量化（quantization）技术、训练期量化等等。这些都是大家试图压缩和打包信息的常规途径。这些方向当然能挖掘出很多价值，因为它们属于底层算子和工程优化的范畴（kernel science）。我也坚信，随着 AI 工具自身能力的不断提升（我非常期待下一代 AI 工具能比今天的工具强大得多），工程师们能够对现有架构进行极致的算子优化，从而在当前模型上压榨出更高的运行效率。</p>
+<p>但是，如果你追求的是解锁下一代质变的全新能力，那就是完全另一回事了。那可能需要一种元算法（meta-algorithm）。你可以回顾一下我们今天编写代码的工作流：通常由一个调度中枢（orchestrator）配合大量的专业智能体（agents）协同工作。因此在未来，多智能体架构（multi-agentic architectures）是另一个极具前景的方向。我们既可以从微观的“原子层面”（atom level）去重新设计计算单元，也可以从宏观的“系统层面”（system level）去构建全局架构。也就是说，你可以构建由更小计算单元复合而成的新型系统——这里的最小计算单元可以由神经元和突触构成，也可以是一个液态基础模型（LFM），或者是一个紧凑的专用小模型。随后，你可以将它们打包、组合，构建出真正的“系统之系统”（systems of systems）。这就是架构演进的另一大核心方向，我把它们称为“认知架构”（cognitive architectures），在这样的架构中，你可以将多个智能体无缝串联聚合，构建出强大的协同智能系统……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Another thing that I want to say is that again, why do you want an alternative architecture, right? This is the question you have to ask. The first thing for us would be efficiency. And everybody else now seems to be focusing on post-hoc optimizations or speculative decoding, for example. Like one of the spaces people try to make things is quantization, you know, quantization of training. These are the kind of places where people try to pack information and you can do a lot in there, because these are kernel science. And I think with better AIs—I'm hoping for the next generation of AIs to get a lot better at what they do today—people can really optimize the current architectures to get efficiency out of the models. Now, if you want to unlock the next generation of capabilities, that's a different story. That could be a meta-algorithm. So, think about it also like right now, how does our workflows of coding today look like? There's an orchestrator and there are a lot of agents. So in the future, multi-agentic architectures—that's another thing that I can think about. We can think about it at the atom level or we can think about it at the system level, right? So you can also build new systems that are composed of smaller units of compute. Let's say a unit of compute could be neurons and synapses, or it could be an LFM, or it could be a small model itself, and then you can use and bundle and build basically these systems of systems, right? So that's kind of another direction for architecture, and I would call them cognitive architectures, where you have multiple agents that you can actually bundle them together to build...</p>
+</details>
+<!-- chunk 9/10 -->
+<h3>Liquid 模型的未来演进与 LEAP 平台架构</h3>
+<p><strong>Liquid 团队</strong>: 这就像是一个完整成熟的系统。因此我指出了很多未来可能令人兴奋的发展方向。如果要我来转述的话，比如智能体（Agents）应该能够在日常工作中顺便轻松地训练模型；显然 LFM（Liquid Foundation Model，液态基础模型）会具备极强的适应能力。而且实际上不仅仅是 LFM 本身，更关键的是 LEAP 平台，因为你需要一个完整的平台架构，才能灵活适应你所部署的任何实际场景。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid 团队</strong>: ...like a whole full-blown system as a whole. So I think a bunch of directions I pointed out that I think could be an exciting future step. If I were to paraphrase, maybe you know agents should be able to train models casually as part of their job, and obviously LFM would be quite adaptable. And it's not actually just the LFM, it would be LEAP, because you need the full platform as well in order to adapt to whatever the situation you're deploying in. Definitely.</p>
+</details>
+<h3>Liquid AI 当前的核心研究议程与多模态布局</h3>
+<p><strong>主持人</strong>: 你刚才提到的这些方向都非常宏大。但你们肯定也有一些更偏近期的具体研究方向。那么对于 Liquid 而言，目前当前的研究议程（Research Agenda）主要是什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: All these named directions, probably you also have sort of more near-term research directions. What would you say is the current research agenda for Liquid?</p>
+</details>
+<p><strong>Liquid 团队</strong>: 我们目前非常聚焦于大规模多模态系统（Massively Multimodal Systems）。我们正在思考同时对所有数据模态进行端到端联合训练，与此同时探索更长视野的推理能力（Longer Horizon Reasoning），这当然是我们全力以赴的方向之一。</p>
+<p>想象一下，如果你想提供可靠的端侧智能服务——比如个人专属助理——所有这些落地应用都需要底层模型具备极高的可靠性与确定性。因此我们在这一方向上投入了极大的研发精力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid 团队</strong>: We are very much focused on massively multimodal systems. We're thinking about training all the data modalities at the same time, and at the same time, longer horizon kind of reasoning. Of course, this is one of the directions that we want to do.</p>
+<p>Imagine if you want to do reliable on-device intelligence kind of services, like an assistant. All of those things require higher degrees of reliability for the models. So we work a lot on that direction.</p>
+</details>
+<p><strong>Liquid 团队</strong>: 此外，我们公司设立了专门的效率工程部门，在全栈的各个层面深耕极致效率：从底层的算子内核设计（Kernel Design），到推理加速引擎，再到更高效快速的强化学习基础设施（RL Infrastructure）。从预训练阶段一直到将模型交付至生产环境的全流程中，如何让所有的基础设施更加高效，这是我们全公司的核心重中之重。</p>
+<p>从前沿科研的角度来看，我们还在探索人类直觉无法直接理解的非人类数据（Non-Human Understandable Data），例如各类物理信号，以及生物学数据。我们本身就构建了一些生物领域的模型，比如我们正在训练 DNA 基础模型（DNA Foundation Models）。你用肉眼是无法真正读懂 DNA 序列的；这类数据具有极长的上下文长度（Long Context Data），但在词表维度上并不像自然语言那么稠密，实际上你面对的只有 4 个碱基字母构成的词表。然而从序列长度的角度来看，它们极其庞大。在这一领域中蕴藏着许多让我们感到非常兴奋的前沿应用。</p>
+<p>我认为我们的技术架构天然地驱使我们去探索这类非传统数据。正如我之前所提到的，我们的架构立足于动力系统（Dynamical Systems）和超长序列数据处理，因此 DNA 数据正是我们能够创造巨大独特价值的领域之一。另外正如我提到的，多模态研究在目前的 Liquid 内部极其火热。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid 团队</strong>: We work a lot. We have a department for efficiency. We work on massive layers of efficiency: you can think about kernel design, it goes to inference, this goes to infrastructure, RL infrastructure that is much faster, making all of our processes that are happening—from pre-training to delivering a model to production—how to make all the infrastructure more efficient. That's the focus of the company.</p>
+<p>Then, from a research point of view, we're looking also at non-human understandable data. For example, think about signals; you can think about biology as well. We have some bio-models as well. For example, we're building DNA foundation models. Your DNA with your eyes, you can't really read it. They're long-context data; they're not dense in the vocabulary—there are like four vocabularies/letters that you're dealing with. But from the sequence length point of view, they're very large. There are a lot of applications that we are excited about in that kind of realm. And I think our type of technology naturally pushed us into looking into this alternative type of data. As I told you, our architectures—we have talked about dynamical systems and longer sequences of data. So DNA data could be one of those places where we can bring value. And then, as I mentioned, multimodal research is extremely hot right now at Liquid.</p>
+</details>
+<h3>端到端多模态输入输出与小参数量模型的物理世界建模</h3>
+<p><strong>主持人</strong>: 是的。你刚才提到了视频、音频输入以及视频、音频输出。也就是说视频、音频、文本输入，音频和……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: Yeah, yeah, yeah. You said video/audio in and video/audio out. Video, audio, text in, audio and...</p>
+</details>
+<p><strong>Liquid 团队</strong>: 文本输入当然是默认包含的。（笑）文本是默认标配，确实如此。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid 团队</strong>: Text is assumed. Text [laughter] is assumed. Exactly.</p>
+</details>
+<p><strong>主持人</strong>: 多模态输入现在大家已经见怪不怪了，但直接的多模态输出则是全新的探索。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: The 'in' is fine. The 'out' is new.</p>
+</details>
+<p><strong>Liquid 团队</strong>: 没错，完全正确。这正是关键所在。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid 团队</strong>: Right. Correct. That is like...</p>
+</details>
+<p><strong>主持人</strong>: 通常来说，我绝不会指望像你们这样的团队会去死磕这种方向。在实际应用中，让一个 7B（70 亿参数）规模的小模型直接输出可用的图像、音频乃至视频，这真的现实吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: Typically I would never expect someone like you to care. Is it realistic to have image out, audio out, video out from a 7B model that is usable?</p>
+</details>
+<p><strong>Liquid 团队</strong>: 是的，我认为指望一个小模型直接生成非常高品质、极高保真度（High Fidelity）的成品视频并不现实。</p>
+<p>但是在探索方向上，如果你希望解决具身物理世界中的实际问题，并且希望模型对物理世界具备某种常识性的世界认知——想象一下，你在 7B 甚至更小参数量范围内训练这些 LFM，以世界模型（World Model）的上下文来进行训练，你就能在模型内部有效编码并沉淀某种物理世界规律与知识。虽然该模型可能无法直接渲染输出极高画质的视频像素，但这能极大增强模型自身的内在理解力与表征能力。</p>
+<p>你可以看到，如果我们通过世界建模的方式对其进行预训练，特别是在那些重视视频生成的应用场景中——这里不仅指用于娱乐制作的视频，而是指工厂车间里实际运行作业的具身机器人所面对的严谨工业场景。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid 团队</strong>: It is... I don't think it is feasible to get a video out of that—like a proper, very very high quality, high fidelity kind of video. But directionally, if you want to solve physical problems, and if you want to have a vague understanding of the world—imagine you're training these LFMs of let's say in the range of 7B or below in this kind of range, you want to train with a world modeling kind of context, like you want to train a Liquid Foundation Model—you would be able to encode some sort of physical knowledge inside the model.</p>
+<p>The model would not be able to output something very high fidelity, but it would add to its own understanding. It can basically have a little bit of a better internal representation. You see, if you retrain them with world modeling, especially for video applications where video generation matters—not just for entertainment, but we are talking about grounded industry work of a robot that is operating in a factory, you see.</p>
+</details>
+<p><strong>主持人</strong>: 确实如此。我认为业界对视频理解的价值其实是严重低估的。目前大部分方案依然远远不够，绝大多数所谓的视频模型本质上仅仅是对抽帧后的图像进行交错拼接（Interleaved Images）处理，但我们需要更深入的理解能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: Yeah, I mean video understanding is actually so underrated. There's still not enough; mostly it's just interleaved images, but like...</p>
+</details>
+<p><strong>Liquid 团队</strong>: 我们需要的是真正的原生多模态。我可以告诉你，在多模态智能这个领域，目前仍有太多空白需要去探索和学习，因为到目前为止，业界真正高度原生的多模态系统其实屈指可数。对于整个基础模型领域来说，这依然是一个极其开放的前沿研究课题，它将解锁完全不同的全新可能性。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid 团队</strong>: We want more. I'll tell you, in the space of multimodal intelligence, it's really a lot to be learned so far because there's really not that many highly multimodal systems. This is a very, very open research topic for foundation models as a whole. It's going to enable something completely different.</p>
+</details>
+<h3>对底层算子生态的思考：Modular、Mojo 与 llama.cpp 的取舍</h3>
+<p><strong>主持人</strong>: 我想跟你探讨一个与你们领域紧密相邻的话题——Modular。他们刚刚被高通（Qualcomm）收购，并且刚发布了 1.0 开源版本。众所周知，你们 Liquid 团队曾知名地从 JAX 迁移到了 PyTorch。（笑）那你们是否深入调研过 Mojo 语言呢？按理说 Mojo 非常契合你们的需求：你们需要编写大量定制化算子内核（Custom Kernels），同时你们又是以 Python 为中心的团队。如果你们没有采用它，背后的考量是什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: One thing I wanted to double check is something that's adjacent to your space, which is Modular. They just got bought/went to Qualcomm. They just released their 1.0 open source. You guys famously switched from JAX to PyTorch. [laughter] Did you explore Mojo? It is supposed to be for you guys, like you are doing custom kernel work, you are Python-centric. If it didn't work, why?</p>
+</details>
+<p><strong>Liquid 团队</strong>: Modular 的本质定位是在算子内核层（Kernel Level）开展工作，他们所处的层级位于基础模型下方一层。他们过去也试图和我们一样保持中立——就像瑞士一样，致力于与所有硬件供应商建立广泛合作。不过他们现在被整合进了高通生态。</p>
+<p>几周前，我其实刚刚和 Chris Lattner 一起参加了一个 AMD 的专题研讨小组（Panel）。我可以告诉你，Chris 是我心目中的英雄偶像之一，他的成就令人惊叹。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid 团队</strong>: I mean Modular is basically operating on a space of kernels—they're one layer below the foundation models. And they try to be also like us, like Switzerland, working with all the hardware providers. But they now got locked in into Qualcomm. I was on a panel with Chris actually some weeks ago on an AMD panel, and I can tell you, Chris Lattner is one of my heroes. He's unbelievable.</p>
+</details>
+<p><strong>主持人</strong>: 没错，他可能正听着这期节目呢。（笑）</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: Yeah, he's probably listening.</p>
+</details>
+<p><strong>Liquid 团队</strong>: 是的。（笑）但我可以明确分享的是，从第一性原理出发，我们在 Liquid 始终坚持的一条准则就是：绝不重复造轮子。如果现有的底层基石已经足够稳固，我们就会直接采用。</p>
+<p>举个例子来说，现在市面上有大量推理框架公司，试图取代 llama.cpp 或者在 llama.cpp 外面封装各种胶水层来做端侧 AI。但现实情况是，几乎所有试图跨硬件平台、想充当通用于所有硬件的通用语言方案，只要你深入到底层去剖析，它们的实际性能表现几乎都比原始纯粹的 llama.cpp 更差。因此我们绝不会盲目更换底层底座。</p>
+<p>当然，也有一些成功方案选择深度绑定在单一专用硬件生态中。我觉得 Mojo 接下来也会走类似的路线——现在他们深度融入了高通生态，我认为他们在高通体系内会取得大得多的成功。但 Mojo 这个平台本身确实极大降低了在算子层托管和交付 AI 智能的门槛。他们所提供的工具是非常有价值的，只不过在我们自己的实际部署中，目前尚未采用这些方案。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid 团队</strong>: Yes. [laughter] But what I can tell you is that one thing that from first principles we try to do at Liquid, we don't want to reinvent the wheel. If the fundamentals is actually... I'll tell you, for example, there's a lot of inference companies that are trying to replace llama.cpp or building wrappers around llama.cpp for on-device AI. Almost every single one of these things that are not locked into one ecosystem and try to be like a general-purpose language for all hardware that is actually out there—all of them are worse. If you dig in, they're worse than the original llama.cpp. So we don't want to change base. That's what I want to say.</p>
+<p>There are some successful ones that are locking into one ecosystem, and I feel like Mojo is going to go into a similar direction. Now that they're getting locked in into the Qualcomm ecosystem, I think there's going to be a lot more success. But the platform itself extremely makes things easier to bring intelligence at that layer, for hosting intelligence. So what they provide is actually useful, but we haven't been using those for our own deployments yet.</p>
+</details>
+<p><strong>主持人</strong>: 你提到 llama.cpp 作为基准基线更加优秀，但这种优势仅仅是因为它经过了大量生产环境的工程打磨（Production Hardening），还是说其底层的核心方法论有什么根本性的不同？我一直想探究清楚这背后的原因。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: You say llama.cpp is better as a baseline, but is it just production hardening or is this something fundamental about the approach? I'm trying to figure out.</p>
+</details>
+<p><strong>Liquid 团队</strong>: 它是纯粹的编译器与极度手工优化的 C++ 算子内核（Very Optimized C++ Kernels），这就是它的本质所在。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid 团队</strong>: It's a compiler, so it's like very optimized C++ kernels. That's what it is.</p>
+</details>
+<p><strong>主持人</strong>: 确实如此，但 Chris Lattner 同样是深谙 C++ 的顶级编译器泰斗，这按理说对他来说根本不是障碍。（笑）</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: Yes, but Chris Lattner knows C++; this is not an issue. [laughter]</p>
+</details>
+<p><strong>Liquid 团队</strong>: 正如我所说的，要想在通用层面对所有异构硬件实现完美的统一度（Unification），是极其困难的。我个人并不迷信 Mojo 这类平台所谓的“全硬件大一统性”。你终究必须做深度定制化的底层工作，而这正是 Modular 团队目前全力投入的方向。</p>
+<p>比如让 Mojo 运行在 AMD 平台上，你就必须专门针对 Mojo 为 AMD 架构设计特定的算子内核；如果是高通平台，就必须针对高通硬件专门优化定制。Modular 团队所做的这些底层工作是非常扎实、过硬的技术攻坚。如果全行业有谁能真正把这套体系攻克并做成，那绝对非 Chris 的团队莫属。</p>
+<p>在我看来，Chris 正在做的事，就像当年 Jonathan Ross 在 Google 研发 TPU 等硬件基础设施时所做的一样，是非常底层且根本性的核心技术突破。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Liquid 团队</strong>: As I said, it's extremely difficult to unify it. I don't believe, for example, in the uniformity of the Mojo kind of platform. You need to do custom work, and this is the work that the Modular team actually put into.</p>
+<p>So I think the version of Mojo that runs on let's say AMD, you have to design certain kernels for Mojo so that they're AMD-specific, or let's say Qualcomm-specific. All that kind of work that they do, that underlying work is very solid work. And if anyone can pull it off, it's basically Chris's team. That's what I would say.</p>
+<p>I would consider those—like of course what Chris does, what Jonathan Ross did with TPUs and all those kinds of things that they're doing—these are the very fundamental works that they do.</p>
+</details>
+<!-- chunk 10/10 -->
+<h3>生态壁垒与解决难题的价值</h3>
+<p><strong>Guest</strong>: 我想说的是，我们会坚持使用最原生的语言、最原生的平台，以便尽可能贴近底层硬件来操作计算机。你看，生态系统总是最终的赢家。你知道，这是一个非常残酷的答案。这对新进入者来说很不公平，确实不公平。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Tell you like we would stick to the most native kind of language, the most native platform that allows us to touch the computer like as close as possible. You see ecosystem always wins. You know it's just really brutal answer. It's not fair to new entrants. It's not fair.</p>
+</details>
+<p><strong>Guest</strong>: 这确实是一个很难解决的问题。但我也会鼓励现在的创业者们。比如我现在创业已经四年了，很多朋友和周围的人都会跑来问我：“嘿，创业历程怎么样？”我只想说，如果一个问题很难解决，那它实际上是非常值得去做的，这反而让它更具吸引力。你知道，这应该会让你觉得更有吸引力，因为简单的痛点所有人都会一拥而上跑去解决。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: It's just a hard problem. And I would also encourage people like a lot of entrepreneurs these days. Like I'm now four years into our entrepreneurial journey, a lot of my friends and people are coming and asking, &quot;Hey, how's the journey?&quot; I would just say like if a problem is hard to solve, it's actually worth it, it makes it more attractive. It should make it a lot more attractive for you, because easy problems everybody else is going to go and solve.</p>
+</details>
+<h3>Attention 之外：具身智能与自适应系统</h3>
+<p><strong>Host</strong>: 或许我原本打算用来结束本期节目的问题是：明年就是 Transformer 诞生十周年了，注意力机制真的就是全部所需了吗（Is Attention All You Need）？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Maybe the question I was going to end the episode with is mostly, you know, it's going to be the 10-year anniversary of the Transformer next year. Is attention all you need?</p>
+</details>
+<p><strong>Guest</strong>: 注意力机制绝对是不可或缺的核心要素之一，而且我认为在很长一段时间内我们都将与基于注意力机制的系统共存。所以注意力机制肯定会存在于各种系统之中。这就像我们的视觉机制一样——眼睛是如何工作的？但你同时也需要身体。我偶然注意到，实际上你并没有一次性看到整个视野，你的眼球总是在不停地快速跳动，是大脑在对图像进行合成处理。顺便说一句，你真正看到的是两帧画面之间的差异，你看到的本质上是差分。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Attention is definitely one element that you need, and I think it will be a long time that we will be living with attention-based systems. So attention is definitely going to be inside like any of the—it's like how do you see, how's your eyes are working, but you need your body. I randomly noticed like actually you're not seeing the whole view, your eyes are just bouncing around all the time and your brain is compositing. Yes, you see the difference between two frames by the way, this is what you see, so it's basically you see the differential.</p>
+</details>
+<p><strong>Host</strong>: 噢，指的是左眼和右眼之间的差异吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Oh, left and right eye?</p>
+</details>
+<p><strong>Guest</strong>: 不是，人类观察世界的基本方式并不是看单帧画面，你看到的是连续两帧之间的动态差异。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: No, like the way that humans see, you don't see one frame. You see the difference of two frames.</p>
+</details>
+<p><strong>Host</strong>: 这个观点我得去好好查一查资料。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I need to go look this one up. Look this one up.</p>
+</details>
+<p><strong>Host</strong>: 所以注意力机制只是其中的一个组成部分。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: So attention is one component.</p>
+</details>
+<p><strong>Guest</strong>: 注意力机制确实只是一个组件。但除此以外……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Attention is definitely one component. But then again...</p>
+</details>
+<p><strong>Host</strong>: 还需要硬件感知与定制化，对吧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Hardware awareness customization. Yeah.</p>
+</details>
+<p><strong>Guest</strong>: 还有具身性（Embodiment）。这是另一个维度的关键要素。我认为如果想要把智能部署到数据中心之外的现实社会中，就必须具备某种具身形态。即便是存在于虚拟世界内部的智能体，它们也同样需要对自己运行其中的虚拟物理环境有所理解。所以具身性对于虚拟智能体而言也是同样适用的。因此系统中必须包含这些维度，具身智能与具身推理是非常重要的方向。此外，自适应智能（Adaptive Intelligence）是我们真正希望引入的另一个更高层级。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Embodiment. There's another aspect. So I would say like intelligence that wants to get deployed in the society outside of data centers, you got to have like some sort of embodiment. Agents that are actually inside the virtual world, they have also an understanding of their virtual physical kind of environments that they are operating in. So embodiment is also true for virtual agents by the way. So you got to have those kind of aspects in there. So embodied intelligence and embodied reasoning is something very important. And then adaptive intelligence is another level that we really want to add.</p>
+</details>
+<p><strong>Host</strong>: 你指的自适应是与模型路由相关，还是具体指什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Is that routing related or what do you mean by adaptive?</p>
+</details>
+<p><strong>Guest</strong>: 噢，我说的自适应是指系统能够持续自我演进，比如持续学习（Continual Learning）和不断自我提升的系统。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Oh, adaptive I mean like systems that can always evolve like continual learning, continuously kind of improving systems. Yeah.</p>
+</details>
+<h3>总结与结语</h3>
+<p><strong>Host</strong>: 好的，这真是一场非常精彩且有深度的探讨。在结束之前，还有什么我们本来应该向你提问但没有涵盖到的内容吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Okay. Well, that was a really good deep dive. Is there anything that we should have asked you that we didn't cover?</p>
+</details>
+<p><strong>Guest</strong>: 没有了，我觉得这是一次非常棒的交流对话。非常感谢！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: No, I think that was a great session. Thank you so much.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">continuous-time-math</span>
+      
+        <span class="tag-pill tag-pill--no-page">biological-inspiration</span>
+      
+        <span class="tag-pill tag-pill--no-page">neural-network-architecture</span>
+      
+        <span class="tag-pill tag-pill--no-page">model-customization</span>
+      
+        <a class="tag-link" href="/tags/embodied-intelligence/">embodied-intelligence</a>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

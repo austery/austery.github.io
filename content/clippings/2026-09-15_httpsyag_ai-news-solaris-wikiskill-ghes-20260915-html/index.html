@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>三条 AI 新闻：会画界面的模型、给自己写说明书的
+agent、脱离厂商云的企业编程</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-areas/">领域</a></li>
+            <li><a href="/all-categories/">分类</a></li>
+            <li><a href="/all-projects/">专题</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">演讲者</a></li>
+            <li><a href="http://localhost:3333" target="_blank" rel="noopener">🔍 语义搜索</a></li>
+            <li><a href="/tool/">工具</a></li>
+            <li><a href="/bookshelf/">书架</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="三条 AI 新闻：会画界面的模型、给自己写说明书的
+agent、脱离厂商云的企业编程" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">三条 AI 新闻：会画界面的模型、给自己写说明书的
+agent、脱离厂商云的企业编程</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-15</span>
+    
+    <div class="metadata-block">
+      
+      <div class="pkm-taxonomy">
+        <p><strong>领域:</strong> <a class="taxonomy-link" href="/areas/tech-engineering-3/">tech-engineering</a>
+</p>
+        <p><strong>分类:</strong> <a class="taxonomy-link" href="/categories/ai-application-2/">ai-application</a>
+</p>
+        
+      </div>
+      
+      <p><strong>主讲人:</strong> <a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a>
+</p>
+      
+      <p><strong>来源:</strong> <a href="https://yage.ai/share/ai-news-solaris-wikiskill-ghes-20260915.html" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-15
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">文章介绍了三条前沿AI技术动态：Runway的无代码界面模型Solaris，Google Research的WikiSkill用于让智能体沉淀可执行的操作说明书，以及GitHub的企业自托管版本GHES 3.22，实现了企业在内网环境运行私有模型和编程工具。文章分析了这三种技术在概念验证阶段的特点、工程局限性以及各自的创新点，指出它们在从演示走向生产环境仍面临的诸多挑战。</div></div>
+      
+    </div>
+    <h2>开场</h2>
+<p>最近有三条动态可以看看。第一条来自
+Runway，他们发布了一个不写前端代码、靠模型逐帧渲染交互界面的系统
+Solaris；第二条是 Google Research 的 WikiSkill
+论文，研究怎么让智能体在排错复盘之后给自己沉淀出一套可执行的操作说明书；第三条是
+GitHub 发布的企业自托管版本 GHES
+3.22，让团队能在隔离内网环境里运行命令行编程工具，不再依赖公有云。</p>
+<p>三条动态的发布状态并不相同：Solaris 目前属于研究预览，WikiSkill
+是一篇学术论文里的验证原型，GHES 3.22
+本身已正式发布，其中的隔离运行支持也明确标注为技术预览。这些还只是前沿演示，不该直接当成能搬进生产环境的工具。</p>
+<h2>Runway Solaris</h2>
+<p>日常开发界面，团队习惯了先写前端代码、搭组件树、绑定各种点击与滑动事件。Runway
+在演示里展示了另一套运行方式：底层没有运行任何前端脚本，也没有真实的系统控件，画面即软件。但
+Solaris
+并不是从空白开始随意点击，使用前，用户必须先提供一个起始状态（例如一个品牌环境或产品场景，起始帧可以由真实产品图像和参考素材构成，把场景锚在真实存在的东西上），并用文本
+prompt
+规定点击、拖拽等交互在这个场景里各是什么意思。在此之后，用户的点击、拖拽、输入才作为条件信号，在已经指定好的场景设定内驱动模型实时算出下一帧画面。整个操作过程就像连续翻动动画册，所有控件的外观与动效全部由模型实时画出来。这项技术出自
+Runway 在 2026 年 8 月 31 日发布的研究预览 Solaris
+官方公告，发布方称其为第一代接口世界模型。</p>
+<p>Solaris
+取消了代码这一中间层：左边是预先写死、冻结的代码界面，右边是模型在交互中逐帧生成的画面。</p>
+<p>这种架构省去了传统软件里的代码中间层。按照 Runway
+的技术说明，渲染层没有状态抽象或结构化中间表示，画面由模型直接生成。Runway
+把这一思路概括为画面本身即软件，认为传统代码是对潜在交互空间的一种预先固化与有损压缩。为了佐证这个说法，他们公布过一项逆向提取实验：让多模态模型从单一网页截图中还原前端代码，结果显示所有受测模型在还原复杂组件的过程中都丢失了原始信息。不过这项实验只能证明从静态图像逆向推导代码存在信息损耗，并不能证明直接生成像素就没有信息损耗。</p>
+<p>在工程结构上，Solaris
+拆成了两个模型配合工作。系统没有预置的屏幕和模板，交互的含义由文本
+prompt 规定。前置语言模型负责理解请求、决定下一步，并生成引导渲染的
+prompt；后置基于 Gen-4.5
+的世界模型专门负责渲染界面的视觉表现与交互反馈。为了把画面生成速度压缩到人类可以接受的操作延迟，团队组合了三项工程手段：逐帧串行生成、蒸馏去噪，以及把自身生成的样本送回训练集二次微调。官方把交互感消失的延迟阈值定在半秒左右，认为延迟达到这个阈值后，操作就不再让人感觉具有交互性。</p>
+<p>在呈现效果上，官方公布了一项包含 250 名受试者、累计约 7500
+次两两对比的用户偏好研究。对比对象选用 Claude Opus 5
+编写的前端代码界面，官方自报在遵循用户指令方面，受试者对 Solaris
+的偏好度为 61% 对 24%；在界面行为自然度方面，偏好度为 71% 对
+21%。成本方面，发布方宣称其实时运行成本比标准视频扩散模型便宜几个数量级。但这项对比的参照系本身就是计算开销极大的视频扩散模型，并不意味着它面对传统网页渲染具备成本优势。</p>
+<p>脱离官方自报的数字来看，根据截至 2026 年 9 月 11
+日的公开资料检索，尚未发现这项技术的第三方独立实测。检索到的公开讨论，全部基于官方放出的几段精剪演示视频。截至该日，Solaris
+处于研究预览状态，没有公测入口，没有公布定价，也没有提供
+API，只开放了一个早期体验申请表单，连正式上线的排期都没有披露。</p>
+<p>官方在公告中列出了四个尚未解决的技术局限。在动态画面中稳定渲染清晰可读的文字依然困难；模型偶尔会生成看似合理但实质错误的虚假界面状态，这种隐蔽错误比程序直接崩溃弹错更难排查；长会话持续维持视觉风格一致性依然困难；纯像素渲染也无法配合屏幕阅读器等辅助功能使用。这几处短板直接制约了它进入通用软件生产的可能。</p>
+<p>在 Reddit
+社区讨论
+中，不少开发者算了一笔账：传统前端代码一旦打包部署到客户端，无论用户怎么点击拖拽，服务器都不需要承担增量推理开销；而依托世界模型逐帧生成像素，每一次交互都在消耗
+GPU 计算资源，服务成本会随着用户的使用时长线性攀升。在 Reddit
+交互设计讨论
+里，同行也指出，通过行为演示来定义界面的想法在人机交互领域早已有之，Solaris
+带来的突破主要在生成式视觉渲染管线上，交互范式本身仍然沿袭了原有的用户与界面交互逻辑。</p>
+<h2>Google WikiSkill</h2>
+<p>日常用大模型写代码，常能碰到一种重复碰壁的循环：工程师在终端里带着模型反复调试，好不容易摸清某个冷门工具库的古怪限制，只要把对话窗口关掉重新开一个，模型立刻把踩过的坑忘得一干二净，下次碰到同样的报错依然从头碰壁。因为模型权重在部署之后固定不变，如何不重训模型参数又能把这些工程教训沉淀下来，一直是个实际难题。Google
+Research 团队的 Liyan Tang 等人在 2026 年 8 月 27 日发表了 WikiSkill 论文，共同作者 Tu
+Vu
+来自弗吉尼亚理工大学。他们提出了一套把执行记录编译成持久说明书的方案，论文按
+CC BY 4.0 协议开放，未提供官方代码仓库与官方博客。</p>
+<p>WikiSkill
+把工作区分成三层：不可变的记录、只增的经验、可回滚的手册；经验层交给写说明书的人读，而不是执行者。</p>
+<p>WikiSkill
+把工作区分成了三层。最底层是不可修改的原始轨迹，完整留存所有历史执行记录；中间层是永不清理的维基目录，用来存放模式归纳、问题索引、复盘日志以及每条规则带来的效果记录；最上层则是结构化的技能目录，存放可以随时版本回滚的操作说明书。这种在外部环境里持续沉淀知识、避免反复推演的做法，延续了
+Karpathy 在 2026 年 4 月提出的维基设想。</p>
+<p>整个系统依托四个组件循环运作。前台的执行智能体负责跑任务并产出轨迹记录；维基维护组件每一轮抽取不超过
+8 条轨迹，其中最多放 5 条失败用例和 3 条成功用例，单条日志长度控制在
+15000
+字符以内，专门对失败环节做根因分析并在维基里归纳共性规律；后方的技能提议组件阅读维基内容，起草技能文件的更新草案；最后交给门控验证组件跑验证集打分。门控机制以历史最佳验证分数为准入线，只有新草案在验证集上的表现严格好于历史最佳验证分数，才会允许合入，分数没达标就会立刻退回上一个稳定版本。即使修改草案没通过，维护组件也会把这次尝试的内容和未通过的原因写进维基，让后续迭代避开死胡同。技能文件采纳了
+Anthropic 在 2026
+年制定的标准格式，写明了触发时机、禁用场景和具体执行步骤，并保留了说明书的演进脉络。</p>
+<p>在 Gemini-3.5-Flash
+上的消融测试里，如果提议组件在没有维基输入的情况下起草技能（同时移除维基维护组件），基线平均准确率为
+48.7%；加入维基作为复盘参考后，模型平均准确率提升了 15 个百分点，达到
+63.7%，其中 LiveMath 数学推理任务从 51.3% 上涨到
+72.6%。在全量主实验中，Gemini-3.5-Flash 的平均准确率从 49.5% 提高到
+68.1%，Qwen-3.6-27B 则从 39.4% 提高到
+63.3%。技能带来的增益会随着底座模型参数规模扩大而递增，在 4B、9B、27B
+模型上，准确率提升幅度分别为 12.3 点、17.5 点与 23.9
+点。配备了技能文件的 Qwen-3.5-9B 最终成绩达到
+47.4%，跨级超过了没有技能支持的 27B 模型最初的 39.4%。</p>
+<p>测试过程里还出现了一个反直觉的对比现象。如果在训练 rollout
+期间把写满排错记录与反思总结的维基全文，直接塞进前台执行智能体的提示词上下文里，模型的平均成绩不仅没有上涨，反而从
+63.7% 跌落到了 60.9%，LiveMath 得分更是从 72.6% 掉到了
+64.8%。细致的长篇排错日志充斥着冗余细节，直接扔给前台执行者会干扰注意力分配；维基的实际价值在于留给后台的提议组件离线精读，把经验收敛成言简意赅的操作规程之后，再交由前台执行。</p>
+<p>除了正面增益，论文也明确记录了负迁移现象。实验把 Qwen-3.5-4B
+总结出来的一套电子表格处理技能，直接塞给更强大的 Gemini-3.5-Flash
+使用，导致后者的准确率从 50.5% 跌落到
+18.1%。小模型为了绕过自身短板总结出来的变通技巧，套到高推理能力模型身上，反而捆绑了更优解题路径。</p>
+<p>在任务覆盖面上，WikiSkill 并没有在所有测试集上拿下第一。在 OfficeQA
+测试中，Qwen-3.6-27B 取得 53.7% 的分数，落后于 Trace2Skill 的 54.3% 和
+SkillOpt 的
+54.8%。作者在论文局限部分指出，当前系统还没有引入技能的动态检索与动态触发逻辑，所有生成的技能都是全量打进上下文中；单看提分的门控规则，也会筛掉那些虽然没有明显涨分但具备潜在价值的中性提案。目前该方案尚未开源官方代码，公开代码只有
+第三方复现项目
+ashutoshsinghpr7/wikiskill，主要记录了门控拦截无效提案的运行机制。</p>
+<h2>GitHub GHES 3.22</h2>
+<p>工程师打开内网开发机上的命令行工具，敲下指令后，代码建议顺畅地输出在屏幕上。整个推理过程没有向微软或者
+GitHub
+的公网服务器发送任何数据包，终端界面没有弹出第三方登录确认，全部网络请求只打到公司机房内部部署的自建服务器上。这套方案来自
+2026 年 9 月 8 日发布的 GHES
+3.22 发布说明。按照 GHES
+3.22 正式发布公告，宿主服务器软件本身已经正式商用，但附带的隔离环境
+Copilot CLI 运行支持明确标注为技术预览，后续版本可能继续调整。</p>
+<p>GHES 3.22
+把部署拆成四层，企业可以分别选择；只有模型端点也在隔离网内时，数据才真正不出网。</p>
+<p>许多企业对云端辅助编程工具始终保持谨慎，主要顾虑集中在内部代码出网与合规审计要求。允许企业自带模型端点、接入本地私有推理并离线运行的功能，其实在
+2026 年 4 月 7
+日就已经推出过。只是当时的设计把配置职责推给了每位开发者，每个人都得在本地机器上单独配环境变量和模型地址，企业安全与合规团队无法统一推行管理策略。GHES
+3.22 的实质变化在于把配置权限收归中枢：系统管理员只需在企业自托管的 GHES
+实例后台，通过 ghe-config
+命令行工具统一部署一次上游模型参数，员工使用现有的自建 GHES
+账号凭据便能直接接入。</p>
+<p>根据 自定义模型端点配置文档，整套体系把原本捆绑的调用链路划分成了四个独立层级。一层是开发者机器，负责跑本地
+Copilot CLI 客户端；一层是企业自建的 GHES
+实例，承担代码托管与员工身份核验；一层是模型推理，由实例内部嵌入的
+copilot-proxy
+代理服务中转请求，交给上游模型端点提供算力；另一层则是供应商云，离线模式下不连接
+GitHub 的公有云。层级解耦让企业能够独立掌控身份与流量边界。</p>
+<p>在模型接口标准上，内部代理支持 openai、azure 以及 anthropic
+三种协议规范。选用 openai 规范，可以接入企业内部部署的各类兼容后端，包括
+Ollama、vLLM 以及 Foundry Local
+等私有推理引擎。企业挂载的模型必须原生支持工具调用与流式传输，官方建议上下文窗口长度至少达到
+128k
+tokens。为了防止数据在异常情况下意外出网，系统设置了拦截策略：一旦模型供应商配置无效，客户端会显示错误信息，不会静默回退到
+GitHub 托管的公网模型。在离线运行模式下，系统不会向 GitHub
+公有云发起订阅状态校验，数据遥测上报也全部关闭。</p>
+<p>隔离配置并不意味着代码资产就一定留在了内网。官方文档给出了明确的架构限定：只有在企业配置的上游模型端点本身也架设在隔离或气隙网络内部的前提下，完全的网络隔离才能够成立。如果管理员在后台把上游地址指向了公网上的商业
+API，开发者的提示词与代码文件依然会经过内置代理服务器穿透边界，流向外部服务商。</p>
+<p>切入隔离运行模式也伴随着功能上的妥协。在当前的技术预览状态下，GitHub
+MCP server 工具、联网搜索与网页抓取、GitHub
+托管模型切换、遥测统计以及客户端自动更新功能全部无法使用；本地能稳定调用的核心能力主要是
+AI 辅助编码、本地文件读写，以及配合企业自托管实例运行的 gh
+命令行操作。真要推进到企业级大规模部署，官方文档尚未给出解答的问题还有不少，比如企业级许可证与具体权益的分配机制、请求级别的审计流水与算力成本计量、多个模型供应商之间的流量调度策略，以及代理服务本身的日志保留粒度。在
+GitHub
+社区讨论议题 205381 中，多家企业团队呼吁 GitHub
+将自托管版本建设为具备统一交付与完备治理能力的一等平台，不过这些诉求目前仍停留在社区反馈阶段，尚未进入官方明确承诺的路线图。</p>
+<h2>收尾</h2>
+<p>Runway 展示了跳过代码直接靠模型渲染界面的尝试，Google Research
+验证了让智能体在后台为自己整理操作说明书的可行性，GitHub
+则给企业在内网环境集中管控私有模型落地补上了一块拼图。不过，从概念验证和早期演示，到真正放进复杂多变的真实业务里跑通，中间还有不少工程问题需要解决。眼下不妨先看清每种方案踩出的边界与限制，留心后续的迭代进展。</p>
+
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Runway" class="entity-link company-link">Runway</a>, <a href="/search/?q=Google Research" class="entity-link company-link">Google Research</a>, <a href="/search/?q=GitHub" class="entity-link company-link">GitHub</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Solaris" class="entity-link product-link">Solaris</a>, <a href="/search/?q=WikiSkill" class="entity-link product-link">WikiSkill</a>, <a href="/search/?q=GHES 3.22" class="entity-link product-link">GHES 3.22</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">visual-model</span>
+      
+        <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+      
+        <span class="tag-pill tag-pill--no-page">self-hosting</span>
+      
+        <a class="tag-link" href="/tags/code-generation/">code-generation</a>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>
