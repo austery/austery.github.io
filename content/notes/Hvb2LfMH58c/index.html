@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>面向 Agent 时代的推理云重构：从单次请求延迟到端到端任务吞吐</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="面向 Agent 时代的推理云重构：从单次请求延迟到端到端任务吞吐" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">面向 Agent 时代的推理云重构：从单次请求延迟到端到端任务吞吐</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-19</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=Hvb2LfMH58c" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-19
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">FriendliAI 创始人 Byung-Gon Chun 剖析了 Agent 工作负载对推理架构的颠覆性变革。随着前沿开源模型性价比超越闭源模型，Agent 推理的核心矛盾转向长上下文、交替工具调用及超长任务链路。FriendliAI 通过前缀缓存、KV 缓存分层管理、缓存感知路由及 Agent 级调度四大支柱，实现端到端任务延迟与成本的大幅优化。</div></div>
+      
+    </div>
+    <h3>Agent 生产力爆发与开源前沿模型的经济学跨越</h3>
+<p>在 2026 年，<strong>智能体</strong>（AI Agents: 具备自主规划、工具调用与多步执行能力的 AI 系统）正式进入大规模生产部署阶段。这一趋势是由两股关键力量汇聚驱动的：一方面，AI Agent 正在软件研发、业务运营与知识工作中实现指数级渗透；另一方面，<strong>开源权重模型</strong>（Open-weight Models: 开放模型权重参数供自由部署的神经网络架构）的能力已跨越关键阈值，达到了与顶尖闭源模型比肩的前沿水平，从而彻底重构了 Agent 的经济模型。</p>
+<p>以一个具体的编码 Agent 任务——构建塔防游戏为例，对比运行在 <strong>FriendliAI</strong>（前沿 Agent 推理云基础设施平台）上的开源模型 <strong>GLM-5.2</strong> 与闭源模型 <strong>Claude Opus 4.8</strong>：两者均能高质量完成这一复杂的实际工程任务，但成本差异巨大。Opus 4.8 完成该任务的花费约为 150 美元，而部署在 FriendliAI 上的 GLM-5.2 仅花费 27 美分，经济效益提升了约 5.6 倍。开源前沿模型在保障顶尖能力的同时，将 Token 成本降低至极低水平，为 Agent 的大规模落地奠定了商业基础。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Let's get started. Hi everyone. Thank you for coming. This is the late afternoon in the last day, so I really appreciate it. I'm Gon, founder and CEO of FriendliAI. Today I want to talk about agentic inference. I'll first walk through what changed, why it matters, and how we rebuilt the inference cloud for agents.</p>
+<p>Before we go deeper, let me briefly introduce FriendliAI. FriendliAI is the frontier AI inference cloud for agents. We run inference for agents at scale—faster, cheaper, and more reliably. We are born from a research team at Seoul National University, and those research roots still define us. We are the team that invented continuous batching, the inference optimization that is now standard across the industry, and our Orca work inspired vLLM, a widely used open-source framework. Today we operate globally, headquartered in San Francisco with a team in Seoul to scale frontier inference.</p>
+<p>As you know, 2026 is the year agents go into massive production, and it's driven by two trends coming together. First, agents are going exponential: AI agents are driving explosive adoption across software operations and knowledge work. Second, open-weight models have reached the frontier and make agents economic. They now rival closed frontier models in capability, which means you can run frontier quality agents on open models with much lower token cost.</p>
+<p>Let me make the open-weight model part concrete. Open-weight models are now strong enough for these types of real agentic workflows. Here we gave the exact same task—building a tower defense game with a coding agent—to two models. On the left is GLM-5.2, an open-weight model running on FriendliAI; on the right is Anthropic's Opus 4.8. The important point is not that the outputs are identical; the point is that both complete the task at a level that is clearly usable for many agentic workflows. Open-weight models have crossed the quality threshold, but the economics are very different for the same task: Opus 4.8 cost about $150, while GLM-5.2 on FriendliAI cost 27 cents—about 5.6 times cheaper. This is the promise I mentioned earlier: open-weight models give you frontier quality agents at a fraction of the cost.</p>
+</details>
+<h3>工作负载本质变迁：从单次请求转向端到端任务优化</h3>
+<p>降低模型 Token 单价仅解决了问题的一半。要让 Agent 系统在生产环境中实现真正的高速与高可靠，底层的<strong>推理架构栈</strong>（Inference Stack: 负责模型计算、内存管理与请求调度的全套系统软硬件架构）必须发生范式转变。传统的推理系统主要面向聊天对话（Chat）场景设计，其基本交互单元是“单次请求”——用户输入提问，模型流式生成回复，系统关注的核心指标是单次响应的<strong>首次生成时间</strong>（Time to First Token: 模型接收输入到输出首个 Token 的延迟）与生成延迟。</p>
+<p>而在 <strong>Agent 场景</strong>中，基本交互单元转变为“完整任务”（Task）。一个任务通常由复杂的循环构成：模型规划生成指令、调用外部非 LLM 工具执行操作、观察环境反馈并写回上下文，如此循环往复数十至数百次，甚至包含并行派生的<strong>子智能体</strong>（Sub-agents: 由主智能体分发独立子任务的轻量级 Agent 实例）。在这个过程中，用户唯一关心的指标是整个任务何时交付，而非某次单步调用的耗时。同时，输入数据的特征也呈现出显著差异：上下文长度随着环境反馈不断追加而急剧膨胀，且连续步骤之间高度共享相同的前缀信息。若每次调用都从头重新计算长上下文前缀，将造成极大的算力浪费。</p>
+<details>
+<summary>Original English Source</summary>
+<p>But model cost is only one part of the story. To make agents actually fast and reliable, the inference stack itself has to change. Let's look at what actually happens inside an agentic workload.</p>
+<p>First, let's look at changes in the workload. In the past, the dominant usage was chat. The basic unit was a request: a person asks a question, the model answers, and the person reads it. Latency meant how fast did I get one response. Agents are different. The basic unit is a task. A task may involve many model calls, many tool calls, and it may run autonomously for a while. So the user does not really care about the latency of one individual request; the user cares about when the whole task is completed. That means we have to optimize for tasks, not just individual requests.</p>
+<p>Let's look at agent workflows more closely. An agent really runs a session made up of tasks. Each task typically runs in a loop: first it plans (which usually means an LLM call), then it acts (maybe by calling a tool), then it observes the result and adds that back into the context, and it repeats this until the task is done. So we are constantly alternating between LLM inference and one or more non-LLM tool executions, creating a gap between LLM calls. An agent can also create sub-agents and run them in parallel.</p>
+<p>Agent inputs also look very different from chat. The prompt and completion length distributions of our internal coding agent runs with GLM-5.2 (which we use day-to-day) show they are much longer. They grow as the task progresses since every observation gets appended back into the context. There's an important pattern here: consecutive agent steps usually share a huge prefix. If we recompute the same prefix every time, we are burning a lot of compute on work we already did. This is one of the biggest opportunities in agentic inference.</p>
+<p>How token-hungry are agents? Consider a long-horizon task example like Deep Research: running a task like &quot;explain the speculative decoding framework in vLLM using code&quot; with GLM-5.2 on FriendliAI involves multiple stages, each composed of sub-agents running multiple inferences and tool calls. It might run tens or hundreds of inference steps over minutes or hours, while the shared context keeps growing the whole time. For the user, what matters is not the latency of a single token or one call, but when the task is completed. Agent inference is not just chat with more requests; it's a different problem: context grows over time, tool work is interleaved between model calls, the number of calls depends dynamically on input (preventing fixed-rate capacity planning), and the real metric is end-to-end task latency.</p>
+</details>
+<h3>FriendliAI Agentic 推理栈的四大核心工程支柱</h3>
+<p>为了攻克长上下文、交替执行以及动态突发调用带来的系统挑战，FriendliAI 围绕端到端任务延迟优化构建了专用的 Agent 推理云栈，其核心架构由四大工程支柱支撑：</p>
+<ul>
+<li><strong>前缀缓存</strong>（Prefix Caching: 跨推理请求持久化并复用历史 Token 的计算中间状态）：由于 Agent 执行步骤高度共享相同的提示词与历史前缀，系统仅对该前缀执行一次 <strong>KV 缓存</strong>（Key-Value Cache: 存储 Transformer 注意力机制键值张量的内存缓冲区）计算，后续步骤直接复用，只对增量后缀进行 Prefill 计算，大幅削减计算量并缩短首字延迟。</li>
+<li><strong>高精细度 KV 缓存管理</strong>：引入紧凑内存布局提高单 GPU 显存利用率，配合 KV 压缩与量化技术降低内存开销；同时建立跨 GPU 显存、Host 主存及固态硬盘的<strong>分层缓存架构</strong>，打破物理显存容量壁垒，并支持跨实例副本的分布式前缀共享。</li>
+<li><strong>全局缓存感知路由</strong>（Cache-aware Routing: 结合集群负载与节点缓存命中状态的智能流量分发机制）：突破传统负载均衡破坏局部性的缺陷，将请求精准分发至已存在对应前缀缓存的计算节点，将高昂的冷启动 Prefill 转为零开销的热命中，同时动态平衡集群热点。</li>
+<li><strong>Agent 感知型调度优化</strong>（Agent-aware Optimization: 结合上层智能体状态图进行的主动式推理资源编排）：推理调度器理解底层调用隶属于同一个长周期 Agent 程序，能够依据执行上下文执行主动抢占、高概率分支推测性 Prefill 计算以及更智能的缓存淘汰策略。</li>
+</ul>
+<details>
+<summary>Original English Source</summary>
+<p>This is where FriendliAI comes in. We rebuilt the frontier inference cloud specifically for agentic workflows around the challenges I just walked through, and we set one goal: optimize end-to-end task latency—the task, not just the request.</p>
+<p>Here is the engineering map for how we think about it. We built the stack layer by layer around agent workflows. There are four big pillars I'm going to cover today: prefix caching, KV cache management, cache-aware routing, and agent-aware optimization (alongside underlying model-layer optimizations like sparse attention for long context, fast kernels, and resilient serving).</p>
+<p>Let's start with prefix caching. Since agent steps share a large prefix, we compute key-value for that prefix once and cache it. Then on later steps, we reuse the cached key-value and only process the new suffix. Reading from cache is much cheaper than recomputing prefill, which improves time to first token and reduces compute on every step. The longer the task runs in agents, the more valuable this becomes.</p>
+<p>But caching only works if the KV cache actually fits and can move around efficiently. We need strong KV cache management: we use frugal memory management to pack more active context onto each GPU, KV compaction/quantization to reduce footprint, hierarchical caching across GPU memory, host memory, and disks to go beyond GPU limits, and distributed caching so one prefix can be served across replicas rather than just inside one instance.</p>
+<p>At global cluster scale, routing becomes critical. A naive load balancer may spread requests evenly across GPU clusters, but it destroys cache locality. A cache-aware router at global scale does something smarter: it routes a request to a pod that already has the right prefix cached, turning a cold prefill into a cache hit, while continuously balancing load to prevent hot spots.</p>
+<p>The next piece is agent-aware optimization—the next frontier of agentic inference. Today, most systems schedule each LLM call as if it were independent, without understanding that it is part of a longer agent program. When the optimizer knows agent-level context, we can make better decisions: preempting the right work, speculatively prefilling context for likely next steps, or making better cache eviction decisions based on agent context to reduce end-to-end latency.</p>
+</details>
+<h3>工业级验证与多模态部署矩阵</h3>
+<p>在实际端到端基准测试中，使用 <strong>Kilo Code</strong> 配合 GLM-5.2 完成移动端游戏开发任务，FriendliAI 依托针对 Agent 优化的架构设计，相较其他主流推理服务商展现出数倍的端到端执行效率提升。在真实商业落地中，FriendliAI 既为服务数百万开发者的 AI 原生编程工具 Kilo Code 提供算力支撑，也支持涵盖消费电子、医疗及能源领域的跨国企业 LG。</p>
+<p>在 Kilo Code 的实际对比测试（A/B Testing）中，针对 GLM-5 模型的推理表现，FriendliAI 相比第三方服务商及模型厂商原生 API，实现了稳定 <strong>7 倍的速度提升</strong>，同时显著降低了调用错误率。为满足不同企业的部署需求，FriendliAI 提供了三种接入模式：</p>
+<ol>
+<li><strong>Serverless 模型 API</strong>：即开即用的前沿开源模型托管服务；</li>
+<li><strong>专属端点</strong>（Dedicated Endpoints: 具备确定性 SLA 与资源物理隔离的独享部署模式）：适用于高合规要求的生产级任务；</li>
+<li><strong>BYOG 自带算力模式</strong>（Bring Your Own GPU: 在客户私有 GPU 基础设施上运行服务软件栈）：实现数据主权与架构性能的统一。</li>
+</ol>
+<details>
+<summary>Original English Source</summary>
+<p>When we put all of this together, this is the payoff: using the same model GLM-5.2 with Kilo Code to create a simple mobile game across FriendliAI and another well-known inference provider, FriendliAI completes the same task end-to-end much faster thanks to our agent-centric cloud design.</p>
+<p>What does this unlock in practice? A stronger production agent stack. Take an agent you already like, plug in open-weight frontier models like GLM-5.2, MiniMax, and Kimi served on FriendliAI: the model gives you frontier capability and better economics, while FriendliAI gives you the speed, reliability, and end-to-end task performance needed in production. That combination of quality, speed, reliability, and cost makes agents truly viable.</p>
+<p>FriendliAI powers teams from AI-native startups to global enterprises. For example, Kilo is a hugely popular agentic AI coding tool serving millions of users, and LG is a global enterprise spanning electronics, healthcare, and energy. Over the past year, Kilo Code tested several providers; in a split test of GLM-5 usage against third-party providers and direct usage from the model lab, FriendliAI was consistently 7x faster with a significantly lower error rate, making it a core component of Kilo's stack.</p>
+<p>You can consume this stack in three ways:</p>
+<ol>
+<li>Model API: The fastest way to start via serverless frontier open-weight endpoints.</li>
+<li>Dedicated Endpoints: Isolated deployments with guaranteed SLAs for production workloads.</li>
+<li>BYOG (Bring Your Own GPU): Run Friendli inference on your own infrastructure.</li>
+</ol>
+<p>To wrap up, remember three things: first, frontier open-weight models make production agents economically scalable; second, agentic inference requires optimizing end-to-end task latency rather than single requests; third, FriendliAI is built specifically as the inference cloud to deliver fast, reliable, and cost-effective agentic inference. You can get started at friendli.ai in minutes. Thank you.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=FriendliAI" class="entity-link company-link">FriendliAI</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=GLM-5.2" class="entity-link product-link">GLM-5.2</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">agentic-inference</span>
+      
+        <span class="tag-pill tag-pill--no-page">prefix-caching</span>
+      
+        <a class="tag-link" href="/tags/kv-cache/">kv-cache</a>
+      
+        <span class="tag-pill tag-pill--no-page">llm-serving</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

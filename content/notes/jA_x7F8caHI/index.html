@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>没有记忆就没有框架：为什么数据库是企业级智能体的最后防线</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="没有记忆就没有框架：为什么数据库是企业级智能体的最后防线" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">没有记忆就没有框架：为什么数据库是企业级智能体的最后防线</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-14</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=jA_x7F8caHI" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-14
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">Oracle 出局数据库产品管理副总裁 Kay Malcolm 深入剖析了企业级 AI Agent 的协作瓶颈。她指出，AI 虽然提升了个体速度，但因缺乏上下文与记忆共享而未带来团队整体生产力提升。真正的企业级智能体不仅需要模型，更需要承载五种记忆类型的 Harness，而原生支持多模态的现代数据库是保障单一真实数据源的核心基础设施。</div></div>
+      
+    </div>
+    <h3>开场互动与活力调动</h3>
+<p><strong>凯·马尔科姆</strong>: 各位朋友，今天玩得开心吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Kay Malcolm</strong>: Everyone, are we having fun?</p>
+</details>
+<p><strong>凯·马尔科姆</strong>: 噢，你们给我的回应可得比这热烈得多才行！让我先向大家做个自我介绍，我叫<strong>凯·马尔科姆</strong>（Kay Malcolm）。在进入科技界之前，我曾是一名退休的街舞嘻哈教练。所以，如果现场的能量不能达到我的标准，我们今天可就要一直重新开场了。我们再来一次：大家今天过得开心吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Kay Malcolm</strong>: Oh, you've got to give me way more than that. So, let me tell you, um, my name is Kay Malcolm. I am a retired hip-hop instructor. So, if I don't get more energy than that, we will start. We'll start. Are you having fun?</p>
+</details>
+<p><strong>观众</strong>: （热烈欢呼喝彩）</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience</strong>: [cheering]</p>
+</details>
+<p><strong>凯·马尔科姆</strong>: 好的，太棒了！那么，这就是我们今天要探讨的话题。最近大家一定听到了非常多关于两个字母的讨论。有人想猜猜我今天要讲的两个字母是什么吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Kay Malcolm</strong>: Okay. All right. So, here's what we're going to talk about today. Now, you guys have heard a lot about two letters. Does anyone want to guess what those two letters are that I'm going to talk about today?</p>
+</details>
+<p><strong>观众</strong>: 数据（Data）！数据库（DB）！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience</strong>: Data. DB.</p>
+</details>
+<p><strong>凯·马尔科姆</strong>: 猜得相当不错——“DB”（数据库）。我确实会讲到 <strong>AI</strong>，但我今天特别想聚焦讨论的是<strong>智能体框架</strong>（Agent Harnesses）。不过在深入这个话题之前，我想先带大家认识几个人，可以吗？你们的选择只有“可以”或者“非常可以”。没问题吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Kay Malcolm</strong>: That was pretty good. DB. I'm going to talk about AI, but I'm specifically going to talk about agent harnesses. But before I do that, I want to introduce you all to a few people. Is that okay? Yes or yes. Is that okay?</p>
+</details>
+<p><strong>观众</strong>: 可以！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience</strong>: Yes.</p>
+</details>
+<h3>研发团队的生产力悖论</h3>
+<p><strong>凯·马尔科姆</strong>: 我给出了选择，大家都同意了。好的，这就是我的团队。我在 <strong>Oracle</strong> 领导一支外向型数据库产品管理团队。我在 Oracle 已经工作了非常久——足足 20 年。说个有趣的笑话，我其实 12 岁就在这里上班了，所以大家千万别在脑子里算我的年龄，别去加减年份。</p>
+<p>目前我们遇到了一个棘手的问题。我手下有一组人负责平台开发，另一组人负责 <strong>LiveLabs</strong> 的内容开发——LiveLabs 这个平台当年还是我自己亲手写出来的，所以虽然我是工程总监，但有时候也像个客串的半吊子开发者。除此以外，我还有一组人专门做 QA 测试，还有一组人负责结合 AI 做前端开发。</p>
+<p>作为一名团队管理者，我发现了一件极其荒谬的事情。在 2025 年这个疯狂消耗 Token 的“Token 极限狂飙”时代——当然，我们现在已经不再盲目消耗 Token 了，我们现在追求的是负责任的人工智能（Responsible AI）。但在那个狂飙阶段，我注意到：虽然 AI 确实让我的团队里的每个个体员工编写代码的速度变得更快了，但它却制造了另一个严重的问题——它并没有让我的整个团队变得更加高产。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Kay Malcolm</strong>: I gave choices. Yes. Anyway. All right. Okay. All right. This is my team. I run an outbound database product management team at Oracle. I've been at Oracle a really long time, 20 years. Funny story, I started when I was 12. So, don't do the math and don't start adding in your head. Um, and we've got a problem. That problem is I've got one group that does platform development and then I have another group that does content development for LiveLabs, a platform that I wrote myself. So yeah, I'm an engineer but I'm kind of a developer poser too. And then I've got another group who does QA and then I have another group who does my front-end development with AI. Here's what I found out as a leader. Because in the token-maxing era of 2025, because you know, we're not token-maxing anymore, right? We are responsible AI now. But in the token-maxing era, the thing that I found out was while AI was making the individuals on my team faster, there was another problem it was creating. It wasn't making my team more productive.</p>
+</details>
+<h3>上下文断层与协作瓶颈</h3>
+<p><strong>凯·马尔科姆</strong>: 造成这种情况的原因在于：当位于荷兰的团队在荷兰当地时间下午完成开发并在我这边的凌晨 4 点提交代码时——因为我一半的团队成员在欧洲、中东和非洲区（EMEA），另一半成员在美国本土——他们虽然把代码提交到了代码仓库，却没有将他们在 <strong>Codex</strong>（我们在 Oracle 内部使用 Codex）中积累的上下文一并提交。</p>
+<p>因此，当美国的团队早晨醒来开始工作时，他们拿到了新提交的代码，却对背后的完整上下文一无所知。最终，我们不得不使用 AI 来解决由 AI 自身制造出来的问题。具体情况是这样的：</p>
+<p>正如我刚才提到的，关键上下文没有得到共享。<strong>GitHub</strong> 并不负责追踪这些隐性的上下文信息。我发现代码仓库开始出现分叉和偏离，我便去质问我手下的经理们：“你们的团队到底怎么回事？为什么我们的整体交付进度没有变快？我们在 Token 上砸了这么多钱，在 AI 上投入了这么多预算，但依然缺少了关键的一环，因为我们依然要耗费大量时间去反复进行人工测试与验证。”</p>
+<p>最终的综合结果并不理想，因为 <strong>Git 记录的只是代码，而不是人类的意图</strong>。这就是症结所在。尽管编写代码本身不再是瓶颈，但整体协作依然存在巨大的卡点。我们需要一个<strong>协作层</strong>。</p>
+<p>今天台下坐着我团队里的几位成员，大家别怪我公开吐槽，你们心里清楚我说的是谁。我并不是说你们过去不注重协作，而是现在我们的团队迎来了一位全新的成员——这位新成员就是 <strong>AI</strong>。</p>
+<p>因此，我们必须设法搞清楚如何追踪工作进度与后续步骤，如何理顺并解释 Agent 智能体所做的每一个决策，以及如何高效解决智能体与人类之间的疑问与逻辑冲突。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Kay Malcolm</strong>: And the reason was when one team from the Netherlands checked in code at my 4:00 a.m. in the morning because I've got half of my team that's in EMEA and I have half of my team that are here in the United States. They checked in the code but they didn't check in their context from Codex. We use Codex at Oracle. So then when the US team woke up, they got the code but no information about the context. So we used AI to solve a problem that AI created. And here's what we did. Oh well, let me talk about this first. So some of the issues, the context, like I said, wasn't shared. GitHub wasn't tracking that. I had repositories that were diverging and I was asking the managers who work for me, what's happening to your teams? Why are we not going faster? We're spending all of this money on tokens. We're spending all this money on AI, yet something is missing because we're still spending time doing testing and validation. So our net-net wasn't really working for us because Git records the code and not human intent. So it's a problem and even though code creation was no longer our problem, we still had a bottleneck. We needed a collaboration layer. Now, I do have members of my team in the audience, so don't judge me, and you know who you are. I'm not saying that you all didn't collaborate. But now, we've got a new team member, and that new team member is AI. So, we needed to figure out how to track our progress in our next steps, how to rationalize decisions that the agent was making. We needed to figure out how to resolve questions and conflicts.</p>
+</details>
+<h3>重新定义企业级智能体</h3>
+<p><strong>凯·马尔科姆</strong>: 好的，先帮我把这个问题收好。大家能帮我把这个难题暂存在这里吗？我们先把它装进一个小盒子里。现在让我先来明确定义一下：到底什么才是真正的<strong>企业级智能体</strong>（Enterprise Agent）？</p>
+<p>现如今，绝大多数人总以为一个企业级智能体无非就是“大模型 + 工作流”。在座的有多少人认同这种看法？天呐，今天这届观众真严格，居然只有一个人举手！看来你们其他人都觉得不仅如此。</p>
+<p>那么让我们看看真正的企业级智能体到底包含什么：它必须拥有<strong>工具</strong>（Tools）——工具是它执行具体动作的手段；它需要<strong>上下文</strong>（Context）——这就是上下文窗口，也就是提示词和运行时环境中所包含的实质信息；它还需要<strong>记忆</strong>（Memory）。</p>
+<p>听到这里大家可能会疑惑：“等等，Kay，你刚才不是说模型本身就像是整个系统运作的大脑吗？”请稍安勿躁，我们稍后会深入剖析记忆与检索机制。因为你绝不希望一股脑把所有历史数据全部捞出来，你必须能够精准地把最正确的信息检索并召回出来。</p>
+<p>此外，我知道现场有非常多的开发者，大家平时可能不太在乎安全问题。但我对<strong>安全性</strong>（Security）有着极高的敏感度，因为我效力于全球安全性最高的数据库公司，而且我早年还曾供职于某家不能透露名字的安全情报机构。<strong>安全护栏</strong>（Guardrails）至关重要。</p>
+<p>这就是所谓的“<strong>框架</strong>”（Harness）。我习惯用类比和讲故事的方式来解释技术，因为如果我借用漫威宇宙的概念，大家一听就能心领神会。</p>
+<p>你可以把 Agent 想象成一个泡在玻璃罐里浮动的大脑——那就是基础模型；而这个 Harness（外骨骼框架）就是它的整个身体。正因为有了这个身体，智能体才真正具备了行动能力，能够切实去完成各项任务。而<strong>记忆</strong>，则是连接这一切的<strong>中枢神经系统</strong>（Central Nervous System）。大家都知道，中枢神经系统把大脑与身体各部位、四肢紧密连接在一起，它正是承载和传递上下文的通道。</p>
+<p>所以回过头来看我刚才提到的 Git 协作问题，我们真正缺失的核心拼图正是<strong>记忆</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Kay Malcolm</strong>: Okay, hold my problem. Will you all hold my problem for me right here? We're going to just tuck that in a little box. Let me define what an enterprise agent actually is. Now, most people think that an enterprise agent is the model and workflow. How many people agree with me? Man, this tough crowd. Okay, one person. Okay, the rest of you think it's a little bit more. Okay, let's see what could it be that a real enterprise agent has tools. Tools are how it does things. Context. The context. That's a context window. That's what's in the actual prompt. Memory. Huh? And if you're thinking, &quot;But wait, Kay, memory, you just said that the model is kind of like the brain of the operation.&quot; Hold tight. We're going to talk a little bit more about memory retrieval because you don't want to get everything back. So that's being able to retrieve the right information back. And then I know that there are a lot of developers here and you all don't care about security. I care about security because I work for the most secure database company and I used to work for a agency that has no name. But guardrails is also important. This is the harness. I speak in analogies and I speak in stories because if I tell you this in Marvel, you know exactly what I'm talking about. So the agent, think of it as the model, little brain floating in a glass jar, plus this harness. This harness is the body. So it's how the agent can actually do things and get things done. That memory, that's the part of the central nervous system. And you remember the central nervous system connects the brain to the rest of the body, legs, arms. That's the part of the central nervous system that carries context. So you remember my problem with Git. What I needed was memory.</p>
+</details>
+<h3>五种记忆类型解析</h3>
+<p><strong>凯·马尔科姆</strong>: 好的，在技术架构中存在着多种不同的记忆类型。我挑选了其中最常见、最核心的五种类型，这也是我希望大家今天务必牢牢记住的概念：</p>
+<p>第一种是<strong>短期记忆</strong>（Short-term Memory）。这代表单次会话（Session）。如果你要存储 AI 运行过程中的状态，在诸如日常对话、Cloud Code、Codex 等单次交互工具中，上下文窗口内保留的就是短期记忆。</p>
+<p>第二种是<strong>长期记忆</strong>（Long-term Memory），指的是能够跨越不同会话、持久化保留下来的知识与历史。</p>
+<p>第三种是<strong>情景记忆</strong>（Episodic Memory）。它记录的是：“上一次我和某某对象进行交互时，具体发生了什么事？”这就是情景记忆。</p>
+<p>第四种是<strong>程序性记忆</strong>（Procedural Memory）。它保存的是工具调用记录、曾经执行过的具体操作步骤和工作流程。</p>
+<p>最后一种是<strong>语义记忆</strong>（Semantic Memory）。由于我们今天讨论的是企业级智能体，而不是我业余自建的个人玩具——顺便提一句，因为我之前是个舞者，所以我给我自己的 AI 幕僚长起名叫“Sasha Fierce”，也就是碧昂丝（Beyoncé）的化身，现场有碧昂丝的歌迷吗？好吧抱歉扯远了，我们回到正题。</p>
+<p>以上这五种就是构建智能体不可或缺的记忆类型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Kay Malcolm</strong>: Okay, so there are a number of memory types. I chose five, the five most common ones that people talk about and these are the ones that I want you to remember. The first one is short-term memory. That's the session, right? And so if you're storing memory of an AI process, that short-term memory is if you're with chat, Cloud Code, right? Codex, pick your poison. The long-term memory is what persists across sessions. Episodic memory. Hm. What happened the last time I interacted with fill in the blank? That's your episodic memory. Procedural memory: tools, steps that were taken. And then finally, semantic memory. And semantic memory because we're talking enterprise agents. We're not talking the agent that I built, Sasha Fierce, because remember I told you guys that I'm a dancer. So, of course, my chief of staff is going to be called Sasha Fierce because that was Beyonce. Any Beyonce fans? Okay, I'm sorry. All right, we got to focus. Okay, so these are the memory types.</p>
+</details>
+<h3>DBA 的血泪史与专用数据库陷阱</h3>
+<p><strong>凯·马尔科姆</strong>: 当你在定义真实企业级智能体及其记忆系统时，必须深思熟虑的一个核心问题是：<strong>这些记忆到底应该存储在哪里？</strong></p>
+<p>我想给大家讲一个我亲身经历的故事。但讲之前你们必须向我保证绝对不嘲笑我、不评判我。大家能保证吗？你们没有在偷偷录音吧？因为这个故事讲出来可不太利于维护我的高大形象。</p>
+<p>以前的数据世界曾经非常单纯美好。虽然我在 Oracle 呆了 20 年，但在那之前我来自一家企业客户——<strong>南方电力公司</strong>（Southern Company），一家总部位于亚特兰大的大型电力能源企业。当时南方电力聘请我，是因为我是个顶尖的数据库性能调优专家（Performance Tuner）。</p>
+<p>只要你写出一个 SQL 查询，虽然这么说显得我年纪很大，但我几乎熟记所有 <code>init.ora</code> 参数。哪怕有些隐藏参数是当你致电技术支持热线时，对方警告你“千万别记这些参数、千万别外传”的，我都会偷偷把它们记在我的随身小本子上。我能把一个 SQL 语句调优到极致。</p>
+<p>在那个年代，整个世界是由行和列构成的关系型数据，那是一段无忧无虑的美好时光。直到有一天，一位开发者来到我的工位前对我说：“嗨，我需要存非结构化数据。”我当时心想：“你没事存非结构化数据干嘛？”作为一名勤勉尽责的 DBA，我回了句：“行，我研究一下再答复你。”</p>
+<p>我后来答复他了吗？我根本没理他。</p>
+<p>大家需要了解的是，在当时的南方电力公司，DBA 每管理一套独立的数据库系统，每周就必须参加两个例行会议。直到今天，只要一听到《萨班斯-奥克斯利法案》（Sarbanes-Oxley / SOX 审计），我胃里都忍不住一阵反胃想吐。每套系统每周都必须参加一次<strong>安全审查会</strong>和一次<strong>补丁升级会</strong>，雷打不动。</p>
+<p>由于那位开发者自作主张安装了一套专门处理非结构化数据的专用数据库，现场这么多数学高材生，大家算算我现在每周要开几个会了？四个！我当时非常恼火，但心想咬咬牙还能应付。</p>
+<p>紧接着业务部门又找上门：“既然你这么擅长性能调优，帮我们理清这套复杂的关联关系吧。”在南方电力有一套关乎人命的关键系统：高空作业人员要冒着暴风雨爬上电线杆和高压电塔抢修电力，他们手持类似诺基亚的特制移动终端，但原先的系统偶尔会出现误报或漏报。为了保障人身安全，他们需要关联分析周围所有的电线杆状态，消除误报与漏报。</p>
+<p>我当时用纯 SQL 实现了这套复杂关联，写出了一个由 5 层嵌套构成的 <code>UNION ALL</code> 语句！那绝对是我职业生涯的巅峰之作之一。虽然每次跑完要花上整整 20 分钟，但它在图数据库普及之前就完美解决了问题。</p>
+<p>结果他们扭头就引入安装了 <strong>Neo4j</strong> 图数据库！</p>
+<p>现在算算，我每周要开多少个会了？整整六个！这简直成了噩梦。你知道我最后怎么做的吗？我直接辞职了！我跳槽来到了 Oracle，因为我认为这种数据碎片化是一个巨大的行业通病，我想去 Oracle 从源头上解决它。</p>
+<p>结果没过多久，产品经理又跑来跟我说：“嗨，我们现在要引入 <strong>Redis</strong>；而且 Oracle 在向量领域动作太慢了，我们得单搞一个向量数据库！”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Kay Malcolm</strong>: Now, when you're defining this real enterprise agent in this memory, there's something you need to consider: where to store it. And so, I'm going to tell you guys a story. But when I tell you the story, you have to promise me that you're not going to judge me. Do you promise? Do you promise you're not recording me, right? Because this doesn't paint me in a good light. Okay. All right. The world of data was once simple. I've been at Oracle a long time, but I came from a customer. That customer's name was Southern Company. It was a power company. I'm based out of Atlanta. And I was hired at Southern Company because I was a rockstar performance tuner. You had a SQL query. I mean, I'm dating myself, but whatever. You had a SQL query. I knew all of the init.ora parameters. Even the ones when you called support and they said, &quot;Don't remember these. Don't write them down.&quot; I wrote them down in my little notebook. I could tune a query within one inch of its life. Then one of you came to my desk because the world was rows and columns. It was a great time back in my Al Bundy days, and said, &quot;Hey, I need to store data unstructured.&quot; Why do I need to do that? And so me being Kay the diligent DBA, I was like, &quot;Let me figure it out and get back to you.&quot; Did I get back to him? I didn't get back to him. Now, the thing you have to know about Southern Company was for every database system that a DBA managed, I had to attend two meetings. Today, when I hear Sarbanes-Oxley, I still throw up a little bit in the back of my throat. So I had to attend a security meeting and a patching meeting every week. Never failed. Now because this developer installed a database that was specialized for unstructured. Okay, there are really smart people in the room. How many meetings am I going to now? Four. Okay, I'm a little annoyed, but I'm like, okay, we can do this. Then they said, &quot;Okay, since you're such a good tuner, I need you to figure out this relationship.&quot; Now, the way that Southern Company worked, there was this &quot;people could die&quot; application, and it was like a Nokia phone that people who were climbing the towers, right? So, you guys have been in a storm and the power goes out, right? And then you're pretty sure that within maybe an hour or two the power will go on. Well, that system that would tell the people who were climbing those trees and risking their lives to turn the power back on sometimes would have false positives or false negatives. So, they wanted to look at all of the other poles in the area to try to get away from the false positive or the false negative. And so I did that in a SQL query and it was amazing. It was a five nested UNION ALL statement. It was some of my best work. Now it might have taken like 20 minutes to work, but it was like a predecessor to graph. Yeah, they installed Neo4j. So now how many meetings am I going to? Six. That's a problem. So, you know what I did? I quit. I left and I came to Oracle because I was like, this is a problem and maybe I can go to Oracle to help solve it. So then Joe Mundy called me and he said, &quot;Hey, we are installing Redis. Oracle is late to the game. We've got a vector database.&quot;</p>
+</details>
+<h3>单一真实数据源与现场互动实验</h3>
+<p><strong>凯·马尔科姆</strong>: 但问题随之而来：现在的 AI 智能体需要同时访问所有这些维度的数据。如果你的业务数据分散在关系型数据库中，一部分在非结构化 JSON 数据库中，一部分在图数据库中，还有一部分散落在专用向量数据库中，那么<strong>你的单一真实数据源（Single Source of Truth）究竟在哪里？</strong></p>
+<p>智能体必须自己跨库去摸索拼凑。有时候它能侥幸猜对，但绝大多数时候它都会犯错，并且在这个过程中白白消耗掉巨额的 Token。</p>
+<p>如果为了图省事，把记忆直接存放在本地文件系统，或者放在 Claude/ChatGPT 这一类工具生成的 <code>memory.md</code> 文件里，单人使用时或许还能跑通；但一旦推向企业级场景，这种方式立刻就会崩溃。</p>
+<p>为了让大家直观体会这种痛苦，我现场需要四位志愿者。让我看看——一、二、三，还有后排那位，四号志愿者。</p>
+<p>后排的这位朋友，你是我们最坚实可靠的“<strong>关系型数据库</strong>”；前排这位，你代表“<strong>非结构化数据库</strong>”；第三位，你负责做“<strong>图数据库</strong>”，你看起来非常有条理，适合处理复杂关系；最后这位，你就是我们的“<strong>向量数据库</strong>”。</p>
+<p>现在全场请保持安静。我对这四位数据库志愿者说一句话，你们四个人必须在不离开座位、只能小声耳语的前提下，协同商量出这句话该如何拆解存储，以及谁才拥有单一真实数据源。不能大声喧哗，因为大声说话就相当于消耗了 5 倍的 Token。</p>
+<p>听好了，这句话是：“<strong>奶牛跳过了月亮</strong>”（The cow jumped over the moon）。开始！</p>
+<p>大家看到了吧？根本行不通对不对？这就是数据孤岛带来的灾难。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Kay Malcolm</strong>: Okay. But here's your problem, Joe. Agents now need access to all of this data. So if data is in an Oracle database, if then it's also in an unstructured JSON database, if it's in a graph database and it's in a vector database, where is your single source of the truth? The agent has to figure that out. Sometimes it'll get it right. Most times it'll get it wrong and it's going to burn up a whole bunch of tokens. And so now if you want to store your memory somewhere, you can store it in a file system. You can store it in Claude or ChatGPT because we all know about the memory.md file. But that's going to be a problem. Now I want to illustrate this. I need four volunteers. I can see you raise your hand. One, two. Three. I need a fourth. Ah, fourth in the back. Okay. Fourth in the back. You are going to be our old reliable. You're going to be a relational database. Yes or yes. You have your assignment. Okay. And then there was someone here. You're going to be my unstructured database. Okay. And then where was my other? Ah, very good. You're going to be my graph database. You good? Relationship guy. You look like a relationship guy. All right. Very good. Fourth. Where was my fourth? Was it you? Yes. You are my vector database. Okay. Now, everybody be really, really quiet. For my four volunteers, I'm going to say something to you. And I need you all to decide how you're going to store it and who's going to have the single source of the truth. You can't get up from your seats and you have to whisper because if you talk loud that's 5x the tokens for you. Yes. Okay. Are we ready? All right. &quot;The cow jumped over the moon.&quot; Go. Doesn't really work, does it? That's a problem.</p>
+</details>
+<h3>多模态一体化：Oracle 23ai 的破局之道</h3>
+<p><strong>凯·马尔科姆</strong>: 如果今天大家把我说的话全忘了，只要记住这一件事就行：<strong>如今的 Oracle 早已不是你们传统印象中的那个 Oracle 了</strong>，这也是我今天站在这里的原因。</p>
+<p>现场有多少人知道，<strong>Oracle Database 23ai</strong> 能够在同一张数据表、甚至同一个底层分区内，原生统一存储 JSON 文档、属性图（Graph）、向量嵌入（Vector）、空间地理数据（Spatial），甚至支持利用不可篡改区块链表（Blockchain）来保证记忆防篡改？知道这一点的请举手——看来我们市场的宣传普及工作确实还需要加强！</p>
+<p>在 23ai 数据库中，你可以在同一个数据库引擎内处理任何数据类型、支撑任何工作负载，并可以自由部署在 <strong>AWS</strong>、<strong>GCP</strong>、<strong>Azure</strong>、<strong>OCI</strong> 或本地私有云（On-prem）环境中，拥有极致的选择权与灵活性。</p>
+<p>回到智能体架构：我希望将<strong>长期记忆</strong>和<strong>程序性记忆</strong>存放在关系表或 JSON 中；利用 JSON 灵活承载会话上下文与短期记忆；通过图模型（Graph）记录执行步骤与关联关系；利用向量（Vector）和全文检索来实现情景记忆与语义记忆。</p>
+<p>如果硬要拆分成四个彼此孤立的数据库，它们之间根本无法顺畅通信；而在 Oracle AI 数据库中，所有模态原生融合，它是承载 Agent Memory、驱动外骨骼框架（Harness）的最佳底座。</p>
+<p>再次强调：<strong>框架（Harness）是身体，而记忆（Memory）是中枢神经系统</strong>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Kay Malcolm</strong>: Okay, Oracle. And if you don't forget one, if you forget everything I say and you remember one thing, Oracle is not the Oracle that you think. That is why I am here today. How many of you knew that Oracle could natively in the same table down to the same partition store JSON, graph, vector, spatial, and if you want your memory to be immutable, blockchain in the same database? Raise your hand. Yeah, we have a marketing problem. So any data type can be stored in a 23ai database, any workload, anywhere: AWS, GCP, Azure, OCI, on-prem, choice and flexibility. So now when we take this and we talk about the agent, I want to be able to store my long-term and procedural memory in relational or in JSON. I want to store my short-term and my long-term memory. Graph, I want to store procedural because procedural, that's how I figure out the relationships, right, the steps. My episodic and semantic memory, I need to do some vector and then store it also as text. Now, if I have four different databases, you all saw they can't talk to each other. It's going to be a problem. And so, what I'm saying to you today is the Oracle AI database is the best place to store this agent memory that's going to power your harness. Remember your harness is your body and that memory is your central nervous system.</p>
+</details>
+<h3>Py 记忆中介与企业级落地</h3>
+<p><strong>凯·马尔科姆</strong>: 让我们回到前面提到的团队协作困境。我们最终通过一个名为 <strong>Py</strong> 的<strong>记忆中介</strong>（Memory Broker）彻底解决了这个问题。</p>
+<p>我们利用了智能体记忆体系，实现了全自动的上下文连续性。现在，荷兰团队的工程师 Kevin 在提交代码的同时，Py 会自动同步捕获并沉淀他的开发上下文——包括程序性记忆、情景记忆以及长期架构决策。当美国的 Linda 坐到电脑前时，她可以通过 Py 毫无阻碍地共享 Kevin 的完整上下文。</p>
+<p>人类开发者牢牢掌握主导权，而记忆中介自动梳理分支、代码分叉与每次提交背后的设计意图。</p>
+<p>最近我在飞机上读了三篇顶会论文。第一篇来自 <strong>OpenAI</strong>，关于其内部构建的数据智能体。OpenAI 明确指出：<strong>内存与记忆机制是确保数据 Agent 精准过滤语义、而非单纯依靠机械字符串匹配的核心关键。</strong></p>
+<p>LangChain 创始人 <strong>Harrison Chase</strong> 也曾精辟地总结道：“<strong>你的框架决定了你的记忆；如果你无法自主掌控框架，你就无法真正掌控你的记忆。</strong>”</p>
+<p>很多人可能会问：“Claude 本身不就自带记忆功能吗？我为什么不能直接用它？”那种基于文件的记忆机制在单兵作战时固然好用，但一旦拓展到多人协作的企业级环境，其弊端就会暴露无遗。</p>
+<p>为此，Oracle 开源推出了官方的 Agent 记忆工具包。大家只需执行 <code>pip install oracle-agent-memory</code> 即可快速接入。这套 <strong>Oracle Agent Memory SDK</strong> 能帮你的系统接管实时会话、沉淀关键事实，并智能判断哪些信息值得长期沉淀。</p>
+<p>底层存储基于 <strong>Oracle 自治数据库</strong>（Oracle Autonomous Database），上层你可以自由对接任意主流大模型，或者通过 <strong>Oracle 私有 AI 服务容器</strong>（Private AI Services Container）在本地安全运行开源大模型。</p>
+<p><strong>AI 能够赋能个体提速，而基于 Oracle AI 数据库的共享记忆系统，才能真正让整个企业团队实现效能飞跃。</strong></p>
+<details>
+<summary>Original English</summary>
+<p><strong>Kay Malcolm</strong>: Okay, back to Py. So the problem that I had, we solved it with a memory broker named Py. We used agent memory. We got out of that automatic continuity. So with my team, they were able to share not just their code, but Py also kept track of the context. So if one context window had procedural memory, episodic memory, information about the long-term memory, that was then shared with the other folks on the team. You could call them agents, if you will. They're just human agents shared across forks. The developers on the team remained in control while Py was able to create the context, figure out which fork and branch it belonged to and which commit it belonged to. Now this is a very simplistic example but when you take this to the enterprise here's what happens. Memory is the thing that becomes non-negotiable in an agent's harness. Now these are three papers that I read on the airplane. This first one is from OpenAI and it's about its in-house data agent and the thing that it says is it is saying that its in-house data agent actually needs memory. Memory was crucially important to ensure that its agent was able to filter correctly instead of trying to string match. Harrison Chase said, &quot;Your harness, your memory. And if you don't own your harness, you don't own your memory.&quot; Which is key. And then I'm sure you all are wondering, &quot;Well, Claude has memory. Why can't I use that?&quot; Well, it's kind of like file system memory and it works with one, but just like in my example, when you scale past one, and you're going to scale past one in the enterprise, it creates a problem. So Oracle has a Oracle Agent Memory package. <code>pip install oracle-agent-memory</code>. You get access to it. And this SDK that we have is the thing that will hold your live conversations, your memories, your facts and figure out what is worth keeping. So if we look at Py now, Kevin can share his context with Py, our memory broker. We use the Oracle Agent Memory SDK. It's stored in an Oracle Autonomous Database. We can use the LLM of our choice or we can use a local model through the Oracle Private AI Services container. And then Linda, who's actually sitting right here, can interact and work with Kevin, no issues. So yes, AI makes individuals faster. Shared memory on an Oracle AI database makes teams faster.</p>
+</details>
+<h3>开发者资源与闭幕总结</h3>
+<p><strong>凯·马尔科姆</strong>: 所以在 AI 时代，大家千万不要在架构完整性上妥协。<strong>Oracle 23ai</strong> 赋予了大家充足的自由度，不论是文件化还是数据库化、JSON 还是关系建模，我们都提供完备支持。</p>
+<p>最后，我为大家准备了一系列开发者福利：</p>
+<p>大家可以访问 <strong>Oracle AI 开发者中心</strong>（Oracle AI Developer Hub），获取今天演讲涉及的全部应用源码与上手教程；还可以访问 <strong>livelabs.oracle.com</strong>——这是我 6 年前亲手搭建的实验平台，如今已服务了超过 4000 万全球用户。大家可以使用免费提供的 OCI 云资源，无成本亲自上手实操体验各项 Oracle 核心技术 6 到 12 小时。</p>
+<p>此外，我还要给在座每位送一台“Mac Mini”——开个玩笑，我送大家的是“<strong>OCI Mini</strong>”，也就是 <strong>Oracle Cloud 永久免费层</strong>（Always Free Tier）。这是目前各大主流云厂商中最慷慨的免费计划：包含免费的 Oracle 数据库实例、免费计算算力、每月 3000 封免费邮件发送额度以及 200 GB 的存储空间。大家只需访问链接或在 Google 搜索“Oracle Cloud Always Free”即可立即开通。</p>
+<p>欢迎大家在社交平台与我保持联系。如果大家基于这套方案构建了有趣的应用，请务必发私信告诉我，好吗？你们的回答必须是“好的”或者“非常好”！</p>
+<p>感谢大家！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Kay Malcolm</strong>: So I don't want you all to compromise. In the age of AI, what 23ai does is you can choose and pick what's best for agent memory: file system stored in a database or in the database. If you need to do data modeling, you've got JSON, you've got relational. We've got choice. Okay, I've got some goodies for you. The Oracle AI Developer Hub: that's where you guys can get coding materials, the applications, what I talked about today. livelabs.oracle.com: if you've done any of our workshops today, that happens to be something that I wrote myself about six years ago and 40 million users ago. Spend my OCI tenancy money. Kick the tires on any Oracle technology for 6 hours, 12 hours, however long you need. And then I'm giving you all a Mac Mini. No, I'm just kidding. I'm giving you an OCI Mini. So, I don't know if you knew, but there is an Always Free OCI. It is the most generous of any of the hyperscalers where you can get a free Oracle Database, free compute, you can send 3,000 emails a month, 200 gig in storage, and if you click on that, you can get access to it. Or just search Google for &quot;Oracle Cloud Always Free&quot;. Connect with me. If you build something, will you all message me and let me know? Yes or yes? Thank you. [music]</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Oracle" class="entity-link company-link">Oracle</a>, <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Oracle Database 23ai" class="entity-link product-link">Oracle Database 23ai</a>, <a href="/search/?q=Oracle Autonomous Database" class="entity-link product-link">Oracle Autonomous Database</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/agent-memory/">agent-memory</a>
+      
+        <span class="tag-pill tag-pill--no-page">context-sharing</span>
+      
+        <span class="tag-pill tag-pill--no-page">enterprise-agent</span>
+      
+        <span class="tag-pill tag-pill--no-page">multi-model-database</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

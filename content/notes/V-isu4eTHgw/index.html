@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>将 AI 连接至数十亿法律文档：Legora 与 Turbopuffer 的搜索架构演进之路</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="将 AI 连接至数十亿法律文档：Legora 与 Turbopuffer 的搜索架构演进之路" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">将 AI 连接至数十亿法律文档：Legora 与 Turbopuffer 的搜索架构演进之路</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-16</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=V-isu4eTHgw" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-16
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">法律 AI 平台 Legora 与搜索引擎 Turbopuffer 联合分享了在百亿级法律文档场景下的检索架构演进。内容详述了从单个 Elasticsearch 集群，到多地域集群、Postgres (pgvector) 分区方案的性能瓶颈与缓存抖动问题，并深入探讨了 Turbopuffer 基于对象存储（S3）、内存层次结构优化、分层聚类树以及多租户 CMEK 物理隔离的高性能低成本搜索架构设计。</div></div>
+      
+    </div>
+    <h3>法律 AI 与搜索挑战</h3>
+<p><strong>Jacob Lauritzen</strong>: 好的，大家好。欢迎参加这次关于将 <strong>AI</strong> 连接至海量法律文档的 20 分钟演讲。我叫 Jacob，是 <strong>Legora</strong> 的一名工程师。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jacob Lauritzen</strong>: Okay. Hi everyone. Welcome to this 20-minute talk about connecting AI to loads of legal documents. My name is Jacob. I'm an engineer at Legora.</p>
+</details>
+<p><strong>Simon Eskildsen</strong>: 大家好，我也走到镜头里来。我是 Simon，是 <strong>Turbopuffer</strong> 的 CEO 兼联合创始人。Turbopuffer 是一家搜索引擎公司，我们与 Legora 以及其他许多客户展开了深度合作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Simon Eskildsen</strong>: Yeah. And I got to step into frame here. I'm Simon. I'm the CEO and co-founder of Turbopuffer, a search engine that we work with Legora and others on.</p>
+</details>
+<p><strong>Jacob Lauritzen</strong>: 很好。首先对 Legora 做一个简短的介绍。我们是一个面向法律工作的<strong>协作式 AI 平台</strong>。这意味着我们的客户既包括各大律师事务所，也包括企业的<strong>法务团队</strong>。</p>
+<p>他们使用 Legora 来进行<strong>合同审查</strong>。他们需要借助平台浏览数量极其庞大的合同，确保所有条款都严密无误。他们也使用平台起草新的合同。此外，他们还会进行<strong>法律研究</strong>（Legal Research），这意味着需要查阅所有潜在相关的法律法规。所有这些工作都在 Legora 内部协同完成。因此，你可以将 Legora 想象成专为法律工作打造的 <strong>Linear</strong>、<strong>Figma</strong>、<strong>Notion</strong> 与 <strong>GitHub</strong> 的综合体，其涵盖的功能非常广泛。</p>
+<p>我们目前是发展最快的公司之一，业务增长极为迅猛。屏幕上展示了大量增长数据，这里我就直接跳过了。</p>
+<p>今天我们真正想深入探讨的主题是<strong>搜索</strong>。在 Legora，我们主要处理两种类型的搜索场景：<strong>项目搜索</strong>（Project Search）与<strong>法律研究</strong>（Legal Research）。</p>
+<p>所谓的项目搜索，在 Legora 内部，项目就是用户处理工作的基本单元。举个例子，假设你是 <strong>SpaceX</strong>，你打算收购 <strong>Cursor</strong>，那么这就构成了一个由你和你的律所共同开展的项目。他们会登录 Legora，上传所有相关文件，协助你的律所团队会全面审查所有的雇佣协议以及与供应商签订的所有合同。顺便提一句，我知道 Cursor 也在使用 Turbopuffer，所以也许那里就有一份需要审查的合同。</p>
+<p>但基本上，项目搜索是严格限定在特定项目范围内的搜索，单个项目涉及的文件量从几十份到数百万份不等。</p>
+<p>另一个使用场景是<strong>法律研究</strong>。法律研究属于一种<strong>深度研究</strong>（Deep Research）风格的工作负载。我们需要在海量的法律条文、历史判例、监管法规等内容中进行横向检索。人们通过这项功能来寻找诸如“我该如何处理这个具体事项”这类问题的答案；他们也会在<strong>诉讼</strong>（Litigation）中使用它——无论是要发起诉讼还是要应对诉讼，他们都会借助法律研究来支持并强化自己的案情主张。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jacob Lauritzen</strong>: Neat. Super quickly, introduction to Legora. We're a collaborative AI platform for legal work. And so that means we have law firms that are clients and we have in-house legal teams that are clients. And they use Legora to do reviews of contracts. They use it to go through an absurd amount of contracts and make sure that they all look good. They use them to create new contracts. They do legal research which means looking over all potential law and they collaborate inside Legora. So you can think of Legora sort of as a Linear, Figma, Notion, GitHub for legal work. It's a lot.</p>
+<p>We are one of the fastest growing companies right now. We grow extremely fast. Yeah, tons of numbers on the screen. I'll just skip through that.</p>
+<p>What we really want to talk about is search today. So at Legora there's two types of search that we do. There is project search and legal research. Project search is basically projects in Legora is like the unit of work that you have. So if let's say you are SpaceX and you want to acquire Cursor, then that would be one project with your law firm. And so they would go into Legora and they would upload all these documents and the law firm that helped you would go through all of the employment agreements, all of the contracts with suppliers. I know Cursor is using Turbopuffer so maybe there's a contract there they'd look at. But basically you do the search confined to a project and projects can be tens of documents to millions of documents.</p>
+<p>The other use case is legal research. And legal research is sort of a deep research style workload where we'll search across tons of laws, previous cases, regulations, etc., etc. And people use this to answer questions such as like how do I handle this specific thing? And they'll also use it for litigation. Maybe they want to sue someone or maybe they are getting sued and they'll use legal research to support and help their case.</p>
+</details>
+<hr>
+<h3>项目搜索架构演进：ES 到 Postgres</h3>
+<p><strong>Jacob Lauritzen</strong>: 如果我们从第一项——<strong>项目搜索</strong>讲起，我们在搜索架构的演进上经历了一段颇为曲折的历程。数据规模从最初的数十万份文档，一路攀升到了数十亿份文档，期间我们尝试了许多不同的技术方案。</p>
+<p>最开始，我们采用了极其简易的方案：为所有搜索负载运行一个单一的 <strong>Elasticsearch</strong> 集群。初期这套方案运行得相当不错，架构很直观——所有租户（即我们的客户和终端用户）的数据都存放在一个统一的大型<strong>对象存储</strong>（Blob Storage）中保存原始文档，同时在一个大型 Elasticsearch 实例中完成所有的索引构建与搜索检索。这种设计极为简单，刚开始时表现良好。</p>
+<p>但随后我们开始拓展国际市场，迎来了全新的合规要求。美国客户要求数据处理必须严格限制在<strong>美国本土</strong>，欧洲客户要求必须在<strong>欧盟境内</strong>完成，而澳大利亚客户则要求处理必须留在<strong>澳大利亚境内</strong>。</p>
+<p>面对这些<strong>数据驻留</strong>要求，我们不得不迁移到多个 Elasticsearch 集群。我们当时的实际做法是将整套基础架构按地域进行复制，分别部署在欧盟、美国以及亚太地区。整套系统就这么直接乘以了三到四倍。这种架构非常繁琐，带来了巨大的运维开销，但它确实满足了当时的合规与落地需求。</p>
+<p>随后，演进故事进入到了<strong>企业级客户</strong>阶段。真正的大型银行、全球顶尖的律师事务所，他们有着极其严苛的要求。排在第一位的要求就是对所有数据实现<strong>完全的物理隔离</strong>（Full Physical Isolation）。</p>
+<p>关于“物理隔离”到底意味着什么可能存在一些争议，但本质上他们要求拥有自己专属的独立数据库。此外，他们还要求支持<strong>客户自主管理密钥</strong>（Customer-Managed Encryption Keys, <strong>CMEK</strong>）。</p>
+<p>这意味着他们会拥有自己的密钥保管库（Key Vault），在其中管理加密密钥。他们授予我们读取该密钥的权限，我们进而使用该密钥对他们在静态存储（Data at Rest）中的全部数据进行<strong>加密与解密</strong>。这样一来，他们只要随时撤销我们对密钥的访问权限，我们就再也无法解密他们的数据，从而确保了绝对安全。这种机制赋予了企业客户对自身数据的绝对掌控权，因为他们掌握着读取数据的钥匙。</p>
+<p>于是，我们从 Elasticsearch 迁移到了 <strong>PostgreSQL</strong>。我想在座的很多人可能会问：为什么会把向量数据放到 Postgres 里面去？</p>
+<p>实际上这套方案最初运行得惊人地好。之所以这么做，是因为我们已经在 <strong>OLTP</strong> 负载中重度使用 Postgres，并且已经为多租户做好了切分多个 Postgres 数据库与多个 Blob 存储的架构。因此，直接将所有搜索工作负载也并入 Postgres 对我们来说非常顺理成章，因为这样我们只需要维护一套系统组件。</p>
+<p>当时我们采用的具体架构是 <strong>pgvector</strong>，并且专门使用了 <strong>DiskANN</strong> 索引，结合 <strong>TSVector</strong> 进行文本全文检索。由于放弃了原生的 <strong>BM25</strong>，我们在检索相关性（Retrieval Performance）上确实付出了一定代价。</p>
+<p>在具体实现中，我们对存储所有文档分块（Chunks）的数据表进行了极为激进的<strong>表分区</strong>（Partitioning），划分了多达 4,000 个分区。对于每个项目，我们获取其项目 Key，并将其<strong>装箱打包</strong>（Binpack）到这些分区中。</p>
+<p>这套机制在一段时期内运行得还算不错，但它的运维成本高昂，且搜索性能始终算不上极其出色。而当业务规模进一步爆发式增长时，整套系统彻底崩溃瓦解了。</p>
+<p>问题在于：你可以设想系统中有大量的项目，其中很多项目在创建并使用一段时间后就被关闭归档，用户几乎再也不会访问；这类<strong>冷项目</strong>占据了很大比例，它们极少接收查询。与此同时，系统中存在另一部分被频繁查询的<strong>热项目</strong>，因为它们是极其活跃的正在进行中的项目。</p>
+<p>当我们把它们混合装箱打包进各个分区时，冷数据与热数据往往会落在同一个物理分区内，导致这些分区变得极其庞大。</p>
+<p>当执行查询时，Postgres 必须将整个分区从磁盘调入内存处理；接着另一个查询触发，又将另一个分区调入内存。这导致<strong>内存缓存被频繁颠簸挤占</strong>（Thrash the Cache）。</p>
+<p>随之而来的就是<strong>延迟的剧烈飙升</strong>：我们的搜索与摄取（Ingestion）<strong>P99 延迟</strong>从最初的 100 毫秒直接恶化到了 <strong>20 秒</strong>。你可以想象，这对用户体验造成了毁灭性的打击。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jacob Lauritzen</strong>: So if we start at number one, project search, we've been through a little bit of a ride here on how we do search. Starting at hundreds of thousands of documents all the way into billions of documents. And we've tried a lot of different things.</p>
+<p>So first we started with the very simple one, which is just a single Elasticsearch cluster for all of our search workloads. That worked relatively well. It was sort of a simple setup. All of the tenants, our clients, our users would be on one big blob storage where we store the raw documents and on one big Elasticsearch where we would do all of the searching, the indexing and the searching. Super simple, worked relatively well initially.</p>
+<p>Then we wanted to enter the land of the free and we got some new requirements. Americans only want processing to happen within the US, and Europeans only want it to happen within the EU, and Australians only want it to happen within Australia. And so we had to basically move to multiple Elasticsearchs. And what we actually did was we took the entire setup and we just basically iterated over the set that is EU, US and Asia-Pacific. And so we just had this multiplied by three or four. Kind of annoying, lots of overhead, but it got us to where we needed to be.</p>
+<p>Then the next iteration of the story is enterprise. So really big banks, the biggest law firms in the world, they have really annoying requirements. And number one they have is they'll ask for full physical isolation of all of their data. There's probably a little bit of a war on what physical isolation actually means, but essentially means they want their own database. They also want customer-managed encryption keys. And what that means is they basically have a Key Vault thing where they have an encryption key and they give us access to read the key and we then use that key to encrypt and decrypt all of their data at rest. And what that gives them is they can just revoke our access to their key and then we can't decrypt their data anymore and so it's safe. And so in a way that gives enterprises a lot of control over all of their data because they control the key to reading it.</p>
+<p>So we moved from Elasticsearch to Postgres. And I imagine a bunch of you guys are like, why would you ever put your vectors into Postgres? It actually worked surprisingly well and the reason that we did this was we were already using Postgres for OLTP workloads and so we sort of already had to do this split of multiple Postgreses and multiple blobs. And so it was really easy for us to try to shift all of our search into Postgres as well because then we only have one system. So the setup here was pgvector, specifically DiskANN, and TSVector for the search. So not BM25, which was you know we lost a little bit of retrieval performance there. And what we do is we would partition the table where we would store all the document chunks. We'd partition it super aggressively, like 4,000 partitions, and then each project we'd basically have the project key and we'd binpack them into the partitions.</p>
+<p>That actually worked relatively well, but it was expensive and search performance wasn't super good. And what happened was when we scaled a lot, everything just broke and exploded. And so what happened was basically you can imagine like you have a bunch of projects and some of them you spin up a project, you work on it, and then you close it and you basically never go back to it again. And we have a bunch of those where like they never get queried. And we have a bunch that get queried all the time because they're super active projects. And when we pack them into partitions, the cold ones and the hot ones would land on the same ones and the partitions would get really really big.</p>
+<p>And so when we query them, Postgres would pull the partition, put it into memory, we do the stuff, and then we create another partition and another partition and it would essentially thrash the cache all the time. And what that meant was our latencies would spike. So we went from like search and ingestion P99 of 100 milliseconds into 20 seconds, which you can imagine is a really bad user experience.</p>
+</details>
+<hr>
+<h3>转向 Turbopuffer：对象存储原生架构</h3>
+<p><strong>Jacob Lauritzen</strong>: 于是，在文档总量达到大约 4 亿份的时候，我们果断引入了 <strong>Turbopuffer</strong>。</p>
+<p>在 Turbopuffer 的架构中，我们为<strong>每个项目分配一个独立的命名空间</strong>（Namespace）。迁移到 Turbopuffer 带来的收益非常显著：我们重新获得了真正的 <strong>BM25 全文检索</strong>能力，检索相关性大幅提升，查询延迟大幅下降；同时系统运维变得异常简单，因为我们只需维护一个单一的 Turbopuffer 集群，而不再需要像 Postgres 那样维护繁琐的分片集群。此外，由于 Turbopuffer 采用原生<strong>对象存储架构</strong>，它可以直接查询我们底层已有的 Blob 数据，不仅大幅降低了存储与计算成本，而且彻底消除了之前的缓存颠簸问题——如果某个项目未被激活，它的数据就会安静地存放在对象存储中，无需占用宝贵的内存资源。接下来请 Simon 详细剖析这套架构为何能如此高效地运作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jacob Lauritzen</strong>: So then we went to turbopuffer in about, you know, when we're about I think 400 million documents something like that. And what we did with turbopuffer was we did one namespace per project. And the advantages of moving to turbopuffer is we got BM25, real BM25, much better relevancy, much better latencies, and it was extremely simple to operate because we could just have a single turbopuffer cluster. We didn't have to have a bunch of different ones like with Postgres, and since it's blob-based it could just query the blobs that we had anyway. And so much lower cost, and it was extremely simple to operate, and we didn't have this problem with the partitions because if a project's not used it's just in blob and so it's really easy. And Simon can talk a bit more about why that works so well.</p>
+</details>
+<p><strong>Simon Eskildsen</strong>: 好的。Legora 以及整个法律科技行业在监管与合规方面有着极为苛刻的诉求。顺便提一句，如果大家发现我和 Jacob 口音很像、长得也有点像，那是因为我们俩都是丹麦人。</p>
+<p>Turbopuffer 采用了一种非常特殊的架构设计，能够完美契合这种强监管环境的要求。为了理解这一点，我们首先需要搞清楚 Turbopuffer 到底是一款怎样的搜索引擎，以及它与传统方案究竟有何不同。</p>
+<p>自 Turbopuffer 创立伊始，其核心设计理念就始终如一，并经受住了时间的检验。当你向 Turbopuffer 发起<strong>写入请求</strong>时，数据会<strong>直接写入对象存储</strong>（如 <strong>S3</strong>）。系统内部没有底层的磁盘多副本复制机制，也没有复杂的 <strong>Paxos</strong> 共识协议，数据直接落地 S3。</p>
+<p>这是 Turbopuffer 做出的最根本的工程权衡（Trade-off）。写入耗时通常在数百毫秒级别。如果你是像 <strong>Shopify</strong> 这样需要在网红闪购活动中处理高并发库存预扣的场景，这种写入延迟显然不适用；但对于<strong>搜索场景</strong>而言，这种设计非常理想——因为在绝大多数搜索业务中，写操作稍慢完全是可以接受的，核心诉求在于<strong>读性能必须极快、极其稳健</strong>。</p>
+<p>数据在写入时会直接进入预写日志（WAL），你可以将其类比为依次写入 <code>1.json</code>、<code>2.json</code>、<code>3.json</code>（当然实际底层是数据库格式而非普通 JSON）。随后，后台系统会自动构建<strong>向量索引</strong>（Vector Indexes）、<strong>全文索引</strong>（Text Indexes）以及<strong>列式索引</strong>（Columnar Indexes），用以支撑下游的高性能检索需求。</p>
+<p>在执行查询时，请求会路由到指定的<strong>命名空间</strong>（Namespace）。命名空间在 Turbopuffer 中类似于“数据表”的概念，你可以将其视作 S3 上与其他数据完全隔离的一个独立目录。</p>
+<p>查询请求可以被分发到系统中的任意节点——所有节点都扮演着<strong>只读副本</strong>（Read Replicas）的角色。但我们会基于<strong>亲和性路由</strong>（Affinity Routing），优先将请求发送到最有可能在其缓存中命中该命名空间数据的节点。</p>
+<p>节点在处理时会建立多级缓存查询路径：首先检查<strong>内存缓存</strong>（DRAM Cache），接着检查 <strong>NVMe SSD 磁盘缓存</strong>，最后兜底访问底层<strong>对象存储</strong>。</p>
+<p>Turbopuffer 的全部架构优化都是为了达成一个核心目标：<strong>用尽可能少的网络往返（Round Trips）完成尽可能多的计算与检索</strong>。</p>
+<p>S3 在读取 1MB 大小的数据块时，P99 延迟大约在 200 毫秒左右。因此，你必须竭尽全力减少向对象存储发起的往返次数，理想情况下单次查询向冷存储发起的往返应控制在 3 次以内。</p>
+<p>Turbopuffer 数据库内部的每一处设计都在围绕<strong>最小化网络往返次数</strong>展开。这种设计对现代 SSD 磁盘也极其友好——通过充分利用<strong>高并发 I/O</strong> 与<strong>极低的往返轮次</strong>，能够将底层硬件的吞吐性能压榨到极致。</p>
+<p>那么，为什么这种架构对 Legora 这样的企业如此契合？</p>
+<p>因为在以对象存储为原生的设计中，我们将命名空间（或表）作为最基础的隔离原子单元。这意味着：<strong>每一个独立的命名空间都可以使用完全不同的密钥进行独立加密</strong>；<strong>每一个独立的命名空间都可以存放在不同的存储桶（Bucket）中</strong>。</p>
+<p>我们的部分客户甚至维护着数千个独立的存储桶来存放不同的命名空间，这样他们的终端企业客户就能将数据直接保存在客户自己的云账户中，获得企业 IT 部门高度认可的安全合规感。</p>
+<p>此外，你可以在命名空间粒度自由配置存储桶共享、自定义密钥加密、跨区域迁移或轮换密钥。</p>
+<p>对于 Legora 而言，这一点至关重要，它完美解决了<strong>数据的完全物理隔离与加密隔离</strong>诉求。所有命名空间在静态存储中都能通过各自的独立密钥实现物理级别的隔离，S3、<strong>GCS</strong> 以及 <strong>Azure Blob Storage</strong> 原生均能提供这类合规保证。</p>
+<p>而在多级缓存体系中，原本 NVMe SSD 缓存被我们视为与内存类似的易失性存储，但客户的合规团队并不这么认为。为了满足合规，我们最初考虑在 SSD 磁盘缓存层增加数据加密，但后来我们尝试直接在特定隔离场景下<strong>关闭磁盘缓存</strong>，仅保留内存缓存与对象存储。测试结果表明，即便完全禁用磁盘缓存，Turbopuffer 凭借其高并发与少往返的设计，仅靠内存缓存与对象存储依然展现出了惊人的检索性能。</p>
+<p>因此对于 Legora 那些对多租户隔离有极端要求的负载，我们直接沿用了这套纯内存+对象存储的模式。这充分证明了 Turbopuffer 在原生支持多租户、数据加密与存储物理隔离方面的天然架构优势。</p>
+<p>接下来把麦克风交还给 Jacob，看看实际迁移后的性能表现。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Simon Eskildsen</strong>: Yeah. So Legora has some of, and legal in general has, by the way, if Jake and I have similar accents and maybe even look a bit similar, it's because we're both Danish.</p>
+<p>Turbopuffer has a particular architecture that supports these kinds of very regulated environments really, really well. But in order to understand that, we have to understand what kind of search engine is Turbopuffer. Why is it different than the ones that they used in the past?</p>
+<p>Since the very beginning of Turbopuffer, the design has more or less been the same. There may be changes in the future, but the design has stood the test of time. When you do a write to Turbopuffer, we write directly to object storage. There is no disk replication. There's no Paxos. There's none of that. Direct to S3.</p>
+<p>That's the fundamental trade-off in Turbopuffer, right? Hundreds of milliseconds. If you're like Shopify and doing inventory reservations for a Kylie Jenner flash sale, not going to work very good. But for search, because generally when you're doing search doing a slow write is fine as long as the read performance is adaptable and good. So that's what happens on write: it just goes into write ahead log. You can imagine you write 1.json, 2.json, 3.json. Obviously, it's a database, so it's not JSON, but for illustrative purposes, that's what happens. And in the background, we build the vector indexes, the text indexes, the columnar indexes, and so on to satisfy the queries that Jake and other customers have.</p>
+<p>So then at query time, the query reaches some namespace. The namespace is kind of our concept of a table. You can think of it as a directory on S3 that's isolated from everything else. We go to the node that is most likely to have it. It could go to any node, right? It could go to every single node and they're all read replicas, but we go with some affinity to the node that has the highest probability of having it in cache. We check the memory cache for any objects, NVMe SSD cache, and then finally to object storage.</p>
+<p>Everything in Turbopuffer is optimized around doing as much work in as few round trips as possible. Right? S3 has a P99 on like 1 megabyte blob size of around 200 milliseconds. So, you want to do as few round trips as possible, right? Ideally, you do around three. And everything in Turbopuffer, the database is designed around minimizing the number of round trips. This is also amazing for modern disks. If you do a lot of concurrency and few round trips, you utilize them optimally. And everything in Turbopuffer is designed around this.</p>
+<p>So, why is this so good for a company like Legora? Well, object storage native, if you design it around the atomic unit of separation being the namespace or the table, every single table could be encrypted with a different key. Every single namespace could be in a different bucket. We have customers that have thousands of buckets that they have namespaces in so that their customers get the warm IT fuzzies of having the bucket in their own cloud account. They can also be encrypted with their own keys. You can share buckets. You can do whatever configuration that you need at the namespace level. You can re-encrypt with different keys. You can move them around.</p>
+<p>For Legora in particular, this was really important for this full physical separation, right? An encryption separation. All of the namespaces needed to be physically at rest with different keys and as separated as possible. S3, GCS, Azure Blob storage, they pass that. And the other parts of the hierarchy also, except the NVMe SSD cache because in the SSD cache we consider that to be volatile like memory, but your customers did not. So what we did was that we thought we were going to implement encryption into the disk cache, but instead we just disabled the disk cache and saw how it fared. And the performance of Turbopuffer even without the disk cache, with just the memory cache, was so good that we just kept it that way for some of the Legora workloads where we couldn't have the disk cache for multi-tenancy. Turbopuffer will support that in the future, but it just goes to show the natural point where Turbopuffer allows this encryption and storage and separation to become fully multi-tenancy native. I'll hand it back to you on what happened then.</p>
+</details>
+<hr>
+<h3>性能飞跃与法律深度研究挑战</h3>
+<p><strong>Jacob Lauritzen</strong>: 见证奇迹的时刻到了。迁移后的延迟表现如图所示。</p>
+<p>在切换到 Turbopuffer 后，<strong>查询延迟实现了数量级（Order of Magnitude）的全面改善</strong>。这里展示的还是中位数延迟，而在 P99 延迟指标上的提升甚至更为夸张。</p>
+<p>对于单次简单的 <strong>RAG</strong>（检索增强生成）调用来说，这种延迟降低已经非常明显；而当你运行一个在单次任务中需要连续发起 20 次甚至 100 次查询的 <strong>AI Agent</strong> 时，单次查询所节省的时间累积起来将产生决定性的体验差距。</p>
+<p>以上是我们在项目搜索方面的实践。而最近我们攻克的另一个更为前沿的领域是<strong>法律研究</strong>（Legal Research）。</p>
+<p>法律研究是一个极具挑战性的技术难题，其根本原因在于<strong>语料库极其庞大</strong>。我们当前的向量规模正迅速向 <strong>100 亿向量</strong>迈进，数据量仍在呈指数级膨胀。</p>
+<p>与此同时，法律研究的读取吞吐量极高。在处理法律研究请求时，QPS 会出现剧烈的脉冲式飙升，因为系统内部需要执行大量的<strong>查询扇出</strong>（Query Fan-out）——用户的单次法律提问会被后台分解并扇出为一长串并发子查询，层层递进地展开检索。</p>
+<p>之所以必须进行如此密集的并发检索与深度过滤，是因为法律知识网络在本质上呈现出一种多维度的<strong>复杂图谱结构</strong>（Graph）：</p>
+<p>首先，法律体系具备严密的<strong>层级结构</strong>（Authoritative Hierarchy）。从城市条例、县级法规、州法再到联邦法律，全球各地的法律体系莫不如此，检索必须严格遵循这种管辖权层级效力。</p>
+<p>其次，法律条文存在<strong>时间有效性</strong>（Temporal Validity）。上级法院法官的最新裁决可能会推翻其他法庭此前的先例判决，检索系统必须准确识别这种时效与撤销关系。</p>
+<p>再者，新出台的监管法规往往包含对旧法规的豁免条款或特殊适用例外。因此当你检索到某一条特定法规时，系统必须连带挖掘出所有与之相关的修正案与关联规则。</p>
+<p>这就导致单次法律检索的范围在底层会呈爆炸式扩散。</p>
+<p>起初我们尝试使用 Elasticsearch 来支撑这项业务，但成本很快变得难以承受；而在迁移到 Turbopuffer 后，我们将不同的<strong>司法管辖区</strong>（Jurisdictions）分别映射为 Turbopuffer 中独立的命名空间。</p>
+<p>这种设计非常精妙。例如像<strong>欧盟法律</strong>这种被高频检索的数据集属于“超级热数据”，而像<strong>丹麦法律</strong>（虽然我们俩都是丹麦人，但丹麦确实是个小国）几乎很少有人查询，属于典型的“长尾冷数据”。</p>
+<p>对于这些冷门管辖区的数据，它们可以常年保存在低成本的对象存储中。在深度研究这类工作流中，即便首次从冷存储中读取数据需要额外花费 500 毫秒的加载延迟，对整体研究体验而言也完全在可接受范围内。</p>
+<p>Turbopuffer 的架构天然契合这种“绝大多数命名空间极度冷门、少数命名空间极度热门”的长尾分布负载。</p>
+<p>请 Simon 进一步从底层原理拆解它是如何实现的高效分层。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jacob Lauritzen</strong>: And then, drum roll please. Latencies look like this. Latency is improved in order of magnitude basically. And these are median latencies. So, P99 were even better. So obviously this is a huge thing when you're doing, I mean one thing is if you're doing a single sort of RAG-style thing, but if you have an agent that does 20 queries, 100 queries, these really really add up.</p>
+<p>So that was on the project side and then a more recent thing is legal research. So legal research is kind of a difficult problem and the reason it's difficult is that the corpus is extremely big. So we're racing towards 10 billion vectors and we're growing extremely fast. We also have quite high read. So QPS can spike a lot because we do a lot of fan-out. Like if you do a sort of legal research query, we will fan it out to a bunch of different queries and we'll keep going.</p>
+<p>And the reason we do that is we need this heavy filtering because essentially it's a kind of like a graph for a few different reasons. Firstly, it's hierarchical. You have cities, and you have counties, and you have states, and you have federal law, and it's the same all around the world. And so you need to respect that authoritative sort of hierarchy. There's also some temporal validity. So, one judge might overrule a decision that's been made somewhere else and you need to also respect that and figure that out. And then sometimes there's even like a new regulation that has exemptions or special cases of an old regulation. And so if you're finding this one, you need to find all the other ones as well. So you can imagine that it sort of explodes the search.</p>
+<p>And so we started on Elasticsearch for this, but also moving to Turbopuffer, Elasticsearch just got extremely expensive because we have to have everything there. But with Turbopuffer we can basically take different jurisdictions and we can make them namespaces in Turbopuffer. And that means some of them, here's an example where like you have the EU that gets queried all the time that's super hot, and some of them, let's say Danish law cuz we're Danish, no one cares really. It's such a small country so it doesn't really get queried and so that can just stay on blob and that's fine. And because it's sort of a deep research style workload, if there's 500 milliseconds latency to fetch that cold blob, that's okay. That's fine. It's not really a big problem. So, the way that Turbo is designed lends itself super well to this super long scale of like cold weird namespaces and a few that are really, really hot. Yeah. And Simon wants to talk more about that.</p>
+</details>
+<hr>
+<h3>内存层次结构与向量/文本检索机理</h3>
+<p><strong>Simon Eskildsen</strong>: 好的。今天早些时候我在另一场分享中曾提到过公司为什么起名叫 <strong>Turbopuffer</strong>。</p>
+<p>“Puffer”（河豚/充气膨胀）这一名称的深层含义之一，就是指在不同的<strong>存储与内存层次结构</strong>（Memory Hierarchies）之间灵活地将数据“吸入与吐出”（Puffing in and out），真正掌控数据在不同存储层级中的精准调度。</p>
+<p>你可以从这个角度来理解：像欧盟法律这类几乎在每次法律研究检索中都会被引用的核心语料，其数据会常驻在距离 <strong>DRAM 内存</strong>及 <strong>NVMe SSD</strong> 极近的层级中。</p>
+<p>随着你在存储层次结构中上下移动，底层的<strong>经济成本模型</strong>与<strong>访问延迟特性</strong>会发生剧烈变化。位于最顶层的 DRAM 内存非常昂贵，只适合存放被超高频访问的热点数据；而底层的 NVMe SSD 允许你直接在其上执行高吞吐的并发扫描。整个数据库从架构设计层面，必须根据数据在不同存储层之间的分布，动态调整网络往返策略、随机 I/O 与顺序 I/O 的平衡。</p>
+<p>Turbopuffer 是一座彻底围绕现代<strong>内存层次结构</strong>打造的数据库。其核心智能在于自动掌控各个命名空间在缓存层中的动态吸入与换出。我们的目标是将尽可能多的数据推向层次结构中成本更低的最底端，以此换取<strong>极致的性价比</strong>（Performance/Cost Ratio）。</p>
+<p>这种设计思想是如何具体落地到搜索算法中的呢？</p>
+<p>以<strong>向量检索</strong>（Vector Search）为例。业界主流的向量检索算法主要分为两大流派：一种是基于<strong>图结构</strong>（如 <strong>HNSW</strong> 图）。但在对象存储或冷磁盘环境中应用图算法存在严重的架构缺陷——在图结构中，检索必须从图的核心节点开始一层层向外遍历导航，每一次跨节点跳转都意味着一次向 S3 发起的 200 毫秒 P99 往返请求。为了克服这一点，工程师不得不绞尽脑汁缩减图的直径或引入各种补丁技巧，但其本质上依然违背了存储层次结构中顺序读取与随机访问的基本硬件规律。</p>
+<p>Turbopuffer 采取了完全不同的路线：我们将高维向量空间组织为<strong>分层聚类树</strong>（Clustering Tree）。</p>
+<p>你可以把高维向量想象为多维坐标系中的几何点，我们将这些点聚类为若干微簇（Clusters），再对这些微簇构建上一级的聚类中心（Clusters of Clusters），自底向上层层聚合，最终将全部向量数据组织成一棵高维几何空间上的<strong>复杂 B 树</strong>（B-Tree）。</p>
+<p>树顶部的根节点与高阶聚类中心（Centroids）在每一次检索中都会被访问到，因此它们被持久缓存在距离 CPU 最近的高速 <strong>DRAM 内存</strong>中；而树底部的叶子节点（包含了数百万份具体的法律判例原文、长文档及图像特征）则完全驻留在底层的 <strong>SSD 磁盘</strong>或对象存储中，仅在最终确定匹配路径后通过单次 1 毫秒级别的 I/O 往返直接读取。我们绝不会将这些海量的底层叶子数据无谓地常驻在昂贵的 DRAM 内存中。</p>
+<p>从根本上讲，这是目前在工程上运行海量数据库<strong>成本最低的架构范式</strong>。无论是像 Legora 这样的法律检索，还是包含数万亿网页的通用 Web 搜索，这都是最具经济效益的解决方案。目前已有客户在 Turbopuffer 中索引了海量的互联网网页数据。</p>
+<p>对于<strong>全文检索</strong>（Full-Text Search），这套存储层次模型同样适用。</p>
+<p>全文检索在概念上可以抽象为一个大型哈希表（<strong>倒排索引</strong>）。我们将文档拆解为一个个 Token 词项作为哈希表的 Key，对应的 Value 则是包含该词项的全部文档 ID 列表（Posting Lists）。</p>
+<p>当用户搜索 <code>New York population</code>（纽约人口）时，系统会在哈希表中检索这三个词项对应的文档 ID 集合并执行<strong>求交集操作</strong>（Intersection）。在求交集的同时，系统还会进行相关性打分：例如包含 <code>York</code> 的文档得分权重通常远高于仅包含 <code>new</code> 的文档，因为 <code>York</code> 在语料库中是一个更为罕见的稀有词。当大家提到 <strong>BM25 算法</strong>时，本质上指的就是这套词频与逆文档频率评分机制。</p>
+<p>构建顶级全文检索的艺术在于：第一，<strong>严格限制网络往返次数</strong>。首先精准拉取相关词典分块，再发起二次往返批量读取经过高度压缩的文档 ID 倒排链表。第二，在执行求交集与评分计算时，必须<strong>最大限度减少内存带宽消耗</strong>。例如当算法已经扫描到足够多同时包含 <code>population</code> 和 <code>York</code> 且评分极高的文档后，那些仅命中普通高频词 <code>new</code> 的低分文档就可以被提前剪枝忽略。</p>
+<p>与大多数人的直觉相反：在超大规模的 Web 级语料库上，<strong>实现高性能全文检索的技术难度与计算开销，实际上远高于纯向量检索</strong>。</p>
+<p>接下来交还给 Jacob 做最后的总结。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Simon Eskildsen</strong>: Yeah. So I was talking about why the company is called Turbopuffer at another talk here earlier today, but one of the other explanations of the name of Turbopuffer is that it's about puffing into the different memory hierarchies and really mastering when data should be in particular memory hierarchies.</p>
+<p>So, you can think about it here, right, of something like the EU law might be more or less part of almost every one of the legal research queries, right? So that probably sits closer to NVMe SSDs in memory, right? The economics kind of change as you move up and down this hierarchy. In memory, you want things that are queried a lot, right? Then the economics of memory are great. NVMe SSDs, you can do a lot of things directly on them, but the economics change as you move up and down this boundary, the latency changes and the way that the database is architected to take advantage of it in terms of round trips versus random versus sequential all changes as you navigate this hierarchy. Turbopuffer is a database that is really designed around the memory hierarchy and all of the smarts in Turbopuffer is that all of these namespaces are puffed in and out of the cache. You can think of this as we want to have as much data pushed as far down in this hierarchy as possible to get the best performance-cost ratios.</p>
+<p>So how does that apply to search? Well, for something like vector search for example, there's two fundamental ways to do vector search. One is to basically design a graph. The problem with a graph on something like object storage or disk, again, we want to have things as far down that memory hierarchy as possible. The problem with a graph is you have to navigate from the center of the graph. And then every time you navigate through these nodes, you're doing 200 millisecond P99 to S3, right? And so you're trying to shrink the diameter of the graph, you're trying to do all these tricks to make the graph, but fundamentally you're at odds with the fact that graph is about a random-sequential trade-off that you have in memory and in registers, but not further down the memory hierarchy.</p>
+<p>The way Turbopuffer does it is organize it into clusters, right? Vectors you can think of in two dimensions just as points in a massive coordinate system and we can organize them into clusters. Turbopuffer then creates clusters of clusters and clusters of clusters of clusters to essentially organize all of the vector data in a tree. You can basically think of Turbopuffer as a very, very complicated B-tree, right? Because it's a tree on this geometry of this entire space and the clustering of it in an approximate way. Now the root centroids further up the tree you can imagine are part of every single time you search right there. We're always trying to figure out which clusters that we're in and we're always looking at the upper levels of the tree. So they're going to be further up the memory hierarchy, right? Closer to the registers, almost all in DRAM. Now the leaves that have all of the actual legal cases or whatever long document it could be, images, all of that is probably going to be on SSDs with that single 1-millisecond roundtrip at the end. It doesn't make sense to have all that puffed into DRAM. This is fundamentally the cheapest way that you can run a database, period. So for something like Legora or even web search which is in hundreds of billions or tens of billions depending on how much of the web you've scraped, this is fundamentally the cheapest way to do it. And we have customers that are indexing massive parts of the entire web into Turbopuffer, which is really also a part of what legal research is.</p>
+<p>Full text is also really respectful of the memory hierarchies. The way text search works is essentially you can think of it as a hashmap. You have a big document and then you take every single one of the tokens and you put them into the key in the hashmap. The value in the hashmap is some set with all of the document IDs that has that term. So then if you search for &quot;New York population&quot;, you're finding those three places in the hashmap and then you're taking the three sets and doing an intersect on the sets. While you're intersecting, you're also trying to do some kind of scoring, right? A document that has &quot;York&quot; in it is probably more valuable than a document that has &quot;new&quot; in it because &quot;York&quot; is a more rare word. When people say BM25, this is the scoring that they're referring to.</p>
+<p>The art of full-text search is: one, we want to minimize the number of round trips. So first you download the parts of the dictionary that are relevant — round trip one, maybe a round trip before that to index into where the parts of the terms are. And then the second round trip is to get these massive lists. Try to make the list as small as possible by compressing them. But also while you're doing the text search, you're trying to minimize the amount of memory bandwidth that you want to intersect these lists. You can probably imagine that at some point there's a point where you've seen so many documents with &quot;population&quot; and &quot;York&quot; that have much higher scores that documents that just have &quot;new&quot; in it are irrelevant anymore. This is like a mega crash course in how text search works.</p>
+<p>And counterintuitively to most people, text search at web scale is more difficult and more computationally expensive than doing vector search. I'll hand it over to you.</p>
+</details>
+<hr>
+<h3>核心收益总结与展望</h3>
+<p><strong>Jacob Lauritzen</strong>: 太棒了。总结一下今天分享的核心收获：</p>
+<p>首先，<strong>检索能力对 Legora 至关重要</strong>，它是整个法律 AI 推理链条的基石。</p>
+<p>其次，Turbopuffer 为我们带来了极其出色的<strong>运维简易性</strong>。我们目前拥有 70 多个、100 多个甚至 200 多个独立租户，如果必须为每个租户单独部署维护独立的 Elasticsearch 数据库，那简直是一场运维噩梦。而 Turbopuffer 原生支持了数据驻留合规、多租户物理隔离与 CMEK 自主密钥加密。</p>
+<p>再者，它提供了极高的<strong>成本效益</strong>。对于我们这种具有大量长尾冷门索引、且用户能够容忍冷加载微小延迟开销的工作负载而言，这套架构将成本压缩到了极致。</p>
+<p>如今在 Turbopuffer 的底层支撑下，我们整个团队终于可以将全部精力集中在打磨 Legora 的核心产品体验上，而无需在底层存储的可扩展性与基础架构泥潭中苦苦挣扎。顺便说一句，我们的 CFO David 对节省下来的成本非常满意！</p>
+<p>非常感谢大家的聆听！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Jacob Lauritzen</strong>: Cool. So key learnings from what you heard today: retrieval is extremely important to Legora. It's key to legal reasoning. Turbopuffer really excels for us because it makes it extremely easy to operate. We have 70-plus tenants, we have 100, we have 200 tenants. If we had to have separate Elasticsearch databases for each of these, it would be just hell. But we can do this natively with Turbopuffer with data residency and CMEK, etc., etc.</p>
+<p>And then it's extremely cost-efficient generally when you have these types of workflows or workloads that we do where there's a long tail of cold indices basically that you don't need to query so much and you're sort of okay paying the small latency cost for it.</p>
+<p>So now with Turbopuffer, in 4 seconds to go, now we can focus on making Legora, we can focus on the product, making it really really great, and not on scalability and infra. And also David, our CFO, is really happy about the cost. So, it's great. Thanks everyone.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Simon Eskildsen" class="entity-link person-link">Simon Eskildsen</a>, <a href="/search/?q=Jacob Lauritzen" class="entity-link person-link">Jacob Lauritzen</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Legora" class="entity-link company-link">Legora</a>, <a href="/search/?q=turbopuffer" class="entity-link company-link">turbopuffer</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Elasticsearch" class="entity-link product-link">Elasticsearch</a>, <a href="/search/?q=PostgreSQL" class="entity-link product-link">PostgreSQL</a>, <a href="/search/?q=pgvector" class="entity-link product-link">pgvector</a>, <a href="/search/?q=S3" class="entity-link product-link">S3</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">vector-search</span>
+      
+        <a class="tag-link" href="/tags/legal-tech/">legal-tech</a>
+      
+        <span class="tag-pill tag-pill--no-page">memory-hierarchy</span>
+      
+        <span class="tag-pill tag-pill--no-page">multi-tenancy</span>
+      
+        <span class="tag-pill tag-pill--no-page">full-text-search</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

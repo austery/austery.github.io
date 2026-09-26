@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>设计工程的本质：从纸笔草图到智能体驱动的原型开发</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="设计工程的本质：从纸笔草图到智能体驱动的原型开发" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">设计工程的本质：从纸笔草图到智能体驱动的原型开发</span>
+      <span data-pagefind-meta="speaker" style="display:none;">The Pragmatic Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>The Pragmatic Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-23</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/the-pragmatic-engineer/">The Pragmatic Engineer</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=KZSzF0KEFRg" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-23
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">文章探讨了设计工程师的核心价值，强调在AI Agent时代，设计与工程的结合点在于理解材料（如性能、数据流）和用户真实语境。文章通过具身感知（纸笔草图）与动态原型生成（AI辅助）的对比，以及对代码托管平台变革的分析，指出工程师应将精力扩展到深入用户研究和系统架构理解上。</div></div>
+      
+    </div>
+    <!-- chunk 1/13 -->
+<h3>片头精选：设计工程的本质与纸笔的价值</h3>
+<p><strong>Maggie Appleton</strong>：就像你脑海中冒出了一个想法，我当然可以直接打开代码编辑器去写代码，比如写一个折叠风琴组件或者一叠卡片。但我发现，直接拿起手边桌上的一支笔和一张纸，用双手画出来，速度要快得多。画好之后你就能一直看着它——它不会像屏幕上的窗口那样被关掉或覆盖，而是就静静地摆在你的桌面上。哪怕到了第二天，你一眼看到它，就会立刻想起来：“对，我记得这个想法！”</p>
+<p>在任何设计岗位上，你都必须深刻理解你用来构建产品的“材料”本身。如果你是在为 Web 进行设计，却对性能一无所知，或者完全不了解你的应用是如何获取数据的、加载时间是多少、甚至是否存在竞态条件，那么你最终拿出来的只会是糟糕的设计方案。我其实非常希望 AI Agent 能够帮助解决这个问题，因为借助 Agent，设计师能够更加自如地涉足工程开发领域。</p>
+<p>你固然可以在设计工具里随意摆弄布局和概念构想，但在代码真正运行在浏览器中之前，你根本无法切身体会它的真实交互手感，也无法判断它究竟需要多大的伸缩空间。每当我设计视觉层面的东西时，如果能有实时的动态变量可以直接调试，体验会轻松很多。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Maggie Appleton</strong>: You have an idea in your head, and sure, I could go into the code and hack forward. Here's an idea I have: it's like a stack of cards, and it's an accordion. But it's much faster to just get a piece of paper and pencil on the desk next to me and draw that with my hands. And then you can look at it; it doesn't go away on your screen, and can sit on your desk, and the next day you're like, &quot;Oh yes, I remember.&quot;</p>
+<p>You have to understand the materials you're building with in any design role. If you're designing for the web and you don't understand performance, or how your app is fetching data, what's the loading time, or if there are race conditions, you end up with bad design solutions. I'm hoping agents actually help solve this, because then designers using agents can step more into the engineering side. So you can play around with layouts and ideas, but you can't get a sense of how this is going to feel and how much room you need until it's live in the browser. Whenever I'm designing something visual, it's so much easier to have live variables. But again, it would not have been possible before.</p>
+</details>
+<p><strong>Host</strong>：你之前做过一场演讲，标题大概是《一位开发者、两打 Agent、零名工程师》——探讨为什么过去需要整个团队协同完成的工程开发，现在我们一个人配合 Agent 就能独立搞定，而且速度极快。软件开发在过去一直都被认为是一项团队运动，而现在的巨大鸿沟似乎正是：我们拥有了智能代码生成能力，但设计与工程的结合点究竟在哪里？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: You did a talk titled &quot;One Developer, Two Dozen Agents, Zero Engineers&quot; — why collaborative engineering, which has always felt like a team sport, can now be done alone with the agent, and we can go really fast. The biggest gap seems to be like we now have agentic coding capabilities.</p>
+</details>
+<h3>导语：什么是优秀的设计工程师？</h3>
+<p><strong>Host</strong>：究竟是什么成就了一位优秀的设计师，或者说一位优秀的设计工程师？我们作为软件工程师，又能从他们身上学到些什么？</p>
+<p>本期节目的嘉宾 Maggie Appleton 是我所认识的最具深度思考能力的设计工程师之一。她曾担任过插画师、AI 初创公司的设计师，目前在探索各种前沿原型设计。今天，我们一起聊聊什么是设计工程师，为什么工程与设计之间常常存在天然的张力，她过去和现在使用的工具链，以及为什么即便在 Agent 时代，纸和笔也永远不会被淘汰。</p>
+<p>当 AI 能够一秒生成二十个高保真原型时，我们究竟还需不需要设计师？AI 设计出来的界面是否一眼就能看破？如果你是一名想要深入了解设计为何至关重要、以及自己该如何提升设计能力的工程师，那么这一期节目绝对不容错过。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: What makes for a great designer or great design engineer? And what can us software engineers learn from them?</p>
+<p>Maggie Appleton is one of the most thoughtful design engineers I know. She has worked as an illustrator, as a designer at an AI startup, and is currently prototyping new interfaces. Today, we talk about what is a design engineer and why there's often a tension between engineering and design, the tools she's used before and now, and why pen and pencil are not going away even with agents.</p>
+<p>Do you still need a designer when AI can generate 20 high-fidelity prototypes? And is AI design obvious to spot? If you're an engineer wanting to know why design is important and how to get better at design yourself, this episode is for you.</p>
+</details>
+<h3>赞助商介绍：Turbopuffer 与 Antithesis</h3>
+<p><strong>Host</strong>：本期节目由 Turbopuffer 赞助支持。Turbopuffer 是一款直接构建在对象存储之上的向量检索与全文本搜索服务，速度极快、成本极低，且具备无与伦比的扩展性。</p>
+<p>今天的主题围绕设计与设计工程展开，因此我也想借此机会分享一下我们本季度赞助商 Antithesis 在视觉设计上极具创新的一面。大家可能已经知道，Antithesis 通过在无菌受控的拟真环境模拟中运行整个系统，来自动检测软件系统的正确性并挖掘隐蔽 Bug。而他们用来进行因果分析的交互界面同样让人惊叹。</p>
+<p>你可以打开一份 Bug 报告，直观看到在整个仿真时间线中该 Bug 发生的概率变化。比如在某个案例中，我们可以清晰地看到在虚拟时间第 25 秒时发生了一起特定事件，使得该 Bug 发生的几率瞬间飙升至接近 100%。于是我们便可以直接跳跃到虚拟时间仿真的这一精准节点去调取排查日志。这种将 Bug 触发概率沿时间轴可视化的 UI，我此前从未在任何其他工具中见过。</p>
+<p>此外，他们还有一个非常强大的日志浏览器（Log Explorer）。你可以根据具体的错误信息进行筛选，然后直观看到该错误随时间推移的发生频率曲线。比如在此处筛选反序列化失败的案例，通过紫色线条，你就能立刻明晰该特定错误到底是极其罕见的偶发现象，还是普遍发生的高频问题。我再次被这种创新的错误可视化设计所打动。</p>
+<p>最后是他们极简的多进程调试器：你可以任意回溯时间并重放调试时间线，甚至可以在任意时间点注入 Bash 命令，而完全不会破坏当前 Bug 的重放进程。这简直太酷了！比如直接查看当前目录下的文件列表，正如你所能想象到的那样，对整个运行环境的调试因此变得轻而易举。我非常喜欢 Antithesis 团队在探索软件全自动调试与形式化验证边界上的突破，想要了解更多，欢迎访问 antithesis.com/pragmatic。</p>
+<p>Maggie，欢迎来到我们的播客！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: This episode is presented by Turbopuffer, a vector and full-text search built on object storage. It's fast, cheap, and extremely scalable.</p>
+<p>Today's episode will be about design and design engineering, and so I wanted to share something visually interesting about our season sponsor Antithesis. We already know that Antithesis verifies your system correctness by running your whole system in headless simulation and finding bugs. Here is a UI for causality analysis: you could open a report for a bug and see the probability of a bug occurring throughout the timeline of the simulation. In this case, we can see that at virtual time 25, something happened that makes this bug close to 100% to occur. So we can jump to this point of virtual time simulation to read the logs. This kind of bug probability visualization is one that I've never seen before.</p>
+<p>There's also this neat log explorer. You can filter on error messages and then visualize how common or uncommon the errors are over time. For example, here's looking for failing deserialization failures—the purple line—and you can understand how rare or common a specific failure was. Again, I have yet to see this kind of error visualization, and I really like the innovation on the UI side.</p>
+<p>And finally, the simplified multi-process debugger: you can go back in time and replay a debugging timeline, and you can inject bash commands at any time without affecting your playback of the bug. How cool is that? For example, we're listing files in the current directory, but as you can imagine, you can go debug the whole environment so much easier. I love how the team at Antithesis are pushing what's possible for debugging and verifying software. Head to antithesis.com/pragmatic to learn more.</p>
+<p>Maggie, welcome to the podcast!</p>
+</details>
+<h3>从文化人类学起步的非典型技术之路</h3>
+<p><strong>Maggie Appleton</strong>：谢谢你！很高兴能来到这里。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Maggie Appleton</strong>: Thanks! I'm thrilled to be here.</p>
+</details>
+<p><strong>Host</strong>：我在这档播客中采访过许许多多的嘉宾，但坦白讲，没有一个人的科技行业入行经历像你这样特别。你是怎么进入科技领域的？你最初的学术和职业背景似乎截然不同，对吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I've had so many guests on the podcast, and no one had quite the introductory story into tech like you. How did you get into tech? You came from a very different background, right?</p>
+</details>
+<p><strong>Maggie Appleton</strong>：是的。我当初进入这个行业，我想最主要的原因就是因为这里能赚到钱吧。我并不是说纯粹为了利益，我的意思是，我在大学里主修的是文化人类学（Cultural Anthropology）。那是我的真爱，我由衷热爱文化人类学，在大学期间彻彻底底迷上了它。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Maggie Appleton</strong>: Yeah. I mean, I came in because it was where the money was, I guess. I mean, not really, but in the sense that in university, I studied cultural anthropology, which is like my one true love. I adore cultural anthropology; I totally fell in love with it in university.</p>
+</details>
+<p><strong>Host</strong>：什么是文化人类学？你能详细聊聊吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: What is anthropology?</p>
+</details>
+<p><strong>Maggie Appleton</strong>：简单来说，它是关于“人”的研究。这听起来范围极其宽泛，大家可能会好奇：这怎么能成为一门严谨独立的学科呢？但它有一套非常特殊的研究方法，那就是深入到特定人群中，通过高强度的“参与式观察”（Participant Observation）与他们共同生活。</p>
+<p>在这门学科创立之初，研究对象通常是各种截然不同的异质文化。早期基本都是西方的人类学者前往巴布亚新几内亚、澳大利亚等偏远地区，深入传统原住民部落并与他们生活在一起。随后他们逐渐意识到，这些群体的文化差异绝不仅仅停留在表层——不是单纯的饮食不同或者房屋构造不同，而是他们对于某些基础概念（比如“颜色”究竟是什么、时间的本质是什么）的认知，都与西方有着彻底不同的理解框架。</p>
+<p>人类学的发展基本上是与心理学并驾齐驱的，旨在探索人类心智在构建对外部世界的理解时究竟有多大的弹性与延展度。一旦你真正接触到人类学，它会成为一门彻底颠覆认知的学科，因为你可以细分深入到医学人类学、性与性别的人类学等各个分支。你会深刻领悟到人类是多么具有适应力、多么具有流动性与可塑性。</p>
+<p>我之所以如此深爱它，也与我自己的成长经历有关。我从小就随父母在海外生活，是一名外派家庭的孩子，因此很早就接触到了大量不同的文化形态。对我而言，这种认知几乎是一种本能：生活在老家的人们习以为常的行事方式——我所谓的老家是指伦敦，但我六岁时就离开了——与其他地方人们的生活逻辑完全大相径庭。人类构建社会形态或者度过一生，从来都不存在某一种固定不变的标准范式；我们认为“可能”的认知边界，其实远远比我们起初设想的要广阔得多。这正是我对它无比着迷的原因，因此我大学毫不犹豫地选择了这个专业。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Maggie Appleton</strong>: Yeah, it's the study of human beings, which sounds incredibly broad. Like, how could that be a discipline? But it does it in a particular way where you go and you live with people intensely in a thing called participant observation.</p>
+<p>Usually, when the field was born, it was done on different cultures. Of course, it was anthropologists from the West primarily going into places like Papua New Guinea or Australia and living among traditional peoples, and then realizing how different their cultures were. Not just like, &quot;Oh, they have different food, they have different houses,&quot; but they have completely different understandings of like what color is, or completely different understandings of time.</p>
+<p>It was kind of alongside the birth of psychology—understanding how flexible is the human mind about constructing understandings of the world. Anthropology is really one of these eye-opening subjects when you get into it, because you can get into medical anthropology or the anthropology of sex and gender, and you just find out how extremely adaptable and fluid human beings are.</p>
+<p>And I loved it because I grew up as an expat kid overseas; I think I was exposed early to lots of different cultures. And so it felt very natural to me to realize that all the ways people do things at home—in quote &quot;home&quot;, which would be London for me, but I left at age six—is completely different to the way they do it elsewhere. There's no fixed way for humans to construct a society or live life, and the bounds of what we think is possible are much wider than we originally assume, which is what I loved about it. So I studied it.</p>
+</details>
+<h3>就业困境与 90 年代 Web 启蒙</h3>
+<p><strong>Maggie Appleton</strong>：但是，当学业走到大四，你不得不面对现实：“学文化人类学到底能找到什么工作？”这个专业可算不上什么吸金的摇钱树。</p>
+<p>当时摆在我们面前的就业选择非常狭窄：要么一路读博最终成为大学教授；要么就是去军队，因为军方当时会招募大量人类学家，为他们在海外不同国家审讯逼供提供文化心理层面的技术支撑。当我们大学教授把这几条出路摆在面前时，我们的反应都是：“呃……好吧，我们可能得重新考虑一下了。”</p>
+<p>幸运的是，我从小就一直非常喜欢设计。我是个典型的 90 后，成长在 Neopets（尼奥宠物）风靡的年代，在上面用简单的 HTML 和 CSS 装扮虚拟宠物页面，后来又玩起了 MySpace。大概在十二三岁的时候，我就学会了写 HTML 和 CSS，而且掌握得相当不错。不过在那个年代，网页并没有多复杂的逻辑，大致也就是在个人主页上加点花哨的元素。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Maggie Appleton</strong>: But of course, come senior year, you kind of get to, &quot;Right, what jobs are available in cultural anthropology?&quot; It's not very lucrative.</p>
+<p>So the options were like: go get a PhD and become a professor, or the military. The military hires lots of anthropologists to come up with interrogation and torture techniques for people in different countries. So when presented with these options by our professors, we were like, &quot;Uh, okay, we'll think about that.&quot;</p>
+<p>And I had always loved design growing up. I was a kid of the nineties; I grew up on Neopets with little bits of HTML and CSS, and MySpace. And I learned HTML and CSS probably around 12 or 13, and knew how to do it. But in the way where there wasn't much complexity in whatever this was in 1999.</p>
+</details>
+<p><strong>Host</strong>：哈哈，MySpace 时代！到处都是令人眼花缭乱的疯狂动画。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: MySpace, oh yeah, crazy animations!</p>
+</details>
+<p><strong>Maggie Appleton</strong>：没错！光标后面跟着一串闪闪发光的粒子拖尾，我觉得我当年的 MySpace 主页可以说是极尽炫酷之能事，但确实让我学到了很多知识。当然，在那个时期互联网还属于新兴事物，没有人会觉得这是一份真正正正经经的职业，你压根不会往职业规划的方向去设想。</p>
+<p>但现实是我大学毕业了，手里拿着一张根本找不到工作的人类学文凭。于是我便开始接私活做自由职业的网页设计，因为这是我当时唯一懂得的赚钱门路。在读大学期间，我就一直在为学校的 IT 部门做技术支持工作，所以转向网页设计就显得非常水到渠成，纯粹是出于“我得交得起房租”的生存刚需。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Maggie Appleton</strong>: And like the little sparkle trail behind the cursor! I think my page was quite something at the time, but I learned a lot. But of course, at the time, the web was so new it wasn't like people thought this was a career, or you didn't think of it that way.</p>
+<p>But I came out of university with this degree that wasn't necessarily employable, and I just started doing freelance web design work, because that was how I knew how to make money. Throughout school, I was doing IT tech support work for the university, and just naturally went into this because it was like, &quot;Well, I need to pay rent somehow.&quot;</p>
+</details>
+<h3>从自由插画师迈向 UI/UX 与前端工程</h3>
+<p><strong>Maggie Appleton</strong>：起初，我把更多精力倾注在插画创作上，因为我打心底里酷爱画画。因此入行的前几年，我的本职其实是一名插画师。至于我是如何一步步更深入地扎根到科技产业中的，是因为插画师本身有很多发展路径：你可以做报刊杂志社论插画，或者去做品牌设计等等。当时我加入了一家位于布拉格的初创团队——与其说是初创公司，不如说它是一家设计开发外包工坊（Design &amp; Dev Agency），专门为旧金山湾区的各种硅谷初创企业制作 UI/UX 应用程序。在那个时期，他们服务的客户包括早期刚刚起步的 Tinder 和 Uber 等等。</p>
+<p>正是在那家外包公司，我第一次全方位接触到了现代 UI/UX 设计。那时我负责为这些应用程序绘制插画、设计 Logo 以及整套品牌视觉体系。那也是我人生中第一次恍然大悟：“天哪，原来世界上居然有专门负责设计按钮和侧边栏（Sidebars）的人！这真的太有意思了。”</p>
+<p>虽然我当时并没有立刻全职转型去专攻界面设计，但那次经历成了我对“科技行业中的产品设计”这一领域的最初启蒙。</p>
+<p>后来，我加入了一家名为 Egghead 的技术在线教育公司，他们专注于开发者的前沿技能培训，教授大量关于 JavaScript 及其现代生态的课程——相信大家平时也一定经常看到他们的内容。我在 Egghead 担任了四年的全职插画师，随后升任艺术总监（Art Director），负责指导和把控其他合作插画师的设计作品。也就是在那个时期，我真正开始沉下心来系统性地深入学习了 JavaScript、React 以及现代前端技术体系。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Maggie Appleton</strong>: And I gravitated towards illustration originally, because I love drawing. So I was originally an illustrator for the first couple of years.</p>
+<p>The way that I went more into the tech side was: you can be an illustrator that's editorial, or you can go into branding, like all kinds of types. But I started working for a startup—I guess it was more like a design and dev shop in Prague that was making UI/UX apps for San Francisco startups. At the time, they were doing work for companies like Tinder and Uber in their very early days, in their beginnings.</p>
+<p>So it was there that I got exposed to UI/UX design. I was making the illustrations for these apps, doing logos and branding. That was my first exposure, like: &quot;Oh, there are people who design buttons and sidebars, and that's kind of interesting.&quot; I didn't end up going into that full-time for a while, but that was my first introduction to what product design in tech is as a field.</p>
+<p>And eventually, I joined this company called Egghead, which does developer education. So they taught JavaScript—I'm sure you've seen them around. I was their illustrator for four years, and then I became an art director and art directed other people's illustrations for them. And that was really where I learned JavaScript and React.</p>
+</details>
+<!-- chunk 2/13 -->
+<h3>从前端插画到产品设计</h3>
+<p><strong>Speaker 0</strong>: 我觉得我真正的前端工程启蒙，其实是给他们做插画。但在画插画的过程中，我必须搞懂自己画的内容到底是什么，结果发现那些全是 React 组件、<code>useEffect</code> 以及各种 JavaScript 函数。以一种很奇妙的方式，我自然而然地转向了前端工程与视觉设计，因为这感觉就像是一次水到渠成的转变。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I think my real front-end engineering education was like doing illustrations for them. But in doing illustrations, I had to understand the material I was illustrating, which turned out to be like React components, <code>useEffect</code>, and like JavaScript functions. And in a weird way, I just ended up moving more into front-end engineering and visual design, because it just felt like a natural move.</p>
+</details>
+<p><strong>Speaker 1</strong>: 你之前也在 Elicit 工作过，对吧？那是在 Egghead 之前还是之后？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: You worked at Elicit as well, right? Was that before or after that?</p>
+</details>
+<p><strong>Speaker 0</strong>: 那是在那之后，是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: That was after, yeah.</p>
+</details>
+<p><strong>Speaker 1</strong>: 所以你在 Egghead 担任他们的学习设计师，然后 Elicit 是一家做 AI 的初创公司，对吧？而且成立得很早？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: So you were at Egghead as their learning designer. And then Elicit was an AI startup, right? Pretty early?</p>
+</details>
+<p><strong>Speaker 0</strong>: 是的，非常早。那里的创始人们真的很了不起，其中一位研究语言模型已经有十年之久了。他在所有人之前就早早看清了未来的趋势。他来自麻省理工学院（MIT），是博士背景，做机器学习相关的研究。他当时意识到：语言模型将会彻底变革科学研究。他非常执着于一个问题：这项技术如何能加速科学研究的进程？</p>
+<p>因此，Elicit 最初——其实直到现在也是如此，虽然他们已经扩展了业务范围——其核心就是利用语言模型来加速科学文献综述的过程。对于广大学者而言，阅读成千上万篇论文并在电子表格中提取整理数据，是一项极其繁琐且缓慢的手工劳动，而这恰好是模型大显身手的绝佳场景，一个完美的使用案例。</p>
+<p>于是我加入了他们。那大概是在 2021 年底或 2020 年初的时候。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Yeah, pretty early. I mean, the founders there were really kind of incredible people, and one of them had been studying language models for ten years. He had seen the writing on the wall way before anyone else. But coming out of MIT, PhD, machine learning stuff, he had this realization of like, language models are going to revolutionize science. He was really big on like, how could this speed up the scientific process?</p>
+<p>So Elicit originally was, and still actually—I mean they've expanded, but at its core, it is using language models to speed up the scientific literature review process. This is a very manual, slow thing of all these academics reading thousands of papers and extracting data about them in spreadsheets. Perfect for models, like a perfect use case.</p>
+<p>So I joined them. That was late 2021 or early 2020.</p>
+</details>
+<h3>初创团队的全流程产品设计实战</h3>
+<p><strong>Speaker 1</strong>: 你当时是团队里唯一的设计师，身兼产品经理的角色，也就是创始设计师？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: And you were the only designer, doing product management, were the founding designer?</p>
+</details>
+<p><strong>Speaker 0</strong>: 没错。我刚加入时团队只有六个人，也可能是七个，我记不太清了。团队非常小，而且在我待在那里的大部分时间里几乎都保持着这种规模。是的，自始至终我都只有我一个设计师。我们曾经有一位产品经理，但后来离开了，之后就再没招新的。所以有很长一段时间我们是没有 PM 的。那是一段非常棒的经历，因为那是典型的早期初创团队氛围，大家亲如一家。我们经常在团建期间一连几周住在一起。创始人信念非常坚定，他们聪明绝顶，我也极其信任他们，所以整个过程就像是完全融入并认同那个愿景。</p>
+<p>正是在那里，我真正从头到尾完整地学会了端到端的产品设计。而且可以说，当时我们拥有大量用户，因为我们推出的免费原型非常受欢迎。因此你能收集到丰富的数据：人们在搜索什么、点击什么、哪些有效、哪些无效，还能做 A/B 测试。我们的节奏极快，整整一年的时间里每周都在上线新功能。那完全就是“设计、构建、发布、衡量”，然后周而复始，如此循环往复了整整两年的时间。我想我在那里待了两年多一点。</p>
+<p>在那段时间里我学到了太多东西，深入掌握了产品设计的核心机制——从深刻洞察用户需求和业务领域出发，一直做到全部的前端工程实现，并将所有环节无缝串联起来。那确实是一段绝妙的经历，让我收获颇丰。不过到了后期节奏实在太紧张了，所以我后来从初创公司抽身退出来调整了一阵。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Yeah. Six of us in the beginning when I joined, maybe seven, might have been seven, I forget. A very small team, and it stayed almost that size the time I was there. And yeah, I was the only designer the whole time. We had a PM at one point who left, and then we didn't get another one, so no PM for quite a while. And it was a really wonderful experience because it was a classic early startup—it was like we were family. We would stay together for weeks at a time during retreats. The founders had really strong conviction, they're really smart people, and I trusted them so much. So it was kind of like get on board with the vision kind of deal.</p>
+<p>And it was there I really learned product design end to end. And I'd say, we had lots of users because we had a free prototype that was very, very popular. So you had all this data you could collect about what people were searching for and clicking on, what worked and what didn't, and A/B tests. And we just went really fast, like we shipped a feature every week for a year. So it was like design, build, ship it, measure; design, build, ship it, measure on repeat over and over for like a solid—I think I was there a little over two years.</p>
+<p>And I learned a ton in that time, just about the core mechanics of product design in the sense of like really going from more of the user needs, what's the domain, through to doing all the front-end engineering and tying it all together. So it was a really wonderful experience. I learned a lot. It was intense, and by the end of that, I stepped back from startups for a minute.</p>
+</details>
+<h3>设计与工程的本质：同一种思维，不同的材料</h3>
+<p><strong>Speaker 1</strong>: 这么说来，你进入设计领域基本上是靠自学，自己摸索出这一套需求。你曾在 Egghead 工作，在那里你学会了如何向开发者解释和呈现教学概念，接着又在 AI 初创公司担任设计师。那么在软件开发或初创公司的语境下，设计师究竟是做什么的？你承担过多种角色，我也明白具体职责肯定因人因地而异，但根据你共事过的初创公司经验，你会如何定义设计师的职责？毕竟很多开发者与设计师密切合作过，但也有不少开发者完全没有接触过设计师。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: So you got into design, I guess, kind of self-taught, figured out there's a need for this. You were at Egghead where you learned to explain developer concepts, educational concepts for developers. You worked at an AI startup as a designer. What does a designer do inside of software or a startup? You actually have had several roles. I get a sense that, of course, there's going to be &quot;that depends&quot;, but at startups that you've worked with, how would you describe it? And of course, many developers have worked with designers, some have not at all.</p>
+</details>
+<p><strong>Speaker 0</strong>: 我倾向于这样描述它：它和工程其实没有太大区别。它们的核心都是解决问题，只不过所用的材料不同而已。</p>
+<p>这二者遵循完全相同的思维路径：首先定义你的问题是什么，确保找准了真正的问题，并做好清晰的定义和范围界定；然后去调研可能的解决方案，展开广泛探索，思考所有可行的解决路径以及各自的权衡取舍；接着制作原型方案，验证这些方案是否正确、能否真正帮用户解决问题，以及逻辑上是否合理。</p>
+<p>我不觉得它和工程有本质区别，毕竟在我的日常工作中两者我都会做一些。不同之处仅在于材料载体：工程师是在跟代码打交道，虽然当今的开发者更多是在更高层级的系统架构和数据层面思考，不一定非要纠结底层具体语法的编写，但以前你需要决定用什么语法来写代码解决问题；而在设计中，你的材料是空间、尺寸、字重、颜色，以及界面中所能看到的视觉元素与动效。你需要考量视觉层级：这个元素是否足够突出？按钮上的文案是否恰当、能否让用户一眼理解点击后的后果？这涵盖了从文案撰写到视觉平面设计的方方面面。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I kind of describe it as not that different from engineering. It's problem solving, but the materials are different is the way I would describe it. You go through the same process of defining what your problem is: Are you sure this is the correct problem? Have you defined it well and scoped it well? Researching possible solutions, doing wide exploration of all the ways we could solve this, what the trade-offs of them are. Prototyping solutions, validating those are the right solutions, do they work for users, do they make sense.</p>
+<p>I don't think it's that different to engineering in the sense that I do some of both in my job, but it's just the materials are different. Instead of working with code—although nowadays developers work in higher-level kind of architecture, data, and not necessarily writing the syntax, but at the time, what syntax you're going to use to write this problem—in design the materials are like space, size, weight, color, things you'd see in an interface in terms of the visuals, motion, prominence. Is this big enough? Are these the right words for the user to understand what this button is going to do? Like everything from copywriting to visual graphic design.</p>
+</details>
+<h3>产品设计中的名词、动词与系统收敛</h3>
+<p><strong>Speaker 0</strong>: 但在产品设计中，你还必须处理我们所说的产品的“名词”与“动词”。</p>
+<p>举个例子，如果你的产品是一家球鞋网店，这很简单，名词无非就是“球鞋”、“购物车”、“金钱”。但如果你设计的是开发者工具这类复杂的专业软件，名词就会变得极其抽象复杂。我主要做的是面向科学家、开发者这类高阶专业用户的工具，在这里名词是非常难界定的，因为它们极其抽象。比如：用来承载某组数据的合适容器应该是什么？这个数据集合应该如何指向或连接到另一个数据集合？或者说，这里有一个函数把一组数据转换成另一组数据。你需要设计一套清晰的名词与动词作为概念容器，用户才能真正理解该如何操纵系统来达成他们的目标。</p>
+<p>在开发者工具中做设计有时极具挑战，因为软件拥有太高的可塑性。这种可塑性在现实实体世界中是不存在的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: But with product design, you're also dealing with what we would call nouns and verbs of a product. So it's easy when your product is like a sneaker store—the nouns are like sneaker, cart, money. If you're designing a complex power-user tool, the nouns get extremely difficult. And I've primarily worked in power-user tools, like scientists, developers, where the nouns are extremely hard because they get very abstract. It's like, what's the right container for a set of data? What's the right container or point to: oh, this set of data connects to that set of data, or here is a function that transforms data into another set. You need a set of nouns and verbs to give containers, so they can understand how to manipulate whatever you're trying to get them to do.</p>
+<p>It's really difficult in dev tools sometimes because there's so much malleability in a way there isn't in the real world.</p>
+</details>
+<p><strong>Speaker 1</strong>: 这里的“可塑性”是指什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: What is malleability?</p>
+</details>
+<p><strong>Speaker 0</strong>: 就是它能够变换成各种不同的形态与形式。如果你是在为实体现实世界做设计，比如我有些在政务服务领域工作的朋友，那里有非常明确的物理现实与规则约束，比如你的目标是引导某人填完一张表格。那虽然也是个不小的设计挑战，但它并不会演变成同一维度的概念复杂性。</p>
+<p>再看看当前，比如我现在正在尝试设计面向智能体（Agent）的工具，这就面临着同样的难题：智能体领域的基本“名词”到底是什么？我们目前还不清楚。现在我们有聊天会话（Sessions）、有被称为计划（Plans）的东西、有像 MCP 这样的协议、还有各种技能（Skills）。我们能否构建全新的原语，将一系列会话连接起来，让它成为一个包含更丰富上下文的新名词？在系统边界上你可以做出各种划定，从而彻底重塑用户感知与使用该产品的方式。</p>
+<p>确立了名词之后，你还必须定义“动词”：用户能对这些名词执行哪些操作？能分享、编辑、重命名、删除吗？这是经典的 CRUD 操作逻辑，必须逐一厘清。但除此之外呢？比如你能否“分叉”（Fork）一个智能体任务会话？这背后牵涉的连锁反应又有哪些？</p>
+<p>我认为产品设计中最困难的部分，在于如何构建一个连贯一致的系统，将所有可能存在的复杂性——特别是在开发者工具这类领域中——高度收敛提炼为最精简的形式。这句话说起来容易，做起来却异常艰难：你必须千锤百炼出一组真正标准、规范的核心名词，让用户能够明确看懂：“好，我明白这是干什么的，我知道点击这个按钮后会发生什么，而不会被执行结果吓一跳。”把一个极其复杂的系统提炼为其最优雅、最具智慧的形式，需要耗费大量的时间与心力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Like adaptability, it could take different forms and shapes. Whereas if you're designing things for the real world—like our friends who work in government design, there's restrictions in their world, like you're trying to get someone to fill out a form. It can be a hard design challenge, but it's not complex in the same way.</p>
+<p>Like at the moment, right? I'm, of course, trying to design agentic tools. And it's like, what are the nouns of agents? Oh, we don't know. There's like chat sessions, we have these things called plans, something called MCP, skills. Could we make new primitives that connect a bunch of sessions all the way up here that becomes a new noun that contains context? There's all kinds of boundaries you could draw that would make the user think about your experience differently.</p>
+<p>And then you have to define what verbs can they take on those nouns, right? Can you share, edit, rename, delete? This is classic CRUD stuff you have to figure out. But I don't know, can you fork an agent session, and what are all of the implications of that?</p>
+<p>I think the hard bit of product design is designing a coherent system that takes all this complexity that could exist, especially in something like dev tools, and reducing it to the simplest possible form you can. Which is very easy to say, extremely hard to do every time: to really find a canonical set of nouns so that the user can go, &quot;Okay, I can point at that. I understand what that's going to do. I can click a button and don't get surprised at the outcome.&quot; This takes time to do this kind of hard reduction down to its best, elegant form.</p>
+</details>
+<p><strong>Speaker 1</strong>: 这非常有意思。因为你所描述的场景——面对一个前所未有的全新产品，比如数字空间里的某个开发工具，它完全存在于我们的脑海中或计算机内部，是由我们凭空发明出来的概念，比如 MCP 或者智能体技能；然后我们需要为它们找到准确的词汇，让大家能够理解并上手使用。</p>
+<p>这感觉就像是在脑海中绘制一张概念地图，而这与软件工程师从零构建一套新系统时的过程如出一辙。我之前和 Kent Beck 聊天时，他也提到过当年他和 Ward Cunningham 一起探索出设计模式等基础概念时的经历（也许那是领域驱动设计或者相关的概念）。当时他们面前摆着一本同义词词典，绞尽脑汁寻找最贴切的词汇来为这些构造命名——最后诞生了设计模式。他们当时正是努力为这些结构和行为赋予精确的称谓……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Interesting, because what you described—like we have a new product that has not existed before, like a dev tool in a digital space which lives in our head or inside of a computer with things that we just invented, made up, like MCP or an agentic skill. And then thinking of how we find the right words so people can use it and make sense of it. I just see that you're kind of drawing up a map in your head, which is not all that different to when you're building a new system as a software engineer.</p>
+<p>I was talking with Kent Beck, who talked about how with Ward Cunningham they came up with some of the basics of—it might have been domain-driven design, it might have been some related concepts—but they had a thesaurus in front of them trying to search for the right words on how to... Oh, it was design patterns! Design patterns came out of it. But they were trying to put a name on these constructs and these things, and how...</p>
+</details>
+<!-- chunk 3/13 -->
+<h3>产品设计与工程的本质交集</h3>
+<p><strong>Speaker 1</strong>: 这听起来和你刚才描述的情况非常相似。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: which feels like a very similar thing to what you're describing.</p>
+</details>
+<p><strong>Speaker 0</strong>: 没错，确实如此，关于设计这个话题。这正是我经常去展示不同设计类型的地方。比如，可以说有室内设计、品牌设计，也有产品设计。但是所谓的产品设计，当我们在科技行业谈论它时，实际上它就是软件设计；而软件设计本质上就是工程。它们其实处于同一个维度上。</p>
+<p>你可能会使用稍微不同的工作材料。从某种意义上说，其中一方可能更关心颜色、尺寸、阴影，以及物体的形态和动效设计；但那个人同样必须理解底层的数据库结构是怎样的、这些 API 是如何定义的、数据是否放置在正确的位置。这样我们才能以正确的方式把数据传递给组件，所以他们同样需要理解这些技术细节。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: yeah yeah, yeah design. this is where i kind of get into show this types of design, like you could be like there's interior design, there's brand design, there's product design. but product design, when we talk about in tech is actually software design and software design is engineering. it's actually the same scale. you, you might be working with slightly different materials. in the sense of one of you cares more about the colors and the size and the shadows, and like the shape of things and the motion design, but that person also has to understand, like what's the shape of the database, like what are these APIs, like whether the data is in the right place, so are we passing data through this component in the right way, like they have to also understand.</p>
+</details>
+<p><strong>Speaker 1</strong>: 这很有意思。因为很多年前我在 Uber 和 Skype 等公司合作过的设计师并不是这样的。当时他们有自己的设计工具，最初是 Sketch，后来变成了 Figma。他们通常与产品经理一起工作，进行各种设计探索或用户体验原型制作，并经常把这些方案拿去进行用户测试。</p>
+<p>但归根结底，他们产出的是一套视觉设计，包含视觉样式和动画效果，那是他们的专长。然后他们把这个设计连同 PRD（产品需求文档）或产品说明一起交给我们工程师，说明“这就是最终呈现的样子”。接下来由我们来把它构建出来，比如开发移动端的 UI。之后我们可能会去找他们展示，或者坐在一起看效果。他们可能会说：“哎呀，这个动效感觉不太对。”但在我的印象中，设计师的工作是非常偏向纯视觉层面的。</p>
+<p>举例来说，那些设计师可能既不需要也不愿介入数据库如何运作、接口如何关闭这类底层逻辑。他们非常敏锐地关注整个业务流程和用户旅程。所以针对那种类型的设计，你会如何描述它与你现在所说的差异？还是说仅仅是他们的专业领域有所不同，更偏向业务层、偏向移动端和网页端的用户体验？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: and this is interesting as the designers i work with years back at places like Uber and Skype. they had their design tools, which was Sketch, later Figma. they typically worked with the product folks, they did explorations or UX prototypes, they often sent them to user testing. but in the end, they had a design, they had visuals, they had animations, that was their thing, and they handed this over to us engineers together with the PRD, or here's the product, here's how it was going to look. and then we built it, and we would build the UI, let's say in mobile, and we would then go maybe sit with them or show them, and they would say, &quot;this motion doesn't feel good.&quot; but my view of designers was that it was very visual. and for example, those designers, maybe they didn't want to get involved in how the database works or how to close it. they were very aware of the flows, the user journey. yeah. so is that type of design—how would you characterize it as being different? or is it just that their domain is a little bit different, more at the business level, more kind of mobile and web screens and some of those?</p>
+</details>
+<h3>从传统产品设计到“设计工程”的演进</h3>
+<p><strong>Speaker 0</strong>: 是的，我认为这牵涉到我们如何定义和划分设计的不同分支。我所谈论的设计风格，显然受到了我自身经历的偏重影响，即更偏向“设计工程”（Design Engineering）的范畴。如今“设计工程师”已经成了一个流行词，大家都探讨它究竟代表什么。而在我看来，它指的是一位真正深入参与工程实现、充分理解产品底层运作机制的设计师。</p>
+<p>当然，这种要求并非在所有领域都必不可少。比如，如果你只是在设计政府部门的表格界面，我认为确实不需要去深入理解底层数据库结构。然而，如果你是在为开发者设计工具，或者身处像 AI 这样全新的前沿领域，产品功能的运转方式很大程度上是由后端的技术可能性和数据结构所决定的，那么你就必须极其深度地介入到工程层面中去。</p>
+<p>但反过来说，如果你正在开发一款普通的消费级应用，设计师把重心放在为用户发声上，往往能产生更好的效果。我认为这是更传统的产品设计哲学——即你代表用户，代表为用户争取最佳体验的立场。这意味着你需要做大量的用户访谈，全神贯注于交互流程，比如关注这个按钮的尺寸是否足够大、文案是否恰到好处。如果设计师不必为底层的技术实现分心，他们就能把全部精力聚焦在这些地方。甚至可以说，在真正关乎“这个交互流程对人类用户是否直观合理”的场景下，技术底层细节反而退居其次。</p>
+<p>所以这并不一定代表不同物种的设计师，而是取决于你如何看待整体的体系栈。把这个栈从纯粹的前端和后端进一步向外延展，涵盖界面层、用户层、商业背景下的产品定位，再到宏观经济环境下的产品形态。有些人完全扎根在靠近用户和商业的这一端，而我个人则更多横跨在产品设计与工程实现的交界处。在这整条光谱的任意位置上，优秀的设计师都能体现其独特的价值。正如有些人专注于视觉表现，有些人深耕动效设计，里面有大量的细分利基市场；而我只是更偏好那种“一半是工程、一半是设计”的切片。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: yeah, i think it gets into kind of like how we label different parts of design. that kind of design i'm talking about is obviously biased by my experience, which is much more design engineering stuff, because like what i hear &quot;design engineer&quot;, that's kind of a catch phrase now, what does that mean. but i think about it as a designer who really engages in the engineering and understands how the product works. and it's required—it's not required in all domains. again, if you're doing government forms, they don't think you need to understand the database. but if you're designing for developers or you're designing in a brand new field like AI, where so much of how the product works is determined by what is possible on the back end and the shape of the data, then you do need to engage that a lot.</p>
+<p>but if you're working on an app where actually a designer is better served by advocating for the user—i think that's a kind of more traditional philosophy of product design, where you represent the user, and you represent trying to get the best experience possible for the user. and that means user interviews, caring about flows, like does this button feel big enough, does it have the right words, and then they can spend much energy there if they don't have to care about the technical back end. and maybe it's actually relevant when really what you need to care about is like, does this flow make sense to people?</p>
+<p>so that's not necessarily a different kind of designer, but it's if you kind of think of the whole stack, right, but expand it all the way out, not just back end and front end, but the interface and users and then the product in the context of a business, and like the product in the context of an economy. like there are people who have been way more on this side. and i'm a bit more straddling the product design and engineering, but you can have valid designers all along this spectrum. and some people, again, you know, just visuals or just animation, like there's lots of niches. i just like a bit more of the half engineering half design slice of it.</p>
+</details>
+<h3>从代码实现到 AI Agent 指引：工具链的剧烈变革</h3>
+<p><strong>Speaker 1</strong>: 这有助于我们进一步了解你的日常工作。那么聊聊你平时使用的工具吧。作为工程师，大家习惯的工具过去主要是 IDE 和代码编辑器；还有一些偏底层的硬件工程师喜欢使用 Vim 等利器。这些年来工具虽然发生了一些变化，但基本范式还在。那么你自己日常都使用哪些工具呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: that helps understand a bit more of what you do. can you talk about the tools that you use? like, you know, as engineers our tools used to be the IDE and the code editor, and you know, several hardcore people like Vim and some of those things. and these days, of course, it changed a bit. but those are the tools of use. what are your tools?</p>
+</details>
+<p><strong>Speaker 0</strong>: 我的工具其实一直在变。在某种程度上，有些基础工作流是相对恒定的，比如你会持续完成类似的日常任务。但当下我几乎在尝试市面上能找到的所有工具，因为我职责的一部分就是为 GitHub 探索下一步的演进方向。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: it changes all the time. i mean, to some degree some things are constant like you're used to doing similar tasks. but of course, at the moment, i'm trying to try everything, because part of my job is trying to figure out what GitHub have to do next.</p>
+</details>
+<p><strong>Speaker 1</strong>: 这正是“GitHub Next”团队的核心使命。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: that's what the team does, GitHub Next.</p>
+</details>
+<p><strong>Speaker 0</strong>: 没错，这个团队名字起得很贴切。因此大部分时间里，我都在深度试用 Codex、Claude，并且在 GitHub 内部对各类原型工具进行日常狗粮自测（dogfooding）。我也尝试过 Conductor，以及各类自主 Agent，比如 OpenCode 等，几乎市面上的同类产品我都试了个遍。</p>
+<p>目前我确实非常喜欢 Codex。我认为 OpenAI 至少在桌面端应用的设计上做得极其出色，界面非常美观，并且经过了极为深思熟虑的考量。他们确实做出了非常棒的成果。</p>
+<p>不过在最初进行头脑风暴时，我依然会使用纸和笔。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: that's like—it was well named. so a lot of the time we are just—of course, i'm trying out Codex and Claude, and like dogfooding stuff internally at GitHub. i've tried Conductor, i mean name any autonomous agent, like OpenCode, I try them all. i do love Codex at the moment, like i do think OpenAI has done some really good stuff, at least in the design of their desktop app is beautiful. they've really thought it through. so i think they're doing some really good stuff. i still use paper and pen for like initial brainstorming.</p>
+</details>
+<p><strong>Speaker 1</strong>: 是的，你手边就放着几个笔记本。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: yeah, you have notebooks here.</p>
+</details>
+<p><strong>Speaker 0</strong>: 是的，我随身带了几个，因为纸质笔记本并没有过时，而且我认为它们永远不会真正消失。此外，我依然会使用 Figma，因为我对它非常熟悉，在把想法移交给 AI Agent 之前，我可以在 Figma 里完成一部分初步构思。</p>
+<p>但坦白说，现在的开发工作流中出现了一个明确的分水岭：一旦你弄清楚了自己到底需要构建什么——这实际上占据了全部核心精力——之后你就可以直接将它交付给 Agent。这并不是说实现阶段的工程问题全被彻底解决，而是说当前的 Agent 实现能力已经足够强，只要我能把需求规格（spec）定义得足够详尽清晰，并明确列出 Agent 应该如何向我验证它确实完成了任务，我就可以完全脱手交给它。我可以直接交代一句：“好了，搞定后提个 PR 告诉我。”</p>
+<p>你知道吗，我现在真的很少亲自去逐行审视代码了。当然，在审核 PR 的时候我确实会看一下代码变更，但也只是快速扫一眼，确认大致逻辑合理无误即可。</p>
+<p>因此，我发现现在最核心的工作全部集中在指导 Agent 进行具体实现之前的所有前期环节；而后续的 PR 审查则是另一块相对独立的工作。至于我所使用的绝大部分工具，如今依然集中在最初的定义与构想阶段。想当年，我们最主要的阵地是 IDE，一旦确定了设计方向，你就会坐在 IDE 前精心编写实现代码，那曾是一段美妙的过程。但如今写代码不再是工作中最主要的组成部分了。有时我还会打开 VS Code，但频率已经极低了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: yeah, i brought some along because notebooks aren't dead. i don't think they're going to be dead forever. i still use Figma because i know how to use it, and i can do some brainstorming in it before i pass it off to an agent. but to be honest, there's a point where once you figured out what you need to build, which is actually all the work, once you hand it off to an agent—it's not that implementation is solved, but we've reached a point where implementation is like good enough that if i spec it out really well, and i list out how the agent should verify to me that it actually did the work, i can hand it to an agent. i just like be like, &quot;right, let me know when you got a PR up.&quot;</p>
+<p>you know, i don't really look at code that much anymore. i do look at PR code when i'm reviewing it, but skim-skim, you know, okay, that looks sensible. so most of the work i find is everything leading up to telling the agent to implement something, and then the PR reviews, kind of a separate piece of work. but like the bulk of my tools are still in this first section now. whereas we used to have the IDE, you know, once it was like, okay, you've decided this is the right thing to design, now you actually start the work of like implementing it, kind of beautiful. that's no longer part of it as much. i open VS Code sometimes, but not really.</p>
+</details>
+<h3>原型驱动与 Agent 交互的规划痛点</h3>
+<p><strong>Speaker 1</strong>: 明白了。但在这之前，你过去会去亲手做原型吧？我原以为你必须自己动手去写原型验证。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: yeah, but beforehand you would build prototypes. i thought you would build prototypes.</p>
+</details>
+<p><strong>Speaker 0</strong>: 是的，这绝对包含在内。在探索“究竟该构建什么”的范畴里，我融入了大量的原型开发。同时我非常幸运能够身处这样一个团队：我们不需要交付生产环境级别的软件系统，核心目标是快速制作原型并验证概念想法。因此相比于直接向 GitHub.com 这样有着严苛质量门槛的生产主站交付代码，我们的质量标准容许度更宽，更侧重探索灵活性。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: yeah. yeah. that's part of that. like what should be built, i include in this lots of prototyping, and i kind of have the privilege of being on a team where we don't have to build like production quality software. we are mostly trying to prototype and validate ideas. so we have a lower quality bar than someone shipping to proper github.com that has a very high quality bar.</p>
+</details>
+<p><strong>Speaker 1</strong>: 是的，完全理解。这意味着你们的职责在于指明方向是否正确；一旦验证这个方向极具价值，后续既可以正式立项开发，也可以再审慎决定是否将其产品化。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: yeah, that's kind of—you get the directional things right, and once it's great, you might build it, or you might decide to build it.</p>
+</details>
+<p><strong>Speaker 0</strong>: 确实如此。我们稍后有望在屏幕上展示这些手稿，我平时做了大量的手绘草图。哪怕仅仅是做界面设计，很多时候你的工作就是随手画几个矩形框，然后推演思考：“如果我点击这个按钮，这个弹层是从侧边滑入还是从底部滑出？”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: yeah yeah, but i definitely—i mean, we can hopefully show these later. i do a lot of sketching. i mean, even just interface design, a lot of what you're doing is just drawing boxes then being like, &quot;does this slide over from the side or from the bottom?&quot;</p>
+</details>
+<p><strong>Speaker 1</strong>: 比如点击某个按钮后的反应。所以你本子上画的这些草图，就是你构思中的 UI 交互界面。我看到了各种 UI 草图的混搭，我们稍后会把这些画面投到屏幕上供大家观看。除了 UI，上面还包含着对具体功能的逻辑描述。你能挑选其中一个最具代表性或令人难忘的案例，详细给我们讲讲吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: like if i click this button. so this is like you drawing up a UI, an interface you think it could look like. so yeah, i see a mix of UIs—we will put this onto the screen—with descriptions of what they do. can you just talk through one of these that is interesting or memorable?</p>
+</details>
+<p><strong>Speaker 0</strong>: 没问题。这是一个全新的尝试，我需要交代一下背后的背景脉络。我目前正在制作一个原型项目，源于我的一个核心假设：当前人机协作中与 Agent 交互的最大瓶颈之一在于“规划（Planning）阶段”。目前规划阶段的用户体验普遍极其糟糕。</p>
+<p>在现状下，你往往需要与 Agent 展开漫长的纯文本对话，有时甚至只能在命令行交互界面（CLI）里进行，这本身就是一种非常原始简陋的交互形式。然后 Agent 就会像连珠炮一样拷问你，连续抛出各种 A、B、C 选项的单选或多选题；如果在一个复杂的大型任务尺度下，这种令人抓狂的追问可能会连续重复成百上千次。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: yes. so this is a new—i should explain the context. i am prototyping at the moment something where my theory is like one of the bottlenecks with agents is planning, is a really bad experience at the moment. like at the moment, you have a long chat with an agent, sometimes even in a CLI, which is a pretty primitive interface, and then the agent grills you by asking a set of like choice A, B, or C questions. and it does this like a hundred times over if you're using it at macroscopic scale.</p>
+</details>
+<p><strong>Speaker 1</strong>: 这段讨论最近恰好在播客里引起了广泛热议。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: it was just on a podcast. yes,</p>
+</details>
+<!-- chunk 4/13 -->
+<h3>决策疲劳与智能体交互界面的失配</h3>
+<p><strong>Speaker 0</strong>: 是的，而且当你回答到第 20 个问题的时候，整个人其实已经相当疲惫了，大脑也开始逐渐罢工、停止运转，我那位朋友当时就是这种状态。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Yeah, and by question 20, you're quite tired, and your brain starts shutting down. That was what happened with my friend.</p>
+</details>
+<p><strong>Speaker 1</strong>: 我之前也经历过类似的过程，当时我连续回答了三四十个问题，到最后整个人都快吃不消了。那些问题本身提得确实不错，但接二连三抛出来，人真的会开始感到厌烦和抓狂。特别是答到第 20 或第 25 个问题的时候，我就在想：到底什么时候才是个头？而且根本看不到进度，完全不知道还要回答多少个，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: I went through that, and I got through 30 or 40 questions, and I was kind of done with it. They were good questions, but I was starting to get annoyed, right? Like 20 or 25 questions in, I'm like... and also none of it was showing progress. It was endless, right?</p>
+</details>
+<p><strong>Speaker 0</strong>: 确实毫无止境。人类的大脑毕竟是会感到疲劳的，在如此短的时间内，你根本不可能持续做出质量始终如一的高水平决策。更关键的是，面对它抛出的绝大多数决策，你手头掌握的信息根本就不充分——它仅仅给你扔出一个问题和三个备选选项，然后直接告诉你“A 选项是推荐方案”。到后来你为了省事，往往就只会机械式地下意识回车：“行行行，选 A，回车，我同意你的意见。”</p>
+<p>所以这绝不是一种理想的交互体验。这触及了一个本质问题：目前的各类 AI 智能体（Agents）极其擅长输出成篇累牍、一间屋子又一间屋子那么大量的文本信息，对于智能体而言，这种长篇文本是它们最擅长、最理想的输出形式；然而，这却恰恰是人类最不擅长、最不理想的信息输入方式。</p>
+<p>这就造成了严重的供需失配：人类在面对海量复杂信息时，究竟需要什么样的呈现媒介，才能高效消化、真正理解透彻并做出深思熟虑的明智决策？显然，当前的命令行界面（CLI）或者干瘪的文字问答根本无法满足这一需求。因此，我目前正在深入探索：我们究竟该如何构建一种全新的交互界面，既能引导并辅助我们做好前期的架构规划与更优决策，同时又能以一种极其符合人类认知直觉、易于理解和掌握的方式呈现出来？这就是我现在正在打造的原型。</p>
+<p>这个原型的一个核心考量在于：它必须支持多人协同协作（Multiplayer）。因为毋庸置疑，在现实工程中，所有的规划与决策本就应该是由团队成员共同讨论、协同制定的，多名成员理应能够同时参与其中。但与此同时，更核心的问题是：你该如何为每一个具体的决策点赋予更充裕的认知展示空间？因此我正在尝试通过原型去验证它。归根结底，这种交互体验必须且必然要发生在一个图形用户界面（GUI）中，而绝不可能在纯粹的命令行（CLI）里完成。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: It's endless. And like the human brain, you get tired; you can't make the same quality decisions in this short amount of time. And also, you don't have enough information about most of those decisions because it's given you a question and three options. It tells you, &quot;Option A is recommended,&quot; so you just stop thinking and end up being like, &quot;Yup, A, Enter, I agree with you.&quot;</p>
+<p>So this is not an ideal experience. This gets into how agents love to output reams and reams of text—that's an ideal output for agents, but it is not an ideal input for humans. So we have a mismatch with what humans need to be able to digest large amounts of information, truly understand it, and make informed decisions. There is no proper interface for this right now.</p>
+<p>So I'm trying to explore how we would make an interface that enables us to do better planning and better decision-making, but in a way that is much easier for us to comprehend. This is what I'm prototyping at the moment.</p>
+<p>And part of this is: okay, it can be multiplayer, because of course everything should be done with your team planning together. Several people can do it together, exactly. But also just like, how do you make it so that you have more space for each decision? So I'm trying to prototype that. First of all, this definitely has to happen in a GUI, not in a CLI.</p>
+</details>
+<p><strong>Speaker 1</strong>: 所以你现在画的这些草图，就是为了探索如何给每一个决策提供更充足展开空间的初步构想，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: So these are just rough ideas of how you have more space, exactly?</p>
+</details>
+<h3>决策卡片、可视化上下文与团队审计追踪</h3>
+<p><strong>Speaker 0</strong>: 没错。我的设想是，每一个具体的决策项都应该拥有专属于自己的微型文档（Mini-document）或者卡片视图，并且能够根据决策本身的特性动态呈现。如果某个决策确实非常简单直观，那么仅仅提供三个单选选项也完全没问题，毕竟那是轻量级的简单决策。</p>
+<p>但很多时候，AI 询问我的决策根本不是文本能讲清楚的。比如它有时会问我：“你觉得这里的边框应该设置成 10%、12% 还是 15% 的灰度？”面对这种问题，我的第一反应是：“你直接展示给我看啊！这根本就是一个纯视觉层面的决策。”或者有时候它会问：“你希望整体系统架构如何组织构建？”这时我的反应是：“请直接给我呈现架构拓扑图、数据流向图，或者状态机模型图。”</p>
+<p>我现在正在探索的原型，就是让每一个决策都内嵌对应的图表、交互原型甚至内联 HTML 演示。这样一来，无论系统抛出什么样的问题，界面都能匹配并呈现出最恰当的上下文形态，来辅助人类做出决策。</p>
+<p>换句话说，在我的构想中，整份规划固然是一个宏观的大文档，但在文档内部，散布着这些独立的微型决策卡片；当你需要深入审视时，你可以把它们逐个展开，查看极其详尽的决策背景与多维细节。</p>
+<p>不仅如此，我认为每一个决策都应当明确指派并绑定到做出该决策的具体负责人身上。这样在项目的整个生命周期中，团队就能留下一份完整可靠的审计追踪记录（Audit trail）。这并不是为了事后去追责或责难某个人，而是为了当我们半年后回过头来复盘时，可以清晰地追溯：“当初我们为什么要在后端架构上做出这样的设计决定？”我们便能直接去查验：“看，这是当时某某同学在六个月前敲定的。让我们打开这张决策卡片看一看，他在当时做出这个决定时，眼前所依据的信息和上下文究竟是什么？”</p>
+<p>我坚信这种机制在项目后期会变得极具价值。不过在当前的阶段，我都还只是在纸上通过草图勾勒各种可能的交互形态：比如它究竟应该设计成一套可以在屏幕上层层展开的叠放卡片堆栈？还是设计成一整条支持横向滑动浏览的线性流？就像 Tinder 那样左滑右滑？到底什么样的交互界面对于这种场景才是真正顺手好用的？画草图的核心目的，正是为了在早期探寻事物所有潜在的可能性与视觉形态。</p>
+<p>我本子上画了各种各样的草图和角色，比如之前我还试图给 ESP 开发板设计一个小吉祥物角色。这看着就跟我家小孩子随手涂鸦一样，画完我都觉得好笑。你肯定知道 ESP32 吧？Steve Krouse 之前简直像在给所有人安利一样，动员大家去买 ESP32——就是那个自带小显示屏、搭载微型芯片且支持 Wi-Fi 和蓝牙的小硬件设备。所以我当时就在草稿本上设计了一个可爱的小角色，它既能给我播报实时天气，同时我也在尝试把它和我的 AI Agent 连接起来，让它随时用萌态提醒我：“在你的 Token 配额达到限流上限之前，当前还剩下多少可用容量。”所以我的草稿本里就是这样，随时随地记录着形形色色的各种点子。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Exactly. So I'm thinking of it as each decision maybe having its own little mini-document or card, depending on the decision. If it's just three multiple choices, that's fine—maybe that's a simple decision, right? Very basic.</p>
+<p>But sometimes it'll ask me things like, &quot;Do you think the border should be like gray 10%, 12%, or 15%?&quot; And I'm like, &quot;Well, show me! This is a visual question.&quot; Or sometimes it's like, &quot;How do you want the architecture to be structured?&quot; And I'm like, &quot;Well, show me an architecture diagram, show me a data flow diagram, show me a state machine.&quot;</p>
+<p>I'm trying to prototype decisions that come with diagrams, prototypes, and HTML embedded within them. So depending on what question is being asked, it shows me the correct interface to make that decision.</p>
+<p>So what I'm prototyping here is: okay, you've got a plan—that's a big document. Within it, you've got these little decision docs embedded, and you can expand them to see more of what you're looking at.</p>
+<p>I also think each decision should have a human assigned to it who made that decision, so that you have an audit trail later. Not necessarily to hunt people down, but to be able to say, &quot;Okay, why did we make that decision about the backend?&quot; Well, let's go see. Look, so-and-so made that decision six months ago. Let's go open up his decision card and see what information he had available in order to make this decision. Hopefully, this becomes really useful later.</p>
+<p>Here I'm just sketching one of the possible shapes. Does this take the shape of a stack of cards that expands on the screen, or is it one big linear canvas where you're swiping through stuff like it's Tinder? What interfaces are going to be truly useful for this? This is what a lot of sketching is: just trying to figure out the possible shapes of things.</p>
+<p>I have all kinds of things here—all these characters. I was trying to make an ESP character. Well, this looks like my kid's scribbling, all over the place. But you know, ESP32—Steve Krouse has basically sold everyone on buying an ESP32, that little device with a screen and a small microchip that has Wi-Fi and Bluetooth. So I was designing a little character who tells me the weather, and I'm trying to hook it up to my agent so it can tell me, &quot;You have this much capacity left before your rate limit happens.&quot; So there's all kinds of things happening in these notebooks.</p>
+</details>
+<p><strong>Speaker 1</strong>: 听起来你的草稿本真是丰富多样，既有非常严肃严谨的系统思考，也有很多天马行空、充满趣味的创意尝试。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Like it's a mix—some serious stuff and some fun stuff. Yeah.</p>
+</details>
+<h3>纸上思考与概念艺术的工程化溯源</h3>
+<p><strong>Speaker 0</strong>: 是的。关于在笔记本上用纸笔推演思考这件事，我觉得可能很多设计师都会这么做，但就我个人而言，这很大程度上源于我的插画背景。我之所以执着于纸笔，是因为我的职业生涯始于一个“凡事必须先画出来才能想清楚该怎么做”的世界。</p>
+<p>当年我做商业插画师的时候，手边常年备着无数本这样的草稿本。在真正动笔创作之前，你必须在纸上反复推敲：画面的构图应该怎样搭建？物体的物理形态与空间体块该如何分布？哪怕是场景中一撮杂草的走势和轮廓，你都要在纸上试验推演。因此，在很早的职业生涯阶段，我就已经养成了完全依赖纸笔来进行问题求解的习惯，用草图去摸索画面的结构、构图与版面排布。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Yeah. And I can show you—this whole thing with notebooks and thinking on paper, I think all designers do this, but coming from illustration, the reason I do this is because I started in a world where you have to draw everything to figure out what you're going to do.</p>
+<p>So when I was an illustrator, I had tons of these notebooks where you're figuring out: what's the composition? What's the physical shape of things? How are you working out the shape of the grass in a scene?</p>
+<p>I think I started problem-solving on paper very early on in my career, figuring out compositions and layouts.</p>
+</details>
+<p><strong>Speaker 1</strong>: 这种习惯是你大学时期养成的吗？大概是什么时候？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Was this in college? When was this?</p>
+</details>
+<p><strong>Speaker 0</strong>: 我记得大概是在给 egghead 画图创作的那段时期吧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I think I was working for egghead when I was doing this.</p>
+</details>
+<p><strong>Speaker 1</strong>: 这些本子里的图全都是你亲手画出来的吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: And you drew all of these? Yeah?</p>
+</details>
+<p><strong>Speaker 0</strong>: 对，都是我画的。我接受过非常严格的专业训练。我曾在洛杉矶生活过一段时间——虽然洛杉矶作为一个居住城市挺糟糕的，但当时带我受训的那帮老师和前辈，全都是参与好莱坞顶级电影制作的概念艺术家（Concept Artists）。</p>
+<p>他们的工作推演方式极其优美，而且带有极强的技术工程色彩。他们的绘图逻辑非常硬核：完全基于三维几何形体去解构和重构一切物体，就像是在三维立体空间中直接搭建和雕刻一样。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Yeah, I was trained with them. I was in LA for a while, which is a terrible place to live, but I trained with people who are concept artists on films. They have a really beautiful way of working that is very technical—very much about constructing things from 3D shapes, like drawing in 3D space.</p>
+</details>
+<p><strong>Speaker 1</strong>: 难怪看你本子上的这些草图，立体感和空间构造感非常强烈。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: These sketches are really 3D. Yeah.</p>
+</details>
+<p><strong>Speaker 0</strong>: 没错，他们教你如何严谨地构建场景、风景和复杂布局。我极其推崇他们的教学体系，因为那套方法真的非常偏技术化，在本质上它更像是一门工程学：比如设计机械与机器人时，你必须透彻理解各类机械关节的运动自由度、铰链与传动结构，这样你才能把一个机器人严丝合缝地装配起来，从而画出具有物理真实感和可信度的机械实体。</p>
+<p>在那套训练中，你必须极其透彻地理解现实世界的物理法则与结构逻辑，才有可能在纸面上令人信服地还原现实。正是这段经历，为我日后转向数字界面（UI）设计奠定了坚实的基础，让我习惯于在设计前期进行大量的纸笔草图推演。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Yeah. And then they teach you how to do landscapes and layouts. I loved their way of teaching, and again, it's very technical—it's like engineering. You have to understand, like with robotics, the different types of joints so that you can assemble a robot and actually draw a robot that was believable. There was a lot of understanding reality in order to believably draw reality.</p>
+<p>And doing this set me up, when I moved into UI design, to do a lot of this kind of sketching.</p>
+</details>
+<p><strong>Speaker 1</strong>: 确实如此，因为从纸笔草图切入感觉非常自然，草绘既快速轻便，修改和调整起来也更加随心所欲。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Because it comes naturally. I mean, these are a lot easier to sketch and easier to iterate on, yeah.</p>
+</details>
+<h3>纸笔草图的快速低成本反馈与非语言化思维</h3>
+<p><strong>Speaker 0</strong>: 而且纸笔推演的核心价值在于，它能够以极低的心智负担迅速承接你脑海中模糊的灵感。诚然，我完全可以打开 Claude Code，敲下一行 Prompt：“嗨 Claude，我脑子里有一个新点子，它看起来像是一堆层叠的手风琴卡片……”但是，直接在手边的桌上抓起一支铅笔，用手在纸上唰唰几笔勾勒出来，速度要快得多得多，付出的心智阻力也极其微小。</p>
+<p>现在网络上总有一帮人不断鼓吹，说什么“未来人人只需要写 Prompt 就能生成创造一切”。但他们忽略了极其关键的一点：在创意的最早期探索阶段，你迫切需要的是那种极度敏捷的即时反馈，以及足够松弛、自由、粗糙的表达载体，这样你才能在把想法凝练成精确的文字指令交代给 AI 之前，先亲手摸清事物大概的形态和轮廓。更重要的是，这是一种纯粹的视觉思考过程，根本无法被语言文字所替代。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: But that helps you on paper. When you have an idea in your head, sure, I could go into Claude Code and be like, &quot;Hey Claude, here's an idea I have: it's like a stack of cards in an accordion.&quot; But it's much faster to just grab a pencil on the desk next to me and draw that with my hands. It requires way less effort.</p>
+<p>I feel like people online keep saying, &quot;Everyone is just going to prompt everything to create.&quot; But you need something that gives quick feedback and is very loose in the early stages to figure out the shape of something before you can even put into words what you want an agent to do. And it's visual—it's not text.</p>
+</details>
+<p><strong>Speaker 1</strong>: 而且用手亲笔画出来，是不是也会给人带来一种更加充实踏实的满足感？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Isn't it a bit more satisfying doing it by hand? So much better?</p>
+</details>
+<p><strong>Speaker 0</strong>: 确实爽快得多！而且画在纸上后，它是真实具象存在的，不会随着屏幕窗口的关闭而消失。它就静静地平摊在你的书桌上，第二天你走过来一眼看到它，立刻就能心领神会：“哦对了！昨天我正琢磨着把这个功能模块做成这种形态呢。”</p>
+<p>当然，你也可以在上面随意绘制数据架构流向图，或者任何你想画的东西。它不一定非得是精美的视觉艺术，它的本质是一种在想法尚未形成语言文字之前、将非语言化的直觉思考向外投射物化的最有效途径。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Yeah! And then you can look at it—it doesn't vanish on your screen; it can just sit on your desk. The next day you can look at it and be like, &quot;Oh yes, I remember I was trying to figure out what shape this feature should take.&quot;</p>
+<p>Or you can draw data diagrams, whatever you want. It doesn't have to be purely visual, but it's a way of externalizing thoughts before they are linguistic.</p>
+</details>
+<h3>AI 智能体的空间推理缺陷与前期设计协作的边界</h3>
+<p><strong>Speaker 0</strong>: 我认为这正是当下人机协作中最核心的症结所在：现有的 AI 智能体本质上只能接收文本作为核心输入。诚然，多模态模型现在确实能够读取图片，我也经常拍下草稿纸的照片喂给它们，但它们对图像的理解能力和空间推理（Spatial reasoning）能力依然极其糟糕，搞视觉设计更是破绽百出。</p>
+<p>如果你尝试让现在的 AI 去做界面视觉设计，它们会犯下大量低级错误：完全缺乏合理的视觉边距留白，元素的尺寸比例彻底失调，甚至把文字层叠覆盖在一起导致完全无法辨识。想通过纯文本向智能体清楚描绘一个精妙的视觉创意，过程极其痛苦费劲，而且最终的交付效果往往惨不忍睹。</p>
+<p>因此我发现，在整个设计探索的前期阶段，我依然必须在完全不依赖 AI 智能体的情况下，独立完成绝大部分的设计推演。因为这个阶段的本质，就是纯粹靠人脑去推敲、穿透那些复杂的视觉元素与空间结构。</p>
+<p>只有当我在纸面上把所有的形态、交互层级都彻底琢磨透彻，心里明确知道“这正是我想要的最终形态”之后，我才能回过头去向智能体下达清晰的工程实现指令。我很清楚现在网上有很多人吹嘘他们如何在极早期就让 AI 深度参与界面设计，但在我看来，对此我持有相当大的怀疑态度。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I think this is the key thing: again, agents primarily accept text as inputs. Okay, they can read images—I do take photos of my sketches and feed them in—but they are not as good at images, and they are very bad at spatial reasoning. They are very bad at visual design.</p>
+<p>When you try to get them to do design, they constantly make mistakes. They don't put proper margins around things, sizing is wrong, and they overlap text in ways that make it unreadable. Trying to explain a visual idea in text to an agent is really challenging and doesn't work very well.</p>
+<p>So I find I still end up doing a lot of my design without agents upfront, because all it is, is thinking through the visual pieces of it. And then, when I'm like, &quot;Okay, I know this is the shape of the thing I want,&quot; then I can tell an agent to build it. But I find it hard to involve them earlier in the way that people claim they do—I'm quite skeptical about that.</p>
+</details>
+<p><strong>Speaker 1</strong>: 这确实是一个极其有趣的现象。其实不仅是在界面设计领域，即便是在纯粹的软件系统设计与架构设计讨论中，就我亲身观察而言，团队中生产力最高、最富洞察力的研讨时刻，往往也都是大家聚在线下会议室里、围着一块白板展开激烈探讨的时候。在白板前，大家一边画一边讨论微服务组件、数据库选型、网络拓扑、服务间连接调用以及重试逻辑等等——而所有这些系统层面的宏观设计，恰恰也是最需要通过图示与空间关系来进行直观描述的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: That's really interesting, because even in software design, talking about architecture design, some of the most productive sessions I've observed have been in person around a whiteboard. People are gathered together talking about components, databases, networking, connections, retry logic, whatever—all these things you could describe visually.</p>
+</details>
+<!-- chunk 5/13 -->
+<h3>白板、二维空间与协作载体</h3>
+<p><strong>Speaker 1</strong>: 或者说你是把想法放到电脑上？但是当你把它画在白板上时，当某个人把它画在上面，然后另一个人接着去看，他们其实是被迫把自己的想法投射到了一个二维空间之中。因为对于我们人类来说，我们虽然生活在三维空间中，但并不是所有人都能画出很棒的三维立体图。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Or are you put on a computer? But when you put it on a board, when someone put it on there and then someone else takes, you know, they kind of, it's they're forced to take their ideas into 2D space. Because we, under 3D, not everyone can draw cool 3D.</p>
+</details>
+<p><strong>Speaker 1</strong>: 不过，我们所有人都可以画方框和箭头。某个人画了框和线，其他人一眼就能看懂，然后走上前去补充自己的想法，或者在上面画圈，亦或是添加新的组件。即便在数字化空间里也是如此，我觉得 Miro 就是一个非常绝佳的范例。他们之所以变得如此流行，正是因为他们彻底摸索出了一套实现多人协同白板交互的方法。你不需要非得和同事待在同一个物理房间里，但他们为你提供了高度相似的工具体验。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: But what we can also do is just boxes and arrows. Someone does that and the other people understand, and they go and they add their own thing, or they circle, or they add new components. And even in digital space, I think Miro was a good example. They became so popular because they figured out a way to do collaborative whiteboarding. You don't have to be in the same room, but they give you somewhat similar tools. Yeah.</p>
+</details>
+<p><strong>Speaker 1</strong>: 所以我一直在思考，这种把个人头脑中的想法具象化到某种物理媒介上的过程——对于我们软件工程师来说，可能是一块白板，或者是一个随身笔记本——是否仅仅是有助于思维的呼吸沉淀，让抽象逻辑变得切实具体？抑或是，它本身就具有一种强有力的约束引导机制（forcing function），迫使你去推敲那些图元构形与发散路径。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: So I wonder if this whole thing of getting your ideas either to a physical medium, which I think for us engineers is the whiteboard, or for us the notebook, maybe just helps breathing or solidify, or also it does have a forcing function about the shapes that you draw.</p>
+</details>
+<h3>人机界面的演进与智能体的物理鸿沟</h3>
+<p><strong>Speaker 0</strong>: 是的，完全是这样。这其实就引申到了界面的本质。坦率地讲，我们目前为 AI 智能体（Agents）所构建的人机界面还极其原始。我想大家心里都清楚这一点，对吧？我们所有人涉足这一领域其实也就短短几年时间。我觉得这真的很不可思议。或许也就是五年左右？我都快记不清 GPT-4 到底是什么时候发布的了，是三年前还是四年前？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Yeah, yeah, yeah, yeah. And this gets into kind of like the interfaces. We have to agents right now are so primitive. I think we know this, right? We're all like a couple years into this. And I think which just is, it's wild. Maybe five years. I forget when GPT-4 came out, was it three or four years ago?</p>
+</details>
+<p><strong>Speaker 1</strong>: ChatGPT 3.5 发布大概是三年前吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: ChatGPT 3.5 came out in the three years, was it?</p>
+</details>
+<p><strong>Speaker 0</strong>: 其实是四年前了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: It was four.</p>
+</details>
+<p><strong>Speaker 1</strong>: 四年？不，是 2022 年 11 月，对吧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Four years? No, November 2022. Yeah.</p>
+</details>
+<p><strong>Speaker 0</strong>: 是的。就在它刚一亮相的时候，我们团队当时内部还在反复研讨是否要做一个对话聊天式的交互界面。结果他们直接把对话界面推了出来，我们当时的感觉就是，好吧，他们把这个形态彻底引爆了。虽然这并不必然意味着我们要和他们进行同质化竞争，但回顾起来，那段历史距今其实并没有过去多久。我们能在这么短的时间内走得这么远，确实相当不可思议。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Yeah, yeah. As soon as that launched. And then, because we were debating doing a chat interface, and then they did that, we were like, oh, they accelerated it. It's not necessarily competing with them, but that is no time at all. And it's kind of wild we've made it as far as we have.</p>
+</details>
+<p><strong>Speaker 0</strong>: 但正如我经常挂在嘴边的那句话：整个现代软件设计领域依然是一个极其年轻的学科，我们满打满算进入这个行业也才不过六十年光景。因此，即便是对于传统的人机交互，我们至今也远远没有彻底参透如何去设计出最理想的人机沟通界面；至于面向自主智能体（Agents），我们探索出来的认知更是微乎其微。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: But it's also like I always say, software design is an extremely young field, like we're 60 years into it at most. So even with that, we haven't figured out a lot of things about how to design the best interfaces for people and machines to communicate with each other, and agents barely at all.</p>
+</details>
+<p><strong>Speaker 0</strong>: 我总觉得，在智能体生存的世界与人类所处的世界之间，横亘着一条巨大的鸿沟。智能体栖息在模型权重、底层架构、技能模块（Skills）以及 MCP 协议之中；而反观人类这一端，我们感知的是真实物理世界、质感、光影、实体材料。所有这些人类赖以思考的实体要素，智能体其实全无认知。因此，去探寻能够让我们在中间地带相遇的“数字制品”（Artifacts），并在此基础上协同共创，才是一项真正极其艰巨的挑战。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I feel like there's just like this gap. Where do the agents live in? There's weights and models and skills and MCPs. And then you have your human side that is like physicality and texture and light materials and all these things agents don't understand, and trying to find artifacts that allow us to meet in the middle and create stuff together is like the really hard challenge.</p>
+</details>
+<p><strong>Speaker 0</strong>: 因为你面对的是两种截然不同的实体形态。我并不是说智能体已经具备了自我意识，我绝对不属于唯意识论那一派阵营，但它们确实代表了一种独特的智能形态——它们倾向于以某种特定逻辑去思考与行动，而这种逻辑根本不是人类习惯的思考与行动方式。在这两者之间进行语义和心智的转译，是极其困难的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Because you got two totally different types of beings, not that agents are conscious beings, I'm not in that camp, but they are a type of intelligence that wants to think and act in a certain way that is not the way humans want to think and act. And it's hard to translate between the two.</p>
+</details>
+<p><strong>Speaker 0</strong>: 我常常会感到一种强烈的挫败感，因为它们无法真正做到站在我的身旁，看一眼我的肩膀上方，或者凝视着我面前摊开的笔记本，去完全理解我随手画下的草图与图元，进而顺理成章地推动我的构思向前演进。这正是我终极期盼的愿景——希望智能体终有一天能够原生理解物理空间、光线、几何形态和线条轮廓。但坦白讲，我们距离实现这一理想蓝图显然还有相当漫长的路要走。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I just find myself frustrated that they can't sort of, you know, be looking over my shoulder or looking at my notebook and be understanding what I'm drawing and helping me move my ideas along. This is like the eventual dream is they understand space and light and shape and lines, you know, but I think we're quite a ways away from that.</p>
+</details>
+<h3>软件工程师的实体手艺：从数字化到木工</h3>
+<p><strong>Speaker 1</strong>: 我们刚才聊到了你的笔记本，而且我也注意到你最近频繁谈及的一件事情，那就是做木工。你曾经说过类似这样的话：“我已经到了做软件的某个特定人生阶段，那就是你开始渴望真正去学习和打磨一门木工手艺的阶段。”你能详细聊聊那段经历和心境吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: So one thing we've talked about your notebooks, and quite something you said recently is woodworking. You said, &quot;I'm at that stage of software where you start taking woodworking classes.&quot; Can you talk a little bit about that experience?</p>
+</details>
+<p><strong>Speaker 0</strong>: 哈哈，这半开玩笑的段子背后其实隐藏着一个真实的现象：在某种程度上，几乎每一个软件工程师在职业生涯的特定节点都会面临一次爱好选择。因为长期深耕于虚拟软件世界，你整个人会感到一种与物理现实世界彻底剥离的“失重感”和“脱敏感”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Well, the little bit of the joke is like I just feel at some point, every engineer, you have a choice of things you can get into because you feel like you're disembodied from the world working in software.</p>
+</details>
+<p><strong>Speaker 0</strong>: 于是你必须从中挑选一项能调动身体触感的实体手艺来平衡自己——比如搞陶艺、做手工酸面包烘焙，或者是捣鼓摩托车维修机械之类的。而在所有这些选项里，木工是一项格外受程序员欢迎的活动，因为它本质上依然高度契合工程思维：它离不开精密的度量、严谨的容差计算以及对毫厘分寸的执着。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: So you have to pick ceramics, bread baking, you can maybe pick like motorcycle repair or something. But woodworking is a pretty popular one because it's like engineering in that it has measurement and being precise.</p>
+</details>
+<p><strong>Speaker 0</strong>: 我之所以下决心去学木工，是因为我在伦敦买了一套房子。伦敦现存的所有住宅基本都年头极老。在这座城市置业，买到一套需要大修大改的老房子几乎是不可避免的宿命，阿姆斯特丹估计也是同样的境况。正因如此，你整个人瞬间被逼到了墙角：“天哪，我必须立刻掌握各种居家 DIY 维修技能了。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Um, so yeah, I'm learning woodworking because I bought a house here. And all the houses in London are very old. You buy a house that needs a lot of work, that is like always what happens, maybe the same in Amsterdam. Yes, it happens. So that you suddenly become like, &quot;Oh, I need to learn DIY skills.&quot;</p>
+</details>
+<p><strong>Speaker 0</strong>: 在这个过程中，大语言模型和 ChatGPT 确实充当了非常得力的指导教练；我也在 Instagram 等平台上刷了海量的专业教程。但我很快就意识到，家里有太多定制需求必须要去解决。我需要为房间量身打造定制置物架，我需要去维修老旧损坏的楼梯踏板。然而在此之前，我可以说完全是零动手能力，根本没有任何木工和 DIY 底子。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Which, you know, LLMs and ChatGPT were very helpful coaches in this regard, along with Instagram a lot. But I just was like, oh, there's so many things I need skills to figure out how to make. I need to make shelves, I need to fix this staircase. Well, I had no DIY skills, no woodworking.</p>
+</details>
+<p><strong>Speaker 0</strong>: 不过我对自己说，我的年龄还不算太大，我完全有能力把这门全新的技能图谱啃下来。虽然我无法保证这些体验能和我的软件研发工作产生多么直接的映射对标，但木工带给我的是一种更为纯粹、更为深层的满足感——在这里，你可以真真切切地伸出双手，抚摸并触碰你自己亲手创造出来的实体物件。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: But I took a course, being like, I'm pretty sure I'm not too old, I can acquire these skills. I'm not sure about the parallels to software, but in a more satisfying way where you actually touch the thing you made.</p>
+</details>
+<h3>重新定义设计工程师：超越微交互与动效</h3>
+<p><strong>Speaker 1</strong>: 你长期以来一直在持续探讨的另一个核心议题，就是“设计工程师（Design Engineer）”这个概念。早在几年前，你就曾经公开发文表达过类似的想法。你写道：“我内心有一种极为强烈的冲动，渴望在某一天成为一名真正的全能型设计工程师。虽然我当时并不是完全清楚这个头衔究竟意味着什么，但我只想去接触大量的底层代码，在屏幕上攻克实打实的具体问题，并亲手打造出极具美感、充满生机的交互体验。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: One thing that you've been talking about is the concept of design engineers from a few years ago. You posted or quoted, &quot;I'm having a strong urge to become a full-blown design engineer one day. I'm not entirely sure what it means, but I just want to touch lots of code and solve tangible problems on screens and make beautiful, animated stuff.&quot; Yeah.</p>
+</details>
+<p><strong>Speaker 1</strong>: 随后你还身体力行地去做了一番梳理，试图把所有你认识的、符合这一特质的设计工程师名单汇集起来。如今几年时间过去了，对于究竟什么是设计工程师、他们是否真实存在、他们的日常职责是什么，以及他们通常散落在什么样的企业组织与工作环境中，你形成了哪些全新的洞察？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: And then you went over and you tried to collect the names of people who you knew, who you felt were kind of doing this design engineering. Now that was a few years ago. What have you figured out about design engineers, if they exist, what they do, what places they work in?</p>
+</details>
+<p><strong>Speaker 0</strong>: 我坚信设计工程师是确凿存在的。不过我觉得 Twitter 社区对此可能有着完全不同的界定标准——抱歉，现在应该改口叫 X 了，不管是 Twitter 还是 X 都是同一个平台。在 X 上，我发现很多人虽然被冠以“设计工程师”的名号，或者以设计工程师自居，但他们本质上其实是极其出色的“微交互设计师”（Micro-interaction Designers）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I think they do exist. I think Twitter might have a different definition, or like, I think there's a lot of, well, that they should call X, sorry, Twitter or X, all the same. On X, I feel like a lot of people who get called design engineers or who present themselves as design engineers actually are like very good micro-interaction designers.</p>
+</details>
+<p><strong>Speaker 0</strong>: 比如他们会展示一个按键上酷炫无比的 Hover 悬停响应高光，或者一个非常精致惊艳的加载过渡动效。这些视觉细节固然非常引人入胜，但我个人并不会把这视作真正意义上的“设计工程”。因为在今天，你完全可以通过向 AI 智能体下达一段自然语言指令来实现绝大多数这类型效果，甚至全程都不需要亲自审视一行具体的代码。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Like, here is a cool hover effect on a button, and like, here is a cool loading transition state. Those things are definitely cool. I don't consider that design engineering because you could achieve most of those things by just telling an agent to do those without looking at a single piece of code.</p>
+</details>
+<p><strong>Speaker 0</strong>: 在我看来，那种工作范畴更多偏向于极其成熟、高阶的动效设计（Motion Design）和视觉传达设计。这确实很棒，但我不会将其定义为设计工程，因为我不认为单纯制作微交互动效足以支撑起一个完整、具有深度的工程职业生涯。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: To me, that's just like very advanced, sophisticated motion design and visual design. And that's cool. But I don't consider that design engineering because I don't think that's like a full job for you to do that as a career.</p>
+</details>
+<p><strong>Speaker 0</strong>: 相比之下，我认为真正优秀的设计工程师所做的事情，正是我前面所强调的模式：你必须更大幅度地踏入工程技术的核心地带。你依然是一位敏锐的设计师，你依然深度关注产品领域中的核心名词与动词定义，关注视觉体验与美学品质；但与此同时，你能够与纯后端研发团队保持极其亲密的协作，甚至直接亲自上手去编写代码与交付工程实现。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: But design engineering now, what like the people who I think of as good design engineers do, is the kind of thing I was talking about before when you step much more into the engineering side of work. So you're still a designer. You're still caring about product nouns and verbs and like the visual design. But then you really work with engineers closely and/or are like directly involved in implementing and writing code yourself.</p>
+</details>
+<p><strong>Speaker 0</strong>: 你不需要成为无所不知的绝对全栈专家，但你必须对自己正在构建的产品的技术架构具备底层深度的洞察与理解。你能够清晰地判断出：基于当前后端数据结构和接口形态，前端界面在物理上究竟能做到什么、不能做到什么？这种设计探索才是最具价值的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: And you fully understand, not that you have to be full-stack, but like you have a deep understanding of the technical architecture of the product you are building. You really are like, okay, given the shape of the backend data, what is possible in the interface? Like that sort of design work.</p>
+</details>
+<p><strong>Speaker 0</strong>: 同样，在当前的 AI 浪潮下，基于现有基础模型的能力边界以及我们内置到系统中的自定义技能集（Custom Skills），我们到底该如何在产品界面中向终端用户准确传达这套系统的实际能力边界？这需要你深入技术细节进行钻研，而不是仅仅漂浮在市场调研、用户访谈，或者争论侧边栏该挑哪种颜色的表层设计世界里。你必须与工程师紧密并肩作战。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Given what models are capable of and what kind of custom skills are built into this product, how do I explain to users what the capabilities of this product are? Truly digging into the technicals and not living in the world of just user interviews and like what color is the sidebar, but caring and working much more closely with the engineers.</p>
+</details>
+<h3>设计工程师如何消除跨职能协作的摩擦</h3>
+<p><strong>Speaker 0</strong>: 而且在绝大多数情况下，真正优秀的设计工程师几乎总是在亲自承包大量的代码实现。就我个人而言，我一直以来都是自己亲手编写全部的前端代码，因为这样迭代起来反而是最高效直接的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: And almost always, I feel like implementing a lot of it yourself. Like I've always done my own frontend work because it's easier.</p>
+</details>
+<p><strong>Speaker 0</strong>: 每当我这么做的时候，与我搭档的后端工程师通常都会感到欣喜若狂。因为众所周知，很多后端工程师极其厌恶跟 CSS 样式打交道。当我们把前端界面的担子接过来之后，他们就可以心无旁骛地专注于更具挑战性、更底层的架构模块——比如数据同步机制、前端底层的业务逻辑编排等等。他们能够全力以赴投入到深层系统逻辑的构建中，而完全不需要分心去纠结“这个组件的圆角半径（border-radius）究竟设为多少像素才合适”。事实是，他们极少真正在乎这些 UI 视觉细节，但我却对此极度敏感和挑剔。因此，这种协作分工从来都是天衣无缝、彼此赋能的。综上所述，我对设计工程师的定义就是：那些在设计实践中极度深潜进工程技术肌理的人。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: And then the engineers I work with are usually thrilled because they hate CSS, and then they get to go work on like the more interesting, difficult stuff, like the syncing or the back of the frontend work, you know, like the more logic stuff. They really get to engage in that. And they don't have to worry about like, &quot;Is this the right border-radius on something?&quot; I don't think they rarely care, and I do care. So it's always worked out well to do that. So I just define it as someone who's like deeply into the engineering side of design.</p>
+</details>
+<p><strong>Speaker 1</strong>: 在你以往的任职经历、当前的岗位实践，或是与周边设计师朋友的交流中，你所见证过的最理想的设计师与工程师协同范式究竟是什么样的？这其中是否要求对方必须是设计工程师？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: What's in your past positions, current positions, through friends who are also designers, what have you seen great engineer and designer collaboration look like? May that be with designers or design engineers?</p>
+</details>
+<p><strong>Speaker 0</strong>: 在我的经历中，正是因为我拥有设计工程师的定位，我与工程研发团队之间的协同配合向来都保持着极其融洽且高效的状态。其中的核心奥秘就在于我前面提到的：你主动包揽了他们最不愿意碰的那一部分工作，从而从根源上消除了外界普遍认为存在于设计师与工程师之间的那种天然摩擦与抵触情绪。在我的整个职业生涯中，我几乎从未遭遇过那种职能撕裂，因为从始至终，我自己就是一个亲手写代码的前端人。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I mean, I do find being a design engineer, I've always had amazing collaborations with engineers because, again, you do the bit they didn't ever want to do. And you take away what I assume is most of the tension between designers and engineers that I've never experienced, because I've always been a frontend person.</p>
+</details>
+<!-- chunk 6/13 -->
+<h3>设计与工程脱节的根源：媒介特质与工具局限</h3>
+<p><strong>麦琪（Maggie）</strong>：但我经常听说有这种情况，你知道的，双方之间一直存在张力——比如设计师交付了一份极其完美的 Figma 设计稿，但工程师实现出来的效果却没有完全符合规范。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Maggie</strong>: But I heard of people, you know, there being the tension where you have like someone's made some perfect Figma file, and the engineer hasn't implemented it exactly to spec.</p>
+</details>
+<p><strong>主持人</strong>：对，确实是这样。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, yeah.</p>
+</details>
+<p><strong>麦琪（Maggie）</strong>：显然，这种摩擦之所以产生，是因为有人脱离了现实媒介在做设计……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Maggie</strong>: And obviously, there's a tension there because someone made something in a media...</p>
+</details>
+<p><strong>主持人</strong>：比如设计稿里做了一个非常漂亮、平滑的高级渐变效果，但这可是要放在移动端上的，而在移动端上渲染这种渐变可能会彻底毁掉滚动流畅度和性能。当然，我这里举的是好些年前这类问题很普遍时的例子了。是的，有时候你甚至没法统一某一个特定色值，或者你得费尽心思向设计师解释系统底层的性能瓶颈，提醒他们考虑低端设备——比如 Android 低端机，或者 iOS 和 Android 之间的差异，而很多设计师往往更偏向 iOS 生态。当然，优秀的设计师通常不会犯这种错误。但在很多情况下，工程师不得不出面说：“我们这里存在客观的技术限制。”没错吧？无论具体原因是什么，这种冲突总是屡见不鲜。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: There's a nice, great gradient, and it's on mobile, and doing gradients would absolutely screw the scroll performance. And again, these are talking about years back when this was a thing. Yeah, and going back, like you cannot gauge a single color, or you try to explain like what you can do with performance limitations or think about low-end devices on Android or iOS versus Android, where a designer might be more into the iOS world? And again, a good designer would not. But there's oftentimes the engineer would come like, &quot;We have constraints,&quot; yeah, right, for whatever reason.</p>
+</details>
+<p><strong>麦琪（Maggie）</strong>：是的。我认为这触及到了核心问题——我并不想单纯归咎于设计师，因为这在很大程度上其实是工具的失败。大家过去习惯使用的设计软件，从早期的 Sketch 到现在的 Figma，产出的本质上都是像素级的高保真视觉模拟图（pixel mockups）。这些工具本身与具体媒介的物理约束几乎没有任何关联，无论你最终是面向 iOS、桌面端还是 Web 平台构建产品。</p>
+<p>但在任何设计门类中，你都必须深刻理解你所使用的材料特质。就好比一位制作桌子的木工设计师，不可能对橡木在特定环境下的表现一无所知，也不可能不清楚松木在受力时容易产生凹陷的物理属性。同理，如果你是在为 Web 环境做设计，却完全不懂底层性能、不清楚应用程序如何拉取数据、不知道加载时间是长是短、或者代码中是否存在竞态条件（race conditions），如果你对这些工程现实全然不知，你最终做出的必然是不合理的设计方案，随后导致极其糟糕的用户体验和技术妥协。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Maggie</strong>: Yeah, I think this gets into like, I wouldn't want to blame the designers, because I think it's a failure of tools because the design tools that everyone used to use, Sketch and Figma, are like pixel mockups. They have no relationship to the constraints of the medium, which is like whatever you're building for iOS or desktop or the web. But you have to understand like the materials you're building with in any design role. Like yes, a table designer would not like be oblivious to how oak performs in certain contexts, right, or like how pine dents in a certain way. And in the same way, I think if you're designing for the web and you don't understand like performance, or like how is your application fetching data, or what's the loading time, or if there's race conditions? I think if you are oblivious to that, you end up with bad design solutions, and then with really bad registration / degradation, yeah.</p>
+</details>
+<h3>AI 智能体如何打破设计与工程的壁垒</h3>
+<p><strong>麦琪（Maggie）</strong>：所以我非常寄希望于 AI 智能体（Agents）能够真正帮助化解这种脱节。因为当设计师开始借助智能体工作时，他们能够更加深入地踏入工程实现的领域，同时还能把智能体当作自己的导师和实时学习工具。设计师完全可以对智能体说：“工程师刚才跑来跟我说代码里遇到了某种特定的错误状态（error state）或者边界状态（ARIA/area state），我这辈子都没听说过这个名词，你能给我解释一下为什么会出现这种状态吗？帮帮我，咱们一起把这个状态机（state machine）搭出来，好吗？”</p>
+<p>现在有这么多全新的工具可供使用。过去那些摩擦与沟通障碍，很大程度上只是由于工具层面的断层造成的。至于那些依然固步自封、不愿放手的旧式设计师——比如坚持认为“我的职责只是画像素级高保真视觉稿”，虽然我身边已经几乎见不到这样的人了，但如果真有人还停留在那种观念里，那基本就只能被时代淘汰了。我不觉得那种工作模式在未来还能走得通。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Maggie</strong>: So I'm hoping agents actually help solve this, right, because really then designers using agents can step more into the engineering side and also use agents as a coach and like a learning tool and say, &quot;Okay, the engineer has come back and told me that we have this like error state / ARIA state I've never heard of in my life. Like explain to me why that error state would occur. You know, help me build a state machine, right?&quot; Like there's all these new tools available. But those old frictions, I have to assume were just like tool-based things. And I would say, designers that are maybe stuck in the past who don't want to let go of like, &quot;Oh, I make pixel mockups,&quot; don't know anyone like that anymore, but if they still are, I mean, you're just out, yeah. I can't imagine that really going well in the future.</p>
+</details>
+<p><strong>主持人</strong>：而且关于 Figma，它在很长一段时间里都太流行了，几乎成了工程师与设计师之间唯一的协作接口。那么，你如今是如何使用 Figma 的？或者说在过去你又是怎么用它的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And Figma was such a popular tool for a while that that was the interface between engineers and designers. How do you use Figma today? Or how have you used it in the past?</p>
+</details>
+<h3>从静态画布到动态治具：麦琪的 Figma 与原型工作流</h3>
+<p><strong>麦琪（Maggie）</strong>：对我来说，我从来不会在 Figma 里死磕超高保真的设计稿。我用 Figma 主要是为了在纸质笔记本草图的基础上，勾勒出界面的粗略框架。笔记本能帮你快速构思出整体轮廓：“大概长成这个形状”，但那毕竟非常粗糙。这时候把草图搬进 Figma 就特别有用，我很喜欢用它来摸索：“什么样的色彩搭配能呈现恰到好处的对比度，从而吸引用户对页面核心元素的注意力？”或者“这段正文和标题到底需要多大字号，整体阅读流才能足够舒适自然？”</p>
+<p>但我绝不会在 Figma 里面把设计推进到极度细化的程度。因为到了实际运行环境中，一切全都不一样了。我的主要工作是做 Web 界面设计，而在浏览器里，所有视觉呈现都会发生变动——从不同操作系统的字体渲染机制、抗锯齿差异，到响应式布局的动态伸缩，以及断点到底该设置在哪个确切的像素阈值上。</p>
+<p>因此，我通常很早就把设计带入真实浏览器中。在 Figma 里做到中等保真度、定好基本骨架后，我就会立刻把它转入真实的代码原型（prototype）中，在那里你才可以真正去微调和打磨细节。</p>
+<p>现在有了 AI 智能体，工作流更是进化了：我只需要直接把智能体指向我的 Figma 设计稿，对它说：“把上面的所有结构和样式全部还原到代码原型里。”接着，我会在原型里构建一种叫做“治具”（jig）的交互控制工具——就是在界面旁边挂载一些滑动条和控制面板，用来动态调节各种变量。</p>
+<p>“治具”（jig）这个词其实来源于木工领域，意思是你为了完成某道特定工序而亲手制作的辅助小装置。在设计中，当你在一个真实可运行的代码原型上调试时，你可以明确列出：“这些是核心可变参数，我现在不太确定主标题的字号究竟多大合适，也不确定这里的配色方案，那就给我生成一组滑块和取色器，还有这套动效过渡曲线（animation curve），我也拿不准，把它们做成旋钮让我在页面上实时微调。”</p>
+<p>当我在实时运行的原型中把这些数值调到了完美状态，我再将这组精确的参数直接提交并固化为正式代码。这种流程不仅比在 Figma 里反复手工调整要敏捷得多，而且也是按照实际开发所需直接构建的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Maggie</strong>: I think I've always used it like not to get to high-fidelity mockups at all. I think, to get like the rough shape of things past a notebook. Like a notebook, you can be like, &quot;The shape of it is like this,&quot; but it's super rough. Sketch and Figma is useful, I find, for being like, &quot;Okay, exactly what color is like the right amount of contrast, like draw attention to this element on the page? Like exactly what size does this text need to be to like flow well?&quot; But then I would never take it to high fidelity. Because, of course, everything always was different. I mean, I primarily design for the web, but everything was different in the browser, right? Depends on the font rendering and anti-aliasing and responsiveness, and when exactly your breakpoints are. So I would always take it into browsers. Pretty early on, you get like medium fidelity in Figma, like the shape of it. And then you take it into a prototype. And then you can really tweak and refine. And of course, with agents, now it's just like I point an agent at my Figma mockup and I'm like, &quot;Just get all of that in there.&quot; And then make what's called a jig, which is where you get like little sliders and variables attached to like a jig. A jig comes from woodworking; you make like a little device that helps you do one specific job. So with design, when you're working on a live prototype, you say, &quot;Okay, here are the variables. I'm not sure about my headline size. I'm not sure about these colors. Give me sliders and color pickers and like all these things, or like the animation curves. Not sure about, give me an input and let me tweak live.&quot; And then when I have the values just right in a live version, then we'll commit those to be the actual values. Much faster, as I build on Figma as needed.</p>
+</details>
+<h3>GitHub Next 的组织架构与“设计工程师”的角色定位</h3>
+<p><strong>主持人</strong>：那么在 GitHub 内部，设计师平时都是如何协作的呢？作为一家构建大型开发者工具、拥有纷繁复杂业务模块的大型组织，你本人以及其他设计师是如何在其中开展工作的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And inside of GitHub, how do designers work? How do yourself and other designers work, as in a bigger organization, you're building a tool for developers with a bunch of different parts?</p>
+</details>
+<p><strong>麦琪（Maggie）</strong>：其实我平时很少与 GitHub 核心产品线的设计团队直接打交道。我认识那里的部分同事……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Maggie</strong>: I mean, I don't spend that much time with like the GitHub design org proper. I know some people in there...</p>
+</details>
+<p><strong>主持人</strong>：是因为你属于 GitHub Next 团队吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: But now because you're in Next?</p>
+</details>
+<p><strong>麦琪（Maggie）</strong>：对。GitHub Next 团队在组织架构上相对独立。虽然我们和主部门的其他团队依然保持着良好合作，但在设立之初，我们的定位就是一支独立的边缘前沿研发（R&amp;D）创新小组，专门负责探索各种稀奇古怪、突破常规的前瞻性技术概念。之后，我们再去说服公司其他团队接受我们的理念，证明我们的方向是正确的，并推动他们关注这些成果并跟进落地——这本身又是另一门复杂的组织政治学了。</p>
+<p>所以我确实能观察到主流业务线的设计师们是如何工作的，但他们的工作性质和我的截然不同。他们肩负着严苛的统一品质标准的重任，必须在庞大而完备的设计系统以及一套历史悠久的庞大 Ruby on Rails 架构体系下开展日常工作。相比之下，他们面对的技术制约与产品包袱和我完全不在一个维度上。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Maggie</strong>: So the GitHub Next team is a little bit isolated. Like we still have good relationships to the rest of the org. But a little bit by design, we're supposed to be kind of like the R&amp;D team out on the side, kind of doing weird stuff and then trying to convince the rest of the org like that we're right, and they should like pay attention and do our thing, which is a whole different politics thing. So I kind of see the designers. But I think like they have a very different job to me, in that like they have to uphold quality standards, they work in like a big design system and like an old Ruby on Rails app. But they've got very different constraints to me.</p>
+</details>
+<p><strong>主持人</strong>：是的，他们需要对数百万乃至数千万的核心用户负责。任何细微的界面变动都可能打乱老用户的长期操作习惯，用户习惯了在固定位置找到特定功能。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, they have about millions or even more like tens of millions of customers, where like that's now a different thing. They've been used to certain things, finding certain things or certain patterns.</p>
+</details>
+<p><strong>麦琪（Maggie）</strong>：没错，一点也没错。在 GitHub.com 主站上改动任何哪怕微小的细节，都牵涉到全方位的内部博弈。因为全球开发者每天依赖它运行关键的工作流，大家满怀预期地打开网站，你绝不能随意挪动哪怕一个按钮的位置。</p>
+<p>而在我所在的 GitHub Next 小组里，目前只有我和另一位同事是以“设计工程师”（Design Engineers）的复合身份在工作。也就是说，我们两个人既负责编写工程代码，同时也主要承担设计职责。组里的其他成员则更偏向纯粹的资深软件工程师，他们全都是技术极其深厚的大牛。与他们共事非常过瘾，因为他们身经百战、见多识广，闭着眼睛都知道如何搭建庞大的系统架构。</p>
+<p>虽然我们和他们一样每天提交 PR、使用着完全相同的基础开发工具和底层技术栈，但我们在日常工作中关注的系统侧重点截然不同：我自然把绝大部分心力倾注在前端交互与用户界面层；而我的后端工程搭档们，则更加专注在服务端架构、数据流向以及底层运行逻辑的严谨性上。同样的技术工具，投射出完全不同的专业考量。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Maggie</strong>: Exactly, exactly. Changing anything on dot com is like a whole political thing, because customers expect, you know, to come in, and they have critical workflows—you can't move their button. But the team I work on, there's me and one other guy who are both design engineers. So we both do engineering work, but we are more the design people, and everyone else is much more engineer-like, and they're all really senior. So it's fun to work with them because they've seen everything, they know how to architect them. But we don't work differently to engineers, I find. I mean, we're putting in PRs the same as them, working in the same tools and materials. It's much more that thing of like what bits of the app we care about. I, of course, care about the interface part. And then my engineer partners, of course, care about like the backend and the data flow and everything. So same tools, but different considerations.</p>
+</details>
+<h3>赞助商播报：Turbobuffer 与新一代 AI 时代的代码协同痛点</h3>
+<p><strong>主持人</strong>：好的，我想借此机会介绍一下本期节目的联合特约赞助商——Turbobuffer。对于本期探讨前沿技术与设计美学的播客来说，Turbobuffer 简直是再契合不过的赞助伙伴了，因为在我看来，他们拥有当今整个科技行业中最令人眼前一亮、最独特的品牌形象之一。</p>
+<p>Turbobuffer 的联合创始人 Simon 将他们的品牌个性精辟地总结为两个词：“硬核”（hardcore）与“奇想趣致”（whimsical），而他们的产品设计则完美无瑕地折射出了这种双重特质。从技术底色来看，Turbobuffer 数据库是一套极度纯正强悍的底层 AI 基础设施，为包括 Anthropic、Notion、Bridgewater、Cognition 在内的诸多全球顶尖、增长迅猛的标杆级 AI 企业支撑着关键的向量检索工作流。他们对系统的可靠性、查询性能和超大规模扩展能力有着极致严肃的苛求。</p>
+<p>然而，Turbobuffer 团队却坚决拒绝让自己沦为又一家刻板、乏味、沉闷的企业级软件公司。只要看一眼他们的官方网站你就会明白——那完全就是你梦寐以求的数据库产品官网应有的样子：极简、低调且坦荡透明，他们甚至直接将系统容量极限与性能边界诚实地摆在首页上。但它绝不枯燥，视觉体验极具审美趣味，处处透出精雕细琢的巧思。特别是网页中穿插的手工 ASCII 字符流程图，将硬核的技术细节与天马行空的趣味设计融为一体。如果你曾尝试过用 AI 大模型生成一张像样的 ASCII 图表，你很快就会意识到：Turbobuffer 网页上的所有字符图表，全部都是团队工程师一笔一画手工绘制出来的。</p>
+<p>这种兼具硬核极客精神与幽默奇想的品牌格调，正是他们团队内在灵魂的真实写照，也是其品牌之所以如此打动人心的根源所在。他们不仅是一家面向 AI 时代打造极高扩展性检索基础设施的公司，更是一群愿意为了极致交付用户价值而不遗余力、倾注热忱的人。大家可以通过访问 turbobuffer.com/pragmatic 深入了解他们。</p>
+<p>此外，我还想隆重介绍本季度的另一位核心赞助商。刚才麦琪提到，作为一名设计工程师，她每天也和团队里的其他工程师一样正常提交 PR，而每一个 PR 最终都会被推送到 Git 代码托管平台进行集中审查与合并。</p>
+<p>但问题在于：在 AI 智能体时代，传统的 Git 协同架构正在日益暴露出严重的性能瓶颈。在现代重度依赖智能体的软件开发流程中，开发者借助智能体能够以前所未有的速度生成海量代码，智能体以极高频率向仓库推送海量变更，大批工程师也在并发运行多路开发流水线……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I wanted to take some time to mention a presenting sponsor, Turbobuffer. Turbobuffer couldn't be a better sponsor for this episode as they have what I think is one of the most refreshing brands in tech right now. Turbobuffer's co-founder Simon describes their brand as &quot;hardcore and whimsical,&quot; and their design perfectly reflects this. Turbobuffer the database is extremely hardcore AI infrastructure. It supports critical search workflows for Anthropic, Notion, Bridgewater, Cognition, and many more of the largest and fastest-growing AI companies in the world. They take reliability, performance, and scalability very seriously, but the team refuses to be another sterile, boring enterprise company. Just look at their website. It's exactly what you would want the website for a database to look like: it's simple, modest, and transparent. They even put the limits on the homepage, but it also wasn't boring. It's nice to look at, it's very well-thought-out, and their little ASCII diagrams perfectly blend hard technical grounding with whimsical design. Plus, if you ever tried to generate a good ASCII diagram with AI, you'll quickly realize that they create all of these by hand. Turbobuffer's brand is the perfect reflection of who they are, and that's why it works so well. The brand is hardcore and whimsical, and so is the team. I highly recommend Turbobuffer, not only as the extremely scalable search engine for AI, but also as a group of people that will go to exceptional lengths to deliver for their customers. You can check them out at turbobuffer.com/pragmatic. I also want to mention a season sponsor. Maggie mentioned as a design engineer, she's still putting in PRs the same as everyone else, and every one of those PRs is pushed to Git hosting. But there is a problem with Git. Git is increasingly becoming a bottleneck in modern agent-heavy software development. Devs are creating more code with agents, these agents are pushing more code, and many devs are running...</p>
+</details>
+<!-- chunk 7/13 -->
+<h3>代码托管平台的变革：面向智能体时代</h3>
+<p><strong>Speaker 1</strong>: 所有的智能体都在推送越来越多的代码。GitHub 显然已经有些难以承受，甚至多次发生令人难以接受的故障停机。那么解决方案是什么？Entire 是由 GitHub 前首席执行官托马斯·多克（Thomas Dohmke）创立的，他从零开始重构了面向智能体时代的 Git 代码托管服务。Entire 构建得极其迅速，并且让你的仓库在地理位置上尽可能离你更近，从而大幅降低延迟，支持成批的智能体同时进行并行推送。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: All agents that are pushing even more code. GitHub is clearly struggling to keep up and has frequent outages. So what is the solution? Entire was founded by GitHub's last CEO, Thomas Dohmke, and he rebuilt Git hosting for the agentic era from scratch. Entire was built to be very fast and have your repos regionally close to you to reduce latency, allowing for fleets of agents to push in parallel.</p>
+</details>
+<p><strong>Speaker 1</strong>: Entire 的性能可以说是突破性的。他们的代码仓库每秒能够承受高达 418 次并发推送，这比市面上所有的其他竞争对手快了整整 89%。当 GitHub 发生故障无法访问时，你依然能够继续工作，而且完全不需要痛苦地从 GitHub 迁移。你只需注册 Entire，该平台就会无缝镜像你的代码仓库。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: And Entire's performance is next-level. All their repos can handle 418 pushes per second, and that's up to 89% faster than every other competitor on the market. When GitHub is down, you can still keep working and you don't need to migrate away from GitHub. You just sign up to Entire and the platform mirrors your repo.</p>
+</details>
+<p><strong>Speaker 1</strong>: 另外还有一点：你是否曾经好奇过，一段特定的代码究竟是由怎样的提示词生成的？我发现提示词以及与智能体的完整对话所承载的信息量，往往比 Pull Request 本身还要多。Entire 会直接在你的拉取请求中完整捕获所有提示词历史，非常便于日后回溯。而且它还有一个相当具有创新性的 UI 来集中展示所有这些细节。如果你正在寻找一个即使在 GitHub 宕机时依然稳定可用的 Git 托管服务，不妨访问 entire.io，安装他们的 CLI 工具，一键完成仓库镜像。我自己就已经配置好了。顺便说一句，我有提到过它兼容任何智能体并且完全开源吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Oh, and one more thing. Have you ever wondered what prompt resulted in this code being generated? I find that the prompt and conversation with the agents carries more information than the PR itself. Entire captures all the prompt history with your agent right in a PR, easy to jog back. And it's got a pretty innovative UI to show all of this. If you're looking for Git hosting that works even when GitHub is down, head to entire.io, install the CLI, and mirror your repo with a click. I've already done it. And did I mention that it works with any agent and is open source?</p>
+</details>
+<h3>大语言模型对设计与原型开发流程的重塑</h3>
+<p><strong>Speaker 1</strong>: 接下来聊聊大语言模型（LLM）。自从它们问世以来，你的设计流程发生了怎样的变化？你前面已经提到过，现在一切都变得轻松许多，比如如果你已经梳理出了交互设计，你可以直接吩咐 v0、Bolt 或者 Cursor，让它们更轻松地完成实现。但从笔记本中的草图、到视觉模型（Mockups）、再到最终落地的原型，这整个链条具体发生了哪些改变？哪一部分变得更省力了，又有哪部分其实变得更加复杂了？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: And then with LLMs, since they came out, how has your design process changed? You've already mentioned how it's now a lot easier. You can like, for example, if you already have introduced a design, you can ask v0 or Bolt or Cursor or whatever to make it easier to implement. But what has changed, like between the notebook, between your mockups, between the prototype that it gets there? What parts are easier, and maybe what parts are harder?</p>
+</details>
+<p><strong>Speaker 0</strong>: 毫无疑问，所有环节都变得更快了，整体感觉确实轻松了不少。我非常清楚地记得，过去在 Figma 里绞尽脑汁制作极其繁琐的交互原型时的那种痛苦，因为在当时看来，做 Figma 交互总比直接在 Web 上构建那些复杂的业务逻辑要快。然后再拿着这些 Figma 点击流原型去给真实用户做演示。但显而易见的是……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: It's definitely all faster. It definitely all feels a lot easier. I will say, like, I definitely remember suffering through making elaborate prototypes in Figma, because that was going to be faster than building more complex things on the web, and then trying to show them to users with these like Figma click-through prototypes. That obviously...</p>
+</details>
+<p><strong>Speaker 1</strong>: 所有的东西对用户而言全都是伪造出来的，有时他们会点到那些根本没有交互响应的怪异区域。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Like everything is faked on the user side, and then sometimes you had to, like, the weird things, things click here and yeah...</p>
+</details>
+<p><strong>Speaker 0</strong>: 对，所以当你坐在用户访谈中时，用户尝试去点击某个你根本没有连线跳转到新界面的元素，整场访谈瞬间就让人感觉有些虚假和不真诚。而且即便你费尽心思动手做了真实可运行的代码原型，你也没办法投入多余的时间去把界面打磨得很美观，结果用户往往会被粗糙简陋的外观弄得注意力分散甚至十分困惑。但我们当时只有几天时间，测试完之后就必须迅速推进到下一个原型的制作中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: So you're like in these user interviews, and like the users try to click something that you haven't hooked up to like a fake new screen, and the whole thing just feels a bit insincere. And then even when you did make prototypes, you couldn't spend any time making them look nice, so then sometimes the users get very distracted or confused by the fact it looks terrible. But we only had a few days, and now we've got to move to the next prototype.</p>
+</details>
+<p><strong>Speaker 0</strong>: 而放到现在，我完全不会再遇到那种困扰了。如今我能够构建出视觉和交互上极其精细完备的原型。虽然并不需要智能体完全在狭窄范围内自行决定全部细节，我依然会给出大量方向指导来打造出我认为合格的界面，但整体节奏快了太多。有时我甚至会在 Figma 中先画出保真度相当高的设计稿，然后直接丢给智能体说：“嘿，这是 Figma 文件，开启目标模式（Goal Mode）尽情发挥吧；不断截图比对，如果渲染出来的效果和 Figma 不一致就持续微调循环，直到它与 Figma 像素级一致为止。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: And now I wouldn't have that problem at all, right? Like now I can build something that really looks quite sophisticated. I'm not with the agents doing that narrowly—a lot of direction I find to make something that I would think was an acceptable interface, but it's so much faster. Sometimes I have even mocked up quite high-fidelity stuff in Figma and then just been like, &quot;Hey agent, here's the Figma file. You know, Goal Mode, you play right, take screenshots. If it doesn't look like the Figma, keep going and keep looping until it looks exactly like the Figma.&quot;</p>
+</details>
+<p><strong>Speaker 0</strong>: 它最终真的能够完全对齐实现出来。这一切简直太省心了。我可以让它在夜间后台自动跑，自己完全不用插手，第二天早上醒来时，前端界面基本上就已经严格按照我的预期完整构建出来了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: And it'll get there. And so that was just like, I can run that overnight. I don't have to do anything. In the morning, the interface is pretty much there, as I spec'd it out, like...</p>
+</details>
+<p><strong>Speaker 1</strong>: 过去那些琐碎的苦工基本上就是这类事情对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: And until I guess this was grunt work, right?</p>
+</details>
+<p><strong>Speaker 0</strong>: 确实完全是这样，因为你会觉得这种事情本身并没有多少技术复杂度。无非就是：“好的，我们又要写一个新的侧边栏组件了，对吧？把这堆 React 组件样式调到位。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Totally. It's totally because you're like, this isn't complex. This is like, okay, again, we're building another sidebar, right? Let's get the React components in line.</p>
+</details>
+<p><strong>Speaker 1</strong>: 而且你根本不用太在乎代码质量或者底层架构跑得怎么样，反正大概率也就是随手丢弃的原型，对吧？如果因为这个原型验证成功了，之后你自然会重新正式构建；如果验证失败了，那就直接放弃。原型开发在今天完全变成了一场截然不同的全新游戏。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: But and you don't really care about the code quality or tech debt running, like it's going to be thrown away anyway, right? If it works because of that, because then you'll build it. And if it doesn't work, like great. Yeah, prototyping is a whole different game.</p>
+</details>
+<h3>可塑软件与“夹具（Jigs）”式交互探索</h3>
+<p><strong>Speaker 0</strong>: 现在我觉得大家完全有能力去探索和验证远比以往宏大、更有野心的设计构想。而且我个人极其推崇利用各种“夹具（Jigs）”来做原型。这给人一种极其强烈的“可塑软件（Malleable Software）”的体验——你可以随意把软件捏造成你希望的任何形态。此时我不再受限于手头现成的有限工具。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Now I feel like you can prototype much more ambitious things. And then I do love the whole jig thing. It feels like this malleable software thing, like you can make the software whatever you want it to be. Well, I'm not constrained by Figma's available tools.</p>
+</details>
+<p><strong>Speaker 0</strong>: 我可以说：“好，我现在想做一个动态的星座星图（Constellation Map）”——这是我最近刚完成的一个实验——“这些星星应该以怎样的速度移动？我们当前处于什么缩放层级？”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I can be like, okay, I'm trying to make like this animated constellation map with something I recently did. Like what speed are the stars moving at? Like what zoom level are we at?</p>
+</details>
+<p><strong>Speaker 1</strong>: 你自己亲自动手做了这个吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Like you did that, yeah?</p>
+</details>
+<p><strong>Speaker 0</strong>: 对，还有“屏幕上的渐变倾角应该是多少度”。智能体会直接在界面上为你生成一排小滑块，你可以实时拖动微调。如果你突然想到“我其实希望给整个画面叠加一层淡淡的胶片噪波颗粒感”，只需要吩咐智能体一声。在很多时刻，这种体验坦白讲真的如同魔法一般。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: And like how much, what degree is the gradient out on the screen? And you just have these on little sliders, and you just tweak it. And then you think, I really want like a slight green like grain over this, tell the agent. You know, it honestly feels like magical a lot of the days.</p>
+</details>
+<p><strong>Speaker 1</strong>: 你手头有现成 Demo 可以展示一下吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Do you have it up?</p>
+</details>
+<p><strong>Speaker 0</strong>: 我把这个漂亮的页面调出来。对，我们来看看。这是我为全新的 GitHub Next 官方网站制作的一个模块。我们目前有一个比较基础的版本在线上跑着，但我希望做一个更加精致炫酷的展示页。我们想让团队发布最新研究成果变得更频繁、更轻松，所以我当时就在探索一些非常有活力、风格抢眼的主页视觉。整个设计核心是一个动态展开的星图，每一个发光的星点代表着团队多年来研发的各个实验项目，非常生动。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: On my beautiful app. Yeah, let's see. So this is something I built for the new GitHub Next website. We have a kind of basic one up, but I wanted something that fancy. We want to make it a little bit easier to like publish research frequently. So I was just playing around with some, like, you know, some jazzy home pages. And this whole thing, this is like an animated expanding constellation. And these like some projects that the team's worked on over the years, amazing.</p>
+</details>
+<p><strong>Speaker 0</strong>: 要做出这样的原型，起点当然还是笔记本里的简易手绘草图，但随后我让智能体生成了一整套专属调试夹具（Jigs）。在这些夹具里我可以实时调节：背景色调该取什么颜色？星图自转的角速度该有多快？而且星辰之间还有一整套精巧的物理碰撞与引力算法，我自己完全没有手写任何一行复杂的物理运动公式，也根本不需要去硬啃物理引擎相关的知识。比如鼠标悬停在星体上时星星要放大多少倍，接着我还做了一个极其丝滑的向下滚动进入具体正文页面的过渡动效。所有这一切，我没有手写一行底层代码，全部是通过生成各种调试面板夹具、实时推拉参数比对观察出来的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: And like this kind of thing to prototype this, right? Of course, it started with a sketch in a notebook, but then made a bunch of jigs. Where was it? Okay, what color is the background, and like how fast is this map spinning? And then there's a bunch of like physics on the stars that I didn't have to do any physics, and I didn't have to know anything about that. You know, how big are these when you hover over them? And then I did this cool scroll effect down into the proper page. And all of that, right, I didn't write any code. I made a bunch of different jigs and tweaks and just examined it.</p>
+</details>
+<p><strong>Speaker 1</strong>: 所以这些夹具本质上就是直接附着在屏幕上的控制部件，比如调节颜色时，你可以一瞬间在蓝、绿、红之间无缝切换，直到你找到最满意的那种视觉效果；大小尺寸也都是通过这种方式即时调整的，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: And so these are just made—these things on the screen, for example, the color you could go from like blue, green, red, and then you figure out right, you like this the most, the sizes, all of those, right?</p>
+</details>
+<p><strong>Speaker 0</strong>: 完全正确。我只要对它说：“帮我生成一个滑动输入条，用来实时控制星座实验里的动画变量。”它就会直接让它生效。这种诉求实现起来非常轻巧，只要你告诉它“给我做一套控制控件”或者“针对当前正在调优的模块做一个滑块面板”，它就会自动理解你需要通过调节哪些关键参数来达到理想效果，并且它生成控件的质量相当高。而且由于我项目里有一套既有的设计规范，它很清楚如何把这些控件做得美观协调。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Exactly. I can be like, &quot;Make me a slider for controlling the animation variables on the constellation experiment.&quot; It will make that work, but that's kind of really simple. If you tell it like, &quot;Make me controls&quot; or &quot;Make me a slider for whatever it is you're trying to do,&quot; and you just think about like, okay, what are the ways I need to tweak this to make it work? It's pretty good about just making them. I mean, I have a style scale, so it knows how to make them so they look decent, right.</p>
+</details>
+<p><strong>Speaker 1</strong>: 它能完全根据你的个人审美和摸索出来的有效方案来自动化搞定。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: And based on your preferences, you know what you figured out works.</p>
+</details>
+<h3>布雷特·维克多与“即时反馈”的活体编程理想</h3>
+<p><strong>Speaker 0</strong>: 是的，它把所有状态变量自动挂接绑定好，剩下的工作就是你在界面上随心所欲地拖拽把玩。这完全是一种前所未有的全新设计范式。这非常有布雷特·维克多（Bret Victor）倡导的“活体编程（Live Programming）”的精髓。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Yeah, but then it's great, it just hooks it up, and then you can just kind of play with it. And it's a whole different way to design. It's very, you know, Bret Victor, like the live programming stuff.</p>
+</details>
+<p><strong>Speaker 0</strong>: 布雷特·维克多既是一位杰出的工程师，也是一位极其前沿的设计师。他现在正在搞一些非常前卫的研究。在大概 2010 年到 2013 年间，他做过一系列影响深远的演讲，其中一场著名的演讲主题叫《停止在死板介质上作画》（Stop Drawing Dead Fish）。他在演讲中深入剖析了为什么现代软件开发从来不是一种“活态（Live）”的媒介——你在代码编辑器里机械地敲写代码，执行漫长的构建编译流程，然后切到浏览器或运行环境去瞅一眼渲染结果。这两者之间存在着巨大的断层与割裂。在代码层面修改一个变量，你必须费劲周折去外部环境查看生效结果，这种反馈链条是间接且滞后的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Bret Victor, he's an engineer and designer. I mean, he's doing some crazy stuff now. He did a set of talks between, I don't know, it was like 2010, 2013, one of them like &quot;Stop Drawing Dead Fish&quot;. It's about how programming is not a very live medium. Like, you know, you code in the editor, you do your whole build, and then you look at it in the browser wherever it is. And these two things feel very disconnected. It's very hard, like you're tweaking variables in code, and then you have to go see the effect, and it's not a direct connection.</p>
+</details>
+<p><strong>Speaker 0</strong>: 他的核心主张就是：你必须在任何时刻都拥有即时、直接的双向反馈回路，能够直接注视着你正在创作的数字化工件，并对其进行直接操纵与参数微调。而我们现在借助智能体生成的这些调试夹具，终于让这种理念真正照进了现实，我们终于做到了这一点。在此之前你根本做不到，过去现存的任何开发系统都无法为你所有可能的变量和状态提供如此丝滑的实时预览与直接操纵能力；过去最接近这种体验的，充其量也就是浏览器自带的开发者工具（DevTools）而已。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: And so his whole thing was like, you need to have instant direct feedback at all times to be able to look at the artifact you're making and directly tweak it. And it's like this kind of stuff come to life, like now we finally can do it. But before you couldn't do that. There was like no programming system in existence that could give you like a live preview of every possible variable or thing. Like the closest we have is like DevTools in the browser.</p>
+</details>
+<h3>工程师主导的设计迭代与传统设计分工的碰撞</h3>
+<p><strong>Speaker 1</strong>: 顺着这个话题，还有一个非常紧密相关的探讨点。毫无疑问，智能体让搭建软件和构建原型变得轻而易举，但如果说智能体同样让界面设计本身变得唾手可得——前阵子我在询问一些人是如何与专业设计师协同工作的，有一位工程师给我的回答，正好代表了我最近听到越来越多的心声。我把他的话原样转述出来：“作为一名软件工程师，我直接让设计生成模型（如 Lovable 等工具）一口气生成 20 种高保真的备选设计方案，然后不断让它根据我的反馈快速迭代，直到撞上最完美的那版设计。这个过程极其愉快，而且感觉比跨团队去和一个完整的设计团队反复拉扯沟通要高效得多。”现在很多人都表达出一种心态，认为既然自己手里掌握了这些强大的生成式设计工具……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Well, another topic which is very related to this one. While we're waiting for one thing that day, of course, your thing is easier to build stuff. But if AI is also easier to design, when I was asking people like how they work with designers, an engineer replied something which I hear a lot more, which is—I'll quote this person here: &quot;As an engineer, I ask Lovable Design to generate 20 high-fidelity alternatives, and I keep iterating until we land on the perfect design. It is enjoyable and feels much faster than interacting with a design team.&quot; It is a thing saying, &quot;Oh, I have these tools...&quot;</p>
+</details>
+<!-- chunk 8/13 -->
+<h3>AI 时代是否还需要设计师？</h3>
+<p><strong>Speaker 1</strong>：我其实根本不需要设计师，因为我可以直接向 AI 提出这些需求。在当前这种情况下，模型一下子就能给我生成 20 种不同的备选设计方案。我只需要从中挑选出最完美的一个，搞定，任务就完成了。作为一名专业设计师，你对这种观点怎么看？顺便说一句，这已经不是大家第一次提出类似的问题了。业界似乎总有这样一种论调：我们真的还需要设计师吗？软件工程师需要他们吗？产品经理需要他们吗？当然，产品经理也会反过来被问：我们还需要工程师吗？诸如此类。但针对设计这个环节，你到底是怎么想的？这种看法有道理吗？那些认为“不再需要设计师”的人可能忽略了什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: I don't actually need a designer, like I can just ask for all these like that. And in this case, it would just give me 20 alternatives. I'll choose the perfect one and boom, I'm done. As someone who is a designer, what's your take on this? And by the way, it is not the first time. I think there's always that thing, like: do we need designers? Do software engineers need them, do product managers need them? And of course, you know, product managers will also ask, do you need engineers, and so on. But what do you think? Could this be valid? What could people be missing?</p>
+</details>
+<p><strong>Speaker 0</strong>：我认为，在手头没有设计师可用、而你又急于验证一款产品或通过搭建界面来验证某个假设的场景下，直接调用模型并对它说“帮我生成 20 个高保真设计方案”，确实是非常棒的做法。但我敢肯定，如果换作我去看那些设计，我很可能会觉得——当然，审美本身也是因人而异的——或者说，我审视它们时的第一反应会是：好吧，在我眼里这些东西有着极其明显的 AI 生成痕迹，我非常怀疑它们能否真正完成预期的产品目标。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I think in cases where you don't have a designer to hand, and you're trying to validate a product or like prove a hypothesis by building an interface for it, it's great to just use a model to be like, &quot;Sure, make me 20 high-fidelity designs.&quot; I'm sure I might look at those designs and be like, &quot;Well, like it all depends on taste too.&quot; Rather, I might look at them and think, &quot;Okay, well, these look obviously generated by AI to me, and I don't know that they're going to do the job that they need to do.&quot;</p>
+</details>
+<p><strong>Speaker 0</strong>：归根结底，这取决于具体的上下文语境。如果你需要的只是一个非常简单的组件，比如在侧边栏上加一个按钮，那模型完全应付得来。但如果我们正在探索某种全新的交互原语，试图推导并定义它的形态与边界，那就必须有专业设计师介入了。从本质上说，设计师的核心价值在于有专人深入且严密地推演问题本身，投入大量的智力劳动，例如设计对比实验、向真实用户展示方案、深入调研用户究竟能理解什么、无法理解什么。这才是设计师应该承担的真正工作。不过我也完全赞同，对于那些没有条件配备设计师的开发者来说，尽可能多地借助大模型去完成界面探索也是合情合理的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Again, it depends on the context. If it's something simple—you need a button on a sidebar—fine. But if it's like we have some new primitive we're trying to make and figure out the shape of, that's when you really need a designer to come in. And really, it's just someone who's assigned to like think through the problem properly, like put in the brain work and be like, okay, do the experiments, like show them to users, like figure out what people actually understand and don't. That's really like the labor a designer should come and do. But I think it's completely fine for developers without access to one to like use models as much as they can.</p>
+</details>
+<h3>为什么模型生成的 UI 往往缺乏微观语境把控？</h3>
+<p><strong>Speaker 0</strong>：但是，每当模型为我生成设计方案时，我看着它们都会觉得质量相当糟糕，甚至可以说是惨不忍睹。尽管你在提示词里向它们灌输了大量所谓的“通用设计准则”，但它们根本无法真正理解语境和细微差异，以至于机械、死板地套用这些规则。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: But when models do designs for me, I, of course, just look at them and think that is terrible quality. That is awful, even to the extent of like, they've been prompted with somewhat what we would call universal design principles, but they sort of don't understand nuance and context, and then I think they stick to them too strictly.</p>
+</details>
+<p><strong>Speaker 0</strong>：举个例子，我发现 AI Agent 恨不得在界面上的每一个元素旁边都贴上一段标签文字。比如界面上明明有一个用于收起侧边栏的小按钮，正常情况下我们只需要放一个单纯的图标按钮就足够了，因为绝大多数用户早就习惯了侧边栏边缘的这个小图标意味着折叠收起，他们自己会尝试去点击并验证其功能。然而 Agent 偏要在模态框右上角或按钮旁明晃晃地写上“关闭侧边栏”或者“关闭弹窗”；更有甚者，它们还会直接在一个按钮上方塞进四行操作指导说明。面对整个页面充斥的文字，你会感到极其崩溃。我很清楚在模型的认知逻辑里，它认为“这就是让界面对人类更具可解释性的方式”，但站在真实交互的角度看，这其实是非常拙劣的设计。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: So like I find the agents want to put a label on everything in the interface—label meaning like a small bit of text. Like there might be like a little button that like closes the sidebar, and we use a single icon button for that because most people are trained that this little button near the sidebar means it will close it, and then they'll experiment with that, click it, and figure out that is correctly what it does. But the agent will write &quot;close sidebar&quot; or &quot;close modal&quot; in the top right hand of the modal, and you're like, &quot;There's now a lot of text on this page.&quot; And they'll just like put like four lines of instructional text over a button, and just things where I understand in the model's mind it's thinking, &quot;Oh, this is how we make the interface explainable to the human,&quot; you know. But actually it's really bad design.</p>
+</details>
+<h3>AI 产品的真正界面范式：打破幻想与回归经典</h3>
+<p><strong>Speaker 1</strong>：既然谈到了针对 AI 的 UX 与 UI 设计，你认为优秀的 AI 用户体验和界面究竟应该是什么样的？我知道这是一个非常宽泛宏大的问题，但到目前为止，你在实践中总结出了哪些行之有效、哪些彻底行不通的经验？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Now talking about the UX and UI for AI, what do you think good UX and UI look like? Again, I know this is a bigger question, but so far, what have you learned of what works and what doesn't?</p>
+</details>
+<p><strong>Speaker 0</strong>：谈到“什么是面向 AI 的理想 UI”这个问题，它确实过于宏大，我不认为整个行业在短时间内能给出一个盖棺定论的终极答案。但与此同时，软件界面设计中其实有很多底层规律是历久弥新的。关于软件界面如何向用户呈现数据，存在着大量成熟而通用的基本原则——比如仪表盘、侧边栏、文档结构等，这些基础框架并没有发生根本性的动摇。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I think when it comes to this—like what is the ideal UI for AI—it's just like a big question, and I don't know that we will figure out the answer to that for a while. But some things haven't changed like in terms of what is good interface design for software. There's a lot of principles here, like what formats we have to show users data, you know: it's like dashboards, and sidebars, and documents. There's a lot of things that haven't changed.</p>
+</details>
+<p><strong>Speaker 0</strong>：关于这一点，我在做 Elicit 时有一个非常典型的故事。Elicit 这款应用当时旨在帮助科研人员从学术论文中提取结构化数据。科研人员在传统工作流中极其依赖 Excel 电子表格：他们拉出一张庞大的电子表格，每一行对应一篇论文，然后将从文献中提取的大量数据分别填入各个单元格中，这可以说是极其标准的工作流程。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: But actually I had a good story about this from Elicit, where the app was like helping scientists extract data from papers, and they are very used to doing this in Excel spreadsheets. So get a big spreadsheet, put the paper in one on each row, and then extract huge pieces of data into the cells, right? Pretty standard process.</p>
+</details>
+<p><strong>Speaker 0</strong>：然而在 Elicit 项目初期，我们团队陷入了一种激进的想法：“哎呀，电子表格太陈旧过时了！既然有了 AI，肯定存在某种极其前卫、远比传统表格强得多的全新界面来展示提取自论文的数据。”于是我们尝试了各种天马行空的疯狂构想：我们做了类似无限画布的方案，上面散落排布着各种数据卡片；我们还尝试过卡片式层叠流；我们甚至设想过类似 Notion 那样由可组合文档与丰富内嵌界面构成的体系。我们几乎把能想到的新颖交互全试了一遍，结果在每一次用户访谈中，科研人员给出的反馈都是：“这太让人困惑混乱了。你们就不能给我一个普普通通的表格吗？”每次都是如此！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: But of course, in the beginning of Elicit, we were like, &quot;Oh, that's so old. There must be a much, much better interface for, you know, seeing the data extracted from papers.&quot; So we tried all this crazy stuff. There was like infinite canvases with like cards spread everywhere. There is one that's like a bunch of cards that are all generally stacked. We were like, maybe it's more like Notion with these like composable documents with rich interfaces. We would try all this stuff, and every user interview I did, the users were just like, &quot;This is very confusing. Can I just have a table?&quot; Like every time!</p>
+</details>
+<p><strong>Speaker 0</strong>：经过几个月的折腾与反复琢磨“到底什么是 AI 时代的全新 UI”之后，我们恍然大悟：答案就是表格。至少在我们的应用场景下，事实证明用户原本一直在使用的界面才是最好的，因为那是他们最熟悉的形式，使用它所产生的认知负荷是最低的。于是我们果断拍板：“太棒了，全面回归表格！”走过这段弯路非常有价值。人们常常存在一种先入为主的执念，认为 AI 的界面必定会同我们现有的想象产生翻天覆地的剧烈分歧，但很多时候事实并非如此。虽然利用 AI 你可以实现功能更强大的事情、释放巨大的杠杆效应，但我预计未来的主流界面依然会由文档、侧边栏、卡片和表格这些我们历经数十年摸索出来、切实有效且人人都懂得如何操作的经典交互组件构建而成。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: And so after a couple months of this, like, &quot;Oh, what's the new UI of AI?&quot; We were like, &quot;Uh, a table.&quot; Well, at least in our use case, it turned out the interface people were using was the best, because it was the most familiar to them, and it caused the least amount of like cognitive load for them to use the tool. So we were like, &quot;Great, back to tables, that's fine.&quot; Like it was good to go on that journey. But sometimes we have this notion of like that the UI of AI will be so wildly different from our current imaginings, and sometimes it's really not at all. It's like you can do more powerful things—I think there's lots of leverage—but I expect it to all be built with documents and sidebars and cards and tables, and like all the classic things we've worked out do work and people know how to use.</p>
+</details>
+<h3>认知负荷与交互习惯：从表格到新原语的演进</h3>
+<p><strong>Speaker 1</strong>：学习任何一种全新的 UX/UI 范式都会带来巨大的认知负荷。如果新工具的运作方式与现有工具大相径庭，往往会让人感到无所适从，因为用户日常仍然要使用操作系统、Google Sheets、Excel 或各类 Office 文档。即便有极少数极客用户能够迅速适应全新概念的界面，但想象一下教我们的父母或祖父母使用智能手机界面的经历——一旦他们好不容易学会了现有的使用逻辑，运转顺畅了，你真的还会想让他们把整套认知推倒重来一遍吗？显然不想。未来的主流交互必然会保持某种连续性与相似性。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: There's a cognitive load in learning any new UX/UI paradigm. It can be confusing if your existing tools don't work like that, because people will still use operating systems and Google Sheets or Excel or Office documents, etc. And even if like a small subset of people are like enough familiar with this new UI... Think about our parents or grandparents: teaching them how to use phones and the interfaces. And once they learned, they're good, but do you really want to do that again? Yeah no, there will be something similar.</p>
+</details>
+<p><strong>Speaker 0</strong>：没错，这非常契合我们最初从聊天机器人（Chatbots）起步的发展路径。聊天框绝不会是 AI 工具的最终形态。如果回顾一下 Codex，你会发现这里的交互体系其实非常丰富：虽然这里确实保留了一个大家熟悉的对话聊天视窗，但左侧还结合了 Git 工作树（Worktrees）等一系列复杂机制，整个界面支持直接在代码上做批注和深度调试。这里融入了极其丰富的拓展功能——其核心精髓在于：你先立足于用户所熟知的经典原语，然后再以此为基点向外扩展与延展。我们在 Elicit 后来也是这么做的：界面的核心骨架依然是一张表格，但我们在表格内部以及周边嵌入了大量强大的 AI 增强能力。一切都必须以熟悉的原语作为起点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Yeah yeah, it's kind of like how we started with chat, right? Chatbots will not be the final form, because if we could look at Codex, like there's a lot going on here. Sure, that's a chat window we know here, but there's all kinds of things going on with Git worktrees over here. And then we've got this whole interface, like I can do annotations and debug. And there's a lot of extra stuff where you take the familiar primitive, you expand outwards from it. And we did similar things at Elicit: like there was still a table, but then we baked a lot of stuff into the table and around it. But you start with familiar primitives.</p>
+</details>
+<h3>动态实时设计工坊：超越 Figma 的浏览器交互调试</h3>
+<p><strong>Speaker 0</strong>：好的，我想我们这边的 Jake 已经准备就绪了。是的，它正在展开。这就是 Jake，它是基于 MDX Deck 构建的。借助这套环境，我可以实时调整动画的播放速度来直观感受：这样是太快了，还是太慢了？这里的强度参数控制的是施加在星空背景粒子上的引力大小——哇，你甚至能实时调节星星大小与运动轨迹的随机变化幅度。还有这一项，控制的是当我向下滚动页面触发缩放动画时，元素最终停靠的高度是多少。我想这是关于 Logo 停靠尺寸与停靠位置的参数。再看看这里，这是在界面表层添加的一种拟物磨砂玻璃材质效果。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: So here I think we have Jake ready. Oh, yeah, it's expanding. So here's Jake. This is using MDX Deck. Um, with this, I can change the speed of the animation to see like, is that too fast, or is that too slow? Um, the intensity is like how much gravity is being applied to the stars here—whoa, how much variation is there in the stars here, sizing and rolls. This is like when I scroll down to have this zoom out, like what's the resting height? Uh, I think this is of the... and this is here, like the resting height of this, resting logo size, and see what this... This is a sort of glass effect on the surface that's like...</p>
+</details>
+<p><strong>Speaker 1</strong>：这个磨砂玻璃效果是应用在顶部导航栏上的吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: It's on the top bar?</p>
+</details>
+<p><strong>Speaker 0</strong>：对，没错。你可以即时观察这种玻璃质感：如果高光太亮，文字就会被反光淹没导致无法阅读；而如果参数调得过暗，你又几乎看不出它是玻璃。你必须在调试中找到那个恰到好处的最佳平衡点，精确掌握它与底层背景之间的对比度关系。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Oh yeah. Is that glass effect... like if that's too bright then you can't read the words; whereas over here you can barely tell it's glass. There's some sort of like happy middle ground you want to figure out, like how much contrast between it and the background.</p>
+</details>
+<p><strong>Speaker 1</strong>：所以你之前说这简直就像是你专属的个人版 Figma 或者定制设计工具，真的一点都没夸张。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: So this is where you aren't kidding that this is like your own almost personal Figma, or your own design tool.</p>
+</details>
+<p><strong>Speaker 0</strong>：是啊。因为想在 Figma 里通过静态画板来模拟这种复杂的动态效果是极其困难的，尽管我以前确实尝试过那样做。曾有一段时间，我们设想过采用网格背景，绞尽脑汁去推敲要添加多少噪点纹理，或者尝试波浪纹理。我试图在静态稿里推演：它是不是应该有一半超出屏幕显示区域？这里是不是应该切除一个切角？你固然可以在设计稿里摆弄布局构想，但在真实浏览器里运行起来之前，你根本不可能真正切身体会到它交互起来的实际手感，比如你得滚屏多长距离才能触发效果，以及整体的主题、色彩、材质纹理搭配起来到底舒不舒服。所以现在只要设计强视觉与动效交互的内容，我都会高频使用这套工具。直接通过暴露的动态变量来实时调参简直太方便了。在过去，如果纯粹靠手写代码去徒手搭建这种调试系统，在工程实践中根本不切实际，因为单是把界面本身从零写出来就已经慢得让人无法忍受了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Yeah. And because it's really difficult to mock up static versions of this in Figma, which I have done. Yeah, like for a minute we were thinking maybe like a grid background, trying to figure out how much like grain and stuff, maybe like a wave one. Yeah, I'm trying to figure out here like, okay, is it halfway off the screen? Maybe there's like a slice out of it here, so you can play around with like layouts and ideas. But you can't get a sense until it's live in the browser of how this is going to feel, and like how much scroll you need to do here, and then like the themes and the colors and textures, everything. So I work with this a lot now whenever I'm designing something visual. It's so much easier to have live variables, which again would not have been possible before. You could have built this by hand, I guess, in the olden days, but it just would have been impractical just coding it—the thing itself was slow enough.</p>
+</details>
+<h3>概念探讨：什么是“能力认知失调 / 能力煤气灯效应”？</h3>
+<p><strong>Speaker 1</strong>：你之前谈到过一个非常有趣的观点，叫做“能力认知失调”（Capability Gaslighting，或译为能力煤气灯效应）。在这种情境下，究竟什么是“能力认知失调”？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: One interesting thing you talked about is capability gaslighting. What is capability gaslighting in this case?</p>
+</details>
+<p><strong>Speaker 0</strong>：我认为这在本质上类似于某种微观分子级别的……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I think this is similar to like even molecule...</p>
+</details>
+<!-- chunk 9/13 -->
+<h3>模型能力的“锯齿状边界”与认知欺骗</h3>
+<p><strong>Speaker 0</strong>: 有人提出过“锯齿状前沿”（jagged frontier）这个说法。其实大体上就是这个意思，不过我在工作中自己总结出了一个概念，叫做“能力层面的心理欺骗”（capabilities gaslighting）。对于熟悉这个概念的人来说，它的核心含义就是：大语言模型在某些任务上表现得极其出色，但在另一些任务上却又糟糕得一塌糊涂。而且当你给它布置一项特定任务时，你往往很难准确预测它到底会落入哪一种表现区间。</p>
+<p>这种“能力欺骗”是我早期在使用它们时产生的一种非常强烈的直觉体验。具体来说，它们会通过在某一个任务上极其惊艳的表现，让你彻底相信它们具有极高的能力；然而紧接着，当你尝试让它做另一件事时，它却可能直接一败涂地。这就让你感觉自己仿佛被心理操纵了一样——原本以为它是一个智商超群的智能体或模型，结果下一秒它就当场出丑。</p>
+<p>更微妙的是，有时候它们其实已经搞砸了，但我甚至没有第一时间察觉到它们错得有多离谱，因为我脑子里依然保留着那种先入为主的信念：“这可是顶尖水平的大模型啊，它怎么可能会在这么简单的事情上犯错呢？”然而随着时间推移，你会发现它确实错得彻底。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Someone has this phrase, the &quot;jagged frontier&quot;? It's pretty much that, but I came up with &quot;capabilities gaslighting&quot; for it at work. For people familiar with the concept, it's that models are really, really good at some things and really bad at others. And it's really hard to predict, when you give it a certain task, which of those it's going to fall into.</p>
+<p>&quot;Capabilities gaslighting&quot; was the feeling I got early on from using them. They convince you they're so capable because they really impress you on one task, and then you try them on something else and they fall on their face. You kind of feel like you're being gaslit, like imagining that this is an extremely intelligent agent or model, and then it falls on its face. And then sometimes I feel like they fail, but I haven't totally noticed how badly they failed, because I still have this belief that, &quot;Oh, but you're a top-tier model, you could never really get this wrong,&quot; and it totally does over time.</p>
+</details>
+<p><strong>Speaker 0</strong>: 所以说，与模型协作是一种极其不稳定的体验，这和与人类共事有着本质的不同。如果你在现实中找到一个你认为是某个领域的资深专家并与他们合作，他们的表现通常是非常稳定的，几乎不可能忽高忽低。他们极少会突然把自己在某个专业领域内所有的专业知识忘得一干二净。如果一个人真的发生这种情况，你肯定会非常震惊，甚至会想：“你是不是精神崩溃了？这行为太诡异了。”</p>
+<p>然而，模型每天都在以这种方式运作。某一天，它们在某项任务上的表现可能极其完美；但到了第二天，面对同一项任务，它们就可能完全失败——仅仅是因为你的提示词有些许不同，或者它们可获取的上下文发生了变化，又或者是大模型本身的随机性与抽样输出导致了波动。它们就是无法保持稳定的高水准表现。因此我认为与它们协作非常困难，因为你永远无法准确预料自己这一次会得到什么样的结果。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: So it's such an inconsistent experience, and it's so different to working with a human. If you find a human who you feel is really an expert in a topic and you work with them, it's very unusual for them to be inconsistent in their performance, right? It's very rare for them to suddenly forget all of their expert knowledge on a topic. And if they did, you would be very like, &quot;Are you having a mental breakdown? This is very weird behavior.&quot;</p>
+<p>But this is how models behave every day. One day, they will perform really well on a task, and they could fail at that same task the next day because you prompted differently, or they had different context available, or just random stochastic outputs—they just didn't do as well. So I think it's hard to work with them because you never quite know what you're going to get.</p>
+</details>
+<p><strong>Speaker 1</strong>: 确实如此，这也是大家必须时刻牢记的一点，对吧？尽管技术一直在持续向前演进，当然，我们始终在讲、也亲眼见证了模型的能力在不断提升，但你总得去面对这种现实。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Yeah, it's guess what you need to keep in mind, right? Because now there's ongoing... of course we always say, and we have seen that the models improve. But you want to have to go...</p>
+</details>
+<p><strong>Speaker 0</strong>: 是的，毫无疑问，现在的基线前沿模型已经有了保底水准，它们不至于跌破某个最基本的表现底线。但正如大家所见，这些模型始终在发生变化。人们也经常对此抱怨：每当你升级到一个全新的模型版本时，它所擅长的领域可能会发生偏移，或者它在某些具体方面的表现无法达到你的既有预期。这种不确定性真的非常难以预料。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Yeah, yeah, of course there's baseline frontier models, you're not going to perform below a certain bit. But you know, of course the models are changing all the time. When people complain about this, that you upgrade to a new model and it changes what it's good at, or it changes like it doesn't perform to your expectations on certain things—it's hard to predict.</p>
+</details>
+<h3>从单兵作战到协作工程：协同与决策对齐的鸿沟</h3>
+<p><strong>Speaker 1</strong>: 你之前做过一场演讲，题目叫做《一名开发者、二十多个智能体、零对齐：为什么我们需要协同工程》（One developer, two dozen agents, zero alignment. Why we need collaborative engineering?）。你能谈谈这个观察背后的思考吗？也就是“一个开发者操纵着一堆智能体，但彼此之间却毫无协同对齐”这种现状。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: You did a talk titled &quot;One developer, two dozen agents, zero alignment. Why we need collaborative engineering?&quot; Can you talk about just this observation, like one developer, two dozen agents, zero alignment?</p>
+</details>
+<p><strong>Speaker 0</strong>: 好的。这其实正是 GitHub Next 团队在过去一年多的时间里一直专注并试图探索各种方案去解决的核心难题。我们越来越清醒地认识到：当下大家使用这些智能体的方式，基本上都是各自在本地机器上单打独斗。单兵作战配上智能体确实能大幅提升个人的开发速度，当我们独自一人带着智能体工作时，效率可以极高、推进速度极其飞快。</p>
+<p>但是，现代软件工程从来都是依托于团队构建的，对吧？在团队中，你必须始终与产品经理、设计师以及其他工程师保持同频与对齐，大家需要清楚你究竟在做什么决策。然而在现实中，我们根本没有好用的协作工具来支持这种新型工作流。现状大概就是：我们平时用 Slack 沟通，或者用 Linear、GitHub Issues 之类的工具来追踪具体 Issue。但问题在于，在正式撰写一个 Issue 之前，通常存在着海量的前期规划工作。因为通常当你写下 Issue 的那一刻，你基本上已经准备好把它直接转交给智能体去执行了。</p>
+<p>可在走到那一步之前，团队必须先就整体方案达成共识：我们到底该不该做这个功能？这个功能的产品形态是否合适？它的接口定义是否合理？我们是否需要执行某种数据库迁移？所有这些前期的沟通、论证和对齐工作，目前市面上几乎没有任何优秀的工具能够很好地承接，尤其是那些能够将智能体深度融入其中的协作工具更是凤毛麟角。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Yeah. So this is a problem that the GitHub Next team has been focused on trying to find various ways to solve, I think for well over a year now. It is this acknowledgment that we are now working with these agents locally on our machines, and it speeds up each individual person—like us alone with the agent, we can go really fast. But software is always built on a team, right? You're always trying to align with the product managers and the designers and the other engineers, like what decisions you're making, and we don't actually have good tools in place to do that.</p>
+<p>It's sort of like we have Slack, people might have something like Linear or GitHub Issues where they're tracking issues. But there's tons of pre-planning well before you write an issue, because usually when you write an issue, you're ready to hand it off to an agent. But before that point, you have to agree upon your approach, like: Should we build this feature? Is this feature the right shape? Does it have the right interface? Do we have some sort of database migration we have to do? There's all this upfront work, and not many good tools do that work, and that's how we felt, especially not ones with agents involved in them.</p>
+</details>
+<p><strong>Speaker 0</strong>: 因此，目前最大的断层就在于：我们虽然拥有了形形色色的智能体编程工具，但它们没有一个是真正支持实时多玩家（multiplayer）协同的。你的所有交互会话都是私有的、被封闭在你个人的本地机器上，你根本无法把它无缝共享给团队里的其他人。</p>
+<p>不过这种情况现在已经开始出现转机了。我们看到市面上已经开始涌现出一些尝试做实时多人协同的产品。而我们之前在 GitHub Next 所打造的探索性原型，正是沿着这个方向推进的——它的本质就是将共享计算环境、共享沙箱与类似 Slack 的即时聊天界面融为一体，让团队成员在编写代码的同时能够实时交流对话。</p>
+<p>人们现在正逐渐意识到，多人协同将是推动智能体编程工具升级演进的下一个核心前沿。但就目前而言，这个问题依然处于完全未被解决的状态。因为即便你拥有了一个内置智能体的类 Slack 聊天界面，你依然缺乏专门的工具机制来促成共识。</p>
+<p>这正是我目前全力倡导的方向：我认为“决策”（decisions）本身需要成为一种一等公民式的核心原语（first-class primitive）。当智能体向人类提出一个决策建议时，系统不仅要在屏幕上以足够清晰、结构化的方式展现出该决策的完整背景与上下文信息，同时，你大概率还需要邀请团队里的其他同事共同参与、协助你完成裁决，或者至少由他们提供反馈输入。在此之后，团队中必须有明确的负责人为这项决策承担最终责任。</p>
+<p>我们需要对整个决策过程留下完整的审计记录：比如我们在此处具体达成了哪些决议、我们接下来准备向智能体喂送什么样的上下文信息。唯有在那个明确的时间节点上，我们才能整理出一套清晰规范的 Issue 列表或规格说明书（specs），并正式移交给智能体去具体落地执行；而在另一端，我们还需要配套严谨的校验环节。</p>
+<p>在迈入具体实现阶段之前，整个团队必须保持极高度的对齐。因为在过去的传统软件工程中，代码实现本身耗时很长，你在编码推进的过程中随时都有时间去调整方向；但现在，由于向智能体交付任务存在一个非常明确且集中的交接断点，如果前期没有完成充分的共识对齐，后期就会产生巨大的脱节。哪怕是在我们自己的团队内部，大家也无时无刻不在感受着这种割裂——每个人都在各自的本地机器上飞速狂奔，但想要让全员对我们正在做的事情保持步调一致，却变得极其困难。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: So the biggest gap seems to be like we have agentic coding tools, but none of them are real-time multiplayer, or your sessions are private and locked to you, often locally on your machines. You couldn't possibly share it with someone. This is starting to change now—like we have seen some products come out that are trying live multiplayer.</p>
+<p>The prototype that we made at GitHub Next was in this direction: it was like shared compute, shared sandboxes in a Slack-like interface. So you're coding and talking at the same time. People, I think, are beginning to realize this is the next big thing we need to push on to improve our agentic coding tools. But it's still totally unsolved. Even when you have a Slack interface and there's an agent in there, you still need tools to agree on things.</p>
+<p>This is where I'm kind of pushing, like maybe decisions need to become some sort of first-class primitive. When an agent presents a decision to a human, you first need to have the decision be large enough on screen to give you the information about it, but then also you probably need someone else on your team to come help you make that decision, or at least give input on it. And then someone has to be responsible for having made that decision. And you need a record of like, here's the things we decided, here's the context we're going to feed the agent, at that moment where we've written a clear set of issues or specs that we're going to hand off to be implemented, and then some verification check on the other side.</p>
+<p>You all need to be so aligned up to the point of implementation, because in the old world, implementation took so long, you could adjust along the way. But now, because there's a sort of hard handover point to an agent, you need to all be aligned upfront in a way that we're not at the moment. Even on our team, we feel this all the time: we're all individually running on our machines, and it's hard to stay aligned on what we're doing.</p>
+</details>
+<h3>GitHub Next 的原型探索与企业级协同智能体实践</h3>
+<p><strong>Speaker 1</strong>: 你刚才提到了 GitHub Next 以及你们内部正在进行的各种技术原型探索。能否详细谈谈你们具体打造了哪些类型的项目、进行了怎样的试验，以及在过程中总结出了哪些核心经验？也许还可以为我们指明一些你目前感到格外兴奋的研究方向。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: And you mentioned GitHub Next and the prototyping that you're doing. Can you talk about the types of projects you built, what you've experimented with, some learnings that you had, and maybe give us a direction of things you're now excited about exploring?</p>
+</details>
+<p><strong>Speaker 0</strong>: 好的。我是差不多不到一年前加入这个团队的。但在过去的大部分时间里，我们都在全力攻坚一个名为“Ace”的原型系统。这个系统大体上是将 Slack 体验与云端计算沙箱、微虚拟机（microVMs）以及一系列周边技术整合在一起。你可以在其中直接发起 Pull Request、进行代码审查等等，它本质上是一个一站式的多玩家智能体工作空间。</p>
+<p>这是一个非常实用且启发性的原型，但事实证明，对于我们这样一个微型团队来说，它的架构过于庞大和雄心勃勃了。当时我们团队总共只有三到四个人在持续开发它，而我们原本的设想是在某个节点将它打造成一个正式的商业化产品。后来事实证明，以我们当时的人力规模，要支撑起这么庞大的产品是不切实际的。</p>
+<p>不过，我们还是成功地把其中的核心技术组件拆解出来，输送给了 GitHub 的其他业务线。例如，当中的沙箱技术如今已经被集成到了 GitHub Desktop 客户端当中，并在其他多个场景下发挥作用。而且我认为，这个原型也促使公司管理层更加严肃地审视多玩家协同编码的价值，并开始寻找其他途径将这种协同体验真正落地到正式产品当中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: So I joined the team like a little less than a year ago, but most of the time we were working on this prototype Ace, which is like Slack plus cloud compute sandboxes and microVMs and a bunch of other stuff in there. You can open PRs and review your code and that kind of stuff; it was a kind of all-in-one multiplayer agent workspace.</p>
+<p>It was a really useful prototype, but it turned out to be extremely ambitious for our small team. We had like three or four people working on it at a time, and we wanted at some point to take it to like a real product. It just turned out that was not feasible with the number of people we had. But we tried to take bits of it and ship it to the rest of GitHub. Like sandboxes have now gone out to be part of the GitHub Desktop app, and being used in other ways. And I think it's also made leadership take multiplayer more seriously and find other ways we can ship that into the product.</p>
+</details>
+<p><strong>Speaker 1</strong>: 这确实是一个极具前景的技术方向。其实在我们这期播客上线之前，我们已经发布了一期针对 Ramp 团队的深度访谈。他们在公司内部就真正构建了这样一套体系，并且把它做成了彻底的协同模式——甚至可以说是一种“强制协同”机制，在他们的系统里，你创建的任何东西都无法设为私有。</p>
+<p>他们打造了多种访问交互界面：这个内部系统被称为 Inspect，它直接运行在 Slack 当中；此外他们还开发了一个配套的 Chrome 浏览器插件以及专用的 Web 网页端。他们发现，在 Slack 频道里，产品经理和设计师都可以直接与智能体 Inspect 进行对话交互，智能体在此过程中能够广泛吸收各方输入。</p>
+<p>更重要的是，在所有的会话中，任何其他团队成员都可以随时加入会话，任何人都能直接向智能体输入 Prompt 并修改它的运行方向。起初 Ramp 内部对这个设计非常担忧，他们很不确定大家是否能接受这一点，因为工程师通常非常在意个人隐私与独立工作空间；但后来的实际运行表明，整个协作过程极其文明规范，完全没有演变成混乱。</p>
+<p>正因如此，系统内的知识和上下文得到了更好的扩散和沉淀。这套体系之所以能在 Ramp 内部取得极大的成功，关键原因在于他们将这个智能体深度打通并集成到了公司所有的内部系统当中，而且他们的云端机器配置完全等同于一台全功能的开发者工作站——当然，搭建这样一套云开发环境（Cloud Development Environment）需要投入极其巨大的工程量。</p>
+<p>说到底，为单个公司量身定制这样一套契合其特定工作流的方案是完全可行的；但如果想把它抽象成一个面向全行业所有人的通用解决方案，难度显然要高出好几个量级。我相信未来的行业生态一定会朝这个方向演进，市场上也必然会出现各种尝试，但这两者之间存在着本质的区别：一种是解决团队自己切身体会的特定痛点，另一种则是构建一套能普适服务于千家万户的标准化系统。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: And this is a really promising direction. I mean, we already have a deep dive out... this podcast is out about Ramp, who have built this exact thing inside, and they made it collaborative—it's forced collaborative. You cannot make anything private.</p>
+<p>They have multiple interfaces: they have it running, it's called Inspect and it runs in Slack; there's a Chrome plugin as well; there's a web interface. And they find that in the Slack channels, with product managers and designers, they can talk to the agent. Inspect gets all this input, and then for all the sessions, anyone can join a session, and anyone can prompt and change the direction—which actually was a really concerning point. They weren't sure if they wanted this, because of people's privacy, but it turns out to be civilized, so it turned out not to be an issue, but because of it, knowledge spreads better.</p>
+<p>And the reason it works really well for them is that they've integrated this agent into all of their internal systems, and their cloud machines are like a full developer machine, which is a lot of work, like a cloud development environment. All this to say, doing this for one company specifically for their needs is possible; doing it as a general solution is probably much more difficult. And I'm sure it will come, or I'm sure there will be attempts, but you know, there's a difference between scratching your own itch and doing something that works for everyone or for so many people.</p>
+</details>
+<p><strong>Speaker 0</strong>: 就拿 Slack 来说吧，他们不久前正式推出了自己的一整套开发者体验与云端 IDE 功能套件，这很可能就是他们试图把这种协同智能体体验真正落地推向市场的一种探索路径……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I mean, Slack, right? They launched their whole developer experience IDE thing, which might be where they try to make this experience happen...</p>
+</details>
+<!-- chunk 10/13 -->
+<h3>原型探索与主动式智能体</h3>
+<p><strong>Speaker 0</strong>: 或者就像杰克·多西（Jack Dorsey）也在往这个方向走。很明显，现在有很多人都已经意识到这是一个切实存在的问题了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Or like what Jack Dorsey is doing, going in this direction too. There's clearly a lot of people realizing this is a problem.</p>
+</details>
+<p><strong>Speaker 1</strong>: 你们团队在这个方向上也正在进行相关的实验。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: And you're also experimenting in this direction.</p>
+</details>
+<p><strong>Speaker 0</strong>: 是的，没错，确实如此。当我们最初尝试构建这整套东西的时候，面对所有那些微虚拟机（microVMs），我们当时的想法可以说是过于雄心勃勃了。但现在我们正在逐步收缩规模，重新思考：这套方案中的哪些核心部分是我们能够保护和保留下来的？它能在哪些具体维度上为 GitHub 带来帮助？以及如何为 GitHub 的领导层提供更明确的方向指引，告诉他们下一步究竟该往哪里探索和推进。</p>
+<p>你知道的，我们团队的核心职责之一就是跑在现有产品线的最前沿去探索。我们会说：瞧，你们大家都很清楚未来六个月到一年内具体应该落地哪些功能；而我们关注的则更加宏观和超前——GitHub 可以尝试哪些颠覆性的、大胆疯狂的大动作？哪些方向更具技术风险？或者说，什么是属于更遥远未来的终极形态？正因如此，我们才试图去把这些概念做成原型。现在大家都在跟进多人协作（multiplayer session）这类模式，那么在这之后，接踵而至的下一个浪潮又会是什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Yes, yes, yeah. So one of the things, like when we tried to build this whole thing, was it was too ambitious to do with all the microVMs. But now we're kind of scaling back and thinking, okay, what bits of this can we protect in ways that would help GitHub? And give GitHub leadership a bit more direction like where they should run next. You know, one of the functions of our team is just to run out ahead of products and say, okay, you guys know what the things you should probably do in the next six months to one year are; we are much more focused on what is a big, crazy swing GitHub could make, or what's more risky, or what's like the far future. And so that's why we're trying to prototype. Okay, people are now on this multiplayer session thing, but what comes after that?</p>
+</details>
+<p><strong>Speaker 0</strong>: 所以我们现在真正感兴趣的课题之一，就是如何构建出既能主动协助、又不会让人感到烦扰的主动式智能体（proactive agents）。因为说到主动式智能体，我们心里其实都有这样一个美好设想：假设机器智能在未来是完全免费的，或者便宜到了根本无需计较成本的地步，对吧？这是一个非常有趣的前提假设——如果你能够同时让一百个后台智能体持续运转，那么用什么样的方式去消费和吸收它们产生的众多产出，才是最不让人感到不知所措、最不令人厌烦的？</p>
+<p>这是一个极其开放的探索性研究课题。我们正在努力思考：在一个文档环境中，你究竟该如何让智能体与人类协同共事，同时又完全不会产生那种压迫感和骚扰感？我们希望它们在后台进行修改或者完成辅助性工作时，给人的感觉是润物细无声的，而不是具有侵入性或强行打断工作流的。因此，我们正在提炼这类交互设计上的核心问题，并通过构建各类原型来尝试寻找解答，希望未来某一天当 GitHub 决定向这个方向推进时，我们能自信地拿出所有的先期调研与研究成果。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: So now we're interested in, like, how do you make proactive agents that aren't annoying—that is one of the things we are trying to solve. Because with proactive agents, we have this dream of: okay, assume intelligence is free, or so cheap that it doesn't matter, right? That's a fun assumption to make. If you could have 100 background agents running, what would be the least overwhelming, least annoying way to consume their many outputs? That is an open research question. We're trying to think around how you would have agents working in a document with humans where it's not, again, overwhelming or annoying, allowing them to make changes or do helpful background work in a way that doesn't feel invasive or interruptive. So we try and take these kind of design questions and figure out prototypes that could solve them, in the hopes that, if one day GitHub wanted to build something in this direction, we can then say: okay, here's all the research we did.</p>
+</details>
+<h3>开发者手艺的消逝：细节把控与注意力转移</h3>
+<p><strong>Speaker 1</strong>: 我这里有一个很想向你请教的问题，这是站在一个软件开发者的视角提出来的。根据你的切身体验和日常观察，当我们开始将越来越多的决策权全权移交给智能体时，究竟会发生什么？我想引用开发者豪尔赫·蒙鲁比亚（Jorge Manrubia）写过的一篇文章，那篇随笔的名字叫作《我的手艺》（My Craft）。</p>
+<p>他在文章中写道：“随着模型能力的不断提升，专注于细枝末节所能带来的收益正在迅速衰减。当模型已经足够强大、能够完全自行处理这些细节时，人类如果再把过多时间耗费在这些细枝末节上，就会开始让人觉得这是对人类注意力的一种极差浪费。”他还谈到自己现在几乎已经不再打开代码编辑器了。他已经有好几个月没有亲手写过一行代码了。但核心问题在于，过去他总是对系统的底层细节了如指掌、洞若观火；而且人们普遍有一种根深蒂固的观念——所谓的手艺与匠心，恰恰正是来自于你与那些最微小的细节朝夕相处、深耕细作。</p>
+<p>当然，你是从设计师的专业视角来看待这个问题的。但你有没有观察到，你自己的专业手艺是否也在发生改变，甚至在逐渐消解？或者说，你是否认为这里面其实潜藏着某种危险？毕竟大家总会面临这样一种诱惑：正如我们讨论过的那样，只要模型做得“足够好、足够好、足够好”，那就干脆让它去做决定吧。“行啊，我们就这么定了吧，不管它决定了什么，反正这无伤大雅。”对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: A question I wanted to ask you is coming from a developer angle. It is: what happens, in your experience and observations, when we start to give more and more decisions to the agent? And I'm going to quote a developer, Jorge Manrubia, who wrote an article titled &quot;My Craft&quot;. He wrote that the return on attending to the small stuff is decaying quickly as models improve, and when models are capable enough to handle those details themselves, spending too much time on these details starts to feel like a poor use of human attention. And he writes about how he rarely opens his code editor anymore. It has been months since he wrote a single line himself. But the thing is, he used to have insight and see all the details. And there is a sense that craft has to do with being there with the details. And of course, you're coming from a design perspective, but what have you observed of your own craft changing, decaying? Or what are you seeing that makes you think there is a danger, as there's this temptation—as you know we talk about—of just saying: &quot;It's good, good, good. Just make the decision. Yeah, we'll just do this. Whatever the decider chose doesn't really matter&quot;?</p>
+</details>
+<p><strong>Speaker 0</strong>: 但细节是有可能产生实质影响的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: But it can matter.</p>
+</details>
+<p><strong>Speaker 1</strong>: 但真的不能产生影响吗？我认为它是有意义的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: But it can't matter? I think it does matter.</p>
+</details>
+<h3>设计标准与控制权：为什么智能体还无法自动化设计细节</h3>
+<p><strong>Speaker 0</strong>: 我想说，这确实很复杂难办。因为在某种程度上，我算不上真正意义上的传统软件工程师，我并不见得那么在乎代码写得多么纯粹整洁；但是我真正在乎的是界面的交互与视觉设计。可现在的现实问题是：智能体做不到，它们绝对无法达到我的设计标准。没错，我必须依然深度介入其中，才能让最终的界面在外观呈现和操作手感上达到我自己亲自动手设计时的那种水准。</p>
+<p>所以很多时候我甚至会感到有些恼火，因为我总是不得不亲自跳进去对它指指点点：“不，这个过渡动画做得太糟糕了！我们应该这样来实现它……”诸如此类，你懂我的意思吧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I mean, it's hard, because I'm not, I would say, a true engineer in the sense of like I don't necessarily care about clean code per se, but I do care about design. But the thing is, they can't. They definitely can't do design to my standards. Yeah, I have to still be really involved to get the design to look and feel the way I would make it. So I'm almost annoyed that I'm always in there being like: &quot;No, that is a terrible transition. Here's how we should do it.&quot; You know, things like that.</p>
+</details>
+<p><strong>Speaker 1</strong>: 所以你依然牢牢扎根在细节当中，你根本没有彻底放手那些细节。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: So you're in the details; you're not letting go of those details.</p>
+</details>
+<p><strong>Speaker 0</strong>: 是的，因为我其实希望能放手。我的意思是，我多希望能完全不用管这些啊。比如我尝试去编写：你会做设计吗？我不知道。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Yeah, because I wish I could. I wish—I mean, like I've tried writing: do you know how to design? Right? I don't know. Yes.</p>
+</details>
+<p><strong>Speaker 1</strong>: 我很想就这一点继续向你深入追问。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Yeah, I want to push you on this.</p>
+</details>
+<p><strong>Speaker 0</strong>: 我脑海里一直在琢磨这件事：假如到了明天，我能够不断摸索并编写出精准的设计技能指令（design skills），把我的设计偏好原原本本地告知智能体——但这些偏好本就不是放之四海皆准的普适真理。比如，我个人对于边框与内部元素之间应该留出多少内边距（padding）有着非常固定的审美偏好，对吧？但这种偏好既不是每个人的偏好，也并非适用于每一款产品，它只是非常契合我自己。</p>
+<p>事实上，这类规则本身是非常明确的：多大尺寸的内边距，搭配什么样式的边框，以及什么样的边框阴影（box shadow），这些在设计规范上都是非常标准化的定义。我也曾反复尝试把这些精确规则编写给智能体，然而在实际执行时，它们根本无法在整套界面中正确且普适地套用这些规则，出来的效果完全行不通。因此，我最终还是只能亲自下场，去手动修改那些具体的数值。按照我们平时谈论智能体能力的那种口吻，你本会以为到了今天这个时间节点，诸如此类的微小细节早就应该被全自动化解决了。我们平时总觉得智能体要接管我们的工作，理所当然地认为让它们实现特定样式的边框或精准的不透明度层级，应该是一件微不足道、信手拈来的小事才对。</p>
+<p>所以我就在想：假如我明天早上一觉醒来，智能体突然开窍了，拥有了足够完备的上下文信息，能够丝毫不差地完全按照我的全部设计规范去输出界面，那我是否会突然觉得：“哎，所有做设计中最有乐趣的那部分全都不复存在了”？看到一个美轮美奂的界面凭空出现在我的眼前，但这其中却没有哪怕一丝一毫是我亲手雕琢出来的，这真的能让人感到内心的满足吗？我对此深表怀疑。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Yeah, I keep thinking about this: like, if tomorrow—I keep trying to write design skills that tell the agents exactly my design preferences, which shouldn't be universal. Like, I have preferences about how much padding I like between a border and an element, right? And that's not everyone's preference, and it's not right for every product, but for me it is. And like there are set rules: this much padding, this kind of border, a box shadow—it's pretty standard. And I've tried to write these rules, but then they don't universally apply them properly, and it doesn't work. And so I always end up in there changing specific values that you would think, by this point in time, would have been automated away, given the way that we talk about agents. Like taking tasks off our plate—we think this would be so trivial for them to implement, like a certain kind of border or whatever opacity level we want. So I kind of think: if I woke up tomorrow and the agents just had enough context and designed exactly to my specs, I wonder if I would feel like: &quot;Oh, all the fun bit is gone.&quot; Like, is it satisfying to have a gorgeous interface appear in front of me, but I didn't do anything to make it? I'm not sure.</p>
+</details>
+<h3>室内设计类比与 AI 生成的美学疲劳</h3>
+<p><strong>Speaker 0</strong>: 我其实经常会拿室内设计来做类比思考。如果你在过去两年的任何时间里刷过 Pinterest 的话……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I also think about this with interior design stuff. If you've been on Pinterest anytime in the last like two years...</p>
+</details>
+<p><strong>Speaker 1</strong>: 我对这个太熟悉了。我妻子对此非常热衷。当我们装修新房子的时候，我真的在大量收集整理这些案例素材。我们当时聘请了一位室内设计师，我妻子挑中了很多喜欢的方案，但我当时也在场参与。你脑海中会有那种朦胧的感觉：“我想要大致类似这样的感觉，但又不完全是它。”然而当你试图把这种微妙的感受清晰解释给别人时，除了拿着这些图片参考案例之外，我们根本缺乏更有效的表达工具。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: I'm familiar with that, yeah. My wife is into it. When we were decorating our new house, I was really collecting these things. Yeah, we worked with an interior designer. My wife loved a lot of things, but I was also there. You have this feeling of: &quot;I want something kind of like this, but not quite.&quot; But when you try to explain it, you don't really have the tools beyond showing reference images or examples, you know?</p>
+</details>
+<p><strong>Speaker 0</strong>: 你知道吧？对，完全是这样！现在那上面的绝大多数内容其实全部都是 AI 生成出来的。现如今你打开那个平台，只要搜索某些特定关键词，确实能搜出一大堆令人惊艳的房间美照。但如果你仔细凝视它们，你很快就能看出破绽：“噢，这绝对是 AI 画出来的；那一张也肯定毫无疑问是 AI 搞出来的。”</p>
+<p>当面对真实物理空间的图像时，这绝对会成为一个巨大的问题。因为你会下意识地反应过来：“等等，画里的自然光照在现实物理世界中根本不可能成立；所有这些全都是彻头彻尾的虚假幻象。”画面看起来也许确实美轮美奂，但你转念一想就会明白：“这个世界上根本没有人真正搭建过这样一间房间，这间屋子在现实中压根就不存在。”因此，它对于我真正的室内装修需求来说几乎是毫无参考价值的。</p>
+<p>我常常在想，软件界面的设计是不是也正在走向同样的境地？诚然，所有那些界面从客观视觉上看确实都显得光鲜亮丽，因为模型训练所喂入的数据，基本上涵盖了我们在互联网上浏览并点击过的所有优秀界面案例。但对于界面本身而言，如果它们全都被打磨得千篇一律、极其平滑圆润——就拿眼下最流行的设计风格来说吧，比如 Linear 掀起的那套极具代表性的美学风格：极其极简主义、干净利落、大面积留白，外加标志性的精致圆角。</p>
+<p>如果所有的 AI 智能体都能毫不费力、分毫不差地直接把这种风格批量实现出来，那么人类设计师立刻就会开始转头去探索截然不同的设计路径。因为一旦到了那个时候，这种风格本身就会成为一个不可抹除的印记，向所有人明明白白地昭示：你这套设计纯粹就是让智能体一键生成的流水线产物。而如果你想让自己的产品脱颖而出、真正吸引用户的目光，你就必须依靠人类设计师去创造出真正新颖独特、与众不同的东西。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: You know? Yes! A lot of it is AI now. If you go on there, there really are gorgeous rooms if you search for certain things. But you look closely and you can start to see: &quot;Oh, that's for sure AI. That's for sure AI.&quot; Which is definitely a problem when they are images of a physical space, because you go: &quot;Well, the lighting might not be physically accurate. All of this is just completely fake.&quot; It may look beautiful, but you kind of think: &quot;Well, someone didn't actually build that room. That's not a real room that exists.&quot; So it's almost irrelevant to my actual interior design. And I kind of wonder if it's like this with interfaces as well. Well, like, it all objectively looks gorgeous because it's trained on pretty much everything on the web that we've ever clicked on. But with interfaces, if they all become extremely slick—take what's popular right now, Linear and their aesthetic, right? Very minimalist, very clean, lots of whitespace, right? And all of those rounded corners. If all the agents can implement that no problem, dead on, people will immediately start to design in different ways. Because that aesthetic will become a tell that you've just used an agent to do the design. And if you want your product to stand out, you need to have a human do something new and different.</p>
+</details>
+<h3>跨越文化语境的设计风格与抗拒感</h3>
+<p><strong>Speaker 0</strong>: 我认为这触及到了设计的本质属性。虽然设计确实拥有一套普适的基础规范——比如文字字号是否足够大以便于阅读、元素四周是否有充足的留白空间等等——但设计在很大程度上也是一种时尚与潮流的演变。比方说，在当下这个时间点，让界面看起来带有一点 Linear 的影子是极其合乎潮流的；而如果让它看起来像当年的 MySpace 个人主页，那显然是非常过时的，尽管在很多年以前那也曾风靡一时。</p>
+<p>可是再往后看十年，在未来的时光里，如果你的软件界面依旧长得像现在的 Linear，你就会显得陈旧落伍到了极点。别人会觉得你的产品就像是一款年久失修、堆砌拼凑的老旧软件。届时必然会诞生某种全新的主流美学风格取而代之。</p>
+<p>这就说明，AI 模型本质上根本无法理解：设计实际上是深深根植于特定的文化语境之中的，而这种文化语境永远都在处于动态的变化流转之中，它在不同的时刻会向人们传递出截然不同的潜台词和心理信号。如果大众在浏览你的网站时产生了一种感知：“这帮人根本就没有在产品上倾注真正的心血，因为这不过就是一套最寡淡、最基础的通用样板代码罢了”——就像 Claude 拥有非常鲜明且极具辨识度的专属设计语言一样，对吧？标志性的米白色复古背景色、略带砖红色的文字色彩，以及界面各处带有特定样式的眉题小标签。当你一眼扫过去，如果感觉它纯粹就是 AI 自动生成的产物，没有任何一个活生生的人类参与过其中的打磨，我甚至怀疑自己究竟还会不会愿意花时间去认真多看它一眼。</p>
+<p>所以归根结底，这关乎于美学风格的选择。你所挑选的设计风格，本质上是在向浏览产品页面的受访者传递某种深层信息；而面对那些一眼就能看出来完全是由智能体批量制造的东西，我想人类用户很可能会在下意识里开始直接表示抗拒与排斥。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I think it gets into how design, although it has universal basics—like is the text big enough to read, do you have enough space around things—a lot of it is fashion. It's in fashion right now to look a little bit like Linear. It's not in fashion to look like MySpace, but it was a while ago. And ten years in the future, if you look like Linear, you're going to look very out of date. You'll look like some old, clunky piece of software, and there will be some new aesthetic that comes along. So it's like the models can't necessarily understand that design exists within a cultural context, and that cultural context is always changing, signaling different things to people. And if people read it as: &quot;Oh, they didn't really care about this site because it's just bland, basic code&quot;—like Claude has a specific design language that is very distinct and noticeable, right? The cream background, slightly terracotta-red text, the eyebrow text on things. If you look at something and feel it was purely generated and no human was involved in this, I don't know if I'm even going to bother looking at it. So it gets into how the aesthetic style you pick communicates something to the person viewing the product page. And things that were clearly made by agents, I think we might start to reject out of hand.</p>
+</details>
+<p><strong>Speaker 1</strong>: 确实如此。当面对纯文本内容的时候，我可能也会产生类似的排斥心理。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: No, maybe I have this same reaction when it comes to written text.</p>
+</details>
+<!-- chunk 11/13 -->
+<h3>AI 写作辨识与人类文字质感</h3>
+<p><strong>Speaker 1</strong>: 我一眼就能看出来是不是 AI 写的，但我始终说不准这究竟是不是因为我自己经常写作。我也读过很多书，特别是很多科幻小说。所以那种异样感立刻就会浮现出来，那种感觉就像……难道不是显而易见的 Claude 风格吗？它的核心特征就是那种反复出现的句式结构和用词偏好，但我从不敢百分之百肯定。我是说，难道只有我一个人注意到了吗？因为你说你一眼就能看出这是 Claude。我倒不敢保证如果我随意浏览一个网页，我也能立刻认出是 Claude，但你对这个领域非常敏锐，正如我对字词、对非虚构类写作极其敏锐一样。所以我确实很好奇，是不是作为专家我们能一眼看穿，但专家在整个人群中始终只占很小的比例，普通人根本看不出来。不过我确实同意你的看法，AI 写作的模式化特征在很大程度上是可以预测的，而人类的写作幸好并非如此。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: I can immediately tell if it's AI written, but I can never tell if it's because I write a lot. I also read a lot; I read a lot of speculative fiction. And so it just feels off immediately. It's just the repetitiveness, the objectives, but I can never tell for sure. Like, am I the only one who noticed it? Because you said, like, &quot;Oh, you see it's Claude.&quot; And I'm not sure if I looked at a web page, that I would see that it's Claude, because you're so into this the same way I'm so into words or non-fiction writing. Yeah. So I do wonder if maybe as an expert, you can always tell, but the experts are always a small percent of the population, so we don't know. But I do agree with you that it is predictable in ways that humans, luckily, are not, I guess.</p>
+</details>
+<p><strong>Speaker 0</strong>: 我也完全能注意到文字上的这种破绽，因为我也是个写作者，我热爱写作。每当我读到任何一句隐约带有那种味道的句子，哪怕只是一丁点，我就会立刻关掉网页，心里想着“算了，不读了”。甚至当你回过头去读那些其实并没有写在很久以前的非虚构书籍——比如去读一本写于五十年前的书，仅仅是它的开头就让人感到如此神清气爽。你会惊叹：“天哪，这些词汇用得多么新奇独到！”这里面完全没有那种“如果是这个，那么就是那个”或者“不仅不是 X，反而是 Y”的刻板句式，连一丝一毫的影子都见不到。你纯粹是在畅快地呼吸真正原创的人类文字。那种感觉是如此令人耳目一新，以至于你转过头来就会觉得，自己实在忍受不了任何非原创、充斥着机器套路的东西。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Like I definitely notice the writing one too, because in the same way, I'm a writer. I love writing, and the minute I read any sentence that is remotely like that, yeah, it's like closed out, like, &quot;Never mind then.&quot; And then even like going back and reading non-fiction books that were really, really not written a long time ago—you go back and read a book written fifty years ago, and just the opening is so refreshing. You're like, &quot;These are such novel words!&quot; Like there's none of this &quot;if this, then that&quot; or &quot;it's not X, it's Y&quot;—there's not a single bit of it to be seen. You just breathe in original human writing. And it's so refreshing that you go, &quot;Yeah, I can't stand anything that didn't come from human thought.&quot;</p>
+</details>
+<h3>数字花园：打破完美主义的公开创作</h3>
+<p><strong>Speaker 1</strong>: 说到原创写作和人类亲笔撰写的文字，你经常谈到“数字花园”（Digital Garden）的概念。到底什么是数字花园？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Speaking of original writing and human writing, you often talk about the concept of the digital garden. What is a digital garden?</p>
+</details>
+<p><strong>Speaker 0</strong>: 它本质上是一个博客，但附带了一些独特的规则。在数字花园里，你发布的每一篇内容并不要求必须是已经写完的成熟作品，前提是你明确向读者说明这一点。所以，它是一个随着时间推移自然生长的博客。你可以先发布一篇只完成了一半的内容，日后再去更新完善。这类文章通常会标注一个“更新日期”。在我的花园里，我通常用三个不同的生长阶段来标识文章的状态，借用了园艺中的隐喻：幼苗期（Seedlings）、萌芽期（Budding）以及常青期（Evergreen）。因此，我可以放上去一个只有半成熟想法的草稿，打上“幼苗”标签，之后随时再回过头来把它补完或修正。以这种方式写作，让我能够发表比以往多得多的内容。因为我骨子里其实有完美主义倾向，而这种模式恰恰与完美主义形成了强烈的对抗。诚然，我当然希望自己的某些作品能代表我的最高水准、经过最精心的打磨，但如果每一篇都苛求如此，那是完全不切实际的；如果是那样的话，我可能永远也不会公开发布任何东西。因此，以这种方式工作真正解放了我。我想我是从 2020 年左右开始打理我的数字花园的，时间其实不算太长，但我写的内容已经远远超过大多数人在自己个人网站上发布的博文量了。因为这其中的有些内容，坦白讲只有短短三段；当然也有一些是我花了很长时间打磨的鸿篇长论。但翻阅时，你很可能会碰上一篇标着“草稿正在进行中”的文章，而在该标记以下的内容其实都非常粗糙。其中有一篇是我三年前就动笔的，每当我有一点空闲时间，我就会回到那里再续写一段，然后把那个小小的草稿提示往下挪一段。这种方式让我能够“在公开场合下工作”（work in public），我觉得这也能让读者稍微窥见车库门背后的创作过程，因为在草稿标记下方的往往都是简单的要点记录，比如“哦，我应该谈谈 X”。只要在网站上做了清晰恰当的标注，我就觉得直接放上去完全没有问题。这就像是你与读者之间建立的一种契约：只要你向他们清晰传达了“这些只是我尚未完成的草稿笔记”，那就完全没有关系；只要你没有宣称“这是我最完美的大作”，我相信读者就会以包容和理解的正确心态去阅读它。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: It's a blog, but with extra rules attached. So it's a blog where every piece you put up does not have to be finished, as long as you clearly communicate that to the audience. So it's a blog that you grow over time. You can put a piece up that is half done and then update it later. These posts have an &quot;updated at&quot; date, and I usually communicate it with three different stages my posts go through. So I have seedlings, budding, and evergreen, like growing in the gardening metaphor. So I can put up something that is like a half-finished thought or marked as a seedling, and then come back to it later and finish it up or fix it. Writing in this way has allowed me to publish much more than I ever would have otherwise. Like, I have perfectionist tendencies; this was very much a counter to that. Well, of course, I want some of my stuff to be my best work, my most polished, but it's completely unrealistic—I would never put anything up if that were the case. So working in this way really freed me. I mean, I started my garden in like 2020, I think, so it's not been that long, but I've written a fair amount more than most people have blog posts on their website. Because some of them are, frankly, like three paragraphs long, or some of them are big long essays that have taken me a long time to write. But hopefully, you'll hit something that's &quot;draft in progress&quot;, and everything below that point is pretty rough. One of these I started three years ago. Every time I have some free time, I go back to it, finish one more paragraph, and move the little draft notification down. It allows me to work in public, which I also think helps people kind of get to see behind the garage door a little bit. Because often the notes below the draft point are like bullet points, like, &quot;Oh, I should say something about X.&quot; And here I just kind of put it on the website; as long as it's marked appropriately, I think it's fine. It's like this contract between you and the reader: as long as you're communicating to them that these are rough notes, that I haven't finished, that's okay. As long as you're not saying like, &quot;This is my best finished work,&quot; I feel that people read it in the right spirit.</p>
+</details>
+<h3>家庭自制软件与“赤脚开发者”的兴起</h3>
+<p><strong>Speaker 1</strong>: 与这个话题多少有些关联的，同样先抛开纯粹的 AI 技术不谈——你之前还探讨过“赤脚开发者”（Barefoot Developers）和“家庭自制软件”（Home-cooked Software）的概念。能讲讲什么是赤脚开发者吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Somewhat related to this again, just going away from AI: you also talked about barefoot developers and home-cooked software. Yeah, what are barefoot developers, and who are they?</p>
+</details>
+<p><strong>Speaker 0</strong>: 这大概是在 2024 年，虽然感觉像过了好久，但其实就在不久之前。那是在当地的 FOSDEM 会议上，2024 年，我做了一场关于家庭自制软件和赤脚开发者的演讲。“家庭自制软件”这个词最初出自罗宾·斯隆（Robin Sloan）。它的含义是指你为你自己、为你的家人亲手打造的软件，就像你为家人亲手做一顿家常便饭一样。罗宾为此写过一篇文章，讲述了他为家人开发的一款小应用，他们可以在里面互相发送小视频便签。这个应用不需要服务世界上任何其他人，他不需要为此付费，也没有任何外部大公司来接管和运营。我认为这就是更多软件本该有的样子。我们完全可以为了自己和家人的生活便利，亲手构建许多轻量的小工具，而不必非要在应用商店里花 2.99 美元购买，或者被迫出卖自己的隐私数据来换取这些功能。在那次会议上我提出过一个观点：随着大语言模型的普及，我预计这类软件将会迎来爆发式增长。好吧，当时这个趋势其实已经初露端倪了，所以这也不算什么多么疯狂的预言，但当时我们毕竟还处于更早期的阶段，智能体（Agents）生态也还没真正成型。然而显而易见，这如今已经彻底变成了现实。现在随处可见个人自制软件，每个人都在搭建属于自己的菜谱管理器、属于自己家庭的日常应用，或是专属的健身打卡应用。有这么多绝佳的应用场景，人们完全可以把软件塑造成自己想要的样子，而根本无需去下载某个市面上千篇一律的标准通用版本。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: So this was—I'm trying to remember what year—yeah, this might be 2024, which feels like an eternity ago, but was not that long ago. This was at the local FOSDEM conference in 2024. I did this talk on home-cooked software and barefoot developers. &quot;Home-cooked software&quot; is a phrase that comes from Robin Sloan, which is software you make for you and your family in the way you make a home-cooked meal. So it's about this app he built for his family where they send each other little video notes. And it's not for anyone else to serve; he doesn't have to pay for it; it's not managed by some company. And this is the way more software should be. There's lots of little pieces of software we can build for ourselves that benefit our lives and our families, and it doesn't have to be like $2.99 on the App Store or selling my data in exchange for this software. And I made this case at this conference that I expect to see an explosion of this with language models. Okay, the writing was already on the wall, so I don't think it was that crazy of a prediction, but we were still more in the early days; we didn't have agency yet. But of course, it's totally happened. There's personal software everywhere. Everyone's building their own recipe manager, their own household app, their own gym app. And there's all these great use cases where people can just make the software to be what they want without having to download a bog-standard version of it.</p>
+</details>
+<p><strong>Speaker 0</strong>: 但我进一步延伸了这个理念：如果你可以为自己和家庭制作家常软件，那么还有一个概念——我称之为“赤脚开发者”（Barefoot Developers）。这个灵感来源于历史上中国农村的“赤脚医生”。当时他们挑选农村本地的村民，给予他们基础的医疗培训，比如接种疫苗、开具抗生素等，然后让他们回到各自的村庄去改善所有人的医疗卫生条件。这是一个全面取得巨大成功的项目，极大地改善了那些无法前往大医院就诊的人们的健康状况。我认为在当今的软件开发领域，我们也迫切需要类似的概念。因为到目前为止，专业开发者是一项极其昂贵且高度依赖专业技能的职业；然而在现实中，有成千上万的人有着各种各样琐碎的需求，他们可能只需要为社区菜园、或者自己所在的街区定制一款小软件来解决某个具体问题。在这些场景下，Google 表格或文档根本不够用，也无法真正满足需求；他们想要的是一个能够管理排班日程或者管理库存物品的专用工具。面对这种需求，他们过去要么必须大家一起筹钱集资，去购买一款并不能完全契合自身需求、用起来勉勉强强、甚至可能暗中收集他们数据的商业软件；要么，如果他们当中有一个“赤脚开发者”式的人物——比如某个精通各类工具的高级用户（Power User），在过去这类人可能会用 Notion 和 Airtable 来搭建解决方案，而现在他们只需要借助 AI 智能体或大语言模型，花上极少的 Token 和非常低廉的成本，就能快速为社区开发出量身定制的工具。他们甚至不需要自己去通读每一行底层代码，只要工具能正常运行、能够经过验证无误，那就完全足够了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: But I extended this concept by saying: okay, home-cooked software for you and your family, but there's another concept that I called &quot;barefoot developers&quot;, which comes from Maoist China. They had this thing called barefoot doctors, where they took peasants from rural villages and trained them up with basic medical training—like giving vaccinations, administering antibiotics—and then distributed them out to the villages so that it would improve the health care of everyone. And it was a wildly successful program across the board; it improved health, as you would expect, for people who can't get to a hospital. And I think we need the same concept for developers, because so far, developers are extremely expensive as a profession and extremely skilled. But there's lots of people with lots of needs who might need little software built for, like, their allotment garden or their local street where they have some problem to solve. And Google Sheets doesn't really cut it, nor does a Google Doc. They want something like managing a schedule or managing inventory. And either they would have to all raise money together and fund and pay for some piece of software that doesn't quite fit their needs but does an okay job, or maybe trades their data for this; or, if they had someone who was that &quot;barefoot developer&quot; type—like kind of a power user, someone who might use Notion and Airtable in the old world—now they can just use an agent or language model and build the software they need for not many tokens, like pretty cheap. They don't have to read the code as long as it works, as long as they verify it's fine.</p>
+</details>
+<h3>从九十年代的“网站管理员”到社区技术支持</h3>
+<p><strong>Speaker 1</strong>: 这听起来让我想起了当年的“网站管理员”（Webmasters）。那确实是很久以前的事了，大约在九十年代中期到九十年代末。那时的网站管理员其实就是一些高级用户或系统管理员，比如负责管理一所学校的 Windows 系统安装与维护。他们往往没有很高的薪酬，我也不太清楚他们最初是怎么接受培训的，但在那个时期，几乎每所学校都有一位网站管理员，有时是志愿者，有时是兼职人员。各大公司也都有自己的 Webmaster，他们通常负责维护网页，而这项工作在当时的技术条件下要比后来复杂繁重得多，这也就是为什么当年专门存在这样一个职位。他们会给系统打补丁、维护页面，但一切也都带着某种草根色彩：他们有时可能会忘记打补丁，遇到难题时他们会去专门的 Webmaster 论坛互相请教求助。这与你刚才提到的中国案例很像，不过中国的“赤脚医生”是一项自上而下、目标明确的政府项目，而当年的网站管理员则完全是一场自下而上的草根自发运动。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: What it reminds me a little bit of is webmasters. Yeah, it was a long, long time ago, but in the nineties—maybe mid-nineties, late nineties—the webmasters were just power-user administrators who would administer, for example, a school's Windows installations. And they were not high-paid. I'm not sure how they got trained, but at some point every school had a webmaster. Sometimes they were volunteers; sometimes they were paid. Companies had their webmasters, and they would often operate the web pages, which was, again, way more involved than later—which, of course, is why it was a role then. They'd patch things, and it was all kind of... you know, they might forget to patch stuff or they might not know, and there were webmaster forums where they helped each other. And because what you talked about—the China example—that was, of course, a government program with a clear goal, but this was just a grassroots movement.</p>
+</details>
+<p><strong>Speaker 0</strong>: 是的，没错。我认为这种草根式的角色今天依然需要再次出现。在某种程度上，我们的社区里确实已经有了这样的人——每个社区通常都会有一位懂技术、爱折腾的人，街坊邻居遇到技术问题都会跑去找他们帮忙。但我认为这群人现在需要获得更多的支持、体系以及更顺手的自动化工具。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Yeah, yeah. And I think that needs to happen again. Like, we definitely have these people to some degree. There's like a techie person in each community who people kind of go to for help. But I think these people need more support and tools. I mean...</p>
+</details>
+<!-- chunk 12/13 -->
+<h3>本地优先架构与 Vibe Coding 的工程基石</h3>
+<p><strong>Maggie</strong>：现在确实非常缺乏专门针对这类人群构建的底层库或开发框架。因为有大批新手正在以“氛围写代码”（vibe coders）或类似的方式涌入这个领域——他们不用真正深入查阅代码就能直接构建应用程序。但问题在于，他们正在触碰极其糟糕的安全基准。他们处理数据的方式很可能存在严重缺陷，甚至随时可能在某个节点彻底搞丢自己的数据库。他们缺少坚实可靠的底层工程根基，因为他们只是在命令 AI Agent：“帮我做一个实现某某功能的 iOS App”，但他们内心其实根本不懂软件工程。因此，我真正想倡导的是一种更稳固的技术范式。</p>
+<p>我认为它应当是“本地优先”（local-first）的，因为作为一种技术哲学，它与当前的需求高度契合。其核心逻辑在于：数据理应保存在本地。你只需要将数据同步到各个终端设备，完全不必在云端强行依赖一个中心化数据库。这难道不恰好指向了某种珍贵的数据主权（data sovereignty）吗？数据完全归用户所有，任何第三方都无法购买、交易或擅自获取这些数据。我由衷觉得，行业需要更强大的本地优先框架，为开发者预先构筑良好、坚实的工程原则：完备的安全机制、可靠的数据持久化，并为这些由 AI 赋能的开发者提供极易上手的底层支持，比如在其之上封装出出色的界面基础图元（interface primitives）。这或许就像是下一代 Airtable 应该具备的形态，也是我非常期望看到的未来。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Maggie</strong>: ...and absence of building like libraries or frameworks for them, because I think there's a whole bunch of people now coming in as vibe coders or whatever, right, like building apps without looking at the code. But you know, they're hitting terrible security foundations, and they're probably handling the data wrong and like lose their database at some point. Like they don't have good foundations to build on because they're telling the agent like, &quot;Okay, make me an iOS app that does X,&quot; but they don't really understand engineering, you know? What I would advocate for is something that is... I think it should be local-first, because as a philosophy it matches up with the need. It's like data should be local. You could just sync it to machines. You don't really need a database in the cloud. Doesn't that point to that little bit of data sovereignty? They own the data, and no one else could buy it or trade it or get access to it. I just feel there should be much stronger local-first frameworks that give you these good, solid principles in place: good security, good data persistence, and make it easy for these AI-first developers to build, like maybe good interface primitives on top. It's maybe something like the next version of Airtable would be this; that's what I would hope.</p>
+</details>
+<p><strong>Host</strong>：当工程师有机会与设计师并肩合作时，你会给他们提出怎样的建议，去向设计师汲取经验、学到东西，并且实现更好的跨职能协作？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: What advice would you have for engineers to learn from designers when they have access to working with a designer—what they could learn from and also how to collaborate better with them? Yes.</p>
+</details>
+<h3>工程师向设计师学习：利用 AI 作为全天候设计导师</h3>
+<p><strong>Maggie</strong>：这其实与我一直倡导的理念如出一辙——设计师如今不该畏惧涉足工程领域，反之亦然。就像设计师可以随时坐下来，借助 Codex、Claude 或 GitHub Copilot 说：“请帮我解释一下后端的整体架构，不需要扣具体实现细节，告诉我它的宏观轮廓和形态就好。”同样地，工程师也可以坐在 AI Agent 面前提问：“好的，我现在需要设计一个侧边栏（sidebar），优秀侧边栏的设计原则是什么？”或者：“这是我的个人博客，请给我上一堂排版字体学（typography）的课。”</p>
+<p>你现在相当于拥有了一位极具耐心的全职导师，随时待命并详细向你拆解：“在这个特定位置以及这些场景下，你应该调整行高（line height）；在这一行中，最理想的字数容纳区间应该是多少字符。”只要你抱有求知欲，渴望将自己的能力边界向设计技能拓展，AI 就能事无巨细地教会你。</p>
+<p>回想过去，想要系统性地学会这些知识其实门槛极高：你必须身处专业的设计团队之中，尤其是涉及产品设计领域的核心实操技能——比如，你该如何对真实用户进行深度访谈？你该如何规范地执行可用性测试（usability test）？除了一些专业书籍，这些实践经验在市面上往往很难直接获取。但现在，你可以直接把整理好的数据提供给 Agent 并询问：“嘿，这是我拿到的业务数据，请为我构想几种能够将其优雅展现的界面方案。”在概念探索与构思推导方面，AI 的表现已经相当扎实可观，即便它们生成的最终视觉界面有时并非尽善尽美。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Maggie</strong>: I think it's in the same way that I'm advocating that designers shouldn't be afraid to get involved in engineering now, and vice versa, right? In the same way that a designer can sit down with Codex or Claude or Copilot and be like, &quot;Hey, explain the backend to me, just not the details, the shape of it.&quot; I think in the same way, a developer can sit down with an agent and be like, &quot;Okay, I need to design a sidebar, what are the principles of good sidebars? Okay, I have my blog, teach me about typography.&quot; Like, you now have a very patient tutor who's just going to sit there and be like, &quot;Okay, this is where and when you would vary line height, here is exactly how many characters should fit on a line.&quot; They can just teach you, you know, as long as you're willing to learn and you want to expand into design skills.</p>
+<p>I think before it was very hard to learn these things; you had to be on a design team, especially product design stuff, like: how do you interview users? How do you do a usability test? Like not generally available information really, except for some books. But now you sit with the agent and you're like, &quot;Hey, here's the data I got, give me some ideas for possible interfaces that would represent it well.&quot; They are decent about conceptual stuff, even if they don't always get the final interface right.</p>
+</details>
+<h3>人类学视角：解构软件背后的隐性文化规则</h3>
+<p><strong>Host</strong>：说到这里，正好回到你的人类学专业背景。对于我们这些软件工程师和软件缔造者来说，能从人类学的方法、研究视角或思维框架中汲取哪些灵感与经验？有哪些精髓在你的实践中切实发挥了巨大的价值？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Right, going back to your anthropology roots. What are things that us engineers and people building software can take inspiration from or learn from anthropology—like methods, approaches, things that have really served you well?</p>
+</details>
+<p><strong>Maggie</strong>：因为我几乎习惯了通过人类学的棱镜来审视周遭的一切。我总是尝试戴上这样一副特殊的眼镜去观察世界。如果你以人类学家的视角去审视事物，你首先会探究：在当前的交互过程、特定环境或所面临的问题背后，究竟潜藏着哪些心照不宣、未被明说的隐性文化规则（unspoken cultural rules）？</p>
+<p>尤其是在软件研发的语境下——诚然，你或许正在搭建一套数据库系统，但你是为特定文化背景下的真实用户而构建的。他们对于如何评判一样事物是否值得信赖，内心自带预设；他们对于某样产品是否值得耗费自己的宝贵时间，也有一套既定的衡量标准；甚至对于一个操作流程（flow）应当如何顺畅推进，也存在特定的习惯。所有这些认知，全部受制于文化土壤的浸润。这还高度取决于目标受众的国际化程度，以及你究竟是在为谁设计。</p>
+<p>举例来说，在某些文化语境中，时间的流转感知是从右向左展开的，或者是由上至下纵向流淌的；但在西方主流认知中，大家理所当然地默认时间是从左向右横向推移。然而这种设定在全世界绝非放之四海而皆准的普适真理。</p>
+<p>我认为，哪怕仅仅阅读一点点文化人类学的基础著作，理解人类认知维度的丰富多元性，就会大有裨益。比如在语言与色彩认知领域，有些文化并非看不出色差，而是对颜色的分类体系截然不同，这导致他们观察色彩的方式完全相异——他们可能会将蓝色和绿色视作同一种未被割裂的统合色彩。当你设计界面时，这并不意味着该案例能直接生搬硬套，但它能让你清醒地认识到：人类对同一客观事物的理解与诠释，存在着极其广阔的光谱。</p>
+<p>如果你是在为人性打造工具，那么在某些特定维度上，你甚至可以通过自己亲手构建的产品，去引导用户以一种全新的视角来打量世界——重塑他们的思维范式，或是改变他们感知与诠释现实世界的方式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Maggie</strong>: Because I feel like I look at everything a little bit through the lens of anthropology. I try to take... you know, a pair of glasses you can kind of put on. But if you look at things as an anthropologist, you think about: what are the unspoken cultural rules going on in this interaction, or this context, or this problem? And especially in the context of software, like sure, maybe you're building a database that you're building for users in a cultural context, right? Like they have assumptions about how they decide something is trustworthy, they have assumptions about how they decide that something is worth their time, and it's like how a flow should go. And this is all culturally conditioned; it depends also on how international the audience is, so who you're designing for. Like there are cultures where time flows from right to left, or from up to down, but we assume in the West, you know, time flows left to right, right? But that's not universal everywhere.</p>
+<p>I think just reading a little bit of cultural anthropology and understanding how varied people's... like some cultures categorize colors differently in a way that makes them see them differently, like they might see blue and green as actually one unified color. And when you're designing an interface... not that that necessarily directly applies, but I think understanding there's a broad range of ways humans can interpret something. And you know, if you're building tools for humans, there might be somewhere you could like teach them to see the world differently through the thing you're building as well—like change their perspective or how they interpret reality.</p>
+</details>
+<h3>走出代码：工程师的用户研究与田野调查</h3>
+<p><strong>Host</strong>：你之前提到过人类学家的工作方式，传统人类学家最具代表性的做法之一就是深入原住民部落，与他们同吃同住，完全融入（embed）他们的生活环境之中。如今随着人工智能的发展，编写代码这件事对工程师而言变得愈发轻而易举，这一点是否也值得大家借鉴？我认为显而易见的是：当一位工程师越能够跨界涉足业务的其他板块、具备越充沛的同理心与认知深度，他的个人价值就会越发无可替代。那么，当条件允许时，工程师直接深入到客户真实的作业场景中，甚至让自己亲身转变为用户本身，是否正是一个绝佳的切入点？</p>
+<p>这就像亚马逊一直推崇的“客户至上”（customer obsession），其原点正是彻底读懂客户。但对于拥有人类学思维的人而言，去到你所服务的目标人群中间、努力成为他们当中的一员，或许是一种极其自然且本能的选择。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Then you said that traditional anthropologists would live with natives and be embedded in them. Is that something that maybe now that AI is making coding a bit easier as engineers... I think it's pretty clear that an engineer becomes more valuable the more they take on the other parts of the business, the more empathy, the understanding. But could it be just an idea, when you have the opportunity, to just embed yourself with customers, or become a customer yourself? I mean that used to be the thing, right, like Amazon had their customer obsession, which also starts with understanding the customer. But I guess this might be very natural as someone with an anthropology background—which could be people you could go and try to be one of them, whoever you're building for.</p>
+</details>
+<p><strong>Maggie</strong>：你指出了一个非常关键的趋势：在某种层面上，工程师即将拥有更多富余的时间。我当然清楚，技术世界里永远存在着无穷无尽的工程难题等待解决，而且我们总能以更优雅的方式去攻克它们。然而，伴随着这部分额外释放出来的精力，工程师完全可以跨越单纯的界面代码层级，将能力版图大幅延伸至更为核心的阵地——那就是扎扎实实的用户研究（user research）。</p>
+<p>所谓深入用户研究，就是去全面、透彻地读懂你正在设计或构建的业务领域，洞察人们使用该产品时所处的真实物理与社会语境。他们究竟是在什么样的时间和场合掏出你的 App？是在嘈杂喧嚣的制造工厂车间里？还是在信号断续的伦敦地铁车厢内？深刻理解用户的具体使用上下文（context of use），正是专业用户研究员的核心职责所在。</p>
+<p>与此同时，你还需要精准捕捉用户在面对琳琅满目的竞品时，为什么偏偏会在某一瞬间决定伸手选择你的产品——究竟是在哪一个心理触发点上，他们认定你的方案才是解救其痛点的唯一正解？这无疑已经深深步入了用户研究的深水区。而这恰恰是工程师在 AI 时代极其值得主动开拓和深耕的宝贵领域。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Maggie</strong>: But that's a good point that engineers are about to have more free time in a certain way. I know there's an infinite number of engineering problems to solve, and then it's like maybe we can solve them better, you know. But with the extra time, a big part where you could expand into for the extra time and go past the interface is really like the user research side. And that is like go fully understand the domain you're designing or building for, and like the real-world context of people using it in. Like, when are they pulling out your app? Like in a factory? Are they on the Tube? Understanding context of use is a big thing that user researchers do. And then understanding the moment when someone reaches for your product versus reaching for a different product—like when do they decide you are the right solution? That definitely gets into the user research side. But that's a great thing for engineers to expand into.</p>
+</details>
+<h3>推荐书目：《设计出的成瘾性》与人机交互反思</h3>
+<p><strong>Host</strong>：在对谈临近尾声之际，你最想推荐大家去读哪些书？哪一本是你自己反复品读且深感享受的，背后的原因又是什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: In closing, what books would you recommend—one that you enjoyed reading and why?</p>
+</details>
+<p><strong>Maggie</strong>：我个人最钟爱、并且几乎会向所有人倾力推荐的一本书叫做《设计出的成瘾性》（<em>Addiction by Design</em>，作者：娜塔莎·道·舒尔 Natasha Dow Schüll）。这本书全景式聚焦于拉斯维加斯沉迷于赌博老虎机的人群，但作者本身正是一位专业的人类学家。她在书中既详实记录了自己深度融入赌徒群体、与他们共同生活所观察到的切身体验，同时也深入对话了那些博彩机器背后的设计架构师——探讨他们究竟是如何从底层设计出一台具有如此强大心理捕获能力的系统，以至于能让一个人在机器前纹丝不动地连续坐上整整十二个小时。</p>
+<p>这是一本极具冲击力且引人入胜的著作。书中揭示了诸多精密的心理操控细节：比如大型博彩赌场在空间建筑设计上为什么全部严禁设立窗户，从而彻底剥离玩家周围的时间流逝感，让你全神贯注沉浸在面前闪烁的机器之中。我在大学求学期间读到了这本书，至今依然深深着迷。它将文化人类学、参与式观察（participant observation）以及人机系统工程设计进行了全方位的深度熔炼，严密剖析了“成瘾性系统”背后的设计机理。</p>
+<p>读完这本书之后，你必然会不由自主地联想到每个人手中的智能手机，以及 Instagram 等无休止下拉刷新的社交软件。它会逼迫你进行深层的伦理与工程反思：我们今天正在为人类同胞构建的，究竟是怎样的一套系统？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Maggie</strong>: One of my favorites that I give to most people is called <em>Addiction by Design</em>. It's about people addicted to gambling machines in Las Vegas, but it's an anthropologist doing it. And she talks about both like living among these people and their experiences, but also the machine designers—like how do you design a machine that is so addictive that someone sits at it for twelve hours straight? It's like a really fascinating thing, and how gambling casinos are designed to have no windows, so there's like no sense of time around you as you play this machine. I read it in university and I love it. It's a total mix of cultural anthropology, participant observation, and also machine design and engineering, and like how do you design addictive systems. Which of course, you read it, and then you think about phones and Instagram, and you reflect a little bit on: what are these systems we're building for people?</p>
+</details>
+<p><strong>Host</strong>：Maggie，非常感谢你的精彩分享！这期节目的内容真的极其引人入胜。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Maggie, thanks so much. This was very interesting.</p>
+</details>
+<p><strong>Maggie</strong>：太棒了，非常感谢你的盛情邀请，今天聊得非常尽兴。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Maggie</strong>: Yeah, thanks for having me, really fun.</p>
+</details>
+<h3>结语与主持人复盘：纸笔草图与动态自建原型</h3>
+<p><strong>Host</strong>：这是一期极具视觉冲击力的对话节目。所以我非常希望大家能抽空去观看完整的视频版本，尤其是 Maggie 亲自在笔记本上展示她那些手绘草图的片段。对于我个人而言，那是整期节目中最震撼、最具启发性的高光时刻之一：哪怕 Maggie 整天都在马不停蹄地为新一代 AI Agent 工具做前沿交互原型探索，她在开启整个设计推演时，选择的第一件工具依然是朴素的纸和笔。</p>
+<p>她的底层逻辑非常简单有力：AI Agent 无法拥有人类物理视角的具身感知，但我们人类可以。我不禁深思：这种直观具象的交互仅适用于纯视觉界面吗？回想起我以往与软件工程师们最高效、最富成果的头脑风暴会议，大家通常都是聚集在一块白板面前挥毫勾勒，把对分布式系统架构与各组件关系的直觉构想逐一具象化在白板之上。</p>
+<p>此外，Maggie 展示的另一个惊艳绝伦的实战技巧，在于她如何利用 AI 动态生成带有调节滑块（sliders）的原型界面，借此动态修改参数并即时重构视觉设计。她形象地将这种工作流称作“打造你自己的专属 Figma”（build your own Figma）。在节目中，我们现场实机演示了她亲手搭建的动态星座连线交互动画，那种随心所欲调整参数并即刻获得视觉反馈的体验，简直酷炫非凡。你完全可以在几分钟内，让 AI Agent 为你量身动态打造出一个媲美专业 Figma 插件的实时交互探索环境。能够在如此短暂的时间内实现这一飞跃，确实令人叹为观止。最后……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: This was a very visual episode, so I hope you were able to watch the video, especially the part where Maggie showed her sketches in the notebook. And this was one of the most interesting parts of the episode for me: even as Maggie spends her days prototyping the future of agentic tools, she starts her design process with pen and paper. Her reasoning is that agents cannot see, but us humans can. And I have to wonder: is that only true for visual stuff? I mean, when I think back to my most productive brainstorming sessions with engineers, it was usually in front of a whiteboard drawing stuff, where we drew out our ideas about the system and the components.</p>
+<p>Another extremely cool trick from Maggie is how she uses AI to generate prototypes with sliders to change parameters and change the design. She calls it &quot;build your own Figma,&quot; and we did a live demo with the constellation animation that she played around with. This was so cool—you get Figma-like tools dynamically built for you. It's also pretty incredible that we can do this with agents in a matter of minutes. Just wow. Finally...</p>
+</details>
+<!-- chunk 13/13 -->
+<h3>对手艺的眷恋与重拾创造连接感</h3>
+<p><strong>Speaker 1</strong>: 我很欣赏 Maggie 能够如此坦率地表达她对设计这门手艺（design craft）的真实感受。AI Agent 能让她更快地完成工作确实很酷，但她说自己并不确定，如果 Agent 只是直接吐出一个完美的设计方案，她是否真的会喜欢这样；然而现实是 Agent 在设计方面正变得越来越强。这让我觉得，这跟我对写代码的感受如出一辙。Agent 能生成优秀的代码固然很棒，但写代码曾经是我非常热爱且擅长的事情，而且我也确实做得很好。现在，我不再亲手写那么多代码了，整件事确实变得更像是一种事务性交易（transactional），让我感觉自己与代码本身以及代码创造过程之间的连接变弱了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: i appreciate how maggie was honest about how she feels about the design craft. it's cool that agents make her work master, but she said, she's not sure shed love if an agent just spit out a perfect design, and yet agents are getting better at design. it feels to me that this kind of how i feel about code, it's great that the agent can generate good code, but it was something i liked being good at, and i was good at it. now. i don't write the code, but it does feel more transaction when i feel a bit less connected to the code and the creation of the code itself.</p>
+</details>
+<h3>借鉴纸笔草图，保留无 AI 思考空间</h3>
+<p><strong>Speaker 1</strong>: 设计类的 Agent 目前虽然还没达到那个高度，但我能感觉到 Maggie 并不想割舍内心深处作为设计师的那份坚持。我琢磨着，我们这些开发者（devs）是否也能从她身上学到点什么：或许我们也应该准备一个笔记本，用来画草图、梳理想法——不仅是界面草图，还包括系统架构和系统设计。说实话我也不确定会怎样，但我可能会尝试一下，至少这能让我觉得自己不那么完全依赖 Agent，并且能拥有一片属于自己的“无 AI 空间”（AI-free space）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: design agents are not there yet, but i didn't sense that maggie once. so let it go of that designer in her. i wonder if one thing to learn for her for us, debs is that we should also have a notebook to make sketches 's idea as not just US, but architecres and systems ms don't don't know, but i might give it aggo, at least it will make me feel less that. i'm dependent on agents, and i'll have some AI free space. if you will,</p>
+</details>
+<h3>结语</h3>
+<p><strong>Speaker 1</strong>: 感谢大家的收听，如果你对这期不那么常规的节目有什么想法，欢迎留言告诉我。感谢各位，我们下期再见！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: thanks for listening and let me know how you like this less conventional episode. thanks, i'll see you in the next one.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">design-engineering</span>
+      
+        <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+      
+        <a class="tag-link" href="/tags/human-computer-interaction/">human-computer-interaction</a>
+      
+        <a class="tag-link" href="/tags/system-architecture/">system-architecture</a>
+      
+        <span class="tag-pill tag-pill--no-page">user-research</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

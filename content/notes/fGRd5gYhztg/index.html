@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>神经操作系统与端到端界面模型：从大语言模型到可学习的完整应用</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="神经操作系统与端到端界面模型：从大语言模型到可学习的完整应用" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">神经操作系统与端到端界面模型：从大语言模型到可学习的完整应用</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Latent Space</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>Latent Space</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-25</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/latent-space/">Latent Space</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=fGRd5gYhztg" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-25
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">文章探讨了构建完全由神经网络驱动的操作系统，以及如何将界面本身也设计成可学习的端到端模型。核心观点是，未来的交互将不再局限于僵化的界面，而是交付一个包含底层大模型、前端渲染和像素的完整应用闭环。文章还分析了生成式模型在创意工具设计、交互形态（如实时交互界面）以及跨模态知识迁移中的潜力，并讨论了成本优化和从专用架构向通用全模态架构演进的逻辑。</div></div>
+      
+    </div>
+    <!-- chunk 1/12 -->
+<h3>神经操作系统与端到端界面模型</h3>
+<p><strong>Anastasis Germanidis</strong>: 类似界面世界模型（Interface World Models）这类研究的终局，实际上就是构建一个完全由神经网络驱动的操作系统。我认为安德烈·卡帕斯（Andrej Karpathy）很久以前就探讨过这个方向。但说实话，现在的交互现状在我看来多少有些别扭。比如目前我们与大语言模型（LLM）打交道时，这个 LLM 几乎无所不能，能与你畅聊任何话题，你可以把对话引向任何维度，它的通用性极强，能够解决五花八门的问题；然而，你同它交互所使用的界面，却依然是极其僵化古板的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Anastasis Germanidis</strong>: Effectively, the end game of something like interface world models is you have a fully neural operating system. So I think Andrej Karpathy has written about that quite quite quite a while back. But you know, I think to me it's a bit odd that, you know, we have, for example, with an interaction with an LLM of today, you have this LLM that can basically talk to you about anything. You can take the conversation in any direction, it's very general so it can solve all those different tasks, but you interact with it through a very rigid interface.</p>
+</details>
+<p><strong>Anastasis Germanidis</strong>: 因此对我而言，整个界面本身变得可学习、并融入到端到端闭环中，仅仅只是时间问题。也就是说，你所交付的不再仅仅是一个单一的模型，而是一个端到端运行的完整应用：你不仅交付了底层的大语言模型，同时也在交付前端的渲染与像素，而这些渲染和界面组件同样是完全可学习的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Anastasis Germanidis</strong>: And so to me, it's just a matter of time before the interface itself becomes learnable and becomes, you know, part of the whole loop of like, you're not just delivering—you're delivering an application end-to-end, and that means you're delivering the language model, but you're also delivering the render and the pixels, and that's also a learnable component.</p>
+</details>
+<h3>开场与观众致谢</h3>
+<p><strong>主持人</strong>: 在正式进入今天的节目之前，我想先对各位听众说一句话：衷心感谢大家。如果不是你们每周准时点击收听、关注我们的节目，我们根本无法持续为大家带来大家如此喜爱的 AI 前沿工程、科学与深度探讨内容。几乎每天都有赞助商找上门来希望合作，但幸运的是，正是因为有足够多的听众订阅支持，才让我们能够在不依赖广告的情况下保持良性运转，我们也希望一直保持这种纯粹的形式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Before we get into today's episode, I just have a small message for listeners. Thank you. We would not be able to bring you the AI engineering, science, and entertainment content that you so clearly want if you didn't choose to also click in and tune into our content. We've been approached by sponsors on an almost daily basis. But fortunately, enough of you actually subscribe to us to keep all this sustainable without ads, and we want to keep it that way.</p>
+</details>
+<p><strong>主持人</strong>: 不过，我在这里唯独想恳请大家帮一个小忙：大家能做的最有力量、而且完全免费的一件事，就是顺手点击一下订阅按钮。这是我唯一向大家提出的请求。这对我以及每周辛勤制作《Inspace》节目的整个团队来说，都意味着全世界。只要大家支持，我向大家保证，我们绝不会停止努力，一定会把节目越做越好。那么，话不多说，让我们正式进入正题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: But I just have one favor to ask all of you. The single most powerful, completely free thing you can do is to click that subscribe button. It's the only thing I'll ever ask of you. And it means absolutely everything to me and my team that works so hard to bring the Inspace to you each and every week. If you do it, I promise you we'll never stop working to make the show even better. Now, let's get into it.</p>
+</details>
+<h3>Runway 的起源与早期生成式模型探索</h3>
+<p><strong>主持人</strong>: 好的，今天我们演播室迎来了来自 Runway 的 Anastasis，我和 Vivu 一起与你在演播室对话。欢迎你的到来！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Okay, we're here with Anastasis from Runway with me and Vivu in the studio. Welcome.</p>
+</details>
+<p><strong>Anastasis Germanidis</strong>: 很高兴来到这里。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Anastasis Germanidis</strong>: Good to be here.</p>
+</details>
+<p><strong>主持人</strong>: 祝贺你在 Runway 取得的巨大成功和突破。你们现在正在全球各地开设新的办公室。当你最初创立 Runway 时，有预料到会有今天这样的发展吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Congrats on all your success and progress with Runway. You're opening offices all over the world. Did you envision this when you first started out?</p>
+</details>
+<p><strong>Anastasis Germanidis</strong>: 其实并没有完全料到。不过我觉得，即使在最初起步的时候，我们内心就坚信这更多是一个“何时发生”而不是“会不会发生”的问题。早在 2016、2017 年前后看到那些早期的生成式模型时，我们就在推演：假定生成的分辨率和画面质量会随着时间推移稳定提升，那么迟早会迎来一个奇点时刻，届时大部分数字内容都将由算法直接生成。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Anastasis Germanidis</strong>: Not quite. I think even when we started we had this idea that, you know, it was more a matter of when, not if. We were seeing the early generative models of 2016, 2017 and just extrapolating, assuming, you know, resolution and quality increases predictably over time, there's going to be a point where most of content will be generated.</p>
+</details>
+<p><strong>Anastasis Germanidis</strong>: 那大概就是 Runway 最早的核心假设：因为这些生成式模型的出现，我们必须从根本上重新思考创意工具的设计方式。随后，随着我们逐步展开模型背后的自主研究，我们越来越清楚地发现，这些生成模型的应用潜力其实远不止局限于创意工具本身。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Anastasis Germanidis</strong>: And that was maybe the initial thesis of Runway: we will need, as a result of those generative models, rethink how creative tools are made. And as we built out the research behind our generative models, it then became clear that they were useful far beyond that as well.</p>
+</details>
+<p><strong>主持人</strong>: 现在的确更加显而易见了，特别是结合真实世界交互以及我们稍后会深入探讨的世界模型来看。我其实非常好奇，你是怎么从过去研究 ZDOC 以及计算机视觉的学术背景，一路走到创办 Runway 的？能否带我们回顾一下当年你和 Chris 以及其他创始团队成员最初的讨论？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And it is more obvious now with like the real world stuff and the world models that we'll talk about later. I'm just kind of curious how you go from a background in like ZDOC and, you know, computer vision into Runway. Like take us back to that early conversations with Chris and, you know, whoever else is on your founding team.</p>
+</details>
+<h3>艺术实践与计算模拟的交汇</h3>
+<p><strong>Anastasis Germanidis</strong>: 我的人生轨迹一直同时跨越在两个平行的世界里。一边是我个人的艺术实践，我之前创作了大量的互动艺术作品，做了相当长一段时间；另一边，我一直在初创公司摸爬滚打，在不同的公司担任机器学习工程师和后端工程师。我始终对编程和计算深深着迷，尤其是对“模拟”（Simulation）抱有极大热情，并且常常把这种计算与模拟的构想带入到我早期的艺术作品中。同时，我一直在探索这两者的交叉点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Anastasis Germanidis</strong>: I was always split into those two worlds. One was, you know, I had my own art practice. I was making a lot of interactive art, I think for a long time. And then on the other side, I was working in startups and I was working as ML engineer, as a backend engineer at different companies. I've always been interested in coding and computation, and especially interested in simulation, and brought it back into my early artwork as well. And at the same time I was interested...</p>
+</details>
+<p><strong>主持人</strong>: 你的个人网站上还收录着几个早期的代表作品，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Personal site has a few, right?</p>
+</details>
+<p><strong>Anastasis Germanidis</strong>: 嗯，对的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Anastasis Germanidis</strong>: Um.</p>
+</details>
+<p><strong>主持人</strong>: 有没有哪一个项目我们现在可以调出来看看？以防听众不熟悉，我也很想回顾一下当年的足迹。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Is there one we should pull up, just in case there's something that's like—I just like to go down memory lane.</p>
+</details>
+<p><strong>主持人</strong>: 好的，眼前这个展示的项目是什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Okay, what is this?</p>
+</details>
+<p><strong>Anastasis Germanidis</strong>: 这是我大约在 2015 年做的一个项目。当时我开发了一套软件系统，可以在美术馆展厅中向观众发送语音指令。本质上，它是在指挥和协调展厅中陌生观众之间的社交互动。比如，它首先会分配给你一个虚构的身份：“你是一名建筑师，今年 30 岁，喜欢体育运动”；接着，系统会为你匹配展厅里的另一个人。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Anastasis Germanidis</strong>: So this was a project that I made, I think back in 2015, where I built this software that would give voice instructions to people in a gallery space. So it would basically coordinate interactions between people. And so it will first give you an identity like, you're an architect, you're 30 years old, and you like sports. And then it would match you with another person.</p>
+</details>
+<p><strong>Anastasis Germanidis</strong>: 这样一来，你就开启了一段完全由程序生成的即兴互动。显然，在那个年代，现代的大语言模型还远未出现。因此，整套交互文本是结合了模板设定以及某种马尔可夫链（Markov Chain）文本生成技术拼凑而成的。它完全是在模拟展厅里每位观众之间发生的寒暄和小范围社交对话。所以，我当时一方面极度着迷于生成式模型和早期机器学习的发展，另一方面，我又对计算机模拟这个命题非常执着：如果我们为人类的行为与交互建立一套极其简单的计算模型，我们能从中反观并学到关于人类自身的什么规律？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Anastasis Germanidis</strong>: You have this completely generated interaction. Obviously language models were not quite there at the time. And so it was made—it was a mix of some templates and some like, some Markov chain generated text. And it would just completely simulate this small talk conversations between everyone in the gallery space. So I was always very fascinated on the one hand with generative models and like the early machine learning work that was playing out that time, but at the same time there was this separate thread of simulation and what it means—like what can we learn about humans by creating those very simple models of their interactions and their behavior.</p>
+</details>
+<p><strong>主持人</strong>: 那些人设提示词——比如“30岁”、“爱好某某”之类的设定，全部是由系统自动生成的吗？你是如何设计的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Did you generate the prompts or, you know, the 30-year-old whatever, was it you generating them? How'd you like...</p>
+</details>
+<p><strong>Anastasis Germanidis</strong>: 没错，完全是由程序算法动态生成的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Anastasis Germanidis</strong>: Exactly. So the program would just generate those from...</p>
+</details>
+<p><strong>主持人</strong>: 明白了，这种方式非常类似填词游戏（Mad Libs）的机制：准备好各种属性池，然后程序自动抽取拼接。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. A lot of it would be kind of Mad Lib style of just, you know, you have lists of different...</p>
+</details>
+<h3>从自动驾驶数据到艺术图像生成：Pix2PixHD 的启发</h3>
+<p><strong>Anastasis Germanidis</strong>: 对，池子里有各种职业、各种性格特质、各种年龄层等预设维度，程序直接把它们随机组合在一起。如果沿着时间线看下一个项目，那就是我们做的《Uncanny Valley》（或称《Uncanny Road》）。这是我和另外两位联合创始人之一的 Chris 一起最早合作开发的项目之一。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Anastasis Germanidis</strong>: Professions, lists of different personality types, list of different ages, things like that. And then it would just combine those things together. And then maybe the next project we go is Uncanny Valley, Uncanny Road, which was one of the first projects that we built with one of my two co-founders, Chris.</p>
+</details>
+<p><strong>Anastasis Germanidis</strong>: 这个项目采用了 Pix2PixHD 模型，那是英伟达（Nvidia）在 2016 或 2017 年前后开源的最早的图像到图像（Image-to-Image）生成模型之一。该模型的核心能力在于接收一个场景的语义分割图（Semantic Map），然后将其渲染并生成一张具有逼真写实感的图像。当然在那个极其早期的阶段，画面的真实感和精细度还非常有限，但这应该是业界第一个能够直接生成 1K（1024 分辨率）高清画质的图像生成模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Anastasis Germanidis</strong>: This was taking Pix2PixHD, which was one of the early image-to-image models that Nvidia released back in 2016 or 2017. And it was a model that would take a semantic map of a scene and then generate a photorealistic, let's call it, output. Obviously very, very early days, so it was not very high fidelity outputs, but it, I think, was the first image generation model that would generate at 1K resolution.</p>
+</details>
+<p><strong>Anastasis Germanidis</strong>: 值得注意的是，该模型完全是在自动驾驶数据集上训练出来的，因此它所支持的语义标签类别极其受限，全部都是道路上常见的元素：行人、交通指示牌、自行车、红绿灯等等。当我们把这个工具做出来之后，它带来了极其强烈的首批信号：用户在平台上创作出了无数极具超现实主义色彩的画面，比如成千上万个行人密密麻麻排布在路上、成千上万个交通路牌堆叠在一起、或是凭空画出体型巨大的超大号巨人。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Anastasis Germanidis</strong>: And it was all trained on self-driving data sets, so the semantic categories it would support were only, you know, things you would encounter on the road, so it would be pedestrians, traffic signs, bikes, stoplights. And so that was actually one of our first indications. We built this and people were making all this like very surreal imagery of a million pedestrians or a million traffic signs or like gigantic humans.</p>
+</details>
+<p><strong>Anastasis Germanidis</strong>: 这给了我们一个巨大的启示：你完全可以拿一个在枯燥、单调的自动驾驶日常道路场景上训练出来的专用模型，通过重新赋予其功能定位，将它推向完全超出原本训练分布（Out-of-Distribution）的极限状态，从而创造出极富艺术张力与震撼力的视觉作品。这在某种程度上正是 Runway 一路以来的核心主张：面对同样的生成式模型，如果你换一个全新的视角去审视它，围绕它构建有趣的工具链并交付给艺术家，他们最终创作出的成果将远远超出你最初的预料。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Anastasis Germanidis</strong>: And it was an indication that you could take a model that was trained on this very boring dataset essentially of like not that many interesting things happen when you're on the road, and then you can repurpose it and go very out of distribution and make something that was artistically compelling. And that was—it's a summary of the thesis of Runway in some ways. Like you can take the same generative models and if you look at them from another direction, if you build interesting tools around them and you give them to artists, they're going to do things that you don't expect.</p>
+</details>
+<h3>工具交互设计与 Runway 研发机构的成立</h3>
+<p><strong>主持人</strong>: 太酷了。我非常喜欢它的交互设计逻辑：本质上就是给用户一张完全空白的画布，你可以任意拖拽元素，自由挥洒涂鸦。而在另一个展示里，你能看到大家都戴着有线耳机，在那个年代看非常具有某种经典苹果广告的气质。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Very cool. I like the UX of it. Basically, you're just given an empty canvas, drag whatever, do whatever. And in the other one, you see everyone with wired headphones, that's a sign that it's very...</p>
+</details>
+<p><strong>Anastasis Germanidis</strong>: 哈哈，像苹果的广告风格，确实是这样。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Anastasis Germanidis</strong>: Apple ads. Yeah, yeah, yeah.</p>
+</details>
+<p><strong>主持人</strong>: 让我们回到现在。你在 Runway 已经深耕了七年之久。我们究竟是如何一步步从最初简单的自动驾驶模拟数据生成，演进到今天涵盖生成式媒体全栈生态的？你们现在的业务几乎覆盖了整个生成式媒体技术栈。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Take us to today. You've been doing this for seven years at Runway. How have we got to this? How do we go from driving simulator data to all this? And you kind of cover the whole stack of generative media, you know.</p>
+</details>
+<p><strong>Anastasis Germanidis</strong>: 很有意思的是，我们几乎走过了一个完整的圆环，现在又回到了最初的起点：我们如今正在把自研的世界模型从单纯的创意工具逐步拓展到真实物理世界的各类场景中去。但回顾起来，这是一段非常漫长的技术演进历程。早在创立初期，第一版 Runway 的定位其实是一个极简的操作平台，用来封装并降低当时所有开源前沿模型的门槛（比如当时的 Pix2Pix 等），把这些能力直接交付到艺术家手中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Anastasis Germanidis</strong>: I mean, interestingly, we're almost back and full circle. We're now applying our models and kind of beyond creative tools into real world scenarios. But it was a long journey. It was very early on we realized that, yeah, the first version of Runway was a way to easily use all the open source model of the day, things like Pix2Pix, and give them to artists.</p>
+</details>
+<p><strong>Anastasis Germanidis</strong>: 当时的初衷是：如果你不是一名专业的机器学习工程师，直接上手跑这些开源模型实在太困难了；而一旦把它们交到艺术家手里，就会激发不可思议的化学反应。但很快我们便意识到，仅仅做封装远远不够，我们必须在 Runway 内部成立自己的核心技术研究机构（Research Org）。那大概发生在公司成立的第一年，当时内部的核心攻关使命就是全面攻坚那一时代的图像生成模型，以及随后的视频生成模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Anastasis Germanidis</strong>: That was the initial idea: those models are too difficult to use if you're not a machine learning engineer, like what happens when you give them to artists. Very quickly we realized we needed to build a research org inside of Runway, and that happened maybe on year one, and a lot of the mandate there was the image generation models of the time, the video generation models...</p>
+</details>
+<!-- chunk 2/12 -->
+<h3>从早期视频研究到扩散模型的阶跃</h3>
+<p><strong>Speaker A</strong>: 大多数时候，甚至几乎很少有像样的视频生成技术；即使有，也完全达不到可以产品化、并引入到创意工作流工具中的水平。所以我们必须去推进研究的最前沿。Runway 前四年的研究基本上都是在后台默默进行的，直到 2022 年迎来了那个关键时刻——伴随着潜在扩散模型（Latent Diffusion）以及 DALL-E 2 的出现，大家知道，技术发生了一次阶跃式的质变。你们可能还记得……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: ...most of the time, or there were barely any video generations all of the time, but they were not quite there where they could be productionized and brought into tools that would be part of creative workflows. Um, so we need to push the frontier of the research. And so maybe the first four years of Runway research was almost happening on the background, until there was a moment in 2022, uh, with Latent Diffusion, with uh DALL-E 2, where you know, there was that step function change, and you guys maybe remember...</p>
+</details>
+<p><strong>Speaker B</strong>: 我之所以创办 L-Space，基本上就是因为潜在扩散模型和 Stable Diffusion。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: &gt;&gt; I started L-Space because of basically Latent Diffusion and Stable Diffusion...</p>
+</details>
+<p><strong>Speaker B</strong>: 因为当时我惊叹道：这不仅在理论上可行，而且在消费级硬件上也是完全可以运行的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: &gt;&gt; ...because I was like, &quot;Wow, this is not only like feasible, it is actually doable on consumer hardware.&quot;</p>
+</details>
+<p><strong>Speaker A</strong>: 确实如此，没错。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: &gt;&gt; Exactly. Yeah.</p>
+</details>
+<p><strong>Speaker B</strong>: 我觉得这种差距也是巨大的。就像我最初学 pix2pix 的时候，那是我的机器学习入门，当时 TensorFlow 和 Jupyter、Google Colab 笔记本差不多就是那样；然后突然之间，随着扩散模型等技术的出现，迎来了一次巨大的阶跃式变化。从早期的扩散模型演进到如今这一步，还有没有其他清晰的标志性范例？在核心技术研究方面，还有哪些关键的演变？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: &gt;&gt; I think the delta is also huge. Like I learned pix2pix, like this was intro to ML, the TensorFlow like Jupyter, Google Colab notebooks are like this, and then you have a sudden step function change, you know, with diffusion and whatnot. Any other ones sense that like there were clear examples of what early diffusion were to get to here? Any other changes in key technology, uh, research...</p>
+</details>
+<h3>Runway 的早期探索与绿幕抠像工具</h3>
+<p><strong>Speaker A</strong>: 在 2018 年我们刚起步到 2022 年之间，我们在 Runway 所做的早期工作之一，就是解决图像和视频的分割（segmentation）问题。这是一个非常重要的问题，因为大多数视觉特效（VFX）本质上都涉及将主体分离出来。没错，转描机抠像（rotoscoping）是一个极其耗费人力的手动过程，没有人喜欢做这件事。因此，Runway 早期的很大一部分精力都放在打造这个名为“绿幕”（Green Screen）的工具上。在很长一段时间里，它都是人们使用 Runway 的最主要功能。它最终被应用在了电影《瞬息全宇宙》（Everything Everywhere All at Once）以及其他许多备受瞩目的影视剧集中。在潜在扩散模型诞生、Gen-1 和 Gen-2 问世之前，Runway 在很长一段时间里本质上就是一个后期制作工具。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: &gt;&gt; ...between, uh, 2018 when we started and 2022. Um, so one of the early work that we did in Runway was solving segmentation, image and video segmentation. It was a very important problem because most VFX involves essentially separating subjects. Yeah. Rotoscoping, extremely manual process. Nobody enjoys doing that. Uh, and so a lot of the early days of Runway was building this tool that was called Green Screen, and it was for a long time the main thing that people were using Runway for. It ended up being used in, uh, <em>Everything Everywhere All at Once</em> and a bunch of other kind of high visibility films and series. But that was essentially Runway for a long time, was a post-production tool, until late in diffusion generated Gen-1, Gen-2, um, happened.</p>
+</details>
+<h3>自研模型的重注与千卡 A100 集群</h3>
+<p><strong>Speaker B</strong>: 太棒了。让我们越过那个时刻继续往下聊。你们一路走来取得了巨大的进展，并且开始发布自己的模型。也许你也可以描述一下那段心路历程。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: &gt;&gt; Cool. I mean, let's go past that moment. You've come a long way that you started releasing your own models. Maybe describe that journey as well.</p>
+</details>
+<p><strong>Speaker A</strong>: 好的。大概在 2022 年年中，我们走到了一个节点：当时我们很清楚，自己之前是在相对较小的算力规模下进行研究的，而缩放定律（Scaling Laws）显然会像适用于语言生成一样，同样适用于图像和视频生成。于是我们下了一个大赌注。我想在那个时候，我们签署了一份协议，去搭建一个拥有 1000 张 A100 GPU 的算力集群。在当时，作为一家 B 轮融资阶段的初创公司，这几乎是一个在旁人看来略显不理智的决定。但我们坚信，如果我们在大规模算力上训练一个视频模型，最终一定会收获一个非常出色的模型。在 2022 年秋天左右，我们确立了一个目标：探索对于视频领域而言，属于视频的“潜在扩散 / Stable Diffusion 时刻”究竟应该是什么样的。当时市面上最顶尖的模型叫做 CogVideo，属于早期形态的视频模型之一，分辨率仅有 256x256，质量并不怎么高。所以我们决定全力搭建这个算力集群，全力投入去构建属于我们自己的视频模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: &gt;&gt; Yeah, so we got at a point, yeah, in kind of mid-2022, when it became clear that we're doing research at a fairly, uh, fairly small scale of compute, and it became clear that like scaling laws would apply to, um, image and video gen in the same way that they were applying to language generation. So we made a big bet. And I think at so at the time, we signed this deal to build a cluster of a thousand A100s, which at the time, we were a Series B startup, that was an almost, you know, slightly irrational decision maybe, but we really believe that if we trained a video model at the large scale, uh, we would we would get like a great model at the end. And at the time, the goal, you know, the goal or we set the goal around fall of 2022 of what is what is the latent diffusion / Stable Diffusion moment looked like for video. And at the time, the best model of the time was called CogVideo. Uh, it was one of the early kind of video models, was very 256 x 256 resolution, very not not very high quality. Uh, and so we decided we're going to build out this cluster, and we're going to just invest in like in in building out our our own video model.</p>
+</details>
+<h3>从 Gen-1 视频到视频的破局与落地应用</h3>
+<p><strong>Speaker A</strong>: 在训练 Gen-1 的过程中，我们逐渐意识到，直接做纯粹的文本生成视频（Text-to-Video）非常具有挑战性。虽然我们一心想做文生视频，但我们清楚地发现，一个更容易切入的起点是做“视频到视频”（Video-to-Video）。因为当拥有更强的先验条件约束（Conditioning）时，给现有视频重新赋予风格（Restylize），本质上比从零开始无中生有地生成一段视频要简单得多。因此，我们在 2023 年 1 月率先推出了 Gen-1。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Uh, it became clear as as we're training Gen-1 that it was it was difficult to get to fully, uh, we wanted to build text-to-video. Uh, but it it became clear to us that an easier starting point would be to to start from video-to-video, because when you have a stronger conditioning, it's it's basically an easier problem to restylize an existing video versus generate a video from scratch. And so we released Gen-1 first back in—it was January of 2023.</p>
+</details>
+<p><strong>Speaker B</strong>: 这真是一个生动的视觉播客。说实话，我们回顾一下 2023 年 2 月，当时的技术状态究竟是怎样的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: &gt;&gt; It's just a fun visual podcast. Honestly, like we can see February 2023. What was the state of stuff?</p>
+</details>
+<p><strong>Speaker A</strong>: 我觉得这非常有意思。因为在那个时间节点，当你看到那些生成效果时，你会觉得这简直不可思议，甚至觉得图像生成或者视频生成的问题几乎已经被彻底攻克了。然而仅仅过去几年再回头看，显然人们很快就会对这些模型的表现习以为常。但在当时，当我们第一次看到那些结果时，内心感到无比震撼，为所能达到的质量水平感到惊叹。Gen-1 是一个基于深度图条件约束（Depth-Conditioned）的视频模型。它的工作流程是接收一段输入的视频，先将其预测并转化为深度图序列，然后再通过潜在扩散模型重新生成像素。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: &gt;&gt; I mean, it's so interesting cuz at the time when you see those results, you think this is this is so incredible. This is like it's almost like image generation or video generation is solved. And then you look back a few years after and it's like it's obviously it's just like you get used to results very quickly, uh, with those models. But at the time when we started seeing those results, it was it was, you know, it felt quite quite incredible, uh, and the level of like quality you could get. And, um, so the Gen-1 was a depth-conditioned video model. So it would turn it would it would take an input video, uh, it would predict, uh, it would you first convert it into the depth map, and then we would generate, uh, pixels with a with a latent diffusion model.</p>
+</details>
+<p><strong>Speaker B</strong>: 没错，非常行之有效。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: &gt;&gt; Yeah, very effective.</p>
+</details>
+<p><strong>Speaker B</strong>: 我刚才都没意识到屏幕上的这篇博客文章（清嗓子）会有多引人注目，抱歉。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: &gt;&gt; I didn't realize how distracting the blog [clears throat] post would be. Sorry.</p>
+</details>
+<p><strong>Speaker A</strong>: （笑）没事。关于 Gen-1，我个人最喜欢的几个实际案例——如果你往上看模式三或模式二的话——有一个故事板（Storyboard）的应用场景。人们可以用书本或者纸箱搭建出一座城市的雏形，然后用手机拍一段视频，再利用模型将其转化为具有真实质感的画面输出。当时这些模型开始以各种方式被运用在分镜故事板中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: &gt;&gt; [laughter] Yeah, but, uh, one of my favorite examples actually of the on those on Gen-1 was both if if you go up to Mode 3 or Mode 2, there was this storyboard use case where people would make...</p>
+</details>
+<p><strong>Speaker B</strong>: 基本上就是……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: &gt;&gt; would basically, um...</p>
+</details>
+<p><strong>Speaker A</strong>: 借助这些工具尽情发挥创意。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: &gt;&gt; you can mess around with...</p>
+</details>
+<p><strong>Speaker A</strong>: 比如用书本或者盒子搭出一座微缩城市，用手机录制下来，随后将其渲染成逼真的成片效果。这些模型在当时开始被广泛用于故事板制作。再比如你看模式四，用户可以导入未经贴图渲染的 3D 粗模场景，然后将其转化为照片级逼真的画质。所以在早期我们看到了大量的这类用例：那些熟悉流程的资深视觉特效（VFX）剪辑师，直接拿 Blender 导出的无材质渲染图用 Gen-1 进行转译；或者在 Unity 引擎里搭建一个场景并录屏，接着借助模型进行重新风格化。因此我始终坚信，视频到视频（Video-to-Video）是一项极其强大的技术。我们最近也推出了全新的视频到视频模型，这也是我最钟爱的用法之一：将真实的基准视频作为最初的灵感源泉与结构骨架，随后将其转译为各种截然不同的风格或视觉输出。不过我想我们稍后会更全面地回顾 Runway 的发展，让大家了解今天的最新动态。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: &gt;&gt; ...make a city out of books or out of boxes, and then they would they would kind of shoot a video with their phone and then translate it into a photorealistic output. There was all these ways in which those models were starting to be used for storyboarding. And also for really, uh, and then if if you go to Mode 4, like of taking kind of untextured 3D scenes and then turning them into photorealistic output. So, we saw a lot of use cases early on where people that were familiar, you know, were power VFX editors would just take a a Blender, uh, render and then they would get translated in with Gen-1, or create a scene in Unity and then take a capture a video of it and then and then translate, you know, restylize it. So, I still I still think video-to-video is powerful. I think we we had a recent video-to-video model as well, and it's one of my favorite ways of using using those models is essentially using them to to use ground truth video as like the initial inspiration and then translate into into different styles or different outputs. But I think we're going to go into like the rest of Runway and catch people up to speed today.</p>
+</details>
+<h3>回溯 Stable Diffusion 与 Stability AI 的合作始末</h3>
+<p><strong>Speaker B</strong>: 在那之前，我想先聊聊那场姑且称之为“Stable Diffusion 争议”或者关于 Stability AI 到底发生了什么的事件。大家都知道，这类事情通常有两面说辞：一方面，人员加入或者离开公司是很正常的商业现象；但在时隔数年之后的今天，站在复盘的角度来看，究竟是怎么回事？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: I did want to cover the, let's call it this, the Stable Diffusion controversy, or, you know, what happened with Stability AI, whatever. You know, I think there was like sort of two sides of the story. I think there's part of that is a normal thing of like people, you know, join and leave companies. But what is the, you know, retrospective now that, you know, there's been some years behind it?</p>
+</details>
+<p><strong>Speaker A</strong>: 是的，展开来讲的话，这是一个非常漫长的故事（笑）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: &gt;&gt; Yeah, it's a very it's a very long story [laughter] to go to go into. I think...</p>
+</details>
+<p><strong>Speaker B</strong>: 我记得你还专门为此写过一篇很长的长文。如果要深入细节的话，我们大概能聊上整整一个小时（笑）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: &gt;&gt; ...which I remember you actually wrote a really long post about. We probably cover the whole hour [laughter] to to go into it in in more detail, but...</p>
+</details>
+<p><strong>Speaker A</strong>: 但本质上，大家知道，潜在扩散模型的开创性论文大约发表于 2021 年底。Patrick Esser 当时是潜在扩散模型背后的核心研究员之一，他那时就在 Runway 工作。这项成果是他与 Robin Rombach 以及慕尼黑大学机器视觉与学习研究组（CompVis）的其他几位成员共同合作完成的。在发布了早期的潜在扩散模型之后，他们的核心目标其实就是继续迭代开发不同版本的模型：扩大规模、融入新数据、引入新任务。而 Stable Diffusion 在本质上是相同的底层架构，只是使用了更大的算力规模进行训练，并结合了一些新的技巧——例如在 2022 年初发表的无分类器引导（Classifier-Free Guidance, CFG）技术……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: &gt;&gt; ...essentially, you know, there was the Latent Diffusion paper that came in, um, I think that was at the at the end of uh 2021. And then Patrick Esser, who was one one of the researchers behind uh Latent Diffusion, and he worked at Runway at the time. He built Latent Diffusion collaboration with Robin Rombach and a few other folks back in the at CompVis, uh, which was a a lab, the research group. Yeah. And uh after releasing the early Latent Diffusion model, they um essentially they were, you know, the goal was keep working on versions of the model, going to scale it up, uh incorporate new data, incorporate new tasks. And Stable Diffusion was basically the same model, but trained on more compute, and then with a few more tricks, like Classifier-Free Guidance paper came at some point, I think in the early 2022...</p>
+</details>
+<p><strong>Speaker B</strong>: 这对提示词控制是一次巨大的提升。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: &gt;&gt; ...which like was a big prompting improvement.</p>
+</details>
+<p><strong>Speaker A</strong>: 没错，大家都知道这大幅提升了生成质量，而且它是在更优质的数据集上训练的，比如 LAION 的审美子集（LAION-Aesthetics）。但从根本上讲，两者的底层架构完全一致。当时是在 Stability AI 的算力集群上进行了一次大规模的训练运行，Stability AI 资助了这次训练。现在回看那段往事，我认为构建和训练那个模型的工作本身是一项科研项目，是作为潜在扩散模型研究的自然延续而完成的。后来这个模型获得了巨大的成功，随之而来的结果是，其他公司开始试图探索其商业化路径。但对我们而言，当时非常重要的一点是，我们要努力确保我们……它……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah, you know that improved results. It was trained on better data, so like the aesthetic subset of uh of LAION, but it was effectively, you know, the same uh the same underlying architecture. And there was that big training run, uh, that happened on Stability's cluster. Uh, Stability kind of financed, uh, financed that run. And looking back at that story, I think it was the work to build and train that model was was done. It was a it was a research project. It was done as part of like continuation of the Latent Diffusion work. It then, I think the model became very successful, and it, um, I think there were the and and I think as as a result of its, uh, it success, other companies tried to, uh, figure out the commercialization path for it. But for us, it it was very important that we try to, you know, we we make sure that we it was...</p>
+</details>
+<!-- chunk 3/12 -->
+<h3>Stable Diffusion 1.5 发布风波与早期社区</h3>
+<p><strong>Speaker A</strong>: 它是作为一个开源研究项目而设立的，因此我们认定应该继续发布它的后续版本。毕竟这算是 Stable Diffusion 最初的目标，而这也促成了 Stable Diffusion 1.5 的发布。当时可能出现了大概一天的沟通误会，但最终在几小时之内就迅速解决了。所以，能这样收场挺好的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: ...meant to be an open source research project and so we decided that we should continue releasing versions of it, since that was kind of the original goal of Stable Diffusion. And that led to releasing Stable Diffusion 1.5. There was maybe a day of a bit of miscommunication there, but ultimately that was resolved very quickly within hours. So yeah, that was nice.</p>
+</details>
+<p><strong>Speaker B</strong>: 我只是想了解一下——毕竟你是那段历程的核心参与者之一，所以能直接从当事人这里听到当时到底发生了什么，感觉很棒。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: I just wanted to, you know, you are actually one of the main players in that sort of journey, and so it's nice to hear from the source of like what happened. Yeah. [laughter]</p>
+</details>
+<p><strong>Speaker A</strong>: 确实。不过我觉得这些现在都已经是过去式了。两家公司后来也各自走上了不同的道路：Stability 走了一条路，Runway 则走了自己的路。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah. I mean, I think it's all in the past now, I would say. And both companies, you know, Stability took its own path, Runway took its own path.</p>
+</details>
+<p><strong>Speaker B</strong>: 现在的 Stability 好像还有詹姆斯·卡梅隆（James Cameron）在背后支持，他们在和好莱坞片场搞些合作，具体在做什么我也不太清楚。[笑]</p>
+<p>不过有一点让我印象非常深刻——在进入下一个话题前我想提一下——就是在那个时期，比方说 2021 到 2022 年前后，存在着一个你所身处其中的社区，大家都在研究这些技术。从我和当时活跃的那些人交流来看，大家似乎都觉得，迟早会有人跑出那次决定性的“英雄式训练”（hero training run），从而把 Stable Diffusion 做出来。</p>
+<p>所以我想问的是，你们当时做出了投入，拥有这样的远见，那么可以说这种想法在当时是代表了大家的普遍共识吗？还是说大家当时仍然觉得“我们可能只是把它当成某种后期制作工具”之类的？回顾当年，你记忆中当时的社区氛围是怎样的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: There's still—I mean James Cameron is backing the new Stability, whatever they're doing with the Hollywood studios. I don't know what they are doing. [laughter] I think one thing that impresses me, and I'm happy to move on, is that back in that time, let's say like 2021, 2022, there was this community of people that you were involved in that was researching all this stuff, right? And like from everyone I talked to who was active then, it seemed like it was fairly obvious that somebody would do the hero training run that would produce Stable Diffusion. So I guess the question is, you know, you had made investments, you had the foresight. Is it accurate to say like that is reflective of like what people were thinking at the time, or was it still very much like, well we'll use it as like a post-production tool or something? I don't know, where in the sentiment were we that maybe you can sort of think back to like what the community was like back then.</p>
+</details>
+<p><strong>Speaker A</strong>: 回想起来，我非常怀念 2018 年到 2022 年那几年的早期时光。因为那是一个非常小的圈子，正如你所说，大家都坚信这必将成为一件大事。在那个时候，因为圈子太小，任何置身其中的人只要做出相关项目，立刻就会在网络上引发病毒式传播。我记得……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I reminisce and I think of very fondly those early years from like 2018 to 2022, because it was a very small community that, as you said, were very convinced that this was going to be big thing. And at the time, you know, anyone who—because it was such a small circle, and everyone who would be part of that circle and make projects with it would, you know, immediately kind of get—go viral. So like I remember...</p>
+</details>
+<p><strong>Speaker B</strong>: 你甚至根本不知道他们是谁，对吧？他们就只是 GitHub 或者 Hugging Face 某个角落里的一个名字。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: You don't even know who they are, right? They're just some name on GitHub or Hugging Face somewhere.</p>
+</details>
+<p><strong>Speaker A</strong>: 完全没错。我记得创意 AI 领域的第一个爆火时刻，是神经风格迁移（Neural Style Transfer）那篇论文出现的时候……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Exactly. Yeah. So I remember one of the first big viral moments of creative AI was—there was the neural style transfer paper...</p>
+</details>
+<p><strong>Speaker B</strong>: 是那个什么 Deep Dreaming 之类的吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: The something dreaming?</p>
+</details>
+<p><strong>Speaker A</strong>: 我记得就是叫神经风格迁移。当时也有 DeepDream，就是带小狗图案幻觉的那个滑动效果，那也确实非常酷。</p>
+<p>但当时有这样一个项目：金·科根（Gene Kogan）——他是 Runway 的早期顾问，也是创意 AI 领域很有影响力的标志性人物——他拍了一段自己坐纽约地铁、穿过威廉斯堡大桥（Williamsburg Bridge）的视频，然后用类似梵高或者某位画家的风格进行了风格化处理。在那个时候，这简直太惊艳了，迅速火遍全网。对人们来说这完全是一次颠覆性的启示：原来生成式模型还能做到这样的事情！而那其实才不过是不到十年前的事情。这恰好说明了技术发展的速度有多么迅猛。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I think it was called neural style transfer. There was also DeepDream, the puppy slide, which was also really cool. But there was this project that Gene Kogan, who was an early adviser of Runway and one of those big creative AI folks—he literally just like showed a video of himself taking the New York subway kind of and going over the Williamsburg Bridge, and then stylized it with, I think in the style of Van Gogh or one painter. And that was like at the time that was like so cool, and it went viral, and it was completely revelation to people that you could do those with generative models. And that was only, you know, it was less than—it was maybe 10 years ago. Just like as an indication of how quick things have gone.</p>
+</details>
+<h3>从文字生成到精细可控：视频扩散模型的演进</h3>
+<p><strong>Speaker B</strong>: 确实不可思议。从那时起，技术栈的各个层级都涌入了各种各样的人——开发者、创意工作者、艺术家、业余爱好者，所有人都在使用它。早先尝试过的人都会记得，使用最初的普通扩散模型有多么困难。现在你可以在常用的聊天界面里随手输入一句话，就能得到极其精美的画面；但以前玩扩散模型时，大家必须疯狂堆砌像“ultra HD”、“4K”、“high resolution”这类提示词，当时的提示词工程完全是另一码事。</p>
+<p>从你们目前面向创意工作者和开发者推出的产品来看，在工具链构建方面你学到了什么吗？你们真正将科研成果带给了大众使用，这中间有什么有趣的经验可以分享吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: It's pretty crazy, like even since then you've kind of got people at every level of the stack. You've got devs, creatives, artists, hobbyists, you got everyone using it. And for people that tried stuff early, they'll remember how hard it was to use regular diffusion, right? Like nowadays you can use your favorite chat interface or whatever, give a sentence, get a beautiful output. But diffusion was like, you know, the whole &quot;ultra HD, 4K, high resolution&quot;—like prompting these things was very different. Anything you learned on the tooling side, like from the offerings you guys have now? So like creatives, devs, you really took the research and brought it to everyone to use. Anything interesting there to share?</p>
+</details>
+<p><strong>Speaker A</strong>: 当时针对视频扩散模型，我们不得不从零搭建一整套模型推理与部署架构（model serving infrastructure）。因为在那之前根本没有任何现成的东西可用。我们的 Gen-2 应该是市场上首个面世的文本生成视频（Text-to-Video）模型。</p>
+<p>一路走来，我们学到了很多东西，其中感触最深的一点就是：我们很早就清楚地认识到，单纯靠文本生成视频绝不是最终的答案。用户想要的控制力远不止于此。因此我们迅速投入资源，在这些基础模型之上构建可控机制。例如：如何利用摄像机运动轨迹来进行控制？如何将输入的初始帧画面作为控制条件？这是我们在探索文本生成视频初期就学到的深刻一课。</p>
+<p>Gen-2 相比以往在视频生成质量上确实是一次惊人的阶跃式提升，但它在很大程度上依然停留在探索性工具的层面，因为没有任何参考依据可以对它进行锚定。你无法引入参考物，无法真正控制摄像机运动，也无法控制主体的运动。</p>
+<p>因此，2023 年整整一年，我们都在探索如何以各种有趣的方式为这些模型施加控制条件。我们在基础模型之上进行了大量的后训练（post-training runs），试图搞清楚用户到底想通过什么样的方式去控制视频。于是接连推出了一系列功能：比如“运动笔刷”（Motion Brush），你只需要在画面上画箭头，就能指定场景中各个元素的运动轨迹；还有摄像机控制，你可以直接设定场景中镜头的运镜方式。因为 Runway 在其发展历程中绝大部分时间都与电影创作者保持紧密合作，我们迅速收集到了这些反馈，并认定这是一个非常值得投入的方向。所以在我们构建这些模型的初期，“可控性”（controllability）很早就成为了一个核心主题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: We had to build the entire model serving infrastructure for video diffusion models. There was no—nothing else already, cuz Gen-2 was the first text-to-video model I think out in the market. So many things that we learned over time. I think the biggest one was like, it was very clear early on that text-to-video was not going to be the answer. People wanted a lot more control than that, and so we invested in control, building on top of those models very quickly. How do you use the camera trajectory as control? How do you use an initial input frame as control? So that was a very early learning for us with text-to-video.</p>
+<p>Gen-2 was an amazing step-function improvement in the quality of video models, but it was used much more in an exploratory way because there was nothing to ground it to. There was no reference that you could bring into it. You couldn't really control the camera motion, you couldn't control the object motion. And so the first year in 2023 was really all about what are all the interesting ways in which we can condition those models. And it was a lot of just post-training runs on top of the base model to figure out how do people actually want to control them?</p>
+<p>And so there was this quick succession of—it was called Motion Brush, which was you could basically draw arrows and dictate where things should move in the scene. There was camera control, that you could just describe how you want the camera to move in the scene. And because we work with filmmakers from kind of most of the history of Runway, we immediately got this feedback and decided that this was worth investing in. And so controllability became a big theme, I think, very early on as we're building those models.</p>
+</details>
+<h3>Gen-2 诞生的秘密：两阶段黑客马拉松架构与思维范式的回归</h3>
+<p><strong>Speaker A</strong>: 还有一件我很少对外公开聊过的趣事，就是 Gen-2 是如何在 Gen-1 的基础上诞生的。</p>
+<p>这背后的过程其实有点奇特：我们在发布 Gen-1 仅仅两个月后就公布了 Gen-2，而且当时 Gen-1 甚至都还没正式面向大众全面开放（GA）。Gen-1 本质上是一个深度图转视频（Depth-to-Video）的模型，它接收深度图输入，并将其转换为 RGB 视频。当时我们始终没办法让文本或者图像直接端到端生成视频，所以才退而求其次，从深度图转视频开始做起。</p>
+<p>当时团队内部还在讨论，说我们得花接下来的整整六个月时间全力攻坚文本生成视频，可能需要增加算力规模或者扩大模型参数量，去训一个更大的模型。结果我周末冒出了一个业余突击项目的点子：如果我们先用一个模型把文本输入转化为深度图序列，然后再用现成的 Gen-1 把这些深度图转成 RGB 视频，这样行不行？</p>
+<p>于是，Gen-2 最初的核心架构基本上就是这么拼出来的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Something fun that I haven't really talked about too much was just how Gen-2 came to be out of Gen-1. It was a bit strange because we announced Gen-2 two months after Gen-1, and it was before Gen-1 was even generally available. But Gen-1 was a depth-to-video model. So it would take a depth map and it would convert it into RGB. And we couldn't get text or image to video to work directly, and that's why we started from depth to video.</p>
+<p>And we had discussions of like, okay, we need to spend the next six months actually investing in text-to-video, maybe increasing the compute scale or the model scale, like train a larger model. And I had this weekend project idea, which was: what if I take a model that starts from text input and converts to depth maps, and then use Gen-1 to convert the depth maps into RGB? And so Gen-2 was basically that.</p>
+</details>
+<p><strong>Speaker B</strong>: 这简直就是一个黑客马拉松风格拼凑出来的流水线（hackathon pipeline）！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: It's a hackathon pipeline!</p>
+</details>
+<p><strong>Speaker A</strong>: 但它的视觉效果确实相当不错。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: But it looks good.</p>
+</details>
+<p><strong>Speaker B</strong>: 而且运行得非常顺畅。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: And it worked pretty well.</p>
+</details>
+<p><strong>Speaker A</strong>: 确实挺好使的。如果你事先知道它采用了这种两阶段流水线，在某些场景下你确实能看出视频的几何结构稍微有点不自然，因为它是先强行生成深度信息、再渲染出最终输出画面的。但它确实奏效了，并且让我们得以在极短的时间内把这项技术推到了用户面前。</p>
+<p>其实现在回头看特别有意思，因为大家似乎又重新回到了这种近乎两阶段的方法上。比如你看几个月前推出的 Reeve 文生图模型，它就包含了一个规划模型（planner model），先生成物体边界框（bounding boxes），然后再将这些结构信息输入到 Diffusion Transformer 里面。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And it worked pretty well. I mean, if with the knowledge that it has this two-stage pipeline, you can tell in some cases that the structure of the video looks a bit off, because you had to generate the depth first before you go into the output video. But it worked, and it allowed us to bring this to our users very quickly. But it's actually now—it's interesting, because people are coming back to this almost two-stage approach. Like if you look at the Reeve text-to-image model that came a few months ago, it had this planner model that would generate bounding boxes before it fed that into the diffusion transformer.</p>
+</details>
+<p><strong>Speaker B</strong>: 是的，Ideogram 也是在同一天发布的。我记得当时觉得特别不可思议，两家竟然在同一天推出了完全相同的创新技术。圈子确实太小了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah. Ideogram also the same day. I remember that was very strange that both of them came out the same day with the same exact innovation. It's a small community. I think...</p>
+</details>
+<p><strong>Speaker A</strong>: 这真的完全纯属巧合吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I'm like this is completely coincidental, right?</p>
+</details>
+<p><strong>Speaker B</strong>: 圈子里的人难免会私下交流嘛。[笑]</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: People talk. [laughter]</p>
+</details>
+<p><strong>Speaker A</strong>: 所以说，这种思路背后确实大有门道。显然，现在生产环境中运行的每一个视频生成模型，底层无一例外都采用了一套复杂的提示词补全与重写流水线（prompt completion pipeline）。这已经不算是什么秘密了，毕竟……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: So yeah, there's definitely something into this approach, and obviously now every single video generation model in production uses a complex prompt completion pipeline under the hood. I think that's no secret that there is...</p>
+</details>
+<p><strong>Speaker B</strong>: 人类自己写提示词水平实在太烂了。我觉得普遍……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Humans are terrible at prompting. I think across the...</p>
+</details>
+<!-- chunk 4/12 -->
+<h3>从镜头控制到世界模型的萌芽</h3>
+<p><strong>Speaker A</strong>：……但是对，我觉得像初代 Sora 的博客文章里甚至就提到过，在你输入之后，系统会做 Prompt 改写，把提示词扩展得更加详尽，更具体地描述你可能想要的内容。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: ...board, but yeah, I think like the original Sora one blog post even told you that what happens after your input is re rewriting your prompt, it's much more descriptive about what you would want.</p>
+</details>
+<p><strong>Speaker B</strong>：没错，是的。在此之前其实有 DALL·E 3 的论文，那是业内首次公开阐述合成标注（synthetic captions）以及极其详尽的描述文本能带来极佳效果的研究，后来 Sora 在某种程度上也沿用了这一思路。</p>
+<p>对，那是在 2023 年。当时我们正在为 Gen-2 陆续推出各种更新，比如镜头控制（Camera Control）和运动笔刷（Motion Brush）。镜头控制这项功能其实带来了一个非常有趣的转折点：你第一次感觉到，自己不仅仅是在生成一段简短的视频，而实际上是在一个世界内部进行导航与穿梭。</p>
+<p>我认为镜头控制或许正是我们围绕“世界模型”（World Models）展开思考的萌芽，它真正为我们开辟了这一研究方向。我们意识到，这一时期以及 Gen-1 和 Gen-2 这一系列模型向我们自身证明了这一点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Exactly. Yeah. Um and there was the Delhi 3 paper beforehand that uh was the kind of the first public uh description of the fact that synthetic captions and really detailed captions work really well and then Sora kind of built uh built on that.</p>
+<p>Yeah. Yeah. So, it was 2023. We were kind of releasing all these updates to Gen 2 like the camera control motion brush. And there was actually something very interesting about camera control cuz it it was the first time that you felt that instead of like you were creating video, you were creating a short video, you were actually navigating inside the world. And I think camera control was maybe the seed of some of the ideas that we had around world models and really opening up that research direction. we realized, you know, it was this era and this series of, you know, gen one and gen two models really proved to ourselves.</p>
+</details>
+<p><strong>Speaker B</strong>：对，这不是最初版本的镜头控制，这是基于 Gen-3 更新的镜头控制。但不管怎么说，它确实让电影创作者们能够真正把这些模型用起来。</p>
+<p>我想说的是，镜头控制当时非常受欢迎。于是我们意识到，看待这类模型其实有两种视角：一种视角是单纯把它们看作内容创作工具；而另一种视角则是，你在做的是视频预测——为了把视频预测做好，你必须以越来越强大的能力去模拟这个真实世界。如果 Scaling Laws（缩放定律）在视频领域同样适用，就像它在语言模型上生效那样，那么随着我们向这些模型中投入更多算力，它们将能够模拟物理规律，能够越来越出色、越来越可预测地模拟人类动作和动态变化。</p>
+<p>这就是我们发力世界模型的核心论点。因此我们成立了专门的研究小组，专注于世界模型，探索如何将我们正在构建的视频生成模型拓展成更广泛的范式，使其在内容创作之外也能发挥价值。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah, this is this is the uh so this is not the original camera control. This was the update to camera control on top of Gen 3. But yeah, I think it made those models usable to to filmmakers. uh I would say the so camera camera control was very uh was was very popular and so we realized you know there's one way of seeing those models which is you know you're just as a as content creation machines and there is the other way which is you're as you're predicting video in order to predict video well you need to simulate the world in an increasing and increasing capacity and if scaling laws apply on video just like they apply on language models then as we scale the computer that we put in those models, then they're going to be able to simulate physics. They're going to be able to simulate human actions and dynamics increasingly well and predictably well. That was the thesis about around our efforts on world models. And we spin up this research group to just focus on on world models and how how do we turn the video generation models that we're building into something broader and something that would be useful beyond uh also content creation as well.</p>
+</details>
+<p><strong>Speaker A</strong>：那大概是在什么时候？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And that was roughly when?</p>
+</details>
+<p><strong>Speaker B</strong>：那是在 2023 年底。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah. So that was in in late 2023.</p>
+</details>
+<h3>缩放定律与从噪点中涌现的真实世界</h3>
+<p><strong>Speaker A</strong>：挺有意思的。现在很多人都在说，许多视频生成模型公司最近都转型去做世界模型了，但你们早在 2023 年就已经发布了相关构想。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Interesting. You know, like I think uh a lot of people have been saying a lot of video gen model companies have all pivoted to world models these days, but like you know 2023 you're posting it. Uh</p>
+</details>
+<p><strong>Speaker B</strong>：我觉得这算不算“转型”（Pivot）是值得商榷的。可以说，这本来就是你终究必须要做的事情，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: I mean it's it's debatable whether it's a pivot like arguably that's what you always had to do anyway, right?</p>
+</details>
+<p><strong>Speaker A</strong>：在某种程度上，随着模型能力越来越强，这是模型应用范围的一种自然扩张。但看看早期的迹象，你们最初拥有的模型，人们可能会觉得它非常不符合“苦涩的教训”（Bitter Lesson），对吧？你们加入了提示词重写，加了所有这些拼凑的单点功能。但那只是技术当时所处的现状；而未来的方向，就像你刚才说的，只要能规模化扩展，就可以一直 Scale Up 到世界模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: It's in a way an expansion of the applications of the models as as they become more capable. the early signs. It seems like the original models you guys guys had, people would say it's very not bitter lesson, right? You're adding rewriting prompts. You're having all these one-off things, but that's just the state of the tech as it was versus the future of, as you said, you can scale it up is, you know, we can scale up to world models.</p>
+</details>
+<p><strong>Speaker B</strong>：是的。如果你去看 Gen-2 的输出，我认为对大多数人来说，当时根本看不出来它能扩展成为一个通用的世界模拟器：运动幅度极其有限、分辨率和保真度非常低、人体解剖结构上有着显而易见的错误，存在各种各样的局限性。但我们的想法是，这就像是当年的 GPT-2。在 GPT-2 时代，它几乎连连贯的句子都写不通顺；同样地，Gen-2 几乎很难生成连贯的视频。但只要你不断堆叠规模，从某种角度来说没有任何理由它会不起作用。</p>
+<p>我认为这正是 Runway 一贯的思维方式——一种长期的外推能力。就像我们 2018 年刚起步时，看着当下的结果，你需要结合长期的发展趋势来看：对比 2018 年与 2014 或 2015 年初代 GAN 刚出来时的样子，一开始只能生成 32x32 分辨率的人脸，而到了 2018 年就已经能生成 1K 分辨率的街景图片了。世界模型也是同样的道理，早期哪怕再粗糙，也是某种更宏大突破的先兆。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah. So it just became and and and if you looked at the outputs of Gen 2, it was not I think it was not obvious to people that this would scale to become a general simulator of the world like you had very limited movement, you had you know very low fidelity resolution like obvious mistakes in human anatomy like all kinds of limitations but it was just you know uh the idea was that's just GP2 and GPT2 you know you can barely generate like coherent sentences similar Gen two can barely create coherent video, but if you scale it up, you're going to there is no reason why it shouldn't work in a way. It's uh and I think that was that's that's always the mindset of kind of of runway is like this extrapolation of like if you know like even when we started in 2018 and you looked at the results of the day you need to look more at the trend of like where we were in 2018 versus when we were at the you know when the first gun came out in 2020 uh for 2014 or 20 uh 15. And you start from like 32x 32 images of faces and then by the time in 2018 you could generate you know street images at a 1k resolution and it was kind of the same with world models very early signs of something much bigger.</p>
+</details>
+<p><strong>Speaker A</strong>：对，我甚至觉得这就像是在扩散中逐渐聚焦。如果观察我们一年又一年肉眼可见的输出变化，其演变过程本身就像是一个扩散去噪（Diffusion）的过程。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah. I was almost think like it's kind of diffusing into focus like if you look at our visible output from year to year to year it looks like a diffusion process itself.</p>
+</details>
+<p><strong>Speaker B</strong>：没错。尤其是翻看早期那些旧博客文章时，你能非常清楚地看到那种卡顿感……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah. Especially watching the early like old old blog post, you can really see the choppiness, the</p>
+</details>
+<p><strong>Speaker A</strong>：细节上的粗糙……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: details</p>
+</details>
+<p><strong>Speaker B</strong>：就像人类文明从随机噪声开始起步，然后一步步去噪成形……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: like human civilization starting from random noise and then noising into</p>
+</details>
+<p><strong>Speaker A</strong>：对，接着跑下去就对了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah. Yeah. Just run it.</p>
+</details>
+<p><strong>Speaker B</strong>：是的，你就是通过这种方式确认自己走在正确的轨道上，知道自己依然在去噪收敛的过程中，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah. That's how you know you're on track. You know, you're still noising, right?</p>
+</details>
+<h3>以世界为中心：超越人类语言与描述的局限</h3>
+<p><strong>Speaker A</strong>：我很喜欢你们 6 月份宣布时所用的表述。当时你们发布了一支短片随笔提到：“人类心智不再是 AI 的中心，我们的物理世界才是。”过去五年基于大语言模型（LLM）的 AI，本质上很大程度是在尝试模仿人类的偏好和人类的语言表达。而现在这部分基本已经被解决了——我认为这也正是你在当时撰写的那篇随笔的背景之一——现在的核心焦点转向了精准地模拟与建模这个物理世界。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah. I like the way that you guys phrased it when you announced it in June, which is, oh, you had a sort of video essay. The human mind is no longer the center of AI. Our world is, right? which is uh you know let's let's call it the the past 5 years of of LLM based AI is very much like trying to emulate human preferences and human speech but now that's like mostly solved or I think that's like some of the context of your essay which you also wrote around the time and now it's like the focus on modeling the world accurately.</p>
+</details>
+<p><strong>Speaker B</strong>：确实是这样。我们的看法是，DeepMind 最初有一个著名的使命陈述：“先解决智能，然后用智能解决其他一切问题”。但我认为，从“其他一切事物”出发同样极具价值。现实世界蕴含着极其庞大的复杂性与细节，如果仅仅依赖人类对世界的语言描述来学习，是很难真正掌握这些规律的。</p>
+<p>我们现在常说语言模型学习了人类写下的关于世界的一切文字记录，但这仅仅代表了截至 2020 年代我们自身对世界的认知水平。还有太多太多的未知，以及大量关于世界底层物理动态的信息，是根本无法被现存文本所捕捉的——因为我们平时根本不会用细节去文字描述这些底层规律。</p>
+<p>比如，如果我让你用语言详尽描述“如何系鞋带”，这用文字表达是一件极其困难的事情；但如果是直接动手演示，一切又显而易见。这里其实存在着莫拉维克悖论（Moravec's paradox）：作为人类，我们总是在习惯性地低估那些潜意识动作背后的极高复杂度，甚至我们往往没有足够的词汇去准确描述它们。</p>
+<p>因此在我看来，相比于那些我们极易用语言高谈阔论的事物，模拟物理世界、模拟物理规律以及世界动态这件事情一直被严重低估了。现实世界拥有如此丰富的复杂性与多样性，如果我们直接去尝试在这些第一手观测数据上进行训练，而不是训练模型去复读“人们是如何描述这个世界的”，我们就能学到很多若非如此便永远无法获知的新知识。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Exactly. Yeah. So the the the way we see it is uh there is that um that uh initial mission statement of deep mind which is uh uh solve intelligence and then use it to solve everything else but I I think it's starting from everything else uh could be valuable of like starting from you know there is just so much complexity uh and detail in the world that in order to that it's it's hard to learn directly from just human descriptions of the world like we're assuming saying that, you know, like language models learn from everything that humans have written about the world, like our own understanding as of, you know, the 2020s. And there's just so much that we don't know and so much that's not captured by existing text uh about both the, you know, the low-level dynamics of the world like we're not describing in detail. you know, if if I tell you to describe like how do you tie your shoes, that's a very difficult thing to to describe in words, but it's very obvious thing to demonstrate. And so I think there's been and there's, you know, more of paradox like we're constantly underestimating all the complexity that goes into very like things that we do subconsciously as humans and we don't even necessarily always have the words to describe them. And so in my mind the simulating the world and simulating um physics, simulating the dynamics of the world has always been kind of underestimated uh uh compared to uh we place too much emphasis on the things that are easy to talk about. Uh but there's just all this complexity and kind of richness of the world that if we just try and train train directly on that observational data instead of training on how people describe the world, we would learn something new that we wouldn't otherwise know.</p>
+</details>
+<h3>视频预测范式与架构争议</h3>
+<p><strong>Speaker A</strong>：所以你认为当前的架构范式完全没问题，不需要再叠加另一层新架构——比如像纽约另一位著名 AI 领袖所倡导的 JEPA 那样？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: You think that the present architectural paradigm is fine. You don't need like another layer like Japa, you know, like another famous uh New York AI leader would say.</p>
+</details>
+<p><strong>Speaker B</strong>：我们是一个非常务实的研究实验室。如果我们有明确证据表明某种新方法确实优于我们现有的方案，我们会毫不犹豫地采纳。但事实是，我们目前完全没有看到任何迹象表明纯粹的视频预测本身无法继续向上扩展。</p>
+<p>而且即使你纵观当下的行业态势——不仅是我们团队的工作，还包括其他同行的研究成果——你会看到在机器人领域，一些最具前景的进展恰恰就是从视频预测模型起步，随后再将其适配扩展为动作模型（Action Models）。</p>
+<p>因此，几乎没有证据表明我们非得引入某种完全不同的架构不可，也没有证据表明把精力耗费在全新的架构创新上，会比持续改进数据质量、打磨并 Scaling 当前的方法带来更好的回报。我们没有任何迹象证明必须另起炉灶。</p>
+<p>前几天 Yann LeCun 发了一条推特提出反对观点，大意是“理解世界动态与生成可爱的短视频完全是两码事”。</p>
+<p>而你们的回答则是：不，它们本质上就是同一回事。（笑声）“我的猫咪视频和物理世界模拟就是同一回事……”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: You know, we're a very pragmatic research lab. If uh we have evidence that an approach works better than the approach that we're taking, then we have no qualms to taking it, we just have seen no indication that video prediction itself doesn't scale. And even if you look now, you know, not just our work, but the work of others, you're seeing in robotics, some of the most promising work um starts from video prediction models and then you adapt them to also be action models, for example. Um, so there is very little evidence that you need something else and that your time is better spent on a novel architectural change compared to improving data and improving the and scaling the current the current approach. And so we don't have any indication that you know the the there is that counterargument that uh I think there was a a tweet by Yan Leon a few days ago that you know uh understanding the dynamics of the world is very different than uh generating uh cute videos and your answer is no. They're the same thing. [laughter] My cat videos are the same as</p>
+</details>
+<!-- chunk 5/12 -->
+<h3>视频模型与物理理解的现实</h3>
+<p><strong>Speaker A</strong>: 理解物理，对吧？因为如果你想生成画面，显而易见视频模型是可以“走捷径”作弊的。比如它们可以连续给出场景的镜头切换，以一种并不需要真正去模拟复杂物理规律的方式来呈现。人们总有各种各样的办法来掩饰模型在这方面的缺陷。因此，非常重要的一点是，不要被当前视频模型的表面表现给过分蒙蔽或误导了。人们很容易挑出一些精心挑选的好例子，从而误以为视频模型的发展程度远比其实际水平要高。所以，为了提升这些模型，我们还有大量、大量的工作需要去做。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: understanding physics, right? Cuz if you want to generate, you know, obviously video models can cheat and like they could you could give like successive shots of the scene in a way that doesn't require you to actually simulate difficult physics. There's always like all these different ways in which you can hide the deficiencies of the model. And it's important not to be kind of too tricked by the performance of the current video models. It's easy to, you know, cherrypick examples and think that video models are further advanced than they actually are. So, there is a lot a lot more work that we need to do to improve those models.</p>
+</details>
+<p><strong>Speaker A</strong>: 但在我看来，这非常类似于语言模型的发展历程——我们见证了它从最初连基本的连贯句子都写不通顺，到后来能够与人类流畅对话，再到如今能够自主运行一整天并构建出完整的代码库。而这期间的核心差异，虽然一路走来显然伴随着架构上的持续改进，但最关键的驱动力始终在于规模扩展（Scale）。对于视频模型来说，这完全是同一种逻辑的押注。而且我们目前没有任何迹象表明这种扩展正在走向饱和。我们用于评估这些模型物理理解能力的基准测试结果显示，随着模型规模的扩大，这些评测指标呈现出完全可预测的稳步提升。比如如果你去查阅 Physics-IQ 测试，它就是专门用来衡量模型在经典力学、流体力学以及光学等各方面物理表现的核心基准之一。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: But in my mind, very similar to language and like we've, you know, you go from barely coherent sentences to something that, you know, could hold a conversation with a human to something that can operate autonomously for a day and like create entire code bases. And the main difference there's obviously some architecture improvements along the way but the main thing is scale and so it's the same bet for video and we have no indications that this is saturating like we have benchmarks that we use for measuring the physics of those models and we see those predictably improve as we scale those models. So if you want to pull up Physics-IQ, is one of those benchmarks that measures how well does the model perform at all mechanics or fluid dynamics or optics.</p>
+</details>
+<p><strong>Speaker B</strong>: 我很好奇你们是否在这个过程中观察到了某种涌现现象，或者关于这方面的 Scaling Law（缩放定律）？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: I'm curious if you've seen any emergence, any scaling law around this.</p>
+</details>
+<p><strong>Speaker C</strong>: 对，他的意思就是这里确实存在 Scaling Law，对吧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker C</strong>: Yeah he's saying there is a scaling law right.</p>
+</details>
+<h3>物理基准测试与直觉物理理解</h3>
+<p><strong>Speaker A</strong>: 没错，确实如此。这些基准测试的运作方式是：研究人员去采集一批代表不同物理现象的真实视频片段，然后提取视频的第一帧画面，输入给图生视频（image-to-video）模型，让模型去展开预测并生成接下来应该发生的画面序列。例如，画面中有一个悬挂在天花板上的球，将其作为输入，模型就需要去预测这个球接下来掉落到地面的运动轨迹。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Exactly. Yeah. So the way those benchmarks work is the researchers have gone and captured a few videos that are representative of different physical phenomena and then you can take the first frame and then pass it through an image-to-video model and then generate kind of a roll out that shows what should happen next. So you have a ball hanging from the ceiling and then you use that as input and then the model predicts how the ball should fall on the ground.</p>
+</details>
+<p><strong>Speaker A</strong>: 这项测试衡量的是直觉物理能力。就像人类天生拥有一种对物理常识的直觉认知一样——我如果松手扔下手里的这个水瓶，你脑海中立刻能想象出接下来会发生什么。这项测试衡量的正是模型内化这种直觉物理理解的能力。我们在不同的模型规模和计算量规模上进行了系统评测，结果清晰地显示，随着规模增长，模型在 Physics-IQ 上的得分呈现出极具规律的可预测性提升。当然，行业里还有许多其他的工程技巧和特定方法可以进一步拔高这个分数，但仅仅是纯粹的规模扩展本身，就已经在实打实地帮助模型学到更好的物理规律了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And this measures you know we have an intuitive understanding of physics. I know you can imagine what will happen next if I drop this bottle. So it's measuring that same intuitive physics understanding of those models and we've measured that at different model scales and compute scales and we see that the score in Physics-IQ predictably improves. There's other tricks and techniques that you can make to improve the score even further but even scale alone helps in the model learning better physics.</p>
+</details>
+<h3>柏拉图洞穴隐喻与无监督学习之争</h3>
+<p><strong>Speaker A</strong>: 我对 Yann LeCun（杨立昆）观点最大的共鸣，就在于他提到的“柏拉图洞穴隐喻”。也就是说，我们当前的做法本质上只是在针对事物投射出来的表象输出进行学习，而没有触及事物内部运行的本质过程，因而输入的数据极其嘈杂混乱。如果真能直接观察到事物背后的内部机理当然最理想，虽然人类大脑思维的内部机制极难直接观测，但对于物理世界而言，我们明明已经拥有一整套极为成熟的科学和物理学规律。然而在当前的视频生成中，我们却在很大程度上忽视了这些现成的物理、动力学、重力及各种相互作用规律，把这一切成体系的公式知识全都抛在一边，仅仅寄希望于堆砌大规模数据来暴力学习。这在很大程度上确实契合了无监督学习的传统经验法则，但在直觉上又难免让人感觉“这做法不对劲”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: My main sympathy with Yann LeCun is the Plato's cave allegory, right? Like you're learning on the output of a thing, not the internal process of a thing. And it's very noisy. And you know, if only you could observe the internals of a thing. It's hard to observe the internals of a human mind. But you can very much observe or at least we have a whole bunch of science and physics that we're ignoring on how to model physics and movement and gravity and other interactions and we're just like throwing away all that and just saying just scale data which is very much the lesson of unsupervised learning but it feels wrong. [laughter] I think that's like the main idea.</p>
+</details>
+<p><strong>Speaker B</strong>: 我觉得机器学习的整个发展史，很大程度上就是由各种“直觉上感觉不对”却最终奏效的做法构成的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: I think the history of machine learning is large it feels wrong.</p>
+</details>
+<p><strong>Speaker A</strong>: 是的，目前摆在我们面前的最直接答案，依然是那篇著名的《苦涩的教训》（The Bitter Lesson）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah. It's a bitter lesson right now is the simple answer to that.</p>
+</details>
+<h3>从规模扩展到长视频生成的演进</h3>
+<p><strong>Speaker B</strong>: 那你觉得我们究竟还能把规模推到多大？从视频生成的维度来看，一边是视频理解，另一边是视频生成。未来我们是否真的能拥有直接生成 2 小时甚至 20 小时长视频的工具？目前在推理阶段，人们可以通过切分成批次生成再拼接缝合的方式来实现，但我们是否只需一直沿着 Scaling 的路线走下去？长视频生成的时序一致性等难题，是否也能单纯依靠规模扩展来自然解决？结合你们从 Runway Gen-2 到如今 Gen-3、4.5 的演进历程，从技术层面来看，行业至今取得了哪些关键突破？你又如何预判未来的技术走向？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: I guess how much can you scale so like even on let's say the video generation side like there's one side of video understanding video generation are we still going to have tools where it's like I want to generate 2 hours 20 hours there's a inferral way to do it in batches and stitch it together but like do we just keep scaling do we just continue long generation consistency all that would scale and like tying it into where we're at now from the Runway Gen-2 to 4.5 like technically what advancements have we made to today and then where do you see things still going?</p>
+</details>
+<p><strong>Speaker A</strong>: 这个问题的核心答案之一，毫无疑问依然是规模扩展（Scale）。我们在研发 Gen-3 的过程中极其深刻地吸取并验证了这个经验。Gen-3 是我们在 2024 年推出的模型，也就是在 OpenAI 发布 Sora 之后的几个月发布的。说起来，这款模型的诞生背后还有一段非常有意思的故事。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: So part of the answer is definitely scale and that was we learned that lesson in a big way with Gen-3. So Gen-3 was the model we released the year after in 2024 that was a few months after Sora was released so yeah there's an interesting story of that came to be as well.</p>
+</details>
+<h3>转向 DiT 架构与应对 Sora 冲击</h3>
+<p><strong>Speaker A</strong>: 对我们而言，Gen-3 是我们首次真正必须去硬啃分布式大模型基础设施的硬仗。基本上，我们不得不在短短几个月的时间里，把整个语言模型领域过去三年才摸索掌握的技术经验全部彻底吃透并落地。Sora 当时带来的最大架构变革之一，就是全面转向了 Diffusion Transformer（DiT），以此彻底替代了传统的卷积网络（ConvNets）。早期的大多数扩散模型在去噪网络部分普遍采用 ConvNets 架构。而关于 Diffusion Transformer 的开创性论文大概是在 2023 年发表的，它初步展现了图像扩散 Transformer 的 Scaling Law。我们当时就敏锐地意识到，必须立刻在模型并行（Model Parallelism）训练基础设施上进行重注投资，以便将视频模型的训练真正扩展到数十亿甚至更高参数的量级。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Gen-3 for us was the first time that we really needed to build. Basically we had to learn all the lessons that the language model world learned in three years in the span of a few months. One of the biggest changes of Sora was using diffusion transformers instead of ConvNets. So a lot of the early diffusion models were all ConvNets for the diffusion model part. And the diffusion transformer paper came at some point in 2023. And it basically showed scaling laws for image diffusion transformers. And we realized at that point that we needed to invest in infrastructure for model parallelism for really scaling training to larger than you know a few billion parameter models.</p>
+</details>
+<p><strong>Speaker A</strong>: 整个 2023 年秋季的大部分时间，我们几乎全都在搭建和调试自研的分布式训练基础设施。期间经历了一次又一次的试错失败，在尝试扩展图像与视频 DiT 的过程中踩遍了各种坑。然而就在 2024 年 2 月，OpenAI 突然发布了 Sora，其展示的视频生成质量全方位碾压了我们当时已有的 Gen-2。当时 Twitter 上充斥着大量舆论唱衰，甚至有人断言“Runway 彻底完了”、“Runway 绝不可能追赶得上”。如果大家还记得当时的大环境，2024 年初的 OpenAI 简直如日中天，是不可战胜的绝对巨头。当时行业里没有任何对手能够望其项背，Gemini 的第一个版本也才刚刚面世不久。因此，当 OpenAI 拿出 Sora 并在生成品质上实现如此巨大的跨越时，坦白说，这直接给我带来了长达数小时强烈的“生存危机感”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And we spent maybe the most of the fall of 2023 building out our infrastructure for distributed training. And we had a lot of false starts and a lot of failure in trying to scale image and video diffusion transformers. And at that point, February 2024, Sora comes out and the results are very much superior to what Gen-2 could produce. There were a lot of chatter on Twitter about Runway's done, like there is no way Runway will catch up and if you remember also OpenAI in the early 2024 it felt like a formidable opponent now but at that point they were on the top of their game nobody could even get close to them there was maybe Gemini was just the first version of Gemini had just released. So when OpenAI came with Sora and it was such a big jump of quality it gave me there was an existential crisis for a few hours.</p>
+</details>
+<h3>极限攻坚：从 Gen-3 到端到端全栈工程</h3>
+<p><strong>Speaker A</strong>: 但我觉得，这恰恰展现了 Runway 最令人惊叹的韧性所在。我们已经在这个领域深耕了 8 年时间，在日新月异的 AI 行业里，8 年简直称得上是“恐龙级”的老兵了。这一路走来，我们经历了太多类似的生死时刻，每一次都逼着团队以极快的速度去学习、调整并建立此前完全不具备的全新技术能力。如果你去问任何一位亲历过那段时期的 Runway 员工，他们都会告诉你那是在公司最热血、最难忘的一段经历——我们硬是在短短三个月内完成了一场极限攻坚冲刺，最终打造出了一款在质量上甚至超越了 Sora 的全新模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: But I think the amazing thing about Runway and like we've been around 8 years now which is almost we're dinosaur in AI and we had a lot of those moments we had to learn adapt very quickly and build out skill set in the team that we didn't have and so if you ask anyone what is their favorite time at Runway that was there during that time. It was that push in like 3 months to get to a model better than Sora.</p>
+</details>
+<p><strong>Speaker A</strong>: 在那次技术攻坚中，我们把模型的参数规模以及训练所使用的计算资源直接放大了整整 10 倍。我们从零开始吃透了此前毫无储备的模型并行分布式训练技术，最终在那个夏天成功推出了 Gen-3。那可以说是整个公司发展历程中的一个巨大转折点。我们的科研能力在极短时间内实现了爆发式跃升，并且从 Gen-3 发布之后，团队真正开始全面、坚定地向着打造“通用世界模型（General World Model）”的宏大愿景全速前进。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And we scaled 10x the model scale, the model size and the compute that we were training on. We figured out model parallelism we had zero expertise in that and then we came out with Gen-3 during that summer. So that was a big turning point I think for the company where the research work grew very quickly and we really started pursuing this vision of the general world model in earnest after Gen-3 was out.</p>
+</details>
+<p><strong>Speaker B</strong>: 确实，这也是在底层从头构建探索时最震撼人心的特质——当你身处开创期时，根本没有任何现成的技术栈可以依赖，你必须从底层自己发明全部的轮子，必须做到完全的端到端全栈（Full Stack）。不像现在，市面上已经涌现出专门解决推理加速的公司（比如 Fal 等），可以为模型托管与推理服务提供现成的支持，我知道你们后来也有跟他们展开合作。但在当时那个关口，一切都得靠自己摸索。回想当时 Sora 刚横空出世、外界都在质疑你们公司是否还有存在必要的那一刻，真的是非常惊心动魄。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah, I mean that's the amazing thing about building when you're building there's no stack to you have to invent everything yourself. You have to be completely full stack you know now I think like there are inference specialists like Fal or whatever that can help with like model serving and I think you guys work with them as well. But at the time it was just very interesting to think about what you do when Sora comes out and people are questioning whether your company should still exist.</p>
+</details>
+<h3>推理架构革新：模型蒸馏与低成本规模化</h3>
+<p><strong>Speaker A</strong>: 是的，当时根本没有针对扩散模型的完整高并发推理框架（类似 LLM 领域的 vLLM），我们必须自己亲手从头搭建一整套模型 Serving 基础设施，并想尽一切办法对计算进行极端优化。在 Gen-3 发布几个月后，我们又紧接着推出了 Gen-3 Turbo 版本。据我了解，这应该是业界首个真正跑在生产环境中的少步数蒸馏（Step-Distilled）视频扩散模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah. And there was no VLM of diffusion models that we had to build the whole model serving infrastructure and make things efficient. And a few months after we released Gen-3, we released the Turbo version which I think was the first step-distilled model in production.</p>
+</details>
+<p><strong>Speaker B</strong>: 那确实是当时我们重点追踪报道过的一大关键技术趋势。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: That was a whole trend that we covered as well. Yeah.</p>
+</details>
+<p><strong>Speaker A</strong>: 这一蒸馏优化实际上让我们得以真正把模型推向超大规模的用户群体，因为最初版本的 Gen-3 无论在推理耗时还是算力成本上都极其昂贵，很难进行大范围服务。而伴随着一致性模型（Consistency Models）、Lightning、Turbo 等一系列生成步数蒸馏技术的爆发……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: So that allowed us actually to serve those models at larger scale cuz I think the first version of Gen-3 was quite expensive to serve. You know, I think the whole trend in consistency models, Lightning and Turbo and all these things somehow</p>
+</details>
+<!-- chunk 6/12 -->
+<h3>蒸馏与实时视频模型的演进路径</h3>
+<p><strong>主持人</strong>：……并没有真正保留下来。我不知道你对此有什么思考，因为在当时我觉得，很明显所有事情都应该先从一个蒸馏模型开始，然后再进行放大（upscale），对吧？这样一来，你那些更大的模型基本上就变成了某种高级的上采样器。但无论如何，你都应该始终先用一个更小、更快的模型来起草初稿，对吧？因为你可以极其迅速地获取结果，几乎能达到实时的速度。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: ...didn't really stick around. I don't know if you have any reflections on this because at the time I was like, well, obviously everything should start with a distilled model first and then you can upscale, right? Then basically your bigger models just turn into fancy upscalers, but like you should always draft with a smaller model and faster model, right? Because you can get it so quickly like near real time.</p>
+</details>
+<p><strong>嘉宾</strong>：对，我倒不会这么笃定地说这种方法没有保留下来。我认为实际情况很可能是——我的意思是，现在有很多步数蒸馏（step distill）模型正在生产环境中被积极地广泛使用。当然，与非蒸馏的完整基座模型相比，它在质量上显然仍然存在一定的差距。但是在我的观念里，视频模型相对于语言模型来说，大约还存在两到三年的时间滞后。因此，出现更好的蒸馏技术仅仅只是一个时间问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, I would not be so sure to say that didn't stick around. I think that's it's likely to—I mean that there's a lot of step distill models that are actively used in production. There's still obviously a gap in quality compared to the you know the nondistill model. But in my mind we're still, you know, there is a two to three year offset from language models. So it's just a matter of time before there is better distillation techniques.</p>
+</details>
+<p><strong>嘉宾</strong>：就比如我们现在使用的一个实时角色一致性模型，我认为这可以说是目前规模最大的实时视频模型落地部署。那正是一个步数蒸馏模型，并且正在被极其活跃地使用。当然，相比于通用视频模型，它针对的是一个非常具体的细分应用场景。所以……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: You know we use right now we have a real-time model core character consistency that I think is the largest deployment of real-time video models. That's a step distill model and it's actively being used. It's a very specific use case compared to a general video model. So this is...</p>
+</details>
+<p><strong>主持人</strong>：顺便说一下。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: By the way.</p>
+</details>
+<p><strong>主持人</strong>：这就是数字人角色的外观一致性。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: This is avatar consistency character.</p>
+</details>
+<p><strong>嘉宾</strong>：没错。所以这是一个说话人（talking avatar）数字人模型。我们成功对它进行了极其深度的极致性能优化。它能够以 24 fps 的帧率稳定生成，本质上是一个经过步数蒸馏的自回归（autoregressive）视频模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah. So this is a talking avatar model. We were able to, you know, we optimized the hell out of it. And it generates at 24 fps and it's a step distilled autoregressive video model.</p>
+</details>
+<p><strong>嘉宾</strong>：因此，如果我们审视我们世界模型（world model）的发展方向，其中一个极其核心的组成部分，就是从以往一次性生成一整段完整视频的双向扩散（bidirectional diffusion）架构出发，将其转变为自回归的形式。也就是说，模型每次只生成一帧或者几帧画面。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So if we look at our world model direction, a big component of it is starting from the bidirectional diffusion that basically generates an entire video at once and making autoregressive show. So you generate one frame or a few frames at a time.</p>
+</details>
+<p><strong>嘉宾</strong>：要构建出这样一个通往实时模型的完整管线，背后需要投入大量复杂的技术工作。首先，你必须先将其改造成一个具有因果性的自回归模型（causal autoregressive model）；随后，你还需要在其上实施额外的步数蒸馏，才能让它真正达到实时的推理性能。而且我认为，这部分技术探索其实才刚刚拉开序幕。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So there's a lot that goes into that pipeline of getting to a real-time model. It's first you need to make it into a causal autoregressive model and then you need to do some additional step distillation to get it to actually be real time. And I think that part is actually just starting.</p>
+</details>
+<p><strong>嘉宾</strong>：如果两年之后我们还没有将实时模型作为主流的主力模型来使用，我会感到非常不可思议。在我看来，实时视频生成是一条不可阻挡的必然趋势。它能带来好得多的用户体验，其线上推理服务的成本也要低廉得多；而且随着我们探索出更为优秀的蒸馏技术，基座模型与实时模型之间的画质差距只会不断缩小。在我们团队内部，我们在蒸馏过程中保持基座模型原有质量方面，已经取得了长足的突破和进展。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: I would be very surprised if we're, you know, two years from now we don't primarily use real-time models. To me, real-time video generation is just inevitable that, you know, it has much better user experience, is much cheaper to serve, and the quality gap between the base model and real-time model is only going to close as we figure out better distillation techniques, and we made a lot of progress there internally on maintaining the quality of the base model when we distill them.</p>
+</details>
+<h3>双维度蒸馏与技术迁移机制</h3>
+<p><strong>主持人</strong>：这些技术经验中有多少是具备可迁移性的？也就是说，如果使用的是同一个基座模型，比如你在整个序列上做扩散生成，然后你要把它转换成步数自回归蒸馏模型，这种蒸馏方式是需要你同时训练两者，还是可以直接复用原有的基座模型加上转换器？从常规模型跨越到在技术层面上能够达到实时的模型，整个流程究竟是怎样的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: How much of this is transferable? So is it the same base model, like if you're doing diffusion across the whole sequence and you're converting it to step autoregressive distillation, is this like distillation where you still need to train both, you can use the same base and converter, what's that process like to go from regular model to something that's real time on a technical level?</p>
+</details>
+<p><strong>嘉宾</strong>：扩散模型最美妙的一点就在于，它赋予了你两个不同维度的蒸馏空间。其一是你可以将其蒸馏为一个体积更小的模型，这与大家在大型语言模型（LLM）中所做的参数缩减蒸馏非常相似；其二则是你可以沿着减少步数的维度进行蒸馏，也就是大幅缩减扩散采样所需的步数。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So the nice thing about diffusion models is you have two axes of distillation. So there is that you can distill to a smaller model which resembles what you do in LLMs, or you can distill in terms of taking less steps, less diffusion steps.</p>
+</details>
+<p><strong>嘉宾</strong>：举个例子，你可以把一个原本需要 50 步才能完成生成的模型，通过蒸馏让它在仅仅 4 步之内就能完成生成。尽管你可能会面临一定程度的性能指标下降，但在非常多的情况下，你所得到的生成输出质量是完全具有可比性的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So you could take a model that generates in 50 steps and generate in four steps and get to—you have some performance degradation, but very often you get comparable outputs.</p>
+</details>
+<p><strong>嘉宾</strong>：因此，你甚至可以直接选用性能最为强劲的前沿大模型（frontier model），通过步数蒸馏技术对其进行优化，直接达成实时级别的生成性能，这正是我们所验证并亲眼目睹的事实。所以，具体取决于实际的应用场景：在某些特定场景下，我们可能也会部署更小尺寸的模型来提供服务；但在大量的使用场景中，我们实际上就是直接运行前沿大模型，并且完全能够让它在实时状态下稳定运转。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So you can even take the large frontier model and distill it with step distillation and get to a real-time performance, and that's what we've seen. So depending on the use case, in some cases we might also serve with a smaller model, but in a lot of use cases we actually just use the frontier model and we're able to make it work in real time.</p>
+</details>
+<h3>界面世界模型：像素级全栈端到端渲染</h3>
+<p><strong>主持人</strong>：我觉得现在可能正是一个切到你笔记本电脑画面的好时机，可以给大家展示一下你们目前正在做的一些令人惊叹的实时成果。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I think this might be a good time to cut over to his laptop to show off some of the real-time stuff that you're doing.</p>
+</details>
+<p><strong>嘉宾</strong>：这是我们最近公布的一项最新研究进展。我们一直在努力将我们的通用世界模型拓展并落地到各种不同的应用形态之中。其中我们认为极具吸引力、前景极其广阔的一个方向，就是将通用世界模型本质上用作一种交互界面——一个通向所有软件的通用人机界面。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: This is one of the research updates that we did recently. So we've been working in getting our general world models to different applications. One of them that we think is very compelling is using general world models as essentially an interface, a universal interface to software.</p>
+</details>
+<p><strong>嘉宾</strong>：这是我们世界模型的一个特殊衍生版本，被称为“界面世界模型”（Interface World Model）。它的核心理念在于，它本质上彻底取代了传统软件应用程序的前端。它直接在像素层面上渲染出整个用户界面，并通过专门的训练，来精确预测用户在界面上进行鼠标点击或产生其他交互行为后，接下来应该发生什么画面变化。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: This is a version of our world model that's called an interface world model. And the idea is that it essentially replaces the front end of a software application. It renders the pixels directly of an interface and it's trained to predict what happens next as a result of a click or another interaction you have with the interface.</p>
+</details>
+<p><strong>嘉宾</strong>：因此你眼前所看到的一切全都是纯粹的像素数据，背后完全没有任何 HTML、CSS 或 React 代码在驱动这个界面。这是由我们的实时视频生成模型直接输出的像素流，并且它能够直接将用户的鼠标点击动作作为输入特征。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So this is all pixels, there is no HTML, CSS, React that's powering this interface. This is directly the output of our real-time video generation model and it takes clicks directly as input...</p>
+</details>
+<p><strong>主持人</strong>：还有拖拽操作。点击和拖拽，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: ...and drags. Click and drag, right?</p>
+</details>
+<p><strong>嘉宾</strong>：没错！所以它支持点击，支持拖拽，而且它同样支持页面滚轮滚动。更令人惊叹的地方在于，你实际上可以直接在提示词（Prompt）中用自然语言描述你希望各个元素具有怎样的行为模式，也就是你希望不同界面元素表现出什么具体的交互反应。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So it supports, yeah, clicks, it supports drags. It also supports scrolling. And the amazing thing about this is that you can effectively describe in the prompt how you want different elements, like what do you want the behavior of different elements to be.</p>
+</details>
+<p><strong>嘉宾</strong>：这样一来，你就完全颠覆了以往必须依靠类似 HTML 标记语言来定义界面的传统方式，取而代之的是，你只需要纯粹用自然语言去描述这个交互界面：“如果我按下这个按钮，我期望发生这件事情；如果我按下那个按钮，应该发生另一件事情。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So you can turn an interface from a markup language description of like an HTML interface, and instead you can just describe the interface: if I press this button I expect this to happen, if I press this button this should happen.</p>
+</details>
+<p><strong>嘉宾</strong>：我们相信这种范式在原型设计方面极其强大，比如用来直接测试和体验不同交互动作的手感与实际感受。此外，你还可以在其中加入音频生成——因为它本身就是一个音画联合生成的多模态模型。所以你基本上可以同时用语言描述点击后画面应呈现怎样的视觉结果，以及伴随该动作是否需要触发相应的音效反馈。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And it's useful we believe both for prototyping, for like just testing what different interactions would feel like. You can also add audio to it, so it's a video-audio generation model, so you essentially describe both what the visual outcome should be of your click and also if there's a sound effect that comes out of it.</p>
+</details>
+<p><strong>嘉宾</strong>：正因如此，我们坚信这将会成为一种灵活得多的未来软件构建方式。既然最终目的都是为了呈现画面，为什么还要费尽周折先生成代码、再由代码去绘制像素呢？直接端到端生成像素不就好了吗？这正是将端到端哲学彻底贯彻并应用到了前端领域。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So we believe that's gonna be a much more flexible way of building software. Why generate the code that generates the pixels, just generate the pixels directly. It's the end-to-end philosophy applied to front ends.</p>
+</details>
+<h3>应用场景与未来软件形态</h3>
+<p><strong>嘉宾</strong>：因此我们认为它有着诸多非常令人兴奋的应用场景。首先，你可以在其之上构建各种富有创意的创作工具；其次，对于任何涉及大量自由探索的场景，或者比如教育类应用场景——当你想学习一个全新的抽象概念，需要某种生动直观的可视化图解，并进行开放式的探索互动时——我们认为这种技术路线将具备无与伦比的强大威力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So we think there's a few interesting use cases: you can build creative tools on top of it; we think that for any kind of use case that involves a lot of exploration or like educational use cases where you want to learn about a new concept and you want some kind of visualization and kind of open-ended exploration, we think this is a very powerful approach.</p>
+</details>
+<p><strong>嘉宾</strong>：你可以大胆设想，未来可能会基于这类世界模型诞生出全新形态的工业设计软件。所有这些画面同样全都是以近乎实时的状态动态生成的。因此，你可以轻松构建出极其丰富而有趣的镜头视角运镜切换，以及各种此前如果不用此类模型就极难实现的全新交互形态。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, you can imagine new forms of industrial design software that could emerge as a result of those models. And this is all generated in real time as well. So you can build a lot of interesting camera transitions and forms of interaction that are very difficult to build otherwise.</p>
+</details>
+<p><strong>嘉宾</strong>：我们评估其能力的一种方式是：假设你尝试通过提示词让 Claude 来生成完全相同的可交互界面，比如给它一张你在 Figma 里绘制的或者从别处截取的界面参考图，然后指示它：“请实现这个特定的交互功能”，在当前案例中也就是“把那个物体向上拖拽”。除了传统的 LLM 代码方案速度明显慢得多之外，纯粹依靠大语言模型往往极难完美捕捉和还原某些连续动态的物理交互手感。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And one way in which we evaluate this is what if you try to generate the same interface with Claude by just prompting Claude: &quot;here's an image reference of my interface that I made in Figma or that I created somewhere else, create this particular interaction&quot; which in this case it's drag that object upwards. And beyond it being slower, it's also very difficult to capture some interactions by just with just LLMs.</p>
+</details>
+<p><strong>嘉宾</strong>：所以我们认为，这极有可能成为未来大量软件被设计与创造的主流形态。此外，它带来的另一个额外优势在于个性化定制会变得轻而易举：你可以根据当前访问界面的具体用户身份，动态换用不同的提示词策略；你也可以轻而易举地通过提示词工程让界面呈现更大号的字体以满足无障碍辅助需求，或者根据用户独特的学习偏好来动态调整界面展现。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So we think that this is likely to be the way that a lot of software in the future will be created. And one of the additional benefits is personalization might be a lot easier done with those models: you can essentially try out different prompts based on who's visiting the interface, you can more easily prompt engineer the interface to have larger size text for accessibility reasons, or like if you have a particular study preferences.</p>
+</details>
+<p><strong>嘉宾</strong>：所以我们对这一技术方向感到无比兴奋。当然，目前它显然还处于非常早期的发展阶段。我认为后续我们还需要进一步提升此类模型的推理成本效益，因为相比于纯粹由浏览器直接渲染静态 HTML 代码，持续运行一个实时的深度视频模型所消耗的算力开销显然要高昂得多。但无论如何，在利用世界模型构建新一代前端交互界面这一方向上，我们看到了无穷无尽的巨大潜力和变革可能。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So we're very excited about this approach. It's obviously early days and I think we'll need to make it more cost-effective as well to serve those models, because running a real-time video model versus just purely rendering HTML, there's obviously the computational needs are much higher. But we do see a lot of potential in this approach to building front-end interfaces.</p>
+</details>
+<p><strong>主持人</strong>：我们之前在与 Ethan 的节目中，聊到 Grok 视频时也探讨过类似的翻页动画（flipbook）概念。我觉得这种形式在视觉表现力上极其引人入胜。我想这也许……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: So we covered this similar thing with flipbook before with our Ethan episode with Grok video, and I think it's very engaging visually. I think it's maybe...</p>
+</details>
+<!-- chunk 7/12 -->
+<h3>界面世界模型的成本优化与交互潜力</h3>
+<p><strong>Speaker A</strong>: ……对教育很有好处，但这听起来确实成本不菲。不过我觉得它的昂贵程度应该是有上限的，对吧？毕竟随着时间的推移，推理成本肯定会逐步下降。你会找到有效优化它的途径。当画面暂停时，你并没有接收到人类的输入，你根本不需要去生成任何东西，对吧？</p>
+<p>所以，我的意思是，比如在这种场景下你会有环境动态背景（ambient motion）。因此屏幕的一部分可能会……打个比方，假设你想去游览巴黎，然后你得到了这个允许你自由探索的界面。画面里有行人在走动，或者有各种事情在发生。这显然会让成本变得更高，因为你必须让模型一直保持运行。或许你可以设计某种循环机制，这样就无需一直运行模型了。但我认为，所有这些细节都是我们接下来需要去摸索和解决的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: ...good for education but it does sound expensive. I think there's an upper bound to how expensive it will be though, right? Like, you know, the inference cost will go down over time. You'll figure out ways to optimize it effectively. When it pauses, you're not receiving human input. You don't have to generate anything, right?</p>
+<p>So yeah, I mean you could also like in this case you have ambient motion. So there is parts of the screen that might, you know, if you're let's say you want to visit Paris and then you get this interface that you allow to explore. You have people walking or like things happening. It obviously makes it more expensive because you need to run the model all the time. Maybe you have some looping mechanism so you don't need to do that. But all those things I think is stuff we need to figure out. Yeah.</p>
+</details>
+<p><strong>Speaker B</strong>: 我觉得我们首要考虑的是，先找到一些非常明确的用例，在这些用例中，相比传统界面，它明显能带来更具吸引力和颠覆性的交互体验；至于以更具成本效益的方式来提供服务，那只是个时间问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: I think our first consideration is let's make this clearly find some use cases where it's clearly a much more compelling interaction compared to traditional interfaces and then it's a matter of time before it becomes more cost effective to serve.</p>
+</details>
+<p><strong>Speaker A</strong>: 是的。说到行人在走动，我觉得对我来说最合理的方案基本上就是像 Moon Lake Nick……天哪，我老是把他们和 Chris Manning 以及 Funen 的名字搞混。我不知道你有没有接触过他们，他们基本上是把这些映射到某种游戏引擎上，我想应该是 Unity 或者 Godot 之类的。显然你可以在其底层给 NPC 行为编写脚本，并基于此进行训练。</p>
+<p>而在我们这里，你真的可以随心所欲地想象任何形态，因为这就是一个 UI，对吧？而且感觉构建一个可交互的软件世界模型要更加容易入手（tractable），因为我们有大量现成的软件交互范例，你可以在上面运用那些精妙的强化学习环境技术。相比之下，直接向外扩展到具身智能（embodied AI）以及真实世界的物理用例要困难得多，但眼前这个方向是一个非常好的第一步。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah. When it comes to the people walking, you know, I think the approach that makes the most sense to me is basically Moon Lake Nick. Oh god, I keep messing up their name with Chris Manning and Funen. I don't know if you've come across them where they basically map to some kind of game engine. I think it's Unity or something or Godot and they you can obviously script some NPC behavior behind that and train on that.</p>
+<p>Whereas here you can really imagine whatever you want like that is a UI, right? And it feels like more tractable I guess to create a world model of software that is interactable because we have many of examples of that and you can, you know, do your fancy RL environment stuff on that then it is scaling up to embody and real world physical use cases, but this is a nice first step.</p>
+</details>
+<p><strong>Speaker B</strong>: 或者，你也可以走相反的路线——比如采用 1B 甚至 3.5 亿参数的极小语言模型，小到它们仅仅负责预测游动的鱼群运动轨迹这类简单任务。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Or you know there's the opposite of you have like 1B models, 350 million parameter language models that just get so small that they're just predicting like you know fishes moving.</p>
+</details>
+<p><strong>Speaker A</strong>: 我是说，小模型可不是 12B 这个量级的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I mean, small models are not 12b. So,</p>
+</details>
+<p><strong>Speaker B</strong>: 可以在设备端运行的超迷你模型［笑］。不过说真的，我认为这把整个事情的视角放得更清晰了。至少对我来说，像汽车那个案例所展示的应用潜力就非常明显。手工完成那一切的工作量是极其巨大的。固然，你一年可能只发布一款年款车型，但应用这种技术，免去了手动构建所有这些资产的繁重工作，本身就是一种巨大的成本节约。所以，它同样开启了无限的可能性。我很想知道，如果把视野延伸到未来两到三年，你认为技术还会向什么更远的方向演变？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Ultra mini on device, [laughter] but uh no, I think it puts it into perspective. At least the car one for me, like the applications, right? The amount of work to do that. Sure, you only make one model year car per year, but applying this, it's also a cost-saving to have to manually make all this, right? So, it opens up a lot of possibilities, too. I'm curious if you extend this out two, three years. So where do you see things going even further? You know,</p>
+</details>
+<h3>从僵化界面到神经操作系统与统一软件抽象</h3>
+<p><strong>Speaker A</strong>: 从根本上讲，像界面世界模型这类技术的终局，是实现一个完全由神经网络构建的操作系统（neural operating system）。我想 Andrej Karpathy 相当早之前就撰文阐述过这一点。</p>
+<p>在我看来，现在的情况其实有点耐人寻味。比如在当今与大语言模型（LLM）的交互中，我们拥有的模型几乎能够就任何话题与你畅谈。你可以将对话引向任何方向，模型本身非常通用，能解决各种五花八门的问题，但你却只能通过一个极其僵化、固定的界面与它交互。</p>
+<p>所以对我来说，界面本身变得可被模型学习，并成为整个交互闭环的一部分，只是一个时间问题。到那时，你交付的将不仅仅是一个孤立的组件，而是端到端地交付整个应用：这不仅意味着交付底层的语言模型，还包括动态交付画面的渲染和像素。渲染界面同样是一个可学习的模块，而“应用程序”现有的固有概念甚至可能不再必要。</p>
+<p>我觉得我们需要为软件探索出一套全新的抽象层。现有的“应用程序”概念，源于你需要不同的代码库来分别驱动每个独立的工具和具体的 App；但如果你拥有一个能随着交互进行而实时生成界面的视频模型，你就可以设想出一种高度统一的形态。它可以从 LLM 中获取上下文，并允许你将传统上散落在不同独立软件中的各项功能自由组合在一起。因此，这实际上是一种端到端解决软件形态的全新途径。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Effectively the end game of something like interface world models is you have a fully neural operating system. So I think Andrej Karpathy has written about that quite a while back. But it's, you know, I think to me it's a bit odd that, you know, we have for example with an interaction with an LM of today, you have this LM that can basically talk to you about anything. You can take the conversation any direction, it's very general so it can solve all those different tasks, but you interact with it through a very rigid interface.</p>
+<p>And so to me it's just a matter of time before the interface itself becomes learnable and becomes, you know, part of the whole loop of like you're not just delivering... you're delivering an application end-to-end and that means you're delivering the language model but you're also delivering the render and the pixels and then that's also a learnable component. And the concept of applications might not necessarily... I think we need to figure out new abstractions for software. The concept of application comes from this idea that you need, you know, separate kind of codebases to describe for to power each individual tool and each individual application, but you might think of something a lot more unified if you have a video model that's actually generating the interface as you go. So it can take context from an LLM and allow you to combine kind of different functionalities that traditional would live in different applications. So it's a way to solve software end-to-end effectively.</p>
+</details>
+<h3>作为计算机操作 Agent 与机器人的实时强化学习环境</h3>
+<p><strong>Speaker A</strong>: 此外，我们认为这也是训练“计算机操作 Agent（computer use agents）”极其强大的途径。总体而言，世界模型的发展有两个核心方向：一个是面向人类体验的世界模型，另一个则是专门用于训练 AI Agent 的世界模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: We also see this as a powerful way to train computer use agents as well. So this is, you know, one way to see this as and in general with world models there is those two directions. One is world models for humans and world models for to train agents.</p>
+</details>
+<p><strong>Speaker B</strong>: 这样一来，我们在世界模型上取得的每一项新进展，都让这两种应用场景成为可能。它既可以作为训练计算机操作模型的超强合成数据生成器，也可以演变为一个实时的强化学习环境，供计算机操作 Agent 在其中进行在线强化学习（online RL）。你可以实时生成极其丰富多样、千变万化的交互形式与界面类型，从而大幅提升 Agent 的泛化鲁棒性。这与我们正在为机器人领域研发的世界模型逻辑完全如出一辙。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: And so for every new work of world models that we do, both uses become possible. So this is a powerful synthetic data generator for training computer use models. It could become a live RL environment that you could use to do online RL with a computer use agent. And you can get wide diversity of different interactions, kinds of interfaces just generate on the fly to improve how robust your agent becomes. So that's the same also with the world models that we're working on for a robotics use case as well.</p>
+</details>
+<h3>长上下文一致性与自回归误差累积的挑战</h3>
+<p><strong>Speaker B</strong>: 那么，目前是否有某项你翘首以盼的研究突破，能够彻底解锁你迫切想要攻克的那批全新应用场景？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Is there a research breakthrough that you're waiting for that would unlock the next set of use cases that you really want to pursue?</p>
+</details>
+<p><strong>Speaker A</strong>: 长上下文（Long context）是一个至关重要的突破点。也就是在长时间跨度内保持逻辑与画面一致性的能力，当然这在很大程度上取决于具体的用例。例如，对于我们的数字人角色模型或界面世界模型，保持长时间的交互会相对容易一些；但如果置身于更加开放的大型世界，你在其中四处漫游并能采取任意不可预测的操作，那么能够稳定生成的上下文长度和持续时间就会极快地受到局限。我们会看到画质劣化与误差累积更加迅速地显现。</p>
+<p>自回归模型面临的最大挑战正是误差累积。它的机制本质上是将前面生成的帧作为输入重新喂回模型，以继续生成后续的画面。如果其中出现了任何微小的偏差或错误，它们就会随着时间的推移不断放大叠加。这并不是一个新问题，大语言模型同样存在这个痛点，而我们已经见证了现在的模型在生成极长文本输出上的突破。所以这是一个可以攻克的问题，但目前来看，它绝对仍然是一项巨大的挑战。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Long context is a very important one. So being able to maintain consistency for long periods of time and that depends on the use case. So for our characters model for example or for the interface world model it's easier to maintain long sessions of interaction. If you go into more open-ended worlds that you navigate and you take arbitrary actions in, like there is more the context at which you can and duration which you can generate becomes limited much more quickly. So we see more degradation and error accumulation happening.</p>
+<p>So the biggest challenge with autoregressive models is error accumulation is basically you're feeding generative frames back into the model to generate the next the next frames and if there is any small errors they accumulate over time. That's not a new problem. It's a problem that LLMs also have and we've seen the ability to generate now really really long outputs. So it's a solvable problem, but it's definitely still a challenge.</p>
+</details>
+<p><strong>Speaker B</strong>: 确实。那么当前的业界前沿（SOTA）水平究竟如何？以 Grok 为例，它的输入上下文大概在 10 到 20 秒视频的量级……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah. And what is the state of the art? Uh so for for Grok it would be like 10 to 20 seconds of context going in there for video.</p>
+</details>
+<p><strong>Speaker A</strong>: 借助我们的数字人角色模型，我们已经能够以自回归的方式生成长达 30 分钟的视频。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: With our characters models, we're able to generate up to 30 minutes of video autoregressively.</p>
+</details>
+<p><strong>Speaker B</strong>: 明白，那仅仅是针对虚拟形象（avatars）的场景。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah. That's just for the avatars.</p>
+</details>
+<p><strong>Speaker A</strong>: 没错。如果是像 GWM Worlds 这样更偏向开放式世界探索的模型，其稳定生成时长大约在几分钟的量级。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah. So, if we look at GWM Worlds, which is more our open-ended world exploration model, it's on the order of a few minutes.</p>
+</details>
+<p><strong>Speaker B</strong>: 这对于许多人来说其实可能已经足够了，毕竟你无论如何都是需要切换到下一个镜头的，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Which is, yeah. It's probably enough for people because you have to cut to the next scene anyway, right?</p>
+</details>
+<p><strong>Speaker A</strong>: 是的。但如果你每隔几分钟就必须被迫重启一次，那它显然还谈不上是一个理想的游戏体验。所以我认为……对于某些特定类型的交互体验，你完全可以通过工程手段绕过这个限制。但最理想的终极状态，是能够无休止地永远生成下去，而且画质与逻辑丝毫不发生劣化。我认为实现这一步也只是时间问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah. It's not the ideal game experience if you have to restart every few minutes. So, I think for certain kinds of experiences, you can work around it. Ideally you're able to just generate forever and it doesn't degrade, and I think that's a matter of time before we get there.</p>
+</details>
+<p><strong>Speaker B</strong>: 确实。比如 Genie 的时长上限基本上也就一分钟左右。另外，你们之前做过一项关于机器人学的研究，我想我手头正好有你们 Runway 机器人项目的展示页面。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah. Genie has like one max one minute, you know. Yeah. This was your... you did a study on robotics. I think I also have just your Runway robotics page though.</p>
+</details>
+<h3>从 Gen 4.5 到 GWM-1：世界模型在机器人与动作仿真中的应用</h3>
+<p><strong>Speaker A</strong>: 这边看清楚吗？去年我们发布了 Gen 4.5，那是我们最新一代的基础模型。正如我之前提到的，我们一直在世界模型领域深耕。我们构建世界模型的核心方法论，本质上就是如何将一个双向扩散模型（bidirectional diffusion model）转化为自回归架构，并使其能够接收动作指令（actions）。</p>
+<p>这样一来，它就不再只是一段供你被动观看的静态视频，而是演变为一个你可以真正踏入的交互式仿真环境（simulation），你可以在其演进的每一步进行实时控制。你能够自由探索各种反事实假设（counterfactuals）——例如，如果我采取这个动作会发生什么，而如果我采取另一个动作又会发生什么。</p>
+<p>而 GWM-1 正是我们基于 Gen 4.5 打造的世界模型。我们在 Gen 4.5 的基础之上完成了所有的自回归改造以及步进蒸馏（step distillation）工作。我们发现 GWM-1 最大的应用场景之一正是在机器人领域。我们常说的一句话是：随着我们不断扩大视频模型的规模，我们无意中……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Is this better? So last year we released Gen 4.5. So that was our latest base model and we've been, as I mentioned, we've been doing all this work in world models which essentially a lot of our approach to world models is how do you take a bidirectional diffusion model and make it autoregressive and make it accept actions.</p>
+<p>So instead of being a video you watch, it becomes a simulation that you step in and you can, you know, control it every step of the way. You can explore counterfactuals like what happens if I take this action versus if I take this action. And GWM-1 was the world model that we built on top of Gen 4.5. So we did all this autoregressive and step distillation on top of Gen 4.5. And one of the biggest use cases that we saw for GWM-1 was in robotics. One thing we like to say is, as we scaled video models, we accidentally...</p>
+</details>
+<!-- chunk 8/12 -->
+<h3>视频模型在机器人领域的应用与世界模型仿真器</h3>
+<p><strong>Speaker A</strong>：我们仅仅通过扩展视频模型，就构建出了面向机器人领域的前沿模型。大约在去年年中，我们注意到许多机器人实验室开始主动接触我们，希望将视频模型用于生成合成数据。他们希望我们对视频模型进行后训练（post-training），使其能够出色地适配机器人任务，从而用来生成大量环境与动作的变体。这是我们最初看到的用例。但随后我们越来越清楚地意识到，视频模型的价值绝不仅仅局限于为训练机器人策略生成合成数据，它们作为仿真器（simulators）同样具有极高的应用价值。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: We created a state-of-the-art model for robotics by just scaling video models. So we realized at some point mid last year that robotics labs started coming up to us and asking to use video models for synthetic data, asking us to post-train our video models to work really well for robotics so that they can use that to basically generate variations. That was the first use case that we saw, and then increasingly became clear that the models will be useful beyond just creating synthetic data to train robotic policies. They would also be very useful as simulators.</p>
+</details>
+<p><strong>Speaker A</strong>：这意味着你可以直接在线使用视频模型，来测试机器人动作模型的表现。你可以执行一个动作序列，在世界模型内部观察该动作产生的结果，然后持续这一循环，形成闭环仿真（closed-loop simulation）。你可以借此评估机器人模型的运行效果。我认为，如果你想构建一个仿真器，最关键要解决的难题就是建立与真实世界的高度相关性（real-world correlation）——即当你在世界模型中执行某项动作时，如果在真实物理世界中执行完全相同的动作，所获得的结果必须高度相似。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: So that means that you can use a video model online to test how your robotic action model performs. So you can take an action roll and then get the outcome of the action inside the world model, and then continue that loop like this closed-loop simulation, and you can use that to evaluate how well your robotics model works. And the biggest thing that I think you need to solve if you want to build a simulator is establishing real-world correlation: that if you take an action inside the world model, if you take the same action in the real world, you get a similar outcome.</p>
+</details>
+<p><strong>Speaker A</strong>：这也是我们今年早些时候所开展工作的一个核心目标。我们希望为我们的世界模型确立真实的“真实到仿真”（real-to-sim）相关性，确保在世界模型中执行一系列动作后，在真实世界中采取相同动作能够得到相近的反馈。我们采用了 GWM-1 模型，并结合了广泛使用的 RoboArena 基准测试数据集——该基准通常用于评估各类动作模型的表现。我们在世界模型中复现了完全相同的场景、设置与本体（embodiment），进而衡量动作模型在世界模型内部与在真实世界中的表现相关性。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: So that was a goal of some work that we did earlier this year. Essentially we wanted to establish that real-to-sim correlation for our world model, so that if you do a series of actions inside the world model and if you do the same actions in the real world, you get similar outcomes. And we took our GWM-1 model and we used some benchmark data—there's this RoboArena benchmark that's very commonly used to evaluate how well do different action models perform—and we used the same scenarios and settings and embodiment inside our world model.</p>
+</details>
+<p><strong>Speaker A</strong>：测试结果显示，我们的世界模型与真实物理世界之间具备非常优秀的对应与相关性。这意味着，如果你希望评估机器人策略的效果，完全可以在仿真环境中以远快于物理实体硬件的速度进行大规模扩展，而无需受制于实体硬件的操作瓶颈。这是首个证明我们的模型在机器人领域能够发挥巨大作用的明确信号。随着我们与各大机器人实验室展开合作，这自然而然地演变成了他们将视频模型融入现有训练流程的首选方案。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And we measured the correlation of how well did an action model perform inside a world model versus in the real world. And we saw that we could get very good correlation between our world model and reality. And that means that if you want to evaluate how well your robotic policies perform, you can scale that much faster inside simulation instead of having to do that with actual physical hardware. And so that was a first indication that our models could be quite useful in robotics. And we saw as we're working with robotics labs that that became like the first use case where they could use video models in a way that fit into their training pipeline.</p>
+</details>
+<h3>仿真到真实的鸿沟与世界模型的泛化优势</h3>
+<p><strong>Speaker B</strong>：请问从 4.5 到解决这一问题之间，核心区别究竟是什么？长期以来，从仿真到真实（Sim-to-Real）的差距一直是个顽疾，对吧？当你在视频数据上训练机器人模型时，它往往无法泛化到真实世界，而仿真系统本身也存在诸多限制。看起来你们已经攻克了这一点，你们具体是如何做到的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Can I ask what the difference was from 4.5 to solving that? So the sim to real gap has always been the issue, right? You train a robotics model on video data, it doesn't generalize to real world and the simulation had an issue. So, seems like you solved it. But how?</p>
+</details>
+<p><strong>Speaker A</strong>：传统的仿真器存在一个重大问题：如果你试图仿真刚体物体，且能够极其精确地描述物体的物理属性，那么它的效果确实相当不错。在那种情况下，你完全可以使用 Isaac Sim、MuJoCo 或其他传统物理仿真引擎。但是，面对更复杂的交互——比如与布料等柔性物体的接触，或者在湿滑表面上的操作，以及任何为了解决机械操作任务而需要克服的复杂物理特性时，传统方法就显得极其困难且耗时费力。针对每一种具体的环境与任务，你都必须重新为其构建数字化资产和仿真版本。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah. So, a big problem with simulators is, if you're trying to simulate rigid objects, it works quite well if you can describe the physics of objects very accurately. Then you're able to use Isaac Sim or MuJoCo or one of the traditional simulators. But for more complex interactions with cloth, for example, or slippery surfaces, with all the complexity that you want to be able to solve with an action model that solves manipulation tasks, it's very difficult and so time-consuming to build the simulated version, the digital domain of that environment, for each of those environments and each of those tasks.</p>
+</details>
+<p><strong>Speaker A</strong>：相比之下，借助世界模型，你只需要向它提供单张初始帧（first frame），就可以直接在这一帧图像所定义的场景中展开并执行控制策略。我们对比了现有方法，那些方法往往要求先对整个物理环境进行完整的三维扫描，再对场景中的每一个独立物体分别进行 3D 建模，然后才能将其导入仿真系统中。而在世界模型里，你只需要给真实环境拍一张照片，就能立刻测试策略在该场景下的具体表现。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Whereas with a world model, you just need to provide the first frame and then you just can roll out the policy inside the first frame. So whereas we compared it to methods that required 3D scanning an environment and then 3D scanning each individual object before you can bring that into simulation, with a world model you just take a picture of the environment and then you're able to test how your policy performs.</p>
+</details>
+<p><strong>Speaker A</strong>：我们在机器人领域的核心论点是这样的：当前有些公司依赖大量的遥操作（teleoperation）数据来训练机器人动作模型；也有些公司开始使用 UMI 数据，也就是人类佩戴类似机械夹爪的装置进行各种灵巧操作的人体第一人称视点视频；还有些团队专注于头戴式第一人称视角（egocentric）数据，例如在人头上绑一个 GoPro 运动相机来记录任务执行过程。我们认为，尽管这些都是训练机器人模型的优质数据源，但现实世界中最丰富、储量最庞大的视频数据，始终是第三人称视角的视频数据。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Our general thesis on robotics is: there are companies that are leveraging a lot of teleoperation data to train robotics action models. There are now companies that are using UMI data, which is essentially human egocentric video where humans use robotic grippers to perform different manipulation tasks. And then there's companies that are focusing on egocentric data, which is where you strap a GoPro on someone's head and capture them performing a task. We think that all those are great sources of data for training robotics models, but the most plentiful source of video data is third-person video data.</p>
+</details>
+<p><strong>Speaker A</strong>：人类自身是如何学习完成各项任务的？很大程度上，我们是通过观察他人的行动来学习的。我们并不是仅靠第一人称视角来获得一切技能。尽管我们也会通过试错和动手实践来掌握新技能，但归根结底，我们在世界上学会的大部分事情，都是通过看别人怎么做而习得的。当你对视频模型进行预训练时，本质上正是在复制这一过程。预训练数据中包含了海量的第三人称真实视频，记录了人们在真实世界中执行的各种动作、各项运动以及日常家务琐事。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And how do we as humans learn how to perform different tasks? A lot of it is by observing others perform those tasks. We don't learn only from first-person. We obviously do some trial and error to learn different things, but ultimately a lot of what we learn how to do in the world, we learn by watching other people do it. And that's how when you're pre-training a video model, you're essentially doing that. It's a lot of third-person video footage of people performing different tasks in the world, people doing sports, people doing household tasks.</p>
+</details>
+<p><strong>Speaker A</strong>：因此，我们的核心观点是：一旦完成了大规模视频预训练，你就可以在此基础上，仅仅依靠极少数小时的实际机器人数据，将模型迅速适配到具体的机器人应用场景中。这样你就大幅减少了对难以规模化扩展的遥操作数据的依赖。即使是相较于依赖实体硬件的遥操作更容易规模化的第一人称数据，其现存量级仍然比互联网上公开的第三人称视频数据少了整整三个数量级。我们坚信，最丰富的数据源最终必然胜出，而以海量第三人称视频进行预训练，正是构建能够泛化并应对未见环境、全新任务模型的最佳起点。这也正是我们认为我们的模型在机器人领域具备独特价值的根源所在，而实际结果也充分印证了这一点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And our main thesis is that video pre-training—once you do that, you can then adapt a model to be useful in robotics use cases with way fewer hours of actual robotic data. So you require way less teleoperation data, which is very difficult to scale. And even if you look at egocentric data, which is a bit more easy to scale compared to teleoperation data which requires actual hardware, it is still three orders of magnitude less than what exists in the world compared to third-person video data out there. And so our thesis is—and generally the most plentiful source of data will ultimately win—third-person video data pre-training is the right starting point for models that you want to generalize and be able to deal with new environments, new tasks, things that you haven't seen during training. That's the motivation for why we think our models are especially useful in robotics settings, and we've seen that to be the case as well.</p>
+</details>
+<h3>从第三人称预训练到机器人后训练微调</h3>
+<p><strong>Speaker B</strong>：你提到了预训练。所以这相当于形成了一种“第三人称视角进行基础预训练，再通过第一人称数据做监督微调（SFT）”的渐进式课程体系，对吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: You said pre-training. So maybe it's like third-person pre-training, first-person SFT. Is that like a curriculum that you can sort of introduce?</p>
+</details>
+<p><strong>Speaker A</strong>：完全正确。从 GWM 世界模型与 GWM 机器人的架构来看，GWM Robotics 正是以 Gen 4.5 作为起点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Exactly. So if we look at GWM worlds, GWM Robotics—so GWM Robotics starts from Gen 4.5.</p>
+</details>
+<p><strong>Speaker B</strong>：它底层使用的是完全相同的视频扩散主干网络（video diffusion backbone），对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: It's the same video diffusion backbone, right?</p>
+</details>
+<p><strong>Speaker A</strong>：没错。你直接从基础视频模型出发——也就是用来生成猫猫狗狗以及各种有趣视觉内容的基础模型，然后只在非常少量的机器人实际数据上进行微调。这个数据量级通常仅在几百小时左右；相比之下，如果从头预训练一个专属的机器人模型，当前的预训练通常需要几十万乃至数百万小时的数据规模。而通过微调，你能够极为迅速地获得优异的表现，因为该模型直接继承了在预训练阶段所积累的关于物理规律、真实世界常识、人体动力学以及人类日常关心的各项任务的理解。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Exactly, yeah. So you start from the base video model—the one you're using to generate cats and dogs and other interesting stuff—and then you fine-tune on a very small number of hours of robotic data. So it's something on the order of kind of hundreds of hours, compared to if you were to pre-train a robotics model, where current pre-trainings go up to hundred thousands or millions of hours of data. And you're able to get quite good performance quickly, because the model leverages all the things that it has learned about the world and physics and human dynamics and the tasks that people care about from pre-training.</p>
+</details>
+<p><strong>Speaker A</strong>：归根结底，你追求的是模型的泛化能力，绝不希望它只能机械地复现训练集里出现过的特定任务。而大规模视频预训练数据集所蕴含的动作丰富度与环境多样性，远远超越了通过人工采集所能覆盖的极限。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And ultimately, you want those models to generalize. You don't want to just be able to perform the task that has been seen during training. And the diversity of actions and environments that you have with a pre-training video dataset is much larger than what you can realistically capture manually.</p>
+</details>
+<h3>针对特定本体的后训练与通用世界模型前景</h3>
+<p><strong>Speaker B</strong>：那么后训练阶段的算力规模大致是怎样的？你们的算力分配是否仍然保持大约 90% 集中在常规视频扩散模型上，然后再大幅扩展？此外，你们是倾向于为不同任务分别构建不同的机器人模型，还是致力于让一个真正顶尖的基础世界模型直接通用于所有机器人场景？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: How's the scale looking like for the post-training? Like do you still want to do roughly 90% of the compute in regular video diffusion model and then scale up a lot? Or is it like we want different robotic models for different tasks, or just the one base really good world model can also apply to robotics?</p>
+</details>
+<p><strong>Speaker A</strong>：在当前阶段，我们正在针对特定合作伙伴所采用的具体物理本体（embodiment）对模型进行后训练。例如，如果他们使用的是特定型号的单臂机器人、双臂协调机器人（bimanual robot）或是特定形态的具身系统，我们就会在他们专属的数据集上对 GWM 机器人模型进行有针对性的后训练。但从长远来看，我们预计 GWM 的各个分支变体最终会走向统一。我预计在一年或两年之后，将会出现一个单一通用的世界模型，它能够覆盖并支持多样的机器人形态与任务。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: So currently, we are post-training our models for specific embodiments for particular partners. So if they have a particular kind of single-arm robot or bimanual robot or humanoid robot, we would post-train our GWM robotics model on their particular dataset. Over time we see the different variants of GWM unifying, like I would expect, you know, a year from now or two years from now, you have a single world model that can...</p>
+</details>
+<!-- chunk 9/12 -->
+<h3>世界动作模型与具身智能</h3>
+<p><strong>Speaker A</strong>: 它不仅能够模拟操作任务，还可以模拟导航——目前市面上很多游戏世界模型本质上就是导航类世界模型，你在虚拟空间中自由走动，同时它还会模拟人类的各种行为，也就是角色模型。所以，与其分别维护三个不同用途的模型，你现在拥有的是一个单一模型。在理想情况下，这个模型能够完整模拟置身于真实世界中的体验：你在环境中四处走动，执行各种不同的操作任务，甚至与其他个体交谈互动。所有这些体验，都由同一个能够实时生成画面的单一视频模型来驱动呈现。</p>
+<p>你认为这种技术能够解决自动驾驶问题吗？打个比方，如果你是在模拟器中学习开车，并且拥有一个世界模型，而你的机器人基本上——你知道的，一辆汽车能操控的轴向其实也就那么多。你们距离实现这样的应用还有多远？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: ...can simulate manipulation task. It can simulate navigation which is a lot of the gaming world models are navigational world models you're moving around the space and it will also simulate kind of human behavior. So that's the character models. So instead of having three different models you have a single model that's able to you know ideally you're able to simulate what it's like to be in the world. You're moving around an environment. You're maybe performing different tasks, you're talking to other people and that happens with the same a single kind of real-time video model that's generating that.</p>
+<p>Do you think you can solve self-driving? So if you are learning to drive a car in a simulator, you have a world model, your robot is basically, you know, car can manipulate so many axes. How far off are you from something like that?</p>
+</details>
+<p><strong>Speaker B</strong>: 也就是打造一个顶级的ADAS（高级辅助驾驶）系统。世界模型目前确实正在被应用到自动驾驶的前沿研究中，不过当下主要还是集中在模型评估这类使用场景上。而我们团队的核心重心则更加偏向机器人机械臂的操作任务（robotic manipulation）。当然，我们在自动驾驶领域的世界模型上也做过一些探索工作。</p>
+<p>但总体而言，我们坚信世界模型和视频生成模型是最好的技术切入点，它们不仅非常适合用作物理仿真模拟器，也是构建策略模型（policy）和动作模型（action models）的最优基石。这就是硬币的另一面：一旦你拥有了一个强大的通用世界模型，你只需在上方接入一个动作预测头（action head），它就同样能够直接预测出动作。</p>
+<p>你可以这样来理解：假设你截取一段机械臂操作场景的起始第一帧画面，然后向模型输入提示词，让它生成机械臂伸手抓取物体的视频。只要它生成的视频在物理细节上足够精确逼真，那么它理论上也就必然能够推导出机械臂在真实三维空间中完成该动作所需要采取的精确位姿序列。</p>
+<p>这正是当前业界非常热门的一个发展方向，大家普遍称之为“世界动作模型”（World Action Models）。其核心逻辑在于：以视频模型为基础底座，在其上增加动作输出头来预测运动指令，从而使模型本身直接转变为一个具身控制策略。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: So a really good ADAS system. World models are definitely being applied to self-driving research right now mainly for evaluation use cases but our focus has been more on robotic manipulation. We've done some work on AV world models as well. But yeah, we do think that world models and video models are the best starting point for both simulators and also policy and the action models.</p>
+<p>So that's the other side to this is that once you have a great world model then you can just add an action head and it can predict actions as well. One way to think about it is if you take the starting frame of a scene with a robotic arm and you ask, you know, you prompt the model, generate the arm picking up an object, and if it generates an accurate enough video, then it should also be able to generate the exact poses in 3D that the arm should take to perform the same action. So this is the direction that's now the popular term for it is world action models which is you're starting from a video model and then you're adding an action head to predict the actions and it becomes a policy essentially.</p>
+</details>
+<h3>数据规模与世界模型的“清醒梦图灵测试”</h3>
+<p><strong>Speaker A</strong>: 另外让我非常震撼的一点是，训练这类前沿模型到底需要消耗多少数据。你可能无法透露具体的精确数字，但就我所了解到的情况而言，包括早期的扩散模型，甚至是目前国内的一些开源视频模型，其实并没有大家想象中需要那么庞大的数据量。这种现象难道不令人感到意外吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: One thing I'm also impressed by is how much data you actually need to train these kinds of models. You probably can't say exactly how much but like you know like the original diffusion models and from what I know even of the open source Chinese models is not that much data isn't it surprising?</p>
+</details>
+<p><strong>Speaker B</strong>: 你所说的“海量数据”具体是怎么定义的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: What do you define as much data?</p>
+</details>
+<p><strong>Speaker A</strong>: 呃，就是投喂进去的体量。在视频模型领域，Token数量这个指标现在还适用吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Um yeah, it just goes in. Is the token count still relevant?</p>
+</details>
+<p><strong>Speaker B</strong>: 实际情况要比这复杂得多……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: So it's a bit more complicated and...</p>
+</details>
+<p><strong>Speaker A</strong>: 我是指，单纯按吉字节（GB）来算？［笑］</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: What is I mean just gigabytes, right? [laughter]</p>
+</details>
+<p><strong>Speaker B</strong>: 主要是按视频总时长（小时数）来统计。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah. Hours of video.</p>
+</details>
+<p><strong>Speaker A</strong>: 没错。我觉得非常有趣的一点在于，在语言模型中，我们可以称之为“Token与模型参数量的比例”，可能比视频模型走在前面两三年，或者说要高得多。尽管从纯信息论的理论角度来看，视频每比特所蕴含的信息量明显要丰富得多。我不知道这在直觉上是否说得通，也许是因为相邻像素之间的差异性和变化度其实并没有那么大？也就是说，视觉画面内部本身存在着极高的信息冗余和重复。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah. Yeah. I feel like something that's interesting is it seems like the let's call it tokens to param counts in language models has really you know maybe they're three years ahead or whatever seems to be a lot higher than video models still even though technically video has more information you know per per bit. I don't know if it seems intuitive or maybe there's just a lot of like the the variability between a pixel to the next pixel is not that high. So like maybe there's just a lot of information that is repeated.</p>
+</details>
+<p><strong>Speaker B</strong>: 我的看法是，整个领域目前依然处于非常早期的初级阶段。［笑］视频模型的训练规模未来还会进一步大幅扩展，远远超越现有的体量，届时模型所具备的能力也将远远突破当今模型的边界。</p>
+<p>我喜欢用一个思维实验来打比方，它就像是视频模型或世界模型的“图灵测试”，我称之为“清醒梦测试”（Lucid Dream Test）。想象一下……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: My answer would be it's still very early like [laughter] the training video models will scale way further than it currently is and you'll have capabilities that go much further than the current models can do.</p>
+<p>So one thought experiment that I like to use it's almost like the Turing test of video models or like the Turing test of world models. I call it the lucid dream test is you have a...</p>
+</details>
+<p><strong>Speaker A</strong>: 你是指人类真实体验到的那种“清醒梦”吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: You mean like the actual person lucid dream?</p>
+</details>
+<p><strong>Speaker B</strong>: 这个概念确实源于清醒梦。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: It comes from lucid dreams, right?</p>
+</details>
+<p><strong>Speaker A</strong>: 清醒梦是指你在梦境中明确意识到自己正在做梦……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Lucid dreams is telling you're dreaming while you're in a...</p>
+</details>
+<p><strong>Speaker B</strong>: 没错，正是如此。所谓的清醒梦，就是当你意识到自己身处梦境之中时，你基本上就能够随心所欲地控制梦境中发生的一切……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah, exactly. So lucid dreaming is when you realize you're inside a dream and then you basically be able to control what happens in...</p>
+</details>
+<p><strong>Speaker A</strong>: 不光是这个，开源社区里之前好像也有一个专门搞模型推理优化和量化的开发者网名叫“Lucid Dreams”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: No, there was also an inference guy called lucid dreams. Yeah. Quantization...</p>
+</details>
+<p><strong>Speaker B</strong>: 对，那是一位非常高产的大神。</p>
+<p>回到这个测试：假设你戴上一台VR头显，站在一个房间里。现在的绝大多数VR设备都配备了视频透视模式（Pass-Through Mode），透过摄像头，你可以直接看到眼前真实的物理世界；当然，头显也完全有能力在内部实时渲染出纯虚拟的生成画面。</p>
+<p>未来必将迎来这样一个转折点：那些可交互的实时视频生成模型变得极其逼真强大，以至于你戴着头显在同一个房间里走动、观察，并与周围的物体发生各种交互。你可以在房间内自由移动，随手触碰或摆弄任意一件物体。</p>
+<p>而在整个测试结束后，如果有人问你：“刚才你看到的究竟是透视模式下的真实世界，还是纯粹由AI实时计算并渲染生成的画面？”如果你完全无法确定自己刚才在漫游和交互时所看到的一切到底是算法生成的虚构场景，还是头显透视出来的眼前现实——一旦达到了这种以假乱真的地步，那就标志着世界模型已经真正走向成熟与完善。</p>
+<p>客观地说，我们现在离那一步还差得非常远。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: ...very prolific person. Yeah. So, let's say you have a VR headset and you're in a room with and you're wearing a VR headset and that VR headset, you know, most of today's VR headsets have a pass through mode so you can see directly what's in front of you in the world or you can obviously render kind of something inside the VR headset.</p>
+<p>And there's going to be a point where those interactive real-time video models become good enough where you wear the headset and you're in the same room and you're walking around and you're interacting with objects. You're able to kind of move freely in that room and do and interact with any object. And then at the end someone asks you did you were you using pastry mode or were you actually or was this rendered or generated footage? And if you cannot tell for sure if that was what you were seeing as you were interacting with and moving around the world was generated or it was kind of pass through mode and was just what was happening in front of you. That's an indication that the models have become good enough. And we're not close to that yet.</p>
+</details>
+<h3>反事实推演与机器人失败模拟</h3>
+<p><strong>Speaker B</strong>: 达到这一目标的很大一部分难点，恰恰在于如何真正模拟物理环境的动态规律以及进行反事实推演（counterfactuals）。</p>
+<p>举个具体的例子：如果你要求一个普通的视频生成模型去生成一段“一个人把球踢进球门”的画面，对比另一段“一个人射门没进”的画面，模型在生成进球得分方面往往会表现得好得多。这是因为训练数据的分布本身就存在极大的偏置（bias）——在互联网视频数据中，绝大多数被上传和保留的镜头都是球员成功破门得分的高光时刻。</p>
+<p>但是，对于一个真正的交互式世界模型来说，它必须具备精准生成反事实情境的能力。比如：“如果我采取了A动作，对比如果我采取了B动作”，无论何种选择，模型都必须能够生成同样符合物理现实的对应结果反馈。</p>
+<p>我认为这正是普通视频生成模型与真正的世界模型之间最核心的鸿沟所在：那就是生成严谨反事实推演的能力。如果你希望将模型应用到机器人领域，你就必须让它能够极其精准逼真地模拟“失败”。因为无论你是将其用作离线评估环境，还是未来将其置于在线强化学习（RL）的闭环中，你都必须让智能体能够在模拟器中不断尝试、经历失败，并从错误中反思改进。</p>
+<p>为了实现这一目标，系统必须能够模拟出各种各样的失败模态。机器人具身智能可以说是目前唯一一个“成功样本泛滥，而失败样本严重匮乏”的特殊技术领域。［笑］</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: And a lot of it is just this idea of really simulating dynamics and counterfactuals. Well, like you know, if you ask a video model to generate a person scoring a goal versus a person failing to score a goal, it would do a better job at scoring the goal because there is a bias from the training distribution. There's a lot more videos of the person succeeding at scoring the goal.</p>
+<p>But if you have an interactive model, you wanted to be able to generate counterfactuals like if I take this action versus this action, you wanted to generate equally realistic outcomes. So that's I think the big gap between video models and and and world models is that idea of the counterfactual generation.</p>
+<p>And if you want a great model for robotics, you want to simulate failure very well cuz whether you're using it for evaluation or you're using it as a in an online RL loop in the future, you want to be able to have the model kind of try and fail to do things and and improve. And so in order to do that, you need to be able to simulate things failing. This is the only domain where you have too many successful examples and not enough bad examples. [laughter]</p>
+</details>
+<p><strong>Speaker A</strong>: 按理说，生成失败的场景应该更容易才对啊。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: It should be easy to generate failure.</p>
+</details>
+<p><strong>Speaker B</strong>: 奇怪的是，早期的图像和视频生成模型其实并不擅长还原真实的人类生活细节，对吧？你在网上经常能看到大量高清4K级别、如同专业摄影师掌镜的大片质感图像，但却很少能生成那种充满烟火气、普普通通的日常生活抓拍。每一张图看起来都极具商业级摄影范儿，但唯独缺乏现实中随处可见的杂乱感，比如凌乱地散落在办公桌上的各种数据线。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Oddly enough, I think like early image video models weren't good at being human realistic, right? Like you see a lot of the high-res 4K like professional photography, but not just everyday life like normal picture, right? everything looks like it's professionally generated like professional pictures but not just like normal like you know messy cables on a desk.</p>
+</details>
+<h3>自回归与扩散架构的融合：视频智能体与外层框架</h3>
+<p><strong>Speaker A</strong>: 确实如此。我们之前还探讨过你们团队近期发布的视频智能体（Video Agents）。我很想了解，传统的所谓前沿自回归大语言模型（LLM）是如何介入并串联到这套技术体系中的？是由它们来直接指挥驱动底层的机器人模型，还是驱动你们在视频智能体制作管线中的各个环节？在自回归与扩散模型的交叉结合点上，你们是如何布局和看待的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Okay. So there's there's this stuff you know one thing we also covered that you guys have video agents that you launched I guess how does the traditional let's call it frontier like you know auto regressive LMS like feed in you know to to all this they're driving your robotics models or they're driving other your video agent production anything where you you see the overlap of auto regressive and diffusion let's call it?</p>
+</details>
+<p><strong>Speaker B</strong>: 在这所有不同的落地场景中，外层支撑架构（Harness / 脚手架工程）都起到了至关重要的枢纽作用。</p>
+<p>以我们发布的视频智能体为例，其本质上是一个具备极强工具调用能力的LLM。它能够熟练调用各种不同的图像生成模型和视频生成模型，从而辅助用户从零到一完整完成一个端到端的项目开发。在传统的广告制作工作流中，你通常需要先从一份需求简报（brief）出发，接着绘制故事板分镜，然后再逐个生成具体的视频镜头。Runway的视频智能体正是全程协助用户打通这一复杂的创作流程；此外，它还能深度介入并分析投放数据——比如对比测试A广告与B广告的转化效果优劣，并基于这些数据复盘结论，自动推演并决定下一步应该继续生成什么样的创意素材。</p>
+<p>我们坚信，外层框架是整套工程管线中不可或缺的核心拼图。正如我刚才提到的，目前市面上所有用于工业生产环境的视频生成模型，在底层都会经历某种形式的提示词补全或重写增强（prompt completion）。我们预计这种协同机制会演进得越来越复杂、越来越精细化：在正式交由扩散Transformer（Diffusion Transformer）处理之前，上游系统会先生成篇幅更长、描述更详尽的控制文本。</p>
+<p>而在更长远的技术路线上，我认为整个行业正日益呈现出向全模态模型（Omni Models）深度统一的大趋势——即直接采用端到端的训练方式，让同一个大模型能够同时原生支持自回归文本预测以及底层的扩散生成任务……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah so harnesses are really important across all those different use cases. So we have this video agent which is essentially an LLM that is very effective a tool use of different image models, video models and kind of helps you through creating a a project end to end. So you know very often in like a traditional kind of advertising flow you have a brief you start from and then you generate a storyboard and then you generate the video. A video agent and runway agent kind of helps you through that whole process and it helps you also analyze performance data. For example, how well did this ad perform versus this ad and then generate me more of the based on those learnings figure out what what what to generate.</p>
+<p>We think that the harness is a very important piece of the the pipeline. As I mentioned all the video production all the production video models use some prompt completion that happens and we expect you know that to become more and more complex and more you know you generate longer and more detailed descriptions before you use the the diffusion transformer. I do think eventually you know there's increasingly this unification into omni models where you have the you're training the models end to end to both do auto regressive text prediction and also diffusion...</p>
+</details>
+<!-- chunk 10/12 -->
+<h3>从脚手架到端到端：多镜头视频生成的演进</h3>
+<p><strong>Host</strong>: 同样如此。所以你在预测下一个 token，就像你可能在对场景进行一些推理和规划，然后把它输入到扩散头中，由它来实际生成像素。是的，我认为目前可能只有 Gemini 和通义千问（Qwen）能做到这一点。我不确定哪一个中国模型是全模态（omni）的，但确实，这并不是一种非常普及的模态。如果仔细思考，我认为这是一个非常有趣的用例，对吧？因为你不仅不需要停在语言模型推理、扩散头生成这一步就输出结果，你还可以回到原点，把那个输出反馈给同一个模型，让它再次对改进点进行推理。它自身就能完成大量的循环迭代。我想核心问题在于，我们真的需要这样做吗？还是说我们可以直接使用智能体脚手架（agent scaffold），也就是在模型外部完成这些？将这些能力内化到模型内部真的有很大的优势吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: as well. So you're predicting the next token of like you do maybe doing some reasoning and planning of the scene and then you're passing it into the diffusion head that's actually generating generating the pixels. Yeah, I think currently maybe only Gemini and Qwen do it. I'm not sure which of the Chinese models are omni, but yeah, it's not a very popularized modality. I guess it's an interesting use case when you think about it, right? Because not only do you have to end at like language model reason diffusion head generate, you don't have to output there, you can go back into feed that output to the same model, reason again on improvements, and it can do a lot of loops just in its own. I guess the question is like, do we need that or can we just do agent scaffold like do it outside the model? Is there a big benefit to doing it in?</p>
+</details>
+<p><strong>Runway Guest</strong>: 我认为总体上存在这样一种趋势：某项能力最开始是由外部治理框架（harness）来完成的，随后它就会变成模型本身的一部分。例如之前的思维链提示（chain of thought prompting），你必须编写超级详尽的系统提示词来引导输出；而现在，模型在给出最终答案之前，基本上自己就会自主生成推理轨迹（reasoning trace）。在视频模型领域也是类似的情况，早期很多视频模型都是单镜头（singleshot）模型，你必须依赖某种外部编排器（orchestrators），比如并行生成多个分镜头，然后再把它们拼接转换成一部真正的视频。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Runway Guest</strong>: I think there's generally the trend of something is first done by a harness and then it becomes part of the model, right? So you had chain of thought prompting where you have to do this super detailed system prompts to get back, and now the model basically generates the reasoning trace by itself before it gives you an answer. And in video models, similarly, a lot of the video models of kind of the early days were singleshot video models and you had to use some kind of orchestrators, you know, generate multiple shots in parallel and then turn it into an actual video.</p>
+</details>
+<p><strong>Host</strong>: 就像到处都是 ComfyUI 那种复杂的“意大利面”工作流一样（笑）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: comfy UI just all over the, you know, spaghetti workflow. [laughter]</p>
+</details>
+<p><strong>Runway Guest</strong>: 没错。而现在有了多镜头视频生成技术，你可以直接生成多个镜头。这样做是有显著好处的，因为视频模型由此学会了更深层的东西——生成单个镜头显然需要理解并摸清现实世界的许多物理与视觉规律，而要生成连贯的多镜头视频，模型基本上还需要具备某种视频剪辑的直觉。比如，你需要搞清楚镜头之间怎样切换才是恰当的节奏。同时，语言模型（LM）目前并不擅长这个，它们算不上优秀的视频剪辑师。如果你让一个语言模型拿来几段视频，然后自动将它们剪辑成一部成品视频，成片看起来会让人感觉很不自然（uncanny）。所以我认为语言模型目前还不能真正胜任视频剪辑师的角色，而通过端到端的方式去学习这种能力是极具价值的。因此，我预计整个技术发展的演进路径通常是：那些原本需要外部脚手架去维持的逻辑，最终都会被逐步注入到模型内部，从而通过端到端的方式直接习得。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Runway Guest</strong>: Um, and now you have multi-shot video generation where you directly generate multiple shots, and there is a benefit to that because then the video model learns some, you know, to generate a single shot well you need obviously to figure out a lot of stuff about the world. Uh to generate multi-shot video, well, you also need to basically get some like video editing instincts, like you need to figure out what is the right pacing of shots, and also LMs are not that good at it. Like they're not that great video editors. If you ask a LM to take some videos and then kind of auto create a edited video out of that, uh it would it would feel uncanny. So, I don't think LMs are actually that good yet at being video editors. And I think there's benefit to learning that end to end. Um so I would expect you know the trend in general is the things that you know you need a harness for eventually get kind of injected into the into the model itself and you learn that end to end.</p>
+</details>
+<h3>纽约特质与跨界融合：艺术审美与世界模型的工程落地</h3>
+<p><strong>Host</strong>: 那么在招聘方面，你们是否需要去寻找那些既是工程师或研究员、同时又具备艺术家特质的人才，来把那种艺术品味融入模型？还是说你们设立了驻留艺术家（artists in residence）机制来负责提炼和传授这些品味？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Do you find that you need to hire engineers who can or researchers who are also artists to infuse that taste or do you have kind of artists and residents to distill them?</p>
+</details>
+<p><strong>Runway Guest</strong>: 我们有一支规模相当庞大的创意团队，他们非常深入地参与到了模型训练的全过程之中，可以说是全程无处不在。比如：如何对视频进行高质量的标注描述（caption），从而以尽可能详尽的方式捕捉到你在电影摄影（cinematography）、美学风格和镜头调度方向所需要的一切细节元素，以便在推理阶段能够真正通过模型激发出这些效果。而且，我们的创意团队还会开展大量的评测工作，去界定究竟怎样的视频才算得上是从这些模型中产出的可用视频。因此，他们深度参与到了研发流程的每一个环节。我认为这正是 Runway 最独特的地方之一：创意从业者与算法研究人员真正坐在一起并肩作战、紧密协作，共同打造我们下一代的基础模型。这对于我们作为一家公司的运作模式而言，一直是非常非常关键的核心环节。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Runway Guest</strong>: We have a large creative team that's very actively involved in training those models, like in every part of the way. And like how do you caption video well so that you capture the stuff that you need for like the cinematography, the aesthetics, the camera direction in as detailed ways as possible so that you're able at inference time to actually uh elicit that through the model. You know, our creative team also does a lot of evaluation of like, you know, what constitutes a usable video out of those models. And so they're very involved kind of through every part of the the process. And I think that's one of the special things of Runway is just that that mix between like kind of creatives and researchers kind of sitting by side by side and kind of working together to build the next generation of our models. I think that's been really really important piece to to, you know, how we've operated as a company.</p>
+</details>
+<p><strong>Host</strong>: 是的。从某种意义上来说，这种事情似乎只能在纽约发生。我的意思是，虽然你们也有其他办公室，但我总想从你们是一家根植于纽约的大公司这个事实中，寻找某种诗意层面的象征意义。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. In some senses you can only do this in New York. I mean you have other offices, but like you know I'm trying to find some poetic significance in the fact that you are a big New York company.</p>
+</details>
+<p><strong>Runway Guest</strong>: 身处纽约确实带来了几方面的特质。显而易见的一点是，这里汇聚了所有不同行业的交集，比如媒体业、广告业——这里充斥着密集的广告业务与艺术生态，这就是纽约的独特之处。我并不是在说旧金山有什么不好，但纽约确实有着更加丰富多元的生态。这是其中一个因素。另一个因素在于，我认为我们受益于处于“局外人（outsiders）”的视角，能够以稍微不同的方式去思考问题，而不是身陷湾区关于超智能（ASI）的那种集体思维（hive mind）当中。同时，这也让我们能够沉下心来投入时间，脚踏实地走到今天的阶段——深思熟虑地打造和扩充团队，汇聚来自创意领域和工程研究领域的优秀人才。纽约显然拥有规模庞大且令人惊叹的人才库，所以招募人才对我们来说从来不是问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Runway Guest</strong>: There's a few parts to being New York. Obviously there is that intersection of all those different industries and like media, kind of advertising, like this is very advertising, the like the art scene is New York. Not to say anything bad about the San Francisco, but it's there's more more going on. There is that component. There's also I think we benefit from being outsiders and thinking of things a bit differently, like not being in the same like hive mind of ASI of Bay Area, and also taking our time to, you know, get we are where we are today, like building growing the team intentionally and bringing people who, yeah, both on the creative side and also on the engineering research side. There's obviously huge talent pool of amazing people in New York, so that hasn't really been been a problem.</p>
+</details>
+<h3>人才布局与 Cosmos 开源联盟：物理 AI 与世界模型的开放生态</h3>
+<p><strong>Host</strong>: 衷心祝贺你们取得的所有成就。那么你们目前主要在招聘哪些岗位呢？大家对 Runway 未来的发展应该抱有怎样的期待？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I mean, congrats on everything. Uh what are you hiring for? You know, what should people look forward to uh for the future of Runway?</p>
+</details>
+<p><strong>Runway Guest</strong>: 我们正在全方位招贤纳士。我想这可能是 Runway 历史上开放职位最多的一段时期。我们正在大幅扩充研究团队的规模。因此，如果你对视频模型充满热情，如果你对世界模型（world models）感到兴奋，尤其是对具身机器人（robotics）方向充满向往，我们正在为机器人团队招募横跨软件、硬件以及算法研究等多个维度的复合人才。所以，非常欢迎大家积极联系我们。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Runway Guest</strong>: We're hiring across the board. I think this is probably the most open roles we ever had in the history of Runway. We're growing our research team quite significantly. So, if you're if you're excited about video models, if you're excited about world models, if you're excited especially about robotics, the robotics team, we're hiring also robotics across kind of software, hardware, and research. So, definitely definitely reach out.</p>
+</details>
+<p><strong>Host</strong>: 许多人其实并没有直接的机器人学背景，但如果他们希望在机器人研发中派上用场，通常应该具备哪些知识储备呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: and and you know, a lot of people don't have direct robotics background, but what should they have, you know, if they want to be useful in robotics?</p>
+</details>
+<p><strong>Runway Guest</strong>: 理想情况下，具备强化学习策略或习得策略（learned policies）的相关经验对于从事机器人技术是非常有帮助的。但就我们的招聘哲学而言，我们倾向于寻找通才（generalists），也就是那些能够非常迅速学习新知识的人。当然，如果具备一定的机器人领域知识和行业实践经验，那绝对是我们未来几个月里非常渴望吸收的背景。此外，我们也在大幅扩充市场推广与商业化团队（go-to-market team）。目前企业界对视频模型的采纳和需求非常活跃，我们正在全力以赴响应这些强劲的市场需求。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Runway Guest</strong>: So ideally some experience with learned policies uh would be else uh good for for robotics. Uh but we we tend to hire generalists as a as a philosophy and like people who learn really really quickly. Uh but some experience and and kind of domain expertise in robotics is something that we're we're definitely looking for uh for the for the next months. Um and then we're scaling the the go to market team significantly. There is a wide like very very active enterprise adoption happening around video models at the moment and uh we're we're really trying to uh respond to all the demand.</p>
+</details>
+<p><strong>Host</strong>: 很好。你想聊聊开源机器人方面的进展吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, great. You want to talk about the uh open source robotic stuff?</p>
+</details>
+<p><strong>Runway Guest</strong>: 当然可以，这刚好是我们之前随手记录的一项笔记（笑）。英伟达推出了 Cosmos，我觉得这非常耐人寻味。你们作为创始成员与其他 AI 实验室联合起来，致力于在物理 AI（physical AI）领域构建开源的世界模型。这方面有什么值得展开谈谈的开放研究吗？</p>
+<p>最核心的一点在于，正如我之前提到的，世界模型目前依然处于非常早期的阶段。我们完全可以把这些模型的规模进一步推高、进行更大维度的扩展（scale），未来还有太多太多的技术突破等待我们去攻克，有大量的未知探索关乎如何进一步完善这些模型。我认为，至关重要的一点是，必须让其中一部分前沿研究以开放的形式展开；我们需要探索出有效的激励机制，让不同的公司能够携手合作，真正把一部分关键研究成果引入到公开可访问的开源生态中。因此，Cosmos 联盟（Cosmos Coalition）就是我们与英伟达共同发起的一项倡议，旨在将这些研究的一部分以开源方式呈现——这可能意味着发布开放权重的模型（openweight models），可能意味着推出用于评估物理规律以及各项世界模型核心指标的基准测试集（benchmarks），也可能意味着构建底层的开源基础设施。其核心宗旨在于：我们如何共同培育世界模型的生态圈，让刚刚起步、对世界模型充满激情的开发者和年轻研究人员，能够更轻松地参与进来并为整个领域做出贡献。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Runway Guest</strong>: Sure. It was just random notes we had. [laughter] Uh Nvidia launched Cosmo. I guess it's interesting. So your founding member AI labs to build open-source world models in physical AI. Um anything much to talk on here is open research. The biggest thing is that as I mentioned world models are still early, like there's still so much that we you can scale and those models further, so much more advancements and and things that we can figure out or how how to improve those models further, and I think this is uh it's important that some of this research happens in the open and figuring out what is some incentives for different companies to come together to to actually bring some of that research into into the open and open source, and so Cosmos Coalition was a initiative that we co-founded with Nvidia to bring some of that research as open source, and that could mean openweight model releases. It could mean benchmarks that measure physics and things that people care about when building world models. It could mean infrastructure. So really how do we grow the ecosystem of world models and make that something that also it's easier for a developer, a researcher that's just starting out that is excited about world models to kind of contribute to the field.</p>
+</details>
+<h3>全球竞赛态势：中西方视频模型的榜单差距与追赶</h3>
+<p><strong>Host</strong>: 我想知道这其中是否也存在这样一种考量：这是否也是我们对近期密集发布的中国世界模型的一种应对策略？还是说这根本不在考虑范围之内？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I think is there there's some amount of like is this also our response against the Chinese world models that are being released you know or uh is that not part of the consideration?</p>
+</details>
+<p><strong>Runway Guest</strong>: 我确实认为这至关重要。在视频模型领域，如果你去观察当前视频模型的主流排行榜，可以说排名前十到前二十的模型中，绝大多数都是中国的模型。而能够登上榜单前列的美国或西方公司的产品，目前仅仅只有屈指可数的几家而已。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Runway Guest</strong>: I do think it's it's important for in video models, you know, if you look at the the leaderboards of video models, I would say right now the majority of models at the, you know, the top 10 to top 20 are Chinese models, there is uh only a handful companies that are made to the leaderboard from like the US or the West.</p>
+</details>
+<p><strong>Host</strong>: 我们在图像生成模型方面表现得更出色，但在视频模型方面，我们确实已经大幅落后了，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: We're doing better with images, but with video we're very behind, right?</p>
+</details>
+<p><strong>Runway Guest</strong>: 正是如此。所以我觉得整个技术社区必须作为一个整体，在更广泛的范围内加大投入，这一点无疑是刻不容缓的，只有这样才能确保我们拥有具备全球竞争力的模型立足于市场。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Runway Guest</strong>: And so I think I think it's definitely important that we invest more broadly as a community to make sure that we we can those models can, you know, we have competitive models out there.</p>
+</details>
+<p><strong>Host</strong>: 话说回来，又有什么能阻止我们去直接从它们那里蒸馏（distill）知识呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Well, like what's to stop us from distilling from them?</p>
+</details>
+<p><strong>Runway Guest</strong>: 我不知道这是否算是一种……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Runway Guest</strong>: I don't know if that's the</p>
+</details>
+<!-- chunk 11/12 -->
+<h3>数据源与基准评测的现实分歧</h3>
+<p><strong>Runway 嘉宾</strong>：……从长远来看，这最终会受限于你所能达到的性能上限。这几乎带有一种略显悲观的视角，即你很难再进一步提升……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Runway Guest</strong>: ...best long-term bounded by the performance that you can... it's almost a bit of a pessimistic, you know, view that you can get better, you know, you can...</p>
+</details>
+<p><strong>主持人</strong>：但这毕竟是免费的数据。就像大家常说的，既然他们在文本和语言模型方向上可以这么做，那何不在视频方向上也反向尝试一下呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: It's free data. Like, you know, you might as well... like if they're doing it for the text language side, they might as well do it for the video side the other way.</p>
+</details>
+<p><strong>Runway 嘉宾</strong>：确实如此。不过我的看法是，即便眼下没有这种解决方案，我们目前也完全有能力训练出非常出色的模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Runway Guest</strong>: Yeah. I mean I do think we're quite capable of training great models without this solution at the moment. Yeah.</p>
+</details>
+<p><strong>主持人</strong>：明白了。关于基准测试（benchmarks）和模型评估（evals），你有什么想分享的吗？我个人的感觉是，现在很多人非常推崇针对视频和图像模型的竞技场（Arena）评测模式，包括客户和行业从业者也是如此。他们只想挑选排行榜上最顶尖的模型，而且他们参考 Arena 的频率似乎远高于语言模型领域。但在基准测试方面，目前到底还欠缺什么？普通用户又是如何去进行对比的呢？毕竟两边的生成结果看起来都极具超现实感。除了我们之前聊过的机器人、仿真环境、物理特性等维度之外，对此你有什么见解？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. Yeah. So anything you have to say on benchmarks and evals? Like I feel like what I'm hearing is a lot of people really like arenas for video and image models, customers and whatnot as well. They only want the best on the leaderboard and they refer to arenas a lot more than language models seem to do. But any notes on benchmarks, what's lacking? How does the average person compare? Well, these both look really hyper realistic. More than that, outside of we did talk about like robotics, simulation, the physics and all that, but anything to say?</p>
+</details>
+<p><strong>Runway 嘉宾</strong>：在某种程度上，我认为实际情况恰恰相反。总体而言，那些真正使用我们平台的人群——无论是创意工作者、艺术家还是市场营销人员——他们对竞技场评分的依赖程度其实更低。因为对他们来说，用不同的模型同时生成一批结果，然后用肉眼进行直观的视觉比对，是一件极其简单直接的事情。图像和视频模型的一大优势在于，你只需用眼睛一看，立刻就能从审美层面上判断出哪张图或哪段视频感觉更好；如果画面有任何瑕疵假象（artifacts），或者在物理规律上存在任何漏洞破绽，你瞬间就能察觉出来。</p>
+<p>因此我觉得，相比语言模型，多模态模型让人类来进行评估反而更容易。在语言模型领域，常常充斥着非常复杂的数学题、代码编写测试等各种任务基准，人类往往很难在短时间内准确判断并区分各梯队顶尖模型之间的细微性能高下。所以在实际工作流程中，大家通常只是拿着相同的 Prompt 扔给几个不同的模型跑一遍，直接看视觉成效如何。现在在 Runway 平台上，你不仅可以使用我们自研的模型，也可以直接调用第三方模型，所以做这种对比非常便捷。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Runway Guest</strong>: I actually think it's the opposite in some ways. I think people generally—creatives and artists and marketers, like people that are using our platforms—I think rely less on arena scores. It's just so easy to generate with a bunch of different models and then compare the results visually. Like one nice thing about image and video models is you can immediately tell with your eyes what feels good from an aesthetic standpoint. Like any artifacts, any issues with the physics of those models, you can immediately tell.</p>
+<p>And so that's... it's actually easier, I would say, to evaluate as a human. There is also those models than it is in language models where you have those very complex kind of math and coding tests where it becomes a lot more harder, I think, for humans to evaluate and discriminate between the performance of our tier models at a time. So I think in practice people just test out the same prompt with a bunch of different models and see what the results look like. And right now in Runway you can use our models and you can use third-party models as well. So it's very easy to do that.</p>
+</details>
+<h3>创作者群体的态度演变与控制力回归</h3>
+<p><strong>主持人</strong>：太棒了。在进入最后的 Runway AI 峰会话题之前，我想聊聊最后一个社会层面的议题：你们恰好身处艺术家、创意人士与 AI 之间紧张关系的风口浪尖。在那个圈子里，很多人对 AI 抱有强烈的抵触情绪。当然，Runway 社区内的创作者并不介意把这些当成生产力工具，大家把它视作另一支崭新的画笔。但在整个大环境中，你是如何看待外界舆论和情绪变化的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Amazing. We're going to end with the Runway AI summit. The last sort of societal issue, I guess—I don't know if this is a thing—is you are at the tension between sort of artists, creatives, and AI. A lot of people in that community hate AI. Obviously the people that are in the Runway community don't mind using tools; it's just another brush. But how have you seen the sentiment change?</p>
+</details>
+<p><strong>Runway 嘉宾</strong>：从我们的角度来看，它确实就像是另一支画笔，或者另一台新型摄像机。它是漫长工具演进历史中的最新一代产物，技术与艺术历来都是相互交织、协同进化的。我认为在过去几个月里，外界情绪发生了相当显著的积极转变。这种转变部分体现在很多知名公众人物开始公开站出来支持 AI。例如在戛纳电影节上，你能看到好几位知名导演公开发表支持 AI 的观点；在我们举办的 AI 电影节上，也有朗·霍华德（Ron Howard）这样的电影大师莅临；马克·扎克伯格（Mark Zuckerberg）等人也在大力推动 AI 模型的应用落地。现在每天都有越来越多知名人士为 AI 发声的故事涌现，在我看来，核心原因在于这些模型正在逐渐“褪去神秘光环”（demystified）。</p>
+<p>同时我还有一个稍微有点尖锐的独家观点：当初人们对这类模型产生过激反应的原因之一，在于“文生视频”（Text-to-Video）这一概念本身被过度宣传了。大家都以为只要给出一行简单的文本描述，模型就能直接吐出一整部成片。坊间甚至一度误传你可以直接一键生成一部两小时院线长片。然而，现在的模型早就不再只是单向文生视频了——它们支持丰富的参考图（references），拥有极强的可控性。当创作者看到一款赋予他们充足自由度与精准控制力的工具时，他们的心态便彻底不同了。此时它是不是一个生成式模型已经不再重要，真正重要的是你能够实打实地驾驭它、把它引导向你心中想要的艺术方向。</p>
+<p>所以当大家看到构建在这些基础模型之上的复杂专业工作流，看到自己能够通过各种精细手段去操控生成过程——甚至最新的模型能够支持多达 50 个参考输入时，整个讨论的基调就彻底转变了。因为它终于不再是一个试图包办一切的黑盒，而是一个真正服务于创作者表达的趁手故事创作工具。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Runway Guest</strong>: I mean, our perspective: yes, it's just another brush. It's just another camera. It's the latest of a long generation of tools. Technology and art have kind of evolved together. I think there's been a pretty significant shift over the past few months, and some of it you can see with a lot of public figures speaking out in favor of AI. Like in Cannes, you saw a few directors speaking in favor of AI; we had Ron Howard in our film festival; there is Mark Zuckerberg also adopting AI models. So you have more of those stories coming out every day of a well-known figure speaking in favor of AI. And it's just a matter of, in my mind, those models are becoming more and more demystified.</p>
+<p>I would say I have also a bit of a hot take that one of the things that made the initial response to those models maybe a bit more heated than it needed to be was this idea of text-to-video—of you have a single text description and you get back a full video. There was a misconception obviously you can generate a two-hour feature-length film. But the models of today now take a lot of references, they are very controllable, and I think when people see a tool that affords many degrees of freedom and control, they respond to it differently. And it matters less that it's a generative model than the fact that you can actually steer it to the direction that you want.</p>
+<p>And so I think when people look at complex workflows on top of those models, when they look at all the ways in which you can steer them—and you can provide now with some of the latest models up to 50 references—the conversation becomes a bit different, because it feels much more like a tool.</p>
+</details>
+<p><strong>主持人</strong>：没错，它不再是一个号称能包揽一切、替你直接搞定整部电影的神奇虚幻实体。那么对于从业者的实际工作流程演变，你有什么观察吗？比如在软件工程领域，至少我们看到很多人预期自己的生产力能提升 10 倍甚至 100 倍，能交付的事情变得极其可观。而你们正在为创意工作者打造开发者级别的创作工具，在这个过程中，有些人抗拒拥抱新技术，有些人则积极接纳，对此你有什么心得？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Versus like a magical kind of entity that figures out your entire film for you. Any notes on like workflows changing for people in the field? Like I think engineering at least has had a lot of people where their expectations have changed—you know, 10x, 100x more productive and you can get a lot more done. Same thing as you're making dev tools for creatives. Any notes there? Like there's some people that don't want to adopt, some that do... anything?</p>
+</details>
+<h3>创意工具的三阶段跃迁与实时交互价值</h3>
+<p><strong>Runway 嘉宾</strong>：关于用户真正关心的核心诉求，我认为我们至今已经历了几个明确的演进阶段。</p>
+<p>最开始的第一阶段，所有人最关注的核心指标就是<strong>画质与生成质量</strong>。正如大家所见，随着我们不断扩大模型规模，生成质量得到了飞跃式的提升。质量至今依然是大家非常在意的基础，但现在行业已经迈入了第二阶段，那就是在质量之上叠加了<strong>可控性</strong>——能够通过参考图、各类控制输入以及故事板（storyboards）来精确调度和指引模型。</p>
+<p>而我目前的判断是，未来人们会越来越看重**延迟（latency）**这一维度。随着模型本身的底层能力日趋完善，快速迭代反馈的能力将变得至关重要。设想一下，如果你输入一个提示词，能在几近眨眼的一瞬间同时拿到 10 种截然不同的生成方案，你的探索效率将比以往呈数量级提升。这能重新唤回曾经那些经典创意工具的“交互魔力”——比如在 Photoshop 里操作是完全即时的。但在早期的生成式视频模型中，这种魔力在一定程度上丢失了，因为你每次调整都必须干等两分钟才能看到一段小视频。而现在，随着实时模型的推出，我们正在把那种即刻交互的掌控感重新带回创作者手中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Runway Guest</strong>: Yeah, so I think in terms of like what people care about, I see that we've gone through a few stages. So we started from the stage where the main thing that people were looking for was quality. As you know, as we scaled those models to improve the quality, it improved dramatically. That's something that people still care about, but it's now in addition to controllability—like being able to steer those models with references, with different kinds of inputs, with storyboards.</p>
+<p>And now my sense is increasingly people are going to care about latency more and more. As those models become better, the ability to iterate very quickly becomes more important. And like if you can, with a single prompt, generate 10 different outputs almost instantly, you can explore way faster than before. And you get some of the magic that characterized the creative tools of the past—like Photoshop was instant. And we lost some of that with generative models; you're waiting for 2 minutes to get back a video. And I think we're going to bring some of that back now with the real-time models.</p>
+</details>
+<h3>Runway 峰会与具身智能/世界模型的技术论战</h3>
+<p><strong>主持人</strong>：确实如此。太令人兴奋了！最后我们要为这个活动宣传一下——Runway AI 峰会。你们终于要在旧金山举办了。（笑）</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. Exciting and exciting. The last thing we'll plug is this one: Runway Summit. You're finally doing this in SF. [laughter]</p>
+</details>
+<p><strong>Runway 嘉宾</strong>：是的，我们对这次峰会感到非常振奋。时间定在 9 月下旬，也就是 9 月 30 日。本次峰会将重点聚焦于<strong>物理世界 AI（Physical AI）<strong>与</strong>实时视频生成技术</strong>。我们邀请了来自英伟达（Nvidia）、Physical Intelligence、The Bot Company 以及 Google DeepMind 等前沿机构的重磅嘉宾。</p>
+<p>我认为这将会是一场极具启发性的高水平对话盛宴。我们致力于让所有的圆桌论坛都深入技术硬核层面，激发实质性的行业探讨，并期待能碰撞出一些深刻的技术分歧与精彩思辨。目前门票已经开售，非常欢迎大家能够报名参与进来。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Runway Guest</strong>: Yeah. So we're very excited about this. This is in late September, September 30th. We're doing a summit primarily focused on physical AI and real-time video generation. We have panelists from Nvidia, Physical Intelligence, The Bot Company, DeepMind.</p>
+<p>Yeah, it's going to be, I think, a very interesting series of conversations. We try to make the panels really technical and elicit actual kind of substantive discussion and hopefully some interesting kind of disagreements and interesting debates on things. And yeah, there's tickets available. Hope people can join.</p>
+</details>
+<p><strong>主持人</strong>：既然你提到了分歧与思辨，大家应该关注或者期待听到哪些技术路线上的争论呢？比如在当下的机器人领域，似乎正存在着一个鲜明的路线争论：究竟该走 VLA（视觉-语言-动作模型）路线，还是走世界动作模型（World Action Models）路线？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Since you mentioned it, what kind of disagreements and debates should people think about or do you expect? So it seems like there is one debate right now in the robotics world: is VLA versus world action models. Okay.</p>
+</details>
+<p><strong>Runway 嘉宾</strong>：确实，目前不同的研究实验室正在各自重金押注这两个截然不同的方向。此外，关于训练机器人模型的最优数据源究竟是什么，也存在很大分歧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Runway Guest</strong>: Um, so there is labs that are really, really betting on one of those two directions. There is like what is the best source of data to train robotics models.</p>
+</details>
+<p><strong>主持人</strong>：这正好对应了我们刚才讨论过的第三方公开数据与第一方专属数据的路线之分。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: There's just the third party, first party that we talked about.</p>
+</details>
+<p><strong>Runway 嘉宾</strong>：没错。一方面，有一批研究者坚信应该进一步扩大遥操作（teleoperation）数据的采集规模；另一方面，也有人主张充分利用并撬动更大规模的互联网视频数据资产。</p>
+<p>不仅如此，在更宏观的**世界模型（World Models）**领域本身，也存在着激烈的路径争论：究竟是应该直接在像素层面进行端到端预测（predict pixels directly），还是采用类似 JEPA（联合嵌入预测架构）的潜空间表征方法，抑或是转向更加显式的 3D 几何表征路线。</p>
+<p>我认为眼下正是研究世界模型的黄金时期，因为学界和业界仍在就“究竟哪条道路才是最佳的长期技术方向”展开极其活跃而充分的技术交锋。就我个人而言，我极其坚信“直接预测像素”并不断 Scaling 视频生成模型是行之有效的正确大道。但客观来说，目前顶尖研究人员之间确实对哪条技术路线才是最优解依然存在诸多极具价值的辩论。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Runway Guest</strong>: Yeah. There is the people who really believe in further scaling teleop data versus leveraging more large-scale video data. So those are kind of some of them.</p>
+<p>And then there is the world models debates of: predict pixels directly versus something like JEPA versus a more 3D-based approach. So I think we're at a nice time in world models because there is still that kind of active debate happening over what is the best long-term direction. I feel very strongly that this video—predict pixels directly and scaling video generation models—is the right approach, but I think there is a lot of interesting debate happening by researchers on what is the best kind of path to take.</p>
+</details>
+<p><strong>主持人</strong>：有意思的是，目前的讨论重心似乎全部集中在所谓的策略层（policy layer）和数据模型层上；而反观物理硬件端——比如所有的传感器和硬件本体——大家似乎觉得这部分已经被彻底解决了……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: It's interesting that it's all on like sort of let's call it the policy layer and the data model layer, as if the physical side is completely solved, like all the sensors, all the...</p>
+</details>
+<!-- chunk 12/12 -->
+<h3>具身智能的物理落地挑战与硬件门槛</h3>
+<p><strong>Host</strong>: 执行器……所有这些部件，我们目前真的已经具备所需的一切了吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Actuators, all these things, they're... we have everything that we need?</p>
+</details>
+<p><strong>Guest</strong>: 我认为这个领域目前也绝对还没被彻底解决。[笑]</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: I don't think that's solved either, definitely. [laughter] Um...</p>
+</details>
+<p><strong>Host</strong>: 那属于完全不同范畴的问题了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Different problem.</p>
+</details>
+<p><strong>Host</strong>: 你懂的，就像我心里渴望去构想、去憧憬所有这些前沿设想，但现实往往是：我买来一台现成机器人，或者尝试自己动手去组装一台，结果连最基本的电机都没法让它正常运转起来。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: You know, like it's like I want to dream about all these things, and then I get... you know, I buy a robot or I try to assemble my own, and I can't even get the... you know, the motors to like work.</p>
+</details>
+<p><strong>Guest</strong>: 确实是这样。归根结底，你面对的是极其敏感精密且脆弱的实体物理设备，它涉及到实际工作电压、峰值功率与供电稳定性，还有散热管理等等一系列工程约束。我们坐在这里探讨软件算法、探讨神经网络模型架构时，所有这些物理现实都被高度抽象掉了；但在真实的物理世界中，你必须实打实地去应对并解决这类底层工程问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Right. Right. Again, it's you're dealing with very sensitive equipment that has voltage and power and like heat and all these things which, you know, abstracted the way we're sitting here we're talking about software and talking about models, but like really you have to deal with those kinds of things too.</p>
+</details>
+<h3>多模态扩展与终极世界模型</h3>
+<p><strong>Guest</strong>: 是的。而且大体而言，我也完全不排斥在我们的模型中逐步纳入更多其他模态的数据，正如我们目前已经见证的发展那样。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah. And I think I'm generally also not opposed to incorporating other modalities into our models like we've seen.</p>
+</details>
+<p><strong>Host</strong>: 确实如此。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yes.</p>
+</details>
+<p><strong>Guest</strong>: 最基础的场景，就是模型能够同时同步生成视频画面与环境音频。它们不仅能合成 RGB 视觉像素流，同时还能直接生成匹配的声音与音频信号。我之前专门写文章探讨过这个方向：一个终极形态的、极致主义版本的世界模型（maximalist version of a world model）究竟应该是什么样子的？它本质上就是把来自我们物理宇宙的越来越多维度的模态信息有机整合进来，并且让同一个模型在横跨不同尺度的物理观测数据上接受统一的预训练。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: The simplest case is they can generate video and audio at the same time. So they can generate RGB and they can also generate sound and audio. But, you know, I've written about this as like what does the maximalist version of a world model look like is you're incorporating more and more modalities from the universe and you're training a model on different scales of observations as well. So yeah.</p>
+</details>
+<p><strong>Host</strong>: 你之前写过一篇关于真实世界的非常棒的文章，大家真应该去拜读一下。另外，Meta 之前发布过一个把六种模态融为一体的模型，对吧？我一时想不起它的具体名字了，但它当时确实融合了……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: You got a good essay that people should read on real world. Meta released a model that was like six modalities in one, right? I forget what the name of the thing was, but it was like...</p>
+</details>
+<p><strong>Guest</strong>: 对，深度信息（Depth）就是其中之一，不过深度信息在某种程度上更像是对 RGB 图像的一种几何变换表征。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah. Okay. Depth is one of them, but that is like a transformation of RGB and...</p>
+</details>
+<p><strong>Host</strong>: 那个模型叫 ImageBind。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: ImageBind.</p>
+</details>
+<p><strong>Guest</strong>: 对，就是 ImageBind！它当时还包含了哪些模态来着？他们集成了热红外感应（Heat）……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: ImageBind. Yes. What other modalities? They had heat...</p>
+</details>
+<p><strong>Host</strong>: 包括音频、深度图、热成像、文本……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Audio, depth, heat, text, uh...</p>
+</details>
+<p><strong>Guest</strong>: 还有惯性测量单元（IMU）运动数据什么的。我个人的看法是，既然架构支持，你完全可以顺理成章地把紫外线光谱加进去；你想融入任何其他传感器模态都行得通，因为在底层模型眼里，所有这些本质上都只是结构化的数据流而已。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: ...whatever IMU is. Um, I do think like you might as well do ultraviolet. You might as well do like whatever other modality you feel like because it's all data to the model.</p>
+</details>
+<h3>跨模态知识迁移与物理仿真模拟</h3>
+<p><strong>Guest</strong>: 没错。而且这里面押注的一个巨大核心假设，在于所有这些看似截然不同的模态之间，实际上存在着深刻的表征迁移能力（Transfer Learning）。我最喜欢的一个经典例子——虽然以现在的技术迭代速度来看它已经算相当早期了——就是当时基于 Stable Diffusion 衍生出的那个名为 Riffusion 的音乐生成微调项目。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah. And a big bet is also that there is transfer between all those modalities. So one of my favorite examples which is quite old at this point is there was this finetune of Stable Diffusion that was called Riffusion which was the music.</p>
+</details>
+<p><strong>Host</strong>: 对，那个项目令人印象深刻。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah.</p>
+</details>
+<p><strong>Guest</strong>: 它仅仅是将 Stable Diffusion 直接在音频语谱图（Spectrograms）数据上进行了微调训练，结果就摇身一变成为了一个能力相当强劲的音乐生成模型。这背后的物理与数学本质在于，不同尺度、不同模态的数据之间，很可能涌现并共享着某些底层的空间模式，或者在视频及时间序列中体现为某种跨尺度的时空动态演化模式。因此，模型在基础预训练阶段所习得的表征，已经在某种程度上完成了一定程度的元学习（Meta-learning）。这种底层先验使得后续的学习效率大幅跃升：如果你从一个已经理解图像视觉模式的基础模型出发去微调它预测音频，其收敛速度和学习效率，会远远高于你仅凭音频数据从零开始从头训练一个全新模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Just fine-tuning Stable Diffusion on spectrograms and became a quite capable music generator. Right. There is probably some spatial patterns or like spatial-temporal patterns if we're talking about video that kind of emerge the different scales and different modalities. And so there is some degree of, you know, meta-learning that the model has done that allows you to learn faster if you start from just a model on images and train it to predict audio than if you train from scratch on just audio.</p>
+</details>
+<p><strong>Guest</strong>: 此外，业界还有其他一些非常引人入胜的探索案例。比如有这样一个研究项目——它本质上构建了一个涵盖了经典物理学、数值模拟、计算生物学以及诸多其他科学领域的跨学科仿真数据集。它汇总了在空间尺度和时间跨度上差异巨大的各种物理系统，上至宏观的天体物理学运行演化，下至微观层面的原子间相互作用力。我们围绕这方面也开展过一系列深入的探索工作，并且从实验中观察到一个明确现象：即便直接采用我们现有的基础视频模型——要知道，现实世界拍摄的真实视频分布和这些高度抽象的科学仿真画面看起来天差地别——直接将其迁移并微调到这些物理数值仿真数据上，把仿真帧直接当作普通的 RGB 图像帧来处理，模型竟然能在极短的时间内达到相当出色的仿真预测性能，速度与表现远超从零初始化训练的模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Um and there is some other interesting examples. So there is this project called... well, it's a dataset of physics numerical simulations in physics and biology and a bunch of other domains. So it's essentially different physical systems across very different scales of space and time from like astrophysics to low-level kind of like atomistic interactions. And we've seen... we've done some work on this and we've seen that we can take our video model where, you know, real-world video looks nothing like this, and you can actually fine-tune it on those numerical simulations and just treat them as RGB frames and you actually get reasonable performance much quicker than if you just train from scratch.</p>
+</details>
+<p><strong>Host</strong>: 是的，我想我们在自然语言跨语种迁移上也早已观察到了类似的现象。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, I think we've seen this across languages.</p>
+</details>
+<p><strong>Host</strong>: 没错，就像在 DeepSeek-VL 或各类视觉文档理解与 OCR 模型上看到的那样。甚至比如 DeepSeek-OCR……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, DeepSeek... OCR as well. Yeah, DeepSeek OCR...</p>
+</details>
+<p><strong>Host</strong>: 你甚至根本不需要事先将文本做繁琐的 Token 切分与分词处理，直接把它们作为纯图像送进模型即可。在底层的基础预训练阶段，模型内部实际上沉淀了海量的通用表征。很久以前曾经有这样一种流传很广的论调：人类拥有如此多维度的感知通道与感官表征，比如嗅觉、触觉等等，而 AI 模型面对的是截然不同的现实，甚至有整整两个核心感官模态我们人类根本就没有任何现成的大规模标注数据；有人可能会说，好吧，你可以挂载一个空气质量传感器（AQI）之类的硬件去尝试采集数据并做实验。但实际情况是，仅在视觉与语言这样的大规模基础预训练过程中，模型内部就已经涌现出了极其丰富且通用的物理规律表征，那些微小琐碎的专用小模态数据反倒无法为你带来那么显著的额外增量了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: ...like you don't have to tokenize text, like you can just throw them in as images. There's a lot that happens in that base pre-training. Like there was an argument a long time ago of people saying, &quot;Oh, humans have so many sensory representations, right? Smell, touch.&quot; Models have a whole two more modalities that will never... like that we don't even have data for. And it's like, okay, you take AQI sensor, like you can try this stuff, but actually, you know, there's so much happening in just the base train run that you don't get as much from these little things.</p>
+</details>
+<p><strong>Guest</strong>: 确实完全是这样。而且我认为这真正破解的核心痛点，正是数据稀缺性瓶颈（Data Scarcity）。现实中我们很难在特定垂直领域直接获取海量标注，比如现成的互联网视频数据浩如烟海、极其充沛，但你不可能轻易搞到全世界所有现代化工厂内部各工序全方位的真实运转数据。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, exactly. And I think that's what it solves is data scarcity. So you don't have as much... you have so much video data available, but you don't have, you know, like all factory data.</p>
+</details>
+<p><strong>Host</strong>: 更妙的地方在于，这种知识迁移机制其实是双向对称贯通的，对吧？如果你打算去攻关基础物理学课题，想要对某种物理现象进行精确测量与建模，或者希望利用扩散模型去生成高保真音频，跨模态迁移都能带来极其强大的效果。正如在你们的实践中一样：只需对视频模型施加极少量的机器人具身动作后训练微调（Post-training），就能直接激发该视频模型在底层视觉物理预训练中所积累的基础认知，并将其无缝复用到一个全新的下游控制领域。因此，我们完全可以将这套范式举一反三推广到更多的未知科学与工业场景之中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: The cool thing is it goes the other way too, right? So if you want to do physics, like if you want to measure this or you want to have a diffusion model do audio, it transfers really well. So like in your case, the little bit of post-training for robotics gets a video model to use its fundamentals in another domain. So we can apply that to other stuff too.</p>
+</details>
+<h3>从专用架构到通用全模态架构的演进逻辑</h3>
+<p><strong>Guest</strong>: 是的。如果我们进一步审视如何让这类大模型在严谨的科学探索领域发挥更大的实际效用——回顾一下 AlphaFold 的演进就会发现，AlphaFold 当初之所以设计了极其精巧复杂的专有网络架构，核心原因正是受限于生物实验领域极其有限的数据量，它必须构建高度定制化的特定归纳偏置（Inductive Bias）来专门攻克蛋白质三维结构预测这一个狭窄任务。但倘若你能够把分布在各个孤立科研领域的异构科学数据整合汇聚起来，置于一个统一的单一多模态大模型框架下协同训练——我认为这样一种技术路线，才能够真正帮助我们在全科学领域解锁全新维度的重大突破，因为它能够充分利用并杠杆化从某一个模态或特定科学数据集中习得的通用表征，并将其迁移赋能到另一个数据匮乏的领域。尽管沿着这条技术路径的探索目前依然处于非常早期的初级阶段，但我深信，这正是终极物理世界仿真模型（World Simulator）最终应该走向的归宿。到那时，模型不再仅仅输入输出基础的 RGB 图像像素，RGB 像素仅仅是它感知物理世界的一个初始切入点；它能够海纳百川地融合这个宇宙中越来越多维度的物理模态与感官信号，并在这些跨领域的底层规律学习中实现最大化的知识融会贯通与表征迁移。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah. And if we look at, you know, like how do you make those models more useful in scientific domains. And if you know, if you look at AlphaFold, it had all these very... because of the data, you know, the limited amount of data that it needed to be trained on, it basically it's very fine-tuned architecture just to solve kind of protein structure prediction. But if you take all those disparate sources of scientific data and you bring them together under a single model, like I think that's an approach that can help us kind of solve new kinds of problems across science by leveraging all the learnings from one modality or one set of data to another. So very early days for that direction, but I do think that's where ultimately what the endgame of kind of simulating the world is. You're not just using RGB, you're using RGB as a starting point, but you can incorporate more and more modalities of the universe and leverage the transfer that happens from learning from one to the other.</p>
+</details>
+<p><strong>Host</strong>: 沿着这个思路顺理成章追问下去：既然全模态这么好，那么原生全模态架构（Omni Model）目前的局限或代价究竟是什么？为什么目前业界的模型并非全部做成 Omni 模型？为什么当前行业主流普遍选择先从一个纯文本语言骨干网络（Language Backbone），或者纯图像/视频视觉骨干网络起步，然后再逐步扩展到全模态能力？这种先后顺序和底座选型真的至关重要吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I guess the followup there is what's the drawback of Omni? Like why is everything not an Omni model? So why not now? And why would you start from language backbone or image/video backbone and then go Omni from there? Does it matter?</p>
+</details>
+<p><strong>Guest</strong>: 饭要一口一口吃，技术探索必须脚踏实地一步一步来。我们眼下得先把机器人具身智能这个硬骨头彻底攻克拿下，然后才能进一步向外拓展并……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, we need to take it one step. We have to solve robotics first and then we can go into...</p>
+</details>
+<p><strong>Host</strong>: 然后再去现在就把一切物理问题都给彻底解决了！[笑]</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Solve everything now. [laughter]</p>
+</details>
+<p><strong>Guest</strong>: 哈哈，是的。我的意思是，要真正训练好一个原生 Omni 全模态模型，目前依然存在着大量的开放式基础科研难题有待攻坚。当你试图将多种物理性质完全不同的异构模态强行统一融合到一个单一网络架构中并完成端到端联合预测时，有极其繁多底层的对齐机制、损失函数权重平衡、模态竞争与干扰等工程与理论细节需要严谨权衡与审慎考量。不过总体而言，我坚信这些挑战随着工程和算法的推进，最终都是完全可以被攻克解决的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah. I mean, I do think there is a lot of open-ended research that needs to happen for those Omni models. There is, you know, there is a lot of things that require careful consideration when you're bringing multiple modalities into a single model to predict. But I think, you know, I expect those to be solvable.</p>
+</details>
+<h3>结语与 AI 视频未来展望</h3>
+<p><strong>Host</strong>: 太精彩了。今天非常感谢你慷慨抽出宝贵时间与我们深入交流。由衷祝贺你们取得的所有辉煌成就与技术突破！我也非常期待接下来即将召开的 AI 峰会与具身物理 AI 峰会。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Wonderful. You've been very generous with your time. Congrats on all your success, and yeah, I'm excited for the AI summit or Physical AI summit.</p>
+</details>
+<p><strong>Guest</strong>: 非常感谢，很高兴能来这里参加对谈。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, thanks for having me.</p>
+</details>
+<p><strong>Host</strong>: 另外，大家如果当地恰好有你们的巡回展映活动，务必去现场亲身体验一下 AI 电影节的魅力。你们接下来的巡回计划应该会走遍世界各地吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And yeah, and people should check out the film festival if it's in town, right? You'll be touring all over the place.</p>
+</details>
+<p><strong>Guest</strong>: 是的，明年我们大概率会继续推进。我们通常在每年的五月或六月份举办 AI 电影节，上一届我们先后在纽约、洛杉矶、东京以及 AI 工程师大会（AI Engineer Fair）现场都做了展映活动。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, next year we're probably going to do the... So we do film festivals every May or June, and we did the last one in New York, LA, Tokyo, and at the AI Engineer Fair.</p>
+</details>
+<p><strong>Host</strong>: 确实办得非常宏大。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. Yeah. Yeah.</p>
+</details>
+<p><strong>Guest</strong>: 是的，所以希望明年能够走入更多城市和地区与大家见面。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Um, so yeah, hopefully even more places next year.</p>
+</details>
+<p><strong>Host</strong>: 我毫不怀疑，未来的某一天，你们一定会亲自站在台前主持属于 AI 生成视频领域的“奥斯卡金像奖”盛典。我真的认为全行业的创作者和年轻人应该极其严肃认真地对待这一技术浪潮，把它当成一条前途不可限量、大有可为的终身职业发展道路。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: No, I think like someday, you know, you will be hosting the Oscars of AI video. And you know, I think people should like take this very seriously as like a potential career they can have.</p>
+</details>
+<p><strong>Guest</strong>: 属于 AI 视频的奥斯卡奖，届时它的名字就直接叫做“奥斯卡奖”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: The Oscars of AI video will be called the Oscars.</p>
+</details>
+<p><strong>Host</strong>: 说的太精辟了！[笑] 太棒了，再次衷心感谢你！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: All right. [laughter] All right. Thank you.</p>
+</details>
+<p><strong>Guest</strong>: 谢谢！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Thank you.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">interface-world-models</span>
+      
+        <span class="tag-pill tag-pill--no-page">end-to-end-system</span>
+      
+        <span class="tag-pill tag-pill--no-page">generative-models</span>
+      
+        <span class="tag-pill tag-pill--no-page">cross-modal-transfer</span>
+      
+        <a class="tag-link" href="/tags/model-architecture/">model-architecture</a>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

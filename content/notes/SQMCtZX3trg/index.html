@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>构建和工程化智能体技能包的深层经验分享</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="构建和工程化智能体技能包的深层经验分享" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">构建和工程化智能体技能包的深层经验分享</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-21</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=SQMCtZX3trg" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-21
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">文章探讨了从简单的提示词到复杂技能体系的演进过程，重点分析了在AI审美疲劳背景下，如何通过规范化、工具调用钩子和被动护栏来提升技能的工程质量。作者分享了关于技能发布质量门槛、测试标准空白以及分发标准的行业思考。</div></div>
+      
+    </div>
+    <!-- chunk 1/7 -->
+<h3>开场与 Impeccable 的诞生背景</h3>
+<p><strong>Paul</strong>: 大家好！大家最近怎么样？好的，我看还有一些朋友正在陆续进场，能来到这里我感到超级兴奋。首先，让我重新加载一下这些幻灯片，因为刚才我的 Claude Code 还在后台编译一些东西。好的，屏幕对比度可能稍微有点低，还请大家见谅。我会尽量把上面看不太清的内容大声念出来。另外，我也听说现场的 Wi-Fi 信号不是特别强。虽然今天是一场工作坊（Workshop），但我希望大家至少能带走其中的核心经验与思路，之后随时可以运用到自己的项目中。当然，我也准备了一个示例代码仓库，想要跟着动手的同学可以一起同步操作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Paul</strong>: Hello everybody. How's it going? Okay, I think we still have some people trickling in, but I'm super excited to be here. Okay, first off, let me reload these slides because my Claude Code was still building something on it. Um, okay. So, the contrast is a little bit low. Um, so please bear with me. I'm going to try to cover what you cannot read as much as possible. I also have heard that the Wi-Fi is not the strongest. So while it is a workshop, hopefully you just do take away a lot of the lessons and then can apply it whenever you want to. But I do have a sample repo if you want to follow along.</p>
+</details>
+<p><strong>Paul</strong>: 首先自我介绍一下，大家好，我叫 Paul。非常高兴大家能来到这个房间。我是 Impeccable 的作者。在座的各位有谁碰巧用过 Impeccable 吗？能让我看一下有多少人举手吗？好的，有几位朋友举手了，太棒了。那么对于还没用过 Impeccable 的朋友，Impeccable 最初其实是我主要为了自己使用而构建的一个 Skill（技能包）。在过去的一年里，我一直在构建一个大型企业级应用，它包含了非常多不同的视图、状态等等。我非常希望能借助智能体——比如 Codex、Claude Code 等工具，来极其迅速地进行界面设计。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Paul</strong>: Um okay first of all hi my name is Paul. Um I'm really glad you found your way into this room. Um I'm the author of Impeccable. Who here has used Impeccable by any chance? Can I see some hands? Okay, a few people. Nice. Um, so for those of you who have not used Impeccable, Impeccable is a skill that I've built for myself mainly. Um, I've built this large enterprise app over the last year and it has like lots of different views, states, whatever. Um, and I wanted to design really quickly with my agents with Codex, with Claude.</p>
+</details>
+<p><strong>Paul</strong>: 但我很快注意到，尽管 AI 能极其迅速地生成一些初步可视化的界面让我查看，但要把生成的内容“规范化”（Normalize）并对齐回现有的设计系统（Design System），过程却异常痛苦且极具挑战性。因此，我为自己编写的第一个 Skill 就叫作 <code>normalize</code>，它的作用就是把 Claude 设计出来的任何界面规范化并重新拉回设计系统的标准规范中。这就是一切的起点。就像在座的很多人一样，我最开始也使用了 Anthropic 官方的 frontend-design skill，在此基础上逐步扩展出了越来越多的设计类 Skill，从而让我能把 Claude Code、Codex 以及其他运行时 Harness 真正转变成一套专门的设计工作台（Design Harness）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Paul</strong>: But I noticed that even though it gets me quickly to something that I can look at, normalizing it back to the design system was really really challenging. So the first skill that I've built for myself was called normalize and it kind of brought whatever Claude designed back to the design system. That's how I started and I also used Anthropic's frontend-design skill like maybe many of you when I first got going and from there on it kind of expanded into more and more design skills that allowed me to turn Claude Code and then Codex and other harnesses more into a design harness.</p>
+</details>
+<p><strong>Paul</strong>: 在某个阶段，我觉得其他开发者或许也会觉得这套东西有用，于是我把它作为开源 Skill 发布了出来。事实证明，大家非常喜欢它。如果你还没体验过，不妨去试一试，项目官网是 <code>impeccable.style</code>。不过，今天的演讲并不是专门宣传 Impeccable 本身的，而是要探讨我在构建这些 Skill 过程中所总结的深层经验。因为整个过程不断迭代升级：最初它只是一段简单的 Prompt，后来一路演进成了今天庞大的体系。很多人翻看 Impeccable 的代码库时，看到 <code>scripts/</code> 文件夹下塞满了各种各样的脚本，都会纳闷：“这些东西到底都是干什么的？”因此，我想把在这个过程中积累的认知分享给大家。让我们直接进入正题，聊聊“Skill 工程的黑魔法”（The Dark Arts of Skill Engineering）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Paul</strong>: At some point I decided maybe other people might find this useful as well. So I open sourced it as an open source skill, released it and it turns out a lot of you liked it. So if you haven't checked it out yet, yeah give it a go. It's on impeccable.style. But today won't be a talk about Impeccable per se. It will be about what I learned from making these skills because it kind of escalated. It started with like a simple prompt and then went all the way to what it is today. A lot of people have looked at the code of Impeccable and they see like a whole bunch of scripts in the scripts folder and they're like, &quot;What is all this stuff?&quot; And so, I wanted to share some of my knowledge that I've gained with you. So, let's get into it. Let's talk about the dark arts of skill engineering.</p>
+</details>
+<h3>AI 审美疲劳与单纯 Prompting 的局限</h3>
+<p><strong>Paul</strong>: 好的，虽然今天的演讲舞台效果有些简陋，但内容绝对硬核。首先，大家肯定都见过这种典型的设计风格。这实际上是一个真实的案例，是用 Anthropic 的 frontend-design skill 配合 Claude Code 生成的，大家很可能都见过类似的设计——这是一个虚拟的儿童 iPad 阅读器应用界面。看看它的元素：斜体衬线体（Italic Serif）、全大写的 Hero 标题，还有顶部一行眉批小字（Eyebrow text / kicker，随便你怎么称呼它，就像一个奇怪的小标签），以及米色背景——我把它戏称为“Claude 米色”（Claude Beige）。这其实并不算一个糟糕的设计，对吧？但我相信在座的各位一眼就能指出来：“这明显是 AI 生成的，简直就是典型的 AI 工业流水线产物（Slop）。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Paul</strong>: Okay. Um yeah, the production value of this talk is out of this roof. Um okay, so first of all, you've all seen this kind of design. This is actually a real design built with the frontend-design skill and Claude Code. And you probably all have seen a design like this. This is for like a fake kids reader, iPad reader app. You have italic serif. You have like some capitalized hero. And you have like a eyebrow text, like a kicker, whatever you want to call it. The top of it, like a weird label. You have beige, I call it Claude beige, Claude beige backgrounds. And now it's not necessarily a bad design, right? But I think you all can point this out and say like, well, this is clearly AI generated. It's clearly slop.</p>
+</details>
+<p><strong>Paul</strong>: 事实证明，“Slop（粗制滥造的千篇一律）”是一个不断变化的动态目标。过去大家对 Slop 的印象往往是各种紫色渐变背景，但现在我们已经升级演进到了“Claude 米色”。而这正是我最初起步时遇到的现实：一开始，我手里只有一段系统提示词（System Prompt）外加一份美好的祈祷。就像很多人一样，我开始使用 frontend-design skill，它包含了大约 55 行列举了各种禁令规则的自然语言散文——没有辅助脚本，没有模型路由分发，纯粹就是自然语言文本，然后你就只能祈祷模型能听话。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Paul</strong>: And it turns out slop is a moving target. You might have been thinking of slop as purple gradients, but we've kind of moved on since that into Claude beige. Okay, so this is where I started. I started with a system prompt and a prayer basically. So I started using the frontend-design skill like many of you, and it's like 55 lines of named bans. No scripts, no routing, pure prose, right? And you just hope for the best.</p>
+</details>
+<p><strong>Paul</strong>: 这种做法有时候管用，但大多数时候根本不奏效。举个例子，我念一下里面的内容，大家可能在屏幕上勉强能看清。比如在 frontend-design skill 中，会有这样的话：“绝不要使用千篇一律的通用 AI 审美；绝不要使用被滥用的字体，如 Inter、Roboto、Arial 或系统默认字体；绝不要使用陈词滥调的配色方案，尤其是紫色渐变和纯白背景；绝不要收敛到常见的主流选择，比如 Space Grotesk 等等。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Paul</strong>: That sometimes worked and most of the time it didn't. So, for example, I'm just going to read some of this. If, I mean maybe it's really readable, I don't know. But for example in the frontend-design skill you have sentences like: &quot;Never use generic AI aesthetics, overused fonts like Inter, Roboto, Arial, system fonts, or cliched color schemes, particularly purple gradients and white backgrounds; never converge on common choices like Space Grotesk for example.&quot;</p>
+</details>
+<p><strong>Paul</strong>: 这种纯写禁令的做法存在两大根本问题：第一，它极易造成过度应用；第二，一条禁令仅仅是将模型推向了潜空间（Latent Space）中的下一个聚类中心而已。稍后我会更深入地向大家剖析为什么这是一个致命问题。实际上，当你命令模型“不要使用 Inter”时，它并不会因此变得更有创意，它只会直接在潜空间中去抓取紧挨着它的次优字体。这就是为什么我说“Slop 是一个移动的目标”——它只是机械地挑了下一个扎堆的东西。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Paul</strong>: Now there are two problems with this approach: the first one, it over applies, and then a ban just relocates the model to the next cluster, and I'll show you why this is a problem a little bit further down the road. But really, you tell it not to use Inter, it just uses the next best font it finds in its latent space. And so it doesn't actually make it more creative. It just, again, this is why I said slop is a moving target. It kind of picks the next best thing.</p>
+</details>
+<p><strong>Paul</strong>: 在这方面我吃过惨痛的教训。不知道大家有没有注意过，当年互联网上之所以到处充斥着紫色渐变，始作俑者其实是 Tailwind——Tailwind 当时的默认示例页面和主题全都是紫色的。而在这之前的很多年，我也曾亲手把整个互联网染成了橙色：当年我创建了一个叫作 jQuery UI 的框架，它的第一个默认主题就是橙色的。结果一夜之间，整个 Web 仿佛全变成了橙色。我原本以为大家会自己去定制和修改主题，但现实是根本没有人去改。所以我深知这一教训。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Paul</strong>: I have learned my lesson here the hard way because, I don't know if you noticed, but the reason why we got purple gradients in the first place is because of Tailwind. Tailwind's default sample pages theme whatever was purple. Well it turns out I've turned the web orange before many years before that. I created a framework called jQuery UI and the first default theme of jQuery UI was orange. So overnight I called the web orange. I thought people would modify the theme but no they didn't. So I learned my lesson.</p>
+</details>
+<h3>从 Prompting 转向 Harness Engineering</h3>
+<p><strong>Paul</strong>: 核心规律在于：“均值即模型的引力中心”（The median is the model's gravity）。即使你精心打磨出 250 行像手工艺术品一样优美的 Skill 提示词散文，也根本无法改变这一引力规律。它根本不够用，也无法提供足够的控制力，甚至差得十万八千里。这是我历经曲折才学到的教训，我希望今天大家不用再去踩这个坑。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Paul</strong>: Okay, the median is the model's gravity. Even 250 lines of like artisanal, crafted, beautiful skill prose cannot change this. It's just not enough. It doesn't help enough, right? It's nowhere near enough. And I learned this the hard way and hopefully you don't have to.</p>
+</details>
+<p><strong>Paul</strong>: 我今天整场演讲的核心论点是：Prompting 仅仅是新手入门级，而“Harness Engineering（运行时宿主工程）”才是你最终应该抵达的终局。当你构建 Skill 时，必须重塑你的思维范式：你要把 Skill 视为对编码宿主环境（Coding Harness）或你所处任何 Agent Harness 的扩展，其概念层级就像 MCP（Model Context Protocol）一样。Skill 绝不仅仅是你打包好的几句 Prompt，它在概念上远比提示词深刻得多。它是对使用者所处的 Harness 能力维度的直接扩充，具备远超单纯 Prompting 的能力边界。当我想通了这一点时，我脑中豁然开朗：Prompting 就像是咒语，而 Harness 才是真正承载和释放魔法的装置。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Paul</strong>: My overall thesis for this talk is that prompting is sort of like the starter level, but harness engineering is where you should end up. Like you should reframe when you're building skills. You should think about: okay, skills the same way as MCP is an extension to the coding harness or whatever harness you're in. It's not just a prompt that you package, it's something more than that, or you should at least conceptually think about it more than that. It is extending the harness of whoever is using that thing. And it also has more capabilities than just prompting. And when I thought about it that way, it sort of clicked for me: prompting is a spell, harnessing the magic.</p>
+</details>
+<p><strong>Paul</strong>: 今天我们将探讨我在构建 Impeccable 过程中总结出来的九大黑魔法：让 Sub-agent 互相辩论博弈；如何强制模型发散思维而非收敛收拢；像模型一样进行动态路由分发（现代大多数尖端模型都是 MoE 架构，而 Impeccable 同样被构建为一个 Mixture of Experts 式的 Skill）；为模型赋予持久记忆；编写能够反向介入会话并向模型反馈的脚本（我保证稍后大家会明白这有多妙）；利用生命周期 Hook 进行主动纠偏拦截；直接把浏览器状态通过 Live Wire 实时接入 Harness；跨平台编译适配到所有的 Harness 环境；以及为能力最弱的模型进行容错设计。让我们逐一展开。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Paul</strong>: And we'll talk about nine different dark arts today that I learned in the process of building Impeccable. We'll make sub agents argue with each other; we'll talk about how to force divergence as opposed to convergence; routing like a model (and basically you've seen this probably, most modern models are mixture of expert architectures and Impeccable is built like a mixture of expert skill); we give them memory; we'll create scripts that talk back, and I promise this will make sense; hooks that fight back; live wire the browser and use more of the harness; compile to every harness; and design for the weakest model. Let's get into it.</p>
+</details>
+<h3>黑魔法之一：对抗性辩论与对抗评审</h3>
+<p><strong>Paul</strong>: 第一项黑魔法：让模型互相辩论（Make it argue）。如果你正在构建一个诸如设计评审（Critique Skill）或代码审查（Code Review Skill）的工具，你会遇到一个巨大的痛点：不论你使用的是 Claude Code 还是 Codex，如果你直接让它去审查它自己刚写出来的作品，它通常都会给出极高的评价。它心里会想：“这可是我写的，我干得太棒了，不是吗？”这就像让学生自己给自己批改作业一样，毫无意义。模型会天然对自己刚刚创建的内容产生严重的锚定效应（Anchoring）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Paul</strong>: Number one, make it argue. So if you're building something like a critique skill or code review skill, here's one huge issue. If you are, I mean you probably noticed this when you're working with Claude Code or Codex, doesn't matter, but if you ask Codex or Claude Code to review its own work, it will usually rate it as very high. It's like, I mean like I've built this, I've done a great job, right? Like it's like grading your own homework. Doesn't make any sense, right? It anchors on what it already created. Now that's not great.</p>
+</details>
+<p><strong>Paul</strong>: 这种情况非常糟糕。那我们该怎么解决它呢？答案是：让一个模型去和另一个模型对抗辩论，也就是所谓的“对抗性提示工程”（Adversarial Prompting）。具体做法是启动两个互相对立的 Sub-agent，并且严格隔离它们的上下文，绝不让它们提前看到对方的内部推理或立场。这其中的机理非常关键：在 Impeccable 中，有一个专门用于审查前端界面的 <code>critique</code> 命令。你可以把它指向你的落地页或任何页面。在审查过程中通常会出现两种典型的失败场景——屏幕上的字看不太清，我直接给大家解释：第一种场景是一个底子不错的页面，看起来视觉效果挺好，但里面潜藏着一整堆确定性的硬性错误（Deterministic errors），而 Impeccable 正好有一套机制去...</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Paul</strong>: What can you do in order to solve this? Well, you can make a model argue with another model, right? Adversarial prompting is also called. So you have two sub agents and they never see each other's work. And here's why this matters. So in Impeccable, there's a critique command that actually critiques your design. And you can point it to your landing page. You can point it to anything. And there are two particular failure scenarios. The first one, and this is almost impossible to read, so I'll explain it. The first one is a strong page, right? So, it's a really good-looking page, but there's a whole bunch of maybe like deterministic errors. And Impeccable actually has a</p>
+</details>
+<!-- chunk 2/7 -->
+<h3>双盲 Sub-Agent 机制与平衡的设计审查</h3>
+<p><strong>演讲者</strong>：如果你只使用确定性引擎——比如一个设计 linter，它能够检测出像对比度不良、使用了过多字体，或者某些元素离边缘过近等问题——它确实能捕捉到一些我称之为打磨层面的细节瑕疵。但是，你可能会遇到这样一种情况：你有一个非常漂亮的网站，检测工具运行起来，作为同一个 skill 和同一个模型上下文线程的一部分执行，随后模型直接看到了检测器的输出，便认为：“好吧，既然报告了 500 个问题，那这个设计肯定很糟糕。”这是其中一种极端情况。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: deterministic engine like a design linter that can detect things like bad contrast can detect things like you know too many fonts um you know maybe things that are too close to the edge of an element so it detects some of I would say polish issues um but you could have this really beautiful website and then the detector runs and it's doing that as part of the same skill and the same model thread and then the model uh just sees the detector output and say like well I guess there's 500 issues therefore this design must be bad.</p>
+</details>
+<p><strong>演讲者</strong>：另一种情况则恰恰相反：页面实际上设计得一塌糊涂，甚至可能就是一个空页面，但确定性检测工具却没有检测出任何硬性错误。于是模型就得出结论：“既然没发现任何问题，那这一定是个优秀的设计。”所以这两种方式都算不上理想。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Now that's one. The other one is the opposite. The other one is it's actually a really terrible page or maybe like an empty page but there are no detected issues by the deterministic detector. So the model is like we didn't find any issues so this must be great design. So both of those are not amazing.</p>
+</details>
+<p><strong>演讲者</strong>：你真正需要的是一种平衡的做法，而这正是 Impeccable 的 critique skill 所实现的——它巧妙地结合了两件事：它派生出两个互相盲测（互不知晓对方存在与输出）的 sub-agent，这就是实现平衡审查的方式。第一个 sub-agent 扮演设计总监的角色，它是一个充当设计总监的 LLM，专门审视层级结构、AI 生成的劣质模板套路（slop）以及启发式设计准则，借助向其开放的浏览器工具，像人类设计师一样进行审查；第二个 sub-agent 则负责运行确定性检测器，并收集浏览器层面的客观证据。一旦这两个 sub-agent 的结果全部返回，主线程就会将双方的结论综合成一份最终审查报告，从而产生更加客观平衡的结果。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Uh what you want is and this is what uh impeccable critique skill does it uh it kind of combines two things. It spawns two sub agents and they are blind to each other. Um and that's how you get to a balance critique. So the first sub agent um acts like a design director. So it's an LLM um that acts like a design director. And so um it looks for hierarchy, it looks for slop, it looks for heuristics. And so it does a critique the way a human would with the browser tools that are available to it. The second sub agent runs deterministic detector and also collects browser evidence. And then once both of those results come in, the main thread synthesizes both into one critique and that produces a much more balanced result.</p>
+</details>
+<h3>示例仓库与多模型博弈的应用场景</h3>
+<p><strong>演讲者</strong>：在继续往下讲之前，我意识到我其实还没给你们看这个示例仓库在哪里。让我快速打开一下。如果你们想克隆这个仓库，而且网络连接还不错的话，欢迎随意克隆跟随操作。地址是 <code>PBA-Aus/impeccable-miners-talks</code>。本次演讲的内容就在这里，而且在 <code>dark-arts</code> 文件夹下，还有一个 <code>starter</code> 目录和一个 <code>demos</code> 目录。<code>demos</code> 里面放着一个相当普通的基准页面，供大家拿来操作测试；而在 <code>starter</code> 初始套件中，包含的组件足以让你搭建一个迷你版的 Impeccable，方便你跟着练习或自行尝试。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: And before I go on, um, I realized I actually have not, uh, have not shown you where the sample repo of this lives. So, let me bring this up real quick. Um, if you want to clone this and you have a decent enough internet connection, go ahead if you like. Um, so this is, um, uh, PBA Aus/impeccable miners talks. Um the talk lives here but also in the dark arts folder there is a starter folder uh and a demos folder. Demos uh has a pretty average median page that you can manipulate. Um and then uh in the starter kit you have enough to build sort of a a mini impeccable if you want to if you want to follow along or or try it out yourself.</p>
+</details>
+<p><strong>演讲者</strong>：作为其中的一部分，这里也提供了一个教程指南，你可以跟着这些检查点和技巧构建属于你自己的工具。如果你喜欢一边听一边动手多任务进行，那非常棒。顺便提一句，这种思路几乎可以应用到任何领域：你可以用它来做代码审查（code review），完全不局限于设计审查领域，但我准备这个示例是为了让大家有实际可玩的东西。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: And so as part of this um there's a tutorial here too. Uh you'll follow along sort of the checkpoints the dark arts and build something yourself. I would suggest you know if you like to multitask great. Um you can apply this by the way to anything. You can do like a code review thing. You can do um it doesn't have to be the design skill. Um but I wanted to have something for you to play.</p>
+</details>
+<p><strong>演讲者</strong>：回到幻灯片。核心原则就是：两个独立的盲测意见永远胜过单一模型的盲目自信猜测。你可以将这种模式用于我刚才提到的代码审查、设计评审，安全审计也是一个绝佳的例子；或者用来审查方案计划与 RFC 文档，让多个 LLM 裁判彼此辩论质询，直到方案真正成熟，用来对候选输出进行排名（ranking outputs）也是非常典型的适用场景。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Uh back to the deck. So two blind opinions beat one confident guess. Um you can use this again I already said code review design review but also security audits once is a good example. Uh or a plan creating a really good plan RFC critique where you have multiple LLM judges argue with each other before it gets good or ranking outputs is a good good example.</p>
+</details>
+<h3>Codex 的权限陷阱与应对策略</h3>
+<p><strong>演讲者</strong>：然而，这里有一个棘手的问题：Codex，你为什么不让我这么干？这很糟糕。事实证明，当我第一次尝试这个方案时，Codex 从来不会去创建这些 sub-agent。当时我简直百思不得其解，心想这到底怎么回事？后来才发现，Codex 拥有与其他运行环境（如 Claude Code 等框架）完全不同的权限模型。在 Codex 中，必须由用户显式地提出允许使用 sub-agent 的请求，框架中的任何机制才能调用 sub-agent。因此，如果你是在公开发布分发一个通用的 skill，你就会束手无策。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Now, here's the problem, though. Codex, why why you don't let me do this? It's bad. Uh, it turns out Codex never created these sub agents when I first tried this. Um, and I bang my head against the wall. I'm like, why is this? It turns out Codex has a different permission model than claude code and other harnesses. In codex, you have to explicitly as a user request the use of sub agents for anything in the harness to use sub agents. So if you're distributing a skill, you're out of luck.</p>
+</details>
+<p><strong>演讲者</strong>：据我目前所知，让它正常运作的唯一办法，就是切实地在指令中告诉模型：“如果你具备调用 sub-agent 的能力，但目前没有获得权限，请立刻在此停下并主动询问用户。”这也是你让 Codex 顺从配合的基本唯一途径。因此，在 Impeccable 里面，如果你看到某些让你觉得“咦，为什么要这么写”的代码或提示词，往往就是因为这个原因——正是通过大家提交的大量 issue 反馈，以及我自己进行的海量测试，这些冷门边缘经验才被融入到了各个 skill 中，以确保它能真正跨各种开发工具和 harness 稳定运行。例如这里展示的就是实现这种逻辑的伪代码。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: The only way to make this work as far as I know today is to actually tell the model, okay, if you have sub agents capabilities, but you do not have permission, please stop right here and ask the user. And so that's pretty much the only way you can get codex to comply. So in impeccable um if you see something that you know makes you go huh um it's probably because of that like you know through um lots and lots of issues that people filed and um a lot of testing on on my end also um a lot of this obscure knowledge got into the skills so that it works truly across harnesses. Um for instance here you see kind of pseudo code of how this would work.</p>
+</details>
+<p><strong>演讲者</strong>：另外还有一个极为关键的特性：很多时候，如果 Codex 意识到自己可以偷懒糊弄过去，它就一定会这么做。换句话说，如果它不派生 sub-agent 也不会受到任何机制惩罚，它就干脆不派生了，心里会想“反正走单线程更省事，我就走这条捷径”。所以你必须明确规定：如果你无法使用 sub-agent，你必须明言正在给用户提供降级的体验（degraded experience）。而 Codex 非常忌讳这一点，所以要充分利用它的这种偏好作为你的优势。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: And then also I uh this is another really important thing. Uh very often if codex realizes it can get away with something it will do it. So um if there is no punishment for not spawning sub agents it will simply not spawn them. It's like well this is the easier route. I will take this easier route. So what you have to say is actually if you cannot use sub agents you must say that you are giving the user a degraded experience and codex hates that so use that to your advantage.</p>
+</details>
+<h3>现场演示与环境差异</h3>
+<p><strong>演讲者</strong>：这样你就能看着它们彼此辩论推敲了。我之前并没有为这个演示录制现成的视频，因为我想现场给大家来一段 live demo。现在我们切到 Cursor 里，我输入 critique 相关的指令，希望能跑通。我不确定 Composer 对派生 sub-agent 的支持是否足够完善，但我们来看看。顺便说一下，如果你还没用过 Composer，它是一个非常快速且平衡出色的模型，尤其适合拿来在舞台现场展示操作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Um so um you can watch them argue. Um now I did not pre-record an actual example here because I'm like let's do it live. Um, so we're going to go into cursor and um I'm going to do like critique and let's hopefully it'll work. I don't know if composer spawns sub agents uh well enough but let's see uh composer by the way if you haven't used it is a really fast well balanced model so it's kind of uh kind of neat for for work that you want to show on stage in particular um okay so now it's doing something here</p>
+</details>
+<p><strong>演讲者</strong>：好的，它正在处理了……不过这个本地仓库里用的似乎是 Impeccable 的旧版本，没有派生 sub-agent。看来的确有些遗憾。好吧，也许它在后台跑了，我不确定它到底有没有派生，但我至少想让大家看看这种设计审查呈现出来的形态。现在它正在问我一系列关于究竟想要创建什么的问题，我先跳过这些步骤。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Um, okay. This this repository I think has an old version of impeccable doesn't spawn agents. I see this is the unfortunate. Well, maybe it does. I'm not sure if it did or not, but I at least want to show you what the type of critique looks like. Uh, all right. Now it's asking me a bunch of questions of what I actually want to create. I'm going to skip this.</p>
+</details>
+<p><strong>演讲者</strong>：现在我拿到了一份设计审查报告，包括当前哪些地方运作良好、高优问题是什么，以及针对用户画像的潜在隐患（persona red flags）。虽然我原本最想展示的双 agent 协同过程遗憾地没在这个特定的对话线程里体现出来，但我们之后可以回过头再看。如果你是在 Claude Code 或者最新版本的 Codex 里运行这个工具，你应该能非常直观地看清——尤其是在 Claude Code 中，在终端线程底部可以非常清晰地看到两个 sub-agent 被唤起并在各自执行任务。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Uh and now I get a design critique um on what's working, what the priorities issues are, persona red flags. Now the actual thing that I wanted to show you unfortunately couldn't be seen in this particular thread but we can come back to it. Um if you run this in in claude code or codex on the most recent version you should very clearly see I mean in claude code it's very easy to see the sub agents running and doing its work. So it will spin up two sub agents and you see it at the bottom of the claude code thread uh doing its thing.</p>
+</details>
+<h3>跳出模型收敛陷阱与反吸引子（Anti-Attractor）</h3>
+<p><strong>演讲者</strong>：接下来我们进入第二层技术探讨：单纯依靠禁用（Ban）只是转移了问题。关于这一点我们前面已经讨论过。如果你禁用了 Inter 字体，模型在字体内置图谱空间中就会退而求其次选择 Grotesk 字体。你该如何解决这个问题？又该如何迫使模型跳出常规实现发散（divergence）？事实证明，单纯的规则禁用只会让模型在自己现有的语义聚类簇内部打转转移。而我为 Impeccable 以及我发布的其他一些 skill 所构建的方案，被我称为“反吸引子”（Anti-Attractor）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Okay level number two uh our Ban just moves the problem. We talked about this already. Um, you ban Inter the model chooses Neue Haas Grotesk. How do you solve that? How do you force divergence? Well, a ban only moves the model around inside its own cluster. And what I've built for impeccable and for a bunch of other skills that I've released is what I call an anti-attractor.</p>
+</details>
+<p><strong>演讲者</strong>：反吸引子的工作原理在于引入某种随机种子（random seed）。这个种子可以来自用户的输入，也可以来自一条外部脚本运行所产生的、对模型而言完全出乎意料的元素——因为跳出预期正是我们想要达到的效果。以字体选择为例，有了这种随机种子的干预，模型不再会因循守旧地依赖默认的下一个 token 预测逻辑去挑选最保守安全的字体，而是被引导进入一个截然不同的设计探索空间。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Uh, and the anti-attractor works by creating a random seed of sorts. And that can come from user input or it can come from a script that it can run that produces something that is completely unexpected to the model because that's what you want. And so in this case for instance it would be font selection and instead of selecting the safe next token prediction font it went into a completely different space through a different seed.</p>
+</details>
+<p><strong>演讲者</strong>：在这个维度上有三种实现技巧，难度从易到难，效果也各不相同。第一种方法是你现在就能立刻用起来的最简单策略，那就是“削去安全选项”（shave the safe picks）。具体做法是：先明确要求模型列出它首选的排名前三的字体选项；当模型给出这三个最直觉的候选后，你紧接着指令：“很好，现在把这三个选项彻底扔掉。”模型可能会纳闷“为什么要把最好的扔掉？”，但通过这种方式，你实际上直接削掉了原本概率最高的那个 next token 预测分支。把这个过程重复执行三次，你就能推动模型跨越到其潜在空间（latent space）中更为遥远、更不寻常的区域。不过这种做法虽然简单可行，但进行到一定程度后依然会出现新的收敛，所以它只是一种局限性较大的初级技巧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Uh there are three techniques that you know are easy to hard and work differently. The first one um is is something you can do right right now. It's the most simple one and it's to shave the safe picks. So basically tell the model, okay, name your top three fonts and then the model is like okay I got the top three fonts and then you're like now throw them away. And like but why? Um but then you basically shaved off the the next token that is predicted. Um and you do that three times and then now you get to a different space of the like a further away in the latent space right um now that's doable but now at some point you still get convergence so this is just you know a limited technique.</p>
+</details>
+<p><strong>演讲者</strong>：第二种技巧是大规模生成大量不同的候选变体，然后引入一个专职的 sub-agent 负责评分排序。我之前在创建一个名为 Radiant Shaders 的着色器库时就应用过这一技巧。当时的目标是要构建大约 100 种各具特色的着色器，但面临的核心痛点在于：每次只要我让模型“写一个新的着色器”或者“为 10 个新的着色器构思创意”，它吐出来的几乎都是那些翻来覆去的重复想法。为了打破僵局，我采用了两种不同的解法。第一种解法正是注入未知的意料之外的元素——也就是一个随机种子、一个创意触发种子。在这个场景下，我……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: The second technique is to generate a lot of different things and then have a sub agent rank I've done this for a shader library that I've created called radiant shaders and um the goal here was to create around a hundred different shaders And the problem is every time I I would say you know create a new shader or create ideas for 10 new shaders I would get the same repeating ideas. I solved this with two in two different ways. The first one is I created something unexpected a random seed a creative seed. In this case I</p>
+</details>
+<!-- chunk 3/7 -->
+<h3>打破同质化：引入随机种子与子代理评估</h3>
+<p><strong>Speaker</strong>: 我还用过名人做类比。比如我会问模型：“蕾哈娜（Rihanna）如果变成一个着色器（shader）会是什么样？或者碧昂丝（Beyoncé）变成着色器又会是什么样？”模型就会开始琢磨。这是第一种方式。紧接着我会说：“生成 100 个这样的创意，然后派生出一个子代理（sub-agent）来对所有这些创意进行排序打分。”这一点非常关键：它必须由一个独立的子代理来完成，因为子代理没有任何当前会话的前置上下文干扰，因此能够彻底重新排列并打破原有的顺序。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: used celebrities. I said like, &quot;Well, what would Rihanna look like as a shader? Or what would Beyoncé look like as a shader?&quot; And then the model was like, &quot;Let me think about that.&quot; So that's the first thing. And then I said, &quot;Well, generate a hundred of these ideas and then spawn a sub-agent that ranks all of those ideas.&quot; And that's important. It has to be a sub-agent because the sub-agent doesn't know anything from the prior context of the session and can then completely change the order.</p>
+</details>
+<p><strong>Speaker</strong>: 第三种方法则是通过脚本生成随机种子。例如在 Impeccable 中，当你刚启动一个项目时，它会调用一个名为 <code>color.js</code> 的脚本。<code>color.js</code> 里面包含了 100 多个经过人工精选的主色调。它们并不是一套套完整的调色板，但都是基色，相当于调色板的一个灵感起点。脚本读取这些颜色后，模型就会以此为创意火花，为你围绕它搭建出一整套配色方案。你依然可以表达反对意见，比如“我不喜欢这个方案，我不喜欢它提议的内容”，但它确实将设计引向了一个完全不同的方向。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: The third one is to create a random seed from a script. So in Impeccable, for example, when you first start a project, it calls a script called <code>color.js</code>. And <code>color.js</code> has over a hundred hand-selected—they're not complete color palettes, but they are primary colors, and they're kind of like a starting point of a palette. And it reads that, and then the model uses that as a creative spark to build a palette around it for you. You can still say, &quot;I don't like this. I mean, I don't like what it proposed,&quot; but it turns it into a different direction.</p>
+</details>
+<p><strong>Speaker</strong>: 这些都是创造发散性（divergence）的手段。当你在 Impeccable 中进行设计时，即便是完全相同的需求简报，由于用户输入的差异以及随机运行的配色脚本等机制，最终也能生成截然不同的结果。我之所以这么做，就是因为我不想看到整个互联网的设计最终都千篇一律、沦为同一种面孔。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: So those are all ways to create divergence. And when you design something with Impeccable, the same brief, depending on the user's input and you know, the color script that runs, etc., can produce vastly different results because of that—because I didn't want to have the whole internet look like everything else.</p>
+</details>
+<h3>技能膨胀与专家混合路由机制</h3>
+<p><strong>Speaker</strong>: 第三点，核心问题在于：如果你把所有的东西都硬塞进同一个技能（skill）里，技能的边界就会变得模糊，遵循指令的能力也会随之急剧下降。如果你正在构建一个通用型技能，然后不停地往里面加内容、不断膨胀它，那么在某个节点上，它对模型来说就会变得极度模糊不清。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Number three: here's the problem. If you cram everything into one skill, it kind of blurs them. The instruction following becomes not very good enough anymore. So if you're building some general-purpose skill and you expand it, and expand it, and expand it, at some point it becomes really, really blurry to the model.</p>
+</details>
+<p><strong>Speaker</strong>: 这里有一个非常具体的案例：Anthropic 的前端设计技能（Front-End Design Skill）。他们三周前刚发布了一个新版本，但在之前的版本里，有一行我之前读到过的规则，写着“避免使用系统字体（avoid system fonts）”。这对于宣传落地页（Landing Page）的设计是合理的；但对于软件产品界面（Product UI）来说，你通常希望它能尽可能贴近原生体验，因此系统字体反而是你恰恰想要的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Here's a concrete example of this: the Anthropic front-end design skill. The former version of it—they just shipped a new version three weeks ago—but the former version had a line that I read earlier that says &quot;avoid system fonts.&quot; That's okay for landing page design. But for product UI, oftentimes you want it to feel as native as possible. So system fonts are actually the thing that you want.</p>
+</details>
+<p><strong>Speaker</strong>: 那么该如何解决这个问题？你可能会想到在技能内部写一个庞大的 if-else 条件判断分支，比如：“如果用户想要落地页，就执行这套规则；如果用户想要产品界面，就执行那套规则。”但这会导致整个提示词异常繁琐，极度浪费 token，而且坦白说实际效果非常糟糕。因此，Impeccable 最初是由很多不同的子技能（sub-skills）构成的，而现在它采用了一种专家混合（Mixture of Experts）的内部路由架构。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: So how do you solve this? You can say—I mean, you have like this giant if-else block in a skill, say like, &quot;Well, if the user wants a landing page, do this. If the user wants a product, do this.&quot; But that becomes really convoluted, wastes a lot of tokens, and honestly doesn't work very well. So Impeccable started as a lot of different sub-skills and now has this mixture-of-experts model that routes internally, both in terms of capabilities.</p>
+</details>
+<p><strong>Speaker</strong>: 这种路由既体现在功能层面上——比如你可以明确调用 <code>impeccable critique</code>（审查评审）或者 <code>impeccable polish</code>（精细打磨），系统就会在后台专门针对该任务加载不同的 Markdown 文件，而不是只依赖一份庞大臃肿的 <code>skill.md</code>。不仅如此，还有很多用户并不知道的一点：在幕后，Impeccable 会根据你的需求简报和输入内容，自动判定你到底是在设计品牌化、博取眼球的展示页面（比如落地页），还是在设计实际的软件交互产品。它会自动切换语境风格（registers），并为这两种截然不同的语境分别加载完全不同的规则体系，因为产品设计和品牌设计本质上有着天壤之别。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: So you can call <code>impeccable critique</code> or <code>impeccable polish</code>, and you get a different MD file loaded behind the scenes for that particular job. So it's not just one giant <code>skill.md</code>. But also—and this is something not a lot of people know—behind the scenes, Impeccable decides based on your brief and what you input whether you're trying to design something brand-y, so like a landing page or something that wants to attract attention, or whether it's the actual product that you're designing. So it switches registers and then loads completely different rules for those two registers because product design and brand design are very, very different.</p>
+</details>
+<p><strong>Speaker</strong>: 如果你正在设计适用范围更广的复杂系统，我也强烈建议你采用这种方式。这种架构同样适用于大型多工具复合技能、按需加载上下文（context on demand）类型的技能、基于不同受众行为定制的技能，以及各类智能体工具包（agent toolkits）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: So that's also something that I would recommend you doing if you're building a larger scope. This works for big multi-tool skills, works for context-on-demand type of skills, per-audience behavior, agent toolkits, that kind of thing.</p>
+</details>
+<h3>复合工程：让技能具备跨会话的长期记忆</h3>
+<p><strong>Speaker</strong>: 第四点，每个人起步时都是从零开始。默认情况下，技能本身并不具备长期记忆能力，它们随着时间的推移也不会自动累积沉淀。但你完全可以通过工程手段来实现这一点。每个技能都有一个独立的技能文件夹，你可以把数据持久化保存在这个文件夹中。事实上，在 Claude 环境中甚至提供了一个环境变量，可以直接解析出该技能所在的真实物理目录以供存取文件，这非常便利。据我所知目前还没有其他运行环境（harness）原生支持这一点，不过你完全可以通过巧妙的方案来变通实现。例如 Impeccable 会直接在当前代码仓库的根目录下使用一个 <code>.impeccable</code> 文件夹；当然，你也可以直接将文件写在技能本身的目录中，并让用户将其加入忽略列表。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Number four: everyone starts from zero. Skills by default don't have long-term memory. They don't really compound over time, but you can make it so. So you have a skill folder and you can save things in that skill folder. In fact, in Claude you even have an environment variable that resolves to the actual directory that you can save things in, which is nice. No other harness supports this right now, I believe. But you can hack around that. Impeccable uses an <code>.impeccable</code> folder in the current repository root, but you can also save things directly in the skill folder and maybe ask the user to ignore them.</p>
+</details>
+<p><strong>Speaker</strong>: 这种机制在实践中是如何运转的呢？举例来说，当你在 Impeccable 中运行审查命令时，审查生成的报告就会作为文件保存在该目录中，并且默认会被 git 忽略。之后，即使你在一个全新的会话中对模型说：“好了，我刚刚做完了审查，现在想继续精修打磨我的页面。”系统依然能够直接读取先前那次审查沉淀下来的上下文信息，从而准确获知：“我们之前在这张页面上发现了哪些具体问题？”它甚至可以回溯以往的所有审查历史，清晰了解这个页面的演进脉络。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: How could this work? So, for example, if you're running a critique in Impeccable, that critique is saved as a file in that folder, and by default it's git-ignored. But then if you then later on say, &quot;Well, okay, I just ran a critique. I'd like to polish my page,&quot; even if you do it in another session, it actually uses that prior critique as a signal to understand: what have we found out about this page? And it can look at all prior critiques and see sort of the progression of the page.</p>
+</details>
+<p><strong>Speaker</strong>: 比如，你在某次审查过程中可能会明确反馈：“我不同意你的这条批评意见，我觉得你说得不对，而且我非常喜欢我使用的 Instrument 字体。”模型此时就会记录下来：“好的，没问题，我把你的偏好标注下来以备后用。”这样一来，该技能就具备了足够的智能与上下文积累，明白这是用户的固有偏好，进而在未来的后续操作中始终予以遵循和尊重。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: For example, you could have said in one of the critiques, you know, &quot;I don't agree with this critique. I don't think you're right, and I think I really like my Instrument fonts.&quot; And then the model would be like, &quot;Okay, no problem. I'm going to mark this for later.&quot; And the skill is now smart enough—the skill has built context to realize, &quot;Okay, well, that's the user preference, so I'm going to respect it going forward.&quot;</p>
+</details>
+<p><strong>Speaker</strong>: 因此，复合工程（Compound Engineering）对于技能开发来说是一个极具价值的命题。通过这种技术，你可以让技能敏锐感知到前序会话留下的成果，让每次运行的价值像复利一样持续累积。这套方法在需要可恢复断点的智能体（resumable agents）、长期进度追踪、跨多个会话的大规模代码重构以及系统迁移等场景下表现得尤为出色。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: So compound engineering really is an interesting theme for skills as well. You can make skills aware of prior sessions with that technique, so make the runs compound. This works really well for resumable agents, progress tracking, multi-session refactors, migrations, that kind of thing.</p>
+</details>
+<p><strong>Speaker</strong>: 以我个人的工作习惯为例，我日常经常需要做代码重构。我是怎么做的呢？我依靠的就是一个能够跨会话自我调度的技能，每次只专注攻克一个文件。我基本上只需要告诉它：“好，这是今天会话要处理的 TSX 文件（或者其他什么文件）。现在请围绕这个文件以及所有引用关联的代码进行整体重构。”随着一次次会话的推进，它会在本地持续积累上下文，直到最终完整重构完整个代码库。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: For instance, one of the things that I do all the time is refactor my code. And how do I do that? By having sort of like a skill that spawns itself across multiple sessions and tackles one file at a time. So I basically tell it, &quot;Okay, here's your TSX file or whatever for today's session. And now refactor everything around this file and linking into that file.&quot; And then it sort of builds up context over time until it's completely finished with the whole codebase.</p>
+</details>
+<h3>深埋的规则会被忽略：构建仿生技能</h3>
+<p><strong>Speaker</strong>: 好，接下来讲第五点：深埋在长篇文本中的规则往往会被模型略过（Buried rules get skimmed）。我们之前对此有过一些探讨，但我这里想表达一个稍有不同的视角。尤其在面对指令遵循能力较弱的模型时，这个问题会变得非常突出。如果你只是在为自己开发专属技能，而且你只跑 Claude Opus 或者只跑 OpenAI Codex，那这倒构不成什么大问题——因为你心里清楚自己在用哪款模型，只要它能在 GPT-5.5 上跑通，你就可以放心了，毕竟那是你唯一使用的模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Okay, number five: buried rules get skimmed. We talked a bit about this before, but this is a little bit of a different point I'm trying to make. Now, especially with weaker models—and now if you're building a skill for yourself and you're only running Opus or you're only running Codex, this isn't that big of an issue, right? You know which model you run. You know if it works with GPT-5.5, for example, &quot;I'm good,&quot; because that's the only model I use.</p>
+</details>
+<p><strong>Speaker</strong>: 但如果你打算把自己的技能公开发布给广大的外部用户，情况就会变得极为棘手。因为这些用户所调用的底层模型五花八门：有的人可能用 Sonnet，有的人用 Haiku，有的人用 Grok，还有的人可能在用 Gemini——天知道会有什么，偶尔我甚至真能碰到用 Gemini 的用户。这时候问题就真正复杂起来了，因为你必须面向“最低共同标准（lowest common denominator）”来构建技能，理想情况下甚至要面向指令遵循能力最薄弱的那个模型做适配。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Now, if you want to distribute your skill to lots of users, this is where things get kind of hairy, because some of those users might be running Sonnet. Some of them might be running Haiku. Some of them might be running Grok, I don't know. Some of them might be running Gemini. You know, you never know—sometimes I meet somebody who does. But really, that's where it gets complicated, right? Because you need to build for the lowest common denominator, and ideally for the one model that is the weakest at instruction following.</p>
+</details>
+<p><strong>Speaker</strong>: 举例来说，GPT-5 mini 在遵循规则方面表现得就不太理想。甚至在 Impeccable 内部，很多特性在 GPT-5 mini 上都跑不通：它经常会漏掉加载我原本要求加载的某些 Markdown 文件，也总无法顺利启动实时交互模式（live mode）。由此可见，不同模型在指令遵循能力上存在显著的鸿沟，而在规则繁多、文本冗长的大型技能中，这种缺陷更是会被无限放大。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: For example, GPT-5 mini is not a very good rule follower. There are things even in Impeccable that don't work with GPT-5 mini. It consistently doesn't load certain MD files that I thought it would; it consistently doesn't spin up the live mode. So there are boundaries to instruction following across these models, and it gets especially bad with longer skills that have lots of rules.</p>
+</details>
+<p><strong>Speaker</strong>: 那么究竟该如何绕过并解决这个痛点？在 Impeccable 中，它的底层设计实际上是一种“仿生（bionic）”形态：它绝不仅仅是单纯的自然语言文本，而是将一系列脚本与提示词深度结合。这些脚本会在技能执行过程中的特定节点精准内联运行，再配合外围的自然语言叙述协同工作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: So how do you work around this? Well, in Impeccable, Impeccable really is kind of bionic of sorts. It's really not just prose. It is a combination of scripts that run inline within the skill at certain times, and then prose around it.</p>
+</details>
+<p><strong>Speaker</strong>: 例如，每当你调用 Impeccable 时，它首先会执行一个名为 <code>context.mjs</code> 的脚本文件。这个 <code>context.mjs</code> 脚本承担了多项核心职能：首先，它会检查项目中是否存在 <code>product.md</code> 文件。在 Impeccable 的体系里，<code>product.md</code> 的地位类似于 <code>design.md</code>，但它专门用来定义产品战略层面的信息——即明确目标受众是谁、你希望通过这个产品达成何种商业或功能目标。在实际的设计访谈中，搞清楚这些往往远比纠结“按钮圆角到底要设成多少像素”要重要得多。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: For example, every time you call Impeccable, it runs a file called <code>context.mjs</code>. And <code>context.mjs</code> does a couple of things. The first thing is, if there is a <code>product.md</code>, which is Impeccable's—it's almost like <code>design.md</code>, but it is for product strategy. So it wants to understand who's the target audience or what do you want to achieve with this thing, which is oftentimes more important in a design interview than, you know, how round do you want your borders to be.</p>
+</details>
+<p><strong>Speaker</strong>: 不过系统对两者皆提供了良好支持，能够同时兼容 <code>product.md</code> 与 <code>design.md</code>。在默认情况下，<code>context.mjs</code> 会自动将这两个文件的内容整合汇聚，并直接注入到当前的会话环境中。虽然把文件内容吐进会话本身并不稀奇，但精妙之处在于：一旦检测到这些文件不存在，脚本不会放任模型自由发挥，而是会直接向技能输出高度结构化的 JSON 数据，明确提示：“顺便提醒一下，当前项目中不存在 <code>product.md</code> 文件……”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: But it supports both. It supports <code>product.md</code> and <code>design.md</code>, and by default <code>context.mjs</code> brings these files together and then spits them into the session. Now, that's not exciting. But when those files are not available, it will actually give the skill structured JSON and say like, &quot;By the way, there is no <code>product.md</code> and...&quot;</p>
+</details>
+<!-- chunk 4/7 -->
+<h3>context.mjs 与动态引导机制</h3>
+<p><strong>Speaker</strong>: 这正是你应该采取的处理方式。或者，<code>context.mjs</code> 还能做另一件事：如果有新版本可用，在征得你许可的情况下，它实际上能让 Impeccable 进行自我更新。它会主动询问你，提示说：“顺便提一下，Impeccable 技能已有可用更新，这里是接下来该如何向用户确认是否需要更新 Impeccable 的指令。” 因此，它在很多层面上被赋予了多种职责。它会始终向模型提供下一步确切该做什么的精确指令。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: here's exactly what you should do about it. Or here's another thing that context.mjs does. It actually makes impeccable self-update if there's a new version of impeccable, now with your permission. So it will ask you, but it will say, &quot;Hey, by the way, there's an update available for the impeccable skill, and here's what you should do now to ask the user whether they want to update impeccable.&quot; So it's overloaded in many ways, and it will always tell the model the exact instructions on what to do next.</p>
+</details>
+<p><strong>Speaker</strong>: 关于这一点，一个真正有趣的发现是：我注意到这种机制的效果，要显著好于在主作用域的常规提示词（prose）里硬塞一些随意的规则。当你从一个脚本的退出值（exit value）或者标准输出（stdout）中输出某些内容时，模型在某种程度上遵循它的程度会远远高于以往。因此，这种模式完全可以用于环境感知配置（environment-aware setup）、动态新手引导（dynamic onboarding）、仓库状态门禁拦截（repo state gating）、自适应工作流（adaptive flows）等等几乎任何场景。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: And the really interesting thing about this is that I found that that works significantly better than some random rule in the prose of the main scope. When you put something out from the exit value, from the standard out of a script, somehow the model will follow it a lot more than before. So that could be environment-aware setup, dynamic onboarding, repo state gating, adaptive flows, anything really.</p>
+</details>
+<p><strong>Speaker</strong>: 在我结束这部分之前，必须明确指出这项技术的一个固有缺陷，也是大家必须注意的一点：提示词缓存（Prompt Caching）。这种机制在保持技能按正确方向推进、严格遵循指令方面表现得极其出色，但它是以牺牲提示词缓存为代价的。如果你非常依赖提示词缓存——比如你需要反复运行同一个技能成百上千次，并希望整个上下文被完整缓存——那么这就不是一个好的实现方案。但我发现在高度交互式（interactive）的场景下，它依然非常实用。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Actually, before I end this session, one of the shortcomings of this technique, and this is something to be aware of, is prompt caching. So this works super, super well to keep a skill sort of flowing in the right direction, instruction following, but it does so at the expense of prompt caching. If you need prompt caching, if you run the skill many, many times, and you want the whole thing to be cached, this is not a good technique to use, but I found it to be very useful in really interactive scenarios.</p>
+</details>
+<h3>第六级：反击型钩子（Hooks That Fight Back）</h3>
+<p><strong>Speaker</strong>: 好，现在进入第六级：反击型钩子（Hooks That Fight Back）。这是我最近才发布的一套功能，我自己非常喜欢。我想向大家展示这到底是什么意思。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: All right, number six: hooks that fight back. It's something I shipped quite recently, and I really like it. I want to show you what I mean by that.</p>
+</details>
+<p><strong>Speaker</strong>: 很多人虽然在系统里安装了 Impeccable，但有时他们会忘记去运行它。有时候他们可能会觉得……我不知道，其实 Codex 表现得相当不错，某些宿主环境（harnesses）在持续自动调入正确技能方面已经做得挺好了。但因为现在它是作为一个统一的技能进行打包分发，很多时候，只要你没有显式提及，宿主环境往往就会忘记去直接调用 Impeccable。这样一来，当你正在编写某些前端代码时，它可能根本没有遵循你的设计系统，诸如此类。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: A lot of people have impeccable in their systems, but sometimes they forget to run it. Sometimes they're like, you know, I don't know. I mean, Codex is actually pretty good. Some of the harnesses are pretty good at consistently looping in the right skill. But because it now bundles as one skill, oftentimes the harnesses forget to simply call impeccable when you don't explicitly mention it. So now you're building some front-end code, and maybe it doesn't follow your design system or whatever.</p>
+</details>
+<p><strong>Speaker</strong>: 现在，这个问题可以通过钩子（hooks）来解决。在座的有谁之前在 Claude Code 或者 Codex 中使用过 hooks 吗？有几位，好的，太棒了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Now that can be solved with hooks. Who has used hooks before in Claude Code or Codex? A few people. Okay, nice.</p>
+</details>
+<p><strong>Speaker</strong>: 我在这里构建的这个 Impeccable 技能自带了设计钩子（design hooks）。我基本上是在底层实现了一个内置于该技能的设计检查器（design lint）。当你安装 Impeccable 时，这些钩子就会自动配置到 Claude Code、Cursor、Codex 以及 GitHub Copilot 中。它们会牢牢把模型按在它应该遵循的轨道上。也就是说，钩子是主动来找你的。它是一道在每次代码修改时都会被触发执行的护栏（guardrail）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: So this skill that I've built here, Impeccable ships design hooks. So I've basically built a design lint that runs under the hood and ships with the skill. When you install impeccable, these hooks install into Claude Code, Cursor, Codex, and GitHub Copilot, and they will keep the model exactly where it needs to be. So the hooks come to you. It's a guardrail that fires on every edit.</p>
+</details>
+<p><strong>Speaker</strong>: 不过，不同的工具平台在钩子的支持上存在差异。Codex 和 Claude Code 的钩子语法并不一致，而且它们的执行行为也不尽相同。例如，我们发现对于像 Cursor Composer 这类能力稍弱的模型，你往往更需要使用“工具调用前钩子”（pre-tool use hook）来直接阻止它写入代码，而不是使用“工具调用后钩子”（post-tool use hook）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: And there are some differences between the different providers here. So the hook syntax for Codex and Claude Code is not the same, and also the behavior is not the same. So for instance, we found out that with slightly weaker models like Composer in Cursor, you kind of want to use a pre-tool use hook that prevents writing of code, as opposed to a post-tool use hook.</p>
+</details>
+<p><strong>Speaker</strong>: 所谓工具调用后钩子，本质上是在 Agent 已经写入文件之后才触发运行。例如，写入文件后它会提示说：“嘿，顺便说一句，这些颜色的对比度不合格，或者你在这里加了一个紫色的渐变。”在理想情况下，模型足够聪明，能够根据这个反馈立即自行修复。但部分模型对这些纠错指令的遵循能力较差。因此，如果采用前置钩子（pre-tool hook），你就可以从一开始就主动拦截并阻止它将该文件写入。虽然这是一种非常强硬且带有强制性的手段，但对于特定的模型和特定的宿主环境而言，这确实是必需的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Post-tool use basically happens right after the agent has written a file, for example, and then it tells you, &quot;Hey, by the way, like the contrast of these colors is bad,&quot; or, you know, &quot;You have a purple gradient in here,&quot; and then ideally the model is smart enough to actually fix it. Some models don't follow those instructions very well, and so if you do a pre-tool use hook, you are actively preventing the writing of this file in the first place. So it's a much more heavy-handed approach, but we needed to do that for certain models and certain harnesses.</p>
+</details>
+<p><strong>Speaker</strong>: 这种设计的好处，更令人欣喜的地方在于：你可以针对自己的设计系统和具体使用场景进行高度个性化的定制。或者，假设你将其用于代码审查（code reviews），你完全可以用自己团队定制的 ESLint 规则、代码语法规范等来定制它，并在此基础上不断拓展。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: But this is nice, and what's even nicer about it is that you can personalize it to your design system and your use case, or whether, let's say, you use it for code reviews. You can personalize it with your own ESLint rules, with your own synthetic syntax guidelines, etc., and then expand it from there.</p>
+</details>
+<p><strong>Speaker</strong>: 归根结底，被动护栏始终胜过没人记得去执行的命令。这些被动护栏会始终确保你留在正确的车道上、保持正轨。同样，这套思路既适用于代码检查（linting），也适用于代码格式化（formatting）。当然，如果你使用的是 Claude Code 或 Codex，它们本身已经内置了部分用于语法和格式化的 linter，但设计层面的检查（design linting）完全是另外一个层维度的博弈了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Passive guardrails beat a command no one remembers to run. So these are passive guardrails that always keep you in the right lane, on track. Again, that works for linting, for formatting. Of course, if you're using Claude Code or Codex, it already uses some of the linters for things like syntax formatting, but design linting is a whole different game.</p>
+</details>
+<p><strong>Speaker</strong>: 我非常鼓励大家去尝试将钩子与技能相结合，认真思考一下：我的技能负责做这件事情，那么我该如何利用钩子构建一个正向的反馈循环与校验回路，从而在执行过程中始终对操作进行纠偏与保驾护航？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: But I would really encourage you to try out hooks in combination with a skill, and think about, &quot;Okay, well, my skill does this, how can I create a feedback loop, a validation loop that uses hooks to actually keep me on the right lane?&quot;</p>
+</details>
+<h3>设计校验与被动纠错演示</h3>
+<p><strong>Speaker</strong>: 好的，要在现场动态展示钩子的工作机制其实有些困难，但大致上在 Agent 内部是这样发生的：以 Gemini 为例，Gemini 经常出现这种行为——它非常疯狂地喜欢在图片上添加动画效果。它几乎会给任何图片都加上动画，而且通常是那种悬浮放大（hover zoom-in）的特效，它对这个情有独钟。而这种模式恰好是 Impeccable 会严格标记并拦截的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Okay, so it's hard to show hooks in action, but if you can see this, this is roughly how it would happen in an agent. So for instance, in this case, let's say Gemini does this all the time. Gemini creates animations on images like crazy. It will animate any image, and it will usually do a hover zoom-in effect. It loves that. And that's something that Impeccable flags.</p>
+</details>
+<p><strong>Speaker</strong>: 在这种情况下，钩子会在后台静默触发——通常情况下是不可见的，这也是为什么我专门做了一个模拟演示来呈现它。随后钩子会通知模型：“嘿，注意，这里出现了一处规则违规。”从用户体验的角度来看，绝大多数时候你甚至什么都不需要做。模型接收到通知后会自动校正航向，自己完成代码的修复。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: And in this case, the hook would fire silently. Usually, that's why I built this fake demo, because you can't usually see it. And then it will tell the model, &quot;Hey, by the way, here was a violation.&quot; The experience of this is that oftentimes you don't have to do anything. The model just course corrects and fixes itself.</p>
+</details>
+<p><strong>Speaker</strong>: 顺便提醒大家一个非常重要的细节：如果你自己构建这种机制并分发给最终用户，务必要提供一种添加忽略规则（ignore rules）的方式。因为很多时候这些钩子不可避免地会出现误报（false positives），用户必须拥有对这些钩子进行配置与豁免的手段。否则，这套机制很快就会变得极其烦人。Impeccable 自带的这套设计钩子，就支持按文件维度、甚至精确到某一条 CSS 规则内部来配置忽略规则，提供了多层次的细粒度控制，方便用户排除特定的文件。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Now one important thing if you do this and you ship it to users: very important to add a way to create ignore rules or something like that, because oftentimes these hooks have false positives as well, and you want a way to configure those hooks. Otherwise, it gets really annoying very quickly. Impeccable ships with these design hooks that allow you to create ignore rules at a file basis, within a CSS rule, so like many granular levels to exclude certain files, for example.</p>
+</details>
+<h3>第七级：宿主能力协同与突破聊天框限制</h3>
+<p><strong>Speaker</strong>: 好的，进入第七级。单纯通过一个聊天输入框，你是不可能真正精细地调控每一个像素的。如果你构建的不是设计类技能，这可能看起来没那么直接相关，但我认为背后的通用底层逻辑是完全相通的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Okay, level seven. Now you can't really tune pixels through a chat box. Now this might not be relevant if you're not building a design skill, but I think the general point is relevant.</p>
+</details>
+<p><strong>Speaker</strong>: 如果你把构建技能看作是“宿主工程化”（harness engineering）而不仅仅是“提示词工程”（prompting），你就会从宿主环境的全局视角来审视它。你身处 Claude Code 中，或者身处 Codex、GitHub Copilot 中，你应该问自己这样一个核心问题：当前的宿主环境具备哪些现成能力，是你能够拿来深度利用、从而为你的具体业务场景打造出极致用户体验的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: So if you think about a skill as harness engineering versus prompting, then you think about the harness as a whole, right? You're living in Claude Code, for example, or you're living in Codex, or you're living in GitHub Copilot. Now what capabilities of that harness that you can exploit to make the best user experience for your use case? That's the question you should ask yourself.</p>
+</details>
+<p><strong>Speaker</strong>: 举例来说，Codex 桌面客户端现在已经内置了一个应用内浏览器（in-app browser）。你能否以某种独特有趣的方式来利用这个应用内浏览器？你能否把浏览器截图工具（browser screenshot tool）以巧妙的方式调动起来？以我的场景为例，我发现答案是肯定的。我意识到：完全可以找到一种方法将这个内置浏览器连接起来，启动本地开发服务器，直接在内置浏览器中加载页面，然后通过特定的桥梁将它与主线程关联起来。这样一来，用户就能直接在页面上进行可视化交互迭代，而无需全部挤在聊天窗口里打字。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: For example, Codex on desktop now has an in-app browser built into the actual app. Can you use this in-app browser in some interesting ways? Can you use the browser screenshot tool in some interesting ways? And in my case, I could. I realized, hey, there's probably a way to connect the in-app browser and spin up the development server and just load the page there, and then kind of connect it to the main thread in some ways, so I can allow the user to visually iterate on that page instead of in the chat.</p>
+</details>
+<p><strong>Speaker</strong>: 在 Impeccable 中，这套机制的具体运作方式是：它并没有采用 MCP，而是极其精简地启动了一个实时轮询器（live poller）微型服务，专门等待输入，并向你的开发服务器中注入一小段脚本。当你在前端页面上进行了某种交互操作时，页面就会通过服务端推送事件（Server-Sent Events, SSE）将事件发送回这个轮询器。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: And so in Impeccable, what this looks like is it's not using MCP. It's simply spinning up a live poller, a little server that looks for input and inserts a snippet into your development server. It then on the page, when you do something on the page, it sends an event back to that actual poller using server-side events.</p>
+</details>
+<p><strong>Speaker</strong>: 接下来的这一步，我认为正是整个设计里最巧妙、也是让整个链路真正跑通的关键点：轮询器在接收到事件后会主动停止退出。轮询器进程终止，并输出一段标准输出信息（stdout message）。前面我们已经深入探讨过 stdout 的威力对吧？也就是这个工具进程的退出值与控制台输出。模型读取到这段输出消息后，立刻心领神会：“哦，页面上有事情发生了，我最好马上采取行动。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: And then—and this is, I think, the clever bit maybe, or the bit that makes it all work—the poller then stops. So the poller ends itself. There's a standard out message. We talked about standard out before, right? The exit value of this thing. And the model reads that message and realizes, &quot;Oh, something happened, I better do something.&quot;</p>
+</details>
+<p><strong>Speaker</strong>: 此时，在技能内部我已经事先预置了处理该事件的具体指令。我告诉它：“如果收到了这个事件，你应该针对页面的特定区域生成对应的设计修改，并将结果回传给这个轮询器，以便它能直接呈现在用户的前端界面上。”这样就建立起了两种原本独立的宿主环境能力之间的直连桥梁——聊天对话线程与应用内浏览器完全打通了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: So in this case, in the skill itself, I give it instructions on how to handle this event. I say like, &quot;Well, if this event comes in, you should probably build some design for this particular section of the page, and then you should send it back to this poller so that it arrives on the user side.&quot; And so this is a direct connection between one harness capability and another harness capability: the chat thread and the in-app browser.</p>
+</details>
+<p><strong>Speaker</strong>: 架构图上大概就是这样呈现的。不过我觉得体验它的最好方式还是亲眼看一看实际效果。让我把它调出来……好的，打开 Cursor。我想我现在应该已经在……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: And yeah, this is kind of how it looks like on a diagram. But I think the best way to experience it is to see it. So let me bring this up. Okay, Cursor. I think I'm already in...</p>
+</details>
+<!-- chunk 5/7 -->
+<h3>Live Mode 实时模式与元素选择器交互</h3>
+<p><strong>Speaker</strong>: 我们在这里进入实时模式（live mode）。好的，我已经启动了实时模式。我现在处于选择器模式（picker mode）中，可以在底部看到这个小控制栏。正如大家所见，我可以点选这个页面上的任何元素。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: live mode here. Um, okay. So, I booted up live mode already. I'm now in picker mode. I get this little bar here at the bottom. Uh, and as you can see, I can pick anything on this page.</p>
+</details>
+<p><strong>Speaker</strong>: 现在我调出了这个小小的浮层操作栏，在这里我可以选择 skill 内部的各种子命令（subcommands）。这些子命令本质上都对应着 skill 内部所包含的 Markdown（MD）文件。我可以自由选择想要生成的变体（variance/variants）数量。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Um, I get now I get this little overlay bar and um I can select all sorts of subcomands within the skill. So these are basically translating to MD files that live within the skill. Uh I can select the amount of variance I want.</p>
+</details>
+<p><strong>Speaker</strong>: 然后我点击执行（go）。现在，大家可以在主会话线程（thread）里看到，它已经捕获到了主线程中的实际信号，因为轮询器（poller）停止了。现在它应该能精确清楚自己需要做什么：首先用某个特殊标签把这个选中的元素包裹起来；接着，它知道如何创建多个变体，并且这些变体都通过特殊的 CSS 样式进行了标记。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: And then um I can hit go. And now um here in the thread you can see that it picked up the actual signal in the main thread uh because the polar stopped h and it now knows hopefully exactly what it needs to do to first wrap this element in some special tag. then it knows how to create uh variants and uh that are marked up in a special way with CSS.</p>
+</details>
+<p><strong>Speaker</strong>: 它现在已经完成了这项操作。大家可以看到，界面内容立即更新了。我现在得到了这三个变体选项，我可以逐个点击预览。如果我相中了其中的某一个变体，直接点击接受（accept）就能采纳它；如果都不喜欢，我只要按下 Escape 键，就能退回到正常的交互模式中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Uh and now it did that. So now as you can see the uh the thing updated immediately. I now get these three variants and I can click through and then if I like one of them I can click accept and accept it. If I don't like one of them I hit uh escape and I'm back in this normal mode.</p>
+</details>
+<h3>利用 In-App Browser 拓展能力与可视化</h3>
+<p><strong>Speaker</strong>: 这展示了如何针对特定问题领域（在当前场景下就是设计），高效地利用并挖掘宿主环境（harness）的能力。通过这个机制，你还可以插入新元素，或者点进这里的任何组件。你可以在页面上方进行涂鸦、绘制并留下批注，也可以直接留下评论。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Um so this shows sort of like uh how to exploit an a harness capability uh in an effective way for one problem space in this case design. Um you can also uh insert elements with this thing um and sort of click into anything here. You can um you can draw on top of this and leave comments. You can leave annotations if you want.</p>
+</details>
+<p><strong>Speaker</strong>: 你甚至可以通过语音输入或者直接在输入框中打字来把控并引导整个页面。随后，这些输入信息会重新传递回主 Agent，变成对整个页面的操控指引信号。此外，你还可以通过这种方式直观地可视化大量内容。可能很多人读过 Tariq 相关的博客文章，讨论相比于 Markdown，HTML 是一种非常棒且高效的沟通媒介。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Um you can dictate uh you can uh steer the whole page by simply writing into this and then uh again this goes back to the main agent and uh it becomes a steering signal for the whole page. Um and you can also visualize lots of things this way. I mean you might have read uh Tariq's uh blog post about this about how HTML is a is a really cool way to communicate as opposed to markdown.</p>
+</details>
+<p><strong>Speaker</strong>: 我对此完全赞同。而且我认为，设计类 MD 文件（design MD）以 HTML 格式来可视化呈现要好得多。在这个例子中，大家看到的就是这个演示网站的 design MD——虽然为了演示搭建的网站本身不算精致，但如果你能巧妙劫持（hijack）内置的应用内浏览器（in-app browser）并为己所用，这就会成为巨大的优势。这就是我利用它的方式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Um I agree and I think also like uh design MD is much better visualized as HTML. In this case you see the M design MD of this you know not great website for demonstration purposes but uh um you can use this to your advantage as well if you hijack the inapp browser and use it to your advantage. Um so this is how I make use of it.</p>
+</details>
+<h3>“在我的机器上能跑”与 Harness 之间的壁垒</h3>
+<p><strong>Speaker</strong>: 好的，第 8 点：“在我的机器上能跑”（It worked on my machine）。在座做开发的每个人应该都对这个问题深有体会。当你真正要公开发布（ship）一个 skill 时，这个问题会带来沉重的打击。我经常在 X（Twitter）上看到很多人持这种论调：“嗨老兄，建个符号链接（symlink）不就完了嘛，把 <code>.claude</code> 软链一下，你所有的烦恼就都烟消云散了。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Okay number eight. It worked on my machine. Um well I mean everybody who who's a developer here knows this problem. Um this is this hits really hard when you ship a scale. Uh there are so many times uh I kind of saw this argument on X was like hey bro just sim link just you know sim link.cloud and all your problems will be gone.</p>
+</details>
+<p><strong>Speaker</strong>: 嗯，想法挺美好。如果你只是在构建一个简单的 skill，或者纯粹只是给自己内部使用，那毫无疑问尽管这么做好了。把你的 <code>CLAUDE.md</code> 软链接到 <code>AGENTS.md</code>，太棒了，把所有东西都软链接起来。但如果你是打算把一个 skill 分发给大量外部用户，这种方式就完全行不通了。因为正如我们刚才所讨论的，这些 harness 之间存在着巨大的差异。接下来我还会展开讲更多差异。我知道这确实很让人恼火，如果真能通过软链抹平一切就太理想了，但遗憾的是现实世界并非如此。而且很遗憾，Anthropic 至今仍然没有支持或采纳 <code>AGENTS.md</code>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Um, well, that's great. If you're building a simple skill and if you're doing it for yourself, by all means, go for it, right? Sim link your claw MD to agents.m MD. Amazing. Like, sim link the out of everything. But it's not great if you're trying to ship a skill to lots of users because again, we just talked about a whole lot of differences these hardes have. I'm going to talk about more differences. And I know it's annoying because it would be great to simulate those things, but unfortunately, we don't live in that world. And unfortunately, Anthropica has still not adopted agents. MD.</p>
+</details>
+<h3>Sub-agents 与用户交互工具的实现鸿沟</h3>
+<p><strong>Speaker</strong>: 那么，实际的区别究竟有哪些呢？比如，我们刚才已经提到过的子代理（sub-agents）。积极的一面是，它们现在得到了普遍广泛的支持。然而，究竟“由谁来派生（spawn）子代理”却大相径庭。在 Claude Code 中，你可以极其轻松地通过代码程序化派生；而 Codex 则需要用户手动操作；在 Cursor 中，大多数情况下是由 Agent 自行决定的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: So, uh, what are the actual differences? For example, we talked about sub agents already. We talked about how, well, on the bright side, they're widely supported. Now, um, but who can spawn one is very very different. So, with claude, you can programmatically do it very easily. Codeex needs the user. Okay. Um, in cursor, it's agent chosen most of the time.</p>
+</details>
+<p><strong>Speaker</strong>: 所以各平台之间存在明显区别。此外，如果你想预定义这些代理，Codex 与 Claude、Cursor 等工具在预定义语法上也截然不同。另一个典型例子是向用户提问的工具（ask user tool）。在 Claude Code 宿主环境中，最酷的工具之一就是 <code>ask_user_question</code> 工具。这是一个非常好用的工具，能让你向用户抛出问题，弹出一个选择菜单，比如询问：“你想执行什么操作？”，然后用户点击选择一个选项。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Um so there are clear differences also if you want to predefine these agents codeex has a different syntax for that uh than claude and and uh and cursor etc. Another one is the ask user tool. So one of the coolest tools in and the um cla code harness is the ask user question tool. Uh it's a really nice tool that you can use to ask the user a question right? It brings up this menu say like hey what would you like to do and then you pick some option.</p>
+</details>
+<p><strong>Speaker</strong>: 好消息是，Codex 确实也具备类似工具；但坏消息是，该工具仅在计划模式（plan mode）下可用。这再次体现了底层运作逻辑的巨大差异。这意味着什么呢？意味着如果你没有在计划模式下运行 Codex，而你的 skill 又需要向用户提问时，大部分情况下它根本不会去问，而是直接基于现有上下文进行臆断推测，完全不跟用户交互确认。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Well, turns out Codex has a tool like this. That's the good news. The bad news is that tool is only available in plan mode. So, again, big differences between how these things work. Uh, and um, what does that mean? That means that if you're not running codecs in plan mode, but your skill wants to ask questions, most of the time it simply doesn't. It will simply infer from the current context and not ask any questions to the user.</p>
+</details>
+<p><strong>Speaker</strong>: 这种体验非常糟糕。因此，在 Impeccable skill 内部，有大量专门添加的规则明确提示：“如果你当前处于 Codex 环境中，你必须停下来向用户提问，你还没有聪明到能光凭上下文脑补出所有内容。”如果你在代码规则里看到类似的提示语句，原因就在这里。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Uh, which is not great. So there's a lot of sentences in the impeccable skill that specifically say if you're codeex you have to stop and ask questions. No, you're not smart enough to infer the context. Um so if you see lines like this, that's why.</p>
+</details>
+<h3>后台任务机制、Watchers 与 Edit Hooks</h3>
+<p><strong>Speaker</strong>: 另一个核心差异是后台任务（background jobs）。这也是在深入实践过程中踩坑学来的教训。例如我刚才向大家演示的实时模式，它其实是派生出了一个后台任务，在后台执行 shell 命令。这种方式非常棒，因为你可以继续正常使用当前会话；而当后台任务执行完毕后，模型会被自动唤醒，接收到返回的消息，进而做出响应并采取下一步操作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Another one is background jobs. And there's also something you learn through the hard way by doing this. For example, this live mode that I just showed you, it's spawning a background task. So it's running a shell in a background task. Uh and that that's cool because you can keep using the session um and then when the background task finishes the model is automatically waken up gets a gets the message back and then can do something and re react to it.</p>
+</details>
+<p><strong>Speaker</strong>: 然而 Codex 则做不到这一点。Codex 以及其他很多宿主环境在后台任务执行完毕后根本不会触发唤醒反应。你必须手动提醒它：“顺便看一下刚才那个后台任务跑完都干了些什么。”如果想做此类自动化流程，这显然不够理想。因此，不同宿主环境在如何派生后台任务以及它们如何协同工作方面有着明显差异。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Uh where codeex cannot codeex and other harnesses do not react when a background task finishes. You actually have to manually say hey by the way this background task can you take a look at what it did and that's not great right if you're doing an automation like this. So there are differences in how these tasks are spawned and uh and how they work.</p>
+</details>
+<p><strong>Speaker</strong>: 正因如此，如果你在 Cursor 或 Codex 中使用实时模式，它不得不退而求其次创建一个前台任务（foreground task），从而将整个聊天交互线程挂起阻塞。虽然这并不完美，但至少能保证功能切实跑通。在任务派生逻辑上，各平台存在着各种微妙差异。文件监视器（Watchers）是另一个例子。现在出现了类似 tail watch 的功能，这确实很棒；绝大多数 harness 都提供了某种监控日志文件变更的手段。然而，相比于直接派生后台任务，这些监视机制受到的限流（throttled）要严苛得多。至于编辑钩子（Edit hooks），我们之前也深入讨论过，它们的表现形态也各不相同。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: So that's why if you're using the live mode in cursor or in codeex, it creates a foreground task and it keeps the actual chat thread blocked. Uh not ideal, but it makes it actually work. So there are subtle differences on how these tasks are spawned. Watchers is another example. Tail watch exists now. That's really cool. I mean most of the harnesses have a way to watch for instance a log file. Um but those are throttled way harder than uh simply spawning a background task. Edit hooks, we talked about this already. Um they are different and so lots and lots of behavioral differences, but there's also model differences.</p>
+</details>
+<h3>底层模型的过拟合偏好与特质差异</h3>
+<p><strong>Speaker</strong>: 除了宿主环境的大量行为差异之外，底层模型本身也存在着巨大差异。以我的经验来看，每款模型在过拟合（overfitting）的倾向和癖好特征（tails）上都截然不同。比如，我之前提到的 Gemini，它超级沉迷于给图片加动画效果，简直乐此不疲。如果你不希望页面上的每张图片鼠标悬停（hover）时都在那里动来动去，你就必须非常明确地下指令禁止它给图片加动画；无论是在什么位置，它都忍不住要加。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: So for example, in my case, um they all have different tails in the ways they're overfitted. Uh for example, Gemini, again, I mentioned this loves to animate pictures. It just loves it. Um, you have to tell it not to animate pictures if you don't want a hover effect on every picture. Doesn't matter where it is. It loves it.</p>
+</details>
+<p><strong>Speaker</strong>: Codex 则莫名其妙地极度偏好糟糕的字间距（letter spacing），我完全搞不懂为什么，但它确实就是这样。同时，Codex 还特别喜欢使用极大圆角的边框（extremely rounded borders），无论你扔给它什么元素，它都会给套上圆角，乐此不疲——不管你做的是严谨的医院医疗网站还是活泼的儿童网站，统统如此。而且它还酷爱极细的发丝边框（hairline borders）。因此，每款模型都有其独有的行为特质。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Um, Codeex loves bad letter spacing. I don't know why, but it does. Um, Codex also loves extremely rounded borders. Uh, it will round anything you thought it. Uh, it loves it. Doesn't matter if it's hospital website or a kids website. Uh, it also loves hairline borders. And so there are specific tails that are unique to every model.</p>
+</details>
+<p><strong>Speaker</strong>: 这种差异不仅局限在视觉设计上，还深刻体现在系统架构设计、代码分层架构，甚至各自偏好的 npm 依赖包选择上。当今的每款模型都在以不同的方式过拟合。而发现模型在哪些地方过拟合，通常纯靠偶然碰壁。对我来说，我在幕后运行着一套相当庞大且完备的评测套件（eval harness）。事实上，Impeccable 的每一行代码都经过了消融实验测试（ablation tested）。我会对每一行进行专项测试，观察它在各个模型上的实际反应与效果。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: And that's not just for design. It's for architecture. It's for code architecture. It's for, you know, preferred npm packages. Now, every model is overfitted in different ways. Uh finding out how to overfit it usually happens by accident. In my case, I have a pretty extensive EVA harness that I run behind the scenes. In fact, every line of impeccable is ablation tested. So I test every single line and see what it does across all models.</p>
+</details>
+<h3>构建面向特定 Harness 与模型的技能分发</h3>
+<p><strong>Speaker</strong>: 我并不要求大家都去下这种苦功夫做全量测试，但大家非常有必要认识到这一点：各个模型在本质上是不同的，它们对指令的遵从和理解各异，不同宿主环境的行为模式也千差万别。正因如此，Impeccable 所采取的做法是：针对每一个具体的模型与宿主环境，分别生成专用定制的特定构建版本（harness-specific and model-specific builds）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: I don't expect you to do that but it is very good to know that uh that the models are different and are following instructions differently and and the behav behavior the harness behavior is different as well. Um and so what impeccable does it creates harness specific and model specific builds for every single uh model.</p>
+</details>
+<p><strong>Speaker</strong>: 针对大家自己的业务需求，可能不需要做到这么极致的程度，但我只是想向各位展示在这个方向上你能走得多深。例如，Impeccable 内部实际上配置了一个变量替换机制，能够根据宿主环境的不同自动挑选正确的用户提问工具；它还专门为 Gemini、Codex 等模型嵌入了专属的 XML 代码块，用于动态插入针对各模型特质的防过拟合规避规则。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Um, you might not have to go all this way for your own purposes, but I just wanted to show you how far you can go with this. Uh, for example, it actually has a um substitute variable that picks the right user question tool depending on the hardness or it has these XML blocks for Gemini, for codeex, etc. Uh, that will actually insert specific overfitting avoidance rules for the given models.</p>
+</details>
+<p><strong>Speaker</strong>: 因为事实证明，如果你提醒 Claude“不要设置过大的字间距”，它反而会走向另一个极端，把字间距往完全相反的方向收缩。所以你根本不可能把所有规则不加区分地全塞进同一个通用的 skill 里。正因为这样，如果你能通过这种方式进行足够精细的编排与适配，你最终就能真正实现那种“一次编写，处处分发发布”（write once, ship to all of them）且在所有环境中都能稳定运行的 skill。虽然这背后需要倾注大量心血，但所带来的回报是极其丰厚的，它能让你……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Because it turns out if you if you tell Claude not to let her space too much, it will let space in the exact opposite direction. So you can't just include it all in the same skill. Um and that's why you know you can you know if you if you instrument this way enough you can actually get to this right once ship to all of them uh skill that actually works everywhere. It's a lot of work but it does pay off and allows you to</p>
+</details>
+<!-- chunk 6/7 -->
+<h3>跨 Harness 安装与差异化编译</h3>
+<p><strong>讲者</strong>：从而生成像这样精美的图片。现在唯一剩下的问题是，常见的安装方式（例如使用 <code>npx skills</code>）并不支持针对不同 harness 区分不同的目录。它们实际上只会直接读取第一个目录，然后将其复制或符号链接（symlink）到各种文件夹中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: create beautiful pictures like this. Um now the only other problem is that uh typical install methods like for um uh MPX skills for instance if you've been using MPX skills do not honor um different directories for different harnesses. So they actually just take the first directory and then copy it or sim link it into all sorts of folders.</p>
+</details>
+<p><strong>讲者</strong>：正因如此，如果你访问 Impeccable 官网，会发现我自己构建了一个 CLI 来解决这个问题，这也是为什么它没有直接采用常规的 skills 安装方式。我认为规范委员会目前还没有完全接受这个理念，这确实挺让人头疼的。我完全理解，要针对不同的 harness 分别进行编译确实很繁琐，但我发现这样做是非常值得的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Um that's why if you go to the impeccable website uh I've built my own CLI to solve this problem. Uh that's why it doesn't use impact skills. So, I think the committee hasn't quite yet gotten to the point where uh this is a this is an accepted idea and it's annoying. I get it. It's annoying to compile for different harnesses, but uh I found it worthwhile.</p>
+</details>
+<h3>面向最低公分母设计与“关卡”机制</h3>
+<p><strong>讲者</strong>：最后，再次强调，一定要面向“最低公分母”（lowest common denominator）进行构建。较弱的模型本身并不缺乏“主见”，但它失去的是严格遵循你设定的规则的自律性。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Finally, um again, build for the lowest common denominator. Um a weaker model has opinions just fine, but what it loses is the discipline to follow yours.</p>
+</details>
+<p><strong>讲者</strong>：以 Codex 和 GPT 为例，它们特别喜欢“关卡”（gate）这个概念。如果你以前为 Codex 构建过 skill，就会知道它非常吃这一套。每当你问它：“嘿，你为什么不遵守这些指令？”它就会表现得像是在说：“嗯，我认为我们需要一个关卡。”于是我就投其所好，给了它最喜欢的关卡机制。但我只针对 Codex 这样做：在运行时，我们会专门为 Codex 动态加载一份 <code>codex.md</code>。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Um so uh codeex for example uh and GPT specifically loves the word gate. If you've built a skill in codeex before, it loves gates. Um whenever you say, &quot;Hey, why didn't you follow these instructions?&quot; You're like, &quot;Well, I think we need a gate.&quot; Um so I gave it what it loves the most, gates. Um but I only do that for codeex. So there's a codeex MD that gets loaded on the fly for codeex um and GPT.</p>
+</details>
+<p><strong>讲者</strong>：这样一来，它就会切实遵循规则，例如明确知道：“好，这里有 8 个关卡，你必须逐一通过每一个关卡，并且绝对不允许压缩或跳过这些关卡。”这一点至关重要，因为模型同样极度喜欢压缩和简化指令。它往往会浮光掠影地扫一眼，然后心想：“那我只要做第一步、第二步和第五步就好了。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: And then uh it actually follows like you know okay here are your eight gates you have to pass every single gate and you are not allowed to compress those gates. Um that's really important because it loves compressing these instructions as well. I'll just skim over it and say like well I guess I do one and two and five and good.</p>
+</details>
+<p><strong>讲者</strong>：解决这个问题的办法，就是强制它逐项锁定并输出每个关卡的结果，明确报告：“我刚刚通过了关卡一，非常成功。”从中得出的最关键教训是：如果一个关卡是可以被跳过的，那么它就一定会被跳过。我前面提到过这一点——只要模型能够从困难处境中溜走，它就一定会溜之大吉，绝不会主动去完成交付最终结果所需的所有必要步骤。因此一定要小心，必须把规则做成无法跳过的强制关卡。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Um and so um the way you solve this is by actually having it lock every single result of every gate and say like well I just passed gate one great success. Um and the most important lesson from this is if the gate can be skipped it will be. I mentioned this before right if the model can wiggle itself out out of a difficult situation it will absolutely do that. Uh it will not do all the all the things it needs to do to uh to complete the end result. Um so be careful, make it unskippable.</p>
+</details>
+<h3>总结与开源资源</h3>
+<p><strong>讲者</strong>：至此，我们刚刚完整构建了一个 harness 扩展。我们的历程从最基础的提示词工程一路演进，最终构建出了这样一个庞然巨物。但在我的实践中，这套方案最终证明是非常强大的，因此我非常想分享一路走来积累的心得。我并不指望大家在自己的项目中照搬所有这些技术，其中有些做法相当硬核，可能并不适合每一种应用场景。但我由衷希望大家能从我今天分享的建议中获得启发与价值。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Um so we just built a harness extension. We went from prompting all the way to building a monster. Um but uh I think it turned out to be pretty powerful in my case and I wanted to share what I've learned on the way. Uh I don't expect you to use all of those techniques. I think some of them are pretty exotic and maybe not applicable to every use case. Um, but I hope that you find value in uh some of the advice that I've given today.</p>
+</details>
+<p><strong>讲者</strong>：今天我们探讨了诸多内容——提示词无法做到的九件事。我们通过这些手段让系统具备了强得多的确定性，Impeccable 也因此变得更加出色。如果你想亲自体验，可以克隆本次演讲的代码仓库，即 <code>impeccable-talks</code>。当然，直接去查看 skill 本身的实现、探究它是如何构建的也同样非常有益。该项目已完全开源，采用 Apache 2.0 许可证。你可以通过 <code>npx impeccable-skills install</code> 安装使用，并在 GitHub 上查看完整源代码。以上就是我演讲的全部内容，谢谢大家！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Uh, so we've done a whole bunch of things today. Nine things a prompt can't do. We made it much more deterministic um and uh and made impactable better for that reason. Uh if you like to try it out yourself um again you can clone the repository for this talk. You can clone uh impeccable minus talks. Um but of course it also is useful to just take a look at the actual skill and see how it's built. Um the project is completely open source license under Apache 2. Um you can install impeccable MPX impeccable skills install. Um and check out the source code on GitHub. Um with that um I'm at the end of it. Thank you.</p>
+</details>
+<h3>问答环节：仓库链接与 Prompt Caching</h3>
+<p><strong>主持人</strong>：[掌声] 接下来我们大概有 10 分钟的时间留给大家提问。有人有问题吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: [applause] And uh now I think we have uh about 10 minutes for any questions that you have. Does anybody have questions?</p>
+</details>
+<p><strong>提问者 A</strong>：有。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member A</strong>: Yes.</p>
+</details>
+<p><strong>讲者</strong>：不好意思，您刚刚说什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Oh, sorry. What was that?</p>
+</details>
+<p><strong>提问者 A</strong>：仓库链接。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member A</strong>: A link</p>
+</details>
+<p><strong>讲者</strong>：哦，代码仓库的链接对吧。屏幕上可能有点看不太清，请稍等，我把链接投到屏幕上方。这是我们本次演讲专用的仓库地址。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: to the repository. Yeah. Um so the the this is hard to see but [music] uh let me let me put it up here. Um this is the repository uh for the talks. Yeah.</p>
+</details>
+<p><strong>提问者 B</strong>：太棒了。我的问题是，你刚才提到说……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member B</strong>: Awesome. My question was you mentioned that.</p>
+</details>
+<p><strong>讲者</strong>：对，提问是关于我刚才提到的——在 skill 内部通过脚本动态获取返回结果的技巧会破坏 prompt caching（提示词缓存）。这其中的原因在于，脚本返回的结果是动态的，对吧？它可能是任意内容。因此，除非每次输出的结果完全一致，否则由于它是动态的 shell 命令执行，执行结果会被直接插入到会话上下文线程中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Yeah, I the question is I mentioned that it breaks prompt caching um the the actual sort of trick the technique to actually get uh something back from a script um within a skill. And the reason is because the result is dynamic, right? It could be anything. Um, so unless the result is always the same, it's a dynamic shell execution. Um, so it gets inserted into the into the thread.</p>
+</details>
+<p><strong>讲者</strong>：客观来说，skill 本身的内容依然是可以被缓存的。静态 skill 依然能享受缓存优势，但这里需要区分的是：一种是包含内联静态内容的 skill，另一种则是调用外部脚本获取动态指令的 skill。调用外部返回的这一部分动态内容是无法被缓存的，这正是我刚才想表达的核心要点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Now the now to be fair, the skill will still be cached. So the skill will still be cached but uh but I guess I'm differentiating between the skill with inline uh you know static content versus the skill with sort of like a dynamic instruction to call out. So this part will not get cached yeah that was that was my main point.</p>
+</details>
+<p><strong>提问者 C</strong>：明白。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member C</strong>: Yeah.</p>
+</details>
+<h3>问答环节：Impeccable 的评测架构与消融测试</h3>
+<p><strong>讲者</strong>：对。关于我是如何对这个 skill 进行评测（eval）和持续迭代的流程是怎样的？这个评测流程其实相当复杂。稍等，我看看能不能在屏幕上把这个界面切出来给你们看……好，这里可以看到——糟糕，我刚才把服务停掉了，没关系。那我就直接口述吧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Yeah. what is the process on how I evaluate and iterate on this skill? Um, so I the process is pretty involved. Um, let me see. Uh, see if I can bring this up on screen. Uh, uh, okay. Here we go. So, here's a glimpse. Oh, no. Okay, I shut down the server. That's fine. Um, okay. I'll just voice over.</p>
+</details>
+<p><strong>讲者</strong>：我前面提到过自己搭建了一套 Evals 评测体系。我为自己构建了一个测试 harness，能够高度精确地复现我所关心的每一个目标 harness 的运行环境与工具链。例如，它直接接入了 Claude Code SDK。（现场嘈杂声）不好意思各位，能麻烦大家稍微放低一点音量吗？现场其他朋友还在听提问交流。非常感谢！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: So, um, yeah, I mentioned I built an uh Evals harness and, um, and so I've created myself a harness that, uh, re closely recreates the conditions and the tools of every harness that I care about. So, for instance, it uses the clawed code SDK. Yes. Uh sorry guys, can you uh can you lower your volume a little bit? Um because uh people are still trying to hear the questions. Um thank you.</p>
+</details>
+<p><strong>讲者</strong>：那么我平时是如何测试、如何构建这套体系的呢？这是多重手段的结合。首先，Impeccable 的仓库中包含了大量端到端测试（end-to-end tests），既有由 LLM 驱动的测试，也有基于 Playwright 的端到端测试。这一层主要用于验证类似实时交互模式脚本（live mode scripts）等功能的正确性。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: So how do I how do I test this? How do I build it? So this it's a combination. So first of all, Impeccable has a ton of end to-end tests in the repository. Um uh that's both L&amp;M driven tests as well as um endto-end playright tests. So that's one uh and that's useful for things like testing the live mode scripts for example.</p>
+</details>
+<p><strong>讲者</strong>：但除此之外，如何测试它在实际生成中的表现究竟好不好呢？为此我构建了一个专用的 EVAL harness。这部分评测代码目前还没有开源，但这个 harness 深度复刻了我目前关心的所有模型 harness 环境，具体包括 Claude、Codex 以及 Gemini，并且我还在尝试接入更多模型。同时它也完整模拟了各项外围工具，比如浏览器截图工具等类似组件。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Um, but then beyond that, how do I test that it actually works? Uh, well, I've built a EVA harness. That one is not open source yet, but I built a EVAL harness that closely replicates every um every model harness that I care about right now. Specifically, right now uh uh cloud codecs in Gemini and um and I'm trying to expand to more and it also recreates the tools like for instance browser screenshot tools uh or something along those lines.</p>
+</details>
+<p><strong>讲者</strong>：此外，它还精确模拟了交互流程。因为 Impeccable 的某些环节是强交互式的——在 Impeccable 初始化时，系统经常会向用户发问：“你希望你的页面绝对不要呈现出什么样的感觉风格？”由此会产生多轮互动与对话。因此我特意构建了一个专门扮演真实用户的 LLM，让它与被测试的目标 LLM 进行多轮交互对话。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: And um and then it also recreates um the because some parts of impeccable are interactive. In the initialization of impeccable oftent times the user gets asked so you know what would you what would you like your page not to feel like? And so you get these interactive like back and forth and so I've built this LLM that acts as the user against the other LLM. And so it does like an interactive you know back and forth turn.</p>
+</details>
+<p><strong>讲者</strong>：在搭建好这个交互 harness 之后，我在其上层构建了一个基于混合专家架构的设计裁判系统（Mixture of Experts Design Judge）。简单来说，就是给它装上一双“眼睛”，用于多维度视觉审视与评估每一次生成的最终页面。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Um so I've built that harness and then I've built a um mixture of expert design judge that runs on top of it. So basically give it eyes uh to evaluate each result.</p>
+</details>
+<p><strong>讲者</strong>：借助这套系统，我可以在 20 种不同的垂直业务场景下进行全方位测试，例如“意大利餐厅”网站设计。针对我重点关注的所有模型（GPT-5、Claude Opus、Claude Sonnet 等），每次发布新版本 skill 时，都会在每个测试场景下跑 5 到 10 次独立测试，观察具体的表现差异与变化。我还会将其与竞品进行对比基准测试，比如直接对照前端设计类 skill，查看 Impeccable 是否带来了质的飞跃，以及在哪些具体细节上是有所改善还是产生了倒退。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Uh and then I can run uh across 20 different niches like for instance Italian restaurant. Um I run across all models that I care about GPD55, Opus, Sonnet um and do like five to 10 tests um for each of those uh for each skill release to see you know how it changed. I also run against competitors for instance I run against the front end design skill to see does it make a difference um um and and and how does it make it worse or better.</p>
+</details>
+<p><strong>讲者</strong>：除此之外，我还会执行消融测试（ablation testing）。这项测试难度更高、成本也更加昂贵，老实说我不建议每个人都去照做。所谓消融测试是这样的：你在 Impeccable 的源码中会注意到，每一条规则前都带有一个形如 XML 的标签，标明该特定规则行的唯一标识符（ID）。评测 harness 会利用这些标识符自动执行测试——它会专门剔除某一行规则代码，然后在所有目标模型上重新跑一遍 Evals；接着再把该行规则恢复放回，并利用 Impeccable 自带的确定性检测引擎去精准核验：去掉这行规则与加上这行规则，生成结果是否真的发生了预期中的显著变化？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Um and then beyond that I'm doing ablation testing that's harder and more expensive I would say um so I don't recommend it for everyone but this the ablation testing so every you'll see this in the source code of impeccable every rule has sort of an XML tag that says like you know a unique identifier of that particular line. Um, and that will be used by the harness to then do a test where it removes that line um runs the evolves against all models and then adds the line back in and then uh uh uses the detection engine of impeccable the deterministic one to see did it actually change. Right?</p>
+</details>
+<p><strong>讲者</strong>：举个例子，如果规则里有一行明确写着：“禁止在彩色背景上使用浅灰色文字以确保对比度合规”，系统就会运行消融对比测试，并结合确定性检查与反馈循环来严密验证该规则的实际约束力。总而言之，整个评测流程非常繁复深厚。虽然这个项目一开始只是纯粹凭感觉（vibes-based）在摸索，但发展到今天，它已经变成了一个拥有极度严谨测试支撑的工程体系。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Right. So if there's a line that says, &quot;Hey, don't don't do like gray on colorful backgrounds for for contrast purposes.&quot; Um there's a there's an ablation test and then a deterministic check or feedback loop that tests against it. So uh in short quite involved um but uh but I really it started you know vibes based uh and now it's really uh truly um well tested. Yeah.</p>
+</details>
+<h3>问答环节：审美能否被评测？</h3>
+<p><strong>提问者 D</strong>：对，抱歉打断一下，您刚才提到建立的评测体系……是专门用来评测“审美与品味”（taste）的吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member D</strong>: Yep. Go ahead. Sorry, you set up for evaluating taste.</p>
+</details>
+<p><strong>讲者</strong>：是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Yes.</p>
+</details>
+<p><strong>讲者</strong>：是的，我确实专门设计了一套评测体系来评估“审美（taste）”，但坦率地说，我认为它们的效果并不是特别理想。我刚刚还和 Contra 的 Ben 深入探讨过这个话题。我认为——虽然我知道有些同行和同事可能会持有不同观点——但我个人并不认为审美这种特质可以在纯模型层面得到彻底解决。我甚至认为，审美从根本上说是一件属于人类特质的事情，因为……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Yes. Um I do have I do have um evals for evaluating taste, but I don't think they work particularly well. Um I just talked to uh Ben from Contra about this. Um I don't think I I mean I know I know um some of my colleagues might disagree um but I don't think taste can be solved at a model level. Um I actually think it's a it's a fundamentally human thing um because</p>
+</details>
+<!-- chunk 7/7 -->
+<h3>审美评判的困境与反向裁判机制</h3>
+<p><strong>主讲人</strong>：品味与审美本身是稀缺且独一无二的。一旦所有人都套用同一种审美标准，它就会变得泛滥和平庸，进而大家也就不再觉得它具有良好的品味了。所以，我认为这件事做起来非常困难。而且我还认为，模型在评估和判断审美方面尤其糟糕。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: Taste is scarce and unique, and once everybody uses the same taste, it becomes ubiquitous and then we don't think it's tasteful anymore. So I think it's hard. And I also think the models are particularly bad at evaluating taste.</p>
+</details>
+<p><strong>主讲人</strong>：举例来说，模型确实可以很好地评估某些维度的表现，比如“首屏可见区域（first viewport）是否展示了正确的内容”，这种功能性、客观性的指标模型是完全能够胜任的。但什么是模型做不好的呢？我来举一个具体的例子：我之前搭建过一个由多个裁判组成的混合裁判系统（mixture of judges），其中有一个裁判模型专门负责评估首屏页面的视觉效果是否出色且高效。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: For example, there are certain things that the models can evaluate well, like hey, is the correct thing in the first viewport, right? So functional stuff that works. But what doesn't work—and here's one example: I've built, again, this mixture of judges, and one judge rates whether the first viewport looks great and is effective.</p>
+</details>
+<p><strong>主讲人</strong>：其中暴露出的一个明显破绽就是：以 Gemini 为例，首屏区域塞进去的内容和元素越多，它给出的评分就越高。这几乎成了一条普遍规律——只要你把首屏塞得满满当当，它就会给出更高的排名。这是一个非常有趣的现象，说明大模型往往具有“极简主义的对立面”，即极繁主义倾向（maximalist）。在它们看来，似乎“越多就是越好”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: And one of the tells is that Gemini, for example, the more stuff there is in the first viewport, the higher it rates it, right? This is just a general rule. Like if you just cram the viewport full, it gives it a higher ranking. And so there's an interesting example of like, you know, the models are often maximalist, right? They're like, well, more is more, I guess.</p>
+</details>
+<p><strong>主讲人</strong>：正因如此，我经常会构建一些反向裁判机制，直接把模型输出的打分结果反转过来。这听起来确实很奇特，但它非常奏效——当模型对某个页面设计给出极高的评价时，我心里就有数了：好的，这绝对不是一个优秀的设计。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: And so often times I build judges that actually invert the response of the model, which is really strange, but it works. Where it sort of judges something very high, I'm like, okay, that's definitely not a good design.</p>
+</details>
+<p><strong>主讲人</strong>：总之，我不认为审美评估的问题目前已经得到了解决，我甚至不觉得它在根本上是完全可解的。但我手头确实有一套工具，能为你赋予一双类似于“设计总监”的审视之眼，它的表现好歹比纯随机瞎猜要稍微强一点。对于初审筛选阶段来说，这对我而言已经足够好用了，之后我再用人类自身的双眼去核对结果并进行批注。现场还有其他问题吗？好的，请那边提问。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: So anyway, I don't think it's solved and I don't think it's solvable. But I do have, I would say, a tool that gives you the design director eyes that works marginally better than random. And that's good enough for me for like a first pass, and then I use my own human eyes to evaluate results and annotate them. Any other questions? Yeah, over here.</p>
+</details>
+<h3>Skill 体系的局限与质量门槛</h3>
+<p><strong>听众 A</strong>：你认为 Skills（技能体系）的未来发展前景会是怎样的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member A</strong>: What do you say is the future for skills?</p>
+</details>
+<p><strong>主讲人</strong>：Skills 的未来前景？我得说，这是一个非常宽泛的问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: The future for skills. So I would say that's a broad question. Yeah.</p>
+</details>
+<p><strong>听众 A</strong>：是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member A</strong>: Yeah.</p>
+</details>
+<p><strong>主讲人</strong>：那么我先从 Impeccable 以及我个人的视角来回答。就 Impeccable 这个项目而言，我认为我们目前绝对正在超出 Skill 这一平台范式所能承载的极限，即正在突破 Skills 自身的能力边界。比如实时模式（Live Mode）就是一个很好的例子。Live Mode 当初就像是一个《侏罗纪公园》式的探索性实验，主要是想看看“我到底能不能做到这一点？”现在的答案是可以做。它的运转效果确实超出了我的预期，但坦白说，它依然存在许多问题。如果能将其作为宿主环境的一方原生集成（first-party harness integration）或者官方内置工具来实现，体验会好得多。所以我认为自己正在触碰某些边界，在这些边界之外，单纯依靠 Skills 可能已经不再高效了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: So I'll first answer for Impeccable and for me. So in the case of Impeccable, I think we're definitely outgrowing the skill platform, kind of what's possible with skills. I think the live mode is a good example of that. The live mode was sort of like a Jurassic Park experiment to see like, can I do this? And the answer is yes. I think it's working better than I expected, but it still has a lot of problems. I mean, it would be way better to do this in a first-party harness integration or like a first-party tool. So I think there are limits that I'm hitting where skills might not be effective anymore.</p>
+</details>
+<p><strong>主讲人</strong>：从更宽泛的角度来看，我认为绝大多数 Skills 实际上最适合由用户个人根据自身需求去编写。而那些真正投入精力去将 Skill 打包并公开发布、分享给社区的人，则必须投入比现在多得多的时间和精力。这就是我的犀利观点（hot take）。眼下我看到了太多被公开发布的 Skills，在作者自己没有使用过的模型上根本无法正常运行。因此，我认为我们必须大幅提高向公众发布 Skill 时的质量门槛。这本质上又成了那种“在我的机器上能跑就行”的问题。我宁愿看到生态系统中的 Skills 数量更少一些，但每一个都是真正经过实战检验、被充分证明是稳定可靠的。我希望我们正在朝这个方向转变，因为现在的生态环境有点像无法无天的蛮荒西部。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: I think in general I would say most skills should probably be written by the individual users. I think those that actually go through the effort of packaging a skill and sharing it with others need to invest more time than they currently do. So I guess that's my hot take. I think right now I've seen plenty of skills that are distributed that do not work well in a model that the author didn't use, for example, right? And so I think we just have to raise the bar of what's acceptable to ship to people. I mean, again, this is like the &quot;works on my machine&quot; thing. I would rather see less skills in the ecosystem that are really battle-tested and proven. And I hope we're shifting towards that, because right now it's sort of like a wild west.</p>
+</details>
+<h3>测试标准的空白与独立工具的发布可能</h3>
+<p><strong>听众 B</strong>：是的。请继续讲，现在根本没有任何手段能够对所有模型和环境进行完整测试。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member B</strong>: Yeah. Go ahead. There's no like way to test it all.</p>
+</details>
+<p><strong>主讲人</strong>：目前行业内确实不存在一套通用的自动化测试方法来评估 Skills。这是一个非常好的切入点，或许正是一个巨大的机会。其实我手里已经有用来做这类测试的专用工具了，这倒是真的。（现场笑声）没错，我完全可以基于它做点事情。目前它纯粹是我为了满足自己的需求而构建的。不过话说回来，不仅是测试工具，Impeccable 的安装器与编译器（installer and compiler）也是类似的情况——我想大多数人甚至根本不知道它的存在，不知道它能够将 Skill 编译并适配到每一个底层 Agent 运行框架（harness），并且内置了变量替换等高级技术。我完全有可能把编译器也作为一个独立的开源工具发布出来。你提的这点确实很棒。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: There's no common way to test the skills. Yeah. And that could be an opportunity. That's a good point. Yeah. I guess I do have the tool for that. That's true. [laughter] Yes, I could do something with it. Right now it's purely built for my own purposes, but yeah, the same is true for, for instance, like the Impeccable installer and compiler. I don't think most people know that it exists, that it can compile to every harness and that it has these substitution techniques and stuff like this. Like I could probably release that standalone as well. Yeah, it's a good point.</p>
+</details>
+<h3>MCP 模式的隐忧与分发标准之争</h3>
+<p><strong>听众 C</strong>：请问如果是通过 MCP（Model Context Protocol）把 Skills 放在服务端运行，那种模式会如何运作？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member C</strong>: Yeah, go ahead. MCP having skills on the server. How would that work?</p>
+</details>
+<p><strong>主讲人</strong>：哦，我明白了。说实话，我自己还没有实际去尝试过这种方式，或者说我还没花太多时间去深入调研它。就 MCP 本身而言，我非常担心上下文污染（context pollution）的问题。其实对于 Skills 我也是同样的态度，因此我平时并没有大量使用 MCP，正是因为之前它多次严重污染了我的上下文。那么在 MCP 里 Skills 是怎么运行的呢？哦，你的意思是说可以直接从 MCP 服务器上动态下载一个 Skill 下来，对吧？好的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: Oh, I see. Yeah. To be honest, I haven't tried it out yet, or I haven't really read too much into it. I think MCP in general, you know, I worry greatly about context pollution, and I do that with skills too. And I think I'm not using MCP a lot for that reason, because it polluted my context many times. How do skills work in MCP? Oh, you can download a skill from MCP server. Yeah. Okay.</p>
+</details>
+<p><strong>听众 C</strong>：对。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member C</strong>: Yeah.</p>
+</details>
+<p><strong>主讲人</strong>：好的，明白。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: Yeah. Yeah. Yeah.</p>
+</details>
+<p><strong>听众 C</strong>：那么在打包和分发 Skills 方面，目前推荐的最佳实践方式是什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member C</strong>: So, what's the recommended way of packaging them and distributing them?</p>
+</details>
+<p><strong>主讲人</strong>：这个话题提得非常好。各个前端 Harness 运行框架和头部的前沿模型实验室（frontier labs）都有各自的一套方案。比如 Codex 提供了一个插件市场，你可以通过它来进行分发；Claude Code 也拥有一个自己的市场，印象中他们很早就开始采用这种市场机制了。但客观地说，这些应用市场目前的体验并不算好，尤其是 Claude Code 的市场，我敢断言它确实不太好用。因为我亲身体会过，它的更新机制（update me mechanism）经常失灵，经常有用户反馈说“为什么我的 Skill 始终不更新”，而且底层往往还伴随着棘手的缓存问题。所以依我个人的使用经验来看，这些原生的分发渠道完全是时好时坏、碰运气的，而且它们只能局限在特定的单一提供商体系内。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: Yeah. It's a good topic. So of course like the harnesses and the frontier labs have their own ways. I mean, Codex has a marketplace that you can use for distribution, plug-in marketplace. Claude Code has a marketplace as well; I think they started with the marketplace technique. Those marketplaces don't work particularly well. I mean the Claude Code one for sure doesn't work particularly well. I know this for a fact because I mean the update me mechanism often doesn't work and people are like, &quot;well, my skill doesn't update,&quot; and oftentimes there's a caching issue. So my experience has been hit or miss with the native methods of distributing, and then of course it's only for that particular provider.</p>
+</details>
+<p><strong>主讲人</strong>：这也是为什么会有类似 skills.sh 这样的开源项目涌现出来的原因。不过话说回来，当前像 <code>mpx skills</code> 这类工具的问题在于，它还不支持更高级的 Skill 使用场景，例如针对每一种不同的宿主运行框架进行针对性编译。我已经在他们的开源仓库里提交了一个 Pull Request，也私下催过安德鲁（Andrew）好几次了，不过他那边还需要评估是否合并，或者说我们在这点上是否能达成一致。目前我们仍在就此进行讨论。但总体来说，我认为 <code>mpx skills</code> 是一个极具价值的项目，如果整个行业能围绕它形成统一的标准化规范，那将是一件非常棒的事情。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: That's why projects like skills.sh exist. But again, the problem with MPX skills right now, it doesn't allow for like, you know, more advanced skill use cases like, you know, compiled for every different harness. I have a pull request in the repository, and I've bugged Andrew a couple times about it, but he still has to get it merged or agree to agree with me on that, I guess. I think we're still discussing. But yeah, MPX skills I think is a great project in general. I think it'd be great if we could sort of like standardize around it.</p>
+</details>
+<p><strong>主讲人</strong>：微软也有一个项目正在试图解决这个规范化问题，不过我一时想不起那个微软项目的具体名字了。但无论如何，目前整个行业在技能分发领域绝对还没有形成统一的标准。说实话，我并不喜欢自己去长期维护一套专属的 CLI 安装器，我宁可不用去维护它，因为这确实相当繁琐。但这套 CLI 确实能够保证安装过程在所有的 Harness 中安全无缝运行，把生命周期钩子（hooks）正确安装在系统的指定位置等。所以目前来看……好的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: There's also one from Microsoft trying to do that, a project from Microsoft—I forgot the name of it. But there's definitely no industry standard for distribution yet. Yeah, I don't love having to maintain my own CLI installer; I would rather not. It's annoying. But it does make it so it plays safe with all harnesses installed, the hooks in the right part of the system, etc. So it's... Yeah.</p>
+</details>
+<p><strong>主讲人</strong>：好的，我想我的分享时间已经严重超时了。如果大家有兴趣，欢迎待会儿直接到台前来跟我交流。我想今天的主题分享就到此结束，欢迎大家随时来找我探讨。非常感谢大家！（掌声）</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: Yeah. Okay. I think I'm way out of time, but come up and speak with me if you like. Yeah, I would say I'll end it here, but yeah, come up if you like. Let me just... Thank you. [applause]</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/prompt-engineering/">prompt-engineering</a>
+      
+        <span class="tag-pill tag-pill--no-page">skill-engineering</span>
+      
+        <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+      
+        <span class="tag-pill tag-pill--no-page">design-linting</span>
+      
+        <span class="tag-pill tag-pill--no-page">tool-hook-design</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

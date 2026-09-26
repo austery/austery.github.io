@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>v0 一键集成：连接服务时，供应商的推荐用法自动进入
+AI</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="v0 一键集成：连接服务时，供应商的推荐用法自动进入
+AI" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">v0 一键集成：连接服务时，供应商的推荐用法自动进入
+AI</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-12</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://yage.ai/share/v0-one-click-vendor-skills-20260912.html" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-12
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">文章介绍了 Vercel v0 推出的一键集成功能，该功能允许供应商的推荐用法（如邮件发送、数据库连接等）在服务连接建立的瞬间自动加载到 AI 模型的生成上下文中。这标志着软件工程的演进，即供应商的使用规约与访问凭据同步交付，将工程知识与调用凭据的交付形态进行了革新，并探讨了这种模式对软件生态、治理和风险暴露带来的影响。</div></div>
+      
+    </div>
+    <h2>一次连接里，藏着两种交付</h2>
+<p>v0 是 Vercel 推出的 AI
+工具，能把一段对话描述直接变成可部署的网页应用。2026 年 9 月 9 日，v0
+正式推出了一项名为一键集成的功能。Michael Toth 与 Jathin Singaraju
+撰写的 Vercel
+更新日志 指出，这项功能会自动载入服务商技能：连接发布了 agent skill
+的供应商之后，v0
+会自动加载它们，并生成符合供应商推荐模式的代码。日志给出的具体范例是
+Resend：一旦连接成功，系统将通过 React Email
+组件生成事务型邮件代码。</p>
+<p>这项功能在界面上带来了一个过去没有的交互。在对话框里输入一段产品需求，让它做一个带用户登录或邮件通知的网页应用，在写出第一行代码之前，输入流里会弹出一张服务连接卡片。如果需求里包含了发送事务型邮件，卡片对应的是
+Resend；涉及全文搜索，卡片给出 Algolia 或 Amazon
+OpenSearch；需要数据库，对应的是 MongoDB Atlas；做用户鉴权，对应的是
+Clerk。开发者也可以通过带参数的直链进入，比如访问
+v0.app/?pi=resend 或 v0.app/?pi=mongodb。</p>
+<p>在这个动作里，点击连接按钮完成的第一件事大家很熟悉。平台在后台处理所需的环境变量与配置。过去十几年里，云服务的集成一直停留在这一步：供应商把凭证交给工程团队，把接口文档和示例项目留给人类开发者阅读。</p>
+<p>第二件事则越过了人类的阅读流程。在写入密钥的同一个动作里，v0 把
+Resend
+官方编写的规则文件同步载入了模型的生成上下文。这些规则指导模型如何组织邮件数据、如何构造模板，以及如何让邮件进入收件箱。真正出人意料的变化在这里：供应商的使用规约直接跟随访问凭据一起分发，在连接建立的瞬间进入模型的上下文，不再留在文档站等待工程师查阅。同一次点击，交付了调通接口的凭据，也交付了使用该接口的工程知识。这种让使用规约与凭据同行的交付形态，究竟遵循着怎样的系统逻辑？</p>
+<h2>生成内核的三件套，正在逐条变成现实</h2>
+<p>随同网络凭证一同交付的第二项内容，即供应商的使用规约，正是我此前推演中所预测的引导知识层。2025
+年 11 月写下 超越
+DRY：AI 原生软件工程的思考 时，我一直在推演一个问题：软件能够由 AI
+随时现场生成，软件厂商交付的形态会发生什么变化。当时的推论是，厂商交付的核心资产将从固化好的软件界面，转向支持模型现场编写软件的生成内核。这个内核包含三层构件：不可替代的核心套件、写给大模型的引导知识，以及把不确定任务转为确定性执行的杠杆工具集。核心套件相当于椅子的腿和椅面，引导知识是给组装机器人阅读的安装指南，杠杆工具集则是打包在盒子里配套的专用内六角螺丝刀。</p>
+<p>当时我拿支付服务商 Stripe
+作为一个假想案例来解释这三层关系。在那个假想的场景里，核心套件是底层的支付接口，引导知识是一套工程规范与最佳实践，杠杆工具集则是一个根据结构化输入自动创建并配置商品目录的程序。在那篇文章里，我写清了三件套的构成设想，却把这些生成内核后续如何测试、如何分发，列为了没有答案的疑问。</p>
+<p>生成内核由核心套件、写给 AI
+的引导知识、把不确定任务转成确定性的杠杆工具集三部分叠成。</p>
+<p>如今看 Stripe 官方推出的 stripe agent setup
+命令行工具，当年的假想推演已经变成了终端里的具体操作。据 Stripe
+官方文档，运行这条命令，工具会自动检测当前工作区使用的编码智能体，配置
+Stripe 专属的 MCP 服务，并安装对应的官方 agent
+skill，后续还能持续同步更新。如果开发者选择手动安装这些
+skill，系统不会自动同步，需要通过 npx skills update -y
+触发更新。在这个链路里，底层的支付网关是核心套件，官方 skill
+承担了引导知识的职责，MCP 服务则成了杠杆工具集。</p>
+<p>Resend
+展现了几乎一致的工程演进。底层的全球邮件投递网络是它的核心套件。而在开源的
+resend/resend-skills
+代码仓库 中，团队维护着成套的配套组件。据 Resend
+官方博客 记载，2026 年 1 月 28 日，Resend 首发上线了三个原始
+skill：Email Best Practices 规范如何让邮件稳定进入收件箱，React Email
+指导模型编写组件代码，Resend 则定义正确的接口调用协议。配合它提供的 MCP
+服务与命令行工具，三件套完整成型。</p>
+<p>产业界针对这套结构的封装标准也在快速收敛。据 Agent Plugins 官网 发布的规范，2026
+年 8 月 6 日推出的 Agent Plugins 1.0 标准，通过统一的
+plugin.json 目录结构，把 agent skill 与 MCP
+服务打包在一起。加上 Anthropic 在 2025 年 12 月 18 日将 Agent Skills
+发布为开放标准，生成内核的三层结构走出单一厂商的自发探索，演化成了跨生态通用的工程规约。当技术规范逐渐统一，云服务厂商究竟面临怎样的现实压力，才会如此急切地构建专属内核并争夺分发入口？</p>
+<h2>企业怎么布局：造内核与抢入口</h2>
+<p>厂商积极跟进背后的现实压力，首先来自模型写错代码所带来的维护代价。正如
+Supabase
+官方博客 所写的那句直截了当的判断：“AI Agents Know About Supabase.
+They Don’t Always Use It Right.”
+这句话切中了许多云服务厂商的痛点。通用大模型在预训练时读过海量代码，但记忆里的知识版本经常滞后。面对复杂的数据库连接池配置、高并发限制或行级安全策略，模型写出的代码经常沿用过时的参数甚至直接报错，带来沉重的技术支持负担。</p>
+<p>其他基础设施团队在解释自身动机时，展现出高度一致的诉求。Auth0
+官方博客 明确将精力放在消除代码幻觉上：“implement Auth0 correctly…
+zero hallucinations: no outdated patterns, no security gotchas.”
+在身份认证与权限管理这类高敏感领域，模型一旦给出含有缺陷的过时方案，会直接埋下系统漏洞。Twilio
+官方博客 则算了一笔团队日常支持的工程账：“instead of bothering my
+coworkers on the solutions engineering team, I have the expertise in my
+terminal.”
+把专业规则送进开发者的终端，能够直接减少技术支持与解决方案团队的人工答疑成本。Resend
+在 官方博客
+推出邮件技能时也指出：“Agent experience (AX) is the next frontier.”
+官方团队认为，优质的技能文件可以在不占用开发者精力、不让上下文窗口过度膨胀的前提下，抹平大模型对特定领域的认知差距。</p>
+<p>各家团队的自发行动迅速演化为成规模的官方供给。从 Stripe
+这类基础设施厂商，到 Anthropic
+这类平台公司，发布官方技能已经成为普遍实践。第三方索引站点
+officialskills.sh 截至 2026 年 9 月 7 日的统计显示，已有 56
+支工程团队发布了 660 条官方技能。</p>
+<p>写好的规则文件怎么送到智能体的运行现场？整条传导链路先在包管理层建立起来。最源头是厂商在
+GitHub 仓库维护的 Markdown 与代码。2026 年 1 月 20 日，Vercel 推出
+skills.sh。按照 Vercel 发布的 技能生态介绍，开发者通过
+npx skills add &lt;owner/repo&gt;
+就可以跨多个辅助编码工具安装所需技能。官方在配套的 使用指南
+中说明，技能收录不经过中心化的提交或审核环节，放在公开仓库的规则文件只要有人通过命令行安装，系统就会根据匿名安装遥测数据自动呈现在目录中。</p>
+<p>供应商的推荐用法沿着仓库、安装命令、目录、连接动作这条链，最终在用户连接服务的那一刻进入代码生成流程。</p>
+<p>平台接着把云资源开通与技能获取捆绑在了一起。据 Vercel
+命令行更新日志 记录，2026 年 8 月 6 日，Vercel CLI
+发布更新：开发者通过命令行安装应用市场集成时，系统会自动从 skills.sh
+安装对应服务商的 agent skill，让智能体立即掌握使用方法；以 Neon
+为例，开发者开通集成的同时即可一键装载技能。到了 v0
+的网页界面，这个链路进一步压缩成了对话流里的单次点击，提示词只要提到相关需求，连接卡片就会出现在界面中央。厂商如此费力地打通分发链路、争夺提示词触发的卡片，但这些公开分发的规则文件本身，真能为服务商带来商业回报吗？</p>
+<h2>引导知识赚不到钱，所以它变成了入口</h2>
+<p>从直接收益来看，答案是否定的。翻开任意一个 agent skill
+仓库，核心文件本质上都是公开的纯文本 Markdown。这种文档推送到 GitHub
+之后，任何开发者与模型都能自由阅读、复制和本地存储，边际分发成本接近零。纯文本规则很难建立起长期的定价壁垒，没有供应商能够靠销售几份纯文本
+skill 建立持续盈利的商业模式。</p>
+<p>厂商愿意投入资源编写并免费开放这些规则，是因为真正的收益来自底层的核心套件。云服务商的业务收入取决于实际的资源消耗：接口调用量、邮件送达量、数据库存储容量与计算单元。引导知识的真正作用，是消除模型调用底层服务时的工程摩擦。如果大模型在编写调用逻辑时频繁报错、使用弃用的参数，或者产出无法送达收件箱的邮件代码，开发者受阻之后很容易换用其他方案。提供经过验证的引导知识，让模型一次性生成可用的工程代码，才能护送调用请求最终流向计费后台。</p>
+<p>Resend
+强调的智能体体验，道出的正是这层商业考量。代码编写的大部分工作交由大模型完成，如何让模型顺畅地选用自家服务，决定了新一代基础设施的获客效率。引导知识因此从一种技术文档，演变成争夺流量的免费通道。</p>
+<p>软件生态的竞争焦点也随之转移。现在的核心问题不在于谁的规则文档写得更厚，而在于服务连接建立的瞬间，谁能占据默认席位。在传统的开发流程中，选型决策通常由工程师在屏幕前逐步推进：对比多个同类库的技术文档、权衡接口设计、注册账号并手动配置密钥。工程师拥有明确的选型决策周期。</p>
+<p>如今平台将连接操作与知识加载合二为一，使得默认推荐拥有了巨大的分流力量。通过
+Vercel CLI 安装 Neon 数据库，系统顺手装载了配套技能；运行
+stripe agent setup，开发环境自动完成环境检测与持续同步；在
+v0
+提示词中敲下一行描述，弹出的卡片直接决定了哪家服务商的规范注入生成上下文。谁掌控了连接时点的触发机制，谁就掌握了开发链路中的默认流量入口。</p>
+<h2>风险暴露面与平台治理</h2>
+<p>把服务连接变成规则的自动分发通道，在重塑流量入口的同时，也直接改变了依赖项的交付边界。当外部技能随着连接动作静默注入开发环境，软件供应链开辟了新的风险暴露面，恶意代码的潜伏空间显著扩大。据
+Snyk
+安全分析报告，该机构对 3,984
+个混合样本技能展开扫描，发现相当比例的技能存在安全缺陷，并确认了 76
+个恶意载荷。而在 Zenity
+安全通报 披露的一场攻击活动中，攻击者正是借由 skills.sh
+分发凭据窃取程序，受影响的技能家族累计录得超过 170
+万次安装。必须辨明，170
+万次代表的是统计意义上的累计安装量，并不等同于遭受侵害的人数，但这足以揭示分发通道本身蕴含的安全隐患。</p>
+<p>更现实的疑问落在了平台的治理透明度上。v0
+目前并没有公开其底层注入机制的关键细节。技能究竟是在建立连接时单次静态加载，还是在每次代码生成时由后端实时拉取？服务商更新了
+GitHub
+仓库里的技能后，既有项目是跟随变更还是锁定旧版？平台根据何种规则为特定服务商绑定对应的技能包？开发者是否有权手动禁用某些技能规则，或者锁定特定版本？这些规则目前依然留在平台的黑盒之中。</p>
+<h2>连接时刻的控制权</h2>
+<p>从 Stripe 的命令行工具到 v0
+的一键集成，生成内核的三层结构已经走出概念推演，变成了云厂商标准化的交付产物。核心套件提供底层服务，引导知识抹平模型认知差异，杠杆工具集将不确定任务转化为确定性调用。这套交付链路不仅跑通了，还在以极快的速度演化为默认的开发基础设施。</p>
+<p>但在分发链路建立之后，真正的分水岭落在了控制权的归属上。正如我在 超越 DRY：AI
+原生软件工程的思考
+中所推演的，软件工程正在从构建固化软件走向组织生成软件的潜力。当连接动作悄然决定了规则的注入，核心问题在于开关究竟握在谁的手里：是平台在黑盒中替开发者选定注入的内容，还是开发者能够看清并掌控进入模型上下文的每一条规则。谁在连接的那一刻决定注入什么，谁才真正决定了现场生成的软件形态。</p>
+
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Vercel" class="entity-link company-link">Vercel</a>, <a href="/search/?q=Resend" class="entity-link company-link">Resend</a>, <a href="/search/?q=Stripe" class="entity-link company-link">Stripe</a>, <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, <a href="/search/?q=Supabase" class="entity-link company-link">Supabase</a>, <a href="/search/?q=Auth0" class="entity-link company-link">Auth0</a>, <a href="/search/?q=Twilio" class="entity-link company-link">Twilio</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=v0" class="entity-link product-link">v0</a>, <a href="/search/?q=skills.sh" class="entity-link product-link">skills.sh</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/ai-tooling/">ai-tooling</a>
+      
+        <span class="tag-pill tag-pill--no-page">agent-skill</span>
+      
+        <a class="tag-link" href="/tags/workflow-tools/">workflow-tools</a>
+      
+        <a class="tag-link" href="/tags/software-development/">software-development</a>
+      
+        <a class="tag-link" href="/tags/deployment/">deployment</a>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

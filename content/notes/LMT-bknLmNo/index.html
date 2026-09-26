@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Claude Opus 5.5 与 GPT-6 实测对决：从长程智能体到创意生成的全方位评测</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="Claude Opus 5.5 与 GPT-6 实测对决：从长程智能体到创意生成的全方位评测" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Claude Opus 5.5 与 GPT-6 实测对决：从长程智能体到创意生成的全方位评测</span>
+      <span data-pagefind-meta="speaker" style="display:none;">How I AI</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>How I AI</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-22</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/how-i-ai/">How I AI</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=LMT-bknLmNo" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-22
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">本期评测针对最新发布的 Anthropic Claude Opus 5.5 与 OpenAI 系列模型（GPT-6 Soul、Astra、Luna）展开盲测横评。测试涵盖日常编程、后端代码、长程智能体架构、B2B UI 界面设计及 SVG 矢量创意生成等多项任务，深入剖析各模型在交互延迟、成本性价比、输出风格及多模态创意生成上的表现差异与权衡。</div></div>
+      
+    </div>
+    <h3>突袭发版：Opus 5.5 与 GPT-6 的定价权博弈</h3>
+<p>在人工智能前沿模型的迭代竞赛中，<strong>Anthropic</strong> 与 <strong>OpenAI</strong> 再次上演了同一天同台突袭的戏码。<strong>Claude Opus 5.5</strong> 与 OpenAI 旗下的新一代模型矩阵（<strong>GPT-6 Soul</strong>、<strong>Astra</strong>、<strong>Luna</strong>）在同一清晨集中发布。对于长期依赖大语言模型解决复杂系统架构与日常编程的工程师而言，最敏感的杠杆莫过于性价比与推理效率的平衡。本次全系更新的主旋律在于提速与降价，但深入对比两家厂商的定价策略，可以发现显著的分化：尽管 Opus 5.5 相比上一代模型大幅降低了计算成本，但其综合调用单价仍接近 GPT-6 Soul 的两倍。对于日常高频执行智力密集型任务的开发者来说，这一价格倍率将直接影响底层生产力工具链的技术选型。</p>
+<p>在架构安全性与系统防御层面，Anthropic 延续了其高规格的安全护栏设计。面对网络攻击与恶意注入，系统在底层构建了极高强度的防御机制，确保<strong>提示词注入</strong>（Prompt Injection: 通过恶意输入诱导模型绕过安全防御的攻击手法）彻底失效。然而，这种严密的<strong>安全对齐护栏</strong>（Safety Alignment Guardrails: 限制模型输出有害内容或越狱行为的规则与过滤器）在防范风险的同时，也对模型的交互灵活性带来了微妙的副作用——在部分边缘指令下，模型更容易触发机械式的拒绝响应，直接判定“不应执行此任务”。</p>
+<details>
+<summary>Original English</summary>
+<p>Estuve en la medida de lo posible listo para eso Anthropic lanzará Opus 5.5. Yo incluso estaba listo al hecho de que OpenAI lanzará otro modelo. Me levanté. temprano esta mañana, porque tuvo acceso anticipado hasta Opus 5.5 para grabar increíble para ti revisar. ¿Y adivina qué? Ambos, ellos ambos salieron esta mañana. Entonces ahora, a pesar del hecho de que en Estoy listo. Excelente reseña de Opus 5.5, que verás más tarde, yo solo Voy a presentar esta transmisión en transmisión en vivo. Y yo nunca hice esto antes. Y nosotros Pasaremos una prueba rápida. Y luego Publicaré una reseña real de Opus 5.5. Pero también voy a evaluar aquí estos nuevos Modelos de OpenAI. Entonces, veamos qué son ellos. lanzado esta mañana. Entonces, Anthropic lanzado Opus 5.5. Y dijeron: &quot;Este es el mejor modelo en el mundo para la codificación, para agentes y para tareas intelectuales&quot;. Esto es grande promesa. Opus 5.5. Y al mismo tiempo OpenAI lanzado nuevo GPT-6. Y lanzaron Alma, Luna y Astra. Y cada uno de ellos estos tres modelos... ellos simplemente se cayeron esta mañana. Así que tenemos un gran día. Opus, Alma y Luna recibieron renovación. Todos se volvió más barato y más rápido. Entonces ellos se convertirá en tuyo a diario asistentes en programación y intelectual tareas. Aquí tiene. ver la calificación el costo de estos modelos. Opus 5.5 casi duplica Más caro que el GPT-6 Soul. Los precios no se conocían, cuando los probé y Esto tendrá un impacto significativo. mi decisión respecto a ellos usando. De nuevo Sí, Opus 5.5 es más barato que Opus 5 en Fábula 1, con el que ellos comparar la inteligencia de este modelo. Entonces dijeron: &quot;Opus 5.5 inteligente como Opus 5 en Fábula 1, pero Más barato que Opus 5&quot;. Pero de nuevo, él todavía dos veces Más caro que el Soul. Y creo que esto muy importante. Si tú mirar el costo por 1000 fichas, luego el costo fichas de entrada Opus 5.5 es de 15 dólares, y el precio fichas de salida — $75 por millón. Para GPT-6 Alma esto es $6 y $30. Muy gran diferencia. Y no olvides que Luna es súper rápida y súper barato. Es gratis. de nuevo, así como Astra. Astra es un modelo para computadoras. usando. Luna es un modelo para la voz. Entonces Luna es modelo, que puedes ver en modo de voz avanzado y ella súper barato. Entonces, la economía de estos modelos muy diferente, y es influencias cómo tú los usará. Hablemos un poco sobre la seguridad de estos modelos. Hay muchas cosas que yo gusta y no gusta en el lado de Opus 5.5. Opus 5.5— Este es el modelo de primer nivel Opus, que surgió de mecanismos de protección Nivel de fábula en el campo ciberseguridad. Entonces ella muy estable a los ataques. Ella realmente resistente al pirateo. Y esto es bastante impresionante. Pero lo que no me gusta es que a veces ella se convierte demasiado seguro. Cuando estás intentando hacer algo que puede parecer una pizca sospechoso, aunque esto completamente seguro, ella simplemente se negará. Ella dirá: &quot;Yo no puedo ayudarte con esto&quot;. Y esto es un poco molesto. Entonces, ya sabes, ella es simplemente te dirá &quot;no&quot;. Ella dirá algo como &quot;No debería hacer esto.&quot; hacer&quot;. Indicación- Las</p>
+</details>
+<h3>沉默的代价：安全对齐与交互心理学的权衡</h3>
+<p>模型对齐哲学的差异深刻塑造了人机交互的心理体验。Anthropic 在 Opus 5.5 中对输出行为进行了极为激进的“静默化”调整。在执行复杂的多步逻辑推理与代码生成时，系统强制抑制了中间过程的琐碎自述与口语化确认。这种设计固然消除了无意义的对话噪声，却在心理学层面将用户推入了“不确定性黑盒”：当模型在后台持续静默运转时，用户无法确定其正在深度思考、陷入死锁还是遭遇网络卡顿。这种静默机制在感官上放大了系统的延迟感知，使得 Opus 5.5 在高并发负载下的等待过程显得尤为漫长。</p>
+<p>在建立这种认知模型后，开发者在选择模型时必须直面不同任务场景的适配分歧：</p>
+<ul>
+<li><strong>代码与深度逻辑领域</strong>: Claude 架构在大规模上下文理解与后端代码生成上维持着极高的逻辑严密性，是处理复杂工程架构的首选底座。</li>
+<li><strong>自主智能体协同</strong>: <strong>自主智能体</strong>（Autonomous Agent: 具备目标规划、工具调用与多步自驱执行能力的 AI 系统）需要处理超长执行链路与状态机转移，Claude 的稳定性提供了长期鲁棒性保障。</li>
+<li><strong>多模态与系统操作</strong>: OpenAI 则在计算机操作与视觉生成（如 SVG 矢量与视频流）上展现了更具弹性的敏捷特性。</li>
+</ul>
+<details>
+<summary>Original English</summary>
+<p>inyecciones no funcionarán. y eso es bueno. Hmm, pero hay ciertos matices. Cuando tú pensando en lo general filosofía y enfoques estos modelos, cómo ellos configurados como están gestionar riesgos, como estas empresas gestionan riesgos. Creo que esto es se extiende incluso sin riesgo alguno actividad, personalidad y comportamiento. Así que esto es todo, a lo cual, en mi opinión, vale la pena prestar atención atención. I realmente no se abrió Claude durante varios años meses para tareas cotidianas, porque él simplemente comenzó se siente tan molesto, pero lo intentaré usar Opus 5.5 durante varias semanas. Y yo Veamos si esto ha cambiado. Pero una cosa que cambió y que ayudó para hacer Opus 5.5 fuera más pequeño molesto, fue, que lo obligaron guarda silencio. Yo también Acabo de darme cuenta de eso. él no comenta sobre su trabajar. Y cuando no lo hace comentarios sobre su trabajo, te metes en un lío una trampa donde piensas: si ¿Trabajas? ¿De verdad eres así? ¿Cómo estás? Así que en este cambio Las comunicaciones de Opus 5.5 son como ventajas y desventajas, ¿Por qué está él? realmente lo sentí más lento que, en en mi opinión, fue de hecho. También, ya sabes, Claude en alto carga comienza retrasarse mucho. Entonces, no lo sé, qué tan estable será el servicio. En general, ellos intentaron hacerlo más conciso y menos molesto, y esto es bueno. Pero a veces él todavía rechaza las solicitudes. OpenAI en este sentido parece ser más flexible. Su enfoque para gestionar los riesgos parece un poco más maduro, no intentan controlar cada paso que das. Y esto es importante para la creatividad y para tareas complejas donde puedes experimentar. Entonces, mi suposición es que para la mayoría tareas de programación, para la mayoría cosas de ingeniería de backend, tú Prefieres el modelo Claude. Creo que si estás construyendo un agente, si tú estás construyendo algo que debería trabajar durante mucho tiempo tiempo y hacer decisiones complejas, tú También preferirás a Claude. Pero si tú necesitas algo interactivo, si tú necesitas algo rápido, si tú necesitas trabajar con la interfaz, entonces Tal vez, te gustará más modelos de OpenAI. Ya sabes, yo le gustará Interfaz. Eh, no. Sé lo que necesito. le gustará por backend. Sospecho que para el individuo Necesito</p>
+</details>
+<h3>盲测开启：复杂任务调度与后端逻辑之争</h3>
+<p>为了剔除品牌先入为主的主观偏差，测试采用了双盲评估机制。评测将候选模型匿名编号为 Model A 至 Model H，置于同一套高阶业务场景下并行检验。测试任务要求模型在缺乏多轮追问的<strong>零样本提示</strong>（Zero-Shot Prompting: 不提供任何示例上下文、直接输入任务指令的提示方式）下，协同处理线上突发事故分类、日历日程重构以及跨团队通知邮件起草等多维复合指令。这一测试直指模型在面对模糊需求时的结构化推理与信息分流能力。</p>
+<p>在各模型的实测解构中，表现风格呈现出鲜明的两极分化：</p>
+<ul>
+<li><strong>过度饱和的工程思维</strong>: 疑似 Claude 系的模型在面对复杂任务时，倾向于输出极其严密、冗长且高度详细的方案。这种风格极度契合要求严苛的后端业务逻辑，但在快速原型构建中却显得厚重过载，增加了理解成本。</li>
+<li><strong>极致紧凑与信息截断</strong>: 疑似 <strong>Grok</strong> 或小型紧凑模型的输出（如 Model C）则受到极其严苛的 Token 生成限制，答复短小甚至丢失了关键上下文；而部分折中模型（如 Model G）则以极高信息密度直击核心，兼顾了快速扫读与可执行性。</li>
+<li><strong>高信息可读性平衡</strong>: Model B 与 Model E 能够生成既有结构深度又保持出色视觉排版的长篇通知，在人机交互阅读体验上拿下了最高分。</li>
+</ul>
+<details>
+<summary>Original English</summary>
+<p>más agentes Te gustará el modelo Claude. Sospecho que a largo plazo El agente será el modelo Claude. De usando computadora, creo que es Habrá IA abierta, pero para tareas creativas— Ni siquiera puedo imaginarlo. En realidad, creo que para SVG creativo será Claude y el video es probablemente IA abierta o antrópica. Pero Ya veremos. Entonces yo Estoy liderando a ciegas. evaluación de estos modelos. Entonces, yo Los ejecuto en diferentes modelos. Estoy seguro. agrupados hasta cierto punto modelos similares. Por lo tanto, no hay todos los modelos. Tengo aquí ocho modelos. Tengo un modelo A, B, C, D, E, F, G, H. Y yo Solo voy a mirar a través de ellos. respuestas, califíquelas de uno a cinco, y luego Vamos a revelar el secreto. y ver qué modelos ganaron. Entonces, ¿cuáles son las tareas que ¿Di? Di varias tareas. La primera tarea fue bastante compleja. Fue una tarea para clasificar incidentes y manejar un calendario. Entonces, hubo una situación en la que tú eres un gerente y recibes un montón de mensajes diferentes sobre problemas con el servidor, problemas con los clientes, solicitudes de reuniones, y tú tienes que resolver todo esto, decidir qué es urgente, qué no es urgente, reprogramar el calendario y redactar correos electrónicos para el equipo. Entonces es una tarea muy realista, que combina análisis, toma de decisiones y redacción de textos. Y además de esto, le pedí a un modelo de lenguaje que actuara como juez para comparar las respuestas. Pero primero quiero dar mi propia evaluación humana. Veamos qué tenemos aquí. Modelo A. Bastante largo. Mucho texto. Ella intentó hacer todo a la vez, pero la estructura es un poco confusa. No es malo, pero tampoco es genial. Yo le daría un tres. Modelo B. Oh, esto se ve mucho mejor. Muy bien estructurado. Separó claramente los incidentes de alta prioridad de los de baja prioridad. Redactó correos electrónicos muy limpios y profesionales. El calendario se ajustó de manera lógica. A mí me gusta esto. Le doy un cinco. Ahora el modelo C. Odio cuando mi Grok hace lo mismo: usa tan pocos tokens que es casi imposible entender el contexto. Es demasiado corto. Omitió la mitad de los detalles importantes. No explicó por qué tomó ciertas decisiones con el calendario. Le daré un dos. No es suficiente para una tarea de gestión real. Modelo D. Hmm, este es un caso interesante. Muy detallado, tal vez demasiado detallado. El correo electrónico es tan largo que nadie en un equipo de ingeniería lo leería durante un incidente. Pero la lógica de clasificación es impecable. Para el código de backend esto sería increíble, pero para la comunicación humana es un poco pesado. Le daré un cuatro. Y el modelo E. Otra vez un mensaje muy agradable. Muy fácil de leer, excelente tono. No ignoró las restricciones del calendario. Le doy un cinco. Modelo F. Bueno, aquí la funcionalidad es más o menos. Pasable, pero nada del otro mundo. Un tres. Modelo G, vamos a ver. Hmm, muy corto. Brevemente, pero lo entiendo perfectamente. Qué quiere decir esto. Así que esto es muy útil. No se enredó con los detalles innecesarios. Le daré un cuatro. Entonces, viendo esto en perspectiva, lo que sucede con los modelos de Claude cuando les das una tarea difícil es que la hacen demasiado saturada, compleja y muy detallada. Bueno para código de backend, difícil para prototipado rápido porque cuesta entender el flujo principal de un vistazo. Pero para la organización del trabajo, prefiero algo que ayude a clasificar incidentes con claridad inmediata sin sacrificar precisión. En los criterios de evaluación di muchos requisitos específicos. Había más abiertos consultas generales al estilo de una sola toma.</p>
+</details>
+<h3>界面范式：B2B 控制台的原型审美突围</h3>
+<p>跨过文本生成维度，评测进一步下潜至前端与 SaaS 控制台原型设计的战场。该环节要求各模型为开发者运维系统设计一套完整的事件故障分类控制台（Incident Triage Dashboard），重点考察其在状态驱动界面、空白态（Empty State）、数据可视化与色彩系统上的工程审美。传统 AI 生成的前端代码长期陷入陈词滥调：大量充斥着晦暗的鼠尾草绿与单调的灰阶，或是生硬套用早期 Claude Artifacts 标志性的高饱和度橙色，缺乏真实企业级产品所需的视觉层级。</p>
+<p>在对组件细节与视觉规范的剖析中，各模型的原型水准拉开了代差：</p>
+<ul>
+<li><strong>空白态处理缺失</strong>: 劣质模型（如 Model E 的部分界面）直接忽视了零数据下的空状态处理，且在左侧导航与信息边框中出现了生硬的单像素割裂，排版权重失衡严重。</li>
+<li><strong>信息分层与组件成熟度</strong>: 优秀输出展现出了极高的设计系统成熟度——合理运用状态徽章（Status Badges）、细腻的渐变映射以及低认知负荷的排版网格，清晰剥离了不同等级警报的紧急程度。</li>
+<li><strong>工程可读性与交互直觉</strong>: 整体而言，Model A 与 Model E 提供了最具实用价值的代码组织架构，其界面组件逻辑清晰；而 Model F、G、H 虽然实现代码极为紧凑，但在界面微交互与信息密度上存在过度压缩的痕迹。</li>
+</ul>
+<details>
+<summary>Original English</summary>
+<p>Entonces ¿De verdad puedes? para ver qué hace modelo, y qué es una solicitud. Pasaré estos mismos rápidamente. Eh, bueno, esto bastante bueno, pero funcionalidad aquí más o menos. No como vacío estado. Creo que esto es normalmente. Yo entregaré esta opción &quot; &quot;Está bien.&quot; Creo que es en algún lugar un dos. Saldrá a la luz. Él no feo, pero bastante primitivo. Esto es lo que creo que debería ser Muy guapo. Supongo que es Claude. Ya veremos. Parece que Muy bueno. Bien usando bandera. Muy fácil legibilidad. Él no añade texto innecesario. Esta es una buena opción para mí. Me gusta. Le doy un cuatro. Y aquí está esto—es un desastre. Mira estos colores para un producto SaaS, ¿verdad? Esto es un poco dona a la medicina color salvia. Eh, pondré un dos, y Analicemos esto con más detalle. Este —No mucho. Horror, horror, horror. Peso del texto demasiado grande. No Creo que eso es todo. bien. Yo cumpliré. él una unidad. Lo odio él. De acuerdo, Modelo E, basura. Mirar en estas franjas de la izquierda. Pondré uno. Estoy demasiado estrictos con esto, pero creo que una interfaz debe respirar. Ahora mira esto otro. Bonito degradado. Ejem, mira qué bonito colores utilizados, muy limpio. Oh, pero no creó mucho qué. Así que apuesto, Me gusta, pero Le doy un tres porque él estaba incompleto. Y ahora Modelo E, este es para mí. Me gusta mucho, porque parece que ella funciona en la vida real tiempo. Eso es genial. Esto es mucho mejor, yo Le doy un cuatro. Modelo F, de acuerdo. Aquí Aquí se ha hecho algo de una manera un poco diferente. A mí realmente esto como, excepto naranja color. Uno de problemas, ¿qué pasa si? míralos a todos , son principalmente usa ese la combinación de colores en sí: dices &quot;herramientas&quot; desarrollador&quot;—y eso es todo Está oscureciendo, pero aún es naranja. Esto recuerda demasiado a los viejos artefactos de Claude donde todo era simplemente naranja. Me pregunto qué será. modelo G. Y ahora modelo H, de nuevo, probablemente un par de ese otro modelo, ¿Cuál me gusta? Un poco diferente, muy claro. Prefiero, ya sabes, modelo A o modelo E, uno de esos, que son más fáciles de leer, comparado con F, G y H, que son mucho más cortas pero carecen de alma visual. Vamos a dejar que el juez evalúe la corrección del código, pero desde el punto de vista del usuario humano, la estética y la claridad estructural son fundamentales.</p>
+</details>
+<h3>矢量暗战：SVG 创意生成与细节表现力</h3>
+<p>在针对前端组件的原型评估告一段落后，测试转向了更具艺术挑战性的纯代码图形生成——<strong>可缩放矢量图形</strong>（Scalable Vector Graphics: 基于 XML 的无损二维矢量图像格式）。测试要求模型仅通过纯代码生成具有复杂光影与语义特征的矢量图形，具体主题涵盖复古麦克风、档案文献以及甲虫图标。这一测试直接考验模型将几何空间推理、CSS 渐变以及图层堆叠转换为精准代码的抽象表达力。</p>
+<p>实测中出现了完全逆转预期的戏剧性结果：</p>
+<ul>
+<li><strong>OpenAI 模型的矢量突破</strong>: Astra 与 Soul 在角色与写实物品的 SVG 渲染上展现了前所未有的细腻度。生成的麦克风不仅具备真实的金属高光与投影，防喷罩的微网格也刻画得极具真实感。</li>
+<li><strong>Claude 的经典技巧与走形</strong>: 传统认知中被认为擅长设计感的 Claude 系模型，在本次测试中陷入了套路化渲染。其生成的麦克风因比例失调与网格错位，形态酷似一株“仙人掌”；在处理背景时，模型则频繁使用标志性的背光渐变圆光环（Halo Effect）来掩盖主体构图的平瘪。</li>
+<li><strong>细节决定成败</strong>: Model H 在暗部投影、光泽过渡与图元语义组织上近乎无可挑剔，斩获了五分满分；而部分表现欠佳的模型在同一批次中生成的矢量图标粗糙破碎，甚至无法正确闭合多边形路径。</li>
+</ul>
+<details>
+<summary>Original English</summary>
+<p>zados, muy limpio. Oh, pero no creó mucho qué. Así que apuesto, Me gusta, pero Le doy un tres porque él estaba incompleto. Estas son las cosas que yo como. Nosotros SVG probado. A mí Me gusta que estos modelos se convierten lo mejor en creación SVG. Si miras modelo B y modelo H, lo hicieron SVG pequeño- ilustraciones. En el modelo H claramente son mucho mejor. Este es un clásico &quot; &quot;Hack&quot; Claude, como círculo de luz en el fondo. Así que se lo daré. Bonificación SVG. Hmm, oh, estos Tampoco está mal. Pero ¡Oh, Dios mío! ¿Quién, quién añadió? ¿Esos círculos en la parte superior? Parece completamente fuera de lugar. Pero los nuevos los modelos pueden crear archivos SVG. Ellos pueden crear ilustraciones. Le pedí que creara documento, micrófono y escarabajo. Esta es la mejor opción. Así que le daré el modelo F. prima. Comparemos modelo B y modelo C. Micrófono aquí horrible. Yo se los daré ambos tríos. Ellos bueno en una cosa pero terrible por lo demás . Comparemos el modelo E y el Modelo G. Es complicado. ¿Por qué lo hacen? micrófonos similares a ¿cactus? DE ACUERDO, Voy a poner esto cuatro. Creo que dos de tres son malos. Tal vez , es un tres, no idealmente. Echemos un vistazo. rápidamente en el modelo H. Oh, modelo H en efecto hermoso. Apuesto a que cinco. Mirar en esta sombra. Micrófono muy similar a micrófono, no encendido cactus. El documento tiene mucho, eh, carácter. Y el último, él lo sobrellevó terriblemente editando los detalles finos. Yo pensaba que Anthropic se llevaría la corona en SVG creativo porque siempre han tenido esa sensibilidad estética en sus interfaces, pero lo que estamos viendo aquí es que OpenAI ha entrenado específicamente a sus nuevos modelos para manejar representaciones espaciales en código de manera mucho más precisa. Esto es lo que ella hace con Lados SVG. Tengo puesto Quiero decir, realmente lo es. algo increíble. Ejem, agreguemos un lazo en el pelo. Vamos, ya sabes, Vamos a hacerla morada ojos.</p>
+</details>
+<h3>裁判悖论：三维生成极限与长程智能体终局</h3>
+<p>为了将模型的代码生成极限推向极端，压轴测试引入了一项高负荷端到端工程任务：使用 Three.js 现场编写一个具备动态交互能力的 3D 芭比换装试衣间应用。测试不仅要求生成完整的空间几何体与贴图着色器，还要求支持实时换装逻辑。从测试反馈来看，生成式 AI 距离通用人工智能（AGI）在空间具身建模上仍有巨大鸿沟：模型生成的女性人体网格在四肢末端遭遇了严重的“解剖学灾难”，手部错位破碎、步态畸形，暴露出当前大模型在复杂 3D 拓扑结构理解上的物理硬伤。然而，模型成功交付了完整的换装交互逻辑与可运行的着色器框架，展现了极强的脚手架搭建速度。</p>
+<p>在最终裁决阶段，引入了自动化评测架构，却引发了引人深思的人机对立——<strong>大语言模型裁判</strong>（LLM-as-a-Judge: 使用能力更强的大模型对候选模型的输出质量进行自动化评测）给出的量化打分与人类资深专家的真实体验大相径庭。LLM 裁判更死板地拘泥于代码字符的语法规约，给予技术指标高权重；而人类用户在真实产品体验中，对 Astra 与 GPT-6 Soul 的视觉创造力与高性价比投下了赞成票。</p>
+<p>最终盲测名单揭晓与综合选型定论如下：</p>
+<ol>
+<li><strong>创意与性价比之王</strong>: OpenAI 的 GPT-6 Soul 与 Astra 成为全场最大黑马，在矢量艺术绘制、高交互响应与极具杀伤力的低成本定价上完胜，是多模态创意与消费级轻量应用的绝佳搭档。</li>
+<li><strong>长程智能体与复杂工程基石</strong>: Anthropic 的 Claude Opus 5.5 并非全能溃败，它在最硬核的企业级 B2B 重构、深层后端架构以及长程自主智能体调度中，依然维持着无出其右的逻辑连贯性与深度推理优势。两强争霸的技术格局正在从单向碾压演化为场景驱动的精细化分工。</li>
+</ol>
+<details>
+<summary>Original English</summary>
+<p>Vale, entonces tú En realidad puedes hacerlo. Póntelo y luego Ve al probador. Este es un modelo 3D que ella creado. Eh, vamos. vamos a añadirle algo minifalda y hagámoslo un poco más agradable. Ahora, ya sabes, yo diré que ella hicieron algunas cosas mejor que otros modelos. Parece haberse formado su cabello, sus manos… oh, AGI Todavía no, todavía no ha llegado. Las manos son bastante horribles. Esto, esto es una tragedia. Los pies están bastante mal. Eh, ya sabes, ella tiene esto un andar audaz pero deforme. Mientras todos los demás en YouTube están haciendo videos de videojuegos con naves espaciales, yo les pido construir un render 3D interactivo para un diseñador de moda. Y aquí se ven las costuras de los modelos. Ningún modelo avanzado logró esto sin defectos, pero el hecho de que puedan generar una escena 3D completa con Three.js en un solo intento sigue siendo notable. Ahora pasemos a las conclusiones y revelemos los nombres detrás de las letras. Di buenas tareas a Opus 5 y 5.5 para agentes cosas y cómo esperado para la voz del asistente. Entonces mi predicción se cumplió correctamente. Y aquí está una verdadera sorpresa: Astra y Soul se las arreglaron mucho mejor con los personajes SVG, y los resultados de otros modelos eran bastante ambiguos. Es bastante interesante, y aquí está todo lo que califiqué con cuatro o cinco. Todo lo que aprecié mucho en visuales se lo entregué a GPT-6. Hizo esa linda pequeña aplicación sobre las plantas, y Astra y GPT Soul crearon estas maravillosas ilustraciones. Por lo tanto, aparentemente para SVG preferimos Astra y Soul. Claude Opus hizo mi actualización B2B favorita, es más ordenado en cosas de arquitectura, pero en general me gusta Astra. Y aquí es donde todo se vuelve realmente divertido: el LLM que actuó como juez dio calificaciones con las que estoy absolutamente en desacuerdo. El juez LLM apreció a Soul mucho más bajo y sobrevaloró la sintaxis rígida. Así que me parece simplemente muy divertido ver esta discrepancia. Astra conquista mi corazón esta semana. Soul, para bien o para mal, con el hecho de que es súper barato, me hace muy feliz. No sé si es solo una cuestión de preferencias personales, pero me gusta Soul y me gusta Astra. Respecto a Opus 5.5: no lo odio en absoluto. No fue un fracaso para el equipo de Anthropic; han regresado con fuerza al juego. Definitivamente me ayuda con el trabajo diario y sigue siendo mi modelo favorito para agentes autónomos a largo plazo. Y luego el éxito inesperado: los personajes SVG son mejores en los modelos de OpenAI. Si vas a trabajar en nuevos campos creativos, te aconsejo usar estos modelos. Sigue el canal Cómo usar la IA, pulsa el botón de suscripción. Lanzaremos una reseña completa de Opus 5.5 para que puedas profundizar. Gracias por unirte a la transmisión en vivo de How-To AI. Nos vemos la próxima vez en howiaipod.com.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Claude Opus 5.5" class="entity-link product-link">Claude Opus 5.5</a>, <a href="/search/?q=GPT-6" class="entity-link product-link">GPT-6</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/model-evaluation/">model-evaluation</a>
+      
+        <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+      
+        <span class="tag-pill tag-pill--no-page">multimodal-generation</span>
+      
+        <a class="tag-link" href="/tags/code-generation/">code-generation</a>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

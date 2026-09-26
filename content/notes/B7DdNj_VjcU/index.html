@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>生物设计与防御的军备竞赛：基因语言模型的核心能力与未来展望</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="生物设计与防御的军备竞赛：基因语言模型的核心能力与未来展望" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">生物设计与防御的军备竞赛：基因语言模型的核心能力与未来展望</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Latent Space</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>Latent Space</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-23</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/latent-space/">Latent Space</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=B7DdNj_VjcU" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-23
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">文章探讨了生物设计领域中，模型在生成和判别序列方面的双重使命，以及如何通过构建能够处理超长序列的基因语言模型（GLM）来革新科学发现。核心内容包括 GLM 的定义、其在长上下文处理上的突破（如 Hyena 算子），以及如何利用序列信息进行功能预测和设计，并讨论了在生物安全、应用场景（如抗菌素耐药性研究）以及技术发展中的挑战与乐观态度。</div></div>
+      
+    </div>
+    <!-- chunk 1/8 -->
+<h3>双重使命：生物设计的攻防平衡</h3>
+<p><strong>Eric Gwynn</strong>：在设计端，模型的能力注定会变得越来越强大；而在防御端，我们必须竭尽全力走在前面。因此我认为，这里本质上存在一种类似军备竞赛的动态机制，而防御端此前一直处于极其严重的滞后状态。我们想要做的，本质上就是让防御端的技术水平赶上来。作为一个实验室团队，我们认为至关重要的一点是：那个正在构建设计能力的团队，实际上也是最适合去构建防御能力的团队，因为二者底层使用的是完全相同的模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Eric Gwynn</strong>: The design side is going to get more capable. The defensive side needs to try to get ahead. So I think inherently there is this arms race style dynamic that the defensive side has been far, far lagging. And so what we want to do is bring the defensive side to par essentially. We felt it was important as a lab that a team that was both building the design capabilities is actually also best suited for building the defense capabilities because they're basically the same models.</p>
+</details>
+<p><strong>Eric Gwynn</strong>：事实证明，一个擅长生成的模型，往往也极其擅长进行判别，或者预测某一段序列是否具有致病性。对我们公司而言，确立这种双重使命（Dual Mandate）被认为是非常关键的。这种理念的核心在于：我们必须对自身在设计端赋予世界的新能力保持清醒的认知，并承担起相应的责任。因此，如果我们打算创造出能够为生物序列设计出具体功能的模型，我们同时也敏锐地看到，在如何为这项技术设立安全护栏方面，业内公司还存在着巨大的能力空白。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Eric Gwynn</strong>: A model that is good at generating, turns out is also very good at discriminating or predicting if a sequence is pathogenic or not. For us, we as a company thought it was very important to have a dual mandate. It's this idea of essentially being cognizant and feeling responsible for the capabilities that we're enabling on the design side. So if we're going to create models that can design function into sequences, we believe and see a gap in companies being able to safeguard that technology.</p>
+</details>
+<h3>嘉宾介绍与基因组语言模型初探</h3>
+<p><strong>Brandon</strong>：欢迎来到 Lane Space。我是 Brandon，在 Atomic AI 从事 RNA 疗法的研发工作。今天与我一同主持的是我的搭档 RJ Honake，他是 Miraomics 的首席技术官兼联合创始人。今天非常荣幸能邀请到 Eric Gwynn，他是 Radical Numerics 的首席执行官兼联合创始人。Eric 最初是在 Chris Ré 的研究组攻读并获得了博士学位。在长上下文或基因组模型变得炙手可热之前，他就已经花费了大量时间思考如何构建长上下文基因组模型。他是 Evo 生成式模型的第一作者，我认为他基本上也是这项研究背后的远见卓识者。Evo 是最早的生成式基因组学平台之一，随后他们又开发了 Evo 2，这自然而然地促成了 Radical Numerics 的成立。非常感谢你的到来。我有遗漏什么吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Brandon</strong>: Welcome to Lane Space. I'm Brandon. I build RNA therapeutics at Atomic AI. I'm joined by my co-host RJ Honake, CTO and co-founder of Miraomics. Today, it's a pleasure to have with us Eric Gwynn, CEO and co-founder of Radical Numerics. Eric started-- got his PhD in Chris Ray's group. He spent a lot of time thinking about how to do long context genomic models before long context or genomic models were cool. He was the first author and I think basically visionary behind the Evo generative model, one of the first generative genomics platforms developed Evo 2, which naturally led into Radical Numerics. Thank you for being here. Did I miss anything?</p>
+</details>
+<p><strong>Eric Gwynn</strong>：介绍得非常全面，太棒了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Eric Gwynn</strong>: That sounds great. Cool.</p>
+</details>
+<p><strong>Brandon</strong>：（笑）欢迎你的到来！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Brandon</strong>: (Laughter) Welcome.</p>
+</details>
+<p><strong>Eric Gwynn</strong>：谢谢你们。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Eric Gwynn</strong>: Thank you.</p>
+</details>
+<p><strong>Brandon</strong>：那么 Eric，我们稍后会聊聊 Omni 以及你们关于基准测试发布的那篇博客文章。但我首先想听你讲讲：到底什么是基因语言模型？我为什么要关心它？它能做些什么？然后我们再来讨论博客文章里那些最引人注目的核心结果。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Brandon</strong>: So Eric, let's talk about Omni and the blog posts that you guys did about the benchmarking. But I want to hear first, OK, what is a genetic language model? Why do I care? What does it do? And then let's talk about the top line results from the blog post.</p>
+</details>
+<p><strong>Eric Gwynn</strong>：基因组语言模型（Genome Language Model，简称 GLM），本质上就是在 DNA 序列上训练的大语言模型。它在很多方面都与大家见过的自然语言模型和聊天机器人非常相似，不同之处在于它不是用单词或自然语言训练的，而是直接在生命的原始基质上训练——也就是构成 DNA 的那串字母序列。而我们自身、我们的公司以及我们的团队，正是以打造出首批生成式基因组学模型而闻名的。这些在 DNA 上训练的模型不仅能“读”，还能“写”，也就是说它们能够生成全新的 DNA 序列。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Eric Gwynn</strong>: So a genome language model, or GLM, is a large language model trained on DNA sequences. So very much like natural language and chat bots you see, but not trained on words or natural language, but on the raw fabric of life, which is these sequence of letters that make up DNA. And we ourselves, our company, our team, is known for creating the first generative genomics models, which are models trained on DNA, not just to read, but also write, meaning able to generate new sequences of DNA.</p>
+</details>
+<p><strong>Eric Gwynn</strong>：当时我们觉得这是一个被大家忽视的领域。如果人工智能既能够阅读 DNA，又能够编写 DNA，它将带来巨大的变革，深刻改变科学发现、对人类健康的理解以及疾病的治疗方式。因此我们深信，在基因组数据上训练人工智能是一个巨大的时代机遇。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Eric Gwynn</strong>: And we felt this was an area that was overlooked and that if AI could read and write DNA, it could change a lot, you know, science of discovery and understanding of human health and how to treat it. And so we felt that it was a big opportunity to train AI on the genome.</p>
+</details>
+<h3>从 Hyena DNA 到 Evo：长上下文突破与生成式基因组学</h3>
+<p><strong>Brandon</strong>：利用这样的模型，我们在实际中究竟能做些什么样的事情呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Brandon</strong>: What kind of things can you potentially do with a model like this?</p>
+</details>
+<p><strong>Eric Gwynn</strong>：从我们最初涉足 DNA 模型的研究历程说起会很合适。我们最早研发过一个叫作 Hyena DNA 的模型，它是一个大语言模型，但在架构上使用了卷积（Convolution）而不是传统的注意力机制（Attention）。如果深入一点技术细节的话：DNA 本身具有一个显著特性，那就是它极其漫长。在那个时期，常规大语言模型在上下文长度上有着极为严苛的物理限制，无法容纳超长序列。因此，我们一直在寻找一种计算效率更高的算法，以便能够处理像 DNA 这样规模的数据。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Eric Gwynn</strong>: Great to start for us when we first started working on DNA models. We worked on this model called Hyena DNA, which is a large language model, but it used a convolution instead of a tension. So a little more technical details. DNA has this property that, well, it's very long, right? At the time, these large language models had limited constraints on context, right? Being able to fit long sequences. And so we were looking for a more efficient algorithm to be able to handle something like DNA.</p>
+</details>
+<p><strong>Eric Gwynn</strong>：于是我们构思出了所谓的 Hyena 算子，它依托于长卷积。简而言之，它允许我们处理长得多的序列——在当时那个案例中最高达到了 100 万个 token，这创造了当时语言模型最长上下文窗口的纪录。我们用它做的事情，本质上是用它来阅读 DNA 并预测其生物学功能。也就是说，给定一段 DNA 序列（一串字符），我们预测它的调控功能以及它对整个基因组产生的效应。这对科学家而言非常有吸引力，因为人体内的绝大多数 DNA，大家可能了解并不深，但事实上我们对自己基因组的认知其实非常有限。我们清楚地知道它显然编码了让我们成为“我们”的全部信息，以及所有复杂的生理机能和潜在疾病。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Eric Gwynn</strong>: And so we came up with this, what we call the Hyena operator uses convolutions. Long story short, it let us process longer sequences, in this case up to a million, and at the time was the largest context for a language model. And what we did with it was essentially used it to read DNA, predict function. So given a sequence of DNA, string of characters, we predict its regulatory function, its effect on a genome. And this is interesting to scientists because a lot of the DNA in our bodies, perhaps people are less aware, but actually we don't know a lot that much about our genome. We know it obviously encodes the information for making us us and all the different complexities and potential diseases.</p>
+</details>
+<p><strong>Eric Gwynn</strong>：但与此同时，这些字母的不同组合方式究竟遵循怎样的语法规则、它们到底如何编码功能与表型特征，目前并没有被完全解开。因此，我们最初的期望就是利用这些 DNA 语言模型，直接从原始的 DNA 序列中建立起映射到具体功能的通道。我们第一代模型成功表明：是的，我们确实可以训练 AI 去在某种程度上阅读并理解 DNA 序列，特别是捕捉我们所说的远距离相互作用（Long-range interactions）。如果你用过聊天机器人就会明白，比如你可能听说过“上下文腐烂”（Context rot）这个概念——喂给语言模型的输入越长，它的表现就会开始退化。因此，能够在超长序列中捕捉长距离信息、各种模式、基序（Motifs）以及深层语法，正是我们当时全力以赴想要实现的目标。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Eric Gwynn</strong>: At the same time, the grammar rules about how the combination of those letters are sort of formed, what they encode function and traits is not fully understood. And so the hope was using these DNA models, language models to be able to map some function from the raw DNA sequence. And so our first generation models was able to show that yes, we can train AI to be able to read and understand to some degree, DNA sequences, and especially what we call the longer range interactions, meaning over sequences, if you use chatbots, for example, if you've heard the phrase context rot, the longer the input you put into a language model, it starts to deteriorate. And so being able to pick up long range information and sort of patterns, motifs, grammar over long sequences was what we were trying to accomplish.</p>
+</details>
+<p><strong>Eric Gwynn</strong>：我们在第一代 Hyena DNA 中证明了在 100 万上下文级别上实现这一点是完全可行的。而真正开创了如今所谓的“生成式基因组学”这一领域的，则是名为 Evo 的模型。在 Evo 中，我们试图展示的不仅是阅读 DNA，更是生成 DNA 的核心构想。我们希望从根本上加速生物学家和科学家从生物学、特别是从基因组学中学习与发现的进程。我们意识到，生成式人工智能在自然语言领域的应用固然非常出色，极大加速了我们理解和操纵自然语言的能力；但在这里，存在着另一种我们并不理解的语言——基因组中的 DNA，而在几年前我们观察看来，人工智能在这个领域的应用几乎寥寥无几。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Eric Gwynn</strong>: And so we showcase in that first generation of hyena DNA that that was possible over a million context. And then really what started the field now known as generative genomics was the model called Evo. And Evo, we should try to showcase there was this idea of not just reading DNA, but being able to generate it. And so we wanted to accelerate essentially how biologists and scientists have learned from biology and particular genomics. And we felt like this whole field of generative AI being applied to language, great, accelerated the, obviously our understanding and ability to manipulate the natural language. But here's this other language DNA in the genome that we don't understand. And it's barely being applied with AI in our pit at the time a few years ago.</p>
+</details>
+<p><strong>Eric Gwynn</strong>：当时我们所见到的模型规模都很小，上下文长度也极为局限，因此它们只能识别非常局部的微小模式和有限的语境。最关键的是，它们没有一个能够生成 DNA，全都是单向的“阅读”模型。我们感到，“生成”这一概念在自然语言领域是如此具有颠覆性和变革力量，那么如果我们能将其带入生物学，特别是带入 DNA 领域，又会发生什么呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Eric Gwynn</strong>: Models that we saw were really small, short context. So they can only pick up small patterns and limited context. And none of them generated DNA. So they all just would read. And we felt that the idea of generation was so powerful and transformative in natural language. What if we could bring that to biology and DNA particular?</p>
+</details>
+<h3>从跨尺度分子设计到从头生成病毒基因组</h3>
+<p><strong>Brandon</strong>：那么这能实现哪些在传统湿实验实验室里无法完成的事情呢？换言之，如果你能把生成这件事做得非常出色，它到底能为你解锁什么能力？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Brandon</strong>: What can you accomplish that you can't do in a lab? Right? So what does that unlock for you if you could do that very well?</p>
+</details>
+<p><strong>Eric Gwynn</strong>：我认为，最先引起大家浓厚兴趣、展现出其巨大潜力的成果之一，就是 CRISPR-Cas 系统。CRISPR 是一种能够对 DNA 本身进行精准剪切的酶系统。我认为 Evo 模型特别赋予我们的核心能力，不仅在于跨越单一模态或单一类型的序列进行生成，而是在于它能够跨越多种模态、跨越多个生物尺度开展协同设计。CRISPR-Cas 是一个同时由 RNA 和蛋白质共同构成的分子机器。而在当时，你根本看不到能够同时生成多种模态的模型：学术界有可以生成蛋白质的蛋白质语言模型，有时也有可以生成 RNA 的 RNA 模型，但你没有一个统一的系统来完成这种协同设计。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Eric Gwynn</strong>: I think one of the first things that we showcased that got folks sort of intrigued by the potential of this was a CRISPR-Cas system. So it's an enzyme that's able to cut DNA itself. And I think what was particularly enabled by the EVO models was the ability to generate over not just one modality or one type of sequence, but spanning multiple modalities and spanning multiple scales. So CRISPR-Cas, it's a molecule made up of both RNA and proteins. And so at the time you hadn't really seen models that can generate multiple modalities. They had protein language models that can generate proteins. Sometimes you had RNA models that can generate RNA, but you didn't have a single system to sort of co-design.</p>
+</details>
+<p><strong>Eric Gwynn</strong>：我们展示了：单一的 DNA 模型本身就是二者的底层根基。因为从 DNA 出发，你可以转录翻译得到 RNA 和蛋白质，因此你可以通过设计单一系统，同时完成生成并使其在真实物理世界中行使生物功能。我们当时把一系列天然存在的 CRISPR-Cas 系统展示给 Evo，然后本质上问它：“你能造出一个全新的系统吗？”我们直接从训练好的模型中进行采样。事实证明，Evo 确实成功发现了一个全新的功能性 CRISPR-Cas 系统。人们对此深感震撼，这项成果登上了《科学》（Science）杂志的封面。随后，我还有幸就这项工作发表了 TED 演讲。那次经历非常有趣，因为受众是极其广泛的普通公众，所以必须解释清楚：什么是 CRISPR-Cas 系统？什么是 DNA？你又是如何用 AI 去生成它的？你为什么要生成它？围绕着这些引人入胜的话题展开。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Eric Gwynn</strong>: We showcased that a single DNA model, sort of the foundation of both of those, right? From DNA you can get RNA and proteins that you can design a single system to generate and also function in the real world. So we asked EVO, we showcased it a bunch of natural CRISPR-Cas systems and essentially asked it, can you make a new one? And we're able to sample from that model that we trained. And indeed we showcased that EVO was able to discover a new CRISPR-Cas system and folks were intrigued by it and cover of Science Magazine. And later you get to give a TED talk about the work, which is interesting because obviously the audience is very general and so trying to make, what is CRISPR-Cas system? What is DNA and how do you generate it? Why would you generate it? All sorts of fun topics.</p>
+</details>
+<p><strong>Eric Gwynn</strong>：而且我认为更令人惊叹、更激动人心的突破发生在去年：科学家们最终展示了利用生成式 DNA 模型究竟能达到怎样的高度——那就是利用人工智能从零开始（From scratch）生成了第一个完整的生命基因组。这是人类自身单凭手工根本无法做到的事情。人类以往的操作，通常可以形象地理解为“剪切和粘贴”来自其他基因组或其他生物体 DNA 的现有片段，将它们拼装融合，挑出那些人类已经明确知晓其功能并理解其规则的微小基序。但要从零开始、自底向上地完整构建一个基因组，此前从未有人做到过。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Eric Gwynn</strong>: And I think the more even intriguing, exciting thing that scientists eventually just last year showcase what you can do with a generative DNA model was to generate the first genome from scratch using AI. So this is something not possible by humans, right? Humans usually, you can think of it like copy and paste parts of other genomes or other DNA, put it into something else, but they would just take out small motifs that they know the function and they understand the rules, but to build something from scratch, you're gonna ground up, had not been done before at the genome level.</p>
+</details>
+<p><strong>Eric Gwynn</strong>：而事实证明，Evo 成功生成了一个具有完全生物功能的基因组。在那个案例中，生成的是一个噬菌体（Bacteriophage），也就是一种病毒。对科学界以及对我们 Radical Numerics 这家公司而言，这都是一个至关重要的转折点。因为我们感到，创造出一个在自然界中从未存在过的完整活体生命，这是能力极其强烈的实体展现；但与此同时，这也意味着巨大的潜在危害。如果你能够驾驭并操纵生命的基本基质本身，能够精准控制其功能，这到底意味着怎样的后果？你正在向这个世界释放何种力量？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Eric Gwynn</strong>: And so EVO turns out was able to generate a functional genome. And in this case, it was known as a bacteriophage, also known as a virus. And this was a key turning point for, I think, the scientific community and for us as a company, a radical numerics, because we felt this was such an indicative manifestation to create a whole organism, not existing in nature, but also the potential harm that that means as well. If you can control, if you can manipulate the fabric of life itself, control its function, what kind of implications does that mean? What are you enabling into the world?</p>
+</details>
+<h3>从自然语言防护延伸至生物序列层面的防御</h3>
+<p><strong>Eric Gwynn</strong>：因此我们收到了潮水般的反馈、评论和外部联络，大家既对这种强大的技术前景感到兴奋，同时也对其带来的潜在风险以及技术的发展轨迹深感忧虑。这还仅仅是技术的早期阶段，只是人们能预见和推演这项技术未来可能导向何方的一个最初缩影。正因如此，我们作为一家公司清醒地认识到：我们不仅需要全力推进这些模型在生物设计方面的能力，同样必须将它们打造成抵御滥用潜在风险与新兴生物安全威胁的防御工具。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Eric Gwynn</strong>: And so we actually got a lot of feedback, a lot of comments, a lot of outreach from folks, both excited and concerned about this capability, this kind of capability and just the trajectory. This is the early stages, the first thing one can sort of project and imagine what this could lead to. And so we felt as a company, it was important to not only push on the biological design capabilities of these models, but also the ability to use them as defensive tools for the potential of misuse and biological risk that emerges.</p>
+</details>
+<p><strong>Eric Gwynn</strong>：事实上，许多顶尖公司和前沿实验室如今也对 AI 模型具备生物序列设计能力所引发的新兴风险高度关注。但与此同时，现有的防御思路大多还是从自然语言层面来进行拦截——例如像 Claude 这样的系统设置的合规安全护栏：一旦你在对话中触及危险病毒，它就会直接拒绝回答并掐断交互，这当然很不错。我认为在某种程度上，自然语言层面的安全护栏确有必要；但显然，你同样迫切需要的是建立在生物序列本体层面的安全护栏。因此，你需要的是不仅能理解语言及聊天上下文推演、更能够直接理解生物基质底层的模型，这才是构建终极防线的下一步。如果你拥有的模型能够直接洞察某段序列是否具有致病性或是否属于危险病毒，那才是人们真正渴望拥有的防御能力级别。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Eric Gwynn</strong>: And I think indeed a lot of companies, a lot of Frontier Labs, are also being concerned about this emerging risk AI models be capable of designing biological sequences. And at the same time, it's being mostly attacked from like a natural language standpoint, like safeguards and things like clod, if you talk about viruses, it'll just like shut you down, which is great. I think it's to some degree, you need safeguards at the natural language level, but I think what you also need clearly is safeguards at the biological sequence level too. So you need models that not just can understand language the trajectory of your chat, but to understand the substrate itself is the next step in ultimate limit. If you can have models that can understand if the sequence is pathogenic or virus, that's the level of defensive capabilities that you want.</p>
+</details>
+<p><strong>Eric Gwynn</strong>：在此基础上，将这种能力推广部署到环境监测系统中，服务于国家安全体系，实时监控环境中新出现的未知突变序列——这正是这类前沿能力所带来的可能。我们认为，将这一前沿技术赋能给安全防御社群同样至关重要，其重要性丝毫不亚于将其应用于人类健康与医疗研发本身，而改善人类健康依然是我们最主要的核心聚焦点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Eric Gwynn</strong>: And then being able to push that out into surveillance systems, national security, of being able to monitor emerging sequences in environment, this is what that kind of capability makes possible. And then we think bringing this frontier technology to that community as well is also important, just as important as using this for human health, which is what we primarily focus on.</p>
+</details>
+<h3>从基础模型到后训练对齐：Omni 超越专用模型的演进之路</h3>
+<p><strong>Brandon</strong>：正如你刚才提到的这一演进脉络，从 Hyena DNA，到 Evo、Evo 2，再到现在的 Omni。你能不能谈谈 Evo 和 Evo 2 当时在许多任务上面临的困境？它们在面对各种专用模型时往往难以胜出；但在你们最新的博客文章中，你们提到 Omni 已经能够在极为广泛的各类任务中全面超越这些专用模型了。我们能深入聊一聊这背后的转变吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Brandon</strong>: There was this evolution that you mentioned, there's the Hyena DNA, and then there's Evo, Evo2, and now Omi. Can you just talk about a little bit about Evo and Evo2 who struggled to beat specialized models across many tasks, whereas in the blog posts you talk about how, across a wide range of tasks, that Omi is actually able to outperform them now. So can we just talk a little bit about that?</p>
+</details>
+<p><strong>Eric Gwynn</strong>：是的。Evo 在很多维度的确让人们大开眼界，展示了同时应用于多种生物模态的巨大潜力；但坦率地说，它在许多具体任务上仍然落后于那些针对特定任务调优的专用 DNA 模型，尤其是在人类基因组学相关任务上。因此，尽管 Evo 具有一定竞争力，但它在当时绝非最先进水平（State of the art），也没能真正拉开质的差距。社区里的一部分人甚至会产生疑问：“既然我可以直接使用那些体积更小、更专注的专用模型，为什么非要去用一个庞大笨重的通用大模型呢？”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Eric Gwynn</strong>: So yeah, Evo was intriguing to folks in many ways, showcased the potential for applying to multiple types of modalities, but it's still in many ways underperformed sort of the specialist DNA models, especially on human genomics. And so although Evo was competitive, it still wasn't state of the art or kind of pushing the needle. And so some parts of the community thought like, why use a giant LOM when I can use these smaller, more specialized models?</p>
+</details>
+<p><strong>Eric Gwynn</strong>：因此，我们在打造 Omni 时最核心的诉求之一，就是在众多技术改进中，率先引入并确立中训练（Mid-training）、后训练（Post-training）或更宽泛意义上的“对齐”（Alignment）这一关键概念。我们审视生物学和基因组学领域的语言模型时发现，过去大家基本看到的都只是预训练完成的基础模型（Base models）。它们经过了大规模预训练，但本质上是未经过对齐的。如果映射到自然语言领域的类似发展历程来看……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Eric Gwynn</strong>: And so what we wanted to do with Omi was amongst many things, but one of the first things was to showcase this idea of mid-training and post-training or broadly alignment. So the way we think about language models and bio and genomics in particular, is that mostly we've only seen base models trained. So they're pre-trained, but they're basically unaligned. So in the analogous space for natural</p>
+</details>
+<!-- chunk 2/8 -->
+<h3>从预训练到对齐：基因组基础模型的实用化</h3>
+<p><strong>Speaker A</strong>: 在语言模型领域，预训练就像是在夯实一切模式识别的基础；但如果想让它在现实世界中真正发挥实用价值，精准回答科研人员与用户真正关切的问题，并以人们认为信息量丰富、易于交互的产品形态呈现出来，就必须进行大量的对齐（alignment）、中训练（mid-training）和后训练（post-training），这样才能使模型达到生产就绪并切实可用的状态。</p>
+<p>我们认为，之前的 Evo 主要是展示了大规模预训练所蕴含的惊人潜力，而 Omni 则是向前跨越的关键一步，致力于将其真正转变为科学家等一线科研人员手中切实好用的工具。</p>
+<p>我们在对齐、中训练以及后训练上投入了大量精力。其核心就在于将任务以人们在基因组学中最希望理解的形式呈现出来——例如：给定一个野生型序列和一个突变序列，帮我找出其中的因果致病变异（causal variant）。诸如此类探索基因组学分析的核心问题与交互形态，并不会单纯依赖预训练过程就轻易、自然地涌现出来。</p>
+<p>预训练本质上执行的是下一个 token 预测（next token prediction）或掩码填空（infilling）任务。我通常将预训练理解为赋予模型基础的模式构建与识别能力；但在此之后，如何把这些学到的特征表示与嵌入向量（embeddings）精准导向具体的下游任务——甚至是一整套复杂的任务体系——并进行对齐，也就是让它以对人类科学家真正有意义的方式呈现输出，这需要进行细致的引导与结构设计。迄今为止，自然语言领域的各大前沿实验室正是推动此类研究的核心主力。</p>
+<p>因此，我们希望将这类先进的前沿方法学及更多创新引入基因组学。</p>
+<p>Omni 的发布实际上正是展示这一潜力的技术预览。令我们惊喜的是，一旦开始引入这些方法，哪怕只是初步探索，模型就立刻开始刷新前沿基准（state of the art）并不断拓宽能力边界——它不仅像 Evo 那样在广泛的多任务上展现普适的有效性，更是在变异效应预测、疾病致病突变分析等各个具体领域推向了技术前沿，真正开始在人类基因组学中释放实际应用价值。</p>
+<p>我们非常激动能够向社区分享这一成果。从某种意义上说，它目前确实只是一个阶段性预览，因为我们仍在紧锣密鼓地继续训练，并向模型中融合更多的前沿技术，例如引入额外的生物模态。但团队当时实在太兴奋了，极度希望能尽快把它交到一线研究者手中。在早期收到的反馈与合作需求中，有大量的医院系统和非营利组织，他们手中沉淀着海量的遗传学数据。</p>
+<p>举例来说，临床上他们明确观察到患者存在某种严重的疾病或表型症状，但受限于现有工具，始终无法确定究竟是 DNA 的哪一部分在诱发病因。</p>
+<p>患者体内普遍存在大量此类意义未明的变异（VUS，Variants of Unknown Significance）。能够将我们的模型应用于这些真实场景，协助临床医生与研究人员为这些疑难患者明确分子诊断，正是其实际落地应用的一个极具代表性的例证。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: In language, it's like you're doing all the pre-training, but to make it actually useful in the real world and answer questions that users actually want and that is in the form factor they find actually informative, there's a bunch of alignment and post-training and mid-training done to get the models to be production ready and actually useful.</p>
+<p>And so we felt Evo was just showcasing the potential of that pre-training, but Omni is a step of actually making it useful for folks like scientists.</p>
+<p>And so we spent a lot of time on alignment and mid and post-training, which is essentially showcasing tasks in the form that people generally would want to understand about genomics, given a wild type and a mutation sequence, help me find the causal variant. These types of questions and form factors for how you might want to analyze genomics doesn't just emerge necessarily easily on its own from pre-training.</p>
+<p>Pre-training is this next token predictions task or infilling. And basically I think of it as like the raw pattern making ability that you're teaching it is in the pre-training, but then taking those learned embeddings or features and pointing at specific tasks or a bunch of tasks really and aligning it, meaning have it show you the output in a way that's meaningful to you, takes a little bit of teasing and manipulating that so far, frontier labs are the ones that drive that research in the natural language community.</p>
+<p>And so we wanted to bring a lot of that research and more to genomics.</p>
+<p>And so I think Omni is really just a preview to showcase that potential. And I think once you do that, even just a little bit, we were surprised that it did start being state of the art and pushing the boundaries, not just being effective at multiple tasks just broadly like Evo was, but actually pushing the frontier of each of those area of variant effects prediction, causal mutations for disease, it could start actually being useful for human genomics.</p>
+<p>And so we're really excited to share that with folks.</p>
+<p>And it was just a preview in that sense because we were still actively training and incorporating additional techniques into the model, like additional modalities, but I think we were basically too excited and we wanted to get this in the hands of folks faster. And some of the feedback we got in early interest, lots of hospital systems, nonprofits that have tons of genetic data.</p>
+<p>And for example, they know there's some kind of condition or symptom for the patient, but they can't figure out which parts of the DNA are causing it.</p>
+<p>So these got these VUSs or variants of unknown significance that we're extremely excited to apply these models to and actually help diagnose a lot of these patients is one example of a real use application.</p>
+</details>
+<p><strong>Speaker B</strong>: 我稍后很想深入探讨具体的应用细节，但从纯技术架构的角度来看，我非常好奇这究竟是如何实现的？对一个基因组学模型进行“对齐”（align）具体意味着什么？在大语言模型中，我们能够很直观地联想到思维链（chain of thought）或强化学习（RL），那里有着清晰成熟的技术范式。但在基因组模型中，这究竟是怎样的形式？或者说，将其称为另一种语言环境下的“微调”（fine-tuning）是否更贴切？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: I'd like to talk more about the applications in a bit, but I am curious just from a technical standpoint, what does it look like? What does it mean to align a genomics model? I can imagine with large language model, there's a sort of natural chain of thought, RL, there's like a clear paradigm here. I'm curious, what does it look like for a genomic model, which is not maybe better described as something like fine tuning in a different language?</p>
+</details>
+<p><strong>Speaker A</strong>: 是的，在很多层面上，人们确实可以将其归纳为微调；但我认为，其中的核心关键在于引入恰当的输入数据结构。换言之，按照特定的序列组织方式向模型输入信息，从而让模型明确意识到当前正在被要求执行某项特定任务。</p>
+<p>因此，这里融合了特殊 token（special tokens）的设计。你可以这样理解：如果你希望模型执行针对疾病 A 的致病性预测，模型就会预期遇到特定的特殊 token，对吧？这实际上就是一种向模型提供提示（prompt）的方式。如果你期望它进行序列从头设计，就会有另一个专属的特殊 token；随后以类似于思维链的方式向它展示范例，也就是向模型呈现一系列期望的输出序列及其推理演进轨迹。</p>
+<p>我在这里有意解释得稍微有些笼统，因为这构成了我们目前仍在持续打磨的核心技术秘诀（secret sauce）的一部分。随着时间的推移，我们希望向学术界和产业界公开越来越多的细节。</p>
+<p>但在很多核心机制上，它确实高度映射了自然语言社群的发展范式。这其中很大一部分是微调，但更根本的是精准圈定出我们希望模型重点学习的高质量特定数据集，并以严谨的结构来组织问题或任务。这与预训练形成了极为鲜明的对比——预训练本质上只是把浩瀚的数据统统灌注进去，然后单纯进行下一个 token 预测，或者像掩码图像建模那样进行掩码区域填空；在预训练阶段，模型完全没有问答（Q&amp;A）这种结构化概念，即不存在“一个明确的问题、一个引导提示，进而生成针对性输出”的逻辑流程。</p>
+<p>你可以把中训练和后训练理解为开始向模型建立这种规范：给定这种类型的输入，我期望获得这种格式与维度的输出，无论是置信度评分、致病概率预测，还是具体的生物序列设计，这基本上就是中训练和后训练所承担的核心职责。</p>
+<p>此外，后训练当然也涵盖了强化学习等技术手段，但我认为带来更深远变革的，正是这种将问答式结构系统性引入基因组序列建模的过程。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah, I mean, I think in many ways, one could describe it as fine tuning, but then introducing, I'd say, sort of the key components are the right structure of the inputs. So feeding them in a certain sequence so that the model is aware that a certain task is being asked of it.</p>
+<p>So there's a mix of special tokens to basically, you can think of it as like, if you're gonna do disease prediction for disease A, expect this special token, right? Just kind of like a way to prompt it. If you expect it to do design, have another special token, and then showcase the examples, kind of like in a chain of thought manner, meaning showcase a sequence of desired outputs and the trajectory of it.</p>
+<p>This is a little vague sort of intentionally because it's part of our secret sauce that we're still developing. And I think over time, we wanna showcase more and more of it.</p>
+<p>But in many ways, it does mimic a lot of the natural language community. A lot of it is fine tuning, but really it's also carving out specific datasets that we want it to focus on and then structuring the questions or tasks in specific ways, as opposed to pre-training. Pre-training is really just feeding it in and everything and really, and just doing next token prediction or mask infilling, if you're doing mask image modeling. And it has no sense of like this Q and A type structure where you have a question, a prompt, and then an output.</p>
+<p>And you could think of mid and post training as starting to showcase, given this type of input, I expect this type of output, whether it's score, prediction score, or design is largely the mid and post training.</p>
+<p>And post training also includes things like reinforcement learning too, but I think the bigger steps are introducing structure of like question and answering.</p>
+</details>
+<hr>
+<h3>统一架构与单模型跨模态泛化</h3>
+<p><strong>Speaker B</strong>: 这些模型是配置了多个针对特定任务的输出头（task-specific heads），还是说你们在训练同一套统一的输出头来同时解答多种不同类型的生物学问题，仅仅依靠改变输入的 token 来切换任务模式？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Do the models have multiple heads that are task specific, or are you training one set of heads or whatever that can answer multiple questions at the same time? Just change the input tokens or whatever.</p>
+</details>
+<p><strong>Speaker A</strong>: 总体而言，我们对此保持着开放和灵活的态度。在具体实现中，有时确实可以挂载不同的专用输出头，但对我们团队而言，核心的发展哲学是走向更彻底的统一化架构。</p>
+<p>在早期的探索实验中，我们确实尝试过采用多种不同的专用头。在部分特定任务中，针对性设计的输出头表现得更为优异；但在另一些任务中，高度统一的单头、单模型架构却展现出了更出色的能力。因此我们在工程实践中保留了灵活性，但从长远来看，我们全面推进的主流方向是构建单一统一模型。促使我们坚定选择这一路线的核心驱动力，在于我们致力于解锁模型深层次的泛化能力（generalization）。</p>
+<p>我们坚信，将这些模型打造得越统一，越能够催生出深层的涌现能力（emergent capabilities）。而在很大程度上，这正是驱动我们从 DNA 出发开展基础大模型研究的初衷。</p>
+<p>我们注意到，先前的许多生物 AI 模型往往孤立地专注于 DNA 下游的其他具体模态，比如专门建模 RNA、蛋白质或是化学小分子。</p>
+<p>但我们始终坚信，DNA 才是整个中心法则与生物系统的底层基石；立足于最底层的 DNA 序列，模型完全可以自主推演并掌握大量其他模态的规律，甚至理论上能够贯通所有下游模态。在我个人的学术认知体系中，我倾向于将其他模态视为向模型输入的某种补充上下文信息。</p>
+<p>总而言之，打造能够横跨多种生物模态、统摄不同生物学尺度的单一统一大模型，正是我们实验室始终为之奋斗的核心愿景。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah, broadly, it's a little, you can, I think we're flexible on this. The idea, yeah, sometimes you can use different heads, but the idea for us is to unify more so.</p>
+<p>And so I think early experiments, we did have different heads, but in some cases the different heads do better. In some cases the unify, a single head, a single model does better. And so I think we're flexible on that, but I think broadly the direction that we are moving toward is a single. And the reason for a special motivation for that is that we're trying to unlock a lot of generalization.</p>
+<p>And I think the more unifying we're able to make these models, I think that's when you see more emerging capabilities happen. And in large part, that's what motivated the DNA work.</p>
+<p>We felt like a lot of models were specialized into other modalities, a little more downstream from DNA. So like RNA or proteins or molecules.</p>
+<p>We largely felt DNA is the foundation and that from DNA, you can learn a good deal of other modalities, potentially all of them. And I think other modalities is a sort of like additional context that you're showing the model. That's how I kind of view it philosophically in my head.</p>
+<p>But yeah, the idea that single models unifying across modalities, scales is what the lab builds toward.</p>
+</details>
+<hr>
+<h3>变异效应预测：攻克非编码区的致病突变</h3>
+<p><strong>Speaker B</strong>: 你能否为我们梳理一下博文中重点展示的几项核心任务并做些阐释？请记得照顾一下仅收听音频的播客听众，用语言为他们描绘一下这些关键基准成果，并深入剖析一下其中的技术细节。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Can you walk through a few of the tasks that you talk about in the blog and just explain and remembering to narrate for the listener only audience, but talk about some of these top line results and maybe dig into them a little bit.</p>
+</details>
+<p><strong>Speaker A</strong>: 没问题。在本次 Omni 发布中，我们认为极具展示价值的一个关键领域是对基因变异及其效应（variant effects）的理解。从根本上说，DNA 变异是指基因组中某个特定位置的碱基发生了改变，换成了另外三种字母中的某一个。这种突变有时会导致严重的疾病，有时则没有任何生理表型。事实上，绝大多数情况下变异并没有显著影响，但在基因组的特定关键位点，一旦出现某种异常变异或碱基突变，就会直接诱发严重疾病。</p>
+<p>在很多情况下，由于全基因组中这些突变组合的空间极其浩瀚——整个人类基因组包含超过 30 亿个碱基字母，对吧？这一排列组合的体量如此巨大，以至于对于临床医生和遗传学家而言，我们目前真正明确知晓哪些变异会导致疾病、哪些属于良性变异的，仅仅占了极其微小的冰山一角。</p>
+<p>因此，全球许多医院系统与临床诊所一直在持续收集患者的变异数据，并沉淀出了一系列专业基准库——其中部分变异的致病机理已被阐明，但仍有海量变异的临床意义尚未明确。</p>
+<p>研究团队基于 ClinVar 以及 TraP（转录文本中作 TraChim）等权威数据库构建了严格的评测基准，其核心评测逻辑在于：给定一段 DNA 中的突变，模型能否精准判断它究竟会不会诱发疾病？</p>
+<p>这对于基于语言模型架构的 DNA 基础模型而言是一个极其契合的任务场景，因为它们本质上是概率模型。当你在序列中引入一个突变时，模型在相应位置及上下文预测下一个碱基的概率分布与置信度就会随之发生敏锐的变化。</p>
+<p>在此次研究中，我们充分利用了模型所具备的这种精准预测能力。Omni 在训练过程中见证并学习了极其庞大的 DNA 序列数据，尤其是在全人类基因组上进行了深度预训练，因此它深刻理解了人类基因组中哪些序列模式是普遍存在的。在人群中普遍存在且高度保守的序列，通常代表着演化选择下的健康状态。</p>
+<p>反之，你可以这样直观理解：如果模型发现某种序列模式在自然演化中极其罕见，模型就能够敏锐地捕捉到这种异常扰动，进而准确预测该变异可能具有致病性或诱发疾病。我们选取了多项权威基准进行评测，而在引入变异或突变时，生物学上存在着多种不同类型的突变形式。</p>
+<p>例如，有时是单个碱基被完全删除（缺失），有时是单个碱基发生替换，有时则是整段大范围 DNA 片段的缺失；而在这些基准测试中，主要考察的是单核苷酸变异。</p>
+<p>这也正是以往各类 DNA 模型举步维艰、表现不佳的核心痛点，尤其是在复杂的人类基因组上。</p>
+<p>我们的评测充分证明，Omni 不仅在人类基因组变异预测任务上展现出了极强的竞争力，而且在许多情况下达到了前沿顶尖水平（state of the art），事实上在绝大多数关键评测场景中都刷新了行业最高纪录。更令人兴奋的是，当前其他处于前沿梯队的模型，在基因组的特定关键区域依然显著落后。在人类基因组中，存在编码区与非编码区——编码区即直接编码蛋白质的区域。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Sure. One of the areas that we thought was really interesting for showcasing in this particular release for Omni was on understanding variants and their effects, which are essentially in DNA, a change in a position, changing the letter of one of the other three letters in your genome in DNA, sometimes can cause a disease and sometimes it doesn't do anything. Actually many times it doesn't do anything, but there are specific areas in your genome that if you have a different variant or a different letter there, it can cause disease.</p>
+<p>And in many cases, because the combinations of these changes in the genome, over 3 billion letters, right? It's so vast that for clinicians and scientists, we actually know only a very small portion of which variants are causal to disease or not.</p>
+<p>And so there's these benchmarks from folks who collect variants, different hospital systems and clinics, and some are known and some are still unknown.</p>
+<p>Folks have created some benchmarks from ClinVar or TraChim to basically the idea is given a mutation in a DNA, can you tell if it's gonna cause a disease or not?</p>
+<p>And so this is a very good setup for DNA models because they're probabilistic. And so when you do make a change, it basically can modify its confidence or their probability of predicting a next letter.</p>
+<p>And in this case, we've sort of leveraged that predictability of these models. They've essentially seen and been trained on so much DNA, in particular human DNA, they kind of understand what's common in such and usually common or conserved across different other folks usually typically means healthier.</p>
+<p>And so if it's less common, you can think of it this way, it's less common, the model can pick it up and sort of predict that it's potentially pathogenic or disease causing. And so we've taken some of these benchmarks and when you introduce a variant or a mutation, there's different types of mutations in variants.</p>
+<p>So sometimes you can delete a letter altogether, you can just flip it, you can remove big portions of the DNA, but these are generally single variants.</p>
+<p>And in this case, this is where previous DNA models really struggled, especially on humans.</p>
+<p>And so we showcased that not only is it competitive or capable for humans, but in many cases, it's state of the art and actually most of these cases, it's state of the art. And I think the exciting part is that areas where other models that were currently on the frontier, they still were lagging behind quite a bit in terms of where in the genome. So in the genome, there's coding and non-coding regions, like protein areas, protein regions.</p>
+</details>
+<p><strong>Speaker B</strong>: 也就是说，编码区负责实际编码并决定蛋白质的具体结构，而其他区域则承担着调控功能，例如严密控制哪些基因应该在何时被激活表达。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Meaning areas that are actually the coding, the structure of a protein versus other areas that do other things like regulate what genes are expressed.</p>
+</details>
+<p><strong>Speaker A</strong>: 没错，这些非编码区绝大部分属于调控序列，它们精准调控着特定基因应该在何时开启、以及将其表达量控制在多大水平。</p>
+<p>在临床实践与科学研究中，发生在这些非编码调控区中的突变与变异，想要准确预测其是否具有致病性，难度要远远高于编码区。</p>
+<p>而我认为，我们依托 Omni 打造的新一代模型最令人振奋的突破，恰恰在于非编码区正是我们展现出绝对压倒性优势的领域。</p>
+<p>我们的模型能够敏锐地捕捉到这些细微突变，并精准甄别其在复杂的非编码调控区、尤其是跨越大距离的长程调控区域中是否会导致疾病。</p>
+<p>这让广大长期受困于传统工具的遗传学家感到无比振奋。过去，传统的生物信息学工具或统计学方法在此类问题上举步维艰，因为传统工具大多严重依赖针对编码区的数据与特征，而编码区仅仅占人类全基因组的大约 1.5% 到 2%。</p>
+<p>然而科学事实表明，许多甚至绝大多数人类复杂疾病的致病变异，恰恰潜伏在这些占据绝大多数篇幅的非编码区之中。</p>
+<p>正因如此，整个遗传学界长期以来一直迫切渴望能够出现真正能够攻克非编码区、准确识别人类疾病致病变异的基础大模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah, and so these non-coding regions are largely regulatory, they kind of control how much or when to use a certain gene or turn them on.</p>
+<p>And in many cases, these non-coding regions, these regulatory regions, variants, their mutations there are much harder to predict if they cause disease or not.</p>
+<p>And I think what's exciting thing about the new generation of models we're building with Omni is that that's where we shine, especially.</p>
+<p>The models are able to pick up mutations and be able to distinguish if it's disease causing in these non-coding and especially long range areas.</p>
+<p>So I think this is particularly exciting to a lot of geneticists that have struggled to use traditional bioinformatic tools or statistical methods because they've largely focused on coding regions, which is only about 1.5, 2% of the genome.</p>
+<p>And turns out many, if not most of the diseases are in these non-coding regions.</p>
+<p>And so there's been a real desire to build models that can actually pick up these variants of disease causing variants in these non-coding regions.</p>
+</details>
+<hr>
+<h3>基准对比：语言模型架构与有监督模型 Borzoi 的本质差异</h3>
+<p><strong>Speaker B</strong>: 我有几个深入的问题想探讨。首先，趁着我们正好聊到这里，我想向听众说明一下：在博文中引用的基准评测图表中，有一列标注为 Borzoi（博文参考文献 4，转录文本中作 Borsoli）。为了帮助大家建立一些历史认知背景，你能否介绍一下这一列模型代表着什么？这或许也有助于听众更好地理解图表右侧 Omni 这一列的核心价值与定位。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: I have several questions. First, just while we're here, for the listeners, there's this column on this, a benchmark chart called Borsoli, reference number four in the blog post. I think for maybe some historical context, could you talk about what this column represents and maybe this also helped give context for the Omni column on the right.</p>
+</details>
+<p><strong>Speaker A</strong>: 这是一个极好的切入点。我们在该基准评测中所呈现的对比，实际上是系统性选取了深度学习前沿最具代表性、性能最顶尖的模型，以及传统的标杆性统计学方法。在对比中，Evo 2 是我们团队之前研发的最新前代基因组基础大模型；而 Borzoi 同样是一个经典的 DNA 模型，但它属于截然不同的技术路线。本质上，Borzoi 是一个有监督预测模型，其目标是直接从输入的 DNA 序列预测功能基因组学轨道数据（functional genomic tracks）。因此，它在底层设计上也天然具备多模态属性，但它并不是一个自回归的语言模型架构。</p>
+<p>也就是说，它不会像语言模型那样执行下一个 token 的概率预测，而是直接从一段输入的 DNA 序列，端到端映射到具体的功能基因组学连续轨道上，例如染色质开放性（chromatin accessibility，转录文本作 chromatex flexibility）或基因表达丰度。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah, great point. So what we show in this benchmark here is really taking some of the representative models or the strongest models in the deep learning side and also in the traditional methods. So we have Evo2 is the latest previous genomic model that our team had worked on. And then Borzoi is, it's also a DNA model, but a very different kind. Essentially it's a supervised model that predicts from DNA functional genomic tracks. So it too is inherently multimodal, but it's not a language model.</p>
+<p>So it doesn't predict like a next token prediction. It goes from a DNA sequence directly to a functional genomic track like chromatex flexibility or gene expression.</p>
+</details>
+<p><strong>Speaker B</strong>: 而这些功能基因组学轨道数据，都是无数科研人员在撰写博士论文和开展实验项目中倾注心血深度实验标注出来的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: And these tracks have been annotated extensively by people writing their dissertations and whatever.</p>
+</details>
+<p><strong>Speaker A</strong>: 没错，完全正确。所以这两种范式之间的巨大本质差别就在于……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah, right. So the big difference there</p>
+</details>
+<!-- chunk 3/8 -->
+<h3>无监督预训练与突变致病性评分机制</h3>
+<p><strong>受访者</strong>：核心在于这是一个监督学习任务，对吧？它需要带标签的输出数据。而在我们的情况下，这些语言模型并不需要带标签的输出。你是在未加注释的原始序列上进行预训练。那么为什么这种方式更令人向往呢？原因在于未标注的数据量极其庞大，存在着海量的未注释基因组数据。事实上，绝大部分数据——在许多层面上几乎可以说是所有数据——都是没有注释的。因此，能够以无监督的方式进行学习是非常有价值的。对于我们而言，我们希望展示在原始基因组序列上进行预训练所带来的优势，并将其与 DNA 其他领域最先进的 SOTA 模型进行对比。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: is that it's a supervised task, right? So it requires labeled outputs. And in our case, these language models, they do not require labeled outputs, right? So you're doing raw pre-training on unannotated sequences. So why is that desirable? Well, it's a lot more data, a lot more genomic data that's not annotated. Actually most of it, pretty much in many ways, almost all of it is not annotated. And so being able to learn from an unsupervised manner, hugely desirable, right? For us, we wanted to showcase the benefit of pre-training on raw genomic sequences and comparing it to state-of-the-art models in other spaces in DNA.</p>
+</details>
+<p><strong>采访者</strong>：那么对于你的预测，当你说是无监督时，这种无监督特性具体是如何运作的？换句话说，你如何将模型的原始输出转换为像排序器、打分或任何其他可操作的形式？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: And so your prediction is when you say it's unsupervised, how does the unsupervised property work? Like how do you convert the output of whatever your model is to an actionable like ranker, score, whatever?</p>
+</details>
+<p><strong>受访者</strong>：正如我之前所讲的，全模态模型（omnimodal）的训练是经过预训练的，因此它是无监督的；但当你针对某项具体任务时，确实存在一个监督步骤，也就是使用一个较小且带标签的数据集。不过从本质上讲，我们使用的是似然得分（likelihood scores）。也就是语言模型的原始输出，你基本上可以将其理解为预测下一个碱基字母的概率。我们基本上可以展示出突变型相对于野生型的概率得分，即似然得分。这里的野生型指的是参考基因组中观察到的序列，而突变型则是针对该特定位点的变异。随后我们会得到两个得分。你可以把这理解为利用这两者的比率来反映该突变与正常或基线状态到底有多大差异。你可以将其视作模型能够利用的“意外因子”（surprise factor），然后我们就可以借助它来为疾病预测打出实际的分数。这讲得通吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: What I talked about before is, to train the omnimodal is pre-trained so it's unsupervised, but when you're pointing at a specific task, there is a supervised step. So it's just taking a smaller dataset that is labeled. But essentially what we're doing is using the likelihood scores. So the raw outputs of the language model, which basically you can think of it like a probability for predicting what the next letter is. We can essentially showcase the probability score, the likelihood score for the mutation versus the wild type. So that's seen in the reference genome versus the mutation in this particular case. And then we'll have two scores. And then you can think of it as like using a ratio of the two to showcase basically how different are you from, how different is this mutation from a normal or baseline basically. And then that's, you could think of it as like a surprise factor that the model is able to use and leverage and then we can use that to essentially score an actual prediction for disease or not. That make sense?</p>
+</details>
+<p><strong>采访者</strong>：明白了。那么这个全模态模型是自回归架构，还是扩散模型，亦或是某些你目前还不能透露的技术？（笑）</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Yeah, so omnimodal regressive is that, or is it diffusion or something else that you can't tell me? (Laughing)</p>
+</details>
+<p><strong>受访者</strong>：是的，这次我们不会公布具体的架构组成，不过 Evo 是自回归的，我认为那是第一个大规模的自回归模型。所以对我们来说，我们并不局限于某一种特定的训练目标，而是几乎把工具箱里的所有工具都用上了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, this time we're not describing the exact makeup, but Evo was autoregressive. I think that was the first large scale autoregressive. And so I think for us, we don't tie ourselves down to a specific training objective. We use every tool in the box, toolbox essentially.</p>
+</details>
+<p><strong>采访者</strong>：但对于特定的基准测试，你们的做法是沿着序列推进，利用 token 的似然分布。模型会认为某些 token 出现的概率极低，这大概率是受到了某种进化约束；这类突变在自然界中不常出现，正因为跨基因组观察时极少出现，它可能就会致病并导致个体无法存活等等。所以你认为这就是你们的排序指标。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: But for the specific benchmark, you're going along and you're just using the likelihood distribution of the tokens. And some tokens are, the model thinks these are unlikely and that is probably because some evolutionary constraint. This doesn't show up often. And because it doesn't show often across genomes, it is probably going to cause problems and people will not survive, so on. So you think that is basically your ranking metric or something.</p>
+</details>
+<p><strong>受访者</strong>：是的，这是理解模型工作方式的一种视角，与自然语言中的范式非常相似，可以用同样的逻辑来阐述。此外，我认为在中期训练（mid-training）和后期训练（post-training）中还可以利用更多机制，因为我们可以向模型灌输特定的结构与基准格式，使其能够在刚才描述的基础——即自然界中的普遍模式——之上进一步扩展。而且正因为这是一项针对疾病变异预测的具体任务，模型在中期训练阶段引入了额外的训练环节，从而在本质上增强了学习能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, it's one interpretation of how the model is thinking about it. And very similar to in natural language, you can describe the same kind of paradigm. And there is additional case in mid and post training to leverage more than that, I suppose, because we can teach it specific structure and benchmarks so that it can build on top of what you just described, which is like what's common in nature, but also because it's a specific task for disease variant prediction, then the model has additional training, introduced during mid training to showcase, to add additional learning power essentially.</p>
+</details>
+<h3>中期训练中的结构引入与免微调设计</h3>
+<p><strong>采访者</strong>：能举几个这方面的例子吗？虽然可能在一定程度上涉及机密，但能不能大致介绍一下具体是什么样的？你们通常会往里面加入哪些内容？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: What are some examples of that? Again, probably secret sauce to some extent, but can you give just a gist of what that looks like? What are the kinds of things you would throw in there?</p>
+</details>
+<p><strong>受访者</strong>：我们实际上会把评分本身直接喂给模型。正如我之前提到的野生型与突变型的比率，我会说那更像是一种零样本（zero-shot）方法，完全不需要进行任何中期训练。这正是该图表中 Evo2 所采用的方法，因此 Evo2 本质上没有经过微调。另外有一列是 EVE，它实际上是使用来自 Evo2 的得分进行微调，这是由 GoodFire 团队完成的。那也是我们非常尊敬的团队，他们证明了如果对这类模型进行微调而不单单是零样本推理，它们同样能够达到业内前沿水平。而我们的模型则更进一步，不仅进行微调，还将结构引入模型内部——这里所说的结构是指这些基准测试本身的格式，也就是在中期训练中采用问答风格（Q&amp;A style）的格式，这进一步为我们带来了额外的性能提升。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: We would actually throw in the score to itself. So, you know, that I mentioned a ratio, it's a ratio of wild type risk mutation. I would say that's more of a zero shot method where you don't even have to do any mid training. And that's what Evo2 is doing in particular in this column. So Evo2 is not fine tuned essentially. There's a EVE column, which people are basically fine tuning, using them scores from Evo2, that's from GoodFire. And that's also, you know, folks that we greatly expect and they kind of showcase that these models are able to be stated art when you can fine tune them as well, not just zero shot. And then our model is introducing sort of a step about that, not just fine tuning, but also introducing structure into, by structure I mean the format of these benchmarks into the model itself, that Q and A style formatting during mid training, which is what gives us an extra boost even.</p>
+</details>
+<p><strong>采访者</strong>：明白了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: I see.</p>
+</details>
+<p><strong>受访者</strong>：除了带来性能提升之外，我认为另一个优势——虽然我们在博客文章中没有过多强调，但对科研人员的实际使用来说非常方便——在于你无需先提取嵌入向量（embeddings），然后再接上一个头部去跑回归，省去了这一额外且繁琐的步骤。你能想象使用 ChatGPT 时，如果每次提问都必须先针对特定领域微调一遍会是什么体验吗？我们在中期训练中赋予了模型极高的灵活性，使其能够同时在多项任务上接受训练。这样一来，针对嵌入向量进行微调的最后一步就不复存在了。在那个阶段它是开箱即用的，你只需以特定格式输入 prompt，该格式就会告知模型当前执行的是哪项任务，随后模型就会直接以所需的格式输出答案。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And extra boost, but I think the other benefit too, that, you know, we didn't emphasize too much in the blog, but I think it's really convenient for practical use for scientists is that you don't, you're doing this without taking the embeddings and then tapping on ahead and then, you know, doing some regression, which is the extra step, it's extra hurdle. Can you imagine chat to PT, if like every time you asked a question, you had to like fine tune it for a certain domain. We've done it so that the model is flexible during mid training to be trained on many tasks at once. And so the, that fine tuning, that last step of training the embeddings doesn't have to be done. It's out of the box at that point, you just prompt in a certain format and it will, that sort of format tells it which task you're gonna do. And then we'll output the answers in that, in the desired format, basically.</p>
+</details>
+<h3>数据泄露防范与全面超越集成基准模型</h3>
+<p><strong>采访者</strong>：你们在设计这一后期训练方案时，有多大程度去谨慎防范与 ClinVar、Cray-GEM、RNA-GEM 等数据集发生数据泄露？你对完全不存在意外泄露或上游泄露有多大信心？因为即便在无监督训练阶段，很多这类序列出现在你们的训练数据中我也完全不会感到意外。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: How careful were you in designing this post training scheme to avoid kind of data leakage with the ClinVar, Cray-GEM, RNA-GEM and so on, like these data sets? Like how confident are you that there is no data leakage either like accidental or something upstream and that, because I would not be surprised if a lot of these sequences showed up also in your training data, even in a unsupervised sort of way.</p>
+</details>
+<p><strong>受访者</strong>：简而言之，我们对数据泄露的风险有着极其深刻的认识，并且竭尽全力保持审慎，避免产生误导。我们配备了生物信息学专家，能够对数据进行细致排查、策展、去重以及序列比对，确保任何与基准测试内容潜在相似的序列都不会留在训练集里。一旦发现，我们就会彻底剔除。因此，我们确实设置了非常严格和广泛的数据质控（QC）流程。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, the short answer is we're extremely cognizant of the risk of data leakage and extremely hard to not mislead or be careful. And so we have bioinformaticians that are able to basically comb through the data and curate, dedupe and align sequences to make sure that things that are similar potentially to what's in the benchmark are not there. If they are there, we remove it. And so, yes, we actually have steps to QC the data quite extensively.</p>
+</details>
+<p><strong>采访者</strong>：很好。在进入下一话题之前，我认为看到这些监督方法取得实质性突破真的很酷。此前该领域的许多指标要么落在误差范围内，要么基本上只是在复现前人成果，而现在你们取得了显著的提升。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Yeah, cool. Yeah, I guess maybe before we move on, I think it's really cool seeing that there are these supervised methods, which previously several of these numbers were, let's say, within the error bars, if not just straight up getting what came before them. Now you have significantly improved upon that.</p>
+</details>
+<p><strong>受访者</strong>：是的，我们感到非常振奋。长期以来，这一领域一直由名为 CADD 的方法占据最前沿地位。它之所以能长期保持前沿也是有原因的，这源于它的设计：它会把最优的方法组合起来做集成（ensemble）。即使最好的单模型是前人的成果，他们也会将其与支持向量机（SVM）结合，一股脑倾注所有资源。因此你完全能理解它为何此前表现最好。对我们来说，这就是我们设定的基准线。我们的态度是：既然他们倾其所有，我们就不能只挑某一个模型去对比并声称自己超越了它；我们必须跨越人类目前在所有维度上能达到的极限。因此，我们的研究人员瞄准了这一目标，去验证是否真的能在所有方法之上全面提高性能。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, we're super excited. And I think for the longest time, there's this area of this other method called CAD, which has been state of the art. And state of the art for a reason, which is sort of by design, they'll take the best methods and kind of do an ensemble, right? So they'll take another, even if the best method is another previous model, they'll mix it with like an SVM and just like throw the kitchen sink at it. And so you can see why it would be the best, right? And so that was the bar for us. We're like, if they're gonna throw the kitchen sink at it, like we're not gonna cherry pick one model and say we're better than that. We need to be what's possible, humanly possible now, like across everything. And so, yeah, our researchers were setting their sights on that to see if they can actually improve performance across every method.</p>
+</details>
+<h3>思维链范式在基因组学与 RNA 适配体设计中的迁移</h3>
+<p><strong>采访者</strong>：我很有兴趣探讨一下关于思维链（chain of thought）的讨论。当我第一次听到这个概念在生物领域的应用时，我的思维甚至受到了一点冲击。我非常想听听这到底意味着什么，之前我不得不仔细通读了那篇博客文章才真正弄明白。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: I'd be interested to see there's some discussion of chain of thought. And that broke my brain a little bit when I was first hearing about that. I'm really interested to hear about what that even means. I had to pour through the blog post to really understand that.</p>
+</details>
+<p><strong>受访者</strong>：是的，我认为这只是展现了我们认为序列设计能力未来的发展方向，并且能让科研人员用起来更加得心应手。思维链源自自然语言处理社区，我相信 OpenAI 的 Jason Wei 最早展示了相关范例。那里的突破本质上是展示了语言模型只要“展示解题过程”，就能取得更好的表现。模型逐步展示得出结论或论点的推导步骤。事实证明，即便只是非常简单的步骤，也会给模型一个机会；从哲学上讲究竟为何有效谁也说不准，但从本质上说，就是喂入更多的 token 并提供更多用于思考的草稿空间（scratch space）。人们认为这就是这些语言模型推理能力的开端——通过自我思考得出答案的能力。在语言领域这非常成功，正因如此才会有大量的 Agent 消耗海量 token 去完整展现推导过程，这在很大程度上都源于思维链范式。</p>
+<p>但在生物学领域，我们此前几乎看不到这种做法。我们在蛋白质设计中开始见到了一点萌芽，因此我们希望进一步推进，去探索这在 DNA 中是否可行。在基因组学中这究竟意味着什么？因为你并没有具体的词语来描绘模型的思考过程，那么你该如何把同样的范式引入到 DNA 语言模型中呢？</p>
+<p>我们在很多方面采用了一种更直接、更精简的方案。我们拥有一个 RNA 适配体（aptamers）数据集，你可以将其理解为附带某种适应度得分（fitness score）的目标序列集合。我们利用了这个包含 RNA 输入及其对应适应度得分的大型数据集。适应度得分越高代表性能越好，这是最简单的设定。我们想要验证的是：如果我们按步骤依次向模型展示逐步更优的 RNA 及其得分——先展示低分序列，然后沿着梯度逐步提高——模型能否自主延续这种提升轨迹？最终一步，它能否自我优化到自身所能达到的最高分？这就是我们的实验设计：探索我们能否做到这一点。</p>
+<p>于是我们拿出了这个庞大的适配体数据集，把其中表现最好的一批样本扣留下来不展示，仅向模型提供较低得分的样本，但对其进行了排序。我们先展示得分较低的 RNA 适配体，然后逐步递增，接着让模型沿着这一规律继续外推。结果表明，它成功重现了我们之前保留未给它看的高分序列。我们目前实际上正在湿实验（wet lab）中进行验证。虽然未能在报告中全部展示，但我们确实想探寻究竟：它不仅能在干实验（in silico）中做到这一点——已经证明它能延续该轨迹并设计出具有更高适应度得分且生物学合理的适配体——而且如果实验室验证成功，我们坚信这是一个极具价值的范式，几乎可以推广到所有其他类型的生物序列。因为生物序列通常正是如此：有序列本身，有某种适应度得分或期望输出；如果我们能让模型最终学会这种结构，通过展示一系列渐进增强的序列，让模型预测出更优的序列，这将是一个极其强大的范式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, yeah. I think this is really just a taste of where we think the design capabilities can move toward and way more usable for folks. So chain of thought stems from natural language community. I believe Jason Way at OpenAI showcased the first examples. And really what the breakthrough there was showcasing that these language models performed better when you just show your work, essentially. You showed the steps of how you came to a conclusion or an argument. And it turns out, even if they were like simple steps, but it just gave the model a chance, maybe it's sort of like philosophically who knows exactly why it works. But essentially feeding more tokens in and giving it more scratch space to think. And so people just think this is the beginning of reasoning for these language models, this ability to kind of get to an answer by thinking to itself, by itself. And so it seemed quite successful in language, very successful. And that's why you have a lot of agents that just spent tons of tokens, right? Just showing its work, right? In many ways it stems from this chain of thought paradigm.</p>
+<p>And in biology, we saw very little of that. We started to see some of that in protein design a little. And so we wanted to push that and showcase that, well, at first explore it, is that possible in DNA? Like what does that even mean in genomics? Because you don't really have words that describe its thinking. So how do you take that same paradigm and introduce it to a DNA language model?</p>
+<p>And so what we did was a simpler version in so many ways. We had this dataset of RNA aptamers. So just think of it as these desired sequences with some kind of fitness score associated with them. So we took this large dataset that had RNA input and a fitness score. The fitness score go high, it's good, right? It's the simplest version. It's a big dataset. And so what we wanted to showcase was that if we show the model progressively better RNAs in a series of steps with its score, right? So you have like low scores first and then you gradually move up the chain. Can the model continue that trajectory on its own? And then in the final step, does it self optimize to a point where it's like the best score it can get? That was the experiment. Can we do that?</p>
+<p>And so we took a dataset, a large dataset of aptamers. We held out a portion of like the best performing ones and we showed it only the lower ones, but then we ranked it, right? So we showcase lower scores with the RNA aptamers and then progressively got higher and then asked the model to just like continue with that pattern. And it turns out it was able to recapitulate some of those higher scores that we had not shown it yet. We were actually in the process of validating the wet lap right now. So we didn't get to show it here, but we wanted to know, right? Actually, can it not just do this in silico, which it can, it showcased that it was able to continue this trajectory and create design plausible aptamers with higher fitness scores. And now we think this is, you know, obviously, if this works in the lab, we think this is a hugely, hugely valuable paradigm that can be pretty much applied to every other type of biological sequence. That's usually what you have. You have sequence, you have some kind of fitness score, desired output. And if we can get models to eventually learn that structure and, you know, basically just show a series of progressively stronger sequences, the model can then predict the rest. That's a very powerful paradigm.</p>
+</details>
+<p><strong>采访者</strong>：坦率地说，对于这项任务能看到如此显著的提升，我感到有些意外。这可能夹杂了我个人的认知偏见，但 RNA 在保守结构相关的协同进化（co-evolution）数据缺乏方面是出了名的；对于病毒基因组，往往存在强烈的进化选择压力，但对于哺乳动物，RNA 通常不存在这种进化压力。我认为学界已经非常清晰地认识到，主要的选择压力在于 RNA 需要编码并承载蛋白质编码信息。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Honestly, a bit surprised about this, that specifically this task saw a strong improvement. Maybe my personal bias is coming in here, but RNA is somewhat notorious for not having good co-evolution data in terms of like concerning structures for viral genomes, oftentimes there is strong evolutionary pressure, but for mammalian, usually RNA does not have evolutionary pressure. And I think the community has seen that very, very clearly the predominant pressure is like RNA will code, you know, will carry information, coding information.</p>
+</details>
+<!-- chunk 4/8 -->
+<h3>DNA 预训练与通用生物智能的涌现</h3>
+<p><strong>Speaker A</strong>: 我一直在思考，基因组承载着大量不同维度的信息。它们不仅编码蛋白质，还包含调控元件，而且不同类型的基因组具有截然不同的结构组织。所以我很好奇，你认为这种能力究竟是如何在这个语言模型中涌现出来的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: So, I mean, I'm wondering like genomes carry lots of different information. They code for proteins, they have regulatory elements and, you know, different types of genomes have different types of structure. So I'm wondering, where do you think this capability might have emerged in this language model?</p>
+</details>
+<p><strong>Speaker B</strong>: 这是一个非常好的问题。老实说，我也不完全确定。我们也感到很惊讶。首先，因为该模型是在 DNA 数据上进行预训练的，而在 RNA 数据上其实仅仅做了非常轻微、极其有限的所谓“中程训练”（mid-training）。</p>
+<p>我认为你的直觉很准——DNA 中蕴含着大量的演化效应与演化信息，这很可能就是能力涌现的源头。这也印证了为什么我们坚信首先在全基因组和 DNA 序列上进行预训练至关重要，随后再在其之上叠加其他模态。因为这样可以获得极强的迁移能力，而跨模态的泛化能力正是我们一直努力实现的目标。</p>
+<p>作为一家公司，我们之前没有公开谈论过的一个理念，就是构建“通用生物智能”（General Biological Intelligence）。在这个构想中，我们希望将生物学中各种不同的所谓“语言”或模态统一起来。归根结底，它们全都源自 DNA。然而我认为大家过去并没有充分挖掘这个基本事实。现有的模型往往高度专业化，局限于特定领域、特定模态，没有充分利用其他模态中固有的共享结构。</p>
+<p>举个例子，比如现在人们经常谈论“虚拟细胞”（virtual cells）——这里稍微延伸一下——大家往往只关注 RNA 和转录本数据，就试图直接泛化并描述整个细胞。但显然，一个细胞所包含的远不止这些。在我看来，如果你想让模型学会一个系统，你必须从该世界或该系统的所有信号或传感器中汲取信息。对于细胞而言，如果你想进行融合，你就必须去理解 DNA，必须去理解代谢组学、表观基因组学、蛋白质组学，只有这样你才能真正接近所谓的“虚拟细胞”。而在我们的设想中，我们甚至不希望停留在单细胞层面，而是希望融合贯穿整个生物学维度的所有传感信号。</p>
+<p>这种范式最终能否带我们走向理解生物学每一个细微末节的“超级智能”？谁也说不准。但我坚信，相较于目前的现状，这种范式能够带领我们走得深远得多。这就是我的衡量基准：我们能否打造出比当下有用得多的工具？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: That's a good question. And honestly, I'm not sure. Like we're surprised too. One, because the model is pre-trained on DNA and it's really just like mid-trained on RNA, very, very, you know, in a small way.</p>
+<p>Yeah, I think what your intuition about the DNA having a lot of evolutionary effects or information is probably where. And so I think this is hinting at the idea of why we think it's so important to pre-train on DNA genomes and genomes first, and then sort of add additional modalities on top because you get a lot of transfer and you want the modality generalization is the thing that we're working toward.</p>
+<p>You know, what I didn't talk about as a company for the company as well, is this idea of a building toward general biological intelligence where we are unifying a lot of the different so-called like languages or modalities of biology. At the end of the day, they stem from DNA. And I think people have not exploited that fact as much. It's usually really specialized, the domain specific modality specific models and not leveraging a lot of inherent shared structure from other modalities.</p>
+<p>And so one example of that is like, you know, when people talk about virtual cells, for example, there's a little bit tangent, but, you know, they tend to focus on just RNA and, you know, transcripts, and they want to generalize to describing an entire cell. But obviously a cell is a lot more things than that. In my mind, if you want to learn a system, you want to learn from all the signals or sensors of that world or that system, you know, if it's a cell and you want to fuse, you want to understand the DNA, you want to understand the metabolomics, the epigenomics, proteomics, and that's when you get closer to like, quote unquote, a virtual cell. And in our minds, we don't even want to stop at just the cell, but we want to fuse all of these sensors across all of biology.</p>
+<p>Will it get us to a super intelligence understands every component of minutiæ of biology? Who knows? But I am confident that this type of paradigm will get us a hell of a lot further than we are now. Like that's my bars. Like, can you make something far more useful than now?</p>
+</details>
+<h3>跨生命领域的扩展：从人类基因组到噬菌体与生物安全</h3>
+<p><strong>Speaker A</strong>: 我很好奇，你们目前是专注于真核细胞吗？还是主要聚焦在人类基因组？你们有没有进一步拓展到病毒基因组？我的意思是，虽然存在很多 DNA 病毒，但现实中也有大量的 RNA 病毒序列。从模型训练的角度来看，我不确定它们在根本上是否会有太大不同。如果在可以透露的范围内，你能否谈谈这方面的研究范围？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: So I'm curious, are you focusing on eukaryotic cells? Are you focusing on like human genomes? Have you gone so far as to do viral genomes? I mean, there's a lot of DNA viruses, but it seems like possible that RNA, that there's a lot of RNA sequence virus sequences out there. And I'm not sure fundamentally they would be much different in terms of training. I'm curious, like what's the scope of that, if you can talk about it?</p>
+</details>
+<p><strong>Speaker B</strong>: 当然可以。我们对生命的所有领域都充满兴趣。在当前的研究中，我们之所以特别关注人类，是因为我们发现此前的模型（如 Evo 和 Evo2）在人类基因组上的表现相对没那么强，而且收到了很多同行的反馈，质问这些模型究竟有什么用处。大家认为它们无法理解人类基因组学，因为人类 DNA 的语法和规则太复杂、噪声太大，并且充斥着大量的重复序列等。因此我们希望证明，这种方法其实极具实用价值，并且完全可以应用于人类；在某种程度上，人类基因组可以说是“最复杂之中的顶峰”。</p>
+<p>但与此同时，我认为将这些模型通用地应用于每一种生命形式具有巨大机遇。所以我们对原核生物和病毒绝对同样保持着浓厚的兴趣。特别是病毒，我们非常重视，尤其是在生物防御和生物安全领域。此外，我认为从微生物生命中我们还可以汲取很多治疗层面的应用，对某些研究人员来说这也许是不言而喻的。</p>
+<p>具体而言，正如我之前提到的，已经有人利用 Evo 生成了首个由 AI 设计的完整基因组——一个噬菌体。事实证明，噬菌体在应对抗菌素耐药性（AMR）方面具有巨大潜力。在全球范围内，每年仍有约 200 万人死于超级细菌等细菌感染。利用工程化设计的病毒去精准靶向消灭特定细菌，这一思路其实早已存在，特别是在东欧地区有着悠久的实践历史。这有望催生一类全新的抗菌药物，它们不同于传统抗生素，但在使用方式上非常相似。因此，我们正在投身于那些影响深远、具有拯救生命潜力的方向。我们不会止步于某一种特定的基因组类型，只要对人类有益的领域，我们都有兴趣探索。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah, absolutely. We are interested in all domains of life. So here we focused on humans in particular, because we thought this was an area that of previous models, Evo and Evo2, were not as strong and sort of got a lot of feedback from folks asking, what are these models useful for? They can't understand human genomics because it's too complex of grammar and rules and DNA. It's too noisy, it's too, there should be repeat characters and all that stuff. So we wanna showcase, we think this is actually useful and it can be applied to humans. And it's sort of the most complex of the complex in some ways.</p>
+<p>But I think there's opportunity to apply these models generally to every form of life. So we absolutely are interested in prokaryotes and viral. Viral in particular, we care about it, especially for biodefence and biosecurity especially. And I think there are also lots of therapeutic applications that we can learn from microbial life, maybe obviously for some folks.</p>
+<p>In particular, I mentioned that folks had used Evo to generate the first AI genome, a bacteriophage. Turns out you can use bacteriophages potentially for AMR or antimicrobial resistance. If you have a superbug bacteria infection, which in the world is about 2 million deaths from bacteria infections still, the idea of using viruses, designed viruses to target specific bacteria has been done for a long time, particularly in Eastern Europe. And there's a potential to make a new class of antimicrobials that are not like antibiotics, but very similar that can be used just like it. And so I think we're gravitating toward things that are high impact and the potential to save lives. And so we don't stop at just one type of genome. I think we're interested in anything that's beneficial as you humans.</p>
+</details>
+<h3>隐式结构理解与思维链范式在 SELEX 中的映射</h3>
+<p><strong>Speaker A</strong>: 回到我之前关于 SELEX 和 RNA 的问题，即预测某种 RNA 演化的“思维链”（chain of thought）。我很想知道，这个模型是在 RNA 序列上训练的，还是在那些对 RNA 结构施加了演化选择压力的序列上训练的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Maybe going back to my question about SELEX and RNA, predicting kind of a chain of thoughts of RNA evolution. I'm curious, was this model trained on RNA sequences or sequences which have some, might have evolutionary pressure on RNA structure?</p>
+</details>
+<p><strong>Speaker B</strong>: 仅在“中程训练”（mid-training）阶段接触过。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Only during mid training.</p>
+</details>
+<p><strong>Speaker A</strong>: 仅仅在 mid-training 阶段？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Only during mid training.</p>
+</details>
+<p><strong>Speaker B</strong>: 是的，预训练完全使用的是基因组和 DNA 数据。我们引入 RNA 的唯一时刻就是针对这个特定任务，而且仅仅使用了该数据集内部的 RNA 数据，甚至没有引入任何外部 RNA 数据。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: So pre-training is all just genomes and DNA. And so the only time we introduced RNA was for this specific task where, and only RNA from this dataset. So not even outside.</p>
+</details>
+<p><strong>Speaker A</strong>: 我明白了。这么说来，模型在某种程度上确实对 RNA 结构进行了编码，或者说……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I see. So this really was something along the, there is something encoding RNA structure in this model to some degree, maybe, or either that or</p>
+</details>
+<p><strong>Speaker B</strong>: 是隐式编码的。对，我认为完全是隐式学习到的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: implicitly. Yeah, implicitly, I would say implicitly.</p>
+</details>
+<p><strong>Speaker A</strong>: 确实，正如我们在蛋白质领域所知的那样，纯序列数据理论上应该能隐式地学习到序列对应的空间结构。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I mean, cause I'd say, you know, sequences, as we know from proteins, like implicitly should learn structure from the sequence.</p>
+</details>
+<p><strong>Speaker B</strong>: 没错。目前我们并没有直接输入二维或三维结构信息，但我们绝对计划在后续加入。（两人笑）</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah, and so we don't add in 2D or 3D information at this point, but we absolutely plan to. (Both Laughing)</p>
+</details>
+<h3>湿实验迭代的计算机模拟：从抗生素耐药性到稀土元素提取</h3>
+<p><strong>Speaker A</strong>: 为了确保我理解准确，首先，思维链的概念在这里得到了展示；其核心思想在于，只要你能构建出一个具有循序渐进、指标不断优化的训练数据集，理论上都可以作为应用这种技术的候选场景。</p>
+<p>你能否结合这个具体的实验描述一下，以便我们理解如何将“思维链”映射到该数据集上，以及这类数据集需要具备怎样的形态？我知道这并不是你们自己测得的数据集，但你能否说明一下，这些数据在实验层面上是如何收集的，从而能让你们将适应度（fitness）等指标精准对应到数据集的特定阶段或部分？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: So just so I understand, first of all, the chain of thought ideas, this is a demonstration of it, but the idea is that anything that you can get sort of a training set that has a sequentially better measurement of some sort is maybe a candidate for this technique.</p>
+<p>Yeah. And so can you just describe for this particular experiment just so we can understand how we're mapping chain of thought to this dataset and what the datasets have to look like? Can you just describe how is the, for this, I know this wasn't your dataset, but how is the data collected in such a way that you could map accurately from sort of fitness or whatever to a particular phase or part of the dataset?</p>
+</details>
+<p><strong>Speaker B</strong>: 好的。从实验操作的角度来看，我对这些数据最初是如何合成或生成的细节了解相对少一些，但它们在收集时都是经过真实世界湿实验验证的。数据本身带有某种适应度得分，我相信是通过……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah, so I'm less familiar with how the data was actually sent us or generated from the experimental point viewpoint, but they are validated from a wet lab in the real world when it was collected. So it has some kind of fitness score, I believe through--</p>
+</details>
+<p><strong>Speaker A</strong>: 如果需要的话，我或许可以补充一点背景信息。</p>
+<p>这种实验的基本思路是：首先随机生成海量序列，然后基于这些序列构建适体（aptamer）结构。适体本质上就像是一个基于 RNA 的分子开关，当特定目标与其结合时，它会触发诸如切割掉某段序列的反应。随后可以利用高通量的新一代测序技术（NGS）进行读取，从而一次性评估海量不同的序列。在这个案例中，他们针对的目标应该是 HIV 的某种蛋白质或基因组元件。如果某段序列能够成功结合，就会富集并产生更多的测序 reads。因此，池中保留下来的序列越多，其适应度就越高、结合能力越强；随后实验人员再提取出这些高亲和力序列，引入新的突变，开始下一轮的迭代筛选。</p>
+<p>换言之，这是一个循环往复的实验过程，科研人员通过培养皿中的物理筛选逐步找出适应度最高的结果。而你们在此处所做的，本质上是在计算机中（in silico）模拟复现同样的实验过程。实验本身是在极高通量下完成的，我记得在这个实验中，并行探索的序列数量达到了惊人的 $10^{11}$ 数量级。但核心关键在于，最初的筛选过滤其实完全是由生物学实验本身来承担的，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I can maybe provide a bit of context if you want.</p>
+<p>I mean, so the idea here is you just generate a bunch of random sequences and then you take those sequences and so you have like an aptamer structure, which is essentially like a switch with RNA, which sort of, when something binds to it, it will do something like cleave off a sequence. And you can use an NGS, like Next Generation Sequencing readout, on very high throughput. So you create lots of these different sequences. I guess in this case, they were targeting a specific HIV, like protein or genome or something. And if it binds, you basically get the signal of like you get more reads of that. And so the more sequences which are floating around kind of like the more fitness, the more likely it is to bind and then you take those and then you mutate them again and you kind of iterate on this.</p>
+<p>Right, so you have this iterative experiment where you're progressively using the Petri dish to basically identify the most fit things. So and then what you're doing here is you're basically doing this same experiment in Silico. And they're actually doing very high throughput. Like I think there's like 10 to the 11 or something sequences, some like really high number of kind of sequences explored in parallel for this experiment. But the key is the biology of the experiment is actually doing the filtering, right?</p>
+</details>
+<p><strong>Speaker B</strong>: 没错，正是如此。因此你可以想象，生物实验中这种渐进式优化的操作非常普遍，这种模式完全可以平移到许多其他类型的实验中。只要你捕获并记录下这些中间状态，就可以将它们作为上下文或提示输入给模型，从而完成类似的任务。</p>
+<p>一点没错。另一个典型的应用案例就是针对抗菌素耐药性（AMR）的研究，这也是我们重点关注的方向之一。我们希望模型具备选择性靶向特定细菌菌株或特异性杀灭特定菌株的能力。这种能力可以通过 0 到 1 的评分来衡量杀菌或结合的有效性。因此，向模型展示一系列杀伤力逐步增强的噬菌体基因组及其对应的效力评分，就非常契合这种思维链范式。</p>
+<p>此外，我们正在与一家国家实验室合作开展另一个设计任务。对我们而言，这是一个相对全新的应用领域——设计能够富集和提取稀土矿物（rare earth minerals）的特异性蛋白质。在实际场景中，你不仅需要蛋白质能够与矿物结合，更需要它具备极高的选择性——只特异性结合某一种特定的稀土元素。针对每一种矿物，我们都有对应的亲和力或结合力评分。我们希望在稀土提取任务中执行类似的操作：向模型展示一系列期望属性逐步提升的打分，不仅包括对目标矿物结合力的提高，还包括对其余非目标矿物结合力的降低，从而实现精准的选择性提取。</p>
+<p>我认为，能够将序列信息与代表适应度或功能输出的预期指标结合起来展示，实质上为人们提供了一种非常直观的、仅仅通过“提示工程”（prompt engineering）就能完成生物分子设计的全新方式。这无疑是一个非常令人兴奋、值得深入探索的方向。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yes, yes. And so you can imagine other types of experiments where you could apply the same kind of idea where you're doing this like progressive refinement of something which is very common in biological lab work. And so if you're capturing those intermediate states and you can maybe feed them into the model and do that kind of thing.</p>
+<p>Absolutely, yeah. So another example is for the antimicrobial resistance. I think that's something we're very interested in as well. And the ability to selectively target specific bacteria strains or kill bacteria strains. Yeah, that's measured basically a score zero to one of how effectively that is done. And so showing progressively more effective phage genomes and their associated scores for effectiveness fits that paradigm very well.</p>
+<p>There's another design task that we're working with a national lab to do this with as well. And an area that is quite different for us, but it's on designing proteins to extract rare earth minerals. And so it turns out that you don't just care about proteins that could bind to something, but you want it to be selective. You want it to bind to one type of rare earth mineral. And so you have scores associated with how much affinity or binding affinity for each type of mineral. We wanna essentially do the similar exercise with rare earth minerals and show it a series of progressively desirable scores, not just for binding to this, but like lower binding scores for other ones. You can selectively do it. So I think the creativity in which you can showcase sequence and desirable sequence with some kind of fitness or functional output is a relatively intuitive way for people to design just prompt by just prompt engineering essentially, which I think is very exciting to explore more.</p>
+</details>
+<h3>蛋白质设计中的竞争优势：基因组上下文与非编码区挖掘</h3>
+<p><strong>Speaker A</strong>: 顺着稀土矿物提取的话题，我认为这是一个非常有趣的用例。但从某种角度来看，相比其他技术，这或许并不是你们最具比较优势的场景。因为你们的核心优势似乎在于更大尺度、跨越整个生物体层面的全局序列设计；而如果将焦点集中在单个蛋白质的设计上，这往往更多依赖于对蛋白质三维空间结构的深入解析。</p>
+<p>另外，谈到 ClinVar 数据集，大家的核心论点通常是：当前的模型已经成为了一个极其出色的统计学表征系统，能够准确描绘哪些突变是常见的、哪些是罕见的。如果要进行结构设计，就必须深刻理解空间结构；如果要理解疾病，从群体基因组学的视角切入则要自然得多。所以我想请教，在使用当前策略时，你认为你们最强大的竞争优势体现在哪里？你认为你们的模型除了理解生物功能之外，是否同样理解结构？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Following up on the rare earth mineral extraction, I find that is an interesting use case for this. In fact, maybe one word you probably wouldn't have a comparative advantage compared to some other techniques because it seems like your strengths are probably in larger scale design across like entire organisms, but focusing on individual proteins, that may be much more of a structural task.</p>
+<p>And I'm curious, like going to talk about ClinVar, the argument here is that the model now is a really good statistical representation of what type of mutations are common or not common. And I think in order to do design as a, if you want to design structures, I think you want to understand structure. If you want to understand disease, I think that is I think more natural, for many diseases is much more natural in terms of like a population genomic sort of way.</p>
+<p>So I'm curious, like where do you think your strongest competitive advantage is, in using this strategy? And do you think that your model understands structure in addition to function?</p>
+</details>
+<p><strong>Speaker B</strong>: 我们之所以被稀土矿物提取这个特殊应用所吸引，并且坚信我们具备胜任该任务的综合实力，主要归结为两点原因。</p>
+<p>第一点，是在那些“上下文”（context）至关重要的场景中。</p>
+<p>你说得没错，如果仅仅是孤立地从头设计单个蛋白质，这可能确实不是我们最具天然竞争优势的战场。但在稀土提取这一案例中，我们的核心假设是：基因组上下文至关重要。这里的关键在于，自然界中某些微生物本身就拥有具备我们所需功能的蛋白质。我们可以通过提示词向模型提供上下文：告诉模型这就是目标蛋白质所在的基因组或微生物邻近区域，你应该在此类邻域中去搜索和发掘新型蛋白质。因此，这在本质上更像是一场精准的“基因挖掘”（mining）工作。</p>
+<p>而我们能够向模型展现、且其他专注于单纯蛋白质结构的专用模型所无法做到的，就是我们可以把目标基因或目标蛋白质上游的整个非编码调控区（non-coding regions）完整输入给模型……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah, I'd say what drew us to this particular application rare earths and our strengths in general, why we thought it might be suited for it, is two things.</p>
+<p>One is I think in areas where context matters. So yeah, you're right. So a protein design task where you're just designing maybe not naturally where we see ourselves competitively advantaged, but in the rare earths case, our hypothesis is that context matters. And what matters here possibly is certain microorganisms with proteins that have the function that we desire, we can potentially prompt and provide us context for, this is the neighborhood in which, tell Omni, this is the neighborhood of genomes or microorganisms that you should search for new proteins. So it's really sort of like a mining exercise.</p>
+<p>And what we can showcase to our models that other folks can for like protein structure models, is that we can feed in non-coding regions before that gene of interest or that protein of interest, and</p>
+</details>
+<!-- chunk 5/8 -->
+<h3>利用基因组上下文生成稀土结合蛋白与分子多样性</h3>
+<p><strong>Guest</strong>: 然后实质上就是让模型去给出变体序列。也就是说，就像是“突变这个蛋白质，但你要清楚它处于这种特定的微生物宿主环境中，在这个背景下向我展示你在自然界中见过的不同变体，或者将你在自然界中所见过的不同特征进行重组”。</p>
+<p>我认为这就是我们能够生成在演化上具有极高多样性的序列、甚至潜在噬菌体的原因之一。此前就有人使用 Evo 模型结合类似的技术来研究毒素-抗毒素系统：他们利用目标蛋白质上游的序列作为提示（prompt），然后让模型去生成一系列合理的其他变体。而在稀土元素结合这个案例中，我认为这极其令人振奋，因为我们可以由此预测出大量合理的变体，随后通过相对简单的实验去测试它们能够结合什么、能否进行选择性结合。对于我们的合作方而言，这具有极高的战略价值——例如他们非常关切如何为美国在战略层面上保障稀土供应链的安全。因此，我们认为这绝对是一项非常值得全力支持的研究。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: then ask for the model to provide variance essentially. So like mutate this protein, but know that you're in this microorganism, but show me different variants that you've seen in nature or combine different things that you've seen in nature, given this context.</p>
+<p>And I think that is one reason why we can make very evolutionary diverse sequences and potentially phages. Folks have used Evo models to do this with toxin antitoxins and a similar technique. They've prompted on things upstream from the proteins of interest, and then asked the model to kind of generate a bunch of plausible other ones. And I think this case for rare earths, that's super exciting because then we can come up with plausible variants and then test them relatively simply for what they bind to and selectively bind to, which I think is really interesting for this partner who cares for example, about securing the supply chain of rare earths for the US strategically. And so we thought that's absolutely worth something that is worth supporting.</p>
+</details>
+<p><strong>Host</strong>: 所以你的核心观点并不仅仅是“你在设计一种蛋白质”，而是在“设计一种能够产生该蛋白质的生物体”，并且这种蛋白质具有特定功能。但这种设计的实现途径，关键在于你必须理解在整个生命之树的演化历程中，蛋白质与稀土元素或特定矿物质之间的相互作用是如何发生的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: So your point is not just you're designing a protein, but you're designing an organism which generates a protein and this protein has an action. But it's that the way to design this is you need to understand how through the tree of life interactions of proteins with rare earths has, or with certain minerals have occurred.</p>
+</details>
+<p><strong>Guest</strong>: 是的，我想说在这个针对稀土的具体案例中，我们其实并不是真的想去设计整个生物体。然而，生物体本身确实向我们揭示了哪些蛋白质是生物学上合理的，以及它们是如何演化的——这不仅关乎蛋白质自身的编码序列，也涵盖了围绕着它的所有调控元件。</p>
+<p>这有助于我们缩小搜索范围，并提供至关重要的额外上下文。</p>
+<p>从广义上讲，我倾向于将基因组或 DNA 视为物理世界在遗传密码中留下的印记。我们所需要的可能只是 DNA 的某个特定片段，但是包裹在目标片段周围的那些区域，恰恰揭示了它的来源背景、它是如何形成的，以及它的生物学功能。</p>
+<p>所以归根结底，我们是否可以重新回到“上下文”这个词上——我认为上下文在很多这类应用中都起着决定性的作用，至少在某些特定任务中是如此。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, I'd say in this particular case for rare earths, we're not really interested in the organism, like designing the whole organism, but I think the organism does tell us about what proteins are plausible and the way they evolve, not just around the protein itself, but also the regulatory elements around it.</p>
+<p>And it helps us narrow and provide additional context.</p>
+<p>I guess I think of the genome or DNA broadly as sort of the imprint of the physical world into DNA. And so there's parts of the DNA that we want, but the things around those parts that we want also tells a little bit about the context of where it came from and how it came to be in its function.</p>
+<p>And so I just think of it, can we come back to that word, but context, I think context matters in many of these applications, or at least in some of them.</p>
+</details>
+<h3>生物学系统的上下文瓶颈与全基因组尺度的长序列挑战</h3>
+<p><strong>Host</strong>: （笑）是的，我也认为上下文在生物学中至关重要。</p>
+<p>我认为我们当前面临的一大核心瓶颈，恰恰就是缺乏足够的上下文。人类在处理生物学问题时，往往采取一种极其工程化的思路，即“让我们孤立拆解各个独立系统”；而系统生物学的方法则很难获得任何真正有意义的定量预测能力。</p>
+<p>所以，这可能稍微有点偏离主题，但我非常好奇：当我们探讨上下文，并思考上下文窗口如何扩展到整个生物体尺度时——你们目前谈论的是 200 万个 token 长度的上下文窗口，对吧？</p>
+<p><strong>Guest</strong>: 是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: (Laughs) Yeah, I think context matters a lot in biology.</p>
+<p>I think maybe one of our big bottlenecks is the lack of context and how we as humans mostly approach biology in terms of a very engineering, like let's isolate individual systems and systems biology approaches very hard to get any sort of meaningful quantitative predictive power.</p>
+<p>So maybe going off on a tangent, but I mean, I'm curious, going to context and thinking about how context scales to an organism, you're talking about right now two million length context, right?</p>
+<p><strong>Guest</strong>: Yeah.</p>
+</details>
+<p><strong>Host</strong>: 据我了解，人类基因组的大致长度是它的 1000 倍左右。</p>
+<p>但即便许多细菌基因组，如果你试图对其进行工程化改造，其序列长度也明显超出 200 万。那么，面对大型复杂生物体开展合成生物学设计时，你如何利用一个虽然很长但相比之下仍然有限的上下文模型呢？</p>
+<p>另外，说到上下文长度，Evo 2 在设计噬菌体基因组时到底是如何运作的？噬菌体的长度大概也远不止或者接近那个尺度吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I think the human genome is roughly 1000 times longer.</p>
+<p>But even like a lot of say bacterial genomes, if you're trying to engineer them, are quite a bit longer than that. So how do you leverage something which has a long, but still finite context compared to do synthetic biology across like large organisms?</p>
+<p>And it may actually be for context, how did the Evo2 bacteriophage design work, which was probably much more than two million for that as well?</p>
+</details>
+<p><strong>Guest</strong>: 关于 Evo 噬菌体的工作，我可以稍作说明，因为那实际上是由另一个独立团队负责推进的。不过那个任务所需的上下文其实相当短。他们之所以从噬菌体起步，正是因为噬菌体拥有自然界中最短的基因组之一。我记得它的长度大概只有 6000 个碱基对左右。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, so I could expect the Evo bacteriophage just a little bit, because it's actually a separate group that worked on that, but that context was actually pretty short. Actually, the reason why they started with phages because it's amongst the shortest genomes. And so I believe it was something around 6,000 base pairs.</p>
+</details>
+<p><strong>Host</strong>: 哇，那确实非常短。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Oh, wow. That's really short.</p>
+</details>
+<p><strong>Guest</strong>: 是的，非常短。病毒这种生物简直不可思议。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, yeah. So extremely short. Viruses are insane.</p>
+</details>
+<p><strong>Host</strong>: 它们的信息编码极其高效，在那么微小的空间里塞进了海量功能。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: They're incredibly efficient. It impact a lot in there.</p>
+</details>
+<p><strong>Guest</strong>: 确实如此。不过回到你刚才提出的问题：如何用相对较小的上下文模型去处理更长序列的生物学上下文？这是一个极其关键的课题，也是整个 AI 领域一直在努力攻克并持续尝试提出创新方案的方向。</p>
+<p>这也正是为什么我们公司将自己定位为“AI 研究实验室优先”的一个重要原因——因为我们深信，算法与架构层面的底层创新必须被持续推进。这绝不是一个随手拿来开源模型、然后指望我们关心的各类科学任务就能迎刃而解的领域。</p>
+<p>我们希望持续突破技术边界。因此，超长上下文始终是我们全力推动的核心研究支柱之一。</p>
+<p>我甚至觉得我们团队之所以能打出名气，正是因为我们在长上下文成为全行业显学之前就已经深耕于此了——大概早在 2022、2023 年，我们就开始全力攻克超长上下文难题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah. Yeah. But yeah, no, I think your question about how do you get longer context with something smaller, is a very key question that we, I think broadly the AI community is constantly trying to fix and be creative about.</p>
+<p>And so, I mean, I think that's a large part why we as a company are in AI research lab first, because we think the innovation needs to be constantly pushed. It's not a space where we can just grab open source models and expect that many of the tasks that we care about are just gonna be solved.</p>
+<p>We wanna continually push the envelope. And so context is one of the key researchers that we drive in.</p>
+<p>I would say that's probably how we got our name, because we worked on long context before it was a thing, I guess, like 2023, 2022, long context.</p>
+</details>
+<h3>从底层 GPU 算子到超长上下文：自研架构与探索 DNA 序列的契机</h3>
+<p><strong>Host</strong>: 你和你的团队，以及你们的合作者们，在状态空间模型（State Space Models）以及极限推进上下文长度方面有着深厚的积累，在当时做出的成绩简直令人难以置信。虽然现在大家对处理整本书、大体量文档已经司空见惯，但在当年，你们实现的上下文长度相比传统 Transformer 而言足足提升了数个数量级。不知道你是否愿意借此机会聊一聊这段历程？</p>
+<p>另外我觉得特别引人入胜的一点在于，无论是面对这个模型还是其他模型，你们总是坚持从第一性原理出发——深入研究 GPU 底层硬件架构的工作机制，并专门设计出能够极致利用 GPU 硬件特性的模型架构。也就是说，你们不是单纯地喊口号说“我们要把上下文拉得更长”，而是在思考：在既定的算力资源限制下，我们能做些什么特殊的底层优化，从而真正打破极限？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: You and your team, I mean, your collaborators have a long history of these state space models, doing, pushing context, like what seemed insane at the time. I mean, now I think routine of books, the big slabs, but at the time was like orders of magnitude longer.</p>
+<p>I don't know if you wanna talk about that a bit.</p>
+<p>And also I think one, maybe one thing which I think is really fascinating is how in for both this model and other ones, you really go on a first principle way, like diving into the architectures of how GPUs work and designing models which are, you know, exploiting the architecture of GPU in addition to, I mean, it's not just, oh, we're building longer. It's like, what can we do special, given the compute constraints we have to push the boundary?</p>
+</details>
+<p><strong>Guest</strong>: 确实完全是这样。如果你想让我们实验室的研究员分心，最好的“极客狙击（nerd snipe）”方式就是跟他们聊超长上下文、底层 GPU 算子（kernels）。一旦有人提了一句“算子优化”，大家立刻会两眼放光追问：“等一下，刚才有人说算子了吗？”然后他们就会全神贯注地开始琢磨到底怎样才能把计算性能压榨到极致。</p>
+<p>超长上下文在我心中始终占据着一个非常特殊的位置，因为这正是我在斯坦福大学读博士期间的研究重心。也正是沿着这条技术脉络，我们才开始将目光投向了 DNA。</p>
+<p>回想起来挺有意思的：我们起初只是在做通用的自然语言模型研究，随后我们敏锐地观察到，我们所设计的这些架构在处理超长上下文任务时表现得异乎寻常地高效。这就是我们涉足生物计算领域的起源线索——我们发现这些模型在长序列上下文上的计算效率极为出众。</p>
+<p>当时，我和同实验室的同学 Michael Poli 合作，他主导了 Hyena（基于卷积架构的长序列模型）的第一代设计。随后我们开始深入思索：我们能不能把这个能力推向更远？如果我们真正将超长上下文能力发挥到极致，到底能够解锁哪些全新的应用前沿？于是我们开始自问：在现实世界中，客观存在的最长序列数据究竟是什么？</p>
+<p>最终，毫无悬念地，答案落在了 DNA 上。</p>
+<p>我们当时脱口而出：现实中最长的序列必然是 DNA，人类基因组足足有 30 亿个碱基对！</p>
+<p>于是我们开始调研：在这个领域，前人目前都在做些什么？人们通常采用的上下文长度到底是多少？</p>
+<p>结果发现他们用的长度极短——通常一次只能处理 1000 或 2000 个碱基对（tokens）。这与 DNA 的实际生物学需求相比，规模实在小得可怜。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, absolutely. If you wanna distract our researchers at radical numeric, this is how you nerd snipe them. You talk about, you bring up long context and kernels, GPUs, then they're like, wait, did someone say kernels?</p>
+<p>And they start trying to figure out, you know, how to make things fast.</p>
+<p>Yeah, long contexts were a special place in my heart because that's what I focused on in my PhD at Stanford. And that's how we started thinking about DNA and, you know, going back a little bit for fun, we were looking at working on language models in general, and then we noticed our models were good at long context.</p>
+<p>And so that's the progression of like how we started working in the space was like, oh, these models seem to be really efficient on long context.</p>
+<p>And then with Michael Pali, my lab mate, he worked on the first design of AppHaina, this convolutional architecture. And then we started thinking like, let's push this further. Let's see what new applications open up if we really lean into long context. And we asked, what's the longest sequence out there?</p>
+<p>And eventually, unsurprisingly, we landed on DNA.</p>
+<p>We were like, DNA's gotta be the longest, three billion base pairs.</p>
+<p>And we started thinking like, okay, what's being done there? Like what kind of context lanes are people doing there?</p>
+<p>They're doing super short. They're doing like one or 2000 base pairs or tokens at a time. It's like way smaller than what one would want for DNA.</p>
+</details>
+<p><strong>Host</strong>: 毕竟绝大多数人类转录本本身的长度都在 3000 个碱基左右。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I mean, most human transcripts are like 3K or so.</p>
+</details>
+<h3>执着于“生成 DNA”：从学术界普遍质疑到首个模型的突现能力</h3>
+<p><strong>Guest</strong>: 对，所以那种极短的上下文甚至根本无法完整表征一个蛋白质的编码区域，很多时候连单个功能单元都装不下。因此，这显然是一个真实存在却长期被学术界忽视的巨大需求空白。</p>
+<p>最初我们只是将它当作一个探索性的尝试：“让我们看看能不能做一些完全不知道行不行得通、也根本不知道会有谁想要的事情。”</p>
+<p>于是我们开始动手摆弄实验。结果令人惊喜，这套架构在几乎开箱即用的状态下，就展现出了极其优秀的 DNA 序列阅读与建模能力。随之而来的反馈是，大家不断向我们询问关于 DNA 的研究进展，反而不再那么关心我们在语言模型方面的工作了。大家不断问我们：“你们能把上下文做得更长吗？”“这东西到底能拿来做什么？”他们总是在问：“它有什么用？”</p>
+<p>其实说实话，当时我们自己也不太清楚。</p>
+<p>后来不知出于什么机缘，我们认准了这样一个念头：“既然目前没有任何人在尝试生成 DNA，那我们能不能训练模型去直接生成并编写 DNA 序列？”</p>
+<p>这是一个极为朴素的问题，但在事后复盘时，这个想法似乎又是如此显而易见——你当然会想要去编写和设计 DNA！然而，当我最初带着 Evo 的雏形构想四处向同行推介时，我整整花了六个月的时间——在生物学的时间尺度里六个月或许不算很长，但在那半年里，我四处奔走询问大家：“嘿，如果我能用 AI 生成全新的 DNA 序列，你们会觉得有用吗？你们会拿它做什么？你们愿意资助我们吗？你们想要参与这项研究吗？”</p>
+<p>令人哭笑不得的是，当时我在斯坦福接触过的几乎所有科学家，都一致认为这是一个愚蠢透顶的荒谬念头。我当时满腔热情地对他们说：“这简直太酷了，能够直接生成功能性 DNA，这将会把整个生命科学领域加速推进到何种地步啊！”</p>
+<p>但人们给我的反馈总是反问：“你生成这个到底有什么用？”</p>
+<p>我只能老实回答：“我现在也不知道具体能用在哪。”随后我听到的要么是这种冷淡的质疑，要么就是直接断言：“这根本不可能实现。我们人类自己至今都没有搞清楚生命密码的底层规则，你怎么可能指望一个 AI 能学会它？你甚至根本无法判断它生成的结果是对是错。你无法给 AI 提供明确的真值反馈——‘对，这是对的；错，这是错的’——那它怎么可能学得会？况且，DNA 序列中有太多的重复字符，其分布极其嘈杂混乱，完全没有严格规律可言，里面充斥着大量的无用垃圾序列……”</p>
+<p>我把所有能想到的反对理由都听了个遍。但我对此有一种近乎执拗的坚持：能够由模型直接生成 DNA，未来必定有着无可替代的应用价值。我心里就是强烈地觉得这是一条正确的道路，尽管当时我也说不清它最终会通向何方。</p>
+<p>所以，这真正是一场纯粹为了探索未知而展开的实验冒险。</p>
+<p>我清晰地记得，当我们第一次训练最初版本的 Evo 时，我们完全不知道它是否能成功运行，也不知道模型内部究竟会突现（emerge）出什么样的能力。我们当时唯一的念头就是：“管它呢，先训一个超大体量的模型试试看再说。”</p>
+<p>从某种意义上讲，这种做法在当时显得有些不可理喻。但令人欣慰的是，有合作伙伴对我们说：“好啊，为什么不呢？看看究竟会发生什么。我们愿意出钱资助购买 GPU 算力，让这帮狂妄的年轻人去训练这个模型吧。”</p>
+<p>我永远忘不了第一批评测结果返回的那一刻，那股震撼感直接让我们所有人起了一身鸡皮疙瘩——我们意识到，这里面很可能真的孕育着某些了不起的突破。</p>
+<p>当时有人拿到了第一版模型的权重 checkpoint，随手把它扔进了一个名为 ProteinGym 的蛋白质前沿基准测试集中进行评估。</p>
+<p>测试结果显示，我们这个直接基于 DNA 训练的通用基础模型，在性能上竟然能够直接媲美那些专门针对蛋白质数据精心训练的专属模型！</p>
+<p>我们当时完全惊呆了：天哪，这简直太不可思议了！因为在整个预训练过程中，我们从没有显式告诉过模型哪些片段编码蛋白质、哪些不是；当然，DNA 中本身就蕴含着蛋白质的信息，但一个未经专门蛋白质微调的底层 DNA 模型能够直接比肩那些专用蛋白质模型，这一事实本身依然极其震撼。</p>
+<p>这仅仅是第一波冲击。紧接着，令人振奋的结果开始接二连三地涌现。</p>
+<p>我们不断发现：它在这一项任务上极具竞争力，在 RNA 和非编码 DNA 的基准测试中刷新了业界最高水平（State of the Art）。我们开始清醒地认识到：模型正在自发地跨越不同的生物学模态进行表征学习，而不仅仅是死记硬背 DNA 序列。在那个瞬间，我们深切地感受到：这里面确实存在着某种颠覆性的本质突破。</p>
+<p>一切就是从那一刻起全面展开的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So that's not even like us, that's not even what you need to represent like a protein or most of the time. And so it's clearly a need there and overlooked.</p>
+<p>And we saw it as a way to initially, like let's see if we can do something that we had no idea if it was gonna work and no idea who would want it. And so we just started tinkering around. And it turns out out of the box, relatively out of the box, it was doing pretty well at reading DNA. And then it led to, okay, people keep asking about like DNA. They didn't really care about our language stuff as much. And they would say like, can you do longer? What can you do with it? They always ask, what can you do with it? We didn't know really.</p>
+<p>And then for some reason we'll actually on this idea of like, well, no one's writing DNA, can we get it to write DNA? And that was a really simple question, but in hindsight, it almost seems obvious that, yeah, you would wanna write DNA and design it. But when I was first pitching the idea of Evo to folks, I spent six months, which I guess in bio words, not that long, but I spent six months going around saying like, hey, if I generate DNA, like, would you find that useful? Like, what would you do with it? Would you back us? Like, would you wanna be a part of this?</p>
+<p>And crazy enough, most, almost every scientist at Stanford I talked to thought it was a stupid idea. It was, I was like, this would be so cool, like generating DNA, how much would we accelerate the field? And then people would say like, what would you do with it? I'm like, I don't know. And then I would get that comment or comments like, that's not possible. Like we as humans don't understand the rules. How could you expect an AI to learn it? You can't even tell if it's right or wrong. Like you can't tell the AI, yes, that's right or wrong. How can you expect it to learn it? Or there's too many repeat characters or DNA is too noisy of a distribution. Like there's no real rules and there's just a bunch of junk in there.</p>
+<p>I heard all the reasons and I was just so stubborn about it. There's gotta be a use case from being able to generate DNA. I just, it just feels right. And I didn't know what it was. So it was, it really was an experiment of like what happens.</p>
+<p>And so when we first trained Evo, I remember we had no idea if it was gonna work. We had no idea, we didn't know what thing was gonna emerge. We just thought, let's just train a big one. Which is kind of ridiculous. But somehow folks that are, they're like, sure. Why not? Let's see what happens. Let's pay some money for the GPUs and let these crazy kids train the model. And I remember when the first result came back and it kind of like gave us chills over like, oh, maybe there's something going on.</p>
+<p>Which was somebody took the model checkpoint, the first one and threw it at a protein gym. One of the protein benchmarks. And turned out to be competitive with protein specific models. And we were like, okay, that is pretty surprising because we never told the model what's proteins versus not. And there's actually, it was, you know, there's also protein and DNA, right? So there was one piece, I think it was just surprising that it was actually competitive with protein specific models.</p>
+<p>And this was like the first experience. And then they just kind of kept on coming one after another. And it was like, oh, this competitive here, oh, it's state of the art on RNA and our DNA. And we started seeing like, oh, it can learn across different modalities, like not just DNA. And then we felt like, okay, this, there's something there.</p>
+<p>And so it kind of went from there.</p>
+</details>
+<h3>从学术奇迹到创立公司：重演语言模型的大模型进化之路</h3>
+<p><strong>Guest</strong>: 随后，英伟达（Nvidia）的团队主动找上门来表示：“我们全力支持打造 Evo 2，让我们把这个模型的规模推向更大的量级。”接着，来自 OpenAI 的 Greg Brockman 也表示：“我愿意从 OpenAI 休假出来，花四个月的学术假期全职加入，跟这帮充满干劲的年轻人一起把这件疯狂的事做成。”</p>
+<p>于是，在接下来的日子里，我们甚至会在凌晨三点通过 Slack 给 Greg Brockman 发消息，拉着他一起通宵排查和调试底层代码——那段经历如今回想起来依然感觉不可思议。</p>
+<p>是的，整个发展轨迹在很多层面上都充满了意想不到的惊喜。但在收获突破的同时，我们依然经常面对各种现实拷问：“这些模型究竟能用来做什么？它们在现实真实世界里到底具备怎样的应用价值？”这种强烈的现实需求反推，最终促使我们决定正式走出实验室创办一家公司。</p>
+<p>我们深知，此前所展示的一切成果，在本质上还仅仅带有浓厚的学术探索风味。</p>
+<p>这就好比早期的自然语言大模型：当第一代自然语言处理模型刚面世时，人们也提出了完全一样的问题——“这玩意儿到底能干啥？哦，挺好玩的，它能帮我写几句蹩脚的笑话。但难道这就意味着它能演进成无所不能、自动接管一切通用任务的 AGI 吗？”当时几乎没有人会这么乐观，对吧？</p>
+<p>大多数人都仅仅把它当作一个小玩具，但随着突现能力的不断被发掘，人们逐渐开始外推并见证其无穷的潜能。而在很多层面上，我认为我们今天在 DNA 领域所亲眼目睹的这一轮技术浪潮，相比当年的自然语言大模型不仅毫不逊色，甚至比语言模型的发展历程更加令人心潮澎湃，两者在技术进化轨迹上有着极高的重合度。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And then, you know, folks at Nvidia were like, let's back Evo too, let's make this even bigger. And then Greg Brockman from OpenAI was like, I'll take a break from OpenAI and take us four months of article and like help these crazy kids out. And, you know, then we're Slack messaging Greg Brockman at 3 a.m. trying to debug our code, which is wild.</p>
+<p>Yeah, so it just, it went, the trajectory was very surprising in many ways. But at the same time, you still got a lot of feedback like, you know, what are these models good for? What are they, you know, what are they useful for in the real world? And so that's really motivated us to start a company.</p>
+<p>We thought what we showed was just really just a taste from like an academic flavor. In a similar way, the language models, when they first too, you know, if natural language came out, people asked some of the questions like, what are these things good for? Oh, cool, it can write some jokes for me. Is this gonna lead to like, in all, you know, all-composing AGI that can automate everything? They did not think that, right?</p>
+<p>They thought it's like a toy, it's got emerging capabilities and they would extrapolate the potential. And in many ways, I think what we're seeing here is even more exciting or reminiscent of that trajectory for DNA.</p>
+</details>
+<p><strong>Host</strong>: 但 Evo 2 甚至已经成功展示了完整噬菌体基因组的从头设计，而这难道还不够具有说服力吗？我的意思是，那甚至可以说是一个让人感到有些敬畏甚至近乎令人害怕的强有力案例，不是吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: But Evo2 even was showing the bacteriophage and that wasn't a persuasive, I mean, that's almost a scary example, right?</p>
+</details>
+<!-- chunk 6/8 -->
+<h3>从概念验证走向实际应用与机理可解释性</h3>
+<p><strong>主持人</strong>：正如你所提到的，人们并没有真正看到这一点——也就是说，对大家而言，这还没有成为一个顿悟的“灵光一闪”时刻。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: As you mentioned. So the people didn't see that, like that isn't a light bulb moment for people.</p>
+</details>
+<p><strong>嘉宾</strong>：确实如此，对一部分人来说是这样的。我认为无论是合理的质疑还是严苛的批评，你甚至可以站在反方立场（play devil's advocate）提出：模型目前所生成的东西，其实跟自然界中已有的序列非常接近，你基本上只是在复现极其微小的变异而已。因此，外界完全可以通过很多种切入点来进行批评，以此来贬低它的潜力，而这种反驳在某种程度上也是说得通的。所以我们认为，现阶段更重要的不仅仅是去推动科学边界、证明“瞧，这件事情是可行的”然后就把它当作一种思想实验束之高阁。我们作为一家公司，除了探索这些更为基础的科学问题之外，现在真正关切的是：我们究竟如何利用这项技术来加深人类对疾病的认知？如何用它来改进现有的治疗手段？如何制造出更高效的稀土矿物提取剂？我们到底该如何让它在现实中发挥实际效用。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, so I mean, and some people, right? I think either fair or, you know, rough critiques, you can even, you know, play devil's advocate and say what it's generating is kind of, you know, pretty close to nature and you're kind of recapitulating just kind of a small variance. And so there's, I think there's a lot of ways to critique and kind of, you know, minimize the potential, which can be fair argument. Like, so I think at this point, we think what is more important is not just pushing on the science and like, cool, this can be done and like kind of leave it there as a sort of thought experiment. But like, how do we actually use this to improve human understanding of disease, improve treatments, make better rare earth mineral extractors? How do we actually make this useful is what we care about now as a company, in addition to some of these more scientific questions.</p>
+</details>
+<p><strong>主持人</strong>：这正好是一个非常好的过渡。这让我联想到了两件事：一个是博文末尾谈到的机理可解释性（mechanistic interpretability / Meck and Turt）相关的内容，另一个则是生物安全（biosafety）方面的内容。我认为这两者都是极其重要的应用方向。那我们先来聊聊机理可解释性吧。你能否具体谈一谈这部分？而且据我所知，这实际上也是在延续 Evo 模型此前的研究工作。我记得在 Evo 的论文中就包含了一些机理可解释性的探索，当时他们讨论了逆转提问视角，利用模型本身来反向提取关于生物学的深刻见解。而且这种思路如今在生物学领域似乎变成了一个非常普遍的主题，甚至比其他任何领域都要明显——因为生物学是一个纯粹的科学探索问题，模型在学习关于客观世界的模式，所以你可以直接问它：“好，那你到底学到了哪些规律和模式？”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: So maybe that's a good segue. There's, that brings up two things for me. One is the Meck and Turt stuff that's in the end of the blog post and then also the biosafety stuff. Those are both, I think, important applications. So can we, let's do Meck and Turt first. Can you talk a little bit about, and this is actually kind of building on the work that Evo did as well, I think. I remember in the Evo paper, there was some Meck and Turt work in which they were discussing using the, reversing the question and using the model to extract insights about biology. And so, and this has actually become a common theme with I think maybe biology more than any other domain is that people, because it's a scientific question and it's learning patterns about the world, you can actually say, okay, well, what patterns did you learn?</p>
+</details>
+<h3>解构生物模型黑箱：从表征压缩到调控模体</h3>
+<p><strong>嘉宾</strong>：没错，我认为机理可解释性（Meck and Turt）在生物学界是一个新兴的前沿领域，我们对此感到非常兴奋。坦率地讲，我们目前还处于非常早期的探索阶段，正在逐步搭建这支专业团队。但到目前为止，我们所展示并为之振奋的工作，主要集中在深入分析模型内部的嵌入表征（embeddings）以及某些激活状态（activations）。把机理可解释性引入生物学的核心逻辑，目前很大程度上借鉴了自然语言处理（NLP）领域的做法。你可以把这些模型所做的事情理解为：对它见过的海量信息进行高强度压缩。而在这种压缩过程中，它本质上是将信息提炼成最为关键的核心组件和模式，从而帮助模型理解数据，或者说学到数据的内在分布规律。因此我们正在尝试做的，就是去探测这些模型，看看模型究竟将什么提炼到了自身的权重、内部激活以及输出层当中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, so I think Meck and Turt is an emerging field in bio that we're extremely excited about. And admittedly we are on the early side, I'd say. So we're building up that team, but so far what we've showcased and been excited about is looking, really analyzing the embeddings and some of the activations in the model. And so this idea of Meck and Turt for bio is borrowing a lot from the natural language community currently, you could think of what the models are doing is compressing a bunch of information it's seen, right? And so in this compression, it's really basically distilling it down into the key components, key patterns that helps it understand the data or learns the distribution of the data. And so what we're trying to do is probe the models to see what did the model distill into its weights and its activations or sort of like the outputs.</p>
+</details>
+<p><strong>嘉宾</strong>：对我们而言，最开始着手的是模型的大量输出，也就是激活值。我们希望能观察到什么样的内在结构和可视化呈现，以帮助我们理解 DNA 那极其庞杂的复杂性。而这种复杂性的跨度非常大，涵盖了从最基础的 GC 含量，到转录因子的特定序列模体（motifs）。我们坚信，模型为了完成既定任务，必然必须捕捉到大量基因调控层面的模式与模体——比如判断某个特定突变是否会导致疾病。通常来说，模型会把所有这些不同的模体进行高度压缩，并浓缩提炼进自身的权重之中。因此，我们的核心任务就是把这些隐藏模式发掘出来，看看能否总结出某种规律或结构，并将其推广泛化到我们尚不理解生物学模式的其他未知场景中。这大体上就是我们的研究目标。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And so for us, we started off with a lot of the outputs of the model, so the activations, and we wanted to see what kind of structure, what kind of visualizations can we see that help us understand some of the complexities of DNA, which is a ton, right? And so some of these complexities can range around GC content, certain motifs of transcription factors. There's a bunch of regulatory types of patterns and motifs that the model, we believe, has to pick up to be able to do its tasks, right? To understand whether a disease is caused by a variant. And generally, it's going to compress all these different motifs and distill them into the model weights. And so our job is to then find these and see if we can distill a pattern or structure that can be generalized to other cases where we don't understand the patterns, right? So that's sort of largely the goal.</p>
+</details>
+<p><strong>主持人</strong>：这里所说的 GC 含量，是指鸟嘌呤（G）和胞嘧啶（C）这两种核苷酸在序列中所占的比例对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: So in this case, GC means the two nucleotides are the fraction of those in a sequence.</p>
+</details>
+<p><strong>嘉宾</strong>：完全正确。就是基因组中 G 和 C 碱基所占的比例，这属于相对基础简单的特征；类似的简单特征还包括序列重复（repeats）以及特定基序的出现次数。我认为转录因子模体（TF motifs）是另一个让大家特别感兴趣的维度，因为我们最终将迈向一个能够自主设计转录因子的阶段——这意味着我们将能借助类似染色质免疫共沉淀测序（ChIP-seq）等多组学模态来获取特定的转录因子模式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Exactly, yeah. So the fraction of the G and C letters in a genome, which is amongst the more simpler things, but also simple things as repeats, number of retifs. I think transcription factor, TF motifs is another one that is especially interesting for folks because eventually we're going to get to a case where we can design transcription factors, meaning we'll have certain transcription factor patterns via like ChIP-seq, you know, modalities.</p>
+</details>
+<p><strong>主持人</strong>：转录因子其实就是……嗯，你请继续讲。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Transcriptive factors are, well, you can go ahead.</p>
+</details>
+<p><strong>嘉宾</strong>：转录因子是能够与 DNA 结合的分子，它们从本质上改变基因的表达模式。因此它具有调控作用，虽不改变 DNA 序列本身，却能改变 DNA 的生物学效应以及 DNA 所产生的最终产物。它会对人体内的几乎所有机理产生深远影响。比如它可以改变疾病状态；事实上，目前很多与衰老相关的研究核心正是围绕转录因子设计展开的。因此我们认为，不仅能通过 DNA 序列，还能通过更多额外模态去理解这些模体，最终将使我们具备直接设计转录因子模式的能力。我认为这极其令人振奋。从很多角度来看，学习这些转录因子的组合空间——例如它们结合什么、在哪里结合、会引发什么效应——实在是太庞大了，根本不可能通过人工实验的方式穷举完成。因此我们希望采用数据驱动的机器学习方法来深入学习这些模体。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Transcriptive factors are molecules that combine to DNA and they would alter essentially the gene expression pattern. And so it has this regulatory effect that doesn't modify the DNA itself, but can modify sort of the effects of DNA in the products that DNA makes. It can have a lot of implications on, well, pretty much everything in your body. So it can modify disease dates, it can modify, I guess that's a lot of aging-related research is around transcription factor design. And so we think being able to understand some of the motifs via DNA, but also additional modalities will eventually let us be able to design transcription factor patterns as well. And so I think this is very exciting. In many ways, the combinatorial space of learning these transcription factors, like what binds and where they bind and what effects it causes is just far too vast to be able to do this in a manual way. And so we want to take a data-driven approach to learn some of these motifs.</p>
+</details>
+<h3>构建疾病流形与多模态生物表征空间</h3>
+<p><strong>主持人</strong>：这里的复杂性部分在于，转录因子本身也是由编码基因产生的蛋白质，所以它们之间还能相互调控，这正是产生极其惊人的组合效应（combinatorial effect）的根源。给只听音频的听众梳理一下，我们刚才一步步走过了从 GC 含量开始、层级逐渐升高、复杂度不断攀升的各类要素，而现在我们已经把目光投向了疾病层面——这大概是你在本项分析中所指出的最高维、最复杂的事物了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: The complexity here is partly because the transcription factors themselves, coding genes, and so that you can, those can regulate each other. And so that you have this, that's where that combinatorial effect comes. So like just narrating for the listeners only, we're kind of marching through these increasingly complex and higher level factors all the way from GC content. We started now, we're looking at disease, which is maybe the most complex thing or you are pointing towards in this analysis.</p>
+</details>
+<p><strong>嘉宾</strong>：是的。我们在最初预览这项成果时提出的设想，以及我们目前广泛推进的方向，正是“绘制疾病流形”（mapping the manifold of disease）这一核心概念。所谓流形，指的是在模型眼中，通过输出打分或潜在嵌入向量所构成的关于疾病表征空间。我们相信，通过理解这些模型输出，可以提炼出远比以往丰富得多的深层结构。因此，去描摹这整个流形，或者说描摹疾病结构的宏观图景（自然界存在着各种各样的疾病），将是我们推动生物机理可解释性研究的一个极其重大的激动人心的研究方向。我觉得我们目前真的仅仅触及了皮毛：因为如果仅仅依靠 DNA 这一种模态——在我看来，DNA 仅仅是你最终构建生物学全貌模型时所需要融合的传感器之一——就能获得如此深度的见解，那么一旦将类似方法推广到所有组学模态上，前景将不可限量。我所说的所有模态，指的是蛋白质、RNA、表观基因组学、ATAC-seq 染色质可及性、DNA 甲基化模式等等，所有围绕 DNA 构建的不同分子表型，展示出摆在我们面前的一片前所未有的广阔蓝海与全新处女地。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, so I think what we, our first idea for previewing this was, and what we're working toward this broadly, is this idea of mapping the manifold of disease, right? So manifold, there's like the sort of representation space of what disease looks like to a model in terms of the output scores or embeddings. We believe that there's a lot more structure that can be gleaned from understanding some of these outputs. And so, mapping this manifold or the landscape of what the structure of disease, and obviously there's many diseases. And so I think would be a big, exciting area of research for us to actually drive motivation for meconterbine bio. I think we're just really scratching the surface because if you can get this much of, glean this much of insight potentially from just DNA, which is in my mind, just one of the sensors that you want to ultimately fuse into modeling biology, then being able to do something similar across all modalities is something like, by all modalities, I mean protein, RNA, epigenomics, the attack, chromatin accessibility and methylation patterns, all these other different types of sort of molecular phenotypes around DNA just presents such a huge opportunity that this guy is kind of late in front of us that is all green space, green, green field.</p>
+</details>
+<p><strong>嘉宾</strong>：坦白说，我此前从未见过有人把如此前沿且精密的机器学习和深度学习技术，应用到我认为对于全人类理解自然界以及 AI 落地最具影响力、最重要的领域中。这就是我们极其兴奋的原因。我们目前展示的仅仅只是基于纯 DNA 模型的初级预览，而在我们下一代模型中，它将具备极其强大的跨模态融合能力，能够融合数十种组学信号，这对我们而言是一个非常振奋人心的历史性时刻。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: No, I haven't seen anybody do this level of sophisticated techniques from machine learning, deep learning into what I think is gonna be the most important impactful area of understanding and applications for AI. That's what we're excited about. And I think we're just showing a preview, very simple preview from the DNA only models, but in our next generation of models, which will be increasingly multimodal, we're talking dozens, it's a very exciting moment for us.</p>
+</details>
+<h3>融合自然语言与链式思考能力</h3>
+<p><strong>主持人</strong>：顺便插一句问一下，自然语言（Natural Language）也是这数十种模态之一吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Sidebar on that, is language, natural language, one of the most?</p>
+</details>
+<p><strong>嘉宾</strong>：目前还不是，但未来一定会是。关于如何把自然语言与生物信号深度融合，目前学术界确实有很多开放性问题，但我个人认为这在技术路线上其实会相对直观顺畅。对我们来说，更棘手的技术难点其实在于如何在底层将各种极其异构的生物信号有机地融合在一起。至于融合自然语言，在图像和视频领域已经有非常多成熟且现成的先例可以借鉴，因此我们在这方面很有信心，并且已经进行了一些早期的语言融合实验。我认为一旦将模型与自然语言打通，会让大众与科研人员使用起来变得极其便捷顺手。但整个领域目前仍在苦苦摸索的核心配方，始终是如何在纯生物的多模态之间实现深度表征融合。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Not yet. Oh yeah. Yeah, but it will be. So I'd say there's a lot of questions about how to fuse that with bio, but I actually think it's pretty, will be relatively straightforward. I think the more tricky part for us is actually how to fuse the biological signals more so. Fusing language, there's a lot of examples with that with like, with image and video space. So we feel pretty good about that and we've done some early experiments with language. And I think that will make it extra accessible for folks when you connect it to language. But I think the part that recipe that folks still are trying to figure out is how to do this across biological modalities.</p>
+</details>
+<p><strong>主持人</strong>：而且引入语言似乎也是赋予模型进行思维链（Chain of Thought）推理最天然、最直接的途径，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: It just seems like a natural way to be able to do chain of thought, right?</p>
+</details>
+<p><strong>嘉宾</strong>：没错，正是这样。尤其是当你需要模型通过链式思考去调度工具、协同云端科学实验室（cloud science）等基础设施时，将语言能力整合进模型架构中，早已经成为许多研发人员脑海中不谋而合的方向了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Exactly, yeah. Absolutely. And I think, especially when you start having chain of thoughts from orchestrating tools, things like cloud science, I think the idea of incorporating language, I think is already in a lot of people's minds.</p>
+</details>
+<h3>生物安全的双重使命与四大防御支柱</h3>
+<p><strong>主持人</strong>：如果你没有其他补充的话，那我们接下来聊聊生物安全（biosecurity）的内容吧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: If you don't have any questions, let's talk about the biosecurity stuff.</p>
+</details>
+<p><strong>嘉宾</strong>：对我们而言，作为一家商业实体，我们认为承担起“双重使命”（dual mandate）是至关重要的。所谓的双重使命，其核心理念在于：我们在设计侧赋予模型强大生成能力的同时，必须保持高度清醒的认知，并对这些能力承担起不可推卸的责任。如果我们制造出的模型有能力直接设计序列并在其中植入特定生物功能，那么我们敏锐地察觉到，现有的生物科技公司在构建防御屏障、确保技术安全且负责任地使用方面存在着巨大的行业空白。昨晚我刚好参加了一场以“AI 科学家 / 科学发现自主智能体”为主题的圆桌讨论。在论坛行将结束的一个环节中，有人提问：“当 AI 彻底掌握了科学知识，最大的风险或末日场景会是什么？”在场每一位嘉宾几乎毫无例外地全部提到了生物武器。可与此同时我非常困惑，我心想：“既然大家都认为这是最大的潜在威胁，那你们当中有谁正在为此付诸行动呢？”结果我没有听到任何具体的应对举措。我不点名具体的公司，但看一眼那些行业巨头，他们在生物防御这一领域几乎毫无实质性的实质投入。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: For us, we as a company thought it was very important to have a dual mandate, what we call a dual mandate. And it's this idea of essentially being cognizant and feeling responsible or wanting to feel responsible for the capabilities that we're enabling on the design side. So if we're going to create models that can design function into sequences, we believe and see a gap in companies being able to safeguard that technology and make sure that it's used responsibly increasingly more. I mean, folks have, I was just at a panel last night, a panel on AI scientists, agents that can do scientific discovery. And one of the last questions was, what are some of the biggest risks or doomsday scenarios with AI learning about science? And every one of them talked about biological weapons. And at the same time, I was curious because I was like, okay, so then what are any of these folks doing about that? And basically, I didn't hear anything about that. And these companies, I won't say the names, and I look at the companies, they don't have big efforts in those spaces.</p>
+</details>
+<p><strong>嘉宾</strong>：所以无论如何，我们深刻认识到，作为一个前沿实验室，一个同时在打磨生物设计能力的顶尖团队，其实恰恰是构建生物防御机制的最佳人选——因为这两者背后的模型本质上是同构的。事实证明，一个擅长生成序列的模型，往往也极其擅长进行判别分类，或者预测某条序列是否具有致病性。因此我们觉得，同时兼顾生物安全与生物设计，不仅是出于原则与伦理考量的必然选择，在战略层面上也是完全合乎逻辑的必然举措。这种双重定位不仅深深根植于我们团队内部的共识中，同时也获得了更广泛学术界、美国政府乃至国际同行的强烈共鸣，大家都清楚地看到，迫切需要这样一个机构站出来填补这块至关重要的安全空白。因此，我们坚定地将这一理念写进了公司的核心使命当中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So anyways, we felt it was important as a lab, in a lab that a team that was both building the design capabilities is actually also best suited for building the defense capabilities, because they're basically the same models. A model that is good at generating, turns out is also very good at discriminating or predicting if a sequence is pathogenic or not. So we felt it was not just from a principle standpoint, necessary to work on both biosecurity and the design, but that it was strategically, it just made sense as well. And so we felt this resonated with our team, but also the broader community, folks in the US government and abroad even, that there was a clear gap in need for a type of entity to exist to do this. And so yeah, we felt it was necessary to build it into our mission.</p>
+</details>
+<p><strong>嘉宾</strong>：对于我们已经落地的行动以及未来的规划，宏观上讲，生物防御与生物安全可以划分为三到四个战略支柱。第一个支柱是环境检测与监测（detection and surveillance）：广义上讲，就是你能否在真实物理环境中检测出某个序列是否含有病原体、是否含有致病风险因子——例如通过机场的咽拭子/鼻拭子采样，或是直接对城市下水道污水系统采集样本进行监测。第二个支柱是溯源与归因（attribution）：一旦检测出某种潜在生物危险，你是否能够准确判定它的来源？它是自然演化产生的？还是来自某个海外敌对国家？亦或是由某国特定实验室中的科研人员人为合成编辑出来的？搞清楚这些，才能明确下一步该采取何种应对策略。紧接着的第三个支柱是应对手段与对策（countermeasures）：既然你已经完成了检测并摸清了来源，那该如何进行反制？能否迅速制造出对应的对抗制剂？能否快速开发出靶向抗病毒药物或抗微生物疗法？至于第四个支柱通常是威慑机制（deterrence），但这更多属于国家政府维度的宏观战略政策。我们目前重点聚焦于前三个支柱。因此，我们打造了一系列先进工具，不仅能在给定输入序列时精准检测其是否具备致病性；更重要的是，我们敏锐地察觉到现有社区所缺失的，绝不仅限于粗粒度地判断“某条序列是否属于病原体”，而是对其进行彻彻底底的深度生物学表征——也就是精确指出这条序列中究竟哪些片段是危险的、具体涉及了哪些基因以及针对……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And so for us, what we have done and plan to do, we look at it, or I should say, biodefense biosecurity sort of has three or four different pillars of strategy for biodefense. The first one is around detection and surveillance, broadly can you detect from the environment if a sequence has a pathogen in it, something that can cause disease, let's say from swabs at a airport, a nasal swab, or this sewage system, right, collecting samples. The next is attribution, which is once you've detected a danger, can you figure out where it came from? Is it natural? Is it from a rental country abroad? Is it engineered by a human from a specific lab in a country? And that helps you figure out what to do about it, right? So this next idea is around countermeasures. So once you've detected, figure out where it's from, what do you do about it? Can you make a counter agent? Can you make it antiviral or antimicrobial? And then fourth one's generally around deterrence, but that's more of like a government kind of level thing. But yeah, so we focus primarily on the first three. So we create tools that can, given a sequence, detect if it's pathogenic, but also what we felt was missing from the community was not just detect, you know, broadly if it's pathogenic, but characterize the heck out of it, meaning what parts of the sequence are dangerous, what genes, for</p>
+</details>
+<!-- chunk 7/8 -->
+<h3>超越序列比对：从“拼写匹配”到“功能空间”识别</h3>
+<p><strong>Speaker A</strong>：例如追溯其来源，不仅要能查看其序列并将其与数据库进行比对，还要能够对其特征特征进行溯源。而且，这也是使其从一开始就能真正发挥作用的关键组成部分。生物防御领域的业界和学术界，普遍主要聚焦于序列比对（sequence matching）。他们的做法通常是提取一段序列，然后基本上将其与已知数据库进行比对，以此来判断：“我以前见过这个吗？它是否与已知病原体清单相符？”</p>
+<p>但现在很多实验室所面临并日益担忧的新问题是：第一，全新的未知病原体——如果它根本不在你的已知清单上，怎么办？第二，在序列空间中有意进行混淆伪装，从而逃避检测的目标——也就是说，虽然字母（核苷酸序列）没有精确匹配，但在功能空间（function space）上它却是相同的。因为我们现在所启用的这些模型，将能够具备“功能感知”或“结构感知”能力。具体来说，这意味着你可以设计出一副与某种已知病原体功能完全相同、但在字母序列上看起来却完全不同的序列。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: For example, attributing where it came from, being able to not just look at its, you know, sequence and match it to a database, but be able to attribute its signatures. And then also a big component to make this effective in the first place.</p>
+<p>The community, the biodefense community broadly focuses on sequence matching. So they'll take a sequence and they'll basically align it to a known database and see, say, &quot;Have I seen this before? Does it match, you know, this list of known pathogens?&quot;</p>
+<p>But I think what's emerging and a concern for a lot of labs is, well, one, new stuff, right? If it's not on your list; and two, things that were intentionally obfuscated to not be detected in sequence space, meaning the letters matching up exactly, but also function space, right? Because basically models that we're enabling now, they will be able to be function aware or structure aware. And so that means concretely, you can have a sequence that has the same function, like a pathogen, but actually look different in terms of the letters.</p>
+</details>
+<p><strong>Speaker B</strong>：你可以想象，我们屏幕上现在展示的依然是这个机械可解释性（Mechinterp）的内容，模型内部构建了某种流形（manifold），而这个流形除其他特征之外，正好编码了这些生物学功能。因此可以想象，它是如何能够识别出：“噢，这段序列在遗传层面上可能相当不同，或者至少有某些差异，但它依然具备类似的功能。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: And you can imagine basically what we have on the screen here still is this Mechinterp thing, and there's this sort of manifold that the model constructs internally that is kind of coding for these, among other things, functions. So you can imagine how it would be able to say, &quot;Oh, well, that's, you know, maybe genetically quite different or at least somewhat different, but it still has a similar function.&quot;</p>
+</details>
+<p><strong>Speaker A</strong>：完全正确，正是如此。我们在防御技术博客中讨论的核心观点就是：那些功能相似的事物，可能在序列外观上开始产生分化，同时却保持着完全相同的功能性。这种现象在自然界中本就会自然发生，但这些 AI 模型让人们能够有意地做到这一点。也就是说，拥有相同的功能或功能潜能，却拥有不同的字母组合——正如人们常说的，采用完全不同的拼写方式，描述的基本上却是同一件事物。</p>
+<p>在这方面，微软有一项名为 Paraphrases 的研究工作，它就像是对底层机制进行某种重构与重写。他们展示了如何利用蛋白质语言模型基本上保持完全相同的空间结构（而结构通常意味着相似的功能），同时改变具体的字母拼写。不仅如此，他们还想测试：如果你拥有这种设计能力，并将生成的序列提交给现有的检测系统，它是否会击垮现有的系统？现有系统究竟能不能检测出来？</p>
+<p>我认为公众可能不太了解、但绝大多数生物学家都心知肚明的一个有趣事实是：世界上存在着许多 DNA 合成公司。你基本上可以直接向他们发送设计好的序列，然后就能像收亚马逊快递一样收到寄来的 DNA 分子。你把数字订单提交出去，他们就会制造出来并寄给你实体设计的真实 DNA。整个科学界都在依赖这条流水线运转，正是这条通道让科研人员得以开展研究、探索生命科学、开发新药等等。它极为普及，也是完全公开透明的商业服务。</p>
+<p>所以大家普遍担心的风险之一，也是我们当初着手开展这项工作时的首要动因：设想在未来的世界里，智能体（AI Agents）在网络上大量普及，成百上千亿的智能体在互联网上构建并执行各种自动化操作。令人不可思议的是，它们竟然完全没有任何检测工具来判断自己正在制造的东西究竟是否具有危险性。这正是我们最直接的初衷——我们必须构建出能够准确检测某种设计是否具备危险性的工具。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Exactly, exactly. So what we talk about in our defense blog is this idea of things that can function similarly, they can start having separation in terms of what the sequence looks like while maintaining the same functionality, right? So this can happen in nature sort of naturally, but also what these AI models allow you to do is also intentionally do that as well.</p>
+<p>So have the same function or functional capability, but have diverse letters, they say, diverse spelling, but describe the same thing basically. And so in this case, this work from Microsoft called Paraphrases, so it's like, you know, kind of rewiring things, where they showcase that you can, for example, use protein language models to essentially keep the same structure, which structure implies similar function, but then change the spelling, right?</p>
+<p>And not just that, they wanted to test that if you have this capability and you send this through existing detection systems, would it break the system? Like would it actually detect it or not?</p>
+<p>And I think one of the interesting facts that maybe the general public, but most biologists know, is that there's these DNA synthesis companies, right? Where you can basically send a design of sequences and get back a DNA molecule like it's an Amazon package. Like you just send it off and they'll send you the physical DNA of the design. They'll manufacture it for you. And this runs the scientific community, right? It's the pipeline that allows people to do research and understand biology and make drugs and everything. So it's prevalent and it's public.</p>
+<p>And so I think one of the concerns for folks is, well, and one of the concerns for us when we first started working on this was in a world, for example, where agents are prolific online, presumably billions and trillions of agents building and taking all sorts of actions on the internet, it's wild that they don't have any tools to basically tell it if it's making anything dangerous or not. And so that was literally our first motivation of like, we should probably make something that can detect if something is dangerous or not, right?</p>
+</details>
+<h3>合成生物学的防御困境：假阳性与科研阻碍的平衡</h3>
+<p><strong>Speaker B</strong>：所以你们是为这些 DNA 制造厂商提供过滤机制，让他们能够实时查询：“我这里正在合成的到底是什么？这东西危不危险？”同时可能还能设置豁免机制，比如“如果你是有正式资质许可的专业实验室，我确实知晓自己在合成某种危险物质，而且我明确清楚我的实验目的，请依然允许我合成”。包含各种各样的情况，这是其中一种应用场景。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: So you guys filter in the, for these manufacturers that they can say, &quot;What am I making here? Is this dangerous or whatever?&quot; And maybe you could have an exception if you were like some licensed lab or something and &quot;I'm doing something dangerous, I know I'm doing it. Please let me do it anyway.&quot; All sorts of cases. So that's one scenario.</p>
+</details>
+<p><strong>Speaker A</strong>：客观来说，目前许多 DNA 合成公司的确配备了某些筛查检测工具，但我敢大胆推断，它们绝非基于人工智能架构，而且坦率地讲，它们极有可能非常脆弱。是的，它们绝大多数都还停留在传统的字符串模式匹配阶段。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: To be fair, many of the DNA synthesis companies have detection tools, but I would strongly hypothesize that they're not AI based and fairly, they're probably not robust. Yeah, they're all pattern matching mostly.</p>
+</details>
+<p><strong>Speaker B</strong>：抱歉，也许我稍后再问这个问题更合适。我只是感到非常好奇：凡是在生物科技领域工作过的人，都曾尝试过使用 Fable 这类工具，而几乎你输入的任何东西都会被判定为违规或非法——比如就连我自己的个人网站链接都会触发警告。是的，你在 Fable 里面几乎寸步难行。</p>
+<p>但对于真正从事合成生物学前沿探索、创造和设计新序列的科学家群体来说，想要找到一条既能保障安全、又不会阻碍正当合法的颠覆性科学研究的受试者工作特征曲线（ROC 曲线），似乎是一件极其困难的事情。即便你的分类模型 F1 分数达到了 0.9（而现在的技术甚至还远未达到这个水平），每天或者每年如果有数十亿条合成序列被生成出来，系统不可避免会产生海量的误报。如何才能避免对科研造成阻碍？这看起来是一个极难权衡的平衡点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Sorry, maybe I should ask this question later. I'm just curious about, we've all, everyone who is working in bio has tried to use Fable and it's a legal, literally everything you type in—my website for example. Yeah, yeah, you can't do anything in Fable without.</p>
+<p>But in terms of people like scientists exploring synthetic biology and creating new sequences and designing new sequences, it seems like it'd be very hard to get, to have an ROC curve, which you can live on that doesn't like impede novel scientific research, for legitimate purposes.</p>
+<p>How do you avoid, even with an F1 of point nine, which you're not even close to right now, I think that still could easily, if there are billions of sequences generated a day or at least like a year, I mean, I think you could really have a lot of—it seems like a very hard balance to.</p>
+</details>
+<h3>生物防御技术落后下的破局与生态建设</h3>
+<p><strong>Speaker A</strong>：是的，这确实是一个非常棘手的问题。总体而言，我们对此的思考逻辑是：如果我们一开始就去纠结“如何才能百分之百阻断所有危险设计”，那是一个更加艰难且几乎无解的命题。</p>
+<p>我们反思的核心问题在于：在生物设计与进攻能力的研发侧，有大量的顶尖人才在竭尽全力拓展前沿；但在防御侧，我们是否看到了同等水平的前沿技术被付诸应用？答案是否定的。我们看到了这条巨大的鸿沟，因此我们希望能为防御侧提供援助，给它注入强大的技术支撑。</p>
+<p>从这个视角来看，对我们而言选择是非常明确的：让我们推动防御技术的发展，使其能够真正与能力设计侧展开正面交锋与抗衡。这是否能一劳永逸地解决所有问题？这当然是我们的理想愿景，但在现实中，总会存在绕过检测的边缘情况。</p>
+<p>这也是我们坚信的一个核心动力：为大型语言模型和对话机器人设置安全对齐只是一层防线，但正如你所指出的，总会有危险信息逃脱对话限制、流入外部世界。当这些情况发生时，你该如何应对？危险信息已经越过了聊天机器人的审查，已经协助某人合成了致命序列，它已经切实存在于现实环境中。</p>
+<p>我认为我们所研发工具的精妙之处在于，我们是为那些必须应对“已经外溢到现实环境中的未知风险”的人群提供工具。围绕监测（surveillance）、溯源归因（attribution）和应对反制措施（countermeasures），正在形成一个庞大的应对生态，我们要融入并赋能这个生态。我们要助力这个群体，为该领域打造更强大的工具支撑。</p>
+<p>这些工具是否必须达到完美无瑕才能在该领域发挥实用价值？我不这么认为。即便系统并非绝对完美，我们依然能够通过将人工智能技术乃至最前沿的 AI 能力引入生物防御领域，实实在在地推动整个生物防御界向前迈进一大步。这就是我们的切入方式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah, it's a tough question, right? So I think broadly, the way we look at it is, if we thought about like, how do we 100% stop the dangerous design, I think it's a harder question to ask.</p>
+<p>I think the question we asked is, on the capabilities design side, there's plenty of folks pushing the frontier of that. When we look at the defense side, do we see frontier technology being applied there? And the answer to that was no, right? So we saw this huge gap and we wanted to sort of aid, come to its defense, I said, come to its aid to give it a boost, right?</p>
+<p>So I think from that perspective, it's an easy choice for us to say, let's push, let's bring that to a better, head-to-head match against the design side. Is it gonna solve everything? Well, I think that's what we're gonna aspire to be, but realistically, there's always gonna be cases where it can get around, right?</p>
+<p>And I think that's one, that's a big motivation for why we think safety for language models and chatbots is one layer, but also you're right, there may be things that kind of just get out there, get past that anyways. And so what do you do about those cases? It's already past the chatbots, right? It's already aided someone into making dangerous sequences. So it's out there.</p>
+<p>I think the cool thing about our tools is that what we're building is tools for the folks that care about things that's already out there, out in the environment, that's made it somewhere. And now there's this whole ecosystem that we wanna build into that does the surveillance, that does the attribution, that does the countermeasures. We wanna boost that community, right? And build stronger tools for that space.</p>
+<p>Does it have to be perfect to be useful there? I don't think so. I think we can be helpful and move the bio defense community forward in terms of bringing AI technology and AI frontier technology to their aid without being perfect in it. So that's kind of the way we're--</p>
+</details>
+<p><strong>Speaker B</strong>：或许还可以补充一点：关于威胁模型（threat model），目前甚至都还不完全清楚我们到底需要防范何种具体的威胁场景，但防御侧的基础能力此前根本是一片空白。你们提供了一套可用的工具，现在整个行业就可以在此基础上，结合更大的监管框架、政府政策或非营利组织体系展开协同攻关。你们为社区提供了一个可以赖以构建方案的基础工具。哪怕它当下并不完美，它至少提供了一个破局的起点；而如果你连工具都没有，你就什么都做不了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Maybe another thing to say. So threat model, it's not even clear what threat model you're actually trying to defend against at this point, but the capabilities don't currently exist at all. So you provide something and now this can be worked on in terms of a larger regulatory framework or government or nonprofit, whatever, larger framework. It now provides you a tool that the community can build upon. Even if it's not perfect, it provides a starting point. And if you don't have a tool, then you can't do anything.</p>
+</details>
+<p><strong>Speaker A</strong>：是的，评价的标准在于是否取得了实质性改进。衡量基准是：你现在的起点在哪里？我们能否推动现状发生质的转变？我们能否超越传统的基于序列匹配和局部对齐的方法？毫无疑问，这其中有着巨大的提升空间。</p>
+<p>而且我认为全社会的关注度只增不减。我们在监管层面上看到了越来越多的探讨，来自各方政策制定者以及智库专家的关注度显著提升，大家确实正在行动起来。因此我们非常乐观地相信，这项技术不仅能推向应用，更能促使人们将安全防范置于优先考虑的地位，真正采取切实行动，而不再仅仅停留在口头讨论上。</p>
+<p>因为在当下，确实充斥着太多的空谈。过去有大量的人工智能公司高调宣称“我们应该投身生物防御”，但问题在于，这究竟意味着什么？你们到底准备采取什么实质性行动？这正是我们决定真正把工具构建出来、向业界开放获取权限的原因。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah, the bar is the improvement, right? So the bar is like, where are you at now? Can we move the needle? Can we move beyond sequence-based matching, alignment-matched matching? Absolutely, I think there's tons.</p>
+<p>And I think the interest is only growing. I think we're hitting a lot of chatter at the regulatory side, from different politicians and different folks in think tanks. It does seem like folks are mobilizing. So we're optimistic that this gets out and is more top of mind for folks to actually take action as opposed to just talking about it.</p>
+<p>Because right now, it does feel like there's a lot of talk. And one of the reasons why we felt like let's build tools and put it out and give access to people. Because there's been a lot of talk about AI companies saying, we should do bio defense. But then, okay, what does that mean? What are you gonna do about it? And so that was our approach.</p>
+</details>
+<h3>攻防军备竞赛与网络安全类比的局限性</h3>
+<p><strong>Speaker B</strong>：不过我可以站在反方立场，为对立观点做一个最强论证（steelman）。你能切到另一个图表界面吗？也就是点击某个节点后，会显示出其他相似化合物或相似基因组的那个图。</p>
+<p>退一步说，从对方最具说服力的观点来看：如果你正身处技术前沿——而且你们显然身处前沿并不断追求突破——你实际上是在同时推高攻击和防御双方的前沿边界。也就是说，在当下，你们所做的工作显然大有裨益；但从长远来看，如果你的研究本身就在推进最前沿的技术能力，这是否真的有助于最终的安全？你对此怎么看？我想，难道我们最终只能通过某种方式去削弱（nerf）人们所能运用的前沿技术能力吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: So I can just steelman this for a minute, though. Can you go to the other diagram where you have the, and if you click on them, then they show other similar, similar compounds or similar genomes.</p>
+<p>So, arguably, just steelmanning the opposing viewpoint. If you are on the frontier, which it seems like you are, and you certainly strive to be, you're moving the frontier of the attack and the defense at the same time. So like, right now, what you're doing clearly helps. But that maybe if you're on the frontier, then that doesn't really matter in the long term. So how do you think about that? I mean, I guess you just have to nerf what people are doing or something.</p>
+</details>
+<p><strong>Speaker A</strong>：是的，我们希望引导大家建立的思维方式，是不要把生物防御简单地看作“开发一个防御工具就可以万事大吉”的事情。从本质上讲，这其实是一场长期的动态军备竞赛。</p>
+<p>这与网络安全社区极为相似：随着技术不断进步，尤其是像 Fable 这样潜在具备攻击性生成能力的模型出现，必然会导致持续的攻防拉锯。设计与合成端的能力会越来越强，防御端必须竭尽全力跑在前面抢占先机；而防御能力的提升又会反过来刺激设计端继续寻求新的突破。</p>
+<p>因此，这在本质上具有一种军备竞赛式的内在动力学机制。然而在我们看来，目前的现状是防御端已经远远滞后了。我们当前最迫切要做的，是让防御端的技术水平在实质上尽快追平甚至看齐攻击设计端。这就是我脑海中的现实图景，也是我看待这一问题的基本框架。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Yeah, the mindset of what was hoping to get folks to start thinking about it as less of a, &quot;Oh, let's make a bio defense tool and like call it a day.&quot;</p>
+<p>It's basically an arms race, right? Similar to the cybersecurity community, you're gonna make better technology, especially with something like Fable, that can potentially attack. And that means you're gonna have this back and forth. The design side's gonna get more capable. The defensive side needs to try to get ahead, right? And then that just motivates other folks to do past that too, right, on the design side.</p>
+<p>So I think inherently there is this arms race style dynamic that the way it appears to us is that the defensive side has been far, far lagging. And so what we wanna do is bring the defensive side closer to par essentially. So that's the mindset I picture or the framing I think about it.</p>
+</details>
+<p><strong>Speaker B</strong>：网络安全的类比很有意思，但我认为它在几个关键维度上存在本质区别。</p>
+<p>首先，在网络安全领域，如果拥有足够强大的模型，理论上你或许能够堵死所有非社会工程学范畴的技术漏洞。虽然某些漏洞防不胜防、总会有人想方设法绕过，但在原则上，你完全有可能捕获并识别出每一个技术漏洞。我认为这在未来是有可能做到的，接着你就可以对系统打补丁。只要用户保持系统更新，就是安全的。</p>
+<p>但是我们人类的基因组是固定的，对吧？你无法给人性或人体“打补丁”。这意味着，从某种意义上说，生物领域的攻击面，或者防御所需面对的难度要大得多、高得多。</p>
+<p>但反过来看，另一个现实可能是，生物领域发起大规模恶意攻击的动机似乎远不如网络攻击那么普遍。而且从合成任意 DNA 到真正培育出具备传播力与致死性、且不会误杀设计者本人的致命病毒，其间的现实门槛实际上极其巨大。</p>
+<p>所以我很好奇，在你看来，我们所面临的单一最大现实威胁究竟是什么？究竟是什么样的潜在风险会让你夜不能寐？是存在某种非常具体的威胁形态，还是说你单纯觉得“这是我们必须构建的基础设施，所以我们必须立刻把它建好”？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: The cybersecurity analogy is interesting, but I think it differs in some key points. So first of all, I think that with cybersecurity with a sufficiently strong model, you might actually be able to close all loopholes which are not sociological. There are certain ones which will always be hard, always be ways of getting around things, but you could in principle catch every single exploit. And I think that might be possible in the future. And then you can patch them. And as long as people say updated, you're secure.</p>
+<p>We have fixed genomes, right? So you can't patch a human. I mean, so once something, so I think that in some sense the attack surfaces or the way that you defending a set is much higher or much harder, but then maybe the converse is that it seems much less likely that someone would have the incentive to go on offense to the same degree.</p>
+<p>And also the barrier to entry to success, even if you can print out arbitrary DNA and the process of going from that to making a successful virus, especially one which doesn't kill the person designing it is actually quite large. So I guess maybe I'm curious, what is the single, from your opinion, what is the single biggest threat that we actually have? What would the thing that would keep you asleep or keeps you awake at night? Is there something in particular or is this like, you just think this is something we need to build and let's build it?</p>
+</details>
+<p><strong>Speaker A</strong>：首先，我们很难去完全代入那些企图设计生物武器的人的阴暗心理，因此我们并没有试图穷尽恶意攻击者可能采取的所有潜在人物画像或假设场景。</p>
+<p>从总体宏观层面来看，我真正深感担忧的是：我们正在大幅拉低工程化这些危险产物所需的专业知识门槛，并以指数级的速度提升这类研发的迭代周期。而这意味着，潜在的威胁总量（volume）将会……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: One, it's hard to get in the mindset of a person wanting to design a bioweapon. So we're not trying to necessarily think of all the potential people or scenarios that bad actors might work on.</p>
+<p>What I think broadly, what I worry about is we're lowering the bar for how much expertise is needed and the speed at which folks can engineer these kinds of things. And that means the volume is gonna</p>
+</details>
+<!-- chunk 8/8 -->
+<h3>生物安全风险：有意威胁与无意泄漏</h3>
+<p><strong>嘉宾</strong>：……在某个节点上呈现指数级增长。因此，这其中存在着复合的担忧。是的，确实存在有意的威胁，因为显然有些国家级行为体曾经开展过规模极其庞大的生物计划。我们公司的一位顾问曾亲眼见过这些设施，并参与过其退役处置工作。所以我们听过很多关于某些国家确实有动机制造此类武器的故事。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: ...just exponentially increase at some point. And so there's a mix of, yes, there's intentional worries because there's certainly state actors that have had biological programs, very, very, very large ones. And one of our advisors on a company has physically seen these facilities and decommissioned them. And so we've heard a lot of stories about states actually being motivated to create such weapons.</p>
+</details>
+<p><strong>嘉宾</strong>：这是一个方面的担忧。我认为在和平时期，它没那么可怕；但在战争时期，这会极其危险。与此同时，我认为无意的风险在短期内可能更有可能发生——人们试图生成新的生物实体并控制其功能，但在此过程中不小心出现了意外。也许他们最初只是为了理解和研究所需而制造某种物质，但它却泄漏出去了，对吧？因为这类东西往往很难完全封闭遏制，进而导致泄漏。所以我认为这种情况在近期来看可能是可能性最大的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: That is one concern. And I think during peacetime, it's less scary. During wartime, it's particularly scary. I think the unintentional ones are also things that, in my mind, potentially more likely in the near term, where folks do try to generate things and control function and inadvertently things that maybe they tried to make a certain thing to understand and to study, but it got out, right? Because these things can be hard to contain, for example, and they just have a leakage. So I think those scenarios potentially seem the most likely.</p>
+</details>
+<p><strong>嘉宾</strong>：这会让我夜不能寐吗？倒也不至于。整体而言，我更像是一个乐观主义者。我认为构建这类技术最终是一场权衡利弊、评估成本与效益的博弈。我认为其带来的益处远远大于潜在的危害，这也是我们致力于此项研究的原因。归根结底，我们相信它将成为科学发现和改善人类健康的强大引擎。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Does it keep me up at night? Not necessarily. I'm much more of an overall an optimist. I think building this type of technology is ultimately a game that you weigh out the pros and cons and the costs and benefits. I think the benefits far outweigh the potential harm. And so that's why we work on it. Because ultimately, we do think it's going to be an engine for discovery and human health improvement.</p>
+</details>
+<p><strong>嘉宾</strong>：但与此同时，我们也切身感受到，防御端在这场军备竞赛中某种程度上处于下风。因此我们也在这方面开展工作，努力推进前沿防线。但总体而言，我认为作为一个由研究人员以及政策制定者组成的整体共同体，具备足够的韧性和动员能力来走在风险前面。因此对此我非常乐观。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: But at the same time, we just felt that the defensive side was sort of losing this arms race. And so we work on it as well and try to push the frontier. But I'd say overall, I think as a community, as researchers, but also folks in the policy side, I think the community is resilient enough and has the ability to mobilize to get ahead of it. And so I'm very optimistic about it.</p>
+</details>
+<h3>消除瓶颈：从算力短缺到打破领域专家的悲观定势</h3>
+<p><strong>主持人</strong>：我们有两个喜欢向每位嘉宾提出的固定问题。第一个问题是：如果你能通过一纸指令直接消除一个对你至关重要的瓶颈，那会是什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: We have two questions that we like to ask every guest. So the first one is, if you could, by fiat, remove a bottleneck that is important to you, what would that be?</p>
+</details>
+<p><strong>嘉宾</strong>：很有意思的问题。针对这个问题，我可以给出两个答案吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Interesting. Could I get two answers on this one?</p>
+</details>
+<p><strong>主持人</strong>：当然可以。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Sure.</p>
+</details>
+<p><strong>嘉宾</strong>：第一个回答可能有点老生常谈或投机取巧，因为每家 AI 实验室都会这么说——那就是 GPU。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: The first one is kind of a cop-up, because every AI lab says this, like-- GPUs.</p>
+</details>
+<p><strong>主持人</strong>：GPU。（笑）这个答案我们已经听过好几次了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: GPUs. (Laughter) We've gotten the answer a few times.</p>
+</details>
+<p><strong>嘉宾</strong>：我们确实需要更多的 GPU。另一个答案则更为偏向哲学思考层面。我认为在当前这个领域中，在我们正在努力并渴望实现的事情中，其核心是重塑科学家在这个领域的工作方式。而我认为我们遇到的一个重大障碍来自于人们的心态——你在很多领域都能看到这种现象——那就是，一个人在某一领域的专业造诣越深，往往就会对该领域的革新变得越悲观。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: We can use GPUs. The other one, which I think is a little more philosophical, I think in this space, in what we're trying to do, aspire to do, is reinvent how scientists do their work in this space. And I think one hurdle we run into is folks who-- and you see this in many domains-- folks who are-- the more expertise you have in something, the more pessimistic you become about that space.</p>
+</details>
+<p><strong>嘉宾</strong>：我认为在生物学领域这一点尤为明显：你对某个疾病领域或某种研究模式了解得太深，当有人引入某种全新的方法时，你脑海里立刻会浮现出：“哦，但这个怎么办？那个又怎么解决？”他们变得非常悲观，而且很可能他们的担忧也是有充分理由的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And I think you especially see this in bio, where you know a disease area or modality so well, and then someone introduces something else new, and you're like, oh, but what about this and this and that? And they're very pessimistic, and probably rightfully so.</p>
+</details>
+<p><strong>嘉宾</strong>：我认为在我们公司所观察到的、我们努力去践行的，以及我们试图招募的人才，是既深刻理解该领域的专家，但同时依然保持梦想家特质的人——这意味着他们依然拥有想象力，并渴望去改变传统的工作方式。我认为这种思维壁垒在业内屡见不鲜。如果我们能更广泛地拥抱这种结合，我相信我们能看到更多我所期盼的突破性进展和跨越式变革。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: I think what I've noticed at the company, what we strive to do, and the folks that we try to bring in, are domain experts that do know that field, but also are still dreamers, meaning they still do have that imagination and desire to change how things are done. I think that barrier, we see that a lot in the field. I think if we embrace that more, we can see a lot more progress and step change that I would love to see.</p>
+</details>
+<h3>核心寄语：无需在最前沿 AI 与生物医疗之间二选一</h3>
+<p><strong>主持人</strong>：这就引出了我们的最后一个问题：你是否有一条最想让听众带走的核心信息？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Brings us to the last question, which is, yeah, is there something that you want the audience to take away, a single message?</p>
+</details>
+<p><strong>嘉宾</strong>：是的。我认为核心信息在于：很多人，尤其是 AI 研究群体中的人们，有时总觉得面临着一种非此即彼的选择——要么去从事最前沿的 AI 技术研发，但这往往意味着去做面向消费者或企业级应用的产品，基本上只能去研发聊天机器人，因为那才是最前沿的技术。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah. I think one message is, I think folks have had, especially into the AI research community, felt like there was a choice they had to make sometimes to either work on the frontier of AI technology, and that was like consumer-related apps or enterprise-related apps. And they just had to work on chatbots. And that's the cutting-edge technology.</p>
+</details>
+<p><strong>嘉宾</strong>：但同时，当大家思考 AI 真正蕴藏的潜能时，很多人会认为其真正价值在于改善人类健康、理解生命生物学本质。然而，大家过去总觉得自己必须在两者之间做出妥协：如果我投身于生物学领域，我就无法置身于最顶尖的 AI 前沿探索。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: But also, I think when people think about the true potential of what AI can do, and I think a lot of it is about improving human health, understanding our biology. But people have felt like they have had to choose. And if I work in that space, I can't work in the frontier of AI.</p>
+</details>
+<p><strong>嘉宾</strong>：而我希望大家能领悟到的是：你根本不需要做出这种妥协与抉择。我们完全可以一边做着自己真正关切、深信能够推动人类进步的事业，一边研发着最尖端的技术。而这也正是我们在 Radical Miracles 所努力构建的方向。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And what I would like people to take away is that you don't have to choose. And I think we can work on things you truly care about that you think will push humanity and work on cutting-edge technology. And that's what we're trying to build at Radical Miracles.</p>
+</details>
+<p><strong>主持人</strong>：是的，确实如此。我也非常鼓励大家去阅读相关的博客文章、模型架构以及 Meck and Turf 等内容。在构建这些模型的过程中融入了大量的创新。我也坚信，生物学研究正切实处于人工智能的最前沿。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, and I mean, clearly, and I encourage people to read the blog posts, the architecture, the Meck and Turf. There's a lot of innovation that is going into building these models. And I firmly believe that biology is really on the forefront of AI.</p>
+</details>
+<p><strong>嘉宾</strong>：太棒了。很高兴你也有同感。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Awesome. Yeah. Glad you feel that way.</p>
+</details>
+<p><strong>主持人</strong>：太精彩了。非常感谢你的到来。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Amazing. Thanks for joining.</p>
+</details>
+<p><strong>嘉宾</strong>：也谢谢你们——聊得非常开心。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, thank you for-- That was fun.</p>
+</details>
+<p><strong>主持人</strong>：远道而来，路途确实很长。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Making the long trip. That's a lot of way.</p>
+</details>
+<p><strong>嘉宾</strong>：随时乐意效劳。非常感谢你们珍贵的邀请，我感到非常愉快。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Anytime. Thank you. Precious invite. I had a blast.</p>
+</details>
+<p><strong>主持人</strong>：太好了，十分感谢，谢谢！（音乐响起）</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Great. Thank you. Thank you. (Music Playing)</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">genome-language-model</span>
+      
+        <span class="tag-pill tag-pill--no-page">long-context-modeling</span>
+      
+        <span class="tag-pill tag-pill--no-page">sequence-generation</span>
+      
+        <span class="tag-pill tag-pill--no-page">biological-design</span>
+      
+        <span class="tag-pill tag-pill--no-page">dual-mandate</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

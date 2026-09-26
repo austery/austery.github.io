@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent Harness 架构、数据层设计与记忆工程实践</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="Agent Harness 架构、数据层设计与记忆工程实践" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Agent Harness 架构、数据层设计与记忆工程实践</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-18</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=xs-ob87TTzg" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-18
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">本文详细介绍了构建智能体控制框架（Agent Harness）的核心概念，重点阐述了 Agent Stack 的五层架构，以及数据层中关键组件（如网关、MCP）的作用。文章深入探讨了上下文腐化问题，并介绍了记忆工程（Memory Engineering）的理念，包括如何通过托管解决方案来高效管理记忆数据，以及利用向量检索和模型路由实现高效的 Agent 循环控制和模型选择。</div></div>
+      
+    </div>
+    <!-- chunk 1/6 -->
+<h3>工作坊签到与环境准备</h3>
+<p><strong>Speaker</strong>: 喂，能听到吗？太好了。是的，这个音量刚刚好。</p>
+<p>我周六刚注册了一个域名，专门用来做这次工作坊的签到登记。对于打算跟着我一起实际操作的朋友，请注意：完成工作坊页面的登记流程后，你会收到一份 GitHub 仓库的邀请。大家只需查看并接受邀请，就可以运行工作坊的内容了。</p>
+<p>我们本次工作坊将在 GitHub Codespaces 上运行。所以如果你想启动它，大概需要 5 分钟的初始化时间。顺便说明一下时间安排：我会用前 30 分钟为大家介绍 Agent Harness（智能体控制框架 / 装备）以及许多其他核心概念；在接下来的一个半小时里，我们将一起实际动手完成工作坊的实战内容。听起来还可以吧？好的，太棒了。</p>
+<p>顺便非常感谢大家能来参加，我知道现在是周一早上 9 点，所以我非常赞赏各位能准时出席。距离正式开始还有两分钟，我就先不打扰大家准备了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Hello. Hello. Perfect. Yep. So, perfect. Yeah, this volume is perfect. It's just a website that I registered the domain on Saturday just to do the registration of the workshop. But for those of you who are going to follow along with me, just know that after you complete that process in the workshop, you will get an invitation to the repository and just view the invitation, accept it, and then you will be able to run the workshop.</p>
+<p>We'll be running the workshop on GitHub Codespaces. So, if you want to start that up, it takes like five minutes. Just for reference, I'm going to use the first 30 minutes to give you an introduction to agent harness and lots of other concepts, and then in the next hour and a half, we're going to actually go through the workshop together. Sound good? Okay, perfect.</p>
+<p>And thank you, by the way, for being here because I know it's Monday 9:00 a.m. So, I commend you all for being here. Just two minutes before we begin. So I will shut up.</p>
+</details>
+<h3>开场介绍与讲师背景</h3>
+<p><strong>Speaker</strong>: 好了，各位，我们正式开始吧。非常感谢大家在这个时间来和我一起交流。就像我刚才说的，现在是早上 9 点，希望我和我的团队能让各位觉得不虚此行。</p>
+<p>在这节课结束时，我希望大家能够掌握关于 Agent Memory（智能体记忆）和 Agent Harnesses（智能体控制框架）的相关知识，了解如何构建属于你自己的 Agent Harness——可以说，这是如今 AI 领域最热门的话题之一。</p>
+<p>很多人一直在不停地讨论模型，但问题在于：像大语言模型这样的模型，它们本质上是整个推理系统中“冻结”固化的部分。我们只能被动接受提供给我们的模型能力。在过去的几周里，如果你关注新闻就会发现，这一点在当下体现得前所未有地明显。因此，Harness（控制框架）才是我们今天要深入探讨的核心。</p>
+<p>如果刚才有朋友还没赶上，可以扫描这个二维码，或者访问 workshopwaitingroom.com 网站进行注册。注册后你会收到 GitHub 仓库的邀请，在 GitHub 上你可以创建一个 GitHub Codespace，我们将在其中运行工作坊，所有环境都会为你预先配置好。</p>
+<p>简单自我介绍一下：我在 Oracle（甲骨文）工作了 7 年，其中担任 Developer Advocate（开发者布道师）大约 4 年。大家可以在网上找到我的演讲，我也在 GitHub 上非常活跃。如果你也是 GitHub 用户，欢迎查看我的 GitHub 个人主页。要说我目前职业生涯的一个亮点，那就是我曾与吴恩达（Andrew Ng）共同推出了一门关于 Agent Memory（智能体记忆）的课程。所以如果你对我们今天讨论的内容中的记忆组件感兴趣，也可以去看看那门课程。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: All right. Well, let's begin, guys. So, thank you for being on this at this time here with me. I know it's 9:00 a.m. like I said, so hopefully I and my team can make your time worthwhile. At the end of this session, what I would like you to leave with is some knowledge on agent memory and agent harnesses. How you can build your own agent harness, which is nowadays one of the hot topics on AI, I would say.</p>
+<p>Lots of people are talking about models constantly, but the thing is that models like language models, they are the frozen part of the reasoning, right? We just have to accept what we are given, and during the past few weeks, if you're following the news, you will have seen that this has never been more true than now. So the harness is what we're going to talk about.</p>
+<p>For those of you who weren't here, you can scan this QR code or go to that website workshopwaitingroom.com and just register. You will get an invitation to a GitHub repo, and on this GitHub, you will be able to create a GitHub Codespace where we will run the workshop and you will have everything set up for you.</p>
+<p>So just a little introduction on who I am. I've been working for Oracle for seven years. I've been a developer advocate for about four of them, and you can find my talks and I'm very active on GitHub as well. So if you're a GitHub user, check out my GitHub profile if you like. What is the highlight of my career so far? I launched a course with Andrew Ng on agent memory. So if you're interested in the memory components of what we are going to discuss today, you could just check out that course if you'd like.</p>
+</details>
+<h3>AI 智能体技术栈的五层架构与数据层定位</h3>
+<p><strong>Speaker</strong>: 这些就是我们今天将要梳理的内容。首先，我们会简要介绍 Agent Stack（智能体技术栈）的构成；接着，我们会聚焦深入到放置记忆的 Data Layer（数据层）。随后，我们将探讨当今 AI 应用所呈现的几种不同形态。接下来会讲解什么是 Agent，以及构成一个 Agent Harness 的七个不同层级。只要遵循这七种架构结构，你就能构建出一个最小化的 Agent Harness，并将其连接到任何模型上。最后，我们会探讨一下 Continual Learning（持续学习），以及 Oracle 如何凭借独特优势帮助大家构建并开发 Agent Harness 及 AI 应用。</p>
+<p>顺便说一句，如果大家有任何问题，随时举手提问，我非常乐意回答大家的问题。</p>
+<p>那么，什么是 Agent Stack（智能体技术栈）？就像所有 AI 智能体一样，每一个 AI 智能体都构建在这五层体系之上：</p>
+<p>最上层是 Application（应用层），也就是产品的用户界面与交互表面，是我们作为最终用户所接触的部分。接着是 Data（数据层），它包含大量组件：比如 Memory（记忆）、Knowledge（知识）、Retrieval（检索）、Encoding（编码）以及 Search（搜索）。再往下是 Model（模型层）本身，也就是底层的推理大语言模型。然后是 Infrastructure（基础设施层），负责调度编排，比如根据所需的推理计算量（reasoning effort）来决定调用哪个模型等。最底层是 Compute（算力层），即云端基础设施或 GPU，同时也包括数据库引擎等。</p>
+<p>在这五个层级中，除了 Data（数据层）之外，Application（应用层）、Model（模型层）、Infrastructure（基础设施层）和 Compute（算力层）这四层正在变得越来越商品化（commoditized）。这是什么意思呢？也就是说，外界平台和厂商正试图把这些层级的复杂性封装抽象掉，使其脱离我们的控制领域。因此，我们在构建 AI 应用时拥有最高掌控度的部分，实际上就是数据层。这正是我们今天要聚焦的地方，因为 Agent Harness 本身就是在数据层中发挥极致作用并与数据层紧密共生的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: These are the things that we are going to talk through today. First of all, we're going to do a little introduction on what the agent stack is, and then we're going to zoom into the data layer where the memory lives. Then we're going to explore a little bit about the different shapes that AI applications take nowadays. What an agent is, followed by the seven different layers that make up an agent harness. So if you just follow these seven different structures, you will be able to create an agent harness, a minimal agent harness that you can connect any model to. Then we're going to finally talk a little bit about continual learning and how as Oracle we are uniquely positioned to help you achieve and develop agent harnesses and AI applications.</p>
+<p>So the agent stack—and by the way, if you have any questions, just raise your hand. I'm very happy to take questions as well.</p>
+<p>The agent stack: every AI agent sits on these five layers. You have an Application which is the product surface, right? What we interact with as users. You have Data, and that has lots of components. You have memory, you have knowledge, you have retrieval, encoding, search. You have the Model itself, the reasoning large language model that is behind everything. Infrastructure which is the orchestration—what model do we serve depending on the reasoning effort that we need and things like that. And then we have Compute which is the cloud or GPUs, and also the database engine.</p>
+<p>And the application, the model, the infrastructure, and the compute—these four layers, except for the data, they are increasingly commoditized. What do I mean by that? They are trying to take away the complexity from these layers out of our domain, right? So the thing that we have the most control over when working with AI applications is actually the data, and that's the part that we're going to focus in because the agent harness excels and lives very closely with the data layer.</p>
+</details>
+<h3>数据层组件与网关 / MCP 的作用</h3>
+<p><strong>Speaker</strong>: 那么我们来深入看一看数据层。数据层正是 Agent Harness 所处的空间，它包含许多关键组件。</p>
+<p>首先第一个组件是 Gateway（网关）。在这里 MCP（Model Context Protocol）非常值得关注，因为正是它将 Agent Harness 与外部数据及工具连接起来。你可以把大语言模型想象成一个孤立的存在——如果无法访问外部数据等资源，它根本无法独立完成实际工作。因此，在网关和 MCP 之上，构建了 Memory Layer（记忆层）、Semantic Layer（语义层）、Retrieval Layer（检索层）、Context Layer（上下文层）以及各类 Tools &amp; Skills（工具与技能）。</p>
+<p>举例来说，假设你电脑上运行着一个应用程序，而你的大语言模型无法访问它，比如 Outlook。如果你希望让大模型连接到 Outlook，你可以创建一个 MCP 服务，定义一些具体函数，这样大模型突然之间就获得了与该程序通信的能力。因此，网关和 MCP 就像是一座桥梁层，将大语言模型连接到外部世界、我们的计算机或你工作的任何环境中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: So let's focus on the data layer. The data layer is where an agent harness appears and it has many components. The first component is the gateway, and MCP is interesting because that's the one that connects an agent harness to data and tools. So kind of think of a large language model like an isolated thing that wouldn't be able to work at all if it didn't have access to things like data, right?</p>
+<p>So you then have like the memory layer, the semantic layer, retrieval layer, context layer, and tools and skills that are built on top of the gateway and MCP layer. Let's say for instance that you have an application on your computer and your large language model doesn't have access to it. For instance, Outlook, right? So if you might want to have your large language model connect to that, you can create an MCP, you specify some functions, and then the LLM all of a sudden is able to communicate with this program. So gateway and MCP is like the layer that connects a large language model to the outside world or the factor to our computer or wherever you're working.</p>
+</details>
+<h3>AI 应用的四种形态与 AI Agent 的本质定义</h3>
+<p><strong>Speaker</strong>: 如今的 AI 应用主要呈现为四种不同的形态：</p>
+<p>第一种是 LLM Chatbots（纯对话机器人），这种形态非常被动（passive），只有在你提问时它才会做出回应；
+第二种是 RAG Applications（检索增强生成应用），这类应用属于半被动式（semi-passive），因为它们需要在后台执行某种数据检索与处理，但整体交互仍然具有被动响应的特质；
+再往后则是更加主动（active）的 AI 应用形态，也就是我们日常中经常接触到的形态，比如 Claude Code 等等。这类应用是 LLM 驱动的自动化工作流（提供 Automation / 自动化）与 AI Agents（提供 Autonomy / 自主性）的结合体。稍后我们会详细解释这背后的含义。</p>
+<p>但我首先希望大家对“什么是 AI Agent”有一个非常清晰的定义。在我看来，AI Agent 本质上就是：<strong>模型（大语言模型）+ Harness（控制框架 / 装备）</strong>。</p>
+<p>模型本身负责提供 Reasoning（推理能力），而除模型之外的一切支撑结构，都构成了 Harness。</p>
+<p>因此，它的定义大致可以表述为：<strong>一个自主实体，其认知功能由大语言模型驱动以进行逻辑推理；通过数据库或文件系统扩展以获得记忆（Memory）；通过工具进行拓展以执行行动（Actions）；并扎根于输入感知以感知（Perceive）其所处的环境。</strong> 简而言之，Agent 就是 Model + Harness。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: And AI applications today, they take up four different shapes, right? You have LLM chatbots which are very passive, they just respond when you ask a question. You also have RAG applications which are semi-passive because they have to do some kind of processing in the background, but then you also have a passive nature of it. And then you have the more active components of AI applications, which are what we kind of use every day like Claude Code etc. etc., which are a combination of LLM-driven workflows that provide automation and AI agents that provide autonomy. And we'll explain later what I mean by that.</p>
+<p>But first, I want you to have a very clear definition of what an AI agent is. So to me, an AI agent is essentially a model (large language model) plus a harness. The model itself will be the reasoning, and everything else will be the harness.</p>
+<p>So this definition is something like this: An autonomous entity whose cognitive functions are powered by a large language model for reasoning. They are augmented by a database or files for memory. They are extended through tools for actions, and grounded in inputs that let it perceive its environment. So an agent is a model plus the harness.</p>
+</details>
+<h3>Harness Engineering 的目标：在非确定性中构建确定性</h3>
+<p><strong>Speaker</strong>: 如果从图架构来看，Agent 等于 Model 加上 Harness。其中，Reasoning（推理部分）是我们无法直接控制的部分。这是被外部高度补贴、我们按需租赁的部分。如果你和我一样，你可能订阅了世界上所有能想象到的 AI 订阅服务——但这恰恰是我们无法掌控的，我们无法控制厂商提供给我们什么模型底座。然而，Memory（记忆）、Tools（工具）和 Perception（感知）这些部分，则是我们真正拥有可定制性、可以由我们亲手去构建和掌控的。</p>
+<p>因此，Harness Engineering（控制框架工程）的核心目标，就是<strong>持续且可重复地产生可靠、可预测的输出</strong>。相比之下，纯粹的推理模型具有极强的不确定性（non-deterministic）——即便你给它完全相同的输入，它每次产出的结果也可能会截然不同。</p>
+<p>正如我刚才提到的，在当今最典型的 AI 应用中（例如 Claude Code 以及大家能想到的其他类似工具），它们无一例外都是“自动化（Automation）”与“自主性（Autonomy）”的结合体。为什么会这样？因为自动化能够为系统提供确定性与可靠性（reliability），而自主性则赋予了系统应对复杂情况的灵活性（flexibility）。这种结合在我们构建实用系统时是非常实用且高效的……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: So if the agent is the model plus the harness in this diagram, right, we have reasoning, and the reasoning is the part that we don't control. It's the part that's heavily subsidized, the part that we rent. If you're like me, you're subscribed to every imaginable subscription on earth, and that's the thing that we do not control, right? We have no control over what we are offered. And then we have memory, tools, and perception that actually we get some customizability that we can do.</p>
+<p>So the goal of harness engineering is to create reliable and predictable outputs over and over. Whereas a reasoning model is very non-deterministic. You might give it the same input and it might produce different outputs every time. Right?</p>
+<p>So I said that in AI applications, the most typical ones nowadays, Claude Code and any other type that you can think of, is a combination of automation plus autonomy. Why? Well, because automation provides reliability to a system and autonomy gives flexibility. And this is a combination that is very convenient when we...</p>
+</details>
+<!-- chunk 2/6 -->
+<h3>Agent Harness 的核心定位与构成</h3>
+<p><strong>Speaker</strong>: ……我们自己开发。顺便问一下，大家举个手：现场有多少人在做 AI 工程师或 AI 开发者？天哪，太棒了。那么，你们肯定都用过这些系统中的某一个，对吧？所有这些系统都有一个共同点，那就是它们都具备自主性（autonomy）和灵活性（flexibility）。</p>
+<p>这里的核心理念是，这些系统都是构建在专有的 Agent Harness 之上的。所谓 Agent Harness，本质上就是围绕 AI Agent 所构建的一切支撑体系——为了让它能够输出可靠且可复现的结果，你所需要围绕模型做的一切配套工作。因为模型本身是非确定性的（nondeterministic），相同的输入在每次运行时都可能产生不同的输出。</p>
+<p>而我们使用 Harness 的目的，正是为了驯服大语言模型的这种非确定性本质，从而能够持续产生可靠、可复现的结果。</p>
+<p>至于推理（Reasoning）部分——这属于我们无法直接控制的部分，我们今天不会把重点放在这上面。事实上，Harness 是构建在可替换的模型之上的；你只需要一个通用的接口，比如 OpenAI 协议或者 Anthropic API 规范即可。所有这些抽象使得模型层是可以任意替换的，而 Harness 本身才是我们今天关注的焦点。</p>
+<p>那么，组成一个 Agent Harness 共有七个要素。正如我所说的，我们不会去碰模型层，因为我们无法控制它。但让我们更详细地深入探讨 Harness 的其余各个组成部分。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: ...are developing ourselves. By the way, raise of hands. Who is working as an AI engineer or as an AI developer? Oh my god. Okay, good. So, you must all have used one of these systems, right? So, all of them they have this commonality which is they have autonomy and they have flexibility. Um, yeah. So the idea is that these systems right they are built on top of an a proprietary agent harness and an agent harness is nothing more than everything that we spoken about an AI agent all the things that you need to do around that to enable it to produce reliable and repeatable outcomes right so the model itself nondeterministic same input different outputs every But the harness, what we want to do with the harness is to turn this nondeterministic nature of a large language model and be able to produce reliable and repeatable results.</p>
+<p>So the reasoning which is the part that we do not control, we're not going to focus actually the harnesses are built on top of models that are kind of swappable. you just need like a common interface like an open AI protocol or the anthropic API specification, right? All these things make it so that the model part is swappable and the harness is what we're going to focus on today.</p>
+<p>So, seven things that make up an agent harness. And as I said, we're not going to touch on the model layer because we have no control over it. But let's go a little bit more uh in detail into each of these. Right?</p>
+</details>
+<h3>Harness 的核心模块：存储、语义与上下文工程</h3>
+<p><strong>Speaker</strong>: 首先，你的 Agent Harness 上需要一个存储层（Storage Layer），它从根本上决定了数据存放在哪里、记忆在物理上驻留在何处。接下来我们会探讨过去六个月里一直存在的一个争论——文件（Files）与数据库（Databases）的权衡 dilemma，以及为什么我认为二者的混合架构（Hybrid）才是最佳选择。</p>
+<p>其次，你还需要记忆工程组件（Memory Engineering），包括所有的编码（Encoding）、搜索（Search）和检索（Retrieval）模块。</p>
+<p>此外还有语义层（Semantic Layer）——它代表着那些隐式发生的事情，或者是我们默认大语言模型应该知晓、但实际上属于我们公司或业务专有的私有词汇与知识体系。那些我们没有明说给 LLM 的背景信息，就属于语义层的范畴。</p>
+<p>我们还会简要介绍 Agent 循环（Agent Loops），探讨什么是 Agent Loop 以及如何实现一个极其极简的 Agent 循环。</p>
+<p>最后，我们会讲解一些上下文工程（Context Engineering）技术，用于尽可能保持上下文窗口的高度显著性（Salient）。你需要最大程度地精简上下文窗口，以确保当前正在解决的任务始终保持最强相关性。</p>
+<p>到目前为止，我们已经完成了对什么是 AI Agent 及其用例的介绍。接下来，我们将深入探讨 Agent Harness 以及其中的每一个独立组件。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: You need a storage layer on your agent harness that essentially determines where the data is going to live, where the memory physically lives. uh and we'll see about this dilemma that has been going on about the last six months about files versus databases and why I think a hybrid uh combination of both is actually the best part.</p>
+<p>Then you also have memory engineering components which are all the encoding, the search and the retrieval components of it. And also the semantic layer which is kind of the the hidden things that happen or the hidden vocabulary that we assume that a large language model knows that is kind of proprietary to our companies or our knowledge. What we don't say to the LLM kind of that's the semantic layer.</p>
+<p>We'll lightly touch on agent loops and what an agent loop is and how to implement a very very minimalistic agent loop and finally go about some context engineering techniques that you know keep the window as salient as possible the context window as salient as possible. You want to minimize the context window as much as possible so that that the task that you're solving stays relevant.</p>
+<p>So until here we have done an introduction to what an AI agent is right its use cases and now we're going to dive deeper into uh an agent harness and each one of the individual components.</p>
+</details>
+<h3>冻结的推理核心与持续学习</h3>
+<p><strong>Speaker</strong>: 关于模型层，我们可以称之为“冻结的推理核心”（Frozen Reasoning Core）。我之所以说它是冻结的，是因为通常情况下模型的权重是不会改变的。之所以说“通常”，是因为我和坐在那边的 Casio 正在准备与 Andrew 一起录制一门关于 AI Agent 持续学习（Continual Learning）的新课程。如果大家感兴趣，可以在几周后关注一下。</p>
+<p>但现实情况是，在 99.9% 的场景下，你拿到的模型其权重永远不会发生改变——除非你拥有数百万美元、极其充裕的时间或海量的 GPU 算力，否则修改模型权重是极其困难的。因此，我们需要寻找其他方法在不改变模型权重的前提下来影响其推理能力。这也正是我们在工作坊中将要看到的持续学习部分的动力来源。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: So the model layer right the frozen reasoning core I say it's frozen because typically the weights of a model don't change and I say typically because uh we are actually I'm actually in the process with Casio sitting right there. We're going to record a new course with Andrew on continue learning for a agents. So if you're interested just check that out in a couple couple weeks.</p>
+<p>But the thing is that 99.9% of the time you will have a model and the weights of the model will never change uh unless you have millions of dollars or you know a lot of time or GPUs it's very hard to change the weights of a model. So there are other ways in which you can affect the reasoning without actually changing the weights of the model. But this is motivation for for the continual learning part that we will see in the workshop.</p>
+</details>
+<h3>记忆存储抉择：文件 vs 数据库的权衡与并发困境</h3>
+<p><strong>Speaker</strong>: 那么，记忆究竟该存放在哪里？这就是我们自今年一月份以来一直在讨论的文件（Files）与数据库（Databases）的权衡抉择。有些人是坚定的文件原教旨主义者（Maximalists），而另一些人则是数据库的原教旨主义者——我个人不把自己归为极端派，但确实两方都有坚定的拥趸。实际上两边都有道理，文件有非常便利的特性，数据库也是如此。</p>
+<p>对于文件而言，它们非常容易创建，极其契合直觉与模型的本能，插入和追加数据非常简单，天然具备非结构化的特性。而另一方面，人们对数据库的固有印象则是高度结构化的——当然，这通常是在考虑 SQL 关系型数据库时的看法。</p>
+<p>关键在于，你其实完全不需要在二者之间做单选题，你完全可以二者兼得。文件之所以吸引人，是因为模型天然能理解它们，并且它们与操作系统的交互极其顺畅。文件遵循 POSIX 语义，因此无论是在 Debian、Ubuntu 还是其他任何你想要的操作系统上都具备通用兼容性。</p>
+<p>但文件也有明显的缺陷。例如，文件缺乏事务一致性（Transactional Consistency）。</p>
+<p>这是我想深入讨论的核心痛点之一。如果你像我一样是个“重度并发折腾者”，同时运行 8 个、16 个甚至 32 个 Agent，那么问题就来了：普通文件是无法被多个 Agent 同时安全地修改、插入和更新的。</p>
+<p>那么，目前在处理文件且缺乏事务一致性时的解决方案是什么？现场有什么建议吗？</p>
+<p><strong>Audience</strong>: Work trees（工作区树）。</p>
+<p><strong>Speaker</strong>: 没——没错，正是 Work trees。当多个 Agent 想要修改同一个文件、而另一个 Agent 正在处理该文件时，它们目前的做法就是创建一个独立的工作区树（Work tree），在各自的工作区树中推进修改，等全部实现完成后，再 merge 回 master——抱歉，是 merge 到 main 分支。</p>
+<p>这是目前绕过缺乏事务一致性问题的一种变通方案（Workaround）。除此之外，文件还有其他局限性，比如混合搜索（Hybrid Search）——这在纯文件系统上是无法直接实现的，但在数据库上却可以轻而易举地完成。</p>
+<p>另外，文件系统缺乏开箱即用的备份与容灾保障。一旦操作系统发生损坏或崩溃，你可能会直接丢失所有内容。而这些问题，数据库技术在三四十年前就已经彻底解决了，只是现在很多人把这些成熟经验给淡忘了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: where does the memory live right the files versus databases dilemma that we've been having uh since January kind of some people are very maximalists of files and some of us are well oh I will not include myself but some of some people are also maximalists of the database um and you know both things are right files have convenient things convenient characteristics and also the databases</p>
+<p>So the files right they are very easy to like they are very they match the model's instincts they are very easy to create they are very easy to insert and append data into files right it's very it has a very unstructured nature to it and databases on the other hand or the conception that people have is that they have a very structured way right but that's when you're thinking about SQL like SQL</p>
+<p>And the thing is that you don't actually need to like choose one or the other. You can actually use both of them. Like files are attractive because the models picks them and they kind of work very very easily with operating systems. They follow posic semantics. So they are compatible on Debian, Ubuntu, any other operating system that you might want.</p>
+<p>And they also have some disadvantages. for instance they don't have transactional consistency. So this is uh one of the problems that I wanted to talk about. If you are a degenerate like me and you are working I don't know with 8 16 32 agents at a time. Uh the problem with this is that files cannot be modified and inserted and modified at the same time. So what is the solution nowadays to not having transactional consistency and working with files? Any suggestions?</p>
+<blockquote>
+<blockquote>
+<p>Work trees.</p>
+</blockquote>
+</blockquote>
+<p>Exa. Exactly. So agents what they when they want to modify a file but another agent is working on this thing, they just create a different work tree, right? They will do all the progress in the work tree and then after the implementation is done they will merge to master or the merge to main sorry. So this is the way that is a workaround against not having transactional consistency right and you also have other characteristics like for instance hybrid search um this is not available on files but is very very easily achieved on databases. Um you don't have backups either. So if your operating system gets corrupted or something, you will just lose everything. And these are things that the database fixed 354 years ago and people have kind of forgotten about that.</p>
+</details>
+<h3>混合架构与库内嵌入（In-Database Embeddings）</h3>
+<p><strong>Speaker</strong>: 因此，我希望为大家提供的是两全其美的方案——让你在同一个体系内同时获得文件的便利性与数据库的强大能力。我们接下来会阐明其中的原理。</p>
+<p>数据库具备诸多显著优势：</p>
+<ul>
+<li>具备 ACID 事务一致性，保证操作的原子性（Atomic）、一致性（Consistent）、隔离性（Isolated）和持久性（Durable）；</li>
+<li>具备高可用性（High Availability），你可以对数据库进行跨地域多副本复制，比如配置多副本因子让数据同步分布在世界上的三个不同节点；</li>
+<li>具备高效的向量搜索（Vector Search）能力；而在纯文件系统中，你只能依赖正则表达式匹配或其衍生手段；</li>
+<li>以及众多其他企业级特性。</li>
+</ul>
+<p>在接下来的实际工作坊中，我们将运行一个真实案例：让三个不同的 Agent 同时尝试修改同一个文件并更新其中的计数器，看看谁的速度更快。我当然已经知道结果了，不过稍后你们就会亲身体验到。</p>
+<p>这里我想向大家介绍的是一个名为 Oracle DBFS（Database File System，数据库文件系统）的方案。它允许你直接在数据库内部的文件系统中存储文件，从而赋予文件前述的所有优势——你不仅能像操作普通文件一样使用它，还能同时获得 ACID 事务一致性、向量检索、关联关系、企业级安全性以及高可用性支持。</p>
+<p>基于此，我的建议是采用混合架构（Hybrid System）：
+我们可以将短期记忆（Short-term Memory）存放在文件中；而当某些信息需要沉淀、提升为长期记忆（Long-term Memory）时——例如用户偏好等——则将它们迁移并沉淀到更加结构化的数据库空间中。这就是我们在工作坊中将要实践的内容。</p>
+<p>针对 Agent Harness 中的编码、搜索和检索组件，我们还提供了一个 LangChain 集成库——<code>langchain-oracledb</code>。它极大简化了向量数据库的写入、检索与查询流程。</p>
+<p>此外，我们还有一个名为“库内嵌入”（In-Database Embeddings）的特性。大家以前听说过库内嵌入吗？听过？太好了。库内嵌入对于企业级客户来说极为便利，因为它将 Embedding 模型直接内置在数据库引擎内部，这样一来，当你在进行向量化处理时……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: So what I want to do is to give you kind of the best of each of the of the implementations, right? You can get the benefits of files and the benefits of databases in the same place. And we'll see why. But these are some of the advantages, right? You have acid consistency. So atomic operations, consistent operations, isolated and durable. You have high availability. You might replicate the database and let it be, you know, in three different places in the world with a replication factor. You also have vector search, which is very easy. In files, you just have to do like regular expression matching or a derivative of that. and you know lots of other lots of other things.</p>
+<p>So what we will do on the on the actual workshop is we're going to run an actual example of trying to modify a file with three different agents that will be working on the same file and trying to update a counter on this file and let's see who's faster. I know the answer of course but you will you'll get to know it later.</p>
+<p>But what I want to introduce to you is that we have a thing called the Oracle DBFS or the database file system where you can store files inside the database on a file system and that gives you you know lots of the advantages that we said. You will get files with acid trans uh transactional consistency. You will get vector search relations security high availability etc. Right?</p>
+<p>And my suggestion is that since a hybrid system works best um we can have things like for instance uh short-term memory right that lives in files and when something needs to be promoted into a long-term memory for instance user preferences things like this they can go into a more structured space like a database and this is what we'll do in the workshop for the encoding the search and the retrieval which was another of the components in the agent harness.</p>
+<p>We also have a lang chain integration that I want to mention called langchain Oracle DB that makes it very easy to insert into vector stores, search in the vector stores and retrieve from the vector stores. So also we have another thing called in database embeddings. Have you ever heard about in database embeddings? Yes. Okay. So in database embeddings is very convenient especially for enterprise customers because you will get the embedding model inside the database so that when you're</p>
+</details>
+<!-- chunk 3/6 -->
+<h3>RAG 架构与向量检索工作流</h3>
+<p><strong>Oracle 讲师</strong>：在本地进行向量嵌入（Embeddings）处理时，你完全无需调用任何第三方外部服务，这在满足数据隔离、数据留存规范以及严格的数据安全合规要求方面带来了极大的便利。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Oracle Presenter</strong>: Doing embeddings, you don't have to call a third-party service, and that's very convenient for isolate, like data retention and data security purposes.</p>
+</details>
+<p><strong>Oracle 讲师</strong>：那么，从一个典型的聊天机器人（Chatbot）交互界面的视角来看，一个标准的向量检索与重排序（Embedding Searching and Reranking）模型架构具体是如何运作的呢？首先，系统会输入大量的原始文档资料，随后利用双塔编码器（Bi-encoder，本质上就是一个专用的文本嵌入模型）对这些文档进行切片分块（Chunking &amp; Splitting），将它们转化为稠密向量并统一存入向量数据库（Vector Store）中。当终端用户提交一段提示词（User Prompt）、查询请求或具体问题时，系统同样会通过嵌入模型为该提问生成对应的向量表征，然后将其与向量数据库中预存的文档向量进行相似度计算和匹配对比，从而精准检索出与用户问题最为相关的候选向量集与对应内容。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Oracle Presenter</strong>: So this is what an embedding searching and reranking model would look like from a chatbot interface, for instance. Right, you have a lot of documents, then you kind of use a bi-encoder—so a bi-encoder is essentially an embedding model. You will create embeddings out of these documents, you will split them and create vectors, put it into a vector store, right? And then you will get a user prompt, a user query, a question; you can also create an embedding out of that and then compare it to what you had previously on your vector store. And this is how you get the most relevant vectors in an answer.</p>
+</details>
+<p><strong>Oracle 讲师</strong>：在完成初步的向量检索后，系统会进一步引入交叉编码器（Cross-encoder，即重排序器 Reranker），将原始用户问题与检索召回的候选文档块联合输入进行深度语义相关性打分与重新排序，最终将最优质的上下文注入提示词来生成精准回答。这就是当下典型的检索增强生成（RAG）应用程序在底层处理和解答用户提问的标准工作机制。我们在本次研讨会（Workshop）中也会对这些基础链路进行简要探讨与实践。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Oracle Presenter</strong>: Then you will run a cross-encoder, which is a reranker, and take a look at the question plus the result, and that's how questions are answered kind of in RAG applications. Right? So these things we are also going to touch briefly on the workshop.</p>
+</details>
+<h3>数据碎片化痛点与多模态数据治理</h3>
+<p><strong>Oracle 讲师</strong>：请大家想象一下构建一个完整 RAG 应用的全生命周期流程：从最源头的海量多格式文档开始，你需要执行大量复杂的前置数据工程操作，包括分词（Tokenization）、向量嵌入生成、数据去重（Deduplication）、文本标准化（Data Normalization），以及过滤和脱敏个人身份信息（Redacting Personally Identifiable Information / PII）等众多繁琐任务。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Oracle Presenter</strong>: And the things that, you know, imagine this RAG application from the beginning: from the documents you create, you do lots of things, right? You do tokenization, then you create the embeddings, um, you have to do things like deduplicating the data, normalization, uh, like redacting personally identifiable information, lots of things, right?</p>
+</details>
+<p><strong>Oracle 讲师</strong>：当这些处理好的数据落盘进入底层存储系统时，你会发现系统中充斥着多种异构的数据模态：既有从原始文档中提取的纯文本数据，又有通常采用 JSON 格式存储的丰富元数据（Metadata），还有表现为 32 位稠密向量嵌入（Dense Embeddings）的向量数据。由于需要处理的数据类型如此繁杂，当前业界很多开发团队的普遍做法——虽然我这里不便具体点名以免引起争议——往往是针对每一种特定的数据类型分别部署和维护一套独立的专用数据库系统。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Oracle Presenter</strong>: And then on your store you have textual data from the documents, you have metadata which is typically stored in JSON, you have vectors which are represented as dense embeddings of 32 bits... Like you have so many types of data that you need to work on that typically what people have is, for instance, I don't know, I will not name names so I don't get in trouble, but you know, you might need like different databases for each one of these, right? You get what I mean?</p>
+</details>
+<p><strong>Oracle 讲师</strong>：这种为不同数据类型割裂部署多个数据库的做法，导致当今的 AI 工程师乃至智能体（Agent）系统承担了极其沉重的数据跨库同步逻辑开销（Data Synchronization Logic Overhead）。不同系统之间的数据一致性维护、故障恢复和状态同步需要耗费巨额的日常运维成本与大量工程精力，而这正是我们在架构设计中极力希望规避的痛点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Oracle Presenter</strong>: So there is a very high, nowadays very high data synchronization logic overhead for AI engineers or even for agents, right? So lots of maintenance required and lots of engineering effort on it. And this is something that we want to avoid.</p>
+</details>
+<h3>Oracle 融合数据库的一体化架构优势</h3>
+<p><strong>Oracle 讲师</strong>：因此，我今天希望大家能够亲自尝试一下我们 Oracle 提供的技术方案，体验我们的数据库产品。Oracle 原生支持你能想象到的几乎所有数据类型，被称作融合数据库（Converged Database）。作为目前市场上唯一真正的多模态融合数据库，我们不仅全面支持标准的 JSON 文档与传统关系型数据，还原生支持空间地理数据（Spatial）、图数据（Graph）以及高性能向量数据（Vector Embeddings）等一切业务所需的数据形态。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Oracle Presenter</strong>: So what I want you to do today is just to try us out as Oracle. Try our database. We have support for every type of data imaginable that you can think of. Um, we are called the converged database. We are the only converged database in the market that we support JSON, we support relational, we support uh spatial, graph, JSON, anything that you can think of you'll be able to create with us.</p>
+</details>
+<p><strong>Oracle 讲师</strong>：借助 Oracle 融合数据库，你可以在单一数据库引擎、单一统一查询接口以及一整套协同的开发技术栈之上完成所有业务构建，所有数据均集中存储在同一个高可靠的数据库实例中。在数据安全治理层面，这意味着你只需要在单一存储中枢上集中配置安全防护与备份策略，需要防范的安全攻击面（Attack Vector）被收敛至唯一的系统入口，再也不必为跨五套不同数据库分别打补丁、升级版本和做权限审计而疲于奔命。Oracle 数据库完全有能力成为你整套 AI 应用程序的核心动力引擎，而绝不仅仅是承载单一数据处理环节的普通中间件。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Oracle Presenter</strong>: And you'll get like one database engine, one query interface, and uh one single development stack. Everything will be in the same database. So also for data security purposes, you just have to, you know, secure and save all your data in one place. So a single attack vector is what you need to worry about. You don't need to worry about updating five different databases. You can just worry on securing one database. So we can be the engine of your AI applications, not just a single step, which is what people think of when they're working with databases, right? Um, yeah.</p>
+</details>
+<h3>Agent 记忆机制与多层级记忆体系</h3>
+<p><strong>Oracle 讲师</strong>：接下来我们深入探讨智能体记忆（Agent Memory）。所谓 Agent 记忆，本质上是指一系列允许智能体保留（Retain）、复用（Reuse）、提炼（Refine）以及回忆与检索（Recall）信息的完整底层机制与系统架构集合。在整个智能体演进过程中，我们希望系统不仅能够复用已有的数据，更能在复用过程中对其不断沉淀与提炼。这样一来，当智能体或者我们作为研发工程师在后续遇到之前曾耗费 3 小时才攻克的复杂难题时，无论对于 AI Agent 还是人类工程师而言，再次解决该问题的门槛与耗时都将大幅降低。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Oracle Presenter</strong>: So agent memory. Agent memory is essentially a description of all the mechanisms and the systems that allow an agent to retain, reuse, refine and recall information. We want to reuse the data and refine it in the process. But we want to reuse the data. So that the next time that an agent or us as engineers we are working on a problem that took us three hours, the next time that we observe this problem, the problem becomes easier either for AI agents or for us.</p>
+</details>
+<p><strong>Oracle 讲师</strong>：一套完备的 Agent 记忆系统包含多个核心组成构件：我们有短期记忆（Short-term Memory）、长期记忆（Long-term Memory），以及相对较新提出的共享记忆（Shared Memory）。所谓共享记忆，主要应用于多智能体协同场景，例如子智能体（Sub-agent）与父智能体之间的跨层级通信同步，或者两个对等智能体为了协同解决某一特定复杂问题而开展的上下文共享。大家需要认识到，根据我们要存储的信息类型与记忆生命周期特征，它们应当被合理路由并持久化在不同的系统层级中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Oracle Presenter</strong>: And agent memory has lots of lots of components, right? We have short-term memory, we have long-term memory, and then we have shared memory, which is something that's relatively new. Um and this shared memory is kind of what happens when a sub-agent is communicating with its parent, for instance, or two agents are trying to collaborate on solving one specific problem together. And then what I want you to see is that depending on the type of memory or the type of thing that we want to store, it will be in one place or the other, right?</p>
+</details>
+<p><strong>Oracle 讲师</strong>：其中，短期记忆通常具有高度的临时性与易失性（Ephemeral），其生命周期极其短暂，非常适用于管理当前正在即时发生的操作上下文。以代码辅助智能体（Coding Agent）为例，它当前维护的任务待办清单（To-do List）属于典型的短期记忆，仅在当前编码任务中实时流转，你并不会希望把这些中间状态永久保存到长期记忆库中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Oracle Presenter</strong>: So short-term memory is kind of ephemeral, is very short-lived, and it's very useful for things that are happening right now. For instance, the to-do list on a coding agent, right? It's happening right now, but you actually don't want to save that, you know, in long term.</p>
+</details>
+<p><strong>Oracle 讲师</strong>：但与此同时，系统中还存在着诸如情景记忆（Episodic Memory）这样的长效信息资产，它记录了过往发生的历史交互轨迹与会话经验。这对于系统能力的持续进阶极具价值。例如，现场使用 Claude 的朋友可能了解，在 Claude 这类先进工作流中，我们可以借助过往的历史交互对话，持续提炼、优化并沉淀系统的工作流程（Workflows）与专业技能（Skills）。这类随着时间推移不断增值的宝贵资产，理应被纳入长期记忆系统中妥善留存。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Oracle Presenter</strong>: But then there are things like, for instance, episodic memory, previous conversations that you've had, that's very useful to have. For instance, um, I don't know if you use Claude—some people are using Claude here—but in Claude you might take your previous conversations and try to refine all your workflows and your skills based on the things that you've done in the past. So this is something that makes sense to save in the long run, right?</p>
+</details>
+<p><strong>Oracle 讲师</strong>：此外，我们还拥有程序性记忆（Procedural Memory），专门用于沉淀并固化已被实践验证行之有效的成功工作流模式。举例来说，假设你此前在某个前端开发任务中构建出了一套非常优美精致且令人满意的界面设计，你完全可以将该次完整的交互与生成过程提炼并固化为一个标准化的、具备高复用性与可重复执行性的规范工作流。这样，当下一次再面临类似的前端界面开发需求时，智能体便能稳定复现出同样高质量的产出。这些核心内容都是我们将在今天的实战研讨会中带领大家深入体验的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Oracle Presenter</strong>: You also have things like procedural memory, previous workflows that have worked very well for your system. For instance, you worked on this front end and then you created a very beautiful design that you like. You might take the whole conversation and turn that into a workflow that is repeatable and reusable so that the next time you're working on a front end, the results will be similar to the previous one. Right? So these are the things that we will see on the workshop.</p>
+</details>
+<h3>上下文腐化（Context Rot）与注意力机制边界</h3>
+<p><strong>Oracle 讲师</strong>：部分对 Agent 记忆架构持怀疑甚至抵触态度的人可能会质疑：“既然我们可以直接把上下文窗口（Context Window）无限做大，为什么还需要费心设计这套复杂的记忆系统呢？干脆直接塞一个 1500 万 Token 的超大上下文窗口不就行了吗？”尽管在目前的技术条件下这种规模的单次推理上下文窗口还无法真正实现，但确实有一些人盲目坚信无脑扩大上下文窗口就是终极解法。然而，大家必须认清一个事实：上下文窗口在本质上仅仅是短期记忆的一种物理实现形态，它在特定即时交互场景下确实有用，但绝非能解决所有记忆难题的万能钥匙。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Oracle Presenter</strong>: And some people say, okay, why do I even need all of these? Like people that have animosity towards agent memory, people say, &quot;Okay, let's just put like 15 million context window,&quot; even though it's not possible yet, but some people really believe that this is the thing, right? But the context window is a type of short-term memory, so it's useful for some things, but not for all of them.</p>
+</details>
+<p><strong>Oracle 讲师</strong>：单纯依赖超长上下文窗口会引发一个极其严峻的工程与算法缺陷，即所谓的“上下文腐化”（Context Rot），或者叫上下文随时间与长度的质量退化（Context Degradation）。其核心机理在于：随着你向上下文窗口中塞入的内容越来越多，神经网络自注意力机制（Self-Attention）分配给上下文中每一个具体信息片段的有效注意力权重就会被急剧稀释。在对话刚刚开始时——这也是上下文窗口机制中非常经典的一个现象——模型往往能够极好地保持在主题轨道上，因为交互才刚刚启动，上下文极其干净。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Oracle Presenter</strong>: And one of the problems that happen with working with a context is this thing called context rot or context degradation over time. And what happens is that the more things that you put into the context window, the less attention there will be for each one of the things that are in the context. So at the beginning of a conversation—and this is a famous problem that the context window has—at the beginning of the conversation it will stay on track a lot because you just started the conversation.</p>
+</details>
+<p><strong>Oracle 讲师</strong>：这就好比在学校课堂上，或者我和你面对面交谈的场景：如果我和你只聊 30 分钟，你的专注度和注意力会非常高度集中，因为谈话刚刚展开；但如果这场对话被迫连续持续整整 8 个小时，我一刻不停地讲了 8 个小时，那你恐怕都要忍不住想揍我了，对吧？因为在如此漫长而轰炸式的信息灌输下，你在最后阶段实际上几乎无法有效吸收和记住任何有价值的东西。人类的大脑注意力资源是极其有限的，大语言模型背后的神经网络注意力机制同样如此。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Oracle Presenter</strong>: So let's say that for instance like in school, right? Or if I'm having a conversation with you, I might have a chat with you for 30 minutes and your attention to me is very, very high because I just started speaking. But if the conversation goes on for 8 hours, then you want to punch me, right? Because I haven't shut up and you haven't learned almost anything at the end. And the problem is that attention, like us humans, is very limited.</p>
+</details>
+<p><strong>Oracle 讲师</strong>：因此，当你塞进上下文窗口的 Token 数量持续攀升时，神经网络的注意力矩阵（Attention Matrix）计算质量就会显著退化。更致命的是，注意力矩阵的计算开销与关联复杂度是以二次方（$O(N^2)$）的规模急剧膨胀的。因为注意力矩阵的本质是让上下文窗口中的每一个 Token 与其余所有 Token 两两建立互相关联与参照关系，随着上下文窗口的线性扩大，矩阵的行数与列数同时呈几何级数激增，从而带来巨大的计算瓶颈与干扰噪音。这就是为什么在架构设计中，我们必须竭力将上下文窗口保持在精简、紧凑的规模，以此彻底根除上下文腐化难题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Oracle Presenter</strong>: So the more things that you put in the context window, the attention matrix of the neural network will also degrade, and it will like scale quadratically because the attention matrix, you know, is one token—it's essentially a reference of one token for every other token in the context window. So the bigger the context window is, the matrix scales on the number of rows and on the number of columns as well, which is a problem. So you want to keep the context window as small as possible to avoid context rot.</p>
+</details>
+<h3>记忆工程与 Oracle Agent Memory Package (OAMP)</h3>
+<p><strong>Oracle 讲师</strong>：这就引出了记忆工程（Memory Engineering）的核心概念与组成部分。所谓记忆工程，是一门涵盖为 AI 智能体设计、构建并全方位落地智能体记忆系统的完整工程学科。它的终极目标是建立起科学的机制，以便在不同层级和生命周期中高效地留存（Retain）、召回（Recall）、复用（Reuse）和持续提炼（Refine）这些宝贵的数据资产。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Oracle Presenter</strong>: And memory engineering, the components of memory engineering... So it's like designing, building, and doing everything around building agent memory for AI agents, and we want to retain, recall, reuse, and refine this data in some type in some way. So it is a discipline, right?</p>
+</details>
+<p><strong>Oracle 讲师</strong>：今天现场也非常荣幸有众多 Oracle 团队的专家在座，比如坐在台下的 Valentine，以及散布在会场各处的多位 Oracle 同事。大家如果遇到他们可以随时热情打个招呼。坐在那里的 Valentine 正是负责开发我们这款 Agent 记忆核心开发包（Agent Memory Package）的核心主力工程师，大家在后续实践中如果有关于底层实现的任何技术细节问题，都可以随时向他请教探讨。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Oracle Presenter</strong>: And here we have Valentine, for instance, and we have people from Oracle, uh, my colleagues all over the room. So if you see them, you can say hi to them. Valentine here, he's working on the development—or he worked on the development—of this agent memory package. So if you have any questions about this, you can ask him.</p>
+</details>
+<p><strong>Oracle 讲师</strong>：OAMP（即 Oracle Agent Memory Package）正是 Oracle 针对开发者在处理此类复杂 Agent 记忆数据时所面临的众多棘手挑战，所倾力打造的一站式全托管解决方案（Managed Solution）。作为一名应用研发工程师，如果你缺乏这样一套成熟的托管框架支持，你就必须在业务代码中自行承担大量的底层决策与架构博弈：你必须自行决断究竟在何种时机触发上下文压缩（Context Compaction）？何时执行历史摘要归纳（Summarization）？如何编写和微调摘要生成器？哪些关键信息必须长期留存，哪些临时噪音应当果断丢弃？以及如何从过往历史交互中精准抽取有价值的模式与知识？而 OAMP 的使命正是将工程师从这些繁重繁琐的底层记忆治理泥潭中彻底解放出来。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Oracle Presenter</strong>: Um, OAMP, or Oracle Agent Memory Package, is the managed answer that we have in Oracle to lots of the problems that you will find when working with this type of data. For instance, as an engineer, if you do not have a managed solution, you need to make a lot of decisions. You need to see: when do I do context compaction? When do I summarize? How do I write it, the summarizer? What do I keep, what do I not keep? Um, what do I extract from my previous...</p>
+</details>
+<!-- chunk 4/6 -->
+<h3>上下文卡片与 OAMP 架构</h3>
+<p><strong>主讲人</strong>：在面对各种对话场景时，我们常常需要考虑：应该在什么时候注入上下文？针对当前的问题，我究竟该使用多少 Token 配额？诸如此类的工程细节往往非常繁琐。而借助 OAMP（Oracle Agent Memory Package，Oracle 智能体记忆包），你实际上只需要一行代码就能搞定这一切。我们希望通过这种方式简化开发流程，从而有效减轻 AI 工程师以及 AI 智能体本身的认知负担。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: ...conversations and when, how many tokens do I use for this problem and lots of these things, right? With OAMP, an Oracle agent memory package, you can actually just do all of this in one single line of code. And we want to make it easier so that we reduce the cognitive load of AI engineers and AI agents as well.</p>
+</details>
+<p><strong>主讲人</strong>：借助这种上下文卡片（Context Card）机制，你将获得类似于左侧所示的结构。这里对卡片中每个组成部分的作用进行了说明。从根本上说，对于任何对话或线程（Thread），你都可以生成一张对应的上下文卡片。</p>
+<p>其中，“主题（Topics）”部分用于对模型进行方向引导与定位；“摘要（Summary）”部分则对整个对话线程进行浓缩压缩，并明确阐明当前 AI 智能体的意图；而“相关信息（Relevant Information）”则包含三个不同的细分板块——与本次对话相关的事实（Facts）、偏好（Preferences）以及关联记忆（Memories）。</p>
+<p>在此之上，你还拥有情景记忆（Episodic Memories），它能专门且显式地跟踪当前正在进行、尚未得到解答的问题；最后的“近期消息（Recent Messages）”则为模型提供局部的即时上下文。因此，无论何时，只要你对当前拥有的数据或对话感到困惑、不确定下一步该怎么做时，就可以在 Python 中调用 Oracle Agent Memory Package，它通过单次函数调用即可完成所有这些内容的自动组装。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: And with this context card thing, you will get something like what you see on the left. And this is kind of an explanation of what each part does on it. But essentially, the topics that you see, for instance, from any conversation, you can create a context card from the thread or from the conversation. The topics will orient the model. The summary will compact the thread and it will state the current intent of an AI agent, and the relevant information has three different parts, which is the facts, the preferences, and the memories that are associated to this conversation. Then you have the episodic memories that explicitly track the unanswered question that is going on right now, and the recent messages give like local context to the model. So whenever you're feeling like unsure what do I need to do right now with the data that I have or this conversation, you might use the Oracle agent memory package on Python, and it is all assembled by one single call.</p>
+</details>
+<h3>智能体线束与模型抽象层</h3>
+<p><strong>提问者</strong>：是的。所以你的意思并不是说把这整个结构直接一股脑塞进模型里，它实际上是由外围的线束系统（Harness）来使用的，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member</strong>: Yes. So you're not suggesting that this goes directly into the model. This is actually something that is used by the harness.</p>
+</details>
+<p><strong>主讲人</strong>：完全正确。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: Exactly.</p>
+</details>
+<p><strong>提问者</strong>：那最终实际输入给模型的又是什么呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member</strong>: What's going into the model?</p>
+</details>
+<p><strong>主讲人</strong>：是的，没错。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: Yes. Yes.</p>
+</details>
+<p><strong>提问者</strong>：也就是说，负责使用它的上层组件本身是清楚这个结构的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member</strong>: The component that you're talking about that uses it knows about the structure.</p>
+</details>
+<p><strong>主讲人</strong>：正是如此，完全正确。所以这种结构……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: Exactly. Exactly. So this structure...</p>
+</details>
+<p><strong>提问者</strong>：……这是我们在大模型之上构建的一层抽象，因为在绝大多数情况下，我们是无法直接控制模型内部机制的，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience Member</strong>: ...this is an abstraction that we build on top of the model because the model we have no control over in most cases, right?</p>
+</details>
+<p><strong>主讲人</strong>：对。关键在于，我们可以在底层模型之上构建我们所需的任何抽象层，从而尽可能使模型表现得更加可靠、稳定。</p>
+<p>记忆系统与语义层（Semantic Layer）实际上是协同工作的。我知道之前我们主要讨论了记忆组件部分，由于时间有限，接下来我将快速带大家浏览一下语义层及其核心组件。</p>
+<p>语义层本质上代表了系统背后的实际含义，也就是你在潜意识中假定正在发生的事情。现场有来自德国的朋友吗？好的，请原谅我的德语发音，但我会尽力念准确。</p>
+<p>这里有一个概念叫做“环界（Umwelt）”，即模型的周边环境认知体系。这个术语最初由雅各布·冯·岳克斯库尔（Jakob von Uexküll）提出。他指出，世界上所有的生命有机体都是通过特定的“透镜”来感知现实的，而这个透镜正是该生物所能够接触和访问到的一切。</p>
+<p>以我们人类为例，我们拥有双眼和各种感官知觉，因此我们所感知到的每一件事物、所经历的每一种体验，全部都是经由这副生理感官透镜投射而来的。智能体虽然不具备人类的肉体感官，但它同样拥有一种语义层，或者说一个语义透镜，你向它提出的所有问题都会经过这个透镜的过滤。</p>
+<p>这副透镜在根本上取决于你用什么数据对它进行训练，以及你在当下为它提供了什么上下文。因此，每当你与智能体交谈时，该智能体都会通过它的环界（Umwelt）来审视这一切，而这个语义层本质上就构成了智能体的专属环界。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: Exactly. Exactly. So this structure... this is an abstraction that we build on top of the model because the model we have no control over in most cases, right? The thing is that we can build on top of that whatever abstractions we want to make the model perform as reliably as possible. Yep.</p>
+<p>So the memory and the semantic layer, they kind of work together. I know we talked only about memory components. I'm going to walk you quickly because I don't have a lot of time to the semantic layer, to the semantic components of it, right? And the semantic layer is the meaning of what's going on behind it that you kind of assume that that happens, right?</p>
+<p>So anyone from Germany? Okay. So I apologize for my pronunciation, but I'm going to try. So the [Umwelt] is like the ambient of a model, and this was coined by Jakob von Uexküll. And this guy said that essentially every organism in the world that is living perceives its reality through a lens, and the lens is what it has access to. For us humans, for instance, we have our eyes, our senses, right? So everything that we perceive and everything that we live, all our experiences are seen through this lens, right?</p>
+<p>And an agent doesn't have human-like senses, but it has also a kind of semantic layer or a semantic lens that everything that you ask it is filtered through. And this lens is essentially what you train it with, and then what you also give context to. So everything that you talk to the agent, right, when you talk to the agent, this agent will look it through the Umwelt, and the semantic layer is essentially the agent's Umwelt.</p>
+</details>
+<h3>语义层与企业隐性知识</h3>
+<p><strong>主讲人</strong>：我们重点要聚焦的是组织知识（Organizational Knowledge）或企业知识（Enterprise Knowledge）。举个例子，当你和日常同事一起工作时，很多事情根本无需反复提及，因为这些背景知识在你们之间早已心照不宣、达成共识，你不需要每天把自己所经手的每一处细节都事无巨细地重新讲一遍。</p>
+<p>但如果换成一个新人——比如一个刚入门的实习生或新手想要开始与你协作——你就必须极其详细地向他说明每一个细节。这些背景与常识就是所有的答案，而这也正是语义层所捕获的内容。</p>
+<p>换句话说，语义层沉淀的是一家企业内部真正的“部落隐性知识（Tribal Knowledge）”以及制度化知识（Institutional Knowledge），例如底层数据是如何建模的、查询是如何具体执行的、各项元数据（Metadata）定义是什么等等。所有这些内容都属于语义层的范畴。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: So what I want to focus on, like for instance organizational knowledge or enterprise knowledge, things that when you're working with a colleague you don't mention this because this is already, you know, known between you and your colleague, you don't need to specify everything that you work on every day. If there was someone else, like a child that wanted to start working with you, you would have to specify everything very, very in detail. These are all the answers, and this is what the semantic layer captures. So the answer is the actual tribal knowledge that an enterprise has, institutional knowledge as well, like how the data is modeled, how the queries are executed, what is the metadata—all these things are in the semantic layer.</p>
+</details>
+<h3>极简智能体循环与上下文工程</h3>
+<p><strong>主讲人</strong>：接下来快速说明一下，我们还将实现一个非常极简的智能体循环（Agent Loop）。智能体循环就像是驱动底层模型运转的引擎，它赋予了模型某种程度的独立性与自主性，也正是这一循环机制将一个静态的大语言模型真正蜕变成为一个具备能动性的智能体。</p>
+<p>你能找到的最简单的智能体循环，就是由“观察（Observing）”、“推理（Reasoning）”以及“行动（Acting）”三个环节构成的高频闭环。这个循环无时无刻不在持续运转，而且必须具备强大的容错与故障恢复能力（Failure-resistant），确保系统永远不会意外跳出循环。这就是赋予模型自主权、使其成为智能体的核心思想。</p>
+<p>在智能体线束的七层架构中，最后一个关键部分是上下文工程（Context Engineering）。在这一层中，你可以施展非常多的工程策略。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: And quickly just for you to know that we're also going to implement a very minimalistic agent loop. And an agent loop is like the driver of the model, right? It lets a model be kind of independent and autonomous, and it is what makes a model—it turns a model into an agent, right? And this is like the simplest agent loop that you can find, is kind of this observing and reasoning and then acting part that happens all of the time, all of the time. And you know, it has to be failure-resistant so that we never exit the loop. This is the idea that you give autonomy to the model so that it becomes the agent.</p>
+<p>And then on the context engineering part, which is the last part of the seven layers of an agent harness, you also have lots of things that you can do.</p>
+</details>
+<p><strong>主讲人</strong>：例如，我们在本次工作坊中也会涉及的“工具箱模式（Toolbox Pattern）”和“技能箱模式（Skillbox Pattern）”。这些模式提供了一套科学的方法来存储模型可调用的工具与技能，从而实现最优检索。</p>
+<p>你的核心目标是：仅在真正需要使用某些工具或技能时才动态检索它们，并且仅在必要时刻才将它们注入到上下文窗口中。在智能体循环的每一次迭代中，系统都会动态评估当前位置是否合适；如果不需要，就可以临时将它们移出上下文。</p>
+<p>抱歉，我刚才好像看到有人提问……我们稍后在动手工作坊中会亲自动手实践这一切，这里我就不过多展开占用时间了。核心思路就是在智能体循环的每一次迭代中，按需动态组装当前上下文。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: For instance, the toolbox pattern and the skillbox pattern, which is on the workshop as well. And these are ways in which you can store the available tools and the available skills of a model so that they are retrieved optimally. And what you want to do is only retrieve the tools and the skills when they are actually needed and put it on the context window only when needed. Every iteration of an agent loop you will see if this is actually the right place, and then if it's not you can just take them out temporarily.</p>
+<p>Oh, sorry, I thought I saw a question. So we will see all of this in the workshop, I don't want to take up too much time, but the idea is that we will assemble the context at every iteration on the agent loop.</p>
+</details>
+<h3>持续学习与技能晋升</h3>
+<p><strong>主讲人</strong>：接下来是“持续学习（Continual Learning）”部分，正如我们之前讨论过的，它是指智能体随着时间推移、根据历史交互与执行结果不断自我优化的能力。</p>
+<p>正如我们所看到的，一个冻结权重（Frozen）的静态模型本身是无法自我提升的。但是，我们有多种方法可以让智能体实现持续进化：一种是基于权重的更新（即我们将在表征部分探讨的 Embedding 嵌入向量优化和 Reranking 重排序机制），另一种则是基于上下文窗口与 Token 空间的优化。</p>
+<p>这三者构成了持续学习的三种主要技术路径。在本次工作坊中，我们将重点关注上下文和 Token 空间层面的持续学习，因为它是实现门槛最低、也是成本最低廉的方案之一。我想在座的大多数人（包括我们团队在内）都不是亿万富翁，无法承担极其昂贵的持续微调成本，因此利用上下文工程是随着时间推移改变模型行为最可行、也最现实的路径。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: And then continual learning is the part that we talked before about the ability to get better over time with the things that we've done with a model, right? So a frozen model, as we saw, it doesn't get better, right? But there are ways in which we can make an agent improve: in the weights, which is the parts that we are going to work on in the representation part, so on the embedding and the reranking part; and also in the context window. And these are the three types of continual learning techniques.</p>
+<p>We are going to focus on the workshop on the context and the token space because it's one of the easiest ones and one of the least expensive ones as well. I assume no one is a millionaire, or not many of us are millionaires. So this is also the most achievable and the most realistic way to change the model behavior over time.</p>
+</details>
+<p><strong>主讲人</strong>：话不多说，我想向大家正式介绍“技能晋升（Skill Promotion）”和“工作流晋升（Workflow Promotion）”。</p>
+<p>假设有些技能或工作流你已经连续摸索调试了三四个小时，甚至为某个业务流程忙碌整整一天，最终成功完成了任务目标。这些宝贵的执行轨迹和策略实际上都可以被完整检索出来，并存入我们稍后会介绍的记忆组件中。</p>
+<p>随后我们就可以进行技能晋升操作。举个例子，当我们对某项技能进行晋升时，可以通过模型蒸馏与精炼流程（Distillation Process），生成一份比原始版本更优质、更健全的 <code>skill.md</code> 规范文档。接着我们淘汰并下线旧版本，直接升级到新版本。</p>
+<p>这种机制使我们能够针对自己的专属技能库实施持续学习，将通用技能深度定制为高度契合个人工作风格、语气偏好以及习惯规范的专属技能。比如指定：“在此类任务中请使用这个特定库，因为我很喜欢它的交互与界面设计”；或者“在数据库选型上使用这个特定的数据库引擎，因为它的 Bug 更少，或者在我实际使用中发现它更好维护”。所有这些个人经验与团队实践，都可以随着时间推移被提炼、晋升为可复用、可持续迭代进化的技能资产。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: So without further ado, I just want to introduce you to this part, which is skill promotion and workflow promotion. So those skills or those workflows that you've done for three, four hours, right, you've been working for the whole day on a workflow, you were able to successfully do your job. And then these things can actually be retrieved, they can be stored into the memory components that we'll see. And then we will see about skill promotion.</p>
+<p>So if we promote a skill, for instance, we can promote it through a distillation process and create a better skill.md than the original. So we will retire the old version and update from the new version. And this allows us to do some kind of continual learning on our own skills that turn them into more customized skills for ourselves, for our tone, our way to work, our preferred preferences. Like for instance, &quot;let's use this specific library because I really like the look and feel of it,&quot; &quot;let's use this specific database engine because it has less bugs or I found it easier to work with.&quot; All these things can be promoted into reusable and improvable skills over time.</p>
+</details>
+<h3>工作坊实践准备</h3>
+<p><strong>主讲人</strong>：在本次工作坊结束时，我们最终构建出的完整智能体线束系统就是这个样子的。希望大家在今天结束时，能够对构成一个生产级智能体线束的所有核心组件建立起更加清晰、深刻的理解。</p>
+<p>在我忘记之前，先说明一下：如果你对 Oracle Agent Memory Package 感兴趣，或者目前正参与智能体记忆组件的相关开发，我们建有一个官方 Discord 社区服务器，大家可以在里面直接与我们交流、探讨技术细节。如果你是 Discord 用户，欢迎随时加入我们的社区。稍后我也会把邀请链接发出来。</p>
+<p>闲话少叙，让我们正式开始进入本次工作坊的实操动手环节，我来一步步带大家具体操作。请看我的屏幕演示……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: So this is what the whole harness would look like at the end of the workshop, and hopefully what you leave today with a better understanding of all the specific components that make up an agent harness.</p>
+<p>So let me go to here before I forget. If you are interested in the Oracle agent memory package or are working on the agent memory package, we have a Discord server in which you can just chat with us as stuff. If you're a Discord user, just feel free to join this Discord server. I'll put the link later as well.</p>
+<p>But without further ado, let's begin with the actual workshop and I will tell you how. So let me show...</p>
+</details>
+<!-- chunk 5/6 -->
+<h3>工作坊环境准备与 GitHub Codespaces 配置</h3>
+<p><strong>主讲人</strong>：首先，我们先来看一下接下来要构建的内容，对吧？这是一个应用手册（App Book）。哦，抱歉，大家现在可能还看不到我的屏幕。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: First, what we are going to build, right? This is an app book. Oh, sorry, you don't see this.</p>
+</details>
+<p><strong>工作人员 / 参会者</strong>：看到了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Staff / Attendee</strong>: Yeah.</p>
+</details>
+<p><strong>主讲人</strong>：首先是工作坊的操作指南，对吧？对于之前没到场的朋友，大家可以直接访问这个网站，使用你的 GitHub 账号进行注册。随后你会收到一份邀请，加入一个对应的 GitHub 仓库。从那里，我们将创建一个 GitHub Codespace 实例。请大家现在务必完成这个步骤。我的同事们都在现场周围，如果在创建 Codespace 过程中遇到任何问题，他们随时可以为大家解答。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: First, yes, the workshop instructions, right? So, for those of you who weren't here, you can just go into this website, register with your GitHub user, and then you will get an invitation like this to a GitHub repo, and from here we will create a GitHub Codespace. So please make sure to do that right now, and all my colleagues are around the room to answer any questions that you might have during the creation of the Codespace, etc.</p>
+</details>
+<hr>
+<h3>现场网络与幻灯片获取问题协调</h3>
+<p><strong>参会者 / 工作人员</strong>：关于网络，大家是连接网络遇到了问题吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Attendee / Staff</strong>: The internet. Are you having issues with the internet?</p>
+</details>
+<p><strong>主讲人</strong>：好的，我们来看一下。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: Okay. Let's see.</p>
+</details>
+<p><strong>现场工作人员 / 参会者</strong>：大家连的是同一个 Wi-Fi 吗？嗯，就是 AI.gineer 的专用 Wi-Fi。好的，如果可以的话，有人能协助大家处理一下 Wi-Fi 连接吗？不管能否逐一帮到在场的每一个人，需要先把系统网络调试好。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Staff / Attendee</strong>: So, do you guys have the same Wi-Fi? Um, AI.gineer Wi-Fi. Okay. So, can someone assist people with the Wi-Fi if possible? Whether you can help each and every one of us, you need to fix the system.</p>
+</details>
+<p><strong>参会者</strong>：对，请负责的人帮忙修一下系统网络。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Attendee</strong>: Yeah, please fix the system. Whoever...</p>
+</details>
+<p><strong>参会者</strong>：快去修一下。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Attendee</strong>: do it.</p>
+</details>
+<p><strong>主讲人</strong>：我这边没办法直接调试。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: I can't, I can't.</p>
+</details>
+<p><strong>主讲人</strong>：好的，好的。我的同事们会过去帮大家查看排查一下。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: Yeah. Yeah. Uh, my colleagues will take a look at that if...</p>
+</details>
+<p><strong>参会者</strong>：好的，这种现场状况总是难免会发生。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Attendee</strong>: Right. Yeah. Yeah. It always happens, you know.</p>
+</details>
+<p><strong>主讲人</strong>：是的。好的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: Yep. All right.</p>
+</details>
+<p><strong>参会者</strong>：先生，能再说一遍吗？刚才展示的那些幻灯片，它们会被上传到……？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Attendee</strong>: Say again, sir. The slides that you were showing, are they...</p>
+</details>
+<p><strong>主讲人</strong>：是的，我相信这些幻灯片会被汇总发布到 AI Engineer 相关的平台上。如果你进入对应的 Session 页面，我会确保将资料上传到那里。如果没有的话，无论你是加入 Discord 社区还是通过其他渠道，也可以随时在 LinkedIn 上直接发私信给我，只要你需要，我非常乐意把演讲幻灯片分享给你。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: Yes, they will go into the AI, I believe they will go into the AI Engineer. So, if you go into the session, I'll make sure to go there. If not, if you either join the Discord or any other, you know, you can just message me as well on LinkedIn. I'll gladly give you the slides if you want.</p>
+</details>
+<hr>
+<h3>App Book 与 Agent Harness 组件可视化</h3>
+<p><strong>主讲人</strong>：好的。视频转播团队，能帮我把屏幕画面切出来吗？不好意思，请帮我切换一下信号源。好的，太棒了，非常感谢。</p>
+<p>我想向大家展示的是，除了我们接下来要逐行讲解的 Jupyter Notebook 之外，我们还构建了这样一个 App Book 应用。通过这个 App Book，大家实际上可以单独测试 Agent Harness（智能体运行底座）的每一个独立组件，对吧？</p>
+<p>这里先向大家演示这是完全可行的，并且当你部署好 GitHub Codespaces 之后，它也会自动在你的 Codespaces 环境中完成部署。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: All right. Um, video team, can you turn me on? Uh, sorry, switch me on, please. Uh, oh, perfect. Thank you. So, what I'd like to show you is that we have built also, apart from the notebook that we're going to go through, we also built this app book. And with the app book, you can actually test every of the individual components of an agent harness individually, right? So just for me to show you that this is possible, and you will get this automatically deployed in GitHub Codespaces as well.</p>
+</details>
+<p><strong>主讲人</strong>：所以大家的环境里也会预装好这个部署，你可能会问：“那我是如何真正发起请求的呢？”我们将要把请求发送给 Oracle（甲骨文）。噢，糟糕，出现未找到文件的情况了，经典演示翻车时刻。</p>
+<p>不过其核心原理是——好的，我知道是怎么回事了，因为长时间闲置没有操作，我和我的 Codespace 实例断开连接了。让我重新启动一下。</p>
+<p>这个 App Book 将允许大家创建、对话并与整个 Agent Harness 交互。我们所使用的模型实际上是部署在 Oracle 的一项托管服务上，称为 OCI 生成式 AI 服务（OCI Generative AI service）。目前我们与 Google、Meta、OpenAI 以及 xAI 都建立了合作关系。我们可以通过我们的托管服务器为他们的模型提供推理服务。因此，大家不妨把我们看作是面向企业级的 OpenRouter。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: So you will have this already deployed and you will say, &quot;Well, how am I actually making requests?&quot; We are going to be making requests to Oracle. Uh oh. Okay. Not file. Demo time. Um, the idea is that... Yeah. Okay. I know what's happening. So I lost connection to my Codespace because of inactivity. Let me restart.</p>
+<p>This app book is going to allow you to create and chat and interact with the whole agent harness. And the models that we're going to use are actually deployed on a managed service that we have on Oracle called OCI the Generative AI service. We have partnerships with Google, with Meta, and with OpenAI and with xAI for the time being. And we can actually provide inference to their models through our managed server. So think of us as the enterprise OpenRouter if you'd like.</p>
+</details>
+<hr>
+<h3>从零构建 7 层 Agent Harness：实战 Notebook 与 19 项任务</h3>
+<p><strong>主讲人</strong>：现在让我来带大家正式开始。大家可以着手启动了。这就是我们的仓库对吧，Agent Harness Workshop 仓库。如果你已经打开了这个页面——顺便感谢大家给这个项目点 Star——如果你在这个页面，只需要点击“Open in GitHub Codespaces”，它就会带你跳转到这里，你可以根据喜好选择核心配置。</p>
+<p>如果你想创建 8 核或者 16 核的配置，请先不要选那么高，因为这个费用是我自掏腰包支付的。虽然你也可以选择分配更多资源，但只要正常创建 Codespace 即可。正如我说的，费用由我来出，大家不用担心。这样就会为你初始化并创建一个全新的 Codespace 实例。</p>
+<p>一旦实例启动完成（目前它还在构建中），我会向大家展示如何使用 App Book 以及对应的 Notebook。我们接下来的目标是利用剩余的 1 小时 15 分钟时间，逐步完成这份 Notebook。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: So let me just go so you get started. You can get started. This is the repo, right? So the Agent Harness Workshop. If you're here—and thank you for starring that by the way—if you're here, you just have to click on &quot;Open in GitHub Codespaces&quot; and it will take you here, and you can select as many cores as you like.</p>
+<p>If you want to create this with 8 or 16, please don't, because I'm paying for this myself. But you might also create this with more resources, but just create the Codespace and I'm going to pay for it as I said, so don't worry about that. And this will create a new Codespace instance. And once it finishes—which it hasn't yet—I will show you what we can do with the app book and the notebook. But the idea is to use the remainder of the time that we have, 1 hour and 15 minutes, to go through the notebook.</p>
+</details>
+<p><strong>主讲人</strong>：让我直接在 GitHub 页面上展示给大家看。进入仓库后，在部署完 Codespace 之后，大家可以在 Notebook 目录下找到一个名为 <code>student_notebook</code> 的学员手册。这是本次工作坊的核心组成部分。在这里，我们将从零开始亲手实现整个 Agent Harness 底座。</p>
+<p>我们将从最基础的裸模型调用开始，然后像我们前面讲到的那样，逐步为 Agent Harness 叠加各层能力，也就是那完整的七层架构，对吧？</p>
+<p>我和同事们会一直在现场协助大家。大家需要亲手完成一些 TODO 练习。</p>
+<p>让我来给大家展示一下，大家需要完成的任务有几项。举例来说，第一项需要做的就是提出一个问题，对吧？这是所有事情中最简单的一步，你只需要直接与模型进行通信，此时没有任何 Agent Harness 机制介入。你需要做的第一件事就是输入任何你喜欢的问题，这个请求会通过 OpenAI 的 Completions API 发送出去并返回响应。这是最基础的起点。</p>
+<p>接下来，我们将逐步为其添加搜索（Search）、检索（Retrieval）、向量编码（Encoding）以及我们之前介绍过的所有其他关键组件。总共包含 19 个需要大家动手完成的 TODO 任务。如果有谁第一个全部完成，请举起手来，我会给你一个大大的拥抱，因为我身上没有带其他奖品了！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: And you will actually have to—let me show you on GitHub actually. You can go here and inside the notebook, after you deploy the Codespace, you will get a student notebook here, and this is one part of the workshop, right? And here we're going to implement the whole agent harness substrate from scratch.</p>
+<p>So, we're going to start with only the model and then we're going to keep adding layers to the agent harness as we saw the seven layers, right? And we're going to be here to assist you. You will have to do some TODOs.</p>
+<p>So, let me show you. There are a couple of things to do for you. So, for instance, the first thing that you need to do, you need to create a question, right? The simplest thing of everything, you just have to communicate with a model with no agent harness implemented, right? So the first thing you'll need is to ask any question that you like. This will go through the OpenAI completions API and it will return you a response. This is the simplest of all.</p>
+<p>And then we will start adding search, retrieval, encoding and all the other components that we have seen. There are a total of 19 things that you need to do. If you finish first, raise your hand and I will give you a hug because I don't have anything else.</p>
+</details>
+<hr>
+<h3>Mission Control 控制台与执行链路追踪解析</h3>
+<p><strong>主讲人</strong>：好的，现场有人已经把 Codespace 部署好了吗？好的，有一位完成了，干得漂亮！如果在部署过程中遇到任何疑问或问题，随时叫我们。</p>
+<p>接下来我向大家展示一下环境部署成功后的界面外观。大家稍微看一下，我快速过一遍。</p>
+<p>你会获得一个 Web 应用对吧？这个应用里已经预置集成了你需要的所有功能。如果你想自己对外访问这个 Web 应用，可以在 Codespace 底部修改端口配置，找到这里的 Total Recall 端口。</p>
+<p>让我再演示一遍操作方法：进入 Ports（端口列表）标签页，点击该端口的 Visibility（可见性），将其从私有切换为 Public（公开）。这样它就会通过公共网关暴露出来，此时只要在浏览器中打开链接，就可以直接访问属于你个人的 Total Recall 实例了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: And yeah, so anyone already deployed the Codespace? Okay, one person. Okay, good job. So if you have any questions or any problems, let me know. But this is what it looks like when you have it deployed. Okay. So, let me go through this quickly.</p>
+<p>So, you will get an app, right? And the app will already have everything that you need. If you want to deploy this app yourself, you might change this Total Recall port here. Let me show you how I did it again. I go into Ports. I clicked on the visibility of the port and I changed this to Public. And then this is now using a public gateway. So that if I open the browser, I can actually get access to my individual Total Recall instance.</p>
+</details>
+<p><strong>主讲人</strong>：举个例子，如果我提出这样一个问题：“按产品类别显示总收入（show the total revenue by product category）”，当然，这套系统就是所谓的 Mission Control（任务控制台）。它已经把我们讨论过的所有组件都完整实现了。</p>
+<p>在界面上，你还会看到一个上下文窗口（Context Window）的可视化面板，实时展示后台正在发生的操作。比如，这里展示了 Agent Harness 为了回答该问题而挑选并加载到上下文中的具体工具列表，以及当前执行的 Schema 结构。</p>
+<p>接着，我们还可以查看单个 Agent 执行追踪日志（Agent Traces）。例如，系统加载了哪些技能（Skills）、抓取了哪些数据源（Data Sources）、调用了哪些工具（Tool Calls）——比如为了查询结果而在后台运行 SQL 命令来回答你的问题。</p>
+<p>可以看到，当前这个问题还在持续构建与执行中，整个流程跨越了 16 个步骤。在这期间即使中间检测到了报错，由于我们的 Agent Harness 底座具备容错能力，并且内部实现了完整的 Agent Loop 循环迭代机制，它会自我纠错并继续尝试。所有这些底层逻辑最终会从数据库的数据中计算出正确结果呈现给你。</p>
+<p>大家还可以切换到上下文窗口查看消耗的具体 Token 数量。如果大家对其中某个特定模块特别感兴趣，比如 Oracle Agent Memory 内存包，大家也可以单独调试上下文卡片（Context Card）的生成逻辑。所有这些功能都已经打包部署在你们的 Codespace 代码库中了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: So for instance, if I ask a question like &quot;show the total revenue by product category&quot;—and of course this is Mission Control, so this has all of the components that we've spoken about implemented already. You will get also a context window visualization of the things that are going on in the background.</p>
+<p>For instance, these are the tools that were selected by the agent harness to be loaded into the context to answer this question. This is the schema that's happening. And then we can also take a look at the individual agent traces that are going on. For instance, which skills are being loaded, what sources of data are we taking, and what are the tool calls being used—like for instance running SQL commands, etc., to answer your question.</p>
+<p>So the question is still being built. It's taking 16 steps, and you know, for instance here it detected an error, right? But because our agent harness is fault tolerant, it will keep trying because it has an agent loop implemented, etc., right? So all these things will actually yield you this result from the data in the database, right?</p>
+<p>And you can actually go into the context window, see how many tokens we're using. And if you're particularly interested in some of these parts—for instance the Oracle Agent Memory package, for instance—you can interact also with only the context card, how the context card is being created, etc., etc. So you will all get this deployed in your codebase.</p>
+</details>
+<hr>
+<h3>海量工具场景下的检索架构：Toolbox 模式与 HNSW 向量索引</h3>
+<p><strong>参会者</strong>：我想提一个问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Attendee</strong>: Yeah.</p>
+</details>
+<p><strong>主讲人</strong>：请讲。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: Yeah.</p>
+</details>
+<p><strong>主讲人</strong>：针对刚才没听清问题的朋友，我重复一下他的提问：如果一家企业拥有成千上万个工具，该如何处理？</p>
+<p>我们在和吴恩达（Andrew Ng）合作的这门课程中引入了一个叫做“工具箱模式（Toolbox Pattern）”的概念。其核心思想在于你可以对工具检索进行极致优化，使得检索这些工具的开销和延迟几乎可以忽略不计。</p>
+<p>具体来说，你会采用 HNSW（分层可导航小世界，Hierarchical Navigable Small World）索引结构，它基于图（Graph）结构进行组织，图中的每一个节点本身就是一个向量索引（Vector Index）或向量存储（Vector Store）。通过 HNSW 索引，可以在数据库层面专门针对这类海量检索问题构建高效查询，而不是依靠在文件系统中生硬地做匹配。</p>
+<p>这是一个非常棒的问题。不过在你的用户规模达到数以百万计、并且工具调用涉及海量各异的具体专用工具之前，其实不用过早担忧这个问题。日常开发中你可能不会一下子遇到 500 万个工具，更多的是像读文件、写文件、Grep 搜索这类日常工具调用，通常工具总数不会超过 100 到 1000 个。但是，通过将工具建立在向量存储之上，你把工具检索的复杂度以及工具数量规模带来的上下文负担彻底抽象化了，从而可以轻松发起……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Presenter</strong>: So his question, for those of you who didn't listen: what happens if you have thousands of tools in an organization, right?</p>
+<p>Well, we introduced this concept called the Toolbox Pattern in this course with Andrew Ng, and the thing is that you can optimize so that the retrieval of these tools is negligible. So you will use Hierarchical Navigable Small World (HNSW) indexes that use a graph structure, and then each node in the graph is a vector index or a vector store. And then HNSW indexes can be created for these types of problems only in the database, not in files.</p>
+<p>So great question. It doesn't have to worry you until you reach millions and millions of users and tool calls—like different specific tool calls. You might not get 5 million; it's more like reading a file, writing a file, grepping, all these kinds of tool calls that we do every day, they typically don't exceed 100 or a thousand. But by being on a vector store, you abstract the complexity and the amount of it. You can just make a...</p>
+</details>
+<!-- chunk 6/6 -->
+<h3>向量检索与工具描述增强</h3>
+<p><strong>演讲者</strong>：……查询 2,000 条数据就像查询 10,000 条一样简单，因为我们选择的底层存储组件是 HNSW 索引。是的，例如其中有些工具拥有访问机密数据的权限，而有些工具则没有。没错。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: ...query 2,000 just as simply as you would 10,000 because of the storage component that we choose, which is an HNSW index. Yeah, some of them have access to confidential data, for instance. Some of them don't. Yes.</p>
+</details>
+<p><strong>演讲者</strong>：提得非常好。他的问题是：如果两家不同公司所提供的工具描述非常相似，会发生什么情况？在工具箱（Toolbox）设计模式下，我们能做的一件事就是利用大语言模型（LLM）为这些特定工具生成增强版的工具箱描述，从而提高不同工具之间的可区分度（separability）。因此，如果你认为某个工具或某项技能当前的描述信息不够充分，你完全可以通过 LLM 检索来进行增强。与其运行像命名实体识别（NER）这种非常原始传统的方式，你还可以采取更精细的做法——比如增强工具的 Docstring 结构化表征，以便在执行向量检索时大幅提升区分度。这是否解答了你的问题？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Great question. So his question was what happens if the tool descriptions that two different companies have are very similar, right? And one of the things we can do on the toolbox pattern is actually generate with LLM enhanced toolbox descriptions for these specific tools to increase the separability of the tools. So if you think that the current descriptions of a tool or of a skill as well are not enough, you can actually enhance them with LLM retrieval. Instead of running, for instance, named entity recognition, which is very caveman style, you can also do something more sophisticated, which is enhancing the docstring-enhanced representations of a tool so that you increase the separability when you're doing vector search. Does that answer the question?</p>
+</details>
+<h3>Agent 循环控制与模型路由</h3>
+<p><strong>提问者</strong>：Agent 循环也是这种机制吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience</strong>: The agent loop is that?</p>
+</details>
+<p><strong>演讲者</strong>：是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Yeah.</p>
+</details>
+<p><strong>提问者</strong>：确实，我们之前见过类似的情况。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience</strong>: Oh yes. Yes. We have seen some.</p>
+</details>
+<p><strong>演讲者</strong>：是的。当然这里必须设置一个限制上限，因为我们的预算不是无限的。如果模型生成的全都是幻觉，我们显然不能无休止地一次又一次重试。因此，我会根据所使用的前沿 LLM 设置一个截断阈值（cutoff point）。例如对于我们这里使用的 Groq 4.1 快速推理模型，我发现将放弃前的最大工具调用次数设在 8 到 12 次是比较合理的。这也取决于模型的准确性和正确率。比如在刚才这个案例中，它只用了 2 次就展示出来了，而之前它可能需要尝试 16 次才能找到。所以有时检索会更快，有时你需要更有耐心一点。但我喜欢定义一个类似迟滞（hysteresis）的变量，用来保存 Harness 对模型的耐心容忍度。</p>
+<p>随后你还可以做其他事情，例如当某个模型表现极差时，你可以使用路由器（Router）。对于更困难的问题类型，将其路由到前沿 LLM；而对于较简单的问题类型，只需接入一个开源权重的小语言模型（SLM），这种架构会更加有趣且高效。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Yes. So there is a limit, of course, because we don't have infinite money. So we can't just keep trying and trying over and over if the generations are just hallucinations, right. There is a cutoff point that I set depending on the frontier LLM that I'm using. For instance, for Groq 4.1 fast reasoning, which is the one that we're using here, I found that a value of 8 to 12 maximum number of tool calls before giving up is correct. It depends also on the accuracy and the correctness of the model. Like, for instance, in this case it was just able to show it in 2, before it was able to find it in 16. So sometimes it will have a faster retrieval, sometimes you will need to be a little bit more patient. But what I like to define is a variable like a hysteresis variable that holds the amount of patience that the harness will get with the model. Then you can do some other things like, for instance, if the model is garbage. You can just use a router: for difficult types of problems you will route this problem to a frontier LLM, and then for the easier types of problems you can just attach an open weights SLM, for instance, which will be more interesting.</p>
+</details>
+<h3>专业小模型与模型路由经济学</h3>
+<p><strong>提问者</strong>：针对具体任务你会推荐专用模型吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience</strong>: Do you recommend models for...</p>
+</details>
+<p><strong>演讲者</strong>：是的，没错。我个人的看法是，未来的趋势是针对每种问题类型采用小规模专家模型的混合架构（Mixture of Small Experts）。有些公司已经开发出了参数量仅为 1 亿（100M）的小模型，它们在处理某单一特定类型的问题时表现异乎寻常地出色。如果你拥有一个聚合器（Aggregator）和编排器（Orchestrator），能够将正确的查询精准路由到匹配的模型上，那么你就能构建出一个在 Token 消耗上极其高效的 Agent Harness。因此，你完全可以在 Agent Harness 内部实现模型路由。事实上，有些创业公司本质上就专门做这一件事，他们的收费模式甚至类似于：“我为你节省的原始支出中抽取 10% 的 Token 成本作为服务费”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Yes. Yes. I think that's—my personal opinion is that the future is a mixture of small experts for each type of problem. Some companies have developed 100 million parameter models that work exceptionally well for one type of problem, and if you just have an aggregator and an orchestrator that routes the correct query to that model, then you will have a very token-efficient type of agent harness. So you can actually do model routing inside the agent harness. Some companies are actually essentially only doing that, and they will charge you like: &quot;I'm going to charge you 10% of the tokens that I'm going to save you from the original amount of money that you were going to spend,&quot; right.</p>
+</details>
+<h3>实操 Notebook 指南与互动答疑</h3>
+<p><strong>演讲者</strong>：那么，接下来让我带大家看一下学员练习 Notebook（Student Notebook）。当你进入学员 Notebook 后，如果你对 Visual Studio Code 还不太熟悉，可能需要在这里选择对应的 Python 内核（Kernel）来运行 Notebook。你可以选择 Python 3.12，然后就可以开始逐步阅读了。如果你遇到了需要完成的 To-Do 任务，我们在 <code>docs</code> 文件夹中准备了详尽的说明文档，里面包含了解决该具体问题所需的独立解析。</p>
+<p>例如第一个 To-Do 任务，仅仅是与推理核心（模型层）进行基础通信，而不做任何额外操作。文档会清楚解释你在该单元格（Cell）中需要实现什么代码以使其正常运行，完成后你就可以进入下一步，同时里面也提供了参考答案。不过如果你愿意亲自动手实践，希望你能主动尝试编写，我们也会在现场走动为大家解答疑惑。</p>
+<p>我现在会关掉麦克风，下台与我的同事们汇合。在本次 session 的剩余时间里，让我们面对面深入交流。如果大家有任何疑问，或者想和我们进一步探讨，欢迎随时光临 Oracle 展位。我们在展台每天全天都在。能和大家交流会让我们感觉非常好，让我们觉得自己很受欢迎、结识了新朋友。所以如果大家想找我们交流，欢迎随时过来聊聊，这会非常棒。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: So let me show you the student notebook. Once you are inside the student notebook, for those of you who are not familiar with Visual Studio Code, you might need to select a kernel here so that you run the notebook. You might select Python 3.12 here and then you can just start reading. If you stumble into a to-do that you need to do, you have a docs folder with all the explanations, the individual explanations that you need to solve this specific problem. For instance, the first to-do, which is just talking to the reasoning core to the model layer without doing anything else. It will just explain what you need to implement on that cell so that it works and you can proceed to the next one, and also have the solution. But if you're not lazy, you will try—and hope that you try—and we will be here answering questions around the room. I'm gonna turn off my microphone, just come down with my colleagues, and then let's chat about it for the remainder of the session. And if you have any questions or you'd like to talk more to us, please come by and swing by the booth, the Oracle booth. We'll be there every day, all the time. And you know, it makes us feel good like we are wanted and we have friends. So if you want to come up to us, just chat with us a little bit. It will be nice.</p>
+</details>
+<p><strong>提问者</strong>：网络情况怎么样？网络还好吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Audience</strong>: Internet. How is the internet?</p>
+</details>
+<p><strong>演讲者</strong>：我感觉自己像凯撒一样。好了，我把设备留在这里，把这个放这儿，然后我就下台了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: I feel like Cesar. Right. So, I'm gonna leave this here. I'm going to keep this here. And I'm going to come down.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/agent-harness/">agent-harness</a>
+      
+        <a class="tag-link" href="/tags/agent-memory/">agent-memory</a>
+      
+        <span class="tag-pill tag-pill--no-page">context-degradation</span>
+      
+        <a class="tag-link" href="/tags/model-routing/">model-routing</a>
+      
+        <span class="tag-pill tag-pill--no-page">vector-retrieval</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

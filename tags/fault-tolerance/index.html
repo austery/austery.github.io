@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+
+  
+  
+  
+  <div class="container" data-pagefind-ignore><div class="home-layout">
+    <h1>标签：fault-tolerance</h1>
+    
+    
+<ul>
+
+  <li>
+    <a href="/content/notes/cI7zfqusmFU/">构建可靠的生产级 Agent 基础设施：基于 Restate 的持久化执行与状态管理</a>
+    <span class="badge">📝</span>
+    <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a> 
+    <time datetime="2026-09-14T00:00:00.000Z">9/14/2026</time><br>
+    
+      <small class="summary-text">📄 随着 AI Agent 从单次问答演变为长生命周期、异步运行的分布式实体，传统 Agent SDK 难以应对网络故障、状态并发与人机协同等生产级基础设施挑战。本文结合 Restate 架构，深入探讨如何利用分布式事件日志、持久化执行（Durable Execution）、虚拟对象（Virtual Objects）与推送模型，构建具备容错自愈、双向交互控制及高并发隔离的生产级 Agent 技术栈。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/notes/xGirTJSQ5pQ/">解耦DiLoCo：谷歌DeepMind突破超大规模大模型训练瓶颈</a>
+    <span class="badge">📝</span>
+    <a href="/speakers/best-partners-tv/" class="speaker-inline">🎙️ Best Partners TV</a> 
+    <time datetime="2026-04-29T00:00:00.000Z">4/29/2026</time><br>
+    
+      <small class="summary-text">📄 这篇论文深入探讨了谷歌DeepMind和谷歌研究院联合发布的Decoupled DiLoCo框架，旨在解决超大规模大语言模型预训练中硬件故障导致的算力浪费和效率低下问题。通过颠覆传统SPMD范式的“一致性优先”原则，转而采用“可用性优先”，Decoupled DiLoCo实现了在极端故障环境下的高有效吞吐率和零停机时间，并大幅降低了通信带宽需求。文章详细拆解了其核心架构及三大关键机制，揭示了其对未来AI训练格局的深远影响。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/notes/2czYyrTzILg/">从混乱到有序：行之有效的多智能体系统编排模式</a>
+    <span class="badge">📝</span>
+    <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a> 
+    <time datetime="2026-04-08T00:00:00.000Z">4/8/2026</time><br>
+    
+      <small class="summary-text">📄 Sandipan Bhaumik 分享了构建可扩展、可靠多智能体 AI 系统的经验。她阐述了从单智能体到多智能体的复杂性爆炸，介绍了编舞（Choreography）和编排（Orchestration）两种核心协调模式，并强调了不可变状态快照、版本控制、数据契约、断路器模式和补偿模式在故障恢复中的关键作用。演讲最终展示了一个生产级别的 Databricks 架构，强调了从构建演示到构建生产系统的转变。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/notes/k8cnVCMYmNc/">OpenAI &#43; Temporal：构建高可用、生产级的 AI 智能体</a>
+    <span class="badge">📝</span>
+    <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a> 
+    <time datetime="2026-01-12T00:00:00.000Z">1/12/2026</time><br>
+    
+      <small class="summary-text">📄 本视频由 Temporal 开发者倡导者 Cornelia Davis 主讲，探讨了如何结合 OpenAI Agents SDK 与 Temporal 构建具备“持久性”的生产级 AI Agent。通过引入 Temporal 的工作流引擎，开发者可以确保 Agent 在面对网络中断或进程崩溃时，能够自动恢复状态并继续执行，避免重复消耗 Token。视频深入解析了 Activity 和 Workflow 等核心抽象，并演示了微智能体编排与移交的实现方式。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/notes/itkvrQUSJC0/">微软马约拉纳芯片：量子计算的“晶体管时刻”与百万比特愿景</a>
+    <span class="badge">📝</span>
+    <a href="/speakers/dwarkesh-patel/" class="speaker-inline">🎙️ Dwarkesh Patel</a> 
+    <time datetime="2025-02-20T00:00:00.000Z">2/20/2025</time><br>
+    
+      <small class="summary-text">📄 微软 CEO Satya Nadella 揭秘了量子计算的重大物理突破——马约拉纳零能模（Majorana zero modes）的成功实现。这一进展被视为量子计算的“晶体管时刻”，标志着从理论走向可扩展、实用化规模（Utility Scale）的关键转折。通过马约拉纳 1 芯片，微软计划在 2027-2029 年间构建容错量子计算机，并展示了量子计算与 AI、高性能计算（HPC）协同运作的未来混合架构。</small>
+    
+    
+  </li>
+
+</ul>
+
+    
+  </div></div>
+
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

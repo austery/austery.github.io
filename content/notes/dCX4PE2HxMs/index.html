@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Token 流与新型价值网络：从支付欺诈到 AI Agent 时代的自适应防御</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="Token 流与新型价值网络：从支付欺诈到 AI Agent 时代的自适应防御" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Token 流与新型价值网络：从支付欺诈到 AI Agent 时代的自适应防御</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Latent Space</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>Latent Space</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-25</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/latent-space/">Latent Space</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=dCX4PE2HxMs" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-25
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">文章探讨了 Token 经济的规模预测、新型价值单元的风险、以及在 AI Agent 时代，恶意行为将由自治 AI 代理执行的趋势。文章强调了产品设计中的发布/订阅模式、模型切换的爆发性需求，以及在支付和 AI 生态中构建安全基础设施的必要性，特别是应对未来由 AI 代理引发的欺诈挑战。</div></div>
+      
+    </div>
+    <!-- chunk 1/11 -->
+<h3>Token 流与新型价值网络</h3>
+<p><strong>Alex</strong>: 互联网上正在流转一种全新的价值单元，被称为 Token。在未来的十年里，整个互联网价值链都必须面对这样一个现实：Token 的价值越高，试图染指这些 Token 的恶意行为者就会越多。无论何时，当你把某种事物规模化，且其承载的内容价值越来越高时，想方设法窃取这一价值的人和手段就会成倍增加。在线支付大约始于上世纪 80 和 90 年代，随后的十年间其规模增长突破了万亿美元，在此期间我们不得不构建一套全新的支付解决方案来应对网络欺诈。今天 Token 所处的发展阶段大致就相当于当年的在线支付。但在未来的短短五年内，我们预计 Token 经济的规模就将达到约 5 万亿美元；而在接下来的十年里，即便 Token 的流通规模达到 10 万亿美元，我也丝毫不觉得意外。上个月我们拦截的欺诈金额已经是前一个月的十倍之多，而且各类针对 Token 的欺诈手段正在急剧多样化。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Hey, there's a new type of unit of value that's being streamed across the internet called a token. And over the next 10 years, the entire internet value chain was going to have to deal with the fact that like the more valuable tokens got, the more bad actors were going to go to try to get their hands on those tokens. And anytime you scale something and the payload gets more and more valuable, more bad things people try to get access to that value. Online payments, you know, is started roughly in the 80s and '90s, right? And grew to over a trillion dollars over the next 10 years, and we needed to build entirely new payment solutions to deal with online fraud. Where we are today is roughly there on tokens, but over the next even five years, we're expecting the token economy to get to like roughly $5 trillion. And over the next 10 years, I'd be shocked if we went to 10 trillion of token flow. We blocked 10x as much dollar volume last month as the month before, and the types of token fraud are diversifying quite a bit.</p>
+</details>
+<p><strong>Host</strong>: 在进入本期节目之前，我想先对各位听众说几句话。非常感谢大家！如果没有你们主动点击收听并关注我们的内容，我们根本不可能持续为大家带来大家心心念念的 AI 工程、前沿科学以及深度对谈节目。几乎每天都有赞助商主动找上门来，但幸运的是，正是因为有足够多的听众选择通过订阅来支持我们，才让我们能够在不依赖广告的情况下保持可持续运营，我们非常希望一直保持这种纯粹的形式。在此我只有一个小小的请求：大家能做的最强大、也是完全免费的一件事，就是顺手点击一下那个订阅按钮。这是我唯一向大家恳求的事，对于我和团队来说意义重大，我们每周都在竭尽全力把节目呈现给大家。只要你动动手指点个订阅，我向你保证，我们绝不会停止努力，一定会把节目越做越好。现在，让我们正式进入正题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Before we get into today's episode, I just have a small message for listeners. Thank you. We would not be able to bring you the AI engineering, science, and entertainment content that you so clearly want if you didn't choose to also click in and tune into our content. We've been approached by sponsors on an almost daily basis. But fortunately, enough of you actually subscribe to us to keep all this sustainable without ads, and we want to keep it that way. But I just have one favor to ask all of you. The single most powerful, completely free thing you can do is to click that subscribe button. It's the only thing I'll ever ask of you, and it means absolutely everything to me and my team that works so hard to bring the Inspace to you each and every week. If you do it, I promise you, we'll never stop working to make the show even better. Now, let's get into it.</p>
+</details>
+<h3>产品理念：发布/订阅模式与模型市场</h3>
+<p><strong>Host</strong>: 好的，我们现在是在 Anj 的家里录制，旧金山所有伟大的初创企业似乎都是从这样的地方起步的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Okay, we are here in Anj's house, which is where all great startups in San Francisco start.</p>
+</details>
+<p><strong>Host</strong>: 大家好！祝贺你在 Cursor 等项目上取得的成绩，天知道你手头上还有多少令人瞩目的进展，你最近经手的事情实在太多了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Howdy. And congrats on Cursor, Mist... god knows what else. You got so much stuff going on.</p>
+</details>
+<p><strong>Anj</strong>: 确实有很多事情在同步推进。不过要说最近最让我感到兴奋的一个，可能非 OpenRouter 莫属了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Anj</strong>: There's a lot going on. Well, OpenRouter is probably the most has been the most I would say one I'm excited about recently.</p>
+</details>
+<p><strong>Host</strong>: 没错。今天我们还迎来了 Alex，这是他第一次做客我们的播客；而 Anj 你已经来过好几次了，每次你为社区贡献力量我都非常感激。恭喜你们，这真是一段不可思议的历程！在回顾你过往撰写的文章时，我发现你作为一名产品人最早写下的核心理念之一，就是将“发布/订阅”（Pub/Sub）作为一种产品设计准则。我希望能请你聊聊，你是如何思考到底什么样的产品应该存在于这个世界的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. And we have Alex, first time on the pod, but you've been a few times. I appreciate every time you shown up for the community. Congrats. I just like what a journey. When I was looking back at your past posts, one of the earliest principles that I saw you write as a sort of product person is pub sub as a product principle. And I wanted to you to maybe explain how you think about what should exist in the world.</p>
+</details>
+<p><strong>Alex</strong>: 好的。关于 Pub/Sub 的这篇思考写于 2023 年初。直到我们十分钟前聊起来，我才重新想起它。核心观点在于，你可以把产品理解为数据订阅与数据发布两者交汇的十字路口，电商和双边市场就是最典型的例子：供应商将某种特定产品发布到一个 SKU 上，而这个 SKU 就像一个 Pub/Sub 的订阅主题（topic），消费者则订阅这个主题，并在他们需要的时候随时消费。人类消费的方式是非常离散、随机且即时性的，因此很难成规模扩展——当他们购买某件商品时，全部注意力都会集中在那个主题上，而无暇顾及其他任何地方。但智能体（Agents）以及模型推理的消费者完全不是这样运作的，它们是在持续不断地进行消费，并且会随时切换自己所消费的 SKU。因此，OpenRouter 某种程度上就像是常规 API 体验与交易市场之间的一种融合体：我们创建了模型标识（model slug），我们构建了自动路由引擎（Auto Router），我们提供了各种各样你可以订阅的产品 SKU，让你能够持续从中汲取价值，并根据这些消费端的需求进行决策。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Yeah. The the pub sub piece which was early 2023. I didn't think about it until we talked like 10 minutes ago is about how there is like a way of thinking about products as an intersection between subscribing to data and publishing data and marketplaces are an easy easy example of this. You have suppliers that are publishing some kind of product to a SKU. And the SKU is kind of like a pub sub topic that a consumer is subscribing to and just going to like consume whenever they want. And humans consume in a very like discreet ad hoc way. It's not very scalable. You know, all their attention is on the topic when they're buying the thing and their attention is nowhere else when that happens. Agents and consumers of inference don't act like that. They're consuming continuously and they're changing the SKUs that they consume from all the time. So OpenRouter is sort of like a blend between a you know a normal API experience and a marketplace where we create model slug. We have the auto router. We have all kinds of like product SKUs that you can subscribe to and then you can like continuously add like derive value and make decisions based on those consumers.</p>
+</details>
+<h3>从 Alpaca 时刻到模型生态系统的爆发</h3>
+<p><strong>Host</strong>: 确实如此。今天大家可能对这件事情已经形成了共识，但在你们刚起步的时候，这绝非行业共识——当时很少有人相信大家会有如此强烈的模型切换与替换需求，也很少有人相信开发者竟然不会直接使用官方原生的 SDK。对于你们二位而言，是在哪一个瞬间突然顿悟，意识到这就是未来的方向？我记得 Alex 你曾在 AI Engineer 峰会上分享过一段演讲，把 Alpaca 模型的出现当作激发你灵感的关键时刻之一？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, this is something that was more consensus now but not consensus when you guys started which was that there is such a demand for swapping models and changing things out and that people would not use the native SDKs. I guess for each of you, what was your sort of realization moment that this would this would be it? You've given a talk at AIE about Alpaca as like one of your inspiring moments?</p>
+</details>
+<p><strong>Alex</strong>: 关于 Alpaca 的那个时刻，我可以简单再复盘一下。回到最初的阶段，也就是 2022 年底，OpenAI 基本上是市场上唯一的选择，市面上大概只有 OpenAI、Cohere，再加上零星几款早期的开源权重尝试。2023 年 1 月 Llama 刚发布时，大家的第一反应是：“天哪，太令人激动了，这绝对是个重大突破，它在几项基准测试上的表现甚至超过了 GPT-3。”但问题在于，你没办法跟它直接对话聊天，它在当时并不是一个真正具有交互性的对话模型。不过看起来只要有人解决几个小问题，再给它做一点人类反馈强化学习（RLHF），就能彻底补齐短板。而 Alpaca 就是我看到的第一款实现这一突破的模型，它前前后后仅仅花费了 600 美元！斯坦福的一个研究团队生成了一批合成数据，对 Llama 进行了微调，打造出了 Alpaca 7B（或者我记不清具体是 7B 还是 13B 参数）的模型。它的效果简直惊艳到了极点，我当时在飞机上试用它，在很多场景下，你根本分辨不出眼前的结果到底是出自 ChatGPT 还是 Alpaca。那一刻我意识到，如果制作一个高水平模型的门槛已经低到这种程度：第一，我们有史以来第一次获得了一种将数据资产变现的全新途径——你只需要拿出非常有价值的数据，花上 600 美元就能把它封装成一项在线服务，而且这个成本随着时间推移肯定还会越来越低。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Alpaca I can like rehash the Alpaca moment for a sec. Like the very beginning at the end of 2022, OpenAI was the only game in town. There was like OpenAI, Cohere, and then a smattering of early attempts at open-weight models. When Llama came out in January of 2023, it was like, &quot;Wow, really exciting. This is really big. It outperforms GPT-3 on one or two benchmarks.&quot; But you can't chat with it. It wasn't actually an engaging model. But it seemed like someone just needed to fix a couple things and do some RLHF on it to get it all the way there. And Alpaca was the first model that I saw that did that. It only took $600 to do. A team at Stanford generated a bunch of synthetic data, fine-tuned Llama, and made Alpaca 7 billion parameter model—or was it maybe it was 13 billion parameters—and it was so good, like I was just like on an airplane using it. In many cases, you could not discern a ChatGPT versus an Alpaca result. And I figured if it was this easy to make a model, one, we have a whole new way of monetizing data for the first time. You can just like take really valuable data and turn it into a service in $600, and that cost will probably go down over time.</p>
+</details>
+<p><strong>Host</strong>: 不好意思打断一下，当你提到“将数据变现”时，具体是指将其打造成最终的 HTTP 端点对外提供服务，还是作为模型的训练数据来变现？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: When you say—so sorry—when you say monetizing your data, as what eventually will become an HTTP endpoint or as training data for a model?</p>
+</details>
+<p><strong>Alex</strong>: 对，就是作为模型的训练数据。换种抽象的说法就是：“看，我手头拥有这些独特的数据……”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Yeah. Training data for a model, like an abstract way of saying like, &quot;Hey, I have this data...&quot;</p>
+</details>
+<p><strong>Host</strong>: 然后把它压缩沉淀进一个模型里。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Compress it into a model.</p>
+</details>
+<p><strong>Alex</strong>: 没错，这些数据在我的具体产品业务中能发挥作用，但同时我也可以将其重新打包成一个大模型的形态并对外售卖。因此，这为整个经济体系带来了一种全新的商业模式。此外，它当然也提供了一种追赶前沿实验室成果的有效路径，而且这种路径是单个独立开发者或小型研发团队靠自己就能搭建落地的。无论何时，只要出现这种情况——即先有一款爆款应用脱颖而出，随后又出现了一套允许大家按照自己的喜好和风格进行模仿与复现的开发框架——一个繁荣的生态系统立刻就会应运而生。因为单一商业巨头所做的产品决策，与更广泛的生态群体基于各种不同考量所能演化出来的变体之间，存在着巨大的鸿沟。既然如此，你就必然需要一个交易市场来发现所有这些涌现出来的服务与模型产品。而在当时，整个互联网上根本没有任何一个平台可以充当 LLM 的“大本营”，让人们能清晰看到各个模型到底有多少人在调用、具体是谁在用以及为了什么场景在用。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Like it makes sense for me in my product, but like I could repackage it in the form of a model and sell it. And so it's just a whole new business model for the economy. It also of course provides like you know a way of following what frontier labs are doing, but in a way that like a single developer or a small team of developers can roll on their own. And so whenever you have an example of that—like a breakout app that's doing really well, and then some kind of framework for imitating it with your in your own flavor—you have an immediate ecosystem that should arise, because there's just a huge gap between the decisions that the single company is making and all of the variations in those decisions that like a wider ecosystem can can create themselves. And so then you know you need a marketplace to like discover all of those services and all of those products. There wasn't any place on the internet that was like a home base for LLMs in terms of seeing how much they were being used and seeing who was using them and why.</p>
+</details>
+<h3>OpenRouter 与 Hugging Face 的本质区别</h3>
+<p><strong>Host</strong>: 当时与这个构想最接近的平台应该算是 Hugging Face 了吧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: The closest would be Hugging Face.</p>
+</details>
+<p><strong>Alex</strong>: Hugging Face 确实是最接近的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Hugging Face was the closest.</p>
+</details>
+<p><strong>Host</strong>: 他们在几年前就已经上线了 Model Hub。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: They just started Hub like a few years before before that.</p>
+</details>
+<p><strong>Alex</strong>: 是的。但 Hugging Face 当时并不托管闭源专有模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Yeah. And Hugging Face also didn't have the closed-source models.</p>
+</details>
+<p><strong>Host</strong>: 确实如此。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah.</p>
+</details>
+<p><strong>Alex</strong>: 而且在那个时期，你没办法直接在上面即开即用地调用这些模型，也没有公开数据展示究竟谁在调用它们。在 OpenRouter 和 Hugging Face 之间存在着一系列关键的差异化特性，而这些差异在我看来是极其根本的，特别是在我刚开始深入研究大语言模型、试图理解大家为什么会选择随着时间推移不断涌现的各种细分小模型时。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: And they didn't—you couldn't use the models at the time. And there wasn't data about who was using them. There are like a bunch of differences between OpenRouter and Hugging Face, and those differences felt really critical to me, especially when I was just trying to learn about LLMs and like why people are choosing like these different little ones that are emerging over time.</p>
+</details>
+<h3>创始结缘：从斯坦福校刊到 OpenRouter 握手</h3>
+<p><strong>Host</strong>: 明白了。那么 Anj，你向来也非常看重模型的多样性。当时你已经在 Anthropic 工作了几年——这一点我们在之前的播客中也详细聊过。你最初是怎么认识 Alex 的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Got it. And then Anj, no stranger to wanting more model diversity at the time. You know you're a couple years into your Anthropic journey, which we covered in a previous podcast as well. What was your introduction to Alex?</p>
+</details>
+<p><strong>Anj</strong>: 这个嘛，我们初次认识大概要追溯到 13 年前了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Anj</strong>: Well, the introduction was I think 13 years before that. Oh.</p>
+</details>
+<p><strong>Alex</strong>: 不过就 OpenRouter 这个项目的正式联手来说，实际上就发生在那边那个角落里，如果你还记得的话。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: But the OpenRouter handshake actually happened right over there, if you remember. Yeah.</p>
+</details>
+<p><strong>Anj</strong>: 确实如此。我和 Alex 相识……我记得如果没记错的话，是在大二的时候，通过《斯坦福评论》（Stanford Review）……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Anj</strong>: Which was Alex and I met, I believe it's sophomores now if I remember correctly, Review...</p>
+</details>
+<p><strong>Alex</strong>: 那是我们第一次见面。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Meeting for the first time.</p>
+</details>
+<p><strong>Anj</strong>: 我想是的，没错。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Anj</strong>: I think so. Yeah.</p>
+</details>
+<p><strong>Host</strong>: 是的。《斯坦福评论》是彼得·蒂尔（Peter Thiel）早年在斯坦福校园里创办的一份自由意志主义学生报纸。一直以来……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. So Stanford Review was the libertarian newspaper on campus at Stanford that Peter Thiel had started back in the day. And forever for...</p>
+</details>
+<!-- chunk 2/11 -->
+<h3>斯坦福校报与网络中立性辩论：结识 Alex</h3>
+<p><strong>前 Discord 平台负责人</strong>：无论出于什么原因，我和 Alex 当时都参加了其中的一次报社例会。我记得主编是我们俩的共同朋友，Lisa 确实是一位非常出色的总编辑。大家都清楚，总编辑职责的核心之一就是向不同成员分配采编任务，并确保各项报道与出版进度能够切实推进落地。我也许记不清全部琐碎细节了，但我清晰地记得自己当时的初衷——让我感到颇为意外的是，在那个时期的校报里，竟然完全没有设立一个专门的科技报道版块。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Former Discord Head of Platform</strong>: whatever reason I you know Alex and I both showed up to one of the meetings and I remember um the editor-inchief was a mutual friend of ours. Lisa was really a really great editor-in chief. You know part of part part of an editor-in chief's job is to assign responsibilities to people and make sure the work gets done. Um, and I I I may be misremembering the details, but I I remember wanting to it was kind of surprising to me that at the time there was no dedicated technology section in the newspaper.</p>
+</details>
+<p><strong>Alex</strong>：嗯，你知道的……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Um, you know,</p>
+</details>
+<p><strong>前 Discord 平台负责人</strong>：……因为那原本是一份更偏向传统政治议题的刊物，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Former Discord Head of Platform</strong>: because it's political, right?</p>
+</details>
+<p><strong>Alex</strong>：是的，没错。主要关注各个州与政府层面的政治事务等等。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Yes. Yeah. States and things.</p>
+</details>
+<p><strong>前 Discord 平台负责人</strong>：对。但如果我们把时钟拨回当年——你可能对这段历史还有印象——那时正有一项备受瞩目的重大科技立法处于激烈论战之中，也就是所谓的《网络中立性法案》（Net Neutrality Act）。网络中立性本身就是一个天然带有深刻政治烙印的议题，对吧？它本质上关乎对互联网宽带接入与网络服务提供商的监管权力边界。因此，在当时的校园里聚集了一小群像我们这样的人：大家既是技术人员和工程师，同时也在密切探讨与争论这些底层网络技术背后的政治权力博弈。我当时就认为，《斯坦福评论》（The Stanford Review）会是一个非常适合深入撰写和剖析此类议题的绝佳阵地。我记得自己那时正在撰写一篇关于网络中立性的深度分析稿，于是在会上顺势提议说：或许我们应该顺水推舟，正式设立一个科技专栏或版块。而 Alex 是全场极少数立刻赞同并表态支持的人之一，他说：“那太酷了。”我已经记不清我们后来是否有共同联名发表过文章，但那就是我们最初相识的契机，大约是在 2011 年或 2012 年，具体哪一年我有点记不真切了，反正就是那两年的某一年。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Former Discord Head of Platform</strong>: Yeah. But it it to take us back in time, you may remember this, but um there was there was this technology uh kind of legislation that was being debated called uh the net neutrality act. And net neutrality is like inherently this political concept, right? It's it's about the regulation of internet broadband access. And so there was a community of us who are kind of technologists but also debating the politics of the technology. And I thought the review would be a great place for to like write about that. And I was working on I think a net neutrality article and I remember proposing well maybe you should start a technology kind of section and Alex was one of the only people who said yes that would be cool and said I I forget whether we ended up writing stuff together but that's when we first met um was 2011 or 12 I forget which year it was. It was one of those.</p>
+</details>
+<h3>疫情期间的 Discord、加密浪潮与黑客攻防</h3>
+<p><strong>前 Discord 平台负责人</strong>：如果我没记错的话，当时的会议地点是在斯坦福的 Old Union 大楼，我们过去总在那里面碰头。不过在后来的这些年里，我和 Alex 一直保持着频繁的联系和交流。而我们在职业层面上交集最密集、业务重合度最高的一段时期，正是我在全面统筹负责 Discord 平台业务的那段日子。当时 Discord 经历了爆发式增长，一跃成为整个加密货币（Crypto）生态最为核心的聚集地。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Former Discord Head of Platform</strong>: Um it was at Old Union if I remember correctly. That's where we used to meet. But, you know, along the way, Alex and I have had a chance to to to hang out often. And probably the the the time when we had the most professional overlap was when I was running the platform of Discord. Um, and it had become this explosive kind of platform for crypto.</p>
+</details>
+<p><strong>Alex</strong>：是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Yeah.</p>
+</details>
+<p><strong>前 Discord 平台负责人</strong>：尤其是在全球疫情最为肆虐的中期，NFT 市场迎来了狂暴的大爆发。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Former Discord Head of Platform</strong>: And NFDs in the middle of the pandemic,</p>
+</details>
+<p><strong>Alex</strong>：顺便提一句，当时你也同时全面执掌着平台的安全防御与风控体系（Safety &amp; Security），对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: which also, by the way, you were in charge of safety and security as well, right?</p>
+</details>
+<p><strong>前 Discord 平台负责人</strong>：没错。我当时担任平台负责人（Head of Platform），这意味着整个生态中所有涉及加密货币 DAO 组织以及海量 NFT 项目发售过程中的系统安全漏洞排查、应急响应与防御调试工作，统统压在了我一个人肩上，并且……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Former Discord Head of Platform</strong>: I was the head of platform which meant all of the crypto DAO and NFD launch security debugging fell on me and</p>
+</details>
+<p><strong>前 Discord 平台负责人</strong>：……我们每天都要应对层出不穷的钓鱼链接欺诈、极其复杂的社会工程学攻击，以及铺天盖地向我们疯狂倾泻的各种拒绝服务攻击（DoS / DDoS）。大约也就是在那同一时期，我开始在斯坦福大学主讲 CS53 计算机安全课程；而 Alex 当时正身处 OpenSea 的核心管理层。面对这种几乎无休止的疯狂黑客攻势，我当时每天都在绞尽脑汁地寻找对策，思考我们究竟该如何筑起坚固的护城河来抵御这些致命威胁。而在整个加密市场的最高峰时期——我不知道你是否还清晰记得当年通过 Discord 流转的 NFT 真实交易体量有多么夸张……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Former Discord Head of Platform</strong>: the fishing the the the social engineering attacks like a ton of DOS that we were getting hit by um around the time I started teaching security at Stanford CS53 and Alex was in the at openc at the time and I was trying to figure out how we we could defend against all these attacks that we were like and at at peak I forget if you remember how much NFT volume was running through</p>
+</details>
+<p><strong>前 Discord 平台负责人</strong>：……但那绝对是一笔极其庞大、不容忽视的商业规模，通过我们 Discord 平台实时交互并最终促成的 NFT 交易商品交易总额（GMV）高达数十亿美元。而几乎所有的底层交易清算与合约调用都直接导流向 OpenSea，用户在社区里日夜不停地进行着高频的买入、抛售和换手交易。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Former Discord Head of Platform</strong>: discord but it was like a meaningful amount of like se it's like several billion dollars in NFT volume of GMV so to speak running through the platform and it was all coming from openc it was these like buy sell trade</p>
+</details>
+<p><strong>Alex</strong>：换句话说，社区服务器内部——这些千千万万个 Discord 群组和频道，才是承载整个交易与人际连接的真实震中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: I mean the server the D and D is discord</p>
+</details>
+<h3>早期接入 GPT-3.5 与内容风控的碰壁</h3>
+<p><strong>前 Discord 平台负责人</strong>：一点没错。正是在那个充满挑战与对抗的阶段，我们在专业领域有了非常深入的互动。但就在那之后大约一年左右，OpenAI 主动为 Discord 提供了他们下一代前沿大模型的极早期内测访问权限，也就是 GPT 系列……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Former Discord Head of Platform</strong>: yes and so that's when I think we had hung out professionally but a year after that openai gave Discord early access to GPT</p>
+</details>
+<p><strong>前 Discord 平台负责人</strong>：抱歉，更准确地说不是原始的 GPT-3，而是 GPT-3.5——也就是引入了人类反馈强化学习（RLHF / RL）后训练机制的那代模型。大约就是在那个节点，我们工程团队与 OpenAI 展开了密切协作，专门为 Discord 内部生产环境部署打造了一个实验性的官方机器人。而也正是在那一轮实际落地的战役中，作为具体负责系统部署与集成方案的核心负责人，我才真正切实体会到实际业务对于模型架构的深层诉求。</p>
+<p>当时我们锁定了两个极具代表性的落地业务场景。巧合的是，最近还有同行把我在 2023 年亲自执笔并公开发表的一篇官方博文重新翻出来转发给我，那篇文章的标题正是《Discord 是你与好友共享 AI 的空间》（Discord is your place for AI with friends）。在那篇规划中，我们清晰界定了两大核心应用方向：</p>
+<p>第一个落地场景是名为 Clyde 的原生第一方 AI 虚拟伙伴。Clyde 被深度集成在 Discord 客户端内部，它的定位不仅是协助用户一键配置和个性化打理专属的 Discord 服务器，还能通过对话智能引导新加入的成员完成繁琐的入驻指引，并在群聊中积极活跃气氛、促使朋友之间更频繁地在线连线与聚集。</p>
+<p>而第二个极为关键的核心场景，则是全平台的内容合规与安全风控审查（Content Moderation）。然而，正是在内容安全风控这一环节的大规模实战演练中，我们遭遇了极其沉重的现实撞墙：模型在执行风控审核任务时，经常会毫无预警地全面罢工，直接拒绝执行我们传入的审核请求！在大量应该正常识别并打标违规内容的边界情况下，它会干脆利落地直接返回安全拒绝报错。究其技术本质，当时整个 AI 行业才刚刚迈入模型后训练（post-training）时代的破晓期，模型内部的安全对齐策略（guardrails）极其生硬死板，我们用于提示模型进行审查比对的业务 Prompt，动辄就会意外踩中其内置的严苛防御规则。</p>
+<p>面对这种僵局，我们直接向 OpenAI 团队提出了严正诉求：“各位伙伴，我们必须获得直接访问模型权重（model weights）的权限。因为我们面对的是一个拥有 2.5 亿月度活跃用户（MAU）的超大规模社交网络，在此等体量的线上生产环境中推行全自动内容审查，我们对模型的行为可控性、稳定边界与任务执行确定性有着近乎苛刻的要求。我们必须确保模型能够百分之百严格按照我们的业务规则执行，而不是随意抛出拒绝。”然而 OpenAI 当时的回应非常明确且决绝：“非常抱歉，这与我们的核心商业原则不符。我们本质上是一家闭源模型公司。”</p>
+<p>那次正面的业务碰撞，成为了我个人职业认知中的一次重大转折点，让我彻底清醒地意识到：全球开发者与企业界绝不可能完全依赖单一的闭源黑盒，我们迫切需要繁荣开放的开源模型（open models）；任何严肃的企业客户在构建核心生产力管道时，都必须对底层的模型能力边界拥有真正自主的主权与调优控制权；并且在终局形态下，行业必然需要一整套功能完善的独立控制平面（control plane）或全生命周期编排调度基础设施，来协调管理跨多元来源的开放模型集群。</p>
+<p>但在当时的市场上，根本不存在任何能够达到商用可用水准的高性能开源备选项。直到大约六个月后，Meta 正式发布了颠覆行业格局的 Llama 模型；紧接着又过了大约六个月，我作为主导投资人，领投了 Mistral 的 A 轮融资——Mistral 的核心创始成员 Guillaume 正是出身于 Meta 的 Llama 核心研发团队。而也几乎就在那一同一时间窗口，我获悉了 Alex 正在全力筹备并正式推出 OpenRouter 的消息。我当时脑海中立刻浮现出一个强烈的预感：这两个技术演进的平行世界，必将在未来的某个节点爆发极其壮观的交汇与碰撞！尽管在那个时间点，我还无法精准预判我们双方究竟在何时以何种形式强强联手才是最佳契机，但 Alex 的战略嗅觉展现出了难以置信的前瞻性。从 Meta 开源 Llama 起步的那一刻起，他就极具远见地断定，一个多元异构的模型生态必将呈指数级爆发，而在这个纷繁复杂的生态之上，必定亟需一层极简、轻量、高可用的统一路由与抽象调度层——尤其是在面对企业端复杂交付诉求时。我之所以对这一点感同身受，完全是因为我当时身处 Discord 平台副总裁的位置，每天的职责就是确保在面对 2.5 亿真实终端用户并发请求时，每一个落地部署的模型都必须分毫不差地贯彻业务意志。而在实践中，这几乎是一项不可完成的极限挑战——因为一旦你把底层智能全权外包给第三方闭源模型巨头，所有的安全拦截策略与对齐红线都被对方死死把持，一旦其安全规则判定拒绝响应你的业务 Prompt，给线上业务带来的打击往往是彻底崩溃与灾难性的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Former Discord Head of Platform</strong>: sorry GPD3 no it was GP3.5 actually yeah GPD 3 which is the RL version of GPD3 and that's around the time we we made a Discord bot with um OpenAI for internal deployment and that's when I I realized we would need like since I since I was part of the deployment team what was the use case there were two that were and there there's actually a post now called Discord is your place for AI with friends that somebody sent me recently that I wrote um and published in 2023 but there were two use cases one was Clyde which was that in like a first party friend inside of Discord that could help you set up your Discord server and talk to you about onboarding and get your friends to hang out more. Um, and then there was content moderation and one of the realizations we had with content moderation was the it would refuse to moderate like it would just refuse our prompts because the RL the post training was we were very early in the post- training era and it would just our prompts would trigger it. uh it's like guardrails. And we told OpenAI, hey guys, we need access to the weights because if we're going to be doing content moderation at scale, we had 250 million monthly active users. We need more reliability that the model will do what we need it to. And they said, well, sorry guys, that's not how this works. We're a closed source company. And so that was my first realization that we needed open models and the enterprises would need more control o over capabilities and then ultimately would need some kind of control plane or management system to orchestrate these open models. But there weren't no good there were no good open alternatives until maybe 6 months later when Llama came out and 6 months after that I led the series A into Mistral which was started by Giam and the Llama team and I that around that time is when I remember hearing about Alex launching open router and going these worlds are going to collide and I don't know when it'll make sense to team up but Alex was so early and could see I think he was totally right about this ecosystem starting with Llama uh that then needed like a an easy layer to to manage for especially for I was approaching it from the enterprise perspective because I'd been that like the as the VP of platform at discord it was my job to ensure that when we deployed models to like 250 million users they did what we wanted them to and that was very hard um cuz if you outsourced it to the labs and they controlled the the guardrails and their guardrails or their safety policies forbid the model from responding to your prompts that was quite catast catastrophic.</p>
+</details>
+<h3>社区定制规则与闭源模型“过度对齐”的不可调和性</h3>
+<p><strong>Alex</strong>：完全没错。不过从常理来看，内容安全审核原本是大模型厂商普遍宣称愿意全力支持的核心应用领域。而且撇开基础模型不谈，OpenAI 照理说应当非常乐意与你们展开定制化合作——比如在常规逻辑下，他们本身就对外免费开放了现成的专用 Moderation 审核接口端点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Yeah. But well, you know, a moderation is a thing that they want to support and obviously beyond that they would work open would work with you uh you know presumably to give you a moderation endpoint which they offer for free.</p>
+</details>
+<p><strong>前 Discord 平台负责人</strong>：这正是整件事情中最耐人寻味且极为棘手的特殊之处所在。他们当时确实毫不犹豫地向我们开放了底层的官方 Moderation 接口端点。然而，正如你们各位所深知的，Discord 平台上的每一个独立服务器（Server），在架构和文化上本质上都是一个自我封闭、自成一体的微型自治社区。我们当时追求的核心业务蓝图，并非继续养着庞大的人力审核团队去艰难揣摩每个细分社区光怪陆离的亚文化规范，而是希望将社区规约直接交给 AI。正如 Reddit 上的无数 Subreddit 一样，Discord 上的数百万个公开服务器往往都拥有由用户自发制定的独立行为准则和专属规则体系。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Former Discord Head of Platform</strong>: It was an interesting use case um that they so they did give us a moderation endpoint. However, as you guys know, every Discord server is like a mini deployment of itself. And so the use case was instead of having human moderators that have to interpret the norms of the community, you just give the they often like every you know subreddit discord servers public ones have their own rules that the user the randomly space discord in yeah</p>
+</details>
+<p><strong>前 Discord 平台负责人</strong>：在原有的传统运作流程中，整个机制完全依赖人类审核员日复一日地去阅读和消化每一个社区的个性化规范，然后依靠纯人工在日常巡视中盯梢每条聊天消息并强制执行惩罚。但要明白，很多大型社群的成员规模动辄高达数十万甚至上百万人！当时我们在全球范围内维持着一支超过 5000 人的 Discord 专职内容安全审查团队。这些工作人员几乎全部来自第三方外包机构，从事着一份心理负荷与精神损耗极其严重的残酷工作。</p>
+<p>因此，我们当时技术创新的核心设想是：如果我们能够将某一个特定服务器的全部治理准则与文化上下文完整注入给大语言模型，让模型针对该特定社区的专属语境，实施高度智能化的“情境即时审核”（in-context moderation），很多难题就能迎刃而解。然而残酷的现实是，许多完全符合特定社区内部正当讨论诉求的个性化规范，在字面或形式上却直接撞上了 OpenAI 全局一刀切的安全审查红线！</p>
+<p>这种矛盾意味着，平台上的每一个独立服务器，实际上都拥有一套属于自己的定制化评估标准（custom eval）。我们当时相当于在尝试为全平台的各个异构社群构建千人千面的专有评测集；但在那个技术阶段，OpenAI 自身对于如何工程化落地与对齐大模型的认知还处于极度粗糙和原始的起步期。他们实施的模型后训练对齐 Prompt 往往表现得极其武断与一刀切。比如他们当时的一条死板规则就是：“任何涉及《哈利·波特》（Harry Potter）的、凡是包含任何受商标版权保护的专有名词与内容，模型必须一律拒答，绝不提供服务。”想象一下，假如这是一个由全球《哈利·波特》铁杆粉丝自发组成的合法探讨社区——这是一个我们在生产环境中遭遇的完全真实的痛点用例——当该社群尝试利用部署的大模型来审查内部聊天发言时，LLM 却因为检测到了关于《哈利·波特》的情节讨论，而在最关键的风控环节直接罢工抛出拒答错误！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Former Discord Head of Platform</strong>: and then humans used to read those norms and then enforce it every day manually like observing each message in these communities and these communities are like millions of users. So we had a 5,000 plus person team globally in the on the Discord content moderation team. These are outsourced contractors who had a really tough job. And so the idea was instead if you could give the norms of that server to the LLM, then the LLM would do custom moderation for that server. It's almost like a like in context moderation for that server. And many of those servers norms just violated OpenAI's rules. And so that it it was like we had our own custom eval. So we used to like each server had its own custom eval but this at the time OpenAI's eval so primitive in our thinking about how to deploy these LMS that often the um the post training prompts were super heavy-handed. It said oh anything about Harry Potter anything that has trademarked content you know don't refuse. And it was a if it was a fan Harry Potter fan community this is a real use case that had a content moderation the LM would just refuse.</p>
+</details>
+<p><strong>Alex</strong>：确实如此。那种粗暴的一刀切规则颗粒度实在太粗糙了，根本无法适应现实世界中真实多样的复杂生产场景。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Yeah. And that was just not precise enough.</p>
+</details>
+<h3>激发 OpenRouter 诞生的“换模型”诉求与早期创业挑战</h3>
+<p><strong>Alex</strong>：我们在开发者群体中反复听闻的另一个典型真实案例也如出一辙：比如某个创作者正试图在平台上撰写一部严肃的侦探悬疑小说，而小说的某一个章节中不可避免地出现了一场密集的暴力犯罪对决——比如某个反派杀害了某个角色。在面临这种正当的创意写作诉求时，主流大模型却会立刻触发僵硬的安全防御，完全拒绝为该章节的文本组织与情节构思提供任何协助。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Another one that that we heard was like if someone was trying to write like a detective story and there's one chapter with a lot of violence, like maybe someone like kills someone, the LMS would just refuse to like help with that part of the story.</p>
+</details>
+<p><strong>前 Discord 平台负责人</strong>：没错，这种现象比比皆是。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Former Discord Head of Platform</strong>: Yeah.</p>
+</details>
+<p><strong>Alex</strong>：面对这种情况，无论是专业开发者还是普通终身用户，都会立刻得出一种直观判断：“等一下，这种死板苛刻的拦截并不是大语言模型（LLM）在底层数学逻辑与自然语言处理上的固有本质。在现有的商业格局之外，市场上必定必须存在多元化的可替代选择，从而允许我在主力大模型突然返回拒绝报错、或是产出极其糟糕的结果时，能够随时无缝、灵活地一键切换到另一款更合适的模型上去。”而正是这种由于闭源单一垄断所带来的巨大摩擦力与强烈现实张力，成为了促使我毅然决然全力投身构建一个开放中立的大模型交易市场（marketplace）的原始驱动力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: And then they like the user would be like, &quot;Okay, this this is not like structurally inherent to LLM. There must be like some choice out there so that I can like switch to another model.&quot; um when I'm getting like a refusal or a bad result from the the main one that I have and and that like tension also drove me for a marketplace.</p>
+</details>
+<p><strong>前 Discord 平台负责人</strong>：是的，我认为“模型多选与动态路由”这个基本判断在今天的技术圈与产业界已经成为了不证自明的普遍共识。但让我们把视野重新拉回到当时那个混沌未开的拓荒时期：当你最初开始着手构想并为这个项目四处奔走融资（raising）的时候，当时的风险投资圈与创业大环境究竟是怎样的反应？投资人们真的能理解你所描述的这一未来愿景吗？在那个阶段你又遭遇了哪些典型的不解与挫折？说实话，我个人非常享受听你倾诉那些其他主流 VC 当时究竟是如何思维盲目、完全看不懂这个赛道并最终与之失之交臂的精彩内幕故事。所以，任何你现在回过头来看愿意公开聊聊的融资往事与轶闻，不妨坦诚地跟我们展开谈谈……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Former Discord Head of Platform</strong>: Yeah, I think that is well accepted now. What was it like back then when you were raising or you know starting this? Um did people get it? Um you know what was the some of the struggles? Basically I like I like getting stories out of him about how other VCs don't get it. So like anything anything you want to you want to uh talk about now you</p>
+</details>
+<!-- chunk 3/11 -->
+<h3>“大模型通吃”质疑与大模型经济的分散性</h3>
+<p><strong>主持人</strong>: 现在我们知道，OpenRouter 的早期历程可以说告一段落了，对吧？你显然可以聊聊早期的一些情况。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: Know now that let's let's call it the, you know, that the early journey of OpenRouter is done, right, you can obviously talk about some of the early days stuff.</p>
+</details>
+<p><strong>Alex</strong>: 额，我想说的是，我们当时遇到的最大质疑就是“大模型通吃”，也就是所有的价值……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Uh well I was going to say that like the the biggest objection we got is is big model win which is all the value...</p>
+</details>
+<p><strong>主持人</strong>: 缩放定律（Scaling Laws）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: Scaling laws.</p>
+</details>
+<p><strong>Alex</strong>: 对，缩放定律，还有自然的网络效应，最终都会汇聚到一家公司身上，形成类似谷歌式的垄断。就像谷歌以巨大的绝对优势赢得搜索引擎市场一样，而其他所有人基本上到头来只能去抢剩下的残羹冷炙。这大概是我们收到的最大质疑。</p>
+<p>很有意思的是，谷歌当年确实以如此巨大的优势赢得了搜索引擎这场竞赛。我觉得，如果当年有更多有趣的基准测试，或者如果搜索引擎更像大语言模型（LLM）那样，被人们看作是一种可以在其之上构建公司的底层服务，那结果可能就不是现在这样了。</p>
+<p>但 LLM 不仅仅拥有一个用户界面，它们还是一种构建全新业务的方式。如果出现一个谷歌级别的垄断者，其规模可能就像是荷属东印度公司放大一千亿倍甚至更多，因为整个经济体系最终都会依赖于这唯一的垄断者。所以如果真的发生那种情况，那简直是个非常疯狂的局面。而这其实也不太可能发生，因为打造具有竞争力的竞品，其经济学逻辑在本质上要分散得多。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Yeah, scaling laws, um and natural network effects are just going to kind of accrue to one company which will be like it'll be a Google-style monopoly, just like how Google won the search market, um by a large large margin, um and you'll just be fighting for it scraps at the end basically. That was probably the biggest objection we got.</p>
+<p>And it is interesting that Google won the the the search engine race with such a huge margin. Um, you know, I think like had there been more interesting benchmarks or had like search engines been, you know, a bit, you know, have people like seen them a little bit more like LLMs where they're services that you can build companies on top of, that might not have been the case.</p>
+<p>Um, but LLMs don't merely have a user interface. They're also like ways of building entirely new businesses. And you know a Google-level monopoly would be like the Dutch East India Company times you know quadrillion in magnitude, cuz the whole economy ends up like depending on the one monopoly as well. So it didn't seem like you know a like would be a really crazy outcome if that happened. And it's also less likely because the the economics of like creating good competitors are are much like much more decentralizable.</p>
+</details>
+<h3>实验室研究与工程落地之间的鸿沟</h3>
+<p><strong>投资人</strong>: Alex 说的完全没错，而我是从一个截然不同的角度来看待这个问题的……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>投资人</strong>: Everything Alex said is true and I came at it from a completely different perspective which is...</p>
+</details>
+<p><strong>主持人</strong>: 没错，这也是为什么我们今天聚在这里。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: Yes this is why we're here.</p>
+</details>
+<p><strong>投资人</strong>: 缩放定律在我看来从来都不是什么问题，反而是证明 OpenRouter 极具价值的一个“特性”（feature）而非“缺陷”（bug）。因为我是 Anthropic 最早期的投资人之一，对我以及我们朋友圈里的其他研究人员来说这是显而易见的。当年我读研究生学的就是机器学习，在机器学习圈子里有很多朋友，大家都很清楚“惨痛的教训”（The Bitter Lesson）是成立的。所以我当时就觉得，太棒了，现在至少有两个事实证明计算缩放是有效的：一个是 OpenAI，另一个是 Anthropic。</p>
+<p>等我们决定在 OpenRouter 上联手合作的时候，我已经投资了 Mistral、Black Forest Labs 和 Luma。因此我当时已经在与好几家模型公司和团队开展合作了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>投资人</strong>: Um the scaling laws were never like in my mind were always a feature not a bug for why OpenRouter would be very valuable, because I was one of the first investors in Anthropic and it was obvious to me that other researchers in our friends group... and I went to grad school for machine learning and I just had a lot of friends in the ML community who it was a very obvious to us that the bitter lesson holds. And so I was like oh like fantastic now we have at least two pro proof points that compute scaling works. It was OpenAI and Anthropic.</p>
+<p>Um, and by the time I think we decided to team up on OpenRouter, I had already invested in Mistral and Black Forest Labs and Luma. So there was multiple model companies and teams that I was uh working with.</p>
+</details>
+<p><strong>主持人</strong>: 但你投的是其他模态，而这里涵盖了不同的模态。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: But you did other modalities whereas this is different modalities.</p>
+</details>
+<p><strong>投资人</strong>: 没错。当时对我来说非常显而易见的是，一个由各种不同类型模型构成的生态系统正在形成。那种认为只会有一家公司像谷歌一样一统天下的末日论调……好吧，虽然有这种可能性，但首先我不相信它；其次，好几个不同的研究团队正在迸发出极富非凡创造力的创新。但我注意到所有这些团队面临的一个共同问题：往往这些研究团队在思考如何实现新能力方面极为出色，他们习惯于从“能力”的维度去思考，但完全没有“开发者思维”，不知道训练完成、模型权重检查点（checkpoint）出来之后该做些什么。</p>
+<p>你可能会感到震惊，Anthropic、BFL、Mistral 这些团队早期的预训练团队在把研究成果带出实验室、扩大影响力时的默认做法竟然如此相似——通常就是：“哦，检查点跑完了，包装成一个 API 发布出去，搞定。”然后接下来就是一片死寂。</p>
+<p>以 Claude 为例，第一个 Claude 模型的检查点其实在对外发布的一年之前就已经在内部完成了。后来 ChatGPT 横空出世，我们才决定：好吧，向外部公开发布一个 Claude 版本确实是个好主意。但他们根本没有任何计划，完全没有关于如何吸引开发者实际来试用的计划。如果你去看 Claude 1 的那篇博客文章，你会注意到他们列出了大约三个使用该 API 的开发者案例：一个是 Discord 机器人；第二个是我妻子 Vivian 的初创公司 Junior Learning；再就是 Notion 之类的。因为这些全都是 Anthropic 团队的朋友，这足以说明他们在模型训练完成之后“怎么把它推向世界”这件事上的规划是多么仓促和临阵磨枪。</p>
+<p>当时根本没有任何一个分发平台能够真正理解开发者的需求——所有的密钥管理、资源调配、简单易用的端点管理、版本控制等等，科学家和研究人员往往会觉得“那不过就是些管道修修补补的工作，我不关心细节”，对吧？</p>
+<p>而 Alex 恰恰是从开发者的角度切入这个问题的。所以对我来说显而易见的是，我投资的每一个实验室有时会投入数以亿计甚至数十亿美元去训练模型，接着跑出一个检查点，然后在开放早期访问时却无人问津，因为他们会意识到：“对哦，光凭一个检查点是很难做出任何东西的。”你实际上需要围绕它构建一整套完善的基础设施管道，才能让它真正被开发者使用起来。</p>
+<p>因此当时在我看来，在整个生态系统中建立像 OpenRouter 这样的分发平台是至关重要的，如果我们希望看到能够与谷歌抗衡的竞争局面出现的话。除非像谷歌 DeepMind 那样，训练完一个新的检查点后，他们只要按下一个按钮，就能立刻铺满他们所有的产品阵列，从 Google Docs 到……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>投资人</strong>: Exactly. And it was so obvious to me that an ecosystem of different kinds of models were being created, um and that this whole do narrative of like only one company will dominate like Google was... um well like may be true but one I don't believe that, but two there was so much extraordinary innovation happening across several different research teams. But the shared problem I was noticing across all of them was often, you know, the research teams were fantastic at figuring out how to reason about new capabilities, they think in terms of capabilities, but never like are not developer mindset oriented, like what happens after the training is done and the checkpoint comes out. Like you'd be shocked how how like similar the early pre-training teams at OpenAI... uh sorry Anthropic, BFL, Mistral uh were in in in their like default approach to taking their research out of the you know lab and kind of scaling their impact, which was often oh the checkpoint is done put it out as an API done, and then there'd be crickets.</p>
+<p>Um in in the case of Claude, the first Claude checkpoint, and it was actually done a year before they released it internally. And then ChatGPT came out and we decided, okay, yes, it's a good idea to to release a Claude version externally. And they had no plan, like no no no plan for how to get developers to actually try it out. And so if you go to the Claude 1 blog post, you'll notice they like three kind of developer examples for users of the API: and one is a Discord bot, and the second is Vivian my wife's startup called Junior Learning, because and then there was like Notion, um because these are all friends of like the Anthropic team. Because that's how like last minute the planning was around hey once the model's done training how do you get it out to the world.</p>
+<p>There was no distribution platform that understood what developers needed: all the the key management, provisioning, like simple like you know endpoint management, versioning control, like all these things that the scientists and researchers go, &quot;I mean that's plumbing, I don't detail, right?&quot; And instead, Alex came at it from that perspective.</p>
+<p>And so, you know, it was so obvious to me that like every single lab I was funding would would spend like literally sometimes billions of dollars into training and then a checkpoint would be done and there'd be crickets like doing early access cuz they're like, &quot;Oh, that's right.&quot; Like it's hard to use a checkpoint to make anything. You actually need a whole bunch of plumbing around it to make it usable by a developer. And so by the time I think we it was so obvious to me that a distribution platform like OpenRouter was critical to have in the ecosystem if we wanted there to be competition to Google. Like unless, you know, with Google DeepMind is done training a new checkpoint, and then they push a button and it gets blasted out across all their surfaces from Google Docs to you know...</p>
+</details>
+<h3>分发优势与中立平台价值</h3>
+<p><strong>主持人</strong>: 无处不在，哪怕你想躲都躲不掉……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: Everywhere even if I don't...</p>
+</details>
+<p><strong>投资人</strong>: 无处不在，包括你熟悉的安卓系统。一夜之间，他们就能把新的检查点部署到多达十亿台设备上，对吧？这种隐形的基础设施优势和分发优势，大多数人是没有意识到的。但在 OpenRouter 出现之前，作为一家模型实验室，你必须自己去思考这一切。而这非常令人望而生畏。</p>
+<p>在 Anthropic，我想我们花了超过 12 个月的时间才实现首个 1000 万美元的营收。相比之下，对于 Black Forest Labs（BFL），我还记得早期的时候，你们和 BFL 团队沟通，OpenRouter 当时轻描淡写地表示：“没问题，在你们上线当天，我们就能给你们送去 100 万名开发者。”你知道，这太不可思议了。这在赋能层面上完全是一次跃迁式的阶跃变化。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>投资人</strong>: Everywhere you want to know about like on Android like like overnight they can deploy a new checkpoint to like a billion devices right, and that invisible infra advantage distribution advantage most people don't realize. But until OpenRouter showed up, you had to think about all of that yourself as a model lab. And it was very daunting, you know, at Anthropic, I think it took more more than 12 months to get to our first 10 million in revenue. And in contrast with with Black Forest Labs, I remember the early days, you you guys had a conversation with the BFL team and uh it it was so simple for OpenRouter to say, &quot;Oh, no problem. Like the day you launch, we can send a million developers to you.&quot; You know, that that was crazy. That was like a step function change in in like power.</p>
+</details>
+<p><strong>主持人</strong>: 这是一个真实的数字吗？100 万？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: Is that a real number? Million.</p>
+</details>
+<p><strong>Alex</strong>: 我觉得今天大概是这个量级吧。今天 OpenRouter 上有多少开发者？超过一千万了，但要统计准确很困难，我们做了很多账号去重的工作，但你知道……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: I I I think today it's like million. How many developers are on OpenRouter today? We over 10 but over 10 million but um but like it's it's hard to I don't know how to we do a lot of like you know account deduplication work but you know no one...</p>
+</details>
+<p><strong>投资人</strong>: 退一步讲，哪怕你能让 1000 名开发者在发布的第一天真正去尝试这个模型、发起推理并给你反馈，那也比他们凭自己能力所能触达的开发者多了整整 1000 人。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>投资人</strong>: If you could get a thousand developers, just to put in context, if you get a thousand developers to actually try the model on day one after you release it and just like do inference and give you feedback, that's a thousand more developers than they knew how to get to on their own.</p>
+</details>
+<p><strong>主持人</strong>: 当然，BFL 本身也是很有声誉的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: Well, you know, BFL had a reputation.</p>
+</details>
+<p><strong>Alex</strong>: 是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Yes.</p>
+</details>
+<p><strong>主持人</strong>: 他们凭借 Stable Diffusion 积累了极高的知名度。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: They had one with Stable Diffusion.</p>
+</details>
+<p><strong>投资人</strong>: 没错。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>投资人</strong>: Yeah.</p>
+</details>
+<p><strong>投资人</strong>: 还有 Mistral，不知道你们记不记得，他们发布的第一个模型检查点是用种子（Torrents）发布的，就像发布 BT 种子权重一样。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>投资人</strong>: And with Mistral, uh I don't know if you guys remember, but the first checkpoint they they released was like torrents. It was like torrent weights.</p>
+</details>
+<p><strong>Alex</strong>: 对，他们直接贴了个磁力链接（magnet link）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Yeah. They just put up a magnet link.</p>
+</details>
+<p><strong>投资人</strong>: 是的，当时连 API 都没有。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>投资人</strong>: Yeah. There was no API.</p>
+</details>
+<p><strong>主持人</strong>: 因为他们并不是为普通人构建基础设施的，就好像在说：“好了，下载这些权重吧，你们自己去玩吧。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>主持人</strong>: Cuz they didn't they weren't in for people, you know, like, okay, download these weights and you guys go.</p>
+</details>
+<p><strong>Alex</strong>: 他那边确实有这样的故事。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: He has a story on his side. Yeah.</p>
+</details>
+<p><strong>Alex</strong>: 除了围绕模型构建出色的开发者体验之外，我们针对不同模型所做的市场推广，与模型实验室自己做的推广无论在形式上还是用户感知上都是截然不同的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Yeah. I I mean in addition to the like building a really good developer experience around it, the marketing that we do uh like for different models is totally different and perceived totally differently from the marketing that a model lab does for itself.</p>
+</details>
+<p><strong>投资人</strong>: 确实。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>投资人</strong>: Yes.</p>
+</details>
+<p><strong>Alex</strong>: 我们就像是一个中立层。在这个市场上，现状就如同一间漆黑的大房间，屋里的所有角落对用户来说都是完全模糊不清的。用户走进这个房间，四处摸索，试图弄清楚该从桌子上抓取什么物体来构建自己的公司。这是一种极其疯狂的工作方式。</p>
+<p>模型不是普通产品，你不能简单地把它们所有的功能特性一条条列在网页上。它们全部都是黑盒子，即便是开源权重的模型也不例外。所以，你必须照亮这个房间的所有角落，让人们看清楚到底是什么让这个模型脱颖而出。而且，手持手电筒去照亮房间的公司必须是一个中立的第三方，这正是我们所擅长的。因此，除了开发者体验之外，这里还有一个非常重要的……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: We are like a, you know, neutral layer looking at this market like it's a big dark room with all the corners completely obscure to users and users were walking into the room and like feeling around and trying to figure out what objects to grab off the tables and like build into uh their companies. It's an insane way of working. Like models are not products where you can just enumerate all their features onto a web page. They're all black boxes, including the openweight ones. So, you need to like shine lights on all corners of this room um so that people can see what makes this model good. And you need the company shining that light to be a neutral third party, which is what we specialized in. So the like it's in addition to developer experience there's also like a very important like...</p>
+</details>
+<!-- chunk 4/11 -->
+<h3>模型的路由与发现：服务商的关键市场切入点</h3>
+<p><strong>Alex</strong>: ……营销和产品包装环节，以及模型路由与模型发现的机制，对于你作为基础设施提供商、模型实验室或推理部署服务商而言，都会成为未来进入市场的关键生命线。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: ...marketing and product packaging component and a way of like routing and discovering models becomes critical to your go to market as a provider or a model lab or a server tool and more in the future.</p>
+</details>
+<h3>风险投资人的认知盲区：“套壳”论调与工程复杂度的脱节</h3>
+<p><strong>Investor</strong>: 这正好呼应了你前面提到的点。关于很多风投（VC）……我最大的挫败感之一就是，很多风险投资人根本没有任何一线业务实操经验。不像那些踏踏实实做过业务的人，许多传统投资人一路顺风顺水，要么是从分析师干起做财务建模，要么就是已经脱离实际业务一线超过十年了——而这在当今行业里占了很大一部分。</p>
+<p>我当时刚在 Discord 负责平台业务大约一年，随后加入 a16z。所以我非常清楚打造真正的开发者体验到底面临哪些硬核挑战，也深知利用模型打造一个真正可运行的软件有多不容易。当时有几位投资人也在看 OpenRouter——这里我就不点名了——但我记得当时和他们交流时，在他们眼里，OpenRouter “不过就是个撮合市场（just a marketplace）”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Investor</strong>: And this value to your earlier point about how many VCs, you know... One of my biggest frustrations is venture capitalists, many of them just don't have any operating experience in the field, you know. So unlike a traditional investor who's just maybe come up through the ranks as an associate working on financial modeling, or maybe hasn't been a real operator in the field for more than 10 years—which is a big part of the industry now.</p>
+<p>I had just arrived at a16z like a year after running the platform [at Discord], and so I knew what the challenges were of building a real developer experience and actually being able to create a working piece of software with a model. And there were a few—I won't name names—but there were investors who were looking at OpenRouter and felt at the time, when I would compare notes with people, that it was just, quote, &quot;just a marketplace.&quot;</p>
+</details>
+<p><strong>Host</strong>: 对，“只是一层薄薄的壳，只是一个代理而已”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, just a thin layer, just a proxy, just...</p>
+</details>
+<p><strong>Investor</strong>: “不过是对别人 API 的包装器（wrapper）”。我当时心里就想：你们根本不知道 OpenRouter 创造的价值有多么具备战略意义！仅仅能在生产环境中稳定编排调度三个 API，背后所需的工程量和社区机制设计就已经极其惊人了。要想把这套系统真正上线、并在生产环境中支撑起 OpenRouter 团队早期就已经起步的那种高并发规模，这绝不是凭空就能自动实现的。</p>
+<p>这也是从最早开始 Alex 身上最吸引我的特质之一：他完全能够从系统工程的角度来理解问题，深谙如何让这些飞轮真正运转起来。早在我们还在 Discord 一起合作推进 NFT 集成时，我就从 OpenSea 的经历中见识到了这一点。Alex 拥有很多传统科学家和机器学习学者完全不具备的“社区与系统工程思维”。做机器学习的人往往只习惯于线性的思维方式：预训练（pre-training）、中训（mid-training）、后训练（post-training）……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Investor</strong>: ...a wrapper or whatever on other people's APIs. And I was like, you have no idea how strategic the value that OpenRouter has created by being able to orchestrate even three APIs in production. The amount of both engineering work and community design that goes into getting that actually live and running in production at the scale the OpenRouter team had started just doesn't happen by default.</p>
+<p>You know, and that was one of the things that stood out to me about Alex from the earliest days. He just understood from a systems perspective how you get these flywheels going. That stood out to me with OpenSea when we were working together on the NFT integration at Discord. Alex had a level of community systems thinking around how you get these flywheels going that most scientists and machine learning people just don't think of. We often think in terms of pre-training, mid-training, post-training...</p>
+</details>
+<p><strong>Host</strong>: 这是一种线性的阶段，一个线性的流水线，中间没有任何闭环反馈。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: It's a linear stage. It's this linear pipeline. There's no loop.</p>
+</details>
+<p><strong>Investor</strong>: 没错。直到很久之后，现代上下文反馈循环（context feedback loop cycle）才真正成为整个行业的标准范式。但如果你还记得的话，在当时，机器学习的研究模式完全不是这样的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Investor</strong>: Yeah. It wasn't until much later that the modern context feedback loop cycle really got standardized in the industry. But at the time, if you remember, machine learning was like...</p>
+</details>
+<p><strong>Investor</strong>: 当时我们在读研的时候，搞 ML 大多就是在笔记本电脑上跑跑。你下载一个数据集，跑几组消融实验（ablations），看着损失曲线（loss curves）降下来了，你就觉得自己搞出了 AI，大功告成了。至于把这些模型能力部署到真实生产环境、收集真实的反馈轨迹（trajectories），然后再把它们整合到一个持续迭代的闭环循环中——这种概念是极其滞后才出现的，而且它与传统的纯学术 AI 研究思维完全是反直觉的。</p>
+<p>我至今清楚记得在评估投资 OpenRouter 的阶段，我根本懒得花力气去教育其他 VC 为什么它绝不仅仅是一个简单的撮合市场。我想的是：去他的，我就是要投！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Investor</strong>: ...mostly we did a lot of ML, like when I was in grad school, on a laptop. So you just download a dataset, ran some ablations, and you looked at the loss curves and you're like, &quot;Great, I made AI.&quot; And the idea that you have to deploy those capabilities, collect feedback trajectories, then put those into a continuous loop came much, much, much later. And it was very counterintuitive to the traditional AI science mindset.</p>
+<p>I do remember during the investment phase for OpenRouter, I just didn't try and re-educate a bunch of other VCs on why it was not just a marketplace. I was like, you know what? I'm just going to invest...</p>
+</details>
+<p><strong>Investor</strong>: 我要抓住这个机会与 Alex 深度合作。如果其他投资人看不懂，那完全没问题，因为在当时，绝大多数投资人都觉得 OpenRouter 无非就是套在第三方 API 上的一个“包装壳（wrapper）”。这种论调让我极其愤怒。我当时心想：我没时间跟你们争论，我们要直接开枪注资。</p>
+<p>结果我记得大概一个月后，Menlo Ventures 的 Matt Murphy 进来，直接按我们估值的 10 倍进行了溢价追加投资。具体投后估值我记不太清了，但平心而论，Menlo Ventures 敏锐地意识到这里蕴含着极其巨大的战略价值。或许 Alex 你在幕后没有听到这些投资人圈子里的争论，但这当时真的让我非常抓狂。</p>
+<p>行业里充斥着关于“套壳（wrappers）”的高谈阔论：如果一个应用套了模型，就被贬低为“套壳”；OpenRouter 整合了多家 API，也被贬为“套壳”。这是最愚蠢、最简化的片面思维框架。能说出这种话的人，显然从未在生产环境中真正部署过任何哪怕一次系统。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Investor</strong>: ...and I'm going to take the opportunity to partner with Alex. And if no other VCs get it, that's totally fine, 'cause at the time it was not obvious to several other investors that OpenRouter was not more than just a wrapper around APIs. And that infuriated me. And I was like, you know, I don't have time to debate you, we're just going to invest.</p>
+<p>And then I think like a month later Matt Murphy marked it up by 10x our—I forget what the exact post-money was and so on—but to his credit, Menlo Ventures realized, okay, there's actually much more strategic value here as well. Maybe you didn't hear all these conversations behind the scenes, but that frustrated me a lot.</p>
+<p>There's a lot of this opining about wrappers. And if you're like, &quot;Oh, an app is just a wrapper on a model,&quot; and &quot;OpenRouter is like this wrapper on top of other APIs&quot;—this is the most stupid, reductive framework. It's clearly somebody who has no experience deploying.</p>
+</details>
+<h3>“万物皆套壳”的荒谬逻辑与工程交付的核心壁垒</h3>
+<p><strong>Host</strong>: 这就是人们用来贬低一切新事物时惯用的说辞，仿佛“万物皆套壳”，对吧？但现实是，很多所谓的“包装壳”具有不可替代的真正价值。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: It's the thing you dismiss other things with, like, &quot;Everyone's a wrapper on everything,&quot; right? And at some point, some wrappers have value.</p>
+</details>
+<p><strong>Investor</strong>: 照这么说，风险投资人也不过是站在有限合伙人（LP）资金之上的“包装壳”而已。往底层看，从头到尾大家都是一层层的抽象和包装，一直套到最底层的裸机硬件（bare metal）为止。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Investor</strong>: I mean, investors are wrappers on LPs, right? Like venture capitalists. So I mean, yeah, it's all wrappers down—all down to bare metal, I guess.</p>
+</details>
+<p><strong>Host</strong>: 当我在 2023 年首次提出并定义“AI 工程师（AI Engineer）”这个概念时，遭遇的第一大阻力和质疑就是：“这根本没有任何技术价值，你们应该去做真正训练模型的事才对”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: When I started the whole [AI] Engineer—I guess the coining in 2023—that was the number one pushback, is that &quot;This is no value. You should actually just train models, right?&quot;</p>
+</details>
+<p><strong>Host</strong>: 毫无疑问，你们就是最好的明证之一：不仅能够构建出极具商业价值的“包装层与集成系统”，同时也能反哺并打造出极其强大的模型企业。</p>
+<p>很多人根本无法想象这有多难：每当业界发布一款重磅新模型，当天 OpenRouter 就能第一时间上线该模型的接入端点，并且往往在第一天就冲上 Hacker News 榜首。人们根本无法理解要做到这一点背后需要付出多么巨大的工程心血。而 OpenRouter 一次又一次地做到了这点。我每次看到都会感叹：大家真的对这背后的硬核难度一无所知。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And yeah, I mean, obviously you guys are one of the testaments to the fact that you can actually build very valuable wrappers, but also very valuable model companies.</p>
+<p>It's so hard to be... the day a model launches, the fact that you have an OpenRouter endpoint for that model frequently at the top of Hacker News on day one—people don't realize the amount of work that goes into accomplishing that. And OpenRouter did that over and over again. And I remember going: people have no idea how hard that is.</p>
+</details>
+<p><strong>Host</strong>: 没错，我们之前深入报道过 BaseTen 等团队在推理工程（inference engineering）背后所做的一系列深层工作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah, we've covered some of the inference engineering that goes behind some of that with Baseten and all those.</p>
+</details>
+<p><strong>Host</strong>: 如今大家每天都能看到各种酷炫的代号，大家都在兴致勃勃地猜测“Oxy Alpha”或者其它新模型到底是什么。但我想追问的是：在最初没有任何资源的时候，你是如何启动最初那个冷启动飞轮的？因为今天的 OpenRouter 拥有庞大的规模、顶级的行业声誉，自然能够带来巨大的分发优势；但在最初起步、最艰难的时刻……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Well, today you have all those cool code name things, and people guess what &quot;Oxy Alpha&quot; is and all those things. But I guess one of the things that you're teasing is: how do you get that initial flywheel going, right? Because today you have your scale and your reputation, all these things, so obviously you drive immense distribution. But when you're early on, when it's most...</p>
+</details>
+<p><strong>Host</strong>: 冷启动阶段。是的，最初的启动到底是什么样子的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: The bootstrap, yeah. How—what is the bootstrap like?</p>
+</details>
+<h3>冷启动经验溯源：从 Discord 与 Axie Infinity 的社区运营中突围</h3>
+<p><strong>Alex</strong>: 这得把记忆拉回到早期的 Discord 时代。从技术上讲，这其实是 OpenSea 时期的故事。我们最初建立联系，是在你还在 Discord 任职的时候，当时我们经常聊到 Axie Infinity 的官方 Discord 服务器。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: I mean, to bring it back to early Discord days. I think we initially connected—this is an OpenSea story technically—but we initially connected when you were at Discord and we talked about the Axie Infinity server.</p>
+</details>
+<p><strong>Investor</strong>: 是的，没错。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Investor</strong>: Yes. Yes.</p>
+</details>
+<p><strong>Alex</strong>: 那个服务器在当时绝对是整个 Discord 平台上规模最大的服务器。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: This server was like the biggest server at the time at Discord.</p>
+</details>
+<p><strong>Investor</strong>: 确实是那样。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Investor</strong>: That's right.</p>
+</details>
+<p><strong>Alex</strong>: 当时服务器人数一直在冲破上限，你们在后台不得不一遍又一遍地帮我们手动调高人数配额。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: And you were kind of like constantly bumping up the limit.</p>
+</details>
+<p><strong>Investor</strong>: 调高服务器人数上限。可能很多人不知道，当时菲律宾大概有 10% 的人口都在那个服务器里。我也一直在那个服务器里面看着。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Investor</strong>: The limits on the server—for those who don't know, like 10% of the Philippines was actually on that server. I was on that server.</p>
+</details>
+<p><strong>Host</strong>: 那是加密游戏史上一次意义重大的贡献。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: It was like a meaningful crypto game. But...</p>
+</details>
+<p><strong>Host</strong>: 类似于某种宝可梦养成孵化游戏。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: There's like a Pokemon breeding thing.</p>
+</details>
+<p><strong>Alex</strong>: 机制很像。里面有宠物对战、宠物繁殖孵化，还有一个专门用来挂牌交易的撮合市场。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Similar. Yeah. There was battling, there was breeding, and then there was a marketplace for trading...</p>
+</details>
+<p><strong>Host</strong>: 而且还具有“Play-to-Earn”（边玩边赚）的属性。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Play-to-earn as well.</p>
+</details>
+<h3>扎根社区洞察真实痛点：从模型被拒到自定义能力的破局</h3>
+<p><strong>Alex</strong>: 没错，Play-to-Earn。游戏的画风非常可爱有趣，玩家培育出自己的 Axie 宠物后，往往会产生深厚的情感羁绊。</p>
+<p>要想从零启动这样一个繁荣的社区——在 OpenSea 早期阶段，我们为几乎每一个新生项目搭建交易市场时，都必须把这个流程完完整整走一遍。我们必须百分之百确保：社区用户是真的渴望并需要这个产品。这本质上就是先做出用户真正想要的东西，然后再去向他们推介。你当然可以通过一对一私聊的方式去做，但如果你深入到一个大家可以同时跟你无障碍交流的活跃社区里，你的杠杆率和影响力会呈几何级数放大。</p>
+<p>所以我们投入了海量的时间和精力，专注去打造社区真正急需的功能。在做 OpenRouter 时，我们完全复用了这套打法。Axie 社区只是我们深度运营的无数个社区中的一个。当时你之所以能亲眼目睹我们的进展，是因为整个 Discord 频道里到处都在疯狂转发 OpenSea 的链接。普通用户自发且持续地分享产品链接，是判断某件事是否真正爆发、是否至关重要的最明确信号。</p>
+<p>因此，我们花了大量时间去寻找技术与现实需求之间的断层：人们真正在乎的技术空白到底是什么？当前最迫切需要被解决的核心痛点是什么？</p>
+<p>在 LLM 的早期阶段，最大的痛点其实非常具体：比如 OpenAI 的模型经常中途拒绝回答，或者无法完整执行并结束 Prompt 给出的复杂任务；另一个痛点则是用户完全无法针对模型进行自主定制。</p>
+<p>在当时，很多活跃的开发者社区完全被这两个硬核问题给死死卡住了。而这类遭遇根本性技术瓶颈的垂直社区，恰恰是最值得我们深入潜伏、倾听学习并全力挖掘的宝库。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Yeah, play-to-earn. And the graphics were really cute and fun, and you get kind of emotional about your Axie that you make.</p>
+<p>So to start a community like that—which we had to do many times at OpenSea with basically every early project for us to create a marketplace for it—we need to make sure that the community actually wants it. And it's kind of like building something that people want and going and telling them about it. You can do that on a one-on-one basis, but it's way higher leverage to do that in a community where everyone can talk to you at the same time.</p>
+<p>So we spent a lot of time building things that the community really wanted. We did the same thing for OpenRouter. The Axie community was one of a zillion communities we did that with. And you saw us doing it because you could just see people sharing OpenSea links constantly in that Discord. Users sharing links is a really clear indicator that something important is going on.</p>
+<p>So we spent a lot of time first figuring out what the gap is in the technology that people care about—like, what was the actual problem that needs to be solved. In early LLM days, it was OpenAI refusing to finish the prompt or complete the task. It was also the inability to customize models. And so there are communities that are just completely blocked on that issue, and those are the communities that are most useful to sort of learn about, dive into, and explore.</p>
+</details>
+<p><strong>Investor</strong>: 听到你刚才讲的这番话，勾起了我当时特别深的一个触动。你可能已经不记得了，但我清楚地记得当时我们经常开着 Zoom 一起开工冲刺……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Investor</strong>: Something that really struck me at that time, as I was just hearing your talk... I remember noting how—you may not remember this, but we had these working Zoom calls that we were doing a sprint...</p>
+</details>
+<!-- chunk 5/11 -->
+<h3>OpenSea 与 Discord 的集成争议：用户体验优先</h3>
+<p><strong>Discord 平台负责人</strong>：当时我们正在推进 OpenSea 与 Discord 的集成。那次会议有我、我的工程团队，我记得你当时也在场。我印象非常深刻的是，在其中一次通话的进行过程中，原本全场陷入了一片沉默。在此之前，我们大家差不多都在想：“哦，对，这完全说得通，就这么干吧。”大家都达成了一致。然而 Alex 突然说：“不，在我看来这根本讲不通。”我记得当时大家都很震惊，心里直犯嘀咕：“什么？为什么行不通？”因为在技术逻辑上它确实是跑得通的：用户点击一个链接，然后页面就会把用户跳转导流到外部的 OpenSea。但 Alex 却明确表示，这样的用户体验并不好，我们绝不应该这么做。我记得在场所有人里，他是唯一一个真正举手提出异议的人。确实，从纯技术实现的角度来看，这完全讲得通，无非就是把用户导向 OpenSea，这在当时也确实满足了双方产品经理在需求文档上打钩的标准。但 Alex 更进一步，他指出这种做法根本不利于用户体验。而且当时通话里有我们团队的大约七个人，大家周复一周地开会讨论，却没有任何一个人提出过这一点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Head of Platform at Discord</strong>: ...around for like this OpenC integration with Discord. Um, and you know, we we'd get it would it was myself, my engineering team, I think you were there. And I remember, you know, um, Alex in the middle of one of those calls just like there was like silence, uh, you know, we were we all like, &quot;Oh, yeah, this totally makes sense. Let's do this.&quot; And then there's some like everybody aligned and Alex was like, &quot;No, this makes no sense to me.&quot; And everyone's like, I remember going, &quot;What? What?&quot; Like that it works. like you click on a link and this then it bounces you out to like open C and he was like it's not a good user experience. Yeah, we should not do this. And I remember going, you know, he was the only one person out of all of us to actually raise his hand and go, yes, it made sense from a technical implementation perspective, like we were bouncing the user out into the into OpenC. And so it kind of checked the box of the product manager requirements on both sides. But Alex went one step further and was like, you know... And not one person on the call, like seven of us who had met like, you know, week after week.</p>
+</details>
+<p><strong>主持人</strong>：而且提出这个意见的，还是那个根本不在 Discord 工作的人。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And it's the guy who doesn't work for Discord.</p>
+</details>
+<p><strong>主持人</strong>：按理说，把用户跳转导流到外部，在商业利益上其实是对你们有利的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Like technically you benefit if they bounce.</p>
+</details>
+<p><strong>Discord 平台负责人</strong>：没错！从利益对立的角度来看，如果强行把用户留在 Discord 内部，反而对 OpenSea 是不利的。然而 Alex 却把纯粹的用户体验置于首位。当时我就觉得，这个人真的很特别。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Head of Platform at Discord</strong>: Exactly. And that was like adversarial to keep the user inside of Discord would be adversarial to OpenC. And yet Alex put that user experience first. And I was like, that's special.</p>
+</details>
+<p><strong>主持人</strong>：哇。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Wow.</p>
+</details>
+<p><strong>Discord 平台负责人</strong>：因为要找到一个既具备像 Alex 这样深厚的技术功底、理解底层开发者工作流，同时又极其深刻地理解什么是最佳用户体验并坚决将其置于优先地位的人，是非常罕见的。这就像是飞轮的两翼，一旦你能让它转动起来，往往就会爆发出难以阻挡的巨大势能。你刚才的话也提醒了我，那确实是让我醍醐灌顶的时刻之一，我意识到自己在用户体验方面必须做得更好，因为本该是由我最先提出这一点的，但我却没有想到，我是向你学习到的。我记得后来这个案例甚至被收录进了我们内部面向产品经理（PM）的培训教材中。我不知道现在它还在不在里面，因为……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Head of Platform at Discord</strong>: Cuz it's very hard to have somebody who's technical like Alex and understands the developer flow, but also understands the best user experience and wants to prioritize that. And that's two sides of the fly. that you can get spinning like is often hard to stop and you just reminded me like that one was one of those moments where I go I went I realized I got to be better at user experience cuz I should have been the one who came up with that and I didn't and I learned from you and um I think that went into one of our case studies for the PM training program at this I don't know if it's there because</p>
+</details>
+<p><strong>主持人</strong>：因为必须得出一个“Alex 式”的结论。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: you need an Alex conclusion</p>
+</details>
+<p><strong>Discord 平台负责人</strong>：对，没错，你确实需要一个 Alex。这也是为什么大家完全不应该对 Stripe 决定收购 OpenRouter 感到意外。因为这代表着一种极其罕见的人才能力组合：既深度理解机器学习（ML）社区，又精通开发者体验，同时还对终端用户体验了如指掌。将这一切融合在一起，才造就了如今这种非凡的业务规模，而在过去的五年里，几乎没有任何其他平台交易市场能够达到这样的成就。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Head of Platform at Discord</strong>: yeah yeah you need an Alex and and this is why I'm not you know nobody should be surprised why Stripe decided like they had to buy open router because it's a really rare combination of people who understand the machine learning community, the developer experience and the end user experience and putting all that together has resulted in this extraordinary scale that very few other marketplaces have been able to achieve over the last you know 5 years.</p>
+</details>
+<h3>从 Window AI 到 OpenRouter：自带模型实验与开发者生态</h3>
+<p><strong>主持人</strong>：是的。关于收购的其他原因，我们稍后也应该好好聊聊，毕竟你也写过相关的文章。不过，我想尽量按照时间顺序来梳理。这里有一个问题，是来自 HFZ 的 Dave 提出来的，他问：“你是什么时候意识到这个方向真正开始走通、开始奏效的？”你之前提到了 Mix Draw，不知道你现在愿不愿意聊聊这个。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. Well, we should talk about the other reasons for acquisitions uh which you've written about. Uh I want to sort of proceed somewhat chronologically as well. So that there there is a point that you know one of the questions that uh Dave from HFZ sent in was when did you know it start really started to work and you brought up Mix Draw I don't know if you want to bring up that.</p>
+</details>
+<p><strong>Alex</strong>：好啊。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Oh yeah</p>
+</details>
+<p><strong>主持人</strong>：这显然与你的经历有重叠。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: which obviously you overlap with so</p>
+</details>
+<p><strong>Alex</strong>：是的，其实我很难界定具体是哪一个具体时刻让我觉得“噢，这在官方层面上终于开始走通了”。它更像是一个在极早期就不断持续积累势能的过程。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: yeah thee was I don't know when I mean the there's no like one moment where I was like oh this is you know officially starting to work. It was like moment increasing like really super early on.</p>
+</details>
+<p><strong>Alex</strong>：在创立 OpenRouter 之前，我当时其实是想探索一个关于“自带模型”（Bring Your Own Model）的实验，呃……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Oh yeah. Well, yeah. So, before open router, I wanted to like explore a bring your own model experiment and um</p>
+</details>
+<p><strong>主持人</strong>：熟悉加密货币圈子的人都知道像 Phantom 钱包这类的工具。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: anyone familiar with crypto is like you know phantom and all these things.</p>
+</details>
+<p><strong>Alex</strong>：没错，就是那样。所以当时我觉得，做一个针对人工智能领域的 MetaMask 类比工具，会是一个非常有趣的探索方向。而在那个时期，市面上几乎根本没有任何真正意义上的 AI 应用。当时通过 API 调用大语言模型（LLM）的 AI 应用数量，可能跟直接用 JavaScript 写网页小游戏的差不多。基本上，在那个特定的时间节点上，原本完全存在这样一种可能性：所有的 Web 应用都通过浏览器直接调用大语言模型，也就是通过某种由用户在本地桌面端掌控的受管应用来进行调用。当然，我认为后来这种模式之所以没有普及开来，背后有许多复杂的原因。但在当时那个行业尚处于原始萌芽的阶段，我编写了一个名为 Window AI 的 Chrome 浏览器插件。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Yeah. Yeah. So, it felt like doing a meta mask analogy for AI would be kind of a fun way of exploring that. And at the time there were no AI apps. There were probably as many AI apps that were like hitting AI via like hitting an LLM via an API call as there were like games just doing it in JavaScript. You basically like there there was a there was a moment in time where it could have been the case that web apps call LLM through the browser like through some kind of desktop managed app that is controlled by the user. Um, and of course there are like I think many reasons that that did not happen, but back when the when the days were that primordial. I built a a a Chrome extension called window AI and</p>
+</details>
+<p><strong>主持人</strong>：那是基于 Plasmo 构建的，我早期接触过它，当时我还在想：究竟会有谁真正去用这玩意儿呢？结果你用了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: with plasma which I had come across early on and I was like who's going to actually use this? You did</p>
+</details>
+<p><strong>Alex</strong>：Plasmo 当时其实已经有几个用户了，我想 Phantom 钱包当时就在用它。嗯，基本上还有其他一些正规公司在采用。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: plasma had a couple like I think Phantom was using it. Um, there were some other like like real companies basically</p>
+</details>
+<p><strong>主持人</strong>：它就像是专门为 Chrome 插件打造的 React 框架，能编译成各种格式，有点类似于浏览器插件领域的 Next.js。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: react for Chrome extension. It compiles to all these kind of like Nex.js for</p>
+</details>
+<p><strong>Alex</strong>：对，我就是基于它构建了 Window AI。后来，Plasmo 的创作者开始在 GitHub 上向 Window AI 贡献代码，而那个人正是 Louis Vichy，他也就是后来 OpenRouter 的联合创始人。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: and yeah built window AI on top of it. The creator of plasmo like started contributing code to window AI and uh in GitHub and that turned out to be Lewis Vichy who is the co-founder open router.</p>
+</details>
+<p><strong>主持人</strong>：原来如此，你曾经告诉过我，这就是你最初结识 Louis 的经过。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: That's you have told me this is how you met Lewis.</p>
+</details>
+<p><strong>Alex</strong>：是的。Window AI 允许用户在浏览器中自主配置他们希望用于网页交互的模型，当应用需要执行任务时，直接在前端调用对应的模型即可。你知道，事后看，这种形态对于大语言模型来说并不是最合适的产品形态，但那是一个极具价值的探索性实验。在这个过程中我学到了非常多东西，后来我也把它开源了。从中我们得到的最核心教训就是：这必须以 API 的形态存在，而且必须提供更加完善的开发者体验，同时也需要有更加健全的模型发现机制。因为用户往往根本不知道该去哪里使用这些模型，而一个小小的 Chrome 浏览器插件根本无法承担起发现的重任——插件弹窗的界面面积太局促了，空间远远不够。我需要更大的展示空间，需要直观的可视化图表、性能对比、真实案例、图像演示，需要让无论是人类开发者还是智能体（Agent），都能够在此自如地探索和选择。OpenRouter 正是在这样的思考和背景下应运而生的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Yes. Okay. So, um, that that allowed users to kind of like configure which model they wanted to use for a web page in their browser and then like the the app would just call out to that model when it needed to do things. You know, not the right form factor for LLMs, but you know, it's like fun experiment. you learn a lot and like I you know open sourced it and uh and you know the main learning is like okay this has to be an API and it has to look a little bit like there has to be more of a developer experience here and more of a discovery experience as well like I don't know where to use these models and a little Chrome extension is not going to help me discover it's not enough real estate I need more space I need visuals I need graphs I need you know examples I need images I need to like I need to be able to like explore both as a human and as an agent. So that's kind of how how open Rider came to be.</p>
+</details>
+<h3>Web3 作为生成式 AI 的预演：Discord、Axie 与 Midjourney 的爆发</h3>
+<p><strong>Discord 平台负责人</strong>：说到这里，还有一个更高维度的观点值得一提。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Head of Platform at Discord</strong>: You know, a meta point that</p>
+</details>
+<p><strong>Discord 平台负责人</strong>：我认为这个观点在业界并没有得到充分的重视和理解，但 Alex 刚才的一番话提醒了我：在那个时期，我们能够如此紧密地紧邻加密货币与 Web3 社区，其实是一件极其幸运的事。因为事后回过头来看，加密货币热潮在某种程度上宛如生成式大模型爆发前夕的一场“带妆彩排”。如果你回想一下当年 Axie Infinity 所经历的火爆盛况——Alex 说得完全没错，当时市面上根本没有几个真正的 AI 应用。而我当时的工作职责是担任 Discord 的平台负责人，这意味着我们需要把 Discord 打造成一个通用的平台底座，供各个社区、好友关系链以及外部开发者构建能够在整个 Discord 生态中分发部署的应用程序、机器人以及各类服务。在那个时期，我们团队大约 80% 的精力都扑在加密货币生态上，因为当时几乎所有 NFT 的交易活跃度和讨论流量全都汇聚在 Discord 里。但是，我当时还留了大约 20% 的时间，花在了一位好友身上。我们经常一起吃火锅，周末还会聚在一起打《万智牌》（Magic: The Gathering）。当时，他正在埋头开发一个轻量级的 Discord 机器人，这个机器人能够接收一行文本提示词并将其转化成精美的图片——那个项目就是后来的 Midjourney。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Head of Platform at Discord</strong>: I think is underappreciated, but Alex is reminding me is that we were quite lucky that we were so we were like adjacent to the crypto community in those days because in hindsight, crypto ended up being kind of like a dress rehearsal for generative models, right? If you if you think about the the AXI experience, uh you know, Alex is totally right. There were not that many AI apps at the time. And while I was dealing, you know, my job was to be the head of platform at Discord, which meant to be a general purpose place for communities and friends to create uh for developers to create apps and bots and you know, other services that could be deployed across Discord. And while 80% of the attention of the time was being spent on crypto because that's where all the NFT volume was, there was like 20% of my time of my time I was spending with a friend u who would get hotbot with me and ask me for we would play Magic the Gathering on weekends. Um and he was working on a little Discord bot that could take a text input and turn it into an image and it was called Midjourney.</p>
+</details>
+<p><strong>主持人</strong>：那位朋友就是 David 吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: You know, was that David?</p>
+</details>
+<p><strong>Discord 平台负责人</strong>：没错，就是 David Holz。他是我的挚友，而且在涉足这趟浪潮之前，我和 David 都是上一轮 AR/VR 领域的创业失意者，都在那个赛道经历了折戟。我至今记忆犹新的是，在 Axie Infinity 的热度逐渐见顶回落之后，Midjourney 迅速成为了我们平台上增长最为迅猛的社区之一。非常幸运的是，我们当初为了应对 Axie 爆炸级流量而构建的许多技术抽象层以及底层基础设施扩容决策，在关键时刻发挥了至关重要的作用。因为 Axie 的热度就像坐过山车一样冲上顶峰后迅速断崖式暴跌，而就在 Midjourney 开始全面腾飞的关头，我们明确作出了一个战略决策：全力协助 David，将 Midjourney 官方服务器打造成用户与该模型进行核心交互的主阵地。因为我们敏锐地发现，对于普通大众而言，如果他们无法在公开场景中亲眼目睹其他人是如何与模型互动并模仿学习提示词，他们根本很难理解究竟该如何使用这样一个前沿的 AI 模型。当时 Midjourney 独立的单人网页版产品（midjourney.com）的用户留存率极其糟糕，因为新用户打开网页后，映入眼帘的就只有一个空荡荡的输入框——有点像 DALL-E 2 那样——他们通常随手敲入一个诸如“猫”或者“狗”之类的简单词汇。面对这样一块必须由自己从零填补的纯白画布，从未接触过 AI 模型的普通用户会感到无所适从、甚至产生思维瘫痪。然而在 Discord 服务器的群聊环境中，情况发生了翻天覆地的变化：你能实时看到其他用户输入了什么天马行空的提示词，并在其创意基础上顺势即兴发挥。这种社交化的激发机制让用户参与度和互动率直接飙升爆表。于是，我们一路支撑着 Midjourney 从零起步，一路扩容到千万级的庞大规模……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Head of Platform at Discord</strong>: That was David Holtz. He was a good friend and David and I have both been sort of failed ARV VR founders, you know, in the last before that. And um I remember this you midjourney was one of the fastest growing communities we had after axi infinity started to peter off and many of the the like the abstractions and the infrastructure decisions we made to scale Axi happened just in time because you know Axi did this and then fell off a cliff and then as Midjourney was taking out we like explicitly decided to help David make the server the midjourney server as the primary place for interaction with the with the model because it was very hard for people to understand how to use the model if they couldn't see other people using it and copy them. And so the single player Midjourney web app on its own like majour.com had like terrible retention cuz people would show up they'd see this empty field. It's kind of like Dolly 2 um and they would type in like cat or dog and it was like paralyzing for them to have this blank canvas that they had to fill because they never used an AI model before. but instead in a discord server you could see other people using it and riff off of their prompts and the engagement was off the charts and so scaling you know midjourney from zero to like 10</p>
+</details>
+<!-- chunk 6/11 -->
+<h3>Web3、RLHF 反馈循环与早期 AI 应用的土壤</h3>
+<p><strong>Speaker A</strong>: ……上百万的月活跃用户，在 Axie Infinity 之后算是一种平稳得多的增长路径，因此……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: million monthly actives was a much smoother approach post Axie Infinity and so</p>
+</details>
+<p><strong>Speaker B</strong>: 别忘了还有四选一的图片机制，这本质上就是一种反馈循环，也就是人类反馈强化学习（RLHF）的反馈循环。顺便提一句，在私下里，Tom Brown、David 和我过去经常在周末一起玩《万智牌》（Magic: The Gathering）。我们其实就是同一帮常聚在一起的朋友，所以这些前沿概念在当时一直被大家热烈讨论。但在我看来，当时能够跨越加密货币世界和 AI 世界的人其实屈指可数。相比于在加密领域人们总是在追问“这项技术的实际落地场景究竟是什么”，在 AI 领域却从来不需要提出这种疑问。因为它的应用场景是如此直观而强烈——那种感觉就像是我现在可以创造出任何我能想象出来的东西，我可以写小说，我可以写代码。而我们当中那些深信加密货币分布式系统价值（比如抗审查特性）的人，突然发现了一个具有爆发性增长潜力的实际应用场景。我认为在 Midjourney 崛起的那段时间，大家都知道，Claude 在正式对外发布前其实是一个 Discord 机器人，我们内部就一直在把它当作 LLM 来使用；ElevenLabs 也有一个文字转语音（TTS）模型，当时我们也把它接入了 Discord。Discord 俨然成了早期应用进行创新的培养皿。在 OpenRouter 为全世界提供一个公共平台或应用商店之前，它们选择在那里扎根绝非巧合。Discord 就像是一个依托于庞大社群、自然孕育出应用雏形的实验场。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: don't forget the best of four pictures, which is the feedback loop, the RLHF feedback loop. Which, by the way, separately like Tom Brown, David, and I used to play Magic: The Gathering on weekends, and so it was one group of friends would hang out. These concepts were all being discussed all the time. But you know, I think there were few of us who bridged both the crypto worlds and the AI worlds. And compared to crypto, where the question was always &quot;what's the use case for this technology?&quot;, there was never any need to ask that for AI, because the use case was so visceral. It was like: I can create now anything I can imagine, I can write novels, I can code. And the infrastructure that those of us who believed in the distributed systems value of crypto—like the censorship resistance part—found this use case that was explosive. And I think between Midjourney... Claude was a Discord bot pre-launch that we were using internally as an LLM; ElevenLabs had a TTS model that we had on Discord as well. Discord became this petri dish for early apps to innovate. And I don't think it's a coincidence that they found a home there before OpenRouter gave the world a public home store or storefront. Discord was this petri dish storefront that had kind of piggybacked on the...</p>
+</details>
+<h3>为什么 OpenRouter 不能只做一个 Discord 机器人？</h3>
+<p><strong>Sean</strong>: 那么我的问题来了：在我的印象中，OpenRouter 并不是以 Discord 为核心的，对吧？虽然你们也有一个 Discord 社区……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: So then my question is: how come you were... my perception is OpenRouter is not that Discord-centric, right? You have a Discord...</p>
+</details>
+<p><strong>Speaker B</strong>: 对。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah.</p>
+</details>
+<p><strong>Sean</strong>: 你们用它来与社区互动，但它不像 Midjourney 那样——对 Midjourney 而言，Discord 就是人们体验该产品的核心方式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: And you use it to engage your community, but it's not like Midjourney where that is like the primary way people experience OpenRouter.</p>
+</details>
+<p><strong>Speaker B</strong>: 是的。对于 Midjourney 来说，通过视觉呈现能让人极其迅速地看清其他人是如何使用该模型、如何撰写提示词的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah. Midjourney, like it really helps to see visually really quickly how people are using the model and how to prompt it.</p>
+</details>
+<p><strong>Sean</strong>: 我觉得这也正是为什么 Discord 服务器对他们如此关键的原因。它本身就是用户体验的一部分，甚至极大地增强了这种体验。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: And I think that is partly why the server was so critical. It is the user experience. It actually adds a ton.</p>
+</details>
+<p><strong>OpenRouter 团队</strong>: 没错。在 Midjourney 上，你完全可以在其 Discord 服务器里走完整套流程：输入提示词、生成图片、分享图片并获得乐趣。但对于大语言模型（LLM）以及 OpenRouter 而言，你必须围绕 LLM 构建大量的配套用户体验，才能让它们真正变得好用。而且，在文本模型中去看别人的示例并没有那么实用，因为需要阅读海量的文字，非常耗费时间。此外，你还需要代码库级别的集成，而这在 Discord 服务器里是根本无法实现的——或者严格从技术上说或许可行，但我得承认，那绝对不是一种优秀的开发者体验。一旦你接入了代码库，你就必须面临治理问题：如何管理有权限访问它的 LLM、如何制定数据合规策略、如何分配不同团队的权限等等。所有这些需求都远远超出了一个 Discord 服务器所能承载的范围，所以它根本就不是一个合适的平台……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>OpenRouter Team</strong>: Yes. Um, and you can go the whole mile with just like prompting via Midjourney, like via the Midjourney Discord server, getting your images and then sharing them and having fun. For OpenRouter, for LLMs, you need a lot of user experience around LLM to make them really usable. And seeing the examples of other people is also not as useful because it's a lot of stuff to read. It takes a long, long time. You need codebase integration, not possible to do in a Discord server. Or technically it's possible, I shouldn't say that, it's just not a great developer experience. You need governance: at the point where you got codebase integration, now you need governance for managing the LLMs that have access to it, the data policies, which teams—all that stuff needs a lot more than a Discord server can provide. So it's just like...</p>
+</details>
+<p><strong>Sean</strong>: 它并不是正确的形态。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: It's not the right...</p>
+</details>
+<h3>从 Midjourney 到 Stable Diffusion：开源模型与路由层诞生的必然性</h3>
+<p><strong>Speaker B</strong>: 另外，你说得完全没错，但这里还有一个极其关键的区别：Midjourney 是一个终端用户应用。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Well, in addition, you're not wrong, but also there's the very important distinction that Midjourney was an end-user application.</p>
+</details>
+<p><strong>Sean</strong>: 对。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: Right.</p>
+</details>
+<p><strong>Speaker B</strong>: 正因如此，对于拥有 2.5 亿月活跃终端消费者的 Discord 来说，作为这种应用体验的托管载体是非常顺理成章的。然而在 Midjourney 取得爆发式产品与市场契合（PMF）之后不久，我就预料到了接下来的发展趋势——Midjourney 从发布到年化收入运转率（ARR）达到 1 亿美元只用了不到八个月的时间。而在此后不久，Stable Diffusion 就发布了。当时我们大家都泡在 Discord 社区里，就是那个……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: And you know that's why Discord, which just has 250 million monthly end consumers, made it make sense for Discord to be a host for that application experience. What I knew was going to happen soon after Midjourney found explosive product market fit—because when Midjourney launched, from launch 100 million revenue run rate was less than eight months. And shortly thereafter Stable Diffusion launched. And all of us used to hang out in the Discord server, it was the...</p>
+</details>
+<p><strong>Sean</strong>: 是 Stability 的 Discord 吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: The Stability Discord?</p>
+</details>
+<p><strong>Speaker B</strong>: 呃，是 LAION 社区。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: It was the LAION...</p>
+</details>
+<p><strong>Sean</strong>: 对，诞生了 Stable Diffusion 的 LAION 开源社区。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: Yeah, LAION community that Stable Diffusion...</p>
+</details>
+<p><strong>Speaker B</strong>: 于是当 Stable Diffusion 横空出世时，我立刻意识到了一点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: And so when Stable Diffusion came out, I realized...</p>
+</details>
+<p><strong>Sean</strong>: 哦，这意味着其他人也可以搭建属于他们自己的 Midjourney 了！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: Oh, now other people can build their own Midjourney.</p>
+</details>
+<p><strong>Speaker B</strong>: 没错！因为在那之前，Midjourney 并没有提供任何 API，他们是一家全栈式公司：自己训练专有模型，并将其作为直接面向用户的应用程序进行部署。如果你想打造自己的 Midjourney，市面上根本没有达到那种质量水平的开放 API。当时 DALL-E 2 依然相当原始，而 Midjourney 的出图质量已经非常出色了。可当 Stable Diffusion 推出后，世界上突然出现了一种全新的可能性：任何开发者都可以创建自己的 Midjourney。正是这一转折，直接催生了对类似 OpenRouter 这种平台的迫切需求。因为在那个时刻，如果你具备像 David Holz 那样的创造力，手里握着 Stable Diffusion 这样的模型，想把二者结合起来，在不必自己苦思冥想如何托管模型权重的前提下，你该如何做到？OpenRouter 的产品形态所赋予开发者的核心能力正是如此——当开源模型开始作为闭源专有应用的替代方案蓬勃发展时，OpenRouter 对整个世界的价值就变得非同凡响，因为现在任何开发者都可以直接接入并调用……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Because until then Midjourney did not have an API, so they were a full stack company, right? They were training their own models and they were deploying them as an application. But if you want to build your own Midjourney, there was no API of that quality. And I think DALL-E 2 was still quite primitive, like Midjourney actually had great quality. And then when Stable Diffusion came out, suddenly there was this new capability in the world, which is a developer could create their own Midjourney. And that I think created the need for something like OpenRouter. Because then you need an API to... if you had the kind of creativity of David Holz and you had Stable Diffusion as the model and you wanted to put these things together, how could you do that without having to figure out how to host the weights? And what the shape of OpenRouter enabled is that right when you have open models, alternatives to closed sort of applications, OpenRouter's value in the world becomes extraordinary, because now any developer can just show up and...</p>
+</details>
+<h3>“Claude 味”与 Mixtral 价格战</h3>
+<p><strong>Sean</strong>: 等等，你刚才说的是“OpenRouter 的形态（the shape of OpenRouter）”吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: Model... did you just say &quot;the shape of OpenRouter&quot;?</p>
+</details>
+<p><strong>Speaker B</strong>: 哎呀糟了，看来我被深度带偏、过度训练了！我最近用 Claude 用得实在太多了对不对？大家现在都把这叫作“充满 Claude 味（Claudish）”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Oh no, I'm misaligned now, I've been overtrained. I've been using Claude way too much, haven't I? &quot;Claudish&quot; is what people say.</p>
+</details>
+<p><strong>Sean</strong>: 哈哈，“充满 Claude 味”，天呐，我得给自己来个反向微调脱敏了。好的，我们来总结一下 Mistral 这方面的情况。我个人的简要总结（TL;DR）是：当时爆发了一场所谓的“Mixtral 价格战”，对吧？大概是在 2023 年底或 2024 年 NeurIPS 会议前后，他们推出了 Mixtral 8x7B 模型，随后相关推理服务的价格暴跌了近 80%。在我看来，这是一个极其积极的信号，因为这是第一次围绕托管 Mistral 展开的真正市场化竞争。关于这一点还有更多细节吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: &quot;Claudish&quot;, oh god, I got to untrain myself. Okay. And I just want to cap off the Mistral side. My TL;DR is there was a Mixtral price war is what they called it, right? Roundabout NeurIPS 2023 or '24, they launched the Mixtral 8x7B, and like the price went down like 80%. To me that's very positive because it's like the first real competition to host Mistral. Is there more?</p>
+</details>
+<p><strong>OpenRouter 团队</strong>: 确实，我正在努力回想当时发生的各种事情。当时那款模型一发布……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>OpenRouter Team</strong>: Yeah, that was... I'm like trying to remember all the things that happened. We saw that model come out...</p>
+</details>
+<p><strong>Sean</strong>: 随后我们立刻就看到许多人纷纷宣称它是全世界最强的大模型。据我所知，这是历史上第一次有开源权重模型被大家如此严肃、正经地冠以这一称号。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: And immediately saw people say that it was the best model in the world. Like this was, to my knowledge, the first time an open weights model was called that in real seriousness.</p>
+</details>
+<p><strong>Speaker A</strong>: 这更多是噱头炒作吧？是那样吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: It's hype, right? Is it, you know...</p>
+</details>
+<p><strong>Sean</strong>: 确实有炒作的成分，包括当时各种 AI 意见领袖（KOL）的推波助澜。但在实际测试中，它确实有许多案例能够正面匹敌甚至击败 GPT-4。因此所有人都在急切地想要亲自上手测试，看看在自己的使用场景下是否也能达到这种效果，以及如果可以，成本究竟是多少。而在当时，整个模型推理市场格局极其混乱杂乱。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: It was hype, it was also hype from AI influencers at the time. And there were many examples where it was like outperforming GPT-4. So people really wanted to try it out and see: is this going to be true for me too, and if so, at what price? And the inference landscape was really messy.</p>
+</details>
+<p><strong>OpenRouter 团队</strong>: 是的，而我们 OpenRouter 把它彻底理顺了。我们让各家算力托管提供商通过透明竞价来展开价格竞争，使得开发者能够在同一个统一接口上获得全网最优惠的价格。因此，我认为这是算力供应商聚合市场运作并切实为开发者创造核心价值的第一个清晰范例。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>OpenRouter Team</strong>: Yes, we cleaned it up. It allowed providers to compete on price so we could give users the best price in one spot. And so it was, I think, the first clear example of a provider marketplace working in a way that adds value to developers.</p>
+</details>
+<h3>NeurIPS 的午餐会：推理速度、错觉与模型评估真相</h3>
+<p><strong>Speaker B</strong>: Sean，你可能已经不记得了，但我记得我和你初次相遇，就是在 Mixtral 发布几天后的 NeurIPS 午餐会上。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Sean, you may not remember this, but I think we met for the first time a few days after Mixtral came out at NeurIPS at a luncheon.</p>
+</details>
+<p><strong>Sean</strong>: 对！正是在那次聚会上，我还认识了 BFL（Black Forest Labs）团队。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: Yeah, that's where I also met BFL as well. Yeah.</p>
+</details>
+<p><strong>Speaker A</strong>: 当时 Guillaume 也在场，我那时候也在 NeurIPS 现场。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And Guillaume was there. I was at NeurIPS at that time.</p>
+</details>
+<p><strong>Speaker B</strong>: 你当时也在场！那时候我们刚刚对外公布了对 Mistral 的投资。我记得 Guillaume 当时就坐在那边，我特意转身过去问 Guillaume：“在发布了 Mixtral 8x7B 之后，你现在感觉怎么样？”而他带着法国人特有的冷静与内敛风格回答说：“呃，我觉得这就是个还行的模型吧，其实没那么好。”我当时听了觉得这反差简直太鲜明了！但我清晰地记得 Guillaume 紧接着提到了一个核心原因：他认为很多人之所以在主观上觉得它甚至优于 GPT-4，很大程度上是因为它的推理速度极快。那是一个混合专家（MoE）模型，他们在工程实现上彻底吃透并做到了极致高效的优化，使其正好处于性能与速度帕累托前沿的最佳位置。而在与大语言模型交互时，这揭示了一个至关重要的心理学现象：很多时候，模型吐字速度越快，人们在直觉上就会觉得它越聪明。尽管在严肃的基准评测体系（Eval benchmarks）中，如果你跑多次采样（pass@k / N of 7），虽然我不记得具体确切数字，可能我们需要调取历史数据核验，但我敢打赌在 7 次测试尝试下，GPT-4 在评测基准的绝对正确率和智力水平上依然是更高或者更准确的。然而，从人类主观偏好的实际体验角度来看，人们在当时真切地感受到了那种超越感……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: You were there too. And we had just announced the Mistral investment, and I remember Guillaume was over there, and I remember turning to Guillaume and asking him like: &quot;How are you feeling after the launch of Mixtral 8x7B?&quot; And you know him, in his typical French fashion, was like: &quot;I mean, it's an okay model, it's not that good.&quot; And I was like... it was so in contrast! But I remember him also saying that part of the reason he felt a lot of people thought that it was better than GPT-4 before was because of the speed. It was an MoE model that they had absolutely figured out how to make super efficient. It was on the Pareto frontier. And this is an important thing with LLMs, right? Sometimes when they're faster, you think they're smarter. Even though if you did N of... these common eval tries—and I don't actually remember, I think we should go back and figure out what the data says, but I wouldn't be surprised if it turns out on an N of 7 attempts, GPT-4 was smarter on evals, or correctness would be smarter or more accurate. But from a human preference perspective, people felt that it...</p>
+</details>
+<!-- chunk 7/11 -->
+<h3>人类作为最初的路由器：从手动分流到智能路由</h3>
+<p><strong>Alex</strong>：之所以更快，是因为它本身响应极快，所以在感知上也更显敏捷。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: was faster because it was smarter because it's so fast.</p>
+</details>
+<p><strong>主持人</strong>：嗯。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Um,</p>
+</details>
+<p><strong>Alex</strong>：而且实际上绝大多数查询根本不需要达到那个思考深度。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: and actually most queries do not take that level.</p>
+</details>
+<p><strong>主持人</strong>：不需要达到那种复杂度，对吧？这就是“人类作为路由器（Humans as router）”的开端，而这种模式最终演变成了 OpenRouter 自身的自动路由机制。你明白我的意思吧？正因为早期是由人类承担路由器的角色——比如我会先去问速度快的轻量模型，如果发现效果不够好，再手动升级去调更强大的模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Don't take that, right? This is the start of humans as router which then eventually becomes open router as router of like the auto you know what I mean like because humans are the routing mechanism like I will ask the fast model first and then if like oh not good enough I'm going to upgrade manually</p>
+</details>
+<p><strong>投资人</strong>：但他接着就会把这个过程自动化。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Investor</strong>: but then he's going to auto it</p>
+</details>
+<p><strong>主持人</strong>：我之前还没从这个角度思考过，但细想一下确实非常有道理。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I didn't I hadn't thought of it that way but that that I mean that makes sense</p>
+</details>
+<p><strong>Alex</strong>：顺着这个方向，后来又衍生出了很多技术，比如模型融合（Fusion）。融合技术是一个我们接下来很值得展开探讨的课题。不过在深入那些技术之前，我想先为早期创业的那段历程收个尾。我观察到的另一件事是——你同时也是 LMSYS Chatbot Arena 的投资人，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: which then there's there's a lot more techniques like fusion fusion is a thing that we should talk about before I move on to those things I just want to close off the sort of early early years uh one thing that I observe which you are also an investor in arena Right.</p>
+</details>
+<h3>为何 OpenRouter 与 LMSYS Arena 各自独立：商业定位与评测科学</h3>
+<p><strong>主持人</strong>：我们之前讨论过 Midjourney 的 ABCD 方案反馈闭环，用户在四张图里做出选择，这个反馈机制极其关键。而且你也深谙飞轮效应的逻辑。那为什么当初你没有直接去做 Arena，而 Arena 当时又为什么没有做成 OpenRouter 呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And we talked about midjourney having that that feedback loop of ABCD and choosing that very being being very important. And you understand the flywheel. So how come you didn't build arena and how come Arena didn't build open router?</p>
+</details>
+<p><strong>Alex</strong>：嗯，Arena 实际上比 OpenRouter 成立得更早，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Well, Arena started before open router, right?</p>
+</details>
+<p><strong>主持人</strong>：他们最开始是伯克利的一个高校研究项目，后来才逐渐演变成……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: They had they had the school project and then they became a</p>
+</details>
+<p><strong>主持人</strong>：演变成 LMSYS Arena。是的。不过我知道你们早期其实也做过一些类似 Arena 的功能体验，比如那种两两盲测正面对决（Heads-up comparison）的产品形态，但你们从未像 Arena 那样完全押注在上面。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Marina. Yeah. So, but and I know you had some Arena experiences like the the heads up comparison type things, but you never really went as hard as Arena did</p>
+</details>
+<p><strong>Alex</strong>：也就是做盲测对比体验。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: and doing heads up experiences</p>
+</details>
+<p><strong>主持人</strong>：而且 LMSYS 其实也曾经基于 LMSYS Arena 的 Elo 天梯积分做过一个路由器（Router）项目，只是他们从来没有将其商业化。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: and and LMS actually did have a router project based on Alam Marina ELOS uh which they never commercialized.</p>
+</details>
+<p><strong>Alex</strong>：要让一家公司同时兼顾这两者是非常困难的，因为其中一种业务模式是在收集数据并将其变现或分发，而另一种业务模式在默认情况下是绝对不能碰用户数据的。所以从品牌定位和信任机制上讲，这里必然是两家不同的公司。比如当你接入和配置 OpenRouter 时，没有任何数据会被拿去微调或训练，我们也不会留存你的 Prompt——除了各家模型供应商自身声明的数据策略之外，OpenRouter 默认是看不到你的 Prompt 原文和补全结果（Completions）的。如果你作为一个组织机构想要查看这些记录，必须主动勾选授权（Opt-in）并开启该功能。因此，我们在数据策略、安全规范和隐私保护上采取了极其审慎和保守的态度。而 LMSYS Arena 的商业模式则是完全围绕前沿实验室（Labs）的研究与需求展开的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: It's hard to do a company that does both because one company is taking data and selling it and the other company really can't by default. So you know I think there there is like a branding reason that there are two companies here. Um like when you set up open router there's no training or no prompts like aside from what your provider policies set like open like open router can't see your prompts or completions. If you want to see that as an org, you have to opt into it and enable it. And so we're like pretty conservative and careful about data policy and security and privacy. And Elm Marina is like their business model is is like oriented around the labs and and</p>
+</details>
+<p><strong>主持人</strong>：因为他们是把数据免费开放的，对吧？你们不免费提供数据，而他们免费提供。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: because they give it for free, right? You don't give it for free, they give it for free.</p>
+</details>
+<p><strong>Alex</strong>：是的。不过我的意思是，我们其实也提供一些免费调用的端点（Free endpoints），但在那些免费端点上，我们也同样不去收集任何 Prompt 内容。除非用户出于某种特殊原因明确主动选择开启，否则我们根本不会去通过用户数据变现。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Yeah. But I mean, we do give some we like have free endpoints too, but like those free endpoints, I think we're not collecting any of the prompts. We're not like monetizing the data unless you you know opt into it for some reason.</p>
+</details>
+<p><strong>投资人</strong>：关于这种对比，你绝不是第一个这么问我的人，Alex 也清楚这一点。在最初的五个月里，当我们在协助 Anastasia 和 Lian 从加州大学伯克利分校（Berkeley）拆分孵化出项目时，我实际上担任了 Arena 的首任兼临时 CEO。我在投资 OpenRouter 之前就已经先投资了 Arena。但外界把这两个项目放在一起对比，在我看来其实是非常奇怪的，因为两者的核心使命完全截然不同。Arena 最早注册的实体法人我们将其命名为“AI 可靠性研究院（AI Reliability Institute）”，因为它的本质定位是一套模型评估与基准测试服务（Eval service）。也就是说，他们最初向各大实验室提供的数据与价值，在于如何让大模型的评估比当时业内的 SOTA 更加科学可靠——因为那时候行业里的评测基本就像是在“把手指伸到风里测风向”一样主观随意。而这正是 Anastasia 和 Lian 在伯克利攻读博士学位期间的科研课题：利用统计学方法，去校正因数据采集方式带来的内在偏差，从而修正模型评测的估算值。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Investor</strong>: Th this this comparison I mean you're not the first person to ask me this and Alex knows this but I you know I was the the inter like the founder like first C CEO of Arena for the first 5 months when we were helping Anastasia and Whan kind of spin out of Berkeley and uh I did invest in that before um open router but it was it was very strange to me the comparisons that outside you know folks would make between the two projects because the missions were completely different. the founding entity for Arena, we called it the AI reliability institute because it was it was actually there as an eval service like the data so to speak that they they were originally um kind of offering the labs was how do you make the evaluation of models more reliable than kind of like the state-of-the-art at the time which is like really just finger in the wind. Um that that's kind of what Anastasio and and Whan's PhD work was as as scientists at Berkeley was on statistical methodologies for sort of uh correcting you know eval estimates um based on like intrinsic biases and how you collected the data</p>
+</details>
+<h3>最挑剔的客户画像：科研人员与一线应用开发者</h3>
+<p><strong>投资人</strong>：比如样式控制（Style control）等等各维度的控制与纠偏。如果你是一名科学家，并且试图去解决这类问题，那么 Arena 面向的“最挑剔客户（Highest expectation customer）”，从始至终都是模型实验室里的后训练（Post-training）团队和核心研究员。但在我看来，Alex 真正深刻理解并立志去服务的最挑剔客户，则是广大的软件开发者（Developers）——他们负责拿到前沿科研成果，然后将其构建成真正部署给全世界使用的落地应用。这两个团队所聚焦解决的痛点和所服务的目标人群，完全属于两个不同的世界。所以从外部视角来看，我不知道 Alex 你还记不记得，我印象特别深刻的是，就在我们敲定 OpenRouter 投资意向书（Term sheet）的前几周，我曾给你打过一个电话，当时我们正尝试把 OpenRouter 和 Arena 的数据集整合到一起，去创建一个开源的提示词库（Prompt repository）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Investor</strong>: um and style control style control and stuff like that and which is very much like a hey how if if you're a scientist and you're trying to kind of um the highest expectation customer for Arena was always like a a post-training and uh like a a researcher at a lab. Whereas the highest expectation customer from from my perspective that that Alex like really understood and and was the mission was to serve was was like a developer, right? Who then takes the result of the research and then produces an application that's deployed to the world. It's actually a completely different problem and person that these two teams were focused on. And so from the outside in actually I don't know if you remember this but I have a distinct memory of a few weeks before we did the term sheet uh together for open router I'd given you a call because we were trying to get a pool's data set together from open router and from arena to uh create like an open- source repository of prompts.</p>
+</details>
+<p><strong>投资人</strong>：正是因为这两个项目在愿景和定位上如此迥异，所以我当时觉得提议大家联手池化数据是非常自然的事：“咱们给 Alex 打个电话，看他愿不愿意合作共享数据。”因为两边的数据特质完全不同：我们在 Arena 根本没有那类数据，我们没有实际运行中的 API Prompt，根本看不到开发者到底想用这些模型来构建什么功能；而这与前沿模型实验室的研究员在正式发布模型前所进行的评估测试，完全是两码事。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Investor</strong>: I mean these projects were so kind of different in their goals that it was totally normal to me to be like oh yeah let's call Alex and see if you'd want to team up on on pooling data cuz they're so different. we need we we actually don't have that kind of data at all. We like we didn't have API prompts. We we didn't have like what developers want to do with the models which is very different from what researchers inside a model lab want to do before releasing the model.</p>
+</details>
+<p><strong>Alex</strong>：确实如此。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Yeah.</p>
+</details>
+<p><strong>投资人</strong>：你明白我的逻辑了吧？所以直到今天，我认为你依然能看到这种本质差异。虽然站在三万英尺的高空粗略审视，人们大概会觉得 Arena 和 OpenRouter 彼此处于相邻的业务赛道（Adjacent），但在当时，无论是产品路线图还是底层使命，两者完全是在朝着截然不同的方向前行。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Investor</strong>: Does does that make sense? And so to this day I I think you see that this difference even though at a 30,000 foot level you could I guess you could kind of conclude that arena and open router are adjacent but uh the road maps the missions and so on at the time at least were like in very different sort of directions.</p>
+</details>
+<h3>创业者的全包陷阱 vs. 极致专注的力量</h3>
+<p><strong>主持人</strong>：关于理想客户画像这点我完全理解。但我作为一名创业者，心理上往往是想“全都要（Own everything）”，对吧？如果看到明显的相邻业务领域，我第一反应肯定是：“我也要把那个方向给探索占领了。”所谓“全都要”，意思是当你还不完全确定下一步该做什么时，就想确保自己能抓住产品市场契合点（PMF）；换句话说，就像你希望垄断整个基础设施生态，于是不断去迎合扩张到任何冒出来的市场需求。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: The ideal customer I get I I totally get that as a founder I want to own everything right. So like this is clearly the adjacency then I'm like I'm going to explore that. uh own everything meaning like you don't know what to do yet so you want to like make sure you catch PM I think what he say you you want to own the entire infrastructure space and so you'd kind of expand to whatever demand</p>
+</details>
+<p><strong>Alex</strong>：是的，但我认为在现实操作中那样做极其困难，因为同时去服务完全不同类型的客群是……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: yeah I I think that's that's hard you know in reality because serving multiple customers is is</p>
+</details>
+<p><strong>主持人</strong>：很显然，这正是必须保持专注的原因所在，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: clearly you know this is the only one of focus right</p>
+</details>
+<p><strong>Alex</strong>：没错。我始终坚信，哪怕身处当前的 AI 浪潮之中，专注（Focus）依然是被严重低估且至关重要的品质。这不仅是因为集中团队的人力心血能够打造出远为出色的产品，更是因为外部世界能够清晰地认知到你的专注点究竟是什么。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: yeah I I still think even in the age of AI like focus is is underrated and critical Not just because you end up with a better product by focusing your humans on it, but also because the world knows what your focus is.</p>
+</details>
+<p><strong>投资人</strong>：当外界遇到痛点时，能够立刻建立心理映射：“哦，我遇到了这个棘手问题，市面上哪家品牌最擅长帮我解决？”答案就是那家以这一核心领域闻名于世的品牌。因此，如果我希望在这个问题上获得最顶级的关注与解决能力，而这对我又至关重要，那我理应选择最在乎这一领域的品牌。为了印证 Alex 关于专注有多么关键的观点，我们可以看看 Anthropic 创办初期的真实情况。很多人总以为 Anthropic 早期一帆风顺，以为他们不过是离开 OpenAI 的那帮研发 GPT-3 的原班人马。但当年的竞争环境实际上异常残酷——这家公司在起步阶段，资金储备就落后了 OpenAI 整整 100 亿美元。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Investor</strong>: The world can map like, oh, I have this issue. Which brand out there is going to help me with that issue? This is the brand that's known for that focus. So like if I want real attention on this issue, like this really matters to me, I should go with the brand that cares the most about it. to underscore Alex's point about how important focus is. In the early days of Anthropic, it it was not easy to like people think that the early days of Anthropic were like super easy because they were on the GPT3 guys who left. But it was actually very competitive. The company was starting $10 billion behind OpenAI,</p>
+</details>
+<h3>Anthropic 的早期定力：以“AI 结对编程”突破前沿</h3>
+<p><strong>Alex</strong>：没错。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: right?</p>
+</details>
+<p><strong>投资人</strong>：所以在落后百亿美金的起跑线下，要想杀入技术前沿，最根本的核心问题就是：我们究竟要凭什么立足？我们的使命是什么？而 Anthropic 当时的使命就是：实现 AGI 结对编程（AGI pair programming）。因此，尽管当时市场上充斥着各种极具吸引力且势头正盛的诱惑——比如在业内吸足眼球的图像生成模型和视频生成模型——但 Anthropic 团队毅然决然地排除了一切干扰，坚定地表示：“我们必须全力聚焦在代码（Coding）能力上，这就是我们要主攻的核心能力。”今天大家都能看到最终的成果：在短短五年内，它成长为了一家万亿美元级别的巨头。而这种对“谁是你最挑剔客户”的极端专注，以及如何全力以赴超出这批客户的预期——要知道超出任何单一客群的预期都已难如登天，若要同时满足多类客群则更是难上加难——正是 OpenRouter 和 Anthropic 能够脱颖而出、取得成功的核心密码。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Investor</strong>: And so to get to the frontier like the big question was what what do we want to be known for? What's the mission? And the mission was AGI pair programming. And so to the um exclusion of all kinds of other things that were really shiny at the time like image models and video models that were getting lots of you know momentum the anthropic team was like we just got to focus on coding like that is the core capability that we're focused and today you can see the results right it's a trillion dollar company within 5 years and that focus I think like the high the focus on who your highest expectation customer is and how you exceed their expectation because exceeding anyone's expectations is hard and doing it for multiple like customers is so even more difficult um is part of the reason why opener succeeded and entropic as well.</p>
+</details>
+<p><strong>主持人</strong>：但他们对代码能力的专注真的在那么早期就已经确立了吗，还是后来才逐步形成的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Was the focus on coding that early though or did it come later?</p>
+</details>
+<p><strong>投资人</strong>：千真万确，从创办的第一天起就是如此。那份天使轮融资备忘录（Seed memo）上的核心目标，白纸黑字写得清清楚楚：“负责任地商业化一款 AI 结对编程工具（Responsibly commercialize an AI pair programmer）”。那正是我决定投资这家公司的时候。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Investor</strong>: Literally from day one it was AI pair programming is responsibly commercialize an AI pair programmer was the seed memo. That was when I invested.</p>
+</details>
+<p><strong>Alex</strong>：是的，我们确实一起对那份备忘录推敲打磨了很久。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex</strong>: Right. We we actually kind like refine that memo a lot.</p>
+</details>
+<p><strong>投资人</strong>：哈哈，关于这部分细节你得去向 Dario 和 Tom 申请公开许可才行。但无论如何，他们当时写下的那篇文档确实是一份极其非凡的作品。“负责任地商业化 AI 结对编程工具”，从成立第一天起就是刻在基因里的使命。我甚至可以说，在公司整个发展历程中，可能只有极少数的几次短暂瞬间，他们为了观察可行性而做过一些微小的旁支探索实验……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Investor</strong>: Well, you got to ask Dario and Tom for permission on that. Um but it's an extraordinary piece of writing that they had put together and AI you know commercializing responsibly commercializing AI pair program was the mission you know from day one. And I would say there was maybe like a couple moments in the company's history where like they did experiments to kind of see if like little detours</p>
+</details>
+<!-- chunk 8/11 -->
+<h3>模型评测重心与早期的长上下文探索</h3>
+<p><strong>Founder</strong>: 像 Claude 这样的通用聊天机器人在 ChatGPT 刚爆火的时候确实很有意义。但归根结底，尤其是当他们的大规模预训练算力上线之后，我认为公司内部所有核心的评测体系一直都是针对编程能力的评测，也就是长程的智能体式编程（long-horizon agentic programming）。我的意思是，从第一天开始，这一直就是核心方向。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Founder</strong>: made sense like a general chatbot like Cloudi when chat GPT was really taking off but at the end of the day especially once um they got their significant pre-training computer online I think like the all the main evals at the company for example have always been coding evals long horizon agentic programming I mean from day one that was always</p>
+</details>
+<p><strong>Co-host</strong>: 当时 Claude Instant 和 Claude 2 发布的时候也是这样。是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Co-host</strong>: when like flawed instant came out and Claude 2 came out. Yes,</p>
+</details>
+<p><strong>Sean</strong>: 我记得当时的营销宣传大部分都集中在文本写作上，比如宣称这个模型……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: I remember the marketing mostly being focused on pros like this model</p>
+</details>
+<p><strong>Co-host</strong>: 写作水平更好，而且……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Co-host</strong>: write better and</p>
+</details>
+<p><strong>Sean</strong>: 具备长上下文能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: long context</p>
+</details>
+<p><strong>Co-host</strong>: 没错，长上下文。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Co-host</strong>: long context um</p>
+</details>
+<p><strong>Sean</strong>: 这点直接影响到了我，因为我当时基于它做了一个东西。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: this directly affected me cuz I told something on that</p>
+</details>
+<p><strong>Co-host</strong>: 你做了什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Co-host</strong>: what did you make</p>
+</details>
+<p><strong>Sean</strong>: 呃，就是 smol developer，那是我在 Devin 出现之前做的项目。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: uh small developer which was my Devon before</p>
+</details>
+<p><strong>Co-host</strong>: 噢对，smol developer。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Co-host</strong>: oh yeah small</p>
+</details>
+<h3>创业的战略定力与未选择的道路</h3>
+<p><strong>Sean</strong>: 是的。所以我觉得在保持专注这方面做得很棒，大家也很想问这个问题：你们原本可以去做任何其他方向，而且很显然 OpenRouter 一直在高速运转。那么在你们探索过的想法中，是否有一些曾经想做但最终选择放弃、没有走下去的路？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: yes uh and uh you know so I think like there's there's all that really like good like focus is another thing that is a question that people do want to ask uh you know you could have built any any other things like and obviously open roto was working working working uh were there other ideas that you wanted to pursue that you turned down you know just the paths roads not taken</p>
+</details>
+<p><strong>Founder</strong>: 我们确实做过几个原型的探索，但最终没有正式发布。其中一个是“微调模型即服务”（fine-tuning model as a service）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Founder</strong>: we made a couple prototypes for things that we didn't launch one was a fine-tuning model as a service</p>
+</details>
+<p><strong>Sean</strong>: 市场上有很多类似 OpenPipe 等等的产品。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: lot of that open pipe and all those things</p>
+</details>
+<p><strong>Founder</strong>: 但我们做的是一种非常偏 C 端消费级的产品形态：你可以提供两三个 YouTube 视频链接，我们会直接提取其中的全部字幕文本，然后尝试微调出一个模型，让它的说话语气像视频里的人，或者像你提交的那些视频里的主角。也就是说，这是一种极其简便的方法，仅凭你喜欢的视频就能快速生成专属的微调模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Founder</strong>: but it was it it kind of was in a very consumerry form factor where you would give us a YouTube video or two or three we would then extract all the transcripts from it and try to fine-tune model to talk like the person in the YouTube video or the people in the in the videos that you sent. So like a really really easy way of creating a fine-tuned model based on like some kind of videos that you like.</p>
+</details>
+<p><strong>Sean</strong>: 那东西听起来会超级有用。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: That would be so useful.</p>
+</details>
+<p><strong>Founder</strong>: 我们其实已经把它做出来了。当时的情况就像……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Founder</strong>: We we we made it too. It was like</p>
+</details>
+<p><strong>Founder</strong>: 结果根本没有人用。其实我们也没有拿它去找太多人做测试，因为模型聚合市场（model marketplace）才是我们最核心的业务焦点。当时这块业务正在快速增长，随着时间推移，我们对它的信念也越来越坚定。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Founder</strong>: I it was and nobody used it. was we didn't actually like test it with that many people because the model marketplace was our main our main focus and it and it was like growing and we're building more conviction in it over time.</p>
+</details>
+<p><strong>Sean</strong>: 嗯。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: Um</p>
+</details>
+<p><strong>Sean</strong>: 单纯从创作者的角度来说，我经常收到很多这类商业推介。比如有人会说：“你有 500 个小时自己的声音录音……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: just just as a creator I've been pitched many like uh you I have 500 hours of recorded voice of myself</p>
+</details>
+<p><strong>Sean</strong>: 做一个你的数字分身，然后收费提供访问权限。”这种模式在 OnlyFans 上行得通，但对我们普通人根本不起作用。我觉得这种产品本质上大多不过是一个被美化了的 RAG 机器人（glorified rag bot），知识到底是在模型权重内部还是在权重外部其实没有太大区别。你无非就是在对那些视频做检索增强生成（RAG），而用户归根结底只想找到能够直接解答疑问的原始视频来源。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: make a thing of you charge access to it. Uh works for only fans doesn't work for for us as regular people. I think this is mostly uh it's just a glorified rag bot whether it's in the weights or it's outside the weights doesn't really matter. You're just doing rag on the videos and people ultimately always just want to find the source video uh that directly answers it.</p>
+</details>
+<p><strong>Founder</strong>: 我当时设想的使用场景，主要是用来让自己跟自己模拟练习。因为我经常想看看自己表现如何——比如我准备求职面试、招聘面试候选人、或者练习公开演讲时，我都希望身边能有一个非常逼真的“小自己”（mini me）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Founder</strong>: My use case was mostly to practice with from with myself cuz I often like to see what like the way I practice for a job interview or if I'm hiring a candidate or public speaking or whatever is I I wish there was like a good mini me</p>
+</details>
+<p><strong>Founder</strong>: 这样我就能跳出来去评判自己，毕竟人很难客观地跳脱自我去审视自己。我绝不会把它作为服务开放给其他人，比如让他们挑选排名前五的导师去对话，而不是……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Founder</strong>: that I could like critique cuz it's kind of hard to pull yourself out. I would never get I would never offer it to other people service like pick your top five mentors that then talk to them instead of talk</p>
+</details>
+<p><strong>Sean</strong>: 那其实也会很酷。是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: that would be cool too. Yeah,</p>
+</details>
+<p><strong>Co-host</strong>: 那就是 Replika 的路线了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Co-host</strong>: that was that's a replica</p>
+</details>
+<p><strong>Founder</strong>: 这确实也是我们当时瞄准的使用场景。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Founder</strong>: and that was the use case we were aiming at.</p>
+</details>
+<p><strong>Co-host</strong>: 我明白了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Co-host</strong>: I see.</p>
+</details>
+<p><strong>Sean</strong>: 就像是你想创造一种体验……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: It's like you want to create an experience</p>
+</details>
+<p><strong>Co-host</strong>: 比如“AI 史蒂夫·乔布斯”之类的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Co-host</strong>: like AI Steve Jobs and</p>
+</details>
+<p><strong>Founder</strong>: “AI 史蒂夫·乔布斯”就是最初的原型案例。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Founder</strong>: AI AI Steve Jobs was the the initial use case</p>
+</details>
+<p><strong>Sean</strong>: 尽管在合规上是不被允许的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: that's a even though it's not allowed</p>
+</details>
+<h3>路由服务 vs. 模型微调：生态定位与中立市场</h3>
+<p><strong>Sean</strong>: 那是一个非常典型的产品原型。说到业务邻角（adjacencies），作为路由服务的一部分，“微调即服务”也是我通常会联想到的方向，对吧？大家会想：你们为什么不做呢？因为如果开发者已经在通过你的平台运行推理，你就可以存储一切、记录一切日志，然后帮他们微调成一个更小、更便宜、更快速的模型，而所有这些都在你的掌控之中。你们没有选择做这个，但在整个 AI 基础设施初创公司圈子里，很多人都会提出这种设想。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: that's a that's a common prototype. you know talking about adjacencies fine-tuning as a service as part of the router service is something that I would typically think about as well right like like why don't you do that because if people are running already their inference through you store everything log everything uh fine tune to a smaller model that is cheaper faster all these things that that's within your control right uh you didn't do that but like other people would have pitched that in the general state of of infra startup</p>
+</details>
+<p><strong>Co-host</strong>: 我觉得你们当时可能只是起步太早了一点。因为放到今天，那已经是一个增长极其迅猛的细分赛道了。比如像 Mistral，他们做了很多企业级部署，经常涉及定制微调模型，比如为 ASML 等企业打造专属模型，这非常普遍。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Co-host</strong>: I think you were just maybe a little bit early because today that's an extraordinarily fast growing segment like you know from astral where they do a lot of enterprise deployments I mean it's often fine tuning is you know custom models for ASML or whatever often</p>
+</details>
+<p><strong>Sean</strong>: 但他们并不是以路由器的定位在做这件事。企业找他们纯粹是因为“我喜欢你们的机器学习模型，我想要一个定制模型”，对吧？这并不是说“我想把所有发给 OpenAI 的提示词流量跑在你们这里，把结果全部存下来，借此彻底脱离对 OpenAI 的依赖”。他们并没有在做这件事。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: but not as a router they're just like I come to you because I like your ML models I want custom model right it is not I want uh to run all my openi prompts uh get store all my results and then just move off of openi right they're not doing that</p>
+</details>
+<p><strong>Co-host</strong>: 作为一种摆脱对前沿大模型实验室依赖的迁移路径，我目前确实还没见过这种形态，而这……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Co-host</strong>: uh as a as as like a way to export off of dependency on a on a frontier lab I have not seen that yet which</p>
+</details>
+<p><strong>Sean</strong>: 这原本是你们可以做出的选择。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: which was your kind of</p>
+</details>
+<p><strong>Founder</strong>: 针对是否要做这个决定，我们最终选择坚定地保持专注。我们意识到整个生态系统是随着时间逐步演进的，有非常多的推理提供商专门致力于帮助企业完成模型定制与微调。因此，对我们来说，更合理的做法是与这些服务商建立合作，为用户提供极其丰富的选择空间，并帮助他们明确自身的竞争优势。归根结底，那完全是一套全新的独立业务，而做一个中立的模型聚合市场、与所有这些专业公司协同合作，本身具有极高的战略价值。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Founder</strong>: decision to do I mean we we decided really we like leaned into our focus and figured that like there are like we just saw the ecosystem develop over time. All these inference providers that that do want to help companies do that. Um be like like it makes sense for us to partner with them and to like give users lots of choice and to like you know figure out what makes them um what gives them competitive advantages. It's it's a whole new business basically and there's there's value in being a neutral marketplace that just kind of like works with those companies. Um</p>
+</details>
+<h3>产品功能优先级与早期的“模型混合”实验</h3>
+<p><strong>Co-host</strong>: 你能不能顺着 Sean 的问题多分享一点：你们平时是如何对功能排定优先级的？有哪些衡量方法？因为从外部看来，你们的功能决策总是做得如此优雅精准，仿佛自然而然就做对了所有决策，而且每一个都契合产品市场匹配度（PMF）。从始至终，你们似乎总能准确抓住那些大获成功的核心功能。也许我存在幸存者偏差，不过 Sean……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Co-host</strong>: could you share a little bit um to to Sean's point like how you prioritized what what are some ways you prioritize features cuz you've always done it so elegantly. I never you know it just happens and you make all the right decisions that always have product market fit from the outside looking in. consistently you seem to have prioritized you know a lot of hit features that worked and maybe I have a sample set bias or whatever but Sean</p>
+</details>
+<p><strong>Sean</strong>: 你可以列举一下你觉得哪些热门功能做得特别好，比如……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: can list what you think hit features worked well like</p>
+</details>
+<p><strong>Co-host</strong>: 噢，比如排行榜！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Co-host</strong>: oh the leaderboards like</p>
+</details>
+<p><strong>Founder</strong>: 排行榜，好的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Founder</strong>: leaderboard okay</p>
+</details>
+<p><strong>Sean</strong>: 是的，比如从第一天起就有的……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: yeah you know like from day one</p>
+</details>
+<p><strong>Founder</strong>: 用户反馈机制。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Founder</strong>: the feedback</p>
+</details>
+<p><strong>Co-host</strong>: 还有图表展示。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Co-host</strong>: charting B okay</p>
+</details>
+<p><strong>Co-host</strong>: 另外他还有插件系统等等。而且我还想深入聊聊关于文本补全（completions）与……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Co-host</strong>: but like he had like plugins uh you know he had like uh and I think there was a whole thing I want to get into about like completions versus</p>
+</details>
+<p><strong>Founder</strong>: 是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Founder</strong>: yes</p>
+</details>
+<p><strong>Co-host</strong>: 对话补全（chat completions）与纯补全的区别，以及我们暂且称之为推理模型（reasoning models）的崛起、以及你们如何应对多模态能力。所有这些都是非常庞大的话题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Co-host</strong>: check completions versus completions and then also uh let's call it like the the rise of the reasoning models and how you deal with multimodality all those all those things by huge one</p>
+</details>
+<p><strong>Founder</strong>: 有一个探索我印象很深，大概是在 2024 年初，非常早的时候，我们当时觉得如果把多个模型生成的结果融合（fuse）在一起，可能会非常有趣。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Founder</strong>: there's one like I think it was in early 2024 very early 2024 we thought it might be interesting to fuse the results of multiple models together</p>
+</details>
+<p><strong>Founder</strong>: 于是我们推出了一个名为 MoM（Mixture of Models，模型混合）的原型产品。它可以让你挑选几个模型，或者由我们为你挑选，然后把各自生成的中间结果在最后融合成一份最终答案，并把所有中间过程展示在一个类似大型看板（Kanban board）的界面里。至于最后负责执行融合的是什么？是另一个模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Founder</strong>: and we launched a prototype called mom mixture of models that let you like pick a couple models we'd pick them for you and then it would fuse the results together at the end and it would show you all the intermediate results in this like big conbon board looking product. What does the fusion at the end? Another model.</p>
+</details>
+<p><strong>Founder</strong>: 是另一个模型。而且是那一组里面最聪明的那一个模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Founder</strong>: Another model. The the smart the smartest of of the three of the set.</p>
+</details>
+<p><strong>Co-host</strong>: 所以这就像是一个“模型委员会”（council）的概念。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Co-host</strong>: So, this is like a council idea.</p>
+</details>
+<p><strong>Founder</strong>: 它本身就是一个模型，就像一个非常早期的 LLM 评议委员会。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Founder</strong>: It was a model. It was like a very early LLM council.</p>
+</details>
+<p><strong>Sean</strong>: 这就是某个前沿实验室在早期会称之为“多智能体集群”（multi-agent swarm）的东西。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: This is a multi- aent swarm as as like they would call it at one of the frontier labs uh in the early days, you know.</p>
+</details>
+<h3>模型融合的演进：从过早探索到重新复活</h3>
+<p><strong>Founder</strong>: 是的。这类想法的大方向确实是对的，但魔鬼往往藏在细节中。要把它们真正做成可用的产品，需要极其大量的打磨。而且它们会分散你对核心业务的专注力；你还需要去培育大量社区、进行大量认知迭代；更关键的是，当时的底层技术可能还太不成熟。因此，这中间会有各种各样的原因导致项目失败。而在我们当时的场景下，技术确实太超前、太原始了。换句话说，融合后的结果往往比参与融合的最佳模型单打独斗还要稍微差一点，顶多持平，因为当时排名第一的那个模型遥遥领先于第二名和第三名。但随着时间推移，排名前三或前四的顶级 LLM 之间的差距已经大幅缩小。尽管它们仍然具备各自独特的思考风格（neurodivergent），但都有能力贡献出非常亮眼独到的见解。强化学习（RL）基本上为各个实验室的机器学习研究人员极大地拓展了创新的探索空间，使他们能够更有效地让不同模型的推理能力呈现出多元化。至少这是我认为为什么……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Founder</strong>: Yeah. Like some of those ideas are like going the right direction, but the devil's in the details. There's a lot of like product refinement needed to make them really work. um they take your focus away from right you know whatever else you have going on and there's a lot of like community building and learning that you need to do and the technology might be too early so there like all kinds of reasons they might go wrong and in our case the technology was a little too early in other words the fused result was a little bit worse sometimes the same as the best model that was being used to fuse because the best model was so far ahead of options two and three at the time. You know, over time, the top three or four LLMs have gotten closer together. Still neurode divergent, but like all capable of inserting like pretty interesting ideas. Like RL has basically like expanded the surface area of creativity for machine learning researchers within each lab and so they can, you know, diversify the reasoning power of different models more effectively. At least that's my my theory for why</p>
+</details>
+<p><strong>Sean</strong>: 为什么模型融合现在比起 2024 年初好用得多了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Sean</strong>: uh Fusion is it like works better than it used to early 2024.</p>
+</details>
+<p><strong>Founder</strong>: 确实如此。当时技术还太原始，产品形态也不对，我们如果继续做就必须经历数轮迭代。所以当时我们干脆决定直接删掉所有代码。直到几年后的 2026 年中或者 2026 年初，我们觉得：“是时候把它带回来了。”因为针对模型融合的研究现在看起来非常有前景，而且如今市场上已经有两到四个第一梯队的前沿模型并驾齐驱……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Founder</strong>: And um so the technology was a little bit too primitive. The form factor was was not right and and so we would have had to go through a couple more iterations. And so we decided to just delete all the code. And uh then years later, middle of 2026 um or early 2026, we're like let's bring it back. like the research is looking kind of promising for fusion. The models now have like two, three, four top frontier models that are</p>
+</details>
+<!-- chunk 9/11 -->
+<h3>多模型融合实验与 Fusion 诞生</h3>
+<p><strong>Alex Atallah</strong>: 这些模型都非常出色。我经常尝试同时咨询多个模型，以获得最好的结果。我做过一个小小的个人实验，当时的想法是：我要为一个代码重构方案制定一份架构设计规划。我会把这个任务分发给所有模型，然后将它们生成的结果进行融合（fuse）。接着，我再反问所有模型：这个融合后的方案是否比每个模型各自单独给出的方案更好？</p>
+<p>它们全部给出了肯定的回答，都认为融合后的结果更为出色。这种测试重复了几次，结果都是如此。我当时就想：抽样检查的效果确实相当不错，我们应该对此进行基准测试。这就是我们构建 Fusion（融合路由）的由来。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Atallah</strong>: all really good and like I'm frequently trying to consult multiple models to get the best results. And then I ran a little personal experiment where I was like: I'm going to do an architecture plan for a code change. I'm going to give it to all the models. I'm going to fuse the result, and I'm going to ask all the models if the fused result is better than the individual result each model came up with. And they all said yes, that the fused result was better. And this happened a couple times, and I was like: okay, spot check pretty good. We should benchmark this, and that's how we built Fusion.</p>
+</details>
+<p><strong>Swyx</strong>: 没错，而且这正好出现在你们的产品预告上。所以你当时觉得这已经达到了对外展示的水准。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Swyx</strong>: Yeah. And it came on your fable. So you were like this is fable level.</p>
+</details>
+<h3>OpenRouter 发展里程碑与模型周期的摇摆效应</h3>
+<p><strong>Swyx</strong>: 是的。我们不妨把时间线往前推，梳理一下通往今年的发展历程，也就是我们此前还没详细聊到的今年之前的阶段。你能否梳理一下这段旅程中的主要里程碑？我觉得你们的核心承诺一直在于模型路由，而且很早就确定了商业模式——从中抽取一定比例的分成。</p>
+<p>那么，究竟是哪些重大里程碑推动了你们增长曲线的拐点？毕竟你们现在的周环比增长达到了 9% 左右，这是目前的官方数据吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Swyx</strong>: Yeah. Yeah. Let's start leading up to this year, which we haven't gone to yet. Can you mark out the main milestones in the journey? I think it seems like your promise was routing. You decided the business model very early: you take a cut.</p>
+<p>And what are the major milestones that inflect the growth, right? Like you're growing like 9% week-on-week now, is that the official number?</p>
+</details>
+<p><strong>Alex Atallah</strong>: 从 Token 调用量的角度来看，这个数字听起来差不多，是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Atallah</strong>: In terms of token volume, I think that sounds about right, yeah.</p>
+</details>
+<p><strong>Swyx</strong>: 是的。所以你能否简要勾勒一下 OpenRouter 的简史？一直讲到这次收购。我们刚才聊到，你们最初的爆发时刻伴随着 Mistral 的发布，当时大家真正开始竞争；然后你们做了 State of AI 的年度回顾，非常有意思；当时你们还在庆祝累计处理了 100 万亿 Token，哈哈，而现在你们一周就能处理 10 万亿……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Swyx</strong>: Yeah, so can you mark out the sort of brief history of OpenRouter up to the acquisition? Let's call it—we're just talking about people having your birth moment with the Mistral stuff where people are really competing. You have your State of AI thing where it's very cute, you have 100 trillion tokens haha, because now you're doing 10 a week—</p>
+</details>
+<p><strong>Alex Atallah</strong>: 额，其实……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Atallah</strong>: Uh, you know, um—</p>
+</details>
+<p><strong>Alex Atallah</strong>: 我们现在是一天处理 10 万亿。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Atallah</strong>: We're doing 10 a day.</p>
+</details>
+<p><strong>Swyx</strong>: 现在一天就 10 万亿？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Swyx</strong>: 10 a day now?</p>
+</details>
+<p><strong>Alex Atallah</strong>: 对，甚至更多。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Atallah</strong>: Yeah, more.</p>
+</details>
+<p><strong>Swyx</strong>: 所以 10 天就能达到以前一年的量。那么这其中的关键转折点有哪些？表面上看是一条平滑的增长曲线，但身处其中一定能感受到拐点的冲击。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Swyx</strong>: So yeah, you do this in 10 days! Like what are the major points there? There's a smooth curve, but you feel the inflections.</p>
+</details>
+<p><strong>Alex Atallah</strong>: 这很大程度上是围绕着新模型的发布周期展开的。在 2024 年 5 月之前，我们的重心基本都在纯文本生成（prose）上，因为当时的代码生成能力还远远不够，几乎没有应用能基于此构建出像样的大规模产品。所以那时候虽然支持的模型有一定多样性，但生态并不算宽广，用例的分布也相对单一。Dream Tavern 是我们当时最顶尖的应用之一，而 Dream Tavern 的创作者现在正在 Cognition 负责 Devin 的产品。</p>
+<p>到了 2024 年年中，Claude 3.5 Sonnet 横空出世，在代码编写能力上实现了不可思议的飞跃。我们随即看到构建在我们之上的应用格局发生了彻底改变。OpenRouter 上的用户和请求量迎来了巨大爆发。正是在那个时刻，开发者们开始审视自己每月的账单开销，纷纷惊呼：“哇，到底发生了什么？我可能得认真考虑寻找性价比更高但能力相当的替代模型了。”在那之后不久，如果我没记错的话是在 Sonnet 3.5 之后，Mixtral 8x7B 发布了，所有人都在惊叹：“天哪，开源权重社区竟然交出了这样的答卷！”所以 Mistral 的发布时间点切入得非常精准。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Atallah</strong>: A lot of this is kind of oriented around model launches. We had a huge focus on prose all the way up through May of 2024, because coding was just not there and no apps were able to build much on top of it. So, a diversity in models, but not a wide diversity in use cases. Dream Tavern was one of our top apps at the time. The creator of Dream Tavern now runs product at Cognition Devin.</p>
+<p>Then in the middle of 2024, we saw Claude Sonnet 3.5 come out—an incredible leap forward in coding. And we saw the dynamics of apps building on top of us change. We saw a huge surge in volume in users using OpenRouter, and this is when I think people started to look at the money that they were spending and get a little bit like: whoa, what's going on, I might need to think about more cost-efficient but equivalent models. And shortly after that—I think it was after Sonnet 3.5—Mixtral 8x7B came out, and everyone was like: what, this is the model, the open weights community delivered! And so it was really good timing from Mistral.</p>
+</details>
+<p><strong>Swyx</strong>: 基本上所有大模型实验室都在客观上帮你们做推广。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Swyx</strong>: Basically all of LLM companies are just helping you out.</p>
+</details>
+<p><strong>Alex Atallah</strong>: 确实，培育一个 OpenRouter 需要整个生态系统的合力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Atallah</strong>: It takes an ecosystem to grow an OpenRouter, you know.</p>
+</details>
+<p><strong>Alex Atallah</strong>: 早期生态就是呈现出这种特点。它就像是一种钟摆运动：顶级模型实验室推出某种前沿创新，带动一波调用量激增；随后用户在 30 天后看到账单时就会倒吸一口凉气，心想“怎么花了这么多钱”；紧接着两到三个月后，开源权重模型就会提供高性价比的平替选择。这种循环我们亲眼见证了好几次。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Atallah</strong>: Yeah, that was the early ecosystem. It was like a swing action where model labs would come up with some sort of frontier innovation, usage would surge, then users look at their invoices 30 days later and like: whoa, what's going on here? And then open-weight models would deliver cost-effective options two to three months later. We saw that happen several times.</p>
+</details>
+<h3>编程智能体的演进：从终端到 OpenClaw</h3>
+<p><strong>Swyx</strong>: 针对编程智能体，你们还做了一件事，就是推出了细分的头部编程智能体排行榜。社区非常喜欢那个榜单，比如 Cline 对阵 Roo Code，诸如此类。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Swyx</strong>: One thing you also did with the coding agents was that you broke out which are the top coding agents, and they love that leaderboard—the Cline versus Roo Code versus what have you.</p>
+</details>
+<p><strong>Alex Atallah</strong>: 没错，Cline 当时长期霸榜。快进到 2025 年底，榜单上已经涌现出了相当多的编程应用，但它们大多还是传统的 IDE 插件或基于终端的 Agent。到了 2025 年底，我们见证了 OpenClaw 的横空出世。</p>
+<p>OpenClaw 显得尤为独特：第一，它代表了一种全新的形态（form factor），引入了一批全新维度的用户——不仅仅是专业开发者，连许多生产力工具极客或互联网创作者也第一次接触并使用了 AI。第二，它的系统架构设计非常巧妙。除了使用模型执行实际任务外，它还会为你选定的模型定期发送“心跳”探活请求，以检测模型是否依然存活。对于心跳请求，你显然不希望支付高昂的模型费用。因此，我们提供的 Auto Router（自动路由）瞬间对这群庞大的用户产生了巨大的实用价值。</p>
+<p>于是我们看到它的调用量呈现指数级暴增，OpenClaw 彻底火了，紧接着又有好几款应用跟进采用了这种新范式，实现了类似的功能。随后 Hermes 问世，也深度集成了自动路由等能力，建立起了极具活力的社区，并专注于技能管理（skill management），让用户能够极其轻松高效地为智能体配置记忆并构建出强大的技能。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Atallah</strong>: Yeah. Like Cline was like the top of our leaderboard at the time. Skipping forward a little bit to the end of 2025, there were quite a few coding apps on the leaderboard, but they were all IDEs or terminal-based agents. And at the end of 2025, we saw OpenClaw appear.</p>
+<p>And OpenClaw was particularly interesting because, one, it was a new form factor that brought in a new type of user—not just a developer, but a productivity or sort of an internet creator came to AI for the first time. And it also had an interesting architecture where it was calling your chosen model for these heartbeats to see if it was still alive, in addition to actually using the model for real tasks. And the heartbeats—you don't want to pay a lot for a heartbeat. So the auto router that we provided was really, really useful to this wide range of users all of a sudden. And so we just saw it rocket exponentially, and then we saw OpenClaw just blow up, and a couple other apps lean into that new paradigm and do something similar. Hermes came out and really leaned into things like the auto router, built a really good community, and leaned into skill management and making it really easy and effective for people to set their memory in the agent and build really good skills.</p>
+</details>
+<h3>专注核心路由与排行榜的历史印记</h3>
+<p><strong>Swyx</strong>: 这正是另一点——你们从未越界涉足记忆层、技能库、代码沙箱这些周边领域，尽管你们原本完全有能力去做。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Swyx</strong>: Which is another thing you never did: memory, skills, sandboxes, all these adjacent things you could have done.</p>
+</details>
+<p><strong>Alex Atallah</strong>: 我们确实可以做，但我觉得……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Atallah</strong>: Could have, but I think like—</p>
+</details>
+<p><strong>Swyx</strong>: 很难去盲目下注。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Swyx</strong>: It's hard to bet.</p>
+</details>
+<p><strong>Alex Atallah</strong>: 而且那些东西非常专业化。对于当时不断涌现的开发者场景来说，开发者极其看重这些底层的架构设计自由，他们希望亲自去设计和掌控那些模块。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Atallah</strong>: They're also things that really matter for the developer use cases that were coming out at the time. Developers wanted to architect those things.</p>
+</details>
+<p><strong>Alex Atallah</strong>: 这些组件对于构建良好的用户体验至关重要。对于第三方平台来说，想要在记忆层找到一种能让所有开发者都满意的统一抽象是非常困难的。确实有一些项目做得不错，比如 Mastra 在这方面表现可圈可点，但不同开发者的偏好和需求实在太千差万别了。</p>
+<p>同时，我们排行榜随时间推移的演变，就如同一部记录 AI 领域发展变迁的纪录片。如果你打开 Wayback Machine 去回看我们不同时期的模型排名榜和应用榜单，它几乎完整展现了过去几年里整个 AI 行业所经历的一切浪潮。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Atallah</strong>: Those were kind of critical to building a good user experience. It's been hard for companies to find abstractions that work for all developers on the memory layer. There are some—like Mastra has done a pretty good job, for example—but developers have lots of varied preferences for them. And then, the way our leaderboard has changed over time is kind of like a movie of how the AI space has changed over time. If you just go to the Wayback Machine and look at the rankings leaderboard and the apps leaderboard over time, it shows you what's happened in AI over the last couple of years.</p>
+</details>
+<h3>卡帕西效应、Stripe 合作与防范 Token 欺诈</h3>
+<p><strong>Swyx</strong>: 在我看来，那个标志性的“成人礼”时刻是 Andrej Karpathy 公开发推表示：“我已经不再去刷 LocalLLaMA 了，因为我现在直接看 OpenRouter 的排行榜。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Swyx</strong>: To me, the coming-of-age moment was Andrej Karpathy being like: &quot;I no longer read LocalLLaMA because I just go to OpenRouter's leaderboard.&quot;</p>
+</details>
+<p><strong>Swyx</strong>: 我还记得那件事，估计他发推时心里还在想：“抱歉了兄弟们，我可能要给你们送过去海量的流量了。”此外，我还想聊聊与 Stripe 的合作，那场对话最初是怎么开启的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Swyx</strong>: Which I remember that. I think he probably said like: &quot;Sorry guys, I'm going to send a bunch of traffic to you.&quot; So I also want to bring it into the Stripe thing. How does that kind of conversation start?</p>
+</details>
+<p><strong>Alex Atallah</strong>: 我们与 Stripe 有着非常长期的合作关系，此前在多个不同项目上都有过深入合作。我们在打击滥用行为上投入了巨大精力……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Atallah</strong>: We had this longstanding relationship with Stripe though, from many different projects that we had worked on with them. We invest a lot of effort in countering abuse—</p>
+</details>
+<p><strong>Swyx</strong>: 比如 Token 欺诈。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Swyx</strong>: Token fraud.</p>
+</details>
+<p><strong>Alex Atallah</strong>: 对，以及各种 Token 欺诈。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Atallah</strong>: And token fraud.</p>
+</details>
+<p><strong>Swyx</strong>: 你能透露一些具体数字吗，好让大家对此有个直观的了解？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Swyx</strong>: Can you give some numbers just so people understand?</p>
+</details>
+<p><strong>Alex Atallah</strong>: 我记得我之前发帖公开提过这个。我们上个月拦截的欺诈涉及金额是前一个月的 10 倍之多。而且 Token 欺诈的手法正在快速多样化：一方面，有传统的黑客利用盗刷信用卡；但另一方面，也有人试图违反服务条款私自倒卖流量转售；还有大量被盗用的账户；甚至有部分公司整个基础设施被攻破黑入，而他们自己却浑然不知。</p>
+<p>我们会协助他们检测异常并重新夺回系统的控制权。有的账户在私下转售推理算力；有的账户则是遇到了误操作失控的 Agent，短时间内疯狂调用耗尽资源，他们自己却没意识到——这并非外部黑客攻击，而是自身逻辑失控跑飞，但企业显然不希望承担这种意外损失。</p>
+<p>因此，我们的信任与安全（Trust and Safety）团队在这类问题上投入了海量工作，全力协助拦截和精准检测。为此我们构建了专门的防御模型，也与 Stripe 紧密协作了很长一段时间。我认为在未来的发展中，这一问题将会变得愈发棘手和严峻……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Atallah</strong>: I think I posted about this. We blocked 10x as much dollar volume last month as the month before. And the types of token fraud are diversifying quite a bit. You know, there are fraudsters going after typical stolen credit cards, but there are also people trying to resell traffic against the terms of service. There's hacked accounts. There's people whose whole company is compromised and they don't even realize it, and we help them regain control and detect it. There are accounts that are reselling inference on the side. There are accounts that are dealing with an accidental runaway agent and they don't realize it—not a hack, but it's something that blows up and the company doesn't want it. And so our trust and safety team works a lot on all of these categories of problems and helps block it and detect it. And so we've built models around them. We worked closely with Stripe for a while on this. And I think it's going to become a huge problem in—</p>
+</details>
+<!-- chunk 10/11 -->
+<h3>AI 生态中的欺诈向量与按任务计费的演进</h3>
+<p><strong>Alex Atallah</strong>: 在整个生态系统中，我们其实已经看到很多公司开始面对这类欺诈分子的蔓延，他们开始寻找除 OpenRouter 之外的其他欺诈途径。如果你正在构建 API 网关，或者在市场上销售通用推理服务，你必然会成为欺诈攻击的目标。相反，如果你销售的是非常独立的特定智能产品——比如那些执行非常明确、具体的垂直任务，而不是单纯将底层大模型推理加上一点点功能就直接转售的产品——那你遭遇这类欺诈者的概率就会低得多。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Atallah</strong>: ...the ecosystem. Like we're already seeing a lot of companies start to see these fraudsters like spread and look for other ways other, you know, other than OpenRouter to other fraud vectors. And if you're making a gateway or or selling like generalized inference, you are a target for fraud. If you're selling very discreet like intelligence products, intelligence products that are like doing something pretty specific, but not like, you know, just reselling inference with some added capability, then you're way less likely to get these fraudsters.</p>
+</details>
+<p><strong>Alex Atallah</strong>: 因此，我认为未来我们会看到越来越多的公司逐渐放弃那种仅仅是在模型推理上套壳加点微小功能就去转售的模式，转而走向离散的具体任务。公司会根据这些具体任务以及增值处理来向用户收费，同时允许用户以第三方的方式自带他们自己的模型推理算力（BYOK）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Atallah</strong>: So it I think we'll see companies also move away from just reselling inference with some sort of like added capability and move towards sort of like discrete tasks and charging for those tasks and charging for those enhancements, and letting people bring their own inference like in a third-party way.</p>
+</details>
+<p><strong>Host</strong>: 哇，明白了。显然你们的产品会成为这背后的驱动引擎。不过，人们未来是会为最终结果付费，还是按单个任务付费呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Whoa. Okay. And yeah, obviously you would power that. Uh but you people pay uh for outcomes or per task?</p>
+</details>
+<p><strong>Alex Atallah</strong>: 我认为大家会按事件来付费。其实 Datadog 的定价页面就很好地揭示了未来的发展方向。像这类基础设施公司，会根据他们所提供的不同类型的具体事件来进行差异化计费，未来会出现大量基于这种形态的连续计费模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Atallah</strong>: I think people will pay um you know I think like the the the Datadog pricing page is a is a good look at like the future to come. It's like companies like infrastructure companies will like charge for different types of events that they're providing, and there'll be lots of like continuous pricing models that look like that.</p>
+</details>
+<p><strong>Alex Atallah</strong>: 当然，如果你顺着技术栈往下看，走向偏向 C 端的消费级应用，计费模式肯定会更加简单，更多采用订阅制，用户不需要操心底层复杂的事件计数。而且这些应用也不会把商业模式建立在单纯给推理算力加价转售之上——这不仅是因为防范欺诈非常困难，还因为来自前沿模型实验室以及优质推理服务商的压力会非常巨大，他们都在极力推动用户直接承诺消费，或者将算力带到其他地方运行。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Alex Atallah</strong>: And of course there will be like if you go down uh towards consumer apps, you know, simpler pricing, more subscriptions, um you know, fewer events to worry about, um and ones that like are not focused on just adding a markup on top of inference, not just because fraud is hard, but also because the pressure from the labs and from inf like good inference providers to like do a commit and then bring your inference elsewhere is going to be very high.</p>
+</details>
+<h3>从 Midjourney 早期黑产透视 Token 价值链安全</h3>
+<p><strong>Host</strong>: 两位有什么补充观点吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Any comments?</p>
+</details>
+<p><strong>Guest</strong>: 我想补充两点。第一，我认为 Alex 非常精辟地阐述了一个看似反直觉的问题，而我在大约四年前通过 Discord 的亲身经历就已经意识到这在规模化后必然会发生。教会我这个教训的具体经历是：当年在我们开始扩大 Midjourney 规模的时候，为了让新用户尝试并完成前 10 次图像生成，我们主要采取免费试用的方式。因为我们发现，生成 10 次图像大致是那个促成用户激活的“神奇时刻”（Magic Moment）——一旦用户生成了 10 次，就会惊呼这简直太不可思议了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Uh two. One, you know, I I think Alex has done a very eloquent job of describing something, you know, counterintuitively I knew would be a thing at scale like four years ago because of Discord. And the particular experience that taught me this was, um you know, as we started scaling Midjourney, you know, the one of the primary ways that we used to give away or like get people to try Midjourney early on to get to their first 10 generations, cuz you know 10 generations of 10 images generated was roughly the magic moment activation point we found. Like once you've done 10, you were like this is extraordinary. Um but for that we so we had a free trial with Midjourney.</p>
+</details>
+<p><strong>Guest</strong>: 当时 Midjourney 跑在一个平台上，需要进行实时监控，我有各种监控大盘。有一天早晨醒来，我发现手机里有 David（Midjourney 创始人）打来的三个未接电话。结果发现，前一天夜里突然涌入了大量的全新用户。我们一开始还觉得“太棒了”，但 David 却说：“不，实际上我们刚刚关停了免费试用。”我问他为什么，他说：“你去查一下那些请求的地理位置和 IP 地址。”事实是，中国有人开始把带有免费额度的 Midjourney 试用账号打包转售，这本质上就是典型的黑产欺诈和资源滥用。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And one day I woke up cuz they had a platform and had to monitor, I had all these dashboards, um you know, I had like three missed calls from David, and it turns out like they had there had been this flood of new users overnight, and we were like this is great, and he was like no, actually we shut down the free trial. And I was like why is that? Um and he said, &quot;I want to look at the geolocation IP addresses.&quot; And basically somebody in China had started to resell Midjourney free, you know, subscriptions with the free trial as a way to like basically, you know, it was fraud abuse, right?</p>
+</details>
+<p><strong>Host</strong>: 哪怕像 Midjourney 这样垂直专用的图像生成模型也会遭遇这种情况？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Even for a specialized model like Midjourney?</p>
+</details>
+<p><strong>Guest</strong>: 是的，而且那还只是一个具体的终端应用。所以当年我产生的一个宏观认知就是：互联网上正在流动一种全新的价值计量单位，它叫做“Token”。在未来的十年里，整条互联网价值链都不得不面对一个现实：Token 的价值越高，黑产坏人就越会处心积虑地去攫取和窃取这些 Token。每当一项技术的规模不断扩大、其承载的数据与载荷变得越来越高价值时，就会引来更多不法分子试图非法获取这种价值。这在当年对我来说就已经是显而易见的事实了。所以你看，直到今天，我不认为 Midjourney 重新开放过免费试用，因为从信任与安全（Trust &amp; Safety）的角度来看，这绝对是一个极难解决的问题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah, and that was actually an application. So this idea that I I think the big picture realization I had back then was, hey, there's a new type of unit of value that's being streamed across the internet called a token. And over the next 10 years, the entire internet value chain was going to have to deal with the fact that like the more valuable tokens got, the more bad actors were going to go to try to get their hands on those tokens. And anytime you scale something and the payload gets more and more valuable, more bad things people try to get access to that value. And and so it, you know, it was very obvious to me back then. And so look, to this day, I don't think there's a free turn, like I don't think Midjourney's ever actually turned on the free trial since then, because it was really not an easy problem to solve in terms of trust and safety.</p>
+</details>
+<h3>从在线支付演进到 Token 经济的防御基建</h3>
+<p><strong>Guest</strong>: 正因如此，我后来才开始在斯坦福大学讲授大规模系统安全（Security at Scale）这门课。结合那次经历以及我们在 Anthropic 观察到的经验，我非常清楚，几年之后整个行业对大规模安全防护的需求将会是空前巨大的。只要你简单算一笔账：想想当年的在线支付，大概是在 20 世纪 80 年代和 90 年代起步，随后的 10 年里迅速增长到超过万亿美元的规模，而我们不得不从零构建起一套全新的支付安全解决方案来应对网络欺诈。如今 Token 经济的发展阶段大致就类似于当年的起点，但在未来短短 5 年内，我们预计 Token 经济的规模就将达到约 5 万亿美元；在未来 10 年里，哪怕其流转规模突破 10 万亿美元我也毫不意外。试想一下，当 Midjourney 当时年收入规模还不足 3 亿美元、处于极早期阶段时，就已经遭遇了如此猖獗的黑产滥用与欺诈，我立刻意识到，为了防范那些试图寄生在 Token 流中的黑产渗透，我们必然需要一整套全新的安全系统。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: That's why I started teaching the class &quot;Security at Scale&quot; at Stanford. Like this, like one of the that and the Anthropic learnings, to me it was clear that the need for security at scale was going to be enormous a few years from then. Cuz if you just do the math, right, think about like if where, you know, online payments, you know, started roughly in the 80s and 90s, right, and grew to over a trillion dollars over the next 10 years, and we needed to build entirely new payment solutions to deal with online fraud. Um where we are today is roughly there on tokens, but over the next even 5 years, we're expecting the token economy to get to like roughly $5 trillion, and over the next 10 years, I'd be shocked if we went to $10 trillion of token flow. And so if we were starting to see such aggressive abuse and fraud at subscale Midjourney—remember Midjourney at this point was like less than $300 million revenue run rate a year—I I just realized we were going to need like entirely new like systems to deal with the fraud that was going to happen for trying to get into the token flow.</p>
+</details>
+<p><strong>Guest</strong>: 所以，我记得是在之前某次董事会上，当你提到 Stripe 希望与 OpenRouter 建立合作时，我觉得这简直太合理了。因为 10 年前我在风投机构 Kleiner Perkins 时，我们就投资了 Stripe。当时 Patrick Collison 和 John Collison 的核心叙事讲得极为透彻：他们说，传统的支付工具（如 Braintree）需要经历长达 7 天的背景审核、KYC 认证和邮件往来，试图以此把欺诈风险挡在门外；而 Stripe 的做法截然相反，我们直接将前期的欺诈成本视作获客成本（CAC）自己消化吸收，开发者只需要复制粘贴 5 行代码，5 分钟内就能开始收款。这样做的结果是，随着时间推移，Stripe 积累了海量的开发者和交易数据。这其实就是 Cloudflare 的网络效应模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So um my I I, you know, when I I forget the board meeting it was when you brought up that, you know, Stripe wanted to to partner up, and it made so much sense to me cuz Stripe Radar—when I was a Kleiner 10 years ago, we invested in Stripe, and the whole pitch that, you know, Patrick and John communicated so eloquently was like, hey, unlike traditional payment tools like Braintree that do a 7-day verification like KYC and email to get get the fraud out of the way, we actually just bite the fraud cost up front as a customer acquisition cost, and tell a developer like just use five lines of code and we'll start accepting your payments in 5 minutes. And what'll happen is, over time, we'll collect all this data on the developers. Cloudflare model...</p>
+</details>
+<p><strong>Host</strong>: 这正是 Cloudflare 的增长与安全飞轮，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: ...is the Cloudflare model, right?</p>
+</details>
+<p><strong>Guest</strong>: 确实如此。5 年之后，Stripe 顺理成章地推出了 Stripe Radar 反欺诈引擎。时至今日，Stripe 骨子里其实是一家安全公司，这才是它的真实底色。许多人以为它仅仅是一家支付公司，但现在市面上有大量其他支付渠道提供费率更低的资金清算通路，而 Stripe 之所以能够在欧美市场持续保持绝对统治地位，就是因为他们多年沉淀下来的这套异常强大的欺诈检测能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And and they did. 5 years later, they launched Stripe Radar, and Stripe really today is a security company. That's the real—people think it's a payments company. No, the reason—there's lots of other payments providers today that give you like cheaper payments transmission, but the reason Stripe keeps, you know, being the dominant one here in the US and Europe is because they have extraordinary fraud detection that they've built, you know, over the years.</p>
+</details>
+<p><strong>Host</strong>: 就像当年 Elon Musk、Max Levchin 创办 PayPal，以及后来做 Affirm 时所经历的一模一样。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: The same story with Elon and Max Levchin and...</p>
+</details>
+<p><strong>Guest</strong>: 以及 Affirm，完全是一回事。这种故事在历史上一次又一次地上演：每当人类社会在世界范围内以极其庞大的体量流转某种核心价值载体时，你就必须建立起一套全新的保护屏障和安全基础设施，去击退坏人，同时让合法用户的正常交易能够极速完成。因此在我看来，Stripe 与 OpenRouter 的联手，本质上是为整个互联网生态、乃至整个前沿 AI 生态所书写的一段至关重要的安全篇章。如果没有这样的战略合作，你很难在阻挡黑产侵袭的同时，还能兼顾并捍卫良好的用户体验和极速的响应性能。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: ...and Affirm. Yeah. You know, I think the story shows up over and over again where every time you have value streamed across the world in large amounts, you need new protection and security infrastructure to fight to to keep the bad guys out and allow the good people to like have their transactions happen really fast. And so I think, you know, this is why the from my perspective, like the Stripe and OpenRouter story is a security story for the internet ecosystem, for the frontier AI ecosystem. Without a partnership like that, it becomes very hard to defend the quality of experience and the speed and all the good stuff without letting the bad guys get in the way.</p>
+</details>
+<h3>AI Agent 时代的自适应防御与行业护盾</h3>
+<p><strong>Guest</strong>: 还有第二点，目前有一个被严重低估的趋势：刚刚 Alex 所描述的种种黑产行为，目前虽然还是由人类在操作，但在接下来的 10 年里，全部都会变成由自治的 AI Agent 来执行。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Um, the second is that, you know, there's this underappreciated thing about like the fact that you need to like these all the bad things that that Alex described as being perpetuated by humans right now is going to be perpetuated by AI agents over the next 10 years,</p>
+</details>
+<p><strong>Host</strong>: 没错，想想看恶意行为体即将展现出来的递归式扩张规模吧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: right? So, think about the like recursive scale we're about to see of bad actors.</p>
+</details>
+<p><strong>Guest</strong>: 绝不仅仅是现实中的坏人，而是成千上万由恶意意图驱动的 AI Agent 会直接攻击和吸附在整个 Token 流水线上。如果你只是一个学术研究员或者单一的 AI 实验室，你很难推演和看清这个问题的全貌，因为你唯一能接触到的数据，无非是自己正在训练的模型在内部测试中如何失控或失范。然而，这仅仅只是未来互联网上将要爆发的全部恶意行为的冰山一角。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: It's not just bad human beings. It's it's all the bad agents that are going to be attacking the token flow. And and there's it it's very hard if you're a researcher and or an AI lab to reason about that problem, because the only data you have is how agents you're training are going rogue. But that's just a fraction of all the bad behavior on the internet that we're going to see.</p>
+</details>
+<p><strong>Guest</strong>: 因此，我们真正需要的是捍卫者，是能够戴上警长徽章进驻城镇的新一代“执法官”——他们必须能够横跨整个生态圈，俯瞰来自不同基础模型实验室、不同后训练部署阶段以及不同开发者的所有 AI Agent 恶意行为。他们能够把全网的对抗数据汇聚在一起，自豪地宣布：“我们要为整个 Token 经济构建一面坚不可摧的防护盾牌。”因为如果没有这层防护，在未来高达 10 万亿美元的总交易额（GMV）与全球 GDP 增量中，将会有极高比例的价值直接沦为欺诈与黑产的温床；而如果大家任由其发展、仅仅……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And so what you need is is defenders, new sheriffs in town with cowboy hats, um that can can see all the bad behavior from AI agents across the ecosystem, from different model labs and different post-trained deployments and different developers, and take all of that data and say, &quot;We're going to build a shield for the entire token economy.&quot; Because without that, you know, the amount of fraud we're going to see of this $10 trillion in GMV and global GDP growth is like a huge percentage of that, I think, is going to be fraud, abuse, and we might never get there if people just...</p>
+</details>
+<!-- chunk 11/11 -->
+<h3>AI 代理欺诈与代币基础设施的挑战</h3>
+<p><strong>Speaker A</strong>: 没人会真正信任代币（Token），对吧？而且我认为目前根本不存在能够支撑这些的基础设施。所以，你们在 Stripe 的任务任重道远。但我认为大众还没有意识到，由 AI 代理引发的欺诈行为——即恶意 AI 代理所带来的不良行为——即将像海啸一样向我们席卷而来。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Don't trust tokens, right? And I don't think this infrastructure exists. So, you have your work cut out for you at Stripe, but I don't think people have realized the scale at which agentic fraud—like bad behavior perpetuated by AI agents—is about to hit us like a tsunami.</p>
+</details>
+<p><strong>Host</strong>: 确实，这里面有太多值得深入探讨的内容了。不过由于时间关系，我们必须收尾了，所以我想把最后的发言时间留给你。对于 OpenRouter 和 Stripe 的合作，大家未来可以抱有哪些期待？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. I mean there's a lot to dig into there. I want to give you the last word. We do have to wrap. What can people expect from OpenRouter and Stripe?</p>
+</details>
+<h3>OpenRouter 与 Stripe 的协同前景</h3>
+<p><strong>OpenRouter Representative</strong>: 我认为这是加速我们推向市场（GTM）、并更快向高端企业市场拓展的极佳途径。同时，正如大家精辟描述的那样，两者结合有着非常清晰的协同效应：一方面能够提升信任与安全，另一方面让应用支持代币、允许用户自带模型推理算力（BYO inference）进入应用变得极其简单，并帮助开发者更纯粹地基于模型推理层构建产品。展望未来，OpenRouter 拥有非常强大的品牌，我们会完整保留这一品牌。无论是作为产品本身、技术路线图、名称还是品牌，都将保持不变。因此，在接下来的六个月里，大家可以期待的是：绝大部分规划都与我们作为独立公司时原本会做的事情一致，唯一的不同在于所有进展都会快得多，这也是我们的近期目标。至于更长远的规划，希望我很快能对外分享，但目前还不能透露。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>OpenRouter Representative</strong>: I mean I think this is a really good way for us to accelerate go to market and to go up market more quickly. It's also, you know, as eloquently described, there's a really clear better together story here when it comes to improving trust and safety and making it really easy to accept tokens and let people bring their own inference to your app and to help developers just build on top of inference. Going forward, we have a really strong brand with OpenRouter and we're keeping the brand. OpenRouter as a product and the roadmap and the name and the brand is staying the same. What you should expect in this next 6 months is that most things will be what we would have done had we been independent, except everything will be moving faster, and that's kind of our near-term goal. Longer term, hopefully I can comment on it soon, but I can't now.</p>
+</details>
+<h3>结语与致谢</h3>
+<p><strong>Host</strong>: 好的。希望我们后续还能有机会跟进交流。非常感谢你慷慨抽出时间接受采访，也祝贺你们达成这次合作。这真是我见过的最美好的商业情谊之一……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Okay. Well, we'll hopefully do a follow-up at some point. But thank you for being so generous with your time and congrats on the partnership. I mean, this is one of the most beautiful bromances I've seen in a...</p>
+</details>
+<p><strong>Speaker B</strong>: ……从斯坦福一路走到了这里。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: ...just starting from Stanford to here.</p>
+</details>
+<p><strong>Speaker A</strong>: 还有很多工作要做，整个生态还有太多需要扮演“治安官”去维护秩序的地方……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Lots more to do. Lots of sheriff policing to do of the...</p>
+</details>
+<p><strong>Speaker B</strong>: ……维护整个小镇，维护代币经济。我们确实需要新的“治安官”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: ...of the town, the token economy. We need new sheriffs for sure.</p>
+</details>
+<p><strong>Host</strong>: 没错，太棒了。非常感谢各位。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. Awesome. Thank you.</p>
+</details>
+<p><strong>OpenRouter Representative</strong>: 谢谢。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>OpenRouter Representative</strong>: Thank you.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">token-flow</span>
+      
+        <span class="tag-pill tag-pill--no-page">value-network</span>
+      
+        <span class="tag-pill tag-pill--no-page">agentic-fraud</span>
+      
+        <span class="tag-pill tag-pill--no-page">pub-sub-model</span>
+      
+        <span class="tag-pill tag-pill--no-page">security-infrastructure</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

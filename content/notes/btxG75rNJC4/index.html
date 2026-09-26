@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vLLM 隐形故障排查实战：AI21 团队如何定位 Mamba 状态缓存的静默乱码与 Logprob 突变</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="vLLM 隐形故障排查实战：AI21 团队如何定位 Mamba 状态缓存的静默乱码与 Logprob 突变" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">vLLM 隐形故障排查实战：AI21 团队如何定位 Mamba 状态缓存的静默乱码与 Logprob 突变</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-19</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=btxG75rNJC4" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-19
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">AI21 Labs 团队在训练与部署 Jamba 混合架构大模型时，遭遇了两类无报错、高置信度的静默故障：千分之一概率的输出乱码与强化学习中的 Logprob 异常突变。本文深入复盘通过显存压力复现、Logprob 对比基线、穿透 ForwardContext 追踪请求标识，最终定位 vLLM 调度器乱序调用 Decode 及 CUDA 算子 uint32 整数溢出的全过程与工程启示。</div></div>
+      
+    </div>
+    <h3>静默 Bug 的挑战与 Jamba 架构</h3>
+<p><strong>尤瓦尔</strong>: 想象一下这个场景：你把自己的模型部署上线，把智能体跑起来，满怀期待一切顺利，时刻准备着应对任何可能发生的崩溃报错。监控指标看起来全都正常，系统运转良好，然后……你看到了输出一堆乱码。</p>
+<p>这就是问题所在：在这类 Bug 中，<strong>没有崩溃（No Crash）</strong>，<strong>没有警告（No Warning）</strong>，<strong>没有报错（No Error）</strong>，而且模型生成这堆乱码时的置信度还极高。这并不是模型能力层面的<strong>质量问题（Quality Issue）</strong>，因为你根本不知道它究竟在何时、如何以及为何发生。</p>
+<p>欢迎来到本次演讲。我叫<strong>尤瓦尔 (Yuval)</strong>，这位是<strong>阿萨夫 (Asaf)</strong>。今天我们将带大家回顾一段我们最终解决这些棘手 Bug 的排查之旅。</p>
+<p>先简要介绍一下我们的背景：我们来自 <strong>AI21 Labs</strong>，一家人工智能研究实验室。我们起步于基座模型研发，其中最知名的成果是 <strong>Jamba</strong> 模型——这是一种结合了 <strong>Transformer</strong> 注意力机制与 <strong>Mamba</strong>（状态空间模型，<strong>SSM</strong>）的混合架构模型。</p>
+<p>在我们训练这些模型、将它们推向生产环境、服务大量用户并承载海量工作负载的过程中，我们遇到了一些非常有趣的 Bug。我认为这些是所有故障中最难处理的一类，因为它们不是算法质量问题，无法通过让研究团队做优化、微调或者提升模型表现来解决；这是一个纯粹的<strong>工程问题（Engineering Problem）</strong>——模型输出时的置信度极高，但结果却彻底损坏了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Yuval</strong>: So, put your model somewhere. Put your agent. You're hoping for the best. You're waiting for something to crash. Everything looks good. Everything's fine. and you see this and that's the problem right in these type of bugs there is no crash there's no warning no error and there's high confidence that's not a quality issue because uh right this is something that you don't really know what and how and why um welcome to this talk my name is Yuval this is Asaf and together We're going to take you on a journey of how we ended up fixing those type of bugs. A little bit about us. We work at AI21, which is an AI research lab. We started as a foundation model company, most famously known for Jamba, which is a hybrid architecture between transformers and mamba, which is an SSM state. And while we were doing those, while we were training those models, while we were shipping those models into production and had users and we had a lot of workload, we got into several interesting bugs. And these are the bugs that I think are the hardest to deal with because this is not a quality problem. It's not something you can take your research team and try to optimize or solve or make the model be better at something. This is an engineering problem. This is an issue where that there is high confidence but the output is bad.</p>
+</details>
+<h3>案例一：冒牌请求与千分之一乱码</h3>
+<p><strong>尤瓦尔</strong>: 让我们深入探讨第一个案例，我们称之为“<strong>冒牌请求（The Imposter Request）</strong>”。</p>
+<p>为了交代一下背景：当时我们在训练 Jamba 模型，更具体地说是在进行 <strong>GRPO（Group Relative Policy Optimization）</strong> 强化学习训练。再次强调，Jamba 是一个由 Mamba 层和自注意力层交替组成的混合架构模型。</p>
+<p>为了确保大家理解一致，我们先梳理一个推理请求的生命周期（Life of a Request）：</p>
+<ol>
+<li><strong>分词（Tokenization）</strong>：从输入的 Prompt 文本转换为 Token。</li>
+<li><strong>前向传播（Forward Pass）</strong>：依次执行 <strong>Prefill（预填充阶段）</strong> 和 <strong>Decode（解码阶段）</strong>。</li>
+<li><strong>反分词（Detokenization）</strong>：前向传播结束后，将生成的 Token 转换回可读文本。</li>
+</ol>
+<p>而这次发生的“案件”在多个层面上都极其恶劣，主要表现为以下三个特征：</p>
+<ul>
+<li><strong>千分之一概率的乱码（1-in-1000 Gibberish）</strong>：它不会在前 500 次或 900 次请求中出现，而是在第 1000 次左右才冒出来。这种概率既低到难以轻易稳定复现，又高到绝对无法容忍推向生产环境。</li>
+<li><strong>推理引擎专属</strong>：该问题仅在 <strong>vLLM</strong> 引擎上发生，在其他推理框架中均未出现。</li>
+<li><strong>迟发性（Late Onset）</strong>：如果你只发送少量请求，它是绝对不会触发的，必须在持续积累了一定规模的工作负载后才会显现。</li>
+</ul>
+<p>罕见、迟发、且高度绑定特定引擎——这让排查变得极其艰难。为此，我们不得不派出团队中最顶尖的“侦探”来破解它。接下来交由阿萨夫为大家拆解排查过程。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Yuval</strong>: So let's break let's dive deep to the first case what we call the imposter request where just to set up the scene what are we talking about we are talking about how we during the training of our jamba model more specifically we did gpo which is a type of RL training and again this is a hybrid model layers of mamba and attention and just to make sure we're all aligned what is the type of a request So life lives life of a request. So we start with the prompt token tokenization and then in the forward pass we're doing both prefill and then decode. After that we finish the forward pass detoenization to go back to text. And the thing about the crime here is that it's bad on so many levels but mainly on these three. This is what we call the one in thousand gibberish. It's not something that will happen in the first 500 or 900 requests, but it will happen in the 10,00 which is rare enough to duplicate it easily but not right. It's too common to ship it. Sorry. H also it only happened in VLM not in other not in any other infra framework and it's something which is laid on set. It's not something that will happen if you have only few requests. You need some sort of workload. So it's rare. It's light on set and it's very engine specific. It's a very very hard task and we had to bring one of our best detectives to handle that. So I'll give it to Asaf to explain how.</p>
+</details>
+<h3>显存施压与确定性复现</h3>
+<p><strong>阿萨夫</strong>: 好的，大家好，谢谢尤瓦尔。</p>
+<p>我们要做的第一步，就是尝试去复现一个极难复现的故障。<strong>vLLM</strong> 提供了大量的 CLI 命令行参数和可供调节的开关配置。为了摸清如何才能复现它，我们最开始尝试随意发送一些 Prompts、打几个批次，但根本无法让模型吐出任何乱码，模型的响应完全正常。</p>
+<p>因此，我们的思路是：必须让故障在极短的时间内爆发，这样我们在调试时才能拥有快速的<strong>反馈回路（Feedback Loop）</strong>。</p>
+<p>我们调整了 vLLM 中最常用、最核心的参数之一——<code>gpu_memory_utilization</code>（GPU 显存利用率）。该参数决定了为模型权重、激活值以及 <strong>KV 缓存（KV Cache）</strong> 分配多少比例的显存。我们将显存利用率从默认的 <strong>90% (0.9)</strong> 大幅压低到了 <strong>20% (0.2)</strong>。</p>
+<p>这一改动生效后，当我们开始并发运行大量请求时，第 854 号请求突然就返回了乱码！紧接着，我们将所有批次采样的温度参数设为 <strong>0 (<code>temperature=0</code>)</strong>。通过这种完全确定性的采样配置，我们终于能够每次都稳定、确定性地在同一个请求上捕获到乱码响应。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Asaf</strong>: All right. Hey guys, thank you. Uh thanks you. So we're going to start with um trying to reproduce something that was very difficult to reproduce. Um and basically um VLM has got a lot of um a lot of flags, a lot of the CLI flags and a lot of knobs you guys can turn and tweak. Um and one of the things that helped us understand how to even reproduce it because when we try to reproduce it on the first time just sending prompts here, prompts there a few batches um it didn't really help us manage to get gibberish back from our model. The model responded back just fine. So what we did was is we tried to make it happen in a very very short um amount of time. So we'll get a a quick feedback loop when we try to deb debug it. So what we did was is we took one of the one of the um most default and most common um um flag that the VLM allows you to play with which is GPU memory utilization which basically allows you to to choose how much memory how much GPU memory you want to allocate for your for your weight for your activations and for your KV cache and so on. and we reduced it from 90% to 20%. And once we did that and then we started uh running a lot of requests uh simultaneously um all of a sudden request number let's say 8 854 suddenly returned gibberish and when we did that we uh we sampled all of the batches with temperature zero. So we'll be able to deterministically and constantly get the same request to get to return to return and respond with gibberish.</p>
+</details>
+<h3>引入 Transformers 作为基准对齐 Logprob</h3>
+<p><strong>阿萨夫</strong>: 正如尤瓦尔所说，这个问题只发生在 vLLM 中。为了进一步深入排查并确定问题根源，我们引入了 <strong>Hugging Face Transformers</strong> 作为对照基准（Baseline）。之所以选择 Transformers，是因为它对 Mamba 算子的实现非常纯粹朴素（Vanilla Implementation），而 vLLM 为了支持众多高级优化特性，底层的算子和引擎逻辑都经历了大幅度的修改。</p>
+<p>利用 Transformers 基准，我们可以精确判断到底是模型本身的问题还是推理引擎的缺陷。我们设计了如下排查流程：</p>
+<ol>
+<li>将所有 Prompts 发送给 vLLM 运行生成，拿到生成结果以及 vLLM 导出的 <strong>Logprobs（对数概率）</strong>。</li>
+<li>将由 Prompt 和生成内容拼接而成的完整序列（Full Sequence）喂给 Hugging Face Transformers 的前向传播，但<strong>只执行 Prefill 阶段</strong>。</li>
+<li>从 Transformers 的 Prefill 响应中提取出 <strong>Logits</strong>，通过 Softmax 转换为 Logprobs。</li>
+<li>计算两个引擎在每个 Token 上的分布散度（Divergence）。</li>
+</ol>
+<p>这是一段简化的伪代码逻辑：我们将 Prompt 送入 vLLM 的 <code>generate</code>，取得响应及其 Logprobs；再将其传入 Hugging Face 的前向传播（仅 Prefill 模式）；通过自定义的 <code>compute_log_probs</code> 函数计算 Softmax 与对数概率，最终计算两者的差值以评估每个 Token 的 Logprob 差异。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Asaf</strong>: Um so um like Yuval said it happened only in VLM and um we used um in order to uh another way to reproduce it and to understand where the issue really came from. We used um uh hugging faces transformers as a baseline since transformers is a very had a very um vanilla and uh plain implementation of our mamba kernels as opposed to VLM which uh all the kernels and all the engine have gone through a lot of changes and modifications to support a lot of um cool features that VLM supports. So we use transformers as our baseline to understand whether or not there is an issue with our um with our inference or not with the model or not. So what we did was we took VLM and we sent uh all of our prompts through VLM and we generated a response all the responses we got and now in our hands we have the response along with the log props because because in VLM you're you able to get your log props out and inspect them. Then what we did was we took the full sequence the prompt and the generation and we uh uh passed it over to to hugging faces forward pass but all we did was run just the prefill um and then we uh uh samp we took this the logit out of the prefill um um response we ran it through softmax and then we were able to u to compare the divergence uh in the distributions of our tokens. Um that's a short uh pseudo code of how that look like. You can see here that we uh take up the prompt. We we run it through gen uh BLM's generate. We get the uh the response back along with the uh with the log props. We pass it over to to hugging faces forward pass. We only run it with prefill. Um we've created some function called compute log log props which um runs this is the softmax. Um then you calculate the difference between them and then you'll be able to tell the divergence between every one of the tokens log props.</p>
+</details>
+<h3>排查算子疑凶与请求标识穿透</h3>
+<p><strong>阿萨夫</strong>: 掌握了分析工具后，我们开始逐一审视 vLLM 引擎中的潜在“嫌疑对象”：</p>
+<ul>
+<li><strong>怀疑点 1：Mamba 的 CUDA Prefill 算子</strong>。我们深入检查了 Prefill 算子内部的所有数学计算，比对了算子调用前后的输入/输出张量，结果一切完全正常。</li>
+<li><strong>怀疑点 2：内存越界检测</strong>。我们运行了 NVIDIA 的 <strong>Compute Sanitizer</strong> 工具，检测是否存在内存越界访问（Out of Bound Memory）或其他内存故障，结果依然显示完全正常。</li>
+<li><strong>怀疑点 3：隔离 Decode 算子与 Prefill 算子</strong>。既然 Prefill 算子本身没问题，鉴于 Mamba 的特性支持将所有计算统一走 Prefill，我们尝试完全绕过 Decode 算子，把所有计算全部路由至 Prefill 算子。结果奇迹发生了——乱码现象瞬间消失了！</li>
+</ul>
+<p>当时我们兴奋地认为：“绝对是 Decode 算子的 Bug！”但做软件工程的人都知道，往往刚高兴得太早，随后就会发现事实并非如此。</p>
+<p>为了彻底看清内部细节，我们必须深入源码、掀开底盖（Lift the Hood）。因为 vLLM 原生并没有提供足够细粒度的工具来调试底层算子和前向传播。在默认情况下，当一个张量或请求进入前向传播、准备传入 Prefill 和 Decode 算子之前，<strong>它已经丢失了一切请求身份（Identity）</strong>——没有标识能表明当前正在处理哪个 Prompt，它只是一堆纯粹的张量、数字和矩阵。</p>
+<p>于是，我们修改了 vLLM 源码，在 <code>ForwardContext</code> 类中强行注入了 <code>request_id</code>，并将其一路透传到 Mamba 的前向传播入口，即紧挨着 Prefill 和 Decode 内核被调用的位置。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Asaf</strong>: All right. So now that we have the tools in our hand to understand where the issue could maybe come from um we started to look at different suspects in VLM's engine. So the first thing we looked at was um the CUDA prefill kernel of Mamba. Um we looked at it we inspected all of the all the math that's being done here that's being done there. Um, and we looked at the tensor in, and the tensor's out before before we called the prefill and after. Everything looks just fine. Second thing we did was running Nvidia's compute sanitizer tool to really see if we have any out of bound memory. Um, any other memory uh bugs or issues. Looked okay to me. Um, then what we did was we tried to isolate between the decode kernels and the pre-filled kernels. Now, we saw that the pre-filled kernels were working just fine. So we tried to not call the decode kernels because in Mamba you're able to do that. Um so what we did was um we moved all of our calls and all of our computations to go through the pre through the pre-fill kernel and there you have it. The gibbish all of a sudden kind of vanished. So we were like okay it's got to be the decode kernels. But you know how it is in software you get excited too quickly and then you figure out it's not what happened. So what we did was uh we tried to start playing with the with VLM's engine and we kind of needed to go and you know lift the hood up and see what we can do to maybe get a bit better understanding and maybe you know get our hands dirty because BLM didn't really give us more um tools to really um debug our kernel and our and our forward pass. So once so once uh once a tensor once the request gets all the way to your forward pass and before it goes into your prefill and decode kernels you don't really have any identity. You can't really tell what prompt uh is currently being processed. It's all just tensors and and numbers and matrices. So what we did was is we added to the request ID to some class called forward context that uh that we propagated all the way down to uh to Mamba's forward pass just before the the prefill and the decode kernels were called.</p>
+</details>
+<h3>根因揭秘：调度器乱序与陈旧状态污染</h3>
+<p><strong>阿萨夫</strong>: 注入请求标识后，我们在前向传播中针对那个必然返回乱码的 <code>request_id</code> 设置了一个简单的 <code>if</code> 条件断点。一旦触发断点，我们便能够全面检查随之而来的所有元数据。</p>
+<p>断点命中的那一瞬间，真相大白了：<strong>这个请求在第一次进入前向传播时，调度器竟然先对它执行了 Decode，而不是 Prefill！</strong></p>
+<p>调度器（Scheduler）错误地判定该请求应该直接进行 Decode。正如尤瓦尔之前介绍的请求生命周期，任何一个 Prompt 都必须先经过 Prefill 初始化，然后再进入 Decode 阶段。而在 Mamba 中，如果一个新请求在系统处理过海量先序请求之后，以 Decode 模式首次运行，此时的状态槽位（State）已经被反复使用过了，它直接读取并复用了先前那些已经结束的陈旧请求（Stale Requests）残留的数据和计算状态。换句话说，它在拿前一个请求的脏状态跑当前请求的 Decode，最终必然生成彻底的乱码。</p>
+<p>所以，底层 CUDA 算子本身并没有算错，而是<strong>调度器在错误的时间、针对错误的请求调用了错误的算子</strong>。</p>
+<p>为什么这个问题只在 Mamba 上暴露，而在 Transformer 注意力机制中没有问题？</p>
+<ul>
+<li>在 <strong>Attention</strong> 机制中，写入 Token 的 KV 缓存发生在读取之前。即便缓存槽位里存在陈旧的脏数据，在读取前也会被新数据直接覆盖覆写。</li>
+<li>但在 <strong>Mamba</strong> 机制中，Decode 算子是<strong>先读取现有状态（State），然后再基于其进行状态转移计算</strong>。如果直接执行 Decode，它就会立即读取未被初始化的陈旧状态。</li>
+</ul>
+<p>修复方案相对直接：在调度器对请求进行分类时，必须严密检查——如果检测到一个请求尚未计算过任何 Token（已计算 Token 数为 0），必须强制将其归类标记为 <code>Prefill</code>，确保其在前向传播中先执行预填充初始化，而绝不能直接进行 Decode 或分块 Decode（Chunked Decode）。该修复 PR 随后被正式合并进了 vLLM 官方仓库。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Asaf</strong>: And there we just managed to uh you know have a simple uh if condition with a request ID, the one that gave us gibberish and put a break point there and then we were able to to to infer and to really um inspect all the metadata that comes along with it. And the second we did that, we saw that the request was um for the first time when it went through the uh through the forward pass, it's actually doing decode before prefill. the scheduler um decided that it's um that that this request should be doing decode before prefill and as Yuval said earlier in our in the life cycle of a prompt a prompt should first be uh going through prefill and then decode and what happens was is that when when in Mamba um you run a request first uh with a with decode first after a long a lot of other requests were already computed the state was already kind of um overused and we were using uh the data and the computations of stale requests, requests that came before it. So now we were actually running decode on on previous requests and that kind of generated gibberish for us. So the kernels weren't doing the wrong thing, they were called at the wrong time for the wrong requests. And now and why did it matter only for Mamba? The reason is was is that in uh in attention uh when you write the tokens KV you write it you write the tokens cavies before you actually you read it. So even if you have stale data it's being overwritten but for mamba as uh as I said when uh when you first go through the decode kernels you first read the state and then you compute over it. So what happens was is you just use over you use stale data um um when you do the when you do a decode and the fix was relatively simple. Well, we just needed to make sure that what we do is that when a request first when the scheduler first classifies a request, it's got to it's got to make sure that um that um that it sets that that if a that if that if you sees a request that's whose tokens were never been computed. Um we and and they're zero to mark them as to mark them as uh as prefill as as prefill. So the so when they get to the forward pass, they'll actually just be um uh used for prefill and not decode and not u and not chunked. You can see that it was merged after some time. Um and that really leads us to and then we thought everything was fixed, right? We thought everything was fixed and there you have it. No more issues. But that but that was almost the case because after a little bit of time it gets us to case number two which um surfaced another issue that we've faced in our in our RL and our inference.</p>
+</details>
+<h3>案例二：RL 训练中的 Logprob 异常突变</h3>
+<p><strong>阿萨夫</strong>: 当时我们以为万事大吉，所有 Bug 都被搞定了。然而好景不长，很快我们又迎来了第二个案例——一个在强化学习训练与推理中浮现出的全新问题。</p>
+<p>我们在进行 RL 后训练（Post-training）时，审视各项评估指标与 Benchmark，突然发现 Rollout 采样阶段与 <strong>FSDP（Fully Sharded Data Parallel）</strong> 前向计算步骤之间存在诡异的 <strong>Logprob 突变峰值（Logprob Spikes）</strong>。</p>
+<p>重点在于：这两个步骤发生在<strong>任何权重更新之前</strong>！完全相同的模型权重、完全相同的输入数据，两处计算得出的 Logprobs 本应是完全一致的。但现实中它们并不一致，而且非常稳定地每隔 12 个训练步骤（Step）就会出现一次显著的 Logprob 突变。这极其反常。</p>
+<p>换作各位，遇到这种情况第一步会怎么做？
+我们希望找到一个不仅能改变“故障频率”，而且能改变“<strong>故障形态（Failure Shape）</strong>”的调优旋钮（Lever）。我们不想只调节某些告诉我们“错误很严重、发生了多少次”的粗粒度参数，而是希望找到一个一旦调节、就能直接对应到 vLLM 引擎内部特定机制的开关，从而精确切入并调试特定组件。（这里放了一张尤瓦尔很喜欢的梗图）。</p>
+<p>在我们的默认强化学习引擎配置中，每个 Prompt 会生成 8 个 Rollout（<code>rollouts_per_prompt = 8</code>），此时故障严格每 12 步出现一次。我们决定提高每个 Prompt 的 Rollout 数量，以翻倍递增的方式测试：从 8 增加到 16、32、64、128。</p>
+<p>实验呈现出非常明显的规律：Rollout 数量越大，故障出现的周期就越短。当我们将 Rollout 增加到 128 时，故障在 <strong>Step 1（第一步）</strong> 就立即复现了！我们再也不用苦等 12 步或 24 步，调试反馈回路被极大地缩短。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Asaf</strong>: Um so we ran RL and and when while we were running um our our trainings our post trainings um and we looked at our evaluations and all of our benchmarks we saw that we had some log prop spikes between the rollout and the FSTP step. Uh so and that was before any weight app update. So some weights uh same inputs and the two log props should be identical. Now they weren't. Um we saw that every 12 step cons constantly um there was a log prop spike and that was kind of weird. Now what would you guys do right? What can what what's the what's the first thing to do here? So we wanted to find some lever that changes how things fail and not just how much they fail. We want to see how much um we want to tweak some knobs that that don't just tell us, hey, this error um this error is very very bad. This error happens uh this many times or or [clears throat] and so and so on. We wanted to tweak some knobs that kind of tell us that once we tweak that knob, um we understand how it's wired to uh anything in the in in VLM's engine. And so we'll be able to specifically go and and debug that specific part. Um that's some uh some some cool meme that you all wanted to put in. Um so what we did was is we decided to um to increase the the the amount of rollouts per prompt. Uh since we saw uh in our default RL engine we have um eight rollouts per prompt and we saw that it happened con deterministically every 12 steps. We decided okay let's try to tweak it up a bit and uh and increase the amount of rollouts per prompt. So we started doubling it from say eight to 16 to 64 32 and 128. And you can see here that it's almost um almost um there's a pattern here that that the more we increased it the closer um it happened because what we wanted to achieve here we wanted to try to reproduce the issue as fast as possible so we'd have a faster debug uh debug loop feedback loop. So when we when we when we ran it on 128 rollouts per prompt, it happened immediately on step one and we didn't have to wait for step 12 and step 24 and so on.</p>
+</details>
+<h3>uint32 整数溢出与显存假象</h3>
+<p><strong>阿萨夫</strong>: 这时大家可能会想：之前你们在排查案例一时调小过显存利用率（GPU Memory Utilization），在高压极限测试下能快速暴露问题，这次是不是也可以照搬？</p>
+<p>我们当时也是这么想的。然而，当我们再次把显存利用率从 0.9 压低到 0.2 时，<strong>Bug 居然完全消失了！</strong></p>
+<p>这一次，我们拉错了杠杆。</p>
+<p>深入探究原因后我们发现：Mamba 的底层 CUDA 算子使用了 <strong><code>uint32_t</code>（32位无符号整型）</strong> 指针来计算状态缓存的索引偏移量（Index Pointer）。当连续处理的数据偏移量累积超过约 <strong>40 亿（$2^{32} \approx 4.29 \times 10^9$）</strong> 时，指针不会抛出任何越界错误，而是<strong>发生了静默的回绕溢出（Wrap Around Overflow）</strong>！</p>
+<p>当我们在前期人为缩减 GPU 显存利用率时，vLLM 分配的状态缓冲区（State Buffer）非常小，缓存索引永远不会增长到触碰 40 亿边界的高位槽位，因此根本无法触发溢出条件。</p>
+<p>弄清机理后，修复手段同样极其优雅简洁：我们只需要修改一个单词——将算子中的索引变量数据类型从 <code>uint32_t</code> 更改为 <strong><code>size_t</code></strong>。在几乎所有现代 64 位硬件架构上，<code>size_t</code> 都会被编译为 64 位无符号整数（<code>uint64_t</code>），这个数值上限极其庞大，推理过程再也不会达到该上限，整数溢出 Bug 被彻底根治。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Asaf</strong>: Now you might think, okay, so you guys played with the with the GPU memory utilization before you you tweaked it, you decreased it. It looks like, you know, when you test on pressure, um, it really surface things up. So So we we thought that as well. And when we reduced the GPU memory from zero from 0.9 to 0.2, two, it actually caused the issue to go away. So, we actually pulled the wrong lever here. Um, and the reason is is because we noticed that Mamba kernels um used um in 32 unsigned in 32 index pattern uh pointer. So, once the offset went past some you know 4 billion um uh numbers, it wrapped around instead of throwing an error. Um so uh when we shrank the GPU memory, VLM allocated a small state buffer and um and the cache index never got large to hit that slot. So we were so we were just not reaching um far enough for the buffer to trigger an overflow. So again the fix was rather simple. All we needed to do was just change one word, one one data type variable um from u in32 to size t which basically means for most modern architectures hardware architectures size t would mean to uh it would be now changed to unsigned 64 uh bit and that's a very large number. We didn't we never reached that number and that overflow now never happened.</p>
+</details>
+<h3>总结与有状态推理排障指南</h3>
+<p><strong>阿萨夫</strong>: 纵观这两个案例，可谓是“<strong>两个案发现场，同一个幕后真凶</strong>”：</p>
+<ul>
+<li><strong>表象高度相似</strong>：两者都表现为静默乱码或无报错的 Logprob 突变（突变有时也会演变为乱码）。</li>
+<li><strong>根源高度一致</strong>：都围绕着 <strong>Mamba 状态缓存（State Cache）</strong> 的管理与计算缺陷。</li>
+<li><strong>与显存压力高度相关</strong>：都在特定的显存压力配置下被激发（无论是显存受限还是显存扩张）。</li>
+<li><strong>排查手段一致</strong>：都是借助 Logprob 深度对比分析（Logprobs Forensics）最终锁定真相。</li>
+</ul>
+<p>必须牢记的一点是：<strong>有状态推理系统（Stateful Inference Systems）从来不会大声呼救报错，它们只会极其自信地对你撒谎（Stateful inference systems don't fail loudly, they lie to you confidently）</strong>。当然，有时你会遇到崩溃、内存越界或者异常抛出，但最致命的恰恰是那些没有任何 Trace 日志、没有任何系统报警的静默错误，你必须亲自深入底层去深挖真相。</p>
+<p>最后，为大家总结几条核心工程建议：</p>
+<ol>
+<li><strong>构建 Logprob 对比脚本</strong>：搭建一个能够对比当前推理引擎与标准基线（如纯净版 Transformers 或自研 Reference 实现）Logprob 差异的验证脚本，这是判断模型质量与推理引擎正确性的黄金准则。</li>
+<li><strong>在压力与约束下复现</strong>：通过限制显存、拉大并发规模、调节推理框架提供的各种控制旋钮，摸清故障触发的边界条件。</li>
+<li><strong>观察故障形态的位移</strong>：留意参数调节对故障形态、触发时机、空间布局和具体位置的影响。</li>
+<li><strong>为张量穿透请求标识（Thread Identity Through）</strong>：当系统内部张量失去上下文时，手动将 Request ID 注入底层管道以辅助跟踪。</li>
+<li><strong>敢于深入源码、亲自动手排查</strong>：面对 vLLM 等高度复杂的推理系统，不要害怕深入代码底层。大语言模型或许能向你解释原理，但唯有亲眼所见、亲自动手深挖源码，你才能真正洞悉系统的运行真相。</li>
+</ol>
+<p>非常感谢大家！欢迎在 LinkedIn 上与我们交流，也可以扫描二维码阅读我们针对此项发现发布的详细技术博客。谢谢！[掌声]</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Asaf</strong>: So what we can see here is that we had um two scenes and one criminal. Um both kind of you know they had similar symptoms. Both had silent gibberish and and silent log prop spikes which also kind of pro sometimes generated gibberish. They were both around the mamba state cache. Um they were both surfaced by memory pressure whether it was for worse or for the best and uh both found via log props um forensics. um stateful inference inference systems don't fail loudly they lie to you confidently I mean obviously sometimes you get crash you get out of bounds errors you get other you know exceptions and so on but sometimes there are some errors that don't surface up and you don't get a trace log you don't get anything you have to go and dig and understand why things happen um so if there some takeaways to take from this um presentation is build a log props comparison script if you need to compare your quality you need to compare it to understand whether you modelize the issues or not. Um log props comparison script with a baseline of some other inference framework that you have or built is always great. Um reproducing underression constrain memory. Uh crank the scale up, play with other knobs that the inference framework gives you and really try to understand where the issue comes from. Uh look for what moves um the failure shape, the timing, the space and the location. And when things don't really have identity uh thread identity through and what it also I want you to take from this and don't be afraid to even you know for complex uh systems like VLM or any other um complex framework don't be afraid to go dig in the code get your hands dirty um sometimes you know model languages LLMs are um they might tell you how things work but you know without you seeing it in your own eyes getting your hands dirty you won't get full understanding of what's going on. Um, thank you. You guys can add us on LinkedIn. Scan the QR code to read the actual blog that we've published with this finding. Um, yeah, that's it. [applause]</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=AI21 Labs" class="entity-link company-link">AI21 Labs</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=vLLM" class="entity-link product-link">vLLM</a>, <a href="/search/?q=Jamba" class="entity-link product-link">Jamba</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">stateful-inference</span>
+      
+        <span class="tag-pill tag-pill--no-page">mamba-architecture</span>
+      
+        <span class="tag-pill tag-pill--no-page">inference-debugging</span>
+      
+        <span class="tag-pill tag-pill--no-page">cuda-kernels</span>
+      
+        <span class="tag-pill tag-pill--no-page">logprob-divergence</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

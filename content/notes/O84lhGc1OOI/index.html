@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>超越代码智能体：以知识工作者模式重构 AI Agent 架构与检索系统</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="超越代码智能体：以知识工作者模式重构 AI Agent 架构与检索系统" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">超越代码智能体：以知识工作者模式重构 AI Agent 架构与检索系统</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-16</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=O84lhGc1OOI" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-16
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">Mixedbread 研究员 Benjamin Clavié 深入探讨了知识智能体（Knowledge Agents）与编程智能体的本质区别。他指出代码属于具象且高确定性的特例，而通用知识工作充满隐式上下文与发散目标。通过借鉴人类社会千百年沉淀的知识分工与检索工具演进史，演讲展示了如何结合多模态检索工具优化与主从分工编排（Orchestration），显著缩减模型与人类专家之间的检索表现差距（Oracle Gap）并大幅降低 Token 消耗。</div></div>
+      
+    </div>
+    <h3>范式转移：从代码特例走向广义知识工作</h3>
+<p>当前 AI 智能体的发展经历着从初期玩具到专业助手的深刻演变。在 2022 年左右的早期阶段，智能体大多仅基于简单的条件判断与基础 RAG（Retrieval-Augmented Generation: 检索增强生成），实现了“与 PDF 对话”等初级能力，但实用价值有限。随后，<strong>编程智能体</strong>（Coding Agents）成为行业焦点并取得了巨大成功。然而，软件开发本质上只是广义知识工作的一个特殊子集。现代社会的法律分析、金融风控、医疗诊断及学术研究等大多数白领服务，全部属于<strong>知识工作</strong>（Knowledge Work: 以非实体信息为核心输入，经过模糊处理后输出决策与行动建议的高维智力活动）。</p>
+<p>这种广义知识工作在拓扑上与信息检索深度绑定——只要面临知识问题，就必然需要检索。尽管人类社会在长期的服务经济发展中早已建立起成熟的知识处理分工体系，但当前的智能体设计却过度局限于代码这一特殊形态。代码具有极其持久的线索（如文件路径、符号标识符）与清晰的语法定义（如函数名、关键字），且开发者向编码智能体下发任务时往往已经完成了问题拆解，目标明确且边界狭窄；而真实的广义知识工作不仅线索含义高度依赖上下文（例如“30天”在不同场景下分别代表宽限期、法定期限或留存规则），而且必须从极其开放、模糊的原始意图出发自主探索。因此，直接照搬编程智能体的架构无法胜任复杂的通用知识任务。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Okay. So, hi everyone. I'm going to give the quickest introduction to myself. I'm Ben Clavier. I worked at Mix Bread where we do retrieval. I'm French and I live in Tokyo. And today I'm going to talk to you about the fact that agents should do knowledge work. And so we should design them like knowledge workers. Like we should design them like knowledge agents and not coding agents. And I'm going to explain the difference and why I think that's important. It's a bit of a hot tech talk, but let's start now.</p>
+<p>So the first thing is like first agents gave us fun trivia, and I'm talking like early agents, 2022 agents, back when all you had was you know RAG, but agents couldn't even do tool call back then. So all you had is like you had an if statement, you did search, you got like cool you could talk to your PDF. That was the very first form of agentic work. It was not very useful. We're not going to talk about that for long.</p>
+<p>What came next was programming agents, and that's been all the rage. Like once agents started being able to search actually properly, search actually properly understand things, carve tasks out, call tools, we started designing coding agents, and coding agents are a big thing. I don't think there's anyone in this room that does not use coding agents. I would use Code, Codex, etc. And that's a form of knowledge work. But agents were not knowledge workers at the time. Like agents were coding agents. And now they're becoming knowledge workers.</p>
+<p>And by knowledge worker, I mean that knowledge work is a big superset. And kind of every workflow you've thought of before is a form of knowledge agents just because of the nature of knowledge. So it's like if you have an agent that's a lawyer that's looking for legal documents, if you've got a financial agent, if you're looking for you know medication information—like you've got a lot of people on Twitter that try to do those self-diagnosis and you've got just a lot of medical usage. All of that is trying to find knowledge, trying to make use of knowledge, and coding is part of that of course. And even the small RAG bit that we talked about in the first slide is part of that, but that's a very very small proportion of the actual full thing. There's so much more to knowledge than any one domain.</p>
+<p>And what even is knowledge work? Because I'm saying that it's important they do knowledge work, coding is knowledge work. And I think there's two ways to define it in my opinion. One of them is: knowledge work is work where your main input is information. Like your main input is not an actual physical material. It's not something that you can touch. Knowledge is information. And the nature of knowledge work is that you process this information which is by nature very ambiguous, very diffuse. And the main output you get from that is something actionable. It's a judgment. It's a decision. If it's a lawyer, you're going to get their findings on your case and they might plead for you. You're going to get an actual actionable thinking item, like something still not tangible, but that exists as knowledge.</p>
+<p>There's also a topological definition which makes sense here: if you need search, it's a knowledge problem, and if it's a knowledge problem, you need search. So it's very easy, self-defined. And in the real world, that's basically most of the work that we see in the service economy is a form of knowledge work: lawyers are knowledge workers, academics are knowledge workers, actuaries are knowledge workers, software engineers and researchers are also knowledge workers. And the fact that there's so much knowledge work in society has contributed to a never-improving structuring of knowledge work. There's actually very very well-defined workflows for how we should do knowledge work, for how knowledge works in itself and how we evolve that.</p>
+<p>But so far, agentics kind of focused on the special case and tried to generalize from it. And that special case is coding and software engineering. And the thing is: code is knowledge, but not all knowledge is code. And code is a very very unique form of knowledge because it has very durable cues. In a codebase, there's going to be a lot of references to an identifier, or a file, or a path. When we vibe code, that can change, but most of the time it's not going to change all that much; all the things are very very durable. Then you've got that surface is now grep-able: there's keywords, there's method definitions, there's a lot of things that by definition you can grep in code.</p>
+<p>And the task—this one's actually very important and we don't talk about it a lot—people are like, &quot;Oh, why is an LLM good enough for programming, or why can an agent do programming and then you're telling me it can't do deep research for a legal question?&quot; One of those reasons is because we don't realize it, but when we interact with coding agents, we are giving them extremely bounded tasks. We're not actually expecting that much from them; everything is always kind of about a feature, about a given ticket. There's a task at hand. You're not going to tell the agent, &quot;Discover a new programming paradigm and then implement it in this new app, I don't know what it's going to do, good luck.&quot;</p>
+<p>But in real-world knowledge work, that's often the case. First of all, you don't have those durable cues; the meaning is always implicit. And more importantly, the same clue can mean a lot of different things. We don't have function definitions in knowledge work. If you see &quot;30 days&quot;, and your agent is looking for &quot;30 days&quot;, is it a deadline? Is it a grace period? Is it a retention rule? Is it even in the same domain—are you searching for 30 days on a contract and you're getting medication? There's a lot of contextual information.</p>
+<p>More importantly, the search starts from an intent. Even if you're doing a legal example, if you're asking about a specific rule that you want to apply to a specific domain, you're going to need to look at the international norms that apply, and then do they apply in this case. There's a lot of conditional information that is not predefined in the task; that's all up for the agent to find. Non-code knowledge is very contextual and meaning-driven, which is much harder than code.</p>
+</details>
+<h3>工具演进与组织分工的双螺旋共生</h3>
+<p>人类历史上的知识管理演进展现出一条清晰的双螺旋规律：<strong>工具演进回路</strong>与<strong>组织演进回路</strong>相互驱动。在工具维度，人类经历了口头传播、文字记录、亚历山大图书馆的<strong>书目索引系统</strong>（Pinakes: 历史上首创的图书分类编目目录）、杜威十进制分类法，最终发展为现代数字搜索引擎；在组织维度，知识载体从早期单打独斗的博学者（Polymath: 通晓多学科的旷世通才），演进为中世纪修道院、近现代大学、行政官僚体系，乃至当今高度专业化分工的现代机构（如医院中由主任医师、专科护士、护理助手构成的分层协作体系）。</p>
+<p>这两个回路在本质上统一为同一套自我优化的飞轮：新知识催生更强大的检索工具，更先进的工具打破原有的效率瓶颈，进而催生新的工作流、分工角色与协作范式；而经过培训的高效知识工作者又会加速产出更多知识，驱动下一轮工具革命。在此过程中，工具绝非仅仅带来 5% 的微小边际增益，而是决定了某项复杂任务是否具备<strong>可扩展性</strong>（Scalability）与经济可行性。在缺乏索引的古老图书馆中查找一份手稿可能耗费数周，使大规模检索变得极其奢侈；而在拥有现代索引与多模态检索系统的环境下，原本因成本过高而被搁置在海量档案中的深层知识挖掘才真正具备了商业落地的价值。</p>
+<details>
+<summary>Original English Source</summary>
+<p>And that's led to the fact that none of what I'm saying is new. People have been doing knowledge work for a very very long time, and that's resulted in like two endless loops. You have a tool loop: at the start we were talking, then at some point someone was like &quot;we should write stuff down.&quot; Then in Alexandria, we had the Pinakes, where the curator of the Library of Alexandria came up with an idea that maybe we should have a way to catalog all of the books we have. Then we developed writing, then we developed bibliographies, then we ended up with the current version of the Dewey system for libraries, and nowadays we have search engines.</p>
+<p>But we also had an organization loop, which is joint but also disjoint from the tool one. It used to be the one gifted expert—we've all heard of the polymath of the past, the person who just knew everything about one domain or all domains and you just went to them if you had information. But that doesn't scale. So we ended up with monasteries which were guardians of knowledge, and then we had universities, and then we ended up creating the bureaucracies, and now we ended up creating the modern organization of work where we have very specialized firms. At hospitals, you've got the doctor, you've got the senior doctor, you've got the nurse practitioner, the nurses, the healthcare assistants, and all of them specialize on different levels of tasks. And that's a really good form of optimization.</p>
+<p>The thing is that it's actually just the one loop. I'm showing two loops here, but they're actually just the one loop: we have new knowledge, and new knowledge means that we need better tools, and better tools mean that we end up creating new workflows, new roles. We need people that are trained to use those tools, people that understand what the new tool does. If you have a person that knows how to go to the library and you're like &quot;okay, use Google,&quot; you need the knowledge of what Google is—that person needs to be taught that it's a search engine, you can just type stuff in it, there's no need to physically go there. That means you retrain, you get new knowledge workers who are more efficient, so they create more knowledge, so we need new tools, and so on and so on.</p>
+<p>So both the tool loop and the organizational loop are actually just this one self-optimizing loop that kind of triggers the other endlessly. And the thing about tooling and optimization is that they're not neutral add-ons. Like I said, we keep optimizing tools and things come up, and we create new things out of those tools. But that's never actually a neutral thing. Tooling is not just &quot;oh, my search is 5% better.&quot; The fact that we have a tool or the fact that we don't have a tool is what decides not if the task is possible—because you can do things without the right tool—but if the task is actually scalable and can be carried out cheaply. Because something being cheap means it can scale.</p>
+<p>Yes, of course, if you go to the Library of Alexandria before the Pinakes, you can find your manuscript somewhere wherever you're looking for it; it's probably going to take two or three weeks, so you're going to really really need that knowledge. But if there's a library catalog, it's going to take you 10 minutes, and now it's way easier to just say, &quot;Oh okay, I need to know something more about this, so I'm going to search for it.&quot;</p>
+<p>Likewise, if you have a map directory, or if you even have a map in the first place—which in itself is a tool for information—then exploring the world is a much better idea. You're not going to rely on randomly discovering America on your way to the Indies; you know where you're going. Likewise, if you have a multimodal search platform, then you can search millions of PDFs in a way that we couldn't before. So now there's a lot of use cases where you were like, &quot;Oh, it's in the archives, I'm not going to touch that,&quot; that become actually useful.</p>
+</details>
+<h3>工具优化与架构编排的双重突破</h3>
+<p>在具体工程实践中，构建高性能知识智能体依赖于“底层工具优化”与“高层多智能体编排”的协同发力。在评估基准 <strong>BrowseComp+</strong>（一个包含 20 万份文档的严格受限深度研究基准）上，未经调优的传统 <strong>BM25 词法检索</strong>（Lexical Search: 基于关键词匹配与词频统计的经典信息检索算法）准确率仅为 60% 左右，完全无法达到工业级可用标准；而经过精细参数与分词优化的 BM25 能够将表现大幅提升至 70%-80%，但最终仍会遭遇词法匹配的固有上限。更重要的是，基于混合检索架构（Hybrid Harness），系统不仅将准确率推升至 90.2% 的天花板，更将所需的<strong>工具调用次数削减了 20%</strong>，这意味着直接节省了 20% 的 Token 消耗与推理延迟。</p>
+<pre><code>                    [ 客户开放式意图 / 复杂问题 ]
+                                 │
+                                 ▼
+                    [ 核心编排智能体 (主合伙人) ]
+                 (负责意图拆解、生成子任务检索策略)
+                                 │
+         ┌───────────────────────┼───────────────────────┐
+         ▼                       ▼                       ▼
+  [ 子检索智能体 A ]      [ 子检索智能体 B ]      [ 子检索智能体 C ]
+   (多模态/语义检索)       (词法/精细化检索)       (领域文档/表格分析)
+         │                       │                       │
+         └───────────────────────┼───────────────────────┘
+                                 │ (汇总调研 Memo)
+                                 ▼
+                    [ 核心编排智能体综合研判 ]
+                                 │
+                                 ▼
+                    [ 高质量行动建议与最终结论 ]
+</code></pre>
+<p>然而，即便拥有强大的多模态检索工具（能够直接解析 PDF 版面、复杂表格和图像），单个智能体在面对复杂任务时仍存在明显的性能鸿沟。在 <strong>MQA</strong>（由 Hugging Face 与 Snowflake 联合发布的企业级 PDF 问答基准）中，传统单智能体即使给予 10 轮交互，其表现（88.9%）依然显著落后于人类专家（99.4%）。</p>
+<p>为了打破这一僵局，必须引入模拟专业律所运作机制的<strong>主从智能体编排</strong>（Agent Orchestration: 主智能体负责问题拆解与全局调度，派发多个子智能体并发执行专项检索并汇总 Memo 报告）。实验表明，引入架构编排后，智能体准确率提升了 3.5 个百分点，使衡量系统与理想状态差距的<strong>神谕差距</strong>（Oracle Gap: 检索系统实际表现与完美黄金文档集之间的性能代沟）从 10 个百分点直接压缩至 6 个百分点，相当于<strong>消除了 40% 的错误率</strong>。这一突破有力地证明：单靠盲目扩大上下文窗口不仅成本昂贵且无法覆盖全量人类知识，唯有将专门训练的多模态检索基语（Primitives: 如 Grep、BM25、语义向量检索）与层次化的智能体分工架构协同设计，才能真正构建起能够胜任真实世界知识工作的 AI Agent。</p>
+<details>
+<summary>Original English Source</summary>
+<p>And in practice, this kind of looks like that, and I'm getting into the more technical stuff here, which is on a simple deep research task. This is the BrowseComp+ leaderboard, which is made to evaluate the quality of search tools on a very bounded deep research task: you have 200,000 documents and you have specific queries. It's a really useful benchmark to analyze queries.</p>
+<p>And what we see is that a bad tool—that's a thing that people often rant about. You'll see that there's two BM25 here: there's optimized and unoptimized. And that's because quite often people will tell you BM25 is not great. And the reason they'll tell you BM25 is not great is because there's not one BM25; there's hundreds of them. It's a way to do lexical search. You should always optimize your baselines, you should always optimize what you're betting. And so what you see here is like a badly optimized tool is useless, like 60% accuracy. You're not going to trust someone that's right 60% of the time, you're just going to do it yourself.</p>
+<p>When you start optimizing the tools, you can see we go up to 70, 80. And then the best—the actual best is the hybrid harness that gets to 98. But that's maybe not the most interesting part, because we start kind of plateauing at one point: the jump from 89.8 to 90.2 is in run variance that doesn't matter. What matters here, however, is that 90.2% accuracy you reach it with 20% fewer tool calls. And that's huge, because in practice that's 20% fewer tokens, 20% fewer resources that you use. That's basically 20% free cash. And if you compare it to the unoptimized baseline, you're spending like 5% of what you were spending in the first place. So the tool is actually what makes the task worth doing. Nobody would keep using that tool if it takes 25 calls, but if it takes 8 calls, you're like, &quot;Oh yeah, cool, that's a workflow I can introduce.&quot;</p>
+<p>And the second part, which goes with tooling and I think it's just as important: BrowseComp+ in the previous slide is interesting, but it's easy. It's 100,000 documents, it's just text, it's just the one question. It's not really that open-ended, it's just a bit convoluted. But when you're actually doing real-life knowledge work, there's that workflow that I try to doodle: you have a client, they come to the big shot, they come to the lawyer that's the partner of the agency, and they're like, &quot;Okay, this is my situation, that's my problem.&quot; And they meet together.</p>
+<p>But then what the partner does is they're not going to be the ones doing all the legal research. They're not going to be the ones doing every single step of the problem. What they'll do is kind of understand that: &quot;Okay, this person has this problem, that's going to cause them that, those are the facts. I need the relevant laws with this, that, and so on aspects.&quot; And then they've got assistants, and the assistants are going to be doing this research. They're going to be using the sets of tools they've been trained to use, and they're going to produce memos and notes, and then they're going to give that back to the big shots. Maybe they'll research one clarification point, but they mostly rely on what their searcher agents—the assistants—have found for them. And that's the response that you're going to get.</p>
+<p>And that's echoing the point I made before: in code, when you're using Claude Code, you're kind of doing that work yourself. You've already broken down the query, you know what you want to do, you've got a linear ticket, you've got something that you're giving the agent. In the real world, you've got a client that's got a very open-ended problem, and you need to break it down yourself, and your agent needs to break it down itself, and then needs to use sub-agents that do this research.</p>
+<p>And this is how better tools and organization work together, because this one is MQA, which is another form of knowledge benchmark. MQA is something that Hugging Face and Snowflake jointly released, and it's PDF-based enterprise tasks: it's got PDFs and it's got OCR versions of the PDFs. The current state of the leaderboard really shows that both tools and organizations are necessary. You can see that in the fact that with BM25, however optimized it gets, the human and Gemini reach the same ceiling. And that doesn't mean that Gemini is as good as a human; that means that even the human cannot get the right information given unlimited searches with BM25. So you have the tool ceiling, and you need better tools to go forward. That's the tool optimization part of the loop.</p>
+<p>Thankfully, we've got better tools. We've got models that can handle PDFs, we've got vision, we don't need to rely on OCR text. And what we see with that is that we get another jump, which is Jina and the Mixedbread search tool which is fully multimodal. So it can read the PDF, you get the tables, you get all that nice stuff in your search, and that gets us a big jump in accuracy. But the interesting part is that doesn't work as well as we would like. Because why is my agent getting 88.9 if the human is getting 99.4? That's 10% I'm leaving on the table here. And that's an agent—it gets 10 turns in the benchmark, so it's a fully agentic system. It gets to think about its results, and yet it's missing performance.</p>
+<p>And that's where we introduced the Mixedbread agent, which is exactly that breaking down of work we saw earlier: where we basically tell the main agent answering the question, &quot;Okay, that's a big topic, there is thousands of PDFs. You're not going to search yourself. Just please break down the problem for me. Please write queries about the aspects that you think are important to answer the actual query.&quot; And we get searchers that go off on their own, and they find the right results, and they bring like a little memo to your agent, and then your agent actually answers that. And that gets the accuracy up by 3.5 points.</p>
+<p>That doesn't sound like a lot, but I like to think of it as an oracle gap. The oracle gap is the difference between perfect documents and your search system. The oracle gap here is about 10 points before using the agents, and it goes down to 6 points after using the agent. So that means that we have about a 40% reduction in mistakes. The gap between humans and agents goes down by 40% just by having a better architecture to search through it.</p>
+<p>And what I want you to get from this talk is that we know how to design better knowledge work for humans, and AI agents really benefit from this pattern. Humans have worked on this for centuries. People have always needed more knowledge: empires used to have librarians, we've got legal firms, medical industry—they figured it out. And none of it looks like programming. Programming has a very different system because it's a very specific use case. And we should really learn from the knowledge world to know how to design agents that will do work for the knowledge world.</p>
+<p>You must not overfit on tools, because tools don't exist as a way to do things by themselves; tools exist as a way to overcome ceilings. You want a better tool when you see that you're hitting a ceiling, that your performance is not where you want it to be. So we design better tools to overcome that ceiling. And more importantly, the tools need to be co-designed with the agents: the agents need to know how to use tools. Because one thing you will often see is agents will try to write grep queries because grep is everywhere in the training data, BM25 is everywhere in the data, and that's not always what you need. Sometimes you need semantic search over a PDF, and you can't grep a PDF, you can't BM25 a PDF, you need to write a better query.</p>
+<p>So it's very important that your agentic harnesses or even your agentic models know that they have got more than one tool. It's about primitives: grep is a primitive, BM25 is a primitive, semantic search is a primitive, and all of those need to be very well trained. And the last one is that the right orchestration of search will get you much better results because context is a finite resource. Even if we get to a model that's got a 100-million token context: a) that's going to cost you a lot of money, and b) that's still nothing—you're not even getting half of one state's legal code, let alone the US, let alone international law, let alone specialist courts. So you need to have a way to break down your task, and you need to have your orchestrator, your main agents, and sub-agents that can actually organize the knowledge for them.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Mixedbread" class="entity-link company-link">Mixedbread</a>
+</p>
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">knowledge-agents</span>
+      
+        <span class="tag-pill tag-pill--no-page">information-retrieval</span>
+      
+        <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+      
+        <span class="tag-pill tag-pill--no-page">multi-agent-orchestration</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

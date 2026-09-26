@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>构建可靠的生产级 Agent 基础设施：基于 Restate 的持久化执行与状态管理</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="构建可靠的生产级 Agent 基础设施：基于 Restate 的持久化执行与状态管理" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">构建可靠的生产级 Agent 基础设施：基于 Restate 的持久化执行与状态管理</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-14</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=cI7zfqusmFU" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-14
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">随着 AI Agent 从单次问答演变为长生命周期、异步运行的分布式实体，传统 Agent SDK 难以应对网络故障、状态并发与人机协同等生产级基础设施挑战。本文结合 Restate 架构，深入探讨如何利用分布式事件日志、持久化执行（Durable Execution）、虚拟对象（Virtual Objects）与推送模型，构建具备容错自愈、双向交互控制及高并发隔离的生产级 Agent 技术栈。</div></div>
+      
+    </div>
+    <h3>Agent 演进的三次浪潮与生产级基础设施缺失</h3>
+<p>在探讨如何构建高可靠性的 <strong>AI Agent</strong>（人工智能代理: 能够自主感知环境、进行推理规划并调用工具完成复杂任务的计算实体）之前，我们需要先审视大语言模型交互范式的三次演进浪潮：</p>
+<ul>
+<li><strong>第一阶段（Web 对话）</strong>：用户通过网页端与模型进行同步问答，输入 Prompt 后等待数秒获取回复；</li>
+<li><strong>第二阶段（工具调用代理）</strong>：Agent 作为本地或桌面应用运行，掌握一系列工具接口，在用户实时干预下协助完成特定操作；</li>
+<li><strong>第三阶段（持久化异步实体）</strong>：Agent 演进为企业基础设施中长期运行的异步进程，能够跨组织调用各类工具、上下文及其他 Agent。</li>
+</ul>
+<p>当应用场景从单一 Agent 扩展至协同运作的 Agent 平台时，现有的技术栈呈现出明显的断层。当前市面上的 <strong>Agent SDK</strong>（代理软件开发工具包）主要聚焦于模型提示工程与记忆库封装，非常适合快速构建概念验证（PoC），但在解决分布式系统的重试恢复、状态隔离与跨系统连接时力不从心。要在生产环境中稳定运行长周期、有状态且分布式的 Agent 进程，底层必须依赖坚实的基础设施支撑层。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Hi everyone. This talk will be about how to run agents reliably in production. It will not be about the LLM part, but it will be about all the other things you need to get going in order to run agents resiliently. So the infrastructure layer basically. I want to set the scene with this quote of Andrej Karpathy of last week. It describes that the way we interact with agents and LLMs has been evolving in three waves. The first wave was an LLM being something like a website where we go to we ask it a question, it thinks for a few seconds and then gives us a response. The second wave was going towards agents. It was an app that we download to our computer. It has some tools at its disposal and it can do some work with our interaction. Now the third wave will be going more and more towards persistent and asynchronous entities. So agents being long-running processes in our infrastructure with access to tools and other agents around the organization and context. And so as our use cases are evolving more and more from single agents to agentic platforms that connect parts around the organization, our infrastructure layer should also evolve with that. So when we look at the types of tools that are currently out there to implement agents, a lot of innovation has been done on sites such as agent SDKs and memory. And agent SDKs are really cool to implement PoCs and get started quickly, but they don't necessarily help with connecting the distributed bits around an organization. And if you want to implement more complex agentic systems, you actually need all of those things. So that is the layer where you have to deploy extra infrastructure. You need to write things like retry logic, recovery logic and all of that is actually pretty complex to get right but completely necessary to run long-running, stateful and distributed processes in production.</p>
+</details>
+<h3>Restate 的核心支柱：持久化执行与全生命周期控制</h3>
+<p>针对分布式 Agent 的工程痛点，开源分布式框架 <strong>Restate</strong>（开源持久化执行与服务编排引擎）提供了一套底层的持久化运行时基础。其设计思想源自 <strong>Apache Flink</strong>（业界主流的分布式流处理引擎）以及前 Meta 核心事件基础设施架构师的设计经验。Restate 的核心架构涵盖四个关键维度：</p>
+<ol>
+<li><strong>持久化执行</strong>（Durable Execution: 一种确保函数在发生节点崩溃或网络分区等故障后，能够精确恢复至故障前执行点并继续运行的编程模型）：若 Agent 运行一周后发生崩溃，系统能够利用日志精准恢复执行现场，避免从头重新计算；</li>
+<li><strong>高并发状态一致性</strong>：支持数千个 Agent 会话并行运行，通过状态隔离确保并发读写不产生竞态干扰；</li>
+<li><strong>异构系统与协议通信</strong>：打通 Agent 之间、Agent 与 <strong>MCP 服务器</strong>（Model Context Protocol: 开放模型上下文协议）及第三方工具的可靠通信；</li>
+<li><strong>全生命周期可控性</strong>：支持对运行受阻或失控的 Agent 执行精准的挂起、取消与终止操作。</li>
+</ol>
+<p>在拓扑架构上，Restate 以独立服务器的形式部署在 Agent 服务前端，充当类似消息代理（Message Broker）与智能反向代理的角色。当请求到达时，Restate 会与 Agent 服务建立长连接生命线；Agent 执行过程中的每一步操作均以事件日志的形式同步至 Restate。借助该<strong>事件日志</strong>（Journal），系统在无需重写复杂重试与恢复逻辑的前提下，即可将普通函数升级为具备持久化能力的长周期运行任务。</p>
+<details>
+<summary>Original English Source</summary>
+<p>So today I want to talk about an open-source framework called Restate. And you can see it a bit as a flexible durable foundation that lets you build any backend. So it's not specific for agents, but as agents are also just a type of a backend, it also works well for them. The ideas behind Restate come from Apache Flink, which is a popular distributed stream processing engine, and also from some of the ex-architects behind Meta's core event infra. So what are the ingredients in Restate? Basically four parts. First of all, it makes sure that a single run of an agent is resilient. This is called durable execution in the industry. Think about things like when an agent runs for a week and then crashes. We want to be able to bring it back and let it continue exactly at the point where it failed. We don't want it to start over from the beginning. Another area here is running many concurrent sessions in parallel. Imagine running thousands of concurrent agent sessions at the same time and needing to make sure that state is always consistent and that different agents don't interfere with each other. And then going more towards things like communication between agents, between agents and MCP servers and other tools. And finally also control, making sure that when an agent for example is doing something you don't want it to continue or when it's stuck, being able to actually cancel or kill the execution. So the way that you can think of it is as follows. Restate is basically a server which runs in front of your agent service. So as a separate component it sits there a bit like a message broker or a proxy and when there's a request for your agent, Restate proxies the request to the service and pushes it to the service basically. And from that moment there's an open connection between Restate and the agent, and that connection will basically be a bit like a lifeline for the agent. So as the agent is doing stuff, it sends events over to Restate, and Restate will use that journal of events to recover the process after a failure. So from a slightly higher level explanation, you could say that it's turning a normal function in your application into something that is long-running, durable, and stateful without having to do a lot of the complex things you otherwise need to do for this.</p>
+</details>
+<h3>深度调研 Agent 实战：日志驱动的自愈与重试机制</h3>
+<p>为了直观展现持久化运行机制，演讲中演示了一个集成于 <strong>Slack</strong> 的企业级深度调研 Agent（Deep Research Agent）工作流。</p>
+<ul>
+<li><strong>规划与交互确认</strong>：当员工在 Slack 频道提出调研需求（例如“AI 领域最新进展”）时，Restate 控制台（UI Cockpit）记录该执行会话。系统首先调用 <strong>Planner Agent</strong> 生成子研究课题清单并发送至 Slack，等待用户审批；</li>
+<li><strong>人工介入（Human-in-the-Loop）</strong>：用户在 Slack 中点击 Approve 按钮即可解除工作流的挂起状态，触发下游多个子调研 Agent 并行启动；</li>
+<li><strong>故障注入与日志自愈</strong>：在子 Agent 执行网络检索时，即使人为注入外部搜索 API 宕机错误，系统也不会导致整个调研流程崩溃或重新执行 LLM 规划。Restate 依据左侧记录的事件日志（Journal），自动在故障点执行退避重试，直至检索成功并继续推进后续报告生成。</li>
+</ul>
+<details>
+<summary>Original English Source</summary>
+<p>So my talk today will be mainly a demo. So I'll be showing you a research agent that is connected to Slack. Imagine we are working at some company and we want to make a Slack agent available to all of our employees. So if I go here into Slack, then I can here in this channel for example ask &quot;what is new in AI&quot;. Now let's have a look at what it's doing under the hood. So if I go back here, I have here the Restate UI. This is a bit like a cockpit for your agents. So you can see a registry of all the agents that are currently registered and you can also see for example which execution is currently happening. So here is the deep research agent that I spinned up a few seconds ago. We can see what it's currently doing. Now it called first an LLM and then it sent me an answer via Slack. This first LLM call was a planner agent. So what it did is it planned the research and sent me a list of subtopics that it wants to research. Now if I press here approve, then this will unblock the workflow and will spin up a set of parallel research agents. So this is basically like the classical deep research workflow, right? You have a planner then a set of sub-research agents and then finally someone who writes a report on this like a writer agent. And so this journal you see here on the left, that is basically the events that get sent from the agent to the Restate server. And if this now crashes at some point, this journal is what will be used to recover the execution to the point where it failed. I injected a bit of tool errors in here. Yeah, here you can for example see that the sub-agent first did an LLM call, then started doing some web searches, and eventually one of the web searches didn't go through because the API was down. And then you see here on the right how it got retried and eventually completed successfully. So instead of starting over, it uses the journal to recover the progress.</p>
+</details>
+<h3>代码落地：基于 HTTP Handler 与持久化 Promise 的非阻塞挂起</h3>
+<p>在代码实现层面，Restate 的核心应用单元是标准的 HTTP 处理器（HTTP Handlers），通过引入 Restate SDK 赋予其持久化执行能力：</p>
+<pre><code class="language-python"># 示例：通过 restate.run 封装步骤实现持久化恢复与挂起
+async def deep_research(ctx: restate.Context, query: str):
+    # 步骤 1：持久化 LLM 调用
+    plan = await ctx.run(&quot;planner_call&quot;, lambda: call_llm(query))
+    
+    # 步骤 2：创建持久化 Promise 并挂起等待人工确认
+    approval_promise = ctx.promise(&quot;approval_token&quot;)
+    await send_slack_notification(plan, approval_promise.id)
+    
+    # 进程在此处休眠挂起，不消耗计算资源
+    await approval_promise.result()
+    
+    # 步骤 3：解除挂起后继续执行下游子 Agent 并行派发
+    await run_sub_agents(ctx, plan)
+</code></pre>
+<p>在上述逻辑中，<code>restate.run</code> 会自动将执行结果落盘。无论服务在数小时还是数月后遭遇重启或重新部署，都能精准跳过已完成步骤。对于等待人类审批的长周期场景，<code>ctx.promise</code> 充当持久化挂起点；在此期间，<strong>Serverless</strong>（无服务器架构）计算实例完全释放，不占用任何 CPU 与执行计费时长，直到回调事件触发唤醒。</p>
+<p>然而，传统的静态工作流模型（DAG）存在局限：现实中的 Agent 是一个有状态、长生命周期、需要随时注入新上下文的动态实体。如果仅用顺序工作流建模，用户必须等待整套流程跑完才能追加信息，无法满足高频互动的需求。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Let's now have a look at what this looks like in code. So the basic unit of how you implement applications in Restate is by writing HTTP handlers, and those handlers become durable by using the Restate SDK. So here in this case we have here our deep research handler and here as a first argument we have a Restate object context. And the way you can imagine that is basically as that connection to that Restate server. Whenever I do an action on this Restate object, it will lead to an event being sent to Restate. So for example, when I did that planner LLM call, what actually happened under the hood was it executed here this Python function. This is just a simple LiteLLM call, and the way I made it durable is by wrapping it in <code>restate.run</code>. So what happens is by doing these durable steps, if this fails somewhere here two hours or two months later, it will recover to exactly that point. So that's the idea of durable execution. You're always able to recover a process to where it was. You can also use that for other things, not necessarily for failure recovery. For example, imagine we want to ask a human to approve something and this approval might take weeks or a month. This process needs to be able to survive restarts and redeploys over those kind of long periods of time. And so with durable execution, you can actually also suspend a function and bring it back when it's able to make progress. So in the case of a human approval, what we do here is basically we create a durable promise which lives in that journal a bit like a suspension point. Then we ask a human to click that button in Slack as I showed in the beginning, and while we are waiting this process actually suspends. So if it's running on serverless, this is not using execution time on our functions. Once the response comes in, this then gets unblocked and can continue where it left off. So what we see here is a bit like a workflow. It's a set of steps that get executed durably. But when we think about agents and also the way that Karpathy described it in the tweet, it's more like a persistent stateful entity that lives for a longer period of time that has some memory. So a workflow is not the nicest way to model this kind of thing.</p>
+</details>
+<h3>虚拟对象与双向信号交互：超越单向静态工作流</h3>
+<p>为了精准表达长周期实体的动态特征，Restate 引入了 <strong>Virtual Objects</strong>（虚拟对象: 具备全局唯一标识符、内置独立持久化状态及排他性并发控制的有状态 Actor 模型）：</p>
+<ul>
+<li><strong>状态与并发隔离</strong>：每个虚拟对象绑定唯一的 Session ID（如会话标识），拥有独立的 Key-Value 状态存储（如历史对话记录）。系统采用串行队列执行机制，同一会话的多次并发请求会自动排队，彻底消除会话状态相互覆盖的竞态风险；</li>
+<li><strong>双向信号通信与动态控制</strong>：外部进程可通过会话 ID 连接到正在运行的 Agent 循环中，执行数据注入或流程取消。</li>
+</ul>
+<p>在实际交互场景中，当用户在 Agent 调研过程中追加输入时，系统通过 <strong>Session Controller</strong> 调用轻量 LLM 进行意图判定：</p>
+<ol>
+<li><strong>追加上下文（Signaling）</strong>：若用户补充“重点关注前沿模型”，分类器判定为相关信息，直接向正在执行的 Agent 循环发送 Signal 注入状态，Agent 即刻基于新提示调整规划；</li>
+<li><strong>重置中断（Cancellation &amp; Rollback）</strong>：若用户输入“忽略刚才的指令，改为调研 AI 监管政策”，协调器会向调用链向下广播取消信号，首先级联终止所有正在运行的子 Agent，随后回滚主控状态并重启新任务。</li>
+</ol>
+<details>
+<summary>Original English Source</summary>
+<p>So the way that we can model this in Restate is by using something called a virtual object. So imagine in the use case that I'm showing this Slack research agent, imagine that I don't want to wait for 10 minutes to give it some follow-up context or maybe I think about something else that I should have told it. I want to actually be able to interact with it, not wait till that research is finished before I can send a follow-up. And so this is basically what a virtual object in Restate is. It's a bit like a stateful actor. It has a unique ID, for example, a session ID. It has some key-value state that is isolated for that specific session that you can write to, imagine for example your history of messages, and it also has a set of handlers that can execute durable functions for this session. So here the way I implemented this use case of interacting with a running process is as follows. This is a bit a session controller. Again, it has like this Restate object context at its disposal to do things in a recoverable way. It can write to this session store. Here I'm retrieving the chat history. And one thing that's interesting there is that in order to run these kind of sessions in very high paralyzed ways, so thousands of sessions at the same time, we need to make sure that agents do not interfere with each other. Imagine I'm sending two messages on Slack and now two agents are actually overwriting each other's session state. To prevent that, this will guarantee that only one execution is running at a time. So a second execution will be queued behind the current one. Then let's have a look at how we implement this interacting with another execution. So an execution in Restate has a unique identifier and you can use that identifier to connect to it from other processes, for example, to retrieve the output, but also to cancel it or maybe to signal it, being injecting a bit of state into an already running agent loop. And so this is like a very flexible type of capability that you can do to implement things like signaling an already ongoing agent loop. So what we do here is if there is a current execution ongoing, then we will ask an LLM: is this something that is relevant for the current agent loop? If that is the case, inject this via a signal; if it's not really relevant for what we're currently doing, then cancel what you're currently doing and start over again with this new information. And so this goes a little bit further than workflows. It goes a bit more towards writing persistent stateful entities that can interact with each other and have memory at their disposal. So let me show you how this works. Here if I now ask again &quot;what is new in AI&quot; and I wait a few seconds, then it should respond again with a plan. And then I can say for example some extra info: &quot;focus on frontier models&quot; let's say. Once I have the plan I will inject that bit of extra state. Now let's look at the UI. It started calling an LLM to classify this new input. Once this comes back, it will probably decide that it should signal it because it's still relevant. So this injects that new message into the ongoing agent loop. So in the deep research agent again, first it called an LLM, then asked us, then we injected this new message of &quot;focus on frontier models&quot;, took that into account, and started over again. Here I can now for example also say something like &quot;forget about that, research AI policy&quot;. If I send this, then the coordinator will decide to cancel the ongoing run and start a new one that will research this new topic. And so this cancellation is basically like a signal that gets sent down the stack of the call chain. So if my agent was already spinning up sub-agents, first those sub-agents would be cancelled, then the controller itself, and like that it would basically rewind the stack and give agents also the ability to roll back.</p>
+</details>
+<h3>解耦服务网格与生产级流控治理</h3>
+<p>当 Agent 系统投入生产数月后，企业常面临高昂的模型调用成本或模型供应商变更挑战。若将模型调用硬编码在业务逻辑中，系统扩展与治理将极为繁琐。Restate 允许将内联的模型调用剥离为独立的 <strong>LLM Gateway</strong>（大模型网关服务处理器）：</p>
+<ul>
+<li><strong>集中化治理与策略校验</strong>：所有 Agent 不再直接发起模型调用，而是通过 Restate 的分布式通信原语请求网关，在网关层统一部署安全策略检查与计费审计；</li>
+<li><strong>细粒度流量控制（Flow Control）</strong>：利用内置的服务通信机制限制并发量（例如限制某部门针对特定昂贵模型的并发调用数不超过 300），防止上游突发请求击穿后端或产生意外账单；</li>
+<li><strong>深层故障免疫</strong>：运行时底层具备应对网络分区（Network Partitions）与僵尸进程故障（Zombie Failures）的弹性恢复能力。</li>
+</ul>
+<details>
+<summary>Original English Source</summary>
+<p>Okay, so this went a bit more into the direction of like stateful persistent entities that we can interact with over longer periods of time. Now the last part of the demo that I want to show is going more towards being able to write highly customized applications. Imagine that we deploy this in production, but then a few months later a new model provider brings out a new model, and even though the model is very good, it's also very expensive, and we notice that this research agent is actually starting to cost a lot. These kind of things that pop up halfway through a project require you to then deploy a lot of new extra infra or find a good way to solve this. This is the kind of things that Restate really excels at. It doesn't really peg you into a specific way of how you should write your application. It basically gives you a durable programming model that lets you implement an application in the way that fits for you and also extend it if necessary. So first I showed this LLM call in the first example as an inline step. It was just a Python function that got persisted. But imagine this use case that we want to actually have a bit more control over those LLM calls. For example, what you can do is then pull this out into its own handler. And this handler can now do things like for example a policy check and then do the LLM call. And the other agents, instead of doing this LLM call inline, can now use Restate's distributed communication primitives to actually just call this LLM gateway instead of doing it as an inline step. And this service fabric that lets you communicate between agents also gives you some things like flow control. So we can for example say one department is only allowed to run 300 calls to this LLM gateway at the same time. So the reason why I showed this was just to show you that it's basically just a resilient foundation. It makes sure that your process can recover from even more advanced types of infrastructure failures, things like network partitions and zombie failures, and it gives you tooling to extend and customize as your use case grows.</p>
+</details>
+<h3>底层架构：基于分布式日志的 Push 调度与极简运维</h3>
+<p>Restate 内部架构由<strong>事件驱动的分布式日志</strong>（Event-Driven Distributed Log）、事件循环（Event Loop）以及嵌入式状态存储（Embedded State Store）构成：</p>
+<ul>
+<li><strong>Push 调度模型 vs. Pull 轮询模型</strong>：传统工作流编排器（如 Temporal、Cadence 等）通常依赖 Worker 节点主动轮询（Pull）拉取新任务，带来额外的调度延迟。Restate 采用由日志驱动的主动推送（Push）模型，将调用直接推向目标服务。这种设计实现了极低的执行开销——对于一个包含 10 个步骤的工作流，其 <strong>P99 延迟</strong>可低至 45 毫秒，同时天然适配需要即时唤醒函数的 Serverless 环境；</li>
+<li><strong>极简运维与生态交付</strong>：Restate 编译为单一二进制文件（Single Binary），天然支持多副本高可用部署，可通过对象存储执行快照备份。框架提供针对 6 种主流语言的 SDK，全面兼容主流 Agent 框架，并支持开源自托管、私有云托管（BYOC: 数据不出租户 VPC）及全托管云服务。</li>
+</ul>
+<details>
+<summary>Original English Source</summary>
+<p>Let's go back to the slides to have a little more of an idea of how this thing is actually implemented on the inside, because it's actually a pretty interesting design or architecture. So the way it's implemented is basically by having an event-driven distributed log implementation. Inside the box, you basically on one side have the clients, on the other side the services, and inside the box is a log which persists all those journal events and an event loop. That event loop basically gets the events from the service, and based on what the event is, it either persists some state in the embedded state store, or it sets a timer, or it sends a request to another agent. And by doing that, you basically have a durable foundation for whatever an application is doing. The design of this distributed log is heavily inspired by the way that the core event infra layer at Meta works; it's basically like an iteration on top of that, and some of those architects have designed that for Restate as a more generic solution that is available in open source. There are two important things related to this architecture that make it interesting. The first one is that it works as a push model. So whereas most workflow orchestrators actually pull for new tasks from the workflow server, Restate actually pushes the invocations. The benefit you get from that is that it has a much lower latency. So you can use these kind of workflow guarantees in functions around your application and have latencies of, for example, 45 milliseconds p99 for like a 10-step workflow. Pushing invocations also works very well for serverless because they require you to basically send the request and wake up the function. So this design that I show here includes everything you need. It includes as well that state store where we were embedding the state as the UI. It's a single binary, so it's pretty easy to operate as well to run it in a highly available way. You just spin it up multiple times and let it snapshot to object storage. So Restate has six different SDKs. We also have integrations for most of the popular agent frameworks out there. And of course, because it's just like a flexible layer, you can also just use any LLM SDK and implement custom agents by just wrapping some steps into these SDK constructs. So it's open source. You can self-host it. We also have a BYOC offering where we deploy Restate in your cloud account, and that gives you the benefit that data doesn't leave your cloud account. Otherwise, there's also a managed cloud offering. This was mainly what I wanted to show. If you want to explore the code a bit further, there is here the GitHub repo, it's publicly available. If you like the project, then have a look at the Restate repo itself. We are hiring across the board for all sorts of roles going from engineering to marketing, especially also here in the Bay Area. So if you're interested in that, then definitely check out our careers page, and I will be outside in front of the conference hall here if you want to ask any questions or learn more about Restate. Thank you very much.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Restate" class="entity-link company-link">Restate</a>
+</p>
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/durable-execution/">durable-execution</a>
+      
+        <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+      
+        <a class="tag-link" href="/tags/fault-tolerance/">fault-tolerance</a>
+      
+        <a class="tag-link" href="/tags/distributed-systems/">distributed-systems</a>
+      
+        <a class="tag-link" href="/tags/state-management/">state-management</a>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

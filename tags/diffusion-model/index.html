@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+
+  
+  
+  
+  <div class="container" data-pagefind-ignore><div class="home-layout">
+    <h1>标签：diffusion-model</h1>
+    
+    
+<ul>
+
+  <li>
+    <a href="/content/notes/75ckHC2LU_0/">推理工程前沿：从 TurboQuant、KV 压缩到扩散推测解码与系统演进</a>
+    <span class="badge">📝</span>
+    <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a> 
+    <time datetime="2026-09-19T00:00:00.000Z">9/19/2026</time><br>
+    
+      <small class="summary-text">📄 Baseten 的 Philip Kiely 梳理了自《Inference Engineering》出版以来的最新推理工程进展。内容深入探讨了 TurboQuant 在数据中心与本地部署中的工程权衡、基于训练摊销的 KV 压缩机制（STILL）、从 Eagle-3 演进至 DFlash/DSpark 的扩散推测解码架构，以及面向未来硬件（如 Rubin 架构 NVFP4）与 PD 分离的系统级优化趋势。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/clippings/2026-08-16_httpsyag_diffusiongemma-text-diffusion-20260816-html/">Google 发布
+DiffusionGemma：当语言模型不再只能从左到右写</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline">🎙️ yage.ai</a> 
+    <time datetime="2026-08-16T00:00:00.000Z">8/16/2026</time><br>
+    
+      <small class="summary-text">📄 Google 发布了开源模型 DiffusionGemma，它通过将自回归生成过程改写为在固定画布内通过多轮双向注意力迭代去噪的并行生成机制，实现了文本生成速度的提升。该模型在推理加速和复杂推理能力之间进行了权衡，并展示了在特定负载下的性能取舍，为未来文本生成架构提供了新的工程实践方向。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/notes/jPtQlILfkhA/">xAI 访谈录：Ethan He 揭秘 Grok Imagine 研发内幕、世界模型与视频智能的未来</a>
+    <span class="badge">📝</span>
+    <a href="/speakers/latent-space/" class="speaker-inline">🎙️ Latent Space</a> 
+    <time datetime="2026-06-01T00:00:00.000Z">6/1/2026</time><br>
+    
+      <small class="summary-text">📄 前 xAI 工程师 Ethan He 分享了在 3 个月内从零构建 Grok Imagine 的历程。他提出“视觉智能本质上源于语言智能”的核心主张，探讨了视频生成与世界模型的本质区别，并预言视频智能体 (Video Agents) 和生成式 UI 将重构人机交互的未来。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/notes/3jGAU2sbAyY/">TTS 架构演进：为什么现代语音合成越来越像大语言模型？</a>
+    <span class="badge">📝</span>
+    <a href="/speakers/ai-engineer/" class="speaker-inline">🎙️ AI Engineer</a> 
+    <time datetime="2026-05-09T00:00:00.000Z">5/9/2026</time><br>
+    
+      <small class="summary-text">📄 来自 Mistral AI 的科学家 Samuel Humeau 深入解析了语音生成（TTS）的最新技术趋势。文章探讨了如何借鉴 LLM 的 Token 化思路处理音频，详细介绍了 Mistral 开源的 40 亿参数 TTS 模型架构，包括自回归解码、音频编解码器（Codec）以及利用扩散模型生成音频块的技术细节，并展望了实时语音交互中延迟优化的关键策略。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/notes/ccqCDD9LqCA/">影像與聲音的生成策略：擴散模型與自回歸架構的深度匯聚</a>
+    <span class="badge">📝</span>
+    <a href="/speakers/hung-yi-lee/" class="speaker-inline">🎙️ Hung-yi Lee</a> 
+    <time datetime="2025-12-14T00:00:00.000Z">12/14/2025</time><br>
+    
+      <small class="summary-text">📄 本講由李宏毅教授解析生成式 AI 在影像與語音領域的核心技術演進。內容涵蓋從早期的像素與取樣點接龍，到現代離散與連續 Token 的表徵技術，並重點探討了 Flow Matching 與擴散模型如何與自回歸架構結合，揭示 2025 年跨模態生成技術的前沿趨勢。</small>
+    
+    
+  </li>
+
+</ul>
+
+    
+  </div></div>
+
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

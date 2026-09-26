@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transformer推理加速：权重折叠、CUDA流并行与逆序生成Bug排查</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="Transformer推理加速：权重折叠、CUDA流并行与逆序生成Bug排查" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Transformer推理加速：权重折叠、CUDA流并行与逆序生成Bug排查</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-19</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=c1hGBoWw20A" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-19
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">本文深入探讨针对Transformer架构中RMSNorm层的高效代数优化（FlashNorm）。通过权重折叠、延迟归一化与前置归一化消除，结合CUDA流在Tensor Core与CUDA Core上的硬件级并行，大幅削减推理耗时。文中还详述了因CUDA流隐式同步导致的竞态条件Bug及其排查方案，并展示了在生产环境开源集群中的部署实践。</div></div>
+      
+    </div>
+    <h3>代数重构：突破RMSNorm的显存与延迟瓶颈</h3>
+<p>在现代大语言模型架构中，<strong>层归一化</strong>（Layer Normalization: 对单样本所有特征进行均值与方差标准化的操作）逐渐被计算更精简的 <strong>均方根归一化</strong>（RMSNorm: 仅利用均方根进行缩放的归一化层）所取代。然而，在实际推理生成（Decode）阶段，RMSNorm 虽然仅占据极小的数学算力开销，却消耗了不成比例的<strong>实际耗时</strong>（Wall Time: 物理时钟所度量的真实运行时间）。这是因为在单步解码中，RMSNorm 可能被频繁触发多达数十次（例如测试中高达 33 次）。GPU 本身擅长密集数学计算，但在高频启动工作负载（Kernel Launch Overhead）、显存数据频繁搬运（Memory Traffic）以及串行等待（Sequential Waiting）上表现较为低效。</p>
+<p>借鉴 <strong>FlashAttention</strong>（FlashAttention: 通过分块与重计算减少高带宽显存读写的高效注意力算法）减少显存通信的设计哲学，这项与 Niels Graf 合作并开源在 arXiv 及 <strong>Transformer Tricks</strong> 代码库中的研究，提出了通过纯代数重构优化 RMSNorm 的三大核心命题：</p>
+<ol>
+<li><strong>无权重归一化 / 权重折叠</strong>（Weight Folding: 将归一化的可学习增益参数离线吸收合并至后接权重矩阵中）：通过离线计算将增益参数预先融入权重矩阵 $W^*$，在推理时彻底免除归一化权重的单独读取。</li>
+<li><strong>延迟归一化</strong>（Deferred Normalization: 将归一化中的标量除法延后至矩阵乘法之后执行）：通过解耦标量除法与矩阵计算，打破原有的串行依赖，使矩阵乘法与归一化计算能够并行处理。</li>
+<li><strong>消除前置归一化</strong>（Canceling Pre-normalization: 消除由于尺度不变性带来的冗余归一化层）：在如 Gemma 这样在特定路径中存在连续两次 RMSNorm 的新架构中，利用<strong>尺度不变性</strong>（Scale Invariance: 输入按比例缩放不改变归一化后输出的数学特性）直接剔除冗余的前置归一化操作。</li>
+</ol>
+<p>在确立了这套代数优化方案后，将这些理论证明落地为高性能计算算子，则需要深入 GPU 底层进行内核定制。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Hello everyone. Thank you for coming and I'll start the talk now. So this talk is around a paper that I did which is very simple. The proposition is very clear. It's basically two lines of algebra that make the RMS norm layer in transformers cheaper, quicker, and kind of improve it as a layer in the transformer architecture. Similar to how layer norm once used to be the standard and then it was substituted by RMS norm. This follows along this way of thinking. And I got the chance to kind of meet some people from the open source world and I co-authored this paper together with Niels Graf who was kind of the creator of this. And the work follows from there.</p>
+<p>So this is presented on arXiv. You can have a look, read it, test it out. There is a repo as well. And the concept, the idea and the way of thinking it's easiest to explain with maybe FlashAttention. So in a similar way of how FlashAttention kind of waits until there's a multiplication and tries to limit this communications between memory so that the whole process is faster, this is kind of a similar thought along those lines and it does certain improvements that make the RMS norm process much quicker and in effect improve the whole transformer.</p>
+<p>And one question is okay, why RMS norm since that layer does almost none of the math? And that's true. The share of the math portion if you look at it is quite small. However, the clock time or wall time as they say is quite big. For example, in one decode step right when inference is performed, the RMS norm can be started like 33 times. Of course, it depends on the model and so on. In the paper, you have the specific models and how this was tested.</p>
+<p>And the question is how this can be improved and how this wait for the matrix multiplication can be kind of avoided. And the reason why this is slow is because the GPUs are not slow or bad at math, but they're bad at everything else around the actual math. That means starting the actual work. So for example, starting the process as it happens in some of the experiments 33 times, that takes a long time. And for example, fusing each normalization into the matrix multiplication can help avoid this. Also doing weight folding can help in kind of moving data between memory, and that's a process that's also slow for GPUs. And also waiting. For example, deferring the division that's done in the RMS norm layer is also a way to avoid this waiting step.</p>
+<p>So basically, what this paper does is it improves all these three aspects by doing a few algebraic tricks in the way RMS norm is computed. That's it. And math-wise, these are the tricks. It's mainly around the first two propositions. One is weightless normalization. You can see that here. And deferred normalization, so that's the second one. And now in newer architectures, there is a situation where RMS can appear twice. For example, in Gemma, this happens. So canceling the pre-normalization also works. All of this is algebraically proven in the paper.</p>
+<p>The first proposition is this where the gain and the weight fold into one matrix W, you can see here with an asterisk. That is computed offline, similar to how in FlashAttention you compute some stuff on the side so that there is no communication between memory all the time. So this is one step that's done, this weight folding. The other step is deferring the scalar divide of the matmul so that they can be done in parallel. In a normal case, you would have to compute once, then wait, and compute again. In this case, the idea is to kind of split this so that it can be parallelized. And the third one, which is kind of a version of this, is that if there are two, because this is scale invariant, one of them can be dropped and this still works. This is applicable to newer models that can have this architecture and implementation.</p>
+</details>
+<hr>
+<h3>流并发与显存竞态：排查模型逆序输出Bug</h3>
+<p>虽然第一项命题（权重折叠）仅需在模型加载时进行权重转换即可生效，但第二项命题（延迟归一化）则必须通过编写底层的 <strong>CUDA 内核</strong>（CUDA Kernel: 在英伟达 GPU 上高度并行执行的 C/C++ 函数）才能发挥硬件优势。在现代 GPU 架构中，计算单元具有明确的硬件分工：<strong>张量核心</strong>（Tensor Cores: 专用于执行高吞吐矩阵乘加运算的专用硬件单元）负责承载矩阵乘法（MatMul），而通用 <strong>CUDA核心</strong>（CUDA Cores: 负责通用多线程标量与矢量计算的基础执行单元）则负责逐元素操作（Element-wise Operations）、规约（Reduction）与平方根计算。<strong>FlashNorm</strong> 的核心构想正是通过 <strong>CUDA流</strong>（CUDA Streams: GPU 上并发执行一系列异步操作的任务队列）实现硬件异步重叠：在张量核心计算矩阵乘法的同时，由矢量计算单元并发处理 RMSNorm。</p>
+<p>然而，在实现这一异步并行流水线时，出现了一个极其隐蔽的系统级 Bug。在单步单元测试和短文本困惑度（Perplexity）评估中，输出均完全正常；但在进行长文本连续生成测试时（例如输入提示词 <code>&quot;The Transformer architecture revolutionized NLP because...&quot;</code>），模型输出了带有明显重复和单步时延的乱码（如反复输出 <code>&quot;because&quot;</code>），仿佛在读取“过去的显存状态”：</p>
+<ul>
+<li><strong>根本原因（Root Cause）</strong>: 双流并发执行完成后，两路数据流合并时采用了<strong>隐式汇合</strong>（Implicit Join）。由于缺乏强同步屏障，负责后置缩放（Post-scale）的操作在张量核心的矩阵乘法尚未完全落盘写入全局显存时，便提前读取了未完成的旧缓冲区数据，触发了严重的<strong>竞态条件</strong>（Race Condition: 多个并发操作执行时序不确定导致的数据读取冲突）。</li>
+<li><strong>修复方案（Fix Implementation）</strong>: 必须在底层代码中显式插入同步事件（Explicit Event Synchronization）。分别在矩阵乘法流与 RMS 流末尾标记完成事件（Mark Events），随后强制后置缩放操作显式等待两个流的事件全部触发就绪，确保数据完整写入后再行读取。</li>
+</ul>
+<p>通过显式流同步，模型恢复了正确的时序推理逻辑，成功将理论代数优化转化为无精度损失的性能提升。</p>
+<details>
+<summary>Original English Source</summary>
+<p>So, in order to make this happen in real life, especially this proposition number two—for this one (proposition one), it's easy. There is a repo called Transformer Tricks. You can just apply this to any model and it works. But in order to do this (proposition two), there is some kernel work. So, it's not as straightforward to do.</p>
+<p>In order for me to do that, I was implementing this and I came out with this experiment once. So, it looks okay in general, where the prompt is &quot;The Transformer architecture revolutionized NLP because&quot; and then there is some kind of expected output. But in the output I got, I saw this repetition and one-step lag, as you can see here, the word &quot;because&quot; appears again. And there was something happening with the GPU streams and I was trying to figure out what was happening. I was getting this one-step lag and kind of outputs that were from the past in a way.</p>
+<p>In debugging all of this, I realized that in the process of building something like this—as I explained the proposition two or deferring these two operations—in CUDA, you can do two things. You can do tensor cores that do one part of the matrix multiplication, and you can do CUDA cores that kind of run stuff like element-wise operations, reductions, square roots, and so on. So, the idea was to do this in parallel and get the benefit of what I was explaining in the paper to actually test out this concept.</p>
+<p>This is how it was supposed to look like: if you do things sequentially, there is this idle waiting time when the vector unit computes the RMS and scaling, and then there is a matrix multiplication. So, the idea was with FlashNorm, which is the technique in the paper, you're supposed to do those both in parallel. So, the matrix unit computes the matmul and the vector unit computes the RMS. In that way you save time. However, you cannot just do this in Python, you have to go a bit lower. And I did that with CUDA code. This looked in general okay at that time.</p>
+<p>However, I realized that I did something slightly wrong. And that thing was that the join in the end, where you're supposed to join the two streams, was implicit in my case. And when I tested this out, the unit tests worked, the quality seemed similar, like perplexity testing and so on, but over long generation, I was able to see this problem. I had no idea what this was. And the reason was that when I was doing this implicit join, basically, one of the streams hadn't finished the work, so I got race conditions that kind of read the past from the unfinished matrix multiplication.</p>
+<p>So, the idea that I had to fix this was around the fact that I had to be explicit about the join and wait until one of the operations is finished so that I'm certain that when I join I'm not reading from the past. That was the realization in this exploration of CUDA streams. The join was implicit, so the post-scale read an old buffer value. How this is fixed is basically you need to mark the end of the matrix multiplication, then mark the end of the RMS, and then post-scale wait for the first stream and then wait for the second stream. That fixed the bug and made the paper work and the model speak forwards instead of backwards.</p>
+</details>
+<hr>
+<h3>从算法到生产：在开源推理集群中无缝集成</h3>
+<p>在完成算子验证与数值排障后，研究的重心转向如何在真实的生产环境中部署并验证这项技术。在 <strong>LLaMA</strong> 系列模型上的大量实测表明，即便仅使用最简单的无内核侵入式权重折叠（通过代码库中的 <code>flashify</code> 工具转换），也能获得显著的端到端吞吐提升；而在融合完整内核后，加速效果更加突出。</p>
+<p>为了让底层代数优化具备广泛的工程可用性，该技术被设计为与现有的主流推理生态完全兼容：</p>
+<ul>
+<li><strong>原生生态集成</strong>: 支持与 <strong>PyTorch编译</strong>（<code>torch.compile</code>: PyTorch 2.0 提供的将动态图编译为优化内核的 JIT 编译器）及各类量化模型（Quantized Models）无缝协同，无需开发者重写网络骨架。</li>
+<li><strong>模型分发与合并</strong>: 转换后的权重模型已上传至 <strong>Hugging Face</strong> 社区，相关优化补丁也已作为 Pull Request 提交至 <strong>vLLM</strong> 与 Hugging Face 上游开源项目。</li>
+<li><strong>生产级推理集群（Superlinked / Sci）</strong>: 针对需要自定义 CUDA 内核但受限于第三方闭源端点（Rented Black-box Endpoints）的场景，采用 Superlinked 的开源推理引擎 <strong>Sci</strong>（site）能够在私有集群中实现一键部署。Sci 提供了智能请求排队（Smart Queuing）机制，支持在单块 GPU 上高密度混合调度多个轻量级智能体模型（Small Agents）与重排序/嵌入模型（Re-ranking &amp; Embedding Models），在免除繁重基础设施胶水代码（Glue Code）的同时，极大地降低了算力开销。</li>
+</ul>
+<p>这一从基础代数推导、底层 CUDA 流竞态排查到端到端开源集群落地的完整工程路径，为前沿大模型推理加速提供了一套兼具学术严谨性与生产实用性的实践范式。</p>
+<details>
+<summary>Original English Source</summary>
+<p>And that was the cool maybe academic perspective, but I also wanted to try things, deploy this, test it out, see how I can make it work in maybe a more production setting. You can also read the paper and see all the tests. Most are done around LLaMA models, but this works for other architectures as well. So, what you can do for this specific paper is, for example, the weight folding that I explained (proposition one), you can just do it with some code in the repo that's like <code>flashify</code> and it does that. However, with this second thing that I mentioned, you need to do a bit of kernel work if you want to do that like I explained in my example.</p>
+<p>And these are some results that are based on LLaMA models and there are different kind of details that you can have a look at as well. Like what happens if you do only the third normalization, what happens if you do a full fused kernel. There are a lot of experiments of going lower here to test all the propositions, and these have been our results in different levels of scrutiny and detail. But even the simple one with weight folding shows some improvement.</p>
+<p>And this also works with the day-to-day tools that you use in the models. It's not like you have to reinvent the wheel or do things from scratch. So it works with <code>torch.compile</code> because it's kind of like a new checkpoint, and that's it. FlashAttention does similar tricks at a different layer, and also it works with quantized models. So it's totally cool to actually apply this, and you can get a model that has this cool new normalization layer.</p>
+<p>Where you can get these details and code to actually run this is this Transformer Tricks repo. It has different algebraic tricks like I explained, as well as this paper that I mentioned. And also there is the Hugging Face model repo where I've done this with some models, and you can have a Hugging Face link to that model and test it out.</p>
+<p>And what you also can do with these Hugging Face models is to deploy them in production. When I was thinking about doing this, I realized that now that the science is done and there is a link to a Hugging Face model, Superlinked's inference engine was a cool way to actually deploy any Hugging Face model. We've done this at hackathons where people would bring a custom Hugging Face model or checkpoint that they have with their fine-tuned stuff, and you can test out—even if you have some version of this algebraic tricks that you want to improve a model and test your own research ideas, you can actually try that out and have a deployed version on a cluster of this model and not have to worry about this glue code around deploying models.</p>
+<p>So that's pretty cool. The point is that if you have the full cluster open source and the model inference open source, you can actually test out this kind of maybe more novel research ideas. Where if you want to do kernel manipulation or FlashNorm and things like that, it's much more difficult to do this at a rented endpoint where you don't own the inference. You want something that's portable and flexible to actually allow you to do this stuff, but it's also production ready enough so that you can test things out at scale.</p>
+<p>And you can, for example, use Sci to combine this with other models like—as you can see in the top left, you can have this flashified models with different other models to do agentic tasks if you want and kind of do that end-to-end bigger use case. The way Sci works is this production cluster helps you deploy the models, so you can have a look at Sci's repo as well for more details on this.</p>
+<p>And also there is a smarter queuing mechanism that helps you, especially if you work with smaller models. Cuz when doing the FlashNorm stuff, I worked with smaller LLaMA models and also with small agents from Hugging Face. So having a way to deploy smaller models that can also work on the same GPU so that you don't have to spend your money on GPU cost, but actually kind of switch models around, especially smaller models, it was quite useful.</p>
+<p>And you can also control the model configs through an API as well as the cluster, which is also pretty convenient without having like an infra guy supporting you in your open source research. So that's cool as well. And you own your cloud, which is useful if you want open weights, open models, open source. And there's also a catalog that Sci has of different models, not just the ones I mentioned, but you can have a look. There's also re-ranking embedding models if you're building something along those lines.</p>
+<p>And with that I'm kind of finishing this story of my research journey where I co-authored this paper around the technique that improves the transformer, but also found a way kind of to bring this to production and test it out and find a way to play around with these open source models. Feel free to contact me on LinkedIn if you have any questions or contributions. A lot of this stuff that I've mentioned, some of them are PRs on like vLLM or on Hugging Face. You might find them all around. You can also check out the paper, that's the arXiv link that you have there, and you also have the Sci repo and my LinkedIn. Thank you very much for attending. And you can catch me for questions, we'll be here close by.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Superlinked" class="entity-link company-link">Superlinked</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=LLaMA" class="entity-link product-link">LLaMA</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">weight-folding</span>
+      
+        <span class="tag-pill tag-pill--no-page">rms-norm</span>
+      
+        <span class="tag-pill tag-pill--no-page">cuda-streams</span>
+      
+        <span class="tag-pill tag-pill--no-page">kernel-optimization</span>
+      
+        <span class="tag-pill tag-pill--no-page">transformer-inference</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

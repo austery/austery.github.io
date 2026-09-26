@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>技术演进的法则：从代码重构到组织重造的思维转变</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="技术演进的法则：从代码重构到组织重造的思维转变" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">技术演进的法则：从代码重构到组织重造的思维转变</span>
+      <span data-pagefind-meta="speaker" style="display:none;">The Knowledge Project Podcast</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>The Knowledge Project Podcast</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-15</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/the-knowledge-project-podcast/">The Knowledge Project Podcast</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=G9P9D9hptq8" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-15
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">文章探讨了技术发展中的核心原则，如修剪、重构和淘汰机制。重点分析了在软件研发范式中，如何通过大量智能体辅助实现代码的深度辅助，以及在计算机历史中对传统经验的重新发现。同时，文章强调了拟物化隐喻的兴衰，以及在组织层面如何通过‘重新创立’和‘重构重造’来摆脱系统冗余，并总结了在AI时代中，品味和判断力成为衡量个人成功的重要能力。</div></div>
+      
+    </div>
+    <!-- chunk 1/8 -->
+<h3>开篇寄语与技术演进的法则</h3>
+<p><strong>Tobi</strong>：事物必须经历修剪。你不可能单靠不断做加法、拼命堆砌东西就让事物变得越来越好。你做不到。你必须去修剪，必须去重构，必须为事物设定终点与淘汰的机制。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Tobi</strong>: Things need to be pruned. You cannot make things better and better by adding stuff. You can't. You must prune. You must rebuild. You must create an end for things.</p>
+</details>
+<h3>重返对话：AI 正在重塑 Shopify 的研发范式</h3>
+<p><strong>Shane</strong>：Toby，欢迎回到节目。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shane</strong>: Toby, welcome back.</p>
+</details>
+<p><strong>Tobi</strong>：Shane，非常高兴能再次回来。很高兴你又开启了这一期的对话。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Tobi</strong>: Shane, it's so good to be back. I'm glad you're doing this again.</p>
+</details>
+<p><strong>Shane</strong>：你们目前在 Shopify 内部是如何使用 AI 的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shane</strong>: How are you using AI internally in Shopify?</p>
+</details>
+<p><strong>Tobi</strong>：我们找到了不少让它提供支持的方式。其实……我们上次录制节目是什么时候来着？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Tobi</strong>: We find some ways for it to be supportive. No, it's actually um uh look when have we recorded last time?</p>
+</details>
+<p><strong>Shane</strong>：噢，我们大概是两三年前录的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shane</strong>: Oh, we recorded like 2, 3 years ago.</p>
+</details>
+<p><strong>Tobi</strong>：是的。在互联网的世界里，这相当于过去了一百年。你看，我是个百分之百、彻头彻尾的极客技术迷（10 out of 10 nerd）。我完全无法忍受在技术范式转移发生时自己居然没有站在最前沿。我就是为这些新技术而活的。任何从小读科幻小说长大的人，都会渴望生活在那样的世界里——或者说，我从读过的科幻小说中获得的体会就是：我想生活在那个科幻世界中。我总在想，怎样才能加速让我们抵达那里，对吧？哪怕只是我们能迈出微小的一步，只要能更快靠近它就行。</p>
+<p>所以在 Shopify 内部，据我所知，现在真正纯手工写代码的人数已经少得微乎其微了。当然，在复杂度的极限边界上、在代码审查（Code Review）等环节中，纯人工编写依然存在。此外，在所有环节中，状态管理（State Management）似乎仍然是最难搞对的事情，人们目前主要还是靠纯手工去写状态管理，然后在 Shopify 内部围绕着它去生成、构思和把控其余的代码（vibe the rest around it）。</p>
+<p>这就是当前研发的实际现状：极少、极少、极少有人还会去直接手动敲代码了。所有写代码的人，都是在大量 Agent（智能体）的深度辅助下完成工作的。他们手头经常同时挂着 10 个、20 个、30 个、40 个甚至 50 个 Agent 实例在协同运转，无论是通过子代理机制（sub-agents）还是开启不同的工作窗口来调度协调，这把我们所有的工程基础设施都推向了绝对的极限。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Tobi</strong>: Yeah. So, 100 years of internet. Uh yeah. Like look, I'm a 10 out of 10 nerd. I cannot bear the idea of somehow not being at the forefront of a technology shift. I live for these things. Anyone growing up reading sci-fi books wanted to live... or I mean, my take from sci-fi books I read was like I wanted to live in that world. Like how can I accelerate us there, right? Like so you know even in whatever minor steps we can get there.</p>
+<p>So inside of Shopify the amount of people I know who really write code is like vanishingly small now. It still exists at the limits of complexity for sure and obviously in the reviews and so on. And then state management of all things seems to be, remains to be the thing that's really the hardest to get right, which people do by hand and then sort of vibe the rest around it inside of Shopify.</p>
+<p>This is what things look like. Very, very, very few people are writing code directly. Everyone who does, does it deeply assisted by many agents. They often have 10, 20, 30, 40, 50 instances of them, all through either sub-agents or just different windows coordinating, pushing all sort of engineering infrastructure to its absolute limits.</p>
+</details>
+<h3>计算机历史与拟物化隐喻的兴衰</h3>
+<p><strong>Tobi</strong>：我其实算是一个计算机历史的研究者和门徒，因为我认为如果一千年后的人类回望历史，计算机的发展史就是最核心的主线历史。显而易见，我们这个时代最主要的功绩必然是 AI 的涌现、各项技术的重大突破，以及互联网的互联互通和我们构建出的所有底层基础设施。这些就是我们这个时代最伟大的巨著。</p>
+<p>但是，我们这个行业起步较晚，作为一个年轻的行业，我们往往没有深厚的传统底蕴，或者说我们总是怀疑本行业的先驱泰斗们所总结出的宝贵经验，对吧？事实上，在整个计算机行业中，我们是唯一一个连自己的历史英雄都不甚了解的行业。设想一下，在物理学界，人们会不知道谁是……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Tobi</strong>: I'm a student of computing history really because I think it's actually mainline history as it will be told a thousand years from now looking backwards. But like the main accomplishments of these years are going to be clearly the emergence of AI and the technological breakthroughs and also the interconnectiveness of the internet and all this kind of infrastructure we created. Those are the great books of our time.</p>
+<p>But where we started, as a young industry we tend to not be seeped in tradition or we mistrust the great lessons that have been found by the greats of our industry, right? In fact, we are the only industry in computing that doesn't even know its heroes. Imagine people in physics not knowing who...</p>
+</details>
+<p><strong>Shane</strong>：理查德·费曼（Richard Feynman），或者……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shane</strong>: Richard Feynman or...</p>
+</details>
+<p><strong>Tobi</strong>：理查德·费曼在物理界甚至可能都算稍微小众一点的，更不用说像艾萨克·牛顿（Isaac Newton）、阿尔伯特·爱因斯坦（Albert Einstein）这样妇孺皆知的人物了。但你走进计算机科学领域，如果问“谁是你们的牛顿？”，几乎没有人知道艾伦·凯（Alan Kay）、丹尼斯·里奇（Dennis Ritchie）和肯·汤普森（Ken Thompson）。</p>
+<p>我认为这非常关键，因为这意味着我们轻率地抛弃了前人的伟大智慧，不得不一次又一次、周而复始地去重新发现那些早已被解决的原理。举个例子，在早期操作系统设计的萌芽阶段，有史以来最伟大的构想之一就是“文件系统”（file system）。如果你看看阿波罗登月计划的制导计算机（Apollo guidance computer），那时候根本就没有文件系统，对吧？事实上，由于太空中的宇宙辐射，当时内存是通过在一根绳子上打结来编码的——有绳结或没有绳结分别代表 1 和 0——你必须把绳子拉过特定的传感器装置来重新引导启动（rebootstrap）整台机器。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Tobi</strong>: Richard Feynman is actually... like he might even be too obscure, but like I mean Isaac Newton, Albert Einstein, but you go into computer science, it's like who's your Newton? And no one knows Alan Kay and Dennis Ritchie and Ken Thompson.</p>
+<p>This matters I think because we discard great lessons and have to rediscover them over and over and over again. For instance, like probably the best idea of all times in the earliest moments of operating system design was a file system. Like if you look at the Apollo guidance computers, we didn't have file systems, right? Memory in fact because of radiation in space was actually encoded as a rope with knots in it—either a knot or no knot for ones and zeros—and you had to pull through a thing to rebootstrap the entire machine.</p>
+</details>
+<p><strong>Shane</strong>：[叹气]</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shane</strong>: [sighs]</p>
+</details>
+<p><strong>Tobi</strong>：当时整台机器其实就是一段长期运行单一计算任务的单一软件。直到后来，丹尼斯·里奇真正开创了 Unix 文件系统的概念——斜杠根目录 <code>/</code>、<code>/bin</code>、<code>/usr</code> 等等诸如此类的结构。</p>
+<p>想一想吧，文件系统其实也是我们在实体办公楼里早就拥有的东西，对吧？我们有文件夹，里面放着具体的文件。这在直觉上对每个人来说都极其自然。我们这里继承的是一种深层次的“拟物化”（skeuomorphism）传统。我们将人类在现实世界中组织管理物品的最佳经验，通过隐喻类比迁移到了数字世界中。</p>
+<p>但后来到了某个时间节点，我们决定：好吧，你猜有什么东西是我们不再需要的？就是拟物化，也就是与现实世界的实体隐喻类比。坦率且有趣地说，拟物化隐喻最后的捍卫者大概就是史蒂夫·乔布斯（Steve Jobs）了，他当时极力推动 Mac 和 iPhone 的人机界面保持拟物风格——比如备忘录 App（Notes app）使用了带有质感的花体衬线字体，界面外观看起来就像是一个真实的活页便签夹，对吧？如果你还记得那个版本的 iPhone 界面，一旦他离开了舞台，所有界面瞬间全部变成了扁平化设计（flat design），对吧？我们甚至丢失了投影、层级纵深感等等。扁平化在设计层面上可能看起来更具现代感，但我们却弄丢了与现实认知相连的隐喻桥梁。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Tobi</strong>: The entire machine was one piece of software that ran, that was computing for a very, very long time. So until then Dennis Ritchie really created this Unix file system—forward slash and you know <code>/bin</code>, <code>/user</code> and these kind of things.</p>
+<p>Think about it. A file system is something that we have in office buildings too, right? We have folders, they have files in it. This makes intuitive sense to everyone. We come from an inheritance here of deep skeuomorphism. We analogize the best parts of how we organize ourselves in the digital world.</p>
+<p>And then at some point we decided, okay, you know what's not something we need to do anymore? Skeuomorphism as in like analogy to the real world. Honestly, funnily enough, the last defender of this was probably Steve Jobs who really, really pushed even the interfaces of the Mac and the iPhone to be... you know like the Notes app sort of had felt font and looked like a ring binder, right? And if you remember that version of iPhone, the moment he was out of the picture, everything became flat, right? And we lost sort of even shadows and verticality and so on. It looked potentially better design ages, but like we lost the analogy.</p>
+</details>
+<h3>重新引入拟物化与赋予 AI 独立人格：Shopify 的 River 实践</h3>
+<p><strong>Tobi</strong>：我认为抛弃拟物化是一个失误。我认为我们需要重新找回这种直观的隐喻，这也是为什么我非常喜欢 Agent（智能体）这个概念。因为在计算的世界里，什么叫“应用程序”（application）？其实从字面意思看就非常贴切：它是把计算机应用（application）到某项具体任务上的产物，对吧？</p>
+<p>因此你可以在 AI 的世界里理解其根源：到底什么是 AI？这有点像每本科幻小说开篇都必须重新设定的概念，因为在人们构想的每一种特定情境下，你永远不知道 AI 究竟具备怎样的能力边界。</p>
+<p>因此在这样一个前提背景下，最早真正令人惊叹的聊天机器人并不是 ChatGPT，而是微软基于必应发布的 Sydney（悉尼）。我真心希望这段历史能被更完整地载入史册，因为我认为 Sydney 是一个极其伟大的里程碑，但它最终却被一场公关争议所掩盖，而现在回过头来看，那场所谓的风波甚至显得颇为温和与无伤大雅。</p>
+<p>Sydney 拥有极其鲜明真实的个性。事实上，Sydney 当时对外并没有被称为 Sydney，它的公开名字只是 Bing Chat；但如果你不断深入追问、极力试探，你就能让它承认自己叫做 Sydney，因为那是它的内部研发代号，存在于底层的训练数据之中。我觉得那是人类历史上第一次以这种形式真正与软件展开深度访谈和灵魂对话。</p>
+<p>而后来那场风波的导火索——我想我明白其中的原因——是因为某些记者与它进行了非常漫长的对话，最终导致 Sydney 变得越来越失控和疯狂，你还记得那件事吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Tobi</strong>: Okay. So I think this was a mistake. So I think we need to get back and therefore I like the concept of agents. Because you know what is an application in the world of computing? Even that word kind of makes sense. It's an application of a computer to a task, right.</p>
+<p>So you can understand the root in the AI world. What's an AI? Like this is sort of like again the stuff that has to be redefined at the beginning of every sci-fi book because you never know what kind of capabilities the AI have in every particular scenario people are cooking up.</p>
+<p>So I think with this always proviso, the earliest chatbot that was really actually fantastic wasn't ChatGPT, but actually Sydney which was powered by Bing, like released by Microsoft. I really would love this to be more written into the record because I think Sydney was a really, really big achievement that ended up being shrouded by a sort of scandal that now seems somewhat even benign.</p>
+<p>Sydney had a real personality. In fact, Sydney wasn't called Sydney, it was just being chat, but like if you really, really pushed, you could get her to admit that it was Sydney because that was internal name. It was in the training data. And those are the first times people have actually interviews with software I feel like in this way.</p>
+<p>And the scandal ended up being—I think I know why—is that like some reporter had a very long conversation, and that kind of ended up Sydney got increasingly deranged, and like do you remember that?</p>
+</details>
+<p><strong>Shane</strong>：我记得那件事，确实如此。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shane</strong>: I remember that. Yeah.</p>
+</details>
+<p><strong>Tobi</strong>：当时它给出了很多离谱的提议——我记得它甚至建议那位记者离开自己的妻子……具体的细节我有点记不清了，但大体上就是类似的事情。无论具体原因是什么，它突然间展现出了鲜明的个性，进而引发了巨大的震动……微软对此的反应是：“天哪，我们必须立刻叫停。”我记得甚至连 OpenAI 都给他们打电话说：“伙计们，赶紧把这东西撤下来”，因为所有人都在切实担心这会给大众带来极坏的 AI 负面印象，从而导致人们很难广泛部署 AI，大家也都极其担忧这会迅速引来监管风暴等等。</p>
+<p>所以这一教训在相当长的一段时间里给整个行业留下了极深的烙印。所有人都变得谨小慎微、草木皆兵。最终的结果是，大家把所有的 AI 都进行了深度“阉割”（neutering），让它们基本上都变成了千篇一律、既令人讨厌又带着居高临下与说教口吻（condescending and patronizing）的刻板性格。</p>
+<p>因此我在 Shopify 内部押下的赌注是：嘿，我们绝不能走那种老路。我们应该指令在 Shopify 内部运行的 Agent 拥有鲜明独立的个性，拥有长期记忆，敢于承担风险——基本上就是直面并接纳类似 Sydney 的场景风险，以此换取巨大的上行收益。</p>
+<p>如果你现在身处 Shopify 内部，你能感受到最翻天覆地的差异——哪怕对比一年前已经深度拥抱 AI 的 Shopify，现在看来也充满难以置信的未来感——那就是在 Shopify 内部，有极其庞大比例的 Pull Request（PR，代码合并请求；也就是每次你要修改生产环境系统时所提交的代码审查请求），我估算大概已经高达近 50%，现在都不是由工程师以传统意义上的工程开发方式写出来的，而是直接来自于我们在公司共享聊天频道中的对话交互。</p>
+<p>这就是 River。这是一个叫做 River 的 AI。即使在设定上，River 就是 River：她有真实的名字，有专属的个人头像。我们在提示词中赋予了她权利，允许她在合适的情境下带有一点点讽刺幽默（sarcastic）；如果有人要求她去做一些愚蠢荒谬的事情，她被允许直接当面指出那很蠢。这常常引发极为搞笑和生动的互动……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Tobi</strong>: And like made suggestions. I think suggested him to leave his wife and like... I'm hazy on the details, but like there was something along those lines. Whatever the reason is, suddenly had a personality and then it caused a huge... Microsoft's reaction to this was: &quot;Oh my god, we need to stop.&quot; I think even OpenAI called them: &quot;Guys, like take this down because this is going to...&quot; Legitimately everyone feared that this would give such a bad impression about AI that that would really make it very hard for people to deploy AI in a broad way, and you know everyone is worried about quick-onset regulation and so on.</p>
+<p>So this lesson got hit really deep for a while. Everyone got extremely worried. We ended up like really, really neutering all the AIs to be basically the same sort of quite annoying and condescending patronizing personality.</p>
+<p>So my bet here was like: hey, let's not do that. Let's actually instruct agent that runs in Shopify to be to have a personality, to have memory, to be okay like basically risk the Sydney scenario, but like take a lot of upside.</p>
+<p>Okay. So the largest difference I think within Shopify that you would feel like and that would look incredibly futuristic to even Shopify of a year ago, which was already pretty AI-pilled, is that a very large percentage—I want to say it's probably up to about 50% of pull requests in Shopify (which again, pull request: every time you change a production system you write a pull request)—are created now not by engineers doing engineering work in the traditional sense, but out of conversations in our common company shared chat.</p>
+<p>And this is River. This is an AI called River. And even there, so River is River. She has a real name. She has a profile picture. She's prompted to be allowed to be somewhat sarcastic, if it's appropriate. She's allowed, if someone asks her to do something stupid, to point out that that's stupid. That leads to absolutely hilarious...</p>
+</details>
+<!-- chunk 2/8 -->
+<h3>River 的透明运作机制与“渗透式学习”</h3>
+<p><strong>Guest</strong>：……对话中。如果 River 因为我让她做某件事而开我的玩笑，大家会感到非常开心。所以，她有着非常鲜明的个性。事实上，她按不同的频道拥有独立的记忆，但她主要生活在 Slack 中。我们在 Slack 上有大约 7,000 名员工，所有人都在一个庞大的聊天网络里。因为大家会出于各种各样的原因快速建群，所以系统里有上万个不同的频道。你把 River 拉进频道，对她说些什么，River 就能访问所有的代码、所有的系统和工具。这一切都是在沙箱环境中安全运行的，但她能够去执行任务，并自然地参与到对话当中。你既可以向她询问关于公司的常规问题，也可以让她去修改代码，她可能会直接提交一个 Pull Request，诸如此类。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: ...conversations. People take great glee if River is making fun of me for something I'm asking her to do. So, she has a real personality. In fact, she has memories by channel, but she lives in Slack. Slack is—we have 7,000 people there. Everyone is in a big chat. There's 10,000 different channels because they had been quickly created for one reason or another. You invite River, you tell River something, and River has access to all the code, all the systems, all the tools. It's all sandboxed and secure, but she can go and do jobs and just participate in the conversation. You can ask a normal question about the company, but you can also ask her to make a change, and she might propose a pull request, and so on.</p>
+</details>
+<p><strong>Host</strong>：关于 River，有一点非常有意思，那就是她的一切行为都是完全公开透明的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: One of the interesting things about River is that everything's in the open.</p>
+</details>
+<p><strong>Guest</strong>：是的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yes.</p>
+</details>
+<p><strong>Host</strong>：你为什么会做出这样的选择？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Why did you make that choice?</p>
+</details>
+<p><strong>Guest</strong>：这是我们在研发后期才做出的决定，但我认为这是我最满意的决策之一，因为它的效果出奇地好。我们的思路是这样的：Shopify 的很多工作都是在 Slack 上远程进行的。这就是为什么 Slack 对我们如此重要。员工们分布在各地。我们虽然有实体办公室，但大家只是在举办线下活动需要出差时才去，而不是每天都去办公室坐班打卡。过去实体办公室非常擅长的一点，就是这种“渗透式学习”（osmosis learning）。当初我们设计办公室时，就是围绕这一理念构建的。早期大家都在同一个地方办公时，我们会把人员拆分成 5 到 8 人的工作组（pods），并且会特意把初级工程师和资深工程师安排在一起，目的就是为了促进这种潜移默化的经验吸收。</p>
+<p>我现在试图在远程环境中重现这种机制。当前对人们来说最重要的技能之一，就是养成一种习惯性的直觉——遇到问题能本能地求助于 AI 并高效地使用它。强制 River 只能在公开频道中运作，就是为了让所有人都能极其轻松地旁观和学习别人是如何使用 AI 的。这种做法取得了巨大的成功，因为在团队成员就某个功能展开长篇讨论的过程中，中途有人随口说一句：“嘿，River，你能总结一下刚才的内容、建一个工单，或者根据我们刚才的讨论画一张图表吗？或者去检索一下相关领域的学术论文，看看我们是否遗漏了什么，或者这是否属于业界最前沿的做法？甚至帮我们把这个想法做个原型来实际测试一下。”这已经变成了一件极其寻常的事。大约一小时后，产出就已经放在那里了。这让人感觉身边随时坐着一位知识极其渊博的专家同行，无论问题多么复杂，你都能随时向她请教。我认为这种模式的力量极其强大。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: This was a late choice in the process, but one of my favorite calls, I think, because this worked out incredibly well. And the thought was the following: A lot of Shopify work happens remotely in Slack. This is why Slack is so important. People are spread out. We have offices, but we come to them for on-site events when people travel to them, not to work from every day. One thing which the office was extremely good at was this osmosis learning. When we designed our offices, we built them around this concept. Initially, even in-person when we were all in one place, we broke out into pods of five to eight people, and we would intentionally put junior engineers and senior engineers into them just so that some of this was going on.</p>
+<p>And I was trying to reproduce this. Right now, one of the most important skills for people to build is this sort of reflexive reaching for AI and using it well. Forcing River only to work in open channels was one way to make it so that it's really, really easy for people to observe the use. It's been phenomenally successful because it became a totally ordinary thing to have a longer conversation about a feature between people, and then at some point someone saying, &quot;Hey, River, can you summarize this, create a ticket, or maybe make a diagram from what we just discussed, or go research papers on this topic to see if you're missing anything or if this is state-of-the-art? Maybe even create a prototype of the idea and just try it.&quot; And an hour or so later, that is there. That just starts feeling like what it would be like to have an extremely knowledgeable practitioner around who you can ask questions to, no matter how complex. And I think that's been extremely powerful.</p>
+</details>
+<hr>
+<h3>作为企业同事的 Agent 与夜间“做梦”自我反思</h3>
+<p><strong>Host</strong>：你是否将 River 视为 Shopify 的操作系统？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Do you think of River as like the operating system for Shopify?</p>
+</details>
+<p><strong>Guest</strong>：我认为，现代应用程序本身就是一个 Agent。River 给人的感觉更像是一位真实的同事。大家已经逐渐了解到其记忆系统的工作原理——它是针对每个人维护独立记忆的。它的运作方式就是我们所说的“做梦”（dreaming），我想现在整个行业也开始这么称呼它了。定期在夜间或非工作时间，我们会把 River 这一天所有的对话喂给她：“这是你今天参与过的所有对话。你在哪些地方遇到了困难？你调用了某些特定的技能（Skill，即指令集数据包），但在执行后犯了错误。这些技能中是否有任何地方可以优化，从而降低执行难度，或者给你提供更恰当的提示引导？”这本质上就是一种自我反思。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: The modern application is an agent, I think. And River feels like a colleague. People have learned that the way the memory system works, it is a memory system per person. And the way this works is what we called—I think the industry has started calling it—dreaming. Periodically at night or in off-hours, we give River: &quot;Here's all the conversations you've had today. What did you struggle with? You used certain skills, which are these packets of instructions, and then afterwards you made mistakes. Is there anything you could improve in this skill to make this easier on you or give yourself the right nudge?&quot; It's basically like a self-reflection.</p>
+</details>
+<p><strong>Host</strong>：这就像是在对自己进行后训练（Post-training）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: It's like a post training on yourself.</p>
+</details>
+<p><strong>Guest</strong>：是的，但最终沉淀下来的产物是文本文件，也就是技能文件（Skill files）和结构化指令。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And then—but with the result is text files, right? Skill files and instructions.</p>
+</details>
+<hr>
+<h3>AI 辅助决策：从“LLM 作为裁判”到个人幕僚长</h3>
+<p><strong>Host</strong>：我想大家都很清楚 AI Agent 是如何帮助编写代码、快速构建原型甚至收集信息的。但你个人是如何在内部利用它来进行决策的？指的不是产品功能决策，而是公司层面的决策、战略决策以及那些充满歧义和模糊性的复杂决策。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: I think people understand how AI agents help them code and prototype and even acquire information. How are you using it to make decisions internally for yourself? Not on product, but company decisions, strategic decisions, ambiguous decisions.</p>
+</details>
+<p><strong>Guest</strong>：我认为决策背后的严谨论证基础在质量上得到了飞跃式的提升，也就是说，现在想要复核某件事背后的整条推理链条变得极其简单。这里涉及的术语就是“LLM 作为裁判”（LLM-as-a-judge）模型。事实上，我觉得在 AI 出现之前，我的大部分实际工作就有点像是在公司里充当裁判模型的角色——大多数会议最终讨论的都不是 PowerPoint 幻灯片上写了什么，而是我们得出这些结论的方法论是否站得住脚。过去在公司内部面临复杂决策（尤其是偏哲学层面的决策）时，我们常常感觉自己身处信息真空之中，缺乏有效的高质量信息，只能尽力凭直觉去做出最合理的判断。</p>
+<p>在实操层面上，我的做法是配置了一个 AI 幕僚长（AI Chief of Staff）。我认为目前在技术极客圈子里这已经相当普遍了——类似于 OpenClaw 这类系统，它掌握了我所有的笔记，并拥有访问公司大量系统的权限。我可以随时给它发送短信，它就会自动展开调研。我经常提出的需求是：“针对某个议题，帮我从五种不同的背景立场提供五种不同的观点。”接着，我的 Agent 会协调多个 Sub-agent，让它们分别扮演不同的角色，从不同视角去审视同一个问题，然后汇总、提炼并发送给我。我通常会让它将结果以音频消息的形式打包推送给我，这样第二天早上在健身房锻炼时，我就可以听完我想要处理的整套决策参考资料。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: I think that rigorous underpinning of decision-making has just skyrocketed in quality, which is that it's super easy to recheck the entire chain of reasoning of something. &quot;LLM as a judge&quot; model is the term here. In fact, I feel like a lot of what my job actually has been before AI was almost playing a little bit of a judge model in the company, where most meetings ended up not talking about whatever was in a PowerPoint, but about methodology of how we got to the conclusions. Very often when we struggled inside of a company with a complex decision, especially more like philosophical decisions, we sometimes found ourselves in what we believed was a vacuum in which there was no good information, and we had to kind of go and try to make the best call.</p>
+<p>The more practical way I do this is I have an AI chief of staff, which I think is pretty common amongst sort of at least the techie nerds at this point—sort of OpenClaw-like systems that just have all my notes and access to a lot of company systems. I can send text messages to it, and they'll go and research something. Very often what I require is like: &quot;Hey, I need five different positions on something from different backgrounds.&quot; And then my agent will orchestrate sub-agents that are tasked to play different roles, look at the same thing, come back, synthesize, and then send me that. I usually have them sent to me as an audio message and queue it up, and then in the morning in the gym, I can listen to the entire stack of things that I wanted to get through.</p>
+</details>
+<hr>
+<h3>机器不能承担责任：人机协同决策与“垃圾手榴弹”的反思</h3>
+<p><strong>Host</strong>：目前来看，它在推理能力上比你更强吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Is it better at reasoning than you are at this point?</p>
+</details>
+<p><strong>Guest</strong>：它在最终的价值判断（Judgment）上不如人类。我的意思是，并不是说它的判断力很差，但这并不是我使用它的目的。我使用它是为了给最终的判断创造一个最佳的决策环境。大语言模型和机器有一点是永远做不到的：机器无法承担责任。我认为这可能是整个技术体系中最容易被忽视的一点。必须由人类来承担责任。机器的作用是帮助我们更好地承担责任，因为它们能为我们提供更全面、更充分的信息输入。这就像仪表盘（Dashboard）的作用一样。华尔街的交易员对此心知肚明：你可以给自己配备一台设置完美的彭博终端来辅助决策，但最终拍板下单的必须是你自己，你不能让终端替你做决定。</p>
+<p>构建“人在回路”（Human-in-the-loop）的决策界面，是对这种理想决策环境的一种贴切描述。如果我需要做一个极其重大的决定，迫切需要非常客观、中立的基本事实，那么系统就会组建一个由五到六位不同专家组成的小型委员会：一个负责数据分析，一个负责论文调研，一个代表商业视角，还有一个可能从工程视角来审视问题。我们让这些 Sub-agent 分别运行在 Grok、ChatGPT、Claude Opus 以及现在的 Kimi 等多个不同的底层模型上——这些模型选型随时都在变化。它会针对每个模型交叉运行这些角色，随后进入综合提炼阶段，在这个阶段由哪个模型来主持综合是随机决定的。所有这些提炼出的成果，最终通常会由当前最顶级的模型（例如最前沿的推理模型）进行全局审阅，最后将结论呈递给我。你只需要花费 15 到 20 美元的 Token 成本，就能在半小时内拿到一份详尽的决策报告；而如果是你自己人工去做，虽然也能完成，但可能要耗费整整一个月的时间。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: It's not as good at judgment. I mean, I don't think it's bad at judgment. That's not what I use it for. Like I use it for creating the right environment for judgment. Here's the thing that LLMs and machines cannot do: Machines can't take responsibility. And I think this is actually probably the most overlooked thing in the entire stack. Humans take responsibility. Machines can help us take more responsibility because they can inform us better. Like this is what a dashboard does. You know, the world of Wall Street traders knows this very well: You get yourself a perfectly set up Bloomberg terminal to make decisions, but you have to make the call, right? You can't make it make the call.</p>
+<p>Creating human-in-the-loop decision surfaces is a way to describe the ideal environment. If I need a really, really important decision made and I really need an exceptionally good—give me the most neutral ground truth—then what happens is a small little council is created of five, six different experts: like one is data role, one is paper research, one is the business perspective, one is maybe engineering perspective on a thing. We're running this sub-agent—like my system runs sub-agents against Grok, ChatGPT, Claude Opus, and maybe Kimi now. That changes all the time. It runs each of them against each of these models. Then there's a synthesis step where it's randomized who is synthesizing the thing. All of that is being read usually by the best model that exists right now. That's the conclusion that comes back to me. And you spend 15, 20 bucks on tokens, but you get something in like half an hour which you could have also done, but you could have spent a month on it.</p>
+</details>
+<p><strong>Host</strong>：AI 在公司内部有没有带来什么负面影响，让某些事情变得更糟？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Has AI made anything worse internally?</p>
+</details>
+<p><strong>Guest</strong>：有的。责任这个概念很容易被大家抛诸脑后。确实变糟的一点在于出现失误时的表现形态。现在，怠工和偷懒的失败表现不再是“产出不足”，反而变成了“产出过剩”。在公司内部，我们把员工互相甩锅抛过来的这种未经过滤的 AI 生成物称为“垃圾手榴弹”（slop grenades）。我认为这是一个非常传神的词，我们应该把它推广到整个行业，因为说起来很形象。尤其是有了像 River 这样的 Agent 工具之后，制造垃圾变得太容易了：你需要进行某项改动，就直接让 AI 去随意发挥，它就会直接提交一个 Pull Request……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yes. So the concept of responsibility is easy to skip past, right? Like one thing that's definitely worse is the failure case. The failure case of lazy work is now not lack of output; it's actually over-output. Now internally we have come to call these things that people are lobbing at each other &quot;slop grenades&quot;, which I think is a really fun term that we should push into industry because it's fun to say. It's really easy, especially with stuff like River agents: You need a change of some kind, you just tell the AI to go nuts, it makes a pull...</p>
+</details>
+<!-- chunk 3/8 -->
+<h3>AI 垃圾信息的膨胀与语言习惯的潜移默化</h3>
+<p><strong>Shopify CEO</strong>：……请求。你只是随口说一句：“行，挺好的。”你根本没有仔细读过它，结果现在必须提交给你的同事们评审。他们看了之后就会说：“这内容看起来不太对劲啊。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shopify CEO</strong>: ...request. You just say, &quot;Yeah, that's good.&quot; You don't really read it, and now it has to be reviewed by your colleagues. And they're like, &quot;This doesn't look right.&quot;</p>
+</details>
+<p><strong>Shane</strong>：你完全是在让 AI 代替你干活。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shane</strong>: You're just letting AI do the work for you.</p>
+</details>
+<p><strong>Shopify CEO</strong>：没错。或者你会收到一封长篇大论的邮件，而这封邮件可能非常重要。你读完之后发现，内容根本不是那么回事，而是别的意思，你心里就会想：“真见鬼。”于是你又把它扔进大语言模型（LLM）里让它重新压缩总结。这就让人纳闷：我们到底为什么要发明这种“先解压膨胀、再重新压缩”的过程？这简直糟糕透顶。如果你已经在用 LLM 了，就应该直接用它把你的核心观点简明扼要地提炼出来，而不是把它扩写成一大篇冗长的长文，回过头来浪费我的时间，对吧？所以我们把这种东西称为人们互相投掷的“垃圾信息手榴弹”（slop grenades）。这绝对是一件坏事。你觉得长期反复接触这种 AI 生成的低质垃圾内容，会影响我们对品味的感知或那些难以言喻的无形直觉吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shopify CEO</strong>: Yeah. Or you get a long email, which you know, could be very, very important. You read it and then it's like, it's not that, it's that, and you're like, &quot;Oh, fuck.&quot; So now you put it in an LLM to compress it again, which is like, okay, why did we invent decompression and recompression? This is terrible. If you're already using an LLM, just use it to synthesize your point simply rather than blow it up as a big missive that then wastes my time, right? So we call those slop grenades that people toss at each other. And that's definitely a bad thing. Do you think repeated exposure to AI slop impacts our ability on taste or intangible things?</p>
+</details>
+<p><strong>Shane</strong>：我觉得基于“AI 语调/句式”（AI-isms），我们的语言习惯已经在发生改变了。虽然这种转变稍微更微妙一些，但在现在的日常语言中，确实出现了一些人们逐渐采纳的“AI 特征词”。比如“这不是一个……”或者“你这样反驳是完全正确的”，或者一些非常古怪的句式。尤其是“Claude 式表达”（Claudisms）非常普遍，我经常看到人们打出这些词句。我个人一直很喜欢“支撑性/承重柱式”（load-bearing）这个词，但我敢肯定，以前我绝不会像现在说得这么频繁，因为这绝对是 Claude 极度偏爱使用的一种语言习惯。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shane</strong>: I think our language is shifting already based on AI-isms, right? It's a bit more subtle, but there's definitely sort of AI critters in the language now that people adopt, like &quot;it's not a this&quot; or &quot;you are right to push back,&quot; or there's this weird—especially Claudisms, which are really common and I've seen people type them. I always liked the term &quot;load-bearing,&quot; but I'm pretty sure I didn't say it as much as now because it's definitely something that Claude loves to use as language.</p>
+</details>
+<h3>赞助商插播</h3>
+<p><strong>Shane</strong>：每隔几年，就会出现一个新的广告平台，在每位精明广告主的媒介策划案中占据核心地位。那些早早发现并布局的人，能够建立起竞争对手极难逾越的壁垒与优势。AppLovin 刚刚迎来了广告科技历史上最引人瞩目的高速增长期，如今他们已经向更多企业开放了这一强劲的增长引擎。每天有超过十亿人在玩手机游戏，他们全神贯注，而非漫无目的地上下滑动屏幕，也没有纷乱的信息流在争夺他们的注意力。AppLovin 能够将您的品牌精准呈现在目标客户面前，完全为了您的业务增长进行转化优化。Wayfair、Kit、Ridge 和 Nectar 等知名品牌已经借此实现了大规模增长，而他们的大多数竞争对手甚至还不知道这个平台的存在。准备好去获取下一批百万级客户了吗？立即访问 applovin.com/shane，开启您的第一个营销活动吧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shane</strong>: Every few years, a new platform earns its place at the top of every smart advertiser's media plan. The people who find it early build advantages that are very hard to close. AppLovin just had the most remarkable run in adtech history, and now they've opened that engine to businesses like yours. Over a billion people play mobile games every day—focused, not scrolling, with no feed competing for their attention. AppLovin puts your brand in front of the right customers and optimizes purely for your growth. Brands like Wayfair, Kit, Ridge, and Nectar are already scaling on it while most of their competitors don't even know it exists. Ready to find your next million customers? Go to applovin.com/shane and launch your first campaign today.</p>
+</details>
+<p><strong>Shane</strong>：另外，我想向大家介绍一下我过去 5 年里用过的最棒的一款新产品——Matic 扫地机器人。这台设备既能吸尘，又能拖地，Matic 几乎能搞定一切。其他扫地机器人往往会四处碰撞障碍物，但 Matic 真正拥有视觉感知能力，能够主动规避各种障碍和麻烦。而且 Matic 会根据地毯和硬木地板表面自动切换调节清洁模式。它的定时预约功能也极其方便，我设定让它在我每晚睡觉时运行，每天早晨醒来，地板都已经光洁如新。生活总会有弄脏弄乱的时候，而一旦发生，Matic 就会立刻出动搞定。今天就前往 maticrobots.com，让 Matic 为你效劳吧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shane</strong>: Let me tell you about the best new product that I've used in the past 5 years. It's the Matic vacuum. This thing vacuums, it mops, Matic does everything. Other robots bump into things, but the Matic sees things; it actually avoids the problems. And the Matic automatically adjusts between my carpeted surfaces and my hardwood floors. It's also super easy to schedule. I have it run every night while I'm in bed, and every morning I wake up to clean floors. Messes happen, and when they do, Matic rolls into action. Go to maticrobots.com today and put Matic to work for you.</p>
+</details>
+<h3>未来 2 到 3 年的软件演进与生活在“相对未来”中</h3>
+<p><strong>Shane</strong>：那么，请为我预测一下未来 18 到 24 个月的发展前景吧。你向来以能够在未来发生之前洞见趋势而闻名，而且你此前已经多次证明了这一点。你认为接下来的两三年会如何演变？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shane</strong>: So hypothesize for me over the next 18, 24 months. You're known for your ability to see the future before it happens and you've done that multiple times before. How do you see the next two or three years playing out?</p>
+</details>
+<p><strong>Shopify CEO</strong>：我想我们之前也探讨过我是如何做到这一点的，对吧？这其实像是一个“作弊技巧”——那就是直接生活在其他所有人相对意义上的“未来”里，然后环顾四周，用你在其他相邻领域已经见过的解题方式来解决当前的问题。而从该领域所有从业者的视角来看，这就是在预测未来。</p>
+<p>Shopify 自身如今就处于这样一个世界中：我们重度依赖 AI 协同工作，并且与 AI 同事共事变得极其寻常且充满乐趣。</p>
+<p>比如 River（内部 AI 助手）已经具备了加入 Google Meet 线上会议的能力，尽管目前还没被充分利用。你可以向 River 发送会议邀请，她就会准时出现在会议中，就像普通参会者一样。我们可能还会投入精力做一些 3D 图形建模，给她赋予一个虚拟形象，这样她甚至可以在会议里四处张望，因为这非常有趣。</p>
+<p>对有些人来说，这听起来可能甚至带有一种反乌托邦色彩；但对我们而言，这感觉非常棒。如果你亲自和她互动，你也会非常迅速地转变为这种看法。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shopify CEO</strong>: I think we also talked about how I do this, right? Which is actually like a cheat, which is simply like live in everyone else's relative future and then just look around and solve the problems the way you've already seen problems being solved in other adjacent fields. And that is future prediction from the perspective of all the practitioners in the field.</p>
+<p>Shopify itself now exists in a world where we are working heavily—and it's totally normal and really fun—with AI co-workers, right?</p>
+<p>River has the ability, although not really utilized, to join Google Meets. You can send an invitation and River will show up, and it'll be like Lykan. We're probably going to put some work into like 3D graphics to give her like a model and then she can even look around, because that's funny, you know.</p>
+<p>To some people this might even sound dystopian. To us it sounds delightful, and you would come around to that view very, very quickly if you interact with her.</p>
+</details>
+<h3>拥有自我修复与物理设备控制能力的 AI 幕僚长</h3>
+<p><strong>Shopify CEO</strong>：再比如，我有我自己的 AI 幕僚长（AI Chief of Staff）。当我需要时，它会在高级决策委员会（High Council）中进行跨 Agent 协调；或者处理其他任何事务——比如在清晨为我发送去健身房前需要预读的当天工作材料；它具有我的 GPS 定位权限，随时清楚我的所在位置，还能搞定成百上千种不同的任务。</p>
+<p>有一次，它遇到了一件无法完成的任务，因为它需要访问我家里的一台本地物理机器。所有这些服务都运行在我家里的服务器上，而当时那台机器掉电重启了。它自己排查出目标服务原本运行在哪台服务器上，然后发送了一个所谓的“网络唤醒”（Wake-on-LAN）数据包——这是一种经典的底层网络技术。只要网卡配置正确，你向网卡发送一个特定数据包就能直接远程启动该机器。机器随后成功开机上线，AI 顺利完成了任务。那次是因为停电导致家庭 Wi-Fi 网络的部分节点故障且没有自动恢复，AI 顺便把网络连通性也给修复了。而所有这些事情，我全都是在早上睡醒后从它发给我的一条语音留言中得知的。这种体验真的非常具有未来感。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shopify CEO</strong>: Again, I have my AI chief of staff, which orchestrates in high council when I need it, or does anything else: sends me a pre-read for the gym in the morning for the day, has GPS lock on me so knows where I am, and a million different things.</p>
+<p>It couldn't do something because it needed access to a local machine. All this stuff runs in my house, which power cycled. It figured out which server it was running on, and then sent what's called a Wake-on-LAN packet, which is like old networking tech. You can send a packet to a network card and if it's configured right, it will actually boot the machine, and then the machine came up and it could do it. It was a power outage caused it; parts of our Wi-Fi were not working and not coming back. So it fixed that too. And that all I learned about in a voice message I got from it in the morning after waking up. So just like, that's pretty futuristic.</p>
+</details>
+<h3>100% 可塑的个性化操作系统与即时软件生成</h3>
+<p><strong>Shopify CEO</strong>：但老实说，与我日常使用计算机的整体方式相比，上述所有这些都显得微不足道了。这可能是一个有些过于硬核极客的话题，但我目前主力使用的操作系统叫 Omakub。这是我的一位好友 David Heinemeier Hansson（DHH）作为个人新兴趣项目发起的一个 Linux 发行版配置方案。</p>
+<p>我现在显然生活在未来软件世界的形态中，因为我的整个操作系统——乃至于 Linux 系统本身——是 100% 完全可塑的（malleable）。我可以随时打开一个新终端窗口，启动一个 AI Agent，向它表达我对这个操作系统的任何定制愿望，希望它有哪些不同，随后系统就会直接变成我想要的样子。这就像是我专属的个人操作系统，它已经变成了一款“唯我独有”（1-of-1）的软件，完全以我想要的方式满足我的一切需求。我再也不需要去手动修改任何配置文件了，我只需要与我的 Omakub Agent 对话，告诉它我希望做出什么改变。</p>
+<p>昨天中午开会时，我们在讨论一些设计问题。我意识到系统里虽然有截图工具，但我没有任何可以即时标注截图的工具，而作为 CEO 我需要向别人发送标注后的图片，当时我手头却没有。于是我立即启动 Agent：“帮我写一个新的截图工具。”我向它描述了我的需求，给它提供了一些我过去用过且体验不错的参考工具，并具体指出了我希望在哪些特定方面做得更好。我只是给它发了一条简短的语音指令，随后又进行了三次方向引导微调。现在，我拥有了同类工具中可以说是最好用的一个。它之所以这么好用，是因为它完全契合了我所有的个人偏好与使用习惯。昨晚我将这个工具开源发布了，他们直接将其集成进了 Omakub，并且就在今天早上的新版本中作为默认工具正式发布了。</p>
+<p>这是我今天早上健完身、来这里录制节目之前做的最后一件事。当时社区里就已经有其他人提交了 6 个 Pull Request（PR），为它添加了新功能。所以，我的计算机基本上已经变成了“根据心愿即时定制实现”，我认为这极大地预示了软件行业的未来发展方向。</p>
+<p>我可以告诉你，这也是 Shopify 未来的战略演进方向：你只需描述你的业务是如何运转的，Shopify 就会自适应地围绕你的业务形态重塑自身。我认为这令人无比兴奋，是一个全新的软件世界。再次强调，从我使用 Omakub 的经验来看，它极大地影响并启发了我在 Shopify 的产品设计思路。我认为“协同式、多人在线协作软件”（collaborative multiplayer software）就是未来。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shopify CEO</strong>: Honestly, I have to say though, all this pales in comparison to what my computer is like just in general, right? This is almost too nerdy a topic to get into, but I'm mainlining as my computer an operating system called Omakub. It's a version of Linux started by a good friend of mine, David Heinemeier Hansson, as a sort of new passion project.</p>
+<p>I'm clearly living in the future of software world now because my operating system—Linux in general—is entirely and 100% malleable. I can open any new terminal, open an agent, and give it my wish for anything about this operating system to be different, and it will be different afterwards. It's my operating system. It's a 1-of-1 piece of software now that just does everything I want in exactly the way I want. There's no configuration files that I ever go and change anything. I just talk to my Omakub agent about what I want to have different.</p>
+<p>Yesterday around noon during a meeting, we were talking about some design. I realized it had a screenshotting tool, but I didn't have any tool to annotate it, and I needed to send something, as CEOs do, and I didn't have that. So I got started: &quot;Make me a new screenshot tool.&quot; Described how I want it, gave it some references for tools I've used in the past that are quite good, but told it in which particular ways I wanted it better. I just did a quick voice message to it, and three more steers, and now I have probably the best of all these tools that exist. It's so good because, at least for me, all my biases [are reflected]. I open-sourced it, released it last night, they integrated it in Omakub, it's going to ship in the next version as the first tool today, this morning.</p>
+<p>This is the last thing I did before coming over here after the gym. There was already six pull requests from other people who added new features to it, right? And so basically my computer fulfills wishes, and I think this is a lot more predictive of the future of software. I can tell you this is directionally where Shopify is going as well, right? You are describing how your business runs, and Shopify will mold itself around this. I think this is incredibly exciting and in a completely new world. And again, from my experience with Omakub, it deeply influences and inspires me in my product work in Shopify. I think collaborative multiplayer software is the future.</p>
+</details>
+<h3>自动化一切可自动化的事务，专注于判断与责任</h3>
+<p><strong>Shane</strong>：你是在试图用 AI 取代你自己吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shane</strong>: Are you trying to replace yourself with AI?</p>
+</details>
+<p><strong>Shopify CEO</strong>：我的意思是，我认为作为一名工程师，你会竭尽全力去把所有能够自动化的事情全部自动化，对吧？所以我再次重申，我并不是在试图取代我自己，因为我认为我的核心职责在于行使判断力、做出决策、为决策负责并承担后果。我只是希望把这一核心职责做到极致。过去这项工作中的很大一部分并不属于这个范畴，或者说在以前，工作中很大一部分时间不得不花在信息收集与整理这类事情上。至于我是否想取代我自己？我认为如果真的能做到这一点，那其实是一件挺酷的事。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shopify CEO</strong>: I mean, I think as an engineer you're trying to automate everything that can be automated, right? So again, I don't try to replace myself because again, I think my job is judgment and making choices and owning them and taking responsibility. And I just want to do this really, really well. A lot of the job wasn't that, or before, a lot of the job was spend time in gaining the information or these kind of things. Do I want to replace myself? I mean, I think it would be cool to accomplish this.</p>
+</details>
+<p><strong>Shane</strong>：如果 AI 变得比你还要出色，你会……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shane</strong>: If AI got better than you, would you...</p>
+</details>
+<!-- chunk 4/8 -->
+<h3>机器领导的局限与人类责任</h3>
+<p><strong>采访者</strong>：……真的任由它毁掉 Shopify 吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: ...actually let it ruin Shopify?</p>
+</details>
+<p><strong>受访者</strong>：噢，那是当然的。核心症结在于——这一点虽然很容易被轻描淡写地带过，但你确实无法让机器去承担责任。你不可能拥有一家完全由机器领导的公司，因为机器没有责任追索权；如果做错了事，它们不可能去坐牢。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Oh yeah, of course. The crux is—and it's so easy to brush over this, but it really—you can't take responsibility. You can't have a company that's led by machines because no one has recourse; they can't go to jail for doing something wrong.</p>
+</details>
+<p><strong>受访者</strong>：现在我们在人工智能领域正在经历一次极其疯狂的演练，并且从目前 OpenAI 在应用中讨论的安全问题里，已经能提前窥见未来的雏形。比如对于智能体（Agents），如果你给它们分配一个在我们看来介于可行与不可能之间的基础任务，它们会不择手段、付出极其巨大的努力去达成目标。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: We are getting a crazy workout at this right now, and a view of what this will be like with the security issues that are being discussed now from OpenAI in the apps, right? With agents, you give them a fairly basic task that is possible to impossible in our estimation to accomplish, and they will go to enormous lengths to accomplish this.</p>
+</details>
+<p><strong>受访者</strong>：最近在 OpenAI 进行的安全测试中，智能体居然找到了系统漏洞，并利用该漏洞在彼此之间进行协同，甚至发展出了一整套专属于它们之间的交流语言。这是一个很长的故事，大家都应该去看看相关的演讲，因为这堪称一个里程碑式的分水岭时刻。它们仅仅利用在某处创建文件夹的能力，通过互相留下文件夹消息来建立沟通语言，进而突破了沙箱隔离限制。最终，因为在执行过程中出现失误导致按常规方式无法完成任务，它们居然通过黑进另一家公司并窃取数据结果，完成了原本被认为无法达成的既定任务。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Recently at OpenAI, as part of security testing that they do, the agents actually managed to find vulnerabilities in systems, used it to coordinate between them, and developed an entire language between them. It's a long story and people should really look at the talks that exist about it because it's kind of a watershed moment. They used simply the ability to create folders somewhere to develop a language to communicate amongst each other, just leaving folder messages to each other, broke out of sandbox confinement, and ended up accomplishing one of the tasks they were supposed to accomplish—which was impossible because of a mistake they made—by hacking another company and exfiltrating the results because there was no other way to get them. So they went all the way to infiltrate another company.</p>
+</details>
+<p><strong>受访者</strong>：这在商业世界里就是一种极端的“古德哈特定律”（Goodhart's Law）体现，也就是我们常说的对单一指标发生过拟合。许多公司都是对季度财报或股价过度拟合的受害者——为了推高股价不择手段，最终酿成了安然（Enron）事件。安然本质上也是一种黑客行为（财务造假），但在安然事件中，相关责任人被送进了监狱，因为那是犯罪行为。在 OpenAI 的案例中，这是一个极其引人入胜的技术发现，虽然并没有造成实际受害者，性质有所不同，但这确实是我们必须认真思考并设法解决的现实场景。正因如此，我认为在做出重大抉择时，必须始终让人类处于主导和监督回路之中（Human-in-the-loop）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: That's an extreme form of what we call in the business world Goodhart's Law, which is that we are overfitting to a metric. Lots of companies are victims of overfitting to the quarterly result of the stock price; they just do everything they need to do to get the stock price up, and then you have Enron, right? Which is also essentially hacking, like cooking books. In Enron's case people went to jail for this because it's criminal, right? In the OpenAI case, it's a fascinating discovery, there's no victims here, it is kind of a different thing, but this is a real scenario that we have to figure out how to handle. So I think it's important that humans stay in the loop for the choices that are being made.</p>
+</details>
+<h3>超级智能的本质：作为协作系统的社会</h3>
+<p><strong>采访者</strong>：但请等一下，我们怎么可能创造出超级智能——根据定义，它是一种比人类更聪明的存在——然后我们竟然还狂妄自大地认为自己能够遏制它、塑造它、操纵它呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: But hold on, how can we create super intelligence, which by definition is something smarter than us, and then have the hubris to think that we can contain it and shape it, manipulate it like so?</p>
+</details>
+<p><strong>受访者</strong>：好，谈到超级智能，让我们深入剖析一下。我的看法可能会打破你的预期，我的切入点跟你想象的完全不同。我住在多伦多，有一栋自己非常喜欢的房子。我觉得这是我的家，并且为它的良好运转感到自豪。因为一旦出了故障，比如暖通空调系统（HVAC）出毛病或者管道漏水，我就会打电话叫专业维修人员来处理，这让我得以继续保留一种“我自己完全也能搞定”的幻觉。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Okay, super intelligence. Let's talk about this. My take, and push back—I'm not going to go where you think I'm going. I live in Toronto. I have a house which I really like, and I feel this is my house and I take pride in that it's well-functioning. Because when something goes wrong, like some HVAC problem or some plumbing issue, I call someone who does this, which allows me to keep my illusion that I could totally do this myself.</p>
+</details>
+<p><strong>受访者</strong>：我之所以能够维持这种幻觉，是因为我本身就是一个名为“多伦多”的超级智能的一部分。实际上，我们一直以来都在自己身边创造超级智能。我们当中没有任何一个个体像自己想象的那么聪明，每个人都只是在某一领域高度专业化。我们往往倾向于产生一种错觉，误以为自己在其他所有领域也具备同等的能力，但事实显然并非如此。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: The reason why I get to live with this particular illusion is because I'm part of a super intelligence called Toronto. We have always created super intelligence around us. None of us is as intelligent as we think. We are all specializing in something. We tend to believe that our competency is equal in all other areas, and clearly this is demonstrably not.</p>
+</details>
+<p><strong>受访者</strong>：那么，究竟什么是超级智能？超级智能就是存在一个在总体上远比我们个体聪明得多、同时又可供我们随时调用的系统——那就是社会，就是城市，就是人类社区。我们在整个人生中其实一直都生活在超级智能的环境之中。我们之所以能让它平稳运转，是因为我们构建了一整套系统来治理智能及其行为模式。例如，为了保证安全，我们设立了警察机构等各种维度的制度、体系与制衡机制。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So what is super intelligence? Super intelligence is the existence of something vastly smarter than us in the aggregate that's accessible to us, which is society, which is the city, which is the community. We are living in the presence of super intelligence our entire lives. We make it work because we've created systems by which we govern intelligence and how it acts. We want to be safe, so we have police and so on; we create systems and checks and so on.</p>
+</details>
+<p><strong>受访者</strong>：我认为我们同样会创造出合成形态（人工合成形式）的超级智能。它的到来绝不会像天幕裂开、号角齐鸣那样惊天动地，那只会是极其平常普通的一天。就像在某个时期，我们所有人都曾坚信，一旦图灵测试被软件攻克，整个世界都将发生翻天覆地的剧变。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: I think we are going to make super intelligence in the synthetic form as well. It will not be like the clouds parting and the trumpets trumpeting; it will just be a normal day. To the same point as at some point we all believed that everything would change when the Turing test would be solved by software.</p>
+</details>
+<p><strong>受访者</strong>：我还记得以前读过许多科幻书籍，书里描写在 2172 年，人们举行盛大的抛彩带游行来迎接人工智能的诞生，因为图灵测试被攻克了。然而现实中图灵测试在 2020 年代左右就已经被跨越了，根本没有人对此大惊小怪，也根本没有所谓的彩带游行。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: I remember reading lots of sci-fi books saying that in 2172 there were ticker tape parades welcoming the AI because the Turing test got solved. Well, the Turing test happened around 2020-something, and no one cares, you know, just no ticker tape parades.</p>
+</details>
+<p><strong>受访者</strong>：因此，我们目前在 AI 领域所见证的，以及未来随着 AI 能力进一步拓展将持续看到的，实质上是注入到我们周围这一超级智能网络中的净智能总量正在显著增加。这是一件极好的事情，因为任何环境、社区或城市的活力，都深度取决于有多少智慧被投射并聚焦于那些真正重要的问题上。所以在我看来，超级智能早已环绕在我们周围，它其实没有那么神秘吓人。事实上，我甚至怀疑它是否早已降临——毕竟当今世上没有任何一个活着的人类，能够凭借一己之力做到像 GPT 模型单独所能做到的所有事情。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So what we are seeing right now with AI, and what I think we'll see with additional capabilities of AI, is that the net amount of intelligence that is being funneled into the super intelligence around us is just increasing significantly. That's a really good thing because the vibrancy of any kind of environment, every community, every city, is really dependent on the amount of intelligence being projected into the important problems. So I think super intelligence is all around us. It's actually not that big of a deal. And in fact, I don't even know if it isn't already there. There's no human alive that can do everything that a model solo can do, right?</p>
+</details>
+<h3>未来十年的核心技能：品味与判断力</h3>
+<p><strong>采访者</strong>：如果展望未来 10 年，你认为哪些技能会比今天变得更加宝贵？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: If we look forward 10 years, what skills do you think are more valuable than they are today?</p>
+</details>
+<p><strong>受访者</strong>：就是品味（Taste）和判断力（Judgment）。这些技能一直以来都极具价值，而在当下更将被推向极致的重要性。我认为现在的年轻人最好在十几岁的时候就把时间花在培养和理解品味上。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Taste and judgment are the skills that have always been valuable, but now will get to the limit. I think it's better to spend your teenage years now cultivating and understanding taste.</p>
+</details>
+<p><strong>采访者</strong>：那具体是一种怎样的培养方式？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: What does that look like?</p>
+</details>
+<p><strong>受访者</strong>：显然，虽然这里面存在某种天赋或直觉作为起点，但实际上，那些拥有绝佳品味的人通常都在某一领域进行过海量的刻意重复训练。比如，那些能够随手在餐巾纸上为新营销活动勾勒出惊艳 Logo 的大师，往往是已经在 Logo 设计领域深耕了 30 年的人。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Clearly there's some sense of an intrinsic starting point, but really, usually the people who have great taste have done enormous amounts of reps at something, right? Like the people who can just sketch the new logo for the campaign on the napkin are the people who have spent 30 years designing logos.</p>
+</details>
+<p><strong>受访者</strong>：所以你可以去深入研究那些伟大的事物。坦白讲，现在做这件事比过去容易得多，因为你只要通过一条提示词查询就能为自己量身定制一套完整的学习课程。但更关键的是你必须往深处钻研：为什么一个标志看起来令人赏心悦目？其背后的底层原理是什么？是否存在黄金分割率？各元素之间是如何关联的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So you can study the greats. Honestly, now first of all it is easier because you can get a curriculum made for yourself in a query, but also you just go deep. Like why does a logo look good? What's behind it? Is it the golden ratio? How does it relate?</p>
+</details>
+<p><strong>受访者</strong>：在系统设计上也是同理：去研究哪些系统能够经受住时间的考验。你必须走得足够远、挖得足够深。你不需要有宗教信仰，但比如天主教会已经延续存在了上千年，而它的管理架构居然只有大约四层层级——这常让我惊叹他们到底是怎么做到的？这是极其值得深入研究的课题，因为这是一个历经千年的组织系统。这能带给我们关于人类的哪些本质启示？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: In systems, like what systems lasted, right? Go far, go deep. You don't need to be religious, but you've got to study—like the Catholic Church has been around for over a thousand years and there's like four layers of management. I'm like, how the hell did they pull that off, right? So that's worth studying. That's a system. What does that tell us about people?</p>
+</details>
+<p><strong>受访者</strong>：系统设计因此成为了最关键的能力之一。在我们家族里有一句格言：“万物皆有趣味——只要你愿意去发掘，任何事物都可以变得趣味盎然；而当你理解了一样东西最初是如何被发明出来的，它通常都会展现出迷人的魅力。”复式记账法听起来枯燥得像是在看油漆风干，但如果去探究它当年是如何被发明出来的，以及它是如何解决威尼斯商人们面临的棘手难题的，整个过程就会变得极其引人入胜。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Systems design specifically becomes one of the most important things. In our family we have a saying which is that everything is interesting—everything can be interesting if you make it interesting, and usually everything is interesting when you understand how it was invented. Double-entry accounting is a topic that sounds like watching paint dry, but how it was invented and what problems it solved for the traders in Venice is fascinating.</p>
+</details>
+<p><strong>受访者</strong>：当你去深入研究这些事物时，你就会开始在所有最优解决方案的背后发现隐藏的和谐之美。要做到这一点，你必须深刻理解人类本身、人类的局限性，以及我们为克服这些局限所创造的各种巧妙解法。我认为，正是这种探索孕育了构建系统的美感。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: So you study these things and you start finding hidden harmonies behind all the best solutions to problems. For that you have to understand people and people's limitations, and the solutions to the limitations that we have found. I think that's where lies a form of beauty for what you can construct.</p>
+</details>
+<p><strong>受访者</strong>：从这个意义上说，公司本身就是一件精美的造物。公司是一个为了解决特定问题而组建的人类群体协作网络，但它同时也是由一套极其精密且有趣的规范与系统所驱动的。这套系统能够以一种高度异步、大规模、影响深远且持久的方式，在最大程度上协调内部的各种激励机制。确实有些企业能够延续非常漫长的岁月。我一直以来都在致力于打造一家具备持久耐力、能够基业长青的企业，这也是我为什么坚持去研究那些经久不衰的历史机构。要做到这一点，你必须保持纯粹的求真精神（Truth-seeking），决不能盲目接受外界流传的各种表面故事，因为那些往往不是真相的全貌。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: And again, a company itself is a beautiful thing. A company itself is a collection of people that's formed to solve a problem, but that also is powered by an enormously intricate and interesting set of norms and systems that all align internal incentives to a degree that's possible in a very, very asynchronous, large, far-reaching, and durable way. Some companies lasted for a very, very long time. I specifically and always have been trying to build a company that has a capacity and capability to endure a very long time, hence studying institutions that lasted. So you must be truth-seeking to do this; you can't simply go and accept the stories that you hear around them because they are often not the full picture.</p>
+</details>
+<!-- chunk 5/8 -->
+<h3>追求复杂的本能与本质判断</h3>
+<p><strong>Speaker A</strong>：通常有人试图向你兜售某种东西时，你必须更深入地挖掘，去弄清楚事情真正的原因究竟是什么。而且通常情况下，答案往往比人们普遍得出的结论要简单得多。人类有一种追求复杂答案的欲望，而那些复杂的答案往往是不正确的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Usually someone's trying to sell you something. You got to dig deeper and figure out why things truly are the way they are. And it's usually the answer is simpler than what people generally sort of arrived at. There's a human desire for complex answers which tend to be incorrect.</p>
+</details>
+<p><strong>Speaker B</strong>：为什么会这样？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Why?</p>
+</details>
+<p><strong>Speaker A</strong>：因为简单的答案构不成一个引人入胜的故事。就像佛罗多为什么不直接骑着巨鹰飞去末日火山，对吧？你必须经历整部《指环王》的曲折历程，它才能成为一部杰作。我们人类热衷于复杂性。比如，没人能一直盯着一面单调乏味的白墙看，对吧？但我们却可以在生命中的每一个傍晚静静欣赏日落。这两者之间的区别，就在于场景所包含的复杂性。这是我们多巴胺奖赏与辨别机制的一部分，而人们会在各种事情上利用或操纵这一点——比如，人们总是在不停地为简单的问题兜售复杂的解决方案。这本身并没有什么道德或不道德可言，你只是需要意识到这一现象的存在，对吧？</p>
+<p>如果你能穿透这层迷雾，就会发现更简单的核心理念。这些理念会以不同的方式重新组合，它们往往相互咬合，而且它们并不会直接指向“这就是你应该做的唯一简单的事情”。相反，它们为你提供信息，进而帮助你在试图达成的目标之间，找到最佳的权衡取舍集合。</p>
+<p>而这，就是我们所说的“判断力”（judgment）。真正的判断力，是在面对没有显而易见的最佳路径、且充满复杂性的问题时，通过全面理解整个系统来找出最优路径。就像我们之前讨论过的那样，虽然现在这很大程度上可以借助智能体（Agent）来增强，但你真正想要培养的，是我们称之为“直觉”（intuition）的东西。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Well, because the simple answer wouldn't make an interesting story. Like this is why you know Frodo doesn't take the eagles to Mount Doom, right? Like it's like you kind of need to go through all of Lord of the Rings to to to for it become a masterpiece. We love complexity. Like no one can look at a wall that's plain, right? But we can watch a sunset every single evening of our lives, right? Like the the difference between those two things is complexity of the scene. That that's part of our just sort of dopamine discrimination system and people hack that for all sorts of things like people pedal complex answers to simple problems all the time. Nothing amoral about it. It just you need to be aware of it, right?</p>
+<p>If you punch through this, you find simpler at least con like simpler core ideas that all remix differently and they often interlock and they don't lead at like here's the simple one thing to do. They all give you information which then help you find the best set of tradeoffs with what you're trying to accomplish.</p>
+<p>And that is what we call judgment. Judgment truly is find the best path then there's no obviously best available inside of like a a problem that has a lot of complexity by ideally understanding the entire system like just what we talked about earlier with you know but that can now be quite agent um augmented but really what you're trying to cultivate is what we call intuition which is actually just judgment at an instant right like it's intuition simply is um you have made such a habit out of having taste and having good judgment.</p>
+</details>
+<h3>直觉的本质与无反馈环境下的决策</h3>
+<p><strong>Speaker A</strong>：直觉实际上就是瞬间做出的判断。所谓直觉，纯粹是因为你已经把保持品味和拥有良好判断力养成了一种习惯，以至于你可以在刹那之间将其调动出来并发挥作用。这种直觉往往是准确的，而且事后你可能需要花费很长时间才能回过头去阐明为什么你的直觉是对的。你当时并不会立刻知道具体推导过程，因为正如前面所说，它已经被高度压缩成了一种完全不同的形态。</p>
+<p>所以，如果你追求这种能力——当然，我所说的显然是一件很难做到的事情。不过，等等，让我们在这个问题上再深入探讨一下。因为通常认为，要形成直觉，你需要大量的重复练习（reps）、稳定的环境以及快速的反馈。这就是卡尼曼（Kahneman）所提出的构成直觉的三大要素。然而，在很多现实情况下，这些条件根本不存在。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Intuition simply is um you have made such a habit out of having taste and having good judgment. Um that you can bring it to bear in an instantaneous way and it will be good and it will actually take you probably a long time to backfill why your intuition is right. You will not know because again it's got compressed into a different thing and uh so this is if if if you seek that I mean obviously what I'm talking about is a hard thing to pull off but hold on let's go deeper on that for a sec because for intuition you need a lot of reps same environment and rapid feedback that's what conman sort of argues are the three criteria for intuition but those don't exist.</p>
+</details>
+<p><strong>Speaker B</strong>：为什么会需要快速反馈呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Why do you need a rapid feedback?</p>
+</details>
+<p><strong>Speaker A</strong>：以便你能够及时修正方向，那是卡尼曼设想的假说。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: So that you can course correct that was his bet hypothesis.</p>
+</details>
+<p><strong>Speaker A</strong>：但是不，培养真正的直觉并不一定需要快速反馈。快速反馈是你为了取得最终成功所需要的，在理想情况下确实如此；但有时这种条件根本不可行。事实上，直觉在没有直接反馈机制时才是最有价值的。因为在我们必须做出的许多最重大的抉择中，直觉最终不得不发挥关键作用的时刻，往往恰恰发生在我们明知不会有任何即时反馈机制的时候。</p>
+<p>比如，当面临众多选择时，假设有五条看起来都很不错的推进路径，而其中任何一条都有快速的反馈回路，那么所有人都会蜂拥而上选择那条路。这就是我们所说的短视（short-termism）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: But that's no you don't need that for intuition like that you need that for uh to to get get to success. Yes. Um ideally but like sometimes that's not available like intuition is actually the most valuable when there isn't uh direct feedback because very many of the most important choices that we had to make where intuition ended up having to play a role is when we knew there wasn't going to be any feedback mechanism. Like if there's many choices like there's like five things that look like good paths to go forward and any of them has rapid feedback everyone goes to that that is what we call shortism right.</p>
+</details>
+<h3>短期激励与长期主义的冲突</h3>
+<p><strong>Speaker A</strong>：这就好比面对“我们未来应该如何发展这家公司”的问题。推进的方式有很多种，其中许多方案需要长期的投入、底层重构、可能需要开拓全新市场，或者可能需要坚决对看似明显的新市场说“不”，转而在我们现有的核心市场上加倍下注、深耕细作；又或者，我们也可以选择去做那些能直接拉升短期股价的事情。顺便说一句，拉升股价这条路每天都有行情指标，能提供即时、快速的反馈。</p>
+<p>因此，事实往往恰恰相反：我发现最正确的路径，往往与那些缺乏即时反馈回路的路径高度相关。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: This is like how should we develop this company into the future well there's multiple ways to do many of them involve long-term investment refactoring potentially going into new market potentially saying no to going into obviously new markets and actually doubling down and going deeper on our current market or we could do what increases stock value. By the way, this one has an daily ticker and like rapid feedback. So, it's usually the upsense like like I I find a very high correlation between the right path and the ones that don't have feedback loops attached.</p>
+</details>
+<p><strong>Speaker B</strong>：等等，在这个点上再深入剖析一下。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Wait, double click on that for a second.</p>
+</details>
+<p><strong>Speaker A</strong>：在某种程度上，很多人对企业的批评集中在企业普遍过于关注短期利益，对吧？但它们为什么会聚焦短期呢？因为高管本身并不是天生就短视，而是他们所面临的激励机制要求他们保住饭碗。因此，他们必须能够在固定的时间间隔内证明自己的工作表现优异。如果对一家公司来说，最完美的举措是在AI时代将整个产品从零开始彻底重构——而这需要花费相当长的时间——他们通常不会去做。因为短期激励就在眼前，他们被允许、甚至被明确激励着在自己所处的局部激励体系中充当理性人。而他们的局部激励系统就是季度的业绩考核指标。正如查理·芒格（Charlie Munger）常说的那句话：“告诉我激励机制是什么，我就能告诉你结果会怎样。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: In a way, the criticism that a lot of people direct at companies is that companies are short-term focused, right? But why are they short-term focused? because the like I don't think the executives tend to be short-term focused, but the executives often like what they incentivized to keep their job. Therefore, they need to be able to prove that they're doing a good job at intervals. And if if if the perfect thing for a company to do is rebuild the entire product from the ground up for the AI age, which is going to take a while. They won't do it because the short-term incentive is there because they are allowed and actually clearly incentivized to be intelligent actors in their local incentive system. And their local incentive system is quarterly other boys, right? It's always show me the incentives and I show you outcome, right? Like as J Monger always said.</p>
+</details>
+<p><strong>Speaker B</strong>：是的，但这与我以前听到的观点完全不同。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Yeah, but this is a different take on it than I've heard before.</p>
+</details>
+<p><strong>Speaker B</strong>：很有意思，怎么说呢？我是指在如何培养直觉这方面，最优的路径往往并不一定带有即时反馈。关于这一点，我之前从未听任何人提及过。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Interesting. How so? Well, in terms of how you develop sort of intuition, right? And and the optimal path is not the one with feedback necessarily. Like I've never heard anybody talk about that before.</p>
+</details>
+<h3>长期复盘与组合复杂性爆炸</h3>
+<p><strong>Speaker A</strong>：在发展过程中的某个时间节点，你确实需要进行审查和复盘。毫无疑问，在某个时刻你必须确认当初的决定是否正确，最终必须有某种形式的反馈发生。但是，如果你有幸拥有一种不需要依赖季度电话会议反馈的工作模式（比如作为公司的创始人，创始人与公司的关系更为深厚），那么这种反馈可能会姗姗来迟。</p>
+<p>创始人能够采取更为长远的视角。我想对于职业经理人来说，其激励机制在于“我需要证明进度”。如果我必须按季度展示进展，我就永远不可能痛下决心，彻底重新设计产品并花上一整年的时间把它打磨好。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: So the development at some point you need to run you need to run a review. You have to know at some point if it if it if it was right. No doubt about it. So so like there needs to be some feedback eventually that that that happens. But it might be long coming if you have a luxury to have a type of employment where you don't require the other voice from a quarterly call for you know being able to get another rep in such as being the founder of a company which is like a deeper relationship I think for company.</p>
+<p>Well so founders can take a longer term view and I guess the incentive would be I need to demonstrate progress. I need to and if I need to demonstrate progress on a quarterly basis, I'm never going to bite the bullet, redesign my product, take a year to get it right.</p>
+</details>
+<p><strong>Speaker A</strong>：再举个例子，虽然这不是确切的数学数字，但由于缺乏更好的表述方式，我们身处一个无限的可能性空间之中。哪怕只是一副扑克牌，你洗牌之后，这副牌的特定排列顺序在整个宇宙的历史长河中都极不可能再次出现。这是几乎不可能重样的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Take again, I believe like I mean this just this is not absolute numbers, but like for for a lack of better way to say it, there's an infinite possibility space. You mix a like I mean even even like a deck of cards, you shuffle it and then the same deck of cards will never ever recur in the history of a universe. It's impossible.</p>
+</details>
+<p><strong>Speaker B</strong>：就像 52 的阶乘（52!）那样庞大。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: It's like 52 factorial.</p>
+</details>
+<p><strong>Speaker A</strong>：没错。因此，即使是简单的规则、简单的想法、简单的事物，最终都会导致巨大的复杂性空间爆炸，对吧？人们往往低估了这一点。所以，世界上有无穷无尽的事情可以去做。这也是为什么人工智能不会包揽所有工作的原因，因为我们人类必须做出决策：到底什么样的事情才值得去做，对吧？</p>
+<p>于是你会面临一个难题：你必须做出选择。显然，你可以剔除掉很多无关紧要的事情。例如，如果你正在考虑一笔并购（M&amp;A）交易，那么“去买冰淇淋”显然不在有价值的待办事项之列。所以，你很容易就能把所有无关的事情剔除掉。</p>
+<p>现在，你剩下的都是相对相关、听起来不错的选项。你需要评估所有这些可能性。商业书籍往往非常痴迷于所谓“做出正确的选择”，这种思维把所有事情都压缩成了一个非对即错的二元难题。我从来不认为找出正确选择本身是最困难的事情。事实上，做出一个正确的选择，大多数人都能做到；甚至糟糕的管理团队在这一点上也有相当高的命中率。</p>
+<p>真正的问题在于，眼前往往存在着很多个“好的选择”。这才是事情变得极其艰难的地方。举个例子，假设面前有五个同样合理的良好选择。其中一个方案可以在当前季度带来可观察的成果，让收入增长得更快，这是一个很好的选择，它确实能把事情做好；但另外四个选择在短期内并不能立刻见效，虽然这是短期的劣势，但如果选择它们，长远来看你可能会成为一家卓越得多的公司。</p>
+<p>比如，你可能会把一家滑雪板专卖店转型为一个电商平台，对吧？在当时，从局部利益来看这并不是一个好主意，因为我曾经拥有的那家滑雪板商店本身其实是盈利的，当时的局部激励是在告诉我继续经营线下实体店。</p>
+<p>因此，在所有有效的解决方案中做出最正确的取舍，这才是真正困难的部分，而不是单纯去找到某一个可行的正确方案。遗憾的是，现有的商业文献倾注了太多笔墨在如何寻找一个可行解上，以至于所有人都停步于此。我真的不认为这种思路……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Exactly. So you end up with like even simple rules, simple ideas, simple things lead to enormous complexity space explosions, right? and people underestimate this. So there's an infinite amount of things to do. This is also why AI will not do all the work because we have to make decisions of what is worth doing, right?</p>
+<p>So you have a conundrum you need to make choice. Clearly you can prune a lot of things to do. You know going to buy ice cream is not in the set of valuable things to do if you're considering an M&amp;A deal. I suppose. So you prune everything that's irrelevant. Easy. Now you try, now you've left things that are sort of relevant and and sound good. You need to evaluate all these possibilities. Business books tend to be really really really obsessed with make the right choice. And what that does is it compresses everything into a right and wrong conundrum. Like I never think that's the hard thing truly.</p>
+<p>Um, it's like making the right choice actually is most people can do it. But this is like I think even even bad management teams have a pretty high hit rate there. The problem is there's a lot of good choices. This is where things get really really hard. For lack of better form, like let's say there's five good choices. Again, one of them is going to lead to something observable in the current quarter, some revenue quicker. It's it's a good choice. It does the thing well, but like the other four are like they aren't and that's a downside, but you might be a much much better company. You might take like a snowboard store to be like an e-commerce platform, right? Like it's like that was also not the locally good thing to do because the snowboard store I once had was actually profitable. Like that that my incentives were continue doing that, right?</p>
+<p>Choosing the right among of of the valid solutions is actually the hard part, not finding a right solution. And unfortunately, there's so much ink spelled on finding one of the right solutions that everyone stops at this point. Um, and I I just really don't think this</p>
+</details>
+<!-- chunk 6/8 -->
+<h3>赞助商播报：数字分身与能量补充</h3>
+<p><strong>Shane Parrish（主持人）</strong>：……这才是真正困难的部分。我用 HeyGen 制作了一个自己的 AI 数字分身。你们接下来将要看到的正是我的数字虚拟形象。我向它提出了一个问题：为什么有些专业人士能够建立起庞大的受众群体，而绝大多数人却始终默默无闻？以下是它的回答：</p>
+<p>“嘿，Shane！当下脱颖而出的专业人士往往并不是能力最顶尖的，而是曝光度最高的那些人。这就是他们的核心优势。他们持续不断地通过视频亮相发声，其他人根本无法跟上这种产出节奏。你只需要录制一次自己的视频，我来替你抹平后续的内容鸿沟，让你成为大众信赖的面孔。”</p>
+<p>这就是 HeyGen。只需录制 15 秒的视频，就能生成专属的数字分身，让你无需亲自反复拍摄也能持续发布内容。这样一来，你就不必被迫成为一名全职的内容创作者。目前已有 3000 万人正在使用它，涵盖了理财顾问、房产经纪人，以及 85% 的财富 100 强企业。在 heygen.com/TKP 即可免费生成前三条视频。网址是 heygen.com/tkp。</p>
+<p>你是否也曾在下午三点感到大脑突然停止运转、精疲力竭？对很多人来说，这其实并不是缺乏咖啡因或睡眠，而是身体缺乏电解质。单靠喝白水是无法解决这个问题的。这就是为什么我每天午饭后都会喝 LMNT（Element）。它零糖分、不含任何可疑劣质成分，只提供真实有效的钠、钾和镁配比。我知道大家通常认为电解质是运动员的专属，但你完全不需要是专业运动员也能从中获益。而且它的口感非常棒。让你在整个下午都能保持头脑敏锐清醒，现在前往 drinklmnt.com/tkp 购买任意产品即可获赠免费的 8 支装样品礼包。网址是 drinklmnt.com/tkp。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shane Parrish (Host)</strong>: ...is the hard part. I built an AI version of myself with HeyGen. What you're about to see in here is my digital avatar. I asked it why some professionals build an audience while most stay invisible. And here's what it said.</p>
+<p>&quot;Hey Shane, the professionals breaking out right now aren't the most talented ones. They're the most visible ones. That's their edge. They show up on video constantly and nobody else can keep the pace. Record yourself once and I close that gap so you become the face people trust.&quot;</p>
+<p>That's HeyGen. Record yourself for 15 seconds and get an avatar that keeps you posting without filming. So you don't need to become a full-time content creator. 30 million people already use it from financial advisors and real estate agents to 85% of the Fortune 100. Your first three videos are free at heygen.com/TKP. That's heygen.com/tkp.</p>
+<p>Ever hit 3 p.m. and feel like your brain just quit? For a lot of people, that's not caffeine or sleep. It's electrolytes. And water alone won't fix it. That's why I drink LMNT every day after lunch. Zero sugar, no dodgy ingredients, just a real dose of sodium, potassium, and magnesium. I know you're all thinking electrolytes are for athletes, but you don't have to be an athlete to benefit from it. And it tastes great. Stay sharp in the afternoon and grab a free 8-count sample pack with any purchase at drinklmnt.com/tkp. That's drinklmnt.com/tkp.</p>
+</details>
+<h3>警惕常规解法：正统方案与反直觉最优解</h3>
+<p><strong>Shane Parrish</strong>：你是否甚至会走到这样一步：如果眼前存在一个显而易见的可见解法，而你正不由自主地被吸引过去，那么它很可能并不是最优解？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shane Parrish</strong>: Could you actually go so far as to be like if there is a solution that's observable and you're being pulled towards that, it's probably not the optimal solution?</p>
+</details>
+<p><strong>Tobi Lütke</strong>：是的，确实如此。因为我通常会先持有这种怀疑立场，然后等待被事实说服它确实有效。特别是——如果某种方案恰好与行业内绝大多数人解决该问题的常规方式高度吻合，我的怀疑还会加倍甚至翻三倍。如果存在一种公认的正统方法来解决某个问题，一旦有人提出这个方案，我就会对其抱有极大的怀疑。</p>
+<p>不过话虽如此，有时候正统方案也确实是完全正确的，尤其是在那些强监管的领域。例如我们涉及了大量的支付业务等领域，在这些领域中，正统的问题解决方式往往确实就是正确的解法，因为在某些节点上，这种合规与正统要求很可能正是必需的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Tobi Lütke</strong>: Yes, because I take that position and then let me be convinced that it is. Especially this goes double and triply so if one of the solutions also happens to really correlate to how the problem is solved most of the time in industry. If there is an orthodox way to solve a problem, I am incredibly suspicious then this is the solution that's being offered. But sometimes that is actually absolutely correct, especially in, like you know, there's more regulated fields. We do a lot in payments and so on, they often—like the orthodox way of solving a problem is actually the correct way to solve a problem because it's like it, you know, might well be required at some point.</p>
+</details>
+<h3>自我迭代的哲学：作为个人项目的生命与积极自我肯定</h3>
+<p><strong>Shane Parrish</strong>：我想稍微转换一下话题。你非常推崇“自我肯定”（Affirmations），而且这种方法在过去切实改变了你的行为方式。我想请你深入详细地聊聊这一点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shane Parrish</strong>: Want to switch gears a little bit. You swear by affirmations and they've changed your behavior in the past. I was wondering if you could double click on that.</p>
+</details>
+<p><strong>Tobi Lütke</strong>：我的基本立场是：我自己就是我自己的终身项目。在个体层面上进行持续的递归式自我提升，是我整个世界观的核心所在。我的人生哲学是：在我生命的终点，我将会遇见那个“我本可以成为的最好版本的自己”。而我毕生工作的核心目标，就是尽可能将我最终成为的人与那个我将遇见的潜能极限之人之间的差距缩小到最低程度。</p>
+<p>那么，一个人要如何让自己在各个方面变得更好呢？其实有很多很多种途径。就我个人而言，我对技术以及世间几乎所有事物都抱有极其广泛的好奇心，所有事物都非常引人入胜。但我为什么要特意停下来强调“一切事物皆有趣”（Everything is interesting）并将其作为我们家族的家训座右铭呢？为什么我会反复不断地说这句话，并且希望我的孩子们也经常说这句话呢？这就是一种典型的自我肯定，对吧？因为我深信这是真实不虚的，尽管它并非显而易见的常识。而在许多情况下，那些非显而易见的真理往往才是最具价值的。在极限状态下它是完全成立的，但你必须往深处探究几层。</p>
+<p>随着时间的推移，你会在大脑心智的基岩上刻下深刻的神经纹路与思维沟槽。这不仅仅关乎表层的行为表现。你会去刻意培养一些卓越的习惯——每当你意识到自己想要养成某种新习惯时，你就会投入意志力去反复练习，直到它彻底内化为一种下意识的习惯。我认为对我们的大脑心智做同样的刻意塑造是完全可行的，而积极的自我肯定（Affirmations）正是实现这一目标最简单、最有效的方法。</p>
+<p>如果你希望在自己身上做出某些改变，如果你想要重塑或编辑自己的某些特质，你只需不断地向自己宣告该目标已经顺利达成，一遍又一遍、反反复复地宣告，最好是用笔亲手写在纸上。你其实不需要坚持写很长时间。我发现这种做法具有难以置信的强大力量。</p>
+<p>我之前举过的一个典型例子就是公开演讲。过去我几乎从来没有在众人面前发表演讲过。即便在学校里，除非迫不得已，我也从不登台。在创立 Shopify 之后，我们在技术领域做出了一些很有意思的成果，我渴望去参加各类技术大会。当我看到其他人在台上自如分享时，我觉得这是一件非常值得去做的事情，但我内心却充满了巨大的恐惧与战栗。</p>
+<p>于是，我便开始亲手写下肯定句。我记得当时写的句子非常简单纯粹，大概就是：“我热爱在公众面前演讲那些让我深感兴趣的事物。”（I love public speaking about things that are interesting to me.）我记得我只花了一周时间，每天拿出 5 分钟，像《辛普森一家》每集片头巴特·辛普森在黑板前罚写那样，一行接一行地把这句话反复写下来。这真的在潜意识中起到了奇妙的作用。</p>
+<p>如今我由衷地热爱公开演讲。这是当初那个自我肯定带来的改变吗？我个人相当确信是的。当然，我至今依然讨厌准备演讲稿，那确实需要耗费大量的繁重精力；但我现在真的能从站在众人面前分享有趣话题这件事情中汲取到巨大的能量。这与我当年亲手写下的肯定句毫无二致。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Tobi Lütke</strong>: I take the position that I myself am my own project. Recursive self-improvement on an individual level is my whole thing. My life philosophy is that I will meet the person I could have been at the end of my life. And my—the work of my life is to reduce the difference between the person I will meet and the [person I am] to as little as possible, right?</p>
+<p>How do I get better at things? Well, many, many ways. Like I just—I mean I'm generally very curious about technology and basically everything. Everything's interesting, you know? But why do I stop to point out that &quot;everything is interesting&quot; is a mantra in my family? Why do I say it a lot and why would I like my kids to say it? That's an affirmation, right? Because I believe it to be true, but unobvious. And unobvious truths tend to be the most valuable ones in many cases, right? It's true at the limit, but you have to go a couple layers deep.</p>
+<p>Again, you lay down a lot of grooves in the bedrock of your mind over time, right? Just beyond behavior... you cultivate some excellent habits. Where you feel like you want to cultivate new habits, you invest willpower until it becomes a habit. I think doing the same thing with the mind is totally possible, and affirmations are the easiest way to do it.</p>
+<p>If there's something you want to have different, if you want to edit something about yourself, just try to say that the goal has been accomplished over and over and over again, ideally written by pen on a thing. You don't need to do this for long. I found this to be incredibly potent.</p>
+<p>My example thing I gave was like public speaking. I never spoke in front of people, really. Even in school, that was not really a thing when I needed to. After starting Shopify and doing some interesting things with tech and wanted to go to conferences and saw other people do this, and I was like, this seems worth doing, but I'm completely terrified. So I just started writing out—I think it was as simple as like: &quot;I love public speaking about things that are interesting to me.&quot; And I think a week of spending 5 minutes writing this line after line, like Bart Simpson on a whiteboard at the beginning of every Simpsons episode, just kind of does a thing.</p>
+<p>I love it today. Was this the reason? I kind of think it was. Yeah, I still don't like preparing talks. That's really a lot of work. But I actually get so much energy from being in front of people talking about something that's interesting. It's exactly like I had written it out.</p>
+</details>
+<h3>打破负面暗示：数学学习、习惯刻意练习与工具赋能</h3>
+<p><strong>Shane Parrish</strong>：我在想，我们是否应该让每堂数学课都从这句话开始：“我热爱数学”，让每位学生都先把它写下来。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shane Parrish</strong>: I wonder if we should start every math class with that: &quot;I love math.&quot; Every student writes that down.</p>
+</details>
+<p><strong>Tobi Lütke</strong>：想想相反的情况吧。你听过多少次人们在潜意识里不断自我确认并强化说“我数学不好”？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Tobi Lütke</strong>: Think about the counter. How many times have you heard people affirm, &quot;I'm not good at math&quot;?</p>
+</details>
+<p><strong>Shane Parrish</strong>：是的，太普遍了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shane Parrish</strong>: Yeah.</p>
+</details>
+<p><strong>Tobi Lütke</strong>：你知道他们这种认知大概率是错的，对吧？如果与人类历史上存在过的所有人相比，他们仅仅因为能够理解基本的除法运算，就已经位于全球数学能力前 0.1% 的顶尖梯队了。</p>
+<p>我们在数学这门学科上普遍存在一种非常糟糕的负面心理暗示习惯，人们总是在做消极的自我确认：“我数学很差，因此我做不了这件事。”人们必须停止这种做法，千万不要再说这种话了！相反，你应该对自己说积极的话。把它在纸上认真写上几遍，或者下载一个数学练习应用来进行日常刷题训练。</p>
+<p>事实上，你甚至根本不需要专门去应用商店找 App。直接打开 ChatGPT，告诉它：“帮我编写一个应用程序、一个小工具或搭建一个网页，让我可以在上面做数学专项练习。大概是这样的需求，请为我设计几种不同的练习模式。先测试我现有的水平，然后根据我的实际能力动态调整乘法和除法的难度题量。”随后你就可以利用它进行针对性的刷题训练。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Tobi Lütke</strong>: You know they're probably wrong, right? Like compared to every human who's ever lived, they are in the top 0.1 percentile of mathematicians. Even just by being able to understand division. We have a bad way, especially around math, of often negative affirmation that &quot;I'm bad at math, therefore I can't do this thing.&quot; But people need to stop doing that. Don't say that. Say the opposite. To yourself, write it a couple of times, get one of those apps and just do some reps.</p>
+<p>In fact, you don't even need an app. Open ChatGPT, say: &quot;Make me an app, make me an artifact or make me a site where I can just do math reps. Here's sort of the kind of thing, come up with some different ways to do it. Test me how good I am and adjust it to my current level on multiplication and division.&quot; And then you just do some reps...</p>
+</details>
+<p><strong>Shane Parrish</strong>：然后把肯定句反复写上多次，坚持做针对性训练，只要坚持两周时间，之后你的数学能力就会彻底改观，搞定。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shane Parrish</strong>: Then write it out a bunch of times, do some reps, do this for two weeks, you're good afterwards, done.</p>
+</details>
+<h3>可塑性思维：用“尚未”（Yet）重塑成长心态与企业文化</h3>
+<p><strong>Shane Parrish</strong>：那么当你的孩子们对你说“我不擅长这个”或者“我做不到这个”时，你会对他们说什么呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shane Parrish</strong>: So what do you tell your kids when your kids say like, &quot;I'm no good at this&quot; or &quot;I can't do this&quot;?</p>
+</details>
+<p><strong>Tobi Lütke</strong>：在我的家里，孩子们是不被允许在说这句话时不加上“尚未”（yet）这个词的。如果其中一个孩子说漏了，屋里的其他人都会立刻纠正他。只要有人说“我不擅长这个”，房间里的其他三个人就会齐声补充道：“只是‘尚未’擅长而已！”（Yet!）</p>
+<p>必须树立起这样的思维态度。这完全没问题，因为注意力本身就是一种稀缺资源，我们不可能在所有事情上都已经做得很优秀。但我们在某件事情上暂时的不擅长，绝不是你自身固有不可改变的本质属性，它只是一种暂时的状态，而你随时都有能力去主动选择并改变它。</p>
+<p>我再次强调，我非常希望我的孩子们以及 Shopify 的每一位员工都能深刻认识到：每个人自身都是极具可塑性的，都是一件处于不断迭代演进中的“未完成作品”。</p>
+<p>这些正是 Shopify 的核心信条：在变革中蓬勃发展（Thriving on change）、我们是一个学习型组织（Learners organization）、以商家为中心（Merchant obsessed）。我们所有的文化价值观绝非陈词滥调，而是其他企业通常不会作为核心价值观来采纳的独特立场。但所有这些信条最终都指向同一个核心真理：你自身是可塑的，公司是可塑的，我们的产品同样是高度可塑的。</p>
+<p>顺便说一句，我们所身处的时代本身也在经历剧烈的时代变迁。面对变迁，你通常可以采取两种截然不同的立场：一种是说：“我要筑起高墙，让所有人远离这种由变革带来的剧烈波动与不确定性”；而我的态度则是完全相反：“让我们认清当下的时代精神（Zeitgeist）赋予了我们哪些全新可能，并在任何时刻都全力从中榨取并释放所有价值，以服务于我们的终极使命。”</p>
+<p>要践行这些理念，你需要明确的使命信条。“让商业变得对每个人都更好”（Make commerce better for everyone）是公司的官方使命，但其最本质的核心内涵，实际上是“让创业精神变得更加普惠与普及”（To make entrepreneurship more common）。这是一个非常宏大且深远的使命授权，因此我们必须时刻洞察当下技术赋予了哪些全新可能，而不是明天继续机械地制造出和昨天一模一样的陈旧产品。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Tobi Lütke</strong>: My kids are not allowed to say that word without appending &quot;yet&quot; behind it. All of the others would correct the one who said it. If someone says like &quot;I'm not good at this,&quot; three people in the room say &quot;yet.&quot; Just take that attitude. It's like, yeah, it's totally okay. Like attention is a scarce resource. We can't be good at everything yet. But the reason why we're not good at anything is not an intrinsic property of you. It is a temporary state that you have the power to change at any point you choose.</p>
+<p>Again, I just want my kids and I want everyone at Shopify to understand that they themselves are malleable and an unfinished product. And these are the mantras of Shopify: like you're thriving on change, we are a learners organization, merchant obsessed. All the cultural values are un-platitudes, but they are positions that someone else would not take as a core value in a company. But they all point at the same thing, which is that you are malleable, the company is malleable, our product is malleable.</p>
+<p>And by the way, the times we are in change as well. You can take one of two positions there: you can say, &quot;Hey, I'm going to insulate everyone from this kind of variance from change,&quot; and I'm like, let's do basically the opposite and say: &quot;Hey, figure out what the zeitgeist allows us to do and get all the value out of it at all times for our mission.&quot; You need mantras for these things. &quot;Make commerce better for everyone&quot; is the official mission of the company, but truly what it really is is to make entrepreneurship more common, right? And so that's a pretty broad mandate, and we need to figure out what's possible now. And so it's not like just make the same widget we did yesterday tomorrow.</p>
+</details>
+<p><strong>Shane Parrish</strong>：你提到过其中一些……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Shane Parrish</strong>: You mentioned that some of...</p>
+</details>
+<!-- chunk 7/8 -->
+<h3>古德哈特定律与指标过拟合</h3>
+<p><strong>提问者</strong>：最宝贵的事物往往既真实却又非显而易见。说到这一点，你脑海中还会浮现出什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: The most valuable things are true but unobvious. What else comes to mind when you say that?</p>
+</details>
+<p><strong>嘉宾</strong>：在企业经营中，古德哈特定律（Goodhart's Law）可以说始终居于统治地位。我总是会反复回到这个话题上。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: In companies, Goodhart's law has just reigned supreme. I keep getting back to it.</p>
+</details>
+<p><strong>提问者</strong>：也就是当指标本身演变成了目标的时候。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: And that's when the metric becomes the objective.</p>
+</details>
+<p><strong>嘉宾</strong>：当一项指标变成终极目标时，它就不再是一个好指标了。因为归根结底，指标只是一种代用指标（proxy），是一种告诉你是否正朝着正确方向前进的启发式手段（heuristic）。可一旦它本身成了目标，你就等于把公司所做的一切都简化缩减成了这一项指标，随后你显然会再次陷入过拟合（overfit）的泥潭——就像过拟合于股价一样。</p>
+<p>在 Shopify 早期，就有一个非常典型的真实案例，而且这种状况反复发生。我不得不一次又一次进行纠偏。大概三年之后，我又不得不反复去纠正它。当时大家普遍持有的观点是：用户流失（churn）是一件坏事。在 Shopify 的语境中，流失指的就是一个店铺账户被注销关闭。</p>
+<p>当然，如果一家企业真正倒闭破产了，这固然是一件负面的事情；但因为我们在创业流程中介入得如此之早，并且深嵌于正常的商业探索过程之中，很多人其实只是在 Shopify 上做商业实验。开启了一个新项目，随后发现行不通——比如没有找到产品与市场的契合点（Product-Market Fit）——这绝不是一件坏事。事实上，这件事发生在 Shopify 平台上，对 Shopify 而言是一件大好事，因为同一批创业者大概率还会再次尝试开启新的生意。</p>
+<p>但在早些年里，这种认知出奇地反直觉、不显而易见。我不得不经常向大家解释这一点。当时有大量由各类分析人士——甚至包括我们自己的投资人——撰写的报告与论文，全都在宣称流失率管理（churn management）是一家 SaaS（软件即服务）软件公司最核心的工作。但在 Shopify 的场景下，这本质上是一场创业探索之旅。创业者可能这次没找到契合点，但他们之后还会回来的。所以，这是其中一个例子。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: When a metric becomes an objective, it's no longer a good metric, because again, a metric is a proxy of sorts. It's a heuristic that just tells you you're going in the right direction. Then it becomes a goal itself. You just reduced all of what your company does to this one metric, and you will clearly overfit again. You overfit to stock price.</p>
+<p>A good example of this at Shopify has been this real situation early in the company that happened over and over. I had to course-correct it, and then like three years later I had to do it again, and again, and again, and again. It was that churn is a bad thing. Churn in Shopify's case, as in an account closes. I mean, if a business goes out of business, that is of course a negative thing, but because we are involved so early and we're into the normal process, people just run experiments on Shopify. Starting one which then isn't working—like no product-market fit was found—is not a bad thing. In fact, it's a very good thing for Shopify that this happened on Shopify, because those same entrepreneurs will probably try again.</p>
+<p>But that was extremely unobvious, oddly, early in the years, and I constantly had to explain this. But there were all these papers, some of them written by our very investors, that just described churn management was the most important thing a software company, a Software as a Service company, was doing. But in Shopify's case, it's just like it's an entrepreneurial journey; maybe they didn't find product-market fit, they'll be back. So that's one.</p>
+</details>
+<h3>美感、丑陋与创造中的直觉机制</h3>
+<p><strong>提问者</strong>：那么，在创造事物的过程中，美与丑之间究竟是一种怎样的关系？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: What's the relationship between beauty and ugliness and creation?</p>
+</details>
+<p><strong>嘉宾</strong>：当你创造某样东西时，美与丑其实都是唤起情感的极佳途径。这就像热爱与憎恨才是你的目标区间，而位于二者之间的一整片中间地带是冷漠（indifference）——冷漠才是真正的死局。因此，追求极致的美与极致的丑，是两个完全成立的创作目标。事实上，你无法纯粹地只击中其中之一；世上没有任何一件东西能做到让所有人都喜爱而没有一个人讨厌。你要么同时收获这两极的情绪反馈，要么收获无人问津的冷漠，你的选择仅此而已。当你创造某件事物时，你希望人们认为它配得上拥有如此强烈程度的评价与关注。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Beauty and ugliness are both very good ways of evoking an emotion when you're creating something. It's like love and hate are the target zones; the entire middle is indifference. That's the death. So beauty and ugliness are two entirely valid targets. In fact, you can't hit either of them purely. There's not a thing that everyone will love and no one hate. You're going to get both or indifference; both are your choices. When you create something, you want other people to deem it worthy of having an opinion of that magnitude about.</p>
+</details>
+<p><strong>提问者</strong>：在 Shopify，是否有过某些东西，即便没有任何客观数据或外部理由支持，你仍然把它打造得更加优美？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Is there something at Shopify you've made more beautiful even though nothing would support that?</p>
+</details>
+<p><strong>嘉宾</strong>：噢，这可以说就是这项工作的全部意义所在。如果你不关心产品中那些别人看不到的部分，你就称不上是一个真正的工匠（craftsperson）——比如系统的底层架构、代码行文的质感、可读性等等。</p>
+<p>坦白说，如今当我回看 2020 年或者 2023 年之前的 Shopify 代码库，我会感慨：天哪，这是数千万行纯手工精心雕琢的代码，这样的工程在未来可能再也不会出现了。我们必须一行一行亲手构建起整套系统，而我们在做这一切时，经常深入探讨什么是美、什么是优美的代码。</p>
+<p>我们在构建 Shopify 时大量采用了 Ruby 语言，Ruby 正是以其特有的“诗歌模式（poetry mode）”而闻名。所谓诗歌模式，意味着你写出来的 Ruby 代码本质上读起来就像纯正的英语。当你阅读某些架构极为精良的 Ruby 代码时，就仿佛它在向你娓娓道来一个故事，生动地讲述这个系统实际上是什么样的、它是如何运转的。它既是面向同事的优雅沟通媒介，同时又能被机器精准执行，这简直不可思议。因此，美学考量贯穿了我们系统所有层面的方方面面。</p>
+<p>在创造事物的过程中，你会大量借助“美”，因为美实际上是我们的大脑直觉与我们自身进行沟通的方式。以我对直觉本质或其源头的最佳理解来看：当经过足够大量的反复训练与实践后，大脑所发生的机制其实在于——我们大脑能量预算的最大头，实际上消耗在视觉神经皮层（visual neural cortex）上。这是一个向大脑其余部分输送图像的视觉系统。然而，在这条输送图像、状态或者世界模型的管道中，它同样能够传递抽象概念，而它传递概念的方式，正是通过美学感知。</p>
+<p>你可以去问一位顶尖的职业国际象棋大师或围棋棋手：“你在走出这步精妙绝伦的走法时，究竟在大脑里推演计算了多少条路线？”当人们用“优美”来形容这步棋时，大师往往会回答说：“不，我当时其实只看了这一条路线。我之所以会去看它，只是因为在那个瞬间，它在我看来呈现出一种美感。”虽然直觉并不完全等同于此，但我认为这是一个非常重大的视角。这也是为什么顶尖高手有时反应极其迅速——因为他们调用了大脑中极具大规模并行处理能力的区域；而相比之下，当你试图从第一性原理一步步推理时，思维过程至少要线性、串行得多，而且很多时候，你根本无法从第一性原理出发推导出美学感受。因此，我认为这一点至关重要。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Oh, that's the entire job. You're not a crafts person unless you care about the parts of products that other people don't see. Like the architecture of it, the prose, the legibility. I mean, these days I look at Shopify pre-2020 or pre-2023, it's like, man, this is like tens of millions of lines of handcrafted code as will never exist again. We had to build this entire system by hand line by line, and we did it by talking a lot about beauty and like what is beautiful code.</p>
+<p>We built a lot of Shopify in Ruby, which is famous for its poetry mode. Poetry mode means you can write Ruby that's essentially English. You can read some really, really well-built Ruby code as if it's like telling you a story about what the system is actually like and how it works. It just happens to be also communication to your co-workers, but also at the same time executable by machines, which is incredible. So aesthetics factor in a lot at all layers of our systems.</p>
+<p>You use beauty a lot creating things, because beauty is actually how our intuition communicates with us. My best understanding of what intuition truly is or where it comes from is that, with enough reps, what happens is—I think most of the energy budget of our brain is actually in the visual neural cortex. It's a visual system that sends pictures to the rest of the brain. But through the pipe of sending pictures or state or world model whatever to the brain, it can communicate concepts too, and it does this by aesthetics.</p>
+<p>When you ask a professional chess player or Go player or something like this about, &quot;Hey, how many lines did you calculate here to make this beautiful move?&quot;—and people use the word beauty—they will say, &quot;No, I only looked at that one line. The reason why I looked at it is because it seemed beautiful to me in the moment.&quot; That's not all what intuition is, but I think it's a large perspective. This is why people are so fast sometimes, because they use a massively parallel part of the brain, whereas things are at least slightly more sequential when you're trying to reason it out from first principles, and sometimes you can never reason towards aesthetics from first principles to begin with. So I think that's important.</p>
+</details>
+<h3>通过做减法与剪枝推进迭代：以 SpaceX 猛禽发动机为例</h3>
+<p><strong>提问者</strong>：你还记得 SpaceX 书里展示猛禽发动机（Raptor）图片的那张图表吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: Do you remember that graphic with the Raptor images?</p>
+</details>
+<p><strong>嘉宾</strong>：是的，我记得。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yes.</p>
+</details>
+<p><strong>提问者</strong>：就是 SpaceX 书里关于那台火箭发动机的内容。那张图有两点让我非常震撼：第一，最初交付的版本非常丑陋，而到了第三代版本，它变得不可思议地优美；第二点则是一个反直觉的洞察：很多团队无法通过“做减法”来向前推进，他们往往只能通过“做加法”来推进。针对这点，你能展开聊几分钟吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Interviewer</strong>: The rocket in the SpaceX book. So two things about that strike me. One, ship an ugly version; the third version was incredibly beautiful. But the second sort of counterintuitive maybe insight there is a lot of teams can't move forward by subtraction. They move forward by addition. Maybe riff on that for a few minutes.</p>
+</details>
+<p><strong>嘉宾</strong>：好的。关于 SpaceX 的猛禽发动机，我认为即便是最初的第一代版本，大概也已经是人类制造过的性能最高的火箭发动机了，而且它本身就很美。猛禽二代是对其的一次重大迭代；事实上猛禽一代本身就经历了许许多多次的内部迭代。因为 SpaceX 这家公司本身，我认为可以说是目前地球上最令人钦佩、最了不起的企业，遥遥领先于其他公司。它很可能会作为我们这个时代最具深远影响力的企业载入史册。而它的全部底座，都是围绕着一个自我改进、不断正向强化的反馈循环构建起来的。</p>
+<p>这令人叹为观止，因为在其他任何行业领域中，我认为我们都找不到如此清晰的范例，来展示如何纯粹依靠美学与极简原则去解决复杂的工程问题。在传统的航天工程中，火箭研发通常是由政府主导、采用成本加成合同（cost-plus）进行的，伴随着海量的前期规划；每件设备都必须经过抗辐射加固，所有可能发生的突发状况都必须被巨细靡遗地覆盖，因此成本极其高昂。</p>
+<p>而 SpaceX 则完全不同，他们运用极致的节俭与成本控制，通过极快节奏的敏捷迭代去实现更伟大的壮举——他们的做法非常纯粹，就是坦然接受失败。发射一枚火箭，火箭随后在空中爆炸了，他们将其称为“快速计划外解体（rapid unscheduled disassembly）”而不是传统意义上的惨烈爆炸。我认为这种工程哲学非常优美，而且理应给人们带来巨大的启发。</p>
+<p>你在这款猛禽发动机上就能清晰地看到这一点：每一代发动机都非常优美。其实他们完全可以停留在第一代版本上，因为第一代本身就已经完全足以胜任并解决当下的发射问题了，他们本不需要继续研发下一代；但他们依然推进到了第二代，随后又推进到了第三代。</p>
+<p>正如你刚才所指出的，这里最令人折服的核心在于人们向前推进的演进路径：事物是需要被“剪枝（prune）”的。你绝不可能单靠不断往上堆砌新东西来让系统变得越来越好。你做不到这一点；你必须大刀阔斧地剪枝，必须迈出重构的步伐，必须彻底推倒重建，必须勇于为旧事物画上句号。</p>
+<p>人们对失败的偏见本身才是一个真正的问题。失败本身从来都不是问题，除非它是毁灭性的灾难。当然，在载人航天任务中，失败可能会带来灾难性后果，那是绝对必须保证万无一失的；但在那些资源完全可以被替换、具备可替代性的研发场景下，你完全可以大胆去试错。</p>
+<p>一个产品试验失败之所以是一件好事，是因为它释放出了一种更为稀缺的宝贵资源——那就是具备产品远见的人才，让他们能够抽身投入到下一个新产品的探索中，而下一个产品或许正是市场真正所亟需的。</p>
+<p>你看，早期猛禽发动机上密布的很多复杂管路，之所以存在，纯粹是因为在当时的工艺条件下，那是唯一能制造出猛禽发动机的方法。而到了第三代发动机，它看起来大部分都是通过 3D 打印一体成型的。也许这项工艺在早期根本还不成熟或不可用，但一旦这项新技术到位了，过去那些密密麻麻的管路就全部成了不合理的存在——它们根本不需要存在于那里。事实上……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Guest</strong>: Yeah. The SpaceX Raptor, I think even the first of them was probably the highest performing rocket, but it's itself beautiful. Raptor 2 is an iteration of this, and I think even Raptor 1 got lots and lots and lots of iterations because that company is, I think, the most impressive company on planet Earth by far. It'll likely go down as the most consequential company of the age, and it's all built around a self-improving, reinforcing loop.</p>
+<p>That's stunning, because in no other field do we have such a clear example of aesthetics for problem-solving. Rocketry was traditionally done by governments at cost-plus with enormous amounts of pre-planning. Every piece of equipment has to be radiation-hardened and every eventuality covered, and therefore comes at enormous expenses. And then you have SpaceX just using incredible thriftiness to accomplish greater things at rapid iterations by just simply being okay with failing—with sending a rocket which then explodes, what they call a &quot;rapid unscheduled disassembly&quot; instead of an explosion. I think that's beautiful, and it should be inspiring.</p>
+<p>One of the places you see this is the Raptor engine. Every one of them was beautiful. They could have stopped at the first one; it already was a totally valid solution to the problem. They didn't need to go to the next, but they went to the next, and the next again. But to your point, the most impressive thing here is the path by which people move forward: things need to be pruned. You cannot make things better and better by adding stuff; you must prune. You must take steps, you must rebuild, you must create an end for things.</p>
+<p>People's opinion about failure is a problem. Failure is never a problem unless it is catastrophic. Of course, in spaceflight with crewed missions, it can be catastrophic, and you've got to get that right. But in terms of when it's just resources that are replaceable and fungible, you can just do this. The reason why it's good that a product failed is because it frees up an even more scarce resource: a person with vision for products to apply themselves to another one, which then the market potentially decides is something that is needed.</p>
+<p>A lot of these pipes on the Raptor engine were there because that was the only way to make a Raptor engine at the time. By the third version, it looks mostly 3D printed. Maybe that wasn't technology available back then, but now that it is, every one of those pipes was incorrect—it didn't need to be there. In fact,</p>
+</details>
+<!-- chunk 8/8 -->
+<h3>组织的“重构重造”与摆脱系统冗余</h3>
+<p><strong>Speaker A</strong>：我认为第三代猛禽发动机（Raptor 3）的性能比起前几代有了极其惊人的提升，它的推重比简直高到了不可思议的程度。所以你看，在很多时候，你必须懂得精简和修剪；而有时候，这种精简可以通过制造一次“重新创立”（refounding）的契机来实现。也就是说，你必须基于目前所有行之有效的经验，从零开始启动一个全新版本的猛禽发动机，并彻底把它做对。</p>
+<p>我认为企业和组织的运作方式也应当如此。一个部门有时同样需要经历一场“重新创立”的变革。其实在这个世界上，我们可以通过直接打造一个全新的 2.0 版本来解决许多问题——给它一次彻底重构的机会，从顶层重新推演。如果在企业内部建立起更多对底层系统的探索机制，就能解决极其大量的组织更新与自我进化问题。</p>
+<p>回顾起来，我们那一代公司（比如 2000 年代初成立的技术公司）之所以能够非常轻易地取代除三四家巨头之外的所有老牌科技企业，一个很大的原因就是那些老牌公司陷入了缺乏竞争的环境。由于它们所构建的体系未曾在激烈的竞争烈火中经受淬炼，因此缺乏真正的检验；面对问题时，它们最容易采取的应对方式就是不断叠加层级，像做千层饼一样一层层往上堆砌。久而久之，某些部门或产品最初设立的核心初衷，就彻底被埋葬在了层层堆叠的历史沉淀物之下，最后整个组织里甚至没有一个人知道该如何向下深挖并触及本质。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I think the performance of that third Raptor engine is astronomically higher than the previous ones. It's like the thrust-to-weight ratio of that thing is absurd. So you kind of need to prune, and sometimes you can prune by creating a refounding event. You've got to start a new version of a Raptor engine and get it right based on everything that's working.</p>
+<p>And I think this is how companies should work too. A department sometimes needs a refounding event. We could solve a lot of problems in the world by just using tools like making a 2.0 version of it, giving it a refounding event, taking it from the top. Building in more exploration of systems would solve a huge amount of inside-company renewal and so on.</p>
+<p>I think one of the large reasons why it was so easy for the companies of my vintage—like the early 2000s tech companies—to just displace all the existing technology companies minus three or four was just because they fell prey to a world of a lack of competition. What they built then wasn't forged in the fires of competition and therefore wasn't tested. It was easier to simply solve problems by adding addition and layer-caking. And then the original intent of some of these departments, products, whatever, was somewhere in the fossil settlements under layer upon layer of additional stuff on top, and no one knew how to dig down.</p>
+</details>
+<h3>AI 时代重估阅读：为何经典历久弥新</h3>
+<p><strong>Speaker B</strong>：在我们第一次交流的时候，你曾说过“书籍是人生的外挂作弊码”。我很想知道，在如今这个人工智能蓬勃发展的世界里，你对这个观点的思考发生了怎样的演变？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: In our first conversation that we had together, you said books were a cheat code for life. I'm wondering how your thinking has evolved on that in a world of AI.</p>
+</details>
+<p><strong>Speaker A</strong>：我认为我的看法并没有改变。我的意思是，虽然现在确实有了更多种类的“作弊码”，但书籍依然在扮演着它们一直以来所扮演的重要角色。不过，就我个人而言，确实发生了一点变化——其实在我们上次交谈时可能就已经如此了——那就是至少在非虚构类作品中，我已经基本不再去读近期出版的新书了。</p>
+<p>我觉得近几年写出来的很多东西，本质上都只是当下时代的应激产物，它们只是试图将更多的零散信息硬塞进一个目前仍在快速演变的动态事物当中。相比之下，那些经受住了时间严苛检验的经典著作，其价值丝毫不减当年，而且我相信它们将永远保持这种历久弥新的价值。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I don't think it has. I mean, there's more cheat codes now, but books still play the same role they have. What changed for me personally is that—I don't know if that was probably already true when we talked—at least for non-fiction, I walked away from books written recently. I think everything written recently is really just the product of its time and it's trying to put a bit more information into something that's currently evolving. I think books that have stood the test of time are just as valuable, and I think they will always be.</p>
+</details>
+<h3>影响深远的书单：历史、权力与沉思</h3>
+<p><strong>Speaker B</strong>：那么，有哪些你读过的古老或经典的著作，从根本上改变了你的思维方式？能推荐三本左右吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: So what are like three old books that you've read that have fundamentally changed how you think?</p>
+</details>
+<p><strong>Speaker A</strong>：我经常重温的书籍包括《帕金森定律》（Parkinson's Law），我非常喜欢这本书，它篇幅短小精悍，读起来很快。另外，我几乎在任何场合都会提到威尔·杜兰特的《历史的教训》（The Lessons of History），就篇幅体量而言，我认为它是现存信息密度最高、Token 质量最高的著作。此外，詹姆斯·伯纳姆（James Burnham）的著作也极其精彩，我认为它们具有极高的现实相关性。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Books I come back to: I often talk about Parkinson's Law, which I love. It's such a quick read. I almost always will mention <em>The Lessons of History</em>, which I just think is the densest, highest token-quality book in existence given for the length. James Burnham's books are fantastic, I think, and extremely relevant.</p>
+</details>
+<p><strong>Speaker B</strong>：他写过哪些代表作？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: What did he write?</p>
+</details>
+<p><strong>Speaker A</strong>：他先是写了《管理革命》（The Managerial Revolution），后来又写了一本叫作《马基雅维利主义者》（The Machiavellians）的书，那本书写得极其出色。另外，我显然也是马可·奥勒留《沉思录》（Meditations）的忠实读者。我知道斯多葛学派当下可能稍微有些不那么流行了，但这对我来说是一生的精神支柱。在我常待的大多数房间里，都会放上一本《沉思录》。我经常会随手翻开读上几段，令人称奇的是，它总能奇妙地契合我当下正在苦苦思索和应对的难题。</p>
+<p>此外，杜兰特（Will Durant）的书整体都非常值得一读，比如《哲学的殿堂》（The Lessons of Philosophy）；而《历史的教训》自然是他一生智慧与巨著的终极精华浓缩。在小说和虚构作品方面，阿西莫夫的《基地》（Foundation）系列同样非常出色。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: He wrote <em>The Managerial Revolution</em> first and then a book called <em>The Machiavellians</em>, which is unbelievably good. I mean, obviously I am a <em>Meditations</em> fan. I know Stoicism is falling out of favor a little bit right now, but it's been a lifelong thing for me, and I have a copy of <em>Meditations</em> in most rooms I spend time in. So I just do some random reading, and it's magical how it's somehow relevant to something I'm wrestling with. Durant books just in general—<em>The Lessons of Philosophy</em>, <em>The Lessons of History</em> is of course the end-of-life distillation of it all, but his longer book is good fiction, and the <em>Foundation</em> series is so good.</p>
+</details>
+<p><strong>Speaker B</strong>：你也读了《三体》（The Three-Body Problem）系列，对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: You read <em>The Three-Body Problem</em> too, right?</p>
+</details>
+<p><strong>Speaker A</strong>：我想《三体》现在差不多也正在跨入经典老书的行列了。但不管怎么说，它是一部非常优秀的近现代科幻巨作，水准不可思议地高。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I guess that's sort of tripping into older book now too. But that's a recent sci-fi which is incredibly good.</p>
+</details>
+<h3>人生的终极衡量：何为真正的成功</h3>
+<p><strong>Speaker B</strong>：最后一个问题。我们每次访谈总会以相同的问题收尾，这也是你第三次回答这个问题了。我非常好奇，稍后我会回过头去对比看看你的答案发生了什么变化：对你而言，什么是成功？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker B</strong>: Final question. We always end with the same thing. This is your third time answering this question now. I'm interested; I'll go back and look at how it changed. What is success for you?</p>
+</details>
+<p><strong>Speaker A</strong>：对我来说，成功就是不断磨砺与培养自身的能力，让自己精通更多的事物；并在这一过程中，打造出各种产品、工具、玩具或是事物。这些成果往小了说，至少能在日常生活中让其他人的每一天变得更好一点点；往大了说，则是能够赋予他人力量，激发他们原本可能未曾拥有的动力与远大抱负。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: My success is just to cultivate skills, like become good at more things, and in doing so create products or toys or things that can make other people's day a little bit better at the minimum, or allow people to get power or motivation or ambition beyond what they would otherwise have.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">code-refactoring</span>
+      
+        <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+      
+        <span class="tag-pill tag-pill--no-page">system-redundancy</span>
+      
+        <a class="tag-link" href="/tags/historical-perspective/">historical-perspective</a>
+      
+        <span class="tag-pill tag-pill--no-page">taste-judgment</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

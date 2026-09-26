@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>大型语言模型驱动的市场发现：从语义理解到可重用内容生成</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="大型语言模型驱动的市场发现：从语义理解到可重用内容生成" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">大型语言模型驱动的市场发现：从语义理解到可重用内容生成</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-25</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=ACPEpji5NV4" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-25
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">文章探讨了如何利用大型语言模型（LLMs）解决市场发现中的核心瓶颈——语义理解问题。作者提出了四个关键能力（监督、目录、语义、语义个性化和可引导的内容生成），并详细描述了如何通过人工标注、微调模型以及两阶段对比方法来构建这些能力，最终实现离线生成可重用的内容，从而将LLMs的推理能力转化为可扩展的生产架构。</div></div>
+      
+    </div>
+    <h3>欢迎与核心论点：语义理解是瓶颈</h3>
+<p>中文翻译：谢谢大家来到这次演讲，并感谢组织这次活动。我是 Roggo，我是一名机器学习工程师，在 Sech 和个性化领域工作。今天，我将探讨我们如何整合大型语言模型（LLMs）来驱动市场发现，具体在四个方面，以及这些能力如何将 LLMs 与传统的搜索相结合。我将从一个简单的论点开始：构建有效的发现，特别是对于像 DoorDash 这样的市场来说，真正的瓶颈在于<strong>语义理解</strong>。这意味着了解用户在特定上下文下，对物品的真正含义，以及购物者在像 DoorDash 这样的应用上实际想做什么。</p>
+<details>
+<summary>Original English</summary>
+thank you, everyone for coming to this talk and divunge for organizing. uh, i'm roggoh. i'm a stuff um machine learning engineer and dautaa shi work on sech and personalization. and uh today, i'm going to talk about uh the ways that we inteinteating place eleams for, you know, our markeplace discovery, our specifically in four pieces. and um how these permitives are kind of uh working towords our inteintegraof LL mbs into traditional uh xcess as well. so i'll start off today um with a simple claim. uh the claim is that to build effective discovery, in this case, for a marketplace like dordash, the real bottleneck is semantic understanding. so that is knowing what you know, actually what items mean uh for users given some context and what a shopper actually intends to do on, you know, an app like dordash.
+</details>
+<h3>扩展购物旅程的挑战</h3>
+<p>中文翻译：从历史上看，我们将这些问题视为参与度优化问题。然而，LLMs 为我们提供了一个真正新的杠杆来扩展我们的能力。因此，本次演讲是关于四个能力，它们使我们能够开始利用 LLMs 来解决 DoorDash 上的问题。如您所知，DoorDash 现在已经远远超出了餐厅的范畴，我们现在涉及生鲜、零售、宠物、礼品等。我们的目标是捕捉每一个可购物的时刻。我们知道，在这些垂直领域，用户经常有非常广泛的购物任务。例如，消费者可能在打开应用时说：“我刚领养了一只小狗，我这周需要什么？”与搜索狗粮不同，消费者可能不会只搜索狗粮，而是这个查询可以演变成进一步的查询重构，最终落到对其他购物需求的集合上，包括配套的物品，比如训练垫，一直到结账。这可能跨越多个会话，甚至好几天。捕捉整个过程非常困难，因为它涉及多个模型。</p>
+<details>
+<summary>Original English</summary>
+and historically, we have treated these um as engagement optizzproblems. ms. however, llms give us a genuinely new lever to extend us. so this talk is about the four permitives that have allowed us to start leveraging llms for problems at dorash. as you may know, dorash is now grown well beyond restaurants. so we are in grocery, retail, pets, gifting and more. and our goal is to capture every shoppkable moment ah. and we know that across these verticles, the users frequently have very broad shopping missions, right? so for example, a consumer may say, when they come to apps, you know, i just adopted a puppy. what do i need to get started this week? and this consumers may start unlike searching for puppy food because they just adopted the puppy, and that one query could unfold into further query reformulations. the land on collections for, you know, other shopping needs. complimentary items such as creates lelehes training pads all the way to check out. and this could happen over multiple session is multiple days, right? and capturing that whole arc is pretty hard because it fans multiple models.
+</details>
+<h3>四大能力：从监督到生成</h3>
+<p>中文翻译：这就是我将要介绍的四个能力，具体包括<strong>监督（Supervision）</strong>、<strong>目录（Catalogue）</strong>、<strong>语义（Semantics）</strong>、<strong>语义个性化（Semantic Personalization）<strong>和</strong>可引导的内容生成（Steerable Content Generation）</strong>，正如我们之前听到的那样。这是一种共享表示的系统，帮助我们利用 LLMs 来映射客户的旅程。</p>
+<p>在监督方面，我们提出的问题是：我们如何教导我们的检索和排序系统，什么是对不同任务的好。以一个简单的例子来说，一个购物者搜索“无麸质意面”。如果我们只根据参与度、流行度或热度进行排序，可能会出现一些不相关的结果。因为某些产品卖得好，它们可能会继续出现，即使是无麸质面包也可能被检索出来，因为它们在“无麸质”和“免费”上存在重叠，但这两者都不是明确的正确答案。我们真正想要的是更高的相关性。例如，“无麸质意面”应该是一个高度相关的项目，而“奇奇意面”可能是一个合理的替代品，而“常规意面”则因为受欢迎而表现良好。这不符合用户现在需要解决的问题的约束。我们显然有两个真相来源：我们可以查看人工标注，但这很昂贵、缓慢，并且因为我们的目录变化很快而很快就会过时。第二个是信号的行为。它们是丰富的，但显然，正如我所提到的，它们受到曝光、位置、价格促销以及之前的模型选择的偏见影响。因此，缺失的信号是一个<strong>可扩展的推理信号</strong>。这就是 LLMs 非常有用的地方，因为它们提供了一种产生这种监督的方式。</p>
+<details>
+<summary>Original English</summary>
+um and this is where the four permitives i will cover come in specifically supervision, catalogue, semantics, semantic personalization and steerable content generation as we heard previously as well. it's a system of shared representations that help us map this customers journey with the use of alums. now with supervision. the question we're asking or looking to address is how do we teach our retrieval and ranking systems, what good means for different tasks. and here's a simple example, right? a shopper searches for glue free free pasta. and if we only rank from engagement popolar lar gular spebegheties might show up. and because it sells well, you know, it may continue to show up even glue and free white bread might be retrieved. and you know, show up because it overlaps at glue and free. but neither of these are clearly the right answer. what we actually want is greater relevance. a true, you know, gluden free posta should be a high relevant item chicky posta might be a reasonable substitute and regular ars pegheti while is popular. it fails the constraint that the user has now to solve this. there are, obviously two sources of truth. we could look at human andcation. but that's expensive, slow and becomes quickly stale because our catalog changes quite rapidly. second is behavior of signals. they are abundant, but obviously, as i mention a biased by exposure physition price promotions and you know previous model choices. so the missing signal is a scalable reasoning signal. this is where llms are very useful as they offer a way to produce that supervision for such task.
+</details>
+<h3>监督流程：从人工标注到微调</h3>
+<p>中文翻译：在我们的案例中，流程始于<strong>人工标注</strong>。我们构建了一个高质量的示例集，包含三层、可扩展的查询-物品对。我们审计可疑案例。例如，如果人工标注说某个物品与用户无关，但该物品在“加入购物车”转化方面表现非常好，我们会将该案例发送给一个更强大的 LLM 进行重新评估，并与其它模型进行协调。例如，将查询映射到分类或类别模型。如果查询映射到一组有效的类别，并且物品属于这些有效类别，我们可能会相应地调整标签。通过这个过程，我们能够实现相当高的精度，然后我们对一个<strong>微调模型</strong>进行微调，比如 GPT-4o mini。这在离线操作中对我们非常有利，我们可以使用这个微调器来生成完整的查询-物品对，因为它们是检索和排序系统的共同目标。这种模式在过去几年对我们非常重要：一次昂贵的推理，然后将其提炼成可以廉价且快速服务的模型。</p>
+<details>
+<summary>Original English</summary>
+so in our case, you know, the pipeline starts with human ground troops. we we build a high quality seat set of example, query itemppairs on a three three level roll in scale. and there are one two. we audit the suspicious cases. for example, if a human label says, you know that item is irrelevant, but that item performs very well on add to carter conversions. we send that case to a stronger eletilim m to reevaluate with more gradular prompts. we also reconcile with other botles les know. for example, ple are query to taxonomy or category models. and if you know, query maps to a set of valid categories and the items belong to those valid cateories, we may adjust the label accordingly. and through proprocess wewere, able to achieve a pretty high precision golden data said that we then find tune a likeway dealyym. let's save, for example of GPT for o mini on top of it. and that's when it you know really pays off. we are able to use that fine tune labeler offline across, you know, our full catalogue to generate full greater query item pairs and those labebebecause one share target for both retrieable and ranking systems. this pattern has been pretty important for us over the past a years years. you know, expensive reasing once offline, then distill it into models that can be serve cheaaply and quicicly.
+</details>
+<h3>检索优化：两阶段对比方法</h3>
+<p>中文翻译：现在我们先来看<strong>检索</strong>。电商规模下的标准嵌入很快就会崩溃。相关性的区分是：仅仅是相关的物品，与真正匹配的物品之间的距离很近，模型可能知道两个物品是相关的，但无法区分精确匹配、替代品和互补品。因此，我们的解决方案是一种两阶段对比方法，在相同层级上进行训练。第一阶段我们称之为<strong>挖掘（Mining）</strong>，它进行全局的<strong>数据塑造（Data Shaping）</strong>。我们使用两个塔式编码器，带有多层监督式对比损失。之后，我们使用该基础模型来挖掘更难的负样本。这些是模型混淆的硬负样本，它们可能被排得太高，或者强正样本被排得太低。在第二阶段，我们通过<strong>课程学习（Curriculum Training）<strong>来训练模型，使用这些硬负样本，重新标注它们。之后，我们的检索层的相关性会急剧提高。在第一阶段之后，我们看到相关性和中等相关性之间存在重叠，但在第二阶段之后，存在显著差异。这一直是我们在整个检索改进方面最大的杠杆之一。我们通过将相关性DCG提高百分之二点三，这在我们的下行业务指标上也是如此，我们对排序模型也做了同样的事情，即在排序器中</strong>蒸馏出最新的标签</strong>。然而，将这与业务和参与度目标相结合，我们增加了一个新的塔层，即<strong>序数相关性（Ordinal Relevance）</strong>，它位于所有分级标签的顶部。这个预测与现有的参与度指标，如点击转化，并与它们共享相同的底层，因此选择性拟合和相关性预测在反向传播中得到了提炼。我们的模型能够预测不同层级的相关性，并通过一个价值函数在上面进行融合，从而在不同的表面之间调整参与度和相关性。</p>
+<details>
+<summary>Original English</summary>
+now let's take retrieval first, the challenges standard ebeddings at e commerce scale quickly collapse. the relevance distinction items that are merely related that close to items that actually match and the model may know two items are related, but not be able to separate um exact matches substitutes compliments. so our fix is a two stage contrasted method um trained on the same gregrated levels stage one which we call mining does a global draetry shaping. we use two tower encoters uh with multi level supervise contracsive loss. um after that, we use that base model to mine harder negatives. and these are items that the model confuses hard negative that are rank too high or strong positives rank too low in the second stage after that is where we really upput the model through curricon training, use those hard negatives, relabel them. and you know, relevvance of our retrieval layer improves sharply after that. so after stage one, we see overlapse twtweeen relevant and moderately relevant. but after stage too, there is a significant difference. and this has been one of like our biggest st levers s retritrival improvement uh across the board. um you know, we've improved an DCG of relevance by two point three percent. and that's also been true with our downsam business metrics. and we did the same with uh exercise with our ranking models as well. distialing allen reasent labels in tour rankers. however, combicing this with business and engagement objectives. here we add a new tower um in this case, in ordinal relevance, totower totop of the len graded labels. and um this prediction sits right alongside existing engagement ment wers ers, click to cartoon conversion. and since they share the same bottom layers, the seletic fit and relevant ance fgets didistled led in the backward pass. and uh, our model is able to predict, you know, probably the relevance across the different levels that we are able to blend us ththrough a value function on on top of this that allows us to to ine tune between engagement and relevance for different surfaces. now these two examples are part of a larger theme of our work across similar projects where it seems right. we're not replacing the retrieval and ranking system with within alalymn, but rather distiling the reasoning and understanding into some production ranking architecture. and this allows us to kind of quickly test and also scaleably improve our models um with llims, while keeping you know the business and system objectives of these surfaces in mind.
+</details>
+<h3>目录的进化：从硬分类到语义结构</h3>
+<p>中文翻译：一旦我们有了监督，下一个问题是如何以每种模型都能理解的方式，以一种可以表示非常庞大且不断变化的目录来表示一个非常庞大且不断变化的目录。在 DoorDash 的规模上，你可以想象我们在商店之间展示物品，没有交互。这相当于商店级别的几十亿个物品。对于这些物品，你显然有独特的SKU想法，但它们在语义上没有任何说明。因此，我们也有一个<strong>人工分类法（Human Category Taxonomy）<strong>来帮助我们将这些物品分类到有意义的空间中。但通常，这太粗糙和太僵化了。例如，像热酱这样的东西可能只是“酱料”这个分类，但它并不能告诉你辣椒酱、番茄酱或芥末酱之间的关系。这就是我们采纳</strong>语义想法</strong>的地方。它以前就被引入了，现在它是我们许多工作的骨干，它提供了一个类似于我们分类的<strong>简短的层级代码</strong>，但可以控制其细粒度的性质。这种学习到的分类法的结果是，每个物品都获得了这个更高的COCO代码，前缀捕获了广泛的邻域，而更后面的标记捕获了更细微的区分。例如，在幻灯片上的地图中，你会看到热酱和数据结构从零标签中浮现出来，每个物品共享相同的第一个或第二个固定ID序列，但然后按专业领域划分。所以现在你有了墨西哥、哥伦比亚、韩国的，热酱被划分开了。这个学习到的代码的一个重要特性是，正如我所说，它可以通过前缀来解析，但也可以被我们所有的下游模型使用。</p>
+<details>
+<summary>Original English</summary>
+so once we have supervision, the next question is how do we represent a very large and constantly changing ing catalogue uh in a way that every model viad language models, or you know traditional retrieval ranking models that they can understand. and at dtash scale, uh, you can imagine we're kind of surfacing items across stores across no interactionacactually uh now. and you know, that's easily a few billion items at the store item level. and for these items, you obviously have unique ski ideas, but it says nothing semantically. so we also have a human career attaxonomy that helps us classifying categorize these items into meaningful spaces. but often, this is too course and too rigid. so for example, something like hot sauces may just have like sauces, hot sauces and the taxonomy. but it doesn't tell you anything about the relationship between a hoyphone or frank or tabascco. so that's where we've also adopted or adopted um semantic ideas ah. it's been introduced previously already. it's a backbone for a lot of our um work now and what it does it. it gives us, you know a short hierarchical code that's analogous to our taxonomy, but the ability to control the fine grain nature of it. and the result of this learn taxonomy is that each item gets this higher coco code and the prefix captures broad neighborhoods, and you know, the later in tokens capture finer distinctions. so for example, in the map were on on the slide, you'll see hot sauces and the structure emerging from the data with zero labels, each one share the same first seconsecond fixin this uh id sequence, but then split by speciality. so now you've got mexican koreibian korean, an hot sauces um being split up. and the important property is that this code that's learned is you know, parable by as i said by prefix, but also usable by all our downstream models. and that on lots, a few things for us. so the first is cross category, comparisons or relationships. you know, chip sousa, a walkamali may live in different taxonomy branches, but a shared ommantic. i neighbororhood uh indicate that they belong together and maybe a shopping mission. second cold start problems. um often times you get new catalogue items added by stores and writ techniques like angram and biite parent coding of these tokens, very able to scalabably add these tore models as sparcidy features third tail coverage, so sparse items, and inherit a lot of signal from semantically related items. and you don't have to wait for the volume me or exposure you for to consumers for these items. and then lastly, nice to have is the fact that we can actually also do a reverse audit. so we can audit our catalogue and how well our human labels agree with the semantically learned labels. so a couple of examples of where we're using it today, just to get give some real metrics. um it has been one of our biggest improvements to our ranker. um in in this case, it's actually improved our ranker by improving MRR between four to five percent, and that's translated to pretty big conversion wins as well.
+</details>
+<h3>消费者上下文：记忆的多元化表示</h3>
+<p>中文翻译：接下来是<strong>消费者上下文</strong>：系统对购物者了解什么？这种知识是否可以跨模型复用？这就是我们的第三种能力——<strong>记忆（Memory）</strong>。在智能体（Agent）的上下文中，记忆是相当成熟的。现在，我们将相同的概念应用于我们的推荐系统。用户嵌入显然非常有用。我们有许多关于消费者的表示，但它们并不一定能告诉我们为什么消费者会有某些特定的偏好，以及为什么他们会有某些偏好。此外，我们不能轻易地读取这些嵌入，你可以对它们进行分词并训练模型来学习它们，但通常拥有一些明确的<strong>原生对应物</strong>非常有用。因此，记忆的想法是以多种形式表示消费者，即可检查和可重用的。我们思考记忆的方式是<strong>三种时间尺度</strong>：长期记忆捕获来自订单、搜索、浏览和支持交互的持久偏好；实时上下文捕获智能体交互，即我们的会话交互；还有状态偏好，这来自于智能体交互，例如“询问 DoorDash”，消费者可以明确说明他们的约束和偏好。我们以<strong>记忆块</strong>来表示长期记忆，这些块以一种允许我们从数据偏好到饮食偏好再到替代偏好的新维度来添加用户信息的方式进行结构化，随着我们对消费者的了解增加。每个消费者的记忆以多种形式具体化：首先是<strong>文本</strong>，它是可人工读取的，以紧凑的方式捕获消费者。其次是那些可以输入到检索和排序系统中的<strong>记忆块的向量嵌入</strong>；第三是<strong>图和树或分层方法</strong>。你可以在消费者与品牌分类和记忆揭示的偏好之间建立关系，并将这些组合成在 ML 模型和 LMS 中的<strong>复合记忆对象</strong>。例如，这个上下文图将消费者与提取的记忆概念连接起来，因为在很多情况下，消费者物品的交互是稀疏且多热的。在这种情况下，这些上下文图能够跨记忆步骤链接消费者，这是我们以前没有的关联，并且在细粒度的分类级别特别有用。在我们的案例中，我们看到对于检索，使用基于图的嵌入的表现优于现有的基于分类的嵌入。今天，这个记忆框架体现在三个地方：第一个是<strong>个性化集合</strong>；第二个是<strong>精细化个性化</strong>，例如 DoorDash 使用它来个性化其会话；第三是<strong>检索和排序模型</strong>，正如我所说，我们对这些记忆块进行编码并将其作为特征输入给模型。</p>
+<details>
+<summary>Original English</summary>
+so memory in the agenta context is pretty well understood. now um we apply the same concepts to uh our recommendation systems. so user ebeddings are clearly very useful. we have many representations of our consumers, but they don't necessarily get to why a consumer may have certain intense um and why they might have certain preferences. additionally, alliycan cannot ureadily these embeddings, you could tocoanize and like train these models to learn it, but often times having some explicit eleven native counterpart is very useful, and that's what we found. so the idea of memory is to represent the consumer in multiple forms symanmatic ah you know, inspectable and reusable. and um the way we think about memory is um in three time skills. so long term memory captures durable preferences from orders, searches, browsing support interactions, real time context captures agentic interactions um else our insession interactions. so art state active searches, and then we have status preferences, which come from aggentic at interaction. so something like asked doordash, for example, where consumers are able to explicitly state their constraints and preferences as well. and the way we represent consumers in um in um this long term, memory is through memory blocks, and these are structured in a way that allows us to add new dimensions of the user from datrary preferences to dining preferences to substitute preferences um as we learn more about the consumer. and that is um d couple from like the downstream system that um that doesn't need to room interpret this for their own use cases. so each consumers memory is materialized in multiple forms. so first is text. it's human reatable. it's captures the consumer in a compact way. second is our late vectors ebeddings of those memory blocks that can be fed into retrievone ranking systems and third are graph and tree or hiarchical approaches. so you type pe tionshiships between sumers and brands texonomies and memory revealed preferences, and these are assembled into compoposite memory objects at both ML models and LMS these downstream. so an example is, you know, this context graph um where we connect consumers with extracted memory concepts and a graph needs fits neatly into shopping journeys because, you know, often times consumer item m interactions are sparse and multi hot. and in this case, these context graphs are able to link consumers across memory steps that we previously did not have um relarelaships ps and it's particularlarhelpful um at fine grain taxonomy levels. in our case, we're seeing for retrieval uum exusing graph based in bedtings out performing or um exsting sting taxonomy based ebedtings. and today, this memory framework shows up in three places. the first is personzed collections. i'll talk about that a bit later. uh second is a gently personalization. so asked ordash, for example, uses this to personalize its sessions. uh for third thiruin retrieval ranking models. as i said that we encode these memory blots and feed them as features and dostry models as well. so the fourth permittive is steerable content generation. we heard quite a bit about it. and the previous talk and it this light is my take on how we're pieing all these um permitives together. so all these inputs, semantic ideas, memory blocks um and graded relevance or um LLM supervision feed into multiple models, you know, beat l lands or small language models, or you know, traditional models. and from these inputs, we can generate different output shapes, ranked semantic tic idealilist, charcil titles sub copies. and these show up across different surfaces today on bordash. and a direct example of this is our um personzed collections on store pages. so historically collection tions store pages, uh on door dash have been a fixed library or attribute based um and we've been able to kind of expand that through um consumer level collection generation. and today, this is an offline l ymn process where we take in consumer memory, semantic ideas and synthesizze collections all the way from titles subtitle to the actual items. and the important part is that control insteirability. we're able to react to occasions and moments and build those collections as needed uh, four different consumers at serving time. um because this is all batch and generated or line through through olymps, we are able to still use our existing retriual and ranking stack for item hydation and collection ranking its udum. and you know, this is, for example, what a shopper actually sees right for shopper with plant based affinity. the system can generate plant based panterary rose for catat only households that can generate cat drive food rose. and if a session indicates that, you know, person is going through pantry restocking, it can buy us towards panterary saabes. and our early tests show that you know, susuers are feeling the benefits of these tailored experiences. an example is within our pets vertical. we've been able to drive close to one percent, water rate increases and point point six percent and active users. so to conclude, there are three takeways. i would love for you to take away from this talk and how elums fit into search and recommendations. first, discovery is a semantic understanding problem. it's not only about engagement ellims give us a way to reason about item, meaning and shopper intent in the in dodashes case, for example, second, the still allen raising into permittives capture, raising offline as labels, semantic ideas, memory, and then let smaller and faster models serve it. the online l lm call is often not the product architecture. you need third shared representations, create many use cases. um once you have these primitives, they can power a rereeeable ranking content generation at set dso. so with not leleast, thank and thank you to all the collaborators that dora issue have helped ship a lot of these things as well.
+</details>
+<h3>总结与未来展望</h3>
+<p>中文翻译：总而言之，有三个要点。我希望大家从这次演讲中带走的内容，以及 LLMs 如何融入搜索和推荐。第一，<strong>发现是一个语义理解问题</strong>。它不仅仅是参与度问题，LLMs 为我们提供了一种推理物品含义和购物者意图的方式。第二，<strong>LLMs 正在捕获能力</strong>，它们可以离线作为标签、语义想法和记忆，然后让更小、更快的模型来服务它们。在线 LLM 本身往往不是产品架构，你需要<strong>共享表示</strong>，创建许多用例。一旦你有了这些基本组件，它们就可以在设置中驱动可重用的内容生成。最后，感谢所有 DoorDash 合作者帮助我们交付了许多这些东西。</p>
+<details>
+<summary>Original English</summary>
+so to conclude, there are three takeways. i would love for you to take away from this talk and how elums fit into search and recommendations. first, discovery is a semantic understanding problem. it's not only about engagement ellims give us a way to reason about item, meaning and shopper intent in the in dodashes case, for example, second, the still allen raising into permittives capture, raising offline as labels, semantic ideas, memory, and then let smaller and faster models serve it. the online l lm call is often not the product architecture. you need third shared representations, create many use cases. um once you have these primitives, they can power a rereeeable ranking content generation at set dso. so with not leleast, thank and thank you to all the collaborators that dora issue have helped ship a lot of these things as well.
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">semantic-understanding</span>
+      
+        <span class="tag-pill tag-pill--no-page">llm-supervision</span>
+      
+        <span class="tag-pill tag-pill--no-page">shared-representations</span>
+      
+        <span class="tag-pill tag-pill--no-page">content-generation</span>
+      
+        <span class="tag-pill tag-pill--no-page">memory-framework</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

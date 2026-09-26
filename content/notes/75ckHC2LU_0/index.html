@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>推理工程前沿：从 TurboQuant、KV 压缩到扩散推测解码与系统演进</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="推理工程前沿：从 TurboQuant、KV 压缩到扩散推测解码与系统演进" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">推理工程前沿：从 TurboQuant、KV 压缩到扩散推测解码与系统演进</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-19</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=75ckHC2LU_0" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-19
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">Baseten 的 Philip Kiely 梳理了自《Inference Engineering》出版以来的最新推理工程进展。内容深入探讨了 TurboQuant 在数据中心与本地部署中的工程权衡、基于训练摊销的 KV 压缩机制（STILL）、从 Eagle-3 演进至 DFlash/DSpark 的扩散推测解码架构，以及面向未来硬件（如 Rubin 架构 NVFP4）与 PD 分离的系统级优化趋势。</div></div>
+      
+    </div>
+    <h3>推理工程基石：首份公开补充案</h3>
+<p>作为 <strong>《推理工程》</strong>（Inference Engineering: 探讨现代大语言模型服务与系统级优化的专著）的作者，<strong>Philip Kiely</strong> 在 <strong>AI Engineer World's Fair</strong> 上回顾了自 2026 年 2 月 23 日新书发布以来的行业反响。该书在短时间内发行了超过 11,000 册纸质版、近 30,000 册电子版，并在社交网络上触达了 2400 万用户。面对“为何要针对瞬息万变的技术领域撰写实体书”的普遍疑问，Philip 指出，尽管模型架构层出不穷，但推理工程的核心底层原理已高度稳固，具备跨代际的复用价值。本次演讲作为新书出版后的首份公开补充案，核心聚焦 2026 年 2 月以来推理工程领域的最新前沿突破，涵盖 <strong>TurboQuant</strong> 的实际落地检验、<strong>KV Cache 压缩</strong>（KV Compaction）、以 <strong>DFlash</strong> 为代表的扩散推测解码革新，以及对下一代推理硬件与架构趋势的系统预测。</p>
+<details>
+<summary>Original English</summary>
+<p>Um I am here to talk about what is new in inference engineering. So hi I'm Philip and I'm here because I wrote a book. Uh this is my third year at the AI engineer worlds fair. This is my favorite conference in the entire world. It's the highlight of the calendar every single year. I really got my start as a speaker and as an engineer here in 2024. I came back in 2025 and did a bunch of stuff. I'm here again. I love it here and I'm very thankful to the organizers for always having me. Um I wrote this book called Inference Engineering. We published it three or four months ago and I've just been overwhelmed by the response. Uh we've done more than uh I yeah I published it in on February 23rd. Um at this point we've done more than 11,000 paper copies. We're coming up on 30,000 digital copies and 24 million people around the world or 24 million Twitter accounts. So we'll see how many people that actually is um have seen something out of inference engineering. And with all of this, you know, great reception, there has been one question that people have been asking me. Why in the world would you do this? Like why would you write a book about something that's changing so fast? Well, you know, I believe that a lot of the principles of inference engineering at this point have been pretty solidified and there's a lot that we can, you know, learn and and kind of repeat over generation and generation of model. But today I'm here to talk about what's new in inference engineering. This is the first public addendum of all new information since the book came out. We are going to review the inference engineering principles a little bit and then we're going to talk about all the stuff that's happened since February 23rd of 2026 in the inference world. We're going to talk about what happened to Turboquant. Talk a little bit about KV compaction. We're going to spend a lot of time on deflash and some other new exciting things in speculative decoding. And then I'm going to do a little bit of prognosticating, a little bit of forecasting of what I think is going to happen in influence coming up here and what I'm excited about. You know, hopefully being able to talk about next time you guys see me up here. Cool. So, let's get started.</p>
+</details>
+<h3>推理范式分流与“为推理而训练”的闭环</h3>
+<p>在推理工程的发展路径中，当前已经清晰地分化出两种截然不同的工程世界：</p>
+<ul>
+<li><strong>本地推理</strong>（Local Inference: 消费级或边缘设备上的单批次模型运行）：其核心策略是“优先在有限硬件上跑起来”，通过量化、蒸馏、剪枝等手段强行压缩模型，并切分到用户现有的消费级 GPU 上；在运行成功后再进行精度修复（Make it less dumb），消除严重失真，使 Batch Size 为 1 的模型恢复基准智力。</li>
+<li><strong>数据中心推理</strong>（Data Center Inference: 云端高并发、大批次的服务端推理架构）：其核心目标是“第一天在 vLLM 等引擎上跑通后全面提速”（Make it less slow），通过 <strong>KV 感知路由</strong>（KV-Aware Routing）、推测解码与 <strong>解耦架构</strong>（Disaggregation）来压榨吞吐与降低延迟。</li>
+</ul>
+<p>在过往认知中，工程界通常将模型权重视为训练完成后的“现成制品”，将训练与推理划清界限。然而最新趋势表明，大量顶尖的推理优化手段本质上依赖于专门的训练过程，<strong>训练与推理的边界正在深度融合</strong>。行业正在形成一种飞轮效应：更快的推理速度产生更多高质量数据，进而训练出更强大的模型，并催生出更高效的推理技术。在日常工程实践中，性能优化的发力点始终围绕着三大支柱：<strong>量化</strong>（Quantization）、<strong>KV 缓存</strong>（KV Caching）与 <strong>推测执行</strong>（Speculation）。</p>
+<details>
+<summary>Original English</summary>
+<p>So, you know, one thing I've been identifying now out of tons and tons of conversations with people about influence is a handful of of shared principles. And one of the big ones I was on this uh podcast the other day with uh so uh we were talking about inference and you know there's two types of inference engineering that have really emerged. There's local inference where the overwhelming strategy is just get it working on whatever hardware you have by squishing the model with quantization, distillation, pruning, however you can, you know, splitting it across whatever GPUs you happen to have in your house. And first you get it working and then you make it less dumb. you take away whatever you know catastrophic issues all of this compression of the model has created and you try and get it back to that baseline intelligence running at a batch size of one and then there's there's my world which is the batch size and data center world where it's get it working you know just day zero get the build of VLM up get it working and then make it less slow do stuff like KVAware routing speculation disagregation and you know with within these two worlds I think that we a lot to learn from each other. I am in this talk going to be focused on advances in data center oriented inference engineering because that's what I know but there's a lot of really cool stuff happening in the local world as well. So in the book in inference engineering I generally assume that the weights are a finished product and I do think that the handoff from training to inference is an important one to keep in mind and it's a good way of kind of delimiting the space. However, what I've found more and more recently is that many optimizations for inference come from a dedicated training process. And so the lines between training and inference are getting blurriier and blurriier. And that's an interesting thing to keep in mind. We're seeing this cycle where you get faster inference, which gives you more data, which you use to train a better model, which gives you faster inference, which gives you more data, and you just kind of like keep doing that until you're super rich. Uh so with with training for inference uh we have a bunch of new techniques to talk about across what I like to call the big three. So we're going to talk about some news in quantization, some news in caching, specifically the the KV cache mechanism, and some news in speculation because these are, you know, there's a lot of other stuff in the world of inference, including some stuff I'm going to talk about at the end. But when it comes to the practical day-to-day of how do I make X model faster usually these are the three techniques that people are reaching for.</p>
+</details>
+<h3>量化博弈：TurboQuant 的工程真相与数据中心选型</h3>
+<p><strong>量化</strong>（Quantization: 采用更低精度的数值表示以节省带宽和算力，从而优化首字延迟 TTFT 与每秒生成 Token 数 TPS）始终伴随着模型质量衰减的风险。2026 年 3 月，采用极坐标量化算法的 <strong>TurboQuant</strong> 引发全网轰动，声称能将 <strong>KV Cache</strong> 压缩至 4-bit 并减半内存带宽占用，甚至一度引发了公开市场对闪存芯片需求的宏观预期波动。</p>
+<p>然而，<strong>Baseten</strong> 模型性能团队的深入研究揭示了其在工程落地中的致命缺陷：TurboQuant 虽然节省了显存，但在解码阶段的前向传播中引入了高额的额外计算开销，导致 <strong>TPS 暴跌超过 50%</strong>。在追求极致吞吐的生产级数据中心场景下，这种性能妥协是不可接受的，因此服务端并没有采纳 TurboQuant。相比之下，由于本地边缘部署的绝对瓶颈在于极度受限的显存容量，TurboQuant 依然是本地长上下文场景下的优秀方案。</p>
+<p>在数据中心场景中，工程团队更倾向于采用成熟的 <strong>NVFP4</strong>（NVIDIA 4-bit 浮点量化格式）对模型权重进行深度量化，同时保持 KV Cache 的概率分布完整性，并通过系统级方案缓解显存压力：</p>
+<ul>
+<li>利用 <strong>NCCL</strong> 与 <strong>NVIDIA Dynamo</strong> 实现跨节点的 KV Cache 感知路由、共享与 CPU 异构卸载。</li>
+<li>将 NVFP4 量化优势拓展至图像与视频等多模态大模型。</li>
+</ul>
+<details>
+<summary>Original English</summary>
+<p>So first thing I publish a book it's February I'm feeling awesome about myself. I'm like wow everything you need to know about influence in one place. And then uh we uh we had some news in the quantization world. So just as a quick review, quantization is when we use a smaller, less precise number format in order to save ourselves on bandwidth, save ourselves on compute, make TTFT better, make TPS better. Uh, it's usually kind of hardware specific, gives you cost savings, but potentially degrades model quality a little bit. And by the way, if you want to hear my whole rant about quantization, I did a talk at AI Engineer Miami last month about how quantization is is not necessarily as evil as it sounds and that there's many things you can do to preserve quality through that process. So I was feeling good about my treatment of quantization and then 20 million people saw Toboquant and in fact it like made the memory stock macro dip for for a minute just because everyone was like oh memory is going to be so much more efficient now like we don't need any more flash memory uh which which was wrong but anyway it was this new quantization approach um that was popularized in March of this year that uses polar coordinates for quantization and allows you to quantize the KV cache down to four bits. And it was like super hot and I was like, &quot;Oh man, like there's this whole thing that that I left out.&quot; And like what what is this going to look like? And so our team did a bunch of research on this. Um this is if you know uh shout out Waterlue intern on Twitter. Um Ali from our model performance team. Um I'm not sure if he's still an intern actually. Uh but yeah, he is from Waterlue. Um anyway, so he he wrote this great piece about the math behind turboquant. And basically the benefit you get out of turboquant is that you get to represent the KV cache with four bits instead of eight bits. You save half the room and half the band and and you get effectively double the bandwidth when you're moving KV cache around in your system memory. But the drawback is pretty big um for turboquant. Turns out that you need to do additional computation in the forward pass to account for this during decode and it cuts TPS by more than half and that's just an unacceptable trade-off for a lot of the production use cases. So we we took a good hard look at toocquant but but are not using it for you know any any of these real workloads. We're we're still on the traditional NVFP4 quantization. That said it actually is a great technique for the local inference folks. So if you are running a model especially a long context language model on your local computer on GPUs in your basement um you have a very limited amount of memory that's the number one bottleneck and so anything that can free up memory from KV cache and allow you to put those longer sequences on there is going to be very valuable and the additional forward pass computation is going to be like less of a a drawback. Um, so still Turboquant is a fantastic research paper, a really great technique that just ended up not being as applicable in the data center inference world as it might have first appeared. Um, you know, instead we're focused on, you know, NVFP4 with a focus on quantizing the weights versus the KV cache. Um, you know, doing our best to find rough edges in the quantized weights. um make sure that we're not flattening out of probability distributions for the KV cache itself. Focusing instead on KV aware routing, KV offloading, KV sharing using uh you know nickel and using Nvidia Dynamo and other tools in order to move the KV cache around the system and potentially offload to CPU, ordinary memory, etc. um versus trying to use uh to Turboquant to to compress it. Um and then we're also focused on quantization across modalities. Um so thinking about how can we apply the benefits of NVFP4 not only to language models but also to you know image and video models. Ali also wrote a lot of great stuff on Twitter about that which you should check out.</p>
+</details>
+<h3>KV 压缩新路径：基于 STILL 的训练期表示摊销</h3>
+<p><strong>KV 缓存</strong>（KV Cache: 保存前序 Token 计算状态以避免重复 Prefill 的无损记忆机制）在长上下文场景下显存开销呈线性激增，百万级 Token 上下文对显存构成了巨大负担。现有的上下文压缩手段（如 RAG 检索、Agent 调度架构或外置文件系统）本质上属于次线性压缩，但存在明显的信息损耗。</p>
+<p>为了寻找兼具极高压缩率与近似无损保留的中间路径，学术界先后提出了 <strong>Attention Matching</strong> 与 <strong>Cartridges</strong> 等在推理阶段动态精简缓存的方案。而 Baseten 后训练团队的 <strong>Charlie</strong> 与 <strong>Mudith</strong> 则开创了基于训练的压缩范式——<strong>STILL</strong>：</p>
+<ul>
+<li>改变了简单保留原始 Token 序列或确定性子集的传统做法，通过后训练将信息综合（Synthesis）为学得的高维表征。</li>
+<li><strong>STILL</strong> 构建了一个可微分的感知瓶颈（Perceivable Bottleneck），利用一组固定的可学习查询向量（Learned Query Vectors）与完整的 KV Cache 进行交叉注意力计算（Cross-Attention）。</li>
+<li>在单次前向传播中直接输出紧凑的 Key 和 Value 表征，使大语言模型能够将其作为原生真实上下文进行无缝注意力寻址，实现了高效的可微分压缩记忆。</li>
+</ul>
+<details>
+<summary>Original English</summary>
+<p>So that said the KV cache is still very important. Let's talk about it. Let's talk about KV compaction. Again quick review. KV cache. If you put in the same prompt with the same prefix, uh you get to reuse the tokens that you calculated prefill on last time. That makes your whole system faster and more efficient. Broadly, KV cache is lossless memory. There's only a couple sources of lossless memory. When we think about our inference system, we have the content of the prompt, the context, you have the the KV cache, and that's going to scale linearly with the amount of data you pass in. And now if you're thinking about you know million token sequence lengths uh that actually gets pretty substantial. So a lot of people are thinking about how do you compress memory? How do you compress context? Agent harnesses will compress context. Rag search all these techniques that we've been talking about for years are a sort of compression of a larger context into something that you can give to a model. You can write to files. All of these things scale sublinearly with the amount of data that you have. But what if there was a middle load? What if there was a way where you could get quite a bit of compression in the data that you remembering with near lossless information retention? So we uh you know we have a lot of different ways that we can think of what to keep in the cache. You know recent compaction methods have shown that we can replace the cache with a much shorter one. We've got papers like attention matching and cartridges that have given really promising uh outcomes here with uh high compression ratios. But both of these are run at inference time. Again, one of the techniques I want to talk about or one of the themes I want to talk about is training for inference. So in this case I want to introduce something called still by the base 10 research team where the synthesis on top of the cache where we're keeping a loaned representation of the information rather than a the information directly or a sort of deterministic subset of it is amotized via training. So Charlie and Mudith from our post training team did a fantastic chalk talk at Kosa compile recently. Um it's up on YouTube. So I would encourage you to take a look at it if you're interested in learning about KV compaction. Um I do not unfortunately have the time or the genius to explain everything up here. Um but the the basic mechanism is that still is a perceivable bottleneck um that takes a fixed set of loan query vectors crossends it against the full KV cache and produces a set of compact keys and values in a single forward pass. This creates a fast differentiable compressed memory that the LLM can attend to as if it was real context. So if you're interested in KV compaction, definitely check out Charlie and Mudith's work. Um it's been a really fantastic thing to learn about.</p>
+</details>
+<h3>推测解码跨越：从 Eagle-3 到 DFlash 扩散架构</h3>
+<p><strong>推测解码</strong>（Speculative Decoding: 利用轻量草稿模型生成候选 Token 并通过目标模型单次前向传播进行批量无损验证的技术）是无损提升 TPS 的核心利器。推测解码的演进历程经历了数次关键迭代：</p>
+<ol>
+<li><strong>同族小模型草稿</strong>（Vanilla Speculative Decoding）：早期采用同系列的极小模型生成 Draft Token，但小模型天然不是优秀的高质量草稿预测器。</li>
+<li><strong>多头结构与隐藏状态预测</strong>：行业发展出添加解码头（如 <strong>Medusa</strong>），进而演进出 <strong>Eagle-3</strong>——通过在目标模型的隐藏状态（Hidden States）上训练 10 亿参数（1B）的专用轻量模型生成草稿，成为 2026 年初的行业性能天花板。</li>
+<li><strong>扩散推测架构（DFlash）</strong>：<strong>DFlash</strong> 将扩散模型引入推测生成中，彻底摆脱了自回归单字预测的低效逻辑。类比于图像/视频生成中全图迭代去噪的机制，DFlash 在单次前向传播中直接并行预测 8 到 16 个 Token 的草稿窗口。</li>
+</ol>
+<p>虽然 DFlash 模型的单步计算耗时比自回归模型略高（约 2 至 4 倍），但其单次前向即可完成原本 Eagle-3 需要多步串行自回归才能产出的整段草稿。由于草稿内的 Token 能够相互进行交叉注意力计算（Cross-Attention），并且训练时采用了<strong>双向推测注意力掩码</strong>（在目标模型提供上下文的前提下，既通过因果掩码保证逻辑一致性，又支持块内双向注意力交互），其 Token 接收率（Acceptance Rate）显著提高。在单张 <strong>NVIDIA B200</strong> 运行 <strong>Qwen-3-8B</strong> 的实测中，DFlash 带来了 <strong>超过 3 倍的实际端到端性能加速</strong>。此外，最新研究 <strong>DSpark</strong> 正在尝试将扩散模型与序列模型相融合以进一步推高接收率。</p>
+<details>
+<summary>Original English</summary>
+<p>So that's two of the techniques. We've talked about quantization. We've talked about caching. The final one is speculation. And there's been a lot of change here. Um as a review, uh speculative decoding, we're going to use draft tokens. We're going to verify them during the forward pass and we're going to use that to generate more than one token per forward pass. It helps a lot with tokens per second and it is a fully lossless optimization which is great because we don't have to worry about quality at all. Now in in the sort of history of speculation we started with speculative decoding. All of these are in the book. Um you have spec where you use a small model from the same family to generate draft tokens. Turns out small models are like not great draft token generators. They're great small models. So we invented as an industry a bunch of new methods like Medusa where maybe just you add decoder heads to the model and then eventually Eagle 3 which was hey what if instead of taking a tiny model from the same family, we actually train a billion parameter model on the hidden states of the target model to generate draft tokens. And that actually worked really well. And so, you know, as of of maybe February last year of of February of this year, Eagle 3 was the best method in speculation. Now, we got Dlash. Dlash is even better. So, it's diffusion for speculation. Uh, Dlash creates a sequence of draft tokens instead of a single token. So the model is a diffusion language model which means it creates a whole sequence of tokens in the same way that a video or image generation creates a sequence of frames or a sequence of pixels and iterates over it rather than doing a auto reggressive token generation. Dlash models might be two or four times slower to run, but they're going to predict eight or 16 tokens at once um in that in that window while Eagle is only doing one at a time. So a single D flash forward pass is faster than the entire eagle draft phrase and predicts more tokens. These tokens are able to cross attend to each other and generally create a higher acceptance rate because in speculation acceptance rate is everything. So in the wild we're seeing a more than 3x improvement uh from deep flash. Um this is measured with a single B200 quen 38B. Um and we can see it versus Eagle. It's a substantial improvement in the tokens uh both the token acceptance rate and the tokens per second. These deflash models are trained with a attention mask for birectional drafting. Um so the target model is going to provide the context. Um and within each block we're going to have a subset of clean tokens that are sampled and the attention mask is going to enforce causal consistency. Uh but it is still going to allow for birectional attention. um where in you know a traditional auto reggressive model you're only looking at the tokens in a single direction. So that's why we're able to you know take advantage of this diffusionbased architecture and then you know I thought I was done and then a couple days ago uh DSpark came out. Now Dlash we do have up and running in production. Uh DSpark is is new research. Um so this one I can basically only say like hey it exists. It's cool. We're looking at it. Um the difference versus Dlash, it still has that diffusion model, but it also pairs it with a sequential model. And the idea is that we're going to improve acceptance weights um by having these two models work together rather than having just the iterative speculator uh just the diffusion speculator or just the auto reggressive speculator. So DSpark very exciting um but we don't have any production results with it yet to share. Um hopefully you know we'll have those for next time.</p>
+</details>
+<h3>连续重训与未来系统演进展望</h3>
+<p>在生产环境中实现推测解码收益最大化的另一关键路径是 <strong>推测器在线连续重训</strong>（Continuous Speculator Retraining）。推测接收率高度敏感于真实生产环境中的 Prompt 与响应分布；通过基于实时线上流量持续微调草稿模型，接收率可实现 <strong>20% 至 2 倍的额外提升</strong>。尽管在线持续重训在存储调度、数据合规授权、动态算力消耗以及主模型版本联动等方面带来了极高的工程复杂度，但在超大规模推理集群中，其带来的吞吐红利使其成为极具价值的长期优化方向。</p>
+<p>展望未来推理工程的发展趋势：</p>
+<ul>
+<li><strong>下一代硬件与 NVFP4 深度协同</strong>：随着 <strong>NVIDIA Vera Rubin</strong> 架构芯片的面世，硬件对 NVFP4 数据格式的原生加速性能将大幅跃升。从本地推理实践中沉淀出的 NVFP4 调优经验将直接反哺云端数据中心。</li>
+<li><strong>PD 解耦与全系统总线通信</strong>：<strong>PD 分离</strong>（Prefill-Decode Disaggregation: 将计算密集型的预填充阶段与内存受限的解码阶段解耦到独立硬件集群上运行）已展现出显著效益，跨网络高效调度与搬运 KV Cache 数据将成为分布式推理基础设施的核心。</li>
+<li><strong>“为推理而训练”的工程范式定型</strong>：离线模型训练与在线推理服务的割裂将彻底消失，面向推理时延、内存瓶颈与系统架构进行针对性协同训练将成为行业主流工程标准。</li>
+</ul>
+<details>
+<summary>Original English</summary>
+<p>Um what we do have production results though on is continuous speculator retraining. So this is we're back to Dlash here. Um and this is the idea that you know speculative decoding is very dependent on the actual content of the prompts and responses that you're looking at in your system. And so if you are continuously retraining on those prompts and responses in your live system, you can see a 20% to even 2x improvement in your token acceptance rates. This is actually like really hard to do. Uh it takes a lot of storage and you have to make sure that you have permission to use the data that you're processing in this way. Uh it takes a ton of compute and you have to move all of this information around. And if you change the underlying model, you also have to change the speculator model. But when I look forward into the future, I do think that continuous speculation for very very large scale systems is going to be a worthwhile optimization. So what is next in inference? Um the following is like personal opinion and speculation and public information and like if I knew anything that was actually coming out, I wouldn't be able to talk about it. Um so so this is just like what I think is going to happen. You know I've been through three hardware cycles um through the Ampio release, the Hopper release, the Blackwell release. Um and it always takes time for you know when these chips get shipped to when they get installed in data centers when the entire software stack really is able to take advantage of their capabilities. But some things that I'm excited about are, you know, with with Reuben, it looks like the NVFP4 performance is going to be fantastic. So the more we can like honestly borrow techniques from local inference and get a lot of confidence running models in this NVFP4 data format, the more we're going to be able to take advantage of the awesome performance of of the upcoming Ruben systems. I think that like disagregation and systemwide communication is going to be increasingly important. um we're seeing really excellent early gains from PD disagregation and the ability to you know move information like KV cache data around the system is going to be increasingly important and then like I said the theme of training for inference is going to be something that continues to have a big impact in the industry moving forward so thank you all so much for the talk uh for coming to the talk um I am on Twitter I'm on LinkedIn um and I'm giving out free books um you can download a PDF at the QR code or come down with me to the base 10 booth to get your free copy of Inference Engineering. Uh we've got a bunch there, maybe enough for everyone. If not, we will have a CO bring some more from the office. Um so yeah, I'll be downstairs at the base 10 booth. Thank you all so much and have a great day.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Baseten" class="entity-link company-link">Baseten</a>, <a href="/search/?q=Nvidia" class="entity-link company-link">Nvidia</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=DFlash" class="entity-link product-link">DFlash</a>, <a href="/search/?q=DSpark" class="entity-link product-link">DSpark</a>, <a href="/search/?q=Eagle-3" class="entity-link product-link">Eagle-3</a>, <a href="/search/?q=TurboQuant" class="entity-link product-link">TurboQuant</a>
+</p>
+      
+        <p><strong>媒体/书籍:</strong> <a href="/search/?q=Inference Engineering" class="entity-link media-link">Inference Engineering</a>
+</p>
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">inference-engineering</span>
+      
+        <span class="tag-pill tag-pill--no-page">speculative-decoding</span>
+      
+        <a class="tag-link" href="/tags/kv-cache/">kv-cache</a>
+      
+        <a class="tag-link" href="/tags/quantization/">quantization</a>
+      
+        <a class="tag-link" href="/tags/diffusion-model/">diffusion-model</a>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

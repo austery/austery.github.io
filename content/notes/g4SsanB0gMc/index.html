@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>为小模型构建大规模集群：突破自建推理架构的吞吐瓶颈</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="为小模型构建大规模集群：突破自建推理架构的吞吐瓶颈" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">为小模型构建大规模集群：突破自建推理架构的吞吐瓶颈</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-19</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=g4SsanB0gMc" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-19
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">随着开源小模型性能逼近前沿大模型，企业推理架构正经历范式转移。本文深入解析由复合智能体、多 LoRA 微调模型构成的新型工作负载，剖析 Bedrock 托管服务与传统单体推理引擎的局限，并提出基于 NATS JetStream 消息队列、Rust 侧车代理与轻量 Candle 运行时的自建分布式集群架构，实现低延迟、高吞吐与自主可控。</div></div>
+      
+    </div>
+    <h3>性能代差收敛：开源小模型的工程重构价值</h3>
+<p>在当前的人工智能演进格局中，<strong>小模型</strong>（Small Language Models: 通常指参数规模可完整装入单张消费级或前两三代 GPU 的轻量化神经网络）正在迎来根本性的能力跃迁。传统认知往往认为小模型必然伴随着生成质量与逻辑推理的严重妥协，但最新的基准测试趋势表明，前沿超大模型的性能收益正遭遇边际递减，而开源小模型在特定垂直任务与流水线工作流中已逐步逼近甚至超越前沿模型。这种能力收敛使得企业能够摆脱对昂贵专用硬件的依赖，直接利用市场上供给充足、价格亲民的上一代算力（如 <strong>Nvidia</strong> 经典硬件），在完全拥有自主技术栈的同时，实现几个数量级的成本削减以及显著的吞吐量与延迟优化。</p>
+<details>
+<summary>Original English Source</summary>
+<p>All right, I think you guys can hear me. I can certainly hear myself. Whoever came closer gets a t-shirt. I meant it. There's like back full of t-shirts over here. And also for questions. Maybe there will be some questions at the end. If you ask a question, you get the t-shirt as well. And if you can guess what is on the background of this slide, you get the t-shirt as well. Any guesses? What does that visualize? This picture in the background? No. Anybody has seen a transformer model? &gt;&gt; Uh yeah, positional encoding. Very good. You get the t-shirt, sir.</p>
+<p>All right. So, today we'll discuss basically small open source models and how they are pretty good now and how they create unique challenges when you want to serve a bunch of them in your own cloud. Everything we'll discuss is open source, do it yourself. This is the kind of stuff you can just run a command and own the stack. So there is no proprietary pieces of the puzzle here. Let's get this underway.</p>
+<p>Well, this works. Okay. So small models. What do we mean by small models? Depending who you ask, the way I think about it is basically models that you can run on two, three generations old Nvidia hardware. The whole model fits into one GPU, and therefore they are easy to serve. Those GPUs are available and they are affordable as well. And then most people think okay, small models, there will be some kind of tradeoff in terms of quality of the results. And hopefully I'll be able to do a good job in this talk to convince you that actually for specific tasks you can be at frontier or beyond frontier performance and get all the other obvious benefits: orders of magnitudes of cost savings and potentially quite big latency or throughput improvements of course.</p>
+<p>So this is one of the charts we like to show. This is the Artificial Analysis Intelligence Index over time. And what they typically don't show you is the bottom part of the chart. But the bottom part of the chart is quite interesting because you can see that the frontier is getting diminishing returns these days, and the small models are really rapidly approaching the capabilities of the big models. So you see this convergence, saturation on top and growth of the small models from below. And that means if you have a workflow, if you have a pipeline that can run with GPT-4.1, now you can move that to a small model and get all the benefits we discussed. So small models are not dumb anymore.</p>
+</details>
+<h3>复合智能体拓扑：从小模型阵列到多 LoRA 协同</h3>
+<p>单纯将大模型替换为小模型并不意味着直接沿用原有的单体交互模式，真正的系统增益来自于<strong>复合系统</strong>（Compound AI Systems: 由多个专门化模块、微调小模型及工具链协作构成的多阶段执行架构）。在现代智能体系统中，单次用户查询往往被拆解为一个复杂的有向无环图（DAG），由一系列参数量在 8B 到 27B 之间的微调小模型以及针对特定子任务的 <strong>LoRA</strong>（Low-Rank Adaptation: 通过低秩矩阵冻结原权重并注入可训练参数的高效微调技术）权重共同协作完成。这种由多样化微调模型构成的流量特征，彻底打破了传统针对单一单体超大模型设计的静态部署假设，对底层推理系统的动态加载与弹性调度提出了全新挑战。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Now it is also about how you use the small models. You can't just treat that 27 billion or 8 billion model as a dumbed-down version of GPT-4.5. Instead, you need to think about how to combine multiple models. And the shape of the typical workloads we see is actually you have a compound system. You have an agent, and that agent doesn't just call one model. It calls multiple models. It calls an embedding model, then it calls a reranker, then it calls some small specialized language model to do some reasoning or data extraction, and then maybe a larger model or a fine-tuned model for final synthesis.</p>
+<p>This is the kind of shape that you will see in your workloads in your agents as you move to using small models. You end up with a graph, a DAG of models, rather than a single monolithic endpoint. And that creates a very different kind of serving challenge because now you don't just have one big model running on eight H100s where you send all your traffic. You have dozens of different small models, many of them with their own custom LoRA adapters or specialized fine-tunes, and you need to serve all of them efficiently without having idle GPUs sitting around for each single variant.</p>
+</details>
+<h3>托管平台锁定与开源推断引擎的结构性断层</h3>
+<p>在构建小模型推理底座时，企业常面临两难困境。一方面，如 <strong>Amazon Bedrock</strong> 等主流云厂商托管方案存在严重的生态封闭性：模型目录更新迟缓且多滞后于开源前沿，用户不仅无法导出或完全掌控微调后的权重资产，还面临极高昂的按 Token 计费成本。另一方面，以 <strong>vLLM</strong> 和 <strong>SGLang</strong> 为代表的优秀开源推断引擎，其核心架构主要针对数十亿至数千亿参数的单体大模型进行了吞吐和显存优化。当面对小模型特有的高频短文本、多并发请求以及频繁的动态 LoRA 适配器切换场景时，传统的基于 HTTP 的推送式（Push-based）路由与庞大的环境依赖容易导致严重的排队阻塞、GPU 负载不均与冷启动开销。</p>
+<details>
+<summary>Original English Source</summary>
+<p>So the models exist, you know that that's not the bottleneck, and we've been talking about like how do we actually serve them. The easy answer people often go to is, &quot;Oh, I'll just use Bedrock or some hosted cloud provider.&quot; Except when you look at the model catalog in Bedrock, it's very restrained in model types that are available. These models are old, often two, three years behind the state-of-the-art. And when you do any kind of fine-tuning in Bedrock, you don't actually own the fine-tuned or trained weights. It stays serving from the Bedrock infra. You cannot download your own model. You're locked in, and you pay enormous per-token prices that defeat the whole economic purpose of using small models in the first place.</p>
+<p>Now if you look at open source infrastructure—vLLM, SGLang, different solutions—they are fantastic pieces of software, but they were predominantly designed with big models in mind. When you're serving a 70B or 405B model across multiple GPUs with tensor parallelism, you have certain assumptions. But small model workloads look very different. The request patterns are bursty, you have lots of quick calls in a pipeline, and you benefit a lot from LoRAs and model adaptation in general.</p>
+<p>And so the traffic that you have to serve contains people coming to you and saying, &quot;Hey, I have 10 LoRAs, how do I use this with our serving stack?&quot; Or &quot;I have this custom fine-tune I made yesterday.&quot; When you try to do that on standard setups, you run into issues with dynamic adapter switching overhead, memory fragmentation, and push-based load balancers that don't know the internal state of each worker, leading to starvation on some GPUs while others are overloaded. This desire around small model adaptation breaks the traditional assumptions and creates a lot of operational friction.</p>
+</details>
+<h3>基于拉取式消息队列与旁路通道的解耦集群架构</h3>
+<p>为了彻底解决高并发小模型工作负载下的吞吐瓶颈，<strong>Superlinked</strong> 探索并落地了一种基于<strong>拉取式架构</strong>（Pull-based Architecture: 工作节点根据自身显存与算力负载主动从中央任务队列获取任务）的分布式集群方案。系统核心采用 <strong>NATS JetStream</strong> 作为分布式消息中间件，单节点可支撑数百万级别的并发消息吞吐。在数据传输层，该架构摈弃了低效且增加数据体积的 Base64 JSON 序列化，通过 <strong>S3/R2</strong> 兼容的对象存储旁路通道处理多模态与大规模二进制负载。<strong>网关节点</strong>（Gateway Router）仅负责鉴权、元数据解析与快速入队，后端的数百张异构 GPU 节点依据自身实时空闲算力主动拉取任务，实现了无中心单点瓶颈的饱和负载运转。</p>
+<details>
+<summary>Original English Source</summary>
+<p>And so we have iterated and iterated and explored different topologies for clusters for running your own small models. The small models make it easier because in whatever environment you can get some L4s or older GPUs, you don't need exotic InfiniBand interconnects or 8-way H100 nodes. But you need the right architecture.</p>
+<p>What we converged on is a pull-based architecture instead of a traditional push-based load balancer. In a push model, an HTTP proxy tries to guess which worker is free, which often results in requests piling up behind a slow query on one worker while another sits idle. In our setup, we have a centralized queue, and the workers pull from that centralized queue. This way, they can saturate themselves completely.</p>
+<p>For the queue, we use NATS JetStream. That thing can do a million requests per second, so it's virtually impossible for the messaging layer to become a bottleneck. We also decouple the data payload from the control plane: one of the things we dislike about the OpenAI API standard is Base64 encoding large binary payloads like images or audio into JSON, which inflates payloads by 33% and wastes CPU cycles on serialization. Instead, large payloads go into side channels—like local object stores or shared memory—and only lightweight pointers and metadata go through JetStream. Then, however many workers you have—dozens or hundreds of GPUs—they look at the queue state, pull jobs as soon as they have capacity, do the computation, and write the output back.</p>
+</details>
+<h3>轻量级运行时与 Rust 侧车：极致冷启动与显存直通</h3>
+<p>在工作节点内部，降低容器镜像体积与消除运行时开销是实现秒级弹性伸缩的关键。传统的 PyTorch 容器镜像往往高达 12GB 以上，在节点冷启动和镜像拉取时带来显著延迟。通过引入基于 <strong>Candle</strong>（Hugging Face 推出的轻量级 Rust 神经网络运行时框架）以及定制化的 <strong>Rust 侧车代理</strong>（Rust Sidecar: 与推理主进程伴生的轻量级本地通信与内存管理模块），可将镜像体积压缩至 1GB 左右（缩减约 90%）。通过直接暴露底层 Unix Domain Socket 并配合原生 C++/CUDA 内存直通，该方案绕过了 Python GIL 锁与高层 HTTP 协议开销，在实现亚毫秒级请求分发的同时，保障了动态权重热加载与显存的高效利用。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Now let's talk about the worker setup and runtime efficiency. If you care about waking up from a cold state and loading these worker images across a bunch of different machines in your cluster, container size matters immensely. The standard worker Docker image with PyTorch and full CUDA toolkits is around 12 GB. Downloading and extracting that takes minutes.</p>
+<p>That was the motivation behind exploring engines like Candle, the minimalist Rust ML framework from Hugging Face. A worker container built with Candle or optimized C++ runtimes is maybe 1 GB—roughly 10% of the size of a standard PyTorch stack. Going from 12 GB to 1 GB makes a massive difference in cold start times and rapid auto-scaling across commodity nodes.</p>
+<p>Furthermore, on the worker process level, we wrap the inference engines (whether it's SGLang, Candle, or custom C++ backends) with a high-performance Rust sidecar communicating over local Unix domain sockets. This eliminates the Python web server overhead, avoids GIL contention, and allows direct shared-memory or socket-based buffer transfers. The Rust sidecar manages the connection to NATS JetStream, pre-fetches requests into local memory, and feeds the GPU engine with zero serialization overhead, keeping the GPU compute cores continuously saturated.</p>
+</details>
+<h3>异构算力选型与基准压测：全栈开源的工程自愈之道</h3>
+<p>在硬件选型与部署实践中，该架构能够全面兼容从 <strong>Nvidia L4</strong>、<strong>RTX Pro 6000</strong> 到 <strong>A100</strong>、<strong>H100</strong> 等多代异构 GPU 资源，极大地缓解了算力配额受限的压力。实际基准测试显示，在处理 Embedding 嵌入模型与小语言模型推理时，基于拉取式队列与轻量侧车的集群方案相较于传统托管 API 可实现数倍的吞吐提升与极低的 P99 延迟，同时支持<strong>推测解码</strong>（Speculative Decoding: 利用小模型生成候选词并由大模型并行验证的加速技术）与动态 LoRA 热插拔。通过将完整的集群管理与推理底座开源，开发者能够以极低的基础设施成本掌控全栈代码与模型资产，摆脱专有云厂商绑架。</p>
+<details>
+<summary>Original English Source</summary>
+<p>To give you some concrete ideas of what is possible on relatively accessible hardware: you don't need top-tier clusters for this. You can run these stacks on Nvidia L4s, A100s, RTX Pro 6000, or H100s across any standard cloud provider where quota is actually available on demand across most regions.</p>
+<p>On this kind of setup, for embedding models and small generative models, you can achieve tens of thousands of tokens or embeddings per second per node with sub-10ms latencies. You can also implement techniques like speculative decoding—where a tiny 1B model generates draft tokens that are verified in parallel by a slightly larger 8B model—dramatically increasing generation speed without losing accuracy.</p>
+<p>The big takeaway is: small models are extraordinarily capable today. When you break away from the mindset of treating AI as a single monolithic black-box API, and instead build a specialized cluster around a DAG of small models and dynamic LoRAs using lightweight queues and fast runtimes, you get superior performance, massive cost reduction, and complete ownership of your intellectual property and infrastructure. The entire cluster implementation we discussed is open source on GitHub—feel free to star the repo and happy self-hosting. Thank you.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Superlinked" class="entity-link company-link">Superlinked</a>, <a href="/search/?q=Nvidia" class="entity-link company-link">Nvidia</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=vLLM" class="entity-link product-link">vLLM</a>, <a href="/search/?q=SGLang" class="entity-link product-link">SGLang</a>, <a href="/search/?q=Candle" class="entity-link product-link">Candle</a>, <a href="/search/?q=NATS JetStream" class="entity-link product-link">NATS JetStream</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">model-serving</span>
+      
+        <span class="tag-pill tag-pill--no-page">distributed-inference</span>
+      
+        <span class="tag-pill tag-pill--no-page">cluster-architecture</span>
+      
+        <span class="tag-pill tag-pill--no-page">low-rank-adaptation</span>
+      
+        <span class="tag-pill tag-pill--no-page">message-queue</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

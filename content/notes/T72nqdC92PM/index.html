@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>从零构建主权基石模型：Sarvam 3B 状态空间视觉模型的演进与突破</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="从零构建主权基石模型：Sarvam 3B 状态空间视觉模型的演进与突破" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">从零构建主权基石模型：Sarvam 3B 状态空间视觉模型的演进与突破</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-23</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=T72nqdC92PM" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-23
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">印度AI独角兽Sarvam通过弃用传统Transformer架构并采用状态空间模型（SSM），成功在单张GPU上训练出30亿参数的SOTA视觉语言模型Sarvam Vision。文章详述了其在处理22种官方低资源语言时的复杂字符挑战、两阶段分块OCR设计、四阶段训练管线及可验证强化学习（RLVR），并阐述了数据飞轮与国家AI数字主权的战略闭环。</div></div>
+      
+    </div>
+    <h3>破局印度数据孤岛：从零构建主权基石模型</h3>
+<p>在当前全球生成式人工智能的快速迭代中，印度面临着严重的<strong>机器可读数据荒漠</strong>。根据权威数据分布研究，作为主流先进大模型预训练基石的 <strong>Common Crawl</strong> 开源数据集中，印度各语言所占比例显著低于 1%。尽管全球头部前沿实验室纷纷将印度视为增长最快、规模最大的用户市场之一，但在日常的模型训练语料中，印度本土语言的数据却几乎处于全面缺席的状态。这种严重匮乏的根源并不在于印度社会缺乏知识积淀或文化资产，而在于海量的物理文档、政企记录与历史典籍从未经历系统性的机器数字化。</p>
+<p>为了从根本上改变这一数字失衡，<strong>Sarvam</strong> 确立了从零构建印度自主<strong>主权AI</strong>（Sovereign AI: 由一国自主研发、数据与算力全流程受控且服务于本国关键基础设施与语言文化的AI系统）基石模型的战略路径。公司布局覆盖语音、文本与图像多模态技术栈：语音侧涵盖端到端语音转文本（STT）与文本转语音（TTS）；文本侧构建了 300 亿与 1000 亿参数级的大语言模型；而在视觉文档理解领域，则打造了 <strong>Sarvam Vision</strong>。</p>
+<p><strong>Sarvam Vision</strong> 是一款参数量仅为 30 亿（3B）的轻量级<strong>视觉语言模型</strong>（Vision-Language Model: 能够联合理解图像像素与自然语言文本的多模态AI模型），具备直接部署在单张商用 GPU 上的高吞吐推理能力。然而在性能表现上，该模型在专业<strong>智能文档处理</strong>（Intelligent Document Processing: 从复杂版式与图像文档中抽取结构化知识与语义信息的自动化技术）评测中不仅取得了领先成绩，更在实际表现上击败了体量为其百倍的庞大闭源模型。模型的底层创新体现在两大维度：首先，在架构上彻底弃用了传统的标准 Transformer 骨干，转而基于<strong>状态空间模型</strong>进行端到端重构；其次，整套从数据清洗、分布式计算到多阶段训练的完整闭环，100% 依托印度本土算力与工程链路自主完成，实现对英语以及全部 22 种印度官方语言的高精度全覆盖，攻克了全球文档智能处理领域公认最具挑战性的多语言复杂版式难题。</p>
+<details>
+<summary>Original English</summary>
+<p>DE ACUERDO. Eh, hola. todos. Buen día. I Krishna. Eh, yo gerente general en Sarvam. Hoy yo Te diré cómo. modelo de 3 mil millones parámetros, suficiente pequeño para trabajar en una sola GPU, alcanza el mejor resultados en Documento de IA y supera a los modelos que 100 veces más grande. Él también algo modelo inusual en dos aspectos. En- Primero, el modelo de lenguaje, que se utiliza no es estándar transformador. Y todo proceso de creación modelos, desde datos hasta capacitación y cálculos, fue hecho completamente en India. Y para Inglés y 22 oficial indio lenguas que, en mi opinión, es uno de el más difícil problemas intelectual procesamiento de documentos en mundo. Así es como lo hacemos han recorrido un largo camino desde cero al liderazgo. ¿Quiénes somos? Somos Sarvam, una empresa que crea soberano modelos básicos en India . Trabajamos con diferente modalidades: voz, Texto e imagen. En el campo Tenemos voz modelos de conversión conversión de voz a texto y texto a voz. EN En el texto tenemos modelos por 30 y 100 mil millones parámetros. Y al amanecer tenemos un modelo intelectual procesamiento de documentos, sobre lo cual hoy y Hablemos. India en gran parte ausente en legible por máquina mundo. De acuerdo con publicado investigación distribución de lenguas, significativamente menos del 1% del cuerpo común Gatear, en el que formación avanzada modelos, presentados en lenguas indias. En muchos foros Es posible que hayas oído hablar de cómo laboratorios avanzados Dicen que India es uno de sus el más grande y de rápido crecimiento mercados, y sin embargo India datos faltantes modelos avanzados, quienes entrenan todos los días. ¿Porqué es eso? El principal no por falta datos o falta de ellos conocimiento. Y porque estos Los datos nunca fueron digitalizado. Y nosotros en Sarvam nosotros resolvemos esto problema.</p>
+</details>
+<h3>复杂印系语言文档的结构化抽取困境</h3>
+<p>要真正解决印度本土文档的理解难题，简单的光学文字扫描是完全无法奏效的。印度语言的<strong>智能文档处理</strong>面临着三重独特的底层技术壁垒：</p>
+<ul>
+<li><strong>知识抽取与语义连贯性</strong>: 文档解析的核心在于结构化知识的深层提取，而绝非机械地转录出孤立无序的纯文本行。脱离了排版层级、段落关联与内在逻辑的字符输出，在后续应用中没有任何认知价值。</li>
+<li><strong>字形渲染与机器编码的严重错位</strong>: 印系文字（Indic Scripts）具有极其复杂的连字、附标符号与 Unicode 编码组合机制。人在印刷品或手写件上所看到的笔画形状，与底层文本串在机器端的字符表示存在巨大差异，这要求底层语言模型必须对全部 22 种官方语言的音节拼合规则具备极其精细的先验理解能力。</li>
+<li><strong>低资源语料匮乏与标注真空</strong>: 绝大多数印度官方语言在计算机视觉与 NLP 语境下均属于典型的极低资源（Low-Resource）语言，市面上完全缺乏高质量、标注完备的文档解析数据集。</li>
+</ul>
+<p>面对上述行业共性困境，Sarvam 早在 2025 年末开启研发初期，便敏锐识别出当时主流视觉语言模型的结构性缺陷。彼时行业内主流的<strong>光学字符识别</strong>（Optical Character Recognition: 将图像中的印刷体或手写文字转化为机器可编码文本的技术）系统多采用“单体整页扫描”（Monolithic Full-Page OCR）模式，试图在单次前向推理中吞下整页高分辨率图像。但对于包含密集排版、多栏嵌套与复杂字形的实际文档而言，这种单体粗暴方式极易引发严重的注意力漂移与幻觉。</p>
+<p>为此，<strong>Sarvam Vision</strong> 率先开创了非对称的解耦架构体系，将文档理解任务系统性拆解为两大难度分层的专业模块：</p>
+<ol>
+<li><strong>版面分析模块</strong>: 专门负责精准检测与分割文档中的复杂区域（文本栏、表格、图表、印章等）；</li>
+<li><strong>细粒度阅读模块</strong>: 结合分块机制，将解析任务下发至基于状态空间模型的轻量级 VLM，实现高密度的逐块（Block-by-Block）精细化 OCR 识别。这一“小参数复杂度分层”的设计范式不仅在 2026 年成为全球顶尖视觉模型的演进共识，更为高密度复杂文档的低功耗端侧处理奠定了坚实的工程基石。</li>
+</ol>
+<details>
+<summary>Original English</summary>
+<p>Por qué indio intelectual El procesamiento de documentos es ¿complicado? En primer lugar, El objetivo es extracción de conocimiento, no Solo texto plano. Solo para retirar texto sin lógica No hay coherencia significado. En segundo lugar, en escritos indios la forma de las palabras y el lenguaje que ya ves, muy diferenciarse de de lo que ve máquina. Eso es Las lenguas indias tienen conjunto complejo caracteres Unicode, interconectados. Hacer todo correcto, idioma El modelo debería ser fuerte en los 22 idiomas. En tercer lugar, la mayoría de los indios Los idiomas pueden ser considerados bajos recursos, debido a lo que hoy faltan datos para formación como modelos. Nuestro La respuesta a esto es Sarvam. Vision, la primera en India soberano visualmente- modelo de lenguaje, creado desde cero, con 3 miles de millones parámetros y arquitectura espacio de estados. Datos , cálculos y aprender, todo eso fue Hecho en India. Cuando comenzamos trabajo inicial a finales de 2025, La mayoría de los VLM en el campo Los sistemas OCR eran monolíticos. Realizaron OCR en incluso páginas, y nosotros en ese momento lo hizo una tasa inusual para OCR bloque por bloque, agregando alrededor sistema modelo niveles de dificultad documento. Muchos modelos lanzados recientemente en 2026, llegamos a la misma conclusión paradigmas « complejidad más pequeña modelo&quot; para OCR, que confirma el valor el camino que hemos elegido. Servam Vision, en particular, tiene dos módulos complejidad: uno para diseño, otro para lectura, así como VLM en basado en el espacio estados para Reconocimiento óptico de caracteres (OCR) bloque por bloque.</p>
+</details>
+<h3>状态空间模型：打破二次方复杂度的计算权衡</h3>
+<p>在确立了分块解析的设计原则后，核心技术路径的选择聚焦于底层序列建模的效率瓶颈。当前行业内绝大多数主流开源通用多模态模型（如 <strong>Qwen</strong>、<strong>Gemma</strong> 等）无一例外均建立在标准的 <strong>Transformer</strong> 架构之上。然而，在以高分辨率文档为输入的高密度场景中，Transformer 固有的自注意力机制展现出了无法调和的算力瓶颈。</p>
+<p>在 Transformer 架构内部，序列中的每一个 Token 必须与其余所有 Token 进行全量的两两点积交互，导致计算量与输入序列长度 $L$ 呈现严格的二次方膨胀（$O(L^2)$ 计算复杂度），同时键值缓存（KV Cache）的内存占用也会随着上下文扩展急剧攀升。在实际的智能文档处理任务中，单张包含复杂图文与多级排版的高清页面被视觉编码器离散化后，产生的视觉 Token 数量往往高达 5,000 至 10,000 个。面对如此巨大的序列长度，二次方的算力消耗与显存占用不仅令批量推理成本变得极其昂贵，更彻底断绝了在边缘设备或单张显卡上进行高并发生产级部署的可能。</p>
+<p>作为颠覆性的替代路径，<strong>状态空间模型</strong>（State-Space Model: 通过维护随时间更新的隐含状态实现线性时间与恒定内存复杂度的序列建模架构）提供了截然不同的状态演化机制。SSM 不依赖全局交互矩阵，而是将长程上下文压缩并封装进一个紧凑的隐状态向量之中，通过递归步进的方式逐步更新该全局状态。这种机制带来了两项无可比拟的底层数学优势：</p>
+<ol>
+<li><strong>线性时间复杂度</strong>: 模型计算量随序列长度 $L$ 呈严格的线性增长（$O(L)$），彻底摆脱了序列膨胀带来的算力激增；</li>
+<li><strong>恒定显存开销</strong>: 推理过程中显存占用始终保持恒定（$O(1)$），无需承载庞大的动态缓存开销。</li>
+</ol>
+<p>从系统工程的权衡视角来看，尽管 SSM 在某些极端长程精细召回场景中需要精细的状态压缩设计，但将其置于“分块逐区 OCR”的特定任务闭环下，其换取到的百倍计算效率收益与确定性吞吐表现，在综合性价比上完全碾压了计算沉重且显存昂贵的传统 Transformer 架构。</p>
+<details>
+<summary>Original English</summary>
+<p>Por lo tanto, ¿Por qué estamos aquí hoy? utilizamos espacio de estados, no ¿transformador? OCR más moderno -modelos como VLM genérico o de código abierto como Gwen, Gemma, etc. construido sobre transformadores. Nosotros elegido alternativa acercarse, utilizando SSM. ¿Por qué? Ambos arquitectura—esta modelos secuenciales, pero con un radical mediante diversos mecanismos trabajar. Transformador fuerza cada ficha interactuar con todos otros, donde los cálculos están creciendo proporcional al cuadrado longitudes secuencias. Él interacciones L sobre L. Y La memoria también aumenta con aumento longitudes secuencias. CON Por otro lado, los SSM tienen estado único. Ellos apoyarse mutuamente condición en general secuencias, refrescando su paso paso a paso Porque Los cálculos están aumentando lineal, volumen memoria para SSM restos permanente. ¿Por qué ocurre esto? correcto ¿Arquitectura para OCR? Todo depende de equilibrio de beneficios y desventajas. Especialmente por mucho tiempo documentos, donde la página puede ser de 5 a 10 mil fichas visuales. Cuadrático complejidad computacional y la memoria se vuelve muy caro para Salida de datos. CON por otro lado, usar SSM para OCR bloque por bloque con alguna pérdida recuerdo justificado, de modo que evitar alto costos de computación, inherente transformadores.</p>
+</details>
+<h3>四阶段训练管线与可验证强化学习飞轮</h3>
+<p>在突破了底层硬件算力与架构复杂度的天花板后，如何将 30 亿参数的 SSM 模型锻造为在跨语言文档理解上超越超大模型的精密引擎，关键在于一套严密分层的四阶段渐进式训练方案：</p>
+<ol>
+<li><strong>纯文本大规模预训练</strong>: 消耗了高达 13 万亿（13 Trillion）Tokens 的海量语料，涵盖高纯度的英语、22 种印度官方语言、复杂的数学逻辑公式以及高质量程序代码。该阶段构建了 30 亿参数模型极度强大的语言学先验概率（Linguistic Prior）。如同人类阅读时即使面对字迹残缺或模糊的单词仍能凭借上下文精准还原语义，模型在接触图像像素之前，就已经在语义与语法层面建立起对各种低资源语言的强大抗噪辨识能力。</li>
+<li><strong>视觉语言跨模态对齐预训练</strong>: 依托精心构建的 3 亿对高对比度图文配对数据进行持续预训练，使纯文本语言模型学会理解视觉像素特征，掌握从图像空间到语言嵌入空间的语义投射机制。</li>
+<li><strong>百万级文档级指令微调（SFT）</strong>: 投入了 1 亿个极具代表性的高难度文档样本，涵盖 22 种印系语言与英语环境下错综复杂的表格矩阵、数学方程、古籍手稿以及多层级复杂排版，全面将通用的多模态表征能力下沉转化为工业级的文档 OCR 抽取能力。</li>
+<li><strong>可验证强化学习（RLVR）优化</strong>: 将<strong>可验证奖励强化学习</strong>（Reinforcement Learning with Verifiable Rewards: 基于确定性自动化测试与规则反馈指导模型策略优化的强化学习范式）深度融入文档视觉后训练，以突破传统监督微调所达到的能力上限。</li>
+</ol>
+<p>在整套训练管线的底层，支撑起卓越泛化性能的是两大不可或缺的基础支柱——<strong>工业级数据飞轮</strong>与<strong>闭环评估体系</strong>。针对 22 种官方语言全面缺乏现成结构化标注数据的客观现实，Sarvam 构建了由合成数据生成引擎与真实文档处理管道构成的自动化水流线，并前瞻性地探索视觉智能体架构（RLM: Reasoning/Reinforcement Language Model 范式），使数据引擎具备基于持续评估结果自动纠偏与增量强化的自治能力。</p>
+<p>在最为关键的第四阶段中，之所以能够通过强化学习取得飞跃性的性能提升，核心原因在于文档 OCR 本质上是一项<strong>完全确定性且高度机器可验证</strong>的任务。研发团队无须依赖昂贵且主观的人类反馈偏好模型（RLHF），而是设计了严密的单元测试集与规则校验矩阵：自动化校验模型输出在 Unicode 字符分布、表格拓扑结构、数学方程语法以及目标语言语法规则上的准确性，并即时计算奖励。通过自动筛选策略输出、与基线基准比对、固定超均值表现并反复迭代，RLVR 将 OCR 任务的演进转化为了高度可扩展、具备极高工程上限的自动化进化飞轮。</p>
+<details>
+<summary>Original English</summary>
+<p>Por lo tanto, ¿Cómo hacemos esto exactamente? ¿Estamos entrenando? Nosotros construyó una fase programa de cuatro etapas. Cada Residencia en anterior: primero etapa—esta es la anterior entrenamiento solo en texto. 13 billones fichas en inglés, en lenguas indias, matemático fórmulas y código. Esto forma el lenguaje base de 3 mil millones parámetros. Fuerte prioridad lingüística permite el modelo identificar borroso o texto ambiguo de la imagen. Sí tal como puedes lee hasta la mitad borra la palabra, porque ¿Sabes qué palabra es? estar en este lugar. Por lo tanto, nos centramos sobre la creación de un lenguaje Competencias modelo incluso antes de ella ¿Viste algo? al menos un píxel. La segunda etapa es continuo formación previa en 300 millones de pares imágenes y textos. Esto enseña el idioma modelo general visual posibilidades, espectáculos, cómo ver, cómo interpretar píxeles, etc. Más Se acerca la tercera etapa, donde nosotros realizó una guía educación adicional para 100 millones de muestras de OCR. Así pues, la tercera etapa enfocado en, para hacer un general El modelo VLM es potente en LOC. Esto incluye varios datos en los 22 idiomas y en inglés, así como usando todo tipo de componentes documentos tales como tablas, ecuaciones, manuscritos, etc. En cuarta etapa se aplica aprender de refuerzo, que ayuda a superar el límite de lo que es posible para lograr un resultado manejable formación adicional. Aquí tiene ya ves el estándar receta. Sin embargo, el principal ventaja—hay dos niveles inferiores: nivel datos y nivel evaluación. Primero- Este es un mecanismo para trabajar con datos. Para la mayoría De los 22 idiomas, ninguno está listo. datos marcados. Cuando esté marcado Los datos no existen, creación de un mecanismo El procesamiento de datos se convierte en una tarea difícil. Y Esto es lo que hicimos en a gran escala. Nosotros cintas transportadoras construidas crear datos sintéticos y datos de datos reales documentos. Y también ayudó a crear transportador para permanente mejora de datos, quienes van a estudiar, Residencia en resultados evaluación, etc. Entonces ya estamos activos en vista de el paradigma RLM, explorador capacidades del agente visión para nuestra modelos en el futuro lanzamientos. Segundo la ventaja es evaluación. Usted no ¿Puedes lograrlo? el mejor resultados, si no puedes medir, qué tan bien Tu modelo funciona. Recogimos evaluaciones exhaustivas, para asegurarnos de que Nuestros indicadores son verdaderamente líderes y significativo para final usuarios. Quiero Tómate un minuto nuestra cinta transportadora aprender de reforzamiento. Cuarta etapa, porque significativo aumentar productividad se logra precisamente Gracias a RL. En OCR la corrección es la tarea que siendo revisado en coche, ¿verdad? Se puede personalizar muchas pruebas para animar y evaluar modelos en basado en el creado muestras. Y en mundo OCR determinista todo esto está sujeto a inspección de máquinas. Por lo tanto, RL nos da aumento significativo. Selección y evaluación de grupos mediante pruebas unitarias, fijación resultados para superando los promedios indicadores y luego repitiendo el proceso. Esto es lo que RLVR hace por el OCR. muy muy escalable.</p>
+</details>
+<h3>商业化落地验证与Akshar智能体平台</h3>
+<p>经历了严苛的数据工程与端到端训练迭代后，Sarvam Vision 在全球权威文档理解与 OCR 基准测试中展现出了令人瞩目的领先实力。在英语主流评测体系中，该模型在 <strong>ULMO CR</strong> 基准上取得了 84.3 分的高分，在 <strong>OmniDoc</strong> 基准中斩获了 93.2 分的优异表现。随着模型版本的持续推进，Sarvam 团队正进一步锁定全球文档榜单的顶尖王座。更为决定性的是，在涵盖全部 22 种印度官方语言的评测维度下，面对包括 <strong>ChatGPT</strong>、<strong>Gemini</strong> 以及 <strong>Claude Opus</strong> 在内的全球超万亿参数顶尖闭源与开源模型，仅有 3B 参数的 Sarvam Vision 展现出断崖式的代际领先优势，以无可争议的识别精度与鲁棒性确立了统治地位。</p>
+<p>在产品转化层面，Sarvam 将该底层视觉模型封装为名为 <strong>Akshar</strong> 的智能文档处理代理平台。针对企业与机构级应用场景，Akshar 不仅提供常规的文本数字化与多字段结构化提取功能，还内置了完整的生产级能力：</p>
+<ul>
+<li><strong>置信度指示器</strong>: 对每一个提取字段与表格单元格输出精准的置信概率度量；</li>
+<li><strong>区块依据溯源</strong>: 提供像素级的图文边界回溯（Block Justification），使用户能够实时审计模型输出的图像来源；</li>
+<li><strong>人机协同校验</strong>: 搭载人机协同修正工作流（Human-in-the-Loop），支持在争议字段上进行人工复核与敏捷补录。</li>
+</ul>
+<p>截至目前，Sarvam Vision 已通过高并发企业 API、私有化本地集群部署以及 Akshar 平台等多元化形态深度服务于实体产业。包括全球顶级保险公司、跨国银行巨头、国家核心部委以及国家级历史文化遗产保护机构在内的诸多大型标杆客户，已利用该模型完成了超 <strong>3,500 万页</strong> 复杂历史与商业文档的深度数字化。在短短四个月内，印度从完全缺乏自研主权模型，跨越式演进为拥有自主可控、极具成本竞争力且在本土语种上实现绝对领先的视觉大模型体系。</p>
+<details>
+<summary>Original English</summary>
+<p>Después toda la formación con desde cero y trabajando con datos, pudimos conjunto avanzado indicadores en pruebas globales para inglés. Uno de ellos es el banco ULMO CR, otro: banco OmniDoc. En el momento en que lanzamos obtuvo 84.3 puntos en ULMO CR y 93,2 en el banco de pruebas OmniDoc. Modelos, que han salido desde entonces, cambió significativamente el estado asuntos, y pronto en Apareceremos modelo más potente en Clasificación mundial . En segundo lugar, y lo que es más importante importante, a los 22 años lenguas indias nosotros tenemos una innegable ventaja incluso comparado con todos modelos avanzados, como Gemini, ChatGPT, Opus etc. Aquí es donde estamos. ampliamos significativamente nuestra separación y permanecemos fuerte en comparación con todos estos más nuevos modelos que apareció. Ahora Sarvam La visión proporciona nuestro trabajo plataforma de agencia para intelectual procesamiento de documentos llamado Akshar, donde nosotros estamos implementando digitalización, extracción y Introducción adicional datos con participación persona para resolver diversas tareas. Nosotros proporcionamos indicadores confianza, utilizamos bloquear justificación y también la posibilidad Corrección de textos de agencia etc. Puntos de referencia y estándares modernos— Este es uno. Tienen los suyos propios lugar. Hoy algunos de los más grandes empresas en el mundo, de seguros y bancario a las instituciones gubernamentales y organizaciones con preservación patrimonio histórico, usar Sarvam Visión para la digitalización más de 35 millones páginas en inglés y 22 indios idiomas. Modelo disponible a través de API, para local despliegue y cómo plataforma de agencia. Así pues, en conclusión, hasta hace 4 meses en India no tenía ninguno propio soberano modelos. Hoy en Tenemos Sarvam Vision, que enseñó desde cero, y ella nuevos establecidos estándares por precio, lo cual es extremadamente competitivo comparado con todos otras soluciones, incluyendo abierto y cerrado. En primer lugar, comenzamos con la solución algunos de el más difícil problemas intelectual procesamiento de documentos en lenguas indias. Pronto lo haremos liberemos VLM universal- modelos con mucho mayores oportunidades vista, y con avidez Los estamos esperando a todos. prueba los nuestros modelos. Gracias. Contento para responder cualquier ¿Qué preguntas?</p>
+</details>
+<h3>确定性奖励工程与历史文献评测基准</h3>
+<p>在研讨会现场的技术问答环节中，研发团队进一步就多语言跨模态协同机制与强化学习实操细节展开了深度技术拆解。针对低资源语种能否促进主干语言能力的核心疑问，实践验证了一个关键的跨语言学习现象：对 22 种官方低资源语言的高强度学习并没有稀释模型的核心容量，反而<strong>显著提升了模型对英语复杂文档的理解与解析精度</strong>。这种多语言正向迁移不仅印证了印系语言深层句法先验对泛化能力的滋养，其结论同样适用于更广泛的全球低资源语种学习范式。</p>
+<p>针对强化学习阶段合成数据与真实样本的配置配比，团队明确区分了不同训练阶段的技术职责：</p>
+<ul>
+<li><strong>预训练与SFT阶段</strong>: 团队自主研发的<strong>合成数据引擎</strong>能够以可控参数大批量构建模拟文档，用于铺设基础的版面语义与复杂图元对齐；</li>
+<li><strong>可验证强化学习（RL）阶段</strong>: 单纯的合成样本极易导致策略过拟合，<strong>最有效的工程手段是直接引入极度复杂的真实物理文档</strong>，并围绕这些复杂样本构建严密的模块化单元测试与确定性奖励函数：
+<ul>
+<li><strong>字符频次分布奖励</strong>: 约束字符组合符合统计语言学规范；</li>
+<li><strong>表格拓扑对齐奖励</strong>: 确保嵌套单元格行列关系的结构完整性；</li>
+<li><strong>数学表达式正确性测试</strong>: 对 LaTeX 或公式树结构进行确定性编译验证；</li>
+<li><strong>语言特异性语法与拼写测试</strong>: 保证在特定低资源语系下的局部语法自洽。</li>
+</ul>
+</li>
+</ul>
+<p>此外，针对长期以来整个行业缺乏统一评测基准的痛点，Sarvam 宣布即将正式面向全球学术界与工业界开源自主构建的 <strong>Sarvam Indic Benchmark</strong>。该评测基准不仅完整覆盖了印度的全部 22 种官方语言，时间跨度更直接从 19 世纪的历史卷宗延伸至当代最新公文，涵盖了散文随笔、古典诗歌、历史文献、高密财务报表及复杂行政表格等几乎所有异构排版形态。</p>
+<p>在解析哲学上，团队特别强调了智能文档提取中<strong>忠实转录</strong>（Faithful Extraction）与翻译或自由生成的本质边界：OCR 任务的核心诉求在于高精度的数据真实还原，即使原始物理文档的图像印刷本身存在拼写笔误或排版缺陷，模型也必须严格忠实于原貌精准提取，绝对不允许其依照自回归惯性进行自作聪明的“幻觉修复”或擅自篡改。在当前数据流通环节中，尽管大量未经验证的所谓“转写清洗数据”充斥市场，但只有建立在确定性规则底座上的高保真提取，才能真正为后续基模型训练沉淀出可信的语料资产。</p>
+<details>
+<summary>Original English</summary>
+<p>Sí. Sí. Sí, definitivamente. En general, el lenguaje 22 idiomas disponibles mejorar significativamente Idioma en Inglés. Y esto aplicable a cualquier que los recursos bajos lenguaje, no solo para Indio. Sí. Verdadero. No estamos del todo mudándose en este dirección con esto modelo, porque está enfocado en visualizaciones donde nosotros nos centramos en extracción de información o conocimiento de documentos. Pero sí, puede ser seguro paralelismos que modelos de ayuda usar lenguajes comunes para aceleración codificación. Pero sí, esto no está dentro del alcance de este trabajo. Sí. Verdadero. Entonces, hay dos cosas. Creamos documentos artificiales o sintéticos, como ellos llamado, para publicación general- capacitación que incluye SFT y RL. Sin embargo, Pasando al tuyo específico preguntas sobre RL, nosotros no...puedes generar documentos sintéticos y allí. Sin embargo, lo mejor lo que se puede hacer es tomar difícil documentos reales, lo cual te ayudará configurar modular pruebas o diferentes tipos recompensas, ¿verdad? Digamos recompensa basado en la frecuencia personajes, o estructura de la tabla, o matemático ecuación, o algo así apropiado para el idioma, Por ejemplo, gramático recompensas, etc., y entonces ayuda modelos iterativamente mejorar en basado en reglas que el modelo puede crear de diferentes maneras ajustes. Sí. Sí. Lo siento, dijiste, que eres un gran fan ¿Chandra? DE ACUERDO. Esto es de otro laboratorio. I demasiado grande seguidor laboratorio, que Creado por Chandra. Pero sí En relación a su pregunta sobre la India punto de referencia, nosotros Lanzaremos Sarvam Indic punto de referencia, que nosotros creado para 22 idiomas y cubre enorme período tiempo, a partir del siglo XIX años y hasta el día de hoy, así como diferentes tipos diseños y documentos en lenguas indias. ¿Te lo imaginas? documentos con prosa, poesía, literatura, hojas de cálculo, finanzas y todos los demás. Pronto nosotros también lo haremos. publicaremos esto punto de referencia para acceso público. Entonces, traducción y más precisamente transliteración, aquí no está directamente involucrado, porque en OCR nosotros interesado en alta precisión minería de datos. ¿Bien? ¿Quieres? para que incluso si en Hay un error en la imagen. fue extraído correctamente, no para que El modelo realizó cambios A su discreción. Atrás eso no es del todo aplicable, pero sí, vemos mucho datos que actualmente pasando transcripción incluso para aprender LOC. Y aún se desconoce cuál la calidad de estos datos y cuánto ellos útil, etc. Sí. Sí .</p>
+</details>
+<h3>14亿人口的数字主权与下一代Agent基石</h3>
+<p>对于拥有 14 亿庞大人口、正处于高速数字化跃迁中的发展中国家印度而言，智能文档处理不仅是一个商业算法赛道，更是支撑整个国家现代治理与数字主权的核心生命线。目前印度全社会各个领域仍运转着极为庞大的纸质行政审批流与线下纸质凭证，而放眼全球现存的前沿 AI 大模型——无论是闭源的商业寡头还是全球顶级开源项目，在应对繁杂且充满方言异构性的印度本土现实文档时，普遍表现极差，甚至处于无法实用的真空状态。</p>
+<p>在这一背景下，建设由本土全要素掌控的自主基石模型，兼具了三大不可替代的战略必要性：</p>
+<ul>
+<li><strong>数据主权与物理合规</strong>: 对于国家核心部委、政务机构、商业银行以及保险财团而言，将其关涉国家安全、公民隐私与经济命脉的未脱敏档案发送至境外不受管制的闭源 API，在合规与国家安全层面是绝对不可接受的。主权模型提供了在本土基础设施上完全自主闭环部署的底线保障，彻底杜绝了敏感数据外泄的风险；</li>
+<li><strong>构建下一代智能体的原生数字资产</strong>: 人类正在迈向以个性化、多语种 AI 代理（AI Agents）为代表的通用智能时代。但如果现存世界中支撑医疗、司法、农业和教育的海量真实文档无法被机器高保真地感知和消化，多语种本地代理就如同空中楼阁。通过高质量的主权数字化工程，所沉淀出的极高纯度结构化知识，将成为反哺后续更大规模基础模型与智能体演进的最关键燃料；</li>
+<li><strong>算法与工程要素的本土自持</strong>: 在数据配比上，Sarvam 团队构建了严格受控的黄金数据池——约 <strong>40% 为 22 种印度官方语言原生数据</strong>，其余 <strong>60% 为高质量英语、数学体系与代码逻辑语料</strong>。这种科学配比不仅确保了模型在跨语种任务中的推理韧性，也真正打通了从底层学术研发到顶层产业赋能的自主闭环。</li>
+</ul>
+<p>如今，在 Sarvam Vision 正式投入商业化运营的短短四个月内，其在各联邦邦级政府与核心行业落地中已高质量完成了超过 <strong>3,500 万页</strong> 复杂历史档案、公文表格与混合文档的结构化解析转换。伴随这一智能化流水线在全印度的持续铺开与数据飞轮的高速运转，一场由自主主权基石模型驱动的国家级数字基础设施变革，正在真正从蓝图走向纵深。</p>
+<details>
+<summary>Original English</summary>
+<p>Bien. Hay varios momentos que valen la pena tener en cuenta. En primer lugar, ningún otro líder modelo, con cerrado o de código abierto, no funciona bien con complicado documentos en lenguas indias. ¿Bien? Entonces, para países con población 1.400 millones de personas ¿Quieres tener? posibilidad para resolver sus problemas cotidianos relacionado con el análisis documentos, porque en India hay muchos papeleo. ¿Bien? Este es un país, en desarrollo y ella todavía digitalizado directamente ahora, por lo que es importante, existir en absoluto posibilidad presentación o digitalización del país. En segundo lugar, ¿qué? en lo que respecta a la educación, nosotros, en particular, creamos datos que pueden ser agregar a muchos procesos adicionales enseñanza. Entonces, estamos en etapa muy temprana de cómo se está convirtiendo la IA parte ordinaria de nuestras vidas y para nosotros Se necesitan datos para para finalmente llegar a ese punto cuando podamos tener personalizado agentes en el idioma que usted ¿Qué prefieres? en el idioma que yo doy ventaja, y cómo lo haría yo Yo no quería eso. Entonces, para hacer todo esto, necesitamos algo comenzar y los datos tienen ser creado. Y si Los datos son cualitativos, ayuda al modelo para convertirse en el más moderno. Y si el modelo el más moderno, luego desde compañías de seguros al estado organizaciones y otros, ¿A quién le importa? soberanía en el terreno Inteligencia artificial, ¿verdad? Como agencia gubernamental, no soy yo Puedo permitir despliegue del modelo en otro lugar, sin saberlo, ¿Adónde los envían? datos para transcripción. Por lo tanto yo debe tener posibilidad para controlar dónde Se están enviando datos, cuando ellos se utilizan como a menudo y así sucesivamente. Por lo tanto La soberanía se convierte en muy importante y por lo tanto este modelo ahora, Ya han pasado cuatro. meses a partir de la fecha lanzamiento, y ya estamos digitalizar 35 millones de páginas. Esto demuestra que el mercado estaba esperando algo soberano en esta área , que realmente puede para iniciar una ola digitalización de IA en India. Entonces, sí, principalmente tres aspectos. Uno es soberanía, otra— posibilidades de la misma modelos, y el tercero— datos necesarios para entrenar estos modelos. Sí, eso es el 40% de los indios. idiomas y el resto— Inglés, que incluye matemáticas, código, etc. OK. Sí. Una cosa interesante pregunta. O utilizamos ¿Por qué? ha existido en la India desde hace mucho tiempo diferente en lenguas regionales como parte de esto proceso para mejora del modelo ¿ Actualmente en proceso de despliegue, que hemos llevado a cabo para con esta ayuda modelos, que cubren diferentes estados, intentando digitalizar lenguas regionales junto con todos Inglés y mezclado documentos y por lo tanto pronto podremos estudiar en reseñas que nosotros obtenemos de actual implementación. Así que sí , también lanzamos esta cinta transportadora.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Sarvam" class="entity-link company-link">Sarvam</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Sarvam Vision" class="entity-link product-link">Sarvam Vision</a>, <a href="/search/?q=Akshar" class="entity-link product-link">Akshar</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">state-space-model</span>
+      
+        <span class="tag-pill tag-pill--no-page">document-ai</span>
+      
+        <span class="tag-pill tag-pill--no-page">optical-character-recognition</span>
+      
+        <a class="tag-link" href="/tags/reinforcement-learning/">reinforcement-learning</a>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

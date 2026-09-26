@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>终结半世纪的速度停滞：Boom Supersonic 如何重构超音速客机与航空发动机工程</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="终结半世纪的速度停滞：Boom Supersonic 如何重构超音速客机与航空发动机工程" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">终结半世纪的速度停滞：Boom Supersonic 如何重构超音速客机与航空发动机工程</span>
+      <span data-pagefind-meta="speaker" style="display:none;">All-In Podcast</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>All-In Podcast</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-22</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/all-in-podcast/">All-In Podcast</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=Gnb-CfNPcPE" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-22
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">Boom Supersonic 创始人兼 CEO Blake Scholl 详述了团队以 50 人的精益规模打造出首架民营超音速喷气机 XB-1 的历程。通过“无音爆巡航”大气折射技术破解监管禁令，并在遭遇传统航发巨头毁约后决然转向端到端垂直整合，自主研发高性能喷气发动机核心机并延伸至数据中心离网供电，开启超音速客运普及的新时代。</div></div>
+      
+    </div>
+    <h3>破除停滞：五十人团队对决半个世纪的航空固步自封</h3>
+<p>1969 年人类成功登月，并将民航客机送入超音速领域；然而半个多世纪过去，人类不仅未能重返月球，民航客机更被禁锢在亚音速空间之内。<strong>协和客机</strong>（Concorde: 20世纪英法联合研制的首款商业超音速客机）遗留下的政治遗产，是美国乃至全球对超音速陆地飞行的长期禁令。<strong>波音</strong>（Boeing: 全球传统航空制造巨头）在 1957 年凭借 707 带领人类迈入喷气时代，但纵观如今的航空工业，其最新机型本质上不过是初代机型的碳纤维复刻版。事实上，在波音 2004 年启动上一款全新机型项目之后出生的实习生，如今都已进入行业工作，主流巨头在真正的航速创新上如同陷入沉睡的歌利亚。</p>
+<p>面对这种技术停滞，挑战行业巨头的尝试往往始于微末。十二年前，作为一名出身于亚马逊与 Groupon 的软件工程师，我仅拥有一张私人飞行执照，妄图打造超音速客机在外界看来无异于天方夜谭。2015 年我向老上司<strong>杰夫·贝佐斯</strong>（Jeff Bezos）推介 Boom 的种子轮融资，遭到婉拒。贝佐斯随后在 2015 年亚马逊致股东信中写道：“世上有些事情唯有大公司才能胜任，无论你多么优秀，你都不可能在车库里造出一架全复合材料客机——至少造不出有人敢坐的客机。”当时 Boom 的机舱全尺寸模型确实只是由纸板、胶合板以及从 Office Depot 买来的办公椅拼凑而成。</p>
+<p>然而，大事业往往发端于简陋的车库。传统巨头需要数千人才能推进的复杂系统工程，<strong>Boom Supersonic</strong> 最终仅依靠一支 50 人的精益团队实现。去年，Boom 打造出人类首架由私营企业独立研发的超音速喷气机 <strong>XB-1</strong>，并在机身装配了首套超音速 <strong>星链</strong>（Starlink: 低轨卫星互联网终端），通过 iPhone 实时向全球直播试飞全过程。当教室里的孩子们因为看到超音速试飞而起立欢呼时，不仅打破了航空工业几十年的死寂，也证明了精益工程在面对迟钝巨头时的破局能量。</p>
+<details>
+<summary>Original English Source</summary>
+<p>set to fly at Mach 1.7 with 130 orders from major airlines. The founder and CEO of Boom Supersonic, Lake Shaw, Boeing hasn't built a new airplane in 20 years. I mean, it's David and Goliath, but Goliath is like asleep. We're here to bring back supersonic passenger travel and ultimately to make the planet dramatically more accessible. This whole airplane was built by essentially 50 people. By 50 people. The moment you become an expert, what you're steeped in is the past and then you're completely useless. Courage is not being fearless. Courage is acting despite the fear. If there's no boom at all, there's nothing to argue about. The world needs supersonic flight. Passengers deserve it. Please welcome Blake Scholl.</p>
+<p>Good morning, Houston. We have a problem. In 1969, we landed on the moon and we flew an airliner through the sound barrier. Yet more than half a century later, we can't go to the moon and we can't fly faster than the speed of sound. The legacy, the political legacy of Concord was a ban on supersonic flight over the US. Boeing brought us into the jet age in 1957 with the 707. But fast forward to today and their latest airliner is a literal carbon fiber copy of their first. By the way, we have interns born after the last time Boeing launched a new airplane in 2004. This is insane.</p>
+<p>But imagine an alternate timeline in which innovation and flight had continued. What if we could cross the Atlantic in three and a half hours? What if Sydney were as accessible as Honolulu is today? What would that do for business, for culture, even for love? Who could do something about this? 12 years ago, I was a software engineer and an ads guy from Amazon and Groupon. The idea that somebody with nothing more than a pilot's license could do something about this seemed laughable. In 2015, I pitched my old big boss, Jeff Bezos, on Boom's seed round, and he passed. And then he wrote this in the 2015 Amazon shareholder letter. There are certain things that only large companies can do. No matter how good an entrepreneur you are, you're not going to build an all composite airliner in your garage startup. Not one that you'd want to fly on anyway. I took that a little personally, but I don't blame Jeff. This is what our garage looked like back then. And this was actually a slide from our pitch deck that's that is in fact a supersonic airliner mockup made from cardboard plywood and seats from Office Depot.</p>
+<p>But big things often have humble beginnings. And fast forward to last year and Boone became the first private company ever to build a supersonic jet. Something that the big companies would have put thousands of people on, we did with just 50 really dedicated men and women. And when we flew that airplane, we had the first supersonic installation of Starlink so people around the world could tune in watching a video filmed on an iPhone streamed via Starlink. And my favorite part was the pictures that people started sending me from classrooms. Kids that would have tuned out on flight instead tuned in. Some of them stood up and some of them even jumped up and down. Isn't that great? One of those is a future chief engineer. I guarantee it. I'd like to invite you now to relive that moment with me.</p>
+</details>
+<hr>
+<h3>物理破解监管：无音爆巡航与半世纪飞行禁令的终结</h3>
+<p>回顾航空史，从莱特兄弟基蒂霍克起飞，人类便不断追求更高、更快的飞行极限。1969 年协和客机揭开了超音速客运的序幕，却在 2003 年彻底退出历史舞台，音障再度成为无法逾越的天堑。2025 年，技术验证机 <strong>XB-1</strong> 成为人类历史上首架突破音障的私营研发喷气机。更重要的是，这次突破并非单纯复刻过去的速度，而是从物理机制上彻底解决了长期困扰超音速飞行的<strong>音爆</strong>（Sonic Boom: 飞行器超音速飞行时产生的强烈激波震耳噪声）问题。</p>
+<p>在技术路径的选择上，XB-1 采用了一种比传统几何外形修形更为简洁纯粹的机制——<strong>无音爆巡航</strong>（Boomless Cruise / Mach Cutoff: 利用高空与地表大气的温度和密度差异产生自然折射，使向下传播的冲击波呈 U 型向上反射、绝不触及地面的超音速巡航技术）。正如“一棵树在空无一人的森林中倒下，到底有没有发出声音”，机体产生的标准强度激波在空中完成折射消散，地面上完全听不到任何震响。该机制可在达到约 <strong>1.3 马赫</strong>（约比现行客机快 50%）的巡航速度下完美运行。这意味着从纽约飞往旧金山只需在上午 9:00 起飞、9:30 即可降落；而在飞跃无居民定居的大洋上空时，客机则能完全释放动力，以 1.7 马赫全速飞行。</p>
+<p>解决物理层面的音爆直接击碎了长达数十年的监管死锁。如果地面不存在音爆，禁飞的法律支点便不复存在。突破音障后，我们迅速推动监管层打破始于 1973 年的超音速陆地飞行禁令，并在白宫签署行政命令后进一步推向立法体系。最终，保障超音速飞行合法化的法案在众议院以及参议院全票无异议通过。以确定性的物理机制消除外部负外部性，是硬核技术重构落后行业法律体系的最有效途径。</p>
+<details>
+<summary>Original English Source</summary>
+<blockquote>
+<blockquote>
+<p>From that fateful moment, the Kittyhawk. We strove to fly higher and faster. This pilot and this airplane are about to be the first ever to fly faster than the speed of sound. Concord showed us the future of passenger flight in 1969. In 2003, we lost all that. Good morning. For the last time, Speedboard Concord 2. The sound barrier was back. But we are still pioneers, and humanity will always want to reach higher. A small team with a big dream. In 2025, XB1 became the first privately developed jet to break the sound barrier. You are go for Mach 1.1. But this time, we demonstrated that supersonic flight could be boomless. And now the sound barrier can stay broken.</p>
+</blockquote>
+</blockquote>
+<p>Thank you. Uh, I thought that would get old, but it never does. Uh, XB1 uses actually a far simpler technique than others have talked about to solve sonic boom. We call it boomless cruise, and it uses the natural refractive power of the atmosphere to redirect the sonic boom upwards. So, it's like if a tree falls in a forest, but no one was there to hear it, did it really make a sound? And uh, we talked to the president shortly after breaking the sound barrier. and uh he agreed if there's no sonic boom there should be no ban on supersonic flight. So that ban that started in 1973 actually ended June 6th of last year. But this was just an executive order and theoretically some idiot could reverse it, right? So we went to Congress and we said you should make that permanent. And the supersonic legalization act passed the house. Anybody guesses what the vote was? It's actually unanimous. It's unanimous and it got out of Senate Congress unanimously recently and now we have to get it through the rest of the Senate and I think we should just do it unanimously, right? Because that's badass. So, okay. So, it's all full speed ahead, right? And like we get to look forward to super passenger flights soon.</p>
+</details>
+<hr>
+<h3>被迫激进化：自研航发破局与工业制造链的垂直整合</h3>
+<p>在超音速客机的发展路径上，最大的生死考验莫过于动力系统。创业早期我犯过的最大错误，是试图将发动机研发外包给传统航空发动机巨头。当合作关系破裂、<strong>罗尔斯·罗伊斯</strong>（Rolls-Royce: 英国著名航空发动机制造商）高调宣布退出后，行业内几乎所有人都断言 Boom 已经死亡。面对传统供应链的封锁，唯一的生存方式就是选择所有人认为绝对不可能的技术路径：<strong>从零开始独立研发专属于该机型的喷气发动机</strong>。</p>
+<p>事实证明，摆脱传统巨头的束缚反而打开了技术代差跨越的空间。我们不再受制于老牌厂商依赖外包与<strong>净资产收益率</strong>（Return on Net Assets: 驱使传统大型工业企业将高价值资产外包剥离的财务指标）的短视模式，而是深度融合现代数字设计与数字智能制造。工程研发与底层制造必须在物理上紧密集成：从原材料开始，到难度极高的涡轮单晶叶片与导向叶片，全部在自建的先进涡轮制造工厂内实现自主生产。我们首款全自研、高度垂直集成的喷气发动机核心机已完成总装，并即将进入试车台测试。美国制造业的真正复兴，不是低水平重召旧日流水线，而是以全新一代先进制造技术，攻克高精尖产品的心脏环节。</p>
+<p>极具戏剧性的是，当年险些致公司于死地的发动机危机，如今却反转成为超音速商业闭环的造血引擎。专为 1.7 马赫全工况、高负荷与高温恶劣环境设计的超音速发动机核心机，在卸掉前端风扇、并在后端接入发电机后，便能立即转换为<strong>离网分布式发电设备</strong>。首批商业化应用并非直接飞上天空，而是直接部署于能耗巨大的<strong>AI 数据中心</strong>：仅需两台拖车空间，就能就地交付高达 <strong>42 兆瓦</strong>（MW）的高可靠电能。更重要的是，由于核心机天生具备适应超音速高温运行的热力学特性，整套系统<strong>完全不需要消耗水资源进行冷却</strong>，彻底消除了困扰现代算力基础设施的耗水环保阻力。一座规划产能达数吉瓦（GW）的高级涡轮工厂已正式投产首批部件，未来五年预计将为电网注入超 10 GW 的清洁高效容量。以地面的高强度连续发电验证反哺航发耐久性，使我们未来的超音速客机在起飞前就拥有世界上经过最严苛地面运行检验的发动机。</p>
+<details>
+<summary>Original English Source</summary>
+<p>But wait, there was actually a problem. Not that long ago, people declared boom dead. One of the dumbest things I ever did was try to outsource our engine development to a big old company. And that that plan didn't work out. And uh we broke up with Rolls-Royce very publicly and people said we were doomed. So we decided to do the thing everyone said was really impossible to make our own engine from scratch to pair perfectly with the airplane. Turns out turns out that effort's actually working and uh we had an opportunity not just to build our own jet engine but to reinvent how engines are designed with the world's most advanced digital design tools and then to change how they are actually manufactured also with the power of digital manufacturing. So we're not just designing our own engines, we're not just making our own engines, we're making our own engine parts down to the turbine blades.</p>
+<p>I have one of those with me this morning. Uh my girl was like, &quot;Is that a turbine blade in your pocket or are you happy to see me?&quot; So, our philosophy is that engineering and manufacturing have to work together. And we if we want to re-industrialize America, we need to invent the next generation manufacturing technology here and uh use that to build the most incredible new products, not just try to bring back what we lost to China. So, as we speak, our first vertically integrated jet engine core is getting assembled and it's going to be in a test stand next month. So, things are starting to get pretty pretty exciting.</p>
+<p>Now, in a in a bizarre twist of history, the thing that everyone said would kill us that we didn't have a big company make us an engine actually turns out to be the thing that makes a supersonic startup financially valuable. Because it turns out if we take our supersonic engine technology that's designed to run full duration at high power in a hot environment at Mach 1.7 and we take the fan off the front and instead we put a generator in the back. It does this. Right? So our first application of our engine isn't in the sky. It's actually on the ground for data centers. And we can wrap this up in a couple trailers and we can deploy 42 megawatts for behind the meter power generation with a supersonic engine core that's designed to run hot so it doesn't need any water. I think we all know the water thing is kind of a objection but why not make it go away.</p>
+<p>So, as we speak, we are building in an undisclosed location the world's most advanced jet turbine factory. And our philosophy is the exact opposite of what you find at every legacy big company with lots of outsourcing and a return on net assets philosophy that makes you spin out your crown jewels. So we are manufacturing our own engines at scale starting from raw materials then going to the parts including the most difficult ones like blades and veins and then assembling them and then running on our own test stand. And the factory you're looking at here made its first parts last week and it will scale to making multiple gigawatts per year and over the next 5 years we aim to add 10 plus gigawatts to the grid. What this means is as future passengers, we get to look forward to flying faster than the speed of sound, twice as fast over water, 50% faster over land with no sonic boom, and doing it on what will actually be the most tested new jet engine ever made, thanks to being proven on the ground first. So, there's still many, many hard problems to solve. Success is not guaranteed, but I think there's a lot of reason to be excited for a faster future, a more connected world and American leadership in aviation. Nicely done, Blake.</p>
+</details>
+<hr>
+<h3>商业测算、地缘行政效能与大众超音速的终局图景</h3>
+<p>对于大众最为关心的商业落地节点与票价模型，技术落地的关键在于兼顾<strong>安全、舒适与经济承受能力</strong>。协和客机在这三点上几乎交了白卷，而新一代超音速客机必须做到三者兼备。以大西洋往返航线为例，以 1.7 马赫航速耗时仅需 3.5 小时，单座盈亏平衡票价控制在约 <strong>3,500 美元</strong>。这意味着只要定价略高于此基准，采购 <strong>Overture</strong>（Boom 研发的旗舰量产型超音速客机）的<strong>美联航</strong>（United Airlines）等大型航空公司就能实现相当可观的商业净利。目前的量产目标期限定为 4 年左右（指向 2030 年前后），但在硬核工程创新领域，“保持极限开发速度远比强行迎合预测更重要”。</p>
+<p>与此同时，由发动机技术衍生出的数据中心离网电力业务，展现出极其惊人的现金流爆发力。面对人工智能集群爆发式涌现的用电荒，公司收件箱内已堆积了数十吉瓦（GW）的电力意向订单。在下个月第一台地面核心发电机测试完成后，这些电力配额将直接以竞拍方式推向市场。不仅解决了超音速整机研发周期长、资金消耗大的传统硬科技瓶颈，更以实际营收证明了颠覆式航发核心技术的跨界商业价值。</p>
+<p>在行政准入与公共政策推进上，效率亦被推向了极限。周一飞机突破音障后，相关推文由<strong>埃隆·马斯克</strong>（Elon Musk）转发并迅速引发关注；当晚我便飞抵华盛顿启动立法攻坚，周二即收到白宫西翼邀请，周四客机全比例模型便已入驻总统椭圆形办公室，最终在短短 115 天内促成了总统行政令的签署。超音速飞行正在跨越党派分歧，成为重振高端制造共识的催化剂。</p>
+<p>这项事业的终极目标，绝非仅仅为少数富豪制造私人飞机，而是重塑整个人类社会的时空感知。正如我四岁半的小女儿在两岁半看模型火箭发射时，无法理解为什么火箭没有像 SpaceX 那样自主飞回发射台一样——未来新一代的孩子将把超音速出行视为理所当然。当我们需要向下一代费力解释“过去横跨美国大陆竟然需要痛苦地耗费 6 个小时”，而孩子们只会反问“为什么会有人愿意忍受那种慢速”的时候，超音速才算真正取得了彻底的胜利。</p>
+<details>
+<summary>Original English Source</summary>
+<p>We're going to talk for a second. Stay here. So, couple of questions for you. Um, really, when can we get on that plane? How much will it cost? Two very simple things. I'm looking for a date and a number. &gt;&gt; A date and a number. Right. These are my favorite questions. I'm sure your board asks once in a while, you know. I mean, the thing about, you know, faster flight is everybody wants it so long as it's safe, comfortable, and affordable. And Concord is really like zero out of three. And we should be able to do three out of three. So, I'll give you the numbers. Round trip across the Atlantic at Mach 1.7, 3 hours, and the break even fair is about $3,500. So, if &gt;&gt; each way &gt;&gt; round trip, no round trip, that's the break that's the break even. And so, of course, it will probably go for more than that. But but any dollar above that, United's making some good money. &gt;&gt; Okay, fantastic. &gt;&gt; And when our goal is 4 years, uh but I think, you know, I think I've learned along the way is it's more important to be fast than to be predictable. Uh so how long will it actually take? I can't say with certainty, but we are uh we're moving as fast as we can and we'll make sure that it's available at the earliest date that it's physically possible. &gt;&gt; So we're looking at potentially 2030 uh give or take Blake versus say Elon timing. So, when you're doing the impossible magical thing, it can take a little extra.</p>
+<p>Um, you keep talking about over oceans, but my understanding, you were on this week in Startups a couple times uh early on, was that you're making it uh that the sonic boom is going to go away and become like a a sonic thump or a a sonic pow or something. It's going to be like a lot less. &gt;&gt; It's a it's a sonic nothing actually. Like like literally. So there there are two different techniques that people use for boom mitigation. And uh the one we're using is called we call it boomless cruise. The the nerds call it mock cutoff. The boom comes off the airplane. It's kind of a normal strength boom and it makes a big U-turn in the sky and never touches the ground. &gt;&gt; And it and that works up to about Mach 1.3 or you know 50% faster than how we can fly today. So you you can't go full speed boomless. Uh, but you could still go fast enough that you could leave New York, say, at 9:00 a.m. and land in San Francisco around 9:30 a.m. Uh, so it's still going to be pretty, it's still going to be pretty great. And then over water, you can go full speed, but no one's there to hear a boom. &gt;&gt; I mean, this is the key. I think everybody wants to know the New York to Los Angeles, San Francisco time.</p>
+<p>Um, how is the um data center project going? Do you have customers for this product already? And how many h how much is coming in? What's the Let's talk dollars here because running a uh building the Concord is quite expensive as Mr. Bezos uh pointed out to you, but this seems like a money printing business. Is it printing money? &gt;&gt; Uh it's an incredible money printing business. I mean I I've never seen demand like this for anything else in my life. How many orders? Give us 10 customers. &gt;&gt; Are tens of gigawatts of demand in my inbox. We're going to run that first engine next month and then we're going to auction it all off. &gt;&gt; Did you Did you talk to Elon about it? Did you is he uh interested for the Colossus? &gt;&gt; You should ask Elon. &gt;&gt; Okay, that's a yes. Okay, good enough.</p>
+<p>Um do you ever think that like as a name of a company for an airline, Boom might be tempting the fates? I got it. I have a punch up for you. How about Zoom? You know, no one's ever asked me about this before. No, it's like it's like Boom and you're there. It's fun. And we called the company Boom because I thought the sonic boom was never going to be the blocker. And so Boom is the company. The airplane is overture. Uh we wanted uh we wanted an innovative brand for the company and something for the airplane itself that would uh have real gravitas. There there are um some individuals who might look at this and say any chance at a private aviation option in the 2.0. Is there is that a good business for you to be in to provide, you know, compete with Gulfream and and and and Falcon? &gt;&gt; Well, I I hope the private jet guys will make a supersonic jet. They should. If they if they don't, I guess we'll do it. Okay.</p>
+<blockquote>
+<blockquote>
+<p>But let's let's talk about the future. I mean, the um I'll I'll tell a story. So, my my daughter, my youngest daughter, who's four and a half now, when she was 18 months old, we'd watch Rocket videos. Uh when she was 2 and a half, I took her to watch uh a model Estie's Rocket. and I'm just the person I am. So I get the smallest little rocket and I put the big D motor in it and so that thing goes and it ends up in a tree three fields over and uh I thought it was pretty cool but she was upset and it took me a moment to realize why she was upset which is she expected the rocket to come back to the pad. &gt;&gt; I had done nothing but watch rocket landing videos with her like literally her entire life. Um and uh and what I realized is for supersonic there's an analogous thing. uh we will have won when we've sped up flights for every passenger from the president on a supersonic Air Force One to a supersonic private jet to supersonic commercial flights that are available to every class of passenger. And so when you have to convince kids that it used to take 6 hours to cross the country and they're like what are you talking about dad? Like who would even do that? Like New York's not worth it if it takes six hours to get there. &gt;&gt; Uh that's when we've won. &gt;&gt; Yeah. So, &gt;&gt; so that will take many generations of airplanes, but we're not giving up.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Um, final question. The company's now getting close to 10 years. &gt;&gt; 12 in fact. &gt;&gt; 12 in fact. Yeah. Okay. So, very close. You passed it. Um, you've had to work with multiple administrations. It's not a political show most of the time. Um, I mean, when Trump's ratings are high, it's a political show. If they go low, talk a little less about it. But, um, thank you. uh talk about how this administration has you has this administration compared to the last one uh in terms of embracing what you're doing cuz this is pretty exciting that you've been able to make such quick inroads in terms of regulations and and that it's a big issue for your company specifically. Yeah. &gt;&gt; Well, I I think I mean first off I think it's really cool that supersonic flight is not a partisan issue and that we're able to get stuff through Congress unanimously. Uh that said, I love how fast this administration moves. Like it was uh we broke literally we broke the sound barrier on Monday. Uh I tweeted about it. Uh Elon reposted my tweet. I flew to DC that night to start the legalization campaign. By the time I landed, I had an invitation to the West Wing. So that's Tuesday. &gt;&gt; Yeah. &gt;&gt; Uh by Thursday, uh our airplane model has made it to the Oval Office. And by the way, it's still there. &gt;&gt; Yeah. &gt;&gt; It's like one of the greatest product placements of all time. Like there's a supersonic jet model in the Oval Office. like I kind of love it. And then it took 115 days to get the executive order signed. To to me that felt slow, but um it probably would have taken longer in a different administration. &gt;&gt; Yeah, I think Biden's um going to call you back in about two or three weeks from when you called him eight years ago. Yeah, it's a joke. Sounds fast. It's a Biden joke. All right, let's give it up for Blake one more time. All right, great job.</p>
+</blockquote>
+</blockquote>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Boom Supersonic" class="entity-link company-link">Boom Supersonic</a>, <a href="/search/?q=Boeing" class="entity-link company-link">Boeing</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=XB-1" class="entity-link product-link">XB-1</a>, <a href="/search/?q=Overture" class="entity-link product-link">Overture</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">supersonic-flight</span>
+      
+        <a class="tag-link" href="/tags/vertical-integration/">vertical-integration</a>
+      
+        <span class="tag-pill tag-pill--no-page">jet-engine</span>
+      
+        <span class="tag-pill tag-pill--no-page">aero-propulsion</span>
+      
+        <span class="tag-pill tag-pill--no-page">distributed-power</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

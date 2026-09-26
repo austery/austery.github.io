@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>超越演示陷阱：构建99.4%商业级高可靠性具身智能基础模型</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="超越演示陷阱：构建99.4%商业级高可靠性具身智能基础模型" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">超越演示陷阱：构建99.4%商业级高可靠性具身智能基础模型</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-24</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=Sjfz1TqxzEs" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-24
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">Dyna联合创始人Jason Ma阐述了如何通过构建包含20万小时数据的预训练金字塔与分层模型架构，打破机器人“演示成功率80%但在实际生产中不可用”的困境。结合奖励模型与主动学习恢复闭环，其Dyna-1模型在餐巾折叠任务中达成24小时连续运行99.4%成功率，并实现了跨非受控场景的零样本泛化部署。</div></div>
+      
+    </div>
+    <h3>具身飞轮：从研发到商业部署的数据金字塔</h3>
+<p><strong>Dyna</strong>（Dyna Robotics: 具身智能通用操作模型研发公司）成立于2024年9月，已完成约1.2亿美元的A轮融资，其核心使命是为现实世界构建具备高鲁棒性的<strong>具身智能基础模型</strong>（Foundation Model Autonomy: 能够驱动硬件在物理世界中完成多样化高价值经济任务的通用模型）。传统的机器人研发往往局限于实验室演示，而Dyna的核心假设在于：要真正让机器人达到商业级水准并在现实中执行有价值的任务，公司必须将<strong>前沿科研</strong>（Frontier Research）与<strong>大规模商业部署</strong>（Commercial Deployments）深度融合，构建一套科研与部署互为催化的飞轮系统。内部自研的硬件与算法研发决定了商业落地的场景与工作流边界，而走向真实的部署现场则能反哺高质量的部署数据，暴露模型与硬件的缺陷，从而明确机器人领域最具决定性的核心攻坚问题，避免陷入学术玩具或单纯拍摄YouTube演示视频的陷阱。目前Dyna已经在多种不同任务场景中拥有超过5个实际部署点。</p>
+<p>在构建通用操作模型的工程实践中，单靠机器人本体采集的数据极其稀缺，因此必须建立一套面向物理世界的<strong>预训练数据金字塔</strong>（Pre-training Data Pyramid）：</p>
+<ul>
+<li><strong>底层离机泛化数据</strong>：包含人类佩戴第一人称视角相机采集的日常活动、公开机器人数据集，以及探索中的仿真合成数据；</li>
+<li><strong>中层多场景真机数据</strong>：在工业、家庭、自助洗衣店及酒店等多样化物理环境中采集的各类复杂操作任务轨迹；</li>
+<li><strong>顶层商业部署数据</strong>：直接来源于实际商业落地场景的高质量闭环数据，专门用于拉近模型训练分布与现场测试分布之间的鸿沟。</li>
+</ul>
+<p>截至目前，Dyna的训练流水线中已汇聚了超过20万小时的物理交互数据。在架构设计上，Dyna采用了由负责语义理解与宏观规划的<strong>高层推理模型</strong>（High-Level Reasoning Model）与负责高频灵巧微观控制的<strong>底层世界动作模型</strong>（Low-Level World Action Model）构成的双层系统。该模型在理解现实物理语义的同时，能够感知细粒度的物理交互并在出错时具备纠偏能力。得益于高质量预训练底座，模型在面对诸如清理垃圾、开箱、折叠毛巾和折叠T恤等基准测试时，即便某些任务完全未在预训练阶段出现，也仅需不到1小时的特定任务微调数据，即可实现高灵巧度、连续无故障的可靠执行。</p>
+<details>
+<summary>Original English Source</summary>
+<p>[Speaker 2]: thanks for a kind introduction. so jason cofounder dina today, i'll talk about how are we developing high performance and very robust generalalist robotic policies. yeah, so let's jump into it. so today's talk will focus on, you know how we are bring robost into commercial, great. and what we are doing to make these models, like i said, very high performance robust. so just a brief introduction are a company. so our missions to build very robust foundation model autonomy in the real world. so we want to train models. and these days also hardware to have a single platform that can do many economically useful physical task in the real world, like the ones. we're showing here. so the company was founded in september twenty twenty four, where a series a company company had raised about a hundred twenty million dollars, and we focused on general purpose manipulation. and our theysis is that to actually bring robots insider real world being at commercial grade, doing useful task. the company needs to combine doing frontier research with a lot of commercial deployments, so we can build what we consider a research and deployment in a fly wheel, which is that the research and hardware we do in house, the RND informs the kind of tasks, the kind of workforce in the real world that we can commercialize. so we actively try to deploy. so these days, we have more than five deployment size to in bunch of different tasks, which i will sh talk about in a bit. and then by building product and by deploying robots, it does several things ones that it can help us gather high quality deployment data. and it could also tell us what our models and what are harbor is not good at yet. so it helps us sharpping our research focus to figure out what is the right problem to work on in robotics. because if you're familiar with the robotic field, there are too many problems, there are too many different fields. you can spend your effort on and about deploying and by building a product, we know exactly the right kind of problems. have we need to focus to actually make a robotics, not just a demo where videos you see a youtube, but rather in the real world impact in millions of people's life. so before i jump into will will be specifically work on a dinner. just a very quick introduction on the kind of models were training for robotic manipulation. so at a high level, we do data collection where you know there's a lot of data being collected. so here's a video of me, manipulating a robody hardware to you know, for the t shirt. and once to collect enough of this kind of data, you can put all of them in a large neor network, and a neyear network essentially takes in a you know representation of the world. in this case, just camera feed of what the you know a table looks like. and the outputs robots, you know, joint positions were talk to actually control the robot to do it, ask that you have collected data on, right? so, you know, this is the hihigh level of how robot models in the real world function. so how are we actually scaling us up to actually create models? it's generalizable, and it can do a lot of different tasks. so dindinwe, we cucus on. we call the pretraining data pyrammid for the real world, where we gather a lot of diverse off robot data, just because robotics atata very scarce. so we have data capture from humans wearing cameras from public data sats. and these days, we also considering some simulation data, but if you only have off robot data is not actually enough to get robots to do very precise actions. so on the robot themselves, we also collect diverse tasks collected in many different scenarios on many different types of task, like industrial task, household in the laonger omat. and you know, hotels. and finally, because we're also deployment robots, we can collect very high quality dedeploment ment ata, which collethe modedel to close train and many test distribution. because when you're developing robots, you know most of the time your robots are in your facility in your ababitories. but if your dedeployrorots ses in a very different environment, so we found that by combining these three data sources, we can actually train large scale foundation models that work very well in the real world. and so far, we have more than two hundred thousand hours of data in our training pipeline and our model architecture roughly folfollows, high level reasoning model with a low level, a world action model that can actually output that dexious actions, fine grained, high frequency, right? so this is the kind of architecture we have, because in the real world, if you think about a robot doing physical tasks, you needs to have a semantic understanding of the world, but also needs to understand a physical interaction at a fine grained level to be actually able to, you know, recover from mistakes. and a very precise actions to complete the task. so once you combine, you know this architecture with a lot of data, what happens is that the model can be rapidly fine tune to the bunch of different testing in the real words. yeah. so here just a gallery of the kind of benchmark task we are doing in the office. so he spends from, you know, like cleaning trash opening a box to you know, things like folting, towels, folting t shirts. and also just bunch about our tasks or researchers had thought about. and what's really interesting is that with the good pretrayed model, even without any you know, for some of these task on showing you here, they are not in the pretraining data at all. but with a good pretraining, you can actually post train a model to do this kind of highty, texas to a use task with a very little amount of data. so both of the videos are seeing here have only been trained on with less than one hour of task specific data, but you can see that the robot can repetivedly do these tasks and over without failure. and i think this is a stepping stone towards actual commercial grade real world deployment, because in the real world, physical tasks need to be done by humans and buy robots over and over. and if your models are not reliable enough, then yes, you can shoot these kind of pretty demos, but it's still very far away from acactual ppointts.</p>
+</details>
+<h3>破除演示陷阱：可靠性鸿沟与奖励模型的主动闭环</h3>
+<p>在当前具身智能领域中，行业普遍陷入了一种<strong>演示繁荣与商业落地割裂的现状</strong>（Status Quo of Manipulation Foundation Models）。许多通用模型能够完成五花八门的任务并制作出赏心悦目的演示视频，但实际单次成功率往往停留在 <strong>80% 到 90%</strong> 的区间。在数学概率上，如果单次成功率只有80%至90%，连续无故障执行10次相同任务的复合概率将暴跌至不足0.1%，这在实际工业与商业部署中完全不可接受。与之相对，传统工业自动化通常采用高度定制的<strong>专用机器人系统</strong>（Specialist Models），例如单一视角的抓取码垛流水线，虽能保证单点任务的可靠性，却毫无通用性和扩展能力，无法快速迁移到任何新任务。Dyna的核心目标正是打破这种二元对立，训练出既具备通用任务泛化能力、又能达到商业级绝对可靠性的模型。</p>
+<p>为了攻克这一瓶颈，Dyna选择了一个具有足够物理复杂度且极具商业刚需的切入点——<strong>高档餐厅的餐巾折叠</strong>（Napkin Folding）。在美国许多餐厅（例如 The Cheesecake Factory），餐巾折叠一直由后厨员工手工逐一完成，极度耗费工时。该任务在物理层面极难处理：机器人必须使用普通的<strong>平行双指夹爪</strong>（Parallel-Jaw Gripper）从一叠餐巾中极其精准地单张分离，稍有偏差夹取了多张就必须自主解离；同时商业客户有着严苛的验收标准，例如餐厅只接收合格的五级折叠（Grade 5 Fold），而二级或三级折叠（Grade 3 Fold）即便折痕仅有1英寸偏差也会被判定为次品。如果仅仅沿用“大规模预训练 + 少量示范后训练”的标准范式，模型在80%的平顺场景下表现良好，但一旦发生轻微失误就会脱离数据分布并陷入死锁，无法自愈。</p>
+<p>针对长程复合操作的自愈难题，Dyna研发了专用的<strong>长程操作奖励模型</strong>（Reward Models for Long-Horizon Manipulation）。该模型通过视觉输入实时评估机器人任务推进的完成度（从0到1打分）：</p>
+<ul>
+<li><strong>单调递增监控</strong>：操作正常时奖励值稳步上升，一旦夹空、偏折或翻车，曲线立即出现明显下挫；</li>
+<li><strong>可扩展自动化监督</strong>（Scalable Supervision）：取代了低效的人工全天候盯防，奖励模型充当背景哨兵，自动定位模型陷入困境的长尾失败切片；</li>
+<li><strong>人在回路主动学习</strong>（Human-in-the-Loop Active Learning）：工程师针对奖励模型捕获的故障案例，进行精准的<strong>错误恢复数据定向采集</strong>（Error Recovery Data Collection），并对模型进行增量微调。</li>
+</ul>
+<p>面对可形变柔性物体（Deformable Objects）近乎无限的物理形变状态空间，穷举采集所有错误是不可能的。但经过数轮主动学习闭环后，模型涌现出了强大的<strong>错误恢复泛化机制</strong>（Generalized Error Recovery）：即使不慎将整叠餐巾掀翻或多抓，也能自主抖动、展开、抚平并继续完成折叠。在最终的<strong>连续24小时测试</strong>中，搭载该技术的新型基础模型 <strong>Dyna-1</strong> 在环境光线随时间剧烈变化（如清晨阳光直射）的真实干扰下，连续运行达成了 <strong>99.4% 的超高成功率</strong>。</p>
+<details>
+<summary>Original English Source</summary>
+<p>[Speaker 2]: so that actually brings us to what i consider the current a status quoal for training, large scale foundation models from a new pulation, which is that the generalist models that can do many, many tasks, like the ones i've been showing you, even though they make pretty videos. ah. what i would tell you that this success strate is actually ah not super high. uh you know when these models are actually deployed, they're about ty ty ninety perperent ent successory. but if you're stuck at eighty to ninety percent successory, then you know the chance that you can do the same task, ten times in our row is actually less than zero point of one percent. and on, on the flip side, in the history of robotics, we have had very specialized robot and a very specialized machine learning pipeline to do singular tasks like picking place. but this kind of pipeline, which is what i consider specialist models are aren't very scalleable, meaning that you can't take the same pipeline to just do a new task. and do an arbitrary task very fast through our mission is to resolve this status pode. and you know, this kind of life economy by training general purpose models that can both to many, many tasks and also be reliable enough for commercial deployments. so also do acactually do that in toyytalk k. briefly taltalk some some of our progress on masterter very comcompletasks their reliably and also taking the same skills to be performance, not only in the environments in the laboratory environments to a trainer, but also being able to deploy to arbitrary customer tes, withwithout tune or without fine tunor adaptation. okay. so let me get to this, right. so the first question we want ansanswer is, can we take? you know the general pretraining position recipe that we have? but to turn these models into models that can be almost to close a hundred percent robust on uh any task. so this is the first research result we published last 啊 for detail. you can check out our block post, but at a high level, you know, if we want to make a model a hundred percrobots on many, many tasks, i think it's very good. the first narrow down on a commercial use case that's reasonably heart, which allows you to make research progress, but also has commercial value. so when we first started the company, uh, but well, we discovered is that if you go to any, you know restaurant, you see fancy restaurant or in some places in the US, you you see a nicely folded napping on the table right for you, right? if you go to cheese k factory, you see those snapkins. and what happens is that in the back office of a restaurant, there's usually uh workers, uh, you know, restaurant employees that's voting these napkines one by one by hand. and that's a maingame process. and a lot of the customers we have talked to are looking into robots, i can actually do the same past. so this is one the earliest case that do did on how the train models to be very robust. so a research result is a model called a diano one, which is they generalist robot foundation model. that's fine teen to do not confolding. they can actually achieve nine nine point four person successory over a twenty four hours span. so here re's a time lapse of the model, you know, doing the task. and uh you know, it's sped up about a thousand times so you can see the clock in the back running very quickly to show the progress. and uh, my favorite part of the video is when the clock you know, hit about, like uh, like seltting m in the morning. so lights, you know, actually come out in the outside. so the environments are actually you know, shifting over time due to the lighting as the robots, forty in apgon, but the models robots enough. and it just keeps going. so how do we actually get to a model that can do this? and uh, first of all, you know, this a video, we put us, not a one time occurrrence. the model can do this many, many times. so in the office, you know, so these are four distinct trials of twenty four hour rs. so before i dive into the techniical detadetajust just hihighlight how difficult ttask. so you see that in the naapkn voting task, you start out with a stack of napping on the site. and what the robot has to do is like, be very precise about picking out exactly one acking from the stack, and then voted and then put it into a bin and not allow the the feal al cases. just come from the fact that you know, parallel job grappers were deploying, you know, the griper may not be precise enough to be able to pick out exactly one acking. and in this situations, the model has to learn how to recover from the mistakes of pulling out action actions. and secondly, the in commercial environment is different from a lap demo, where the seararers like me are thinking of task of success. there's actually very uh well defined success criteria for these task. so on the right, you see the difference between will we consider a great five fowhich, which is a fold diffethat that the restaurant would accept versus a great three, which is something that's below the accepting criteria. and we you see the barely like one inch difference in how you know low the uh you know, second fold seem of the naapkiness. so how do we actually get to a model that works really well? so our internal attempt was kind of like the pretraining, uh, many, many hours of data and then post in any recipe that i told you about in the beginning. i'm doing this roughly get you about eighty percent successory. and what happens is that the model l know is doing fine the beginning. but as soon as it makes a mistake, you tytypically go out didistribution get stuck and unable to recover. so we have to do something more than the standard pretraining post training idea. that's very popular in robotics and not also in other fields. so what we did is that we developed will we consider a reward models for comcomplex long horizmanmanpupulatask ks. so these are models that can you know, look at their robot video and accurate score? it's progress towards solving a task, right? so let me i just play these videos again. so here's the same model, you know, being able to score. so well, the robot is doing these long horizon complex task, as it's you know, going from uh you know, starting of the task to finish. so you see as the robots completing and task is able to go from zero to one. and if you you squent at these videos enough, you also see that whenever the robot is actually making some mistakes, it'll be like slight dips in the reward model and actually becomes a very important. you also siite into how to make these models very robust. so here's what happens when you run such model during like a autonomous royout of the robot. so you see that when the robot is that doing fine for the napks, the progress asimation is roughly um monotonic going up right because the robots are not messing up. but what's really interesting is that let me just for fast forward a bit, whatever the model starts to making mistake. so ah here it is this is the nice napinins voting. so you see, i when the model is like making mistake, that's when the progress mistion, you know starts to like, you know, show no montonic sign, indicating that a mibot. it's messing up, right? and this is very important because once your models like good enough in ninety percent uh range, then it's very inefficient for humans to manually oversee the robot to detect its failure. and i try to recover. but once we have this reward model, we can actually do what i consider a skeleable supervision. so you can just have the robot trying to folnow. and and in this reward model, the background. so whatever a model does make a mistake. uh we as researchers are operators can immediate, you know, kind kind of fiure case that the model is struggling on. and then do very targeted data collection and erver recovery data for the model, then we can find ght in the model again. so the overall pipeline looks like a human e loop active learning process, where you can use the reward model to help us catch the the kind of mistake. the model is bad ate and then do targeted collection to make the model better and iterate. and what we found is that once you iterate on this a couple cycles, then you start art get a model. this extremely robots, and i can't recover from all kinds of errors. and finally, bringing us closer to a commercial, great robots. so here is just some of the uyou. you know, the highlight, i guess, during the twenty for our child. so what you saw there was the robot accidentally pick out more than one acins, and the model is able to, you know, separate an accouns. and you know, here, it's kind of doing that. and uh be able to continue progressing what we found inteinterein that uh naapkon folting that diformable object manipulation histories. so there is almost infinitely many possible states or configuration that in applicans can get to. so the impossible to exhaussively collect data for all the error cases. but once we have done to active learning, many, many times, we saw the model able to generalize to new ways of recovery from the mistake is made and contincontinue to make progress, and that contributed to its ability to be able to afforat at that in life, point four percent success strike. so here's uh what i found the most impressive bit from the trial. typically, if you look at robot videos, you know, they only show you the successful cases. but here i wanted to highlight that even when a model accidentally put in the higher nockin stock over is they ilable to demonstrate this kind of erir recovery behavior does very surprising to us when wor're developing a model and contribute to how it's able to just continues to run, right? so here ah he made a big mass, but it's able to just do all kind of like very impressive apppolling. uh, you know, structing behavior to recover from his in snake. and and continuously going yeah.</p>
+</details>
+<h3>即插即用：跨非受控场景的零样本泛化工程</h3>
+<p>在成功攻克单一场景的极限可靠性后，下一个重大的商业化壁垒在于<strong>泛化迁移成本</strong>（Generalization vs Onsite Data Dependency）。此前的餐厅餐巾折叠与加州自助洗衣店的毛巾折叠部署，虽然实现了商业化落地并由现场工人高频倒料、机器人稳定运作，但其前提是在部署地采集了现场环境数据。对于机器人企业的规模化市场拓展（GTM）而言，最理想的形态是实现<strong>开箱即用</strong>（Drop-in Autonomy: 无需现场环境微调或额外适配，直接在新客户站点投运）。</p>
+<p>为此，团队研发了一套跨任务多样性数据配方，并在高难度的非受控现场得到了验证：</p>
+<ul>
+<li><strong>学术顶会现场挑战</strong>：在韩国举办的 CoRL 2025（机器人学习顶级学术会议）上，团队将机器人从美国空运至韩国展位现场开箱放置，在<strong>零现场微调数据</strong>的前提下连续3天不间断折叠T恤。面对展会参会者故意用衣服遮挡机器人摄像头、人为干扰抓取等恶劣环境，模型展现出了强大的即时抗扰与动态复原能力；</li>
+<li><strong>音乐节高动态场景落地</strong>：在与红牛（Red Bull）的商业合作中，机器人被直接部署于音乐节现场，负责为参会者开启红牛易拉罐。面对现场不断剧烈变换的舞台灯光、嘈杂人群与震动，模型依然保持着极高的执行稳定性。</li>
+</ul>
+<p>这种无需现场额外适配即可保持高性能的跨场景泛化能力，标志着具身智能基础模型正从“定制工程集成”迈向真正的“通用物理劳动力产品”。</p>
+<details>
+<summary>Original English Source</summary>
+<p>[Speaker 2]: so you know, after developing such technology, we actually are successful deployying our models at many, many restaurants in the us. so here's a real uh restaurant deployment of our robot footing opinins for the customers in their back office. and in addition to footing in opkon, because the recipe is quite generalizable. now we also have models doing bunch of commercial task. so here is at a real uh launroamat in cycuonmental. and this time, we find tuning our model to do uh tolevoting for the customer. so you can see, uh, you know, there's a restaurant, i guess, laundge of my worker coming here to fill the bin over and over on the robot. just kept voting stacks of tolls to serve the customer. so now let's talk about. we have a recipe to master very complex tasks. but the copy out here is that in all the deos have have shown you so far, we have also collected data at the exact customer sidewhere location that are robotally played. but if you think about scaling robots to any task or to to any customer, then then 'll be much better or more ideal. if the models can readily generalize the environment, it hasn't seseen before. so is what we have worwork on in the uh um i guess, the end of last year, will we figured out a data recipe to collect a lot of diverse tasks to allow the robots to be able to deploy at a new site without any additional data while maintaining the task performance. so here's a demo we did at coral twenty twenty five. so coral al is the premier academic conference and robot learning, and it's held in korea last year. so you know, bring a robot from the US. carret was its whole challenge that i can talk about offline, but the recipe we discovered was able to, you know, which just brought a robot to our, you know, hibition booth and just drop it there. and the robot can start voting many, many different t shirts. and you see that the robot is facing the, you know the conference attendees. so many, many times, there are people just deliberate trying to mess with the robot, use the t shirt to cover up the robots camera, and you know, all kind offances study. you see at academic conferences, but a models able to continuously fold t shirts over and over for three days, strates at conference. just to demonstrate the ability to, you know, saw the time other environments is never seen before, bring it, you know, much closer to the kind of, you know, idea, you know, go to market that, that want want have have robotics company, which is just spring the robot to a sight, and you stararworking king. and recently, we have also eventually into many different task, like we have AA partnership with red boall l where uh opening red ball cans, like you know, red boall events. so um here's a video with our uh robot. again ah h guethis video won't play proproperly. so you get the point. we brought the robot to a red red boall event. and is able to uh open uh these red bow drinks for again, conference tindies over and over without failure, even though in this particular deployment, it's that a music festival. so the lightings always changing the background, but the model can continue. yeah, but due to yeah, i guess the video will not play. so just to summarize, uh, mismission, i denized be able to build general purpose models and robots, that's those competent at many task, but also being able to focus and attain really high performance on commercial task. and i have demonstrated some of our recent progress on mastering complex task and also generalizing the skills to environments is the robots have never seen before. so we are a serious stage company, actively growing and hiring. and if you're also interested in partnering with us for deployments and everythings feel free to reach out. and i talk to me after the talk, and thank you for listening,</p>
+</details>
+<h3>现场互动与问答：商业落地边界、语音控制与智能分配</h3>
+<p>在演讲结束后的问答环节中，现场观众与研究人员就系统研发边界、消费级应用、语音集成及模型智能分配展开了深入探讨：</p>
+<h4>1. 开发者套件与教育场景规划</h4>
+<ul>
+<li><strong>SDK/开发套件</strong>：Dyna目前尚未向商业合作伙伴提供机器人开发者套件（Developer Kit）。现阶段团队的核心精力聚焦在自研底层全栈硬件系统，未来随着硬件体系成熟可能会纳入路线图。</li>
+<li><strong>教育领域</strong>：当前暂无针对儿童编程或小学数学辅导等教育场景的投入，但长期来看具身智能未来规模庞大，让年轻一代接触并学习如何训练机器人模型将具有重要意义。</li>
+</ul>
+<h4>2. C端家庭场景与B端商业落地的战略权衡</h4>
+<p>关于机器人进入家庭自动折叠衣物的问题，Jason指出团队的长期愿景确实是提供一套软硬一体、随时随地服务所有人的通用平台，但目前的<strong>商业化切入点必须坚定放在B端企业级客户</strong>。原因在于：</p>
+<ul>
+<li>消费级产品对错误的容忍度几乎为零，且涉及极其复杂的隐私和物理安全法律伦理边界；</li>
+<li>B端企业具备明确的现场部署与迭代渠道，能够快速形成数据闭环；</li>
+<li>当前AI机器人的首要瓶颈是跑通底层软硬件协同，而商业环境正是当下最理想、最可控的试验田。</li>
+</ul>
+<h4>3. 传统意图驱动语音系统与具身模型的融合</h4>
+<p>针对语音交互从业者关于“语音意图与操作模型结合”的提问，Jason阐述了系统接口逻辑：</p>
+<ul>
+<li>上层利用成熟的板载语音转文字模型（STT）将人类自然语音极速转译为文本意图；</li>
+<li>转译后的文本指令直接注入高层推理模型与世界动作模型中进行语义解析与行动映射；</li>
+<li>整体链路的核心瓶颈不在于语音理解，而依然在于底层操作模型对复杂非结构化指令的物理执行能力。</li>
+</ul>
+<h4>4. 通用基础模型与特定任务现场微调的智能分配</h4>
+<p>针对“通用模型 vs 专用模型微调”的智力分配架构，现场讨论给出了底层技术洞察：<strong>绝对不能脱离通用预训练底座而从零训练单任务模型</strong>。人类之所以能迅速掌握任何未见过的物理操作，源于常识性的物理世界直觉；机器人模型在执行餐巾折叠等任务时展现出的强大自愈纠偏能力，其本质是在插值与组合此前在数千个不同任务中学习到的错误恢复先验。如果放弃通用预训练底座而单纯特化训练单一任务，模型将彻底失去底层物理常识与容错泛化能力。因此，“通用预训练底座 + 后训练 + 基于奖励模型的主动学习”构成了跨多任务规模化复用且不可替代的标准范式。</p>
+<details>
+<summary>Original English Source</summary>
+<p>[Speaker 4]: awesome. thank you, jason, really appreciate. uh, if you guys haven't see that, then everybody in life in real life have to check it out. else. i see as very impressive performance. um do we have any question or wanted ask? okay, cool.
+[Speaker 1]: 嗯，
+[Speaker 5]: thank you for sharing the presentation. i wanted to ask if you are already doing kindlike a providing developer kds with robots as decase is frameworks setup for your commercial partners.
+[Speaker 2]: yes. so we haven't been working on developed develop a kit, but you know, uh, at the current moment where building our own hargard step. so maybe at some point, it's on a road nap. uh not as self not has up now. yeah,
+[Speaker 6]: i'm curious if you have ventured into education, like teaching kids, elementary mats are any such use case you tried.
+[Speaker 2]: yes. so we haven't looking into education use case, right? but i think in the future, you know, once are uh four stack robotics pipelinines matchaibes, who have our own hardware, our data collection, you know, too kid id think think possipossible II think would be very interesting to venture and education use cases, because i also think robotics will only get bigger in the future. so i think it will be really interesting to get our children and young kids into the field and are learning how to actually train models to do tasks.
+[Speaker 7]: thank you for the presentation, really good. um my question is like, is there US have a plan for kind of taking this technology direct or consumer? like i saw the use case for the falling launddry. a lot of people don't like follling ononder. i think it's a great use case. so is that something that you guys thinking about? and obviously, there is a cost and all those aspects, but whawhat's your plan in the long term on this technology.
+[Speaker 2]: yeah. so our long term plans to develop, you know, like a robot model plus harder platform that can be deplot anywhere for anyone. so that would include, you know, like going directly to consumers. and you know, our models today are able to just fold, you know, many kinds of garments. but uh in terms of like go to market strategy, our current focuses on enterprise use cases because i think the distribution channel is like i think it's easier to work with uh enterprise customers or like we can deploy right away and iterate adds customers size. but for consumer product, i think II would imagine. i you have to be very, very polish, and it's less tolerant from mistakes and years. a lot of privacy safety concerns that we think uh we are trying to not get into at the current moment to uh unbloccuus from deployments because we think that the bottle neck for AII robots is getting AI and hardware working totogether very well well. and i think commercial environments provide ideal testing ground for companies and for the entire field at this stage.
+[Speaker 8]: thank you, jason. my name is omid, and i work in a invoice ai in in the voice space and at least for consumer robots, where i believe humans will want to issue voice commands to robots. um can you talk about how to integrate traditional voice stacks, which are intent driven and a different kinds of models from robotic, you know, via models.
+[Speaker 2]: yeah, that's a great question. so we think a robot human infractions really important. and at the end of the day, right, we want to develop models are teachable. so if it really nize, if humans can speak to it and the robot does the task. so the way i think about it, so not i don't have a speech or audio background. so what i can think of is like there is very mature speech to text models, right? so i can use that running the on board to translate human intent or human speech into text very quickly. and then you know, that's where our reasoning model and our world model comes into play, because both of them are able to interpret text comments so that we allow the model to translate instruction into actions. but i think in the overall stack, the bottm neck is still on the robot foundation models. because models today, our models and other people's model are not ready to just execute any arbitrary comcomments. so i think they're still gap in terms of low level robotic manipulation to get there. but i think that's the eventual goal that we want to get to just a model that can be steerthat that can taught by anyone. yeah, okay, thank you.
+[Speaker 9]: how do you think about? i guess, the split of intelligence between the general foundation models that you all are training. i guess, something like a tasspecific model for something like launddary folding and then kind of some of the onsite specific training that, that neeto to happen for a specific depoloyment in particular environment.
+[Speaker 2]: yeah, i think both are very, very important, right? so the kind of recipe that we have you seen, we have pretraining post sttraining that we have some of sort of active learning, right? i think, think think if you think about, you know, humans, right, you know, we have a basic level of like so mi taking phphysunderunderstand that allows us to adapt any physical task very fast and don't think the best way. do you even build commercial de robots today is by doing that because by doing a lot of generalist model training, have a general understanding of physical world. that's very useful. and what we have seen. so this is something i didn't talk about in a talk is that when the model was recovering from all kind of errors that you saw a lot of that. also just came from interpolate in different error recovery behavior that is gathered from doing older task. ks, right, right. just because you know, the model has in thousands of task, we are have some data to recover from all kind of mistakes is able to just executhat that kind like uh h demand on a new tsbal has n't sine before. but if you 're only specializing the model from the gadgo on one task, then is actually missing out on a lot of the physical knowledge that allows the model to be more robust. then if we only train one task, and that's what we have seen consistently. that's why, you know, in the beginning of the talk, also emphasize on having that general petroining backbone are then do impose training on an active learning on top of that to get to actual commercial grade is the ability not on just one task, but also the same recipe that can be repeated across many of any tasks.
+[Speaker 4]: awesome. thank it isn't really appreciate. um does a rap for uh h dinance session? uh, if you have more question for you to catch easand after the session as well. uh h, yeah, this wrap our morning session. uh this afternoon, we have unittary skydeal suoks uh googdemine. so we'll catch you own scy as well. so we'll see you in the afternoon.
+[Speaker 1]: thank everyone.
+[Speaker 0]: 嗯。</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Dyna Robotics" class="entity-link company-link">Dyna Robotics</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Dyna-1" class="entity-link product-link">Dyna-1</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">robotics-manipulation</span>
+      
+        <span class="tag-pill tag-pill--no-page">foundation-models</span>
+      
+        <span class="tag-pill tag-pill--no-page">active-learning</span>
+      
+        <span class="tag-pill tag-pill--no-page">error-recovery</span>
+      
+        <span class="tag-pill tag-pill--no-page">commercial-deployment</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

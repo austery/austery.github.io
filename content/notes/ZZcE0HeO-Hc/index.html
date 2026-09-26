@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>从VLM与VLA到具身智能：Perceptron构建物理世界基础模型的技术演进</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="从VLM与VLA到具身智能：Perceptron构建物理世界基础模型的技术演进" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">从VLM与VLA到具身智能：Perceptron构建物理世界基础模型的技术演进</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-23</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=ZZcE0HeO-Hc" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-23
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">Perceptron AI联合创始人兼CEO Armen Aghajanyan系统阐述了超越传统VLM与VLA割裂架构的新路径。团队提出统一的具身基础模型（Embodied Foundation Model），通过早期统一多模态表示、动态时空Token压缩与自适应重加权，攻克高分辨率长视频中稠密视觉Token的训练信号失衡难题，并打通具身推理与动作控制，在物理交互的鲁棒性与推理效率上实现对现有巨型模型的重要突破。</div></div>
+      
+    </div>
+    <h3>具身基础模型：超越传统VLM与VLA的技术范式转向</h3>
+<p>在传统的AI体系中，视觉语言模型（VLM）与视觉-语言-动作模型（VLA）往往被割裂对待。<strong>Perceptron AI</strong> 确立的核心北极星任务（North Star Metric），是打造能够实时感知、理解并与物理及数字世界交互的<strong>具身基础模型</strong>（Embodied Foundation Model: 统一处理感知、空间推理与连续动作执行的跨模态通用智能体网络）。当前机器人学与多模态AI的底层架构正面临瓶颈：现有的<strong>视觉语言模型</strong>（Vision-Language Model: 接收图像、视频与文本并主要输出文本描述的多模态架构）通常仅局限于被动语义生成；即便衍生出带有空间定位标签的点位推理模型，或者通过在输出端扩展动作控制指令构造的<strong>视觉-语言-动作模型</strong>（Vision-Language-Action Model: 将视觉文本感知直接映射到机械臂末端控制轨迹的模型），其本质依然是建立在标准VLM主干网络之上的补丁式方案。</p>
+<p>从技术发展历程来看，业内曾尝试将VLM推向世界模型或行动驱动的世界模型，但并未取得根本性突破；而直接输出预测视频的高开销方案或在潜空间中优化的语义世界模型，也难以直接解决底层闭环控制问题。Perceptron团队基于在早期多模态扩展研发中的积累，提出了一种“早期统一”（Early Unification）范式。这一范式的核心设计在于：打破感知、具身空间思维（Embodied Reasoning）与底层物理动作执行的界限，将所有输入模态（多视角高帧率图像、视频、音频、动作信号）与输出需求统一在单一模型架构内原生表征与端到端联合训练，彻底消除外置控制模块与感知模型之间的语义断层。</p>
+<details>
+<summary>Original English Source</summary>
+<p>それでは、始めましょうか。私はアルマンです。共同創設者および最高経営責任者（CEO）パーセプトロン。私たちは婚約していますが、えっと主に何について話したいか？今日、これは私たちの研究職です。私たちはVLM、VLA、世界のモデルの区別から去りたい、どうしてほしいですか？私たちは「具現化された基本的モデル（Embodied Foundation Model）」と呼ぶ。具体的にはパーセプトロンではこれを行います。</p>
+<p>私たちのポーラースター（Polar Star）、私たちは物理的なAIの基礎知識を作成する可能性、物理世界でリアルタイムに知覚し、理解し、交流するチャンスがある。そしてポーラースターミッションは物理的およびデジタル世界の上で、デバイス、ツール、ロボット、カメラ、センサーがあるところならどこでも、基本的にその知性を提供する。特に知覚する能力、理性、行動を起こす能力のパラダイムを検討している。</p>
+<p>伝統的マルチモーダルモデリングの協会。私は博覧会（Fair/Meta）から来ました。そこで6数年間働き、私の目標はマルチモーダル向けモデルのレシピをスケールアップする方法を試すことでした。だから最初に私たちが始めた仕事、そしてたくさん出版したこの分野では「早期統一（Early Unification）」。つまり、これらのすべての方法をできるだけ早く実装したい。そして本当の難しさは、どちらが正しいか調べてみることです。</p>
+<p>VLMと私が話しているのはマルチモーダルモデルについてです。画像、動画、テキストを受け入れ、要するにテキストを出力する能力。そしてこれのバリエーションとして、ERモデル、身体化された思考（Embodied Reasoning）として推論できるもの、空間理解や推論を提供するポイントサポートを持つものがあります。それからテキスト以外に行動を出力エリアとして拡張するVLAがあります。彼らは伝統的には標準VLM高速道路の上に築き上げる。それでもVLMから世界のモデル、世界における行動モデルへの試みがあったが、特に実り多いわけではなかった。</p>
+<p>そしてより面白く複雑なオプションとして、ビデオを出力するモデルや、セマンティック世界のモデルがあります。私たちは具現化された基本モデルとしてフレーミングし、標準知覚、具現化思考、目的極軸制御を1つのモデル以内で実行できるようにする。単一モデル内で入力データを考慮し、帰り道で全てを思い出す。</p>
+</details>
+<h3>高维视觉Token困境与稠密监督信号的重新分配</h3>
+<p>实现单模态到统一物理世界模型的跨越，首先遇到的是计算表征层面的基本科研瓶颈：<strong>视觉Token爆炸与监督信号极其稀疏之间的严重失衡</strong>。在对长视频（例如连续1小时的连续交互任务）进行建模时，依照常规切分方法，输入端会迅速累积超过100万个视觉Token。若采用传统的自监督生成或问答式微调，业界通常的做法是从中提取视频转录文本、预测文本字幕，或者采用合成数据随机抽取少量帧进行问答测试。然而在数学本质上，若模型在处理100万个视觉Token时，只有极少部分（约0.2%）的上下文被实际计算为损失函数梯度，绝大多数物理世界的细微时空变化就会成为无效背景噪声。这种训练信号不仅极度被稀释，且合成伪标签往往难以捕捉物理现实的因果逻辑。</p>
+<p>为了克服纯文本伪标签的稀疏性，部分研究转向密集的逐像素预测（Pixel-level Prediction）。然而逐像素重建存在严重的注意力错配缺陷：模型分配给静态背景墙壁或无意义阴影像素的权重，与机械手末端夹爪（Gripper Tip）、物体物理接触面（Contact Points）完全相同。这种未加区分的稠密信号在计算层面上极度低效，模型无法提炼出真正的空间动力学本质。</p>
+<p>针对这一困境，Perceptron探索了更高效的<strong>时空Token压缩机制</strong>。团队摒弃了简单的粗暴下采样与线性平均池化，设计了基于先验语义与任务重要性的自适应Token重分配策略。例如，当检测到需要细粒度操作或目标分割（如特定物体、果实采摘）时，模型会自适应降低环境静态背景的Token分配率，并将高分辨率的表示容量集中倾斜至关键物理实体及其接触交互点。通过在嵌入层与等待架构中融入先验分布，成功实现了在高达10倍压缩比的同时，依然完整保留高精度的物理交互语义与连续控制能力。</p>
+<details>
+<summary>Original English Source</summary>
+<p>すぐに2つの課題についてお話しします。これは私たち自身が衝突した基本的な研究課題であり、当社がこれに対してどうアプローチし、他の人が何をしているかをお教えします。</p>
+<p>まず最初に、1時間のビデオのように何かをモデルにすることを考えてみてください。プレゼンテーションによると、100万くらいのビジュアルTokenがやってくるかもしれない。しかし効果的に使用できる真実（Ground Truth）が実際にはない。人々はビデオの文字起こしを予測したり、合成的にいくつかのショットを示して質問したりする。しかしモデルが100万Token持っているときに、全体の0.2%のTokenの損失しか基本的に計算しない。これは根本的に問題があり、トレーニング信号が薄すぎるか、合成的すぎるか、判読不能です。</p>
+<p>単純な合成を超えた新たなアプローチとして、それぞれピクセルを予測してみようというものがあります。これはとても密度が高い信号ですが、実際には注意の分配が不十分です。背景ピクセルを、グリップの先端や接触点、特定のオブジェクトと同じ重要度で比較・処理してしまう。</p>
+<p>テキストToken、画像Token、オーディオやビデオTokenを同等に扱う中で、空間圧縮やToken圧縮に焦点を当てることができます。平均化やセクションごとの表現を試すことで最大10倍の圧縮係数を手に入れることができるが、まだハック的です。もし果物のセグメンテーションなどをさせるなら、果物を考慮するTokenにより多くを割り当てます。私たちは先験的埋め込み（A-priori Embedding）アーキテクチャを用いてモダリティの不均衡を解消し、モデルが実際の物理世界のタスクを効率的に学習できるようにしました。</p>
+</details>
+<h3>早期统一样构的优势：在恶劣物理扰动下的零样本鲁棒性</h3>
+<p>将空间感知与直接控制无缝结合在统一模型中的最大收益，在于能够应对物理世界中极度苛刻且不可预测的环境扰动。传统的级联系统（先运行VLM或离散目标检测器，再将坐标或语义提示输入给独立的<strong>模仿学习策略</strong>（Imitation Learning Policy: 通过人类演示轨迹训练的机器人端到端控制模型））极其脆弱：一旦现实环境中的工作台背景从木纹被换成反光材质、现场照明突然变暗、或者产生强烈阴影，下游的执行策略往往会彻底瘫痪并输出发散动作。</p>
+<p>在Perceptron所展示的基准验证中，通过统一具身模型输出<strong>控制Token</strong>（Control Tokens: 直接对应机械臂关节力矩、末端姿态及夹爪开合的离散/连续动作指令Token），模型表现出了极高维度的因果理解能力。实验表明：</p>
+<ul>
+<li><strong>极端视觉环境的自适应推理</strong>：在低对比度、昏暗甚至光照急剧变化的环境下，该模型能够原生理解自身视觉感知的受限状态，自主执行寻找对比度、重新对焦或调整观察视角的动作序列，从而可靠锁定微小目标。</li>
+<li><strong>背景抗扰性与结构容错</strong>：由于联合建立了空间感知与动作控制的深层因果关联，当部署环境的物理台面、周围背景或视角产生显著变化时，统一模型依然保持极高的控制稳定性，而不会像单纯的VLM级联策略那样由于轻微特征偏移而失效。</li>
+<li><strong>计算效率与推理成本重构</strong>：现有的超大规模商业多模态模型（如Gemini等）在单次处理包含多帧时序的高分辨率视频时，调用开销常在数美元量级；而Perceptron的专用具身基础模型通过端到端原生优化与Token压缩，能够将同等任务的计算消耗降至美分甚至更低，具备了在机器人本体边缘设备或本地实时系统中工业化部署的可行性。</li>
+</ul>
+<details>
+<summary>Original English Source</summary>
+<p>モデルは実際にどうするか決める、コントラストを変更する必要があると言う。ここに正方形を提供し、コントラストが増して鳥を見つけることができる。人間にとっても洞察力が必要なタスクであり、作るのが比較的難しい。これらすべては、具現化されたモデル自身が理解することから来ています。</p>
+<p>ジェミニ（Gemini）でこれをやろうとすると、このビデオはおそらく数ドルかかりますが、私たちはおそらくペニー（数美分）で済みます。高度な身体化された思考（Embodied Reasoning）の機会を得るためです。</p>
+<p>これはネイティブにあるモデルの枠組みの中で動作し、具現化された推論を実行し、タスクを理解する。実際、これはコントロールToken（Control Tokens）の出力です。少し揺れているように見えますが、規模によって分解され、清潔な状態のVLAでは非常に難しかった複雑なタスクを実行できます。</p>
+<p>最もクールな信頼性として、例えば中国のポリシーなどで背景を変更した場合、テーブルの背景が変更されただけで従来のポリシーは機能しなくなる。しかしこの共同の洞察力とコントロールモデリングを行えば、こうしたタイプのエラーや光の減衰に対してはるかに耐性がある。私たちはこれを「背景抵抗（Background Invariance）」と考えています。懐中電灯を直接向けられるような極限状況はまだ難しいですが、オンライン補足資料でアームカメラの電源断や日光の落下方向などを模倣・トレーニングし、早期合併パラダイムによってロボット工学の信頼性を大幅に向上させています。</p>
+</details>
+<h3>空间基数理解与时序因果：迈向通用具身智能底座</h3>
+<p>在针对模型的空间时间推断能力评估中，业界长期以来普遍受制于互联网训练数据的根本局限。从海量静态网页和视频文本中爬取的训练集，往往缺乏精准的物理坐标、上下左右方向（Cardinality: 物体间的绝对/相对方位基准）以及精准的时空因果标注。这使得现有的顶尖多模态基础模型（包括早期的前沿架构）在判断“目标物位于参照物下方某特定厘米处”或执行长程时序逻辑动作时频繁失误。</p>
+<p>Perceptron在数据准备初期便重点注入了专为具身智能设计的<strong>自中心高密度时空注释</strong>（Egocentric Spatiotemporal Annotations: 第一视角下的连续时空几何关系及动作流标签），不仅教会模型识别关键帧（Keyframes）与差分帧（Delta Frames）之间的运动学关联，更赋予了其强大的物理常识与空间方位推理能力。在下游工业场景与机器人伙伴方案中，该模型既能充当超高精度的结构化自中心知识提取底座（进行免预设本体的深层结构化视觉解析），也能直接作为驱动多样化机械执行机构的动作控制大脑。</p>
+<p>团队当前已向早期合作伙伴开放了Mark-1规模模型的API与评估基准，并进一步将更大的物理具身模型投入规模化扩展验证中。这一突破证明，具身AI的未来路径并非单纯堆叠文本语言模型的规模，而是依赖于将物理世界的第一性原理——空间几何、光度扰动、时序因果与闭环控制——深度熔铸于基础模型底层架构之中的系统级创新。</p>
+<details>
+<summary>Original English Source</summary>
+<p>パートナー向けに私たちのマーク1（Mark-1）スケール、より大きな具現化された基本モデルへのアクセスを提供します。メールやTwitterメッセージでお知らせください。</p>
+<p>質疑応答：時間と空間的側面の理解について。モデルに高FPSビデオを挿入するのは容易ですが、コンテキストをどう管理するか。キーフレーム（Keyframes）とデルタフレーム（Delta Frames）をどう考えるか、そのコンテキストをどう教えるか。プレワークアウトで時間目標をネイティブに使用し、ロボット工学タスクに役立てる。ジェミニモデルでも以前困難に直面していた基本的な基数（Cardinality）、左側や右側、下側などの判断は、インターネット規模のスキャンだけでは学習が難しい。私たちはデータ配信の初期段階からこの身体化された思考に焦点を当て、ジェミニERと比較して計算回数を減らしながら上回ることができた。</p>
+<p>質問：FK1モデルを使用して知識データベースを作成することは役立つか？知識ベース、例えば画像や動画の署名、注釈付けにおいて、パートナーのロボット工学における非常に複雑な自己中心的（Egocentric）注釈に非常に役立ちます。オントロジーを必要とせず、非常に深い構造化された削除・解析が得意です。ここに示されたものは公開APIであり、ベンチマークも公共です。時間切れとなりましたので、外でお話ししましょう。ありがとうございました。</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Armen Aghajanyan" class="entity-link person-link">Armen Aghajanyan</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Perceptron AI" class="entity-link company-link">Perceptron AI</a>, <a href="/search/?q=Meta" class="entity-link company-link">Meta</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Gemini" class="entity-link product-link">Gemini</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/embodied-ai/">embodied-ai</a>
+      
+        <span class="tag-pill tag-pill--no-page">multimodal-foundation-models</span>
+      
+        <span class="tag-pill tag-pill--no-page">vision-language-action</span>
+      
+        <span class="tag-pill tag-pill--no-page">visual-token-compression</span>
+      
+        <span class="tag-pill tag-pill--no-page">robotics-control</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

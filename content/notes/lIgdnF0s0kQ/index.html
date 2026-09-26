@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>从幂律缩放到语义标记：为什么大模型推荐系统将成为最大的消费级AI应用</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="从幂律缩放到语义标记：为什么大模型推荐系统将成为最大的消费级AI应用" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">从幂律缩放到语义标记：为什么大模型推荐系统将成为最大的消费级AI应用</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-25</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=lIgdnF0s0kQ" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-25
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">Meta推荐算法负责人深入剖析了推荐系统的大模型演进路径。推荐系统正遵循与LLM相同的幂律缩放曲线，并在Instagram等业务上取得显著增长。文章系统拆解了推荐技术演进的四层S曲线与五层架构，并从推理成本与创作者经济的底层逻辑论证了为何LLM推荐系统在商业价值和用户规模上都将超越对话式AI。</div></div>
+      
+    </div>
+    <h3>幂律扩展：推荐系统的规模化法则与飞轮效应</h3>
+<p>在当前的人工智能技术浪潮中，<strong>大语言模型推荐系统</strong>（LLM Recommenders: 结合大模型底座与生成式架构的新一代推荐引擎）正迎来决定性的拐点。这一演进建立在两个关键论点之上：第一，<strong>推荐系统</strong>（Recommender Systems / Rexis）同样严格遵循大语言模型的<strong>缩放定律</strong>（Scaling Law: 模型性能随计算量、参数规模与训练数据增长呈现对数线性改善的经验规律），且整个行业目前仍处于这一缩放曲线的早期阶段；第二，LLM推荐系统将成长为用户规模与使用时长最为庞大的<strong>消费级人工智能应用</strong>（Consumer AI Applications）。</p>
+<p>回顾2020年关于大模型缩放曲线的开创性研究，模型尺寸、数据集规模以及训练计算量的指数级放大，使得模型损失在对数-线性刻度上呈现高度可预测的下降。这一规律不仅确立了全球生成式AI的基础设施投资逻辑，更同样支配着现代工业级推荐系统。在<strong>大语言模型</strong>（Large Language Model）兴起前，推荐系统便已是大型科技公司中参数规模与吞吐量最大的生产级机器学习模型，每天为超过十亿的日活跃用户（DAU）提供服务。当推荐系统在X轴上持续注入训练算力、参数量与交互数据时，其离线评估指标（如交叉熵损失下降与<strong>AUC</strong>（Area Under Curve: 衡量排序模型区分正负样本能力的受试者工作特征曲线下面积）提升）会以幂律形式稳定改善，并直接兑现为线上真实生产环境的参与度与业务营收增长。</p>
+<p>以<strong>Meta</strong>的工业级实践为例，团队针对生成式推荐系统开展的<strong>HSTU</strong>（Hierarchical Sequential Transduction Unit: 面向超长用户行为序列的高性能生成式推荐架构）技术研究，连续在2024年及后续工作中严格证明了算力与模型规模放大的离线增益。在业务表现上，通过简化排序架构、支持模型高效扩展、并将用户交互历史序列长度翻倍，<strong>Instagram Reels</strong>实现了年化观看时长增长30%的强劲表现。这一持续进化的底层动力在于<strong>代币与交互飞轮</strong>（Token-Interaction Flywheel）：模型完成离线训练后，在线生成推理标记（Tokens），进而产出更高质量的内容推荐；精准内容激发消费者的停留时长与活跃度，转化为广告或订阅等商业化收益，最终反哺下一轮更大规模的模型研发与算力训练。推荐系统远未触及扩展瓶颈，整条增长路径依然开阔。</p>
+<details>
+<summary>Original English Source</summary>
+<p>大家好。谢谢。来到LLM Rexis赛道。嗯，我先分享第一个报告。我的该报告名为“代币与互动”用于训练法学硕士推荐人。今天我想要提出两个重要论点。第一的就是推荐系统像这样缩放与LLM相同，而且这一点该行业位于在非常早期的阶段缩放曲线。嗯，第二个是在那LLM推荐人将成为最大的之一消费者人工智能的应用。好的简单介绍一下我自己。嗯哼我目前在Meta工作。经过研究和产品。呃，我我管理着一个团队称为元推荐具有教学意义的研究高级模型、LLM和推荐人提供工作Instagram、Facebook广告、应用系列元。在此之前，我很久以前就曾在谷歌工作正在处理许多关键机器指令培训，包括DeepMind和YouTube。过去的那一年我在人工智能大会上发表了演讲工程师撰写报告名为“双子座训练”在YouTube上谈论两个想法：语义标识符和生成式搜索我们也有写了两篇文章，我链接到这里给了。那是真的很有趣，这导致了许多讨论和合作。想法语义识别和生成式搜索真正获得了受欢迎程度过去几个行业年，他们搬走了来自超过研究大规模生产系统。和我看到了令人着迷的东西发布会和文章YouTube、Meta、Spotify、DoorDash在整个行业中，我们拥有举几个例子稍后今天。今年我想谈谈四个部分：曲线缩放建议四层结构S曲线范式建议，我们崛起行业方面，嗯，我会分享的。处方建议，以及最后，这种结构消费者应用人工智能。</p>
+<p>嗯，我们先从曲线开始吧。规模化。所以，我想先从开始这篇具有里程碑意义的文章关于曲线从2020年开始缩放今年，这似乎是很久很久以前。那时达里奥当时仍在OpenAI工作，当时人猿理论尚未出现。但主要观点是，这一点与此相同这篇文章，——这篇文章幂律规模化。从增大尺寸模型、数据、数量计算训练周期模型训练，损失落在对数式-线性刻度。和这很清晰，预测曲线实际上比赛开始了国外人工智能，因为可以预测为看起来质量改进模型和机会。正是如此。这提供了巨额资金投资当今人工智能发展现状。事实证明推荐系统坚持非常类似法律规模化。事实上，对于这一点LLM波，Rex是最大生产模型机器学习大的技术公司，以及它们仍然是其中之一最大的型号，这些供应规模超过十亿活跃用户每天都有用户使用。和他们遵守类似的幂律缩放曲线。X轴上是数据，计算和尺寸模型。在Y轴上，你会看到秋天损失，或者，就此而言图形、改进推荐质量。离线电子值它是纯粹的熵吗？AUC增加。进而，这段文字什么时候翻译？实际发射生产，这就是影响在参与和影响力方面规模化营收一些最大的消费者应用。</p>
+<p>以下是一个真实案例Meta展示了这一点。这些功率曲线规模化。有文章，其中第一篇——这是HSTU为2024年所做的工作以及第二个——续上文年。两个都证明这一点增大尺寸模型、计算和我们清晰地看到的数据离线改进质量评估建议。这些尺度曲线这并不容易学术的研究。他们导致实际影响规模化产品对于某些人来说最大的消费者世界上的公司。这里举几个例子我最近损益表元。Instagram Reels曾本季度表现强劲，增长30%。观看时间年化。和我们进行的优化专为质量改进建议包括简化我们的建筑排名，以便提供有效的模型缩放以及更长的历史互动利益的定义人类。我们翻了一番长度序列与的互动用户用于Instagram培训和增加每种饱和度与的互动用户。所以，这些与上述内容直接相似歪通过缩放幂律法学硕士。而我想要提出这个想法飞轮代币参与，即这一切的驱动力是什么？模型缩放雷克斯。你训练模型然后执行她的结论是，代币。这款模型建议带来更好的结果建议内容。她激发参与消费者增加花费的时间每日活动用户。它变成货币化和广告或订阅，哪个公司会付钱？下一轮模型训练。所以曲线上的每一步规模化——这转一圈这个飞轮，以及许多消费者应用程序轮换这个主飞轮在其核心商业。所以，我们仍然有传递路还很长扩大这些推荐系统。</p>
+</details>
+<h3>四维演进：从特征工程到智能体循环的S曲线</h3>
+<p>在认知到规模化扩展的确定性后，推荐系统技术栈正在沿四条平行的<strong>S曲线范式</strong>（S-Curve Paradigms: 描述技术生命周期在萌芽、加速与成熟阶段演替的发展模型）展开系统性重塑。尽管各工业团队起点不同，但行业正协同迈向更高级的认知与推理能力：</p>
+<ul>
+<li><strong>传统推荐范式</strong>（Traditional RecSys）：聚焦于人工特征工程、稀疏特征交叉以及用户/物料的低维嵌入表征。这类架构广泛采用双塔深度网络或<strong>DLRM</strong>（Deep Learning Recommendation Model: 结合分类特征Embedding与密集特征MLP的经典推荐模型）机制。尽管该范式生命周期已趋成熟，但未来其优化演化将主要由自动化AI研发智能体替代传统工程师来接管特征挖掘与超参调优。</li>
+<li><strong>大模型启发范式</strong>（LLM-Inspired RecSys）：直接借鉴Transformer与自回归序列建模能力，从输入到输出实现端到端训练扩展。Meta的HSTU即为该范式的核心标杆，其将用户长期动作序列作为序列上下文进行端到端表征，也是当前大多数工业推荐系统前沿探索所处的真实阶段。</li>
+<li><strong>原生大模型范式</strong>（LLM-Native RecSys）：通过对具备通用世界知识和多语言思考能力的<strong>基础大语言模型</strong>（Foundation LLM）进行推荐领域后训练，使其原生理解推荐任务。诸如<strong>TIGER</strong>（利用语义ID与自回归生成进行内容检索）与<strong>PLUM</strong>等前沿论文，展示了如何通过将物品表征映射为语义离散编码，使预训练模型兼具自然语言理解与候选物品直接解码的能力。</li>
+<li><strong>智能体化推荐范式</strong>（Agentic RecSys）：推荐系统跳出单一前向传播的决策流程，演进为由<strong>AI智能体</strong>（AI Agent）驱动的多阶段推理循环（Agentic Loop）。如同软件工程中从单纯调用大模型补全代码进化为像Claude Code或Codex那样的自主智能体系统，智能体化推荐系统能够在闭环中自主执行意图规划、多路检索召回、候选排序、反思批判（Critique）与多轮重排，甚至主动调用外部工具与澄清提问，最终输出经过深度推演的高质量决策。</li>
+</ul>
+<details>
+<summary>Original English Source</summary>
+<p>我想谈谈四种范式，正因如此，我认为观点，将发展分支。第一个S-类似的曲线是更传统的对于Rexis来说，其中S-相似的曲线更多专注于功能开发和嵌入用户和内容。多数生产系统仍在进行中这条曲线。他们使用某种双塔稀疏网络、游骑兵、尺度模型嵌入。我不是我认为这条曲线将会消失，但发展这里会有模特。由于加速自动的研究等等诸如开发之类的事情函数将是待实现代理人，而不是真实的机械工程师教学。</p>
+<p>下一个曲线就是模型，受LM启发，在那里你比例模型从一开始就很完美直到最后。HSTU文章和一等兵的例子这种范式。我我觉得就在这里。今天大部分领导们正在努力工作推荐行业系统。</p>
+<p>我我认为下一个S-类似的曲线将是本土范式法学硕士（LLM）适应性基本模型，理解并能思考，以及将其改编为推荐任务。Tiger and Plum的文章——这方面的例子有很多范式。</p>
+<p>而且我认为，最后一个范式，我开始明白了，这是一家提供法学硕士学位的机构。将开始策划录音系统循环。我觉得这里这与代理人的情况类似编码。所以，原生LLM模型类似于改进基本能力模型，从作品4.5至4.8，而代理人曲线将是类似于改进加密武器，潜在的克劳德或法典代码。所以，而不是就一个直接通道推荐人，你能想象吗？循环中代理人计划、接收、排名，然后批评建议。他们可以为他们澄清，再次致电模型，以及最后，给建议。我我觉得就是现在有趣的行业研究。让我去……嗯，就是这里。这就是所有结构的基础四种Rex范式之一。我认为公司按比例缩放这些曲线中的每一条并联。多数建议，我认为今天直播，受LLM启发，试图穿越成为LLM本地人。嗯，但是许多公司都仍然使用传统模式和沿着这条S形向上走歪。</p>
+</details>
+<h3>五层解耦：语义标记化与生成式推荐系统的工程处方</h3>
+<p>要真正落地一个具备通用语言能力与精准推荐表现的LLM推荐系统，工程上可拆解为清晰的“五层蛋糕”架构。该架构的精髓在于<strong>算力复用</strong>：核心底座预训练与对齐能力可以跨业务场景共用，彻底终结了过去各业务表面必须从零构建孤立模型的碎片化状态。</p>
+<pre><code>+-------------------------------------------------------------+
+| Layer 5: 产品交互表面 (Product Surfaces &amp; Control)          |
++-------------------------------------------------------------+
+| Layer 4: 推荐下游任务适配 (Task Direction &amp; Reasoning)       |
++-------------------------------------------------------------+
+| Layer 3: 语义标记与语言联合预训练 (Joint Pre-training)       |
++-------------------------------------------------------------+
+| Layer 2: 基础大语言模型底座 (Foundation LLM Base)           |
++-------------------------------------------------------------+
+| Layer 1: 语义标识符离散编码 (Semantic Identifiers / SID)    |
++-------------------------------------------------------------+
+</code></pre>
+<ol>
+<li><strong>第一层：语义标识符（Semantic Identifiers / SID）</strong>：将海量高维内容语料离散化为大模型可理解并参与运算的标记序列。传统推荐中利用随机Hash ID标记物品存在本质缺陷，既无法提供稳定的跨生命周期语义表示，也缺乏泛化性。通过分层离散编码（如<strong>残差量化变分自编码器</strong> RQ-VAE），内容被压缩为具备树状语义结构的词元前缀（Prefix Sharing）。例如在Instagram网球视频场景中，前缀编码分别代表“体育”和“网球”，末尾Token则指代具体视频个体。这种结构不仅提供了语义连续的表示，更实现了极致压缩——如果将一段3分钟的短视频直接展开为视觉/文本多模态Token，序列长度将迅速超过10,000个Token并瞬间撑爆上下文窗口（Context Window）；而SID仅需大约10个Token即可完成无损高阶表征。</li>
+<li><strong>第二层：通用基础大语言模型（Foundation LLM）</strong>：引入开源权重模型或内部自研的基础模型底座，承载通用的世界认知与推理逻辑框架。</li>
+<li><strong>第三层：双语联合预训练（Joint Pre-training Alignment）</strong>：核心目标是使模型同时精通<strong>自然语言</strong>（English）与<strong>领域推荐标记</strong>（Domain SID），演进为真正的“双语模型”。训练任务包括两个方向：一是多模态语义对齐，例如给定温布尔登网球赛事的单帧画面或空描述，要求模型生成对应的SID（如<code>ABC</code>）并补全自然语言描述；二是对用户历史交互序列进行Mask掩码自回归建模，预测未来交互的SID序列。</li>
+<li><strong>第四层：推荐任务微调与推理链构建（RecSys Task Adaptation &amp; Reasoning）</strong>：赋予模型具体的业务任务能力，包括点击率/停留时长预测、多候选精排（例如从30个候选视频中筛选Top 5），以及输出推荐归因。模型凭借其自然语言常识理解用户在喜剧、美食、DIY或健身养生领域的意图演化，在内部生成思维链（Chain-of-Thought），明确解释为何某位创作者的风格契合当前用户的实时心理。</li>
+<li><strong>第五层：可交互与可解释的产品表面（Product Surfaces &amp; Interactive UX）</strong>：当推荐模型同时理解自然语言与推荐语义时，算法分发彻底告别了“不可解释的黑盒”（Black Box）。用户不再仅仅被动通过点击或点赞向系统隐式传递信号，而是能够直接通过自然语言与算法交互。例如在Instagram信息流设置中直接审视算法对自身画像的兴趣建模，主动增删“世界杯梅西任意球”等实时兴趣指令；推荐系统随之解码出精准匹配的个性化视频，将单向推送重塑为主动可控的双向对话。诸如<strong>Spotify</strong>的智能播放列表、YouTube的会话式引导以及<strong>DoorDash</strong>（通过自然语言点餐的智能推荐表面）均在印证这一产品界面的范式迁移。</li>
+</ol>
+<details>
+<summary>Original English Source</summary>
+<p>允许我需要稍微改变一下方向分享食谱真实情况是创造法学硕士推荐人。我我觉得这就足够了。简单地。这是三个步骤。嗯，首先是您的令牌化内容和创建一种语言您的域名。然后你想适应法学硕士，这样它明白了如何英语，以及您的域名语言和成为双语者模型。最后，你您能提供该模型关于信息用户，还有她直接地将解码来自你的案子内容。我们开始吧让我们深入探讨一下更深。它LLM推荐人是五层蛋糕。嗯，我们就从最底层开始吧。嗯，这只是语义上的问题。你的身份信息改变你的内容语料库LLM可以持有的代币理解和证明其合理性。</p>
+<p>然后你是一种基本LLM模型。它可以作为模型开放式鳞片或内部模型自研开发者。接下来是主要部分。学习阶段先前的培训，它结合英语和这些推荐令牌。学习结束后，他去了模型方向任务中建议，例如预测参与或理由建议。和，最后，你可以去做就对了一些小设置表面到展开产品表面。有趣的是，范式是……大多数计算分布在所有表面产品，所以你不会需要学习从零开始创建单个模型对于每个表面产品。我有点我会深入调查每个阶段。</p>
+<p>什么担忧语义标识符，我我觉得它成功了。极好的执行。许多命令很简单替换它们的哈希值SID上的标识符传统模式并看到好影响。我认为有两个主要原因用于标记化内容。首先，这给你稳定演示文稿训练模型，以及并非不断变化模型可以哈希记住就好。其次，这一点压缩。你想要仔细思考这些漫长的序列互动用户，以及如果你不会挤压例如，内容中3分钟视频Instagram将达到10,000代币，以及它太多了很快就会填满上下文窗口内容。因此，你必须挤压大约10代币。好了，就是这样。我有一些视频示例Instagram上关于网球的内容。你你可以看到语义标记具有共同的前缀前三个因为代币它们非常相似。滚轮。你可以想象一下第一个标记代表体育，以及其他两项代币——网球，以及然后是最后一个令牌制作这些视频个人。</p>
+<p>在你拥有之后语义标识符，你你能教他吗？了解如何英语，以及语义标识符。所以，我的任务离开以前的学习，是例如，你请求视频语义标识符ABC，其描述为空，结果是来自……的一帧温布尔登，瞬间变成标志性的。给你训练模型结合来自语义标记的合成文本用英语自然语言。右侧示例关注事项序列语义标识符。所以，在历史上互动用户您你可以掩饰部分序列，以及该模型正在学习预先考虑到它们并了解哪些视频综合来看反过来。我这里有示例帖子了解我们身在何处我们教模型如何重新计算内容。所以，即将到来的数据是一组数据。关于信息用户和30视频候选人然后排名前五名来自这项LLM排名。什么真有意思，就是这样。你能做什么看看这条链子关于这个模型的想法，以及因为这个模型懂英语语言，以及建议，你你可以直接检查模型并明白她为什么完全接受了这些决定。在此示例模型理解主题用户兴趣例如喜剧、美食、DIY，健康养生。她了解风格互动以及与哪些此作品的创作者用户拥有同情。进而她列举基于以下内容这一系列想法。我认为这一点极其令人兴奋，因为……只有你有一个模型，谁懂得如何英语，以及建议，它新产品表面和新机遇用户可以管理自己的丝带。</p>
+<p>以下是一个例子你的算法Instagram，用户可以交流在算法运行期间内容消费。这是屏幕截图滚动磁带，或者当你按下，你可以明白这一点Instagram算法认为关于你和你的家人兴趣，然后你您可以添加或删除兴趣和与他沟通自然语言。和所以我们将会看到这一幕。我认为，从算法建议以黑色形式提供盒子用户更多控制权关于你的算法，算法也随之改变。更具互动性且易于管理。我非常很高兴用户可以指导他/她的成就乌龙球，用语言表达，并且不仅仅是点赞或评论。我我认为这是基本常识。该模型还可以开始解释您的建议。和因此，对于这一点我添加了一个例子。兴趣，我想要什么？接下来世界锦标赛此时此刻的足球，以及这个模型会和我的一样。用户历史记录以及这些新数据，以及然后他就可以解码建议个性化定制我喜欢这个一个任意球最近得分梅西。我认为这些交互的建议将真有趣新表面产品，我们看到这是整个行业的普遍现象。在我们有几个人。示例请求来自Spotify的播放列表，方便使用的YouTube视频，问问DoorDash，我们让我们听听更多来自就此发表讲话。</p>
+</details>
+<h3>算力经济学视角：为什么内容流的商业回报远超对话式AI</h3>
+<p>评价任何消费级人工智能应用是否具备长期生命力，核心在于其<strong>单位计算转换效率</strong>（Compute-to-Engagement Conversion: 衡量训练与推理算力转化为用户真实交互及商业化变现的资本回报率）。从表面上看，内容推荐流与对话式智能体均通过“训练 -&gt; 推理 -&gt; 用户交互 -&gt; 商业变现”这一飞轮运转，但两者在Token生成成本与经济学结构上存在着数量级的本质差异。</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">评估维度</th>
+					<th style="text-align: left">内容流大模型推荐（如 Instagram / TikTok / YouTube）</th>
+					<th style="text-align: left">对话式AI应用（如 ChatGPT / Claude / Gemini）</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>模型参数规模</strong></td>
+					<td style="text-align: left"><strong>1B – 10B</strong>（轻量化密集参数，适配极高并发吞吐）</td>
+					<td style="text-align: left"><strong>10B – 100B+</strong>（超大参数量，单次推理消耗巨大）</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>输出标记类型</strong></td>
+					<td style="text-align: left"><strong>语义标识符指针</strong>（指向已存在的优质物料地址）</td>
+					<td style="text-align: left"><strong>逐字内容解码</strong>（自回归生成全部文本/代码内容）</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>供给端经济模型</strong></td>
+					<td style="text-align: left"><strong>创作者生态免费供给</strong>（创作者上传，平台聚合分发）</td>
+					<td style="text-align: left"><strong>推理计算实时承担</strong>（平台承担全部生成计算负载）</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>单步交互Token消耗</strong></td>
+					<td style="text-align: left"><strong>~10 Tokens</strong>（紧凑SID即刻对应数分钟的多媒体内容）</td>
+					<td style="text-align: left"><strong>数千 Tokens</strong>（逐词解码导致推理延迟与成本剧增）</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>相对推理成本</strong></td>
+					<td style="text-align: left"><strong>极低（低出 10x – 100x）</strong></td>
+					<td style="text-align: left"><strong>极高（面临巨大的算力边际成本与毛利压力）</strong></td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>核心商业化载体</strong></td>
+					<td style="text-align: left"><strong>天然融合高沉浸度广告与增值闭环</strong></td>
+					<td style="text-align: left"><strong>依赖高单价订阅与API调用付费</strong></td>
+			</tr>
+	</tbody>
+</table>
+<p>对比分析表明，对话式AI每进行一步对话，必须由模型端独立解码出成千上万个内容Token，这些Token直接由推理阶段昂贵的GPU集群实时算力计算生成。而在内容信息流场景中，平台的输出仅为一个紧凑的<strong>语义指针</strong>（Semantic Pointer），直接定位至由数百万创作者生态预先生产的高清短视频或图文。推荐系统仅需解码极少量的指针Token，便能撬动包含巨大信息量与情感价值的内容消费。这种结构性套利使得内容流推荐的推理成本比纯文本生成式AI便宜10到100倍。</p>
+<p>从宏观消费级互联网的盘子来看，全球DAU排名前十的应用中，有四款本质上都是内容流平台。绝大多数消费级互联网产品的时长与营收增长，均由底层的推荐与广告变现引擎直接驱动。随着推荐系统全面迁移至LLM架构，并引入具备推理反思能力的推荐智能体（Agentic Recommenders），推荐系统将成为商业转化效率最高、经济模型最健康、覆盖受众最广阔的AI落地赛道。</p>
+<details>
+<summary>Original English Source</summary>
+<p>最后，我想谈谈一种奇特的结构交互中的令牌。我使用的这个飞轮开始了，这是合乎逻辑的结论模型训练，与互动消费者，然后货币化。它实际上是一样的飞轮，用过的内容源以及聊天应用程序人工智能。和这是一个可以用于任何评估消费者应用的镜头。这个应用会做什么？从以下角度来看是成功的：盈利能力投资学习，就是这个。他有多厉害？将能够转换对模型的计算正面？从这个角度来看合乎逻辑的结论，好逻辑标记结论可以变成互动，然后是盈利模式？</p>
+<p>所以，如果你尝试对比磁带内容和聊天人工智能应用我认为，智慧……法学硕士推荐人实际上结构上比使用比聊天更有价值人工智能。所以，左边是内容源，例如Instagram、Facebook、TikTok和YouTube。正确的你们进行了很多对话——人工智能应用情报，例如Gemini、ChatGPT和Claude。内容源现在使用模型数量约为1-10个数十亿活跃用户参数。聊天-应用程序服务大得多型号，从10到100不等数十亿活跃用户参数。出口内容源是一个语义标记标识符，哪个是一个指针和/或现有地址内容，因为提供的内容这些录像带内容，加载中创造者。有一个非常健康的经济因此，创作者们提供内容实际上免费或其创作者上传。</p>
+<p>聊天应用程序人工智能必须独立解码每个内容令牌。和代币的数量为每个聊天互动步骤法学硕士（LLM）由多个部分组成数千枚代币。和这里有很大的不同就是每个令牌必须是由应用程序创建戒断期间。所以，这意味着如果你比较这两个相关应用它要多少钱逻辑结论和有多少台电脑花费于时钟生成与的互动消费者，那么就有巨大的结构丝带之间的区别内容显著便宜，最多可便宜100倍或者不仅仅是聊天-人工智能应用智力，因为他们解码指向内容，而非内容本身内容。</p>
+<p>最后，我最后我想说的是：我为什么考虑攻读LLM Rexis学位之一最重要的消费者应用人工智能。如果你看一下最佳应用程序活跃用户数量每天有用户以上就是前十名应用程序。十分之四它们——这些是丝带内容。所以，这是意义重大消费者应用。如果你看一下内容源，几乎所有增长消费者应用无论是从互动方面来看，从侧面看货币化模型驱动建议和广告。他们将会完全转变推荐LLM系统。这非常大而非常从这个角度来看是有效的令牌视图应用人工智能对消费者而言应用程序。我们会看到许多新的来自的产品管理和交互的建议解释建议和仅仅因为更多用户可以控制你的在这些应用方面的经验。我认为在期间明年或我们即将我们拭目以待。迷人研究消费者代理和代理人建议。嗯，还有这就是我认为的原因。这真是非同寻常。令人着迷的行业研究和产品开发在主路交叉口法学硕士（LLM）和建议。就是这样全部。非常感谢。</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Meta" class="entity-link company-link">Meta</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=HSTU" class="entity-link product-link">HSTU</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <span class="tag-pill tag-pill--no-page">recommender-system</span>
+      
+        <a class="tag-link" href="/tags/scaling-law/">scaling-law</a>
+      
+        <span class="tag-pill tag-pill--no-page">semantic-identifier</span>
+      
+        <span class="tag-pill tag-pill--no-page">generative-recommendation</span>
+      
+        <span class="tag-pill tag-pill--no-page">inference-economics</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>告别2022年的落后分块：基于多尺度索引与倒数排名融合的高效RAG检索策略</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="告别2022年的落后分块：基于多尺度索引与倒数排名融合的高效RAG检索策略" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">告别2022年的落后分块：基于多尺度索引与倒数排名融合的高效RAG检索策略</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-16</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=r9OwPx_HoV0" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-16
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">AI21 Labs研究员Yuval Belfer指出固定分块大小是导致RAG检索性能受限的信息损失瓶颈，且不存在全局最优的分块尺寸。演讲提出了多尺度索引（Multiscale Indexing）结合倒数排名融合（RRF）的解决方案，通过多副本与多窗口并行检索，在仅增加可控常数级存储开销的前提下，将基准检索召回率大幅提升20%至40%。</div></div>
+      
+    </div>
+    <h3>RAG未死但基础设施亟需进化：突破固定分块的传统思维</h3>
+<p>当前行业中频繁出现“RAG已死”、“智能体检索（Agentic Search）终结传统检索”的声音，甚至连许多框架维护者也将分块技术视作无需过多投入的过时环节。然而在处理海量非结构化数据与多样化查询时，单纯依赖智能体在目录与文件层级的逐层遍历（如 <code>grep</code>、<code>find</code>）会引发严重的检索延迟和巨大的 Token 消耗。例如在遍历历届世界杯数据的场景下，统计夺冠次数最多的球队需要逐个目录展开汇总，计算效率极其低下。检索架构并没有消亡，而是降级为了底层的管道基础设施；但令人遗憾的是，目前大多数系统依然沿用着 2022 年初期的粗糙模式——选定一个固定的分块大小（如 512 词元）并搭配 10% 到 20% 的重叠率，随后便将其固化在向量数据库中。</p>
+<p>这种固定分块策略本质上是一种<strong>有损压缩</strong>（Lossy Compression: 在切分过程中不可逆地丢失上下文或细节信息）。如果切分窗口过大，虽然能够保留全局语义，却会抹杀关键细节，导致向量嵌入表征模糊；反之，若切分窗口过小，则会丢失跨句的宏观语境。业界长期尝试针对特定语料库寻找“最佳分块尺寸”，但实际测试表明，检索最优解本质上是<strong>查询依赖型</strong>（Query Dependent: 最优检索窗口取决于用户提问的具体粒度与意图），根本不存在一个能够通用于整个数据集的静态分块大小。</p>
+<details>
+<summary>Original English Source</summary>
+<p>Hi everybody. Thank you for coming today. Welcome to a talk about retrieval. My name is Yuval. I work at AI21, which is essentially an AI research lab. And today I want to talk to you about something that most people don't want to talk about, which is chunking. And I hope to convince you by the end that chunking isn't dead and there is something to do with that.</p>
+<p>And really, if you are at X, LinkedIn, wherever, you've probably seen that RAG is dead, right? I think people also killed MCP lately, and RAG is dead again. Long live agentic retrieval, agentic search. And there comes a time where you have to ask yourself: how many times can RAG die? And even when someone says, &quot;Well, RAG isn't dead,&quot; like Jerry, the CEO of LlamaIndex, they still have to kill something, and apparently this something is chunking—like &quot;don't invest in it, don't do it.&quot;</p>
+<p>And the reason that people said that chunking is dead is because everybody's using agentic search now, right? You have gs, you have ls, you have finds. All of these are great, but these are still not enough if you have a lot of data and you have various amounts of queries.</p>
+<p>And I think that the main reason that a lot of people don't like to talk about chunking is because it's not the fun part, right? In every RAG system, we have two stages. The first stage is the boring one that you do in the beginning: you have a lot of data, you have to preprocess it, you have to decide on the chunk size, and then you have to store everything in a vector DB. The other part is the retrieval part—essentially the one that happens per query. This is much easier to do and much easier to optimize; you can use all your queries and then play with top-k, hybrid search, and those kinds of things. It's much more fun to do retrieval tuning.</p>
+<p>So I will claim that if something has to be dead, then it's probably retrieval tuning. Agentic search probably killed that. But still, agentic search—even if we accept the fact that it killed retrieval tuning—is still not good enough when you have scale and a lot of data. It costs a lot of money and token-maxing. And underneath, if the data itself is not ordered in the right way in your folders and directories, you still get something inefficient.</p>
+<p>Let's think of a timely example: the FIFA World Cup. Imagine we have a dataset containing all FIFA World Cups, where every directory is, say, the '98 one, the 2002 one, and so on. If your query asks which team won the most World Cups, you can't just go to a folder and ask that. You have to go to every folder, see who won, and aggregate this together, which is very inefficient. (The answer, by the way, is Brazil.)</p>
+<p>So retrieval didn't actually die; it got demoted into plumbing. Everybody who worked on any RAG system knows the feeling: day one, week one, or month one, you pick some sort of chunk size (let's say 512), put some overlap (10–20%), index everything, and forget all about it. We talk a lot about fixed chunking strategies where if your chunk is too big, you get the whole picture (which is nice) but lose a lot of nuance and meaningful embeddings; whereas if your chunks are too small, the big picture is lost. Chunking is essentially a lossy compression. No matter what we do, we're losing something.</p>
+<p>There is no single right chunk size. Many who work on data say, &quot;No, we optimized our system on our corpus and it works well.&quot; We thought so too. But unlike model benchmarks where you can easily overfit, in RAG you cannot optimize a single chunk size per dataset—it is query-dependent.</p>
+</details>
+<h3>上帝视角实验：揭示查询依赖与固定分块的巨大性能鸿沟</h3>
+<p>为了验证分块大小与查询类型之间的强耦合关系，研究团队设计了一组对比实验。在构建的 <strong>Seinfeld 剧集问答数据集</strong>（Trivia QA: 基于情景喜剧文本构建的事实与上下文检索测试集）中，不同属性的查询展现出了完全相反的偏好：</p>
+<ul>
+<li><strong>强聚焦事实型查询</strong>（如“Jerry最喜欢的麦片品牌是什么”）：答案高度集中且简短，微小尺寸的分块（如 50-100 词元）表现极其出色，检索命中排名可达 Rank 1，而在大尺寸分块下排名则掉落至 50 名之后。</li>
+<li><strong>广度上下文推理型查询</strong>（如“Jerry 将谁视作其一生宿敌与纯粹的邪恶化身”）：线索分散在较长对话与情境中，过小的分块因切断了语义依赖而彻底失效，必须依赖大窗口分块才能准确定位。</li>
+</ul>
+<p>在观察到这一现象后，团队构建了 <strong>Oracle 实验</strong>（Oracle Experiment: 假设存在一个全知先知，能够为每一个输入查询动态匹配最佳分块尺寸的理想上限测试）。实验在 QM-sum（会议纪要）、NarrativeQA（小说叙事问答）及 Seinfeld 数据集上，将同一语料库分别以 6 种不同的窗口尺寸进行切分索引。结果显示，各类固定分块尺寸的性能曲线在召回率评估中频繁交叉，没有任何单一尺寸能够在全局占据优势；而 Oracle 曲线相比于任何固定尺寸的基准线，展现出了高达 <strong>20% 至 40% 的召回率提升</strong>。这一巨大的差距揭示了工程架构中的核心信息错配：在索引构建阶段能够决定分块大小，但无法预知未来的查询意图；而在推理检索阶段已知查询语义，却受限于已经固化的索引粒度。</p>
+<details>
+<summary>Original English Source</summary>
+<p>How can I be so sure and claim such a thing? Because we ran experiments. Instead of asking what the best chunk size per dataset is, we took datasets and duplicated them several times—in this case, six times—where each instance had a different chunk size (e.g., 200, 1000, etc.).</p>
+<p>We did this across several datasets: QMSum (meeting transcripts), NarrativeQA (question answering on novels), and the Seinfeld dataset (trivia questions on Seinfeld transcripts, an in-house trolling dataset we published).</p>
+<p>First, we looked at how queries different in nature perform across chunk sizes. For example, in Seinfeld:</p>
+<ol>
+<li>&quot;What is the name of Jerry's favorite cereal?&quot; — A very focused, specific question where the answer is contained. A smaller chunk size (100 tokens) achieves Rank 1 versus Rank &gt;50 on larger chunks.</li>
+<li>&quot;Who does Jerry describe as his nemesis and pure evil?&quot; — (The answer is Newman.) If you look at the transcript, it's not found easily; if you use a small chunk size, you will not get the answer.</li>
+</ol>
+<p>We then asked: what if we had an Oracle (or a genie) that could tell us the best chunk size for every query? This is the Oracle experiment—to see the potential. In the graph (Recall@K vs K), the blue lines represent individual fixed chunk sizes, while the orange line represents the Oracle picking the best chunk size per query.</p>
+<p>Across several datasets, the blue lines intersect, meaning no single chunk size dominates. More importantly, the gap between the Oracle line and all fixed blue lines is huge—around 20% to 40% improvement just from chunking strategy. That gap is the cost of picking an arbitrary number like 512 or 1000.</p>
+<p>The core challenge is an information asymmetry problem: at indexing time, when you control the chunk size, you don't know what the queries will be; at retrieval time, when you have the query, you cannot adjust the chunk size because it is already fixed.</p>
+</details>
+<h3>多尺度索引与倒数排名融合：构建高性能文档级聚合检索</h3>
+<p>面对这种阶段间的信息错配，以往的研究方向（如语境化检索 Contextual Retrieval）主要聚焦于向文本块中注入元数据以增强潜在语义空间，但其底层仍受限于单一固定分块。AI21 Labs 则提出了全新的 <strong>多尺度索引</strong>（Multiscale Indexing: 在索引期创建多种窗口大小的并行分块副本，并在检索期联合查询与融合的架构方案）。在检索阶段，系统针对 $N$ 个不同分块粒度的数据库并行发起查询，将返回的片段回溯映射至其源文档，随后通过 <strong>倒数排名融合</strong>（Reciprocal Rank Fusion, RRF: 一种无需评分归一化、仅依赖多路排名位置进行加权聚合的稳健排序算法）将多路文档排名融合成最终输出。</p>
+<pre><code>                    ┌─► 向量库 (Chunk Size: 50)  ──► Top-K 文档排名 1 ┐
+                    ├─► 向量库 (Chunk Size: 100) ──► Top-K 文档排名 2 ┤
+Query ──────────────┼─► 向量库 (Chunk Size: 200) ──► Top-K 文档排名 3 ┼─► RRF 融合 ──► 最终相关文档
+                    ├─► ...                                         ┤
+                    └─► 向量库 (Chunk Size: 2000) ─► Top-K 文档排名 N ┘
+</code></pre>
+<p>该架构的完整实操流程与工程特性如下：</p>
+<ul>
+<li><strong>跨粒度可比性解决</strong>: 由于不同尺寸分块直接基于相似度得分排序不具备可比性，系统将分块检索转化为针对完整<strong>父文档</strong>（Parent Document）的命中投票，使得多路召回可以在统一实体粒度上完成度量。</li>
+<li><strong>极佳的综合收益</strong>: 在 QMSum、NarrativeQA、Seinfeld 及 FinanceBench 等多个公开与工业基准测试中，该方法不仅全面超越了任意单一固定尺寸的分块方案，还在 Recall@1 到 Recall@10 各指标上实现了稳定增长，普遍带来了 10% 至 40% 的检索质量提升。</li>
+<li><strong>系统开销与未来演进</strong>: 在资源成本方面，多尺度索引将存储与索引体积扩大了 $2$ 至 $5$ 倍（保持在 $O(1)$ 常数倍开销）；但由于多路向量检索可高度并发执行，且 RRF 算法计算开销极低，系统端到端延迟几乎不受影响。未来的优化方向包括基于语料特征自适应确定最佳分块尺寸集合与副本数量，以及探索超越 RRF 的高阶融合重排算法。</li>
+</ul>
+<details>
+<summary>Original English Source</summary>
+<p>Prior works like Anthropic's Contextual Retrieval enrich chunks to improve the latent space, but they still stay within the fixed chunk size paradigm. We took a different approach: why commit to one chunk size when you can commit to several?</p>
+<p>We call this <strong>Multiscale Indexing</strong>. At indexing time, we duplicate the database and chunk it with $N$ different window sizes. At retrieval time, we run $N$ parallel retrieval calls per query.</p>
+<p>How do we combine them? We cannot use the Oracle in production. Since chunks of different sizes are not directly comparable by similarity scores, we adopt a document-level retrieval approach: when a chunk matches, we retrieve the entire parent document. Now we have $N$ different document rankings, and retrieval becomes a voting process. We aggregate these rankings using <strong>Reciprocal Rank Fusion (RRF)</strong>—a simple, lightweight formula that requires no dedicated model training.</p>
+<p>The results across QMSum, NarrativeQA, Seinfeld, and FinanceBench demonstrate that this method consistently matches or beats the best fixed chunk size, improving recall across Recall@1 to Recall@10 by 20% to 40% (and 10% to 40% on MTEB benchmarks).</p>
+<p>There are trade-offs: it is not a free lunch. It incurs an additional storage cost of 2x to 5x ($O(1)$ constant overhead). However, latency is virtually unaffected because retrieval calls run in parallel and RRF computation is instantaneous.</p>
+<p>Future work includes determining the optimal number and specific values of chunk sizes dynamically rather than arbitrarily choosing (50, 100, 200...), as well as exploring ranking fusion methods beyond RRF. Agents didn't kill retrieval; the issue is that systems are still stuck with 2022 infrastructure. Simple multiscale strategies can instantly yield substantial gains.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=AI21 Labs" class="entity-link company-link">AI21 Labs</a>
+</p>
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/retrieval-augmented-generation/">retrieval-augmented-generation</a>
+      
+        <span class="tag-pill tag-pill--no-page">multiscale-indexing</span>
+      
+        <span class="tag-pill tag-pill--no-page">reciprocal-rank-fusion</span>
+      
+        <span class="tag-pill tag-pill--no-page">chunking-strategy</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

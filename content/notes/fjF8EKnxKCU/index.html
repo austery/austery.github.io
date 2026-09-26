@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent 架构演进：从 Python 胶水代码到文件与远程沙箱</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="Agent 架构演进：从 Python 胶水代码到文件与远程沙箱" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Agent 架构演进：从 Python 胶水代码到文件与远程沙箱</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-14</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=fjF8EKnxKCU" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-14
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">深入剖析 Agent 开发范式的三次跃迁：从手写 Python 循环与 JSON Schema，到框架封装，再到基于 Antigravity 远程沙箱与 Markdown 文件的声明式架构。结合 Cursor、Manus 等业界案例，揭示 Agent 工程中&#39;随模型能力增强而精简代码&#39;的核心法则。</div></div>
+      
+    </div>
+    <h3>范式转移：从编写胶水代码到以文件定义 Agent</h3>
+<p>在探索智能体架构演进的过程中，一个核心命题正在显现：<strong>文件系统与规范声明正在逐步替代传统的 Python 胶水代码</strong>。根据 Simon 对 <strong>LLM Agent</strong>（大语言模型智能体：在循环中持续调用工具直至达成目标的系统）的经典定义，智能体的核心机制是围绕目标不断循环执行工具。为了直观展现这一演变轨迹，我们将通过构建同一个 GitHub PR 审查 Agent 的三个不同版本来剖析整个演进过程——在版本迭代中，代码量将不断减少，取而代之的是纯粹的配置与指令文件。</p>
+<p>这一演进的底层基石是 <strong>Interactions API</strong>（交互接口：Gemini 提供的用于统一调度模型与智能体的新一代统一接口）。与以往仅支持简单会话的旧接口不同，Interactions API 支持服务端状态管理与后台异步执行，统一了工具调用、多模态理解与多模态生成的交互界面。更关键的范式转变在于，API 设计彻底告别了传统的“用户提问-模型回答”的轮次历史（Turn-based），转向以<strong>步骤时间线</strong>（Step-based Timeline）为核心的数据结构。在多步骤推理与智能体场景下，执行链路涵盖了用户输入、<strong>思维链推理</strong>（Reasoning: 模型内部的思考与规划过程）、函数调用及函数执行结果，开发者无需再将环境返回的数据违规塞入 User 角色中。</p>
+<details>
+<summary>Original English</summary>
+<p>Hi everyone. Thank you for coming. I know it's the fourth day, last session before the keynote starts again and we are going to do something fun. We're going to look into how files are basically replacing Python. And before we begin, I would like to start with my favorite definition of what is an agent from Simon. An LLM agent runs tools in a loop until it achieves a goal. And what we are going to do is we are going to build the same agent, the same GitHub PR review agent in three different ways. And we are going to delete code on the way. Each new version, less code, more files basically.</p>
+<p>Before we begin, I would like to quickly introduce you to the interactions API, which is our new Gemini API. It's a unified interface for running models and agents. So you can use the interactions API to call the Gemini models directly or to call our new agents, which also comes with sandbox. It supports serverside state management, background execution. So it's perfectly suited for all that's coming in the next years. And the capabilities it's the same API for tool call multimodality understanding multimodality generation so you always have the same interface might look very familiar if you're using other LLM applications we really try to build something for developers which you like to use to build and that's something we are going to do.</p>
+<p>So something little bit different in the interactions API to other LLM applications or APIs is that we moved away from this term based based conversation history to steps. So until I would say a few months ago, most of the applications were really turnbased. Normally you had a user in input and then a model output, a user input, a model output, which definitely works for normal chat application. But as soon as you start to build agents, use reasoning model. We have more than just a user role and a model role, right? So we have like different inputs, we have different types, we have reasoning. So we decided to like make a cut, make a change and build something really for agents and that's what you see on the flat steps timeline on the right where you have a user input then you have reasoning you have a function call you have a function result and you no longer need to like abuse the user role for passing back data from an environment.</p>
+</details>
+<h3>演进阶段：从原生循环到框架封装的局限</h3>
+<p>回溯至约一年半前，构建智能体意味着在本地手写完整的 <strong>Python 控制循环</strong>（Python Loop: 负责驱动 LLM 不断进行函数调用和状态更新的代码循环）。开发者必须手动定义庞大的 <strong>JSON Schema</strong> 规范以声明工具、编写具体的 Python 工具执行函数、解析大语言模型的响应、判断返回类型是文本还是函数调用，并手动将参数分发给具体工具；同时还需要捕获执行异常、拼接错误信息并反复回传。在最基础的实现中，开发者不仅要管理复杂的解析逻辑和状态，还必须维护专门的系统提示词（System Instructions）以及对接 GitHub API 的定制化请求代码。这种模式下，智能体的能力被死死限制在硬编码的工具集内，一旦遇到未预定义的能力请求便会立刻报错瘫痪，且充斥着大量易错、难维护的样板代码。</p>
+<p>为了缓解这种复杂度，业界涌现了大量 <strong>Agent 开发框架</strong>（如 <strong>ADK</strong> 框架）。这些框架将底层复杂的轮次循环、函数调用分发、重试机制与错误处理进行了抽象封装，并能够直接利用 Python 函数的类型签名动态生成 JSON Schema。这确实帮助开发者剔除了大量重复的样板代码，使得项目结构中不再需要手写独立的 Agent 驱动类。然而，这种框架层面的封装治标不治本：开发者依然需要维护繁重的 Python 管道代码、自行定义和管理每一个具体工具函数、编写特定业务逻辑，并必须自行搭建和维护运行这些工具的本地或服务器托管环境。智能体依然缺乏泛化能力，开发者仍未摆脱底层管道维护者的角色。</p>
+<details>
+<summary>Original English</summary>
+<p>So roughly a year one and a half years ago writing agents mostly meant writing a loop in Python. You needed to define a JSON schema. You needed to define Python functions. You needed to look at the output from the LLM. Need to check if it was a function call or if it was a text response. And then needed to match it against the type and then like call the tool look of if you get an error and then like go back and forth and let's look at some some code example on how this would look and also run it and hope that the demo gods are great to us.</p>
+<p>So I built or I let Gemini build a basic implementation of this Python loop. So we have our class. We have a run function which uses the interactions API. We have all of the weird complex passing with function calling with appending the errors checking if we get an error and then we have the result again. And what we need of course for an agent is we also need a system instruction. So there's a separate file for the system instruction. Very basic. QR GitHub PR reviewer and then of course we need tools and for tools we needed to write those JSON schemas specifications of description exactly define which actions the agent can take and then of course we need the implementation in this case using the the basic GitHub API just sending some some requests.</p>
+<p>So we can run this in and basically the main main implementation is a very simple input interface and we can say something like hello and yes we get back hey I'm an agent and then we yes ask it to review a pull request on the Gemini skills repository and what we should see is like the agent should hopefully start soon sending function calls function results function calls function results but it's very limited to yes great it works very limited to the tools we define so if we ask the agent to do something which it does not have the capabilities to it just says hey I cannot do this which is unfortunate but that's how we were building agents raw Python code a lot of files a lot of things which can go wrong a lot of code to manage.</p>
+<p>So what happened afterwards or what we we need to do we have like a token generation We have the native function calling and we must execute the loop. We must handle the tool routing. We must create a JSON schemas. We must write the Python code. We need to execute the Python code. We need to manage the state. So there's a lot of things we need to do to get an agent running.</p>
+<p>And then we got agent frameworks. There were many different agent frameworks which abstracted away some of that complexity. One example here is the ADK framework where you have an agent class now which handles all of the tool loops, the function calling, the retries, the error handling and it made it a little bit easier. We basically removed all of the boiler plate code which we always needed to write for agents put it into a framework and help people build with it.</p>
+<p>So back to the demo and same example. So we go into the CR2 and what is very interesting if you let me open both. So we still have our we don't have our agent file anymore. So the agent went away. We still have our prompt same system prompt. We still have our tools in this case also no JSON definitions anymore because those agent frameworks now use the signature of our functions to create those JSON schemas on the fly to provide the model.</p>
+<p>So let's stop our agent. Now let's run our second agent. Similar interface, similar prompt and we should see a similar expected behavior where we have function calls. We try to get the PR data. We try to get the diff, we try to get all of the code we need and it works and we wait for for the agent to yes continue.</p>
+<p>But similar difficulty here. If I ask it like what's the weather in San Francisco we should get back hopefully a result like hey I cannot do this I don't have access to the weather API which obviously makes sense because we did not define any tool still very unfortunate because we need to be very explicit on what our agent can do and we all know nowadays that we just want to prompt something and we wanted the agent to do whatever it takes to to achieve that goal.</p>
+<p>So what is left for us to do? What does the framework solve? The framework solves the turn taking loops, the routing, the execution mapping, the JSON schema creation for like the different function calls, but we still own the Python plumping. So we still need to write those tools with Python code. We still need to add specific rules or requirements to like make sure whatever we want the agent to do and we need to provide the environment where all of the tools are running, where we want to host it.</p>
+</details>
+<h3>远程沙箱与 Antigravity：架构下沉与凭证安全</h3>
+<p>面对本地框架的局限性，架构进化的下一阶段是<strong>远程智能体</strong>（Remote Agents）。在 Google I/O 上发布的 <strong>Antigravity Remote Agent</strong>（基于 Gemini API 的云端智能体服务）正是这一趋势的代表。该服务由驱动 <strong>Antigravity IDE</strong> 的同款 Agent Harness 底座提供支持，但面向通用任务进行了适配，原生内置了 Google Search 等基础能力。其最具突破性的特性在于引入了 <strong>Environment</strong>（运行环境配置参数），使智能体能够直接挂载并运行在一个完全托管、相互隔离的<strong>云端沙箱</strong>（Cloud Sandbox）中。在沙箱内，智能体拥有执行 Bash 命令、操作文件系统以及调用系统工具的完整权限。</p>
+<p>在沙箱环境中，开发者可以灵活配置数据源（Sources），包括 GitHub 仓库、GCS 对象存储桶或内联文件。为了彻底解决安全隐患，系统在沙箱外围构建了 <strong>Network Proxy</strong>（网络安全代理：拦截并注入鉴权凭证的网络层）。当智能体从沙箱内部发起对外请求时，网络代理会根据预设策略在传输层动态注入对应的 API Token（如 GitHub API 凭证与 Git 命令行凭证），而智能体本身完全接触不到任何真实敏感凭证。同时，开发者还可以精细化配置域名访问白名单（默认开放全网访问以保证灵活性）。此外，借助统一的 <strong>Agents API</strong>，开发者可以将特定指令、基础环境与自定义工具封装为具备专属 ID 的可复用智能体，像调用原生 Gemini 模型一样无缝复用。</p>
+<details>
+<summary>Original English</summary>
+<p>So what comes afterwards? Afterwards hopefully comes remote agents and at Google IO we launched the anti-gravity remote agent on the Gemini API. The anti-gravity agent is powered by the same agent harness which powers the anti-gravity IDE. Here the same harness very important does not mean the same agent because the anti-gravity agent is a coding agent at the moment and the agent available in the Gemini API is a general purpose agent. So there might be different system instruction, there might be slightly different tools because the Gemini API already has a Google search tool. So we use that what we have built and but very importantly it comes with this new environment parameter and this environment parameter here allows the agent to get access to a hosted isolated cloud sandbox where it can run tools, where it can run bash commands and where it can save files.</p>
+<p>And those environments can be configured. So you can provide sources and sources can be a GitHub repository, it can be a GCS bucket, it can be inline files and of course very important we want to make sure that those agents are secured and cannot use our credentials in any way possible. So we created a network proxy around the agent sandbox which basically injects the credentials when the agent makes a request from inside the sandbox to outside the sandbox. So the agent never really sees your credential. It just knows hey I can call the GitHub API and then on the fly we make sure that it received the correct token which you define and you can also limit which domains the agent has access to. So if you want to restrict the agent completely on which network access it can or which website it can access you just leave it blank. By default the agent can access all because I mean it's a hassle if you first need to define where to go. So we tried to stay simple.</p>
+<p>And of course making an API call is nice but we thought hey people want to reuse their configuration want to reuse their agents. So we added the agents API where you can define your own custom ID you the same system instruction the same base agent the same base environment and then you can create that agent and then you can use that agent in the same exact way as you use Gemini models or as you use the anti-gravity agent by providing the ID. So all of the existing code can be reused with your own custom agent, with your own custom tools, with your own custom credentials, environments, whatever you need for it to to run.</p>
+</details>
+<h3>零代码实践：利用 Markdown 与通用 CLI 解构复杂性</h3>
+<p>在 Antigravity 架构下，智能体的第三个版本彻底删除了原本的 <code>src/</code> 代码目录。项目中不再包含任何 Python 业务代码，取而代之的是一个包含 <code>agents.md</code> 的规范目录。开发者无需再为“读取 PR 内容”、“获取代码差异”单独编写定制化的 Python 函数，只需在 <strong><code>agents.md</code></strong>（智能体系统指令文件：定义行为准则、可用工具说明与环境上下文的 Markdown 规范文档）中声明：“你拥有 <strong>GitHub CLI</strong>（<code>gh</code> 命令行工具）、Bash 执行环境和文件系统权限，请按需使用”。若沙箱初次启动未安装对应工具，只需通过一个极简的启动脚本在第一轮交互中自动检测并下载安装。</p>
+<p>当运行这种以文件驱动的远程智能体时，智能体会首先主动探测沙箱环境、自动配置依赖，随后利用自身对标准 CLI 工具的预训练知识自主拆解任务并完成 PR 审查。更重要的是，它展现出了通用的泛化求解能力：当被问及“旧金山天气如何”时，由于不必拘泥于硬编码的 Python 工具集，它能够自主选择内置的 Google Search 搜索实时信息并给出准确回答。在实现层面，开发者只需发起一次简单的 API 调用，传入用户 Prompt、环境配置（包含启动脚本、<code>agents.md</code>、网络代理凭证）以及前序交互 ID（维持多轮对话上下文）。云端沙箱会自动加载文件，模型与沙箱环境之间自主完成工具循环、函数执行与结果回传，服务端自动处理上下文压缩（Context Compaction），从而彻底解放了开发者。</p>
+<details>
+<summary>Original English</summary>
+<p>So let's look at how this will look for SS code and as a demo. And okay, now 03. And what might be very obvious is that we no longer have a source directory. So the code went away. We have now an agents M folder with an agents MD file with system instructions. So very similar system instruction. The only difference here is that we tell the agent, hey, you have access to the GitHub CLI. So we no longer create specific tools for reading files from a GitHub pull request, for accessing a GitHub pull request. We just tell the agent, hey, you have a GitHub CLI, you have a bash tool, you have file systems. try to use it whenever you think it's important. And since we don't have the CLI installed, we have a very basic bash script in this case which checks, hey, if the GitHub CLI is installed, please use it. If not, download it and install it on the first turn.</p>
+<p>So, we go into our terminal and we run our agent here. In this case, maybe important I use a stream version because otherwise we would wait like a few seconds and we not get back any we would not get back any anything back. So same prompt and we should soon see our function calls and function results coming in.</p>
+<p>Yes. So in this case since we run inside a sandbox the agent first like explores the sandbox to really make sure hey do we have this GitHub CLI installed and then tries to run it. It did not find it on the first turn. So it installs it and then we can see the agent doing its work. And in this case it's not using the predefined function calls. It's using the GitHub CLI and it's already existing knowledge about how it works. I have a bash tool. I have like access to the file system and I do all of that work to see or to like review the the pull request. Let's wait a little bit.</p>
+<p>Okay. And I think the the amazing part here is like if we ask the same question as before, what's the weather in San Francisco? We should hopefully see that the agent tries to use ah it uses Google search in this case on 2nd of July. Let me quickly check. Yeah, that's today. And we have around 20° Celsius and it works. So the agent became more of a general purpose agent and we don't need to like specify all of the tools. We basically trust the model on understanding hey I have a specific set of very atomic general purpose tools to solve my task or the task for the user.</p>
+<p>And if we look at the the code for like the the input or like the the sorry the the interface we have our sources here. So we have the the bash script which install the GitHub CLI. We have the agents MD file and then we say hey you can use the GitHub API with credentials. So I want to access or use GitHub credentials in a secure way. So I created a token for the API and also for github.com since you need both URLs. one uses is used for the git commands. The other one is used for HTT commands and then domain all is basically hey in addition to the GitHub URLs you can use all of the web but you don't have credentials for it and then it's a it's a simple single API call to the anti-gravity agent with your or user input with the environment and then also with the previous interaction ID that we keep the multi-turn going and that that's all it takes and it's a single API call on the backend side we start that cloud sandbox we load the agents MD file and the skills from the environment provided to the model and then the model between the API and the sandbox does all of the the looping calling the function returning the function results calling the function returning the function results and that is all it takes.</p>
+</details>
+<h3>智能体苦涩教训：越演进越极简的架构法则</h3>
+<p>从手写代码向文件系统的迁移，印证了 <strong>智能体工程的“苦涩教训”</strong>（Bitter Lessons of Agent Engineering: 随着基础模型推理能力的提升，复杂的硬编码编排往往会沦为负资产）：</p>
+<ol>
+<li><strong>Cursor 的重构实践</strong>：在欧洲工程师大会上，<strong>Cursor</strong> 分享了他们将原本用于 Git Worktrees 编排的约 12,000 行 TypeScript 硬编码编排逻辑，精简替换为仅约 200 行基于 Markdown 的 Agent Skill 文件的案例；</li>
+<li><strong>业界普遍收敛</strong>：<strong>Manus</strong> 在半年的时间内将 Agent Harness 重构了 5 次；<strong>LangChain</strong> 在一年内重构了 3 次 Open Deep Research；<strong>Vercel</strong> 则直接删除了 80% 的复杂工具，以此换取了更少的执行步骤、更快的响应速度与更高的准确率。</li>
+</ol>
+<p>这一系列实践揭示了明确的架构准则：<strong>如果随着底层大模型的升级，你的 Harness 架构变得越来越臃肿复杂，说明你正在过度工程化（Overengineering）</strong>。在先进架构中，Agent 仅仅由文件构成——通过 <code>skills.md</code> 注入能力，通过 <code>agents.md</code> 声明规则，利用文件系统持久化存储偏好与规则记忆，或通过写入交接文件（Handoff Files）来完成长周期的上下文外化。开发者应当贯彻 <strong>“为删除而构建”</strong>（Build to Delete）的哲学，停止对模型执行路径的微观管理（Micromanaging），转而专注于领域规则、工作流规范以及核心的 <strong>Evals</strong>（系统评测基准：用于客观量化与验证 Agent 行为产出的评估系统），将广阔的探索与执行空间交给具备通用原子工具的强推理模型。</p>
+<details>
+<summary>Original English</summary>
+<p>So where does it leave us? We no longer need to execute loops. We no longer need to do two routing. We have a serverside conversation and session state. So we only need to provide new inputs. The context window and the compaction is also automatically managed by the agent. So if we continue our conversation at a certain point the context is compacted and we can continue without the need to manage anything and we also get an isolated remote Linux sandbox which we can use to run our code.</p>
+<p>So what is still left for us? We need to define instructions. We need to define rules behaviors in an agent MD file. We need to provide capabilities or context and skills MD and we need to own the evils. So all of the heavy lifting, the infrastructure management, all of the same code which probably every one of us has written of us here like 20 times is no longer needed. And you can start really building your product instead of like needing to rewrite the same code over and over again.</p>
+<p>And very important is like, hey, that's great, but what about extending? And I think looking into how extending previous agents to like those new agents work. It's very obvious that previously if we want to do like some kind of security scanning on a pull request, we would need to define or write a Python function. We would need to understand okay which CLI tools do we need to use? We need to define a new function schema and then we needed to add it to our tools need to run it and then so there's a lot of things we need to do on on agents powered by files. We write a skills MD file maybe with some additional information on which CLI tool to use or maybe provide the CLI tool inside the environment and then we extended the capabilities. we don't need to change our code. We just provide more files to the agent and the agent decides on what we want to do.</p>
+<p>And I like to bring up some very good examples. So at a engineer in Europe, Cursor did a great talk on how they replaced roughly 12,000 lines of TypeScript code with a 200 lines agent files to create something similar. So they had a very hard-coded code orchestration for doing git work trees and they were able to replace it with just a skill and markdown files and there are more I would say bitter lessons of ancient engineering manos has refactored their harness five times in six months last year langen has rearchitected their open deep research three times a year and then also worsel has removed 80% of their tools to achieve fewer steps faster responses and better accuracy so there's an obvious trend that with better model capabilities, we can remove orchestration code.</p>
+<p>But if your harness is getting more complex as the model improves, you are most likely overengineering your harness. So if you struggle with model improvements and adding new capabilities which lead to more complexity and more code, you might need to rethink a little bit on how your agent harness looks.</p>
+<p>And so where does it end up? Agents are just files. We write markdown files to extend capabilities. Agents can learn from those can create their own files. So if you have a session and tell the agent to remember something to take notes of rules of preferences, the agent just writes it to this and then can reuse it in the later session and you can also externalize context. So if you have a very long running session and during that session you notice hey maybe I want to additionally work on another feature you can like just write that information that hand off to a file and like tell the agent to later pick it up.</p>
+<p>So what are the takeaways? We should not fight the model like we should stop micromanaging the execution paths provide general tools to the agent and let the model explore reason and discover the right solution. Own what is yours meaning focus on your domain instructions. Focus on the workflows. Focus especially on the evals, define clean tools and verify the outcomes and really build to delete. Like we have seen in the past many many times, the better the model get, the more code we can remove and the more things we need to change and obviously we all want to benefit from better models.</p>
+<p>So what the things for you to get to do on Monday, you can scan that QR code which brings you directly to EI studio where you can immediately try out the anti-gravity harness. So you can already start prompting it. it will start your own custom sandbox. If not, start or create your API key. We are currently working on a free tier for the API. So hopefully you can start exploring faster soon and then definitely start building files and skills. And that's it. Thank you for for coming.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Google DeepMind" class="entity-link company-link">Google DeepMind</a>, <a href="/search/?q=Cursor" class="entity-link company-link">Cursor</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Gemini" class="entity-link product-link">Gemini</a>, <a href="/search/?q=Antigravity" class="entity-link product-link">Antigravity</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/ai-agents/">ai-agents</a>
+      
+        <a class="tag-link" href="/tags/agent-harness/">agent-harness</a>
+      
+        <span class="tag-pill tag-pill--no-page">sandbox-execution</span>
+      
+        <a class="tag-link" href="/tags/code-generation/">code-generation</a>
+      
+        <a class="tag-link" href="/tags/prompt-engineering/">prompt-engineering</a>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

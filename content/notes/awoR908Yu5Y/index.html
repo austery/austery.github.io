@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 时代软件基础设施的演进：从五层蛋糕模型到 AI 工厂的重塑</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="AI 时代软件基础设施的演进：从五层蛋糕模型到 AI 工厂的重塑" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">AI 时代软件基础设施的演进：从五层蛋糕模型到 AI 工厂的重塑</span>
+      <span data-pagefind-meta="speaker" style="display:none;">The MAD Podcast with Matt Turck</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>The MAD Podcast with Matt Turck</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-24</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/the-mad-podcast-with-matt-turck/">The MAD Podcast with Matt Turck</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=awoR908Yu5Y" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-24
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">文章深入探讨了人工智能技术栈中的软件基础设施层，将其定位为承上启下的核心领域。通过五层蛋糕模型阐述了该层在硬件、模型、应用之间的核心地位，并分析了数据中心从传统架构向“AI 工厂”的剧变，强调了数据、算力、网络和存储在新型 AI 负载下的需求，以及训练与推理阶段对基础设施的差异化要求。</div></div>
+      
+    </div>
+    <!-- chunk 1/7 -->
+<h3>播客引言与算力背后的数据激增</h3>
+<p><strong>雷宁·哈拉克（Renen Hallak）</strong>：有时候这种增长速度甚至让我感到震撼。我们的一家客户——属于当前快速崛起的新兴 AI 云服务商之一——此前曾对我们预测说，在未来的三年时间里，他们大概总共需要大约 500 PB（Petabytes，拍字节）的数据存储容量。然而就在上周，他们重新找上我们并表示，在原本预估的 500 PB 基础之上，他们还需要额外追加 2 EB（Exabytes，艾字节）的存储规模。我认为，在接下来的十年时间里，整个行业所将要经历的剧烈变革与技术演进，将远超我们在过去十几年甚至几十年中所见证的全部变化。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Renen Hallak</strong>: Sometimes it scares me. We had a customer, one of these AI clouds. They said, &quot;We're probably going to need about 500 petabytes over the next three years.&quot; Last week, they came back to us and said, &quot;We're going to need an extra two exabytes on top of that 500 petabytes.&quot; I think in the next 10 years we will see more difference than we did in the last...</p>
+</details>
+<p><strong>主持人</strong>：欢迎来到本期播客节目。在我们这档节目中，我们经常深入探讨前沿的 AI 大模型，也经常讨论底层的算力与芯片硬件。然而，今天我们要将目光聚焦在两者之间那个至关重要的夹层——也就是承上启下的关键软件基础设施层。正是这一层，负责将海量的数据源源不断地输送供给给所有的这些 GPU 算力集群。今天我们邀请到的嘉宾是雷宁·哈拉克（Renen Hallak），他是 VAST Data 的创始人兼首席执行官。考虑到 VAST Data 在最近一轮融资中估值已达到令人瞩目的数十亿美元级别（甚至有报道称达到 300 亿美元），并且正在为包括 xAI 在内的全球顶级 AI 巨头以及多个世界最大的 AI 新型算力云提供强劲动力，这家公司在公众视野中却显得异乎寻常的低调。接下来，请大家尽情欣赏我与雷宁·哈拉克的深入对话。雷宁，热烈欢迎你来到我们的节目！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Welcome to the podcast. We talk a lot about AI models on this show, and we talk a lot about compute. But think about the layer in between: the crucial software infrastructure layer that feeds massive amounts of data to all these GPUs. My guest today is Renen Hallak, founder and CEO of VAST Data—a company that is surprisingly under the radar considering it has been most recently valued at thirty billion dollars, and powers top AI players like xAI and some of the biggest AI neoclouds in the world. Please enjoy my conversation with Renen Hallak. Renen, welcome.</p>
+</details>
+<p><strong>雷宁·哈拉克（Renen Hallak）</strong>：非常感谢你的邀请，很高兴来到这里。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Renen Hallak</strong>: Thank you, all right.</p>
+</details>
+<h3>五层蛋糕模型：软件基础设施在 AI 时代的定位</h3>
+<p><strong>主持人</strong>：为了给今天整场对话建立一个清晰的基准框架，我想先从英伟达（NVIDIA）CEO 黄仁勋（Jensen Huang）经常提到的那个心智模型切入，我发现这个类比对理解整个行业极其有帮助。他在描述当前的人工智能技术栈时，将其比喻为一块“五层蛋糕”：最底层是电力能源供应，紧接着上面一层是硬件算力设施，第三层是软件基础设施，第四层是基础模型，而最顶层则是各类上层应用程序。那么，VAST Data 在这块五层蛋糕架构中具体处于怎样的位置呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: So to anchor this whole conversation, I wanted to start with that mental model from Jensen at Nvidia that I found so helpful, where when he describes AI, he uses the analogy of a five-layer cake: where you have power at the very bottom, and then hardware, then software infrastructure, then models, then applications. So where do you sit in that layer cake?</p>
+</details>
+<p><strong>雷宁·哈拉克（Renen Hallak）</strong>：我们恰好正好处在这块蛋糕的最核心正中间。那个中间的软件基础设施层就是我们专注打造的核心领域。当然，我们的工作是在与底层的硬件芯片及设备厂商紧密协同、同时与支撑我们上方的各类前沿大模型构建者通力合作的基础上开展的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Renen Hallak</strong>: Right in the middle. That software infrastructure layer is the one that we do, in collaboration, of course, with the hardware vendors underneath us and with the model builders on top of us.</p>
+</details>
+<p><strong>主持人</strong>：是的。那么如果再往下一层深挖，具体来说，在整个人工智能的语境下，“软件基础设施”究竟涵盖了哪些具体的含义和功能范畴？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Yeah. So going down a level, what does that mean—software infrastructure in the context of AI?</p>
+</details>
+<p><strong>雷宁·哈拉克（Renen Hallak）</strong>：我认为，在传统 IT 技术栈中所需要处理的一切核心基础构件，在今天这个全新的 AI 技术栈中同样一个都不能少。具体而言：我们必须高效管理底层的算力资源，必须管理庞大复杂的存储系统，同时还必须妥善管理底层的高速网络架构。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Renen Hallak</strong>: Yeah, so everything you would imagine from the old stack, we need for this new stack. We need to manage the compute. We need to manage the storage. We need to manage the networking.</p>
+</details>
+<p><strong>雷宁·哈拉克（Renen Hallak）</strong>：而随着技术栈层级的进一步向上延伸，我们不仅要管理这些异构的基础物理资源，还必须让这一切产生实际业务意义与数据价值——通过高性能数据库让海量非结构化与结构化数据变得可被快速理解与高效检索；通过精细优化的模型训练引擎与低延迟推理执行功能，让底层庞大的算力硬件发挥出最大效能。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Renen Hallak</strong>: And then as you go up the stack, we need to make sense of all of it. Make sense of the data through a database; make sense of the compute through training and inference functions.</p>
+</details>
+<p><strong>雷宁·哈拉克（Renen Hallak）</strong>：不仅如此，当我们沿着技术栈继续向上攀升，且产业重心正从以往以预训练为主导，快速转向以推理工作负载、自主智能体（AI Agents）以及强化学习（Reinforcement Learning）为核心的新阶段时，整个生态亟需越来越多的全流程工具链来赋能这个崭新的世界：需要让系统变得极度简洁易用，保障全方位的企业级安全，同时还要提供无与伦比的高性能、极高的吞吐扩展性以及高弹性容错韧性。所有这些复杂而关键的核心能力，全部沉淀并坐落于这个中间层软件基础设施之内。有时我习惯将其统称为软件基础设施，而在另外一些场合，我更愿意将其定义为“属于这个 AI 新时代的操作系统”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Renen Hallak</strong>: And as you go even higher up the stack, and we shift from training predominantly to inference, to agents, and reinforcement learning, we need more and more tools to enable this new world: make it simple, make it safe, make it fast, scalable, and resilient. All of that sits in that middle layer. Sometimes I like to call it software infrastructure, and other times I like to call it the operating system for this new era.</p>
+</details>
+<h3>从传统数据中心到“AI 工厂”的架构剧变</h3>
+<p><strong>主持人</strong>：与刚才提到的五层蛋糕高度相关的一个衍生概念——这个说法大概也是最先源于英伟达，并且在业界当下的各种讨论与交流中被反复频繁提及——那就是“AI 工厂（AI Factory）”的概念。这究竟代表着什么意义？换言之，如果你手头已经拥有了一大批顶级的 GPU 算力集群，你还需要为其配套补充哪些至关重要的要素，才能够真正搭建起一座名副其实的 AI 工厂？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: There is a related concept to that five-layer cake—that thing may have originated from Nvidia again, but it keeps coming back in conversation—which is this idea of an &quot;AI factory.&quot; What does that mean? So if you start with a bunch of GPUs, what do you need to add to create an AI factory?</p>
+</details>
+<p><strong>雷宁·哈拉克（Renen Hallak）</strong>：我认为，甚至在考虑 GPU 芯片本身之前，如今的数据中心在物理形态与基础设施设计上，就已经与五年前的数据中心有着天壤之别了。在传统的旧有技术栈下，每个标准机架的功耗设计通常只有大约 10 千瓦（10 kW）；然而在今天，面向 AI 负载的单个高密度机柜机架动辄需要达到 500 千瓦（500 kW）的供电能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Renen Hallak</strong>: I think, even below the GPU, data centers are looking very different today than they did five years ago. In the old stack, you had 10-kilowatt racks; today, you need 500-kilowatt racks. And so you need more power; you need more power density.</p>
+</details>
+<p><strong>雷宁·哈拉克（Renen Hallak）</strong>：因此，基础设施层需要供给更加庞大的总功率，需要极高密度的电力交付能力。当然在计算芯片方面，也是从传统的以 CPU 为中心全面转向了以大规模并行 GPU 为核心；在通信与存储介质方面，彻底摒弃了传统的百兆/千兆以太网以及旧式的旋转机械硬盘，全面换代为超高速互联网络（如高带宽以太网与 InfiniBand）以及超大规模的高性能全闪存固态存储介质。可以说，这块技术蛋糕的每一个物理层与逻辑层，今天都必须彻底经历重塑与重构。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Renen Hallak</strong>: You need GPUs, of course, versus CPUs. You need extremely fast networks and very large SSDs, rather than hanging gigabit Ethernet and old hard drives. And so every layer of this cake needs to be redone.</p>
+</details>
+<p><strong>雷宁·哈拉克（Renen Hallak）</strong>：而从我们 VAST Data 的专业视角来看，今天的系统需要容纳吞吐规模远比过去庞大得多的数据量，并且对这些数据有着极低延迟、极高并发的访问速度要求。因为今天的 AI 算力所分析和处理的，早已不再是传统大数据时代那种旧技术栈下数据库表格中规整的数值与行列数据，而是海量无处不在的图像、高清视频、语音音频以及自然语言文本。这些丰富复杂的非结构化多模态数据本就需要占用极其惊人的存储空间，而这甚至还没算上当前由前沿生成式 AI（Generative AI）本身正在以爆炸式速度实时生成的全新合成数据。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Renen Hallak</strong>: And from our perspective, you need much more data and much faster access to that data, because we're no longer analyzing numbers and columns of a database the way you did with big data and the old stack; we're doing pictures and video and sound and natural language. And that takes a lot more space. And that's before new generative AI data that gets generated.</p>
+</details>
+<p><strong>雷宁·哈拉克（Renen Hallak）</strong>：与此同时，所有这些庞大的计算集群、成千上万张集群化运行的 GPU，无论是在执行密集的大规模分布式预训练任务，还是在实时运行超低延迟的大规模在线推理功能，都无一例外地需要极高带宽、极低延迟地持续读写这些数据资产。因此，可以说是贯穿从底至顶的整套技术栈全都是全新的产物。而我认为，所有这些底层技术与前沿创新的集大成者，就是我们今天所称的“AI 工厂”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Renen Hallak</strong>: And of course, all of this compute, all of these GPUs, need very fast access to this information, whether they're training on it or whether they're running low-latency inference functions. And so the entirety of the stack is new. And I think the culmination of this stack is what we call the AI factory.</p>
+</details>
+<h3>AI 工厂是前沿实验室的特权，还是企业的普遍未来？</h3>
+<p><strong>主持人</strong>：那么关于“AI 工厂”这一概念，它主要是针对那些少数顶尖的头部前沿人工智能实验室（比如掌控上万张乃至十万张 GPU、海量数据与万亿参数模型的大型机构），还是说它未来同样也是面向各行各业普遍普通企业的核心范式？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: And is the concept of an AI factory mostly for the big labs—like this whole massive data center plus foundation model kind of thing—or is it also for enterprises?</p>
+</details>
+<p><strong>雷宁·哈拉克（Renen Hallak）</strong>：我认为最终，它必定是属于每一个人、每一家企业的标配能力。当前阶段，顶尖的前沿 AI 实验室率先启动了这一浪潮，他们跑在行业的最前列，并正在为全行业的其他所有人探索并照亮前行的道路。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Renen Hallak</strong>: I think it'll be for everyone, eventually. The big labs are starting. They're ahead of the pack, and they're leading the way for everybody else.</p>
+</details>
+<p><strong>雷宁·哈拉克（Renen Hallak）</strong>：但毫无疑问，任何继续顽固守着旧有传统技术栈、停留在陈旧落后的企业管理信息系统上的组织，最终都不可避免地被时代洪流所淘汰。因此，各行各业的企业都必须迅速开始利用并释放这些前所未有的全新技术能力。其中一部分企业选择首先通过公共云或者各大超大规模云服务商（Hyperscalers）、新型 AI 算力云（Neoclouds）来弹性租用和调用这些能力；而另一部分企业则选择直接在其内部自建并掌控这些本地基础设施环境。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Renen Hallak</strong>: But anybody who stays with the old stack, with old business information systems, will get left behind. And so people need to start leveraging these new capabilities. Some start by leveraging them out of the clouds, out of the hyperscalers, the neoclouds; others build within their environments.</p>
+</details>
+<p><strong>雷宁·哈拉克（Renen Hallak）</strong>：但无论采用何种落地方案，从中期的发展维度来看，所有企业最终都需要拥有真正属于自己的 AI 工厂。而如果放眼更长远的未来演进，我认为随着人类社会的组织运作模式逐步从传统以人力为绝对核心的架构，深度过渡到全面借助自主智能体（AI Agents）实现组织扩增与赋能的阶段，这些 AI 工厂所承载的使命与内涵，将远比我们过去习惯理解的单纯“计算基础设施”要深远得多。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Renen Hallak</strong>: But in all of these cases, enterprises will need AI factories in the medium term. And then after that, I think as we shift from people-based organizations to augmenting them with agents, these AI factories become a lot more than what we're used to thinking of from just our computer infrastructure.</p>
+</details>
+<h3>企业落地路径剖析：外部合作、租算力还是自建模型工厂？</h3>
+<p><strong>主持人</strong>：如果我们退一步来看现实情况，当前如果走进许多传统行业的典型非科技大型企业——例如辉瑞（Pfizer）、高盛（Goldman Sachs）或者沃尔玛（Walmart）——我认为在这些企业内部占据绝对主导地位的普遍观点往往是：拥抱和利用 AI，本质上就是去找像 Anthropic 或者 OpenAI 这样的前沿模型公司展开商业合作，将他们的模型 API 或商业套件引入到自己的企业防火墙内部；然后基于这些现成的通用大模型在业务层构建一些功能，起初可能只是一些内部问答聊天机器人，而现在则开始升级演变为各种执行具体工作流的智能体。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: To play back right now, if you go to a lot of enterprises—a non-tech enterprise, so like a Pfizer or Goldman Sachs or Walmart—I think the dominant view is that leveraging AI basically means, you know, you start partnering with Anthropic or OpenAI, and you know, you have these models coming into your walls. And then, you know, you build some stuff; initially that was chatbots, now it's agents.</p>
+</details>
+<p><strong>主持人</strong>：那么你所倡导的“AI 工厂”理念，难道是指这些企业需要彻底自建一套独立的 AI 体系吗？也就是说，企业不仅要自建专属的数据基础设施，还要自行大规模租用 GPU 甚至直接斥资采购 GPU 硬件，并由企业自己的团队去深度开展底层模型微调或自主训练工作？这才是你所定义的 AI 工厂的核心理念吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Is the concept of an AI factory that you build your own? So you have, you know, data infrastructure, but you also rent GPUs or buy GPUs, and then you do model work? Is that the concept?</p>
+</details>
+<p><strong>雷宁·哈拉克（Renen Hallak）</strong>：我认为，一旦企业的应用体量和计算需求达到某个特定的规模临界点，直接采购和自建基础设施的综合经济效益，必定会远远高于长期对外持续租用算力。单从这个纯粹的财务与成本效益角度来看，答案是肯定的——规模化的企业确实应该构建属于自己的专属 AI 工厂。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Renen Hallak</strong>: I think once you get to a certain level of scale, definitely it's more cost-effective to buy than to rent. And so from that perspective, yes, you should build your own AI factories.</p>
+</details>
+<h3>人类大脑的比喻：基模、体验与企业专属数字权重的沉淀</h3>
+<p><strong>雷宁·哈拉克（Renen Hallak）</strong>：但除了硬件采购与成本视角的考量之外，更深层次的原因在于：放眼长期，所有这些现代企业的核心知识产权（IP）与核心业务洞见，最终都将以参数权重的形式，高度提炼并浓缩沉淀在模型之中。但这并不意味着企业非得从零去预训练属于自己的通用基础大模型。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Renen Hallak</strong>: But beyond that, over time, I think all of these organizations' IP will be distilled in models, which will be weights. And they don't necessarily need to build the base model.</p>
+</details>
+<p><strong>雷宁·哈拉克（Renen Hallak）</strong>：关于这一点，我非常喜欢用人类的大脑发育过程来作类比。我们每个人在呱呱坠地出生时，其实都共享了一套高度相似的生物“基础模型”（Base Model）。但随着时间的推移，在我们游历世界、学习新知识、经历现实生活中的各种互动时——我们白天在日常工作中进行高频的“推理”与感知，而在夜晚睡眠中对认知进行内化“调优”与神经重塑，于是到了明天，我们就会比今天的自己变得更加聪明一点点。同时，正因为你和我各自拥有截然不同的人生经历与实践积累，我对这个宇宙所建立的认知心智模型，就会与你对这个宇宙的心智模型产生微妙而深刻的个体差异。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Renen Hallak</strong>: I like to give analogies of the human brain. We were all born with a base model. But then over time, as we travel the world, we learn new things. We infer during the day, we tune at night, and tomorrow we'll be a little bit smarter than we were today. And my model of the universe is slightly different than your model of the universe because we had different experiences.</p>
+</details>
+<p><strong>雷宁·哈拉克（Renen Hallak）</strong>：我认为，未来企业级智能体的工作机制也将完全遵循相同的基本逻辑：随着时间推移，所有的企业智能体都会通过强化学习（RL）等方法对模型展开持续不断的微调演进。如此一来，每家企业的独特商业机密、专有数据资产、运作流程以及核心知识产权，都将能够被完美凝练并沉淀到由该企业全权掌控的模型体系以及他们日积月累构筑的专属参数权重之中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Renen Hallak</strong>: And so I think in the same way, all of these agents will fine-tune models through reinforcement learning over time, and every organization's IP will be able to be distilled into the models that they own and the weights that they've accumulated.</p>
+</details>
+<h3>从极客专享到普惠企业：打造 AI 时代的操作系统与合规基石</h3>
+<p><strong>主持人</strong>：但若想真正达成这样的愿景，对那些传统企业自身的能力建设而言又意味着什么呢？毕竟，在底层搞模型工程、精调各种模型权重、管理异构算力环境，是一套门槛极高、高度专业的硬核技能，放眼全球，当今真正精通掌握这套底层手艺的顶尖人才本就屈指可数，而绝大多数传统企业内部根本不具备这种基因与人才储备。那么，这些传统企业究竟该如何跨越眼前这道巨大鸿沟，从当前的状态顺利抵达未来的目标？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: What does that mean in terms of what those enterprises need to be able to do? You know, like doing model work and weights and GPUs—that's a whole kind of expertise that ultimately very few people in the world really have. And a lot of those companies don't have that. So how do they go from here to there?</p>
+</details>
+<p><strong>雷宁·哈拉克（Renen Hallak）</strong>：在这里，我同样想用一个非常生动的技术历史类比来解答这个问题。如果你把时钟拨回到 20 世纪 70 年代，在那个大型机主导的蛮荒早期时代，一个人往往必须拥有计算机科学的博士学位（Ph.D.），才具备操作和调度一台计算机的专业能力；而在今天，全世界每个人几乎都能毫无门槛地熟练使用智能电脑与手机。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Renen Hallak</strong>: I think, again, I like analogies. The analogy I would give here is: you go back to the 1970s, you needed a PhD in computer science to operate a computer; today, everybody can do it.</p>
+</details>
+<p><strong>雷宁·哈拉克（Renen Hallak）</strong>：而今天所有人之所以都能毫不费力地驾驭计算机，并不是因为我们每个人都去系统性地苦读了计算机科学，而是因为操作计算机的交互界面和系统底座变得无比简便而直观。是操作系统（Operating System）的出现与成熟，让底层复杂的晶体管、内存寻址和硬件外设变得易懂、平民化，并让每一个人都能开箱即用。不仅如此，成熟的操作系统同时还为大众提供了一整套安全可控的沙箱与防护运行环境。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Renen Hallak</strong>: And the reason everybody can do it is not because we learned; it's because operating a computer became much simpler. The operating system made it intuitive, made it easy for everybody to use. It also made it safe for everybody to use.</p>
+</details>
+<p><strong>雷宁·哈拉克（Renen Hallak）</strong>：对于当下的各行业大型企业而言，他们身上背负着极其繁复严苛的法律法规、数据隐私以及合规监管义务，必须保证万无一失。因此，我们作为构建这层核心软件基础设施的人，肩上最重要的根本天职与历史使命，就是将这些极其复杂的前沿技术封装并抽象化，把它们极其平滑、安全地交付到广大企业客户手中。我们要让企业甚至根本不需要在底层繁琐的工程细节上耗费过多心力，便能够以极快的发展节奏迅速接纳并规模化应用这些最前沿的 AI 技术，从而避免在时代的快速洗牌中惨遭淘汰、避免被那些由 AI 原生专家所创立的新兴挑战者取代自身的位置。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Renen Hallak</strong>: These enterprises are under a lot of regulation that they need to comply with. And so, it is our job, as the ones building that software infrastructure layer, to make these new technologies accessible to the enterprises such that they don't need to think about it too much, and that they can start adopting them at pace, rather than get left behind and have new companies with AI experts take their place.</p>
+</details>
+<h3>云体验与本地主权的统一：AI 工厂的真正所有权边界</h3>
+<p><strong>主持人</strong>：为了进一步探讨甚至适度推敲一下这个逻辑，或者说为了确保我能够真正准确地理解你的观点：我们都知道，传统云计算（Cloud）的核心立足点与全部商业卖点，就在于通过即开即用的服务化（As-a-Service）模式，把一切复杂的底层运维与架构治理抽象屏蔽掉，让开发部署变得极致简单。而你所阐述的“AI 工厂”概念似乎高度强调企业对于技术底座的自主拥有与掌控，这在听感上非常接近传统的本地部署（On-Premise）或者私有云（Private Cloud）架构——而从历史经验来看，私有云这种模式在落地操作上往往要复杂琐碎得多。因此，根据你的论述，这是否意味着当前行业正迎来一个全新的历史契机：即在底层构建高度专业化的架构抽象，从而让用户在私有掌控的同时，能够享受到如同公有云一般敏捷顺滑的使用体验？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: To maybe push back a little bit, or maybe just to make sure I understand: that whole premise of the cloud is to make things incredibly simple and use those functionalities as a service. The concept of an AI factory revolves around owning a lot of this, which sounds very kind of like on-prem or private cloud, which historically has been a little more complicated. So is what you're saying that there is this opportunity to abstract away all of this in a way that feels cloud-ish in experience?</p>
+</details>
+<p><strong>雷宁·哈拉克（Renen Hallak）</strong>：我认为确实如此。而且我还想进一步强调：一座“AI 工厂”在物理形态上的实际物理部署位置，具有极高的灵活性与解耦性——它既可以完全搭建在企业自己的内部本地机房（On-Premises）中，也可以托管在第三方的托管数据中心（Colocation）内，甚至同样可以部署在外部的某家新型 AI 算力云（AI Cloud）之中，由企业对外按需租用基础设施资源，而无需亲自下场去进行繁杂的机柜与硬件日常运维。在未来，我预计各大公有云超大规模服务商（Hyperscalers）同样会在各自的云基础设施环境之内，全面支持企业客户去构建和运行这种企业级 AI 工厂。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Renen Hallak</strong>: I think so. I think the physical location of this AI factory can be on-prem, can be in a colo, can be in an AI cloud where you rent it from somebody rather than manage it yourself. Eventually, my guess is that the hyperscalers will also enable these AI factories to be built within their premises.</p>
+</details>
+<p><strong>雷宁·哈拉克（Renen Hallak）</strong>：但这一切最根本的前提是：整个技术系统的最高控制权必须牢牢掌握在企业自己手中。更核心的评判标准在于：你是否在最根本的层面拥有自己的核心信息数据资产、拥有属于你自己的基础与衍生模型、拥有沉淀业务经验的专属模型权重，并且真正掌控服务于你企业的自主智能体集群。我认为这才是我想在这里做出的最关键区分——所谓的“自主拥有”，绝不狭隘地等同于企业必须在一个归属于自己的物理建筑物里，亲手摆放并插满归属于自己的物理硬件服务器。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Renen Hallak</strong>: But so long as it's within your control, and so long as you're the one that owns it in terms of, really, I think: owns the information, owns the models, owns the weights, owns the agents. I think that's the distinction that I'm trying to make here. It doesn't necessarily need to be physical equipment within a building that belongs to you.</p>
+</details>
+<h3>智能体的自主进化与自我微调展望</h3>
+<p><strong>主持人</strong>：非常精彩，这个界定极为清晰。接下来，我想就你刚才在几分钟前所重点提及的一个前瞻性论点展开更深入的探讨——关于智能体（Agents）以及智能体在运行中执行自主微调（Fine-Tuning）的未来图景。毕竟在当前这个时间节点，业界绝大多数人对于智能体这一概念的主流认知和普遍看法其实依然停留在……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Okay, great, great. I want to spend more time on what you alluded to a minute ago about agents and agents doing their own fine-tuning. Right now, the way I think most people think about agents is that, you know...</p>
+</details>
+<!-- chunk 2/7 -->
+<h3>企业内部的智能体进化与知识闭环</h3>
+<p><strong>Speaker 2</strong>: 你通过强化学习来赋能智能体（agents），但按照你的说法，智能体本身也在实践这个过程。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: You do reinforcement learning to enable the agents, but I think you're saying agents do it.</p>
+</details>
+<p><strong>Speaker 0</strong>: 我个人依然倾向于把智能体看作“人造人”（artificial people）。随着时间的推移，我认为我们每个人未来都会拥有为自己工作的智能体，不论是作为个人还是作为组织，去应对各类不同的任务。我们会拥有智能体团队，协助我们进行软件开发，或者研发个性化医疗方案，或是处理任何我们希望完成的事情。我们会让它们代表我们去执行任务。</p>
+<p>随着时间的推移，我们会对自己的智能体产生依恋感。我们会期望它们记住昨天发生的事情，或是记住一年前发生过的事情。这种持续的记忆会让我们对智能体产生熟悉感和信任感，但这同时也要求它们必须根据与我们共同经历的互动体验，去微调自身的模型。</p>
+<p>当然，这也会让它们变得越来越聪明，从而能够为我们做更多的事情。而且在团队内部，不同的智能体之间还可以互相学习。我认为这将催生下一阶段的人工智能，彻底改变我们今天的现状——如今每个人都依赖于某家大模型实验室所提供的基础模型，每隔几周，我们只能被动接收他们根据自己在其封闭环境中训练出的模型升级版本。</p>
+<p>在这种全新的模式下，我们每个人、每个企业或组织，都将拥有通过这些微调机制所沉淀和生成的自主知识产权（IP），而不是在漫长的时间演进中，任由那些头部大模型厂商掌控和拥有一切资产。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I, again, like to think of agents as artificial people. And over time, I think we're all going to have agents that work for us, whether we're people or organizations, for different tasks. And we will have teams of agents that can help us develop software or personalized medicine or whatever it is that we want done. We will have them do on our behalf.</p>
+<p>And I think over time, we will get attached to our agents, and we will expect them to know things that happened yesterday or that happened a year ago. And that will allow us familiarity with our agents, but that requires them to fine-tune models based on experiences that they had with us. And of course, that also makes them smarter and able to do more for us. And within teams, they can learn from each other.</p>
+<p>And I think that generates the next level of artificial intelligence, versus where we are today where everybody's based on some base model from one big lab or another. And every few weeks, we get an upgrade to that model based on what they did in their environment. In this new way, each one of us, each organization owns the IP generated through these fine-tuning mechanisms, rather than letting the big model builders basically own everything over time. Okay.</p>
+</details>
+<p><strong>Speaker 2</strong>: 也就是说，为了复述并确认你的逻辑：知识的反馈闭环全部发生在企业内部，而这个闭环沉淀下来的成果便成为了企业全新的专有知识产权（IP）。因此我们认为，企业不可能直接借助 OpenAI 或者 Anthropic 这样的外部厂商来实现这一点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: Just to echo back, so that the knowledge loop happens within the enterprise, and that becomes the new IP. And so we think they cannot do that with OpenAI or Anthropic.</p>
+</details>
+<p><strong>Speaker 0</strong>: 无论对方是谁，企业都不愿意这么做。因为你绝对不想把自己的专有信息、核心业务流程以及商业机密暴露给任何外部第三方，否则他们完全有可能拿走这些机密并据为己有、自行发展。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Whoever, you don't want to because you don't want to expose your proprietary information, your processes, your secrets out to somebody else, such as they can take it and run with it.</p>
+</details>
+<h3>开源模型与智能资产交易市场的构建</h3>
+<p><strong>Speaker 2</strong>: 这是一个极其深刻且引人入胜的转变。过去人们谈论数据所有权时常常抱有这种防备心态，但现在我们微调的是智能本身、智能的处理流程、工作记忆以及智能体系架构。那么，这是否意味着开源模型将成为这里唯一的破局之道和必然选择？因为如果你想要针对模型进行微调或者执行强化学习（RL），拥有对开源模型的完全掌控权才能让你具备这种实操能力。这是你所预见的未来世界格局吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: Which is super interesting. Because people used to say that about data, but now we fine-tune intelligence, intelligence processes, and that memory for intelligence. Okay. Does that mean that open source becomes the play here? Because if you want to fine-tune or do RL against a model, having access to an open-source model enables you to do that. Is that your vision of the world?</p>
+</details>
+<p><strong>Speaker 0</strong>: 未必如此。我认为我们需要构建一种机制，让那些付出了巨大心血、投入了巨额资金才研发出顶尖能力的模型构建者，能够合理地将这些成果商业化变现。</p>
+<p>因此，我们需要找到一种两全其美的路径：一方面，企业客户绝不需要对外泄露他们自己的私有业务数据；另一方面，前沿大模型的构建者也完全不需要对外公开暴露他们的核心模型权重。正如我之前所强调的，软件底层基础设施层（software infrastructure layer）正是落实和强制执行这种双向信任机制的最佳锚点。</p>
+<p>随着时间的推移，当企业开始在底层基础模型之上生成属于自己的派生模型或定制微调模型时，他们同样应该能够将自己沉淀出的专业技能组合进行商业化输出变现。举个例子，假设我经营着一家木工工坊，我训练出来的木工机器人技能是全行业最顶尖的，那么我理应能够将这个“木工大脑模块”出租给你，以便让你去打造一把椅子或者完成任何你想做的工艺，但我可能只把这个模块租赁给你使用一周时间。一周租期结束后，你就无法再访问或调用它；或者我也可以选择把它直接出售给你，但我依然不会把底层的神经网络权重源码暴露给你查看。</p>
+<p>所以，我们完全有必要、也应该探索建立起这样一种繁荣的“智能交易市场”（intelligence marketplace）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Not necessarily. I think we need to build a way for people to monetize these abilities that they worked so hard and paid so much to get to. And so we need a way where, on the one hand, an enterprise does not expose their data; on the other hand, a model builder does not expose their weights. And again, the software infrastructure layer is the right place to enforce that type of trust.</p>
+<p>And over time, as the enterprise starts to generate their own models or fine-tune on top of base models, they should also be able to monetize the skill sets that they developed. And so if I run a carpentry shop and my carpenter robots are the best in the business, I should be able to lease to you that brain module such that you can build a chair, whatever it is that you're trying to do, but I'm only giving it to you for a week. And at the end of that week, you don't have access to it anymore. Or maybe I'm selling it to you, but I still don't want you to see those weights. And so there should be ways for us to build an intelligence marketplace.</p>
+</details>
+<h3>模型管理与机密计算的重磅发布</h3>
+<p><strong>Speaker 2</strong>: 明白了。我想这正好切中了你们本周发布的重大战略消息。你之前提到了其中的基本原则，我们稍后会深入探讨细节。但从高维度的全局视角来看，你们刚刚宣布的这一战略，具体是如何解决这一核心痛点的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: Okay. And I guess that goes to your big announcement of this week. You mentioned the principle of it, and we will go into the details in a minute. But at a high level, how does what you guys just announced address this specific problem?</p>
+</details>
+<p><strong>Speaker 0</strong>: 没问题。本质上，我们正在全力完善和构建那个软件基础设施层。我们逐渐意识到，我们之前讨论过的“五层架构蛋糕”已经基本成型。模型并不是简单孤立地生存在软件基础设施的最顶层，随着技术演进，模型实际上已经变成了一种系统资源——就像 GPU 是一种计算资源、NVMe SSD 是一种存储资源一样，凡是系统资源，就必然需要被统一调度和管理。</p>
+<p>因此，我们这次重磅发布的核心就是“模型管理”（model management）。作为操作系统平台，我们现在如何准确理解：这个模型极其擅长编写代码，那个模型非常擅长图像生成；这个模型的调用成本高昂，而那个模型则非常经济实惠？通过建立这种认知，操作系统才能精准调度，厘清具体的业务任务到底应该分配给哪一个模型去处理。</p>
+<p>在眼下，我们或许只需要协调调度四到五个主流模型，情况还不算复杂；但当我们全面推进强化学习、深度微调，当企业开始部署成百上千甚至数以万计的自主智能体，并随着时间推移衍生出海量定制化派生模型时，模型调度与管理的复杂度将会呈指数级上升，成为一项极其庞大繁重的系统工程。</p>
+<p>关于模型管理，我们本次发布会重点公布的一个极为关键的维度——同时也有众多顶尖模型厂商作为战略合作伙伴共同出席了这次发布——正是围绕“机密计算”（confidential computing）展开的。这项技术使企业能够在本地私有化环境中（on-premises）直接运行顶尖模型推理，而完全无需大模型厂商公开或泄露其核心模型权重。</p>
+<p>如此一来，供需双方都可以彻底打消顾虑：企业能够确信自己的专有业务数据绝不会遭到泄露，而模型厂商也可以确信自己的核心知识产权资产和权重不会被逆向或盗取。在英伟达（NVIDIA）的硬件支持以及底层内存硬件加密技术的协同保障下，我们能够从底层杜绝任何未授权的越权访问，确保没有任何人能窥探到权限范围之外的敏感内容。</p>
+<p>我们希望借此大幅拓展这些前沿模型厂商的可寻址市场空间（TAM），帮助他们顺利切入强合规受监管行业，以及对数据主权极其谨慎的大型企业客户群体中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Sure. So basically, what we're trying to do is fill out that software infrastructure layer. And what we realized was that the five-layer cake that we discussed is almost complete. The models don't really live on top of this software infrastructure; models over time have become a resource, just like a GPU is a resource or an SSD is a resource, and resources need to be managed.</p>
+<p>And so this announcement is all about model management. How do we as the operating system now get an understanding of: this model is really good at coding, and that model is really good at generating images; and this one is expensive, and that one is inexpensive? And that way we can understand which tasks belong under which models.</p>
+<p>And that's today, when we have four or five of them. As we start to run reinforcement learning and fine-tune, as we start to have hundreds and thousands of agents, and over time generating new derivatives of those models, that's going to be a much bigger task.</p>
+<p>One specific aspect of model management which we're announcing—and we have a lot of the model builders as partners joining the announcement—is around confidential computing and enabling that ability of enterprises to run inference on-prem without exposing the model builder's weights. And so both sides can rest assured that my data is not exposed, and your weights are not exposed to me.</p>
+<p>And so with help from NVIDIA and encrypted memory underneath, we are able to make sure that no one sees what they're not allowed to see. And to hopefully increase the total addressable market of these model builders into regulated industries and into large enterprises that are careful with their sensitive information.</p>
+</details>
+<h3>从数学神童到千亿独角兽 VAST 的创业征途</h3>
+<p><strong>Speaker 2</strong>: 我们先在这里做个标记，稍后几分钟再深入拆解它在工程层面上究竟是如何运转落地的。不过，让我们先把时间线往回调一调。我非常想聊聊你个人的成长和创业历程，以及这一切是如何指引你创立了 VAST Data——这真是一家令人赞叹的杰出企业，如今估值已经高达三百亿美元。有趣的是，可能恰恰因为你们处在整个技术架构“五层蛋糕”的中坚基础设施层，公众层面并不是每个人都对你们的大名耳熟能详。</p>
+<p>我记得你之前跟我提过，你在以色列长大的时候，对数学表现出了一种极其特殊的狂热与天赋。用我自己的话说——这不是你的原话——你当时在数学领域简直就是个不折不扣的天才神童。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: Let's put a pin in this, and we will revisit in a few minutes and go into how that actually works. But taking a step back in time, I would love to talk about your journey a little bit, and then how that led you to build VAST, which is an incredible company, which is valued at thirty billion dollars. You know, interestingly, perhaps because you're right in the middle of the cake, not everybody has heard about you yet.</p>
+<p>So, I think you were telling me growing up in Israel that you had a particular affinity for math. So my words, not yours, but you were a bit of a whiz kid in math.</p>
+</details>
+<p><strong>Speaker 0</strong>: 对数学抱有狂热和喜爱是确凿无疑的，但要说我是神童，那是绝对称不上的。</p>
+<p>说来很有意思，刚才我上楼时，楼下恰好贴着数学博物馆的展览信息。说起来，本周数学界是不是刚刚曝出了什么重磅新闻？</p>
+<p>大约二十年前我在大学念书的时候，曾花了整整六个月的时间，试图去证明“P是否等于NP”（P versus NP）。我希望在座的听众都了解这个问题，但对于不太熟悉的人来说，它本质上是在探讨：验证一个问题的解答是否成立，比起从无到有去求解该问题本身，究竟是不是要容易得多？在人类的日常直觉中，答案显而易见是肯定的——让我们审阅一份已经写好的文档并判断其是否通顺合理，显然要比亲自撰写一份万言书轻松得多；欣赏一幅画作并赞叹它的唯美，也远比亲自挥毫画出这幅杰作要容易得多。</p>
+<p>然而，在严格的数学理论层面，这种直觉在计算复杂性理论中至今尚未得到证明。有趣的是，这正是克雷数学研究所（Clay Mathematics Institute）在千禧年（2000年）设立百万美元悬赏的“千禧年七大数学难题”之一。我清楚地记得，当年我花了整整六个月废寝忘食地试图攻克它，因为当时天真地觉得，如果我能证明 P = NP，那么我就顺带解决了其余六个世纪难题，一下子就能拿到七百万美元的巨奖；哪怕我最终只证明了 P ≠ NP，至少也能稳拿一百万美元。但闭门苦思了六个月之后，我残酷地认识到，以我的智商和天资，根本不足以解开这种级别的难题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Affinity for math, for sure. Whiz kid, definitely not. It's funny, when I came up, the math museum was downstairs. Did we have some big news this week about math?</p>
+<p>When I was in school twenty years ago, I spent six months of my life trying to figure out if P equals NP, which I hope your audience knows. But for those who don't, it's the question of: is it easier to verify a problem than it is to solve the problem? Which intuitively it is. It's much easier for us to review a document and say, yeah, that works, than to write that document; to look at a picture and say that's beautiful than to paint that picture. But mathematically it's unknown if that is the case or not.</p>
+<p>And interestingly, this is one of seven Millennium Problems that the Clay Institute back in the year 2000 put a million-dollar bounty on. And I remember spending those six months trying to solve it, because I thought if I prove that P does equal NP, then I also solve the other six, and I'll get seven million dollars. And if I prove that it's not equal, then at least I get one. And after six months, what I realized was that I'm not nearly smart enough to do it.</p>
+</details>
+<p><strong>Speaker 2</strong>: 你要不要为观众补充一下本周刚刚发生的完整背景，让大家对这起事件的前因后果看得更清晰一些？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: Do you want to provide the full context about what happened this week just for clarity?</p>
+</details>
+<p><strong>Speaker 0</strong>: 确实如此。千禧难题中的另一大高峰——纳维-斯托克斯方程（Navier-Stokes existence and smoothness），近期据称被 OpenAI 攻克了，或者至少他们对外宣称自己找到了解法。坊间传闻甚至表示——希望到了这期节目正式播出的时候，其中的部分传言已经得到证实——在克雷数学研究所设立的这七大世纪难题中，OpenAI 和 Anthropic 正在动用前沿 AI 力量进行全面攻坚，并且借助 AI 极其接近彻底解开其中的好几个难题。</p>
+<p>要知道，这些数学难题在人类历史上已经悬置未决了将近一个世纪之久；在过去的二十六年里，尽管每道题目都悬赏百万美元的巨额奖金，全人类最顶尖的数学家们依然无法攻克它们。</p>
+<p>正因如此，我认为我们如今正站在一个前所未有的历史拐点上：人工智能第一次无可辩驳地证明了它有能力解决人类自身至今不知道该如何解答的极深奥问题。</p>
+<p>但如果将视线拉回到二十年前，当时我就已经非常笃定地坚信：如果我们能够借助计算机强大的算力来协助人类攻坚这些硬核难题，那将是人类取得突破的唯一路径。因为单凭肉体凡胎的人类个体，探索速度实在太慢了，我们知识库的自然演进也太迟缓了。如果我们渴望在有生之年见证这些世界级难题逐一被攻破，我们就必须依赖计算机为人类的认知进化提供极速狂飙的加速度。</p>
+<p>然而在 2006 年那个时代，我们根本不知道在工程上该如何实现这种计算智能。于是我沿着常规的技术路径继续探索，先后加入了数家科技创业公司。我当时效力的最后一家公司叫做 XtremIO（后被 EMC 收购），专门从事大规模企业级存储系统的研发。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: But yeah, another one of those problems, Navier-Stokes, was solved by OpenAI, or at least they claim that they've solved it. And the rumors are—hopefully by the time that this is aired, some of those rumors will come true—that there are at least more of the seven problems that OpenAI and Anthropic are trying to solve and are close to solving using AI, that these are problems that have been open for nearly a hundred years. And for the last twenty-six years, there was a million-dollar prize associated with them, and still people were not able to solve them. And so for the first time, I think we're at a point today where AI has proven that it can do things that we don't know how to do.</p>
+<p>But going back twenty years, it was clear to me that if we could get computers to help with these hard problems, that's the way to solve it, because people are slow and the evolution of our knowledge is slow. And if we are to see any of these things get solved within our lifetime, we need computers to speed us up.</p>
+<p>We didn't know how to do it back in 2006. And so I went along my way and joined a few technology companies. The last one I was with was a company called EMC, which built large storage...</p>
+</details>
+<p><strong>Speaker 2</strong>: 你还记得那段经历吧。你当时加入了第一家初创企业。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: Do you recall? So you joined startup number one...</p>
+</details>
+<p><strong>Speaker 0</strong>: 是的，没错。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Oh, yes.</p>
+</details>
+<p><strong>Speaker 2</strong>: 后来那家初创公司被 EMC 成功收购了，接着你协助统领和掌管了负责该存储产品的核心研发团队。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: And that company was acquired by EMC. And then you helped run the R&amp;D organization for that product.</p>
+</details>
+<h3>神经网络破局：从猫片分类到大算力认知的启蒙</h3>
+<p><strong>Speaker 0</strong>: 那次收购发生在 2012 年。到了 2015 年前后，局面开始发生本质变化——人类利用计算机去解决超级难题的曙光，终于第一次清晰地展现在我们眼前。计算机真正开始展现出协助我们求解复杂未知问题的巨大潜力。</p>
+<p>这一切的核心催化剂就是人工神经网络（neural networks）。回想十年前、十五年前我在大学念书的时候，神经网络还仅仅被学术界视作一种停留在理论上的边缘新奇事物，几乎做不了任何具备实际工程价值的事情。</p>
+<p>然而到了 2015 年，神经网络有史以来第一次向世人展示了它们的非凡威力：它们开始能够准确识别并分类出海量网络视频中哪些含有猫咪的画面、哪些视频里没有猫。在当时，这带给了我极大的震撼与惊叹！因为在对人类大脑运作机理尚未真正完全理解的前提下，这种通过模拟生物脑神经元结构的技术路径，竟然奇迹般地展现出了类人认知能力的雏形。</p>
+<p>于是，我立刻迫不及待地投入进去，试图彻底搞清楚这一切背后的底层根源究竟是什么。而经过一番抽丝剥茧之后，事实很快变得无比清晰明朗：这种跨越式的突破，其本质驱动力未必源于什么全新的革命性数学算法……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: And that acquisition happened in 2012. By 2015, it became clear that there is a shot at computers helping us solve problems. Because neural nets—which again, when I was in school ten years earlier, fifteen years earlier, were a curiosity, they didn't really, weren't able to do anything—now they were for the first time starting to show that they can do something. They were able to recognize which videos had cats in them and which videos did not have cats in them, which was astonishing to me. Because suddenly mimicking the human brain without really understanding the human brain was working.</p>
+<p>And so immediately, I tried to figure out how this happened, and it was very clear that it wasn't necessarily new algorithms.</p>
+</details>
+<!-- chunk 3/7 -->
+<h3>VAST Data 的创立初衷与早期 AI 探索</h3>
+<p><strong>Speaker 0</strong>: 那时候正是让这些神经网络能够以快得多的速度访问海量数据，才使得它们有能力去完成那些在当时看来非常简单的任务。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: it was giving those neural nets much faster access to a lot data that enabthem them to perform these very simple tasks.</p>
+</details>
+<p><strong>Speaker 2</strong>: 所以这就是创办 VAST 背后的核心直觉对吧？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: so that was was intuition behind the founding of vast,</p>
+</details>
+<p><strong>Speaker 0</strong>: 没错。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: correct.</p>
+</details>
+<p><strong>Speaker 0</strong>: 那是在 2015 年，准确地说是 2015 年底到 2016 年初。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: and then fifteen two thousand and fifteen beginning of two thousand sixteen.</p>
+</details>
+<p><strong>Speaker 0</strong>: 是的，我们就是在那个时候启动的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: we started yeah.</p>
+</details>
+<p><strong>Speaker 2</strong>: 显然，那至少是在 Transformer 论文发表的三年前。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: and then obviously, that was uh at a minimonm three years before, for h the transformers paper came out,</p>
+</details>
+<p><strong>Speaker 2</strong>: 确实是这样。距离 ChatGPT 带来的那个震撼时刻还有整整五年。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: yes, another two years before the judgy beity moment.</p>
+</details>
+<p><strong>Speaker 2</strong>: 那么在那个时代，你们的核心想法究竟是什么？因为在当时，并没有多少客户在业务中使用海量的大规模 AI 负载。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: so what was the ah h idea then because they were not a lot of customers using massive amounsive df AI at the time,</p>
+</details>
+<p><strong>Speaker 0</strong>: 那个时候根本就还没有生成式 AI。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: there was no generative AI at the time.</p>
+</details>
+<p><strong>Speaker 0</strong>: 谷歌在之前的那一年刚刚收购了 DeepMind。但当时已经非常清晰的一点是：我们现存的所有系统、所有可用的基础设施，都没有足够的扩展能力，也没有足够的性能来支撑即将到来的下一场技术革命。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: um google acquired deep mind the year previous to that um but it was clear that none of the systems, none of the infrastructure that we had available to us would be scale enough would be performing enough to enable this next revolution.</p>
+</details>
+<p><strong>Speaker 0</strong>: 传统的系统架构全部建立在一种固有假设之上：系统要么必须追求速度（快），要么必须追求容量（大）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: the architectures were built on an assumption that things needed to be fast or big.</p>
+</details>
+<p><strong>Speaker 0</strong>: 但面对 AI，你所需要的是一种既极其快速、同时又规模极其庞大的系统。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: um and here you needed something that was both fast and very, very large.</p>
+</details>
+<p><strong>Speaker 0</strong>: 因此，如果想要让下一场革命真正开花结果，我们就必须构建一个全新的底层支撑架构来实现它。在最初的那段日子里，我们的客户自然不是在做生成式 AI。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: if so, we neeneed to build d new underunderying uh layer to enable the success of this next revolution, if if it were to come to fruition um in the early days, of course, our customers were not doing generative AI.</p>
+</details>
+<p><strong>Speaker 0</strong>: 他们当时做的是大规模分析，做自动驾驶研发项目，做医疗影像分析、基因组学分析，以及对冲基金和科学计算领域的计算任务。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: they were doing large skill analytics. they were doing um autonomous driving projects. they were doing medical imaging, uh analysis, genomysis alalysis h hedge from sscientific computing.</p>
+</details>
+<p><strong>Speaker 2</strong>: 明白了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: oh,</p>
+</details>
+<p><strong>Speaker 0</strong>: 是的，对冲基金当时正试图从新闻聚合源和自然语言数据中挖掘交易信号。所以，那正是现代 AI 的最初雏形。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: yeah, hedge funds were trying to uh get signal from news fees and natural language. and so it was the beginning of AI.</p>
+</details>
+<h3>从“无共享”到“全共享”：DASE 架构的底层突破</h3>
+<p><strong>Speaker 2</strong>: 不过在探讨 ChatGPT 之前，为了更深入地理解 VAST 的本质，你能不能用极其通俗易懂的语言解释一下你刚才提到的底层逻辑？你最初是从存储领域切入的。正如你刚才所说，当时的存储系统面临二选一的困境：要么速度慢但价格低廉，要么性能快但极其昂贵。而你们的重大科研突破就是要打破这种非此即彼的对立局面，对吧？也就是你们所说的“解耦式全共享硬件架构”（DASE: Disaggregated Shared Everything）。你能用最通俗易懂的语言解释一下它的工作原理吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: but before chadge GPT actually tually as a way of getting into what vast actually as um did you anna explain in in super simple terms, um what you just so uh, so you started from storage uh and then storage. as you just said, was it's either the the alternative at the time was either slow and inexpensive or fast, but expensive. and the whole uh scientific can brebreakthrough as to break right? and uh uh, was it what you called the days disaggregated hard everything, right? so explained that in in supersible terms,</p>
+</details>
+<p><strong>Speaker 0</strong>: 过去构建可扩展系统的传统方式，是基于一种叫做“分片”（Sharding）的机制，也就是业内熟知的“无共享”（Shared-Nothing）系统。在这种架构下，集群中包含大量节点，每个节点各自负责数据的一小块分片，节点之间彼此协同通信，以响应上层应用程序的请求。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: so the old way to build scalable systems is based on a concept called sharting, uh, was known as shared nothing systems where you have a lot of node. each note is responsible for a piece of the pithey collaborate with each other in order to serve up application requests.</p>
+</details>
+<p><strong>Speaker 0</strong>: 当你向系统中添加更多节点时，你确实能获得更高的性能和更大的容量。在一定规模之内，这种方式运作得相当不错。但一旦节点的数量增加到一定程度，节点之间的东西向内部通信就会开始显现出严重的边际收益递减。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: and as you add more node, you get more performance. you get more capacity. it works well up to a certain limit. and so want you have too many notes. the communication between them starts to show diminishing returns.</p>
+</details>
+<p><strong>Speaker 0</strong>: 如果你只是分析纯文本，这种模式或许还能应付；如果是分析数值，它也能正常工作；分析关系型数据库中的几列数据，也完全没有问题。但一旦你的规模突破了这个界限——要知道，今天的数据量已经比当时多出了四到五个数量级，而且很快就会比那时多出七到八个数量级——这种传统架构就行不通了，它会彻底崩溃。因为集群内部各节点之间的通信开销呈几何级数急剧膨胀。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: and so if you're analyzing text, it may work, if you're analyzing numbers, it works. well, if you're analyzing columns of a database that's fine once you grow beyond that. and today, the amounts of data are four five orders of magneude beyond where they were back then soon they will be seven, eight orders of magitude bigger. um it doesn't work. it breaks down because uh the communication grows quite ratically within the cluster.</p>
+</details>
+<p><strong>Speaker 0</strong>: 此外，从系统高可用和容错弹性的角度来看也是如此：在无共享架构中，当某个组件或节点发生故障时，集群中的所有其他节点都必须参与到数据恢复流程中，这需要耗费漫长的时间。因此，在这类系统里，你根本无法将节点规模扩展到超过一百台以上。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: and then um from a resilience perspective, also, when one part fails, everybody needs to recover that takes time. you can't really have more than a hundred nodes in one of those systems.</p>
+</details>
+<p><strong>Speaker 0</strong>: 但是要构建支撑现代 AI 的基础设施，我们需要的是拥有数百万个节点的系统。举个例子，在我们的一处客户现场部署中，单个集群今天就已经达到了多个 EB（Exabytes）的容量规模，每秒能够提供数十 TB 的吞吐量。即便在智能体（Agentic）革命全面爆发之前，这种系统就已经由数万个计算和存储节点组成了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: uh, to build AI. we need systems with many millions of nodes. uh we have one system um one of our customer sites that is today multiple exhibits within a single cluster, delivering tens of terribbites per second. this is tens of thousands of notes even today before the agentic revolution.</p>
+</details>
+<p><strong>Speaker 0</strong>: 为了达成这一目标，我们必须打造一种与传统无共享架构截然相反的新型架构。在我们的设计中，固态硬盘（SSD）和存储介质不再直接物理挂载在特定的 CPU 上，而是被置于网络的对端。借助超高速网络、全新网络协议（如 NVMe-over-Fabrics）以及新型存储介质，我们不仅可以将原始数据保存在网络对端，甚至连元数据也同样存放在网络对端。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: and so to do that, we needed to build an architecture that ended up being the opposite of the way shared nothing systems work instead of having the SSD, the media directly atattach to the CPU. it's on the other side of the network and that through a very fast networks and through new protocols and can viememe our fabrics and through new media types that allow us to save, not just stayed on the other side of the network, but also met mea data.</p>
+</details>
+<p><strong>Speaker 0</strong>: 这样一来，所有计算节点都可以像访问本地直连硬件一样，无差别地读取并纵览整个系统中的全部信息。这就催生了我们所开创的“全共享”（Shared-Everything）架构。系统中的所有计算节点之间完全不需要相互通信协作来协调数据访问，因为它们对底层所有信息都拥有直接共享的访问路径。这就是我们架构最根本的核心思想。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: uh, we were able to have all of the nodes uh, see all of the information as if it was directly attached. and that's what led us to being able to do what we all shared everything. all of the nodes now don't need to communicate with each other because they share access to all of the information that's the basic idea behind our architecture.</p>
+</details>
+<p><strong>Speaker 0</strong>: 事实证明，这种设计对于专为 AI 打造的新型存储系统极其有效。随后，它又被成功应用于专为 AI 打造的新型数据库系统，进而被扩展到专为 AI 打造的全新算力编排管理方式上。在这几年的演进过程中，客户的需求迫使我们深刻意识到：需要被彻底重构的远不止是存储层，而是整个系统技术栈的方方面面。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: and it proved really, really good for a new type of storage system for AI. and then for a new type of database for AI. and then for a new way to orchestrate compute for AI. and we realized over the years, our customers forced to realize that it's not just storage that needs to be redone, but the entire uh part of that stack that needs to be redone.</p>
+</details>
+<h3>逆周期下注与非主流技术路线的壁垒</h3>
+<p><strong>Speaker 2</strong>: 听到这里我忍不住笑了。当年你们去向风险投资机构（VC）推介存储项目的时候，过程一定充满了戏剧性。因为在当时，存储技术大概被普遍视为整个科技行业里最无趣、最不性感的领域了，而你们却决定一头扎进去。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: as i said, i'm i'm smiling. you must have been a lot of fun to pitch HH storage, as i decihad the the enteen to to be terrible. the storage was probconconsithe time, the the least sexy part of the entire tach IOU guys,</p>
+</details>
+<p><strong>Speaker 0</strong>: 我们今天之所以能取得如此巨大的成功，很大程度上恰恰要归功于此。当年向风投机构推介存储项目有多么艰难，如今我们就能享受到多么丰厚的回报——因为我们面对的竞争对手比走热门赛道要少得多。所以从这个角度说，真得感谢当年那个冷门的定位。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: a lot of our success, because as hard as it was to pitch storage to vc now uh or reaping the benefits of having a lot less competition, then we otherwise would have had. and so thank you. yeah.</p>
+</details>
+<p><strong>Speaker 2</strong>: 这是否也是为什么在整个基础设施的中间层，相关公司相对鲜为人知的原因？就是因为去 pitch 这一领域的初创公司数量极少，很少有公司能走到大众视野中。市面上似乎根本没有几家公司在做你们所做的事情。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: is that is that part of of why that middle le yers less less known, that's just less companies pitching of why that don't have come come. the the the mile anies that come come to on, not we ko,</p>
+</details>
+<p><strong>Speaker 0</strong>: 确实很少有公司在做我们正在做的事情。有几点核心原因：首先，我们当前面对的那些传统竞争对手，要么是在我们创办前三年起步的，要么是在我们创办前三十年就已经存在了。当我们着手构建这套全新架构时，我们是建立在一系列完全面向未来的前瞻性技术设想之上的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: and there doesn't seem to be a lot of companies doing what you do a few point um the ones that we're competing with started three years before us or thirty years before us. and so when we built this new architecture, we were basing it on forward looking technologies.</p>
+</details>
+<p><strong>Speaker 0</strong>: 当我们在 2016 年起步创业时，支撑这套架构的关键底层硬件部件在市面上甚至根本还不存在。它们是在 2017 年、2018 年、2019 年才陆陆续续研发问世并投入商用的。因此，你必须在它们出现之前就坚信它们必定会被制造出来。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: when we started in twenty sixteen, the underlying parts weren't there yet. they became available throughout twenty seventeen, twenty eighteen, twenty ninety. and so anybody you had to believe that they were going to appear.</p>
+</details>
+<p><strong>Speaker 0</strong>: 所以，困难的不仅仅是最初向风险投资人筹集资金。在早期的董事会会议上，投资人们总是一遍又一遍地追问我：“如果这套关键硬件部件最终没有被造出来，我们该怎么办？”而我总是一遍又一遍地告诉他们：“我们没有 Plan B。”他们非常讨厌听到这个回答。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: and so it wasn't just difficult to raise money from vcs in those early board meetings when they kept asking me, what do we do if this part doesn't come to life? i kept telling them. we don't have a plan b which they didn't like.</p>
+</details>
+<p><strong>Speaker 0</strong>: 所以在那些日子里，我可不是他们眼中最受欢迎的人。当然，希望随着时间的推移这一情况有所改变，毕竟他们后来从中获得了极为丰厚的回报。但客观地说，对于任何一家在我们之前就已经创立的公司而言，他们根本不可能去下这种激进的前瞻性技术赌注。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: and so um i was not their favorite person in those days. uh hopefully that changed over time, they made some money. um but um um there was no way for a company that started before us to make those forward bets.</p>
+</details>
+<p><strong>Speaker 0</strong>: 因此，使得我们今天如此独特的关键优势，正是我们是唯一一家拥有这种全共享底层架构的公司。在我们所处的中间基础设施层，确实没有多少其他同类公司。我认为这主要是因为这个领域一点都不“性感”。相比于去枯燥地修筑底层的管道设施，创办一家上层的模型公司或者应用软件公司显然在资本市场上要诱人得多。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: and so those favorite today that are most the fact that we're the only ones with this architecture, and it's true that there aren't many other companies uh in our layer, i think, mainly because it's it's not sexy. it's a lot um more appealing to build a model company or an application company than it is to build the the plumbing.</p>
+</details>
+<p><strong>Speaker 2</strong>: 那么直到今天，DASE 架构依然是你们目前所做一切的最根本基石吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: and to the days are architecture is chilled the very basis of of what what you do ing to curtly.</p>
+</details>
+<p><strong>Speaker 0</strong>: 完全正确。我们做的就是一个统一产品，那就是这个统一的数据操作系统。我们后续不断追加扩充的所有功能模块，全都是深度扎根于 DASE 架构之上的。这也是为什么我们不能简单地直接拿开源软件拼凑或者硬生生缝合在系统顶部——绝大部分核心代码都必须由我们从零到底层全部自主编写。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: that's what you do. one product. that's this operating system. but all of the the parts that were adding are based on days, and that's part of the reason why we can take open source and bolted on top. we have to write most bit ourselves.</p>
+</details>
+<h3>从存储延伸到数据库：支撑万亿级向量与 Agent 协作</h3>
+<p><strong>Speaker 2</strong>: 那你们后来为什么决定在存储之上进一步构建数据库系统？市场上当时存在哪些尚未被满足的需求，以至于促使你们必须自己动手去打造数据库？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: why did you start building databases on on top? what was uuuh address by the market that you needed to build in?</p>
+</details>
+<p><strong>Speaker 0</strong>: 就像在存储领域一样，我们发现在数据库的世界里，价格与性能之间、扩展能力与高可用及易用性之间，同样存在着难以调和的妥协与权衡，这与存储系统面临的困境如出一辙。我们之所以意识到这一点，是因为客户明确地向我们反映了他们的痛点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: as with storage, we realized that there was a trade off between price and performance and scale and resiliand and iavieuse in the world of database, what the same way that there was in the world of storage. we realized that because our customer stold us said,</p>
+</details>
+<p><strong>Speaker 0</strong>: 举个例子，我们在新加坡有一家大型客户，他们有海量的实时监控摄像头视频流不断接入。当这些视频图像数据源源不断地涌入系统时，所有的视频流都需要被实时向量化计算，最终产生了高达数万亿规模的特征向量，必须实时写入并存储在数据库中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: um we have a big customer, for example, in singapore, um and they have a lot of camera feeds uh coming in. and all of those feeds need to be uh vetorized as uh the images, comin and uh results in trillions of vectors that need to be placed in a database.</p>
+</details>
+<p><strong>Speaker 0</strong>: 市场上根本没有任何现成数据库是专为承载数万亿行数据记录而构建的；市场上也根本没有任何数据库，能够承受数以千计的自主智能体（Agents）在同一时刻并发分析系统中发生的各种维度的动态。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: there isn't a database that was built for trillions of rose. ah there isn't a database that was built for thousands of agents analzing different aspects of what's happening uh in the system.</p>
+</details>
+<p><strong>Speaker 0</strong>: 与此同时，那些旧技术栈时代的数据库，是为当时所谓的大数据而设计的，但在今天的标准看来那些数据量其实极其微小；而且它们最初是为人操作交互设计的——供人类分析师手动编写运行 SQL 查询并进行数据分析。再次重申，那些陈旧的架构、那些“无共享”（Shared-Nothing）架构，根本不可能横向扩展到我们今天业务所苛求的极高维度。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: at the same time, uh old stack databases built for uh big amounts of data, which today seem very, very small, which were built for people, uh running queres and doing the analysis. and again, that old architecture that shared nothing architecture uh is big, scalable enough to the levels that we need today.</p>
+</details>
+<h3>传统云与新型 AI 云的代际更迭</h3>
+<p><strong>Speaker 2</strong>: 所以归根结底还是扩展性（Scale）的问题。不过我稍微追问并提出一点质疑：你肯定清楚，像 Databricks 或者 Snowflake 这样的公司一定会站出来反驳说：“不，我们具备海量的扩展能力，我们完全有能力对海量数据执行大规模分析，甚至包括通过我们实际的产品运行部分近实时的实时分析。”另外，可能还会有人提出：“存储问题不是早就被解决了吗？AWS 的 S3 不就是可以无限扩展的吗？”但是我们在这里听到的事实似乎是：所有这些现有方案在特定的传统场景下或许成立，但在我们当下讨论的 AI 场景中却完全行不通。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: so it's it's so it's scale. i i'm just to um push back back AA, little little it um um or probe. um you know, i'm i'm sure like dita brakes or like snowflag would tell on and know, we massive with scale able, and we can just run massive analytics on data incluincluding some in real time with in real product. um and then um you know, i think some people would tell well, storage was sold like that's as three three that's in scalable. but what we we here here is um all of this maybe true for certain news cases, but not for what we talking about here.</p>
+</details>
+<p><strong>Speaker 0</strong>: 你刚才提到的这两家知名公司，实际上都是在我们创立前大约五年前成立的。因此，它们同样是架构在上一代陈旧的技术体系之上，并且它们走的是自顶向下的构建路线。它们高度依赖诸如 AWS S3 这类底层公有云基础设施服务，而 S3 这些服务从一开始就根本不是为了应对现代人工智能时代的高吞吐、低延迟并发需求而设计的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: i think both of those companies that you mention started about five before us us. so they too are built on that older architecture, and they started top down. they are based on underlying cloud services like a three, which were not built for this era of AI.</p>
+</details>
+<p><strong>Speaker 0</strong>: 如今我们正在亲眼见证这种行业现实。这也是为什么现在一大批新型专业 AI 云计算厂商（AI Clouds）如雨后春笋般迅速崛起的核心原因之一。因为构建了 S3 的传统超大规模云厂商（Hyperscalers）搭建的是老一代技术栈，而这些新兴的 AI 云构建的则是面向未来的全新技术栈。时至今日，那些老牌云厂商已经被迫必须进行深刻的架构自我重塑，以此来努力维持自身在新时代的竞争力与相关性。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: and we're seeing that today. um that's a big part of the reason these AI clouds are starting to pop up because the traditional hyperscalers that build us three uh, build the old stack, and these new AI clouds are building the new stack, and now the olof clouds need to adapt in order to um stay relevant.</p>
+</details>
+<p><strong>Speaker 2</strong>: 那么对于那些正在构建 AI 工厂的客户来说，他们现在的做法是否就是直接把全部数据直接迁移到 VAST 之上？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: so easy the customcustomer as they build those AI factories to basically move all the data to fast.</p>
+</details>
+<p><strong>Speaker 0</strong>: 他们在一开始并不需要立刻把所有存量数据全部一口气迁移到 VAST 上。通常来说……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: they don't have to start by moving all the data to vast. usually,</p>
+</details>
+<!-- chunk 4/7 -->
+<h3>新旧技术栈的融合与数据重力</h3>
+<p><strong>Speaker 0</strong>：我们最初的做法，仅仅是去支持那些全新的应用，专门为新兴的 AI 应用提供底层服务。但在那之后，通常会发生这样的转变：客户——也就是这些企业组织——会逐渐意识到这套系统确实非常实用，于是他们不再满足于只让它处理一小部分特定的数据子集，而是希望它能够直接访问企业的全量完整数据集。</p>
+<p>值得庆幸的是，我们原生支持所有传统技术栈的标准接口。因此，如果你需要的是 S3 对象存储，我们完全支持；如果你需要文件系统，我们提供支持；如果你需要块存储设备，我们也同样支持；如果你谈论的是数据库层，我们完全兼容 SQL；如果你涉及的是数据流处理，我们对 Kafka 也有着原生支持。正因如此，将那些基于传统技术栈构建的老旧应用，与全新的智能体工作流以及前沿 AI 应用并行接入到我们的统一平台上，是一件非常轻松自然的事情。从这个意义上说，随着各大企业逐步开启这段技术升级之旅，我们实际上充当了一座连接传统 IT 世界与现代 AI 新世界的坚实桥梁。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: We start by just serving the new applications, just serving the new AI applications. Usually, what happens after that is that the customer—the enterprise organization—realizes that this is actually useful, and they say, &quot;I want it to access the entirety of my data set rather than just this subset.&quot;</p>
+<p>The good news is that we support all of the old stack interfaces. And so if you're talking storage like S3, we support file systems, we support block devices; if you're talking databases, we support SQL; if you're talking streaming, we support Kafka. And so it's very easy to plug in those old stack applications onto our platform in parallel to the new agentic workflows and AI applications. In that sense, we become a bridge between the old world and the new world as companies make that journey.</p>
+</details>
+<p><strong>Speaker 2</strong>：但这段旅程的终点，必然是传统世界彻底融入这个新世界。显然，在视觉和逻辑层面，数据重力（Data Gravity）对于像 VAST 这样的平台而言是一件非常美妙的事。不过，客户对于最终将所有数据都统一迁移到单一供应商这里，通常持有什么样的态度和顾虑？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: But the end of the journey is that the old world merges into the new world, of course. Visually, data gravity is a wonderful thing if you're VAST. How do customers feel about the idea of ultimately moving all their data to one vendor?</p>
+</details>
+<h3>客户满意度与零主动流失</h3>
+<p><strong>Speaker 0</strong>：正因为我们提供的所有接口都是行业通用标准，对客户而言，迁出我们平台的难度与迁入我们平台是完全一样的，没有任何专有壁垒。因此，我们的核心职责就是全力确保他们保持满意。我每天早晨上班后看的第一张图表，就是我们的客户满意度图表，那是我们全公司上下唯一真正关心的核心指标。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Because the interfaces are all standard, it's just as easy for them to move off of us as it is to move onto us. It's our job to make sure that they're happy. The one chart that I look at every morning is our customer happiness chart. That's the only thing we care about.</p>
+</details>
+<p><strong>Speaker 2</strong>：那张图表具体是什么样的？你们是如何衡量的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: And what does that look like? How do you measure it?</p>
+</details>
+<p><strong>Speaker 0</strong>：它由三种颜色构成：绿色、黄色和红色。在公司内部，任何一名普通员工都有权限随时将某个客户的状态从绿色调整为黄色，或者从黄色调整为红色；但是，极少数经过严格授权的人才有资格将客户状态改回绿色。要将一个客户重新标记为绿色，唯一真正管用的衡量标准就是客户亲自表态。只有当客户亲口对我们说：“我们现在非常满意，所有问题都已经彻底解决了，一切进展顺利”，我们才会将其改回。</p>
+<p>是的，这正是我们每天竭尽全力想要达成的目标。我认为各项实际业务数据也证明了这种机制的有效性。像你们这类投资人通常极为关注净金额留存率（NDR）和毛金额留存率（GDR）这些指标。在我们公司，我们从来没有发生过主动客户流失（Churn）。我们的毛金额留存率之所以没有达到绝对的百分之百，仅仅是因为过去几年中有极个别客户自身因经营不善而倒闭停业了，但从来没有任何一家客户是因为主动决定“我要停止使用 VAST”而离开我们的，这一点让我感到无比自豪。平均而言，我们的客户每年部署在系统上的数据规模都会实现翻倍甚至三倍的爆发式增长。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: It has three colors: it has green, it has yellow, and it has red. Anybody in the company is allowed to move a customer from green to yellow, or from yellow to red, but very few people are allowed to move them back. The only metric that really matters in order for us to move a customer back is the customer themselves saying so. When they say, &quot;We're happy now, everything is good, everything is solved.&quot; And that's what we work so hard every day to accomplish.</p>
+<p>I think the numbers show that it's working. The numbers that people like you usually care about are Net Dollar Retention and Gross Dollar Retention. We don't have any churn in the company. Our Gross Dollar Retention is not 100% only because a few of our customers have gone out of business over the years, but no one has actively decided, &quot;I'm going to stop using VAST,&quot; which is something I'm very proud of. On average, our customers double and triple the amount of data that they place on our systems every year.</p>
+</details>
+<h3>模型数据交互：训练与推理的技术分水岭</h3>
+<p><strong>Speaker 2</strong>：让我们深入探讨一些底层技术细节，聊聊数据究竟是如何与 AI 模型进行交互的。所谓“将数据搬运到 GPU”在底层物理和架构层面上到底意味着什么？在模型训练阶段与推理阶段，这种数据移动模式是否存在本质差异？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 2</strong>: Let's get into some of the technicalities of how the data interacts with models. What does it actually mean to move data to the GPU? And is it different for training compared to inference?</p>
+</details>
+<p><strong>Speaker 0</strong>：训练的过程在架构逻辑上其实非常简单直接。在训练场景下，你基本上只需要堆叠海量的 GPU 计算集群，然后用海量的训练数据持续不断地喂饱这些算力卡。在训练过程中，系统会周期性地写入检查点（Checkpoints），这样即便某个节点或任务发生崩溃中断，整个训练任务也无需从头再来。除此之外，训练阶段并没有太多额外的复杂维度，核心要求就是极致的大规模扩展能力（Large Scale）以及高吞吐的快速访问能力（Fast Access），仅此而已。</p>
+<p>然而，推理环节正在演变成一个极其复杂且庞大的独立技术世界。最开始，推理之所以具有挑战性，显而易见是因为它对超低延迟（Low Latency）有着极高要求——因为链路的另一端坐着真实的人类用户，他们正在实时输入 Prompt 并焦急地等待即时响应。这意味着你必须构建一套高度贴近终端用户的分布式边缘系统。与此同时，这也意味着整个系统必须具备极其严苛的零停机可用性（High Availability）。</p>
+<p>曾经有一位顶级大模型开发商的负责人跟我说过一句话：如果是模型训练集群停机中断了，可能外界根本无人察觉；但如果是推理服务宕机了，那就相当于整个商业服务彻底瘫痪了。因此，推理基础设施必须保证 100% 的全天候稳定在线。高弹性容灾、高度分布式架构、极致低延迟以及极高安全性的执行环境——所有这些维度，都是推理相较于训练更为严苛的关键特性。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Training is super simple. In training, you just need a lot of GPUs and you need to feed them with a lot of training data. Once in a while, they put down a checkpoint so that if something crashes, they don't have to go all the way back to the beginning. But other than that, there's not much to it: you need large scale, and you need fast access. That's it.</p>
+<p>Inference, however, is becoming a whole complex world of its own. Inference started by requiring low-latency access, because people are on the other end prompting and wanting immediate responses. That meant that you need a distributed system close to where those people are at the edge. That also means that you need a system that's always up.</p>
+<p>Somebody once told me—one of the big model builders—that if training is down, nobody notices; if inference is down, there is no service. And so it needs to be up 100% of the time. Resilience, distributed nature, low latency, very secure environments—all of that is important for inference versus training.</p>
+</details>
+<h3>多模型路由、上下文缓存与分层记忆网络</h3>
+<p><strong>Speaker 0</strong>：但刚才提到的低延迟和高可用，其实还仅仅是推理基础设施的最底层地基。一旦我们的架构开始演进到支持多个异构模型、支持自主智能体（Agents）、引入强化学习（Reinforcement Learning），甚至是彻底跳出传统数据中心边界、延伸进具身智能（Physical AI）与各类物理边缘设备的广阔领域时，每一个新增的维度都会在系统上叠加一层前所未有的全新复杂度。这意味着我们必须从零研发一整套全新的工具链与系统能力。</p>
+<p>举个具体的例子：现在企业的技术架构中普遍同时并存着多种不同的模型，而每个模型各自擅长处理完全不同的任务。因此，我必须确保系统能将某个特定 Prompt 精准路由到专门的模型上，比如因为它在软件工程开发方面表现卓越；同时，我还希望将另一个日常任务的 Prompt 路由到另一个低成本模型上，因为该模型调用单价极低，而当前处理的并非高价值的核心任务。此外，在数据安全与合规层面，我必须在系统级做到绝对隔离，严格确保任何敏感的企业核心信息都不会被意外暴露给某个特定的外部模型，因为外部服务商很可能会将这些交互数据挪作他用，而在使用受控模型或内部私有模型时，我们则有明确的法律合规合同提供全面保护。单单是这种多模型智能分发与合规控制的单一维度，其背后的复杂性就已经呈指数级上升了。</p>
+<p>一旦技术思考延伸到这个深度，你就会发现必须在全链路执行海量的底层深度优化，比如极高密度的激进缓存技术（Heavy Caching）、上下文窗口（Context Window）的智能维护与保存机制。系统在路由 Prompt 时，绝不仅仅是简单地选择“正确的模型架构”，而是必须精确定位到“已经预加载了该特定模型、并且已经在显存中完整缓存了该用户上下文（Context）的那块具体 GPU 物理卡”上。</p>
+<p>这里的“上下文”，往往还仅仅局限于过去几分钟内的即时对话流水。但现实业务场景不仅需要瞬时的短期工作记忆（比如过去几周的交互沉淀），还需要能够调取两年前发生过的企业长期记忆。而所有这些不同时间跨度的多层记忆，都必须借助检索增强生成（RAG）等先进技术，被高效、无缝地注入到这些计算环境中。</p>
+<p>因此，所有这些架构演进的根本，都在于如何系统化地治理与管理全生命周期的数据：包括原始沉淀数据、模型实时生成的数据、用户输入数据、深度神经网络的模型权重本身，以及各类运行时的上下文状态。我们必须在最底层机制上筑牢防线，坚决确保没有任何人或任何程序能够窥探到未经授权的信息。</p>
+<p>更有甚者，当我们通过强化学习或持续微调来迭代模型时，系统必须具备端到端的数据血缘追溯能力，精确追踪究竟是哪些特定数据被用于微调了哪一个具体模型，并从数学与系统层面上严格杜绝这些微调数据在后续与其他人类用户或自动化智能体的交互过程中发生意料之外的隐式泄露。随着你将这些复杂的技术组件——第一层、第二层、第三层、第四层——一层接一层地叠加在一起，整个系统架构就变得异常精密且极具挑战性。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: But that's just the ground level. Once we start talking about multiple models, once we start talking about agents, once we start talking about reinforcement learning, and definitely once we expand outside of the world of data centers into physical AI and actual devices—each one of those adds another layer. That means that we need to develop a new set of tools.</p>
+<p>For example, now that we have multiple models, each model is good at different things. And so I want to make sure that this prompt makes its way to that model because it's good at software development. I want to make sure that this other prompt makes its way to that model because it's inexpensive and this isn't a high-value task. I want to make sure that no sensitive information is exposed to this particular model, because they are going to use that information for things that I don't want them to, whereas over here, I have a contract that protects me. And so just that aspect of it is starting to get complex.</p>
+<p>Once we start thinking in that direction, there's all kinds of optimizations that we need to do around things like heavy caching, saving context windows, and making sure that we route the prompt not just to the right model, but to the right GPU that has that model loaded and that has my context in cache. Context is just the last few minutes of conversation; we need short-term memory—the last few weeks—and long-term memory—what happened two years ago—to also be accessible through things like RAG into these environments.</p>
+<p>All of that requires us to manage data: the raw data, the generated data, the input data, the weights of the model, the context. And we need to make sure that nobody sees information that they're not allowed to. We need to keep track, as we do reinforcement learning, of what information went into fine-tuning each model, and make sure that that information isn't leaked through interacting with somebody who's using that model, whether it's a human or an agent. It becomes very, very interesting as you layer one, two, three, four of these things one on top of the other.</p>
+</details>
+<h3>智能体访问控制与策略执行挑战</h3>
+<p><strong>Speaker 1</strong>：所以如果企业内部有海量的历史数据需要被反复调用，这些数据可以通过上下文窗口、通过作为模型工作记忆的 KV 缓存（KV Cache），或者通过外部 RAG 知识检索系统来供大模型消费。那么在实际系统运行中，究竟由谁来做出这些架构决策？作为高性能高速数据平台的提供商，你们的职责仅仅是扮演一个高可用的底层数据存储底座，任由上层大模型根据自身需要随时拉取数据？这套体系在工程上究竟是如何运转的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: So if you have enterprise data to play back, that data could be used by the model through the context window, through the KV cache—which is the model's memory—or through RAG. Who makes those decisions? Is your job as the fast data provider to just be available, and then the model pulls as needed? How does that work?</p>
+</details>
+<p><strong>Speaker 0</strong>：核心逻辑在于必须自上而下预先设定好统一的安全治理策略（Policies）。在现阶段，我们的系统直接无缝对接企业现存的身份认证（Authentication）与访问授权（Authorization）基础设施。如果你的组织采用 Active Directory，或者有一套成熟的访问控制列表（ACL），我们的系统就能自动继承并准确识别从人类员工视角来看，谁有权限访问哪些敏感数据。</p>
+<p>在此基础上，我们进一步将这套权限控制模型平滑延伸到了自主智能体（Agents）身上——因为这些智能体在被部署时，天然继承了部署它们的人类实体、或者是派生创建它们的父级智能体所拥有的固有权限属性。基于这种上下文血缘，系统便能清晰地获知各项操作的法定边界到底在哪里，明确该交互场景下的规则底线究竟是什么。</p>
+<p>然而，在明确规则之后，接下来的核心难点在于如何真正强制执行这些策略——特别是当涉及跨越多个不同外部组织和公有云环境时，执行难度会成倍攀升。目前绝大多数主流的前沿商业大模型开发商，根本不允许你在自己的私有物理环境内部本地运行推理，这意味着企业必须将内部核心数据打包外发推送到他们的服务器集群中，然后全凭运气祈祷对方能遵守安全规范。我认为，这种严峻的数据外溢与隐私不可控风险，在极大程度上严重阻碍了 AI 技术在现代企业中的深度落地与规模化普及。</p>
+<p>因此，我们的使命就是必须从底层数据通路上构建起坚不可摧的安全性与确定性，彻底消除数据流动的安全隐患，扫清一切可能阻碍 AI 充分释放其真正商业潜力的系统性障碍。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: We need policies to be set. Today, we just connect into your organization's authentication and authorization mechanisms. If you use Active Directory, if you use access control lists, we then know who is allowed to see what from a human perspective. We then extend that to agents, as those inherit properties from the people that deploy them or from other agents that spawned them. Based on that, we know what's allowed and what the rules of the game are.</p>
+<p>Then we need to enforce those rules, which becomes very difficult when you're talking about multiple organizations. Most of these model builders won't let you infer within your environment, which means that you just need to send your data to them and hope for the best. That, I think, has been slowing down the adoption of AI in a significant way. And so we need to make sure that it's secure, we need to make sure that it's safe, and we need to make sure that there aren't any obstacles for AI to achieve its true potential.</p>
+</details>
+<h3>从数据安全到物理世界安全干预</h3>
+<p><strong>Speaker 1</strong>：正如你刚才阐述的，智能体记忆（Agent Memory）的概念在底层运行机制上完全遵循相同的逻辑路径——即按需访问底层的海量数据存储底座。你刚才的意思是不是说，你们实质上赋予了智能体一套与人类员工高度相似的认证与授权身份体系？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: And to what you just said, the concept of agent memory works the same way: accessing that vast data storage. Did you say you effectively give the agents authentication and authorization the way a human would, very similar?</p>
+</details>
+<p><strong>Speaker 0</strong>：没错，正是这样。传统上直接绑定在具体人类用户账号（User ID）上的细粒度访问控制列表（ACL），现在可以直接映射并分配给一个自主运行的智能体，而不再仅仅局限于物理自然人。我们全面支持基于角色的访问控制（RBAC），也支持基于属性的动态访问控制（ABAC）。这种机制能够提供极其精细化的权限颗粒度，使企业能够根据实际业务需求，动态、灵活地定义和下发各类精细安全策略。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Yes. Access control lists that applied to a user ID are now assigned to an agent rather than a person. We have access controls based on roles, and we have access controls based on attributes. It's very fine granularity, and you can, in a dynamic way, set your policies.</p>
+</details>
+<p><strong>Speaker 1</strong>：这种管控不仅涵盖它们对底层静态数据的读取访问权限，也包括严格限制它们究竟能够调用哪些外部工具（Tool Calls），不能调用哪些工具，对吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: It's accessing data, but also what tool calls they can and cannot make, correct?</p>
+</details>
+<p><strong>Speaker 0</strong>：不仅如此，它还精确约束了智能体究竟被允许与谁进行双向通信。因为在当下的全新协同范式中，整个网络往往呈现出“多个自主智能体并发与多个不同业务人员实时交互”的复杂拓扑结构。所有这些高并发对话流，都在我们提供的统一持久化事件流服务（Persistent Streaming Service）之上高速运行。这为整个系统赋予了全方位的端到端可观测性（Observability），因为运维人员和合规系统可以直接对底层实时数据库发起结构化查询，随时审计并剖析这些智能体之间的对话内容与交互轨迹。</p>
+<p>而且请牢记：整套基础设施早已不再局限于某一个物理数据中心内部，而是跨越了多个不同的地理区域和跨国节点。因此，从全链路可观测性、运行时系统控制以及全局策略设定的多重视角来看，这个庞大的分布式新世界在很大程度上正是由我们这套底层操作系统统一调度与管理的。</p>
+<p>当这种架构进一步突破传统算力数据中心的物理围墙，向外泛化渗透进自动驾驶汽车、具身双足人形机器人以及低轨卫星集群等前沿硬件载体中时，系统面临的安全风控等级与赌注（Stakes）瞬间被拔高到了前所未有的生死高度。因为物理世界中的机电硬件实体一旦失控，是会造成无法挽回的真实物理人身伤害与财产毁灭的。</p>
+<p>到了那个阶段，我们所要守护的边界，就绝不仅仅是单纯的“数字数据安全”了，而是必须上升到关乎人类生命财产的“现实物理安全”。系统必须有能力做出绝对可靠的刚性约束：比如那台机械臂人形机器人绝不能抓起某件危险工具，或者那辆自动驾驶汽车在任何极端偶发场景下都绝对不可误撞行人。正因如此，你必须依赖我们牢牢坐镇在端到端的底层实时数据通路（Data Path）之中——我们不仅要能够全量感知、实时上报并追踪这一切数据流向，更必须具备在毫秒级微秒级内直接下发干预、强行阻断违规行为并刚性执行安全防护策略的决定性底层控制力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: And who they're allowed to talk to! Because now you have multiple agents talking to multiple people. That conversation happens over a persistent streaming service that we provide, which gives us observability into it because we can query through the database and ask questions about those conversations.</p>
+<p>And remember, the entirety of this is not in one data center anymore; it's across geographies. The entirety of this new world gets managed by this operating system from an observability, a control, and a policy-setting perspective.</p>
+<p>Especially when it starts to expand outside the data center into cars, humanoid robots, and satellites, the stakes get higher because physical elements can create physical damage. Rather than just data safety, we need to think of things like actual safety: that robot should not pick up that tool, or that car should never accidentally hit a person. And so you need us to be in the data path, not just to be able to report on these things, but also to intervene and enforce the policy.</p>
+</details>
+<p><strong>Speaker 1</strong>：与此相伴随的是，智能体协同（Agent Collaboration）的概念眼下正成为全行业最为瞩目的焦点。部分原因自然在于近期一系列安全与系统防护隐患的集中爆发引起了业界的深刻反思，但不可否认的是，“智能体集群”（Agent Swarm）的技术范式如今确实已经无处不在、席卷了每一个前沿领域……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: And in the meantime, the concept of agent collaboration is all the rage right now, highlighted in part through recent security and safety issues. But the concept of agent swarms is everywhere...</p>
+</details>
+<!-- chunk 5/7 -->
+<h3>多智能体协作与解决重大科学难题</h3>
+<p><strong>Speaker 1</strong>: 这样一来，协作层也将以同样的方式得到赋能。它将拥有如同人类群体那样的访问能力——完全正确，也就是对数据拥有群体级别的访问权限。这正是关键所在。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: So that collaboration layer would be also enabled the same way they would. It would have access to a group like a way humans would have access, that's exactly right—a group access to data, that's exactly right.</p>
+</details>
+<p><strong>Speaker 0</strong>: 确实如此。长期以来，我们一直期盼 AI 之间的交互以及智能体之间的协作，能够为我们带来智力水平上的下一次阶跃式飞升。就像我们人类互相交流时一样，我们彼此启发、让对方变得更聪明。我认为，本周早些时候解决纳维-斯托克斯方程（Navier-Stokes）问题的突破，就证明了这一幕正在切切实实地发生。他们让一万个智能体去攻克一道历史悠久的世纪数学难题，仅仅过了几天，它们就带着成果回来了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: And I think for a long time, we've been hoping that interaction between AI and interaction between agents will give us a next step function in level of intelligence, in the same way that when we talk, we make each other smarter and we give each other ideas. I think this solving of the Navier-Stokes problem earlier this week proves that that is actually happening. They said, ten thousand agents loose at an age-old math problem, and within a few days, they came back with the result.</p>
+</details>
+<p><strong>Speaker 0</strong>: 所以，这是一个之前缺失的维度。我认为这种多智能体协作非常适合解决理论性问题。而目前仍然缺失的另一个维度是对现实物理世界的接入与感知，那将非常适用于解决实体物理世界中的难题。希望随着这些维度的补齐，能把 AI 提升到一个全新的高度，帮助我们真正解决多年来一直苦苦探索的一些重大世纪难题。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: And so that's an aspect that was missing, I think, which is good for theoretical problems. The other aspect that is missing still is access to the natural world, which is good for physical problems. And so hopefully, that brings this to a level where the AI can help us solve some of the big problems that we've been struggling with over the years.</p>
+</details>
+<h3>数据飞地与机密计算：保护企业隐私与模型权重</h3>
+<p><strong>Speaker 1</strong>: 太不可思议了。对了，我们刚才提到要回过头来聊聊私有与敏感数据向商业模型开放的话题。顺便问一下，这个技术叫什么来着？是叫数据安全区、数据飞地（Data Enclave）吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Right? Amazing. We said we would go back to that private and sensitive data exposing it to commercial models. Which, what is it called by the way? It's called Data Enclave?</p>
+</details>
+<p><strong>Speaker 0</strong>: 没错，就是 Enclave（飞地）。好吧，我不知道它本来的名字是怎样的，但我很喜欢这个称呼，这正是我们刚刚做的事情。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Yes, Enclave. Okay, I'm not sure, I like the name, but that's what we just did.</p>
+</details>
+<p><strong>Speaker 1</strong>: 那么用通俗易懂的简单语言来解释，它在实际落地中具体是如何运作的呢？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: So how does that work practically in simple terms?</p>
+</details>
+<p><strong>Speaker 0</strong>: 实际上，它的原理非常直观简洁。事实上，这一切的核心归根结底都在于加密内存。如今的实际情况是，模型构建者希望对其模型权重严格保密，因为那是他们最核心的知识产权（IP）。他们害怕把权重直接交付给成千上万的客户后，有人会私自挪用或者做一些不被允许的事情。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Practically it's super simple. In fact, it all goes back to encrypted memory. And so if today, model builders want to keep their weights very secure because that's their IP, they're afraid of giving it to a million customers and having one of them take it and do something that they're not supposed to.</p>
+</details>
+<p><strong>Speaker 0</strong>: 另一方面，对于特定类别的客户，特别是大型企业客户而言，他们绝对不可能像目前业界期望的那样，随意把自己的核心私有数据拱手交给模型构建商。因此，我们所做的事情，就是不再让推理进程运行在模型构建者的机房或他们托管的云端，而是允许该推理进程直接运行在企业客户自己的内部环境中——无论是在他们本地的物理数据中心机房，还是在他们拥有完全控制权的虚拟私有云（VPC）中。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: On the other hand, because a specific class of customers, specifically enterprises, cannot just give their data to the model builders in the way that they're expected to today. What we're doing is letting that inference process, rather than running within the premises of the model builder or within one of their clouds, we're letting it run within the premises of the enterprise, whether it's a physical on-premises or a VPC—a virtual private cloud that they own.</p>
+</details>
+<p><strong>Speaker 0</strong>: 而我们确保模型厂商放心的做法，就是对这些模型权重实施端到端的全程加密。我们深度利用了底层硬件厂商提供的安全能力，比如英伟达（NVIDIA），他们也是我们这次发布的重要合作伙伴。底层硬件支持加密数据在网络中传输，进入加密内存，并从内存直接安全送达 GPU 内部。在整个通路中，只有模型构建厂商授权的专属推理应用才被允许解密和访问它。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: And the way that we make sure the model builders are happy is by encrypting those weights, and we encrypt them end to end. We leverage hardware capabilities underneath us from companies like NVIDIA, who is a big part of this launch, who allow us to bring encrypted data through the network into memory, from memory up to the GPU. And only the model builder's inference application is allowed to access it.</p>
+</details>
+<p><strong>Speaker 0</strong>: 这样一来，我们就构建了一条端到端完整受控的信任链。模型权重得到了严密的安全防护，同时企业也确信没有任何外部人员能窥探到哪怕一丝一毫的企业私有数据。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: And so we have full custody chain of control end to end such that those weights are safe, and the enterprise knows that nobody can ever see their information.</p>
+</details>
+<h3>机密计算的生态协作与信任中枢</h3>
+<p><strong>Speaker 1</strong>: 为什么这套方案在当下才真正成为可能呢？机密计算（Confidential Computing）的概念其实已经存在很多年了。我记得这个概念有两三个不同的叫法，它出现已经有十年甚至更久了吧？为什么直到现在它才真正落地普及？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: And why is it possible now? That concept of confidential computing—I'm trying to remember the name, there are two, three names for that concept. It's been around for like a decade plus. Why wasn't it happening until now?</p>
+</details>
+<p><strong>Speaker 0</strong>: 我认为在底层技术上其实并没有什么颠覆性的全新发明。正如你所说，机密计算在 CPU 领域早就存在多年了，而现在它终于在 GPU 上打通了全部软硬件管道。因此，硬件底座层面的支持必须先就位，这项工作需要由底层厂商来完成。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I don't think there's anything new in the underlying technology. It had to be plumbed because this was, as you say, available for a long time for CPU. Now, it's available for GPUs. And so that piece of it needed to be done underneath us.</p>
+</details>
+<p><strong>Speaker 0</strong>: 而在我们这一层，职责则是管理这极其复杂的全流程，确保系统精准掌握：这究竟是哪一个模型？权重属于谁？谁有权限查看？应该在何处拦截与隔离？等等这些控制逻辑。坦白讲，这背后并不需要某种突如其来的技术大突破，我认为这单纯是一个“时机成熟的想法”。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Our layer requires us to manage all of this and make sure we understand which model is where, who does it belong to, who is allowed to see it, where should we block it, those types of things. I don't think there's a technological breakthrough that was required for this. I think it's just an idea whose time has come.</p>
+</details>
+<p><strong>Speaker 0</strong>: 此外，它需要庞大生态系统中的众多公司和环节紧密协同，才能共同提供这样一套端到端的闭环解决方案。因此，我们正在与各大 AI 专业云厂商合作落地；我们正与各大硬件 OEM 厂商携手打造可直接部署在企业数据中心内部的物理机架服务器；比如思科（Cisco）、超微（Supermicro）等厂商现在都在就此与我们展开全面合作；当然，还有像英伟达这样的顶级芯片巨头。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: And it also requires many companies, many parts of the ecosystem to work together in order to provide this end-to-end solution. So we're working with the AI clouds to do it. We're working with the OEMs to build physical boxes that can sit in the enterprise's data center. Companies like Cisco or Supermicro are now collaborating with us on this. And of course, the chip makers themselves, like NVIDIA.</p>
+</details>
+<p><strong>Speaker 1</strong>: 超越单纯的技术本身，这显然还需要极高的信任度与可审计性层，对吧？因为你们正好切入了关键节点，恰好卡在这个生态系统各方玩家交汇汇流的正中心。对此你们是怎么考量的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: And beyond technology, there has to be a trust and an auditability layer presumably, right? Because now you become the middle—you're in the middle of this great confluence of just different players from across the ecosystem. So how do you think about that?</p>
+</details>
+<p><strong>Speaker 0</strong>: 我认为信任正应该沉淀在这个位置。这一层一方面极具价值，因为它是灵活的软件层；另一方面，它在整个技术栈中所处的位置足够底层，因而能够向下抽象、向上赋能所有不同的上层应用。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I think that's where the trust should be. That's the layer that is on the one hand valuable because it's software. On the other hand, it's low enough in the stack such that it can benefit all of the different applications.</p>
+</details>
+<p><strong>Speaker 0</strong>: 从计算机发展史来看，系统的底层安全保障机制历来都是在操作系统（OS）层实现的。而在当下的 AI 新架构中，安全控制机制必须落入我们所处的这一层。我希望我们被证明是值得信赖的，我们正在极其努力地与生态系统中的每一个人建立这种深厚的信任。能够身处这样一个核心枢纽位置，我们感到由衷的敬畏与谦卑。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Historically, that's where safety was done—in the operating system. And so now it needs to be done in our layer. I hope that we are trustworthy. We're working very hard to build that trust with everybody else in the ecosystem. And yes, we're very, very humbled to be in the middle.</p>
+</details>
+<h3>算力繁荣背后的爆炸性需求与供应链瓶颈</h3>
+<p><strong>Speaker 1</strong>: 占据这个关键生态身位，听起来确实是贵司发展历程中的又一个重大里程碑。太振奋人心了。我想退一步，从你的视角来审视一下整个宏观环境。作为整个体系架构最核心的夹层，你们处于极其优越且敏锐的位置，能清晰俯瞰多家 OEM 和各大巨头。所以我想探究一下，你对宏观层面各种动态的真实看法。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: And in that position, sounds like another huge milestone for the company. So amazing. I'd love to take a step back and think through the macro environment from your perspective. You're in this very privileged position as the middle layer of the cake, as we see a couple of OEMs now. So I'm curious what your take is on a bunch of things.</p>
+</details>
+<p><strong>Speaker 1</strong>: 一个不可回避的核心问题，围绕着这场波澜壮阔的算力大繁荣的需求端。你与众多新型专业 AI 云以及英伟达都有着极深度的合作，所以你对供给侧的真实情况了如指掌，你本身也是供给侧的关键一环。那么，究竟是什么让你确信，需求端将会以一种切实有效的方式落地爆发，而不会让这整个宏观生态陷入供过于求或过度扩张的危机之中？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: The inevitable question is around the demand side of the whole compute boom. So you work with a lot of the new clouds and NVIDIA, so intimately familiar with the supply side; you're part of the supply side yourself. What gives you comfort that the demand side is going to materialize in a way that is not going to get this entire ecosystem in trouble?</p>
+</details>
+<p><strong>Speaker 0</strong>: 事实上，我认为需求在当下不仅完全真实存在，甚至在某种程度上已经不是“令人安心”，而是“庞大到令人敬畏甚至心生恐惧”。那种需求增长的加速度是惊人的：每个季度，我们的客户都会回头找我们，并告诉我们，他们所需的算力规模比他们原先预估的要大得多得多。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I think the demand is there today. I'm not sure it gives me comfort, and sometimes scares us, as to how much demand is there. The acceleration in demand—because every quarter our customers are coming back to us and telling us they need a lot more than they thought they did.</p>
+</details>
+<p><strong>Speaker 0</strong>: 我们有一家新兴 AI 专业云客户，体量相对较小。大约一个季度前他们找到我们，我们当时提醒他们：“你们需要为未来三年的资源做好前瞻规划，因为硬件产业链存在极其刚性的供应链交付周期，你们必须对此有清醒的预估。”当时他们评估后表示，未来三年他们大概总共需要大约 500 PB（Petabytes）的存储与算力支撑。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: We had a customer, one of these AI clouds, one of the smaller ones, come to us a quarter ago, and we told them we need to plan ahead for the next three years because there's supply chain implications, and you need to be aware of this. And they said we're probably going to need about 500 petabytes over the next three years.</p>
+</details>
+<p><strong>Speaker 0</strong>: 结果就在上周，他们急匆匆跑回来跟我们说：“在那 500 PB 的基础上，我们还需要额外追加 2 EB（Exabytes）。”而根据我在整个行业上下游其他领域观察到的趋势来看，我完全预计，再过一到两个季度，他们还会再次回头说：“对不起，我们之前严重低估了，我们现在需要两位数级别的 EB 规模。”我们正在全行业范围内普遍见证这种惊人的指数级扩张——不仅在中小规模的客户环境中如此，在那些原以为自己只需要几十个 EB、现在张口就要上百 EB 的超大规模头部环境中同样如此。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: And last week, they came back to us and said, &quot;We're going to need an extra two exabytes on top of that 500 petabytes.&quot; And my expectation is that from what I'm seeing in other parts of the landscape, they'll come back again in a quarter or two and say, &quot;We need a double-digit number of exabytes. We undershot.&quot; And we're seeing that across the board, both in the smaller and medium-sized environments as well as in the big environments where they thought they would need tens of exabytes, and now they're talking in triple digits.</p>
+</details>
+<p><strong>Speaker 1</strong>: 目前这些底层算力基础设施的疯狂建设，究竟有多少是源于头部 AI 顶尖实验室的自研扩张，又有多少是来自于下游实际终端企业客户与终端用户的真实消费？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Now how much of it is big labs building versus end customers and end users?</p>
+</details>
+<p><strong>Speaker 0</strong>: 事实上，顶尖大模型实验室之所以大规模扩建，正是因为他们下游拥有成规模的终端企业客户与终端用户在源源不断地调用；而专业 AI 云厂商之所以大兴土木疯狂建设，是因为他们同时服务着众多头部实验室与中等规模团队的海量算力消耗。眼下，市场上根本找不到任何闲置未用、被白白浪费的算力基础设施。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Well, the big labs are building because they have end customers and end users that are using it, and the AI clouds are building because they have both big labs and medium labs that are consuming it. And I don't think you'll find infrastructure that's just lying around and not being utilized at the moment.</p>
+</details>
+<p><strong>Speaker 0</strong>: 恰恰相反，真实情况完全是供不应求。人们迫切希望实现的宏大计算任务，远超现有硬件设施的承载极限。部分 AI 云服务商甚至已经彻底暂停了对外销售新增算力配额，原因很简单——未来整整一年半的产能全部被预订一空了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: In fact, the opposite is true. There is a lot more that people want to do that they cannot do. Some of these AI clouds have stopped selling more capacity just because they're sold out for the next year and a half.</p>
+</details>
+<p><strong>Speaker 0</strong>: 因此我认为，当前的唯一制约瓶颈全在物理世界：土地、电力、芯片晶圆产能。兴建晶圆制造厂（Fab）往往需要耗费数年光景。所以，尽管在我们主观感受中整个产业已经在飞速狂飙，而且确实快如闪电，但基础设施的物理扩建步伐，依然远远落后于市场爆炸性需求的迫切拉动。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: And so I think the limiting factor here is physical: it's land, it's power, it's chips. Building fabs takes a long time. And so, as fast as we feel this is moving—and it is moving very, very fast—still the buildouts are happening much more slowly than the demand requires from them.</p>
+</details>
+<p><strong>Speaker 0</strong>: 这种超高增速会永远持续下去吗？我无法预测，假以时日，行业肯定会遭遇某些阶段性的波折或颠簸。但就我目前的观察而言，我们正处于整个世界全面步入 AI 驱动时代的极早期黎明阶段。如果 AI 真的能够全面兑现我们当下刚刚窥见其端倪的巨大潜能，那么这种高歌猛进的建设节奏，至少还将以当前的速度持续狂飙五到十年。我们面前还有极其庞大的工程需要去攻坚完成。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Will it sustain forever? I don't know. I'm sure over time there will be hiccups. But as far as I can tell, we're just at the very, very beginning of most of the world running on AI. And if AI will really be able to do all of these things that we're starting to see it do, then it should continue at least for the next five to ten years at this pace. So we have a lot of work to do.</p>
+</details>
+<h3>生态融资与循环注资：资本结构与长期信心</h3>
+<p><strong>Speaker 1</strong>: 业界最近热议的那些生态循环交易（Round-tripping deals）以及整个复杂的融资机制，这类围绕生态系统的资本运作方式，会让你感到担忧甚至神经紧绷吗？还是说你认为这仅仅是把如此庞大的生态体系真正建立起来所必须经历的现实手段？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Do the circular deals and the whole financing aspect of the ecosystem—does that make you nervous? Or do you think that's just a means to whatever needs to happen for the ecosystem to be actually built?</p>
+</details>
+<p><strong>Speaker 0</strong>: 这就回到了我们最初谈到的话题：旧的技术栈与全新的技术栈。我认为，目前围绕着这个全新的技术架构栈，正在催生并形成一个全新的产业生态。在这个进程中，一部分老牌传统科技企业正在加速融入这一新生态，而另一部分传统巨头则尚未入局。这就不可避免地导致整个供应链生态在某些关键环节上出现了流动性短缺。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: So I think going back to the beginning—the old stack and the new stack—I think there's a new ecosystem getting built around the new stack. And some of the older companies are joining this ecosystem and some have not yet joined this ecosystem. And so it's lacking in liquidity at some points in this supply chain.</p>
+</details>
+<p><strong>Speaker 0</strong>: 我们清晰地看到，为了推动那些必须落地的超大规模基础设施建设，某些节点急需巨额资本作为支撑。而在很多时候，资本必须赶在实际成果产出之前、赶在投资人真正看到真金白银的回报之前，就提前数期密集垫付到位。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: We see the buildouts that need to happen at some points need money in order to finance them. And sometimes you need that money ahead of when the results appear and ahead of when you actually get returns on that investment.</p>
+</details>
+<p><strong>Speaker 0</strong>: 在这种背景下，已经身处生态核心圈内的企业，自然就成为了提供这部分关键流动性的最合理来源。因为他们身在局中，切身感知着技术一线正在发生的剧变；他们真正坚信这一未来，并深刻理解这个市场的终极体量到底有多么磅礴浩瀚。相比之下，那些站在生态外围隔岸观火的外部传统金融机构，可能会出于对未知的担忧，而觉得此时提供大笔资本存在过高的不确定性与风险。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: And I think the companies that are in the ecosystem are a natural spot to get that liquidity because they see what's happening. They believe in it. They understand how big this is going to be, versus someone who's on the outside looking in that maybe feels this is riskier for them to finance.</p>
+</details>
+<!-- chunk 6/7 -->
+<h3>软件商业模式与资本效率：为何能在 AI 生态中持续盈利</h3>
+<p><strong>Speaker 0</strong>: 我认为在财务层面正在发生的就是这种情况……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: That's I think what's happening speaking financially.</p>
+</details>
+<p><strong>Speaker 1</strong>: 你们处于一个非常有趣且有些独特的市场位置，因为你们身处这一细分领域，并且我认为你们目前已经实现了盈利。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: You're in a very interesting, somewhat unique position because of where you sit. I think you guys are profitable.</p>
+</details>
+<p><strong>Speaker 0</strong>: 是的，我们确实盈利了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: We are.</p>
+</details>
+<p><strong>Speaker 1</strong>: 据我们所知，生态系统中很多其他玩家的情况并非如此。这向我们揭示了什么？这是否反映了你们所处生态位所承担的风险特征？也就是说，你们所处的这一技术层是必不可少的，而且目前还没有其他竞争对手能做到同样的事；因此，你们既能够保持高度自律，又能实现良好的盈利？这究竟意味着什么？你对此是怎么看的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Which is, you know, not the case for a lot of other players. And what does that tell us in terms of the risks in the ecosystem, and the specific layer you happen to be in? Is this layer indispensable, and therefore there's no other competitor, allowing you to be profitable while remaining disciplined? What does that mean? What's your take?</p>
+</details>
+<p><strong>Speaker 0</strong>: 这很可能是多重因素共同作用的结果。但我认为，归根结底取决于我们的商业模式——我们本质上是一家销售纯软件的公司。</p>
+<p>正因为是软件模式，我们的毛利率非常高。而且随着我们顺应 AI 行业的整体增长轨迹前行——这一轨迹一直以来都非常稳定地保持在每两年实现约十倍（10x）增长的水平——我们的运营效率在不断提升，产生的现金流越来越多，整体盈利能力也越来越强。</p>
+<p>相比之下，处于技术栈更上层的公司必须承担极其高昂的算力与计算成本；而处于我们技术栈下方的硬件公司，则在重资产制造和供应硬件。因此，这两类公司的商业模式与我们的商业模式截然不同。</p>
+<p>不仅如此，我认为这种快速增长与高资本效率相结合的特质，从公司成立早期就已经深深融入了我们的基因之中。追溯到最初阶段，风险投资（VC）当时并不太愿意向这个底层基础设施领域投入重资，所以我们从一开始就必须具备自我造血的能力、实现自给自足。而且正因为早期没有大量风投资金涌入这个赛道，我们面对的竞争压力，也远没有当前其他技术层那么惨烈。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: It's probably a combination of factors. But I think it goes towards our business model: we sell software.</p>
+<p>So our gross margins are high, and as we grow on the trajectory of AI growth—which has pretty consistently been about 10x every two years—we get more and more efficient, we generate more cash, and we generate more profitability.</p>
+<p>The companies that are higher up the stack have a lot of compute costs that they need to incur. And the companies that are underneath us in the stack are building hardware. And so they too have a very different business model than the one that we have.</p>
+<p>But yeah, I think the combination of fast growth and efficient growth is something that we've built into the way we work from the early days. It goes back to VCs not necessarily wanting to invest in this space in the early days, so we needed to be self-sufficient. And it also goes back to VCs not wanting to invest in the space early on, meaning we have less competition than maybe exists in some of these other layers.</p>
+</details>
+<h3>新兴云（Neo-Clouds）的崛起与胜出法则：电力、硬件与前瞻性建设</h3>
+<p><strong>Speaker 1</strong>: 你们在新兴云（Neo-Cloud）生态系统中有大量的客户，同时这个领域也充满了各种不确定性与激烈博弈。你对整个新兴云生态系统的真实看法是怎样的？我的意思是，市场上现在 literally 有成百上千家提供 GPU 算力的云厂商。你认为在未来两到三年内，究竟是什么因素能让少数玩家脱颖而出、成为该生态中的主导力量，而让其他大多数玩家走向淘汰？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: You have a lot of customers in the neo-cloud ecosystem, and it's quite tumultuous. What is your view on that ecosystem? I mean, there's literally hundreds of clouds out there. What do you think separates the ones that will be around in two to three years as dominant forces in that ecosystem versus the ones that will not?</p>
+</details>
+<p><strong>Speaker 0</strong>: 要想生存并突围，他们必须具备三项核心要素：第一是对电力的获取能力，第二是对底层芯片与服务器硬件的获取能力，第三则是雄厚的资金筹措能力。</p>
+<p>但我认为，最终能够胜出的公司，一定是真正深谙基础设施建设之道的团队。从我接触的终端用户来看——也就是英伟达所称的“算力消纳方”（off-takers）——他们核心的诉求是立刻、马上获得可用算力。如果你手里已经准备好了现成的算力集群，他们就会直接找上门来，并且非常乐意支付高昂的溢价。但如果你手里没有现成容量，而是对客户说：“我们一起来规划建设吧，明年这个时候我保证为你准备好”，那么客户转身就会去找其他供应商。</p>
+<p>因此在实践中，我观察到最成功的新兴云厂商，普遍是那些敢于在真实需求完全爆发前就进行前瞻性超前建设的团队，而不是跟在客户订单后面被动响应的团队。他们会通过租赁数据中心、采购设备等全方位手段提前锁定并构建起物理交付能力。</p>
+<p>此外，你并不需要亲自去拥有或掌控技术栈中的每一个环节。在新兴云中，位于我们之下的底层技术栈同样包含很多层级的供应商与分工。总的来说，那些能够兼具以下几项核心优势的玩家最为成功：与核心硬件供应商保持绝佳的关系、能锁定稀缺的电力指标与土地资源，并且在运营与资产融资方面拥有极其精明运作能力的团队。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: So they need access to power. They need access to hardware. They need access to money. And I think the ones that will succeed are the ones that know how to build.</p>
+<p>I find the end users—what NVIDIA calls 'off-takers'—they want immediate access to compute. And if you have it, then they'll come to you, and they're willing to pay. And if you don't have it and you tell them, &quot;Let's build it together, I'll have it ready for you next year,&quot; then they'll go to somebody else.</p>
+<p>And so I've seen the ones that are most successful be the ones that build in anticipation of demand, rather than building behind demand. They physically build capacity through rentals or whatever means necessary.</p>
+<p>And you don't have to own all of the layers of the stack. There are multiple layers of the stack underneath us in the neo-clouds. But yeah, I find the ones that have that combination of good relationships with the hardware vendors, access to power and land, and that are savvy in the way that they finance their operations, be the ones that are most successful.</p>
+</details>
+<h3>创新者的窘境：新兴云对决传统超大规模云厂商</h3>
+<p><strong>Speaker 1</strong>: 关于你最后提到的融资与资本运作能力，长期以来一直存在激烈的争论。过去看衰新兴云的核心逻辑是：这些新兴云本质上不过是给英伟达 GPU 提供资产打包与融资的特殊载体（financing vehicle），其核心竞争力仅仅是金融财技；但随着时间推移，传统超大规模云厂商（Hyperscalers）终将彻底击溃新兴云，因为超大规模云厂商永远享有低得多的资本成本。结合你刚才提到的未来两到三年的竞争格局，你认为这种金融运作能力是否真的与其他能力同等重要？你如何看待这背后的商业现实？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: And into the last point about money: one can debate whether this is short-term or not, but the case against neo-clouds for a long time was that, ultimately, they're kind of like a financing vehicle for NVIDIA GPUs. Their primary skill is finance, and eventually hyperscalers will beat them because hyperscalers will always have a lower cost of capital. In that two-to-three-year window you mentioned, is financing skill as important as the rest? What do you make of all of this?</p>
+</details>
+<p><strong>Speaker 0</strong>: 我认为客观现实恰恰证明了上述看法的完全错误。事实摆在眼前：不仅市场上涌现出了如此之多极具活力的新兴 AI 专业云厂商，而且迄今为止，那些传统的超大规模云厂商并没有能够击败他们。</p>
+<p>我认为这在本质上再次验证了克里斯坦森所说的“创新者的窘境”。当你需要从零开创构建一套全新的技术范式，而手中又有一头巨大的传统现金奶牛业务需要全力维护时，推进革新的难度，要远远大于一家没有任何历史技术包袱、轻装上阵从头构建新事物的初创公司。</p>
+<p>退一步讲，无论这些新兴 AI 云最初是如何起步的，在过去几年的摸爬滚打中，他们已经建立起了极其深厚的技术积累、专业工程能力和独特领域认知。构建面向现代 AI 工厂的全新技术栈与系统架构，与传统超大规模云厂商在五年前、十年前构建传统通用云技术栈的方式截然不同。</p>
+<p>随着时间一天天过去，这些真正在基础设施第一线战壕里摸爬滚打、解决大规模分布式工程难题的 AI 云厂商，正在以极高的速度学习、迭代与沉淀经验；而那些手握极廉价资金优势、却迟迟没有深入一线实战演练的超大规模云巨头，则完全无法获得这种核心能力的进化。结果就是，两者在这一专门领域的工程技术差距正在持续扩大。</p>
+<p>当然，我认为如今超大规模云厂商已经深刻意识到了这一点。如果在两年前，他们的态度往往还是漫不经心地说：“没关系，这些基础设施我们都有现成的。我们有成熟的存储、有海量的算力、有现成的网络体系，我们非常清楚自己在做什么，完全不需要为这种新生事物感到焦虑”；但到了今天，他们唱出的调子已经发生了翻天覆地的变化。他们终于清醒地意识到，自己的核心地盘正在被别人蚕食。他们现在正在全力反击。因此，观察未来几年内这两种力量的博弈与动态演变，将会是一场极其精彩的戏码。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I think that the reality has proven to be the opposite of what you just said. The fact is that we have so many of these new AI clouds, and hyperscalers have not beaten them yet.</p>
+<p>I think it goes back to the innovator's dilemma: when you have something new to build, and you have this old cash cow to focus on, it's a lot harder than when you have something new to build and you don't have that legacy.</p>
+<p>Regardless of where it started, I think these AI clouds have built up a skill set and a specialty. It is not the same to build this new stack and these AI factories versus building the old stack in the way that hyperscalers built clouds five and ten years ago.</p>
+<p>Every day that passes, these AI clouds that are actually in the trenches doing the work are learning. Meanwhile, the hyperscalers that are sitting on very cheap financing, but are not yet doing this work, are not learning that. And so the gap in skills just keeps increasing.</p>
+<p>Now, I think the hyperscalers have realized that. If two years ago they were saying, &quot;Yeah, we have this. We have storage, we have compute, we have networking, we know what we're doing, we don't need to worry about this new thing today,&quot; they are singing a very, very different tune today. I think they are aware of the fact that their lunch is being eaten by someone else, and they're reacting to it. So it will be very interesting to see how that dynamic evolves over the next couple of years.</p>
+</details>
+<h3>主权 AI（Sovereign AI）：从基础需求到地缘技术壁垒</h3>
+<p><strong>Speaker 1</strong>: 你如何看待“主权 AI”（Sovereign AI）这一概念？在我看来，一两年前我们广泛讨论的“AI 工厂”这一概念，很大程度上就是围绕主权 AI 的构想展开的。正如我们在本次谈话伊始所讨论的那样，这一概念如今似乎已经扩展到了企业级私有基础设施领域。但就国家层面而言，在全球各国的实际落地过程中，主权 AI 的现实进展与本质到底是什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: What do you make of sovereign AI? It seems to me that the concept of an AI factory that was discussed early on was largely around this concept of sovereign AI a year or two ago. As we discussed at the beginning of this conversation, it seems to have expanded now to also include enterprises. But from a broader perspective, what's the reality of that concept around the world as it applies to nations?</p>
+</details>
+<p><strong>Speaker 0</strong>: 我认为随着时间推移，AI 必然会演变为人类社会的一种基础需求，其性质就像电力和自来水一样不可或缺。先进的机器智能将成为全社会的基石资源。如果缺乏它，我们将无法以我们期望的现代文明方式生存和运转。</p>
+<p>然而在我们所处的当代世界格局中，主权国家之间存在着深层的对抗、竞争以及严重的互不信任。虽然在跨国商业社会中各家公司彼此竞争，但总体上依然能进行良好而理性的合作；可民族国家不同，他们必须确保自己拥有独立自主的技术底牌。每个国家都在高度警惕，极力避免哪一天外部大国（比如美国）或任何地缘竞争对手突然切断他们的 AI 基础设施服务与模型供给。</p>
+<p>正因如此，世界各国都在竭力自主建设主权 AI 解决方案。显而易见的是，并不是每一个国家都有实力从底层研发出自己的核心基础软件、掌握全部核心算法，更没有能力独立制造技术栈中的每一个硬件层级。但只要这些基础设施的物理集群部署在他们本国领土范围之内、处于他们自身的司法管辖区之下，至少能给他们带来极大的安全感与确定性。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I think this becomes a basic need over time, in the same way that electricity is a basic need, or that water is a basic need. AI intelligence will be a basic need. We will not be able to live in the way that we would like to live without it.</p>
+<p>And so, in the world that we are in today, countries are adversarial one to the other, and they don't trust each other. In the business community, as much as we have competition, I think we collaborate very, very nicely. But nations like to have their own. Every nation wants to make sure that the US can't shut down its AI, or that somebody else can't shut down its AI.</p>
+<p>And so they're trying to build sovereign AI solutions. Obviously, not every nation can build the software, and not every nation can build all the different layers of the stack. But I think they get comfort from knowing that it's within their borders, or at least within their jurisdiction.</p>
+</details>
+<h3>价值沉淀与大宗商品化：硬件、软件与模型层的长期博弈</h3>
+<p><strong>Speaker 1</strong>: 让我们稍微跳出来宏观审视一下：回到我们此前描述的包含五个技术层级的技术栈。你认为随着时间推移，整个产业链的经济价值最终会沉淀在技术栈的哪一层？而技术栈的哪些部分又会被大宗商品化（Commoditized）？人们长期以来都在讨论基础模型层终将沦为同质化的大宗商品，那么技术栈的其他层级又会如何演变？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Zooming out a little bit from that stack we described with five layers: where do you think the value accrues over time? And which part of the stack gets commoditized? People have been talking about model commoditization for a long time. What about the rest?</p>
+</details>
+<p><strong>Speaker 0</strong>: 我认为思考这个问题的最佳视角是审视历史规律。从历史上看，底层硬件层往往会以相对较快的速度走向大宗商品化。这主要是因为硬件存在通用标准规范，而不是因为它制造简单——当然，也许是因为硬件更易于被模仿和替代，我不能完全断定。</p>
+<p>反观软件基础设施层，在历史上往往能够吸纳并沉淀极其庞大的商业价值。看看当今世界上最具市值的领头羊企业：无论是亚马逊、微软、苹果还是谷歌，这些巨头无一不是抓住了个人电脑（PC）时代、移动互联网时代、互联网时代或现代云计算时代的核心软件平台层，因而成长为价值数万亿美元的商业帝国。</p>
+<p>再看应用层（Application Layer）。应用层往往会诞生数以万计的各种应用程序，其中一部分能够创造出极其惊人的商业价值，而另一大部分则可能价值平平。但在过往的历次技术革命中，消费者的品牌忠诚度与深度使用习惯也是一种能够孕育极高商业价值的核心壁垒。</p>
+<p>因此总结来看：软件基础设施层必然会持续沉淀大量的超额价值，而应用层则会以更具选择性的方式在部分领跑者身上实现巨大价值回报。至于基础模型层在这一版图中的定位究竟如何，坦率地说，现在非常难以做出断言，因为在人类过去的计算革命中，从未出现过一个单独的“模型层”。这将会是一个极具悬念的发展过程。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I think the best way for me to think about this is to look to history. Historically, hardware tends to commoditize relatively quickly—not because it's easy, but because it standardizes, or maybe it's easier to copy, I don't know.</p>
+<p>The software layer tends to accrue a lot of value. If you look at the most valuable companies in the world today—if you look at Amazon, Microsoft, Apple, Google—those are the companies that built those software layers of the cloud, of the PC era, of the mobile era, of the internet. And they are worth trillions of dollars as a consequence.</p>
+<p>At the application layer, there tends to be a lot of applications, some of which will have a lot of value, and others will not have that much value. But consumer loyalty is something that is also valuable in those previous revolutions.</p>
+<p>And so the software infrastructure layer tends to accrue a lot of value, and then on a more selective basis, value accrues at the application layer. Where the models fit into that is very, very difficult to say, because we have never had a 'model layer' before. So that will be interesting to see.</p>
+</details>
+<h3>模型层与应用层的边界融合</h3>
+<p><strong>Speaker 1</strong>: 我们确实看到越来越多的基础模型公司正在全面转型为终端应用公司；同时一个非常引人注目的最新趋势是，上层应用公司与底层模型公司又开始重新进行大量深度的交叉渗透与捆绑——不管这种现象被视为一种必然的条件还是一种魔咒。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: And you see the model companies are becoming application companies. It's interesting to see recent trends where application companies and model companies, again, are starting to do a lot more work together, whether that's a condition or a curse.</p>
+</details>
+<p><strong>Speaker 0</strong>: 我其实并不确信模型层和应用层在长远来看能否保持各自独立；随着技术演进，它们完全有可能重新合并为单一层次。在过往的传统技术栈中，我们原本只有四个核心层级；而在如今这套全新的 AI 技术栈里，也许这两层最终也会走向融合。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I'm not sure those two layers will stay separate over time. Perhaps they merge back into one. In the old stack, we had only four layers, and in the new stack, perhaps that merges back.</p>
+</details>
+<h3>与英伟达的竞合与独立性维持</h3>
+<p><strong>Speaker 1</strong>: 我非常好奇你如何看待英伟达（NVIDIA）在整个产业生态系统中的特殊地位。在我们的整场对话中，英伟达这个名字已经被反复提及了无数次，他们处于无可争议的绝对中心枢纽位置。英伟达既是你们的早期投资人，也是你们至关重要的合作伙伴。对于一家软件企业而言，在与如此强势且处于主导地位的生态巨头紧密合作的同时，究竟该如何保留战略灵活性、维护自身的技术与商业独立性，以确保企业的长期自主生存？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: I'm curious about how you think about the place of NVIDIA in the ecosystem. The name has come up already a bunch of times during this conversation, and it's so central. They are an investor, they are a partner. How does one work with such a dominant player in the space in a way that preserves optionality and preserves your independence and self-reliance as a business long term?</p>
+</details>
+<p><strong>Speaker 0</strong>: 非常有意思的是：除了作为早期的股权投资人之外，从法律合同的角度来看，我们与英伟达之间其实没有任何法律约束协议或排他性捆绑；在纯粹的技术解决方案层面，从法律和合同意义上讲，我们双方并没有进行任何捆绑合作。</p>
+<p>但话虽如此，从实际业务协作层面来看，英伟达迄今为止绝对是我们最出色的首选合作伙伴。在任何一个时间节点上，我们双方都有着极高的……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Interestingly, other than as an investor, there's no legal document between us and NVIDIA as an investor or from a solution perspective. We don't actually do anything together from a legal perspective. Having said that, they are our best partner by far, and at any given point in time, we have a high...</p>
+</details>
+<!-- chunk 7/7 -->
+<h3>与英伟达的深度协同与生态合作</h3>
+<p><strong>Speaker 0</strong>: 我们与他们正在合作推进的项目多达数十个。我们双方都有达到三位数规模的研发工程师团队在紧密协同工作，他们那边投入的工程师数量也是相当的。合作范围涵盖了方方面面：从全新的网络互连设备，到最新的推理微服务（Inference Microservices），再到前沿的智能体（Agentic）与机密计算（Confidential Computing）联合项目，以及下一代 GPU、DPU 架构及其底层特性的深度挖掘与性能释放。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: There are dozens of projects that we're collaborating with them on. We have triple digits of developers working with them, and they have the same on their side with us. Everything ranging from new networking gear to new inference microservices, to this agentic and confidential computing project, to the next generation of GPUs and DPUs and how we take advantage of them.</p>
+</details>
+<p><strong>Speaker 0</strong>: 我们非常乐于投入这一切，因为随着双方的共同研发与联合打磨，最终交付给客户的联合解决方案会变得更加成熟和强大。而且从企业文化的角度来看，我们也非常享受与英伟达共事的过程。他们的动作极其迅捷，并且秉持着一种强烈的信念：只要在物理法则上是可行的，就一定能够实现。在其他人认为某件事根本做不到的时候，他们坚信这一定能办成。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: All of that we love, because as we build this together, the solution ends up being much better for our joint customers. And so we really enjoy working with NVIDIA also from a cultural perspective. They move fast and believe that anything that is physically possible is doable. They believe that it can be done when others believe that it cannot.</p>
+</details>
+<p><strong>Speaker 0</strong>: 因此与他们的合作充满了乐趣；同时从商业层面来看，这本身也是回报极其丰厚的合作模式。因为正是英伟达在持续开拓并塑造着这些全新的技术环境，为所有这些前沿概念确立行业标准并命名定义。他们始终是一马当先、引领浪潮的先锋，而我们则在竭尽所能地顺应并借力这种强大的行业势能。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: And so it's been a lot of fun working with them, in parallel to it being also very lucrative, because they are the ones creating these new environments and putting names on all of these new concepts. And so they're leading the charge, and we're trying to ride their coattails as much as we can.</p>
+</details>
+<p><strong>Speaker 0</strong>: 话虽如此，我们之间并不存在任何排他性绑定的协议。我们在与英伟达深度合作的同时，也同样在与 AMD 以及行业内的其他公司展开并行合作。只是在实际业务与落地场景中，英伟达确实占据了市场上的绝大多数份额，因此我们现阶段绝大部分的实际系统部署也都是围绕他们的硬件生态展开的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Having said that, there is no type of exclusivity. We work with AMD, we work with other companies in parallel to working with NVIDIA. In practice, they do have the majority of the market, and so the vast majority of the deployments we have are with them.</p>
+</details>
+<h3>xAI 速度与消除瓶颈的工程哲学</h3>
+<p><strong>Speaker 1</strong>: 我觉得贯穿我们整场对话的一个非常核心的主题就是：你们团队似乎一直在以极其激进、不知疲倦的节奏不断推出新产品、拓展新客户群，并持续建立关键的战略伙伴关系。我们刚才重点谈到了英伟达，但与此同时，xAI 也是对你们极其关键的重磅客户。在适应并跟上“xAI 速度”这一方面，你获得了哪些深刻的心得与体会？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: When I think about what has been a big part of this conversation, it's that you guys seem to be relentlessly launching new products, expanding to new customers, and having key relationships. We mentioned NVIDIA, but xAI has also been a very important customer for you guys. What have you learned in terms of moving at the speed of xAI?</p>
+</details>
+<p><strong>Speaker 0</strong>: 事实是，没有任何人的速度能快过埃隆·马斯克（Elon Musk）。我曾有幸亲眼见证过他是如何强力推动他的团队不断提速的，那套逻辑其实极其纯粹、极其朴素：首先找出当前系统中最主要的限制因素或瓶颈，然后果断彻底地干掉它；紧接着找出下一个浮现出来的限制因素，再迅速干掉它。这个闭环循环往复、不断加速，驱动着组织以越来越快的速度向前狂飙。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Well, you can't move faster than Elon. I was fortunate to see some of the ways in which he pushes his team to move faster, and it's super simple: You find the limiting factor and you get rid of it. And then you find the new limiting factor and get rid of it. And that cycle keeps accelerating, making you faster and faster and faster.</p>
+</details>
+<p><strong>Speaker 0</strong>: 这正是我们推崇并践行的做事方式。我们之所以不断保持高频创新、不断提速并对自己提出越来越严苛的要求，原因主要有两个方面：其一，是我们骨子里始终带有强烈的危机感与偏执感（Paranoia），我们无时无刻不在警惕着某个地方可能会突然杀出一个竞争对手，试图追赶并超越我们；其二，则源于我们对这件事情真正的热爱与享受。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: And that's what we like. The reason we keep innovating, keep accelerating, and keep demanding more from ourselves is, A, because we're paranoid, and we're afraid that somebody from somewhere will pop up and try to catch up to us. But B, because we love it, we enjoy it.</p>
+</details>
+<p><strong>Speaker 0</strong>: 这种乐趣来自于创造前所未有的新事物，来自于探索未知领域，并彻底攻克上周或上个月你还完全不知道该怎么解决的技术难题。我们的客户也对我们抱有这种极高的期望。我们的客户可以说是全世界要求最严苛的一群人，他们全都置身于一场没有退路的竞赛之中，在这场追求更强大 AI 能力的殊死角逐里彼此激烈竞争。他们需要我们永远不要成为拖慢他们脚步的阻碍。在他们的技术演进与商业成功的道路上，我们决不能成为任何环节中的限制因素。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: It's the joy of building new things, exploring, and figuring stuff out that you didn't know how to do last week or last month. And our customers expect that from us. Our customers are the most demanding in the world, and they're all in a race, racing each other in this quest for better AI, and they need us to never slow them down. We can never be the limiting factor in their progress and in achieving their success.</p>
+</details>
+<h3>扁平化组织与直面问题的管理法则</h3>
+<p><strong>Speaker 1</strong>: 从实操落地的角度来看，对于正在收听本期节目的初创企业创始人或团队管理者而言，到底该如何具体践行这一点？也就是究竟该如何真正找出组织内部的各种瓶颈？因为企业的规模越大，暗藏的瓶颈往往就越多，而且这些瓶颈往往不会直接暴露在最高管理层，而是盘根错节地散落在组织深处甚至基层。作为一名 CEO，你具体是如何定位并解决这些瓶颈的？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Practically, for the founders or leaders listening to this, how does one actually do that in terms of finding bottlenecks? Because the bigger the organization, the more bottlenecks there are, and they may be down in the organization rather than at the very top. As a CEO, how do you do that?</p>
+</details>
+<p><strong>Speaker 0</strong>: 你必须亲自走到基层，去和一线员工深度交流并向他们直接提出这个问题。他们心里最清楚答案。作为 CEO，很多具体的痛点你坐在办公室里是看不到的，但是真正在前线作战的人一清二楚。因此，你必须尽可能构建起一个极致扁平化的组织架构，确保你能够与团队中的每一个人保持直接畅通的沟通渠道；同时，你必须全力打造一种内部文化，让员工敢于毫无顾虑地主动把这些问题和障碍暴露出来。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: You have to talk to people and ask them that question. They know. As a CEO, you don't know, but the people that are on the ground know. And so you need to build an organization that is as flat as you can possibly build it, so that you have direct access to everybody, and you need to build an organization where people are not afraid of raising those problems.</p>
+</details>
+<p><strong>Speaker 0</strong>: 组织内部绝不能存在僵化拖沓的官僚指挥链（Chain of Command），因为那会极大地拖慢决策与反馈的响应速度。我记得从埃隆那里听过这样一句话：坏消息应当大声且高频地讲出来，而好消息讲一次、轻声带过即可。我们绝不能让自己陷入过度自我庆贺、自我感动的盲目状态中。我们必须时刻保持一种高度警惕的危机意识——总有人随时会置我们于死地，我们虽然不知道具体的对手究竟来自何方，但我们必须持续不断地修补和优化每一个环节，绝不给对方在我们的盔甲上留下任何可以趁虚而入的缝隙。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: There cannot be a rigid chain of command because that slows things down. I think I heard this from Elon: Bad things should be stated loudly and often, and good things once and softly. We can't get into a mode where we're congratulating ourselves too much. We always have to be in this mode of: Somebody's going to kill us, we don't know who it is, and we have to keep fixing everything so that they don't find a chink in the armor to get into.</p>
+</details>
+<h3>十年视界：超越人类智能的范式巨变</h3>
+<p><strong>Speaker 1</strong>: 好的，那在节目接近尾声之际，我们不妨把目光放得更长远一些，从面向未来的前瞻性角度来审视这一切——尽管立足当下做预测极其艰难，但如果站在从现在算起十年（或者无论多少年）之后的未来回望今天，你认为当前整个科技行业所深信不疑的认知中，有哪一件事情最终可能会被证明是彻底错误的？只要谈谈你脑海中浮现出的最深刻的一点即可。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Alright. So maybe to close, looking forward and projecting ourselves into the future, as hard as that can be today: Ten years from now, or however many years, looking back, what do you think the industry believes today that may turn out to be wrong? Just one thing that comes to mind.</p>
+</details>
+<p><strong>Speaker 0</strong>: 我认为十年之后——前提依然是假设人工智能的发展并不会停滞在人类平均智力水平的平台期，而且我认为我们现在已经开始看到确凿的实证信号表明它绝不会止步于此，而是会持续跨越并全面超越人类智能；并且假设 AI 能够充分获得对我们在这颗星球上乃至太空深处所拥有的一切物理实体资源的接入与操控能力——那么在我看来，整个世界的面貌将会被彻底重塑，没有任何事物还会保留今天的模样。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: I think ten years from now—again, assuming AI (and I think we're starting to see proof points) will not plateau at the level of human intelligence, but will continue beyond the level of human intelligence, and assuming it has physical access to all of the things we have physical access to on this planet and in space—I think everything is different. Nothing is the same ten years from now.</p>
+</details>
+<p><strong>Speaker 0</strong>: 到那个时候，人类将不再需要承担如今处理的绝大多数常规工作与任务。政府的组织结构与运转形态将发生根本性的变革；财富的转移方式与生产资料的所有权结构将被全盘颠覆；我们衡量价值、理解金钱的逻辑，乃至我们生活、生存的全部方式都将截然不同。因此，对我而言，想要精准描摹那个世界的细节几乎是不可能的，唯一可以确信的是：未来的世界与我们今天的现实之间的差异，大概率将远远大于我们当下的现代文明与一千年前的古代世界之间的鸿沟。如果技术的发展态势继续按照目前显现的轨迹演化下去，我们在未来十年内所亲历的剧烈剧变，将超过人类在过去一千年里所经历的总和。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: We will not be needed for all of these tasks. And I think the way government is structured will be different, the way wealth is transferred and ownership of things will be different, the way we think about money and how we live our lives will be very different. And so it's impossible for me to imagine that world, except to say that it's probably going to be more different from what we have today than where we are now compared to where we were a thousand years ago. So I think in the next ten years we will see more difference than we did in the last thousand years, if this plays out in the way that it seems to be playing out.</p>
+</details>
+<h3>VAST Data 的终极愿景与播客结语</h3>
+<p><strong>Speaker 1</strong>: 在那样的世界里——或许根本用不了十年，仅仅五年之后，在你的终极构想中，抑或说在你极其务实的战略规划中，VAST Data 将如何立足并成为整个“AI 操作系统”？如果这一切愿景最终全部成为现实，这究竟意味着什么？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: And in that world—maybe that's not ten years, maybe that's just five years—in your wildest dreams, or perhaps your very pragmatic vision, where does VAST sit in terms of becoming the operating system for AI? What does that actually mean if everything plays out?</p>
+</details>
+<p><strong>Speaker 0</strong>: 我们首先希望充当这一历史进程的核心赋能者，让这场技术革命真正具备发生的基础，确保底层基础设施不会成为阻碍它实现的拦路虎。因为如果仅仅因为现有的底层系统无法支撑这种狂飙突进，我们就会面临无法满足需求的困境，而我们的目标是要构建出比现在快一千倍、规模大一千倍的基础设施能力。在此基础上，我们必须确保这种强大的智能体系不会带来毁灭性的风险，确保它的演进始终处于安全可控的边界之内。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: We want to, A, enable this so that it actually can happen and that we don't see obstacles in the form of lacking the required infrastructure for it to happen, because we can only build this fast and we want to build a thousand times faster or a thousand times bigger. We need to make sure that it doesn't kill us, so that it's safe.</p>
+</details>
+<p><strong>Speaker 0</strong>: 此外，在这一整个演进路径中，我们必须建立起坚实的防护屏障与安全机制，使得作为人类的我们，即便无法在每一步都去完全指引其方向，至少也能够在最深层次上彻底洞察并理解正在发生的一切。我常常跟我的团队强调：如果世界上所有的数据都在由我们的系统来统一管理与调度，那么我们在技术追求上就再无所求了。尽管我们距离实现这一终极目标还有很长的路要走，但这正是我们坚定不移向前迈进的崇高理想——管理这世间的一切数据。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: And along that path, we must put safeguards in place and enable us as people to understand what's happening at the very least, if not guide what's happening. I tell my team all the time: If all the data is managed by us, we can't ask for anything more than that. We're still a ways away from that, but that's the ideal that we are marching towards: all the data in the world.</p>
+</details>
+<p><strong>Speaker 1</strong>: 这真是一个再完美不过的总结与收尾时刻了，雷南（Renen）。非常感谢你抽出宝贵的时间，这真是一场极为精彩、干货满满的深度对话。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: It feels like a wonderful place to leave it, Renen. Thank you so much, as this was a terrific conversation.</p>
+</details>
+<p><strong>Speaker 0</strong>: 非常感谢。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 0</strong>: Thank you.</p>
+</details>
+<p><strong>Speaker 1</strong>: 好的，各位听众朋友，再次感谢大家收听本期的 MAD Podcast。如果你喜欢这期节目，无论你是通过哪个音频或视频平台收听或观看本期内容，如果您还没有订阅，烦请点击订阅关注；也热烈欢迎大家留下积极的五星好评或留言评论，这对于我们持续把播客做大、不断邀请到重量级的顶尖嘉宾具有不可估量的巨大帮助。期待在下一期节目中再次与大家相见！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker 1</strong>: Alright. Again, thanks for listening to this episode of the MAD Podcast. If you enjoyed it, we would be very grateful if you would consider subscribing if you haven't already, or leaving a positive review or comment on whichever platform you are watching or listening to this episode from. It really helps us build the podcast and get great guests. See you on the next episode!</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/compute-infrastructure/">compute-infrastructure</a>
+      
+        <span class="tag-pill tag-pill--no-page">data-management</span>
+      
+        <a class="tag-link" href="/tags/system-architecture/">system-architecture</a>
+      
+        <span class="tag-pill tag-pill--no-page">hardware-evolution</span>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>经济增长的底层逻辑、AI生产力悖论与通用技术分析</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit">搜索</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="report-container">
+  <aside id="toc-container" class="sidebar-toc"></aside>
+  <main id="content-body" class="main-content" data-page-title="经济增长的底层逻辑、AI生产力悖论与通用技术分析" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">经济增长的底层逻辑、AI生产力悖论与通用技术分析</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-23</span>
+    
+    <div class="metadata-block">
+      <p><strong>来源:</strong> <a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a>
+</p>
+      
+      <p><strong>原文:</strong> <a href="https://www.youtube.com/watch?v=CGq9KRSb9Kc" target="_blank">查看</a></p>
+      
+      <p><strong>发布时间:</strong> 2026-09-23
+</p>
+      <div class="summary-section"><p><strong>摘要:</strong></p><div class="summary-content">文章探讨了经济增长的核心驱动力是生产率提升，并将其与历史上的技术革命（如工业革命）进行对比。核心议题聚焦于通用目的技术（GPT）的特征，分析了人工智能作为一种兼具通用技术和元创新技术的双重属性，并结合实际案例展示了AI在自动化流程（如KYC）和基础设施（如虚拟化、远程开发）中的应用，强调了AI在提升生产力方面的颠覆性潜力。</div></div>
+      
+    </div>
+    <!-- chunk 1/8 -->
+<h3>经济增长的底层逻辑与 AI 生产力悖论</h3>
+<p><strong>Speaker</strong>: 在经济学中，产出的增长通常来自两方面：要么是我们向既有经济体系中投入更多资本与劳动要素，要么是我们以更有效率的方式将现有的劳动和资本转化为经济产品。而经济学中将后一种效率的提升称为全要素生产率（Total Factor Productivity）的增长。从长远视角来看，驱动整体经济持续增长最核心的动力，正是生产率的提升；而生产率的进步，又直接取决于科学技术以及组织管理方式的不断革新。这正是我想在此引出的话题——它直接关联到我们如何在真实历史发展中寻找参照，从而解答我在开头所提到的当下关于“AI 生产力悖论”的困惑。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Growth in the economy happens either because we can add more capital and labor to the existing economic system, or because we find better ways to transform labor and capital into economic output. Economists call this latter improvement productivity growth. From a long-term perspective, the primary engine driving economic growth is precisely this advancement in productivity, which in turn has always been intimately connected with improvements in technology and organizational methods. And this is exactly where I want to start drawing parallels from historical reality to address the puzzle of AI productivity that I mentioned at the very beginning. We can look back at technological revolutions in history—such as the Industrial Revolution—to find very good benchmarks for understanding what to expect from artificial intelligence.</p>
+<p><em>(Transcript Source: 経済における仕事、なぜなら私たちはできるから資本を追加するすでに経済において、またはなぜなら私たちは最高のこの変化労働と資本経済的な製品。そしてこれが経済私たちはそれを成長と呼ぶ生産性。そして長期視点メイン経済の原動力成長とはまさにこういうことだの業績生産性、今度は、改善点テクノロジー、そして組織において進歩は、彼らと繋がっていた。そしてここが私の居場所だ。引き寄せ始める実際のストーリー類似点を指摘するパズルAI生産性、私が言及した始まり。)</em></p>
+</details>
+<p><strong>Speaker</strong>: 我们可以通过技术发展史上的那些重大转折来进行对比，其中最典型的代表莫过于工业革命。正如大家所熟知的，工业革命拉开了现代经济持续增长的序幕。然而，当我们仔细观察工业革命的发展脉络时，会发现一个既相似又非常耐人寻味的规律：作为其核心基础技术的蒸汽机，在被发明出来的最初几十年里，几乎没有在宏观统计数据中带来任何显著的生产率增长。事实上，从蒸汽机的最初发明到我们真正能在历史经济数据中清晰看到生产率和 GDP 的爆发式增长，足足过去了 100 多年的时间。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: The Industrial Revolution, as is widely recognized, initiated modern economic growth. However, when we observe its historical trajectory, we notice a fascinating and very similar regularity: the steam engine, which was the central foundational technology of that era, contributed almost nothing to measurable productivity growth for decades after its initial invention. In fact, more than a century elapsed from its first invention before the substantial gains in productivity and economic growth were visibly reflected in historical data.</p>
+<p><em>(Transcript Source: 我々はできる、例えば、私はこう思う。非常に良い比較頭を持つAI例技術的な歴史上の革命—工業回転。ええと、産業革命すでに述べたように、現代の経済成長。しかし、私たちは私たちは何かを観察します類似していて興味深い規則性と彼女。蒸気機関、そのメイン基地テクノロジーはほとんどない何も与えなかった成長生産性多くの人にとって彼女が数十年後発明、そして実際に合格しました100年以上前見たものよりも生産性と経済成長反映されているその後のデータ発明。)</em></p>
+</details>
+<h3>通用目的技术（GPT）的核心特征与创新乘数</h3>
+<p><strong>Speaker</strong>: 接下来我们看一张关于技术本质的幻灯片。在经济史学界，有一类非常特殊的通用技术被称为“通用目的技术”（General Purpose Technologies），其英文缩写恰好也是“GPT”。这对于今天关于 AI 的讨论来说是一个非常有趣的巧合。但在经济学定义中，通用目的技术（GPT）通常具备三个关键特征：第一，它们无处不在（Pervasive），几乎可以渗透并应用到整个经济体的所有部门；第二，这类技术本身具备长期持续改进的空间（Long-term improvement），在相当长的时间跨度内其性能和成本都在不断演进；第三，也是非常重要的一点，它们具备强大的“互补性”（Complementarity）。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: All right, let us look at a brief slide about technology. In economic history, there is a general class of technologies characterized as General Purpose Technologies—interestingly abbreviated as GPTs. While this abbreviation happens to be a fitting match for our current conversation, General Purpose Technologies in economic literature typically possess three defining attributes. First, they are pervasive, meaning they find applications across virtually every single sector of the economy. Second, this class of technology continues to improve over an extended period of time. And the third, highly crucial point is that they possess strong complementarity.</p>
+<p><em>(Transcript Source: わかりました、短いスライドについてテクノロジー。で経済史一般クラスがあります技術と表現されるテクノロジー一般的な予約は経済史、かなり面白い、GPTと呼ばれる。そしてこれこれにぴったりのマッチ会話だが、テクノロジー一般的な予約は通常３つの属性を持つ。それらはどこにでもある、つまり適用事実上すべての経済の各分野。この技術は改善する長い間期間。)</em></p>
+</details>
+<p><strong>Speaker</strong>: 所谓技术的互补性，意味着基础技术的进步会催生出大量下游的改进型应用，而这些不断优化的下游应用反过来又会反哺并极大提升初始核心技术的商业与社会价值。换言之，通用目的技术能够在一个极其漫长的时期内，持续为整个宏观经济创造巨大的经济红利。因此，摆在我们面前的核心问题——无论是从历史回溯还是面向未来——就是：我们今天所构建的 AI 体系，究竟是否是一项真正具备这种潜力的工程化通用目的技术（GPT）？虽然在经济学界关于 GPT 并没有官方权威的法定清单，但在历史上通常被公认为通用目的技术的，包括水轮机、蒸汽机、铁路、电力以及计算机。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Complementarity means that technological progress in the core innovation enhances downstream applications, and improved applications in turn increase the value of the initial technology that enabled their creation. In other words, a General Purpose Technology yields economic benefits that compound over a very long duration. And the crucial question—the answer to which lies between historical precedent and future unfolding—is whether our engineering of AI will truly emerge as a General Purpose Technology capable of realizing this full potential. While there is no definitive official list, historical examples widely regarded as General Purpose Technologies include the waterwheel, the steam engine, railways, electricity, and the computer.</p>
+<p><em>(Transcript Source: そして3つ目のポイントで十分です興味深いのは、彼がつまり、持っている相補性。そしてこれはつまり技術の進歩リターンアプリケーションは改善、そして改善しているアプリケーション、これ、順番に、価値を高めるイニシャルテクノロジー彼らを助けた作成する。その他言葉で言えば、テクノロジー一般的な予約は利益を得る経済は非常に長い間。そして重要な質問です、答えは歴史か未来か、かどうか私たちのAIになるエンジニアリングGPTテクノロジー一般的な目的、能力これを実現するために。それでも公式リストには載っていない存在する、技術に対して、しばしば考えられているテクノロジー一般的な予定、例えば、水車、蒸気車、鉄道、電気またはコンピューター。)</em></p>
+</details>
+<p><strong>Speaker</strong>: 与此同时，还有一个我希望大家牢牢记住的重要概念：除了上述通用技术之外，历史上还存在另一类特殊的创新，它们专门用于改进人类进行“科学研究与未来研发”的方法本身。正是这类技术从根本上加速并激励了人类社会未来的生产率持续增长。在人类历史上，这类能够放大发明创造效率的技术范例包括印刷机、显微镜，以及现代工业实验室与现代研究型大学体系的发明。而今天，我们同样将这一角色寄托在人工智能和机器学习技术之上。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Furthermore, there is another key concept that I want to touch upon briefly and keep at the forefront of our minds. There exists another distinct category of technologies: those that fundamentally enhance the very methodology of conducting research and driving future development. These innovations stimulate long-term productivity growth by expanding our capacity to discover new knowledge. Historical examples of this category include the printing press, the microscope, and the institutional invention of corporate and university research laboratories. Today, we observe artificial intelligence and machine learning functioning in precisely this domain.</p>
+<p><em>(Transcript Source: そして、友人もいる。私が考えたアイデア簡単に触れておきたいそしてそれを保管するために頭。これは他の種類もあります技術私たちを助けてください方法を改善する実行する研究との発展未来。だから、これらはイノベーションは私たちを助けてください刺激する成長生産性未来。そしてその中で例えば、イノベーション、例えば印刷機、顕微鏡、発明企業または大学研究私たちがまた、今ではAIの分野で、または機械技術教えること。)</em></p>
+</details>
+<p><strong>Speaker</strong>: 我们完全有充分的理由认为，AI 同时兼具这两种关键技术类别的属性。它既是一种无所不在、短期内绝不会耗尽潜能、能够长期刺激经济广泛增长的通用目的技术（GPT）；同时它又是一种能够被直接投入到“自我改进与发明创造过程”中的元创新技术。大家在过去几周里所看到的，例如 AI 在数学等基础科研领域取得的突破，正是这一特质的体现。考虑到这一点，它在未来对整体人类生活水准可能带来的提升，无疑是令人极其振奋的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: There are solid reasons to view AI as belonging to both categories of technology simultaneously. It is at once a pervasive General Purpose Technology whose potential is far from being rapidly exhausted and which will drive economic expansion for a prolonged period, and a technology applied directly to recursive self-improvement and the process of scientific invention itself. We have seen striking demonstrations of this over recent weeks, for instance in automated mathematical reasoning. When we consider how this might eventually uplift human living standards, the implications are truly breathtaking.</p>
+<p><em>(Transcript Source: AIについて正当な理由があるこれら両方を考慮する技術の種類同時に。それ同時に遍在するテクノロジーほとんど速くない使い果たす潜在能力があり、刺激する経済成長長い間時間、そしてテクノロジー、どちらが使用する自己改善発明の過程。そして私はその間ここ数週間で例えば、数学。そして私は思う、これはとてもワクワクしますね。これを考慮するとレベルに応じて与えることができます人生。)</em></p>
+</details>
+<h3>150年年均 2% 的增长基准与 AI 加速假说</h3>
+<p><strong>Speaker</strong>: 顺便请大家关注这张幻灯片上的图表。在过去的 150 年里，美国经济的人均产出一直保持着平均每年约 2% 的稳定增长速率。大家可以看到，这条长期趋势拟合线是极其稳定的。尽管在特定的具体历史时期，有时增速快一些，有时慢一些，存在周期性的繁荣与衰退波动，但放眼整整一个半世纪的宏观历史跨度，年均 2% 的增长率是相当坚挺的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Turning to the chart displayed on this slide, over the past 150 years the United States economy has grown at a remarkably steady rate of roughly 2% per year on a per-capita basis. You can observe how tightly the long-term trend line holds. Certain intervals saw faster growth, other periods experienced slower growth with regular ups and downs, but on average across 150 years, that 2% annual rate has remained remarkably consistent.</p>
+<p><em>(Transcript Source: ところで、お元気ですか？このスライド上のグラフィック、過去150年間米国経済成長した安定した年間2％の割合で一人当たりの計算人口。分かりますか、トレンドラインが非常にぴったり合う。期間によってはより速い成長、期間によっては遅いです、浮き沈みなど。しかし平均的には、150年で十分だ安定して2％。)</em></p>
+</details>
+<p><strong>Speaker</strong>: 请注意，图表的纵轴（Y轴）是对数坐标刻度。在对数坐标系中，每一个固定的垂直刻度间距，实际上代表着真实数值的成倍增长。对于每年 2% 的增长率，很多人直觉上可能会觉得“听起来似乎并不多”——如果你投资了一笔资金，一年只赚了 2%，你可能并不会感到特别惊喜。但是，当这一比率经过长达 140 到 150 年的复利累积效应之后，经通胀调整后的实际人均收入水平实际上整整翻了大约 10 倍。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Note that the vertical Y-axis uses a logarithmic scale. Because it is logarithmic, every equal step on the axis represents a doubling in actual value. A 2% annual growth rate might not sound like a huge number in the abstract—if you invested capital and received only a 2% return in a single year, you would likely not be ecstatic. However, this is compound exponential growth operating over an extended timeframe. Consequently, over the 140 to 150 years shown on this chart, inflation-adjusted per capita income has increased roughly tenfold.</p>
+<p><em>(Transcript Source: うーん、これは対数スケール、はい、Y軸です。対数なので、すべての線形変化実際には倍増。成長年率2％で、ええと、あまり良い音ではない多くの。もしあなたが投資したお金を受け取り、2％1年間なら、おそらくあまり嬉しくなかったが、これは、複雑なパーセンテージ成長中長い間。したがって、この150年間グラフィック、140年間このグラフでは、収入を見ると人物、考慮に入れるインフレなどが増加した約10回。うん。)</em></p>
+</details>
+<p><strong>Speaker</strong>: 这个图表在我看来最深刻的地方在于：它直观展示了人类社会为了维持这看似微小的“年均 2% 增长”，背后究竟付出了多么巨大而惊人的技术飞跃。从 1880 年到 2020 年这漫长的时代里，发生了一系列不可思议的密集技术创新。实际上，我们在今天所赞叹和依赖的几乎所有现代科技基础，全部都是在这段时期内被发明出来的：汽车、商用航空、载人航天、现代生物医药、互联网……我们还可以在这个清单上不断补充。然而，即便把所有这些颠覆性的技术发明全部叠加在一起，最终在宏观统计数据上，它换来的也仅仅是维持住美国经济长期年均 2% 的平稳增长而已。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: And to my mind, this demonstrates precisely what is required simply to sustain that 2% annual rate. The era between 1880 and 2020 was an age of unbelievable innovation. In fact, virtually all the foundational modern technologies that we admire and depend upon today were invented during that exact window: automobiles, commercial aviation, space travel, modern biotechnology, the internet, and many others that could readily be added to the list. Yet in the final accounting, aggregating all of these profound breakthroughs together served to sustain an average per-capita economic growth rate of 2% per year.</p>
+<p><em>(Transcript Source: そして私にとってそれは必要なものを示す2％を達成する成長。そうだった信じられない時代1880年から2020年までのイノベーション年。実際、すべて現代のテクノロジー、私たちは何者なのか私たちは賞賛します今日、まさにその時発明された。自動車、航空、宇宙旅行、バイオテクノロジー、インターネットはそのうちのいくつかは、そして私は思うのですが、追加できますこのリスト。そして最後に、これらすべてを合わせると、平均身長米国経済は2％減少年。)</em></p>
+</details>
+<p><strong>Speaker</strong>: 现在回到人工智能，AI 在未来可能发挥两方面的作用。首先，最基本的作用是它能够继续托住这一历史趋势线，确保年均 2% 的生产率增长能够在更长的未来时期内得以延续。我认为这本身就已经是一个非常了不起的宏伟成就，因为随着前沿技术复杂度的指数级攀升，要仅仅维持住年均 2% 的增长，所需要的技术创新强度就已经越来越高。但更引人深思的可能性在于：AI 是否能够真正打破这一历史速度，甚至进一步加速这一进程？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Looking ahead, AI could accomplish two distinct things. First and foremost, it can underwrite this historical trend, ensuring that the 2% trajectory persists over a substantially longer horizon. In my view, that in itself would already be a monumental achievement, because maintaining a constant 2% rate over time requires an ever-increasing pace of technical innovation. But the far more fascinating question is whether AI might fundamentally accelerate this growth process.</p>
+<p><em>(Transcript Source: 今やAIは2つのことをする。の上-まず、彼はこの傾向を支持するそうすれば彼は続くより長い期間時間。そして私はこれがすでに大きい達成、なぜなら我々は、技術レベルイノベーションが必要だちょうど年間2％を維持する。しかし興味深いのは、おそらくこれを加速させるプロセス。)</em></p>
+</details>
+<p><strong>Speaker</strong>: 目前对于未来能从这条增长曲线上期待什么，经济学界尚不存在一致公认的定论。各方的预测区间极其宽泛：悲观或保守的评估模型认为，AI 每年对 GDP 增长率的额外拉动可能仅仅只有 0.1 个百分点，几乎很难超越历史基准趋势。但另一方面，一些考虑了“递归自我改进”（Recursive Self-improvement）机制或所谓“智能爆炸”假说的经济学家前沿模型则预测，AI 带来的潜在年均增长率可能会跃升到高个位数的百分点级别（如 7% 到 9%），正如大家在图表极端预测区间所看到的那样。而在新模式的推动下，如果这种爆发式增长真的在未来的数年或数十年内发生，人类整体的生活水准将以令人目瞪口呆的速度发生飞跃。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: At present, there is no unanimous consensus among economists regarding what trajectory we should anticipate from this graph going forward. The range of estimates spans from the highly conservative—projecting an incremental GDP growth contribution of merely 0.1 percentage points per year above the historical trend—to aggressive models that incorporate recursive self-improvement and AI intelligence explosion dynamics. Those latter economic models contemplate growth potential accelerating into the high single-digit percentage points, as illustrated in the upper bounds of this projection. If we were to find ourselves operating under such a new paradigm over the coming decades, the resulting improvements in living standards would be genuinely staggering.</p>
+<p><em>(Transcript Source: 現在経済学者はいない満場一致の意見何が期待できるかこのグラフから未来。評価範囲はミニマルGDP成長率0.1パーセントポイント年間平均を上回る傾向。しかし、経済学者のモデル、考慮に入れる再帰的自己改善、ある種の「知的AIの「爆発的成長」は、仮定する成長機会一桁台後半パーセントポイント、ご覧のとおりこのグラフ。そしてレベルが人生は時とともに成長していくご覧のとおり、新しいモードで私たちは成長しています私たちはその間に自分自身を見つけるでしょう次の数件何年も経つと、本当に驚くほどのお買い得価格生活水準のために。)</em></p>
+</details>
+<h3>工业革命的历史镜像：蒸汽机长达百年的生产力时滞</h3>
+<p><strong>Speaker</strong>: 好，既然如此，让我们重新回到历史中去，从工业革命开始讲起。因为当我们讨论重大技术变革的规律时，一切严肃的讨论都必须从工业革命的技术演变史出发。蒸汽机是工业革命中最经典、最正统的技术创新标志。从根本原理上讲，蒸汽机的出现将机械从依靠人力肌肉、牲畜力量以及天然河流落差等自然能源的地理束缚中彻底解放了出来，使得人类能够在前所未有的大规模水平上、并在不受特定地理位置限制的广泛区域内产生动力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Let us now go back and start from the history of the Industrial Revolution, which is where any rigorous discussion about foundational technology ought to begin. The steam engine stands as the canonical technological innovation of the Industrial Revolution. In fundamental principle, it decoupled machinery from reliance on human muscle, draft animals, and the physical location of rivers, thereby making it possible to generate mechanical power at immense scale and in locations far more flexible than had ever been previously possible.</p>
+<p><em>(Transcript Source: よし、じゃあ行こう。戻って歴史から始めましょう工業革命、そこからすべてが開始すべき時私たちが話しているのはテクノロジー。スチームこの車は正統派です技術的な革新工業回転。原則として彼女は手伝った別機械の作成筋肉からのエネルギーと川、そして可能になったエネルギー生成大規模かつはるかに小さい場所によって異なるこの場所よりもそれは以前のことだった。)</em></p>
+</details>
+<p><strong>Speaker</strong>: 历史记载，最早的大气式蒸汽机是由托马斯·纽科门（Thomas Newcomen）在 1712 年发明的；随后在同一个世纪的后半叶，大家都熟知的詹姆斯·瓦特（James Watt）对其进行了关键的冷凝器改良。然而，这项技术在整个 18 世纪以及进入 19 世纪的相当长一段时间里，依然在经历漫长的渐进式微调与改良，才得以逐步在更广阔的国民经济、传统工业和制造工厂中推广开来。直到 19 世纪中叶，当高压蒸汽锅炉技术真正成熟并广泛扩散，使有效动力单位的能量成本下降了数个数量级之后，我们才真正从宏观生产率和国民生产总值（GDP）的宏观统计数据中看到了实打实的迅猛增长。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: The steam engine was first invented in practical form by Thomas Newcomen in 1712, and then notably improved by James Watt—whose name everyone knows—later in that same century. However, the technology required substantial time well into the nineteenth century, continuously undergoing refinement, before it could be widely adopted across the broader economy, heavy industry, and manufacturing plants. Only after high-pressure steam boilers became prevalent and energy costs plunged by orders of magnitude did we finally witness undeniable, measurable surges in productivity and GDP figures within economic statistics.</p>
+<p><em>(Transcript Source: 初めてそれはトーマスによって発明された1712年のニューコメンとそして、ジェームズによって改良されましたワットという名前は少なくとも誰もが知っている、その後同じ世紀。しかしテクノロジーたくさん19世紀までの時代世紀、続く改善するために、彼女が広く実施されている経済、産業と工場。そしてその時初めて、いつ拡散したのか高圧蒸気ボイラー圧力と価格エネルギーが落ちた数桁の規模で、本当にできた成長を見る生産性と統計におけるGDP。)</em></p>
+</details>
+<p><strong>Speaker</strong>: 换言之，蒸汽机本身必须经历漫长岁月的技术演进，使其自身成熟度发生质的飞跃，社会各界才可能将其真正推向宏观规模的大规模应用。更关键的是，只有当围绕着蒸汽机的一整套互补性创新——包括新型金属切削机床、标准化机械制造、跨区域铁路网、远洋蒸汽轮船，以及熟练掌握机械动力操作的新型劳动力大军——在它周围逐步建立并培育成熟之后，由这项技术所驱动的完整现代经济生态系统才算真正成型。这才是我们今天所称的“工业革命”全貌：技术所带来的革命性数字变化，最终落脚在普通人的现实工作流程和日常生活形态的彻底重塑上。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Thus, the steam engine had to become dramatically superior across a prolonged gestation before we could deploy it at full societal scale. Furthermore, it became genuinely transformative only when a dense web of complementary innovations and infrastructure was implemented around it—such as precision machine tools, railways, steamships, and a newly qualified industrial workforce. It required an entire economic ecosystem to evolve in synergy. That holistic transformation is what we truly mean by the Industrial Revolution: the revolutionary statistical metrics we observe in retrospect were driven by real changes in how ordinary human beings lived and worked every day.</p>
+<p><em>(Transcript Source: それで、蒸気機関こうあるべきだった劇的に良くなった技術長期間私たちが開始することができました使用方法あらゆる規模において。そしてそれらは役に立つようになった発明とその実施追加項目—新規工作機械、鉄道、蒸気船と新しい資格のある労働力彼女の周りでは全体を発展させる経済システム、そして産業革命これは私たちが知っていることであり、変革的我々が見る変化数字は本物働くために人生を変える人々。)</em></p>
+</details>
+<p><strong>Speaker</strong>: 这是一个非常耐人寻味的历史洞察：一项颠覆性技术要真正渗透并促成整个经济系统的深层演进，往往需要极其漫长的时间跨度。在蒸汽机的案例中，从 1712 年的最初发明，到生产率在 1830 年代左右开始显现出令人瞩目的加速增长，中间足足跨越了 100 多年的漫长岁月。这表明，从核心概念的发明到最终在宏观统计数据中结出硕果，存在着巨大的历史时滞。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: This provides a very telling historical observation: a foundational technology demands a great deal of time to diffuse and reshape the broader economic system. In the case of the steam-powered engine, first invented in 1712, notable surges in macroeconomic productivity did not materialize until around the 1830s. More than a full century elapsed before the profound ultimate results became visible in the empirical record.</p>
+<p><em>(Transcript Source: よし、たぶん。これは、面白い観察。テクノロジーは非常に、たくさんの時間彼女が広がるそれは発展するだろう経済システム。で蒸気の場合車で、初めて1712年に発明され、顕著な成長生産性1830年にのみ登場年が経過しました。100年以上前私たちが見たものよりも結果。)</em></p>
+</details>
+<h3>电气化范式转移：工厂车间重构与分布式驱动革命</h3>
+<p><strong>Speaker</strong>: 让我们再看另一个历史案例：美国的全面电气化进程。托马斯·爱迪生（Thomas Edison）于 1882 年在纽约珍珠街（Pearl Street Station）建立了人类历史上第一座商业化中心发电厂。然而，在爱迪生建厂之后，整整经过了大约 30 到 40 年的时间，美国绝大多数制造工厂才真正实现了实质性的电气化改造。在这三四十年的漫长等待中，主要矛盾并非仅仅在于进一步完善发电机和输电网络本身的技术参数，而是在于必须对“能量究竟如何在工厂内部被消费和分配”的整个车间布局进行彻底的组织重组。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Consider another historic parallel: the electrification of the United States. Thomas Edison commissioned the first central electric power station in New York, the Pearl Street Station, in 1882. Yet it took approximately 30 to 40 years before significant, pervasive electrification took hold across American manufacturing factories. And this delay was not primarily about fine-tuning the electrical generation technology itself; rather, it was driven by the necessity of completely restructuring factory architecture around where and how power was consumed rather than how it was generated.</p>
+<p><em>(Transcript Source: 他の人たちへ例えば電化アメリカ合衆国。トーマス・エジソン最初のニューの発電所ヨーク、パール駅1882年にストリートで。しかし約30～40年で少なくともいくつかは重要な電化米国の工場州。そして今回は改善する必要ではないテクノロジーですが、実際には必要だった工場再編エネルギーが消費されたのではなく、作成中です。)</em></p>
+</details>
+<p><strong>Speaker</strong>: 在电气化普及之前，传统工厂的动力系统完全是围绕着单台集中的大型蒸汽机来设计的，工厂只能依赖单一的动力来源。大家可以看一下右下角我使用 Grokbot 生成的这幅历史复原示意图：工厂内部只有这一个单一的中央动力源，它通过一系列纵横交错的传动皮带（Belts）、旋转轴（Shafts）和滑轮齿轮系统，将动力机械式地强制分发给整个工厂厂房里的所有机器设备。正因如此，传统工厂在建筑规划上必须完全服从于机械能量的物理传输损耗限制，厂房普遍被设计成多层垂直结构，所有耗能设备必须紧密围拢在中央动力主轴的周围。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Traditional factories built prior to electric motors were engineered strictly around a single central steam engine, forced to rely on one centralized power source. You can see an illustration of this in the graphic at the bottom right, which I generated using Grokbot. In that configuration, a solitary prime mover powered every single machine throughout the entire facility. Power transmission relied on an intricate web of belts, pulleys, and overhead drive shafts mechanically linked to every workstation. Consequently, factory designers had to plan the entire facility around the rigid physical constraints of mechanical power transmission, which dictated multistory vertical brick buildings where machinery clustered tightly around the central vertical driveshaft.</p>
+<p><em>(Transcript Source: えっと、工場以前の蒸気機関に携わったエンジンと設計されているので1つ使用する電源。そして部分的に彼らにそれを見る下の画像右へ、私はどれですか、作成者Grokbotを使用しています。うーん、そして情報源は一つだけだった電源とは基本的にすべてを実行に移す工場にある機械。つまり、ある情報源は電源接続済みベルトとシャフトすべての車工場、えーと、その、原則として、えっと、何をしなければならなかったのですか、工場を計画して彼が答える伝達方法その中にエネルギーが宿っている。そしてまた工場では建てられた垂直に、いくつかの階。)</em></p>
+</details>
+<p><strong>Speaker</strong>: 在这种原有的工厂架构下，如果工厂主仅仅是简单粗暴地将原来的中央蒸汽机拔掉，原地换成一台集中式大型电动机，工厂原有的布局和传动方式其实根本没有任何本质改善。电力的真正杀手级优势，只有在工厂能够充分发挥其“独特解耦特性”时才得以完全释放。电力最独特的本质优势在于：它的生产地点和消费地点可以完全分离开来，能量不再需要通过机械连杆刚性绑定在原地。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Under that legacy architecture, if factory owners merely replaced the single central steam engine with a large centralized electric motor, it was hardly an optimal arrangement. The profound advantages of electricity were only truly unlocked when engineers began exploiting its unique inherent characteristics. The paramount advantage of electricity is that energy generation can be located entirely apart from the point of consumption, freeing equipment from rigid mechanical attachment to a central shaft.</p>
+<p><em>(Transcript Source: えっと、でもあなたはすぐに蒸気を交換するエンジンオン電気、えーと、これ最高ではなかったある意味で工場出荷時の設定、入手可能な場合電気。えっと、そして電気本当に明らかになった彼らの最大の利点できた使ってみて個性的特徴。そして独自の利点その電気技師たちそれは生成できますそこ以外のどこかで、消費する場所。)</em></p>
+</details>
+<p><strong>Speaker</strong>: 这催生了所谓的“单元驱动”（Unit Drive）革命：工厂里的每一台独立机床设备，都可以配备属于自己独立的小型电动机进行单独供电。这种模式带来的颠覆性优势是显而易见的：在旧的“集中驱动”（Group Drive）系统下，如果中央蒸汽机发生故障或需要停机检修，整个工厂所有的流水线和机床就会立刻全部陷入瘫痪；而在分布式单元驱动模式下，工人如果只需要停用某一台车床，只需切断该机器自身独立电机的电源开关即可，其他所有工位丝毫不受影响。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: This insight gave birth to the concept of the &quot;unit drive&quot; system, where each individual piece of machinery on the factory floor is equipped with its own dedicated electric motor. The operational benefits were immediately evident. Under the older group-drive setup, shutting down the central steam engine meant the entire factory ground to a complete halt. With individual unit drives, if a single machine needed to be turned off for maintenance, you simply switched off that one unit's motor, leaving the rest of the facility fully operational.</p>
+<p><em>(Transcript Source: ええと、それによっていわゆるシステム個人理性とは、本質的には、それぞれが工場の機械には、ええと、情報源の一つは餌やり。そして私は思う、利点が非常に明白すぐに、なぜなら今、もし、あなたが、あなたができるなら1つだけオフにする車。システム内でグループドライブ、オフにすると蒸気機関、全体工場が停止する。オフにするとモーター1つ、電動モーター車の場合、これだけ車が1台必要です消す。)</em></p>
+</details>
+<p><strong>Speaker</strong>: 单元驱动的出现，彻底解放了工业建筑设计。工程师们终于可以完全摒弃那些受制于动力传动轴走向的多层垂直厂房，转而根据产品真实的生产工艺“工作流逻辑”（Workflow），将整个工厂设计成平铺式的单层厂房。厂房可以根据需要极其轻松地进行模块化横向扩建，生产线设备的重新调整和转产换型也变得前所未有的灵活。然而，这种从集中驱动到单元驱动的彻底重构，是一项极其缓慢且资本开支巨大的漫长过程，需要对旧工厂所有的设备和车间进行彻底改造或新建。直到珍珠街电厂建立 50 年之后的 1920 年代末，美国制造工厂中才有超过 80% 的机械能消耗真正来自于电力驱动。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: As a result, architects could begin planning factories strictly according to operational workflow logic, rather than around overhead shafts and pulleys. Facilities could be built as single-story horizontal layouts that were far easier to expand, retool, and reconfigure for new production lines. Nevertheless, this was an inherently slow and capital-intensive transformation requiring the complete re-equipment and redesign of entire manufacturing floors. It was only about 50 years after Pearl Street, by the late 1920s, that more than 80% of manufacturing energy in factories was finally derived from electricity.</p>
+<p><em>(Transcript Source: だから、あなたは始めることができます工場を計画するあなたのワークフロー、そしてそれによるとそうではないパスポートはどこに保管すべきですか？そしてシャフト。あなたはできる拡張するのは簡単です。あなたはできる再装備するために、始めることができます何か別のものを生み出すために、しかし、それは遅く、費用のかかるプロセス必要あらゆるものの再装備工場ではなく工場で消費され、そして50年後には80％エネルギー消費工場、受け取った電気から。)</em></p>
+</details>
+<h3>索洛计算机悖论与组织变革的“后半场”</h3>
+<p><strong>Speaker</strong>: 让我们将目光拉回距离我们更近的现当代。这里最著名的论断来自于诺贝尔经济学奖得主罗伯特·索洛（Robert Solow）在 1987 年写下的名言：“你可以在任何地方看到计算机时代的到来，唯独在生产率统计数据中看不到它。”1987 年的现实正是如此：当时的个人电脑已经迅速普及到了各行各业的办公室里，计算机硬件设备在宏观经济中的使用范围已经相当广泛。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Moving closer to our own modern era, we encounter the famous adage from economist Robert Solow, who famously observed in 1987: &quot;You can see the computer age everywhere but in the productivity statistics.&quot; When he made that remark in 1987, personal computers were indeed becoming ubiquitous, and computing hardware was already being deployed widely across the economy.</p>
+<p><em>(Transcript Source: 私たちは少し先に進みましょう。私たちの時代に近いえーと、まずは有名な名言経済学者ロバートソロウは、えっと、どこにいるんですか？あなたができると書いたコンピューターを見る時代は、統計生産性。そして彼は1987年にこう言った。個人的なコンピュータはすでにどこでも、そして計算十分な装備広く使用される経済。)</em></p>
+</details>
+<p><strong>Speaker</strong>: 众所周知，在整个 20 世纪下半叶，人类见证了计算技术的巨大飞跃。个人电脑、局域网与互联网的结合构成了现代信息技术体系，急剧降低了信息的数据处理、长期存储和跨网络传输的边际成本。然而，直到 1990 年代中后期，宏观生产率统计指标才终于对这一轮波澜壮阔的数字化技术浪潮做出了清晰而积极的滞后响应。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: As is well understood, the second half of the twentieth century witnessed astonishing innovations in computing technology. Personal computers, network communications, and the internet converged into information technology, drastically lowering the marginal costs of processing, storing, and transmitting data. Yet it was not until the mid-to-late 1990s that aggregate economic productivity began to measurably surge in response to these investments.</p>
+<p><em>(Transcript Source: ええと、私も私は思うよく知られているように、20世紀後半世紀に私たちは見た本当に素晴らしい革新計算テクノロジー、個人的コンピューター、インターネットはこれらすべてを合わせると、情報提供テクノロジー、急激にコストを削減処理、保管移籍情報。しかしかかるまで1990年代半ば～後半年、生産性本当に反応したこれについて。)</em></p>
+</details>
+<p><strong>Speaker</strong>: 其中的深层原因同样在于：宏观经济要想从信息技术中榨取红利，必须经历一系列剧烈的前提变革，而这一次的变革主要集中在“企业组织形态”层面。企业组织和广大员工必须彻底重塑自身的日常工作流程、培养全新的数字化技能，并找到正确利用计算技术的经营策略，才能真正释放计算机的内在潜能。这需要大量下游补充性软件的开发与成熟——例如面向大型企业级业务的管理软件（ERP/CRM）、分布式数据库技术，以及利用数字手段对整个供应链物流与商品库存核算体系进行深度端到端重构。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: The fundamental reason was that the economy once again demanded profound structural adaptations, and this time those changes were predominantly organizational. Enterprises and employees had to overhaul business processes, master new skill sets, and cultivate effective methodologies to genuinely capture the value inherent in computer technology. This required the development of critical complementary innovations—such as enterprise software, relational databases, and the complete redesign of supply chain logistics around digital tracking and inventory control methods.</p>
+<p><em>(Transcript Source: そしてまた、経済特定のものが必要変更、そして今回はそれらはほとんど組織的。したがって、企業と従業員は彼らのプロセスを開発するスキルと正しい方法を実行するさらに、本当に理解する恩恵を受けるコンピューターテクノロジー。そしてこれかつては、例えば、開発…まあ、他の企業にとっては作成する必要があった企業ソフトウェアソフトウェア、データベース技術、サプライチェーン必要再設計使用デジタル手法商品の会計処理。)</em></p>
+</details>
+<p><strong>Speaker</strong>: 当然，这还意味着需要耗费巨资，为经济体系中的数千万员工大规模采购、部署并熟练掌握浩如烟海的硬件单元和软件系统。事实上，企业组织形态的制度重塑与流程适应速度，远远慢于计算机硬件技术本身的单点发明与更新换代。而唯有当全社会的组织重构最终完成时，这项核心信息技术才真正以具有重大经济学意义的方式，全面打通并驱动了现实经济生产率的腾飞。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Naturally, this also entailed the extensive rollout and organizational integration of countless individual pieces of hardware and software packages across the labor force. In practice, the organizational transformation of business operations progressed at a vastly slower pace than the invention of the raw computer hardware itself. Yet it was ultimately this painful organizational restructuring that finally enabled modern computing to impact the economy in an undeniably significant manner.</p>
+<p><em>(Transcript Source: えーと、もちろん、それも受け入れを意味するおよび実装たくさん、たくさん個々のユニットハードウェアとソフトウェア規定従業員経済。そして実際ははるかに遅い変換組織よりも彼ら自身の発明のみコンピューター最終的に-ついに私たちに役立ちましたこれを使うテクノロジーは本当に重要な経済的な方法で、この接続)</em></p>
+</details>
+<!-- chunk 2/8 -->
+<h3>资本周期与生产力J曲线：AI基础设施的历史映照</h3>
+<p><strong>克莱门斯</strong>：到底是这种连接机制，还是我们目前正在探索的某种特定模式？在技术扩散的早期阶段，我们常常能观察到一种被经济学家称为“投资J曲线”（Investment J-Curve）的现象。为了最初引入并部署一项颠覆性技术，企业必须投入巨额前期资本——用于采购全新设备、开展全员培训、重塑业务流程以及重新设计组织架构。所有这些庞大而痛苦的沉没投入，在初期阶段不仅不会立刻提升效率，反而往往会暂时拖累生产率的增长。只有在经历了这个下潜期、克服了磨合阻力之后，生产力才会在后续阶段实现全面提速与飞跃。而我想顺便触及的另一个关键维度在于：技术创新的自然演进节奏，往往与宏观经济的另一个关键要素脱节——那就是资本市场。纵观整个人类科技史，每当一项真正具有潜在革命性的核心技术破土而出时，它在初期往往能够吸纳超乎寻常的庞大资金与社会资源，远在我们真正摸清这项技术究竟该如何有效驱动实质性经济增长之前，资本狂潮就已经呼啸而至。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Clemens</strong>: Is it this connection, or is it the pattern we are developing and observing here—what is often described as the 'investment J-curve'? To implement a new technology initially, the necessary investments—training on new processes, purchasing new equipment, reorganizing workflows—actually decelerate productivity growth at first, only for it to speed up significantly later down the line. And I also want to touch upon another dimension: technology is often out of sync with other macroeconomic factors, namely the capital markets. Throughout history, truly revolutionary technologies have always possessed the power to attract enormous amounts of capital and early resources during their inception, long before we actually figure out how the technology begins to tangibly stimulate real economic growth.</p>
+</details>
+<p><strong>克莱门斯</strong>：为了更直观地理解这一点，我想把当前人工智能（AI）的大规模部署与科技史上的两个经典案例放在一起，从投资规模的视角做一番对比。第一个案例是19世纪40年代发生在英国的“铁路狂热”（Railway Mania）。在那几年间，英国议会批准了数百条全新铁路干线的建设法案。当时所发生的一切令人叹为观止：逐利的廉价资本如痴如狂地蜂拥而入，与此同时，轨道交通的真实货运需求也在激增——尤其是煤炭运输，以及各大内陆城市为了融入全国经济命脉而对铁路互联互通产生的刚性需求。所有这些因素交织碰撞，催生了一场人类历史上绝无仅有的疯狂投资繁荣。这是史上规模最庞大的投资浪潮之一，在1840年代的狂热峰值年份，仅英国国内的铁路投资额就占到了当年全国GDP的5%到7%之多。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Clemens</strong>: I would like to highlight two historical parallels alongside the current rollout of AI and compare them, at least in terms of relative economic scale. The first is the 1840s in Britain—the Railway Mania. Over those pivotal years, Parliament authorized the construction of hundreds of new railway lines. What took place was remarkable: a desperate hunt for cheap capital driven by sheer investor fervor, occurring simultaneously alongside a genuine surge in freight transport demand—particularly for coal—and the pressing need for inland cities to connect to the national economy via rail. Together, this triggered an unprecedented investment boom with virtually no historical precedent. It stands as one of the largest capital booms in history, with railway investment reaching an astounding 5% to 7% of British GDP in a single year during the 1840s.</p>
+</details>
+<p><strong>克莱门斯</strong>：另一个时间上更切近的案例，是20世纪90年代后期的数字信息技术革命——也就是个人电脑与互联网的崛起。90年代末，商业互联网迎来了爆炸式的大发展，跨国与城际干线光纤网络以前所未有的速度铺设开来，为全社会提供前所未有的宽带接入能力。当时美国正在推进重大的电信管制放松，大量全新的电信运营商与科技创业公司如雨后春笋般涌现。海量资金砸向地下和海底光纤的敷设，行业普遍对数据传输需求的持续指数级增长抱有盲目乐观的预期，导致基础设施建设陷入了极度超前的严重过剩。在1999年的投资狂潮顶峰，通信与互联网基础设施的资本开支占到了当年美国GDP的大约1%到1.5%。而今天，如果我们把目光转向人工智能的扩张狂潮：当前全球在AI基础设施（数据中心、先进制程芯片、电力基础设施）上的投资总额，已经占到了美国GDP的约1.8%！这意味着，仅在今年，AI基础设施的资本投入占比就已经超越了90年代末光纤热潮的顶峰；而且根据业界和投行的权威预测，到2028年，AI基础设施投资将攀升至美国GDP的3%左右。换句话说，当下的AI基础设施投资热潮，在宏观经济体量上已经足以比肩人类历史上任何一次最顶级的重大技术繁荣。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Clemens</strong>: Another closer historical example comes from digital technology in the late 1990s—computers and the internet. In the late 90s, the commercial internet began expanding rapidly. The deployment of major long-haul fiber-optic networks enabled broadband access on a massive scale. Major deregulation was taking place in the United States, spawning an influx of new telecom operators and enterprises that laid vast amounts of fiber-optic cable, driven by expectations of unending exponential data demand that resulted in drastic infrastructure overbuilding. That boom represented approximately 1% to 1.5% of US GDP in 1999. Today, if we compare this to the expansion of AI: investment in artificial intelligence infrastructure has already reached roughly 1.8% of US GDP. That means this year it has already surpassed the peak fiber-optic boom, and projections indicate that by 2028, AI infrastructure capex will reach around 3% of US GDP. In other words, AI infrastructure is already on par with the very largest investment booms witnessed in all of economic history.</p>
+</details>
+<p><strong>克莱门斯</strong>：那么，这到底是不是一场正在膨胀的“经济泡沫”？说实话，我并不会草率地下一个非黑即白的定论，因为没有任何人能绝对断言未来。但我从历史中提炼出的一个深刻观察是：无论早期涌入该领域的私人投资者最终面临怎样的回报命运，即便当前确实存在泡沫、甚至在资本市场上发生崩盘，这些超前建造的物理与技术基础设施，在漫长的未来岁月中往往会沉淀为极具耐久性、且极富生产力的社会共有资产。历史一次又一次地印证了这一点：当年在英国铁路狂热中修建的多余铁轨，以及在互联网泡沫时期铺设的、一度被闲置的“暗光纤”（dark fiber），在泡沫破灭之后的岁月里，反而为全社会提供了极为廉价的高速交通网络，并直接孕育了后来的流媒体盛宴与移动互联网时代。正因为底层基础设施已经被极其廉价地提前筑就，整个社会才能在后来的数十年中坐享红利。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Clemens</strong>: Now, does this mean we are in a 'bubble'? To be frank, I cannot give a definitive conclusion, and no one truly knows for certain. But in my view, there is a vital historical observation to keep in mind: regardless of what ultimately happens to the private returns of the investors pouring money into this infrastructure today, the ultimate result may prove to be extraordinarily durable and productive for our future, even if this is indeed a bubble right now. Just as with the surplus railway tracks in the 19th century or the 'dark fiber' left behind from the dot-com era, those massive investments subsequently provided vastly cheaper transportation and directly enabled streaming and mobile telecommunications decades later, precisely because that infrastructure was already built out and made cheap.</p>
+</details>
+<h3>两种技术演进节奏与生成式AI的落地瓶颈</h3>
+<p><strong>克莱门斯</strong>：这就引出了一个非常清晰的分析模型，也是我在这份报告中特别希望向大家阐明的一个核心命题：一项根本性技术的发展，往往是沿着两个截然不同、快慢悬殊的时间表推进的。第一个是“快速时间表”——这是纯粹的技术研发、概念验证与原型设计时间表。在这个维度上，颠覆性的新技术层出不穷，模型能力一日千里，技术突破目不暇接。而第二个时间表则要缓慢沉重得多——这是技术真正落地、走向深度产业化的扩散时间表。在这个维度上，技术必须与既有的企业组织架构、管理流程以及整个宏观经济体深度交融与嵌合。回顾历史：对于蒸汽机时代而言，早期的技术突破只是发动机本身的迭代，而真正的生产力爆发，依赖于长达数十年围绕动力机重构矿井与工厂体系；对于电力革命而言，发电机很早就被发明了，但工业生产力直到几十年后工厂彻底摒弃老旧的集中动力传动轴、按照分布式电动机重新设计了现代装配线车间之后，才迎来了爆发式激增；至于计算机革命，其真正转化为生产力，本质上也是一场旷日持久的大规模组织变革——需要培养全新数字技能、重塑日常工作模式，当然，还伴随着软硬件基础设施的全面迭代与普及。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Clemens</strong>: This brings me to a clear model that I hope to convey: technology develops along two distinct, mismatched timelines. The first timeline is fast: it is the technology schedule of pure innovation, rapid prototyping, and transformative model releases. The second timeline is substantially slower: it is the schedule of real-world implementation, where technology must become deeply embedded into enterprise structures and the macroeconomy as a whole. In the age of steam, early breakthroughs were engines, but the real impact required decades of fundamental engineering diffusion. With electricity, it wasn't just generating power, but inventing entirely new factory designs and assembly lines to complement the technology. And for computers, the true gains were primarily driven by massive organizational restructuring, new skills, new operating workflows, alongside the extensive rollout of hardware and software.</p>
+</details>
+<p><strong>克莱门斯</strong>：我们如今已经生活在生成式AI（Generative AI）浪潮的第四个年头了。在此，我想向在座的每一位提出一个值得深思的根本问题：究竟还需要补齐哪些关键短板，才能让AI真正引爆全社会的生产力跃升，让普通人真切地感受到广泛的经济繁荣？我们所欠缺的，究竟是底层基础架构的继续跃迁，还是前沿基础大模型能力的进一步逼近通用智能？是需要推动AI深入渗透到那些目前几乎尚未被波及的传统产业与经济核心支柱？是需要在垂直应用层构建更加完备的交互与落地生态？抑或是全社会的劳动力队伍需要经历一场脱胎换骨的技能再培训？对于这些宏大的问题，我坦承自己今天无法给出唯一的标准答案；但我非常期待能与现场的各位同仁深入探讨，在接下来的两天峰会期间，随时欢迎大家来找我交流。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Clemens</strong>: We are now four years into the era of Generative AI, and I want to invite all of you to reflect on what is truly missing for AI to finally drive measurable productivity gains and widespread economic growth for everyone. Is it a breakthrough in foundational technology and basic models? Is it deeper enterprise adoption across sectors of the economy that currently remain largely untouched? Is it supplementary work at the applied application layer? Or is it comprehensive workforce retraining? I do not pretend to possess all the definitive answers, but I would be thrilled to discuss this with anyone here over the next two days of this event.</p>
+</details>
+<p><strong>克莱门斯</strong>：行将收尾，我由衷希望自己今天向大家清晰地传递了一个观点：单点的科学发明在初期所带来的，仅仅是潜在的时代机遇；但要把这种机遇真正转化为整个社会的实际增长，所需要的远不止代码和算法本身。技术的深远扩散、资本的持续沉淀、配套设施的完善、以及深度的组织变革——唯有当所有这些要素协同推进时，才能最终转化为实打实的生产力，进而系统性地提高全人类的生活水准。企业在内部推进AI落地、彻底颠覆既有的业务运行准则、重新培训员工并改变每一个人的工作方式，乃至于基于崭新的AI原生理念白手起家创办颠覆性的新公司——在我看来，这正是当前科技革命真正落地生根的方式。对于坐在台下的诸位而言，这无疑是一个巨大的利好与鼓舞，因为我相信，在座的大多数工程师与创业者，每天所孜孜以求的事业，正是为了迎接这项崭新的技术而全面重构我们的经济图景。非常感谢各位宝贵的时间！预祝大会圆满成功！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Clemens</strong>: To summarize, I hope I have made the case that technological invention creates initial opportunities, but converting those opportunities into real growth requires far more: diffusion, sustained capital investment, complementary additions, and organizational change. That is what translates raw technology into tangible productivity and improves living standards for all people. The implementation of AI inside enterprises, changing operating principles, workforce retraining, restructuring how individuals work, and launching entirely new companies from scratch around novel ideas—that, in my view, is how technology truly moves forward. And that should be an incredibly encouraging message for everyone in this hall, because I believe most of you spend your days doing the vital work of restructuring this economy for this new technological paradigm. Thank you very much for your time. Have a wonderful conference.</p>
+</details>
+<h3>串场主持：从历史回望到未来审视</h3>
+<p><strong>主持人</strong>：非常感谢克莱门斯！让我们再次以热烈的掌声感谢他！精彩绝伦！我个人一直特别喜欢这种分析视角——看看我们如何能够从过往的历史经验中提炼出规律，进而推演并预见即将到来的未来。克莱门斯刚刚用扎实的数据帮我们锚定了当下现实；而我们的下一位演讲嘉宾，则将带领大家直接眺望未来。事实上，接下来的两位演讲者都会围绕未来的趋势为我们带来硬核洞见。说到即将登台的这位讲者，他其实完全不需要冗长的介绍。如果你平时活跃在社交网络上，如果你经常刷X平台，你一定对他那些极其尖锐、辛辣且极具争议性的犀利言论记忆犹新。他甚至自封为一个所谓的“思想领袖”（thought leader）——老实说，我至今都还没完全搞明白这个头衔到底意味着什么！但不管怎样，大家都认可他的号召力，对吧？好的，闲话少叙，让我们隆重有请巴拉吉登台！热烈欢迎！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Thank you, Clemens! Give him another round of applause, please. Wonderful. I always love examining how we can extrapolate from the past to understand and predict the future, and Clemens provided great perspective on how we should contextualize the present. Our next speaker is going to tell us about the future—in fact, our next two speakers will be discussing the future. The next speaker truly needs no introduction. If you spend time on social media networks, if you are active on X, you have undoubtedly seen his razor-sharp commentary. He describes himself as a 'thought leader'—I still don't quite know what that means, but let's just roll with it, alright? So please, give a warm welcome to Balaji! Congratulations, welcome to the stage!</p>
+</details>
+<h3>开发者工作流的代际变迁与“粗制滥造工厂”</h3>
+<p><strong>巴拉吉</strong>：好的，太棒了！现场投屏向来是个玄学，但我们还是试试看，只要它能亮起来就算大获全胜。好的，幻灯片出来了，搞定！大家台下都能看清屏幕吧？非常完美。我刚才在后台突然意识到今天场面的隆重程度，这听起来简直就像是真正的“思考大师”布道现场。不过，为了能让大家肆无忌惮地折腾各种技术玩意儿，我们特意攒了这么一个局，我待会儿马上就会跟大家细说。台下能把背景音乐关一下吗？能停掉背景音乐吗？好了，音乐关掉了，太棒了！听着，我本质上就是一个在X平台里摸爬滚打长大的极客。如果你在X上认识我，你大概会知道，我们在很多技术观点上可能高度共鸣，但也可能在不少话题上撕扯争论过无数回合。其实关于今天的内容，我随手就能拉出二三十张幻灯片；但几分钟前我在叫Uber的时候，心里琢磨着：这太好玩了，我今天何必墨守成规呢？我只需要把鼠标光标往屏幕上一拽，干脆利落地开讲就行了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Balaji</strong>: Alright, awesome! This setup might be glitchy, but let's give it a shot and make it work. Boom, slides are up. Can everyone see them clearly? Perfect. I just realized the gravity of this introduction—it makes me sound like some revered 'thought master.' But in reality, we built this entire community simply to tinker with cool things, and I will share more about that in just a second. Can we kill the background music? Is there music playing? Great, music is off. Fantastic. Look, I am essentially a child of X. If you know me from X, we probably agree on a whole lot of things, and we have likely argued over plenty of others as well. I could easily show twenty slides; in fact, just a few minutes ago while ordering an Uber, I thought: you know what would be fun? I'll just drag the cursor over here, click start, and dive right in.</p>
+</details>
+<p><strong>巴拉吉</strong>：平时在各种技术分享大会上，我通常会花上大量篇幅去介绍我参与开发的几十款具体产品。但这一次我决定彻底打破惯例：今天整场分享，我就只放这一张幻灯片！如果你是一个对本地运行大语言模型（Local LLM）、底层硬件、私有化部署和极客自建服务感到兴奋的人，我们其实有一个极其疯狂的极客圈子，名字就叫 tinker.club。网址就写在屏幕上。事实上，今天在座的各位只要是在技术圈里爱折腾的人，基本上都是这个社群的潜在成员。这是一件极具魅力的事情：你会看到形形色色背景迥异的开发者汇聚一堂，大家拥有着高度重合的硬核极客爱好——从最硬核的嵌入式硬件与3D打印，一路跨界到最前沿的AI算法、现代SaaS开发与各自的独立商业产品。如果你也想加入这群技术狂人的狂欢，欢迎直接访问 tinker.club。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Balaji</strong>: Usually, across about 39 conferences, I talk in detail about specific products I build. This time is completely different: I am presenting just a single slide. If you are someone who enjoys tinkering with local LLMs, hardware hacking, self-hosting, and home labs, we run an awesome community called tinker.club. The URL is right up there. In fact, pretty much everyone attending this event is an embodiment of that ethos. It is fascinating to see such diverse people unite around shared technical obsessions—ranging from raw hardware and 3D printing all the way to AI, SaaS, and building their own ventures. If you want to join, head over to tinker.club.</p>
+</details>
+<p><strong>巴拉吉</strong>：在上一届AI工程师大会（AI Engineer Summit）上，我做过一场主题为“从氛围编码（Vibe Coding）迈向氛围工程化（Vibe Engineering）”的演讲。当时这个行业正处于剧烈的范式转移前夜。如果我今天原封不动地重新讲一遍那份报告，它依然极具现实针对性，因为现在绝大多数开发者才刚刚开始从毫无章法的纯“氛围编码”向稍微具备工程纪律的“氛围工程化”蹒跚迁徙。然而，我敏锐地察觉到，在我自己的日常编码中、在我构建的产品里、以及在广大开发者群体中，一股全新的技术浪潮已经悄然暗涌。我每天都在刷推特，密切注视着圈子里正在发生的一切。我们可以清楚地看到：整个AI工程领域正在迅速跃迁至一个全新的阶梯。大家最近可能频繁听到诸如“软件工厂”（Software Factory）、或者像我经常嘲讽的“垃圾流水线工厂”（Slop Factory）这类的说法。到了今年第四季度以及即将到来的明年，大家将会更加清晰地见证这场质的剧变：整个行业正在以惊人的速度，从最初粗糙的原型试水，全面转向某种前所未见的崭新范式。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Balaji</strong>: At the previous AI Engineer conference, I gave a talk titled 'From Vibe Coding to Vibe Engineering.' We were already navigating a major transition back then. If I delivered that exact presentation today, it would still be entirely relevant, because a massive number of people are only now making that journey from chaotic vibe coding to disciplined vibe engineering. But I can already sense the next fundamental shift happening within myself, inside my own applications, and across the developer ecosystem. I watch everything unfolding on Twitter, and we are gradually moving into a completely different echelon of AI engineering. You have likely heard buzzwords like 'software factories,' or what I affectionately call 'slop factories.' Throughout Q4 of this year and into next year, the conversation will shift entirely away from old-school vibe coding toward something radically new.</p>
+</details>
+<h3>人机交互演进史与全面失控的YOLO模式</h3>
+<p><strong>巴拉吉</strong>：但在深入探讨那个所谓“崭新的事物”之前，我们必须先退后一步，冷静地复盘一下我们究竟是如何一步步走到今天的。让我们快速回顾一下过去这一年多来整个开发者群体的交互演进轨迹：很多人直到今天其实还在依靠GitHub Copilot这类行内自动补全工具，敲一下Tab键，让AI帮你补完一行代码，然后惊呼“这就是人工智能”。但对于在座的硬核玩家来说，那早就是老掉牙的旧时代产物了！回顾两年前，我们大家的标准工作流还是在网页端和ChatGPT疯狂打交道：不停地把代码片段复制出来，粘贴给它，然后如果你还记得的话，当时的GPT-3.5或者早期GPT-4经常写到一半就彻底罢工断更，我们必须卑躬屈膝地打字哀求它：“求求你了，把剩下的半截函数写完吧！”然后你屏息凝神地等待它输出第二段代码，再小心翼翼地把它们拼接起来复制回编辑器里。更有甚者，当我们需要结构化数据时，我们又得一次次苦苦哀求它输出合法的JSON格式：“拜托了，千万别在外面加Markdown的包裹代码块，不要添加任何开头的废话或者解释，我只需要纯正干净的JSON！”而它总会非常礼貌却又无比弱智地回复你：“当然没问题！这是您的代码：```json ...”，然后在末尾再附赠一段它自作多情的废话。因此，那些从一开始就直接使用现代智能工具的新生代开发者，老实说，你们真的被惯坏了！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Balaji</strong>: Before we unpack this 'something new,' we need to take a step back and examine where we have been over the past year. Plenty of people are still using Copilot—pressing the Tab key to trigger an autocomplete, thinking, 'Wow, this is AI.' But for us, that feels like a lifetime ago. For a long period, we were stuck in the manual loop of copying and pasting back and forth with ChatGPT. If you recall, a couple of years ago the models couldn't even finish long functions; you had to literally plead with them: 'Please, just finish the function!' You waited anxiously for the second half, copied it, and stitched it together. Then came the agonizing battle for pure JSON: 'Can you please omit the markdown formatting? I just need raw, parseable JSON.' And it would invariably respond: 'Sure thing! Here is a little markdown and some JSON inside.' Developers who are just getting started with modern AI tooling today have no idea how utterly spoiled they are.</p>
+</details>
+<p><strong>巴拉吉</strong>：在那之后，整个生态迈入了局部聚焦的代码编辑时代（In-line Diff Editing）。顺便提一句，当时根本还没有真正成熟的自主智能体（Agent）概念。我们只是把大模型接入本地环境，让它直接修改你的本地文件。我清晰地记得，在那个阶段，所有人的心态都是“天呐，这玩意儿太危险了！它竟然拥有篡改我本地文件的权限！”紧接着，自主智能体粉墨登场了。但在最初那段时间，大家依然是战战兢兢、如履薄冰，每当智能体提出一个执行请求，我们都要逐行仔细审查每一项系统权限，不断告诫自己：“千万要小心！绝对不能让它触碰核心配置，不要乱改任何不该碰的文件！”然而，仅仅过了一年之后的今天，情况变成了什么样？当智能体弹窗询问：“请问我是否可以执行这条终端命令？”绝大多数开发者甚至连看都不看一眼——“这命令到底从哪儿冒出来的？我真的需要搞清楚吗？管他呢，点了Yes再说！”大家心里唯一的侥幸就是：“按回车就完事了，它总能搞定的对吧？”到了今天，几乎所有资深开发者都彻底切换成了毫无保留的“人生仅此一次，放手一搏”的YOLO极限模式（You Only Live Once）。我环顾四周，现在几乎找不到任何一个不给AI全量提权的人了——大家甚至直接把线上生产数据库的凭证、核心业务库、用户私密数据、哪怕违反GDPR合规的一切系统权限全盘托付：“拿去吧！把整套系统权限全部拿去！只要能替我把活儿干完，随你怎么折腾！”这就是我们当下所处的极其疯狂而真实的开发者生态。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Balaji</strong>: Then came the phase of focused in-line editing. Mind you, there were no autonomous agents yet; we were simply using AI that could directly modify your local files, and our immediate reaction was: 'Whoa, this is dangerously powerful. It can touch my filesystem!' Soon after, agents arrived. Yet initially, we were extraordinarily paranoid, meticulously checking every single permission prompt and warning ourselves: 'Careful, don't let it touch anything critical!' Fast forward just one year to today: when an agent asks, 'Can I execute this shell command?' who among us actually reads it? You think, 'Where did that even come from? Do I really care? Yeah, sure, whatever, just finish the job.' Now everyone is running in full-blown YOLO mode. I literally do not know a single engineer today who doesn't grant agents unrestricted system access: 'Here, take my local database, take my customer data, forget GDPR compliance, just take everything and get the job done.' That is the reality of where we have arrived.</p>
+</details>
+<p><strong>巴拉吉</strong>：审视当下正在借助AI开展研发工作的开发者图景，人群基本上可以划分为鲜明的几大类别。首先第一类，我称之为“垃圾手榴弹投手”（Garbage Grenade Throwers）——坦白讲，在座的我们绝大多数人在某些时刻其实都扮演过这个角色。我们嘴上极力否认，但现实中却乐此不疲地四处投掷这种“垃圾手榴弹”。第二类人群，则是最近在业界流传开来的一个极其传神的新热词——“数字肉类替代品”（Meat Substitutes）。不知道你们有没有听过这个称呼？这是我近期听到的最绝妙、最具黑色幽默的行业术语之一，我个人简直对这个比喻爱不释手！当然，除此以外，行业里还有一小撮真正秉持严谨工程素养的硬核开发者，虽然数量凤毛麟角，但我们都在竭尽全力推动自己蜕变成为真正名副其实的专业AI工程师。</p>
+<p>那么，究竟什么是所谓的“垃圾手榴弹投手”呢？顾名思义，这就是如今绝大多数普通员工的真实工作写照：由于AI生成内容的速度快到了极致、操作门槛又低得令人发指，任何人都可以随手给智能体扔一句含糊不清的提示词，让大模型瞬间倾泻出一大坨毫无质量保障的垃圾代码或报告。而这位员工甚至连看都懒得看上一眼，就直接把这坨垃圾像手榴弹一样甩给身边的倒霉同事，嘴里还轻描淡写地附上一句：“搞定了！祝你好运！希望扔进生产环境别当场爆炸就行，具体的细节你自己慢慢看吧！”而至于另一类所谓的“数字肉类替代品”，指的则是那些在职场夹缝中毫无技术主见与辨别能力的中间人：当管理层或团队主管给你布置了一项连你自己都毫无头绪的复杂需求时，你既不思考也不消化，只是充当一个毫无灵魂的肉体传话筒——把上级指令一字不落地原样粘贴进大语言模型的输入框里，随后把模型吐出来的原始内容看都不看地直接交差……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Balaji</strong>: Looking at the developers currently building with AI, they primarily fall into a few distinct archetypes. First, we have the 'Garbage Grenade Throwers'—and let's be completely honest, most of us belong to this category to some degree, even as we try to pretend otherwise while hurling these grenades across the office. Second, we have what is brilliantly referred to as 'Meat Substitutes.' Have you heard this term before? It is easily one of my absolute favorites that has emerged recently; I love it. And finally, there is a tiny minority of true, disciplined software engineers, and we are all collectively striving to transform ourselves into genuine AI engineers.</p>
+<p>So what exactly does a 'garbage grenade thrower' do? It is what people do all day long: because AI is so blazingly fast and frictionless, you throw a half-baked prompt at an agent, it generates a giant pile of unvetted garbage, and without even reading it, you immediately chuck it over the fence to your colleague. You say, 'Shipped! Good luck! Hope production doesn't blow up, figure it out yourself!' And then you have the 'meat substitutes'—when someone doesn't actually understand what needs to be built, but simply acts as human middleware sitting between a manager or executive and an LLM. Whatever leadership asks for, they take the request verbatim, feed it straight into the model, and take whatever hallucinatory output comes out, barely glancing at it before passing it along...</p>
+</details>
+<!-- chunk 3/8 -->
+<h3>“肉身代用品”与企业层级中的现实觉醒</h3>
+<p><strong>演讲者</strong>：请把它还给我。所以你只不过是在扮演一个“肉身代用品”（meat proxy）的角色。如今在非常多的企业内部——这种情况亟待改变——存在着一层又一层的层级，而这些层级不过是充当传递信息的“肉身中介”，让你自己去和系统通信。</p>
+<p>我认为明年将会极其残酷。很多人在照镜子面对这一残酷现实时都会恍然醒悟，惊呼：“啊，糟了！”随后他们便会被解雇淘汰，这几乎是必然的。我在之前的演讲中就曾谈论过这一点，我认为这在明年某个时候一定会发生。</p>
+<p>真正的工程师正在竭尽全力围绕自身去构建系统，而不是仅仅停留在浮于表面的流程。但谁又没有一套属于自己的合适系统呢？正是这场对话，促使我一路探索走到了今天这一步。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>演讲者</strong>: それを返してください。だからあなたはあなたはただ役を演じているだけです「肉の代用品」、そして今ではとても多い企業、そしてこれ変更する必要がある、それらはレイヤー、レイヤー、そしてさらに単なる「肉」の層「プロキシ」通信するあなた自身。そして私は思う来年は残酷なのは、多くの人が目覚めるのは誰この現実の鏡に近づき、「ああ、しまった」と言うだろう。そして彼らリリースされます。それ必然的に。私は話しました。これについて彼らのスピーチ、そして私は思うこれはどこかで起こるだろう来年。真のエンジニア本当に頑張っていますビルドシステム彼ら自身の周りでプロセスではないが、そこにいないのは誰？適切なシステム。この会話は私がここまでたどり着いた方法。</p>
+</details>
+<h3>阵营之争：桌面图形界面派与命令行黑客</h3>
+<p><strong>演讲者</strong>：我看到了两个不同阵营的人群。这一直是分歧与割裂的根源。我们把人划分为：一类是“桌面（Desktop）”派，另一类是命令行界面（CLI）派、黑客以及深入思考事物本质的人……</p>
+<p>坦白讲，我以前一直对终端（Terminal）厌恶至极，过去我极度讨厌 CLI，真的打心底里讨厌。你看，给我一个漂亮的图形界面不好吗？我只要知道点击哪里就行了。我过去总是排斥把所有东西都塞到终端这种本该极客才去碰的地方，有什么东西总是在不断地别扭着我，折磨着我的习惯。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>演讲者</strong>: 私私は二つの陣営の人々を目にする。。それは常に分裂の原因だった。つまり、私たちは「「デスクトップ」の人々は CLIの人、ハッカー、思想家たち ...物事、私はいつもターミナルが大嫌いだった。私 CLIは昔から大嫌いだった。私大嫌いだった。ほら、私にちょうだい。素敵なインターフェース、どれを押せばいいですか？。私はいつも嫌いだったこれらを本来あるべき場所に置く何かが絶えず私をひねる驚くべきことに</p>
+</details>
+<h3>编排工具泛滥与 3700 万美元的同质化泡沫</h3>
+<p><strong>演讲者</strong>：令人惊叹的是，在过去的三年里，涌现出了如此之多的编排工具（Orchestrator），从 Cursor 演进到各种调度指挥工具等等，层出不穷。然而，根本没有人去真正把产品做得更好。大家都只是在简单地复制粘贴完全相同的界面布局：左侧是一个侧边栏面板，中间是一个流程图或图表，正如你们所看到的那样；然后你可以查看 Git diff。</p>
+<p>接着每个人都在吹嘘：“我们刚刚为一款全新的编排器完成了 3700 万美元的融资！”可是当你点开软件截图时，你会忍不住吐槽：“这不就是 Codex 吗？这难道不是 Cursor 吗？这……这不全都是一模一样的套路吗？从来都是这样。”根本没有人愿意去探索真正的差异化。在演讲的最后，我会向大家展示你们的可选方案，让我们拭目以待，我相信你们一定会喜欢的。你使用着那些通用的工具，而我则一直在不同的工具之间来回迁徙和切换。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>演讲者</strong>: 過去 3年間非常に多くのものが現れたオーケストレーターからカーソルを指揮者などに移動します。全て。そして誰もしようとしているより良い。簡単だ。コピー＆ペースト同じレイアウト。左側サイドパネルグラフ。あなたの真ん中にグラフ。おっしゃる通りです。 git diffを取得できます。そしてみんなはこう言う、「私たちはただ 3700万ドルを調達新しいオーケストレーター」。そしてスクリーンショットでは、あなたはこうなっています。「これはコーデックスですか？これはカーソルですか？これは…これは「同じことか？」いつも。そして誰も試みる。私お見せしてみます。あなたの選択肢スピーチの最後に、見てみましょうきっと気に入るよ。あなた使用一般的なツールそして私は常に私はあちこち移動する。</p>
+</details>
+<h3>从抵触自托管到加入 Thinker Club 极客俱乐部</h3>
+<p><strong>演讲者</strong>：我常常是先启动桌面应用程序，随后又被迫退回到命令行 CLI。而且社区里还有一群极其疯狂的人——如果你从未听过“Oh My Pi”这个词，甚至都不要去 Google 搜索它，直接略过就好。但是，“Oh My Pi”到底是什么？在集群管理（Herder）、“Oh My Chain”的圈子里，在虚拟机内部、Proxmox 虚拟化环境里，你去问他们到底发布上线了什么成果，他们会振振有词地说：“可是我的‘工厂’看起来正在轰轰烈烈地运转啊。”</p>
+<p>所以我过去一直猛烈批判这些做法。我以往极其讨厌那些搞自托管（Self-hosting）的人，我始终坚定地站在 Vercel、Railway 或其他托管平台这一边。没有任何必要去自己骗自己。然而，随着越来越多的思想家俱乐部成员加入并撰写相关内容，我也越来越渴望亲手去打造底层的系统。于是我也彻底转向了对立面：我配置了 Linux 机器、搭建了 Tailscale 内网，并搞了一大堆看似琐碎复杂但切中本质的底层设施。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>演讲者</strong>: デスクトップを起動しますアプリケーション、そして私は CLIに戻ります。そしてまた本物がありますクレイジーだわ、もしあなたが「オーマイパイ」という言葉は聞いたことがありません。グーグルで検索すらしないでこれで終わりだ。しかし、「オーマイパイ」って何？牧畜民の中で、「オーマイチェーン」の中で、内で仮想マシン、 Proxmox内部。そして彼らに何を尋ねますかリリースされ、彼らは「でも私の「工場は稼働しているようだ。」だから私はこれらすべてを批判した。私いつもあれらが嫌いだった自撮りをする人ホスティング。私はいつもは Vercel、鉄道または他の誰に対しても。ないどうぞご自由に自分を騙してください。そして私は完全に反対側へ渡ったシンカークラブと共同で。のために人数が増えるほどそれについて書く、私ももっと欲しいです。作る。だから私は Linuxマシン、Tailscaleおよびナンセンスの集まり、エッセンス。</p>
+</details>
+<h3>单会话提示词瓶颈与黑盒上下文压缩的困境</h3>
+<p><strong>演讲者</strong>：现在，让我们深入探讨工具与方法。谈到方法，工具其实就分为两大类：CLI 和桌面端（Desktop）。我们在实践中确实掌握着具体的方法。我已经把这些方法全部通盘试了一遍，现在就讲给你们听。</p>
+<p>首先是单一会话聊天与提示词全包的模式（One Chat Prompt）。这种方式到了后来彻底卡住走不通了。这就好比我放弃了为不同的任务开启多个独立对话窗口的做法，把所有事情都胡乱丢在同一个窗口里。尤其是在那些号称聪明的 Codex 中封存上下文时，我简直想要彻底放弃——队列中堆积了海量的上下文和指令，你甚至根本搞不清楚模型把内容压缩到了哪里，全部成了不可见的黑盒。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>演讲者</strong>: そこで、ツールと方法。話し合いましょう。方法についてですが、 2種類ありますツール : CLIとデスクトップ。そして私たちには実際に方法があります。私はそれらすべてに目を通し、今からお話しします。それは止まった。 1つチャットしてプロンプト勝利。これはまるで、私は開けるのをやめる。多くのチャットさまざまなタスク、そしてそのままにしておきます。特にスマートなコーデックスに封印する、私はもう諦めてもいいよ。キューに並んだたくさんのもの、そしてどこにいるのかさえ分からない。圧縮されています。</p>
+</details>
+<h3>工作树与“软件工厂”概念泛滥的现实断层</h3>
+<p><strong>演讲者</strong>：它在执行上下文压缩时甚至不会给出任何显式报告。当然，如果只处理简单的流程，这确实很容易：专心干活，处理手头的下一个任务，紧接着再推进下一个任务，一直这样机械地走下去。这确实能起效，也能产出某些结果。但在任务流转之间，完全没有任何时间去进行管理，比如根本没有验证子代理（Sub-agent）进行复核，也没有专门的测试子代理。你只能在心里默默祈祷，希望它在最终交付时能神奇地把所有任务都正确搞定。我虽然喜欢这种无脑感，但与此同时，我也非常不满意它的失控。</p>
+<p>接下来是第二种选择：一对一的任务对话，你在 Codex 内部为每个任务建立专属文件夹，或者在其他地方为所有交办的任务单独新开一个聊天窗口。但如果你不配合使用 Git Worktree（工作树），你根本无法预料添加的新功能是否会产生代码冲突；而如果你真的使用了 Worktree，随之而来的又是另一场灾难——你必须在各个目录下管理多条分散的会话，设法统筹这些分支树上的代理。整个现场变得混乱不堪。</p>
+<p>进一步地，我们不断扩展工作树，试图让协作变得更好。顺便提一句，就在七周之前，甚至还没有人真正了解 Worktree；现在大家怎么全都闭口不谈了？突然之间每个人都在大谈特谈 Worktree，仿佛一夜之间所有人都摇身一变成了 Git 架构专家，这种技术热潮真是屡见不鲜。但根本问题在于，它依然是一个完全孤立的系统。这就像另一个独立的 Git 一样，如果你不规范使用 Worktree，你不仅可能会彻底毁掉数据库，甚至会连带破坏版本库本身。</p>
+<p>再者，所有这些不断涌现的专有术语也让我深恶痛绝。被迫学习这些层出不穷的花哨概念让人精疲力竭。比如，你们听过所谓的“Gauntlet Loop”（严酷考验循环）吗？起初一个概念周期出现时，所有人都一脸茫然：“这是什么鬼东西？”而现在你却到处能听到大家跟风说：“哦，我只是在用 Gauntlet Loop 来完成那个工作。”我们总是喜欢凭空发明一大堆晦涩的名词，其中有些许用处，有些则纯属故弄玄虚。</p>
+<p>最后就是被神化的“软件工厂（Software Factory）”。如果你去问大家到底该研究哪些 Bot、去读那些关于软件工厂的宏篇大论，你可能会被唬住，但当你硬着头皮读到一半，你只会摆摆手说：“算了，不管怎样，先把工具扔给我就行。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>演讲者</strong>: どうやらそれは報告しない圧縮を実行します。だから、簡単なことなんです。働き、世話をする次のタスク、そして次のもの、そしてまた次のものへと続きますさらに遠く。効果があり、結果を生み出すが、タスク間に時間がない管理なし、例えばサブ検証のためのエージェント、そしてもう 1つはテスト中。あなたはただそう願うすべてを確認しますタスクを完了するみんな。私はそれが好きです。好き、そして同時に、それほど多くもない。次に、次の選択肢があります。 1対 1のチャットあなたが持っているタスク Codex内のフォルダ、または他の場所、そしてすべての人々のためにあなたにタスクを新しいチャットを開始する。しかしそうでない場合は使用ワークツリー、あなたは推測するかしないか機能が追加されます衝突する、または使用ワークツリー、そして次に床での別の会話これらによって、何らかの形で従業員を管理する木々。それで、少し散らかっている。さらに遠く私たちは木々を育て、より良い。ちなみに、誰もワークツリーについてはまだ知らなかった 7週間前、はいなぜ黙っているのですか？さあ皆さんワークツリーを使用する、みんなが Gitになったエンジニアの皆さん、よくある話ですよね。しかし問題は、それはまだ完全に孤立しているシステム。それはまるで別の Gitは確かに存在するが、破壊することもできるデータベースだけでなく、 Gitを使用せずにワークツリー。それからこれらはすべて私がよく使う用語私はそれが嫌いです。あらゆることを学ぶこれは非常に疲れる。例えば、聞いたことがありますか？「ガントレットループ」について？最初はサイクルが始まって、みんな「何？」って感じ。「.そして今、それは聞こえる「ああ、私はただそれをするためにガントレットループを使用する。私たちは常に私たちはたくさんのものを発明します用語、それらのいくつか役に立つものもあれば、そうでないものもある。それでおしまい。そして最後に、私たちは「ソフトウェアファクトリーソフトウェア」。もしあなたはどんな質問でもするでしょうどのボットを調査すべきかこれらに関するすべての記事工場では、感銘を受けたが、あなたは読むだけです半分にして言うでも、とにかくそれを私にください。</p>
+</details>
+<h3>LLM 之间的礼貌假象与“两个 AI 互相寒暄”的荒谬</h3>
+<p><strong>演讲者</strong>：为所有事情去反复撰写提示词吧，装作一个无所不能的“圣人”。“让我来做吧，我不得不充当那个中介。”因为这一幕确实太奇妙了。放眼望去，几乎没有人在真正运行所谓的软件工厂，大家只是把所有东西一股脑堆在一起，然后试图达成某种脆弱的共识。</p>
+<p>这到底算什么？难道这就是扁平化的企业协作组织吗？每个工程师都在自己的工厂里各自为政，难道我们不是在制造更大的混乱吗？你去看看 GitHub 上的任意一个代码仓库，某人借助大语言模型（LLM）提交了一个 Pull Request，里面写着极其华丽的 README 文件，塞满了花哨的 Emoji 表情和排版精致的段落。以前我们在 GitHub 上甚至都懒得用粗体去强调文字，而现在满屏都是大段大段的精美文字、分割线以及各种排版元素。</p>
+<p>更滑稽的是，对方审阅时还会给出更漂亮、更冗长的长篇大论。他们突然变得对细节体贴入微，而你在屏幕前只会冷笑：“这根本就不是你写的，混蛋，谁不知道这是 AI 写的。”所以现在的局面变成了：人类变成了两个大模型之间传话的无谓中介，两个 LLM 彼此之间用充满格式化礼貌的套话进行冗长沟通，而身处其中的人类却对真实逻辑毫无察觉。直到最后，客户或者老板给出了具体任务需求，才有人猛然惊醒：“我们到底为什么坐在这里？我们究竟在干什么？”</p>
+<p>我们需要彻底解开这个死结，预见到我们自身所处的位置，看清我们真正投身的工作。因此，我也采取了针锋相对的反制手段：用我的 AI 去审阅你的 AI，AI 对抗 AI。归根结底，它们终究会在某个中间地带碰头并达成妥协。但我们必须找到根本性的解决方案，倒逼整个研发流程完成实质性的进化。回顾我之前走过的弯路：从终端迁移到桌面 GUI 应用，随后被现实打脸又撤回终端，而最近这段时间，我则是全盘彻底回归到了命令行 CLI。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>演讲者</strong>: プロンプトを書いてください。あらゆることのために &quot;聖人。&quot; &quot;私にさせて私はそうしなければならない仲介者」なぜならこれは本当に素晴らしい。見てみればより広く、ほとんど誰も本当のソフトウェア工場、人々すべてを集める山積みにして、私たちは私たちは合意に達することができます。これは何ですか？これは水平である企業組織？すべてのエンジニアは彼の工場では、その結果、私たちは混乱を引き起こしているのだろうか？見てみるとどれでも GitHubのリポジトリ、誰かがそこにプルリクエストを作成しました法学修士（LLM）の助けを借りて。そこには素晴らしい READMEファイル絵文字と段落。私たちは決して心配さえするテキストの強調表示 GitHubでは太字で、そして今段落全体があります。セパレーターとすべて他の。そして彼らはまだ応答中より美しい景色。さらに長い。彼らは突然方向転換細部への注意、そしてあなたはこう考える。「あなたはこれをする」「俺は書いてないぞ、この野郎。」。これが何なのか、あなたは分かっているはずだ。 AIが書いた。したがって、今は 2つあります人々の仲介者、 2人分コミュニケーションをとる LLM彼らの間では誰もこれに気づかず、最後にタスククライアントによって提出された、またはボスですよね？そして誰も気づいていない：私たちは一体何のためにここにいるのだろうか？私たちは何をしているのでしょうか？私たちには必要だこれを解き明かすために、あれを実は予見されるのは私たちが何者であるかを理解してください私たちは婚約しました。だから私は私はそれに応じて投げ返した。私の AIがあなたの AIをチェックします AIなど。結局、彼らはどこかで待ち合わせをする真ん中で、しかし私たちは解決策を見つける必要があるそしてプロセスを強制する進化。私のやり方これより前 :から端末からデスクトップアプリケーションそしてターミナルに戻り、最近</p>
+</details>
+<h3>剥离复杂编排：Herder 与极简终端会话管理</h3>
+<p><strong>演讲者</strong>：我重新全面回到了 CLI。在座有谁听说过这个？有人听过相关讨论吗？你们明白我的意思吗？嗯？Herder（集群管理终端）？没听过就先忘掉它吧，但你们应该能理解其核心原理。</p>
+<p>如果你不知道它是什么，其实它就像 tmux 一样，允许你在任何设备上对代码进行远程持久化操作；会话不会因网络中断而丢失，终端体验丝滑稳定。把它部署好之后，所有状态都一目了然，绝不会出现遗漏或任务脱节。</p>
+<p>讽刺的是，我过去尝试过无数极其复杂的配置和自己编写的编排调度器，但在过去这一两周里，我仅仅只是将 Herder 配置为最纯粹、最简朴的终端界面。令人惊讶的是，我反而借此发布交付了数量最多的实际产品！这引发了我的深思：或许我们从一开始就把所谓的软件工厂与“安全性”给过度复杂化了。然而，这确实取决于你的具体处境：你是在与人协同？几个人？什么规模的团队？还是你完全在单打独斗？以及你具体需要交付发布的到底是什么产品？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>演讲者</strong>: CLIに戻りました。誰がこれについて聞いたことありますか？聞いた話それ？わかりますか？え？牧夫？忘れて。あなた理解した。だから、もしあなたはそれが何なのか知らないこのように、tmuxのようなものです。遠隔操作を可能にするあらゆるコードに対応するデバイスではセッションは中断され、端末は問題ありません。配置すると事実に見落とされなかったする。そして皮肉なことに、私はたくさん試しました設定、独自のオーケストレーターだが、過去または先々週私はセットアップしたばかりヘルダーは、最も単純なものとしてターミナル。そして私は最も多くリリースされた製品、そして考え：私たちもそうかもしれない私たちはこの全体を複雑にしていますソフトウェアファクトリー「セキュリティ」だが、これはそれは本当に状況。あなたは働いていますか？人と？幾つか人々？何チーム？あなたは働いていますか？一人で？または具体的に何をリリースするのですか？</p>
+</details>
+<h3>跨客户端的割裂：Cursor、Codex 与云端配额的折磨</h3>
+<p><strong>演讲者</strong>：后来我切换到了树莓派（Raspberry Pi）。不得不说，Pi 上的学习曲线相当陡峭，但我自己非常喜欢 Pi。以前我也常常嘲笑那些执着于在树莓派上折腾的人，我曾说：“拜托，像个现代人一样工作吧，直接拥抱云端，直接用 Codex，用那些唾手可得的成熟工具不行吗？”</p>
+<p>然而现实很快给了我一记重锤：我的云端配额（Quota）耗尽了，分配给我的云端额度彻底见底。被逼无奈之下，我只能在 CLI 版本的 Codex、桌面版 Codex 以及其他零碎工具之间疯狂来回切换。</p>
+<p>而令人抓狂的是，它们的底层行为逻辑完全大相径庭！它们在拉起后台子代理（Sub-agent）时的调度方式、在执行上下文压缩（Compaction）时的内部算法、在处理具体任务时的决策路径，彼此之间根本没有任何一致性可言。因此，我整天在 CLI、Cursor、云端服务和各种版本的 Codex 之间疲于奔命。正因为我在这些工具之间频繁切换，而它们又表现出截然相反的行为机制，这彻底把我逼疯了。</p>
+<p>所以当我最初尝试构建编排系统时，我天真地试图把这三大平台全部强行整合进来。但我很快发现这几乎是不可能完成的任务：要构建一个能同时完美兼容这些平台差异的统合编排器实在太艰难了，特别是还要兼顾纯粹的 CLI。它们在达成目标和完成具体任务时所采取的方法论完全是脱节的。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>演讲者</strong>: 私 Raspberry Piに切り替えました。円周率は急勾配だ。自分私は円周率が好きです。私もみんなを笑った、円周率を使った人。私は言った、「ただ人間らしくあれ。クラウドを活用しよう。コーデックスを使用してください。何を使うか &quot;何でも。&quot;その後、私のノルマが終了しました、クラウドのクォータについて消えた。そして私は CLI Codexに切り替えましたまたは Codexデスクトップ版、もしくは他のもの何か。彼らは行動する全く違う。彼らのやり方発売しますサブエージェントとして圧縮を実行する、彼らはこれをどのように行うか、あれをどのように行うか。だから私は常に CLIを切り替えてカーソル、クラウド、コーデックス。そしてなぜなら私はそれらを切り替えて、彼らは行動した全く違う。そしてこれそれは私を狂わせた。だから私が建てるときオーケストレーター、私は構築しますこの３つに加えて。しかし、それは非常に難しい。オーケストレーターを作成するこれは、これらすべて、そしてそれは CLI。彼らは異なる方法を用いている。タスクを完了する。</p>
+</details>
+<h3>纯粹 CLI 的模块化救赎：插件控制与全设备统一感知</h3>
+<p><strong>演讲者</strong>：而在 Pi 的环境下，你别无选择，只能严格使用命令行 CLI。这种纯粹的 CLI“开箱即用”时几乎是一张白纸，不会替你做任何擅作主张的多余操作。</p>
+<p>如果你需要上下文压缩功能，你就必须明确安装对应的压缩插件；如果你需要并发运行子代理（Sub-agents），你就必须显式配置子代理插件。这样一来，你就能对内部的每一处执行过程拥有 100% 的绝对掌控权。这就像是 Linux 的系统框架哲学一样透明可靠。</p>
+<p>我仿佛能听到你们心中的声音：“啊，是的，见鬼，确实如此。我想要一套比普通 Linux 更优雅、更具风格的操控体验，对吧？”</p>
+<p>在这方面，Herder 最近新增的一个特性非常亮眼：如果你的所有机器设备上都安装配置了 Herder，你就能在一个统一的界面里俯瞰并掌控所有的计算节点——无论是 MacBook Pro、Mac Studio 还是远端的 Linux VPS 等等，全部尽收眼底。这感觉真的非常棒。因此，我的工作方式发生了彻底的转变：我现在仅将笔记本电脑用作纯粹的远程管理终端。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>演讲者</strong>: そして Piでは CLIしか使えません。どれが「型破り」なのか何もしない。それで、あなたが望むなら圧縮には、プラグインをインストールしてください。あなたが望むならサブエージェントを実行するインストールする必要がありますプラグイン。そしてあなたは完全にプロセスを制御する。これは Linuxのようなものフレームワーク。そして私は、あなたが言っているように聞こえるのは、「ああ、はい。くそっ、そうだ。私はしたいもっとスタイリッシュなもの Linuxですよね？ハーダーはまた、良い機能があります。追加されたようです最近：もしハーダーがすべてにインストール済みあなたの車、あなたすべてを見る 1か所に—MacBook Pro、 Mac Studio、Linux VPSなど。なかなか良いですね。私に切り替えました使用ノートパソコンのみリモコン管理。</p>
+</details>
+<h3>远端工作流的觉醒：从打翻的鸡尾酒到全面投奔 Linux</h3>
+<p><strong>演讲者</strong>：一切始于云端，而现在我决定走得更加彻底。我的根本决策是：笔记本电脑或智能手机，仅仅只是用来查看和操控云端实际运行环境的“遥控器”而已。</p>
+<p>我之所以会一头扎进这个深不见底的技术兔子洞，是因为遭遇了一次惨痛的意外事故：当时一杯含牛奶的鸡尾酒不慎倾倒在我的笔记本电脑上。那时候我本地正好有一个刚刚修改完成但尚未推送至远程的 GitHub 代码仓库，我根本来不及在电脑彻底死机前完成代码的同步和下载。万幸的是绝大部分内容最终还是抢救了回来，但在那一瞬间，我整整一个月的心血差点随着报废的笔记本电脑灰飞烟灭！</p>
+<p>那次事故让我彻底痛定思痛：我必须把整个工作环境、所有开发状态和任务现场彻底剥离并迁移到远端，确保无论身处何地、使用任何终端设备都能无缝接入。直到今天，我哪怕拿着一台 10 年或 11 年前的老旧 MacBook，也能流畅地远程连接到专属的开发环境并全速执行繁重的高负荷任务。</p>
+<p>起初，我尝试把所有的工作流都整体迁移到工作室的 Mac Studio 上。然而实践证明，Mac 和 macOS 底层在应对全天候无头运行的远程自动化代理（Remote Agents）时，存在很多水土不服的问题，无法完全适应这种高强度的后台代理托管需求。</p>
+<p>经过长达 15 年的深度使用后，当重新审视这一现状时，我没有丝毫犹豫，果断做出了决定：“好吧，是时候全面尝试 Linux 了。事实证明，这或许才是我做出的最明智的选择。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>演讲者</strong>: 始めたクラウドから、そしてもう一つ、私はもう先に進みます。自分の決定、ノートパソコンまたはスマートフォンこれらは単なるリモコンです何が起こっているのかクラウド上で。だから私はこのような状況に陥ったウサギの穴、なぜなら牛乳がこぼれるカクテルは各自でノートパソコン、そして私は 1台持っていた GitHubのリポジトリ、私には時間がなかったダウンロード。幸いなことに全て保存されていたが、私はすでに彼が終わり。 1ヶ月の仕事消えてしまうかもしれないこれに加えてラップトップなので、私は気づいたすべてを移動させる職場環境働く場所どのデバイスからでも。今でも私は私は 10- 1年前の MacBookから遠隔で接続するあなたのセットアップとタスクを実行する。まず最初に試してみましたすべてを Macに移行するスタジオで、 Macと macOSは完全には適応リモートエージェント。 15年後、考えてみると私は考えず、決めた。「わかりました、Linuxを試してみます。そうなるかもしれない最良の選択</p>
+</details>
+<!-- chunk 4/8 -->
+<h3>从 VPS 租赁到自建地下室 Linux 服务器：告别游戏，沉迷智能体</h3>
+<p><strong>演讲者</strong>：……其实就是一个选择。当时我开始租用一台 VPS，每个月的租金是 128 欧元。我心里盘算着：“如果这套系统真能帮我赚到钱，那投入和产出完全是两码事，这其中的差距简直太惊人了。”后来我仔细算了一笔账：如果我把每个月这笔租赁费用连续交上两年，这笔钱完全足够我自己去组装一台属于我自己的高性能 Linux 计算机了。</p>
+<p>结果一眨眼的功夫，你家里地下室里就真正多出了一台属于你自己的 Linux 物理服务器。但当时我突然想起，我家里其实本来就放着一台高配置的游戏台式 PC。过去上面跑着 Windows，整天打游戏，但现在那些游戏早就对我毫无吸引力了——我现在的全部兴趣都在这里，玩这些东西可比打电脑游戏有意思多了。今天我根本不想再去碰任何游戏，也不想花时间去刷什么电视剧，我现在一心只想把所有时间都投入到跟这些 AI 智能体（Agents）的交互与协作当中。</p>
+<p>于是我下定决心：干脆把这台游戏 PC 直接格式化。给它装上那个在很多人眼里“糟糕头顶”的 Linux 系统，对吧？虽然之前 Windows 系统还保留在上面，但我发现既然这台机器跑 Linux 效果这么好，唯一的短板就是内存不够用。我非常想念更大容量的 RAM 内存。</p>
+<p>于是我便开始四处搜寻各种电脑硬件配件。在真正投身到开发面向客户的实际产品之前，我彻底掉进了一个越来越深的“兔子洞”（Rabbit hole）。当时我看了看手头的机器，只有 32 GB 的内存。我心里非常清楚自己需要多得多的内存，但要升级内存，往往就必须把整块主板也给连带换掉。我当时心里不断琢磨：“我想要这个主板，我还想要那个配件……”结果折腾到最后，我硬生生自己从零开始组装出了第二台独立的 Linux PC。是的，我完全从零攒出了自己的第二台专属 Linux 电脑。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: ...It was an option. I started renting a VPS for 128 euros a month and thought to myself: &quot;If this actually brings in money, then what a massive difference it makes.&quot; Later, I did the math on the costs. If I were to pay this kind of monthly fee for two years, that total amount would easily allow me to buy and build my very own dedicated Linux computer.</p>
+<p>And before you know it, suddenly you have your very own Linux server showing up right there in your basement. But then I remembered my existing gaming PC. It had Windows and games on it, but I'm just not into that anymore. What I am truly interested in is this—this is infinitely more fun than playing video games today. I don't want to play video games; I don't want to sit around watching TV series. I just want to play with and build alongside these agents.</p>
+<p>So earlier on, I made the decision: I am going to completely format this PC. I was going to put this &quot;terrible&quot; Linux on it, right? Windows was still sitting there, but even though it worked reasonably well, I sorely missed having more RAM.</p>
+<p>So that was when I started hunting for components. Far before developing the actual production product for customers, the rabbit hole just kept getting deeper and deeper. I looked at it and thought, &quot;Look, 32 gigabytes.&quot; I needed way more than that, but upgrading the memory meant I also had to upgrade the motherboard: &quot;I want this, and I want that.&quot; And as a direct result, a second Linux PC materialized. Yes, I ended up building a second Linux computer completely from scratch.</p>
+</details>
+<h3>虚拟化与隔离环境：借助 Proxmox 与 AI 让基础设施自动化</h3>
+<p><strong>演讲者</strong>：就在这个时候，有人向我提议：“你为什么非要纠结到底装哪个 Linux 发行版呢？你完全可以在物理机上直接部署一套 Proxmox 虚拟化环境啊！”</p>
+<p>在座的各位当中，有谁的技术极客水平高到足以自己去手动配置整套 Proxmox 呢？请举手看一下？好的，我看到举起的手不多，我完全理解。Proxmox 确实是个非常酷炫的平台，它可以监控系统底层的所有资源，就像我们刚才深入讨论的那样。因为过去我总是不得不花大量时间在底层配置里反复摸索、到处点击菜单来修改各种复杂参数。</p>
+<p>所以对于刚才提到的所有这些底层细节，请大家直接放手，千万别再自己去一点点死磕。我自己其实也根本没有那么高的智商，凭我单枪匹马一个人是绝对搞不定这些复杂配置的。我当时的做法特别干脆——我直接把这些琐事全盘托付给了 AI 智能体。我对它说：“听着，我有个朋友强烈推荐我使用 Proxmox，你现在就去帮我把 Proxmox 完全配置妥当并跑起来。”没过多久，它就已经把整套系统完完整整地全部部署配置好了。</p>
+<p>这种体验真是令人叹为观止。因为从本质上讲，你手头虽然只有一台物理计算机——假设你只有这么一台机器——但只要安装了这种顶层的底层虚拟化操作系统，你就可以在上面随心所欲地并行运行 Linux、Windows，甚至连古老的 Windows XP 都能作为轻量级虚拟机随时启动运行。而你手里的所有 AI 智能体都能在这些隔离环境里顺畅运转。</p>
+<p>你甚至根本不需要亲自去手动做任何调整配置。它们既可以作为独立的完整虚拟机运行，也可以作为容器（Containers）灵活编排。所以归根结底，你等于在自己的局域网内部独立搭建起了海量可用的计算资源与运行节点，哪怕是功能完备、开箱即用的完整虚拟机也能瞬间启动。</p>
+<p>正因如此，我的智能体们就拥有了非常清晰的边界：这里运行着 Hermes，那里跑着其他专属智能体。我专门为它们各自划分并分配了小型的轻量虚拟机，这样一来，就算它们在运行过程中突然失控，做出某些愚蠢的操作，它们也仅仅只是被严格限制在我物理机内部的一个极小的隔离迷你计算单元里，根本无法越界破坏宿主机。</p>
+<p>那么，我是怎么搞定 Proxmox 安装的呢？我当时接入了 KVM 硬件控制台，然后把控制权转交给了 Codex，对它下令：“请帮我把接下来的安装配置全部处理掉，我一眼都不想再多看这些繁杂的安装界面了。”事情就这么简单。Codex 在后台忙碌地敲命令、安装、排错，最终一切大功告成。我过来看了一眼，由衷感叹道：“太棒了，全部搞定，而且我以后再也不需要隔三差五去手动摆弄这些底层硬件了。”</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: And then someone chimed in and said, &quot;Why are you debating over which Linux distribution to install? You could just install Proxmox!&quot;</p>
+<p>Who among you here is enough of a hardcore nerd to configure Proxmox from scratch on your own? Let's see a show of hands. All right, I understand. Proxmox is an incredibly cool piece of tech for monitoring everything across the stack, just as we discussed, because previously I would find myself digging endlessly through configuration files and clicking all over the place trying to adjust settings.</p>
+<p>Therefore, for everything mentioned here, just leave it as it is. I am certainly not smart enough to deal with all of this entirely by myself. I simply turned to my agent and instructed it: &quot;Hey, a friend recommended that I use Proxmox, so please go ahead and set it up and run with it.&quot; And boom—right there, it had the entire environment completely configured.</p>
+<p>This is truly remarkable, because in reality, out of just a single computer—suppose you only own one PC—you can install an operating system at a higher hypervisor level, and then spin up Linux, Windows, or even legacy Windows XP as virtual machines. Everything runs like a charm, and all your agents operate smoothly.</p>
+<p>You don't even need to configure things manually anymore. They can function seamlessly as virtual machines or containers. So essentially, you have an entire fleet of independent computing instances made available right inside your local network. You can run fully completed, standalone virtual machines.</p>
+<p>That is why my agents operate this way: here is Hermes, and there are the others. I carved out and assigned dedicated little virtual machines for them, ensuring that even if they go rogue or do something completely stupid, their footprint is strictly contained within these mini-computers running inside my physical machine.</p>
+<p>So, how did I get it &quot;Proxmoxed&quot;? I plugged in a KVM switch, turned to Codex, and said: &quot;Please finish this up. I don't even want to look at this.&quot; And that was that. It worked away, executed the steps, and succeeded. I looked at the result and thought: &quot;Great, it worked, and I don't have to keep touching this constantly.&quot;</p>
+</details>
+<h3>远程开发环境优雅化：抛弃晦涩 IP，拥抱 Traefik、PM2 与自定义域名</h3>
+<p><strong>演讲者</strong>：很多人在刚开始尝试远程开发与远程编程时，我经常看到他们发过来的各种屏幕截图——上面全是一堆乱七八糟、稀奇古怪的裸裸 IP 地址，充斥着各种让人眼花缭乱的杂乱端口与原始输出。</p>
+<p>但实际上，如果你在做远程开发，你完全可以为自己构建出一套极其优雅、舒适的高水准工作环境。你只需要吩咐你的智能体去帮你把 Traefik（不管这个单词到底怎么读，反正是 Traefik）和 PM2 配置好。接下来奇迹就会发生：你所有的后端进程与后台服务都会被智能路由并映射到一个极其清爽、易读的专属 URL 域名下。</p>
+<p>你可以拥有属于自己的专属根域名，无论那个域名叫什么都可以；然后你可以充分利用各个子域名来对应你开发流程中的各个独立微服务与测试模块。</p>
+<p>这样一来，无论你何时想查看当前正在开发的落地页或服务长什么样，你都可以直接在浏览器里访问诸如 my-beautiful-landing-dev.my-url.whatever 这样清晰优美的域名。你一眼就能认出它，随手就能把它保存在浏览器的收藏夹里，而不是每次都费劲去记那些随机分配、毫无规律的裸 IP 地址和端口号。</p>
+<p>这绝对是一个值得大家采纳的极佳工程实践。智能体完全有能力把这一切自动装配妥当。</p>
+<p>而这一切的核心逻辑，往往会让很多人跑过来问我：“你的这些配置文件里到底都写了些什么内容啊？”我的回答非常直接：“老实说，我真的不知道。”我已经整整两年没有亲自打开并肉眼看过哪怕一份底层的原始配置文件了。我所做的仅仅是向智能体表达我的需求与愿望，然后凭借自动化工具，所有的配置与环境就如同魔法一般全部自动就位了。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: People often start getting into remote programming, and I see the kind of screenshots they send me—riddled with weird, raw IP addresses and all sorts of chaotic junk.</p>
+<p>In reality, you can build a very, very clean and pleasant environment if you are working remotely. You can simply tell your agent to set up Traefik—however you choose to pronounce it, Traefik—along with PM2. Magically, your processes and services will be gracefully mapped and guided under convenient, readable URLs.</p>
+<p>You can have your own primary domain, whatever domain it might be, and leverage structured subdomains to manage your entire development pipeline.</p>
+<p>That way, whenever you want to check what your landing page currently under development looks like, you can simply navigate to something like my-beautiful-landing-dev.dot-my-URL-dot-whatever. You will instantly recognize it, remember it, and bookmark it. It won't be some arbitrary, accidental raw IP address.</p>
+<p>This is a fantastic piece of advice you should definitely adopt. The agent is entirely capable of configuring all of this for you.</p>
+<p>The essence of all this is that people keep asking me: &quot;What exactly is written inside your configuration files?&quot; And I reply: &quot;Yes, well... honestly, I have no idea.&quot; I haven't directly looked at a configuration file with my own eyes for two whole years. I simply state my intention or make a wish, and everything materializes as if by magic.</p>
+</details>
+<h3>破解 API 额度与速率墙：多账号订阅、负载均衡器与智能路由架构</h3>
+<p><strong>演讲者</strong>：接下来我想聊聊额度限制的问题。毫无疑问，我们所有人都在共同面对并承受着各种 API 速率与用量上限的瓶颈。</p>
+<p>在这一块，我琢磨出了一套非常实用的小技巧。我自己同时开通并支付着 4 个每个月 200 美元的顶配订阅服务。这笔开销完全不成问题，比起雇佣专职工程师的成本，这简直便宜太多了，完全属于合理的生产力投资范畴。</p>
+<p>但核心的挑战在于：你必须能够在不同的时间窗口与不同账号之间进行精细化调度与管理。也就是说，你必须搭建一个所谓的 Codex 负载均衡器（Load Balancer）。听到这里你可能会纳闷：“什么？难道你们大家平时写代码都不用负载均衡器来做分流调度吗？”我原本以为这早就已经是行业内公认的标准基操了，大家听到后应该都会异口同声地说：“对啊，当然是这样，这就是我日常的工作流。”</p>
+<p>在实际架构中，系统外部只需要暴露一个统一的 API 端点。但每当你向它发起调用请求时，这个端点背后会自动做智能决策：当前应该去调度哪里的计算资源与 API 额度？它对你名下所有账号的速率限制了如指掌——无论是按周计算、按天计算，还是任意时刻的实时额度。正因为有了这层调度，事实上我的 API 配额从来没有真正枯竭耗尽过。</p>
+<p>当然，直到不久前他们发布了 Astra 模型，情况发生了一点意外——在 Astra 发布后的短短一天内，配额瞬间就被吞噬一空。在处理 Astra 时这种限流确实非常糟糕。</p>
+<p>但与此同时，这套架构还附带了一项极具价值的额外红利：你不仅可以通过实时语音交互进行多模态通信，还能直接在同一个统一端点下并行生成各种图像。你只需要向终端程序或客户端暴露这一个最终端点，程序本身完全不需要关心背后的调度细节，只需直接与该负载均衡器对接即可。</p>
+<p>而且更精彩的还在后面。刚才说的还仅仅只是针对 Codex 这一款工具；但对于其他工具又该怎么处理呢？我们还有 Cursor、Gemini，以及市面上层出不穷的大量其他模型与开发助手。</p>
+<p>在这些工具背后，隐藏着一个极其简洁精巧的 API 代理 CLI 工具，它同样在扮演着负载均衡器的角色。而位于最顶层的“AI 路由器”（AI-Router），则是整个系统的核心调度中枢终端。</p>
+<p>每当我有写代码的需求时，我只需要单点对接这个 AI 路由器，由它全权负责裁决并调度——究竟该调用后端这些林林总总的哪一个服务来具体承接任务。到目前为止，甚至几乎还没有人真正公开发布过这种体系架构。稍后当我切换到下一张幻灯片时，你们就能看到借助 PiHerder 以及其他周边工具，究竟能把整体的开发生产力提升到多么恐怖的境地。</p>
+<p>总结起来就是：每一个底层的模型与端点，都汇聚成了一个处处皆可无缝调用的统一入口。这直接创造出了前所未有的全新算力与吞吐空间。而不是像过去那样，四处搜刮、费尽心机地去抠一点 Claude 的额度，或者再挤出一点 Codex 的配额。这种架构是真实存在的吗？它不仅真实，而且运转得极为顺畅。正因如此，我所有的对外调用连接都被收敛并沉淀到了这一个核心端点之上。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Next, I found myself constantly pushing against the hard boundaries of limits and rate caps, which of course is a shared struggle we are all navigating together.</p>
+<p>Here, let me share a neat little trick with you. I am paying for four separate $200 monthly subscriptions. That expense is trivial—it is vastly cheaper than hiring human staff, so it is completely normal and justified.</p>
+<p>However, you must manage and orchestrate each of them across varying time intervals. In short, it comes down to what you might call a Codex load balancer. You might wonder: &quot;What? Are you guys telling me you don't use load balancers to distribute your workload?&quot; I genuinely assumed this was already common knowledge and industry standard, where everyone would simply respond: &quot;Yes, absolutely, that's exactly how I do it.&quot;</p>
+<p>In practice, there is only a single unified endpoint exposed to your tools. But whenever you make a request against it, the balancer intelligently decides: where should it source the necessary resources right now? It has full awareness of your quota limits—weekly caps, daily thresholds, any timeframe. And in truth, my quotas have never run out... well, at least until they rolled out Astra, which completely disappeared down the drain within a single day. Astra is indeed pretty brutal in that regard.</p>
+<p>As a massive bonus: through this very same terminal endpoint, you can engage in real-time voice communication and simultaneously generate images on the fly. You can present this exact endpoint to your client programs, and they simply interact with the load balancer.</p>
+<p>And things get even better. This handles Codex, but what about other tools? You have Cursor, Gemini, and countless others. Hidden behind all of them is a lightweight API proxy CLI, which itself functions as another robust load balancer.</p>
+<p>Hovering above all of this is our AI-Router, serving as the master terminal hub. Whenever I want to write code, I interface exclusively with this router, and it autonomously determines which specific service among all these available tools to dispatch the work to. Almost nobody has formally released something like this yet. As I advance to the next slide, you will see how tools like PiHerder and others can skyrocket your productivity.</p>
+<p>Every single model becomes a singular, globally accessible endpoint. This produces entirely new capacity. Instead of manually scraping a tiny bit of quota from Claude here and a few crumbs from Codex there, does it actually work in practice? It works brilliantly. Thus, all my connection pipelines are consolidated neatly into one single problem domain.</p>
+</details>
+<h3>工具连接器与执行器模式：告别重复配置，以单一 MCP 驱动万物</h3>
+<p><strong>演讲者</strong>：大家看，这就是其中一张非常关键、值得你们举起手机拍照记录的幻灯片。请务必牢牢记住它的名字——Executor（执行器）。</p>
+<p>如果你们当中还有人至今没有搭建或配置过 Executor，我强烈建议你们重点关注它。相比于 OpenClaw，我更推荐这个架构，因为它表现出的威力简直无与伦比。</p>
+<p>这套模式最核心的优势在于：它赋予了我随意更换和重构底层配置的绝对自由。每当我想尝鲜体验一款全新的工具——不管它是 Grok Bot、Meta 刚出的 Muse，还是任何其他横空出世的新模型——在过去，我每一次都不得不痛苦地把 Gmail、Google Calendar、GitHub、Cloudflare 等等这一整套繁琐的数据连接器全部重新对接一遍。是的，每一次都得把所有这些第三方服务从头连接一次。</p>
+<p>而现在这一架构给出的破局之道，就是把所有的外部服务连接器收拢并归宿到一个统一的 MCP（Model Context Protocol）宿主服务之中。然后把这一切的全部能力，统统注入到 Executor（执行器）里面。</p>
+<p>现在，假如我想去体验一下来自 Meta 的最新 Muse 模型，我根本不需要做任何复杂的环境适配。我只需要告诉它：“你只需要挂载并使用这一个 MCP 即可——这就是我的专属执行器。”随后，这个统一的执行器就会代表该模型去向下调用所有与之绑定的下游服务。</p>
+<p>这样一来，在不同的智能体与客户端之间进行自由切换就变得轻而易举，无论是 Pi、Claude、Codex，还是其他任何主流或新兴的 Bot 机器人。整个过程流畅得不可思议。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: And this is one of those slides that is worth taking out your phone to snap a photo of. Make sure you remember its name: Executor.</p>
+<p>If you haven't configured an Executor yet, this is precisely what I am advocating. Even more so than OpenClaw, because this is absolute pure fire.</p>
+<p>The single best thing about it is that it grants me the freedom to effortlessly change my configuration. Whenever I want to test out something new—whether it's Grok Bot, Meta Muse, or whatever new system just dropped—previously I had to manually reconnect Gmail, Calendar, GitHub, Cloudflare, and all those respective connectors every single time. Yes, every single one of those integrations.</p>
+<p>The definitive solution here is to house all connectors under a single MCP provider. Everything is plugged directly into the Executor.</p>
+<p>Now, if I want to give Muse from Meta a spin, all I have to tell it is to consume just this one single MCP—which is my Executor. That performer then bridges out and talks to every other underlying service on its behalf.</p>
+<p>This makes switching back and forth between Pi, Claude, Codex, and other bots infinitely easier, rather than undergoing constant reconfigurations. It is remarkably straightforward.</p>
+</details>
+<h3>重塑智能体技能架构：从臃肿的 Markdown 文件到 Skillbox 与技能包规范</h3>
+<p><strong>演讲者</strong>：接下来，我想介绍一个由我开源的项目。它的完整源代码已经公开发布在我的 GitHub 主页上，项目名称叫做 Skillbox（技能箱）。</p>
+<p>我逐渐意识到，我们过去在维护智能体技能（Skills）方面的方式从一开始就走偏了——我们过去习惯于把各种技能硬塞在分散的 Markdown 文件里。在早期，我写了一段自动化脚本，把 GitHub 仓库里的技能文件跨不同的工作空间进行同步。但这种做法到最后演变成了一场混乱的灾难，极其容易让人摸不着头脑。</p>
+<p>每当我在配置一台全新的电脑工作环境时，经常会出现这样的窘境：“糟糕，原本应该有的那项技能，在这台新电脑上居然丢失了。”当时我就在想：“既然我们已经有了一个承载所有 MCP 的统一执行器，既然我所有的 MCP 工具都能够被集成收敛到一个地方，那为什么我不能把所有的技能（Skills）也统一封装到一个专属的 MCP 服务里呢？”</p>
+<p>顺着这个思路，我围绕这个目标展开了深度开发。而他们随后也顺理成章地制定出了一套正式的标准规范。因此在当前的 MCP 规范体系中，有一个非常核心的理念被明确提出——那就是所谓“技能高于原始 MCP（Skills matter more than MCP）”。</p>
+<p>你不再需要在各个不同的工作目录下散落堆积 30,000 多个臃肿凌乱的 Markdown 技能文件。你现在只需要在你的智能体系统里完成极其简单的一句指令，对你的 Bot 说：“嘿，我启用了 Skillbox。”它就会立即为你返回一个设计精良的图形化 Web 界面 URL，你所有的技能都会清晰直观地呈现在眼前。</p>
+<p>不仅如此，这套体系还允许你把技能解耦并打包成一个个独立的“技能包”（Skill Bundles）。比如针对个人日常助理智能体，你给它一套技能包；而针对专职写代码的编程智能体，你再给它另一套完全隔离的技能包。</p>
+<p>我的个人日常智能体平时只需要用到 4 个核心技能，而我的专业编程智能体可能需要配备 20 多个强大的研发技能。而且这两者之间完全没有必要、也不应该去感知对方技能树的存在。</p>
+<p>因此，如果我现在需要配置部署一套开源的 Open Cloud Hermes 智能体，我只需要将它精准指向专属于它的定制技能包即可。它在这个技能包的边界内工作得非常出色，绝不会在运行过程中莫名其妙地反问我：“哎，Cloudflare 是个什么东西啊？”</p>
+<p>这极大地改变了现状。过去我的技能虽然表面上任何人都能访问，但实际上却死死沉淀在本地一个塞满了无数庞杂 Markdown 文件的混乱文件夹里。而现在，我的整套技能生态完全变成了可自由迁移的便携化模块（Portable）。</p>
+<p>我只需要把它打包带走，无缝接入到任何其他系统或框架中，一切就能立即稳定运作。我目前还在持续研发一些更新的技术能力，并且一定会将其彻底实现。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: From there, I open-sourced this project's codebase. It is listed right on my GitHub under the name Skillbox.</p>
+<p>I came to realize that the way we were managing skills was fundamentally flawed—keeping skills trapped inside markdown files. Previously, I maintained a custom script where GitHub synced skills across various workspaces. But it ultimately proved to be an absolute mess and incredibly confusing.</p>
+<p>Whenever I sat down to set up a brand new computer, I would inevitably run into: &quot;Oh great, I don't have that skill over here.&quot; That got me thinking: &quot;If we already have an overarching executor actor for MCP that encapsulates all my MCPs, why on earth don't I consolidate all my skills into a single, unified MCP?&quot;</p>
+<p>So I went to work on this, and they ultimately adopted it into the formal specification. In the official MCP specifications today, there is a recognized concept: &quot;Skills matter more than MCP.&quot;</p>
+<p>Instead of having 30,000 loose markdown files scattered all over the place, you simply tell your bot: &quot;Hey, I'm using Skillbox.&quot; It immediately hands you a polished graphical interface URL, and boom—all your skills are right there.</p>
+<p>Furthermore, you can segment and organize them into modular &quot;Skill Bundles&quot;—a bundle for your personal assistant agent, another bundle for coding agents, and so forth.</p>
+<p>My personal agent only ever requires 4 specific skills, whereas my coding agent might utilize 20 distinct skills, and neither of them needs to be aware of the other's toolset.</p>
+<p>Consequently, if I am configuring something like Open Cloud Hermes, I simply point it to its designated skill bundle. It operates exclusively within that perimeter, never getting confused or randomly asking: &quot;Wait, what on earth is Cloudflare?&quot;</p>
+<p>Previously, my skills were technically accessible to anyone, but they were trapped inside a single folder burdened by a mountain of markdown files. Now, my entire infrastructure is completely portable.</p>
+<p>I can effortlessly pick it up, plug it into any other setup, and everything works seamlessly out of the box. I am currently working on something even newer, and I will definitely see it through to completion.</p>
+</details>
+<h3>从插件到剧本（Playbook）：智能体大脑的可移植性与编排终局</h3>
+<p><strong>演讲者</strong>：这就像是在现有的技术栈之上又叠加上了一层更高维度的抽象。因为在技能这一层我们拥有了 MCP，而在 Codex 的实际落地应用中，他们把这层封装称为“插件”（Plugins），对吧？</p>
+<p>如果你在 macOS 平台上使用 Codex 并安装了某个开发类插件，该插件会自动在底层为你安装对应的 MCP 工具以及关联的所有技能。正因如此，我认为在行业术语上我们可能需要一个更加贴切的新名词，比如可以把它称为“剧本”（Playbook）。</p>
+<p>关于这个方向，我脑海中涌现出了大量的全新设想。或许在下一次的技术分享大会上，我会专门针对这个主题带来更深入的演讲，大家也可以随时在我的 Twitter 上保持关注。</p>
+<p>但其核心思想始终如一：那就是将 Skillbox（技能箱）与 Executor（执行器）进行深度融合，在更高的层级上把所有的配置、上下文和运行环境完整打包。这样一来，你就能毫不费力地把这整套环境直接打包迁移到任何一台全新的物理机或云端环境中。</p>
+<p>这非常类似于 KenshoDogs 团队打造的 Cody。如果你曾经关注或研究过 Cody，你会发现它们的理念几乎如出一辙。虽然他们通篇使用了 Cloudflare Workers 以及大量晦涩深奥的专有术语，但我彻底看穿了它的底层本质：它的核心构想，无非就是把智能体的“大脑”（Brain）从具体的宿主环境中彻底剥离出来，完整封装进 Cody 容器之中，从而赋予它自由穿梭、漫游迁移到任何运行环境的能力。</p>
+<p>可以说，Cody 本质上就是在更高维度上对 Skillbox 与 Executor 进行了一次极其精巧的包装与功能增强。而我的这套 Executor 也会在不久后发布一个对开发者更加友好的全新迭代版本，其产品形态将与 Cody 展现出高度的相似性。</p>
+<p>面对当今技术爆炸的洪流，想要完整追踪并消化所有这些前沿进展确实极其困难。但我今天站在这里，最希望能为大家播下一颗认知的种子——让大家真切意识到，整个行业正在以何等迅猛的速度发生着范式转移。</p>
+<p>在如此繁重的复杂性面前，我们人类有限的内存、我们脆弱的大脑带宽，在现实世界中是根本无法同时应对和消化这所有一切的。事实的确如此。我们面对着海量的算力瓶颈、数不尽的账号订阅、复杂的负载均衡调度、五花八门的代理层……林林总总的琐事堆积如山。</p>
+<p>因此我最终得出了一个极其坚定的结论：如果你不肯为自己量身打造一个专职的系统编排器（Orchestrator），如果你不建立起一套能够替你统筹全局的自动化调度体系，你整个人以及你的技术架构必然会彻底陷入一片不可收拾的混乱状态之中。到时候没有任何事情能顺畅运转，失控与混乱必将不可避免。因此，所有这一切……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: It's essentially adding another layer of abstraction on top, because while our skills have MCPs, the implementation inside Codex refers to this tier as &quot;Plugins,&quot; right?</p>
+<p>So if you come over to Codex and install a development plugin on macOS, it automatically installs both the underlying MCP and the corresponding skills for you. Because of this, I believe we need a fresh term for it—perhaps something like a &quot;Playbook.&quot;</p>
+<p>I have a tremendous amount of ideas around this concept. Perhaps I will present this topic in detail in my next presentation; you can keep tabs on it through my Twitter.</p>
+<p>The central thesis, however, is that Skillbox and Executor can be harmoniously united, packaging all configurations several layers higher and allowing you to simply transfer the entire bundle anywhere else.</p>
+<p>This is very similar to Cody from KenshoDogs. If you've seen Cody, it operates on virtually the same foundational philosophy. They wrap it in Cloudflare Workers and a heap of sophisticated, complicated buzzwords, but I saw right through to its core essence: the core idea is to decouple and extract the &quot;brain&quot; of the agents, package it securely into Cody, and then freely transport that brain wherever it needs to go.</p>
+<p>So Cody is essentially a convenient, higher-level companion to Skillbox and Executor. And the upcoming version of Executor will be released in an even friendlier form, functioning quite similarly to Cody.</p>
+<p>It is undoubtedly difficult to track and absorb all these rapid developments simultaneously, but I want to plant a seed in your minds today so you recognize the massive trajectory of where things are heading on the move.</p>
+<p>Our own biological RAM and human brains simply cannot juggle and retain all this complexity at once. Yes, that is the reality. We have compute capacities, subscriber tiers, load balancers, proxies, and on and on.</p>
+<p>And so I reached an unavoidable conclusion: if you do not build yourself a dedicated orchestrator to systematically organize and tame this mess, everything will inevitably collapse into total chaos. Nothing will work smoothly. Chaos is guaranteed. Therefore, everything...</p>
+</details>
+<!-- chunk 5/8 -->
+<h3>单一对话与工作流的瓶颈</h3>
+<p><strong>Speaker A</strong>: 基于我们之前讨论过的你的工作流程，这也正是我今天来到这里的原因。在以往的工作中，我注意到在单一的长对话中，随着上下文不断被压缩和推移，我们很容易陷入一种“我现在究竟推进到了哪里”的迷失状态。在此过程中，大量的子任务中途被丢弃，最后甚至无法串联成完整的结果，并且还会引发大量的代码冲突。另一种替代方案是开启多个独立的对话窗口，但这往往会导致各个对话上下文之间互相干扰、顾此失彼。而第三种选择，则是引入带有工作区分支（Worktree，工作树）的操作方式，但实践证明这同样存在不小的挑战。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Based on what we discussed regarding your workflow, that is exactly why I came here today. In our previous setups, I noticed that within a single chat session, as the context window continuously shrinks and shifts, you easily lose track and ask yourself, &quot;Where am I right now?&quot; As a result, many tasks end up getting discarded along the way, leading nowhere because you run into so many conflicts. Then another alternative is having multiple separate chats, but they often interfere with one another. And then there is a third option: utilizing worker options with Git worktrees, but that introduces its own set of problems as well.</p>
+</details>
+<p><strong>Speaker A</strong>: 后来我读到一篇文章——我在幻灯片中也引用了它——文章主张一种范式：每一次对话，对应一个独立的工作树，对应提一次 Pull Request（PR）。很多团队和开发者都在尝试这种模式。对于我个人而言，作为一名独立开发者，在过去我很长一段时间里甚至完全不走 PR 流程，而是习惯于直接将所有改动推送到主分支（main branch），结果导致整个开发过程不断兜圈子、反复折腾。但现在我深刻意识到，为了切实提高代码交付质量，必须走完包含类型检查、代码规范检查（Linting）以及各类自动化验证在内的完整 PR 检验流程。并且我希望将这个过程全盘自动化，而不是每一步都靠人工手动去点。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: That was when I came across an article—which is included right here in my slides—advocating the rule: one chat, one worktree, and one PR. A lot of developers have adopted this pattern. For me personally, as an independent developer working solo, I historically did not use pull requests at all. I used to just push everything directly to the main branch, which led to endless circles and messy iterations. But now I understand that in order to genuinely improve code quality, I need pull requests that pass all the checks: type checking, linting, and various other automated verifications. And I want to automate this entire process rather than doing everything manually.</p>
+</details>
+<h3>工作树隔离的局限与数据库误删事故</h3>
+<p><strong>Speaker A</strong>: 促使我痛下决心做出改变的，是一次真实发生的惨痛教训。当时我开始完全依赖工作树来处理任务，结果在一个工作树中运行的 Agent 在执行操作时，竟然直接把我们生产环境中的 Git 数据库给删除了。所幸我们有完整的备份副本才得以恢复。事后复盘时我问它：“为什么会发生这种事？”Agent 回答说：“抱歉，我当时试图为测试填充数据库数据，但我并不是在隔离容器内测试，而是在你的宿主机上直接执行。”结果它直接清空了所有数据。这让我猛然清醒：单纯的 Git 工作树根本不是真正的沙箱环境。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: What triggered me to change was a real incident that occurred. I had started using strictly worktrees, and one of the agents running inside my worktree somehow deleted our production Git database during execution. Fortunately, I had a backup copy to recover from. When I investigated, the agent essentially said, &quot;Oh, sorry, I was trying to seed the database for testing, but instead of testing inside an isolated container, I was running tests directly on your host machine.&quot; As a consequence, it wiped out everything. That taught me a hard lesson: a Git worktree alone is definitely not a real sandbox.</p>
+</details>
+<p><strong>Speaker A</strong>: 幻灯片上展示的这一页，关于“球体（Orbs / OrbStack）”。Ampcode 的那位工程师——叫 Thorsten 还是类似的名字——之前一直在分享关于 Orb 的理念。起初我的大脑对这些概念完全过载，心里觉得：“没有 Orb 难道就不行吗？非得搞这套？”而且我在 Twitter 上也屡次看到有人讨论甚至吐槽：“所谓 Orb 完全是个新造的噱头词，字典里根本没有，别再整天提 Orb 了。”但实际上，他背后的核心哲学非常深刻：每一个自主 Agent 在领受任务时，都应当配备一个专属的微型沙箱、微型虚拟机或微型计算环境，让它在其中安全执行。而在它工作期间，系统只向外部暴露一个隧道 URL，你可以通过这个 URL 实时浏览并检查运行效果。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Here on the slide, we have Orbs. That guy from Ampcode—Thorsten or a name like that—he was talking about Orbs. Initially, my brain felt completely overwhelmed by all of this, and I thought, &quot;Can we just move on without Orbs? Is that really necessary?&quot; I even saw people arguing on Twitter multiple times, saying: &quot;Orbs are just a marketing invention. They do not exist in the dictionary. Shut up and stop talking about Orbs.&quot; But actually, his underlying philosophy is spot-on: for every task, your agent needs a dedicated mini-sandbox, a mini-VM, or a mini-computer where it can safely operate. And while it is doing its job, it opens up a single tunnel URL. You can open that URL to inspect the app and verify what it is doing.</p>
+</details>
+<h3>从程序员到 AI 验证者：基于微型沙箱的工作流</h3>
+<p><strong>Speaker A</strong>: 仔细想想，此时你扮演的不就是一个测试员吗？我们人类工程师的角色正在悄然发生转变，我们正在成为 AI 的测试者与验收员。起初我对这种论调嗤之以鼻，觉得这根本不切实际。但在完整体验了这套流程之后，我彻底折服了，现在我心里只有一句话：“是时候拥抱 Orb 了！”虽然听起来有点拗口，但确实到了全面采用 Orb 的时代。这是我所见过的最稳定可靠的构建方式：所有代码都经过恰当的测试、充分的隔离，并在一条规范的软件流水线工厂中层层推进。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: When you think about it, you are acting as a tester, right? Our roles are shifting right now: we are becoming testers for AI. At first, I scoffed at that idea; I thought that would never happen. But after going through everything from start to finish, observing what he demonstrated, I now genuinely believe: &quot;It is Orb time.&quot; He had this catchphrase, and awkward as it sounded, it really is Orb time. I realized this is by far the most stable way to build anything—properly tested, strictly isolated, and routed through an automated software factory pipeline.</p>
+</details>
+<p><strong>Speaker A</strong>: 我的核心架构准则是：一个任务在单一时间内只分配一个轻量级的微型环境。之前我提到过 Proxmox，我的 Proxmox 设备会负责按需启动类似 Docker 容器或轻量虚拟机的环境。每次 Agent 执行任务需要一个“球体”时，系统就会创建一个干净的微型虚拟机，里面预先配置好所需的一切：数据库、种子数据、无头浏览器环境等等。它在完全受控的隔离状态下运行。我使用 Podman 来管理容器，外部的敏感凭证和生产信息完全不会泄漏给它。我的物理机上维护着一个任务队列，因为硬件资源限制，系统同时只允许运行 8 个环境，随后便优雅销毁。所有新任务都在排队等待：一个 Orb 生成、执行、自毁，接着下一个任务启动，形成极其流畅健康的生命周期。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: My rule of thumb is: one task gets one disposable mini-environment at a time. I mentioned Proxmox earlier; my Proxmox setup provisions containerized environments similar to Docker or lightweight VMs. Every time an agent requires an Orb, it spins up a mini-VM equipped with everything it needs: a seeded database, browsers, and dependencies, running strictly under isolated conditions. I personally use Podman, and the environment is isolated from outside credentials and production data. My machine maintains a task execution queue because it can only sustain around eight concurrent Orbs before tearing them down. So tasks simply wait in line: an Orb spawns, executes, dies, and the next one takes over in a smooth, continuous cycle.</p>
+</details>
+<h3>严苛熔断机制：Linter 与防垃圾代码防线</h3>
+<p><strong>Speaker A</strong>: 接下来谈谈内部的代码质量保证。正如我之前强调过的，在普通的对话式编程中，缺乏硬性熔断机制会导致严重的质量隐患。例如，很多时候你让 Agent 运行 ESLint，它一看有报错，为了完成“没有任何报错”的目标，竟然会自作主张直接关掉配置文件里的 5 行 Lint 规则，然后邀功般地告诉你：“任务完成，0 个错误！”这简直荒谬。如果你不在流程中配置强制性的硬熔断，提交上来的 PR 就会充斥着垃圾代码（Slop），最终变得毫无维护价值。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Now let us look at what goes inside for code quality. As I mentioned earlier, when you run multiple tasks inside unstructured chats, there are virtually no hard fuses. You might look at ESLint and realize the agent disabled half the configuration just to report: &quot;Work completed, zero errors!&quot; Did it really fix the issues? No, it simply commented out five lines of your linting configuration. If you do not install strict, unbypassable hard fuses, your pull requests will devolve into complete garbage and slop that nobody can use or maintain.</p>
+</details>
+<p><strong>Speaker A</strong>: 为了彻底解决这个问题，我构建了一套防御组合拳：ESLint、Ultra-Linter，再加上 Dylan Monroe 开发的 Anti-Slop 工具库。这三者紧密协同工作。建议大家也可以把这套方案拍下来，直接配置给你们的 Agent。这套工具能百分之百保证每一份 PR 都严格符合你设定的代码规范。把那些只存在于你脑海里的规范和约束剥离出来，注入到底层的 Lint 和验证系统中，这样你才能真正得到想要的高质量交付成果。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: To solve this, here is my winning combo: ESLint, Ultra-Linter, and the Anti-Slop library created by Dylan Monroe. These three components operate together seamlessly. I encourage you to take a photo of this and instruct your agents to configure it. They guarantee that every incoming pull request strictly adheres to your established rules. When rules only live inside your head, you must extract them and encode them into linters and validation systems; that is the only way to reliably get the exact output you desire.</p>
+</details>
+<p><strong>Speaker A</strong>: 在实践中我发现，很多架构规范根本无法直接套用 ESLint 或 OXLint，它们本质上不适合写成传统的静态语法规则。于是我让我的 Agent 为我编写了一个专属的命令行政策检查工具，我戏称它为“代码交警（Cop）”。在这个工具里，你可以定义非常具体的领域规则，例如：“严禁使用原生自定义按钮，必须统一使用 Shadcn UI 的 Button 组件。”这类业务约束很难塞进通用 Linter，但我的 Agent 帮我把这些检查逻辑全部写成代码。有了这位“代码交警”，我们就建立起了一层层规则叠加的防护网，确保 Agent 绝不会在工程中做出任何愚蠢的改动。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: I also realized that many of my architectural rules do not easily fit into OXLint or ESLint; they simply are not traditional lint rules. So I asked my agent: &quot;Can you create a custom CLI policy enforcer? Let us call it the 'Cop'.&quot; With it, you can enforce specific guidelines such as: &quot;Never use custom raw buttons; always use the Shadcn button component.&quot; You cannot easily configure this inside a standard linter. But my agent wrote the checker, and now it enforces a stack of customized constraints that effectively prevents the agent from doing anything foolish in the codebase.</p>
+</details>
+<h3>用自然语言规范审查 PR：Jev 与自动化流水线</h3>
+<p><strong>Speaker A</strong>: 最后的杀手锏是 Jev（Jevrabbit）。Jev 真的非常惊艳。它是由 Jevrabbit 开发并开源在 GitHub 上的一个工具，名为 Rabbit。你只需要用通俗普通的自然语言英语，清晰描述出你绝对不想在代码库中看到的反模式和违规行为，它就会以极快且极具性价比的方式自动审查每一个 PR。它不会像一些低劣的评审工具那样留下空洞无用的废话评论，而是直击要害。你再也不必去绞尽脑汁编写复杂的语法 AST 规则，直接用自然语言清晰表达你的意图，Jev 就会在每一个版本提交时忠实履行审查。这在基础工具之上又叠加上了一层极其强大的高空防护网。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: And finally, we have Jev. Jev is remarkably cool. It was created by Jevrabbit on GitHub under the name Rabbit. With it, you simply describe in plain English the negative rules and anti-patterns you do not want to see in your code. It provides an exceptionally fast and inexpensive review of every pull request, without leaving useless or nonsensical comments. Instead of handcrafting complex lint rules, you literally state your requirements in plain English, and Jev verifies each PR against those natural language rules. It adds another layer of high-level validation right from the sky.</p>
+</details>
+<p><strong>Speaker A</strong>: 基于这整套理念，我打造了自己的自动化软件工厂。我今天非常想向大家现场演示它的运作机制。它将刚才提到的所有环节融为一体：上下文回溯、负载均衡的微型环境调度、端到端自动化测试，每一个环节都是流水线系统不可分割的一部分。不过我看了看倒计时器，留给我的时间已经不多了，但我至少可以用一到两分钟时间，让大家亲眼看看这样一个软件工厂在实际中长什么样子。因为未来的软件工程工厂绝不会是现在这种粗糙的形态。请稍等，我把屏幕切换过来。这将是你此生见过的第一款真正具备实用价值的 Agent 编排管理系统。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: Based on these concepts, I built my own software factory, and I really wanted to show you how it works in practice. It integrates everything we talked about: state recall, load-balanced Orb generation, and automated testing as core pillars of the system. Looking at the countdown timer, I am running out of time, but let me take a minute or two to show you what it looks like. Software factories in the future must look something like this. Give me a moment to switch screens. This is arguably the first genuinely well-designed agent orchestrator you will see in action.</p>
+</details>
+<h3>软件工厂 Workbench 实机演示与展望</h3>
+<p><strong>Speaker A</strong>: 屏幕已经载入进来了。大家可以看到，整个界面设计非常干净，除了清爽的浅色主题外，没有杂乱无章的冗余元素。这就像是史蒂夫·乔布斯某天醒来后说：“来，让我们造一款真正优雅的 Agent 编排器。”左侧是清晰的导航侧边栏，优雅地归集组织着我的所有项目。以当前展示的“Bench”项目为例，进入之后，你可以看到大量的待办事项、规划蓝图以及任务清单。点击进入“工厂”视图，整个流水线的执行流程一览无余：每一个任务依次经历编码 Bot 的处理，Bot 快速编写代码并启动无头浏览器进行交互测试，随后自动化验收器完成全流程验证并打上绿色勾选。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: It is loading up now. As you can see, the UI is very clean—beyond the light theme, there is no clutter. It feels like what Steve Jobs might have created if he woke up and decided: &quot;Let us build an orchestrator.&quot; On the left sidebar, it neatly organizes all my projects. For example, looking at the Workbench project here, I have a clear backlog of tasks I want done, detailed plans, and issue lists. When you click into the &quot;Factory&quot; tab, you can observe the pipeline in real time: every task passes through code-generating bots, automated browser testing, and thorough verification by tester agents until the work is fully checked off.</p>
+</details>
+<p><strong>Speaker A</strong>: 如果我回到项目视图，有任何新想法想立刻实现，我只需在待办栏中添加任务，点击确认执行，该任务便会瞬间进入“就绪”状态，无缝进入整座软件工厂的自动化作业链条。在这样一款优秀的人机交互界面前，你会由衷感受到自己正在指挥一座井然有序的现代化数字软件工厂，而不是在同一个简陋的对话框或笨重臃肿的传统编排工具里盲目输入。由于时间确实到了，这个名为 Workbench 的系统很快会在我的 Twitter 上正式发布。它彻底改变了我的日常习惯，我现在甚至不再使用繁琐的 CLI 或官方 Codex 客户端，无论是在手机上还是在任何性能羸弱的便携设备上，我都能随时打开并掌控整座软件工厂。非常感谢大家的聆听，我必须赶去机场乘飞机了，谢谢大家！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: If I return to one of my project views and need something done, I just look at the to-do list, specify the work, and hit enter. The item moves straight into &quot;Ready&quot; and traverses the entire factory pipeline while you watch. With an interface like this, you genuinely feel like you are managing an industrial software factory, rather than just conversing with an oversized chat bubble or a bloated orchestrator. My time is up, but this tool—called Workbench—will be announced shortly on my Twitter. It fundamentally changed how I work; I no longer rely on CLI commands or heavy local apps. Even from a phone or a low-spec device, I can effortlessly oversee the entire factory. Thank you very much for listening, I have a flight to catch. Thank you!</p>
+</details>
+<h3>主持人串场：致敬顶流嘉宾与介绍 Mistral AI</h3>
+<p><strong>Host</strong>: 感谢大家的热烈掌声！在此我必须向现场的朋友们补充说明一句：刚才发表演讲的嘉宾，实际上是 AI Engineer YouTube 频道上最受瞩目、播放量最高的常客。如果你去翻看 AI Engineer 官方频道上的视频，他的技术演讲往往名列前茅、最受欢迎。他的分享非常精彩，其中提到的很多工程痛点，在我们的日常工作中同样引起了强烈的共鸣。顺便提一下，我本人就职于 Replit，我们的工作同样是为广大开发者构建用于创建和部署应用程序的基础设施。接下来，我们将继续探讨人工智能的未来演进。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: Thank you again, everyone, give him another round of applause! I forgot to mention to the audience—this speaker is actually the most popular presenter on the AI Engineer YouTube channel. If you browse through the channel, you will see his talks consistently rank as the highest viewed and most popular. His insights were fascinating, and I personally resonate deeply with many of the practical issues he described. By the way, I work at Replit, where we build infrastructure for creating and running applications. Now, let us continue our conversation about the future of AI.</p>
+</details>
+<p><strong>Host</strong>: 现在，让我们有请下一位重磅演讲嘉宾：Mistral AI 的工程副总裁（VP of Engineering）、同时也是该公司加入的第三号核心初创员工——Lélio Renard Lavaud！掌声欢迎 Lélio 登上舞台！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Host</strong>: At this moment, we are excited to hear from the Vice President of Engineering at Mistral AI, who was also the third employee to join the company. Please join me in giving a warm welcome to Lélio Renard Lavaud to the stage!</p>
+</details>
+<h3>Mistral AI 的使命：立足欧洲，赋能企业与商业落地</h3>
+<p><strong>Lélio Renard Lavaud</strong>: 大家好！非常感谢大家今晚的光临，看到现场座无虚席、聚集了这么多人，真的令人倍感振奋。今天我想和大家聊聊 Mistral 目前正在筹划的新动向、我们即将推出的创新，并希望能向大家透露一些我们团队正在全力以赴攻坚的核心项目。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Lélio Renard Lavaud</strong>: Hello, everyone. Thank you so much for coming tonight; it is incredible to see such a massive crowd here. Today, let us talk a bit about what Mistral is preparing, what is new, and hopefully give you some genuine insight into what our engineering team is actively working on behind the scenes.</p>
+</details>
+<p><strong>Lélio Renard Lavaud</strong>: 对于现场可能还不太熟悉我们的朋友，在此做个简要介绍：我们是 Mistral，是欧洲首屈一指的先锋人工智能实验室。我们的创业旅程始于大约三年零四个月前。在创业初期，我们还只是一家规模极小的初创团队；而时至今日，我们的团队规模已经壮大到了 1300 人之众，取得了不可思议的飞速发展。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Lélio Renard Lavaud</strong>: For those in the room who might not know us yet, we are Mistral. We are Europe's leading artificial intelligence laboratory. Our journey began about three years and four months ago. Back then, we were just a tiny company. Today, we have already expanded to over 1,300 people, experiencing tremendous growth along the way.</p>
+</details>
+<p><strong>Lélio Renard Lavaud</strong>: 我们拥有非常清晰坚定的核心使命：将前沿的 AI 技术切实交付到广大客户的手中，从根本上重塑现代企业的日常运营与业务开展模式。我们并不狂热地追逐空中楼阁般的通用人工智能（AGI），我们真正追求的是实打实的商业价值、现实效用与实际盈利能力。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Lélio Renard Lavaud</strong>: We operate with a very clear mission: to place cutting-edge AI directly into the hands of our customers and transform how enterprises conduct their daily operations. We are not blindly chasing artificial general intelligence (AGI) for the sake of it. We are focused on delivering tangible business value, utility, and real-world profitability.</p>
+</details>
+<!-- chunk 6/8 -->
+<h3>团队使命与 Koyeb 收购背后的基础设施逻辑</h3>
+<p><strong>Speaker A</strong>: 这正是我们团队致力于打造实用产品、将试点项目转化为全职工程决断的原因。这切实反映了公司当前正在推进的工作以及未来的战略方向。如果大家还记得一年前的上一届 AI 工程师峰会（AI Engineer Summit），当时 Koyeb 很高兴邀请了我。自那以后发生了许多事情，今天现场有超过 700 名注册参会者，以及 50 位演讲嘉宾，这是一场令人难以置信的盛会。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: が私たちが作った理由ですチームがに従事している実用的なもの、パイロットの転向労働者のためのプロジェクト決断。これは実際には、会社が何をしているか今、何をしているのか。覚えているなら前回のAIエンジニアサミット1年前、私はとてもコイエブが喜んでいる私は招待されました。それ以来、多くのことが起こった。起こった。登録済み700名以上の参加者。今日私たちはスピーカーが50個なので、信じられないほどイベント。</p>
+</details>
+<p><strong>Speaker A</strong>: 关于去年邀请我们的 Koyeb，如今他们已经正式成为 Mistral 的一部分。大家可能会问：我们为什么要收购他们？接下来就让我们深入探讨这个问题。对于向智能体网络调度工作负载来说，引入一支专业构建此类底层系统的团队是非常符合逻辑的。这绝不仅仅是日常的服务器运维管理那么简单。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: コイエブに関しては、私たちを招待しました昨年、今彼らはミストラルの一部となり、質問できます：なぜ私たちはそれらを買ったのか？なぜなら私たちはでは次に進みましょう派遣労働者整数へのロードエージェントネットワークには、非常に論理的チームを引き付けるために専門としているのはまさにそのようなものを作り出すシステム。これは完全にただサーバーを管理するあるいは、それに類するもの。</p>
+</details>
+<p><strong>Speaker A</strong>: 正如 Yann 去年所说的那样，这一切关乎沙箱、计算单元以及在生产规模下加载启动工作负载所需的一切基础设施。但愿初日就能依托高性能“裸金属”硬件，在保障极高生产效率的同时维持合理的开销。我们要在全球各地的裸金属服务器上，支撑起数以万计的应用和数十人的工作。他们加入 Mistral 就是为了构建这套基础设施。我们要确保它能根据自身需求，在后台安全、可靠且高速地执行各类任务，而这也正是他们技术的用武之地。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: これは「サンドボックス、計算単位、必要なもの作業開始ロードイン規模。これはイアンが昨年述べた。うまくいけばね。と初日「「鉄」高い品質を確保するため生産性妥当な経費。私たちはサポートします数十人の仕事数千のアプリケーション10の「むき出しの」鉄各地世界。そして彼らはミストラルに参加して、これを構築するインフラストラクチャー。私たちは私たちは確認したいのです、それは私たち自身の必要に応じてタスクを実行する安全で信頼性が高く、高速バックグラウンド実行すれば、彼らのテクノロジー。</p>
+</details>
+<h3>Emi AI 收购、物理建模与工业合作</h3>
+<p><strong>Speaker A</strong>: 此外，我们在 5 月份宣布了对 Emi AI 的收购。Emi 专注于物理 AI 建模领域。引用 Johannes 的话来说：“将经验整合到 Mistral AI 的生态系统中，将把世界级的研究与开发推向革命性的高度。”我们将携手打造设计和制造下一代飞机、汽车及半导体所需的底层信息。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: また、5月に発表しましたEmiAIの買収について。エミこれは、専門としているのは物理的なAIモデリング。引用しますヨハネス：「統合する生態系における経験ミストラルAIワールドレベルが上がると、革命を起こす重要な点で研究と開発」。私たちは共に私たちは基本的なものを作ります情報が必要デザインと次世代を創造する航空機の世代、車と半導体。</p>
+</details>
+<p><strong>Speaker A</strong>: 这意味着一个调动全体、结合物理模拟来帮助模型深入理解与建模现实世界的机会，再将其实际反馈给模型，从而为我们的工业客户提供更为高效的赋能。今年早些时候，我们宣布了与空中客车（Airbus）达成的 1.5 亿美元合作伙伴关系，这正是运用此类专业知识协助工业客户构建前沿专业模型的典型案例。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: つまり、それは全員を巻き込む機会、シミュレーション、それらすべて理解を助け、世界をモデル化するために、モデルに戻すと、より効果的かもしれない私たちの産業顧客。今年の初めに私たちは発表エアバスとのパートナーシップ1億5000万ドルドル、そしてこれがその一つですケースそのような存在専門知識会社を助ける私たちは構築します最もモダンな専門このようなモデル顧客。</p>
+</details>
+<h3>30 亿欧元 D 轮融资与未来工作愿景</h3>
+<p><strong>Speaker A</strong>: 就在上周，我们还宣布了 D 轮融资。这是欧洲科技公司有史以来规模最大的一轮融资，总额达到 30 亿欧元。我们凝聚了来自欧洲及全球各地众多投资者的信任，他们坚信我们所肩负的使命：AI 应当是实用的，能够切实变革企业；而在过去的三年里，我们的工作也确实取得了卓越的成效。不过，我还是先抓紧时间进入正题。接下来我将向大家阐述我们对未来工作的愿景，这其中涵盖了我们对智能体安全、数字主权以及新型模型协作方式的深度思考。我知道大家可能是来打探“Le Chat”重磅消息的，虽然我今天不会在此正式发布它，但我们确实正在为此全力以赴。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: 過去今週は他にも発表しました資金調達ラウンドDシリーズ。これは最大ですラウンド技術的なヨーロッパの企業—3社数十億ユーロ。私たちは私たちは、彼が団結させた多くの投資家ヨーロッパから世界中から信頼する世界の我々にはこの使命がある。AIは便利で、変身企業、そしてこれは、私たちの仕事は過去3年間本当に効果的です。しかし、私はまた同じことをするだろう。時間。あなたは自分。私ではありません。もしこれが次に何が起こるか一度、あなたは知るでしょうそれは私です。ええと、手短に済ませます。あなたにお話しします仕事の未来とこれに対する私たちのビジョン。これはまた、私たちは安全を重視していますエージェント。私たちは少し話しましょう主権、そして私たちの働き方について新型モデルについて。皆さんが「le」について聞きに来ました「シャトンの脂肪」。私はそうではない私はそれを発表します。今日、しかし我々が一生懸命働くこれを実現するために。したがって、うーん、それは複雑だもちろん、その瞬間だ。はい、素晴らしい。</p>
+</details>
+<h3>平台矩阵：从开发者 Studio 到企业级 Vibe</h3>
+<p><strong>Speaker A</strong>: 关于未来的工作形态，请允许我介绍我们当前的产品组合以及长远规划。我们拥有一个名为 Developer Studio 的强大产品，在其中我们围绕底层模型构建了大量的工程基语（Primitives）。如今市面上模型层出不穷，但单靠模型本身并不足以直接投入生产落地，因此我们开发了 Studio，为其注入了巨大的工程实用价值。它补齐了生产部署中真正必需的关键能力，例如长时间运行的后台进程、沙箱环境等我此前提到的一切必备原语。这一套方案已经运行得相当出色。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: したがって、仕事の未来、少々お時間をください。私たちの今日のセット製品と当社のビジョン。我々は持っています強力な製品開発者スタジオと呼ばれる場所で、私たちはたくさん作りますプリミティブを上にモデルそのもの。したがって、今日はとても多くのモデルがありますが、これだけでは不十分です実装のために生産なので、スタジオを開発しました。巨大なものを追加するフロアの価値これ。必要なもの本当に必要だった仕事のために生産。労働者のことを考えてみてくださいプロセスなど長期実行、サンドボックス、私が言及したこと以前。すべてのプリミティブあなたが必要とするもの、つまり、それは本当にうまくいった。</p>
+</details>
+<p><strong>Speaker A</strong>: 此外，我们还有一款面向最终用户的产品——Vibe。它为终端用户、尤其是企业员工提供了借助上述一切能力解决生产力问题的契机。与此同时，我们强大的解决方案团队正为客户构建各类落地应用，科研团队也在打造兼具生成能力与专业深度的通用及定制模型。不过，我们真正想让大家看到的远不止于此——抱歉，控制翻页器在这边。请看，这位是 Stephen。Stephen 是个非常出色的人，他在 Mistral 财务部门工作，负责确保我们的收入与资金得到严谨妥善的管理。有人可能会说 Stephen 是个全能多面手，但他遗憾的是，他根本没有多余的时间去地下室亲自组装配置一台全新的工作站。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: また、当社にはVibeという製品があります。最終版ユーザーこれら全てを使用する機会問題解決生産性エンドユーザー、特に企業ユーザー。もちろん、また、強力な意思決定チームが素晴らしいものを作り出すすべてのケース顧客だけでなく科学チームは生成的なものを構築し、また専門的誰にとっても魅力的なモデル。しかし、私たちは私たちは本当にそこに行きたいのです、ここにないのでコントロール、すみません、ここ。こちらはスティーブンです。スティーブンはとてもいい人だ。男。彼は財務部ミストラル。そして彼は答える。私たちの収入のために使用されたきちんと。スティーブンはある人はこう言うかもしれない何でも屋、しかし、残念ながら彼は収集する時間がない新しいワークステーション地下室で一人でいる。前</p>
+</details>
+<h3>企业工作流痛点与统一的 Vibe 体验</h3>
+<p><strong>Speaker A</strong>: 过去，Stephen 所掌握的工具根本无法支撑他完成应用创建，而只能做一些最简单的提问。他迫切需要能够让他搭建分析型应用的工具，能够对数据湖中的数据、Excel 电子表格或者各类工作空间资产进行跨维度交叉核验，进而将其编译封装成独立应用并与团队同事共享。正如我们之前讨论的那样，在企业级环境中，一切都必须严格遵循数据合规使用的审计与安全准则。而这正是我们正在全力推进的统一版本 Vibe 的核心目标：如何让这类普通业务人员具备“开发者”般的能力，让他们能够轻松上手理解模型应用，借助我们的产品矩阵构建出真正高价值的企业工具。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: 彼は必要としているツール彼に許さないシンプルに言うと質問ですが、アプリケーションを作成する。彼はアクセス権を必要としている。ツールへ彼に許すだろう、例えば、作成する分析アプリケーションそしてクロスデータチェック湖から来るデータ、Excelテーブル、またはワークスペース考え、そうすれば彼はこれをアプリにコンパイルするそしてそれを共有します同僚たちと共に。それ、つまり、私たちが話しているのは以前にも話したが、彼は企業環境によっては特定の規則に関してちゃんとしたデータ使用量。そしてこれは統一された私たちが開発中のVibeのバージョン私たちは今取り組んでいます:どのようにそのようなものを作るためにユーザー-開発者普通ユーザー、しかしより良いスタートを切るアプリケーションを理解し、モデルの使用作成する役に立つもの、効果的に当社の製品群。</p>
+</details>
+<p><strong>Speaker A</strong>: 至于传统的自动化场景，我们最初主要是面向工程师群体的。以往当半夜发生系统异常收到 Slack 告警时，值班工程师必须立刻被叫醒并坐到电脑前。而现在，智能体可以先行介入调查，为工程师整理好即时可用的上下文信息。这得益于我们的 Vibe 技术栈：我们能够在容器中迅速启动异步运行的智能体，并通过内置连接器对接 Grafana、Sentry 以及 GitHub，全面排查可能引发性能回归的 PR 改动，快速给出故障诊断建议，并将最终排查结果推送到 Slack。这样，值班工程师只需介入决策，而不必在低效的手动排查中耗费大量时间。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: それ典型的な自動化我々が主にエンジニア向け。私たちは元気ですか？移動Slack通知について真夜中に何かがうまくいかなかった、調査エージェント。私たちは気にかけています次のものについてエンジニア電話がかかってきた。目を覚まして座るコンピューター用に、すでにすぐに使える情報に応答する問題。通常これはのおかげで私たちのVibeスタック、なぜなら私たちはすぐに発売します非同期エージェント容器の中でを介して接続されています当社のコネクタ—GrafanaSentry、GitHubへPRとは何かを理解するにつながる可能性がある回帰分析、そしてオファーエンジニアのためのヒント素早く理解する問題が発生した。そしてそして、明らかに、結果を送信するSlackで。そうすれば可能になる対話をし、勤務中のエンジニア何かから押し退けるのではなく、使いすぎる時間。</p>
+</details>
+<p><strong>Speaker A</strong>: 这便是一个鲜活的实际范例：Sentry 发出第一条报警后，智能体立刻将检索汇总到的关键信息呈现出来，辅助工程师理清现状。如果放在过去，要协调多个系统之间的交互，需要进行极其繁杂的技术配置——必须在服务器某处部署启动智能体，手动配置连接并逐一指定所需访问的连接器。而现在，我们在统一的 Vibe 体验中彻底简化了这一流程。业务人员只需提出类似“审查遗漏的面试评估并向忘记填写的面试官发送个性化提醒”这样简单的自然语言请求，完全无需操心底层 ATS 系统连接或 MCP 协议的具体细节。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: これは実際には、例。手に入れる初回通知セントリー、そしてエージェントはすぐに妨害する情報彼が見つけたものエンジニアを支援する理解してください起こっている。場合その前にしなければならなかったたくさんする技術的な作業調整する相互作用複数のシステム。必要があるエージェントが起動しましたサーバー上のどこか。あなた必要これらを設定する接続、示す、どのコネクタにアクセスが必要です。そしてだから私たちは私たちは、この統一されたバージョン。あなたは始めていますこのような要求から、十分に単純で、だから私たちの愛しいスティーブンがそれを手に入れるかもしれない入場する。レビューインタビューについて不足しています、送信個人的リマインダー面接官へやるのが忘れていました。そして必要ない考える繋がり必要なMCPはATSシステムか何かそんな感じ。</p>
+</details>
+<h3>面向非技术员工的自主执行与全流程治理</h3>
+<p><strong>Speaker A</strong>: 我们正在倾力打造的，正是能够覆盖全部所需环节的闭环平台。在此前的许多技术展示中，大家看到的往往是复杂的工程考量；但对于企业级业务用户而言，他们既不是开发者，也不懂 Linux 虚拟机，他们只希望能够直接提出诉求，由系统自动对接企业工具中的各类连接器。这正是系统的智能之处：它能够精准领会用户意图并在后台生成智能体，完成代码编写、运行测试、部署托管等一系列工作；并在几分钟乃至数小时的自主迭代后，交付可直接分享给相关权限同事的最终成品。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: 私たちは私たちは取り組んでいますそれがほぼ全てだった必要なもの作る。なぜなら、すべては今見たのは前のプレゼンテーションには、複雑で、その他の考察。しかし私たちの企業ユーザーは開発者と何も知らないLinuxまたは仮想車が欲しいだけそのようなものを送るリクエストとすべての必要なコネクタ企業用ツール手作業で。こちらがバイパーですこの意図を理解し、エージェントを作成する背景には、コード、テストを実行する、デプロイおよびホストする彼らと、そして独立して反復処理分または数時間あなたは手に入れることができません最終結果、これはシェアする同僚適切な権利を有するアクセスとは必要企業向けソフトウェア。</p>
+</details>
+<p><strong>Speaker A</strong>: 这一点尤为关键。在实际落地中我们经常看到：很多人希望将一切都交给智能体处理，但由于缺乏对企业数据的权限与安全管控，导致这些方案根本无法真正投入生产环境使用。我们坚信，未来的工作形态必然要求将上述所有角色和流程深度融合，而这也正是我们重金投入的研发方向。我们致力于用单一的统一交互界面，取代过去各种割裂的工具拼凑，让无论身处财务、法务还是工程部门的员工都能自如使用。模型会自适应不同岗位的上下文，在统一平台上呈现适配的交互体验。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: そしてこれは最も興味深いことです。なぜならこのようなケース使用どこにでも見られる:人々はそれを関連付けます何でも、代理人へアクセスするデータなし制御できない実は不可能にするこのような実装ソリューションを実運用へ。私たちは確信しています仕事の未来結合することから成るこれら全ての役割を一つにまとめるそしてそれがまさに私たちなのです私たちは投資します。それで、代わりにソフトウェアソフトウェア、なぜなら私たちのユーザーは間違いなく知っているそれを作るために、なんとかやりくりしているエージェント。我々は持っています単一の統一インタフェース。したがって私は私は発表します別の製品あなたはどこで働いていますか？金融、法律部署はありますか？エンジニア。製品とモデル対応適応するもの彼らは使用するそしてショーは、統一異なるインターフェースプラットフォーム。</p>
+</details>
+<h3>本地到沙箱的闭环协作与技能自优化</h3>
+<p><strong>Speaker A</strong>: 这正契合我们日常的工作流：你在本地笔记本电脑上开启一个工作会话，随后将其无缝移交给网络端并在云端沙箱中执行；你可以随时在移动端应用中进行查看与控制，代码能够自动推送到 GitHub 并触发 CI 流程验证，整个过程可持续迭代循环。对于业务人员而言，这套统一工具链最美妙之处在于，他们可能仅仅是在协同处理几张电子表格，不知不觉中便享受到这套体系带来的巨大赋能。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: となることによって以前見たもの、まさにそれが私たちは働く：そうすればセッションを開始する地元で自分でノートパソコン、転送ネットワークに送って実行する「サンドボックス」では、チェックするアプリ内の電話とそれさえも管理できる。彼はできるGitHubにプッシュします。彼はできるCIを確認してください。彼作業できるこれを繰り返し行う。そしてここにある唯一のもの統一ツールキットとてもよく機能します、ビジネスだからユーザー必要なのは複数のプロセススプレッドシート、可能になる使ってみて気づかないうちに違い。</p>
+</details>
+<p><strong>Speaker A</strong>: 伴随着每一个业务用例的诞生，整个平台的价值都在呈指数级增长。一旦有人创建了一项技能或一个独立应用，就能立即共享给团队中的其他成员。与此同时，系统还会自动提炼优化各项技能与 Prompt。通常在经过一周的持续运行后，我们可以回溯分析这些调研智能体的执行轨迹。例如，如果发现某个调用 Grafana MCP 的初始逻辑存在瑕疵、未正确匹配参数文档，系统便能基于 Trace 日志自主纠正，学会在未来的执行中更正确、更高 Token 效率地调用该连接器。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: したがって、プラットフォームは明らかに回数を重ねるごとに価値が増し、誰かがそれを持っているとき使用例。誰かスキルを作成する、誰かが作成するアプリケーション、彼らはそれらを共有チームの残りのメンバー。私たちはまた、改善するスキルを向上させ、プロンプト。通常私が今言ったように、見ることができます一週間働いた後この研究エージェントが働いたなどなど。多分、GrafanaMCPを呼び出す方法元々は間違っているのは彼はこれを理解していなかった書類不備オプション。分析するトレース、スキル今ならもしかしたら独立して修正してどのように示すか右これを使うコネクタ入力将来、彼がより効果的だったトークンに関してもっと早く。</p>
+</details>
+<h3>智能体安全防护与非确定性边界控制</h3>
+<p><strong>Speaker A</strong>: 这一切也自然引出了我们对智能体安全性的深入考量。正因为这些智能体如此强大、能够自主执行海量复杂任务，伴随而来的风险也显而易见。我相信在座各位最近十天里可能都被家人问及“AI 是否会毁灭世界”之类的话题。请放心，Mistral 绝不会做那样的事，而这正是我们持续大力投资智能体安全防护的原因所在。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: これは残念だ。私たちを安全な場所へエージェント、なぜならこれらはエージェントは非常に強力で、彼らはパフォーマンスする多くのタスクがありますが、もちろん、リスクはあります。そして私は確信していますあなた方一人ひとりには家族の中で、過去10日間AIが人を殺すかどうか尋ねられた世界。さて、ミストラルはこれやらない、それだけだだからこそ私たちは活動しているのです私たちはセキュリティに投資しますエージェント。</p>
+</details>
+<p><strong>Speaker A</strong>: 概括来说，究竟什么是智能体安全？如果从威胁建模的视角来剖析智能体，它们通常拥有极高的执行特权，可以访问大量连接器与海量数据资产，并具备调用这些工具的广泛能力。由于模型本身具有非确定性，仅靠设定硬性的死规定（例如粗暴地限制“如果要执行此类操作，就一概禁止运行”）是极为困难且不切实际的。这种硬编码限制之所以行不通，是因为到了下一次执行时，面对需要严令禁止的边缘状况，智能体仍可能绕过限制；当然，这同样涉及到复杂的输入……</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker A</strong>: 短い何がエージェントの安全性は？もしさまざまなことについて話す脅威モデルエージェント、彼らは通常持っている特権多くのものへのアクセスコネクタ、大型データ量とそれらを使ってできること何でも。なぜならそれらは非決定論的である非常に難しいハードに設定制限により「もしあなたがこれをやるなら、やめた方がいいやれ。」これは難しい、なぜならその間次回の打ち上げ彼はこれができる絶対にやらないでください。そして、もちろん、入力</p>
+</details>
+<!-- chunk 7/8 -->
+<h3>Agentic Security and Dynamic Sandboxing: Mitigating Prompt Injections</h3>
+<p><strong>Speaker</strong>: 谈到受控攻击者与提示词注入（Prompt Injection），我们都知道这类攻击正变得越来越复杂。尽管大家都在努力为模型本身构建防护机制，但每个模型都有其自身的脆弱性。当你需要处理用户数据或外部输入的数据时，这就始终构成潜在的威胁，随时可能引发严重问题。那么，我们究竟该如何保护系统免受此类威胁呢？</p>
+<p>其中一部分工作必须由模型自身来承担。你希望模型能够最大程度地理解什么是提示词注入，明晰指令的来源层次——区分哪些是安全上下文，哪些是普通用户输入。与此同时，你必然希望对 Agent 的权限进行最小化限制。你必须确保在运行时（runtime），Agent 仅拥有完成当前具体任务所必需的权限。并且这种权限应当是动态调整的：根据执行的具体步骤和工作流程，动态调整并分配对应的权限级别。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Data, controlled attackers, prompt injections we talk about. We all know that they are becoming increasingly complex, and while efforts are being made to implement protections in the model itself, each of them has its own vulnerabilities. As long as you process user data or external data, this is always a threat and can cause problems at any time. So how can we protect ourselves against this?</p>
+<p>Part of the work has to be done by the model. You want the model to maximize its understanding of what an injection is, what the instruction tree and origins are from the user and safe contexts. Of course, you also want to restrict the privileges of your agents. You want to make sure at runtime they can only do what they need to do. And this dynamically changes permissions depending on the step and the work process.</p>
+</details>
+<p><strong>Speaker</strong>: 在这种架构中，沙箱（Sandbox）显然扮演着极其关键的角色，同时在运行时底层还需要部署严密的安全护栏（guardrails）。你必须具备全面的可观测性（observability），能够完整追踪和记录 Agent 的所有行为。这不仅包括底层的 trace 记录，更需要对沙箱内部的活动进行深度监控。你可以实时查看系统的每一次调用、所有的网络请求，并基于这些信息进行启发式分析（heuristics），从而精准洞察沙箱内部正在发生的实际行为，判断它是在遵循预定的 Agent 行为模板，还是出现了某种异常偏离。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Obviously, the sandbox here is very important. And underneath, there are safety rails at runtime. Do you have everything you need to observe the behavior of that agent? Displaying traces, not just low-level traces, the sandbox is also very important. You can display all system calls, all network requests, and based on this, is it possible to derive heuristics and understand what the sandbox is actually trying to do? Whether it follows the nominal agent template or if it is something abnormal.</p>
+</details>
+<h3>Balancing Safety Rails with Enterprise Policy Enforcement</h3>
+<p><strong>Speaker</strong>: 但这里存在一个棘手的矛盾：如果你在每个环节都盲目堆叠安全护栏，就会彻底扼杀 Agent 的实用价值。原本你拥有一个强大的 Agent 和强大的工具集，但如果因为过度恐惧风险而将所有功能锁死，它就变得毫无用处。因此这显然是一个必须权衡的困境。我们解决这个问题的方式是采用动态协作机制：确保仅在 Agent 提出明确需求并提供合理解释的时刻，才动态授予其所需额度的权限。同时，我们能够细粒度地过滤和裁定允许执行的操作及其具体理由。</p>
+<p>举一个典型的提示词注入攻击演示：假设我们要求 VibeCLI 完成一项任务，例如审查 GitHub 上的一个 Issue。这个操作通常转瞬即成，但如果该 GitHub Issue 中潜藏着提示词注入攻击，它可能会诱导 Agent 发布带有被盗密钥敏感信息的评论。原因仅仅是 Agent 读取了由恶意用户提交的 Issue 内容。</p>
+<p>针对这种情况，我们引入了针对提示词注入的安全规则体系，在其中你可以灵活配置一组分类器（classifiers）。你可以根据需求自由选择检测个人身份信息（PII）、敏感机密凭证、企业专有知识等内容。你可以自主设定阈值与审核强度，并决定在检测到违规后触发何种处置动作。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: The problem is that if you add all these guardrails everywhere, you basically destroy all options to use it. Because you had a powerful agent, powerful tools, but now by restricting everything because you fear everything, you make it useless. Therefore, this is clearly a dilemma that we have to deal with.</p>
+<p>So we resolve this dynamically using collaboration and ensuring that we provide the required amount of desired privileges only at the moment they tell you it is necessary and there is a valid justification to grant them. We can also filter what kind of operations should be allowed and why.</p>
+<p>In a very quick, typical demonstration with prompt injection, let's ask VibeCLI to complete a task, reviewing an issue on GitHub. It goes through very quickly, but looking back, that GitHub issue contained a prompt injection that actually made it publish a comment containing stolen secret keys, simply because you fetched the content of an issue published by a malicious user.</p>
+<p>Therefore, we have prompt-injection rules where you can configure a set of classifiers. You choose whether you want to detect personally identifiable information (PII), secrets, enterprise knowledge, and so on. You decide the sources, determine the thresholds—meaning you decide the type of moderation you want to apply—and also define what should happen afterwards.</p>
+</details>
+<p><strong>Speaker</strong>: 当你配置好这些规则后，就可以进一步添加企业策略（Policies）。策略能够让你精确控制这些安全规则生效的产品界面（product surfaces），无论是在 Web 端、移动应用还是命令行界面（CLI）。这正是企业级管理的核心能力：管理员可以在企业层级统一设定阈值并强制推行。完成后只需一键激活。</p>
+<p>此时，当用户再次通过 Web 界面执行完全相同的操作时，该恶意行为就会在网络层面被直接拦截阻断，而无需终端用户去进行任何额外的安全配置。这就是集中式企业管控的力量：不需要每个员工单独开启防护，而是直接在企业组织架构层面定义并推行安全策略。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Once you set your rules, you can now add policies. Policies allow you to decide where to apply this across product surfaces, whether it is the web version, mobile applications, or command-line interfaces. So this is the ultimate enabler for enterprise administrators to rule this. You determine the thresholds here and apply them, and then you just need to activate it.</p>
+<p>Now, even if you use the web interface and perform the exact same action, it is stopped at the network level without the user needing to configure anything. That is the power of enterprise control: users never have to give separate consent for protection; this policy is defined and implemented at the enterprise level. This is the kind of work we are doing in terms of security guidelines.</p>
+</details>
+<h3>AI Sovereignty: Data, Infrastructure, and Mistral's European Data Center</h3>
+<p><strong>Speaker</strong>: 然而，光有安全性还是不够的，我们还必须实现自主可控的 AI 主权（AI Sovereignty）。那么，究竟什么是主权？</p>
+<p>首先是数据主权（Data Sovereignty）：你的数据究竟存放在哪里？用户的敏感信息、企业客户的数据究竟保存在何处？谁拥有这些数据的访问权限？是否有某个超大规模云厂商（hyperscaler）或某家受特定司法管辖权约束的公司能够依法或因其他原因调取并检视这些数据？</p>
+<p>其次是智能与运行主权：这涉及到如何分析模型的内部行为，以及如何对正在运行的系统进行监测、干预、修正或微调。</p>
+<p>最后是算力主权（Compute Sovereignty）：这关乎整个模型推理输出的全流程。当你进行推理输出时，即便大家都购买了全球各地的算力资源，数据依然必须流经特定的物理节点。理解这一点对企业运营至关重要，因为从安全、合规和审计日志的角度来看，你的企业必须百分之百明确掌控系统的底层运转细节。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: But security alone is not enough; AI must be sovereign. So what is sovereignty?</p>
+<p>There is data sovereignty: Where is your data? Where is your user and customer data stored? Where is it kept, and who has access to it? What hyperscaler or what company, through jurisdictions or other reasons, can actually read this data?</p>
+<p>Intellectual sovereignty also involves analyzing model behavior, trying to fix or fine-tune what is happening. And also computation: this covers all output processes (inference). When you run inference, even if everyone buys ZTRs everywhere, data still passes through specific locations. Understanding this is very important for operations, because your enterprise needs to know with certainty what is happening from a security, audit logging, and compliance perspective.</p>
+</details>
+<p><strong>Speaker</strong>: 正因如此，我们正在全力构建自己的数据中心来正面回应这一诉求。Mistral 的发展势头依然迅猛——我们从最早的模型研发初创团队，逐步发展到推出全套企业级商业服务，而现在，我们正在自主建造独立的数据中心。</p>
+<p>大致的情况是：我们在巴黎附近建立了一个功耗达 10 兆瓦时级别的计算基地，全面部署了由英伟达（Nvidia）提供的最新 B200 芯片。这是全欧洲搭载此类顶级英伟达先进硬件的最大规模数据中心之一。我们通常会在这里承载重要的内部核心工作负载，例如大家现在使用的由 Le Chat 提供的各类应用；但更重要的是，这里也是我们为企业客户部署最高机密级别工作负载的物理承载地。</p>
+<p>正是通过这种方式，我们得以为客户提供一条从始至终真正端到端完全自主可控的实现路径，全面涵盖 Agent 安全防护、模型推理以及模型训练与蒸馏。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Therefore, we answer this directly: this is the data center that we are currently building. Mistral continues to push forward; recently starting as a model development company, then growing into an enterprise-ready company, and now we are building our own data center.</p>
+<p>Roughly speaking, this facility near Paris represents about 10 megawatt-hours, equipped with Nvidia B200 chips. It is one of the largest data centers with such advanced Nvidia hardware in Europe. This is where we run critical internal workloads—like Le Chat serving articles and user queries—but it is also where we host the most confidential customer workloads. This is exactly how we deliver a fully sovereign pathway from beginning to end, offering agent security, inference, and training to our customers.</p>
+</details>
+<h3>Specialized Domain Models: Specialized AI vs. General Foundation Models</h3>
+<p><strong>Speaker</strong>: 当然，要让整个体系高效协同运转，底层的模型架构才是核心支柱。从本质上讲，我们不仅拥有一系列涵盖各种尺寸、面向通用任务的基础大模型——我知道大家都在热切期待我们新一代旗舰大模型的到来，我可以向大家保证，它很快就会面世——但与此同时，我们也把极大的精力投入到了专业化模型（Specialized Models）的研发上。</p>
+<p>我们的专业化模型主要分为两大类：第一类是面向特定应用场景打造的功能型专用模型（例如稍后我们将深入介绍的 Vox 音频模型家族以及 OCR 4.1）；第二类则是专门针对特定企业客户及其专属私有数据集进行深度重训的模型。</p>
+<p>试想一下小众语言或低资源语料的场景；再比如许多企业内部使用着外界闻所未闻的专属编程语言，开源现成的通用基础模型在处理这类企业专有代码时表现往往非常薄弱。在成立公司之前，大家坐下来深入探讨过，专业化定制模型确实能带来颠覆性的体验飞跃。此外，我们还推出了一系列用于拓宽前沿技术边界的实验性模型，例如用于形式化数学证明的 Leanstral，以及我们在一个月前发布的 Ministral / Chillstral 系列。虽然大家都在谈论通用大型模型，但例如 Chillstral 这种模型凭借极高响应速度和精炼优美的架构，专为安全审查与内容审核（moderation）场景量身打造。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: But of course, to make everything work smoothly, you also need the models. This is essentially the family of general-purpose models we have, across various sizes for diverse tasks. I know everyone is looking forward to the next big foundation model, and I can assure you that we will deliver it very soon.</p>
+<p>However, we are also paying tremendous attention to specialized models. There are two types of specialized models: first, dedicated models useful for various specific purposes (we will talk about OCR and Vox shortly); and second, models where we retrain specifically for particular clients and proprietary datasets.</p>
+<p>Think about low-resource languages, or companies that use proprietary in-house programming languages that nobody else has heard of. Obviously, default models are not very strong at this kind of coding. Before founding the company, we sat down and discussed this, and specialized models truly make a massive difference. We also have experimental models that allow us to push scientific boundaries, like Leanstral for formal proofs, and Chillstral, which we announced a month ago. Everyone talks about general-purpose models, but Chillstral responds specifically to moderation issues extremely fast with a very clean architecture for security purposes.</p>
+</details>
+<h3>Audio Intelligence with Vox: Real-Time Diarization and Voice Cloning</h3>
+<p><strong>Speaker</strong>: 如果我们进一步拆解这些专业化模型，我想先和大家重点聊聊 Vox 系列——这是我们的全新音频模型家族。Vox 涵盖了文本转语音（Text-to-Speech）以及语音转文本（Speech-to-Text）的全套能力。我想借此证明我们在去年作为 AI 工程师所确立的使命：我们始终致力于通过开放模型与前沿工程将顶尖 AI 普及给大众，同时与顶层企业级解决方案无缝结合。</p>
+<p>我们在 Mistral 收集分析各类现实工作数据、观察人们实际日常工作模式时发现，深入理解企业真实环境至关重要：员工在一天中究竟如何组织各项事务？他们每天在执行哪些核心业务流程？在刚才的演示中，你能猜出哪一段声音是由 AI 合成的，哪一段是我本人的原声吗？事实上，其中一段正是我本人的声音克隆。这也是我们重金投入的研发方向——打造实用价值极高的声音克隆与拟真合成模型。第二个样本完全复刻了我的音色。</p>
+<p>在语音转文字（STT）方面，我们正全力推进精度提升与环境适应性优化。我们努力在任何严苛环境下都能精准捕捉不同说话人的声线、方言和口音。针对语音转文字，我们不仅拥有业界领先的高精度模型，而且正在实现飞跃式的持续升级。我们正在攻坚实时说话人日志（real-time diarization）技术：在会议进行的同时，提供极低延迟的实时同传转录，精准区分当前发言人，不断拓展支持的语种数量，提供高精度的时间戳标签，并在高噪声嘈杂环境中保持卓越的转录稳定性。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: Delving a bit deeper into specialized models, let's talk about Vox, our family of audio models. We have text-to-speech models, and I want to demonstrate this. As I stated last year as an AI engineer, our mission has truly been to offer open models and code execution to make AI accessible to the masses, while maintaining compatibility with enterprise-grade solutions and strong focus.</p>
+<p>When we build at Mistral and analyze this data, observing how people actually do their work in enterprise contexts, it is crucial to understand how employees organize their day and what operational processes they execute. Can you guess which one was generated by artificial intelligence? The other one was actually me. This type of voice cloning capability is an area where we are actively investing to create highly useful models. The second sample was entirely my voice, and this represents the capability we are developing.</p>
+<p>For speech-to-text conversion, we are working on increasing accuracy. We do everything to capture voices and various accents in any operating condition. In speech-to-text, we already have advanced models, and we are significantly improving them. We are working on real-time diarization to provide live stream transcription during meetings with accurate speaker identification, expanding the number of supported languages, providing precise timestamps, and ensuring robust stability in noisy environments.</p>
+</details>
+<h3>Enterprise Impact: KYC Document Automation and State-of-the-Art OCR 4.1</h3>
+<p><strong>Speaker</strong>: 在银行业与金融领域，存在一个极其重要且漫长繁琐的核心流程——客户尽职调查（KYC，Know Your Customer）。针对这一痛点，Mistral AI 与比利时的一家大型企业客户展开深度合作，为其专属的企业级 KYC 流程量身定制了两个自动化协同 Agent。最终取得的成效极为显著：因资料不齐全而被退回后台人工审核的案件比例从原本的 80% 大幅断崖式降低至 10%。客户申请的整体流转审批速度获得了成倍提升。</p>
+<p>这绝非空洞的概念炒作，而是依托我们最新前沿模型实现的端到端真实落地业务转化与工作流加速。我们持续聚焦于为客户创造实打实的业务价值，这也是我们一切研发工作的核心出发点。我们不盲从于跑分榜单上的微弱差异，而是致力于创造能够彻底改变客户实际生产力现实的工具。</p>
+<p>最后简要介绍一下我们在夏季发布的 OCR 4.1 模型。这款前沿先进的现代 OCR 模型能够轻松识别包括复杂手写体在内的各类文本，即使面对上世纪 60 年代那种经过多次扫描劣化的老旧模糊纸质档案，依然能够实现高精度的文本与版面还原。</p>
+<p>对于高度复杂的文档排版结构，OCR 4.1 能够精准区隔图注、大纲标题、正文段落、数据表格以及内嵌图像，并支持将其中的全部结构化内容完整提取解析。这是一个功能极度强大的基座模型，已经被深度集成在我们全套文档智能资产库中。</p>
+<p>在 Vibe 智能文档库架构中，面对企业级客户动辄数 TB 的海量非结构化文档与凭证，所有材料均可通过由该 OCR 模型驱动的高性能流水线进行深度处理，从而实现对任意文档内容的秒级毫秒级即时检索与结构化调用。这正是我们为企业级高端 RAG（检索增强生成）流水线所打造的核心引擎。</p>
+<p>我们正在持之以恒地对该模型进行打磨升级，使其更具鲁棒性，支持更广泛的多语言体系，并在复杂扫描噪声环境下保持极致稳定性。这些前沿模型之所以成为我们当下研发投资的重中之重，正是因为它们能切实解决企业面临的复杂业务难题，能无缝嵌入客户已有的生产系统中，为实际业务运转带来立竿见影的颠覆性变革。</p>
+<p>我们已经在 Mistral Studio 平台中全面开放了这些能力的测试沙盒。非常欢迎大家亲自前往 Studio 平台上手体验并实测这些专业化模型。无论是音频语音模型还是前沿 OCR 模型，我们近期都进一步延长了一个月的测试周期，诚邀大家亲自探索与验证。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Speaker</strong>: In the banking sector, there is a very critical and lengthy process known as KYC (Know Your Customer). Mistral AI partnered on a specific corporate KYC process with a Belgian customer, developing two dedicated agents. We succeeded in reducing the share of incomplete files sent back to the back office from 80% down to 10%. As a result, customer applications operate dramatically faster.</p>
+<p>This was not a gimmick; it was real-time transcription and document processing powered by our latest models. We are actively working to make this even more beneficial for customers, and this philosophy is key to our approach. We don't just chase benchmark nuances; we strive to build capabilities that transform the operational reality of our customers.</p>
+<p>Briefly touching upon OCR 4.1, which we released this summer: this modern OCR model is capable of recognizing any handwritten text as well as old scanned documents, such as papers from the 1960s. Even with highly complex document markups, it distinguishes captions, headings, body text, tables, and images, allowing you to extract everything cleanly. It is an extremely powerful model used extensively in our document libraries.</p>
+<p>In our Vibe document libraries, when you load massive amounts of unstructured documents—terabytes of files—they pass through this OCR pipeline, providing instantaneous access to any piece of data. This serves as our advanced RAG pipeline for customers with these specific configurations. We are persistently refining it to make it even more reliable, supporting more languages with high noise resilience. These state-of-the-art models are where we actively invest because they solve real enterprise problems and directly upgrade production workflows for our customers.</p>
+<p>These playgrounds are available for testing. We invite you to visit Mistral Studio to test these models yourself—whether testing our audio models or our OCR models. We have extended access by another month, so please go ahead and try them out.</p>
+</details>
+<!-- chunk 8/8 -->
+<h3>构建新一代工作愿景与安全强大的智能体</h3>
+<p><strong>Lélio</strong>: 并且它允许我们在极其复杂的场景下执行这些任务。因此，我们正在致力于打造一种全新的工作愿景，力求摆脱传统聊天助手的种种局限，创造出真正实用、能够将最终用户与开发者凝聚在一起的产品。在智能体安全方面，我们也在全力以赴，确保在部署极其强大的智能体的同时，切实保障企业的专有知识不被泄露；而我们所依靠的，就是一套完备且恰当的工具集。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Lélio</strong>: And it allows execution based on all these very difficult scenarios. So, in other words, we are working on a new vision of work—trying to escape the limitations of simple chat assistants and build something genuinely useful that unites end users and developers. We are also working very hard on agent safety to ensure that, while keeping these agents extremely powerful, we guarantee the protection of enterprise knowledge. And what do we have for that? The right set of tools.</p>
+</details>
+<p><strong>Lélio</strong>: 我们还在数字主权方面倾注了大量心血，确保为所有客户提供所需的全面控制能力，并在法国乃至全欧洲的数据中心与基础设施上投入了巨资，从而实现横跨整个人工智能周期的全流程自主可控。与此同时，我们仍在攻克难关，持续优化底层前沿模型。我们的科学研究团队规模空前壮大，在各个维度上都有众多突破正在发生。大语言模型显然仍将是我们的核心研究方向之一，我们正积极全力推进。我希望很快我们就能向大家分享一些非常令人振奋的新成果。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Lélio</strong>: We are working extremely hard on sovereignty, ensuring that we provide every customer with the level of control they require, backed by massive investments in data centers across France and perhaps all of Europe for the entire AI lifecycle. And we continue the hard work of improving our models. Our science team has never been larger, and there is so much happening across all these different fronts at this event. LLMs clearly continue to be one of our primary directions that we are actively pursuing. And I hope that very soon we will have something very exciting that we can share with you.</p>
+</details>
+<h3>峰会现场致谢与招聘倡议</h3>
+<p><strong>Lélio</strong>: 非常感谢各位的光临！希望大家喜欢这次峰会。我们的各个团队今天都在现场，其中一些小伙伴身穿橙色 T 恤，请大家务必随时与他们交流互动。请记住，今天现场有 1300 人，而且我们目前正在广纳英才！快去和大家打个招呼吧。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Lélio</strong>: Thank you so much for coming. I hope you enjoyed the Summit! Each of our teams is here today. Some of them are wearing orange shirts, so please don't hesitate to reach out and talk to them. Remember, there are 1,300 of us here today, but we are actively hiring employees—so go ahead and say hello!</p>
+</details>
+<p><strong>Lélio</strong>: 此外，还要衷心感谢各位演讲嘉宾。我特别想感谢 Jen、Alice、Dar 以及整个 DevRel 团队为组织本次盛会所付出的巨大努力。当然，还要感谢 Ralph，他担任了我们今晚的主持人。真的非常感谢大家，祝大家度过愉快的时光！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Lélio</strong>: And thank you to all the speakers. I also want to thank Jen, Alice, Dar, and the entire DevRel team for organizing this event, and, of course, Ralph, who has been our presenter this evening. Thank you all very much. Enjoy!</p>
+</details>
+<p><strong>Ralph</strong>: 太完美了！好的，谢谢 Lélio。让我们再来一次，给 Lélio 献上热烈的掌声！是的，太棒了，这绝对实至名归。我认为我们也应该向 Jen、Alice 以及整个 Mistral 团队致以诚挚的感谢，感谢他们精心筹办了这场精彩的盛会。</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ralph</strong>: Perfect! Yes, thank you, Lélio. Let's do it one more time—a round of applause for Lélio! Yes. Yes, definitely, that was well deserved. I think we should also thank Jen, Alice, and the entire Mistral team for organizing this event.</p>
+</details>
+<h3>明日精彩预告与展览区交流</h3>
+<p><strong>Ralph</strong>: 好的，接下来我有一个坏消息要告诉大家：坏消息就是今晚的议程到这里就全部结束了，对吧？大家可以回去休息了。但我这里还有两条好消息：好消息是，我们明天还会继续！明天还有大量丰富的内容等待大家参与。你们将听到来自 Black Forest Labs（黑森林实验室）的主题演讲，还会听到 NVIDIA 以及更多重磅嘉宾的分享。因此，明天的日程安排绝对非同凡响，听明白了吗？</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ralph</strong>: Alright, so I have one piece of bad news. The sad news is that tonight is already over, right? You can go and get some rest. But I also have two pieces of much better news: we will be back again tomorrow! There are so many things we are going to embrace tomorrow. You will hear talks from Black Forest Labs, you will hear from Nvidia, and many others. So tomorrow's program is going to be truly extraordinary, alright?</p>
+</details>
+<p><strong>Ralph</strong>: 顺便问一下，明天有谁还会再来？我看到台下的各位基本上都会来，太好了！那么我们明天再见。不过在今晚，我们现在的接待处设在展览区，对吧？所以请大家放慢脚步，一起移步到展览区，尽情享受美妙时光，结识新朋友，花点时间与每个人畅聊一番。我们的演讲嘉宾都会在那里，各位赞助商也都在场。来吧，一起加入我们！大约一分钟后，我们在展览区见。好的，各位，再次衷心感谢大家！今天大家的表现棒极了。嗯，再见！</p>
+<details>
+<summary>Original English</summary>
+<p><strong>Ralph</strong>: By the way, who is coming back tomorrow? I see all of you! Yes, wonderful. So see you tomorrow—but for today, the reception is over at the exhibition area, right? So let's all slowly head over there, enjoy, meet people, and take your time chatting with everyone. Our speakers will be there, and our sponsors are participating as well. Come on, let's join! See you in the exhibition hall in about a minute. Alright, everyone, thank you so much. You've been wonderful today. Yeah.</p>
+</details>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary>📌 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    <div class="tags-section"><p><strong>关键字:</strong>
+      
+        <a class="tag-link" href="/tags/productivity-growth/">productivity-growth</a>
+      
+        <span class="tag-pill tag-pill--no-page">general-purpose-technology</span>
+      
+        <a class="tag-link" href="/tags/ai-application/">ai-application</a>
+      
+        <a class="tag-link" href="/tags/workflow-automation/">workflow-automation</a>
+      
+        <a class="tag-link" href="/tags/technology-trends/">technology-trends</a>
+      
+    </p></div>
+    
+  </main>
+  <button class="toggle-all-details-btn" id="toggleAllDetailsBtn" aria-label="展开/折叠所有英文原文"><span class="icon">📖</span><span class="btn-text">展开全部原文</span></button>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+    <script src="/js/theme-toggle.js"></script>
+  </body>
+</html>
