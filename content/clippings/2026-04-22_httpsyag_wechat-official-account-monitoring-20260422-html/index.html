@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>公众号监控这件事：主流方案对比与一条更务实的路径</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">公众号监控这件事：主流方案对比与一条更务实的路径</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-04-22</span>
+    
+
+    <header class="article-header">
+      
+      <h1>公众号监控这件事：主流方案对比与一条更务实的路径</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">wechat-monitoring</span>
+      
+        <span class="tag-pill tag-pill--no-page">data-extraction</span>
+      
+        <span class="tag-pill tag-pill--no-page">local-database</span>
+      
+        <span class="tag-pill tag-pill--no-page">cli-tools</span>
+      
+        <a class="tag-link" href="/tags/software-engineering/">software-engineering</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章探讨了微信公众号监控的长期需求及官方API缺失的现状。对比了五类主流解决方案，指出只有微信读书API和本地客户端SQLite数据库是可持续的路径。作者介绍了一个开源CLI工具`wechat_db_parser`，利用本地数据库提供稳定的数据入口，方便用户接入日报、知识库或AI工作流，并强调这是解决该问题的务实起点。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/wechat-official-account-monitoring-20260422.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-04-22T00:00:00.000Z">2026-04-22</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>7 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E9%9B%B6%E5%85%88%E8%AF%B4%E7%BB%93%E8%AE%BA%E6%88%91%E4%BB%AC%E5%BC%80%E6%BA%90%E4%BA%86%E4%B8%80%E4%B8%AA%E7%9B%B4%E6%8E%A5%E8%83%BD%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7">零、先说结论：我们开源了一个直接能用的工具</a></li><li class="outline-h2"><a href="#%E4%B8%80%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E9%95%BF%E6%9C%9F%E5%AD%98%E5%9C%A8%E5%AE%98%E6%96%B9%E4%B8%8D%E8%A7%A3%E5%86%B3%E7%9A%84%E9%9C%80%E6%B1%82">一、这是一个长期存在、官方不解决的需求</a></li><li class="outline-h2"><a href="#%E4%BA%8C%E5%B8%82%E9%9D%A2%E4%B8%8A%E4%B8%BB%E6%B5%81%E6%96%B9%E6%A1%88%E7%9A%84%E5%88%86%E7%B1%BB">二、市面上主流方案的分类</a></li><li class="outline-h2"><a href="#%E4%B8%89%E4%B8%BA%E4%BB%80%E4%B9%88%E7%9C%9F%E6%AD%A3%E5%80%BC%E5%BE%97%E9%95%BF%E6%9C%9F%E6%8A%95%E5%85%A5%E7%9A%84%E5%8F%AA%E6%9C%89%E4%B8%A4%E6%9D%A1">三、为什么真正值得长期投入的只有两条</a></li><li class="outline-h2"><a href="#%E5%9B%9B%E6%9C%AC%E5%9C%B0%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%99%E6%9D%A1%E8%B7%AF%E5%BE%84%E9%AB%98%E5%B1%82%E4%B8%8A%E6%98%AF%E6%80%8E%E4%B9%88%E8%B7%91%E7%9A%84">四、本地数据库这条路径，高层上是怎么跑的</a></li><li class="outline-h2"><a href="#%E4%BA%94%E5%AE%83%E8%A7%A3%E5%86%B3%E4%BA%86%E4%BB%80%E4%B9%88%E6%B2%A1%E8%A7%A3%E5%86%B3%E4%BB%80%E4%B9%88">五、它解决了什么、没解决什么</a></li><li class="outline-h2"><a href="#%E5%85%AD%E5%A6%82%E6%9E%9C%E4%BD%A0%E5%8F%AA%E9%9C%80%E8%A6%81%E5%B8%A6%E8%B5%B0%E4%B8%80%E4%BB%B6%E4%BA%8B">六、如果你只需要带走一件事</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><blockquote>
+<p>调研日期：2026-04-22
+场景定义：已经在自己微信里订阅了一批公众号，希望把”今天谁更新了、最近发了什么、能不能搜索、能不能接进自动化”这类需求稳定落地</p>
+</blockquote>
+<h2 id="零先说结论我们开源了一个直接能用的工具" data-reading-heading="">零、先说结论：我们开源了一个直接能用的工具</h2>
+<p>如果你只想要一个能跑的东西，可以直接看 wechat_db_parser。它是一个开源
+CLI，基于本地微信客户端数据库，把公众号监控里最难的那一层（稳定的数据入口）直接做成了两条命令：一条导当天所有订阅号的更新流，一条导某一个号最近几篇文章的时间线，输出格式是
+CSV 或 Markdown，可以直接接进自己的日报、提醒、知识库或 AI 流程。</p>
+<p>这篇文章的其余部分回答的是另一个问题：公众号监控这件事，社区里尝试过的主流方案有哪几类，为什么最后真正值得长期投入的只有两条，以及本地数据库这条路径在整体生态里处于什么位置。如果你只需要工具直接用，上面一段就够了；如果你想理解为什么是这套方案、为什么是这种形态，继续往下读。</p>
+<h2 id="一这是一个长期存在官方不解决的需求" data-reading-heading="">一、这是一个长期存在、官方不解决的需求</h2>
+<p>关注一批公众号之后，会自然出现几类后续需求。最轻的一类是希望知道今天谁更新了，不想每次手动翻订阅列表。再往上是按关键词搜索历史文章，把公众号当作长期信号源做舆情或行业跟踪。再往上是接入自己的知识库、日报、提醒、摘要、打标签这类
+AI
+工作流。对做内容研究、情报跟踪、媒体观察的人，以及重度信息订阅者和个人自动化开发者来说，这是一个真实而持续的需求。</p>
+<p>问题在于微信本身并不为这些需求提供入口。没有公开的
+RSS，没有面向第三方的订阅号拉取
+API，客户端也没有开放导出。需求一直有，官方通道一直没有，这就使得所有试图解决它的方案都在走旁路。调研这件事的第一步，不是去找”哪个工具最好”，而是先理解清楚：旁路一共有几种，它们各自解决到了哪一步。</p>
+<h2 id="二市面上主流方案的分类" data-reading-heading="">二、市面上主流方案的分类</h2>
+<p>如果系统地看一遍社区里的尝试，大致可以分成五类。它们并非互斥，但面对的问题和付出的代价不同。</p>
+<p>第一类是直接抓公众号网页。 无论是 mp.weixin.qq.com
+的文章页，还是搜狗微信搜索曾经暴露过的入口，这一类的核心矛盾是持续对抗服务端。你要面对反爬、登录态、频控、入口变化和页面结构漂移。写起来不难，维持起来很难。它适合一次性抓一批已知链接，不适合做长期系统的稳定入口。</p>
+<p>第二类是协议模拟，典型代表是 Web 微信、iPad 协议、Mac
+协议。 Web 微信协议自 2019 年被官方关闭后整条路基本失效，ItChat、wxpy、Wechaty 免费 puppet
+这一代工具都停在那里。iPad
+协议仍有少数项目在维护，但多数转成了闭源商业服务，需要付费
+token，并且账号风险较高。这一类方案的问题在于它直接落在微信最敏感的检测面上，个人和小团队几乎没办法长期维护。</p>
+<p>第三类是 UI 自动化，用桌面客户端的界面模拟操作。
+Windows 平台上 wxauto
+这类工具相对成熟，macOS
+和移动端则基本原型级别。它的优点是容易上手，十几行代码就能跑起来；缺点是必须保持客户端前台可见、依赖特定微信版本、微信每次更新都可能打破界面定位。它适合做原型验证或低频交互，不适合作为长期稳定的数据入口。</p>
+<p>第四类是微信读书 API。
+这是一条相对冷门但在公众号场景里真正能打的路径。微信读书本身是腾讯的产品，收藏到微信读书的公众号文章可以通过它的
+API
+拿到结构化数据，包括标题、作者、正文、时间。它的优势是接口稳定、和微信主客户端风险面隔离；限制是文章必须已经进入微信读书的收藏/订阅体系，且整条链路被微信读书的产品边界限制。对需要把公众号正文拿出来做索引、搜索、摘要的场景，它是一个值得严肃考虑的选项。</p>
+<p>第五类是读取本地微信数据库。
+微信桌面客户端会把你订阅和读过的内容同步到本机 SQLite
+文件里。把这些文件解析出来之后，可以直接拿到结构化的更新流、账号信息、文章链接和摘要。这条路径不依赖持续访问微信服务器，也不依赖界面操作，它处理的是已经落到你设备上的数据。</p>
+<h2 id="三为什么真正值得长期投入的只有两条" data-reading-heading="">三、为什么真正值得长期投入的只有两条</h2>
+<p>上面这五类方案里，从长期可维护性的角度看，真正能作为稳定输入层的只有两条：微信读书
+API
+和本地数据库。其它三类要么入口已经不存在，要么维护成本随时间快速上升。</p>
+<p>网页抓取和协议模拟的共同问题是它们持续暴露在服务端面前。微信有强烈的动机去识别并阻断这类访问，工具作者和服务方始终处在对抗关系里，工具的半衰期很短。UI
+自动化的问题则是界面本身不稳定，微信一次更新就可能让脚本失效，维护节奏被迫和微信客户端绑定。对一个希望跑一年以上的个人或小团队项目来说，这些成本最终都会压过收益。</p>
+<p>微信读书 API
+和本地数据库之所以不同，是因为它们都把问题从”在线对抗”收缩到了一个更可控的面。前者走的是一个独立产品的开放度边界，后者走的是离线数据处理。两条路径都不需要你持续模拟访问微信服务端，维护形态也更接近常规软件工程而不是爬虫运维。</p>
+<p>两者之间如何选取决于目的。微信读书 API
+更适合需要文章正文、做全文搜索或生成摘要的场景，尤其是以内容分析为主的使用方式。本地数据库更适合把”哪些公众号更新了、每条更新的标题和链接、更新时间”这类信号流作为触发信号，再由上层决定接下来做什么。如果你的系统需要一个能持续产出更新事件的输入层，本地数据库是更直接的选择。</p>
+<h2 id="四本地数据库这条路径高层上是怎么跑的" data-reading-heading="">四、本地数据库这条路径，高层上是怎么跑的</h2>
+<p>本地数据库方案的核心思路，可以用一句话概括：微信桌面客户端已经把你订阅的公众号和最近的更新同步到了本机
+SQLite
+文件里，只要能读懂这些文件，就等于拿到了一个离线的、结构化的输入层。</p>
+<p>具体走下来有三个步骤。</p>
+<p>第一步是从加密的客户端数据库恢复成可读的
+SQLite。这一步公开社区已经有成熟工具，ChatLog Alpha
+是目前最活跃的一个，它同时提供 HTTP API 和 MCP
+集成，可以让数据库直接作为数据源被消费。这一步并不需要读者自己从零做逆向。</p>
+<p>第二步是从恢复出来的数据库里读出公众号相关的数据。客户端把订阅号的更新流、账号信息、最近文章的标题和链接直接保存在几个
+SQLite
+文件里，解析出来就是结构化数据。具体是哪几张表在哪个文件里，会随客户端版本变化，但读取方式都是普通
+SQLite 查询，不涉及逆向。</p>
+<p>第三步是把这些结构化数据拿出来，交给上层使用。到了这一步就已经是常规数据处理了：写一个日报、按关键词做提醒、接进一个
+AI 摘要 pipeline、同步到 Notion
+或本地知识库，都只是普通的数据消费工作。真正难的入口问题已经在前两步解决了。</p>
+<p>我们把这套流程封装成了一个公共 CLI，仓库地址是 wechat_db_parser。实际使用形态大致是这样：</p>
+<p>想知道今天谁更新了，跑一条命令把当天的订阅流导成 CSV：</p>
+<pre><code>&lt;code class="sourceCode bash"&gt;&lt;span id="cb1-1"&gt;&lt;a href="#cb1-1" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;&lt;span class="ex"&gt;wechat-db-export&lt;/span&gt; official-articles &lt;span class="dt"&gt;\&lt;/span&gt;&lt;/span&gt;
+&lt;span id="cb1-2"&gt;&lt;a href="#cb1-2" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;  &lt;span class="at"&gt;--data-dir&lt;/span&gt; /path/to/Msg &lt;span class="dt"&gt;\&lt;/span&gt;&lt;/span&gt;
+&lt;span id="cb1-3"&gt;&lt;a href="#cb1-3" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;  &lt;span class="at"&gt;--output&lt;/span&gt; /tmp/official_articles.csv &lt;span class="dt"&gt;\&lt;/span&gt;&lt;/span&gt;
+&lt;span id="cb1-4"&gt;&lt;a href="#cb1-4" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;  &lt;span class="at"&gt;--start&lt;/span&gt; 2026-04-22 &lt;span class="at"&gt;--end&lt;/span&gt; 2026-04-23&lt;/span&gt;&lt;/code&gt;
+</code></pre>
+<p>想看某一个号最近几篇文章，换一条命令直接导成 Markdown：</p>
+<pre><code>&lt;code class="sourceCode bash"&gt;&lt;span id="cb2-1"&gt;&lt;a href="#cb2-1" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;&lt;span class="ex"&gt;wechat-db-export&lt;/span&gt; official-articles-timeline &lt;span class="dt"&gt;\&lt;/span&gt;&lt;/span&gt;
+&lt;span id="cb2-2"&gt;&lt;a href="#cb2-2" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;  &lt;span class="at"&gt;--data-dir&lt;/span&gt; /path/to/Msg &lt;span class="dt"&gt;\&lt;/span&gt;&lt;/span&gt;
+&lt;span id="cb2-3"&gt;&lt;a href="#cb2-3" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;  &lt;span class="at"&gt;--accounts&lt;/span&gt; &lt;span class="st"&gt;"极客公园"&lt;/span&gt; &lt;span class="dt"&gt;\&lt;/span&gt;&lt;/span&gt;
+&lt;span id="cb2-4"&gt;&lt;a href="#cb2-4" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;  &lt;span class="at"&gt;--limit&lt;/span&gt; 3 &lt;span class="at"&gt;--format&lt;/span&gt; markdown &lt;span class="dt"&gt;\&lt;/span&gt;&lt;/span&gt;
+&lt;span id="cb2-5"&gt;&lt;a href="#cb2-5" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;  &lt;span class="at"&gt;--output&lt;/span&gt; /tmp/geekpark_timeline.md&lt;/span&gt;&lt;/code&gt;
+</code></pre>
+<p>Markdown 输出里直接包含标题、时间、账号、文章链接和封面图
+URL，既适合人工 review，也方便再喂给下游的 AI
+或知识库系统。这些不是理论演示，是已经跑通的日常用法。</p>
+<h2 id="五它解决了什么没解决什么" data-reading-heading="">五、它解决了什么、没解决什么</h2>
+<p>这条路径最直接的价值，是把公众号监控里最难的一层，也就是稳定的数据入口，变成了一个本地数据处理问题。一旦输入层稳定，上面不管是关键词提醒、日报汇总、主题分类、摘要生成，都只是常规工程问题，能随需求持续迭代。</p>
+<p>边界也需要说清楚。它依赖本机已经同步到微信客户端的数据，因此覆盖范围受你自己的订阅和阅读行为限制。它适合做监控、整理、分析，不适合被理解成一个面向任意公众号的全量抓取方案。风险轮廓上，它把问题收缩到了离线数据处理层，不需要持续访问微信服务器，也不需要大量界面操作，检测面明显小于网页抓取和在线自动化。这里说的是风险形态不同，而不是零风险承诺，这个差别值得读者自己根据使用场景去判断。</p>
+<h2 id="六如果你只需要带走一件事" data-reading-heading="">六、如果你只需要带走一件事</h2>
+<p>公众号监控这件事，官方不提供入口，社区里尝试过五类方案，长期看能活下来的只有两条：微信读书
+API 和本地客户端
+SQLite。前者适合以正文为中心的内容分析，后者适合以更新流为中心的监控和自动化。本地数据库这条路的入口工具已经开源，我们自己也维护了一个面向日常使用的
+CLI，把”今天谁更新了”和”某个号最近几篇”这两种任务直接做成了命令。对需要长期跑一套公众号监控流程的人来说，这是一条目前性价比较高的起点。</p>
+<p>相关公开链接：</p>
+<p>wechat_db_parser</p>
+<p>ChatLog Alpha</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/1dd736700308e28817be0089c72fbfa1757a51753a2a178d4366f5f804dece0e.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/1dd736700308e28817be0089c72fbfa1757a51753a2a178d4366f5f804dece0e.md" download="公众号监控这件事：主流方案对比与一条更务实的路径.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=WeChat" class="entity-link company-link">WeChat</a>, <a href="/search/?q=Sogou" class="entity-link company-link">Sogou</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=wechat_db_parser" class="entity-link product-link">wechat_db_parser</a>, <a href="/search/?q=ChatLog Alpha" class="entity-link product-link">ChatLog Alpha</a>, <a href="/search/?q=WeChat Read API" class="entity-link product-link">WeChat Read API</a>, <a href="/search/?q=SQLite" class="entity-link product-link">SQLite</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

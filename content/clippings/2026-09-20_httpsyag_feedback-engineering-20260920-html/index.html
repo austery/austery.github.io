@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Engineering：agent
+自动化工程卡在哪，卡多久</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Feedback Engineering：agent
+自动化工程卡在哪，卡多久</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-20</span>
+    
+
+    <header class="article-header">
+      
+      <h1>Feedback Engineering：agent
+自动化工程卡在哪，卡多久</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">feedback-engineering</span>
+      
+        <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+      
+        <span class="tag-pill tag-pill--no-page">dense-feedback</span>
+      
+        <a class="tag-link" href="/tags/performance-optimization/">performance-optimization</a>
+      
+        <span class="tag-pill tag-pill--no-page">diagnostic-tools</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章解析Feedback Engineering在AI自动化工程中的核心作用，指出智能体性能瓶颈源于缺乏分层诊断反馈。通过GLM-5.3部署案例，阐述区分验收与诊断、构建低成本多维反馈机制的重要性，强调人类工程师需通过设计观测环境来引导智能体，而非仅依赖模型能力。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/feedback-engineering-20260920.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-09-20T00:00:00.000Z">2026-09-20</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>4 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E6%8A%8A%E9%AA%8C%E6%94%B6%E5%92%8C%E8%AF%8A%E6%96%AD%E5%88%86%E5%BC%80feedback">把验收和诊断分开：Feedback</a></li><li class="outline-h2"><a href="#%E4%B8%89%E4%B8%AA%E7%B3%BB%E7%BB%9F%E6%95%85%E9%9A%9C%E4%B8%8E%E4%B8%89%E7%A7%8D%E5%8F%8D%E9%A6%88%E7%B2%BE%E5%BA%A6%E5%B9%B6%E5%8F%91%E5%92%8C%E7%AE%97%E5%AD%90%E7%9A%84%E7%9C%9F%E5%AE%9E%E5%AE%9A%E4%BD%8D%E9%93%BE%E6%9D%A1">三个系统故障与三种反馈：精度、并发和算子的真实定位链条</a></li><li class="outline-h2"><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%99%E9%97%A8%E6%89%8B%E8%89%BA%E7%A8%80%E7%BC%BA%E4%BB%8E%E5%BC%BA%E9%AA%8C%E8%AF%81%E4%BF%A1%E5%8F%B7%E6%8E%A8%E8%BF%9B%E5%88%B0%E4%BF%A1%E6%81%AF%E6%9E%B6%E6%9E%84">为什么这门手艺稀缺：从强验证信号推进到信息架构</a></li><li class="outline-h2"><a href="#%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%A6%82%E4%BD%95%E8%90%BD%E5%9C%B0%E4%B8%89%E9%97%AE%E8%87%AA%E6%9F%A5%E7%8E%AF%E5%A2%83%E4%B8%8E%E8%AF%BB%E6%87%82%E5%8E%82%E5%95%86%E6%8A%A5%E5%91%8A%E7%9A%84%E7%B4%A0%E5%85%BB">工程师如何落地：三问自查环境与读懂厂商报告的素养</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>设想这样一个工程场景（示意场景）。你让一个软件智能体优化在线推理服务的吞吐表现。它改了几处配置参数并启动压测，吞吐下降了
+20%。面对变差的数字，它又改了另一批函数重新测试，折腾几轮后依然理不清排查方向。问题不在于智能体缺少执行能力，而是测试环境在压测结束后只返回一个笼统的终点总分，它根本无从判断代码到底坏在哪。</p>
+<p>平时排查系统性能瓶颈，工程师很少只盯着压测仪表盘上的总延迟看。吞吐掉下来了，通常先拉出计算与传输的时间线，看两条时间线有没有撞在一起；怀疑计算逻辑改错了，就把算出的数值与标准实现逐项比对，量化其中的误差；怀疑某个热点循环拖慢整体，就把它单独拆出来跑一次局部耗时测试。如果这些诊断工具没有封装给自动化系统，哪怕把整个工程仓库交给智能体，它对着变差的分数也没法排查。</p>
+<p>在 Z.ai
+2026 年 9 月 17 日发布的复盘长文 里，GLM-5.3 驱动的 Infra Agent
+遇到的就是这种情况。当时的任务目标，是让大模型 GLM-5.3-Flash
+在国产芯片集群上完成生产部署。厂商自报该集群部署了超过 10
+万张国产加速器，模型全部生产推理任务运行其上。工程师负责设定性能目标与系统边界，由
+Infra Agent
+提出假设、修改算子实现与通信代码，再由测试环境提供分层反馈，循环推进直至通过验收。厂商自述该系统从首次跑通到生产就绪用时不到两周，相对初始基线，端到端吞吐达到约
+3 倍。</p>
+<p>这套工程循环能够持续推进，关键在于工程师搭建的反馈机制。改完代码之后，如果测试环境每次只返回一个下降的性能总分，智能体就无法判断问题到底出在计算核心、通信库还是并发调度。正如
+Z.ai 在复盘中所写：“End-to-end metrics can tell an agent that results
+got worse, but they cannot explain why.”
+终点指标只能告知结果恶化，无法解释背后的机制。搞清楚智能体在工程任务中到底卡在哪、怎么突破，往往比单纯看最后的跑分有用得多。这背后有个朴素的原则：优化之前先测量。基于测量数据的推断，永远比拍脑袋猜测可靠；这个原则对人成立，对
+AI 同样成立，甚至更成立，因为智能体比人更依赖环境递给它的信息。</p>
+<h2 id="把验收和诊断分开feedback" data-reading-heading="">把验收和诊断分开：Feedback</h2>
+<p>engineering 的三条硬特征</p>
+<p>排查系统故障时，工程师通常有一套清晰的分级思路：确认计算结果是否正确，先与标准实现比对；定位耗时瓶颈，先调出时间线看计算与通信在哪个交接点卡住；评估硬件资源是否跑满，先通过局部测试跑一下。把这些原本依靠人工经验调用的排障手段整理成工具链，让自动化系统在改动代码后能获得多维度的即时反馈，厂商将这种机制称为
+dense feedback。以此为核心构建的工程方法，就是本文标题里的 feedback
+engineering。如果智能体缺少这类诊断工具，压测没达标时，它的视线就会困在静态代码与孤立的最终分数之间。</p>
+<p>这项手艺的核心分工，在于区分验收与诊断。端到端分数回答系统有没有变好，诊断反馈回答故障卡在哪一层、假设错在哪里。手里只有分数的智能体，只会陷在知道失败却查不出原因的停滞中；只有局部诊断没有全局验收的系统，容易在偏离目标的局部改动中走失。两套机制相互配合，智能体才能在复杂的底层堆栈中建立起因果链条。</p>
+<p>厂商强调的 dense feedback
+体系，有三条硬要求。第一，反馈要能指出问题的大致位置。系统不能只抽象报告精度下降，而应直接给出特定输入在修改前后的数值差异，引导智能体把排查范围缩小到具体代码路径。第二，反馈成本必须低、响应必须快。几秒钟单算子测试能回答的问题，不必动用耗时数小时的集群压测，短周期验证能帮助智能体快速排除错误假设。第三，反馈必须支持客观验证。代码修改是否有效，应由标准实现比对、对照测试和量化指标判定，不能依赖智能体的主观陈述。正如厂商在复盘中所言：“correlations
+between observations alone cannot establish a root
+cause”，运行时信号只能提供线索，因果确认仍然需要受控对照实验。</p>
+<p>在这套体系下，人类工程师把精力放在了三个关键位置：设定优化目标与系统边界、搭建智能体可调用的反馈环境，并对涉及数值计算语义、异步并发与生产风险的关键改动执行人工审查。厂商在长文中对此做了概括：“Engineers
+defined objectives and system boundaries. The agent handled analysis,
+hypotheses, and code changes. The experimental environment provided
+layered, timely, and verifiable
+feedback.”（工程师定目标和系统边界，agent
+负责分析、假设和改代码，实验环境提供分层、及时、可验证的反馈。）这样分工之后，两边的事就清楚了：工程师管方向和安全底线，自动化系统在搭好的验证环境里自己跑。</p>
+<p>只有一个分数的 agent
+在盲猜循环里打转，分层反馈的 agent
+沿定位、微基准、时间线到端到端验收逐步收敛</p>
+<h2 id="三个系统故障与三种反馈精度并发和算子的真实定位链条" data-reading-heading="">三个系统故障与三种反馈：精度、并发和算子的真实定位链条</h2>
+<p>推理系统里最难的 bug
+往往不在某一行代码里，而是几层组件相互作用才暴露出来：单独看每层都正常，叠在一起就出错。GLM-5.3
+基础设施开发过程中出了三个这样的案例，正好用来说明反馈工程在排障中怎么用。三个案例都走了同一条路：定目标、看现象、提假设、修复、验证。</p>
+<p>第一个案例出在计算结果的正确性上。在长文本推理中，系统目标是确保上下文并行切片计算的结果与未切片基准数值保持一致。这项切分技术名为
+Context
+Parallelism。智能体在对比测试中观测到异常：切片并行路径的输出误差超出了容许公差，且随着上下文长度增加持续放大。据厂商自述，它据此提出假设：误差源于跨切片状态传递与合并计算时的精度丢失，底层矩阵乘法默认启用了低精度模式。</p>
+<p>顺着这个假设往下查，问题果然出在这里。KDA
+算子在跨切片状态合并时，两次连续乘法默认调用了 TF32
+模式计算。修复方案是将这两处运算显式指定为
+input_precision=“tf32x3”，通过三组 TF32
+硬件运算组合累加逼近高精度浮点，减小累积误差。局部回归测试随后确认，输出误差成功回落至容差范围内。修复随后提交给了开源项目
+Flash
+Linear Attention
+并已合并；合入的是一条默认关闭的精度路径，需要显式开启。这项修复管的是算得对，不是跑得快，不能计入端到端性能提升的账面。</p>
+<p>第二个案例是跨层并发瓶颈排查。在长文本与多轮对话推理中，前序计算生成的注意力状态，需要跨越网络通道直接传递给后续计算节点，省去后续节点重新计算的开销。这项跨节点传输键值缓存机制，通常称作
+KV
+Transfer。系统的工程目标，是在预填充阶段计算的同时并发执行数据传输，将加入
+KV Transfer 后的性能差距控制在 5%
+以内。基准测试显示，加入传输后的性能差距超过
+20%（厂商自报），大幅落后于目标。</p>
+<p>如果只看吞吐数字，很容易推测问题出在网络带宽饱和或传输引擎效率不足。据厂商自述，智能体调出执行时间线观测，发现了一个反常现象：测试场景中
+Python
+侧的传输任务与底层通信调度在时间线上从未重叠。这表明瓶颈更可能不在网络本身，而在上层任务未能及时发出。智能体顺着调用链向下追踪，把问题锁定在
+Python 与 C++ 的语言边界。</p>
+<p>卡住的地方是运行时锁的争用机制。Python
+运行时依赖全局解释器锁来管理多线程内存安全。工作线程进入底层 C++
+通信扩展时若未释放该锁，其他 Python
+线程就会因等待锁而排队停滞。这种协调多线程的机制，正是常说的
+GIL。所用版本的 DeepEP 里，节点内分发的 C++
+函数没有释放这把锁，跨节点的分发函数反而早已释放，源码注释直接写着不释放会卡住其他线程的
+KV transfer。修复就是把节点内通信的 C++
+区间也显式释放锁，让传输线程能并发提交任务。</p>
+<p>释放锁后重新测试时间线，传输任务顺利与计算重叠，性能差距缩小至 1%
+以下（厂商自报）。这项并发冲突在开源社区早有公开记录。DeepEP PR #142 于
+2025 年 5 月 8 日合并，曾修复与 Mooncake
+共用时的解释器锁问题；针对节点内调用的 PR #555 也在
+2026 年 1 月 4
+日提交，至今保持开放状态。本文判断，智能体的贡献是在特定集群上完成了本地定位、迁移与验证，不是首次发现该缺陷。厂商复盘也承认：“correlations
+between observations alone cannot establish a root
+cause”，时间线追踪排除了虚假假设，最终因果确认依赖受控修复后的端到端验证。</p>
+<p>第三个案例是单算子性能挖掘与系统级取舍。优化前先测量的原则在这里最要紧：算子在局部测试中快了，不代表端到端快了，单个算子过度占用硬件资源，可能会挤占通信带宽，拖慢全局流水线。所以每一步改动都要回到端到端压测里确认。KDA
+解码算子引入重放机制后，虽然降低了内存占用，但计算耗时明显增加，性能分析显示计算密集型操作成为主要瓶颈。</p>
+<p>据厂商自述，针对这项观测，智能体首先改写内部除法逻辑，使执行时间降低
+9.6%（厂商自报）。随后它发现特征维度分块导致浮点归一化和门控计算重复执行四次。它调整了分块策略，将切片合并进单个线程块，中间结果驻留寄存器，用线程束规约替代重复计算。通过牺牲微小并行度消除冗余计算，算子实现了
+1.71
+倍的局部加速（厂商自报）。改动后的算子送回端到端压测环境中确认收益；厂商自述这些经验随后沉淀进优化骨架库，供后续复用。</p>
+<p>三类故障经由误差比对、时间线追踪与阶梯测试汇入修复与端到端验收</p>
+<h2 id="为什么这门手艺稀缺从强验证信号推进到信息架构" data-reading-heading="">为什么这门手艺稀缺：从强验证信号推进到信息架构</h2>
+<p>用智能体优化系统并拆分验证手段，在工业界已有实践探索。2026 年 9 月 11
+日，Elastic 阐述自动化优化工具 atune 时写道：Benchmarks
+provide the verdict and profilers provide the
+gradient，指出性能分析工具提供的梯度信息比最终测试给出的判决更有价值。Elastic
+搭了一条验证阶梯：秒级探针只负责快速否决错误代码，局部测试过滤环境噪声，双向比对执行严格验收，数小时全量负载充当最后防线，越往上成本越高。在一次实验中，智能体合并指令导致基准退化
+26%，系统通过向量化反编译警告，用约 10 秒向智能体解释了原因。</p>
+<p>我核对了当时的公开记录，这种人机协同优化基础设施的思路已经在不同团队中展开。OpenAI
+与博通在 2026 年 6 月 24 日联合发布 Jalapeño
+专用推理芯片 时表示：“The same models served to users are helping
+improve the infrastructure used to run future models.”
+模型不仅服务用户，也在协助改进承载未来模型的底层设施。该芯片在模型参与下，耗时九个月完成了从架构设计到制造流片的全流程。更早之前，DeepMind
+的 AlphaEvolve
+为 Google 的 Borg
+集群找到一套更优的调度方案，该方案已在生产环境运行一年以上，平均回收
+Google 全球算力的 0.7%；它还把 Gemini 的一个核心算子提速
+23%，带来训练时间减少 1%（该口径来自官方博客披露，不可与 GLM
+系统的吞吐数字作同条件对比）。</p>
+<p>既然业界已有先例，为什么反馈工程依然稀缺？原因是此前的讨论大多在问信号有多硬，很少问信号说了什么。在此前关于
+验证信号五级梯度、考场与试卷供给瓶颈
+以及 AlphaEvolve
+架构解构
+的分析中，核心关注的是验证信号的确定性：形式化验证给出证明，测试用例给出通过率。然而确定性再高，也只能说明代码是否正确，无法说明问题出在何处。形式化证明器只抛出拒绝，全量压测只给出一个下降的吞吐数字，二者都无法指出下一步该排查哪一层。推理基础设施横跨硬件计算、跨语言胶水层、通信拓扑与并发调度，正是强检验却零诊断的典型地带。Feedback
+engineering
+带来的增量，是把散落各处的性能分析、运行记录和正确性检查串起来，让智能体一步步排除错误假设，每一步都知道下一步查什么。</p>
+<p>说白了，这项手艺点出了工程师在自动化时代的核心位置。随着编写与微调代码逐渐交由自动化工具执行，决定研发效率上限的，变成了谁能为智能体搭建反应快、成本低、出问题能定位到原因的观测环境。掌握了这套反馈设计能力，才能把自动化系统的执行力真正转化为系统性能收益。</p>
+<h2 id="工程师如何落地三问自查环境与读懂厂商报告的素养" data-reading-heading="">工程师如何落地：三问自查环境与读懂厂商报告的素养</h2>
+<p>面对实际工程项目，团队不必等待未来更强大的模型问世，现在就可以借助三道检查问题审视现有的验证环境。第一问：当前验证工具分别能回答什么、不能回答什么？以
+GLM
+系统的实践为参照，端到端压测回答系统整体性能是否达标，执行时间线回答时间耗费在哪个并发交接点，局部测试回答算子在何种数据形态下效率更高。三者一旦缺失任何一环，智能体就会陷入在原地盲目修改的低效循环。</p>
+<p>第二问：每种反馈形式的成本是多少、周期有多长？几秒钟算子测试能验证的假设，不必每次都拉起整套集群做数小时的全量负载测试。设计成本低廉且响应敏捷的反馈阶梯，可以让智能体在单位时间内测试更多假设。第三问：哪些关键改动必须由人类工程师亲自把关？涉及数值计算语义转换、跨语言并发安全以及生产发布稳定性的改动，必须设立人工审查门禁，不能任由智能体未经复核直接合入主分支。</p>
+<p>不过在吸收这些工程实践时，面对技术报告应当保持清醒的怀疑态度。第一，报告案例全部来自单一厂商技术复盘，存在选择性展示成功个案的倾向。第二，厂商未公开去除诊断反馈、仅保留最终分数的严格消融对比实验，诊断反馈在提速中的边际贡献在统计学上无法独立定量。第三，厂商自报的端到端吞吐达到初始基线约
+3
+倍，是权重量化、混合精度缓存、重放机制与流水线切片等多项技术综合叠加的结果，不能简单归因于智能体自身的单点能力。第四，解释器锁导致的并发阻塞属于开源社区已知的工程缺陷，智能体完成的是具体的定位与复现迁移，不能夸大为算法的首创发现。若未来出现相同算力预算下仅凭终点分数对照组也能拿到相近加速比的严格测试，本文对诊断反馈必要性的判断就需要相应调低。</p>
+<p>分清工程报告里哪些是机制、哪些是宣传，本身也是一种需要练的能力。在评估前沿实践时，需要严格区分两类证据。一类是能沿着开源代码和
+Pull Request 逐行核验的具体工程机制，例如 PR #1180
+的精度选择路径与通信库内部加锁逻辑。另一类则是厂商自述的综合性指标，例如端到端吞吐达到初始基线约
+3
+倍，或两周内达到生产就绪。把可核验的机制和厂商自报的数字分开看，团队既能学到真东西，宣传口径也不容易把判断带偏。</p>
+<p>GLM
+基础设施复盘展示的不是人工智能自主进化的科幻故事，厂商在文章中明确承认：“we
+have not yet reached recursive
+self-improvement”，尚未达到递归式自主改进的阶段；同时强调设定目标、划定边界与防范风险依然属于人类工程师的职责，原文写道
+“remain human responsibilities”
+作为明确底线。这篇报告真正的实践价值，在于展示了自动化工具深入底层工程时，人类该如何通过反馈设计维持对系统的控制与引导。正如文中总结的那样：“The
+model optimizes the system; the system runs the model.”
+模型优化系统，系统运行模型。</p>
+<p>软件智能体能够自动化多少工程劳动，取决于人类能为它提供多清晰的观测。如果智能体在改动代码后依然在原地盲目摸索，先不必急于更换更大的模型，先审视一下它的验证环境。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/38f8bfff0e7ef280cb2ee51550bc544f120a4d259ce1d88f8c1a8134d6b3194e.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/38f8bfff0e7ef280cb2ee51550bc544f120a4d259ce1d88f8c1a8134d6b3194e.md" download="Feedback Engineering：agent
+自动化工程卡在哪，卡多久.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=z.ai" class="entity-link company-link">z.ai</a>, <a href="/search/?q=elastic" class="entity-link company-link">elastic</a>, <a href="/search/?q=openai" class="entity-link company-link">openai</a>, <a href="/search/?q=deepmind" class="entity-link company-link">deepmind</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=glm-5.3" class="entity-link product-link">glm-5.3</a>, <a href="/search/?q=atune" class="entity-link product-link">atune</a>, <a href="/search/?q=jalapeño" class="entity-link product-link">jalapeño</a>, <a href="/search/?q=alphaevolve" class="entity-link product-link">alphaevolve</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

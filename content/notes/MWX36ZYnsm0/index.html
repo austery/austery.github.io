@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>哪些 GPU 云值得租用？SemiAnalysis 发布 ClusterMAX 3.0 解读 AI 算力与新云格局</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">哪些 GPU 云值得租用？SemiAnalysis 发布 ClusterMAX 3.0 解读 AI 算力与新云格局</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Latent Space</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>Latent Space</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-02</span>
+    
+
+    <header class="article-header">
+      
+      <h1>哪些 GPU 云值得租用？SemiAnalysis 发布 ClusterMAX 3.0 解读 AI 算力与新云格局</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/cloud-computing/">cloud-computing</a>
+      
+        <span class="tag-pill tag-pill--no-page">gpu-cluster</span>
+      
+        <a class="tag-link" href="/tags/ai-infrastructure/">ai-infrastructure</a>
+      
+        <a class="tag-link" href="/tags/distributed-training/">distributed-training</a>
+      
+        <span class="tag-pill tag-pill--no-page">hardware-acceleration</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">SemiAnalysis 团队深度剖析 ClusterMAX 3.0 评测体系与 AI 新云（Neocloud）最新格局。对话围绕十项评估标准、网络与集群安全隐患、最新 GB300 NVL72 部署挑战展开，并深入探讨了算力紧缺现状、前沿实验室的算力分配博弈、英伟达并购策略以及异构与国产芯片的发展前景。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/latent-space/">Latent Space</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=MWX36ZYnsm0" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-02T00:00:00.000Z">2026-10-02</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>11 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#clustermax-%E6%BC%94%E8%BF%9B%E4%B8%8E%E6%96%B0%E4%BA%91%E8%AF%84%E6%B5%8B%E8%B5%B7%E6%BA%90">ClusterMAX 演进与新云评测起源</a></li><li class="outline-h3"><a href="#%E4%BB%80%E4%B9%88%E6%98%AF-neocloud-%E4%B8%8E%E8%AF%84%E6%B5%8B%E6%A0%B8%E5%BF%83%E7%BB%B4%E5%BA%A6">什么是 Neocloud 与评测核心维度</a></li><li class="outline-h3"><a href="#%E4%BB%A4%E4%BA%BA%E9%9C%87%E6%83%8A%E7%9A%84%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%A4%9A%E7%A7%9F%E6%88%B7%E9%9A%94%E7%A6%BB%E9%9A%90%E6%82%A3">令人震惊的网络安全与多租户隔离隐患</a></li><li class="outline-h3"><a href="#%E8%AF%84%E7%BA%A7%E5%8A%A8%E6%80%81%E4%B8%8D%E6%96%AD%E6%8A%AC%E9%AB%98%E7%9A%84%E9%97%A8%E6%A7%9B%E4%B8%8E-gb300-nvl72-%E9%83%A8%E7%BD%B2%E5%A4%A7%E8%80%83">评级动态：不断抬高的门槛与 GB300 NVL72 部署大考</a></li><li class="outline-h3"><a href="#%E7%AE%97%E5%8A%9B%E4%BE%9B%E7%BB%99%E7%8E%B0%E7%8A%B6%E4%BB%8E%E7%99%BE%E5%8D%A1%E5%88%B0%E5%8D%95%E8%8A%82%E7%82%B9%E7%9A%84%E6%9E%81%E5%BA%A6%E7%9F%AD%E7%BC%BA">算力供给现状：从百卡到单节点的极度短缺</a></li><li class="outline-h3"><a href="#%E8%A3%B8%E9%87%91%E5%B1%9E%E4%B8%8E%E6%89%98%E7%AE%A1%E9%9B%86%E7%BE%A4%E7%9A%84%E5%88%86%E6%B0%B4%E5%B2%AD%E5%8F%8A%E5%89%8D%E6%B2%BF%E5%AE%9E%E9%AA%8C%E5%AE%A4%E7%AE%97%E5%8A%9B%E5%82%A8%E5%A4%87">裸金属与托管集群的分水岭及前沿实验室算力储备</a></li><li class="outline-h3"><a href="#%E7%AE%97%E5%8A%9B%E5%A5%97%E5%88%A9%E5%8D%9A%E5%BC%88%E4%BB%8E-xaispacex-%E5%88%B0-google-%E4%B8%8E-anthropic">算力套利博弈：从 xAI/SpaceX 到 Google 与 Anthropic</a></li><li class="outline-h3"><a href="#%E8%8B%B1%E4%BC%9F%E8%BE%BE%E9%98%B2%E5%BE%A1%E6%80%A7%E5%B9%B6%E8%B4%AD%E5%89%96%E6%9E%90-poolside-%E4%B8%8E-hugging-face-%E4%BA%A4%E6%98%93">英伟达防御性并购：剖析 Poolside 与 Hugging Face 交易</a></li><li class="outline-h3"><a href="#%E6%AD%A3%E9%9D%A2%E5%9B%9E%E5%BA%94%E4%BA%89%E8%AE%AE%E5%88%A9%E7%9B%8A%E5%86%B2%E7%AA%81%E4%BB%98%E8%B4%B9%E6%8E%92%E5%90%8D%E4%B8%8E%E9%80%89%E8%82%A1%E8%AF%AF%E5%8C%BA">正面回应争议：利益冲突、付费排名与选股误区</a></li><li class="outline-h3"><a href="#%E6%9C%AA%E6%9D%A5%E8%B7%AF%E7%BA%BF%E5%9B%BEinferencexendpointx-%E4%B8%8E%E5%BC%82%E6%9E%84%E6%8E%A8%E7%90%86%E7%94%9F%E6%80%81">未来路线图：InferenceX、EndPointX 与异构推理生态</a></li><li class="outline-h3"><a href="#%E5%A4%9A%E8%8A%AF%E7%89%87%E5%BC%82%E6%9E%84%E8%AE%A1%E7%AE%97rl-%E8%B4%9F%E8%BD%BD%E9%87%8D%E6%9E%84%E4%B8%8E%E4%B8%AD%E5%9B%BD%E8%87%AA%E7%A0%94%E8%8A%AF%E7%89%87%E6%80%81%E5%8A%BF">多芯片异构计算、RL 负载重构与中国自研芯片态势</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="clustermax-演进与新云评测起源" data-reading-heading="">ClusterMAX 演进与新云评测起源</h3>
+<p><strong>[Speaker 2]</strong>: 嗨，乔丹（Jordan），祝贺你们发布 <strong>ClusterMAX 3.0</strong>。你能先简要介绍一下你的背景，做个个人介绍，并聊聊你是如何参与构建 ClusterMAX 的吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: the uh hi h yjordan um congress and launjing cluster max. um what's your brief history? um is a persl introduction and also a journey into building cluster max,</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 当然可以。我是在去年夏天（六月份）加入 <strong>SemiAnalysis</strong> 的，过去一年一直在技术团队工作，随着团队规模扩大而不断推进各项事务。至于我的个人背景，在加入之前，我在系统硬件技术架构领域工作了十年。在 <strong>ChatGPT</strong> 发布之前，我就一直在为这些新云厂商设计他们采购的各类硬件系统。随后在 2022 年和 2023 年掀起了这股大潮，大量新参与者涌入市场。</p>
+<p>作为 SemiAnalysis 的忠实读者，我读过他们发布的每一篇文章，在私下的小群里也认识不少团队成员。当迪伦（Dylan Patel）和团队推出第一代 <strong>ClusterMAX</strong> 时，我看到了很多与我观点不谋而合的内容。在 SemiAnalysis 获得工作的最佳方式，其实就是挑出他们正在做的事情并提出中肯的批评，然后迪伦就会雇佣你来解决这些问题——我的情况正是如此。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: surely i'jojoin. some ananysis is last summer last june and been working on the technical staff would grow in a lot um over the past year. anyway, the i guess, personal ackackground out i'spbeen ten years years working techilical acket on tera. there was designing a lot of the hardware systems that these new clouds were buying back, you know, before charge you fd launched. and then with the big craise and it's twenty two, twenty three and a lot of them beinto into the market. so big, some analysis reader read every word d new, a bunch of the guys in, like group chats on the side, and uh saw a lot of my opinions represented in cluster max one. when dan and the team put it out when dh, the best way to get a job of semine, oysis is to something something semine ysis is doing and criticize it, and then delen hire you to fix it, which was what happened. in my case,</p>
+</details>
+<p><strong>[Speaker 3]</strong>: 对 ClusterMAX 第一代和第二代的批评是什么？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 3]</strong>: the criticisms of classramax wand two,</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 那时第二代是我独立完成的，所以第二代我没法批评自己，但第一代确实存在不少问题。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: but what i did too all by myself, so i can give you the criticism, no criticism of there,</p>
+</details>
+<p><strong>[Speaker 3]</strong>: 从 1.0 到 3.0 有哪些变化？让我们快速切入新版本的亮点吧。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 3]</strong>: what chges from one day to. and then you know, let's let's quick into whawhat's new, great.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 如果看屏幕上的对比就会发现，在 ClusterMAX 1.0 时，我们遗漏了非常多的云厂商。当时总共只评测了大约 24 家云服务商，很多应该测试的大型厂商当时由于团队规模很小而没有覆盖。而且当时我们过度聚焦于 <strong>Slurm</strong>，而 <strong>Kubernetes</strong> 实际上非常重要，需要在测试标准中大幅增加比重。</p>
+<p>回顾 ClusterMAX 1.0，整体排名页面与现在大不相同，名单要少得多。当时根据我们的市场全景观察，总共大约追踪了 120 家云服务商，其中包括 111 家新兴的 <strong>Neocloud</strong>（AI 新云）。这一次在 3.0 中，我们没有公开全部的市场视图，因为我们将其纳入了付费的新云财务模型中。我们长期追踪这些厂商的财务状况，其中许多已经上市或即将 IPO，因此我们现在为整个行业建立了完整的财务模型。在 3.0 版本中，我们追踪的供应商总数已经达到了 323 家。</p>
+<p>就在今天早上，还有人在我的收件箱里发邮件联系，说他们拥有 3000 张 GPU，希望我们进行测试。整个体系经历了巨大的演进。在测试工程层面，最显著的变化是：在 ClusterMAX 1.0 时，所有测试完全是人工手动执行的。那是在 <strong>Claude Code</strong> 和代码生成智能体真正成熟之前，我们只能通过手动运行基准测试脚本来收集数据。而在过去一年半中，我们建立了一整套完整的代码仓库，涵盖行业标准基准测试、自定义可靠性压测和老化测试脚本。现在这一切高度自动化，我们能够直接调度编程智能体去启动测试，并在出现环境与配置异常时自主修复，无需过多人工介入。在覆盖的广度和深度上都有了质的飞跃。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: you don't screen guys. it's perfect deserts. i don't know what what you would do, of course, um um kay, i close ter max one. i mean, there is just a lot of providers mesed, like twenty four total providers and a lot of them, um big ones, you know, they should have been testing and warr't small team and of the time. and then there's a big focus on sluum to me. carbonaties was really important need of, you know, tests that as well in terms of like criteria and stuff even changed a lot. but yeah, alway back to queser max one. you know, the rankenpapage looks a lot different otheers, just a lot less names and releasing the market view. also, i believe at the time of are around one hundred and twenty total providers, one hundred and eleven emerging neoclouds there in the middle. and we didn't release the full mark of you this time because we payled led behind ind nenew cloud model, or we track all these providers. a lot of them are public. a lot of them are going iio soon. so so got this whole financial model for the industry now. but yeah, three point o are up three hundred and twenty three total providers that we track. um and i have some people this morning in my inbox, reach and out. and and they've got some three thousand gpus and they want of the test and where 're got, you know, anyway, it's in a big vovolution. i think big big in terterms of sting is that with clclummax one, you know, all the testing was hands on. this is pre cloud code, pre codex, the getting serious. and so we did a lot of the testing hands on by like just running benchmark scripts manually. and now we're been able to develop like this whole repoo over the past year and a half of itdurestandard benchmarks, custom benchmarks stuff for reliability and burn in. um you know, it's it's like very automated now where we can launch this stuff with the coding agents and have them run in fixed evench, isises es ttonomously without us involved. and yet, i mean, just the the breadth of coverage as well as the deathth of coverage, i would say, has improved over time,</p>
+</details>
+<hr>
+<h3 id="什么是-neocloud-与评测核心维度" data-reading-heading="">什么是 Neocloud 与评测核心维度</h3>
+<p><strong>[Speaker 3]</strong>: 请给观众系统介绍一下，究竟什么是 ClusterMAX？什么是 Neocloud（新云）的评级与排名？你们重点测试的核心指标有哪些？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 3]</strong>: but i guess introduce it, what is cluster max? what is new cloud ratings and rankings? um what are like the main things you guys are actesting for for years?</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 官网上详细阐述了我们的 <strong>十项核心标准</strong>。首先对于 Neocloud，我们将其定义为：任何出租算力访问权限、销售算力资源的云服务商。使用“新云”这一概念，是因为在此之前存在传统超大规模云服务商（Hyperscalers）和传统老牌云，例如 <strong>AWS</strong>、<strong>Google Cloud</strong>、<strong>Oracle</strong> 和 <strong>Azure</strong>，以及像 Rackspace、DigitalOcean、Cloudflare 或 Akamai 这样的传统基础设施提供商，任何运营大规模数据中心并对外出租算力的厂商都属于这一范畴。</p>
+<p>而新云则是伴随这轮 AI 浪潮涌现的新力量。我们常说“现在所有人都在变成新云”，因为新云的核心特质是完全专注于 AI 负载，部署大量 GPU 及其他专用加速器来支撑 AI 工作负载——包括模型预训练、推理以及日益占据主导地位的强化学习（RL）。</p>
+<p>我们评估的核心目标是：谁能为用户提供最佳的计算性能、网络与系统安全性、硬件与集群可靠性，以及易用性、定价透明度和实际算力可用性？我们力求提供全局维度的综合评估，而非孤立的单项基准跑分。在 ChatGPT 刚问世时，大量初创团队向 SemiAnalysis 咨询：“我手头有几家供应商可选，到底该如何抉择？评估框架是什么？”创始人往往刚融了 2000 万美元，马上就要把其中的 1000 万到 1500 万美元砸给某一家算力供应商。这关系到整轮融资乃至初创公司的生死存亡，是极为关键的商业决策。为了避免反复回答相同的基础问题，我们决定撰写系统性报告，给出粗粒度的初评、分层排名（Tier List）和领奖台榜单，供业界参考；针对有特定深度需求的客户，则通过定制尽职调查或深入咨询来进一步支持。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: yeah. so there's ten criteria described on the website, basically a new cloud. we define as anybody who rents access to compute cells access to compute. so neo cloud implying that there was hyperscalars and legacy clouds that existed before chchchb b. um this is AWS google oracle azure. also, some of the ultical clouds like a wackspspace or digital share in or even like a cloud fllaor acammi. anybody body was like running a big days and a footprinting renting access out there would be a cloud. and then the new clouds are the new ones that have come along. we say everybody's becoming a neil cloud because what makes new class differenis that they're specifically focused on ai. so they deploy gps and other accelerators for AI worclothes. this is training inference increasingly RL. and that's what we trying to test on is who's going to give you the best performance, security reliability? and um just like ease of use pricing availability, we try to go through comprehensive assessments instead of individual benchmarks back. when jutubt came out, a bunch of people were reaching out to semanalysis saying, like, hey, i'm trying to decide the foot twtween providers, like how should should think think about how how should we go about it? you know, bothering dealing with the same questions over and over because ok, i just raised twenty million dollars. i'm but to go give ten fifteen million of it two up provider. you know, it's my whole seat around like this is a really critical decision for me. i need to get everybody body speedback. and so instead of dylon, an team like answering that question individually cost. er every single time was like, why don't we write an article to give our like course grain? first, thoughts, here's are like quick tearliest rankings um podium, and then you can engage us for more detailed stuff. you know, consulting dd, whatever it is for your specific, you know, requirements, and we can begin further from there.</p>
+</details>
+<hr>
+<h3 id="令人震惊的网络安全与多租户隔离隐患" data-reading-heading="">令人震惊的网络安全与多租户隔离隐患</h3>
+<p><strong>[Speaker 2]</strong>: 在这十项标准中，最引起公众震动的往往是安全维度——你们在文章中直言绝大多数新云的网络安全状况堪忧。目前新云的网络安全真实水准究竟如何？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: there's a lot there. uh uh, the the one that consumine is the is the criteria of the ten criteria. uh the one that consumia is the, the one that you guys cled it, which is area as a curversaying. uh every all then have terrible cvver security. what is the the stof of ymmer security in the ocloclods?</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 正如你所言，确实非常糟糕。当然，这也取决于具体的供应商……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: i mean, you said it, terrible. yeah, it's dependent. you were talking about. look,</p>
+</details>
+<p><strong>[Speaker 2]</strong>: 迪伦刚上线，我们正好让迪伦也聊聊。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: yeah, we know. i i'all just say hi to deallwho, who is choojust just rathis.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 抱歉我迟到了几分钟。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: one of so sorry for raing late.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 迪伦，聊聊新云目前的网络安全现状吧。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: so know what's the state of a new cloud cybersecurity right now. so so i mean,</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 整体安全态势极其脆弱。早在第一代 ClusterMAX 评测中，我们就发现了严重的网络安全漏洞。许多供应商根本没有正确实施网络隔离与访问控制，导致租户之间几乎毫无屏障：<strong>我们能直接看到其他用户的训练任务、查看其他客户的敏感数据，甚至能直接挂载和读取其他公司的存储卷</strong>。在第一代评测中，我们迅速将这一重大隐患上报给了涉事厂商以及 <strong>NVIDIA</strong>，同时在榜单中将该厂商评级为“跑输大盘（Underperform）”，并强烈建议用户避免使用。</p>
+<p>在第二代评测中，类似乱象依然存在。尽管在我们曝光后不少厂商开始修补，但在第三代 ClusterMAX 评测中，乔丹团队依然挖出了惊人的安全漏洞。我们在通讯专栏中直接发文直言《绝大多数 AI 新云的安全烂透了》。文章发布后数小时，<strong>Ilya Sutskever</strong> 也公开在社交媒体上指出新云的安全性极其堪忧。Ilya 创办的 <strong>SSI（Safe Superintelligence）</strong> 是一家极度重视安全的公司，团队拥有大量资深前网络安全领域专家，显然他们在自己的集群选型测试中也发现了同样荒谬的问题。</p>
+<p>在某次实际测试中，问题甚至严重到了荒诞的程度：<strong>我们租用测试集群时，竟然能直接窥探到某些国家情报机构及军工级保密单位正在运行的敏感任务数据</strong>。这令人不寒而栗——我们仅仅是上去运行标准的基准压测，就能随意看到这些国家安全级别的计算内容。如果我们怀有恶意，后果不堪设想；而同一集群上很可能早就潜伏着恶意租户。虽然经我们指出后厂商进行了修补，但按理说绝不应该由第三方独立分析机构来充当这个安全质检员。整个行业在安全隔离上的粗制滥造暴露无遗，这也是我们将安全列为硬核筛选标准的原因。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: we you know, i think um security is really bdiand back from the first cost ter max. um there was um pretty significant security issues. um people not properly implementing network security controls. and so we 're able to see other people's uh jobs, see other people's 's data, see other people's storage at stura in the first generation of customer max. um we escalated to the firm as well as in videa, um you know, and rank that company under perform, of course, and strongly recommended people don't use them um. and in the second generation of cluster max, we saw similar stuff. i think a lot of people got better because we highlighted stuff um but in the third generation across your max, we also tested. i think you know, jorn this team tested this and and saw pretty major security issues. so we posted as uh a news lighter titled, uh, most new clouds um sucket security um and then uh, you know, handful of hours later, illia tweeted about most new clouds security sucking. um there are obviously a very security conscious firm. um you know, they have a lot of folks war from the former cyber's curiy world. so imagine theyve done their own work on a number of clouds there um to see um and test. and it's it's pretty clear right like what it is so bad. in one case, there was we were literally able to see national intelligence of certain countries like stuff, right like that multiple national security agencies in military style, um intelligent stuff running in that neocloud. and it's like good god, we're just like care to test the cluster, and we can lixsee the stuff. imagine if we are militious, i'm sure there are people who are milalicious ous or could have in militious um on that cluster as well. so thankfully, they should fix it. i think, but like you know, we shouldn't be the one that has to find whether or not someone is ah you know, good or bad of security, but you know, i think the the industry generally needs that service. and so that's that's a big area of our criteria.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 从技术执行层面来看，我们的检测项其实非常基础且通用：检查软件版本是否及时打补丁、驱动程序是否更新至最新、网络配置策略是否合规。然而，许多供应商集群上运行的系统软件版本居然落后了两到三年，公网数据库上记录着详尽的公开 CVE 漏洞。攻击者根本不需要用前沿大模型去编写复杂的零日漏洞利用代码，只需要简单的端口扫描和基础渗透就能长驱直入。</p>
+<p>在文章中，我们还随附发布了一个免费的开源 CLI 工具。运维人员只需在集群上安装并运行 ClusterMAX CLI，它就能自动扫描并输出当前集群的软件版本、驱动兼容性及已知漏洞列表，并生成升级链接，帮助他们快速修复安全短板。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: yeah. and i think on the technical side, like this is our checks are very simple. is your software version up to date? are your drivers up to date, like is a configured correctly? i mean, is there these are relatively simple checks. but when people are running versions of software that her two three years old, and they have well documented CVS online. it's like you don't need a frontier model to create a piercexploin of this. um you just need to know the right right place to look. and so part part of ararticle. we also put out of free CI people can installed clustom max, c, max and then use it to check the software versions on their clusters idendenfy. you know, a quick like you get a link in the termal output to show you where the upgrade stop, try to help people keep the software t today. this is the beyering is a new cloud security.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 另一个重灾区是网络分区与密钥管理。在 <strong>InfiniBand</strong> 以及 <strong>RoCE (RDMA over Converged Ethernet)</strong> 网络架构中，存在诸如 <strong>MKeys</strong>、<strong>PKeys</strong>（分区密钥）等隔离机制。但令人震惊的是，绝大多数新云在交换机和主机层根本没有正确配置和下发这些安全密钥，导致租户间高速网络流量完全暴露，甚至可以直接跨租户嗅探 RDMA 内存数据。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: that's a thing is the network keys, right? there's um in fidevan and internet have various like at least on in fitamamon siit's like mkeys pkeys. all these things are those properly configured and deployed. it's shocking how bad most deal clouds are, though like it is really bad.</p>
+</details>
+<hr>
+<h3 id="评级动态不断抬高的门槛与-gb300-nvl72-部署大考" data-reading-heading="">评级动态：不断抬高的门槛与 GB300 NVL72 部署大考</h3>
+<p><strong>[Speaker 3]</strong>: 从 1.0、2.0 到 3.0，有哪些厂商实现了显著跃升，或者有哪些值得关注的评级调整？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 3]</strong>: well, you get tting. i guess, any anything interesting, any major jumps, any improvements that they've from one two three ain't on a highlight?</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 第一代 ClusterMAX 的准入门槛相对较低，而随后的每一代我们都大幅收紧并提高了考核难度。因此整个评级的大趋势是大量厂商被连续降级。当然，也有极少数云厂商实现了逆势升级。</p>
+<p>以 <strong>Google Cloud</strong> 为例，他们在历代 ClusterMAX 评测中表现极为稳定且持续进步，最初是铜牌，随后升至银牌，在本次评测中进一步稳固提升。与此相对，大量曾经风光的新云厂商在过去一年多陷入了停滞，即便有一些微小的优化，但在激烈的技术演进中不进则退。我们通过不断提高标准，促使全行业认清真实差距并针对性改进。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: our bar on cluster max es know, as first generation was like super law, um and each generation we made it harder and harder. hence, the trend has been for people to get downgraded. there are bit a few folks have been upgraded. of course, um googles don't a really good job at getting upgraded across the cluster max generations. um i think they started out as bronze and moved to silver. and now gold. um we're just silver. sorry, i know gold dad. so google is googles consistently upgraded. while there there have been a number of clouds who have been downgraded across the generations because they sort of stall, they improved a little bit, but they didn't improve a lot. and and we keep trying to raise the bar um and and teach everyone. hey, these are the things you should do to be better. yeah.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 本次 3.0 的核心门槛在于对最新顶级硬件架构的支持能力：你是否能在 2026 年保质保量交付和运维 <strong>GB300</strong> 与 <strong>NVL72</strong>？这是目前所有前沿实验室和头部初创公司最渴望租用的顶尖架构。带着数亿美元算力预算找上门来的典型客户，点名要的就是 GB300 NVL72 机柜级集群。</p>
+<p>然而，部分原本处于金牌梯队的老牌供应商至今仍无法提供 NVL72 交付，因为部署 NVL72 涉及全栈物理和工程架构的重构：单机柜内部升级为高密 Scale-up 域、处理器全面转向 <strong>ARM CPU</strong>、搭配 <strong>Blackwell GPU</strong>、网络接口全面升级为 <strong>800G</strong>，并且<strong>必须强制引入全机柜直接液冷（Direct Liquid Cooling）</strong>。从物理数据中心的承重、电力、水冷管路，到底层操作系统、固件驱动管理与低延迟网络调优，所有环节与以往截然不同。某些供应商对外声称“由于商业策略选择暂不部署 GB 系列”，但当明年的 <strong>Vera Rubin</strong> 架构接踵而至时，不能持续迭代先进硬件的云厂商注定会被客户抛弃。</p>
+<p>如果一家云厂商能够率先铺开上万张 GB300 算力，经过我们实测运行稳定无阻，遇到异常提交工单后支持团队能在 1 小时内迅速排查解决而不是拖延两周，那么他们的排名就会迅速上升。反之，如果无法按时交付新硬件，或者部署后故障频频、排障迟缓，抑或被我们检出严重安全漏洞以及频遭客户抱怨可靠性差，其排名就会直线滑落。<strong>可靠性</strong>正是头部高端客户在选型时最为看重的首要指标。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: and the bar for this time was like latest and greatest. so are you deploying GB three hundred and BO seventy two in twenty twenty six? you know, this is incredibly popular p. it's what all the frontier lives want to buy. it's what all of the new lives want to buy. and the typical customer that comes to us and says, averaged one hundred million dollars. i want to spend on on compute. they want AGV throughout ded. and we also seventy two cluster. and so some of the providers that were in gold originally do not offer GB three hundred and the the ulseminy, too, why not we've got to contend with a whole bunch of different things. there's a new network and the ulsemity to implies it to scalup domain in iraq. you're tto go to arm cpu, it's a black old GPU. you have an eight hundred dig network. it's mandatory drug liquid calling. so from the physical data center through how how you to play the operating system, tell you like manage the drivers in the network, just about everything different different when people say, oh, we just like made a strategic business decision choice not to do gbs. well, well, what happens when very rubin comes next year who you going to trust? and so the trend is like if people are going out and they're deploying ten thousand GP three hundred and ds, and we test cluster and it works. and we engage with the support team, and we we give them feedback from some things we think we have issues with and they fixed in an hour, not two weeks thethey're. moving up the rankings. other people that are not deplying these these test test british tripues, or they're doing it as completely broken, is taking them a long time to fix it. or it's we find security issues or we hear from customers huge issues with reliability, which is probably the number one criteria that like these top customers care about, um they're moving down the list st. that's that's that's bbit of dynamamic there.</p>
+</details>
+<hr>
+<h3 id="算力供给现状从百卡到单节点的极度短缺" data-reading-heading="">算力供给现状：从百卡到单节点的极度短缺</h3>
+<p><strong>[Speaker 3]</strong>: 假设用户是一家刚融了几千万美元的新成立 AI 实验室，准备在市场上租用算力，现在的市场供给与一到三年前相比如何？是在改善还是在恶化？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 3]</strong>: so assuming most of these you know, brown, silver, honorable mountains are good. good to rent from what's the state of availability caused compute. so say, you are in new olab, you just raise tens millions of dollars. you want to start to rent um how does that market look now compared to one to three years ago? things getting better? worse, good, trucking, loks.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 现实非常残酷。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: yeah,</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 当前面临着有史以来最严峻的算力获取困境。像 <strong>Anthropic</strong> 和 <strong>OpenAI</strong> 这样的巨头正在向市场上扫荡各种规模的集群。同时，所有的推理服务商业务利润率正在大幅飙升。在半年前或九个月前，<strong>Baseten</strong> 在模型推理业务上的毛利率可能只有 10% 左右；但如今，像 Baseten、<strong>Fireworks AI</strong>、<strong>Together AI</strong>，乃至像 <strong>Morph</strong> 这样的小型企业，基于 <strong>vLLM</strong> 和专有编译优化技术，在开源模型推理业务上的毛利率已经高达 60% 以上。</p>
+<p>类似 <strong>Inference.net</strong> 等新兴推理厂商也同样利润丰厚。任何只要能搞到 GPU 现货的公司，几乎立刻就能赚取高额现金流。这导致格局发生剧变：如果你是一家新实验室，想要租算力来训练自己的前沿新模型，你现在是在与可以直接盈利的推理业务公司竞争。过去，你主要面对的是持续烧钱亏损的实验室；而现在，任何持有 GPU 的团队都能轻松变现，这使得市场上可供出租的冗余算力被迅速抽干。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: it's it's really tough. it's it's it's toutouest. it's ever been rect compute um i'will, you see ethropiic and opening. i've been buying smaller and smaller clustersizes um but also all of the inference providers are more more profitable. it was one thing. one say, based ten was running at ten percent rus margins, which i think might have been like six months ago, right um on inference or or nine months ago. but it's another thing when you know, based ten fireworks together, many other companies, even small companies like morph are running at sixty percent per margins ins on open models using veal emeractually elying using just a little bit of optimization of beyond that um unable to do it, awesome job. and then you know, companies like infraact and radc sark as well. so so anyone who can like get access to a jep, you can immediately make money. um and to ultimately, it's like we're great. i'm a nail lab who wunants to train our interesting cool, new model. well, i'm also competing against people who make money. now, where's before? i was mostly competing against money losing, you know, open ing money, losing in thropic money, losing labs, very few people making money off the gp s. now everyone can make money off the gps, and that's just very, very difficult to get any sort of compute.</p>
+</details>
+<p><strong>[Speaker 3]</strong>: 头部大模型实验室现在所能容忍的最小租赁单元缩减到了什么程度？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 3]</strong>: what's avoid the loves. yeah, what aavoid the abs going down to compared to like major, they,</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 过去大实验室通常只洽谈 8000 张甚至数万张 GPU 的超大集群，而现在这一标准持续下移。我们甚至看到顶尖实验室直接下手承租规模仅有 1000 张 GPU 的小集群。而 1000 卡原本正是初创型小团队最理想的起步规模，这直接挤占了初创公司的生存空间。</p>
+<p>再看 Baseten、Fireworks、Together 等推理厂商，他们甚至愿意把集群拆细到以 4 台服务器节点（32 张 GPU）为单元去承租接入。对他们而言，跨越 20 多个不同的云服务商进行多云流量编排虽然在工程上极其繁杂，但只要能拿到哪怕三四台节点，他们就能立刻将其转化为滚滚现金流。在庞大商业利润驱动下，整条供应链的剩余算力被搜刮殆尽。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: they used to only go like KKK, you know, AKGPS from a fwrider, you know, and it's it's steadily gone down. um we've even seen as small one thousand g pipuce get rented by the laabs. now um and so one thousand g piece is closer to what a new lab wants. um and so you've squeezed out the market a lot. um and then when you look at like the vase tens, the fireworks, the togethers and all these other inference providers, they're cool like they're cooled, like four notes like their model, right? these guys are cooled, like even four notes that are cloud. um so ultimately tely. it's like, you know, obviously ororchestrais tough um models talked a lot about that. actually right? they're orchestration across like twenty different clouds. what's yes. so so ultimately, it's a very, very it's challenging for anyone to get any sort of computer. if you know, model can make money hand over fest off of even eight, four notes from my company.</p>
+</details>
+<p><strong>[Speaker 3]</strong>: 现在甚至连单个节点的 Spot 竞价实例都很难随时随地租到了，整条算力链路高度紧绷。那么前沿实验室的算力储备格局究竟如何？OpenAI、Anthropic、Google 谁拥有的实际有效算力最多？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 3]</strong>: yeah, it's bad. i mean, like even individual, you can spot rent single nodes anymore. like down the whole stack is cooked. um what about the state of the labs? how do you segment the large players open air? and thropic google, where where's the spate of who has the most compute? uh, anything interesting on the road maps of where you think incluinteresting the most.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 显而易见，OpenAI 与 Anthropic 在租赁超大规模裸金属算力方面处于领跑地位。OpenAI 不仅是 <strong>CoreWeave</strong> 业务的关键驱动力，在微软内部大量消耗算力，还在与甲骨文（Oracle）推进极其庞大的基础设施合作并推进自建数据中心。而 Anthropic 则依托与 AWS 的深度战略绑定采购大量 Trainium，在 Google Cloud 上承租大量 TPU，并与 CoreWeave 等第三方签署了巨额采购合同。两家公司为了支撑庞大的前沿研发和模型服务，正在全方位拉动算力需求。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: i mean, it's clearly opopen eye and tropic that are leguing the way in terms of both renting from like large scale bear metal hyperscallers. in other words, you know, open eeyes a driver of correeves business, also some microsoft that are also exploring with other hypersckillers. they're doing self filled as well, like massive stuff ff with oracle, and then throropic obviously they got there. they get up AUS partnership ptrrinia. they've also got a lot of tps with with google cloud. they sign stuff with corary if they've sign stuff with with know know others. and so theare the big driver. i mean, you just look at error and something has to drive that. so it goes to the computer side. um with that, is there aspected?</p>
+</details>
+<hr>
+<h3 id="裸金属与托管集群的分水岭及前沿实验室算力储备" data-reading-heading="">裸金属与托管集群的分水岭及前沿实验室算力储备</h3>
+<p><strong>[Speaker 1]</strong>: 这里必须明确一点：像 CoreWeave 这样的厂商在提供超大规模纯<strong>裸金属（Bare Metal）<strong>服务方面实力极其雄厚，而这与我们在 ClusterMAX 中重点测试的侧重点有所区别。ClusterMAX 的核心评估对象并非裸金属，而是</strong>托管集群服务（Managed Cluster）</strong>——涵盖托管 Slurm、托管 Kubernetes 编排以及自动节点热替换等企业级全托管能力。</p>
+<p>最顶级的超大规模机构（如 OpenAI、Anthropic）只想要最底层的纯裸金属，因为他们拥有顶尖的基础设施工程团队，会在底层之上自研内部定制的 Slurm 分支或特化调度系统，自己管理节点故障；而绝大多数中小型乃至中大型企业，则强烈依赖云厂商提供经过深度打磨的托管调度平台与自动化运维支持，当硬件发生物理故障时需要云平台自动感知并热替换健康节点。</p>
+<p>许多厂商在数据中心物理建设、裸金属出租或 Token 推理 API 上表现出色，但其托管集群软件工程能力却较弱，这正是 ClusterMAX 评分的切入点所在。</p>
+<p>放眼顶尖算力池，连 Google 自己都在从第三方大量租用算力——他们分别与 CoreWeave、<strong>Fluidstack</strong> 签署了大额合同，外采算力规模高达数亿美元。在裸金属层面，OpenAI 与 Anthropic 占据了绝大部分采购增量。而 Google 在前沿研发算力上实际上正在显露疲态：到今年年底，Anthropic 和 OpenAI 投入在**模型研发（R&amp;D）**上的核心算力规模，已经基本持平甚至略微超过了 <strong>Google DeepMind</strong>。虽然从企业全局看，Google 拥有的物理芯片总量仍然超越前两者，但其中大量算力已被外部商业云客户瓜分并锁死在现有的产品推理业务中；如果单对比真正分配给最顶尖前沿大模型探索的纯 R&amp;D 算力池，OpenAI 和 Anthropic 现已实现反超。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: this is um you know, a lot of these providers, like like a crucial have fantastic bear metal, right? um that's that's what we're testing in customer max. we're not testing um beare medal, mean it. it part part of crititeria. but a lot of the criteria, a managed cluster, right managed there manmanstribaneties all that sort of stuff. so it's it's a different level of um service that people want on top of the GPU. um the original cluster max was title, also like a big chunk of it was called how to rent in GPU youalso. just teaching people what they should do to rent to GPU. um in in our view, most stly smaller folks, you know your super small, you don't care about. um you're note being beare metal, you um you're super super big, you want beare metal because you're going to put your own, you know, fork of of slum, such commcommunities um and do your own stuff on manage services and such like that. um but most customers want a managed slum, manage commbities um and for the cloud to like hot wap notes for them. when one fails uh, you know the biggest customers will manage stuff like them, but you know, very the the mid size and smaller customers want the that sort of stuff managed for them. and so customer max is focused around that. um so companies like crucium um will rent bear metal, right? they have mass contracts with companies um or they'll do great in data centers or though they're starting to do well in, you know, inference API, but on manage services, they're not doing well um and that's specifically is what cost your max is targeting. um it's manage services there because it's otherwise it's like too complicated to um you know, it's it's it's many different areas. people want to rent from some people want better mattal some people at matter services, some people want tokens out. um so ultimately, it's a range of options. um as far as you know, good even google is ranting some compute from folks, right? they sign a deal core corerve. they signed a deal, it's baseacx um so so pretty large amounts of compute that thethey've signed over. i think over one hundred billion dollars over the compute that they've signed from various uh customers. um navbe is also as deals with the labs and such. and so um but these guys are only going for their modal. um open line and thropic are definitely line sheer bying. the most um google google is definitely falling behind at this point, open ing and and thropic have as much compute, if not a little bit more by any of the year, though both have more compute dedicated to RND than deep bite. so yes, google still ultimately has more compute than good open iron tropic for now um but a gle that is sold out other places and dedicated to other offerings. um but deep minds RND compute verses open en ion on tropics RND compute. the two labs have more compute now because they reach that scale.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 过去外界常迷信“Google 坐拥整个产业最庞大的计算资源”，如今这已非事实。Google 确实凭借自主研发的 <strong>TPU</strong> 享有极高且显著的单位计算成本优势，但就 DeepMind 能够自由调用的核心 R&amp;D 训练资源体量而言，已经落后于 OpenAI 与 Anthropic。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: um so this whole, like oh, google has the most compute. beell in is is actually not really the case anymore, right? they don't costs advishh because they build the TPU. and um it's much short cocost, but ultimately it's it's it's less deep mind has less compute than open and and profc.</p>
+</details>
+<hr>
+<h3 id="算力套利博弈从-xaispacex-到-google-与-anthropic" data-reading-heading="">算力套利博弈：从 xAI/SpaceX 到 Google 与 Anthropic</h3>
+<p><strong>[Speaker 2]</strong>: 这是一个根本性的格局转变。我此前与一些 DeepMind 的一线研究员交流，他们感到非常沮丧，抱怨说：“我们的管理层一直在把我们急需的基础算力转手卖给外部商业客户。”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: yeah ah ah re's, a big, big shift ft because y're, uh uh, the biggest insights from me, AIE was running into some deep, my researchers and are very depressed because they're like, look, our leadership keeps selling the computer that we want to other people.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 想象一下 <strong>xAI</strong> 的处境……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: yeah ah i mean,</p>
+</details>
+<p><strong>[Speaker 3]</strong>: 想象一下成为 xAI。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 3]</strong>: amazine being XAI like,</p>
+</details>
+<p><strong>[Speaker 2]</strong>: 如果把 <strong>SpaceX</strong> 视作一家新云厂商，他们的算力也几乎处于对外部完全封闭不可租用的状态。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: well, yeah, i think you know basspecis was a new cloud. they would the hell, well, we where we unavailable.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: SpaceX 和 Google 的算力合作模式极具启发性。它清晰地印证了迪伦先前提到的趋势：许多拥有庞大基础设施的前沿实验室，正在伺机以“投机性/机会主义”模式跨界成为新云提供商。不仅是 SpaceX 与 Google，<strong>Meta</strong> 内部在规划庞大集群时也在评估类似策略。这些科技巨头具备独立规划、建设并运营超大型数据中心的核心工程能力；当算力市场出现高溢价套利空间时，他们便顺水推舟，将闲置或阶段性算力对外转租或用于商业推理 API 变现。</p>
+<p>但他们的底层逻辑是：<strong>始终保留在需要时无条件召回算力用于内部关键模型大训练（Hero Runs）的绝对权力</strong>。他们会在满足内部当前研发承受上限的前提下最大化算力利用，一旦模型架构跑通，立刻将全部对外商业算力回撤。</p>
+<p>例如，SpaceX 与 Google 之间的算力供给协议中，便明确包含了<strong>相互拥有 90 天内无条件单方解约撤回权</strong>的条款。这意味着一旦 SpaceX 的内部研究实现突破需要巨量算力，他们能在 90 天内强行撤回算力；而如果 Google 发现自己在推理端能榨取更高利润，也可以提前解约收回。双方如同在一场复杂的博弈对峙中互相打量：看谁会先动摇，看谁对 <strong>AGI</strong> 的信仰更坚决。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: they are on here, heart art ah ah well as dias. we can tetest. they'll move up the rankings. you know, they'll be a competior on think space like is. and the google deal, for example, is super interesting as well as a ththropicone because it goes es what dylen was saying about the fact that the labs are considering becoming new clouds on this opportunitic basis. um matas considering the same thing with the midraw and put outside and there as well, we company have this skills out on building data centers and managed managing them. and then when there's an opportunity mootizze, the compute, either through renting ting, the other people or theyserving infrence rence, they want to pursue that only only a certain level. and they always want the optiontionality bring the computer back and use it for those research or hero runs as soon as they can afford that want. want to use maxxmum amount of compute they can afford to the research right now and all the exresure, you oopportistically making the money to fund all that research。 and so space ecxis contact with google, for example, has mutual ninety ty cancellation rights. so space ecx's research starts to work, they can pull the compute back. google stoff making money off of that compute on some inference and point. they pull a computer back. it's a really interesting structure where both are kind of, you know, in this little stand off saying, who's going to who's going to blink first, who who believes in AGI more um h going going,</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 从组织内部心理来看，如果你是原 xAI 团队的研发人员，即便公司转手卖掉部分阶段性算力，你也不会感到沮丧，因为你清楚埃隆·马斯克正在以难以想象的极限速度在田纳西州等地建设体量数十倍的超大规模计算中心；这种对外部的短期算力倒买倒卖是为了支撑公司财务自负盈亏与正向运转。</p>
+<p>但在 Google 内部，员工看到这种现象就很难接受：作为一家现金流充沛且极具盈利能力的公司，核心管理层为什么宁愿把关键计算资源转手卖给外部云客户去赚取基础云服务利润，而不全力倾斜给内部团队去训练顶级模型？训练出顶尖模型并在软件服务层面销售，其利润率和战略壁垒远高于出租底层硬件。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: i think togeother aspect of of at least for space sex, right? if you're AXAI employee and you got bought by space ex, and then space ex sold all the computer, at least you're not depressed, because, like you really, okay. look, he wants building a shitload more. i'm going to have access to this. and he's doing this because it helps us be more financially solve it. so the iio um with google, it's like why the hello, by selling the compute, you know, i have. i'm already a very profitable company. uh, why why can't we just use the computer to build models and sell those models at way? hard margin inthat are giving a hanthropic or open the eye or other firms.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: Google 甚至形成了一种独特的资本内部循环闭环：Google 内部的核心技术骨干选择离职创办新的 AI 实验室，而这些初创团队随即从 Google Ventures 等渠道获得巨额风险投资，随后这笔资金又被完整用于向 <strong>GCP（Google Cloud Platform）</strong> 采购高昂的算力服务。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: um no SSS is also a er er google 差不多 through of the the dynamic of like google funding, the people that leave to go, do a neil lab to buy gcp. no, it words like they've silver jefting. they spent out they get funding from rural ventures to then go spend on gcp.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 如果单从 GCP 部门本身的财务报表来看，这无疑是一张亮眼的成绩单。托马斯·库里安（Thomas Kurian）得以持续拉高云部门的营收总额与营业利润率，但站在 Google 集团的整体长远利益来看，这种机制存在巨大隐患：公司实际上是在间接激励最优秀的顶级科研人员自立门户出走。用原本可用于产生百倍软件生态价值的高密电力和机房资源去赚取每兆瓦几千万美元的基础硬件租赁差价，战略眼光极其短视。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: i mean, i think it's it's a fantastic move. if if if you look at just gcp as it's own company, right? thomas, korean continues to pumpers. you know, his revenue, his operating margin is operating income for google as a whole. it's really dumb right, like you should not incentivize your best researchers leaving. you should not incentivize us a generally and has a brave. so that point out thirty million dollars of megawa when you could run models on it for fifty million dollars of megwa.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 以杰夫·丁（Jeff Dean）等人离职后创办的 Discovery Loop 为例，如果他们在模型算法上取得关键突破，你认为 Google 能够凭借初期的资本与算力绑定将其牢牢锁定在自己的生态体系内吗？抑或他们会轻易转向其他基础设施提供商？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: so if discovery loop has a big breakthrough, do you think google is able to keep them in their orbit? or do you think jefting in goes and takes breakbreakthrough does something without google being exposed to a the upsite, like they were be an investor thethey're. obviously, their oud service provider.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 看看 Anthropic 的演变历史就一目了然。Google 很早便对 Anthropic 进行了重金战略注资，Anthropic 最初的 Claude 3、Claude 3.5 Sonnet 等核心基准模型几乎全部在 Google 的底层 TPU 架构上训练而成。但随后，Anthropic 果断引入了亚马逊（Amazon）的战略投资。</p>
+<p>Anthropic 现如今不再仅仅依赖 Google 和亚马逊，他们已经与超过十家不同的云基础设施厂商签署了采购协议，甚至开始自建和租赁大型独立数据中心，联合 Fluidstack 在自己的机房中直接部署和调优专属算力。虽然 Google 仍然能从他们身上获取部分算力收益，但利润率被大幅摊薄；未来 Anthropic 甚至会联合供应链定制专属芯片，摆脱对任何单一巨头的底层依赖。</p>
+<p>在当今 AI 时代，过去云计算厂商引以为傲的“数据重力（Data Gravity）”和平台锁定壁垒正在瓦解。AI 代码辅助和高度标准化的容器与通信栈使得跨云无缝迁移变得空前容易。对于技术实力雄厚的实验室而言，<strong>GPU 本质上已经变成一种高度可互换的通用大宗商品（Fungible Commodity Asset）</strong>。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: i mean, go look at anthropic right like, yeah true. google did invest in in ropic um but if google didn't invest in in thropic with a dropic beer today, because googles are really early believer um like open three and and onate three and three, five like those. i think we're just trained on googles info for shirk. um you know, it is, and then they later brought on amazon, which was, you know, amazon also are great, at least amazon on know, just like they don't don't have a business of training models in selling mmory. in the same way, they have some folks, but like nothing, nothing crazy, but google does. and it's like did google like stand up a ultimately their biggest competitor uh fighter. now google now anthropic is not only renting from amazon and google, but also from numerous other clouds. they have deals with like ten plus clouds. now um and then enthropc is also building their own data cennors leasing their own data cennors, starting a phillimmap um working with foods stack and deloay tps in their own data centers. so sure, google still getting revenue, but it's like, well, i used to rent from you now buying keep you use for me, which is less margin for you. and now in the future. i'm now i'm now building my own chip. i mendo everything without you. so so like it's pretty clear what happened with the topic just after you, if he does something amazing and discovery loop, and why would they continue? why would they be stuck to google, right? they can use any cloud switching. clouds is ultimately not impossible. it's not to it's not in data gravity and all this stuff that people leased to talk about with clouds in the prea era is a lot less relevant in the post in in the ai. err because AI can help you migrate everything, and AGPUAGP is not just AGPU, but like you know, AGPU is largely um workable as as a fungible asset across clouds. if you're good.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 那么如何看待 Google 现阶段的管理层变动？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: so think googgles curirkman.</p>
+</details>
+<p><strong>[Speaker 2]</strong>: Google 本质上是一个错综复杂的超大型业务综合体。虽然在新云语境下单纯的数据重力在减弱，但 Google 庞大的产品生态所沉淀的数据优势依然是其最大底牌。然而，他们内部面临着巨大的组织管理协同挑战。</p>
+<p>现阶段新领导团队上任，新领导接手了整个科技界最具挑战性的重组担子。而**德米斯·哈萨比斯（Demis Hassabis）**全面掌舵 DeepMind 并进入最高核心权力层，这在过去是难以想象的黑天鹅事件。德米斯是 DeepMind 的精神图腾与领航者，这次调整标志着顶级前沿实验室领导层罕见的全面实质交接。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: i mean, i do these days are much more than exweek than i am. um and there's like yeah, this google is the a conlomorate of a bunch of different things, right? uh. so i do think like the data of enage having there's data grareer as a as new club. but uh the data vantage of google is the the thing that most people cooky coming back to 're, right? um and uh, there's just organiztional challenges. and like you know, now there's new new leadership. um you know, gobless, the corey, who has say the hardest job in it wolves to to to fix this. but like i me's a very, very capable guy um and like i think i think they they know like i you know, it's like not a secret that, like uh, they need do need a reset. and um to me, damiis, like basically stepping on the leadership, see it, which is like a complete black ks, an, like i just make. i never thought it's possible, like maybe i just don't know impersonally where like it's like yeah, actually like i just care a lot about i sympophic. but like um i mean, you know, he, he, he found found it like he's 's um he's sees. so like the spiritual leader of bemind. and and so like this, like this is probably the first major frontier lab transition leadership transition fully.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 当然，此前 OpenAI 也曾发生过戏剧性的数日领导层动荡风波。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: um can me say that there was like two days were some left train. but yeah,</p>
+</details>
+<p><strong>[Speaker 2]</strong>: 但那次更像是一场快速平息的闹剧，并未改变 OpenAI 的既定轨道。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: as i mean ah, never never ft in in in anyon's, say, hearts. uh yeah ah yeah, this is the team cook of like, hi, yeah,</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 确实，那只是小插曲。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: youyou living up open eir.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 好了，回到产业动态上。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: now is my my plalater, yeah yeah.</p>
+</details>
+<hr>
+<h3 id="英伟达防御性并购剖析-poolside-与-hugging-face-交易" data-reading-heading="">英伟达防御性并购：剖析 Poolside 与 Hugging Face 交易</h3>
+<p><strong>[Speaker 2]</strong>: 让我们回顾过去六个月发生的大事。你们提到了 <strong>Poolside</strong>。此前由于他们体量不大，媒体甚少深度剖析过他们；但这家主打代码大模型的初创公司，其整个核心研发团队近期被英伟达以高额代价打包并购。这背后的底层逻辑究竟是什么？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: it was like kind of like the yeah, yeah. yes, okay. so you obviously people spspt right like anyway. um so that's my my gh thtager. i don't think i'm i'm going to have like uh space you takes the you guys i did want to pick up on a one thing is. so this is i just a chance to like catch up on the last six months of like crazy new. yeah, you guys mentioned poll side. if theynever never acshould written about poll side because they're not that big um but uthere's, they do egphical ical um h got blot by uh the employees got blot by in video for two billion. what's going on? okay?</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 这笔交易极为关键。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: yeah.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 这是一笔绝妙的战略收购。英伟达直接花重金买断了这批顶尖研究人员，其核心目的就是为了全面升级打磨其自研的 <strong>Nemotron</strong> 系列大模型体系。</p>
+<p>Poolside 从创办之初，就发现市面上的所有云服务商都存在各种短板，于是他们被迫深入底层硬件栈自建完整的基础设施系统。他们在超大规模集群构建上积攒了极为深厚的技术实力，并与 CoreWeave 等深入合作搭建专有集群。他们或许是业内最早独立操刀万卡自建基础设施的 AI 模型实验室之一，甚至在 OpenAI 自建大规模集群之前，Poolside 就在做这方面的极限尝试。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: um it's really cool right, because in videa is paying for all these researchers. so they can make nemotron better. now,</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 他们在基础设施工程层面的造诣极深。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: this is posiside is poll side posiside.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 他们完全把原本属于基础设施巨头的主业当作自己的核心支柱在做。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: like you know, from the beginning like they, they just like all the cloud, new clouds kind of sucked. and so they started building a lot of their own infront. they got better and better better building their own infront than they were trying to play their own clusters and had a partnership ship that correve on this and stuff like that. but they're just been solely moving down the stack, maybe the first AI lap to uh become you know, running their own infa even before open and and in in the opperer were trying to build their own infa that whole side was trying to.</p>
+</details>
+<p><strong>[Speaker 2]</strong>: 这原本应该是一家全职基础设施公司干的事，他们却作为副业一并啃了下来。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: i which is wild is a side projects. it's like people have to do. this is a full time job. this is a sisite project.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 现在这变成了英伟达的核心主业。英伟达收购他们的研发班底，因为英伟达迫切需要 Nemotron 模型变得真正强大。英伟达看到许多传统开源项目逐渐失去声量，他们认识到不能单纯依赖外部开源社区，必须亲自主导前沿模型的研发。</p>
+<p>市场上关于交易对价的传闻版本不一，有说 20 亿美元，也有说 70 亿美元外加 10 亿美元战略投资。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: well, now it's the full time job, right, because they sold all there are researchers to uh in video for nemo rum um because in video clearly wants neneo ron to be a lot better. i think they've sort lost open a lot of the um open source folks. i mean, sure, rereflection is still trying um thinking machines open source some stuff. but ultimately, i think in videos losing sort of hope american opopen ource. so they think they have to do it themselves. um so the've bought a budge of employees. um and yes, i thought there was seven billion dollars, not a not twelve, but anyways regardless. um but there was like a seven billion dollar, then a one billion dollar investment at a probably we have of other detadetatoday i toabally.</p>
+</details>
+<p><strong>[Speaker 2]</strong>: 市场上存在不同的估值口径。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: i take my different number,</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 涉及技术许可、人员聘用及股权拆分等多种形式。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: license, employee or six.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 但归根结底，英伟达的实际净现金支出可能只有表面账面的四分之一，因为这笔巨额资金最终都会通过购买 GPU 的形式回流给英伟达。表面上英伟达开出了极高估值，但通过注入资本，他们实质上扶持并绑定了一个承诺采购数十万张 GPU 的巨无霸客户。Poolside 如今账上握有巨额现金，借助高额资产抵押贷款加杠杆，甚至能独立撬动建设吉瓦级（Gigawatt）的超大规模算力基地。英伟达以此凭空孵化出了一个全新的顶级算力买家。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: the number six always always take the bigger ger number. but you know, i think at the end of the day, it's like in vidia can say, well, actually, we only paid one forth the price, because all of this money just going back to buying gp s. so did they pay? you know, seven billion dollars six for the employees in one in an investment that they actually pay. you know, one and a half because all seven of that is going into buy gps. and in fact, i'm doing this is going to insentivize other people to invest a bunch of money into them. and so actually it's a it's it's probably a positive thing tired. these people like they they actually inspend any money because now they have created a new customer, a new cloud that's going to build a massive cluster. right? like imagine yeah, theyve got seven billion dollars now of cash. um they raise another few billion dollars, as should city of ten doillion dollars of cash on the balance cheat um and they're able to get a loan, the value of like seventy five percent, um yeah, twenty five percent uh down and seven, five, five perent ent. once another forty thousand thousand dollars, they can do the gigwa oso. this is another digoa scalill near a cloud. um so thethey've, just yet you a new competitor.</p>
+</details>
+<p><strong>[Speaker 2]</strong>: 如果这种打法被验证可行，后续很可能会引来大批效仿。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: you have that lower down in the in the article. um it's uh yeah. i mean, II don't know. i don't know what, uh, if that this is the playbook, if this is the playbook, honestly uum low it down, loit down. um uh the the guy was leaving it, robert bonr. um.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 如果这是标准化范本，未来会有更多团队争相仿效。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: and like if this is the playbook, a lot more people should be doing.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 会有更多初创公司主动寻求与英伟达达成类似捆绑协议。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: this should should be doing.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 因为英伟达有极强的动力去维持生态与硬件垄断。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: what should should be DD should be doing deals with in video like this, because an in video will king make make just because they they want monocrtes. yeah,</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 并非所有团队都能训出顶尖开源模型，Poolside 的技术积淀值得认可。在我看来，<strong>英伟达对 Poolside 和 Hugging Face 的入股与并购，本质上都是极其典型的防御性并购（Defensive Acquisitions）</strong>。英伟达绝不希望其竞争对手（如 AMD、自研 ASIC 巨头）捷足先登买下这些拥有深厚技术沉淀和生态号召力的关键标的，从而借助他们的实战经验攻克大规模训练与推理集群的软硬件死穴。</p>
+<p>在 AI 基础设施领域，深刻理解真实大模型计算特征与网络通信模式是构建优秀系统的绝对前提。许多跨界搞数据中心建设的加密货币矿工，即便手里有充沛的土地、电力和资金，也根本不具备将万卡集群稳定调优至最佳状态的软件工程实力。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: i mean, not everybody releases. the second vests open american model, and you spspend years building it. i mean, we're kind of brushing over the fact that pulls i did build something interesting. and to me, both this and hugging face are defensive acquisitions by invideo, who does not want want their comtition tion, snapping up a lab that actually has something going for them and having some momentum where they can build the real experience that's required to build real training and inference clusters. in other words, it's so important for building an infrastructure company that you actually understand how the workload works. and you have opinions that are informed by tratrainmodels ls and running accreate s. look, get represented in the not ecyped of miners who decide. hey, i found some site. i got some power. i have the money. they don't have the ability to execute, like somebody who has proven they can train the second best american opens model in the world, which fools i did, right?</p>
+</details>
+<p><strong>[Speaker 3]</strong>: 那么对 Hugging Face 的收购传闻或深入合作，你们如何评价？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 3]</strong>: yes, say more 样的。 i was going to say, you mentioned higging face and there. how do you go see the higgface acquisition? anything you ganna comment on there?</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 逻辑如出一辙，同样是绝对的防御性卡位。英伟达绝不容许竞争对手收购并把持这一整个 AI 开发者生态最大的分发枢纽。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: i think it's quite quite similar. i think it's defensive. i don't think that invideo wants the influence in the ecosystem of other companies coming in and owning somebody that's like curiricle.</p>
+</details>
+<p><strong>[Speaker 2]</strong>: 这是一个极具宏大视野的策略布局：如果竞争对手试图在开源生态中发起逆袭，英伟达通过掌握生态制高点便能形成威慑。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: infit is a galaxy brain, take care, right, which is um now now hugging face, you know, can can see the fucket of opening i for hacking them. um and now vividea can can can has has that has that hamit. i don't think exside of exul. um but i think i think i think hiking face is obviously like, uh, you know, leagues ahead of everything else. um some some folks on my team have started adminiting, a much of PR for model scope uh to work across the ecosystem.</p>
+</details>
+<p><strong>[Speaker 3]</strong>: Hugging Face 在开源生态位上确实遥遥领先。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 3]</strong>: um my leagues ahead in. no, it cense.</p>
+</details>
+<p><strong>[Speaker 2]</strong>: 核心疑问在于：Hugging Face 目前支持一键将开源模型部署到 AWS Trainium 等各类非英伟达硬件上。在英伟达主导下，未来这种多硬件中立支持是否会被削弱并全面向 GPU 倾斜？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: i just like for for open source popostory for yeah, just like what hoging face us. um but then ultimately, a lot of them are. uh, you know lake. it's it's you know. the question is, like does huhugging ace ace know there's a way you can just like deploy hugging face models um on amazon traineum. if you want right, you can just click about in the or the poeum. um does that go away as it early? er GPS from here on out um or is there any closing up that happens? um we'll see. but ultimately, it's it's um and II also love that the price was uh the o moi e moso say.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: Hugging Face 与 Poolside 拥有业内顶尖的基础设施人才。很多人认为英伟达收购单纯是为了人才掠夺，但从财务视角看，英伟达单季度自由现金流逼近 500 亿美元，一年产生近 2000 亿美元充沛自由现金流。英伟达的企业战略投资部门只需拿出单季度现金流的 10%，就足以将两家公司揽入囊中。这不仅能扩充核心研发实力，更重要的是直接封死了竞争对手借此反攻英伟达生态的最短路径。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: and the teams incredible. look, i think wewe're kind brurushing over the fact that hugen face and poll sight have incredible talent in both ororananzations. and like a lot of people would see that's the motivation for invidia to acquire them. i say it's defensive because if you look at invideo's business, they're generating almost fifty billion dollars of free cash flow corter. so tunor billion a year. and there is a corporate strategy team at at in vidia that gets some amount of that money and says what we need to deploy it right? they can make investments. they can make acquisitions and ten percent of free cash flows to acquire hugging face in full side. i mean, it's a no brainer to me that these would be good assets on your team at working, at least not for your competition. let's say, hugging face days independent, and they follow the letter of the law in the acquisition, and they keep supporting all these other chips and stuff if they were required by somesomebody else, they would be actively working against invideo's interest. and i think that's not what they want. so i think you're going to see more of this, if companies grow up a little bit, they have build this team hundred to two hundred, incredible people. they want to bring them into make sure that they stay in the invideo ecosystem as oppposed to going and competing against them with somebody else.</p>
+</details>
+<p><strong>[Speaker 3]</strong>: 这完全合乎逻辑。我们在 Poolside 被并购前一个月曾专门邀请其团队录制过播客，他们那种打造“模型工场”系统化训练前沿大模型的基础设施工程实践极为精湛。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 3]</strong>: yeah, makes sense not to discredit anything pole sides done where uh pretty big fans. we had them on the pot of month before they got acquired for people interesin the model factory work approach to training foundation models. uh very, very good way that they built all this out. you know,</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 这正好引出了 ClusterMAX 4.0 的可能构想：未来新云服务商证明自己集群卓越性的终极方式，或许就是直接在自建集群上亲自跑通并训出一个真正的前沿模型。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: to me coming, you know, maybe maybe this brings us back to customax. uh, the way that you that all new clouds should be proving like cosmax four is like just train a frontiy model. please h, yours yourselves, right? uh. and then i show everything works.</p>
+</details>
+<p><strong>[Speaker 2]</strong>: 但并非所有云厂商都具备训练顶级大模型的算法储备与研发实力。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: i don't know everyone should everyone should have the skill set to train the fronter, right? that's just a kind of,</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 如今开源界已经拥有了非常多现成成熟的训练配方与全套开源流程。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: but there's not to open recipes is stuff right?</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 训练前沿大模型对集群底层工程能力的要求极为严苛：你必须拥有毫秒级的节点健康检查与自愈机制、极高的持续在线可靠性，否则在漫长训练周期中节点会频繁崩溃导致训练进度无法收敛。Poolside 已经用实战证明了他们拥有搭建数十万卡顶级集群的工程实力，而大多数银牌和铜牌供应商目前只适合跑轻量推理或小规模微调，完全不具备承载十万卡级别顶尖预训练任务的调度能力。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: let's talk about what it takes to get that right, if you're going to train, i think, but also, i think procide and probably hugging face of probably both entertained acquisition options in the past to the tune of similar money. and it's yeah. so specifically in video tried to buy poll side, uh ah h viwhich try to by hudking face uh at the start of the year, right? that's in case people did know well.</p>
+</details>
+<p><strong>[Speaker 3]</strong>: 市场上关于英伟达大举并购的传闻此起彼伏，包括收购 Thinking Machines 等众多新创团队的传闻。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 3]</strong>: and i think also, and video is on a bit of a acquisition. crazy are rumors of thinking machines and a whole bunch of the the acquisition.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 核心创始团队在面临十万卡乃至四十万卡前沿竞赛的巨大资本壁垒时，往往会理性选择套现并与巨头合流，共同建设未来基础设施。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: yeah, i the court ch ounders kind of have the they have the option to like cash on when they want for a lot of these people that have built these things, right? so when do you decide to cash in? i think both i is probably looking out there. i'm going okay. i've built the ten thousand GPU cluster, i needed get get icggin it out. but if i want to compete, i need a research cluster. that's hundred thousand GPS four hundred thousand gps. and how do i keep up with the open frontier into next year? thanks, that's pretty hard to keep going in. the money comes in. there are like, okay. sure. let's just cash in and build it with the other people, that, that seems fine. but the other thing worth pointing out is like on the technical site, we prosasaze papers are really good on the infrastructure stuff. i've talked to the team. but if you're going to train to frontier model, you need to have health checks on your cluster. you need to have high reliability. you, you just just have this model like not make progress as you're training and constantly be failing. um coursight has that they have like an incredible sweet of um they just have incredible infrastructure. so the uh, the idea that people with that talent would be able to provide that as a service. other other people i think is like just obvioulater. uh and there's only limited people that have that experience ces were same ying even when when get into the silver in in bronsteer. er um people are not training frontier models on most of the silver teer and all the bronze teer. let's say, a lot of influence bit of our AA lot of research, but i went trust any of those guys, frankly, to build smptasure ring, but to build a hundred thousand GP coster. i crew is proven and they can do that already.</p>
+</details>
+<hr>
+<h3 id="正面回应争议利益冲突付费排名与选股误区" data-reading-heading="">正面回应争议：利益冲突、付费排名与选股误区</h3>
+<p><strong>[Speaker 0]</strong>: 鉴于剩余时间有限，我们必须正面直面外界对 ClusterMAX 的核心质疑与批评。这批榜单是企业采购硬件算力的重要风向标，Periodic Labs 等机构甚至公开表示这份评级直接决定了他们数千万美元预算的投向。外界最常见的质疑究竟是什么？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: yeah, not a low five hundred minuyeyeyeah ah oay. i do want to maybe uh dive in one of two things that maybe you don't h don't actually cover. maybe the best way a, given the time that we have left is to just address the criticism. um uh, you know you really, uh, obviously, this is a very valuable list that people do be purchasing decisions. offeits uh periodic glads uh did come out and say, like yey ittually ally, uh, you know this, this helps us decide what what we spend on. um yeah, i mean that you ah, what is the charrticism that most people have?</p>
+</details>
+<p><strong>[Speaker 2]</strong>: 核心批评与误解主要来自三个方面：</p>
+<p>第一，<strong>对评测边界的混淆</strong>。这项测试<strong>严格限定于托管集群（Managed Clusters）的软件与运维服务质量</strong>，并不等同于否定某家公司在其他领域的卓越成就。例如，某家知名新云在本次托管集群评级中被下调，但这丝毫不妨碍他们依然是全球最顶尖的物理数据中心建设者之一，手握庞大的吉瓦级电力储备与工程交付管线；同样，Together AI 拥有极其卓越的推理 Endpoint 服务，但其在裸金属上层提供的托管服务并非其长项。许多人混淆了数据中心土建、纯裸金属集群与托管云服务的界限。</p>
+<p>第二，<strong>关于“商业充值付费排名”的无端指责</strong>。我们可以绝对斩钉截铁地声明：<strong>我们绝不接受任何形式的付费上榜或有偿买榜，这不仅违背我们的职业伦理，在法律上更是严重的欺诈违法行为</strong>。我自己个人通过特殊目的载体（SPV）私人投资了多家算力相关企业，但这些企业在 ClusterMAX 榜单中完全没有进入前五强，甚至有的直接被评为表现不佳。乔丹领导的技术团队拥有完全独立的评估决策权，甚至完全不知道我们在商业上与哪些机构签署了研究服务合同。在 SemiAnalysis 的企业研究客户中，诸如礼来（Eli Lilly）、沙特阿美（Saudi Aramco）等全球顶尖巨头以及 AWS，其研究订阅预算规模远超任何小型新云公司，但这绝不会对我们的独立技术测试产生丝毫倾斜。硬件与数据中心全产业链的客户都在购买我们的深度报告，但技术排名的唯一准绳就是实测数据。我们在行业中的立足之本就是讲真话的公信力，绝不可能为了蝇头小利透支声誉。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: i think i think there's um a lot of criticism for a lot of things like first and foremost. um this is testing manage costers. um so that does not mean that a company is not good at other things, right? crucial, it was downgraded for manage costers. um but there are one of the best data center builders in the world. um if not like the best they have, they've nearly the most contracor or or the most contracted gigle lots in their pipeline, a bununch of sites. they're building on really rapidly, but this is not a criticism against there. you know, dis on their building capital is it's only a criticism against their manage customter offerings that they were theystill one of of the better es es, right, but they dodowngraded right. um you know, likewise, you know, other companies together has great inference and points that has nothing to do with manage services. um you know, and and so think think there's a lot of confusion around what this is testing, right? this is for manage clusters, not for data center construction or or bememetal clusters or for infrence cand inints, which which just come a blurure line because everyone is doing these stakes right? um the other question, the other big major criticism we have is like, oh, you know, people like, oh, are they taking money for this? as like no, we do not take money for any ranking. uh, that would be illegal. um i myself have personal investments in crucial. i have personal investments in floodstack and neither those companies. um you know, i did SP vs in both of them. neither those companies are in the top. you know, five clouds um because because that's not what you know, i'm not here to be by a strike. jordan, well say he's like he's like he has free rain til like do whatever he wants to do. technically, he does even know all the companies you do contracts with. um if i look at the top twenty companies in the world, there are five companies that are not our customers. um yeah like e like lily and saudi ram co and sounds like that. but ultimately, it's like those are much bigger customers than core river nebbias could ever be right, because you know, they just have their way bigger companies with way bigger budgets um you know. and so like eighd, AWS is a bigger customer than core riban vious, for example, right um and yet, that has nothing to do with the rainkks, right? everyone in the infer supply chain buys our stuff. um it just is what it is right. if you're tracking data centers, you are know other people doing their data cennors. if you're tracking excelerator supply ly ands, if you trying to understand the cost of various kinds of cholers, if you're trying to uh understand the supply chain for networking in optics, you're going to buy a research and our data services that does not mean um and you often commcommission ed us to uh work beyond that, right? um you know, but that doesn't mean that we're going to ever bias our rankings. um you know, so so sort of i think there's a lot of criticisms around that, but ultimately, like first of all, who are taking money and ranking people not disclosing yet that be illegal. um but second of all, right, it know makes no sense right. the value we have to the industry is that we tell the truth in what we believe um if if we didn't do that, then no one would kure what we would say we'd be screaming into the void. um so our reputation is like what matters the most right over a quick box.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 换个角度来说，你们的买方咨询业务收入规模比卖方大上千倍，根本没有动力去迎合卖方搞利益输送。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: yeah, maybe one way to put it is like your you're byysides and people people people accusing you taking money for ccl side de, and they don't want to say the byside is like probabone thousand times larger ah, enters the revenue for you that to put them the cell side.</p>
+</details>
+<p><strong>[Speaker 3]</strong>: 所谓“充值买榜”完全是缺乏认知的无稽之谈。核心误解依然是外界未能读懂评测的真正边界，把特定维度的测试结论泛化成了对公司整体价值的断言。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 3]</strong>: i mean, i think people trying to poke at it's a paid list, you know, and that's just one IQ. the brother point is, like, okay, people misunderstanding what you're trying to rank here. and a lot of the claims are just well. it's crazy. this is a better cloud x is AA better oud d white, right?</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 那些建设性的批评我们始终虚心吸纳。例如有人批评说：“你们公开的数据还不够多，应该放出更海量的实测底层底稿。”也有人抱怨报告篇幅太长，三万多字的体量读不完。针对希望获取持续、海量详尽数据的专业机构，我们推出了独立的“云 TCO 财务与性能跟踪模型”，每周持续更新行业动态、算力基准跑分看板与供应链数据。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: but that's that's what you're actually testing youyou're. uh clear criticisms about the writing from people where i listen to the criticisms, because i, you know, respect their work, and i you know, if they're not like anonymous just showting as the aoid. and those criticisms are, you guys didn't write enough, you should have released more data. you should have wrten more or this is thirty thousand words. i can't read this all so it's really hard frous the balance between those two,</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 毕竟客观评估新型云基础设施需要详实的数据支撑。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: but it's exa new. yeah, you're evaluating new clouds, of course,</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 是的，对于需要更细致信息的机构，我们提供全年的持续跟踪数据。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: like so so for the former, i'm you know, interested in that criticism, and we we want to do better. and so we have this research products called the cloud tco model than anybody can come in license. it's a yesually fee. we write notes every week about the trends in the industry. we have a dashboard, which we took a reducted screen shot of below where you can get all of our data, all of our performance status on their yeah. it's like you know, you get us working on the research for a year around weekly rather than just ah h this individual, you know, kind of once a year release or every six months or something as what we do. so that's for the people who want more detail.</p>
+</details>
+<p><strong>[Speaker 2]</strong>: 第三类批评通常来自二级市场的散户或股票投资者。他们持有某家上市公司的股票，看到我们在 ClusterMAX 中将该公司的云服务评为低分，便感到强烈不满。</p>
+<p>必须严正澄清：<strong>我们在 ClusterMAX 中对云托管服务质量的打分，与二级市场股票的涨跌逻辑截然不同</strong>！我们在机构研报中持续估算各大公司的前瞻营收，但从未据此提供股票买卖建议。例如在某些时期，我们认为 Nebius 的股票投资价值优于 CoreWeave，原因在于 Nebius 拥有的合同周期较短，当现货 GPU 价格出现暴涨时能更快享受上涨红利；在另一些案例中，如 Iris Energy 建设的超级数据中心交付并全量裸金属租给微软，其股票基本面可能非常强劲，但我们依然会在 ClusterMAX 中提醒用户不要采购其软件托管服务。</p>
+<p>把 ClusterMAX 的技术采购评级当作全仓押注某只股票的投资依据，是极其荒谬的逻辑错误。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: um there were another crowd of criticism, m such is like, um it's often time someone who like owns one of the stocks, and we ranked them popoorly positively ly, right? like i remember last time, people were were like, like better way, like our a view on a company doing better or worse in the stock market, has nothing to do with uh jordan ous team, right? there's uh you know, we we do. we do estimate revenue for all these companies going on on a four basis um and then you can like license our data and see what you think that should mean you should trade. we never recommendous trade. um but theverban times were like, for example, um we thought nebbious was better than corory, and the reason we thought naabbious was better than correeven. even we thouthink cory was still a better cloud than nebyous, is because nevvius is contracts are shorter term, and so it prices of GP spiking nebvious gets to take the upside better, right? like that's something that we've released in our research in a separate separate group of people, not jordan and the technical staff that are working on costumer max, or or hey, like irish energy, has this massive data stthat that's going to come online. we think it's going to get least when we would put a report out like about that well of the same time saying you should never use irish energies um iron's um, man, age services um. and so like it's like it's it's it's completely different things right know. they sold that data center ters, a bear metal to microsoft. and so we were you know, a research on the institutional research side for some one who might be buying. stocks is completely different from like, hey, costmamax is really for people. people like perioticical labs or applied compute or companies like that. it was publicly came out and said they look like costter max, and what we do there. um you know, even opening ice, and they like costa max, and we have like a quote from them on on that um wehave, a variety of different buyers who said they really appreciate the ethodology and that we are pushing the bar up for all the clouds. and so i think it's it's it's you know if you're trying buy buy stock based off cluster max, that's like completely wrong. it has nothing to do with stock performance.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 必须重申：这份指南百分之百面向真实的算力采购方（Buyers），是为了帮助工程师与决策者避坑，绝非散户全仓炒股的代码手册。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: yeah, it's a hundred percent man. this is strictly for buyers. this is for helping people buy compute. it is not for people to pick what stock to yellow all their savings and it,</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 确实，两者不能直接划等号。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: i mean, it, it, it will corrently uh at some kind of limit. um i think like i think isn't a tendency. it's litererally. it's literally in quoral ly for my money guys or so ok oright oh,</p>
+</details>
+<p><strong>[Speaker 2]</strong>: 一家公司管理云平台的软件能力可能很差，但只要他们建成了吉瓦级的超级数据中心并以裸金属打包租出，依然能赚取海量利润。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: my gogod right like someone someone is terrible running a cloud, but has a gigoot data center that they're building. and in it's like actually credible like a giggooddata center. well, they could be that worst ranink customer max, and they could still make shitloads of money.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 股票估值取决于当前股价包含了多少预期，许多标的估值极其便宜，而许多则充满泡沫。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: um elah like dodoesn't matter at the car of price at the curar price of the stock. many names are cheat. many names are expensive, like, yeah.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 托管服务质量只是基本面拼图中的一块。二级市场关注的是全局现金流和估值乘数，而采购方关注的是集群调度的稳定交付。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: yeah, II, do i do? i do get it fundamentals, which is uh, you know, one offering uh, that contributes to overall fundamentals. it contribubuto the overall uh, h valuation, interrection or data. i used to be a, it fronone guy. i get it. you know. i'm just saying like this is like you guys are the subdomain experts and people do value the rating on that elements. uh. but obviously, this is way more by side, uh and by is in uh, you know, the the the new lab.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 我们在正式报告中会加入更加严密的免责声明，明确指出这不构成对相关标的资本市场估值的背书。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: yeah, i cerarsorto to just keep dressing this. but we genuinely have a core research product where people report on starks. and i give opinions about the names and many other guys ys that confact research. look, they ask us questions, but then they come out. they say people in the underperforming are unavailable. tear were positive on the name. this is different than what we put out publicly and say you should rent cluster shoong. and maybe i need a another rex claimer on the future one. that's like this is not a cosign of this current valuation of their stoalk.</p>
+</details>
+<hr>
+<h3 id="未来路线图inferencexendpointx-与异构推理生态" data-reading-heading="">未来路线图：InferenceX、EndPointX 与异构推理生态</h3>
+<p><strong>[Speaker 0]</strong>: 或许未来可以制作一个二维象限图表：纵轴是 ClusterMAX 算力工程排名，横轴是 SemiAnalysis 的股票估值评级，两者的背离一定会非常有看点。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: it could be, you know, it could be really interesting for like a two way way or or like a two dimensional chart wear, like here's the question, max ranking. and and here's the seminalysis, like stock ranking and like it, the diffediffeces are are going to be interesting.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 这正是我们后续研究的方向。许多上榜公司的业务早已超越了单一的托管集群：从纯裸金属、Serverless 推理端点、RL 训练环境到代码沙箱（Sandbox），各家边界正在快速延伸。未来我们将围绕这些差异化细分赛道陆续推出专项评测。大量向我们咨询的客户所困惑的，正是到底该选择哪家推理 API 服务商、选用哪家托管强化学习环境，这与采购万卡预训练集群是完全不同的技术选型逻辑。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: and i was like the research uam, but maybe worth single there is a lot more coming, which is that didn't mentioned it. individual names and logos on here have businesses that are much larger than just managed clusters, which is what we're waking here. and so we are going to be addressing that on the newslettter for inference and points for bear metal for our infrastructure for sandboxes, for you know, part of our oil infrastructure. but kind of different um we're going. we running about all of that and stay tuned for that because i think people will start to have a more holistic view of these businesses that compete in different market segments across inference, managed clusters and mbaronmental. and we've got a lot of focus on manage clusters here, but frankly, so many people are reaching out to us for help, deciding on which and point provider to go with there with, which hosted our tratraing provider der go go with or which sandbox provider to go with. and that's a different question than who to go with for your managed cluster.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 也就是说后续将推出更多专属基准测试？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: yeah. so so is this solution more maximore benchmarks?</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 没错。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: yeah, that's so yeah.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 目前推理端已覆盖了多少维度？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: okay, how many you have yefrence?</p>
+</details>
+<p><strong>[Speaker 2]</strong>: 我们希望逐步建立数百项评测指标，全面覆盖各个环节。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: it's it's it's me when you go shopping when you go to grow shsure in hundred hundred reds, the ll, right? we we want to do everything. i'll see. i'll see. hopefully, we can execute all all of.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 需要厘清的是：现有的 <strong>InferenceX</strong> 专注于硬件加速器底层的纯推理算力对比（如不同 GPU 和系统在特定吞吐与延迟下的表现）；而即将推出的 <strong>EndPointX</strong>，则将聚焦测试各大 Serverless 推理端点提供商的工程成熟度。</p>
+<p>我们不仅考察静态下的首字延迟（TTFT）与每秒输出 Token 数，更全面评估真实场景下的动态成本、可用性 SLA、极端高并发下的系统弹性以及监控运维链路。某家服务商即便在 Batch Size 等于 1 的理想人造跑分中名列前茅，并不代表他们在生产流量激增时能稳定抗住负载。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: yeah, we need be to be clear, though. influence acts today. the name is because it's ininference performance. it's about about ps ps, it's about comparing gbps and systems, and we're going to be relation something called end point x where we test the several st infrence ence point providers and kind kind a dig into those details on uh because i think there's a very similar methodology. we know there's a similar methodology that we should apply where we we go beyond just performance. we know we look at cost. we look at reliability. we look at security. we look at monitoring inffstructure that there's all of this stuff that goes into an inference and point that says, just become because somebody had supiirer h target on batch one, you know, contrived tests doesn't necessarily mean theythe, right? partner took scale up your infrence requirements with when you need to all that extra.</p>
+</details>
+<p><strong>[Speaker 2]</strong>: 很多底层服务商虽然拥有顶尖的算力硬件甚至能做出激进的内核极限优化，但其上层对外开放的 API 极不稳定，频繁超时抛错。对于真实应用开发者而言，整体综合可用性反而不及那些跑分略低但稳定性极高的云平台。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: yeah, there's providers with better performance like raw, better performance, better optimization engineers, but then they're like api less stable. it's flaicy er um yeknow. there's there's all sorts of reasons why it may not be as good for the end point and customer. even that's like more tokens, persecupper user and loter cost.</p>
+</details>
+<hr>
+<h3 id="多芯片异构计算rl-负载重构与中国自研芯片态势" data-reading-heading="">多芯片异构计算、RL 负载重构与中国自研芯片态势</h3>
+<p><strong>[Speaker 1]</strong>: 确实如此。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: yeah, amazing.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 你们未来将如何覆盖英伟达生态之外的非英伟达算力宇宙？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: um do you ever? how will you cover the let's all all the the non envidia universe?</p>
+</details>
+<p><strong>[Speaker 3]</strong>: 榜单中其实已经包含了一部分，比如基于 AMD 芯片的 TensorWave 等。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 3]</strong>: um so which is risant, you have someone here, right, like tenser with this mt cloud.</p>
+</details>
+<p><strong>[Speaker 2]</strong>: TensorWave 也是我个人参与了早期投资的项目，但在此次评测中我们依然客观地给出了相对靠后的保守评级。我们虽有投资，但技术评级绝不徇私。</p>
+<p>至于更多异构芯片，很多时候外界难以获得测试渠道。例如 Fluidstack 虽然掌握部分非 GCP 的 TPU 资源，但几乎被 Anthropic 整体包圆承租，市面上根本没有冗余的零散算力可供第三方公开发起基准压测。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: yeah, that's another one where i explicitly have an investment by the way guys. and and we still ranked them poorly, um you know, time until like that had investment in the first cluster max that put we put him as under perform, right? i think like a lot of this bias against like it's it's yes, i might make an investment. i'm going to talk to them and trying help them. but at in to the day, the ranking is the ranking. um so we we do want to extend beyond. but ultimately, like you know, foods dback is not going to rent rent TP use dos right, because you're renting everything to anthropic right.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 未来或许会有转机。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: ah maybe well, see ve maybe II you.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 被列为“Unavailable”确实反映了市场的真实窘境。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: yeah. it's kind of an excusiable that they're unavailable, like i come on,</p>
+</details>
+<p><strong>[Speaker 2]</strong>: 现实就是如此：普通客户拿不到货，它在商业上就是不可获得的，因为所有稀缺资源都已被超大型机构全部提前锁定。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: guys like, no. i mean, it's it's valid at the same time. it's like look, it's unavailable to us. so we can't we can't we can't rent it. it will be to rent to neither unless you're really, really freaking cool um because they're selling everything like space ex is not going to rent to us. they're not going to rent to to use wax are not going to rent to to, you know rent companies.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 随着我们在业界的深入，不少头部供应商及在 SpaceX、xAI 工作的团队非常看重我们外部客观中立的评测见解，未来我们将有更多机会直接进入这些集群开展闭门测试。</p>
+<p>关于**多芯片异构（Multi-Silicon）**的趋势，在接下来的 <strong>Vera Rubin</strong> 世代中将呈现爆发态势。届时不仅是英伟达自家的 LPO、PCIe 与不同形态系统需要横向对比，<strong>AMD</strong> 的迭代产品、OpenAI 自研芯片的推进，以及包括 Cerebras、Positron 等专用 ASIC 芯片初创企业都在纷纷建立并上线各自的专用计算云。此外，AWS 的 <strong>Trainium</strong> 芯片产能正在大规模放量，并开始通过多方渠道输出给各类云服务商。领先的新云提供商必须在调度层具备管理异构异质硬件的综合能力。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: they're going to rent massive cloud and you do. and i think it know, i think you need to work on your, i think it is. so if is the first time i ever given you this feedback, and i think you need to work yourself, confidence, man, we we can get it in there. i think we can get it in there with these guys yet. well, i think over time like today, tolly, a lot of these providers, even fluds back and and people that we know who are at space XAI. now um see value um reading the article, and they see value in getting in outside opinion, even if they're not necessarily going to provide the service is publicly that they offered off. so they, you know, they they enjoy a third, you know, i thankher ical opinion. that's outside the company. that's honest that's going to give them real feedback. and we're here to help for all that stustuff to answer the question about multsilicon. i'm going to be huge next year, like with the very ruban generation within video. we're going to see it because they're going to bring the lpos in from crock, the LP acsystems right? so even if we're just testing in video wegoing to have multsilicon to test emd obviously has their own thing. so rivers is becoming a neo cloud for opening air blowling, their own data centright um moving from just inference and point stuff to like really managing clusters of their chifts. for everybody else, we see him and and overcome in a market. lots of the chip starus like posiatuum edged mateacks, like lots of people are launching stuck like this. um there's mmors, you know, obviously, fluds ducks got TPU outside of GCP. there's more stuff come on there. traineum lots eight of bius can produce a lot of chips. maybe they won't self build all of it in the future. they've got analysment son on had virginious traineum with the rivers and stuff like that. so i think there's going to be a lot more for that next year. and and we're going to have to contend with multisilicon as part of a comprehensive offering from the leading meoclouds. they they will need to be able to support heerogenen ous computer in the future.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 这类异构芯片主要还是集中在模型推理场景吧？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: and that's all focused on infrrence mostly right, right, like, uh because of it's, you know icic.</p>
+</details>
+<p><strong>[Speaker 2]</strong>: 并不绝对。以 Anthropic 为例，其核心的 Claude 3.5/Claude 3.7 模型预训练很大比例是在谷歌 TPU 上完成的；而在后训练（Post-training）和日常大规模推理中，则混合使用了 Trainium 和英伟达 GPU。非英伟达芯片在推理端占据主流，但在训练端也已经扮演关键角色。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: i mean, most most ethropic, for example, uses TPS for trading primarily, um so in that case, is sort of the opposite right. they don't actually most of their inferences on trainium in GPS. most are training is actually especially like, you know, fable five was trained on TPS, for example, for for the pro training, and then the post training and inferences mostly the trainum in GPS. so it's a mumultsilicon oi would say, in most cases, other silicon offerings are for inference, but there are some cases where people using it for training.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 如今训练与推理的界限正在被彻底打破。在**强化学习（RL）**和思维链测试时计算（Test-time Compute）的整个训练流程中，绝大部分算力其实是在做模型的前向传播（Forward Pass）生成推理样本。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: yeah, but that i think the key thing is infrence persuis training is not this hard to blit now or there's a lots of forward patches during oral when you're doing research and when you're actually postering the model. and so um in fact,</p>
+</details>
+<p><strong>[Speaker 2]</strong>: 从计算性质上看，强化学习探索阶段的大规模前向推演本质上就是推理负载。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: most of the workloades is forward passes, right? and so you might call that classically inference, even though for you know, four passes for reinforcement learning, um ah ah ah infeence is part of to do.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 没错。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: yeah,</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 这为架构设计打开了巨大空间：工程师完全可以使用高吞吐、低成本的非英伟达芯片来专门跑 RL 中海量的前向 Token 生成，而只将高精度的梯度反向传播集中在英伟达顶级集群上。但这同时带来了严峻的**数值一致性（Numerical Correctness）**挑战：在两款不同架构甚至仅是不同代际的芯片（例如 B200 与 B300）之间混合运算，显存规格、浮点精度舍入差异、Batch 尺寸不同，都会对强化学习训练收敛产生深远影响。</p>
+<p>在预训练阶段，用户在 40 万卡规模上往往不敢冒险引入异构芯片；但在后训练与强化学习阶段，<strong>跨芯片乃至跨数据中心的分布式异构架构正在成为前沿标配</strong>。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: there's a whole bunch of benefits of using ah let's say, cheaper chips capable of high throughput for the ford past in RL. but then there's a bunch of challenges with numerical corcorrectness, if using two different ships, even just two different generations of individia gps be two hundred versus be three hundred, you might have different amounts of memory, different batch sizes. there's all these effects. so II absolutely expect there to be heyderogenunion silicon used across training and inferenced pretraining probably a hamamoginous ster. people probably not going to risk on it, like four hundred thousand GP scale, but also yeah ver like you know,</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 强化学习的计算规模如今已经全面持平甚至超越了纯预训练，这意味着算力调度正在走向<strong>前后向流水线解耦（Forward/Backward Disaggregation）</strong>：在同一数据中心乃至跨地域部署不同特质的芯片集群来分工协作。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: RL is like as big or sometimes bigger than deprettrain uh workload right now, right? and so that actually means that you reve, uh, like maybe AA forforal disaaggregation, where like you have different kinds of compute in the same data center, but you shuttle,</p>
+</details>
+<p><strong>[Speaker 2]</strong>: 甚至根本无需局限于同一个物理数据中心。业内已经广泛在跨地域多站点开展去中心化 RL 计算：A 数据中心专门并行生成环境轨迹与 Token，B 数据中心聚合梯度进行主权重更新。这会带来极其复杂的工程挑战，涉及到异步通信参数同步以及跨机房的数据调度。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: but it doesn't have to be the same data center, right? people are doing oral across many, many sites rright. this data center doing token gengeneration that data center is doing token generation. it's actually fine to do different types of chips. there re's just a very complex infer problem because you're going a charger model differently and wait up daata at at different times. and there's all the two feet of a acing pror people listening this right now.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 一线系统工程人员听到“跨数据中心多芯片异构异步实时在线更新强化学习”这类构想，往往会感到巨大压力。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: we're like a god. no, please, no, you have to a day of the center, multi silicon RL updates on the flight gude.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 毕竟系统必须直面光速延迟带来的网络传输物理极限。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: please know you're fighting speed of light and how you you going to ansfer er this this data.</p>
+</details>
+<p><strong>[Speaker 3]</strong>: 近期关于去中心化超大规模 RL 训练架构的探索非常多，包括刚刚发布的 Nemotron 2.6 论文，详细阐述了如何在系统层面针对超大规模 RL 阶段进行并行化扩展。</p>
+<p>顺着硬件多样性的话题，你们如何看待华为等<strong>中国自研 AI 芯片</strong>的最新进展？你们是否在持续追踪？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 3]</strong>: i mean, theis interesting architecture stuff being done on disaggregated like discentralized oral. uh, the memo two point six that just came out. it's a good open paper on how they super scale of the oral side of things. um but on that point as well, you mentioned a lot of the custom chips, anything on hailway chinese chips. um do you guys look at them?</p>
+</details>
+<p><strong>[Speaker 2]</strong>: 我们在密切追踪。华为昇腾（Ascend）系列芯片的迭代演进速度极其惊人。在受到美国出口管制后的最初两三年，他们经历了一段艰难的底层供应链供应链重组期；但随着 Ascend 910B、910C 的量产，以及后续规划芯片的密集发布，其演进节奏非常快。</p>
+<p>我们正在从多个维度对华为芯片展开深度评测：一方面通过承租国内可获得的算力实测其通信延迟与真实计算算力；另一方面对其物理架构、制造工艺与实际产能展开严谨推算；同时，我们位于俄勒冈州的芯片逆向工程实验室也在对其物理芯片进行显微级逆向拆解分析。我们在全方位追踪这股力量。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: yeah, we're tracking them. the wilway chips are really uh getting better much faster for a while they were like, you know, basically, when they were bned by the os government took them like a few years to reset. um you and the assaid, nine ten BNC, uh, but theyyve ve ununched, the nineteen forty and nineteen fifty and nine sixty in pretty quick succession. um they you we're trying to sort of did access to them and test them along all bounds, right? whether it be renting them. so we can test the performance, whether it be um you know, looking at the specks in the manufacturing capacity and things like that um also trying to access them. so we can do reverse engineering analysout of our organ reverse engineering lab. um we we try to do work across all of these um dimensions.</p>
+</details>
+<p><strong>[Speaker 3]</strong>: 中国头部模型实验室使用本土自研芯片的真实比例如何？他们是否能够摆脱对英伟达的依赖？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 3]</strong>: um yeah, as the as the availability, other clusters, like are the labs, okay, without any videa, any any early science in general gabing people are super。 i mean, the labs are using, you know, ethropic uses ford of kind of i mean, like the the chinese labs using their own chip ufrom.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 比如智谱 AI（GLM）此前就曾明确公开披露过相关数据。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: like like yeah ah,</p>
+</details>
+<p><strong>[Speaker 2]</strong>: 是的，智谱（GLM）曾明确表示他们部署了超过 5 万张国产自研 AI 芯片，专门用于其最新大模型的推理服务。除了华为之外，寒武纪、壁仞、摩尔线程、燧原等国产芯片厂商都在全力追赶。</p>
+<p>虽然在最前沿的绝对性能上他们与英伟达仍有客观代差，但华为无疑是其中综合实力最强的一家；百度也将其昆仑芯业务独立分拆。中国本土芯片生态展现出了惊人的韧性与活力。随着前沿大模型与代码智能体在底层算子与自定义 Kernel 自动编写上的能力大幅跃升，模型在非 CUDA 架构上的跨平台移植难度正在断崖式下降。</p>
+<p>这种软硬件协同演进的压迫感，正是迫使英伟达不得不将自身产品迭代周期从传统的两年一更新极限压缩为一年一更新的根本原因——黄仁勋必须率领英伟达以贴近物理极限的速度狂奔，否则 CUDA 生态的护城河势必会被异构编译与开源生态逐步蚕食。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: i know it was um GLM said explplititly, right? that i had uh, fifty thousand chips that we're not in vidia. there are chinese made uh accelerators for inference of their news model as we extend out to other firms. um you know, camericon, n, vatar and flame and many other thers. there's a handful of different companies um they're all pushing up the curve. you know, obviously, there are further behind in videa. how way is definitely the best of them all? um and then bby is spinning out their chip business uh as a completely separate company. so there's a lot of developments in the chinese chip pical system. and and especially for inference, i think you know, the china, you know, as as frontier models um become even even even the opopen source models become better and better at writing kernels. it's easier easier to poor stuff. um. and so ultimately, um you're going to have more diversity in hyoriginity, uh, which is why in video is moved to the superfast paste of trying to release new chips every year, many systems over year, because they know they have to run as fast as possible about the speeet of light, otherwise they will get caught up to um because the cudo mode is graphicdly being determined,</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 当前的核心瓶颈主要在实际产能量产规模上。这些自研芯片在功能上完全可用，但目前的年制造交付量尚难以充分满足其庞大的本土市场需求。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: but it's just volume right telling like the um the trips do work today, but they can't produce enough of him to really surreal lder domestic demand.</p>
+</details>
+<p><strong>[Speaker 2]</strong>: 如果以单颗芯片折算到 GB200 算力当量来看，英伟达年出货量达数百万颗级别，Google、亚马逊、Meta 的自研芯片同样在以数百万颗的体量规模部署；而在中国芯片厂商中，除华为的整体出货规模能达到百万级（性能折算后）之外，其余多数芯片厂商的实际量产规模仍停留在数十万颗左右。在严苛的外部出口管制供应链制约下，实现高良率规模化量产极具挑战。</p>
+<p>但预计中国在明后两年内将以惊人的速度拉升其本土先进封装与制造产能，到 2028 年有望将自研 AI 芯片年产量推升至数千万颗级别。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: so yeah, you know, if you look, if if you do it one one eequivalence, or let's if you do in gv, two hundred equivalence, invidea is making millions ons, millions of chips googgles, making millions of millions of chips amazons, making millions of millions of chips MMS, making millions of chips for. but then if you look at the chinese companies really in the only one that even in growth chips y're making a million plus um and then the lalowway chips ps are behind. so then you have to discount them for ff everyone else is stole. the hundreds of thousands of units and scaling production is very difficult. specispecigiven export controls, ls stuff. um um i china will ran production rarapidly across next year in the year after um and they will get to even tens of millions of chips produce. um i twenty twenty eight, um, but it it does take type.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 毋庸置疑，中国拥有强有力的国家级战略规划与产业调动能力，一旦全产业链启动并打通良率堵点，其规模化制造爆发力将超越以往任何认知。</p>
+<p>祝贺你们成功发布 ClusterMAX 3.0。我们今天深入探讨了当前 AI 基础设施领域几乎所有的重磅热点，涵盖新云格局演进、网络安全隐患、异构芯片博弈到国际竞争态势。期待未来有机会参观你们在俄勒冈州建立的芯片逆向工程硬件实验室！</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: yeah, memean h t's not not get get the, the little first, have a national plan around all this stuff, you know, when when they get going, get get going in al al ske, like like like we've ever seen in huhuman history. um okay, lot ts to discuss here. congratulations on question max. um and all this stuff, the events are ing it. uh. i think we manage to hit on like many of the major topics as like the year so far um is k lot. get a catch up on like the the hardware lad that guguss a building, an organ. i don't actually love to see it, and all we should do like some kind of try.</p>
+</details>
+<p><strong>[Speaker 2]</strong>: 非常欢迎，随时恭候你们前来参观！</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 2]</strong>: yes, fout right out will. can you give you a tour? yeah, yeah, yeyou you. you that entever you are going like they will do a tour ah.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 欢迎随时过来，到时候带大家看点震撼的内部成果。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: i want it it. you don't not give you arrive in his orange jeep. um we i want to go to abbuly ly like, let's. this is do of interesting. you know, i mean, obviously, you guys been there as as well.</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 感谢乔丹和迪伦的深度分享。随着整个市场加速分化演进，你们建立的客观评测标准为全行业树立了关键指引，期待你们后续的 EndPointX 与更多重磅研究。代表所有读者向你们致谢！</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: anyway, ah you guys going go go um is great ccatch uh, congress on everything. and also like, i think there's a lot of of dowork to lose jordan. give us a sleep peak at the kind of things you're doing uh and point next sounds interesting uh. and like the market is really segmenting here, right like to me. that's that's what you guys are identified. early in are raising the start of everyone. so i think for you know, on behalf of everybody, like thank you for doing this.</p>
+</details>
+<p><strong>[Speaker 1]</strong>: 谢谢大家！</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 1]</strong>: thank you, and thank you ah ah ah ah,</p>
+</details>
+<p><strong>[Speaker 0]</strong>: 谢谢！</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>[Speaker 0]</strong>: the ss ss, right?</p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/eb5c7ae1c67b209b3264ede6ee0b74526c29b3e19e0b2a237f46a6ee4fa38057.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/eb5c7ae1c67b209b3264ede6ee0b74526c29b3e19e0b2a237f46a6ee4fa38057.md" download="哪些 GPU 云值得租用？SemiAnalysis 发布 ClusterMAX 3.0 解读 AI 算力与新云格局.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=SemiAnalysis" class="entity-link company-link">SemiAnalysis</a>, <a href="/search/?q=NVIDIA" class="entity-link company-link">NVIDIA</a>, <a href="/search/?q=Google" class="entity-link company-link">Google</a>, <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=GB200" class="entity-link product-link">GB200</a>, <a href="/search/?q=NVL72" class="entity-link product-link">NVL72</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

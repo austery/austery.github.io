@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>美研芒格君 · X 阅读</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="x-reading" data-pagefind-ignore>
+  <header class="x-heading"><h1>美研芒格君 · X 阅读</h1><p>按原发时间浏览 · 时间显示为 Toronto 当地时间</p></header>
+  <nav class="x-authors" aria-label="X 来源"><a href="/x/" >全部来源</a>
+    <a href="/x/authors/890076269580341248/" >宏观边际MacroMargin（128）</a><a href="/x/authors/2058239737522204672/" aria-current="page">美研芒格君（38）</a><a href="/x/authors/1620475218627121153/" >投资TALK君（125）</a><a href="/x/authors/858124064476479488/" >Herman Jin（321）</a><a href="/x/authors/809013582/" >Tigris | 会讲课教授是好老师（362）</a>
+  </nav>
+  <p><a href="/search/?author=2058239737522204672">搜索这位来源的原文</a></p>
+  <p class="x-status">保存说明：除条目另有标注外，正文尚未人工核对 · 图片未保存 · 引用或对话上下文可能不完整。</p>
+
+  
+  
+<article class="x-entry" data-author="2058239737522204672" data-long="true" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-10-03T06:11:51.000Z">2026-10-03 02:11</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2106265958629441714" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">哇，这篇文章写得真好！想搞懂 Agent、Harness和 Post Train到底怎么连起来，一定要读这篇最终指南，我认真读了一遍，收获很大
+
+《The ultimate guide to multi-harness RL》讲了一个很实际的问题：同一个模型，为什么放进 不同的 Harness, Claude Code、Codex、OpenCode，表现会差这么多？又该怎么训练，让它在不同框架里都能更好地完成任务？
+
+看完你能搞懂这几件事：
+
+1/ 模型、Agent、Harness、RL 环境到底是什么关系。 Harness 就是模型外面负责组织上下文、执行工具、控制任务流程的那层程序。它改变了模型能看到什么、能做什么，也就改变了最终表现
+
+为什么只在一个框架里训练，换个框架就可能出问题。 模型可能记住了某套工具名称、参数格式和重试规则。换个地方，连工具都调用不对，原本会做的任务也做不好
+
+2/ 怎么让真实的 Agent 框架接上 RL 训练。 
+文章把 OpenEnv、Harbor、TRL 怎么配合讲得很细：任务在哪里跑，模型生成的数据怎么记录，最后怎样变成训练样本。连“为什么不能只存聊天文本，还要保留原始 token 和生成概率”这种容易忽略的细节都解释了。
+
+3/ 怎样同时训练“做对”和“少走弯路”。 
+奖励怎么设计，怎样鼓励模型做对任务又少调用工具，以及模仿大模型的 SFT 和根据自身尝试学习的 RL，在这组实验里有什么区别。
+
+文中有个很直观的实验结果：在 SmolDataEnvs 数据分析测试中，2.6B 的小模型经过四种框架联合 RL 训练，平均任务成功率从 42.2% 提升到 54.2%；在训练前后都做对的任务上，工具调用减少了约 31%。
+
+我最喜欢的是它的讲法：先把概念讲明白，再用交互图一步步展示一次任务怎么跑完、数据怎么送进训练，后面还有代码和实验对照。想把 Agent 和 RL 真正串起来理解，这篇很值得收藏慢慢看</div><a href="/content/clippings/x/posts/2106265958629441714/#x-post-2106265958629441714">保存的原文 · 长文</a>
+    
+    <footer>
+      
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 2106265958629441714<br>保存时间：2026-10-03T22:15:32.700Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：See source observations for media and context status.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="false" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-10-02T23:48:42.000Z">2026-10-02 19:48</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2106169534461972865" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">总是有坏人在尝试把市场的水搅浑误导大家
+
+这次的坏人是 SemiAnalysis, 不过我感觉他是老坏蛋了</div><a href="/content/clippings/x/daily/2058239737522204672/2026-10-02/#x-post-2106169534461972865">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2106147184693620924">引用原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2106169534461972865<br>保存时间：2026-10-03T22:15:32.700Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved</p><p>QUOTES: x:post:2106147184693620924 · https://x.com/i/status/2106147184693620924</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="false" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-10-02T19:24:36.000Z">2026-10-02 15:24</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2106103073328574823" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">这太疯狂了，一定要看看这个产品宣传片
+
+想象一下，有天你孩子给你打电话，哭着说被绑架了，张口就是要钱。你甚至无法判断和你正在视频的人是不是AI。
+
+这个技术成熟之后，很有可能助推灰黑产和诈骗，特别是对AI不熟悉的人很容易被骗</div><a href="/content/clippings/x/daily/2058239737522204672/2026-10-02/#x-post-2106103073328574823">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2105704169009246248">引用原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2106103073328574823<br>保存时间：2026-10-03T22:15:32.700Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved</p><p>QUOTES: x:post:2105704169009246248 · https://x.com/i/status/2105704169009246248</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="false" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-10-02T16:25:43.000Z">2026-10-02 12:25</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2106058055431700943" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">“我经常觉得自己落后了，很焦虑。”
+
+说这话的人，大概率是个AI Native的人。很大部分活是AI干的，每次新模型，新产品都会追踪
+
+能看到这条的你，已经站在最最前沿了，超越了98%的人，要相信自己
+
+外面的世界，根本还不知道接下来要发生什么。</div><a href="/content/clippings/x/daily/2058239737522204672/2026-10-02/#x-post-2106058055431700943">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2105726958021885977">引用原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2106058055431700943<br>保存时间：2026-10-03T22:15:32.700Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved</p><p>QUOTES: x:post:2105726958021885977 · https://x.com/i/status/2105726958021885977</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="false" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-30T06:41:44.000Z">2026-09-30 02:41</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2105186316338295173" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">看完了以后，我真的觉得这段15秒的视频非常经典
+
+领导川总在中间讲话，马斯克、黄仁勋、小扎、劈柴都在认真听讲，不时微微点头
+
+就A\ 家Dario不好好听讲，频频低头，在玩自己的，这是啥意思？为什么Altman没有出席呢，有没有比较懂的朋友</div><a href="/content/clippings/x/daily/2058239737522204672/2026-09-30/#x-post-2105186316338295173">保存的原文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 上下文状态：UNKNOWN</p>
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 2105186316338295173<br>保存时间：2026-09-30T15:25:48.141Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：UNKNOWN<br>已知缺失：Media references were not archived with this snapshot.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="false" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-30T05:24:13.000Z">2026-09-30 01:24</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2105166807523012753" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">我想问一下大家：当莫名其妙有人跳出来“指责”你、“实锤”你和“揭穿”你，你会选择奋起自证，还是一笑了之呢？
+
+一个月前的我是前者，现在的我是后者
+
+我见过一些人拍着胸脯，说得那叫一个信誓旦旦，自己没见过的事情，就说是假的
+
+所以我想回应：你说假的就是假的，我听你的</div><a href="/content/clippings/x/daily/2058239737522204672/2026-09-30/#x-post-2105166807523012753">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2105162591329046557">引用原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2105166807523012753<br>保存时间：2026-09-30T15:25:48.141Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Media references were not archived with this snapshot.
+Reply and quoted-post context may be partial; only the returned root post was saved.</p><p>QUOTES: x:post:2105162591329046557 · https://x.com/i/status/2105162591329046557</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="false" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-29T23:42:32.000Z">2026-09-29 19:42</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2105080820759507141" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">SemiAnalysis 爆料说，Ultrafast 不是运行在 Cerebras 上，值得关注
+
+如果这个爆料是真的，那可以解释今天 Cerebras 的突然下跌，也能解答我心中的疑问：为什么之前内测的时候，速度将近 14 倍，但今天出来只有 8 倍
+
+但据我所知，OpenAI 是有一套 Cerebras 支持的Ultrafast体系的，什么时候拿出来？怎么收费？性能怎么样？值得关注</div><a href="/content/clippings/x/daily/2058239737522204672/2026-09-29/#x-post-2105080820759507141">保存的原文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 媒体状态：NONE</p>
+      <div class="x-related"><a href="https://x.com/i/status/2105055045959995719">引用原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2105080820759507141<br>保存时间：2026-09-30T15:25:48.141Z<br>正文状态：UNVERIFIED<br>媒体状态：NONE<br>上下文状态：PARTIAL<br>已知缺失：Reply and quoted-post context may be partial; only the returned root post was saved.</p><p>QUOTES: x:post:2105055045959995719 · https://x.com/i/status/2105055045959995719</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="true" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-29T23:16:53.000Z">2026-09-29 19:16</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2105074362542092409" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">作为全网最早一批使用上 UltraFast 的Codex用户，今天我用了一天500$ plan，分享从速度、容量和智能方面的三个亲身强烈感受
+
+我有点后怕，这种感受只有亲自使用了才懂
+
+1/ 速度实在是太快了
+GPT6 Ultra的速度和instant模式差不多了。我喜欢在等待 AI 的过程中刷刷手机。今天我手机刚一解锁，AI 就做完了，连刷手机的空档都没有
+
+2/ 实在是太贵了
+今天我大概用了 2 到 3 个小时，就把一周的额度用完了
+
+现在大部分人面对 AI 的最大优势，就是我们比 AI 便宜，包括我在内
+
+3/ 智能水平没得说，丝毫没有感觉到降质
+
+今天官方给出的速度是 8 倍，我推测是把 Cerebras 的卡利用了一些推理优化，分给更多的用户</div><a href="/content/clippings/x/posts/2105074362542092409/#x-post-2105074362542092409">保存的原文 · 长文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 媒体状态：NONE</p>
+      <div class="x-related"><a href="/content/clippings/x/daily/2058239737522204672/2026-09-03/#x-post-2095547583083266462">引用原帖（已保存）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2105074362542092409<br>保存时间：2026-09-30T15:25:48.141Z<br>正文状态：UNVERIFIED<br>媒体状态：NONE<br>上下文状态：PARTIAL<br>已知缺失：Reply and quoted-post context may be partial; only the returned root post was saved.</p><p>QUOTES: x:post:2095547583083266462 · https://x.com/i/status/2095547583083266462</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="false" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-29T18:20:27.000Z">2026-09-29 14:20</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2104999766371541457" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">成为了第一批 500 刀 Codex 的客户🫡
+
+我今天上午把很多实际的工作切换到了Ultrafast，之前苦苦等待结果的日子一去不复返了！回过头来再一看，Claude 的速度让我无法忍受
+
+最强的智能&#43;最快的速度，Only in Codex  
+
+我真的建议大家都去试试，后面会分享更多我的工作一手感受</div><a href="/content/clippings/x/daily/2058239737522204672/2026-09-29/#x-post-2104999766371541457">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2104994601140711896">引用原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2104999766371541457<br>保存时间：2026-09-30T15:25:48.141Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Media references were not archived with this snapshot.
+Reply and quoted-post context may be partial; only the returned root post was saved.</p><p>QUOTES: x:post:2104994601140711896 · https://x.com/i/status/2104994601140711896</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="false" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-28T15:06:00.000Z">2026-09-28 11:06</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2104588441103352191" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">$MDB MongoDB 今早闪崩-23%。CEO 被扎克伯格挖走做 $META 新成立部门的 Head
+
+Meta 是这样的，喜欢各种天价挖人。有的时候不是产品坏了，只怪对方给的太多
+
+在如今这个时代，很多人面临失业，却有一小撮人成为天价打工人，旱的旱死，涝的涝死</div><a href="/content/clippings/x/daily/2058239737522204672/2026-09-28/#x-post-2104588441103352191">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/StockSavvyShay/status/2104554555614859577">引用原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2104588441103352191<br>保存时间：2026-09-28T15:59:50.987Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Media references were not archived with this snapshot.
+Reply and quoted-post context may be partial; only the returned post record was saved.</p><p>QUOTES: https://x.com/StockSavvyShay/status/2104554555614859577 · https://x.com/StockSavvyShay/status/2104554555614859577</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="true" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-28T05:56:00.000Z">2026-09-28 01:56</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2104450030367297803" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">Post-training 一个很实际的目标，就是让小模型在某个特定场景，把业务做好、做便宜。 这是我相当看好的方向。
+
+那硅谷工业界已经在做什么？了解这些，对我们选方向、做项目都有指导意义。这次挑了 6 家我觉得很值得关注的公司
+
+它们代表了后训练及相关工具的几条前沿方向，业务有重叠，但各有侧重。
+
+1. Thinking Machines Lab / Tinker：把训练基础设施交给平台
+
+你自己写训练逻辑，Tinker 通过 API 帮你完成计算、更新模型和保存进度，省掉管理 GPU 集群的工作。比如 Glean 用它训练了专门负责找资料的 Waldo，再把资料交给大模型组织答案。
+官网：https://t.co/eYez2wKnnb
+Glean 案例：https://t.co/mtzNRX1x4n
+
+2. Fireworks AI：把训练到上线的工程流程接起来
+
+它把模型训练和上线运行放在同一个平台，还提供接入 coding agent 的工具，帮你研究训练方法、估成本、启动实验和排查失败。适合希望把训练、调试和部署连起来的团队。
+官网：https://t.co/JN2HVA2jwB
+训练 Agent Skills：https://t.co/zSdTmGwt29
+
+3. Prime Intellect：让模型在任务里反复尝试、打分、学习
+
+你提供任务、可调用的工具和评分规则，它把模型尝试、评测和强化学习训练的过程跑起来。比如 Ramp 用它训练 FastAsk，专门学习在财务表格里找对单元格、调用 Python 算数，供主 agent 使用。
+官网：https://t.co/zR6ypAWyXb
+Ramp 案例：https://t.co/mbG4WNK70u
+
+4. Osmosis：工程师和客户一起把模型练出来
+
+如果你连训练目标、reward 怎么设计都拿不准，它会派工程师和你一起把业务问题变成训练任务，再完成训练和上线。它提供的是 平台加专业人员交付，客户买到的也包括训练经验。
+官网：https://t.co/LPsBaFpytz
+
+5. Bespoke Labs：给 AI 搭接近真实工作的训练环境
+
+它给模型实验室和企业搭建包含真实代码库、微服务、多步骤工作流的训练环境，让 agent 有地方练习实际工作。它更关注 模型拿什么练、怎么验收，这些环境和配套基础设施就是它提供的产品。
+官网：https://t.co/kV3DIljqii
+
+6. Weco：让 AI 自动改方案、跑实验、比较结果
+
+你给它代码和衡量效果的评测脚本，它用大模型加树搜索，反复修改、测试，继续尝试更有希望的方案。它自动化的是 做实验这件事，改进对象可以是 prompt、算法或训练代码，未必需要训练模型权重。
+官网：https://t.co/11s9v7JEZU
+工作方式：https://t.co/io1nWTSQog
+
+我觉得对个人和小团队的启示很直接：先找到自己懂的具体场景，把“怎样才算做好”定义清楚，再借这些工具验证，能不能做得更好、更便宜</div><a href="/content/clippings/x/posts/2104450030367297803/#x-post-2104450030367297803">保存的原文 · 长文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 上下文状态：UNKNOWN</p>
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 2104450030367297803<br>保存时间：2026-09-28T15:59:50.987Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：UNKNOWN<br>已知缺失：Media references were not archived with this snapshot.
+Reply and quoted-post context may be partial; only the returned post record was saved.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="false" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-28T02:52:05.000Z">2026-09-27 22:52</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2104403743630565471" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">今天下午 5 个小时，我用完了 Codex 200$ 一周的 Token
+
+我劝大家一定要去疯狂地消耗 Token。
+
+这说明你在思考，说明你有问题去解决，这已经领先了大部分人
+
+一个平庸的人，就算拥有了无限的 Token也烧不出去</div><a href="/content/clippings/x/daily/2058239737522204672/2026-09-27/#x-post-2104403743630565471">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="/content/clippings/x/posts/2104402096514900168/#x-post-2104402096514900168">引用原帖（已保存）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2104403743630565471<br>保存时间：2026-09-28T15:59:50.987Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Media references were not archived with this snapshot.
+Reply and quoted-post context may be partial; only the returned post record was saved.</p><p>QUOTES: x:post:2104402096514900168 · https://x.com/i/status/2104402096514900168</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="true" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-28T02:45:32.000Z">2026-09-27 22:45</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2104402096514900168" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">最近我的投研系统 Harness在满负荷运作，每天帮我完成大概 85% 的 研究工作，挖掘信号因子。而我可以专注于技术和思考
+
+比如上周四我听他的买了 $METD 。这个帖子我把投研 harness&#43;Model的架构图完整的分享出来，给大家提供一些思路
+
+如果有不懂的，可以评论区问我。我可以单独出一期，讲讲每个模块我都有什么样的思考
+
+我认为AGI 其实已经来了，只是全民意识到需要些时间，顺路分享一些我最近的观察
+
+1. Opus5.5 我实际使用下来，和 GPT-6 Ultra 水平基本一样，而且额度多到用不完
+
+2. 周末跟朋友聊下来，我们认为 pre-training recipe 在业内不是什么秘密，各大厂商都会追上来，看好开源模型
+
+3. 想象一下，如果在 2027 年的时候，我们拥有了更多的算力，Frontier Labs 可能会做出更多的突破，让更多人用上
+
+4. 情绪和基本面，其实大部分时候都是在背离，只是有的时候背离得特别离谱，我们只需要抓住这些时刻</div><a href="/content/clippings/x/posts/2104402096514900168/#x-post-2104402096514900168">保存的原文 · 长文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 上下文状态：UNKNOWN</p>
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 2104402096514900168<br>保存时间：2026-09-28T15:59:50.987Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：UNKNOWN<br>已知缺失：Media references were not archived with this snapshot.
+Reply and quoted-post context may be partial; only the returned post record was saved.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="true" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-21T16:56:00.000Z">2026-09-21 12:56</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2102079407179575794" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">我非常推荐大家收藏斯坦福今年秋季这门课：MS&amp;E 319：Efficient Generative Language Models（高效生成式语言模型）
+
+这门课会从预训练一路讲到推理和后训练。（我最喜欢的部分）课程资料和录屏后面会同步上传
+
+我很喜欢它的出发点：模型越做越大，但预算总有上限。给定一个具体想实现的效果，手里的算力又有限，训练目标怎么定、模型架构怎么选、推理怎么跑，才能把钱花得更值，避免所有任务都用最贵的模型 GPT6
+
+“再买点 GPU”当然是一种办法，也是现在市场的主流
+
+有关于 MoE、attention与 KV Cache 压缩、量化、投机解码，以及 LoRA、RLHF、DPO、蒸馏，都会涉及。这门课把平时分散看到的这些技术，放回同一个问题里理解：它到底省了哪部分计算、显存或时间，又付出了什么代价？
+
+比如，同样是想降低模型的使用成本，有的办法让每次只调用一部分参数，有的减少需要存储和搬运的数据，有的加快生成答案。先把各自解决的问题分清楚，才知道手里的任务适合用哪一种，哪些方法还能配合起来用。
+我自己看 AI 公司，也很关心这一层：同样一笔预算，能不能训练出更好的模型，或者服务更多用户。把这些技术背后的取舍弄懂，再看模型发布和成本变化，判断会具体很多。
+
+这门课有一定门槛，感兴趣的一定要关注</div><a href="/content/clippings/x/posts/2102079407179575794/#x-post-2102079407179575794">保存的原文 · 长文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 上下文状态：PARTIAL, UNKNOWN</p>
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 2102079407179575794<br>保存时间：2026-09-26T01:10:15.812Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL, UNKNOWN<br>已知缺失：Media references were not archived with this snapshot.
+Reply and quoted-post context may be partial; only the returned post record was saved.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="true" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-13T04:37:53.000Z">2026-09-13 00:37</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2098994551402987630" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">过去一年我的 P&amp;L 超过了 150% https://t.co/urE6Bthoxc
+
+今天起床到现在，饭没吃，水没喝，用 GPT-6 Ultra 跑掉了约 7.1 亿 token，消耗了一份 $200 Codex Plan 一周额度的 90%。过去的12 小时，烧掉约 7.1 亿 token。我正在把自己的投研大脑快马加鞭蒸馏出来
+
+目前在开发的，一共五个功能：
+
+1/ 一个被“蒸馏”出来的芒格君
+把我的投研思考方式做成可以直接对话的大脑：一家公司的生意怎么理解，哪些变化值得追，什么证据会让我改变判断。
+
+你可以拿着自己的问题，跟这个大脑一层层聊下去。投研大脑 as a Service，这是我最想做好的部分
+
+2/ 把一只股票过去一年的财报和电话会议，变成可以随时追问的资料库
+先从我们深度追踪的股票做起，接入第一步的大脑，带着大家读细节。比如：“管理层这次的说法，和上个季度有什么不同？” “之前承诺的增长，到底兑现了多少？”我希望这些问题，都能回到具体材料里讲清楚
+
+3/ 投行研报的收集，以及真正能聊明白的深度对话。
+对深度追踪的公司，把研报收集、整理起来，让大家可以继续问：这家投行为什么看多？它最关键的假设是什么？另一家为什么不认同？读完之后，你应该能理解它的判断，也能知道自己是否同意
+
+4/ 把不同渠道的观点和华尔街预期放在一起看。
+整理我平时从各类渠道收集的观点、机构分析师的分析，以及华尔街目标价共识、新增目标价和调整。我尤其想让大家看懂：同一家公司，大家到底分歧在哪里？这次上调目标价，背后的理由变了什么？
+
+5/ 把我的投研 Agent Team，也开放给大家
+Agent Team as a Service，全部由 GPT-6 / Fable 5.1 驱动。这支团队每天挖出的关键基本面信号、公司变化和新闻解读，我会放到平台上。让大家持续追踪自己关心的公司，理解新消息会怎样影响原来的投资逻辑
+
+做到这里，我很想听听大家的真实需求：
+
+你研究股票时，最费时间、最头疼、最想交给 AI 帮你完成的一步，到底是什么？可以直接在评论区讲具体场景。你平时怎么做、卡在哪里、希望它帮你做到什么程度，越具体越好
+
+还是老规矩，点赞、收藏这个帖子，到时候拿着记录来，我送大家GPT-6 和 Fable 5.1 Token 来使用
+
+如果你提的功能被我们采纳，并且真正开发上线，我会邀请你进入核心用户体验群，给你一对一 VIP 服务
+
+平台还在做，大家现在提的需求，有机会直接决定它接下来长什么样。评论区欢迎分享，我会认真看
+
+还是那句话，我不是一个短线交易的高手，因此短线数据点位依然给不了。这个平台不是给大家一个买入点位的，更多的是为了看懂。谢谢理解</div><a href="/content/clippings/x/posts/2098994551402987630/#x-post-2098994551402987630">保存的原文 · 长文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/Kay2289123/status/2086855246131941823?s=20">相关来源（查看来源）</a><a href="/content/clippings/x/posts/2098671363934593223/#x-post-2098671363934593223">引用原帖（已保存）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2098994551402987630<br>保存时间：2026-09-13T14:16:20.254Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved</p><p>LINKS_TO: https://x.com/Kay2289123/status/2086855246131941823?s=20 · https://x.com/Kay2289123/status/2086855246131941823?s=20</p><p>QUOTES: x:post:2098671363934593223 · https://x.com/i/status/2098671363934593223</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="true" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-13T02:54:16.000Z">2026-09-12 22:54</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2098968475792499163" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">最近有很多关于 RSI（Recursive Self-Improvement，递归自我改进）的讨论，也让大家开始担心，AI 会不会不断升级自己，最后超出人的控制
+
+我周末集中看了一批 RSI 2026 年的论文和公开项目，想把几个问题讲清楚：现在到底发展到了哪一步，业界 popular 的讨论是什么，以及我们普通人能怎么用。最后我会给大家一个可以用来直接给 AI 实现初步 RSI 的 Prompt
+
+这次按方向来聊，论文和项目放在对应段落，大家可以收藏下来慢慢看
+
+1/ 先分清楚，大家说的“自我改进”，有三件不同的事
+第一件，AI 根据反馈，把当前任务再做一遍。
+
+第二件，它把有效经验、工具或工作流程留下来，下一次任务也能用上。
+
+第三件，它进一步改进“下一轮怎么学习、怎么做实验、怎么选方案”这套方法。
+
+越往后，接手的研发决策越多。9 月 10 日发表的的《The Last AI Built by Humans》把这些自主范围拆成了执行、策略、经验获取、环境适应和元改进几层，适合当阅读地图 https://t.co/aOWmBcFure
+
+2/ 今年一条很密集方向研究线，是让 AI 改自己的 Harness
+
+Harness 可以理解为模型周围那套实际干活的系统：读哪些文件、给模型看什么上下文、怎么调用工具、失败后怎么恢复、什么时候算完成。
+
+今年 3 月的 Meta-Harness，6 月首发、8 月更新的 Self-Harness，以及 7 月底的 DarwinX （Salesforce），都在研究怎样把这套系统交给自动实验来优化
+
+3/ 另一条已经出现企业内部应用的路线，是把人的纠错变成持久经验
+
+今年 1 月的 MemRL，把经验和“这条经验实际有多管用”一起保存。下次先找相关经验，再根据使用效果挑选，而不只是找文字最相似的记录
+https://t.co/kJ8zPuFy4G
+
+到了 9 月 2 日，Meta 公开了一个更贴近日常工作的内部案例：专家纠正 Agent 后，系统会判断错误来自知识缺口还是处理流程，把纠错转成文件修改，重放原来的问题、跑回归测试，再交专家审核。
+
+通过后，这次失败还会进入以后的测试集。这是 Meta 在特定专业领域的内部实践
+https://t.co/YRgKSDa7So
+
+对我们普通用户来说，这一条就很有用了, 人的一次纠错，开始有机会变成后续任务都能使用的改进
+
+回到关键问题，我觉得今年这些工作的共同价值，是让我们开始认真维护一个会积累经验的系统。所以我们现在可以怎么用？
+
+篇幅有限，我把一个我们都能用上的效仿 RSI 的基础 prompt 放在评论区里，
+
+我最近也在观察，每次任务留下什么，每次纠错改到哪里，下一次能否因此做得更好，这些都已经可以在自己的工作里动手验证了。
+
+为了防杠，我得说明一下：这三个方向只是工程向的，硅谷大佬们担心的更多是研究向的内容。
+
+这些内容比较硬核，研究向 RSI我会在后面帖子里单独去聊</div><a href="/content/clippings/x/posts/2098968475792499163/#x-post-2098968475792499163">保存的原文 · 长文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="/content/clippings/x/posts/2098958020915188124/#x-post-2098958020915188124">引用原帖（已保存）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2098968475792499163<br>保存时间：2026-09-13T14:16:20.254Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved</p><p>QUOTES: x:post:2098958020915188124 · https://x.com/i/status/2098958020915188124</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="true" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-13T02:12:43.000Z">2026-09-12 22:12</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2098958020915188124" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">这个周末我认为最重要的一件事情：
+OpenAI、Anthropic、xAI在同一个周末集体来了表态，一致同意并呼吁放慢 AI 的发展速度……
+
+Dario 已经在原文里点名：AI 正在越来越多地参与研发下一代 AI。他担心这种加速，会超过人类理解和控制模型的速度
+
+OpenAI 甚至说：“如果真到了那一步，为了拯救人类，我们愿意把自己的 GPU 都熔掉。”
+
+通常这类 frontier lab 的管理层会比我们提前看到新一代模型的能力。显然，AI 已经突破了某个临界点，而且事情严重到把所有人都吓住了
+
+这个或许是我们过度解读了。但有一点是肯定的，无论如何呼吁，整个世界这么多 lab 一定不会完全步调统一、暂缓步伐</div><a href="/content/clippings/x/posts/2098958020915188124/#x-post-2098958020915188124">保存的原文 · 长文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2098773920774074715">引用原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2098958020915188124<br>保存时间：2026-09-13T14:16:20.254Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved</p><p>QUOTES: x:post:2098773920774074715 · https://x.com/i/status/2098773920774074715</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="true" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-12T07:13:39.000Z">2026-09-12 03:13</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2098671363934593223" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">我始终觉得，人人都值得拥有 AI 平权、知识平权。这个时代已经到来了，关键是很多人还没有意识到，我建议大家今天就开始用 AI 大胆地犯错
+
+1/ 为什么我对这个时代既感到焦虑，又欣喜若狂？高强度每天使用 10 亿 GPT-6、Fable 5.1 Token之后，这种感受越来越强烈。一个人的学历、专业和过去接触过什么，曾经很大程度上决定了ta能理解什么、参与什么。
+
+2/ 过去没学会的，可以重新学。这难道还不是最好的时代吗？
+以前觉得“这是专业人士才能做的事”，现在可以亲手试。你甚至不必先相信自己很聪明，只需要对一个问题有兴趣，愿意追问，愿意动手验证。
+
+3/ 当然，我也焦虑，我有时会想，这是最混乱的时代
+自己花了很多年积累的能力，还有多少会继续值钱？当工具越来越强，工作会怎么变，我和身边的人又该往哪里走？参与开发和使用 AI，并不会让我免于这些担心。因为离得近，反而更难把这些问题放到一边
+
+4/ 模型的发展，至少让我变得非常矛盾和混乱
+刚刚为模型完成了一件复杂的事而兴奋，紧接着就想到，这原本可能是某个人赖以谋生的工作
+
+所以，我希望大家能尽早接触它、理解它，有机会为自己的下一步做准备。我做这个账号，分享一线体验，把芯片、产业链和公司财报尽量讲明白，也有这层心愿
+
+投研平权在我这里，有一个很具体的愿望：你读完我的文章，能够自己回去看材料，知道该问什么，甚至能有依据地指出我哪里想错了，知道问什么，是最重要的一步</div><a href="/content/clippings/x/posts/2098671363934593223/#x-post-2098671363934593223">保存的原文 · 长文</a>
+    
+    <footer>
+      
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 2098671363934593223<br>保存时间：2026-09-13T14:16:20.254Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：See source observations for media and context status.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="true" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>Kay</strong></a> <span class="x-muted">@kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-08T19:24:03.000Z">2026-09-08 15:24</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2097405625341026618" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">这个时代很残忍，目前我在硅谷一家一线厂任职 team lead。今天被管理层拉到了一个裁员决定会，说整个 org 要裁员10-15%。让我详细论证我组里的每一个 headcount 在 AI 的加持下都能为公司创造价值
+
+我有两点 takeaway，给大家敲个警钟
+
+1. 资本并没有把我们每一个员工当做一个真正的人。不管你是 中层还是一线干活的。在他们眼里，这只是人力，是电池，是耗材，不要太把自己当回事了
+
+2. 当前大多数人还没被裁员的原因，就是人比 AI 便宜。但已经开始行动了
+
+我需要在这周五之前提交报告，没有 qualified 的可能会被直接裁掉
+
+AGI已经到来，它目前还仅仅收敛在一小部分拥有顶尖资源的人手里，还太贵了。
+
+大家不妨问自己一个问题：当 AI 比你便宜的时候，你是否能依旧论证你的独特价值？
+
+如果可以，那才是过关了</div><a href="/content/clippings/x/posts/2097405625341026618/#x-post-2097405625341026618">保存的原文 · 长文</a>
+    
+    <footer>
+      
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 2097405625341026618<br>保存时间：2026-09-12T02:47:44.402Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：See source observations for media and context status.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="true" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>Kay</strong></a> <span class="x-muted">@kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-08T02:39:00.000Z">2026-09-07 22:39</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2097152697682280565" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">如果你持有 $NVDA、$MU，或者正在关注三星、海力士，这篇文章，我强烈建议你先收藏，再从头读完。
+
+我是美研芒格君。
+
+之前写那篇“打破内存墙”的文章，我们陆陆续续花了 4 周、50 个小时，在硅谷走访了来自英伟达、美光、英特尔、SNDK 等公司的十余位工程师。想带给你的，是顺着技术变化，找到下一阶段值得研究的生意
+
+这篇，就是沿着那条线继续往下挖。英伟达拿出了 NVHBM，三星和海力士也在推进各自的新架构。过去讨论“怎么打破内存墙”，现在还要追问：墙打破之后，谁能把钱留下？
+
+我把英伟达的公告和技术说明、三星与海力士的路线图、美光的财报放在一起核对，再用 10 张图，把控制器搬家、内存上下堆叠、散热、测试，一直拆到三家厂商的利润账本。
+
+你不用先成为半导体专家。这篇想替你省下的，是在一堆缩写、新闻和财报之间来回拼图的时间。看完以后，你应该能自己分清：哪些变化只是参数更漂亮，哪些变化真的可能影响公司赚多少钱。
+
+正文开始：
+
+8 月 26 日，英伟达公布 NVHBM。名字里带着 HBM，最容易让人误会的地方是：英伟达要自己下场造内存了？
+
+它这次公布的，是一套自己定义控制器与接口、推动多家内存厂商共同供货的方案。DRAM 的制造、堆叠和测试，仍然要靠供应链完成。
+
+开始深入对内存墙的定义，这是一个重要转变真正值得存储股东留意的，是客户$NVDA
+
+看完这篇，你可以带走三件事：
+
+看懂 NVHBM 是一种什么样的技术？ 到底搬了哪块电路，以及它和 zHBM 有什么不同。
+
+分清这件事情带来的 出货增长、市场份额和毛利润，避免把行业热闹当成每家公司都受益
+
+理解 散热、测试和良率，为什么可能成为下一轮客户愿意付钱的能力。
+
+我的判断：HBM 的重要性没有下降，但利润会更取决于厂商实际承担了什么工作，以及能把它做得多好，会存在重新分配
+
+01｜先拆开 HBM：数据究竟怎么送到 GPU？
+
+先记住两个指标。容量，是能放多少数据；带宽，是每秒能搬多少数据。 内存装得更大，并不等于每秒能送得更快。
+
+GPU 负责计算。模型参数、计算过程中的临时数据，需要从内存送进去。数据送得不够快，计算电路就得等，这就是“内存墙”的一部分。
+
+HBM 的办法，是把多层很薄的 DRAM 芯片叠起来，用密集的通路传数据。DRAM 就是计算时使用的工作内存。
+
+从上往下拆，一摞 HBM 主要能看到：
+
+DRAM 层：保存数据。
+
+底座芯片（base die）：承接连接、测试和相应的逻辑功能。
+
+封装连接结构：把这一摞内存接到计算芯片。
+
+图 1｜HBM 在 GPU 旁边。中介层位于两者下方，承担横向连接；它不是竖着夹在两块芯片之间的一堵墙。图中层数和间距仅为示意。
+
+还差两块电路。内存控制器安排什么时候读写、怎样调度；PHY 接口电路负责真正收发电信号。
+
+标准 HBM 系统中，计算芯片一侧有控制器和接口，内存一侧也需要相应接口。传输要求越高，接口的面积、功耗和信号质量就越需要精打细算。
+
+计算芯片的面积很贵。分给内存管理和连接的面积增加，就会与计算、缓存等功能争夺空间。
+
+于是工程师开始问：能不能把一部分功能，搬到 HBM 的底座里？
+
+02｜NVHBM：控制器搬家，设计分工也跟着变
+
+英伟达的做法，是把自己设计的内存控制器放进 HBM 底座，并重新优化两边的连接方式。
+
+这里搬的是电路功能。内存仍然可以放在计算芯片旁边
+
+图 2｜标准 HBM 与 NVHBM 的简化对比。绿色区域突出控制器的位置变化；计算芯片仍需通信电路。此图不代表完整的 NVIDIA 电路布局。
+
+对比标准 HBM4E，英伟达披露的方案指标包括：
+
+每摞内存带宽，最高增加 30%。
+
+HBM 功耗，最高降低 15%。
+
+为主计算芯片释放更多可用于计算的面积。
+
+NVIDIA 技术说明
+
+美光在 2025 年 9 月的财报演示中也表达过预期：带定制底座的 HBM4E，毛利率有望高于标准产品。这是当时的产品预期，不是已经披露的 NVHBM 合同利润。美光 FY25 Q4
+
+现在，平台提供共同方案，客户有机会少做一部分重复设计，供应商之间也更容易比较。
+
+图纸趋同之后，谁能持续交出合格产品，谁才有继续谈价的底气。
+
+“共同方案”不会让三家的制造能力瞬间一样。良率，也就是最终合格产品的比例，仍然可能差很多；功耗、可靠性、交付和成本也不会自动拉平。
+
+所以我的判断是：独有设计带来的溢价可能承压，制造能力的重要性会上升。 这还不能推导出 HBM 立即变成低利润产品，更不能推导出定制设计收入全部消失。
+
+03｜行业多卖三成，一家公司也可能几乎没多赚
+
+一家内存厂的 HBM 毛利润，可以先拆成一条简单的关系：
+
+行业出货量 × 厂商份额 × 每摞毛利润。
+
+这是理解竞争的入口。NVHBM 可能影响份额，也可能影响单位收益；
+
+我们沿用一笔教学假设，数字不对应任何真实公司：
+
+行业从 5,000 万摞增至 6,500 万摞，增长 30%。
+
+每摞毛利润从 400 美元降至 360 美元，减少 10%。
+
+A、B、C 的数量份额，从 55%／25%／20%变成 47%／30%／23%。
+
+这个数字有点复杂，但核心结论就一句：同一份行业增长，可能毛利润和份额会因为 NVHBM 的到来发生格局上的改变。可以落到很不一样的公司账本上。
+
+现实里的最新参照，是 Counterpoint 9 月 1 日公布的二季度 HBM 收入份额：海力士 50%、三星 33%、美光 18%。数字四舍五入后相加为 101%。Counterpoint 份额
+
+这里有两个不能跳过的区别：这是收入份额，不是摞数份额；这是二季度数据，早于 8 月 26 日 NVHBM 公布，不能拿它证明 NVHBM 已经造成份额变化。
+
+对海力士，要看领先优势能否守住；对三星和美光，要看能否通过验证、拿到新增订单。追赶者有机会，不等于追赶者一定赢。
+
+04｜云厂商自己做芯片，英伟达仍可能有生意
+
+公告里一个很有意思的细节是：首个 NVHBM 合作者，是亚马逊的 Annapurna Labs，也就是参与开发 Trainium 的团队。NVIDIA 公告
+
+一家云公司自己设计计算芯片，并不意味着它要把内存、互连、服务器和机柜也全部重做一遍。
+
+英伟达的 NVLink Fusion，就是让客户自研芯片接入其互连和机柜级系统的一套合作体系。NVHBM 又把合作范围延伸到了内存。
+
+图 4｜自研计算芯片、内存与互连、机柜是不同层次的工作。客户可以选择合作，也可以自己做；图中为通用系统概念，不对应某款 Trainium 服务器。
+
+亚马逊此前已宣布从 Trainium4 开始支持 NVLink Fusion。这与“Trainium4 已经批量采用 NVHBM”是两件事，不能混读
+
+你品一下这个商业关系：客户即使自己设计计算芯片，周围的连接和系统能力，仍然可能来自英伟达。
+
+对内存厂来说，客户也会有不同选择：
+
+采用平台共同方案：普通 HBM
+
+进行更深的独立定制：NVHBM，或者其他类似产品
+
+05｜再往前一步：内存从旁边，叠到计算芯片上方
+
+NVHBM 调整的是控制器与接口分工。另一条更远的路线，直接改变内存和计算芯片的位置。
+
+三星在 FMS 2026 展示的 zHBM，把内存从处理器旁边搬到上方。技术资料也把这一大类方向称为 Memory-on-Logic，直译就是“内存在上，逻辑芯片在下”。三星 zHBM
+
+图 5｜并排布局的数据要经过横向连接；上下布局探索更短、更密的垂直通路。右图是架构方向，不是 NVHBM 的另一种写法，也不是已经确认量产的产品。
+
+这个变化不只是“多叠几层”。传统 HBM 本来就有很多层内存；新方向进一步把内存与负责计算的逻辑芯片叠到一起。
+
+距离缩短，有机会降低传输开销、提高连接密度。但是否真的更划算，还得把散热、供电、测试和报废一起算。
+
+三星特别强调，自己同时具备内存、晶圆代工和先进封装能力。这让它有机会承接更多环节，却不保证每个环节都能赚钱。
+
+06｜混合铜键合：两块芯片怎样贴得更紧？
+
+三星在这块儿有自己独到的知识积累。提到两项支撑技术：混合铜键合，以及把多个晶圆结合成整体的多晶圆键合。三星 zHBM
+
+先看连接处。传统微凸点连接，要通过很小的焊料连接点把芯片接起来，层与层之间会留出相应的高度。
+
+混合键合则让铜点对铜点、绝缘层对绝缘层精密对准并结合。两种材料一起完成结合，所以叫“混合”。NIST 混合键合
+
+图 6｜连接界面的放大概念图。右侧铜点嵌在平整的绝缘层内，连接处不用传统焊球；并不意味着整颗封装的所有位置都不再需要焊料。
+
+这听起来像“贴得紧一点”，实际很难。表面不够平、残留一粒污染物、位置对不准，都可能影响连接质量。
+
+也正因为如此，能做出展示样品，和能每天稳定大量生产，是两道不同的门槛。
+
+07｜三星和海力士，都在推进这个方向
+
+三星的 zHBM 是一个明确的上下集成方向。9 月 1 日 SEMICON Taiwan 前期论坛的相关报道，又补充了时间线。
+
+按 TrendForce 汇总的报道，三星 HBM5 量产预期约在 2028 年；zHBM 的推出则被放在 2029 年以后。这些是路线图与报道口径，不能写成已兑现的交付承诺。三星路线图报道
+
+SK 海力士在 4 月的台积电技术研讨会上，展示了标准 HBM、定制 HBM、HBF，以及 3D 堆叠 DRAM on Logic 等方向。
+
+它希望从“供应商”走向参与架构设计的“创作者”。这里的 HBF 是高带宽闪存方向，之前我们也聊到过。海力士技术研讨会
+
+图 7｜不同公司的节点与应用方向并列展示，不代表同一产品依次升级。HBM5 在不同厂商和研究机构的时间表里也可能不同。
+
+按 Hot Chips 2026 的现场报道，海力士认为混合键合赶不上 HBM4E，最早要看 HBM5，并展示了 20 层的混合键合样品。Counterpoint 对大规模采用的估计在 2029—2030 年。Hot Chips 报道
+
+08｜NVHBM 改了规则，三家内存厂和台积电怎么赚钱？
+
+英伟达对 NVHBM 的安排，有一句话特别值得存储股东留意：建立一套共同实现方案，由多家内存厂商供货，减少客户适配和验证不同供应商的工作。NVIDIA 公告
+
+这意味着，客户有机会获得更多采购选择。我的判断是，三家内存厂仍然能靠制造、堆叠和交付赚钱，但独有设计能留下多少溢价、客户更容易换供应商之后还能赚多少，需要重新算。
+
+三星：机会在于进入更多采购名单
+
+假如过去客户已经围绕某家供应商做了大量适配，即使三星愿意供货，客户也未必愿意重新投入开发和验证。
+
+NVHBM 的共同方案，有机会减少其中一部分重复工作。对希望争取更多订单的厂商，这是一个值得重视的入口。
+
+但共同方案只能减少适配负担，不能替三星解决良率、功耗和可靠性问题。客户更容易比较供应商，也就更容易比较谁做得不够好
+
+所以，对三星我会看：有没有通过具体客户的验证，拿到了多少采购份额，以及这些订单能不能在合格率和成本达标的情况下交出去
+
+SK 海力士：要证明客户有得选，仍然愿意选自己
+
+海力士是现有 HBM 市场的领先者。Counterpoint 的二季度收入份额仍将它列在第一位。Counterpoint 数据
+
+NVHBM 对领先者提出的问题是：如果客户适配第二家、第三家供应商变得更容易，原有订单还能守住多少？
+
+这不意味着海力士的经验失去价值。相同的方案，交给不同工厂，合格率、交付稳定性和成本仍然可能不同
+
+如果海力士能让客户少遇到坏件、少耽误整机交付，即使客户拥有其他选择，也可能继续优先采购它的产品。
+
+它要守住的，是“用了以后更省心、更划算”的优势，以及这种优势能支撑的价格。
+
+美光：多拿订单的机会，要和每摞少赚的压力一起算
+
+对美光来说，共同方案同样可能减少进入新客户体系的适配工作。但这件事有两面。
+
+一面是，新客户采用 NVHBM 后，美光有机会争取更多订单；另一面是，多家供应商提供可比较的产品，客户谈价时也会更有底气。
+
+所以，美光的受益逻辑要算的是：新增销量带来的毛利润，能否超过价格压力和扩产投入带来的成本
+
+如果多卖了不少，但每摞赚得更少，还需要投入更多设备和研发，收入增长就未必能等比例变成股东回报。
+
+台积电：关键是 NVHBM 的底座由谁制造
+
+NVHBM 把英伟达设计的内存控制器放进 HBM 底座。这里必须分清：谁设计电路，和谁把电路制造出来，是两份工作。NVIDIA 技术说明
+
+如果具体产品采用台积电的逻辑工艺制造底座，台积电就可能承接相应的晶圆代工业务。美光此前已披露标准和定制 HBM4E 底座与台积电合作，但这不能直接当作全部 NVHBM 订单的归属证明。美光 FY25 Q4
+
+对台积电，要继续看具体产品采用什么工艺、底座面积多大、出货多少，以及最终承担哪些制造环节。
+
+09｜接下来，哪些信号会真正改变我的判断？
+
+NVHBM 已经把方向摆出来了：英伟达进一步参与内存方案的定义，希望让客户更容易采用多家供应商的产品。
+
+接下来，我会沿着这条线，追到实际订单和利润。
+
+第一，多家供货，到底有没有落地？
+
+我要看哪家内存厂通过了具体客户的验证，什么时候开始量产交付，以及客户有没有真的把订单分给第二家、第三家。
+
+如果共同方案推出了，实际供货仍集中在少数厂商手里，就说明制造和验证的门槛依然很高。原有供应商的优势，也可能比预想中更牢。
+
+第二，客户更容易换供应商之后，价格怎么谈？
+
+如果厂商为了争取订单，需要给出更低的价格，就要看良率提升、成本下降和销量增长，能不能补回来。
+
+同样是多卖一摞 HBM，留下多少毛利润，比“多卖了”本身更重要。
+
+第三，NVHBM 有没有带来新的客户和需求？
+
+我要看自研 AI 芯片的客户，是否因为接入更方便，真正采用了 NVHBM，并扩大部署。
+
+这里要分清两种增长：一种是客户原本就要买这些内存，只是换了方案或供应商；另一种是新方案让更多项目能够落地，带来了额外采购。
+
+前一种主要改变订单分配，后一种才可能扩大整体市场。两者对三家内存厂的意义不同。
+
+第四，为了拿到这些订单，厂商先付出了多少？
+
+开发、验证、设备和产能都要投入。订单增长得快，如果前期花钱更多、量产爬坡更慢，现金回报也可能晚于收入增长。
+
+所以我会把新增毛利润和新增投入放在一起看。客户愿意采购，只是这门生意的开始；能否收回投入，才决定它值不值得做。
+
+第五，可靠性优势，能不能变成客户愿意付的钱？
+
+如果一家厂商能让客户少遇到故障、减少返工、按时完成整机交付，这种能力就有价值。
+
+但价值最终以什么形式兑现，还要看合同：是更高的售价、更稳定的采购份额，还是更长的合作关系？供应商又承担了多少保修和赔偿责任？
+
+内存是一堵墙，大家都要打破它，英伟达出手了
+
+资料与延伸阅读
+
+NVIDIA 公告：2026-08-26，NVHBM、共同供货方案与 Annapurna 合作。
+
+NVIDIA 技术说明：控制器、接口与性能指标口径。
+
+Counterpoint 份额：2026-09-01，二季度 HBM 收入份额。
+
+三星 zHBM：FMS 2026 架构与键合技术。
+
+三星路线图报道：2026-09-01，时间节点为媒体汇总。
+
+海力士技术研讨会：2026 年 4 月，定制与端侧 DRAM on Logic 方向。
+
+Hot Chips 报道：2026-08-24，海力士发言与研究机构时间预期。
+
+海力士 iHBM：2026-05-26，封装散热方案，30% 为公司披露口径。
+
+海力士 HBM4E：2026-06-18，12 层产品送样。
+
+NIST 混合键合：2026-01-29，铜与绝缘层结合及量测。
+
+美光 FY25 Q4：2025-09-23，第 13 页，定制底座毛利预期与合作。
+
+美光 FY26 Q3：2026-06-24，产品进展与部门财务数据。
+
+设备资料：Besi · KLA · Advantest。用于说明产品能力，不作为本次新架构订单的证据。
+</div><a href="/content/clippings/x/posts/2097152697682280565/#x-post-2097152697682280565">保存的原文 · 长文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 媒体状态：UNKNOWN, NOT_ARCHIVED</p>
+      <div class="x-related"><a href="/content/clippings/x/posts/2086855246131941823/#x-post-2086855246131941823">引用原帖（已保存）</a><a href="/content/clippings/x/posts/2077279581497860514/#x-post-2077279581497860514">引用原帖（已保存）</a><a href="https://x.com/i/status/2092723685194973635">引用原帖（查看来源）</a><a href="https://x.com/i/article/2097138265916899328">相关来源（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2097152697682280565<br>保存时间：2026-09-12T02:47:44.320Z<br>正文状态：UNVERIFIED<br>媒体状态：UNKNOWN, NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Imported from a selected PoC sample; coverage is not exhaustive
+PoC verification is not inherited; attach exact-version check evidence
+Images were not archived
+Reused a previously captured PoC body; this import makes no new provider-access or completeness claim
+Images and embedded context are not independently archived</p><p>QUOTES: x:post:2086855246131941823 · https://x.com/i/status/2086855246131941823</p><p>QUOTES: x:post:2077279581497860514 · https://x.com/i/status/2077279581497860514</p><p>QUOTES: x:post:2092723685194973635 · https://x.com/i/status/2092723685194973635</p><p>LINKS_TO: https://x.com/i/article/2097138265916899328 · https://x.com/i/article/2097138265916899328</p></details>
+    </footer>
+  </div>
+</article>
+
+  <nav class="x-pagination" aria-label="帖子分页"> <a href="/x/authors/2058239737522204672/page/2/">下一页</a></nav>
+</div>
+
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

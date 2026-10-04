@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>对话 Amazon AGI 专家：大模型训练的深水区，从算力基建、数据洗练到 AI 自进化的终局</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">对话 Amazon AGI 专家：大模型训练的深水区，从算力基建、数据洗练到 AI 自进化的终局</span>
+      <span data-pagefind-meta="speaker" style="display:none;">课代表立正</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>课代表立正</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-03-04</span>
+    
+
+    <header class="article-header">
+      
+      <h1>对话 Amazon AGI 专家：大模型训练的深水区，从算力基建、数据洗练到 AI 自进化的终局</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/large-language-model/">large-language-model</a>
+      
+        <a class="tag-link" href="/tags/pre-training/">pre-training</a>
+      
+        <a class="tag-link" href="/tags/scaling-law/">scaling-law</a>
+      
+        <a class="tag-link" href="/tags/distributed-training/">distributed-training</a>
+      
+        <span class="tag-pill tag-pill--no-page">information-gain</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">本访谈由 Amazon AGI 高级经理查晟深度拆解大模型预训练的核心技术栈。内容涵盖 Scaling Laws 的实操坑点、科研中“最大化信息增益”的方法论、算力集群在 backward 阶段的电力冲击挑战，以及行业内 Benchmark 泄露与刷分的现状。查晟进一步预测了 AI 将从“答题”转向自主“出题”的自进化阶段，并探讨了智能商品化后对人类职业路径与宏观经济的深远影响。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ke-dai-biao-li-zheng/">课代表立正</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=Uh0F_suae5Q" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-03-04T00:00:00.000Z">2026-03-04</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>11 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E7%9A%84%E7%BB%8F%E9%AA%8C%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%96%B9%E6%B3%95%E8%AE%BA">大模型训练的经验科学与方法论</a></li><li class="outline-h3"><a href="#%E5%AE%9E%E9%AA%8C%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E4%BF%A1%E6%81%AF%E5%A2%9E%E7%9B%8A%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%95%A2%E4%BA%8E%E8%AF%95%E9%94%99">实验设计中的“信息增益”：为什么要敢于试错</a></li><li class="outline-h3"><a href="#%E7%AE%97%E5%8A%9B%E5%9F%BA%E5%BB%BA%E7%9A%84%E6%8C%91%E6%88%98%E5%BD%93%E8%B6%85%E7%AE%97%E7%BA%A7%E9%9C%80%E6%B1%82%E6%92%9E%E4%B8%8A%E4%BA%91%E5%8E%82%E5%95%86%E6%9E%B6%E6%9E%84">算力基建的挑战：当超算级需求撞上云厂商架构</a></li><li class="outline-h3"><a href="#%E5%9B%A2%E9%98%9F%E7%AE%A1%E7%90%86%E4%B8%8E%E4%BA%BA%E6%89%8D%E5%AF%86%E5%BA%A6%E5%A4%A7%E5%8E%82%E7%97%85%E4%B8%8E%E5%B0%8F%E7%B2%BE%E5%B0%96%E5%9B%A2%E9%98%9F">团队管理与人才密度：大厂病与小精尖团队</a></li><li class="outline-h3"><a href="#%E6%95%B0%E6%8D%AE%E6%B4%97%E7%BB%83%E7%9A%84%E8%89%BA%E6%9C%AF%E4%BB%8E%E5%BE%AE%E6%B3%A2%E7%82%89%E7%BE%A4%E7%BB%84%E5%88%B0%E5%90%88%E6%88%90%E6%95%B0%E6%8D%AE">数据洗练的艺术：从“微波炉群组”到合成数据</a></li><li class="outline-h3"><a href="#%E8%AF%84%E4%BB%B7%E4%BD%93%E7%B3%BB%E7%9A%84%E9%99%B7%E9%98%B1benchmark-%E6%B3%84%E9%9C%B2%E4%B8%8E%E5%88%B7%E5%88%86%E7%9C%9F%E7%9B%B8">评价体系的陷阱：Benchmark 泄露与刷分真相</a></li><li class="outline-h3"><a href="#%E9%A2%84%E8%AE%AD%E7%BB%83%E5%9B%A2%E9%98%9F%E7%9A%84%E6%BF%80%E5%8A%B1%E6%9C%BA%E5%88%B6%E4%BB%A5%E7%AE%97%E5%8A%9B%E6%8D%A2%E7%B2%BE%E5%BA%A6">预训练团队的激励机制：以算力换精度</a></li><li class="outline-h3"><a href="#nvidia-%E7%9A%84%E6%8A%A4%E5%9F%8E%E6%B2%B3%E4%B8%8D%E5%8F%AA%E6%98%AF%E6%98%BE%E5%8D%A1%E6%9B%B4%E6%98%AF%E7%94%9F%E6%80%81%E6%A0%87%E5%87%86">NVIDIA 的护城河：不只是显卡，更是生态标准</a></li><li class="outline-h3"><a href="#%E6%8A%80%E6%9C%AF%E7%9A%84%E4%B8%8B%E4%B8%80%E6%AC%A1%E8%B7%83%E8%BF%81%E4%BB%8E%E7%AD%94%E9%A2%98%E5%88%B0%E8%87%AA%E4%B8%BB%E5%87%BA%E9%A2%98">技术的下一次跃迁：从“答题”到自主“出题”</a></li><li class="outline-h3"><a href="#%E5%AE%8F%E8%A7%82%E8%B6%8B%E5%8A%BF%E4%B8%8E%E8%81%8C%E4%B8%9A%E7%BB%88%E7%BB%93%E5%BD%93%E6%99%BA%E8%83%BD%E6%88%90%E4%B8%BA%E5%A4%A7%E5%AE%97%E5%95%86%E5%93%81">宏观趋势与职业终结：当智能成为大宗商品</a></li><li class="outline-h3"><a href="#%E7%89%A9%E7%90%86%E4%B8%96%E7%95%8C%E7%9A%84%E7%95%8C%E9%99%90%E7%AE%97%E6%B3%95%E5%B7%B2%E5%87%86%E4%BD%86%E4%BC%A0%E6%84%9F%E5%99%A8%E8%BF%98%E8%BF%9C">物理世界的界限：算法已准，但传感器还远</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="大模型训练的经验科学与方法论" data-reading-heading="">大模型训练的经验科学与方法论</h3>
+<p><strong>[课代表]</strong>: 查晟现在是在 <strong>Amazon AGI</strong> 担任 <strong>Senior Manager</strong>。你之前是在 <strong>Alex Smola</strong> 的组做深度学习框架，后来参与了亚马逊第一批大模型的开发，始终偏向 <strong>Pre-training</strong>。你跟<strong>李沐</strong>共事过，也深度参与了亚马逊现有的 Frontier 模型训练。</p>
+<p>现在大家说 DeepSeek 用 1% 的成本就能训出好东西，中国有很多好模型，但亚马逊、微软、Meta 拥有海量资源却似乎很难搞。训练模型到底是怎么回事？为什么看起来又难又不难？</p>
+<p><strong>查晟</strong>: 现在大模型的训练，基本上用 <strong>Next-token Prediction</strong> 的方式去给模型压缩信息。要做好这件事，环节非常多，每个环节都得搞对。</p>
+<p>首先是<strong>实验方法论</strong>。它是一个<strong>经验科学</strong>，基础的东西必须做对。比如训练数据不应该泄露 <strong>Benchmark</strong> 的信息。其次是预训练过程，因为成本很大，大家现在的做法是利用好 <strong>Scaling Laws</strong>。通过在小规模上做实验，预测大规模时的效果，这样能大大节省迭代成本。</p>
+<p><strong>[课代表]</strong>: 理解 Scaling Laws 就是对那个数据量与表现的曲线有好的拟合，从更小的数据量判断变大后的效果，是吗？</p>
+<p><strong>查晟</strong>: 基本上是这个意思。Scaling Laws 是一个经验率，目前并没有理论基础。各家的做法会因为 <strong>Design Space</strong> 特别大而产生分歧。虽然概念简单，但在 Scale up 过程中非常容易踩坑。</p>
+<p>比如模型在某个规模下突然不 Scale 了，掉出了曲线（Fall off scaling laws）。很多实验室都得踩过一遍这个坑，才能知道在小规模实验时，除了 <strong>Loss</strong> 之外还要看哪些变量趋势。这需要很多 <strong>Discipline</strong>（纪律性）。</p>
+<p>另外，过去的 Research 有个不好的趋势是 <strong>Over-generalize</strong>。有人在某个 Setting 下试了一个 Idea 不行，就说这个 Idea 不 Work。其实要提高 <strong>Research Taste</strong>，消化论文时重点不是看结论，而是看实验 Setting 到底适不适合你关心的场景。</p>
+<h3 id="实验设计中的信息增益为什么要敢于试错" data-reading-heading="">实验设计中的“信息增益”：为什么要敢于试错</h3>
+<p><strong>[课代表]</strong>: 你上次提到一个观点：团队要 <strong>Optimize for Information Gain</strong>（优化信息增益）。去做那些高失败率、但能最有效得到信息的东西。为什么这反而更容易成功？</p>
+<p><strong>查晟</strong>: 因为成功率太高或太低的东西，你已经有了很强的 <strong>Prior</strong>（先验知识），这只是在 Confirm 你的直觉，是 <strong>Incremental</strong>（增量式）的。</p>
+<p>如果成功率正好是一半一半，说明你对这个方向了解较少。不管结果是成功还是失败，你都会获取非常有用的信息，试错迭代的速度会快得多。在不熟悉的方向上面挖掘，能很快 Cover 一个更大的空间。</p>
+<h3 id="算力基建的挑战当超算级需求撞上云厂商架构" data-reading-heading="">算力基建的挑战：当超算级需求撞上云厂商架构</h3>
+<p><strong>[课代表]</strong>: 这种规模的训练需要哪些团队配合？</p>
+<p><strong>查晟</strong>: 首先 <strong>Infra（基础设施）</strong> 团队得靠谱。规模大了会有意想不到的 Bug。比如我们现在的 <strong>Synchronous Optimization</strong>，在 <strong>Backward</strong>（反向传播）时大量计算同时发生，所有 GPU 同时开始算梯度，会导致 <strong>Compute Surge</strong>。</p>
+<p>这时候所有 GPU 同时从数据中心抽电。如果 <strong>Data Center Design</strong> 的 <strong>Buffer</strong> 不够大，电量不足，Node 就会突然 Crash。甚至 GPU 在 Peak 阶段抽的电会超过它标定的功耗。</p>
+<p>此外，规模上去后，GPU 会坏，Memory Bank 会出问题，还会有 <strong>Silent Data Corruption</strong>（静默数据损坏），没有报错但给了错误的数字。这都对 Compute 质量提出了极高要求。</p>
+<p><strong>[课代表]</strong>: 搞数据中心不是亚马逊的强项吗？毕竟有 <strong>AWS</strong> 多年的积累。</p>
+<p><strong>查晟</strong>: 云厂商也有学习过程。云服务倾向于规模化零售计算，而大模型训练的性质更接近<strong>超算</strong>，这是非常独特的 <strong>Workload</strong> 场景。</p>
+<p>在分布式训练中，为了让 GPU 保持 Busy，要尽量减少访存。常用方式是<strong>算子融合（Operator Fusion）</strong>。比如算完矩阵乘法（Matrix Multiplication）后直接接一个激活函数（Activation Function），省去中间写回再读出的过程。做这件事的人需要既懂模型，又懂硬件和网络，这样的人非常少。</p>
+<h3 id="团队管理与人才密度大厂病与小精尖团队" data-reading-heading="">团队管理与人才密度：大厂病与小精尖团队</h3>
+<p><strong>[课代表]</strong>: 听说像 DeepSeek 这种公司，模型和数据团队合作很紧密。传统大厂如果不解决这些业务问题，很难凑齐这样的人？</p>
+<p><strong>查晟</strong>: 大模型要出来，所有方面都必须做对。大厂的问题是东西分给不同的 Director，每个人都有自己的团队和小文化。如果 <strong>Talent Density</strong>（人才密度）不够，就没法把一个重要方向完全做对。</p>
+<p>小而精的团队没有交流的 <strong>Overhead</strong>，也没有 <strong>Scope Politics</strong>。哪怕大家都是好意，但人才密度不够时，是没法避免互相拆台或拖后腿的。更可怕的是 <strong>Google</strong> 模式，他们团队大但文化非常 <strong>Technical</strong>，人才密度够，所以不但 Catch up 快，迭代也极快。</p>
+<h3 id="数据洗练的艺术从微波炉群组到合成数据" data-reading-heading="">数据洗练的艺术：从“微波炉群组”到合成数据</h3>
+<p><strong>[课代表]</strong>: 数据这一块需要什么样的人？</p>
+<p><strong>查晟</strong>: 需要好的常识和 <strong>Taste</strong>。比如 <strong>AI2</strong> 讲过一个例子，Reddit 上有个 <strong>Microwave Gang</strong> 的版块，里面全是模拟微波炉声音的文本（MMM...ding!）。这种文本跟其他 Domain 完全不同，会导致 <strong>Loss 爆炸</strong>。</p>
+<p>网上还有很多为了 <strong>SEO</strong> 存在的垃圾文本，这些都得过滤掉。对于 <strong>Trillion</strong> 级别的文本，虽然没法人工看，但搜索技术已经很成熟了，可以用 <strong>Scalable</strong> 的工具去做。</p>
+<p><strong>[课代表]</strong>: 现在很多人用 <strong>Language Model</strong> 去洗数据，甚至用合成数据（Synthetic Data）。这种“左脚踩右脚”有意义吗？</p>
+<p><strong>查晟</strong>: 生成文本比理解文本更难。如果模型生成的不好，但它能识别出不好并过滤掉，那依然能提升数据质量。这就像“猴子打字机”，信息空间已经在那了，找比生成简单，这种 <strong>Asymmetry</strong>（不对称性）是有意义的。</p>
+<p>现在还有 <strong>Self-distillation</strong>（自蒸馏）和利用 <strong>Reward</strong> 信号让模型自我调和的工作，有点像女生给男生设置测试看他能不能“开悟”。</p>
+<h3 id="评价体系的陷阱benchmark-泄露与刷分真相" data-reading-heading="">评价体系的陷阱：Benchmark 泄露与刷分真相</h3>
+<p><strong>[课代表]</strong>: <strong>Evaluation</strong>（评估）似乎是所有环节中最重要的？</p>
+<p><strong>查晟</strong>: 是的。如果你把 Evaluation 搞错，决策就会错。很多人觉得预训练就是为了让模型记住知识，哪怕有 <strong>Leakage</strong>（数据泄露）也没关系。</p>
+<p>但如果数据泄露，优化出来的模型会更偏向于 <strong>Memorize</strong>（记忆）。Benchmark 被 <strong>Overfit</strong>（过拟合）后，就没法指示模型的真实能力，你也不知道 <strong>Compression</strong>（压缩）发生得怎么样。</p>
+<p>现在很多数据厂商会猜测你会测哪些 Benchmark，然后把数据 <strong>Paraphrase</strong>（改写）进去，虽然不是 Exact Match 但有 Leakage。所以每个公司都必须有一份自己的 <strong>Secret Evaluation Benchmark</strong>，永远不能公开。</p>
+<p><strong>[课代表]</strong>: 现在的 Benchmark 还能信吗？</p>
+<p><strong>查晟</strong>: 很多已经成了 <strong>Marketing</strong> 工具。比如 <strong>Humanity's Last Exam</strong>，它数据本身的错误率可能就有 40% 多，如果你刷出 70 分，那肯定说明模型见过错误答案。老师改卷子时发现错得都一样，那肯定是抄了。</p>
+<p>这本质是 <strong>KPI</strong> 衡量与 <strong>Science</strong> 精神的 PK。如果你试图用偷懒的方式、用 Quantifiable 的指标去管理科研团队，反而会损害科研精神。</p>
+<h3 id="预训练团队的激励机制以算力换精度" data-reading-heading="">预训练团队的激励机制：以算力换精度</h3>
+<p><strong>[课代表]</strong>: 你在过去工作中有什么领悟？你是怎么设计团队 <strong>Incentive</strong>（激励）的？</p>
+<p><strong>查晟</strong>: 我们团队秉持做好 Science。在有了干净数据后，我们会利用小规模实验降低成本。每个季度，我们会申请一批大规模算力（比如 10^23 次 FLOPs 以上），进行一次 <strong>Scale up</strong> 的实战演练。</p>
+<p>我们用 <strong>Cost-to-accuracy bar</strong> 来衡量进度：训练到同样的精度，相比上个季度节约了多少算力。</p>
+<p>这种打包衡量的好处是，不同方向（比如理论、优化器、数据）得到的 Gain 周期不同。有些工作（如初始化方法）可能不直接反映出 Gain，但它 <strong>Enable 了 Everything else</strong>。如果拆开考核，就很难公平。</p>
+<h3 id="nvidia-的护城河不只是显卡更是生态标准" data-reading-heading="">NVIDIA 的护城河：不只是显卡，更是生态标准</h3>
+<p><strong>[课代表]</strong>: 你觉得 <strong>NVIDIA</strong> 有明显的竞争对手吗？</p>
+<p><strong>查晟</strong>: 硬件厂家有了硬件只完成了一小部分。中间从框架到 <strong>Compiler</strong>（编译器）再到硬件有很厚的一层。不同厂家为了保护 <strong>Proprietary</strong>（私有）的东西，指令集不开放，导致这一层很难有有效的 <strong>Software Sharing</strong>。</p>
+<p>NVIDIA 非常勤奋，他们在搞 <strong>Tile Language</strong>，弥补 <strong>Triton</strong> 的 Feature gap，还用 <strong>Agent</strong> 去写自己的 Kernel。它的护城河不仅是硬件，更是一个行业标准。你要竞争的是一个标准，第 2 名到 100 名加起来也挺难搞定。</p>
+<h3 id="技术的下一次跃迁从答题到自主出题" data-reading-heading="">技术的下一次跃迁：从“答题”到自主“出题”</h3>
+<p><strong>[课代表]</strong>: 接下来会有什么样的技术 <strong>Disruption</strong>（颠覆）？</p>
+<p><strong>查晟</strong>: 现在的模型改进瓶颈在人。要 Cover 新领域，需要人找 Intent，在 <strong>Post-training</strong> 找环境和 Reward，再写程序放回模型。</p>
+<p>如果模型能自己找新的 <strong>Environment</strong> 和 <strong>Reward Function</strong>，学习就不再依赖于人。现在模型善于“答题”，但不善于“出题”。如果模型能自动化地出一些有灵性的题目，实现 <strong>Self-improvement</strong>，那进步速度可能再也不会有瓶颈感。</p>
+<p><strong>[课代表]</strong>: 这实现可能性有多大？</p>
+<p><strong>查晟</strong>: 我比较 Conservative，觉得五年之内有 70% 的概率解决。一旦解决，只要给 Context，它马上能学会只跟你相关的 Task。</p>
+<h3 id="宏观趋势与职业终结当智能成为大宗商品" data-reading-heading="">宏观趋势与职业终结：当智能成为大宗商品</h3>
+<p><strong>[课代表]</strong>: 技术变革对人意味着什么？</p>
+<p><strong>查晟</strong>: 24、25 年开始，不仅是 <strong>Entry level</strong> 的工作难找，上面的 Job level 也会变少。这基本否定了工业革命以来定义的传统的 <strong>Career</strong> 路线。Career 本身可能就是个假的东西。</p>
+<p>现在的难题是大家如何继续参与经济活动。美联储调利率看就业率，但如果资金流向 AI 产业，它不是劳动密集型的，资金流向不会反映在就业率上，工具就失灵了。</p>
+<p><strong>[课代表]</strong>: 这是 <strong>Labor</strong> 与 <strong>Capital</strong>（资本）的长期博弈，AI 加剧了这一点。</p>
+<p><strong>查晟</strong>: 是的。即便民众希望有政策确保人的福利，但在国际竞争压力下，大家不得不把资源投向提高生产力的方向。结果就是发了很多电，但电得给 AI 用，不能给人用。</p>
+<h3 id="物理世界的界限算法已准但传感器还远" data-reading-heading="">物理世界的界限：算法已准，但传感器还远</h3>
+<p><strong>[课代表]</strong>: 如果带娃这种事变成了仿生机器人呢？</p>
+<p><strong>查晟</strong>: 我没那么看好机器人应用会那么快。算法可以解决，但 <strong>Sensor</strong>（传感器）和控制不是容易解决的。</p>
+<p>在数字世界盖 1000 亿层的楼很容易，因为那是 <strong>Scalable</strong> 的。但在物理世界，我们对手部神经元这种敏感度的控制还差得远。我们可以合成钻石，但合成不了翡翠或蓝宝石，因为化学物稍复杂一点就不行。人类科技在原子的精确控制上还有一个很大的天花板。</p>
+<p><strong>[课代表]</strong>: 我觉得人类智能相比机器智能其实很小。如果解锁了自进化，人在它面前的智能会非常渺小。</p>
+<p><strong>查晟</strong>: 现在是不确定的时代，大家还是要践行<strong>反脆弱</strong>。现在是 Take risk 的时候，大家应该勇敢去尝试。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/5a4992999f3af87f2f8b073056aa971c6215229ed8f0e399f17487c22f56c657.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/5a4992999f3af87f2f8b073056aa971c6215229ed8f0e399f17487c22f56c657.md" download="对话 Amazon AGI 专家：大模型训练的深水区，从算力基建、数据洗练到 AI 自进化的终局.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=查晟" class="entity-link person-link">查晟</a>, <a href="/search/?q=李沐" class="entity-link person-link">李沐</a>, <a href="/search/?q=Alex Smola" class="entity-link person-link">Alex Smola</a>, <a href="/search/?q=Elon Musk" class="entity-link person-link">Elon Musk</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Amazon" class="entity-link company-link">Amazon</a>, <a href="/search/?q=DeepSeek" class="entity-link company-link">DeepSeek</a>, <a href="/search/?q=NVIDIA" class="entity-link company-link">NVIDIA</a>, <a href="/search/?q=Google" class="entity-link company-link">Google</a>, <a href="/search/?q=AWS" class="entity-link company-link">AWS</a>, <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Humanity&#39;s Last Exam" class="entity-link product-link">Humanity&#39;s Last Exam</a>, <a href="/search/?q=CUDA" class="entity-link product-link">CUDA</a>, <a href="/search/?q=Triton" class="entity-link product-link">Triton</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

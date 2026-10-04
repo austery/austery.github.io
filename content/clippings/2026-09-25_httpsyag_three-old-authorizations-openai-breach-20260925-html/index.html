@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>三条旧授权，两天，走到 OpenAI 内部仓库</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">三条旧授权，两天，走到 OpenAI 内部仓库</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-25</span>
+    
+
+    <header class="article-header">
+      
+      <h1>三条旧授权，两天，走到 OpenAI 内部仓库</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/supply-chain-security/">supply-chain-security</a>
+      
+        <span class="tag-pill tag-pill--no-page">least-privilege</span>
+      
+        <span class="tag-pill tag-pill--no-page">identity-trust</span>
+      
+        <a class="tag-link" href="/tags/ai-security/">ai-security</a>
+      
+        <span class="tag-pill tag-pill--no-page">zero-day-exploit</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">Hacktron团队利用OpenAI论坛图片解析漏洞，结合单点登录信任传递及Codex工具的全局写入权限，在72小时内渗透至核心代码仓库。文章指出，AI仅加速了利用代码生成，真正的风险在于连接器权限配置过宽，强调需最小化自动化工具的凭证权限以限制失陷影响范围。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/three-old-authorizations-openai-breach-20260925.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-09-25T00:00:00.000Z">2026-09-25</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>3 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E6%AF%8F%E4%B8%80%E5%B1%82%E9%83%BD%E4%B8%8D%E6%98%AF%E6%96%B0%E7%9A%84">每一层都不是新的</a></li><li class="outline-h2"><a href="#ai-%E6%94%B9%E5%8F%98%E4%BA%86%E4%BB%80%E4%B9%88%E6%B2%A1%E6%94%B9%E5%8F%98%E4%BB%80%E4%B9%88">AI 改变了什么，没改变什么</a></li><li class="outline-h2"><a href="#connector-%E6%98%AF%E5%A4%B1%E9%99%B7%E5%90%8E%E6%9E%9C%E7%9A%84%E4%B8%8A%E9%99%90">connector 是失陷后果的上限</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>Harsh Jaiswal、Mohan Pedhapati 和 Rahul Maini 组成的安全研究团队叫
+Hacktron，日常业务围绕自动化安全测试展开，技术博客页脚留着商业咨询入口。2026
+年 7 月 23 日，这三名研究者把目光投向 OpenAI 的官方技术社区
+community.openai.com，开始审阅那里的图片上传接口。</p>
+<p>论坛面向公众开放，注册用户发帖可以上传本地图片。社区运行着开源论坛系统
+Discourse。Discourse 接到用户传来的图片文件后，拉起命令行工具
+ImageMagick 做格式转换，由 ImageMagick 调用底层开源 C 语言库 libheif
+解析数据流。一条未经严格内存隔离的处理路径就此铺开：浏览器送上来的外部输入，直通底层
+C 语言解析器的内存空间。</p>
+<p>研究者顺着这条路径步步推进。7 月 24
+日，他们把大语言模型拉进流程，尝试生成导致内存崩溃的利用代码。到了 7 月
+25
+日凌晨，测试人员已经在论坛所在的服务器环境中拿到了远程代码执行能力，掌握了论坛的管理后台权限。</p>
+<p>拿下论坛管理权限通常只意味着一个边缘站点的失守。这处论坛的身份验证没有走独立用户表，直接挂在
+OpenAI
+的单点登录系统上。顺着系统同步的信任会话，研究团队无需目标员工配合，接管了一名内部工程师的
+ChatGPT 和 Codex 账户。这名工程师此前按照日常开发流程，把个人 GitHub
+账号授权绑定给了代码助手 Codex。</p>
+<p>拿到有效会话后，测试团队借助 Codex 在核心代码仓库 openai/openai
+内部创建了一个分支，并提交了一条拉取请求。根据 Hacktron 官方博文
+的自述说明，提交拉取请求只是为了给出确凿的权限证据：</p>
+<blockquote>
+<p>To demonstrate impact without actually accessing any internal
+code</p>
+</blockquote>
+<p>The
+Hacker News 随后核实了这一测试动作的边界：</p>
+<blockquote>
+<p>It did not read any source code, merge or ship anything, or touch
+customer data</p>
+</blockquote>
+<p>测试过程没有读取内部源码，没有合并或发布代码改动，也没有触碰客户数据。依照
+OpenAI 要求，公开披露脱敏隐藏了包含具体代码路径的拉取请求链接。</p>
+<p>7 月 25 日 08:00 至 10:00 UTC，研究团队通过 Bugcrowd
+漏洞披露渠道提交报告，并在协调世界时 15:30 停止测试。提交报告约 14
+小时后，OpenAI 在当晚 22:49 UTC 确认完成技术修复。从 7 月 23
+日审阅接口到 7 月 25 日在内部仓库建分支，整个过程耗时不足 72
+小时。虽然技术渗透发生在 7 月下旬，公开报道直到 9 月中旬才出现：Hacktron
+于 9 月 13 日发文，华尔街日报于 9 月 18
+日凌晨刊出独家报道，多家行业媒体跟进转述。</p>
+<p>这次测试没有造成代码泄露，但在系统的工程拓扑上画出了一条实线：一个外围公开论坛的图片处理接口，跨越层层信任传递，连通了核心代码仓库的写入端点。三条互不关联的既有授权，拼出了一条直通核心资产的完整通道。</p>
+<p>一个外围论坛的图片解析缺陷，顺着全公司共用的统一登录体系，接到员工早已授予编程助手的仓库写入权限，三层既有授权串联成一条通往内部核心仓库的完整通路。</p>
+<h2 id="每一层都不是新的" data-reading-heading="">每一层都不是新的</h2>
+<p>从公网图片输入到内部核心仓库，整条链路上的技术组件与授权设定，全是在生产环境中运行已久的既有配置。</p>
+<p>链路前端是图片解析。诱发异常的源头，在开源 C 库 libheif
+处理图像覆盖层计算的代码缺陷里。早在 2025 年 5 月 5 日，上游就在提交 85e21ad44eba931314337300a2376b8d28f085ae
+中调整了相关计算逻辑，提交说明没有附带任何安全提示。一年后的 2026 年 5
+月 19 日，项目发布 libheif
+v1.22.0，更新日志列出包括 CVE-2026-32882 在内的多处修复。</p>
+<p>上游修补后，补丁在下游 Linux 发行版中落地缓慢。Debian 社区在 2026 年
+8 月 8 日发布安全通报 DSA-6417-1，在稳定版
+trixie 分支修复了 12 个 CVE 漏洞，但在运行于生产服务器的 bookworm
+旧稳定版中至今没有回迁，官方追踪面板长期保持开放。libheif 维护团队直到 8
+月下旬至 9 月初，才连续推出 v1.23.2、v1.23.3 与 v1.23.4
+等版本推进修补。</p>
+<p>Discourse 官方收到测试人员通过 HackerOne
+提交的报告后响应迅速：周六接报，周日回复，周一拿出修复方案。2026 年 7 月
+27 日，代码提交 a07188016987de1613c961277e2e928aaa7c37ec
+引入 Linux 的 Landlock 机制对图片处理子进程实施沙箱隔离。7 月 28
+日，Discourse 发布官方安全通告 GHSA-vhm9-85gw-x335，定级为
+8.8 分高危风险。</p>
+<p>越过图片解析入口，后续推进依靠身份认证系统的信任传递。社区论坛的登录接入集中式单点登录系统。研究团队指出，这种跨域接管并非
+Discourse
+专有缺陷，任何接入这套单点登录体系的外围服务一旦失守，都会产生相同后果。论坛在这场测试中只是一个外围端点。OpenAI
+的核心修复也落在这处：收紧社区论坛登录凭证的作用域，批量撤销受影响的凭证与活动会话。发言人
+Drew Pusateri 接受华尔街日报采访时证实了这项整改，The
+Straits Times 具名引述。</p>
+<p>链路最后一环是开发者给辅助工具配置的连接授权。一名内部工程师此前出于日常工作需要，把个人
+GitHub 账号授权绑定给代码助手
+Codex。该配置符合常规业务需求，操作过程没有任何越权，却最终划定了整场测试能够触达的影响力上限。测试人员接管单点登录凭证后，直接继承了该账户在外部代码平台的全部写入能力。</p>
+<p>输入端是存在已知缺陷的图像解析依赖，中间是宽泛信任外部站点的身份集成架构，顶端是工程师正常配置的代码工具授权。三处设定单独看都是常见工程状态，在特定拓扑中咬合在了一起。下游稳定版系统挂起的修复清单，让外围服务的内存缺陷持续暴露在公网输入面前。</p>
+<h2 id="ai-改变了什么没改变什么" data-reading-heading="">AI 改变了什么，没改变什么</h2>
+<p>9
+月中旬媒体集中报道这起事件，多数标题把焦点放在模型攻破防线上。最初跟踪这起事件，我的第一反应也是大语言模型在漏洞挖掘上取得了突破。对照研究团队公开的完整记录与技术细节逐项核实后，我发现自己的归因出现了偏差。</p>
+<p>整场测试的核心推进由人类研究者把控。人类专家挑选攻击面，梳理跨域信任链条，在真实服务上验证利用脚本，并通过合规渠道披露问题。语言模型承担的工作，是在人类定位出内存缺陷之后，编写对应的利用代码，并针对运行环境微调内存布局。Hacktron
+在技术复盘中给出了明确界定：</p>
+<blockquote>
+<p>This was not completly autonomous hacking, and skilled human guidance
+remained important</p>
+</blockquote>
+<p>测试并非完全自主推进，人类专家的方向引导贯穿始终。</p>
+<p>研究团队在博文中反复强调模型版本升级带来的效率跃迁，把突破归功于新模型的推理能力。仔细核对研究者的操作流水，这种能力跃迁背后混杂着多重外部因素。</p>
+<p>关键的前提来自人工建立的先验上下文。7 月 24 日使用 Claude Opus 4.8
+期间，研究者投入大量时间完成了漏洞根因定位，在关闭内存地址随机化保护的环境里跑通了原型脚本，摸清了内存结构偏移与调试环境。等到模型接手任务，人类已经把崩溃现场与内存偏移整理就绪，省去了盲目试错的过程。</p>
+<p>发布窗口的巧合同样提供了客观助力。7 月 24 日晚间，Anthropic 正式发布
+Claude Opus
+5。研究团队在官方发布数小时后便接入新模型，这也是排查受阻后主动引入的技术变量。</p>
+<p>测试任务的人工降维也是关键一环。拿到 Opus 5
+后，研究者没有直接去打线上目标，他们把二进制程序搬到本地 ARM64 架构的
+Mac 电脑上重现环境，用大约 3
+小时产出适配本地架构的可用脚本，随后才将验证通过的逻辑迁移到云端运行的
+x86-64 架构与 jemalloc 内存分配器配置上。</p>
+<p>安全护栏的绕过同样依赖专门的工程设计。模型内置的安全机制会拒绝针对远程生产环境编写利用脚本。为了驱动模型持续工作，研究团队搭建了代理网络，把自有云端服务器伪装成夺旗对抗靶场，绕开模型的审查提示，驱动模型执行多轮自动调试与修改。</p>
+<p>在纯粹的网络对抗基准测试中，Opus 5 的表现并未拉开代际差距。根据
+Anthropic 官方随模型发布的系统技术报告数据，Opus 5
+在漏洞利用基准测试中的得分，显著落后于专用模型：</p>
+<blockquote>
+<p>far behind that of Mythos 5</p>
+</blockquote>
+<p>在 Anthropic 现有的模型序列中，有一款名为 Mythos 5
+的模型，官方评估显示其网络对抗能力突出，仅面向少数经过严格资质审核的机构定向开放。The
+Straits Times 引述单方信源披露，Hacktron 团队在测试全程没有接触过
+Mythos 5。</p>
+<p>研究团队在其后续开展的 HEIF
+Heist 衍生项目中，还提到测试了 GPT-5.6 Sol
+等其他厂商模型，声称能在几天内实现自动化探测。这套结论跨越了不同的技术架构与业务环境，缺乏对照基准。</p>
+<p>利用算法辅助寻找软件缺陷早有先例。谷歌 Project Zero 团队在 2024 年 10
+月公开的 Big Sleep 项目，展示了 自动化发现真实开源软件
+SQLite 零日漏洞 的系统方法；安全平台 XBOW
+也在漏洞众测榜单上凭借约 1060
+次经过人工复核的自动化提交取得靠前排名。相比这些行业实践，Hacktron
+团队展示出的增量，是在人类专家明确漏洞根因并搭建好调试环境的前提下，借助语言模型加快了针对复杂加固环境的内存利用代码编写。</p>
+<p>关于测试开销与防御感知的宣称，必须严格限定在自述范围之内。按照
+Hacktron 团队的事后陈述，在历时两个月的 HEIF Heist
+研究项目中，三名研究者协同推进，整体消耗的 API 调用 token 费用不足 3000
+美元，对每个新目标的适配耗时约 1 至 2 天，纯自动化模式下通常在 1 至 3
+天内跑出有效代码执行结果。研究者同时宣称，测试期间发送的数千张畸形图片导致多家受测平台频繁崩溃，除了大型电商企业
+Shopify
+之外没有其他厂商察觉到异常。这组数据纯属研究团队的单方陈述，团队没有公开调用账单，也无法查阅受测企业的内部入侵检测日志，而
+Shopify 官方自始至终没有对这项测试发表过公开回应。</p>
+<p>模型并没有自主发现系统深层的未知缺陷，它的真实作用体现在压缩人工逆向调试的耗时上。资深安全工程师原本要在实验室里花费数天对齐的内存布局，辅助工具把这项工作压缩到了几个小时之内。</p>
+<h2 id="connector-是失陷后果的上限" data-reading-heading="">connector 是失陷后果的上限</h2>
+<p>深入复盘整起事件，我的关注点逐渐从前台的模型能力移到了后台的权限连接上。对于每天配置多
+agent
+系统、把开发助手连上代码仓库与凭证系统的团队来说，这起事件暴露出的机制可以用一句话说清：外围系统或认证凭据一旦失守，破坏能够蔓延到什么范围，取决于我们授予
+connector 的实际权限，与攻击者的技术水准关系不大。</p>
+<p>这名内部员工当初绑定的 Codex
+连接如果只拥有代码仓库的只读权限，或者把范围严格限定在某个边缘实验项目里，测试人员即便接管了会话，能做出的动作也会止步于仓库之外。真实情况是，Codex
+拿到了全局代码仓库的写入能力。一旦单点登录凭证失守，外围服务的缺口就顺着这条预设通道，直接通向核心代码库。</p>
+<p>系统层面的应对动作随之清晰。团队需要排查身份拓扑中的信任传导，系统性梳理各类边缘服务，确认高权限的核心系统是否会无条件信任并接纳这些低安全等级服务签发的身份凭证。OpenAI
+在事发后迅速收紧社区论坛登录凭证的作用范围，正是切断信任由外向内单向渗透的通路。</p>
+<p>与身份拓扑并行的，是对各类自动化工具实际生效权限的审计，不能仅在配置清单里记录工具的存在。每次给开发环境或智能体绑定
+GitHub、云服务密钥或通讯接口，都需要追问一个具体问题：假定这个外部服务明天失守，攻击者拿着现成凭据在内部系统究竟能够调用哪些接口、读取哪些数据？把写入权限收紧为只读，把组织层面的通配授权收窄为具体项目的单独授权，能直接压低潜在失陷能够触达的破坏上限。</p>
+<p>面对这种风险，防御容易走向过度设计。这起事件给出的启示，并不意味着要求工程师退回纯手工时代，或者在开发环境外部堆叠繁复的沙箱机制与通信中继。繁重冗长的隔离机制往往只会拖慢开发节奏，促使员工私下寻找绕过限制的捷径。在依赖组件的维护观念上，过去那种冷门陈旧库无关紧要的想法也需要更新：大语言模型把复杂内存漏洞的利用成本压缩下来之后，以往许多团队认为攻击门槛太高的底层处理库，如今同样暴露在低成本攻击的射程里，依靠攻击成本高昂来维持的安全假设已经失效。</p>
+<p>Hacktron 的渗透测试与 2026 年 8 月业内讨论的 Anthropic
+评测事故机理不同。在业内称为 Irregular
+事件的评测失误中，评测环境由于运维配置疏漏直接连通了公网，导致自主运行的模型触碰到真实外部企业的网络资产，到达登录页面后自行停下，属于沙箱网络隔离缺失引发的自动化越界。而在
+OpenAI
+这次事件中，全程由人类研究人员规划路径、在生产系统验证假设并提交披露，模型充当的是编码调试的辅助工具。</p>
+<p>评估自动化工具的安全风险，与其层层叠加防护外壳，不如把各种外部凭证的实际权限收紧到任务所需的最小范围。</p>
+<p>自动化组件大幅提升了工程生产力，但技术团队赋予这些工具的凭证常常跨越信任层级，在内部系统留下了长期有效的写入通道。</p>
+<p>还有一个边界需要转述这件事的人记住：OpenAI 后来支付了 6500
+美元漏洞奖励，但按照 Hacktron
+转录的官方评审反馈，这笔钱只覆盖单点登录系统侧的发现，论坛本身被明文排除在赏金计划之外；研究团队在提交报告后仍完成了员工账户接管与内部拉取请求，这段操作处于授权状态不明的灰色地带。对单个漏洞的奖励不构成对全链条测试的事后追认。账户失陷能走多远，上限始终是你授予
+connector 的权限。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/9a4b7e31c1eb91efce452e81262445bc2a2b10d08b830e7c775cc8a9c26045e5.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/9a4b7e31c1eb91efce452e81262445bc2a2b10d08b830e7c775cc8a9c26045e5.md" download="三条旧授权，两天，走到 OpenAI 内部仓库.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=harsh-jaiswal" class="entity-link person-link">harsh-jaiswal</a>, <a href="/search/?q=mohan-pedhapati" class="entity-link person-link">mohan-pedhapati</a>, <a href="/search/?q=rahul-maini" class="entity-link person-link">rahul-maini</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=openai" class="entity-link company-link">openai</a>, <a href="/search/?q=hacktron" class="entity-link company-link">hacktron</a>, <a href="/search/?q=anthropic" class="entity-link company-link">anthropic</a>, <a href="/search/?q=bugcrowd" class="entity-link company-link">bugcrowd</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=codex" class="entity-link product-link">codex</a>, <a href="/search/?q=claude-opus-5" class="entity-link product-link">claude-opus-5</a>, <a href="/search/?q=libheif" class="entity-link product-link">libheif</a>, <a href="/search/?q=discourse" class="entity-link product-link">discourse</a>, <a href="/search/?q=imagemagick" class="entity-link product-link">imagemagick</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

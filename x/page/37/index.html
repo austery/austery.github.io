@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X 阅读</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="x-reading" data-pagefind-ignore>
+  <header class="x-heading"><h1>X 阅读</h1><p>按原发时间浏览 · 时间显示为 Toronto 当地时间</p></header>
+  <nav class="x-authors" aria-label="X 来源"><a href="/x/" aria-current="page">全部来源</a>
+    <a href="/x/authors/890076269580341248/" >宏观边际MacroMargin（128）</a><a href="/x/authors/2058239737522204672/" >美研芒格君（38）</a><a href="/x/authors/1620475218627121153/" >投资TALK君（125）</a><a href="/x/authors/858124064476479488/" >Herman Jin（321）</a><a href="/x/authors/809013582/" >Tigris | 会讲课教授是好老师（362）</a>
+  </nav>
+  
+  <p class="x-status">保存说明：除条目另有标注外，正文尚未人工核对 · 图片未保存 · 引用或对话上下文可能不完整。</p>
+
+  <p><a href="/x/">最近一天</a> · <a href="/x/archive/">历史记录（含日期未知）</a></p>
+  
+<article class="x-entry" data-author="858124064476479488" data-long="true" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@shanghaojin</span>
+    <div  class="x-post-heading"><time datetime="2024-09-14T02:48:56.000Z">2024-09-13 22:48</time></div>
+    <a class="x-outbound" href="https://x.com/shanghaojin/status/1834786381178323310" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">关于GPT4o1对半导体影响跟美国的技术团队及TSM电话了下：
+
+先给结论：NV芯片需继续增加，毛利可能有小幅影响
+
+GPU是一个通用解决方案，而ASIC非常特定的。需要极大的特定场景才能justify提前2年投入芯片设计
+
+1. ASIC作用：pre-training还得用GPU，但ASIC可以在特定环境做垂直精确post-training优化结果（比如Goog推荐是非常特定得找回&#43;推荐模型）但是，结果出来之后还是要用GPU翻回大模型
+
+而且ASIC需要提前投入芯片设计，而且使用场景非常特定。如果选择ASIC替代GPU，垂直场景环境变化、AI模型改变都会对大公司产生风险
+
+2. 与NV争夺同样CoWoS线程。比如Goog得TPU都需要内存，带宽，因此一样都要CoWoS。TSM反馈: 不会冒险增加线程大量给NV之外公司做ASIC。另一方面，虽然NV几乎买断了2027年前的线程，但是毛利率面对竞争可能会略降
+
+3.使用TPU得实际问题。因为使用场景特定，Goog已经研发TPU很多年了。对于其他垂直领域，新设计芯片，完成设计&#34;之后&#34;光投产就需要提前1年预定TSM线程（1y对应AVGO，其他供货商起码1.5y-2y）
+
+而且AI云是这几个大公司核心业务。放新卡替代部分GPU算力还需要测试的。假设我们模型不变，预期一切顺利可能2年后能开始使用。
+
+4. 云计算中心迭代：不算4大云厂商新的capex，1万亿的云计算中心的迭代还是专注GPU在逐步替代CPU。同时，新的Capex对与GPU需要并不变化（MSFT反馈不预期有任何影响）</div><a href="/content/clippings/x/posts/1834786381178323310/#x-post-1834786381178323310">保存的原文 · 长文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 媒体状态：NOT_ARCHIVED, NONE 上下文状态：PARTIAL, UNKNOWN</p>
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 1834786381178323310<br>保存时间：2026-09-27T12:31:22.454Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED, NONE<br>上下文状态：PARTIAL, UNKNOWN<br>已知缺失：Reply and quoted-post context may be partial; only the returned post record was saved.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@shanghaojin</span>
+    <div  class="x-post-heading"><time datetime="2024-09-06T04:41:21.000Z">2024-09-06 00:41</time></div>
+    <a class="x-outbound" href="https://x.com/shanghaojin/status/1831915566694854732" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">才发现@错人了
+
+是跟@Pathusa 一起悄悄讨论crypto市场的群
+</div><a href="/content/clippings/x/daily/858124064476479488/2024-09-06/#x-post-1831915566694854732">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://t.me/doorcrafter">相关来源（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 1831915566694854732<br>保存时间：2026-09-27T12:31:22.454Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：See source observations for media and context status.</p><p>LINKS_TO: https://t.me/doorcrafter · https://t.me/doorcrafter</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@shanghaojin</span>
+    <div  class="x-post-heading"><time datetime="2024-09-05T03:58:13.000Z">2024-09-04 23:58</time></div>
+    <a class="x-outbound" href="https://x.com/shanghaojin/status/1831542324255707231" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">还说我恐怖分子吗？这2个月起起伏伏基本上都跌了一半
+
+算个命：现在市场带着对降息恐惧等待FOMC，盲猜BTC的空头会在FOMC之后的1-2周被集团爆仓
+
+空小币的注意：9月底前，只要破前低就要降仓。反弹拿得住请无视此推</div><a href="/content/clippings/x/daily/858124064476479488/2024-09-04/#x-post-1831542324255707231">保存的原文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 媒体状态：NOT_ARCHIVED, NONE</p>
+      <div class="x-related"><a href="/content/clippings/x/daily/858124064476479488/2024-06-19/#x-post-1803478131338256741">引用原帖（已保存）</a><a href="https://x.com/ShanghaoJin/status/1803478131338256741">引用原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 1831542324255707231<br>保存时间：2026-09-27T12:31:22.454Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED, NONE<br>上下文状态：PARTIAL<br>已知缺失：Reply and quoted-post context may be partial; only the returned post record was saved.</p><p>QUOTES: x:post:1803478131338256741 · https://x.com/i/status/1803478131338256741</p><p>QUOTES: https://x.com/ShanghaoJin/status/1803478131338256741 · https://x.com/ShanghaoJin/status/1803478131338256741</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@shanghaojin</span>
+    <div  class="x-post-heading"><time datetime="2024-09-03T11:08:43.000Z">2024-09-03 07:08</time></div>
+    <a class="x-outbound" href="https://x.com/shanghaojin/status/1830925886843167185" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">别说“这轮牛市”了
+
+不看BTC等大币的价格，按照链上活跃度，现在就是跟FTX倒的时候一样“熊”的“大熊市”
+
+每轮熊市发生都会以不同方式展开，21年是风险资产炒风险资产的链条被加息打断，全线暴跌；
+
+而这次是，降息和ETF套利保护了大币。但是整体流动性匮乏，市场一步步从边缘到中心恶化</div><a href="/content/clippings/x/daily/858124064476479488/2024-09-03/#x-post-1830925886843167185">保存的原文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 媒体状态：NOT_ARCHIVED, NONE 上下文状态：PARTIAL, UNKNOWN</p>
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 1830925886843167185<br>保存时间：2026-09-27T12:31:22.454Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED, NONE<br>上下文状态：PARTIAL, UNKNOWN<br>已知缺失：Reply and quoted-post context may be partial; only the returned post record was saved.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@shanghaojin</span>
+    <div  class="x-post-heading"><time datetime="2024-09-03T02:25:10.000Z">2024-09-02 22:25</time></div>
+    <a class="x-outbound" href="https://x.com/shanghaojin/status/1830794134678093877" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">只有不下合约的才永赚，下合约必输
+
+声明下，我非常自信，觉得自己很厉害
+
+我自信的估计我不用API、不操纵市场，每天积极手点下合约。按照1.5/万手续费账户，大概能挺3个月-6个月才被清零
+
+你们经验自己多久合约被清零的？（输完重新转入也算）</div><a href="/content/clippings/x/daily/858124064476479488/2024-09-02/#x-post-1830794134678093877">保存的原文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 媒体状态：NOT_ARCHIVED, NONE</p>
+      <div class="x-related"><a href="https://x.com/i/status/1830792102072197564">引用原帖（查看来源）</a><a href="https://x.com/kklmt123456/status/1830792102072197564">引用原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 1830794134678093877<br>保存时间：2026-09-27T12:31:22.454Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED, NONE<br>上下文状态：PARTIAL<br>已知缺失：Reply and quoted-post context may be partial; only the returned post record was saved.</p><p>QUOTES: x:post:1830792102072197564 · https://x.com/i/status/1830792102072197564</p><p>QUOTES: https://x.com/kklmt123456/status/1830792102072197564 · https://x.com/kklmt123456/status/1830792102072197564</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@shanghaojin</span>
+    <div  class="x-post-heading"><time datetime="2024-09-03T02:15:09.000Z">2024-09-02 22:15</time></div>
+    <a class="x-outbound" href="https://x.com/shanghaojin/status/1830791612596936716" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">都说BTC要4.5万见，为啥呢？你们是先知？看跌还能看到价位的？
+
+KOL们都看短期4.5万，那么就先爆一下空头再跌吧</div><a href="/content/clippings/x/daily/858124064476479488/2024-09-02/#x-post-1830791612596936716">保存的原文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 媒体状态：NONE 上下文状态：UNKNOWN</p>
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 1830791612596936716<br>保存时间：2026-09-30T15:28:55.656Z<br>正文状态：UNVERIFIED<br>媒体状态：NONE<br>上下文状态：UNKNOWN<br>已知缺失：See source observations for media and context status.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@shanghaojin</span>
+    <div  class="x-post-heading"><time datetime="2024-08-30T00:35:40.000Z">2024-08-29 20:35</time></div>
+    <a class="x-outbound" href="https://x.com/shanghaojin/status/1829317023064822202" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">8月流动性还算宽裕，9月发债又回到了100mm/DV01。不过市场关注焦点应该还在短端Fed会给多大力度降息上
+
+要注意2024年全年大约1014mm/bp，而2025年预期将继续维持在1075mm/bp规模（2023年发行仅701mm/bp）长端发行的压力是持续性的</div><a href="/content/clippings/x/daily/858124064476479488/2024-08-29/#x-post-1829317023064822202">保存的原文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 上下文状态：PARTIAL, UNKNOWN</p>
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 1829317023064822202<br>保存时间：2026-09-27T12:31:22.454Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL, UNKNOWN<br>已知缺失：Media references were not archived with this snapshot.
+Reply and quoted-post context may be partial; only the returned post record was saved.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@shanghaojin</span>
+    <div  class="x-post-heading"><time datetime="2024-08-28T22:42:54.000Z">2024-08-28 18:42</time></div>
+    <a class="x-outbound" href="https://x.com/shanghaojin/status/1828926256844550240" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">NVDA业绩预期双beat（营收30b &amp;amp; 预期32.5b）盘后股价居然-8%
+
+不是华尔街变聪明觉得2B生意不该那么定价，而是他们简单看了下毛利率要降到70%，担心GPU供求关系改变
+
+B系列延后一季度，H系列新产品上线前，难以维持原来的毛利率了。是产品迭代周期，而不是GPU周期影响
+
+有点错杀了，等等明天市场反应</div><a href="/content/clippings/x/daily/858124064476479488/2024-08-28/#x-post-1828926256844550240">保存的原文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 媒体状态：NOT_ARCHIVED, NONE</p>
+      <div class="x-related"><a href="/content/clippings/x/daily/858124064476479488/2024-08-27/#x-post-1828411904802595251">引用原帖（已保存）</a><a href="https://x.com/ShanghaoJin/status/1828411904802595251">引用原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 1828926256844550240<br>保存时间：2026-09-27T12:31:22.454Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED, NONE<br>上下文状态：PARTIAL<br>已知缺失：Reply and quoted-post context may be partial; only the returned post record was saved.</p><p>QUOTES: x:post:1828411904802595251 · https://x.com/i/status/1828411904802595251</p><p>QUOTES: https://x.com/ShanghaoJin/status/1828411904802595251 · https://x.com/ShanghaoJin/status/1828411904802595251</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@shanghaojin</span>
+    <div  class="x-post-heading"><time datetime="2024-08-28T03:21:42.000Z">2024-08-27 23:21</time></div>
+    <a class="x-outbound" href="https://x.com/shanghaojin/status/1828634034555261209" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">说穿了，你们用的交易信号都不靠谱
+
+职业镰刀的工作就是：研究怎么造出你们认为有用的信号
+
+对割子来说，推涨砸跌是都是没有难度的。跟单&#43;爆仓才是赚钱上限
+
+不过我据观察币圈割子们手法也不咋高明，把鱼捕完自己要被割死
+
+少看老港片赌钱，赌神才不是一把大胜大负，而是大量小胜&#43;概率。会分辨KOL了？</div><a href="/content/clippings/x/daily/858124064476479488/2024-08-27/#x-post-1828634034555261209">保存的原文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 媒体状态：NOT_ARCHIVED, NONE 上下文状态：PARTIAL, UNKNOWN</p>
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 1828634034555261209<br>保存时间：2026-09-27T12:31:22.454Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED, NONE<br>上下文状态：PARTIAL, UNKNOWN<br>已知缺失：Reply and quoted-post context may be partial; only the returned post record was saved.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@shanghaojin</span>
+    <div  class="x-post-heading"><time datetime="2024-08-28T03:07:21.000Z">2024-08-27 23:07</time></div>
+    <a class="x-outbound" href="https://x.com/shanghaojin/status/1828630421825036697" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">对下棋的、交易员的说复盘才是最重要的，得明白怎么赢、怎么输的
+
+币圈不少KOL喜欢复盘，发生了什么事情、怎么画线怎么尿
+
+告诉你们一个正确打开方式，打开昨天7秒跌2%的行情，逐笔去对市场成交单。会发现就是被秒级程序化一格一格快速扫卖下去的
+
+self-fulfilling明白吧？画一条你们相信的线，让你们去跟去砸、去冲
+
+真希望交易所能搞个禁渔期，大家再这样竭泽而渔，我们这种来晚的只能准备跟你们互割了</div><a href="/content/clippings/x/daily/858124064476479488/2024-08-27/#x-post-1828630421825036697">保存的原文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 媒体状态：NOT_ARCHIVED, NONE 上下文状态：PARTIAL, UNKNOWN</p>
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 1828630421825036697<br>保存时间：2026-09-27T12:31:22.454Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED, NONE<br>上下文状态：PARTIAL, UNKNOWN<br>已知缺失：Reply and quoted-post context may be partial; only the returned post record was saved.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@shanghaojin</span>
+    <div  class="x-post-heading"><time datetime="2024-08-27T12:39:03.000Z">2024-08-27 08:39</time></div>
+    <a class="x-outbound" href="https://x.com/shanghaojin/status/1828411904802595251" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">NVDA 的option定价业绩后将有10%&#43;的波动
+
+我们估计2Q营收29bil，3Q大约31-32bil预期
+
+B系列延期对营收的影响是市场焦点，3Q/4Q实被影响3%左右，但得到5%的H20补充。明年则会被影响1-2个月
+
+市场已经price in不确定性了，就看老黄怎么沟通，怎么吹</div><a href="/content/clippings/x/daily/858124064476479488/2024-08-27/#x-post-1828411904802595251">保存的原文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 媒体状态：NONE 上下文状态：UNKNOWN</p>
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 1828411904802595251<br>保存时间：2026-09-30T15:25:48.141Z<br>正文状态：UNVERIFIED<br>媒体状态：NONE<br>上下文状态：UNKNOWN<br>已知缺失：See source observations for media and context status.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@shanghaojin</span>
+    <div  class="x-post-heading"><time datetime="2024-08-26T23:55:44.000Z">2024-08-26 19:55</time></div>
+    <a class="x-outbound" href="https://x.com/shanghaojin/status/1828219811979239769" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">抄底的对冲基金们，又开始大量卖顶做T，但按市场仓位9/13前看多Mag7
+
+K线没有任何意义。净卖出太大，基金对Meg7配置严重过底、公司回购。不管NVDA业绩，目前涨跌风险极不对称
+
+7月初来空单平仓仅15%-20%
+多头仓位不到最高30%、3-4月的50%
+
+大家都问“VIX都65了，伤害呢？几时能买回来？”可能买不回来了</div><a href="/content/clippings/x/daily/858124064476479488/2024-08-26/#x-post-1828219811979239769">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="/content/clippings/x/daily/858124064476479488/2024-08-06/#x-post-1820944238169010596">引用原帖（已保存）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 1828219811979239769<br>保存时间：2026-09-27T12:31:22.454Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Media references were not archived with this snapshot.
+Reply and quoted-post context may be partial; only the returned post record was saved.</p><p>QUOTES: x:post:1820944238169010596 · /content/clippings/x/daily/858124064476479488/2024-08-06/#x-post-1820944238169010596</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@shanghaojin</span>
+    <div  class="x-post-heading"><time datetime="2024-08-23T13:24:33.000Z">2024-08-23 09:24</time></div>
+    <a class="x-outbound" href="https://x.com/shanghaojin/status/1826973807015612687" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">币圈长远再光明，但短期风险也需时刻警惕
+
+1. 政府卖币，合规就要还过去的原罪
+
+2. ETH及链上大量明牌质押杠杆，空头燃料太多了
+
+3. ETF累积了大量套利盘，去杠杆风险
+
+4. 链上完全没有真流量，全靠中心化交易所上韭菜
+
+5. 但韭菜又被割太快，交易所拉新远不如过去狂野
+
+6. 美元长端发债周期
+
+最大矛盾是所谓活跃度、流动性不足，其实就是买ETF套利的、发币的、交易割子、MM、政府卖币，全靠CEX韭菜，现在拉新韭菜难了，青黄不接了</div><a href="/content/clippings/x/daily/858124064476479488/2024-08-23/#x-post-1826973807015612687">保存的原文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 媒体状态：NONE 上下文状态：UNKNOWN</p>
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 1826973807015612687<br>保存时间：2026-09-30T15:25:48.141Z<br>正文状态：UNVERIFIED<br>媒体状态：NONE<br>上下文状态：UNKNOWN<br>已知缺失：See source observations for media and context status.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@shanghaojin</span>
+    <div  class="x-post-heading"><time datetime="2024-08-15T05:58:59.000Z">2024-08-15 01:58</time></div>
+    <a class="x-outbound" href="https://x.com/shanghaojin/status/1823962571713732841" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">买我上海别墅的买家违约了…..
+
+我疫情后清仓了上海、香港、深圳、大连的所有房产
+
+虹桥别墅卖出的时候，对方没有上海购房资格。当时给了600万不可撤销定金，但前几天说别墅和定金都不要了
+
+大家知道市场有多差了么，我这样的都能被套
+
+就这样吧，房子带着记忆的。以后池塘里养点乌龟、青蛙还是不错的</div><a href="/content/clippings/x/daily/858124064476479488/2024-08-15/#x-post-1823962571713732841">保存的原文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 媒体状态：NOT_ARCHIVED, NONE 上下文状态：PARTIAL, UNKNOWN</p>
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 1823962571713732841<br>保存时间：2026-09-27T12:31:22.454Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED, NONE<br>上下文状态：PARTIAL, UNKNOWN<br>已知缺失：Reply and quoted-post context may be partial; only the returned post record was saved.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="809013582" data-long="false" >
+  
+  <header><a href="/x/authors/809013582/"><strong>Tigris | 会讲课教授是好老师</strong></a> <span class="x-muted">@tig88411109</span>
+    <div  class="x-post-heading"><time datetime="2024-08-09T15:44:51.000Z">2024-08-09 11:44</time></div>
+    <a class="x-outbound" href="https://x.com/tig88411109/status/1821935684980183070" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">最后，真正的财务自由无论如何都不会在不遵守法律和市场规律，保障私有产权的国家和环境产生。唯一的办法就是逃离，逃离你现在所在的楚门世界。🏃🏃🏃</div><a href="/content/clippings/x/daily/809013582/2024-08-09/#x-post-1821935684980183070">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="/content/clippings/x/daily/809013582/2024-05-26/#x-post-1794802009218171162">回复的原帖（已保存）</a><a href="https://x.com/i/status/1794802009218171162">回复的原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 1821935684980183070<br>保存时间：2026-09-27T12:30:38.116Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Media references were not archived with this snapshot.
+Reply and quoted-post context may be partial; only the returned post record was saved.</p><p>REPLY_TO: x:post:1794802009218171162 · https://x.com/i/status/1794802009218171162</p><p>REPLY_TO: https://x.com/i/status/1794802009218171162 · https://x.com/i/status/1794802009218171162</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="1620475218627121153" data-long="false" >
+  
+  <header><a href="/x/authors/1620475218627121153/"><strong>投资TALK君</strong></a> <span class="x-muted">@tj_research</span>
+    <div  class="x-post-heading"><time datetime="2024-08-08T15:46:05.000Z">2024-08-08 11:46</time></div>
+    <a class="x-outbound" href="https://x.com/tj_research/status/1821573606825926950" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">如果每天看看线，画画图，视频的制作过程1小时完成，轻松的很，以前干过。如果每天看宏观数据做研究，看财报听财报会议，视频的制作过程4-5小时完成。
+以前的流量比现在高，因为行情好，现在花的时间却比以前多很多，因为更享受这个学习研究分享的过程。
+做内容的，做的越精，受众越小，越小白，受众越大，没有热爱还真干不下去</div><a href="/content/clippings/x/daily/1620475218627121153/2024-08-08/#x-post-1821573606825926950">保存的原文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 媒体状态：NOT_ARCHIVED, NONE 上下文状态：PARTIAL, UNKNOWN</p>
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 1821573606825926950<br>保存时间：2026-09-26T12:24:19.337Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED, NONE<br>上下文状态：PARTIAL, UNKNOWN<br>已知缺失：Provider discovery ordering and completeness are unverified
+Linked context and media have not been archived
+Reply and quoted-post context may be partial; only the returned post record was saved.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@shanghaojin</span>
+    <div  class="x-post-heading"><time datetime="2024-08-06T22:05:12.000Z">2024-08-06 18:05</time></div>
+    <a class="x-outbound" href="https://x.com/shanghaojin/status/1820944238169010596" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">这两天刚逃顶的对冲基金疯狂抄底，买入量为5个月来最大
+
+刚与GS NY Eq电话，觉得美股不像死猫跳。但gamma还是-2b，CTA确定性卖出在路上，现在火中取栗难度是王者局
+
+修复在路上，比我想得快，但不可能一蹴而就：
+
+1.仍然需要gamma回复（1w）
+2.接着CTA止血（2w&#43;）
+3.LOs抄底
+
+不过，NVDA估值是不怕套的</div><a href="/content/clippings/x/daily/858124064476479488/2024-08-06/#x-post-1820944238169010596">保存的原文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 上下文状态：PARTIAL, UNKNOWN</p>
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 1820944238169010596<br>保存时间：2026-09-27T12:31:22.454Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL, UNKNOWN<br>已知缺失：Media references were not archived with this snapshot.
+Reply and quoted-post context may be partial; only the returned post record was saved.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="1620475218627121153" data-long="false" >
+  
+  <header><a href="/x/authors/1620475218627121153/"><strong>投资TALK君</strong></a> <span class="x-muted">@tj_research</span>
+    <div  class="x-post-heading"><time datetime="2024-08-05T13:11:48.000Z">2024-08-05 09:11</time></div>
+    <a class="x-outbound" href="https://x.com/tj_research/status/1820447614417908139" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">美联储不开紧急会议，我们来开个紧急直播吧🤪如果点赞&#43;分享过500的话</div><a href="/content/clippings/x/daily/1620475218627121153/2024-08-05/#x-post-1820447614417908139">保存的原文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 媒体状态：NOT_ARCHIVED, NONE 上下文状态：PARTIAL, UNKNOWN</p>
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 1820447614417908139<br>保存时间：2026-09-26T12:24:19.337Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED, NONE<br>上下文状态：PARTIAL, UNKNOWN<br>已知缺失：Provider discovery ordering and completeness are unverified
+Linked context and media have not been archived
+Reply and quoted-post context may be partial; only the returned post record was saved.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@shanghaojin</span>
+    <div  class="x-post-heading"><time datetime="2024-08-03T23:28:44.000Z">2024-08-03 19:28</time></div>
+    <a class="x-outbound" href="https://x.com/shanghaojin/status/1819878097199808512" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">很多人不懂医
+
+有时候吧，积极治疗，化疗放疗一下病人会死更快</div><a href="/content/clippings/x/daily/858124064476479488/2024-08-03/#x-post-1819878097199808512">保存的原文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 媒体状态：NOT_ARCHIVED, NONE</p>
+      <div class="x-related"><a href="/content/clippings/x/daily/858124064476479488/2024-06-19/#x-post-1803478131338256741">引用原帖（已保存）</a><a href="https://x.com/ShanghaoJin/status/1803478131338256741">引用原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 1819878097199808512<br>保存时间：2026-09-27T12:31:22.454Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED, NONE<br>上下文状态：PARTIAL<br>已知缺失：Reply and quoted-post context may be partial; only the returned post record was saved.</p><p>QUOTES: x:post:1803478131338256741 · https://x.com/i/status/1803478131338256741</p><p>QUOTES: https://x.com/ShanghaoJin/status/1803478131338256741 · https://x.com/ShanghaoJin/status/1803478131338256741</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="1620475218627121153" data-long="false" >
+  
+  <header><a href="/x/authors/1620475218627121153/"><strong>投资TALK君</strong></a> <span class="x-muted">@tj_research</span>
+    <div  class="x-post-heading"><time datetime="2024-08-02T15:29:29.000Z">2024-08-02 11:29</time></div>
+    <a class="x-outbound" href="https://x.com/tj_research/status/1819395100180427174" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">来给大家打个气，我这次市场越恐慌，年底标普就越高</div><a href="/content/clippings/x/daily/1620475218627121153/2024-08-02/#x-post-1819395100180427174">保存的原文</a>
+    
+    <footer>
+      
+      <p class="x-status"> 媒体状态：NOT_ARCHIVED, NONE 上下文状态：PARTIAL, UNKNOWN</p>
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 1819395100180427174<br>保存时间：2026-09-26T12:24:19.337Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED, NONE<br>上下文状态：PARTIAL, UNKNOWN<br>已知缺失：Provider discovery ordering and completeness are unverified
+Linked context and media have not been archived
+Reply and quoted-post context may be partial; only the returned post record was saved.</p></details>
+    </footer>
+  </div>
+</article>
+
+  <nav class="x-pagination" aria-label="帖子分页"><a href="/x/page/36/">上一页</a> <a href="/x/page/38/">下一页</a></nav>
+</div>
+
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>上云前先脱敏：拆开 Perplexity 和 OpenAI 的 PII
+检测器，它其实不是 LLM</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">上云前先脱敏：拆开 Perplexity 和 OpenAI 的 PII
+检测器，它其实不是 LLM</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-16</span>
+    
+
+    <header class="article-header">
+      
+      <h1>上云前先脱敏：拆开 Perplexity 和 OpenAI 的 PII
+检测器，它其实不是 LLM</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">pii-detection</span>
+      
+        <span class="tag-pill tag-pill--no-page">bidirectional-encoder</span>
+      
+        <span class="tag-pill tag-pill--no-page">data-masking</span>
+      
+        <a class="tag-link" href="/tags/edge-ai/">edge-ai</a>
+      
+        <span class="tag-pill tag-pill--no-page">viterbi-algorithm</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章深入解析Perplexity与OpenAI开源的PII检测器，指出其并非LLM而是基于双向编码器的专用分类器。通过对比架构、性能及局限性，论证了端侧数据脱敏需结合双向分类器与正则规则，以在云端算力调用前有效拦截敏感信息泄露。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/pii-privacy-gate-classifiers-20260916.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-09-16T00:00:00.000Z">2026-09-16</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>5 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E6%9C%AC%E5%9C%B0%E7%AE%97%E5%8A%9B%E5%92%8C%E4%BA%91%E7%AB%AF%E7%AE%97%E5%8A%9B%E4%B9%8B%E9%97%B4%E5%8D%A1%E7%9D%80%E6%B3%84%E5%AF%86%E8%BF%99%E4%B8%80%E5%B1%82">本地算力和云端算力之间，卡着泄密这一层</a></li><li class="outline-h2"><a href="#%E8%84%B1%E6%95%8F%E4%B9%8B%E5%89%8D%E5%85%88%E5%BE%97%E6%9C%89%E4%B8%AA%E8%83%BD%E6%8A%A5%E7%BD%AE%E4%BF%A1%E5%BA%A6%E7%9A%84%E6%A3%80%E6%B5%8B%E5%99%A8">脱敏之前，先得有个能报置信度的检测器</a></li><li class="outline-h2"><a href="#%E6%8B%86%E5%BC%80">拆开</a></li><li class="outline-h2"><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%95%BF%E6%88%90%E8%BF%99%E6%A0%B7%E4%BB%8E">为什么长成这样：从</a></li><li class="outline-h2"><a href="#%E8%BF%99%E5%AF%B9%E6%99%AE%E9%80%9A%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB%E7%9A%84%E5%90%AF%E5%8F%91">这对普通文本分类的启发</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h2 id="本地算力和云端算力之间卡着泄密这一层" data-reading-heading="">本地算力和云端算力之间，卡着泄密这一层</h2>
+<p>Anthropic 在 2026 年 9 月发布的威胁情报报告里记录过一个真实的泄密案例：某家制药公司的员工把日常数据发给
+AI
+工具，内部资本支出预测顺着请求流向公网，最终进了外部机构用来蒸馏模型的训练集。我在本地开发
+agent，让它读取本地代码和工作文档，最担心的就是这种泄密。数据一旦穿过本机网卡离开设备，后续所有访问权限控制就完全失去了意义。端侧芯片这几年虽然性能提升明显，但受限于功耗与内存带宽，本地小模型接不住复杂的全流程推理与多工具编排；而把长任务发往云端的前沿大模型，又伴随着数据出网的泄密风险。</p>
+<p>Perplexity 在 Mac 端推出Hybrid
+Compute时给出了一个折中方案：系统默认由本地小模型负责任务调度和敏感操作，复杂的推理硬任务交给云端模型，但在数据离开设备出网的前一刻，先在本地执行一层脱敏过滤。这道本地网关把拦截到的数据分成了四条处置路径：留在本地处理、替换成占位符后再发往云端、直接拒绝该动作，或者暂停下来等待用户手动批准。事后追查日志解决不了数据外泄的问题，真正的防御要直接前置在数据序列化出网的网卡边界上。Perplexity
+随后开源了这道闸门的核心感知部件，也就是与其合作的安全研究机构共同训练的敏感信息检测器。既然本地小模型无法独立承担所有复杂推理，数据又不能随意出网，在出网边界上守住敏感信息，就成了端侧
+agent 调用云端算力的必经之路。</p>
+<h2 id="脱敏之前先得有个能报置信度的检测器" data-reading-heading="">脱敏之前，先得有个能报置信度的检测器</h2>
+<p>想在本地把敏感数据拦下来，第一反应往往是写几行正则表达式，或者拉一张关键词表做字符串匹配。但我在本地拿真实的
+API 密钥做测试时，迅速撞上了各种边缘情况。哪怕换上 Perplexity
+开源的专用检测器，实测中也接连暴露问题。</p>
+<p>一段没有任何上下文修饰的裸密钥输进去，比如一段以 sk- 开头、总长 164
+个字符的凭证，检测器容易把它误标成
+account_number。更麻烦的是切片位置：它经常只圈出密钥中段的 82
+个字符，总长 164
+个字符的密钥首尾依然原样留在待发送的文本里。在一段包含代码和配置的混合长文档里，我埋了
+4 个真实密钥，模型在文末漏掉了其中 1
+个。只要切片偏移或者漏掉几个字符，凭证外泄的漏洞就依然敞开着。</p>
+<p>既然规则和专用检测器都有盲区，我试着把输入直接扔给通用大模型，用提示词让它定位文本里的敏感信息，但这条路实测同样走不通。生成式大模型依靠自回归机制工作，核心逻辑是在给定前文后依次预测下一个词元的概率分布。让大模型寻找敏感片段，它输出的是一段新生成的自然语言文本，或者在生成某个词元时的离散概率。这种生成机制无法针对原始输入文本里的连续字符片段，原地给出干净、连续的局部置信度。</p>
+<p>这两轮实测把我对检测器的要求逼得越来越明确：它需要在原文里原地圈出起止字符，指认从第几个字符到第几个字符属于哪类实体，并且给每个圈出的片段附带一个置信度分值。外层的调度逻辑是直接拦截、替换成占位符，还是暂停下来等待用户确认，完全依赖这个分值来决定。自由续写的聊天模型给不出这个分值，我需要的是一个能在本地低延迟运行、通读前后两端上下文、而且能对任意片段直接输出概率分布的专用检测器。</p>
+<h2 id="拆开" data-reading-heading="">拆开</h2>
+<p>pplx-pii-masking：一个双向编码器加两个线性头</p>
+<p>我从 HuggingFace 上把 Perplexity 的pplx-pii-masking权重下载到本机。打开权重文件和配置代码，整个模型的
+bf16 权重文件只有 1.1GB，稠密参数量约
+0.6B。它的底层架构完全没有走生成式大模型的路线，而是一个标准的双向编码器：沿用
+Qwen3
+架构的注意力层与权重布局，但显式关闭了因果掩码，改成了全双向注意力模式。</p>
+<p>通常所说的聊天模型只能向左看历史词元，是因为它的任务是预测下一个词，后面的词生成时还没有出现，因果掩码矩阵把对未来词元的注意力全部遮蔽掉了。但敏感信息检测并不是文本续写任务，待检测的输入文本在送进模型的那一刻就已经完整存在了。</p>
+<p>判定一个实体往往需要依赖后文给出的线索。一段 16
+位的数字，只有结合后面紧跟的有效期和安全码，才能确认它是支付卡号；一个常见的英文单词，只有读到后面跟着的职位或者问候语，才能确认它是人名。双向注意力抹平了单向因果掩码带来的右侧视野盲区，让模型在单次前向计算中同时看清前后语境。</p>
+<p>这个小模型读完一段文本后，核心动作是给序列里的每一个词元贴标签。在模型顶端，它接入了词元分类头与文档敏感度头两个轻量线性输出层。词元分类头把隐藏特征映射到
+37 个输出标签上：模型支持的 9
+类敏感信息，各自拆分为开始、内部、结束、单字四种边界状态，再加上一个代表非敏感词元的独立状态，正好构成
+37 个维度。</p>
+<p>得到每个位置的概率后，模型通过维特比算法挑选出一条符合语法规则的最优标注路径。维特比算法的作用是施加状态转移约束，防止出现没有开始状态就直接跳出内部状态的非法标注序列。整个模型把所有算力都集中在字符边界定位与置信度计算上，完全避开了逐字自回归生成的额外开销。</p>
+<h2 id="为什么长成这样从" data-reading-heading="">为什么长成这样：从</h2>
+<p>causal LM 到双向分类器的三步</p>
+<p>顺着这个架构往下想，自然会冒出一个念头：能不能拿一个现成的因果语言模型，微调时直接把注意力掩码改成双向？这是一个容易踩坑的工程陷阱。因果语言模型在海量语料上预训练时，每个词元的特征表示都是基于只看左侧历史信息的目标训练成型的。如果在微调阶段直接把因果注意力掩码放开成全双向，底层权重无法适应右侧突然涌入的信息流，原本预训练学到的语义表征会出现严重的分布偏移。</p>
+<p>Perplexity
+采取的演进路径分三步：先完成因果语言模型的常规预训练，再通过双向掩码建模训练出名为
+pplx-embed
+的双向文本向量底座，最后在底座上挂载分类头，在标注好的敏感数据上完成微调。因果模型单向生成文本，而文本向量底座为了浓缩整句语义天然需要通读全文。借用训练成熟的向量底座作为骨干，模型顺利继承了稳定的双向理解能力，避开了强行打开掩码造成的表征破坏。</p>
+<p>这套架构还在解码阶段留出了调节旋钮。检查模型的权重文件，里面内置了两个标量偏置：进入实体开始状态的转移偏置，以及离开实体结束状态的转移偏置。调整这两个标量数值，操作点就能在精确率与召回率之间滑动，不需要重新训练底层参数。在凭证泄露这种宁可多报也不能漏报的场景中，调高偏置就能让拦截策略更加激进。在差不多的时间段里，OpenAI
+也开源了结构相近的隐私过滤器。我把这两家团队的开源检测器放在同一个设计坐标系中对照：</p>
+<p>维度</p>
+<p>Perplexity (pplx-pii-masking)</p>
+<p>OpenAI (Privacy Filter)</p>
+<p>参数量与激活规模</p>
+<p>约 0.6B 稠密参数</p>
+<p>1.5B 稀疏架构（约 50M 激活参数）</p>
+<p>上下文窗口</p>
+<p>4096 词元</p>
+<p>128K 词元（带状注意力，有效窗口仅 257 词元）</p>
+<p>底座演进路径</p>
+<p>因果语言模型 → 双向嵌入底座 → 微调分类头</p>
+<p>自回归基础模型直接重构为双向分类器</p>
+<p>开源协议</p>
+<p>MIT 协议</p>
+<p>Apache 2.0 协议</p>
+<p>支持敏感类别数</p>
+<p>9 类</p>
+<p>8 类</p>
+<p>我把 OpenAI 的开源权重下载到本地跑通了推理（整个模型仓库约
+10GB，含多种量化版本）。它的总参数量为 1.5B，采用 8 层 MoE 架构，包含
+128 个专家，每个词元激活其中 4 个，实际激活参数量约 50M，推理用的 bf16
+主权重占 2.8GB。它的 tokenizer 采用了与 gpt-oss 系列相同的
+o200k_base，底座由自回归模型直接重构为双向分类器。它同样支持维特比解码，在
+config 中定义了 33 个标签类，覆盖 8 类敏感信息，并附带了
+viterbi_calibration.json 配置文件。</p>
+<p>OpenAI 检测器标称的上下文窗口达到了 128K 词元（配置中
+max_position_embeddings 为 131072，default_n_ctx 为 128000）。但这个
+128K
+窗口并不意味着每个词元都能看到全局文本：模型采用了带状注意力，每个词元只看自己左右各
+128 个词元的邻域，算上自身，单个词元的实际有效视野只有约 257
+个词元。</p>
+<p>我在搭载 M3 Ultra 的机器上，使用 MPS
+后端对两款模型做了对照测试（OpenAI 模型在无 Triton 环境下走 PyTorch 原生
+MoE fallback）。在显存占用上，pplx-pii-masking 占用约 1.2GB 显存，OpenAI
+隐私过滤器占用约 3.1GB。</p>
+<p>在推理耗时方面，简短文档上 pplx-pii-masking 单次前向扫描约 40 到 80
+毫秒，OpenAI 检测器约 55 到 300 毫秒。如果把文档长度推到 2816
+词元，pplx-pii-masking 耗时约 0.7 秒，OpenAI 检测器耗时约 5
+秒。我接着用一段 21820 词元的超长文档进行测试，OpenAI 检测器耗时约 39
+秒。在已经超出 pplx 截断窗口的文本末尾，OpenAI
+检测器成功检出了埋在那里的密钥；但带状注意力的局限也随之暴露：一段 16
+位的账号数字，因为实体说明标签出现在 550 个词元之前，超出了左右 128
+词元的带状视野，模型直接把它误标成了 private_phone。</p>
+<h2 id="这对普通文本分类的启发" data-reading-heading="">这对普通文本分类的启发</h2>
+<p>日常搭 agent
+工作流，不少团队习惯了把所有文本分析和提取任务直接扔给大模型，试图靠一段提示词解决所有分类需求。但把这两家机构开源检测器的代码拆开、并在本机跑过一整轮基准测试之后，我对小尺寸双向分类器的工程定位有了更清晰的认识。</p>
+<p>如果一项任务符合以下几个特征，双向词元分类器在延迟和准确性上展现出了明显的优势：需要在物理文本中精确定位起止字符偏移量、需要模型给出连续可靠的置信度分值来驱动分支决策、需要输出严格符合语法约束的结构化标签，以及需要在本地端侧设备上维持几十毫秒级的吞吐响应。在
+M3 Ultra 上实测，0.6B 的小模型处理 2816 词元只需约 0.7
+秒；我在由真实密钥、中文和负样本构成的 14 篇测试文档上跑了一遍，它的 F1
+分数达到了约 0.98。</p>
+<p>但这套概率检测器也有自己的边界，我在测试里挨个撞到了。商业机密和专有数据属于权限与访问控制的范畴，并不具备固定的语法特征：一份内部资本支出预测或者一段核心算法代码，在文本形式上和公开文档、常规代码并无二致，仅凭文本概率模型划不出安全分界。上下文同样会带来识别漂移：在机械重复的退化语境下，模型即使在有效窗口之内也会漏检；在常规英文句子里，它会把普通动词短语误判成人名。</p>
+<p>两款模型对长文档的处理方式也各有取舍与陷阱。pplx-pii-masking
+的上下文上限是 4096
+词元，输入文本一旦超出限制，模型会直接静默截断而不抛出任何告警，超长部分的内容在无声无息中失去了保护。OpenAI
+隐私过滤器虽然给出了 128K
+的名义窗口，但带状注意力将每个词元的视野限制在左右各 128 词元（约 257
+词元）之内，面对 550
+词元之外的上下文线索完全无能为力。两者在本质上都无法做到通读整篇长文档进行全局关联。面对缺乏自然语言修饰的裸密钥和高熵字符串，模型同样容易出现切片偏移或者类别误判。</p>
+<p>所以这次拆完，我的结论是端侧防护不可能只靠单一组件：小尺寸双向分类器接住自然语言语境里的多变实体，正则表达式、高熵检测和严格的长度截断负责确定的格式边界，两者各管一段。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/025bfd924296da7d54bb8e5c4f39058fb6253834c21d292825b2100e2b03643f.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/025bfd924296da7d54bb8e5c4f39058fb6253834c21d292825b2100e2b03643f.md" download="上云前先脱敏：拆开 Perplexity 和 OpenAI 的 PII
+检测器，它其实不是 LLM.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=perplexity" class="entity-link company-link">perplexity</a>, <a href="/search/?q=openai" class="entity-link company-link">openai</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=pplx-pii-masking" class="entity-link product-link">pplx-pii-masking</a>, <a href="/search/?q=openai-privacy-filter" class="entity-link product-link">openai-privacy-filter</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>
