@@ -1,0 +1,2729 @@
+---
+author: The Pragmatic Engineer
+date: '2026-10-07'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=a0sZV0qIbI0
+speaker: The Pragmatic Engineer
+tags:
+  - distributed-systems
+  - resilience
+  - microservices
+  - observability
+  - ai-engineering
+title: Sam Newman 谈微服务、分布式系统三定律与 AI 时代的工程韧性
+summary: 本文通过 Sam Newman 的访谈，深入探讨微服务作为最后手段的架构定位，阐述分布式系统三定律（延迟、故障、资源有限），并分析在 AI 时代如何通过确定性代码、多供应商策略及生产环境真理构建高韧性系统。
+insight: ''
+draft: true
+series: ''
+category: architecture
+area: tech-engineering
+project: []
+people:
+  - Sam Newman
+  - Dave Farley
+  - Kent Beck
+  - Trisha Gee
+  - Dan North
+  - Kevlin Henney
+  - Thomas Dohmke
+  - Thuan Pham
+companies_orgs:
+  - ThoughtWorks
+  - GitHub
+  - Entire
+  - Uber
+  - Notion
+  - O'Reilly
+  - FAA
+products_models:
+  - TurboBuffer
+  - Entire
+  - OpenTracing
+  - Zipkin
+  - Google Dapper
+media_books:
+  - Building Resilient Distributed Systems
+  - The Pragmatic Engineer
+status: evergreen
+---
+<!-- chunk 1/16 -->
+
+### 微服务是最后的避难所与分布式系统三定律
+
+**Sam Newman**: 我曾将微服务描述为一种“万不得已才采用的架构”（architecture of last resort）。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: I've described microservices as being an architecture of last resort.
+
+</details>
+
+**Sam Newman**: 确实如此，千真万确。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: Really, yeah. Absolutely.
+
+</details>
+
+**Sam Newman**: 很多人都误解了这一点。我认为他们以为只要采用了微服务，就会像被撒了魔法粉尘一样，奇迹般地解决一切问题。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: What a lot of people get wrong, I think, they say adopt microservices, and they think sort of magic dust going to happen.
+
+</details>
+
+**Host**: 你谈到过分布式系统的三条定律。这三条定律具体是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: You talk about the three rules of distributed systems. What are these three rules?
+
+</details>
+
+**Sam Newman**: 第一条是你不可能瞬间把信息从 A 点发送到 B 点。第二条是很多时候系统之间的通信会中断。第三条规则则是计算资源从来不是无限的。绝大多数情况下，如果你的系统发生了故障或宕机，归根结底都是因为某个地方的某种资源被彻底耗尽、被完全打满了。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: The first is that you can't send information instantaneously from point A to point B. The number two is sometimes network calls fail when you talk to things there. And the third rule is that resource pools are not infinite. The vast majority of the time that you have a system outage comes down to that: some resource has been totally saturated somewhere.
+
+</details>
+
+**Host**: 那么在当前的技术环境下，关于人工智能，有哪些事情是我们自以为知道但实际上并不知道的呢？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: What are the things that we know that we do not know?
+
+</details>
+
+**Sam Newman**: 我觉得整个技术界在整体上对 AI 普遍抱有一种相当天真的态度，并且从根本上产生了很多误解。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: I think the tech world in general is quite naive about AI and fundamentally misunderstands it.
+
+</details>
+
+### 对话背景与 Sam Newman 介绍
+
+**Host**: Sam Newman 是多本专著的作者，他撰写了或许是微服务领域最为流传广泛的经典著作。然而，正如大家刚才所听到的，他却明确表示微服务只是一种万不得已才使用的架构。那么，为什么当年在“微服务”这一概念被首次提出的现场，身处会议室中的 Sam 会持有这样的观点？在我看来，无论是在微服务架构领域，还是在构建弹性与韧性系统（resilient systems）方面，他都是最深刻、最具真知灼见的思想者之一。他的最新著作《构建弹性分布式系统》（Building Resilient Distributed Systems）也已经正式出版。
+
+今天，我们不仅探讨了规范（Specs）与代码（Code）究竟谁才是真正的单一真实来源（source of truth），以及为什么 Sam 坚持认为“生产环境才是唯一真理”；还深入分析了幂等键（Idempotency Keys）与状态指纹（Fingerprints）的区别，以及为什么你应该尽可能避免滥用幂等键；我们还详细拆解了系统弹性的四个维度：鲁棒性（Robustness）、回弹力（Rebound）、优雅扩展性（Graceful Extensibility）和持续适应能力（Sustained Adaptability）；此外，我们还探讨了认知深度（Cognitive Depth）、认知放弃（Cognitive Surrender），以及 Sam 对于如何更好地利用 AI 来避免陷入这些认知陷阱的建议等等。如果你渴望从一位十多年来深耕于该领域的一线专家那里理解构建高韧性系统究竟需要什么，那么本期播客绝不容错过。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Sam Newman is the author who wrote probably the most widely read book on microservices. And yet, as you heard, he said that microservices are an architecture of last resort. But why? Sam was in the room when the term microservices was coined. I find him to be one of the most thoughtful engineers on this topic, as well as on resilient systems. And his latest book, *Building Resilient Distributed Systems*, is out now.
+
+Today, we cover specs versus code as a source of truth, and why Sam says that production is truth; idempotency keys versus fingerprints, and why you should avoid idempotency keys when possible; the four dimensions of resilience: robustness, rebound, graceful extensibility, and sustained adaptability; cognitive depth and cognitive surrender, and Sam's advice on how to better use AI to avoid these and many more. If you want to understand what it takes to build resilient systems from an expert who has been knee-deep in this topic for 10-plus years, this episode is for you.
+
+</details>
+
+**Host**: 本期播客由 TurboBuffer 赞助呈现——基于对象存储构建的高效 AI 检索层。它兼具超高速度、低成本与极致的横向扩展能力，Notion 等诸多头部企业皆是其忠实用户。
+
+在正式开始之前，我还想介绍一下我们本季的赞助商、一款我个人非常看好的产品和团队——Entire。相信大家都深有体会，代码托管正在面临一个全新的瓶颈：AI Agents。在现代以代理为驱动的软件开发模式中，Git 越来越成为阻碍生产力的瓶颈。像你我这样的工程师正在借助 Agents 编写呈几何级数增长的代码，生成的代码量越来越庞大，而且我们许多人都在并发运行多个代理，它们同时向远程仓库推送极高密度的提交。GitHub 显然已经开始难以招架这种压力，宕机频发。
+
+那么解决之道是什么？Entire 由 GitHub 的前任 CEO Thomas Dohmke 创立。顺便提一句，Thomas 当年还在 GitHub 任职时就曾做客过我们的播客。如今 Thomas 从零开始专为智能体时代打造了全新的 Git 托管服务。Entire 的设计初衷就是追求极致的速度，并通过在不同地理区域靠近用户的边缘节点部署仓库，大幅削减网络延迟。这使得由海量 Agents 构成的集群能够无缝并行推送代码，Entire 的性能表现堪称跨越式升级：其底层引擎每秒能够承载多达 418 次 Push，比市面上现有的所有竞争对手高出多达 89 倍。即使在 GitHub 发生瘫痪时，你的团队依然可以照常工作；甚至你根本不需要脱离现有的 GitHub 生态，只需登录 Entire，平台就会自动镜像你的所有仓库。
+
+不仅如此，你是否曾经困惑过某一段特定的代码究竟是由怎样的 Prompt 提示词生成的？很多时候，我觉得工程师与 Agent 之间的 Prompt 交互以及上下文对话，比 PR 本身包含了更多至关重要的工程意图和背景信息。Entire 能够将你与 Agent 交互的所有提示历史原汁原味地捕获并直接保存在仓库之中，方便日后随时审计与溯源，并且它还拥有一个极具创新性的 UI 界面来集中可视化展示这一切。如果你正在寻找即使 GitHub 故障也依旧稳如泰山的 Git 托管平台，请前往 entire.io/pragmatic，安装 CLI 工具，一键镜像你的代码仓库。我已经亲自体验过了，确实非常惊艳。对了，它还兼容任何智能体平台，并且完全开源。
+
+Sam，非常高兴你能来到我们的播客节目。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: This episode was presented by TurboBuffer, the AI retrieval layer built on object storage. It's fast, cheap, and extremely scalable, and Notion and many others are happy customers.
+
+Before we start, let me mention Entire, our season sponsor and a product and team I am bullish on. You probably already know Git hosting has a problem: AI agents. Git is increasingly becoming a bottleneck for modern agentic software development. Engineers like you are creating more code with agents, those agents push more code, and most of us are running parallel agents which push way more code. GitHub is clearly struggling to keep up and racking up outages.
+
+So what's the solution? Entire was founded by GitHub's former CEO, Thomas Dohmke, who, by the way, was a guest on our podcast when he was still at GitHub. Thomas rebuilt Git hosting for the agentic era from scratch. Entire was built to be very fast, and to have your repos regionally close to you to reduce latency. This allows fleets of agents to push in parallel, and Entire's performance is next level. Their repo can handle 418 pushes per second, which is up to 89 times faster than every competitor on the market. When GitHub is down, you can still keep working, and you don't even need to migrate away from GitHub; you just sign into Entire and the platform mirrors your repo.
+
+And here's another neat thing: have you ever wondered what prompt resulted in this specific code being generated? I find that the prompt and conversation with the agent carries more information than the PR itself. Oftentimes, Entire captures all the prompt history with your agent right inside of the repo, easy to check back on, and it's got a pretty innovative UI to show all of this. If you're looking for Git hosting that works even when GitHub is down, head to entire.io/pragmatic, install the CLI, and mirror a repo with a click. I've already done it, and I love it. Oh, and did I mention that it works with any agent and it's open source?
+
+Sam, it's great to have you on the podcast.
+
+</details>
+
+### 从早期计算机到大学教育
+
+**Sam Newman**: 非常感谢你的邀请。我很高兴能来到这里，非常开心。我一直是这档节目的忠实听众。不过老实说，我最近好像变得有点像千禧一代了，经常刷短视频，而不是从头到尾看完整场长视频。我感觉自己正在逐渐变成我儿子那个样子。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: Thank you so much for having me. I'm happy to be here, very happy to be here, big fan of the show. As I say, I'm not going to lie: I've become a bit of a millennial, and I think I watch a lot of Shorts rather than watching the whole things now. I'm becoming my son.
+
+</details>
+
+**Host**: 哈哈，没错，据我所知千禧一代现在似乎成了某种意义上的“新一代婴儿潮老人”（the new Boomers）。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah, millennial is the new Boomer apparently, I learned.
+
+</details>
+
+**Sam Newman**: 我当年自以为属于年轻一代，但现在不管怎么归类，我都已经是这个年纪了。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: And so I was happy with Gen Y, now I'm whatever I am now.
+
+</details>
+
+**Host**: 那么让我们回到最初的起点吧。大家熟知你是因为你的多部著作、你对高弹性系统和微服务架构的精辟见解，以及此前你在 ThoughtWorks 的工作经历。但让我们先回溯到一切的源头：你最初是如何对科技与计算机产生兴趣的？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Well, so let's go back to the beginning. You've been known for a lot of your books, your takes on resilient systems, microservices; before that you worked at Thoughtworks. But let's rewind to the very beginning. How did you get interested in tech and computers?
+
+</details>
+
+**Sam Newman**: 我在英国长大，其实挺幸运的。我们在很小的时候就有机会接触到计算机设备。我们家里当时有一台 Acorn Electron，那是紧接着 BBC Micro 系列之后推出的微型家用计算机。后来我又得到了一台 ZX Spectrum 128 +3，那台 Spectrum 自带了内置磁带机。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: I'm quite fortunate living in the UK, we had access to computers quite early on. We had an Acorn Electron at home, which was sort of one of the generations of the BBC computers that came after the BBC Micro, and then I got a Spectrum 128 +3, which is the Spectrum that had the built-in tape drive.
+
+</details>
+
+**Host**: 那应该比 Commodore 机器早得多吧？是这样吗？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: This is way before the Commodores, is that right?
+
+</details>
+
+**Sam Newman**: 我觉得有些确实更早。我非常确定 Acorn Electron 的出现早于 Commodore 64 的大流行，但 Spectrum 大致处于同一时代。英国当时更倾向于 ZX Spectrum 和 BBC Micro 的市场格局，而在美国，Commodore 64 和雅达利（Atari）之类的机器则占据了更大的主流。这些早期的硬件让我对计算机产生了浓厚兴趣，并且这种热情一直保持了下来。
+
+到了升学阶段，我选择了非常中规中矩的道路：进入大学攻读软件工程学位。我是在德蒙福特大学（De Montfort University）读的书，我们家里的一个保留笑话是“它是莱斯特排名前五的大学”，但实际上整个莱斯特就只有那么两所大学。不过说实话，我很喜欢那段时光，当时的课程体系和班级教学环境非常扎实。
+
+更关键的是，我们当时有一种所谓的“三明治课程”（Sandwich course）。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: I think some of this was... I'm pretty sure that the Acorn Electron was pre-Commodore, but the Spectrum would have been around the same era. The UK was a bit more of a Spectrum and BBC Micro market, whereas the US, the Commodores and the Ataris and things were a bit bigger. So that sort of got me a bit interested, and then I always stayed interested in computers.
+
+I did the very boring thing: I went to uni, I did a software engineering degree at De Montfort University, which the running joke in my family is it's in the top five universities in the Leicester area—there are only two universities in Leicester. I mean, it was... I loved it. It was a great class base in my syllabus. And back then we did these things called sandwich courses.
+
+</details>
+
+**Host**: 啊，“三明治课程”，对。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Ah, sandwich course, yeah.
+
+</details>
+
+**Sam Newman**: 它的基本模式是：你在大学先完成前两年的理论学习，然后去工业界全职工作实习一年，这是一份带薪的全职岗位，尽管你的身份依然是学生。结束那一年的工业实习后，你再回到学校读完大四的最终学年。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: And so the basic idea was you do two years of study, you do a year in industry that was paid, but you effectively go in as a student, and then you do your final year.
+
+</details>
+
+**Host**: 这种模式真不错。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Nice.
+
+</details>
+
+### 初入职场与重构 Fortran 77 遗留系统
+
+**Sam Newman**: 这段经历其实棒极了，因为在此之前我的学习状态稍微有些随波逐流。但当我去工业界实实在在地工作了一年之后，许多知识和原理突然全都豁然开朗、融会贯通了。这让我大四返校时目标变得极其专注。
+
+当时我去了一家名为 GEC-Marconi / Alstom 的公司实习，我们主要为欧洲航天局（ESA）以及燃气轮机控制系统开发关键工业软件，那真的非常硬核且酷炫。我先是在那里完成了为期一年的三明治实习，毕业后又正式入职回到了这家公司。而当我全职回归时，恰逢第一波互联网泡沫（Dot-com bubble）兴起。
+
+当时公司里几乎所有经验丰富的资深员工都被外面的高薪吸引跑光了。于是，我瞬间从一个原本什么重任都不用挑的实习生，变成了不得不扛起一切的核心开发者。
+
+我清楚地记得我正式入职的第一周，他们直接交给我一个庞大的 Fortran 77 代码库。你要知道，Fortran 77 标准正好是在我出生的那一年发布的。在那套代码库里，每一个 `DO` 循环都被硬编码加上了强制中断退出的条件。原因在于我们当时是在极其昂贵的 Unix 工作站上运行仿真分析模型，机器运行的每一分钟都造价不菲，而工程师们非常担心代码会因为逻辑错误陷入死循环。这本质上是我们在用笨办法强行解决图灵的“停机问题”（Halting problem）。
+
+因此，整个代码库分布在数千甚至上万个源文件中，每一个循环都写死了类似计数上限判断：如果循环迭代超过了 9999 次，程序就会直接主动报错中断。然而，随着时间推移，物理模型变得越来越庞大，硬件计算能力也越来越强，我们必须把所有的循环上限改大。当时留给我的任务，居然是靠纯人工手动逐行去修改所有的循环。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: This was actually fantastic because I kind of was drifting a bit. And when I did my year in industry, so many things clicked; it meant I was much more focused going in.
+
+And I got to do work for a company called GEC Alstom. And we did software for the European Space Agency and gas turbine control systems, which was really cool. I joined there the first time for that internship, and then I went back after graduation. And when I went back, it was around the time of the first dot-com boom.
+
+And so everybody left. So I went from being the person that was doing like nothing to the person who did everything.
+
+I remember my first week there, I was given a Fortran 77 codebase. Fortran 77 was released in the year I was born, and every single loop had a break condition, because we were basically doing analysis on these Unix machines, and machine time was expensive, and we were worried about accidental infinite loops. This was us basically trying to solve the halting problem. So every loop across something like 8,000 files had a break condition of, I think, 9,999 loops, and if you went over that, the program basically broke and aborted. But the model had got bigger, the computers got more powerful, and someone had to go in and change all of them by hand.
+
+</details>
+
+**Host**: 那时候全靠纯手工改？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Back then by hand?
+
+</details>
+
+**Sam Newman**: 没错。但那也是我在职业生涯初期遇到过的最幸运、最有人情味的事情之一。因为 Fortran 77 在很大程度上还保留着对老式打孔卡片（punch card）规格的限制，代码每行的字符长度有着极其严格的上限，无法随心所欲地往行尾多塞数字字符。我的主管走过来看了看，估计说：“如果纯靠人工改，我猜你得干整整两个星期。”接着他递给我一本厚厚的书，说：“你先把这个看了。”那是一本关于 AWK 和 Unix 工具的书。
+
+于是我花了整整两天时间去学习正则表达式和文本处理工具。随后，我编写了一整套基于正则表达式和 AWK 的自动化重构脚本，精确考虑了换行规则和行长限制，一口气批量完成了整个庞大代码库的重构。那一刻，是我这辈子感觉自己距离“如同上帝般无所不能”最近的一次：我写下了脚本，它完美地自动搞定了一切。我当时想：这就是编程带来的无与伦比的战栗与快感！
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: Well, this is one of the nicest things anyone has ever done in my professional career. Because Fortran 77 was based on punch card limitations to an extent, your lines couldn't go very long. So you couldn't just insert an extra digit easily. My boss said, "I reckon it will take you about two weeks if you do it by hand." And then he slid a book across to me and said, "You can read this." He gave me a copy of the Sed and Awk book.
+
+And so I spent two days learning how to do regular expressions. And I wrote a refactoring using regular expressions, accounting for line lengths and everything else. And I think that's the closest I've ever come to feeling like a god. I did it, and I thought: that's the thrill.
+
+</details>
+
+**Host**: 那种感觉绝对终生难忘。我不知道这是一个笑话还是一个寓言：讲的是两个建筑工被要求砌一堵砖墙。其中一个工人第一天拿起砖头，一块接一块地砌墙；而另一个工人则坐在一旁拿纸笔画图纸、构思方案。别人说砌这堵墙要花三天时间。在前两天里，画图纸的工人在墙体上一砖没垒，而另一名工人已经垒起了一堵漂亮的墙。但到了第三天，那个画图纸的人组装出了一台自动砌砖机，直接一口气把剩下的整堵墙全自动砌好了。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: That's the absolute thrill. I'm not sure if it's a joke or a story, but you know: two builders need to build a wall, and one of them starts to build the wall one by one, and the other one is drawing and making plans. They say, "I don't know, it will take us three days to build the wall." The first two days, the planner has built nothing while the first builder was doing really good. And then on day three, this other builder puts together a machine that builds the whole wall for them.
+
+</details>
+
+**Sam Newman**: 哈哈，确实如此！不过现实中很多时候，那种所谓的机器在刚启动的瞬间就垮塌报废了。但无论如何，我非常喜欢你讲的这个故事。那个经历是完全真实的，也是我记忆中最早的几起通过真正掌握某项核心技术工具而带来如此强烈的情感与身体共鸣的时刻。我清楚地记得那种由衷的成就感，而再往后，我就加入了 ThoughtWorks……
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: And then, but sometimes the whole thing falls down the moment you switch it on! But I love that story, and that story was true. It's one of the early times I could remember learning something and having such a visceral reaction. And I remember that distinctly. And then after that was Thoughtworks...
+
+</details>
+
+<!-- chunk 2/16 -->
+
+### 行业中的谦逊与编程的掌控感
+
+**Speaker 0**：比如有些刚毕业的新人……他们让我讲一些职业生涯早期发生过的趣事。我就讲了一个故事，我说以前做模型的时候，有一晚我写了一段逻辑。结果其中一个毕业生听完就问：“你为什么不直接用一个常量把它们全替换掉呢？这样你以后随时想改数字直接改常量就行了。”我当时一愣，心想：好吧，我又学到了一招。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: sensible graatin. and they've ked tell some stories about like what what happened in presh career. i told this story, i said, i added the night made the models speaker. and then one of the one of the grads said, why didn't you just replace it all the constant? so you you you change number ononin any time in the future was like, that's so i'm learning once again.
+
+</details>
+
+**Speaker 0**：是的，我觉得这太棒了。在软件行业里，你随时都会被上一课，时刻保持谦逊。你总能学到新东西。是的，虽然我们总是在“重新发明轮子”，但我们一直在发明更好的轮子。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: yeah. so it's i supposed ble. i love it. it's like you, you get humble all the time is industry. you get to learn stuff. yes, as reinventure that we are going on. but you we're inventing better whalels whole time.
+
+</details>
+
+**Speaker 1**：而且我觉得时不时提醒自己这一点真的挺好的。我相信每一个写过代码、做过程序的人，某一刻都会产生一种自己像上帝一样的顿悟——你可以用这些代码做到单凭人工极其难以完成的事情，对吧？我们日常沉浸在琐碎事务中时，往往会忘了这一点；或者就像现在，我们使用大语言模型（LLM），它们也能完成那些过去看似不可能、极其神奇的事情。但很酷的一点在于，掌控权始终在我们手中，我们能够创造出惊人的成就。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: so and i think it's just nice around us every now that i'm sure everyone who's built cold and programs, like as somebody have the realization that you do feel like a god that you can do things with these things, which is just so difficult to do by hand, right? like there's. i think we forget about that when let's kind a day today, and we're just like doing our stuff or even like right now, we using l ams, which you go also do te incredible magical stuff that would have been impossible. but like it's kind of call that we are in charge. we can do amazing stuff.
+
+</details>
+
+**Speaker 0**：你会获得那种微小却兴奋的多巴胺分泌。我觉得现在大家正在经历的某种失落，正是因为人们离具体代码越来越远了，大家在苦苦思索：我究竟该怎样重新找回那种渴望的多巴胺快感呢？确实是这样。对我来说这倒不算太严重的问题，毕竟我已经入行大概三十年了，而且很长一段时间以来，我主要负责架构和基础设施层面的工作，因此我早就习惯了与底层代码保持一定距离。不过跟我儿子聊天时——他也是个程序员——他正处在一个非常有趣的时代。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: you get that little phyzy dopamine here. and i think that swe're dropping with a bit now is that people are getting further away from the code that trying to work out like, how do i still get that want to doopen me? yeah, and it's same way. um it's not as much an issue for mikes bit. it ter ter, you know, have been doing someof thirty years now, and i've already been mostly working at the aof of architecture for and so architecture infrastructure for a while. so i feel a little bit more removed, but it's uh, yeah talking to. my sound is a programme is good into it around an interesting time right now,
+
+</details>
+
+### Thoughtworks 岁月与极限编程实践
+
+**Speaker 1**：后来你去了 Thoughtworks，并在那里待了很长一段时间。你在 Thoughtworks 都做了哪些事情？在那段经历中你学到了什么？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: um and then you eventually made your worge to thought works, where you spent a bunch of time, what kinds things did you do at thought works? and what are what are things that you learn? there did anything?
+
+</details>
+
+**Speaker 0**：我加入 Thoughtworks 的时候，公司大概还不到四百人，当我离开时，已经增长到了大约四千人。我在那里参与了各种项目，去了很多遥远的地方。我加入的时机非常好，因为当时我们是一家非常纯粹的 XP（极限编程）公司，没有把核心的 XP 精髓搞丢。事实上，在核心层面，那家公司的业务骨子里依然流淌着极限编程的基因。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: i mean, it was i joined when they were probably just under four hundred people left with us about four thousand, and i worked and know gogot to go away away place. i joined it. good time because a lot of the i mean, we were very much an XP shop and nothing that the cooexthing broken yeah. and in the call, the business still kind of primarily is and a speed to people, they, of course,
+
+</details>
+
+**Speaker 1**：那是深受肯特·贝克（Kent Beck）极限编程理念影响的 XP 吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: but it exexpelike. what was that inffencby by cancanbcks XP?
+
+</details>
+
+**Speaker 0**：对，就是肯特·贝克所定义的极限编程。不过当时我们带有一点“伦敦风味”——也就是所谓的伦敦学派测试驱动开发（London School of TDD），以及伦敦极客圈里的各种极限编程实践。如果你想了解那种伦敦风格的 TDD，你可以去读一读《Growing Object-Oriented Software, Guided by Tests》（测试驱动的面向对象软件开发），那本书的名字堪称世上最糟糕的书名之一，是我的一对好友 Steve Freeman 和 Nat Pryce 写的。当时围绕这个圈子聚集了非常多的人，那是一个极其活跃的聚会圈子，我也由此结识了许多优秀的人才。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: yeah, that extreme programming is very much. it's it's it's can extreme programming. there was a bit of a london flavor. um so the kind of london school of techgiand development and extreme extreme cheessea clumb XDC around here. so what was the london flavor of of XD sort of like if you wanna know you pretty to regrowing object orange software diided by tests, one of the worst titled books and existence written by a couple of friends of mine, stay stay freement in that price. and i think that was a lot. there's a lot of people in the community around he. they knew that as a rich meets have seen. and so i kind of is good good juice of people through there.
+
+</details>
+
+**Speaker 0**：当时还有一家银行同时给我发了录取通知，那家银行能极其详尽地告诉我入职后具体要干什么。而在 Thoughtworks，当时的招聘人员——现在是我最好的挚友之一——直接对我说：“老实说，我也不知道你入职后具体会做什么。”我一听就说：“这正是我想要的工作！”那个时候，大家都在畅谈持续集成（CI），但根本没有配套的工具；大家都在谈论测试驱动开发（TDD），同样缺乏工具支持。所以大概在 2004 年左右，我们开始自己动手搭建构建流水线（build pipeline）相关的工具。当时 Dave Farley 是我的第一位 Tech Lead（技术主管）。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: and i mean, and i jow, i was same time was offered job by somebody else is a bank. the bank could tell me exactly what i was going to be be ing ing thought works. basically, the recruit to the time is now i of my very good ds ds or my oldest friends. now she said to me of, i don't me know what you be doing. and i like that sounds of the job for me, II it. it's like one. and this is that time when, like, you know, know, we talk continuue integration, but but the tooling wasn't there and talks about TDD and the tooling wasn't there. so it was in if we know it was around that sort time that we started. i ststted building the bill pipeline staff in about two thousand and four, and then i worked day day files was first first telead.
+
+</details>
+
+**Speaker 0**：是的，Dave Farley 是我在 Thoughtworks 的第一个 Tech Lead。后来我参与面试了 Jez Humble，让他来接替我在一个项目中的工作。那个项目是在 AOL，我们当时负责把各种系统集成起来。我们需要有人接替我的职位，于是我面试了 Jez Humble。那段时期周围发生了许多不可思议且充满创新的事情。我非常幸运能身处其中，和大家一起碰撞和探讨那些前沿概念。显然，像 Dave Farley 和 Jez Humble 这样的人，最终非常出色地将这些思想体系化并融合在了一起。身处那样的环境，身边所有人都在思考和讨论这些理念，这让我很早就意识到：现有的规则全都是可以重新定义的，没有任何东西是一成不变的，我们完全可以推动边界向前突破。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: uh, what sounds like day fly? yeah, yeah. he's my first tecular, though it works. i hight, i was on the people interinterfuge jaz humble to backfield for me a projeject melway. so so you project IOL of all places, and i think we use it back that it looks like, like, like, like, see, i'm so of the half. is this side me in half every every so II see myself. so we we needed someone to take over my job. and so i leent to you, jazz um and all around, what a love of interesting things were happening. so as fortunate enough to be there, while we were sort of kicking those ideas around. and obviously, people at daviand jazz, those those ideas together really, really well. you was t's surrounded by everyone talking thinking about these ideas. i think you got that i got the idea very early er that this starts all lot for grabs. these things ren't certain stone that we can push.
+
+</details>
+
+### 从持续交付到进入 Google 布道测试
+
+**Speaker 1**：当你提到这些东西时，你具体指的是持续交付，还有……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: and when you're saying these things like you vention the continuous delivery, you mention,
+
+</details>
+
+**Speaker 0**：测试自动化、构建流水线优化、基础设施自动化等等。2007 年我搬去了美国，作为 Thoughtworks 的顾问在 Google 工作了一年到一年半左右。我们去负责推进一个项目，Mike Bland 后来写过一篇非常精彩的文章公开记录了这段经历。当时有我、几位 Thoughtworks 的同事，还有来自 Industrial Logic 以及 Pivotal 的一些人（当时还是非常早期的 Pivotal）。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: what what put out the chechesed automation, um h ill, ill pipe, my optimization, uh infrastructural automation. i'm ennever to the US in two thousand and seven as she to work in a big, but she worked to google for it a year, even a half four, a thought of employee wow in do right? where is we were doing? we were had ading a project. uh, re's all been told about publicly is a great right up by mike bland all about our experiences. i was may is a few of me, a few, my toorist colleagues, some people from industrial logic and some people from a pivotal, the old pivotal preact preanquis there there.
+
+</details>
+
+**Speaker 1**：那些公司都以极其卓越的工程文化闻名，当时正是把这些顶尖团队引入进来的好时机。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: there were no for their really excellence and during culict when it was just brought these company when else.
+
+</details>
+
+**Speaker 0**：我们去那里的主要目标，是教 Google 的工程师如何编写自动化测试，以及如何写出具有良好可测试性的代码。所以我到了那里，跟他们深入交流各种高级工程实践。当时我们也在进入很多大型企业推行自动化测试，使用像 Selenium 之类的工具，并且四处跟工程师交流。当时很多人——包括雅虎甚至 Google 内部相当大一部分工程师——根本不相信你居然可以对网站等产品做端到端的功能自动化测试。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: and we were there to teach googlers primarily how to write automated test and how to write code those testiball. and so i got out there, and i'm talking to people out the valanced stuff is ying. and we were going in these enterprise companies to intest automation using stuff like sylennium, and you go round talking to people. and so people didn't II mean conversations of people like yahoo and even a big chance of google who did not think you could do functional automative testing of like websites and stuff.
+
+</details>
+
+**Speaker 1**：我想这是因为他们以前从没见过有人能做成这件事，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: i guess ss cause you just never that it right?
+
+</details>
+
+### 咨询公司的创新基因与工程师文化的塑造
+
+**Speaker 0**：完全正确。对我而言，如果我没有逼自己一把，或者没有找到一种更好的做事方法，我会很难受。我非常幸运早年在 Thoughtworks 度过，那里充满了思想的不断碰撞与持续自我革新。天知道当时诞生了多少 Mock 框架和版本控制工具，我自己就手写过两个用来替代 CruiseControl 的系统，对吧？后来像 dbdeploy 也是这么诞生的，我的朋友 Nick Ashley 和 Pramod Sadalage 打造了它，那是第一个真正意义上的数据库版本迁移工具。如果当时开源社区没有现成的解决方案，而你又切实需要它，当时的工程文化就是：那就自己动手造一个。在 Thoughtworks 工作始终秉持着这种“下一步还能探索什么”的心态。我很幸运当时公司扩张迅速，总有数不清的事情亟待完成，而我的习惯就是对一切新挑战说“没问题”。因此我得以去往世界各地工作，体验棒极了。我在 Thoughtworks 结识了我的妻子，直到今天我最好的大部分朋友依然来自 Thoughtworks。虽然我已经离开那里很久了，但那段经历对我整个工程思维的塑造极其关键。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: yeah, absolutely. it's for me that i hate it. whenever i haven't pushed myself or by found a better way of doing something. and i was lucky enough that early days and thought like that was is the constant turd of ideas and reinvention. i mean, goodness knows how many mocking frameworks and vivional control things old II built two different replacements, accrews control myself right? and so, but like II know know, well, it was that that's how my great inkle DB deploy my friends. niccashley and grand tacky was was like the first dates basue frfrching ing tall, normally source thing succeed, it exist, he needed them. and it was like, if you, if you want to do to do it, that was in mind said. and so i think it was always this idea working at thought works was always i what's next, and i was quite fortunate that because of it was growing so much. it was always things needed to be done, and my devi was knowledge to say, yes to everything. so i got travell all over the world was fantastic. met my wife. they thought works. most of my best friends will come from thought works now still al to day. so although has not been there for a long time, it was kind of very formative. i think in terms of,
+
+</details>
+
+**Speaker 1**：这非常有意思，因为 Thoughtworks 培养出了一大批声名显赫的校友。很多曾在那里工作过的人，如今在整个行业里都因其独特的思想和颠覆性的视角而闻名遐迩。他们中有些人致力于工程师教育，有些人则创立了公司，致力于在特定维度上以更好的方式构建软件。这之所以引人深思，是因为通常情况下大家对公司的刻板认知并非如此：比如像 Google、Meta 这样的产品驱动型公司，它们打造自己的专属产品，处于金字塔顶端，能够吸引最顶尖的人才，拥有极其卓越的工程文化（Google 早期正是以此闻名）；而在另一端，则是许多传统的技术咨询公司，它们不研发自己的产品，通常只是作为外援进驻企业协助交付，或者在客户遇到难题时代为解决。Thoughtworks 从业务模式上来说确实属于咨询公司范畴，人们通常不会指望这类咨询机构能产生颠覆性的底层创新。但 Thoughtworks、你以及其他人向我证明了：当你把专业做到全球极致时，即使是咨询团队，也同样能够孕育出大量的硬核技术创新。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: and it is really interesting because laff works has uh alone of my pipeline. people who used to work there who are now really well known the industry for their ideas for for thing differently. some some of the educate people, others uh have created businesses to to build software in better ways in certain dimensions. and it's just interesting because like usually, i wouldn't think of how i'll just like put it the box. i you know, yeet product companies, like like google, like meet a like they have their builder on products and and you have like different tears of these companies, some can afford the best people. and they have an next ontimes you in culture. and google was known for this matters to smix stand. and there some companies, maybe who are like law untier, and then you have the social consultanes, who are you know, they don't built their own suffer. they no do too much a bit. they come in and they help companies build, or you have a problem. you hire a group of experts. and thoughtwork technically is in this group. and usually, you would not think that there's too much innovation going on in these places, but without thouthoughorks proves to me, yourself and other people, actually, you can have like when you are the best in what you do globally, conactually have a lot of innovation that happening. there is all right.
+
+</details>
+
+**Speaker 0**：是的，那是在完全不同的一套约束条件下所产生的创新。关于这一点我经常提到……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: yeah, i was innovation with the difference set of constraints. i mean, always say there about that,
+
+</details>
+
+<!-- chunk 3/16 -->
+
+### Thoughtworks 内部的创新土壤与工程实践的阻力
+
+**Sam Newman**: 很多人加入 Thoughtworks 时，都是非常出色的初创公司产品人才。我的意思是，有很多人帮助过各种业务实现规模化扩张。但把大家放在一起看，真正从 Thoughtworks 走出来的连续创业者其实屈指可数，我认识其中几位，但确实不算多。
+
+不过我觉得，即便是在受限的企业级环境里，也始终存在创新的机会。那时候作为一家咨询公司，大家都在推崇联合交付（co-sourced delivery）。我们当时做的是一种联合交付，但本质上是赋能型的自由交付。作为顾问，你的工作条件往往取决于客户本身在做什么——除非客户明确要求你彻底改变他们构建软件的方式。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: Many people have come into Thoughtworks that were really great startup product people. I mean, a lot of, you know, a lot of Thoughtworks people make it scale up. People, all together, actually very few real entrepreneurs came out of Thoughtworks. I know a few of them, don't know many of them. But I think there was always the opportunity to innovate even within a constrained enterprise environment. So much about working conditions as a consultancy who motivated co-sourced delivery at that time. We were doing kind of co-sourced delivery, but enablement-free delivery, your working conditions are often based on what the client does, unless you're explicitly there to change how the client built software.
+
+</details>
+
+**Sam Newman**: 所以你只能面对既有的现实。但这种文化是自我强化的，因为我们骨子里已经习惯了在内部不断挑战现状、推动边界并尝试新事物。那种精神一直传承了下来。我们当时的扩张非常激进，但即便激进，也是带着这种精气神轮换着团队成员。
+
+这种文化能够维系下来吗？我的意思是，过去我们开启大多数咨询项目时，第一步都必须先去说服别人：为什么做测试是个好主意？为什么结对编程（Pair Programming）是个好主意？更不用说推行测试驱动开发（TDD）了。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: So what you got is what you work with, but that was self-perpetuating because we were already used to challenging and pushing internally and doing new things. That spirit carried on. And so I think we grew quite aggressively, but that aggressive growth was rotating people through with that spirit. Did that carry on? I mean, that we had to start most engagements with convincing people why testing was a good idea, why pairing was a good idea, let alone TDD. Yeah.
+
+</details>
+
+**Speaker 1**: 我完全能想象当时跟客户的对话是怎么展开的，他们大概会说：“等等，你们这是要干什么？我原本可以拥有 8 个工程师，现在你们让两个人结对，直接砍成了 4 个？这听起来也太糟糕了吧。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: I imagine how the conversation went, like a manager going like, "Well, what would you do here? I have like eight engineers. Now you're making it four, which sounds like a terrible thing to do."
+
+</details>
+
+### 编程不是打字：软件构建的本质是团队心智模型
+
+**Sam Newman**: 是的，这也体现了我的幸运之处，因为周围有很多人在 Thoughtworks 共同探讨这些。我跟 Martin Fowler 走得很近，他也给了我非常多的支持，包括我的第一本书。
+
+我至今仍清楚记得他说过的一句话：“编程不是打字（Programming is not typing）。”这句话彻底点醒了我，也完全改变了我后来跟客户交流的方式。如果一个客户把编程等同于打字，并因此反对结对编程，那么你面临的就是一个极其根本的认知问题。一旦我们能把这一点理清楚，那这就根本不再是关于“要不要结对”的争论了，对话的本质其实变成了：“在大多数时间里，编程到底意味着什么？”
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: Which, and this is, I mean, my good fortune, because of the people at Thoughtworks. I got to know Martin Fowler quite well. You know, he supported me a lot, right? My first book. I still remember when he said, "Programming is not typing." That fundamentally made it click for me, as I was now having those conversations with clients. If the client thinks of programming as typing, and that's why they don't want you to pair program, then you've got a fundamental problem. Once we deal with that, then it's not a conversation about pairing. The conversation is: what do we think programming actually is?
+
+</details>
+
+**Speaker 1**: 让我们把这个话题带到当下，因为今天大家正在进行一模一样的一场讨论。如今很多科技公司的 CEO 甚至创始人都在审视：在构建软件的所有环节中，最耗费时间的是哪一部分？从历史上看，大约 50% 的时间都花在编写代码上。因此许多人自然而然地认为“编程就等于写代码”，而现在大语言模型（LLM）极其擅长批量吐出代码。那么，编程的本质到底是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: But let's bring this a little bit forward, because right now we're having the same conversation, right? For a lot of CEOs, even founders who have been building tech companies, they all look at what is the most time-consuming part of what we do in building software: 50% of the time has historically been writing code. So a lot of people think programming is code, and LLMs are really good at churning out code. So what is programming?
+
+</details>
+
+**Sam Newman**: 好，我们来聊聊什么是编程。我想到了 Peter Naur 的那篇文章——也就是提出巴科斯-诺尔范式（BNF）的那位图灵奖得主。他在很多年前写过一篇论文，回顾了编程的本质。他在文中阐述道：程序本质上是存在于开发者头脑中的一套理论（theory building）。正是我们大家聚在一起协同思考、通力合作，才构建出了程序。至于我们恰好通过代码让这个程序运转起来，代码本身不过是我们在协同工作过程中产生的一个副产品。
+
+我认为产品开发无非是这种模式的自然延伸。我们共同构建的，是一个由人与系统交织的整体，而代码只是我们用来交付这个系统的其中一种手段，代码绝不是全部。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: Okay, what is programming? I think of Peter Naur's article — the guy behind Backus-Naur Form. He wrote that paper years ago, he was a Turing Award winner, and he sort of describes what is a program: a program is being a theory that lives in the minds of the developers, that is actually us working together collectively who build a program. The fact that we happen to make that program work through code — the code is really a side effect of how we work together. And I think product development is just that extended, right? What we are building collectively, we are building a system together, and the code is one of the mechanisms we use to deliver the system, it's not the only thing.
+
+</details>
+
+**Sam Newman**: 从整体视角来看，核心就在于此：我们之所以盯着代码不放，是因为在历史长河里，那是我们把时间具体呈现出来的载体。但从经典的制约理论（Theory of Constraints）来看，如果你把某一个环节的速度大幅提高，瓶颈必然会转移到其他地方，从而暴露出系统在别处的摩擦点。
+
+我甚至认为，在过去很多时候，编码速度从来都不是真正的瓶颈；瓶颈在于代码是怎么被写出来的，在于迟缓的反馈循环以及诸如此类的事情。这让我又回到了刚才提到的观点，就像前几天有篇文章里引用的观点一样：构建软件是一项集体事业，是人与人之间的协作。Kent Beck 在他的第一本书里也写过：软件设计本质上是一场处理人际关系的修行。AI 并没有改变这个底层现实。
+
+过去这十五年里，以我的经验来看，唯一的进步是我们稍微多理解了一点：我们需要更好的工作关系，比如产品负责人与研发之间的关系。所以说，编程的创造过程，本质上是协同运行软件的过程，从来就不仅仅是开发人员单打独斗的事情，过去从来不是，现在更不是。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: So I think holistically, that's what it's all about. We focus on the code because that's historically been where we sort of spend the time. But I think this is also a classic Theory of Constraints stuff, right? If you speed one part up, you get constraints elsewhere and it exposes a friction point elsewhere. I would also argue that a lot of the time the coding was not the problem, not the bottleneck; it was how the coding was done, delayed feedback cycles and things. But I do come back to that piece again, like modern stories referenced recently: building software is a collective endeavor, it's people working together who build software. Kent Beck put it in his very first book that software design is an exercise in human relationships, right? AI doesn't change that. And I think all that's really happened over, say, the last 15 years in my experience is that we've got a bit better understanding that we need better working relationships — product folks, for example. The programming and creating is the collective of operating software, and it's not just developers who do that, never has been.
+
+</details>
+
+### 从三次创业失败到独立咨询顾问
+
+**Speaker 1**: 在离开 Thoughtworks 之后，你就开始独立执业了，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: And so after Thoughtworks, you've gone independent, right?
+
+</details>
+
+**Sam Newman**: 在这之间我做了三家初创公司，出于各种不同的原因全搞砸了，所以千万别找我咨询怎么创业成功。之后我才正式成为独立顾问。那时候我住在澳大利亚，后来搬回了英国。自那之后我就一直保持独立状态，做的事情也挺杂的。
+
+我在 Thoughtworks 的业余时间写完了《微服务设计》（Building Microservices）的第一版。当那本书正式出版的时候，我已经在那家公司待了很长时间，我意识到自己正变得“体制化”。人在一家公司待久了都会遇到这种临界点：你觉得有些事情是公司必须改变的，你也尝试过去推动这些改变，但公司根本不想变。要么是因为我不擅长推动组织变革——这很可能是事实；要么就是他们觉得根本不需要变——这大概率也是事实。与其继续赖在那里变得满腹牢骚、怨天尤人，我还不如直接离开。所以我当机立断选择了辞职，成为一名独立顾问。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: I did three startups, none of them worked out for different reasons, so don't ask me for advice on how to succeed at startups. And then I went independent. Yeah, I was living in Australia at the time and moved back from Australia. And yeah, been independent ever since, doing kind of a mix of stuff. Ever since I've written the first book on microservices, which I think I wrote in my spare time at Thoughtworks. And then that book came out. And I'd been at Thoughtworks a long time, I realized that I was becoming institutionalized. You get to a point with a company, I think: these are things this company needs to change, and I've tried changing those things, and they don't want me to change them. So either I'm bad at changing them, which is probably true, or they don't think it needs to be changed, which is also probably true. It's like, I could hang around and get bitter, or I just go now. So I was going now. I thought I'd be an independent.
+
+</details>
+
+**Sam Newman**: 从那以后发生的一切都非常有意思。一方面，所有束缚都被打破了，整个人彻底自由；但自己单干的痛苦之处在于，你的老板经常是个混蛋——现在的 Sam 经常得为了过去的 Sam 随口许下的承诺而疲于奔命、痛苦买单。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: It's been really interesting ever since, because on one level the shackles are off. The problem of working for yourself, though, is that the boss is frequently an asshole. So yeah, current Sam frequently is cursing past Sam for the commitments he's made.
+
+</details>
+
+**Speaker 1**: 哈哈，这真的太形象了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Haha, that's so true. Yeah, yeah.
+
+</details>
+
+**Sam Newman**: 是啊，我都快五十岁了，却依然没吸取这些教训。虽然踩了无数次坑，但现在总算慢慢学聪明了一点。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: Yeah, yeah. I mean, as I say, I'm almost 50, and I'm still not learning the lessons, right? And yeah, made those mistakes enough times now.
+
+</details>
+
+### 微服务架构的起源与湖区研讨会
+
+**Speaker 1**: 我很想聊聊微服务的话题。你在 2015 年出版了《微服务设计》，写作大概是从 2014 年开始的。作为对比，Uber 是在 2015 年开始对外大谈他们拥有成千上万个微服务的。也就是说，你写这本书的时候，正是微服务概念在初创圈开始走向主流的时间节点。
+
+你还记得微服务最初是怎么兴起的吗？这个名词到底是在哪里、由谁提出来的？是 Martin Fowler 和 James Lewis 吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: So I want to talk about microservices. You wrote the book *Building Microservices* in 2015, you started to write in 2014. And as reference, Uber started to talk about how they have thousands of microservices in 2015. So you were kind of writing this book right as the concept of microservices was starting to go mainstream across startups. Do you remember how and when microservices took off? And where was it even coined? Was it Martin Fowler and James Lewis?
+
+</details>
+
+**Sam Newman**: 这得追溯到更早的时候了。你必须意识到，很多技术演进就像干柴遇烈火，在野火真正蔓延开来之前，空气中早就有水分和温度的积累了。
+
+大概在 2011 到 2012 年间，James Lewis 当时正在与很多不同企业交流，那些公司当时构建的系统在今天会被归类为面向服务架构（SOA）。在此之前，有一股我们称之为“游击队式 SOA”（guerrilla SOA）的民间浪潮，核心诉求就是试图简化传统的面向服务架构。大家转向了 REST 风格的 Web 服务，试图摆脱过去的繁文缛节。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: So going back in the day, you've got to remember again, it's like something in the water. Like before we have a bushfire, there was a lot built up before the bushfire kicked off. Say this would be 2011 to 2012. James was talking to a bunch of different companies who were building what would have been classed back then as service-oriented architectures. Earlier there had been this movement we refer to as the guerrilla SOA movement, which was trying to simplify service-oriented architecture, shifting toward REST Web services done by people like...
+
+</details>
+
+**Speaker 1**: 没错，早期的传统 SOA 充斥着极其繁重的格式。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Yeah, that's the original service-oriented architecture, had like this...
+
+</details>
+
+**Sam Newman**: 是的，全是 XML、WSDL，还有所谓的简单对象访问协议（SOAP）——名字里虽然带个“Simple”，但跟简单两个字根本沾不上边，极其沉重。后来像 Jim Webber 等人提出过非常关键的思想，倡导去中心化治理，也就是“端点要聪明，管道要愚钝（Smart endpoints and dumb pipes）”，不要把复杂的总线逻辑堆在中间，而是让管道保持简单。
+
+这全都是当年的大背景。与此同时，我们也在持续交付领域做了大量工作。我当时负责欧洲区的持续交付业务，很多咨询项目的核心任务就是攻克“最后一公里”的交付瓶颈：代码已经写好了，怎样才能尽可能快、尽可能稳妥地把代码推到生产环境中？也就是贯彻持续交付的思想。2006 年 Jez Humble 他们在探讨这些工作流时我就在场，很多对话我都深度参与过。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: XML formats, and WSDL, and Simple Object Access Protocol — never was a word "simple" so poorly used. So you had this whole heavyweight thing. And Jim Webber had been pushing against centralized managers, like "make the endpoints smart, make the pipes dumb" to keep things simple. This was all the background. We were also, at this time, doing a lot of work around continuous delivery. I was running continuous delivery practices for Europe at the time. And so a lot of engagements were like optimizing the final mile: you've written the code, how do I get it into production as quickly and effectively as possible, basically taking the ideas of continuous delivery. I was around when Jez Humble did those workflows back in 2006, having those conversations.
+
+</details>
+
+**Sam Newman**: 当时 James 正在接触很多构建新型面向服务架构的公司。在那些系统里，单个服务非常轻巧，甚至可以被整体迅速替换掉。你可以把它看作是一种粒度更细的服务形态。所有这些探索都在同步发生。
+
+后来我们在英格兰湖区（Lake District）举办了一场软件架构研讨会。James 当时把这一类东西叫做“微应用”（micro apps）。当时屋子里坐满了人，有人突然插了一句：“微服务怎么样？”我甚至记不清具体是谁喊出这一句的，因为当时屋里电视开着，我们大多数人都还带着宿醉。但这个词一下子击中了大家。
+
+后来，James Lewis 和 Martin Fowler 在 Martin 的个人网站上联合撰写发表了第一篇关于微服务的文章。所以 James 确实是这一模式的最早发现者和提炼者，将其正式定名为“微服务”。而与此同时，我则在基础设施和自动化交付领域进行着深度的实践与梳理。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: James was talking to companies that were creating service-oriented architectures where they could replace the services quite quickly. You'd look at it instead as a fine-grained form of services. That was all happening. So when we had this architectural symposium up in the Lake District, James was calling them "micro apps" at the time in this room. And somebody else in the room said, "Microservices?" I don't remember who said it, we had a television on in the room and most of us were hungover. And then James and Martin write the first blog post. The first paper on Martin's website was written by them. So James is the original discoverer of that pattern they called microservices. At the same time, I was doing a lot of stuff around infrastructure automation.
+
+</details>
+
+<!-- chunk 4/16 -->
+
+### 微服务的缘起：从持续交付与架构阻碍谈起
+
+**Sam Newman**: 所以我是从一个完全不同的视角切入这个领域的。我觉得 James Lewis 更多是从架构视角来看待它，而我则是从持续交付的视角切入。在当时那个时间节点上，近十年来这几乎一直是我专注的核心方向。没错，正是在那个时候，我开始看清架构层面所带来的阻碍。也就是说，如果我希望能频繁地做出变更，但这些我想变更的东西却和其他系统紧密交织在一起……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: and so i was coming in it from a different lens. so i think james was coming it more from an architectural lens. and i was coming into it from a continuous delivery lens. i spent at this point, almost ten years would out be my focus. yeah. and then i was starting to see the architectural impediment. so if i want to change things frequently, but the things i want to change are integrated with other things...
+
+</details>
+
+**Gergely Orosz**: 就像单体应用那样——虽然你可能不会完全用这个词来形容它，但事实确实如此。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1]: like monolith, yeah, although not now that i would describe it exactly right.
+
+</details>
+
+**Sam Newman**: 确实。我的意思是，早在 2012 年我就做过一场关于“为快速发布而设计”（Designing for Rapid Release）的演讲，当时就已经触及了这方面的内容。所以 James 后来把这些东西梳理出来、正式命名并提炼出一些模式，我在 Thoughtworks 看到之后就觉得，我之前一直在聊的那些东西和这套思路显得非常契合且合情合理。而且我一直都很想写一本书。老实说，我一直想写一本动物封面的书——也就是 O'Reilly 出版的书，因为对我来说，O'Reilly 的动物书才算得上是真正的书。于是我就开始动笔写了。我其实一直觉得写作蛮……我很幸运的一点是，我觉得写作是一件很享受、而且写起来挺轻松的事。所以我当时就坐下来开始写这本书。但对我而言，它本质上就是持续交付的一种延伸，是一种只有在持续交付和 DevOps 成为可能之后才得以实现的架构风格。我们以前也有过类似的想法，比如 Erlang 就体现了这些理念，但把它变成一种现实、可行且易于操作的东西，归根结底其实就是一次将 1970 年代经典概念“偷运”到现代的实践。这对我来说完全没问题，我完全赞同，它无非就是重拾了对信息隐藏、低耦合与高内聚的重视。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: i mean, i did a talk on designing for rapid release in 2012, which was touching it. so basically James had thought this through and put a name to this stuff and put some patterns, and at Thoughtworks the stuff i was talking about over here seemed quite sensible. and i always wanted to write a book. i mean, honestly, i wanted to write an animal book. i wanted to write an O'Reilly book, because as they said, the O'Reilly book is *the* book. yeah. and so i've just started writing. i'm quite lucky that i find writing enjoyable and quite easy. so i just sat down to write the book. but for me, it was an extension of continuous delivery, and it was a style of architecture that was only possible because of continuous delivery and because of DevOps. we'd had these ideas before—i mean Erlang is a representation of these ideas—but making it a real, practical, and tractable thing... really fundamentally, the whole thing's been an exercise in smuggling through concepts from the 1970s, which is fine by me. right, i get it: it was attention to information hiding, and coupling and cohesion.
+
+</details>
+
+### 微服务火势蔓延：从先锋探索到行业跟风
+
+**Gergely Orosz**: 没错。但正如你所说，这只是在丛林大火蔓延之前的火星。接着火势就彻底爆发了：突然之间，像 Uber 这样非常知名的公司开始在 InfoQ 等公开技术大会上大谈自己拥有成千上万个微服务，这立刻吸引了所有人的目光。紧接着，几乎像是一夜之间，大量初创公司和企业都开始跟风，把自己的系统标榜为微服务架构，整个行业掀起了一场轰轰烈烈的“换汤不换药”改名潮。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: that's alright. but then as you said, like this was just a spark before the bushfire. and then the bushfire starts: like suddenly, again, i think Uber was a very notable company starting to talk in public about having thousands of microservices on conferences like InfoQ, and that got people's attention. and then it kind of seemed that overnight, a lot of startups started to say, like, "you know what, let's do microservices." it was a lot of rebadging going on.
+
+</details>
+
+**Sam Newman**: 确实如此。我很幸运地写出了关于这个领域的第一本书。当时在 YOW! 大会上认识了 Netflix 负责性能与可靠性的 Adrian Cockcroft 以及 Roy van Rijn 等人；我还认识澳大利亚 REA Group 的同行。这些公司都在以各自不同的方式开拓探索、挑战极限。因此，我在写书时有两个非常扎实的真实世界案例可以引用。但在当时，大多数公司并没有那么公开地谈论这些实践。而且在 Netflix 把自己的架构称为“微服务”之前，他们其实只是将其称为“细粒度的 SOA”（fine-grained SOA）。在某种程度上，后来在 Uber 和其他地方发生的事情也是如此——我们当时只是没有一个专门的新名词来指代它。再后来的发展大家都知道了：所有人转头就把自己的 SOA 架构直接改口叫成了“微服务”，这其实就是一种语义扩散（semantic diffusion），但这也是意料之中的事。所以我后来就一直坚持为真正的定义发声：它是否具备独立可部署性？我一直把它定位成一种“带有强烈主观意见的 SOA 风格”（an opinionated style of SOA）。你可以不同意这些观点，那完全没问题；别人也可以有不同看法，但我会不断重申这一点。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: i mean, i was lucky to write the first book. Adrian Cockcroft and folks from the YOW! conference—Adrian was looking after performance and reliability at Netflix. and i also knew people at REA Group in Australia. and these are companies that were very much pushing the envelope in different ways. and so i had two very good real-world cases to draw upon in my book, but most people weren't talking as publicly around that. and also before Netflix referred to their architecture as microservices, they just referred to it as fine-grained SOA. and to an extent, you know, what happened at Uber and elsewhere: we didn't have a different word for it. then, of course, what happened was that everyone just called their SOA architecture microservices, which is sort of semantic diffusion, but that is to be expected. so i just kept fighting the good fight: is it independent deployability? and i positioned it as: it's an opinionated style of SOA. you may not agree with the opinions, that's fine, but that's what was repeated.
+
+</details>
+
+### 微服务与 SOA 的本质区别
+
+**Gergely Orosz**: 那么在你的理解中，微服务与传统的面向服务架构（SOA）之间最核心的区别到底是什么？在整个面向服务的架构演进中，你认为关键的区别体现在哪里？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: so then what is the difference between microservices and what was SOA services? so in the architecture service orientation, what are the differences in your view?
+
+</details>
+
+**Sam Newman**: 问得很好。需要先澄清的是，我有我的一套定义，你也可以有你自己的定义；不过既然我是那个写书的人，那我自然倾向于使用我的定义。如果你不满意，完全可以去写一本你自己的书！我认为微服务体现了两个非常强烈的核心主张。第一点，也是最重要的一点：你的微服务必须具备独立可部署性（independently deployable）。也就是说，部署和变更的最小单元必须是单个微服务或单个服务的边界，而不是把所有东西捆绑在一起全量部署。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: very nice. not to be clear, right, i have my definition, you might have your own definition, but i'm the one who writes the books on it, so like my definition... write your own damn book! um i always began it as: there are two kind of very strong opinions i think we hold with microservices. the first, and it's most important, is that your microservice needs to be independently deployable. so the unit of deployment, the unit of change, needs to be a single microservice boundary, a single service boundary, rather than deploying everything together.
+
+</details>
+
+**Gergely Orosz**: 也就是说，绝对不能出现那种“必须同时部署三个服务”的情况。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: that's like deploying three services at the same time.
+
+</details>
+
+**Sam Newman**: 没错，最起码的底线是针对单个服务的独立发布。而第二点主张——虽然这一条有时会有例外——就是微服务边界的默认划分方式应当围绕业务领域（business domain）展开。这其实是借鉴了领域驱动设计（DDD）中限界上下文（Bounded Context）的思想。相比之下，传统的很多 SOA 架构在很大程度上都被技术维度的拆分所主导，比如经典的三层架构或水平分层架构，服务的切分是根据底层技术的形态来定，而不是去思考业务功能本身。相比独立可部署性，业务领域的划分略显灵活一些，但无论如何，独立可部署性绝对是压舱石般的核心原则。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: yeah, minimum, right? and this is a single service. and the second one, which i think there can be exceptions to, is that the default way for defining your service boundaries is around your business domain. this is taking the concepts of bounded context that you have to do, rather than a lot of SOA architecture which was dominated to an extent by technical decomposition, traditional n-tier architectures, layered architectures, where you've picked your decomposition based on the nature of tech, rather thinking about the business functionality. that's a bit softer; independent deployability is the main thing though.
+
+</details>
+
+### Uber 的微服务实践：失控的膨胀与现实约束
+
+**Gergely Orosz**: 这让我想起了当年在 Uber 的经历。在你的书开始大火的时候我正好在 Uber，大概是 2016 年左右。我们当时确实做到了独立可部署的服务，但我们几乎没有花太多心思去深入思考业务领域。每个服务都有各自的接口与对外契约，并且类型约束越来越强，开发体验和工具链也一直在改善。但在日常执行中，你可以想象，工程师往往仅凭自己的经验做决定。工程师们会想：“既然如此，那我们就写个新服务吧！接口定义在这儿，谁都可以调用。”不管是资深工程师还是经验不多的新人，都在疯狂新建微服务，其他团队也开始依赖它们。几年之后，公司不得不专门组织力量去梳理关键业务链路并对服务分级打标。结果大家发现，某个孤零零的小服务竟然卡在极其关键的主流程上，仅仅因为大量上下游都在调用它，它瞬间就被迫升级为超高优先级的核心服务。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: okay, well, thinking back at Uber: i was at Uber at the time when your book was starting to become really popular, from 2016. and we had independently deployable services. we didn't really think too much about the business or domain. they had all these interfaces, they had contracts that they offered, increasingly strongly typed, and we used better ways to do it. but it was just more like—as you can imagine, there were devs often deciding based on their experience: "let's build a new service, here's the interface, then anyone can use it." these were developers, even not very experienced devs, spinning up a microservice and others started to use it. and suddenly, years later, there would be these exercises to figure out the critical path and label services. and then this loan service was on the path of something critical and needed to be reclassified as a really high-tier service because a lot of people were using it.
+
+</details>
+
+**Sam Newman**: 这种情况在很多环境里都屡见不鲜，比如 SoundCloud 早期也有过类似的经历。这也和企业的组织文化密切相关：公司文化到底是否默许甚至鼓励团队放手去搞出这种野蛮生长的技术环境。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: i mean, that was always... also in some environments, hearing from SoundCloud, they had similar things. and this is also a lot about a corporate culture: what was acceptable in that kind of environment to go and do stuff.
+
+</details>
+
+**Gergely Orosz**: 完全没错。而且我觉得这也是为什么 Uber 当时会走上这条路。我最近刚和 Uber 当时的 CTO 聊过微服务的真实内幕。他说，其实他从来没想要搞出那么多服务，这纯粹是在现实约束下被逼出来的选择。当时 Uber 有一个庞大而笨重的单体系统——他后来在播客里也讲过这段故事，我们会把链接附在下面的节目说明中——那个单体系统不仅跑得极慢，而且严重拖慢了研发和交付进度。而竞争对手当时都在迅猛发展，Uber 必须跑得比谁都快。所以管理层希望尽快摆脱单体应用、将其拆解为小服务，但他们清楚地意识到：如果不下一个强硬的死命令禁止向单体添加新代码，这件事情永远也做不成。于是管理层下达了硬性规定：所有新功能都必须以独立服务的形式全新构建，谁建的谁负责，中央平台概不过问。结果，成百上千个彼此独立的服务瞬间爆发式涌现出来，但这根本不是最初的初衷。在成功拆解单体数年之后，团队才回过头来审视，考虑是不是应该基于业务领域把一些零碎服务重新合并。但当时外界根本看不到这些背后的苦衷与权衡，大家只看到表象：“哇，Uber 有几千个微服务，几乎平均每个工程师负责一到两个！”全世界看到的就只有这个神话。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: it's absolutely fine, and i think that's why Uber, for example, went there. i just talked with the CTO at the time about what was the real deal about microservices. and he said, like, he never really wanted that many services, but it was just more of a constraint because Uber had a monolith. the story was—which he told on a podcast, we'll link in the show notes below—that Uber had this big monolith, and it was really slow. it was slowing delivery down, and they needed to move fast because all the other competitors were out there. so they said, right, they wanted to get rid of the monolith into particular small services, but they knew unless they had a strong mandate that you cannot add new stuff to it, this will never happen. so he said the mandate was: everything new needs to be your own service, you take care of it, we don't care. and suddenly so many independent services were born, which was not the goal. and years after the fact, when they decomposed the monolith, they're now looking at maybe it makes sense to merge based on business domain, etc. but this story wasn't really told at the time; it was just all looking like, "look, Uber has thousands of microservices, almost one or two per engineer, right?" and this is what the world saw.
+
+</details>
+
+### 微服务是终极手段，而非万灵药
+
+**Sam Newman**: 确实是这样。但这恰恰反映了微服务在行业落地时的真实面貌：它终究只是工具箱里的一件工具而已。我甚至常把微服务形容为一种“不得已而为之的底线架构”（architecture of last resort）。说真的，确实如此！因为它会非常自然而强制地逼迫你把系统状态以及其他所有组件推向极其激进的分布式状态。因此，采用微服务最充分、最正当的理由之一，其实是当你在组织层面上追求极高程度的团队自主性。如果你希望各个团队之间能够高度自治、彼此独立地开展行动与决策，那么微服务架构在组织契合度上是一个极其绝妙的选择。但归根结底，它只是一种实现目标的手段，对吧？然而许多人在这一点上本末倒置了。很多人一提到要采用微服务，就仿佛觉得只要贴上这个标签，某种魔法就会自动降临。事实并非如此：如果你追求的是组织自主性，那才是你的最终目标，而微服务只是帮你达成该目标的机制之一。而在现实中，我合作过的绝大多数大型企业组织，其实真正渴求的就是这种自主性：他们拥有极其庞大的研发团队和层层叠叠的中间管理层，平日里的推进效率却非常低下，所以他们苦思冥想解决之道，最终把组织自主性看作拯救所有顽疾的灵丹妙药。当然，我不想花太多时间在这里争论这在所有场景下是否都是好主意；但在微服务最能发挥威力的场景下，组织自主性确实是核心驱动力，尽管行业中也存在着其他特例。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: i mean, it's also though... but this is the reality of microservices adoption: it's just a tool in the toolbox. i mean, i've described microservices as being an architecture of last resort. really, yeah, absolutely, because it pushes you quite naturally to a more aggressive distribution of your state and everything else. and so you have a good reason: one of the best reasons to use microservices is if what you actually want is an organization with a high degree of autonomy. if what you want is teams who are able to act independently from each other, the microservices architecture is a fantastically good fit. but then really it's a means to an end, right? so that's often a lot of people get wrong. i think you say "adopt microservices" and they think some magic dust is going to happen. and no: if you want organizational autonomy, that's what you're working towards, and this is just one of the mechanisms to get you there. and most of enterprise organizations, the vast majority of ones i've worked with in this space, that's what they're after. they've got huge numbers of developers, lots of middle management, they do not get much work done, and they are thinking: what do we do? organizational autonomy becomes the solution to all problems. again, i don't want to get into saying when that is a good idea, but i think that's where microservices can be especially useful, though there are other exceptions as well.
+
+</details>
+
+<!-- chunk 5/16 -->
+
+### 互联网科技公司与传统企业的领域边界差异
+
+**Speaker 0**: 像优步（Uber）这类组织，还有 Netflix 也是如此。我们之前聊过 Netflix 的组织方式，他们的团队已经在围绕业务领域进行相当清晰的边界划分了。这种方法本身就自然具备了高层级的业务领域边界，因此这些事情演进得非常顺理成章。对我而言，那是一个非常符合逻辑的演进阶梯。但这里面其实还有一个根本性的差异，这是我很早就意识到的：当你去那些互联网科技公司做咨询，对比去传统的传统大型企业时，情况是完全不同的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: and so the organiztions u. you know, uber IIIIII know netflix as well. things like mamaing exsignment talked about netflix, but the teams are already faadly. well scope around. it was approach already no. and you had those natural high level boundaries around the business dominins. so those things flow naturally. and so that for me, was a logical kind of stepping stone. you also have a difference. so this is i i've rerezzed quiely on when you go and do the work in the dot coms. this is stand prizoranization.
+
+</details>
+
+**Speaker 1**: 你说的“dot-coms”（互联网泡沫时期的公司），指的就是那些数字化科技原生企业吧？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: when you say dog comes, you mean, the digital companies.
+
+</details>
+
+**Speaker 0**: 是的，我年纪够大，所以习惯称它们为 dot-coms，但本质上就是指现代科技公司。我的意思是，从底层概念来看，它们的业务核心域往往极其简单，其领域模型清晰且纯粹。然而相比之下，绝大多数大型传统企业的业务领域要复杂得多得多，因为它们背后的业务流程已经存在了十年、二十年、三十年，乃至四五十年。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: yeah yeah, the companies say companies i'm old enough. i do talk about dog comes, but the tech companies, i mean, fundamentally algwith, you know, the make from the the main concept that inccredibly simple. the domains are very, very simple. compared enterprise ororananiztions by large, the mainins. they are much much more complicated because it based on business processes that have existed for ten twenty thirty, forty fifty fifty years. yes.
+
+</details>
+
+**Speaker 1**: 确实是这样。你的意思是，在很多科技公司里，产品形态非常明确：这就是产品，这就是它赚钱的方式，基本上就这么简单。比如在 Uber，起步时模型非常单纯——比如打车业务（Rides），这就是它的盈利模式；后来又有了 Uber Eats 外卖业务，这是一个独立的业务。虽然随着时间推移，业务确实会变得越来越复杂，但最开始的时候，它真的极其简单，界限分明，非常清楚一个业务在哪里结束、另一个业务在哪里开始。即使早期上线 Uber Eats 时为了快速推向市场做了一些临时拼凑的 hack——直接搭建在原有的打车基础设施之上，导致一个外卖订单在系统底层对应着两次行程（trips）——但无论如何，就像你所说的，在初期阶段，这一切的业务模型是极其直观简单的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: yes. so so what you mean in a lot of of companies of product is pretty matasure re's re's product. here's hepth makes money, and that's kind of it. and we have another product in uber, and that's a uber like a simple thing as there's riits, which it makes money like this. and then there's uber eats, which is a separate business overtime by the way, does get more compleicpbut. but when ststart, it's really, really, really simple ah and it's really separate and it's clear like where one ends for just where the other begins. and then you do some hacks when in these launch uberriies with it quickly, and he built it on the right infrastructure. and the uberberies order has like two trips attached to it because but anyway, but but but as you say like early on, it starts very simple.
+
+</details>
+
+**Speaker 0**: 而且在那些数字原生环境中，业务流程与业务流程的数字化实现是同步伴随演进的。但许多传统企业根本没有这样的演进条件，它们的第一代数字化产品，往往只是把多年来基于纸质媒介运转的手工流程生硬地代码化。你面对的这些企业，早在数字化时代到来之前就已经存在并运转很久了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: but then there also you knows environments your business processes and the digital mentation as business processes is evolving together. a lot of enterprise organizations didn't have that mean their first generation of digital products were codifications of paper based processes also also youare talking to these companies as before digital.
+
+</details>
+
+**Speaker 1**: 比如传统零售鞋企 Adidas，或者是各类传统银行机构。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: let's say, and adidst or a less issue company virtue,
+
+</details>
+
+**Speaker 0**: 还有所有的大型银行。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: all banks,
+
+</details>
+
+**Speaker 1**: 所有的传统银行。它们现在的状态就像是：“我们内部有着极其繁琐的历史业务流程，现在我们必须编写软件来完美复刻我们在线下所做的一切。”这无疑非常棘手。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: viviral, al banand. and now they're like we have all these processes. and now we need to build a software that mmics what we do, which, of course,
+
+</details>
+
+**Speaker 0**: 没错，那就是问题的起点。Eric Evans 的《领域驱动设计》（Domain-Driven Design）那本书大约是在 2003、2004 年出版的，那本书其实正是对当时现实的真实映射——绝大多数软件开发工作，本质上都是我们在试图对既有的、非数字化的线下业务流程进行建模，并探讨如何通过面向对象和领域模型去实现这一点。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: that's that you start off up in. that's, but the whole imagzine book came at two thousand, and it was a magine zone came at two thousand four, and it was a reflection of the fact the vast majority of software development was the process of us trying to model existing non digital processes. and how you do that.
+
+</details>
+
+### AI 时代下的软件抽象层级与组织重塑
+
+**Speaker 1**: 我在想，面对如今全新的技术浪潮，我们是否也会遇到类似甚至完全一样的问题。正如我们所知，AI 工具已经全面登场了，大家也看到它们在代码生成方面非常强大。现在行业中存在两类公司：一类是传统的数字化公司，拥有成熟的前 AI 时代工作流——编写需求规格说明书、产品经理与架构师定方案、下发给开发人员、配合设计师与 QA 测试人员，每个角色分工明确，整套流水线像精密润滑的钟表一样运转；而另一类则是所谓的 AI 原生初创公司（AI-native startups），团队可能只有寥寥数人，从创立第一天起就全面使用 AI Agent（智能体）处理一切事务，两者的协作方式有着根本不同。随着这一切不断成熟并确立最佳实践，原有的成熟企业大概率也会像当年转型一样，试图把这套全新的 AI 工具生搬硬套（retrofit）到他们现有的传统工作流程中去。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: i wonder it if we will have a different or but similar problem of the same thing. now that you know, we know AI tools are here. we know that, for example, the're greaagenererating code, and we have two sebs companies. we have a company, a digital company that has this is prea. i there used to be a writing, protocohehement document, deploying developers, product managers, designer. yeah QA. they all have the roles and it it works like a really well old machine. and now you have these so called AI native startups who just again, they have a few people they're just at from the start. they're using agents for everything. they have a very different postdent at someway. on this whole thing me will mature, and we will have best practices will have the existing companies who, like the previous on, they will try to retrorofch. you know, this, this tlling to how they're working today.
+
+</details>
+
+**Speaker 0**: 这种现象已经在发生了。现实是，传统大型企业很难在第一代转型中真正取得成功，因为其固有的企业组织文化与 DNA 往往会从根底上将这种颠覆性的尝试碾碎。这需要很长的时间去演化。但我认为整个行业目前都在极力理解和适应一个核心概念：我们现在是否正在跨入一个全新的抽象层级？
+
+软件工程的历史本质上就是一部关于抽象层级演进的历史。我们从最初编写机器码，演进到编写汇编语言，再到发展出各种通用的高级编程语言。随之而来的理念是，程序员的脑海心智模型（mental model）决定了代码的演进方式。在当时看来，最富生产力的方式是在 Java、C# 或高级语言层面去表达业务与逻辑，而不是在汇编指令层面苦苦挣扎。
+
+而我们现在讨论的本质，实际上是将这个抽象层级再度向上推升了一层。我们依然是在共同构建软件产品，依然在思考软件应当是什么形态，依然在构建那个心智模型；只是现在可能以一种更加协作化的方式，比如让更多的产品人员直接参与到这一层抽象的构建中，或者直接通过编写规格规范（specs）来进行。那么对我来说，核心问题在于：我们真的准备好跨出这一步、迈向这个全新的抽象层了吗？我的答案是：还没有，至少绝非所有地方都准备好了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: it's already happening. i mean, then anything is enterprise companies will really be successful and doing those first genam things. because ultimately the corporate DNA would just crush that stuff from then right? and it'll take a while, but i think the whole industry getting is grrapping with the idea of, like, are we now moving to a new level of abstraction, right? so in socp, as all about abstractions, right is, but you know, we went from doing machine code doing somebody he went from the sebrgital purpose, programing languages. and you coming to idea of the programm being the mental model would evolve that mental model of the code one. if you that was a most effective place was us working at job. you know, java naxi shop whatever is rather than working at assembly level, right? and i okable is actually what we're talking about really, which dipping that level up. we still actually building a product together. we're still thinking about what the software is. we still building that mental model, maybe now more collabortively involving, you know more product people, for example, in that conversation or we writing aspects. and so the question for me is, are we ready to make that step? and the answer is no, not everywhere.
+
+</details>
+
+### 代码、规范与生产环境：单一真实来源之辩
+
+**Speaker 1**: 这个切入点非常深刻。因为如果你仔细想想，在过去像 Facebook 这样的科技公司内部一直流行着一种信条，大意是“代码即真相”（Code is the single source of truth）。通常在很多科技公司里，如果你想确切了解系统到底是如何运作的、核心真实逻辑究竟保存在哪里，它绝不是记录在文档里，而是在实际承载业务逻辑的代码当中。如果代码维护得当、结构清晰且注释良好，你就能直接从代码中读出最真实的业务逻辑和规则。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: this is a really good point because if if you think about it, like you know, like one of the the montrtras inside it facebook gies to you that i think some something along the land, that code is code st truth or something like that. but in generally a lot of tech companies, if you want to know like how things work, like where the true lives is that in documents? or is it in the code business logic? it's in the code in the business logic? and if if it's well maintain code often well comon to are structured, you can i should see the business logic in the rules for, i don't know, for example,
+
+</details>
+
+**Speaker 0**: 在这一点上，我觉得我必须借用我的好友 Charity Majors 的观点来表达：真正的真相永远只存在于生产环境（production）中，其余的一切都只是我们说给自己听的自欺欺人的谎言。生产环境才是唯一的终极真相。
+
+不过，如果就“系统应该做什么”的定义而言，业内目前确实存在着一场持续的争论：这个权威定义到底应该存在于何处？它是在代码本身，还是在规格说明（spec）中？Birgitta Böckeler 最近在 Martin Fowler 的网站上发表了一篇非常出色的文章，专门讨论了基于规范的开发（Spec-driven Development）。她在文中探讨了不同公司的理念：有些公司是“规范先行”（Spec-first）或“以规范为锚点”（Spec-anchored）。这在很大程度上取决于团队如何定义“真实来源”（source of truth）。
+
+现在很多公司使用像 Kiro 或 Spec Kit 这类工具来定义功能特性，然后直接由大语言模型（LLM）去执行并生成该规范对应的代码，并在整个过程中进行迭代。最初，很多团队只是用规范来生成代码，生成完就把规范扔掉了；但现在有另一些公司选择把规范持久化保留下来，一旦未来功能需求发生变更，他们就去修改规范。这就导致系统的权威事实来源被割裂：一部分人认为代码是真实来源，另一部分人认为规范才是定义系统行为的真实来源。甚至现在开始出现一些公司，开发人员根本不看代码，他们只看规范本身。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: say II feel like i've got to channel my friend charity at this point and say, the truooth is production that as thing elis is, is the lies we tell us. our production is truth. um but i think in terms of like a definition of what the system should be doing there. is this ongoing debate about where is that definition? is it the code with the spect brigeto brobroketed, a nice article on martin photos website recently about spectrum development, and she talks about the idea. some companies using uh being spect first or speak ankled. and a lot of it comes down to where they see the source truth being. so a lot of companies using things like kero or speck kit to define a feature, and then at the LM executes that spect, and you could iterate ate on proprocess, right? so so lot, we we always start off the user spect to write the code, and then they throw the back away and then get other companies that keep the speck. and then when the future changes that adopdate speck. and so there's all seeing a bit the code and a bit the spect is a source of truth until of what the system should do. and then you stannow start arting to get companies where they did even even look at the code. and they just look at the spect.
+
+</details>
+
+**Speaker 1**: 竟然连代码都不看了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: no.
+
+</details>
+
+**Speaker 0**: 没错，我们正在朝着这样一个以规范为核心的光谱两端演化。她在文章中为这些现象给出了非常精准的概念定义。但对我来说，关键问题是：这真的是正确的演进道路吗？我不知道。我认为在此之前，我们还有很多根本性问题必须解决。
+
+当让编译器和运行时执行一段 Java 代码时，我们在类型安全和运行机制上拥有确定的信心；但是当你仅仅通过自然语言或规范提示词去驱动系统时，在整个世界准备好接受“规范即系统行为的终极真实来源”之前，还有太多的未知数和不确定性需要回答。更何况，生产环境中的实际运行状况永远才是衡量一切的最终真相。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: and so we're kind of going on this spection. and she had some great terms for these. and i think for me, is like, is that the right path i don't know, i think, is a lot of questions about about we we d need to do to to get that. we have a degree of confidence about what happens when i ask you, you lot of javava code beyond the safety of the companer in the run time, you know, will that stuff there's a lot more questions to answer? i think before the whole world is ready to say, the speck is the source of truth of all assim is supposed to do productions always going to be the real tricks. so just to weekly.
+
+</details>
+
+### 上下文共享：从结对编程到 AI 时代的知识孤岛
+
+**Speaker 1**: 但我认为这是一个非常值得每个人深思的好问题。大家确实需要问问自己：在当前借助智能体（Agent）构建软件的过程中，你的系统真相究竟存在于何处？是更多地保留在代码中，还是沉淀在规范文档里？或者说，它仍然只是零散地分散在每个人的脑海中？
+
+这又回到了团队协作的核心问题上。许多初创公司的现实情况是，关键的业务逻辑和架构认知只存在于少数几个核心成员的脑子里。在初期这没有问题，但随着公司规模扩大，事情就会失控。过去大家之所以推崇代码审查（Code Review）——尽管现在有些团队觉得它过时了——其中一个关键目的就是为了共享团队内部的上下文信息。当有人离职或者遭遇意外（比如著名的“巴士系数”），系统不会陷入瘫痪，因为其他人参与过代码审查，他们了解这部分代码的背景与意图。然而如今在 AI 生成代码的冲击下，有些公司甚至觉得：“既然代码是 AI 大量生成的，我们索性连代码审查都不做了，因为代码量实在太庞大了。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: but but i think, is a good question. so just asked yourself, what how are your building and how we're using agents of where is the truth of your system right now is more? and the code do have a speck. is it scattered between the minds of people, uh, which which goes back to the the collaboration? because again, a lot of the reality of a lot of start tups ar is a few people hold these things in their head, right? right, which is okay, because and beginning, but of course, has you scale one, the reasons we used to love coal review, which is now going out of fashion. but we used to share information. and when someone left the company or or got l, or you know the the famous bus factor, it was okay, because other people people understood because they review, they were taken part. and that part of it. but now where we with but AI code of US, some some companies are like, well, we're not going to do it because of it's it's with too much code.
+
+</details>
+
+**Speaker 0**: 这正是结对编程（Pair Programming）的核心精髓所在，对吧？在结对编程的实践中，如果你严格执行轮换结对，团队成员每天都在轮换交流；因此当任何一个人离开时，所有人都依然拥有并保持着高度一致的共享上下文认知。这是很多人在谈论结对编程时容易忽视的巨大收益。
+
+关于这一点，确实有太多值得深入探讨的内容。我最近正在与西班牙 Thoughtworks 的技术负责人 Chris Ford 交流，他就提到，当前我们在围绕软件交付和 AI 实践中所面临的最大核心问题……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: that was wasn't the seseppof of paring right pairing. you wrote, if you do, if you do promisse as parent, you wrote at every day when someone leaves s everyone has got this same shared context. now it's what something people missed around the on the benefits appearing. i think it's a lot to be said around this i'was, trying to chris ford, ty sits of had a software. i had a technology for networks in in spay, and he said, the biggest problem we've got around uh around day.
+
+</details>
+
+<!-- chunk 6/16 -->
+
+### 软件交付中的隐性知识与协作模型
+
+**Sam Newman**: 软件交付本质上包含大量的隐性知识。我们头脑中积累了许多经验，但平时甚至不一定能意识到它们的存在。比如在做代码审查（Code Review）时，你可能会看着一段代码觉得：“感觉不太对劲，我肯定不会这么写。”有时候这只是一种主观偏好，但有时候背后确实隐藏着某种问题——虽然你一时说不上来，也许能拆解分析清楚，也许讲不透彻。但事实就是，关于软件交付应当如何进行、业务是如何运转的，诸如此类的隐性认知充斥在我们的头脑中。
+
+如果我们想要提升抽象层次，直接在规范（Spec）级别开展工作，人类工程师就必须能够把脑海中的这部分隐性知识拆解开来，确保它们被明确写入规范中。如果我们真的想做到不插手具体编码，这一点至关重要。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: I do think software delivery is tacit knowledge. There's a lot of knowledge in our heads that we've built up that we don't necessarily know that we have. When you look at a code review, you could have a look at it: "It doesn't really feel right. I wouldn't do it like that." And sometimes it's subjectivity, but sometimes it's something about that you can't quite pinpoint. Maybe you can unpack it, maybe you can't, but it's also like, do you have bunches of things like that in your head about how software delivery should be done, about how the business works, everything else. If we want to step up that level of abstraction to work at a spec level, we actually need human beings to be able to unpack that tacit knowledge that we have and make sure it's in the spec, if we really want to be hands-off.
+
+</details>
+
+**Sam Newman**: 我还认为，当前大家搞软件交付的方式存在一个根本性问题，这又回到了认知负荷的话题：很多人正在各自朝着不同的方向狂奔。我看到不少人宣称自己在跟 AI 结对编程——别装了，那根本不是真正的人类结对。每个人都在各自的方向上加速产出，导致团队原本共享的思维模型（Shared Mental Model）开始瓦解。这种断层正在显现。AI 本该将我们从繁琐的苦工中解脱出来，对吧？但这往往没有发生。随着我们写出越来越多的代码，我们反而丢失了全局视野。
+
+因此我认为，如果我们能共同协作制定规范，就能重建那个共享模型，进而让规范成为真正的单一真实信源（Single Source of Truth）。当然，这也少不了人脑与规范之间的共同配合。但要让这一切运转起来，核心在于协作——无论开发团队规模是从 15 人缩减到 5 到 6 人，无论具体人数如何变化，协作本身都是极其关键的。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: I also think it is a fundamental problem that we've got in the current way people do software delivery. This comes back to cognitive load stuff, which is you've got a lot of people running off in different directions. I've seen a few people talking about pairing with their AI system—not a human, stop pretending it is. And so you're all going off, you're doing more in a different direction, that shared mental model of the program is breaking down, and these gaps between—AI is supposed to free us from drudgery, right? It isn't the most often developed. We have more and more code, and we're losing that big picture. So I think if we can work collectively on the specs, we can rebuild that model, then that could be the source of truth. I still think it's going to be partly our brains and partly the spec, right? But for that to work, there does have to be the collaboration piece, whether or not our dev teams go from being 15 people into about 5 people or 6 people. I don't know, but collaboration is really important.
+
+</details>
+
+### 放弃代码审查的前提：将思考前移
+
+**Sam Newman**: 比如像 Jane Street 这样一家非常正规、严谨的企业，他们最近宣布不再进行由人类主导的代码审查。他们表示，团队可以把节省下来的时间投入到更高维度的设计与架构层面上。对此我其实是赞同的。首先，我相信他们非常清楚自己在做什么；其次，这触及到了核心本质——许多公司犯的错误是直接省去了思考环节，而像他们则是明确把时间转移到了更重要的高阶思考上。
+
+我们应当以这种视角来看待变化。只要你采取了其他手段确保系统正确运行，并且批判性地思考系统该如何演进，那么不直接去一行行看代码完全是可以接受的。但如果你既不看代码，又对这些更高维度的架构设计和验证漠不关心，那就只能自食恶果了。
+
+<details>
+<summary>Original English</summary>
+
+**Sam Newman**: Jane Street, a proper company, right? They do proper stuff. They recently announced they're doing away with human-based code reviews, and they said, we can spend more time working on things like architectural design level. And actually, I'm okay with that. Because firstly, I trust that they know what they're doing, but also there's something about—I think a lot of companies are making the mistake of not doing the thinking, whereas Jane Street is saying, we're going to spend that time doing more important thinking, right? And I think that's sort of how we should view this. I'm okay not looking at the code as long as you're doing other things to make sure the system is operating correctly, and you're thinking critically about how the system needs to change and evolve. If you're just not looking at the code and you're not caring about these other things, well, then you deserve everything that's coming to you.
+
+</details>
+
+**Gergely Orosz**: 这也正好印证了 Charity Majors 之前谈到的观点：系统运作应当体现同理心，比如去体会 QA 和 SRE 人员的处境。他们长期以来一直在生产环境中维护和负责那些自己既没写过、没读过、甚至可能完全不理解的代码；但他们懂得如何去运维，清楚生产环境中的“良好状态”是什么标准，也知道系统出现故障时是什么表现。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Which also goes back to what Charity was talking about on how you want to have systems up, about having empathy, for example, for the work that QA and SRE folks have had to own code in production that they didn't write, they didn't necessarily read or even understand, but they know how to operate, know what good looks like in production, and they know what it looks like when it goes poorly.
+
+</details>
+
+### 规范驱动开发与生产环境的可观测性
+
+**Sam Newman**: 这也正是越来越多开发者必须面对的核心难题。如果你想推行“规范驱动开发”（Spec-Driven Development），你首先得明确界定什么才叫“良好状态”（What good looks like）。我之前在线上组织过一个名为 HalfStack 的技术会议，最近一场关于软件交付的研讨会大概有 6 位讲者，其中有 4 位专门从不同角度深入探讨了规范驱动开发。他们所有人的共识都在于：如果你无法界定什么是“好”，你就根本无法落地这一模式；如果你定义不出来，那就干脆别瞎折腾。
+
+其中一些人对此态度极其激进，有些则相对保守。有一位演讲者所在的团队规模极小，可能只有三个人，但他们积极地将生产环境的可观测性数据（比如 OpenTelemetry 收集的遥测数据）直接反馈回规范与开发上下文中，以此来把握系统的动态演进。我认为这正在促使更多开发者走出狭隘的视野。过去大家写需求往往局限于非常窄的用户故事（User Stories）和功能点，现在我们必须以更加成熟的心态来看待整体工程。工程纪律依然不可或缺，专业能力依然极其重要，只是发挥价值的主战场发生了转移。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: That's also a bigger thing that more developers are having to struggle with, because if you want to do spec-driven development, you have to know what good looks like. I run these HalfStack conferences online. We had one recently on software delivery with six speakers, and four of them were talking specifically around different varieties of spec-driven development effectively. And all of them basically said: you can't do this unless you can define what good looks like. And if you can't, don't bother. Some of those people were much more bullish, others less so. But one of the presenters—they've got like a small software team of three people—they're actively pulling in their observability data, their OTel stuff, right into the loop to understand how it is changing. I think that's exposing more developers into understanding—maybe it comes back to the practice of people doing user stories being always very narrow, functional requirement stuff. And now, I think we've got to be more grown-up about those things. The discipline is absolutely important, and the expertise is still needed, just needed in a different place.
+
+</details>
+
+### 赞助商环节：Antithesis 与 Turbopuffer
+
+**Gergely Orosz**: Sam 刚才提出了一个非常深刻的论点：除非满足两个先决条件，否则你根本无法把工作安心交接给 AI Agent。第一，清晰定义什么是“好”；第二，能够证明你的系统确实达成了这种“好”的标准。说到证明系统如预期般稳定工作，大家肯定猜到我要介绍本期的联合赞助商了。
+
+随着 AI 编写的代码越来越多，我们如何确保系统在没有缺陷的情况下正确运行？传统的代码审查在当下正变得越来越幼稚且低效。正因如此，Antithesis 彻底颠覆了这种传统做法。Antithesis 会在一个模拟的恶劣对抗环境中运行你的完整系统，包含定向测试与故障注入测试。通过这种全真模拟，它能在你的真实用户踩坑之前捕捉到每一个 Bug。更关键的是，因为该模拟过程具备完全的确定性（Deterministic），它不仅能找出 Bug，还能提供问题复现的完整路径，极大降低了 Bug 排查与修复的难度。
+
+我第一次听说 Antithesis 的自动化缺陷发现与确定性测试时，感觉这完全像是科幻小说；但深入底层实现后才发现，这是硬核工程技术的结晶。像 Jane Street、Fly.io 以及 etcd 社区，如今都能信心十足地上线由 AI 生成的代码，正是因为这些代码已经通过了 Antithesis 的严格验证。想了解更多案例与技术细节，请访问 antithesis.com/pragmatic。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Sam made a really good point that you cannot hand your work over to agents unless it does these two things: one, define what good looks like; two, prove that your system does what this good definition looks like. You already know who I need to mention when it comes to proving that your system works as expected, and this is our co-presenting sponsor. Agents are writing more of the code. So how can we trust that our system works correctly without bugs? Code review is an increasingly naive and ineffective approach to do so, which is why Antithesis goes well beyond this practice. Antithesis runs your whole system in a hostile simulation. This simulation includes targeted testing and fault injection testing. By running the simulation, it finds every bug before your users do. And because the simulation is fully deterministic, it doesn't only find bugs—it gives you a perfect reproduction of every issue, which makes it a lot easier to fix issues. The first thing I thought when I heard about automated bug discovery and fully deterministic testing was that it sounds like science fiction. But actually, it's hardcore engineering when you look under the hood. Jane Street, Fly.io, and the etcd community ship agent-produced code with full confidence because they know it's been verified by Antithesis. To see more case studies and details, head to antithesis.com/pragmatic.
+
+</details>
+
+**Gergely Orosz**: 接下来介绍另一家联合赞助商 Turbopuffer。大家都知道他们提供的高性能且极致便宜的数据库服务，而他们最近正在做一件非常了不起的事：他们正从第一性原理出发，对自身的底层存储架构进行全面重构，旨在让搜索在大规模场景下变得更快、更廉价、更可靠。
+
+如果你关注过 Turbopuffer，就会知道他们最初的高效存储架构是其早期取得巨大成功的关键支柱。推翻一套早已被证明成功的既有架构绝非小事。查询计划（Query Plans）通过单元测试是一回事（他们已经实现了这一点），而在生产环境中保持正确性与高可靠性的同时，将每一个查询计划的性能追平甚至超越老架构，则是完全另一层维度的挑战。
+
+难能可贵的是，该团队非常坦诚地公开了重写过程中遇到的各种真实困境。例如在目前的 v3 版本中，部分性能依然落后于现有的生产版本：冷全文本搜索（Cold Full-text Search）比生产环境慢了 11 倍，热全文本搜索（Hot Full-text Search）甚至慢了 126 倍；但同时他们也迎来了阶段性突破，冷/热向量搜索（Vector Search）已经追平甚至超越了现有版本。我非常欣赏这种透明公开工作进展、实时输出日志、展现重构存储架构全貌的极客精神。Turbopuffer 团队正在记录这段技术旅途的工作日志，你可以访问 turbopuffer.com/v3 跟踪他们的最新进展，我个人肯定会持续关注。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: I'd also like to mention our presenting sponsor Turbopuffer. We know them as a database that's really fast and extremely cheap, and they are doing something amazing: they are completely redesigning their storage architecture from first principles to make search faster, cheaper, and more reliable at scale. If you follow Turbopuffer, you know that their storage architecture was a massive part of their early success. Redesigning a winning architecture is a big deal. It's one thing for query plans to pass unit tests, which is already happening. It's another to bring each query plan to performance parity or better while maintaining correctness and reliability in production. And the team is sharing the messy reality of the rewrite, and how the v3 version is currently a lot slower than the current production one. For example, we can see how cold full-text search is 11 times slower than prod, and hot full-text search is 126 times slower. But we can already see some wins, like hot and cold vector search is at parity or better. I really appreciate this work-in-progress view and the real-time logs on what it takes to do a successful storage architecture rewrite. The Turbopuffer team is keeping a worklog of their journey, and you can follow along at turbopuffer.com/v3. I definitely will do.
+
+</details>
+
+### 从弹性工程到新书创作灵感
+
+**Gergely Orosz**: 聊完赞助商，让我们重新回到与 Sam 的对话。前面我们聊到了 QA 和 SRE 人员在运维非自己编写的代码方面的经验。接下来我想和你聊聊你刚推出的新书《Building Resilient Distributed Systems》（构建弹性分布式系统）。这本书主要讲了什么？是什么契机促使你觉得该动笔写下这本书的？
+
+**Sam Newman**: 好多年前，我参加了非常著名的 Velocity 大会，那正是整个 O'Reilly 系列会议的黄金时期。当时许多知名互联网公司的大佬都会去那里分享高可用与大规模系统架构的实战经验。去 Velocity 演讲一直是我早年的职业梦想之一。在出版了我的第一本书之后，我终于有机会登上了那个舞台。
+
+在那里我结识了 John Allspaw——我至今还经常和他交流。他如今深耕于系统事故分析（Incident Engineering）与韧性工程领域。我记得是他（也可能是别的同行）向我推荐了 David Woods 写的一篇论文。那篇论文通篇都在探讨韧性工程（Resilience Engineering）。当时我读完后整个人都懵了，感觉无比震撼，但又觉得晦涩难懂。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: And with this, let's get back to Sam. On what QA and SRE folks know about running code that they didn't write—I want to talk to you about your latest book that is just coming out, *Building Resilient Distributed Systems*. What is the book about? And what made you feel this is a good subject to write?
+
+**Speaker 0**: Yeah. Years and years ago, I went to Velocity, which is quite a well-known conference, an O'Reilly conference. And it was like the conference where a lot of the other dot-com people went to talk about how they made systems scale and all the stuff. It had been like one of my career ambitions to go to Velocity. I got to go after I'd written the first book, and I got talking to John Allspaw there, whom I still chat with now. He now works in the incident engineering space. He pointed me—I think it was him, or someone else—pointed me to this paper by David Woods. It was all about resilience engineering, and the paper was utterly baffling to me and absolutely nascent to me, but you know...
+
+</details>
+
+**Sam Newman**: 那篇论文根本就不是写给计算机从业者看的。对于计算机科学家来说读起来都非常费劲，更不用说普通工程师了。但它为我打开了一扇崭新的大门，展示了安全与韧性工程领域的人们是如何审视“弹性”的。对照我们在软件行业里的所作所为，有些同行试图将这些概念生搬硬套过来，但我发现直接把安全关键系统（Safety-critical Systems）中的理论硬塞进软件工程是非常困难的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Yeah, it's just not written for computer scientists to read. And for computer scientists, that was really true. But it was really fascinating seeing this whole other world about how people viewed resilience, and what we do in the software world. When I tried to take some of those ideas in a little bit, I found it very difficult to take some of those ideas from safety-critical systems.
+
+</details>
+
+<!-- chunk 7/16 -->
+
+### 分布式系统的痛苦与写书初衷
+
+**Speaker 0**: 这正是我的思考方式——把它转化成对像我这样的普通人来说更容易理解、更容易接受的形式。那大概可以追溯到 2016 年，或者是 2015 年。每隔六个月左右，我就会回过头去重新研读那篇论文。我也会阅读一些相关的周边资料，看看其他比我更聪明的人是如何更好地总结那些数据的。那时我心里在想，行吧，这些概念我现在终于开始看明白了。与此同时，我也逐渐意识到，尽管我竭尽全力（去劝阻），很多人似乎依然在构建微服务架构。哪怕你读过我的书，就会发现我书里大部分内容其实都是在劝你不要这么干。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: and that's my way of thinking and making any shape form palatable for normal people like me. and so i kind of must have been back, what 2016 maybe 2015. and so i go back and try and reread that paper, every six months or so, i'd read a bit around the agency, other smarter people than me that summarized the data better. and i was thinking okay these ideas now are starting to make sense. and then also, i kind of realize that despite my best efforts, lots of people seem to be building microservice architectures. even though if you read my books, most, my book is about telling you not to do it.
+
+</details>
+
+**Speaker 1**: 他们真的读过那本书吗？也就是《微服务设计》？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: do they read the book, which is microservices?
+
+</details>
+
+**Speaker 0**: 我们得说明白，只要他们买了书就行。那才是最重要的事。至于他们到底读没读过，你懂的。但随后我意识到，越来越多的人正在遭受分布式系统所带来的恐惧、痛苦与折磨。所以当时的情况就是，好吧，眼前正在发生这一切。我现在有了这样一种真切的感受。我常常在想，如果有人发现自己正在构建一个分布式系统，或者参与到分布式系统的构建工作中，我能给他们提供什么样的救生装备，才能让他们不至于溺水沉沦？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: let's be clear as long as they buy the book. that's the most important thing. whether they read it or not, you know. but and so then i realize that there are more people exposed to the, the horror, pain and suffering of a distributed system. and so it was like, okay. so i've got this stuff happening. i've got this like my sensitive that happen now. and i only thought that if somebody found themselves building a distributed system, working as part of building a distributed system. what was like the kind of equipment, a life ring, i could give them so they don't drown.
+
+</details>
+
+### 从基础工程概念到韧性工程
+
+**Speaker 0**: 因此，这本书的目标是从非常浅显、基础且简单的工程概念入手，教你如何开始着手应对分布式系统的问题，同时也会带你踏上一段领略整个“韧性工程”（Resilience Engineering）概念的旅程。所以它是从非常简单的想法开始，然后逐步深入到更复杂的领域。比如，我引入了一些概念，像是社会技术系统（socio-technical systems），以及安全管理与韧性工程之间的差异，这些都是宏观的大概念。但在引言之后的第二章，我们讨论的是可观测性；第三章讲的是：什么是超时（timeout）？对吧？我认为这些都是非常具体、容易把握的内容。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: and so the goal of the book is to start you off with really easy foundational, simple, kind of engineering concepts about how you can start making dealing with the problems of distributed systems, but also take you on a journey into kind of the whole concept of resilience engineering. and so it starts off without really easier ideas, and then steadily gets more and more complicated than you know. so i introduce kind of concepts, like, what socio-technical systems is the difference of safety management of resilience engineering is all big concepts. but second chapter of the introduction is the site, what's observability, talking about hotel, the third chapter is, what's a timeout? right? i think these are all quite tractable things taught,
+
+</details>
+
+**Speaker 1**: 但它们正是构建系统的基石，对吧？它们既是分布式系统的基础原语，也是不可或缺的词汇体系。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: but they're building blocks, right, right, the primitives for, yes or for the systems, and the vocabulary as well.
+
+</details>
+
+**Speaker 0**: 没错，完全正确。书的目的就是梳理并提炼出其中的一部分知识。而且我也很乐意在这些事情上表达一些明确的个人见解。不过我现在也很幸运，一部分原因是我现在的工作性质，让我有机会能与更多的人交流。所以我能够接触到那些以此为全职工作的人，并尝试将他们的知识提炼出来。我希望这本书一方面具备长效的生命力，但另一方面也是为了明确一点：现在有非常多的人都在构建分布式系统。先抛开大家构建的是哪类分布式系统不谈，现实是有很多人都在做这件事，不论他们到底应不应该做。而且这些系统对我们现在的生活极其重要。那么，我该如何帮助大家起步并成长呢？这就是我想要达成的目标。我的意思是，我本身就很享受写作的过程，但这一本是我真正希望能亲手交到大家手里的书。我一直都是这样写书的，对吧？我希望有这样一本书存在，哪怕在我坐下来动笔时发现别人已经写过了，我也会由衷地觉得，太好了，既然它已经存在了。而对我而言，这是一本我渴望它问世的书，这就是我写作的动力。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: yeah, absolutely. and to give you know, to go through and sort of distill some of that knowledge down. and also to be a bit of quite happy being a bit opinionated on these things, but i'm also lucky now, because partly, because my new work, i get to chat to more people. so i contact people who this is their full-time job and trying to distill down with their knowledge a bit. and so i wanted that book partly is about being evergreen, but it was also about saying there are lots of people building distributed systems. put what type of distributed systems you've got off on side for a moment. there are lots of people building them whether they should or not. and they're really important to us now. so how do i? how do i help people start? and grow. and that's that's what i wanted to do. i mean, i enjoy the process of writing anyway, but this is a book i wanted to be able to give to people. that's always been right, right? a book. i want a book, even now i've gone sit down to write a book, i found someone else had done it, then it's already, say well that exists now. so this for me was a book that i wanted to exist and that's kind of why i wrote it.
+
+</details>
+
+### 试错、隐性知识与事故复盘文化
+
+**Speaker 1**: 我觉得这本书对我来说绝对用得上。比如我之前刚去 Groupon 的时候，面对的就是我后来才意识到的分布式系统。你面对的不仅仅是大型系统，要处理一堆复杂业务，还有很多相互依赖的服务。因为哪怕是一件很简单的事，比如意识到“哦，你应该把可观测性上下文传递下去”，虽然摸索一段时间后你也能搞明白，但靠自己一个人摸索确实要花很长时间。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: so now i think it's a book i certainly could have used like because i dropped into a place at Groupon where we did have what i realized were distributed systems. you don't just just large systems, handling a bunch of stuff, lots of services depending on one another, because even a simple thing of like knowing, like, oh, you should pass your observability context. i mean, you figure out after a while, but it takes a while, on your own.
+
+</details>
+
+**Speaker 0**: 确实，全靠自己去摸索太费劲了。这也算是我试图把自己的隐性知识解构出来的一种尝试。我犯过太多错误了，而且我还在不断地犯错。我认为犯错本身是有价值的，但它也创造了绝佳的机会——如果大家能够从别人的错误中学到更多，那也是一件好事。所以在书里，我也尽量引入真实的案例，有时是一些大公司的案例，有时是一些踩坑的教训，好让这些内容显得更加真实。我认为我极力想要传达的另一件事就是：事情总是会出错的，对吧？软件工程的核心目的，是确保尽可能多的事情能够顺利运转，而不是确保所有事情绝对不出差错。并非如此。而且总的来说，构建韧性系统的唯一途径，就是坦诚面对已经犯下的错误，公开讨论并分享它们，因为只有这样每个人才能有所长进。如果你做不到这一点，你就无法在公司内部构建出一个具备韧性的系统。所以，这也是我的一种尝试，去向所有先驱者的杰出工作致敬，包括许多公司所分享的那些精彩的复盘报告。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: yeah, on your own. i mean, again, i mean, maybe this. this is my attempt to unpack my tacit knowledge to an extent. i've made so many mistakes and i keep making mistakes. i think making mistakes is useful, but i think it also creates opportunity. people can learn more from other people's mistakes, so it is a good idea too. and so in the book, i also try to pull in real examples and sometimes some big companies, sometimes some mistakes to kind of make this stuff seem real. i think the other thing i think i really try and get across is that things go wrong, right? engineering is all about making sure as many things go right as possible. it's not about making sure everything goes right. no. and the only way you can build resilient systems in general, is also by being honest about mistakes that have been made and talking about them and sharing them because that's how everyone gets better. if you don't do that, you can't put a resilient system in your company. and so this again, is my attempt to sort of highlight all the awesome work that has gone before, the fantastic post-mortem reports that some companies share.
+
+</details>
+
+**Speaker 1**: 比如当一个大家都在用、或者很多人都在用的系统发生宕机故障时，如果遇到这种情况确实让人恼火，尤其是当你正在使用它的时候。但我一直非常感激那些愿意公开分享事后复盘（post-mortem）或事故总结报告的公司。他们其实完全没有义务这么做，但他们会详尽复盘到底发生了什么。比如 GitHub 之前发生过一次故障，他们分享了一篇非常有意思的复盘文章，详细复盘了所有出错的环节以及来龙去脉。但你也会看到有些公司在遇到类似事故时什么也不做。当然，法律并没有强制要求他们必须公开，但我个人总是会觉得……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: like when there's a system that we all use or many of us use has an outage. i mean, it's annoying especially when you're using it. but i always greatly appreciate when the companies, because they don't have to do this, but when they share a public post-mortem or incident recap, whatever that is, they go through what happened. for example, GitHub had an outage, and they shared a really interesting one on what, all the things that went wrong and the what what. and then you also have companies where something like this happens and they don't do anything. so of course, you're not obliged to do it anyway, but i always have a bit of a...
+
+</details>
+
+**Speaker 0**: 不过现在很多法规已经开始强制要求他们这么做了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: regulations are now making them do it.
+
+</details>
+
+**Speaker 1**: 我觉得强制要求这很好。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: which which i think it's great.
+
+</details>
+
+**Speaker 0**: 是的，想想比如英国或者欧洲的 DORA（数字运作成效法案）之类的法规。而且我觉得，我们还应该把事故复盘报告划分为两种情况：一种是公关营销式的复盘，另一种则是你是否真正做了一次规范的事后复盘。我认为作为规范复盘的一部分，你有责任去关怀和理解相关人员。那些对外什么都不说的公司，其内部可能有一套非常出色的复盘流程。而且事实上，有些公司公开发布的报告，你读起来会觉得更像是营销公关文稿。我认为如果你想看优秀的公司典范，看那些敢于进行最深刻“自我剖析”的事故复盘报告，Cloudflare 的复盘绝对名列前茅。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: yeah, think like DORA stuff of the UK, in Europe rather. and i think we should also separate around that post-incident report stuff that there's marketing PR versus, have you done a proper post-incident review? now i do think you have a duty of care that you just know as part of a proper post-incident review. but those companies maybe say nothing might have a fantastic process internally. it's also the fact that some companies that put those things out, you read them, you're like this does feel more marketing. i think if you want a good company that puts out some of the best self-flagellating post-incident review write-ups, go for Cloudflare for their stuff.
+
+</details>
+
+**Speaker 0**: 哎，他们在那些复盘里真是一点都不给自己留情面。看得我都忍不住想说：“朋友们，对自己下手轻一点吧，好吗？大家都会犯错的。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: i always, they absolutely go for themselves in those. it's like i feel like guys, take it easy on yourselves, right? everyone makes mistakes.
+
+</details>
+
+**Speaker 1**: 但我很欣赏他们这种做法，而且他们的响应极其迅速，通常在 24 小时之内就发出来了。要知道他们可是一家上市公司。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: but i quite like and do it, they did it rapidly, within 24 hours. and they are a publicly traded company.
+
+</details>
+
+**Speaker 0**: 没错。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: yeah,
+
+</details>
+
+**Speaker 1**: 这正好击碎了某些论调——很多上市公司会说：“因为我们是上市公司，不能公开这些，否则会向股东泄露敏感信息。”而 Cloudflare 这样做了，他们完全没问题。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: which which i think just goes back to the, like some of them, "unlike, we're publicly traded, we don't want to do it because it would give away information for shareholders." you know, like Cloudflare does it,
+
+</details>
+
+**Speaker 0**: 而且他们发展得非常好。完全是这样。而且这也关乎信任的建立。很多时候，外界如何看待一个机构，很大程度上取决于当错误发生时你们是如何应对的。对吧？我的意思是，没有哪家公司能保证所有事情永远十全十美。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: and they're fine. exactly, exactly. and and also, the deposit of trust. a lot of how an organization is perceived comes down to how you deal with mistakes when they occur. right? i mean, yeah, nothing ever goes perfect for every company.
+
+</details>
+
+### 分布式系统的三大法则：法则一，传输需要时间
+
+**Speaker 1**: 那么在你的书中，你提到了分布式系统的“三大法则”。这三大法则分别是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: so in in your book, you talk about the three rules of distributed systems. what are these three rules?
+
+</details>
+
+**Speaker 0**: 我确实花了很多心思去提炼它们，因为我始终记不住那个所谓的“八大误区”——也就是由分布式计算先驱们总结的“分布式计算的八大谬论”（Fallacies of Distributed Computing）。我总是记不全那八条到底是啥，里面充斥着各种复杂的内容。但我意识到，当你把所有表象剥离干净之后，真正引发所有问题的根源其实只有三件事，对吧？
+
+第一条规则是：你无法将信息瞬间从 A 点发送到 B 点。这是物理定律决定的。当然，当你去和一些懂量子物理的人聊的时候，他们可能会说：“呃，其实有一种叫量子纠缠的现象，在理论上确实允许跨越任意距离瞬间读取电子的自旋状态。”而在那一刻，我不得不指出：首先，据我所知那仅适用于读取状态；其次，它并不是一种网络通信协议。所以，信息的传输是需要时间的，对吧？
+
+我无法瞬间从 A 到达 B，而作为一个开发者，我只能控制其中的一部分。是的，我可以控制发送多少数据，我可以控制有效载荷（payload）的大小，以及用于序列化和反序列化的技术。但我极不可能去亲自指定底层的网络布线、所使用的网络设备硬件，或是物理节点之间的距离。因此，那些根本不在我的掌控范围之内。一旦你的数据流经公共互联网，哪天 BGP 协议抽了个风，你的数据包就可能绕进了互联网错误的传输路径中，对吧？这就是第一条法则：传输需要时间。认识到这一点极其重要，因为有些时候它表面上看起来像是即时的，但事实并非如此。
+
+至于第二点，有时候你想要与之通信的那个目标根本就不存在，有时是……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: so i really tried to distill this down because i could never remember the, the rule of eight that came out of some, oh, the fallacies of distributed computing. i always forget what those eight were, there's loads of complicated stuff. but i realized when you strip it all down, there's only three things that really cause all of the problems, right? the first is that you can't send information instantaneously from point A to point B. it's physics. i mean, now it turns out when you get in to talk to people about quantum physics, they say, uh, and there's a thing called quantum entanglement, which does allow the theoretical instantaneous read of electron spin states across arbitrary distances. at which point, i point out that A, that only works for reads as far as i'm aware, and B, not a networking protocol. so like, but it takes time, right? so i don't get from A to B instantaneously, and i can control bits of that as a developer. yeah, i could control how much data i send, and i could control the the payload size, technology i use to serialize and deserialize. i'm unlikely to be specifying the network cabling or equipment used or distances between them. so uh, not really under my control. and the moment you go to the public internet, BGP has a bad day, and your packet has gone down the wrong transit of the internet, right? and that's that's rule one. it takes time. and that's important to recognize because sometimes it looks instantaneous, it's not. second thing, sometimes the thing you are talking to isn't there, sometimes that... and we do things to make it under our control, right?
+
+</details>
+
+<!-- chunk 8/16 -->
+
+### 分布式系统的物理现实与资源有限性
+
+**Speaker 0**: 比如说，我们可能会在负载均衡器后面运行某个服务实例的多个副本。然而，要是负载均衡器本身故障了呢？我的意思是，你根本不可能掌控所有事情。我曾经历过服务因为数据中心起火而瘫痪的情况——一台 SAN（存储区域网络）着火了，基本上是 SAN 的某个部件出了故障。那个 SAN 包含一个使用 SSD 的缓存存储层，有两组 SSD，其中一组 SSD 着了火，而另一组 SSD 却工作正常。于是我们从 SAN 监控上看到了非常诡异的延迟曲线：如果请求正好路由到了那些着火的盘上，延迟图表看着还挺正常；但故障转移机制走的是另一条路径，说实话，系统实际上是在绕过着火的部件进行请求路由。我还经历过另一件事：我们在几栋办公楼之间埋了管道穿线，结果野兔钻进了管道里咬断了网线。我总不能去防范兔子吧？所以说，现实中确实会发生这类事情。这里其实有两层含义：是的，你可以控制一部分风险，也可以估算并降低概率；但规则之二就是，有时你要通信的目标根本就不存在。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: like we would run, say multiple copies of service instance behind a load balancer. well, how if the load balancer fails? but i mean, like you can't control for everything. i've had services taken out by a fire at a data centre, a SAN caught fire, and basically one bit of the SAN. the SAN had a caching storage layer with SSDs. these two sets of SSDs, one of the sets of SSDs caught fire. the other set of SSDs are working fine. and so we had this weird latency graphs coming out of the SAN, like perfectly fine, if you routed through the ones that went on fire. but the failover is another one we're routing to be fair. it was routing around the bits that were on fire. i had this where we had ducting between office buildings and rabbits moved into the ducts. and ate the networking cable, i can't control for rabbits, right? and sure, things like that, that are real is the two things right? yes, you can control that and you can reduce chances, kind of know the chances, right. so sometimes, rule number two is sometimes the thing you talk to isn't there.
+
+</details>
+
+**Speaker 0**: 至于第三条规则——我非常感谢我的同事提到这一点——我之前遗漏的是：资源池并不是无限的。这意味着你的计算资源是会耗尽的，比如 CPU、内存等。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: and the third rule, i'm very grateful to a colleague for telling me for a website thing. i've missing is that resource pools are not infinite, meaning you can run out of computing resources, CPU, memory.
+
+</details>
+
+**Speaker 1**: 甚至是底层的负载均衡器也可能会过载，然后即便它还在运行也直接不再响应。我们知道会有延迟，但可能它的队列直接被塞满了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: i know whatever even basically a load balancer could be overloaded. and then just not respond even though it's there. and we know the latency, but it maybe queues fill up.
+
+</details>
+
+**Speaker 0**: 绝大多数时候，系统宕机最终都可以归结为某处的某种资源被彻底耗尽、饱和了。而这种资源饱和反过来可能是由于某个组件宕机引发的，进而导致重试风暴（retry storm）；重试风暴又进一步导致连接匮乏（connection starvation），进而造成计算资源饱和；这反过来又会引发连锁反应……没错，那才是致命的杀手。退一步说，从理论认知上看，你可以钻研所有那些复杂的概念、分布式系统理论；有人可能会想，“天哪，是不是得去搞懂共识协议算法、CAP 定理、PACELC 定理？”但我想说的是，先等等，把这些高深概念先放一边。首先牢记这几条基础规则，大多数实际问题解决起来反而会容易得多。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: the vast majority of the time when you have a system outage it comes down to that, some resource has been totally saturated somewhere. and it might have been that saturation might in turn have been caused by the fact that something is down and you're in a retry storm, which is in turn, causing you know, connection starvation, which is in turn causing resource saturation, which, in turn, goes on and on. yeah, but that that's the killer. and and again, another insight. and you know, to intellectually all of these things, but you can go through all the complicated concepts in distributed systems. and so oh, why spend time on consensus protocol thing. well, this is go way way down this bit like, what about CAP and PACELC. well, can i just like yeet this, put this up on one side. remember these rules first and then most problems end up becoming a little bit easier to deal with.
+
+</details>
+
+### 可观测性的核心价值与单机向分布式的跨越
+
+**Speaker 1**: 在介绍了这些基本规则之后，正如你所提到的，第二章讲的就是可观测性（observability）。这似乎表明，对于分布式系统而言，可观测性是一个非常非常核心且重要的部分。为什么可观测性会如此重要呢？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: and in the book after introducing these rules, you start, as mentioned, second chapter is observability, that kind of suggests that this is a really, really important part for distributed systems. why is observability so important?
+
+</details>
+
+**Speaker 0**: 理解可观测性的一种方式是，把它看作是系统本身的一种属性。也就是说，一个系统的可观测性越强，你就越容易根据它对外输出的信号来推断和理解其内部行为。当你面对的是单机系统时，你其实可以从该程序中获取非常高质量的信号；因此，它本身就具备极高的可观测性，你能从中榨取大量信息。比如我可以把调试器（debugger）直接挂载到进程上；我可以生成核心转储文件（core dump）并在调试器中分析；在 JVM 上我可以直接做线程转储（thread dump），弄明白信号量究竟卡在什么地方。如果单机程序就是我的整套系统，那么知道 CPU 飙到了 100% 实际上是非常有价值的信息，因为那通常意味着出故障了。因此，对于单一程序，这些基础诊断信号我们几乎是信手拈来、免费获得的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: i mean, the way to think about observability is, is a property of a system, right? so the more observable something is the easier it is to understand how that thing is behaving based on the external signals. when you have a system, which is a single system, you actually get some pretty high quality signals coming out of that program. therefore, giving you a high degree of observability, you can get a lot of information out of that. i could attach a debugger to a process. so i could generate a core dump and run that in. i could just thread dump on the JVM to work out where my semaphores are blocked. if this is my whole system, like knowing the CPU stuck at a hundred percent is actually really useful information cause that's probably a problem right. so this basic information we pretty much get for free with a single program.
+
+</details>
+
+**Speaker 1**: 这就属于单一程序在你能直接访问的机器上运行时所具备的高度可观测性，完全没错。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: this is a whole degree of observability for a single program running on your machine that you have access to, exactly right.
+
+</details>
+
+**Speaker 0**: 但是，一旦转向分布式系统，你就不可能再以同样的方式去访问计算机了。你面对的是成百上千台机器，因此那些基础信号变得极难获取，你无法轻易将各处的信息关联起来，需要付出大量额外工作；而且，那些分散的单个指标本身并不能真正反映整个系统的综合运行状态。所以你必须做更多的事情来让系统变得可观测。正如这类架构工程的一贯规律，从一开始就内建可观测性，要比事后亡羊补牢容易得多。值得庆幸的是，我们现在有了像 OpenTelemetry 这样的协议与规范，至少为我们提供了一个厂商中立（vendor-agnostic）的开放框架。顺便说一句，Charity Majors 之前送过我一些贴纸，我这里必须澄清我是独立工作的，但能有一个厂商中立的开放标准确实是重大利好，它让我们讨论这些问题时变得容易太多了。如果无法从系统中获取足够的信号，如果没有结构化事件流（structured events）告诉我系统底层究竟发生了什么，那我完全就是在盲目操作。举个例子，当一个客户端调用下游服务时，怎么合理设置超时时间（timeout）呢？我必须清楚该服务正常的响应时间及其分布情况；我需要收集历史延迟、成功与失败比例，甚至把直方图（histogram）调出来看。如果系统中没有这些监控信息输出，你就根本无法正确设定超时阈值。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: but now we go to a distributed system, you don't have access to the computer the same way. you've got multiple computers. and so those basic signals are harder to get. you can't correlate the information without actual work. and those individual signals by themselves, don't really give you a proper sense of how the system is behaving. so you have to do more work to make the system observable. and as with these sorts of things, it's much easier to do that from the beginning, than it is to retrofit. and you know luckily, we've got things like now the OpenTelemetry protocol and specification, because that at least gives us an open framework that is vendor-agnostic. oh, Charity Majors gave me stickers just to be clear. i always work independently. i have to be really clear Charity gave me stickers, but like we get a vendor-agnostic open standard benefit. now it makes it so much easier for me to have conversations about this. but if i don't get the signals coming out of the system, if i don't have that stream of structured events telling me what the hell is going on with my system, i'm flying blind. but how do i know what an appropriate timeout is to a client when you're talking to a service? well, i'm only going to know that if i have a sense of, well, what is its normal response time and distribution? so i'm going to need latencies, know the success or failure of those latencies, probably pull up the histogram, maybe take a look at it. if i don't have that information coming out, i'm not going to be able to specify timeouts correctly.
+
+</details>
+
+### 从底层机器指标到业务追踪与用户真实体验
+
+**Speaker 1**: 我们刚才聊的是机器层面可以度量的底层指标，比如延迟。但在可观测性中，还有一个关键维度：系统对最终用户或客户来说是否真正可用？当他们点击提交按钮时，业务逻辑是否真正完成了？你会关注这一层吗？因为我们提到可观测性时，通常讨论的都是延迟、状态码、500 报错意味着服务挂了等等。但我一直在思考，甚至在团队协作中我也发现很难界定——我们虽然拥有那些唾手可得的、教科书式的指标……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: and then we're talking about a low level thing like latency and things that we can measure at the machine level. but of course, observability, i'm talking about like doesn't work for the user or the customer, doesn't it do what they do when they click the button to submit? does it submit? do you look at that? because we know observability, it's usually talking about these kind of latencies, the status, the 500 responses that's going bad. that means it's down. but there's always a part that i always wondered. and i found it hard even when we're working in teams to, okay, like we have the easy observability, like this is kind of textbook...
+
+</details>
+
+**Speaker 0**: 不是教科书式的，那些更多是系统级指标（system metrics）。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: not textbook, it's system metrics, it's the metrics.
+
+</details>
+
+**Speaker 1**: 对，但核心问题在于它是否真正管用？它是否达成了用户关心的目标？比如以 Uber 为例，当用户点击叫车按钮时，系统是否真的能在通常的 5 秒内完成叫车请求？还是说用户界面一直卡在无限加载的等待图标（spinner）上？如果是后者，那情况就很糟了——即便你后端的日志和指标看着健康无比，但用户已经非常愤怒了，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: but then there's the stuff of does it work. does it do what people care about? like again, in the case of like an Uber, like when people hit a button to request a ride, does it actually request within what is usually five seconds or something like that, or is it stuck in an infinite spinner? which is bad, even if your logs can be as healthy as can be. but people are upset, right?
+
+</details>
+
+**Speaker 0**: 你需要将实现可观测性的原始数据抽象为结构化的事件流（stream of structured events），并在此之上构建更高层次的抽象与场景。分布式追踪（distributed tracing）就是其中之一，通过链路追踪，我们能洞察某一次具体的按钮点击在生产系统内部究竟触发了什么。这过去常常是一个巨大的盲区，大多数组织不得不自行构建追踪系统。像 OpenTracing、Zipkin 等项目的诞生正是源于此，本质上大家都是在试图重现 Google Dapper 所做的事情。追踪的目的在于弄明白：“我们能否观察一次完整请求的流转过程？在整个流程中到底发生了什么？请求调用了哪些组件？”这就需要我们在跨越多台不同机器之间采集一系列的 Span（跨度）。一个 Span 代表一次具体的操作或活动，它记录了我执行的某项工作；而一个 Span 又可以衍生出更多的子 Span。比如我的第一个 Span 可能是外部请求打到我的 API 服务器上；紧接着在该 Span 内部，我可能会去查询数据库；我可以向这些 Span 附加丰富的业务和上下文信息；之后请求可能又调用了另一个服务。通过在所有这些 Span 之间共享同一个 Trace ID，并记录耗时，你就能拼凑出一次调用跨越所有依赖项的完整全貌。这一切的基石，仍然是各组件串联在一起的独立事件。
+
+由此，我们便能进入下一个阶段，去回答系统的核心问题：“我的系统运行得是否正确？”这也促使我们摆脱过去那些花哨但无用的虚荣仪表盘（vanity dashboards），转向以 SLO（服务等级目标，Service Level Objectives）和 SLI（服务等级指标，Service Level Indicators）为核心的评估体系。SLI 是我们在特定时间点判断某项服务表现是“好”还是“坏”的具体量化指标。我们通常会汇聚一系列指标，比如“在特定响应时间内成功返回的请求比例”。这就是一个明确的标准：如果报错了，算作一次“坏”请求；如果耗时太长，同样算作“坏”请求。我们将这些好坏指标汇聚统计，以此评估我们是否达成了预设的 SLO 目标。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: you treat the raw data of making this observable as a stream of structured events. and from that, you build up the higher level abstractions and a few scenarios, is so a trace right, where we get sense of for a given click of a button, what happened in the production system. and this is a big blind spot, right? most organizations had to build our own tracing systems. this is where things like the OpenTracing stuff came from, and things like Zipkin and things like that, but the attempt to recreate like mine, most people just tried to recreate what Google built there. and it's an attempt to say, okay, can we at least look at a flow, what happened during that flow? where did these things go? well, that requires me to get a bunch of spans across all these different machines, and a span meaning an activity, something i did, and then a span can beget more spans. so i can say my first span might be a call that hit my server, right? so i've now got a span that starts with it that span. i might talk to my database. and these are operations, and i can put additional information on these spans, and then i could reach another service and then you get a trace ID that shared across those spans and you got timing. and now you get effectively a view of what happened across those calls, but that's all just based on individual events stitched together. and then you also start getting the system with a situation, which is is my system behaving correctly. and this is going away again, going away from vanity dashboards. this is moving into what we call the SLOs, right, service level objectives and SLIs. an SLI, service level indicator, that's our way of saying at this given point in time, for this thing, is this thing good or is this thing bad. and we use a collection of those. so one example of that might be a successful percent of response time, right? so that would be is it a good one or bad one. it could be a bad one because it's an error. it could be a bad one because it's slow, good or bad, and i collect those together. and that helps me know if i'm achieving my SLO, so i might have reaching my SLO...
+
+</details>
+
+<!-- chunk 9/16 -->
+
+### SLO 承诺与弹性的相对性
+
+**Speaker 0**: 这就意味着我应该能够做到，比如 99% 的请求都能在 300 毫秒内成功响应，对吧？这就是你的声明，也是团队为之努力的一种承诺。是的，这应该始终是一项承诺。然后你会拿到这些原始数据；你不能针对每一个孤立的细枝末节去生搬硬套 SLA，而是要利用这些数据来评估系统的整体韧性：如果指标是绿色，说明运行良好；如果是红色，说明用户体验并不理想。我的意思是，你可以通过这种方式去推进，我们有新的方法来引入这些概念。但如果没有这些基石，就像我在书的第一章里谈到的那样：没有人会说“我不希望我的系统具备韧性”。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: which is so I should be able to have response, right? The 99% successful requests within 300 milliseconds, you know. And that would be your statement, and that would be a commitment. Yes, that should always be a commitment, that's the thing our team is working towards. You then get this raw data; you can't create SLAs on individual things, and then you use it to work out what resilience is looking like. If it's green, everything is a good time; if it's red, people are unhappy. I mean, you can get it this way, we have new ways to get a great introduction to this stuff. But without those building blocks—because like I talk about in the first chapter of the book, nobody says "I don't want my system to be resilient."
+
+</details>
+
+**Speaker 1**: 确实，没有人会这么说。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Yeah, no, no one.
+
+</details>
+
+**Speaker 0**: 但与此同时，韧性并不是一个非黑即白的布尔值属性。它不像身份认证那样非此即彼，而是更像可观测性，是一个程度问题。那么接下来的问题就是：你到底需要多大程度的韧性？因为如果我和你探讨多云架构，或者像 Monzo 那样为了关键支付流程对核心系统进行彻底重写……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: But at the same time, resilience is not a binary property. It's not like authorization; it's a bit like observability, a matter of degree. So then the question is, how much do you need? Because am I having a conversation with you about multi-cloud and, you know, doing complete rewrites of systems for critical spendings like Monzo do, for example—
+
+</details>
+
+### Monzo 的热备银行与极端韧性成本
+
+**Speaker 1**: 没错，他们有一套备用银行系统，平时就在那里待命，这也让他们付出了不少成本。那套系统闲置在那里，大部分时间都在花钱。但就在几周前，他们的主应用程序发生了一次短暂宕机，他们确实启用了那个备用银行。我猜光是维持它的日常待命，就得花费数百万英镑或美元。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Yeah, they have a standby bank. They go down that course so that it's sitting there, it's costing them money for the most part. But then just a few weeks ago, their main application went down for a short period of time, and they actually activated that bank. I'm assuming it's costing millions of pounds or dollars just to keep it there.
+
+</details>
+
+**Speaker 0**: 其实顺便提一下，据我了解，他们的备用银行功能列表经过了极大精简，更加精干基础，只保留了最核心的功能——比如你可以冻结银行卡、提取资金以及查询账户余额。它是一个彻底重写的独立系统，因此没有任何共享代码，因为他们担心同一个软件 Bug 会波及不同的云厂商。同时在设计上，它的运行成本也显著降低。他们的全功能主栈里有成千上万个微服务，而备用系统的云成本大约只有主系统的十分之一，并且他们也是一直保持常态运行的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: As a side bar, as I understand it, their standby bank has a real stripped-down list of features. It's much more bare-bones. It's all of the core ones: like you can freeze cards, you can take money out, and check your balance. It's a complete rewrite, so there's no shared code because they worry about a bug across different cloud vendors. It's also by design significantly cheaper to run. So they've got thousands of microservices in the full stack; this is about a tenth of the cloud cost, and they also run it constantly.
+
+</details>
+
+**Speaker 0**: 是的，它一直处于待命状态。我知道他们 Monzo 是这样运作的。但如果连基本的可观测性都没有，做这些就毫无意义。所以回到前面谈到的可观测性：你需要原始数据，但你也需要据此做出决策，回归到“良好的状态究竟是什么样”这一本质。接着你就需要清楚：好吧，我是否需要去操心多云环境或者灾备策略？因为那是否真的是我必须走的方向，还是说我的实际需求并不在此？如果不树立这样的北极星目标，不明确定义我们需要达到什么水平的韧性，你就无法知晓自己的架构究竟该做多深。这就像是在问：“我的系统到底需要多安全？”你做过威胁建模吗？如果你连威胁建模都没有，又怎么能知道答案呢？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Yeah, so that is always there. I know at Monzo, right, that's how that works. But there is no point starting it without those foundations. So actually, as I put observability, it's like you need the raw data, but also you need to make decisions about—comes back to what good looks like. Then you need to know: okay, do I need to worry about multi-cloud vendors, DR strategies, because that's where I need to be going? Or am I somewhere else? And so I think without that kind of sense of your North Star of how resilient do we need to be, without that defined, you don't know how deep you're going to get. It's like trying to say: "How secure does my system need to be?" Have you done a threat model? If you don't have a threat model, I don't know.
+
+</details>
+
+### 多云与多区域容灾中的架构权衡
+
+**Speaker 1**: 我觉得，要回答“系统需要具备多高的韧性”这个问题，在很大程度上取决于——或者说做出明智决策的前提在于——评估代价：在运营成本上要花费多少？构建它需要耗费多少时间？以及对延迟会有什么影响。举个简单的例子：业务方可能会说：“做多云怎么样？”他们非常希望上多云，心想“上周或者几个月前听说亚马逊发生过宕机，如果 AWS 挂了，我希望能直接无缝切换到谷歌云”。但随之而来的现实是：首先，这意味着我们要支付两份云账单；其次，如果我们想要做完整的数据实时复制，这可能会显著增加写入延迟，因为必须等待多处副本写入完成，而这会导致响应变慢，最终影响客户的使用体验。总之，这里面存在着各种权衡。在我的经验中，很多时候人们往往是在事后才反思这些；但如果能提前把这些摆在桌面上充分讨论，那是最好的。只是要展开这种讨论，你就必须清楚代价是什么，必须清楚底层正在发生什么，以及涉及的所有维度——构建周期需要多久、复杂度有多高、日常运行维护需要花多少钱。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: And I guess, answering the question of how resilient do I need to be, it greatly helps—and maybe it's actually the requirement to make an informed decision—is how much will it cost me in terms of operating costs, in terms of time to build it, in terms of, for example, latency. Just a simple example: if the business says, like, "Oh, would you like multi-cloud?" and business is like, "We would love multi-cloud! If Amazon goes down because we heard they had an outage last week or a few months ago, I actually want to be able to fail over to Google." But then you'll be like: okay, well, first of all, this will mean we're paying two cloud bills. And if we want full replication, it might increase our latency because we need to wait to write to both, which might mean slower response, you know, customers might see things. So anyway, there's all of these trade-offs. And my experience is, oftentimes you might retrospect that, but if you can have the discussion upfront, that's great. But to have the discussion, you need to know what the trade-offs are, you need to know what's happening. And all these dimensions that you care about, like how long will it take to build, how complex would it be, how much money will it cost to operate.
+
+</details>
+
+**Speaker 0**: 但作为技术人员，我们不能只是单向灌输。我们还必须擅长与业务利益相关者以及需求方沟通。如果我们直接问：“你想要多少百分比的可用性？你能容忍多高的延迟？”有些业务人员或许明白我们在说什么，但也有许多在各自领域极为出色的产品负责人或业务领域专家，他们并不是软件开发者，并不真正理解这些术语背后的具体含义。因此，我们必须对业务领域和产品领域有足够深入的理解，做好桥梁和翻译工作，去弥合技术与业务之间的认知鸿沟。而且，韧性本身也是一个动态发展的概念。这就是韧性的整体本质所在，对吧？一个具备韧性的系统必然是能够持续演进的系统；如果不随环境变化而进化，那它就只是一个脆弱的系统，称不上韧性系统。因此，即使是我们设定的那些指标，以及围绕“什么是足够好”所展开的所有讨论，也都是会随着时间推移而不断改变的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: But also as technologists, we have got to get good at communicating with our business stakeholders, with our users. "What percentage of latency do you want?" Some business people know what I say when I say that, but how many experts in their field, who are great product owners or subject matter experts, but are not software developers, wouldn't know what I mean by that. And so we also have to understand the business domain, the product domain well enough to do the interpretation and help bridge that gap. And it is a dynamic thing as well. I mean, it's the whole thing about resilience in general, right? A resilient system is one that changes and evolves; if you don't change and evolve, you are a brittle system, not a resilient system. And so even those targets we set, all that conversation we have to have about what is good enough does change.
+
+</details>
+
+**Speaker 0**: 我想以去年 AWS us-east-1 区域发生的宕机事件为例。当时 AWS 发生了重大故障，us-east-1 区域瘫痪了——那是他们历史最悠久的区域，由于历史上很多新服务最先在该区域上线，很多企业的第一批系统都部署在那里。当那个区域瘫痪时，促使许多人重新思考：“我们需要做多区域部署吗？”其中有些公司之前可能探讨过这个话题，并得出过“我们不需要”的结论；但在亲眼目睹了故障带来的严重后果之后，他们改变了主意。这完全是正常的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: But I think that's the case of, say, the US-east-1 outage in the last year. There were lots of AWS—the AWS us-east-1 region went down. It's the oldest region, where lots of people's first services were launched historically. When that went down, it caused a lot of people to say, "Do we need to be multi-region?" And some of these companies would have had the conversation before and decided "No, we don't," and then having seen the fallout, they have changed their minds. And that is fine.
+
+</details>
+
+**Speaker 1**: 这正是你所说的“韧性系统随现实世界演进”的含义吧？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: That is what you mean by a resilient system evolves? Yeah, with the real world.
+
+</details>
+
+**Speaker 0**: 是的，这也关系到你选择去解决哪些问题，不去解决哪些问题。当 us-east-1 宕机时，一些知名大公司同样受到了牵连，遭遇了极其严重的服务降级，甚至影响到了核心业务的正常运转。比如像 Netflix 这样的公司也受到了严重影响。难道我们会认为在 Netflix 工作的人是傻子吗？绝不是。难道我们认为他们不知道云区域一旦宕机会产生什么影响吗？他们当然知道。他们很可能在评估后得出了结论：如果要构建一套跨区域的容灾架构，会带来相应的研发成本和巨大的开销，权衡下来并不划算。更不用说跨云部署了，多云架构与多区域部署完全是不可同日而语的两个概念。我认为只要团队认真权衡过这些利弊，哪怕选择不去做也是完全合理的。而且关键还在于另一层默契：你所认为该做的事情，必须与你的用户对系统的实际期望保持一致。这也是我在书中反复强调 SLA 与 SLO 区别的原因所在：SLA 是具有法律约束力的底线，一旦违背你可能会吃官司被起诉；但如果你仅仅按 SLA 的最低标准来交付，你的客户绝不可能感到满意，你必须做得比那更好。在这背后始终存在着一层隐性的社会契约。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: But also, it is about what problems you're trying to solve. There were some big-name companies that got taken out when us-east-1 went down, or got severely degraded in what they could offer. Companies like Netflix were severely affected. Do we think the people working at Netflix are idiots? No. Do we think they knew that if a cloud region went down they'd be impacted? Yes. They probably looked at that and said, "Well, to come up with a multi-region approach is going to have this impact, it's going to cost us this much money, it's not worth it." Let alone talking multi-cloud, because multi-cloud versus multi-region is a whole different conversation. And that's okay, as long as you had the conversation. And this is the other secret of it, of course: as long as what you think you need to do is in tune with what your users think you should be doing. That's why I made the point in the book talking about the difference between SLAs and SLOs. The SLA is what you're going to get sued for if you breach; if you only ever delivered to the SLA, your customers aren't going to be happy. You've got to do better than that, right? There is always that social contract.
+
+</details>
+
+### 深入分布式系统核心：理解幂等性
+
+**Speaker 1**: 面对分布式系统和构建韧性系统的挑战，深入理解一些不那么直观的复杂概念会非常有帮助。我不打算把你书里阐述的所有概念都过一遍，但我确实想探讨一个我觉得理解和真正领会起来相当微妙的概念——而且这个概念在工程实践中越体会越觉得重要，那就是幂等性（Idempotence）。究竟什么是幂等性？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Now, with building distributed systems and building resilient systems, it really helps to understand concepts that are not as straightforward. I'm not going to go through all the things—you explain a lot of things in the book—but I do want to touch on a concept that I found tricky to understand and then appreciate, and you really appreciate it: idempotency. Yeah, what is idempotency?
+
+</details>
+
+**Speaker 0**: 幂等性背后有一个我不甚了解的深奥数学概念，但简单来说，一个幂等的操作就是指：你可以对一个目标多次执行该操作，而不会产生多次执行带来的额外副作用。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: So there is a mathematical concept behind idempotency that I don't understand, but basically an idempotent operation is one that you can apply multiple times without it actually having effects multiple times.
+
+</details>
+
+**Speaker 1**: 也就是说，它只在第一次执行时生效并改变状态。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: So it has an effect once, the first time.
+
+</details>
+
+**Speaker 0**: 一个形象的幂等操作现实例子就是按电梯按钮。假设你想乘电梯下楼，你按下了向下的按钮，按钮指示灯随即亮起；如果你再次按同一个向下按钮，什么都不会改变，电梯依然在按计划赶来，或者说我们希望它正在赶来，对吧？这就是一个幂等操作。反观普通的灯开关，每次动作都是状态翻转：按一下开灯，再按一下关灯，这就不是一个幂等操作。在计算机科学中，有些操作天生就是幂等的，比如读操作；而删除操作通常也被设计为幂等的，对吧？但我记得在书中引入这个概念时，我所使用的典型例子是单笔支付。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: A really good example of an idempotent operation would be pressing a lift button. If you want to go down in the lift, you press the down button. It lights up, but if you press that down button again and again, nothing changes. The lift is still coming—we hope the lift is still coming, right. That's an idempotent operation. Whereas some light switches toggle the action: it goes on, toggle it and it goes off—that's not an idempotent operation. In computing, we have some operations which are inherently idempotent, like reads. A delete is typically idempotent, right? But the example I think I use in my introduction to this concept is a one-off payment.
+
+</details>
+
+**Speaker 1**: 我正想说这个呢，支付场景确实是解释幂等性极佳的例子。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: I was about to say that, I have a much better idempotent example, yeah.
+
+</details>
+
+**Speaker 0**: 没错，支付是一个非常贴切的业务场景。比如我要给你付一笔钱，所以如果我发起请求……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Yeah, payment is a good device. I'm going to pay you money, so if I...
+
+</details>
+
+<!-- chunk 10/16 -->
+
+### 分布式调用中的确认缺失与重试困境
+
+**Speaker 0**: 假设我想发起一笔支付，我向你发送请求：“请向 Sam 转账 100 英镑”。这就好比我在家里给别人转账，对吧？我说“请给 Sam 转 100 英镑”，然而我却没有收到任何确认回复，没有得到任何响应。从我的视角来看，这里存在着两种可能性：第一种可能性是，你其实已经收到了那笔支付请求并执行完毕，转账已经成功处理，但由于某种原因，返回给我的执行结果在传输中丢失了，导致我没有收到响应，这是一种可能；另一种可能性则是，你根本就从来没有执行过该操作，也许请求根本没有送达你那里，又或者你的系统崩溃了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: If I want to make a payment, and I send you "please pay Sam a hundred pounds." Yeah. This is, I'm emailing people back at home, right? "Please pay Sam a hundred pounds," and I don't get a confirmation back. I don't get back a response. From my point of view, there are two possibilities. The first possibility is that you received that payment request, you've done it, the payment has been completed. And the result has got lost to me for some reason, I didn't get a response, that's one possibility. The other possibility is that you never carried out the operation, maybe it didn't get to you, maybe you crashed.
+
+</details>
+
+**Speaker 1**: 我觉得过去经常能见到一个很好的例子，也许现在已经好多了，但在航空公司网站上买机票时常有这种情况：你正准备买一张 1000 美元或者 2000 美元的机票，核对了所有个人信息，上面写着“支付”或“预订”。紧接着，通常有些航空公司会把你带到一个中间页面，上面写着：“请不要刷新此页面或重复提交，否则您可能会被重复扣款。”而你真正想要的是，你点击支付，页面转圈加载；如果它不是幂等的，你一旦重复操作，就会被扣两次款。但如果它是幂等的，即便你刷新页面、复制相同内容、重新提交一模一样的表单，也不会出问题。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: I think like a good example that I've seen in the past, maybe it's over, but airlines: you're about to buy this airline ticket for a thousand dollars, two thousand dollars, you've checked all of your details. And it says like "Pay" or "Reserve". And then often, some airlines will take you to an intermediate page which says "Please do not refresh this page or submit it again, because you might be double charged." And what you really want is you pay, you know, like pay. And you get the spinner, and if it's not idempotent, if you do it again and you get charged twice, yeah. But if it is idempotent, if you just refresh, you copy the same thing, you submit the exact same form...
+
+</details>
+
+**Speaker 0**: 这就很有意思了。那么问题就来了：我发出了机票购买或转账的支付请求，没有收到预期的回复，但我又非常希望能确保机票预订成功。这就是拿着浏览器的你，或者在家里转账 100 英镑的普通用户面临的处境，对吧？你想：“我必须确保 Sam 现在能拿到这 100 英镑。”但在分布式系统中，由于“规则二”的存在——
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: That's interesting. So the question then becomes, right. So I send that payment for my airline ticket, whatever it is. And I haven't had that response back, but I really want to make sure that the airline ticket booking can go through. This is you with the browser, or the people at home sending a hundred pounds, right? You think, "I must make sure Sam gets this hundred pounds right now." One thing in a distributed system, because of rule number two...
+
+</details>
+
+**Speaker 1**: 规则二，意味着那里有规则一……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Rule number two means there is rule number one...
+
+</details>
+
+**Speaker 0**: 规则一是有时候事情会出错，是的，必须接受有些事情就是会失败。因为你极度希望这件事能办成，所以你只能尝试重试。但在重试的过程中存在一个危险：如果第一次操作实际上已经成功处理了，只是你并不知情，那么由于第一次操作已经成功应用，你再次重试，就会导致支付两次，买了两张票。这就是缺乏幂等性所带来的问题。我们必须让重试操作变得安全。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Rule number one, sometimes things go wrong, yeah, and accepting these things is going to... You just try to retry, because you really want it to happen, yeah. And retrying, there's the danger that if the first operation had been processed successfully, you didn't know about it. Well, the first operation had been applied successfully, and you do it again, and now you pay twice, you know, two tickets. And that's the problem without idempotency. You want to make it safe to retry operations.
+
+</details>
+
+### 实现幂等性的两种路径：幂等键与请求指纹
+
+**Speaker 0**: 要做到操作幂等，实际上有两种主要方法。第一种非常好，也是你应该采用的标准做法，但它通常需要事后改造，而改造现有系统往往是一件痛苦的事；另一种方法也需要解释一下，它很有用，但也伴随着自身的问题。第一种方法是使用幂等键（Idempotency Keys）。你会生成一个唯一标识符，通常是一个 UUID。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: So to do that, to make it idempotent, there's two ways to do it really. One is good, and that is what you should do, but you kind of have to retrofit, which retrofitting is a pain. And one, which is one you should explain, which is useful, but has problems, right? The first one is idempotency keys. Yeah. So you generate, you have a unique ID. You use a UUID for this, yeah.
+
+</details>
+
+**Speaker 1**: 当你生成这些唯一 ID 时，连续生成的两个 ID 应该是完全不同的。虽然理论上存在极其微小的哈希碰撞概率，但实际中极难发生。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: And so when you generate the unique ID, and when you generate two of them, they should be different. There is like this tiny, tiny, tiny likelihood of clash, which might again, that would happen.
+
+</details>
+
+**Speaker 0**: 我想如果是 UUIDv7 的话，在本地生成且无需任何网络往返调用的情况下，碰撞概率极低，可能需要数十甚至数百年才可能遇到一次冲突空间。是的，碰撞概率极其微小，这种方式完全可行。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: I think that's like, I think with UUIDv7, I think it's like a 59-second chance space, something you can generate locally without round trips. Yes, collision chances are extremely low. It's a way to modify that we can work with that.
+
+</details>
+
+**Speaker 1**: 只要避开所谓的亚马逊问题……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: And this, as long as your Amazon problem...
+
+</details>
+
+**Speaker 0**: 但这已经被广泛采用了。你看 AWS 的 API、Stripe、PayPal，它们全都使用相同的机制。客户端随请求附带一个 UUID 作为幂等键发送给服务端：“请付钱给 Sam，这是该操作的幂等键。”如果因为某种原因我没有给你返回响应，你发起重试，再次传入同一个幂等键。如果服务端之前已经处理过该请求，就能识别出来：“我处理过这个请求吗？是的，处理过了，很好。”即便服务端收到了第二次、第三次或第四次重复请求，只要检查发现已经处理过，就会直接返回：“是的，已处理完成，没有问题。”这是一个非常优雅简单的做法。但采用幂等键的难点在于，它要求客户端和服务端双方都提供支持：客户端必须将其作为必填字段传递，服务端也必须具备解析和记录能力。因此，如果要对现存系统进行向后兼容的改造，会相当麻烦。不过如果你是从头构建系统，务必从一开始就使用幂等键。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: But this has been, yeah, the AWS APIs you see, Stripe, PayPal, they all use the same key mechanism. So you send a UUID. So then if you send that to me, and say "Pay Sam, and here's the idempotency key." I don't send you back a response. Whatever reason you retry it, you pass that idempotency key. If I had carried out the processing, I could look at it, "Have I processed this? Yes, I have, okay great." If I have processed it, even if I get a second one, third or fourth, "Have you processed this?" I just keep on saying, "Yeah, processed. This process is fine." That's a nice simple thing to do. The issue with making things idempotent with idempotency keys, it requires both client and server to support them. So it has to be a required field to go through, and it has to be something the service supports. So if you're going to retrofit this in, it's a pain. But if you're building it, use an idempotency key, use it exactly.
+
+</details>
+
+**Speaker 0**: 另一种方案正是你刚才在开头提到的场景：用户退回上一页，点击刷新，重新填写了完全相同的信息，再次提交了机票预订请求。系统理应能够识别出这是一笔重复提交。这是另一种可行的方式，非常适合用来在服务端对系统进行幂等性的补丁改造。具体而言，当收到包含相同字段的请求——相同的收款人 Sam、相同的金额 100 英镑转到同一个银行账户——服务端可以做的是生成一个“请求指纹”。服务端提取这些业务字段，通过哈希计算生成一个代表该请求内容的哈希值。这样一来，当你发起第二次预订请求时，其指纹看起来完全一致。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: The other one you mentioned at the beginning was: I go back, I hit refresh, I fill out all the same fields again, and I submit the airline booking again, it should know it's duplicate. That's another thing you can do. This works as a good retrofit for idempotency. So if I've sent the same fields, the same person Sam, the same amount 100 pounds to my bank account, and I'm sending this through again, what you can do on the server side is generate what's called a fingerprint. You take these fields, yep, and then generate a hash that represents those fields. So if you do a second booking, it looks the same.
+
+</details>
+
+**Speaker 1**: 这样就可以把它当作一种通过改造实现的伪幂等键机制。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: And you're using that as an idempotency, as a retrofit of idempotency keys.
+
+</details>
+
+### 请求指纹的缺陷与双重校验组合
+
+**Speaker 0**: 是的，但这种方式存在一定的负面缺陷：你可能会遇到假阴性（误判）的情况，这意味着完全合法的第二次独立请求可能会被误当成重复请求而遭到拒绝。举一个现实生活中的真实例子，我知道这在丹麦发生过，可能其他地方也存在类似情况：我和丹麦负责支付系统的人聊过，在他们的特定支付系统里，你去商店刷卡购买了一件 40 克朗的商品，然后如果紧接着在随后的四到五分钟之内，你在同一家店又购买了另一件同样价值 40 克朗的物品，收银台或刷卡机终端就会直接拒绝这笔交易。但如果第二件商品是 41 克朗，交易就能顺利通过。这是因为系统假定，你在这么短的时间内连续购买两笔金额完全相同的东西的概率极低，所以内置了这种幂等防重复刷卡逻辑。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Yeah, there are a couple of downsides. So that you do get false negatives, meaning that legitimate second requests might get rejected. Real-world example: this happens in Denmark, and it might happen elsewhere. I speak to people in Denmark who work on a payment system. You go in, you buy something for 40 kroner with this particular payment system, and you tap your card, 40 kroner, whatever. If within the next four or five minutes, you buy something else for 40 kroner in the same shop, the till handset rejects it. If it was 41 kroner, it would be fine. That's because the chances of you buying something for the exact same money is so remote. There's some idempotency to stop double taps.
+
+</details>
+
+**Speaker 0**: 因此，一旦遇到某些业务场景，其操作在业务上完全合法且内容看起来一模一样，但实际上是彼此独立的并发或连续操作时，问题就出现了。一个极其典型的例子就是 AWS API：在代码中用一个 `for` 循环连续创建 20 台完全相同的 EC2 实例是完全合法的需求。虽然可能有更好的批量调用方式，但通过循环依次启动 20 台配置完全一致的 EC2 实例是常有的事。如果服务端完全依赖请求指纹来判断，这些请求的指纹全都会一模一样，指纹机制在这里就会彻底失效。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: And so when you get situations where operations can legitimately look the same, but actually be different and carried out at the same time, the really good example would be the AWS APIs. It is completely legitimate for me to, in a for-loop, provision say 20 EC2 instances. Now there's better ways of doing it than cycling in a for-loop, but I could iterate through the for-loop and spin up 20 identical EC2 instances. If I just relied on there being a fingerprint, they are all the same. So that's where this stuff breaks down.
+
+</details>
+
+**Speaker 0**: 所以如果你的业务场景允许两个合法操作内容完全相同且发生时间极为接近，直接使用指纹就会遇到麻烦。如果它们之间存在时间间隔，服务端可以选择只在特定时间窗口内保留这些指纹缓存，比如保留 5 分钟、10 分钟或 1 小时。但这依然存在潜在隐患，所以单纯依靠指纹并不是最理想的方案，幂等键才是首选之道。指纹通常只用于事后改造。然而，如果你将两者结合使用，效果会非常强大：你可以借此识别出那些在重试之间篡改了请求参数的异常情况，从而避免数据混乱。很多对外开放的公有 API 仍然会生成请求指纹，如果你发起操作时使用了与之前相同的幂等键，但传入的业务参数却被修改了，服务端就能直接识别并拒绝该非法请求。因此，将这两者配合使用能发挥出极大价值。这些核心理念其实非常简单，但在工程落地时，如何优雅地在服务端存储和管理它们，仍然涉及许多有趣的细节。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: And so if you've got situations where legitimately you have operations that come to look the same, but they're actually different, they could happen close to each other, you have an issue. If you've got a bit of space around them, what you can do is hold onto those fingerprints for a period of time: five minutes, ten minutes, an hour. There are still some potentials for issues, so it's not ideal. Idempotency keys are the way to go; fingerprints are for retrofitting. But if you use them both together, that can be really useful, so you can pick up situations where people change the parameters between retry attempts, which leads to confusion—a bit more of a complex topic. But a lot of public-facing APIs will still generate a fingerprint, and if you carry out this operation and you give the same idempotency key you gave before, but you've changed parameters, the server can reject it as being an invalid request. So having those things work together is great. The fundamental ideas are actually really simple, but there's some nuance about implementing them and how you store them on the server side.
+
+</details>
+
+### 惊群效应与重试放大雪崩
+
+**Speaker 1**: 我觉得另一个当下经常被频繁讨论的话题就是“惊群效应”（Thundering Herd）。没错，当一个系统重启恢复时，突然之间面临排山倒海般的请求洪峰。具体来说，GitHub 几周前就遭遇了一次网络相关的故障，而系统的恢复过程耗费了非常长的时间，正是因为客户端不断重试，从而引发了严重的惊群效应。究竟什么是惊群效应呢？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: I think another interesting topic that comes up often these days, it feels more often, is thundering herds. Yes. It's when a system restarts and suddenly it faces a big load. Specifically GitHub had an outage a few weeks ago where it was networking related, and recovery took a lot longer time because there were retries going on, and it creates this thundering herd. What is a thundering herd?
+
+</details>
+
+**Speaker 0**: 我通常把它定义为任何存在容量错配的场景：也就是过多的请求涌向了过少或不足的系统资源。正如我们前面提到的“规则三”，资源永远不是无限的。因此，在书中相关的章节里，我详细剖析了一整套不同的场景与具体表现形式。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Generally I talk about it in any situation where you've got mismatched capacities. You've got too many requests for too few resources, right? Resources are not infinite, coming back to rule number three, yeah. So in the chapter, I talk about a whole bunch of different scenarios.
+
+</details>
+
+<!-- chunk 11/16 -->
+
+### 内部自伤与雪崩：从缓存崩溃到重试风暴
+
+**Speaker 0**: 从恶意攻击引起的故障来看，比如分布式拒绝服务攻击（DDoS），对吧？遭遇拒绝服务攻击时，这种恶意攻击通常发生得非常突然，老实说你能做的事情并不多。常见的应对方式是使用 Fastly 或 Cloudflare 这类边缘防护与 CDN 服务。这里我就不深入展开具体防御的技术细节了。除了外部恶意攻击，你还会遇到各种内部自找的、自作自受型故障（self-inflicted onset）。一个很典型的例子就是缓存崩溃（cache collapse）。系统不仅依赖缓存来提高操作速度，还指望它来减轻其他下游组件的负载压力。对吧？一旦缓存发生故障并重启，就会产生大量的缓存未命中（cache miss）。请求瞬间全部击穿打到源站，源站承受不住如此巨大的负载，直接就被打挂了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: So you've got everything from malicious... like a denial of service attack, right? Denial of service attack. Malicious attacks often come at short notice, and there's not that much you can do about them. The answer is you'd use Fastly or Cloudflare. I won't go into details of how that happens. But you also get things like kind of internal, self-inflicted onset. So a good example would be something like a cache collapse. The system relies on the cache not only for speed of operation, but also for reducing load on other components. Yep, the cache gets restarted, you then have a lot of cache misses, you'll hit the origin, and the origin goes down.
+
+</details>
+
+**Speaker 1**: 因为源站根本没有预料到会承受如此量级的瞬时负载。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Expected such load.
+
+</details>
+
+**Speaker 0**: 没错。面对这种情况，业界常见的做法首先是将缓存快照定期刷写落盘（flush cache snapshots to disk），以此降低每次重启后遭遇高缓存未命中的几率。不过也有不少公司干脆直接暂时关闭对外服务，直到缓存预热回填完毕后再重新开放。
+
+另一个类似的严重隐患则是重试风暴（retry storm）。比如早在 2017 年，Square 就发生过一次重大系统宕机，起因是重启了名为 Multipass 的多因素身份验证系统。Multipass 会从 Redis 读取数据——他们把 Redis 当成持久化数据库来用，因为表面上你确实能这么搞。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Yeah. So a common thing there would be, first, you use flush cache snapshots to disk to reduce the chance of having high cache misses every restart. But also a lot of companies will just turn their service off until the cache refilling finishes. So that's kind of another example. Another one is retry storms. Back in 2017, Square had a big outage that restarted Multipass, which was their multi-factor authentication system. Multipass in turn pulled its data from Redis. They were using it as a database, because you can do that, apparently.
+
+</details>
+
+**Speaker 1**: 我觉得一般人会觉得他们基本上只是把 Redis 当作缓存来用吧，对不对？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: I think... they are using it as a cache, basically, right?
+
+</details>
+
+**Speaker 0**: 呃，我认为他们当时确实是把它当数据库用的。确实有些人会把 Redis 视作数据库，不过这属于另一期播客讨论的范畴了——或许你应该开一期专门聊“愚蠢技术决策”的播客，专门讨论那些把技术用得啼笑皆非的案例。总之，他们当时正在从 Redis 读回状态数据。问题在于，Multipass 客户端内部的代码逻辑是：如果调用 Redis 失败，客户端就会立即重试，但重试之间没有任何退避延迟（no delay/backoff），并且写死了多达 500 次的重试上限。于是，密集的重试直接把 Redis 给轰垮了；而运维人员不断重启 Redis，又接着重启 Multipass。当然，那是很久以前的事了，他们后来也彻底修复了这个问题。修复方案是引入了更合理的重试策略（retry policy），并将这些配置参数外部化，从而避免了重试风暴与惊群效应（thundering herd）。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Well, I think they were using it as a database. There are some people who think Redis is a database. That is a different podcast altogether. I think you should start a "Stupid Technology Decisions" podcast, where we talk about using technology stupidly. Great. Anyway, so they were pulling state back from Redis. And there was a problem that the clients in Multipass, if the Redis calls failed, they'd try again, but without any delay between retries, and they had a hardcoded limit of 500 retries. So their retries basically smashed Redis, and they kept restarting Redis, and then they'd restart Multipass. And again, this was a long time ago, and they fixed it, right. They fixed it by having a more sensible retry policy and externalizing these values so that thundering herds would never happen.
+
+</details>
+
+### 产品爆红与惊群流量：不同成因下的差异化缓解方案
+
+**Speaker 0**: 我在书中探讨的最后一个分类，是那些由于“产品过于成功”而引发的故障，比如早期的 Twitter，或者 Healthcare.gov 医保网站，对吧？在这种场景下，摧毁系统的并不是恶意流量，而是实打实来自外部的合法业务请求。当你审视这些场景的解决方案时，会发现尽管表面上的故障现象完全一样（都是系统过载崩溃），但采取的解决手段却截然不同。
+
+面对外部涌入的合法洪峰与惊群流量，你能考虑的切入点完全不一样。比如你可以对注册流程施加更多限制，采用发放少量邀请码的机制。Healthcare.gov 当年的致命伤之一（虽然问题还有很多），在于他们一次性直接向全美 36 个州全量上线，这直接注定了系统必然会被挤爆。事后复盘来看，如果当初先开放一个州作为试点上线，显然是更明智的做法。再看 Twitter，早期他们几乎整天宕机，所以他们完全可以限制新用户注册速率，或者限制每个用户的发推频率。对这些关键环节施加限制，他们后来也确实采取了这类手段。因此，虽然系统崩溃的表象相似，但针对性的缓解措施却千差万别。我非常喜欢剖析这些案例，因为在调研中我发现它们都是极其精彩的真实故事。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: The last kind of section I talked about were ones caused by products being too successful, like Twitter or Healthcare.gov, right? This is where you have external, real, legitimate load that takes you out. And when you look at all of these solutions, although what happened is the same, the kind of solutions were very different. So with a thundering herd that's coming from external legitimate users, you've got different things to look at. Like, I would have more constraints on signups and have fewer invite codes. With Healthcare.gov, one of the issues—there were many others—was that they went live in like 36 states at once, and they were meant to be overloaded. In hindsight, maybe going live with one state first would have been a good idea, for example. With Twitter, they were going down all the time, so they could have constrained signups or put tweet limits on you, and things like that. Yeah, constraining those sorts of things. And they did those things as well, right? So although they look the same, the mitigations for each were a little bit different. So I quite liked talking about that, because they were all great stories I found.
+
+</details>
+
+**Speaker 1**: 当然，我觉得我们刚才讨论的主要是：在可用资源固定的前提下，该如何解决这类问题。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Of course, like, I think we're talking about solving it when you have the same resources.
+
+</details>
+
+**Speaker 0**: 没错，但接着我们就会自然引申到扩展性（scaling）的思考：我们能否通过水平扩容、动态增加硬件资源来解决？因为任何负载问题通常都有两个维度，你究竟在什么时候能这么做，又在什么时候会撞上不可避免的瓶颈——哪怕你增加了一堆计算节点，底层的中心化组件却可能早已不堪重负。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: But then we get into things like scaling. Like, can you scale horizontally and add more resources? Because there's two sides to this, right, whenever you have it. At what point can you do it, or at what point do you face a bottleneck because of a central component or whatever?
+
+</details>
+
+### 弹性扩容的代价：拒绝服务攻击变成“拒绝钱包攻击”
+
+**Speaker 1**: 这恰恰是一个绝佳的例证，说明为什么缓解措施有时需要分清场合。举个例子，假设你做的一款产品突然爆火了——比如一家初创公司，不知怎的突然取得了巨大成功。这种成功往往如潮水一般汹涌而来，对吧？成功的大潮瞬间拍打在你身上，随后潮水又会逐渐退去。你可能一下子涌进来一千个新客户，但潮水退去后最终留存下来的也许只有一百个，商业规律往往就是如此残酷。因此，你必须在流量峰值期间扛住压力，而在峰值过后，你又必须能够将系统规模缩容回去以压低成本。
+
+如果你在构建应用时就具备了动态伸缩能力（dynamic scalability），并且部署在公有云或类似支持弹性伸缩的基础设施上，那么按需扩容与缩容确实是一种非常可行的应对机制。面对流量暴涨，直接扩容机器顶住压力，这完全没问题。
+
+但你能用自动扩容来抵御分布式拒绝服务攻击（DDoS）吗？绝对不行。因为那样一来，你的“分布式拒绝服务攻击”（Distributed Denial of Service）瞬间就会演变成“分布式拒绝钱包攻击”（Distributed Denial of Cash）。你不仅服务依然被打瘫，钱包还会被彻底掏空，因为你的 Kubernetes 集群在疯狂创建节点，而 AWS 只管按部就班地持续向你扣费记账。公有云供应商乐见其成，而你的系统却依然根本顶不住。所以，自动扩容是应对特定流量场景的绝佳机制，但你必须清楚它所适用的具体上下文边界——绝不能盲目靠砸钱加机器来摆脱一切困境。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: That's a great example of where sometimes mitigations... you take something like a startup that suddenly got successful. That success comes like a wave, right? The wave of success hits you, and then it recedes. You'll get a thousand customers in, and maybe you'll keep a hundred, right? That's just how things work. So you need to be up during the peak, and you probably need to shrink down again to keep costs low. So if you build your application to have dynamic scalability, and if you are on the public cloud or a similar place where you can spin up and spin down, that's a viable mechanism, right? Okay, we can scale up to handle this, that's fine. Would I use that against a denial of service attack? No, because then your distributed denial of service attack becomes a distributed denial of cash attack, right? You go from not only having no service, but also now having no money, because you keep spinning up nodes on your Kubernetes cluster and Amazon just keeps taking the money. It's great, and you still can't keep up. So that's a perfect mechanism for some things, but you kind of have to know the context, to say you can't just throw resources at trouble.
+
+</details>
+
+### 技术取舍的本质：理解业务影响与可观测性
+
+**Speaker 0**: 完全正确。这又让我们回到了那个反复提及的核心理念：作为一名软件工程师，你必须深刻理解业务本身。你必须清楚到底什么在为公司创造价值，什么在带来核心营收，哪些功能对公司生死攸关，而哪些其实无伤大雅；这样你才能权衡判断，究竟是在基础架构和高可用性上倾注资源重金投入，还是在那些无关痛痒的地方顺其自然，因为为之过度投入根本不划算。一切本质上都是权衡取舍（trade-offs）。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Right, I think we're going back to what we say a lot of times: as an engineer, you want to know about the business. You want to know what creates value, what creates revenue, what is important for the company versus what is not, and where we want to maybe invest with our infrastructure and our reliability versus where it doesn't matter and it's not worth doing. It's all about trade-offs.
+
+</details>
+
+**Speaker 1**: 确实如此。而且如果没有足够的数据与信息支撑，你根本做不出正确的权衡。如果你不了解你的生产系统，你就根本不知道当前架构距离崩溃红线究竟有多近——这也是可观测性（observability）不可或缺的关键原因，它让你看清权衡背后的真实代价。正因如此，我在书中专门用了一整章的篇幅探讨形式化方法（formal methods），讨论 CAP 定理以及 PACELC 模型。我经常强调，这些分布式理论虽然看似极其深奥复杂，但抽丝剥茧之后，其底层逻辑最终都可以归结为一场围绕业务上下文展开的务实对话。
+
+举个例子：在一家电商公司里，假设我想在线购买一件实物商品。在用户点击下单的那一瞬间，如果系统底层库存服务出现故障，无法百分之百确定该商品到底还有没有存货，绝大多数电商公司的系统策略依然会选择直接返回“购买成功”。因为从概率上讲，仓库里大概率是有货的；即便后续发现真的缺货，他们也可以安排补货调拨再发货；退一万步讲，在最糟糕的情况下，客服也可以致歉并为客户办理全额退款，对吧？虽然退款体验不算理想，但如果系统在查不清库存的瞬间就保守地决定“因为我不确定有没有货，所以拒绝售卖”，那公司就会直接白白流失一笔真金白银的订单，而顾客转头就会跑去竞品平台购买，并且对方很可能正好有货。因此电商企业在面临这种抉择时，深刻理解他们与客户的契约关系以及业务影响：哪怕误判了，他们也有后续兜底手段把商品补寄给买家。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: And I think it's about... you don't know unless you get information about your production system; you don't know how close you are to the red lines. That's what observability is key to—it's what trade-offs are all about. And that's why I do a whole chapter on formal methods, I talk about CAP and PACELC. And I say that these things are complicated, but actually it really all comes down to a conversation about understanding the business context. So for example, at an e-commerce company, if I want to buy a physical item online, and at the moment of the purchase you're not sure if you've got it or not, most e-commerce companies will say, "Yes, sure, you can have it." Because they know there's a good chance they do actually have it in stock. And if they don't have it in stock, they can get it back-ordered and deliver it. And in the worst-case scenario, they can even say sorry and refund the money, right? So that's not great, it's not ideal, but if they say, "We don't know, therefore we're not going to sell it to you," they're missing out on a sale, and I could go buy that somewhere else, where they probably might have had it. So e-commerce companies in that situation understand the relationship with the customer and the impact if they get it wrong—they can try to fulfill the item later.
+
+</details>
+
+### 故障开闭哲学：从泰勒·斯威夫特演唱会门票到 Uber 的演进
+
+**Speaker 1**: 现在把底层技术问题完全保持不变，仅仅切换一下业务上下文：把买普通商品换成抢购演唱会门票。比如你要去买泰勒·斯威夫特（Taylor Swift）的演唱会门票，此时由于底层系统连接故障，系统无法确认你究竟有没有锁定这张门票。但系统如果草率地告诉你“购买成功”，你就会满心欢喜地带着孩子、带上妻子，全家大费周章飞去葡萄牙准备观看演出。结果等你们兴冲冲赶到现场，却被告知其实根本没有门票。
+
+这种情况下产生的问题和打击，与买普通电商商品完全不在一个量级上。主办方根本无法通过后续“补订一张门票”来弥补损失，现场座无虚席就是座无虚席。此时对用户的伤害是毁灭性的，远远超出了机票本身的经济价值。因此在这类业务场景下，系统必须做出完全相反的架构决策：如果系统不确定你是否拿到了票，就绝不能直接放行确认购票。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Keep that problem exactly the same, but now change the business context: now it's concert tickets. So you're getting tickets to go see Taylor Swift, right? You go to see Taylor Swift, and we're not sure if you've got that Taylor Swift ticket or not because the backend system is down. But the site tells you, "Here's your tickets." You take your kids, take your wife, fly to Portugal, all excited to see Taylor Swift, and then it turns out you don't actually have the tickets. The problem with that is, the devastation is entirely different. They can't back-order a ticket, yeah. And so in that situation, the impact to the customer is so much greater than the cost of the flight and everything they put into it. So what they do is make a different decision. In that situation, if they don't know if they've got a ticket, they do not issue a ticket.
+
+</details>
+
+**Speaker 0**: 我不确定书中是否明确提到了这个术语，但这本质上就是架构设计中经典的“故障开放”（fail open）与“故障关闭”（fail closed）之争，对吧？当系统发生异常、状态不确定时，你究竟是选择放行操作还是拦截操作？正如你所指出的，这完全是一个业务层面的决断。面对同一个技术问题，两家不同业务性质的公司会做出截然不同的抉择；甚至同一家公司在不同发展阶段，其选择也会随之改变。
+
+Uber 早期在这个问题上就有过极其经典的演化案例。在支付环节中，当系统不确定扣款是否已经真正成功时，到底应不应该允许乘客完成行程下车？在 Uber 的创业早期阶段，他们的策略始终是无条件“故障开放”（fail open）——允许乘客正常下车完成行程。哪怕钱没扣成功，公司先自己承担这笔账，后续再去催收或者记账；但随着公司逐渐步入成熟期，开始全力追求财务盈利时，策略便果断转向了“故障关闭”（fail closed）：只要无法百分之百确认支付扣款成功，系统就不再放行……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: I'm not sure if we covered it in the book, but this is the fail-open versus fail-closed debate, right. When you have an error and you're unsure, are you going to let it go through or not? And as you say, this can be a decision where, for the same problem, two companies can make completely different decisions. Or a company years down the road could make a different decision. Uber had this classic example when it came to payments: when we weren't sure the payment went through, do we allow the ride to finish or not? In the early years of the company, we always failed open: yeah, just let them have the ride, we might get the money later, and if not, we'll deal with it. But as the company started to go for profitability, we failed closed: like, we're not sure we have the money or that the charge went through...
+
+</details>
+
+<!-- chunk 12/16 -->
+
+### 业务权衡与 CAP 定理的工程本质
+
+**Speaker 0**: 你不可能把所有事情都做到完美，而且即便是同一家公司，在不同发展阶段关注的重点也完全不同。如果你是一名开发人员，你必须密切关注当前对业务最关键的指标是什么。公司初期可能最看重的是业务增长，哪怕亏损也没关系；而现在可能追求的则是单位经济效益与盈利能力。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: You're not going to get the right and you get the same company different focus. And if you're the developer you needed to pay attention to like what is important for the business. It was growth initially. It's okay if you lose money, then now it's I don't know, unit economic profitability.
+
+</details>
+
+**Speaker 1**: 而且这种权衡并不是整个系统搞一刀切，它取决于具体的功能，甚至取决于单笔交易的上下文。比如在同一个系统中，一笔打车费可能只有 10 欧元，而另一笔可能高达 1000 欧元，你完全可以基于具体的业务价值做出不同的技术决策。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: But also that open close as a layout open discussion isn't one size fits all for the whole system. It's on a feature by feature basis and even...
+
+**Speaker 0**: Even in the system.
+
+**Speaker 1**: You could say this taxi ride is 10 euros versus it's 1,000 euros, you can make different decisions.
+
+</details>
+
+**Speaker 1**: 现在如果你从数学和计算机科学的角度来看这个问题，我们通常会谈论 CAP 定理，对吧？刚才那段讨论本质上就是关于 CAP 定理的。在后来的扩展中，还会讨论 PACELC 理论——它是对 CAP 的延伸。我解释这些模型是因为当你深入架构领域时会经常听到它们。但从根本上讲，这个问题的核心到底是什么？就是当系统发生分区时——用通俗的话说，就是“我无法与系统的某个部分通信了”。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Now if you approach this from a mathematical and from a computer science viewpoint, we talk about CAP theorem. That was a conversation about CAP theorem, right? So I talk about CAP, PACELC, which is the extension of CAP. I explain what these models are because when you get deep into architecture you hear about them. But fundamentally, that's what this is about, right? When you have a partition, CAP theorem defines: I can't talk to a part of my system.
+
+</details>
+
+**Speaker 1**: 记住我们之前说的“法则二”：我无法连接到系统的另一部分了，这时候我该怎么办？作为开发者，你真正需要明确的就是：我现在连不上那个下游服务了，我该作何反应？有时我们可以做纯技术的决策，比如“我重试一下”。但如果重试把下游服务打崩了，或者重试之后依然失败，那又该怎么办？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Remember, it's rule number two: I can't talk to a part of my system. What do I do? And all you need to know as a developer: I can't talk to that, what do I do? Sometimes we can make a technical decision: I'll try again. I hope I don't bring my system down with retry storms. But I'll try again and again, if that doesn't work, what do I do?
+
+</details>
+
+**Speaker 1**: 其实很多时候，正确的做法不是一个人死抠 CAP 或 PACELC 这些理论模型，而是去找产品经理沟通：“现在下游断了，在这种情况下我们的产品应该怎么表现？”最终的技术方案往往都会落到一致性与可用性的权衡上，或者涉及到 Brewer 猜想延伸出的各种理论权衡。但在实际工作中不必被这些术语吓倒，那些内容我都放在书的后半部分了，大概在第 11 或 12 章。千万别从那些复杂的理论开始，先从务实的沟通开始：牢记“法则二”，当我现在无法访问依赖服务时，我们的业务究竟应该怎么应对？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Well, actually often the answer is, yeah, you look at CAP and PACELC or whatever else, but go have that conversation with the product team: "What should we do?" The resolution of that often ends up being a discussion about: are we trading off consistency versus availability, PACELC, harvest and yield, you're going into that evolution of Brewer's conjecture. But don't worry about that. That's in the book. That's why it's a later chapter, chapter 11 or 12 I think. Don't start there, start with having a conversation: rule number two, I can't talk to this dependency right now, what should we do?
+
+</details>
+
+### 韧性工程的四大维度：健壮性与反弹力
+
+**Speaker 0**: 刚才聊到韧性的时候，你提到过思考韧性时的几个不同维度。具体是哪几个维度呢？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: And that starts... when talking about resilience, you talk about the dimensions to think about resilience. What are these dimensions?
+
+</details>
+
+**Speaker 1**: 我在书的第一章就展开了这部分内容。这源于我之前提到过的大卫·伍兹（David Woods）写的一篇论文，刚开始读时我觉得那篇论文晦涩难懂，但他在其中提炼出了韧性工程（Resilience Engineering）的四个核心概念。我非常喜欢这四个概念，因为它们能帮助我们建立全局性的思维视角。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: I start in the first chapters. So climbing back, that paper by David Woods I mentioned that was impenetrable to me at the start, and he comes up with four concepts for resilience engineering. And I like the four concepts he comes out with. It helps us think broadly, right?
+
+</details>
+
+**Speaker 1**: 第一个概念是“健壮性”（Robustness）。它的定义基本上就是：系统吸收已知扰动（absorb known perturbation）的能力。我们在系统建模时预设可能会出问题的地方，一旦发生故障，系统能自行消化处理，外部用户甚至完全感知不到任何异常。一个很简单的例子就是 Kubernetes 中 Pod 挂掉的场景：Pod 挂了，Kubernetes 自动调度拉起一个新的替代它。Pod 挂掉属于已知的扰动，虽然出了故障，但系统能够妥善吸收应对。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: So it starts off with robustness. This is where we can basically, in his words, absorb known perturbation. So we model the system and something goes wrong, and we can just deal with it in a way that no one cares about, nobody knows. So a very simple example would be in Kubernetes if a pod fails, Kubernetes creates a replacement. Now, the pod failing, that's a perturbation. It's going to go a bit wrong, but we deal with it, great. So that's the start.
+
+</details>
+
+**Speaker 1**: 但问题在于，我和大多数工程师交流时，发现他们几乎把所有精力都放在了健壮性上，完全忽略了另外三个维度。关于健壮性，最反直觉的一点是：我们为了让系统更加健壮所采取的手段，往往反过来增加了系统的复杂度，而复杂度的增加又进一步扩大了系统的潜在故障面。比如为了应对单个容器故障，我引入了 Kubernetes；可现在引入了 Kubernetes，它自身又变成了一个新的复杂度和故障源。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: And the thing is, most engineers I speak to, they focus entirely on this and didn't look at the other three. They focus entirely on this. The other annoyingly true thing about robustness is the things we often do to make our systems more robust in turn increases the complexity of our system, which in turn increases the surface area for failure. I bring Kubernetes in to deal with the failure of a container, now I've got Kubernetes and that becomes... and that's not solvable by the way, that's just a thing to be aware of, right?
+
+</details>
+
+**Speaker 0**: 是的，这也正是为什么很多团队不愿意轻易做多区域（Multi-Region）或多云（Multi-Cloud）架构的原因，因为那样做会急剧增加系统发生故障的暴露面。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Yes, that is also why sometimes people don't go multi-region or multi-cloud because it's increasing the surface area of the failure types.
+
+</details>
+
+**Speaker 1**: 没错。健壮性解决的是：对于那些我们事先已经预见到的、可预测的故障，我们能否提前处理好。而第二个维度是“反弹力”（Rebound）——也就是当故障真正发生并且造成了破坏时，你能以多快的速度恢复过来。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Yeah, that's robustness, right? For things to be robust, we have to know about them ahead of time. This is predictable, we deal with it. Then there is rebound, which when something does happen and goes wrong, how quickly you can recover.
+
+</details>
+
+**Speaker 0**: 这通常对应的就是我们常说的平均恢复时间（MTTR），包括发现故障的时间和修复恢复的时间。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: So this is typically the time to recovery, well time to detection and time to recovery.
+
+</details>
+
+**Speaker 1**: 没错。很多人会把它放到容灾（Disaster Recovery）的范畴去讨论。但核心思考的是：当我们已经处于服务降级或者部分瘫痪的状态时，我们能够多快把系统重新拉起来？这就是反弹力的内涵。在这一点上你必须对系统保持谦逊。追求绝对的健壮性会让人产生一种幻觉，以为系统永远不会在自己的掌控之外崩溃；但万一我们料错了呢？我们必须承认故障总会超出预期。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Yeah. That's the metric of measuring it. In DR chat, I talk about disaster recovery, but that's like how quickly could we get it up and running. So we've got into degraded functionality, how quickly can we get it up and running? That's thinking about the rebound. And again, for that, you have to be very humble, because robustness is "the system will never fail on the inside", but what if we got it wrong?
+
+</details>
+
+**Speaker 0**: 我们必须承认意外总会发生，所以关键在于你如何从故障中恢复。如果团队认真对待这一点，通常会组织模拟演练，比如模拟某个模块宕机。这方面最著名的就是 Netflix 的混沌猴（Chaos Monkey），它会在生产环境中随机关闭部分服务来验证系统的自我恢复能力。此外还有定期的演习、排班值班（On-call）流程的磨练等等。这是非常硬核的部分，而且不能做一次就完事，必须定期重复演练，因为系统本身是一直在演进变化的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: We have to admit things go outside and as for how you can recover, this is where teams that are serious about this do simulations of this going down. This is where Netflix's very famous Chaos Monkey comes in, where it goes and shuts down part of the system to test it live. And there's drills that are being done on how our on-call process works. That's a hard part. And doing it once is not enough, because you need to do it regularly because the system keeps changing.
+
+</details>
+
+### 应对未知：优雅延展性与人类组织
+
+**Speaker 1**: 这里我想顺便提一下伦敦的 Uptime Labs，他们提供非常棒的线上故障应急演练培训。所以第二维度就是这种恢复流程与重新拉起系统的能力。而紧接着的第三个维度，叫做“优雅延展性”（Graceful Extensibility）。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: I'd like to shout out to Uptime Labs who are based in London. They do excellent incident training that you can do online, fantastic. So you've got that recovery process, how to get up and running. And this links next to the third one, which is graceful extensibility.
+
+</details>
+
+**Speaker 1**: 优雅延展性这个名字听起来稍微有点学究气，但它的本质就是：如何应对突如其来的意外（dealing with surprise）。当我们做系统健壮性时，我们处理的是已知问题，是意料之中的情况。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: And so graceful extensibility, it's a slightly weird name, it's basically dealing with surprise. When we make our system robust, we're dealing with the known problems.
+
+</details>
+
+**Speaker 0**: 对，都是那些预料之中的故障。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Yeah, what was expected.
+
+</details>
+
+**Speaker 1**: 但如果我们遇到了完全意料之外的事情呢？当意外发生时，解决问题的主体就不仅是计算机了，而是人。软件系统本质上是社会-技术系统（Socio-technical Systems），是人与技术协同工作的整体。当完全没见过的突发状况撞上系统时，我们如何应对？现实中很多团队的应对往往非常糟糕。特别是在那些等级森严、强调自上而下命令与控制的企业环境里，每个人的岗位职责被死死框定，遇到意外时你往往受到极大制约、无权自主处置。这类组织在面对突发未知事件时通常表现得很差，因为整个科层架构都是围绕“已知事物”建立的，组织结构本身限制了临场应变能力。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: What about things we don't expect, right? If we don't expect it, this is now not about computers, it's about humans. Technical systems are fundamentally socio-technical systems, people and technology working together. How do we deal with what hits us when it turns out badly? But if you're in a corporate environment which is very command and control, hierarchical, with a very narrow job description, you're often constrained in what you're able to do. Those organizations tend to deal with surprise badly because a corporate structure is structured around the known, and so structurally you find it difficult.
+
+</details>
+
+**Speaker 1**: 前面提到的演习在应对未知意外方面非常有价值。演练时引入外部观察员，突然提出“假设现在发生了这个突发状况，你们该怎么解决”。Google 就有类似的实践，他们轮流值班时会搞一个“不幸之轮”（Wheel of Misfortune）演练，转动轮盘随机抽一个极端灾难场景，比如“某国黑客发起了 DNS 投毒攻击”，然后考察团队在毫无防备下如何应对。这靠的全是人的经验、团队对新方法的尝试以及不断跳出舒适区。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: You mentioned drills earlier. Drills are great for helping with surprise, having people from the outside saying: "This has happened, how do you deal with it?" Google had a thing, and SRE teams do it around the Wheel of Misfortune. They spin the wheel: "Today there's a DNS poison attack by a rogue state, this is happening, how do you deal with it?" That is all about people, experiences, trying new things, and constantly pushing yourself.
+
+</details>
+
+### 从真实事故中学习：持续适应性
+
+**Speaker 0**: 这也离不开从他人的事故中吸取教训。比如几年前 Meta 发生过一次非常著名的特大宕机事故，他们的整个 DNS 系统因为 BGP 配置失误全部瘫痪，导致 WhatsApp、Facebook、Instagram 全部断网。为了修复这个问题，工程师必须物理接触到数据中心里的机器，因为远程网络全部断开了。但当他们赶到数据中心大楼时，发现门禁系统的认证也是依赖于自身域名服务器的，而该域名系统已经挂了，结果导致他们甚至进不去大楼的大门，最后不得不采取物理手段破门而入。事后他们把这些事故细节完整地公开了出来，这非常有价值，让全行业的其他团队都可以反思：我们自己的物理安防系统，是否也挂在自己的内部域名或单点系统上？如果有，就必须立刻整改。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Because learning also from others. I remember this very famous outage happened a few years ago at Meta, where their DNS system through BGP just all went down, WhatsApp, Meta, everything. To fix this, they pushed out an update to their BGP table which severed DNS to their servers. Now to fix this, they needed to get physical access to the computers because they couldn't reach it remotely, so they needed to go into that building. Now in going to the building, they had to go through a door that protected the system which was running on their own domain, which was down. So they had to physically break in. But again, this is a thing where they shared the details, which was great, as now everyone else could think about: do we have any of our physical security tied to our own domain? Because if you have it, you want to change that, learning from what Meta learned about.
+
+</details>
+
+**Speaker 1**: 这一点恰好将第三个维度“优雅延展性”（它侧重于事故发生当下的临场应变能力）自然地引向了第四个维度——“持续适应性”（Sustain Adaptability）。持续适应性关注的是：我们如何从已经发生的事件中吸取教训？这不仅仅是指写一篇复盘报告，而是指我们是否拥有一个能够包容学习、分享和成长的文化环境，并且能够真正根据总结出的经验教训去持续改造和升级系统。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: And this links from graceful extensibility, which deals with surprise in the moment, into the fourth one, which is sustain adaptability, which is: how can we learn from what happened? Not just the learnings—do we have the environment in which we can learn and share and grow, but then also adapt the system based on that learning?
+
+</details>
+
+**Speaker 1**: 它之所以被称为“持续适应性”，就是因为这是一个永不停歇的连续过程。它不只是针对某一天，也不只是针对发生故障的当下，而是在系统风平浪静、没有事故的日子里，我们依然在主动做些什么来促进学习与进化。正如你刚才提到的那点非常好：我很喜欢阅读其他公司发布的事故复盘报告，尽管看到那些大公司吃瘪可能难免有一点点幸灾乐祸的心理，但更重要的是，那些公开的事故经验总是能带来巨大的启发。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: And it's called sustain adaptability because it is a completely continuous process. That's not just today, that's not just when you have an incident, that's when you don't have an incident: what are we doing to learn? Because I think your point you made there was excellent, which is: I like reading other people's incident reports. There's a little bit of schadenfreude with companies you don't like, but it's always...
+
+</details>
+
+<!-- chunk 13/16 -->
+
+### 持续适应能力与心理安全感
+
+**Speaker 1**: 所以，这里面有一部分是去思考：别人学到了什么，我能从他们身上学到什么，并做些什么来改善我的系统？因此，当你自己没有发生故障事件时，去读读别人的事故报告。比如有一个叫 The VOID 的地方，虽然它最近更新不算频繁，但里面收录了成百上千篇事故复盘报告，非常值得仔细通读。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: So a little bit of it is like, what have they learned? Can I learn from them and do something that results in my system improving? So when you don't have an incident, read other people's incident reports. There's a place called The VOID. It hasn't been updated recently, but there's like hundreds and hundreds of incident reports, so it is worth going through.
+
+</details>
+
+**Speaker 1**: 这种“持续适应能力”（sustained adaptability）的核心，在于我们如何在更长的时间跨度上进行调整和变革。至于最后两点，即实现平稳降级与扩展能力，归根结底都取决于人与文化，取决于是否拥有一个合适的环境。心理安全感（psychological safety）是绝对必不可少的。如果你无法提出问题，无法以一种安全的方式提出质疑，那么当意外来临时，你的应对一定会非常糟糕，因为问题无法被及时提出来；你也无法从中吸取教训，因为事情都会被隐瞒起来。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: So that idea of sustained adaptability is all about us adapting and changing over longer time scales. For those last two things, to say that's reaching graceful extensibility, this all comes down to people and culture, like having proper environment. Psychological safety is just absolutely required. If you can't raise issues, if you can't challenge in a safe way, you will deal with surprises badly, because things can't get raised, and you won't learn, because things will be hidden. Yeah.
+
+</details>
+
+**Speaker 1**: 所以这一切都归结为人的行为层面。在本书的最后三章中，我们就专注于探讨这一点，剖析其中的社会与组织心理层面。全书大概有十二、十三或十四章，前面大部分都在讲技术细节，而最后三章则把这些非技术的维度补充完整。比如我们应该做些什么来确保团队拥有心理安全感的环境，因为如果没有它，你根本不可能建立起真正的系统韧性。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: And so that all comes down to behavioral stuff. And so the last three chapters of the book, we focus on that, looking at some of the socio-technical aspects of that. I've got like twelve, thirteen, fourteen chapters. So about the technical, and then the last three chapters will round out that side of things. So like what we do to make sure we have that environment of psychological safety, because without it, you can't actually be resilient.
+
+</details>
+
+### AI 浪潮与构建高可用软件的底层规律
+
+**Speaker 0**: 这非常令人赞叹，因为贯穿我们迄今为止的整场对话，我们一直在讨论如何构建高韧性系统，谈了很多关于人的因素，关于人们如何理解韧性。但有一件事我们只是顺带提及了一下，那就是 AI。尽管你这本书现在才出版，而且我知道里面也有专门关于 AI 的章节，但思考起来确实很有意思：即便 AI 正在深刻改变我们构建软件的方式，构建和运行高可靠性软件的某些底层基本规律，似乎仍然超脱于这个范畴之外，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: That's very amazing because so far throughout this whole conversation, we've talked about building resilient systems. We talked a lot about people, about how to think about resiliency. One thing that we've simply talked about just in passing is AI, even though like this book is coming out now, and I know it has a section on AI as well. But it's just interesting to reflect that even though like AI is changing how we're building software, it seems like some of these ground truths of how to operate reliable software are a little bit just outside of this realm, right?
+
+</details>
+
+**Speaker 1**: 嗯，我的意思是，是这样吗？不，其实不是。在微观层面，确实有一些工具、一些辅助手段能够带来帮助。我在书里详细列举了不少例子，比如利用模型进行根因分析、关联分析，以及在事后复盘时提供辅助支持。在面向受众的自动化领域，也有很多非常惊艳的应用。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Well, I mean, is it? No, it's not. I mean, at the micro level, there's some stuff, there's tooling and stuff that can help. I detail quite a few examples where root cause or correlation analysis and tools help support around post-mortems, and intended automation is doing amazing stuff in this area.
+
+</details>
+
+**Speaker 0**: 比如处理概率性问题之类的？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Dealing with a lot of probability?
+
+</details>
+
+### 宏观商业困境与长期韧性对冲
+
+**Speaker 1**: 但这里存在更为本质的矛盾。首先是在微观与宏观两个不同层面上。在微观层面，它们确实有用，这方面我们可以展开讲讲；但在宏观层面上，整套商业逻辑在财务上根本就无法自洽，对吧？如果你从长远视角来看待系统的韧性：如果我的产品所依赖的市场板块本身存在根本性缺陷，这些 AI 公司甚至没有一条通往商业可持续性的可行路径——比如说到 OpenAI 和 Anthropic 的估值及资本支出，据《经济学人》的一项保守分析估算，到 2030 年，他们需要创造 2.6 万亿美元的年收入，才能撑得起目前的资本开支规模；而目前整个软件市场的总体规模也才 1.4 万亿美元。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: There's more fundamental kind of things. And the first thing is the micro and macro level. At the micro level, they're useful tools, we can talk about that. But at the macro level, none of it stacks up financially, right? So if you're taking a longer view about resilience: if I'm building my products based on a market sector that is fundamentally flawed, these companies don't have a viable path to sustainability. When you look at OpenAI and Anthropic, and the hype cycles, conservative analysis by The Economist showed that they need to be generating $2.6 trillion in revenue to justify their CapEx expenditure by 2030, while the entire software market is $1.4 trillion.
+
+</details>
+
+**Speaker 1**: 所以在宏观层面，我不知道这最后要怎么收场，我也没有那么聪明。我手上也没有这些公司的股票。但你知道，那是宏观资本层面的问题，我解决不了。我能思考的是：好吧，这就是我所处的客观环境，那我该如何应对？我无法解决所有宏观层面的问题，但如果我要规划面向未来的系统韧性，我就必须对如何使用 AI 保持极度的谨慎。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: So at the macro level, I don't know how that gets sorted out, I'm not smart enough. I also don't have the shares of these companies. But you know, that's capitalization, I can't solve that. What I can start thinking about is: okay, that's the environment what I'm operating in. How do I deal with that? I can't deal with all of that. What I do if I'm taking future resiliency into account is being very careful about how I use AI.
+
+</details>
+
+**Speaker 1**: 举个例子，如果你着眼于长远，在模型选择上保持更高的灵活性就会对你大有裨益。因为你可以选择来自不同供应商的模型，或者使用开源权重模型。退一步说，就算看最基础的指标，比如 OpenAI 和 Anthropic 自身核心模型 API 服务的可用性，其实是相当糟糕的。这也是为什么如果我们使用 Google、Amazon 或微软的云服务作为承载这些模型的主要平台，往往能获得好得多的正常运行时间。所以在这类层面上，我们必须做好应对与权衡。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: For example, you know, if I'm thinking and taking a longer view, being more flexible about model choices, that's going to help me because I've got the opportunity to use open-weight models from different vendors. Just basic things like OpenAI and Anthropic are pretty terrible when it comes to the availability of their core models from their own services, which is why even if we use Google or Amazon or Microsoft as their primary place where they host these models, they have better uptime than things. So there's all that stuff we've got to deal with at that level.
+
+</details>
+
+### 分布式系统的非确定性与架构解耦
+
+**Speaker 1**: 之前我和 Charity Majors 讨论过关于非确定性的问题，她点醒了我。我当时说：“问题在于，我们正在从确定性软件走向非确定性软件，这对我们的工程运作来说是一个巨大的挑战。”结果她对我说：“我们的分布式系统从来就不是确定性的；而现在，它们只是彻底变得更加非确定了而已。”当然，她说得完全没错。现在我们审视分布式系统，在网络重试、硬件故障之外，再加上人员因素，我们一直都承受着某种程度的非确定性，而 AI 只是进一步放大了这种非确定性。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: There was a conversation about non-determinism, and Charity Majors caught me on this a bit. And I said, the thing is that, you know, we're going from deterministic software to non-deterministic software. You know, that's a challenge for us, for engineering work. And she said to me, our distributed systems were never deterministic, and now they're really not deterministic. And of course, she's right. And now we take our distributed system, and we add people in beyond the retries and the failures, we always had a degree of non-determinism, we're just amping that up a bit. Yeah.
+
+</details>
+
+**Speaker 1**: 所以我认为这是一种延续。在我看来，当下的格局非常复杂混乱，不能简单用好或坏来定论。在宏观层面存在巨大的不确定性，而在微观层面，我们确实能做一些非常出色的事情。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: So I think that's a continuation. So for me, I think it's a confusing landscape, not good or bad. I think on a macro level there are real issues, whereas on a micro level there are really great things that we can do.
+
+</details>
+
+**Speaker 0**: 这正是我们在战术层面上可以付诸实践的事情，对吧。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: That's the tactical things that we can do, right.
+
+</details>
+
+**Speaker 1**: 我所指的正是这一点：我审视宏观经济和地缘资本的现状，同时找出那些我们可以切实利用的优势。其中确实有一些优秀的东西值得我们吸收采纳。但我同样认为，我们必须在长期架构中做好风险对冲。如果你正在把 AI 引入自己的产品中，有一些非常简单的对冲手段。比如采取多供应商（multi-vendor）策略，采取多模型（multi-model）架构；再比如，与其设计一个包揽一切的单一 Agent，不如将其拆解为更清晰的工作流模型。这样一来，当你审视工作流中的某个特定环节时，你可能会意识到：“其实这个环节完全可以用一段高效确定的代码替换掉。”我认为这些都是非常明智、可落地的做法。我们改变不了大环境，但至少可以在我们掌控的系统里做好应对。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: I think really what I mean by that is I'm taking the macroeconomic situation into account, and I say that there are things that we can make use of. There's some good stuff in that that we can make use of. But I also think we need to do long-term hedging. If you are building AI into your product, there's a simple hedging thing: being multi-vendor, being multi-model. For example, rather than having a single agent, breaking that down into more workflow models. Therefore, you can take bits of your workflow and realize actually, this could now be swapped out for a bit of deterministic code, written efficiently. I think these are all sensible things that you can do. We can't fix the macro world, but we can at least deal with our own world, and I think there's sensible things that we can do in that space.
+
+</details>
+
+### 大语言模型的认知盲区：因果性与物理世界常识
+
+**Speaker 1**: 那么，关于 AI，有哪些事情是我们“已知自己未知”的呢？我认为整个技术界普遍对 AI 抱有相当天真的态度，并且从根本上误解了大语言模型（LLM）到底是什么。我们坦白讲：为什么 LLM 会把我的数据库删掉？因为它根本没有因果关系（causality）的概念。没有，归根结底就是它完全不具备因果认知。比如这里有一只玻璃杯，如果我把这只玻璃杯推到地上，如果下面铺着地毯，你问我接下来会发生什么，你会判断玻璃杯掉在软地毯上可能没事；但如果地上是坚硬的瓷砖地板，它可能就会摔碎。你在脑海中进行了大量的物理推演，你对现实世界的物理规律有明确的概念，你直觉上知道一旦我推了杯子，就会产生某种必然的结果。而大语言模型对此完全一无所知。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: What are the things that we know that we do not know about AI? I think the tech world in general is quite naive about AI and fundamentally misunderstands what an LLM is, let's be real. Why did the LLM delete my database? Well, it has no concept of causality. No, that's what it comes down to: it has no concept. Of course, like there is a glass here. If I push that glass onto the floor, you'll work out if there's carpet down there, good. If asked what's going to happen, you say, the glass won't break, it may be fine. If I push it onto that floor and it's a hard floor, that might break. You're carrying a bunch of calculations in your head. You've got an idea about the physical properties of the universe. You've got a sense that if I push the glass, this is going to happen. LLMs don't do any of that.
+
+</details>
+
+**Speaker 1**: 它根本不理解“如果我做了动作 A，就会导致结果 B”这种逻辑关联。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: They have no concept that if I do A, B happens.
+
+</details>
+
+**Speaker 0**: 是的。虽然现在大家都在大力推崇世界模型（world models），但目前的这些 LLM 根本算不上世界模型。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Yeah. Well, there's a push for world models, but these LLMs are not world models.
+
+</details>
+
+**Speaker 1**: 其实因果模型在很多领域已经存在很久了，甚至早于这一代 LLM。那些模型确实可以做这类推断。如果有恰当的模型架构和输入，它们至少能评估：“如果我执行了 X，就会发生 Y，而系统已经明确指令要求我不要触发 Y。”正因如此，现阶段围绕大语言模型构建安全护栏（guardrails）在很长一段时间内都很难成为真正完美的解决方案。我们往往对大语言模型抱有超出其实际能力的期望，正是因为它们表面上看起来太聪明了。我认为这就是问题所在——这导致人们在很大程度上高估了它们的能力。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Causal models have been around for a long time, they predate LLMs. They can do stuff like that. So they could make decisions like, if you have the appropriate model and appropriate inputs, they could at least get a sense of: if I do X, then Y happens, and I've been told not to do Y. This is why guardrails around LLMs are really not, for a long time, going to be a complete solution. And so I think we expect LLMs to do more than they can actually do because they seem so smart, yeah. And so I think that's the problem when that leads to overestimating their capabilities a bit too much.
+
+</details>
+
+### 工具调用与代码生成的确定性验证
+
+**Speaker 0**: 我觉得确实是这样，甚至人们会在不知不觉中过度依赖它们，之后可能才会尝到事故的苦果。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: I think so, or maybe over-relying on them without knowing, and we might have severe incidents later actually.
+
+</details>
+
+**Speaker 1**: 确实如此。我认为关键在于清楚何时以及如何去使用这些能力。而我们当前并不十分清楚的是：系统的哪一部分应该交给 LLM 去做，哪一部分应该直接编写确定性的代码？让 Agent 去调用一个脚本，并且你确切知道该脚本能够正常运行，这比指望它用那颗“魔法大脑”现场为你凭空实现整个脚本要可靠得多。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Absolutely. And I think we need to know when and how to use those things. And I think what we don't know right now is: where should I have the LLM do it, and where should I just write some deterministic code? There's a lot to be said for just having the agent call a script where you know that script works, rather than having it implement the script in its magical brain for you.
+
+</details>
+
+**Speaker 0**: 确实，这里面很有意思的一点是，像 Anthropic 和 OpenAI 这两家顶尖实验室似乎都意识到了代码的极端重要性。因此很多时候，当你让模型执行某项任务时，它往往会倾向于生成代码，因为它试图编写一个确定性的程序来解决问题——因为代码执行的那部分是具备确定性的。这非常有意思，特别是当任务涉及到对比或严谨逻辑时，模型通常会直接输出一段 Python 或 TypeScript 代码，因为他们已经将模型训练成了默认优先通过编写代码来解决问题的模式。我不确定这究竟是如何演变而来的，但在某种程度上，这种方法确实非常有效。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Well, there's something to be said that it seems both leading labs, Anthropic and OpenAI, have realized that coding is so important. So oftentimes, when you ask it to do something, it will start generating code because it tries to write a deterministic program, because that part will be deterministic. It's very interesting. When you ask it, people often find it pumps out Python or TypeScript or whatever, especially when it has to do with comparing this or that. And they have trained these models to default to coding. I'm not sure how this came about, but it seems to be working to some extent.
+
+</details>
+
+**Speaker 1**: 这一切也是非常容易验证的，对吧？因为它们被训练用来生成看似合理的文本，在编程语境下，就是生成看似合理的代码，而这些代码是我们接下来可以立即验证的。它能否成功执行？可以。所以这是一个非常好的特性组合，而且在某些特定场景下，这种模式的效果确实非常出色。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: It's all very testable, right? You know, they are trained to generate plausible code, just as they are to generate plausible words, right? And in the context of code, they generate some plausible code that we can now validate: does it execute? Yeah. And so that's a really nice set of tractable aspects, and there are some places where it works really, really well.
+
+</details>
+
+<!-- chunk 14/16 -->
+
+### AI 辅助调研与认知投降的隐患
+
+**Speaker 1**: 但另一种极端是……这太糟糕了，比如我在写书的时候，我很少用它，根本不让 AI 碰正文写作。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: but the other rate is way. it's terrible like I write my book. I used very little of it. Don't let AI at it at all.
+
+</details>
+
+**Speaker 0**: 嗯，你不用它来做具体的文字撰写，而是先用在前期调研上。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: well, you don't use it for the writing, use it first.
+
+</details>
+
+**Speaker 1**: 完全不用它来写正文。我主要用它来协助梳理研究资料。但在这种语境下，所谓的研究是——比如我基本上使用的是 NotebookLM 这类工具——在这种场景下，它给出的内容虽然看似合情合理，但紧接着去逐一点击来源链接、核对原始出处的还是我本人。我会反复求证：这个论点确实在论文里吗，还是它编造的？我一直在核查它的工作。它替我完成的工作量，远远超过了我自己逐篇翻阅所有那些论文所能做到的。天知道要肉眼翻完会漏掉多少篇论文。你能读完它们吗，对吧？但在那种场景下，我觉得完全没问题；可如果换到其他工作场景中，人们往往就无法坚持这种核查了。这就引发了所谓的“认知投降”（cognitive surrender），也就是大家让 AI 去写那些自己根本不会再去通读的文件，这实际上是这类 LLM 技术应用中一个非常严重的问题。这其实是我们人类自身的问题。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: and you just not using it for writing at all. I use the fact that we are doing the research. But in the context, the research is, if I used NotebookLM basically, but in that context, what is plausible? But then who's going to click the links, it is me. And I say, was that there or not, I am checking the work. It has done way more work than I could have done going through all those papers. And God knows how many missed papers. You can read through it, right? But in that context, I feel completely fine. Unable to do that in other settings. You get into what is practically cognitive surrender, which is where using AI to write documents that you're never going to read. That's really, really a big problem with the LLM technology. That's the problem with us.
+
+</details>
+
+### 认知负债与认知投降：从代码审查到决策剥离
+
+**Speaker 0**: 好吧，我们深入聊聊这种“认知投降”和“认知负债”（cognitive debt）。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: okay. We talk about this cognitive surrender and cognitive debt.
+
+</details>
+
+**Speaker 1**: 是的，“认知负债”这个概念已经存在一段时间了，它描述的是当我们频繁使用 AI 工具时，自身进行批判性思考和逻辑推理的能力所遭受的侵蚀。围绕这一现象已经有了一连串的研究，多项调查表明，人们越是重度使用聊天机器人和对话式工具，其批判性思维能力受到的负面影响就越显著。而且我认为我们已经看到了其他相关的例子。比如 Margaret-Anne Storey 对此写过一篇非常精彩的文章，她在文章中也引用了部分相关研究。她所阐释的核心观点正是：我们一直在讨论系统中技术负债（technical debt）的堆积，但在使用 AI 时，我们同样必须对“认知负债”保持警惕——构建软件需要团队成员对这个系统究竟应该做什么拥有一个共享的心智模型（shared mental model）。我们必须从构建程序的微观视角去审视它。如果在运用 AI 时各行其是，团队成员走向了不同的理解方向，那么那座维系共识的桥梁就会瓦解，从而沉淀为系统性的认知负债。而“认知投降”又是另一种不同的现象，它的心态就像是：“哦，行吧，没问题。”这本质上就是打个“LGTM”（Looks Good To Me）完事，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: yeah, cognitive debt has kind of been around for a while that sort of explains the erosion in our ability to think critically and to reason that can occur when we're using AI tools. There's been a bunch of research into this, there's been some studies that showing that people's ability to think critically is impacted the more they use chatbots and things. And I think we've also seen other examples that Margaret-Anne Storey has got a great article about this, and she cited some of the research around it as well. And that's explaining, I mean, her thing is what she's talking about. We talk about technical debt building up in the system. We've got to be careful of our use of AI, and it's a cognitive debt. We need to have a shared mental model of what this system is supposed to do, thinking about it narrowly through the lens of a program that we're building. And if our use of AI, for example, we go off in different directions, that shared bridge breaks down, that becomes a cognitive debt. Cognitive surrender is a different thing, which is like, "Oh, yeah, fine." It's basically LGTM, right? Uh,
+
+</details>
+
+**Speaker 0**: 哪怕 AI 呈现给我的东西漏洞百出，大家也直接说 LGTM。经典的“Looks Good To Me”过去通常发生在审批一个庞大的 Pull Request 时：你要么是懒得看，要么是试着看了一眼但出于种种原因不想逐行通读，抑或是代码出自某个你默认信任的人，于是直接盖章放行。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: but what the AI tells me, yeah. LGTM was typical, "Looks Good To Me", approving large pull requests where you cannot be bothered, or you tried to look at it, and for whatever reason you didn't want to go through, or it came from someone who you rubber-stamped.
+
+</details>
+
+**Speaker 1**: 你根本没办法把所有细节都消化掉，对吧？因此 LGTM 简直就变成了一种模式匹配下的自动签名，用来草率给出审批。你回一句 LGTM，就算通过了。我想这个缩写在工程文化里的泛滥大概就是这么来的，虽然我也不能完全确定。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: I wasn't able to tell on all that stuff, right? And so LGTM was literally a sound pattern match on and takes as an approval. So you say LGTM, that person's approved, right? And that was it. That was where I think that maybe economically came from. Not sure.
+
+</details>
+
+**Speaker 0**: 我想确实如此，从来没有认真核查过。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: I think you can never, yeah, yeah,
+
+</details>
+
+**Speaker 1**: 但这种思想已经演化成了一种思维简写：让 AI 来看吧，嗯，没毛病。我认为这种心理层面的投降正在以各种形式泛滥。如你所知，我们正在让 AI 去撰写那些根本没人会去完整阅读的文档；同时我们又在让 AI 去阅读别人用 AI 拼凑出来的文档。因此，认知投降的核心问题在于，人类是否真正处于控制环路之中（human-in-the-loop），这在工作流中引发的细微差异，最终会导致天壤之别的人机协同模式。正如很多医学代码和临床诊断案例中所探讨的，这里存在着巨大的分野：假设你是一名癌症肿瘤学家或肿瘤专科医生，如果医生在阅片诊断的同时，由大语言模型或视觉模型在旁边协助检测扫描切片，模型提示：“你已经看完了这里，顺便看看那个区域，你可能会遗漏那里”，这种辅助实际上是非常有价值的，对吧？但反观另一种模式：大语言模型驱动的 AI 直接输出：“这是我看过的全部扫描，这几份需要你直接签字批准确认。”后一种模式直接把专业人员从核心判断环路中剥离了出去，把专科医生退化成了一个盖章审批人。而且在这种背景下，机构往往还会趁机裁撤大量肿瘤科医生，只留下最后一个人在终审环节流水线作业。这必然会导致严重的灾难，对吧？而前一种模式则是在赋予人类更强的能力。我认为这才是 AI 最初被设想并寄予厚望的形态。在最初的宣传愿景里，大家都说 AI 能将我们从枯燥的劳作中解放出来，就像工业革命许诺将人类从繁重苦役中解放出来一样——它将提升我们的层级，让我们减少事务性劳碌，专注于更高维度的批判性思考与智慧决策。然而，我们目前对 AI 的许多用法，不仅没有把我们解放出来去进行深度思考，反而引发了更频繁的上下文切换（context switching），留给独立思考的时间反而更少了。大量研究数据表明，人们的工作时间甚至变得更长了。这未必是 AI 工具本身的错，而是取决于我们如何使用它，我们确实需要正视并调整这一点。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: but it is this idea that it has become a shorthand. Does AI look at it? Yeah. And I think that psychological surrender thing is coming out in lots of ways. And you know, we're getting AI to write documents and no one's going to read. We've got AI that's reading documents that weren't read by other people. And so the cognitive surrender piece is really that the humans—it comes back to the human being in the loop has very subtle differences in those workflows into the current differences. It changes like—there's a big difference, like code doctor talks about. It's a big difference like if you are say a cancer oncologist or a cancer specialist. It's a big difference to use oncologist working and LLM doing sort of detection of similar scans. You're looking like done. "Uh, you should look over there. By the way, you might miss that." That's actually quite useful, right? Versus the LLM-powered AI going, "Here was scans I've looked through. Here's the one we need you to sign off, right." The last one, the second one, right, takes the expert out of the loop and makes them an approver. And often in that context, they've got rid of a bunch of the oncologists. You've got one person in the final loop. That's going to lead into issues, right? The other model is we are making people better. I think that's come back to the original idea of AI. Also, the pitch, right, was it was going to free us from drudgery, no, just like the Industrial Revolution was going to free us from drudgery. But like it would elevate us, we'd have less toil. We can be this. We can focus more on critical thinking and smart. And so much of our current use of AI is not freeing us up in critical thinking, it is causing more context switching. It's causing less time for thinking. People are working longer hours. We know because studies show this now. That's not necessarily AI's fault. It's how we're using it, it's like we need to address that a little bit.
+
+</details>
+
+### 平台工程的复杂度膨胀与模块化边界
+
+**Speaker 0**: 我们能聊聊复杂度的问题吗？AI 是否正在进一步推高复杂度？我想引用你几个月前写过的一段话。你当时写道：“我担心 AI 最终可能会变成对现有复杂度的加码和固化，而不是抽丝剥茧地去简化系统，至少在平台工程领域是这样。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: can we talk about complexity? AI, maybe adding it. I'm going to quote you from about it from a few months back you wrote: "I worry AI could just become an exercise in doubling down on current complexity rather than stripping things back to simplify, at least in the platform space."
+
+</details>
+
+**Speaker 1**: 是的。虽然我不记得当时谈话的具体上下文了，但在平台工程（Platform Engineering）领域确实耐人寻味。设立平台工程最初本是为了让开发者的工作更加简单，因为 Kubernetes 普及之后，对普通应用开发者其实极度不友好。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: yeah, can't remember the exact context in which we had that conversation. But I mean, platform space was all—I mean, platform space is kind of interesting, like because that was an attempt to make things simpler for developers because Kubernetes became popular. And it's not developer-friendly.
+
+</details>
+
+**Speaker 0**: Kubernetes 本就不是为了终端业务开发设计的，但绝大多数开发者却不得不面对这种噩梦般的底层细节。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: that's not always designed for them, but most developers have found it such a nightmare.
+
+</details>
+
+**Speaker 1**: 是啊，如果你有一个专门的平台团队，或者没有平台团队……对，平台团队本身也面临着其生存立足点的问题，对吧？那是他们的职责所在，他们领这份薪水就是要维护这些设施。所以我当时其实寄希望于这个领域能够迎来一次“复杂度的塌缩”（complexity collapse）。我曾经满怀希望地认为，像 WebAssembly 或某些新兴轻量化运行时能让编程模型大幅简化。我也觉得业界当时已经开始针对这些过载的基础设施产生了一些反思与讨论。然而接下来发生的事情是：AI 浪潮全面爆发了，所有人的口号瞬间变成了“我们要把一切都接入 AI”（AI all the things）。结果，大家非但没有去审视我们真正需要什么、没有去精简剥离多余的复杂度，反而直接往原有的架构上又堆叠了一层全新的技术组件。原有的全部旧复杂度不但原封不动地保留着，顶层还硬生生叠加了崭新的复杂层。而且最终总得有人去维护和排查所有这些东西。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: I mean, well, if you have a platform, don't have a platform. Yeah. Yeah. There's a platform team's problem, right? And that's what they get paid, they do what they get paid for. But and so I think there was this idea that I was sort of hoping that there'll be a bit of a complexity collapse around that space. I had this hope the things like Wasm for example seem to simplify down that programming model a little bit. Um, and I think there's starting to be a bit of a conversation trying to be had about some of that stuff going on. What then happens, of course, as AI has come out, and it was like, "I've got to AI all the things." And so rather than thinking about what we need and try to strip complexity back, we've now just got another piece that requires—it still have all the old complexity, adding new complexity on top. And somebody has got to look after all that stuff.
+
+</details>
+
+**Speaker 0**: 我觉得这又回到了我们之前提到的现象：有了 AI 之后，我们的工作量似乎反而增加了。再加上 AI 不断引入更多的复杂度，局面就更加雪上加霜。尤其是当我们对自己真正想要什么缺乏清晰认知，或者在我们深陷“认知负债”与“认知投降”而放弃对 AI 输出进行批判性评估时——特别是认知投降，大家觉得反正是 AI 写出来的，直接通过就好了。因此，这些因素互相放大，导致了工作越来越多、系统越来越复杂的恶性循环，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: but I think it goes back a little bit of like we seem to have more work with AI. And probably doesn't help that they add more complexity, especially when we're not being clear of what we want, we're not being critical of the output when we have cognitive debt or cognitive surrender, especially of a cognitive surrender. You know, "it'll just be right." So these things might be amplifying the fact that there's just more and more work, more complexity, right?
+
+</details>
+
+**Speaker 1**: 确实如此。而且我认为这也与我们如何对齐认知模型息息相关。这在某种程度上又形成了一个闭环：不直接盯紧每一行底层代码，并不意味着你不再关心自己所构建的系统本身，而是意味着你必须拥有一种更高维、更深刻的方式来理解自己正在创造的系统架构。目前大家最大的担忧之一在于：如果我们任由 AI 肆意生成，它是否会产生堆积如山的认知负债，最终演变成一个谁也看不懂、谁也理不清的庞大而混乱的系统？我们绝不能让这种失控发生。我们依然必须与我们所构建的系统保持血脉相连的理解。这也是为什么我极其推崇系统的模块化设计（modularizing systems）——至于你最终是把这些模块部署在不同的物理机上，还是封装在单体架构内部，其实我并不在乎；关键是让 AI 在清晰的模块边界内部去尽情发挥。让工程师把精力聚焦在宏观构思这些模块究竟由什么构成、以及模块之间的接口与契约如何连接。在模块内部，你可以放手让 AI 去大展拳脚；只要外部边界清晰稳定，内部怎么重构都极其容易替换。而模块与模块之间的接缝、交互逻辑以及心智模型的契合，才是需要人类工程师投入全部心力去深思熟虑的地方。我认为这才是平衡我们时间与精力的极其明智的方式。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: yeah. And I think there's also that connection through to what the alignment is doing. Sort of comes full circle a little bit, which is the idea of potential. Not looking at the code isn't to say that you don't care about what the system is that you're building, it's to say that you've got a better way of understanding what you're building. So one of the concerns is, if I'm using AI to create, because it's going to create awful loads of debt and a complicated system that no one's going to understand. Well, we can't let that happen. We still need to remain connected to the system that we're building, which is why I'm just a big fan of like modularizing systems. Whether or not you put those modules on different computers, I don't actually care. Getting AI to work within the modules. Having the humans think carefully about what these modules are and the connections between them. Let the AI go hog-wild inside. Those boundaries are easy to change, the gaps between them. That's where the human beings need to think about the mental model of how everything fits and slots together. That was a very sane way for us to balance our time, our energy appropriately.
+
+</details>
+
+### 人类心智模型与架构全景图
+
+**Speaker 0**: 所以如果从更高维度来总结，一种理智且成熟的工程策略是：你的大脑中必须装有整个系统的宏观交响乐总谱。你必须深谙整个系统如何运转，洞悉每一个业务架构方块的职责，明确哪些盒子里是由 AI 在驱动——也许 AI 在内部生成具体代码，也许它在相互隔离的沙箱中自动化执行突发事件响应。然后，工程师应该把宝贵的时间花在与业务部门、团队成员以及客户的深入沟通上。正如你刚才所言，软件系统的本质是人类思想与认知模型的连接物。你脑海中有了对现实世界的构想，然后通过架构将其记录沉淀下来。而现在，AI 应该作为赋能工具，让你有能力去统揽业务中更宏大的版图，做出更优越的顶层决策。因为身为工程师，你终于可以腾出充裕的时间，去透彻理解业务的真实运行机理、究竟什么才对全局至关重要。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: so to summarize, that probably a sensible approach is to have the orchestra in your head, know how your system works, know how the boxes work, know where there's AI inside it. Maybe it's generating code. Maybe it's running your incidents response in isolated ways, and then spend your time talking with other people in the business, on your team, with your customers, because you're—as you said, systems like software is people's ideas connected. And you have things in your head, and you write it down. But now using AI as a tool to enable you to maybe take on larger chunks of the business and maybe make better decisions because maybe you have more time to, as an engineer, understand more on the business on what is working, what is important, those kind of thing.
+
+</details>
+
+**Speaker 1**: 没错。并且这也让系统的架构分层与心智模型变得更加清晰显式。这就是优秀模块化架构的威力所在。这也是为什么像 Shopify 这样体量的公司，能够如此成功地长期维护一个巨大的单体应用——因为他们投入了极其庞大的心力，将单体应用自始至终构造成一个边界极其分明、高内聚低耦合的模块化组件架构。正是这种严苛的模块化边界，使得整个系统的宏观结构始终清晰透明、易于人类心智所把握与驾驭。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: yeah. And also to make the structure and the model, this is a bit more explicit as well. I mean, that's one thing a good modular structure does, and it is why Shopify, for example, have been so successful at keeping their things a monolith, right? Because they spend a lot of time building the monolith application as a modular architecture, right? Because it makes the structure easier to understand.
+
+</details>
+
+<!-- chunk 15/16 -->
+
+### 渐进式软件工厂与风险隔离
+
+**Speaker 1**: 你可以放大视角，审视这些部分是如何拼合在一起的。但从短期来看，当我们还在争论“我们究竟是否要走向全自动化软件工厂”时，我们其实不需要采取一刀切的策略。我们可以说：看，这就是我们的架构——不管它是模块化单体架构还是微服务架构，形式本身并不重要。我知道在这里，在这个特定区域，我们正在尝试全自动化软件工厂的方法，在这里我们不再逐行审查代码，而是明确定义接口规范。围绕这个接口，我们构建了完备的验证机制。我们清楚对于那个模块来说，怎样才算合格。我们有针对它的功能测试，也会审视它的一些运维非功能性需求。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: You can zoom out and see how those things fit together, but also in the short term, while we're having these debates about are we going full software factory or not, we don't have to make a one-size-fits-all approach. We can say, look, this is our architecture—be it a modular monolith or microservices, architecturally it doesn't really matter. I know that over here, this area is where we're trying the full software factory approach where we don't look at the code anymore, but we specify the interface. We have verification around that. We know what good looks like for that module, right? We've got functional tests, and we look at say some of the operational requirements as well.
+
+</details>
+
+**Speaker 1**: 但是对于另一边的这些模块，我们仍然在小心翼翼地包裹守护。这些部分对我们来说非常核心、极其重要。我们还没有准备好放弃对它们的精细控制，因为我们尚未建立起足够的信任度。我们还不愿意在这个阶段承担那样的风险。因此在这些核心区域，我们会以更具协作性的方式与 AI 一起工作。在彼此协作的过程中，我们依然深度介入代码实现，因为我们还没准备好迈出那一步。但如果我们把整个系统当成一个巨大的黑盒来处理，那就会被迫陷入非黑即白的二选一困境中。循序渐进地摸索与学习，才是更健康的路径。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: But these areas over here, we're still wrapping. These are really key, really important to us. We're not ready to give up on this yet because we don't have the trust level yet. We don't want to take that risk just yet. And so over here, we're going to work with the AI in more of a collaborative way. While we work together, we stay involved in the code because we're not ready to make that step here. But if we approach our whole system as one big black box, then we get forced into making an all-or-nothing decision. Continuous learning and incremental steps—that's healthy.
+
+</details>
+
+**Speaker 0**: 我能否这样理解你的意思？你的意思是，针对那种类似于“黑灯工厂”的软件工厂模式——你给它一份规格说明书，由 AI 来构建或运行它——你认为这种模式在现实中是可行的？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Do I understand that? You're saying that you think that the software factory or the dark factory—where you give it a spec and the AI is building it or operating it—that you see that as viable?
+
+</details>
+
+**Speaker 1**: 确实有一些公司已经在探索或落地这种做法了，不过这绝不意味着人人都应该立刻跟进。我认为，如果这就是我们的未来形态，那它也应该从风险最低的场景开始起步。核心问题在于你如何去采纳和尝试它。我正在努力寻找的，正是那些能够降低门槛、让我们可以在安全可控且低风险的环境中尝试这些理念的方法。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: There are some companies already on this, but not everyone should be doing it whatsoever. I think if that is our future, that is our lowest-risk starting point. The question is about how you go about adopting and trying it. What I'm trying to do is find ways in which we can lower the barrier to entry to try these ideas out in a safe way and in lower-risk environments.
+
+</details>
+
+**Speaker 0**: 比如从简单的业务领域、边缘模块这类场景开始切入，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: And maybe simple domains, those kinds of things, right?
+
+</details>
+
+### 从零部件与低风险模块开始试验
+
+**Speaker 1**: 没错。而且在现实世界中，很多所谓的“黑灯工厂”生产的也并非最终成品。除去现实中黑灯工厂本就屈指可数这一事实，大多数自动化工厂生产的其实是零部件，而不是整件终端产品。软件也是同理：如果你把一个模块视为整个庞大系统中的一个组成部分，那么我们完全可以只针对这几个特定部分引入软件工厂。事实上仔细想想，就算我们需要从头重写这个模块，即便按照现在人机协作的模式，可能也只需要耗费我们几周的时间；就算真的彻底重写，我们其实也会感觉非常轻松。退一步讲，哪怕直接让它以现有状态运行，它也能工作得很好。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Exactly. Also, a lot of dark factories don't create finished products in the real world. Beyond the fact that in the real world dark factories aren't many, most create components, they don't create the finished product. Yeah. So in the same way, if you think about a module being a piece of the overarching system, right? Well, let's have a factory on these bits here. And actually, looking at it, like if we had to rewrite that from scratch, it might take us—with the collaborative way with AI—a few weeks to rewrite. If we had to, we'd actually be quite relaxed about it, even leaving it as is, and it's been working fine.
+
+</details>
+
+**Speaker 1**: 比如选择这样一个模块：你周围已经具备了极佳的测试覆盖率；或者从延迟与吞吐量的角度来看，它并不处于关键的性能热路径上；又或者它是一个你拥有绝佳可观测性数据、定义非常明确的服务等级目标（SLO）、并且具备良好稳态表现的服务。对于这样的服务，我们现在就可以开始将其当作软件工厂来运作，观察生产环境中究竟会发生什么。我们可以监控那些 SLO 指标，甚至可以在其周围专门配置一些特定的 SLO 监控。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: And so it's a module around which you've got great test coverage already, for example, or where it's not on the critical path from a performance or latency point of view, or it's a service where you've got really good observability data and really well-defined SLOs and a good steady state. Well, we can start running it as a factory now and seeing what's happening in production. We could have a look at the SLOs. We maybe add some special SLOs around there.
+
+</details>
+
+**Speaker 0**: 我很认同你这个观点。你其实是在说，作为专业工程师，作为一个希望跟上可用新技术步伐的人，如果你有机会尝试构建软件工厂——在一个组件内部、在低风险的范围内打造一个具备一定自主性的场所——那绝对值得去尝试，去看看它是如何运作的，去体会能学到什么，去验证它是否可行以及会在哪里崩溃。但在做的过程中，你必须尽量降低风险。这有点像微服务概念刚提出来的时候：你绝不能一上来就直接迁移最核心的庞大单体，而是从构建一个即便挂掉也无伤大雅的小服务开始，即使它宕机了你也能从中吸取教训，而且它完全不在业务的核心链路（hot path）上。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: I hear you on that. You're saying that as a professional, someone who wants to be up to date with the new techniques that we can use, if you have the opportunity to start to build a software factory—a somewhat autonomous place in a component, in something lower-risk—it's probably worth trying it out to see how it works, to see what you learn, to see if it even works or where it breaks down, but do it in a way where you are minimizing the blast radius. It's a little bit like when microservices came out: the concept wasn't to start by moving your biggest thing; you start by building a small service that didn't really matter all that much, and you were okay to learn from it when it goes down, and it wasn't on the hot path for the business.
+
+</details>
+
+### 规范驱动开发与三维验证体系
+
+**Speaker 1**: 是的。我认为最开始需要理清的就是“规范”（Spec）这个概念。因此，可以去研究基于规范的开发（Spec-driven development），比如借助 Tessl、SpecKit 等相关工具，不管其层级如何，去了解它们有何不同。看看像 GitHub 的相关工具或者其他类似方案，这些都是非常好的切入点。先从摆弄这些工具开始建立认知，因为这是最基础的垫脚石。这意味着你必须能够清晰地定义“合格标准究竟是什么”，并将其作为软件工厂的输入——因此，就以清晰的规格说明书作为你的输入端。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Yeah, I think the thing to start off with is getting your head around the spec. So looking at spec-driven development—whether that's Tessl or Spec Kit, whatever that is at different levels, right? Have a look at GitHub Workspace or tools like that as a good on-ramp to get ahead of it. Start off by playing around with that because that's the stepping stone. You have to define what good looks like as an input to your factory, so start with the spec as input.
+
+</details>
+
+**Speaker 0**: 同样也要用规范来定义输出标准。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: And also for the output.
+
+</details>
+
+**Speaker 1**: 没错。接下来就是你该如何验证：你打算如何对从工厂产出的成果进行全方位验证？你必须认真思考这一点。而且，这绝不仅仅关乎那些常规的行为功能性需求。我很赞同相关专家的观点，他非常反感“非功能性需求”这种叫法。因为说某样东西是“非功能性”的，听起来就像是它没有实际用处一样。所以他将其拆分划分为：开发性需求（Development requirements）、运维性需求（Operational requirements）以及业务性需求（Business requirements）。我觉得这种划分方式非常棒。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Yes. And then it's like how you verify—how are you going to go about verifying the output of the factory? You have to think about that, and not just in terms of the normal behavioral requirements. I agree with folks who hate "non-functional requirements," because if something is called non-functional, it implies it doesn't function. So he breaks it down into development requirements, operational requirements, and business requirements. I think it's nice doing that.
+
+</details>
+
+**Speaker 1**: 面对这些维度，我该如何验证该模块生成的软件满足了我的开发需求？比如可维护性指标；再看运维需求，比如延迟表现和可用运行时间；以及我的业务需求，功能是否切实有效？只要你拥有围绕这三个维度对软件进行验证的完整手段，就能够把关质量。如果你连这三个维度下“何为优质”都说不清楚，那么可想而知，这套流程是根本转不起来的。你可以写出漂亮的规格说明，但你无法真正运行一座自动化工厂。这可能会让人联想到当年的模型驱动开发（MDD），我们今天没时间深究这个让不少人恼火的旧话题，但它确实有相似之处。不过我依然抱有一丝希望：与当年的模型驱动开发不同，这一次它或许真的能跑通。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: So across those dimensions: how do I verify that the software being created by this module has matched my developer requirements, such as maintainability; my operational requirements, like latency and uptime; and my business requirements—is the feature working? So as long as you've got a way of validating the software around that. And if you don't know what good looks like for those three things, guess what, it isn't working. So you can write specs, but you can't run a factory. There may well be some points of analogy here—this could be Model-Driven Development all over again, which we do not have time to get into and get very angry about. But it could be that; however, I have hope it might actually work this time, unlike MDD.
+
+</details>
+
+### 培养架构思维与模块化实践
+
+**Speaker 0**: 在收尾之前，我想回到我们讨论过的核心点：在脑海中清晰构建架构愿景、不断思考架构设计以及如何做好模块化是至关重要的。对于那些希望提升这种高层次战略思考与架构能力的工程师们——除了阅读你那本不仅探讨系统弹性、还提出了许多极具价值的架构思想的书籍之外——对于想要精进系统架构设计能力、想确切知晓“优秀架构标准”的专业开发者，你有哪些推荐的学习资源？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: And then as we're closing, I think a lot of what we talked about is that it's important to hold the architecture in your head, to think about architecture, and to think about how to modularize. Now for engineers who want to get better at this kind of high-level thinking, strategic thinking, and architectural thinking—outside of reading your book, which I think brings a lot of really good ideas on architecture as well and not just on resilient systems—outside of that, what would be your recommendations for professional engineers who want to get better at architecting systems and know what good looks like?
+
+</details>
+
+**Speaker 1**: 我觉得有几本书可以推荐给大家。一本是 Neal Ford 和 Mark Richards 写的《软件架构基础》（Fundamentals of Software Architecture），写得非常出色。需要说明的是，他们两位都是我的好朋友，所以我推荐这本书并不算完全中立客观。在模块化方面，Vlad Khononov 写的《平衡耦合》（Balanced Coupling）非常精彩；当然他的《领域驱动设计精要》（Learning Domain-Driven Design）也同样极具价值，但这本探讨平衡耦合的书真正切中了核心。据我所知他目前也在开发相关技能课程来拓展这些思想，强烈建议大家去读一读。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: I think there's a few books I can point people to. I think *Fundamentals of Software Architecture* by Neal Ford and Mark Richards is good. To be clear, they're friends of mine, so I'm not unbiased in recommending it. Around modularity, Vlad Khononov's book on *Balanced Coupling* is fantastic. His DDD book is also very good, but that *Balanced Coupling* book is really great. I think he's also developing skills and coursework to take some of those ideas forward, so definitely take a look at those.
+
+</details>
+
+**Speaker 1**: 如果你从架构视角去审视系统，对我而言，始终要以模块的角度来思考。虽然 Martin Fowler 的书里也有很多干货，但对我来说，那正是一切的起点。我写《构建微服务》这本书的核心初衷，其实就是为了悄悄推行一种理念：让人们重新思考信息隐藏（Information Hiding）。这是早在 1970 年代就确立的经典理念，但今天依然历久弥新。对我来说，模块化始终是整个架构的基石。所以我推荐阅读 Vlad 的书；如果你愿意去翻阅 David Parnas 在 1971 年和 1972 年发表的经典初始论文，它们至今依然极具阅读价值，这些都是很好的起跑点。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: And I think if you're looking at things architecturally and thinking in terms of modules, for me—while Martin Fowler's book has lots of great stuff in there—for me, that's where you start. The edition of *Building Microservices* was really all about smuggling in getting people thinking about information hiding. A very old idea from the 1970s that still comes back. So to me, modules are still the whole thing. I would read Vlad's book, and if you want to go read Parnas' original papers from 1971 and 1972, they are still worth reading. Those would be good jumping-off points.
+
+</details>
+
+**Speaker 1**: 此外我还想说，从模块化角度思考的美妙之处在于：即便身处既有的遗留代码库中，你依然可以从小处着手推进模块化。你可以开始思考划定边界、清晰分离关注点，并利用封装将实现细节隐藏隔离起来。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: I would say the nice thing about thinking in terms of modules is even within an existing codebase, you can start to modularize it in some small ways. You can start to think about bounding things, about clear separation, and using encapsulation to tuck information away.
+
+</details>
+
+**Speaker 0**: 我想完全可以这么说：如果你心中已经有了如何让现有代码库变得更加模块化的构想，你现在根本没有任何借口不去付诸行动。虽然我们目前还无法百分之百信任 AI Agent，但这绝对是一个教科书级的适用场景：只要你能清晰表达出“这就是我的重构目标”，如果过去人工操作需要花费大量时间，现在利用工具速度会快得多。所以你完全有能力、也应当被赋予信心去动手展开这些重构实验。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: And I guess it's fair to say: look, if you have an idea of how you can make your existing codebase a bit more modular, you have zero excuse not to do it. I mean, we don't trust agents fully, but this is a textbook example of where if you can say, "Here's my goal, refactor this," where if it would have taken a huge amount of time by hand, it is vastly faster now. So you should be empowered to experiment with this.
+
+</details>
+
+**Speaker 1**: 尤其是当你拥有一套扎实的测试套件时更是如此。如果目前还没有，那就先从补全测试套件开始；或者如果你使用的是静态强类型语言，哪怕只是借助经典成熟的 IDE 重构功能，它就能完成令人惊叹的工作。如果使用的是动态类型语言，现在同样没有借口了，因为现代大语言模型对这些语言有着极其深入的理解。如果你正在使用 Python 或 Ruby，现在对其庞大代码库进行重构比以往任何时候都要高效得多。你完全可以通过搭建测试防护网来开展模块化重构。这一切的核心就在于让代码体现架构设计——回到我们之前说的，我们不希望架构只停留在你的脑海中，我们希望代码本身能够映射出这种心智模型。因为我们是通过代码来进行沟通协作的；也许在未来，我们会转向通过规范来进行沟通。而当你把这些概念表达得愈发清晰明确时，它就能帮助团队中的每一个人保持认知同步。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Especially if you've got a decent test suite. And if not, start with that. If you've got a statically typed language, even just a good old-fashioned IDE does an amazing job, right? In a dynamically typed language, now you don't have the excuse either, especially as modern ones are well understood by the LLM. So if you're using Python or Ruby, it's so much better now than it used to be for refactoring those codebases. Absolutely. You can start testing your way around that and start modularizing. And that goes back to making sure the architecture isn't only in your head, right? We want the code to represent that mental model. Yep, because we communicate through the code, and maybe in the future we'll be communicating through specs. When you make those things more explicit, I think that helps everyone stay on the same page.
+
+</details>
+
+<!-- chunk 16/16 -->
+
+### 架构显著的代码风格与生产环境的真实性
+
+**Sam Newman**：乔治·费尔班克斯（George Fairbanks）写过一本书——我突然一下子忘了书名——但他在书里提出了一个叫做“架构显著的代码风格”（architecturally evident coding style）的模式。它的核心思想是：我们的编码方式应该能够清晰地传达出系统的架构意图。我觉得我们的编程语言在构建优秀的通用概念模型方面，表现往往有些欠缺。因此，我认为我们必须跳出语言本身的限制，做更多努力来让系统的架构变得更加显式和清晰。这也是我为什么一直强调生产环境的重要性，尤其是当你的模块结构最终映射为进程结构时——如果不这样做，就只能依赖进程边界了。我完全可以通过观察网络通信来摸清系统的架构。虽然理论上我不应该非得这么做，但至少我们明白：生产环境才是唯一的真理，就像“足球就是生命”一样。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: There's a George Fairbanks—forgotten the name of the book now—but in it he has a pattern called an architecturally evident coding style, and that we should code in such a way that the code communicates the architecture of the system. And I think our programming languages are quite bad at having good conceptual models in general. So I think we have to go a bit beyond ourselves, but we could do more to make the architecture of systems that little bit more explicit. This is also why I spend time in production, because especially if your module structure ends up as a process structure, otherwise it's process boundaries. I can go look at the network to find out my architecture. I shouldn't have to, but at least know production is truth, it's like football is life.
+
+</details>
+
+**主持人**：“生产环境即真理”。大家现在能买到你的新书了吗？大家现在可以去订购了吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Production is truth. Where can people get your book? Can they go order it now?
+
+</details>
+
+**Sam Newman**：嗯，你可以直接去当地的书店购买，支持实体书店是个很棒的想法。同时，它也会以电子书的形式上线 O'Reilly 平台，订阅用户可以直接在上面阅读，大家也可以在那里看到。不过，我知道很多人还是非常喜欢拥有一本实体纸质书。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Um, if you can go buy it from a local bookshop, that was a great idea. It's also going to be available for people on the O'Reilly platform in sort of digital form, so you can go and read it as part of a subscriber. Everybody can get it there as well. But lots of people love having the physical copy.
+
+</details>
+
+**主持人**：我们会把这些渠道链接放出来，大家也可以直接去查看这本书。另外，你最近好像也在录制一些视频，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: And we have these in the links, but also check them out to the book directly. And also, you've been doing some videos, right?
+
+</details>
+
+### 视频创作与咨询合作方式
+
+**Sam Newman**：是的。我最近在戴夫·法利（Dave Farley）的“现代软件工程”（Modern Software Engineering）YouTube 频道上做了一些内容。这算是一个挺好的契机，让我能做点类似半吐槽式的独白视频，聊聊各种模型，顺便开心地扯扯皮。所以，大家可以去 YouTube 上的软件工程频道看看，那里能找到我和戴夫·法利录的视频，还有凯文·赫尼（Kevlin Henney），肯特·贝克（Kent Beck）也贡献了很多内容，还有特蕾西（Trisha Gee）、斯坦·诺斯（Dan North）……我肯定还漏掉了谁。总之还有好几位朋友。我们尽量有空就发发视频，过程挺有意思的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Yeah. Well, I've been doing some stuff on Dave Farley's Modern Software Engineering channel. It's kind of a good excuse to do some semi-rant, you know, monologue-esque videos and have some fun chat. So yeah, go to the Software Engineering channel on YouTube, and you can find videos from me and Dave Farley, and Kevlin Henney is there, lots from Kent Beck, Trisha Gee, Dan North is there as well... I'm pretty sure I've forgotten somebody else. There's another couple of people as well, but we try and pull videos together once we can, it's a bit of fun.
+
+</details>
+
+**主持人**：那个频道真的很棒，大家记得点个赞。如果听众想和你合作，他们该怎么联系你？通过什么渠道能找到你？他们可以在哪些方面寻求你的帮助？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: It's a great channel, we also like that one, yeah. And if people would want to work with you, where can they find you, how can they find you? What kind of stuff can they get help from you for?
+
+</details>
+
+**Sam Newman**：我会给企业做内部技术演讲或参加内部活动，这也是我经常做的事情。我的培训课程涵盖很多主题，包括分布式系统、安全性以及微服务架构。同时，我也为客户提供大量的架构咨询服务，帮助他们梳理系统、重新设计系统架构等等。想了解更多详细信息，可以直接访问我的个人网站 samnewman.io，你可以在上面联系我，或者在 LinkedIn 上找到我。不过如果你直接来网站通过电子邮件联系我，那就更好了，在这方面我还是有点老派习惯。我的咨询业务面向全球客户。所以如果我能帮上忙，欢迎访问 samnewman.io，我的所有联系方式都在那里。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: I do internal talks for people, like internal events. I do that a lot. My training courses cover a whole variety of things around distributed systems and security and microservices. I also do a lot of consulting for clients, helping them around rearchitecting their systems, stuff like that. To know more about that, go to my website samnewman.io, and you can contact me there. You can also find me on LinkedIn. But if you come straight to the website, use email—I'm always a bit old-fashioned like that. And I work with clients all over the world. So if I'm able to help, yeah, head over to samnewman.io, my contact details are there.
+
+</details>
+
+**主持人**：太棒了。那么 Sam，再次非常感谢你今天的分享，聊得太开心了。非常感谢你。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Wonderful. Well, Sam, thanks again, this was great. Thank you. Thanks very much.
+
+</details>
+
+### 主持人总结：分布式系统三定律、故障处理模式与实用的 AI 思考
+
+**主持人**：纵观整场对话，我个人非常喜欢 Sam 提出的分布式系统三定律：第一，网络调用需要耗费时间；第二，你想要通信的远端服务有时根本不存在；第三，资源池从来都不是无穷无尽的。Sam 强调指出，绝大多数系统故障的根源其实正是这最后一条：资源池并非无限，系统最终被流量与负载打爆吞噬。不过，听到他提到兔子咬断办公楼之间的网络线缆时，我还是忍不住笑出了声。但话说回来，就在几周前，美国东海岸成千上万个航班被迫延误停飞，原因就是工人在新泽西州施工时不小心挖断了美国联邦航空管理局（FAA）使用的一根电信光缆。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: As for this conversation, I really liked Sam's three rules of distributed systems: One, it takes time. Two, sometimes the thing you want to talk to isn't there. Three, resource pools are not infinite. Sam said how most of the outages happen because of his last one—resource pools not being infinite and services are getting saturated. But I was chuckling when he was talking about the rabbits chewing through networking cables between office buildings. Then again, a few weeks ago with thousands of flights stranded down the east coast of the US, it was because workers accidentally cut a telecom cable in New Jersey used by the FAA.
+
+</details>
+
+**主持人**：另一个深受启发的观点来自 Sam 关于故障处理应当根据业务类型区别对待的论述：一家电商网站完全可以在库存服务宕机时选择照常展示商品，最坏的情况无非是在用户下单付款后，由于缺货而直接退款并致歉——在这种场景下，采取“故障放行”（fail open）的策略是完全合理的；但如果换作演唱会门票售票网站，你绝不可能去冒险售卖一张可能根本不存在的门票，因此选择“故障闭锁”（fail closed）才是正确明智的决策。正如我们在本期节目中深入探讨的那样：如果售出了一张不存在的虚假门票，用户可能会提前预订机票酒店，最后发现无法入场会极其愤怒，平台更会彻底失去这些客户的信任。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Another thought from Sam is how failure should be handled differently depending on the type of business. An e-commerce shop might decide to show you the item when the inventory service is down. Worst case, after you order and pay, they just refund you because, look, we don't have the item. Basically failing open is fine in this case. But on a concert ticketing website, you don't want to sell a ticket that might or might not be there, and so failing closed is the right call to make. Because again, as discussed in the episode, if you sell the ticket, people might book flights, they might get upset, you might lose them as customers.
+
+</details>
+
+**主持人**：最后，我非常赞赏 Sam 对待人工智能（AI）那种冷静客观、甚至可以说是谨慎务实的态度。他毫不怀疑 AI 在微观战术层面上具备极高的实用价值——特别是在那些人类自身完全有能力验证结果的事情上；但他对大模型提供商的底层经济模型深感担忧。他给出的应对建议非常务实落地：对你的供应商和大模型进行对冲，采用多供应商、多模型的组合策略；并且在一切可行的环节，将不具备确定性的 AI Agent 流程替换为确定性序列——也就是让大语言模型去生成确定性的代码来运行。我认为这是一种非常清新、极具洞察力的工程思考。别忘了查看下方的节目介绍，里面有我们聊到的 Uber 早期架构演进与扩容故事，那是来自前 CTO 范·庞（Thuan Pham）的精彩分享，内容极为震撼。如果想了解更多关于弹性高可用系统的《实用工程师》（The Pragmatic Engineer）深度分析，也欢迎查阅。如果你喜欢本期节目，请一定要在常用的播客软件中订阅关注。非常感谢大家将本播客推荐给你的朋友与同事。谢谢收听，我们下期节目再见！
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Finally, I appreciated how level-headed, perhaps even cautious Sam is about AI. He's got no doubts that AI is very useful at the micro level, basically tactical at things that we can already approve, but he is worried about the economics of the model providers. His suggestion is pretty pragmatic: hedge your vendors and your models, multi-vendor and multi-model, and wherever you can, swap non-deterministic AI agent workflows to deterministic sequences—basically have LLMs generate deterministic code. I find it very, very refreshing thinking. Check the show notes below for the story about scaling Uber, the early days with Uber former CTO Thuan Pham that we discussed, and it's an awesome story. And for more of The Pragmatic Engineer deep dive on resilient systems. If you enjoyed this show, do subscribe in your favorite podcast player, and thank you very much if you recommend the podcast to your friends or your colleagues. Thanks, and I'll see you in the next one.
+
+</details>

@@ -1,0 +1,175 @@
+---
+author: 'House of El: AI'
+date: '2026-07-20'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=9nUmVktlwvA
+speaker: 'House of El: AI'
+tags:
+  - attention-economy
+  - technology-policy
+  - wealth-redistribution
+  - cognitive-decline
+  - structural-inequality
+title: 别对锤子发怒：技术迷局下的分配机制与结构性改革
+summary: 本文深入剖析了科技巨头限制子女使用电子产品的“行业秘密”以及全美耗资300亿美元推广数字化教学却导致Gen Z认知能力下降的失败实验。文章指出，公众对AI的愤怒与主权财富基金等激进提案实际上指错了对象，指出AI仅是工具而非根源，并呼吁通过税收、教育、劳动保障等结构性制度改革来真正解决技术繁荣背后的分配与治理难题。
+insight: ''
+draft: true
+series: ''
+category: politics-society
+area: society-thinking
+project: []
+people: []
+companies_orgs: []
+products_models: []
+media_books: []
+status: evergreen
+---
+### 硅谷权贵的双重标准与“不吸食自家毒品”的舆论风暴
+
+**彼得·蒂尔**（Peter Thiel：硅谷知名投资人、PayPal联合创始人）每周只允许他的孩子们使用一个半小时的电子屏幕。当他在2024年阿斯彭思想节（Aspen Ideas Festival）上说出这番话时，台下的观众倒吸了一口凉气。无独有偶，推出iPad的**史蒂夫·乔布斯**（Steve Jobs）曾告诉《纽约时报》，他的孩子们从未用过iPad。**比尔·盖茨**（Bill Gates）则禁止孩子在14岁前使用智能手机，并完全禁止手机上餐桌。**埃文·斯皮格尔**（Evan Spiegel），这位掌管Snapchat的首席执行官，也将他孩子的屏幕使用时间限制在与蒂尔相同的每周1.5小时内。YouTube的联合创始人**陈士骏**（Steve Chen）也表示，他不想让自己的孩子消费短视频内容，因为更短的内容意味着更短的注意力跨度。甚至**埃隆·马斯克**（Elon Musk）也坦言，没有对孩子使用社交媒体设定任何规则可能是一个错误。
+
+正是这些科技领袖一手构建了**注意力经济**（Attention Economy: 通过吸引并锁定用户注意力来获取商业利益的经济模式）。他们设计了这些平台，资助了这些算法，放大了用户参与度循环（engagement loops），然而他们却绝不让自己的家人靠近这些产品分毫。这是对企业信心最极致的体现——这种商业模式是如此强大，以至于其创造者对待自己产品时的谨慎态度，简直像核技术人员对待未经屏蔽的铀元素一样。得知现代科技新贵们至今仍奉行着20世纪80年代毒贩的古老智慧——“永远不要吸食自己贩卖的毒品（Never get high on your own supply）”，这多少令人感到一丝黑色幽默。这就是引人注目的头条新闻，它令人出离愤怒，而且是一种从直觉上、生理上就能感受到的愤怒。
+
+然而，我认为真正的故事并非如此。大多数人在回应这一现象时所采用的思维框架，恰恰无法解决任何问题。但我们又如此迫切地需要解决这些问题，不是吗？在建立这种对行业伪善的初步认知后，我们必须把目光投向更深层的系统反馈。今天，我想和大家详细探讨这场耗资300亿美元、却培育出人类现代史上首个认知能力不及父母的世代的浩大实验；分析为什么在一项民调中，有69%的美国人希望剥夺每家AI公司一半的股票；并阐明为什么将愤怒宣泄在AI身上，就像对一把锤子大发雷霆一样，毫无用处。
+
+<details>
+<summary>Original English</summary>
+
+Peter Teal lets his children use screens for one and a half hours per week. When he said this at the 2024 Aspen Ideas Festival, the audience gasped. Steve Jobs, the man who launched the iPad, told the New York Times his kids had never used one. Bill Gates banned smartphones until age 14 and banned phones from the dinner table entirely. Evan Spiegel, the CEO of Snapchat, the man who runs Snapchat, limits his child to the same 1.5 hours per week as Steel. Steve Chen, co-founder of YouTube, said he wouldn't want his kids consuming short form content because shorter form content equates to shorter attention spans. And Elon Musk said it might have been a mistake to not set any rules on social media for his children. These people built the attention economy. They designed the platforms, funded the algorithms, scaled the engagement loops, and they won't let their own families near any of it. It is the ultimate expression of corporate confidence. A business model so profoundly robust that the people who created it treat their own product with the exact same caution a nuclear technician reserves for unshielded uranium. It's kind of comforting to know that the modern tech aristocracy is governed by the ancient wisdom of the 1980s drug dealer. Never get high on your own supply. That's the headline. And it is outrageous. Understandably, viscerally outrageous. But I think the real story is something different. And I think the framing that most people are using to respond to it is going to guarantee that nothing gets fixed. And we so desperately need it to get fixed, don't we? Today, I'd like to talk through the $30 billion experiment that produced the first generation less cognitively capable than their parents. The poll showing 69% of Americans want to seize half of every AI company's stock and why being mad at AI is kind of like being mad at a hammer and just as useful.
+
+</details>
+
+### 数字化教学的惨败：300亿美元的认知倒退实验
+
+回顾历史，早在2002年，缅因州成为美国第一个面向学龄儿童实施全州笔记本电脑计划的州。时任州长**安格斯·金**（Angus King）憧憬着这样一幅画面：年轻一代指尖轻触便能连接互联网，沉浸于海量信息中，并通过触手可及的信息获取渠道获得赋能。那年秋天，17,000台苹果笔记本电脑被分发到了243所中学的七年级学生手中。到了2016年，这一数字在全州范围内增长到了66,000台电脑和平板。安格斯·金的这一举措在全美引发了模仿效应。截至2024年，美国政府已花费超过**300亿美元**将笔记本电脑和平板送入课堂。这是历史上最大规模的教育技术部署之一。
+
+然而，如今结果已经揭晓，情况非常不乐观。今年早些时候，神经科学家**杰瑞德·库尼·霍瓦斯**（Jared Cooney Horvath）向美国参议院商业、科学和运输委员会提交了书面证词。他的结论简而言之就是：**Z世代**（Gen Z: 指1990年代中后期至2010年代前期出生的人）是现代历史上第一个在标准化测试中得分低于上一代的群体。霍瓦斯引用了经济合作与发展组织（OECD）的国际学生评估项目（PISA：评估全球15岁学生阅读、数学和科学能力的测试）数据，指出其中存在着极其显著的相关性：**学生在学校里使用电脑的时间越多，他们的成绩就越差**。
+
+从纯粹的财务角度来看，花300亿美元来换取人类智力水平的可度量下降，无疑是一种极其大胆的策略。通常情况下，如果你想在亏掉这么多钱的同时，还要让参与其中的每个人的基本推理能力下降，你可能得去收购一个社交媒体平台，或者开一个加密货币交易所。但把这一手段用在学龄儿童身上，真是一个令人着迷的物流侧重点转移。
+
+教育周刊研究中心（Edweek Research Center）在2021年对846名教师进行的调查显示，有55%的教师反映学生每天使用教学技术的时间在1到4小时之间，另有四分之一的教师反映长达5小时。然而，2014年一项针对3,000名大学生的观察研究发现，学生在使用电脑时，有接近三分之二的时间在做与学习无关的杂事。他们并没有在学习，只是漫无目的地滚动网页。
+
+随着研究的深入，关于接下来会发生什么的学术成果也在迅速积累。2025年发表在顶级期刊《心理学公报》（Psychological Bulletin）上的一项系统综述和元分析研究了近10万名参与者，发现**短视频消费**（short-form video consumption: 用户对时长极短视频内容的消费行为）与年轻人和年长用户的认知能力下降以及心理健康恶化高度相关。2026年发表在《青少年杂志》（Journal of Adolescence）上的另一项系统综述综合了23项研究，发现短视频成瘾损害了青少年和年轻人的注意力、执行功能和自我调节能力。2025年发表在《记忆》（Memory）期刊上的一项研究表明，**快速任务切换**（fast context switching：在不同内容或任务间极速切换的行为，也是TikTok式消费的核心特征）会直接导致**前瞻记忆**（prospective memory: 对未来需要做的事情的记忆能力）衰退。
+
+这些平台的设计初衷本质上就是为了诱导这种状态。贝勒大学（Baylor University）在2025年11月领衔的一项研究揭示了为什么TikTok尤为让人难以自拔：与Instagram Reels或YouTube Shorts相比，消费TikTok视频所需的**认知负荷**（cognitive effort: 大脑处理信息所需的心理资源）最低。因为它的算法将高度相关的内容与令人意外的未知视频以黄金比例混合，使大脑陷入一种“低付出、高回报”的刺激循环中。正如圣地亚哥州立大学心理学教授**吉恩·特温吉**（Jean Twenge）向《财富》杂志所言：“许多应用，包括社交媒体和游戏在内的许多应用在设计上就是极具成瘾性的。它们的商业模式完全基于让用户在应用上度过尽可能长的时间，并尽可能频繁地重新登录。”
+
+根据美国儿童与青少年精神病学会的数据，现在美国8到18岁的孩子平均每天花在屏幕上的时间高达**7.5小时**。7.5小时，这是一个全职工作日的工作时长！孩子们每天都在进行如此长时间的屏幕消费，而这本该是他们开发余生所需认知架构的关键时期。霍瓦斯的观点非常尖锐，他称Z世代是“一场失败教育学实验的受害者”。他提到：“每当我与青少年交流时，我都会告诉他们，这绝不是你们的错。你们谁都没有主动要求在整个K-12教育阶段都坐在电脑前。这意味着我们这代人搞砸了。我真切地希望Z世代能尽快想通这一点，并为此感到愤怒。”
+
+作为一个科学家，我必须保持严谨和细致。人类的注意力和认知能力并非一成不变的，它们更像是一块肌肉。如果你刷了两年Instagram，你的注意力模式会适应它；但如果你停用两年，大脑就会重新适应回去。**大脑具有可塑性**（neuroplasticity: 神经系统根据外部环境或内部变化调整自身结构和功能的能力），而关于屏幕对认知产生的长期永久性影响，科学界仍在持续研究中。但无可争议的事实是，当年的设备推广极其鲁莽：在没有功效评估标准、没有对照组试点研究、没有证据基础、也没有任何机制去衡量这种干预是利是弊的情况下，全美就砸下了300亿美元进行这场全国性的实验。他们直接给了孩子们无限制接触技术的权利，然后只能双手合十祈祷能有好的结果。然而事实证明，如果你把孩子的教科书换成一个通往全人类无序深渊的门户，他们绝不会用它来学习微积分。稍微动点脑筋的人都能预料到这个结果。
+
+然而，当年的决策者却全都是极其聪明的人。《财富》杂志在2017年报道称，自该计划启动以来的15年里，缅因州公立学校的测试成绩没有任何提升。该州时任州长**保罗·勒佩奇**（Paul LePage）直言这是一次惨痛的失败。霍瓦斯在参议院的证词中直接指出了这笔投入对几代人的深远影响：“这根本不是一场关于排斥科技的辩论，而是关于如何让教育工具与人类学习的实际机制相契合的问题。”
+
+这番话听起来是不是似曾相识？一种强大的技术在没有任何充分证据支撑的情况下被大规模部署，产生了意料之外的负面后果，而当权者现在只能手忙脚乱地去打补丁。在这个频道里，我们之前就见过这种发展轨迹。而那一代首当其冲被当成实验品的人，如今又成了被要求全盘接受下一波强推技术的群体。
+
+<details>
+<summary>Original English</summary>
+
+In 2002, Maine became the first US state to implement a statewide laptop program for school children. Then Governor Angus King envisioned a generation with the internet at their fingertips, immersed in information, empowered by access. By that autumn, 17,000 Apple laptops had been distributed to seventh graders across 243 middle schools. By 2016, those numbers had grown to 66,000 laptops on tablets across the state. King's initiative was mirrored nationwide. By 2024, the United States had spent more than $30 billion putting laptops on tablets in classrooms. It was one of the largest educational technology deployments in history. Well, the results are in and they're not good. Earlier this year, neuroscientist Jared Cooney Horvath submitted written testimony to the US Senate Committee on Commerce, Science, and Transportation. His conclusion was basically that Gen Zed is the first generation in modern history to score lower on standardized tests than the previous one. Using data from the OCD's program for international student assessment, which tests 15 year olds across dozens of countries, Horvath documented a stark correlation. The more time students spent on computers in school, the worse they performed. From a purely financial perspective, spending $30 billion to achieve a measurable decline in human intelligence is a remarkably bold strategy. No. Usually, if you want to lose that much money while simultaneously making everyone involved slightly less capable of basic reasoning, you're going to have to buy a social media platform or maybe launch a cryptocurrency exchange. Doing it to school children is a fascinating logistical pivot. A 2021 survey of 846 teachers by the Edweek Research Center found that 55% reported students spending 1 to four hours per day with educational technology. Another quarter reported 5 hours per day, but a 2014 study observing 3,000 university students found they were engaged in offtask activities on their computers nearly twothirds of the time. They were not learning. They were just kind of scrolling around. And the academic research on what happens next is accumulating rapidly. A 2025 systematic review and metaanalysis published in Psychological Bulletin, which is one of the highest impact journals in the field, studied nearly a 100,000 participants and found that short form video consumption was consistently associated with poor cognition and declining mental health across both younger and older users. A 2026 systematic review in the Journal of Adolescence synthesized 23 studies and found that short form video addiction impaired attention, executive function, and self-regulation in adolescent and young adults. A 2025 study published in memory found that fast context switching in general, the defining feature by the way of Tik Tok style consumption, directly contributed to decline in perspective memory, which is just the ability to remember to do things in the future. And the platforms are essentially engineered for exactly this. A November 2025 study led by Baylor University uncovered why Tik Tok in particular is so difficult to put down. It requires the least cognitive effort to consume of any short form platform, less than Instagram reels, less than YouTube shorts, because its algorithm balances relevant content with surprising and unexpected videos at a ratio that keeps the brain in a loweffort, highreward loop. As Gene Twang, psychology professor at San Diego State University, told Fortune, "Many apps, including social media and gaming apps, are designed to be addictive. Their business model is based on users spending the most time possible on the apps and checking back as frequently as possible. The average US child aged 8 to 18 now spends 7.5 hours per day watching or using screens according to the American Academy of Child and Adolescent Psychiatry. 7 and a half hours. That's a lot. That is a full working day of screen consumption every single day by children who were supposed to be developing the cognitive architecture they will need for the rest of their lives. Horvit's view is also very stark. He called Jenzie victims of a failed pedagogical experiment and said whenever I work with teenagers I tell them this is not your fault. None of you asked to be sat in front of a computer for your entire K12 schooling. That means we screwed up. And I genuinely hope Jenzie quickly figures that out and gets mad. Now, I want to be careful here because I am a scientist and nuance matters. Attention and cognition are not static traits. They're more like a muscle. If you spend two years scrolling Instagram, your attention patterns will adapt. But if you do spend two years off it, they just kind of adapt back. The brain is plastic. And the research on long-term permanence is still developing. But what is not in dispute is that the deployment was reckless. $30 billion spent on a nationwide experiment with no efficacy standards, no controlled pilot studies, no evidence base and no mechanism for measuring whether the intervention was helping or hurting. They gave children unfettered access to technology and just kind of hope for the best. Well, it turns out that if you swap a child's textbook for a portal to the entire sum of human chaos, they don't use it to study calculus, but only less informed people could have guessed that. And these decision makers are all incredibly intelligent. Fortune reported in 2017 that Maine's public school test scores had not improved in the 15 years since the program launched. The state's own governor at the time, Paul La Page, called it a massive failure. And Horvath's Senate testimony framed the generational impact directly. He said, "This is not a debate about rejecting technology. It is a question of aligning educational tools with how human learning actually works." Does that sound familiar? a powerful technology deployed at scale without any adequate evidence producing unintended consequences that the people in charge are now just kind of scrambling to address. We've seen this pattern before on this channel and the generation that absorbed this experiment is now the one being asked to embrace the next wave of technology being forced on them.
+
+</details>
+
+### 归因偏差：为什么对AI愤怒就像对锤子大发雷霆
+
+根据皮尤研究中心（Pew Research Center）在2026年6月对5,119名美国成年人进行的一项调查，18至29岁的Z世代是对AI表现出最大敌意的年龄群体。他们中有多达48%的人认为AI会对社会产生负面影响。然而，极具讽刺意味的是，他们同时也是使用AI最频繁的一代，使用率高达66%。他们既是参与度最高的用户，也是敌意最深的群体。
+
+对于霍瓦斯在其证词中说“希望Z世代能看清这一点并感到愤怒”，我必须提出反驳。我反驳的并非愤怒情绪本身，因为这种愤怒是合情合理、理所应当且完全可以理解的，正如同所有情绪都有其合理性一样。我反驳的是**愤怒所指向的标靶**。每天我都能在频道的评论区看到类似的言论：“大语言模型极其愚蠢”、“AI根本行不通”、“我是反AI主义者”。我完全理解这些声音，我也曾说过类似的话，许多人的生活确实因为这项技术受到了极大的冲击。
+
+但是，对AI大发雷霆，就像是对一把砸到你的锤子怒不可遏一样。锤子自己并没有决定去砸你，是有人挥动了它。**人工智能**（Artificial Intelligence: 计算机科学的一个分支，研究使计算机模拟人类智能行为的理论、方法和技术）只是计算机科学的一个分支领域，仅此而已。它不是风险资本，它不是税收结构，它不是财富与资产不平等，它不是劳动力市场，更不是一种经济系统。AI只是一套用于模式识别、预测和生成的计算方法。宣称自己“反AI”，就如同宣称自己“反医学”、“反数学”或“反电力”一样荒谬。这是一种极其根本的**框架性错误**（framing error: 因认知框架不当而导致对问题本质产生误判的现象），它确保了你无法解决任何实质问题。
+
+如果你愤怒于工作被取代，这本质上是一个**劳动力市场与企业治理**问题；如果你愤怒于孩子认知能力的衰退，这是一个**部署方式与教育政策**问题；如果你愤怒于亿万富翁保护自己的孩子不碰屏幕，而你却只能刷着TikTok停不下来，这是一个**资源分配不平等**问题；如果你愤怒于暴涨的电费，这是一个**基础设施规划与公共咨询**问题。以上任何一个问题，都不是对着一个神经网络发脾气就能解决的，也绝对不可能通过“反AI”来搞定。只要愤怒继续偏离靶心、指向技术本身而非部署技术的系统，这些问题就一个也解决不了，并将永远持续下去。
+
+作为一名计算机科学家，看到AI与这些社会积弊混为一谈，真的让我感到无比痛心。因为AI本身是卓越非凡且令人敬畏的。我们今天所见证的科学突破，是这个时代最美丽的智力结晶之一。每当有人声称自己“反AI”时，他们真正想表达的其实是：“我对失去工作感到愤怒”、“我对孩子的注意力涣散感到愤怒”或者“我对电费上涨感到愤怒”。由于指错了敌人，真正的痛点反而渐行渐远，无法得到解决。而锁定错误的敌人，正是走向失败最有效的方式。宣泄愤怒可能会让你感觉良好，但对改变现状无济于事。一旦你理清了自己究竟在对什么感到出离愤怒——这确实是一项极有价值的自我剖析——你就需要制定方案。你需要结构性改革、需要政策指导、需要斗争策略。缺乏策略的愤怒，终究只是一场噪音。
+
+<details>
+<summary>Original English</summary>
+
+According to Pew Research Center June 2026 survey of 5,119 US adults, Gen Z, that's ages 18 to 29, is the most hostile to AI of any age group. 48% believe it will have a negative impact on society. And yet, they are also the generation that uses AI the most at 66%. The most engaged and the most hostile simultaneously. Horvath in his testimony basically said, "I genuinely hope Jenz quickly figures that out and gets mad." And this is where I have to push back not on the anger itself. The anger is legitimate, earned, and understandable, just as all feelings are valid. But on the direction it's pointing. I see it in the comments on this channel every single day. LLMs are stupid. AI doesn't work. I'm anti- AI. And I get it. I've said it before. People have had their lives disrupted significantly because of this tech. But being mad at AI is like being mad at a hammer. The hammer didn't decide to hit you. Somebody swung it. AI is a sub field of computer science. That's all it is. It is not venture capitalism. It is not tax structures. It is not wealth and asset inequality. AI is not the labor market. It's also not an economic system. AI is a set of computational methods for pattern recognition, prediction, and generation. Being anti-AI is like being anti- medicine or anti-mathematics or anti-ele electricity. It is a framing error so fundamental that it guarantees nothing gets fixed. If you're mad about job displacement, that's a labor market and corporate governance problem. If you're mad about children's cognitive decline, that is a deployment and education policy problem. If you're mad about billionaires shielding their kids while you're scroll TikTok, that's a resource inequality problem. If you're mad about your electricity bill, that's an infrastructure planning and public consultation problem. None of these are solved by being mad at a neural network. None of them are solved by being anti-AI. And the longer the anger stays pointed at the technologies instead of the systems that deploy it, the longer every single one of these problems persists. As a computer scientist, it pains me deeply genuinely that AI is being conflated with all of this because AI is extraordinary. It is all inspiring. The research breakthroughs happening right now are some of the most beautiful intellectual achievements of our time. And every time someone says I'm anti- AAI because what they actually mean is I'm angry about my job or I'm angry about my kids attention span or I'm angry about my electricity bill. The actual problems drift further from being solved because you've named the wrong enemy. And naming the wrong enemy is the most reliable way to lose. Getting mad feels good, but it doesn't do anything. Once you figured out what specifically you're angry about, and that would be a genuinely valuable exercise, you need a plan. You need a structural reform, you need policy, you need strategy. Anger without strategy is just noise.
+
+</details>
+
+### 激进与幻想的交织：剖析50%AI股票充公提案的金融悖论
+
+顺着这个逻辑，我们来到了公众对AI行业至今最强烈的一次愤怒宣泄。研究公司Veracite在2026年6月对1,690名美国成年人进行的一项全国性民调发现，有高达69%的受访者支持强制要求AI公司将其50%的股份划拨给公共主权财富基金。同在6月，参议员**伯尼·桑德斯**（Bernie Sanders）提出了《美国人工智能主权财富基金法案》（American AI Sovereign Wealth Fund Act），该法案强制要求对美国最大的几家AI公司进行一次性50%的股权剥夺。根据目前的估值，桑德斯预计该基金的规模将达到约7万亿美元。
+
+这是一个听上去极其惊人的数字，而对于如此激进的政策，69%的公众支持率同样非同寻常。与此相对，有89%的人支持强制性的安全信息披露。在2026年上半年，科技行业占到了全美裁员人数的近三分之一，超过16.6万个岗位被裁撤，预计到年底裁员总数将达到31.2万人。这是一个巨大的数字。高盛集团（Goldman Sachs）估计，在为期十年的AI转型期内，美国可能会有超过1,500万个工作岗位被取代。这种被裁员潮、生活成本上涨所裹挟的公众怒火，伴随着一种日渐强烈的社会共识：**AI带来的财富利益正源源不断地向上流，而其带来的转型代价却全由下层承担**。
+
+对此，政治层面的回应堪称极具戏剧性。桑德斯提议强行剥夺AI公司50%的股权，这种激进的资产组合管理方式，通常只在惊心动魄的恶意企业收购战或者海盗电影里才能看到。如果你不去细看这些公司的资产负债表，这确实是一个听上去十分解气的头条。我完全理解这种诉求背后的民意，但我必须对这项政策坦诚相告：**我们所讨论的“财富”到底是什么？**
+
+以**OpenAI**为例，其在2025年的运营亏损高达**209亿美元**；Anthropic同样未能实现盈利。绝大多数AI公司的估值完全是由风险投资和天使投资撑起来的，而不是来源于实际营收。这些公司目前的经营状态是每赚1美元就要烧掉1.6美元。强行收归它们50%的股权，意味着公众将持有半数在今天正以历史性速度亏钱的公司的股份。
+
+这个公共主权财富基金所持有的并不是7万亿美元的现金或实体财富，它持有的只是**7万亿美元的“估值”**，这是两码事。估值随时可能崩溃，而且在历史上屡见不鲜。去剥夺一家年亏损200亿美元的公司的半数股权，简直是金融自虐行为的教科书范本。你这并不是在重新分配财富，而是在将“烧钱游戏”收归国有。这就好比因为听说邻居的信用卡额度很高，你就潜入他家偷走了他一半的信用卡账单。从技术上讲，你确实拥有了一大笔“资产”，但这里面装的全是催款通知单。
+
+让我们停下来想一想，如果我们的真实目的是财富再分配，如果我们真的希望技术进步的红利能够被更广泛的公众分享，那我们为什么不去对那些真正有利润的企业下手，反而先从连年亏损的AI公司开始呢？标普500指数中充满了大量能产生真实、真金白银利润的巨头。例如，苹果公司去年的净利润就高达970亿美元。我们为什么不强行充公它50%的股权？
+
+答案在于，这种政治能量是专门针对AI的，因为人们正在对AI本身宣泄怒火。这表明相关的民意调查测量的仅仅是愤怒情绪的烈度，而不是理性的政策偏好。事实上，我们早就有一套让盈利企业回馈社会的制度性工具，它被称为**税收**。企业所得税、资本利得税、红利税——这些才是设计用来重新分配商业收益的结构性工具。如果这套税收系统出了问题（事实上的确有很强的理由证明它失效了），那就应该去改革税收系统。强行夺取50%的股权根本不是税收，而是将那些高度依赖风险投资、且在经济下行期估值极易化为泡影的亏损公司进行部分国有化。政府不应该用公众的纳税钱去进行这种高风险的资本博弈，因为这并不符合所有纳税人的风险承受能力。一旦这场赌局失利，如果这些公司最终无法盈利，如果AI泡沫破裂、估值大幅回调，公众分到的就不是一笔丰厚的主权财富，而是50%的巨额债务和亏损。
+
+<details>
+<summary>Original English</summary>
+
+And this is where we arrive at the most dramatic expression of public anger towards the AI industry so far. A national survey of 1,690 US adults conducted by research firm Veracite in June 2026 found that 69% of respondents support forcing AI companies to transfer 50% of their stock into a public sovereign wealth fund. In June, Senator Bernie Sanders proposed the American AI Sovereign Wealth Fund Act, which would mandate exactly this, a one-time seizure of 50% of stock from the largest AI companies in the United States. At current valuations, Standards estimated the fund would be worth approximately 7 trillion. Okay, so that's a number that sounds extraordinary and the public support 69% is really remarkable for a policy this aggressive. Meanwhile, 89% support mandatory safety disclosures. The tech sector accounted for nearly a third of all US layoffs in the first half of 2026. Over 166,000 positions eliminated with projections suggesting 312,000 by year end. That's a lot of people. Goldman Sachs has estimated that more than 15 million US jobs could be displaced across a decadel long AI transition. The anger is backed by job losses, rising costs, and a growing sense that the benefits of AI are flowing up while the costs flow down. Now, the political response to this has been nothing short of spectacular. Senator Bernie Sanders proposal to seize 50% of AI company stock is the kind of aggressive portfolio management usually only seen in highstakes corporate rates or maybe pirate movies. It's an incredibly satisfying headline, provided you don't look at the balance sheets of the companies you're actually rating. I understand the sentiment completely, and I need to be honest about this policy. What wealth are we talking about exactly? OpenAI lost $20.9 billion operationally in 2025. Anthropic is not profitable. The majority of AI company valuations are built on venture capital funding and angel investment, not revenue. These are companies that are spending $1.60 for every $1 they earn. Seizing 50% of their stock means the public gets 50% of shares in companies that are right now today losing money at historic rates. The fund wouldn't hold $7 trillion in wealth. It would hold $7 trillion in valuation, which is a very different thing. Valuations can collapse, and they frequently do. Seizing half the equity of a company that loses $20 billion a year is a masterclass in financial massochism. You're not redistributing wealth. You're nationalizing a cash burn. Is the sovereign wealth equivalent of breaking into your neighbor's house to steal half of their outstanding credit card debt because you heard they have a very high credit limit. Technically, you own a massive asset pool, but it consists entirely of invoices. And let's just pause for a second here. If the goal is wealth redistribution, if the genuine legitimate concern is that the profits of technological progress should be shared more broadly, then why start with AI companies that don't have profits? Huh? The S&P 500 is full of corporations generating enormous, real, tangible profits. Apple made $97 billion in net income last year. Why aren't we seizing 50% of that? The answer is that the political energy is directed at AI specifically because people are angry at AI specifically which means the pull is measuring anger not policy preference. We actually have a mechanism for ensuring that profitable companies contribute to society. It's called tax. Corporate tax, capital gains tax, dividend tax. These are the structural tools designed to redistribute the gains of commerce. If the tax system isn't working, and there are strong arguments that it isn't, then reform the tax system. A 50% stock seizure is not taxation. It's partial nationalization of companies that are mostly unprofitable, funded by venture capital, and whose valuations could evaporate in a downturn. The government should not be making investment decisions with that kind of risk appetite because it doesn't represent everyone's risk appetite. That is a gamble with public money. And if the gamble goes wrong, if these companies fail to reach profitability, if the AI bubble deflates, if the valuation's correct, the public isn't holding a sovereign wealth fund, the public is holding 50% of the losses.
+
+</details>
+
+### 理性治理的呼唤：超越愤怒导向型政策的替代路径
+
+再次重申，公众的愤怒是完全合理的，要求行业承担责任的诉求也是完全正确的。然而，这种具体的实施机制在我看来却找错了工具。它之所以失效，是因为怒火瞄准了错误的标靶。试想一下，如果美国政府明天真的强行没收了OpenAI 50%的股份，结果会怎样？政府将持有一家年亏损逾200亿美元公司的半数股权。如果这些公司未来确实实现了盈利（多数独立分析师预计这一天最早也要到2029年才会到来），主权财富基金可能确实能产生回报；但如果它们没能熬到盈利，公众手里拿到的就只是一堆废纸。
+
+更严重的后果在于这一举措树立的危险先例。一个可以强行剥夺私营企业一半股权的政府，几乎肯定会引发大规模的**资本外逃**（capital flight: 资本为了规避风险或寻求更高回报而流向国外的现象）。如果你让每一家AI初创公司都意识到政府随时可能拿走他们的一半股权，投资和人才会立刻转移到海外。那些你试图追究责任的企业将直接搬迁到不会对它们下手的其他司法管辖区。AI的开发步伐并不会因此停止，它只是转移到了保护力度更弱、缺乏监管、且完全没有公共基金分红的地区去继续进行。
+
+与此同时，那89%支持“强制安全信息披露”的民意，反而指向了明天就可以立即落地且无需没收任何股权的有效政策。信息透明度要求、审计标准、AI系统在部署前的独立评估——这些才是解决核心安全与治理问题、且完全不用承担部分国有化风险的实用工具。然而，“强制安全信息披露”并不能像“7万亿美元主权财富基金”那样成为抓人眼球、令人情绪亢奋的头条。这就是**情绪驱动型政策**（anger-driven policy）的弊端：那些最能在情感上给予人抚慰、令人大呼过瘾的政策提案，往往在实际操作中最不具备可行性和成效。
+
+<details>
+<summary>Original English</summary>
+
+The public anger again is completely legitimate. The desire for accountability is definitely correct. This specific mechanism is, in my opinion, the wrong tool. And it's the wrong tool because the anger is aimed at the wrong target. Consider what would actually happen if the US government seized 50% of OpenAI stock tomorrow. It would own half of a company that loses $21 billion per year. If these companies eventually do become profitable, which most independent analysts don't expect before 2029 at the earliest, the fund might actually generate returns. If they don't, the public holds paper in failed companies. and the precedent. A government seizing half of private company's equity would almost certainly trigger capital flight. If you tell every AI startup that the government might take half of their stock, investment moves offshore immediately. The companies you're trying to hold accountable, relocate to jurisdictions that won't touch them. The AI development doesn't stop. It just happens somewhere with fewer protections, less oversight, and no public fund at all. Meanwhile, the 89% who support mandatory safety disclosures, that is a policy that could work tomorrow without seizing a single share. Transparency requirements, auditing standards, independent evaluation of AI systems before deployment. These are the tools that address the actual problems without the risks of partial nationalization. But mandatory safety disclosures doesn't make for as satisfying a headline as 7 trillion sovereign wealth fund. And that's the problem with anger-driven policy. The most emotionally satisfying proposals are rarely the most effective ones.
+
+</details>
+
+### 隐形的资源壁垒：亿万富翁的避风港与大众代偿
+
+为了更清晰地厘清问题的本质，让我们重新审视一下那些亿万富翁和他们的孩子们。我认为，对这些科技巨头行为给予更宽容的解释是必要的，而且这实际上加强了我的论点，而非削弱了它。我不认为蒂尔、盖茨和乔布斯在多年前就对屏幕时间的长期认知危害有着完美的预见。一个开发出某项技术的首席执行官，并不天然拥有关于该技术对人类发育影响的20年临床试验数据。这就像一个药剂师配制出了一种新药，却并不意味着他立刻对所有长期副作用了如指掌一样。科学知识来源于持续的研究，而研究需要时间，屏幕对儿童心理发育影响的研究目前仍在不断成熟和积累中。
+
+这些亿万富翁真正拥有、而绝大多数普通父母完全无法企及的，是**做出另一种选择的丰厚资源**。一个在流水线上工作了10小时、疲惫不堪的母亲把iPad塞给孩子，仅仅是因为她需要30分钟的安静时间。这并不是什么糟糕的家庭教育，这仅仅是生活重压下的筋疲力尽——这是一个普通人为了度过艰难的一天而做出的本能挣扎。相反，蒂尔可以直接雇佣保姆来照看孩子；盖茨可以自己出资办一所私立学校；乔布斯甚至可以为孩子们专门设计一所完全不使用那些让他赚得盆满钵满的科技产品的实验学校。
+
+去指责一个辛劳工作了10小时的父母给孩子玩iPad，无异于去指责一个被困在荒野中的旅人饮用未经碧然德（Brita）滤水器过滤的雨水。他们并不是要在这一刻去优化孩子面向2045年的认知架构，他们仅仅是想在做晚饭的间隙争取20分钟的休战期，好让厨房不至于被点着。
+
+与此相对，那1,600名联名原告、350个家庭以及250个学区，他们对Meta、Snap、TikTok和YouTube发起诉讼，指控这些平台刻意设计成瘾机制导致儿童抑郁和自残。这些家庭和学区并没有多余的资源去为孩子们构筑保护层，他们不得不正面迎击这些社交巨头的侵蚀，而那些创始人们的孩子却在城堡里被悄无声息地隔离和保护着。
+
+如今，澳大利亚和马来西亚已经立法禁止16岁以下儿童使用社交媒体；法国、丹麦和英国也在考虑类似的立法。这些政府正在试图在国家政策层面，去践行亿万富翁们多年前在家庭内部所做的事情：限制儿童接触那些他们怀疑会带来严重认知和心理伤害的技术。
+
+这种现象的虚伪性在于：**富人有资本选择规避技术带来的负面代价，而普通大众却必须直面并承受这些后果**。富人家庭能够花钱避开的技术，恰恰是穷人家庭在疲惫不堪的生活中不得不依赖的工具。这种巨大的反差所催生的怒火完全合情合理。然而，人们却错误地将这种怒火发泄在AI、科技或屏幕本身上，而忽视了这本质上是创造了这一**资源鸿沟**（resource gap）的系统性问题：是糟糕的劳动环境，让父母们疲惫到根本无力去监管孩子的屏幕时间；是盲目的教育体制，在毫无证据支撑教学效果的情况下就将300亿美元扔进了数字化笔记本的无底洞；是畸形的公司治理架构，允许企业在裁减数万名员工的同时向高管发放创纪录的红利；是不公的税收体系，让这个星球上最富有的一群人能够积累如此庞大的资源，以至于可以轻易将自己的子孙后代与创造他们财富的产品副作用相隔离。
+
+<details>
+<summary>Original English</summary>
+
+Let me come back to the billionaires and their children for just a moment because I think the more generous interpretation is important and it actually strengthens the argument rather than weakening it. I don't think Tal and Gates and Jobs necessarily had perfect insight into the long-term cognitive effects of screen time. A CEO who builds a technology doesn't automatically possess the equivalent of 20 years of clinical trial data on its developmental impact. Just like a pharmacist can formulate a drug without having a full understanding of every long-term side effect. Right? Knowledge comes from research and the research takes time and the research on screens on child development is still maturing. What these billionaires did have and what most parents do not is the resources to make a different choice. A parent working a 10-hour shift hands their child an iPad because they need 30 minutes of peace. It's not bad. Parenting is just exhaustion. That's a person trying to survive their day. Teal can just instruct a nanny to handle it. Gates can fund a school. Jobs could design an entirely different child school for his kids, one without the products that made him the wealthiest person in tech. Blaming an exhausted parent for giving their child an iPad after a 10-hour shift is a bit like blaming a stranded traveler for drinking rain water because it hasn't been properly filtered through a Britta filter. They're not trying to optimize the child's cognitive architecture for the year 2045. They're just trying to negotiate a highly volatile 20-minut ceasefire so they can just cook dinner without the kitchen burning down. The 1,600 plaintiffs, 350 families, and 250 school districts who filed lawsuits alleging that Meta, Snap, Tik Tok, and YouTube created addictive platforms leading to depression and self harm in children didn't have the resources to shield their children. They were fighting the same platforms that the founders children were quietly protected from. Australia and Malaysia have now banned children under 16 from social media. France, Denmark, and the UK are considering similar legislation. These are governments trying to do at the policy level. What billionaire parents did at the high school level years ago, limit exposure to technology that they suspect is causing harm. The difference is that the governments are doing it for everyone, not just for their own children. The hypocrisy is that they can afford to opt out of the consequences while the rest of the population absorbs them. The same technology that rich parents can afford to avoid is the technology that exhausted parents depend on. And the anger that produces, which is completely valid, gets directed at AI and tech and screens when it should really be directed at the systems that created the resource gap in the first place. At the labor conditions that leave parents too exhausted to supervise their children's screen time. At the education system that spent $30 billion on laptops without evidence they would help. at the corporate governance structures that allow companies to fire thousands while posting record profits. At the tax system that allow the wealthiest people on earth to accumulate resources so vast they can insulate their families from the consequences of the very products that made them wealthy in the first place.
+
+</details>
+
+### 锤子与挥锤人：将技术工具回归结构性治理的终极策略
+
+在理清这些社会制度层面的成因后，作为一名计算机科学家，这种技术与体制罪恶的生硬混淆再次刺痛了我。AI本身是一个美丽的学术领域。它底层的数学模型是如此优雅，它的每一次研究突破都令我由衷地感到震撼与敬畏。它在医学诊断、无障碍辅助以及基础科学发现等领域的应用前景，让我内心充满了一种或许只有“极客”才能完全心领神会的喜悦。然而，每当AI被当作风险资本主义、劳工剥削、资产不平等以及企业冷酷无情的代名词时，这门科学本身就会被掩埋在那些既不是由它引起、也无法由它解决的积怨之下。
+
+AI本身并没有创造贫富差距，AI也没有发明注意力经济，AI更没有决定在毫无教学论证的前提下砸下300亿美元给学校买笔记本电脑。AI没有在六个月内做出开除16.6万名员工的决策。做决定的是具体的人，是运作的系统，是背后的**激励结构**（incentive structures: 引导和塑造个体或组织行为的奖惩机制）。
+
+如果我们不开始直呼这些系统性根源的本名，不着手制定切实的政策去改革它们，那么无论我们多么愤怒，一切都不会有任何改变。人们所渴望的，无论他们能否用语言清晰准确地表达出来，本质上都是深层次的**社会变革**（societal change: 社会结构、制度、行为规范及文化价值系统的根本性转变）。
+
+AI在其中只是充当了引爆这场大讨论的催化剂。然而，催化剂绝非致病因子。即便没有人工智能的出现，这场关于劳工权益、财富分配以及大机构社会责任的清算也迟早会到来。劳动力市场早已不堪重负，贫富差距早已触目惊心，教育政策也早已在耽误孩子。AI的出现只是加速了这一切，让它们变得更加显性，并给它们贴上了一个清晰的标签。然而，标签本身并不是病灶，结构性的体制缺陷才是。
+
+既然病灶是结构性的，那么我们就必须给出结构性的回应：我们需要的是实实在在的税制改革，而不是赌博式的股权充公；我们需要的是基于扎实科学证据的教育决策，而不是科技公司销售代表天花乱坠的推销辞令；我们需要的是在自动化技术冲击下依然坚固的劳工保障制度，而不是任由其随风蒸发；我们需要的是追究管理层部署决策社会后果的公司治理标准，而不是让他们只对季度财报负责；我们需要的是对影响社区的基础设施项目引入强制性的公共咨询机制。
+
+这些提议绝非什么异想天开的激进主张，而是构建一个能够更公平地分配社会进步红利的体制时，所必须进行的那些枯燥、艰难、循序渐进的修补工作。它们或许无法成为街头游行中极具感召力的口号，也无法被写在愤怒的标语牌上，但它们才是真正行之有效的政策。
+
+再次强调，你们的愤怒是完全合理的。但我想说的是：请务必看清你具体在对什么感到愤怒，这种清晰的认知具有极高价值。然而，一旦你看清了，你就需要一个切实的行动路线图，而不是一个空洞的口号。愤怒本身无法改变制度，唯有策略才能颠覆系统。
+
+当下最核心的战略洞察就在于此：AI只是一把锤子。它既可以用来建造医院，也可以用来砸碎窗户。这把锤子本身无法做出选择，真正做出选择的是挥动锤子的人。所以，请停止对这把锤子的无端宣泄。去把那个挥舞锤子的人找出来，去质问是谁把这把锤子递到了他手里，是谁在从每一次挥击中攫取利益，以及我们需要付出怎样的努力，才能把这把锤子交到更有责任感、更懂得爱惜的人手中。
+
+如果你想进一步了解这把锤子在具体的企业中是如何被挥舞的，以及为什么有55%的企业高管已经在筹划用AI取代他们的员工，我将在屏幕上链接的另一期视频中为您详细拆解。非常感谢您的收看，我们下期节目再见。
+
+<details>
+<summary>Original English</summary>
+
+As a computer scientist, this conflation wounds me. AI is a beautiful field. The mathematics underneath it are elegant. The research breakthroughs are genuinely all inspiring. The potential applications in medicine, in accessibility, and scientific discovery fill me with a kind of joy that I suspect only nerds fully understand. And every time AI gets used as a shorthand for venture capitalism, labor exploitation, asset inequality, and corporate recklessness, the actual technology, the actual science gets buried under grievances it did not cause and cannot solve. AI didn't create wealth inequality. AI didn't design the attention economy. AI didn't decide to spend $30 billion on laptops without checking whether they worked. AI didn't choose to fire 166,000 people in 6 months. People did. Systems did. Incentive structures did. And until we start naming the actual causes and building actual strategies to reform them, nothing changes. No matter how angry we get, what people are asking for, whether they articulate it this way or not, is societal change. And AI is the catalyst for that conversation. But catalysts are not causes. This kind of reckoning about labor, about inequality, about the responsibilities of powerful institutions would have arrived with or without artificial intelligence. The labor market was already under strain. Wealth inequality was already obscene. Education policy was already failing children. AI accelerated all of it, made it visible, gave it a name and a face, but the face isn't the cause. The structural conditions are the cause. And the structural conditions need structural responses. Tax reform, not stock seizure. Education policy grounded in evidence, not in sales pitches from technology companies. Labor protections that don't evaporate every time a co discovers automation. corporate governance that holds executives accountable for the consequences of their deployment decisions, not just their quarterly earnings. Public consultation requirements for infrastructure projects that affect communities. These are not radical proposals. I'm not suggesting something crazy here. They're the boring, difficult, incremental work of building systems that distribute the benefits of progress more fairly. They don't make for good protest slogan. They don't make for good protest signs, but they do make for good policy. And the anger, and once again, I have to be clear, the anger is earned. I would say this, figure out what you're specifically angry about because that clarity is genuinely valuable in this case. But once you figured it out, you need a plan, not a slogan. Getting mad doesn't change systems. Strategy changes systems. And the most important strategic insight available right now is this. AI is a hammer. It can build hospitals or it can break windows. The hammer didn't choose. Somebody is swinging it. Go find them. Stop being mad at the hammer. Start asking who handed it to the person swinging it, who is profiting from the swing, and what it would take to put it in bitter hands. If you want to understand how the hammer is being swung at specific companies, and why 55% of executives already target replacing their workers with AI, I cover that in this other video that I'm linking on your screen here. Thanks so much for watching. I'll see you in the next one.
+
+</details>

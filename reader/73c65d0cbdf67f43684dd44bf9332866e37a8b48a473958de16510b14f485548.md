@@ -1,0 +1,451 @@
+---
+author: TED
+date: '2026-10-08'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=8WWrNbHvd44
+speaker: TED
+tags:
+  - curiosity
+  - growth-mindset
+  - educational-equity
+  - empathy
+title: 如野草般野蛮生长：用好奇心打破教育与阶层偏见
+summary: 教育工作者Stephen Nobles在TED访谈中分享了如何以好奇心驱动教育变革。他主张穿透贫困等表面数据标签，看见学生的潜能与可能性；以不带评判的倾听赋能学生，将分歧转化为对话。通过母亲鼓励自己像野草一样在非预设环境中顽强生长的故事，他呼吁以好奇心为燃料，将人生视为代际接力，赋能下一代自主探索与前行。
+insight: ''
+draft: true
+series: ''
+category: psychology
+area: society-thinking
+project: []
+people: []
+companies_orgs:
+  - TED
+products_models: []
+media_books:
+  - The Odyssey
+  - Lord of the Flies
+status: evergreen
+---
+### 好奇心在教育中的力量：从数据到看见人
+
+**Whitney Pennington Rodgers**: 作为一名教育工作者，在你的日常工作中，**好奇心（curiosity）**扮演着一个非常有趣的角色。你能具体谈一谈好奇心是如何体现在你的教育实践与工作当中的吗？
+
+<details>
+<summary>Original English</summary>
+
+**Whitney Pennington Rodgers**: In your work as an educator, curiosity plays a very interesting role. Can you talk a little bit about how curiosity shows up in the work that you do?
+
+</details>
+
+**Stephen Nobles**: 在我们所从事的教育工作中，保持好奇心是至关重要的。好奇心赋予了我们一种极为珍贵的能力与视角：让我们看到的不仅仅是事物当前所呈现的既定现实状态，更是它们未来所能够达到的可能性与潜力。
+
+在我们学区的实际探索中，我们逐渐认识到，当带着真正的好奇心去面对学生时，一旦学生切身体会到自己被真正“看见”了，一旦他们感受到自己的声音被认真倾听了，一旦他们被充分赋能，他们就会发自内心地主动投入进去，紧密地与学习内容产生连接与共鸣。这种连接一旦建立，学校的出勤率自然就会显著提升，而学业表现与学术成就也会紧随出勤率的改善而稳步提高。
+
+因此，这要求我们去践行一条准则，就像21世纪伟大的英国哲学家**特德·拉索（Ted Lasso）**所说的那样：“**多一点好奇，少一点评判**”（*Be curious, not judgmental*）。在我们所在的学区，我们的教育工作要求我们必须放下先入为主的评判心。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Nobles**: So in the work that we do, it's important for curiosity to be there. It gives us the opportunity to see things not just how they are, but how they can be. And we're learning, in our district, that with curiosity, when students feel seen, once they feel heard, once they feel empowered, they'll engage, they'll connect to the work, and then the attendance shows up and then the performance follows the attendance. So it requires us to follow, like the great 21st-century English philosopher Ted Lasso puts it, to be curious and not judgmental. And in our district, our work requires us to not be judgmental.
+
+</details>
+
+### 跨越恐惧与偏见：穿透数据标签看见可能性
+
+**Whitney Pennington Rodgers**: 你能进一步阐述一下**好奇心（curiosity）**与**勇气（courage）**之间的桥梁作用吗？在面对未知的探索时，你通常是如何帮助人们克服可能存在的对失败的恐惧，从而真正带着好奇心去拥抱探索与交流的？
+
+<details>
+<summary>Original English</summary>
+
+**Whitney Pennington Rodgers**: And can you talk a little bit about the bridge between curiosity and courage? How do you help people move past, I guess, what might be the fear of failure to really engage with curiosity?
+
+</details>
+
+**Stephen Nobles**: 如果你能真正把握并正确运用好奇心，它就会成为跨越人与人之间差异与鸿沟的桥梁。好奇心能够将对立与隔阂转化为真诚的对话。
+
+在教育中，你渴望能够真正读懂孩子们，走到他们身边去接纳他们当前的真实状态；但这首先要求你必须戴上一副充满期待与可能性的眼镜去看待他们，彻底摒弃那些主观的评判。
+
+对我们学区而言，有一件极其关键的事情，也是我在工作中始终在不断敦促我的同事们去领悟的，那就是：**我们必须穿透冷冰冰的数据指标去看待学生（see students beyond the data）**。
+
+这里有一个不容忽视的基本事实：如果一个孩子生活在贫困之中，并不意味着这个孩子本身是贫穷的。事实是他们的父母处于贫困状态，而他们只是和父母生活在一起罢了。同样地，如果一个孩子的父母非常富有，那也并不代表这个孩子本身就是富有的；只是他们的父母富有，而他们恰好生活在那个家庭环境中。
+
+因此，面对所有那些统计数据、面对所有关于贫困的特征标签，请把它们归在父母身上，而不是直接硬套在学生的身上。请纯粹透过“未来一切皆有可能”的视角去看待这些学生，唯有如此，他们通常才会不负所望、挺身而出，展现出惊人的潜力和担当。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Nobles**: If you get curiosity right, it's the bridge between our differences. It turns it into dialogue. So you want to be able to see kids and meet them where they are, but that requires you to see them with a lens of expectation and opportunity without the judgment. And for us, one of the things that's important, that I'm always pushing my colleagues to see, is that we have to see students beyond the data. A fact with that is if a kid lives in poverty, they're not poor. Their parents are poor and they live with them. The same way, if a kid's parents are rich, they're not rich. Their parents are rich and they live with them. So with that, all of the data, all of the characteristics of poverty, place it on the parents and not the student. See them through the lens of what's possible, and then they usually rise to the occasion.
+
+</details>
+
+### 好奇心作为生存技能：提出更好的问题
+
+**Whitney Pennington Rodgers**: 在我们当下所处的这个时代环境里，人们往往很容易固守自封，加倍坚持自己的既有感受，极度确信自己在这世界上的立场和观点，却很少愿意主动去询问别人的感受、倾听他人的想法，更不用说保持开放的好奇心了。在你看来，在当下这个时代节点上，好奇心作为我们所有人必备的一项关键**人生技能（life skill）**，其重要性究竟有多大？
+
+<details>
+<summary>Original English</summary>
+
+**Whitney Pennington Rodgers**: (Applause) This moment we're living in, it's sometimes really easy for people to sort of double down on what their feelings are, to be more certain about where they stand in the world instead of asking people how they feel, what they think, to be curious. How important do you think curiosity is as a life skill for all of us in this moment?
+
+</details>
+
+**Stephen Nobles**: 我认为好奇心极其重要。我时常在脑海中憧憬这样一个世界：在那个世界里，我们所颂扬和赞美的，不仅仅是那些看似完美的标准答案，更是那些**最深刻、最发人深省的问题**。
+
+因为我们生活在一个高度由数据驱动的现代社会，但如果数据是真实准确的，它所起到的作用应当是启发我们提出更有深度的问题，促使我们向更深层次去钻研探索。而这一切的前提，正是需要发自内心的纯粹好奇心。
+
+当好奇心被放置在正确的位置上时，它能够搭建起人与人之间深度的连接。这种连接会进一步孕育出友谊与坚实的合作伙伴关系。这正是通往更加光明未来的桥梁。尤其是身处当今这个每个人都急于给你一个斩钉截铁的答案、并且用不可置疑的自信语气将其抛给你的社会环境里，好奇心恰恰是赋予我们**谦逊（humility）**与**同理心（empathy）**的核心源泉。在我浅薄的认知里，这不仅是教育领域所亟需的精神，更是整个世界向前迈进所不可或缺的力量。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Nobles**: I think it's very important. I can only imagine a world where we celebrate not just the answers, but the best questions. Because we live in this data-driven society, if the data is right, it should propose better questions. It should ask us to dive in deeper. And that requires genuine curiosity. And curiosity, when put in the right place, builds connection. Connection builds friendship and partnership. That's the bridge toward a brighter future, especially in a world where everyone is so quick to give you a certain answer and they just say it with such confidence. But curiosity is the thing that gives us humility and empathy, and that's the thing that we need to move forward, not just in education, but as a world, in my humble opinion.
+
+</details>
+
+### 空间碎片的震撼：TED-Ed学生演讲项目
+
+**Whitney Pennington Rodgers**: 你刚才特别提到过，好奇心能够将分歧转化为对话。你能不能具体聊一聊，这种力量在你亲身经历的课堂和学生之间是如何体现出来的？关于通过好奇心来弥合分歧与隔阂，你从中汲取了哪些深刻的经验和教训？
+
+<details>
+<summary>Original English</summary>
+
+**Whitney Pennington Rodgers**: Well, you said this earlier that curiosity can turn disagreement into dialogue. Can you talk a little bit about how that's shown up in the classrooms you've been in, with students and what you've learned about the importance of curiosity for bridging a divide?
+
+</details>
+
+**Stephen Nobles**: 当然可以。一个非常典型的例子是，我们在我们所在的学区启动了一个**TED-Ed学生演讲项目（TED-Ed student talk program）**。
+
+起初我们是在一所小学开展这个项目的，但去年我们把它引入了学区内的一所初中。那所初中其实生源背景比较复杂，环境相对严峻棘手。因此，在我们正式踏入那个活动场地之前，我就提前郑重地叮嘱在场所有的成年人和老师们：在我们走进这扇门之前，千万不要带着任何偏见去评判这些孩子。我们绝对不对他们想表达的主题设限，不划定条条框框，不限制他们是谁、不限制他们能做什么。让我们纯粹给予他们充分的空间，让他们在没有任何指责和审判的环境中做最真实的自己。
+
+当时有这么一个男孩走上台来——脚踩一双乔丹球鞋（Jordan's），穿着紧身牛仔裤，留着脏辫（dreads），头发遮住了大半张脸，套着一件连帽衫，整个人看起来似乎完全心不在焉、游离在外。他一个人默默在角落的纸上写写画画，然后走了过来。老师问他：“你想聊点什么？你对分享什么主题感兴趣？”
+
+他的演讲选题竟然是：**太空垃圾（trash in space）**。
+
+他真正渴望探讨的核心议题是：那些在地球轨道上漂浮的、来自于受损报废卫星以及各种航天器残骸的太空垃圾，如果有一天被地球的重力场捕获并拉入地心引力圈，究竟会引发怎样的后果？那对人类意味着什么？
+
+现场没有任何一个成年人预料到他会选这个话题。在场的所有人都被深深震撼了，完全没想到这样一个看似漫不经心的孩子，内心深处真正着迷并深入思考的，竟然是太空垃圾坠入地球轨道所带来的影响。
+
+在我看来，我们之所以能够收获这样令人动容的体验，正是因为我们自始至终保持了好奇心：不去主观预判他，不去强行引导或规训他，只是给予他足够包容的空间，然后提供帮助他达到标准的必要工具与资源。最终，他完全达到了甚至超越了标准，给我们带来了巨大的惊喜。
+
+直到今天，我和那个孩子的师生关系依然在不断加深。他现在已经升入了高中，每次我见到他，他总是眼神坚定、全力以赴（lock in）。我无比期待看到他未来成长为怎样一个卓越的人。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Nobles**: Yeah, so a good example is we started a TED-Ed student talk program in our district. We started that program at one of the middle schools, well we started at an elementary school, but last year we did it at one of our middle schools. And it's a kind of tough middle school. So when we get into this space, I'm telling the adults, before we get in here, do not judge these kids. We're not going to put barriers or parameters on what they can speak on, who they are, what they can do. Let's just give them the space to be themselves without judgment. So we have this student who comes up -- Jordan's, skinny jeans, dreads, hair in his face, hoodie on, looks like he’s not engaged -- he’s over here writing to himself, and he comes up and he’s like, “What do you want to talk about? What are you interested in speaking on?” His topic was trash in space. He was interested in discussing what would happen if the trash that's orbiting Earth, from damaged satellites and different things in space, was able to be pulled into our gravitational pull. What that would mean. No adult expected that. Everyone was shocked that this kid was interested in what happens if trash is pulled into our orbit. To me, we were able to have that experience by just remaining curious, to not judge them, to not guide him, to just give him the space and then the tools to meet the standard. And he met the standard. He actually surprised us. And my relationship with that kid is still growing now. He’s in high school now, and every time I see him he’s always ... going to lock in. I can't wait to see who he becomes.
+
+</details>
+
+### 好奇心的涟漪效应：重塑组织与领导力
+
+**Whitney Pennington Rodgers**: 这个故事太发人深省了。它自然而然地引出了另一个核心概念：当一个人对另一个人抱有真诚的好奇心时，这种好奇心是如何像涟漪一样在整个空间中传递与蔓延的。
+
+<details>
+<summary>Original English</summary>
+
+**Whitney Pennington Rodgers**: I mean, that's interesting. It leads to this other idea of what happens when one person is curious about someone else and sort of how that spreads in a space.
+
+</details>
+
+**Stephen Nobles**: 没错，好奇心是具有极强感染力的（contagious）。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Nobles**: Yeah, it's contagious.
+
+</details>
+
+**Whitney Pennington Rodgers**: 你能深入分享一下你是如何观察到好奇心对周围其他人产生积极影响的吗？在同一个场域中，对单个个体的好奇，是如何波及并改变其他人的？
+
+<details>
+<summary>Original English</summary>
+
+**Whitney Pennington Rodgers**: Can you talk a little bit about how you've seen curiosity impact other people? Being curious about one person impacts other people in a space.
+
+</details>
+
+**Stephen Nobles**: 这种氛围有点类似于体育运动中的团队协作机制。
+
+学生们开始能够以一种前所未有的方式彼此看见、建立深度的同伴连接，而在过去，由于他们各自迥异的家庭生活背景、参差不齐的学习成绩或是日常的行为表现，他们之间往往彼此疏离、无法建立这样的连接。但好奇心营造出了一个充满心理安全感的场域，让每一个学生都能真真切切地被看见，让每一个学生都能毫无顾虑地表达自己的真实想法与见解。
+
+不仅如此，跳出学生群体本身，站在学区管理者的宏观层面上来看：当那些成年人和教育管理者们同样秉持着这种好奇心去行事时，他们不再仅仅居高临下地向下属或学生派发既定的标准答案；他们开始非常坦然且欣慰地意识到，自身认知与能力的很大一部分成长，恰恰来自于他们所引领和服务的那群人。
+
+我亲眼见证了这种以好奇心为基石的成长力量在我们整个学区内生根发芽。如今对于我们而言，面对未来我们感到无比振奋，正是因为这种开放的好奇心赋予了我们全新的机遇。它不仅在领导力层面为我们整个学区注入了变革的生机，坦率地讲，也重塑了我们每一个个体的生命状态。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Nobles**: So it's kind of like the way that sports works. The students were able to see and connect to one another in a way that their home life or their grades or their behavior may not have connected them before. But it provided a safe space for the students to be seen, a safe space for them to voice their opinion. But even to back away from the students, being at the district level, for the adults and the leaders, to have that curiosity, to move in such a way that they're not just providing the answers, they're comfortable with also recognizing that some of their growth is going to come from the crowd that they're leading. I've just seen that begin to grow in our district. And now for us, we're so excited for the future because of that opportunity, that curiosity. Even in leadership it's creating for us as a district. And as individuals, to be honest.
+
+</details>
+
+### 构建探索文化：超越K-12的终身学习
+
+**Whitney Pennington Rodgers**: 我想深入探讨一下你围绕这一点构建组织文化的工作。你知道，无论是在教育体系中，还是在日常生活的绝大多数场景里，我们往往都是因为“给出了正确答案”而获得奖励与肯定。既然如此，你究竟是如何打造出一个让人们感到安心与自在的包容环境，鼓励大家拥抱各种未知的可能性，而不是直奔一个草率的现成解决方案呢？
+
+<details>
+<summary>Original English</summary>
+
+**Whitney Pennington Rodgers**: I want to talk a little bit about the work you do of sort of creating a culture around this. And, you know, we're sort of rewarded, in education, I'm sure, but just in life, for having the answer. And so, how do you create a space where people feel comfortable engaging with possibilities instead of just coming right down to a solution?
+
+</details>
+
+**Stephen Nobles**: 关键就在于努力创造一个包容的场域，让置身其中的每一个人都能着眼于事物的未来走向与发展潜力，思考事物“能够成为什么样”以及“可以如何去实现”。
+
+因为有时候，如果我们仅仅把目光死死锁定在事情“眼下是什么糟糕现状”上，那种无力感往往是极其令人气馁和生畏的（daunting）。这种沉重的现实足以击垮很多人，让他们在学业上、甚至在整个人生道路上产生放弃的念头。
+
+作为一名教育者，我的核心使命是帮助我们的学生找准定位，让他们清醒地认识到：**学习绝不仅仅是一场局限在K-12（基础教育阶段）的短暂冒险**，它绝不是你当前所经历的一个转瞬即逝的过渡阶段而已。始终保持好奇心，能够为他们打下坚实的基础，让他们真正把学习视为一段贯穿一生的长途跋涉（lifelong journey）。
+
+同样地，即使作为成年人，当我们时刻保持好奇心时，我们也能够透过可能性的视角来审视周围的一切。当学生们看到我们成年人率先垂范并身体力行地展示出这种探索姿态时，他们走进这个空间，这种精神就会像火种一样感染每一个人。
+
+久而久之，这就会沉淀为一种深入人心的文化，而正是这种文化在驱动着所有事物向前演进。这正是我们如今开始亲眼见证的变革力量——它不仅在推动我们的学区大步向前，更在推动我们整座城市迈向新的高度。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Nobles**: Yeah, just trying to create a space where everyone is looking at things for where they can be and how they can be. Because sometimes if we focus just on how they are, can be daunting. And that could be enough to make people want to quit academically and in life. And for me, as an educator, our goal is to get our students positioned to recognize that learning isn't just a K-12 adventure. It's not just a phase that you're in currently. To remain curious prepares them to recognize their learning as a lifelong journey. And even as adults, when we remain curious, we see things through the lens of possibility. And then the students see that behavior modeled by us, as adults, and then they come in and it becomes contagious. It becomes a culture, and that's what moves everything forward. That's what we're starting to see move our city forward beyond just our school district.
+
+</details>
+
+### 逆流而上：如何打破极化舆论与固有认知
+
+**Whitney Pennington Rodgers**: 我想正在收听这段对话的人里，很多人可能会由衷地感慨：“这听起来太美好了！”而在你的实际工作中，或许也经常遇到这样的人：他们内心非常渴望在自己生活的圈子和工作的场域中融入更多的好奇心，但面对当前极化狭隘的社会话语环境却感到深深的沮丧与无力，或者被身边人们早已习以为常的封闭处事方式泼冷水甚至打压。对于那些感觉自己正在逆流而上的人，你会给予他们怎样的建议？
+
+<details>
+<summary>Original English</summary>
+
+**Whitney Pennington Rodgers**: And I'm sure there are people that maybe are listening, they're saying, this sounds great, and maybe you come across these people in your work who feel like, I want to have more curiosity in the spaces I inhabit, but I feel really frustrated by the current state of discourse or shut down by how people are accustomed to sort of approaching these things. What advice would you give to somebody who's sort of going against the tide in that way?
+
+</details>
+
+**Stephen Nobles**: 保持全然的开放（Be open）。
+
+要学会用一种超越当下的全新视角去看待一切：不要紧盯着你或对方此刻所处的局限位置，而是看向你内心期盼他们未来能够达到的美好境界。
+
+这在本质上要求我们必须在一定程度上跳出狭隘的自我个体视角，转而将大家视为一个休戚与共的命运共同体来看待。这往往是最艰难的关口——如何在最开始破冰的那一刻，把人们凝聚并带动起来。
+
+然而，一旦这种好奇与探索的齿轮真正开始转动，一旦它引起了共鸣与效仿，它本身就是具有极强感染力的。后续的工作就会顺理成章地推进——整个体系会开始自主运转起来，你甚至不再需要耗费那么大力气去死命推它。
+
+但最艰难的挑战，始终在于如何让每一个人站在“探索无限可能”的起点上。去引导他们看到超越眼下现状的事物，超越那些死板的统计数据，超越冷冰冰的数据报告所武断断言的“学生能力极限”。这是整个过程中最难啃的硬骨头。
+
+可一旦你真正跨过了这个门槛，伟大的实践、澎湃的想象力、卓越的领导力以及崇高的期待，就会开始自我繁衍与生生不息。它就像形成了一个正向循环的领导力再生符号：优秀的领导者托举孩子们成为下一代领军人物，全力支持孩子们的思想构想，全心守护孩子们的梦想与憧憬。这种正向循环一旦形成，发展的势头就会真正迅猛提速。这就是吸引力法则的体现，也是最令人心潮澎湃的制高点。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Nobles**: Be open. See everything from a lens of not where you are, but where you hope for them to be. It requires us to kind of disconnect from ourselves as individuals and see things as a collective. That's the biggest challenge, just getting people at the beginning of it. But once it starts and once it catches on, it's contagious. The work just moves -- it begins to do it itself. You don't have to push it that much. But the tough part is just getting everyone at the entry point of what's possible, seeing things beyond where they are, beyond where the data is, beyond what the data is saying that students are capable of. That's the toughest part. But once you get there, the great work, the imagination, the leadership, the expectation, it begins to beget itself. So it just creates this recycling symbol of leaders that are pushing children to be the next leaders, supporting their ideologies, supporting their dreams and their hopes. And it just creates this symbol and then things really start to pick up. And that's what attraction is, and that's the great spot.
+
+</details>
+
+### 聆听孩子的声音：当学生开始质疑规则
+
+**Whitney Pennington Rodgers**: 真是太棒了。你能否再具体举一个例子，描述一下这种转变在现实中究竟是怎样的场景？我非常喜欢你刚才分享的那个思考太空垃圾的学生的故事。在你的经历中，有没有哪一次你亲眼见证了某个人跨越了原有的认知障碍，真正达到了这种全新的境界？
+
+<details>
+<summary>Original English</summary>
+
+**Whitney Pennington Rodgers**: Yeah, could you say more about, I guess an example of what that looks like? I love what you shared about the student who's thinking about trash in space and so, you know, I guess, what's an instance where you've seen somebody see this example of how they can push past this to really get there?
+
+</details>
+
+**Stephen Nobles**: 对我们而言，这种转变的核心就在于跨越冷冰冰的数据指标，跨越那种居高临下向学生单向发号施令、告诉他们“只能成为什么样的人”的传统模式。
+
+它要求我们成年人以开放包容的胸怀，去接纳学生们反过来发出的质问：“为什么事情一定要是这个样子的？”
+
+因为对我而言，那才是真正令我茅塞顿开、振聋发聩的顿悟时刻。当你开始坐下来与学生展开真正平等而真诚的深层对话时，原本习惯了由大人告诉他们该做什么、期望他们达成什么目标的孩子们突然反问：**“为什么我们未来的路，总是由你们成年人来做决定？为什么你们从来不问问我们自己想成为什么样的人、想用什么样的方式去实现？”**
+
+这一幕对我产生了极大的震动。天哪，关于这一点我有太多太多的感触想说，但为了不显得过于冗长，我只想强调：当学生们真正感受到自己被看见、听到自己的声音通过好奇心的透镜被认真对待时，那种激发出来的能量是完全无法估量的。
+
+我太热爱置身于这样的空间了——陪伴在那些第一次被真正倾听、被真正看见、并开始勇敢表达自己独立主张的学生们身边。在这其中我们见证了太多的奇迹与蜕变。很抱歉我无法只挑出某一个孤立的案例来展开，因为此时此刻我脑海里正有成百上千个鲜活的面孔和故事在飞速闪过。但毫无疑问，一旦你真正做对了这一步，所能释放出的能量是无比巨大的。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Nobles**: For us, it's moving beyond the data, moving beyond just telling the students what they can be. Being open to the students questioning why this is this way. Because that's the thing that's eye-opening for me. When you start to have genuine conversations with students and you're telling them what they're expected to do, and then they question, well, why are the adults making the decisions for what I do next? Why aren't they asking us what we should be and how we should do it? That was eye-opening for me. And man, there's so much I could say about it without being long-winded. It's just when the students feel seen, when they feel heard, through the lens of curiosity, it's immeasurable. And I just love being in a space, being with the students that are beginning to be heard or be seen and voice their opinion. It's just so much that we've seen with it. I'm sorry, I can't just lock in on one because I have a million going through my head right now. But yeah, it's immeasurable what could happen once you get it right.
+
+</details>
+
+### 多元学习者的赋能心法：撕掉邮编与阶层标签
+
+**Whitney Pennington Rodgers**: 这太令人惊叹了。而且我想你非常幸运，能够有机会接触并服务于各种不同类型的学习者，他们与知识和思想互动的方式各不相同。对于那些正在尝试在自己的课堂或社区中落地这种理念的人，面对认知风格各异、接收信息方式截然不同的各类学习者，你会给予他们什么切实的建议？
+
+<details>
+<summary>Original English</summary>
+
+**Whitney Pennington Rodgers**: That's amazing. And I think you've had the great fortune of being able to work with people who are different types of learners and have different ways in which they're engaging with ideas. What is some advice you'd give for somebody who is trying to implement this in their own classroom or community, who might have learners who have different approaches or ways that they're taking in information?
+
+</details>
+
+**Stephen Nobles**: **透过可能性的透镜去审视你的学生。**
+
+超越冰冷的数据标签去看待他们；超越他们当下的居住生活条件去看待他们；超越他们所在社区的**邮政编码（zip code）**去看待他们；超越他们父母的生活方式与阶层背景去看待他们。发自内心地、真正透过无限可能性的视角去注视他们。
+
+在我看来，这是必须建立的第一步，也是不可动摇的前提基石。
+
+而这要求我们在认知上达成共识：哪怕孩子们身处贫困的环境，他们本身绝不等于贫困。如果他们生活在贫困之中，那是因为他们的父母陷入了贫困，而他们只是随父母生活在一起。一旦你亲手擦去围绕在学生身边的那些刻板数据标签，纯粹透过“未来一切皆有可能”的信念去注视他们，教育的美好与奇迹就会在那一刻悄然绽放。
+
+正是在那一刻，真正的深度投入与学习自驱力才会被彻底激活；正是在那一刻，他们才获得了足够的心理安全感与舒适感，去大胆发出自己的声音、去表达更多的见解，并在自己的求学生涯中真正建立起**主人翁意识（ownership）**。只要你做到了真诚而全情地陪伴在他们身旁，优异的数据指标自然会水到渠成地随之而来。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Nobles**: See your students through the lens of possibility, see them beyond the data, see them beyond their living conditions, see them beyond their zip code, see them beyond their parents' lifestyle, see them through the lens of possibility, truly. To me, that's the first step that has to exist. And that requires us to recognize that if they are poor, they are not poor. If they live in poverty, their parents are poor and they live with them. Once you erase the data around the student and you see them truly through what's possible, that's when the beauty happens. That's when the engagement starts. That's when they're safe and they're comfortable to voice their opinion, to say more and to take ownership in their academic experience. The data will follow, but you have to authentically be right there.
+
+</details>
+
+### 野草的成长哲学：在不属于你的土壤中破土而出
+
+**Whitney Pennington Rodgers**: 我非常希望能听你聊聊你自己的成长经历，以及好奇心在你整个人生轨迹中所扮演的独特角色。你亲身体会到好奇心是如何为你改变命运的？它在你的生命历程中究竟带来了哪些深远的影响？
+
+<details>
+<summary>Original English</summary>
+
+**Whitney Pennington Rodgers**: Well I’d love to hear you talk a little bit about yourself and the role curiosity has played in your own life. How have you seen curiosity change things for you? What has it done in your life?
+
+</details>
+
+**Stephen Nobles**: 我母亲是在一种充满好奇心的氛围中把我抚养长大的。我母亲给予了我质疑一切事物的权利，允许我去追问每一个浮现在脑海中的问题。
+
+举一个非常生动的例子：她把我培养成了一名狂热的阅读爱好者。我当年成长在一个相当艰苦严酷的环境中，那是佐治亚州的一个偏远小镇。但我母亲始终在竭尽全力鼓励我读书，总是让我读给她听，或者陪我一起读书，不断给我买各种各样的书籍。
+
+有一次她问我：“嗨，儿子，这个夏天你想不想去坐游轮度假？”
+我兴奋地回答：“想啊，当然想去！”
+她说：“好啊，如果你能把这本书读完——荷马史诗《**奥德赛**》（*The Odyssey*），我们就去。”
+（笑声）
+这绝对是真事。我为了能去旅行，废寝忘食地一口气啃完了整本书。等我终于读完的那天，她笑着看着我问：“这次‘思想上的航海游轮之旅’，你玩得还开心吗？”
+（笑声）
+你说得对，就是这样。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Nobles**: So my mom raised me in a space of curiosity. My mom allowed me to question everything, to ask every question. A good example: she raised me to be an avid reader. So I grew up in a tough environment, small town here in Georgia. But my mom encouraged me to read, always asked me to read for her, always asked me to read to her, gave me books, "Hey son, you want to go on a cruise this summer?" "Yeah, of course." "Alright, if you read this book, "The Odyssey," we'll go." (Laughter) True story. I shoot through the book to finish, and she's like, "Did you enjoy that cruise?" (Laughter) Right, right.
+
+</details>
+
+**Whitney Pennington Rodgers**: 我太喜欢你母亲了。
+
+<details>
+<summary>Original English</summary>
+
+**Whitney Pennington Rodgers**: I like your mom.
+
+</details>
+
+**Stephen Nobles**: 但正如你从我的体格所能看出的，我从小到大一直是个运动员，在体育方面极具天赋。所以每当我和伙伴们聚在一起运动时，我总是球场上的核心主力。
+
+当时在我们镇上新建了一家大型工厂。每天下午放学后，当我们坐校车回到家时，我们所有人的父母都在工厂里上班，接下来的整整三个小时里家里都空无一人。所以在那三小时的空档期里，整个社区全是孩子们的世界。我们是**80后（'80s baby）**，漫无目的地在街头闲逛游荡，自己弄东西吃，完全靠自己在小天地里摸索生活。
+
+但在那个时期，我碰巧读完了威廉·戈尔丁的经典名著《**蝇王**》（*Lord of the Flies*）。我清楚地记得我当时跑去找我的伙伴们，神情严肃地说：“伙计们，我刚读完了一本书，讲一群独自流落荒岛的孩子……照我们现在这样无法无天混下去，结局可能会非常糟糕。”
+（笑声）
+
+然而对于阅读这件事，我的伙伴们完全提不起兴趣。甚至夸张到后来，每当他们跑来找我出门玩耍而我正在屋里专心看书时，我就悄悄交代我母亲替我打掩护，告诉他们说我睡着了。
+
+所以你猜我童年的外号叫什么？
+——“睡仙”（**Sleepy**）。
+
+但我记得有一次我忍不住认真地问我母亲：“如果你一直在如此极力地鼓励我阅读，推着我去坚持做这件事，那为什么周围其他人都完全不认同它呢？为什么在这个社区里大家都不支持读书？为什么在我们街区，读书从来都不是一件受欢迎的酷事？”
+
+我母亲看着我，反问了一句：“**儿子，你知道什么是野草（weed）吗？**”
+我说：“知道啊，就是院子里你老让我从草坪里拔掉的那些杂草呗。”
+
+她摇了摇头说：“不。那株植物之所以被叫做杂草，仅仅是因为它碰巧长在了我的草坪里。如果你走进茫茫热带丛林，一朵娇贵的名品玫瑰在那里就是杂草。**所谓的‘野草’，是指任何顽强生长在原本不属于它的环境中的生命（A weed is anything that's growing where it's not supposed to be）。**”
+
+“周围的人觉得你格格不入、看你的眼光不一样，是因为我正在把你培养成一株野草。**我正在培养你学会在一个原本不属于你的严酷环境中，破土而出、野蛮生长。**”
+
+所以在我整个人生道路中，她始终都在激励我要做一株野草：去永不停歇地茁壮成长，尤其当你置身于一个从出身和概率上看你原本不应该立足的全新高度时，更要顽强生长。这背后需要一种宏大而坚韧的好奇心，而她无私地赋予了我这种好奇心。因此在我的教育生涯中，我也始终在极力推着我的学生们：**去做一株无所畏惧的野草**。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Nobles**: But as you can see from my build, I've always been an athlete. I've always been great at sports. So I was one of the key players with my friends when it came to sports. So there was a factory that was built in my hometown. Whenever we got out of school, our parents were at work for like the next three hours we got off the bus. So for three hours, it's just kids, you know? We're just roaming around, we're cooking, I'm an '80s baby. We're navigating the world by ourselves. But I read the "Lord of the Flies." And I remember going to my friends like, "Man, I just read a book. And this could end bad." (Laughter) But in that, my friends weren't excited about it. So much so that every time they came to play and I was reading, I started telling my mom to tell them I was asleep. So what do you think my childhood nickname is? Sleepy. But I remember asking my mom one time, "If you're encouraging me to read so much, you're encouraging me to do this thing. Why is everyone not on board with it? Why is it not supported? Why is it not a popular thing to do in my neighborhood?" And my mom said, "Do you know what a weed is?" Yeah, it's that plant in the yard you make me get out of the grass. She's like, "Nope, that plant is only a weed because it's in my yard. If you go to the jungle, a rose is a weed. A weed is anything that's growing where it's not supposed to be. They see you different because I'm raising you to be a weed. I'm raising you to grow in an environment that you're not supposed to be in." So she's always, throughout my life, encouraged me to be a weed, to constantly grow, especially if I'm in a space where I'm not supposed to be in. That requires her curiosity and she granted me that. So I’m always pushing students to be [a] weed.
+
+</details>
+
+### 人生是接力赛而非短跑：传递希望的接力棒
+
+**Whitney Pennington Rodgers**: 这其实是在赋予人们保持好奇心的合法权利与勇气。这太优美、太动人了，真的。
+（掌声）
+
+当你深入思考用好奇心去感知与探索这个世界、以及我们眼下所处的时代格局时，看到课堂里的孩子们，是什么赋予了你前行的希望？放眼广阔的世界以及人们对好奇心可能产生的新理解，又是什么让你对未来充满信心？
+
+<details>
+<summary>Original English</summary>
+
+**Whitney Pennington Rodgers**: It's sort of giving people permission to be curious. It's beautiful, it really is. (Applause) Well I think when you think about the ideas of engaging the world in curiosity and sort of where we are in this moment, what gives you hope about what you see in your classrooms and what gives you hope about what you're seeing, maybe out in the world and how people might be approaching this idea of curiosity differently?
+
+</details>
+
+**Stephen Nobles**: 是如今获取海量信息的巨大便利。
+
+当下的学生们正被来自四面八方的海量信息所牵引和冲击。我们作为成年人，同样在被各种纷乱的信息拉扯撕裂。然而在这样的浪潮中，我们开始惊喜地看到，孩子们正在主动对自己是谁、自己未来将成为什么样的人建立起前所未有的**自主权与责任感（take ownership）**——虽然他们选择的方式未必完全符合我们成年人原本设想的既定路线。
+
+有时候这种姿态甚至看起来像是在叛逆，像是在公然反抗我们对他们行为和身份的传统预期。但恰恰是这种反思与叛逆，成为了最让我感到充满希望的源泉。
+
+学生们正在开始严肃地追问：为什么很多事情的现实状况会是现在这样？为什么当下的政治生态会演变成这副模样？为什么社会上的犯罪问题会以当前这种形态存在？
+
+如果年轻一代在如此稚嫩的年纪就能够展现出这种勇于探究的主人翁担当，那么对于如今步入四十岁不惑之年的我而言，我深刻地顿悟到：**人生早已不再是一场单打独斗的个人短跑，而是一场代代相传的接力赛（a relay）**。
+
+我身上的使命与期许，是拼尽全力把属于我的这一棒带到我所能抵达的最远方，然后郑重地把这根历史的接力棒稳稳交到下一代的手中。我之所以内心充满希望，正是因为我亲眼看到他们正在伸出双手，稳稳地抓住这根接力棒。他们身上所展现出的那种敢于刨根问底、帮助我们纠偏求真的好奇心，让我对我们未来在学术上、职业上、乃至作为人类整体的发展方向，抱有无比坚定的希望。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Nobles**: The enormous access to information. The students are being pulled in so many directions. We as adults are being pulled in so many directions, but we're starting to see kids take ownership in who they are and where they become, not necessarily from the way that we'd hope. It feels like they're rebelling from what we expect them to do or be, but that's what makes me most hopeful. The students are starting to question why things are the way they are, why politically they are the way they are, why the crime is the way it is. If the students take that ownership at such a young age, and for me as an adult now in my 40s, recognizing that life is not a race anymore -- it’s a relay. The expectation is for me to take this as far as I can and pass that baton back to the next generation. I'm hopeful because I see them grabbing that baton, and I think the curiosity that is required for us to truly get things right that they possess, I truly feel hopeful for where we're headed academically, professionally, and just as people.
+
+</details>
+
+### 好奇心是前进的真正燃料
+
+**Whitney Pennington Rodgers**: 畅想年轻一代将如何带着这种好奇心走向广阔的世界并带来深刻的改变，实在是一件令人心潮澎湃的事情。对于今天坐在这里的每一个人，尤其是那些并非从事教育行业、但同样在思考数据问题的人来说：你刚才提出了一个关于数据的绝妙洞见——我们普通人在日常生活中该如何看待自己面对的各种数据，并以此点燃好奇心、将其转化为探索的动力呢？
+
+<details>
+<summary>Original English</summary>
+
+**Whitney Pennington Rodgers**: It's so exciting to think about how they're going to take that curiosity out into the world and make a difference. And I think for everyone sitting here, what is sort of the big takeaway for people who are maybe not educators who are thinking about, you know, you make this great point about data. How do we as people sort of take, I guess the data in our life and become curious about that and use that to fuel curiosity?
+
+</details>
+
+**Stephen Nobles**: 哪怕是在我们自己的日常生活之中，也要善于运用数据去**提出更有质量的问题**；去质疑一切既定的结论，紧接着去探索下一个更深层次的问题。
+
+在我看来，如果我们能够把好奇心当作连接“我们当前身处的现状”与“我们未来期望达到的愿景”之间的坚实桥梁，再配以具备前瞻格局的卓越领导力，并全力赋能年轻一代去担当领导角色，那么我们所能共同成就的事业将是不可估量的。
+
+这不仅是对我个人而言，对我生活的亚特兰大市、对我们身处的整个佐治亚州，甚至于放眼整个国家，我都坚信：**当好奇心被放置在正确的位置上时，它就是驱动一切事物向前发展的真正燃料**。
+
+因此我对未来充满希望。我认为这就是今天所有人最应当带走的核心领悟：**好奇心正是推动我们所有人不断向前迈进的真正燃料**。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Nobles**: Use the data, even in our life, to ask better questions, question everything, and then ask the next question. And to me, I think if we use curiosity to be the bridge between where we are and where we hope to be, with the right leadership and empowering the next generation to lead, I think it's immeasurable what we can accomplish. For me, for my city, but with us being in Atlanta for the state of Georgia and hopefully for the entire country, I think curiosity, when put in the right place, is the fuel that truly is going to move things. So I'm very hopeful for that. And I think that's the biggest takeaway. Curiosity is the fuel that's going to move things forward for us.
+
+</details>
+
+**Whitney Pennington Rodgers**: 我太喜欢这个作为压轴的核心总结了：“好奇心正是推动我们向前迈进的真正燃料。”
+
+<details>
+<summary>Original English</summary>
+
+**Whitney Pennington Rodgers**: I love that as sort of a lasting takeaway. Curiosity is the fuel that's going to move things forward.
+
+</details>
+
+**Stephen Nobles**: 所以，**永远保持好奇，而不是傲慢地评判**。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Nobles**: So remain curious, not just mental.
+
+</details>
+
+**Whitney Pennington Rodgers**: 说的太好了。非常感谢你，Stephen。
+
+<details>
+<summary>Original English</summary>
+
+**Whitney Pennington Rodgers**: There you go. Thank you so much, Stephen.
+
+</details>

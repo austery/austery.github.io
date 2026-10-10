@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>美研芒格君 · X 阅读</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="x-reading" data-pagefind-ignore>
+  <header class="x-heading"><h1>美研芒格君 · X 阅读</h1><p>按原发时间浏览 · 时间显示为 Toronto 当地时间</p></header>
+  <nav class="x-authors" aria-label="X 来源"><a href="/x/" >全部来源</a>
+    <a href="/x/authors/890076269580341248/" >宏观边际MacroMargin（564）</a><a href="/x/authors/2058239737522204672/" aria-current="page">美研芒格君（370）</a><a href="/x/authors/1620475218627121153/" >投资TALK君（603）</a><a href="/x/authors/858124064476479488/" >Herman Jin（805）</a><a href="/x/authors/809013582/" >Tigris | 会讲课教授是好老师（905）</a>
+  </nav>
+  <p><a href="/search/?author=2058239737522204672">搜索这位来源的原文</a></p>
+  <p class="x-status">保存说明：除条目另有标注外，正文尚未人工核对 · 图片未保存 · 引用或对话上下文可能不完整。</p>
+
+  
+  
+<article class="x-entry" data-author="2058239737522204672" data-long="true" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-03T22:16:03.000Z">2026-09-03 18:16</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2095636970601148572" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">OpenAI Astra如期发布，有幸体验到了首发版接口，聊聊我的看法和一手体验。我认为这是第一次真正跨过了“能用”的临界点
+
+我能感受到几年在预训练、强化学习和后训练上的积累，终于开始汇聚到同一个系统里
+
+我用ai做投研很久了，reasoning、coding、computer use、tool use 和长任务，以前这些能力各自都很惊艳，但一串起来就容易崩：网页打不开、数字抄错、执行到一半忘了最初目标，最后还是人类接管
+
+Astra 给我的感觉第一次不太一样。
+
+我专门拿了一个很贴近我平时工作流的任务测试它：同时研究三家刚发财报的 AI 芯片/互联公司 $MRVL $CRDO $AVGO 
+
+只给了公司名字和一个问题：
+为什么三家公司都在讲 AI demand 很强，但盘后市场却同时惩罚它们？到底是哪几个数字出了问题？
+
+它自己去 IR 页面找 earnings release、10-Q、电话会 transcript，再把 revenue、AI revenue、guide、design win、客户时间线等数据拉出来做成表。
+
+中间有一个数字在新闻稿和电话会口径里不完全一样，它没有直接选一个数字继续写，而是重新打开原文，找到管理层解释这个数字对应的时间周期，然后回来修改自己的结论。
+
+我做到一半临时改要求：
+
+“不要再讲宏观，把所有跟 Google / AWS custom silicon、互联和光通信有关的东西单独拆出来，再解释这三家公司之间到底是不是份额转移。”
+
+以前的 Agent 很容易从头再来，或者把之前的信息忘掉。Astra 是在原来的 research tree 上重新规划：保留已经验证的数据，补新的资料，再修改 thesis。
+
+那个体验很微妙，和之前的opus5和GPT5.6都不太一样
+
+我第一次不是在不停地 prompt 一个模型，而是在 review 一个 junior researcher 的工作。
+
+intelligence × agency × reliability都有了显著提升，这是一个我敢把整天的活交给它做的模型。静候全量继续使用</div><a href="/content/clippings/x/posts/2095636970601148572/#x-post-2095636970601148572">保存的原文 · 长文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2095595752815030713">引用原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2095636970601148572<br>保存时间：2026-10-04T20:13:48.282Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved</p><p>QUOTES: x:post:2095595752815030713 · https://x.com/i/status/2095595752815030713</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="false" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-03T16:23:46.000Z">2026-09-03 12:23</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2095548315060535569" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">@ryY1436253 巨快无比，两天用完了一周的 200$ Plan 量。不过我不确定它背后实际的 quota 管理机制，因为还在灰度</div><a href="/content/clippings/x/daily/2058239737522204672/2026-09-03/#x-post-2095548315060535569">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2095547772376166600">回复的原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2095548315060535569<br>保存时间：2026-10-04T20:13:48.282Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved</p><p>REPLY_TO: x:post:2095547772376166600 · https://x.com/i/status/2095547772376166600</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="false" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-03T16:20:51.000Z">2026-09-03 12:20</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2095547583083266462" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">听说 base:0x2b31d3ed065f1f834d5c85efed49089f4c4f6b07 今天有大事要发布，搬好小板凳了
+
+利用一点人脉，灰度到了 UltraFast，爽用 14 倍速的 GPT5.6 Sol
+
+用下来就一个字：爽！之前需要等待好几分钟的任务，现在就十几秒，大大减少了我同时管理 session 的数量，因为生成实在太快了。有的时候，我甚至觉得是在跟真人实时对话
+
+这就是未来</div><a href="/content/clippings/x/daily/2058239737522204672/2026-09-03/#x-post-2095547583083266462">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2095527989077557738">引用原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2095547583083266462<br>保存时间：2026-09-30T15:25:48.141Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Media references were not archived with this snapshot.
+Reply and quoted-post context may be partial; only the returned root post was saved.
+Linked or quoted context may not be saved</p><p>QUOTES: x:post:2095527989077557738 · https://x.com/i/status/2095527989077557738</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="false" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-03T16:18:49.000Z">2026-09-03 12:18</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2095547071667503208" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">@BitpushNewsCN 尽早转变身份。文科生、理科生，是给没有 AI 的时代的人划分的二分定义
+
+有了 AI 之后，只有会用 AI 的人和不会用 AI 的人</div><a href="/content/clippings/x/daily/2058239737522204672/2026-09-03/#x-post-2095547071667503208">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2095546348544417849">回复的原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2095547071667503208<br>保存时间：2026-10-04T20:13:48.282Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved</p><p>REPLY_TO: x:post:2095546348544417849 · https://x.com/i/status/2095546348544417849</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="true" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-03T16:07:35.000Z">2026-09-03 12:07</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2095544242634731944" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">今年可能是 AI 导致大规模 layoff 的元年
+
+$UBER 在发出这篇《降本增效，如何使用 AI》的文章 5 天之后的今天，宣布全公司裁员 10%，真的非常讽刺
+
+作为硅谷一线厂的 manager，我真诚建议，尽早转变上班的态度，你不是在为公司打工，是在提升自己。如果你还在做 SDE 的工作，尽早转型，离模型参数近一些，离 GPU 近一些。不要为了 leader 表扬你用 AI 用得好，就开始发了疯地到处宣讲、优化流程、自我革命
+
+uber朋友一早收到的裁员邮件。硅谷众多公司都在推 AI 代码覆盖率、AI 使用率，甚至作为考核的指标之一。这已经算得上是明谋了，想裁员怕出事，等 AI 使用率上来之后就开始动刀</div><a href="/content/clippings/x/posts/2095544242634731944/#x-post-2095544242634731944">保存的原文 · 长文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="/content/clippings/x/posts/2094322706091213195/#x-post-2094322706091213195">引用原帖（已保存）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2095544242634731944<br>保存时间：2026-10-04T20:13:48.282Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved</p><p>QUOTES: x:post:2094322706091213195 · https://x.com/i/status/2094322706091213195</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="false" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-03T06:55:55.000Z">2026-09-03 02:55</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2095405411017134517" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">@hooxingzhao 2.3.4的后半部分 都可以依靠inference 工程解决，这也是为什么我鼓励大家转这个方向。企业的微调，SFT，Post-Train我也可以预见会越来越多
+
+我可以预见到这个岗位短期不会被ai取代，缺口会越来越大
+
+1 .4成本问题, 租硬件是固定成本。企业更好算账</div><a href="/content/clippings/x/daily/2058239737522204672/2026-09-03/#x-post-2095405411017134517">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2095400457510465679">回复的原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2095405411017134517<br>保存时间：2026-10-04T20:13:48.282Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved</p><p>REPLY_TO: x:post:2095400457510465679 · https://x.com/i/status/2095400457510465679</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="false" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-03T06:29:04.000Z">2026-09-03 02:29</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2095398654060499373" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">我想真诚请教一下 X 上的各位天才程序员们，有没有什么 skill 或者工具能够做出来审美比较好的网站？
+
+最近想把投研网站好好弄一下，想做的有艺术感一点，审美好一点，UX 好一些
+
+我投研团队成员们，前端审美一直不太好，做出来的网页，都是一股 one shot 的 AI 味儿。但我实在忍受不了，总有一种不正规的感觉
+
+提前谢谢各位</div><a href="/content/clippings/x/daily/2058239737522204672/2026-09-03/#x-post-2095398654060499373">保存的原文</a>
+    
+    <footer>
+      
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 2095398654060499373<br>保存时间：2026-10-04T20:13:48.282Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：See source observations for media and context status.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="false" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-03T05:11:24.000Z">2026-09-03 01:11</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2095379107785904155" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">@Ccinhtv 完全有可能，我我朋友在硅谷另外一家公司，他们 GPT 5.6 限额使用，5.4无限使用</div><a href="/content/clippings/x/daily/2058239737522204672/2026-09-03/#x-post-2095379107785904155">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2095377949277209076">回复的原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2095379107785904155<br>保存时间：2026-10-04T20:13:48.282Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved</p><p>REPLY_TO: x:post:2095377949277209076 · https://x.com/i/status/2095377949277209076</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="false" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-03T05:09:34.000Z">2026-09-03 01:09</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2095378648694140946" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">@li53275613 我认为ai还没到零和博弈的阶段，ai在早期，蛋糕越做越大，现在蛋糕胚可能都还没烤好的阶段</div><a href="/content/clippings/x/daily/2058239737522204672/2026-09-03/#x-post-2095378648694140946">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2095377879282704872">回复的原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2095378648694140946<br>保存时间：2026-10-04T20:13:48.282Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved</p><p>REPLY_TO: x:post:2095377879282704872 · https://x.com/i/status/2095377879282704872</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="true" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-03T04:43:12.000Z">2026-09-03 00:43</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2095372012512567538" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">我说的，可能是个违反大部分人直觉的想法：我认为将来私有化部署的开源模型 Kimi、GLM、DeepSeek 的需求，可能远大于 Fable、GPT 这类顶尖模型
+
+我举个例子，大家就能懂这些顶级模型在日常工作中与我的关系：
+
+1. Fable5.1：顶级聪明，名校毕业，智力超群，但问题是工资太高，高到我支付不起，而且有脾气，遇到不符合它心中标准的就不好好干，默默降智
+
+2. GPT 5.6：能力卓越，勤劳肯干，能够很好地胜任大部分工作，但心中仍有道德感，会拒绝一些违反公序良俗的请求
+
+3. 私有部署的开源kimi/deepseek模型：我相信这才是大部分人最想要的。它可以成为私人的嫡系，尽管他不是最聪明的，但是所有的脏活、累活、见不得人的都可以聊，可以做，数据天知地知你知我知。
+
+虽然私有部署没有前面那些那么聪明，但是可以和你彻底成为同一战线，真正成为自己人
+
+那么问题来了：如果你有一个工作，你愿意交给自己人来做，还是交给那些顶级聪明、但可能没有完全同一战线的人来做呢？</div><a href="/content/clippings/x/posts/2095372012512567538/#x-post-2095372012512567538">保存的原文 · 长文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="/content/clippings/x/posts/2094907218361778634/#x-post-2094907218361778634">引用原帖（已保存）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2095372012512567538<br>保存时间：2026-10-04T20:13:48.282Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved</p><p>QUOTES: x:post:2094907218361778634 · https://x.com/i/status/2094907218361778634</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="false" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-02T20:25:35.000Z">2026-09-02 16:25</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2095246782393704708" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">@madvincent4 不需要让明星员工分享，把明星员工的能力变成一个 service 提供出来</div><a href="/content/clippings/x/daily/2058239737522204672/2026-09-02/#x-post-2095246782393704708">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2095241741595197569">回复的原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2095246782393704708<br>保存时间：2026-10-04T20:13:48.282Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved</p><p>REPLY_TO: x:post:2095241741595197569 · https://x.com/i/status/2095241741595197569</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="true" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-02T18:41:19.000Z">2026-09-02 14:41</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2095220542198739170" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">在硅谷创业，现在toA非常火（to agent，做ai agent用的产品），想分享一个珍贵的、最近沉淀下来的初创 idea，来源于我团队真实的数据
+
+它起源于实际团队协作的一个痛点，很多人一定也有同感
+
+一句话来说，我把它叫做团队共同记忆演化，什么意思呢？
+
+团队有明星员工，ai/codex/claude用的飞起，Context - Dev - Skill - Eval -Loop做的飞起，但遇到3个致命问题
+
+1. 不可迁移。大部分p50水平员工不会做，导致团队内水平不对齐，大量重复工作和人力消耗
+
+2. 不可演化。Loop中ai总能发现问题，可能是pm/QA发现的，也可能是RD自测，ad hoc解决完之后，domian specific的问题是fable 5.1 也无法解决的，我预计这类私有化问题还会持续很长的时间
+
+3. AI大材小用。任务并不一定需要高智能，但是现在小模型做得不够好（比如 GLM、Kimi 也一次性做不好），所以团队成员还会尽可能地用贵的模型去做。
+
+但其实可以 Record as a skill，或者通过 post-training 让本地极小、极便宜的模型在某个特定的、重复性高且使用频率高的场景下，做到和顶级模型一样的表现，这样成本更低
+
+这个问题其实很多开源项目已经在做了，但我拿下来测试都差强人意，并不 fit 我的实际业务数据。
+
+这是我 side project 方向在探索的问题。如果有好的产品，欢迎分享；如果你有好的 idea，也欢迎让我知道</div><a href="/content/clippings/x/posts/2095220542198739170/#x-post-2095220542198739170">保存的原文 · 长文</a>
+    
+    <footer>
+      
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 2095220542198739170<br>保存时间：2026-10-04T20:13:48.282Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：See source observations for media and context status.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="true" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-02T18:01:37.000Z">2026-09-02 14:01</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2095210552121536527" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">入门 AI 不在于你学没学会，而是在于你去学什么。
+分享4个最近/曾经看过的 AI/Inference/RL 强化学习分享视频，教程。团队成员说很有帮助，一直好评
+
+看完之后你会大概入门：
+1. 为什么我 LLM 的 推理 非常关键？
+2. 在推理过程中，KV Cache 发挥了什么样的作用？
+3. GPU 的 memory 和算力是怎样的权衡？
+4. 为什么互联如此重要？
+5. 强化学习是如何做的？为什么是下一阶段 AI 增长的关键点？
+
+1/ Understanding the LLM Inference Workload - Mark Moyou, NVIDIA 
+https://t.co/0oZoAq6UC0
+
+2/ Post-Training Nemotron With RL: Multi‑Environment Training for Reasoning and Tool-Using Agents
+https://t.co/Q2HFcZytYo
+
+3/ Fast &amp; Efficient LLM Inference with vLLM
+https://t.co/L9sPaoT6Jb
+
+4/ Efficiently Serving LLMs
+https://t.co/KV3RsTgLxM</div><a href="/content/clippings/x/posts/2095210552121536527/#x-post-2095210552121536527">保存的原文 · 长文</a>
+    
+    <footer>
+      
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 2095210552121536527<br>保存时间：2026-10-04T20:13:48.282Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：See source observations for media and context status.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="false" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-02T02:34:45.000Z">2026-09-01 22:34</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2094977300081304027" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">Meta 的这个 ASR Voice Model 看着效果不错，打算周末试一下。只是听起来 Demo 的 8 个 researcher 怎么 7 个都是中国人？
+
+有没有人想过，你可以直接实时地跟芒格君的大脑对话呢？
+
+相信大家都被 AI 生成的长文本狂轰滥炸夺走了注意力，这也是我最近在做的工作之一。把我的知识蒸馏出来，让大家可以毫秒级别、像打电话一样给芒格君打电话，聊任何你想聊的问题，通过我的大脑实时给你语音回复
+
+之前曾经开发过 Voice Agent，现在最聪明的方式依然是：先通过 ASR 实时地转成文字，文字送给顶级模型处理，再用 TTS 转回来</div><a href="/content/clippings/x/daily/2058239737522204672/2026-09-01/#x-post-2094977300081304027">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2094836602681938385">引用原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2094977300081304027<br>保存时间：2026-10-04T20:13:48.282Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved</p><p>QUOTES: x:post:2094836602681938385 · https://x.com/i/status/2094836602681938385</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="true" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-01T21:56:17.000Z">2026-09-01 17:56</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2094907218361778634" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">Fable5.1如期发布，高强度用了一个下午，分享一下我的一手体验：
+
+大部分人不需要一个“神一样聪明”的模型，普通人的AGI在opus4.8/gpt5.6 的时候已经到了。现在缺的是，足够便宜
+
+今天下午我让 Fable 5.1 给我的项目写文档，一个query直接烧掉我 $200/月会员一周额度的 38%。
+
+但我主观感觉，写出来的东西确实比 GPT-5.6 Sol 好大概 1.2 倍
+
+从opus4.8时代开始AI已经可以读 repo、debug、写代码、写文档，操作Excel，那对绝大多数人来说，intelligence 可能已经够用了
+
+想象一下，当这种级别的模型可以私有化部署，一天随便烧几千万 token，你根本不用考虑额度，让它 24 小时读代码、跑实验、写文档、做研究……
+
+那可能才是真正的生产力爆发。
+
+所以我现在越来越看好的不是单纯继续 scale intelligence，
+
+而是 Inference Cost ↓ &#43; 私有化部署 ↑</div><a href="/content/clippings/x/posts/2094907218361778634/#x-post-2094907218361778634">保存的原文 · 长文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2094848572143407483">引用原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2094907218361778634<br>保存时间：2026-10-04T20:13:48.282Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved</p><p>QUOTES: x:post:2094848572143407483 · https://x.com/i/status/2094848572143407483</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="false" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-01T17:37:28.000Z">2026-09-01 13:37</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2094842085593719177" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">@curious_hao 谢谢你的信任，不过我也不是什么 MRVL 代言人，我只是客观觉得它不错。获利了记得卖出，否则一路加、一路波动，卷入了资金，还没获得应该有的利润</div><a href="/content/clippings/x/daily/2058239737522204672/2026-09-01/#x-post-2094842085593719177">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2094841536064176451">回复的原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2094842085593719177<br>保存时间：2026-10-04T20:13:48.282Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved</p><p>REPLY_TO: x:post:2094841536064176451 · https://x.com/i/status/2094841536064176451</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="false" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-01T17:33:59.000Z">2026-09-01 13:33</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2094841211488190466" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">与此同时，我想分享多年投资的一个道理，叫做“物极必反”
+
+当加息、冲突、美债收益率集体上升，如此多的坏消息凑在一起，那随时一个好消息就可以拉爆空头，因为不会更糟了，保持耐心，今天工作有点忙，没有任何的操作
+
+我发现很多关注我的朋友对 AI 很感兴趣，比如 AI 的应用、硅谷的职业、SDE 的现状，以及怎么转 AI。
+
+正好我的投研团队有一位朋友，他正在从 SDE 转 AI Infra。他帮我写了很多 MRVL 的分析，我送了他一张 5070 Ti，让他每天在上面分享学习打卡和学习资料，没有任何付费内容，请大家放心食用</div><a href="/content/clippings/x/daily/2058239737522204672/2026-09-01/#x-post-2094841211488190466">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="/content/clippings/x/posts/2094818338329469246/#x-post-2094818338329469246">引用原帖（已保存）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2094841211488190466<br>保存时间：2026-10-04T20:13:48.282Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved</p><p>QUOTES: x:post:2094818338329469246 · https://x.com/i/status/2094818338329469246</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="true" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-01T16:03:06.000Z">2026-09-01 12:03</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2094818338329469246" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">09/01 的 $MRVL $ORCL $COHR 等一揽子半导体股票下跌逻辑，其实很明确
+
+美伊冲突重新升级 → 原油上涨 → 通胀预期升温 → 市场加码押注美联储 9 月加息 → 全球债券抛售、长端收益率上冲 → AI/半导体这类高估值资产被压估值
+
+1/ 说实话，这些都不是我们普通人能够预测的。
+
+1. 美伊重新交火，油价突然上去
+2. 随后出现全球债券抛售
+市场对美联储 9 月加息 25 个基点的定价已经升到约 65%～70%
+3. 美联储理事 Michael Barr 发表讲话，明确表示：
+如果通胀没有充分缓和，美联储应该“果断加息”。
+
+2/ 为什么半导体跌得比大盘多
+半导体的估值建立在 2028—2030 年的利润上，DCF 一算未来利润折现到今天就越不值钱
+
+高估值、高波动的互联标的最容易先被卖
+
+3/ 回顾一年的下跌
+例如 $MRVL , 2026 年这只股票几乎每一段大涨大跌，动的都是倍数，而非基本面。倍数就是股价除以每股利润，市面上叫市盈率，意思是这家公司一年替你赚一块钱，你今天愿意付几块钱买
+
+6 月 4 日高点 316.43 到 7 月 29 日低点 163.40，跌了 48%，同期市场对明年每股利润的一致预期只从 6.08 挪到 6.18。7 月 29 日到 8 月 20 日涨 54%，预期只挪了 1%。全程从 6 月 4 日到 8 月 31 日，股价跌 33%，盈利预期涨 9%，倍数跌 39%
+
+目前我正在写一篇站在 9 月 $MRVL 的基本面文章，给大家三点目前 research 下来的上行空间作为参考，后面会发全文</div><a href="/content/clippings/x/posts/2094818338329469246/#x-post-2094818338329469246">保存的原文 · 长文</a>
+    
+    <footer>
+      
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 2094818338329469246<br>保存时间：2026-10-04T20:13:48.282Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：See source observations for media and context status.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="false" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-01T05:55:28.000Z">2026-09-01 01:55</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2094665423598014870" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">我愿意把 Codex 和 Claude 称为当代鸦片
+
+每次给AI回车是上瘾的，总觉得下一次prompt的结果会更好，觉得模型输出的就是属于我的了
+
+我无论是在家里吃饭、看电视，甚至洗漱、睡觉前，只要Agent没有在干活，我就有一种负罪感。但很多时候又不知道做什么，一直坐在屏幕前，白白浪费了时间。比如现在</div><a href="/content/clippings/x/daily/2058239737522204672/2026-09-01/#x-post-2094665423598014870">保存的原文</a>
+    
+    <footer>
+      
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 2094665423598014870<br>保存时间：2026-10-04T20:13:48.282Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：See source observations for media and context status.</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="true" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-09-01T01:03:29.000Z">2026-08-31 21:03</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2094591944358015178" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">8月一转眼过去了。时间过的太快了。我们一起走过了 7 月的下跌、8 月的暴力反弹，分析了许多市场机会和交易错误。一起走完的朋友，不妨奖励一下自己，相信你的认知和耐心又有了新的提升！  
+
+9 月可能会成为 AI 疯狂发布的一个月，也会伴随着新的机会，我也很激动。
+
+我把最近的各种 leak / rumor 和打听到的消息大概捋了一遍： 
+9 月初发布
+Claude Fable 5.1  
+OpenAI Astra（会不会是 GPT-6 还不知道） 
+Grok 4.7  
+
+9 月中旬发布 
+DeepSeek 下一代模型
+Composer 3 
+Gemini 3.8 Flash 
+Kimi 下一代 K 系列模型  
+
+后半月 / 9 月 possible 
+Claude Opus 5.1 
+MiniMax 2.7T  
+Meta “Watermelon” 
+Mistral 新的 frontier open model  
+
+其中有些已经有很明显的上线迹象，比如 Fable 5.1、Grok 4.7、Gemini 3.8。有些则还停留在 rumor，比如 DeepSeek V5、Opus 5.1 和 Mistral   
+
+最近几个月我在一线感受到几点变化 
+1/ frontier model 的领先周期正在急剧缩短 
+2/ 特定模型正在从“产品”变成“消耗品” 
+3/ 真正的战争开始从 pre-training 转向 inference 
+4/ Open-weight 模型会越来越重要  
+
+现在看来，模型战争最大的赢家可能不是某一个模型，大家目前还处于共赢把市场做大的阶段。模型半衰期越来越短，但每一次模型升级，都在制造更多 token、更多 inference，以及更贵的基础设施  
+
+我现在在 9 月最期待 Astra，期待一次面向大众新的升级，你们最期待什么模型公布呢？ 与此同时，马上就要 3 万 followers 了！2 万 follower 的时候，我发布了我的全部持仓和逻辑。3 万的时候，大家想看什么呢？请让我知道</div><a href="/content/clippings/x/posts/2094591944358015178/#x-post-2094591944358015178">保存的原文 · 长文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2081822254921617487">引用原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2094591944358015178<br>保存时间：2026-10-04T20:13:50.564Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved</p><p>QUOTES: x:post:2081822254921617487 · https://x.com/i/status/2081822254921617487</p></details>
+    </footer>
+  </div>
+</article>
+
+  <nav class="x-pagination" aria-label="帖子分页"><a href="/x/authors/2058239737522204672/page/6/">上一页</a> <a href="/x/authors/2058239737522204672/page/8/">下一页</a></nav>
+</div>
+
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

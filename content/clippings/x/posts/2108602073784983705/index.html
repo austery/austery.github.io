@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>美研芒格君 · 2026-10-09 · 帖子</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="x-reading" data-pagefind-body>
+  <header class="x-heading">
+    <p class="x-eyebrow">𝕏 原文阅读 · 帖子</p>
+    <h1 data-pagefind-meta="title">美研芒格君 · 2026-10-09 · 帖子</h1>
+    <span hidden data-pagefind-meta="author">美研芒格君</span>
+    <span hidden data-pagefind-filter="x_author" data-pagefind-ignore>2058239737522204672</span>
+    <span hidden data-pagefind-meta="date">2026-10-09T16:54:44.000Z</span>
+    <p>保留来源原文。时间显示为 Toronto 当地时间；未保存的配图与引用请前往 X 查看。</p>
+    <a href="/x/">返回 X 阅读</a>
+  </header>
+  <p class="x-status">保存说明：除条目另有标注外，正文尚未人工核对 · 图片未保存 · 引用或对话上下文可能不完整。</p>
+
+  
+<article class="x-entry" data-author="2058239737522204672" data-long="true" id="x-post-2108602073784983705">
+  <span id="x-post-heading-2108602073784983705" class="x-post-anchor" aria-hidden="true"></span>
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div id="x-post-time-2108602073784983705" class="x-post-heading"><time datetime="2026-10-09T16:54:44.000Z">2026-10-09 12:54</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2108602073784983705" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text">我在硅谷看得最清楚的一件事情，就是软件开发已经被 AI 蚕食得差不多了。如果让我选择当前最有价值的一个方向，那就是去做后训练算法或者数据，不论是学习，还是投资，后训练都值得你了解和认识
+
+我们理解大模型的后训练，如果只学一个算法，我希望你了解的是 GRPO，现在是工业界最主流的 LLM 强化学习方式之一
+
+这个方法是 DeepSeek 团队在 2024 年提出的。用大白话说，就是让模型对同一道题自己尝试多次，再比较这些尝试的结果，通过更新模型参数，让表现更好的生成行为更容易出现。
+论文：https://t.co/lSnJWsRyD7
+
+看完这个帖子，你会明白，那这个“自己学”，到底是怎么发生的？模型做错了一个问题，下一次怎样才有机会写得更好？为什么这个过程非常消耗算力？
+
+1/ 先让模型自己尝试
+我们先准备好任务，以及判断结果好坏的评分规则。这里还是用写代码为例，市面上的所有任务，无论是文科还是理科，都是这个道理
+
+举个假设的例子：亚马逊购物车为空时，程序会报错，现在让模型修好这个 bug。
+
+把同一道任务交给同一个版本的模型，让模型尝试 8 次。每一次都去读代码、修改、检查结果，可能产生不同的解决过程。你可以认为模型在某些情况下总会蒙对几次
+
+2/ 把这 8 次尝试放在一起比较
+继续用假设来讲，评分程序按测试结果打分：通过得 1 分，失败得 0 分。
+
+假设最后有 3 次通过、5 次失败，那么这组的平均分就是：
+3÷8＝0.375
+
+得 1 分的尝试，高于本组平均；得 0 分的尝试，低于本组平均。
+GRPO 就利用这种组内差异，产生学习信号。
+
+这里的 1 分和 0 分只是为了简化，实际上各种任务我们都可以有不同的 rubrics 去评判、打分
+
+3/ 训练程序根据差异，真正去改模型
+到了这一步，训练程序会计算损失和梯度，再更新模型参数。
+训练目标是让高于本组均值的尝试中，那些生成行为更容易出现；低于均值的则受到抑制，那更新完参数后的模型，就更容易产生我们认为好的答案
+
+更新完，再拿一批任务让模型尝试，继续比较、继续学习
+
+这就是这里说的“模型自己学”：模型负责尝试，评分规则负责衡量结果，训练程序负责更新参数。 任务怎么选、什么结果值得奖励，仍然需要训练者设计。
+
+4/ 最后看模型有没有真的进步
+我举一个具体的例子，用 500 道软件工程任务，对 Qwen3.8-27B-Medium 做了 15 次训练更新后，模型在 DeepSWE 上的平均单次成功率，从 27.8% 提高到 39.1%，增加 11.3 个百分点。1
+
+我觉得这件事值得关注的地方，是模型自己尝试产生的结果，可以继续用来训练模型。其次，在强化学习的过程中，模型要不断地去推理、尝试，每一次都是一次训练的消耗
+
+但做强化学习，人类的工作也正在这里非常重要：要让模型有值得尝试的任务，再让尝试的结果变成有用的反馈。任务和奖励怎么设计，直接关系到模型最后在学什么。短期之内，我觉得人类还无法被替代，特别是在 rubrics 和 alignment 这块儿</div>
+    <footer>
+      
+      <div class="x-related"><a href="/content/clippings/x/posts/2107138447664349370/#x-post-2107138447664349370">引用原帖（已保存）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2108602073784983705<br>保存时间：2026-10-10T00:30:13.142Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved</p><p>QUOTES: x:post:2107138447664349370 · /content/clippings/x/posts/2107138447664349370/</p></details>
+    </footer>
+  </div>
+</article>
+
+  <nav class="x-pagination" aria-label="同来源合集" data-pagefind-ignore> </nav>
+</div>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

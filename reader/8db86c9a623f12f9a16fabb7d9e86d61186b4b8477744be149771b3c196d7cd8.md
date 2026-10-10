@@ -1,0 +1,88 @@
+---
+author: TechButMakeItReal
+date: '2026-08-05'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=xhn7ShyLBG4
+speaker: TechButMakeItReal
+tags:
+  - open-weights
+  - mixture-of-experts
+  - compute-economics
+  - model-distillation
+title: 重构算力经济学：中国AI开源权重的商业突围与地缘博弈
+summary: 本文深入探讨了中国AI实验室（如DeepSeek）免费公开前沿大模型权重的底层商业逻辑。通过厘清开源权重、开源代码与闭源API的定义和界限，揭示了混合专家模型（MoE）带来的单位算力成本优势。同时，分析了硬件巨头英伟达在开源生态中的受益机制，以及西方闭源阵营以模型安全为叙事、实质维护自身定价权的商业与地缘博弈。
+insight: ''
+draft: true
+series: ''
+category: ai-ml
+area: tech-engineering
+project: []
+people: []
+companies_orgs:
+  - DeepSeek
+  - NVIDIA
+  - OpenAI
+  - Anthropic
+  - ASML
+products_models:
+  - DeepSeek-V3
+  - GPT-4
+  - Claude-Opus
+media_books: []
+status: evergreen
+---
+### 战略破局：开源权重引发的权力转移
+
+两周前，关于中国**开源权重**（Open Weights: 公开模型参数但保留训练数据和代码的发布模式）AI大模型在国际上引发了巨大反响。中国大模型初创公司 **DeepSeek** 推出的新一代模型 **DeepSeek-V3**，首次在性能上齐平了美国最前沿的闭源模型。这一突破不仅在开源社区引发轰动，也让芯片巨头 **英伟达**（NVIDIA）CEO **黄仁勋**（Jensen Huang）首次在社交媒体公开发帖，指出开源权重模型代表着AI的未来，且对于维持美国在AI领域的领导地位至关重要。与此相对，以 **Anthropic** 和 **OpenAI** 为代表的美国闭源先锋则在华盛顿政界拉响安全警报，警告廉价且强大的中国开源模型将带来灾难性的安全风险，试图游说政府对开源模型施加更严格的限制。与此同时，半导体巨头 **ASML** 股价因向中国交付大量光刻机的传闻导致市场剧烈波动，表明硬件层面的博弈同样焦灼。在这一系列地缘与商业博弈的背后，大模型的交付模式正在发生根本性改变。
+
+<details>
+<summary>Original English Source</summary>
+
+Two weeks ago, there was a big buzz about Chinese open-weights AI models. For the first time, a Chinese open-weights model, DeepSeek-V3, matched the performance of frontier American models. This success quickly made waves in the Chinese open-source AI community. Following this, NVIDIA CEO Jensen Huang posted on social media for the first time, stating that open-weights models are the future and will play a critical role in maintaining America's AI leadership. Then, Anthropic issued warnings in Washington, cautioning that powerful, cheap Chinese models could pose severe safety risks, painting a dystopian future. The Trump administration is clearly divided and unable to decide whether to completely restrict, limit, or allow open-weights models. To top it all off, ASML's stock crashed. Reports surfaced that Netherlands-based ASML, a key player in chip manufacturing, had shipped a large number of lithography machines to China, showing once again that China's AI hardware foundation is finding ways to bypass export controls. But why are they giving these models away? Who benefits from this? Why is Nvidia a staunch supporter of open weights, while Anthropic and OpenAI are strongly against it? When did Chinese AI labs turn into charitable organizations? What are they really doing? Let's discuss this in today's episode of AI Business.
+
+</details>
+
+### 模式解构：司康饼、生百吉饼与完整配方
+
+为了厘清这场开源与闭源的论战，我们必须准确界定商业AI模型的三种交付形态。我们可以用面包店的运作来做直观的类比：第一种是**闭源模型**（Closed Model: 将模型完全封装在 API 后，用户按 Token 付费的交付模式），这类似于面包店只出售做好的“司康饼”（Scone）。作为顾客，你无法得知配方，也无法更改司康的成分，只能在店家设定的价格和安全规则下通过 API 付费接入。第二种是**开源权重**，这相当于面包店出售未经烘焙的“生百吉饼”（Bagels）。虽然开发商依然保留了具体的训练配方与数据集，但他们向你提供了训练好的参数，允许你将面团带回家，加入三文鱼或奶酪进行深度个性化定制并随意部署。Meta、DeepSeek、阿里巴巴、Moonshot 以及 Mistral 发布的均为此类模型。第三种则是真正的**开源大模型**（Open Source: 彻底公开训练数据、完整训练代码及权重的透明发布模式），类似于面包师站在门口，向所有人免费发放包含所有制作细节和商业机密的“完整配方”。在当下的前沿AI领域，由于研发与数据清洗成本极其高昂，真正的开源模型几乎不复存在。
+
+<details>
+<summary>Original English Source</summary>
+
+First, let's get the definitions straight. Many people use 'open source' and 'open weights' interchangeably. So, what is the difference between open source, open weights, and closed models? Imagine a bakery. The bakery makes and sells scones. You go to this bakery and buy a scone. When you take it home, you cannot replicate it. You cannot bake the exact same scone because you don't have the recipe, and you cannot change anything about the scone you bought. But you can eat it as is. You have the finished scone as a product, and you can consume it by adding toppings if you like. This is what a closed model is. Closed models are sold as a service (SaaS). The company keeps the model entirely behind an API. They control the version, the safety parameters, they can change the behavior, and they can change the price. A closed model follows the classic Software-as-a-Service (SaaS) model. As a user, you pay for access to this model. Frontier AI models are typically sold as closed models because they are extremely expensive to build. When the model developer sells it as a finished product, they recoup their costs this way. That's why they host the model behind an API and charge per token. No competitor can directly copy a closed model. Now imagine you go to the same bakery and they tell you: 'Hey, we are starting to sell raw bagels. You can bake them with salmon, with eggs, with cheese, or take them home and customize them however you want.' But again, they don't give you the recipe. They give you the customization capability. This is an open-weights model. In AI models, weights control the model's behavior and how it generates responses. This is the core and most critical part of an LLM. It defines the model's characteristics. Companies that release open-weights models—like Meta, DeepSeek, Alibaba, Moonshot, and Mistral—give you something you can run locally and modify. They release the trained weights. Once you have these weights, you can use them or integrate them into your own products without needing anyone's permission. Now for the last one. When you walk into the bakery, the baker stands at the door and hands you printed recipes for every bagel, scone, and pastry they sell, including all variations, customization tips, and all secrets. They give it to you completely for free. This is true open source, and it is very rare. There are very few examples of true open-source models in frontier AI. This is because they are completely different from traditional commercial models; they are mostly research artifacts or scientific disclosures. They have no commercial nature because the training data, training code, and how they were built and trained are documented step-by-step for the public, allowing anyone to replicate and retrain these models from scratch. It should also be noted that today, there are no true open-source models that match the quality of frontier models. Therefore, when you hear the buzz about Chinese LLMs or Chinese 'open-source' models, keep in mind that what they are releasing are actually open weights. They are open-weights models, not true open source. This distinction is very important.
+
+</details>
+
+### 利益博弈：谁在为开源权重买单？
+
+这一技术分化直接重塑了产业的价值分配，不同群体各怀心思。对于普通大众而言，底层交付方式的区别并不影响使用体验；但对于企业用户，特别是医疗、金融和法律等对数据合规性极其敏感的行业，开源权重允许他们在**本地基础设施**（On-premise Infrastructure: 企业完全自主控制的物理或云端托管计算资源）上私有化运行模型，彻底消除了向外部服务器发送敏感数据的安全隐患。对于广大AI初创企业和独立开发者而言，使用开源权重能够显著降低对高昂闭源API的依赖，极大地优化了其产品的利润率。最具戏剧性的是以英伟达为代表的硬件层与云服务商，由于开源权重模型需要大量的本地算力来支撑微调和日常推理，这极大地刺激了市场对 GPU、高速显存及带宽的需求。黄仁勋大力宣传开源模型，本质上是因为无论上层是开源还是闭源，最终都会转化为对英伟达芯片的采购订单。
+
+<details>
+<summary>Original English Source</summary>
+
+But why does this matter so much? Because this distinction affects specific groups of users. This brings us to the next point: who does this actually affect? Who is open weights really for? First of all, this does not affect ordinary LLM or AI users. If you are not in the tech business or a developer, what Chinese labs release won't change your daily life. The audience that cares about this consists of businesses—especially those in healthcare, finance, or law, who worry day and night about keeping their data within their own infrastructure. With open-weights models, enterprises can run the entire model on-premise. Instead of sending sensitive data to OpenAI's or Anthropic's servers, they keep all sensitive information locally. The second group that cares about this is startups and small tech businesses. Many of them cannot afford the high API pricing of closed-model companies. Think of LLM wrappers, niche AI businesses, indie startups, indie music apps, or anyone building a real tech business with a real product. If you have a real product and switch to an open-weights model, you will see a massive difference in your profit margins. The third group is the infrastructure layer—cloud providers and chip manufacturers. Now, this might surprise you. Why them? Because any business using an open-weights model needs the infrastructure to run it. They need cloud servers, GPUs, memory, and bandwidth to run these model weights. Therefore, companies that sell infrastructure also promote open-weights models. NVIDIA CEO Jensen Huang aggressively promotes open-weights models because NVIDIA doesn't care who has the best model. They don't care about the competition in the model market. Whether it is open source, open weights, or closed, all businesses using these models need chips to run them. Thus, NVIDIA, along with other chip makers and cloud providers, directly benefits from the growth of open-weights models.
+
+</details>
+
+### 算力农场：DeepSeek 的低成本底牌与经济学
+
+面对开源权重的普及，人们常问：如果模型参数免费，DeepSeek 怎么赚钱？这里存在一个“种子与农场”的经济学逻辑。模型权重好比是植物的种子，即便 DeepSeek 将种子免费赠送，也并不意味着普通人能建立起一个高效的“农场”。在生产环境中以极低单元成本、高可靠性运行大模型，需要庞大的 GPU 集群、复杂的系统优化和电力支撑。DeepSeek 的核心商业模式并非售卖知识产权（这在训练完成后即为沉没成本），而是其低成本、高吞吐的**云端算力托管服务**。它能够凭借**混合专家模型**（Mixture of Experts: 简称 MoE，仅激活部分子网络进行推理的架构）的巧妙设计，利用智能路由仅激活特定专家网络，从而使 V3 的训练成本压缩至 560 万美元（而 GPT-4 超过 1 亿美元）。这种架构使 DeepSeek API 价格低至 GPT-4 的数分之一（同等业务量下，Claude-Opus 需 900 美元，GPT-4 需 450 美元，而 DeepSeek 仅需 80 美元）。
+
+<details>
+<summary>Original English Source</summary>
+
+Now, if you are listening to this, you might wonder: why do they release these weights? What is the point? If DeepSeek gives away its model weights for free, why would anyone pay DeepSeek? If anyone can download the weights, how do they make money? Here is how. Think of the weights as seeds. Think of the model weights as if you are thinking of seeds. When DeepSeek gives you access to the weights, they are printing instructions on how to plant the crop. Anyone in the world can take these instructions and plant this seed themselves. But owning a seed and owning a harvest are two completely different things. Owning a seed doesn't give you land. It doesn't give you water, fertilizer, sunlight, or the daily labor needed to grow this seed. The same is true for AI models. Running an AI model reliably, at scale, and cost-effectively requires GPU chips, electricity, data centers, systems engineers, and immense technical expertise to get the maximum throughput per dollar. Therefore, to do anything useful with these seeds, you have to build an entire farm. DeepSeek gives you the seeds for free, but owning the seed doesn't mean you can build the farm. That's why they release the weights. Weights are intellectual property, but DeepSeek doesn't make money by selling intellectual property. They make money by computing at scale. Large-scale compute is their product. Giving away intellectual property is not a constraint, because intellectual property has become a sunk cost once training is complete. What actually generates revenue after training is the industrial capability to serve this intellectual property to millions of API requests per second at a cost lower than anyone else. Any lab that sells API access to their model is running an industrial business. To put it simply, the output is generated text, and the unit cost (Unit Cost) is how much compute is required to generate that output, while the margin (Margin) is the difference between what they charge and the cost to produce it. Thus, the economics boils down to one question: who can generate a unit of output at the lowest cost? When we look at American frontier labs, think of them like a massive corporate headquarters. When a customer walks in with a request, no matter how simple or complex it is, they route it to every single employee in the building. Every agent, from the intern to the VP of customer success, has to look at the query, think about it, and only then does one of them respond. On one hand, you might think this is incredibly wasteful. But this is exactly how AI models like OpenAI's GPT-4 family or Anthropic's Claude operate. Every single query activates the entire model, every single weight, no matter how simple the query is. What they do in China instead is use an intelligent router. The router first looks at the incoming query and sends it directly to just two specialists in the call center who can answer it, while the other floors remain idle. If the other floors remain idle, their existence doesn't cost anything. The architecture used by Chinese LLMs is called Mixture of Experts (MoE). The math behind it is very simple. Instead of paying to activate the entire model for every request, you only pay for the small part of the model that is relevant to the question you asked. DeepSeek has a lower cost by design, which is why Chinese LLMs can afford to give away open-weights models. This makes strategic sense for their business. Training DeepSeek's V3 model ultimately cost around $5.6 million. GPT-4 cost well over $100 million. This cost difference is enabled by architectural decisions, because using a Mixture of Experts reduces the compute per query. That is exactly why DeepSeek can charge just a fraction of what GPT charges for equivalent performance. Look at the numbers. On DeepSeek's API, the operating cost for a certain volume might be $80. The equivalent operating cost on GPT-4 would be $450. And on Anthropic's Claude Opus, it would be $900. Again, this is possible because DeepSeek's actual cost to generate a million tokens is significantly lower than what OpenAI or Anthropic pay for their generation.
+
+</details>
+
+### 安全叙事与定价权的地缘终局
+
+为什么西方闭源实验室收费如此高昂？除了算力成本外，主要因为它们在模型设计中做出了不同的抉择。例如 Anthropic 将品牌绑定在高度安全与**确定性**（Determinism: 系统在相同输入下产生一致输出的确定性特征）上，宁可牺牲成本也要确保模型的强对齐与合规性；而 MoE 架构路由机制固有的**非确定性**（Non-determinism: 系统在相同输入下可能产生不同输出的特性），对高度敏感的生成精度存在微小影响。然而，闭源模式的壁垒正在面临**模型蒸馏**（Model Distillation: 利用大型模型的输出作为监督信号来训练较小模型的技术）和企业间谍活动的降维打击，竞争对手仅需反复调用闭源API，就能训练出克隆其能力的开源模型。当闭源模型的技术“秘密”无法维持，决定胜负的依旧是底层的算力基础设施建设。因此，华盛顿充斥着围绕“安全风险”的政治叙事，其底层实质是闭源巨头为保护自身商业定价权和对抗地缘竞争而构建的利益防线。
+
+<details>
+<summary>Original English Source</summary>
+
+But look, if DeepSeek saved so much money using this architecture, why are Western labs so expensive? Because labs made different choices. The MoE architecture used in Chinese open-weights models is primarily a routing system, and this routing system exhibits non-determinism, meaning if you ask the exact same question twice, you might get slightly different answers. Anthropic's Claude operates on a different architecture, which is known to be very precise. For a company like Anthropic, whose entire brand is built on safety and alignment, they have to choose a much safer, more deterministic architecture, even at a higher cost. They consciously make this trade-off because Anthropic optimizes for consistency and safety. OpenAI, interestingly, sits somewhere close to DeepSeek's logic. They also use Mixture of Experts models, but unlike DeepSeek, they dedicate significant compute to safety-related tasks, trying to balance safety and cost efficiency at the same time. The key takeaway here is that architectural choices reflect what each lab prioritizes. DeepSeek optimizes for cost. It might not be the most deterministic or precise, but it is extremely cheap (and weights are free). Anthropic optimizes for alignment and consistency, which is why it requires so much capital. OpenAI tries to achieve both, but as you know from our videos, OpenAI is struggling financially under this pressure. But again, this doesn't answer my original question: why give the weights away for free? Of course, your product's margins might be smaller compared to Anthropic's, but it works for the majority of LLM wrappers. Why give the weights away for free? This, ladies and gentlemen, brings me to my final point, because there is no other way to survive. Remember the seeds and the farm analogy? DeepSeek's moat was never in the seed or the model itself. It was in the farm. In other words, it comes down to their ability to run the lowest-cost compute infrastructure. If a competitor cannot match your low operational costs, even if they have the entire recipe, even if someone steals it and leaks it, having the recipe won't protect their pricing power. This is why Jensen Huang supports open weights. Of course, NVIDIA makes money regardless of which model is used—whether it is open weights, open source, or closed. But his key point is that open weights is the future, and even the most closed frontier labs cannot stop their models from leaking into the open ecosystem. We have done entire episodes on corporate espionage, and OpenAI, Anthropic, Gemini, and all other frontier labs are highly vulnerable to corporate espionage. This is a very real threat. Even if no secrets leak directly, or if they guard them securely, competitors can simply query the closed models' APIs repeatedly and use the outputs as training data for their own models. This process is called Model Distillation, and it effectively clones the capabilities of the original model without ever seeing its weights. It turns out weights might not be the ultimate weapon. Ultimately, if everyone has access to the seeds, it is time to build a farm that cannot be beaten. So, let's return to where we started. As Jensen Huang said, open weights is the future. Closed AI advocates and Anthropic claim there are severe safety risks because it threatens OpenAI's and Anthropic's pricing power. Therefore, when they warn Washington about dystopian threats, it is not just about safety. While safety is a legitimate concern, make no mistake: behind the safety narrative, the big players are playing a game of massive business and geopolitics. We hope you found this useful, and we'll see you in the next episode. Goodbye.
+
+</details>

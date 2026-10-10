@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>美研芒格君 · 2026-10-05 · 帖子</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="x-reading" data-pagefind-body>
+  <header class="x-heading">
+    <p class="x-eyebrow">𝕏 原文阅读 · 帖子</p>
+    <h1 data-pagefind-meta="title">美研芒格君 · 2026-10-05 · 帖子</h1>
+    <span hidden data-pagefind-meta="author">美研芒格君</span>
+    <span hidden data-pagefind-filter="x_author" data-pagefind-ignore>2058239737522204672</span>
+    <span hidden data-pagefind-meta="date">2026-10-05T15:58:49.000Z</span>
+    <p>保留来源原文。时间显示为 Toronto 当地时间；未保存的配图与引用请前往 X 查看。</p>
+    <a href="/x/">返回 X 阅读</a>
+  </header>
+  <p class="x-status">保存说明：除条目另有标注外，正文尚未人工核对 · 图片未保存 · 引用或对话上下文可能不完整。</p>
+
+  
+<article class="x-entry" data-author="2058239737522204672" data-long="true" id="x-post-2107138447664349370">
+  <span id="x-post-heading-2107138447664349370" class="x-post-anchor" aria-hidden="true"></span>
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div id="x-post-time-2107138447664349370" class="x-post-heading"><time datetime="2026-10-05T15:58:49.000Z">2026-10-05 11:58</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2107138447664349370" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text">如果你会 AI，但是不投资，那就有点亏大了
+
+不论是投资 $MRVL $AMD 等一众算力互联标的，还是 AI Infra学习，收藏搞懂我这篇帖子，对你帮助都一定会很大
+
+算力发展远远不足，早点搞懂，就能早点把握住机会。不信你看下去
+
+为什么OpenAI 想要提供快的推理速度，就得牺牲订阅额度上限，这个帖子是我认真整理的内部流程，看懂了它，你会更加得心应手。
+
+1/ 我先来说两个指标
+&gt; TTFT (Time to First Token)，它来衡量你发出一条消息之后，OpenAI 多久响应吐出第一个字。
+
+&gt; TPOT（Time per Output Token），这个来衡量你总体的体感速度，以及什么时候完成？
+
+你总的等待时间约等于 TTFT 加 n 乘以 TPOT，n 就是你的 Token output总量，就是 AI 给你回了多少话
+
+你可以大致粗略地记一句话。1 个 GPU 如果只给一个用户用，那么两者的速度都会很快，但互联的速度跟不上，因此 GPU 会有闲置时间，会导致浪费
+
+那聪明的厂商就把一个 GPU 分给多个用户，这样 GPU 的闲置时间被充分使用了。但每个用户因为 GPU 调度需要等待的时间就会变长，导致整体速度变慢
+
+2/ 那 GPU 内部在推理的时候，到底发生了什么呢？
+我做推理优化，这个循环是每天都要打交道的东西。我把一个请求在推理引擎里走的 5 步画进了一页动图，先说结论，后面按图的顺序讲
+
+1. 请求进来不会直接上 GPU，而是先进调度器，由 CPU 驱动。GPU 每跑一步，调度器就重新挑一次人，批次每一步都在换人，这叫 continuous batching
+
+2. 评估推理服务，工业界盯三个数，吞吐、出字间隔 ITL、首字延迟 TTFT，而且要看 P99, P50，需要有统计意义
+
+3. 这三个数互相拉扯，决定了用户的成本和总的等待时间，总的来说是一个权衡（trade-off）
+
+3/ 先过一遍图里的 5 步
+① 新请求带着整段 prompt 排队
+② 调度器每一步开跑前问三件事：已经在跑的先上，本轮 token 预算还剩多少，KV cache 的格子还够不够
+③ 能上的拼成一批。新来的做预填（prefill），整段 prompt 一次算完；老的做生成（decode），每人只写 1 个 token
+④ GPU 把这一批一起算一步
+⑤ 写完的释放格子离场，没写完的回到 ②，马上开下一轮
+
+2022 年的 Orca 论文把调度单位从“一个请求”改成“一步”，在 GPT-3 175B 上，同样延迟下吞吐做到了 FasterTransformer 的 36.9 倍 [1]。现在 vLLM 默认就按这一套在排 [2]
+
+想搞投资，相信你看到这儿已经差不多都懂了。想入门推理，我的建议是先把这个循环自己画一遍，再去读压测报告，每个数都能对回其中一步
+
+这里边的水很深，后续我会逐渐跟大家讲解，结合每天的信息以及具体实践，帮大家搭建起科技到投资中间的这座桥梁
+
+出处
+[1] Orca: A Distributed Serving System for Transformer-Based Generative Models，OSDI 2022 https://t.co/YEug2DJJKN
+[2] vLLM 文档，Optimization and Tuning https://t.co/opI2PoiUFH
+[3] Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve，OSDI 2024 https://t.co/IgpP9LvqFl
+[4] vLLM 文档，vllm bench serve</div>
+    <footer>
+      
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 2107138447664349370<br>保存时间：2026-10-05T16:33:48.158Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：See source observations for media and context status.</p></details>
+    </footer>
+  </div>
+</article>
+
+  <nav class="x-pagination" aria-label="同来源合集" data-pagefind-ignore> </nav>
+</div>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

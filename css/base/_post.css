@@ -1,0 +1,14 @@
+/* Article components own their styles in _content, _metadata, and _sidebar. */
+.article-body { overflow-wrap: break-word; line-break: strict; letter-spacing: .01em; font-variant-numeric: tabular-nums; }
+@supports (text-autospace: normal) { .article-body { text-autospace: normal; } }
+.article-body :is(h2,h3) { scroll-margin-top: calc(var(--reading-header-offset, 56px) + 64px); }
+.article-body a { text-decoration: underline; text-underline-offset: 3px; }
+.article-body pre { overflow: auto; padding: 16px; background: var(--theme-surface-subtle); border-left: 2px solid var(--theme-accent); font-size: .875rem; line-height: 1.7; }
+.article-body code { font-size: .90625rem; background: var(--theme-surface-subtle); border: 0; }
+.article-body pre code { font-size: inherit; }
+.article-body table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; }
+.article-body th, .article-body td { border: 1px solid var(--theme-border-subtle); padding: 8px 12px; }
+.article-body blockquote { margin: 28px 0; padding: 0 20px; border-left: 2px solid var(--theme-border-strong); color: var(--theme-text-secondary); }
+.article-body .lang-en { color: var(--theme-text-secondary); font-style: normal; margin-bottom: 8px; }
+.article-body .lang-zh { margin-top: 0; }
+@media (max-width: 768px) { .article-body :is(h2,h3) { scroll-margin-top: 64px; } }

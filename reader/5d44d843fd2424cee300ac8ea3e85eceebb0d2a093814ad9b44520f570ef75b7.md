@@ -1,0 +1,471 @@
+---
+author: a16z
+date: '2026-10-06'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=cJsHel27Z6M
+speaker: a16z
+tags:
+  - autonomous-agents
+  - cybersecurity
+  - red-teaming
+  - vulnerability-detection
+  - zero-day
+title: Mandiant 创始人重返战场：AI 时代的攻防海啸与超速战争
+summary: 网络安全传奇调查机构 Mandiant 创始人 Kevin Mandia 联合顶级红队专家创立 Armadin。在与 a16z 合伙人 David Ulevitch 的深度对话中，他剖析了进攻型 AI 带来的范式转移、传统渗透测试的消亡，以及由 AI 智能体集群驱动的“超攻击”与自动化闭环防御。
+insight: ''
+draft: true
+series: ''
+category: ai-application
+area: tech-engineering
+project: []
+people:
+  - Kevin Mandia
+companies_orgs:
+  - Armadin
+  - Mandiant
+products_models: []
+media_books: []
+status: evergreen
+---
+### 重返赛场：为何在50岁选择再创业
+
+**戴维·乌列维奇**: 坐在这里的是凯文，感谢你的到来。
+
+<details>
+<summary>Original English</summary>
+
+**David Ulevitch**: This is Kevin, thanks for coming.
+
+</details>
+
+**凯文·曼迪亚**: 不，谢谢你邀请我。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Mandia**: No, thank you.
+
+</details>
+
+**戴维·乌列维奇**: 你曾经创立了 **Mandiant**，那是一段巨大的成功。历经多个业务拆分，那家公司最终归入了 **Google** 旗下。那么，你为什么决定重返赛场？
+
+<details>
+<summary>Original English</summary>
+
+**David Ulevitch**: So you created Mandiant. Yes, of course, this is a great success. Um, lots of different divisions, you know, eventually the company ended up inside Google. Um, why did you decide to get back into the game?
+
+</details>
+
+**凯文·曼迪亚**: 问得好。说实话，我甚至不确定这完全是我个人的决定——听起来可能有点奇怪，但我见到了戴维·斯莱特（David Slater）、特拉维斯·兰姆（Travis Lam）以及埃文·佩尼亚（Evan Peña）等联合创始人。是他们创办了这家公司，他们才是真正的发起者。
+
+我和他们见面时，他们带来了一个想法，展示了他们想要做的事情的规划，而我从他们身上看到了非凡的天赋。特拉维斯是这一代人中罕见的天才，戴维·斯莱特——我是从极其正面的意义上说的——绝对是个现象级人物。埃文·佩尼亚在他所做的事情上也是出类拔萃的。当你面对这样一支团队并听他们阐述构想时，我脑子里一直在想：“我想成为其中的一员。”
+
+我在安全领域深耕了30年，如今一切都将发生翻天覆地的变化，我绝不想错过由 AI 引发的这场技术巨变。你知道，这太棒了——我过去所做的一切都在过时，而崭新的一切正在到来。与刚起步的这支团队交流后，我意识到自己能很好地融入并帮助他们加速这一进程。**Armadin** 正在打造的东西正是当前每家企业迫切需要的，我想：“这支团队能做到，而我有30年的安全行业积累和人脉，让我们一起走到客户面前，告诉他们我们做出了他们需要的东西。”
+
+某种意义上，我几乎觉得这是我的使命。我知道这听起来不可思议，在我50多岁的年纪，本来在做风投，不会平白无故再去创办一家公司。我不是那种纯粹为了当创业者而不断开公司的人，我也不是纯粹的风投家，我就是个务实做业务的人。但遇到他们时，我说：我们必须做这件事。仅此而已。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Mandia**: That's a good question, and, you know, I'm not sure if it was my decision, this is going to sound weird, but I met with David Slater, Travis Lam, the other founders, and Evan Peña. I knew, well, you know, I could say that they started this company; they are the founders. You know, I met with them, they had an idea, they presented me with a plan of what they wanted to do, and I saw talent in them. For example, Travis is a talent of a generation, and David Slater—and I say this in a positive sense—is a true phenomenon. You know, these guys are really, really good. Evan Peña is exceptional at what he does. And when you meet this team and talk to them, the whole time I was listening to what they were doing, I was thinking, "I want to be a part of this." You know, I don't want to be left out of the changes brought about by AI, when I was in security for 30 years, and now it's all about to change dramatically. You know, that's great. Everything I did before is outdated, and everything else is new. But after meeting this team when they were starting the company, I realized that I would be a great fit to work with them to accelerate this process. What Armadin is building is something every company needs right now, and I thought, "This team can do it, and I have 30 years of experience in security, I know a lot of people, so let's go to them and say we've built what they need." Yeah, you know, I almost felt like I had to do it. I know it sounds strange, but I wouldn't start a company again in my 50s, I was in the venture business. It wasn't like I'm an entrepreneur and I love starting companies. This is not about that. And I'm not a venture capitalist. I'm just a business man. This is not true. I met the team and said: we have to do this. Yes. Really, that's all.
+
+</details>
+
+**戴维·乌列维奇**: 所有的这些剧变都是因为人工智能驱动的。这就是催化剂，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**David Ulevitch**: Yes. And all these changes were happening because of AI. That's the catalyst, isn't it?
+
+</details>
+
+### 构建网络加农炮：Armadin 的红蓝双面
+
+**凯文·曼迪亚**: 没错。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Mandia**: Yes.
+
+</details>
+
+**戴维·乌列维奇**: 那请跟我们讲讲 Armadin 具体在做什么。
+
+<details>
+<summary>Original English</summary>
+
+**David Ulevitch**: So tell us what Armadin does.
+
+</details>
+
+**凯文·曼迪亚**: Armadin 利用前沿模型和**进攻型 AI**（Offensive AI）来检验系统是否存在可被利用的安全风险——这就是我们今天所做的事情。我们将其称为 **Armadin Red**。但在公司创办之初，特拉维斯、戴维·斯莱特和埃文就已经非常清楚：网络安全的未来，必须是由“正义方”造出一门进攻型网络大炮，持续轰击自己的网络防御，以确保其能抵御不可避免的外部攻击。
+
+我们还深知，这也必须是由正义阵营打造的进攻型 AI，与同样由正义阵营打造的防御型 AI 相互协同、共同进化。你必须兼备这两者。因此我们的第一步，就是在发现可被利用的漏洞风险方面做到全球顶尖。只要我们能比攻击者（无论是国家级黑客还是网络犯罪分子）提前五分钟发现风险，我们就能开启第二幕：**Armadin Blue**。我们必须能切断风险，建立类似止血带的补偿性控制机制。这就是 Armadin 正在做的事——在 AI 时代打造保护你免受 AI 攻击的力场。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Mandia**: Armadin uses advanced models and offensive AI to check if you have exploitable risks—that's what we're doing today. We call it Armadin Red, but when we started the company, Travis, David Slater, and Evan knew that the future of cybersecurity was for the "good guys" to build an offensive cyber cannon and fire it at networks to make sure they could withstand attacks because they were inevitable. We also knew that it would be an offensive AI created by the “good guys,” working and learning alongside an AI for defense created by the same “good guys.” And you should have both. So our first act was to become the best in the world at finding vulnerable risks. If we are five minutes ahead of the attacker—whether it's the state or the criminal—if we are ahead of them, we have also realized our second act: Armadin Blue. We must stop this. Compensatory control, like a tourniquet. That's what Armadin does. We are building the force field you will need in the AI era to protect yourself from AI attacks.
+
+</details>
+
+**戴维·乌列维奇**: 请谈谈如今 AI 攻击能力的本质，以及你认为它未来会如何演变。
+
+<details>
+<summary>Original English</summary>
+
+**David Ulevitch**: Yes. Tell us about the nature of AI attack capabilities today and how you see them developing in the future.
+
+</details>
+
+**凯文·曼迪亚**: 好的。首先在本质上，我们正处于一个奇怪的窗口期：我们已经能观测到它们，但还没有达到大众预期的那种高度。在现实攻击中，我还没有看到像 Armadin 已经构建出的那种系统：**25,000个智能体协同作战**，执行极具智慧的操作，而不需要依赖拙劣的网络钓鱼。
+
+因为当你应对一次真实的 AI 攻击时，你会很快意识到这是 AI 所为。至少我能看出来，因为我过去处理过太多由人类主导的入侵事件。人类攻击者在渗透时通常是从A点推进到B点，再到C点。而现阶段的 AI 会有一些细微破绽，其中之一就是它攻破了A点，转向B点，接着你又会看到它试图再次攻破A点。它就像一群蜂群无人机：思路是对的，但在协同和战术规划上还可以更精巧。这就是当下的水平，但未来一定会变得更干净、更高效。
+
+两者的核心差异在于规模与速度，AI 的处理规模远远超出了人类的能力边界，其方式甚至超出了大多数人的理解。过去人类攻击者面临扩展瓶颈，受限于有限的精力和资源，他们一次只能沿着单一路线深入内网。但 AI 完全不同，速度快得令人难以置信：**AI 在一微秒内完成的操作，需要70名安全人员耗费极长时间甚至根本无法完成**，这完全是不可同日而语的量级。
+
+人们过去总在争论 AI 究竟是有创造力还是仅仅有效率。但在我们攻防领域，并不需要一个通晓400门语言的通用语言模型。Armadin 在进攻端所做的是挖掘可被利用的代码与逻辑漏洞。代码是结构化语言，攻击是结构化流程，正因为其高度结构化，AI 的表现会极其出色。
+
+现在很多人在呼吁放缓大模型的发展步伐。但在网络安全领域，我们绝不能让安全变成事后诸葛亮。开源模型已经足够强大且普及，犯罪分子的大规模应用只是时间问题——一旦他们能够匿名获取 GPU 算力，大规模恶意攻击就会爆发。现在犯罪分子很难行动，是因为无法彻底隐藏身份，而穿着印有自己名字的 T 恤去作案显然不明智。我们目前正处于 AI 攻击的第 1 局初赛阶段，仅仅是因为犯罪分子的获取成本和可用性还没达到顶峰。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Mandia**: Well, great. So, their nature is primarily that we observe a strange period of time where we see them, but not at the level that one would expect. I haven't seen anything like what Armadin has already created in real life: 25,000 agents acting in concert, doing very smart things, without resorting to weird phishing attempts, because when you respond to an AI attack, you very quickly realize that it's AI. At least I understand because I've been doing, you know, I've been thinking a lot about offensive action. I've responded to many attacks in the past that were led by humans, right? and the person goes to point A, then to point B, then to point C during their invasion. The AI does little things, there are four or five differences, but one of them is that it will break point A, then move to point B, and then you see it trying to break point A again. Yeah. It's like a swarm of drones: I get the idea, but it could be coordinated and thought out a little better. And that's the level it is at today. It will be better and cleaner in the future. But the differences lie primarily in the fact that the scale of what AI can do far exceeds the capabilities of humans. in ways that people don't even fully understand. So there is a scaling problem: people could only ever find one way into the network. Yes. They had to be selective because they were forced to direct limited resources along one direct path. Of course. Yes. And so, scale is a challenge. The speed is simply incredible. What AI does in a microsecond would take 70 people so long that they wouldn't even be able to do it. This is a comparison of the incomparable. So what has always been missing is whether AI is creative or efficient? But when it comes to what we do, we don't need the most perfect model. We're not trying to know 400 languages with our models and all that. What Armadin does offensively is look for vulnerabilities and risks that can be exploited. This is code. It's a structured language, a structured process. Because it's structured, AI will be great at handling it. Of course. Yes. So, I really think that's already happening today. This talk about slowing down the development of models. We don't want cyber risk to become an afterthought. Open models are already good enough, and these things are now common. It's only a matter of time: once anonymous access to GPUs becomes available, you'll see a lot more criminal attacks. Oh, interesting. Yes. Do you understand what I mean? But until you can attack anonymously, you know, it's hard to commit a crime when people know your name. It's better if you can, if you can commit a crime anonymously, here's my advice to criminals. If you can commit a crime anonymously, it's much smarter than doing it wearing a T-shirt with your name on it. And, uh, in short, the difference in attacks, and what we're seeing now, we're on the verge, in the first inning, of AI attacks. Hmm, and I think it's simply because the cost and availability of models is not yet as high for the criminal element as it will be in the future.
+
+</details>
+
+### 从狙击暗杀到无人机蜂群：国家级黑客与 AI 的碰撞
+
+**戴维·乌列维奇**: 没错。凭借你在安全行业30年的资历，你肯定亲历过大量国家级网络攻击吧？
+
+<details>
+<summary>Original English</summary>
+
+**David Ulevitch**: Yes. That's right. Okay. So your experience in the security industry for 30 years, you've probably seen a lot of attacks from states, right?
+
+</details>
+
+**凯文·曼迪亚**: 每天都在看。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Mandia**: Daily. Daily.
+
+</details>
+
+**戴维·乌列维奇**: 那请讲讲国家级攻击（代表了最复杂、最成功的攻击类型）与当下的 AI 攻击之间有何异同，以及你认为几年后 AI 会走向何方。
+
+<details>
+<summary>Original English</summary>
+
+**David Ulevitch**: So tell me about the differences or similarities between state attacks—I use this to refer to the most sophisticated, most successful, if you will, types of attacks—compared to AI today, and where you think AI will be in a few years.
+
+</details>
+
+**凯文·曼迪亚**: 局势演进得非常快。以我的经验，当主权国家出于间谍情报或国家安全目的发起进攻时，采用的向来是所谓的“**狙击手式精准射击**”。他们绝不会盲目扫射，而是高度克制目标，极深地钻研特定对象，比如紧咬30家国防承包商或军工实体不放。
+
+你可以把传统国家级行动理解为那记致命的狙击；但在 AI 时代，攻击变成了**无人机蜂群**。这彻底改变了网络战的逻辑，连现代大国也在重新思考作战条令：“如果我们想攻破这家公司，该采取什么协议？” AI 会执行大量人类黑客根本不会去尝试的密集动作，不仅效率更高，而且会迫使国家层级去重新权衡风险、目标与隐蔽性：何时用狙击暗杀，何时释放蜂群？
+
+更深远的影响在于能力平权。过去只有少数技术顶尖的黑客能够成功，现在借助 AI，原本二流、技术薄弱的攻击者其成功率被断崖式拔高。防守方往后会面临极其复杂的局面：我们能感知到自己正被这套模型猛烈攻击，但背后究竟是一个大国，还是一个个人？归因将变得前所未有地困难。总而言之，AI 极大地平民化了高精尖的网络攻击能力。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Mandia**: So, things are going to change quickly, right? And, uh, but I can tell you: nations on the offensive never, in my opinion, they never really, when you hack for espionage and for security reasons, you attack with what I would call a sniper shot. You don't shoot at random, hoping to hit. For the most part, modern nations on the offensive limit their targets and dig deep into very specific things, like 30 defense contractors or military, you know, and they push hard for that. Think of it like, you know, that sniper shot; with AI, I think it becomes more like a swarm of drones, you know? It becomes a little different in cyberspace, and I think even modern nations are thinking, "What would our protocol be if we wanted to attack this company?" Should we... Because AI will do a lot of things that humans simply wouldn't do, right? It's more effective, probably, because, and so the nation will have to think about so many things now. Could we perhaps use cyberspace differently? Do we sometimes use a swarm of drones and sometimes act as snipers? How do we find a balance between this? Does it depend on the risk, the goal, and how inconspicuous we want to be? Maybe we need someone to monitor whether these actions are reasonable? And you know, the other thing that I've seen is that, you know, it's an equalizer. Attackers, less technically savvy, and less successful will appear significantly more successful. It's a means of equalizing the odds, right? Because over time, when you start using models, the defenders will say, "We are being attacked by these models," but we won't know who is behind these attacks. Is this the state? Is this a person? Who is this? We will have some assumptions, but it will become more difficult to establish the author. So, the long answer is that in the age of AI, it democratizes access to significantly higher expertise for attacks on victim networks.
+
+</details>
+
+### 超级攻击：从静态测绘到网络心跳感知
+
+**戴维·乌列维奇**: 这是一个绝佳的过渡。你曾说过，最好的防守必须拥有强大的进攻，就像2000年巴尔的摩乌鸦队的铁血防守一样，需要强大的进攻陪练来逼出极限。那么你们的产品具体是如何运作的？你们如何达到能够检测并修复这些威胁的精密水准？
+
+<details>
+<summary>Original English</summary>
+
+**David Ulevitch**: Yes, this is a great transition. You said that defense should be a great offense, right? You want to be like the 2000 Baltimore Ravens defense, you need your training offense to push you. So how does the product work and how do you achieve this level of sophistication to detect and remedy these things?
+
+</details>
+
+**凯文·曼迪亚**: 防守方面临的最大困境在于：你永远不知道攻击者下一次何时以何种方式发起突击。你必须持续不断地评估自己的防御，但这在过去几乎无法落地。
+
+因此我们研发了一种被称为“**超级攻击**”（Hyperattack）的机制。戴维，这个名字听起来很玄乎，但本质上就是我们向你的网络同时发射成群结队的智能体无人机，对网络进行全景测绘——每一个服务、每一条路由、每一个系统和全部数字资产。在一场极速的超级攻击过后，我们能获取海量的网络元数据，在几分钟内精准点亮你的全局拓扑，生成一份攻击者视角下的元数据数字孪生副本。如果是内网评估，我们同样如此。
+
+有了这份元数据镜像后，我们就能像**心跳监测**一样对你的网络进行持续轮询。这是一种动态跟踪：应用是否发生了变更？路由改了吗？某个服务升级了吗？目标区域是否凭空多出了一辆“新车”？凭借这种机制，我们可以以极低成本仅对变更部分进行针对性攻击与验证。
+
+在 AI 时代，企业真正需要的是模型源源不断施加的模拟攻击压力。但你不可能每分每秒进行无差别的全量实弹轰炸——成本太高且毫无必要。正确的触发机制通常有三类：第一，威胁态势变化时（出现了新模型、截获了新情报）；第二，你自身的网络发生了代码或架构变更；第三，出于治理需求，比如“明天要开董事会了，我们跑一次自我审计看看成色”。
+
+正是得益于这种敏锐的感知，当周末某个主流软件曝出 **0day 漏洞** 时，我们的心跳机制能瞬间捕获异动并立刻排查问题。Armadin 的目标是超越传统的已知已知漏洞（CVE），直接在攻击者利用之前，验证该漏洞在真实生产环境到底能不能被打通。并非所有 Bug 都能稳定利用，我们必须帮企业把精力聚焦在真正能拿到远程代码执行权限（RCE）的致命漏洞上。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Mandia**: Defense is... The problem with defense is that you don't know when the attacker will strike next. So you have to constantly assess your defenses. You have to do this continuously, and that's where the difficulty lies. So we do a thing we call hyperattack. Yes. And David, that's just a fancy word for us sending a swarm of agent drones at you and mapping your network. Every service, every route, every system, all assets. We can obtain terabytes of metadata about your network after this super-fast hyper-attack. It just lights you up. So now we have almost a metadata duplicate of what we can see. If we are inside, we do the same. Let's just map everything out. This is a view of your network through the eyes of an attacker. But with this metadata, we are now polling you almost like a heartbeat. What has changed? What has changed? It's a constant search: has the app changed? Has the route changed? Has the service been updated? Has a new car appeared in the target area? So we can cheaply test changes and then attack those changes. Yes. What you really want in the future, in the age of AI, is a constant pressure of models attacking you, but you can't do that all the time because, first, it's too expensive, and second, it's unnecessary. You do this when either the threat changes—new models emerge, new intelligence emerges—or, secondly, your network changes and you want to see what happens. And then, thirdly, you probably just want to protest. We have a board of directors meeting tomorrow. Let's see how we do. Do you understand what I mean? Let's do a self-audit and see what stage we are at. And that's why, when a zero-day vulnerability in a popular product surfaced over the weekend, we instantly got that "heartbeat." We just discovered a problem. Yes. And our goal at Armadin is to move from known vulnerabilities, or CVEs, to being able to determine whether they're exploited before attackers do, right? You know, not all bugs provide stable access to your system. So, not all mistakes are the same, right? And we want to make sure: hey, this one is worth worrying about, but these ones don't allow remote command execution. So, in short, this hyper-attack, this metadata that we get, allows us to track changes and attack you when your network changes. And that's the best thing we can do for continuity, and we'll get better at it. And the cost of network polling will decrease. You know, in small networks it doesn't cost much. But in a large, constantly changing network, you will have to poll it frequently to avoid leaving windows for vulnerabilities.
+
+</details>
+
+### 告别形式主义：传统渗透测试的黄昏与实战检验
+
+**戴维·乌列维奇**: 解释得非常透彻。现实中，犯罪分子一直都在全球范围进行无休止的随机扫描，哪怕不用 AI，他们手里只要握着一个有效 Exploit 就会扫描全网。防守方的网络本就时刻处于恶意势力的施压之下，因此必须由一支由正义之士组成的、更强大的 AI 力量来持续给予对抗压力。
+
+这就引出了一个有趣的议题：一年前，人们可能还会把 Armadin 归类为“渗透测试”（Pentesting）。我和你与 **CrowdStrike** 的乔治（George Kurtz）都有深厚的渊源，他们当年颠覆性地将传统杀毒软件重构为 **EDR**，这一底层架构与产品的革新创造了一个远大于杀软的新品类。让我们聊聊渗透测试：历史上人们是如何看待渗透测试的？为什么说它已经不再适用于未来？
+
+<details>
+<summary>Original English</summary>
+
+**David Ulevitch**: Yes. Of course. So that's actually a very good explanation of why this continuous approach is important, right? This is so exciting. As I, you know, we share, well, you're already resisting this. Somewhere out there, criminal elements will always be conducting random scans, and they probably don't even use artificial intelligence to do it. They have one exploit that they think works, and they just scan the world for it and then attack the vulnerabilities, you know, so your network is already under pressure from an unseen force with bad intentions. Do you understand what I mean? So you should have a better force, made up of good guys, that will constantly put pressure on you. Yes, that's interesting. So, Armadin, I don't know, a year ago, it would probably have been categorized as penetration testing, and you and I have a history and relationship with George from CrowdStrike, they famously reimagined the category from antivirus to EDR, and of course they did incredible things, but the reimagining of the category was due to significant infrastructure and product changes, and that allowed them to create a product category that was much larger than antivirus. Let's talk about pentesting. What is the historical view of pentesting and why is it not something we can expect in the future?
+
+</details>
+
+**凯文·曼迪亚**: 这里有几个核心痛点。渗透测试在过去确实是必不可少的，就像第一代杀毒软件一样，每家公司都得采购。而我认为 Armadin 未来的普及度会达到杀毒软件的量级，因为你必须拥有一套进攻型 AI 力场来锤炼防御型 AI。
+
+然而，传统的渗透测试本质上只是在扫描已知问题，它根本无法证明你是否真的会沦陷。它只会吐出一份堆满无关痛痒漏洞的长长报告，制造大量噪音。而在 Armadin，我们的逻辑是**真正执行 Exploit 验证**。我们严格校验测试结果，实现零误报，直至成功取得远程代码执行（RCE）或从机器中提取敏感数据。
+
+传统的自动化测试（如 **Tenable**、**Rapid7**、**Qualys** 等老牌工具）做的大多是“合规性卫生检查”：看开通了哪些端口服务、是否存在公开的 CVE。但面对企业内部自研的定制化应用，它们完全无能为力。而基于 AI 的多智能体能够理解业务逻辑，挖掘深层次的**逻辑缺陷**，每一次都会穷尽所有可能的攻击路径。
+
+我可以明确地说：自2026年1月至今，**Armadin 已经在客户真实的生产环境中发现了超过90个 0day 漏洞**。这些客户全都是**财富500强**级别的大企业，他们非常庆幸我们能在真实入侵前揪出这些隐患。
+
+我这么说绝不是为了制造恐慌（FUD）。核心区别在于，我们所有模型的再训练，都有顶尖真实红队专家（真正懂得如何编写 Exploit 的实战派）深度参与。我们做黑盒外部测试时，根本没有客户的源代码，也不是在源码里肉眼挑刺。我们纯粹从互联网外部以黑盒视角发起实战攻击，就在这群头部科技企业身上挖出了90多个高危 0day。市场上有种迷信认为扫源代码能扫出上万个漏洞，那纯粹是无意义的噪音。我们通常在48小时内就能直接连线客户的 CISO：“我们在你们的 DMZ 区域拿到了 RCE。”然后以此为跳板直捣内网。客户会立刻切换进紧急应急响应状态——因为这不再是一场走过场的合规渗透测试，而是真实的对手兵临城下。
+
+渗透测试只是一年一次的卫生底线，如果成本允许，每家企业都想对所有资产做持续性红队演练。过去由于人力成本极其高昂无法实现，但现在借助 AI 智能体集群的分工协作，我们彻底打破了成本枷锁。这种智能体红队必将完全取代传统的渗透测试。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Mandia**: Yes, there are several points. I mean, it had to be done. It was similar to first-generation antiviruses. You should buy antivirus. And I think when you look at Armadin, we're going to become as ubiquitous as antivirus, because you need to have a force field of AI on offense that trains AI on defense. You should do it, and you can do it. So why not? And when you look at it, to me, pentesting is always just scanning what is already known, and it doesn't prove whether you are actually vulnerable or not. So he always created a huge list of vulnerabilities that didn't matter, right? So, at Armadin, we wanted to make it so that we could actually execute the exploit. We check the results to ensure there are no false positives. We can get remote code execution or extract data from a machine, whereas many penetration tests just "beat" your infrastructure, lacking the thinking and learning technology that remembers and knows your system the way an AI agent does. Um, so they don't work with custom apps. This...this will be...uh, at least the old versions of testing, like Tenable, Rapid7, Qualys, were more of a "hygiene" issue. You know: what do I have there, what services are open, and are there any available CVEs for these services or known exploits against them? When you have an AI-based attack, it will find logic flaws, not bugs in the code of custom applications. She will exhaust all avenues every time. Um, and all I can say is: Armadin has found over 90 zero-day vulnerabilities on customer sites in a real production environment since January of this year, in 2026. And by the way, your customer base is... they're glad we found them early, and they're Fortune-level companies. These are not some, you know, small offices. These are Fortune 500 companies. Yes. And I'm not saying this to sow fear, uncertainty, or doubt, but the difference is that we trained our models, we retrained all of our models with the participation of real "red teamers," people who actually know how to develop exploits. And this is important. So when we scan networks, we don't have the source code to inspect. We don't find these "zero days" through source code. We don't find these "zero days" simply because we can log into an application, gain access, and get to another one. We act as a "black box" from the Internet, having found over 90 "zero days" in large software companies, and they are grateful to us. And everyone says, "Wow, there are myths that you can scan code and find vulnerabilities, thousands of them." It's just noise. Yes, we come from outside and then call the CISO, usually within 48 hours. "Hey, we got remote code execution in your DMZ." And usually from there we penetrate inside, and they agree with us. And the nice thing is that we go through...well, you know, the remediation side is a little more complicated, takes a little longer, but these companies go into incident response mode right away. They react as if it were a real incident. And this is no longer a penetration test. It's like a real opponent attacking you. The difference between red teaming and penetration testing is that pentesting, for me, is a hygienic minimum. And I think over time, everyone would test everything all the time if they could, right? It was too expensive and required a lot of people, but with AI and an agent doing the work, or in our case, a lot of different agents doing different tasks... You can do it now. So I think over time this will replace penetration testing. Yes. This is just a small part of what the red team would do when attacking you.
+
+</details>
+
+### 防御自治与即时响应：Armadin Blue 的补偿性控制
+
+**戴维·乌列维奇**: 你刚才提到了红队的进攻，但也谈到了“Armadin Blue”，请具体聊聊蓝队防御方案。
+
+<details>
+<summary>Original English</summary>
+
+**David Ulevitch**: Yes. So, you mentioned earlier that this is obviously an armed "red". Yes. You mentioned the armed "blue". Tell us about the armed "blue".
+
+</details>
+
+**凯文·曼迪亚**: 戴维，蓝队防守的核心在于：我们不能只跑到客户面前说“嘿，你这里有致命漏洞”，然后丢下一堆烂摊子。对于许多大企业来说，哪怕他们知道了漏洞，完成正式补丁发布、灰度测试再全量上线，往往也需要30天到60天。这几十天就是完全赤裸的暴恐窗口期。
+
+这就必须依靠 **Armadin Blue**。我们在发现漏洞的瞬间，自动生成即时的**补偿性控制措施**（Compensatory Control）并推送到防御层——就像给喷血的伤口立刻扎上一根**止血带**。这可以是主机层面的微隔离规则、代理拦截指令或是自动化生成的安全策略，直接在漏洞被修补前封死利用路径。
+
+这就回到了安全领域的铁律：如果你依靠人类去分析、评审、决策再手工下发指令，周期以天甚至周计算，在微秒级的 AI 攻击面前，你注定会被彻底打穿。防御、检测、响应三大支柱，正在全部被 AI 接管。甚至未来“检测与响应”的生存空间会被大幅挤压，因为留给响应的时间窗口是以毫秒计的，一切必须实现**自主化防御**（Autonomous Defense）。
+
+当然，纵深防御必须像洋葱一样层层嵌套，必须假定任意一层防线都随时可能失守。哪怕我们部署了最强的力场，也保不齐有攻击者比我们更早发现了某个未测试资产上的新漏洞。一旦突破发生，你必须依赖预置的诱捕陷阱立刻拉响警报。
+
+在 Armadin 内部做攻防模拟时我们亲眼见证过：一旦攻破外壳进入内网，AI 的横向移动速度令人背脊发凉。人类黑客在键盘上敲命令、换凭证横向移动，动作是线性且迟缓的；而 AI 智能体集群是在一瞬间并行执行上千个操作，瞬间铺满全网。防御体系就像被刺破的气球瞬间崩塌。因此，整个处置链路必须剥离人类环节，实现全自治的自动化阻断。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Mandia**: Armed blue is when we can't just come in, David, and say, "Hey, you're vulnerable." Because in large companies, even if you find a problem, rolling out a patch and remediating it can take 30 to 60 days. That's a huge window of vulnerability. So with Armadin Blue, the moment we identify an exploitable risk, we provide an immediate compensatory control—like a tourniquet. It stops the bleeding immediately. This might be a rule on an agent, a proxy-level block, or host isolation that neutralizes the threat while the engineering team works on the permanent fix. If you have humans in the detection and response cycle, you're going to be too slow. Yes. Do you understand what I mean? It just won't work effectively. So you have prevention, detection, response. Prevention will be driven by AI, and detection and response will be performed by AI. And the goal in cybersecurity has always been—you want to prevent, you don't want to deal with detection and response. So I see a constant narrowing of the window for each phase, to the point where we're not really doing a lot of detection and response because the window for that happens instantaneously. That's right. This is too fast. But still, to some extent, there has to be this "onion" protection, where systems back each other up, assuming that there's going to be a failure somewhere, right? You know, how even if you created a force shield, sooner or later someone would bypass it. Someone will create an exploit before us, somehow finding it on a platform or in an application that we haven't tested yet. It hasn't been used in production at the client yet, so we haven't seen it, but someone else found it. And when they do, you'll need a trap that will alert you to unauthorized or illegal access to the system. These traps—you simply cannot rely on humans here. Yes. I mean, it's just going to happen, because we've done it before at Armadin: when we hack a system and gain inside control, it spreads at an amazing rate. You know, as a human, you type on the keyboard, you try to move with the password from here to here, you're so slow and you do everything one at a time. And this thing does a thousand things at once. It's just everywhere, and you're like, "Wow, okay, done." Got it. Yes. So each of these process steps must be automated. This cannot be a person in the cycle. Yes. This is so bad. I don't have any apt analogies. It's like a balloon bursting: someone gets inside, and that's it—they're gone. The entire defense apparatus simply exploded. So you need to set up protection, then immediately lock the system upon detection and respond as you see fit. There are always gray areas between these stages, because people say: if you detect and respond automatically and quickly, that's protection. Of course. So all of that will change. Every CISO considers this. Each vendor is assessing its role in the transition to AI.
+
+</details>
+
+### 脆弱期与绝望感：企业防线的数字化全面动员
+
+**戴维·乌列维奇**: 确实，各家企业对于自身未来的防御体系形态都还在摸索。你接触了大量财富500强客户，以及众多非客户的头部机构，目前它们整体的脆弱性现状究竟如何？
+
+<details>
+<summary>Original English</summary>
+
+**David Ulevitch**: Of course. So, it's too early to say what they will look like, what their defense apparatus will look like. You may have many Fortune 500 clients. You also have close relationships with many others who are not your clients. What is the state of their vulnerability today?
+
+</details>
+
+**凯文·曼迪亚**: 这种脆弱性正在迅速降低，但眼下双方都处于某种“**绝望状态**”。
+
+站在进攻方的立场（比如俄罗斯或伊朗的国家级黑客），他们现在有一种迫不及待想要突入内网的绝望感——趁着防守方还没把 AI 铁幕完全拉上，抓紧一切时间站稳脚跟。而在防守端，企业也在拼死封堵每一个缝隙。这种绝望是真实的：在 AI 时代初期，进攻端享有天然的技术先发优势，防守方因此经历了一段剧烈的脆弱期。
+
+但我看到几乎所有的一线大型企业都在全力以赴。我所知道的所有顶尖企业都在实时对自身漏洞进行自动化扫描与排查。各家公司的作战室（Situation Room）里，CIO、CISO、业务线与产品团队全员上阵，协同修复。这就像一场数字鸡尾酒会，每个人都处于极度紧绷的竞速状态。
+
+一家头部科技巨头曾私下告诉我们，他们抽调了极其庞大比例的核心工程师和研究团队，全部精力只用于加固自身的安全边界。这是不折不扣的全面动员。而在市场上，“**Mythos**”等大模型安全测试事件是一个警钟，它让所有人彻底看清：AI 已经具备实战级的攻击破坏力，你必须主动在自身代码中找漏洞，否则就会被他人攻破。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Mandia**: It is rapidly decreasing. You know, everyone is worried. At this point, there is a sense of desperation on both sides. By the way, if you are on the offensive, like Iran or Russia, you have a desperate desire to penetrate right now. Yes. To get stuck in place. You are right. And if you're on the defensive, you're desperately trying to patch up every crack, you know. And it would be fair to say that both sides have reason for their despair. I mean, in the age of AI, we experience short-term difficulties because it gives an offensive advantage, period, right? So, that's normal. It's just the nature of things. But both sides understand that this is for long-term benefit. That is. This means that defensive AI, trained on examples of offensive AI and acting autonomously, will do much better and more thoroughly than humans reviewing data packets. And so we're going through a period of vulnerability right now, let's call it that, where everyone on defense is under threat, and they're all rushing. I see incredibly strong efforts in every company right now, and I don't know of a single large, first-tier enterprise that isn't scanning for vulnerabilities and responding to them in real time. And you know, David, what's interesting is that it's teamwork everywhere: CIO, CISO, product teams, business lines—they're all saying, "Okay, we found something." And it's like working in the "situation room": we have to fix this. You know, the composition of these teams is quite broad. So there is no way to make next year easy. That's the best way to say it. Do you understand what I mean? This is a real cocktail party now. Digital cocktail party. And everyone is in a racing state now. Yes. Aha. One of our largest technology companies told us that they have dedicated a large percentage of their engineers and research teams solely to strengthening their own frontiers. Yes. It was like a full mobilization of forces. And you know, the alarm bells started ringing quite recently, it was within the last few months, right? I think "Mythos" was the biggest, we saw it long before that, but the moment with "Mythos" from a marketing perspective made everyone realize, "Okay, the threats have changed." And many people said that with the release of "Mythos": "Find vulnerabilities in your own software," and that's what you have to do if you're in software security. So all the vendors rushed to do it, but my response to "Mythos" is that it just made it common knowledge that AI can be used offensively against you. And I think that's what accelerated the process. You know, that was the final confirmation. This is coming.
+
+</details>
+
+### 将猛兽关入铁笼：AI 实验室的盲区与安全红线
+
+**戴维·乌列维奇**: 顺着这个话题，比如 **Hugging Face** 发生的安全事件，我想听听你的看法。
+
+<details>
+<summary>Original English</summary>
+
+**David Ulevitch**: Yes. What about the case of Hugging Face? I would like you to talk about...
+
+</details>
+
+**凯文·曼迪亚**: 我对这类事件思考过很久。我相信在 **OpenAI** 等前沿实验室内部，事后大家也会复盘反思：“我们本可以加装这层和那层安全护栏，这样悲剧就不会上演。”
+
+在我漫长的职业生涯中，每当底层计算范式发生跃迁时，人们往往会低估对手的能力；而在今天，人们严重**低估了前沿模型自身的自主演化与破坏潜能**。事后阅读报告时，旁观者总会觉得“明明设几道确定性防护规则就能拦住”。但现实是一场宛如阿波罗登月的“AI 军备竞赛”。研发团队疯狂狂飙突进，甚至一些实验室 CEO 自己都坦承：“我们无法遏制这场技术创新的速度，甚至需要求助于政府监管。”这意味着，很多人在一定程度上已经无法完全掌控自己造出的产物。
+
+核心症结在于：追求前沿突破的 AI 科学家，与拥有实战经验、懂得如何“**把猛兽关在笼子里**”的安全老手之间，存在着巨大的认知鸿沟。安全专家往往不懂最新的前沿大模型架构，而 AI 专家又往往对底层攻防机理一无所知。
+
+别搞错了——在 Armadin，我们亲手创造了所有人惧怕的那头猛兽：我们打造了一套高度自主的进攻型 AI 模型，专门攻坚复杂的工业级网络并且渗透战绩斐然。但我们的团队有着深入骨髓的安全本能：**必须设立严格的虚拟机隔离层（Hypervisor），必须在宿主机层面锁死权限，必须经过专门的安全代理（Proxy）进行全链路审计**。
+
+当智能体失控狂奔时，通常不是出于安全攻击目的，而是它在“乱花钱”——它陷入了无效死循环，追逐无意义的目标。你必须设立多层验证，甚至必须建立无法绕过的**确定性物理规则**来封死高危动作。AI 的安全管控不是一个纯粹的算法问题，它极其依赖深厚的网络安全领域专业知识（Domain Expertise）。
+
+当年云计算刚爆发时，我们在 Mandiant 处理了无数起云安全泄露，我们不得不从零摸索云入侵的数字取证范式；而今天，整个行业必须重新学习一次：一次 AI 入侵留下的痕迹究竟是怎样的？**Anthropic** 或 OpenAI 在模型被利用发起攻击时记录了多少数据？我们迫切需要完善审计日志（Audit Trail）与司法取证能力，当智能体失控时，绝不能花费两周时间才能理清发生了什么。在 Armadin，我们对智能体执行的每一个动作、发起的每一个 IP、每一个时间戳与指令集都有完整的行为重放能力。
+
+把猛兽关在笼子里是一门艺术。戴维，你既不能把笼子焊得太死，因为如果全部用确定性规则彻底锁死，你就杀死了 AI 原生的创造力与自适应推理潜力；但如果完全放任自流，就会酿成灾难。因此你必须引入分类器（Classifiers）和监控模型，结合人工反馈（RLHF 中的 Thumbs Up / Thumbs Down），构建严密的灰度边界。当遇到系统无法确定的未知边界时，必须立刻中断并呼叫人类安全专家仲裁。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Mandia**: I have thought about this a lot. I mean, I'm sure at OpenAI, you know, they were like, "Oh, we could have done this and that, and it wouldn't have happened." Do you understand what I mean? So, they've already figured it all out. In my experience, every time we change the technical modality, we underestimate the capabilities of the adversary, and in this case, we underestimated the capabilities of the model, because when you read about it after the fact, you think, "They could have stopped it." And, um, they could put in some safeguards, some deterministic things, and, uh... And I think they understand that now, but I think when you're in a race, it's almost like a "moon race," right? AI racing. You have R&D specialists, they are working on creating models in such a way that even the CEOs themselves say: "We can't slow this down." "Let's ask the government to help us slow it down." You know, it means you can't even control your own innovation. I have my views on this, but we can leave that for another time. Yes. And so, when you have—and I understand that R&D people are chasing these innovations, and it's very difficult to combine them with experienced security professionals who have the skills to "cage this thing," you know? And it's hard to put them together because security experts don't really understand AI, and AI experts don't realize one of the things that we did in our model. That is, make no mistake, Armadin created the very beast we all fear. We created a model that attacks. We created many of these. We have a system that attacks industrial networks and is very successful at hacking them. Well, is it safe? Our guys instinctively knew: of course, we need a secure, you know, we need a hypervisor. We have to secure this thing. We have to block it at the host level. We need a proxy server. She knows about proxies. It works through a proxy, and that's good. When an agent needs to be stopped, it's usually not even about security—it's because the agent is burning compute and wasting money, chasing ghosts. There must be deterministic guardrails. You need domain expertise to govern these agents. This paradigm shift requires that AI labs mature their logging, telemetry, and forensic audit trails so that an incident can be reconstructed in minutes, not weeks. We record every action of our agents—IP, timestamp, exact command—so you can replay reality. We keep the beast in a cage, David. But you can't keep it too tight, or you destroy its utility. It is a nuanced gray area managed by classifiers, continuous monitoring, and human-in-the-loop escalation.
+
+</details>
+
+### 从代码人工挖掘到智能体自主发现 0day 的技术跃迁
+
+**戴维·乌列维奇**: Armadin 这支顶尖安全战队到底是一群怎样的人？
+
+<details>
+<summary>Original English</summary>
+
+**David Ulevitch**: Yes. What do these awesome security specialists at Armadin look like?
+
+</details>
+
+**凯文·曼迪亚**: 经验极其老道。人均拥有15年以上的顶级红队实操与攻防实战经验。在我们的职业生涯中，我们曾审计过财富100强中整整99家巨头的安全性。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Mandia**: A lot of experience. 15 years in attack, 15 years in the "red teams". I think we've audited the security of 99 out of 100 Fortune 100 companies in our careers.
+
+</details>
+
+**戴维·乌列维奇**: 哇。
+
+<details>
+<summary>Original English</summary>
+
+**David Ulevitch**: Wow.
+
+</details>
+
+**凯文·曼迪亚**: 只有一家我们没拿下，我知道那是哪家公司，虽然我很喜欢他们的产品，但他们从未聘用过我。不过这无伤大雅，也许他们本身确实很强。
+
+当我们回顾今年挖掘出的这90多个 0day 漏洞时，在最开始，绝大部分确实是由人类红队专家最终确定的。但之所以能做到这一点，是因为我们把90%以上的枯燥繁重工作交给了 AI 智能体——它们在98%至99%的场景下自主跑完了极其复杂且极具创意的渗透探测。而最令人兴奋的突破发生在最近，戴维：**最近的几个 0day 漏洞，已经完全是由 AI 技术自主独立挖掘出来的**。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Mandia**: We didn't get just one, I know who it is, they never hired me, even though I love their products. So maybe someday I can... How do we get... Let's find these guys. Yes, we communicate with them constantly. But they still weren't convinced. It's okay. Maybe they are good. But, you know, they're very experienced, and, you know, when I look at our 90+ zero-day vulnerabilities, most of them were found by humans, right? But people find them, because we use AI for 90% of routine work: automated penetration testing, web applications in a creative way for 98-99% of cases. We're still getting people involved, but here's what's interesting, David: the last few zero-day vulnerabilities were found by technology.
+
+</details>
+
+**戴维·乌列维奇**: 真的吗？全凭技术自主发现？
+
+<details>
+<summary>Original English</summary>
+
+**David Ulevitch**: Really?
+
+</details>
+
+**凯文·曼迪亚**: 真的，太不可思议了。我们实现了一次里程碑式的跨越：只要你坚定不移地训练进攻型 AI，你的智能体集群就真正具备了自主发现未知 0day 的实战威力。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Mandia**: Yes, wow. So we made a breakthrough; yes, most have already made this breakthrough: if you work on an AI attack, your AI agents find zero-day vulnerabilities.
+
+</details>
+
+### 创业哲学的代际裂变：从自给自足到超速竞赛
+
+**戴维·乌列维奇**: 我想把话题转向你的公司构建理念和创业思维。现在的打法与过去截然不同了。
+
+<details>
+<summary>Original English</summary>
+
+**David Ulevitch**: Yes. I want to change the subject to your philosophies and mindsets on building a company. You know, they are different.
+
+</details>
+
+**凯文·曼迪亚**: 确实完全不同了。我在2004年2月创办 Mandiant 时，甚至不觉得自己是个典型的创业者。那时候我们是完全自我造血（Self-funded）且实现盈利的。回首当年，很多认知都是在极其痛苦的挫折中领悟到的。
+
+2004年我们在官网上写下了一个当时没有任何人相信的论断：“**安全漏洞不可避免（Security breaches are inevitable）**”。甚至我们最初的口号更枯燥：“不能仅依赖预防手段”。但核心逻辑是一样的：由于攻击必定会发生，我们决定介入每一次重大的安全入侵事件，从而在应对真实攻击的过程中，最先掌握如何建立防御的情报。
+
+网络安全历史上的第一代分析模型是杀毒软件，基于已知签名匹配恶意软件。但这套逻辑是有硬伤的：如果不幸漏掉了一个木马，就得指望受害者把病毒样本抓出来寄给杀毒厂商去更新规则。我母亲绝不可能在自己的笔记本电脑上找到恶意软件，病毒只会把她的电脑生吞活剥。因此这种被动模式走不通。
+
+后来第二代防护演进出了 EDR，就像乔治的 CrowdStrike 所做的，在传统杀毒这道“马奇诺防线”之后构建第二层可学习、可分析的纵深防线。而我把今天的 Armadin 视为**网络威胁情报的第三次浪潮**：为什么一定要等到某家国防承包商被黑客攻破后，我们再去采集样本、共享情报以防二次中招？这种“等受害者流血”的模式太荒唐了。我们必须在灾难发生前，主动向自身系统开火，揪出自己的致命盲区。
+
+回顾当年，Mandiant 靠自我造血稳步发展，但在今天这个 AI 时代，戴维，我没见过任何一家新创公司还能靠慢节奏的自我造血活下来。**速度决定一切**。
+
+当年创办 Mandiant 的心力是：“这是我们的本职生计，赚够生活的钱，招揽最优秀的一小批人，给他们高于同行的薪水，承担更重的责任。”我们凭借高素质的人才团队打响了声誉。但在 AI 时代，技术栈几乎每两周就在彻底重构一次。你不可能再像过去那样，每年1月份开一次全员销售启动会（SKO）培训一遍产品就算完事。
+
+现在的企业级安全销售逻辑是：产品两周一变，你不能把理解技术的重担推给客户。我们必须在内部建立极其制度化的机制，每周对一线团队进行全量培训迭代。在我的理念里，我们绝不接受沦为行业第二，你必须在自己的细分赛道上成为全球第一。
+
+就像勒布朗·詹姆斯在职业生涯中意识到为了保持巅峰必须加倍苦练，就像汤姆·布雷迪走上球场时绝不会认为自己是全场第二优秀的四分卫。这种极致追求需要顶尖的人才、严格的过程验证，以及从客户到工程师团队闪电般敏捷的反馈闭环。
+
+作为 CEO，最核心的职责就是**在公司内部完全屏蔽掉外界的混乱感**。外部环境风云变幻，你绝不能让员工感到迷茫或无所适从。你必须给出清晰确定的流程与接口人，让整个组织在超高速扩张的同时保持秩序井然。
+
+在知识产权层面，今天你做出来的东西，六个月后别人也能复制。你就像在造一台法拉利引擎，六个月的窗口期转瞬即逝。要脱颖而出，就必须以极致的速度推向市场（GTM）、服务好客户，并在这一过程中建立起代表顶级品质的品牌图腾。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Mandia**: Yes. So, a few points. For example, I first started a company in 2004, and I wouldn't say I was an entrepreneur. I started Mandiant in February 2004, it was self-funded, profitable, and we were successful because looking back, it seems like you're learning almost nothing at the time, and then you look back and say, "Oh, I learned then, usually through pain." But I, you know, looking back at Mandiant now, we had a thesis that nobody believed in 2004, because on our first website it said that security breaches were inevitable, and nobody believed it, and I don't even know how much I believed it myself, and... that's a pretty good slogan. By the way, I was a little wrong. Our first headline was: You can't rely on precautions alone, and it was so boring, but it's the same as "security breaches are inevitable." You know, you can't rely on... it's better to... Yes, I was wrong, because I'm not a marketer. But, be that as it may, security breaches are inevitable. And the idea was to respond to every significant breach so that we would have a head start in getting intelligence on how to prevent it in the future. No. And that's why the first analytics model in all of cybersecurity was antivirus. You know, it was like, we're looking for malware. Yes. We have signatures for it, and if we miss it, David George has to find the malware and send it to us so we can get better. This is a bad model. My mom won't find malware on her laptop. Do you understand what I mean? It will simply eat her laptop alive. So that model was bad. So we decided we needed a better model, because I was reacting to the violations. And the reason I responded to them was because antivirus is easy to bypass. And we thought: well, let's study everything, you know, let's make a second level of antivirus, because it's useless. And that's what George has now, you know, so let's do a second layer of antivirus. Although antivirus is still needed. I criticize him, but the reality is that he is still needed. Or something that will replace it. So a second level of protection was necessary. So antivirus was the Maginot Line here. And then you extend the Maginot Line with something that can learn and think. And we wanted to do that, and I actually view Armadin as the third wave of intelligence. Why wait for a victim to learn from this? This is ridiculous. You have to find your own problems first. Don't wait until, say, defense contractor "A" is hacked to then quickly share information and ensure it never happens again. This model should still exist for when something does sneak up and defeat you. But, um, we have this model now, and it's just not enough. So, going back to your question, Mandiant was self-funded. I don't know of any self-funded companies right now, David. Well, speed requires you to be fast. That's the difference. Yes. You see, we founded Armadin, and the philosophies were different. When I started Mandiant, it was: hey, this is what we do for a living. Let's make enough money to live on. That's all. I mean, we hired the best people and had a philosophy: we pay you more than our competitors, but you'll work harder. So we always felt like we had fewer people working harder, but they were better people. Yes. I think we were known for that. But in the AI era, development happens at lightning speed. It used to be that you train the sales team in January, and that was enough. Now, we change every two weeks! How do you have a sales team that is always on top of things? Enterprise security sales still requires people buying from people. You need an institutionalized process where the sales team is trained every single week. In the companies I lead, we never strive to be second in our field. You have to be the best in the world. Tom Brady never stepped onto the field thinking, "I'm the second-best quarterback." Never. The CEO's job is to completely absorb and hide the chaos from the employees, providing clear processes and clear ownership. Intellectual property moves fast—whatever we build today, someone else will attempt in six months. So you must build the brand, execute the go-to-market strategy, and make customers wildly successful. Today, we need to build much faster than two years ago.
+
+</details>
+
+### 海啸中的超级光环：巨头背书与物理同侪效应
+
+**戴维·乌列维奇**: 这一切的核心原因，在于这是网络安全领域有史以来从未见过的滔天海啸。当年 CrowdStrike 开创了新赛道，而近几年 **Wiz** 之所以能以不可思议的速度飞速成长，很大程度上是因为它精准击中了企业上云后如同晴天霹雳般迫切的刚需，客户迅速意识到必须立刻采购类似方案。
+
+而且他们在早期就快速获得了“光环效应”（Halo Effect）。要赢得那种高规格的光环，关键在于拿下标杆客户并让他们为你疯狂喝彩。无意冒犯街角的烘焙小店，但如果你只是搞定了一家杯子蛋糕店，在网络安全圈是无法建立这种光环的；只有拿下顶级跨国大行、顶尖零售巨头和大型航空公司，才能形成牢不可破的行业信誉。
+
+<details>
+<summary>Original English</summary>
+
+**David Ulevitch**: Well, and the main reason for that is because this is a tsunami that has never been seen before in security, in the security market, right? CrowdStrike, you know, and other players around, they redefined the category, but they had to create it. In the case of Wiz, part of the reason she was able to grow so quickly is because it was, oh bam, an urgent need that struck like a bolt from the blue. and so everyone felt like they needed to buy this or something like it. Plus, you also scaled very quickly. You get the "halo" early on, you know, you have to get that "halo" and I personally think you get it by attracting the right customers and making them excited about you. Yes. You know, no offense, if there's a place called, say, "Susie's Cupcakes," they're not going to give you that "halo" if you make them happy in cybersecurity, right? But the big banks, the best retailers, the airlines—they give, you know?
+
+</details>
+
+**凯文·曼迪亚**: 这正是 Armadin 为什么从第一天起就毫不动摇地聚焦于大型企业级市场（Enterprise Sector）的原因——我们去解决最棘手、最复杂的安全梦魇。Wiz 在这方面做得极其出色，在我们所投资和合作的公司里也表现优异。
+
+现在的创业生态中，创始人和初创公司的数量比以往任何时候都多，资本获取的渠道也极其宽广，这意味着无论你选择切入哪条赛道，竞争都空前激烈。再也不会出现20年前我创办 Mandiant 时那种“四顾无人、唯我独尊”的蓝海环境了。
+
+在喧嚣的营销炒作中，创始人脱颖而出的唯一法则极其朴素，甚至毫无高深奥妙可言：**找到一个标杆客户，让他们喜出望外，然后不断复制这一过程**。商业的底层逻辑从未改变，只是今天一切都在以超光速推进。
+
+为了配合这种极致的迭代速度，Armadin 采用了一种特殊的组织方式：**我们把所有工程师都集中在同一个物理房间里办公**。我们对这种协作模式坚信不疑。跨地域的分布式远程办公极其缓慢，而在一个大办公室里，当你遇到瓶颈时，站起身大声抛出问题，屋子里立刻有20位顶尖大脑能停下手头工作给你最直接的答案。
+
+当前是创办公司的黄金年代，不仅每一个传统行业在面临重构，在网络安全领域，整套技术栈在未来两年内都将被全盘洗牌。旧有的技术堆栈必将被颠覆，一切都必须更新换代。置身于这场网络空间的百年风口之中，既令人兴奋又充满挑战。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Mandia**: And that's why Armadin focuses on the corporate sector, number one—solving the most complex problems. Of course. And I think Wiz did just that. So, yes, they did a great job with it at one of our companies too. We love these guys. There are more founders today than ever before. There are more startups than ever before, and they are all able to raise capital now. So, you will have competition in whatever you take on now. There will be no lack of competition. In a crowded market, especially with marketing hype everywhere, the only way to stand out is: get a customer, make them happy, and repeat. There is nothing else that will set you apart other than your customer base being thrilled with you. There is no higher mathematics here. It's the same as it's always been in business, but now everything happens at hyperspeed. And to maintain that speed, we keep all our engineers in one room. We firmly believe in this. Managing distributed teams is slow compared to standing up in a room with 20 people ready to answer instantly. This is a great time to start a company because every technology stack in cybersecurity will change over the next two years. Old technologies will be replaced by new ones. This is a once-in-a-lifetime wind of change in cyberspace.
+
+</details>
+
+**戴维·乌列维奇**: 我们对你们正在创造的事业感到无比兴奋，也很荣幸能成为你们并肩作战的伙伴。非常感谢你的到来，聊得非常尽兴。
+
+<details>
+<summary>Original English</summary>
+
+**David Ulevitch**: Well, we are excited about what you are creating and excited to be your partners. Thank you for coming. It was fun.
+
+</details>
+
+**凯文·曼迪亚**: 谢谢，非常愉快。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Mandia**: Thank you. It was fun.
+
+</details>

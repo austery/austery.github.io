@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CloakBrowser：从 C&#43;&#43; 源码层打补丁，让自动化浏览器通过所有主流反爬检测 · 乔木博客</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">CloakBrowser：从 C&#43;&#43; 源码层打补丁，让自动化浏览器通过所有主流反爬检测 · 乔木博客</span>
+      <span data-pagefind-meta="speaker" style="display:none;">向阳乔木</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>向阳乔木</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-05-11</span>
+    
+
+    <header class="article-header">
+      
+      <h1>CloakBrowser：从 C&#43;&#43; 源码层打补丁，让自动化浏览器通过所有主流反爬检测 · 乔木博客</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">anti-scraping</span>
+      
+        <a class="tag-link" href="/tags/browser-automation/">browser-automation</a>
+      
+        <span class="tag-pill tag-pill--no-page">chromium-patching</span>
+      
+        <span class="tag-pill tag-pill--no-page">web-scraping</span>
+      
+        <span class="tag-pill tag-pill--no-page">fingerprinting</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">本文介绍了 CloakBrowser 项目，该项目通过修改 Chromium C&#43;&#43; 源码，实现深度伪装自动化浏览器，以绕过 Cloudflare、reCAPTCHA 等主流反爬检测。与表面 JS 注入不同，CloakBrowser 直接修改浏览器指纹和行为，使其难以被识别。文章详述了其指纹管理、人类行为模拟、代理集成等功能，并与 Playwright 等工具对比，为网页抓取和 AI Agent 提供了更有效的解决方案。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/xiang-yang-qiao-mu/">向阳乔木</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://blog.qiaomu.ai/2026-05-11-wwhlb5" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-05-11T00:00:00.000Z">2026-05-11</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>7 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E5%AE%83%E5%88%B0%E5%BA%95%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88">它到底做了什么</a></li><li class="outline-h2"><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%85%B6%E4%BB%96%E6%96%B9%E6%A1%88%E4%BC%9A%E5%A4%B1%E6%95%88">为什么其他方案会失效</a></li><li class="outline-h2"><a href="#%E7%94%A8%E8%B5%B7%E6%9D%A5%E6%9C%89%E5%A4%9A%E7%AE%80%E5%8D%95">用起来有多简单</a></li><li class="outline-h2"><a href="#%E5%87%A0%E4%B8%AA%E5%80%BC%E5%BE%97%E5%85%B3%E6%B3%A8%E7%9A%84%E5%8A%9F%E8%83%BD">几个值得关注的功能</a></li><li class="outline-h2"><a href="#%E5%AF%B9%E6%8A%97%E6%9C%80%E9%A1%BD%E5%9B%BA%E7%9A%84%E7%AB%99%E7%82%B9">对抗最顽固的站点</a></li><li class="outline-h2"><a href="#%E4%B8%80%E4%BA%9B%E4%BD%BF%E7%94%A8%E7%BB%86%E8%8A%82">一些使用细节</a></li><li class="outline-h2"><a href="#%E5%92%8C%E5%90%8C%E7%B1%BB%E5%B7%A5%E5%85%B7%E7%9A%84%E5%AF%B9%E6%AF%94">和同类工具的对比</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>乔木博客</p>
+<p>全部</p>
+<p>AI工具</p>
+<p>AI教程</p>
+<p>AI生成</p>
+<p>AI资讯</p>
+<p>健脑房</p>
+<p>播客解读</p>
+<p>论文学习</p>
+<h1 id="cloakbrowser从-c-源码层打补丁让自动化浏览器通过所有主流反爬检测">CloakBrowser：从 C++ 源码层打补丁，让自动化浏览器通过所有主流反爬检测</h1>
+<p>AI工具</p>
+<p>·</p>
+<p>2026年5月11日</p>
+<p>·</p>
+<p>165 次阅读</p>
+<p>·</p>
+<p>约 9 分钟</p>
+<p>最近发现一个开源项目，叫 CloakBrowser。</p>
+<blockquote>
+<p>https://github.com/CloakHQ/CloakBrowser</p>
+</blockquote>
+<p>做过爬虫或自动化的人应该都遇到过这个问题：Cloudflare 拦截、reCAPTCHA 打低分、FingerprintJS 识别出机器人。</p>
+<p>市面上的解决方案大多是 JS 注入或者改配置参数，用一段时间就失效了。</p>
+<p>CloakBrowser 的思路完全不同。</p>
+<h2 id="它到底做了什么" data-reading-heading="">它到底做了什么</h2>
+<p>直接改 Chromium 的 C++ 源码，重新编译成二进制。</p>
+<p>不是在浏览器启动后注入 JS 去伪造 navigator.webdriver，也不是靠 --disable-blink-features=AutomationControlled 这种 flag。而是在编译阶段就把指纹信息改掉，包括 canvas、WebGL、音频、字体、GPU、屏幕尺寸、WebRTC、网络时序、CDP 输入行为，一共 57 处补丁。</p>
+<p>检测系统看到的是一个"真实的浏览器"，因为它本来就是一个真实的浏览器。</p>
+<p>测试结果比较直观：</p>
+<p>检测项</p>
+<p>原版 Playwright</p>
+<p>CloakBrowser</p>
+<p>reCAPTCHA v3 分数</p>
+<p>0.1（机器人）</p>
+<p>0.9（人类）</p>
+<p>Cloudflare Turnstile</p>
+<p>失败</p>
+<p>通过</p>
+<p>FingerprintJS</p>
+<p>被识别</p>
+<p>通过</p>
+<p>BrowserScan</p>
+<p>被识别</p>
+<p>4/4 正常</p>
+<p>navigator.webdriver</p>
+<p>true</p>
+<p>false</p>
+<p>UA 字符串</p>
+<p>HeadlessChrome</p>
+<p>Chrome/146.0.0.0</p>
+<h2 id="为什么其他方案会失效" data-reading-heading="">为什么其他方案会失效</h2>
+<p>playwright-stealth、undetected-chromedriver、puppeteer-extra 这类工具的共同问题是：补丁打在表面，检测系统盯的也是表面。</p>
+<p>Chrome 每次更新，JS 注入的方式可能就失效了。更麻烦的是，反爬系统已经开始检测"补丁本身"，比如某些特定的 JS 覆盖模式、flag 组合，反而成了机器人的特征。</p>
+<p>CloakBrowser 的源码级补丁不存在这个问题，因为没有任何运行时注入的痕迹。</p>
+<h2 id="用起来有多简单" data-reading-heading="">用起来有多简单</h2>
+<p>这是它最大的优点之一，API 和 Playwright 完全兼容，改一行 import 就够了：</p>
+<pre><code>&lt;code class="language-python"&gt;# 之前
+from playwright.sync_api import sync_playwright
+pw = sync_playwright().start()
+browser = pw.chromium.launch()
+
+# 之后
+from cloakbrowser import launch
+browser = launch()
+&lt;/code&gt;
+</code></pre>
+<p>剩下的代码一行不用改。</p>
+<p>JavaScript 同样支持：</p>
+<pre><code>&lt;code class="language-javascript"&gt;import { launch } from 'cloakbrowser';
+
+const browser = await launch();
+const page = await browser.newPage();
+await page.goto('https://protected-site.com');
+await browser.close();
+&lt;/code&gt;
+</code></pre>
+<p>安装也很直接：</p>
+<pre><code>&lt;code class="language-bash"&gt;pip install cloakbrowser
+# 或
+npm install cloakbrowser playwright-core
+&lt;/code&gt;
+</code></pre>
+<p>第一次运行会自动下载约 200MB 的定制 Chromium 二进制，之后缓存在本地，不需要额外配置。</p>
+<h2 id="几个值得关注的功能" data-reading-heading="">几个值得关注的功能</h2>
+<p>指纹管理</p>
+<p>每次启动会自动生成随机指纹种子，GPU 型号、屏幕尺寸、硬件参数全部自动伪造，每次启动都是一个新身份。</p>
+<p>如果需要模拟"回访用户"（对 reCAPTCHA Enterprise 很重要），可以固定种子：</p>
+<pre><code>&lt;code class="language-python"&gt;browser = launch(args=["--fingerprint=12345"])
+&lt;/code&gt;
+</code></pre>
+<p>同一个种子每次产生完全一致的指纹，在同一个站点反复访问时不会显得可疑。</p>
+<p>人类行为模拟</p>
+<p>加一个参数，鼠标移动、键盘输入、滚动行为全部变成人类模式：</p>
+<pre><code>&lt;code class="language-python"&gt;browser = launch(humanize=True)
+&lt;/code&gt;
+</code></pre>
+<p>鼠标走贝塞尔曲线、键盘有每个字符的时间间隔、偶尔打错字再自我纠正、滚动有加速和减速过程。</p>
+<p>不需要改任何业务代码，底层自动替换。</p>
+<p>代理 + 时区自动匹配</p>
+<p>这个细节很多人忽略。用了代理但时区还是 UTC、语言还是 en-US，这本身就是机器人信号。</p>
+<pre><code>&lt;code class="language-python"&gt;browser = launch(proxy="http://user:pass@proxy:8080", geoip=True)
+&lt;/code&gt;
+</code></pre>
+<p>geoip=True 会通过代理出口 IP 自动检测时区和语言，同时注入 WebRTC IP 防泄漏，一个参数解决三个问题。</p>
+<p>持久化 Profile</p>
+<pre><code>&lt;code class="language-python"&gt;from cloakbrowser import launch_persistent_context
+
+ctx = launch_persistent_context("./my-profile", headless=False)
+&lt;/code&gt;
+</code></pre>
+<p>Cookie、localStorage、缓存跨会话保留，避免被识别为无痕模式，也能积累浏览历史让 Profile 看起来更真实。</p>
+<h2 id="对抗最顽固的站点" data-reading-heading="">对抗最顽固的站点</h2>
+<p>遇到 DataDome、Kasada、Akamai 这类强度更高的反爬系统，推荐的完整配置是：</p>
+<pre><code>&lt;code class="language-python"&gt;browser = launch(
+    proxy="http://your-residential-proxy:port",  # 住宅 IP，数据中心 IP 直接被 IP 信誉封掉
+    geoip=True,       # 时区和语言匹配代理出口
+    headless=False,   # 有头模式，部分站点能检测无头
+    humanize=True,    # 人类行为
+)
+&lt;/code&gt;
+</code></pre>
+<p>Linux 服务器上还需要额外安装字体包，Kasada 和 Akamai 会在隐藏 canvas 上渲染 emoji 然后对比哈希值，Docker 镜像里已经预装了。</p>
+<h2 id="一些使用细节" data-reading-heading="">一些使用细节</h2>
+<p>reCAPTCHA 分数低的常见原因</p>
+<p>page.wait_for_timeout() 会发送 CDP 命令，reCAPTCHA 能检测到。</p>
+<p>换成原生 sleep：</p>
+<pre><code>&lt;code class="language-python"&gt;# 有问题的写法
+page.wait_for_timeout(3000)
+
+# 正确写法
+import time
+time.sleep(3)
+&lt;/code&gt;
+</code></pre>
+<p>另外，表单填写用 page.type() 而不是 page.fill()，前者模拟真实键盘事件，后者直接设值，行为分析会发现差异。</p>
+<p>和 AI Agent 框架集成</p>
+<p>browser-use、Crawl4AI、Scrapling、Stagehand、LangChain 都支持，两种方式：框架直接用 CloakBrowser 的二进制，或者 CloakBrowser 先启动再通过 CDP 连接。</p>
+<h2 id="和同类工具的对比" data-reading-heading="">和同类工具的对比</h2>
+<p>playwright-stealth</p>
+<p>Camoufox</p>
+<p>CloakBrowser</p>
+<p>补丁层级</p>
+<p>JS 注入</p>
+<p>C++（Firefox）</p>
+<p>C++（Chromium）</p>
+<p>reCAPTCHA v3</p>
+<p>0.3-0.5</p>
+<p>0.7-0.9</p>
+<p>0.9</p>
+<p>Playwright API</p>
+<p>原生</p>
+<p>不支持</p>
+<p>原生</p>
+<p>维护状态</p>
+<p>基本停滞</p>
+<p>不稳定</p>
+<p>活跃</p>
+<p>Camoufox 是最接近的竞品，但基于 Firefox，Playwright 生态的兼容性差一些，而且 2026 年初刚回归，还在 beta 阶段。</p>
+<p>目前 GitHub 4300 星，MIT 协议，二进制有单独的许可条款（禁止再分发，但使用免费）。</p>
+<p>项目还在活跃维护，最近刚升级到 Chromium 146。</p>
+<p>对做数据采集、自动化测试、AI Agent 的人来说，值得关注。</p>
+<p>© 2026</p>
+<p>·</p>
+<p>向阳乔木</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/1be619085b9e7b8a61b166483d707bda246e5dbc8b76534efe0361c465a4ac07.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/1be619085b9e7b8a61b166483d707bda246e5dbc8b76534efe0361c465a4ac07.md" download="CloakBrowser：从 C&#43;&#43; 源码层打补丁，让自动化浏览器通过所有主流反爬检测 · 乔木博客.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Cloudflare" class="entity-link company-link">Cloudflare</a>, <a href="/search/?q=CloakHQ" class="entity-link company-link">CloakHQ</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=CloakBrowser" class="entity-link product-link">CloakBrowser</a>, <a href="/search/?q=Chromium" class="entity-link product-link">Chromium</a>, <a href="/search/?q=Playwright" class="entity-link product-link">Playwright</a>, <a href="/search/?q=reCAPTCHA" class="entity-link product-link">reCAPTCHA</a>, <a href="/search/?q=FingerprintJS" class="entity-link product-link">FingerprintJS</a>, <a href="/search/?q=Camoufox" class="entity-link product-link">Camoufox</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

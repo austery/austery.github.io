@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent 通信越来越简单，为什么 Swarm 依然很难落地？</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Agent 通信越来越简单，为什么 Swarm 依然很难落地？</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-08-11</span>
+    
+
+    <header class="article-header">
+      
+      <h1>Agent 通信越来越简单，为什么 Swarm 依然很难落地？</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/multi-agent-system/">multi-agent-system</a>
+      
+        <span class="tag-pill tag-pill--no-page">process-communication</span>
+      
+        <span class="tag-pill tag-pill--no-page">concurrency-control</span>
+      
+        <span class="tag-pill tag-pill--no-page">zero-trust-acceptance</span>
+      
+        <a class="tag-link" href="/tags/workflow-tools/">workflow-tools</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章探讨了Agent通信从团队框架向底层进程间通信演进的工程现实，指出仅靠自然语言文本的交流无法解决并发冲突、权限穿透等底层工程问题。文章提出了构建Multi-Agent系统所需的五层基础设施，包括通信寻址、租约与所有权、写入隔离、冲突裁决和零信任验收，强调系统层面的排他锁、隔离和硬门禁是实现可靠协作的关键。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/agent-swarm-communication-20260811.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-08-11T00:00:00.000Z">2026-08-11</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>14 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#claude">Claude</a></li><li class="outline-h2"><a href="#%E8%A3%B8%E6%96%87%E6%9C%AC%E5%8D%8F%E8%B0%83%E7%9A%84%E4%B8%89%E5%A4%A7%E5%BA%95%E5%B1%82%E7%9F%9B%E7%9B%BE">裸文本协调的三大底层矛盾</a><ol><li class="outline-h3"><a href="#%E7%9F%9B%E7%9B%BE%E4%B8%80%E6%96%87%E6%9C%AC%E6%B5%81%E5%8A%A8%E6%80%A7%E4%B8%8E%E7%8A%B6%E6%80%81%E6%8E%92%E4%BB%96%E6%80%A7%E7%9A%84%E7%9F%9B%E7%9B%BE">矛盾一：文本流动性与状态排他性的矛盾</a></li><li class="outline-h3"><a href="#%E7%9F%9B%E7%9B%BE%E4%BA%8C%E6%B6%88%E6%81%AF%E9%80%9A%E9%81%93%E4%B8%8E%E4%BC%A0%E8%BE%93%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E7%9F%9B%E7%9B%BE">矛盾二：消息通道与传输生命周期的矛盾</a></li><li class="outline-h3"><a href="#%E7%9F%9B%E7%9B%BE%E4%B8%89%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E9%AB%98%E5%BC%80%E9%94%80%E4%B8%8E%E5%8D%8F%E8%AE%AE%E4%BD%8E%E5%BB%B6%E8%BF%9F%E6%8F%A1%E6%89%8B%E7%9A%84%E7%9F%9B%E7%9B%BE">矛盾三：自然语言高开销与协议低延迟握手的矛盾</a></li></ol></li><li class="outline-h2"><a href="#%E4%BB%8E%E5%BA%95%E5%B1%82%E7%9F%9B%E7%9B%BE%E6%8E%A8%E5%AF%BCmulti-agent">从底层矛盾推导：Multi-Agent</a><ol><li class="outline-h3"><a href="#1-%E9%80%9A%E4%BF%A1%E5%AF%BB%E5%9D%80%E5%B1%82%E5%AF%BB%E5%9D%80%E8%B7%AF%E7%94%B1%E4%B8%8E-rpc">1. 通信寻址层：寻址路由与 RPC</a></li><li class="outline-h3"><a href="#2-%E7%A7%9F%E7%BA%A6%E4%B8%8E%E6%89%80%E6%9C%89%E6%9D%83%E5%B1%82%E5%8E%9F%E5%AD%90">2. 租约与所有权层：原子</a></li><li class="outline-h3"><a href="#3">3.</a></li><li class="outline-h3"><a href="#4-%E5%86%B2%E7%AA%81%E8%A3%81%E5%86%B3%E5%B1%82%E7%A1%AE%E5%AE%9A%E6%80%A7">4. 冲突裁决层：确定性</a></li><li class="outline-h3"><a href="#5-%E9%9B%B6%E4%BF%A1%E4%BB%BB%E9%AA%8C%E6%94%B6%E5%B1%82shift-left">5. 零信任验收层：Shift-Left</a></li></ol></li><li class="outline-h2"><a href="#swarm-%E7%9A%84%E6%A0%B8%E5%BF%83-trade-off">Swarm 的核心 Trade-off</a><ol><li class="outline-h3"><a href="#1-%E6%A0%B8%E5%BF%83-trade-off%E5%88%B0%E5%BA%95%E7%94%A8%E4%B8%8D%E7%94%A8">1. 核心 Trade-off：到底用不用？</a></li><li class="outline-h3"><a href="#2-%E6%8B%93%E6%89%91%E6%94%B6%E6%95%9B%E4%B8%8E-multi-agent">2. 拓扑收敛与 Multi-Agent</a></li></ol></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>写 Agent 框架的时候，大家很容易习惯性地把 Agent 怎么交流和 Agent
+怎么组队绑在一起，觉得得先搞出一套有 PM、有 Coder 的 Team
+逻辑，它们才能开始对话。但仔细看最近的技术演进，事情的方向刚好相反：通信能力正在从大一统的团队框架里脱离出来，变成类似操作系统底层的进程间通信。</p>
+<p>在 macOS 或 Linux 上启动多个 Claude Code
+进程，它们已经能发现同机其他会话，并通过 SendMessage
+相互发文本了。但这暴露了一个非常直观的工程现实：管道连通了，并不代表工程协作就建立了。</p>
+<h2 id="claude" data-reading-heading="">Claude</h2>
+<p>扩大的是消息边界，不是 Team 的成熟度</p>
+<p>两个进程能互相 SendMessage，就像两台电脑刚连通 TCP
+Socket，离跑起一个分布式数据库还差得远。回看 Claude
+的各种交互动作，Agent 之间的交流其实在分化成三种完全不同的层次：</p>
+<p>父子委派：最简单的单向控制，就像主程序调了一个子函数。父进程拉起子进程干活并拿回结果；从 v2.1.77 起，父会话还可以用 SendMessage 继续或恢复先前拉起的 Subagent，但不需要维持什么团队状态。</p>
+<p>跨进程寻址：刚剥离出来的底层通信。两个独立会话知道了对方的地址，能发裸文本。但管道打通归打通，双方不共享上下文、不共享文件状态，也没有任何互斥锁。</p>
+<p>团队协作：这才是真正的 Agent Teams。它试图在通信管道之上，搭起任务看板、认领机制和团队生命周期。</p>
+<p>这三种形态在接口上都叫
+SendMessage，但解决的完全不是同一个维度的工程问题。在官方设计里，Claude Code Agent
+Teams 至今依然带着
+CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
+这个显式开关。因为定义一个团队框架并不难，真正的工程难点在于：如何确保
+Agent
+之间发送的自然语言文本，不会演变为并发冲突、权限穿透和不可靠的代码覆盖。</p>
+<p>另一个关键点是信任与权限。在操作系统里，一个进程给另一个进程发消息，不可能自动继承对方的权限。在
+v2.1.166、v2.1.198
+和 v2.1.222
+的更新里，官方反复强调：另一个 Agent
+发来的可以执行，在系统眼里只是一段建议文本，无法自动升级为人类用户的授权。通信通道容易打通，但信任和安全边界无法靠自然语言文本建立。</p>
+<h2 id="裸文本协调的三大底层矛盾" data-reading-heading="">裸文本协调的三大底层矛盾</h2>
+<p>如果只把通信管道打通，却没有任何基础设施约束，拿裸文本做协调就会撞上三大底层矛盾：</p>
+<h3 id="矛盾一文本流动性与状态排他性的矛盾" data-reading-heading="">矛盾一：文本流动性与状态排他性的矛盾</h3>
+<p>自然语言文本是连续流动的，天然没有数据库事务里的排他锁。在 GitHub
+Issue #23884 里，三个同名 Teammate
+同时认领同一任务，并发修改同一个文件。因为没有系统维度的排他锁，并发修改最后直接变成了互相覆盖，四次测试里
+Agent 最终分别只保住了 3/3、1/3、2/3 和 1/3
+行代码。这说明文本对话根本承担不了排他锁的职责。</p>
+<h3 id="矛盾二消息通道与传输生命周期的矛盾" data-reading-heading="">矛盾二：消息通道与传输生命周期的矛盾</h3>
+<p>进程间通信需要明确的投递状态、超时重试和会话生命周期，而裸文本通道发出去就管不着了。在
+2026 年 8 月 7 日针对 v2.1.224
+提交的 Issue
+#84945 里，单向消息发送 5/5 成功，反向发送却全部失败。更早发布的 v2.1.212
+不可能是这个具体 Bug 的后续修复，后续版本也没有明确记录覆盖这个本地
+socket case。问题在于：裸文本通道自己无法处理传输和状态感知。</p>
+<h3 id="矛盾三自然语言高开销与协议低延迟握手的矛盾" data-reading-heading="">矛盾三：自然语言高开销与协议低延迟握手的矛盾</h3>
+<p>模型生成自然语言是高成本的推理操作，而系统协调需要的是极低延迟、高精度的状态信号。在
+Issue
+#47930 分析的一份含 8 个 Teammate 的协作记录里，13% 的 Teams
+阶段输入 Token 用于纯 acknowledgement；把所有没有人类输入、由 Teammate
+触发的 lead 唤醒纳入后，比例为 22.2%。用高成本的文本生成去充当低层的 ACK
+握手，造成严重的计算开销。</p>
+<p>自然语言干不了排他锁、传输协议和低层握手，所以不能直接把 Agent
+的文本群聊当成数据库、文件锁和验收系统。</p>
+<h2 id="从底层矛盾推导multi-agent" data-reading-heading="">从底层矛盾推导：Multi-Agent</h2>
+<p>的 5 维基础设施</p>
+<p>解决这三大矛盾，靠在 Prompt 里教 Agent
+如何成为更好的团队成员是没有用的。就像分布式系统从来不靠节点互相谈心达成一致一样，多
+Agent 系统要把这些能力沉淀成 5 层基础设施：</p>
+<p>Multi-Agent 协作的 5
+层基础设施：从通信寻址到零信任验收，把排他锁、隔离、裁决和硬门禁下沉为系统层</p>
+<h3 id="1-通信寻址层寻址路由与-rpc" data-reading-heading="">1. 通信寻址层：寻址路由与 RPC</h3>
+<p>隔离</p>
+<p>在操作系统里，进程通信靠的是明确的套接字和消息总线。这一层只解决发现、路由和消息传递，提供纯粹的传输管道。把投递细节从上下文剥离，能防止网络重试或卡顿污染
+Agent 的记忆。</p>
+<h3 id="2-租约与所有权层原子" data-reading-heading="">2. 租约与所有权层：原子</h3>
+<p>Lock 与 TTL Lease</p>
+<p>为了解决文本搞不定排他锁的问题，可以直接借鉴 Chubby 或 Redis
+租约机制。任意任务在认领时，控制面会签发带生存时间的原子锁。如果持有锁的
+Agent
+挂了或者陷入死循环，超时后租约会自动释放，防止任务一直悬空或多节点重复认领。</p>
+<h3 id="3" data-reading-heading="">3.</h3>
+<p>写入隔离层：Copy-on-Write 与 Worktree 沙箱</p>
+<p>为了解决并发覆盖修改，引入写时复制思想。系统给每个并发 Worker
+挂载独立的 Git Worktree 或沙箱 Namespace。Worker
+的所有修改都在独立的物理快照里进行，主干保持只读。如果 Worker
+最终没有跑通过门禁，控制面直接把快照扔掉，没有任何副作用。</p>
+<h3 id="4-冲突裁决层确定性" data-reading-heading="">4. 冲突裁决层：确定性</h3>
+<p>Merge 与中立裁判 Agent</p>
+<p>两个 Worker
+提交的代码冲突时，别让它们在对话框里拉锯扯皮。控制面先尝试基于语法树的确定性合并；如果遇到设计分歧，拉起一个上下文完全干净的中立裁判
+Agent。它只读增量 Diff
+和需求定义，给出一次性裁决，避免原修改方带着偏见吵架。</p>
+<h3 id="5-零信任验收层shift-left" data-reading-heading="">5. 零信任验收层：Shift-Left</h3>
+<p>机械硬门禁</p>
+<p>工程上自然语言的承诺完全不可靠。这一层把质量控制前移，在代码合入主干前，强制在隔离容器里跑编译、类型检查和测试。门禁系统只看确定性的退出代码。哪怕
+Agent
+宣称自己写得再完美，测试未全绿，系统将物理拒绝提交。把排他锁、隔离空间、裁决和硬门禁下沉到这
+5 层基础设施后，Agent 之间的通信才能从无序聊天变成可靠的工程流水线。</p>
+<h2 id="swarm-的核心-trade-off" data-reading-heading="">Swarm 的核心 Trade-off</h2>
+<p>与落地指南</p>
+<p>把这 5
+层基础设施建齐成本并不低，这就带来了一个现实问题：我们什么时候才真正需要
+Swarm？</p>
+<h3 id="1-核心-trade-off到底用不用" data-reading-heading="">1. 核心 Trade-off：到底用不用？</h3>
+<p>Swarm
+的底层账本非常清晰：用额外的计算开销和通信磨损，去换取探索空间和质量天花板。</p>
+<p>Google
+Research 对 180 组系统配置的实验
+给出了具体数据：在一项可并行的金融推理任务里，集中协调的多 Agent 相比单
+Agent 带来 80.9% 的性能提升；但在需要严格顺序推理的
+PlanCraft 任务里，所有受测多 Agent 结构的性能都下降了 39% 到
+70%。</p>
+<p>微软工程师公布的
+Coding 实测 也是同样的逻辑：在相同 Prompt、相同 GPT-5-nano
+的两项对照里，5-Agent 方案的 LLM 评分提升了 28% ~
+32%，但代价是 Token 飙升到 3.4 ~ 3.9
+倍，耗时拉长了 2.2 ~ 4.5
+倍。所以答案很明确，按任务的依赖拓扑来决定：强顺序逻辑、修改热点集中或需要共享大上下文的任务，单个能力更强的
+Agent
+效率最高；而在任务边界清晰、高度可并行解耦且有自动化校验手段的场景下，Swarm
+才能发挥优势。</p>
+<h3 id="2-拓扑收敛与-multi-agent" data-reading-heading="">2. 拓扑收敛与 Multi-Agent</h3>
+<p>落地的三大原则</p>
+<p>全网状对等 Swarm 天然存在二次方灾难。如果让
+NN
+个 Agent 自由网状通信，通信链路是
+O(N2)O(N^2)，不仅
+Token 暴增，还会导致架构多头指挥和脑裂。</p>
+<p>软件工程本身的演进也是天然的树状分层：从架构决策、接口定义，到模块并行实现，最后合入代码。所以行业主导产品普遍收敛到了主控扇出拓扑：</p>
+<p>主控扇出拓扑：Orchestrator 拆解任务并签发
+Lease，三个 Worker 在独立 Worktree 中提交 Diff 并跑通门禁</p>
+<p>Cursor
+在 2026 年 7 月展示的 SQLite Swarm 虽然探索了自研版本控制和裁判
+Agent，但未被记录为已发布的 Cursor 产品能力。随后在 Cursor 2.5 更新日志
+中实际推送给用户的，依然是异步 Subagent 与有限嵌套树。从 OpenAI Codex 到
+Devin，主控扇出架构把拓扑复杂度降到了
+O(N)O(N)，主控握着全局上下文，Worker
+保持轻量专注，这是目前最稳固、性价比最高的选择。</p>
+<p>如果工程上决定搭建 Multi-Agent 系统，无需罗列复杂的 SOP
+步骤，本质上只需要贯彻三大原则：</p>
+<h4 id="原则一验收与隔离先行避免无保护并发">原则一：验收与隔离先行，避免无保护并发</h4>
+<p>没有硬门禁的并发只会加速生产垃圾代码，没有写入隔离的协作一定会污染主干代码。在让
+Agent
+并行干活前，第一步是建好自动化测试与编译门禁（零信任硬验收），第二步是给每个
+Worker 挂载独立的 Git Worktree
+或沙箱（写入隔离）。把试错成本限制在物理隔绝的局部空间里，门禁没过就直接丢弃快照，保证主干不受任何污染。</p>
+<h4 id="原则二控制面下沉用系统锁与凭证替代自然语言">原则二：控制面下沉，用系统锁与凭证替代自然语言</h4>
+<p>不要试图靠 Prompt
+对话去解决状态排他、身份恢复和权限问题。分布式系统怎么管节点，控制面就怎么管
+Agent。在控制面维护 Worker
+的生命周期与并发上限，用带生存时间的租约（Lease）替代文本认领，并显式校验消息来源与权限认证。用确定性代码与控制面原语，把自然语言引发的竞态条件和越权隐患彻底关进盒子里。</p>
+<h4 id="原则三极简拓扑优先按任务依赖关系选择收敛路径">原则三：极简拓扑优先，按任务依赖关系选择收敛路径</h4>
+<p>架构的目的是收敛结果，而不是展示复杂度。避开网状 Swarm
+的二次方灾难，优先选择
+O(N)O(N)
+的主控扇出；遇到分歧时用确定性 Merge 规则或中立裁判 Agent
+裁决，而不是让修改方拉锯。更重要的是根据任务依赖动态选择拓扑：串行依赖或热点集中时坚决使用单
+Agent，只有边界清晰、易于并行校验时才进行扇出。</p>
+<p>打通消息管道只是第一步。真正决定 Multi-Agent
+系统能否跑在生产环境里的，始终是底层的隔离、所有权和硬验收基础设施。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/6d36c5f294d4f193cac64e74030288ba39fb2942dcbf31e8108605ee5ada2342.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/6d36c5f294d4f193cac64e74030288ba39fb2942dcbf31e8108605ee5ada2342.md" download="Agent 通信越来越简单，为什么 Swarm 依然很难落地？.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>
