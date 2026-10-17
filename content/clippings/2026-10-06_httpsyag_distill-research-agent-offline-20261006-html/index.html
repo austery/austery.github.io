@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>大模型的研究能力，两天就能蒸馏进一个小模型</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">大模型的研究能力，两天就能蒸馏进一个小模型</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-06</span>
+    
+
+    <header class="article-header">
+      
+      <h1>大模型的研究能力，两天就能蒸馏进一个小模型</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/knowledge-distillation/">knowledge-distillation</a>
+      
+        <span class="tag-pill tag-pill--no-page">research-agent</span>
+      
+        <span class="tag-pill tag-pill--no-page">synthetic-data</span>
+      
+        <span class="tag-pill tag-pill--no-page">small-language-model</span>
+      
+        <span class="tag-pill tag-pill--no-page">tool-use</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">OpenResearcher论文提出通过构建本地封闭检索环境，利用大模型生成研究轨迹并蒸馏至小模型，使其在特定基准上超越商业旗舰。该方法揭示了环境工程与行为轨迹的价值，但受限于教师模型上限及环境泛化能力。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/distill-research-agent-offline-20261006.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-06T00:00:00.000Z">2026-10-06</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>5 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E8%92%B8%E9%A6%8F%E4%B8%80%E4%B8%AA%E8%AF%B4%E4%B8%8D%E6%B8%85%E8%BE%B9%E7%95%8C%E7%9A%84%E8%83%BD%E5%8A%9B">蒸馏一个说不清边界的能力</a></li><li class="outline-h2"><a href="#%E5%AE%83%E6%98%AF%E6%80%8E%E4%B9%88%E5%AD%A6%E7%9A%84%E7%BB%99%E4%B8%80%E4%B8%AA%E4%BC%9A%E5%81%9A%E9%A2%98%E7%9A%84%E6%A8%A1%E5%9E%8B%E9%80%A0%E4%B8%AA%E8%80%83%E5%9C%BA">它是怎么学的：给一个会做题的模型造个考场</a></li><li class="outline-h2"><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%80%E7%AC%A8%E7%9A%84%E6%96%B9%E6%B3%95%E8%83%BD%E8%B5%A2%E7%8E%AF%E5%A2%83%E5%92%8C%E8%A1%8C%E4%B8%BA%E4%B8%8D%E6%98%AF%E7%AD%94%E6%A1%88">为什么最笨的方法能赢：环境和行为，不是答案</a></li><li class="outline-h2"><a href="#%E8%92%B8%E9%A6%8F%E7%9A%84%E4%B8%89%E4%B8%AA%E6%9D%A1%E4%BB%B6%E4%B8%8E%E7%9C%9F%E6%AD%A3%E7%9A%84%E6%88%90%E6%9C%AC%E6%89%80%E5%9C%A8">蒸馏的三个条件与真正的成本所在</a></li><li class="outline-h2"><a href="#%E8%BE%B9%E7%95%8C%E4%B8%8E%E5%AE%83%E5%AF%B9%E6%88%91%E4%BB%AC%E7%9A%84%E5%90%AB%E4%B9%89">边界与它对我们的含义</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h2 id="蒸馏一个说不清边界的能力" data-reading-heading="">蒸馏一个说不清边界的能力</h2>
+<p>我们最常见的对大模型的知识进行蒸馏的方法，是针对一些有明确输入和输出的任务，比如写几行符合规范的代码，抽取一些实体，翻译一段文本等等。这些任务因为天生有明确的正确或错误的界定标准，所以我们可以直接给它非常明确的指令，让它用某种特定的格式来回答。但是对于一些比较耗时且复杂的research
+tasks来说，单步对齐的方法就不适用了。</p>
+<p>研究能力的难点在于，它的边界很难界定。面对一个模糊的问题，人类需要理清思路、搜索各种资料、阅读长篇报告、对细节进行比对、发现矛盾证据需要推翻重来、更换关键词搜索，最终将各种证据整合成令人信服的结论。工程上无法获取成千上万小时的高质量人类操作录像，没有这些现成的人类探索录像，传统的模仿学习从一开始就缺乏最关键的数据基础。</p>
+<p>那问题就简化成一个：蒸馏的前提是有示范数据，可示范数据从哪来？真人实录这一条已经堵死了。让大模型直接连真实网络边做边录，是剩下最顺理成章的路，但它自己就先欠着一笔账，下一节算。而造数据听起来自由度最大，真做起来会撞上一堵更硬的墙：研究不是数学题，既没法程序化出题，也没法机械判对错，一条数据好不好，连个能写进代码的准绳都没有。三条路堵了两条半。EMNLP
+2026 主会上发表的 OpenResearcher
+论文，来自德州农工大学、滑铁卢大学等机构的联合团队，要回答的就是这最后一个问题。</p>
+<h2 id="它是怎么学的给一个会做题的模型造个考场" data-reading-heading="">它是怎么学的：给一个会做题的模型造个考场</h2>
+<p>真要让大模型直接联网去解难题、把轨迹录下来，工程账本头一个通不过。几千道种子题想凑出几十万条可用训练样本，前前后后得调上百万次网络搜索；要是直接走商业搜索接口，光检索这一项就要花几千美元，换个贵点的接口账单还得再翻几倍。更要命的是公网网页天天在变，今天改版、明天超时下线，昨天录出来的搜索结果今天就对不上，整个训练数据流根本没法稳定复现。</p>
+<p>团队的解法是把整个信息环境整个搬回本地。他们从公开题库里挑出数千道种子题，按题目和参考答案一次性抓回上万篇核心证据文档，再把这些内容混进上千万篇公开网页里，在本地搭出一套不用联网的高并发检索系统。这个封闭考场不仅把高昂的搜索账单彻底抹平，还保证了每次检索给出的结果完全确定，随时都能复现。</p>
+<p>考场搭好后，该让答题教师上场了。团队拉来了开源权重模型
+GPT-OSS-120B，给它配了搜索、打开网页和页内查找三项基本操作，放它在封闭考场里自己找路解题。64
+块 H100
+连轴转了大约两天，教师模型跑了近十万次探索，把怎么查线索、怎么读长文献，以及线索断了之后怎么换关键词重搜，全都完整记录了下来。</p>
+<p>alt:
+离线闭卷库与教师演练把昂贵的联网检索换成本地管线，最终蒸馏进 3B
+激活的小模型</p>
+<p>拿到这批详尽的做题录像，后头教学生的环节就省事多了。学生模型挑了英伟达开源的轻量架构，每一步推理实际激活的参数只有
+3B
+上下。团队没搞复杂的在线试错，训练这步反而没什么花样：几块卡跑一晚，轻量底座把教师的解题步骤从头到尾模仿一遍，在短短几小时内就把这套成体系的研究动作学到了手。</p>
+<h2 id="为什么最笨的方法能赢环境和行为不是答案" data-reading-heading="">为什么最笨的方法能赢：环境和行为，不是答案</h2>
+<p>先来看一下实验结果。这里用的评测基准是开源的 BrowseComp-Plus。BrowseComp-Plus
+把 830
+个深度问答题和大约十万篇人工核验过的文献放在本地，进行断网离线搜索，来测试长程搜索和多跳推理的能力。在没有进行任何专门训练之前，一个轻量级的底层模型在这个基准上只能拿到二十多分。但在看过教师模型的探索录像之后，这个每一步激活参数都非常少的小模型得到了
+54.8 分的成绩。而 GPT-4.1 和 Claude-4-Opus
+这些商业旗舰，在完全相同的受控检索环境下也只能拿到 36 分左右。</p>
+<p>小模型的高分并非死记硬背题目答案的结果。消融实验显示一个有趣的细节：即使特意挑选教师模型最终答错的失败路径进行微调，小模型仍然能拿到
+55.06
+分的分数，与使用正确路径的训练结果几乎一样。小模型学到的行动策略是：检索落空就换词重试，去长篇文献里定位证据；具体题目的答案本身，没有被背下来。</p>
+<p>反过来，这也说明为什么最聪明的一般大模型在长程测试中表现不佳。基准的官方数据表明，如果不做任何搜索，直接把包含答案的黄金文档放进上下文中，GPT-4.1
+的准确率可以达到
+93.5%。旗舰模型本身并不缺乏推理能力，之所以在测试中得分偏低，是因为它没有养成在未知环境中不断使用工具、反复排查证据的行为习惯。</p>
+<p>但单纯模仿行为的适用场景是有明确限制的。论文里的消融实验显示，只要把本考场最初的黄金文档从文档堆里拿掉，模型的成绩会掉到
+6.35 分。在同一个作者发表的 AgentFlow
+论文中，如果面对真实动态互联网，仅仅通过监督微调模仿轨迹，成绩也会降到
+19.5
+分，只能靠在线强化学习持续探索试错。这两个对照实验说明：信息环境和工具接口完全固定，单纯模仿行为才真正省力。</p>
+<h2 id="蒸馏的三个条件与真正的成本所在" data-reading-heading="">蒸馏的三个条件与真正的成本所在</h2>
+<p>顺着这套工程实践捋下来，能得出一个大胆的读法：这本质上是对前沿大模型高阶行为能力的一场低成本蒸馏。深度研究能力长久以来是闭源大模型的独门资产，普通开发者只能按
+token 付费去调接口；而 OpenResearcher
+证明了只要找对路子，完全能把顶级能力从大模型里低成本蒸馏出来。想跑通这场蒸馏，手里得攥住三个硬前提：第一，能自托管一个开源大模型当教师，随时在本地自由采样；第二，想学的研究行为能分拆成一串连续的工具调用动作；第三，自己得有能力搭出封闭考场，并且能跑通自动判分。</p>
+<p>这三个前提把过去模型研发的成本账本彻底翻了过来。在大家的固有印象里，训模型才是最吃算力、最烧钱的大头；但在这条管线里，教小模型做监督微调反而成了白菜价，几块卡跑一晚就能交工。整套体系里真正值钱、也真正构成护城河的，反而是前期理文献、设计工具原语花掉的环境工程心血，以及顺着这套环境攒下来的海量高质量行为轨迹。</p>
+<p>alt:
+算力重心在教师演练与环境工程，学生蒸馏只要几块卡跑一晚</p>
+<p>行业大厂的跟进动作印证了轨迹确实是硬通货。英伟达把这批合成轨迹用作自家新旗舰
+Nemotron 3 Ultra 的微调数据之一，官方合成数据平台 NeMo Data Designer
+也集成了这套生成思路。这个动作把话挑明了：权重本身会过时，能持续从顶级模型蒸馏行为的那条管线，连同攒下的轨迹，才是能一直复用的家底。</p>
+<h2 id="边界与它对我们的含义" data-reading-heading="">边界与它对我们的含义</h2>
+<p>这套蒸馏打法能效确实惊人，但真要算账，还得看清客观的技术边界。小模型的上限始终扣在教师模型手里，学生并没有发生什么实质跃迁；在权威基准的官方大榜上，新一代通用旗舰
+GPT-5 的得分已经冲破 70 分，通用智能上的代差依然摆在那里。</p>
+<p>另外，模型的高分表现极度依赖特定的考场环境。现在的闭卷库主要处理事实类信息检索，这套轻量模型一旦走出熟悉的受控考场、直接扔进真实公网评测，得分立刻滑落到
+26.3
+分，明显落后于同行靠大规模强化学习磨出来的专业模型；再者，截至目前公开技术圈还没有第三方独立复现过这个结果，开源的数据层也卡着非商用授权的红线。</p>
+<p>把这些边界条件摆在一块，要不要自己搭这套管线，可以理出四条硬杠杠：业务场景必须得长期高频复用；任务必须有一套客观明确的自动判分办法；平时的翻车瓶颈要卡在搜索和浏览这些具体的决策动作上，而不是检索漏召回或者工具挂掉这类基建问题；业务依赖的信息环境能用较低成本打包和重置。只有这四条全对得上，花算力去搭本地考场、把大模型的研究经验蒸馏进私有小模型，ROI
+才是划算的；而面对全是未知变量、需要大量即兴推理的开放任务，老老实实调用商业大模型接口，依旧是确定性最高的那条路。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/49c8c1e7c0cf2080852a09f6d65ae91429a2784f3dbb94e046fb7f5578b9038a.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/49c8c1e7c0cf2080852a09f6d65ae91429a2784f3dbb94e046fb7f5578b9038a.md" download="大模型的研究能力，两天就能蒸馏进一个小模型.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=nvidia" class="entity-link company-link">nvidia</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=openresearcher" class="entity-link product-link">openresearcher</a>, <a href="/search/?q=gpt-oss-120b" class="entity-link product-link">gpt-oss-120b</a>, <a href="/search/?q=nemotron-3-ultra" class="entity-link product-link">nemotron-3-ultra</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

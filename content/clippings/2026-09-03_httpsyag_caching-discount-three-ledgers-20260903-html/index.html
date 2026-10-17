@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>智能体 token 用量过线人类、OpenAI
+自研芯片跑分出炉、GitHub 发布文档压缩原型</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">智能体 token 用量过线人类、OpenAI
+自研芯片跑分出炉、GitHub 发布文档压缩原型</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-03</span>
+    
+
+    <header class="article-header">
+      
+      <h1>智能体 token 用量过线人类、OpenAI
+自研芯片跑分出炉、GitHub 发布文档压缩原型</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/prompt-caching/">prompt-caching</a>
+      
+        <a class="tag-link" href="/tags/token-economics/">token-economics</a>
+      
+        <a class="tag-link" href="/tags/ai-chip/">ai-chip</a>
+      
+        <span class="tag-pill tag-pill--no-page">knowledge-compression</span>
+      
+        <span class="tag-pill tag-pill--no-page">agent-workload</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章剖析智能体Token用量、GitHub文档压缩及OpenAI芯片跑分三则新闻，指出因Prompt Caching机制，名义数据与真实成本存在偏差，强调需结合缓存折扣与真实负载评估AI技术经济性。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/caching-discount-three-ledgers-20260903.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-09-03T00:00:00.000Z">2026-09-03</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>5 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E6%99%BA%E8%83%BD%E4%BD%93">智能体</a></li><li class="outline-h2"><a href="#%E6%99%BA%E8%83%BD%E4%BD%93-token">智能体 token</a></li><li class="outline-h2"><a href="#github">GitHub</a></li><li class="outline-h2"><a href="#openai">OpenAI</a></li><li class="outline-h2"><a href="#%E4%B8%89%E4%BB%B6%E4%BA%8B%E6%94%BE%E5%9C%A8%E4%B8%80%E8%B5%B7%E7%9C%8B">三件事放在一起看</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h2 id="智能体" data-reading-heading="">智能体</h2>
+<p>token 用量过线人类、OpenAI 自研芯片跑分出炉、GitHub
+发布文档压缩原型</p>
+<p>先看上周 AI 行业的三条新闻。OpenRouter
+平台公布了一组数据，智能体消耗的 token
+数量超过了人类，差距还在拉大。接着 OpenAI 放出了自研推理芯片 Jalapeño
+的首批跑分，部分指标跑赢了 Nvidia 现役产品。另外 GitHub 前瞻团队发布了
+Knowledge Compressor
+原型工具，可以把智能体反复阅读的文档压短一半。这三件事各自带着数字上的坑，我们挨个说。顺带一提，这三笔账里都有一个关键角色。模型服务商对重复读取的上下文会给个折扣价，这套机制叫
+prompt caching，我们先放一放。</p>
+<p>三份不同的账连向同一枚打折硬币：名义数字都因缓存折扣而失真</p>
+<h2 id="智能体-token" data-reading-heading="">智能体 token</h2>
+<p>用量达人类 5.2 倍，实际账单约 2 倍</p>
+<p>8 月中旬 OpenRouter 平台数据负责人 Peter Walker
+给了一组统计数据。2026 年 2 月 6 日是人类 token
+消耗量最后一次赢过智能体。截至 8 月 10
+日的七天平均数据显示，智能体每周跑掉 7.3 万亿 token，人类每周用掉 1.4
+万亿 token。按这两个数字算，智能体的名义用量达到了人类的 5.2
+倍。过去半年里智能体用量涨了 14 倍，人类只涨了 2.8 倍。这组数据传遍了
+The Decoder 和 a16z 等五个独立转述链，各家引用的数字都对得上。这组多方核对一致的数据构成了判断近期
+token 经济的基准。</p>
+<p>这 5.2 倍的用量其实有两个口径。按 Walker 自己给的 total token usage
+来看，智能体用量里差不多 70% 是缓存读取；a16z 周报转述时换了 token burn
+口径，占比在 85% 以上。两个口径统计的不是同一种量，分别是约 70% 和 85%
+以上。a16z 也点出，智能体多出来的那些用量基本都是缓存 token
+贡献的。模型服务商对缓存的收费一般要低很多。按这个缓存占比加上缓存约一折计价粗算，智能体给人类打出的实际账单倍数在
+2
+倍上下。这个估算没有实测兜底，最终落在哪，还得看两边实际的缓存占比和具体的折扣费率。</p>
+<p>用这组平台数据还得卡死两条外推边界。第一，这只是 OpenRouter
+一家的数据。平台厂商自己说他们的流量只占全球推理量的 1% 左右，每周大概
+28 万亿 token。这里的用户多是开发者，模型也偏向 token
+效率偏低的开放权重。他们区分人类和智能体靠的是七个行为信号加权估计，权重没公开，别人没法复现。再加上八月份碰上假期，人类用量也会跟着往下走。更夸张的是单点集中，Hermes
+Agent 这个单一应用一周就烧了 1.5 万亿 token，快赶上其他 49
+个追踪应用的加总了，差不多占了智能体总流量的两成。</p>
+<p>第二，这个数字有系统性高估的倾向。转述案例里经常看到智能体去下载无关文件或者搜一堆没用的东西，更典型的是掉进重试风暴：第一次失败就该停手，它却一遍遍地重来，token
+就这么滚上去了，干的活并没有变多。另外平台整体的缓存命中率确实高，但个别应用还是会遇到缓存失效，比如
+hermes-agent 的 20957
+号问题。这些坑连同动态提示词和缓存写入的单独计费，都在一点点吃掉账面上的省钱效应。</p>
+<h2 id="github" data-reading-heading="">GitHub</h2>
+<p>压缩原型：官方称 2,000 次复用回本，中位预期 5,000 次以上</p>
+<p>GitHub 前瞻团队研究员 Alex Gorischek 8 月 24 日发了个原型工具叫
+Knowledge
+Compressor。这东西能把智能体反复读的知识文档自动压短。在官方示例里，合成文本从
+996 个 token 压到了 480 个
+token。它的做法是先自动生成二十四道问答题，然后闭卷筛选加迭代压缩。有个强制见红机制要求至少一道题答错，接着进入失败回流和最小恢复环节，直到全绿收工。官方博文中描述了这套验收流程。官方给算了一笔经济账，压缩一次花
+2 美元，每次未缓存读取省 0.001 美元，同一份文档复用 2,000
+次左右能回本。官方在脚注里认了回本门槛会受定价和缓存影响，但没给出具体数字。</p>
+<p>这笔回本账有个错位。官方算账时把每次读取都当成未缓存的全价计费，可文档在多轮交互里反复加载，这正好是缓存命中的优势场景。把缓存折扣算进去，工具的经济收益就有点波动了。官方隐含的单价是每百万
+token 1.94 美元，Sol 的牌价则是 4 到 5
+美元。大头还是在缓存价格上，主流厂商的定价差得很多。OpenAI 和 Anthropic
+的缓存读取按原价一折计，Gemini 按二五折计，DeepSeek
+只收百分之二。一项实测数据表明，长会话缓存能省下 78% 到 81%
+的成本。如果按 50% 缓存命中率算，回本大概要 3,640 次。按 90%
+命中率算，回本大概要 10,500 次。要是全缓存的情况，回本门槛直接顶到
+20,000 次。那 2,000 次只是全价情况下的乐观估计，诚实的回本区间落在 2,000
+到 20,000 次之间，中位预期在 5,000 次以上。</p>
+<p>我们再往 10K token 长度的文档推算一下。单做压缩就要花 20 美元，加上
+240 题跑全新上下文的验证环节还得花 25 美元，跑一次起步成本就是 45
+美元。这个原型现在没开源，外部复现和社区反馈都没做到官方演示的理想状态。另外拿问答指标来验证压缩效果也藏着坑，连接性知识丢了在指标上也看不出来。这个工具剩下的不可替代价值，只有上下文容量这一项。而且这个回本门槛还要求文档几乎不能改，每次还得把全文读进上下文。海量的业务文档在生命周期里，很难做到
+5,000 次以上的无修改读取。</p>
+<h2 id="openai" data-reading-heading="">OpenAI</h2>
+<p>自研芯片跑分领先，但真实负载测试缺席</p>
+<p>OpenAI 8 月 25 日交出了自研推理芯片 Jalapeño 的首批成绩。在 8,000
+token 读入、1,000 token 产出的固定长度单轮测试中，他们用了 GPT-OSS
+120B、DeepSeek R1 670B 还有开放权重的 Kimi K2.5 三款模型。对标 Nvidia 的
+GB200 和 GB300 芯片，Jalapeño 的每瓦吞吐达到 1.5 到 1.9
+倍，端到端延迟快了 1.7 到 3.6 倍。这组由厂商单方面提供的数字说明了新硬件的纸面性能。第三方评测机构
+SemiAnalysis
+在实验室现场抽检了一部分推理轮次，没有跑全套测试。现有的批评未质疑造假，都认可是真的领先，转而指出测试口径有缺失。</p>
+<p>SemiAnalysis
+更喜欢用模拟长上下文和多轮对话真实智能体负载的评测口径，比如
+AgentX。在这个负载场景里，有个关键变量是重复读取相同的长篇前置上下文，也就是重前缀缓存。这次给出的所有成绩里，未见
+AgentX 成绩。评测机构提了一句，在 8k/1k
+固定长度打靶里跑得好的框架，到了真实的 AgentX 测试里表现经常不太行。单一的固定长度最优未必能代表复杂的智能体工作负载具有同等表现。</p>
+<p>技术社区 Hacker News 补充了两条不对称的测试口径批评。先是拿来参照的
+Nvidia Rubin 成绩算上了投机解码技术 speculative decoding，Jalapeño
+这边没用。再是 Jalapeño 现在还只是工程样品，2026 年底只有极小规模，要到
+2027 年才开始放量，Rubin 可是已经实际出货了。而且这次直接对比的对象是
+GB200 和 GB300，Rubin
+没进直接测试环节，单用户解码场景对真实业务的代表性也比较弱。换到
+per-total-cost 口径看，媒体 wallstengine 转述的观点是，Jalapeño 和 Rubin
+水平差不多。仔细盘这第三本账，它和前面两本结构很像。8k/1k
+固定长度测试测不出真实智能体负载，因为真实负载里占比最大的活儿，正好是享受折扣的重复内容读取。在这本账里，折扣读取直接让真实评测口径缺席了。</p>
+<p>平台账单里名义与实际失衡，压缩工具的回本门槛一路抬升，芯片评测的真实负载成了移动靶</p>
+<h2 id="三件事放在一起看" data-reading-heading="">三件事放在一起看</h2>
+<p>三条新闻来自三个不挨着的发布方，看的时候各有一个要避开的坑。引用
+OpenRouter 的用量数字，得记住大头都是打折的缓存读取，名义上是 5.2
+倍，折算下来实际账单粗算约 2
+倍。听压缩工具的省钱故事，先去核实它的回本账是按全价算还是按折扣价算。看芯片跑分，要留意打靶成绩和真实负载成绩现在是两码事。这些事背后其实都牵着
+prompt caching 这个变量，我们六月那篇 KV
+Cache 文章聊过它的杠杆。这里不展开，大家心里有数就行。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/60895d0cccbbeccfc879aa1b2411960975ab53c68239d199bb0732137e85fd7c.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/60895d0cccbbeccfc879aa1b2411960975ab53c68239d199bb0732137e85fd7c.md" download="智能体 token 用量过线人类、OpenAI
+自研芯片跑分出炉、GitHub 发布文档压缩原型.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Peter Walker" class="entity-link person-link">Peter Walker</a>, <a href="/search/?q=Alex Gorischek" class="entity-link person-link">Alex Gorischek</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=OpenRouter" class="entity-link company-link">OpenRouter</a>, <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, <a href="/search/?q=GitHub" class="entity-link company-link">GitHub</a>, <a href="/search/?q=Nvidia" class="entity-link company-link">Nvidia</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Jalapeño" class="entity-link product-link">Jalapeño</a>, <a href="/search/?q=Knowledge Compressor" class="entity-link product-link">Knowledge Compressor</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

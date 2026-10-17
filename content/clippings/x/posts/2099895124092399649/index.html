@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>美研芒格君 · 2026-09-15 · 帖子</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="x-reading" data-pagefind-body>
+  <header class="x-heading">
+    <p class="x-eyebrow">𝕏 原文阅读 · 帖子</p>
+    <h1 data-pagefind-meta="title">美研芒格君 · 2026-09-15 · 帖子</h1>
+    <span hidden data-pagefind-meta="author">美研芒格君</span>
+    <span hidden data-pagefind-filter="x_author" data-pagefind-ignore>2058239737522204672</span>
+    <span hidden data-pagefind-meta="date">2026-09-15T16:16:26.000Z</span>
+    <p>保留来源原文。时间显示为 Toronto 当地时间；未保存的配图与引用请前往 X 查看。</p>
+    <a href="/x/">返回 X 阅读</a>
+  </header>
+  <p class="x-status">保存说明：除条目另有标注外，正文尚未人工核对 · 图片未保存 · 引用或对话上下文可能不完整。</p>
+
+  
+<article class="x-entry" data-author="2058239737522204672" data-long="true" id="x-post-2099895124092399649">
+  <span id="x-post-heading-2099895124092399649" class="x-post-anchor" aria-hidden="true"></span>
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div id="x-post-time-2099895124092399649" class="x-post-heading"><time datetime="2026-09-15T16:16:26.000Z">2026-09-15 12:16</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2099895124092399649" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text">很多人问，业界里的强化学习到底在做什么？本质上就一句话：用尽可能小的成本，高质量完成特定领域任务
+
+我想用这个帖子举个例子大家串一下5 步简化流程，和我整理的一个 hugging face 系列阅读链接（免费，可放心使用），我把完整的阅读链接放在评论区
+
+业界 RL原理本质上其实很简单：在特定领域出题 → 尝试 → 评分 → 更新 → 验证，反复进行，看似简单的流程，每一项都可以挖得很深，适合个人学习或者职业选择的方向 
+
+我举个例子用一个 Hugging Face 训练小模型，如何强化学习提升修 bug能力， 可以先抓住这几个步骤：
+
+1/ 出题、定标准：选一个已有基础能力的SOTA模型，准备代码任务，提前规定怎样算修好
+
+2/ 让你要强化学习的开元模型尝试：读代码、改文件、跑测试，根据报错继续改。这一整次尝试，叫一个 rollout
+
+3/ 给结果打分：检查代码通过哪些测试，把结果变成奖励。奖励怎么设计，会影响模型往什么方向学
+
+4/ 更新模型：收集多次尝试的记录和评分，用 GRPO 等方法调整模型参数
+
+5/ 换题验证：用没参与训练的任务检查效果。训练奖励涨了，还要看新题能不能做好。评估方法
+
+我整理的阅读资料按照这个顺序看：
+1️⃣ 先懂基本循环：HF 的 RL 入门。用游戏例子讲清行动、环境反馈和奖励的关系
+https://t.co/fFdGIhFFSC
+
+2️⃣ 再懂怎么评分：How frontier models train on outcomes。看大模型怎样利用可验证结果训练，以及奖励设计为什么会影响效果
+https://t.co/swSNP1QCNY
+
+篇幅有限，如何更新模型权重？任务、工具、接口、沙箱如何配合？以及对应的HF 上的实战 demo，训练等待优化和旧模型数据处理的教程，我也一并整理好，我放在评论区
+
+相信看完，你基本就半只脚趾头踏入了 LLM 后训练强化学习的部分</div>
+    <footer>
+      
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 2099895124092399649<br>保存时间：2026-10-04T20:13:39.263Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：See source observations for media and context status.</p></details>
+    </footer>
+  </div>
+</article>
+
+  <nav class="x-pagination" aria-label="同来源合集" data-pagefind-ignore> </nav>
+</div>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

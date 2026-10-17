@@ -1,0 +1,1292 @@
+---
+author: TVO Today
+date: '2026-10-08'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=Lzf0ybgEang
+speaker: TVO Today
+tags:
+  - breast-cancer
+  - cancer-awareness
+  - resilience
+  - palliative-care
+  - patient-advocacy
+title: 带着感恩与乳腺癌共存：资深主播 Cynthia Mulligan 的生命韧性与觉醒
+summary: 加拿大著名新闻主播 Cynthia Mulligan 与主持人 Nam Kiwanuka 展开深度对谈。她坦诚分享了从 2010 年初次确诊乳腺癌到 2020 年复发并转移为四期的心路历程，探讨了公开抗癌历程对公众意识的启发、面对死亡与疾病时的心理防御、来自工作场所与亲友的支持，以及作为母亲为了守护女儿成长而迸发的坚韧生命力。
+insight: ''
+draft: true
+series: ''
+category: health-wellness
+area: life-family
+project: []
+people:
+  - Cynthia Mulligan
+companies_orgs:
+  - CityNews
+  - Citytv
+  - Princess Margaret Cancer Centre
+products_models: []
+media_books: []
+status: evergreen
+---
+### 序言与重聚：跨越岁月的友谊
+
+**Nam Kiwanuka**: 你正在收听的是 *(Mis)Treated* 播客。我是 **Nam Kiwanuka**。在今天的节目中，我有幸采访到一位我深感钦佩和喜爱的人——著名记者 **Cynthia Mulligan**。引用 ODB 与 Mariah Carey 的歌曲《Fantasy》里的一句歌词，我和 Cynthia 识于微时，交情深厚，正如歌中所唱“就像婴儿离不开安抚奶嘴一样”。那是我年轻时作为初出茅庐的记者在 **CHUM** 担任摄像师的照片。而那是记者 Cynthia Mulligan 的照片，她是 CHUM 最早的女性摄像师之一。
+
+那么多年以前，Cynthia 对我给予了极大的支持，直到今天她依然如此，既是一位杰出的导师，也是一位挚友。2010 年，当 Cynthia 第一次被确诊患有**乳腺癌**时，她的两个女儿才只有 6 岁和 10 岁。Cynthia 在当时做了一件极具突破性且轰动一时的事情：在 Instagram 或 TikTok 都尚未诞生的年代，她公开分享了自己患癌的消息，并在 **Citytv** 上全程记录了自己的抗癌经历。毫无疑问，Cynthia 在提高加拿大公众对乳腺癌的认知方面发挥了至关重要的作用。
+
+2020 年圣诞节前夕，她得知自己的乳腺癌复发并恶化为**四期乳腺癌**（晚期转移）。Cynthia 希望，随着针对乳腺癌科研的不断推进，终有一天它能像慢性病一样被治疗和管理。最近她给我发了一封邮件，并且同意让我在这里与大家分享。她写道：“我又做了一次扫描检查，结果显示**无疾病迹象（No Evidence of Disease, NED）**。这种情况已经维持了一年半以上。我感到自己如此幸运，也无比感恩。”Cynthia Mulligan 现在来到了我们节目中。欢迎来到我们的播客！
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: You're listening to (Mis)Treated. I'm Nam Kiwanuka. On today's episode, I get to speak with someone who I deeply admire and love, celebrated journalist Cynthia Mulligan. To quote ODB and Mariah Carey's song, "Fantasy," Cynthia and I go way back, "like babies and pacifiers". That's a picture of me as a young journalist working as a videographer at CHUM. And that's a picture of journalist Cynthia Mulligan, one of the first videographers at CHUM. Cynthia was so supportive of me all those years ago, and she still is to this day, a great mentor and a friend.
+
+In 2010, when Cynthia was first diagnosed with breast cancer, her girls were just six and ten years old. Cynthia did something which was phenomenal and groundbreaking at the time: before Instagram or TikTok were created, she publicly shared she had breast cancer and documented her experience for Citytv. Without a doubt, Cynthia has played a critical role in raising breast cancer awareness in Canada.
+
+In 2020, days before Christmas, she found out that she had stage four breast cancer. Cynthia hopes that with the research being done around breast cancer, one day, it will become treated as a chronic illness. She recently sent me an email, and she said it's okay if I share it with you. She writes, "I had another scan. It shows no evidence of disease. It has been that way for more than a year and a half. I am so lucky and so very grateful." Cynthia Mulligan joins me now. Welcome to the podcast.
+
+</details>
+
+**Cynthia Mulligan**: 噢，谢谢你。能来到这里我太高兴了。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Oh, thank you. I'm thrilled to be here.
+
+</details>
+
+**Nam Kiwanuka**: 能请你向大家做个自我介绍吗？
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Could you please introduce yourself?
+
+</details>
+
+**Cynthia Mulligan**: 我的名字是 **Cynthia Mulligan**。我是两个很棒的年轻女孩——现在已经是年轻女性了——的母亲。她们仍然是我的小女孩，不过她们……
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: My name is Cynthia Mulligan. I'm a mom of two amazing young girls, young women now. They're still my girls, but they're...
+
+</details>
+
+**Nam Kiwanuka**: 是的，在母亲眼里永远都是孩子。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Yeah, always your babies.
+
+</details>
+
+**Cynthia Mulligan**: ……她们现在已经 22 岁和 26 岁了，这对我来说简直难以置信。我是一位女儿、一位姐妹、一位伴侣，同时在 **CityNews** 工作。我在那里工作了超过 30 年，曾长期深入报道政治新闻，现在我是下午 5 点和 6 点晚间新闻节目的主播。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: ...22 and 26 now, which is incredible to me. I'm a daughter, I'm a sister, I'm a partner, and I work at CityNews. I've been there for over 30 years, covered politics extensively, and now I'm the anchor of the 5 and 6 newscast.
+
+</details>
+
+---
+
+### 初次确诊：为了年幼女儿而迸发的力量
+
+**Nam Kiwanuka**: 你是在 2010 年 4 月首次被确诊患有乳腺癌的。从最初确诊到现在这 16 年的岁月，你会如何向大家形容这段历程？
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Well, you were first diagnosed with breast cancer in April of 2010. How would you describe these last 16 years from when you were first diagnosed with breast cancer?
+
+</details>
+
+**Cynthia Mulligan**: 呼……（长长地舒了一口气）真没想到你会问这个问题。这真是一段跌宕起伏的过山车之旅。但我必须说，当我第一次确诊时，我的两个女儿还很小，而我的婚姻当时刚刚破裂。她们那时只有 6 岁和 10 岁，我当时下定决心，无论如何为了她们我也一定要挺过去。我必须挺过去。
+
+我想抚养我的女儿们长大，我想把世间一切美好的事物都注入到她们的生命里。所以在那个时候，我非常清醒地意识到：“我必须活下去，而且我必须用正确的方式度过这一切。为了她们，我必须在心理上、身体上都好好地挺过这一关。”因此，我当时对自己许下了一些承诺：我要在磨难中学习，我要在逆境中成长。正因为有她们的存在，我发现了一种连我自己都未曾知晓的内在力量，支撑着我跨过难关。孩子真的能给人带来……你知道那些母亲为了救孩子徒手抬起汽车的故事吗？
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Ooh... (Exhaling sharply) Wasn't expecting that question. It's been a roller coaster. But I will say that, when I was first diagnosed, my daughters were little and my marriage had just ended, and they were only six and ten, and I was determined to get through it for them. I had to. I wanted to raise my daughters. I wanted to instil every positive thing I could into them.
+
+And so, I was really conscious at the time of, "I have to live, and I have to do this right. I have to get through this well - mentally, physically - for them." So, I made some promises to myself back then that I was going to learn and I was going to grow. And because of them, I found a strength I didn't know I had to get through it. Kids can be, um... You know, when you hear those stories of how a mom can pick up a car off her child?
+
+</details>
+
+**Nam Kiwanuka**: 是的，那种母爱的本能爆发。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Yes.
+
+</details>
+
+**Cynthia Mulligan**: 就是那种感觉。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: That kind of thing.
+
+</details>
+
+**Nam Kiwanuka**: 所以，当你得知病情时，那些就是你对自己许下的诺言吗？
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: So, when you found out, those are the promises that you made to yourself?
+
+</details>
+
+**Cynthia Mulligan**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Yes.
+
+</details>
+
+**Nam Kiwanuka**: 为了守护你的孩子们。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Because to honour your children.
+
+</details>
+
+**Cynthia Mulligan**: 是的。我不想让她们感到恐惧，所以我竭尽全力展现坚强。我会对她们说：“看，我们生活中的这些人有多么美好啊！”因为正如我所说，当时我的婚姻刚刚结束。我的女性朋友们组成了庞大的支持网络，她们就像一张安全网一样牢牢托住了我。每当我要做化疗，她们就会过来留宿，为我们做饭。
+
+今天我还特地问我女儿们：“你们对那段时光还有什么记忆吗？”因为 16 年后再回看，我觉得很有意思，“你们还记得些什么？”她们回答说：“我们只记得当时常常和你那帮朋友一起开怀大笑。”你看，她们并没有把那段日子记忆成一段可怕、悲惨的时光，而这正是我当初努力的目标。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Yes. And I didn't want them to be terrified, so I tried to exhibit strength. And I would say to them, like, "Look how beautiful the people in our lives are," because, you know, as I said, my marriage had just ended. My girlfriends became a network of support; they were like a safety net. And if I had a chemo, they would come and stay over, and they would cook.
+
+And I asked my daughters today, "What do you remember of those times?" Because I find it fascinating 16 years later, "What do you remember?" And they said, "We remember laughing a lot with your friends," you know? So, they don't remember it as a horrible, terrible time, which was my goal.
+
+</details>
+
+---
+
+### 公开抗癌与生命的重新定义
+
+**Nam Kiwanuka**: 嗯。你当时分享了这些经历——当你最初确诊时，你建了一个博客……
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Mm-hmm. Well, you shared-- when you were first diagnosed, you created a blog...
+
+</details>
+
+**Cynthia Mulligan**: 没错，我写了博客。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: I did.
+
+</details>
+
+**Nam Kiwanuka**: ……你公开分享了所有细节。我们得知，比如你去接受化疗和放疗时，头上还戴着你女儿的小王冠发饰。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: ...and you shared this publicly, and we learned about how, like, when you went to chemo and radiation, you wore one of your daughter's, like, little tiaras.
+
+</details>
+
+**Cynthia Mulligan**: 是的，我确实戴了。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: CYNTHIA: I did.
+
+</details>
+
+**Nam Kiwanuka**: 那真是太温馨了。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: NAM: Which was so sweet.
+
+</details>
+
+**Cynthia Mulligan**: 是她要我戴上的。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: She asked me to. Yeah.
+
+</details>
+
+**Nam Kiwanuka**: 是啊。然后在 2011 年，你向大家分享你已经战胜了癌症。然而到了 2021 年，你的乳腺癌复发了。你在网上公布了这一消息，其中写了这样一段话：
+
+> “我唯一的请求是，当你们看着我时，不要把我看作一个病人。请把我看作一个正在热烈享受这美妙生命每分每秒的人。我并不是‘带着癌症生活’，它只是恰好搭上了我精彩生命的顺风车而已。”
+
+为什么分享这句话对你来说如此重要？
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Yeah. And so, and then, in 2011, you shared that you had beat the cancer. And then, in 2021, your breast cancer returned. You posted the news online, and part of what you wrote was this: "All I ask is that, when you see me, don't see someone who is sick. See someone who is loving every second of this glorious thing we call life. I'm not living with cancer, it's just hitching a ride on my amazing life." Why was this important for you to share?
+
+</details>
+
+**Cynthia Mulligan**: 因为我认为，如果别人总是把你当成一个病人来对待，这会慢慢侵蚀你的自信心。几年前有人对我说过一句话——很有意思，因为他们自己患有另一种疾病——他们对我说：“哎，至少我不需要像你一样面临迫在眉睫的死亡。”
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Because, I think, if-- if people treat you like you're sick, it erodes your confidence. Somebody, a couple of years ago, said to me - and it was interesting because they suffer from a different disease - and they said, "Well, at least I'm not facing imminent death like you."
+
+</details>
+
+**Nam Kiwanuka**: 天哪，怎么能这么说！
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: NAM: No!
+
+</details>
+
+**Cynthia Mulligan**: 那一瞬间，我感觉自己像是被人迎面狠狠揍了一拳。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: And I felt like they punched me in the face.
+
+</details>
+
+**Nam Kiwanuka**: 真是难以置信。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Oh my gosh.
+
+</details>
+
+**Cynthia Mulligan**: 我不想要那种目光。我不想让别人用那种眼神看着我。我不希望人们那样看待我，因为这会侵蚀你的意志，对吧？我不希望那种消极的气息渗入到我精心构筑的心理防线里——我在身边建立了一座坚固的堡垒，告诉自己：“我很健康，我很好。”
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: I don't want that. I don't want people to look at me like that. I don't want people to think of me like that, because it erodes you, I think, right? I don't want that seeping into my very carefully curated fortress around me of, "I'm okay, I'm good."
+
+</details>
+
+**Nam Kiwanuka**: 嗯。因为那会让你感觉……是不是会让你感到被彻底暴露和脆弱？
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Mm-hmm. Because it kind of makes you feel-- Does it make you feel exposed?
+
+</details>
+
+**Cynthia Mulligan**: 确实如此。确实会这样。就好像在说：“别用那种眼光看我。我不想呈现出那个样子”，因为我自己根本就不是那样看我自己的。我看自己的方式是：我每天清晨醒来，我都在过着这段精彩绝伦的生活。我很幸运，我拥有非常美好的人生。
+
+人们听到我说“我是世界上最幸运的人之一”时可能会感到诧异，但我认为这是因为我比以往更懂得感激生命。我们大多数人平日里并不会每天直视自己的死亡；我们往往选择无视它。我们都知道自己终有一天会死去，但大多数人不需要每天面对死亡的逼近。而我其实……我选择——这是一种主观选择——我选择将它视为一种提醒，提醒我生命究竟有多么宝贵。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: It does. It does. It's like, "Don't look at me like that. I don't want to look like that" because I'm not looking at me like that. I'm looking at me like I'm getting up every day, I'm living this amazing life. I'm lucky; I have a great life.
+
+People may think-- may be surprised to hear me say, "I'm one of the luckiest people in the world," but I think it's because I appreciate life more, because most of us don't stare at our own mortality every day; we ignore that. We all know we're going to die one day, but most people aren't faced with it regularly. I actually... I choose-- and it's a choice. I choose to take that as a reminder that life is really precious.
+
+</details>
+
+---
+
+### 直面死亡：生命密度的哲学
+
+**Nam Kiwanuka**: 我想大家其实都对死亡充满恐惧。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: I think we are afraid of death.
+
+</details>
+
+**Cynthia Mulligan**: 当然如此，我们甚至避讳谈论它。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Of course. We don't talk about it.
+
+</details>
+
+**Nam Kiwanuka**: 这种直面死亡的经历让你对自己有了怎样的认识？因为这看起来是你已经能够坦然面对的事情。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: What has it taught you about yourself? Because this is something that you are at peace with.
+
+</details>
+
+**Cynthia Mulligan**: 实际上，我对死亡本身并没有真正感到释怀。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: I'm not really at peace with dying, actually.
+
+</details>
+
+**Nam Kiwanuka**: 是吗？请跟我多谈谈这一点。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Yeah. Tell me more about that.
+
+</details>
+
+**Cynthia Mulligan**: 嗯……因为我还没准备好离开。所以……我应对它的方式是：这确实可能会缩短我的寿命，对吧？它终究会缩短我的寿命。但我想要做的是，在我所拥有的有限时间里，塞进尽可能多的美好与不可思议的瞬间，让我度过的人生比那些活到 100 岁的人更充实、更精彩。活多久并不重要，重要的是你在属于你的时间里做了些什么，这才是我的全部焦点所在。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Um... I'm not ready. So, I... The way I'm dealing with it, like, this could shorten my life, right? And it will. But what I want to do is pack as much beauty and-- and incredible moments into the time that I have and live a longer and better life than somebody who makes it to 100, right? It's not how long you live; it's what you do in the time that you have, and that's what I'm focusing on.
+
+</details>
+
+**Nam Kiwanuka**: 你愿意公开谈论这一切，真的是太无私了。因为我们见过很多在暗处默默承受的人，直到生命的最后一刻，外界才知道他们在私底下经历了什么。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: You are so generous in not just, like, talking about this, because we know a lot of people who hold that stuff close to their chest, and you don't find out that they were navigating something behind the scenes until the very end.
+
+</details>
+
+**Cynthia Mulligan**: 是的，我非常尊重那样的选择。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Yeah, and I respect that.
+
+</details>
+
+**Nam Kiwanuka**: 当然，每个人都有权选择最适合自己的应对方式，绝无评判之意。但你在 2010 年最初确诊时就选择全程公开，并在 CityNews 开设专栏博客，还因此获得了**爱德华·默罗奖（Edward R. Murrow Award）**。你曾把抗癌之旅形容为一种极其孤独的体验，那为什么你一开始就选择公开呢？
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Yes. There's no judgment, of course, because everybody manages their life the best they can. But you were first diagnosed in 2010. You were open with your diagnosis from the very beginning, and as I mentioned, you did a blog for CityNews. You won the Edward R. Murrow Award for that. And you've described this journey as a solitary experience. Why did you share right from the beginning?
+
+</details>
+
+**Cynthia Mulligan**: 有很多原因。首先，我想继续工作。我知道对我而言，工作和职业生涯是我生命中不可或缺的基石，我希望能继续坚持下去。而且我心想，我的外表会发生很大的变化，对吧？我必须戴假发。因此，我觉得我应该坦诚面对镜头。
+
+但另一方面，这么多年来我作为记者报道了无数的故事，受访者在他们生命中最痛苦、最绝望的时刻向我敞开心扉——比如痛失爱子，或者遭遇火灾失去一切。他们表现出了巨大的勇气和体面，将自己经历的苦难分享给我。我内心真切地觉得，我也需要以此来回馈社会，去向他们致敬——如果这么说能表达清楚的话。
+
+我觉得如果我自己遮遮掩掩，那会显得非常虚伪。我也希望能够借此帮助其他女性，因为这太难了。经历乳腺癌和手术真的极其艰难、极其可怕。在很多层面上，它严重打击了一个人的女性特质——比如失去头发。我想把这展现出来，让其他患病的女性知道她们并不孤单。
+
+> “在开始六次化疗的第一轮时，我仍处于震惊之中。每一次化疗都让我感到更加恶心虚弱，但每一次也都在缩小那威胁着我生命的肿瘤。在第一轮化疗后不久，我的头发便开始脱落。”
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: A number of reasons. One, I wanted to work. I knew, for me, that working - because my career and work has been a big part of my life - I wanted to carry on with that. And I thought I would look quite different, right? I had to wear a wig. And so, I felt that I should be honest about it.
+
+But the other thing is, for many years, I had covered so many stories and people had shared the worst moments of their lives with me, and really devastating, like losing a child or a fire and they've lost everything, and they had the courage and the grace to share with me what they were going through, and I actually felt that I needed to do that to pay back, as well, and honour-- honour them, if that makes any sense.
+
+I just felt it would be so disingenuous of me not to share as well and try and help other women because it is hard. It's really hard, and it's really scary going through breast cancer and the surgeries. And really, it attacks your femininity in so many ways - losing my hair. I wanted to share that, so that other women didn't feel alone as well.
+
+I was still in shock as I began the first of six chemotherapy sessions, each one making me feel sicker, but each one was also shrinking the tumour that was threatening my life. My hair started falling out shortly after that first round.
+
+</details>
+
+---
+
+### 职场包容与医疗系统的温暖
+
+**Nam Kiwanuka**: 在职场环境中公开讨论自己的健康危机，你曾经感到过担忧或忐忑吗？
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Were you ever nervous about talking about what you were navigating with your health when it came to work?
+
+</details>
+
+**Cynthia Mulligan**: 没有，完全没有。因为公司和工作团队给予了我难以置信的巨大支持，真的是不可思议的支持。从 2010 年最初确诊直到今天，他们一直表现出超乎寻常的理解和包容。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: No, no, because work was so incredibly supportive, incredibly supportive. Back in 2010, at the beginning, to this day, they have been really remarkably supportive and understanding.
+
+</details>
+
+**Nam Kiwanuka**: 听到这个真让人欣慰，因为在职场上我们常常听到负面的案例。这也是我非常希望能和你聊聊的原因之一，因为你在工作中得到了充分的支撑。那么，你在医疗系统中的就医体验如何？
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: That's amazing to hear because you hear a lot of the negative things, and this is part of the reason why I was hoping that we could talk, because you have had support from your work. How would you describe the experience you've had going through the medical system?
+
+</details>
+
+**Cynthia Mulligan**: 和你以往经历的医疗困境不同，我的就医体验非常棒。但我确实觉得，乳腺癌如今太普遍了——虽然我很不想这么说，但它确实很常见——比起慢性疼痛等疾病，医学界对乳腺癌的认知和重视程度要高得多。我听了你关于女性慢性疼痛的那期播客，讲述了女性的疼痛是如何被误解和误诊的。
+
+幸运的是我没有经历过那种情况。不过我也确实认识一些遭遇不幸的人——不久前我身边一位非常亲近的人，这至今仍让我感到痛心，她的乳房里出现了一些可疑阴影，医生却说：“噢，六个月后再来复查吧，没什么大碍，我们保持观察就行。”结果六个月后复查时，她不得不接受双侧乳房切除术。这太让人心碎了，而且原本是完全不必要的。如果尽早干预，本可以阻止病情如此迅速地恶化。但就我个人而言，我的医疗经历是非常出色的。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: I have had an incredible experience, unlike yours. But I do feel like breast cancer is so incredibly common - I hate to say it; it's common - that there is a greater understanding around breast cancer than pain, for example. I was listening to your podcast on chronic pain and how it's really misunderstood and mistreated for women.
+
+That has not been my experience, although I do know people who-- someone very close to me not so long ago, and I'm still devastated by it, had, you know, something suspicious in their breast, and they said, "Oh, come back in six months, it's nothing, but we'll just keep an eye on it." Well, six months later, now they have a double mastectomy, right? It's just that-- that just is devastating and it was so unnecessary. It could have been preventable, to have gone that far, that fast. But my experience has been remarkable.
+
+</details>
+
+**Nam Kiwanuka**: 很高兴听到这一点。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: It's so good to hear that.
+
+</details>
+
+**Cynthia Mulligan**: 嗯，这要归功于**玛格丽特公主癌症中心（Princess Margaret Cancer Centre）**。首先是我的家庭医生 David Satok 博士。还有玛格丽特公主癌症中心的 Philippe Bedard 博士，我必须向他致以崇高的敬意——他在 2010 年是我的肿瘤科主治医生，如今依然是我的主治医生，我是他的“回头客”了（笑）。还有一位极具魅力的女性 **Simi Malhotra**，她是我的临床试验研究护士，她简直太卓越了。所以我真的很幸运。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Mm-hmm. And I credit Princess Margaret. First of all, my GP, Dr. David Satok. Princess Margaret, I have to give a shout-out to Dr. Philippe Bedard, and-- who was my oncologist in 2010 and again now - I'm-- I'm his repeat customer. (Laughing) And there's this magnificent woman, Simi Malhotra, who is my clinical trial nurse, and she's brilliant. So, I'm lucky.
+
+</details>
+
+**Nam Kiwanuka**: 太为你高兴了。每一个面对重疾的人都理应得到这样的医疗照护。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: I'm so happy to hear that. That's how it should be for everybody who's navigating.
+
+</details>
+
+**Cynthia Mulligan**: 没错，本应如此。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: CYNTHIA: Yes, yes.
+
+</details>
+
+---
+
+### 镜头前的“面具”与脱发记忆
+
+**Nam Kiwanuka**: 在应对种种挑战的过程中，能听到这些积极正向的声音真的很好。你是一位公众人物，镜头前的外表形象很无奈地属于你工作的一部分。当你当年录制视频博客时，我觉得特别珍贵的是，你真实地向大众展示了接受化疗的全过程。你也经历了放疗。当时有一段视频记录了你的头发不断掉落的过程，我觉得那对公众来说是一份珍贵的礼物，因为面对这种疾病时，大家往往充满未知的恐惧。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: And it's so good to hear the positives, and... as we navigate some of the challenges. You are a forward-facing person, and how you look is, unfortunately, a part of your job. When you were doing the vlogs, I thought it was really special, in the sense that you were actually showing people going through chemo. You went through radiation, as well. And there was a video of you where your hair was coming out, and I thought that was so-- that was such a gift to people because I think part of navigating the disease is you don't know, like, what it is.
+
+</details>
+
+**Cynthia Mulligan**: 是的。
+
+> “Ariane 让我感觉很舒服。她让我不再对秃顶感到难堪，她给了我勇气去做一件我想了很久的事情。我该摘下来吗？”
+> “我觉得你百分之百应该摘。”
+> “好的，等等，来吧……（深吸气）看你多漂亮啊。看，你的头也和我一样小。哒哒！跟我一模一样。好吧，我只在镜头前摘这一次。”
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Yeah.
+
+Ariane is so comfortable. She makes me feel better about being bald, and she gives me the courage to do something I've been thinking about for a while. Should I?
+
+I think 100% you should.
+
+Okay, hang on. Here we go. (Gasping) Look how beautiful you are. See? You have a small head like me. Ta-da. Just like me. Okay, I'm only doing this once.
+
+</details>
+
+**Nam Kiwanuka**: 你当时为什么决定在镜头前公开摘下假发？
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: NAM: Why did you do that?
+
+</details>
+
+**Cynthia Mulligan**: 因为我平时掩饰得太好了。我的意思是，如果你买了一顶做工极好的假发，画上精致的睫毛和眉毛，外人根本看不出异样。但实际上我病得很重，非常非常痛苦。当年的化疗过程异常艰难。事实上，我的肿瘤科医生最近告诉我，他们现在已经不再给女性患者使用当年那种化疗方案了。他们彻底淘汰了那种疗法，因为毒副作用太大、太痛苦了，而且没有必要承受那么大的痛苦。医学也是在不断摸索中进步的。
+
+而在镜头前摘下假发，是非常真实、毫无保留的呈现。那是真正的坦诚。这也正是我们在新闻工作中一直要求受访者去做的事情。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Because I was able to mask it really well. I mean, you know, if you buy a great wig and you sort of paint on your eyelashes and eyebrows, um, but really, I was sick. I was really sick. So... And the chemo was really tough. In fact, my oncologist told me recently they don't do that same chemo for women anymore. They've stopped that particular kind because it's too hard, unnecessarily hard. Because they're learning, right, still as they go. Um... And it was honest and raw. It's being authentic. It's doing what I ask people to do, we do, in our jobs.
+
+</details>
+
+**Nam Kiwanuka**: 在那些需要“伪装掩饰”的日子里——你用了“掩饰（masking）”这个很有意思的词，因为哪怕是今天为了做这次专访，我也画了全套妆容，你知道的，我平时根本不长这样……（两人大笑）可怜的我丈夫，他看到我都觉得……
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: On those days where-- you said about the masking, which is such an interesting word, because, even now, for this interview, I have the makeup on, and you know, I usually don't look like... (Both laughing) My poor husband, he's like...
+
+</details>
+
+**Cynthia Mulligan**: 我也是一样！（笑）
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Same. (Laughing)
+
+</details>
+
+**Nam Kiwanuka**: 身体内部正在经受病痛折磨，与你在镜头前所必须展现的状态之间，你当时是如何平衡这种割裂感的？
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: What was it like for you navigating what was going on in your body with how you presented on camera?
+
+</details>
+
+**Cynthia Mulligan**: 这确实极其困难。在面对女儿们时也是如此。当我最初确诊时，我 6 岁的小女儿 Hillary，我对她们说：“我没有生病，但我身体里长了个东西，如果不把它拿出来，它就会让我生病。在清除它的过程中，我可能会变得有点滑稽。”我解释说我会掉光所有的头发，必须戴假发。她当场就哭了出来，非常担心别人会嘲笑我。“妈妈，要是你的假发掉了怎么办？”她甚至恳求我不要不戴假发就走到门外去，因为她想要保护我。
+
+所以我平时总是非常注意自己的形象。因为我支持一个很棒的慈善机构，叫做 **Look Good, Feel Better**。我深信，对我个人而言，如果你在外界眼中保持体面，你向外散发出的能量也会让你自己感觉更好，有点类似于“装到成功为止（Fake it until you make it）”的心理暗示。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: It was challenging, right? Um... As well as with my daughters. My six-year-old, Hillary, when I was first diagnosed, and I said to them, you know, "I'm not sick, but there's something in my body that will make me sick unless I get it out, and I'm going to look kind of funny as we get it out," and I explained that I was going to lose all my hair and I'd wear a wig, and she started to cry, and she was really worried that people would laugh at me. "And what if your wig fell off, Mommy?" And she asked me to not go outside without a wig on, because she was protective of me, right? So...
+
+I always took care because-- you know, there's this great charity that I support, It's called Look Good, Feel Better, and I really believe that if you-- for me, if you are masking it to the world, you're also projecting and you feel better. "Fake it until you make it" kind of...
+
+</details>
+
+**Nam Kiwanuka**: 是的，那确实能起到支撑作用。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Yeah.
+
+</details>
+
+**Cynthia Mulligan**: 是的，很有帮助。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Yeah, it helps.
+
+</details>
+
+**Nam Kiwanuka**: 你对假发和脱发意识的普及也很深远——因为当你完成第一个治疗周期后，你把你定制的真发假发捐赠出去了。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: The fact that you're raising awareness about your hair because that-- when you completed the first cycle, you actually gave your hair, your wig, away.
+
+</details>
+
+**Cynthia Mulligan**: 是的，我送人了。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: I did.
+
+</details>
+
+**Nam Kiwanuka**: 因为这也是普通人平时往往不会注意到的花销。假发极其昂贵。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Because I think it's not something people think about. They're expensive.
+
+</details>
+
+**Cynthia Mulligan**: 没错。那是一顶真人发丝制成的假发，放到今天可能要价值 9,000 美元。很多女性根本承担不起这样的开销，所以我希望它能帮助到有需要的人。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Yeah. You know, that was a human hair wig. It's probably, today, $9,000. A lot of women can't afford that, so I wanted someone else to have it.
+
+</details>
+
+---
+
+### 从现场记者到新闻主播：意外的晋升
+
+**Nam Kiwanuka**: 今年早些时候，你荣获了**加拿大银幕奖（Canadian Screen Award）**最佳地方新闻主播奖。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Earlier this year, you won the Canadian Screen Award for Best News Anchor, Local.
+
+</details>
+
+**Cynthia Mulligan**: 是的，我获奖了。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: I did.
+
+</details>
+
+**Nam Kiwanuka**: 颁奖礼当时我也在现场，听到你名字时我都尖叫了！（笑）这就是你的人格魅力所在，在获奖感言中，你充满了对团队和工作单位的爱，你分享说，你的单位不仅全方位支持你的抗癌治疗，甚至还提拔了你。在获奖感言中你说了这样一段话：
+
+> “谁能想到，一个身患四期乳腺癌的人，竟然能获得如此崇高的荣誉和机遇？我要感谢我的团队始终坚定地与我站在一起。”
+
+但在最初几个月里，你其实是拒绝了这个主播职位的晋升。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: And your speech, I was there; I was like, "Aah!" (Chuckling) Um... Just the person that you are, you spoke with love about your team, about your workplace, and you shared that your workplace was not only supportive of your cancer diagnosis, they gave you a promotion. And part of your acceptance speech, you said this...
+
+Who knew that somebody with stage four breast cancer would be given such an honour and an opportunity? And I want to thank my team for standing by me.
+
+But you turned down that promotion for months.
+
+</details>
+
+**Cynthia Mulligan**: 没错，我拒绝了好几个月。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: I did.
+
+</details>
+
+**Nam Kiwanuka**: 你当时为什么拒绝？后来又为什么最终决定接受？
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Why did you? And why did you finally accept it?
+
+</details>
+
+**Cynthia Mulligan**: 我之所以拒绝，是因为我热爱在一线跑新闻。在职业生涯的最后这些年里，我一直在报道政治——这占据了我职业生涯的大部分时间——我深爱着一线新闻，并在其中充满活力。
+
+当时的新闻总监 **Jon Whitten** 是一位极具远见的人，他极力邀请我出任主播。因为在此之前整整十年里，City 电视台都没有设常驻主播，完全是“无主播”模式，由一线出镜记者自己串联引出新闻。但他想要改变这个现状。于是他找我做主播，我当时说：“我不是主播，我是个记者！我就喜欢在新闻现场，头发乱糟糟地到处跑。”
+
+几个月后我最终决定接下这个职位，是综合了几个现实原因。其中一个就是，当时我已经确诊复发了，一线工作变得极其残酷吃力。我每个月至少要去医院两次做验血、见肿瘤医生。因为我参与了一项临床试验，医生对我的各项身体指标监测得非常严密。
+
+经常有这样的日子：我清晨赶到安大略省议会大楼（Queen's Park），然后必须一路小跑赶去玛格丽特公主医院——幸好医院就在同一条街上。我跑去抽血，在候诊室里打开笔记本电脑写稿，看完医生后，我又急忙跑回省议会大楼堵采访对象做简短采访。与此同时医院药房正在给我配药，等他们准备好药剂，我又得再跑回医院取药，取完药再跑回议会……（深叹气）这种来回奔波实在太累、太艰难了。
+
+这时新闻总监再次找到我，对我说：“我真的很需要你，我认为你是坐在这个位置上的不二人选。”他耐心地一点点做通了我的思想工作，我最终答应：“好吧，我接受。”主播工作虽然同样要求极高、压力很大，但至少不会遇到那种情况：清晨 6 点电话突然响起说“摄像车 15 分钟后接你，立刻赶去萨尼亚市，因为省长 Doug Ford 要在那里发表演讲”。主播的工作节奏稍微少了一些不可预测的混乱。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: I turned it down because I love being an in-the-field journalist. And I-- you know, the last number of years of my career, I've covered politics - probably the majority of my career - and I loved it, and I thrived on it.
+
+So, when my then news director, Jon Whitten, who's fantastic, fantastic man, um, he asked me to do it-- because we hadn't had an anchor at City for ten years. We had gone anchorless, and we had reporters self-introducing their stories, but he wanted to change that. So, he asked me to do it, and I'm like, "I'm not an anchor. I'm a journalist. I'm in the field, messy hair, you know, running around."
+
+There are a number of reasons I took the anchor job after a few months, and one was, by then, I had been re-diagnosed, and it was gruelling because I'm in the hospital at least twice a month, getting blood work done, seeing my oncologist. I'm on a clinical trial, so they watch you very, very closely. And there were days I'd be at Queen's Park, I'd come in in the morning and then I'd run to-- luckily, it's down the street; I'd run to Princess Margaret, I'd get my blood work done, and then I'd work on my computer in the waiting room, I'd go see the oncologist, and then I'd go back to Queen's Park and do scrums while they're getting my meds ready for me, and then I'd run back again, and then I'd run back again, and... (Exhaling sharply) ...it was exhausting, it was tough. So... um...
+
+And then-- and then, my news director said, "I really need you; I think you're the right person to do this," and he slowly wore me down, and I went, "Okay, I'll do this." So, it was a combination of things. And I work really hard as an anchor, but it's not as-- you know, your phone doesn't ring at 6 a.m., and it's like, "Your camera's picking you up in 15 minutes and you're going to Sarnia because Doug Ford's speaking there," right? It's a little less chaotic.
+
+</details>
+
+**Nam Kiwanuka**: 你会怀念奔跑在一线的感觉吗？
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Do you miss that?
+
+</details>
+
+**Cynthia Mulligan**: 会，非常怀念。那种现场肾上腺素飙升的感觉，我敢说它是会上瘾的。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Yes, I do, very much. The adrenaline, right? It's the adrenaline. I swear it's addictive.
+
+</details>
+
+**Nam Kiwanuka**: 确实如此。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Yeah, yeah.
+
+</details>
+
+**Cynthia Mulligan**: 能够亲身站在事件现场、见证历史在眼前展开，那种感觉太震撼了。报道政治新闻就像是在现场观看一场顶级的国际象棋大师赛，引人入胜。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: But it's just amazing to be there in person, in the moment, and watching all of this unfold. And covering politics is watching a chess game, right? It's fascinating.
+
+</details>
+
+---
+
+### 癌症复发与四期确诊：纯属偶然的发现
+
+**Nam Kiwanuka**: 能带我们回到你得知癌症复发、而且这一次已经是四期的那个瞬间吗？
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Can you take me back to that moment when you found out that you had been re-diagnosed with breast cancer, but this time it was stage four?
+
+</details>
+
+**Cynthia Mulligan**: 那是在圣诞节前两天，当时正值新冠疫情最严重的高峰期。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: It was two days before Christmas, and we're in the middle of COVID.
+
+</details>
+
+**Nam Kiwanuka**: 那是 2020 年？
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: So, 2020?
+
+</details>
+
+**Cynthia Mulligan**: 是的，2020 年。说来真的很讽刺，因为当时我刚刚迎来确诊 10 周年的节点。我连续服用了整整十年的**他莫昔芬（Tamoxifen）**，当时手头的药只剩最后一个月的药量了。
+
+我卵巢上一直有个囊肿，有时会隐隐作痛。我当时在女子大学医院（Women's College Hospital）的癌症康复门诊复查。我的肿瘤科医生在满五年时就“开除”了我，开玩笑说：“你从我这里毕业了，我们分手吧。”所以我转到了康复门诊，每年做一次例行的乳腺钼靶和超声检查。检查时我随口对医生说：“做超声时，能不能顺便帮我照一下卵巢囊肿？我想看看它有没有变大。”超声医生爽快答应了。
+
+完全是纯粹的偶然巧合——在扫描过程中，他们意外扫到了我的肝脏，并发现了**肝脏上的两个阴影病灶**。起初医生安慰我说：“别担心，你都平安度过十年了，你已经彻底安全了。乳腺癌十年后极少会复发，别多想。”于是我又去做了一次复查，结果无法定论。随后我做了更进一步的高精度检查，而那一次的结果确定了转移。
+
+在圣诞节前两天，我整个人彻底崩溃了。我真的心碎欲绝。因为我以为自己已经赢了，这十年里我做对了一切：坚持高强度运动、健康饮食、规律作息。这一击对我而言太沉重了。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Yeah, it was 2020. Um... It was ironic, because I was hitting my ten-year mark, and I had been on tamoxifen for ten years, and I had one month's left supply. And I've always had a cyst on my ovaries, and sometimes, it throbs a little bit. And I was at Women's College in the after-cancer care clinic. My oncologist fired me after five years: "You're breaking up with me." So, I was in this after-cancer care clinic at Women's College, and I would go for an annual mammogram ultrasound.
+
+And I said, "Hey, when we do the ultrasound, do you mind if we just check that cyst, because maybe it's grown or something?" And she's like, "Okay." So, it was found by fluke, because, during that ultrasound, they saw two spots on my liver. And initially, the doctor said, "Oh, don't worry about it. You're ten years; you're gold. It doesn't come back after ten years. Don't worry about it." So, I went for another test; it was inconclusive. And then, I went for another test, and that wasn't inconclusive.
+
+So, two days before Christmas, I was shattered. I was really shattered, um... because I thought I was good, and I had been doing everything right: lots of exercise, eating well, living well. It was-- it was a blow.
+
+</details>
+
+**Nam Kiwanuka**: 但这绝不是你的错。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: It's not your fault, though.
+
+</details>
+
+**Cynthia Mulligan**: 是的，生病不是任何人的错。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: It's no one's fault, right?
+
+</details>
+
+**Nam Kiwanuka**: 嗯。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Mm-hmm.
+
+</details>
+
+**Cynthia Mulligan**: 我从未觉得这是自己的过错。我内心常想的是：“这下轮到我了。”
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: I never thought it was my fault. I've always thought, "It's my turn."
+
+</details>
+
+**Nam Kiwanuka**: 真的吗？
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Really?
+
+</details>
+
+**Cynthia Mulligan**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Yeah.
+
+</details>
+
+**Nam Kiwanuka**: 请跟我多聊聊你这种心态。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Tell me more about that.
+
+</details>
+
+**Cynthia Mulligan**: 我想是因为我采访过太多处于生命至暗时刻的人，让你对世间他人所承受的悲剧有更宏观的体会。在这个世界上，极少有人能够毫发无损地走完这一生。所以我一直觉得，“现在轮到我来承受了”。我从未自怨自艾地问过“为什么偏偏是我？”，我脑海里只有一句“轮到我了”。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: I think interviewing so many people at the worst moments of their lives, you have a greater sense of the tragedies that people face. Very few of us get through life unscathed. So, I always just thought, "It's my turn." It was never, "Why me?" It's just, "It's my turn."
+
+</details>
+
+---
+
+### 向女儿坦白与临床试验的奇迹
+
+**Nam Kiwanuka**: 当时要把病情复发的消息告诉女儿们，一定非常艰难吧。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: It must have been really hard, um, to tell your children that it was back.
+
+</details>
+
+**Cynthia Mulligan**: 我瞒了她们一阵子。事实上，向已经成年的女儿们开口，比向当年年幼的她们坦白要难得多。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: I waited for a while. It was actually harder to tell them as young women than it was as little girls.
+
+</details>
+
+**Nam Kiwanuka**: 为什么会这样？
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: How come?
+
+</details>
+
+**Cynthia Mulligan**: 因为她们懂得更多了。在她们 6 岁和 10 岁时，作为母亲你尚且能在叙事上掌握主动权，尽量淡化可怕的一面。但当她们已经 20 岁出头时，你无法再粉饰太平了。
+
+而且她们心里一直有阴影，一直害怕癌症会卷土重来，因为她们有同学的母亲就是死于乳腺癌。我大女儿 Gwen 在念高一左右时，她一个朋友的母亲因乳腺癌去世了，那位母亲原本也以为自己战胜了癌症，但后来复发去世了。Gwen 当时坐在餐桌旁突然哭了起来，对我说：“妈妈，向我保证你的癌症绝不会复发。”我当时看着她说：“我无法向你做这个保证，但我可以向你保证，我一定会竭尽所能去预防它、阻止它复发。”
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Because they understand more. Six and ten, you can kind of control the narrative more. You can't when they're 20, not so much. And I-- you know, they've always been aware and they've always been afraid of it coming back because they've had friends' mothers die of breast cancer.
+
+You know, my eldest, when she was maybe in grade ten, her friend's mother died, and she had beat it and then it came back and she died, and Gwen was-- we were just sitting at dinner and she started to cry, and she said, "Promise me it won't come back." And I said, "I can't, but I can promise you I'll do everything to make sure it doesn't, to try and prevent it from coming back."
+
+</details>
+
+**Nam Kiwanuka**: 我想你也教会了她们倾听自己身体的声音。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: I think you've also taught them to listen to their bodies.
+
+</details>
+
+**Cynthia Mulligan**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Yes.
+
+</details>
+
+**Nam Kiwanuka**: 因为这次发现病情，正是源于你敏锐地觉察到了身体的细微异样并提出了检查。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Because the way this was caught, it was you listening to your body.
+
+</details>
+
+**Cynthia Mulligan**: 是的，纯粹是偶然之中的万幸。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Yes. Yeah. Fluke.
+
+</details>
+
+**Nam Kiwanuka**: 四期乳腺癌的确诊，在医学上到底意味着什么？
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: What does a stage four breast cancer diagnosis mean?
+
+</details>
+
+**Cynthia Mulligan**: 现实并不乐观。你最先听到的预后预期往往是“三到六年生存期”。而如今我已经撑过了五年半。所以这个倒计时始终盘旋在你脑海里。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: It's not pretty. You know, the first words you hear are "three to six years." I'm five and a half.
+
+</details>
+
+**Nam Kiwanuka**: 它始终是悬在心头的一块巨石。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: So, that is on your mind.
+
+</details>
+
+**Cynthia Mulligan**: 是的，如果我说完全不想那就是在撒谎。但我努力把它锁在脑海最深处的一个极小的黑匣子里，轻易不把它放出来，也不轻易打开它。
+
+就在最近几周，有件事让我感触很深。我参与了一项**新药临床试验**。五年半前当我刚加入这个临床试验时，我的肿瘤医生曾坦诚告诫我：“听着，你即将服用的其中一种靶向药物，通常在人体内的有效反应期只有两年半，因为癌细胞非常狡猾，会慢慢产生耐药性从而战胜药物。”如今我已经服用了五年半，远远打破了该药物的常规有效期记录。
+
+但当我加入这项临床试验时，我给自己建立了一种心理防护机制。这可以称作是一种有意的、明知故犯的……
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Yeah. I'd be lying if I said it wasn't. But I try and keep it in a tiny little black box locked at the very back of my mind that I don't let out and open up very often. I've recently had an-- and... just in the last couple of weeks, so I'm on a clinical trial and, um, when I went on it five and a half years ago, my oncologist said, "Look, one of the drugs that you're going to be on typically only lasts two and a half years because the cancer outsmarts the drug."
+
+So, I'm five and a half years, and so, I've surpassed the expectation on that drug. But when I went on this clinical trial, I created this sort of narrative, right? And I'm going to call it wilful, knowing...
+
+</details>
+
+**Nam Kiwanuka**: 心理区隔化（Compartmentalization）？
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Compartmentalization?
+
+</details>
+
+**Cynthia Mulligan**: 不，是一种自我诱导的“选择性视而不见”。我是极其自觉且清醒地这样做的，因为我不想每天沉溺在负面恐惧中。我是靠着**希望**而活着的人！我靠希望滋养生命，而且我也确实在不断打破医学预期。我之所以选择参与这项临床试验，是因为它早期的试验数据表明，这种疗法比我这种癌症亚型的传统疗法表现更优越。毕竟乳腺癌非常复杂，分类繁多，每一种癌症在不同个体身上都有着完全不同的生物特质。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: No. Self-- self-induced, uh, blindness, shall we say. And I do it knowingly and consciously, but because I don't want to think-- like, I just thrive on hope, right? I'm living in hope and because I am-- you know, I am surpassing the expectations.
+
+But this clinical trial, I went on it because the early stages of it showed that this was better than the traditional treatment for what I have, because there are so many different treatments for... because every cancer is different.
+
+</details>
+
+---
+
+### 泳池边的承诺：见证女儿独立成长
+
+**Nam Kiwanuka**: 癌症的降临完全不受个人控制。当你最初确诊时，女儿们那么年幼。当你必须去接受这种“毫无掌控感”的残酷现实，却又必须为了家庭“保持掌控”时，你是如何调和这种矛盾的？
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: A breast cancer diagnosis is completely out of your control. And your girls were so young when you were first diagnosed. How did you manage those moments when you had to reconcile that this was something out of your control, but perhaps that you had to stay in control?
+
+</details>
+
+**Cynthia Mulligan**: 我给你讲一个故事吧。正如我前面提到的，第一次确诊时女儿们才 6 岁和 10 岁，我的婚姻刚结束。那是一个周末的早晨，我们来到了当地的社区游泳池，她们正在水里上游泳课。她们当时那么小、那么娇弱。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: So, I'll tell you a story. As I mentioned, my girls were six and ten when I was first diagnosed. My marriage had just ended, and it's a weekend morning, and we're at the local pool and they're getting their swimming lessons, and they're so little.
+
+</details>
+
+**Nam Kiwanuka**: 哎，我也很怀念孩子们那么小的日子。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Right? I miss those days, yeah.
+
+</details>
+
+**Cynthia Mulligan**: 她们当时那么小。我就坐在泳池边，整个人近乎麻木地看着水里的女儿们。我的脑海里不断回响着一个念头：“我必须为了她们活下去。我必须活得足够久，久到能亲眼确认她们能够在这个世界上过得很好，确认我已经把她们引上了正确的人生轨道；久到我已经陪她们读完书，把我所有的爱化作厚厚的保护毯彻底裹住她们，让他们能受益终生。”我对自己发誓，我必须做到这一点。
+
+就在两三个月前，我 22 岁的小女儿从多伦多都市大学（TMU）新闻系毕业了。当时我出差在多伦多外地，她突然给我发来一条短信，说：“妈妈，我上了**优秀生榜单（Dean's List）**！”
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: And they're so little. And I'm sitting by the edge of the pool, numb, and I'm watching my girls. And I kept thinking to myself, "I have to be here for them. I have to live long enough so that I know they're going to be okay, that I have set them on the right path. I've gotten them through school. I have infused them with all my love and my blanket of protection that will last them the rest of their lives," and I had to do that.
+
+So, two or three months ago, my youngest, who's 22, um, she went to TMU, journalism. She sent me a text - I was out of town - and she sent me a text, and she's just graduated, and she said, "Mom, I made the dean's list."
+
+</details>
+
+**Nam Kiwanuka**: 哇，太棒了！
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Wow.
+
+</details>
+
+**Cynthia Mulligan**: 看到短信那一刻，我止不住地嚎啕大哭，甚至一开始我自己都不知道为什么哭得那么凶。当然，我为她感到骄傲，她学业一直极其刻苦，但我就是控制不住眼泪。
+
+接着我猛然回想起来：“正是当年泳池边的那一幕！我做到了！我做到了！我活得足够久了，看着她长大了，她现在完全能够独立过好自己的人生了。”而我的大女儿之前也已经大学毕业，这是我的第二个女儿也顺利完成学业。我完成了我当年发誓必须要做到的事。这并不意味着我的使命就此结束，但我确实做到了当年最奢望的目标。这对我而言胜过世间一切。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: I started sobbing, and I couldn't figure out why. Like, I was happy for her, of course, and she's worked really hard, and I just couldn't stop crying. And then, I thought, "It's that moment at the pool, and I did it, I did it. I made it. I made it long enough. She's okay." And my eldest has already graduated, so she's my second one. I did what I needed to do. Doesn't mean I'm done yet, but I-I did it, and that... meant the world to me.
+
+</details>
+
+**Nam Kiwanuka**: 祝贺你的宝贝女儿！
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: You... Your... You know... Congratulations to your baby.
+
+</details>
+
+**Cynthia Mulligan**: 谢谢你。后来我把泳池边的这个故事讲给了她听。这两个女儿我都给她们讲过这个故事。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Thank you. And I told her that story. I've told them both that story, you know.
+
+</details>
+
+**Nam Kiwanuka**: 就像是她们赋予了你生存的力量。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Yeah. It's like they gave you strength.
+
+</details>
+
+**Cynthia Mulligan**: 确实是她们赋予了我力量。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: They did.
+
+</details>
+
+**Nam Kiwanuka**: 而你也是她们力量的基石。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: And you were their strength.
+
+</details>
+
+**Cynthia Mulligan**: 是的。如果没有她们，我真不知道自己能否撑过这一切。是她们激励我战斗到底，直到今天依然如此。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Yeah. I don't know if I could have done this without them. They inspired me to do it, and they still do.
+
+</details>
+
+---
+
+### 传承先驱者的火炬：Mark Dailey 的榜样
+
+**Nam Kiwanuka**: **Mark Dailey** 是我们过去共同共事过的一位前辈同事。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Mark Dailey is someone that we both worked with.
+
+</details>
+
+**Cynthia Mulligan**: （深吸一口气）是的，Mark……
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: (Exhaling sharply) Yeah. Yeah.
+
+</details>
+
+**新闻播报录音**: “Mark Dailey 被誉为 Citytv 之声。Dailey 于 2004 年宣布自己正在与前列腺癌作斗争，并在公众面前坦诚分享了他的所有抗癌经历。”
+
+<details>
+<summary>Original English</summary>
+
+**新闻播报录音**: NEWS ANCHOR: Mark Dailey was known as the voice of Citytv. Dailey announced he was fighting prostate cancer in 2004 and openly spoke about his experience with the public.
+
+</details>
+
+**Nam Kiwanuka**: 他是一位多么了不起的人。他在你对抗乳腺癌的旅程中扮演了怎样的角色？
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Amazing, amazing person. What role did he play in your journey with breast cancer?
+
+</details>
+
+**Cynthia Mulligan**: 他给予了我无与伦比的支持。他是我们台里第一个公开自己癌症诊断和全部治疗过程的人，是他深深激励了我。他走在了最前列，因为他坚信这样做极其重要：如果你的公开分享哪怕能帮助一个人早点去体检并发现癌症，哪怕能在别人经历至暗时刻时给予一份支撑，向他们展示这个难关是可以迈过去的……
+
+在他接受生命最后的治疗阶段时，我也正在医院接受我的化疗和手术，我们经常互相发短信鼓励。我记得我做手术住院时在病床上给他发信息，而当时他也正在另一间病房里，我们就在病房里互相发短信打气。他的离世不仅是多伦多这座城市的巨大损失，更是整个加拿大的损失。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: He was so supportive. He went public first with his cancer diagnosis and treatments, and he inspired me. He did it first, and because he believed it was really important to do: that if you can help one person find it early, give them support as they're going through it too, show them that it can be done, you know?
+
+Um... He and I were going through, well, his final treatment, I was going through my treatments, and we would text each other. I remember texting him from the hospital when I had surgery, and he was in the hospital, too, and we would text.
+
+</details>
+
+**Nam Kiwanuka**: 对他的家人也是巨大的打击。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: A great loss to not just the city; the whole country. And his family.
+
+</details>
+
+**Cynthia Mulligan**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Yeah. Yeah.
+
+</details>
+
+---
+
+### 筛查倡议与生命的欢愉：四期绝非死刑判决
+
+**Nam Kiwanuka**: 你提到是他为你开辟了公开谈论癌症的道路，但我必须强调，你在提升加拿大全社会的乳腺癌防治认知方面所起到的作用是不可估量的。早在 Instagram 或 TikTok 出现之前，你就站出来做了表率。而在你开始之前，整个社会甚至对这个话题避而不谈。
+
+如今，安大略省已经将乳腺癌例行筛查的推荐年龄从 50 岁下调到了 **40 岁**。
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: You mentioned that he led the way for you to talk about this, but I can't stress how important you have been in raising breast cancer awareness in Canada. You did this before Instagram or TikTok was created. When you started, we weren't talking about this. The province of Ontario lowered the screening age for breast cancer from age 50 to those over age 40.
+
+</details>
+
+**Cynthia Mulligan**: 嗯，但我认为筛查年龄还应该进一步降低！检查门槛需要更加普及、更容易触达。女性被确诊乳腺癌的年龄越来越趋向年轻化，而发病年龄越年轻，往往恶性程度和致死率就越高，肿瘤表现得更为凶险和激进。我当年确诊时还处于绝经前阶段。年轻女性患癌的攻击性太强了，我根本无法想象那些在 20 多岁或 30 岁出头就要经受这一切的年轻女孩有多么艰难。
+
+我最想传递的信息之一就是：是的，我们迫切需要更多的早期筛查机制！我们必须确保年轻女性得到充分的保护，获得应有的医疗筛查支持，以免她们被迫经历如此可怕痛苦的抗癌折磨。
+
+而且，我还特别想对大家说：**四期癌症绝对不是自动生效的死刑判决！**过去的这五年半，反而是我生命中最美好的时光之一。在确诊晚期转移之后，我还收获了真爱并订了婚！
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: Mm-hmm. It needs to be lower still. It needs to be more accessible. I mean, women are getting diagnosed younger and younger, and the younger they're diagnosed, the deadlier it can be. It's more aggressive. I was-- I was premenopausal. It's more aggressive when you're younger, and I can't imagine going through it in my earlier 20s or 30s.
+
+One of the messages that I want to get is, yes, we need-- we need more screening. We need to make sure younger women are protected and get what they need, so they don't have to go through as horrific a journey, you know?
+
+And-- And I also want to say, stage four is not an automatic death sentence. You know? The last five and a half years have been some of the best of my life. I've also gotten engaged.
+
+</details>
+
+**Nam Kiwanuka**: 衷心祝贺你！
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: Congratulations!
+
+</details>
+
+**Cynthia Mulligan**: 是的！我得到了梦寐以求的主播职位，我订了婚，而这一切都是在四期确诊之后发生的。谁能预料到生命会是这样展开的呢？生活就是用来尽情活出精彩的，生活理应充满喜悦地去度过！
+
+<details>
+<summary>Original English</summary>
+
+**Cynthia Mulligan**: So, I got this great job, and I got engaged, and it's all after-- all after this diagnosis, and who would have thought, right? Life is for living. Life is for living with joy.
+
+</details>
+
+---
+
+### 结语与健康警示
+
+**Nam Kiwanuka**: 这就是本期的 *(Mis)Treated*。感谢大家的收听。
+
+根据加拿大癌症协会的数据，加拿大约有八分之一的女性在其一生中会被确诊患有乳腺癌。2024 年，安大略省将乳腺癌例行筛查起始年龄从 50 岁以上降低到了 40 岁，但仍有许多适龄女性尚未参与筛查。请大家务必按时进行健康筛查；如果您对乳腺钼靶检查有任何疑虑或担忧，请及时咨询医生。
+
+再次由衷感谢 Cynthia Mulligan 在本次对话中如此坦诚与慷慨的分享。无论您在哪个平台收听播客，都欢迎关注我们的节目，以便第一时间获取更新通知。我们非常渴望听到您的反馈，您可以发邮件至 mistreatedpodcast@tvo.org——每一封来信我们都会认真阅读，或者您也可以在社交媒体上与我互动。
+
+本期节目由 Chantale Dahmer 和我共同制作，Colin Kish 剪辑，统筹制作人 Matthew O'Mara，数字短视频制作 Edwin Janzen，动态图形设计 Ayush Madhamshettiwar，摄像师 Max Stussi 与 Ricardo Diaz，提词员 Elisa Verrilli。鸣谢 TVO 演播室团队，以及 Jonathan Halliwell 和 TVO 数字媒体服务团队的技术支持。数字内容执行制作人 Laurie Few，媒体副总裁 Vanessa Case。非常感谢大家的收听！
+
+<details>
+<summary>Original English</summary>
+
+**Nam Kiwanuka**: This was (Mis)Treated. Thanks for listening.
+
+About one in eight women in Canada will develop breast cancer during their lifetime, according to the Canadian Cancer Society. In 2024, the province of Ontario lowered the screening age for breast cancer from over age 50 down to 40, but some women are still not getting screened. Please get screened and talk to a doctor if you have questions or concerns about mammograms.
+
+Our thanks again to Cynthia for being so generous in our conversation. You can follow our show wherever you download your podcasts, so you can get notified each time a new episode is available. We would love to hear your feedback. You can write me an email at mistreatedpodcast@tvo.org - we read them all - or you can reach out to me on social media.
+
+This week's episode was produced by Chantale Dahmer and me, and edited by Colin Kish. Coordinating producer Matthew O'Mara. Digital shorts by Edwin Janzen, and motion graphic designer by Ayush Madhamshettiwar. Camera work by Max Stussi and Ricardo Diaz. Teleprompting by Elisa Verrilli. And our thanks to the TVO studio crew. Production support from Jonathan Halliwell, and TVO's Digital Media Services team. Laurie Few is the Executive Producer of Digital. Vanessa Case is Vice President of Media. Thanks so much for listening.
+
+</details>

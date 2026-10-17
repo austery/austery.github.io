@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10 万词元进、500 词元出：Modal 把 Kimi K2.6
+编程代理推理调快的三步</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">10 万词元进、500 词元出：Modal 把 Kimi K2.6
+编程代理推理调快的三步</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-02</span>
+    
+
+    <header class="article-header">
+      
+      <h1>10 万词元进、500 词元出：Modal 把 Kimi K2.6
+编程代理推理调快的三步</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/speculative-decoding/">speculative-decoding</a>
+      
+        <span class="tag-pill tag-pill--no-page">kv-cache-optimization</span>
+      
+        <a class="tag-link" href="/tags/llm-inference/">llm-inference</a>
+      
+        <span class="tag-pill tag-pill--no-page">load-balancing</span>
+      
+        <a class="tag-link" href="/tags/gpu-optimization/">gpu-optimization</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">Modal 针对 Kimi K2.6 在编程代理场景下的长输入短输出负载，通过投机解码、显存分层优化及负载感知路由，实现单用户速度 2.8 倍及集群吞吐 5.6 倍的提升，展示了针对特定硬件与模型的系统级推理优化路径。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/modal-kimi-k26-inference-tuning-20261002.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-02T00:00:00.000Z">2026-10-02</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>5 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E4%B8%80%E8%BD%AE%E8%AF%B7%E6%B1%82%E5%90%9E-10">一轮请求吞 10</a></li><li class="outline-h2"><a href="#%E8%AE%A9%E6%AF%8F%E6%AC%A1%E7%94%9F%E6%88%90%E5%A4%9A%E5%90%90%E5%87%A0%E4%B8%AA%E8%AF%8D%E5%85%83%E5%85%88%E6%B2%BB%E5%8D%95%E8%AF%B7%E6%B1%82%E6%85%A2">让每次生成多吐几个词元：先治单请求慢</a></li><li class="outline-h2"><a href="#%E6%98%BE%E5%AD%98%E8%85%BE%E7%BB%99%E7%BC%93%E5%AD%98%E5%9C%A8%E5%8D%95%E6%9C%BA%E9%87%8C%E6%8A%A0%E5%87%BA%E5%B9%B6%E5%8F%91%E7%A9%BA%E9%97%B4">显存腾给缓存：在单机里抠出并发空间</a></li><li class="outline-h2"><a href="#%E6%8A%8A%E8%AF%B7%E6%B1%82%E9%80%81%E5%88%B0%E6%9C%89%E7%BC%93%E5%AD%98%E7%9A%84%E9%82%A3%E5%8F%B0%E6%9C%BA%E5%99%A8%E5%88%AB%E8%AE%A9%E5%88%86%E5%8F%91%E5%B1%82%E9%80%BC%E7%9D%80%E6%96%B0%E6%9C%BA%E5%99%A8%E9%87%8D%E7%AE%97">把请求送到有缓存的那台机器：别让分发层逼着新机器重算</a></li><li class="outline-h2"><a href="#%E6%95%B0%E5%AD%97%E7%9A%84%E8%BE%B9%E7%95%8C">数字的边界</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>在利用编程代理进行编程的时候，我们经常遇到这样一种情况：让他修复一个bug，他要阅读整个项目的所有代码，包括终端的错误信息和之前做的修改。吞进十来万个词元（Token），最后吐出来的代码补丁往往只有寥寥几行。这样的请求——长输入、短输出、多轮对话的形式——对一般的模型服务的架构来说是非常不友好的。</p>
+<p>2026 年 9 月 23 日，Modal 的五位工程师 Janelle Cai、Charles
+Frye、James Liu、Timothy Feng 和 Richard Gong 发了一篇工程复盘。他们拿月之暗面的万亿参数模型
+Kimi K2.6
+开刀，在英伟达 Blackwell 架构的 B200
+集群上做优化，把单用户的交互速度提到了先前的 2.8
+倍，多用户副本的整体吞吐量推到了 5.6 倍。</p>
+<p>这种工程复盘很容易让人以为它是个流行词汇的清单。但实际上，每一个改动都来自这种极端负载的倒逼。读懂他们为什么选这几个点、用哪些妥协、以及那些倍数在什么条件下成立，是理解这场仗的关键。</p>
+<h2 id="一轮请求吞-10" data-reading-heading="">一轮请求吞 10</h2>
+<p>万词元、吐 500 词元：这样的负载撑不住</p>
+<p>日常用编程代理修一个
+bug，常常遇到这种场景：改动可能只有几行代码，代理却得把整个项目的目录树、报错日志和之前的改动全读进去。Modal统计了他们的生产流量发现，一个请求平均包含大约10万个输入词元，最终产生大约500个输出词元，200比1。</p>
+<p>而且，实际编程中很少会一次搞定，经常要交互几十轮。到第T轮，模型得把前T-1轮的所有对话和代码状态都再吃一遍，再加上最新的修改指令。用户最开始打的那几行背景描述，会在后续的几十轮调用中被反复搬进显存重算。</p>
+<p>这种需求给服务架构带来了巨大挑战——直接使用未优化的开源方案，一旦单机负载超过6个用户，整机的吞吐量和每个用户的生成速度都会跌到谷底。硬件算力尚未完全利用，前端交互响应已难以为继。</p>
+<p>这几个数字其实埋着三个相互关联的坑。每生成一个词元，硬件都要把数 GB
+的权重和历史状态从显存里读进计算核心。数据搬运的速度跟不上计算节奏，单请求延迟就直接被显存带宽卡死。为了省去重复计算，系统还得把前面的输入状态存成
+KV
+缓存；但多轮对话让缓存像滚雪球一样膨胀，很快占满显存容量，单机并发因此受限。因为单机并发难提升，集群算力就被喂不饱，整体吞吐只能在低位徘徊。</p>
+<p>面对这条连锁反应，团队选择先攻下单请求的交互速度，再去拉高并发吞吐。写代码的用户对吐字速度最敏感，把单请求的吐字效率提上去，后续做系统扩展才能持续放大收益。他们最终跑出的
+2.8 倍单用户提速与 5.6
+倍并发吞吐，起点正落在这里。沿着这个思路，团队最先着手解决的，就是解码阶段每次搬运数据的带宽瓶颈。</p>
+<p>编程代理一轮请求平均吞进 10
+万个输入词元、只吐出 500
+个输出词元，性能压力沿带宽、容量、吞吐三级传导。</p>
+<h2 id="让每次生成多吐几个词元先治单请求慢" data-reading-heading="">让每次生成多吐几个词元：先治单请求慢</h2>
+<p>在解码阶段，每生成一个词元，都要把数 GB
+的权重和缓存从显存搬进计算核心，搬运时间比实际计算还长。单纯做并行化能造出更多搬运通道，但对逐词元的串行依赖帮不上忙。Modal
+换了一条思路：既然搬运躲不掉，那就让每次搬运多产出几个词元。找一个跑得飞快的小模型在前面先猜几个词元，再让主模型在单次前向计算里集中比对、并行核验。只要猜得准，读一次权重就能连续吐出好几个有效词元。这种先猜后验的做法，就是投机解码。</p>
+<p>在 SGLang 生态里，团队选用了 DFlash
+方案。这条路线算是
+MTP（多词元预测）的近亲：都借主模型算到一半的中间结果来猜下文，但近年模型内建的原生
+MTP 模块猜词元时还是一个一个往外蹦，DFlash
+则让轻量草稿模型一口气并行生成一整块候选词元，更合 GPU
+的胃口。它用主模型先前算好、存在 KV Cache
+里的中间特征当输入来猜。最终输出还是完全按主模型的概率判定来的，所以不会改变原模型的输出分布。</p>
+<p>要想让推测小模型猜得准，全靠喂对训练数据。他们的做法是先在通用语料上预训，再用主模型在真实执行编程任务时的轨迹微调。上线后，生产环境的新轨迹还能继续回流，不断给模型补充训练样本。</p>
+<p>检验投机解码有没有效果，就看主模型每一步平均能接受多少
+token，叫接纳长度（acceptance
+length）。在基准评测任务里，未经微调的基础推测模型平均接纳长度是 5.00
+个词元；拿编程轨迹微调之后，接纳长度涨到了 5.84
+个词元，相当于给解码阶段带来了整整 20% 的额外速度提升。</p>
+<p>不同业务负载对投机机制的反应天差地别。在同一套机制下对比，由于代码有高度规范的语法和重复模式，编程任务测出来的平均接纳长度差不多是常规散文测试的
+2 倍。在他们更早针对 Qwen 3.5 与 3.6
+模型的摸底下，投机解码带来的收益甚至能达到整数倍。</p>
+<p>但在工程实现上，他们发现一个分词转换的问题。很多系统日志会记录人类可读的文本字符串，然而把词元转换成文字、再转换回词元的过程不是可逆的，导致上下文推测可能产生微妙错误。Modal
+向上游 SGLang 提交了修复，在底层扩展中直接暴露原始词元编号，在 PR #34488
+合入。</p>
+<p>单请求延迟确实得到了改善。但如果一台机器放不下几个用户，那并发量仍然受限。下一步，如何在有限显存下为更多用户腾出缓存空间，成为硬件划分与资源管理的核心。</p>
+<h2 id="显存腾给缓存在单机里抠出并发空间" data-reading-heading="">显存腾给缓存：在单机里抠出并发空间</h2>
+<p>要跑动这么庞大的模型，最先碰到的抉择就是怎么把权重切分到多张加速卡上。Kimi
+K2.6 约有 1 万亿个参数，即使在 4
+位微缩浮点（NVFP4）格式下，其权重仍占用了 595 GB 的空间。考虑到每张 B200
+加速卡的显存容量为 180 GB，显然无法在 1-2
+张卡上完成部署。因此，团队必须在单机硬件的限制下决定是选择 4
+张卡（TP4）还是 8 张卡（TP8）。</p>
+<p>这两个方案的显存容量差距很大。一个简单计算：这个模型一共有61层，每个层在16
+bit半精度BF16的格式下，假设每层有576个维度，每个数用2个字节存储，那么一个token对应的历史状态就需要72KB的空间。如果选
+4
+卡方案，整个机器有720GB的显存，在扣除了595GB的模型大小以后，剩下125GB的显存。除以4张卡，每张卡只有大约31.3GB的显存，所有实例加起来的键值缓存只能放大约45万个token。</p>
+<p>但如果采用 8 卡方案，总显存一下飙升到 1440 GB，扣掉权重还剩 845
+GB，每张卡分到 105.6 GB。整组缓存容量可以冲到约 300 万个词元，正好是 4
+卡方案的 6 倍。从显存的角度来看，8 卡方案似乎更有优势。</p>
+<p>面对 6 倍的显存诱惑，团队最后还是选了 4
+卡。拍板的关键在于一组对比实验：让 8
+卡配置单单跑输入编码的每卡吞吐，才勉强追平 4
+卡配置完整跑完编码加解码的每卡吞吐。SemiAnalysis 在 InferenceX
+基准测试里对同款 NVFP4 模型的研究也印证了这点：4 卡或 8
+卡配置能在保住单卡效率的同时挤出最高交互速度；如果硬去切分注意力状态来搞数据并行凑并发，反而会恶化延迟，降低单卡综合产出。</p>
+<p>运维的考量同样指向小集群：8
+卡一套的小机器，一台主机就能管理，按需采购、捡便宜现货都没问题；72
+卡的大箱需要 9 个子系统挤在一个地址空间，货少合同还死长。</p>
+<p>4
+卡方案保住了单卡效率，代价是留给缓存的地方极度逼仄，单机实例只能承接大约
+4
+个活跃用户的长会话。超过这个数之后，后面的请求打不到已有的状态，缓存命中率会直接掉一大截，十几万词元的输入又要从头算。为了在夹缝里给缓存抠出空间，团队展开了三层显存挖潜。</p>
+<p>第一层先清理代码里的显存冗余。在DFlash最初的实现里，给推测用的中间特征张量先收集为指针列表，等前向传播跑完了再统一拷进连续内存，结果运行时的显存峰值直接飙到了实际需求的两倍。团队改成预先分配连续缓冲区并在计算中直接写入，甩掉了二次拷贝的开销，把这个阶段的显存峰值砍掉一半，补丁合并在PR#28956。</p>
+<p>第二层是降低存储精度给体积减肥。团队把键值缓存从 BF16 压缩到
+FP8，直接把缓存容量翻了一倍；同时把每个词元都会调用的共享专家参数从 FP8
+降到
+NVFP4。评测数据显示，这两项改动带来的输出波动完全落在模型多次运行固有的随机误差里。推测小模型也完成了
+FP8 量化，补丁合并在 PR
+#28957。有严密的基准评测护航才敢实施有损调整，这也是自建托管服务相比通用多租户平台的核心优势。</p>
+<p>第三层是构建分层存储当安全网。显存再挤也会遇到超长上下文爆满的情况，这时系统会把溢出部分丢到物理机的主机内存甚至分布式存储里。从主机内存读取虽然比显存慢，但远快于重新计算几十万词元。这种多级缓存直接由
+SGLang 内置的 HiCache
+实现：主机内存作 L2 兜底突发溢出，分布式存储作 L3
+托底，让缓存命中率随并发增加的下降曲线由悬崖式断裂转为平缓过渡。</p>
+<p>把这些优化组合起来以后，和未优化的单机版本相比，单用户交互生成速度提升到了
+2.8 倍，单实例多用户并发吞吐量提升到了 5.6
+倍。请注意这是多个改动一起带来的结果，而且都是在特定模型、硬件和编程负载上实现的。</p>
+<h2 id="把请求送到有缓存的那台机器别让分发层逼着新机器重算" data-reading-heading="">把请求送到有缓存的那台机器：别让分发层逼着新机器重算</h2>
+<p>把单机性能调顺之后，真正的考验来到了多机集群扩展。团队把节点横向一扩容，监控面板上立刻冒出了异常扰动：请求队列不稳定，从请求到收到第一个
+token 的等待时间出现抖动，TTFT（Time To First
+Token）也变差了。此外，集群的总吞吐量没有达到单机吞吐量的线性增长。</p>
+<p>经过分析定位，我们发现问题的根源在于请求落点的分散导致了冷启动。具体地说，当客户端在第十几轮发出请求时，它提供的输入前缀历史已经在之前由集群处理过了。但由于分发机制的原因，这个请求被分配到了一个没有相应历史缓存的机器上，迫使这台新机器从头开始做全量编码计算。代码没有缺陷，这是传统无状态哈希分发避不开的数学宿命。</p>
+<p>系统最开始通过客户端携带的 session id，用一致性哈希的方式把同一个
+session
+分配到固定的机器上。然而，仅用随机哈希做分发，就像把客人随机领进一排包间：有的包间空着，有的却挤到站不下。这不是运气差，而是随机分发的数学本质。对
+50 台机器分配 250 个会话，即使平均期望每台机器有 5
+个会话，随机分发的波动仍然不可避免。不论有多少机器，任意时刻约有 4%
+的机器只会分到 1 个或 0 个会话，造成硬件浪费；同时约有 0.5% 的机器会拿到
+12
+个或更多会话，面临长尾延迟。这两个比例不会随着集群规模增大而降低。在生产环境中，情况往往更糟：长会话请求动辄几十万词元，处理时间更长，滞留时间也会延长。实测各机器的负载偏离平均值的幅度常达到平均值的数倍，某些机器的排队时间出现很长的长尾。</p>
+<p>看明白了这笔账，团队推行了三条结构化分发规则。第一是针对高并发的会话。这里有个绕不过去的现实：会话
+ID 是客户端自己填的，系统拦不住有人拿同一个 ID
+同时发好几个请求。写代码的 agent 经常产生并行探索分支，同一个会话 ID
+下会同时出现多个并发长请求。若机械恪守会话亲和，单节点的并发数将失去上限，性能反而比把部分请求分流出去更差。新策略在并发请求超出安全水位时，主动把超出部分分流给其他节点。团队算过一笔账：宁可让另一节点重复建立部分缓存，也要把并发摊开，不让单个节点被挤爆。</p>
+<p>第二条规则加入细粒度实时负载感知。分发层实时收集每节点的 in-flight
+request
+和显存缓存占用率，用这些动态指标来把新会话分给当下真正最轻的节点；一旦建立状态，后续请求一般保持节点亲和以保护命中率。</p>
+<p>第三条规则是在扩容时避免缓存震荡。传统哈希扩容会让大约1/N的已有会话漂移重平衡，造成大范围重算。团队优化了扩容逻辑：新节点上线后，新来的会话优先落在新节点上（此时新节点无负载积累）；当会话与新节点的速率不匹配时，再用会话层面的负载感知做重分配补足平衡。</p>
+<p>这三项改进让每个节点分得的负载比随机派单均匀很多，负载偏离平均值的幅度降低到均值的一半以下。首词元延迟趋于平稳，多实例总吞吐接近单机线性外推。Modal将这种感知负载和状态分发请求的机制沉淀成kv_aware_routing实验配置。复盘中展示了负载均匀度和稳定性的明显改观，但没有给出路由改动对应的端到端整体提速量化数值。</p>
+<p>纯随机派单让机器有的过载有的闲置，负载感知派单把各节点负载磨平、偏差减半。</p>
+<h2 id="数字的边界" data-reading-heading="">数字的边界</h2>
+<p>梳理完这几项环环相扣的技术落地，系统工程师应当保持审慎。推理优化的每一个指标都是系统设置和负载特性的结合体。一旦负载一变，即使软硬件都不动，结果也会大不相同。</p>
+<p>复盘里很坦诚地交代了三个具体范例。首先是单卡词元吞吐量，它高度依赖于生成任务的输出长度。在闭环请求中，跑一条长序列生成的工夫，足够系统穿插完成多条短输出请求，导致统计吞吐与长度配比高度绑定。第二，投机解码的加速程度取决于语料的内在规律性。用同样的方法去做代码和散文时，代码的平均接纳长度大约是散文的2倍。如果换成更发散的文本生成，加速效果就会差很多。最后是缓存命中率，它极易受到客户端不良交互行为的破坏。若客户端频繁回头修改前文历史指令，长达数万词元的缓存前缀将随之全量失效，使缓存优化在表面上化为乌有。</p>
+<p>复盘披露的 2.8 倍交互速度与 5.6
+倍总吞吐量，是一个投机解码、显存腾挪、降精度和分层缓存等多个优化叠加后的综合结果，没有对每一项措施进行拆分归因。这组数字严格限定于
+Kimi K2.6 模型、Blackwell B200
+加速卡以及特定编程流量，不能无条件外推。</p>
+<p>从产业视角看，Modal
+作为提供算力服务的产品，其技术复盘兼具技术背书与拉客的功能。公开的补丁代码增强了工程可信度，但失败的尝试不会公开展示。在硬件演进上，配备更大显存的
+B300
+加速卡能承接更高并发；在模型迭代上，团队声明同一套状态治理方法已成功迁移至
+Kimi K3，并在公开聚合市场上承接了该模型最多份额的调用流量。</p>
+<p>这篇复盘能提供的最可取之处，是呈现了一个诊断的时序：先度量负载轮廓，让瓶颈自现；再按单请求延迟、单机缓存容量、集群状态分发的顺序逐层解析。数据或会过时，这个时序不会。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/e079ca989151158e791304339165240a0b08b9162db9b3364c762474f43e1945.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/e079ca989151158e791304339165240a0b08b9162db9b3364c762474f43e1945.md" download="10 万词元进、500 词元出：Modal 把 Kimi K2.6
+编程代理推理调快的三步.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=modal" class="entity-link company-link">modal</a>, <a href="/search/?q=moonshot-ai" class="entity-link company-link">moonshot-ai</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=kimi-k2.6" class="entity-link product-link">kimi-k2.6</a>, <a href="/search/?q=sglang" class="entity-link product-link">sglang</a>, <a href="/search/?q=dflash" class="entity-link product-link">dflash</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

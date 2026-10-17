@@ -1,0 +1,5325 @@
+---
+author: The Diary Of A CEO
+date: '2026-09-28'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=IQ4JVWdj4Q0
+speaker: The Diary Of A CEO
+tags:
+  - business-failure
+  - growth-stage
+  - financial-management
+  - leadership-philosophy
+  - resilience
+title: 从高速增长到公司困境：高增长企业家的生存哲学与商业教训
+summary: 文章探讨了从快速扩张到公司崩溃的商业周期，分析了估值膨胀、现金流管理失误以及创始人心态转变等核心问题。核心教训包括在关键决策时保持冷静、选择正确的伙伴、关注长期影响力而非短期权力，以及认识到真正的成功在于如何从失败中站起来。
+insight: ''
+draft: true
+series: ''
+category: business-entrepreneurship
+area: finance-wealth
+project: []
+people: []
+companies_orgs: []
+products_models: []
+media_books: []
+status: evergreen
+---
+<!-- chunk 1/18 -->
+
+### 快速增长与公司困境
+
+**Speaker A**: 我在一周内从13,000名员工减少到了三名员工。我们工作是世界上有史以来最快的物理全球增长之一。但一切都出了问题。我们失去了所有东西。2019年，你们公开提交了S1。公司估值约为470亿美元。S1显示过去3年有30亿美元的损失。此外，S1透露了在我担任首席执行官的时候，我也会注册“我们工作”这个词并将其卖回给公司。那不是真的。人们有时认为我被解雇是因为《华尔街日报》说那样。不是真的。我想要直接从你那里听到。发生了什么事？你真的想去那里吗？我……我很高兴，地板是你的。所以我们在工作时，业务增长的速度比我能增长得快，我每走一步，突然我的自我开始冒出来了。哦，200亿美元的估值，加上中国50亿美元的估值。突然间，这变得关乎金钱。我忘记了我们当初的全部意义，当我失去它时，每个人都失去了它。然后，我们发现自己被迫在还没准备好的时候上市了。然后你辞去了“我们工作”的首席执行官职位，在首次公开募股（IPO）失败后。所以，我选择退出了，在做完之后，我们被背叛了，唯一的教训是，你要刺杀国王，杀掉他。如果你不打算杀人，我还会再回来。
+
+<details>
+<summary>Original English</summary>
+
+I went from 13,000 employees to three employees in one week. We work was one of the fastest physical global growth the world's ever seen. But everything went wrong. We lost everything. 2019 you were publicly filed its S1. Company valued at around $47 billion. The S1 showed some losses, 3 billion in the past 3 years. Also, the S1 revealed when you were CEO that you'd also trademarked the word we and sold it back to the company. That's not true. People sometimes think I was fired because the Wall Street Journal said so. Not true. I wanted to hear directly from you. What happened? You really want to go there? I'm like I'm I'm happy to the floor is yours. So in we work the business grew faster than I could grow and every step I take suddenly the ego starts coming up. Oh 20 billion valuation billion valuation in Japan on top of that 5 billion valuation in China. It suddenly became about the money. I forgot what we were all about and when I lost it everybody lost it. And the next thing is we found ourselves being forced to go public when we weren't ready. Then you resigned as CEO of we work after the IPO didn't pan out. So I stepped down out of choice and a second after I did it, we got stabbed in the back and the only lesson there, you're going to stab the king, kill. If you're not going to kill, I'm going to come back again.
+
+</details>
+
+**Speaker B**: 你为什么做出回到事业的决定？因为你从报告中获得了近十亿美元的资金。你知道这有多难。
+
+<details>
+<summary>Original English</summary>
+
+>> Why did you make that choice to go back into business again? Cuz you had money from the reports almost a billion dollars. You know how hard it is.
+
+</details>
+
+**Speaker A**: 我现在意识到，在“我们工作”里，我做的事情比做错的事情要多得多。多得多。不是像多10%，而是多95%。我说的有些话对你来说很难完全集中精力。你向所有这些你谈论过的创始人，你谈论过的所有这些，我不太认为他们分享过这篇论文。所以，我们来谈谈它。所以，首先，你可能看到了，或者你可能没看到，但这个频道正在追逐一个大订阅里程碑。所以我得向你求一个帮助。现在观看的人中，大约58%的人还没有点击订阅按钮，尽管事实是你每周都看这个频道。所以，我能向你们求一个帮助吗？那些58%的人，无论出于什么原因，还没有点击订阅按钮。如果曾经有任何时候能为我们提供帮助，那现在就是时候了。我保证我会尽我所能，确保这个频道能变得越来越好，越来越好，越来越好。我们有交易吗？
+
+<details>
+<summary>Original English</summary>
+
+>> I now realize that in we work, I did a lot more things right than wrong. A lot more. Not like 10% more, like 95%. Some of what I'm saying is hard for you to fully hone in on. All these founders you spoke to, all this I don't think they shared this paper. So, let's talk about it. So, first, you might have seen or you might not have seen, but this channel is chasing a big subscriber milestone. So, I have to ask you for a favor. Roughly 58% of the people watching right now still haven't hit the subscribe button despite the fact that you watch this channel every single week. So, could I ask you guys a favor? that 58% of you that for whatever reason haven't yet hit the subscribe button. If there was ever a time to deliver upon a favor for us, it would be right now. And I promise that I will do everything in my power to make sure that this channel gets better and better and better for you. Do we have a deal?
+
+</details>
+
+**Speaker C**: 亚当·纽曼，我有幸在过去几个月里与你短暂接触，我几乎立刻就觉得你不像我见过的任何其他创始人、CEO或真正的人。你有一种深度，一种哲学和一种视角，是极其罕见的。我的问题是，如果我们接受这一点，你就是一个异常现象。我是否在想你有一些某种异常的早期起源故事？塑造了站在我面前这个男人的那个故事是什么？你知道，对我来说，当我开始认识某人时，他们说“它从哪里来？你是谁？”我通常会从同样的地方开始。首先，我是一个丈夫。这是我的第一份工作，是我最骄傲的。然后我是一个父亲。我有一个六岁的孩子。然后我是一个朋友。友谊对我来说非常重要。在那之后，我是一名企业家。我认为我们每个人都有一个非凡的灵魂。我认为这很完美。而我认为当我们看待人们时真正看到的是我们认为他们持有的地方和他们的潜力之间的距离。我认为正是这两个东西之间的差距定义了一个人。对我来说，在我的一生中，有时在我年轻的时候，在我的控制之外，有时在我变老的时候，在我的控制之下，我一直都在努力弥合那个差距。
+
+<details>
+<summary>Original English</summary>
+
+Adam Newman, I've had the privilege of getting to know you briefly over the last um couple of months, and it struck me almost immediately that you're unlike almost any other founder or CEO or really person I think I've ever met. There's a depth to you and a and a philosophy and a perspective that is just incredibly rare. My question to you is for you to be an anomaly if we accept that. Am I right in thinking that you had some sort of anomalous early origin story? What is that that story that shaped this man that sat in front of me? You know, for me first when I get to know someone in the beginning and they say, "Where is it coming from? Who are you?" I usually start the same. First of all, I'm a husband. It's my first job. what I'm most proud of. Then I'm a father. I'm a father of six. Then I'm a friend. Friendships are very important for me. And after that I'm an entrepreneur. I think each one of us has a phenomenal soul. I think it's perfect. And I think what really we see when we look at people is the distance between where we think they're holding to where their potential is. And I think it's that gap between those two things that actually defines a person. And for me throughout my life, sometimes out of my control when I was young and sometimes with my control when I got older, I've always been striving to close that gap.
+
+</details>
+
+**Speaker D**: 所以你谈到没有控制。你早期的背景相当不稳定，根据我所读到的，因为你的母亲患有双相情感障碍。你能把我带入那个世界，让我能理解亚当是如何成长的那种背景吗？
+
+<details>
+<summary>Original English</summary>
+
+>> So you talk about not having control. Your early context is quite unstable from what I read because your mother suffered from bipolar. Can you bring me into that world so I can understand like the sort of context that Adam was raised?
+
+</details>
+
+**Speaker C**: 很高兴。所以我们会从每一个故事开始，它都有两面，我妈妈和我都是医生，在成长过程中，我一直看到我们俩都在照顾病人，有时会感觉病人比我们更成功。比如我姐姐和我，无论我们多病，我们从来没有生病。看看我姐姐，她是一名肿瘤学家，她会说我的病人更病。上学和那差不多是开始。当我二年级的时候，我的父母离婚了。这对我的妈妈来说非常困难，她需要一个环境的改变。所以，我们实际上搬到了美国。你知道这张照片吗？
+
+<details>
+<summary>Original English</summary>
+
+>> Happily. So we'll start like every story it has two sides to it and my mom and my father are both doctors and growing up I always saw both of them taking care of the patients and it would feel sometimes like the patients came ahead of us. So for example my sister and I we were never sick no matter how sick we were look at my she was an oncologist and she would say my patients are sicker go to school and that was sort of the beginning of it. When I was in the second grade, my parents got a divorce. It was very difficult for my mom and she needed a change of scenery. So, we actually moved to the United States. You know this photo here?
+
+</details>
+
+**Speaker E**: 我知道。
+
+<details>
+<summary>Original English</summary>
+
+>> I do.
+
+</details>
+
+**Speaker C**: 嗯，还有这张照片，你有一个孩子。这是你小时候的样子，正闪闪发光，从耳朵到耳朵。我经常看到这样的照片，我的好奇心是你能看到的，而那个年幼的孩子，那个年幼的男孩在那里，不是在说，而是他内心感受到的，在所有那些情感之下。我可以告诉你的是，我认为挑战始于家里。所以我们谈到了我母亲的双相情感障碍。我只在搬到美国后观察了母亲的情绪。当时没有人。只有我妈妈、我姐姐和我。她整天都在和病人一起工作，晚上8点她回家，一切都会爆发。我记得有很多故事，但我记得这个。她会告诉我的姐姐和我，我们必须洗碗。那是我们的一个家务。我们不会管什么，因为孩子们有时会通过行动来反抗，当他们不能通过言语反抗时。她回家了，你没洗碗。她会把碗拿起来扔在地板上。然后她会哭，然后开始清洗碗，还有拖地。每晚都以某种行动告终。在两年里，我记得我姐姐和我当时觉得整个经历是多么疯狂。直到有一天她买了一套漂亮的碗。她又回家了，扔碗。我们注意到她只是扔廉价的碗。她没有扔她喜欢的碗，这给了我们一个微小的暗示，也许在发生的事情上，比这种失控的情况有更多的控制。所以，如果我必须猜测孩子们发生了什么，因为现在回想起来，我非常了解我妈妈和爸爸。可能家里有很多争吵。可能作为孩子，因为我现在看到我的孩子还很小。我确信孩子发现当父母不是作为一个团队保持一致时，会感到非常困惑，因为作为孩子，你所有的依靠都是你的父母。但我认为最重要的是要说，如果我妈妈不是她现在这样，如果我没有经历我成长过程中经历的那些挑战，我经历了很多。我们谈论双相情感障碍。这有很多东西伴随着它，我们可以深入探讨，也可以不深入。但几乎每件事，如果你拿出一张纸，你必须为我们认为可能发生的所有坏事打一个勾，一个小男孩。你能和我一起勾选几乎所有这些，包括我们不想谈论的那些非常糟糕的。就像我22、23岁的时候，我记得对我的童年非常生气。直到我遇到了我的前女友，后来成为我的妻子，她很快就向我介绍了一种精神实践。她介绍我的方式，就是一周约会后，她来找我，她说：“看，你真的很不错。你有很大的潜力，但你不是我想要的那个男人。” 当时我非常惊讶。我当时住在纽约。我姐姐是超级模特。我们一起出去玩。我当时想了很多。我说：“你是什么意思，我不是你想要的那个男人？”她说：“嗯，你没有精神上的乐队。你非常专注于物质的东西。你想成功，但你并没有真正理解人生的游戏。我感兴趣的那个男人会想要真正的幸福和真正的……”
+
+<details>
+<summary>Original English</summary>
+
+>> I do. Um, and this one here, you've got a kid. This is you as a a child that is beaming with uh smell sort of ear to ear. Often when I see photos like that, my my curiosity is what what you can't see and what that young kid, that young boy there is is not saying, but what he's feeling underneath all of those uh those emotions. What I could tell you is I think for me I think the challenge started in the house. So we talked about my mother being bipolar. I only observed my mother's moods when we moved to the United States. There was no one around. It was only my mom and my sister and I. And all day she would work with the patients and at night at 8 p.m. she would come home and all hell would break loose. And I remember there's many stories but I remember this. She would tell my sister and I we had to wash the dishes. That was our one chore. And we wouldn't no matter what because kids sometimes rebel by action when they can't rebel by words. And she would come home, you didn't wash the dishes. And she would take the dishes and throw them on the floor. And then she would cry and start cleaning the dishes and and mopping them. And it was every night ended with some version of action like that. And for 2 years, I remember how crazy my sister and I thought the whole experience was. And we didn't have any friends who were sharing that experience until one day she bought this nice set of dishes. And she comes home again to throw the dishes. And we notice she's only throwing the cheap dishes. She's not throwing the ones that she liked, which gave us a little hint that maybe there's a little more control over what's happening than this out of control situation. So if I had to guess what was happening with the kids because now in hindsight I know my mom and dad very well. Probably there was a lot of arguing in the house. Probably as a kid cuz I now see my kids that are very young. I'm sure a child finds it very confusing when the parents are not aligned as a team because as a child all you have to lean on are your parents. But I think the most important thing to say if my mom wasn't the way she was and if I didn't go through all those challenges that I went through growing up and I went through a lot. We're talking about bipolar. There's a lot that comes with it and we could go deeper or less. But almost every single thing if you took a piece of paper and you had to do a check mark for every bad thing we think can happen to a little boy. You get to check mark with me all almost all of them including the really bad ones that we don't like to talk about. As bad as that was when I was 22 23 I remember being very angry about my childhood. only when I met Rebecca, my then girlfriend to then wife, she very quickly introduced me to a spiritual practice. The way she introduced me, by the way, was after a week of dating, she came to me and she goes, "Look, you're really nice. You have a lot of potential, but you're not the guy for me." I was very surprised at the time. I was living in New York. My sister was the supermodel. We were hanging out. I I thought a lot of myself. And I said, "What do you mean I'm not the guy for you?" He said, "Well, you don't have a spiritual band. You're very focused on material things. You want to be successful, but you're not actually understanding the game of life. The guy I'm interested in is going to want true happiness and true
+
+</details>
+
+<!-- chunk 2/18 -->
+
+### 关于满足感与自由选择的实践
+
+**Speaker A**: 满足感和真正的幸福并不来自于物质的东西。对我来说，这与任何人都说的话都大不相同。有人告诉我，与其逃跑或者做某事，不如思考一下，我停顿了一下，然后我说：“那么，一个人如何才能去探索你所谈论的这种精神生活呢？”她回答说：“嗯，你需要一种实践。”对我来说，这种实践开始变成了卡巴拉。但对我们所有人都可能存在不同的实践。我在实践中学到的非常快的一点是“注定如此”（meant to be）和自由选择之间的区别。我认为很多人不明白这一点。但为什么会有这种区别呢？我们谈论精神生活时，经常谈论“注定如此”和自由选择。自由选择和事物注定如此，怎么可能同时存在呢？我解释它的方式是，你会在人生的十字路口做出选择，选择左边而不是右边，而一切都会“注定如此”。你会在同一个十字路口做出选择，选择右边，然后你会在自己的脸上惨烈地摔一跤。每个人都在看着你，你停下来，你真正从中学到了教训，你承担起责任，你说：“你知道，无论我经历了什么，对我发生的事情是有原因的，我将从中学到东西。我将变得更强大。”这几乎就像一把正在锻造的剑。你打它越狠，你施加的冲击越多，它就越强。然后你学到那些教训，然后回到人生的游戏里，再次应用到生活中，突然间，你把灾难、悲剧或诅咒变成了一份祝福。你把它变成了一种“注定如此”。当世界在我成年的时候对我崩溃时，那与我作为孩子所要面对的事情相比，简直不值一提。我当时想，没关系。我有妻子，我有孩子。我也有亲密的朋友。我们深呼吸一下，我们从零开始。我怀着一种非常痛苦的怀念，我认为那种坚韧来自于经历非常困难的事情。所以，如果你现在正在听这个，正经历着非常困难的事情，感觉很黑暗，我鼓励你记住，黑夜中最黑暗的时刻是黎明前的最后一秒。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: fulfillment.
+
+And
+
+true
+
+happiness
+
+and
+
+true
+
+fulfillment
+
+does
+
+not
+
+come
+
+from
+
+material
+
+things.
+
+It
+
+was
+
+so
+
+different
+
+for
+
+anything
+
+anyone
+
+has
+
+ever
+
+told
+
+me
+
+that
+
+instead
+
+of
+
+running
+
+away
+
+or
+
+doing
+
+this
+
+or
+
+doing
+
+that,
+
+I
+
+thought
+
+for
+
+a
+
+second
+
+and
+
+I
+
+said,
+
+"Well,
+
+how
+
+would
+
+one
+
+come
+
+to
+
+explore
+
+this
+
+spiritual
+
+life
+
+that
+
+you're
+
+talking
+
+about?"
+
+And
+
+she
+
+said, "Well,
+
+you
+
+need
+
+a
+
+practice."
+
+And
+
+for
+
+me
+
+that
+
+practice
+
+started
+
+being
+
+cabala.
+
+But
+
+for
+
+all
+
+of
+
+us
+
+there
+
+can
+
+be
+
+different
+
+practices.
+
+The
+
+thing
+
+I
+
+learned
+
+very
+
+quickly
+
+in
+
+the
+
+practice
+
+is
+
+the
+
+difference
+
+between
+
+meant
+
+to
+
+be
+
+and
+
+free
+
+choice.
+
+And
+
+I
+
+think
+
+a lot
+
+of
+
+people
+
+don't
+
+understand
+
+it.
+
+But
+
+how
+
+can
+
+there
+
+be?
+
+We
+
+talk
+
+a
+
+lot
+
+about
+
+in
+
+spirituality
+
+about
+
+it's
+
+meant
+
+to
+
+be
+
+and
+
+there's
+
+free
+
+choice.
+
+How
+
+could
+
+there
+
+be
+
+free
+
+choice
+
+and
+
+things
+
+be
+
+meant
+
+to
+
+be
+
+at
+
+the
+
+same
+
+time?
+
+The
+
+way
+
+I
+
+explain
+
+it
+
+is
+
+you
+
+get
+
+to
+
+a
+
+fork
+
+in
+
+your
+
+life
+
+and
+
+you
+
+choose
+
+left
+
+over
+
+right
+
+and
+
+everything
+
+works
+
+out
+
+meant
+
+to
+
+be.
+
+You
+
+get
+
+to
+
+that
+
+same
+
+fork
+
+and
+
+you
+
+choose
+
+right
+
+and
+
+you
+
+crash
+
+on
+
+your
+
+face
+
+horribly.
+
+Everybody's
+
+watching
+
+and
+
+you
+
+stop
+
+and
+
+you
+
+actually
+
+learn
+
+lessons
+
+from
+
+it
+
+and
+
+you
+
+take
+
+accountability
+
+and
+
+you
+
+say,
+
+you
+
+know
+
+what,
+
+whatever
+
+happened
+
+to
+
+me
+
+happened
+
+for
+
+a
+
+reason
+
+and
+
+I'm
+
+going
+
+to
+
+learn
+
+from
+
+it.
+
+I'm
+
+going
+
+to
+
+be
+
+stronger.
+
+Almost
+
+like
+
+a
+
+sword
+
+that's
+
+getting
+
+forged.
+
+And
+
+the
+
+more
+
+times
+
+you
+
+hit
+
+it
+
+and
+
+the
+
+more
+
+hit
+
+you
+
+put
+
+on
+
+it,
+
+the
+
+stronger
+
+it
+
+gets.
+
+And
+
+then
+
+you
+
+learn
+
+those
+
+lessons
+
+and
+
+you
+
+go
+
+back
+
+into
+
+the
+
+game
+
+of
+
+life
+
+and
+
+you
+
+apply
+
+that
+
+in
+
+again,
+
+suddenly
+
+you
+
+take
+
+the
+
+catastrophe
+
+or
+
+the
+
+tragedy
+
+or
+
+the
+
+curse
+
+and
+
+you
+
+make
+
+it
+
+into
+
+a
+
+blessing.
+
+You
+
+turn
+
+it
+
+into
+
+a
+
+meant
+
+to
+
+be.
+
+When
+
+the
+
+world
+
+did
+
+crash
+
+on
+
+me
+
+as
+
+an
+
+adult,
+
+it
+
+was
+
+nothing
+
+compared
+
+to
+
+what
+
+I
+
+had
+
+to
+
+deal
+
+with
+
+as
+
+a
+
+child.
+
+I
+
+was
+
+like,
+
+it's
+
+okay.
+
+I
+
+have
+
+a
+
+wife.
+
+I
+
+have
+
+kids.
+
+[clears throat]
+
+I
+
+have
+
+close
+
+friends.
+
+we'll
+
+take
+
+a
+
+deep
+
+breath
+
+and
+
+we'll
+
+start
+
+from
+
+scratch
+
+again.
+
+And
+
+that
+
+kind
+
+of
+
+fortitude,
+
+I
+
+think
+
+regretfully, comes
+
+through
+
+going
+
+through
+
+very
+
+difficult
+
+things.
+
+So,
+
+if
+
+you're
+
+listening
+
+to
+
+this
+
+right
+
+now
+
+and
+
+you're
+
+going
+
+through
+
+something
+
+really
+
+difficult
+
+and
+
+it
+
+feels
+
+dark,
+
+I
+
+encourage
+
+you
+
+to
+
+remember
+
+that
+
+the
+
+darkest
+
+moment
+
+of
+
+the
+
+night
+
+is
+
+a
+
+second
+
+before
+
+dawn.
+
+>> I
+
+feel
+
+like
+
+there's
+
+things
+
+in
+
+your
+
+early
+
+context
+
+that
+
+you
+
+haven't
+
+shared
+
+before
+
+because
+
+you
+
+said
+
+there's
+
+things
+
+that
+
+we
+
+don't
+
+usually
+
+share.
+
+Not
+
+publicly,
+
+but
+
+meaning
+
+I
+
+have
+
+in
+
+front
+
+of
+
+So
+
+I
+
+used
+
+to
+
+share
+
+everything
+
+in
+
+front
+
+of
+
+our
+
+employees
+
+that
+
+we
+
+work.
+
+So
+
+there's
+
+things
+
+I
+
+shared
+
+in
+
+front
+
+of
+
+10,000
+
+people.
+
+I'm
+
+not
+
+sure
+
+it
+
+ever
+
+made
+
+it
+
+to
+
+the
+
+press.
+
+>> What
+
+is
+
+missing?
+
+You
+
+really
+
+want
+
+to
+
+go
+
+there?
+
+>> I'm
+
+I'm
+
+happy
+
+to.
+
+>> If
+
+you're
+
+happy
+
+to,
+
+I'm
+
+happy
+
+to.
+
+>> I'll
+
+share
+
+two
+
+things
+
+that
+
+I'm not
+
+sure
+
+that
+
+maybe
+
+could
+
+be
+
+helpful
+
+for
+
+other
+
+people
+
+that
+
+are
+
+going
+
+through
+
+similar
+
+things.
+
+So
+
+the
+
+the
+
+hidding
+
+and
+
+stuff
+
+like
+
+so
+
+when
+
+someone's
+
+bipolar,
+
+by
+
+the
+
+way,
+
+they
+
+get
+
+very
+
+angry
+
+or
+
+very
+
+happy
+
+very
+
+fast.
+
+When
+
+they're
+
+happy,
+
+they're
+
+the
+
+happiest.
+
+You
+
+have
+
+fun
+
+and
+
+everything's
+
+amazing.
+
+And
+
+my
+
+mom
+
+would
+
+play
+
+games
+
+with
+
+us
+
+and
+
+it
+
+was
+
+phenomenal.
+
+But
+
+also
+
+when
+
+that
+
+I
+
+think
+
+happens
+
+a
+
+lot
+
+with
+
+bipolar, there's
+
+the
+
+suicide
+
+threats.
+
+And
+
+then
+
+there's
+
+one
+
+thing
+
+when
+
+you
+
+threaten
+
+to.
+
+So
+
+again,
+
+if
+
+you're
+
+two
+
+children
+
+and
+
+your
+
+only
+
+parent
+
+threatens
+
+to
+
+commit
+
+suicide,
+
+who
+
+is
+
+going
+
+to
+
+take
+
+care
+
+of
+
+you?
+
+What
+
+is
+
+going
+
+to
+
+happen
+
+if
+
+suddenly
+
+that
+
+happens?
+
+And
+
+I
+
+have
+
+a
+
+lot
+
+of
+
+memories,
+
+but
+
+one
+
+that
+
+just
+
+came
+
+back
+
+to
+
+me
+
+not
+
+too
+
+long
+
+ago.
+
+We're
+
+in
+
+the
+
+kibutts,
+
+which
+
+is
+
+where
+
+we're
+
+living
+
+after
+
+we
+
+came
+
+back
+
+from
+
+the
+
+US.
+
+My
+
+mom
+
+wanted
+
+us
+
+to
+
+have
+
+a
+
+special
+
+experience.
+
+So
+
+we
+
+went
+
+to
+
+this
+
+community
+
+where
+
+everybody
+
+shares
+
+a
+
+lot
+
+of
+
+things
+
+together.
+
+It's
+
+also
+
+the
+
+beginning
+
+of
+
+why
+
+I
+
+love
+
+communities.
+
+And
+
+we
+
+get
+
+into
+
+this
+
+big
+
+fight
+
+and
+
+my
+
+mom
+
+basically
+
+says
+
+she's
+
+going
+
+to
+
+kill
+
+herself
+
+and
+
+she
+
+takes
+
+the
+
+knife
+
+and
+
+I
+
+remember
+
+she's
+
+holding
+
+this
+
+huge
+
+knife.
+
+I'm
+
+like, "No, no, don't
+
+do
+
+it."
+
+And
+
+I
+
+remember
+
+I
+
+just
+
+remember
+
+feeling
+
+that
+
+I
+
+[clears throat]
+
+have
+
+to
+
+stop
+
+it
+
+that
+
+it
+
+is
+
+up
+
+to
+
+me
+
+and
+
+if
+
+I
+
+don't
+
+stop
+
+it,
+
+then
+
+she's
+
+going
+
+to
+
+kill
+
+herself
+
+right
+
+there
+
+in
+
+front
+
+of
+
+my
+
+sister
+
+and
+
+I.
+
+So
+
+I
+
+grabbed
+
+the
+
+knife
+
+and
+
+we're
+
+fighting
+
+left
+
+and
+
+right.
+
+And
+
+my
+
+sister
+
+is
+
+sitting
+
+right
+
+there
+
+and
+
+she's
+
+crying
+
+and
+
+she's
+
+crying
+
+and
+
+I'm
+
+no
+
+and
+
+she's
+
+saying
+
+yes.
+
+And
+
+the
+
+whole
+
+thing
+
+is
+
+so
+
+crazy.
+
+How
+
+old
+
+were
+
+you?
+
+12
+
+at
+
+that
+
+moment.
+
+That's
+
+one.
+
+There's
+
+more
+
+if
+
+you
+
+want
+
+to
+
+go
+
+deeper,
+
+but
+
+that
+
+was
+
+one.
+
+I
+
+invite
+
+you
+
+to
+
+go
+
+deeper.
+
+When
+
+I
+
+was
+
+in
+
+between
+
+second
+
+grade
+
+to
+
+fourth
+
+grade, um
+
+I
+
+was sexually
+
+I
+
+think
+
+you
+
+called
+
+molested
+
+by
+
+an
+
+older
+
+uh
+
+than
+
+a
+
+teenager.
+
+So
+
+she
+
+was
+
+at
+
+least
+
+six
+
+or
+
+seven
+
+years
+
+older
+
+than
+
+me.
+
+This
+
+one
+
+I
+
+didn't
+
+even
+
+know
+
+that
+
+what
+
+was
+
+happening
+
+was
+
+wrong.
+
+And
+
+many
+
+years
+
+later,
+
+Rebecca
+
+and
+
+I
+
+are
+
+in
+
+the
+
+Hamptons
+
+and
+
+it's
+
+somehow
+
+the
+
+story
+
+comes
+
+up
+
+and
+
+she
+
+goes, "Adam,
+
+understand
+
+that
+
+this
+
+is
+
+not
+
+normal
+
+for
+
+a
+
+child
+
+at
+
+that
+
+age."
+
+And
+
+I
+
+didn't
+
+even
+
+fully
+
+understand.
+
+And
+
+that
+
+taught
+
+me
+
+that
+
+explained
+
+to
+
+me
+
+a
+
+lot
+
+about
+
+children.
+
+And
+
+again
+
+we
+
+go
+
+back
+
+to
+
+the
+
+responsibility
+
+of
+
+parents
+
+and
+
+the
+
+responsibility
+
+of
+
+society
+
+to
+
+take
+
+care
+
+of
+
+the
+
+children
+
+and
+
+schools
+
+to
+
+understand
+
+what's
+
+happening.
+
+And
+
+whenever
+
+we
+
+see
+
+anyone
+
+we
+
+are
+
+so
+
+good
+
+at
+
+walking
+
+into
+
+a
+
+room
+
+seeing
+
+someone
+
+else
+
+and
+
+judging.Oh,
+
+they're
+
+not
+
+acting
+
+the
+
+way
+
+I
+
+would
+
+act.
+
+They're
+
+not
+
+acting
+
+right.
+
+They're not
+
+speaking
+
+right.
+
+Everybody's
+
+so
+
+busy
+
+judging
+
+everybody.I
+
+want
+
+to
+
+encourage
+
+every
+
+single
+
+person
+
+next
+
+time
+
+you're
+
+about
+
+to
+
+judge.You
+
+don't
+
+know
+
+who
+
+that
+
+person
+
+is.You
+
+do
+
+not
+
+know
+
+where
+
+they
+
+come
+
+from.You
+
+do
+
+not
+
+know
+
+what
+
+happened
+
+to
+
+them
+
+as
+
+a
+
+kid.
+
+God
+
+forbid
+
+they
+
+were
+
+molested.
+
+God
+
+forbid
+
+they
+
+dealt
+
+with
+
+all
+
+these
+
+things.
+
+You
+
+don't
+
+know
+
+where
+
+they
+
+started.
+
+You
+
+only
+
+know
+
+where
+
+you
+
+see
+
+them
+
+now.
+
+And
+
+it
+
+could
+
+be
+
+that
+
+if
+
+you
+
+really
+
+got
+
+to
+
+know
+
+them
+
+and
+
+you
+
+would
+
+have
+
+known
+
+the
+
+distance
+
+they
+
+went
+
+from
+
+here
+
+to
+
+here,
+
+you
+
+would
+
+have
+
+been
+
+extremely
+
+impressed
+
+with
+
+them
+
+and
+
+you
+
+would
+
+have
+
+not
+
+measured
+
+them
+
+that
+
+way.
+
+And
+
+this
+
+is
+
+why
+
+I
+
+think
+
+it's
+
+so
+
+important
+
+for
+
+all
+
+of
+
+us
+
+when
+
+we
+
+walk
+
+into
+
+rooms
+
+to
+
+really
+
+go
+
+after
+
+unity.You
+
+and
+
+I
+
+can
+
+say
+
+the
+
+same
+
+sentence
+
+in
+
+a
+
+way
+
+that
+
+tears
+
+people
+
+apart
+
+or
+
+brings
+
+people
+
+together.It
+
+takes
+
+more
+
+effort
+
+to speak
+
+in
+
+a
+
+way
+
+that brings
+
+us
+
+together.But
+
+if
+
+we
+
+don't
+
+start
+
+acting
+
+like
+
+this, if
+
+we
+
+keep
+
+dividing
+
+and
+
+keep
+
+splitting,I'm
+
+worried.
+
+Sounds
+
+like
+
+as
+
+an
+
+adult, you've
+
+been
+
+able
+
+to
+
+understand
+
+that early
+
+experience
+
+and
+
+sort
+
+of
+
+create
+
+a new
+
+sort
+
+of
+
+perspective
+
+or
+
+lens
+
+on
+
+what
+
+happened
+
+to
+
+you
+
+and
+
+what
+
+it
+
+means.And
+
+as
+
+you
+
+said,
+
+you
+
+know, you've
+
+you've
+
+oriented
+
+it
+
+around
+
+the
+
+fact
+
+that
+
+it's
+
+happened
+
+for
+
+a
+
+reason
+
+or
+
+at
+
+least
+
+there's
+
+there's
+
+something
+
+to
+
+have
+
+learned
+
+from
+
+it.Was
+
+that
+
+always
+
+the
+
+case?
+
+I
+
+I
+
+sometimes
+
+reflect
+
+on
+
+my
+
+own
+
+experience
+
+and
+
+think
+
+that
+
+for
+
+the
+
+first
+
+season
+
+of
+
+my
+
+life
+
+I
+
+was
+
+dragged
+
+and
+
+then
+
+at
+
+some
+
+point
+
+I
+
+like
+
+got
+
+hold
+
+of
+
+the
+
+steering
+
+wheel
+
+and
+
+I
+
+was
+
+able
+
+to
+
+like
+
+drive
+
+and
+
+one
+
+of
+
+them
+
+was
+
+like
+
+sort
+
+of
+
+unconscious
+
+and
+
+the
+
+other
+
+was
+
+more
+
+in
+
+sort
+
+of
+
+intentional
+
+and
+
+thoughtful
+
+and
+
+I'm
+
+wondering
+
+through
+
+your
+
+early
+
+teens
+
+and
+
+20ies
+
+whether you
+
+had
+
+the
+
+wisdom
+
+and
+
+the
+
+perspective
+
+that
+
+you
+
+have
+
+now
+
+on
+
+your
+
+early
+
+experiences
+
+and
+
+how
+
+that's
+
+evolved
+
+over
+
+time.I
+
+probably
+
+went
+
+to
+
+sleep
+
+crying
+
+every
+
+single
+
+night
+
+for
+
+probably
+
+until
+
+I
+
+was
+
+14
+
+or
+
+15.
+
+And
+
+I
+
+remember
+
+and
+
+if
+
+you
+
+ask
+
+my
+
+sister
+
+did
+
+what
+
+what
+
+would
+
+I
+
+say?
+
+She
+
+I
+
+I
+
+completely
+
+forgot.
+
+She
+
+said
+
+I
+
+told
+
+her
+
+that
+
+one
+
+day
+
+I'll
+
+become
+
+very
+
+successful
+
+and
+
+we'll
+
+take
+
+care
+
+of
+
+I'll
+
+take
+
+care
+
+of
+
+us.
+
+That
+
+was
+
+what
+
+I
+
+used
+
+to
+
+say. I
+
+I
+
+literally
+
+didn't
+
+remember this
+
+is
+
+something
+
+she
+
+told
+
+me. [sighs and gasps]
+
+I
+
+think
+
+that's
+
+how
+
+I
+
+interpreted
+
+that
+
+control
+
+and
+
+how
+
+I'm
+
+going
+
+to
+
+fix
+
+all
+
+these
+
+challenges
+
+that
+
+I had.
+
+But
+
+we
+
+launched
+
+the
+
+school, Rebecca
+
+and
+
+I, more
+
+Rebecca
+
+I
+
+helped.
+
+It's
+
+a
+
+fifth
+
+school.
+
+In
+
+the
+
+school,
+
+we
+
+teach
+
+kids
+
+how
+
+to
+
+be
+
+connected
+
+to
+
+themselves, how
+
+to
+
+be
+
+part
+
+of
+
+something
+
+greater
+
+than
+
+themselves.If
+
+someone
+
+just
+
+taught
+
+me
+
+this
+
+as
+
+a
+
+kid
+
+and
+
+I
+
+would
+
+have
+
+understood
+
+then
+
+that
+
+there's
+
+this
+
+bigger
+
+picture, I
+
+think
+
+I
+
+would
+
+have
+
+been
+
+able
+
+to
+
+handle
+
+it
+
+a
+
+lot
+
+better
+
+and
+
+skip
+
+the
+
+challenging
+
+years
+
+faster, move
+
+faster
+
+into
+
+the
+
+point
+
+where
+
+I
+
+realize
+
+that
+
+I
+
+don't
+
+control
+
+what
+
+happens, but
+
+I
+
+can
+
+control how
+
+I
+
+react
+
+to
+
+it.So,
+
+back
+
+to
+
+your
+
+point
+
+of
+
+driving,
+
+are
+
+you
+
+driving?>> Don't
+
+know.
+
+Now, you
+
+question
+
+it.I'm
+
+questioning.I
+
+would
+
+question
+
+it.You
+
+know,
+
+my
+
+my
+
+</details>
+
+**Speaker B**: 我感觉在你的早期背景中，有一些你以前没有分享过的事情，因为你提到有些事情我们通常不会分享。不是公开的，而是我私下知道的。我以前会向我们工作的员工展示我们的一切。所以有我向一万个人分享过的事情。我不确定它是否曾引起媒体的关注。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: I feel like there's things in your early context that you haven't shared before because you said there's things that we don't usually share. Not publicly, but meaning I have in front of So I used to share everything in front of our employees that we work. So there's things I shared in front of 10,000 people. I'm not sure it ever made it to the press.
+
+</details>
+
+**Speaker A**: 缺少的是什么？你真的想去那里吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: What is missing? You really want to go there?
+
+</details>
+
+**Speaker B**: 我很想去。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: I'm I'm happy to.
+
+</details>
+
+**Speaker A**: 如果你愿意，我也愿意。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: If you're happy to, I'm happy to.
+
+</details>
+
+**Speaker B**: 我会分享两件事，我不确定它们是否可能对正在经历类似情况的人有帮助。比如，当一个人患有双相情感障碍时，他们会非常愤怒或非常快乐，非常快。当他们快乐时，他们是最快乐的。你很有趣，一切都很棒。我妈妈会和我们玩游戏，那太棒了。但当双相情感障碍发生的时候，也会有自杀威胁。然后，当你威胁要这样做时，如果你是两个孩子，而你唯一的父母威胁要自杀，谁会照顾你？如果突然发生这种情况会发生什么？我有很多回忆，但有一个在我回来后不久就突然涌现了。我们现在住在我们从美国回来后所在的基布茨（kibutts）。我妈妈希望我们有一次特别的经历。所以我们去了这个社区，那里每个人都会分享很多东西。这也是我热爱社区的原因。我们卷入了一场大争吵，我妈妈基本上说她要杀自己，她拿起了刀，我记得她拿着一把巨大的刀。我当时想：“不，不，别这么做。”我记得我只是感觉到我必须阻止它，这是我自己的事，如果我不阻止它，她就会在我姐姐和我的面前杀自己。所以我抓住了刀，我们左右打斗。我姐姐正坐在那里，她正在哭，她正在哭，我不知道，她正在说“是”。整个事情太疯狂了。你当时多大了？那个时候我十二岁。这是其中一个。如果你想深入了解，还有更多，但我只是提到了一个。我邀请你深入了解。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: I'll share two things that I'm not sure that maybe could be helpful for other people that are going through similar things. So the the hidding and stuff like so when someone's bipolar, by the way, they get very angry or very happy very fast. When they're happy, they're the happiest. You have fun and everything's amazing. And my mom would play games with us and it was phenomenal. But also when that I think happens a lot with bipolar, there's the suicide threats. And then there's one thing when you threaten to. So again, if you're two children and your only parent threatens to commit suicide, who is going to take care of you? What is going to happen if suddenly that happens? And I have a lot of memories, but one that just came back to me not too long ago. We're in the kibuts, which is where we're living after we came back from the US. My mom wanted us to have a special experience. So we went to this community where everybody shares a lot of things together. It's also the beginning of why I love communities. And we get into this big fight and my mom basically says she's going to kill herself and she takes the knife and I remember she's holding this huge knife. I'm like, "No, no, don't do it." And I remember I just remember feeling that I have to stop it that it is up to me and if I don't stop it, then she's going to kill herself right there in front of my sister and I. So I grabbed the knife and we're fighting left and right. And my sister is sitting right there and she's crying and she's crying and I'm no and she's saying yes. And the whole thing is so crazy. How old were you? 12 at that moment. That's one. There's more if you want to go deeper, but that was one. I invite you to go deeper.
+
+</details>
+
+**Speaker A**: 当我还在二年级到四年级的时候，嗯，我性上，我想你叫我被一个比青少年年长的……嗯，更年长的……性侵犯了。所以她至少比我大六七岁。我当时甚至不知道发生了什么不对。多年后，我和丽贝卡在汉普顿，故事不知怎么地就出现了，她对我说：“亚当，明白，这对那个年龄的孩子来说不是正常的。”我甚至没有完全理解。但这让我对孩子有了很多理解。我们又回到了父母的责任，以及社会照顾孩子和学校去理解发生了什么。每当我们看到任何人，我们都擅长走进一个房间，看到另一个人并评判。哦，他们不是我那样行事。他们不是在做对的事情。他们不是在说对的话。每个人都太忙于评判每一个人了。我希望在下一次你准备评判某人之前，鼓励每个人。你不知道那个人是谁。你不知道他们从哪里来。你不知道他们小时候发生了什么。天啊，他们被性侵犯了。天啊，他们经历了所有这些事情。你不知道他们从哪里开始的。你只知道你现在在哪里看到他们。也许如果你真的了解他们，你会知道他们从这里走到这里的距离，你会对他们印象深刻，而不会用那种方式衡量他们。这就是为什么我认为当我们走进房间时，对我们都非常重要，去真正追求团结。我和你可以在一种撕裂人们或团结人们的方式中说出同样的句子。用一种能把我们团结在一起的方式说话需要更多的努力。但如果我们不开始像这样行事，如果我们继续分裂和分裂，我感到担忧。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: When I was in between second grade to fourth grade, um I was sexually I think you called molested by an older uh than a teenager. So she was at least six or seven years older than me. This one I didn't even know that what was happening was wrong. And many years later, Rebecca and I are in the Hamptons and it's somehow the story comes up and she goes, "Adam, understand that this is not normal for a child at that age." And I didn't even fully understand. And that taught me that explained to me a lot about children. And again we go back to the responsibility of parents and the responsibility of society to take care of the children and schools to understand what's happening. And whenever we see anyone we are so good at walking into a room seeing someone else and judging. Oh, they're not acting the way I would act. They're not acting right. They're not speaking right. Everybody's so busy judging everybody. I want to encourage every single person next time you're about to judge. You don't know who that person is. You do not know where they come from. You do not know what happened to them as a kid. God forbid they were molested. God forbid they dealt with all these things. You don't know where they started. You only know where you see them now. And it could be that if you really got to know them and you would have known the distance they went from here to here, you would have been extremely impressed with them and you would have not measured them that way. And this is why I think it's so important for all of us when we walk into rooms to really go after unity. You and I can say the same sentence in a way that tears people apart or brings people together. It takes more effort to speak in a way that brings us together. But if we don't start acting like this, if we keep dividing and keep splitting, I'm worried.
+
+</details>
+
+**Speaker B**: 听起来，作为一个成年人，你已经能够理解早期经历，并对发生了什么以及它的意义形成一种新的视角或透镜。正如你所说，你知道，你已经把它围绕着这件事发生了原因，或者至少有了一些可以从中学习的东西来构建了。那一直都是这种情况吗？我有时会反思我自己的经历，我认为在我人生的第一个季节里，我被拖着，然后到某个时候我好像抓住了方向盘，我能够开车，其中一个像是有点无意识的，另一个则更具意图性和深思熟虑，我一直在想，通过你的青少年和二十多岁，你是否拥有现在对早期经历的智慧和视角，以及它如何随着时间的推移而演变。我可能每晚都睡着哭，直到我14岁或15岁左右。我记得，如果你问我姐姐做了什么，我会怎么说？我完全忘了。她说我告诉她有一天我会变得非常成功，我们会照顾好我，我会照顾好我们。我以前就是这么说的。我真的不记得这是她告诉我的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Sounds like as an adult, you've been able to understand that early experience and sort of create a new sort of perspective or lens on what happened to you and what it means. And as you said, you know, you've you've oriented it around the fact that it's happened for a reason or at least there's there's something to have learned from it. Was that always the case? I I sometimes reflect on my own experience and think that for the first season of my life I was dragged and then at some point I like got hold of the steering wheel and I was able to like drive and one of them was like sort of unconscious and the other was more in sort of intentional and thoughtful and I'm wondering through your early teens and 20ies whether you had the wisdom and the perspective that you have now on your early experiences and how that's evolved over time. I probably went to sleep crying every single night for probably until I was 14 or 15. And I remember and if you ask my sister did what what would I say? She I I completely forgot. She said I told her that one day I'll become very successful and we'll take care of I'll take care of us. That was what I used to say. I I literally didn't remember this is something she told me.
+
+</details>
+
+**Speaker A**: 我想我把那种控制方式以及我将如何解决我所面临的所有挑战的方式解读了。但我们创立了学校，丽贝卡和我，更多是丽贝卡帮助了。这是一所五年级的学校。在学校里，我们教孩子们如何与自己建立联系，如何成为比自己更宏大的事物的一部分。如果有人在我小时候教了我这个，我会理解的，那么我就能理解这个更大的图景，我认为我能更好地处理它，更快地跳过那些有挑战性的年份，更快地进入那个我意识到我无法控制发生什么，但我可以控制我如何应对它的点。所以，回到你驾驶的点，你现在在开车吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: But we launched the school, Rebecca and I, more Rebecca I helped. It's a fifth school. In the school, we teach kids how to be connected to themselves, how to be part of something greater than themselves. If someone just taught me this as a kid and I would have understood then that there's this bigger picture, I think I would have been able to handle it a lot better and skip the challenging years faster, move faster into the point where I realize that I don't control what happens, but I can control how I react to it. So, back to your point of driving, are you driving?
+
+</details>
+
+**Speaker B**: 不知道。现在，你质疑它。我在质疑。我会质疑它。你知道，我的……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Don't know. Now, you question it. I'm questioning. I would question it. You know, my my
+
+</details>
+
+<!-- chunk 3/18 -->
+
+### 关于成功的定义
+
+**Speaker A**: 问你，你如何定义成功？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: follow-up question to you would be, how do you define success?
+
+</details>
+
+**Speaker B**: 我最近对成功的定义，这很有趣。我今天早上在去这里的时候，我当时在电梯里想到了这一点。我想，你知道它是什么吗？因为我未婚妻这个周末转向我，她对我说：“史蒂芬，我想你现在已经足够了。”然后她停顿了一下，然后她撤回了这句话。但我却开始思考“足够”到底是什么。而且，我当时想，我认为重要的是在追求目标的过程中，那些具有挑战性，被周围的人包围的目标才重要，那就是成功。这就像每天都会发生的事情。在这个我正在玩的这个游戏里，根本没有奖坛。
+
+</details>
+
+**Speaker A**: 但当她说她认为你已经足够了，她指的是物质的东西吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: But when she said she thinks you have enough, was she referring to material things?
+
+</details>
+
+**Speaker B**: 是的。我认为社会教会了我们，一旦我们获得了那种成功，一旦我们获得了那些物质的东西，我们就得到了这个数字，我们内心那个空洞会立刻被填满。现在，我知道这很难听，特别是对于那些还没有达到的人来说。比如，哦，是的，你已经达到了。所以现在你才说。我只会与你分享我学到的，以及我所认识的那些最成功的人所学到的东西，而且我很幸运地认识相当多他们。我没有看到一个因为获得一个数字或一件物质的东西而感到快乐或满足的人。我不相信这就是人生的游戏运作方式。所以当你的未婚妻说——她不是那样说，因为我认为她更偏向精神层面——告诉她我说我惊讶她会这么说。我认为她有更深层次的东西要说，她是在有所保留的。当她说“我想你已经足够了”的时候，我真的会重新定义成功。所以，回到那个问题。我会在第二分钟告诉你我如何定义它。但我认为如果我们能就成功的定义达成一致，那么我们就可以开始讨论我们是否在那里，我们是否正朝着那个方向前进？还有B，我们如何做得更好才能到达那里？如果我们对成功的定义达成一致，那么我们现在就可以朝着同一个目标共同努力了。如果一个人将成功定义为赚最多的钱，而另一个人将成功定义为成为最充实、最快乐、最轻松的人，那么就玩了两种不同的游戏。
+
+</details>
+
+**Speaker A**: 你的定义是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: What's your definition?
+
+</details>
+
+**Speaker B**: 当你躺在病床上，在生命即将结束的一分钟前，你知道一切都将结束，你已经没有时间了，你所剩下的一切就是环绕你当那一刻的爱。你的孩子，你的孙辈，你的朋友，你的朋友，所有的爱环绕着你那一刻，以及你一生所培养的所有爱。我认为正是那种爱，才会转变为之后发生的一切。所以，我定义的成功是在你离开之前最后一刻，你感觉如何？你感觉充实，被爱环绕，感觉生活是一段多么了不起的旅程，还是有遗憾，还是有……我告诉你，在我们离世之前发生的一件事，自我会完全消失。不再有秘密。而且，在精神研究中，你问死亡的定义是什么，回到我们是如何开始这一切的。你得以看到，你得以瞥见，你灵魂曾经拥有的终极潜力是多么完美，以及你本可以走多高，以及你真正到达了哪里，以及那两个点之间的距离。那就是地狱。
+
+</details>
+
+**Speaker A**: 当你31岁的时候，在2010年和你的伴侣米格尔坐下来的时候……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: When you were 31 years old in 2010 and you sat down with your partner Miguel
+
+</details>
+
+**Speaker B**: 米格尔·麦克利（Miguel McKelie）。你当时在白板上为我们画了一个草图，我们一起工作。如果我问你当时对成功的定义是什么，你会转向我并说“爱”，还是会说别的东西？我相信我会说别的东西。所以我的一个大转变是我遇到了我的妻子。所以到这张你向我展示的照片的这个时间点，我已经在学习生活游戏四年了。所以我开始变得更高级了。所以我可以告诉你我在想什么。那不会是爱，而是“我们”和上面的那个点，因为如果你看看那张照片，它会说“我们工作，我们生活，我们给予，我们分享”。我不记得了。我大概有十年没看过它了。它从来都不是关于书桌和椅子。它一直都是关于创造一个让人们过上生活，而不仅仅是生存的世界。它是关于比我们自己更宏大的东西。如果我们从那天回到大约10年前，如果我问你你长大后想成为什么，你会说什么？
+
+</details>
+
+**Speaker A**: 在21岁的时候……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: At 21.
+
+</details>
+
+**Speaker B**: 21岁。这很尴尬。我告诉你。但尴尬的是……我为我21岁的自己感到尴尬。你想要成为什么？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I'm embarrassed for my 21-year-old self. What did you want to be?
+
+</details>
+
+**Speaker B**: 一个亿万富翁。你想要在21岁成为亿万富翁。我怀着后悔的心情做过。为什么？我以为赚钱会弥补童年那个空洞。如果我问你16岁的时候呢？我记得我当时说我想要成为百万富翁。我不认为我16岁时知道“百万富翁”这个词。我想是数字变了，因为世界变了。但我以为赚钱会填补童年那个空洞，那时似乎非常困难，非常具有侵略性，充满了我们用来形容困难和虐待童年的所有负面词汇。我以为赚钱能解决它。但后来我做了三个生意，直到我遇到了丽贝卡。丽贝卡说：“你一直在追逐金钱。你永远不会有它。即使你得到了它，它也不会让你快乐。你永远不会有它。”她说，“追逐金钱就像追逐酷。你很酷。你就是那样。你没有……我不认为你工作得太累了。”非常感谢你。你不喜欢穿鞋。我不喜欢穿鞋，请。这都没关系。
+
+</details>
+
+**Speaker A**: 所以她说，“你一直在追逐金钱。它不是那样运作的。而且就像追逐一个女孩一样。你真的想要某个人。你必须深呼吸。”但她说对我，“即使你以你追逐金钱的方式得到它，它不仅不会满足你，它对你来说也是负面的。”所以我说：“那我该怎么办？”她说：“你是一个非常有天赋的个体。你应该弄清楚你的超能力是什么。”这是我第一次听到有人使用“超能力”这个词。她说：“你需要掌握你的超能力。你需要把它与对世界来说真正有意义的东西联系起来。一个你充满热情的，但又能带来改变的东西。你需要把这两样东西结合起来。你需要只专注于让它成为现实。雇员会想和一家正在做这件事的公司一起工作。投资者想投资一家正在做这件事的公司。消费者想从一家正在做这件事的公司购买。剩下的就……”然后她说，成功的方式就是你定义它。然后，金钱的成功，你认为它会从天而降，比你想象的任何时候都更强大。我当时想我想要娶这个女人。我们在认识三个月后就提出了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: So she said, "You're chasing money. It doesn't work like that. Also like chasing a girl. You really want someone. You have to take a deep breath." But she said to me, "Even if you were to get money the way you're chasing it, it not only will not fulfill you, it will be negative for you." So I said, "Well, what should I do?" She said, "Well, you're a very talented individual. You should figure out what your superpower is." It's the first time I've heard anyone use the word superpower. She goes, "You need to take your superpower. You need to connect it to something that's really meaningful for the world. Something you're passionate about, but something that can make a difference. You need to bring those two things together. You need to only focus on making that a reality. Employees will want to work with a company that's doing that. Investors want to invest in a company that's doing that. And consumers want to buy from a company that's doing that. The rest will for then she said success the way you you define it then that money success you think is a will fall on you from the sky more than you can ever imagine. I was like I want to marry this woman. I proposed 3 months after we met."
+
+</details>
+
+**Speaker B**: 还有我们对成功的定义，然后金钱的成功，你认为它会从天而降，比你想象的任何时候都更强大。我当时想我想要娶这个女人。我们在认识三个月后就提出了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: And the idea of we was central to this drawing that I have in front of me, which is a drawing you did on a whiteboard when you were 31 years old, 2010 with your partner Miguel after selling your company. I think it was called Green Desk.
+
+</details>
+
+**Speaker A**: Green Desk。你卖了多少钱？不是像……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Green Desk. You sold it for how much? It wasn't like
+
+</details>
+
+**Speaker B**: 150万美元。有三位合伙人。所以我们每个人各拿五十万美元。五十万。五十万。但我们的合伙人不想一次性付给我们全部金额。所以他只给了我们30万美元。剩下的部分是米格尔和我四年的分期付款。我记得我告诉米格尔说：“米格尔，你把钱留着，因为我会浪费的。”我第一次赚到钱。你把钱留着，因为我会浪费它，我们会把它留给我们下一个生意。宇宙运作的方式就是这样，宇宙会向我们说话。迹象开始发生，某件事会引出另一件事。这几乎是巧合。我们第一个工作建筑，为了得到建筑，房东不会给我们，除非我们给了他正好30万美元的支票。就是米格尔账户里躺着的那30万美元。它从那里流向那里。而我的工作是……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: 1.5 million. There were three partners. So we each got half a million. Half a million. Half a million. But our partner didn't want to pay us the whole amount up front. So he only gave us $300,000. The rest was installment over four years for Miguel and I. And I remember telling Miguel, Miguel, you keep the money cuz I'll waste it. First time I ever made money. You keep the money cuz I will waste it and we'll keep it for our next business. And the way the universe works, by the way, the universe speaks to us. The signs start happening and you sort of one thing leads to another. It's almost serendipity. Our first Weiwork building to get the building, the landlord wouldn't give it to us unless we gave a check of exactly $300,000. The same $300,000 that was sitting in Miguel's account. It went from there to there. and my work was
+
+</details>
+
+<!-- chunk 4/18 -->
+
+### Greenesk 的起源与商业模式的演变
+
+**Speaker A**: So tell me what that is. Okay, we're in Greenesk. Just to remind everybody what Greenesk is, Greenesk was created in May of 2008. The world was the world was crashing. That was the downturn and before it started, Miguel and I got to know each other. He was an architect and I had a baby clothing company and we're in the same building. My roommate introduced us and we would just talk about doing great things and there was a landlord there and every day he would see me goes, "Adam, your baby clothing company sucks." And I said, "Mr. Gutman, why do you say that?" He said, "Well, my wife, we have eight kids. She loves buying baby clothes. She didn't once buy from you. I don't know how you pay me rent. Your baby clothes suck." And I would say, "Well, Mr. Gutman, you own all this real estate around here." He goes, "Yes, I do." Said, "Your real estate sucks." He goes, "Why do you say that?" Said, "It's all empty." And we would do that for four months back and forth. One day he looks at me goes, "Adam, if I gave you one of my buildings, you keep saying that it's sucks. What would you do with it?" So he takes me upstairs and he shows me this this beautiful floor plate. And I said to him, "How much do you get in rent?" He goes, "$5,000 a month." Said, "Well, it's empty, but let's say you would get $5,000." Said, "Look, I'm a small business. I don't need this much. Let's divide it to 15 small places spaces. We'll charge $1,000 each. We'll put a receptionist. We'll pay the receptionist 2500. We'll get 15,000. That will leave us with 12,500. You will get 7,500 and we'll get the difference." And he was like, "Let me think about it." He calls me the next day. He goes, "I love it, but instead of one floor, take the whole building. It had five floors. We'll put the receptionist downstairs so we can share the expenses. It will be even better." And we put five ads on Craigslist. We launched Greenes. It was 92% full within a week. started cash flowing positive which was a new thing for me because this was my fourth business never had cash flow positive cash flowing positive within a month and became very successful very fast after about six maybe 12 months we started thinking bigger Miguel and I said we'll take this national we went to our landlord said I'm not interested we asked for $20 million we said we'll split the business 50/50 he wasn't interested so we started and and very soon after he said I'll buy it from you and we started planning this and you drew this on a whiteboard. Miguel drew this on the wall, not even a whiteboard. The walls were made of glass. This was drawn on the glass. So all of our walls in green desk were also whiteboards and cuz everybody was about creating and inventing. And what you see here is that social life, commercial, friends is here. This proves the fact Ben Horwitz in the interview that you saw he did with me in the podcast, he says to me, Adam, you've always had one idea. And then at the end, at the end, he apologized said, Adam, I didn't mean to say you only have one idea. Of course, you have all these ideas. I said, Ben, you're right. This is not that different from what flow is. This is all about the friends and all about the living and all about the working life essentials. Wow, I haven't seen this for a long time. Fintech, travel, everything in between. So, for anyone that's watching uh listening and can't see, it's a circle that has lots of circles in it. Um, and it says all the little circles are like travel, health, social life, friends, um, co-work co-workers, supporters, uh, life essentials, work rituals, work rituals. Again, you can read it better than me, but that makes sense.
+
+<details>
+<summary>Original English</summary>
+
+So tell me what that is. Okay, we're in Greenesk. Just to remind everybody what Greenesk is, Greenesk was created in May of 2008. The world was the world was crashing. That was the downturn and before it started, Miguel and I got to know each other. He was an architect and I had a baby clothing company and we're in the same building. My roommate introduced us and we would just talk about doing great things and there was a landlord there and every day he would see me goes, "Adam, your baby clothing company sucks." And I said, "Mr. Gutman, why do you say that?" He said, "Well, my wife, we have eight kids. She loves buying baby clothes. She didn't once buy from you. I don't know how you pay me rent. Your baby clothes suck." And I would say, "Well, Mr. Gutman, you own all this real estate around here." He goes, "Yes, I do." Said, "Your real estate sucks." He goes, "Why do you say that?" Said, "It's all empty." And we would do that for four months back and forth. One day he looks at me goes, "Adam, if I gave you one of my buildings, you keep saying that it's sucks. What would you do with it?" So he takes me upstairs and he shows me this this beautiful floor plate. And I said to him, "How much do you get in rent?" He goes, "$5,000 a month." Said, "Well, it's empty, but let's say you would get $5,000." Said, "Look, I'm a small business. I don't need this much. Let's divide it to 15 small places spaces. We'll charge $1,000 each. We'll put a receptionist. We'll pay the receptionist 2500. We'll get 15,000. That will leave us with 12,500. You will get 7,500 and we'll get the difference." And he was like, "Let me think about it." He calls me the next day. He goes, "I love it, but instead of one floor, take the whole building. It had five floors. We'll put the receptionist downstairs so we can share the expenses. It will be even better." And we put five ads on Craigslist. We launched Greenes. It was 92% full within a week. started cash flowing positive which was a new thing for me because this was my fourth business never had cash flow positive cash flowing positive within a month and became very successful very fast after about six maybe 12 months we started thinking bigger Miguel and I said we'll take this national we went to our landlord said I'm not interested we asked for $20 million we said we'll split the business 50/50 he wasn't interested so we started and and very soon after he said I'll buy it from you and we started planning this and you drew this on a whiteboard. Miguel drew this on the wall, not even a whiteboard. The walls were made of glass. This was drawn on the glass. So all of our walls in green desk were also whiteboards and cuz everybody was about creating and inventing. And what you see here is that social life, commercial, friends is here. This proves the fact Ben Horwitz in the interview that you saw he did with me in the podcast, he says to me, Adam, you've always had one idea. And then at the end, at the end, he apologized said, Adam, I didn't mean to say you only have one idea. Of course, you have all these ideas. I said, Ben, you're right. This is not that different from what flow is. This is all about the friends and all about the living and all about the working life essentials. Wow, I haven't seen this for a long time. Fintech, travel, everything in between. So, for anyone that's watching uh listening and can't see, it's a circle that has lots of circles in it. Um, and it says all the little circles are like travel, health, social life, friends, um, co-work co-workers, supporters, uh, life essentials, work rituals, work rituals. Again, you can read it better than me, but that makes sense.
+</details>
+
+**Speaker A**: And this was the idea for we work.
+
+<details>
+<summary>Original English</summary>
+
+And this was the idea for we work.
+
+</details>
+
+**Speaker A**: This is the idea for we work. So sometimes people said, "Oh, you grew out of desk and chairs. You shouldn't have gone to all these categories." The idea started, this was before there was one desk. What is the essence of this?
+
+<details>
+<summary>Original English</summary>
+
+This is the idea for we work. So sometimes people said, "Oh, you grew out of desk and chairs. You shouldn't have gone to all these categories." The idea started, this was before there was one desk. What is the essence of this?
+
+</details>
+
+**Speaker A**: We wanted to make a world, at least in our opinion, that really needed community. This was to deliver on a mission of of create a world where people make a life and not just a living. This was a full life style, life circle, and it was very aspirational. And it's how, by the way, for anyone of our listeners or your listeners that uh that is starting a business, start with a vision. Dream as high as you can. Go all the way to the stars. Cuz if you don't shoot for the stars, you're never going to get to the moon. Go far. Then take a deep breath and go back to basics. What do I need to do first? What I need to do second? What I need to do third? The secret of life and entrepreneurship is to be able to be in both places at the same time. On the one hand, I'm going to go so far. On the other hand, I'm just starting, so I better roll up my sleeves and get the broom and start brooming. It's both of them. I need to go knock on doors. I need to go meet people. I need to do whatever work needs to be done at the beginning to get the business started.
+
+<details>
+<summary>Original English</summary>
+
+We wanted to make a world, at least in our opinion, that really needed community. This was to deliver on a mission of of create a world where people make a life and not just a living. This was a full life style, life circle, and it was very aspirational. And it's how, by the way, for anyone of our listeners or your listeners that uh that is starting a business, start with a vision. Dream as high as you can. Go all the way to the stars. Cuz if you don't shoot for the stars, you're never going to get to the moon. Go far. Then take a deep breath and go back to basics. What do I need to do first? What I need to do second? What I need to do third? The secret of life and entrepreneurship is to be able to be in both places at the same time. On the one hand, I'm going to go so far. On the other hand, I'm just starting, so I better roll up my sleeves and get the broom and start brooming. It's both of them. I need to go knock on doors. I need to go meet people. I need to do whatever work needs to be done at the beginning to get the business started.
+</details>
+
+**Speaker A**: Let's talk about both then. So the you got the trenches and then you've got let's say the clouds or the moon as you refer to it. Why is it important to dream big? Why is the scale and the size of the dream important?
+
+<details>
+<summary>Original English</summary>
+
+Let's talk about both then. So the you got the trenches and then you've got let's say the clouds or the moon as you refer to it. Why is it important to dream big? Why is the scale and the size of the dream important?
+
+</details>
+
+**Speaker A**: So I believe it's the secret of manifestation. So when people ask me Adam what is the secret manifestation? How do you make something out of nothing? I think the order is first you have to believe. If you and I have a big idea, first we have to believe it. Then that takes time to believe. True belief, by the way. Do you know when belief is measured?
+
+<details>
+<summary>Original English</summary>
+
+So I believe it's the secret of manifestation. So when people ask me Adam what is the secret manifestation? How do you make something out of nothing? I think the order is first you have to believe. If you and I have a big idea, first we have to believe it. Then that takes time to believe. True belief, by the way. Do you know when belief is measured?
+
+</details>
+
+**Speaker A**: No. When it's really tough. Belief is not measured on everything. So I remember this. This is and I've shared this story before, but your audience is so wide that I'm sure a lot of them haven't heard it. When right after the whole explosion of we work occurred and it was like 5 days in and the whole thing was crashing on us and there's a million articles and the whole thing is happening my spiritual teacher who I haven't spoken at this point almost for 2 years after I studied with him for 8 years calls me said Adam how are you doing I said I'm not doing so well right now it's crazy he said oh great that's why I called you I said why did you call me his name is Eton I said why didn't you call me said I called you to make sure that you remembered the two things we learned for 8 years. Said, "Atan, we didn't learn two things for 8 years. We study twice a week. We learned endless things." Goes, "No, you missed it. We learned two things." I said, "Please remind me." Goes, "One was love thy neighbor as yourself, and the rest is commentary."
+
+<details>
+<summary>Original English</summary>
+
+No. When it's really tough. Belief is not measured on everything. So I remember this. This is and I've shared this story before, but your audience is so wide that I'm sure a lot of them haven't heard it. When right after the whole explosion of we work occurred and it was like 5 days in and the whole thing was crashing on us and there's a million articles and the whole thing is happening my spiritual teacher who I haven't spoken at this point almost for 2 years after I studied with him for 8 years calls me said Adam how are you doing I said I'm not doing so well right now it's crazy he said oh great that's why I called you I said why did you call me his name is Eton I said why didn't you call me said I called you to make sure that you remembered the two things we learned for 8 years. Said, "Atan, we didn't learn two things for 8 years. We study twice a week. We learned endless things." Goes, "No, you missed it. We learned two things." I said, "Please remind me." Goes, "One was love thy neighbor as yourself, and the rest is commentary."
+</details>
+
+**Speaker A**: It took a second, Fred. I said, "Let's talk about this for a second. What does love thy neighbor as yourself mean to you?"
+
+<details>
+<summary>Original English</summary>
+
+It took a second, Fred. I said, "Let's talk about this for a second. What does love thy neighbor as yourself mean to you?"
+
+</details>
+
+**Speaker A**: Such a famous saying. We've heard it so many times. When I think about it, the way that I understand it is to have empathy and compassion for all of the complexities, both the good, the bad, the indifferent, and that which you don't understand, which is like how I would treat myself. like I understand um all the that I'm a complex person and that I'm multifaceted and imperfect and that I have strengths and weaknesses and I kind of I'm okay with all of it and in others we're less okay with all of it. Beautiful. Let's say it a little bit different words but that was right on. Love that ins means that you first have to love yourself. To love yourself you have to acknowledge not only the great strength that you have that you love, you must acknowledge your weaknesses, your failures, your mistakes. And the only way you can love yourself after all of those is if you're able to forgive yourself. So the true secret of loving oneself is to forgive yourself, to not carry guilt, to really be able to know that all of these are lessons for you to grow and change and go to your next level from. Back to the sword analogy that you're a sword and you're getting forged and every single time you get hit, you just get stronger. Once you feel that and you're able to love yourself, then you're able to love everybody else. That was the first thing he told me we learned. The second thing he said to me which we said before is
+
+<details>
+<summary>Original English</summary>
+
+Such a famous saying. We've heard it so many times. When I think about it, the way that I understand it is to have empathy and compassion for all of the complexities, both the good, the bad, the indifferent, and that which you don't understand, which is like how I would treat myself. like I understand um all the that I'm a complex person and that I'm multifaceted and imperfect and that I have strengths and weaknesses and I kind of I'm okay with all of it and in others we're less okay with all of it. Beautiful. Let's say it a little bit different words but that was right on. Love that ins means that you first have to love yourself. To love yourself you have to acknowledge not only the great strength that you have that you love, you must acknowledge your weaknesses, your failures, your mistakes. And the only way you can love yourself after all of those is if you're able to forgive yourself. So the true secret of loving oneself is to forgive yourself, to not carry guilt, to really be able to know that all of these are lessons for you to grow and change and go to your next level from. Back to the sword analogy that you're a sword and you're getting forged and every single time you get hit, you just get stronger. Once you feel that and you're able to love yourself, then you're able to love everybody else. That was the first thing he told me we learned. The second thing he said to me which we said before is
+</details>
+
+<!-- chunk 5/18 -->
+
+### 关于信念的衡量标准与克服困难
+
+**Speaker A**: 我想提醒大家，夜晚最黑暗的时刻是黎明前的最后一秒。信念不是在一切都在上升、每个人都在告诉你你有多天才、每个人都想成为你的朋友、每个人都想成为你的投资者的时候来衡量的。信念是在一切都崩溃的时候来衡量的。当连你的朋友都在质疑你的时候，当电话没有响的时候，如果一个人能够拥有真正的信念，那么他会告诉我，如果你有能力把这次经历拿下来，真正坚持你的信念，坚持你的积极性，坚持你的快乐，成为我所知道的你能够成为的人，你无法想象未来为你储备了什么。你在最艰难的时刻相信了什么？相信上帝，相信我自己，相信我的妻子，相信我的孩子，相信即使我现在不知道这件事为什么发生，我也会变得更强大。我记得那天早上，这次电话是在深夜，第二天早上六点。我从十三千名员工减少到了一个星期内三名员工。我走向那三名作为家庭办公室伙伴的员工，不只是员工，是伙伴。我走向他们，我微笑着，而他们却很紧张。我们每天早上六点见面，然后我们就说，我们完了。我们破产了。一切都结束了。他们只在他们想是五到十亿美元的家庭办公室来管理之前三个月才加入我，他们正面临着负四亿的复利利息，完全破产的状况。然后我开始想他们，不是我所有朋友，而是那些真正和我在一起、和我一起享受、和我一起成长、在我真正需要的时候和我一起赚钱的朋友。在那个我真的需要的时候，很多人都不在，而这三个人，几乎是陌生人，我并不真正认识他们，却站在我身边，看到我微笑，亚当，你为什么笑？他们就像他们觉得我真的疯了，一切都结束了。我说我笑是因为我记得夜晚最黑暗的时刻是黎明前的最后一秒，我记得信念实际上是在事情困难的时候来衡量的，而不是在一切都在运转的时候。我相信，我知道它会成功，我不知道如何，也不知道为什么，但这一切最终会为最好的结果服务。我们会从中学到很多，这会为我们应对真正的困难做准备。所以，我们准备好去面对它。大约十天后，我们以非常积极的方式开始走出困境。我想去故事的顶端，我真的想走过一些关键时刻，但我注意到当你开始描述那三个人时，你的能量发生了一点变化。
+
+<details>
+<summary>Original English</summary>
+
+I want to remind you that the darkest moment of the night is a second before dawn. Belief is not measured when everything is going up and everybody's telling you what a genius you are and everybody wants to be your friend and everybody wants to be your investor. Belief is measured when it's all crashing. when even your friends are questioning you, when the phone is not ringing and if a person is able to have true belief then then he says to me if you're going to be able to take this experience and really hold your belief, hold your positivity, hold your happiness, be the person I know you can be, you can't imagine what the future stored for you. What did you believe in in your hardest moment? in God and in myself, in my wife, in my kids, and in the fact that even though I don't know at this moment why this thing happened, I am going to be stronger for it. And I remember that morning, this phone call was late at night, the next morning at 6:00 a.m. I walked down to to my three I went from 13,000 employees to three employees in one week. I walked down to the three employees who were my partners in the family office, not even employees, partners. I walk down to them and I'm smiling and they're stressed out. We would meet every day at 6:00 a.m. that we're done. We're bankrupt. It's finished. They only joined me 3 months before they came to manage what they thought was a 5 to 10 billion family office and they're dealing with negative 400 million compounding interest full bankruptcy situation. and start and I thought about them all my not all a lot of friends that I had that were really there with me and enjoyed with me and grew with me and made money with me when I really needed that one small moment a lot of them weren't there and these three almost strangers who I didn't really know were standing right there by my side and they see me smiling Adam why are you smiling you they're like they thought I really lost my mind it was done and I said I'm smiling because I remember that the darkest moment of the night is a second before dawn and I remember that belief is actually measured when things are difficult, not when everything is working. And I believe and I know it's going to work out and I don't know how and I don't know why, but this is all going to work out for the best. And we're going to learn a lot from this and it will actually prepare us when a real difficulty happens. So, we're ready to go and deal with it. And about 10 days later, we started coming out of it in a very positive way. I want to go to the top of the story and I really because I really want to walk through some of the key moments, but um I noticed your energy shift a little bit when you started describing those three people.
+</details>
+
+**Speaker B**: 这里还有一件事我学到的。如果你知道你现在正面临这种情况，我敢打赌你有很多朋友。
+
+<details>
+<summary>Original English</summary>
+
+Here's another thing that I've learned. If you know haven't you're facing this as we speak right now. I bet you have lots of friends.
+</details>
+
+**Speaker A**: 我敢打赌你有很多朋友。
+
+<details>
+<summary>Original English</summary>
+
+I bet you have
+</details>
+
+**Speaker B**: 你如何定义朋友？
+
+<details>
+<summary>Original English</summary>
+
+how you define friends.
+</details>
+
+**Speaker A**: 完全正确。嗯，我告诉你他们的一个秘密，我很抱歉说。我们只能知道他们中的哪一个是你朋友，哪一个不是。如果上帝不禁止你，你真的需要他们，那么我也可以告诉你，如果你会崩溃还是不会崩溃，如果你做得足够大，真的非常非常大，你就会崩溃。每当有人说，哦，亚当，这永远不会发生在我身上，我的自我永远不会成为最好的我，我永远都在掌控之中。年轻成功的那些人会告诉我，哦，你做得不够大，因为如果你真的非常非常大，那这就是“做大”的定义。生活不是关于我们是否会跌倒。我们应该跌倒。生活是关于我们如何站起来。我们跌倒的次数越多，我们站起来的次数就越多。如果你练习站起来足够多次，那么你可能就不会跌倒了。然后你就会变得非常擅长。然后你就可以去真正地去追求星辰了。所以，对于朋友来说，我能量改变的原因是关于那三个人，我不知道他们，他们一直在我身边。我对自己忠诚性有点弱。我非常忠诚。所以，如果你在困难的时候在我身边，我就会在那里。即使你犯了错，我也会在你犯错的时候在那里。很多创业者在开始企业时都有这个东西，流行文化称之为冒名顶替综合征，他们会有点怀疑自己，这与拥有信念的想法形成对比，因为有时他们不相信，他们被不安全感和怀疑困扰，他们会有点前后摇摆，他们会想，我真的有能力做这件事吗？我以前从来没有做过。这就是追求伟大的事物所伴随的。你以前从未做过。所以，你对那些正在与怀疑作斗争的人说什么，因为他们听到“听着，你必须相信”。当你画出这个时，你有没有怀疑过？一个迷人的问题。当我做很多工作的时候，我的确定性非常高。我确信它会成功。我经常觉得人们把我的确定性搞成了一个不同的词。我只是非常确定这个产品对世界是需要的。当我开始“心流”时，那感觉是不同的，它在一切之后，在我们的家庭之后。当我开始工作时，我没有孩子。只是我和丽贝卡，我非常容易投入到某件事中，工作18到20天，一周7天，热爱每一秒。除此之外，什么都没有。我们的工作增长得是天文数字般快，真的非常非典型的快，特别是对于那种类型的公司。我一直想直接从你那里听到，为什么？发生了什么？是什么因素促成了这种飞速的崛起？我想在你成立公司后几年，我成为了它的客户。嗯，既在纽约，也在伦敦。我没看到什么？那是什么？所以我们的工作始于2010年2月，对于任何听着的人来说，我想这就是它应该成为什么，并且可以运作的方式。我想从第一天我们就非常清楚，正如你用那个圆圈指出的那样，这个使命比我们本身更大。当你处于一个比你自己更大的使命的一部分时，紧迫感不仅仅变成“哦，我们现在必须做这件事”，因为我说过，或者因为我们这么说的。当你感觉到你的使命真的需要走向世界时，你就必须现在做，因为没有时间浪费，因为它真的很重要。我们只是从我们的第一个开始，我的一部分能量是把人们聚集在一起。我真的很喜欢创造社区，但我同时也喜欢当我们对前进的方向非常清楚时快速行动，而且我不相信任何事情都是不可能的。所以当你连接那个使命，即某件事比你自己更大，速度和不接受“不”时，你把这些东西组合在一起，真正的魔法就会发生。我想这也是一个。
+
+<details>
+<summary>Original English</summary>
+
+I think a couple of years after you founded the company, I became a customer of it. Um both in New York, but also in London. What didn't I see? What was what was it? So we work started in February of 2010 and it's for anybody listening I think this is the way that that it should and could work. I think from the first day we were so clear as you pointed out with the circle on on the fact that this mission is bigger than us. And when you're part of a mission that's greater than yourself urgency doesn't just become something like oh we have to do it now because I said so or because we said so. when you feel that your mission really needs to come out to the world, then you have to do it now because there's no time to waste because it's really important. And we just started with our first and part of my energy is I bring people together. I really like creating community, but I also I love to move fast when we're clear on the direction that we're moving and I don't believe anything is impossible. So when you connect that mission of something being greater than yourself speed and not accepting a no you put those things together then real magic happens. I think that's one too.
+</details>
+
+**Speaker A**: 我想举一个例子。
+
+<details>
+<summary>Original English</summary>
+
+I want an example of that.
+</details>
+
+**Speaker B**: 我会给你一个，很多例子，但让我们开始吧，让我们尽早开始工作，因为我认为这一切都始于工作。但在例子之前，我还有一件事想说，那件事让我们开始工作，来回答一个问题。是团队。团队非常敬业。团队相信了很多。那是他们的东西，那是他们的精髓。那是他们作为比自己更宏大事物的一部分的经历。当你能把一群人聚集在一起，让他们朝着同一个方向前进，你几乎不可能阻止任何事情。给你一个例子。这是我们的第二个工作。我们需要做，我们需要做地板。我们只有九万美元。我们没有更多的钱了。而所有的报价都是每块地板20万美元，无论数字是多少。我告诉米格尔和那几个人，我们必须以这个价格做。然后说，你做不到。我们收到了五个报价。这不是价格。我说，嗯，地板是多少？而每个人都说，地板在3万到4万之间，而这些木地板的设计是设计中很重要的一部分。我说为什么？我说什么意思？为什么？这些是报价。我说，嗯，你能帮我分解一下这个报价吗？我说你是什么意思？他们说，嗯，地板有多少块？多少钉子？多少胶水？多少橡胶？每人工作多少小时？
+</details>
+
+**Speaker A**: 怎么做？
+
+<details>
+<summary>Original English</summary>
+
+How to do it?
+</details>
+
+<!-- chunk 6/18 -->
+
+### 谈判策略与第一性原理
+
+**Speaker A**: 成本？没有一个能给出答案。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: cost?
+
+No one could answer.
+
+</details>
+
+**Speaker A**: 谈到谈判策略时，我有一个不同的想法。我联系了前三位那个人，告诉他：“伙计，我希望你能比成本高出15%。我认为这是一个公平的利润空间，15%。你同意吗？”所以，当然，我同意了。这感觉很棒。而且他们三个人，顺便说一下，都说“是”。我说：“太好了。嗯，我需要看到每件产品的成本。我要自己去报价，我们就能达到15%。”
+
+</details>
+
+**Speaker A**: 报价后，成本很快就降到了第一层，而不是30到45,000，而是12,000。那个人告诉我：“亚当，没人以前那样跟我合作过。”在你不知不觉中，他们加入了我们，我们拥有了自己的内部建筑公司，我们意识到只有通过控制它，我们才能获得正确的价格并足够快地行动。所以，这不是没有答案，而是利用逻辑深入研究它。现在，也许如果我深入研究它，我将无法获得更好的价格，但我所描述的是建筑业在一般和全球范围内的挑战，这也是当今解决问题的部分。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Very quickly, the cost went down to that first floor instead of 30 to 45,000 was 12,000. The guy tells me, "Adam, no one's ever worked with me that way." before you know it, they joined us and we had our own internal construction company and we realized that only by controlling it could we get the right price and move fast enough. So it's not taking no for an answer but also using logic to really look into it. Now it could be that if I looked into it I wouldn't have been able to get a better price but what I'm describing is a challenge in construction in general and globally and it's part of the things that flow is solving today.
+
+</details>
+
+**Speaker B**: 埃隆会把那种从第一性原理推理称为“推理”。我有一个类似的经历。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Elon would call that like reasoning from first principles. I had a similar story.
+
+</details>
+
+**Speaker B**: 他会称之为那样。而且从我所知道的，在“流”（flow）中，我们把埃隆看作是一位企业家。我们认为他令人难以置信。每当有人拿埃隆做例子时，比如没人是埃隆，那不是我们使用的例子。我们只是从他那里寻找灵感。我恰好知道他可以请工程师，因为我有一个朋友的女儿在SpaceX为他工作。他可以请一位工程师在一个问题上工作六个月。一个螺丝，一个连接，但结果最终不会像NASA做过的事情那样简单，但会简单500倍，更便宜、更快、更轻。所以，是的，它回到了第一性原理。你可以称之为提出每一个问题，但如果你是企业家，如果你要运营，或者如果你是员工或合作伙伴，就问“为什么”。人们不会问，因为他们不想显得粗鲁或给别人带来不便，或者他们太关心受欢迎了。所以，对供应商或任何既有的现状进行反驳被认为是不方便的。我将尝试用不同的理由来解释为什么他们不问自己为什么。
+
+</details>
+
+**Speaker A**: 这次讨论将回到同样的几个基本问题。一个能让自己舒服地问自己为什么他正在做某事的人，质疑自己、看到负面事物、看到问题，然后享受摆脱它们的过程的人，将不会有任何问题去问别人为什么。每当你问别人为什么，而他们不想回答你时，你隐藏了什么？这是一个讨论。我通常在谈论这类话题时，会先告诉供应商，无论在哪里，我希望你们赚钱。不，没有人想让你亏钱。但我们有一个使命，如果我愿意支付比我应该支付多20%，那么那意味着另一个建筑、另一个社区、另一个街区将不会参与。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: It's going to go back this discussion can keep going back to the same basics. A person who's comfortable asking himself why is he doing something questioning himself or herself seeing negative things seeing problems and then enjoying the process of growing out of them will have no problem asking someone else why. And whenever you ask someone why and they don't want to answer you, what are you hiding? This is a discussion. I usually when I go into topics like this start by telling the vendor wherever it is, I want you to make money. No, no one's trying to make you lose money. But we're on a mission and if I'm going to pay even 20% more than I should, then that's 20% less of another building, another community, another neighborhood that Floor is not going to take part in.
+
+</details>
+
+**Speaker B**: 这对我来说真的很有道理。我们在公司有一个Slack频道，叫做“纸墙”（Paper Walls）。整个想法是，我们试图鼓励我们的团队坚持纸墙。纸墙看起来很坚固，但会显露出完全由纸制成的真相。你一试，你就问为什么。你坚持下去。我有一个故事，在我的一家公司里，一个孩子为我工作了四年。我告诉他：“为我们制作一个30分钟的视频需要多长时间？”他说：“需要9天，对吧？”他为我工作了四年。制作那个视频花了9天。我们决定想推出一个每周频道。我需要他最多在3天或4天内完成，这样团队的其余部分就可以完成。我问他：“需要多长时间？”他说：“9天。”然后，因为我们在公司建立了坚持纸墙的文化，我告诉他：“为什么？”你知道他告诉我什么吗？我想我问了类似“要把它做成两天需要什么？”他回答说：“斯蒂芬，你只需要给我买一台新笔记本电脑。我有一台旧笔记本电脑。”我当时想，“该死。我付给他四年，他一直在想我在这四年里因为我没有问那个问题而损失了多少时间。”但从你的角度来看，他从未提到过。他自己也不知道自己身处纸墙之中。我们在工作的第一年，我们开了一栋建筑。嗯，我们在工作第九年，我们在130个城市、50个国家、70种语言、每栋建筑100,000平方英尺的建筑中，每天开两栋建筑，每天200,000平方英尺，相当于每天20,000平方米的欧洲听众。当时只有能够完成一、二部分的同类人，已经成为了世界上有史以来最快的物理全球增长的领导者。和你一样的人，在你的话中学习，会经历纸墙，就像你学到任何事情都是可能的。突然间，这就是高速增长和动能的秘密。无论你今天能做什么，如果你的公司开始快速增长，你会对你在3个月、9个月和两年内能做什么感到震惊。你回过头看时，你不会相信那才是你的能力。我一直告诉人们，他们告诉我：“我做不到这个，这需要三个月。”我说：“伙计们，我以前见过有人做过，我知道我们能做到，现在更容易了。我以前已经在那里了，现在你只需要相信，然后我们就会需要建立系统和流程。今天有了技术，这就是我认为AI非常令人兴奋的地方，你可以简化很多这些事情，并做得更好。但回到你对你公司的看法，我敢打赌，你上次和他们围坐圈子的时候，有多少员工？”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: This really does uh make a lot of sense to me. We have this um Slack channel in our company called Paper Walls. And the whole idea is that we're trying to encourage our team to push on paper walls. A paper wall is something that looks solid but reveals itself to be completely made of paper. The minute you try it, you ask why. You push on it. And there's a a story of a a kid that worked for me in one of my companies for 4 years. And um he animates video. I said to him, "How long is it going to take you to animate a video for us that's 30 minutes?" He said, "It takes 9 days, right?" He worked for me for 4 years. It took him 9 days to animate the video. We decide we want to launch a weekly channel. I need him to do it in 3 or 4 days max so that the rest of the team can do it. I say to him, "How long is it going to take you?" He says, "9 days." And then because we had established this culture in our company of pushing on paper walls, I said to him, "Why?" And do you know what he said to me? I think I said something like, "What would it take to do it in two?" And he went, "Stephen, you just need to buy me a new laptop. I have an old laptop." I thought, "Fucking hell. I've been paying him for 4 years and he's been think about how much time I've lost in those four years just simply because I didn't ask that question. But also to your point, he never mentioned it. He never knew he was in a paper wall himself. First year of we work, we opened one building. Hm. Year nine of we work, we open two buildings a day in 130 cities, 50 countries, 70 languages, 100,000 square foot per building. So that's 200,000 square foot a day, 20,000 square meter for your European listeners a day. A lot of the same people who were only capable doing the one and two particip were leaders by that time of of being able to do one of the fastest physical global growth the world's ever seen. Same people as you learn to in your words go through paper walls as you learn that anything is possible suddenly this is the secret of high growth and momentum whatever you can do today if your company starts growing fast you'll be shocked what you'll be able to do in 3 months 9 months and in two years you're going to look back and not believe that that was your capacity and I keep telling people and they tell me oh I can't do this and this takes 3 months I say guys I've seen this done before I know we can do it it's easier now I've already been there now you just need to believe and goes back to the belief then we're going to need to put the systems and the processes and today with technology and this is where I think AI is very exciting you could shortcut a lot of these things and and do a much better work but back to what you said about your company I bet when's the last time you sat with them in a circle how many employees?
+
+</details>
+
+**Speaker A**: 关于总共200人。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: about 200 in total
+
+</details>
+
+**Speaker B**: 那么200是个大数字，但如果你把其中30个人坐在一间房间里，然后真正问他们他们个人在做什么，你们的内部纸墙是什么，你们的内部挑战是什么，什么在阻止你们？他们就感到很自在地谈论了。然后作为一个群体，首先，他们所有的同伴都会听到，在你不知不觉中，他们的同伴会帮助他们。嘿，我记得你曾说过，这对于你来说是个孩子，因为你缺乏安全感。你在公开场合不说话。你有点多疑。你对自己太苛刻了。每个人都有另一个故事。在你不知不觉中，一旦你让他们习惯于内部成长，它就会影响你的业务的外部增长。在我们工作的时候，业务增长的速度比我能增长得快。问题就出在这里。我实际上认为，每当一家公司增长速度超过其创始人时，会发生两件事之一。要么它会崩溃，因为就是这样。要么如果奇迹般地那个创始人能把一切都维持住，根据我的经验，他们不会感到满足和快乐。如果他们不满足和快乐，为什么还要做？对创始人来说，倾听有多重要？对那些想建立或成为的人来说，努力工作有多重要？因为关于努力工作存在一个真正的争论。你知道，有些人说，你知道，工作与生活平衡是终极的。有些人说，如果你是创始人，你得工作100小时/周。啊，顺便回答这个问题。这是最重要的事情。但我们必须定义努力工作。作为创始人，努力工作不仅仅局限于你在办公室里投入的小时数。作为创始人，努力工作是你为业务投入了多少时间？你为自己投入了多少时间？随着你成长，你将成为一个更好的领导者。你将成为一个更好的募资者。你将成为一个更好的表达者。你会更好地表达你的业务。所以，努力工作是做这件事的唯一方法。你不能是50%。而你的创始人知道另一件事。当我必须决定是否要继续做“流”还是不时，之所以这么难，是因为我知道不存在80%或90%的“在里面”。要么你是100%在里面，你全在里面，要么它就没用。那么努力工作有多重要？最重要。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: about 200 in total so 200 is a big number but if you took 30 of them sat in a room and actually asked them what are you working on personally what is your internal paper wall what is your internal challenge what's stopping you? And they got comfortable talking about it. And then as a group, first of all, all their peers would hear and before you know it, their peers would help them. Hey, I remember that you said that this is a child for you're insecure. You don't talk in public. You're a little judgmental. You're too hard on yourself. Every person has another story. Before you know it, the moment you get them used to grow internally, it will affect your business to grow externally. In we work, the business grew faster than I could grow. That's where everything went wrong. I actually think whenever a company grows faster than its founder, one of two things would occur. Either it will crash because that's what happens. Or if somehow miraculously that founder is able to keep it all together, in my experience, they're not fulfilled and happy. And if they're not fulfilled and happy, why do it? How important for the founders listening and for the people that want to build or become is hard work? Because there's a real debate around hard work. You know, some people say, you know, work life balance is the ultimate. Some people say, if you're a founder, you got to give 100 hour weeks. Ah, by the way, new answer to that question. It is the most important thing. But we have to define hard work. Hard work as a founder is not just limited to how many hours you put in the office. Hard work as a founder is how much time do you put on the business? How much time are you putting on yourself? As you grow, you will be a better leader. You will be a better money raiser. You will be a better express. You'll express your business better. So hard work is the only way to do it. And you can't be 50%.
+
+</details>
+
+<!-- chunk 7/18 -->
+
+### 关于工作的定义与专注力的力量
+
+**Speaker A**: 什么是努力工作？有些是在生意上，有些是在你身上。如果你是已婚的，那它也在你的关系上。如果你有孩子，那它也在你和孩子身上。顺便说一下，对于那些有孩子的听众来说，如果你在想你需要努力做些什么，就听听你的孩子。他们知道。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: What is hard work? Some of it is on the business, some of it is on you. If you're married, it's also on your relationship. If you have kids, it's also with your kids. By the way, for those listeners who have kids, if you're ever wondering what you need to work on, just listen to your kids. They know.
+
+</details>
+
+**Speaker A**: 他们在暗示一种当一个人专注于某件事时会发生的一种类似魔法的事情。你刚才说，如果你已经有90%的投入，那它就不行了，但如果你是100%的投入，它就能行。这种不明显“魔法”是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: There you alluding [clears throat] to this like sort of magical thing that happens when one focuses on something. You were saying if you're like 90% in, it like doesn't work, but if you're 100% in, it works. What is the the magic that isn't obvious with that?
+
+</details>
+
+**Speaker B**: 当你投入100%时，就没有时间怀疑。就没有时间提问。因为你已经如此投入了。当你能一边做着，一边找到这种工作生活平衡时，你不会做一件伟大的事情。如果你想取得成就，它离你的潜力还很远。但再次强调，我正在重新定义“100%投入”的含义。我们谈过沃伦·巴菲特。他不是100%投入吗？当然他也是。他有完整的日程表吗？不可能。他会保持开放，这样他才能参加重要的会议，才能阅读，才能建立联系。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: When you're 100% in, there's no time for doubt. There's no time for questions. There's no time for fear cuz you're so in it. When you're, oh, I can find this work life balance while doing it, you're not going to do something great. And if you are, if you were to achieve something, it's not close to your potential. But again, I'm redefining what 100% in meant. We talked about Warren Buffett. Was he not 100%? And of course he is. Does he have a full schedule? No way. He keeps it open so he can have the important meetings, so he can read, so he can connect.
+
+</details>
+
+**Speaker B**: 投入100%的方式有很多种。但在我的意见里，在生活中，你必须投入100%。这就是我喜欢冲浪的原因。在冲浪时，当你站在波浪板上，如果你没有在当下，没有进入心流状态，你就被冲下了板。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: There are different ways to be 100% in. But you must in life, in my opinion, be 100% in. It's why I love surfing. In surfing, when you're on the board on a wave, if you're not present and you're not in flow, you're knocked off that board.
+
+</details>
+
+**Speaker C**: 那么那些同时做两项不同业务、追求两种不同使命的创始人呢？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker C**: What about founders that are doing two different businesses, pursuing two different missions?
+
+</details>
+
+**Speaker B**: 记住我告诉过你什么？我们说进入心流状态，你不是艾伦。我会告诉他们你不是艾伦。艾伦可以做两件非常非常少的事情。我知道他是我所知道的唯一例子。杰克·多西。世界上最好的有些能做到。但做两家公司同时运营非常困难。做一家已经很困难了。而且我猜即使在那些情况下，他们也是通过非常非常出色地做了一家来积累了巨大的资源。再次强调，关于我不知道你在想哪个创始人，但你见过那样的人。说实话，当我遇到那些做两件事并且有些成功的人时，他们没有时间为自己的个人成长而花时间。所以，他们因为第一家业务做得太好而有额外的空闲时间，他们用它去做另一家业务，这通常在我经验中是一个借口，而不是真正体验生活本身的机会。如果你已经做了一件事，它有意义、令人满足，你还需要另一件事吗？你正在隐藏什么？你没有真正做的事情是什么？这是我的问题。现在，如果他们也许是个奇迹。你好。我没能参加那个金融会议。你能告诉我我错过了什么吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Remember what I told you? We say in flow, you're not Elen. I would tell them you're not Elen. Elen can do two different very few people. I know I he's one of the only examples I have. Jack Dorsey. Some of the best on the planet can do. But uh it's very hard to do two businesses at the same time. It's hard enough to do one. And I guess even in those cases, they built up tremendous resources by doing one really, really well. Again, my question about I don't know which founder you're thinking, but you've met people like that. Really, where I when I've met people doing two that are somewhat succeeding, they're spending no time on their own personal growth. So, the extra time they have because they did their first business so well, they're using it to do another business, which usually in my experience is an excuse not to actually experience life for what it is. If you're already doing one and it's meaningful and it's fulfilling, why do you need another? What are you hiding from? What is it that you're not actually doing would be my question. Now, if they maybe there's a maybe they're a miracle. Hello. I wasn't able to make that finance meeting. Can you tell me what I missed?
+
+</details>
+
+**Speaker D**: 我面前的是 Whisper Flow 的新笔记工具。对我来说，它彻底改变了我的游戏规则。我大部分时间都参加过非常非常长的会议，和很多不同的团队和很多不同的部门。在任何一个星期里，我可能有40到50次会议，有时更多。但我也在播客里坐着，那里有很多非常有趣的事情被说，我需要专注于对话。Whisper Flow 的笔记工具对我来说做的事情是，它捕捉了我整个一周发生的所有事情的全部背景。它标注了说话的人是谁，他们说了什么，我可以向它询问我可能忘记的事情，比如行动，我说的，我将要做但还没有做的事情。它正在构建我生活中所有正在发生的事情的这种更广泛的背景。这是一种不可思议的超能力。我喜欢很多人在街上找我，因为他们知道我是 Whisper Flow 的投资者，并告诉我它如何改变了你的生活。这是生产力领域最不为人知的秘密。如果你想试用它，请前往 whisperflow.ai/stephven 立即下载它并试用一下。当你试用它之后，我想你会明白为什么我们让它赞助这个播客。这太神奇了。我有一个数据让我真正震惊了。它说销售团队大约花费他们时间的前50%在行政和手动 CRM 更新上，而不是销售。这对他们的底线来说是致命的。这也是十年前在我上一家公司我转向使用 Piperive（我们的赞助商）的原因。如果你以前没用过 Pipe Drive，它是一个智能的 AI 驱动的销售 CRM。他们刚刚推出了新的会议智能功能，比如内置在 CRM 中的 AI 笔记工具。Pipe Drive 现在自动化了更多阻止你做你最喜欢的工作的事情的行政工作。在你的会议之前，它会把交易历史、电子邮件记录和以前的对话汇集到一个简短的摘要中，这样你就能做好准备。它会将你的会议与你联系起来。它在那里做笔记，这样你就不需要了。它会将它做出的那些笔记变成准确的自动草拟 CRM 更新。已经有10万家公司正在用它来运营他们的销售。你可以在 piperive.com/ceo 注册，在那里你会获得一个独家的30天免费试用，而不是通常的14天。绝对不需要信用卡。如果你在销售领域并且管理销售团队，只需前往 piperive.com/ceo 即可开始使用。我不认为你会后悔的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker D**: What I have in front of me is Whisper Flow's new notetaker. And for me, it's been an absolute game changer. I spend most of my life sat in very, very long meetings with lots of different teams and lots of different departments. In any given week, I could have 40, 50 meetings and sometimes more. But also, I sit in podcasts where lots of very interesting things get said and I need to focus on the conversation. What whisper flows notetaker does for me is it captures the entire context of everything that's happened throughout my entire week. It labels who the people are that said what and I can ask it for things that I might have forgotten for actions things that I said I would do that I haven't yet done. It's building this sort of broader context of everything that's happening in my life. And it's an incredible incredible superpower. I love the fact that so many of you come up to me in the street because you know I'm an investor in Whisper Flow and tell me how much it's changed your life. It is the worstkept secret in productivity. If you want to give it a go, head to whisperflow.ai/stephven to download it right now and give it a try. And once you try it, I think you'll realize why we let them sponsor this podcast. It's amazing. I am have a stat here that genuinely shocked me. It says that sales teams spend about 50% of their time on admin and manual CRM updates rather than selling. That is deadly for their bottom line. And that is part of the reason why a decade ago at my previous company I switched to using Piperive who are our sponsor. If you've never used Pipe Drive, it is an intelligent AI powered sales CRM. And they just launched new meeting intelligence features like an AI noteaker built right into the CRM. Pipe Drive now automates more of the admin that stops you from doing the work that you love to do best. Before your meeting, it pulls deal history, email records, and previous conversations into a single brief so you're prepared. And it joins your meetings with you. It's in there to take notes so you don't need to. and it turns those notes that it takes into accurate autodraft CRM updates. 100,000 companies are already running their sales on it. You can sign up at piperive.com/ceo where you'll get an exclusive 30-day free trial instead of the usual 14 days. Absolutely no credit card needed. Just head to piperive.com/ceo to get started if you're in sales and you run a sales team. I don't think you'll regret it.
+
+</details>
+
+**Speaker B**: 我们经常说，你知道，在某一个方面，你是在说要快。我从像你这样的伟大的创始人，以及埃隆和那些家伙那里听到了这一点。他们说快点，推着纸上的墙，快到你能快，但也有其他领域，你必须慢下来才能快，但也要知道自己的弱点。我显然没有在 Weiwork 中成功构建伟大的技术。这是个已知事实。所以，如果我再次合作，我要建立一个比我们公司更大的业务，要找对合作伙伴。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: We often say, you know, in one end you're saying go fast. And I hear that from great founders like yourself and Elon and those guys. They say go fast, push on paper walls, go as fast as you can, but then also there's other areas where you go, you have to go slow to go fast, but also know your weaknesses. I obviously did not succeed in building great technology in Weiwork. That is a known fact. So if I'm going to partner again and I'm going to build a business larger than we work, put the right partners.
+
+</details>
+
+**Speaker C**: 知道自己不知道什么。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker C**: Know what you don't know.
+
+</details>
+
+**Speaker B**: 知道自己不知道什么，然后让别人带头。当我们雇佣我们的 CTO 时，我们有四位不同的 CTO。我会让本（Ben）做最后的面试。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Know what you don't know. When we hired our CTO, we had four different CTOs. I'll let Ben do the final interview.
+
+</details>
+
+**Speaker B**: 好的，这就是我想问的原因，因为我经常从创始人那里听到的一件事是他们知道自己不知道X。假设是金融领域，然后他们对某人进行面试，那个人说：“我最擅长金融。”他们根本不知道自己最擅长金融，因为创始人不知道金融。那么，你做了什么来减轻意外雇佣一个你无法评估其能力的陷阱？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Okay, this is what I was going to ask because one of the things I hear from founders a lot is they know they don't know X. Let's say it's finance and then they do an interview with someone and the person says, "I'm the best at finance." They have no idea if they're the best at finance because they don't know finance, the founder. So, what did you do to mitigate the trap of accidentally hiring someone that you weren't able to assess their competence?
+
+</details>
+
+**Speaker B**: 我选择那些说实话的合作伙伴。当马克和本和我开董事会时，马克是我们的董事会成员，本加入我们。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: I chose partners that say the truth. when Mark and Ben and I do a board meeting and Mark is our board member and Ben joins us.
+
+</details>
+
+**Speaker B**: 为了背景说明，我应该说马克和本是世界上最著名的投资者之一，他们为你的新业务 Flow 提供了支持。嗯，是的，只是……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: For context, I should say Mark and Ben are two of the world's most famous investors and they have backed you with your new venture flow. Um yeah, just
+
+</details>
+
+**Speaker B**: 马克和本投资了4.7亿美元在 FL 的 A 轮和 B 轮。而我、亚当和我家人个人投资了3.5亿美元，因为当我们一起创建公司时，我们想保持一致。我们一起买，我们一起卖，我们一起做一切。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Mark and Ben have invested $470 million into FL at the series A and series B. And I, Adam, and my family personally invested $350 million because part of when we created the the business together, we wanted to be aligned. We buy together, we sell together, we do everything together.
+
+</details>
+
+**Speaker B**: 我们有董事会会议。它们通常从早上8点开始，到下午5点结束。非常长的董事会会议。我们讨论一切。我们作为团队非常喜欢它。我们真的尊重他们。我们为这些会议做好了充分的准备。我们不会花太多时间，因为再次强调，当你非常忙的时候，你没有时间。所以，不是我们花一个月，我们提前一周去，看看我们上个季度做了什么。看到你做了多少总是令人震惊的。因为当你没有真正衡量时，你只是在做。当你停下来看你做了什么时，比如，哇，我们在三个月内做了相当多的事情。所以，非常有用的。我们准备了我们的董事会演示文稿。我们在他们实际阅读之前几天把它们发给他们。然后他们就来开会了。所以是8:30到5点。然后会议结束后，我跟他们俩吃晚饭。晚饭以我开始说：“我们通常会坐在哪里。请告诉我我能做得更好的地方。”我第一次问他们时，他们有点不自在。第二次我真的记得马克那样说。马克，安德鲁，那样，他准备好了。本拿出了他的笔记。那是一种真正的伙伴关系，我们每次都这样做。当你拥有……你之前说过，在我看来，A6Z 是地球上最大的投资者之一，如果你今天是一个创业者，并且你能……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: We have our board meetings. They usually start at 8:00 a.m. They end at 5:00. Very long board meeting. We talk about everything. We love it as a team. We really respect them. We truly prepare for these meetings. We don't spend too much time cuz again, when you're really busy, you don't have time. So, it's not like we spend a month, we go a week before, look, take stock of everything we did that quarter. It's always shocking to see how much you did. Cuz when you're not really measuring, you're just doing. When you stop for a second and look what you did, like, wow, we did quite a lot in 3 months. So, very useful. We put together our board decks. We send them to them a few days before they actually read them. And then they come for the meeting. So it's like 8:30 to 5. And then when it's done, I go to dinner with the two of them. And the dinner starts by me saying, "We sit down usually wherever it is. Please tell me what I can do better." And the first time I asked them, they were a little bit uncomfortable. The second time I literally remember Mark going like this. Mark Andrew like this, like he was ready. Ben taking out his notes. That's a true partnership and we do it every single time. And when you have the previously you said some of the biggest investors in my opinion A6Z number one investor in the planet and if you're an entrepreneur today and and you can
+
+</details>
+
+<!-- chunk 8/18 -->
+
+### 投资和人才管理的核心原则
+
+**Speaker A**: 你想从谁那里拿钱。如果你今天是个企业家，并且你从 Benchmark 这样的公司那里拿钱，那公司又从谁那里拿钱呢？杰克·多西从 Uber、Square、Twitter、Block 以及更多。所以当你选择你的投资者时，要看看他们的历史。他们是支持像你这样的企业家的人吗？他们会带你进入下一个水平，还是他们有与企业家不相符的历史？如果他们有与企业家不相符的历史，就让他们离开。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: that's who you want your money from. If you're an entrepreneur today and you take it from Benchmark the company that took me out that took Travis Superstar out. Jack Dorisy out >> Travis from Uber Jack >> Travis from Uber. Jack Dorsey from Square, Twitter, Block and and many more. So when you choose your investors, look at their history. Are they the kind that support entrepreneurs like you? Are they going to take you to the next level or do they have a history that actually clashes with the entrepreneur? If they have a history that clashes with the entrepreneur, park them.
+
+</details>
+
+**Speaker A**: 所以我从那里总结出了两点。第一点是关于什么时候该快什么时候该慢的想法，你用技术为例。第二点是关于 A16Z 故事中关于正确的人和合作伙伴的故事。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: So there was two two key things I pulled out from there. The first was around this idea of like knowing when to go fast and slow and you use technology as an example. The second thing which was opened up the story about um A16Z is the right people and partners.
+
+</details>
+
+**Speaker B**: 所以更重要的是，如果我必须选择一个，对投资者、对员工、对合作伙伴，对你来说，最重要的事情是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> So important more if I had to choose one. Right investors, right employees, right partners. Most important thing.
+
+</details>
+
+**Speaker B**: 你学到了关于员工什么？一个优秀的团队成员是什么样的？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> What did you learn about employees? Like what is a great team member?
+
+</details>
+
+**Speaker A**: 如果我对员工有问题，只能怪一个人，那就是我。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> If I have a problem with an employee, there's only one person to blame and that's me.
+
+</details>
+
+**Speaker A**: 你在选择员工时犯了哪些错误？我认为是我在领导方式上犯的错误，我一直在学习这一点。我以前是从上到下领导，现在我正在学习如何从下到上领导。区别在哪里？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> And what are the mistakes that you made in choosing employees? I think it's how I was leading that I've been learning more about. Where I used to lead from top to bottom, I now I'm learning how to lead bottom to up. What's the difference?
+
+</details>
+
+**Speaker B**: 从上到下意味着你认为因为有人向你汇报，他们必须做你说的。但这不真实。这不是独裁。他们有自由意志。他们可以去工作。如果他们是人才，如果你雇佣了某人，他们真的很优秀，他们会去别处工作。尤其是伟大的领导者。他们越有才华，从上到下领导就越行不通。他们不会愿意这么做。他们不应该这么做。伟大的才华不愿意被这样管理。灰色人才想要受到启发，想要我看到他们比他们自己看到的更完整的一面。他们想要有犯错的空间，但也想要成长。但他们也需要反馈。如果你有一个很棒的人，他们很 [__]。抱歉，他们很 [__]。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> Top to bottom means you think because someone reports into you, they have to do what you say. But it's not true. This is not a dictatorship. They have free will. They can go work. If they're talent, if you hired someone, they're really talented, they'll go elsewhere. Especially great leader. The more talented they are, the more the top to bottom does not work. They they won't be willing to do it. They shouldn't. Great talent is not willing to be managed like this. Gray talent wants to be inspired, wants me to see the full version of themselves even more than they see it. And they want the room to make mistakes, but also to grow. But they also need feedback. If you have someone amazing and they're [__]. Sorry. They're miss
+
+</details>
+
+**Speaker B**: 你可以发誓。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> You can swear.
+
+</details>
+
+**Speaker A**: 我可以发誓。是的。我的孩子们会听的。一切都很好。他们很 [__]。你打算告诉他们，还是因为你对冲突不适应，你打算等 90 天，每当他们犯那个错误时，你就会那么生气，到你和他们沟通的时候，已经太晚了。他们犯错的那一刻，如果你尊重他们，给他们反馈，因为这对他们来说是最好的事情。通过这种方式，当你给他们反馈时，也给他们空间来给你反馈。如果你要管理这些员工，想吸引世界上最好的人才，记住权力来自于影响力，而不是控制。如果你认为他们需要做你说的，因为你是他们的老板，你就已经输了，这只是时间问题，直到它不再奏效。如果他们对这没意见，只是因为你是老板，你就必须告诉他们他们做什么，他们接受这种权力，他们不是你需要的员工，你也不是他们需要的领导者。你没有机会从他们身上榨取最好的东西。我旅程中我反思的其中一部分，因为这是一个迷人的故事，是你在软银遇到马萨的那一天，我非常想了解在遇到马萨之前，公司处于什么背景。那个特别的故事一直激励着我，原因有很多。但公司当时在哪里？是 2017 年。我想告诉你我遇到马萨的那一天。我要把它和我在 Weiwork 犯过的最大的错误联系起来。我会把它们整合起来。马萨是世界上最好的投资者之一。他也是世界上最大的投资者之一。在我故事中，马萨是英雄，尽管很多人没有正确了解故事，可能会误解。所以在我的故事中，马萨对我下了一笔赌，他做得非常棒，他理应因此变得非常成功。他领导着软银。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: By the way, where was the business at? Was it It was um 2017. I want to tell you about the day I met Mustang. I'm going to connect it to I think the biggest mistake I ever made in Weiwork. I'll bring it together. Masa is one of the best investors in the world. He's also one of the biggest investors in the world. In my story, Masa is the hero even though a lot of people who didn't know the story correctly might have misunderstood. So in my story, Masa took a bet on me and and he did amazing and he deserved to have become very successful from it. And he leads SoftBank.
+
+</details>
+
+**Speaker B**: 马萨是软银的领导者。所以如果你想了解一点马萨的历史，马萨是软银的领导者。他变得对世界非常有名，他买了一场科技会议，实际上是在拉斯维加斯，他买了这个科技会议，我想大概是 8.8 亿美元，同时他也有自己的科技业务，他拥有一个电话公司，他开始成长，而且不断成长。他以去见史蒂夫·乔布斯并说我要拿 iPhone 而闻名。当 iPhone 刚推出时，他知道它会是一场大热门，我将把它给日本的每个订阅者。他发明了它的租赁模式，并给了一个 iPhone。然后每个人都签署了他的服务，因为每个人都想要 iPhone。所以很多事情，然后他给了杰克·马萨 2000 万美元，作为加班费，我想变成 2000 万美元。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> Masa is the leader of SoftBank. So if you want a little history of Masa, Masa is the leader of SoftBank. He becomes very well known to the world where he buys a tech conference actually in Vegas and he buys this tech conference for I think about 880 million and at the same time he has his own tech businesses and he owns a phone company and he starts growing and growing. He's famous to have gone to Steve Jobs and said I'm going to take the iPhone. When the iPhone just came out he knew it was going to be a hit and I'm going to give it to every subscriber in Japan. He invents the leasing model for it and gives an iPhone. Then everybody signs to his service cuz everybody wanted the iPhone. So a lot of things and then he gives Jackma $20 million that over time I think becomes 200
+
+</details>
+
+**Speaker B**: 对于阿里巴巴来说，在它的巅峰时期价值大约是 800 亿美元。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> for Alibaba which at its peak is worth about 80 billion.
+
+</details>
+
+**Speaker A**: 哇。所以当我遇到马萨的时候，这是 2016 年。让我们从前一天开始。在纽约市遇到马萨的前一天，我有一个董事会会议。这是旧董事会，我们都在一起坐着。我刚在 16 亿的估值之前，可能六个月前在 16 亿的时候融资。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> So at the time when I meet Masa, this is 2016. Let's start with the night before. The night before I met Masa in New York City, I have a board meeting the day before. This is the old board and we're all sitting together. I just raised at 16 I raised maybe six months before at 16 billion valuation.
+
+</details>
+
+**Speaker B**: 我们工作多大？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> How big we work?
+
+</details>
+
+**Speaker A**: 我们的目标是做那一年大约 9.5 亿美元的收入。我之所以知道这一点，是因为我们每一年收入都翻了一番。所以我们的商业模式运行得非常好，四面墙运行得非常好。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> It's about to do that year about 950 million in revenue. And the reason I know is cuz we were doubled in revenue every single year. So we work the business model was working very well and the four walls were working very well.
+
+</details>
+
+**Speaker B**: 墙壁和别的东西的区别是什么？当你有零售业务时，你的商店可能做得很好。你的州赚不到钱。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> What's the distinction sorry between the four walls and everything else. When you have a retail business, you could have your stores could be doing really well. Your state not making money
+
+</details>
+
+**Speaker A**: 那么，假设你在纽约市。所以我们稍微谈谈高增长。当你像我们一样飞速增长时，你总是在地图上建新的建筑。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> and what's the >> state the so let's say you're in New York City. So let's talk high growth for a second. When you're growing as fast as we're growing, you're always putting new buildings on the map.
+
+</details>
+
+**Speaker B**: 新建筑需要一个爬坡期。通常一个零售店或一家餐厅的爬坡期可能需要两年、三年。我们喜欢谈论投资回报率（ROI）和需要多长时间。一个很好的投资回报期可能是 24 个月、36 个月，然后它可以增长。我们在巅峰时期，回报投资的资金大约在 6 个月到 9 个月之间，然后之后它会增长到 12 个月和 18 个月。所以如果你要增长，我们在纽约市建了 130 栋建筑。所以你可以有 30 栋建筑。如果第二年你又加了 30 栋建筑，那这 30 栋新建筑至少在头 6 个月，如果不是 9 个月，必须亏钱。所以你可以在这些建筑中非常盈利，但在这些建筑中却不盈利，因为它们需要时间。这意味着纽约市这个城市看起来不像一个盈利的城市，或者如果你看你的损益表，国家看起来不像一个盈利的国家。这就是为什么在高增长业务中，你可以变得非常具体，在细节上，并且真正了解什么有效，什么无效。即使在一个建筑里，你可以有一个楼层是盈利的，因为你先开了一层，而你之后开的楼层虽然不盈利。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> A new building has a ramp up. Usually ramp up of a retail store or a food or a restaurant could take two years, three years. And we like to talk about ROI, return on investment and how long does it take. A great time to return your investment would be 24 month, 36 month and then it can grow. We work at its peak was returning its money somewhere between 6 month to 9 month and then afterwards it was going up to 12 month and 18 month. So if you're going to grow, we we grew in New York City to 130 buildings. So you can have 30 buildings. If the following year you're adding 30 more buildings, those new 30 have to per definition lose money for at least the first 6 month if not 9 months. So you could be very profitable in these buildings but not profitable in these because they need time. Which means this New York City the city doesn't look as a city profitable or the country if you're looking at your P&L doesn't look as a country profitable. Which is why in a high growth business you got to get very specific and in the details and you got to really understand what's working, what's not. Even in a building you can have one floor that's profitable cuz you opened it first and the new floor that you opened after not profitable yet.
+
+</details>
+
+**Speaker A**: Weiwork 的技术从来没有能这样计算。Flow 的技术，如果我今天把它扔到 Weiwork 上，我可以告诉你哪个平方英尺是，我忘记哪个建筑是盈利的，哪个楼层是盈利的。我可以告诉你哪个角落是。它知道一切，因为它是一个连接的系统。它不是不相连的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Weiwork's technology was never able to count this way. Flow's technology, if I threw it on Weiwork today, I can tell you which square foot is, I forget which building is profitable, which floor is profitable. I can tell you which corner is. It knows everything cuz it's a connected system. It's not disconnected.
+
+</details>
+
+**Speaker A**: 回到我们刚才说的。我正和董事会坐着，我们决定我们要把业务转为盈利，我们要出去筹集资金，让业务盈利，然后上市。你将如何让它盈利？在一个正在运作的高增长业务中，要让它盈利的唯一方法是停止增长。你只是停止增加新的建筑，并给所有建筑时间来追赶。记住我解释过，在 Weiwork，你的问题不是需求，而是供应。所以当你不再增加更多的供应时，需求大于供应，一切都会被填满。当一切都填满，而你没有增加任何新东西时，你就会实现现金流为正。这很简单。所以，我们坐在这里。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Back to what we're saying. I'm sitting with the board and we decide that we want to turn the business, we're going to go out and raise money, turn the business profitable, and take it public. How are you going to turn it profitable? All you have to do in a high growth business that's working to turn it profitable is stop growing. You just stop adding new buildings and you give time to all the buildings to catch up. Remember I explained that in we work your problem was not demand, it was supply. So the moment you don't add more supply, the demand is greater than the supply, everything fills up. The moment everything fills up and you didn't add anything new, you go cash flow positive. As simple as that. So, we sit in that
+
+</details>
+
+<!-- chunk 9/18 -->
+
+### 决策與資金籌集策略
+
+**Speaker A**: 我們決定我要去提高數字，從 30 億提高到 4 億，停止增長，這意味著停止簽訂租約，也許甚至轉向管理交易，這我們稍後會在會議中討論。然後再將其公開。這是 2016 年。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: and we decide that I'm going to go and raise and the number was 3 to 400 million, stop the growth, meaning stop signing leases, maybe even move to management deals, something we'll talk about in floor in a second. And and then take it public. This is 2016.
+
+</details>
+
+**Speaker A**: 那是前一天。在某個時間點，Masa 的右側助手，他的名字是 Ron Fischer，給我們其中一位員工發了一封電子郵件，發了一條簡訊，說：「嘿，Masa 想見見 Adam。」這時，Masa 正在籌集 Vision 基金。對於那些不了解的人來說，Vision 基金是他的百億美元風險投資基金，是從未籌集過最大的風險投資基金。Masa 想見 Adam。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: That was the day before. The same time at some point Masa's right-hand guy, his name is Ron Fischer, sends an email, a text to one of our guys and says, "Hey, Masa wants to come see Adam." This is at the same time that Masa is raising the vision fund. For those who don't know, the vision fund was his hundred billion dollar venture fund, largest venture fund ever raised. Masa wants to see Adam.
+
+</details>
+
+**Speaker A**: 說：「太好了。」然後我們安排了上午 90 分鐘，第二天早上。我們在早上準備。Masa 要來。大家都很興奮。他們會想：「這太棒了。也許我們昨天剛討論的那項投資今天就會實現。」他的團隊說：「只是想讓你知道，不會有投資討論。」所以，沒問題。隨著時間接近早上，我們不斷收到簡訊。他不會有 90 分鐘。他會有 75 分鐘。他會有 60 分鐘。他會有半小時。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Say, "Great." And we schedule 90 minutes in the morning, the next morning. And we do we do the we get ready in the morning. Masa is coming. Everyone's excited. They're like, "This is amazing. Maybe that investment we just talked about yesterday will come today." His team says, "Just to let you know, there will be no discussions of investing." So, okay, no problem. As it gets closer to the morning, we keep getting text messages. He's not going to have 90 minutes. He's going to have 75 minutes. He's going to have 60 minutes. He's going to have half an hour.
+
+</details>
+
+**Speaker A**: 我想：「好吧，無論是什麼，聽起來都很好。」與此同時，川普總統首次獲勝。這是在十二月底。Masa 與他們開會了。他們想談談美國的未來。他說：「我非常抱歉。我有一個和川普總統的會議，我只有 12 分鐘。」同樣地，我們在這種情況下都會發現自己處於境地，當我們想：「天啊，我制定了這麼多計劃，我本想進行這次巡迴，我本想展示這些數字。我要做所有這些事情，突然一切都改變了。」我深吸一口氣。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I'm like, "Okay, whatever it is, sounds great." The same time, President Trump wins for the first time. This is the end of December. And Masa had a meeting with them. They wanted to talk about the future of America. Said, "I'm so sorry. I have a meeting with Trump, President Trump, and I only have 12 minutes." Again, we all find ourselves in situations like this when, "Oh my god, I had all this plan and I was going to do this tour and I was going to show these numbers. I'm going to do all these things and suddenly it all changes." I take a deep breath.
+
+</details>
+
+**Speaker A**: 我們讓這成為我們能做的最好的 12 分鐘，但我不能不這麼做。我問：「告訴我一些事情，Masa。如果你要見總統，未來總統川普，你讓賈里德·庫什納先介紹你給他嗎？」他回答說：「Adam，你這麼說真好笑。每個人都告訴我，讓賈里德介紹我比較好。我不知道他。我們一直在試圖聯繫他。」不。我說：「給我一秒鐘。」我非常幸運，把賈里德算是我親近的朋友之一。賈里德和伊凡卡川普結婚。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Let's make it the best 12 minutes we can, but I can't help myself. I go, "Tell me something, Masa. If you're meeting President, future President Trump, do you have Jared Kushner introducing you to him first?" He goes, "Adam, it's so funny you're saying that. Everybody told me that it's better if Jared introduces me. I don't know him. We've been trying to get in touch." No. I said, "Give me a second." I'm very lucky to to count Jared as as one of my close friends. Jared's married to Ivanka Trump.
+
+</details>
+
+**Speaker B**: 賈里德和伊凡卡川普結婚，我認為他是總統的顧問。但現在他正在幫助解決中東和歐洲的和平。所以我給賈里德發了簡訊，我說：「Masa 在這裡。再見了。我們花五分鐘在上面。」賈里德說：「沒問題。傳給他。我會介紹他給未來總統。」現在我們剩下 7 分鐘了。我說：「Masa，我們只有 7 分鐘。我們只能待在樓下，但這是我們工作的地方。」他看著我。他這麼說：「你知道這聞起來是什麼味道嗎？」我說：「哦，不，他要說什麼？他們正在提供鬆餅。他要說聞起來像鬆餅嗎？他要說什麼？」他說聞起來像夢。這不是辦公室，這是一個夢的工廠。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Jar's married Jared married to Ivanka Trump and he's the adviser, I think, to the president. But right now he's helping to peace both in the Middle East and in Europe. So I text Jared and I was like, "Masa is here. Ta ta da. We spend 5 minutes on that." Jared says, "No problem. Send him. I will introduce him to the future president." Now we have 7 minutes left. I say, "Masa, we only have 7 minutes. We're only going to stay downstairs, but this is we work." And he looks at me. He goes like this. Smells there. He goes, "You know what this smells like?" And I'm like, "Oh no, what is he going to say? They were serving waffles. Is that is he going to say it smells like waffles? Like what is he going to say?" He goes smells like dreams. This is a factory rework is not an office space. It's a factory of dreams.
+
+</details>
+
+**Speaker A**: 我覺得他正在說你的語言。他比你的語言高出一步。他把夢想家變成了一步高。他把 Adam 殺了。我說：「哦，是的，我喜歡夢的味道。沒有人比那更好地定義這個業務。」他說：「看，Adam，我們沒有時間了。我正在開車去 50 街，無論在哪裡。你想跟我一起去車上嗎？我們在車裡談。」
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I'm like he's speaking your language. Oh no. Not my language. One step above my language. He took he took the dreamer and went one step above the dreamer. He out did the he he Adam. He killed it. And I'm like, "Oh yeah, I love the smell of dreams. This no one's ever defined the business better than that." He goes, "Look, Adam, we don't have time. I'm driving up there to 50th Street, whatever, wherever it was. Do you want to come with me to the car? We'll talk in the car."
+
+</details>
+
+**Speaker B**: 他沒有繞過大樓嗎？而且……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Did he not go around the building? And
+
+</details>
+
+**Speaker B**: 而且……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: couldn't have time 7 minutes. We were only downstairs in the lobby, the entrance. But but if you had the opportunity in 2017, 2016 to walk into our HQ, the energy was electric. You could not walk in there and not feel I I never felt a factory of dreams, but I felt community and people coming together. It felt like people are doing their life's work. It didn't feel like a work environment. It felt like people are really connected. And when you make a connected environment, then it really takes things to the next level and everybody wants to be there. So that's what it was. It's not what it is today, but that's what it was. So he says, "Come with me to the car." I said, "No problem." I get into the car and I remember the back of my hand, they said, "No investing." thing. His team said, "Don't talk about raising money." He goes, "So I start talking build where we work." He's like, "Adam, what's the number?" Said, "What do you mean?" Goes, "What's your valuation and how much money are you raising?" Goes, "I'm I'm here to do business." Said, "Your team said like, ah, I am I am the boss. I've done this many times myself. I'm the boss. Let's talk about it." [sighs and gasps]"
+
+</details>
+
+**Speaker A**: 我說：「嗯，聽著。我們的最後一次估值是 160 億。我們剛推出了中國。那是一家 20 億美元的公司。我們還有拉丁美洲，我們在歐洲。我們是一家全球性公司，然後我們還有一個中國實體。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I said, "Well, listen. We have our last valuation was 16 billion. We have a we have we just launched China. That's a $2 billion company. We have Latin America and we're in Europe. We have a global company and then we have a China entity. Goes great. How much are you raising?" I said 3 to 400 million. 3 to 400 million. That's that's that's not going to work. Don't you want to build a global business? I was like of course I would love to build a global business. Goes don't you have a business in China? I said of course. Said what about Japan? Said I don't have a business in Japan yet. He said I think it's going to work very well in Japan. I said, "I'm sure it's going to work well in Japan. It's working everywhere, but I don't have the team." Goes, "What about Southeast Asia?" He said, "Sounds amazing, but I've never been there." He goes, "Well, I think it's going to work there." I said, "Again, I'm sure it's going to work there, but and before you know it," he says, "I think we should do about 3 billion." And that was a big number. Remember three, we were we were I was the night before with the board 300 to 400 million. Let's take less than number one. And again, I don't blame myself for any of this. Every decision I made was my decision. He's an investor. He saw a great business and he wanted to go big. I respect that. I've done it myself. Not at those numbers, but I've done it myself. [gasps]"
+
+</details>
+
+**Speaker A**: 如果你決定你有一個使命或一個願景，並且你要籌集 3 億，而第二天有人向你提供 30 億，在說「是」之前，深呼吸，問自己那個問題：為什麼？我的意圖是什麼？這對業務會做什麼？我準備好承擔這麼多嗎？然後它說 30 億。我們然後繼續談論所有不同的需求和不同的事情。這結束了。現在我們見面了 12 分鐘，車程是……16 分鐘。所以，呃，如果是的，總共 28 到 36 分鐘，整個過程，我們就同意了。他說 40 億，42 億，為了準確。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: If you decide you have a mission or a vision and you're going to go raise out 300 million and the next day someone offers you 3 billion, before you say yes, take a deep breath and ask yourself again that question of why and what is my intention? What is that going to do to the business? and am I ready to take that much? And so it says 3 billion. We then keep talking about all the different needs and the different stuff. It ends up after this is now we met for 12 minutes and the ride is um 16 minutes. So uh if yeah total 28 to 36 minutes the whole thing and we agree on the he says 4 billion 4.2 to be exact.
+
+</details>
+
+**Speaker B**: 42 億美元，這是他想投資的金額。我們工作拓科，我們工作中國，我們工作日本，我們工作東南亞。記住，我們曾經是一個現金機器。你把現金投入給我們，我們……只是我回想一下，那一年我們做了 9.8 億。我們達成了我們的數字。我們預測明年將做 18 億。我們做出了我們的 18 億。那進展得非常好。模型，你需要的全部是現金來建立它。你需要建立這些空間，如果你要成長這麼大。他有宏大的抱負，我也有宏大的抱負。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: 4.2 billion what >> dollars >> that he wants to invest in. We work topco, we work China, we work Japan, and we work Southeast Asia. Remember, we were a cash machine. You put cash into us and we that just to I'll go back to a second, but we were doing 980 million that year. We hit our numbers. We forecasted we're going to do 1.8 billion next year. We did our 1.8 billion. The it was working so well. The model, all you needed was cash to build it. You needed to build these spaces and you needed to do if you're going to grow that big. He had big aspirations and I had big aspirations.
+
+</details>
+
+**Speaker B**: 你告訴他了嗎？你告訴他那是個現金機器嗎？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Did you tell him that? Did you tell him that it was a cash machine?
+
+</details>
+
+**Speaker A**: 不，你不需要告訴他。Masa 比世界上大多數人更了解商業。但再次強調，如果你看看 Weiwork 的歷史，每當你投入資金時，它都會增長。錯誤在於我們簽訂了租約。我們用短期承諾對抗了長期承諾。我們本該做別的事情。我們稍後會討論我們本該做什麼，以及我們現在正在做什麼。但這個問題是存在的，因為很多人沒有理解籌集的資金。籌集的資金……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: No, you didn't need to. M understands business better than most people in the world. But again, it was obvious cuz if you looked at the history of Weiwork, every single time you put money into it, it grew. The mistake was we were signing leases. We were taking long-term commitments against short-term commitments. We should have done something else. And we'll talk about it in a second. What we should have done and it's what we're doing in flow. But the this question was there's people because a lot of people didn't understand the money raised. The money raised
+
+</details>
+
+<!-- chunk 10/18 -->
+
+### 成長階段與企業價值
+
+**Speaker A**: 建立遍佈全球的巨大企業。而當你停止成長它們的那一刻，那些企業就變得有利可圖了。今天，我們的工作就是讓那些企業停止成長。我們處於一個高成長階段。這就是高成長企業家所做的事情。這就是當時市場想要的，也是每個人都知道我們正在做的事情。我們所做的事情並不是秘密，而且它正在呈指數級增長。所以，我們最終同意了 42 億。
+
+<details>
+<summary>Original English</summary>
+
+was to build tremendous businesses all over the planet. And those businesses the moment you stopped growing them turned profitable. Today we works profitable. Those businesses all you had to do was stop growing. We were at a high growth stage. That's what high growth entrepreneurs do. That's what the market wanted at the time and that's what everybody knew we were doing. It was not a secret what we were doing. And it was growing exponentially. So, we ended up agreeing on 4.2 billion.
+
+</details>
+
+**Speaker A**: 他拿著 iPad，他把所有東西都寫下來。這一切都在同一輛車裡，對吧？他把所有東西都寫下來。他簽名，然後把筆遞給我簽我的。我看了看，我簽了。他走出了車，說：「非常感謝。」然後去開他的會議。現在這是關於 4054 街。我們的總部在 18 街。我只是站在那裡。我簡直不敢相信剛發生了什麼。這不是我計劃的。我開始走。我心想，我要去市中心走走。我要走一走。我每走一步，因為到目前為止，這是在 2016 年，我們是五年的使命驅動的使命。你問我基礎是什麼，我們擁有所有正確的基礎，我們之所以工作是因為我們擁有正確的文化。當你擁有正確的文化時，你可以應對任何挑戰。我們是使命驅動的。我們可以突破任何壁壘。我們是團隊合作。我們晚上工作。我們在一起。我們是朋友。我們是一個團隊。我開始從 54 街走到 18 街。我每走一步，突然自我膨脹感開始湧上來。哦，200 億的估值。在那個基礎上，日本的估值是十億，在東南亞的估值是十億，在中國的五億美元估值之上，還有那個。所以，那個 42 億，對包括我自己在內的每個人都適用，當時我擁有公司大約 25% 的股份。所以，那些數字，我從未見過這麼大的數字。Miguel 獲得了我們所有員工和投資者比他們投資的還要多次。從那個十億開始，我每走一步，自我膨脹感就來了。哦，我感覺自己如此強大。我感覺自己如此偉大。你開始做你自己的數學。200 億，25%。這只是五億。然後還有其他的。我的淨值是多少？在你不知道之前，坐在車裡的那個人是一個使命驅動的企業家，他真正相信創造一個讓人們過上生活而不是僅僅生存的世界。我每走一步，就更高、更高。當我走到 18 街的總部時，我忘記了我們最初的目標是什麼。這就是為什麼自我膨脹感是一手非常好的，另一手非常危險。自我膨脹和慾望是同一個詞。巨大的自我膨脹只是巨大的慾望。擁有巨大的慾望對於建立巨大的事物很重要。但你必須管理和控制它。當我走進去時，我感到困惑。它突然變成了關於金錢。Rebecca 告訴我的所有事情，我們見面時的所有事情，所有多年的精神實踐，一切都變成了垃圾。當自我膨脹佔了上風時會發生什麼？你會變得盲目。這意味著什麼？你會犯錯和做出糟糕的決定。在高成長企業中，你需要每天做出 100 個決定。正如我們之前所說，至少有 98 個決定需要是正確的。突然你變得盲目，突然只有 95 個是正確的，或者 90 個錯誤，因為你成長得太快，錯誤也會非常快地增長。另一個事情，我們曾經由頂端領導的公司，所有偉大的公司都是由頂端領導的。在我失去它的那一刻，每個人都失去了它 [嘆氣和喘氣]，它就擴散了，而那一刻就是結束的開始。但之後花了三年時間讓一切展開，但就是在那一刻，它就發生了。
+
+<details>
+<summary>Original English</summary>
+
+He takes an iPad, he writes it all down. This is all in that same car, right? He writes it all down. He signs his name and he hands me the pen to sign mine. I look at it. I sign. He walks out of the car, says, "Thank you very much." And goes to his meeting. This is now about 40 54th Street. Our HQ is on 18th Street. I'm just standing there. I can't believe what just happened. It was not what I planned. And I start walking. I was like, I'm going to walk downtown. I'm going to take a second. I'm going to walk. And every step I take, cuz until this point, this is 2016, we were 5 years of missiondriven mission. You ask me about the fundamentals, we had all the right fundamentals and we work because we had the right culture. And when you have the right culture, you can deal with any challenge. We were missiondriven. We could break through any wall. We were teamwork. We worked late at night. We were together. We were friends. We were one team. And I'm starting to walk down from 54th Street to 18th Street. And every step I take, suddenly the ego starts coming up. Oh, 20 billion valuation. Billion valuation in Japan on top of that. billion and a half valuation in in Southeast Asia on top of that five billion dollar valuation in China on top of that. So a billion of that 4.2 was going to everybody including to myself and I owned about proportionately about 25% of the company at the time. So big numbers numbers I've never seen numbers Miguel was getting a lot all our employees the investors many times more than they ever invested from that billion and every step that I'm taking the ego comes up. Oh, I feel so strong. I feel so big. You start doing your own math. 20 billion, 25%. What's but that's that's that's 5 billion. Then there's all the other ones. What's my net worth? And before you know it, the guy that sat in the car was a missiondriven entrepreneur who really believed in creating a world where people make a life and not just a living. Every step that I take, it goes higher and higher. And by the time I walk into HQ 18th Street, I forgot what we were all about. Here is why ego is on the one hand very good and on the other hand very dangerous. Ego and desire are the same word. Big ego just means big desire. Having huge desire is important to build huge things. But you have to manage it and control it. When I walked in, I got confused. It suddenly became about the money. all the stuff that Rebecca told me, all the stuff when we met, all the years of spiritual practice, everything to the garbage. And what happens when the ego gets the best of you? You become blinded. What does that mean? You make mistakes and bad decisions. And in a high growth business, you need to make a 100 decisions a day. And as we said before, at least 98 of them need to be correct. Suddenly you're blinded and suddenly only 95 of them are correct or 90 those mistakes ex because you're growing so fast the mistakes grow very fast also the other thing we were a company led from the top all great companies are led from the top the moment I lost it everybody lost it [sighs and gasps] and it just spread and the moment that's that's the beginning of the end and look it took 3 years after that for everything to unfold but it was that moment That was the moment that went.
+
+</details>
+
+### 關於建議與決策
+
+**Speaker B**: 有沒有什麼可以在馬薩給你那輛出租車裡給你那 40 億美元的提議時，對你說或做些什麼，讓你準備好接受它？你準備好了嗎？
+
+<details>
+<summary>Original English</summary>
+
+Is there anything that could have been said or done to have made you when Massa offered you that $4 billion in that cab? Are you ready for this?
+
+</details>
+
+**Speaker B**: 當然。我以前更接近。我們現在不那麼多說話了 [清了清嗓子]。我以前比馬斯克（Mark Ben）更接近。他聽說了馬斯克的提議，他給我打了電話說：「亞當，我只認識你有一點，我知道你不會聽我的建議，但我希望你飛到日本，拒絕馬斯克的提議。我希望你把你的公司上市。」
+
+<details>
+<summary>Original English</summary>
+
+Sure. I I used to be closer. We don't speak as much [clears throat] anymore today. I used to be much closer to Mark Ben off the founder of Salesforce. He heard about Masa's offer and he called me and said, "Adam, I only know you for a little bit and I know you're not going to listen to my advice, but I want you to fly to Japan and say no to Masa. I want you to take your company public."
+
+</details>
+
+**Speaker B**: 你上次的估值是多少？我說 16 億。
+
+<details>
+<summary>Original English</summary>
+
+What was your last valuation? I said 16.
+
+</details>
+
+**Speaker B**: 他說：「太棒了。我希望你把你的公司上市，目標是五億美元。我希望你賣出十億的 20%。我希望你學會如何成為公開的 CEO。我向你保證兩件事。第一，因為你上次的估值是 16 億。在五億的時候，每個人都會認為這是一個好交易。人們會衝去投資，包括我。每個人都會衝去投資。你會學到，因為成為公開的 CEO 和私營的合夥人非常不同。你會學到關於盈利的。你會學到所有這些東西，因為我認為你是一個非常快的學生，我保證在你意識到之前，你的估值會大得多。」
+
+<details>
+<summary>Original English</summary>
+
+He goes, "Great. I want you to take your company public for 5 billion. I want you to sell 20% of the billion. And I want you to learn how to be public CEO. I promise you two things. one cuz your last valuation was 16. At five, everybody's going to think this is a great deal. People are going to rush to invest including myself. Everyone's going to rush to invest. You'll learn because it's very different to be a public CEO and a private co. You're going to learn about profitable. You're going to learn all these things cuz I think you're very fast student and I guarantee you before you know it, your valuation will be much larger."
+
+</details>
+
+**Speaker B**: 但他說：「但我知道你不會聽我的話。」
+
+<details>
+<summary>Original English</summary>
+
+And he said, "But I know you're not going to listen to me."
+
+</details>
+
+**Speaker B**: 我沒有。我當時有能力說不嗎？
+
+<details>
+<summary>Original English</summary>
+
+And I didn't. Was there a world that I could have said no?
+
+</details>
+
+**Speaker B**: 不是我當時那種人，也不是我當時擁有的工具。
+
+<details>
+<summary>Original English</summary>
+
+not the kind of person that I was then and not with the tools I have.
+
+</details>
+
+### 關於失敗與恢復
+
+**Speaker A**: 為什麼你沒有聽他的話？
+
+<details>
+<summary>Original English</summary>
+
+Why why didn't you listen to him?
+
+</details>
+
+**Speaker B**: 我們不認識彼此足夠長的時間。我認為當有人給你反向建議時，要傾聽需要大量的信任，而且每條路都有另一個人也說不。
+
+<details>
+<summary>Original English</summary>
+
+We didn't know each other for long enough. I think it takes a lot of trust to listen to when someone gives you a counter advice and every by the way there was another person also said no.
+
+</details>
+
+**Speaker A**: 但我們暫時把那放一邊。但這裡是我認為更重要的是它。假設我說不。假設我們仍然可以繼續工作。我們今天可能是一家百億美元的公司。新冠疫情會發生。我們將重新協商所有的租約，而不是租約將變成管理協議，我們將領導重返辦公室的運動。我們會領導那個概念，因為顯然，人們工作。我知道我們面對面談論它比遠程工作好得多，我們將會是重返辦公室運動的領導者，而我們工作是一家偉大的公司，即使它也會啟動我們版本的 FL，但我不會學到所有那些教訓。我今天比以前快樂得多，即使我們在談論的時候，我注意到你所談論的一切讓我感到充實，甚至那些具有挑戰性的部分，我很高興它們發生了，因為它們讓我成為我本該成為的人。
+
+<details>
+<summary>Original English</summary>
+
+But but we'll put that aside for a second. But here's what I think is more important about it. Let's say I said no. And let's say we work could still be around. We were could be a hundred billion dollar company today. Corona would have happened. we would have renegotiated all of our leases instead of leases would become management deals and we would have led the return to office. We would have led that concept because obviously people work I know we spoke about it much better face to face than remote work and we would have we would have been the leaders of the movement of return to office and we work was a great company and even it would have launched launched we live our version of FL but I Adam wouldn't have learned all those lessons I wouldn't be I am so much happier today even as we're speaking I'm noticing like everything you're talking to about makes me feel full even the wor even the challenging parts I I'm so happy that they happened because they made me exactly who I'm meant to be.
+
+</details>
+
+**Speaker A**: 失敗並不壞。這就是你和我現在談論的。失敗可能是生活中最重要的部分。我們大多數人從失敗中學到的東西比從成功中學到的要多。壞的不是你失敗了，而是你如何站起來。如果你只是摔倒了，然後你說：「哦不，每個人都看到我摔倒了。我不會在四年間躲在被子裡，直到每個人都忘記發生了什麼。」這才是可怕的。這會導致悲劇。這會導致創傷。如果你失敗了，你環顧四周，你就像是說：「哇，每個人都看到了。」你清理乾淨，你站起來，然後你說：「我們再試一次。」如果你有那種精神，什麼都無法阻止你。你可能需要十次、二十次、五十次，但如果你摔得夠多次，你可能會避免摔倒。
+
+<details>
+<summary>Original English</summary>
+
+Falling is not bad. That's the thing that you and I are actually talking about. Falling is probably the most important part of life. And most of us learn a lot more from falling than we do from succeeding. The thing that's bad is not when you fall, it's how you get up. If you just fell and you're, "Oh no, everybody saw me fall. I'm not going to hide under the covers for four years until everybody forgets whatever it is that happened." That's what's horrible. That leads to the tragedy. That leads to the trauma. If you fail, you look around, you're like, "Wow, everybody saw." You clean up, you get up, and you say, "Let's do it again." If you have that in you, nothing will stop you. And it might take 10 times and 20 times and 50 times, but if you fall enough times, then you might avoid falling.
+
+</details>
+
+### 關於訂閱與啟示
+
+**Speaker B**: 在下面應該有一個按鈕。如果上面寫著訂閱，你就已經訂閱了。如果上面寫著訂閱者，那意味著你還沒有。如果你沒有訂閱，請幫我們點擊那個按鈕。這對節目有幫助，比你想像的要多。根據演算法，你是一個觀看我們節目的觀眾，但你還沒有點擊那個按鈕。非常感謝你。我還在想一個 21 歲的創始人。他們有一個他們想開始的初創公司或一個想法。你就像我 21 歲的時候，我媽媽告訴我 18 歲，如果你做這件事，我再也不跟你說話了。你知道，她當時在警告我不要做生意，因為她自己曾在生意中掙扎過。所以，那是一種愛的替代。然後你還有一群人在這裡告訴你這將會非常棒，你會賺到數百萬。當你處於那種情況時，你會遇到噪音。你如何找到信號？有兩種方法。一種是...
+
+<details>
+<summary>Original English</summary>
+
+There should be a button just down below here. And if it says subscribed, you're already subscribed. If it says subscriber, that means you're not yet. And if you're not subscribed, please could you do us a favor and hit that button? It helps the show more than you know. And according to the algorithm, you're someone that watches our show, but you haven't yet hit that button. Thank you so much. I'm thinking also about a founder that's 21 years old. They've got a startup or an idea that they want to start. You like like when I was 21 years old, my mom tells me 18, if you do this, I won't speak to you again. It's, you know, she was warning me against business because she had struggled in business herself. So, that's a proxy of love, I guess. And then you've got other people here telling you that it's going to be amazing and you're going to make millions. When you're in that situation, you've got noise. How do you find the signal? Two ways. One,
+
+</details>
+
+<!-- chunk 11/18 -->
+
+### 关于使命、实践与个人成长的思考
+
+**Speaker A**: 他们必须回到任务中。所以，如果一个人有一个任务，然后有人向他提供了一些东西，而这属于非任务范围，你可能会想：“哦，我还是会去做，因为钱很好，但这是非任务的。” 这已经是一个警告信号了。但我想，另一个更重要的事情，也就是我今天比以前拥有更多的东西，需要实践。尝试噪音的方法的一部分就是实践。我过去一年一直在享受冥想，我变得越来越好。冥想需要时间。冥想有助于淹没噪音。而我在冥想时产生的想法往往是朝着好的方向发展的非常健康的想法。我做过很多。
+
+<details>
+<summary>Original English</summary>
+
+they have to go back to the mission. So, if one had a mission and then someone off someone offers them something and it's off mission and you're like, "Oh, I'm going to do it anyway because it's good money, but it's off mission." That already is a warning sign. But I think the other one, which is something that I have more today than I used to back then, one needs a practice. Part of the way to try on the noise is with a practice. I've been enjoying meditating lately in the past year and I've been getting better and better at it. And meditating is something that takes time. Meditating helps drown the noise. And then the thoughts that I do get while I meditate tend to be very healthy thoughts that are headed in a good direction. I there's many I do the hyperaric chamber.
+
+</details>
+
+**Speaker B**: 史蒂夫·乔布斯谈论过冥想和他的某种精神实践，这是我去年开始深入研究的事情。当我提到“深入研究”时，我的意思是，我开始研究他做了什么以及他为什么这么做，因为他是一个我关注的人，他能看到一个角落，对于一个经营大公司的老板来说，他怎么能做出那些今天很不受欢迎的决定，但明天却被证明是正确的呢？你知道，我得出的一个结论是，他花在“战壕”里的时间，和他在“云端”花的时间一样多。也就是说，他退后足够远，以便他能看到全貌。这让我觉得，哦，天哪，这有点与你之前说的关于你重新定义“硬工作”的话相关。不仅仅是在办公室里待着，24/7，而是当你站在冲浪板上时，你正在做硬工作，因为你给自己留出了时间来看到全貌。当你对自己弱点诚实时，比如我谈到我的演讲，它可能会提升事情，但也可能破坏事情。我们以前见过这种情况。
+
+<details>
+<summary>Original English</summary>
+
+Steve Jobs talked about meditation and his sort of spiritual practices and it's something that I I actually in the last year I started really looking into. Um, when I say looking into, I mean I started looking into what he did and why he did it because he's someone that I look at and go, it was like he was able to see around the corner and and for a guy running a big company, how was he able to make these really unpopular calls today that proved out to be true tomorrow? And you know, one of the conclusions I arrived at is that he spent just as much time in the trenches as he did in the clouds. I.e. he stood away from the picture enough so he could see the full picture. And that's something that I thought, oh gosh, that's it kind of correlates to what you were saying earlier about your redefinition of hard work. Not just being in the office and being there, you know, 24/7, but actually when you're on the surfboard, you're doing hard work because you're giving yourself time to see the full picture. And when you're honest with yourself about your weaknesses, like I spoke about my speech, it can elevate things, but it could also break things. We've seen that happen before.
+
+</details>
+
+**Speaker A**: 所以，硬工作也是个人成长。而且大多数人都没有勇气诚实地去看，让（自己）改变。
+
+<details>
+<summary>Original English</summary>
+
+So hard work is also personal growth is very hard work. And most people don't have the courage to even look in honestly, let alone change.
+
+</details>
+
+**Speaker B**: 你认为什么机制会让我到40岁时在商业上更成功？假设我做了你说的，并专注于个人成长，你必须从重新定义商业开始，我必须反驳它。我们不会只衡量你的商业成功。我们将衡量你生活的成功，人际关系的成功，友谊的成功，对世界的成功，以及对商业的成功。
+
+<details>
+<summary>Original English</summary>
+
+What is the exact mechanism that you think would result in me being more successful at 40 in business, let's say, if I did exactly what you said and focused on personal growth, you're going to have to start by redefin business, I'm going to have to push back on it. We are not going to measure your success just in business. We're going to measure your success in life, in relationship, in friendships, in effect on the world and in business.
+
+</details>
+
+**Speaker A**: 你知道我问这个问题为什么吗？因为现在有些人在听，他们听过创始人来，人们说：“你需要停下来，冥想，做这些事情，专注于个人成长。” 无论出于什么原因，因为他们的创伤，因为他们是如何被教养的，他们将接收到的信息，或者将成为他们所关心的事情变得更好的承诺，会是他们目前关心的事物的催化剂。现在，我们可能会欺骗他们一点，因为我们要让他们做工作，他们会意识到其他事情也很重要。但对于那些有这种透镜的人来说，不，我会帮助他们。我们会说一些话，我希望人们以前在这里说过，但我不知道他们是否说过。但告诉我人们是否说过。我们会告诉所有正在听的创始人，失败不仅仅是还可以。这是你所经历过的最好的事情。如果这些创始人都可以重新定义成功，想想在学校里，而不是学习所有成功，谈论史蒂夫·乔布斯，他是我真正的英雄，但我会想要他的生活吗？他去世时多大年纪？他周围的关系如何？他如何影响人们？我现在不知道。我不是他的朋友。我不知道他。我不是在评判或衡量。我只是告诉你，我们不能仅仅通过他们的商业成就来衡量一个人。我们必须全面地看待人们。所以，我告诉所有这些年轻的创始人，忘记花时间冥想。你问我我怎么做的，我回答了冥想。但这并不是我给他们的第一个建议。我给所有人的第一个建议，顺便说一下，你们谈论AI来和一岁的人，每个人都准备成为创始人。每个人都可以开始一个业务。这对每个人都是真的。对12岁的人也是真的，对60岁的人也是真的。这是对所有人的。有勇气真正地深入内看，说：“我可以在哪里成为自己更好的版本？不要同时做三件事。专注于一件事，选择那件事，然后专注于它。”这样，如果你做，当你修复它时，你如何知道它变好了？因为你会看到你需要做下一件事。这就像一个洋葱。每当你剥开它时，你就会看到另一层。又一层又一层。这就是我给他们的建议。我向他们保证，如果他们深入足够深，他们会找到他们的使命。当他们找到他们的使命，当他们将那种想要成为创始人的能量与那种使命匹配时，一切都会运转起来。作为人类，我们能够做到这一点，找到我们真正的旅程，找到我们的心流，世界对我们是开放的。
+
+<details>
+<summary>Original English</summary>
+
+What is the exact mechanism that you think would result in me being more successful at 40 in business, let's say, if I did exactly what you said and focused on personal growth, you're going to have to start by redefin business, I'm going to have to push back on it. We are not going to measure your success just in business. We're going to measure your success in life, in relationship, in friendships, in effect on the world and in business.
+
+Do you know why I'm asking this question? Because there will be some people that are listening right now and they have heard, you know, founders come on and people say, "You need to just take a moment, meditate, do these things, focus on personal growth." and for whatever reason, because of their trauma, because of how they were raised, the lens that they will receive that message through or the thing that will be the carrot will be a promise that it will make them better at the thing they currently care about. Now, we might be tricking them a little bit because we're going to get them to do the work and they'll realize that other things matter. But just for those people that have that lens, no, I'm going to we're going to help. We're going to say something and I hope people have said it here before, but I'm not sure they did. But tell me if people said it. We're going to all these founders that are listening falling is not just okay. It's the best thing that ever happened to you. If these founders can all redefine success, think about if in school instead of learning about all the successes spoke about Steve Jobs and he's a real hero of mine, but would I have wanted his life? How old was he when he passed away? How was the relationship with everybody around? How did he affect people? Now, I don't know. Oh, I wasn't a friend. I don't know him. And I am not judging or measuring. I'm just telling you we cannot measure a person just through their business achievements. We must look at people holistically. So I'm telling all these young founders, forget take time to meditate. You asked how I do it and I how we quiet the noise and I answered meditation. But that is not my first advice to them. My first advice to all of us, by the way, you talk a lot about one year one year olds with AI coming and everybody's about to be a founder. Everybody can start a business. It's true for everyone. It's true for 12 year olds and it's true for 60 year olds. This is for everyone. Have the courage to actually look inside and say, "Where can I become a better version of myself? Don't work on three things. Work on one thing and choose that thing and work on it." And by the way, if you do, when you fix it, how you going to know that it's better? Cuz you're going to see the next thing you need to work on. It is like an onion. And every time you peel it, you will see another layer. and another layer and another layer. That is the advice I'm actually giving them. And I'm promising them that if they look deep enough, what they're going to find is their calling. And when they find their calling, when you match that calling with that energy of wanting to be a founder, that's when everything works. As we are able as human beings to do that, find our true journey, find our flow, the world is open for us.
+
+</details>
+
+**Speaker B**: 所以，让我们回到故事。你正在走向18街。你刚刚筹集了所有的这笔钱。你感觉自己像个国王。这就是纸面上的情况，对吧？我们只是在说。事情还没有真正发生。
+
+<details>
+<summary>Original English</summary>
+
+So, let's zoom back into the story. You're walking down towards 18th Street. Um, you've just raised all this money. You feel like a king. That's the way you just on paper, right? It just, we're just saying. It didn't actually happen yet.
+
+</details>
+
+**Speaker A**: 你在明年说，那是开始的终点。在接下来的三年里，商业方面做出了特定的决策。它变成了关于金钱。它变成了关于金钱。它变成了关于估值。我忘记了使命。那是一个滑坡。这不是我的真理。这意味着你成长得更快了。你打开了更多的租赁。我们爆炸了。我们增长了。我们变得更快了。我们正在变得非常快。
+
+<details>
+<summary>Original English</summary>
+
+You're walking down towards 18th Street. Um, you've just raised all this money. You feel like a king. That's the way you just on paper, right? It just, we're just saying. It didn't actually happen yet. What was um, you said over the next year, you said that was the start of the end. Over the next three years, decisions changed specifically in terms of business. It became about money. It became about money. It became about valuation. I forgot the mission. That was a slippery slope. It's not my truth. And that means that you you grew even faster. You opened up even more leases. We blew up. We grew. We went even faster. We were going We went really fast.
+
+</details>
+
+**Speaker B**: 我读到的一些东西，或者在我做研究的时候，你当时有很多一些附带的念头。也许是因为钱。像冲浪和假新闻。这在我们开始之前。我当时有很多这些想法。任何告诉人们我们当时有很多想法的故事，他们不知道这是在我们开始在绿色的办公桌上工作之前就做过的。我们当时所有的想法都在这里。这对我来说看起来不像专注。我感觉如果我把这些现在展示给我的投资者，他们会对我大喊大叫。可能会是这样。今天我会选择所有这些事情的真正重点。这个人，如果我们真的能，我今天会做，我会比别人领先一步。这有点像我们在做心流。但当你建立一个业务时，它是艺术，而不是科学。如果你要让一些投资者告诉你，哦，你把这个放在第一位，这个放在第二位，这个放在第三位，他们就是在限制你。你需要有一个非常非常坚实的基础。这就是你之前说的，无论作为一个人类还是作为一个商人。所以，对于任何看不见的人来说，你只是在所有这些想法的中间圈出了一个类似钉子的人，然后你说，真的，我会专注于这个人。我会真的专注于这个人，只添加那些让使命创造一个让人们过上生活而不是仅仅生存的世界的东西。
+
+<details>
+<summary>Original English</summary>
+
+One of the things that I I read or something from when I was doing the research is that you had lots of sort of tangential ideas at that time. Maybe because of the money. Things like surfing and fake news. This was before we were ever started. I had all these ideas. Anybody who tells the story that we had a lot of ideas in 2016 cuz we raised money doesn't know that this was done before we work ever started in a green desk office and all the ideas we had were right here. This doesn't look like focus to me. I feel like if I showed my investors this now they would shout at me. Could be. Today I would choose what is the real focus of all these things. The person and if we can actually and I would do today I would do it one foot ahead of the other. It's a little bit more like we're doing flow. But when you build a business, it's art, not science. If you're going to have some investor tells you, oh, you put this first and this second and this third, they're limiting you. You do need to have a very a very strong foundation. And that's, as you said before, both as a human being and as a business person. So, for anyone that can't see, you just circled the the sort of stick person in the middle of all of these ideas, and you said really, I would have focused on this person. I would really have focused on the person and only added things that made so the mission create a world where people make a life and not just a living.
+
+</details>
+
+**Speaker A**: 我们应该只添加支持那个使命的东西。
+
+<details>
+<summary>Original English</summary>
+
+we should have just only added things that are in support of that mission.
+
+</details>
+
+**Speaker B**: 这让我想起了亚马逊和杰夫·贝索斯他们著名的“倒逼”说法，从客户和客户的痛点倒逼。我刚刚雇佣了一位很棒的人，我们的亚马逊CTIO，她叫ADA，她告诉我，在亚马逊那里，会议上总是经常有一个空位，那就是客户。所以他们留出一个空位，这样他们就可以通过这个人的角度做出决策。所以他们总是在每次会议上，这样你就不会分心，你知道你在做什么。
+
+<details>
+<summary>Original English</summary>
+
+It reminds me of Amazon and Jeff Bezos their famous saying of working backwards from the customer and what's the customer's pain points. I've just we just hired um a wonderful person our CTIO um from Amazon she's called ADA and she says to me that at Amazon there's always a you know often an empty seat to the meetings and that is the customer. So they leave an empty seat so that they can make the decisions through the lens of this person. So they're always in every meeting so you don't get distracted of who you're doing it
+
+</details>
+
+<!-- chunk 12/18 -->
+
+### 关于客户导向与自我定位的讨论
+
+**Speaker A**: 这就是你所描述的。自从她加入我们的业务以来，这一直是我们所有人的首要关注点，也就是从客户那里倒推工作，因为有时候你可能会从你自己的自我（ego）向前工作，比如我喜欢这个，但请记住，我将给你我最好的建议。我见过 Mr. Bizos，他非常了不起，而且是地球上最好的运营商之一。有些人可能会说他是最好的。我给你的最好建议是，建立一种真实且忠于你自己的文化。所以，我喜欢你专注于客户，但我可以告诉你，当我们谈论这个问题时，你非常专注于你的用户。你多次告诉我你的听众将如何解读我们所说的内容。你与你的听众是保持一致的。我对此毫无疑问。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: for. And that's kind of what you describe. It's actually become you know since she's joined our business it's always front of mind for all of us which is like work backwards from the customer cuz sometimes you might work forward from your own ego like I like that but remember I'm going to give you my best advice. I've met I've had the pleasure to meet Mr. Bizos and he's phenomenal and he's one of the best operators on the planet by far. Some would say the best. My best advice for you, build a culture that is authentic and true to you. So, I love that you're focused on the customer, but I can tell as we're speaking, you're very honed in on your user. Multiple times you've told me how your listener is going to interpret what we're saying. You are aligned with your listener. I have no doubt about it.
+
+</details>
+
+**Speaker B**: 这难道不是一种从客户那里倒推工作吗？因为我在这里一直在思考 21 岁的戴夫·珍尼。我一直在思考，每当你回答问题时……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Isn't that a form of working backwards from the customer? Cuz I'm sat here about thinking 21-year-old Dave Jenny. I'm thinking about and every time you answer questions
+
+</details>
+
+**Speaker A**: 再次抱歉，我不想……不，我们正在非常……我正在重复自己，我不是想让人感到无聊的。如果这发生在三年前我们做这个播客的时候，也许我会把整个地方都翻一遍。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: again I'm sorry I don't I don't want to being very No, we're being very I'm I'm repeating myself and I don't mean to be boring and if this was if we did this podcast 3 years ago maybe I would go all over the place.
+
+</details>
+
+**Speaker B**: 如果你今天真正深入你的真理，你的修正是什么？你需要改进什么？你将走向何方？然后你找到了那个，然后你把它带回你的团队。我告诉你，我甚至不知道会发展到多远。所以，你是在说我不需要从客户那里倒推工作吗？你在说什么？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: If you actually today went to the depth of your truth what is your correction? What do you need to work on? Where are you going? And then you found that and then you brought that back into your team. I am telling you I don't even know how far it would be. So, are you saying I don't need to work backwards from the customer? What are you saying?
+
+</details>
+
+**Speaker A**: 我说你的真理必须是你自己的第一位。我不是在推翻这个理论。当然，我们需要再次工作。我的真理。我知道很多时候人们一直告诉我客户想要什么。我，丽贝卡，我们构建我们认为正确的东西。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I'm saying your truth has to be yours first. I'm not pushing against this theory. Of course, we need to work again. My truth. I know a lot of times people keep telling me what the customer wants. I, Rebecca, and I build what we think is correct.
+
+</details>
+
+**Speaker B**: 你不听……没有焦点小组。不可能。有一个著名的说法，我想是亨利·福特，如果我问客户，他们会要求更快、更快的马。他们从来没有发明汽车。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: You don't listen to no focus groups. No way. There's a famous saying, I think it's Henry Ford, if I asked the customer, they would have asked for faster horses. Never invented the car.
+
+</details>
+
+**Speaker A**: 不，你知道你想要什么。我认为是找到我们自己的真理。我认为当一个人找到他自己的真理时，他就可以表达出来。当然，我不会告诉你我们不应该听客户的。而且，我们有很多我可以说出客户指出的十件事，当然是正确的，我们确实做。但再次强调，我们有自己的观点。如果我们听我们客户在FL（佛罗里达州），我们会拥有更漂亮的建筑，这样更多的影响者就可以拍更多照片。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: No, you know what you want. I think it's about finding our own truth. I think when a person finds his own truth, they can express it. Of course, I'm not going to tell you we shouldn't listen to the customer. And flow, we have a lot of I could tell you 10 things that the customer has pointed out to us that of course are right and we do. But again, we have an opinion. If we listen to our customer at FL, we'll have prettier buildings so more influencers can take more pictures.
+
+</details>
+
+**Speaker B**: 所以，你的意思是听客户，但不要总是听他们。这是一种区别吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: So, you're saying hear your customers but don't always listen to them. Is that a distinction?
+
+</details>
+
+**Speaker A**: 我说你了解你自己吗？我说每个人都在冲着建立所有这些企业，而他们甚至不知道自己是谁，这会把我们引向去参加晚宴，谈论一些毫无意义的事情，去参加派对，做任何我们正在做的事情。我叹气。而不是为了潜力而生活，生活是如此美丽和令人惊叹，充满了活力，如果你想现在忙着听客户，因为你想建立一个业务，因为你想赚钱。不仅仅是做……我认为这不会对你奏效，乐趣在哪里？我认为我以一种有点自私的方式问这个问题，也就是……对你来说。我准备好了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I am saying do you know yourself? I'm saying everyone rushing building all these businesses when they don't even know who they are leads us to going into dinners and talking about nothing going into parties and doing whatever it is that we're doing. [snorts] And instead of living life to the potential, life is so beautiful and amazing and full that if you're going to now be busy listening to your customer cuz you want to build a business cuz you want to make money. Not only do I think it's not going to work for you, where's the fun in that? I think I'm asking this in part uh selfishly for myself which is
+
+</details>
+
+**Speaker B**: 对你来说。我准备好了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: for you. I'm ready.
+
+</details>
+
+**Speaker A**: 所以，在我业务的一个阶段，你知道，我们被很多人提供很多钱。我们的上次估值大约是 4.5 亿，或者类似这样的数字。所以我反思你的故事很多，因为尽管数字差异很大，你当时正处于一个你知道你可以筹集你想要多少钱的时刻，以及随之而来的机会和潜在的干扰，穿着同样的衣服。在你的故事的这个特定季节里，我……啊，亚当，就像买了这个，显然你买了一个冲浪的东西，在这里买了一个东西。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: So at a stage of my business, you know, where we're being offered lots of money from lots of people. Um our last valuation was about 450 uh 450 million or something like that. And so I reflect on your story a lot because I although the numbers were wildly different um you were at a moment where you know you could raise whatever you money you wanted and with that comes opportunity and distraction dressed in the same dress potentially. And in this particular season of your story I go oh Adam like bought this like apparently you bought like a a surfing thing and a thing over here.
+
+</details>
+
+**Speaker B**: 让我们说点什么，因为你说过，因为我喜欢它。我们为 700 万美元买的那件冲浪装备占 Wave Garden 公司的 48%。嗯。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Let's let's say something just cuz you said it cuz I I love it. The surfing thing we bought for $7 million was 48% of a company called Wave Garden. Mhm.
+
+</details>
+
+**Speaker A**: 我们买它是因为我们认为你可以围绕冲浪建立出很棒的社区。Wave Garden 今天在我的了解范围内，销售额超过 5 亿，到 2027 年。我认为今年可能在 2.5 亿左右。他们非常成功。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: We bought it because we thought you could build amazing communities around Surf. Wave Garden today does north of, as far as I know, north of 500 million in sales for 2027. I think this year maybe around 250. They're extremely successful.
+
+</details>
+
+**Speaker B**: 嗯。创始人非常高兴。我前不久就看到了他们，因为当我退下来的时候，我们以非常著名的方式把公司以 500 万卖回给了他们，尽管它值更多的钱。他们拥有 100% 的业务。他们的业务正在蓬勃发展，我支持他们，我今天再次告诉你，如果我们想建立一个大型全球社区房地产，最好的设施是第一所学校，因为如果你有一所很棒的学校，每个人都想住在附近。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Mhm. The founders are so happy. I saw them not too long ago because when when I stepped down, we work famously sold it back to them for 5 million even though it was worth so much more. They own 100% of their business. Their business is thriving and I stand behind and I'll tell you again today the best amenity for if we wanted to build a big global community real estate best amenity number one school cuz if you have a great school everybody wants to live around
+
+</details>
+
+**Speaker A**: 让我再点一下，即使 Wave Garden 是一个很棒的想法，就像发现了一个很棒的业务，后来发展得非常非常成功，在我们的情况下，有很多这样的例子，我最终会给一个不同的业务。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: let me double click there then even though wave garden was a great great idea like great spotted a great business that went on to be very very successful in our situation there's lots of those and I would end up giving a different business.
+
+</details>
+
+**Speaker B**: 是的。在我的世界里，有很多这样的事情，我们可以做那个，那个，那个，那个。你知道吗？客观地说，也许它们都是好主意，但当我们谈论这个焦点时，我会将自己分成 10%。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. Like in in my world, there's lots of these like we could do that and that and that and that. And you know what? Objectively, maybe they're all good ideas, but when we talked about this point of focus, I would then be splitting myself 10%.
+
+</details>
+
+**Speaker A**: 我有一个很好的答案给你。对你来说最好的建议将与我们谈论你未婚妻时给你的建议相同。我认为你需要给自己一点时间，思考一下。我认为你需要进行灵魂搜索，看看你到底想去哪里。问问自己我刚才说的。假设在 6 年后你非常成功，你为什么成功？以及为什么。当你回答了为什么成功时，然后回到过去，说，谁是能带我到那里的正确伴侣？这是实现这个目标唯一的方法，因为如果你根据其他任何东西做决定，你可能会遭受我所经历的痛苦，天啊，我们不需要这。首先要了解你是谁。然后决定你想去哪里，因为原因。然后回到所有投资者，看看谁是正确的投资者。然后再次强调，我想再说一遍，我认为这值得。我认为你应该选择，我们都应该选择我们的伴侣，我们的朋友，以及我们的商业伙伴，基于他们在我们最糟糕的一天会如何对待我们，当我们展示最糟糕的时候，而不是最好的时候。如果我，如果我不停顿一下，我不做工作，在做这些决定之前，不明确我的使命以及我为什么要做它。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I have a great answer for you. Best recommendation to you would be the same one I gave you when we spoke about your fiance. I think you need a little bit time for yourself for a second. I think you need to soul search and see exactly where you want to go. Ask yourself what I just said. Assume that in 6 years you're huge. what for and why. And when you answer what for and why, then go back to the day and say, well, who's the right partner to get me there? That's the only way to make that because if you make your decision based on anything else, you might suffer what happened to me, God forbid, and we don't need this for you. First understand who you are. Then decide where you want to go because of it. then go back to all of the investors and see who is the right investor. And again, I want to say it again because I think it's worth it. I think you should choose, all of us should choose our partners, our friends, and our business partners based on how they will treat us in our worst day when we show the worst, not the best. If I if I don't pause for a second and I don't do the work and I don't get clear on what my mission is and why I'm doing it before I make these decisions now to grow.
+
+</details>
+
+**Speaker B**: 为了成长。是的。这可能对任何听众来说，那是他们旅程的开始。进展顺利。他们正被机会吸引，而不是被使命吸引。拐角处有什么错误，我会犯的，我会做你提到的，你说的，我目前看不到的？所以，我认为我们给出的铁律是，你说了几件事。如果你的业务以使命开始，那么你已经比大多数人做得更好，因为很多人没有真正的使命。所以，第一步，你需要有一个真正的使命。现在假设你有一个真正的使命，你找到了那个真理，现在你就在那里，现在这个增长机会向你提供。如果业务的增长速度快于你处理的能力，处理就是自我，处理就是金钱，处理就是关系，处理有很多我们可以用很多种方式来翻译它。那么从定义上说，某件事将会出现裂缝。会出现短路。所以在你没有理解这种增长的情况下跳上那场增长，你必须确保你已经为它做好了准备，并且它确实对你来说是正确的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: To grow. Yeah. And that could be for anyone listening that's at the start of their journey. It's going well. They're being pulled by opportunity, not by mission. What What are What is the mistake around the corner there that I'll end up making that you referenced that you said you made that I can't currently see? So, I think the rule of thumb that we gave is well, you've said a few things. If your business started with a mission, then you're already doing better than most because a lot of people don't have a real mission. So, first step, you needed to have had a real mission. Now let's say you actually had a real mission and you found that truth and now you're there and now this growth is offered for you. If the growth of the business is going to grow faster than you're capable of handling, handling is ego, handling is money, handling is relationships, handling there's a lot of handling we can translate it in many ways. Then in definition something is going to crack. There will be a short circuit. So before you jump on that growth without understanding that growth, you have to make sure that you're ready for it and that it's actually correct for you.
+
+</details>
+
+**Speaker A**: 你以前部署过的最有效的让你更好地了解自己的做法是什么？对我来说，亚当，那就是我的真理。大约 10 年前，我开始保持沙巴特（Shabbat），对于那些不知道的人来说，这意味着在周五，我们与技术断开连接 25 小时，我只是把时间花在我的家人、我的朋友身上，参与到比我自己更宏大的事情中。这种断开连接实际上比任何人都理解的连接要多得多。所以，我能建议的最佳做法是技术沙巴特。忘记宗教。这与宗教无关。如果你把手机关掉 24 小时，完全关掉。把它放在一边。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: What is the um the most effective practice you've ever deployed to know yourself better? For me, Adam, it's just my truth. About 10 years ago, I started keeping Shabbat, which for those who don't know, it means that on Friday, we disconnect from technology for 25 hours and I just spend my time with my family, my friends, and taking part of something greater than myself. That disconnection actually makes a lot more connection than anybody understands. So, the best practice I can suggest is technology Shabbat. Forget religion. This is nothing to do with religion. If you take 24 hours off of your phone, completely off. Put it aside.
+
+</details>
+
+<!-- chunk 13/18 -->
+
+### 关于手机断网的建议与专注力的讨论
+
+**Speaker A**: 给大家一个预测。上次你离手机断网24小时是什么时候？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Here's what I forecast. When's the last time you were off your phone for 24 hours, by the way?
+
+</details>
+
+**Speaker B**: 天啊。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Oh, god.
+
+</details>
+
+**Speaker A**: 好了。我们要以身作则。所以，如果我们想问大家，这与我的想法有关，如果我们想以身作则。所以，我建议创始人，对每个人。选择一天。让它周六，让它周日，让它一周的中间，周末更容易。让它对你来说是真实的那一天。然后把他们的手机拿走24小时，把它放在一个你绝对不会碰的地方。如果你不信任自己，把它给朋友。
+
+</details>
+
+**Speaker A**: （叹气和惊呼）前两个小时，你把手放进口袋里思考手机在那里，会让你知道你有多上瘾，因为它确实是一种成瘾。但然后你会注意到，特别是如果你提前安排了它，计划和朋友吃晚饭，一些包括去大自然、一些小事情的活动。根据我的经验，当那24小时过去，你把手机拿回来时，会发生两件事。第一，你在第22、23、24小时会感觉棒极了。棒极了。然后你拿出了手机，你只需要花10分钟就回到错误的频率。这是第一点。第二，你过去一段时间里产生的一些最好的想法会来找你，包括你应该和谁在一起、你应该专注于什么业务、下一步是什么。对我来说，最好的实践是每周24小时一次。现在又说起，我得记住我有六个孩子。我结婚了。那24小时是我们在一起的时候是多么棒。而且我想在大家面前，如果你承诺每周24小时一次，然后向我们所有人报告有多难，这将是成瘾的定义，但B是积极的吗？因为你经常谈论为你的听众提供工具。嗯，我认为我们应该先在我们自己身上测试这些工具，只有当它们有效时，我们才应该真正向每个人推荐它们。但我有一种感觉，这对你来说会很棒，对你的未婚夫来说更是如此。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: So, here's what I suggest to the founders, to everyone. Choose a day. Make it Saturday, make it Sunday, make it middle of the week, it's easier on the weekend. Make it the day that's true for you. and take their phone away for 24 hours and put it in a place that you genuinely are not going to touch it. Give it to a friend if you can't trust yourself. [sighs and gasps] The first two hours, the amount of times your hands going to go to your pocket thinking your phone is there will show you how addicted you are cuz it's an actual addiction. But then what you'll notice, especially if you scheduled it in advance, you plan the dinner with your friends, some activities that include going out to nature, little things. From my experience, when those 24 hours are over and you take back that phone, two things will happen. One, you're going to feel amazing at hour 22, 23, and 24. Amazing. And you're going to take out that phone and it's going to take you exactly 10 minutes to drop back down to the wrong frequency. That's one. Two, some of the best ideas you've had in some time are going to come to you, including who you should be surrounded with, what business you should focus on, what is your next move. For me, the best practice is that 24 hours once a week. Now again, I got to remember I have six kids. I'm married. I have that 24 hours where it's where it's us together has been phenomenal. And I think in front of everyone, if you committed to 24 hours one time and then report back to all of us how hard it was, which will be a definition for the addiction, but was it positive? Cuz you talk a lot about giving your listeners tools. Well, I think we should test the tools on ourselves first and only if they work, we should really recommend them for everybody. But I have a feeling it would be amazing for you and even better for your fiance.
+
+</details>
+
+**Speaker B**: 我有一种感觉。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: I have a feeling you
+
+</details>
+
+**Speaker A**: 我敢打赌她想要。而且我敢打赌她已经问我了上百万次。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I bet she wants it, by the way. I bet she's even asked for asked me a million times.
+
+</details>
+
+**Speaker B**: 那么，为什么你没有答应，如果她问了你上百万次？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Well, why haven't you said yes if she asked you a million times?
+
+</details>
+
+**Speaker A**: 哦，天哪。嗯，我为什么没有答应呢？答案是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Oh gosh. Um, why haven't I said yes? What's the answer?
+
+</details>
+
+**Speaker B**: 无论什么时候有人
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Whenever someone
+
+</details>
+
+**Speaker A**: 因为我看不出好处。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Because I don't see the upside.
+
+</details>
+
+**Speaker B**: 因为你很宗教，而不是很精神上的。M [清了清嗓子]
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: It's cuz you're religious, not spiritual. M [clears throat]
+
+</details>
+
+**Speaker A**: 无论什么时候有人可以改变某件事，我认为他们是宗教的。我一直对人们说，我是精神上的，而不是宗教上的。我会改变的。我可以改变。我可以去。我不会被困在一个盒子里的。每当你被困在一个盒子里面，你还没准备好改变某件事的时候，当然，你看不出好处。给你一个例子。禁食。你做过禁食吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: whenever someone can change something, I think they're religious. I keep saying to people, I'm spiritual, not religious. I'll change. I can change. I can go. I'm not stuck in a box. Whenever you're stuck in a box and you're not ready to change something, of course, you can't see the upside. Give you an example. Fasting. Have you ever fasted?
+
+</details>
+
+**Speaker B**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yes.
+
+</details>
+
+**Speaker A**: 你的大脑会变得非常清晰吗？是禁食水和食物还是仅仅水？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Does your brain get very clear? Fasted from water and food or just water?
+
+</details>
+
+**Speaker B**: 只是食物？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Just food?
+
+</details>
+
+**Speaker A**: 两者。是的。你做过一整天不喝水吗？不吃东西？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Both. Yeah. Have you ever done a whole day no water? No food?
+
+</details>
+
+**Speaker B**: 是的。不吃东西。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yes. No food.
+
+</details>
+
+**Speaker A**: 我也做过酮症。所以酮症也有一点不同。你注意到在禁食12小时、18小时、24小时后，取决于你的头脑变得多清晰，你的身体不想要它。你的身体看不到其中的好处。但你测试过它，你知道你从它那里获得了清晰。你知道它有益。这和这里是一样的。说我看不出把手机放走24小时的好处，就是成瘾者会如何谈论我看不出停止尝试这种药物的好处。试过两三次之后，觉得这对我没用，我尊重这一点，但你反正我知道它会起作用。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I've done ketosis as well. So ketosis also is a little different. Have you noticed when fasting after 12 hours, 18 hours, 24 depending how clear your head becomes. Your body doesn't want it. Your body doesn't see an upside in it. But you've tested it and you know that you get clarity from it. You know that there's a benefit to it. Same thing here. Saying I don't see the benefit of putting my phone away from 24 hours is the way an addict will speak about I don't see the benefit of stopping to take the the drug trying it and after doing it two three times being like that didn't work for me I respect that but you by the way I think you know that it would work.
+
+</details>
+
+**Speaker B**: 是的，这正是我要说的概念。当然，我知道它会起作用。我跟那些做过研究的神经科学家坐过。嗯，我想可能有一个更诚实的答案是我刚刚发现的，那就是这会非常不舒服，甚至一想到它就非常不舒服。但现在你和我正要去某个地方。我们如何知道该做什么？每当我们感觉自己处于十字路口时，一个决定是舒服的，一个是不舒服的。在不舒服的那个路线上继续前进。最抗拒的路径，最不抗拒的路径。总是走最抗拒的路径。长途旅行，短途旅行，走长途的。但你知道会发生什么？会花更少的时间。最终会变得更容易，更有价值。生活有规则。没有人教给我们。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah this is what I was going to say is like conceptually of course I know it's going to work. I've like sat here with the neuroscientists that have done the studies. Um I I think there was probably a more honest answer that I've just sort of uncovered which is it would be very uncomfortable and even the thought of it is like really uncomfortable. But now you and I are going somewhere. How do we know what to do in life? Whenever we feel that we're in a crossroad, a decision, one is comfortable, one is not. Keep going after the uncomfortable one. Path of most resistance, path of least resistance. Always go after the path of most resistance. Long journey, short journey, go after the long. But you know what happens? It takes less time. It ends up being easier and has a lot more value. There are rules to the game of life. No one taught us.
+
+</details>
+
+**Speaker B**: 所以我们回到
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: So I we go back to
+
+</details>
+
+**Speaker A**: 等等，我们是在做承诺吗？我需要一个承诺。如果法国在听，我们能做一个吗？她正在听。我们能做一次吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: So I we go back to Wait, are we getting a commitment? I need a commitment. If France is listening, can we do one? She's listening. Can we do one time?
+
+</details>
+
+**Speaker B**: 我们能做一次。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: We can do one time.
+
+</details>
+
+**Speaker A**: 好的，完美。我们能做一次。我们能确保这个月在九月做吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Okay, perfect. We can do one time. Can we make sure to do it this month in September?
+
+</details>
+
+**Speaker B**: 哦，这是一个很好的问题。嗯，是的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Oh, that's a great question. Um, yes.
+
+</details>
+
+**Speaker A**: 这很让人不舒服。是的。是的，我们可以。在我摇晃之前，因为我想我的因为我们将保持我们的承诺。我可以定义吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: It's uncomfortable. Yes. Yes, we can. Just before I shake, cuz I want my Cuz we're going to We both keep our words. Can I can I define
+
+</details>
+
+**Speaker B**: 让我们定义它。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Let's define define it.
+
+</details>
+
+**Speaker A**: 嗯，你刚才说了一些我教我的孩子的话。在你之前，如果你在保持你的承诺方面有问题，在说它之前，先做个更好的工作来定义它。所以，请继续。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Well, you just said something I teach my kids. Before you If you're having a problem keeping your word, do a better job defining it before you ever say it. So, go right ahead.
+
+</details>
+
+**Speaker B**: 这不是关于我的手机或电脑或任何电子设备25小时。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: It's not going on my phone or my computer or any electronic device for 25 hours.
+
+</details>
+
+**Speaker A**: 你可以开车。你可以打开灯。做其他所有事情。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: You can drive. You can turn on the lights. Do everything else.
+
+</details>
+
+**Speaker B**: 我可以谈论任何事情。不，不。我们不是要求你拿笔和纸。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: I can talk about everything. No, no. We're not asking you to pen and paper.
+
+</details>
+
+**Speaker A**: 我可以。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I can
+
+</details>
+
+**Speaker B**: 我不是要求你保持沙巴特。我说的是技术沙巴特。[笑声]我们只是我们只是在走。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: I'm not asking you to keep Shabbat. I said technology Shabbat. [laughter] We're just We're just going off.
+
+</details>
+
+**Speaker A**: 我可以对着白板集思广益。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I can brainstorm on a whiteboard.
+
+</details>
+
+**Speaker B**: 受鼓舞。好的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Encouraged. Okay, encouraged to bring a server. Now again, next level will be we'll take business out of it so you can really connect. But let's do the first.
+
+</details>
+
+**Speaker A**: 好的。所以，对，我们来定义它。不使用屏幕，包括你的电脑、你的iPad、你的看、任何东西。是的，看。很好。我喜欢它。你的车有大屏幕吗？因为有些车是像大iPad。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Okay. So, right, let's define it. No screens, which includes your computer, your iPad, your watch, whatever. Yeah, watch. Good. I like it. Does your car have like a big screen? Cuz some of the cars are like big iPads.
+
+</details>
+
+**Speaker B**: 我在九月会去欧洲，所以我不会在我的车里。所以，我们结束了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: I won't be in my car cuz I'll be in Europe in September. So, we're done.
+
+</details>
+
+**Speaker A**: 好的，太棒了。交易。交易。我会让你知道进展如何。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Okay, great. Deal. Deal. I'll let you know how it goes.
+
+</details>
+
+**Speaker B**: 让我们所有人都知道进展如何。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Let all of us know how it goes.
+
+</details>
+
+**Speaker A**: 我会。现在，我们可以回去。所以，让我们回到这个，因为我真的很想把这个重点弄清楚。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I will. Now, we can go back. So, let's go back to this this cuz I really wanted to nail this point of focus.
+
+</details>
+
+**Speaker B**: 请做。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Please do.
+
+</details>
+
+**Speaker A**: 我很痴迷。我对这个重点很痴迷。我记得我看了Johnny Ives的那个视频，我把Johnny发给了我团队的最后几年。Johnny说Steve有这种非凡的专注能力。他说专注不是拒绝你不想做的事情。它是在拒绝那些你身体的每一个细胞都想做，你醒来时会想到的事情，但你拒绝它们，因为我们要做这个。在史蒂夫·乔布斯的故事中，当他被解雇后重返苹果时，他坐在一个和所有高管在一起的房间里。他们都有数百万项正在进行的项目。他非凡地走到一块白板前画了四件事。我记得那是一个四象限的东西。他说：“这就是我们要做的。其他一切都取消了。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I'm obsessed. I'm pretty obsessed with this point of focus in part. I remember this Johnny Ives video I watched where Johnny I've sent it around for the last couple years to all of my team. Johnny says Steve had this remarkable ability to focus. And he said focus isn't saying no to things you don't want to remotely don't want to do anyway. It's saying no to things that with every bone in your body you want to do and you wake up thinking about, but you say no to them because we're going to do this. And famously in Steve Jobs story when he came back into Apple after being fired, he was sat in a room with all of his executives. They've all got a million initiatives they're working on. And famously, he goes up to a whiteboard and draws four things. Like I think it was a four quadrant thing. And he says, "This is what we're going to do. Everything else is canceled."
+
+</details>
+
+**Speaker B**: 取消它。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Cancelled it.
+
+</details>
+
+**Speaker A**: 我从你提出所有这些钱之后的那段时间得出的一个结论是，缺乏专注力，因为你同时做了很多事情。这是我发现自己几乎想做的事情的起点。这就是我为什么要问你这个问题，让我们来回答它。所以首先，我们谈论了超能力和弱点。我不能告诉你我的超能力是专注。好吧，它不是我的超能力。我实际上拥有它的反面。我的挑战是，Ben Horitz和Mark和Dre帮助我理解了这一点。我非常擅长从零到一。所以许多企业家有很多想法。我有很多想法的问题，他们实际上会成为现实。所以一个企业家有Ben告诉我，另一个企业家将带来九个新想法，下一个董事会会议也许他做了一个。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Cancelled it. One of the things that I concluded from the the period after you raised all this money was that there was a lack of focus cuz you ended up doing lots of things at the same time. And that's something that I find myself almost at like the foothills of being tempted to do. So that's why I wanted to ask you the question like let's let's answer it. So first of all, we talked about superpowers and super weaknesses. I cannot tell you that my superpower is focus. Okay, it's it's not not not my superpower. I actually have the opposite of it. My challenge is and Ben Horitz and Mark and Dre helped me understand this. I'm very good at zero to one. So the problem with many many entrepreneurs have a lot of ideas. Problem with me having a lot of ideas, they actually become a reality. So one entrepreneur has Ben was telling this to me said another entrepreneur is going to come with nine new ideas and the next board meeting maybe he did one
+
+</details>
+
+<!-- chunk 14/18 -->
+
+### 关于个人成长与商业策略
+
+**Speaker A**: 我们有九个想法。我们没有在董事会上说任何东西。我们下次董事会。现在有九家新公司。所以重点是我需要努力的方向。所以现在让我们深入一点。这是我实现个人成长的我的方式。我是一个创作者。我不是一个保护者。我真的很擅长创造。我不太擅长保护。里贝卡祖父很有名地说：“要让财富，需要一个狮子，要看守它，需要十个狮子。”他的名字是安德烈·赫兹。一个狮子来创造财富，十个狮子来守护它。说得非常聪明。因为我现在意识到我是一个创作者，而不是一个保护者。团队里需要另一个人坐在桌子上，他的工作是说：“亚当，听起来很棒，也许我们应该在三个月后，或者六个月后，或者九个月后做，但现在真的需要专注于一件事。”我不是那种一成不变的人，但我们假设是三件事，在这些事情上其他人只能同时做一件。我可能非常擅长三到五件事。但一旦你超过那个数字，十到十五，我可能会陷入那个陷阱，不会成功。所以对我来说，凭借我的个性，我必须让自己被我信任的人包围，让他们说不。你在魏工作的时候有这种情况吗？有一点，但不是真的。因为再次记住那个可怕的时刻，我走进办公室，我的自我膨胀占据了上风。当你失去自我之后，接下来会发生什么？你会开始吸引错误的人。所以在那之后被雇佣的人只是为了钱。所投射的能量是“我们来做这件事，我们来做那件事”。所投射的能量是错误的。你申请了首次公开募股（IPO），我记得软包银行向我们工作投资了额外的20亿美元。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: of them. You have nine ideas. We didn't say anything the board meeting. We come next board meeting. There's nine new businesses. So focus is something that I need to work on. So now let's go a little deeper. And this is how I do my own personal growth. I'm a creator. I'm not a protector. I'm really good at creating. I'm not that great at protecting. Rebecca's grandfather famously said, "It takes one lion to make a fortune and 10 lions to watch it." His name was Andre Herz. One lion to make a fortune, 10 lions to watch it. Very smart saying. because I'm now aware that I'm more a creator than a protector. There needs to be someone else around the table on the team whose job is to say, "Adam, sounds great and maybe we should do it in 3 months or in 6 months or in 9 months, but right now really need to focus not on one thing. I'm not a one thing kind of guy, but let's say on three things where other people can only do one at a time. I'm probably very good at 3 to 5. But once you go above that number 10 to 15, which I could fall into that trap, not going to succeed. So for me, with my personality, I would have to surround myself with people I trust to say no. Did you have that at Weiwork? A little, but not really. Because again, remember back to that horrible moment where I walk back into the office and the ego got the best of me. What happens next when you lose yourself? you start attracting the wrong people. So the people that were hired after that were just there for the money. The energy that was being projected was let's go public, let's do this, let's do that. The energy that's projected was was wrong. You filed for an IPO and uh I think softback soft bank invested a further 2 billion into we work.
+
+</details>
+
+**Speaker B**: 所以你真的在试图讲故事。你试图做的事情的挑战在于故事中缺少太多背景。我会给你一点小片段。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: So you really are trying to get to the story. The challenge with what you're trying to do is there's so much context to the story missing. I'll give you the little piece.
+
+</details>
+
+**Speaker A**: 不，我没问题。如果这是你的播客，我会给你。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: No, I'm I'm all good with I'll I'll I'll give it to you if this and this is your podcast.
+
+</details>
+
+**Speaker B**: 我会告诉你我想要什么。[清嗓子] 我只是想结束这个。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: I'll tell you what [clears throat] I want to get. I just want to end this.
+
+</details>
+
+**Speaker A**: 然后我们继续。然后我要告诉你一些我以前提到过但没人有你的收视率，所以我们会再提一次的东西。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Then we're going after and then I'm going to tell you something that I mentioned once but no one has your viewership so we'll mention it again.
+
+</details>
+
+**Speaker B**: 我现在想结束这个。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: I want to close this now.
+
+</details>
+
+**Speaker A**: 是的。我会为你结束这个。我会为你结束这个。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah. I'll close this for you. I'll close this for you.
+
+</details>
+
+### 关于公司规模与投资逻辑
+
+**Speaker B**: 所以马萨给钱。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: So we Masa gives the money.
+
+</details>
+
+**Speaker A**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah.
+
+</details>
+
+**Speaker B**: 我们稍微失去了我们的使命。但他非常清楚他想要什么。他想要最快。他想要地球上最大的公司。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: We lose our mission a little bit. But he's very clear what he wants. He wants the fastest. He wants the largest company on the planet.
+
+</details>
+
+**Speaker A**: 一万亿美元的公司。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: A trillion dollar company.
+
+</details>
+
+**Speaker B**: 我可以交付大公司。我可以做到。那时再回头再回头。反正没有人今天说出这样的数字。我们已经看到了5年前的公司正在达到那些数字。看看世界在如何发展，过去不可能的事情，然后没有人能谈论它，甚至嘲笑它，十年前，突然间，每天都是现实。不再是一个大词，但它显然是一个巨大的数字，而且很少有公司会在那里停留，但随着时间的推移，越来越多的人必须投资。钱最终只在2017年才进来，在投资提供之后，和2016那份文件到2017年钱进来之间，需要相当长的时间。但我们我们交付了我们9.6亿美元的销售额。在第二年，我们交付了我们18亿美元或19.2亿美元，无论我们说确切的数字是多少，我们达到了我们的目标。然后马萨来了，他说：“哇，你真的实现了你的目标。”他说：“当然，马萨，我们总能实现我们的目标。”然后他说：“嗯，亚当，我用愿景基金投资了很多公司。每个人都答应我将收入翻倍。你是我唯一一个做到的人。”他说，“嗯，我们就是这么做的。我说，嗯，我们的开支增长了。我没有对开支有问题。当时候到了，我们会停止增长，盈利能力会追赶上来。正如我们所解释的，这发生在实际上成功的企业中。然后他来了，基本上提出了这个想法。他说：“我们不如买下你的投资者，他们想要IPO，他们想要退出。他们想要专注。我没有对我们有多广的意见。我们不如以200亿美元买下公司怎么样？”这就是很多人不理解的故事。我不如买下公司？我会给它200亿美元的估值，这与之前估值非常相似。但我说，200亿美元，这有点低吗？他说：“不，不，200亿美元的现金。我们会给投资者100亿美元，我们会在资产负债表上投入100亿美元。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: A trillion dollar company. I can deliver big company. I can by then back then by the way no one said numbers like that today we've seen companies 5 years old that are getting to those numbers see look how the world's moving what was impossible and then no one could talk about and made fun of 10 years ago suddenly is everyday reality not a big word anymore but it's a huge number obviously and very few companies are going to be there and stay there but more as time moves forward more and more must invest in the money ends up coming in only in 2017 takes quite a long time between when the investment is offered and 2016 that piece of paper to the money coming in in 2017. But we we we deliver on our 960 million in sales. And the following year, we deliver on our 1.8 billion or 1.92, whatever the exact number we said we we hit our number. And Masa comes and says, "Wow, you really delivered on your number." Said, "Of course, Masa son, we always deliver on our number." And and he said, "Well, Adam, I've invested with vision fund a lot of companies. Everybody promised me to double the revenue. You're one of the only ones who did it." said, 'Well, that's what we did. I said, 'Well, so our expenses grew. Said I have no problem with the expenses. When the time is right, we'll stop the growth and profitability will catch up. As we explained, that happens in businesses that are actually successful. And he comes and basically comes up with this idea. He says, "How about we buy your investors are going to want an IPO and they're going to want an exit. They're going to want focus. I have no problem with how wide we're going. How about we buy the company for 20 billion?" And this is the story that a lot of people don't understand. How about I buy the company? I'll give it a $20 billion valuation, which is very similar to the valuation it came in before. But I said, 20 billion, isn't it a little low? He said, "No, no, 20 billion of actual cash. We'll give $10 billion to the to the investors and we will put $10 billion on the balance sheet."
+
+</details>
+
+### 关于股权结构与管理层动态
+
+**Speaker B**: 在银行账户里，基本上，在银行账户里，你亚当不会卖。你的员工可以卖一些，这样他们就能赚钱。所有的投资者都出局了。你和你的管理团队会下降到30%。我和我新的软包银行愿景基金，无论谁来做，都会拥有70%。当你达到我们同意的目标时，你和管理团队将从30%下降到51%，而我们将会下降到49%，我理解我们增长太快，我理解我们会有很多开支，但我把我的钱放在我嘴上，我不在乎，因为我认为这将是世界上最大的公司之一。这发生在2018年3月。这在IPO之前。如果你不理解这一点，你就不能把这个故事带回来。2018年3月，他只投资了钱，真正是在2017年中期或像你们一样。这只是他加入我们一年。他在董事会。他有两个董事会。他们知道公司发生的一切。没有秘密。我接受了董事会的提议，说看看这惊人的事情，2000万美元的预估。这是200亿美元。他们以8400万美元的预估投资。到那时，他们已经因为所有的二次投资而撤资了。他们已经撤资了，或者在3000万到5000万美元之间。我会查一下确切的数字，所以你有它。也许更多，也许到那时有7亿。他们撤资了很多。无论数字是多少，至少是2100万美元的投资。我把它带给他们。提议听起来像一个很棒的提议，但我亚当留在这家公司意味着管理团队。所以我们不能做这样的交易。所以在董事会里，当有人有一个交易，他们留下来，你需要在你后面创造一个特别委员会，一个特别委员会创建后，董事会成员从基准和我们以前在的另一个董事会成员，出于对他的尊重，我不是说他的名字，他们创建了一个特别委员会，他们决定谈判一笔200亿美元的现金交易，这对每个人来说都会赚钱。记住，马萨在20岁时来了，他是唯一一个没有从这笔交易中赚钱的人，他留下来了。其他人都在5000万美元、1亿美元、4亿美元、10亿美元。每个人都在赚钱。而且这个词很危险，但它是贪婪，因为到那个时候公司每年损失大约20亿美元，预计明年损失超过30亿美元。他知道预测。他想投入100亿美元来给它三年跑道，这样我们就可以在你们和我的之间建立我们想要的一切。他将成为多数股东。他们说不，然后谈判一笔200亿美元的交易，从3月到10月，对于一家损失20亿美元的公司。现在我不知道你如何评估公司。我们可以谈谈我们应该如何评估公司，因为有很多非常有价值的公司正在亏损，当然是高增长，但它们仍然有一家正在亏损20亿美元的公司。马萨为这个乐趣提供了200亿美元的报酬，然后他们谈判这两个特别委员会、特别的董事会成员。现在我不是其中一部分，因为我留在这笔交易中，所以我没有其中任何一部分。在正常世界里，如果我坐在你的董事会上[哼了一声]，而我坐在你的董事会上，而有人来提出这个疯狂的收购你和所有其他朋友都退出，我投资了你现在这4亿美元，而你给了我200亿美元的交易，而我用我的5000万美元赚了230亿美元。首先，我来找你，我说：“史蒂芬，谢谢你。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: In the bank account, basically. in the bank account, you Adam won't sell. Your employees can sell some so they make money. All the investors are out. You and your management team will go down to 30%. me and the new me soft bankank vision fund whoever is going to do it will own 70%. And when you hit goals that we agree you and the management team will go from 30% to 51 and we will go to 49 and I understand that we're growing too fast and I understand that we'll have too much expenses but I'm putting my money where my mouth is and I don't care because I think this is going to be one of the biggest companies in the world. This happens is a very important part of the story. This happens in March of 2018. This is before the IPO. You can't you can't bring this story back if you don't understand this part. March of 2018, he only invested the money really came in in the middle of 2017 or like you two. This is only a year after he's with us. He's on the board. He has two boards. They know everything that's happening in the company. No secrets. I take the offer to our board say look at this amazing thing 20. Remember they invested pre-money valuation of 84 million. This is 20 billion. They invested at 84 million. By this point, they've already pulled out because of all the secondaries. They've already pulled out nor somewhere between 3 to 500 million. I'll check the exact number so you have it. Maybe even more, maybe even 700 million by this. They've pulled out a lot. Whatever the number was at least 350 million on an investment of 21 million. I take it to them. The offers it must sounds like a great offer, but I Adam going to stay in the company mean the management team. So, we can't make a deal like this. So in boards when someone has a deal that they're staying behind you need to create a special committee and a special committee is created the board member from benchmark and another board member that we had in the not that we had which out of respect to him I'm not saying his name and they create a special committee and they decide to negotiate a 20 billion allcash deal that would have made money for everyone remember Masa came in at 20 he's the only one who's not making money from this deal and he's staying Everybody else came in at 50 million, 100 million, 400 million, a billion. Everyone's making money. And they're, and this word is a dangerous one, but it's greed because the company at that point is losing about $2 billion a year, forecasted to lose over $3 billion the next year. He knows the forecast. He wants to put 10 billion to give it run rate of three years so we can build whatever we want between the two of us. He'll be the majority shareholder. they say no and negotiate a $20 billion deal from March till October for a company losing two billion. Now I don't know how you value companies. We could talk about how we should value companies because there are very valuable companies who are losing money of course at high growth but still they have a company losing $2 billion. Masaasan is offering them 20 in return for that pleasure and they negotiate these two special committee special uh board members. Now I'm not part of it cuz I'm staying in the deal so I have zero part of it. In a normal world, if I were to sit on your board [snorts] and and I'm sitting on your board and and someone comes and gives this crazy offer to buy me and all the other friends out and I invested in you now in this 400 million and you gave me a deal at 20 billion and I'm making 23 billion on my 50 million. First, I come to you and I say, "Stephen, thank you.
+
+</details>
+
+<!-- chunk 15/18 -->
+
+### 对创业和合作的看法
+
+**Speaker A**: 对你来说，成为一个如此伟大的企业家并为我做这些事情是第一位的。但第二点，我得说，斯蒂芬，我有点被你不再想和我在一起感到被冒犯。这真的是你想要的吗？如果你能告诉我，是的，亚当，这就是我想要的。A16C就是这样，这就是他们如此了不起的原因。他们和创始人在一起。我告诉你，斯蒂芬，这不是我想要的，但我很感激你为我赚的每一笔钱。你付出了极其艰辛的努力，我祝你好运，也许下次你做你的下一个生意的时候，能再回来找我。他们不会那样做。他们不会问我想要什么，我想要什么，他们会谈判，因为他们认为他们可以把我从200亿推到300亿。他们的数字是320亿。他们不知道他们是怎么创造出来的。他们当时想的是1000亿。记住，他们是那些坐在董事会周围的人，他们从未对技术提供过反馈。从不。他们从未只看重一件事，只看重一件事，而那就是美元符号。但贪婪和美元符号的问题是，如果你很贪婪，你甚至会失去你手中已经拥有的东西。所以，他们正在谈判这200亿。我必须在第一天就说：“伙计们，这是我的最终报价。没有210亿，甚至没有200亿。这太疯狂了。这是我能给的最高价，因为我相信亚当，我相信我自己，我们将会一起建立。他们一直坚持到十月。然后在九月底到十月初，他们意识到他没有动。股市开始下跌，日本和这些增长型企业开始受到冲击。他们看到情况正在改变。然后他们决定参与并实际谈判这笔交易。到他们完成文件的时候是2018年12月24日。软银的股票因为与我们无关的原因而大幅下跌。在任何一个世界里，他们都无法做一笔200亿的现金交易，而MASA仍然保持原样。然后Masa给我打电话说：“亚当，我非常抱歉。我不能再做那笔交易了。那是在三月份提出的。” 同样，这些董事会成员本该做的是第二天就上飞机，来见马哈桑，然后说：“马哈桑，请签字。你知道董事会的一切。你就在董事会里。你不需要任何尽职调查。这是我们的银行账户。这是签名。我们对不与亚当继续合作感到失望，但如果这就是他想要的，而这就是你想要的，祝你们双方好运。感谢非常公平的价格。我们会以当时的基准价格，至少是他们会给的24亿来衡量。我们会拿现金然后走人。不，不。特拉维斯在一次采访中说，我刚看到>>特拉维斯>>特拉维斯卡尼克>>担任UB创始人的CEO>>他说做企业家就像玩维度象棋。成为风险投资家就像重玩游戏。记住，你是在选择你的投资者。选择那些玩维度象棋的人，而不是观察者。所以他们没有那样做。Masa给我打电话。现在是十二月了。他说我做不了那笔交易。我实际上理解他。我实际上是理解他，因为他们浪费了所有时间。然后我发现自己陷入麻烦，因为从他提出交易的时候，记住，他本来打算拿70%，我们将会拿30%。目标是一个我们已经朝着那个目标努力的目标。我们签署了租赁合同。我们做出了承诺。我们已经在赶路了。我们发现自己处于一种，如果我们不这样做，他会给两亿美元，只是为了不真正毁掉这个业务。他已经在业务中投入了很多钱了。我们发现自己被迫上市了。所以，我们实际上在还没准备好的时候上市了。这就是实际发生的事情。所以，这部分故事非常重要，因为没有这个背景，你就不会理解。然后，又回到了你谈论的所有创始人。你必须明智地选择你的投资者，因为如果到了那个大动作的时候，你选择错了投资者，如果他们不会优先考虑你，他们就会为他们自己做最好的事情，而每个人都会输。>> 你为什么当时还没准备好，现在你又回到了系统？>> 我们增长得太快了。>> 是的。>> 我们的技术跟不上我们。所以我们无法正确地衡量事物。这里有一个叫做“socks compliant”的东西，当你上市时，我们的系统无法做到我之前告诉你的事情，证明一个建筑是盈利的，但一个社区不是，一个城市是盈利的，但一个州不是。以前无法划分，但现在回想起来，与我们今天谈论的联系，亚当当时还没有准备好，如果创始人没有准备好，业务就不会准备好。通过我试图推动不上市，他肯定会给我打电话说，请不要上市。我周围的一些人，其中一些是在这个点之后来的，不是所有人都，但很多人都想上市。上市，上市，上市。我被那些错误的人推着，让他们回到与错误的人周围。但我们当时还没准备好，但时间表非常疯狂，因为显然，这里是新冠疫情，我们称之为新冠疫情，而且我们现在在2018年底，你提交了软银，软银又向我们投入了20亿。>> 那20亿是因为他们提前放弃了那笔交易，而不是因为我们提交了。>> 所以那算是某种马哈桑和我之间的补偿，我猜。>> 在五月，>> 另一个马哈桑做了一笔他本不需要的伟大交易。>> 在2019年5月，你拥有近500个地点，40万会员，全球12,000名员工。然后在2019年8月，我们公开上市，S1公司估值约为470亿美元。嗯，我们上市的S1显示了一些亏损。>> 很多亏损，不是一些亏损。显示了真相。公司正在亏钱。>> 它显示我们Work在2019年前六个月亏损了6900万，使过去三年的总亏损接近30亿美元。Work每小时运营亏损219K美元。是的。其中一个揭示了你还注册了“we”这个词，并将其卖回给了公司。>> 那不是真的。但>> 你是。不，不是。不是真的。>> 不，不，不。不否认。如果你愿意，我们可以谈论有一个故事，但这并不是>> 不是真的。我不太关心那个故事。>> 但再次，所有这些小细节只是为了让那些在看的人理解。所以现在你正在讲述一个发生在我身上的故事，我应该对这个故事有巨大的情感，即使它不正确，如果这是人们说的，其中一些是正确的，不是那么正确，所以缺少很多背景。重点不是别人说的，不是媒体说的，甚至不是你说的，而是我认识什么样的人，我为什么想把这个告诉你和听众，我们都可以成为那样的人。请继续。>> 2019年9月，嗯，我们Work宣布推迟IPO，因为投资者质疑公司，然后我意思是大约在这个时候新冠疫情出现，但然后你在2019年辞去WeiWork的CEO，在IPO失败后。所以那不是我辞职的原因。所以我辞职了。人们不知道的是，我拥有董事会和投票的完全控制权。所以我不得不选择辞职。人们有时认为我被解雇了，因为《华尔街日报》这么说的。不是真的。辞职。我拥有完全的控制权。控制董事会和控制>> 你为什么辞职？>> 所以，如果当人们理解了背景，又回到了一个旧故事，但我很高兴能去那里。一个人的唯一原因选择辞职是，因为他们认为那是在当时最好的选择。又回到了这一点，这是游戏的一部分。这是我们现在要再次提到他的名字。特拉维斯，Uber的创始人，著名的比尔·古利来，会拿出一张纸放在他面前。>> 他是比尔·吉。>> 他是基准合作伙伴之一。>> [轻蔑地哼了一声]他著名的做法是拿出一张纸放在他面前，我想，然后你辞职。
+
+<!-- chunk 16/18 -->
+
+### 决策與財務困境
+
+**Speaker A**: 我們做這件事，做那件事，還有一些威脅讓他在一步之緩。我有一個不同的版本，但他們正非常非常強迫我退場。起初，我不喜歡，我不是在退場。然後我與世界兩大銀行之一的負責人開會。他和我坐在一起，他對我說：「亞當，如果你退場，我們將向 Weiwork 投資 20 億美元，這將給我們時間讓利潤變得可持續。」
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: or we do this, this, and this, some threat that makes him step down. I have a different version of it, but they're pushing me very, very hard to step down. And at the beginning, I don't like I'm not stepping down. And then I have a meeting with one of the heads of the two biggest banks in the world. And he sits with me and he says to me, "Adam, if you step down, then we will fund $2 billion into Weiwork, which will give it time to move profit profitable."
+
+</details>
+
+**Speaker A**: 退場，順帶來說，從執行長變成主席。當時我還有個人債務，這是一個另一個故事，但我當時有 4.6 億美元的個人債務給那家銀行和其他銀行。我說：「但我的個人債務呢？」我的董事會成員在我身邊，我家族辦公室的負責人也在我身邊。我們說：「我們的個人債務呢？」他說：「別擔心，我們會想辦法解決的。」還有一個顧問為我的董事會提供意見，他站在整個董事會面前說：「我跟銀行談過了。他們說一切都沒問題。一切都會順利的。」所以我選擇退場，因為我認為這將有助於 Weiwork 發展。我認為這將照顧 MASA。我認為這將照顧員工。我認為這將照顧每個人。聽起來像是對每個人最好的。但我並不是要離開。我只是從執行長退下來，成為執行主席。我主持董事會會議。我退場，10 分鐘後，銀行就發來了一封法律信，基本上說因為你違反了合約，因為是控制權的變更，這是一個非常技術性的事情，我們之前和他們談過，他們說沒問題，但因為你違反了合約，而且你現在有控制權的變更，你有 15 天時間償還我們那 4.6 億美元的債務，否則我們將收你的股份，因為我超額投票權是 5 対 1，這意味著通過收走我的股份，他們將獲得對公司的控制權。現在我向你描述的，你談了很多關於創始人的事情，但你對很多名字並不了解，了解名字和歷史很重要，因為我不是在向你描述從未發生過的事情，這在歷史上發生過多次給多個企業家。這以前是風險投資的劇本，今天有新的風險投資者，他們非常不同，但老派的風險投資，這就是這樣。這有很多次。這就是以前的運作方式。那是一個驚喜。我們突然變得低落，因為我退場了，因為我認為這對每個人來說都是最好的。然後我做完之後，我們被背叛了。唯一的教訓是，如果你要刺殺國王，就殺了。如果你不打算殺，我們就要深呼吸。我們要學習我們的教訓。我們要知道生活中真正重要的是什麼。我們將再次回來。這就是真正發生的事情。而故事對你來說有點具有挑戰性，是因為我們從未公開糾正過它。而我們之所以糾正了一些，但沒有全部糾正。而我們沒有公開糾正的原因，是因為最好的談論過去的方式是通過我今天所做的事情。通過我們現在的談話方式，通過我的孩子，通過我建立的企業，通過我做的非營利活動，通過我擁有的友誼，通過我擁有的關係。而為什麼很多企業家會來從我們那裡拿錢，而且我們不再投資了，但我們有大量想讓我們投資他們的人湧入，是因為我們總是不把我們的成功談論出來。我們談論的是教訓，衡量我們未來將如何對你接招，當時間非常艱難時。所以，那實際上就是那樣發生的，我很快就從中走出來了。從那以後，在不讓故事混亂的情況下，Masa 登場了。Masa 償還了所有銀行的債務，4.6 億美元。作為回報，我把公司的控制權交給了他。我把任何股份都給了他，我給了他他要的任何東西，因為我們已經結束了，公司已經結束了，他來拯救它了，然後剩下的都在他們手下。你從銀行那裡收到一封電子郵件，大約是 9 分鐘。我讀了>> 9 分鐘。九分鐘，要求你立即償還，我認為大約是 4.5 億美元>> 每天複利，因為你正在違約>> 對於任何不知道每天複利是什麼的人來說。所以我有，如果我讀了，這只對我的 Rick Rubin 面試有用，因為我第一次說的時候，我說這才幾個月前，我從未談論過。>> 好的，每天複利意味著每天。>> 所以如果你有 10% 的年利率債務，或者我們設為 12%，這很容易，計算起來就是每月 1%，只是為了讓事情保持簡單。每天複利是當你的債務突然增加時，我認為它會變成 5% 變成 50%。15% 並且你按每天的增量計算。所以每次它又複利一次，又複利一次，又複利一次。最終，當你計算一年的計算時，它會比債務數字還多。>> 你的債務每天都在增加超過一百萬。>> 不，不是。我們不會有這麼多。但假設是 15%。我們就用乾淨的數字。假設是 15% 的 4 億美元，那將是 6000 萬美元。實際上比 6000 萬美元還多。如果你把它除以，那將是我們沒有錢支付的巨大數字。>> 好的。所以你沒有錢。>> 沒有錢。>> 而銀行要求你支付 4 億，假設是 4.5 億>> 並給我們 15 天的時間來支付。>> 給你 15 天的時間來支付>> 或者他們把一切都拿走。>> 你說這是我被擊垮的原因。>> 我什麼時候說的？>> 我想你是在播客上說的。是的，你在播客上說了，你在播客上說這是我被擊垮的原因。那是在>> 我不知道，我懷疑這是否意味著我破產了，因為我不認為那是我被擊垮的原因。>> 你描述的是半夜醒來，哭著，因為你以為你失去了所有東西。是的，這更準確。所以，在那個發生的時候，我們還好。幾天後，我半夜醒來，在旁邊看到 Rebecca 哭。現在，我們談論我的童年。我們今天談論你和我童年。我們沒有把眼淚哭出來。我不哭。不是為那樣哭。第一次 Rebecca 看到我哭。她看著我，她問：「你為什麼哭？」我說：「我們失去了所有東西。」我想我當時是這麼說的。我說：「我們失去了所有東西。」她問：「你說什麼東西？」我當時是說：「所有東西。」她問：「車子？」我說：「車上的輪子。所有東西。」我說：「是的，但記住我們說過，以防萬一，你會在我名下留下 1 億美元。」她說：「是的，我記得。」她說：「至少我們有那個。」我說：「我從來沒有做過。」你從來沒有做過那件事。我說：「從來沒有。」他說：「好吧，但沒問題。你沒有簽署個人擔保。我們說你永遠不會簽署個人擔保。」我說：「我簽署了個人擔保。這是一個很長的過程，但我又簽了。這就是為什麼你結婚誰很重要。你認識多少伴侶，在你兩年前還以為他們值得那數字，過著高生活，然後在不到一分鐘的準備下發現，不僅一切都完了，所有承諾在關係中都沒有兌現。所以，它結束了，錢也沒有存起來，個人擔保簽了。因為如果我簽署個人擔保，我是在為我們倆簽署，我們是夫妻。而一個個人擔保是我們同意不簽署的。這就是為什麼你必須非常仔細地選擇你的伴侶。選擇你的伴侶，在某天，發生那樣的事情，而不是任何其他日子。我幸運我選擇得好，或者她選擇了我，或者宇宙選擇了我們。她看著我，她說：「嗯，好吧，這是一個驚喜。我媽媽在紐約州上州有一棟房子。她 30 年前買的。她沒有抵押貸款。我們去住我媽媽那裡吧。」
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I'm lucky that I chose well or she chose me or the universe chose us. She looks at me and she goes, "Hm, okay, this is a surprise. My mom owns a house in upstate New York. She bought it 30 years ago. She has no mortgage. Let's go live with my mom.
+
+</details>
+
+<!-- chunk 17/18 -->
+
+### 重新开始的思考与婚姻的韧性
+
+**Speaker A**: 几个月。想想看。如果你想重返事业，我知道你会成功的。而如果你不成功，我们就去哥伦比亚。我会在家上学，我们每天早上冲浪，晚上服务。我们会过上很棒的生活。无论哪种情况。不要担心它。正是在那一刻，我第一次觉得自己长大了。你问过这个问题。所以现在当我们谈论这些时，你正在帮助我理解一些事情。[叹气] 你谈到了那个孩子和痛苦。作为一个孩子，当我们面对这些非常困难的事情时，我们没有可以依靠的人，只有我们的父母。有一段时间，我觉得我还是那个孩子一样在哭。但因为我有一个了很棒的妻子和孩子们，我可以依靠他们。即使我搞砸了，即使我没有守住我的诺言，即使我没有做事情应该做的那样，即使我把世界上所有的潜力都弄坏了或者弄丢了，即使那是属于我们的，我意识到这一点的那一刻，我感觉自己更强大了一点。我感觉更好。我停止了哭泣。我当时就像，我[哼了一声] 开始哭。我当时就像，“好吧。”但丽贝卡说我仍然没有笑。她会说，“顺便说一句，当我认识你的时候，你一无所有。我觉得你一无所有的时候更性感。”然后我笑了。现在我很高兴了。然后我下楼了，现在你正在完成那个早晨的故事。在我去见我的三名员工之前，早晨发生了两件事。一个是和那个教给我知识的灵性导师的故事，他教给我，夜晚最黑暗的时刻是黎明前的第二秒。而这种信念是在我们低的时候衡量的，而不是在我们高的时候。第二，我知道我可以依靠丽贝卡，这意味着我有一个基础，我有一个真正的伴侣，我能克服任何事情。所以当我的三名员工说，“你为什么在笑？”他们没有把所有事情都告诉他。我告诉他们，夜晚最黑暗的时刻是黎明前的第二秒，而且我相信。但我还告诉他们，“而且我妻子觉得我很性感。”对于一个没有太多稳定性的孩子来说，那是一个你意识到你的基础可能非常坚固的时刻。我回到了你开始的地方。我们人生中任何一个我们能做出的最大决定是我们的伴侣是谁。我们如何知道他们是谁？我们现在说了两件事。第一，他们是否让我们成为自己最好的版本？第二，如果一切都消失了，在那个非常艰难的一天，他们会是什么样子？而剩下的不仅仅是我们美好的那一面。他以前谈过黑暗面和光明面。如果有一刻，它只是黑暗面，他们会如何对待我们？如果光明没有关闭，只是减弱了。我能看到你在讲述那个时刻时脸上的所有情绪，以及那对你意味着多大。嗯，可能比你说的任何其他事情都多。有时候丽贝卡对我生气很快，我可能会因此感到不快一秒钟，但当我有一秒钟时间深呼吸并记住我拥有一位多么伟大的妻子和多么伟大的伴侣时，她做不了任何事情能让我比一点点更难过。因为我们的关系一直在考验着火。我记得你对她给你的另一个了很棒的建议，关于在那个我们工作时代之后站稳脚跟的建议，你知道那时关于我薪酬的谈判仍在进行中，她给了你一些关于站稳脚跟的非常非常好的建议。她确实是这么做的。对于那些没有听到那个故事的人来说，那启发了我，因为你知道我倾向于认为我的未婚夫总是对的。所以当我听到那个时候，我心想，嗯。所以，首先，当我们认为我们有很多东西要失去时，站稳脚跟是非常困难的。这又回到了那种恐惧。丽贝卡有很多超能力。其中之一，她没有恐惧，这是个缺点。她全是真理。她看到人们的真实面貌。因此，她很诚实，她不害怕她的真理。如果某个人不会成为我们的朋友，如果某个人因为这件事不会和我们说话，她不在乎。她把事情说出来。在整个谈判的最后，当是时候把一切结束时，当时我的诉讼律师，今天是我伴侣，他的名字是埃里克·赛勒，他叫我，我们谈了，我们说，“我认为我们可以达成一个交易。”我们谈了交易。我们达成了交易。谁？在……在……为了给每个人讲故事，我退出了世界。我收到了银行的信。我们一无所有。但马森来了，拯救了这一天，为公司提供资金，为我们提供资金，支付我们的债务，但我们并没有得到，我们没有得到大数字，并且在2020年4月1日同意支付我以及所有其他投资者30亿美元现金，我们将会得到10亿美元。新冠疫情真的发生在3月，在2020年3月最后一个星期三，我们收到了软银的一封信，说这对那些不知道什么是不可抗力的人来说，不可抗力是指比生命更大的事件，是失控的，比如洪水或某种不可抗力的自然力量，他们不必支付这笔钱，他们也不需要发送那三亿美元。我记得到目前为止我承受了这么多打击，到这一点我已经习惯了。我抬头看看天，我说，“谢谢你，上帝。我们从中学到了什么？我已经准备好学习这个了。”而那课显然是诉讼。我们需要从这个中学到什么。我们进入了一场非常复杂的诉讼。当诉讼以十亿美元的和解结束时，所以不是30亿美元，而是变成了50亿。所以每个人都得到一半，但它完成了。我们谈判了一个特定的谈判，并且原本要花一定的时间来争取这笔钱。丽贝卡当时快要分娩了。这是分娩前的4天。我带着我的好朋友安德鲁·芬克尔斯坦一起走进那里，他一直和我一起经历了整个过程。我们走进那里告诉他们，因为这是新冠疫情。所以一切都在Zoom上。所以埃里克·赛勒，这位诉讼律师，在他的纽约家。我们在汉普顿。他们在日本。每个人都在不同的地方。我们走进那里告诉丽贝卡和他们，我们已经同意了和解，但钱将在两个月后到账，这会发生，那也会发生。[叹气和喘气] 她说不。如果我们周一不达成交易，我们将去法庭，法庭对任何人来说都不会太好，对韦工作来说也不太好，因为如果我们不打算去法庭，另一个投资者就会来，他们至少会把韦工作拿下来。她说不，我们已经有这事了，他们本该在2020年4月1日支付，他们没有支付30亿美元，三亿美元为什么现在要和另一个协议和解，以再次推迟付款？如果他们不付钱，而你错过了法庭日期？他们要么付钱，然后就解决了。我们会对他们说谢谢，每个人都会走开。这不仅仅是为我们付钱。那笔账和一半是给所有员工和所有投资者。这对我们来说是5亿美元，对其他人来说是10亿美元。要么是这样。我知道我们所有听众都知道这些数字是惊人的大数字。我完全承认并理解他们要么付钱，要么不付钱。我告诉她，“你想做什么？”我们已经就此达成了一致。她说，“告诉他们你已经达成了一致，但你的妻子没有。”她说，“你没有把钱放在一边，我们谈过。你签署了个人担保。这不仅仅是你的钱。这是我们的钱。我不能接受和解。回去告诉他们，明天他们要么付钱。”这就像……这是周三，在我们安排剖腹产之前。所以周五早上8点，他们要么在周五早上8点之前付钱，否则我们周一在法庭上见所有人。她说，也告诉他们，任何对你说的可怕的事情，都已经在媒体和公众面前了。一切都暴露了。所以埃里克·赛勒给我打电话。
+
+<details>
+<summary>Original English</summary>
+
+few months.
+
+Think about it.
+
+If you want to go back into business, I know you'll be successful. And if you don't, we'll move to Costa Rica. I will homeschool and we will surf every morning and serve every night. And we'll have a great life. Both cases. Don't worry about it. And at that moment, this is when I think I grow up for the first time. And you asked about this. So now as we're talking, you're helping me understand something. [sighs] You talked about that child and the pain. As a child, when we're facing these very difficult things, we have no one to count on, only our parents. For a moment, I think I was that child again crying. But I wasn't a child anymore because I had an amazing wife and kids that I could lean back on. They have my back even if I messed up. Even if I didn't keep my word, even if I didn't do things the way they're supposed to, even if I took all the potential in the world and messed it up or lost it, even though it was ours for the taking. And the moment I realized that, I felt a little stronger. I felt better. I stopped crying. I was like, I [snorts] start crying. I was like, "Okay." But Rebecca says that I'm still not smiling. She goes, "By the way, when I met you, you were broke. I think you're much more sexy when you're broke." Then I smiled. Now I was happy. Then I walked downstairs and now you're completing the story from before that morning. After when I go to my three employees, two things happened before that morning. One was the story with the spiritual teacher who taught me that the darkest moment of the night is a second before dawn. And that belief is measured when we're down, not when we're up. And two, I knew that I could rely on Rebecca, which means I had a foundation and I had a real partner and I can make it through anything. So to when those when my three employees say, "Why are you smiling?" They didn't add everything. I told them the darkest moment of the night is a second before dawn and I believe. But I also told them, "And my wife thinks I'm sexy." For a kid that didn't have much stability, that was a moment where you realized your foundation was probably rock solid. I think >> I go back to where you started. Biggest decision any of us can make in our life is who is our partner. And how do we know who they are? We now said two things. One, do they make us the best version of ourselves? Two, how will they be in that very tough day if everything was gone? And all that is left is not only our nice side. He talked before about the dark side and the light side. How are they going to treat us if for a moment it's just the dark side? If the light is not turned off but diminished. I can see all the emotion in your face when you recount that moment and how much that that means to you. Um, probably more so than anything else you've said. There's sometimes Rebecca is quick to anger with me and I can be upset for a second, but when I have a second to take a deep breath and remember how what a great wife I have and what a great partner I have, there's nothing she can do that can actually keep me upset for more than a little bit. Cuz our relationship has been testing fire. There's another remarkable story I remember you saying about um her giving you some advice to stand your ground in the post sort of we work era where you know there was negotiation still going on about I think your your compensation that you were going to get and she gave you some really really good advice about standing your ground. >> She did. >> What was that for those that haven't heard that story? It [snorts] inspired me cuz you know I do tend to think my fiance is always right. So when I heard that I thought huh. So, first of all, it's very hard to stand our ground when we think we have a lot to lose. It's back to that fear. Rebecca has many superpowers. One of them, she has no fear, to a fault. She's all truth. She sees people for who they are. And therefore, she's honest and she's not afraid of her truth. If someone's not going to be our friend, if someone's not gonna talk to us because of it, she doesn't care. She calls it as it is. And at the end of this whole negotiation, when it came time to finish everything, my litigator at the time, today is my partner, his name is Eric Syler, called me and we talked and we said and said, "I think we can get to a deal." And we talked about the deal. And we got to the deal >> with who? Between >> between so fast to finish for the story for everyone. I step down the world. I get the letter from the bank. We have nothing. Masan comes in, saves the day, funds the company, funds us, funds, pays our debt, but we don't get get money, but we don't get the big number, and agrees in April 1st, 2020 to pay myself and all the other investors $3 billion cash out of which we would have been 30%. So, a billion dollars for us. Corona happens really in March and on the last day of March 2020 we get a letter from SoftBank saying that this is force majour for those of you who don't know what force majour means is when an event happens that's greater than life that's out of control like a flood or something force majour force of nature something unexpected and they don't have to pay the money and they don't send the three billion I remember by this point I've taken so many hits ah one at this point I'm already practiced I look up to the heavens and I say, "Thank you, God. What do we need to learn from this one? This one I'm already ready to learn." And the lesson there was apparently litigation. Here's what we need to learn from this one. And we go into a very complicated litigation. When the litigation ends with a settlement of a billion and a half, so instead of the 3 billion, it ends up being half. So, everybody gets half, but it's done. We negotiate a certain negotiation and was going to take a certain time for the money to come in. And Rebecca was just about to give birth. This was 4 days before she was giving birth. And I walk in with my best friend Andrew Finkelstein who was there with me for this whole experience. And we walk in to tell cuz this is Corona. So everything's on Zoom. So Eric Syler, the litigator, is in his house in New York. We're in the Hamptons. They're in Japan. Everybody's all over the place. And we walk in to tell Rebecca the settlement that we agreed and we settle but the money will come in two months and this will happen and that will happen [sighs and gasps] and she says no. and we're if we don't close the deal Monday we're going to court and court was not a not going to be great for anyone and b it wasn't great for weiwork because if if if we weren't going to go to court another investor was going to come they're going to take the weiwork at least to stood the chance and she goes no we've already had they were supposed to pay April 1st for 2020 they didn't pay the 3 billion the three billion why are you now settling the 3 billion with another agreement ment to delay payment again. What if they don't pay and now you missed your court date? Either they pay and then it's settled. We'll all say thank you and everybody will walk away. And it's not just paying to us. That bill and a half is to all the employees and all the investors. It's half a billion to us and a billion to everyone else. Either and and and I know for all of us listening that these are outrageously large numbers. I completely acknowledge and understand either they pay or they don't. And I say to her, "What do you want to do?" we agreed on it. And she goes, "Tell them you agreed on it, but your wife didn't." And she goes, "You didn't do the money aside that we talked. You signed the personal guarantee. It's not just your money. This is our money. And I don't accept the settlement. Go back and tell them that either they pay it tomorrow." This was like th this was Wednesday before we had a scheduled C-section. So, Friday 8:00 a.m. Either they pay it before Friday 8:00 a.m. or we'll see everybody in court on Monday. And she said also tell them that any horrible thing that's ever been said about you has been on the press and public. It's all out there. So Eric Syler calls me
+</details>
+
+**Speaker A**: 丽贝卡说我仍然没有笑。她会说，“顺便说一句，当我认识你的时候，你一无所有。我觉得你一无所有的时候更性感。”然后我笑了。现在我很高兴了。然后我下楼了，现在你正在完成那个早晨的故事。在我去见我的三名员工之前，早晨发生了两件事。一个是和那个教给我知识的灵性导师的故事，他教给我，夜晚最黑暗的时刻是黎明前的第二秒。而这种信念是在我们低的时候衡量的，而不是在我们高的时候。第二，我知道我可以依靠丽贝卡，这意味着我有一个基础，我有一个真正的伴侣，我能克服任何事情。所以当我的三名员工说，“你为什么在笑？”他们没有把所有事情都告诉他。我告诉他们，夜晚最黑暗的时刻是黎明前的第二秒，而且我相信。但我还告诉他们，“而且我妻子觉得我很性感。”对于一个没有太多稳定性的孩子来说，那是一个你意识到你的基础可能非常坚固的时刻。我回到了你开始的地方。我们人生中任何一个我们能做出的最大决定是我们的伴侣是谁。我们如何知道他们是谁？我们现在说了两件事。第一，他们是否让我们成为自己最好的版本？第二，如果一切都消失了，在那个非常艰难的一天，他们会是什么样子？而剩下的不仅仅是我们美好的那一面。他以前谈过黑暗面和光明面。如果有一刻，它只是黑暗面，他们会如何对待我们？如果光明没有关闭，只是减弱了。我能看到你在讲述那个时刻时脸上的所有情绪，以及那对你意味着多大。嗯，可能比你说的任何其他事情都多。有时候丽贝卡对我生气很快，我可能会因此感到不快一秒钟，但当我有一秒钟时间深呼吸并记住我拥有一位多么伟大的妻子和多么伟大的伴侣时，她做不了任何事情能让我比一点点更难过。因为我们的关系一直在考验着火。我记得你对她给你的另一个了很棒的建议，关于在那个我们工作时代之后站稳脚跟的建议，你知道那时关于我薪酬的谈判仍在进行中，她给了你一些关于站稳脚跟的非常非常好的建议。她确实是这么做的。对于那些没有听到那个故事的人来说，那启发了我，因为你知道我倾向于认为我的未婚夫总是对的。所以当我听到那个时候，我心想，嗯。所以，首先，当我们认为我们有很多东西要失去时，站稳脚跟是非常困难的。这又回到了那种恐惧。丽贝卡有很多超能力。其中之一，她没有恐惧，这是个缺点。她全是真理。她看到人们的真实面貌。因此，她很诚实，她不害怕她的真理。如果某个人不会成为我们的朋友，如果某个人因为这件事不会和我们说话，她不在乎。她把事情说出来。在整个谈判的最后，当是时候把一切结束时，当时我的诉讼律师，今天是我伴侣，他的名字是埃里克·赛勒，他叫我，我们谈了，我们说，“我认为我们可以达成一个交易。”我们谈了交易。我们达成了交易。谁？在……在……为了给每个人讲故事，我退出了世界。我收到了银行的信。我们一无所有。但马森来了，拯救了这一天，为公司提供资金，为我们提供资金，支付我们的债务，但我们并没有得到，我们没有得到大数字，并且在2020年4月1日同意支付我以及所有其他投资者30亿美元现金，我们将会得到10亿美元。新冠疫情真的发生在3月，在2020年3月最后一个星期三，我们收到了软银的一封信，说这对那些不知道什么是不可抗力的人来说，不可抗力是指比生命更大的事件，是失控的，比如洪水或某种不可抗力的自然力量，他们不必支付这笔钱，他们也不需要发送那三亿美元。我记得到目前为止我承受了这么多打击，到这一点我已经习惯了。我抬头看看天，我说，“谢谢你，上帝。我们从中学到了什么？我已经准备好学习这个了。”而那课显然是诉讼。我们需要从这个中学到什么。我们进入了一场非常复杂的诉讼。当诉讼以十亿美元的和解结束时，所以不是30亿美元，而是变成了50亿。所以每个人都得到一半，但它完成了。我们谈判了一个特定的谈判，并且原本要花一定的时间来争取这笔钱。丽贝卡当时快要分娩了。这是分娩前的4天。我带着我的好朋友安德鲁·芬克尔斯坦一起走进那里，他一直和我一起经历了整个过程。我们走进那里告诉他们，因为这是新冠疫情。所以一切都在Zoom上。所以埃里克·赛勒，这位诉讼律师，在他的纽约家。我们在汉普顿。他们在日本。每个人都在不同的地方。我们走进那里告诉丽贝卡和他们，我们已经同意了和解，但钱将在两个月后到账，这会发生，那也会发生 [叹气和喘气] 她说不。如果我们周一不达成交易，我们将去法庭，法庭对任何人来说都不会太好，对韦工作来说也不太好，因为如果我们不打算去法庭，另一个投资者就会来，他们至少会把韦工作拿下来。她说不，我们已经有这事了，他们本该在2020年4月1日支付，他们没有支付30亿美元，三亿美元为什么现在要和另一个协议和解，以再次推迟付款？如果他们不付钱，而你错过了法庭日期？他们要么付钱，然后就解决了。我们会对他们说谢谢，每个人都会走开。这不仅仅是为我们付钱。那笔账和一半是给所有员工和所有投资者。这对我们来说是5亿美元，对其他人来说是10亿美元。要么是这样。我知道我们所有听众都知道这些数字是惊人的大数字。我完全承认并理解他们要么付钱，要么不付钱。我告诉她，“你想做什么？”我们已经就此达成了一致。她说，“告诉他们你已经达成了一致，但你的妻子没有。”她说，“你没有把钱放在一边，我们谈过。你签署了个人担保。这不仅仅是你的钱。这是我们的钱。我不能接受和解。回去告诉他们，明天他们要么付钱。”这就像……这是周三，在我们安排剖腹产之前。所以周五早上8点，他们要么在周五早上8点之前付钱，否则我们周一在法庭上见所有人。她说，也告诉他们，任何对你说的可怕的事情，都已经在媒体和公众面前了。一切都暴露了。所以埃里克·赛勒给我打电话。
+
+<details>
+<summary>Original English</summary>
+
+few months.
+
+Think about it.
+
+If you want to go back into business, I know you'll be successful. And if you don't, we'll move to Costa Rica. I will homeschool and we will surf every morning and serve every night. And we'll have a great life. Both cases. Don't worry about it. And at that moment, this is when I think I grow up for the first time. And you asked about this. So now as we're talking, you're helping me understand something. [sighs] You talked about that child and the pain. As a child, when we're facing these very difficult things, we have no one to count on, only our parents. For a moment, I think I was that child again crying. But I wasn't a child anymore because I had an amazing wife and kids that I could lean back on. They have my back even if I messed up. Even if I didn't keep my word, even if I didn't do things the way they're supposed to, even if I took all the potential in the world and messed it up or lost it, even though it was ours for the taking. And the moment I realized that, I felt a little stronger. I felt better. I stopped crying. I was like, I [snorts] start crying. I was like, "Okay." But Rebecca says that I'm still not smiling. She goes, "By the way, when I met you, you were broke. I think you're much more sexy when you're broke." Then I smiled. Now I was happy. Then I walked downstairs and now you're completing the story from before that morning. After when I go to my three employees, two things happened before that morning. One was the story with the spiritual teacher who taught me that the darkest moment of the night is a second before dawn. And that belief is measured when we're down, not when we're up. And two, I knew that I could rely on Rebecca, which means I had a foundation and I had a real partner and I can make it through anything. So to when those when my three employees say, "Why are you smiling?" They didn't add everything. I told them the darkest moment of the night is a second before dawn and I believe. But I also told them, "And my wife thinks I'm sexy." For a kid that didn't have much stability, that was a moment where you realized your foundation was probably rock solid. I think >> I go back to where you started. Biggest decision any of us can make in our life is who is our partner. And how do we know who they are? We now said two things. One, do they make us the best version of ourselves? Two, how will they be in that very tough day if everything was gone? And all that is left is not only our nice side. He talked before about the dark side and the light side. How are they going to treat us if for a moment it's just the dark side? If the light is not turned off but diminished. I can see all the emotion in your face when you recount that moment and how much that that means to you. Um, probably more so than anything else you've said. There's sometimes Rebecca is quick to anger with me and I can be upset for a second, but when I have a second to take a deep breath and remember how what a great wife I have and what a great partner I have, there's nothing she can do that can actually keep me upset for more than a little bit. Cuz our relationship has been testing fire. There's another remarkable story I remember you saying about um her giving you some advice to stand your ground in the post sort of we work era where you know there was negotiation still going on about I think your your compensation that you were going to get and she gave you some really really good advice about standing your ground. >> She did. >> What was that for those that haven't heard that story? It [snorts] inspired me cuz you know I do tend to think my fiance is always right. So when I heard that I thought huh. So, first of all, it's very hard to stand our ground when we think we have a lot to lose. It's back to that fear. Rebecca has many superpowers. One of them, she has no fear, to a fault. She's all truth. She sees people for who they are. And therefore, she's honest and she's not afraid of her truth. If someone's not going to be our friend, if someone's not gonna talk to us because of it, she doesn't care. She calls it as it is. And at the end of this whole negotiation, when it came time to finish everything, my litigator at the time, today is my partner, his name is Eric Syler, called me and we talked and we said and said, "I think we can get to a deal." And we talked about the deal. And we got to the deal >> with who? Between >> between so fast to finish for the story for everyone. I step down the world. I get the letter from the bank. We have nothing. Masan comes in, saves the day, funds the company, funds us, funds, pays our debt, but we don't get get money, but we don't get the big number, and agrees in April 1st, 2020 to pay myself and all the other investors $3 billion cash out of which we would have been 30%. So, a billion dollars for us. Corona happens really in March and on the last day of March 2020 we get a letter from SoftBank saying that this is force majour for those of you who don't know what force majour means is when an event happens that's greater than life that's out of control like a flood or something force majour force of nature something unexpected and they don't have to pay the money and they don't send the three billion I remember by this point I've taken so many hits ah one at this point I'm already practiced I look up to the heavens and I say, "Thank you, God. What do we need to learn from this one? This one I'm already ready to learn." And the lesson there was apparently litigation. Here's what we need to learn from this one. And we go into a very complicated litigation. When the litigation ends with a settlement of a billion and a half, so instead of the 3 billion, it ends up being half. So, everybody gets half, but it's done. We negotiate a certain negotiation and was going to take a certain time for the money to come in. And Rebecca was just about to give birth. This was 4 days before she was giving birth. And I walk in with my best friend Andrew Finkelstein who was there with me for this whole experience. And we walk in to tell cuz this is Corona. So everything's on Zoom. So Eric Syler, the litigator, is in his house in New York. We're in the Hamptons. They're in Japan. Everybody's all over the place. And we walk in to tell Rebecca the settlement that we agreed and we settle but the money will come in two months and this will happen and that will happen [sighs and gasps] and she says no. and we're if we don't close the deal Monday we're going to court and court was not a not going to be great for anyone and b it wasn't great for weiwork because if if if we weren't going to go to court another investor was going to come they're going to take the weiwork at least to stood the chance and she goes no we've already had they were supposed to pay April 1st for 2020 they didn't pay the 3 billion the three billion why are you now settling the 3 billion with another agreement ment to delay payment again. What if they don't pay and now you missed your court date? Either they pay and then it's settled. We'll all say thank you and everybody will walk away. And it's not just paying to us. That bill and a half is to all the employees and all the investors. It's half a billion to us and a billion to everyone else. Either and and and I know for all of us listening that these are outrageously large numbers. I completely acknowledge and understand either they pay or they don't. And I say to her, "What do you want to do?" we agreed on it. And she goes, "Tell them you agreed on it, but your wife didn't." And she goes, "You didn't do the money aside that we talked. You signed the personal guarantee. It's not just your money. This is our money. And I don't accept the settlement. Go back and tell them that either they pay it tomorrow." This was like th this was Wednesday before we had a scheduled C-section. So, Friday 8:00 a.m. Either they pay it before Friday 8:00 a.m. or we'll see everybody in court on Monday. And she said also tell them that any horrible thing that's ever been said about you has been on the press and public. It's all out there. So Eric Syler calls me
+</details>
+
+<!-- chunk 18/18 -->
+
+### 谈判的最后阶段与人生哲理
+
+**Speaker A**: 我告诉他，实际上，Rebecca给他打电话，他说：“亚当，我有个问题想问你。我是为谁工作的？是为你还是为Rebecca？”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: and he says I I tell so actually Rebecca called him and he said, "Adam, I have a question for you. Who do I work for? You or Rebecca?"
+
+</details>
+
+**Speaker B**: 他说：“嗯，你为我工作，而我为Rebecca工作。所以，你是为Rebecca工作吗？”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Said, "Well, you work for me and I work for Rebecca. So, you work for Rebecca?"
+
+</details>
+
+**Speaker A**: 我当时的想法是，因为她打电话给我，告诉我我是一个糟糕的律师。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Goes what I thought cuz she called me and told me I'm a lousy lawyer.
+
+</details>
+
+**Speaker B**: 她说：“你不是一个糟糕的律师。她只是不喜欢我们的和解方案。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Said, "You're not a lousy lawyer. She just doesn't like our settlement."
+
+</details>
+
+**Speaker A**: 但我们确实达成了一项解决方案。我问：“你觉得我们应该怎么做？”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: But we did get to a resolution. I go, "What do you think we should"
+
+</details>
+
+**Speaker B**: 他说：“你别无选择。你应该告诉他们没有交易。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: He said, "You have no choice. You should tell them there's no deal."
+
+</details>
+
+**Speaker A**: 我说：“他们会做什么？”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I said, "What are they going to do?"
+
+</details>
+
+**Speaker B**: 他说：“他们会爆炸的。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: He said, "They're going to explode."
+
+</details>
+
+**Speaker A**: 我说：“我不知道。他们要么会让你在法庭上见面，这是个可怕的决定，要么他们会破裂并把钱发过来。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Said, "And then said, I don't know. Either they'll meet you in court and this was a horrible decision or they'll break and send the money."
+
+</details>
+
+**Speaker B**: 我问：“你觉得会发生什么？”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Said, "What do you think's going to happen?"
+
+</details>
+
+**Speaker A**: 他说：“我从来没有处于这种境地。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Said, "I I've never been in this position."
+
+</details>
+
+**Speaker B**: 他说：“我不知道。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Said, "I don't know."
+
+</details>
+
+**Speaker A**: “好吧。”然后我接起了电话。我们告诉他们我们告诉他的话。他们挂了，他们尖叫道：“爸，我们会起诉你这事，还会起诉你那事。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Okay. Got on the phone. We told them what we told him. They hung they screamed, "Ba, we're going to sue you for this and sue you for that."
+
+</details>
+
+**Speaker B**: 我给Eric打电话说：“现在怎么办？”他回答说：“不，我们等着。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: I called Eric, "What now?" He goes, "No, we wait."
+
+</details>
+
+**Speaker A**: 后来，Torres，Marcelo打电话来了，而Marcelo不是当初给我做原始投资的人。Marcelo Clar是他在SoftBank非常大人物的时候。今天他有自己的事业了。我每次和他互动的时候，他都守住了他的诺言，总是做对的事情。即使我不同意他，他也会直言不讳地告诉我。所以我非常尊重他。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Torres later, Marcelo calls and and Marcelo is not the person who made the original investment in me. Marcelo Clar is he was at the time he was very big personality in SoftBank. Today he has his own business. Every time that I've had an interaction with me, he's always kept his word and always did the right thing. Even when I didn't agree with him, he told it to me straight. So I respect him and a lot.
+
+</details>
+
+**Speaker B**: 他在推车上。他像个高个子，像他现在在推车上。他叫我：“给Rebecca打电话。”我当时想：“你确定吗，Marcelo？”她正坐在沙发上。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: And Marcelo calls me. He's on the walker. He's like a tall guy like he's on this walker. He goes, "Call Rebecca." I was like, "Are you sure, Marcelo?" She's like on the couch. Call Rebecca. I was like, "Okay."
+
+</details>
+
+**Speaker A**: 我给Rebecca打电话。她又在分娩前来了。她站在Marcelo旁边。他告诉她：“Rebecca，我想告诉你，你和Adam当时都比你的时间更领先。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I called Rebecca. She's coming in again right before birth. And she's standing there next to Marcelo goes, "Rebecca, I wanted to tell you that you and Adam were ahead of your time."
+
+</details>
+
+**Speaker B**: 他说得对。他说：“世界是孤独的。世界是脱节的。人们需要我们。人们需要把人聚集在一起。人们需要社区。你比你的时间领先了10年。我不认为我们领先了10年。我认为我们比我们的时间领先了5年，因为世界变化太快了。我只是想告诉你，钱会在你分娩之前就进入银行。我很抱歉我们不得不经历这一切。这只是生意。这里没有什么私人的。我们会拿走钥匙。希望我们能通过公司过得好，但我们已经没事了。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: He's so correct. He said, "The world is lonely. The world is disconnected. People need we. People need to bring people together. People need community. You're you're 10 years ahead of your time. I don't think we were 10 years. I think we were five years ahead of our time because the world's moving so fast. Cuz I just want to tell you the money will be in the bank before you give birth. I'm sorry we had to go through all of this. This is just business. Nothing here was personal. We'll take the keys. Hopefully, we do well by the company, but we're good."
+
+</details>
+
+**Speaker A**: 他从状态中走出来。我看着她。我问：“现在怎么办？”她回答说：“好吧。签文件。”我说：“但你说我们如果钱不在里面，就不能做。”她回答说：“不，不，我们现在都很好。我们4点半的时候钱就到账户了。我们都开了一个Zoom。早上8点，我在Mount Si医院。那是个很棒的医院。Rebecca正在生出Moses。每个人都深吸了一口气，我们今天在这里。亚当，我……我打算结束了，但我有这五张空白卡，我想给你机会写上。你觉得写可以吗，还是我为你写？我会为你写，因为我的阅读障碍。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Gets off the zone. I looked at her. I said, "Now what?" She goes, "Fine. Sign the documents." I said, "But you said we can't do it if the money is not in." What?" She goes, "No, no, we're all good now. We signed At 4:30 a.m. the money hits the account. We all get on a Zoom. At 8:00 a.m. I'm in Mount Si Hospital. Great hospital. Rebecca is giving birth to Moses. Everybody took a deep breath and we're here today. Adam, I have um I'm going to wrap up, but I I have these five pieces of empty card and I wanted to give you the opportunity to write on. Are you okay with the writing or shall I write it for You'll write for me for my dyslexia."
+
+</details>
+
+**Speaker B**: “好吧。嗯，就是你从我们开始合作以来学到的五条最重要的教训。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Okay. Um just the the five most important lessons that you have learned over since the beginning of we work.
+
+</details>
+
+**Speaker A**: 我猜从我们合作开始以来，从你开始以来……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Well, I guess from the beginning of your
+
+</details>
+
+**Speaker B**: “那我们不如就做我们今天通过谈话学到的五条教训怎么样？”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: How about we just do the five lessons I feel we learned today by talking.
+
+</details>
+
+**Speaker A**: “当然。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Sure.
+
+</details>
+
+**Speaker B**: “第一课，选择你的伴侣、朋友和商业伙伴，在人生最糟糕的一天，而不是最好的那一天。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Lesson one, choose your life partner, friends, and business partners for the worst day in your life, not for the best. Okay.
+
+</details>
+
+**Speaker A**: “很好的建议。”（轻笑）
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Great advice. [snorts]
+
+</details>
+
+**Speaker B**: “第二课，生活不是关于我们跌倒的时候。而是关于我们如何站起来。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Lesson two, life is not about when we fall down. It's about how we get up.
+
+</details>
+
+**Speaker A**: “好吧。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Okay. Number two,
+
+</details>
+
+**Speaker B**: “第二点，选择那个会让你成为最好版本的伴侣。选择你需要的那个，而不是你认为你想要的那个。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Number two, choose the life partner that will make you the best version of yourself. The one that you need, not the one that you think you want.
+
+</details>
+
+**Speaker A**: “好吧。”（轻笑）
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Okay. [snorts]
+
+</details>
+
+**Speaker B**: “控制不是来自于权力。它来自于影响力。而影响力需要从一开始，每一天都赢得。最后，我们都有一个命运和一个旅程。了解你自己，这样你才能开始过属于你的人生。那是属于你的。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Control doesn't come from power. It comes from influence. And influence needs to be earned every single day from the beginning. And last but not least, we all have a destiny and a journey. Get to know yourself so you can start living yours. That one's for you.
+
+</details>
+
+**Speaker A**: “是的，我想了。”（笑声）
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah, I thought [laughter] so.
+
+</details>
+
+**Speaker B**: “亚当，非常感谢你。我无法对你在Flow目前所做的一切感到如此兴奋。嗯，我这里有一些很棒的照片，比如团队的照片，我研究了一下这个业务。我还采访了你的伴侣，嗯，你的伴侣，他是史上最伟大的投资者之一Ben Horowitz。让他给我写一封美丽的信，谈谈他与你一起经历的惊人旅程，为什么他支持你，以及你有多么出色地合作，你是一个学习的海绵，以及他多么坚信你现在正在建立一个将改变世界的代际企业，以及他为与你这样的人建立联系感到多么骄傲。他告诉我们，我们永远不应该根据创始人的最糟糕时刻来评判他。但对于Adam来说，那很容易，因为他的光芒照耀，并且一直闪耀。你已经以每一个意义上都超出了期望，包括对你的承诺。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Adam, thank you so much. I am I couldn't be more excited by all the wonderful things you're doing at Flow at the moment. Um, got some wonderful photos here of like the team and I've looked into the business. I also had your partner um your partner one of the greatest investors of all time Ben Horowitz write me this beautiful letter where he talks about the amazing journey he's had with you um why he backed you and how amazingly collaborative you've been what a sponge you are for learning and how he strongly believes that you are now building a generational business that will change the world and how proud he is to be associated with a man like you he tells us all Ben Horowitz We should never judge a founder by his worst moment. But with Adam, that was easy because his light shined and shines so brightly. You have overd delivered in every sense of the word, including on your promises.
+
+</details>
+
+**Speaker A**: “谢谢你，Adam。太美了。我想让Steven感谢你。我知道我们进行了一次真正的讨论，因为我第一次学到了一些东西，你让我大声谈论了一些我几乎从未有过的东西。我对此很感激，我将思考它，我将从中学习。你有什么最后的总结吗？有什么你想留给观众的吗？”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Thank you, Adam. Beautiful. I want Steven to thank you. I know we had a real discussion because I learned a few things for the first time and you made me talk out loud about a few things that I've almost never had. I appreciate it and I'm going to think about it and I'm going to learn from it. What's your last word? Is there anything at all that you wanted to leave the audience with?
+
+</details>
+
+**Speaker B**: “我们都带着一个目的和一个命运来到这个星球。我们以这种完美的火开始了这段生命。噪音来了，挑战来了，人们来了，自我来了，一切都来了。我们每个人都有勇气去审视内心。看看那些阻止我们真正成为自己最好版本的人。与正确的人周围，与正确的家庭周围，无论是真正的家庭，精神上的家庭，无论你认为什么是最好的和最亲近的，去追逐你的梦想，你的旅程，你的真理。我确信，如果你经历这个过程，如果你记住生活不是关于我们如何跌倒，以及有多少人看到我们跌倒，它真正关乎我们如何站起来。如果你有勇气真正成为你全部的自己，并且对你的优势和劣势都诚实，如果你记得这真是一段旅程，当你走到生命最后几分钟时，你会环顾四周。你会被你为整个生命创造和培养的，大量的爱所包围。你将比你来之前这个世界和这个星球过得更好。我祝愿你和我们所有人都好运在这段人生的旅程中。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: We all came to this planet with a purpose and a destiny. We started this life as this perfect light. Noise came, challenges came, people came, ego came, everything came. It is up to all of us to have the courage to look inside. See whatever the things that are stopping us from really becoming the best version of myself, of ourselves, surround ourselves with the right people, with the right family, both real family, spiritual family, whatever you consider your best and closest and go and chase your dream, your journey, your truth. And I know as a fact that if you go through the process, if you remember that life is not about how we fall and how many people saw us fall, it's genuinely about how we get up. And if you have the courage to really be the full version of yourself and you're truthful about not just your strength, but also the weaknesses, and if you remember that it truly is a journey, that when you get to that last few minutes of your life, you're going to look around. You're going to be surrounded by loved ones and by a lot a lot of love that you've created and cultivated for your entire life. and that you're going to live this world and this planet much better than it was before you came. I wish you and all of us good luck at this journey of life.
+
+</details>
+
+**Speaker A**: “阿门。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Amen.
+
+</details>
+
+**Speaker B**: “阿门。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Amen.
+
+</details>
+
+**Speaker A**: “谢谢你。我们结束了。谢谢你。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Thank you. We're done. Thank you.
+
+</details>
+
+**Speaker B**: “YouTube有一个新的疯狂算法，他们知道你接下来想看什么视频，是根据人工智能和你的观看行为。算法说这个视频是为你量身定做的。对每个人来说都是不同的。去看看这个视频，我敢打赌你会喜欢的。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: YouTube have this new crazy algorithm where they know exactly what video you would like to watch next based on AI and all of your viewing behavior. And the algorithm says that this video is the perfect video for you. It's different for everybody looking right now. Check this video out and I bet you you might love it.
+
+</details>

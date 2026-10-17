@@ -1,0 +1,1372 @@
+---
+author: The Ezra Klein Show
+date: '2026-10-02'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=2fb8aNqFSLc
+speaker: The Ezra Klein Show
+tags:
+  - design-aesthetics
+  - visual-language
+  - consumer-culture
+  - emotional-resonance
+  - power-dynamics
+title: 世界是否变丑了？设计美学、权力表达与情感共鸣的对话
+summary: 本文探讨了当代设计为何显得单调或粗俗，分析了比例失调、消费主义对物品情感价值的削弱，以及右翼政治美学与科技视觉语言的冲突。通过对比苹果园区与赛博朋克风格，文章揭示了设计背后的权力动态，并强调了物品在代际传承中承载记忆与情感的重要性。
+insight: ''
+draft: true
+series: ''
+category: culture-history
+area: society-thinking
+project: []
+people:
+  - Ezra Klein
+  - Debbie Millman
+companies_orgs:
+  - Tesla
+  - Apple
+  - IKEA
+  - Burger King
+  - See's Candies
+  - Häagen-Dazs
+products_models:
+  - Cybertruck
+  - Apple Park
+media_books:
+  - The Voice That Is Great Within Us
+  - Love in the Time of Cholera
+  - Ulysses
+  - Hunger
+status: evergreen
+---
+<!-- chunk 1/7 -->
+
+### 世界真的越来越丑了吗？
+
+**Ezra Klein**: 为什么现在的一切都显得如此单调乏味？为什么所有东西看起来都一模一样？看看那些千篇一律的咖啡店，它们长得全无二致；建筑变得标准化，楼宇毫无色彩；街上的汽车也几乎可以互相替换。而与此同时，在另一端，你又看到了唐纳德·特朗普那种镀金的奢华审美、冰冷的拱门，以及他对倒影池那种充满个人色彩的浮夸愿景。在现代保守派这里，他们拥有一套关于“美”的理论——虽然这绝非我认同的美学理论，但这确实是一套明确的理论。
+
+一段时间以来，我一直想做一期节目来探讨很多人都在提出的这个疑问，而且这个问题也一直困扰着我：我们的世界是否真的正在变得越来越丑陋？如果是这样，原因何在？为什么我们设计出来的东西，要么看起来如此乏味无聊，要么走向另一个极端，显得如此喧闹刺眼？在这个右翼拥有一套清晰美学理论的时刻，左翼到底有没有提出任何应对的主张？
+
+黛比·米尔曼（Debbie Millman）在纽约市的视觉艺术学院任教，是一位资深的平面品牌设计师。她曾为汉堡王、喜诗糖果（See's Candies）和哈根达斯等知名公司重塑品牌标识。二十多年来，她一直主持着播客节目《Design Matters》，与各领域的创意人士畅谈设计。她现在来到了我们的节目中。黛比·米尔曼，欢迎来到节目。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: why is everything so drab right now？ is it also the same same？ got these copy shops？ they all look the same architecture looks standardized buildings or colorless。 the cars are interchangeable。 then on the other side， you have trumps guilover over office ice imagined ararch his truish vision for the reflecting pool。 so we will mcdonald trump。 he in the modern， right。 they have AA theory of beauty， not my theory of beauty， but a theory for a while。 now i would wanting to do an episode on this question that i've seen all other people ask， and it has bothered me to is the world getting uglier。 and if so， why why do we seem to design？ so much that looks so boring wearing the other side。 so loud。 and in this moment， when the right has a clear theory， beauty does left have any answer at all。 debby moment teaches at the school visual arts in yyork city e's， a long time graphic brand designer。 she revamp logos for companies like earking seen up in hagging dos。 and for over twenty years， she's hosted a podcast called design matters where she talks to creative people about design。
+
+**Speaker 1**: she joins me now deadby moment。
+
+**Speaker 0**: welcome to the show。
+
+</details>
+
+**Debbie Millman**: 谢谢你，埃兹拉（Ezra）。非常高兴能来到这里。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: thank you as there。 it's great to be here。
+
+</details>
+
+**Ezra Klein**: 在过去的几年里，我感觉自己读过或看过了不下十几篇关于“为什么一切都在变得越来越丑陋”的深度文章。我刚好看到了你写的一篇题为《世界真的越来越丑了吗？》的文章。那么，世界真的变丑了吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: so over the first couple of years， i feel like i have read or watched。 i mean， it dozen essays on why everything is getting uclear。 and i just read a peace from you with the title， is the world getting uclear。 so is it depends on who you ask？
+
+</details>
+
+### 从丑陋到粗俗：缺乏意图的设计灾难
+
+**Debbie Millman**: 这取决于你问的是谁。如果问我的看法，我认为在某些方面，世界其实是变得更加“粗俗”（vulgar）了。丑陋往往可以是非常具有刻意意图的（intentional），而粗俗通常是无意识、偶然造成的，因为它缺乏这种意图——没有人会真正处心积虑地去制造出彻头彻尾的粗俗之物。某种形式的丑陋，在特定潮流的审视下，完全可以被视作极富魅力、性感、有趣或具有颠覆性的。然而，粗俗却始终是极其糟糕糟糕的。我认为“粗俗”才是准确描述我们目前走向的关键词。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: i'm asking you my opinion。 it's getting more vulgar in some ways。 uginess can be very intentional。 vulgar is accidental because it doesn't have intention。 nobody really sets out to make something that's truly voulger。 certain ugly can be seen through the lens of a trend as being really glamorous or sexy or interesting or subversive。 but vulgar is always pretty awful。 and i think that is the real word about where we're moving。
+
+</details>
+
+**Ezra Klein**: 你能为这种粗俗举几个具体的例子吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: you give me some examples of this vulgarity。
+
+</details>
+
+**Debbie Millman**: 比如特斯拉的赛博皮卡（Cybertruck）。一辆车根本没有必要设计得如此盛气凌人、如此浮夸臃肿。再看看住宅建筑：原本很多房屋非常怡人地坐落在地块上，拥有前院、后院，两边可能还有小巷；而现在的房子却被硬生生地塞满整个地块，以至于房屋和人行道之间可能只剩下六七英寸的草坪缝隙。我们在服饰上也看到了这种现象，尤其是在 Z 世代的时尚中——我知道《纽约时报》对此已经写过很多讨论文章。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: well， this cyber truck， there's really no need for a car to look that imposing and that blueviated housing where houses are now being raised that fit sort of sweettly on their lots with a front yard in a backyard and maybe little allies on either side。 and now they are being squeezed into the property so that there's maybe six or seven inches of grass between the house and the sidewalk。 we're seeing it in clothing， particularly in jessefashion on which i know that new york times has been writing about quite a lot。
+
+</details>
+
+**Ezra Klein**: 如果说有什么是我完全称得上专家的，那大概就是 Z 世代的时尚了，不过——
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: and if is anything， i'm an expert on its jensey fashion， but that，
+
+</details>
+
+**Debbie Millman**: 但是 Z 世代的时尚本质上并不是具有持久生命力的时尚。它是一种生来就带着保质期或者暂停期的表达方式。它未来可能会回潮，但在当下的一段时间内，它很快就会过时。这其中一部分是人为制造的过时淘汰，一部分则纯粹是风格与潮流的短暂轮换。然而，房屋、汽车、交通工具、飞机这类事物，在它们根本的外观形态和运作机制上，通常是不会如此频繁变迁的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: but jensei fashion is not forever fashion by nature， is a type of expression that has an exploration date in it or certainly a posidate。 it might come back。 but for a while， it goes out of style， some of it is four stops s lesson。 son of it is just trrends and style wherehouses cars， vehicles， airplanes thinks like that tnot to transition very often in the way that they fundamentally look at work。
+
+</details>
+
+### 比例、数学感知与物品的情感共鸣
+
+**Ezra Klein**: 你是如何区分这两者的呢？我知道这是品味领域中最古老、也最棘手的问题：某个人眼中的粗俗，可能是另一个人眼里的趣味盎然；某个人眼中的丑陋，在另一个人看来却是：“哇，这是一辆超酷的赛博朋克卡车！”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: how do you distinguished？ i know this is like the oldest hardest question in taste， but one woman's volgarity is another woman's interesting。 ugly is another persons。 oh， that's a cool cyberpunk truck eh。
+
+</details>
+
+**Debbie Millman**: 我认为这在很大程度上与比例（proportion）有关，而比例又在很大程度上与数学相连。因此，有些事物之所以具有诗意的美感，正是因为它们符合比例。通常而言，即使完全不懂其中的数学原理，人类也能本能地评估出某样东西是否失衡或失调——无论是一栋建筑物、一辆汽车，还是一只咖啡马克杯。
+
+如果某样东西失去了比例，它就会给人带来一种混乱不安的失调感。这可以是手提包或滑板的比例失调，也可以是任何物品的比例失调。归根结底，事物会让我们产生情感感受。一切事物都会引发我们的感知，而当某种东西比例失调时，它便改变了环绕在我们周围的环境基因。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: i think a lot of it has to do with proportion， and a lot of proportion has to do with mathematics。 and so there are things that are just more lyrically beautiful because they are in proportion。 not generally speaking， humans can assess when something is out of proportion and genering anything about the math of it， whwhether be a builbuilding or car， or uh coffee mug。 and so if something is out of proportion， it will， if a is a sense of discompopulation， and it could be the discproportion of a handbag of capeboard。 it could be the didispproportion of anything， but things essentially make us feel things。 everything makes us feel something， and when something is out of proportion and changes the dna around us。
+
+</details>
+
+**Ezra Klein**: 我对我们感知周围环境或物品带给自身情绪的方式非常感兴趣。我觉得几年前近藤麻理惠（Marie Kondo）掀起的那股整理狂潮，很大程度上就是因为这一点：她的过人之处在于，她为人们提供了一种去敏锐觉察身边物品给自己带来何种感受的实践方式。
+
+以往人们只是被动地被告知去收拾房间，而她提供的是一种途径，让你能够真正去倾听和体会环境带给你的情绪。但是在这里，我认为你也会遇到另一个问题：很多我们今天认为美丽的事物，在它们最初被建造或设计出来的时候，其实也是比例失调的、张扬刺眼的、充满攻击性的，因此它们早期的评价往往非常负面。这样一来，就引出了一个耐人寻味的问题：你真的能在当下完全信任自己此刻的感受吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: i'm very interested in the way that we notice what the environment around us or the objects around us are making us feel。 i was so a big reason you had that mariranando craze。 some youours back。 was it？ there was a real genius to her， giving people a pracce ce ah of noticing what their objects made them feel。 exactly。 people had previously told people to tidy up what she offered was a way to say you can tune in to the way your environment is making you feel， but but there are too， i think you run to this question of much that we now consider beautiful when it was built when it was designed， it was out of proportion。 it was brush， it was aggressive。 and so the early reviews of it were very negative。 so then you get in as interesting question of， can you trust what you're feeling in the moment，
+
+</details>
+
+### 从洞穴壁画到品牌部落：人类符号化的进化史
+
+**Debbie Millman**: 光是你的这句话里，就有太多值得深入探讨的内容了。我想先回到你前面提到的第一部分，也就是物品是如何让我们产生感受的。我们是社会性哺乳动物，我们在社会化过程中体验周围世界的所有方式，都是建立在身边的物品和事物之上的。
+
+这可以一路追溯到五万年前，当时我们开始创造符号来标示我们的现实。我们最早画下的痕迹，就是我们在身边看到的事物，于是我们开始在洞穴的岩壁上作画。在那之后，我们不断进化并融入部落。当我们进入部落生活时，我们做的第一件事是什么？我们用符号来表明我们的归属和信仰：“我信奉这种宗教，你信奉那种宗教。”我们通过使用这种符号来传递和表征这一身份。这对身处同一部落的人和部落之外的人具有同等重要的意义：它带来了群体的人数优势，带来了安全感。因为大家拥有共同的信念，我们才不会互相残杀。这使得我们能够在群体中蓬勃发展，建立起更庞大、更紧密的社会联系。
+
+这就是我们面对符号时的心理感受机制。从史前时代起，我们就经过训练与社会化，习惯了通过符号、物品，以及如今的品牌来感知世界。你穿某种特定款式的运动鞋，说明你属于耐克（Nike）部落；你背某款手提包，向外界传达的信息则是你是一位在罗迪欧大道（Rodeo Drive）购物的富有女性。
+
+如今在整形手术上，我们甚至也在做着同样的事情，这对我来说格外耐人寻味。我们可以通过重塑鼻子、丰唇或做臀部塑形，让它们呈现出某种特定的外观，以此向他人表明这种审美价值：“我认为好看的东西，对我和你来说都是好看的；你知道我知道你知道我知道我们都理解这一点，而且我们看起来都很棒。”与此同时，对于那些不喜欢丰臀或某种特定唇线的人来说，它也发挥着相同的识别与区隔作用。因此，我认为我们必须回顾人类进化的轨迹，因为外貌、体型、时尚与发型，所有这些都与我们所处时代的政治、宗教以及社会化进程紧密相连。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: there's so much to talk about just from messenence。 i want to go back to the first part of what you were saying about how things make us feel。 we are social mammals and every single way in which we've been socialized to experience the world around us is based on objects and things around us。 and that goes all the way back that goes back fifty thousand years ago， when we started to create symbols to designate our reality。 so the very first marks was what we were seeing around us。 so we started to draw on the walls of caves。 after that， we started to advance and move into tribes。 what was the first thing we did when we moved into tribes， we designated where we belonged and what we believed in with a symbol， i belong to this religion。 you belong to that religion。 we signify and telegraph that through the use of this symbol， and it means as much for the people that are part of the same tribe as those that aren't and that safety in numbers that's security。 and we all believe the same thing。 so we're not going to a go off and kill each other because we all believe in this。 it allowed us to prosper and create bigger， stronger social ties when we're in those groups。 so that's the whole sort of how do we feel around symbols。 weve been trained socialized to experience the world through symbols， objects and now brands since priostorc times。 so you're wearing a certain typof of sneaker。 you're part of a niki tribe， a certain handbag， and that is telegraphing that you're a wealthy woman who bought her handbag on rodae drive。 we're even doing that。 now this is really really interesting to me with plastic surgery。 so we can reconstruct a nose or reconstruct lips or reconstruct our buts to look a certain way to signify the others that those values， that， that thing we think looks good， looks good to me and to you。 and you know that i know that you know that i know that we both get that and we both look good。 now it also does the same thing for the people that don't like a big bud or um a certain type of lineire。 so i think that we have to look back at the trajectory of our evolution because looks size fashion here， all of those things have so much to do with the politics of our time with religion and with socialization for you，
+
+</details>
+
+### 好设计让世界更美好，坏设计是不道德的灾难
+
+**Ezra Klein**: 对你而言，什么是好的设计，什么又是坏的设计？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: what is good design and what is bad design？
+
+</details>
+
+**Debbie Millman**: 对我来说，好的设计能让我在做任何事情、使用任何物品时感觉更好。这完全是我个人的主观感受。如果要给出我个人对好设计的明确定义，那就是它能让我感到身心舒畅；而从宏观世界的角度来看，我认为好的设计能让整个世界变得更美好——它优化了人们所获得的体验，改善了人们穿行于这个世界的方式，让一切变得轻松从容，充满尊重。
+
+前几天我来纽约的时候，在洛杉矶国际机场（LAX）排队安检。那是一条曲折混乱的长队，三队人马全都挤在一起，等着把行李物品放进安检塑料筐里，然后再推上传送带。这三排队伍的位置安排毫无逻辑可循。即便你排在前面，也不意味着你能先安检，完全取决于谁先抢到位置，现场还有工作人员在机械地调度。人们不得不拼命争分夺秒地把物品硬塞进安检箱推进去。
+
+因为知道今天会来录这期节目，我当时忍不住问工作人员：“这到底是谁设计的？”这是一个在全球各大机场耗资数亿美元普及的系统，却是我亲眼见过的最糟糕的设计方案：旅客们为了把自己的收纳筐塞进传送带队列而推搡争抢，为了争夺下一个过检顺位而焦头烂额。整个系统简直就是一场设计灾难。在我看来，不尊重人的设计、贪婪驱动的设计、违背道德的设计，统统都是糟糕的设计。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: good design makes me feel better about whatever i'm doing and whatever i'm doing it with。 it's entirely subjective for me。 what what my specific definition of good design is for me， it makes me feel better for the world。 i think good design makes the world better。 the experiences that people have the way in which they're able to move through the world。 it's easy。 it's respectful。 when i was coming to york。 KI was in LX， and i was in a sneaky line where i had to scan behind a bunch of people in three lines that were all waiting to put their things in a container to then push onto a line。 there's no rimary reason about where the three are。 so even if you're in that position， you're not first， it's whoever got there first， then somebody's managing it。 and then you have to sort of really fast pusher things through so that it gets through。 and i said to the guy， as i knew i was coming here today， i said， who design this？ this was this is a billion dollar system that's in airports all over the world， and it is the worst design system i have ever witnessed where people are fighting to get their containers into the into into the queue。 they're fighting to go next there。 the whole thing was just a design disaster。 i think design that's disrespectful。 i think design that is greedy。 i think that design that is immoral is bad design。
+
+</details>
+
+### “丑陋”与“乏味”：审美批评的两条分叉路径
+
+**Ezra Klein**: 这段时间以来，在阅读和思考这些文章的过程中，我一直在琢磨一件事。我和我的团队一直想围绕这个话题做一期节目，因为“世界是否正在变得越来越丑陋”作为一个讨论主题，其实同时包含了两个截然不同的批评维度。
+
+其一，就是你刚才所提出的批评：世界确实正在变得越来越丑陋。这种丑陋让人的内心产生感受，但那种感受是非常糟糕的；用情感心理学的术语来说，它带给人一种负面的情绪基调（negative feeling tone）。
+
+而另一个维度则是：世界并没有走向我所谓的丑陋——尽管大家经常用“丑”这个词来形容——而是变得越来越平庸沉闷（drab）。世界变得越来越千篇一律、枯燥无味，它更频繁地让人感到索然无味、麻木不仁。我认为在这方面的奠基之作，是 2023 年发表在《n+1》杂志上的一篇文章，他们在文中专门探讨了这种“单调崇高”（drab sublime）——这种无处不在的寡淡……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: one thing i've thinking about， as i've been， you know， reading and thinking about these essaover， you know， some period time， my teteand i've wanted to do a show on this for little bit is， is the world getting uger as a johra。 it has shave two different lines of critictic happening in it at once。 one is the critics of you're offering here， which is it is getting uglar it。 the world makes you feel something。 and the thing it makes you feel bad。 it's a negative feeling tone in the woodsh terminology。 and the other is that the world is getting not what i've called ugly， or will people often use that word draber。 it is getting more drive。 it is making you feel nothing more often。 so one of the i think foundation ousis here is an emplst one to say， from twenty twenty three。 and in that， they talk about the dabs subme， the drab，
+
+</details>
+
+<!-- chunk 2/7 -->
+
+### 平庸同质与 Cybertruck 的视觉冲击
+
+**Speaker 0**：这种审美将平板包装家具、家用电器、市政基础设施和商业平面设计串联在一起，汇成一片物品的海洋。它们如此千篇一律、缺乏深思，以至于被其淹没的世界常常让人感觉像是一个数字渲染图。我有点喜欢 Cybertruck 的一个原因正在于此：我并不觉得它美丽，它甚至会让人感觉不太舒服，但相比路上那么多其他车辆，它至少让我产生了一种情绪。它反映了某人的愿景，我相信在某个地方，有人真觉得它是美丽的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Sublime unites flat pack furniture and home electronics, municipal infrastructure, commercial graphic design, an ocean of stuff. So homogeneous and underthought that the world it has inundated can feel like a digital rendering. One reason I sort of like the Cybertruck is, I don't find it beautiful, what it makes me feel is not good, but it makes me feel something compared to so much else on the road right now. It reflects somebody's vision. I believe somebody somewhere found it beautiful.
+
+</details>
+
+**Speaker 2**：确实有人买它。所以我觉得很大程度上这取决于品味，还有事物与周围其他事物的契合程度。关于 Cybertruck 的问题在于，它侵入了既有的街道景观。也许这背后有一种策略，但我并不完全清楚那究竟是什么策略。是为了博取眼球吗？还是为了吓唬人、展现威慑力？这背后的意图到底是什么？当我思考世界在其纯粹形式下变得愈发丑陋时，我不禁在想：世界变得更丑，是因为我们做出了糟糕的设计决策？还是因为除了我们自己，我们根本不在乎任何其他人的看法？世界在变丑，是因为我们在以丑陋的方式行事吗？一旦你开始看到人们表现出丑恶的行为，这种风气不可避免地下沉并渗透到每个人身上。这改变了人们的行为规范，因为大家会觉得：“既然这里能容忍这种事发生，既然有人能这么做而不受惩罚，那我为什么不可以呢？”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: Yeah, there are people that buy it. So I think a lot of it comes down to taste. And then also how well do things go with other things. The thing about the Cybertruck is that the Cybertruck infringes—is it the streetscape? Maybe there's a strategy behind it, but I'm not entirely sure what that strategy is. Is it to command attention? Is it to intimidate? What is the intention of this? And when I think about the world getting uglier in its purest form, is the world getting uglier because we're making bad design decisions? Or is the world getting uglier because we don't care about what anybody else thinks but ourselves? And is the world getting ugly because we are behaving in ugly ways? Once you start to see people behaving in ugly ways, it's inevitable that that is going to trickle down into everybody. It alters behavior because we see if this could happen here, somebody can get away with doing this, well, then why can't I do it?
+
+</details>
+
+---
+
+### 麻木无感与设计意图的缺失
+
+**Speaker 0**：我想把自己的立场讲清楚，因为我认为这篇随笔所主张的观点中，关于……我非常赞同的一点是：这确实不是一件令人愉快的事。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Well, I want to really position myself here because I think this essay argues for—I really could agree that it's not nice.
+
+</details>
+
+**Speaker 2**：我认为你表明立场很重要。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: But I think that's important for you to do.
+
+</details>
+
+**Speaker 0**：这里存在一种趋势，对吧？我觉得你可以把这个问题放在两个维度上来考量：一个维度是某件事物是否让你产生感觉、能引发多强烈的情绪；另一个维度则是这种感觉究竟是好是坏。但如今包围我们的许多事物——比如那么多公寓大楼——我并不觉得它们丑陋，我只是觉得它们无害、无伤大雅，我内心毫无波澜。当我看它们的时候，它们对我来说完全是哑然沉默的、毫无言语的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: There is a trend here, right? So I feel like you could branch into two axes here. There's whether something makes you feel anything at all, how much it makes you feel; then there's whether or not that feeling is good or bad. But there's so much that surrounds us now, so many apartment buildings—I don't find them ugly. What I find is inoffensive, I feel nothing. When I look at them, they are mute to me.
+
+</details>
+
+**Speaker 2**：很多汽车也是这样，它们对我而言是哑然无声的。当某件事物对我来说没有任何真正的意图，当它在建造时缺乏任何目标感、策略感，或者缺乏对周围环境的尊重时，我认为这比丑陋更糟糕，甚至可能比庸俗更糟糕。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: So many cars, they're mute to me. When something doesn't have any real intention to me, when it's built without any sense of purpose or strategy or respect to surroundings, and that I think is worse than ugly. And maybe even worse than vulgar.
+
+</details>
+
+---
+
+### 注意力经济：算法趋同与极致张扬的双重夹击
+
+**Speaker 0**：我认为我们经历了一段漫长的时期，周围世界的绝大部分事物——从时尚，到公寓的设计方式，到汽车的设计方式，再到我们所居住场所的设计——尽管可以用很多不同的方式去描述，但总体上导致了一种“扁平化”。然而我现在看到的，是对这种扁平化的一种反弹。我想在你的随笔里，你谈到了这种走向庸俗、走向浮夸张扬风格的转变。你可以想想唐纳德·特朗普把椭圆形办公室装潢得金碧辉煌；你可以想想 Z 世代那种极具眼球效应、夺人眼球的穿搭风格；你还可以想想 Cybertruck，或者最近在其他地方经常被报道的极繁主义设计风潮。我们已经从……是的，极简变成了极繁。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: I think we have been in a period where a tremendous amount of the world around us, from the fashion to the way apartments are designed, to the way cars are designed, to the way places we stay are designed—which is described in many different ways—has led to a flattening. But now what I'm seeing is a reaction to that, right? You're talking about this. I think a little bit in your essay, you talk about this move towards a vulgarity, towards a bloviating style. You can think about Donald Trump redoing the Oval Office in gold. You can think about this very attention-grabbing fashion style in Gen Z. You can think about the Cybertruck, which has recently been covered in other places—a move towards more maximalist design. We've gone from minimalism to maximalism.
+
+</details>
+
+**Speaker 0**：还有极端装饰主义。你在文章里写得很对：我们生活在一个注意力经济中，而注意力会奖赏极端。一项设计越是因其瞬间可见、极易识别和极具社交分享性而受到奖励，人们就越容易忽视比例、目的以及生活在其中的人。但我觉得硬币的另一面是，我们确实深陷在注意力经济中，而且万物越是由算法投喂给我们，各地的东西感觉就越是一模一样。无论你走到哪里的咖啡馆——作家凯尔·查卡也指出过这一点——你走进纽约、洛杉矶、墨西哥城、布宜诺斯艾利斯或东京的咖啡馆，它们全都是同一种风格的咖啡馆，千篇一律。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Maximalist decor, and you write: living in an attention economy, attention rewards extremity; that the more design is awarded for being instantly visible, recognizable, and shareable, the easier it becomes to lose sight of proportion, purpose, and the people to live inside it. But I think maybe the other side of it is that we do live in an attention economy, and the more everything is served to us by algorithm, the more also things feel the same everywhere. You go to coffee shops—and there is a point the writer Kyle Chayka makes—you go to coffee shops in New York, and LA, and Mexico City, and Buenos Aires, and Tokyo, and they're all the same coffee shop.
+
+</details>
+
+**Speaker 2**：你甚至都无法分辨机场了。你走进一个机场，它可以是世界上任何一座城市的任何一个机场。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: You can't even differentiate airports anymore. You go into an airport, and it could be any airport in any city of the world.
+
+</details>
+
+**Speaker 0**：那么，你是如何看待这两种力量之间的关系和张力的呢？一方面是人们可能正在排斥的那种无处不在的雷同感；另一方面，这种排斥又催生了你所描述的那种庸俗、浮夸、博人眼球的回应方式。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: So how do you think about the relationship and tension between those two things—a feeling of sameness, maybe that people are rejecting, but then it's creating a move towards what you're describing as a kind of vulgar, bloviating answer to that?
+
+</details>
+
+---
+
+### 极简科技美学的二十五年霸权
+
+**Speaker 2**：如果你回看 iPod 最初的视觉语言——在“9·11”事件发生仅仅六周之后，苹果公司推出了第一代 iPod，并配有白色的耳塞式耳机。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: Well, I mean, if you look back to the original visual language of the iPod. Six weeks after 9/11, Apple introduced the first iPod, and that came with white earbuds.
+
+</details>
+
+**Speaker 0**：我都不知道那是“9·11”之后六周的事。这两件事在我的记忆中从来没有联系在一起过。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: I did not know that was six weeks after 9/11. Those are two events I had not put together in my head.
+
+</details>
+
+**Speaker 2**：是的。那是一段非常耐人寻味的时期。随着人们开始购买 iPod，他们可以通过戴着那副白色耳机来彰显自己的归属与身份认同。这在当时极其精妙，因为 iPod 本身并不是挂在衣服外面，而是放在口袋里的；但露在外面的白色耳机泄露了一切。那种感觉就像是在说：“我知道，你也知道，我们都是最早的拥趸和早期尝鲜者。”人们对此感到非常自豪。那种极致的极简主义，真正做到了在当时嘈杂混乱的声浪中脱颖而出。它具有一种货真价实的极简主义力量。
+
+到了二十多年后的今天，那仍然是科技界最主要的视觉语言，以至于其他所有的科技公司都沿用了这套相同的通用语汇。它们看起来都大同小异，因为公众对“卓越设计应该是什么样子”已经形成了一种固定的心理预期。所有科技公司都陷入了这种范式。直到最近，我认为三星才开始稍微远离这种视觉语言，因为他们有史以来第一次任命了一位设计主管毛罗·波尔奇尼，他正在带来一些改变。但在那之前，整整二十五年间，科技产品都呈现出一种极其特定的样貌，因为人人都想显得自己是最顶尖的。所以，随着苹果和三星掌舵人的更迭，看看这种美学会如何演变，将会是一件很有意思的事。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: Yeah. And there was a really interesting period of time where, as people began to acquire the iPod, they were able to showcase their allegiance with these white earbuds. It was actually really brilliant because the iPod wasn't sitting outside of your clothing, that was in your pocket, but the earbuds gave it away. And there was a sense of like: "I know that you know that we're the early adopters here." And people were very proud of that. Super-minimalist, to really be able to cut through all the cacophony of that time. There was still a real sense of minimalism to it. It's now what, 25 years later, and that is still primarily the language, so much so that every other tech company has taken on that same vernacular. So they all look a certain way because people have an expectation of what excellence should look like. All of the tech companies. Until recently, I think Samsung is beginning to move a little bit further away from that visual language because they brought in, for the first time ever, a president of design, Mauro Porcini. So he is making some of those changes. But up until then, we're talking about 25 years of tech looking a very specific way because everybody wanted to seem like the very best. And so it'll be interesting to see how that now changes with new people at the helm, both at Apple and at Samsung.
+
+</details>
+
+---
+
+### 设计的本质：人为制造的意义与差异化传达
+
+**Speaker 0**：在《纽约时报》的这篇文章中，你谈到设计是“对意图的深思熟虑的表达”。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: In The New York Times, you say that design is a "deliberate expression of intention."
+
+</details>
+
+**Speaker 2**：为了阐述这一点，我必须回到“什么是品牌”这个根本问题上。品牌是人为制造出来的意义。比方说，我们达成了一种共识，认为十字架代表着某种含义，你我都认同这一点……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: So in order to do that, I have to go back to what is a brand. A brand is manufactured meaning. We agree that a crucifix stands for something. You and I both agree—
+
+</details>
+
+**Speaker 0**：我们可能不会把基督教直接称为一个品牌。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: We might not agree on Christianity being a brand.
+
+</details>
+
+**Speaker 2**：这只是因为我想把它拆解到最基础的原型。这可以说是最早的品牌之一——尽管印度教和耆那教的符号远在此之前就存在了——但无论如何，让我们选用一个大家普遍熟悉的概念：它是人为赋予意义的。那个十字架原本可以代表任何事物，但我们达成共识，认为人们佩戴、祈祷并膜拜的这个十字架象征着某种特定含义。而设计，正是将这种差异化传达出来的媒介。在我看来，这就是设计的核心要义，也是设计的终极定义：它是通过对意义的制造，来实现对差异化的传达。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: Well, it's just because I want to bring it down to the most foundational. The very—one of the first brands, although Hindu and Jain were well before that. But in any case, let's just go with something that a lot of people know. It is manufactured meaning, that cross could stand for anything. We agree that this crucifix, this symbol that people wear and pray to and worship, signifies something. Design is what communicates that differentiation. That is what design is for me. That is the ultimate design definition: it is the communication of differentiation that is made through meaning manufacturing.
+
+</details>
+
+---
+
+### 意图的多元化：能效、安全与历史美感的消解
+
+**Speaker 0**：你将“意图”引申到品牌塑造的维度，这很有意思。我完全赞同你的观点：一种品牌、声誉或意义在广阔尺度上被构建的方式，确实是人为塑造出来的。但我认为这里还存在另一个值得深入探讨的机制：品牌固然需要彼此区分，它们必须追求差异化；而人们如今常常感到的沮丧，恰恰在于它们变得越来越缺乏差异了。
+
+我们普遍能感受到——尽管可以争论这是否绝对真实——三十或四十年前的汽车，在设计上比今天的汽车更具美感、更有趣味。我最近去参加了一个朋友的四十岁生日聚会，作为送给他的礼物，他的伴侣租了一辆经典的老式野马跑车让他开着兜风。人们普遍更喜欢老款野马而不是新款野马，这种审美偏好很常见。
+
+但如今之所以有如此多的汽车看起来极其相似，原因之一在于我们对空气动力学的认知有了极大的飞跃。我们掌握了物体高速穿过空间时的物理规律，这种确切认知是过去那个时代所不具备的。同时，我们通过燃油经济性法规、电动汽车补贴等政策标准对这些方面施加了硬性约束，迫使汽车厂商向特定的方向靠拢。因此，现在的汽车看起来都更加流线型，因为这对燃油效率和被动安全性至关重要。
+
+这里有各种各样不同的外部现实在起作用，它们合力将所有的产品推向了同一个形态。所以，当我读到你对设计的定义——“设计是对意图的深思熟虑的表达”时，我想到的一个关键点是：我们今天的“意图”，已经包含了除纯粹美丽或单一美学之外的许多其他目标。我们更清楚如何让建筑节能环保，我们更清楚如何确保它们在地震中屹立不倒。所有这些现实考量施加的硬性结构约束，在过去那些常因卓越美感而被我们赞颂的历史时期里，往往根本不需要被纳入优化考量。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: It's interesting to see you go on that question of intention directed at branding, because I do take your point that the way the brand, or the reputation, or meaning of something across great scales is constructed, is indeed constructed. But one of the things that I think is operating here—I'm curious to explore this a bit—is that brands want to differentiate from each other, they have to. And I think the frustration people have is often that they are under-differentiated now. So I think it is widely felt—we can argue that it's true, but it's widely felt—that cars were more beautiful and interesting in the way they were designed 30 or 40 years ago than they are today. A friend recently had a 40th birthday, and as a present for him, his partner rented him a classic car to ride around in, an old Mustang. And I think people like the old Mustangs more than they like the new Mustangs. I think that's common. But one reason so many cars are similar is that we've learned a lot about how to make them aerodynamic. We know things about how objects move through space at speed that we did not know to the same level of certainty then. And we've put pressure on those things through fuel regulation standards and electric vehicle incentives and other things to push car companies in a certain direction. And so now the cars look more streamlined, because that is very, very important for their fuel efficiency and their safety. And there are other different things that are operating here, and it pushes everything in a certain direction. And so one thing that I thought when I read your definition of design as a "deliberate expression of intention" is that the intentions we have now include many other things than just beauty or just aesthetics, right? We know more about how to make buildings energy efficient. We know more about how to make sure they don't fall down during earthquakes, and all these things that impose structures that in some of the periods in the past that we often lionize for their superior aesthetics, they didn't have to optimize for as much.
+
+</details>
+
+<!-- chunk 3/7 -->
+
+### 趋同的世界与审美价值的下一阶段
+
+**Speaker 0**: 人们如今在物质造物中感受到世界越来越趋同，其中一个关键原因其实就在于此：我们在优化那些切实发挥效用的东西，而这种优化本身会迫使设计走向同质化。我们对客观物理世界的运转规律认知得越多，就越会导致我们在设计产品时，跨越不同品牌之间呈现出高度一致的形态与结构。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: One reason the world is feeling a little bit more same to people in the construction of material objects is actually this: what we're optimizing on things that actually do forces the same. We know things about the world that have led us to design things in ways that are more consistent across different brands.
+
+</details>
+
+**Speaker 2**: 确实如此。我认为这只是一个时间问题。因为一旦我们开始完全掌握了这些基于人体工程学与实用效能的全新建造方式，下一步自然的跃升就是通过美感来最大化其价值。因为品牌必然会追求差异化——在最开始，我们聚焦于解决功能层面的需求，而随后，我们就会转向追求审美与情感向往。
+
+就在你刚才讲这段话的时候，我脑海里冒出了一个极有意思的例子，这或许恰如其分，也或许只是个逗趣的类比。我想到了我祖母年轻时穿束身内衣的年代，那种束身衣极其丑陋，但确实管用高效，然而也真的是丑到了极致。反观今天，我们有了 Spanx 和 Skims 这类品牌，它们在帮助女性修饰身形方面起着完全相同甚至更优异的效果，但在视觉呈现上却性感迷人得多，也漂亮得多。
+
+所以我认为这纯粹只是时间早晚的问题，因为我们身处的整个社会体系本就是如此运转的：我们总是在不断寻求改进，总是在渴望创造出比以往更加优质美好的事物。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: Yeah. And I think that's just a matter of time because once we begin to master these new ergonomic ways of building, the next natural step will be to maximize the value via beauty because you will want to differentiate. For us, we're looking at function and then we'll look at aspiration.
+
+And while you're talking, I had the funniest example come to mind which may or may not make sense. But I think back to the days when my grandmother used to wear girdles—really ugly, really efficient, really, really ugly. Now we have Spanx and Skims essentially doing the same or better work to help shape a woman, but far sexier and far more beautiful.
+
+So I think it's just a matter of time because that is the system we live in. We're always looking to improve and create something better than it was before.
+
+</details>
+
+### 无摩擦的现代生活与被抹去的灵魂
+
+**Speaker 0**: 我和团队制片人此前为这期节目做筹备沟通时，探讨过一个非常耐人寻味的话题。我那位制片人住在一栋年代相当久远的老房子里，那房子非常优美迷人，美到你站在屋外路过都会忍不住驻足拍照的程度。门前还矗立着一棵苍翠茂盛的大树。虽然我未曾亲眼拜访过她的宅邸，但我能真切地感受到，那栋居所拥有一种独特的灵魂与神韵。
+
+然而她同时也坦言，她内心深处其实非常羡慕那些住在现代大豪宅里的家庭。那些现代大平层或宏大别墅对育儿更加友好，空间格局规划得井井有条，拥有极其充裕的活动面积，还配备了全天候中央空调系统，针对各种实用起居目的都做了极致优化。
+
+我认为生活中的许多事物大抵都是如此。当你把生活中的所有阻力与摩擦都彻底剔除、让一切都变得无比顺滑顺手时，生活便开始不可避免地丧失了某种原初的特质与质感——哪怕其他客观条件完全平等，甚至哪怕现代产物的质量与做工在很多维度上其实更为优渥。
+
+我完全承认，而且我自身也真实体验过不少环境、居所、汽车乃至各色物件，在这些造物之中，创造者对美的构想与对功能的极致追求达成了浑然天成的完美融合。但我切实认为，我们眼下所探讨的这种无处不在的平庸沉闷与单调乏味，很大程度上恰恰源于人们正生活在一个被过度抛光、被过度熨平的世界里。在这个世界中，万事万物一方面运作得极其高效顺畅，而另一方面，却无法再让人感受到跃动的生命力与鲜活气息。它仿佛被全盘压平，沦为了一种毫无灵魂的冰冷表面。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: One of the interesting questions that came up when my producers and I were preparing for the episode was: my producer lives in a much older home, and it's really beautiful. It's like you'd be going to take a picture of it from the outside; it's got this beautiful tree. And in front of that, I felt something—I've never seen her home—it has soul to it.
+
+And also, she was saying that part of her really envies people who live in these, for her, McMansions that are better designed for kids, that have a lot more space in them in the way the space is used, that have central air, that have been optimized for other purposes.
+
+And I just think a lot of things in life are like that. I think that when you make life frictionless, it begins to lose something, even if everything else is equal, even if sometimes the quality of the product is higher.
+
+And so I grant completely that you can have—and I have experienced these places, homes, cars, everything, right?—you can have places where somebody's idea of beauty and the idea of function have come into a beautiful union. But I actually think some of the drabness that we're talking about comes from people living in a world that has been smoothed for them, such that it on the one hand works really well, and on the other hand, it doesn't feel alive to them. It just sort of has been flattened into a kind of soulless surface.
+
+</details>
+
+**Speaker 2**: 比如能举个具体的例子吗？我很想了解你心目中具体是指哪些事物。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: Like what? I'd love to know what you consider that to be.
+
+</details>
+
+### 实体触感与数字便利的张力
+
+**Speaker 0**: 我自己倒算不上黑胶唱片的狂热收藏家，但我身边有很多深陷其中的朋友。黑胶的吸引力，在很大程度上恰恰在于那种不可替代的物理肉身感与繁琐的手工流程——你必须从沙发上站起来，走到唱机前给它翻面；你必须屏息凝神，将唱针精准妥帖地落在凹槽上。相比于他们在流媒体 Spotify 里随手收藏的庞大歌单，这些黑胶藏品对他们而言承载的分量与意义要深厚得多。
+
+当然，很多人会解释说黑胶的声音听起来质感更加温润饱满。平心而论，它的音色的确更加温暖一些，但我并不认为这是核心起效的根源。真正发生作用的，是你与这个物品之间建立起了一种真实的、有物理反馈的触觉互动关系。
+
+又比如读书这件事。对比电子书阅读器……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: I'm not myself a vinyl collector, but I know many people who are, and it is in part like the physicality, the annoying [aspect of] you have to get up and turn it over. You have to put the needle correctly, and those record collections mean more to people than their Spotify libraries. And people will say how the sound is warmer. Sure, it's a little warmer. I don't think that's what's really doing the work. The work is that you end up in a physical tactile relationship. Whereas reading books... this Kindle...
+
+</details>
+
+**Speaker 2**: 没错，正是 Kindle。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: Exactly.
+
+</details>
+
+**Speaker 0**: 我在 Kindle 上积攒了极其庞大的数字书库，但与此同时我也收藏了满屋子的实体纸质书。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: I have a big Kindle library, and I have a big physical book library.
+
+</details>
+
+**Speaker 2**: 我也是如此。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: Same.
+
+</details>
+
+**Speaker 0**: 所以，在现实世界的某些维度里，客观物质对你提出了一些要求，而这些要求从某种角度来看或许并不那么顺手便捷。你看，我的 Kindle 始终随身携带，无论身处何地，我都能通过手机随时调阅所有高亮笔记和划线，这在功能上无疑是无比便利的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: So there are places where the fact of the world asks things of you that are, you know, perhaps a little bit less convenient. You know, the fact that my Kindle is always with me, and I can look up all my highlights on my phone—it is more convenient.
+
+</details>
+
+**Speaker 2**: 确实如此。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: Yeah.
+
+</details>
+
+**Speaker 0**: 可每当我发自内心地挚爱一本书时，我往往还是会特意跑去买一本纸质实体书。说实话，如今我整体上反而越来越倾向于回归纸质阅读，因为实实在在地捧着它、拥有它，对我而言具有不可替代的仪式感与精神意涵。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: And when I really love a book, often just go buy it physically. I mean, now actually move more to physical books in general, because having it is meaningful to me.
+
+</details>
+
+**Speaker 2**: 对，我也深有同感。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: Yeah.
+
+</details>
+
+**Speaker 0**: 哪怕单从阅读获取信息这一核心功能来看，实体书和电子书在客观层面上其实相差无几。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Even if its function is actually objectively somewhat the same.
+
+</details>
+
+**Speaker 2**: 是的，我百分之百赞同你的看法。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: Yeah, a one hundred percent agree.
+
+</details>
+
+**Speaker 0**: 那么，对于那些便捷性与审美个性之间产生剧烈冲突的领域，你又是如何看待的呢？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: So how do you think about the spaces though, where there's a conflict?
+
+</details>
+
+**Speaker 2**: 嗯，我认为我们当前身处一个巨大拉扯的时代，这其中最核心的张力就在于“便利性”与“个性表达”之间的较量。为了追求便利，我们正在主动出让极其庞大的个性特质以及个人隐私。这是我们在现代生活中必须做出选择并主动承受的代价。
+
+我并不觉得兼收并蓄两者有什么不妥。但我确实认为，如果你走入极端的任何一端，无论是彻底倒向极致的数字便利，还是彻底退缩到迂腐的复古执念，你都会与生活中极大一部分丰沛的美好失之交臂。
+
+就我个人而言，我由衷喜爱能够随时随地随心阅读的感觉。把海量的划线标记汇总整理在一处，口袋里揣着几十部大部头著作，这种体验棒极了；但与此同时，我也无比迷恋那种整个人蜷缩在沙发里、手捧一本实体书、手指摩挲着纸张纹理、随心翻阅书中字句的惬意时光。
+
+我还非常怀念过去的唱片内页说明书，就是以前黑胶唱片和 CD 里附带的那些印刷精美、印有乐队幕后照片和歌词的小册子。我自己同样收藏了大量的黑胶唱片，这些东西未来肯定得跟我一起带走。我恐怕得需要一座巨大的陵墓，才能把我积攒的这堆别人根本不稀罕、但我哪怕到了弥留之际也绝舍不得扔掉的宝贝全部塞进去。
+
+所以归根结底，我认为这取决于你在这条光谱的两极之间究竟选择立足于何处。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: Well, I think we're living at a time where the big tension is between convenience and individuality, and we are giving up so much of our individuality and our privacy for convenience. That's something that we have to opt into. I don't know that there's anything wrong with having a bit of both. But I do think that perhaps, if you're extreme on one way or the other, you're really missing out on a great deal.
+
+I mean, I love being able to read anything anywhere, have all my highlights in one place and have forty-five books in my pocket. But I also love curling up with a book and feeling the pages and being able to look throughout. I also really miss liner notes, those little booklets that used to come with band photos. I mean, I also have a vinyl collection, so that will go with me somewhere. I need a really big tomb to put all that stuff with me that nobody else wants, but I can't get rid of even on my death bed.
+
+So I think it's a matter of where do you live on that continuum?
+
+</details>
+
+### 丑陋还是突兀：空调外机的现代隐喻
+
+**Speaker 0**: YouTube 频道 Kurzgesagt 曾做过一期关于“为什么现代事物正变得越来越丑陋”的视频。主讲人在视频中穿行于伦敦的街头巷尾，审视着在更早年代建造的路灯、铸铁下水道等公共市政设施，并将它们与当今新建造的设施进行比对。这并不是说新建造的设施存在质量问题，它们作为路灯照样能够正常亮灯照明，但它们看起来就是极其乏味暗沉。反观那些老式路灯的基座与柱身，甚至还铸造雕刻着形态奇巧的怪鱼纹饰，极具匠心；而现代设施则纯粹是赤裸裸的功能主义体现。
+
+我看那个视频时，里面有一段专门探讨空调外机的段落，令我印象无比深刻。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: So there's this YouTube video by Kurzgesagt about why things are getting uglier, and he's walking through London looking at, you know, lampposts and sewer systems built in an earlier era, and comparing it to what's being built now. And it's not that the new ones are bad. They work as lampposts, but they are drab. The old ones have these sort of weird fish on them. And the new ones, that is very functional. And I was watching it, and this part on it, air conditioning units...
+
+</details>
+
+**Speaker 2**: 天哪，是的，那一幕太典型了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: Oh, my god, yeah.
+
+</details>
+
+**Speaker 0**: 它的论述直击痛点，因为我觉得它极其尖锐地触碰到了我们今天所讨论的核心命题。你看视频中对空调外机的描述：
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Struck me so, yes, because I think it maybe gets at some of the things we're talking about. Look at these air conditioning units:
+
+</details>
+
+**Speaker 3**: “我认为相比于智能手机或社交网络，空调外机更能揭示当今现代世界的本质。这是一项堪称奇迹的伟大发明技术，它彻底重塑了全球格局，切实改善了数十亿人的生存境遇。正因如此，我们几乎毫无节制地把它们钉在建筑物的每一个角落。然而，它却极其丑陋。它的丑陋之处在于，它完全没有展现出任何一丝‘平凡寻常之物亦可兼具美感’的信念与追求。但比单纯的丑陋更恶劣的是，它令人窒息的枯燥无趣。
+
+要在制造它时注入更多美感，耗费心思、时间、关怀与注意力，其实并不会增加多少生产成本。可是在当今时代，人们似乎宁可去赚取更多利润，也不愿多花心思把东西造得赏心悦目。或许在某种逻辑下，这也算情有可原吧。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 3**: "I think it says more about the modern world than anything else, more than phones or social media. It's a miraculous technology, one that has changed the world and improved billions of lives. Hence, we stick them literally everywhere. But it's ugly. Ugly because it doesn't seem to express any belief in the idea that ordinary things can also be beautiful. But worse than ugly: it's boring.
+
+Now it would not be a bit more expensive to make it pretty, to take your time and care and attention. But these days, it seems that we would rather make more money than make things pretty. And maybe that's okay."
+
+</details>
+
+**Speaker 2**: 首先，我想借此机会对詹姆斯·戴森（James Dyson）发出公开呼吁！我去年曾经专访过詹姆斯·戴森，在前期资料调研中我发现，戴森的所有颠覆性创新始终都围绕着空气动力学展开——吸尘器、吹风机等等莫不如此。放眼全球，还有谁比詹姆斯·戴森更有资格去重构并革新空调产品呢？他打造出了世界上最优雅美观的吸尘器，打造出了最惊艳华丽的吹风机。詹姆斯，全世界的美学空调都在期盼着你！
+
+不过，对于视频里的评价，我并不认为空调外机仅仅是“枯燥无趣”。我持不同看法。我认为它们是极其刺眼突兀、极具侵入性的。“无聊”往往会让人视而不见，但这些挂在墙面上的庞然大物却完全不同——它们直挺挺地怼在你的视野正前方，这是一种彻头彻尾的视觉侵犯，它们在对你的感官发起蛮横的攻击。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: First of all, this is an open call to James Dyson. I interviewed James Dyson last year, and one of the things that I learned in my research was James Dyson, all of his innovations have been with air—vacuum, hair dryers, etc. Who better to innovate an air conditioner than James Dyson? He's made the most beautiful vacuum cleaners, the most beautiful hair dryers. James, we need you!
+
+But I don't think that these are boring. I disagree. I think that they're obtrusive. Boring is sort of far away from being obtrusive. It's in your face, and it's assaulting. They assault you.
+
+</details>
+
+### 大众制造、阶级属性与被消解的“特质”
+
+**Speaker 0**: 关于这个观点，我一直在思考的一个深层症结，恰恰落脚在他最后所提及的“成本”问题上。我和你的感受完全一致，窗式空调外机之所以让人反感，很大程度就在于它们强烈的视觉侵入感。然而现实情况是，窗式空调通常往往只能安装在年代久远的老旧楼宇外墙上，或者是由那些无力负担昂贵中央空调系统改造费用的普通家庭所使用。
+
+市场上虽然也能买到外观相对体面或稍微规整一些的机型，但平心而论，我也从未见过哪一款空调外机称得上真正具备艺术美感。可成本在这一议题中起着决定性的制约作用。因此，这正是深层矛盾集中爆发的地方：你可以不惜重金把预算砸在工业设计与美学雕琢上，但如果你的产品定位是要面向极大规模的普罗大众进行工业化量产，那么最终的产品形态往往要么沦为索然无味的平庸，要么显得粗暴突兀。
+
+因此，在绝大多数工业制品身上，它的形式（美感）与它的功能（效用）之间天然存在着不可调和的拉扯。这也是为什么在围绕这个话题展开讨论时，我们经常会听到一种批判声音，认为我们当下探讨的美学焦虑带有一种精英主义的傲慢——因为在许多人看来，审美不过是一种锦上添花的非必需品。
+
+而且这也是有历史由来的：那些历经漫长岁月洗礼而得以保留至今的古代历史建筑，几乎从未包含过当年贫苦阶层栖身的贫民窟或逼仄廉租屋，那些粗制滥造的建筑早就被全部推倒铲平了；我们今天能在华盛顿乔治城等地看到的精美排屋，之所以能留存下来，无一例外是因为当年的建造者在其中倾注了极其高昂的金钱与心血。
+
+所以说，我们今天探讨的课题，究竟在多大程度上是因为我们将曾经被称之为“个性特质”与“建筑风貌”的东西推向了廉价的工业化量产？而一旦某种造物被纳入标准化流水线的大规模复制之中，它原本所拥有的独特风骨与精神气质，往往就会被稀释殆尽？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: One thing I thought about with that though, is where he ends on cost. I agree with you. One thing people dislike about window AC units is they are obtrusive, but window AC units tend to be put onto older buildings, or they tend to be for people who don't have the money to put in central air. You can get ones that are nicer and less nice looking. I haven't seen any that are truly beautiful, but cost actually matters here.
+
+And so this is a place where I think there often really is a tension where you can, you know, you can put money into the design of things. But if you need to produce things in a very mass way, they often look boring, or they can look very obtrusive. And there is a tension on many products at least between their form and their function.
+
+And so one critique you'll often hear of this conversation, the kind of conversation we're having, is it's a bit elitist. That beauty is a nice-to-have. There is a reason, you know, what kind of survives from old housing stock is usually not the tenement-built things where the poor lived. And those have largely been knocked down. And you get these nice row houses in Georgetown, because people put a lot more money into it.
+
+So how much of what we're talking about here is the mass production of what was once called character? And when you make things mass-produced, it tends to lose character?
+
+</details>
+
+**Speaker 2**: 我想再次强调，这在很大程度上依然取决于生产者的初心与意图。
+
+许多年前，塔吉特百货（Target）曾开创性地推出过一个非常出色的产品线，名为“人人皆享设计”（Design for All）。他们当时携手艾萨克·米兹拉希（Isaac Mizrahi）以及多位顶尖设计师展开跨界合作，打造出了一系列定位亲民的桥梁产品线。你在 Target 超市就能以极其实惠平价的预算买到这些商品，但它们依然注入了极大的用心、关怀与设计美学。
+
+我认为无印良品（Muji）也是另一个极具说服力的典范。你走进任何一家 Muji 门店，里面的每一件日用品都是经过精心构思与悉心打磨的，而它们的售价也绝非高不可攀。这证明世上永远存在着更优的替代解法。
+
+很多很多年前，大概至少十年前，我曾对一件事情抓狂不已：市面上所有的女士淋浴沐浴帽全都丑陋不堪，简直可以说是粗陋怪异到了极点。于是我特意到互联网上搜寻替代方案，最终发现了一家名为 SHHHOWER CAP 的初创品牌。他们研发出了一种形似经典缠头巾风格的优雅淋浴帽。而且毫无疑问……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: I think again, it really depends on intention. Years ago, Target had a wonderful line they launched called Design for All. And they worked with Isaac Mizrahi and really wonderful designers to create sort of bridge lines that you could buy at Target that would be less expensive, but would still be made with care.
+
+I think that Muji is also another company where you can go into a Muji and things are made with care. They're not overly expensive. There are alternatives.
+
+Years and years and years ago, probably at least ten years ago, I became obsessed with the fact that all shower caps were heinous. I mean, truly grotesque. And I went online to look for alternatives. And I found a company called SHHHOWER CAP, and they made these turban-style shower caps. And yes...
+
+</details>
+
+<!-- chunk 4/7 -->
+
+### 廉价易耗与物品中的尊严
+
+**Speaker 2**：它们确实比普通的三只装塑料浴帽稍微贵一点，但它们能用很久，而且非常漂亮。突然之间，你的头上不再是那个在浴室隔间里不知挂了多久、看起来像某种霉菌一样的东西，而是换成了一个制作精良、设计优美的小物件。它算不上昂贵，却明确传递出一种信号：有人认为你在那种沐浴体验中理应获得更多尊重，而那些渴望得到这种尊重的人，也终于找到了它们。所以你是能够发现这些东西的。它们虽然不是随处可见，但只要你用心去找，就能找得到。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: They are a little bit more expensive than your sort of standard three-pack plastic shower caps, but they last forever and they're gorgeous. And suddenly you go from having this piece of sort of fungus on your head that's been sitting in your stall for however long to having this beautifully crafted, beautifully designed object that is not that expensive, but signifies that somebody thought that you deserve more respect in that experience, and somebody that wanted more respect in that experience found them. So you are able to find these things. They're not everywhere, but you do have to look.
+
+</details>
+
+**Speaker 0**：这一点非常有意思，因为关于为什么如今许多东西看起来和感觉起来都变糟了，你有时其实会听到一种完全相反的解释：那就是事物变得太便宜了，以至于我们不再对它们倾注那么多心力。在准备这次对话时，我的团队还在讨论，过去代代相传的家具曾是多么重要的事情，人们会继承祖父母的卧室家具。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: There's something interesting about that because you actually sometimes get this completely opposite explanation for why many things feel and look worse today, which is that they have become cheap, so we don't attend to them as much. We were talking in my team as we were getting ready for this about how it used to be handed down. Furniture was a really important thing; people got their grandparents' bedroom sets.
+
+</details>
+
+**Speaker 2**：对，我祖母的餐桌就是这样。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: Yeah, my grandmother's dining room table.
+
+</details>
+
+**Speaker 0**：现在很多家庭都遇到过这样的情况：老一辈人去世了，或者正在大屋换小屋进行断舍离，他们想把手里拥有的、如此珍视的、对自己意义非凡的物品传给孩子们，但孩子们却根本不想要。他们不想要的原因之一，就是我们把家具造得便宜太多了。因此，对于一个家庭来说，买一套卧室家具或买一张餐桌，不再是一笔惊人的重大投资。你可以直接去宜家买一套，而且你完全不需要在上面花太多心思，因为这可能只是你起步阶段的过渡居所，过个几年你大概就会换掉它。所以说来也奇怪，过去只有物资稀缺、人们必须全神贯注对待手头之物时，那种你倾注在浴帽上的用心，原本是更频繁地发生在各种日用品上的。可是，一旦人们清楚一件东西自己只会用上几年，一旦他们知道计划性淘汰已经为他们设计好了，他们可能就不会那样珍视它了。因为你在潜意识深处明白，说到底，它不过是一笔临时投资，不过是家里的一个匆匆过客，所以它不需要承载和表达太多关于你自己的东西。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: And now I think many families have had the issue where the elders pass on or downsize their home, and they want to give what they have, what they care about so much, what is so important to them down to the children, and the children don't want it. And one reason they don't want it is that we have made furniture much cheaper. And so it's not as incredible an investment for a family to get a bedroom set or to get a dining room set. You get it from IKEA, and you don't necessarily have to think about it that much, because maybe this is your starter home and in a couple of years you'll probably change it. And so in a weird way, when there was scarcity and people had to attend to what they were getting, they sort of gave that attention you were giving to that shower cap more often. But when people know that they're only going to have the thing for a few years, when they know that its obsolescence is planned for them, then maybe they don't treat it that way, because in the back of your mind, it's a temporary investment. It's a temporary visitor in my home, so it doesn't need to express as much about me.
+
+</details>
+
+### 代际传承与器物中的记忆
+
+**Speaker 1**：我真替抱有这种想法的人感到惋惜，因为为什么不让你身边的每一件物品都以某种方式展现关于你自己的特质呢？这完全不需要取决于一件东西值多少钱。而且就家族代代相传的家具而言，我总觉得里面是寄宿着灵魂的。六十年前的某一刻，我的祖母就曾围坐在这张桌旁。后来由于种种原因，我不再需要那张桌子了——我妻子看中了一张不同的桌子，但我实在舍不得扔掉它。于是我把它一直存放在地下室里。正好我侄女现在需要一张餐桌，我正在把它打包运给她。现在，她即将拥有她曾祖母用过的餐桌了。在我看来，这简直充满魔力；这本身就是活着的意义所在——正是这种你可以把承载着家族历史的物件代代相传的连续性。一张餐桌，曾经汇聚了家人，大家在那里吃饭、流泪、争吵，在那里经历人生的种种起伏，它里面沉淀了太多的意义。这就是我对各种器物最为珍视的地方。我多少算是个喜欢囤东西的人，我妻子肯定会斩钉截铁地说我就是个仓鼠症患者，但物品是有情感的。它们浸润着温情、情绪与记忆。它们是生命活过的证据，对我而言，这比脑海中几乎任何事情都更为重要。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: I feel bad for people that feel that way, because why not have everything around you express something about you in some way? That doesn't necessarily need to be how much something costs. But I also feel, in the case of handed-down family furniture, there's a soul that's embedded in that. At one point sixty years ago, my grandmother sat at that table. Now, I didn't need that table anymore because of a lot of different reasons—my wife wanted a different table, but I didn't want to get rid of it. And so I had it in my basement, and my niece needs a dining room table. So I am shipping her the table. And now she is going to have her great-grandmother's dining room table. To me, that is magic. To me, that is a reason for living: that kind of continuity where you can pass something down that has been in a family. That dining room table, where people gathered, where they ate, where they cried, where they fought, where they did all kinds of things—that has so much meaning embedded in it. And that's what I treasure most about objects. I tend to be a bit of a packrat—my wife would say I'm absolutely a packrat—but things have sentiment. They're embedded with sentimentality, with emotion, with memory. It's evidence of living. That to me is more important than almost anything in the back of my mind.
+
+</details>
+
+### 市场逻辑下的无摩擦与千篇一律
+
+**Speaker 0**：刚才在我们交谈的时候，我一直在思考我们生活中的不同结构是如何依据截然不同的逻辑来运转的。这里面存在着一种市场的逻辑，而市场偏爱的是无摩擦的逻辑。市场痛恨摩擦，市场喜欢一切都可以被标准化交易，喜欢事物在极远的距离之外依然能够被清晰辨识、轻松流通。刚才听到你说把这张桌子送给你的侄女是活着的意义所在，我真的很感动。能够参与到这种跨越先祖的连续性之中，所蕴含的意义早已远远超出了这张桌子挂在 eBay 上转卖所能换来的货币价值。我认为有一种批评观点是我相当认同的，那就是我们生活中正在发生的一件事：市场逻辑正在侵蚀越来越多的领域。正如我刚才所说，市场其实并不欢迎个性与独特性。拿住房来说吧，有一项统计数据非常明确地显示，现在越来越多的人把房子刷成灰色。关于华盛顿特区有一项专门的研究，显示灰色房屋的数量出现了急剧上升。这种现象被形容为“色彩大萧条”。而且大家其实很清楚背后的原因。2021年，全美售出的房屋中有近三分之一流向了根本没打算住进去的买家手里——房屋要么被当作纯粹的投资工具，要么买下来就是为了转手翻新倒卖。在2021年，这种比例令人震惊。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: While we've been talking, I've been thinking about how different structures in our life operate by different logics, and there's a logic of markets. And markets like a logic that is frictionless; markets hate friction. Markets like things to be tradeable. They like things to be legible across great distances. I was very moved a second ago when you said that giving this table to your niece, I think it was, is a reason for living—that participating in that ancestral continuity has a meaning far beyond the worth of the table if you put it up for sale on eBay or something. And I think a critique I kind of buy is that one thing just going on in life is that market logic is eating more and more and more and more. And markets don't, as I was saying, markets don't really want specificity. So thinking about homes, one thing that has been measured is that people are painting their homes gray more often. There's a study about this in DC, a sharp rise in the number of gray homes. This has been described as the color recession, and it's not unknown why it is. Nearly a third of American homes sold in 2021 went to people who had no intention of living in them. The home is an investment vehicle, or the homes were going to be flipped in 2021. In 2021. Wow.
+
+</details>
+
+**Speaker 0**：所以，如果你看待房子的角度，不再把它当作一个你打算安居五十年的家园，而是把它视作一个你要转手倒卖给别人、那个人可能还要再转卖给下一个人的标的；或者因为你自己的流动性越来越高，你预计自己在华盛顿特区的这份工作只干个四五年，之后就要搬回北卡罗来纳州的阿什维尔之类的城市，那么让这个家走向鲜明的个性化——比如把它漆成黄色和绿色，仅仅因为你碰巧是一个痴迷黄绿配色的特立独行之人——对于房屋长期的转售价值而言，显然是极为不利的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: And so if you're seeing your home not as a place you will live for fifty years, but either as a place you're trying to sell to someone else, and then maybe they sell to somebody after that and sell to somebody after that; or this is a place you're only going to live for a few years because you yourself are more mobile, and you only expect to be in this job in Washington, DC, for, you know, four or five years, then you're going to move back to Asheville, North Carolina, or something—moving that home towards particularity, right, painting it yellow and green because you're an idiosyncratic person who loves yellow and green, is not good for the long-term resale value of the home.
+
+</details>
+
+**Speaker 2**：确实如此。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: Absolutely.
+
+</details>
+
+**Speaker 0**：不仅如此，我成长的地方有着极其严苛的业主委员会制度，那里严禁将房屋粉刷成各种五花八门的颜色，因为这可能会影响到周边房屋的转售价值。这甚至与我个人的审美无关，对吧？它本质上是关于每个人都希望确保自己的房产是一项能够顺畅交易的有效资产。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: And even more than that, I mean, I grew up in a place with very strong homeowners associations where you were not allowed to paint your home a lot of different colors, because it might change the resale value of the homes around you. It wasn't even about you, right? It was about everybody wanting to make sure their home was an effectively tradeable asset.
+
+</details>
+
+**Speaker 2**：是的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: Yeah.
+
+</details>
+
+**Speaker 0**：因此，这种市场逻辑能够侵染越来越多的领域，这也正是走向同质化、千篇一律大趋势的一部分。我很好奇，这种现象在设计层面究竟是如何具体体现的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: And so there's this market logic that can infect more and more, and that is, you know, again, part of the trend towards sameness. I'm curious how that specifically relates to design.
+
+</details>
+
+### 色彩消退与评判的目光
+
+**Speaker 1**：在很多方面，这又把我们带回了最初的那个话题：有人把原来的房子推平重建，盖了一座庞大无朋的巨宅，以至于侵入了周围邻居的空气和视野空间。因为这恰恰就是当下正在被全面管控的东西，也正因如此，它才显得如此丑陋。令我感到难过的是，如今有太多的东西被稀释、冲淡了，只为了抹平那些可能显得奇怪、但实则极其美丽、或是极具个人特质的痕迹。看看名人去世后举行的那些拍卖会吧，大家争相竞购他们的书桌或是帽子——比如琼·狄迪恩过世后，她的家人举办了拍卖会，她生前的所有衣物都被拿出来拍卖，人们疯狂竞相抢购她那些标志性的宽檐草帽。所以我认为这里面存在着一件非常耐人寻味的事情，也是我现在正打算深入研究的课题：我们内心依然渴望以极具表现力的方式来展现自我差异，但这种渴望却被迫局限在极其狭窄的参数范围之内。如果大环境一直在敦促我们压低调色盘的纯度、把一切都灰度化，这对于我们究竟能在多大程度上表达色彩意味着什么？而当我们在这方面选择退缩与克制时，又会对我们的创造力造成怎样的压抑？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Well, in many ways, it sort of brings us back to the whole notion of somebody razing their house and creating a house that's so big that it infiltrates into that sort of air and space of others, because that's exactly what is being controlled here, and that's why it's ugly. Now, I'm sad that there's so much that is being diluted now to eliminate some of what is strange, but also really beautiful, or also really specific to a person. And look at all the auctions that go on when celebrities die, where somebody wants their desk or their hat. Joan Didion had an auction, her family had an auction, and all her clothes went on auction, and people were clamoring for her big boho hats. So I think that there's this really interesting thing that I want to do some research now on, in that we still want these really expressive ways of differentiating ourselves, but within a certain parameter. So if we are being urged to gray down our color palettes, what does that mean about how much color we can actually express? And when we hold back from that, what does that do to our creativity?
+
+</details>
+
+**Speaker 0**：这又会对你在这个世界上行事与生活的方式产生什么影响，或者折射出怎样的态度？回到我们之前讨论的那个维度：你到底有没有感受到情绪，以及你感受到了什么？我有一个朋友，她的穿衣打扮完全是为了让周围的人产生情绪反应——快乐也好，奇思妙想也好。她的穿着非常张扬显眼，你和她一起走在街上，大家都会侧目而视，而她本身就是故意要吸引大家的注意。而我的穿衣风格，特别是在我们的播客转为视频录制后给我带来了巨大的压力，基本上就是为了避免引起任何人的注意。我不想让你去琢磨我的穿着，我只希望你觉得看起来得体顺眼，然后就别再多想一秒钟，对吧？这里面其实存在这样一个维度：你是否做好了心理准备，愿意让别人对你形成鲜明的看法与评价？无论是你的房子长什么样、你的着装风格如何、房间如何布置，你是否能够坦然面对有些人可能会极度喜欢、而另一些人可能会极为讨厌的事实？时尚与设计本身是可以极具争议性和两极分化的。然而，在某种文化层面上，我们的社会对于面对这种分歧变得越来越感到不安，对吧？身处其中的人们不再愿意将自己暴露在外部的审视与评判之下。他们只希望自己被看作是合格且无可挑剔的，然后让注视的目光迅速从自己身上移开。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: And what does it do to, or what does it reflect about the way you want to move through the world? So going back to our earlier axis above, there's something about: do you feel anything at all versus what do you feel? I have a friend who, the way she dresses is meant to make other people feel things—joy, whimsy. But it's loud. Like, you walk around with her and people are noticing, and she is trying to get them to notice. And the way I dress—and when we moved this podcast to video, it caused me a lot of stress—it's sort of been to not have people notice. I don't want you to be thinking about how I look. I want you to think it looks nice and then not give it any further thought, right? And there is this dimension: where are you willing to have people have views about you, right? What your house looks like, what you're dressed like, how things are decorated. Are you recognizing that some people might love it and other people might hate it, right? That fashion can be polarizing and design can be polarizing. Whereas a society in some cultural way has become less comfortable with that, right? People in it do not want to expose themselves to judgment. They want to be looked at, judged as acceptable, and have the gaze fall off of them.
+
+</details>
+
+**Speaker 1**：我不知道那是否真的可能做得到。即使一个人明确表态反对引人注目或张扬外露，那种选择本身依然是一种选择，依然是一项经过深思熟虑的决定。多年前，我的父亲决定再也不穿拉夫·劳伦（Ralph Lauren）的 Polo 衫了，因为他不想成为品牌的活动广告牌。好吧，结果他做了什么呢？我说起这个都忍不住想笑：他在那个车标 Logo 上别了一枚国旗胸针。我当时就跟他说：“爸，你不过是用一个标志替换了另一个标志。现在你直接在你的 Polo 衫上代表整个美利坚合众国了。”他不想买新衣服，所以干脆就把 Logo 给盖住了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: I don't know if that's possible as well. And even when someone takes a stance against being obvious or loud, that choice is still a choice. It's still a deliberate decision. Years ago, my father decided that he was no longer going to wear Ralph Lauren polo shirts because he didn't want to be a walking billboard for the brand. Okay, what did he do? I can't even say this with a straight face: he put a flag pin over the logo. I'm like, "Dad, you just exchanged one logo for another. Now you are representing the United States on your polo shirt." He didn't want to buy a new one, so he replaced the logo.
+
+</details>
+
+<!-- chunk 5/7 -->
+
+### 服饰、标志与私人意义的公共化
+
+**Speaker 1**: 你把那个标志给遮住了，用一面国旗盖住了 Polo 的马球标志。你一看到那面旗帜，它就象征着某种意义。在过去的二十年里，我一直都有点害怕穿有颜色的衣服。我几乎总是穿黑色，总是如此；穿任何其他颜色都会让我觉得太刺眼、太招摇，感觉所有人都在盯着我看。黑色则是百搭的，一切都能混搭在一起。很多年前，我侄子第一次注意到这一点时，就对我说：“嘿，你为什么总是穿一身黑啊？”我回答说：“这样更轻松，我不需要费太多心思去挑，黑色和什么都很搭。”他听了说：“那真奇怪。”我说：“是的，确实有点奇怪，但对我来说很省事。”而且我还觉得，在播客领域，突然要转向视频出镜是一件很吓人的事情。但我确实认为，我们所做的每一个决定都是深思熟虑的。我们都在以某种方式展现自己，从而让自己以特定的形象被外界感知——衣着、物品、汽车、房子、球鞋以及手袋，都在某种程度上表达着这种自我认知。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: You put covered up the logo, the Polo logo with a flag. As soon as you see that flag, it signifies something. I have always, in the last twenty years or so, been kind of afraid of wearing color. I only always wear black, always, always. Anything else feels too fluorescent. I feel like I'm being looked at. Everything goes with everything; it blends. When my nephew first realized it many, many years ago, he said, "Hey, why do you always wear black?" I go, "It's just easier. I don't have to decide about too much. Everything goes with everything." He goes, "That's weird." "Yeah, it's a little bit weird, but it's easy for me." And I also feel like, in the podcast world, to have to then suddenly go into video is terrifying. But I do think that every decision we make is deliberate. We're revealing ourselves in ways that allow us to be perceived in a certain way, including clothing and objects and cars and houses and sneakers and handbags all express that in a way.
+
+</details>
+
+**Speaker 0**: 我不太确定人们是否真的把拉夫·劳伦（Ralph Lauren）这类品牌看得有那么深刻。这可能不是一个特别恰当的例子，但比如现在人们佩戴国旗胸针——尤其是在“9·11”之后的那个时期——它本身就是对自己立场的一种极其具体的声明。而在其他时代，这也许并不具备同等的意味，当时可能仅仅是关于美国国旗的普通表达；或者过去人们在家里挂罗斯福总统的画像，而在另一些社会里，家里挂毛泽东或斯大林的画像，其含义与在多元社会中的意义完全不同，它承载着非常不同的政治与情感重量。但这属于一种选择。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: I'm not sure people mean that much by Ralph Lauren and brands. It may not be a great example, but when people put a flag pin on now, like particularly in the post-9/11 world and era, it was a very, very, very specific kind of statement about yourself that maybe wouldn't have been at other times when it was just, you know, people about American flags. Or they had an FDR picture hanging in their house; or separately, what it meant to have a Mao picture or a Stalin picture in those societies meant something different than in societies where it was much more of a choice.
+
+</details>
+
+**Speaker 1**: 无论如何，你刚才谈到的是拉夫·劳伦与国旗胸针之间在情感共鸣层面的差异。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: You're talking about the sort of emotional resonance being different between Ralph Lauren and a flag pin.
+
+</details>
+
+**Speaker 0**: 不，我真正想表达的，或者我认为我在这里所指的，是品牌塑造的底层逻辑。我们已经习惯于将这种符号运作单纯理解为商业品牌运作，视其为大公司试图推行的营销手段；以至于即便某个符号源自完全非商业化的领域——一个原本被理解为代表个人深层信仰与精神追求的领域——我们如今也几乎把它们放在了同一个扁平的逻辑维度上去审视。比如在我小时候，我佩戴过一枚金质的“Chai”吊坠，那是一个犹太教的象征符号。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: No, what I'm talking about here, what I think I'm talking about here, is the logic of branding. We have become so used to thinking of it as branding, like the thing corporations are trying to do with it, that even when the symbol is coming out of a non-commercial sphere, a sphere that was understood to be representing very different things about somebody, we almost now sort of see them all on the same plane. You know, when I was a kid, I wore a gold Chai, which is a Jewish symbol.
+
+</details>
+
+**Speaker 1**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Yes.
+
+</details>
+
+**Speaker 0**: 当时我佩戴它的时候非常虔诚，在操场上甚至立志将来要成为一名拉比。那个符号在那时对我所代表的意义，与几年后我买下第一双耐克球鞋、或者为了融入其他同龄孩子而刻意穿戴打扮时所代表的意义，是截然不同的，对吧？当时我是在表达一种更加私密内省的信念。我的意思是，它当然也存在于公共视野中，但它的性质不同。我认为这两者有着本质区别。有趣的是，这虽然不是我预料中对话会走向的方向，但我认为这是一个非常值得深入探讨的话题——即原本应该保持界限的逻辑或认知世界的方式，如今却开始相互融合并趋同。我想借此深入探讨公共领域与私人领域的关系，而切入这个话题的一个好方式或许是：我们之前通邮件时，我请你举一个虽然外表丑陋、但在你看来却堪称优秀设计的例子，你提到了曾经在纽约地铁里随处可见的齐兹莫尔医生（Dr. Zizmor）的广告。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: And I wore that at a time when I was quite religious, to the extent that on the playground I wanted to be a rabbi. And what that meant to me wasn't what it meant to me some years later when I got my first Nike shoes or when I was trying to dress to fit in with other kids, right? Like I was expressing something that was more private. I mean, it was existing publicly too, but it wasn't the same. And I think these are different. And so it's fun because this is not where I thought our conversation was going to go, but I think it's a very interesting place for it to go, which is places where maybe logics or ways of accessing the world that should remain separate actually begin to converge. And I want to get into the public and private spheres here, and maybe a good way to do it is this: we sent an email asking you for an example of something ugly that you thought was good design, and you talked about these ads that used to be on the subway from Dr. Zizmor.
+
+</details>
+
+**Speaker 1**: 齐兹莫尔医生，没错。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Or is it Zizmor?
+
+</details>
+
+**Speaker 0**: 你能为正在收听音频的听众们描述一下那些广告具体是什么样子的吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: So can you describe them for, you know, listeners in audio here?
+
+</details>
+
+### 地铁广告的审美暴力与品牌熟悉感
+
+**Speaker 1**: 好的。齐兹莫尔医生是一位皮肤科医生。我不知道他现在是否还健在，但他肯定已经不再行医了。在很多很多年里，他基本上霸占了纽约市地铁系统里的车厢广告位。他的广告视觉风格极其艳俗，运用了俗气的黄绿色、橙色，以及大量的彩虹元素，上面写着“齐兹莫尔医生将修复你的面容”之类的标语，全都是关于如何彻底消除痤疮的宏大愿景。那些广告视觉上真的很丑陋，非常非常丑陋。然而随着时间的推移，它们展现出了惊人的一致性。它们日复一日、年复一年地重复使用同一套视觉语言：一道道彩虹，字间距极差的排版字体，糟糕透顶的垂直与水平文字拉伸，以及粗劣的人物轮廓剪影。但它们最终变得就像70年代那些疯狂的“疯狂埃迪”（Crazy Eddie）廉价广告一样——标榜着“他的价格简直疯了”——彻底融入并成为了纽约地铁文化织锦的一部分。正因如此，人们对它们变得无比熟悉，并在最终产生了真正的情感依恋与喜爱。
+
+这在品牌建设中是一条至关重要的法则：哪怕某样东西在美学上很丑陋，只要你在公众视野中反复看到它足够多次，它就会转变成一种你所熟知的标志，你会开始将它与某些体验联系起来——这种联系可能是好的感觉，也可能是坏的感觉，归根结底又回到了情感共鸣上。就齐兹莫尔医生而言，因为他看起来像个和蔼友善的人，没有任何丑闻，医术似乎也很靠谱，收费也相对低廉亲民，并且能够与普通大众真诚对话，所以人们真心地喜欢这些广告，他们深深爱着它们。现在人们对换标志之所以反应如此剧烈，往往不是因为新换上的标志本身好不好看，而是因为换标剥夺了我们最为熟悉的事物。而在当今这个让人感觉一切都如此脆弱不稳定的时代，哪怕只是剥夺了人们对一个果汁纸盒包装的熟悉感，都会让大家感到极度的不安与失落。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Yes, Dr. Zizmor was a dermatologist. He—I don't know if he's still alive, but he's definitely not in practice anymore. And for many, many, many years, he essentially took over the billboards in the New York City subway system and had really garish chartreuse, orange, lots of rainbows. "Dr. Zizmor will fix your face," you know, all about what your high hopes could be to eradicate acne. They were really hideous, really, really hideous. But over time, they were enormously consistent. They used the same visual language over and over: signature rainbows and really badly kerned type and terrible vertical and horizontal scaling and bad silhouettes. But they became sort of like the crazy ads of the seventies—"his prices are insane"—part of the tapestry of the New York City subway system. And so they became really familiar, and ultimately, really beloved. Now this is something that's really important to branding: even when something is ugly, if you see it enough times, it becomes something that you recognize and you begin to associate with something—it could have good feelings, it could have bad feelings, again back to the feelings. And in the case of Dr. Zizmor, because he seemed like a nice guy, and there were no scandals, and he seemed to do good work, and he was somewhat inexpensive, and he talked to the populace, people loved these ads. They loved them. What people get so upset about now when you change logos, it's not so much that the logo that is being changed is any good, it's that it's taking us away from the thing that we're most familiar with. And in day and age where everything feels so tenuous, taking that familiarity away, even if it's a juice carton, makes people feel really insecure.
+
+</details>
+
+### 公共空间被商业资本入侵与视觉殖民
+
+**Speaker 0**: 我想把讨论引向一个略有不同的方向。我也仔细看过那些广告，我认为它们确实很有意思。之所以说它们精妙，尽管它们丑陋、怪异而且排版拥挤，原因之一在于你能明显感觉到背后站着一个活生生的人，而不是某个委员会评审出来的产物。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: So I want to take it in a slightly different direction. So I was looking at these ads, and I think they're wonderful. And one reason they're wonderful, though ugly and weird and crowded, is that they feel like a person was behind them, not a committee.
+
+</details>
+
+**Speaker 1**: 确实如此。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Yes.
+
+</details>
+
+**Speaker 0**: 它们看起来根本不像出自那些精细复杂的高端品牌营销机构之手——那种动辄召开项目启动会、范围界定会的团队。你完全能从那些千篇一律的企业宣传活动背后，感受到官僚体制的僵化气息。但回到我们刚才谈到的观点，即市场力量可能正在吞噬大量原本属于其他性质的公共空间，并将其商业逻辑强加于其上。有一篇专栏文章我一直想写，但至今没有动笔，部分原因是我有些害怕发表后会引起的舆论反弹：作为一个两三年前才搬到纽约的新居民，我发现纽约地铁和公交车上充斥的商业广告让人感到非常悲哀。这并不是说其他地方就没有广告——大都会运输署（MTA）显然不是唯一通过广告招商来筹集资金的公共交通机构——但地铁是一个真正的公共空间。事实上，我认为它是美国公众生活中最非凡、最值得珍视的公共空间之一。纽约地铁不论存在多少缺陷，其平等主义色彩是令人惊叹的。它是社会各个阶层的人群无差别交汇融合的场所，载着形形色色的人去往各个角落。然而，所有这些生动的公共生活，却全部笼罩在追逐车祸诉讼的揽客律师广告、Tinder 约会软件广告以及整容手术广告的刺眼凝视之下。很长一段时间里，我和孩子们每次走进地铁站，头顶上正对着的都是翻拍版电影《驱魔人》（The Exorcist）的宣传海报。整张海报是黑白色调，画面上是两个女孩的面孔，正在往外呕吐鲜血，那是一张极其令人作呕、毛骨悚然的广告。我专门去查阅了相关数据，广告收入其实只占 MTA 运营收入的大约百分之一左右。一方面，我知道亚当斯（Adams）市政府一直在努力尝试推行免费公交试点，如果有人跳出来说“你应该把这笔预算花在让地铁免受商业广告侵扰上，而不是用来免除公交车票”，听起来是否会显得有些精英主义？但另一方面，每当我思考要写这篇文章时，我都深切地感到，公共空间根本不应该以这种方式被彻底商业化。公共空间理应成为一个避难所绿洲，让人得以暂时逃离无处不在的商业广告轰炸，逃离注意力与视觉空间被市场力量持续不断的掠夺。这些商业海报让纽约地铁的外观变得比原本应有的样子丑陋得多。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: They don't feel like they came out of a sophisticated branding agency that had, you know, a kickoff meeting and a scoping meeting. You know, you can feel the sort of bureaucratic energy behind ubiquitous corporate campaigns. But to go back to this point of maybe the market eating a lot of other spaces and imposing its logic on them: a column I have wanted to write and haven't written, in part because I've been afraid of the reaction to it, is that as a newcomer to New York City—I moved two or three years ago—I find the presence of the advertising on the New York City subway and on the buses really sad. And not that it doesn't exist in other places, of course it does; the MTA is not the only transit authority that raises some money through advertising. But that is a public space. It is actually one of the most remarkable public spaces, I think, in American life. The New York City subway, for whatever its flaws, is incredibly egalitarian. It is all strata of society mixing with each other. It is people going in all kinds of places. And it is all happening beneath the glare of these ambulance-chasing attorneys, and Tinder ads, and plastic surgery ads. For a long time, the subway station I would walk into with my kids had an ad for the reboot of The Exorcist above where we would walk in. And it was black and white; it was these two girls' faces, and they're like spitting blood. It was this horrifying, grotesque ad. And I looked into this: the MTA gets about one percent of operating revenue from advertisements. And on the one hand, I know that the Adams administration is trying to make buses free, and isn't it a little bit elitist to say you should spend that money on making the subway non-commercial rather than making the buses free? And on the other hand, as I thought about writing this piece, it seems to me that maybe public spaces should not be commercialized in that way. Maybe this should be an oasis from constant advertising, from your attention and your visual field being captured by the market. These ads make the New York City subway much uglier than it could be.
+
+</details>
+
+**Speaker 1**: 确实是这样。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Yes.
+
+</details>
+
+**Speaker 0**: 所以我特别喜欢纽约地铁偶尔做的一件事：他们有时会把原本留给广告的版位换成诗歌展示，那真的非常优美动人。他们偶尔也会在上面展出艺术作品，我认为这棒极了，带有一种非常古典的进步主义运动色彩，仿佛在致力于丰富与滋养市民的精神世界。你能想象一个世界吗？在那个世界里，公共交通空间里唯一存在的非实用性视觉元素就是艺术与诗歌。我认为如果所有商业广告都消失了，那将会是一幅无比美丽的图景。现在的现状就好像市场资本硬生生地吞噬掉了原本纯粹属于公众的东西；在这样一个并非由商业资本承担主要建设运营费用的公共设施里，市场营销却反客为主，成为了占据主导地位的视觉语言。要知道，绝大部分运营资金根本不是广告商支付的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: What I love on the New York City subways is sometimes they will use the spaces they use for ads and put poetry there—like that's really beautiful. They occasionally have art on them; I think that's really cool. It has like a very old-style progressive movement feel, like the enriching of citizenry. You imagine a world where that was the only thing that existed that was, you know, non-utilitarian visuals there. And I think it would be really beautiful. If the ads were gone, it's like the market has eaten something that is for the public, and the market is the dominant visual language in something that they are not the dominant player paying for. They don't pay for most of it.
+
+</details>
+
+**Speaker 1**: 你成了一名视觉上的囚徒。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: You're a visual prisoner.
+
+</details>
+
+**Speaker 0**: 是的。回想上世纪五六十年代，人们其实非常担忧公共视觉环境被商业广告彻底接管的趋势。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Yes. And we used to—what I mean is, if you go back to the fifties and sixties, people worried a lot about how the visual field was being taken over by advertising.
+
+</details>
+
+**Speaker 1**: 没错。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Yes.
+
+</details>
+
+**Speaker 0**: 而如今我们却以一种既令人惊讶又略带悲哀的方式默默接受了这一切，这实际上代表着我们对公共空间与人造建筑环境的雄心与追求正在不断萎缩降级。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: And we've come to accept it in a way that is a little surprising and a little sad, and represents a diminishment of our ambitions for public space of the built environment.
+
+</details>
+
+**Speaker 1**: 这里的核心问题之一在于，现在的广告实在是太丑陋了。如果它们富有启发性、发人深省，或者能引人思考、激励人心，情况或许还会稍有不同。不过，如果你打算写这篇专栏文章的话，有两件事你可能会很感兴趣：第一件是圣保罗（São Paulo）曾经在一段时间内拆除了整座城市所有的户外广告牌。我不知道现在的具体情况如何，但他们当时确实将这作为一项试验推行了下去，那彻底改变了整座城市的视觉生态环境。第二件事是艺术家奥拉维尔·埃利亚松（Olafur Eliasson）创作过一整套相关的艺术作品……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Well, part of it is that the ads are really ugly. If they were interesting, if they were provocative, if they were something that made you think or inspired you, then it might be a little bit different. But if you're writing this article, two things that you might be interested in: São Paulo for a while took all their billboards down. I don't know if that's still the case, but they did that as a test, and it really changed the visual environment. And then Olafur Eliasson, the artist, has a whole series of pieces...
+
+</details>
+
+<!-- chunk 6/7 -->
+
+### 公共空间中的商业侵蚀与纯白广告牌
+
+**Speaker 1**：他创作了一整套纯白广告牌的系列作品，那真的很美——没有任何商业信息，就只是在城市环境中伫立着一面空白的白色板面，这在视觉上和思想上都极具挑衅与启发性。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: He did a whole series of pieces of blank billboards, and it's beautiful, no messages, just the white plain billboard in an urban environment, and it's really quite provocative.
+
+</details>
+
+**Speaker 0**：圣保罗的那个案例确实非常耐人寻味。我的意思是，如果你去过其他国家，体验过那里的地铁系统，就会发现并非所有地方都充斥着铺天盖地的广告。所以在我看来，这触及了我们一直在探讨的核心议题：我们已经开始在许多原本未曾预料到市场会涉足的空间里，全盘接受了市场的运作逻辑。我们开始用市场的眼光来看待那些原本非市场化的事物，比如宗教等等。而且你要知道，我认为市场本身是有其特定诉求与欲望的。倒不是说市场天然仇视美——如果能卖出一件美丽的东西，市场当然乐见其成——但市场的根本意图与指向永远是推销产品。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: That's so interesting about São Paulo. And I mean, you go to—I mean, I've been to other countries and their subway systems, and you don't always have advertising everywhere. So to me, it gets to something we're talking about, which is we have begun to accept the logic of the market in a lot of spaces you might have not expected the market to be. We've begun to see things that are not market-based, like religions, in market terms. And you know, the market, I think, has certain desires. It's not that the market hates beauty; it would love to sell you something beautiful, but the intentionality of the market is to sell product.
+
+</details>
+
+**Speaker 1**：现在我们在公厕的小便池正上方都能看到广告。说真的，那难道就是你想要吸引别人注意力的时刻吗？这意味着，当下几乎已经没有任何空间能够彻底摆脱商业印记的侵染了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: We see ads now over urinals in public bathrooms. I mean, really, that's when you want to get somebody's attention? I mean, there's virtually no space that is left free from a corporate mark.
+
+</details>
+
+**Speaker 2**：甚至在鸡蛋上，在真正的生鸡蛋表面，都已经印上了商业标识。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: You have logos on eggs, on the actual egg!
+
+</details>
+
+### 政治语境中的审美之争：右翼与古典主义复兴
+
+**Speaker 0**：既然我们聊到了政治层面，我想向你请教一个现象。近年来，右翼政治势力内部兴起了一股非常明确的浪潮，试图以一种非常具体的方式重新复活关于“美”的议题与争论。你肯定也注意到了，唐纳德·特朗普使用“美丽”（beautiful）这个词的频率，恐怕比历史上任何一位美国总统都要高。诚然，他对美的理解和我的审美标准大相径庭，但他确实……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: As we're getting into politics here, I want to ask you about... There's been a real movement on the right in recent years to, in a very certain way, resuscitate an argument about beauty. And you've seen it. Donald Trump uses the word "beautiful" more than any president, I think, probably ever. And certainly, his idea of beauty is not my idea of beauty, but he...
+
+</details>
+
+**Speaker 1**：他确实总把美挂在嘴边。现在甚至专门为此造出了一个词。我们别忘了，海湖庄园式的审美风貌（Mar-a-Lago face）如今在我们的大众文化中几乎成了一种奇特的风潮。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Cares about it. Yeah, there's now even a term for it. Let's not forget Mar-a-Lago face is actually a charm/trend in our culture right now.
+
+</details>
+
+**Speaker 0**：而且他们正在推行建筑工程，通过各种方式全面回归新古典主义建筑风格。不仅是他个人，围绕在他身边的整个政治圈子都在倡导这一点。我之前看到塔克·卡尔森（Tucker Carlson）的一段发言，我马上放给你看的这个片段，确实非常引人深思：
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: And you know, they are building things and going back to neoclassical architecture in different ways. And it's not just him; it's sort of all the people around him. I thought this from Tucker Carlson, in this clip I'm going to show you, was genuinely interesting.
+
+</details>
+
+**Speaker 3**：这是美国政治中另一根碰不得的“第三轨”。公众甚至不被允许指出我们的现代建筑是何等怪诞、何等令人丧失人性。为什么这些建筑很糟糕？因为它们丑陋不堪，而丑陋正在剥夺我们的人性。请允许我更精确地界定我所说的“非人化”：非人化就是一种不断向人们灌输“你们无足轻重”的行径，让人们相信自己微不足道、远远次于宏大的整体，说服人们相信自己并不是独一无二的灵魂、不是独特的个体、不是由上帝亲手造就的存在，而仅仅是某种更庞大力量摆布下的易耗品。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 3**: This is another third rail of American politics. You're not allowed to note that our buildings are grotesque and dehumanizing. Why are they bad? Because they're ugly, and ugly dehumanizes us. And let me be more precise about what I mean when I say dehumanizing: dehumanizing is the act of convincing people that they don't matter, that they are less significant than the larger whole, that they are not distinct souls, that they are not unique, that they are not created by God, that they are merely like beauty in the hands of some larger force.
+
+</details>
+
+**Speaker 0**：我对“人们不被允许讨论这个”的说法持保留态度，因为大家显然都在公开谈论。但你确实能观察到右翼的一种明确转向，即致力于将“美”重新确立为一项公共政策目标。我很想知道你是怎么看待这一点的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: I'm skeptical of the "you're not allowed to talk about this"—it's strange because you're definitely allowed to talk about this. But you do see a move on the right to make beauty become supported as a public goal. I'm curious what you thought of it.
+
+</details>
+
+**Speaker 1**：这大概是我有生以来第一次觉得自己在某种程度上同意塔克·卡尔森的论调，但我并不认为他对右翼现状的描绘是符合事实的。如果事实真如他所言，那么当现任总统对白宫进行大改动、在反思池旁树立那些拱门时，民间就应该爆发出巨大的抗议声浪。华盛顿正在遭受如此多的审美破坏，变得越来越丑陋，我可没看到右翼对此提出过任何抗议。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Well, it's the first time I think I've ever agreed with Tucker Carlson ever, but I don't think it's true. I don't think that's true about the right at all. If that were the case, then there would be much more of an uproar about what the president is doing to the White House, about what he's doing to the arches that he's putting up to the reflecting pool. I mean, there's so much damage that is making Washington uglier. I don't see how that is being protested by the right.
+
+</details>
+
+**Speaker 0**：可是在他们看来，难道他们不觉得这是在让环境变得更美吗？唐纳德·特朗普难道不坚信他改造后的反思池熠熠生辉、光彩照人吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Well, don't they think they're going to make it more beautiful? Doesn't Donald Trump think his reflecting pool is luminous?
+
+</details>
+
+**Speaker 1**：我不知道现实中有谁会觉得……比如觉得“现在的椭圆形办公室看起来真是太棒了”——唯一这么想的人就是特朗普自己。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: I don't know anybody that's like, you know, that the Oval Office looks really good now. The person who thinks that is Trump.
+
+</details>
+
+**Speaker 0**：但我这其实是一个非常严肃的探讨……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: But I mean that very seriously...
+
+</details>
+
+**Speaker 1**：我也是严肃的。在右翼阵营里，没有任何人会站出来呼吁“让我们投资更多的金色花丝装饰吧”，没人会倡导那个。谢天谢地，那绝不是一种正在蔓延开来的主流审美趋势。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: But no, I do too. There's nobody on the right saying, "You know what, let's invest in gold filigree." Nobody is talking about that. That's not a trend that's catching on in any way, thankfully.
+
+</details>
+
+### 美的本质：审美趣味抑或权力意志？
+
+**Speaker 0**：好吧，让我换个角度来陈述。我并不是要为他们的具体做法辩护，但我认为他们所提出的命题，对于自由派以及左翼来说，是一个必须认真对待的严峻挑战：去正视右翼对古典建筑以及罗马石柱的重新发掘。当代美国右翼本质上是一场带有浓厚反动色彩的意识形态运动，正因如此，它能够极其明确地指认出一个无可争议的“美的黄金时代”——也就是古典时代的遗存。如果你阅读白人至上主义或极右翼势力的论述，他们对这一点表达得极为赤裸，那就是他们所认同的“欧洲文化遗产”。相比之下，左翼（“左翼”这个词涵盖面很广，包含温和派、自由派以及左翼知识分子）却很难提出旗帜鲜明的对等方案。这倒不是因为左翼认为美不重要，而是因为左翼不希望武断地规定什么是美——我们凭什么去定义唯一的标准呢？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Well, let me make not the argument for what they're doing, but I think the challenge they are proposing that is interesting for liberals and on the left to try to take seriously the right's rediscovery of classical architecture, of Roman columns. The right, because the nature of the modern right in America is much, much more of a reactionary movement, it is able to locate a very clear moment of beauty, which is old things. And in ways where if you read the white nationalist writings, they're explicit about this—you know, what they understand as the European inheritance. And I think that the left—and the term "left" is tricky because obviously, you know, moderates and liberals and others—has more trouble knowing what it wants to answer this with, not because it doesn't think beauty is important, but because it doesn't want to dictate what the beautiful should be. Who am I to say?
+
+</details>
+
+**Speaker 1**：而且美本来就不是非黑即白的二元对立。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: And it's not binary.
+
+</details>
+
+**Speaker 0**：没错，它绝非二元对立。因此这构成了一种非常有意思的局面：我确实认为右翼正在做一件发人深省的事，那就是试图将“美”重新拉回到公共政治中一个充满争议与讨论的核心位置。而我至今没有看到左翼对此给出有力的回应，甚至没看到左翼愿意坐下来与他们就此展开辩论。部分原因在于，如果你认为过去充满了压迫与问题，而你渴望迈向一个尚未建成的全新未来，那么有哪一种视觉语法、哪一种视觉语言是所有人都能达成共识的呢？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: And it's not binary. And so you have an interesting thing. I do think that the right is doing something interesting in trying to move ideas of beauty back to something more essentially contested in politics. And I'm not sure I've really seen an answer, or even a willingness to argue about it with them among people on the left. In part, because if you understand the past to be full of problems, and you want to move to a future that is not yet built, well, what visual grammar, what visual language can everybody agree on for that?
+
+</details>
+
+**Speaker 1**：任何人都永远不可能完全达成一致。评估美的方式永远不可能只有一种。但在这里，我必须明确区分“品味”、“风格”与“权力”。我不认为右翼阵营里有谁回看古罗马、古希腊建筑或者凡尔赛宫时，心里想的仅仅是“哇，那真是一批巧夺天工、辉煌绝伦的建筑”。我认为他们真正的潜台词是：这种建筑所代表与象征的，正是某种至高无上的权力；这种建筑具象化了那种他们渴望用来统领社会的威权力量。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Well, nobody will ever agree. There will never be one way of assessing beauty. But I do want to make a distinction between taste and style and power. And so I don't think that anybody on the right is looking back to Roman and Greek architecture or the architecture of Versailles and thinking, "Now there was some really magnificent architecture." I think what they are actually saying is: this is the type of power that's represented. This architecture is representing a certain power that we want to lead.
+
+</details>
+
+**Speaker 0**：我不知道，我对此不能完全苟同。我认为他们确实真诚地觉得那些建筑是美丽的；或者至少，我们应该承认在他们的真实认知里那就是美。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: I don't know. I don't think that's—I don't agree with that. I think they really do think it's beautiful, or at least I think it's worth trying to grant them that they think it's beautiful.
+
+</details>
+
+**Speaker 1**：但这正是关键所在：我同意他们认为那是美的，但他们之所以觉得它美，恰恰是因为它象征着特定类型的领袖和特定类型的统治权力。这两者是不可分割的。就像海湖庄园的面容之所以在某些人眼中显得美丽，背后是有具体动机的。那些人由衷地觉得那是美，你和我可能无法认同，但对他们而言那就是美。我并不是要否定某个人主观上对美的感知，但我认为比“他们觉得什么美”更为重要的核心问题是：“他们为什么会觉得那很美？那对他们而言到底象征着什么？”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: But I think they think it's—okay, I agree there. I think they think it's beautiful because it represents a certain type of leader and a certain type of power. And those things you can't always separate. It's like Mar-a-Lago face being beautiful for a certain reason. Those people think it's beautiful; you and I might not, but they think it's beautiful. I'm not questioning somebody's own sense of what is beautiful to them. But what I think is more important than what they think is beautiful, is why: why do they think it's beautiful? What does this represent to them?
+
+</details>
+
+### 审美政治学的演变与未来愿景的博弈
+
+**Speaker 0**：我完全赞同，决定一个人为何觉得某物美丽的那些深层支流是极其错综复杂的。正如我们在开篇就讨论过的，比例关系、数学构图等等都是其一部分。人们甚至会深入到诸如“什么是完美体型”这样的探讨，就像当下的男性健美与外貌最大化（looksmaxxing）运动中，男人们坐在一起拿着量尺测量下颌线与面部比例的各种参数。关于人们究竟如何构建起自己的审美定义，这显然是一个充满争议的领域；而且正如你指出的，它还会随时代演变。
+
+但我依然认为，当代右翼——或者至少是右翼中的这一支派——即便其审美背后隐含着权力的考量，他们如今所拥有的这种“美学政治”，也是乔治·W·布什或米特·罗姆尼时期所未曾具备的。这是美国当代政治中一个崭新的切入点：迅速颁布行政命令，强制要求公共建筑采用新古典主义或古典主义风格。我的疑问在于——因为我也深知，包括左翼作者在内的许多人，近期写了大量关于“周遭世界正在变得丑陋”的文章——广大民众普遍感到眼前的世界正在丧失美感，并且渴望这种对美的追求能在现实中得到回应。大众渴望让“美”重新成为一种全社会共同维系的公共价值。但在这一议题上，右翼往往占据天然优势，因为他们只需要径直伸手向历史倒退即可。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: So I think I agree that the set of the tributaries of why we think a thing is beautiful is very complicated. And what you're saying, even at the very beginning, the proportionality and the mathematics. And I mean, get into these things like what is the perfect figure, or you know, the looksmaxxers and the men's movement now are sitting there like measuring the proportional difference of their whatever to their whatever. And why people have come up with what they think is beautiful is obviously contested. And then, as you also said, changes over time.
+
+But I take the right as—or at least this part of the right as—even if power is part of it, believing now and having a kind of politics of beauty that I don't think George W. Bush had, that I don't think Mitt Romney had, that I think is a sort of new entry into politics, right? The immediate executive orders on neoclassical or classical architecture. And I guess one of my questions—because I do think people, including on the left (where a lot of the articles about everything becoming ugly that we're talking about are coming from), I don't think people have a feeling that the world is becoming less beautiful to them without wanting this represented. I think that there is a yearning for beauty to be a publicly held value again. But I think the right always has an easier time with this because they can sort of just reach back.
+
+</details>
+
+**Speaker 1**：没错，这正是“让美国再次伟大”（Make America Great Again）的逻辑本质。如果你声称要把美国带回过去的伟大荣光，你就必然是在向后倒退，重拾那些曾经在特定历史时期被确立的标准——无论是社会行为规范、阶层制度结构，还是建筑、艺术、音乐、政治体制等等。所以在我看来，这一切都是同构的。如果“让美国再次伟大”运动或者现任总统突然宣布“让我们创新一种全新的未来主义建筑风格来代表我们的明天”，那反而会让我大吃一惊。那种事绝不可能发生。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: Right. That's "Make America Great Again." Well, if you're making America great again, you're going back to things that were once considered a certain way. That could be behavior, that could be social structure, that could be architecture, art, music, politics, et cetera. So I think that's all part of it, right? It would be shocking to me if Make America Great Again or the current president was like, "Let's innovate a new style of architecture to represent our future." That's not going to happen.
+
+</details>
+
+**Speaker 0**：所以伴随着这种在设计美学上极力向后回溯的“新右翼”，你同时还能看到“科技右翼”的崛起。我们在之前的对话中多次提及赛博皮卡（Cybertruck），但无论是加密货币（Crypto）还是软件界面，它们都形成了一套极具辨识度的视觉语言。再加上如今涌现出的大量人工智能内容——从拙劣的 AI 废品（AI slop）到真正的人工智能艺术——确实正在孕育出一种全新的视觉话语，勾勒出人们心目中未来的数字设计应当呈现的面貌。这无疑构成了一种关于未来的理论范式。当然，如何将这种科技愿景视为一种抗衡力量……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: So alongside that this new right, which I think is reaching backwards in its design aesthetic, you also have the tech right. We've talked about the Cybertruck a bunch in this conversation, but crypto and software have had a very legible visual language. You have a certain amount of AI, from slop to art, but you do have an emerging language of what the kind of digital design of the future is supposed to look like. It's certainly a theory of the future. Of course, how you think about that as a contestant...
+
+</details>
+
+<!-- chunk 7/7 -->
+
+### 设计语言之争与权力表达
+
+**Speaker 0**：因为你在思考它在传达什么，因为这代表了设计界的一个流派。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Because what you think it is communicating, because think it's one faction of design.
+
+</details>
+
+**Speaker 1**：现在这一点非常明显。因为我同样可以指出苹果园区（Apple Park）以及那里建筑的美感，那些建筑确实非同凡响，构成了对这种风格的鲜明对照。有趣的是，很多“赛博时尚”（cyber chic）都非常讲究线性、非常棱角分明。而苹果园区则全都是圆角曲线。你在毕尔巴鄂古根海姆美术馆能看到这种风格，在惠特尼美术馆的部分重新设计中也能看到。所以我认为这种风格同样存在。但就像其他一切事物一样，我认为我们正处于一种紧张对峙的状态之中，看究竟哪一种视觉语言最终会胜出。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: That is apparent now, because I could also point to Apple Park and the beauty of the buildings there, which are truly extraordinary as a counterpoint to some of that. Interestingly, a lot of the cyber chic is very linear, very sharp edges, whereas Apple Park is all round edges. You see that in Bilbao, you see that in some of the way the Whitney was redesigned. So I think that that's there also, but like everything else, I think that we're in this space of tension between which visual language is going to win out.
+
+</details>
+
+**Speaker 0**：其实还有更多层面的含义，我们虽然一直在深入探讨这个话题，但我们所聊的很多内容，不论是以潜移默化隐秘的方式，还是以直截了当的方式，我认为都带有男性化与女性化的编码象征。我是说，无论你怎么评价它，Cybertruck 都是一种非常男性化的设计。而你刚才所描述的则是中心感、感性与曲线。我的意思是，我们在这里所经历的争论，在多大程度上与那种更宏大的政治动态、甚至是性别对抗的动态相关？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: There's always more than what we've been talking about this very much, but a lot of what we talking about, I think in a sometimes sub rosa, sometimes explicit ways, masculine and feminine coded. I mean, Cybertruck is a very male design, say what you will about it. And you're describing about like sensuality and curves. I mean, how much is some of the fight we're having here about the sort of larger political, but gender war dynamic that we've been in?
+
+</details>
+
+**Speaker 1**：我想回到我之前说过的话。我不知道这算不算一场性别之战，它更像是一场权力游戏（power play）。我们认为权力应该如何被传达和视觉化呈现？我认为这才是我们如今所目睹的本质。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: I'm going to go back to what I said before. I don't know that it's a gender war so much as a power play. How do we believe power should be communicated and visualized? And that's, I think, what we're seeing now.
+
+</details>
+
+### 美学的回应与未来的期许
+
+**Speaker 0**：那么以现代的视角来看，对于海湖庄园（Mar-a-Lago）所构建出的那一套审美世界，是否存在某种回应呢？你认为是否存在一种应对之道？你知道，人们可以说：“是的，世界确实变得丑陋了。”而且我觉得这也正是你在表达的观点——你某种程度上是在说，他们的所作所为是丑陋的，因为它是俗丽耀眼的（garish），是低俗庸俗的（vulgar），是不成比例失衡的，因为它关乎权力，关乎恐吓与威慑。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: So do you think about in a sort of modern ways, a kind of answer to what the Mar-a-Lago world has come up with for their beauty? Do you think there is an answer to that? You know, you can say, yes, the world has become ugly. And I think it's something you're saying, and what you're sort of saying is what they are doing is ugly because it is garish, because it is vulgar, because it is out of proportion, because it is about power, because it is about intimidation.
+
+</details>
+
+**Speaker 1**：说句实在话，它代表了一种我根本不认同的政治理念。是的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: And I'll be very honest. It represents politics that I don't believe in. Yes.
+
+</details>
+
+**Speaker 0**：那你认为是否存在一种你真正认同的回应呢？这种回应能否让与你政治立场相同的人，以一种更易于理解、更能激励人心的方式来阐述美？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: And so do you think there's an answer to that you do believe? And that does allow, though, you know, people whose politics you do agree with to speak about beauty in a way that is more legible and inspiring to people?
+
+</details>
+
+**Speaker 1**：我很想说是的，我很想说是的。但在我的实践工作中，我是一名分析者。我回顾历史和时代，试图理解眼下正在发生的事情。我不是未来学家。我甚至不确定自己能否自称是一个乐观主义者，但我抱有希望，我想说我满怀希望。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: I'd like to say yes, I'd like to say yes. In my practice, I am an analyst. I look at the time and back to try to make sense of what's happening right now. I'm not a futurist. I'm not even sure I would claim to be an optimist, but I hope so. I want to say I hope so.
+
+</details>
+
+### 影响一生的荐书
+
+**Speaker 0**：我想这是一个非常合适的收尾点。那么照例是最后一个问题：你会向听众推荐哪三本书？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: And I think that's a place to end. So then always, always final question: what are three books you recommend to the audience?
+
+</details>
+
+**Speaker 1**：我对这个问题深思熟虑过。我打算列出我一生中最喜欢的三本书，然后再额外推荐一本我在过去十年里发现的书，那本书彻底改变了我的人生。如果可以的话，我就按这个顺序来推荐。
+
+好的。
+
+第一本是一本诗集，书名叫《我们内心强大的声音》（*The Voice That Is Great Within Us*），由海登·卡鲁斯（Hayden Carruth）编辑整理，这是一部极其出色的二十世纪诗歌选集。我正是在那里第一次读到了我毕生最爱的一首诗——查尔斯·奥尔森（Charles Olson）的诗，题为《马克西姆斯写给自己的信》（*Maximus to himself*）。顺便提一句，我给我的狗起的名字就叫马克西姆斯（Maximus）。这是第一本。
+
+第二本我认为是史上最伟大的爱情故事之一，那就是加夫列尔·加西亚·马尔克斯（Gabriel García Márquez）写的小说《霍乱时期的爱情》（*Love in the Time of Cholera*）。这本书拥有文学史上最精彩的结尾句。所以你必须从头读到尾，才能真正领会到那一刻的震撼。
+
+我的第三本书是一部我希望将来有一天能够以视觉化形式呈现的作品。我在大学时就深深爱上了这本书，那就是詹姆斯·乔伊斯（James Joyce）的《尤利西斯》（*Ulysses*）。我甚至还特意在“布鲁姆日”（Bloomsday）专程去了爱尔兰——那一整天正是詹姆斯·乔伊斯在《尤利西斯》中所描写的利奥波德·布鲁姆（Leopold Bloom）一天的生活。我在爱尔兰参加了徒步游，还去了桑迪科夫的马特洛塔（Sandycove Martello Tower）。这就是我最喜欢的三本书，它们深刻地改变了我的人生。
+
+不过在更近期的时候，也就是2017年，我读了一本罗克珊·盖伊（Roxane Gay）写的书，书名叫《饥饿》（*Hunger*）。当我读那本书的时候，未曾谋面仅凭阅读她的文字，我就深深地爱上了这位作者。以至于我主动联系了她，希望邀请她上我的播客节目。她拒绝了我。我尝试继续保持联系，她态度一直很谨慎闪躲。后来通过一位共同的朋友，她得知我其实并不是个怪人。接着在2018年，我约她出去约会。到了2020年，我们结婚了。所以罗克珊·盖伊的这本《饥饿》，是一部美妙的第四本推荐书，一段美妙的经历。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 1**: So I'm giving this a lot of thought. I'm going to name three of my favorite books over the course of my life, and then I'm going to push in one more that I discovered in the last decade that changed my life. So I'm going to, if that's okay, with your permission.
+
+Okay.
+
+So number one, it's a book of poetry called *The Voice That Is Great Within Us*. It's by Hayden Carruth, and it is a remarkable collection of 20th-century poetry. That's where I first became aware of my favorite poem of all time, which is a poem by Charles Olson called *Maximus to himself*. P.S., I named my dog Maximus. That's number one.
+
+Number two is what I think is one of the greatest love stories of all time, a book written by Gabriel García Márquez called *Love in the Time of Cholera*, which has the greatest last line of all time in a book. And so you have to read it all the way through before you get to that.
+
+And then my third book is a book that I hope one day to be able to do a visual version of. I fell in love with this book in college. It's James Joyce's *Ulysses*. I even went to Ireland for Bloomsday, which is the day in the life of Leopold Bloom that James Joyce wrote about in *Ulysses*, and took a walking tour of Ireland and went to Sandycove. And those are my three favorite books. Books have profoundly changed my life.
+
+But more recently, in 2017, I started reading a book called *Hunger* by Roxane Gay. And when I read that book, I fell in love with the author sight unseen, just reading her words, so much so that I reached out to her. I wanted to get her on my podcast. She said no. I tried to stay in touch; she was very squirrelly about it. And then through a mutual friend, she got wind that I was actually not a crazy person. And then I asked her out on a date in 2018, and in 2020 we got married. So my book *Hunger* by Roxane Gay, that is a wonderful fourth recommendation, a Debbie moment.
+
+</details>
+
+**Speaker 0**：非常感谢你。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 0**: Thank you very much.
+
+</details>
+
+**Speaker 2**：谢谢你，埃兹拉（Ezra）。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker 2**: Thank you, Ezra.
+
+</details>

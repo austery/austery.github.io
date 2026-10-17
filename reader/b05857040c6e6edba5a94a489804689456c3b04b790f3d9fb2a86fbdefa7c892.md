@@ -1,0 +1,525 @@
+---
+author: How I AI
+date: '2026-10-12'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=4TOLm1g-gCE
+speaker: How I AI
+tags:
+  - agent-design
+  - generative-ui
+  - progressive-disclosure
+  - consumer-ai
+  - human-computer-interaction
+title: 专访 Meta Muse 设计总监：如何打造真正让人喜爱的消费级 AI Agent？
+summary: 本期《How I AI》专访了 Meta Muse 设计总监 Alex Cornell。他深入探讨了消费级 AI Agent 的设计哲学与人机交互创新，分享了 Muse 如何通过消息拟人化交互、渐进式信息披露、状态可视化以及生成式 UI 带来纯粹的惊喜感，并展示了通过 Instagram 联动、复古购物清单、高尔夫与国际象棋数据分析等硬核私人爱好场景的落地实践。
+insight: ''
+draft: true
+series: ''
+category: ai-application
+area: tech-engineering
+project: []
+people:
+  - Alex Cornell
+companies_orgs:
+  - Meta
+products_models:
+  - Meta Muse
+media_books: []
+status: evergreen
+---
+### 渐进式披露与执行延迟：Agent交互的核心权衡
+
+**Claire Vo**: 设计师们一直都在纠结：我们在执行过程中到底应该向用户透露多少正在发生的事情？必须让用户看得很清楚，这样等待延迟才不会让人觉得痛苦。我个人在使用 Muse 应用程序时的体验是，我非常喜欢这种**渐进式披露**（progressive disclosure），这也是我在产品评测中特别提出来的亮点之一。而且，它的响应速度是真的快，确实非常敏捷。
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: Designers have struggled with how much do we narrate along the way what is happening? It's quite obvious to the user so that latency doesn't feel so painful. My experience in the Muse app is I do like that progressive disclosure as one of the things I called out in our review. It's also just fast. It is just fast.
+
+</details>
+
+**Alex Cornell**: 如果你是一名工程师，你可能会希望确切知道你的 Agent 到底执行了哪些操作，你可以在 Muse 中找到这些底层细节。但如果你是一个普通人，你可能只是想知道：它现在是不是在干活？所以在界面最上方，它会告诉你它正在工作。对于我们目前的解决方案，我感到非常满意，因为我们把主聊天的优势充分展现给了用户。但在帮助人们组织整理内容方面，我觉得我们还有很多可以做的空间。比如二十年前我写过一个个人博客，我让我的 Muse 智能体 Marlo 去把那些文章翻找出来，先汇总成一份 PDF。不过我现在更喜欢的重温方式——纯粹是为了唤起回忆——是通过播客。Muse 能够读取这些老旧内容，并以一种对我来说既有趣又实用的形式重新呈现出来。当你的 Muse 很有主见的时候，这体验非常棒。
+
+<details>
+<summary>Original English</summary>
+
+**Alex Cornell**: If you are an engineer, you may want to know exactly what your agent has done, and you can find that in Muse. But if you're a normal person, you maybe just want to know like, is it doing something? So at the top, it'll tell you if it's working. I'm very happy with our solution currently because we've sort of like exposed the benefit of the main chat to people. But I feel like there's a lot more that we could do in terms of helping people organize. I had a blog twenty years ago, and I had Marlo go and find it and then accumulate them into one PDF first. But the way that I like to read it now, just again, for memory, is via a podcast, and Muse is able to take it and just like reform it into a way that's like really interesting and useful for me when your Muse is being opinionated.
+
+</details>
+
+**Claire Vo**: 那么你的 Prompting 策略是什么？你平时都是怎么给它下指令的？欢迎回到《How I AI》！我是 Claire Vo，一名产品负责人，也是一名 AI 狂热爱好者。我的使命就是帮助大家利用这些新工具构建出更好的产品。今天，我们邀请到了 **Meta Muse** 的设计总监 **Alex Cornell**，他将来到节目中跟我们聊聊如何为大众消费者设计出色的 Agent 体验，并深入剖析一些大家可能从未想过的 Muse 实际应用案例——尤其是涉及到在 Instagram 上购物，以及极度深度地投入个人爱好的场景。让我们马上开始！
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: What is your prompting strategy? What do you do? Welcome back to How I AI! I'm Claire Vo, product leader and AI obsessive here on a mission to help you build better with these new tools. Today, we have Alex Cornell, design director for Meta's Muse, and he's here to talk a little bit about how to design a great agent experience for consumers and a little bit more about some Meta Muse use cases you might not have thought of, especially ones that involve shopping on Instagram and going really hard into some of your personal hobbies. Let's get to it.
+
+</details>
+
+**Claire Vo**: 本期节目由 WorkOS 赞助播出。AI 已经深刻改变了我们的工作方式，各种工具正在帮助团队编写更优质的代码、分析客户数据，甚至自动化处理客户支持工单。但这里有一个关键门槛：这些工具只有在能够深度访问企业内部系统时才能发挥最大价值。你的代码补全助手需要看到你的整个代码库；你的内部聊天机器人需要能够检索内部文档。而对于企业级买家来说，这引发了极其严肃的安全顾虑。这就是为什么这些 AI 应用从诞生的第一天起就面临着极其苛刻的 IT 安全审查。为了顺利过审，它们需要安全的身份认证、访问控制权限管理、审计日志以及一整套企业级特性支持。如果从头自建这一切，工程量将极其浩大。这正是 WorkOS 大显身手的地方。WorkOS 为你提供开箱即用的企业级特性 API，让你的应用能够迅速具备企业级服务能力并更快开拓高端市场。你可以把它理解为企业级功能的 Stripe。OpenAI、Perplexity 和 Cursor 都已经在通过 WorkOS 加速开发以满足企业级客户需求。欢迎访问 workos.com，与成百上千家行业领军企业一起立即开始构建！Alex，欢迎来到《How I AI》，非常感谢你的加入！
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: This episode is brought to you by WorkOS. AI has already changed how we work. Tools are helping teams write better code, analyze customer data, and even handle support tickets automatically. But there's a catch: these tools only work well when they have deep access to company systems. Your copilot needs to see your entire code base. Your chatbot needs to search across internal docs. And for enterprise buyers, that raises serious security concerns. That's why these apps face intense IT scrutiny from day one. To pass, they need secure authentication, access controls, audit logs, the whole suite of enterprise features. Building all that from scratch is a massive lift. That's where WorkOS comes in. WorkOS gets you drop-in APIs for enterprise features so your app can become enterprise-ready and scale upmarket faster. Think of it like Stripe for enterprise features. OpenAI, Perplexity, and Cursor are already using WorkOS to move faster and meet enterprise demands. Join them and hundreds of other industry leaders at workos.com to start building today. Alex, welcome to How I AI, thanks for joining us.
+
+</details>
+
+**Alex Cornell**: 谢谢你的邀请！我是节目的忠实粉丝，非常高兴能来到这里。
+
+<details>
+<summary>Original English</summary>
+
+**Alex Cornell**: Thank you for having me, big fan. Happy to be here!
+
+</details>
+
+### 从工具到实体：消费级 Agent 的交互范式重构
+
+**Claire Vo**: 我刚才也正想说，我是 Muse 的超级铁粉！我大概试用过这个星球上的每一款 AI Agent，但老实说，Muse 带来了我在非常非常长一段时间里，使用 AI 产品体验到**达成纯粹愉悦感（time to pure delight）最快的一次**。所以，跟我们聊聊你们在设计这款 Agent 时的方法论吧。因为我觉得你们挑选的核心设计原语，跟我们在其他智能体产品中见到的截然不同。你们锁定的目标用户画像似乎也完全不同。能给我们梳理一下，你们在设计决策层面上是如何一步步走到今天的形态的吗？
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: I am. I was just saying, I am a big, big fan of Muse, and I have used probably every AI agent on the planet, and Muse, I tell you, fastest time to pure delight I have had with an AI product in a very, very long time. So tell us a little bit about how you approach designing this agent, because I think some of the primitives you picked are very different than what we see in other agents. It seems like the persona that you're going after is different. Walk me through how you all ended up where you ended up from a design perspective?
+
+</details>
+
+**Alex Cornell**: 好的，非常感谢你给予的肯定评价！这确实是一个非常有趣且独特的挑战。我认为我们团队当时都能真切地感觉到，这一次的技术浪潮有些与众不同。从核心能力的角度来看是这样；而且从一些极简的交互细节来看也是如此——比如，**一个智能体能够主动给你发送消息**（message you proactively），这一事实本身就从根本上改变了你从设计角度思考这款产品的方式。哪怕是在一些看似极其细微的交互细节上：我之前开过玩笑，大家都知道我们在消息外面保留了气泡框（speech bubbles）。通常在过去，人们会把气泡框跟即时通讯短信联系在一起，而不是 AI 应用。很久以前，大多数 AI 聊天应用其实都去掉了那些气泡框。而我们在 Muse 中保留它，原因之一在于它能提供清晰的时空区隔边界。因为一个 Agent 可能会在一天的不同时间点主动找你发消息，你必须清楚地知道不同的对话是在何时何地发起的、段落的起始点在哪里。因此，正是这些看似微不足道的细节塑造了我们的整体设计。
+
+但我们反复回归、也是被证明最具指导意义的核心思考框架，就是**把这个界面设想为你与另一个生命实体（entity）之间的交流**。这也是为什么它在屏幕顶部被赋予了具象化的实体形态（embodied at the top of the screen）。正因如此，我们借鉴的大量设计模式更多来自于即时通讯（messaging patterns），而不是去参考以往不同 AI 工具的做法，或者拘泥于行业里已经形成的常规惯例。我们当时的参考锚点更接近于：如果你是在现实中真正跟另一个人对话，你会怎么处理这种情况？这种思维方式极其清晰有力，几乎指引了我们所必须做出的每一个设计决策。当你看向它时，它给人的感觉就像一个发短信的通讯软件，在屏幕顶部你能看到那个小家伙。而且，智能体能够**在后台自主运行**也是其核心能力之一，这让展示它是否正在工作中变得至关重要。因此，仅仅是在顶部提供这种清晰的状态显示，就是我们所做出的最关键决策之一。
+
+<details>
+<summary>Original English</summary>
+
+**Alex Cornell**: Yeah. Well, thank you for saying that. It was definitely an interesting challenge and felt like a unique one. I think we all could feel that something was different this time around, I think from a capability perspective. And I think like just simple things, like the fact that an agent can message you proactively changes the nature of like how you think about the product from a design perspective, even in like super simple ways. I have joked before because we have bubbles around the messages, as you know. And like that's typically something that you associate more with messaging than like an AI app. Long ago, I think most AI apps kind of stripped those out. And that is there, among other reasons, to like help with the fact separation that you need when like an agent is possibly messaging you at different times of the day, you kind of need to know like where and when the different messages begin. And so like simple things like that, I think informed some of the design.
+
+But the basic framing that always we went back to, and I think was probably the most helpful, was just imagining that this interface was more of an exchange between you and an entity. And that's why it's embodied at the top of the screen. And so a lot of the patterns that we looked at were much more messaging patterns, you know, and not thinking about how did this work before in different AI apps or using kind of like the tradition in the industry, I guess, as a reference. It was more like, how would you handle this if you were actually speaking with another person? And that was immensely clarifying, I think, in almost every decision that we had to make. And I think defines kind of the feel of it. When you look at it, it feels like a messaging app. You see a little guy there at the top of the screen. And I think even something like that, you know, one of the other capabilities of it being able to work in the background makes it really important that you know when it's working. And so like just simply having that status, I think, has been one of the most important decisions that we made.
+
+</details>
+
+**Claire Vo**: 另一件让我觉得 Muse 与众不同的地方在于，你们选择提升并作为应用核心组成部分的原语设计。对于我们这些长期使用 AI 构建工具、聊天机器人等产品的人来说，我们已经习惯了诸如线程（threads）、聊天流（chats）、项目（projects）、虚拟机（machines）、文件（files）、代码差异对比（diffs）以及连接器（connectors）这类非常偏向软件工程思维的概念。我认为这是因为绝大多数 Agent 最初都是作为企业级编程助手或知识工作自动化助手被开发出来的。但是当我审视 Muse 时，真正击中我的是：首先，你们将这个**角色化身**（character）确立为了第一位的核心实体。此外你们有对话流、有点子卡片（ideas）、有信息动态流（feed）。你们选择了将完全不同维度的功能点提升为核心界面。这是因为你们一开始就明确知道，这款产品要服务的是一类完全不同的用户群体，他们对于这个 Agent 能为他们完成什么样的事情拥有更广泛、更多维的意图吗？
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: The other thing that strikes me as very different about Muse is the primitives that you've chosen to elevate as core parts of the application. Because I think for those of us who have been using AI building tools, chatbots, etc., we're used to these ideas of like threads and chats and projects and machines and files and diffs and connectors. There are these very software-centric concepts, I think because a lot of these agents have primarily been built as coding agents for the enterprise or knowledge work agents. And then I look at Muse, and what really struck me is you have this like character, first of all, as a primary entity. You have chats, you have ideas, you have your feed. You've chosen different aspects to elevate. Is that because you knew that this was going to be serving a different type of user with a different kind of like breadth of intention around what this agent could get done for them?
+
+</details>
+
+### 面向大众的渐进式披露：隐藏思维链的克制艺术
+
+**Alex Cornell**: 是的。说起来很有趣，今天早上我还收到了我妈妈发来的一条短信。她说她刚才郑重地向她的 Muse 道歉了，因为她让它干了太重的活，同时她也非常感谢 Muse 为她所做的一切。这让我感到非常欣慰和满足，因为我已经在软件设计领域工作了非常漫长的时间，而我妈妈此前几乎从没真正用过我参与开发的任何产品。这并不是因为我做不出有趣的东西，而是正如同你所说，传统工具对于大众普通人来说门槛往往有点高、不够亲民。而且面对这项新技术，它如此新颖、蕴含了如此庞大而隐蔽的强大能力，让普通人能直观理解并轻松上手，正是我们极力追求的核心目标。
+
+大家在设计领域经常听到**渐进式披露**（progressive disclosure）这个词。这属于你在入行第一天就会学到、时刻记在脑子里、但日常工作中未必每天都会深度践行的概念。然而在这款产品中，我发现它成为了最强大的指导工具之一。以系统状态展示为例：如果你是一名技术工程师，你可能会希望极其精确地了解你的智能体到底执行了哪一步操作，在 Muse 中你确实能调出这些信息。但如果你是一个普通人，你首要关心的往往只是：它现在在干活吗？所以在顶部，它会先告诉你它正在工作，比如显示“Jellybot 正在工作中”。接下来用户很自然的下一个疑问会是：它具体在忙什么呢？于是它会配上一个小表情符号告诉你：“正在调研南瓜农场”。如果你想进一步探究，点击进去就会看到它已经执行完成的操作列表；如果你还想继续深挖，再次点击展开，你最终甚至能查看到底层的 cURL 请求、代码执行调用等所有技术审计细节。这对于技术排查和审计来说非常重要，但这些繁复的信息只有在你主动需要时才会出现，它绝对不会挡在那些不懂其含义的普通用户面前。
+
+你经常会看到，传统所谓的**思维链**（chain of thought）在核心聊天主界面中往往变得非常冗长喧闹、充斥着大量推理细节。换作以往的惯性思维，我们很可能也会顺理成章地把它直接塞进主聊天框里，因为当下市面上的 AI 应用基本都这么做。但在 Muse 中，我们的思考是：所有人真的都需要在主屏幕上实时盯着那些思维链吗？答案显然是否定的。
+
+<details>
+<summary>Original English</summary>
+
+**Alex Cornell**: Yeah. You know, I got a text actually from my mom like this morning, which is really funny. She said that she has apologized to her Muse for making him work so hard, and thanked him for all that he's taken for her, which I found really gratifying because I have been working in software for a long, long time. And I don't think my mom has ever used a thing that I've made, not because I don't make interesting things, just like to your point, typically they can be maybe a little bit inaccessible to kind of the average person. And I think with this kind of technology too, it was so new and has so much capability to it that's not obvious. I think that was definitely a huge part of what we were after in terms of making this more accessible and intuitive for people to use.
+
+And I think, I mean, you hear a lot about progressive disclosure in design, and it's kind of one of those things that like you hear like on day one, and then like you always think about, but like I don't know, you don't use it every day. But in this product, I found it to be one of the most helpful things, which is like, if take something like status. It's like if you are an engineer, you may want to know exactly what your agent has done, and you can find that in Muse. But if you're a normal person, you maybe just want to know like, is it doing something? So at the top, it'll tell you it's working, Jellybot is working. And then your next question might be, what's it working on, you know? And so it will tell you that with the little emoji, like "researching pumpkin patches." But then if you want to go a little bit further, you tap on it and then you have a list of everything that it's done. Want to go a bit further, you could tap on that, and then eventually you get down to where you get to see the cURL and all the raw code and everything, which is really important from like an auditing perspective. But it's only there if you need it, and it doesn't get in the way for people who may not know what that means. And I think like you see a lot of what is traditionally referred to as chain of thought can get pretty loud and like really detailed in the core chat. And that's the kind of thing I think that like typically we would have just put that in there because that's like what you do these days in AI apps. But I think in this case it was like, well, does it really need to be there for everybody? It's like, probably not, you know.
+
+</details>
+
+**Claire Vo**: 我必须再夸赞你们一点。因为我自己现在也彻底成了 Muse 的铁粉。但我深感当下很多产品界面里的思维链推理展示，本质上只是**掩盖响应延迟的一张创可贴**（a band-aid for latency）。作为用户，干坐在那里猜测“我的智能体到底是在思考，还是取得了进展，抑或是彻底卡死了”，体验是非常沮丧的。因此很多设计师都在两难中挣扎：我们到底要在过程中向用户口述多少正在发生的事，才能让用户清晰感知而不觉得等待痛苦？与此相对，我们又该保留多少渐进式披露？我认为 Muse 的出色之处在于它优雅地平衡了渐进式披露，而且它非常快！模型本身极其敏捷。对于一款试图赢得普通消费者喜爱的产品来说，响应延迟确实至关重要，而 Muse 是一个非常轻快灵敏的小智能体。
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: I'll give you one other compliment, because, again, I'm a Muse girl now, but I also think that a lot of times these chain of thought reasoning elements in the UI are there as a band-aid for latency, which is it feels very frustrating as a user to sit and wonder, is my agent working on something? And is it making progress? Or is it just stuck? And so I think a lot of designers have struggled with how much do we narrate along the way what is happening so it's quite obvious to the user so that latency doesn't feel so painful versus how much do we kind of like deep progressive disclosure? And what I think is nice about my experience in the Muse app is I do like that progressive disclosure, and one of the things that I called out in our review that I thought was quite nice, but also just fast. It is just fast. The model is just fast. Like I do think for especially something that's going to try to catch the eyes of consumers, that latency really matters, and it is a zippy little agent.
+
+</details>
+
+**Alex Cornell**: 是的，它确实非常快。这非常有意思，因为有时候它快到你甚至会怀疑：“它到底有没有真正去执行这个任务？怎么一下子就返回了？”但非常棒的一点是，当你给出一个非常复杂的要求时，它会立刻通过表情回应或初始消息向你确认收到了请求，然后转入后台去啃硬骨头。这就像在现实中跟真人打交道一样：如果你向某人交代了一件很困难的任务，他们绝不会直接玩失踪、直到彻底做完才露面。他们通常会先回应你：“好的，我的计划是这样，我先去处理这个，搞定后马上回来找你。”哪怕只是一个简短的表情互动，也足以让你安心知道对方已经开始行动了。
+
+因此，在何时快速响应、如何回应、说什么话，以及如果这是一个耗时极长的任务、在等待期间如何安抚用户之间，存在一个精妙的平衡。这时我们就可以依靠顶部的位置状态栏，让你随时看清最新进展。如果你想具体确认它是否卡在某一步，或者是否走偏了路线，你可以随时点开检查。这种机制极为有效，因为你永远不会觉得智能体擅自走开把你一个人冷落在那里。
+
+<details>
+<summary>Original English</summary>
+
+**Alex Cornell**: Yeah, and it's really, you know, it's interesting actually, because it's one of those things where sometimes it's so fast that you are tempted to think like, did it actually go do a thing because it's so quick? And I think like the nice thing is there are times where you ask for something complex, and it will at least acknowledge the request, you know, either through a reaction or an initial message, and then go off and do the hard work. And I think like a person, you know, if you ask for something hard, they're not going to just ghost you until they're done. They'll usually just say like, okay, here's the plan. I'm going to do this. I'll be back when I have it done. Or even just a reaction is enough to let you know that it's doing it. And so I think like that balance of when to respond quickly, how to respond, what to say, and then like what to do in the meantime if it is a really long task, and that's where we start to rely a little bit on that status display to let you know what's going on. And if you want to know specifically, did it get stuck, or is it like going down the wrong path, you can check. And I think that that's really helpful because you never really feel like it's just gone off and left you alone.
+
+</details>
+
+### 生成式 UI 的正确打开方式：兼顾稳定框架与个性化惊喜
+
+**Claire Vo**: 结合这个状态栏消息，我还想探讨一个关键概念——**生成式 UI**（Generative UI）。很多人一提到生成式 UI，就会下意识以为是每次登录后台时整个仪表盘都彻底变样，或者界面上的每一个按钮对每个人都是天差地别的。但我在 Muse 中看到的是，你们用一种极为优雅克制的方式应用了生成式 UI：底层的核心原语是稳固不变的——你始终拥有头像、状态信息、点子推荐卡片以及动态流；但在这个稳固的框架之内，每次我打开应用，我都会看到一套完全基于我们之前对话内容生成的全新点子。当状态栏更新时，它不仅会生成精炼的文字，当智能体在它的电脑上工作时，你甚至能看到一段生成式动态小视频，展示你的专属虚拟形象在笔记本电脑前噼里啪啦打字。这种所谓的生成式 UI 真正令人愉悦，而且对于那些想要把生成式概念引入自己应用的设计师而言，它远比每次打开应用都让界面面目全非要合理、好理解得多。
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: Yeah. One other thing just thinking about this status message I want to talk about, which is this concept of generative UI. And I think a lot of people think when they think about generative UI, they think like every time I log into my dashboard, it's different, or every button I click is unique for every person. And what I saw in looking at Muse is you're using generative UI in a really elegant way, which is like the core primitives stick: you've got your avatar, you've got your status message, you've got your ideas, you've got your feed. But then within that, every time I log in, I have a new set of ideas that are based on the things that we have talked about. And every time the status is generated, when it's working on its computer, you get a little generative video of it typing on its laptop. Like that type of quote-unquote generative UI I think is really delightful, and much easier to understand for folks trying to understand how they could bring these concepts into their own app, than like every time any one person opens up, the UI is completely different.
+
+</details>
+
+**Alex Cornell**: 也许未来的某一天行业会走向极致的完全重绘，但就当下而言，在何处落地生成能力，显然需要更多的轨道约束（on the rails）。专属头像就是一个绝佳的例子。当用户亲手定制了自己的专属 Avatar 后，看到它能够无缝转换为各种工作状态——比如在电脑前打字或者制作物品——用户展现出了极大的惊喜与喜爱。这成为了最有趣的体验之一。虽然我们官方有默认的吉祥物 Jellybot，但在 Muse 里，如果你把自己的形象定制成一个番茄，你就会在状态栏看到一个可爱的番茄在电脑前专注敲字，这种体验让人感到极为亲密和私人化。
+
+你提到了动态流（feed）和灵感卡片（ideas）。你可以想象如果这款应用只有纯聊天窗口，凭借 Agent 的能力它固然也能在单个对话框里搞定很多事情，像全能私人助理一样。但问题在于，它能够完成的事情实在太多了，许多功能对用户而言根本不是显而易见的。通过增加辅助界面——尤其是灵感卡片——我们明确解决了一个痛点：主动向你展示你可能根本不知道它能做的事情。正如你所指出的，如果那些只是系统通用的预设建议，固然也可能有用，但唯有当它们是基于你过去的真实对话量身定制时，人们才会真正体会到其震撼威力。比如如果你整天跟它聊高尔夫，就像我一样，它就会为你生成海量围绕高尔夫的创意建议。
+
+动态流也是一个非常有趣的版块，用户可以在这里尽情实验。你可以输入任何你想要的提示词，然后生成专属的定制信息流。我自己经常更换我的动态主题，有时我厌倦了接收科技圈的 Muse 资讯，就会切换成在周末接收跟亲子带娃相关的动态流。但本质上，它依然运行在我们预先精心设计的原生界面容器中，底层由 Muse 的智能与高度个性化记忆进行数据驱动，它目前并不是一个完全失控随意重绘的生成式界面。
+
+<details>
+<summary>Original English</summary>
+
+**Alex Cornell**: I think perhaps one day we'll get there, you know. But I think these days, there's definitely a little bit more on the rails in terms of like where we can apply it. The avatar is a great example, and I think people find a lot of delight I've seen when they do make their own avatar, seeing that it will then be translated into each one of those states, you know, typing on a computer or making something. And that's been one of the most fun things because we, of course, have our mascot, Jellybot has those states as well. But like if you turn yours into a tomato, then you'll see a tomato typing out on the computer, and that really does feel very personal and is I think a very delightful thing.
+
+You mentioned feed and ideas. And I think that those surfaces, you know, you could definitely imagine this app with just chat. And I think part of an agent's power is that it can handle a lot in a single chat, and you can kind of just treat it like a really capable personal assistant in that way. I think, though, like there's so much that it can do that might not be intuitive for people, that exposing some of those additional capabilities just with the additional surfaces that we have, like ideas in particular, it's serving a very specific purpose, which is basically just telling you some things that you may not know that it can do. I think like to your point, if those were just generic suggestions, that would be one thing, maybe even useful things. But when they're specifically based on what you've talked about, I think that's when people really find the power. Where like, if you talk to it about golf all day, like I do, I get a lot of golf ideas.
+
+And then the feed too, the feed is a fun one because you can experiment, and I think people should experiment more than they do. You can write anything you want in the prompt and get a feed of whatever. Like I mix and match things all the time and have a really interesting feed. I often change mine just because sometimes I'll get tired of getting like Muse news or something, and I'll switch to something else, like I try to do like kids' stuff on the weekend, for example. But yeah, I mean, it's still a native surface though. Like the feed unit that you're looking at is still like one that we've designed, and it's being powered by the intelligence softly and the personalization that your Muse has, but it's not yet like a fully generated surface.
+
+</details>
+
+### 实机演示：Marlo 的硬核私人爱好场景探索
+
+**Claire Vo**: 既然聊到了灵感以及那些 Muse 能为你做到、但你此前可能闻所未闻的使用场景，接下来请把你的屏幕共享出来，带我们看看你自己的 Muse 实践吧！在你投屏的间隙，我也分享一下我的 Muse 的名字：它叫 Slum，是一只粉红色的恐龙，以我孩子最喜欢的毛绒玩具为原型，超级可爱。好了，让我们看看你的 Marlo！
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: Okay, so speaking of ideas or things that your Muse can do for you that you wouldn't have thought of, I'm going to let you get your screen up and share with us some of your ideas. And while you're doing that, I will tell you what my Muse's name is, which is Slum. Slum is a pink dinosaur fashioned after my child's favorite stuffy, and he is very adorable. Okay, so let's take a look at Marlo!
+
+</details>
+
+**Alex Cornell**: 我的 Muse 叫 Marlo，形象是一只仙人掌。我和 Marlo 之间的渊源有点微妙。我最初用的其实是官方吉祥物 Jellybot，那个名字取自我女儿的小名“Jellybug”。但后来当团队全方位把 Jellybot 推为官方默认形象后，我继续用它感觉有点太贴近真实生活了，怪怪的。于是我把它换成了一个仙人掌角色 Marlo，我非常喜欢它，尤其是它抱着的那台毛茸茸的笔记本电脑。
+
+<details>
+<summary>Original English</summary>
+
+**Alex Cornell**: Mine is Marlo, which is a cactus. And I have a bit of a complex relationship with Marlo because my original Muse was Jellybot, which is the mascot that you see everywhere, and it's named after my daughter, who we call Jellybug. And when we started using Jellybot everywhere, I felt kind of weird using Jellybot for mine because it was just too close to home. So I made kind of a cactus version, which is Marlo, which I like a lot, especially those little...
+
+</details>
+
+**Claire Vo**: 我太喜欢那台毛茸茸的小电脑了，每次看到都戳中我的笑点。好了，给我们展示几个你用 Marlo 做过的有趣事情吧！
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: I love the fuzzy laptops! Just send me, they are funny. Okay, well, walk me through some things that you do with Marlo that are fun?
+
+</details>
+
+**Alex Cornell**: 我挑几件我最近最喜欢的案例。如果你平时使用 **Instagram**，我强烈建议你尝试这个玩法：我让 Marlo 遍历我在 Instagram 上收藏保存过的所有帖子，把它们分门别类归纳整理到不同的文件夹里。接着我对它说：“根据我所有收藏的内容，给我推选一些购物灵感和购买建议。”如果它仅仅把建议以纯文本列表的形式吐出来，那也很棒；但我最喜欢的一点在于，面对这些原本平淡无奇的数据，你可以用一种极其个性化、趣味盎然的视觉风格将它们渲染出来。
+
+你们现在在屏幕上看到的，就是 **Jellybot's SkyMall**。它提取了那些分析我 Instagram 收藏后得出的好物推荐，但完全采用了 90 年代经典的 SkyMall 飞机购物杂志和 Sharper Image 目录的视觉语言与排版调性进行了渲染！作为一个 90 年代长大的孩子，这种界面简直直接命中了我的审美情怀。比如你看这个时钟，就是系统精准推荐的一个绝佳例子。
+
+<details>
+<summary>Original English</summary>
+
+**Alex Cornell**: Yeah, I can show you a few things. So I think one of my favorite things recently is, and I would recommend doing this by the way, if you use Instagram, I had Marlo look at everything I'd saved on Instagram and just organize them, put all my saves in folders and categories. But then I said, okay, look at everything I've saved and maybe send me some suggestions for shopping ideas, like gives them that I think. And it did that again just in text, which was a good idea. But one of my favorite things I think to do with these systems is take what would be otherwise like a fairly mundane set of data and render it in a way that I personally find really fun. So with this, what you're looking at here is Jellybot's SkyMall, which is that same set of suggestions that have looked at everything I've saved on Instagram, considered some ideas for things that I might be interested in, but then rendered them in kind of the vernacular of the SkyMall, Sharper Image magazine. So as a 90s kid, this is speaking my actual language. So like this clock, for example, you can see right here was a good suggestion.
+
+</details>
+
+**Claire Vo**: 当然，这太酷了！
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: And of course!
+
+</details>
+
+**Alex Cornell**: 这个页面每天都会自动刷新。作为一名设计师，这纯粹在视觉形式上就让我感到非常愉悦和过瘾；而且说不定哪天我真的需要一款新的雨水收集器呢？
+
+<details>
+<summary>Original English</summary>
+
+**Alex Cornell**: Yeah, so this is a fun one. And I think like it refreshes every day, and it's kind of a really interesting way both just for me personally as a designer to look at because I think it's a really fun type of crazy design. But also like, you know, I may be one day in the market for a new rain trainer, so it's nice to see that.
+
+</details>
+
+**Claire Vo**: 我太爱这个了！顺便问一句，你直接通过 Marlo 下单买过东西吗？它有没有帮你完成过端到端的购买流程？
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: I love this! And then have you, I just am curious, have you transacted with Marlo? Has Marlo bought things?
+
+</details>
+
+**Alex Cornell**: 买过，不过买的都不是什么惊天动地的大件，基本是表带之类的小配件。其实我日常最常用、也是最核心的一个功能，是把 Muse 当成一个拥有全网超能力的**雷达监控系统**。我让它帮我紧盯全网动态，比如：“如果这位音乐人发布了新专辑，立刻通知我”；“如果这位歌手巡演来到旧金山，赶紧告诉我”；“如果这个高尔夫品牌跟特定设计师推出了联名款，立即提醒我”。我设置了大量这种后台雷达监控。电影票也是一个典型场景，随时监控场次开售。
+
+我目前还没给 SkyMall 杂志页面打通一键自动结账的流程，那是我接下来想补齐的能力。但现阶段它对我来说更多是一种趣味性的享受，我单纯沉醉于看到这些零散信息被包装成复古杂志排版的视觉质感。
+
+<details>
+<summary>Original English</summary>
+
+**Alex Cornell**: Yeah, but probably not anything that exciting, like watch straps and things like that. One of the things I do most actually with mine, and probably my favorite use case, is like I feel like a kind of monitoring superpower where it is always looking for like, "Oh, if this artist releases a new album, tell me." Okay, great. "If this artist comes to San Francisco, go tell me." "If this golf brand does a collaboration with this person, tell me." I have a lot of things on the radar. And so like, you know, movie tickets are a big one as well. So yeah, I have. And I think that it's definitely something that is really useful. I haven't hooked this up, that's actually something I would like to do, to where I can like make it easy to, if I do see something I like, go and get it. But it's mostly because this is more of a fun thing for me, and I just love seeing these things rendered this way.
+
+</details>
+
+**Claire Vo**: 在这个场景下还有一个进阶玩法，我自己在日常中经常用：我设置了一个定时例行任务，让 Agent 每周自动扫描我想购买的心愿单，查看是否有任何商品正在打折。一旦发现降价，它就会主动弹窗告诉我：“你一直想买的这件东西现在打折了”，或者“某家零售商正在特价促销”。这样我就能第一时间锁定降价折扣。我还会用它来做详尽的比价。
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: You know, the other thing that you can do here, which I do, is I have a recurring task that every week, it looks at the list of stuff that I'm interested in buying and sees if any of it is on sale. And so it'll be like, "A thing you've been waiting for is now discounted," or "This vendor happens to be selling it on sale." So then I just get that just-in-time discount on something. I also do a lot of price comparison.
+
+</details>
+
+**Alex Cornell**: 是的，各类商品的前期深度调研我也全权交给它处理，无论是价格比对还是参数筛选。这让我回想起以前极其繁琐的手工流程：比如我要给两岁小孩买一个儿童安全座椅，在以前，这通常意味着我要开启漫长的 Google 检索，去 YouTube 上看几十个开箱测评视频。而现在，我直接把诉求扔给 Muse，它会帮我搞定全盘调研，然后再由此发散展开。
+
+<details>
+<summary>Original English</summary>
+
+**Alex Cornell**: Yeah, yeah, and I do all the research as well too, whether it's price or just kind of... It reminds me of like used to be a very manual process of like, okay, I'm in the market for a toddler car seat. Normally that would kick off a lot of web searches, a lot of YouTube watching and everything like this. And now it's like I usually start in Muse with whatever it is, and then kind of go from there.
+
+</details>
+
+**Claire Vo**: 没错。而且我觉得很多用户还没充分意识到 **Instagram 连接器** 的威力。我自己也在重度使用它。Instagram 蕴藏着极其丰富的个人数字化记忆，但长期以来它的数据格式非常封闭非结构化，以前几乎无法被程序进行深度推理与分析。而现在，Agent 具备了理解和提取这些数据价值的能力。更进一步地说，现在的智能体不仅能接 API，还能直接登录各类网页。我现在也经常调用我的 Pinterest 收藏夹，重度依赖这些视觉存档。对于屏幕前广大设计师而言，一个极具启发性的工作流是：直接打开你的一个 Pinterest 灵感画板或收藏组，告诉 Agent：“我很喜欢这一套视觉风格，请帮我提炼其设计语汇，并基于此生成一套全新的创意概念”。当智能体能够直接理解多模态视觉数据，尤其配合网页登录与社媒连接器，它彻底解锁了海量此前极难实现的创意场景。
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: Yeah. Well, and I do think people are really... I haven't heard a lot of folks talk about the Instagram connector. It's one that I also use a lot. It's a very rich source of personal information that has historically been in a format very hard to reason with. And now it is in a format that I can actually reason and extract that value out of it. Because now these agents can log into websites, I use my Pinterest a lot more too. I use these visual records a lot more than I had in the past. For the designers out there, one of the things that I've done recently is open up a board or a saved group and said, like, "I like this, help me generate concepts based on this or language I can use to describe this." And so the ability of these agents to reason with visual data in a way, especially if you just log into a website or use an Instagram connector, unleashes a lot of creative use cases that I feel like have been harder to do before.
+
+</details>
+
+### 数据盘活与重构：让沉睡的数字记忆重新呼吸
+
+**Alex Cornell**: 结合 Pinterest 确实是个好点子。正如你所言，我觉得自己很多宝贵的个人信息散落在互联网的各个角落，随着时间的流逝逐渐被尘封遗忘。比如我的 Instagram 收藏夹，我用了这么多年，但平时极少会特意翻回去重新审视那些内容。有一个典型的例子（虽然今天没在演示屏幕上打开）：我日常在 Ins 上保存了海量的高尔夫击球技巧教学帖，真的有成百上千条，但我保存后就再也没回头看过。于是我让 Marlo 遍历所有这些零散教学，把它们系统化归纳整理成了一份专门面向我的定制化高尔夫训练手册。上面清晰列出：“Alex，根据你自己的收藏记录，以下是你在击球时显然认为自己最需要攻克和练习的技术环节”。这体验太棒了，因为否则那些内容就只能永远沉睡在时间长河里。
+
+屏幕上展示的这个则是另一个与 Instagram 相关的案例：我平时会发布大量的限时动态（Stories）。这个自定义版块做的事情，就是每天从过去的档案中随机调出我当年发布的限时动态回顾。这原本也是我平时根本不会主动去翻阅的内容，但现在它成了我的专属回忆流。你可以把任何你喜欢的内容源接入进来。我每天会抽空看上几次，重温美好的回忆。我女儿今年五岁了，能随时看到她小时候牙牙学语的照片视频，感觉特别温馨。
+
+<details>
+<summary>Original English</summary>
+
+**Alex Cornell**: Yeah, Pinterest is a great idea too. I mean, I think to your point, I feel like I have scattered about the internet a lot of this information that's kind of just gotten lost to time, you know. And so like my Instagram saves, for better for worse, I've been using that forever, but I very rarely go back and mill about in there and look at them, because you're kind of just, I don't know what I would be doing necessarily. One thing I did, actually, I don't have it here, but I do save a lot of golf tips, hundreds and hundreds of golf tips that I never go back in and look at. So I had Marlo consolidate them all into like a manual. And so that I have this conflict: "For Alex: these are the things you apparently think you should work on." And that was pretty cool because it was otherwise kind of just buried in time.
+
+And I have this one too, which like this is another Instagram one, but I do post a lot of stories. And this one is basically just showing me an archive of random stories from the past that, again, I would never look at. And it's kind of like my new kind of feed where this is just mine, but you could bring in any kind of content here. And I love looking at this kind of stuff, it's just nice memories. I'll check it a couple times a day. And having a five-year-old, it's funny seeing little things of her when she was growing up.
+
+</details>
+
+**Claire Vo**: 既然聊到了高尔夫，我们必须好好谈谈如何用 Muse 极度硬核地赋能个人爱好！展开讲讲你是怎么用 Muse 辅助你的高尔夫运动的？作为一个五岁孩子的父亲，我猜你的打球时间肯定非常不稳定吧。
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: Okay, you mentioned the golf, and we're going to talk about Muse for going hard on your hobbies. So let's talk about how are you using Muse for your golf game, which I know as a parent of a five-year-old, I'm presuming is inconsistent at best.
+
+</details>
+
+**Alex Cornell**: 哈哈太真实了！我经常在团队里拿这个开玩笑，因为我在 Muse 上构建的大量功能最初都是为了高尔夫设计的，但这完全建立在我有时间下场打球的假设之上。然而为了做这个项目我们日以继夜地赶工，我能真正去球场的机会少之又少。但我主要从几个维度来使用它。这跟我玩国际象棋等其他爱好很像：我原本就有一些记录运动数据的专业工具。每次打球我都会记录一轮比赛的基础数据，这是大多数球手的常规操作，涵盖球场信息、总杆数等等。更关键的是，我会通过运动手表记录下我击出的**每一杆的详细数据**。因此我拥有海量可供分析的底层数据。
+
+每当我打完一场球，Muse 就会自动给我推送一份复盘战报。这比传统的纸质记分卡要丰富深入得多。如果某个球场我经常去打，它甚至能记住该球场的特征并做纵向对比：“在第某洞，你平时的典型表现是怎样，今天你在该洞发挥得更好还是更差”。在重返该球场比赛时这极具战略价值。屏幕上展示的这个页面就在做类似的归因分析：它正在帮我拆解，如何通过在某几杆上的微调，把我今天的 84 杆改写为 79 杆。
+
+再次强调，正如我们前面探讨的，它把原本枯燥、扁平的数字统计，自动转化为了极富叙事感的多维图表。红线代表我前半程极其糟糕的表现，而后半程的表现则非常亮眼。通过图表你可以一目了然地看出走势，而如果只看枯燥的传统记分卡，你很难获得这种直观洞察。此外在击球练习时，我由于能练习的时间极其有限，所以每次练习都必须高度由数据驱动。我练球时身上挂满了各种感应仪器，就像那些浑身插满电极线和氧气管跑步的运动员一样。仪器会实时监测我的挥杆动作。Muse 能够把这些极其复杂的专业监测指标消化解析，然后清晰告诉我：我的挥杆在哪些环节展现良好、具体需要在哪个动作点进行改进。屏幕上正是这样一份把单次练习拆解到细枝末节的深度报告，高尔夫球手一眼就能看懂这些指标的含金量。
+
+<details>
+<summary>Original English</summary>
+
+**Alex Cornell**: I know, yeah. I always joke about this with people on the team, because a lot of what I would want to use Muse for was golf-oriented, but that sort of assumed that I was able to play golf. But we've been building this project for so long that it's kind of very few and far between where I'm able to get out there. But yeah, I use it in a couple ways. And I think what's nice about this is similar to some of my other hobbies like chess, there are services already that I use that monitor how I'm playing. So every time I play, I record the round. That's the thing most golfers do. And so that's like some basic data about the course that you played, what your score was. But I also keep track of every shot that I hit on a watch, and so I have a lot of data that I can provide.
+
+And what it will send me basically every time I play is kind of like a round recap. So I'll see how the round unfolded much richer than like a paper scorecard or some other way that I'd be able to see it. And it will tell me a little bit about the course if I play the course a lot, and it will tell me like, "Okay, on this hole, this is usually what happened. You did better today or worse today," which is really helpful when I go back and play the course again. This one is trying to tell me how I could have turned my 84 into a 79 by just doing a little bit better here or there. And it's taking data that was pretty much very plain and monolithic, not really showing me more than the number, and turned it into these different visuals that tell much more of a story. The red line is like a very bad front nine, and the back nine was a very good back nine. You can see that with the graph very easily, that would be much harder to do if you look at the scorecard.
+
+Also, whenever I practice, I can only practice every so often. So when I practice, it has to be very, very data-oriented. So I have all these machines that are looking at me when I swing. And this again is putting out all of this stuff that is really helpful to get me used to where I can improve, what I need to do better, what's looking good. And that's what we're looking at here, is like a practice session really broken down into fine detail. Golfers will know what this stuff means, but it's very useful.
+
+</details>
+
+**Claire Vo**: 而且你在 Muse 里面立下了一个技术进阶目标对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: And you have a Muse goal to get better?
+
+</details>
+
+**Alex Cornell**: 是的，我设了一个长期目标。每次看到自己毫无进展时确实挺扎心的，但我的人生长期追求之一，就是在有生之年把高尔夫差点打进个位数（single-digit handicap）。这是一个难度极高但并非遥不可及的目标，非常适合作为人机协作的共同目标。我可以随时跟 Muse 探讨打球心得，而它完全清楚我的每一次练习和数据追踪最终都是在为这个宏大目标积蓄力量。
+
+<details>
+<summary>Original English</summary>
+
+**Alex Cornell**: I do. When I make no progress against it, it's kind of sad, but that is one of my long-term goals. I love the tracking section in particular, just because there's a lot that I keep an eye on. But in terms of long-term goals, it's basically I would really like to be a single-digit handicap in my life, which is achievable, it's hard. It's kind of like the perfect goal because I can talk to Muse about it anytime, and it knows that all these things accrue into that goal. It is definitely one of my main ones.
+
+</details>
+
+### 对话架构哲学：单线程主干与侧边栏的权衡
+
+**Claire Vo**: 关于 Muse 我想问一个快速的架构问题，这可能关乎个人使用习惯，或者你可以给我们观众透露一点官方使用诀窍：到底该用**主聊天（main chat）**还是**侧边聊天（side chats）**？我到现在都还没彻底决定哪个更好。我下意识的冲动总是倾向于开侧边分支，但我不知道这究竟是过去使用 ChatGPT 等机器人留下的操作惯性，还是它在底层逻辑上确实有独立价值？
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: Quick question about Muse, and this could be maybe personal preference, or you just give our audience a little bit of insider tips on how to use it. Main chat or side chats? I haven't decided if one is better than the other. My impulse is towards side chat, and I don't know if that's just an artifact of how I've been working with chatbots, or it's actually useful?
+
+</details>
+
+**Alex Cornell**: 问得太好了！这是我最喜欢探讨的话题之一，因为这是 AI 交互领域目前极其引人入胜的架构难题。在 Muse 的设计中，我们刻意定义了一条规范的“主聊天”（canonical main chat），并且高度有意地将其打造为核心主线。我们从心底里认为，哪怕你 100% 只用这根主线，你也完全能够顺畅使用整个产品。但我们也深知，对于绝大多数人来说——尤其是那些已经深度习惯了当前市面上几乎所有 AI 工具运作模式的用户——多线程（threads）是一种极度根深蒂固且好用的组织整理方式。
+
+因此我们提供了 Side Chat（侧边聊）：如果你想把某个特定任务剥离出来、不想污染你的主聊天流，或者面对一个边界极其清晰的小问题，你都可以开一个侧边聊天去处理。但请注意，Muse 的骨架是一个带有分支可能性的单主线系统，而大多数主流应用是纯多线程模式——每次打开就是一个新会话。当大语言模型的上下文窗口足够庞大、能够轻松在单个对话中管理统筹一切历史记忆时，对我而言，保持在单条对话流中，才更符合你与另一个真实独立生命实体交互的感觉。这就像你跟真人打交道一样：你在现实中绝不可能跟自己的母亲“开一个平行侧边会话”去聊别的琐事。
+
+话虽如此，我认为在这个领域还有大量非常激动人心的演进工作要做，以将其全面升级到真正成熟的“Agent 时代”。即使到了今天，这依然是一个尚未被充分探索的设计领域。虽然我对我们目前的方案很满意——因为它把单主线聊天的优雅之处展示给了大家——但在帮助用户理清心智模型、明白到底何时该用主线、何时该用分支方面，依然大有可为。你的困惑极其真实且普遍，任何一个普通用户走进来都会困惑：“我为什么用这个而不用那个？”未来这块界面的演变一定会非常精彩。
+
+<details>
+<summary>Original English</summary>
+
+**Alex Cornell**: Great question actually. One of my favorite things to talk about, because I think it's such an interesting architectural problem in the space. The way Muse is designed is there is a canonical main chat that is kind of very intentionally the primary mainline. And we sort of feel like you could use that entirely if you wanted to. We know that for a lot of people, especially anyone that's used to the way most of these apps work today, threading is a very useful way to organize. So we have side chat for that purpose. Like if you want to put something specifically just to get it out of your main chat, or it's a very scoped problem, that's why side chats are there. But it is definitely like a single thread with the possibility of side threads, whereas most apps are all threads. That's kind of the traditional model, like a new thread every time you open it.
+
+And I think once the models were able to handle the context and be able to manage everything in a single chat, to me, that is a little bit easier way to interface with what you feel like is another entity, the same way you would have with another person. Like I don't side-thread with my mom or something like that. Now all that said, I think that there remains a lot of really interesting work to do to kind of uplevel this to maybe you could say like the agentic era. I feel like even still, this is sort of an underexplored area where I'm very happy with our solution currently because we've sort of exposed the benefit of the main chat to people. But I feel like there's a lot more that we could do in terms of helping people organize and really understand the difference between the main chat and the side chat. Because your question is a good one, and one that a normal person could very reasonably come to and just be like, "Why would I use this instead of that?" And I think it's going to be an exciting area in the future.
+
+</details>
+
+### 从文字到播客：跨媒介重构个人数字遗产
+
+**Claire Vo**: 好的，再向我们展示最后一个你用 Muse 打造的个人爱好案例吧！
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: Okay, show me your last hobby artifact that you've made.
+
+</details>
+
+**Alex Cornell**: 好的，我想展示这个**挂载了播客音频**的案例，因为这个真的超级好玩。我很多年前写过一个个人博客，后来在漫长的岁月里丢失了。当年我曾把它从 Blogger 迁移到 Tumblr 等各种平台，到处搬家。我让 Marlo 顺着 Wayback Machine 互联网时光机，把散落在全网的旧博文一篇篇抓取找了回来，最初它帮我汇总成了一份完整的 PDF 文档，后来又生成了一个看起来就像复古博客一样的应用界面。
+
+但我现在最喜欢的重温方式，是让它每天早晨为我生成一段播客音频推送到手机上！它每天会随机挑出一篇我二十年前写的旧文章进行朗诵。你可以听到二十年前那个年轻的 Alex 满脑子都在思考些什么奇葩问题，比如“为什么有 90% 的人都穿着一模一样颜色的裤子？”听着二十年前的自己碎碎念，体验极其奇妙幽默。因为二十年过去了，你根本记不清自己当年写过什么，但听着音频里的观点，你又会忍不住感慨：“天哪，这想法确实太怪了，但这绝对是我能干得出来的事！”
+
+这贯穿了我所有用例的核心主题：在我的人生中，沉淀了无数这类被岁月掩埋的内容资产。由于当初的呈现方式并不利于我在当下重新消费和利用，它们就只能被弃之一旁。而 Muse 能够把这些沉睡的数据挖掘出来，以一种对今天的我极具趣味性或实用性的全新媒介形态重新激活。无论是做成这样的复古播客，还是前面提到的打球建议。包括国际象棋我也做了类似的应用，它能拉取我在 Chess.com 上的对局数据进行详尽分析。甚至这个象棋助理还会带点毒舌特质，在分析我走法时毫不留情地吐槽我的失误。
+
+<details>
+<summary>Original English</summary>
+
+**Alex Cornell**: Yeah, one I wanted to show you was this one with the podcast attached, because it's very fun. So I had a blog years ago, has been lost to time, and I had Marlo go and find it via the Wayback Machine, going to Blogger, as it moved between Tumblr, I moved it all around. So it went back and found all the posts, and then accumulated them into one PDF first, and then this little thing that basically looks like a blog. But the way that I like to read it now, just again for memory, is via a podcast, which is sent to me every morning. And it is just basically a random reading, and you can hear all these weird posts: "Does anyone else notice that 90% of people wear the exact same color pants?" Which is the kind of thing that a 20-years-ago Alex used to wonder about. It's very, very funny because you're hearing yourself, but 20 years ago you barely remember anything. So everything that person's saying, "Oh my god, that is kind of weird, but of course I would think that because it was me."
+
+It's sort of a theme here, which is like I feel like I'm constantly taking these things that I had in my life forever, and I do not look at them, it's presented in such a way that it wasn't useful for me at the time. And Muse is able to take it and just reform it into a way that's like really interesting and useful for me, whether it's interesting like this or useful like the golf stuff. I have the same thing for chess as well, which will break down my recent games. And with this one, it gets a little bit snarky, I guess you could say. I didn't tell it to do this, but it will poke at me a little bit, which is kind of fun, like "that bishop C5 collapse." But it's a fun one because it's useful, but it's also kind of funny to have like a snarky chess coach that's trying to help me get better.
+
+</details>
+
+**Claire Vo**: 给那些只在听音频播客的听众描述一下：Alex 屏幕上展示的是一个仪表盘，它对接了你的 Chess.com 账号数据对吧？然后对你的每一场对局进行了细致入微的复盘与数据可视化呈现。
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: Well, and for folks that aren't watching, this is a dashboard that pulls in your Chess.com data, right? And just renders it and gives you game-by-game breakdowns, really like this.
+
+</details>
+
+**Alex Cornell**: 是的，这非常管用。而且这一切你在聊天对话框里下达自然语言指令就能定义出来。我最初提需求时就告诉它：“我有一个象棋账号，我希望看到综合性的战局走势分析，让我看清自己有没有进步。”虽然从现在的图表看我最近的胜率有点下滑。但我最核心的诉求，是让它对最近一场对局进行深度复盘，让我看清自己的具体盲点在哪里。比如这一盘我中途直接认输退出了，这显然没啥分析价值；但毕竟当五岁的女儿跑回家扑向你时，你必须立刻停下手中的一切游戏去陪她。
+
+<details>
+<summary>Original English</summary>
+
+**Alex Cornell**: Yeah, it's been useful because you basically just define this in chat. So when I originally asked for this, I said, "I have a chess account. I would love to see kind of a mixture of analysis, but also trends over time because it's helpful for me to know am I improving." It looks like right now I'm kind of falling off a bit. But then the main thing that I wanted it to do in this case is give me a review of the most recent game, so I can go through here and try to get a sense of what did I do wrong. In this case, I just quit mid-game, so that wouldn't be that helpful. But you know, when your daughter arrives home, you have to stop playing.
+
+</details>
+
+**Claire Vo**: 完全正确，家庭永远第一！到目前为止，我们看到了 Marlo 大显身手：从复活陈旧的 Instagram 帖子和陈年博客，到打造极具复古情怀的定制购物目录，再到化身数据分析大师全面盘活你的个人爱好数据，助力你达成短期和长期的个人目标。这也印证了为什么大家对 Muse 的评价如此之高——它设计极为考究、克制地只呈现你真正需要的信息、响应极其敏捷，而且拥有个性化定制的萌系 Avatar。接下来让我们进入快速问答环节，随后我就让你回归重要的日常工作中。
+
+第一个问题：对于当下的绝大多数设计师和产品经理而言，设计这类智能体体验与 AI 原生交互是一件极其前沿且陌生的事情。界面是崭新的，底层技术架构也是颠覆性的。在整个探索过程中，**你有哪些认知是被迫打破重塑的？又有设计领域哪些历久弥新的经典法则可以继续依赖？**
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: So that's exactly right. Okay, so we have seen Marlo do everything from revive old Instagram posts and blogs to give you a custom and kind of nostalgic shopping catalog, to taking all your data you collect, especially for some of your hobbies, and let you put it in a way that will allow you to achieve either short-term or long-term goals. And we talked a lot about why I think a lot of people are reacting so positively to Muse: because it's well-designed, it's thoughtful, it shows you what you need, it's fast, and we all have these cute little avatars.
+
+Well, let's do very quick lightning-round questions, and then I will get you back to all your important work. First question is just: designing these agent experiences and AI experiences are very new to a lot of designers and PMs. The surfaces are new, the underlying infrastructure and technology is new. What did you have to learn? And then what were you able to fall back on that has worked forever from a design perspective?
+
+</details>
+
+### 非确定性系统下的设计心法：拥抱不完美与提示词策略
+
+**Alex Cornell**: 这是一个极其深刻的好问题。对于我和任何涉足这个项目或进入该领域的设计师来说，我认为最关键的心智转变，就是必须从根本上理解**什么是非确定性系统（non-deterministic system）**，以及当你在设计一个屏幕时，这种非确定性到底意味着什么。
+
+在我以往的整个职业生涯中，设计一个功能意味着你坐下来推敲构思、完成视觉设计，然后你心里非常清楚，在任何客户的屏幕上，它基本上都会严格按照代码编写好的逻辑运行并呈现，这几乎是唯一的预期输出。哪怕出现 Bug，其表现形式往往也是非常局限的，比如“某个圆圈没有在预期的位置渲染出来”。你需要思考的边界是非常确定和封闭的。虽然我们今天聊这个话题似乎已经习以为常，但只要回想哪怕仅仅一年前，那种落差感依然极其剧烈。当你第一次踏入这个领域时，你必须深刻意识到：虽然系统最终通常会走向你期望的方向，但我手机里的 Muse 设定、呈现的界面与输出内容，跟你手机里的完全是两个世界，跟其他任何人的也截然不同。它们是如此高度私人化，能做的事情又如此包罗万象，以至于**你必须将注意力更多放在底层架构、脚手架系统以及基础约束规则上**，而不是纠结于某个微小的具体像素细节。
+
+这甚至导致了一件对我来说最痛苦的事情：有时在审视智能体生成的内容制品时，我必须在脑海里强行关闭我作为设计师的“挑剔本能”。因为在过去，如果页面视觉有瑕疵，你可以花尽天下所有时间去把它抠到完美。但面对生成式产物，我逐渐学会了用更开放包容的心态看待它。在某种程度上这是一种解脱：它依然为我提供了极具价值的输出。如果我想精益求精，我可以花时间让它的配色变得完美无瑕；但即使不去精雕细琢，它目前展现出来的效果也足够出色、足够有用了。这是一个全新的世界，我确实花了一段时间才彻底适应。
+
+<details>
+<summary>Original English</summary>
+
+**Alex Cornell**: Oh, it's a great question. You know, I think one thing that I have found for myself and any designer coming into this project, or really just this space, is really wrapping your head around what a non-deterministic system is, and what that means for when you're designing a screen. And by that, I mean where for my whole career, you would conceive a feature, you would be able to think about it and then design it, and kind of know that like on any given customer's screen, it's basically going to work like this and look like this because that is the way that this thing has been coded. And that is the only outcome that you will see. And then the bug that you would see would be like, "Oh no, this circle didn't appear where it's supposed to," and it'd be very, very scoped in terms of what you had to think about.
+
+And it sounds routine to us now to talk about this, but like you're saying in terms of things I had to learn, it's hard to remember what it felt like even just a year ago, how different things were. When you first come into this space, I think really understanding that these systems usually do kind of end up the way you think, but my Muse setup is completely different than yours, is completely different than someone else's. They're so personal, and they can do so many different things that you really kind of have to think more about the underlying foundation and the system, the architecture and scaffolding in place, and less about like, "Well, what about this one little thing here? Is it going to be just so?"
+
+One of the things that's hardest for me sometimes is looking at those artifacts that we were looking at, I kind of have to turn off my brain sometimes design-wise because I'm like, it's different. If you want, go and spend all the time in the world to make it look exactly as you want, but I've come to kind of view it a little bit more freely. And it's kind of, I think, liberating in some ways to feel like this is still just a very useful output for me. And maybe I will take the time to make the colors just so, but otherwise it's fine, you know. And that's kind of a new world, and that took some getting used to.
+
+</details>
+
+**Claire Vo**: 我觉得你对“平庸废料（slop）与高水准 Agent 设计”之间的光谱区间给出了极其包容温和的诠释。顺着这个话题，当你的 Muse（你的 Marlo）开始变得非常有主见、不听指令、交出的成果没有达到你的质量预期时，你的 **Prompting 策略** 是什么？你会怎么做？
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: I would say that is a very, very gentle approach to the spectrum of slop to high-quality agent design. Speaking of, you didn't get the colors quite right when your Muse, when Marlo, he's opinionated and not giving you what you want from a quality perspective, just not listening: what is your prompting strategy? What do you do?
+
+</details>
+
+**Alex Cornell**: 我其实没有一套成体系的刻意策略，但我发现自己**非常注重礼貌**。我从来不会打全部大写的字母，也绝不使用连串的感叹号。有时候我回头审视自己敲下的字句，甚至会失笑：“天哪，我表达挫败感的方式也太温文尔雅了吧！”在编写代码时我也深有同感：当任务耗费了漫长的时间却跑偏翻车时，内心确实极其抓狂。但让我自己都感到惊讶的是，潜意识里我对待智能体的方式，完全就像在现实中对待一个真人同事一样。我在现实生活里很少对别人发脾气，所以我自然也不会对 Marlo 或 Jellybot 破口大骂。
+
+我有一些朋友曾给我看过他们的运行追踪记录，当他们被彻底惹毛时，模型的思考链（thinking trace）里甚至会出现类似这种重置机制：“检测到 Alex 现在情绪非常沮丧……”。这确实会让我反思，也许有时我在提示词里应该表现得更强硬、更直接一些。
+
+<details>
+<summary>Original English</summary>
+
+**Alex Cornell**: Well, not like a well-formed one in the sense that I didn't suppose I have a reason about it, but I am very polite. I think I'm not an ALL CAPS, I'm not a multi-exclamation-mark person. And I do find myself sometimes looking at what I wrote and be like, "Well, I was really nice to express that frustration." And I think it's really interesting, and I feel this way when I'm doing any kind of coding thing as well, where things can take a long, long time, they go sideways, and it is really frustrating. I have always been surprised with how not consciously, but how I will just speak to it the way I would speak to anybody else about it. I don't ever really get mad at other people, so I don't really get mad at Marlo or Jellybot otherwise, you know.
+
+I have seen, I have some friends who show me sometimes like the traces when they have got really mad, the thinking trace will be like kind of a reset like, "Okay, Alex is frustrated." So it does make me think sometimes I could probably be a little bit more forceful.
+
+</details>
+
+**Claire Vo**: 确实需要更有针对性。我通常也极力保持客气，唯一的例外是当代码智能体发生极其昂贵、完全脱轨的幻觉翻车冒险时——那真的会让我心态爆炸。不过说实话，每次我忍不住冲智能体咆哮时，往往就像生活中的人际关系一样，问题通常出在我自己身上，是因为我的提示词没有清晰定义好输入。
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: Yeah, more factor. You know, I also try to generally be polite, with the exception of what feels like very expensive, misaligned coding misadventures. That's the one that like really gets me. And to be honest, every time I'm yelling, it is as true to agents as it is in life: it's usually a me-problem, we misprompted them.
+
+</details>
+
+**Alex Cornell**: 哈哈你说得完全没错！当它们突然走偏去执行奇怪的歧途冒险时，确实让人哭笑不得。
+
+<details>
+<summary>Original English</summary>
+
+**Alex Cornell**: Yeah, but you're right though, like when they go off into the misadventure, that's not training well.
+
+</details>
+
+**Claire Vo**: Alex，今天聊得太尽兴了！非常感谢你如此慷慨地与我们分享宝贵的时间与见解。我们都由衷喜爱 Muse，也无比期待见证它未来的持续进化。听众们可以在哪里关注你的动态？大家如何能够支持你的工作？
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: Alex, this has been so fun. Thank you for being so generous with your time. We love Muse, I'm excited to see more of it as it evolves. Where can we find you? How can we be helpful, and how can we follow along?
+
+</details>
+
+**Alex Cornell**: 对我们最有帮助的事情，就是去**下载体验 Meta Muse**，亲自把玩一下。当你在使用中遇到不顺手的地方，或者渴望某种新功能时，直接在软件里告诉 Muse！那些反馈最终都会如实汇总到我们开发团队手里，这是对我们最大的支持。至于我个人的社交动态，在互联网上我主要活跃在 **Threads** 平台。我一直在上面分享 Muse 幕后的设计思考与决策细节，后续也会持续更新。因此去试用产品并告诉我们你的真实想法，就是最大的帮助！
+
+<details>
+<summary>Original English</summary>
+
+**Alex Cornell**: The most helpful thing would be to download Muse, try it out, and you can let Muse know when something isn't going right or you want a feature. Those do come to us, that's probably the most helpful thing. I think for me on the internet, Threads is probably the best place. I have been trying to do some posting about the behind-the-scenes and kind of some decisions that we made, and I'll continue to do that. So that's probably what I would say. But yeah, try it out and letting us know what you think is the most useful thing.
+
+</details>
+
+**Claire Vo**: 简直太棒了！再次感谢你做客《How I AI》！
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: So amazing. Well, thank you for joining How I AI!
+
+</details>
+
+**Alex Cornell**: 谢谢，非常感谢邀请！
+
+<details>
+<summary>Original English</summary>
+
+**Alex Cornell**: Yes, thanks for having me.
+
+</details>
+
+**Claire Vo**: 非常感谢大家的收看与收听！如果你喜欢本期节目，请在 YouTube 上点赞并订阅频道，更欢迎在评论区留下你的真知灼见。你也可以在 Apple Podcasts、Spotify 或任何你喜爱的播客平台上收听《How I AI》，并顺手给我们留下好评与打分，这将极大地帮助更多朋友发现我们的节目。欢迎访问 howiaipod.com 浏览往期所有精彩单集并了解更多节目详情。我们下期再会！
+
+<details>
+<summary>Original English</summary>
+
+**Claire Vo**: Thanks so much for watching! If you enjoyed the show, please like and subscribe here on YouTube, or even better, leave us a comment with your thoughts. You can also find this podcast on Apple Podcasts, Spotify, or your favorite podcast app. Please consider leaving us a rating and review, which will help others find the show. You can see all our episodes and learn more about the show at howiaipod.com. See you next time!
+
+</details>

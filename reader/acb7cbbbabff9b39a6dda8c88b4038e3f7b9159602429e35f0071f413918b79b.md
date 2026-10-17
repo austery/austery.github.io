@@ -1,0 +1,834 @@
+---
+author: New York Times Podcasts
+date: '2026-10-08'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=rVbpnMKVS1Y
+speaker: New York Times Podcasts
+tags:
+  - capital-punishment
+  - criminal-justice
+  - lethal-injection
+  - wrongful-conviction
+  - judicial-reform
+title: 死刑困境与分歧：从田纳西注射失误到佛罗里达提速处决
+summary: 本期节目聚焦田纳西州女死囚克里斯塔·派克注射死刑执行失误引发的全国震动。资深司法记者帕梅拉·科洛夫回顾了美国死刑支持率从1990年代严打时期的80%峰值滑落至如今刚过半的历史演变，剖析了犯罪率下降、高昂诉讼成本以及DNA平反浪潮对公众信心的重塑。同时深度探讨了特朗普重返白宫重启死刑号召下，佛罗里达州州长德桑蒂斯逆势加速处决、压缩上诉期及致命药物短缺所带来的制度性危机与伦理拷问。
+insight: ''
+draft: true
+series: ''
+category: politics-society
+area: society-thinking
+project: []
+people:
+  - Christa Pike
+  - Pamela Colloff
+  - Ron DeSantis
+companies_orgs:
+  - The New York Times
+  - Innocence Project
+products_models: []
+media_books:
+  - Catch the Devil
+status: evergreen
+---
+### 田纳西死刑事故与全国震动
+
+**雷切尔·阿布拉姆斯**: 欢迎收听《纽约时报》播客节目《The Daily》，我是**雷切尔·阿布拉姆斯**（Rachel Abrams）。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: From the New York Times, I'm Rachel Abrams and this is the Daily.
+
+</details>
+
+**克里斯塔·派克**: 我每天都在心里预演这场死刑，尤其是随着行刑日子的临近。
+
+<details>
+<summary>Original English</summary>
+
+**Christa Pike**: I run through this execution every day in my heart, especially with the day coming closer.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 上周，田纳西州一名名叫**克里斯塔·派克**（Christa Pike）的女子原定被执行注射死刑。派克表示：“我对我们现行注射死刑方式的担忧，说白了就是我没听到过任何好消息。”
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: Last week, a Tennessee woman named Christa Pike was set to be executed by lethal injection. The concerns I have on our lethal injection method are simply that I do not have good things.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 在计划执行死刑的前几天，派克向我的同事**艾米莉·科克伦**（Emily Cochran）透露了她的恐惧，她担心该州无法做到没有并发症或意外地将她处决。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: In the days leading up to her planned execution, Pike told my colleague Emily Cochran about her fears of the state's ability to kill her without complication.
+
+</details>
+
+**克里斯塔·派克**: 据说这种药物会带来极强的灼烧感。他们用到了各种可怕的词汇，想到自己会窒息，会被自己的体液和血液呛死、淹没。这对我来说听起来太可怕了。
+
+<details>
+<summary>Original English</summary>
+
+**Christa Pike**: The drug supposedly burns very bad. They use the word doano and the thought of suffocating and drowning on my own bodily fluid and blood. That sounds scary to me.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 最终，派克在承受了两剂注射死刑药物后幸存下来，并在纳什维尔的一家医院恢复了意识，目前她的伤情和身体状况依然十分危重。不仅如此，这还是田纳西州在短短几个月内发生的**第二起死刑执行失误事故**，促使州长暂停了今年剩余时间的所有死刑执行。
+
+今天，**帕梅拉·科洛夫**（Pamela Colloff）将与我们探讨公众对死刑支持度的持续减退，以及为何尽管如此，一些州仍在加倍强化死刑执行。今天是10月8日，星期四。帕梅拉·科洛夫，欢迎来到《The Daily》。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: In the end, Pike survived two doses of a lethal injection drug and regained consciousness in a Nashville hospital where her condition remains severe. And on top of that, this was Tennessee's second botched execution in just a few months and has led the governor to pause executions for the remainder of the year. Today, Pamela Kolaf talks about the waning public support for the death penalty and why despite it, some states are still doubling down. It's Thursday, October 8th. Pam Kolof, welcome to the Daily.
+
+</details>
+
+**帕梅拉·科洛夫**: 非常感谢邀请我。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: Thank you so much for having me.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 帕姆，我想很多人都对克里斯塔·派克这个案子感到极为震惊。当然，克里斯塔·派克在20世纪90年代承认并被定罪犯下了一起极其残忍可怕的谋杀案，但这显然不是人们过去一周热议的焦点。大家聚焦的是田纳西州对克里斯·派克这次失败的处决尝试中那些血腥可怖的细节。这次行刑失误真正引爆了一场关于死刑的全国性讨论——我们如何执行死刑、为何执行死刑。我们之所以想和你聊聊，是因为你作为一名深度报道死刑领域多年的资深记者，最近还出版了一本关于死刑的新书《Catch the Devil》。那么请告诉我们，你对这起案件有什么反应？你认为它在我们当前关于美国死刑的更广泛讨论中处于什么位置？
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: So Pam, I think a lot of people have been really stunned by the Christa Pike case. And Christa Pike, of course, is this woman who confessed to and was convicted of a really gruesome murder back in the '90s, but that obviously is not what people are talking about this last week. What people are focused on are the really grizzly details of this botched execution attempt of Chris Pike in Tennessee. This execution attempt has really ignited this national conversation about the death penalty, how we do it, why we do it, and we wanted to talk to you because you are a reporter who has covered the death penalty for years. You recently wrote a book about it called Catch the Devil. So tell us what your reaction to this case has been and where you think it fits into the broader conversation that we're having right now about the death penalty in America in this moment.
+
+</details>
+
+**帕梅拉·科洛夫**: 我认为，当我们审视克里斯塔·派克的遭遇时——必须明确说明，她在注射死刑中幸存了下来，这种事情在我们以往认知中几乎是从未发生过的，这彻底暴露了剥夺生命这一行径的残酷本质——我们可以看出，这可以说是一场长期累积、不断升级的危机的最恶劣例证。我认为这终于打破了沉默，触动了那些平时并不像我一样把全部时间花在思索“我们为何要这么做以及为何要以这种方式去做”的普通大众。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: I think when we look at what happened to Christa Pike, who to be clear survived lethal injection, which is something we are not familiar with having happened andual sort of lays bare the gruesomeness of the task at hand, we can see that this is sort of the worst example of something that's been building and building and that I think sort of finally broke through to people who don't spend all their time like me wondering why it is that we do this and why we do it the way we do it.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 过去几年里，注射死刑出现了如此之多的技术与流程问题。就在今年5月，田纳西州还发生过另一起性质截然不同的执行失误。而且我认为理解这一点非常重要：这一切发生的同时，美国民众对极刑的支持率正遭遇断崖式下跌。目前，我认为只有略高于50%的美国人还支持死刑。因此，这些拷问正以前所未有的方式浮出水面，而在20世纪80年代和90年代，情况完全不是这样。
+
+但令人玩味的是，尽管公众支持率在下降，我们却看到了一些异常的“孤岛州”——田纳西州就是其中之一——它们处决的人数反而比近年更多。因此，我很想探讨为什么有些州在此刻选择变本加厉、加倍下注。不过在此之前，我想先了解公众支持率下滑的历史脉络。你会从哪里讲起这个故事？又会如何叙述它呢？
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: There have been so many issues for the past few years with lethal injection. There was another botched execution in Tennessee with a completely different issue in May. And I think something important to understand is this is happening at a time when support among Americans for capital punishment has taken a nose dive. We currently have, I think it's just above 50% of Americans who support the death penalty. And so these questions are percolating to the surface in a way that they weren't back in the 1980s and 1990s. M but what's interesting is while we have a decline in public support we have these outlier states Tennessee being one of them that are executing more people than they have in recent years. So I want to get into the reasons why some states might be doubling down in this moment. But first I just want to understand the history of that declining public support. Where would you start that story and how would you tell it?
+
+</details>
+
+### 严打时代与注射死刑的诞生
+
+**帕梅拉·科洛夫**: 是的，我认为这要追溯到20世纪80年代以及那个“严打犯罪”（tough on crime）的时代。
+
+当时美国的暴力犯罪处于极为严峻的激增状态。那时的暴力犯罪猖獗程度是如今的人们很难想象的。1980年，有近500万个家庭遭遇过强奸、抢劫或严重袭击的侵害。当时在80年代和90年代初，暴力犯罪率是现在的两倍以上。到处都是同样的故事：恐惧。人们不敢走出家门。民众陷入恐慌，四处寻找反击和应对的手段。因此，人们都在苦苦寻找答案：我们究竟该如何控制局势？我们该如何重新找回安全感？
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: Yeah, I think it goes back to the 1980s and to the tough on crime era. Crime is on the increase in the United States. There was such a degree of violent crime at that time that we have trouble imagining now. In 1980, nearly 5 million households were touched by rape, robbery, or assault. It was more than twice the rate of violent crime then in the 80s and early 90s. It's the same story everywhere. the fear. People are afraid to leave their houses. People are afraid and looking for ways to fight back. And so people were looking for answers to how do we get control of what's going on? How do we feel safe again?
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 于是死刑似乎成了一个答案。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: And the death penalty seemed like an answer.
+
+</details>
+
+**帕梅拉·科洛夫**: 死刑似乎成了一个解药，超长刑期似乎也成了解药，本质上就是一套严苛得多的铁腕手段。你知道，政客们利用了公众真实的恐惧心理，同时也进行了大量的恐惧贩卖与煽动。在政治上，主张严惩、支持死刑、大肆宣扬强硬言论是非常有利可图的政治捷径。在那个时期，全美判处了数百起死刑判决，执行了数百起死刑。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: The death penalty seemed like an answer. Long sentences seemed like an answer. Just a much harsher approach. You know, there was so much both real fear and a lot of fearmongering on the part of politicians. It was very very politically expedient to be pro-death penalty to to use all that language. We had hundreds of death sentences being handed down during that period, hundreds of executions.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 帕姆，请提醒我们一下，在你谈到的80年代和90年代这个时期，注射死刑是美国执行死刑的主要方式吗？
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: And just remind us, Pam, in this period in the 80s and 90s that you're talking about, was lethal injection the main way that the US executed people?
+
+</details>
+
+**帕梅拉·科洛夫**: 是的，那正是所谓“现代、人道处决”的黄金时代。
+
+当时的新闻报道记载：“昨天，俄克拉荷马州州长博恩签署了一项法案，规定通过静脉注射速效药物来执行死刑。”
+
+注射死刑作为一种行刑方式于1977年在俄克拉荷马州被发明。该法案的提案人比尔·格兰特（Bill Wiseman）表示，这种新方法将消除死刑中更为残忍暴力的成分。
+
+得克萨斯州是全美首个采用这种方法的州。1982年，一名叫**查理·布鲁克斯**（Charlie Brooks）的男子被处决。布鲁克斯整天坐在简陋的牢房里等待，当天他接待了三位访客——两位穆斯林牧师和他的侄女。到了下午6点，访客离开，布鲁克斯冲了最后的澡，吃了最后的断头饭：丁骨牛排、炸薯条和桃子脆馅饼。
+
+这标志着一个新纪元的开启，各州纷纷开始转向注射死刑。当时的核心理念是：注射死刑更加“人道”。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: Yeah, this was the era of the modern supposedly humane execution. Yesterday, Oklahoma Governor Borne signed into law a bill providing for execution by introvenous injections of a quick acting drug. Lethal injection was developed as a method in Oklahoma in 1977. The bill's sponsor, Benz. Grant, says the new method will do away with the more brutal aspects of the death penalty. Texas was the first state to use it in 1982 when a man named Charlie Brooks was put to death. Brooks sat in his cell, his plane cell all day long waiting. He had three visitors, two Muslim chaplain, and his niece Barry Mitchell. But at 6 p.m., the visitors were let out. Brooks was given his final shower and ate his final meal. T-bone steak, French fries, and peach cobbler. And that marked this new era where states began to shift to lethal injection. The idea was that lethal injection was more humane.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 比起电椅或美国以前使用的其他行刑方式更人道。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: More humane than like the electric chair or some of these other methods that the US had been using.
+
+</details>
+
+**帕梅拉·科洛夫**: 没错，少了一些野蛮。
+
+我认为，注射死刑的引入让公众对这一制度感到更加心安理得。它看起来就像一项严谨规范的医疗程序。因此，这一技术的包装加上当时暴力犯罪的剧烈攀升，让公众普遍觉得这就是解决社会毒瘤的良方。这直接推动了公众对死刑支持度达到历史最高点。盖洛普民调（Gallup）显示，在1994年，全美有高达80%的美国人支持死刑。
+
+然而，这种压倒性的支持后来慢慢开始被侵蚀瓦解。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: Exactly. Less barbaric. And so the introduction of lethal injection, I think, made people more comfortable with the practice. It looked like the medical procedure. And so I think that coupled with this incredible rise in violent crime made people feel that this was an answer to that problem that leads to this sort of high watermark of public support for capital punishment. Gallup found that in 1994 80% of Americans supported capital punishment. But that support slowly started to erode.
+
+</details>
+
+### 犯罪率下降与高昂司法成本
+
+**雷切尔·阿布拉姆斯**: 这确实非常耐人寻味。你有一个亟待解决的社会危机，你有一套受大众认可的技术方案，而且获得了极高的民意基础。那么，鉴于所有这些优势，为什么对死刑的支持率会开始衰退呢？
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: Well, that is really interesting because you have a problem, you have a solution that people like and you have a lot of support for it. So why why would that support start to wayne given all of that?
+
+</details>
+
+**帕梅拉·科洛夫**: 我认为有几个不同的关键因素在起作用。首先也是最重要的一点，是**暴力犯罪率的持续下降**。我们可以看到，从90年代开始犯罪率出现急剧下跌，并一直延续到2000年代。到了2012、2013年左右，全美的暴力犯罪率几乎只有短短二十年前的一半左右。
+
+因此，随着暴力犯罪率的急剧下降，围绕“严打犯罪”理念以及特别是死刑的紧迫话语开始消退。与此同时，其他深层问题也浮出水面，比如死刑案件日益高昂的经济成本。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: I think there were a few different things in play. I think the most important thing first of all was the falling rate of violent crime. we can see this sort of precipitous drop that starts in the '9s and then uh goes through the as by the time we get to 2012 2013 we're looking at a crime rate that's roughly half of what had been just two decades earlier. So as we see the violent crime rate rapidly decrease, I think the urgency of the language around this tough on crime ethos and around capital punishment in particular starts to wayne in combination with other issues such as the growing costs of these kinds of cases.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 日益高涨的成本？你指的是什么？是说起诉一桩死刑案件的花销变得极其昂贵吗？
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: Growing costs. What do you mean by that? Like you're saying it's more expensive to prosecute a capital punishment case or
+
+</details>
+
+**帕梅拉·科洛夫**: 昂贵得多，极其昂贵。特别是对于一个财政资源有限的乡村县区而言，每次启动死刑公诉，耗资动辄数百万美元，这意味着必须从其他许多非常重要的公共事务中抽调剥夺资源。
+
+我认为这些多重因素的交织，开始逐步削弱公众对死刑的信任度。暴力犯罪减少意味着对激进处决手段的需求紧迫感下降；同时大家也意识到，这些案子耗资巨大，或许这些纳税人的钱本可以投入到更有价值的领域。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: Much much much more expensive. And so, especially for a rural county with limited resources, when we're talking millions of dollars, which it is every time you do a capital prosecution, you're talking about taking resources away from many other very important things. And I think these combination of factors start to erode some public confidence in the death penalty. So less violent crime means less demand for an urgent solution and also by the way these cases have been very very expensive and maybe you could put that money towards something else.
+
+</details>
+
+### DNA技术革命与无辜者平反潮
+
+**雷切尔·阿布拉姆斯**: 确实如此。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: Exactly.
+
+</details>
+
+**帕梅拉·科洛夫**: 但我认为公众对死刑信心受挫的第三个重大原因——也是我认为最引人瞩目的原因——是**DNA检测分析技术的诞生**。当时的科学界面对新技术宣告：“今日的科学正站在一个新时代的门槛上。”
+
+DNA技术彻底改变了刑事侦查的未来，但与此同时，它对既往的历史定罪也产生了翻天覆地的冲击，因为它允许被告人及其辩护律师重新回头审视：检方当年的指控到底搞没搞对？无辜者因莫须有罪名被送入监狱早已不是第一次，而DNA成了昭雪冤屈的强力武器。
+
+例如媒体曾报道：“一名因1984年谋杀小女孩而两度被定罪的马里兰州男子曾面临死刑判决。但今晚，**柯克·布拉兹沃思**（Kirk Bloodsworth）凭借DNA证据重获自由，成为自由之身。”
+
+借助DNA分析，人们能够对陈年旧案展开最严密的复核审查，确认铁窗背后关押的究竟是不是真正的罪犯。另一则报道提到：“27年来，他一直被称为082629号囚犯。如今，**威廉·狄龙**（William Dillon，家人叫他比尔）正在母亲的后院享受阳光。”
+
+这随即引发了一连串惊人规模的平反浪潮。正如另一名当事人所言：“‘不是我干的。’在被指控强奸后，**厄尔·拉芬**（Earl Ruffin）多年来始终坚持这一说法，直到21年后DNA证据给出最终定论，正义才得以伸张。”
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: But I think there's a third big reason for the decline in public confidence in the death penalty and I think it's the most interesting one and that is the advent of DNA analysis. Today's science is on the threshold of a new era. It completely transforms the future of criminal investigations, but it also does something for past convictions because it allows defendants and their attorneys to go back and look at did prosecutors get it right. It would not be the first time innocent people were sent to prison for crimes they did not commit. DNA could be the instrument of vindication. Twice convicted for the murder of a girl in 1984, a Maryland man faced the death penalty. Tonight though, Kirk Bledsworth is a free man because of DNA evidence. With DNA analysis, they're able to hold up these old convictions to scrutiny and to see whether the correct person was behind bars. For 27 years, he was known as inmate number 082629. Now, William Dylan, or Bill, as his family calls him, is spending time in his mother's backyard. And that then resulted in a cascade of a tremendous amount of exonerations. It wasn't me. That is what Earl Ruffin has said all along after he was charged with raping a woman in the Gent section of Norphick. It wasn't until DNA evidence weighed in. 21 years later that justice was served.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 我想这也是我最早开始关注这一议题的契机，因为我记得**“无冤计划”**（Innocence Project）在那一时期获得了极大的社会关注。他们把这当作自己的历史使命，对吧？利用DNA技术重新调查陈年旧案，为大量无辜蒙冤者洗清罪名。我想，这大概是公众第一次清醒地意识到：法庭的定罪并不能被直接当作绝对事实来接受。这引发了大量的灵魂拷问——我们过去是否一直都在错误地处决无辜的人？
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: This is where I think I remember becoming kind of aware of this issue because I remember the Innocence Project in particular getting a lot of attention in this moment. They they took this up as their mission, right? Like using DNA to go back to old cases and exonerating a lot of people. And I think I think that that was probably the first time that people understood that convictions could not be taken as fact. And it raised a lot of questions about whether we had been wrongly executing people.
+
+</details>
+
+**帕梅拉·科洛夫**: 我觉得现在的人很难想象当时的舆论环境。但我可以说，当我在90年代刚作为一名记者开始报道刑事司法系统时，如果你提出死刑犯排期名单上有无辜的人，别人会觉得你脑子有点极端、离经叛道。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: I think it's hard to even envision now, but I'll just say that when I started as a reporter in the '9s reporting on the criminal justice system, if you suggested that there were innocent people on death row, you were considered a little fringe.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 真的吗？
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: Really,
+
+</details>
+
+**帕梅拉·科洛夫**: 确实非常如此。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: very much so.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 天哪，现在事后回想起来，去质疑定罪准确性似乎是再自然不过的事情了，但在当时……
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: God, in hindsight, it just feels like that would be so natural to question, but
+
+</details>
+
+**帕梅拉·科洛夫**: 但那完全是因为在90年代及之后发生了太多的惊人案例。如今我们习以为常地认为公众早就深知刑事司法系统存在极大的缺陷，但正是这一连串事件，以极其锋利的方式将这个现实推到了聚光灯下。特别是对于那些此前从未思考过这些问题的普通民众来说，这种冲击是震撼性的——每隔几个月，就会出现一起DNA平反冤案。
+
+自1970年代初以来，我们现在已经有了**超过200起死刑平反案例**。这意味着有200多名曾经被判处死刑、被押送上死囚牢房的人，如今重获自由行走在阳光下。这是一个令人不寒而栗的惊人数字。当你得知这个真相时，你很难再去相信这个司法体系运转良好。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: but that's because of so much of what happened in the '9s and beyond. So this shift that we see in public consciousness that we just assume has always been there that we understand that the criminal justice system is highly imperfect. This brought this into focus in in a very very sharp way and I think especially for populations who hadn't thought about these issues before this became shocking and every few months there was a DNA exoneration. We now have since the early 1970s over 200 death penalty exonerations. So that's over 200 people who received a death sentence, who went to death row, who now walk free. That's a a staggering number and it's hard to imagine that this system is working well when you know that.
+
+</details>
+
+### 处决高潮与多州暂停执行
+
+**雷切尔·阿布拉姆斯**: 除了公众对极刑的观念改变以及对司法体系信心的动摇之外，政府层面是如何应对的？是否发生了其他根本性的政策转变？
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: And beyond people sort of changing their ideas about capital punishment and faith in the justice system, how did governments respond or or did anything else change?
+
+</details>
+
+**帕梅拉·科洛夫**: 事实上这中间存在一段滞后期。作为一名在1990年代末期实地报道的记者，我亲身经历了当时死刑执行的最高峰——在1999年达到顶峰，那一年全美处决了98人，仅得克萨斯州就处决了35人。那是处决鼓点密集、毫不留情的狂暴时期。
+
+随后到了2000年，伊利诺伊州州长**乔治·赖安**（George Ryan）宣布暂停全州死刑。促使他下定决心的，是《芝加哥论坛报》（Chicago Tribune）一篇极其震撼的深度调查报道，该报道彻底揭露了伊利诺伊州死囚牢房案件中充斥的严重纰漏，其中竟然有13名死囚最终被证实完全是无辜的。
+
+尽管类似的反思需要时间蔓延，但在随后的岁月里，越来越多的州开始效仿，要么出台行政禁令暂停执行，要么在实操中干脆不再推进死刑。到了2003年，美国联邦政府也开启了长达17年的非正式暂停执行期。联邦政府显然是在顺应各州的步伐。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: Well, there was sort of a lag period. I mean, I was very aware as a reporter in the late 1990s of this huge upsurge that we had had where it peaked in 1999 with 98 people being executed that year. In Texas alone, there were 35 people executed and it was a relentless drum beat of executions at that time. Then in 2000, Governor George Ryan in Illinois instituted a moratorum on the death penalty. And he did so after an incredible Chicago Tribune investigation really showed just how many problems there were with the cases that were on Illinois's death row, including 13 men who ended up being innocent. It would take a while for more things like that to happen, but slowly in the years that followed, more states began to follow suit, putting moratoriums in play or simply just not acting upon the death penalty. And then in 2003, the federal government started this sort of unofficial moratorum. So they really seem to be taking a cue from what the states are doing.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 表面上看起来确实是大势所趋。但显然，帕姆，在这一时期依然有人坚定支持死刑，尽管有这么多冤案真相被曝光，他们依然认为死刑绝不能停。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: That's what it seems like. But obviously Pam, there are people who still support the death penalty during this period despite all of these revelations who do not feel that they should be stopped.
+
+</details>
+
+**帕梅拉·科洛夫**: 当然如此。我认为死刑支持在地理上高度集中，但从广义来看，受害者权益保护运动团体以及检察官协会依然深信死刑的震慑与报应价值，并一直在为死刑制度顽强抗争。
+
+但全美整体的宏观趋势转折是极其剧烈的。当年我在一线采访时亲眼目睹的这一切，让我不禁思索：这或许还不是死刑的终结，但这会不会是一个标志着死刑“走向终结的开端”的新纪元？这在十年前是无论如何都无法想象的。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: Absolutely. And I think that was highly concentrated geographically, but broadly we can see that the victim's rights movement and prosecutors associations strongly believed in the death penalty and fought for the death penalty. But the overall trend across the country was so dramatic. What I was seeing on the ground was was this not the end of the death penalty, but was this a new era that was leading toward the end of the beginning of the end of the death penalty, which is something I really could not have imagined even a decade earlier.
+
+</details>
+
+### 特朗普行政令与重启死刑浪潮
+
+**帕梅拉·科洛夫**: 当时特朗普的言论非常明确：“如果我们不对毒贩采取铁腕手段，我们就是在浪费时间，请记住这一点。”
+
+然而，当特朗普总统开启他的第一任期后，这一切风向开始发生剧烈逆转。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: If we don't get tough on the drug dealers, we're wasting our time. Just remember that. But all of that began to change when President Trump came into office in his first term.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 而这种“铁腕”强硬，直接包含了死刑。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: And that toughness includes the death penalty.
+
+</details>
+
+**帕梅拉·科洛夫**: 很快局势就变得清晰明了：他在死刑问题上将采取极其激进的强硬立场。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: And it quickly became clear that he was going to be taking a much more aggressive stance on the death penalty.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 我们稍后就回来。……好的，帕姆，请再详细给我们讲讲特朗普总统采取了哪些举措来鼓励和推动死刑的使用？
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: We'll be right back. Okay. So, Pam, talk to us more about what President Trump did to try to encourage use of the death penalty.
+
+</details>
+
+**帕梅拉·科洛夫**: 首先，他在第一任期内做出的首个标志性重大举动是：在联邦政府连续17年没有执行过任何死刑之后，特朗普政府在2020年7月突然强行重启了联邦死刑。并且在其首个任期的最后短短6个月内，**突击处决了13名联邦死囚**。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: Well, the first really important thing he did was in his first term. So this was after the federal government had not carried out any executions in 17 years and Trump restarted them in July of 2020 and there were 13 federal executions in the final 6 months of his first term.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 这对于他个人对死刑的态度而言，无疑是一次极其强烈的宣示。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: So that's a pretty powerful statement about how he feels about the death penalty.
+
+</details>
+
+**帕梅拉·科洛夫**: 从那里我们就能清晰看到他在第二个任期内所作所为的萌芽。2025年1月20日，在他重返白宫椭圆形办公室的第一天，他就签署了一项范围极其广泛的总统行政命令，名为《**恢复死刑与保护公共安全**》（Restoring the Death Penalty and Protecting Public Safety）。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: And I think from there we can see the seeds of what then happened in his second term. On his very first day back into office, January 20th of 2025, he signed a sweeping executive order which was called restoring the death penalty and protecting public safety.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 好的，意图非常直白明确。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: Okay. Very explicit.
+
+</details>
+
+**帕梅拉·科洛夫**: 丝毫不加掩饰。这向所有人明确释放了信号：在全美其他地方死刑支持度日渐式微之际，他却要反其道而行之，加倍强化死刑。
+
+因此他采取了一系列组合拳：从指示司法部长更激进地寻求死刑判决，到要求司法部挑战限制死刑适用的最高法院判例。我认为最关键的是，虽然他无法直接控制各州的地方检察官办公室，但他极其明确地表态，敦促他们尽可能频繁地寻求死刑判决。他是在全方位加码推行这一制度。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: Exactly. And this really signaled to everyone that he was doubling down on the death penalty at this time that it's ebbing everywhere else. And so he did everything from instructing the attorney general to pursue death sentences more aggressively, calling on the justice department to challenge the Supreme Court decisions that limited the death penalty. And I think most significantly, you know, he does not control state district attorneys offices, but he made clear that he wanted them to seek the death penalty as often as they possibly could. He was doubling down on it.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 他是在试图向各州喊话施压、传达信号。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: He was trying to send a message to the states.
+
+</details>
+
+**帕梅拉·科洛夫**: 毫无疑问，就是为了向各州传达这一政治信号。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: Absolutely. Trying to send a message to the states.
+
+</details>
+
+### 各州落地困境与致命药物短缺
+
+**雷切尔·阿布拉姆斯**: 但这在现实中究竟该如何运作呢？因为正如你向我们梳理的那样，在当前这个时间节点，大部分州都已经主动背离或放弃了死刑。那么这种自上而下的政策喊话，到底能产生什么实际效果？
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: But how would that actually work though? Because as you've explained to us, at this moment in time, a lot of the states have turned away from the death penalty. So what practical effect does that message actually have?
+
+</details>
+
+**帕梅拉·科洛夫**: 这种影响可以体现为多种形式：从州议会立法扩大死刑的适用罪名范围，到基层检察官行使自由裁量权在特定案件中积极寻求死刑。我们之前谈到过死刑公诉的成本多么天文数字，对乡村县区的财政打击有多大。而特朗普的话实质上是在给他们撑腰打气：“放手去干吧。”
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: So, it can be everything from a legislature deciding to expand who's eligible for the death penalty to, you know, prosecutors have a lot of discretion in whether or not they are going to seek the death penalty in certain cases. We talked about how expensive it is, what a hit, especially rural counties take when they pursue it. And Trump was basically saying, "Go for it."
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 那么各州对这个信号的接纳程度如何呢？
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: And how receptive were the states to this message?
+
+</details>
+
+**帕梅拉·科洛夫**: 总体而言，绝大多数州根本没有以任何实质方式重新恢复死刑。但我认为有一小撮一直在保留和执行死刑的保守州，对这一号召表现出了积极回应。
+
+然而摆在他们面前的核心问题是：**在实操层面，你究竟该如何把人处死？**
+
+因为此时此刻，执行死刑的技术门槛已经变得极其艰难。各大跨国制药企业受到公众反对意见的巨大压力，开始严厉限制乃至直接停产任何用于注射死刑的药物。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: Overall, most states are really not engaging with the death penalty in any significant way, but I think there was a small cohort of states which had been implementing the death penalty that were open to this message. But the problem was one of how do you practically carry it out? M this had become so difficult by this point because drug companies were heavily restricting or simply not making the drugs that were needed for lethal injection
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 因为他们承受着来自民意和公众舆论的巨大抵制压力。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: because they were being pressured public support
+
+</details>
+
+**帕梅拉·科洛夫**: 完全正确。生产处决致死药物对于任何药企来说都是极为恶劣的商业声誉灾难。
+
+这还不是唯一的问题。**美国医学会**（American Medical Association）有明确伦理准则，规定医生严禁参与任何形式的死刑执行。因此，各州越来越难找到有合格医疗资质的专业人员来操作行刑，整个执行流程在后勤物流上面临毁灭性的技术挑战。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: absolutely not great business to be in the business of making execution drugs and that's not the only problem the American medical association says physicians should not participate in executions so It's increasingly hard to find qualified people to carry these out and it becomes much more logistically challenging.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 也就是说，诉讼费用极其昂贵，操作流程极其艰难。我觉得正是在过去几年里，我们才频繁听闻各种执行失误的事故报道，以及像克里斯塔·派克这样骇人听闻的案例。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: So they're expensive, they're logistically much tougher. And I mean I feel like in the past few years is when we really started hearing about botched executions and sort of some of these grizzly cases like Christa Pike.
+
+</details>
+
+**帕梅拉·科洛夫**: 我认为执行失误其实一直都存在，只是最近我们看到了更多见报曝光。
+
+我认为这根源在于：随着合规药物越来越难以通过正规渠道获得，各州常常被迫使用要么是**长期囤积已过期的药品**，要么是从不受监管的**调配药房**（compounding pharmacy）私下配制的药剂。
+
+于是就形成了这样一种死局：正规药品极难获得，各州手头掌握的药物质量存疑、稳定性未知，而与此同时，越来越难招募到具有正规医疗背景的专业人员来负责给药注射。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: I think there have always been botched executions, but we have been getting more news of this. And I think that has to do with the fact that as these drugs have gotten harder to get, these states are often using either stockpiled expired drugs or they're using drugs that they had made at a compounding pharmacy. And so you have this combination of it's very hard to get these drugs. the drugs that these states do have are of uncertain quality and then it's harder and harder to get people to administer them who have a medical background.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 嗯。因此由于所有这些技术与伦理障碍，那些即便主观上想要响应特朗普号召的州，可能在客观能力上也根本做不到，或者无法按照预期的顺畅方式去达成。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: Mhm. So, for all of these reasons, states that may have even wanted to heed Trump's call are not perhaps able to or able to in the way that they would want
+
+</details>
+
+**帕梅拉·科洛夫**: 或者说他们硬着头皮去尝试，结果就是导致我们目睹的各种惨不忍睹的行刑事故。
+
+然而，有一个州却异乎寻常地彻底响应并贯彻了这一号召。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: or they're trying and we're getting all these botched executions. But there is one state that really heated the call.
+
+</details>
+
+### 佛罗里达提速处决与黑箱操作
+
+**帕梅拉·科洛夫**: 佛罗里达州正迅速蜕变为美国的“死刑之都”。
+
+那就是**佛罗里达州**。从2025年开始，其政治修辞宣称：“有些罪行极其令人发指，死刑是唯一适用的正义惩罚。”
+
+佛罗里达州州长**罗恩·德桑蒂斯**（Ron DeSantis）开始密集签署雪片一般的死刑执行令。当地媒体频频报道：“德桑蒂斯签署了一名连环杀手的死刑令”；“德桑蒂斯刚刚签署了爱德华·詹姆斯的死刑令，即将处决波尔克县凶手大卫·皮特曼”；“今晚，一名奥兰治县男子成为该州第9名被处决者”；“这将是佛州今年的第12起死刑”；“创纪录的第19起死刑”；“州长德桑蒂斯签署了本年度第20份死刑令，推动该州迈向打破死刑历史纪录的轨道”。
+
+德桑蒂斯签署死刑令的速度快到了匪夷所思的地步。去年全美执行的死刑中，佛罗里达州处决了19人，**单州就占了全美总数的40%**。而今年截至目前，佛罗里达州处决的死囚人数已经超过了全美其他所有州的总和。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: Florida is quickly becoming the capital of capital punishment and that was Florida. Starting in 2025, there are some crimes that are just so horrific. The only appropriate punishment is the death penalty. Governor Ronda Santis started signing a flurry of death warrants. Santis signed a death warrant for a serial killer. Governor Ronda Santz just signed the death warrant for Edward James. Is set to execute Pulk County killer David Pitman. Tonight, an Orange County man became the ninth person executed. He'll be the 12th execution in Florida. Record 19th execution. Governor Ronda Santz has signed Florida's 20th death warrant of the year, putting the state on pace to set a new record for executions. He did so at such an extraordinary rate that last year 19 men were executed. That's 40% of the people who were executed in the US last year. And this year so far, Florida's executed more men than all other states combined.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 令人震惊。那么佛罗里达州究竟采取了什么其他州不愿做或做不到的手段，才让他们能够将行刑进程加速到如此惊人的地步？
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: Wow. So what is Florida doing that other states seem either unwilling or unable to do that has allowed them to accelerate this so much?
+
+</details>
+
+**帕梅拉·科洛夫**: 我认为原因之一在于佛罗里达州极其不同寻常的制度架构。通常在死刑案件中，案件会在法院系统中层层审理，伴随多次复杂的上诉程序。当所有法定上诉途径全部用尽后，由法官敲定具体的行刑日期。
+
+但在佛罗里达州，流程完全不是这样。在佛州，只有一个人拥有签署死刑执行令的绝对权力，那个人就是州长**罗恩·德桑蒂斯**本人。在目前依然活跃执行死刑的各州中，这一集权机制是绝无仅有的。
+
+另一点关键在于，外界根本无从知晓他到底会在何时、出于何种理由选定处决名单上的某个人。
+
+佛州的死囚区里，至今还关押着自1970年代就被判刑、在死牢中煎熬数十年的老囚犯；然而，另外一些定罪时间近得多的犯人，却突然被插队排上了执行日程。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: I think one thing is the very unusual setup that Florida has. So typically a case works its way through the courts and in a capital case there are a number of appeals and when those appeals are exhausted a judge sets an execution date. But in Florida this works differently. There's one person in Florida who can sign death warrants, that being Governor Ronda Santis, and this is unique among active death penalty states. Another thing is that there's no telling when or why he's going to choose who he chooses. M so there are men who are on Florida's death row right now who've been there since the 1970s who languish there while there are other men with much more recent convictions who have received these execution dates.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 你的意思是，外界完全不知道他是依据什么标准来挑选这些处决对象的。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: We don't know how he's picking these men is what you're saying.
+
+</details>
+
+**帕梅拉·科洛夫**: 这里的运作没有任何透明度可言。德桑蒂斯州长挑选这些人的逻辑完全是一个**黑箱**。
+
+曾有一位受害者的家属，因为凶手在死囚区等待执行的时间过于漫长而极度沮丧，他们特意给德桑蒂斯寄去了一套定制的夏普牌（Sharpie）粗头马克笔——因为德桑蒂斯向来喜欢用这种马克笔签署死刑令和其他法案。家属寄笔给他，恳求他签署该案凶手的死刑令，而德桑蒂斯随后果然用笔签下了那道死刑令。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: There is zero transparency. It's like in a black box how Governor Dantis picks these men and why. One victim's family was so frustrated with how many years the defendant had been awaiting the death penalty that they sent Governor Dantis customized Sharpies. He signs his death warrants and other legislation and Sharpies. and the Sharpies were sent to him asking for him to sign a death warrant for the defendant in this case, which Governor DeSantis subsequently did.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 天哪，不可思议。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: Oh, wow.
+
+</details>
+
+**帕梅拉·科洛夫**: 此外在其他州，从签署死刑执行令到真正行刑之间，通常有90天的时间，有时甚至更长。
+
+这段时间窗口之所以至关重要，是因为案件中往往存在此前未能充分辩论的新法律争议，律师可以在当下重新提请司法审查。
+
+而在佛罗里达州，律师只有极其仓促的**30天期限**来进行所有救济工作。因此，司法发生致命错误的概率被急剧放大。这在佛罗里达州尤为令人担忧，因为佛州保持着一项极其沉重的纪录：它是全美**平反死刑冤案人数最多的州，总计高达30人**。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: And in other states, typically there's 90 days, sometimes it's much longer, between when the death warrant is signed and when the execution actually takes place. Why that time frame is so important is there are issues that have often not been litigated that suddenly you can litigate in the present day. In Florida, you have a 30-day period in which to do this kind of work. So the chance for error is so great. And this is an issue of particular concern in Florida, which holds the record for having the most death row exoneries, 30 in all.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 哇。所以说白了，他们实际上拆除了其他州为了防止错杀而设立的大量制度刹车装置，以此来强行加速这些死刑的推进。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: Wow. So basically, they've removed a lot of the breaks that other states have in order to sort of speed up these executions.
+
+</details>
+
+**帕梅拉·科洛夫**: 是的。佛罗里达州还采取了其他强硬手段，包括通过立法扩大死刑适用罪名，甚至允许**非全票陪审团**（non-unanimous juries）通过死刑建议——这意味着12名陪审员中只需8人赞成，就足以建议判处死刑。所有这些都在不断拓宽佛州的死刑通道，但同时也让被告人面临丧失应有正当法律程序的严重危险。
+
+为了让你体会这种执行节奏有多疯狂：目前佛州几乎保持着至少每月处决一人的频率，当下就有4道正在生效的死刑令。就在即将到来的周二（10月13日），该州甚至可能上演一场“双重死刑”处决。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: Yes. And there are other things that have gone on in Florida as well, and that includes legislative efforts to make more crimes eligible for the death penalty. also to allow for nonunanimous juries to vote for death. That means just eight jurors out of 12 are enough to recommend a death sentence. And so these are all ways in which this is being expanded in Florida, but also it puts defendants at danger of not having the due process that they need. And just to give a sense of the pace of things, there are executions taking place in Florida typically at least once a month. There are four active death warrants right now. And there could be a double execution this coming Tuesday, October 13th.
+
+</details>
+
+### 药物隐患与制度未来的伦理拷问
+
+**雷切尔·阿布拉姆斯**: 帕姆，你刚才提到了注射药物面临的种种重重困难，比如寻找药物货源、寻找专业医务人员实施注射等。佛罗里达州难道就没有遭遇这些障碍吗？还是说他们找到了规避难题的偏门？为什么他们没有像其他州那样被这些现实问题卡住脖子？
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: Pam, you mentioned all these problems with drugs, for instance, finding drugs, finding medical professionals to administer the drugs. Is Florida just not having those problems or are they just finding ways around them? Like why are they not encountering the same issues as other states?
+
+</details>
+
+**帕梅拉·科洛夫**: 我认为正是由于佛罗里达州执行流程的高度黑箱化，导致有太多的核心疑问外界根本无从得知真相。他们很可能囤积了大量已经过期的药品，我们对这些药物的纯度和品质一无所知。
+
+我们唯一确知的是，佛州的注射药剂配方中包含一种**肌肉松弛麻痹剂**（paralytic）。而在田纳西州的克里斯塔·派克案中并未添加此类麻痹药物，因此派克当时能够喊出声来表达手臂的剧烈灼烧感，并能做出挣扎动作。
+
+当你给囚犯注射了肌肉松弛麻痹剂时，就会衍生出全新的伦理拷问：在行刑过程中，囚犯究竟在承受多么巨大的痛苦？因为一旦肌肉被彻底麻痹瘫痪，即便他们正在体内经历千刀万剐般的剧痛，他们也根本无法开口呼救，旁观者在表面上也完全看不出任何痛苦迹象。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: I think there's so many questions we don't know the answers to because of the blackbox nature of how this is done in Florida. They may have stockpiled drugs that are expired. We don't know the quality of those drugs. We do know that one of them is a paralytic which was not present in Tennessee where Christa Pike was able to articulate that she felt her arm burning and was able to move. So when you introduce a paralytic, there are all sorts of new questions involved about how much that prisoner is suffering during the execution itself. Because if they are suffering the idea is they wouldn't be able to tell you or it might not be apparent.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 正是如此。如果他们饱受折磨，外面的人也看不出来。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: Exactly.
+
+</details>
+
+**帕梅拉·科洛夫**: 我明白了。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: I see.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 所以这取决于我们如何定义所谓“执行失误”，对吧？有些惨状是肉眼可见的，而有些痛苦则是被药物强行掩盖的。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: So it depends how we're talking about botching, right? We can see some things and other things are more hidden.
+
+</details>
+
+**帕梅拉·科洛夫**: 完全正确。作为一名长期跟踪报道这一领域的人，我认为在佛罗里达州以及其他州，迟早不可避免地会发生我们在田纳西州看到的那种严重事故。
+
+这与死囚群体日益老龄化、医护人员难以找到可穿刺的血管直接相关。各州正在盲目试验不同的药物配方和不同的行刑程序。因此，我认为克里斯塔·派克的遭遇，实质上是对未来更大危机的提前预演。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: That's exactly right. I think having covering this issue for a long time, I feel that it's inevitable that something will happen in Florida and other states like what we've seen in Tennessee. This has to do with an aging prison population where it's harder to access a vein. Different states are experimenting with different drug protocols and different ways to do this. So I think what happened to Christa Pike is really a preview of what lays ahead.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 这听起来确实充满讽刺意味。因为正如你刚才向我们解释的，当初之所以引入注射死刑，是因为它被宣扬为处决犯人最“人道”的方式，对吧？相比于电椅、枪决或绞刑这些美国历史上曾经采用的方法，它被包装成一种文明、人道的救赎方案。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: It feels sort of ironic actually because as you explained to us, lethal injection was introduced because it was seen as the most humane way to execute somebody, right? It was promoted as this humane solution compared to the electric chair or a firing squad or hanging all of which have been used in this country.
+
+</details>
+
+**帕梅拉·科洛夫**: 确实如此。当注射死刑最初作为一种行刑方式被引入时，其背后的部分动机，是为了将“国家剥夺公民生命”这一本质残酷的暴力行为进行**无害化与洁净化包装**。
+
+而如今随着注射死刑频频出现惨烈故障，我们反而看到一些州正在倒退，试图重新捡起枪决和电椅等手段。
+
+就在上周，田纳西州很可能成为下一任州长的**玛莎·布莱克本**（Marsha Blackburn）公开声称，她希望重新启用电椅。
+
+有人或许会辩称，电椅或行刑队对于所发生的事实反而更加诚实、更加透明。但当各州以这种赤裸裸的方式行刑时，显然承担着极大的社会舆论风险，因为这直接将国家暴力的本来面目撕开暴露在公众眼前，而不再是一场伪装成平静入睡的医疗把戏。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: That's exactly right. When lethal injection was first introduced as a method of carrying out executions, I think part of the idea was to sanitize what was being done, which was the taking of a life by the state. And as lethal injection has failed more often, we're also seeing states moving toward things like firing squads and the electric chair. Just last week, the likely next governor of Tennessee, Marcia Blackburn, said she wanted to bring back the electric chair. And one could argue that the electric chair or firing squads are more honest and more transparent about what is taking place. But states obviously take a risk when they carry out executions that way because it shows what they are doing in a way that a quiet act that is supposed to look like something medical does not.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 没错。从某种层面上讲这确实说得通，因为当你目睹并亲身体验到这种更具感官冲击的场面时，它会逼迫你真正去直面眼前发生的事情以及死亡这一血淋淋的事实。
+
+也许对某些人来说这无所谓——毕竟全美依然有一半民众支持死刑，或许对他们而言枪决或电椅都不成问题。但我相信对很多人来说，在情感和心理上是绝对无法承受这种画面的，这可能会触及社会的道德底线。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: Right. All right. I mean, on some level that does make sense because you're seeing something and maybe experiencing it in a more visceral way that really makes you kind of reckon with what's actually happening in front of you and the fact of death. And maybe for some people that's fine. Half the population supports the death penalty. And so maybe for them, firing squads, the electric chair, none of that will be a problem. But I would imagine for a lot of people, they just can't stomach that. Like it might be going too far.
+
+</details>
+
+**帕梅拉·科洛夫**: 是的。我常常会回想起1998年我在得克萨斯州目击的那场死刑，在行刑室里，整个过程看起来就如同注视着一个人安然睡去一样平静。
+
+我认为，当我们看到佛罗里达州在全力踩油门加速，看到其他各州在尝试退回到那些我们认为更野蛮残酷的处决方式时，它激发出了一系列更宏大的终极质问：**我们的死刑制度究竟将走向何方？**它是否会因为公众目睹其恐怖真相而彻底走向消亡，还是说我们会在那些依然死死抓住死刑不放的保守州目睹它的死灰复燃？
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: Yes. I often think about the fact that when I witnessed an execution in 1998 in Texas, it was as if I were watching someone go to sleep. I think when we see Florida ramping up, when we see other states trying some of these what we think of as sort of more more barbaric ways to execute people, it engenders a lot of bigger questions about where we're headed with the death penalty and whether this is about to peter out because people will be so horrified by what they see or whether we're seeing a resurgence in these states that have clung so hard to the death penalty.
+
+</details>
+
+### 节目收尾与新闻简讯
+
+**雷切尔·阿布拉姆斯**: 帕梅拉·科洛夫，非常感谢你的深度分享。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: Pam Kolaf, thank you so much.
+
+</details>
+
+**帕梅拉·科洛夫**: 非常感谢你的邀请。
+
+<details>
+<summary>Original English</summary>
+
+**Pamela Colloff**: Thank you so much for having me.
+
+</details>
+
+**雷切尔·阿布拉姆斯**: 我们稍后就回来。
+
+以下是今天你需要了解的其他新闻动态：
+
+俄罗斯当局周三表示，西伯利亚一家防鼠疫研究所的研究人员因神秘肺炎去世，但该人员生前已接种过所接触病原体的疫苗，且该实验室未发生任何所谓的“紧急情况”。俄罗斯卫生监管机构发表此番声明之前，美国曾敦促莫斯科方面对这起可能的公共卫生事件保持更大透明度，世界卫生组织（WHO）也要求获取更多信息以准确评估潜在风险。由于缺乏现场卫生调查人员以及俄罗斯官员未披露详细细节，外界对俄政府坚称“局势完全在掌控之中”的说法产生了严重质疑。
+
+本期节目由奥利维亚·纳特（Olivia Nat）、阿德里安娜·赫斯特（Adrienne Hurst）、杰西卡·钟（Jessica Chung）和埃里克·鲁普克（Eric Rupkey）共同制作。由德文·泰勒（Devon Taylor）和克里斯·赫尔（Chris Hel）在迈克尔·贝尼斯（Michael Benis）协助下编辑完成。苏珊·李（Susan Lee）提供研究支持。音乐由阿丽西娅·比图普（Alicia Beetup）、莉亚·肖·迪恩（Leah Shaw Dearon）和玛丽安·拉萨诺（Marian Lassano）创作。音频工程由克里斯·伍德（Chris Wood）负责。主题音乐由Wonderly创作。特别鸣谢艾米莉·科克伦（Emily Cochran）。
+
+以上就是今天的《The Daily》。我是雷切尔·阿布拉姆斯，我们明天见。
+
+<details>
+<summary>Original English</summary>
+
+**Rachel Abrams**: We'll be right back. Here's what else you need to know today. Russian authorities said on Wednesday that a researcher at a Siberian anti-plague institute who died from a mysterious pneumonia had been vaccinated against the pathogens that she worked with and that no quote emergency situations had occurred at the lab. The statement from the Russian health regulator came after the US urged Moscow to be more forthcoming about the possible public health incident and after the World Health Organization asked for more information to make an accurate assessment of any threat. The lack of on-site health investigators and the lack of details from Russian officials have fueled doubts about the Russian government's insistence that it has the situation under control. Today's episode was produced by Olivia Nat, Adrienne Hurst, Jessica Chung, and Eric Rupkey. It was edited by Devon Taylor and Chris Hel with help from Michael Benis. Research help from Susan Lee and contained music by Alicia Beetup, Leah Shaw Dearon, and Marian Lassano. It was engineered by Chris Wood. And our theme music is by Wonderly. Special thanks to Emily Cochran. That's it for the daily. I'm Rachel Abrams. See you tomorrow.
+
+</details>

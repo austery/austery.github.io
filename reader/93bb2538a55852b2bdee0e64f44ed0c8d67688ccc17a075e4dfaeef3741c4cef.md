@@ -1,0 +1,2120 @@
+---
+author: TVO Today
+date: '2026-10-14'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=nXBu5IWcUhY
+speaker: TVO Today
+tags: []
+title: ''
+summary: ''
+insight: ''
+draft: true
+series: ''
+category: ''
+area: ''
+project: []
+people: []
+companies_orgs: []
+products_models: []
+media_books: []
+status: evergreen
+---
+<!-- chunk 1/11 -->
+
+### 开场与辩论介绍
+
+**主持人（Steve Paikin）**：大家好，欢迎来到由 TVO Today Live 与罗特曼管理学院（Rotman School of Management）联合举办的多伦多市长辩论会。本次竞选下一任多伦多市长的候选人共有 53 位，但最终的胜选者必将产生在今晚台上的这两位之中。我们现在位于多伦多大学市中心校区罗特曼学院的德索泰尔厅（Desautels Hall）。今晚现场座无虚席，观众人数非常多，我们诚挚恳请大家在聆听辩论时保持克制，切勿以过于热烈的掌声打断辩论。
+
+不过现在除外——让我们按姓氏首字母顺序，欢迎市议员布拉德·布拉德福德（Brad Bradford）与市长邹至蕙（Olivia Chow）。
+
+欢迎两位来到今晚的现场。非常高兴你们能在繁忙的日程中抽出时间来到这里，参加这——我想想，这应该是你们两位之间进行的第六场、第七场还是第八场辩论了吧？
+
+<details>
+<summary>Original English</summary>
+
+**Steve Paikin**: Hi, everybody. And welcome to this Toronto mayoral debate brought to you by TVO Today Live and the Rotman School of Management. There are 53 people running to be the next mayor of Toronto. But the winner will be one of these two. We are in Desautels Hall at Rotman on the grounds of the University of Toronto's downtown campus. We have a very big audience in this room tonight, and we urge them to listen to the debate without interrupting with overly dramatic applause. Except for now, as we welcome in alphabetical order, Councillor Brad Bradford and Mayor Olivia Chow. Now welcome you to tonight. We're glad you could carve time out of your schedules to be with us here and have what is only, I think, what is this, the sixth or seventh or eighth debate that you guys have done.
+
+</details>
+
+**Brad Bradford**：差不多是这样吧？
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: Something like that?
+
+</details>
+
+**主持人（Steve Paikin）**：差不多就是这样。这可不像当年你第一次竞选市长时那样，一下子有一百场辩论。在过去的这些年里，事情总算变得更合乎情理、更有条理了。不过，鉴于你们两位对辩论流程已经非常熟悉，我们就不必花大把时间去逐条解释规则、计时钟以及那些琐碎细节了。现在，计时钟就在那里，上面已经显示了时间。今晚我们一共设有六个辩论环节。
+
+那么，就让我们正式开始吧。我们要讨论的第一个议题是住房问题。正如你们两位所深知的那样，市长既没有总理的权力，也没有省长的权力。那么，市长究竟该如何切实缓解住房负担危机、在住房可负担性方面取得实质突破呢？我们刚才通过抽签决定了发言顺序。布拉德·布拉德福德，前面的这一分半钟发言时间属于你。
+
+<details>
+<summary>Original English</summary>
+
+**Steve Paikin**: Something like that. Not like when you first ran for mayor and there were a hundred of them. Things have gotten more sensible in the intervening years. However, let us say that you two have done this enough that we don't need to spend a lot of time going through rules and clocks and all that business. Right now, there's the clock, the times on it. We have six segments tonight. So let's get started. We're going to start with housing. Neither of you, as you well know, have the power of a prime minister or a Premier. How can a mayor actually put a dent in housing affordability? We drew lots. Brad Bradford the first minute and a half is yours.
+
+</details>
+
+### 第一环节：住房可负担性与建设审批
+
+**Brad Bradford**：非常感谢你，史蒂夫，也感谢你们今晚邀请我们来到这里。各位晚上好。住房是一个对我而言极其重要的议题，我对此充满了热情。我的专业背景是城市规划，这是我接受过的专业训练，也是我毕生的事业追求。我当初竞选市议员的初衷，正是为了建造更多的住房。而这项议题之所以至关重要，另一个原因在于，就生活成本和可负担性而言，住房正是本市绝大多数市民当下所面临的最大挑战之一。《多伦多星报》（Toronto Star）最近进行的一项民意调查显示，在这座城市里，每四个租房者中就有三个人认为自己永远也不可能拥有一套属于自己的住房。
+
+而住房的核心本应在于给人们提供选择。在上一届市议会任期内，当我担任规划与住房委员会（Planning and Housing Committee）主席时，我们付出了大量努力来增加住房供应，在更多的社区中引入更丰富的住房选择。我们提出并推进了多单元住宅（multiplexes）和后巷屋（laneway suites）合法化的方案，并且清除了大量制度障碍，力求让房屋建设能够更快地启动和落成。
+
+然而不幸的是，在过去的三年里，我们所目睹的却是更多的延误、更多的停滞拖延，以及更多开了空头支票却从未真正兑现的承诺。邹市长当初的住房计划曾信誓旦旦地宣称，到2030年要新建65,000套住房。可遗憾的是，截至今天，真正建成的仅仅只有1,400套。这仅仅完成了既定目标的2%。如果我们继续按照眼下这种慢吞吞的节奏推进下去，要彻底兑现那项承诺将需要整整115年。归根结底，我们需要在更多的社区内提供更多元化的住房选择。我们深知行之有效的方法是什么：减少审批拖延、降低建设难度，并确保我们在以更快的速度进行建设。这正是地方政府的核心职责所在——创造适宜的市场与政策环境，让建设人们所急需的住房和供应类型在经济与操作上变得切实可行。
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: Well, thanks very much, Steve, and thanks for having us tonight. And good evening, everyone. This is a topic that really matters a lot to me. I'm very passionate about this. My background is in urban planning. That's my professional training and my life's work. I actually ran for council to build more housing, and the other reason this is important is because housing is one of the biggest challenges most folks are facing on the affordability front here in the city. Toronto Star had a recent survey that found three out of four renters in this city feel like owning a home will never be a reality for them. And it should be about choice. When I was the chair of the Planning and Housing Committee in the previous term, we did a lot of work to increase housing supply, more housing options in more neighbourhoods. We brought forward a plan to legalize multiplex and laneway suites, and we removed a lot of the barriers to get housing built quicker. Unfortunately, what we've seen in the past three years is more delays, more slowdowns, more promises made that haven't materialized. Mayor Chow's housing plan called for 65,000 new housing units by 2030. Unfortunately, today we only have 1400 of them constructed. That's 2% of the target. And if we kept going at that pace, it would take 115 years to deliver on that commitment. The bottom line is we need more housing options and more neighbourhoods. We know what works. Reducing the delays, making it easier to build and making sure that we're doing it faster. That is the job of local government. Create the conditions where it is viable to build the housing and the type of supply that people need.
+
+</details>
+
+**主持人（Steve Paikin）**：时间到。时间卡得刚刚好。谢谢布拉德福德先生。邹市长，一分半钟，麦克风交给你。
+
+<details>
+<summary>Original English</summary>
+
+**Steve Paikin**: That's time. That's right to time. Thank you, Mr. Bradford. Mayor Chow, a minute and a half. The microphone is yours.
+
+</details>
+
+**Olivia Chow**：我每天早晨醒来，脑子里想的、手里在推进的，全都是如何建造更多的住房。我们正面临着严峻的住房危机。而且在过去长达十多年的时间里，在我的任期之前，几乎没有建造过任何普通老百姓能够负担得起的经济适用房。而就在此时此刻，在我的主政推动下，有整整15,000套住房正在开工建设，就在我们此刻说话的同时正在抓紧施工。正因如此，当你们走到室外、看到天际线上十台塔吊中有七台在运转，这一切都得益于我所推出的财务激励措施。这就是为什么大家都在积极开工建设。
+
+不仅如此，如今建设推进的速度也更快了。因为在我上任之前、在布拉德福德议员主管期间，那时的规划审批是有史以来最慢的，批准一项申请竟然需要耗时长达三年半。而现在，审批速度已经提升了80%，当然我们还有很多工作要做。我们必须确保广大租房者能够安居其所、继续留在自己的家中。我正在持续推动建设，我们正在着手建设另外10,000套住房。
+
+而且我要告诉大家，正因为卡尼总理对我领导的市政府充满信任，我现在能够为每一套新建的两居室或三居室住房减免48,000加元的成本。这使得建造成本大幅降低，这也就意味着，无论大家将来是购买还是租住这些房屋，你们都将真正能够负担得起。
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: I wake up every morning thinking about and working on how to build more housing. We have a housing crisis, and for a long time, more than a decade, no housing that people can afford have been built under my watch. 15,000 homes are being built right now, being constructed as we speak. It's so when you go outside and see seven out of ten cranes in the sky is because of my incentive, financial incentive. That's why they are building. They're building faster because before I came in under Councillor Bradford, he was it was the slowest application ever. It took three and a half years to approve. Now it is 80% faster and there's a lot more to do. We need to make sure that the renters can stay in their homes. And I am continue to build. We are building another 10,000 units of housing. And let me tell you, because Prime Minister Carney has confidence in my administration, I can now take off $48,000 for every 2 or 3 bedrooms, units of housing that can be built. That is a lot cheaper to build, which means that when you buy one or you're renting, you are going to be able to afford it.
+
+</details>
+
+### 自由辩论：审批效率与市场建设环境
+
+**主持人（Steve Paikin）**：这就是两位候选人的开场陈述。正如大家所见，我们已经——谢谢，谢谢大家。我们现在给计时钟增加了六分钟的时间。在每组开场陈述之后，我们将进入自由辩论环节。同样根据抽签结果，布拉德·布拉德福德，你拥有在此环节发起首次质询的权利。关于邹市长在住房领域的执政记录，你有什么想向她提问的吗？
+
+<details>
+<summary>Original English</summary>
+
+**Steve Paikin**: That's our opening statement. So as you can see, we've added thank you, thank you. We've added six minutes to the clock now. And after each set of opening statements, we'll have open debate again by lot. Brad Bradford, you are permitted the first intervention here. Is there anything you want to ask Mayor Chow about her housing record?
+
+</details>
+
+**Brad Bradford**：我想说的是，你一直在大谈特谈加快审批速度……
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: Well, I would just say that you talk about speeding up.
+
+</details>
+
+**Olivia Chow**：审批确实提速了，但你没提到的部分是……
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: Approvals, but the part that you didn't mention is that
+
+</details>
+
+**Brad Bradford**：审批是提速了，但你完全避而不谈的部分是：你实际上对整整60%的建房申请说了“不”。所以，对于那些迅速递交上来的申请，你直接否决了其中的60%。当然了，直接予以否决并就此了事确实是更快，但这样根本无法让更多的住房被建造起来！
+
+而且我认为，在家里观看直播的广大市民必须认清一个核心事实：你口口声声谈论着本市正在推进的所有由市政府主导的住房项目，然而与此同时，你们却彻底摧毁了多伦多其他所有潜在建房主体的市场环境——无论是渴望在这座城市建房的非营利机构，还是私营开发部门，支撑他们建房的必要市场与政策条件都已不复存在。正因如此，现在整个城市里只剩下市政府自己在建房。
+
+我想绝大多数民众心里都非常清楚：在现实中，政府搞建设通常不可能比私营部门花费更少的钱、以更快的速度把东西建好。因此，我们真正需要聚焦的，是努力创造一个健全的建设环境，让无论是非营利组织、慈善机构还是市场化开发商，在经济财务层面都能够切实可行地建造房屋。然而目前，我们的房屋开工量实际上已经……
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: Approvals, but the part that you didn't mention is that you've actually said no to 60% of those housing applications. So you have said no to 60% of the applications that have come fast forward. And of course, it's faster to land on. No, but that doesn't get more housing built. And I think the point that folks at home need to understand is, you know, you talk about all the city led housing that's going on, if completely tanked the market here for anybody else, whether it's the not for profit sector or private sector that would like to build housing here in this city, the conditions are not there. And that is why it is only the city. And I think most folks out there understand that, you know, the government generally doesn't build things faster for less money than the private sector. And so that's why we really need to focus on creating the conditions where whether you are a not for profit or a charity or a market builder, it is financially viable to build housing and housing starts haveac
+
+</details>
+
+<!-- chunk 2/11 -->
+
+### 多伦多新房开工率低迷与建设成本争议
+
+**主持人**：……其实我想让你把发言权转交过去。但眼下多伦多的新房开工量正处于30年来的历史低位。所以这无论如何都算不上一个好消息。邹至蕙市长，请回应。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: ...tually a have you turn it over. But housing starts are at a 30 year low right now. So that's not a good news story. Olivia Chow.
+
+</details>
+
+**邹至蕙**：好的。关于目前已获批的在建住房储备，总计有30万套之多。你们知道为什么开发商建不起来吗？正是因为现在的建造成本实在太高昂了。而事实是，我能够为每一个两居室或三居室单元削减4.8万加元、足足48,000加元的规费成本，这意味着住房市场将得以重新打开。事实上，正是因为我的工作，即便在当前整个市场陷入冰冻期的情况下，这批住房储备中也至少有1万到1.5万套目前已经在破土动工了。
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: Well, on the pipeline being approved. It's 300,000 units of housing. You know why they can't build because it's so expensive to build. The fact that I can take out $48,000, $48,000 out of every 2 or 3 bedrooms, that means that the market is going to open up. In fact, because of my work, at least 10 or 15,000 of those housing, even though the market is frozen, are now being built.
+
+</details>
+
+### 租客权益保护与多斯路问题业主风波
+
+**邹至蕙**：而且关于住房问题，我还要再强调另一件事。我们绝不能忘记广大租客群体。布拉德福德议员，你在你自己的选区里根本就没有为租客挺身而出！因为我亲自去过多斯路（Dawes Road）的那栋大楼，那就在你的选区范围内，天哪，整栋楼里蟑螂四处乱爬，屋顶还在漏水。居住环境极其恶劣，但之前根本无人问津、没有任何作为。你甚至连去现场看都没去看过一眼。所以对我来说，我必须介入。我们将那位房东告上了法庭，最终迫使她缴纳了100万加元的罚款。我们市政府直接进驻并把大楼修缮好了。
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: And let me tell you about something else about housing. We need to remember the renters. Counsellor, you have not stood up for renters in your own ward because I've gone into Dawes Road, which is right in your area, and my God, there were cockroaches running around in the building and the roof was leaking. It is terrible and nothing was done. You didn't even go to visit it. So for me, I had to step in. We took that landlord to court and as a result, and she had to pay $1 million. We came in and fixed the building...
+
+</details>
+
+**邹至蕙**：谈论住房时你必须谈论租房者，因为多伦多有一半的市民都是租房一族。我们不仅要建造他们能够负担得起的住房，还必须切实保护租户的合法权益。而我将永远挺身而出，坚决捍卫租客的基本权利。
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: ...and when you. You have to talk about renters also, because half of Torontonians are renters and you need to build housing they can afford, but also protect tenants. And I will always stand up for the rights of renters.
+
+</details>
+
+**布拉德·布拉德福德**：市长女士，我必须在此纠正事实，因为那完全不符合真相。这是一个存在了许多许多年的恶劣问题业主。早在戴维斯（Janet Davis）议员负责该辖区之后、也就是我担任市议员的第一任期内，我们就针对那栋大楼开出了整整70张整改命令，并且早已经将他们告上了法庭。事实上，我们对那个问题房东提起了多伦多市历史上金额最高的一次指控。我们一直在共同努力推进这项工作。
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: I'm going to have to correct the record because that's not true. Madam Mayor. This has been a problem landlord, that has existed for many, many years. In my first term as councillor after Janet Davis had the file. You know, we levied 70 different orders on that building, and we have taken them to court. And in fact, we had landed the largest charge against the problematic landlord in the city's history. And we worked together to continue to do that work.
+
+</details>
+
+**布拉德·布拉德福德**：正是直到我们进入了市长政治竞选周期，你才突然决定跑到多斯路500号去作秀亮相。我想很多人都明白，这座城市里有50%的人口都在租房生活。这就是为什么我们需要一个切实可行的方案来增加专用租赁住房（purpose-built rental）。这也是为什么我凭借自己的城市规划背景和专业经验，为多伦多创造了建设所谓的“缺失的中间层”（missing middle）住房的先决条件。这种温和密度的社区开发，让城市的新区域能够接受适度集约化建设，非常适合有育儿需求的家庭，或者希望换小户型安度晚年的长者。
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: It was only since we entered into a political campaign that you decided to show up at 500 Dawes Road, and, and I think a lot of people understand that 50% of the population does rent here in the city. And that's why we need a real plan to increase purpose built rental. That's why, you know, my planning background and the experience there created the conditions so that we could build what we call the missing middle, the type of gentle density in our neighbourhood that opens up new parts of the city to the type of gentle intensification that works really well for families or for seniors that want to downsize.
+
+</details>
+
+### 租客三点计划与驱逐翻修监管对决
+
+**布拉德·布拉德福德**：我在这个议题上一马当先，在距离我所居住的丹佛斯（Danforth）和伍德拜恩（Woodbine）仅隔几条街的地方批准了“缺失的中间层”试点项目，为住房开发特别是针对非营利领域创立了一种崭新的示范模式。所以对于租房者，我拥有清晰务实的“三点计划”：我们将全力保住您的家园；我们将对假借翻修实施驱逐的行为（Renovictions）施加极其严格的限制；我们还将确保落实到位的规章制度，以便真正开展执法。搞拍照作秀和发布新闻通稿固然很容易，但你必须把实打实的资源投入进去才能把事情办成。
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: And I led on that file, approving a missing middle pilot a couple streets over from where I live at Danforth and Woodbine, and it's creating a new type of model, particularly for the not for profit sector. So I have a plan for renters. It's it's a three point plan. We are going to keep your home. We're going to be very stringent on Renovictions. We're going to make sure that we have the bylaws in place to actually do the enforcement. It's great to do a photo op and a press announcement, but you need the resources in there to do it.
+
+</details>
+
+**主持人**：我们来听听邹市长的回应。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: Let's get a response from Mayor Chow.
+
+</details>
+
+**邹至蕙**：行了吧，事实是你在任内根本就没有把事情办成，不是吗？因为你根本没有抽出哪怕一点时间去亲自探望他们。楼里的租户到处找你，但你根本不肯见他们。这就是为什么他们转而向我求助。正是因为我们市府强硬地将业主告上法庭，问题才终于迎刃而解，那里的租赁单元最终才被彻底清理修缮好。你说你做了根本不是事实，因为是市政府强制进驻接管的。你去和那些租户谈谈吧，他们表达得清清楚楚：在你任内根本什么都没搞定。
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: Yeah, well, actually, you didn't get it done, did you? Because you did not take the time to go visit them. The the tenants were looking for you and you wouldn't meet with them. That's why they turned to me. And because we took them to court, it finally worked. And we finally got housing built. Rental units are finally now cleaned up. That's not true because the city moved in. Go and talk to the tenants. They said very clearly it didn't get done.
+
+</details>
+
+**邹至蕙**：再想一想所谓“借翻修驱逐租客”（Renoviction）的问题，我们都清楚以往屡见不鲜的乱象。正是我主持引入了市府专门法规，彻底叫停了房东以此为虚假借口驱赶租客的恶劣行径。以往那些房东只凭一句“要搞装修”就能强行把人扫地出门，如今这种现象已经一去不复返了，租客不会再轻易遭遇恶意驱逐。谢天谢地，我们真正保护了租客的权益。
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: But think about this Renoviction we know that happened. And I brought in a bylaw to stop this bogus reason. This landlord gets to kick you out because of our renovation. So now it's gone. You do not get renovicted. And thank God we protected the rights of tenants.
+
+</details>
+
+**邹至蕙**：不仅如此，你刚才还夸夸其谈大聊什么建设“缺失的中间层”理念。事实是在我的治下，我直接免除了市政府对多单元复式住宅（multiplex）以及后院小巷屋（laneway houses）所征收的全部规费与开发收费。正如大家所亲眼见证的，我们终于能把房子盖起来了，因为我们在政策上让建房变得便宜得多、也快速得多。
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: Not only is that you talked about the whole notion of being able to do the missing middle. Yes. Of course, under my watch, I have taken out all the charges that a city would even ask the. These multiplex or backyard laneway. And as we saw, finally we got a building because we are making it a lot cheaper and faster to make it happen.
+
+</details>
+
+**主持人**：布拉德福德先生，请讲。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: Mr. Bradford.
+
+</details>
+
+### 数据透明公开与政策执行力的交锋
+
+**布拉德·布拉德福德**：任何真正懂行、任何实际建造过“缺失中间层”建筑的人都一清二楚，那是我通过《住房行动计划》（Housing Action Plan）所奠定推进的工作——将加拿大按揭与住房公司（CMHC）对接起来，将融资政策与民间实际开工的套数相匹配。市长女士，只要身在这个领域的人都心知肚明。
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: And anyone that knows and anyone that's built missing middle knows that was the work that I did with the Housing Action Plan, aligning the CMHC, finding financing policies to the number of units that people are doing. Everybody knows that is in the space, Madam Mayor.
+
+</details>
+
+**布拉德·布拉德福德**：但是，我不得不明确指出：针对假借翻修驱逐的有关数据，我们必须公之于众！这是我之前在市议会动议提案的内容，而你当时却投下了反对票！我们既需要对不良房东问责，也同样需要对市政府本身进行严正问责。请等一下，我们需要把这些数据全部公布出来！
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: But, you know, I got to say, the Renovictions we need to publish that data. That's something I've moved motions for. You voted against it. We need to hold the city to account, just like we need to hold problematic landlords to account. Hang on a second. Like we need to publish that data. And that's why we...
+
+</details>
+
+**邹至蕙**：不，那完全不是事实。那不是真的。
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: No, that's not true. That's not true.
+
+</details>
+
+**布拉德·布拉德福德**：市长女士，我实在无法理解你为什么不愿在这件事情上更加透明开放，把这些信息直接挂到网上公开？这样一来，租客在搬进一栋大楼之前，就能清清楚楚地看到自己将要面对的是怎样一个房东！地方政府的政务透明度是至关重要的。然而一次又一次，每当涉及住房档案与关键决策时，你总是试图把公众蒙在鼓里，而我想要做的是把一切都带到阳光之下！
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: Madam mayor, and I don't know why you wouldn't want to be more transparent about this and put it online so that tenants can actually see, you know, what type of landlord they're dealing with when they move in the building. Transparency for local government is paramount. And time and time again, when it comes to the housing file, you want to keep people in the dark. I want it to bring it to the light.
+
+</details>
+
+### 第二环节转场：长期无家可归与支持性住房
+
+**主持人**：各位候选人，本环节时间已到，第一部分讨论结束。我们现在转入辩论的第二部分。在此我要温和地提醒现场观众，请不要像看足球比赛那样不必要地喧哗喝彩，这毕竟是一场严肃的市长候选人辩论。在第二部分中，我们将聚焦讨论无家可归问题以及支持性住房问题。邹至蕙市长，就应对多伦多慢性/长期无家可归现象的这一提问，您拥有前1分30秒的回答时间。您具体有什么解决规划？
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: Candidates. That is our time for this segment. That is section one. We now move on to section two. I'm going to gently remind the audience about needless cheering like it's a football game. This is a mayoral debate after all. We're going to talk homelessness and supportive housing in this section. Mayor Chow, you've got the first minute 30 to respond to this question about chronic homelessness. What plans do you have?
+
+</details>
+
+**邹至蕙**：好的。哦，这确实是一项艰巨复杂的挑战。因为现实情况往往是，当你走进避难所时，很多街友或许是因为成瘾问题，或是面临严重的心理健康困扰，又或者单纯是因为手头拮据、没有足够的收入来源，导致陷入困境……
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: Yeah. Oh, it's difficult, because what happens is that you go to shelters and perhaps because of addiction or mental health issues, or you just don't have enough money, you're t...
+
+</details>
+
+<!-- chunk 3/11 -->
+
+### 杰森的转变与支持性住房计划
+
+**邹至蕙市长（Mayor Chow）**：……获得了全方位的包裹式支持。让我来给你们讲讲杰森的故事。杰森在街头流浪了整整六年，那是一段极其艰难的日子。他常常进出监狱，而且情况变得非常糟糕，因为他一次又一次尝试戒掉自己的毒瘾。
+
+情况一度恶化到他甚至决定结束自己的生命。感谢上帝，他当时没有成功。随后，一位受雇于市政府的住房社工找到了他，对他说：“杰森，再试一次吧，我给你找到住所了。”这里有一处住所，是我本人、你们大家以及卡尼总理共同建设并资助的项目，叫做“邓恩之家”（Dunn House）。
+
+杰森搬了进去，我的天哪，他的人生彻底改变了。他不再深陷毒瘾，而是迷上了做园艺。他种了许许多多的黄瓜，并且免费分送给大家。他现在成了一个榜样，彻底重塑了自己的生活。他重获了希望，而且正在积极服务自己的社区。
+
+我不仅是在建这单独一栋房子，我们正在建设更多这样的支持性住房。我现在就有600多套单元正在施工当中。如果我再次当选，还会有更多……
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Chow**: ...wrapped. Let me tell you the story of Jason. Jason has been on the street for six years, and it was a difficult life. He was in and out of jail also, and it gotten so bad because he keeps trying to quit his addiction. And it got so bad that he decided to end his life. And thank God he was not able to be successful.
+
+And a housing worker employed by the city went to him. "Jason, give it another try. I have a home for you. Here's a home that myself and you and Prime Minister Carney have built to well, this his funding called house."
+
+Jason came into it and my God, his life transformed. Instead of being addicted, he got addicted to become a gardener. He grew so many cucumbers. He had gave it away. He's now the role model. He has transformed his life. He found hope and he's serving his community.
+
+I am not just building one house. We're building many more supportive housing. I have 600 more units being constructed right now. If elected, there'll be so many.
+
+</details>
+
+**布拉德福德市议员（Councillor Bradford）**：……更多的只是口头承诺……
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: More to help.
+
+</details>
+
+**邹至蕙市长（Mayor Chow）**：……去帮助像……
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Chow**: People like.
+
+</details>
+
+**布拉德福德市议员（Councillor Bradford）**：……杰森这样的人。
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Chow**: Jason.
+
+</details>
+
+**辩论主持人（Moderator）**：好了各位，请遵守规则，请克制一下。布拉德福德市议员，您的一分三十秒发言时间现在开始。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: Come on guys, come on, come on. Councillor Bradford, your minute 30 starts now.
+
+</details>
+
+### 布拉德福德质询实际成效与社区经验
+
+**布拉德福德市议员（Councillor Bradford）**：是的，我们听到了大量的承诺和花哨的说辞，但并没有看到多少实质性的成果。我们非常清楚什么方法才管用——那就是支持性住房。大家都知道这才是真正需要的举措。你必须确保这些人拥有一条能够搬出避难所的路径，进入一个让他们拥有稳定生活、享有头顶有屋顶的尊严，并获得全方位包裹式支持的地方，这样他们才能重新走上正轨并取得成功。
+
+我可以告诉大家，在我担任市议员的第一个任期内，我作为当地议员所做的最艰难的事情之一，就是推动建设支持性住房，而且就建在我住处不远的那条街上。
+
+当时，社区里存在大量的担忧和疑虑，遇到了巨大的阻力，但我们把这些困难一一化解了。我们挨家挨户深入沟通，我走遍了那里的每一条街道，敲开了周边所有邻居的大门。事实上，前市长庄德利（John Tory）当时还亲自来和我一起做这些走访工作，因为他就是那种坚信要亲临现场、踏实付出努力的人。
+
+而现在，我们与运营机构伍德格林（Woodgreen）合作所取得的成果是：我们成功改变了48个人的命运。他们现在能够获得社工协助、心理健康支持以及必要的药物治疗。他们自己承担房租——尽管享受了大幅度的租金补贴——并且他们正在为社区做出非常积极的贡献。
+
+当年那些抱有诸多担忧和顾虑的居民，后来也主动站出来说：“你知道吗？我们当初确实心里没底，但你在当地议员任上处理这件事情的方式，以及市政府推行这一项目的方式，实际上为整个社区带来了非常积极的成果。”
+
+所以，这才是正确的前进道路。问题在于，在过去的三年里，我们做的工作还远远不够。这才是根本的解决途径。当我当选市长后，我们会以更快的速度推进落实，因为只有这样我们才能切实帮助那些露宿街头的人。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: Yeah, it's a lot of promises and a lot of rhetoric, but it's not a lot of results. We know what works. Supportive housing. You know that's what you need. You need to make sure that these folks have a pathway out of the shelter in, into a place where they have stability, the dignity of a roof over their head and the wraparound support so that they can be successful.
+
+And, you know, I can tell you in my first term in council, that was one of the most difficult things that I did as a local councillor was build supportive housing. Just down the street from where I live. And, you know, there was a lot of concern from the community. There was a lot of pushback, but we worked through that. We had those conversations. And, you know, I went and knocked on the doors of all the streets and all the neighbours in the area. Actually, former Mayor John Tory came and did that work with me because he was he was one of those guys that believed in showing up and putting in the work.
+
+And what we found now with the operator is Woodgreen is we have now transformed the lives of 48 individuals who have access to whether that might be social work or mental health supports or medication. They pay rent, albeit significantly subsidized, and they make a really positive contribution to the community.
+
+And the folks at the time who had a lot of concerns and apprehension, they have now come forward afterwards and said, you know what? We were unsure about this, but the way that you handled it as a local councillor, the way that the city was able to do this, it's actually been a really positive result for the community. So that is the way forward. The problem is we haven't done enough of that over the past three years. That is the pathway. And when I'm mayor, we're going to do that a lot faster because that's how we help people. Thank you for On the Streets.
+
+</details>
+
+### 公共安全与人道关怀的平衡之辩
+
+**辩论主持人（Moderator）**：感谢您的发言，布拉德福德市议员。现在计时器设定为六分钟。进入自由辩论环节，首先由邹至蕙市长进行第一轮发言。
+
+我们必须在两者之间寻求平衡：一方面，我们必须对那些饱受毒瘾和心理健康问题折磨的人抱有同情心。他们是最难获得安置的群体之一，而且正如你们二位所知，在需要入住避难所的人群中，他们占了相当大的比例；但另一方面，我们也清楚，当有人在公开场所吸毒或睡在地铁车厢内时，公共空间的性质就发生了改变，这也会让很多普通市民对自身的公共安全感到担忧与焦虑。
+
+这就是需要权衡的焦点所在。我们到底应该怎么做？邹至蕙市长，请您先发言。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: Thank you for that statement, Councillor Bradford, we put six minutes on the clock now. And as we get into Mayor Chow, you're going to have the first intervention during the open debate portion here.
+
+We have to strike a balance here. We need compassion for those who are struggling with addiction and mental health issues. They are among the most difficult to house, and they make up a significant number, as you both know, of the people who need our shelters, we also know that when people engage in open drug use or sleep on the subways, it changes the character of those public spaces. And it also makes a lot of people nervous about their own public safety.
+
+So that's the balance. What do we do? Mayor Chow, you first.
+
+</details>
+
+**邹至蕙市长（Mayor Chow）**：这是一个非常深刻的问题。那么你是希望我们在这个议题上讨论六分钟吗？
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Chow**: It's a very good point. So you want six minutes on this?
+
+</details>
+
+**辩论主持人（Moderator）**：我并不是让您一个人讲六分钟，而是总共六分钟的辩论时间。好的，由您先行作答。
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Chow**: I don't want six minutes on that. That's six minutes for debate. Okay. You got the first intervention.
+
+</details>
+
+### 建设速度与模块化住房的成效
+
+**邹至蕙市长（Mayor Chow）**：我明白了。我很理解大家的感受，因为我自己就住在市中心。我亲眼看到这种状况有多么棘手，有多么艰难。我看到了你们所看到的景象，也完全理解你们的感受。但是请想想那4000名已经离开街头、如今住进房屋的人们；再想想杰森的故事，我们是完全有能力做到的。
+
+我们已经做到了这一点：目前已经有500套单元投入使用，像纳米（Nami）以及许多受助者都已经搬进了室内。在当前这个阶段，大家确实面临着抉择：我的方案正在切实把露宿者带进温暖的居所。
+
+而且至关重要的是，我们必须雷厉风行地去做。是的，我们在奥辛顿（Ossington）建设支持性住房的推进速度，仅仅用了几个星期就完成了，而这正是依托于模块化住房技术。没错，我们确实可以快速建造。正因如此，在非常短的时间内，我们已经建成了数百套支持性住房。
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Chow**: I got it. I understand that I live in downtown. I see how that it is something that it is hard. It is difficult. And I see what you see and I understand how you can feel and think about the 4000 people that are off the street now that are now in housing.
+
+And think about the Jason's we can do it. We have done there's 500 units already open and like Nami and many, they are already getting inside. And there's really a choice in this stage that my plan bring people inside.
+
+And it is important that we do it very fast. Yes, my speed of getting a supportive housing that was on Ossington, it was just in a couple of weeks, and it was because of modular housing. Yes, we can build it fast. That's why in very short time we have hundreds of supportive housing being built.
+
+</details>
+
+**辩论主持人（Moderator）**：布拉德福德市议员，您对此有回应吗？
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: Councillor Bradford, you want to come back on that?
+
+</details>
+
+### 现状质疑与执政紧迫感之争
+
+**布拉德福德市议员（Councillor Bradford）**：我只能说，这确实是一个非常棘手的问题，但邹市长所主张的、要求我们去接受的这种推进步伐，是远远不够的。大家知道，在她的整个任期内，我们依然有两万人露宿街头、流落公园、睡在我们的公共交通系统里。
+
+虽然表面上有一些改善，但这根本不及格。在长达三年半的时间里，仅仅取得了百分之八的微弱改善，这绝不是一份可以挂在冰箱上引以为豪的成绩单。
+
+所以，我们都清楚什么方法才管用。大家刚才听她谈到了“邓恩一号大楼”（Dunn House One），很好，现在“邓恩二号大楼”也拿到了资金。但我更想谈的是邓恩三号、四号、五号和六号大楼。
+
+我认为多伦多当前的问题——同时也是恕我直言，邹至蕙市长的领导力所存在的问题——在于换汤不换药，依然在维持墨守成规的现状。在应对这些极其紧迫的危机时，根本缺乏应有的紧迫感。
+
+我们目前的做法根本没有奏效。我们推进的步伐与速度是完全无法令人接受的。我们明明知道怎样做才有效，我们必须拿出坚定的决心和紧迫感，并且选出一位真正有魄力的市长去……
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: Well, I would just say that it's a difficult issue, but the pace that Mayor Chow has suggested that we should be accepting is inadequate. You know, over her term. We still we still have 20,000 people who are sleeping rough on the streets, in the parks, on our transit system. And while there has been some improvement, it's not good enough. Eight, 8% improvement over three and a half years is, is not a report card that you're going to put on the fridge.
+
+And so we know it works. You heard her talk about done house one. Excellent. There is now funding for done House two. But I want to talk about done House three and four and five and six.
+
+And I think the problem in Toronto and respectfully the problem with Mayor Chow's leadership is it's more the same. It's status quo. And there's not that urgency to address these types of urgent issues. What we're doing right now is not working. And the space that the speed at which we're moving is unacceptable. We know it works. We have to have the determination and the urgency. And a mayor who's actually g
+
+</details>
+
+<!-- chunk 4/11 -->
+
+### 住房危机应对与防范驱逐机制
+
+**布拉德·布拉德福德市议员**：……真正深入并切实推进这些事务。光是发布公告和拍照造势是远远不够的。你必须把工作人员凝聚在一起，必须联合非营利合作伙伴……
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Brad Bradford**: ...going to be seized and engaged with these files, it's not enough to just make the announcements and do the photos. You have to bring the staff together. The not for profit partners.
+
+</details>
+
+**主持人（史蒂夫）**：协同合作。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator (Steve)**: Work with.
+
+</details>
+
+**布拉德·布拉德福德市议员**：……并与省政府和联邦政府紧密合作，把事情落到实处。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Brad Bradford**: The province and the federal government to get it done.
+
+</details>
+
+**主持人（史蒂夫）**：给市长同等的发言时间。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator (Steve)**: Equal time for mayor.
+
+</details>
+
+**邹至蕙市长**：市议员先生，您是错过了我两周前与住房厅长共同举行的新闻发布会吗？当时我们宣布与 Yukon 机构联合为 3 号、4 号和 5 号房屋项目提供资金。在那场发布会上我对杰森承诺过，我们要做满 10 个项目，我们一定会彻底建好第 10 号房屋项目，我们正在付诸建造。
+
+另外，我还要补充最关键的一点：我们必须从源头上防止市民被驱逐流落街头。因为一个人一旦沦为无家可归者，日子就会变得极其艰难。很多时候这根本不是当事人的过错，可能仅仅是因为做了一次根管治疗，就要花掉几千加元。过去这段时间你一直能够安稳居住，但就是因为突发了某种紧急意外，导致房租拖欠了两个月，你就会收到驱逐通知。如果你原本有稳定的住所，市政府就会通过“租金银行”（Rent Bank）及时介入救助。我把租金银行的资金规模翻了一番，由此成功防止了成千上万的人陷入无家可归的境地。这才是治本的解决方案——防止市民被驱逐。对于那些正在逃离虐待关系的受害者，我们帮助他们垫付首尾两个月的租金，让他们能够重新站稳脚跟。所有这些举措都至关重要，能从根本上避免市民沦为无家可归者。
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: Councillor, miss the press conference I had with the Minister of Housing just two weeks ago where we announced funding together with Yukon for House three, four and five. And at that place I said to Jason, I promise him we're going to do ten. We're going to get to done. House number ten. We are building it.
+
+And let me say there's one more thing. Let us prevent people from getting evicted in the first place. Because once you become homeless, it's tough. So through sometimes no fault of your own, maybe because you have a root canal, it might cost a few thousand bucks. You've been able to be housed all this time, and because of something that emergency happened, you're two months behind your rent. You get an eviction notice. If you are stably housed, the city will step in through the rent bank, and I've doubled the amount in rent bank. And as a result, thousands of people have been prevented to become homeless. That is the solution prevent people from being evicted. And for people that are leaving abusive relationships, we help them put the first and last month in so they can get back on their feet. All of that is so important to prevent people to become homeless in the first place.
+
+</details>
+
+### 无家可归治理成效与庇护所建设争议
+
+**布拉德·布拉德福德市议员**：我是布拉德福德议员，我认为大家都会认同在上任市长任内启动的 EPIC 项目非常关键，这也是为什么我们一直支持它，在我的政府领导下我也将继续支持该项目。因为毫无疑问，防止人们陷入无家可归的恶性循环是更好的做法。
+
+但话又说回来，对于眼下正流落街头的无家可归群体，我们必须加快行动步伐，取得更好的成效。多伦多街头有两万人无家可归，三年半下来仅有 8% 的改善，这根本称不上胜利，这不过是在原地踏步、老调重弹。问题反而在变得越来越严重。只要你去联合车站外、皇后街与巴瑟斯特街路口，或者去吉普林地铁站走一走看一看，就会明白我们目前的做法根本没有起效。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Brad Bradford**: Councillor Bradford and I think we all agree the Epic program, which was started under the previous mayor, is something that's really important and that's why we continue to support it, and something that I would continue to support in my administration, because, of course, it's better to prevent people from falling into the cycle of homelessness.
+
+But then again, like we have to move faster and get better results for the folks who are experiencing homelessness right now. And it's 20,000 people on the streets of Toronto and 8% improvement over three and a half years is not victory. That's more of the same. The problem is getting worse. And, you know, just go spend time outside of Union Station or Queen and Bathurst or go to Kipling station. That's all you have to do to see what we're doing is not working.
+
+</details>
+
+**主持人（史蒂夫）**：那么你会怎么做？
+
+<details>
+<summary>Original English</summary>
+
+**Moderator (Steve)**: So what would you do?
+
+</details>
+
+**布拉德·布拉德福德市议员**：所以我们必须加快动作。我们必须兴建支持性住房。坦率地说，按照目前推进的节奏，完全是远远不够的。同时我们还必须清醒地认识到，这些人当中有一部分需要获得他们目前根本没有得到的戒瘾治疗与心理支持。对地方政府而言，任由某个人躺在人行道上，任由有人在有轨电车上公然吸毒，或者任由营地蔓延……
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Brad Bradford**: And so we have to do it faster. We have to build the supportive housing. And and honestly, at the pace it's been going right now, it's totally inadequate. We also have to recognize that some of these people need treatment and support that they're not getting. It's not a compassionate response from local government to have somebody laying on the sidewalk or somebody who is engaging in open air drug use on, on our streetcars or encampments.
+
+</details>
+
+**邹至蕙市长**：在……
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: In the.
+
+</details>
+
+**布拉德·布拉德福德市议员**：……在公园里搭帐篷，对于加拿大这样一个富裕的国家、对于多伦多这样一个繁荣的城市来说，这绝不是一座城市应当给出的合理交代。大家也都看到了，这届政府依然在固步自封、因循守旧，缺乏足够的政治勇气去采取某些艰难但必不可少的举措，把这些人送去接受他们亟需的戒瘾治疗与支持服务。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Brad Bradford**: Park, that for a country as wealthy as Canada and a city as prosperous as Toronto, that is not an acceptable response in this city. And, you know, I have just seen more of the same from this administration without the courage to do some of the difficult but necessary things to get these people to treatment and the support they need.
+
+</details>
+
+**主持人（史蒂夫）**：我们给邹市长留出一分钟的时间回应。请讲。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator (Steve)**: Let's save a minute for Mayor Chow. Yes.
+
+</details>
+
+**邹至蕙市长**：说到勇气，你说你想把街头的人接纳安置进来，你想把速度提得更快。但我已经实实在在地做成了！而你呢，你之前对庇护所投了反对票，那可是一座长者庇护所！我翻看你的投票记录时感到非常遗憾。让我来揭示一下你在选举期间的真实表现：一到选举你就换一套说辞。事实清清楚楚，那确实是一处庇护所——史蒂夫，如果允许我直说的话——你当时投了反对票。史蒂夫，请容我说明，事实就是……
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: Speaking about courage, you wanted to bring people in. You want to do it faster. I've done it. You voted against a shelter. A shelter for seniors. And I. I am sorry that I see your voting record. Let me let me walk you through election time. You talk about something else. It is clear that is a shelter, if I may, Steve, you voted against it. If I may, Steve, allow me to say, though, that.
+
+</details>
+
+**主持人（史蒂夫）**：你提出了指控，我们应当听听对方对此的回应。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator (Steve)**: You made an allegation. We should we should get a response to that.
+
+</details>
+
+**布拉德·布拉德福德市议员**：我在沙滩-东约克选区的皇后街上建了一座妇女庇护所。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Brad Bradford**: I've built a women's shelter on Queen Street in Beaches-East York.
+
+</details>
+
+**邹至蕙市长**：我说的不是建没建……
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: I'm talking.
+
+</details>
+
+**布拉德·布拉德福德市议员**：等一下，先让我把话说完。我在东约克建设了支持性住房，最近我们还刚刚与“双灵人”（2-Spirited People）组织合作建立了一处紧急庇护所。然而，邹市长，你所没有做到的——我认为这是对你整个执政团队的中肯批评——是你根本没有在社区内部建立起承接能力与民众支持，导致这些项目根本无法取得成功。这就是为什么我当年会和庄德利市长一起挨家挨户敲门与社区沟通、听取居民反馈，并建立起社区的善意与支持。而这种深入基层的细致工作，你从来都没有做过。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Brad Bradford**: About built. Hang on, let me finish. I built supportive housing in East York, and most recently we've just worked with the two spirit Organization to build up an emergency shelter. But you. Shelter what you haven't done. Mayor Chow and I think this is a fair critique of your entire administration. You have not built the capacity and the support with community. So these things can be successful. That's why I went and knocked doors with John Tory to talk to the community, to hear their feedback and build the goodwill and support of a community. You've never done that.
+
+</details>
+
+**邹至蕙市长**：你根本不花……
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: You don't take.
+
+</details>
+
+**布拉德·布拉德福德市议员**：……时间去……
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Brad Bradford**: The time to.
+
+</details>
+
+**邹至蕙市长**：……亲自到场……
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: Show up.
+
+</details>
+
+**布拉德·布拉德福德市议员**：……并切实把基层工作做好。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Brad Bradford**: And do that work.
+
+</details>
+
+### 多伦多经济发展与就业议题
+
+**主持人（史蒂夫）**：两位候选人，我们这个环节的时间到了。我现在必须插话打断，以便把控整个节目的时间节奏。接下来进入第三个板块，主题是经济发展。同样，我们为倒计时重新设定一分三十秒，每一节我都想以一个非常客观、简短且切中要害的问题开始。布拉德·布拉德福德，这一轮由你率先作答：你打算如何提振多伦多的经济？
+
+<details>
+<summary>Original English</summary>
+
+**Moderator (Steve)**: Candidates. That's our time in this segment here. I'm going to jump in right now so we can stay on time here. Section three comes up next and that is on economic development. And again, I like to start each section with just a very neutral, short, punchy question. As we put a minute 30 back on the clock. Brad Bradford You get the first response this time. How would you improve Toronto's economy?
+
+</details>
+
+**布拉德·布拉德福德市议员**：多伦多的经济有着极大的改善空间，因为多伦多是整个国家的经济引擎，我们需要一届能够认清这一点并竭尽全力巩固这一地位的市政府。让我们面对现实吧：特朗普总统正在冲击我们的国家主权，正在冲击我们的经济体系，甚至正试图抢走属于我们的工作岗位。作为市长，我将确保多伦多成为全国首屈一指的理想目的地，并在全球范围内对人才、资本和投资保持强大竞争力。
+
+在邹市长领导下的市政团队根本没有把精力聚焦在经济上，这令人深感遗憾。相关数据摆在眼前：多伦多在全国各大主要城市中拥有最高的青年失业率之一，达到了 17%。这一数字实际上比全国平均水平高出了整整 4 个百分点；而与此同时，多伦多明明拥有全国顶尖的院校、最优秀的高校以及身在本地的技术工人群体。然而他们如今却陷入了失业困境，这是完全无法令人接受的。我制定了一项计划来打造一个多伦多……
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Brad Bradford**: There's lots of room for improvement because Toronto is the economic engine of this country, and we need an administration that recognizes and does everything we can to strengthen that. Let's get real. President Trump is attacking our sovereignty. He is attacking our economy, and he's coming to steal our jobs. As mayor, I am going to make sure that this is the number one destination in the country and competitive around the world for talent, for capital and for investment.
+
+We have not had an administration under Mayor Chow that is focused on the economy at all. And it's regrettable. And the numbers are such that we have among the highest youth unemployment rate, 17% of any major city in the country. That number is, in fact, 4% higher than the national average, despite having some of the best colleges and best universities, skilled tradespeople right here in Toronto. And they're out of work, that is unacceptable. I have a plan to create a Toront...
+
+</details>
+
+<!-- chunk 5/11 -->
+
+### 青年经济挑战与多伦多就业承诺
+
+**Councillor Bradford**：……青年经济挑战，我将借助本市现有的140万个私营部门工作岗位、各大企业的所有总部，以及愿意留在这里的新创业者们。我们将共同努力，制定公开的承诺，去招聘长期的全职工作岗位——不是在浅水戏水池打零工那样的暑期兼职，而是为30岁以下的年轻人提供能够成为终身职业的全职工作。我们将公开发布这些数据，并且向这些机构以及市政府严格问责。这正是纽约市所做的事情，他们创造了65,000个就业岗位；洛杉矶做到了；芝加哥也做到了。现在正是需要一个认真对待经济繁荣的本地政府和行政团队的时候了。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: ...to Youth economic challenge, where I'm going to leverage the 1.4 million private sector jobs here in the city, all the headquarters of the big companies, the new founders that are going to stay here. And we're going to work together to create public commitments, to hiring permanent, full time jobs, not summer jobs at the, you know, at the wading pool, but full time jobs for careers for folks under 30. We're going to publish that data, and we're going to hold those organizations and the city to account. This is what they've done in New York City with 65,000 jobs. They've done it in Los Angeles. They've done it with Chicago. It is time for a local government and administration that takes economic prosperity seriously.
+
+</details>
+
+**Moderator**：布拉德福德市议员。好的。好的，谢谢大家。邹市长，你有1分半钟的发言时间。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: Councillor Bradford. All right. Okay. Thanks. Everybody. A minute and a half on the clock to you, Mayor Chow.
+
+</details>
+
+### 应对关税压力与基础设施就业
+
+**Mayor Chow**：我知道，本市每一家小型企业背后，都有一个努力维持生计的家庭。我知道，由于特朗普关税的影响，现在的日子确实非常艰难，我们必须把多伦多建设得强大、更加强大。而这正是我们正在做的事。因为我所推动的TTC（多伦多公车局）投资，我们正在引入日立公司（Hitachi）。他们正在维修和更新TTC地铁站的信号系统，并且他们就在士嘉堡（Scarborough）创造了数以千计的就业机会。不仅是日立，丰田（Toyota）也正在这里设立总部，没错，同样创造了数千个工作岗位。我还可以继续列举，大西洋包装公司（Atlantic Packaging），还有因为我之前提到的住房建设项目而正在创造的40,000个工作岗位。所以，就业机会正在不断被创造出来。而且我赢得了总理的信任，这就是为什么他愿意对本市进行投资，这就是为什么他最近和我们一起出席活动。例如，我们去了赛诺菲公司（Sanofi），那又是接近10亿加元的投资，就落在我们多伦多市，创造了成百上千的工作岗位。在赛诺菲，事情正在实实在在地推进。让我们继续向前迈进。
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Chow**: I know that behind every small business in this city is a family that make ends meet. I know time is really tough right now because of the Trump tariff, and we need to build Toronto strong, strong. And that's precisely what we're doing because of the TTC investment that I put in. We are bringing in Hitachi. That is fixing and renewing the signal in the TTC subway station. And they are creating thousands of jobs right in Scarborough, not only Hitachi, Toyota is building a headquarter here. And yes, and creating thousands of jobs. And I can go on Atlantic packaging and 40,000 jobs are being created because of the housing that the housing that I was talking about earlier. So jobs are being created. And I have the confidence of the Prime Minister. That's why he's investing in the city. That's why he's joined with us to recently. For example, we have gone to the Sanofi. Again, that's close to $1 billion investment right here in the city, creating thousands, hundreds of jobs. And Sanofi. So things are happening. Let us keep going forward.
+
+</details>
+
+**Moderator**：谢谢，时间到。请在计时器上设置六分钟，好的各位。布拉德福德市议员，你获得本轮的首个发言权。市长认为她在为安大略省首府吸引外部投资方面交出了一份出色的成绩单。对此你怎么看？
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: Thank you. That's time. Let's get six minutes on the clock here and then okay everybody. Okay. Okay. The mayor Councillor Bradford, you get the first intervention here. The mayor thinks she's got a good story to tell on bringing outside investment into the capital city of the province of Ontario. What say you?
+
+</details>
+
+### 人口流失与营商竞争力之争
+
+**Councillor Bradford**：嗯，我并不同意。我的意思是，看看这个事实吧：去年有77,000人离开了多伦多市，这是一场逃离——逃离难以承受的生活成本、逃离缺乏机遇的环境、逃离安全感的缺失。这绝不是什么好消息。你知道的，上周我们在多伦多都会大学（TMU）参加了一场辩论，当时现场有一位年轻学生站起来向我们提问关于工作和就业的问题。邹市长的回答却是大谈“白夜节”（Nuit Blanche）和街头节庆活动。而我的回答，则是谈论我们要为在这个城市求学的年轻人创造15,000个私营部门就业岗位，我们希望留住这些人才，这是至关重要的事情。如果我们要与北边、南边以及整个美国竞争，如果我们要与全世界竞争，我们就必须成为一个安全的城市，一个能为劳动人口提供可负担住房选择的城市，一个能为人们提供在工作中学习、成长和晋升的经济机遇的城市。这是建设一个繁荣、成功城市的基本基石，这是通往繁荣的公式。然而在本届政府的管理下，我们对此谈得远远不够，而且我们显然也没有看到成效。
+
+我们究竟该如何提高自身的竞争力？让我告诉你：我们要增强抵御美国关税战的韧性。我已经提议，在关税战持续期间，针对本市的工业物业类别削减25%的物业税。因为我们今天所拥有的制造业工作岗位是如此至关重要、质量如此优渥。一旦这些工作机会流失，就再也不会回来了。但当我在市议会提出这项提案时，邹市长却投了反对票。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: Well, I disagree. I mean, I look at the fact that 77,000 people left the city of Toronto last year in a flight for affordability, a flight for opportunity and a flight for safety. That's not a good news story. You know, we were at a debate last week at TMU, and there was a young student there who stood up and asked us a question about jobs and employment. Mayor Chow's response was to talk about Nuit Blanche and street festivals. My response was to talk about the 15,000 private sector jobs that we're going to create for young people who are studying in this city, and we want to retain that talent that is the most important thing. If we want to compete north, south, across with the U.S. if we want to compete around the world, we have to be a safe city, a city where there are housing options that a workforce can afford, and a city where there's economic opportunity for people to learn in a job, grow and move up. That is the basic foundation for a thriving and successful city. That is the formula for prosperity. And we have just not talked enough about that under this administration. And we certainly haven't seen the results.
+
+How are we going to improve our competitiveness? I'll tell you this strengthening our resilience against the tariff war in the US. I have proposed a 25% property tax reduction for the duration of this tariff battle for our industrial property class here in the city, because the manufacturing jobs that we have today are so vital, they are so high quality. And when those jobs leave, they're never coming back. When I put that forward at council, Mayor Chow voted against it.
+
+</details>
+
+### 税收优惠与社区效益协议
+
+**Mayor Chow**：请等一下，等等。你确实说了。各位，多伦多市其实有一项计划，对那些在本地扩大经营规模的企业免除任何物业税增长。就在多伦多这里，它被称为“edge”计划。正是由我主导引入了延期缴税至11月。让我……好吧，随后它结束了。请允许……你知道的，请让我把话说完。市议员，另外因为我们很快就要动工建设埃德蒙顿东线……不好意思请原谅，是士嘉堡东线轻轨（Scarborough East LRT）。因此，我们可以要求实际承建工程的企业将20%的投资用于为本地年轻人提供工作岗位，这被称为“社区效益协议”（community benefits）。我们在摄政园（Regent Park）就是这样做的，在修建横城轻轨（Eglinton Crosstown）期间也是这样做的，现在我提出的是完全一样的要求。各位，我们必须采取“加拿大团队”（Team Canada）的合作方式，这就是商业。多伦多的企业需要的是稳定性。我们绝对不能冒风险去指望这位市议员，因为他总是一再改变主意。我们……在这个需要稳定的时刻，我们必须团结一致、保持乐观，对企业表达信任，让他们知道可以满怀信心地在多伦多投资。好的，让我们听听回应。比如，他们已经带来了巨大的投资。
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Chow**: Excuse me. Hang on a second. You did. Folks, there is a program in the city of Toronto that exempts any property tax increases for companies that expand their footprint. Right here in Toronto, it's called edge. It was under my watch that this was introduced deferral until November. Let me well, and then it ended. Allow you know, allowed me to finish. Councillor also because we are going to be building very soon the Edmonton East. Sorry pardon me, the Scarborough East L.R.T. As a result, we can ask the people that are actually building it to provide 20% of the investment into providing local jobs for young people. And that is called community benefits. We did it in Regent Park. We did it over when during the cross town is being done, and I am asking the same thing. We have to take the Team Canada approach folks, and it is businesses. Toronto businesses need stability. What we can't do is to take risk on the councillor. That just keeps changing his mind. We. In this time of stability, we have to come together, be optimistic, say to the businesses that we trust you. We know you can be optimistic and invest in Toronto. Okay, let's get a response. For example, have provided a great investment.
+
+</details>
+
+**Councillor Bradford**：我得……
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: I got.
+
+</details>
+
+**Moderator**：为了保持公平。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: To be fair.
+
+</details>
+
+**Moderator**：在时间上必须保证公平。请开始，布拉德福德市议员。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: It's got to be fair with the time here. Let's go. Councillor Bradford.
+
+</details>
+
+### 税务延期与现场交锋
+
+**Councillor Bradford**：好的，有几点我们需要当场澄清指正。有几件事我们需要纠正。首先，市长女士，您提到的那个计划只是一项税款延期缴付，无非是把账单推迟给制造业企业而已。稍后再付。那张账单在11月就已经到期了，那根本算不上增强我们的竞争力！这就是为什么我说应该直接减税25%……等一下，让我……
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: Okay, a couple of things that we got to correct there. A couple things we need to correct. First of all, the program that you're referring to, Madam Mayor, was a tax deferral just giving the manufacturers the bill. Later. That bill came due in November. That is not strengthening our competitiveness. That's why I've said it's a 25%. Hang on. Let me.
+
+</details>
+
+**Mayor Chow**：请讲完。
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Chow**: Finish, please.
+
+</details>
+
+**Councillor Bradford**：不，让我说完。我刚才让你说了很长时间，我想表达完我的观点。不好意思，请允许我……请允许我说完。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: No, let me finish. I let you talk for a long time. I would like to make my point. Sorry if I may. If I may.
+
+</details>
+
+**Moderator**：请大家肃静，观众席请保持安静。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: Please, please. Audience.
+
+</details>
+
+**Councillor Bradford**：我刚才被打断了，说实话。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: I got interrupted. Honestly.
+
+</details>
+
+**Moderator**：时间……
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: Times
+
+</details>
+
+<!-- chunk 6/11 -->
+
+### 交通规划与招商引资的交锋
+
+**主持人**：布拉德福德市议员发言。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: Councillor Bradford has the floor. About the issue. Councillor Bradford has the floor.
+
+</details>
+
+**布拉德·布拉德福德**：是的，那其实是一次延期。我们真正需要做的是提高我们的竞争力，降低税负。在一项根本没有资金支持的项目上空头承诺创造就业机会，这是不切实际的。这既不体贴，也脱离了我们所生活的现实。这就是为什么早在五月份，当你把士嘉堡爱灵顿东轻铁线（Scarborough Eglinton East LRT）与湖滨轻铁线（Downtown Waterfront LRT）解绑剥离时，你遗忘了士嘉堡。你遗忘了维多利亚公园大道（Victoria Park）以东的所有人。我不得不亲自来到市议会提醒你这项工程，提醒你士嘉堡的居民们已经苦苦等待高等级公共交通许多许多年了。作为一名前新民主党（NDP）国会议员，你的整个政治生涯都在反对士嘉堡地铁项目，反对……
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: Yeah, so it was a deferral. What we needed to do—what we need to do is increase our competitiveness, reduce the taxes. The piece here about promising jobs on an unfunded project is not realistic. It's not compassionate. It's not reflective of the world that we're living in. That is why back in May, when you decoupled the Scarborough Eglinton East LRT from the downtown waterfront LRT, you forgot about Scarborough. You forgot about everybody east of Victoria Park. And I had to come to council to remind you about that project, to remind you that people in Scarborough have been waiting for years and years for higher order transit. As an NDP MP, you've made your entire career fighting against the Scarborough subway, fighting against...
+
+</details>
+
+**主持人**：请容我打断一下，我们稍后会有专门关于交通的讨论环节，现在的议题是关于吸引外部资金对本市的投资。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: If I could jump in only because we are going to come to transit and this is about outside investment into the city.
+
+</details>
+
+**布拉德·布拉德福德**：所以我想强调的是，在一项你从未为了争取资金而安排会谈的项目和线路上，随意许诺就业岗位与发展承诺，根本不是切实可行的就业战略。我已经做出承诺，在就任后的前100天内，我就会前往省府女王公园（Queen's Park）以及联邦首都渥太华（Ottawa），去敲定士嘉堡爱灵顿东轻铁线的专项资金协议，因为这是我首要的交通工程项目，不仅关乎士嘉堡，更关乎整座……
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: So what I would say is it is not a realistic job strategy to promise jobs and commitments on a project and a line that you have never taken a meeting on trying to get funding. I have committed that I will go to Queen's Park and Ottawa within the first 100 days of taking office to hammer out a funding agreement for the Scarborough Eglinton East LRT, because it's my number one transit project, not just for Scarborough, but for the entire...
+
+</details>
+
+**邹至蕙**：整座城市。但请允许我说明，你们知道为什么赛诺菲（Sanofi）、日立（Hitachi）、丰田（Toyota）——所有这些国际巨头企业都在这里大举投资并扩大业务吗？因为在我的领导和治理下，多伦多市的信用评级23年来首次被上调至AA+级。
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: City, but allow me to say, you know, you know, why Sanofi, Hitachi, Toyota, all of these companies are investing and expanding their business? Because under my watch, under my leadership, the credit rating of the city of Toronto for the first time in 23 years went up to AA+.
+
+</details>
+
+**布拉德·布拉德福德**：那是因为……
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: That...
+
+</details>
+
+**邹至蕙**：国际债券市场坚信多伦多市政府财政稳健、管理严格。正是基于这份信任，他们才表示，是的，正因如此，我们愿意在多伦多市投资。
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: The international bond market believes that we run a tight ship right here in the city of Toronto. That's why they have the faith. They said, yeah, because of that, we will invest in the city of Toronto.
+
+</details>
+
+**主持人**：给布拉德福德市议员30秒时间。原谅我，请让我为布拉德福德市议员留出30秒，请围绕究竟是什么能为多伦多带来外部投资发言。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: 30 seconds here for Councillor Bradford. Let me say forgive me. Let me save 30 seconds for Councillor Bradford. Talk about what brings outside investment into the city.
+
+</details>
+
+**布拉德·布拉德福德**：嗯，绝不是信用评级。事实上，信用评级之所以上升，完全是因为你把税率提高了20%。你知道吗，普通房屋业主承受不起，租房群体承受不起，中小企业也承受不起。我们的制造业正在竭尽全力争取保住在这座城市的岗位。你推行了本市历史上最大幅度的加税，信用评级自然会好看。但老百姓关心的根本不是这个——那些每月在生活账单中挣扎求生的老年人，他们绝不会惊叹“天哪，信用评级多好”，他们真正问的是：“你究竟还要把我的税加到什么时候？”
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: Well, it's not the credit rating, and in fact the credit rating is going to go up because you've increased the taxes by 20%. And, you know, homeowners can't afford that. Renters can't afford that. Small businesses can't afford that. The manufacturers are fighting tooth and nail to keep their jobs in this city. You raise the taxes, the highest tax hike in the city's history. So of course, the credit rating goes up. But people aren't asking, you know, the seniors that are struggling, you know, month to month trying to pay the bills. They're not saying, oh my goodness, what is the credit rating? They're saying, how much more are you going to raise my taxes?
+
+</details>
+
+**邹至蕙**：巧合的是……
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: Coincidentally...
+
+</details>
+
+**主持人**：大家请稍等一下。我原本以为这个问题……
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: We are—we are going to—hang on folks. I thought the question...
+
+</details>
+
+**邹至蕙**：是关于贸易和吸引商业投资的。
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: Was about trade and bringing business...
+
+</details>
+
+**布拉德·布拉德福德**：这就是你不明白的地方，税率恰恰是经济决策的核心组成部分。
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: That's what you don't understand is the tax rate is an important part...
+
+</details>
+
+### 市政财政与民生可负担性
+
+**主持人**：……经济决策的关键部分。看来你们两位早就迫不及待要讨论这个环节了，那我们就直接进入正题。第四部分是关于城市财政收入与可负担性。作为追求这份职位的人，你们都做出了种种承诺，而你们必须明确如何为这些承诺筹集资金。我们想知道，你们将如何筹资兑现自己许下的让市民生活更能负担得起的各项承诺？邹至蕙市长，你有1分30秒的时间，发言权交给你。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: Of economic decision. It seems you both want to go here already anyway, so let's do it. Section four is on city revenues and affordability. As people who have your jobs, do you make promises you need to figure out how to fund those promises? Promises. I'd like to know how you will fund the promises that you have made to make living in this city more affordable. Olivia Chow, a minute and a half. The microphone is yours.
+
+</details>
+
+**邹至蕙**：谢谢。我从小在圣詹姆斯敦（Saint James Town）长大，我的母亲是一名单亲靠一份微薄收入持家的清洁女工。那时的生活很艰难，但我们挺过来了。然而现在的时代比以往任何时候都要严峻得多，大家的日子都非常不容易。我深知如何精打细算、珍惜纳税人的每一分钱，因为这正是过日子的根本所在。正因如此，作为市长，让每个市民都能负担得起生活是我的首要任务。
+
+建设大家负担得起的可负担住房；为更多孩子提供校园餐食以节省家庭的食品杂货开支；维持多伦多公车局（TTC）的低廉票价，让大家到月底时不必在交房租和给孩子填饱肚子之间左右为难。展望未来，在我的下一个任期里，我还会做得更多。是的，我们要建造更多房屋，并且落实TTC每周乘坐10次后当周剩余行程全部免费的政策，为大家省下大笔开支，同时在学校为更多孩子提供供餐支持。
+
+这能为市民节省大量开支。大家肯定会问，我们该如何做到这一点呢？回想我刚上任时，市政府面临着庞大的财政赤字。而现在我们已经成功迎来了转机。这正是因为我终于成功推动将嘉丁纳高速公路（Gardiner Expressway）和当河谷园林公路（Don Valley Parkway）的管辖与维护责任移交回省政府，从而腾出了数十亿加元的资金，让这笔巨资能够投入到……
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: Thank you. I grew up in Saint James Town, and my mom was a maid with one income. Life was tough, but we were okay. But times are a lot tougher now. It is difficult. I do know how to make every dollar count because that is how it has to be. That's why as a mayor, making life affordable for everyone is my priority. Building housing that people can afford, feeding more kids to save your grocery dollars, keeping the TTC fare low so that by the end of the month, you don't have to worry about paying rent and feeding your kids going forward. In my next term, I'm going to even do more. Yes, build more housing and make sure that TTC—that ten rides a week, the rest of the week is free, saving you a whole lot of money and feeding your kids in school even more. That will save you so much money and you are going to say, how are we going to do this? Well, when I first came in, we had a big deficit. We have now turned a corner. That is because I was able to finally upload the Gardiner and the DVP back to the provincial government, taking those billions of dollars and allowing it to go...
+
+</details>
+
+**布拉德·布拉德福德**：投入到TTC。
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: To TTC.
+
+</details>
+
+**主持人**：时间到。谢谢。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: That's time. Thank you.
+
+</details>
+
+**邹至蕙**：我们现在有了这笔支持。谢谢，谢谢。
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: We now have that support. Thank you, thank you.
+
+</details>
+
+**主持人**：现在把时钟重设为1分30秒交还给布拉德·布拉德福德，围绕城市财政收入与可负担性议题发言。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: Let's put a minute and a half back on the clock for Brad Bradford and the issue: city revenues and affordability.
+
+</details>
+
+**布拉德·布拉德福德**：可负担性在当前就是一切的核心。当我听到市长女士声称她要在连任后做更多事情时，我不禁怀疑她究竟还打算把多么沉重的加税负担强加在多伦多市民身上，因为市民们已经不堪重负了。大家记得，在上一次市选辩论台上，邹市长曾向所有人保证只会适度微调税收。然而她最终端出来的，却是多伦多市政历史上最大规模的“偷梁换柱”和失信背叛——整个任期内累计加税幅度接近20%，创下了历史纪录。
+
+普通老百姓负担不起，老年人负担不起，新移民以及年轻家庭更是根本承受不起接二连三的加税。如果我当选，在我上任的第一年，我将直接冻结物业税（Property Tax）。我将为你们带来切实的减负与可负担性，而我们的资金筹集方案是通过确保预算中的实际支出与我们向纳税人征收的资金精准对应。我们将采用长期低息融资的方式来支持基础设施工程建设。我将对多伦多市的预算管理制度进行彻底现代化改革，完全借鉴卡尼总理（Prime Minister Carney）所采用的做法，将……分离开来。
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: Affordability is everything right now. And when I hear Madam Mayor say that she's going to come back and do more, I wonder how much more of a tax increase she can thrust upon Torontonians because they can't afford it. You know, in the last election, we stood on the stage and Mayor Chow promised everybody a modest tax increase. What she delivered was the biggest bait and switch in Toronto municipal history, with a record breaking tax increase nearly 20% over the term. People can't afford that. Seniors can't afford that. Newcomers, young families, they—they just can't afford more of these tax increases. I'm going to freeze the property taxes for the first year I'm in office. I'm going to deliver that affordability for you, and we are going to pay for it by making sure that the actuals in the budget reflect what we are collecting from taxpayers. We are going to finance our infrastructure projects with long term low interest financing. I'm going to modernize the city's budget by taking the exact same approach Prime Minister Carney has taken by sep...
+
+</details>
+
+<!-- chunk 7/11 -->
+
+### 预算结构与市政融资之争
+
+**布拉德福德市议员**：……将我们的资本预算与日常运营预算彻底区分开来。绝不对一线公共服务进行任何削减。我们在运营预算中对这些至关重要的公共服务予以有力保护，而对于各项重大资本性支出，我们则通过在资产的整个使用生命周期内进行长期、低息的融资来解决资金需求。这与卡尼总理在联邦政府层面所采取的财政运作方式完全是一模一样的，也是全国所有省份通行的成熟做法，同样也是任何一家市政公用事业单位在面对大型基础设施投资时必然会采取的标准模式。这是对纳税人税金更加明智、更具远见的使用方式，它使我们能够切实保全和维护每一位市民……
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: ...separating our capital and our operating budgets. No cuts to frontline services. We protect that in the operating and we fund the capital expenditures with long term low interest financing over the lifecycle of the asset. This is the exact same approach the Prime Minister Carney is taking with the federal government. It is the approach that is taken in all the provinces here in the country. And the same approach that you would take with a municipal utility. This is smarter use of taxpayer dollars, and it allows us to preserve the frontline services that everybody...
+
+</details>
+
+**主持人**：……所依赖的各项服务。布拉德福德市议员，谢谢您，您的陈述时间已到。现在进入六分钟自由辩论环节。邹至蕙市长，由您来首先就此发言。如大家所知，在本次竞选活动期间，公众和舆论针对您在市长任期头两年推行的大幅加税举措展开了相当激烈的讨论。对于推行如此大幅度的增税，您是否有过任何后悔或反思？
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: ...depends on. Councillor Bradford, thank you. That's time. Let's go to six minutes on the clock for open debate. Olivia Chow, you get the first response on this. You know, there's been a considerable amount of discussion during the course of this campaign about the tax increases you brought in first couple of years of your term. Any regrets about bringing in tax increases that big?
+
+</details>
+
+### 加税争议与削减公共服务的指控
+
+**邹至蕙市长**：这个嘛，今年的税率增幅实际上比通货膨胀率还要低整整2个百分点。我自始至终向广大市民承诺的，就是保持低税率，并将税率的涨跌幅度控制在通胀率上下。要做到这一点非常艰难，整个过程绝非轻而易举。但是，坐在我对面的这位市议员许下了高达数十亿加元的竞选诺言，如果既要兑现这些诺言又拒绝合理筹措资金，那就必然会砍掉某些公共服务。我非常担心，首当其冲被削减的将会是大家的公共图书馆服务。因为上一次本市推行所谓的预算审查时，正如他自己过去所谈到的，图书馆服务以及所有那些至关重要的公共服务就遭到了大幅削减。
+
+不过，请允许我谈谈我目前最为深切担忧的问题——而且广大市民朋友们，你们每一位也理应为此感到担忧。这位市议员竟然打算把我们城市饮用水系统的控制权拱手让给道格·福特，这无疑是在为私有化敞开大门，将我们最宝贵、最基本的饮用水安全置于巨大风险之中。我绝不会允许这种事情发生。我一定会全力保护饮用水系统，因为这根本就……
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: Well, this year is 2% below the rate of inflation. What I promise is low tax. And around inflation. And it was hard. It was not easy. But the councillor here has promised billions of dollars of election promises and something is going to get cut. And I'm afraid that it will be your library services. Because the last time that there was going to be a review, he said, was the library was cut and all of those services that are important.
+
+But allow me to say what I'm most—let me allowed me to say what I'm most concerned. And you should too. Councillor—Councillor wants to give away control of our drinking water to Doug Ford, not opening the door to privatization and risking our drinking water. And I will not do that. I will protect it because there's absolutely...
+
+</details>
+
+**布拉德福德市议员**：绝无此事！
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: No.
+
+</details>
+
+**邹至蕙市长**：……没有任何正当理由去这么做。
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: ...reason to.
+
+</details>
+
+**布拉德福德市议员**：这完全是荒谬透顶的无端指责。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: This is ridiculous allegation.
+
+</details>
+
+**主持人**：既然已经对供水系统控制权提出了明确指控，那就请作出回应。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: Water allegation has been made. Let's get a response.
+
+</details>
+
+### 逐项预算审查与家庭日常开支对照
+
+**布拉德福德市议员**：听我说，各位市民朋友，请听我把话说清楚。现场的各位观众，请让我把话说清楚。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: Look, let me let me tell you this, folks. Audience, please let me tell you this.
+
+</details>
+
+**主持人**：安静，请大家保持安静。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: Enough, enough.
+
+</details>
+
+**布拉德福德市议员**：这充分反映出这是一场已经思维枯竭、动力耗尽、并且时间所剩无几的竞选活动。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: This is very... much reflective of a campaign that is out of ideas, out of gas, and almost out of time.
+
+</details>
+
+**布拉德福德市议员**：邹市长所诉诸的这种散播恐慌与危言耸听的吓唬伎俩，坦率地说，是极不诚实的，并且完全有失市长职位的尊严与体统。对自己所掌管的财政预算进行彻头彻尾的逐项审查，这本身绝对没有任何令人害怕或恐惧的地方。
+
+刚才，您声称我上一次就在现场参与了那次审查。您在引用历史事实时可必须得把事实搞清楚。上一次全市进行这种全面审查还是在2011年，那恰恰是你们当年的所作所为，而那也正是眼下问题的症结所在。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: The fear mongering... and the scare tactics... that Mayor Chow is resorting to is—it's frankly dishonest. And it's unbecoming of the office. There's nothing scary about doing a line by line review of your budget. Now, you suggested that I was there the last time. You're going to have to get the history right. The last time this was done was in 2011, and that's kind of that you did. And that's kind of part of the problem.
+
+</details>
+
+**邹至蕙市长**：我们每年都在做逐项审查！
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: Here is BYLINE.
+
+</details>
+
+**布拉德福德市议员**：不，不，不，请让我把话说完。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: No no no no no, let me finish.
+
+</details>
+
+**邹至蕙市长**：每年！
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: Every year.
+
+</details>
+
+**布拉德福德市议员**：我们……
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: What.
+
+</details>
+
+**邹至蕙市长**：我们每一年都在做逐项审查。
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: We've done line by line.
+
+</details>
+
+**布拉德福德市议员**：大家都清楚……
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: You know.
+
+</details>
+
+**主持人**：发言权在他手里。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: Like he needs the floor.
+
+</details>
+
+**布拉德福德市议员**：我想把话讲完。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: I'd like to speak.
+
+</details>
+
+**主持人**：请让他发言，发言权在他手上。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: He needs the floor.
+
+</details>
+
+**布拉德福德市议员**：所以说，上一次全市开展彻底的预算审查是在2011年，距今已经整整15年了。因此，对于守在电视机前看直播的各位市民朋友，我希望你们静下心来仔细想一想。在日常生活中，你们很可能每个月都会逐笔核对自己的信用卡账单。你们会自省是不是在外面餐馆吃得太多了？或者是不是有某项已经遗忘的自动扣费订阅服务忘记取消了？我们大家之所以都在精打细算做这些事，就是为了能付得起房租，为了能把饭菜摆上餐桌，为了能给汽车油箱加满油。
+
+然而，现任这届市政府却固执地认为，应对任何财政挑战的解决办法只有唯一一种——那就是不停地向市民加税。我将会亲力亲为去啃这块硬骨头，就像广大纳税人辛辛苦苦工作赚取每一分纳税钱一样，深入到市政机构中去揪出浪费、节省开支、挖掘效率。关于这一点，邹市长和我大概都会承认市政机构内部确实普遍存在这种低效与浪费。
+
+可是这项工作至今根本就没有真正推行过。事实上，在过去四年当中，我有三年都针对这项逐项预算审查提出过正式动议。然而每一次，邹市长都投票表示反对。因此，在当下广大市民生活成本如此拮据的艰难时刻，如果不在市政厅内部先下狠功夫去找出节约空间、揪出浪费、挖掘行政效率，我凭借自己的良知，根本无法厚着脸皮去向市民伸手索要更多的血汗钱。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: So the last time this was done was in 2011, 15 years ago. So for the folks at home, I want you to think about that for a second. You probably check your credit card bill every month. Maybe you're eating out too much. Maybe there's a subscription that you forgot to cancel. But that's what we're all doing to pay the rent, put food on the table and gas in the tank.
+
+This administration feels that there is only one solution to any challenge, and that is to raise the taxes. I am going to do the hard work, just like you work hard for your taxpayer money to go and find the savings, the waste, the efficiency that Mayor Chow and I would probably both agree exists in the Organization.
+
+But that work hasn't been done. In fact, I've moved motions for that the past three out of four years. Every time Mayor Chow has voted against it. So I can't in good conscience go out and ask for more money when times are so tight for people without doing the hard work at City Hall to find the savings, to find the waste and the efficiencies.
+
+</details>
+
+**邹至蕙市长**：而且这当中根本就……
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: And there's nothing.
+
+</details>
+
+**布拉德福德市议员**：……没有任何令人害怕的。这非常合情合理。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: Scary about that. It's very reasonable.
+
+</details>
+
+**主持人**：现在轮到市长发言了。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: It's the mayor's turn now.
+
+</details>
+
+### 六十亿竞选许诺与资本首付之辩
+
+**邹至蕙市长**：你想谈具体的数字吗？我真正想和你好好对质的数字，是你做出的那整整60亿加元的竞选空头支票。你许下了如此庞大的承诺。你究竟打算从哪里筹措这60亿加元？
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: You want to talk about numbers? The number that I want to talk about is the $6 billion of election promise. You have made. What you're going to find $6 billion.
+
+</details>
+
+**布拉德福德市议员**：你到底是从哪里弄来的……
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: You got that...
+
+</details>
+
+**邹至蕙市长**：……这个数字的？你能想象那意味着什么吗？大家不妨仔细想一想，为了凑齐这笔钱，究竟必须得削减、得砍掉多少现有的公共服务！请你向大家解释清楚。而且我们每年都在扎扎实实地做逐项审查。行了，市议员先生……
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: ...number from. Can you imagine that? Think about what needs to be, what needs to be cut. Please explain that we do the line by line every year. Come on, Councillor.
+
+</details>
+
+**布拉德福德市议员**：史蒂夫，如果允许我插一句……
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: Steve, if I may.
+
+</details>
+
+**邹至蕙市长**：市议员，市议员先生，你刚才声称我们市政府不做逐项审查，这纯粹是睁眼说瞎话，公然违背事实。这绝不是事实，因为如果你向我们了解情况，在我的监督领导下，市政府管理层光是今年就已经削减了1.7亿加元的开支。而且每一年市政预算都经历过严格的逐项审查。投票反对你所谓动议的并不仅仅只有市长一个人，而是议会的大多数市议员。事实上，有16位市议员都投了反对票。
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: Councillor. Councillor, you said that we do not do line by line. That is blatantly not true. It's not because if you asked us, the city administration under my watch, we have reduced the spending this year of $170 [million]. And every year there's been a line by line review. It wasn't just the mayor voting against your idea, it was most of the councillors. In fact, 16 councillors.
+
+</details>
+
+**布拉德福德市议员**：大家都在好奇你到底是从哪里捏造出60亿加元这个数字的。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: Wondering where you got the $6 billion figure.
+
+</details>
+
+**邹至蕙市长**：好啊，如果你把各项承诺加在一起……
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: Well, if you add up the...
+
+</details>
+
+**布拉德福德市议员**：在竞选官方纲领里根本就没有这个数字。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: It's not in the notes.
+
+</details>
+
+**邹至蕙市长**：怎么会没有！你想让我当场给你一笔笔算出来吗？好啊，没问题！你说过你要减免3亿加元，要把土地转让税给削减掉……
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: Well, yes. Do you want me to add it up? Okay, sure. You said you want to do $300 million that you are going to do the land transfer...
+
+</details>
+
+**布拉德福德市议员**：是通过停止从日常预算中抽取资本金来实现的……
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: Tax for it by stop taking capital from...
+
+</details>
+
+**邹至蕙市长**：请让我把话说完。你知道什么是“资本运营化专款”（Capital from Current）吗？
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: Let me let. What's the capital of current?
+
+</details>
+
+**布拉德福德市议员**：你应该很清楚……
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: You should know that.
+
+</details>
+
+**邹至蕙市长**：我当然一清二楚！
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: I know exactly.
+
+</details>
+
+**布拉德福德市议员**：每年整整2.5亿加元的资本运营化资金，你也应该向市民说明……
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: $250 million capital from current every year. You should know that to...
+
+</details>
+
+**邹至蕙市长**：……它到底是什么概念！市议员先生，你到底能不能让我把话给说完？
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: ...you what it is. Councillor, would you actually allow me?
+
+</details>
+
+**布拉德福德市议员**：请便。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: Of course.
+
+</details>
+
+**主持人**：请大家听邹市长发言，现在是邹市长发言时间。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: I know. Mayor Chow. Chow has the floor.
+
+</details>
+
+**邹至蕙市长**：你买房子难道可以一分钱首付都不付吗？
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: A home without paying down payment?
+
+</details>
+
+**布拉德福德市议员**：不，根本不是那回事。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: No, that's not what it is.
+
+</details>
+
+**邹至蕙市长**：所谓资本运营化资金（Capital from Current），就是当你购买大件资产时所必须拿出来的真金白银现金首付款！我已经拨出了4亿加元的专款资金，用来作为这项投资的现金首付款。
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: Current is the is the cash you put in order to buy something. I have put away $400 million to put in the down payment.
+
+</details>
+
+**布拉德福德市议员**：市长……
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: The mayor...
+
+</details>
+
+**邹至蕙市长**：士嘉堡轻铁线（Scarborough LRT）现在必须启动建设。而在他的方案之下，因为他不想动用并支付任何现金，所以他打算把这笔资金全给砍掉。资本运营化资金的实质，正是从运营预算中提取现金，以确保我们城市拥有极其优良健康的信用评级。因为当你去推行一项耗资数十亿加元的宏大投资项目时，你无论如何都必须预先支付一定比例的现金！让我拿事实给你们看：55列全新地铁列车，我们到底是如何……
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Olivia Chow**: Has to do the Scarborough is LRT now. That's under his scheme. He doesn't want to pay any cash, so he's going to cut that out. That is exactly what capital of Current is taking the cash. The operating dollars, and to make sure that we have good credit rating. Because when you go and do a multibillion dollar investment, you have to put some cash down. Let me show you. 55 subway cars. How did we...
+
+</details>
+
+<!-- chunk 8/11 -->
+
+### 资本预算与融资机制的交锋
+
+**邹至蕙（Mayor Chow）**：……设法真正拿到那笔资金？就在我们说话的此刻，我们正在建造，我们正在建造那55辆地铁列车。我们必须投入实际的现金，当然，剩下的资金我们必须通过借贷来筹集。
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Chow**: ...manage to actually get that funding? We are building, we are building as we speak, the 55 subway cars we had to put in actual cash. And then of course, we have to borrow the rest.
+
+</details>
+
+**主持人（Moderator）**：好的，让我们把最后的发言机会留给……
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: Okay, let's get the last word.
+
+</details>
+
+**布拉德·布拉德福德（Brad Bradford）**：让我们来做实事。
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: Let's do the kind of work.
+
+</details>
+
+**主持人（Moderator）**：布拉德福德市议员拥有最后的发言权。还款……现在请布拉德福德市议员发言。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: Councillor Bradford has the last. Repayment in. Councillor Bradford has the floor now.
+
+</details>
+
+**邹至蕙（Mayor Chow）**：会给出……
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Chow**: Will give.
+
+</details>
+
+**主持人（Moderator）**：由您发言。市长女士，请别这样。我必须在这里保持双方发言时间的均等。最后的发言权交给布拉德·布拉德福德。各位还有谁？市议员，请做最后的发言。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: You. Madam Mayor. Come on. I've got to keep the time equal here. Last word to Brad Bradford. You anybody? Last word, Councillor.
+
+</details>
+
+**布拉德·布拉德福德（Brad Bradford）**：好的，多伦多市民都看得到，电视机前在家观看的每个人也都能看清楚，邹市长并没有花足够的时间去研究预算。她根本无法向你们解释清楚什么是“经常性预算转资本支出”（capital from current）。那么就由我来解释。不，你刚才没有解释，你根本不知道那是什么。它是指市长女士从经常性营运预算（operating budget）中抽取2.5亿美元，然后投入到资本预算（capital budget）中；这笔钱进入基金后，产生的利息微乎其微。结果就是，资本项目的通胀上涨速度远远超过了我们积累资金的速度，导致工程项目根本建不起来。
+
+因此，明智的做法是效仿卡尼（Carney）行长的举措，将资本预算与营运预算明确区分开来。这正是我打算采取的做法。我们将利用长期的低息融资，就像通过房屋抵押贷款来支付一样……通过长期融资来建设基础设施，从而保护第一线公共服务。而对方的竞选阵营只会聚焦于制造恐慌和散布吓人策略。这套做法是行不通的。
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: Well, Torontonians can see you and everybody watching at home can see Mayor Chow hasn't spent enough time with the budget. She is not able to explain to you what capital from current is. So I will. No you didn't. You don't know what it is. It's when Madam Mayor takes $250 million from the operating budget and puts it into the capital budget, it goes into a [fund] collects very, very little interest. And as a result, inflation on the capital projects increases faster than we collect the money. And the projects don't get built.
+
+So the smart thing to do is to do what Prime Minister Carney has done, to clearly separate capital from operating. That is what I'm going to do. We're going to engage in long term, low interest financing, just like when you get a mortgage to pay for... financing infrastructure over the long term, protect the front line services. This is a campaign that's focused on fear mongering and scare tactics. It's not going to work.
+
+</details>
+
+### 交通拥堵与公共交通方案
+
+**主持人（Moderator）**：朋友们，本环节的时间到了。我们现在进入第五部分。辩论马上就要接近终点了。第五部分的主题是：交通与公交（traffic and transit）。我希望你们每位都阐述一下自己的构想，布拉德·布拉德福德，你有1分30秒的时间率先作答。请向我们提出一项由你倡导的重大新思路，以切实显著地缓解交通拥堵。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: That is our time for this segment, friends. We're going to move on now to section five. Almost at the finish line here. Section five: traffic and transit. I would like for each of you—and Brad Bradford, you get the first crack at this with a minute 30. Give us one big new idea you would champion to make a noticeable dent in congestion.
+
+</details>
+
+**布拉德·布拉德福德（Brad Bradford）**：我们能做的最好的事情，就是吸引人们重新乘坐公共交通。我受过专业的城市规划师培训，看到在邹市长执政期间乘坐公交的人数如此之少，我感到非常痛心。尽管省政府提供了数十亿美元的资金支持，尽管进行了20%的大幅加税，尽管全城多条新公交线路相继开通，但现在的公交客流量相较于2019年却下降了20%。那可是七年前了。想象一下，如果你经营一家企业，顾客却减少了20%，会是什么概念。
+
+现在，邹市长总在谈论3.30加元的票价。但我接触过许多外面的公交乘客，他们告诉我，他们不坐车并不是因为票价是3.30加元；他们告诉我，他们之所以不坐，是因为公交系统既不安全也不可靠。
+
+所以我们有一套解决这个问题的方案。我打算在各个地铁站和公交车上部署佩枪穿制服的警察。因为车站在有警察驻守时，推婴儿车的母亲和推助行架的老人都会感到安心，这有助于应对我们在多伦多公车局（TTC）系统内司空见惯的反社会行为。包括今晚我来这里的路上，每天都能看到这些现象。
+
+我们还将推行统一的照明与清洁标准。这就是“破窗理论”在现实中的体现。如果人们看起来和感觉上TTC的基础设施缺乏妥善维护，那正是导致公交系统内反社会行为频发的原因。此外，我们将利用长期低息融资，建造真正的站台屏蔽门，在乘客与轨道之间建立一道物理屏障与隔离，而不是邹市长给你们弄的那种半吊子、敷衍了事的半高护栏措施，而是真正配得上这座美丽繁荣城市的坚实基础设施，以此吸引市民重新乘坐公共交通。
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: The best thing that we can do is to get people back on transit. I'm an urban planner by training, and it breaks my heart to see how few people are riding transit under Mayor Chow's administration. Despite billions of dollars coming in from the provincial government, despite a 20% tax hike, despite new transit lines opening up across the city, transit ridership is down 20% since 2019. That is seven years ago. Imagine if you had a business and you had 20% fewer customers.
+
+Now, Mayor Chow is going to talk about the fares, $3.30. I talked to a lot of transit riders out there. They don't tell me they're not riding the trains because it costs $3.30. They tell me they're not riding it because it's not safe and reliable.
+
+So we have a plan to fix that. I'm going to put uniformed police officers in the stations and on the transit. That is because an officer in the station provides comfort to a mom with a stroller, and a senior with a walker, helps deal with the anti-social behaviour that we see on the TTC routinely. Every day that I saw on the way over here tonight, we are going to have universal lighting and cleanliness standards. This is the broken window theory in action. If it looks and feels like TTC infrastructure is not kept up to par, that's when you start to see the anti-social behaviour that we see on the transit all the time, and we're going to build using long term interest financing, real platform edge doors, a physical barrier, separation between customers and the tracks, not the half baked half fence measures that Mayor Chow gave you, but real infrastructure befitting of a beautiful and thriving city get people back on transit.
+
+</details>
+
+**主持人（Moderator）**：倒计时1分30秒。现在话筒交给您，邹市长。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: A minute 30 on the clock. The microphone is yours, Mayor Chow.
+
+</details>
+
+**邹至蕙（Mayor Chow）**：没有什么比被困在堵车中更让人沮丧的了。无论你是坐公交车、有轨电车，还是开小汽车，我都希望能把时间还给你们，让你们多陪伴挚爱的家人。正因如此，看看加丁纳高速公路（Gardiner Expressway）的改造——原本需要3年才能修好，我们直接将工期缩短了一半。由于我们大幅加快了施工进度，加丁纳高速因此减少了一年半的拥堵时间。
+
+接着，我们开通了士嘉堡公交专用道（Scarborough Busway）。如今，有10万名公交乘客每周至少能节省一个小时，因为公交车拥有了自己的专属车道。正因为我们实施了这项工程，肯尼迪路（Kennedy）和米德兰路（Midland）上的公交车数量减少了，私家车通行的路面拥堵也因此大大减轻。
+
+我们还全面推行了车费封顶政策，通过保持TTC低廉的单程票价，使出行变得更加经济实惠，从而吸引更多市民乘坐公共交通。我们增派了更多的交通协管员，未来还会进一步增加人手，这样大家就不用再为车辆堵塞路口而感到烦恼。我们将彻底杜绝这种情况。
+
+此外，我们一定会建成士嘉堡轻轨（Scarborough LRT）。我们已经启动了工程规划、可行性研究和图纸绘制工作，为此已经支出了2800万美元。该项目正在全速推进中。时间到了，我们必须坚定不移地向前迈进。
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Chow**: Nothing is more frustrating than being stuck in traffic. Whether you're in a bus or streetcar, in a car or a car and I want to give you your time back to your loved ones. Which is why if you look at the Gardiner, the Gardiner, we had to rebuild it rather than three years. We cut it by half. So a year and a half of less congestion on the Gardiner, because we did the construction much faster.
+
+And then we got the Scarborough busway open. So now 100,000 transit riders are going to save at least an hour each week because you have the bus has its own lane. And because we did that, the cars will have fewer buses on Kennedy and Midland. So it's less congested.
+
+We have a full fare capping because of keeping the TTC fare rides low. It's more affordable, more people are going to take public transit. We have put in more traffic agents, and we will do more so that, you know, the frustration that people are blocking the intersection. No more. We're going to eliminate that and we will get the Scarborough LRT built. We have started, we have started the engineering, the study, the drawing by spending $28 million. And it is going ahead. That's time. We need to move ahead going forward.
+
+</details>
+
+### 拥堵收费议题讨论
+
+**主持人（Moderator）**：时间到了。我正想说明一下，我知道显示屏上还剩6分钟，但我将在4分钟后终止辩论，因为我们当前的进度已经超标严重了。好的，我们的首要规则是不管怎样都必须在8点整准时结束广播。那么我们继续。我想了解两位能否探讨一下这个问题：如果交通拥堵确实是症结所在，现在是否到了痛下决心、对进入市中心的车辆推行拥堵收费（congestion pricing）的时候了？布拉德·布拉德福德，由你率先回答这个问题。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: That's time. And I'm just about to say, I know there's six minutes in the clock there, but I'm going to cut it off after four minutes because we're running heavy right now. Okay. And rule number one is we got to get off the air by 8:00 regardless. So away we go here. I wonder whether you two could speak to the issue if congestion is the problem, is it time to bite the bullet and usher in congestion pricing? If you want to bring your car downtown? Brad Bradford you get the first intervention on this.
+
+</details>
+
+**布拉德·布拉德福德（Brad Bradford）**：你看，再次审视世界上推行该政策的各大城市——伦敦、新加坡，以及北美唯一推行的城市纽约——它们都拥有全世界最为健全完备的公共交通网络。因此，我的回答是否定的，我不会支持这项政策，除非我们先建立起健全、可靠且安全的公共交通网络，为市民提供切实的出行选择。你知道，对于来自全城各地的居民来说，如果他们没有一个既安全又可靠的公交方案可供选择，那么推行这种收费无异于变相对民众强行加税。而这根本就是一种强加……
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: You know, again, you look at cities around the world that have this: London, Singapore, the only city in North America, New York. They have some of the most robust transit networks in the entire world. And so, no, I would not support that unless we had the robust and reliable and safe transit network that provided people an option. You know, folks from across the city, because if they don't have a safe and reliable transit option to take, then it's just an additional tax on people. And that is an imp[osition]...
+
+</details>
+
+<!-- chunk 9/11 -->
+
+### 道路拥堵与城市重大活动封路争议
+
+**布拉德福德议员 (Councillor Bradford)**：……一个非常重要的区别。从理念上来说我是赞同的，但前提是你必须有与之配套的公共交通网络。不幸的是，多伦多在近30年的时间里几乎暂停了公共交通建设，我们已经严重落后了。因此，这座城市目前还没有做好准备。
+
+但我认为，我们有很多实实在在的事情可以做来改善市民的日常通勤。而且老实说，其中有些完全是基本常识。我们都记得母亲节那个周末——当时奥巴马正好到访多伦多，多伦多坦普尔队（多伦多猛龙发展联盟/相关赛事）打第一场篮球赛，蓝鸟棒球队主场作战，RBC舞台有三场门票售罄的演出，还有Sporting Life五公里长跑活动，再加上母亲节本身通常就会让车流量增加15%到20%。然而，就在那个周末，邹至蕙市长却把嘉甸拿高速（Gardiner Expressway）和当河谷园林公路（DVP）给双向关闭了。
+
+因此，我对广大市民的承诺是：当城市有重大活动举行时，我绝不会实施重大的道路封锁。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: ...important distinction. I agree with it as an idea, but you have to have the transit to complement. And unfortunately, Toronto took a hiatus from building transit for nearly 30 years. We're very far behind. So the city is not ready for that yet.
+
+But I would say like, there's lots of things that we can do to improve people's commutes. And, you know, some of it's pretty basic common sense stuff. We all remember Mother's Day weekend and Mother's Day weekend. You had Barack Obama in town, you had the Toronto Temple first basketball game. You had a Blue Jays homestand, three sold out shows at the RBC stage. You had The Sporting Life, 5K and Mother's Day, which generally increases traffic 15 to 20%. And that was the weekend that Mayor Chow shut down the Gardiner and the DVP.
+
+So my commitment to folks out there is I will never do major road closures when we have major events going on in this city.
+
+</details>
+
+**主持人 (Moderator)**：关于拥堵费的问题，如果您想对此作出回应的话？
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: A comment on congestion pricing. Then if you want to respond to that.
+
+</details>
+
+### 公共交通投入、票价与车站安全交锋
+
+**邹至蕙市长 (Mayor Chow)**：好吧，我们其实并没有这个控制权，因为拥堵费很遗憾是由福特省长管辖决定的。
+
+但我绝不会做的是你们以前做过的事——你们削减了公共交通服务，并且提高了票价。结果就是导致大量的乘客流失。这是事实，因为每个人都切身体会到了。在我当选市长之前，大家经历的就是这些。
+
+而在我成为市长之后，我做的恰恰相反。我增加了公交车班次；地铁到站间隔缩短了一分钟，无论是在央街一号线还是二号线都是如此。随后我还冻结了公交票价，这一点至关重要，因为也许对你来说这不算什么，但对于一个普通家庭来说，他们确实能切实省下一笔钱。光是这个月，就有6万人每月节省了30美元。不仅如此，一旦我们推行了“单周乘满10次后余下行程免费”的政策，大家还能节省更多。
+
+我有一套明确的规划来疏导交通，加快施工进度，推动士嘉堡东部轻轨（Scarborough East LRT）向前迈进。我们必须齐心协力把这些事情办好。
+
+谈到你刚才说的不安全问题——我们已经增派、并且将继续增派超过400名交通一线工作人员，包括在TTC车站内派驻警官，以此来保障车站更加安全。
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Chow**: Well, we don't have control because that congestion pricing, unfortunately, is governed by Mr. Ford.
+
+What I won't do, though, is what you've done, and you cut taxi service and raise the fares. As a result, the huge number of riders left. This is... well, it is true because everybody experienced it. Experience before I became the mayor. Once I became the mayor, I did exactly the opposite. I increased the bus services, the subway is coming a minute faster, both in the Yonge, the Line 1 and Line 2. And then I froze the fare, which is so important because perhaps for you, it's not that important, for a family that they could actually save quite like this. This month alone, 60,000 people saved $30 a month for that. And then once we do the ten rides, the rest of the week is free. They're going to save even more.
+
+I have a plan, and it is clear to have more traffic agent foster construction, Scarborough East LRT going ahead. It is so important that we must do that together.
+
+And speaking, you talked about not safe. Okay. We have put, and I will continue to do more, 400 transit workers, including police officers in the TTC station. So that there would be more safety.
+
+</details>
+
+**主持人 (Moderator)**：好的，布拉德福德议员。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: Councillor Bradford.
+
+</details>
+
+### 市长是否乘坐TTC与交通运营现状的质问
+
+**布拉德福德议员 (Councillor Bradford)**：是的，我们确实需要做得更多。恕我直言，市长女士，您自己平时甚至都不坐TTC。您……我当然知道您不坐。您配有公职专职司机。您享有公职配备的专车司机，我理解这一点。
+
+请允许我把话说完，请让我说完。您的职务还配备了私人安保团队。我理解并感谢前任市长即使享有这些也依然每天乘坐TTC，但您却没有这样做。
+
+因此，当市民对您反映公交不安全时，他们感受到的绝不是电子表格上的冰冷数字。他们是在亲身经历——就像我乘坐505路有轨电车时那样，目睹有人在电车后排公然吸毒。这就是为什么在您的领导下，连续两年的乘客量都在持续下滑。市长女士，公共交通客流量下降了，这跟2018年、2019年毫无关系，这就是您担任市长期间实实在在发生的，客流量就是在减少。
+
+现在有轨电车的准点率只有61%，公交车的情况也好不到哪里去。所以这绝不是一个运转良好的交通系统，这是一个需要倾注大量关注与支援的系统。同时我认为非常重要的一点是，市长本人必须经常乘坐公共交通，这样才能亲眼看到我们的乘客每天正在经历什么。而您根本没有这么做。
+
+<details>
+<summary>Original English</summary>
+
+**Councillor Bradford**: Yes, we need to do more. If I may. Madam Mayor, with all due respect, you don't even ride the TTC. You... of course, I know you don't. You have a private driver that comes with the office and I understand.
+
+Although, if I may finish, if I may finish. You have a private security detail that comes with the office. I understand and appreciate that the previous mayor still rode the TTC every day, but you're not. And so when people tell you that transit isn't safe, you know, they're not experiencing it on a spreadsheet. They're experiencing riding the 505 like I do, where somebody is engaging in open air drug use on the back of the streetcar. And that is why ridership has declined in back-to-back years under your leadership. Madam Mayor, transit ridership is down. That has nothing to do with 2018, 2019. That is literally you in the office as mayor and transit ridership is down.
+
+Streetcar reliability is only at 61% on-time performance. Buses aren't much better. So this is not a transit system that's firing on all cylinders. This is a transit system that needs a lot of focus and help. And I also think it's important that the mayor actually takes the transit on a regular basis so they can see what our transit customers are experiencing. You don't do that. You don't.
+
+</details>
+
+**邹至蕙市长 (Mayor Chow)**：我一直在坐！我一直都在坐斯巴达拿（Spadina）有轨电车，我们全家人都是。听着，我的母亲当年去上班唯一的出行方式就是坐公共交通。我们家里没有汽车，我无论去哪里，都是坐地铁、坐有轨电车、坐公共汽车。所以我非常清楚公交乘客的切身需求。
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Chow**: I've been riding! That Spadina streetcar. My entire family. And listen, my mum, the only way she could get to work is through public transit. Our family did not have a car, and I went everywhere through by subways and by streetcars and by buses. And so I do know the need of transit rider.
+
+</details>
+
+### 总结陈词：本次选举的核心命题
+
+**主持人 (Moderator)**：好的，时间到了。不，我想我们该进入下一个环节了，抱歉。我们得继续往下进行了。
+
+我之所以想进入这最后一个环节，是因为它有些与众不同，能让我们对两位有更深入的了解。我知道我们已经花了45分钟探讨本次竞选中的各项政策议题，但每一场选举背后都有一个核心主线。我想知道在两位看来，这场选举归根结底究竟关乎什么？
+
+邹市长，您有一分钟的时间，请讲。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: Okay. That is time here. No, I figured we're going to move on. Sorry. We're going to move on. We're going to move on because I like this last section in particular because it's a little bit off beat. This is a section that allows us to sort of find out a little bit more about you two. And I know we've spent 45 minutes already talking about issues in this election campaign, but every election has a story. And I want to know what both of you think this election ultimately is all about.
+
+Mayor Chow, you get a minute. Tell us.
+
+</details>
+
+**邹至蕙市长 (Mayor Chow)**：这场选举归根结底是关乎让大家的生活更加可负担，因为在当下充满不确定性的艰难时刻，大家的日子过得很不容易。我们必须具备保持稳定与携手前行的乐观信心。
+
+我们不需要的是一个朝令夕改的人，一个连自己在选区内该履行的职责都照料不好的人。我们必须向前迈进，而不是重回过去那种大幅削减开支、冒巨大风险的老路。
+
+向前迈进意味着我们要让更多孩子吃饱饭，让生活更加可负担；建设更多住房；让公共交通票价平易近人；如果你购买一套两居室住宅，还能为你节省48,000美元——这至关重要，因为这能实打实地让生活负担得起。
+
+最重要的是，正因为当下时局艰难，我们必须团结一致、凝聚共识，能够同各级政府携手合作，采取“加拿大队”（Team Canada）式的通力协作模式。我相信正是凭借我的领导力，联邦和省两级政府才向多伦多市重磅投资了数十亿加元。这也就是为什么我们现在迎来了55辆全新的地铁列车。
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Chow**: It's ultimately about making life more affordable because it is tough out there in uncertain times. We have to have the stability and the optimism to move ahead together.
+
+What we don't need is someone that would changes his mind. Someone that didn't take care of the kind of work that needs to be done in his ward. We have to go forward rather than going back to the old days of cuts and taking big risks.
+
+Going forward means that we feed more kids, making life more affordable, build more housing, making transit affordable, and saving $48,000. If you are getting a two-bedroom home, that is important because that absolutely will make life affordable.
+
+And on top of it, because times are tough. The kind of work that we must do coming together and being able to say, let us work with other levels of government, we have to do the Team Canada approach, and I believe that because of my leadership, that both levels of government have invested heavily, billions of dollars in the city of Toronto. So that's why we have 55 new subway cars.
+
+</details>
+
+**主持人 (Moderator)**：谢谢您。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: Thank you.
+
+</details>
+
+**邹至蕙市长 (Mayor Chow)**：让我们携手向前迈进。
+
+<details>
+<summary>Original English</summary>
+
+**Mayor Chow**: Let's go forward.
+
+</details>
+
+<!-- chunk 10/11 -->
+
+### 本次市选的核心议题与变革诉求
+
+**主持人（史蒂夫）**：布拉德福德，我能请您问一下吗？谢谢。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator (Steve)**: Bradford, could I get you to say ask? Thanks.
+
+</details>
+
+**布拉德·布拉德福德**：朋友们。归根结底。
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: Friends. Ultimately.
+
+</details>
+
+**主持人（史蒂夫）**：这次选举的核心议题究竟是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Moderator (Steve)**: What is this election about?
+
+</details>
+
+**布拉德·布拉德福德**：大家知道，我认为邹至蕙市长深情怀念的是40年前她初次当选时的这座城市。但这根本不是现在的真实处境。从1985年到现在，这绝不是普通多伦多市民在今天所真切体会到的现实。就在当下，他们所经历的是一座生活负担实际上变得更加沉重的城市，因为地税账单已经猛增了整整20%。他们所经历的是这样一座城市：你会被征收双重土地转让税，这是在多伦多独有的、全国绝无仅有的税费，让购买普通住宅的普通人，在拼尽全力准备交房结算时，平白多承担大约18,000加元的沉重开支；他们所经历的城市，是在公共交通系统上感到更加不安全，公交出行体验的可靠性也大打折扣；而如果你不幸只能被困在私家车里，那么你的日常通勤路况更可谓糟糕透顶、前所未见。
+
+不过，现在的好消息是，多伦多今天所面临的每一项挑战与难题，在世界其他某个地方其实都早已有了现成的解决方案。我们唯一需要具备的，就是敢于尝试新鲜事物、勇于换一种方式把事情做好的胆识与魄力。所以，史蒂夫，你刚才问的问题是：这次选举究竟是为了什么？事实很明显，坐在我们面前的现任市长，她认为这座城市的潜力已经完全挖掘殆尽了，她非常安于现状，因为现有的既得秩序对她自身非常受用。但这种固步自封的现状，对荧幕前在家的千家万户市民根本行不通。因此，这次选举关乎变革。如果我们要改变现状，如果我们渴望让这座城市焕然一新，我们就必须通过更换市长，来共同建设一个美丽、强大且令人自豪的多伦多。
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: You know, I think Mayor Chow fondly remembers the city from 40 years ago when she was first elected. But that is not the experience. From 1985, average Torontonians and how they experience it today. Right now, they experience a city that is in fact less affordable because the tax bill has gone up 20%. They experience a city where you are whacked with a double land transfer tax, the only one in the entire country here in Toronto that costs, you know, people buying the average home $18,000 at a time when they're trying to close, they experience a city that feels less safe on transit and a transit experience that's less reliable. And if you're unfortunate enough to be stuck in a car, your commute has never been worse.
+
+Now, the good news is, every challenge that Toronto is facing today has been solved somewhere else. We just have to have the courage to try new things, to do it differently. And so, Steve, your question was, what is this election about? Well, you have an incumbent here who thinks the city has reached its full potential, is very comfortable with the status quo because the status quo works for her. But it doesn't work for the folks at home. So this is about change. And if we change, if we want to change the city, we have to change the mayor to build a beautiful and formidable.
+
+</details>
+
+**主持人（史蒂夫）**：发言时间到。谢谢布拉德福德市议员。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator (Steve)**: Toronto time. Thank you, Councillor Bradford.
+
+</details>
+
+### 最欣赏的前任多伦多市长
+
+**主持人（史蒂夫）**：第二道问题，布拉德·布拉德福德，由你先来回答：在多伦多历任前市长当中，你最欣赏、最喜欢哪一位？
+
+<details>
+<summary>Original English</summary>
+
+**Moderator (Steve)**: Second question here, Brad Bradford, you get the first kick at this, which former mayor of Toronto is your favourite?
+
+</details>
+
+**布拉德·布拉德福德**：你知道我会怎么说吗？我认为每一位前市长都为这座城市带来了截然不同的独特价值。我们常常能拥有恰好契合当时时代需要的市长，比如梅尔·拉斯曼（Mel Lastman），也就是那个大合并时期的“巨无霸城市梅尔”（Mega City Mel），性格鲜明张扬。在多伦多经历剧烈成长阵痛的那个特殊时期，我认为老百姓是真切喜爱他这样一位愿意走到第一线、事事亲力亲为的市长。也许有时候他的行事风格相当高调甚至有些喧闹，但市民们确实非常受用。每当我在北约克挨家挨户走访拜票时，那里的居民至今依然总是深情地谈论起梅尔·拉斯曼。
+
+同样，我每次走进多伦多社区公屋（TCHC）的大楼，也总能亲耳听到许多关于福特市长（Mayor Rob Ford）如何亲自现身帮大家解决困难的故事。他是一位真正随时会出现在民众身边的市长。如果公屋大楼里出现任何故障或民生问题，福特市长就会雷厉风行地把它办好。直到今天，我依然能听到大家讲述他是如何高效办事，又是如何发自肺腑地深切关心生活在多伦多社区公屋里的困难民众。
+
+还有庄德利市长（Mayor John Tory），我是说，他所面对的局面是何等艰难——带领大家全力应对席卷全球的新冠世纪大疫情。在整个世界都被彻底颠倒翻覆的至暗时刻，他展现出了强大的领导定力与沉稳作风，带领大家抗击危机，那份担当给人的感觉已经远远超出了单纯管理一座城市的范畴，事实上更成为了在充满极度不确定性的世界里引领全加拿大前行的领导力典范。曾经能够与他并肩共事，我深感无比自豪；在那样的危急关头由他坐镇市长重任，我也由衷地心怀感激。
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: You know what I would say? I think that each mayor brings something different. We have often had a mayor for the moment, you know, like Mel Lastman, Mega City, Mel, big personality. At a time when Toronto was experiencing some growing pains. And I think people really liked that he was a mayor that showed up. He was a mayor who was really hands on. Maybe sometimes, you know, in a pretty big and boisterous way. But people like that. And when I'm canvassing up in North York, people talk fondly about Mel Lastman all the time.
+
+I can't go into a Toronto community housing building without hearing stories about how Mayor Ford showed up. He was a mayor who showed up. You know, if there were issues in buildings, Mayor Ford got that resolved. And, you know, I still hear stories about how he was very effective and cared deeply about people in Toronto, community housing.
+
+And Mayor Tory, I mean, what a hand that he got held, like trying to deal with a global pandemic. You know, when the whole world was upside down, his strength and his stability in leadership, shepherding what felt like a bigger job than just the city. But in fact, leadership for the entire country, in a world where we had so much uncertainty, I was really proud to serve alongside him. I was really grateful that he was in that role.
+
+</details>
+
+**主持人（史蒂夫）**：谢谢布拉德福德市议员。好的，让我们继续进入第三道题。为了确保时间够用，接下来的最后这几道题，时间必须一分为二……噢，请原谅我，原谅我的疏忽！是的，邹市长，您还没回答，您得说说您的答案。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator (Steve)**: Thank you, Councillor Bradford. Okay, let's go on to the third one here. And for these last ones, that time's got to be divided by two to make sure we get. Oh forgive me, forgive me. Yes, you've got to do yours.
+
+</details>
+
+**邹至蕙**：不好意思。
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: I'm sorry.
+
+</details>
+
+**邹至蕙**：我想您刚才问的是选出“一位”市长，我原本是打算挑一位来回答的。对方刚才一口气列举了三位。不过，我最推崇的前市长是大卫·米勒（David Miller），因为他坚定不移地坚信要誓死捍卫公共服务。
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: I think you said one mayor. I will take. That was three. But I will take David Miller because he firmly believe in protecting public.
+
+</details>
+
+**布拉德·布拉德福德**：公共服务。
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: Service.
+
+</details>
+
+**邹至蕙**：他当年成功阻止了喷气式飞机项目对我们珍贵湖滨景观的严重破坏。而我将坚定地继续打赢这场保护湖滨的持久战。没错，与我身边的这位朋友截然相反，大卫·米勒不仅保护好了湖滨，还高瞻远瞩地推出了“公交之城”（Transit City）战略宏图。“公交之城”的核心就是要将这些至关重要的公交轨道线一条条切实建起来。是的，艾灵顿跨城轻轨（Eglinton Crosstown）的建设确实历经波折、耗费了极其漫长的时间。但大家要明白，它至少终于矗立在那里了，情况正在逐步好转。而且那条线路并非由我们市政府承建，那是省属安省交通局（Metrolinx）主持的项目。
+
+然而，这两条关键公交干线对于城市至关重要，士嘉堡东部轻轨项目（Scarborough East LRT）也同样重中之重，这些全都是“公交之城”蓝图不可或缺的重要有机组成部分。大卫·米勒最近郑重警告我们的一件事尤其值得警醒：我们必须牢牢将多伦多水务的控制权掌握在自己手中。如果我们守不住底线，如果按照当前被提议、被策划的那样，拱手将水务大权让渡给道格·福特省长（Doug Ford），后果将不堪设想。保护我们纯净安全的生活饮用水绝对是重中之重，因为只要你一旦将其让渡交出，它——
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: He was able to stop jets wrecking our waterfront. And I will continue that battle. Right. Unlike my friend here, he protected the waterfront, and he brought in Transit City. And Transit City is about getting these transit lines. Yes, Edmonton Crosstown took a long time. But, you know, at least it's there. It's getting better. We didn't build it. It was the province was Metrolinx. However, those two transit line is important. And the Scarborough East LRT is important. It is part and parcel of the Transit City.
+
+One thing he recently warned us is this we must keep control of our water. If we don't do that, if we give it away to Doug Ford, which is what was being proposed, what is being proposed, and that is the. Most important thing that we need to protect our clean drinking water, because the minute you give it away, it.
+
+</details>
+
+**布拉德·布拉德福德**：它就会被彻底私有化。我必须针对这个指责做出回应！谢谢，谢谢。请允许我回应一下——
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: Will get privatized. I need to respond to that. Thank you, thank you. If I may.
+
+</details>
+
+**主持人（史蒂夫）**：时间到了。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator (Steve)**: That's time.
+
+</details>
+
+### 从政生涯中最后悔的一件事
+
+**主持人（史蒂夫）**：各位，时间到了。时间真的到了。我们之前已经讲过规则了，大家心里都清楚这条规定。我们明白，这次留给你们两位的发言时间是1分20秒平分。请你们说出一件在自己的从政生涯中，事后回想起来真希望自己当初没有做过的事情。邹至蕙，由您先回答：在您的从政生涯中，事后回想起来，有哪一件事是您后悔当初做过的？
+
+<details>
+<summary>Original English</summary>
+
+**Moderator (Steve)**: That's time, everybody. That's time. We've been through this. We know we've been through this one already. We understand a minute 20 divided by two of you this time here. Name one thing in politics that you wish, in hindsight, you had not done. Olivia Chow, your first one thing you did in politics that in hindsight, you wish you had not done.
+
+</details>
+
+**邹至蕙**：好的，我一共有多少时间可以回答？
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: Well, how much time do I have?
+
+</details>
+
+**主持人（史蒂夫）**：30秒。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator (Steve)**: 30s.
+
+</details>
+
+**邹至蕙**：好的。我想分享的其实是一件更加关乎个人情感的事情，因为我多么希望当初能有更多的时间，与我已故的丈夫杰克·林顿（Jack Layton）并肩携手工作。无论是在多伦多市政厅，还是后来在联邦国会下议院，我们共同并肩投入了大量的政治奋斗。我心中一直有一份遗憾与期盼，因为曾经有一项我们两人全心全意渴望达成的共同心愿，但他却没能活着亲眼看到它的实现——那就是让全加拿大的全国校园膳食计划真正实现普惠普及。
+
+而如今，这项计划终于落地成真了！这真是一项无比辉煌壮丽的成就。因此，我多么希望他今天依然能够陪伴在身边，亲眼见证每一所学校里的每一个孩子都能享受到营养充足的餐食。
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: Okay, I this is something more personal because I wish I had more time working with my late husband, Jack Layton, because we did a lot of political work together, both at City Hall and the House of Commons. And I wish, because there was one thing that we really wanted to do, that he didn't live to see it, which is making the Canadian school food program universal. And it finally happened. And it is just magnificent. So I wish he was here to be able to see that every kid in every school are being fed.
+
+</details>
+
+**主持人（史蒂夫）**：感谢您的深情分享。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator (Steve)**: Thank you for that.
+
+</details>
+
+**邹至蕙**：有足足十万名学童。
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: Hundred thousand.
+
+</details>
+
+**邹至蕙**：他们所有人都能从中受惠。
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: Of them.
+
+</details>
+
+**主持人（史蒂夫）**：布拉德·布拉德福德，布拉德·布拉德福德，请说出一件你在从政生涯中，事后回想起来真希望自己当初没做过的事。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator (Steve)**: Brad Bradford, Brad Bradford, one thing you did in politics, in hindsight, you wish you had not done.
+
+</details>
+
+**布拉德·布拉德福德**：我真希望自己当初能有多一点时间留给我的家人。大家知道，我的家里还有一个5岁和一个3岁年幼的孩子。我的妻子今晚就坐在台下的观众席里，孩子们则留在家里由保姆照看。然而这份市长和公职工作是一周七天、每天24小时连轴转的严酷考验。当你把一切心力都奉献给这项事业、全心全意投身其中时，工作是永不停歇的。而这种全情投入，不可避免地以牺牲陪伴家人的宝贵时光为代价，偏偏错过的正是孩子们成长过程中极其珍贵、无可替代的美好童年岁月。因此，大家也明白，凯瑟琳，再次向你表达我的歉意与感激，每一次面对你……
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: I wish I had more time for my family. You know, I got a five year old and a three year old at home. My wife's in the audience tonight. The kids are with the sitter, but this is a 24 over seven job. And when you put everything into it, you put your heart into it. The work is non-stop. And of course, that comes at the expense of time at home. During those really precious and special years. And so, you know, Catherine, thanks again as a thank you every
+
+</details>
+
+<!-- chunk 11/11 -->
+
+### 认可对手品质与答谢闭幕
+
+**Brad Bradford**: ……但是对大家的辛勤付出已经非常难能可贵了。
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: ...day, but very good enough for all of your hard work.
+
+</details>
+
+**Olivia Chow**: 谢谢你。
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: And thank you.
+
+</details>
+
+**Brad Bradford**: 我们非常赞赏你为我们的孩子们所付出的一切。
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: We love that you give our kids.
+
+</details>
+
+**Olivia Chow**: 谢谢你。
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: Thank you.
+
+</details>
+
+**Brad Bradford**: 我们确实心怀感激。
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: We have.
+
+</details>
+
+**主持人**: 这几道题还剩最后10秒作答时间。请用10秒作答，布拉德·布拉德福德（Brad Bradford）请先开始：说出一个你所钦佩的对手身上的特质。10秒倒计时。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: 10s left for these. Answer 10s, Brad Bradford first: name one characteristic of your opponents that you admire. 10s.
+
+</details>
+
+**Brad Bradford**: 我认为她长期以来始终坚持不懈地为2SLGBTQ+社群发声维权，我非常感激她为此所做出的贡献与努力。
+
+<details>
+<summary>Original English</summary>
+
+**Brad Bradford**: I think she has been a long time and relentless advocate for the 2LGBTQ to I plus community, and I'm really grateful that she's done that.
+
+</details>
+
+**主持人**: 邹市长（Mayor Chow），请说出一个你所钦佩的对手身上的特质。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: Mayor Chow, one characteristic of your opponents that you admire.
+
+</details>
+
+**Olivia Chow**: 非常顽强执着，而且工作非常勤勉努力。
+
+<details>
+<summary>Original English</summary>
+
+**Olivia Chow**: Very tenacious and hard working.
+
+</details>
+
+**主持人**: 太好了。好的，我们的辩论时间到此全部结束，感谢各位。
+
+10月26日是正式投票日。如果您没有在提前投票阶段参与投票，请务必行使您的民主权利前去投出宝贵的一票。
+
+在结束之前，我们要特别表达几项诚挚的谢意。首先感谢罗特曼管理学院（Rotman）的各位同仁，布雷特（Brett）和曼迪（Mandi）；感谢大卫·费尔德曼房地产与城市经济学中心（David Feldman Centre for Real Estate and Urban Economics）；感谢《TVO Today》团队、现场总监希拉里·克拉克（Hilary Clark）、马克·福特（Mark Ford）的技术保障团队，以及我们的创始赞助方威尔逊基金会（The Wilson Foundation）。
+
+<details>
+<summary>Original English</summary>
+
+**Moderator**: There we go. All right. That is our time. Everybody.
+
+October 26th is voting day. If you didn't vote in the advance polls, please be sure to exercise your democratic right and vote.
+
+We want a few thank yous here. Before we go to go to the folks here at Rotman, Brett, Mandi; thank you to the David Feldman Centre for Real Estate and Urban Economics. Thank you to TVO Today, live producer Hilary Clark, Mark Ford's technical crew, and our founding sponsor, the Wilson Foundation.
+
+</details>
