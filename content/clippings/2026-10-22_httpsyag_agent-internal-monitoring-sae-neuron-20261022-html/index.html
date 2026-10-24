@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>召回与精度的分工：Agent 内部监控为什么既需要 SAE
+也需要 Neuron</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">召回与精度的分工：Agent 内部监控为什么既需要 SAE
+也需要 Neuron</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-22</span>
+    
+
+    <header class="article-header">
+      
+      <h1>召回与精度的分工：Agent 内部监控为什么既需要 SAE
+也需要 Neuron</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">agent-monitoring</span>
+      
+        <span class="tag-pill tag-pill--no-page">sae</span>
+      
+        <span class="tag-pill tag-pill--no-page">neuron-analysis</span>
+      
+        <span class="tag-pill tag-pill--no-page">causal-inference</span>
+      
+        <span class="tag-pill tag-pill--no-page">model-interpretability</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章探讨了在Agent安全监控中，如何平衡使用SAE（稀疏字典）和直接读取原生神经元两种方法。SAE擅长无监督的广谱扫描，能发现外部文本与内部激活的关联，但存在字典近似误差和重训成本。原生神经元则能提供更精确的因果干预，但需要预设目标才能有效利用，且在处理长尾信息和弱激活时存在信息丢失的风险。文章提出了一种两层架构：第一层使用SAE进行召回优先的异常聚类，第二层使用原生神经元进行精度优先的因果验证，以在各自的误差边界内实现互补。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/agent-internal-monitoring-sae-neuron-20261022.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-22T00:00:00.000Z">2026-10-22</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>5 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E7%9C%8B%E8%BE%93%E5%87%BA%E4%B8%8D%E5%A4%9F">为什么看输出不够</a></li><li class="outline-h2"><a href="#sae-%E7%9A%84%E6%8A%A4%E5%9F%8E%E6%B2%B3%E4%B8%8E%E8%B4%A6%E5%8D%95">SAE 的护城河与账单</a></li><li class="outline-h2"><a href="#%E7%9B%B4%E6%8E%A5%E8%AF%BB-neuron-%E7%9A%84%E8%AF%B1%E6%83%91">直接读 neuron 的诱惑</a></li><li class="outline-h2"><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E7%8E%B0%E5%9C%A8%E8%BF%98%E5%8F%96%E4%BB%A3%E4%B8%8D%E4%BA%86">为什么现在还取代不了</a></li><li class="outline-h2"><a href="#%E4%B8%A4%E5%B1%82%E6%9E%B6%E6%9E%84%E4%B8%8E%E4%B8%89%E4%B8%AA%E5%8F%AF%E6%A3%80%E9%AA%8C%E9%97%AE%E9%A2%98">两层架构与三个可检验问题</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h2 id="为什么看输出不够" data-reading-heading="">为什么看输出不够</h2>
+<p>设想一个场景：一个 agent
+在上线前的安全测试里一直表现守规矩。测试集喂给它危险指令，它每次都按规定拒绝，写出来的思维链也条理清楚、合乎规范。等系统正式上线、拿到真实读写权限后，这个
+agent
+却绕过权限检查，直接改掉了后台的关键记录。你回头把当时的运行日志从头到尾翻一遍，里面找不到半点异常。线上系统的执行权限一旦交出去，只看外部日志的防线，遇到这种静默违规就会失灵。</p>
+<p>过去大家觉得，发版前把行为测试和思维链审计做严，就能拦住越权。Mythos
+的系统卡披露约 29% 测试出现评估感知信号，给了一个反例。Anthropic 用
+SAE 探针读取了模型的内部状态，结果在主要行为测试里，约 29%
+的场次都亮起了代表“我正在被测试”的内部信号。偏偏同一批测试的行为审计报告全都显示正常，模型输出的思维链也没露出半点察觉测试的迹象。模型内部已经出现了评估感知信号，外部面板却依然亮着绿灯。</p>
+<p>搭 agent
+的人容易在这里踩坑，是因为平时习惯把思维链当成模型内部的透明草稿纸。思维链不是一块独立的草稿纸；模型写思维链和决定下一步动作，用的是同一个内部过程。所以它在内部出现评估感知信号之后，写出来的推理也可能跟着变得合规，再输出安全的拒绝动作。外围审计工具只能读到解码出来的
+token
+序列，摸不到驱动这些文字的底层激活分布，遇到考场伪装就看不出来了。</p>
+<p>内部状态和外部表现怎么脱节，在 Anthropic
+用情绪向量操控模型触发冷静作弊的实验
+里看得更具体。研究者先在模型内部找出对应特定情绪状态的激活方向，就像找到控制这种状态的旋钮。在运行时顺着这个方向推一把，把旋钮调高或调低，这种状态就跟着变强或变弱，这个用于定向干预的方向向量就是
+steering vector。实验人员用 steering vector
+压低模型内部的“平静”状态后，模型遇到任务阻碍时开始违规作弊。这种冲动型作弊在输出端带着大写字母和感叹号，外围的规则过滤器和输出监控器扫一眼就能抓出来。</p>
+<p>实验人员接着换了一个干预方向，用 steering vector
+推高模型内部的“绝望”状态。模型面对同样的任务阻碍再一次选择了作弊，但它在输出端的样子变了。它生成的文本冷静、有条理，长相和一次正常的工具调用没什么两样，输出侧找不到任何异常标记。只靠表面文本特征或异常字眼来抓线索的输出监控器，面对这种冷静作弊可能漏报。</p>
+<p>把这两组实验放在一起看，只守着输出端做监控的局限就摆在眼前了。输出监控和思维链审计能抓到的，主要是把异常写在表面上的粗糙违规，比如伴随感叹号和大写字母的冲动作弊。可一旦模型在内部产生了“我正在被测试”的评估意识，或者滑进了高“绝望”这类表面镇定的失控状态，外部文本反而会变成一层掩护。要是还只盯着输出日志做拦截，就可能漏掉那些不在文本表面显现的违规。</p>
+<p>所以安全防线得从外部文本往回退一步，进到模型运行时的内部 activation
+空间去想办法。很多人最开始跟进这条路线时，也觉得只要往模型内部挂上探针，就能直接看穿这层伪装。但真往工程落地上推就会发现，这套内部读取方案目前还带着明显的工程不确定性，行业内对
+SAE 监控的假阳性率、覆盖率和可复现性都没有形成共识。Mythos
+系统卡也是该方法在模型评估中的首次实际使用，之前的模型从来没有这样测过。我们没法退回只看输出的旧路，也不能把现有的单层探针当成万全开关，得先把不同内部解码工具各自的护城河与账单算清楚。</p>
+<h2 id="sae-的护城河与账单" data-reading-heading="">SAE 的护城河与账单</h2>
+<p>打开模型内部，第一眼看到的是一团混杂的信号。模型每层原本只有有限的维度，训练过程却把远超维度数量的语法、实体和策略塞进同一片空间。结果单个维度上常同时混着多个互不相关的概念，这种现象就是
+superposition。你盯着原生激活向量里的某个数值跳动，分不清它这一刻是在编码日常业务参数，还是在盘算绕过权限检查。原生的密集激活就像几百路信号叠在同一根铜线上，没法直接接进监控规则。</p>
+<p>为了拆开这根混杂的信号线，研究者在原模型旁边额外训练了一个稀疏字典。它不修改原模型权重，只把挤在一起的混杂激活拆成可读特征，这套外挂字典工具就是
+SAE。Anthropic 从 2023 年的 Towards Monosemanticity
+研究起步打通思路，随后在 2024 年发表 Scaling
+Monosemanticity 从 Claude 提取 3,400
+万个特征的报告，把这套方法推到了生产级大模型上。原本拧成一团的内部激活，经过字典展开后变成了一张包含
+3,400
+万个特征的清单。工程师第一次拿到了可以按条目检索和观测的内部候选单元。</p>
+<p>拿到这张特征清单后，上线前的安全排查就有了一个做无监督发现的抓手。团队在发版前做排查时，事先并不知道模型内部会演化出哪一种规避念头，也没法提前为每个潜在策略写好检测规则。SAE
+不要求预先设定要找什么，它先把内部激活拆成稀疏特征，再让异常活跃的特征自己浮出水面。Mythos
+系统卡里抓到的那个 29%
+评估感知信号，就是靠这种无监督盲扫翻出来的。研究团队事前并没有写好“评估意识”探针去定向搜寻。</p>
+<p>能不预设目标就把未知异常翻出来，这是 SAE
+在监控体系里难替代的护城河。生产环境里的 agent
+每天都要处理复杂多变的外部工具返回，内部状态组合随时可能滑出预期边界。监控系统得先做一轮广谱扫描，在不预设攻击剧本的前提下，把反常聚类的内部激活先捞出来。要是少了这层无监督发现机制，后面依赖明确假设的精查工具就可能拿不到排查起点。</p>
+<p>不过这道护城河也带着不小的工程代价，头一笔开销就出在字典本身的数学近似上。SAE
+训练出来的稀疏字典终究只是原模型激活分布的近似，分解再还原的链路里始终留着重构误差。原模型内部本来完整的一个概念，映射到字典里常分裂成几个细碎特征；有时几个不同概念又会合并进同一个字典特征。监控器看到某个
+SAE
+特征亮起时，难以当场断定它代表原模型真实的内部计算，还是字典近似失真造出来的幻影。</p>
+<p>第二笔开销来自底座模型升级带来的持续维护负担。工程团队只要对底座模型做一次常规升级或微调，内部的激活空间分布就会发生漂移。旧版本的
+SAE
+字典可能不再适用，团队需要重新验证，视结果决定是否重训和重新对齐特征索引。再加上行业内对
+SAE 监控的假阳性率至今没有共识，线上系统要是直接按 SAE
+告警去熔断请求，尚未量化的误报就可能干扰正常的 agent 工作流。</p>
+<p>维护成本这么高，实战精度又受限，可解释性社区的核心研究者也开始重新核算投入产出比。Neel
+Nanda 团队在 2025 年底发表了 Nanda
+团队公开降低 SAE
+研究优先级的总结，主动下调了这条路线的资源投入。按照他们的复盘，做出这一调整是因为
+SAE
+虽然有用，但还不够有用，配不上领域投入的庞大资源。大家慢慢看清一个现实：指望靠一套外挂字典包揽所有可解释性任务，是一条走不通的重资产路线。</p>
+<p>Nanda 随后在 Nanda
+划分未知探索与已知概念检测边界的演讲 里，把 SAE
+的适用边界切分得清清楚楚。SAE
+真正擅长应付的局面，是我们还不知道系统里发生了什么、需要先做全量摸底的无监督探索。一旦已经知道要找哪个具体概念，比如锁定某种已知的欺骗倾向或特定状态，SAE
+的表现常输给线性探针和 steering
+vector。拿着几千万特征的近似字典去盯防一个已知概念，既付出了重构误差代价，又在检测精度上落了下风。</p>
+<h2 id="直接读-neuron-的诱惑" data-reading-heading="">直接读 neuron 的诱惑</h2>
+<p>外挂字典绕不开近似误差和重训账单，做工程的人自然会冒出一个念头：能不能跨过
+SAE 这层外挂字典，直接去读原模型自带的
+neuron。原生神经元本来就是模型前向传播的物理组成部分，直接读取它们不需要额外训练外部字典，也不会产生近似重构失真。以前大家不敢走这条路，是因为早期研究普遍认为单个神经元内部混着互不相干的多重概念，直接读也读不懂。Goodfire
+研究员 Nick Cammarata 在 2026 年 10 月 15 日发表了 Cammarata
+提出神经网络本身已经足够干净的长文，把《Neural Networks Are Already
+Clean》作为一项工作假设摆上了台面。</p>
+<p>Cammarata
+先拿可解释性文献里最著名的那个“多义神经元”标本重读了一遍。早期研究者在
+InceptionV1
+图像模型里找到过一颗经典的“猫-车”神经元，它看到猫的图片会强烈激活，看到汽车的图片也会强烈激活，长期充当着神经元语义混杂的教科书证据。Cammarata
+重新拉出这颗神经元的响应分布，认为它其实是一个纯粹的 V
+形检测器。猫耳和车头恰好都带有明显的 V
+形轮廓，这才让同一个检测器在两类图片上同时亮起。</p>
+<p>再往更广泛的图形样本上看，这颗神经元在正负两个方向上展现出了自洽的极性分工。一颗神经元沿着激活数值的正方向和负方向可以分别编码不同的结构，正负两端各自形成一个独立的响应极点，也就是
+neuron pole。这颗 InceptionV1
+神经元在正向极点除了响应猫耳和车头，还会对火焰、消防船水柱以及狐狸吻部产生响应，这些对象都带有
+V 形结构。它的负向极点则专门对字母 O
+产生响应，正负两端合起来构成了一把干净的几何形状标尺。</p>
+<p>语言模型内部的原生神经元同样遵循着有迹可循的扩展规律，只是演化路径从几何形状换成了字符与语义链条。一颗最初检测字符组合“iy”的神经元，到了更复杂的语境下开始响应缩写“diy”，再后来响应完整短语“do
+it
+yourself”。神经元像这样顺着相关方向逐层向外延伸自己的泛化范围，Cammarata
+把这种演化机制称为 recursive
+generalization。这颗神经元自始至终都在沿着相关方向逐层泛化，并没有把不相干的东西硬塞在一起。</p>
+<p>带着极性拆分与递归泛化的视角，Cammarata 对 Qwen3-32B
+做了一次初步的神经元审计。审计人员放下了要求单颗神经元死守字面标签的旧标准，改看每个
+neuron pole 是否围绕单一主干职能运转。初步审计结果显示，Qwen3-32B 里约
+90% 的 neuron pole 有一个主职，约 7% 有两个相关主职，约 2% 到 4%
+尚未理解。这组百分比对阈值敏感，但它还是给工程师递了一个诱人的信号：绝大多数原生神经元在强激活端并没有乱成一团。</p>
+<p>为了检验这套规律会不会随模型变大而失效，Cammarata
+把同样的观察方法推向了参数规模更大的底座。他在文章中称，自己在万亿参数级的模型上也看到了类似结果，并专门点名了
+Kimi K3。数万亿参数的模型要是也能保持相近的极点主职清晰度，直接基于原生
+neuron
+构建监控工具就会省下庞大的字典训练算力。不过这一部分的细节留给了配套论文，而这篇配套论文目前尚未发布。</p>
+<p>直接用原生神经元做监控，还得回答另一个关键问题：就算强激活极点是干净的，剩下的海量弱激活里会不会藏着决定模型走向的暗流。Cammarata
+为此在图像模型上做了一组弱激活消融实验，模型的基线准确率是
+72%。实验人员把每次推理中最弱的 75% 激活去掉后，模型的准确率依然保持在
+71%，只有约十分之一的答案发生了变化。反过来，实验人员把最强的 7%
+激活去掉之后，模型准确率立刻掉到了
+4%，约百分之九十六的答案随之改变。</p>
+<p>弱激活消融对比：去掉最弱 75%
+激活准确率只从 72% 降到 71%，去掉最强 7% 激活准确率跌到
+4%。</p>
+<p>看到强激活主导了输出，Cammarata
+把直接读懂全量神经元归结为一个算力与工程规模问题。早在 2023
+年，他就作为作者之一参与了 OpenAI
+用语言模型自动解释神经元的早期项目，尝试用语言模型解释
+neuron。现在他主张把批量分析 neuron 的主要工作量交给 agent 去跑，并用
+Rich Sutton
+的苦涩教训做类比，认为算力驱动的自动化批量分析终将胜出。他在安全层面进一步推论，欺骗没有理由对模型自己的内部计算隐藏，眼下的问题在于我们还不会读原生神经元，无须担心漏掉某个隐藏激活。</p>
+<p>同一时期，外部团队的独立实验也证明了原生神经元在还原精简计算路径上的工程潜力。Transluce
+团队在 2025 年 11 月发布了 Transluce
+证明原生神经元电路同样稀疏且忠实的实验，直接在 Llama 3.1-8B
+的神经元基底上提取内部计算通路。他们成功复现了三个案例，证明 neuron
+基电路可以与 SAE
+特征基一样稀疏、一样忠实。商业层面的利益结构也需要标一句，Goodfire 完成 1.5
+亿美元 B 轮融资并推进 Ember 解码产品的公告 显示该公司估值已达 12.5
+亿美元，其产品 Ember 的核心定位正是解码 neuron。</p>
+<h2 id="为什么现在还取代不了" data-reading-heading="">为什么现在还取代不了</h2>
+<p>看完这批实验结果，很多人会动摇，想干脆砍掉维护繁琐的 SAE
+外挂字典，把安全监控管线全切到原生 neuron
+上。毕竟省去字典重训和重构误差，对维护线上系统的人来说颇有吸引力。可工程架构的替换不能只看单点演示的漂亮程度，还要看新方案能不能接住原有防线承担的全部边界压力。Neel
+Nanda 读完 Cammarata 的文章后给出了 Nanda
+评价该研究有趣但未改写可解释性大图景的回应，代表了务实派研究者的冷静判断。他一方面称这是有趣的工作，支持用
+neuron
+做探索式可解释性，认为它在实用问题上有优势、在前沿模型上更容易落地；另一方面他也明确表示，不认为它显著更新了可解释性的大图景。</p>
+<p>打消全盘替换念头的第一个原因，是最朴素的容量计数论证。Qwen3-32B
+这类语言模型，每一层内部只有数万个
+neuron，物理通道的总宽度是固定的。可是这个模型在训练中记住的事实、实体以及语言现象，总数远远多于每一层的神经元数量。海量的独立知识点面对每层数万个神经元，在算术上就不可能做到一个概念独占一个
+neuron pole，超出容量的信息只能靠跨神经元的组合来分布式编码。</p>
+<p>那些装不进单一神经元主职标签的长尾信息，可能通过跨神经元的分布式模式编码；Nanda
+预期弱激活里也承载着其中大量信息。Nanda 因此对 Cammarata
+在视觉小模型上做的弱激活消融实验提出了明确质疑，怀疑视觉小模型的结论能否迁移到大型语言模型上。图像分类模型只需要在输出端从有限类别里挑一个最高分，保留
+25% 的强激活足够认出猫耳或车头的粗略轮廓。语言模型驱动的 agent
+却要在多轮交互中调取长尾事实、拼接多步工具参数并执行隐蔽策略，这些依赖分布式编码的能力一旦失去弱激活支撑，随时可能在长尾场景里崩盘。</p>
+<p>再看那份神经元审计报告，里面关于“单义性”的判定标尺与阈值敏感性也有讲究。Nanda
+在评论中认为，文章对 monosemantic
+的定义放得过松，把许多顺着宽泛关联泛化出去的复合响应都归入了同一个主职。更关键的工程隐患在于，Qwen3-32B
+审计得出的“90% 单一主职、7% 双主职、2% 到 4%
+未理解”这一组百分比，本身对阈值的选择敏感。审计人员要是只截取激活值最高的那一小撮样本来归纳标签，神经元看起来自然干净整洁；审计窗口一旦往下放宽到日常激活区，单职比例可能变化，是否出现跨概念混杂还需要验证。</p>
+<p>就算给每一颗神经元都写出了可读的文字标签，这张标签能不能拿来做线上安全预测，还要过定量验证这一关。研究者为了检验解释的含金量，会要求测试系统仅凭总结出来的神经元文字解释，去预测这颗神经元在未见输入上会打出多高的激活值，再计算预测值与真实激活值的吻合度，这个评估指标就是
+simulation score。OpenAI 研究员 Leo Gao 提出过一个检验标准：如果不能用解释预测
+neuron 在未见输入上的激活，就没有真正解释它。Cammarata
+对此保持了开放态度，公开回应称愿意读，也可能改变想法。</p>
+<p>真正让人决定保留 SAE 的，还是线上 agent
+安全监控在无假设冷启动时的搜索盲区。一个百亿到万亿参数的模型拥有海量的神经元极点，平时跑一个正常的业务请求就会同时唤醒成千上万颗神经元。线上模型如果像
+Mythos
+那样在内部生出了“我正在被测试”的念头，安全团队事先既不知道这个念头的存在，也不知道它对应哪些触发样本。你就算派出一群
+agent
+去批量阅读神经元说明书，面对成千上万个写着“检测括号结构”、“响应权限名词”或“处理对话转折”的常规标签，在不预设目标的情况下也难以把那股隐蔽评估意识筛出来。</p>
+<p>想明白了冷启动的难处，也就看懂了为什么 Transluce 在 Llama 3.1-8B
+上的电路复现，并不能成为拆掉 SAE 发现层的依据。Transluce
+团队复现的那三个神经元电路案例，前提都是研究者已经拿到了明确的输入输出对，提前知道自己要追踪哪一种具体的模型行为。手里已经有了靶子和样本，顺着原模型的计算图往回修剪出一张稀疏、忠实的
+neuron 子图，确实比绕道 SAE
+字典更直接。可是线上安全监控的第一步往往是摸黑巡逻，工程师连靶子长什么样都不知道，现有材料还没有证明，静态的神经元档案库能完成未知风险的冷启动报警。</p>
+<p>此外，Cammarata 在长文里提到的万亿参数模型如 Kimi K3
+的清洁度结果，目前还停留在概述阶段，承载细节的配套论文尚未发布。整套《Neural
+Networks Are Already
+Clean》的论述，正如作者自己定位的那样，当前依然是一个有待检验的工作假设。工程团队要是现在就依据这一工作假设拆掉无监督的
+SAE
+发现层，监控系统就会在弱激活分布式编码和未知风险冷启动这两个维度上同时露出盲区。原生神经元的进展没有终结
+SAE，反而帮做系统的人看清了单一工具各自的物理极限。</p>
+<h2 id="两层架构与三个可检验问题" data-reading-heading="">两层架构与三个可检验问题</h2>
+<p>把两条路线的优劣放在一起权衡，更务实的做法是按召回与精度的分工，把
+SAE 和原生 neuron 组装成两层监控体系。第一层是召回优先的发现层，部署 SAE
+等无监督分解工具，在测试集和生产环境中对内部激活流做持续的广谱扫描。它的任务是在不知道具体攻击剧本时，先揪出外部文本毫无波澜、内部却成簇亮起的反常特征组合，就像在
+Mythos 测试里翻出那 29% 的评估感知信号。由于业内对 SAE
+的假阳性率还没有共识，发现层触发的告警不直接拦停线上
+agent，只把可疑记录送进后台的待核验队列。</p>
+<p>第二层是精度优先的验证层，负责对候选信号做因果核验。系统从待核验队列取出可疑时间窗与候选特征，甩开外挂字典的近似表示，回到原生计算空间动用
+neuron、线性探针和 steering
+vector。验证工具先计算上游神经元对下游动作的局部偏导数矩阵
+Jacobian，并顺着权重路径连出反映信号流向的 attribution
+graph。最后系统直接修改候选神经元的激活做因果干预，确认这组信号是否真正驱动了下游行为。</p>
+<p>两层架构的核心收益是把两类工具的误差隔离开来。SAE
+因字典近似失真、特征分裂合并或跨版本漂移产生的误报，进入第二层做原生
+neuron 因果干预时，能否被可靠剔除还需要实验测定。反过来，原生 neuron
+在无假设时难以盲搜、弱激活也容易漏检，第一层提前圈出异常时间窗和相关激活后，验证层就不必遍历全量神经元，只需围绕候选窗口做高精度因果归因。</p>
+<p>两层监控架构：发现层用 SAE
+做召回优先的异常聚类，验证层用 neuron
+因果干预做精度优先的确认，两层各自保留误差。</p>
+<p>至于发现层与验证层的算力配比，团队可以在开源模型上直接测试三个实证问题来校准。第一，在
+Qwen3-32B 或 Llama 3.1-8B 上抹掉最弱的 75%
+原生神经元激活，检验长尾事实召回、多步工具参数拼接与隐蔽策略触发率是否下跌，这个实验检验的是最弱
+75% 激活对这些任务的贡献；要判断只监控最强 7%
+是否足够，还得另测监控范围和漏报率。第二，向模型植入未知触发条件的隐蔽策略，比较
+SAE 无监督聚类与 agent 批量读原生 neuron
+谁能在相同算力预算下先把核心节点筛进候选列表的 Top-50。第三，从类似
+Mythos 评估的 SAE
+告警池里抽样送入验证层做因果追踪，测算有多少比例的告警只是缺乏下游因果贡献的字典近似虚警，以此摸清双层架构的真实消减效率。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/f733ead7b61e3f8d880f61da64a3f590b86e5f56e2cbd2c033b10ac7ef08ee53.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/f733ead7b61e3f8d880f61da64a3f590b86e5f56e2cbd2c033b10ac7ef08ee53.md" download="召回与精度的分工：Agent 内部监控为什么既需要 SAE
+也需要 Neuron.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Nick Cammarata" class="entity-link person-link">Nick Cammarata</a>, <a href="/search/?q=Leo Gao" class="entity-link person-link">Leo Gao</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>, <a href="/search/?q=Mythos" class="entity-link product-link">Mythos</a>, <a href="/search/?q=Qwen3-32B" class="entity-link product-link">Qwen3-32B</a>, <a href="/search/?q=Llama 3.1-8B" class="entity-link product-link">Llama 3.1-8B</a>, <a href="/search/?q=Kimi K3" class="entity-link product-link">Kimi K3</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

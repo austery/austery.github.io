@@ -1,0 +1,98 @@
+---
+author: Joseph Wang
+date: '2026-10-03'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=8yV_MZvcspE
+speaker: Joseph Wang
+tags:
+  - bond-market
+  - sovereign-debt
+  - monetary-policy
+  - equity-valuation
+title: 全球债市风暴、法国主权信用危机与美股科技泡沫的裂隙
+summary: 本期周报深度复盘了全球宏观市场异动：中东地缘冲突与能源冲击导致全球固定收益资产深度承压，而美国疲软非农与薪资增速放缓阻断了薪资通胀螺旋；与此同时，法国政治僵局与赤字危机引爆主权债务利差，重演欧债危机隐忧；美股科技板块在英伟达回购下仍显韧性，但Anthropic财务数据曝光与开源模型追赶揭示了估值泡沫的潜在风险。
+insight: ''
+draft: true
+series: ''
+category: investment-assets
+area: finance-wealth
+project: []
+people: []
+companies_orgs:
+  - Federal Reserve
+  - European Central Bank
+  - Anthropic
+  - Nvidia
+products_models:
+  - Claude
+media_books: []
+status: evergreen
+---
+### 利率风暴与能源冲击：固定收益市场的深度重创
+
+在过去一周的市场演变中，各大资产类别的价格走势呈现出极度割裂的局面，其中最具破坏性的震荡发生在利率与债券市场。当前**债券市场**的交易表现极其疲软，几乎每天都处于被抛售的状态，且每一次盘中反弹都会立刻遭遇迫切的抛售盘压制。令人意外的是，在利率端发生如此剧烈抛售的同时，其他金融资产表面上却似乎毫发无损。这种价值缩水并不局限于**美国国债**，而是广泛蔓延至整个固定收益领域，包括**公司债**和**抵押贷款支持证券**（MBS）在内的全部品种市值均大幅下滑。这意味着广大的机构投资者与投资组合经理正在承担严峻的账面浮亏，进而引发显著的**负财富效应**（Negative Wealth Effect: 资产市场价值缩水导致机构与投资者资产负债表受损并引发连锁去杠杆的机制）。按照常规资产组合管理逻辑，当固定收益敞口遭遇巨额亏损时，基金经理通常被迫进行再平衡，不得不抛售股票等权益资产来补足流动性或控制风险敞口，但当下的权益市场却反常地未现传导冲击。回想上一轮美联储激进加息周期，**硅谷银行**（Silicon Valley Bank）等金融体系裂痕也是在加息推进相当长一段时间后才爆发出来。
+
+深入探究驱动本轮全球利率飙升的深层动力，核心逻辑依然锚定在利率与国际油价的高度正相关性上。中东地缘政治局势的持续动荡，直接导致原油价格随着局势升级而剧烈脉冲。为平抑油价，美国总统此前公开对**欧盟**施压，警告若欧洲不释放自身柴油战略储备，美方将实施针对柴油的出口禁令；欧洲方面随后妥协并释放了部分库存，从而提供了短暂的市场喘息。然而，中东与伊朗之间的冲突持续发酵，正在对全球债券市场造成毁灭性打击。尽管网络舆论存在试图淡化能源价格影响的声音，但各国央行在加息与维持高利率时已经明确表态，全球能源冲击正是通胀黏性与加息决策的关键推手。
+
+<details>
+<summary>Original English</summary>
+
+Hello my friends. Today is October 3rd and this is Markets Weekly. All right, so a lot of random things happened in the market last week. So let's just kind of talk about things by price action, by asset class, and some of the things that happened that would affect them. Let's start with rates. Of course, the bond market has been trading very very poorly. It looks like we're selling off every single day and every time we have a bounce, it seems like there's someone eager to sell. Now, honestly, I think it's super surprising to me that we can have such a large sell-off in rates and yet everything else seems fine. So, it's not just treasuries, but all fixed income, corporate bonds, mortgages, and so forth are seeing some significant decreases in market value. That means that someone, some investor, portfolio manager is having some serious markdowns, right? So, negative wealth effect and that that should have some cascading impacts. So let's say that you were a portfolio manager. You're down a lot on your fixed income portfolio. Usually what would happen is that you would rebalance a bit. So you'd have to sell your equities and other stuff. So it's really surprising to me that we don't really see anything like that. Also recall that the last time we had a big hiking cycle, it was sometime afterwards until we had some issue with Silicon Valley Bank.
+
+So what was driving this sell off in rates? Well, again, we've talked about this too much, so I'm not going to go over it, but to say that, you know, if you look at the correlations between rates and oil, it's really strong. And looking at the Middle East, oil prices continue to kind of trend up and down depending on events. The president of course has reportedly basically threatened the European Union that if they don't release their diesel stockpile, they're going to put on a US export ban for diesel. And it seems like the Europeans have complied and are releasing some diesel. So that provides some short-term relief. But again, this is something that has been going on for some time. It continues to put upward pressure. You don't really need to take my word for it. The central banks are hiking rates and they're telling you straight up that they're hiking in part because there is a global energy shock. Now, one thing I'll note is that this warning with Iran is a political issue. So, there will be people on the internet who try to gaslight you into telling you that oil doesn't matter. But really, I think that this Iran war is really blowing up the global bond market.
+
+</details>
+
+### 就业裂缝与薪资减速：美联储降息博弈与螺旋破裂
+
+除了地缘与通胀预期，宏观基本面数据同样主导着收益率曲线的定价逻辑，其中尤以美国劳动力市场数据最为关键。作为承担**双重使命**（Dual Mandate: 美联储同时维持物价稳定与实现最大化就业的法定目标）的央行，一旦就业市场出现实质性转弱，即便利胀率仍然高于既定目标，美联储也有充分理由软化加息立场或开启政策转向。近期美联储多位核心高层的公开表态释放了明确信号：美联储副主席**菲利普·杰斐逊**（Philip Jefferson）以及纽约联储主席兼联邦公开市场委员会（FOMC）副主席**约翰·威廉姆斯**（John Williams）——这两位位高权重的决策者均对10月份加息表达了否定态度。高层的鸽派立场促使市场迅速重新定价，目前市场预期美联储可能在12月实施25个基点的加息，并在明年再加息两次，这一预期调整主要对收益率曲线的前端产生了压制，但尚未完全传导并平抑长端收益率。
+
+最新公布的周五非农就业报告强化了基本面的复杂性。尽管新增非农就业数据大幅逊于预期，但整体情况并未出现断崖式崩溃。失业率小幅攀升至4.2%，在历史纵向对比中仍处于相对低位。数据公布之初，债市曾迎来全收益率曲线的大幅反弹与下移，但随后因胡塞武装袭击沙特阿拉伯或沙特拟发动还击等中东地缘升级新闻，国际油价再度拉升，债市在日内回吐了全部涨幅。深入拆解这份就业报告可以发现两项关键特征：第一，失业率的上升主要是由劳动参与率的提升所驱动，叠加人口低速增长的大背景，绝对新增岗位减少并不代表劳动力市场发生结构性坍塌；第二，至关重要的是薪资增速出现了明显减速。缺乏强劲的工资增长，市场此前担忧的类似1970年代那种工资与物价相互推升的**薪资-物价螺旋**（Wage-Price Spiral: 工资增长推高生产成本与物价、物价上涨反过来迫使劳动者要求更高工资的恶性通胀循环）就根本无法形成。现实微观层面上，求职难度明显上升，普通劳动者已失去薪资谈判话语权，大幅加薪的现象已不复存在。
+
+<details>
+<summary>Original English</summary>
+
+But again, it's not just about inflation. Other data matter as well. And we did have employment data. Now, this matters in particular to the Fed because the Fed is a dual mandate central bank. Should employment weaken, then the Fed has a reason to at least soften its stance on rate hikes a little bit, even if inflation is above target. Now, we did get some Fed speak from fairly senior people. So, Vice Chair Jefferson and Vice Chair Williams of the New York Fed. So, one is vice chair of the Fed board, the other is vice chair of the FOMC. Small details, but these two are basically among the most senior people at the Fed and they were all no for October hike. So these guys are dovish and the market priced that in as well. So the market right now is thinking that we could get another 25 basis point hike in December and two more next year. So that did have some impact on the front end but not so much throughout the curve.
+
+On Friday when we got the employment data though it was much weaker than expected but really not bad. So the headline job number of course disappointed, much lower than expectations, and the unemployment rate went up a little bit. It's like at 4.2% right now, still historically quite low. Now at the release of that data you had a pretty big rally in rates. So the entire curve basically shifted lower, but they gave that entire thing back throughout the day. There were additional headlines that the Houthis were hitting Saudi Arabia or Saudi Arabia was about to attack the Houthis, something like that that drove oil up and that seemed to have again strong correlation there. Could be other things as well. Now one thing to think that this isn't too bad of a jobs report is that the increase in the unemployment rate is due to an increase in participation. And of course because we have a slow growth in population even though we didn't create that many jobs it's still okay. One other thing that we should really highlight and this is super important is that you don't see a lot of wage growth. Wages actually decelerated this month. And without strong wage growth, it's really hard to have that classic inflationary spiral that people talk about that we saw in the 1970s where higher wages meant higher inflation, higher wages and so forth. You just don't see that right now. It doesn't really seem that labor has a lot of bargaining power. And of course anecdotally many people report hard to get a job right now, and so in that context it also looks like people aren't getting big raises either.
+
+</details>
+
+### 法国债务陷阱与欧盟裂痕：主权信用溢价与政治紧箍咒
+
+在欧洲债券市场，更为严峻的主权信用危机正在加速演变。从法国国债相对德国国债的利差，或者通过**互换利差**（Swap Spread: 衡量主权债券收益率相对欧洲央行基准政策利率预期路径之差的风险指标）来观察，法国10年期国债收益率相对于欧洲央行预期的政策利率路径大幅飙升，导致互换利差深度倒挂。这表明法国主权债券市场正处于极其严重的流动性与信用压力之下。欧洲与美国具有根本性的制度差异：法国并非**货币主权国**（Monetary Sovereign: 拥有独立的货币发行权且本国央行能够无限制购债支持财政的经济体），法国只是欧洲央行的一个成员国，无法单方面要求欧洲央行无底线开动印钞机全额承接其主权债务。因此，当前市场定价的是实打实的主权违约风险，投资者开始严正评估法国政府债务重组甚至赖账的可能性。
+
+回顾十余年前的**欧洲主权债务危机**，希腊、葡萄牙、意大利等外围脆弱国家的借贷成本曾发生爆炸式上涨，并引发欧元区解体与**重新计价风险**（Redenomination Risk: 成员国被迫退出欧元区并将其外币债务转为本国大幅贬值货币所带来的清偿损失风险）。彼时，由欧盟委员会、欧洲央行与国际货币基金组织组成的**三驾马车**（Troika: 负责对债务危机成员国实施监督援助与强加严苛财政纪律的跨国机构联盟）进驻违约边缘国家，以提供流动性兜底为筹码，强行推行了极其痛苦的财政紧缩政策。紧缩虽然最终压低了希腊主权债券收益率，但代价是希腊GDP迄今仍未恢复到十多年前的水平，伴随着巨大的社会动荡与政治撕裂。然而，法国是整个欧盟的核心支柱，一个失去法国的欧盟在逻辑上根本无法成立。在主权债务危机的典型化解路径中，法国无法自行印钞，本已极高的宏观税负让加税空间彻底锁死，而削减公共财政支出更是无法逾越的政治红线——本周法国多座城市爆发的高中生暴乱与焚烧事件，充分展现出社会大众对福利削减的激烈反抗。随着**玛丽娜·勒庞**（Marine Le Pen）极有希望在明年的大选中接掌政权，加之法国长期缺乏经济内生增长动能，政治家违约的阻力甚至可能小于强行紧缩的阻力。
+
+面对利差走阔的系统性风险，欧洲央行虽然拥有**传导保护工具**（Transmission Protection Instrument, TPI: 欧洲央行用于定向购买特定成员国主权债券以防范政策传导受阻与利差异常扩大的危机干预机制），并在理论上可将法德利差走阔归咎为货币政策管道失灵而入场干预。然而，TPI的官方启用门槛明确要求受助国必须维持健全的财政纪律与赤字控制，这让深陷赤字泥潭的法国在合规层面上完全不具备申请资格。尽管在极端紧急状态下监管规则常被特事特办地搁置，但法国债务问题的最终归宿必然是一场涉及欧盟、欧洲央行与法国政府之间的高维政治博弈，纯粹的市场化解决方案并不存在。一种潜在的政治剧本是：布鲁塞尔官僚体系可能会静待勒庞正式上台，随后利用主权利差恶化的窒息式金融压力迫使其屈服就范，强推财政改革。更为严峻的是，欧洲在此轮能源危机中的脆弱性远超美国：欧洲在切断廉价俄罗斯管道天然气与柴油供应后转向中东，中东战火蔓延后又被迫溢价采购本国供应同样吃紧的美国能源，全方位的能源瓶颈正在持续恶化其经济与主权信用基本盘。
+
+<details>
+<summary>Original English</summary>
+
+Now one other thing that happened in the bond market this week that was super interesting of course was what's happening in the European Union. Some people call it the spread, which is to say what French bonds are traded as a spread to German bunds. But today I'll illustrate it relative to the expected path of ECB policy, that is to say through swap spreads. And you can see that French 10-year yields have risen significantly relative to expected path of ECB policy rate. And that manifests in an increasingly negative swap spread. So basically France is the French bond market is under a lot of stress. Now remember France, European Union is different from the US. They are not a monetary sovereign. France can't just print their own currency, have the ECB buy it all. They are only one member of the ECB. So what you're seeing here is legitimate credit stress. There is some chance that France will default and not able to pay their debts.
+
+Now this is something that the market has seen before and if you weren't around over a decade ago there was a European sovereign debt crisis. And at that time what people thought of as the weaker sovereigns, so like say Greece, Portugal, Italy and so forth, their interest rates exploded higher and there was significant stress in the Eurozone. And people weren't really sure what happened because there was some possibility that hey, maybe the stress would be so large that some members would actually quit the European Union. So there was what the ECB referred to at that moment as redenomination risk. Basically when you leave the European Union maybe your debt becomes the Italian lira or something like that, and then that creates a lot of risk for investors and so they demand higher yields. Now ultimately though that was resolved after a long long time through basically the European Union getting together, providing some backstops and also forcing the weaker sovereigns to take very punishing fiscal reforms. At that time the powers that be, they were called the Troika, that was the IMF, the European Union, and the ECB, they basically descend upon smaller countries like Greece and say that we could help you with your debt, but in exchange you have been spending too much money, you have to do austerity. And that's what they did and you can see the impact on Greece's GDP was severe. They basically have not yet recovered. Their GDP today is lower than it was over a decade ago. So the fiscal reforms worked in the sense that Greek sovereign bond yields are relatively low compared to say France for example, but it also came at a very high social and political cost at that time. There were Greek political parties that wanted to leave the European Union, but the Troika they put the fear of god in them and they basically bent the knee.
+
+So France though of course is a whole another level because France is core Europe. You can't have a European Union without France. So what are they going to do to solve this problem? Now again if you have a sovereign debt problem, many solutions, right? Well of course you can print, have the central bank buy it all, but that's not available. Or you could raise taxes. We've talked about this before, really can't do that for France, they're super highly taxed already. You could cut expenses. That's never going to happen. You have tremendous amounts of popular revolts. Now, what happened this past week is that you had revolts by high school students in a couple cities in France basically burning things. And I think that really hurt public sentiment and highlights to the market that any type of benefit cut is basically politically impossible. And of course next year I think it's widely perceived that there is a very good chance that Madame Le Pen will take power and take France towards another direction. France has no growth either, so they can't grow out of it. So it is very much a tricky issue. So the market rightly of course is perceiving higher risk. I mean I would imagine it would be easier for a French politician to just default. Not to mention, not too long ago some of the intellectuals in France, more of the left-leaning, were dreaming about just having the central bank cancel their debt that they bought, but I think they at the moment at least have stepped back from that.
+
+So the ECB actually has a special tool. It's called the transmission protection mechanism, something like that, TPI or TIP. What that does is that the ECB basically views sovereign debt spread widening relative to German bunds as a transmission mechanism problem. So for the ECB to use this tool, they would have to perceive some kind of plumbing malfunction such that when they are setting rates, it's not passing through to the rest of the euro member states. And so they could come in and they could buy up some of the sovereign debt to close the spread, police the spread as they would say. That is a tool that the ECB could use to make the French spreads a bit narrower. But according to the official description of the transmission protection tool, to use this the member state has to have good fiscal order, right? They're not having a big deficit and so forth. France would not qualify. But again, when there's an emergency, these guys would just waive all the rules. Ultimately, what happens with France is going to be a political decision by the European Union, by the ECB, and of course by the French government. There is no market solution to this. This could potentially be some sort of sovereign debt crisis. But remember, we don't want to fight the last war. These guys have fought the last war, so they have tools to solve this. It's just a political will question. One possibility is that they could wait for Madame Le Pen to become president and then use this as pressure to control her the same way that they controlled the smaller European countries to force them to do painful reforms. So we'll see. But that is something that is a notable risk factor and will get worse. Remember this energy crisis hits Europe much harder than it hits the US. They were reliant on Russian gas, Russian diesel. We don't like the Russians anymore, began to buy it from the Middle East. Then there's the Middle Eastern war, so they began to buy it from the US. And the US needs it itself as well. So they are under severe energy strain basically from all sorts of energies.
+
+</details>
+
+### 纳指新高与AI估值泡沫：回购遮羞布、财务隐患与模型平替
+
+与风声鹤唳的固收市场形成鲜明对比的是，美股权益市场在过去一周展现出了不可思议的超强韧性。**纳斯达克指数**（NASDAQ）持续在历史最高点附近徘徊，市场资金明显在押注中东局势的任何和平转机；一旦地缘紧张达成缓和协议，场内普遍预期美股将迎来类似互联网泡沫时期的抛物线式狂热暴拉。在主导此轮牛市的核心AI交易逻辑中，**英伟达**（Nvidia）宣布了巨额股票回购计划，再次强力提振了股价并维持在历史高位区间，尽管拉长周期来看，其股价在过去数年的大幅上涨后已逐渐进入平台震荡期。
+
+与英伟达股价坚挺形成鲜明对比的是顶级AI独角兽面临的深层隐忧。本周市场爆出了**Anthropic**的真实财务数据泄漏事件。最新消息显示，该公司计划在下个月（感恩节前）推进首次公开募股（IPO），这意味着市场上将迎来规模庞大的新增股票供给并对流动性构成压制。然而令人震惊的是其财务基本面的恶化：Anthropic去年单年亏损高达400亿美元，更致命的是，作为一家估值高度依赖预期增长的明星独角兽，其旗下主力产品**Claude**虽然广受专业好评，但公司的整体营业收入却已经陷入停滞状态。对于一家常年巨额亏损且成长引擎失速的公司而言，若仍坚持索要高达2万亿美元的上市估值，其面临的募资阻力将可想而知。
+
+加剧头部专有闭源大模型生存压力的，是外部廉价竞争对手与中国**开源权重模型**（Open-Weight Model: 开放网络模型权重以允许全球开发者免费部署与微调的AI架构）的技术突围。尽管这类开源模型在极限性能上仍逊于Claude或OpenAI的旗舰版本，但对于普通用户在绘制数据图表、处理Excel表格乃至常规软件代码编写等绝大多数日常场景而言，开源模型的能力已经完全绰绰有余（Good enough）。大模型核心能力的边际效用递减与开源生态的泛化替代，将对整个AI产业链的超高溢价带来持续估值重估。纵观整个美股大盘，其抵抗宏观利空的韧性令人难以置信，但当前的市场格局越来越接近典型的互联网晚期非理性繁荣，市场或许只有通过一场超越所有人预期的极端脉冲式拉升，才会迎来流动性与估值的最终出清。
+
+<details>
+<summary>Original English</summary>
+
+So okay, now the second thing of course let's talk about the equity markets. Now the equity markets again surprisingly resilient this whole week. The NASDAQ basically around all-time highs. Honestly, just looking at this, there's just so many people I think just think that it's going to moon and this position for some sort of resolution in the Middle East that could set it higher. And again, I believe that if we do have some resolution there, it will just surge in a dotcom-like fashion. So, a few things that I thought were interesting the past week, again, just focusing on the AI trade is that we got Nvidia announced a big buyback. Again, that sent Nvidia stock higher. Stock is hovering around all-time highs. Although, if you zoom out a bit, it really hasn't done that much over the past few years.
+
+Now, in addition to that, we had really, really interesting leak of Anthropic's financials. Anthropic, the latest news suggests they want to IPO sometime next month, maybe before Thanksgiving. So that could be an additional supply of stock that could weigh on the market. So the interesting thing about Anthropic's financials is that well it loses tons of money, like 40 billion last year. But more alarmingly though, when you have a company like this, what people sell is growth. So revenues from Anthropic, and I use Claude, I think Claude is wonderful, but the revenues looks like they've stagnated. So that's really alarming if you're a company that loses money and is not growing, and if you want a two trillion valuation as they want, it's going to be quite difficult to get that. And of course as we know, the cheaper competitors, open weight Chinese models, they are improving significantly. They're not as good as Claude, not as good as OpenAI, but honestly, you don't need a rocket scientist to make pretty graphs or make Excel or even code for you. So, the open weight models are really good enough for basically whatever anyone else does. So, it is something that I think will continue to be felt in the market. So, really equities continue to surprise me as to how resilient they are. I honestly find it to be unbelievable, but we are, as I've discussed many times, I continue to believe to be in a very dotcom-like boom and maybe the only way through is to just zoom higher than you ever expected and kind of be like the culprit. But we'll see in the coming months. All right, so that's all I prepared for today. Thanks so much for tuning in. Talk to you guys next week.
+
+</details>

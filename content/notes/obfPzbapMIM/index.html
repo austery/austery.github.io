@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>构建高可靠性高风险 AI Agent：基于 Langfuse 的全生命周期评测与可观测性实战</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">构建高可靠性高风险 AI Agent：基于 Langfuse 的全生命周期评测与可观测性实战</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-18</span>
+    
+
+    <header class="article-header">
+      
+      <h1>构建高可靠性高风险 AI Agent：基于 Langfuse 的全生命周期评测与可观测性实战</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">ai-agent-evaluation</span>
+      
+        <a class="tag-link" href="/tags/observability/">observability</a>
+      
+        <a class="tag-link" href="/tags/llm-as-a-judge/">llm-as-a-judge</a>
+      
+        <a class="tag-link" href="/tags/human-in-the-loop/">human-in-the-loop</a>
+      
+        <span class="tag-pill tag-pill--no-page">error-analysis</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">来自 Langfuse 的 Annabell Schäfer 与 Doneyli De Jesus 深入拆解了高风险场景下 AI Agent 的评测体系与工程闭环。内容涵盖错误分析、黄金数据集构建、多模态 Tracing 与 PII 脱敏、自动化 CI/CD 评测流水线门禁，以及人机协同（HITL）渐进式自动化落地上线的全套落地方法论。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=obfPzbapMIM" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-18T00:00:00.000Z">2026-10-18</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>13 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E9%AB%98%E9%A3%8E%E9%99%A9%E5%9C%BA%E6%99%AF%E4%B8%8B%E7%9A%84-agent-%E8%AF%84%E6%B5%8B%E6%8C%91%E6%88%98">高风险场景下的 Agent 评测挑战</a></li><li class="outline-h3"><a href="#%E7%BB%8F%E5%85%B8%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%B8%8E-ai-agent-%E8%AF%84%E6%B5%8B%E7%9A%84%E8%8C%83%E5%BC%8F%E8%BD%AC%E7%A7%BB">经典软件测试与 AI Agent 评测的范式转移</a></li><li class="outline-h3"><a href="#ai-%E5%B7%A5%E7%A8%8B%E5%8C%96%E9%97%AD%E7%8E%AF-the-ai-engineering-loop">AI 工程化闭环 (The AI Engineering Loop)</a></li><li class="outline-h3"><a href="#%E4%BB%8E%E4%BD%8E%E9%A3%8E%E9%99%A9%E5%88%B0%E9%AB%98%E9%A3%8E%E9%99%A9%E4%B8%8D%E5%90%8C%E5%9C%BA%E6%99%AF%E7%9A%84%E8%90%BD%E5%9C%B0%E8%B7%AF%E5%BE%84">从低风险到高风险：不同场景的落地路径</a></li><li class="outline-h3"><a href="#%E5%AE%9E%E6%88%98%E6%BC%94%E7%A4%BA%E9%87%91%E8%9E%8D%E9%AB%98%E9%A3%8E%E9%99%A9-agent-%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%85%A8%E9%93%BE%E8%B7%AF-tracing">实战演示：金融高风险 Agent 架构与全链路 Tracing</a></li><li class="outline-h3"><a href="#%E5%A4%9A%E6%A8%A1%E6%80%81%E9%9F%B3%E9%A2%91%E4%B8%8E%E5%91%BC%E5%8F%AB%E4%B8%AD%E5%BF%83-trace-%E5%88%86%E6%9E%90">多模态音频与呼叫中心 Trace 分析</a></li><li class="outline-h3"><a href="#%E9%94%99%E8%AF%AF%E5%88%86%E6%9E%90%E4%B8%8E%E4%BA%BA%E6%9C%BA%E5%8D%8F%E5%90%8C%E6%A0%87%E6%B3%A8%E9%98%9F%E5%88%97-annotation-queues">错误分析与人机协同标注队列 (Annotation Queues)</a></li><li class="outline-h3"><a href="#%E6%9E%84%E5%BB%BA%E9%AB%98%E8%B4%A8%E9%87%8F%E9%BB%84%E9%87%91%E6%B5%8B%E8%AF%95%E9%9B%86-datasets">构建高质量黄金测试集 (Datasets)</a></li><li class="outline-h3"><a href="#%E8%AF%84%E6%B5%8B%E5%99%A8%E7%9F%A9%E9%98%B5%E4%BB%8E%E8%A7%84%E5%88%99%E6%96%AD%E8%A8%80%E5%88%B0-llm-as-a-judge">评测器矩阵：从规则断言到 LLM-as-a-judge</a></li><li class="outline-h3"><a href="#%E7%A6%BB%E7%BA%BF%E5%AE%9E%E9%AA%8C%E5%AF%B9%E6%AF%94%E4%B8%8E-prompt-%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86-prompt-experiments">离线实验对比与 Prompt 版本管理 (Prompt Experiments)</a></li><li class="outline-h3"><a href="#cicd-%E6%B5%81%E6%B0%B4%E7%BA%BF%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E9%97%A8%E7%A6%81-deployment-gates">CI/CD 流水线与自动化部署门禁 (Deployment Gates)</a></li><li class="outline-h3"><a href="#%E9%81%BF%E5%85%8D%E5%85%A8%E8%87%AA%E5%8A%A8%E9%99%B7%E9%98%B1%E4%BA%BA%E6%9C%BA%E5%8D%8F%E5%90%8C%E7%9A%84%E5%8A%A1%E5%AE%9E%E9%97%AD%E7%8E%AF">避免全自动陷阱：人机协同的务实闭环</a></li><li class="outline-h3"><a href="#%E7%8E%B0%E5%9C%BA%E9%97%AE%E7%AD%94%E5%AD%98%E5%82%A8%E6%9E%B6%E6%9E%84%E8%87%AA%E6%89%98%E7%AE%A1%E4%B8%8E%E5%A4%9A%E8%A3%81%E5%88%A4%E4%B8%80%E8%87%B4%E6%80%A7">现场问答：存储架构、自托管与多裁判一致性</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="高风险场景下的-agent-评测挑战" data-reading-heading="">高风险场景下的 Agent 评测挑战</h3>
+<p><strong>Annabell Schäfer</strong>: 好的，我们正式开始。欢迎各位来到我们关于使用 <strong>Langfuse</strong> 评估 AI 应用的工作坊！我叫 <strong>Annabell Schäfer</strong>，是 Langfuse 的 AI 解决方案工程师。今天和我一起登台的还有我的同事 <strong>Doneyli De Jesus</strong>，他在 Langfuse 负责领导 AI 解决方案架构团队，专门与我们最大规模的客户合作，确保他们能够真正将可靠的 <strong>AI Agent</strong> 推向生产环境。</p>
+<p>在我个人的“上一段职业生涯”中——之所以这么说，是因为那感觉就像过了整整一辈子——我曾在一辈子专门为医疗器械合规性开发 AI Agent 的公司工作。在医疗合规这种行业中，确保系统稳定运行是重中之重。我们必须确保拥有经客户严格验证的<strong>基准数据集</strong>（Ground Truth Dataset），并且大量采用了人机协同系统（Human-in-the-Loop）。当时我工作的大部分时间其实都在使用 Langfuse。在某个时刻我想：为什么不换个角色，去帮助更多正在将 Agent 推向生产环境的团队呢？尤其是在强监管行业中。所以我在大约七个月前加入了 Langfuse 团队。</p>
+<p>但在我们深入正题之前，想先了解一下今天现场听众的背景。请问在座各位中，有多少人曾经参与过将 AI Agent 真正推向生产环境的过程？我指的是亲自作为团队的一员参与落地，而不仅仅是公司里有其他人做过。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Annabell Schäfer</strong>: All right, let's get started. Welcome everybody to our workshop on evaluating AI applications with Langfuse. My name is Annabell. I'm an AI solutions engineer at Langfuse. And I'm today joined by my colleague Doneyli who is leading AI solution architecture at Langfuse. So working with our biggest customers on making sure they actually shipping reliable agents to production.</p>
+<p>I myself was in my previous life, how I like to call it because it feels like a lifetime, in a company building AI agents for medical device compliance. And in this industry it was super important to make sure we have ground truth data set that is validated by our customers and we also ran a lot of human in the loop systems and a lot of my time I actually spent in Langfuse and at some point I decided okay why not swap sides and also help other teams that are shipping agents especially also in regulated industries and joined the Langfuse team roughly seven months ago.</p>
+<p>So before we dive right into it we wanted to get a little bit of a feeling of who is here today and who we are coming together with. So we were wondering who of you has brought AI agents to production before and with that I mean been part of a team doing it, not necessarily just someone in the company did it, so actually been part of a process to bring it to production?</p>
+</details>
+<p><strong>Annabell Schäfer</strong>: 太棒了，举手的人非常多，这正是我们期望看到的！那么，又有多少人之前使用过 Langfuse 呢？好的，也有相当一部分。那其他类型的可观测性（Observability）或评测（Evals）工具呢？也有不少人，太好了。</p>
+<p>最后再问一个问题：谁觉得自己已经彻底解决了 AI 应用的<strong>评测难题</strong>（Solved Evals）？</p>
+<p>对于那些自信举手的朋友，活动结束后我非常欢迎你们来我们的展台，给我们讲讲你们是怎么做到的。因为在现实中，这确实非常困难。我想在座只要开发过 AI 应用，甚至只是日常和 ChatGPT 或 Claude 聊天的人，都深有体会。这之所以非常棘手，是因为 AI Agent 在底层系统指标（比如 HTTP 状态码 200、网络通信、响应延迟）完全正常的情况下，依然可能彻底失败。系统指标毫无异常，但模型输出的内容可能完全是错误的、出现严重幻觉，或者根本没有执行用户的意图。</p>
+<p>不仅如此，随着模型能力的提升，测试的难度反而在加大。对于简单的任务，我们一眼就能看出对错；但当你在构建极其复杂、高风险领域的专业 Agent 时，评估 Agent 的表现往往需要深度的领域专业知识。判断它的回答是否优质变得非常昂贵且耗时。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Annabell Schäfer</strong>: Okay, that's good, amazing, it's a lot of people and we hoped to have this also. And who of you has worked with Langfuse before? Okay, quite some. And any other kind of observability and evals tool? Okay, yeah, also a few, amazing. And then finally, who has solved evals for AI applications?</p>
+<p>For the confident hands, I would love you to come by at our booth and explain to us how. Because actually it is quite hard and I think all of you have experienced it if you're working with AI or also just chatting with ChatGPT or Claude. It is quite tough because AI agents can fail while the system metrics are completely fine. A 200 status code doesn't mean your agent did what it was supposed to do. It might have hallucinated, it might have answered completely off-topic, or it might have violated some critical compliance rules.</p>
+<p>And on top of that, as models get smarter, evaluation gets harder. For simple tasks, it's easy to see if it's right or wrong. But when you are building agents for high-stakes, complex domains, evaluating agent performance requires deep domain expertise. Judging whether an answer is good or bad becomes very expensive and time-consuming.</p>
+</details>
+<h3 id="经典软件测试与-ai-agent-评测的范式转移" data-reading-heading="">经典软件测试与 AI Agent 评测的范式转移</h3>
+<p><strong>Annabell Schäfer</strong>: 如果我们回顾传统的软件开发，事情就简单得多。在传统软件工程中，系统本质上是确定性的。我们编写确定性的单元测试：输入固定的参数 A，断言输出必然是 B。如果输出不是 B，测试失败，我们修 bug，重新跑测试，部署上线。</p>
+<p>但在基于 <strong>LLM</strong> 的应用中，这种范式彻底失效了。首先，模型天然具有非确定性（Non-deterministic）。更重要的是，真实用户的输入是开放域的、充满无限种表达可能性的自然语言。你不可能为所有的输入输出穷尽单测用例。传统测试的覆盖率（Code Coverage）在概率系统面前失去了原有的防护意义。</p>
+<p>高风险 AI Agent 的现实是：你不可能在部署前消灭 100% 的错误。即使你在离线阶段测试得再充分，上线后依然会遇到从未见过的极端边缘案例（Edge Cases）。因此，你必须建立一套持续从生产环境中挖掘问题信号的机制，确保发生过的错误能够被捕捉并转化为测试集，保证同类错误不再复发；甚至在更早的阶段防患于未然。这就是为什么我们需要在整个生命周期中将评测与可观测性紧密结合起来。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Annabell Schäfer</strong>: If we look back at traditional software engineering, things were much simpler. In traditional software, systems are largely deterministic. We write deterministic unit tests: given input A, we assert output B. If the output is not B, the test fails, we fix the bug, re-run the tests, and ship.</p>
+<p>With LLM-based applications, this paradigm breaks down. First, models are inherently non-deterministic. Even more importantly, real user input is open-ended natural language with infinite variations. You cannot write exhaustive unit tests for every possibility. Traditional code coverage doesn't mean behavioral coverage for probabilistic systems.</p>
+<p>The reality with high-stakes AI agents is that you will never eliminate 100% of errors before deployment. No matter how much you test offline, production will always surprise you with edge cases. Therefore, you need a mechanism to continuously mine for those signals where things are going wrong and make sure they don't happen again, or maybe not even at all in the first place. And this is why observability and evaluations must be intimately connected across the entire lifecycle.</p>
+</details>
+<h3 id="ai-工程化闭环-the-ai-engineering-loop" data-reading-heading="">AI 工程化闭环 (The AI Engineering Loop)</h3>
+<p><strong>Annabell Schäfer</strong>: 在 Langfuse，我们观察到所有成功将高可靠性 Agent 推向生产并持续迭代的团队，都遵循着一个核心工作流，我们称之为 <strong>AI 工程化闭环</strong>（The AI Engineering Loop）。</p>
+<p>这个闭环包含几个紧密咬合的关键环节：</p>
+<p>第一步是<strong>跟踪与可观测性</strong>（Tracing）。当一个 Agent 运行时，它不仅仅是一次单独的模型调用。它往往是一个复杂的多步骤图：路由决策、工具调用（Tool Calls）、检索增强生成（RAG）、意图分类、结构化提取等。通过 Tracing，你能够记录下每次执行的完整树状调用链，包括每次调用的延迟、Token 消耗、输入输出以及中间状态。</p>
+<p>第二步是<strong>构建数据集</strong>（Datasets）。很多人试图通过拍脑袋去凭空编写测试用例，但最真实、最有价值的测试样本往往来源于生产环境中的真实调用。Tracing 帮助你筛选出那些真正值得关注的样本——既包括成功的正向范例，也包括失败的极端案例，将它们固化为可复现的黄金测试集。</p>
+<p>第三步是<strong>实验与评测</strong>（Experiments &amp; Evals）。当你修改了 Prompt、切换了底层基模（例如从 GPT-4o 切换到 Claude 3.5 Sonnet），或者重构了工具逻辑时，你怎么知道整体表现是变好了还是变差了？你必须在固化的测试集上运行自动化实验，使用确定的规则评估器（基于代码断言、正则匹配）或模型评估器（<strong>LLM-as-a-judge</strong>）进行打分。</p>
+<p>最后一步是<strong>持续监控与迭代</strong>（Monitoring &amp; Iteration）。评测不是跑一次就结束了，而是持续闭环的过程。通过生产监控捕捉异常，送入标注队列（Annotation Queues），由业务专家审核修正，再追加到数据集，反哺模型或 Prompt 的优化。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Annabell Schäfer</strong>: At Langfuse, what we see teams that successfully manage to ship reliable agents and continuously improve them follow is something we call the AI engineering loop.</p>
+<p>This loop consists of several interconnected steps:</p>
+<p>First is Tracing and Observability. When an agent runs, it's rarely a single LLM call. It is typically a complex, multi-step graph: routing decisions, tool calls, retrieval-augmented generation (RAG), intent classification, structured data extraction, and more. Tracing allows you to record the entire execution tree, capturing latency, token usage, cost, inputs, outputs, and intermediate states at every single step.</p>
+<p>Second is building Datasets. People often try to come up with synthetic test cases out of thin air, but the most representative and valuable test cases come directly from real production traces. Observability lets you mine the interesting ones—both good examples and failure modes—and turn them into curated ground-truth datasets.</p>
+<p>Third is running Experiments and Evals. When you change a prompt, switch an underlying foundation model (for instance, switching from GPT-4o to Claude 3.5 Sonnet), or tweak a tool definition, how do you know if you actually improved the system or introduced regressions? You run an offline evaluation experiment against your curated dataset using automated evaluators, whether deterministic rule-based checks or LLM-as-a-judge.</p>
+<p>And finally, Continuous Monitoring and Iteration. Evaluation is not a one-off task. You continuously monitor production traces, route problematic runs into annotation queues for domain expert review, add newly discovered failure modes back into your evaluation suite, and continuously close the loop.</p>
+</details>
+<h3 id="从低风险到高风险不同场景的落地路径" data-reading-heading="">从低风险到高风险：不同场景的落地路径</h3>
+<p><strong>Annabell Schäfer</strong>: 值得注意的是，不同的业务场景在这个闭环中的切入点完全不同。</p>
+<p>如果你做的是一个<strong>低风险应用</strong>（Low-Stakes Application），比如一个公司内部使用的知识问答小助手，或者一个帮你自动回复父母繁琐提问的闲聊机器人，你的容错率其实很高。在这种场景下，你完全可以直接开发原型并迅速上线，一开始甚至不需要任何复杂的评测体系。你只需要先接入基础的 Tracing，然后在上线后慢慢观察生产日志，看用户反馈，逐步补充测试用例并改进提示词。</p>
+<p>但如果你的目标是<strong>高风险应用</strong>（High-Stakes Application）——比如金融交易风控、医疗合规审查、保险理赔处理，或者直接操作客户退款与资金账户的企业级客服 Agent——情况就完全倒过来了。在这些场景中，一个单点错误可能导致成千上万甚至数百万美元的损失，或是触犯监管法律法规。</p>
+<p>在高风险场景下，你<strong>绝不能</strong>直接把未经验证的自主 Agent 暴露给最终用户。成熟团队的经典打法是采用<strong>渐进式落地</strong>：</p>
+<ol>
+<li><strong>纯后台影子模式（Shadow Mode）</strong>：Agent 接收与人类相同的真实数据并给出建议，但动作不生效，仅与人类专家的决策进行比对评测。</li>
+<li><strong>人机协同（Human-in-the-Loop, HITL）</strong>：Agent 生成草稿或行动方案，必须经过专业风控人员审核批准（Approve）后方可执行。</li>
+<li><strong>分层切片自动化（Data Slicing &amp; Gradual Automation）</strong>：通过长期积累的高置信度评测数据，将业务场景进行切片。只有那些模型表现达到 99.9% 准确率的极高确定性子场景才放开全自动执行；其余复杂或模糊的边缘案例依然强制走人工审核流程。</li>
+</ol>
+<p>接下来，我们将通过具体的实战演示，来看看这套体系在工程上是如何实际搭建和运行的。下面有请 Doneyli！</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Annabell Schäfer</strong>: What we observe with many of our customers is that, depending on your use case, there are different entry points into this engineering loop.</p>
+<p>If you are in a low-stakes environment—for example, building an internal company chat assistant or an agent that answers questions from your parents so you don't have to—your tolerance for error is relatively high. In that case, you don't necessarily need a comprehensive evaluation suite on day one. You can build the prototype, deploy it with tracing enabled, observe production traces, gather feedback over time, and incrementally add test cases.</p>
+<p>However, if you are building in a high-stakes environment—such as financial risk assessment, medical compliance, insurance claims, or enterprise agents directly issuing customer refunds and accessing banking data—the approach must be completely inverted. In these domains, a single error can mean thousands or millions of dollars in financial loss, regulatory fines, or severe legal repercussions.</p>
+<p>In high-stakes setups, you cannot simply let an autonomous agent loose on real users. What mature teams do is adopt a progressive deployment strategy:
+First, run in Shadow Mode, where the agent processes real data in parallel with humans without taking external action, allowing you to benchmark against human decisions.
+Second, adopt Human-in-the-Loop (HITL), where the agent drafts actions or responses, but a qualified human expert must explicitly review and approve them before execution.
+Third, data slicing for gradual automation. Over time, as your evaluation scores demonstrate near-perfect reliability on specific slices of data, you safely automate those high-confidence slices while keeping human review mandatory for complex or uncertain edge cases.</p>
+<p>To see how this works in practice, I'm welcoming Doneyli on stage, and we're going to look together at how to trace agent execution, build datasets, configure evaluators, and close this loop in production.</p>
+</details>
+<h3 id="实战演示金融高风险-agent-架构与全链路-tracing" data-reading-heading="">实战演示：金融高风险 Agent 架构与全链路 Tracing</h3>
+<p><strong>Doneyli De Jesus</strong>: 大家好！正如 Annabell 介绍的，我是 Doneyli，大家叫我 Don 就行。只有在我惹麻烦的时候，我妈妈才会连名带姓叫我 Doneyli。</p>
+<p>今天我们将通过一个具体的真实场景来拆解这套体系：假设我们正在为一家大型金融机构（比如银行或信用卡发卡行）构建一个高风险的客服风控 Agent。这个 Agent 的核心职责包括处理信用卡交易纠纷（Disputes）、协助用户挂失被盗卡片、处理退款请求，以及核查潜在的欺诈交易。在这个场景中，只要 Agent 漏掉了一笔欺诈、错误地向骗子发放了高额退款，或者泄露了客户的敏感财务数据，后果都是灾难性的。</p>
+<p>首先，让我们看一下<strong>可观测性</strong>（Observability）在系统运行中的第一线表现。</p>
+<p>在 Langfuse 的控制台里，我们可以看到实时捕获的每一次用户交互 Trace。在 Agent 架构中，一个单一的用户请求往往会衍生出一棵庞大的调用树。例如，用户说：“我昨天在一家餐厅被多刷了 50 美元，我想申请争议并退款。”</p>
+<p>进入该 Trace 详情，我们可以看到：</p>
+<ol>
+<li><strong>根 Trace（Root Trace）</strong>：记录了全局的会话 ID、用户画像、总延迟以及整体 Token 成本。</li>
+<li><strong>多步骤 Span &amp; Generation</strong>：首先是一个意图识别与安全护栏（Guardrail）检查；随后是调用路由决策模块；紧接着触发了底层工具调用，比如查询核心银行系统的数据库（<code>query_account_transactions</code>）；然后模型根据返回的交易明细，决定调用欺诈检测评分工具，最后生成回复。</li>
+</ol>
+<p>大家如果在屏幕上仔细看，会注意到我们启用了内置的 <strong>PII 敏感数据识别与脱敏</strong>（Personally Identifiable Information Masking）。在金融场景下，客户经常在对话中说出自己的社会安全号（SSN）、信用卡卡号（PAN）、CVV 码或家庭住址。在这些敏感数据被持久化存储到 Langfuse 之前，我们的脱敏管道已经在客户端或网关层自动将其识别并打码（Masking）。这不仅满足了 PCI-DSS 和 GDPR 的严格合规要求，也确保了后续进行人工审核排查的开发人员和风控标注员不会接触到明文敏感数据。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Doneyli De Jesus</strong>: Hi everybody. Like Annabell said, I'm Doneyli, but you can call me Don to keep it easier for everybody. Only my mom calls me Doneyli when I'm in trouble.</p>
+<p>Today, we're going to walk through a concrete, high-stakes scenario: imagine we are building a customer support and risk assessment agent for a financial institution, like a bank or credit card issuer. This agent is responsible for handling card disputes, lost or stolen cards, transaction refunds, and identifying potential fraud. In this kind of environment, if the agent approves an unauthorized refund, fails to flag a fraudulent charge, or mishandles private financial data, the stakes are exceptionally high.</p>
+<p>First, let's look at what observability looks like in practice.</p>
+<p>Inside the Langfuse dashboard, we can inspect every execution trace as it happens in real-time. In an agentic architecture, a single user interaction triggers a complex execution tree. For example, a customer says: "I was overcharged $50 at a restaurant yesterday, and I want to dispute this charge and get a refund."</p>
+<p>Looking into this trace, you see:
+First, the root trace, which captures the overarching session ID, metadata, user context, overall latency, and total token cost.
+Second, the nested spans and generations: an initial intent classification and safety guardrail check, followed by routing logic, followed by deterministic tool calls—such as querying a core banking ledger (<code>query_account_transactions</code>). The agent then takes that structured data, evaluates whether the transaction qualifies under bank policy, and formulates the response.</p>
+<p>Notice also that we have PII identification and automated masking enabled. Any sensitive financial data—credit card numbers, Social Security numbers, bank account numbers, or CVVs—is automatically masked before being persisted into Langfuse. This is a critical prerequisite for regulated enterprises to remain compliant with standards like PCI-DSS and GDPR, ensuring that engineers and annotators reviewing traces never see unmasked customer secrets.</p>
+</details>
+<h3 id="多模态音频与呼叫中心-trace-分析" data-reading-heading="">多模态音频与呼叫中心 Trace 分析</h3>
+<p><strong>Doneyli De Jesus</strong>: 除了文字聊天机器人（Chatbot），现代金融客服中心很大一部分流量来自于呼叫中心（Call Center）的语音电话。</p>
+<p>我们把多模态语音也直接整合进了追踪链路中。客户拨打热线电话，音频流进入系统，我们在此处触发一个语音转文字（Speech-to-Text）工具，同时保留原始音频的上下文引用。转录出的文本立即进入我们的 Agent 风控审查流水线。</p>
+<p>在控制台中，我们可以直接回放音频、查看转写的实时文本对齐，并观察 Agent 是如何在各个决策分支之间流转的。比如在这个通话中，客户语气非常激动地声称自己遭遇了钓鱼诈骗，账户里的资金被转走了。系统不仅记录了语音转录，还打上了情绪分类标签，并将整个决策链路清晰地呈现在面前。</p>
+<p>对于这种关键通话，如果在生产环境中出现了异常，比如用户中途愤怒挂机、客服系统超时，或者模型给出了模棱两可的合规答复，我们如何及时发现它？这就是为什么我们必须有一套强大的过滤和检索系统。你可以按照任意多维元数据进行切片：筛选出通话时长大于 3 分钟、意图属于“争议交易”、且包含了退款操作的所有 Trace。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Doneyli De Jesus</strong>: In addition to text chatbots, a huge portion of financial customer interactions happen through contact centers over voice calls.</p>
+<p>We have integrated multimodal audio directly into the trace view. When a customer calls the support line, the raw audio comes in, triggers a speech-to-text pipeline, and the transcribed conversation is piped straight into our agentic evaluation pipeline.</p>
+<p>Right here in the Langfuse UI, you can listen to the call recording, view the aligned transcript, and see every decision step the agent took. In one example call, a caller is distressed about an unrecognized wire transfer, indicating potential account takeover fraud. The system captures the audio, the transcript, sentiment metadata, and the underlying reasoning steps taken by the model.</p>
+<p>If something goes wrong during one of these calls—for example, if a user hangs up frustrated, or if the agent gives a non-compliant policy answer—how do you find that needle in a haystack? That's why having flexible filtering is indispensable. You can slice your production data by tags, metadata, user ID, latency, cost, or specific business intents—like filtering for all calls involving transaction disputes over $500 where a refund was requested.</p>
+</details>
+<h3 id="错误分析与人机协同标注队列-annotation-queues" data-reading-heading="">错误分析与人机协同标注队列 (Annotation Queues)</h3>
+<p><strong>Doneyli De Jesus</strong>: 找到这些关键 Trace 后，下一步是什么？这就是构建高可靠性系统的核心秘密——<strong>错误分析</strong>（Error Analysis）。</p>
+<p>在机器学习和 AI 工程中，很多人往往急于调整 Prompt 或去跑成百上千个自动评测，但他们甚至没有坐下来花几个小时亲自看一看真实的数据。<strong>错误分析就是强迫你去直面失败</strong>。你要看 50 个、100 个真正出错的 Trace，去弄清楚系统到底是在哪一步“翻车”的：</p>
+<ul>
+<li>是意图分类器理解错了用户的方言？</li>
+<li>是知识检索（RAG）没能召回最新的退款政策文档？</li>
+<li>是模型在调用工具时给参数填错了日期格式？</li>
+<li>还是模型在最后生成阶段自己编造了一条根本不存在的豁免条款？</li>
+</ul>
+<p>在 Langfuse 中，我们提供了<strong>标注队列</strong>（Annotation Queues）来完美支持这一流程。作为架构师，我不可能一个人去给所有金融合规问题打分，因为我不是银行法务合规官。我可以在 Langfuse 里设置过滤规则：“把所有退款金额大于 200 美元且涉及争议的生产 Trace，自动抽取 10% 导入到‘风控合规审核队列’”。</p>
+<p>然后，合规专员打开这个专门的标注界面，他们看到的不是冷冰冰的代码，而是一个直观的审核看板。合规专员可以逐项给这个 Trace 打分：</p>
+<ul>
+<li><strong>政策遵循度（Policy Compliance）</strong>：是否严格遵守了发卡行退款合规章程？（是/否/部分符合）</li>
+<li><strong>事实准确性（Factuality）</strong>：是否编造了到账周期？</li>
+<li><strong>语气专业度（Tone &amp; Empathy）</strong>：是否安抚了客户情绪？</li>
+</ul>
+<p>如果合规专员发现模型的回答有误，他们可以直接在界面上填写“标准答案”（Ground Truth），并附上错误原因的备注标签（例如“未向用户索要刷卡凭证”）。点击保存后，这个被人类专家精细核准过的真实案例，就正式成为我们系统最宝贵的资产。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Doneyli De Jesus</strong>: Once you've located these critical traces, what is the next step? This brings us to what I consider the absolute cornerstone of building reliable systems: Error Analysis.</p>
+<p>Too often, teams jump straight to prompt tweaking or running synthetic eval benchmarks without actually reading their real failure traces. Error analysis is the deliberate practice of sitting down and inspecting dozens of failed traces to understand precisely where the failure mode occurred:
+Did the intent classifier misinterpret user phrasing?
+Did the retrieval step fail to fetch the updated bank dispute policy?
+Did the model pass malformed parameters to the SQL database tool?
+Or did the LLM hallucinate an unauthorized policy exception during the final synthesis step?</p>
+<p>To operationalize this, Langfuse provides Annotation Queues. As an engineer, I cannot unilaterally decide whether a nuanced dispute resolution complied with banking regulations—I am not a compliance officer. With Annotation Queues, I can define a sampling rule: "Route 10% of all production interactions tagged with 'dispute' and 'refund &gt; $200' directly into the Risk Review Queue."</p>
+<p>A domain expert—like a risk officer or compliance specialist—opens this queue and sees an interface designed for rapid, focused human grading. They evaluate criteria such as:
+Policy Adherence: Did the agent follow standard operating procedures?
+Accuracy: Were the stated transaction timelines correct?
+Tone and Professionalism: Did the agent maintain an appropriate demeanor?</p>
+<p>If the agent made a mistake, the human annotator can correct the output, provide the ideal ground-truth response, and tag the root cause (e.g., "Missing mandatory identity verification step"). Once submitted, this human-verified interaction is transformed from a production bug into our most valuable engineering asset.</p>
+</details>
+<h3 id="构建高质量黄金测试集-datasets" data-reading-heading="">构建高质量黄金测试集 (Datasets)</h3>
+<p><strong>Doneyli De Jesus</strong>: 通过标注队列审核过的数据，可以直接一键沉淀到 <strong>Langfuse 数据集</strong>（Datasets）中。</p>
+<p>大家必须明白：<strong>一个高质量的黄金测试集，是所有评测的基石</strong>。如果你的测试集本身就是随机编造的无意义句子，那无论你跑多少次自动化评估，得出的评分也是毫无意义的“垃圾进，垃圾出”（Garbage In, Garbage Out）。</p>
+<p>一个成熟的高风险 Agent 测试集通常由两部分组成：</p>
+<ol>
+<li><strong>边界案例与历史缺陷集（Edge Cases &amp; Regressions）</strong>：每一个在生产环境中被真实发现并确认的 bug，都必须被转化为测试集里的一条记录。就像传统软件工程中的回归测试（Regression Testing）一样，任何一次代码或 Prompt 的提交，都必须证明它没有让过去修好的 bug 重新复发。</li>
+<li><strong>基准业务场景覆盖集（Golden Standard Cases）</strong>：涵盖核心业务主流程的典型正面用例，代表系统期望展现的标准能力。</li>
+</ol>
+<p>在 Langfuse 数据集中，每一条数据项（Dataset Item）不仅包含输入（Input）和期望输出（Expected Output），还可以附加任意复杂的结构化元数据（Metadata），比如用户类型、所属卡种、账户风险等级、预期的工具调用序列（Expected Tool Calls）等。这为后续的细粒度自动化评测提供了充分的判定依据。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Doneyli De Jesus</strong>: The traces reviewed in the annotation queue can be promoted directly into Langfuse Datasets with a single click.</p>
+<p>It is impossible to overstate this: a high-quality, curated dataset is the foundational bedrock of all AI evaluation. If your test cases are low-effort, synthetic queries that don't reflect real user behavior, running evaluations on them is pure vanity—garbage in, garbage out.</p>
+<p>A robust dataset for a high-stakes agent typically consists of two key components:
+First, Edge Cases and Regression Test Cases. Every single meaningful failure identified in production must be converted into a permanent test case in your dataset. Exactly like regression testing in classical software engineering, whenever you deploy a prompt change or agent update, you must prove that you haven't reintroduced historical bugs.
+Second, Golden Benchmark Cases covering standard core flows, representing the gold standard of expected agent behavior.</p>
+<p>Inside a Langfuse dataset, each item stores the input, the ground-truth expected output, and arbitrary structured metadata—such as customer tier, transaction risk level, or the exact sequence of deterministic tool calls the agent was expected to invoke. This gives our automated evaluators the rich context required to perform precise evaluations.</p>
+</details>
+<h3 id="评测器矩阵从规则断言到-llm-as-a-judge" data-reading-heading="">评测器矩阵：从规则断言到 LLM-as-a-judge</h3>
+<p><strong>Doneyli De Jesus</strong>: 现在我们有了基准数据集，接下来该怎么评估 Agent 的表现？</p>
+<p>很多人陷入的一个误区是：言必称“大模型评测大模型”（LLM-as-a-judge）。但在工业级高风险系统中，<strong>最可靠、成本最低的往往是确定性的代码规则评测</strong>（Deterministic Evals）。</p>
+<p>在 Langfuse 中，我们建议建立一个分层的<strong>评测器矩阵</strong>（Evaluator Matrix）：</p>
+<p><strong>第一层：确定性规则评测（Deterministic &amp; Code-Based Evals）</strong></p>
+<ul>
+<li><strong>JSON Schema 校验</strong>：Agent 调用的工具参数是否符合规范？输出的结构化字段是否完整？</li>
+<li><strong>关键词与敏感词正则匹配</strong>：是否包含了合规声明必须包含的法律免责声明语句？是否误输出了未脱敏的卡号？</li>
+<li><strong>代码断言与状态码校验</strong>：是否严格在调用了身份验证 API 并返回 <code>SUCCESS</code> 后才执行转账工具？
+这类评测执行耗时在毫秒级，成本为零，且结果具有 100% 的确定性。</li>
+</ul>
+<p><strong>第二层：模型作为裁判（LLM-as-a-judge Evals）</strong>
+对于语言层面的复杂逻辑，比如判断回答是否“存在诱导性推销”、“是否语气合规”、“是否根据检索到的合规条例进行了正确推理”，纯代码规则很难覆盖。这时我们引入 LLM 评测器。</p>
+<p>但使用 LLM-as-a-judge 绝不能写一句简单的“请给这个回答打分 1-5 分”。一个合格的工业级评测 Prompt 必须包含：</p>
+<ol>
+<li><strong>明确的角色定位与评分标准（Rubric）</strong>：对每一个分数档位（如 1 到 5 分）给出极其详尽的判定标准，说明在什么情况下给 3 分，什么细微瑕疵会扣到 2 分。</li>
+<li><strong>少样本示例（Few-Shot Examples）</strong>：提供由人类专家标注过的典型样例，让评测模型校准判决尺度。</li>
+<li><strong>强制思维链（Chain of Thought, CoT）</strong>：要求裁判模型在给出最终得分之前，必须先逐条输出推理分析过程（Reasoning）。这不仅大幅提高了评分的准确性与鲁棒性，而且当评测失败时，工程师可以清晰阅读裁判的思考过程，了解扣分背后的具体原因。</li>
+</ol>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Doneyli De Jesus</strong>: Now that we have our ground-truth dataset, how do we actually grade our agent's performance?</p>
+<p>A common misconception is that people assume everything must be evaluated using LLM-as-a-judge. In a real-world, high-stakes production environment, the most reliable, cost-effective evaluators are actually deterministic code-based rules.</p>
+<p>In Langfuse, we advocate for a layered Evaluator Matrix:</p>
+<p>Tier 1: Deterministic and Code-Based Evaluators
+JSON Schema Validation: Did the agent output valid JSON matching the required tool definition?
+Regex &amp; Substring Matching: Did the agent include the legally mandated compliance disclosure? Did any unmasked PII leak into the final output?
+State Machine &amp; Sequence Assertions: Did the agent strictly call the identity verification tool and receive a success status before attempting the refund transaction tool?
+These checks run in milliseconds, cost zero LLM tokens, and provide 100% deterministic reproducibility.</p>
+<p>Tier 2: LLM-as-a-Judge Evaluators
+For nuanced semantic qualities—such as assessing whether a response was manipulative, checking empathy, or determining whether a policy argument correctly followed from retrieved legal clauses—code assertions fall short. Here, we deploy LLM evaluators.</p>
+<p>However, running LLM-as-a-judge effectively requires rigorous prompt engineering. You cannot just prompt the model to "Rate this answer from 1 to 5." A production-grade judge prompt must include:
+A detailed Rubric: Explicit, unambiguous definitions for each score tier, explaining exactly what qualifies as a 5 versus a 4 or a 2.
+Few-Shot Examples: Ground-truth examples calibrated by human domain experts to anchor the model's judgment.
+Mandatory Chain of Thought (CoT): The judge LLM must output its step-by-step reasoning before generating the final score. This drastically improves grading consistency and allows engineers to audit the evaluator's rationale whenever an unexpected score is assigned.</p>
+</details>
+<h3 id="离线实验对比与-prompt-版本管理-prompt-experiments" data-reading-heading="">离线实验对比与 Prompt 版本管理 (Prompt Experiments)</h3>
+<p><strong>Doneyli De Jesus</strong>: 当评测器和数据集准备就绪后，我们就可以在沙箱环境中进行<strong>离线实验</strong>（Offline Experiments）了。</p>
+<p>在开发 Agent 的过程中，团队最常做的事情就是改 Prompt。在 Langfuse 中，我们提供了集成的 <strong>Prompt 管理与版本控制</strong>（Prompt Management）。大家可以看到屏幕上，这个金融客服 Agent 的 System Prompt 目前已经迭代了 5 个版本：</p>
+<ul>
+<li>版本 1 是初始的通用系统提示词；</li>
+<li>版本 2 增加了对退款额度限制的硬性约束；</li>
+<li>版本 3 我们尝试重写了身份验证的指令顺序；</li>
+<li>版本 4 和版本 5 则进一步细化了反欺诈声明的语气规范。</li>
+</ul>
+<p>现在，假设我们编写了版本 6 的 Prompt，或者我们想把底层的推理模型从 GPT-4o 切换成另一个更具性价比的模型，我们怎么确保这个改动不会引发灾难性的线上事故？</p>
+<p>我们直接在数据集上发起一次自动化实验运行（Run Experiment）。系统会并行运行基线版本（Prompt v5）与新候选版本（Prompt v6），将数据集中的所有测试用例输入给 Agent，捕获全部的执行链路，并由我们配置好的评测器矩阵自动打分。</p>
+<p>在实验对比视图中，两个版本的表现以直观的并排看板（Side-by-Side Comparison）展现出来：</p>
+<ul>
+<li><strong>政策依从度得分</strong>：从 88% 提升到了 97%；</li>
+<li><strong>工具调用准确率</strong>：保持在 100%；</li>
+<li><strong>单次平均延迟</strong>：下降了 220 毫秒；</li>
+<li><strong>总 Token 消耗与成本</strong>：降低了 15%。</li>
+</ul>
+<p>更关键的是，我们可以点击“差异视图”（Diff View），直接筛选出那些“在 v5 版本中通过、但在 v6 版本中失败”的个别用例。这让我们能够在数秒内精准定位任何微小的潜在<strong>能力退化</strong>（Regression）。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Doneyli De Jesus</strong>: With datasets and evaluators configured, we can now run offline experiments before anything touches a production user.</p>
+<p>During agent development, teams iterate on prompts constantly. Langfuse includes native Prompt Management and Versioning. As you can see on screen, our financial agent's prompt has five recorded versions:
+Version 1 was the initial baseline.
+Version 2 added strict instructions around transaction dispute limits.
+Version 3 restructured the sequence of authentication tool invocations.
+Versions 4 and 5 refined compliance disclosures and safety guardrails.</p>
+<p>Now, suppose we draft Version 6, or suppose we want to test whether an open-weight model or a cheaper frontier model can replace our current LLM. How do we guarantee this change won't introduce breaking behavior?</p>
+<p>We trigger an offline experiment against our curated dataset. Langfuse takes each dataset item, feeds it into both Version 5 (baseline) and Version 6 (candidate), executes the agent flows, and runs our evaluator matrix across all runs.</p>
+<p>In the experiment comparison dashboard, we get a clean side-by-side view:
+Compliance adherence score increased from 88% to 97%.
+Tool invocation accuracy stayed at 100%.
+Average latency dropped by 220 milliseconds.
+Total token cost decreased by 15%.</p>
+<p>Crucially, we can filter by regressions—cases where Version 5 passed but Version 6 failed. This allows engineers to immediately isolate regressions and fix prompt nuances before shipping.</p>
+</details>
+<h3 id="cicd-流水线与自动化部署门禁-deployment-gates" data-reading-heading="">CI/CD 流水线与自动化部署门禁 (Deployment Gates)</h3>
+<p><strong>Doneyli De Jesus</strong>: 手动在控制台里看实验对比固然很好，但我们真正想要的是把这个过程彻底自动化，将其嵌入到现代软件工程的 <strong>CI/CD 流水线</strong> 中。</p>
+<p>在 GitHub 仓库里，我们为这个 Agent 项目配置了 GitHub Actions 工作流。当工程师提交 Pull Request 时，流水线会自动触发运行 Langfuse 评估测试。</p>
+<p>我们为此设定了严格的<strong>质量门禁</strong>（Quality Gates）：</p>
+<ul>
+<li><strong>安全性与合规性得分</strong>：必须达到 100%（0 容忍）；</li>
+<li><strong>业务主流程准确率</strong>：必须大于等于 95%；</li>
+<li><strong>回归测试集失败数</strong>：必须严格为 0。</li>
+</ul>
+<p>大家看我的演示：我在这个分支上提交了一处 Prompt 修改，GitHub Actions 正在自动执行评测。我们调用 Langfuse Python SDK，在云端并发运行测试集，计算综合指标。一旦某项合规指标低于预设阈值，GitHub PR 检查就会直接变红并阻断合并（Block Merge）。只有当所有门禁条件全部通过时，代码才被允许合入主干并部署到预发或生产环境。</p>
+<p>通过将评测固化为 CI/CD 质量门禁，团队从根本上告别了“凭玄学上线”和“提心吊胆看生产”的原始状态。代码、Prompt 和模型配置的每一次流转，都有详实的量化指标提供安全担保。</p>
+<p>现在，我把舞台重新交还给 Annabell，让她为我们总结高风险系统的闭环演进策略，随后我们将进入现场问答环节。谢谢大家！</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Doneyli De Jesus</strong>: Manually reviewing experiments in the UI is great, but what we really want is to embed this into automated CI/CD pipelines as automated deployment gates.</p>
+<p>In our repository, we have configured a GitHub Actions workflow. Whenever a developer pushes a PR that touches prompts, agent logic, or tool bindings, the CI pipeline automatically triggers an evaluation run against our Langfuse dataset via the SDK.</p>
+<p>We define hard deployment gates:
+Security and compliance score must be 100%.
+Business intent resolution accuracy must be at least 95%.
+Zero regressions allowed on the historical edge-case dataset.</p>
+<p>Here on screen, you see the PR checks running. The GitHub Action spins up, triggers the evaluation job in Langfuse, scores each test case against our evaluators, and aggregates the results. If a change degrades compliance adherence below our threshold, the PR check turns red and blocks the merge. Only when all deployment gates pass is the PR approved for staging and production rollout.</p>
+<p>By turning evals into CI/CD deployment gates, teams eliminate the anxiety of "vibes-based" deployments. Every prompt tweak, model upgrade, and code refactor is verified against a quantitative safety bar.</p>
+<p>With that, I will hand things back over to Annabell to wrap up our framework before we take questions. Thank you!</p>
+</details>
+<h3 id="避免全自动陷阱人机协同的务实闭环" data-reading-heading="">避免全自动陷阱：人机协同的务实闭环</h3>
+<p><strong>Annabell Schäfer</strong>: 谢谢 Don 的精彩演示！</p>
+<p>我们在接触许多企业客户时，经常看到一种极其危险的极端倾向：一些团队希望“一步登天”，对管理层许诺“我们的 Agent 将完全自主，不出任何差错，全自动处理 100% 的业务流程”。</p>
+<p>请允许我明确地提醒大家：在真实的生产环境，尤其是在高风险行业中，<strong>如果你试图在第一天就追求完全自动化，结果往往是灾难性的</strong>。你会得到一个质量低下、充满不可控风险的脆弱系统；即使早期勉强上线，一旦发生严重的合规事故或资金损失，整个项目就会被法务和管理层彻底叫停。</p>
+<p>另一个极端则是完全依赖人工，由于害怕出错而裹足不前，导致 AI 技术的巨大生产力红利根本无法释放。</p>
+<p>真正成功的工程方法是<strong>务实的人机协同</strong>（Pragmatic Human-in-the-Loop）：
+你可以把自动化率看作一条随着时间推移不断提升的曲线。在初期，你的 Agent 可能只承担 10% 的独立决策，剩下 90% 的复杂交互全部由人工审核把关。但随着系统不断运行、生产 Trace 不断沉淀、标注队列持续纠偏、黄金测试集日益壮大，你的评测器会对更多细分子场景建立起极高的置信度。</p>
+<p>在这个过程中，你可以通过精细的数据切片（Data Slicing），逐步把那些置信度达到极限的场景从“人工审核”迁移到“完全自动”，同时把有限的高级专家资源集中在最具挑战性的 5% 极端案例上。这样不仅保障了 100% 的绝对合规与安全，同时也能立竿见影地为企业节省大量人力与运营成本。</p>
+<p>相关的演示仓库代码已经在 GitHub 上完全开源，大家可以在现场或活动后自行克隆研究。此外，周三 Donelli 还会带来一场专门关于“如何为 AI Agent 构建部署门禁”的深度专题演讲，欢迎大家参加！</p>
+<p>剩下的时间，我们非常乐意回答大家关于系统架构、评测方法和生产落地的任何具体问题。现场我们还准备了一些 Langfuse 的定制贴纸，欢迎大家前来领取并与我们交流！</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Annabell Schäfer</strong>: Thank you, Don.</p>
+<p>What we see some companies and teams trying to do is this: they approach the problem with a mindset of "Please fix my agent, make it make no mistakes, and fully automate everything from day one."</p>
+<p>Let me be very clear: in a production setting, especially in regulated, high-stakes industries, if you try to achieve 100% full automation right out of the gate, it will not turn out well. You end up with a fragile, low-quality system prone to unpredictable hallucinations, and sooner or later a compliance violation will shut the whole initiative down.</p>
+<p>On the other hand, sticking purely to manual processes means you miss out on the incredible efficiency leverage that AI agents provide.</p>
+<p>The winning approach is pragmatic Human-in-the-Loop:
+Think of automation as a progressive slider over time. On day one, your agent might only autonomously resolve the simplest 10% of cases, while 90% require human approval or shadow review. But as you continuously capture production traces, curate datasets, expand your evaluator coverage, and optimize prompts, your confidence intervals expand.</p>
+<p>You use data slicing to systematically transition validated categories into full automation, while keeping human experts in the loop for the ambiguous, high-risk long tail. That way, you maintain bulletproof compliance while systematically driving down operational costs.</p>
+<p>The demo repository that Donelli showcased is open source and available online for you to explore. Also, Donelli is giving a dedicated talk on Wednesday on building deployment gates for AI agents, so be sure to check that out as well.</p>
+<p>We'd love to use the remaining time to take your questions. We also have some cool Langfuse stickers up front—please feel free to come up, grab some, and say hi!</p>
+</details>
+<h3 id="现场问答存储架构自托管与多裁判一致性" data-reading-heading="">现场问答：存储架构、自托管与多裁判一致性</h3>
+<p><strong>Audience Member</strong>: 我想请问关于底层存储和部署的问题：Langfuse 的数据存储对于 ClickHouse 是强依赖吗？因为我们公司在数据合规上有严格的要求，必须自主托管。我们能把它完全部署在我们自己的 AWS 环境里吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Audience Member</strong>: [Question regarding data store dependencies and hosting on AWS infrastructure].</p>
+</details>
+<p><strong>Doneyli De Jesus</strong>: 这是一个非常好的架构问题！</p>
+<p>是的，Langfuse 在存储架构上对 <strong>ClickHouse</strong> 确实存在强依赖。解释一下背后的演化历程：在 Langfuse 最早期的版本中，我们最初只使用了 PostgreSQL。但是随着产品的发展，客户量暴增，每天需要摄入并实时分析数十亿甚至数百亿级别的事件、Span 和 Token 日志，PostgreSQL 在这种高并发海量时序 OLAP 场景下逐渐达到了性能瓶颈。因此，我们将底层的数据平面全面迁移到了 ClickHouse，以保障极高吞吐下的秒级聚合查询性能。</p>
+<p>关于数据导出与消费：如果你有自己的数据湖或内部审计系统，Langfuse 提供了极其灵活的数据导出能力。你可以配置将全量 Trace 数据自动流式导出到你的 Amazon S3 存储桶，或者通过我们的 REST API、CLI 工具以及 MCP（Model Context Protocol）协议直接对外消费这些数据。</p>
+<p>关于部署模式：你完全可以 100% 部署在你们自己的 AWS 环境中！Langfuse 除了提供开箱即用的交钥匙（Turnkey）SaaS 云服务之外，本身也是完全开源的，我们提供了完整的<strong>私有化自托管方案</strong>（Self-Hosted Deployment）。如果你在 AWS 内部有现成的 EC2 实例或 EKS Kubernetes 集群，我们提供了预先打包好的 Docker Compose 和 Helm Chart 模板，包含 ClickHouse、Postgres、Redis 以及 Langfuse Web/API 容器，你可以一键拉起并在企业内网安全运行。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Doneyli De Jesus</strong>: Yeah. Well, Langfuse per se has a hard dependency for their stores with ClickHouse. That is just because in the evolution of the product, it started with Postgres. But then Postgres couldn't handle the scale that we achieved with billions and billions of events per day. That's when we moved the analytics data plane over to ClickHouse.</p>
+<p>In terms of data integration, we also offer the ability for you to export your data: you can export it to S3, consume it via our REST API, the CLI, or via MCP if you want to pull data directly into other enterprise tools.</p>
+<p>Regarding hosting on AWS: yes, you can host it 100% on Amazon. We offer our managed cloud offering, which is fully turnkey SaaS running on AWS, but if you want to manage the infrastructure yourself on your own EC2 instances or EKS clusters due to strict compliance policies, we have a fully packaged self-hosted deployment model ready to deploy with all components included.</p>
+</details>
+<p><strong>Audience Member</strong>: 追问一下，如果在生产中大量使用 LLM-as-a-judge，你们是如何解决评估器的一致性（Consistency）以及标注者间信度（Inter-annotator Reliability）问题的？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Audience Member</strong>: I want to host it on... [Follow-up question on inter-annotator reliability and consistency of LLM-as-a-judge].</p>
+</details>
+<p><strong>Annabell Schäfer</strong>: 这是一个极其核心且关键的专业问题！大家关心的正是：我们如何确保裁判模型（LLM-as-a-judge）的打分结果与人类专家的判断保持高度一致，而不是随性乱判。</p>
+<p>在学术界，这个概念叫做<strong>标注者间信度</strong>（Inter-rater Reliability / Cohen's Kappa），即衡量多个独立打分主体之间的一致性水平。</p>
+<p>在工业界的工程实践中，我们推荐的标准落地方法如下：
+首先，抽取一批具有高度代表性的生产样本（例如 100 条涵盖各类业务场景和复杂边缘案例的真实对话）。由至少一名或多名资深人类领域专家（如合规官或风控经理）对这些样本进行严谨的人工标注，形成一份权威的黄金基准答案。</p>
+<p>随后，我们运行待测试的 LLM 评测器，让它对这批相同的样本进行打分。我们将 LLM 评测器的输出与人类专家的打分矩阵进行对齐分析，专门计算两者的相关性与一致性得分。</p>
+<p>如果发现分歧，我们会深入分析原因并持续优化裁判模型的 Prompt：补充更详尽的评分细则、明确扣分边界、加入引发分歧的 Few-shot 对照样本，直到 LLM 评测器与人类专家的判定一致性达到令人满意的阈值（例如 90% 以上）。</p>
+<p>最后，在生产实际运行中还有一个非常实用的工程心得：<strong>宁可接受前期的假阳性（False Positives），也绝不能漏掉任何假阴性（False Negatives）</strong>。在高风险场景下，刚开始上线自动化评测器时，应该把过滤条件收得略微过严一点，宁可让评估器多报出一些疑似有问题的案例给人工审核，也坚决不要放过任何一个真实的违规行为。当系统平稳运行一段时间并积累了更多反馈后，再逐步微调阈值，降低误报率。这样才能确保系统在万无一失的前提下平稳演进。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Annabell Schäfer</strong>: Yeah, super important question! The question was about inter-annotator reliability and the consistency of LLM-as-a-judge evaluators to make sure they are actually catching what you want them to catch.</p>
+<p>In essence, the entire goal is ensuring that the LLM judges evaluations in coherent alignment with how a qualified human expert would judge.</p>
+<p>In practice, what you do is take a representative sample of interactions and have human experts label them to establish your verified ground truth. Then, you run your LLM-as-a-judge against that exact same sample and measure the correlation and alignment between the model's scores and the human annotations. If there are discrepancies, you calibrate the judge prompt by refining the rubric definitions and adding few-shot examples representing the divergent cases until the judge achieves high consistency with your human baseline.</p>
+<p>And practically speaking, especially when evaluating live production data in high-stakes domains, a great rule of thumb is to tune your evaluators to tolerate a few too many false positives initially. You would much rather flag a few harmless cases for human review than miss a critical real-world failure mode. Once you have that safety net verified, you can fine-tune the thresholds down over time as your dataset grows.</p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/14a8b1c2807aca14c2c3890a1c27579e5bb1a7b2f002750c50e87b991e63f5ad.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/14a8b1c2807aca14c2c3890a1c27579e5bb1a7b2f002750c50e87b991e63f5ad.md" download="构建高可靠性高风险 AI Agent：基于 Langfuse 的全生命周期评测与可观测性实战.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Langfuse" class="entity-link company-link">Langfuse</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Langfuse" class="entity-link product-link">Langfuse</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

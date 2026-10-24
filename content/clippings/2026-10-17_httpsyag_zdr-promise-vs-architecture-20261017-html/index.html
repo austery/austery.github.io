@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>别再相信大厂的 ZDR 承诺：一次 API 调用里，你的 Prompt
+到底在哪被记下来了</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">别再相信大厂的 ZDR 承诺：一次 API 调用里，你的 Prompt
+到底在哪被记下来了</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-17</span>
+    
+
+    <header class="article-header">
+      
+      <h1>别再相信大厂的 ZDR 承诺：一次 API 调用里，你的 Prompt
+到底在哪被记下来了</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">zdr-limitation</span>
+      
+        <span class="tag-pill tag-pill--no-page">api-call-lifecycle</span>
+      
+        <span class="tag-pill tag-pill--no-page">data-retention</span>
+      
+        <a class="tag-link" href="/tags/system-architecture/">system-architecture</a>
+      
+        <span class="tag-pill tag-pill--no-page">security-verification</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章探讨了关于大模型服务商的 ZDR（零数据保留）承诺的局限性。核心观点是，ZDR 承诺仅覆盖请求处理完成后的静态数据不保留，但数据仍可能通过缓存、反滥用监控日志、法律程序或模型前沿政策的例外条款等途径被保留或调取。文章强调，安全验证不能仅依赖厂商的承诺或第三方认证，而应从系统架构设计层面进行分级应对，包括检查调用端点、缓存留存窗口、第三方子处理者以及架构的退路等，最终认为架构设计才是决定数据安全的关键。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/zdr-promise-vs-architecture-20261017.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-17T00:00:00.000Z">2026-10-17</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>5 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E6%89%BF%E8%AF%BA%E7%9C%8B%E7%9D%80%E5%83%8F%E4%B8%80%E5%A0%B5%E5%A2%99%E5%85%B6%E5%AE%9E%E6%98%AF%E4%B8%80%E6%89%87%E5%B8%A6%E6%9D%A1%E4%BB%B6%E7%9A%84%E9%97%A8">承诺看着像一堵墙，其实是一扇带条件的门</a></li><li class="outline-h2"><a href="#%E4%B8%80%E6%AC%A1-api-%E8%B0%83%E7%94%A8%E9%87%8Czdr">一次 API 调用里，ZDR</a></li><li class="outline-h2"><a href="#%E5%B0%B1%E7%AE%97%E5%8E%82%E5%95%86%E5%AE%8C%E5%85%A8%E8%80%81%E5%AE%9E%E6%95%B0%E6%8D%AE%E4%B9%9F%E4%BC%9A%E4%BB%8E%E4%B8%89%E9%81%93%E7%BC%9D%E9%87%8C%E6%BC%8F%E5%87%BA%E5%8E%BB">就算厂商完全老实，数据也会从三道缝里漏出去</a></li><li class="outline-h2"><a href="#%E4%BD%A0%E8%83%BD%E8%87%AA%E5%B7%B1%E9%AA%8C%E8%AF%81%E4%BB%80%E4%B9%88%E5%8F%AA%E8%83%BD%E7%AD%BE%E5%90%88%E5%90%8C%E5%8F%AA%E8%83%BD%E4%BF%A1">你能自己验证什么、只能签合同、只能信</a></li><li class="outline-h2"><a href="#%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E6%A0%88%E6%80%8E%E4%B9%88%E5%8A%9E">我的技术栈怎么办</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h2 id="承诺看着像一堵墙其实是一扇带条件的门" data-reading-heading="">承诺看着像一堵墙，其实是一扇带条件的门</h2>
+<p>在业内有一个潜规则，就是即使厂商写了
+ZDR，也不要完全相信。厂商没有说谎，只是这句话保证的范围比想象中小了很多。很多情况下，你以为你前面有一堵厚实的墙，但其实厂商只给你一扇门，在满足一定条件下门是可以打开的。</p>
+<p>所谓
+ZDR，也就是零数据保留。通俗地说，就是模型做完推理、把结果交给你之后，服务商不会把你给的
+prompt 和它的回答写进长期硬盘。在 OpenAI
+的 ZDR 服务公告 里，官方写明这项功能只对符合条件的 API
+客户开放，请求处理完不保留提示词和回复，内容不供员工查阅，企业客户数据也不用于训练模型，除非客户明确选择加入。</p>
+<p>2026 年夏天有个真事。Anthropic 提供企业 ZDR 安排。可当年 6
+月，他们对最强前沿模型改政策，强制 30
+天数据保留。在那项调整生效的几个月里，就算你之前签了 ZDR
+协议，一旦调用这些模型，数据照样会在对方系统里暂存 30
+天。在客户反弹后，CNBC
+关于 Anthropic 数据保留争议的报道 指出，官方于 9 月推出了 Enterprise
+Frontier Safeguards，允许企业自行控制数据如何被审阅和存储，无需
+Anthropic 人工审阅。</p>
+<p>合同里的 ZDR
+还在，但你默认的那层保护已经没了。厂商不用撕毁商业合同，只要改一下前沿模型的适用名单，原来的防护就直接落空了。</p>
+<p>有人会问，这算不算厂商在耍花招？目前还没有厂商被公开发现故意欺骗
+ZDR，或者声称支持 ZDR
+却偷偷保存客户数据、因此被监管部门处罚的案例。数据泄露的风险不是来自厂商违背承诺。那些可能导致数据被保存、查看或提取的机制，往往早就写在
+ZDR 协议的例外条款里。</p>
+<p>所以厂商的 ZDR
+承诺没有造假，但它其实只写了一句很短的话，就是请求处理完不写硬盘。除此之外，你的数据照样会进入缓存、被审查，或在法律程序里被调取。真正能自己验证的只有两件事：敏感数据没发出去，或者模型跑在你自己的机器上。看重安全，就去看架构，别只看承诺。</p>
+<h2 id="一次-api-调用里zdr" data-reading-heading="">一次 API 调用里，ZDR</h2>
+<p>只覆盖了哪一步</p>
+<p>写代码的人写业务代码时，总把 API
+当函数一样随手调用。要是以为开了安全开关，整个网络生命周期就会像铁桶一样密封，就可能对数据去向想岔了。</p>
+<p>网络请求的真实路线：客户端发起请求，数据到达云厂商的接入层网关，网关将文本送入计算集群的显存，模型进行推理，生成回复文本后经由网络传回客户端。</p>
+<p>一次 API
+请求要走发送、鉴权、推理、返回四段，ZDR
+覆盖的只是请求处理完成之后不静态保留这一小段，训练、缓存、反滥用监控与法律调取都在它之外</p>
+<p>ZDR
+覆盖的范围，就是请求处理完成之后：服务商保证此后不静态保留这次请求的输入和输出。在这个范围之外，有几件事要交代清楚。</p>
+<p>第一，先把最容易混的一件事分清：不训练不等于 ZDR。OpenAI
+不拿企业客户数据训练，除非客户明确选择加入，Anthropic
+的 API
+数据保留说明文档也写明，未经明确授权，保留的数据不会用于训练。这条不训练的承诺更常见、也更容易做到；ZDR
+比它更强，保证的是在覆盖范围内请求处理完不静态保留输入输出。数据没留下来，也就谈不上事后被拿去训练。数据被保留也不意味着可以用于训练，仍需客户明确授权。</p>
+<p>第二是应用状态。构建智能体系统离不开会话历史和记忆。在 OpenAI
+平台数据使用指南 中，官方列出了一批非 ZDR
+端点，包括会话、助手、线程、向量数据库和批量处理接口。即使主账号开启了
+ZDR，调用这些接口时，系统仍可能存储应用状态。对于助手接口创建的对象，你主动删除后，后台会在
+30 天后清除；若没有主动删除，就会一直保存下去。</p>
+<p>第三是安全监控与人工介入通道。开通 ZDR
+并不是在控制台随手勾选就能生效。OpenAI
+文档写得很清楚，这类安全权限必须经过厂商事先审批，只对符合条件的 API
+客户开放。默认情况下，所有 API 功能调用都会生成反滥用监控日志。</p>
+<p>第四是高级功能的例外保护。Anthropic
+在文档里明确写了，当开发者启用未由 ZDR
+涵盖的高级功能时，这表示你已选择让这些特定数据不受 ZDR 约束。</p>
+<h2 id="就算厂商完全老实数据也会从三道缝里漏出去" data-reading-heading="">就算厂商完全老实，数据也会从三道缝里漏出去</h2>
+<p>在理解了调用周期的断面以后，技术组往往会接着问：那为什么敏感代码或凭据仍然有可能留在远端？这是因为
+ZDR
+从来不是密不透风的铁板，它在安全防线、系统性能与法律管辖三个维度，给数据留出了完全合规的通道。</p>
+<p>厂商没有违约，你的数据依然会从安全、功能、法律这三道缝里漏出去</p>
+<p>第一道缝隙来自反滥用监测。这是各家厂商为了防止黑客攻击和违规内容所设置的自动化排查系统。OpenAI
+默认会为所有 API 功能调用生成监测日志。根据 OpenAI
+的公开说明，这类日志默认会在服务器上保存最长 30
+天，除非法律另有要求。</p>
+<p>而一旦自动化的规则认定该调用有违规的可能，那么服务器上的保留时间可能变得长很多。Anthropic
+对于数据存储的政策里也提到，如果某段对话触发了他们的安全规则，那么这段明文对话可被保留最多
+2 年，相关的信任和安全分类分数则可被保留最多 7 年。</p>
+<p>对于最前沿、能力最强的模型，某些情况下厂商甚至会取消常规 ZDR
+的选项。Anthropic 的前沿核心模型保留政策
+明确指出，Fable、Mythos 这些前沿模型强制要求 30 天数据保留，除非获得
+Anthropic 专门授权，全平台都不支持 ZDR。在云分销渠道中，AWS
+Bedrock 数据保留配置指南 也写明，调用其中之一必须启用 aws_review
+模式，数据在 AWS 边界内最多保留 30 天且可能接受 AWS 人工审阅；在
+none/default 模式下该模型直接无法调用。</p>
+<p>除了模型厂商本身以外，请求经过的云基础设施也可能保存记录。以 OpenAI
+私有安全处理开发文档
+为例，这套机制会把加密后的记录保存在客户自己区域的云存储上，并保留 30
+天。企业事后撤销密钥授权可以阻止后续解密，但这一操作不会删除已经保存下来的文件，也不会撤销已经完成了的处理。</p>
+<p>第二道缝来自性能优化。为了降低延迟和开销，大模型服务会使用提示词缓存。缓存，说白了就是把数据暂存在物理介质里。根据
+OpenAI 的说明，提示词缓存的 KV 张量保存在图形处理器本地内存中，24
+小时后消失；后台异步处理模式则会落盘约 10
+分钟。在这些窗口内，缓存张量或后台处理数据仍停留在硬件介质中。</p>
+<p>第三道缝是商业约定的硬边界。无论怎样的商业服务条款，在司法监管面前都必须退让一步。OpenAI
+在执法政策说明
+中明确，服务提供商在收到有效的法律请求之后，会对用户的数据进行最多 90
+天的保全，并且在一定条件下会再延长 90
+天；获取用户的通讯内容需要搜查令。ZDR 承诺不排除这类法律保全要求。</p>
+<h2 id="你能自己验证什么只能签合同只能信" data-reading-heading="">你能自己验证什么、只能签合同、只能信</h2>
+<p>在购买大模型服务的过程中，许多团队往往将第三方的合规认证视为一种技术保障措施。把审计的印章当安全墙，常常忽视软件工程的基本验证原则。</p>
+<p>VGS 在 VGS
+数据安全分析文章
+中提到一个更深刻的悖论：你不能审计不存在的东西。再负责任的审计师，进入机房或查看系统后，也只能确认眼前的运维日志、访问控制和加密流程符合标准。没有一种审计工具能向你证明，某次特定请求的代码片段或商业机密已在服务商成千上万台服务器内存中和所有备份介质中被彻底擦除。</p>
+<p>行业资质也有明确的局限性。PremAI
+对 SOC 2 认证界限的探讨 表明，服务组织控制报告，也就是业内常说的 SOC
+2 第二类报告，只涵盖内部运维流程与传输加密机制；ISO 42001
+则是一种管理体系标准。通过认证意味着服务商具备相关管理机制，但无法对物理数据的即时清除提供实时验证。</p>
+<p>能自己验证、只能签合同的、只能靠信任的，是三个完全不同的层级。最底层的架构层，是你唯一能用技术手段验证的物理事实。只有两种情况是确定的：要么敏感信息在离开受控内网前已经脱敏，危险数据压根没发出去；要么模型镜像完整部署在你掌控的私有硬件上，即使拔掉网线，系统也能正常输出结果。中间层是商业合同，主要依赖数据处理协议，也就是常说的
+DPA
+等文书。合同的作用在于明确双方权责与违约责任，发生事故后为你提供追责和索赔依据。这种约束力完全在事后，数据在公网传输时，几张纸给不了一行代码的阻拦能力。最上面的认证背书层，无论是服务商官网的合规印章，还是第三方审计出具的年度流程报告，本质上都是主观信任，不能替代客观防护。</p>
+<p>安全验证分三层：架构可验、合同追责、认证盲信，控制力逐层递减</p>
+<p>开源运行时的演进轨迹印证了这种层级划分。在 Ollama 隐私政策声明
+中，官方承诺用户在本地运行 Ollama
+时，平台不会看到任何提示词或数据；云端只会临时处理提示词和回复，不会用于模型训练，也不出售数据。这种本地安全性是由代码在本地受控运行这一物理事实保障的。该项目也提供云端接入能力，并在
+Ollama 定价与服务说明
+中向用户保证，提示词和回复数据不会被记录或用于训练，同时要求合作的
+NVIDIA Cloud Providers 必须严格遵守不记录日志、不用于训练和 ZDR
+政策。</p>
+<p>对于几乎相同的安全措辞，另一个安全竞品在 ModelPiper 评论
+Ollama 的云端隐私机制
+中做出了冷静的评论：这种云端隐私机制是依靠承诺而不是通过架构来保护的。一旦计算请求被发送到云端，它就超出了开发者的控制范围，重新回到了依赖于外部信任的场景。</p>
+<h2 id="我的技术栈怎么办" data-reading-heading="">我的技术栈怎么办</h2>
+<p>理解 ZDR
+承诺的局限，不必因噎废食，也不该继续在生产环境裸奔。切实的工程实践，是在认清技术边界之后对架构做出分级应对。</p>
+<p>将使用大模型的代码部署到生产环境之前，需要思考以下五个问题：第一，调用端点是否真的在
+ZDR
+的正式覆盖范围内？检查业务调用链，确保没有无意中使用了助手接口、向量数据库或不在
+ZDR
+清单上的前沿模型。第二，业务数据是否容易触发反滥用审查机制，提示词缓存的留存窗口又是多久？理解
+OpenAI 提示词缓存的 KV 张量在图形处理器本地内存中暂存、24
+小时后消失的状态，评估是否与合规底线冲突。第三，整条调用链路中是否存在未曾注意的子处理者，也就是替大模型厂商承接算力或存储的第三方云服务商？搞清楚数据是否会备份到其他区域，以及撤销解密密钥后物理数据究竟何时消亡。第四，系统网关层是否具备在数据离开内网前完成清洗的能力？把所有的内部用户标识、数据库连接串和通信私钥拦截在本地，用虚拟占位符替换真实信息。第五，一旦厂商突然改变数据保留规则，系统架构是否拥有随时切换的退路？业务编排层是否能够平滑转向另一家供应商，或者降级接入本地模型。</p>
+<p>对于不同的应用场景，技术决策的分水岭在于何时仅需更换供应商，何时则必须坚决重构架构。如果系统主要处理普通公开讨论、低敏感度文案或缺乏攻击价值的半成品文本，那么选择信誉良好的主流云厂商并启用
+ZDR
+功能，已经在工程效率与商业保护之间找到了平衡。在低后果场景中，供应商安全政策的微小变动影响有限。然而，在处理核心系统源码、未公开专利方案、关键商业合同、员工真实身份以及医疗财务信息等高后果资产时，从一家云厂商转向另一家云厂商毫无意义，因为任何纸面协议都无法替代技术防火墙，唯一的解决方案是直接升级系统架构。正如
+Fortune
+关于企业转向开源模型与隔离访问的报道
+所指出的那样，企业在经历前沿模型的数据保留波折后，转向开源模型，或者经
+Amazon Bedrock 隔离访问。</p>
+<p>业内常说的 ZDR 不过是一句朴素的工程常识。大模型的 ZDR
+政策只是一个商业法务合同，它不能成为技术防火墙。真正决定数据能否被保留的是系统的架构设计。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/e257fe451e5af7d96abe23d5d221798de8751a3b30f9c684a5da05c737665e35.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/e257fe451e5af7d96abe23d5d221798de8751a3b30f9c684a5da05c737665e35.md" download="别再相信大厂的 ZDR 承诺：一次 API 调用里，你的 Prompt
+到底在哪被记下来了.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, <a href="/search/?q=CNBC" class="entity-link company-link">CNBC</a>, <a href="/search/?q=AWS" class="entity-link company-link">AWS</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>, <a href="/search/?q=GPT" class="entity-link product-link">GPT</a>, <a href="/search/?q=Fable" class="entity-link product-link">Fable</a>, <a href="/search/?q=Mythos" class="entity-link product-link">Mythos</a>, <a href="/search/?q=Ollama" class="entity-link product-link">Ollama</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

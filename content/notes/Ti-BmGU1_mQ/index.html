@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 账单优化与 Token 经济学：从算力定宽到垂直蒸馏的工程实战</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">AI 账单优化与 Token 经济学：从算力定宽到垂直蒸馏的工程实战</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-17</span>
+    
+
+    <header class="article-header">
+      
+      <h1>AI 账单优化与 Token 经济学：从算力定宽到垂直蒸馏的工程实战</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">tokenomics</span>
+      
+        <a class="tag-link" href="/tags/model-distillation/">model-distillation</a>
+      
+        <a class="tag-link" href="/tags/inference-optimization/">inference-optimization</a>
+      
+        <span class="tag-pill tag-pill--no-page">semantic-routing</span>
+      
+        <span class="tag-pill tag-pill--no-page">dedicated-inference</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">Featherless AI 创始人 Eugene Cheah 深入拆解企业大模型落地的 Tokenomics 核心杠杆。通过业务流量可观测性分析、批处理与实时交互解耦、开源对等模型替换、JEPA 语义分类器前置分流、领域小模型 SFT 蒸馏以及专用独占算力与公有云突发混合部署，企业可在维持前沿性能的同时实现 10 倍以上的推理降本。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=Ti-BmGU1_mQ" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-17T00:00:00.000Z">2026-10-17</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>10 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E7%AE%97%E5%8A%9B%E8%A7%84%E6%A8%A1%E5%8C%96%E7%9A%84%E4%BB%A3%E4%BB%B7%E9%87%8D%E6%9E%84%E4%BC%81%E4%B8%9A-token-%E7%BB%8F%E6%B5%8E%E5%AD%A6">算力规模化的代价：重构企业 Token 经济学</a></li><li class="outline-h3"><a href="#%E8%A7%A3%E6%9E%84%E5%AE%9A%E4%BB%B7%E5%89%96%E9%9D%A2%E6%97%B6%E5%BB%B6%E5%90%9E%E5%90%90%E4%B8%8E%E4%B8%8A%E4%B8%8B%E6%96%87%E7%BC%93%E5%AD%98%E7%9A%84%E5%8D%9A%E5%BC%88">解构定价剖面：时延、吞吐与上下文缓存的博弈</a></li><li class="outline-h3"><a href="#%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7%E9%A9%B1%E5%8A%A8%E6%B2%BB%E7%90%86%E6%9E%84%E5%BB%BA%E9%83%A8%E9%97%A8%E4%B8%8E%E4%BB%BB%E5%8A%A1%E7%BA%A7%E8%B4%A6%E5%8D%95%E8%BF%BD%E8%B8%AA">可观测性驱动治理：构建部门与任务级账单追踪</a></li><li class="outline-h3"><a href="#%E5%BC%80%E6%BA%90%E6%A8%A1%E5%9E%8B%E5%B9%B3%E6%9B%BF%E9%97%AD%E6%BA%90%E5%89%8D%E6%B2%BF%E5%A3%81%E5%9E%92%E7%9A%84%E6%B6%88%E8%9E%8D%E4%B8%8E%E9%99%8D%E6%9C%AC%E6%9D%A0%E6%9D%86">开源模型平替：闭源前沿壁垒的消融与降本杠杆</a></li><li class="outline-h3"><a href="#%E6%B5%81%E9%87%8F%E8%A7%A3%E6%9E%84%E7%94%A8%E5%88%A4%E5%88%AB%E5%BC%8F%E5%88%86%E7%B1%BB%E5%99%A8%E9%98%BB%E6%96%AD%E7%94%9F%E6%88%90%E5%BC%8F%E6%B5%AA%E8%B4%B9">流量解构：用判别式分类器阻断生成式浪费</a></li><li class="outline-h3"><a href="#%E5%9E%82%E7%9B%B4%E8%92%B8%E9%A6%8F%E4%B8%8E%E5%BE%AE%E8%B0%83%E4%BB%8E%E9%80%9A%E7%94%A8%E5%89%8D%E6%B2%BF%E5%90%91%E7%B4%A7%E5%87%91%E4%B8%93%E7%BD%91%E6%BC%94%E8%BF%9B">垂直蒸馏与微调：从通用前沿向紧凑专网演进</a></li><li class="outline-h3"><a href="#%E7%AE%97%E5%8A%9B%E6%9E%B6%E6%9E%84%E5%AE%9A%E5%AE%BD%E4%B8%93%E7%94%A8%E7%8B%AC%E5%8D%A0%E7%AE%97%E5%8A%9B%E4%B8%8E%E5%85%AC%E6%9C%89%E4%BA%91%E5%BC%B9%E6%80%A7%E5%AE%B9%E7%81%BE">算力架构定宽：专用独占算力与公有云弹性容灾</a></li><li class="outline-h3"><a href="#%E7%BB%84%E7%BB%87%E4%B8%8E%E6%BF%80%E5%8A%B1%E5%AF%B9%E9%BD%90%E9%81%8F%E5%88%B6ai-%E5%BA%9F%E8%AF%9D%E6%89%8B%E6%A6%B4%E5%BC%B9%E7%9A%84%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%AD%A6">组织与激励对齐：遏制“AI 废话手榴弹”的研发工程学</a></li><li class="outline-h3"><a href="#%E9%97%AE%E7%AD%94%E5%AE%9E%E5%BD%95%E4%B8%80%E6%95%B0%E6%8D%AE%E7%AD%9B%E9%80%89sft-%E4%B8%8E%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%9A%84%E9%80%82%E7%94%A8%E8%BE%B9%E7%95%8C">问答实录一：数据筛选、SFT 与强化学习的适用边界</a></li><li class="outline-h3"><a href="#%E9%97%AE%E7%AD%94%E5%AE%9E%E5%BD%95%E4%BA%8C%E4%B8%8A%E4%B8%8B%E6%96%87%E7%BC%93%E5%AD%98%E9%9A%94%E7%A6%BB%E4%B8%8E%E6%99%BA%E8%83%BD%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E7%9A%84%E6%8B%93%E6%89%91%E9%99%B7%E9%98%B1">问答实录二：上下文缓存隔离与智能动态路由的拓扑陷阱</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="算力规模化的代价重构企业-token-经济学" data-reading-heading="">算力规模化的代价：重构企业 Token 经济学</h3>
+<p>随着大语言模型深度切入生产业务，企业面临着极其严峻的推理成本压力。<strong>Token 经济学</strong>（Tokenomics: 研究大模型推理与生成过程中 Token 消耗、吞吐延迟折衷与单位成本优化的系统工程）已成为决定 AI 应用商业可持续性的核心瓶颈。作为托管超过 40,000 个开源模型的平台 <strong>Featherless AI</strong> 的创始人，Eugene Cheah 指出，虽然学术界聚焦于训练下一代模型架构与支持全球小语种（如乌干达的 Sunflower 语言模型），但在工业界，大规模企业客户的单日推理量已攀升至 <strong>2 万亿 Token</strong>。在 512 张 <strong>AMD Instinct MI215</strong> 加速卡构建的专用集群上，通过极端优化将具备接近 Claude 3.5 Sonnet / GPT-4 等级能力的 400B 混合专家模型（MoE）推理单价压缩至每百万 Token <strong>0.03 美元</strong>（约合每天 6 万美元），这是通用公有云按量付费市场无法直接获取的成本结构。</p>
+<p>实现这种工业级优化的第一步，是建立细粒度的<strong>成本可观测性</strong>（Cost Observability: 对系统内不同部门、业务负载与任务类型的资源消耗进行精准归因与度量的能力）。企业如果不能在部门维度与具体任务链路中拆解 Token 账单，任何降本策略都会失去靶向。当前多数企业的现状是，内部开发团队只要拿到公有云 API 密钥，就会默认调用最顶级的闭源前沿模型，导致大量非关键任务无端侵占算力预算。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Uh thank you for everyone for coming here. Uh not too sure whether to be happy or sad that so many people are suffering from the token bill. It's a full workshop. Uh Yeah, that uh we're going to talk about tokenomics. So, a little bit of a a background with the kickstarting it, right? I'm Eugene from Felis AI. I'm CEO and founder of of it. Uh and I'm part of the team behind the Arabic AI open source project, the first AI model under the Linux Foundation. And and we work on next generation AI architecture. Uh that's a little bit of my academic background. And my Twitter handle is PicoCreator. But, but more importantly, right? Uh uh a little bit of background for Felis AI is that our mission is to make AI accessible for everyone, every language, every dialect, every country. And we do this We do this by creating the world's largest platform of open models, of over 40,000 open models. And this includes specialized fine-tune like the Sunflower model, which is Uganda's first language model, specifically for their language, and a lot of other specialized models. So, we're not just not talking about the biggest open source model, but specialized language models or specialized use cases, uh some of it which I'll touch as well. And when we when we can go on scale in terms of variety of model, Felis AI also we serve customers at scale. So, some of our largest customers are literally serving 2 trillion tokens a day. And and they're And and they're serving it at around 0.3 per million tokens or 60K a day. And they're doing it on around 512 AMD GPUs, uh MI215. Uh and for this customer in particular, it's a private 400 Android BM OE model. Uh and they're serving it around Opus 4.8 class performance. So, it's lots of concurrent requests, lots of token volume. That's what we mean by scale. And if you look at it, 0.03 per million token at over 4.8 class, it's not something that is not something that you can get off the public cloud market. This is specially very specialized setups that is meant to run at the scale that we are. But, to to for clarity, we sell inference. We're an inference engine platform. So, we sell you API calls, we help you deploy your dedicated cluster, and manage them. How many of you here know your company's monthly AI spend within a 20% margin? Can I get a raise of hands? Wow, only half the room raised hand. Okay.</p>
+</details>
+<hr>
+<h3 id="解构定价剖面时延吞吐与上下文缓存的博弈" data-reading-heading="">解构定价剖面：时延、吞吐与上下文缓存的博弈</h3>
+<p>在企业建立基础可观测性之后，优化杠杆必须聚焦于大模型推理的底层物理特性与定价模型。大模型 API 的成本结构并非铁板一块，它由四个相互制约的维度构成：输入价格、输出价格、缓存命中率以及生成速度。<strong>首字延迟</strong>（Time to First Token, TTFT: 用户发起请求到模型吐出第一个 Token 的时间）与<strong>单 Token 生成时延</strong>（Inter-token Latency: 模型每生成一个 Token 所需的时间，通常换算为 Tokens/s）在系统侧对应着完全不同的硬件负载状态：</p>
+<ul>
+<li><strong>人机交互实时负载</strong>：面向 C 端对话或在线代码补全，必须保证极高的高每秒 Token 数（如 80-150 Tokens/s），此时底层 GPU 处于计算受限与显存带宽受限的高溢价工作区。</li>
+<li><strong>离线批处理与后台 Agent</strong>：在午夜运行的数据抽取、摘要或异步任务，根本不需要极速响应。以 15 Tokens/s 的吞吐运行与以 100 Tokens/s 运行的结果完全一致，但后者往往需要支付数倍的硬件峰值预留溢价。</li>
+</ul>
+<p>与此同时，<strong>上下文缓存</strong>（Prompt Caching: 复用长提示词的前缀 KV Cache 以降低预填充计算量的机制）将输入 Token 拆分为“已缓存”与“未缓存”两类，未命中缓存的输入处理成本可能高达缓存命中时的 4 到 10 倍。对于呼叫中心、邮件路由或日常会议纪要等短上下文、高频次场景，由于输入变化剧烈，缓存命中率通常极低，此时纯粹依赖单价高昂的顶级模型进行文本分类与提取，会在高并发下瞬间耗尽预算。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>How many of you can measure at the department level? Those two hands at the back. Okay, so so so the question of tokenomics really starts with knowing where your money goes. If you do not know where your money is going, there's no way to optimize, there's no way to reduce, and and everything else falls down. So, what is the token bill composed of, right? You have your inputs, your outputs, your cached versus uncached, and increasingly important, the speed tier you pay for. Everyone talks about the cost of input tokens versus output tokens, but people forget that high tokens per second is a premium you pay for interactive use cases. Some background agents running at midnight probably can don't deserve the tokens per second speed that you're paying for. If you're paying for a model that's optimized for 100 tokens per second so a human doesn't wait, but you're running batch jobs or background agents where no human is looking at the screen, you are essentially overpaying for speed. On the other hand, caching is another huge axis. Models charge significantly less for cached prompts, but caching only works if your prompts are structured consistently and have long reusable prefixes. If every request has slight dynamic variations at the beginning, your cache hit rate drops to zero, and your input bill explodes. So knowing your workload characteristics—whether it is human-facing with strict latency requirements, or background batch processing where throughput and low cost matter—is fundamental. Call centers, email routing, meeting notes transcription—these are volume games where latency tolerance is higher and context can be tightly controlled.</p>
+</details>
+<hr>
+<h3 id="可观测性驱动治理构建部门与任务级账单追踪" data-reading-heading="">可观测性驱动治理：构建部门与任务级账单追踪</h3>
+<p>如果缺乏精确的计量手段，技术团队关于降低 AI 成本的所有讨论都只能停留在理论假设。构建生产级 Tokenomics 治理体系的核心，在于推行<strong>细粒度计费归因</strong>（Granular Cost Attribution: 将整体 API 消耗按照团队、业务域及具体用例切分到具体业务单元的审计机制）。很多工程师在原型验证阶段习惯采用“单密钥全包”的懒惰模式，导致月底财务部门面对数十万美元的账单时，完全无法辨别哪些支出创造了真实业务价值，哪些支出只是因为内部某个脚本陷入了死循环。</p>
+<p>一个经过实战检验的度量框架要求在应用层强制实施三维追踪：</p>
+<ol>
+<li><strong>组织维度归因</strong>：按部门、子团队甚至独立微服务划分 API 密钥，实施动态配额与告警预算；</li>
+<li><strong>场景维度归因</strong>：区分前台实时用户交互（如客服机器人）与后台异步管道（如文档批量分析）；</li>
+<li><strong>输入/输出比率分析</strong>：如果某个用例呈现出“巨量输入、微量输出”的特征（例如长文档分类或意图抽取），则属于高度特异化的负载，应当立即将其从通用对话大模型中剥离。</li>
+</ol>
+<p>只有当团队能够量化“每项业务操作消耗了多少分钱”时，才能在技术评审中针对高耗能节点推行针对性的模型平替与流程再造。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>So, knowing your team allows you to make these decisions respectively. If you are not measuring, you can pretty much ignore everything else I say and start with measuring first because all your optimization attempts will be shooting in the dark. How do you measure? You start by splitting your API keys by department and by project. You set up a proxy layer or an observability platform that logs every request: the prompt tokens, the completion tokens, whether cache was hit, the latency, and the specific model used. Most teams when they first do this are shocked. They find that one rogue background worker or one experimental branch that someone forgot to turn off is burning 40% of their monthly budget. Or they find that their customer support bot is sending 50,000 tokens of company handbook on every single turn just to ask a yes/no question. Once you have this observability, you can start categorizing workloads. Is this high-input, low-output? Is this high-output, low-input? Is there a human waiting for this response right now? If a human is not waiting, why are we paying for 100 tokens per second? You can start enforcing rate limits, setting budgets per department, and more importantly, creating an internal dashboard where teams can see their own spending. When developers see that their prompt change doubled their team's daily cost, human psychology kicks in and they start caring about prompt efficiency.</p>
+</details>
+<hr>
+<h3 id="开源模型平替闭源前沿壁垒的消融与降本杠杆" data-reading-heading="">开源模型平替：闭源前沿壁垒的消融与降本杠杆</h3>
+<p>在过去，依赖闭源顶尖模型是保证业务准确率的唯一手段；但随着开源生态的高速演进，通用能力的护城河正在快速收敛。企业在多数具体业务场景中，继续全量调用顶级闭源模型（如 Claude 3.5 Sonnet 或 GPT-4o）正在变成一种巨大的资源浪费。通过精准评估与基准测试，大量业务负载可以实现<strong>对等替换</strong>（Drop-in Replacement: 在不改动上层业务逻辑的前提下，直接将昂贵模型切换为成本显著降低的平替模型）。</p>
+<p>以真实工业落地为例：</p>
+<ul>
+<li>在复杂财务报表解析与金融计算场景中，参数量仅为顶级大模型十分之一的 <strong>Step-1.5</strong> 模型，在特定财务基准上的表现已经与通用旗舰模型旗鼓相当；</li>
+<li>在前端 UI 设计与代码生成基准中，<strong>Kimi k1.5</strong> 等垂直聚焦的模型在最新版本迭代前甚至在部分公开评分上超越了当时的闭源旗舰；</li>
+<li>像 <strong>DeepSeek-V3</strong> 等极具成本破坏力的高效开源架构，更是将同等认知能力的推理成本直接下拉了接近一个数量级。</li>
+</ul>
+<p>进行开源平替的核心原则是<strong>解耦通用能力与领域胜任力</strong>。绝大多数企业业务并不需要模型同时擅长写古诗、解高难度奥数题并掌握数百种冷门语言；业务真正需要的是在预先限定的领域任务（如保单分析、合同字段提取、结构化 SQL 转换）上达到 99% 的准确率。通过建立自动化的端到端评估测试套件（Evals），企业完全可以在保障输出品质的前提下，通过平替开源模型实现 5 到 10 倍的直接成本消减。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Extremely predefined. I I can give you more specific examples. We are starting to see the gap close. We are starting to see situations where where some of the open models are even on par or even surpassing. So like for example before the Opus 5.5 update came out Kimi K3 was beating Opus in UI design in some of the UI benchmarks. And and this is like very public benchmarks. Within customer benchmarks right we were already starting to see open source models beat very specialized benchmarks in specialized use cases. So like A particular one to highlight is like for example, step one five model. They it was able to achieve near Opus and extra quality despite being like a 10 x smaller model in financial benchmarks uh financial use cases. And this is it the best coding model? No, but in that use case, it's actually extremely strong and competent. So so so the landscape is slowly changing where where where you can have drop-in replacement for a lot of use cases that are sometimes even just 10 x cheaper respectively for the uh uh if if you know your workload and you can drop it in respectively. Special shoutout is also DeepSeek-V4 and Flash. For some of these models, the cost difference is insane. And what that means for enterprise architecture is that you don't need one universal model for everything. You have this notion of default models per task. Coding? Okay, maybe you use Sonnet or a top-tier coding open model. Financial extraction? A specialized 10x smaller open model. The key is having evals. If you have solid evaluation datasets representing your actual business traffic, you can test a drop-in open model in a staging pipeline. If the pass rate matches your frontier model, you flip the switch. You instantly save 80% to 90% on that pipeline overnight.</p>
+</details>
+<hr>
+<h3 id="流量解构用判别式分类器阻断生成式浪费" data-reading-heading="">流量解构：用判别式分类器阻断生成式浪费</h3>
+<p>大模型落地过程中最普遍且最隐蔽的浪费，莫过于使用<strong>自回归生成模型</strong>去处理本质上的<strong>判别式分类任务</strong>。在典型的智能客服、工单流转与意图分发链路中，超过 60% 甚至 80% 的系统流量仅仅是为了判断用户意图属于预设的某几个类别（如“退款查询”、“物流追踪”或“人工转接”）。让一个拥有数千亿参数、每生成一个 Token 都需遍历所有显存权重的生成式大模型来输出一个词（如“类别 A”），在工程上是极度低效的。</p>
+<p>针对此类流量，先进的架构实践是采用基于<strong>联合嵌入预测架构</strong>（Joint Embedding Predictive Architecture, JEPA）理念的高效小模型或专用分类器（如开源单样本分类器项目 <strong>Simple JAF</strong>）进行<strong>语义分流</strong>：</p>
+<ol>
+<li><strong>特征提取与近邻检索</strong>：通过紧凑的语义表示或轻量判别头直接完成请求分类，其计算开销仅为生成式大模型的 1% 到 10%；</li>
+<li><strong>预定义话术组合</strong>：在客服场景中，绝大多数高频问题的回复本质上是预先审核过的标准化模板。分类器确定意图后，直接结合插值数据返回结果，完全规避了昂贵的逐字生成开销；</li>
+<li><strong>分层升级机制</strong>：只有当分类器置信度低于安全阈值、判定为长尾复杂提问时，请求才会被路由至后端的生成式模型。</li>
+</ol>
+<p>这种将分类流量与生成流量彻底物理隔离的漏斗形网关设计，能够直接过滤掉系统绝大部分的冗余 Token 消耗。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>And these are models that are entirely focused on just making decisions and classification on on tasks. Uh the main advantage is that because on a technical level only, they are commonly 10 x cheaper than existing models or even more. And to re-highlight back Jeff uh and simple Jeff, which is a open-source project that we did uh that replicates it. You'll be surprised at how many m- percentage of your AI traffic is classification traffic. Uh At the end of the day, right? Like Yeah, sure. Answering the customer support is text. But even then, right? Even then, right? A lot of teams, right? Already have predefined text output that they put into the context for the model to output for most cases. And and you could use a classifier there. And there's a lot This is a new new new shift within AI world. And that this is one of the big levers for this kind of processes in lowering your your token bill. Yeah. So, one of the patterns we implement with customers is this: analyze your last month of prompts. Group them by what the model actually did. Did it generate creative novel prose, or did it pick an option from a list, or route an intent, or validate a JSON schema? If it picked an option or routed an intent, that is a classification problem. A small, fine-tuned classification model or an embedding-based classifier costs virtually nothing to run compared to a 70B or 400B generative model. If you peel off the 60% of your traffic that is purely decision routing, your generative token bill collapses. You keep the big generative model only for the true long-tail synthesis steps where creative reasoning is genuinely required.</p>
+</details>
+<hr>
+<h3 id="垂直蒸馏与微调从通用前沿向紧凑专网演进" data-reading-heading="">垂直蒸馏与微调：从通用前沿向紧凑专网演进</h3>
+<p>当企业业务沉淀出海量的真实交互日志时，优化杠杆便自然进阶到<strong>知识蒸馏</strong>（Knowledge Distillation: 利用能力更强的教师模型指导小型学生模型训练，使其在特定领域具备对齐表现的优化技术）与<strong>监督微调</strong>（Supervised Fine-Tuning, SFT: 在预训练底座上使用领域高质量指令问答对进行参数更新）。以 <strong>AT&amp;T</strong> 等大型企业的工程实践为例，他们早期的业务流水线全面挂载在昂贵的前沿模型上，随后通过收集经过验证的业务数据构建评估集，逐步将模型规模从全尺寸通用基座降级蒸馏至 27B，最终在极窄域任务上压缩到仅需数 B 参数量的超紧凑模型，且业务准确率未发生统计学显著下降。</p>
+<p>在落地微调工程时，企业需要规避“跟风强化学习（RL）”的技术陷阱。虽然在通用代码生成等具备即时代码编译器反馈闭环的领域强化学习表现亮眼，但对于大多数传统行业（如金融、供应链、政企服务）而言：</p>
+<ul>
+<li>业务场景缺乏可自动验证的确定性环境奖励函数；</li>
+<li>**高质量的监督微调（SFT）**结合精心清洗的领域轨迹，依然是最稳定、最可预测且算力成本最低的收敛路径；</li>
+<li>充分利用前沿大模型生成合成数据并进行领域清洗（Synthetic Data Bootstrapping），再将其灌注进开源小底座，可以在数周内完成专属业务模型的闭环交付。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Um these are hyper-specialized agents that were fine-tuned to do a specific task. And they have published this. So, for AT&amp;T, for example, when they fine-tuned their models, they they they went from being open class to like 27B to even smaller models. So, a lot of models and processes, right? Uh do benefit at this scale where you start to fine-tune your own model. Uh on the flip side, for this AI space, it's kind of hard to keep pace in fine-tuning the best coding model. But on the flip side, for your domain, it might be worth it to fine-tune a domain model for your use case, especially if the model is much smaller. And the workflow is clear: You start by running the best frontier model available. You collect the golden inputs and outputs. You build an eval suite of maybe 500 to 1,000 real-world examples that represent what success looks like. Then you use the frontier model to generate synthetic edge cases and augment your training dataset. Once you have a clean dataset, you perform supervised fine-tuning (SFT) on an open source base model—like an 8B or 14B model. In almost every specialized corporate domain, whether it is insurance claim routing, legal clause extraction, or enterprise ERP data transformation, a fine-tuned 8B model will match or outperform an off-the-shelf generalized 400B model. Why? Because the general model spends 99% of its parameter capacity remembering world history and pop culture, whereas your fine-tuned 8B model spends 100% of its capacity on your corporate jargon, your schemas, and your exact business rules. And running an 8B model is over 20 times cheaper than querying frontier APIs.</p>
+</details>
+<hr>
+<h3 id="算力架构定宽专用独占算力与公有云弹性容灾" data-reading-heading="">算力架构定宽：专用独占算力与公有云弹性容灾</h3>
+<p>在确定了模型组合之后，基础设施的采购与部署拓扑决定了最终的账单下限。云计算市场长期推崇按使用量计费的公有云无服务器（Serverless）API，但这仅适用于早期验证或负载极度稀疏的业务。当业务进入规模化阶段，公有云提供商已经在按量定价中打包计入了极高的机房闲置风险与超额利润。</p>
+<p><strong>基础设施右移</strong>（Right-sizing Infrastructure: 根据业务底层基线负载与峰值波动特性匹配最经济的计算资源交付形式）的核心模型如下：</p>
+<ul>
+<li><strong>确定基线负载（Base Load）</strong>：通过可观测性工具分析过去几个月的 Token 消耗曲线，提取出 24 小时恒定存在的底线吞吐量；</li>
+<li><strong>部署独占专用实例（Dedicated Instances）</strong>：为基线负载租用或采购专用的裸金属 GPU 集群（如 AMD Instinct 或 NVIDIA HGX）。只要独占算力的利用率长期维持在 70% 以上，其单位 Token 的实际综合成本将比公有云 API 下降 <strong>60% 至 85%</strong>；</li>
+<li><strong>公有云弹性溢出（Burst to Public Cloud）</strong>：对于偶发性的月末结算、大促活动等高尖锐峰值（Spikes），不应按照峰值去超额预留专用物理算力，而是配置网关策略，将超出专用集群承载能力的突发流量动态溢出至公有云按量付费端点。</li>
+</ul>
+<p>通过“专用打底 + 弹性溢出”的混合算力拓扑，企业既锁定了极致的单价优势，又避免了为非高峰时段的闲置算力买单。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>And what's the tokens per second speed that you want?" And then subsequently, we'll be like, "Okay, we propose this much. You can try switching to this." And then we we generate we can generally show you your savings respectively. And in some extreme cases where you have a lot of spikes, you may want to have limit your dedicated capacity to a certain amount and let the spikes spill over to the public cloud respectively. The different use cases uh have different right sizing, but this is something that by measuring your token workload once again at the beginning, you can start exploring these options, and the savings can be huge. Like once again, like for the customer that we served two 2 trillion token, and that was like uh 4.8 Opus class model, they are paying less than 0.03 per million token. Like you can't get that price anywhere. Yeah. So, yeah. Simple disclaimer is the spikes really matter. Uh it's very rare that someone has a short spike at the extreme end where they like run a workload every month at that scale, and then nothing else matter. So, so usually some base workload exists. It's about knowing your baseline. If you have a constant stream of 500 requests per minute around the clock, paying per-token on public cloud is financial suicide. A dedicated box running 24/7 fully utilized drops your per-token cost through the floor. But if you have extreme volatility—zero traffic at night and 10,000 queries at 9 AM—a pure dedicated setup will sit idle and waste money. The optimal architecture is hybrid: size your dedicated capacity to your median baseline, and set up your API gateway to burst excess traffic to public cloud providers when queues build up.</p>
+</details>
+<hr>
+<h3 id="组织与激励对齐遏制ai-废话手榴弹的研发工程学" data-reading-heading="">组织与激励对齐：遏制“AI 废话手榴弹”的研发工程学</h3>
+<p>技术方案的落地最终取决于组织行为学。当工程师缺乏成本感知时，往往会出现严重的<strong>工程异化</strong>。其中最典型的现象被称为**“废话手榴弹”**（Slop Grenades: 工程师为了追求表面的功能实现，未经审视地在提示词中堆砌海量低质冗余信息，或由 Agent 无节制地生成数万字垃圾文本并在内部服务间相互投递）。在许多微服务架构中，一个 AI 模块生成的未经压缩的长篇废话，会被下游另一个 AI 模块全盘接收并作为上下文继续放大，导致整个系统的 Token 账单呈指数级恶化。</p>
+<p>遏制此类工程浪费必须依赖制度与文化的双重牵引：</p>
+<ul>
+<li><strong>确立默认廉价模型</strong>：在工程脚手架中，禁止默认绑定旗舰模型。必须要求工程师以轻量级模型作为初始默认配置，只有在评估流水线证明轻量模型无法满足基准时，才允许申请向高级模型提升；</li>
+<li><strong>推行降本收益分成激励</strong>：财务部门应与工程管理层达成共识，将节省下来的云资源预算按一定比例返还给研发团队（例如作为团队奖金或团建经费）。当开发者意识到“为公司每个月省下 10,000 美元 Token 费用能转化为自己的实质收益”时，提示词精简、上下文压缩和模型轻量化的主动性将被彻底激活；</li>
+<li><strong>引入严格的输出有用度审查</strong>：定期审计各流水线的生成内容利用率——模型吐出的数千字分析中，最终被下游系统或人类用户实际读取和采纳的比率究竟是多少？裁剪无用生成是立竿见影的减负手段。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>And and another major issue that we start to realize is that these are human processes. How do you review? Do not let slop grenades happen. In many companies, developers build agentic chains where Agent A generates 2,000 words of conversational filler, passes it to Agent B, which summarizes it into 1,500 words of filler, and passes it to Agent C. We call this the 'slop grenade'—masses of useless, hallucinated or verbose tokens exploding across your internal pipelines, costing money at every hop, and ultimately delivering zero business value. How do you stop this? First, change the defaults. The default model in your internal development template should NOT be GPT-4 or Claude Sonnet. It should be an 8B open model or a cheap flash model. Make developers justify stepping up to the expensive frontier model. Second, align internal incentives. If an engineering team optimizes a prompt, introduces caching, or switches to a distilled model, saving $20,000 a month, give them a cut! Throw them a bonus or fund their team offsite with a fraction of those savings. If finance keeps 100% of the cost savings and engineers get zero recognition for optimization, engineers will always take the lazy path of pinging the biggest frontier model. Tokenomics is 50% technical architecture and 50% organizational culture.</p>
+</details>
+<hr>
+<h3 id="问答实录一数据筛选sft-与强化学习的适用边界" data-reading-heading="">问答实录一：数据筛选、SFT 与强化学习的适用边界</h3>
+<p>在现场问答环节，参会者首先就企业内部微调的具体范式提出了疑问：在没有海量标注团队的情况下，企业应如何选择微调路线？当面临包含 20% 错误噪音的真实业务日志时，是否必须人工提纯出“黄金轨迹”？</p>
+<p>Eugene Cheah 指出，对于绝大多数企业级私有化落地，<strong>监督微调（SFT）依然是性价比最高的生产选择</strong>。强化学习（RL）虽然在自动化单元测试通过率等代码场景非常性感，但企业复杂流程很难构建无偏的奖励模型。针对数据清洗难题，成熟的工程做法并非完全依赖高成本的人工筛选，而是**利用顶级闭源大模型担任评委（LLM-as-a-Judge）**进行自动化过滤。直接将包含 20% 错误的原始业务日志喂给小模型微调，小模型同样会继承 20% 的错误率甚至发生能力退化；正确的做法是让前沿旗舰模型批量审核历史轨迹，剔除掉逻辑错误与合规风险样本，仅提纯出高置信度的正向范例，甚至利用旗舰模型重写和补充高质量的反思步骤，从而低成本合成出高质量微调数据集。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Yeah. Yeah. So, uh doubling down on my previous point, uh on the question of fine-tuning: Is that SFT sort of fine-tuning or is there like other sort of fine-tuning methods that you have depending on what specific use case there is or what data there is? Uh okay, so in general, it tends to be SFT, but I don't think um Well, we do provide fine-tuning services and it tends to be SFT. I there is a lot of methods that are happening right now currently. I know RL is very sexy right now, especially in the coding environment, because it's easy to generate the data in the loop, but what we realize for a lot of organizations, especially like in New York, for example, financial institute, things like that, there's not an easy environment to generate programmatic RL rewards. You don't have a compiler that tells you if a financial analysis is syntactically valid or profitable in real-time. So SFT with clean data wins. Now, to the follow-up question: 'If we take our raw historical traffic to fine-tune, won't the fine-tuned model also get like 20% of it wrong because humans make mistakes?' The answer is absolutely yes. If you feed garbage in, you get garbage out. You cannot just dump your raw Postgres database of customer agent chat logs into a fine-tuning pipeline. You must filter for golden traces. And the most cost-effective way to get golden traces today is using frontier models as judges. You run your 10,000 raw historical traces through Claude 3.5 Sonnet or GPT-4o with a strict rubric. Have the frontier model score each trace from 1 to 5 on correctness and adherence to company policy. Discard everything scoring below a 4. Take the top 2,000 pristine examples, format them consistently, and fine-tune your 8B model on that. That is how you achieve frontier-level precision on an open source budget.</p>
+</details>
+<hr>
+<h3 id="问答实录二上下文缓存隔离与智能动态路由的拓扑陷阱" data-reading-heading="">问答实录二：上下文缓存隔离与智能动态路由的拓扑陷阱</h3>
+<p>随后的问题聚焦于系统缓存安全与近期备受关注的<strong>自动化路由网关</strong>（Auto-routing Gateways）。针对大型企业最关切的客户敏感信息（PII）泄露隐患，Eugene Cheah 阐明了专用缓存的物理机制。在多租户公共云环境中，共享 KV Cache 确实存在潜在的安全与合规风险；但在工业级交付中，Featherless AI 为大客户提供的是<strong>隔离独占缓存空间</strong>（Dedicated Cache: 仅供单一客户独享的物理/逻辑 KV Cache 存储区），完全隔绝了跨租户信息污染的可能。</p>
+<p>针对业界热议的“按对话轮次自动路由”（Turn-based Auto-routing，即多轮对话中根据当前句子的复杂度在多模型间实时跳转），Eugene Cheah 发出了明确的技术警示：<strong>过度激进的轮次级路由是上下文缓存的毁灭者</strong>。如果一个路由网关在 10 个甚至 30 个不同的模型之间频繁切换，每次切换都会导致上文在此前模型生成的 KV Cache 彻底失效，迫使后端对完整的历史长提示词重新进行昂贵的全量预填充（Prefill），最终算下来的整体账单反而可能比固定使用单一模型更加昂贵。</p>
+<p>工程上真正稳健的路由策略应当以<strong>业务域或部门任务</strong>（Task-based / Department-based）为主轴进行静态解耦；即便在对话内部采用动态路由，也必须<strong>严格限制候选模型池在 2 到 3 个具有继承关系的模型之内</strong>（例如仅在同系列的 Gemini Flash 与 Pro，或同一系列大基座与其蒸馏版之间做二元跳跃），从而最大程度维持缓存亲和性与系统经济效益。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Are you supposed to filter that out somehow and get only the golden traces for training, or can you just throw all the traffic in? You filter, exactly as I described. And once once they have that, then then they start getting the cycle of experimenting and changing. Now, regarding cache and privacy: What about customer private information saved in the cache? For our larger scale customers we deploy them with dedicated cache. So it kind of solves a lot of PII issues because the cache is physically or logically dedicated only for that specific customer, not shared across public multi-tenant pools. Um yeah, and obviously there's prompt formatting to ensure predictable cache keys. Next question: Thoughts on turn-based versus task-based auto routing? Oh, um I'm a I'm generally more towards task-based. Um mostly because it's much easier to control expectation at a department or organization level. There's a lot of hype right now for turn-based auto routing—where every single conversational turn is evaluated by a router model and sent to a different LLM. One of the massive architectural issues with turn-based auto routing is that you need to lock down your candidate models to at most two to three models. If not, your cache will be extremely inefficient to be used. For example, if Turn 1 goes to Model A, Model A builds a 4,000 token KV cache. Then Turn 2 is routed to Model B; Model B has no cache, so it must re-compute all 4,000 tokens from scratch! Then Turn 3 goes to Model C, re-computing again. If your router switches across 30 different models, your cache hit rate collapses to 0%, your time-to-first-token skyrockets, and your prefill token bill completely wrecks your supposed savings. We have seen turn-based work successfully only when restricted tightly—like switching between a primary model and its flash/mini variant (e.g., GRM 5.3 and GRM 5.3 Flash). But across arbitrary models, request-level dynamic switching is an anti-pattern. Task-based and workflow-level routing makes infinitely more sense for production tokenomics. All right. Thank you very much, and if anyone has more questions, feel free to come up front.</p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/bdd5e390507961deddcef55ffbcdab652fa195d9b4d31a969d4aa9a90df5b832.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/bdd5e390507961deddcef55ffbcdab652fa195d9b4d31a969d4aa9a90df5b832.md" download="AI 账单优化与 Token 经济学：从算力定宽到垂直蒸馏的工程实战.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Featherless AI" class="entity-link company-link">Featherless AI</a>, <a href="/search/?q=Linux Foundation" class="entity-link company-link">Linux Foundation</a>, <a href="/search/?q=AT&amp;T" class="entity-link company-link">AT&amp;T</a>, <a href="/search/?q=AMD" class="entity-link company-link">AMD</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=DeepSeek-V3" class="entity-link product-link">DeepSeek-V3</a>, <a href="/search/?q=Claude 3.5 Sonnet" class="entity-link product-link">Claude 3.5 Sonnet</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

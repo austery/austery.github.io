@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;"></span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-18</span>
+    
+
+    <header class="article-header">
+      
+      <h1></h1>
+    
+    
+
+      
+      <div class="metadata-block">
+        
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=q4WC4TowkBo" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-18T00:00:00.000Z">2026-10-18</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>37 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E5%B7%A5%E4%BD%9C%E5%9D%8A%E5%BC%80%E5%9C%BA%E8%B6%85%E8%B6%8A%E5%AE%8C%E6%88%90%E7%9A%84%E7%9C%9F%E6%AD%A3%E5%90%AB%E4%B9%89">工作坊开场：超越“完成”的真正含义</a></li><li class="outline-h3"><a href="#%E8%AE%B2%E5%B8%88%E4%BB%8B%E7%BB%8D%E4%B8%8E%E5%B7%A5%E4%BD%9C%E5%8C%BA%E9%85%8D%E7%BD%AE">讲师介绍与工作区配置</a></li><li class="outline-h3"><a href="#%E4%BB%A3%E7%A0%81%E5%AE%A1%E6%9F%A5%E7%9A%84%E7%93%B6%E9%A2%88%E4%B8%8E%E8%A1%A8%E9%9D%A2%E9%AA%8C%E8%AF%81%E7%9A%84%E9%99%B7%E9%98%B1">代码审查的瓶颈与表面验证的陷阱</a></li><li class="outline-h3"><a href="#midnight-snack-club%E7%9C%8B%E4%BC%BC%E6%88%90%E5%8A%9F%E7%9A%84%E5%89%8D%E7%AB%AF%E5%81%87%E8%B1%A1">Midnight Snack Club：看似成功的前端假象</a></li><li class="outline-h3"><a href="#%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E5%B9%B6%E5%8F%91%E4%B8%8B%E7%9A%84%E9%9A%90%E8%94%BD%E7%BC%BA%E9%99%B7%E4%B8%8E%E9%AA%8C%E8%AF%81%E7%9C%9F%E8%B0%9B">多智能体并发下的隐蔽缺陷与验证真谛</a></li><li class="outline-h3"><a href="#%E8%87%AA%E6%88%91%E6%BC%94%E8%BF%9B%E4%BB%A3%E7%A0%81%E5%BA%93%E6%97%B6%E4%BB%A3%E7%9A%84%E8%AF%84%E4%BC%B0%E5%9F%BA%E5%87%86">自我演进代码库时代的评估基准</a></li><li class="outline-h3"><a href="#%E9%97%AD%E7%8E%AF%E9%AA%8C%E8%AF%81%E7%9B%AE%E6%A0%87%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%8F%AF%E8%A7%82%E5%AF%9F%E6%80%A7">闭环验证：目标定义与可观察性</a></li><li class="outline-h3"><a href="#%E7%8A%B6%E6%80%81%E6%9D%A5%E8%87%AA%E8%AE%B0%E5%BD%95%E8%80%8C%E9%9D%9E%E6%A8%A1%E5%9E%8B%E9%99%88%E8%BF%B0">状态来自记录，而非模型陈述</a></li><li class="outline-h3"><a href="#%E5%B7%A5%E5%85%B7%E5%AE%9E%E8%B7%B5ctx-%E4%B8%8E-ryker-%E7%9A%84%E9%9B%86%E4%B8%AD%E5%BC%8F%E9%AA%8C%E8%AF%81%E6%8E%A2%E7%B4%A2">工具实践：CTX 与 Ryker 的集中式验证探索</a></li><li class="outline-h3"><a href="#%E4%BA%BA%E5%B7%A5%E4%BF%9D%E5%A7%86%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8C%96%E9%AA%8C%E8%AF%81%E4%BA%A4%E6%8E%A5">人工保姆与自动化验证交接</a></li><li class="outline-h3"><a href="#%E4%BB%8E%E4%BA%BA%E7%B1%BB%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E9%AA%8C%E8%AF%81%E7%9B%B4%E8%A7%89%E8%B0%88%E8%B5%B7">从人类开发者的验证直觉谈起</a></li><li class="outline-h3"><a href="#%E4%BB%8E%E6%A8%A1%E7%B3%8A%E7%9A%84%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E6%8F%90%E7%A4%BA%E5%88%B0%E7%A1%AE%E5%AE%9A%E6%80%A7%E7%9A%84%E6%B5%8B%E8%AF%95%E8%84%9A%E6%9C%AC">从模糊的自然语言提示到确定性的测试脚本</a></li><li class="outline-h3"><a href="#%E7%A1%AE%E5%AE%9A%E6%80%A7%E9%AA%8C%E8%AF%81%E5%B7%A5%E5%85%B7%E4%B8%8E%E7%A0%94%E5%8F%91%E6%95%88%E8%83%BD%E7%9A%84%E8%B7%83%E8%BF%81">确定性验证工具与研发效能的跃迁</a></li><li class="outline-h3"><a href="#%E5%AE%9E%E6%88%98%E6%BC%94%E7%A4%BAsnack-%E4%B8%93%E7%94%A8%E9%AA%8C%E8%AF%81%E5%B7%A5%E5%85%B7%E5%89%96%E6%9E%90">实战演示：Snack 专用验证工具剖析</a></li><li class="outline-h3"><a href="#%E5%9B%A2%E9%98%9F%E7%BB%B4%E5%BA%A6%E7%9A%84%E5%A4%8D%E5%88%A9%E4%B8%8E%E9%AA%8C%E8%AF%81%E4%BD%93%E7%B3%BB%E7%9A%84%E7%BB%88%E6%9E%81%E4%BB%B7%E5%80%BC">团队维度的复利与验证体系的终极价值</a></li><li class="outline-h3"><a href="#%E5%B7%A5%E5%85%B7%E4%B8%BA%E6%99%BA%E8%83%BD%E4%BD%93%E8%B5%8B%E4%BA%88%E8%A1%8C%E5%8A%A8%E5%AE%9E%E4%BD%93%E4%B8%8E%E9%AA%8C%E8%AF%81%E8%83%BD%E5%8A%9B">工具为智能体赋予行动实体与验证能力</a></li><li class="outline-h3"><a href="#%E6%9E%84%E5%BB%BA%E7%AB%AF%E5%88%B0%E7%AB%AF%E9%97%AD%E7%8E%AF%E5%8F%8D%E9%A6%88%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8C%96%E6%A0%A1%E9%AA%8C">构建端到端闭环反馈与自动化校验</a></li><li class="outline-h3"><a href="#%E5%85%A8%E6%A0%88%E5%BA%94%E7%94%A8%E4%B8%AD%E7%9A%84%E8%AF%84%E4%BC%B0%E4%B8%8E%E7%A1%AE%E5%AE%9A%E6%80%A7%E4%BF%9D%E9%9A%9C">全栈应用中的评估与确定性保障</a></li><li class="outline-h3"><a href="#%E6%9E%84%E5%BB%BA%E5%8F%AF%E5%8F%8D%E9%A6%88%E5%BE%AA%E7%8E%AF%E4%B8%8E%E6%8E%A2%E7%B4%A2%E5%A4%9A%E5%8F%98%E4%BD%93%E5%AE%9E%E7%8E%B0">构建可反馈循环与探索多变体实现</a></li><li class="outline-h3"><a href="#%E6%9E%84%E5%BB%BA%E5%8F%AF%E5%A4%8D%E7%8E%B0%E7%9A%84%E9%AA%8C%E8%AF%81%E9%97%AD%E7%8E%AF%E4%B8%8E%E6%88%AA%E5%9B%BE%E9%99%B7%E9%98%B1">构建可复现的验证闭环与截图陷阱</a></li><li class="outline-h3"><a href="#%E8%87%AA%E6%84%88%E5%BE%AA%E7%8E%AF%E4%B8%8E%E7%B2%BE%E5%87%86%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7">自愈循环与精准错误信息的重要性</a></li><li class="outline-h3"><a href="#%E7%9B%AE%E6%A0%87%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91%E7%BA%A6%E6%9D%9F%E5%8D%B3%E8%87%AA%E7%94%B1">目标驱动开发：约束即自由</a></li><li class="outline-h3"><a href="#tdd-%E9%AA%8C%E8%AF%81%E5%BE%AA%E7%8E%AF%E4%B8%8E-midnight-snack-%E5%AE%9E%E6%9C%BA%E6%BC%94%E7%A4%BA">TDD 验证循环与 Midnight Snack 实机演示</a></li><li class="outline-h3"><a href="#%E6%89%A7%E8%A1%8C%E5%87%AD%E8%AF%81receipts%E4%B8%8E%E8%87%AA%E8%BF%9B%E5%8C%96%E4%BB%A3%E7%A0%81%E5%BA%93%E7%9A%84%E6%95%B0%E6%8D%AE%E4%BB%B7%E5%80%BC">执行凭证（Receipts）与自进化代码库的数据价值</a></li><li class="outline-h3"><a href="#%E6%9E%84%E5%BB%BA%E8%AF%84%E4%BC%B0%E5%9F%BA%E5%87%86%E4%B8%8E%E9%80%92%E5%BD%92%E8%87%AA%E6%88%91%E6%94%B9%E8%BF%9Brsi%E5%BE%AA%E7%8E%AF">构建评估基准与递归自我改进（RSI）循环</a></li><li class="outline-h3"><a href="#%E8%A7%A3%E8%80%A6%E9%9D%99%E6%80%81%E6%96%AD%E8%A8%80%E4%B8%8E%E5%BC%95%E5%85%A5%E7%B3%BB%E7%BB%9F%E4%B8%80system-1%E6%A8%A1%E5%9E%8B">解耦静态断言与引入系统一（System 1）模型</a></li><li class="outline-h3"><a href="#%E5%AE%9E%E6%88%98%E4%BA%92%E5%8A%A8%E6%B8%B8%E6%88%8F%E7%A0%B4%E5%9D%8F%E8%80%85%E4%B8%8E%E4%BE%A6%E6%8E%A2">实战互动游戏：破坏者与侦探</a></li><li class="outline-h3"><a href="#%E8%AF%84%E6%B5%8B%E7%BB%93%E6%9E%9C%E5%88%A4%E5%AE%9A%E4%B8%8E%E9%AA%8C%E8%AF%81%E9%97%AD%E7%8E%AF">评测结果判定与验证闭环</a></li><li class="outline-h3"><a href="#%E5%9B%9E%E5%BD%92%E4%BA%BA%E7%B1%BB%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E5%B7%A5%E7%A8%8B%E7%9B%B4%E8%A7%89">回归人类开发者的工程直觉</a></li><li class="outline-h3"><a href="#%E9%80%9A%E8%BF%87%E7%A1%AE%E5%AE%9A%E6%80%A7-cli-%E4%B8%8E%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E8%B5%8B%E8%83%BD-agent">通过确定性 CLI 与开发者工具赋能 Agent</a></li><li class="outline-h3"><a href="#%E4%BF%9D%E7%95%99%E5%87%AD%E6%8D%AEreceipts%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8C%96%E4%BF%AE%E5%A4%8D-pr">保留凭据（Receipts）与自动化修复 PR</a></li><li class="outline-h3"><a href="#%E6%9E%84%E5%BB%BA%E4%BF%A1%E4%BB%BB%E4%B8%8E%E8%AF%81%E6%8D%AE%E9%98%B6%E6%A2%AF%E6%B5%8B%E8%AF%95%E4%B8%8E%E9%97%AE%E7%AD%94%E7%8E%AF%E8%8A%82">构建信任与证据阶梯：测试与问答环节</a></li><li class="outline-h3"><a href="#%E6%8F%90%E9%97%AEskills-%E7%BA%A6%E6%9D%9F%E4%B8%8E-ci--hooks-%E5%BC%BA%E5%88%B6%E6%89%A7%E8%A1%8C%E7%9A%84%E6%9D%83%E8%A1%A1">提问：Skills 约束与 CI / Hooks 强制执行的权衡</a></li><li class="outline-h3"><a href="#%E9%80%9A%E8%BF%87-ci-%E5%8F%8D%E9%A6%88%E9%97%AD%E7%8E%AF%E5%AE%9E%E7%8E%B0%E5%A4%9A-agent-%E5%B9%B6%E8%A1%8C%E5%BC%80%E5%8F%91">通过 CI 反馈闭环实现多 Agent 并行开发</a></li><li class="outline-h3"><a href="#%E8%87%AA%E5%8A%A8%E5%8C%96%E4%BB%A3%E7%A0%81%E5%AE%A1%E6%9F%A5%E4%B8%8E%E5%87%8F%E5%B0%91%E4%BA%A4%E4%BA%92%E8%BD%AE%E6%AC%A1">自动化代码审查与减少交互轮次</a></li><li class="outline-h3"><a href="#agent-%E8%BE%85%E5%8A%A9%E7%94%9F%E4%BA%A7%E5%8F%91%E5%B8%83%E4%B8%8E%E5%85%A8%E8%87%AA%E5%8A%A8%E9%87%91%E4%B8%9D%E9%9B%80%E7%9B%91%E6%8E%A7">Agent 辅助生产发布与全自动金丝雀监控</a></li><li class="outline-h3"><a href="#%E6%80%BB%E7%BB%93%E8%87%B4%E8%B0%A2%E4%B8%8E%E5%B1%95%E5%8F%B0%E4%BA%A4%E6%B5%81%E9%82%80%E8%AF%B7">总结致谢与展台交流邀请</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><!-- chunk 1/8 -->
+<h3 id="工作坊开场超越完成的真正含义" data-reading-heading="">工作坊开场：超越“完成”的真正含义</h3>
+<p><strong>Nick Nisi</strong>：大家好，欢迎来到本次工作坊——《超越完成》（Beyond Done）。我们现在马上开始。今天的内容非常丰富充实，我们希望留出足够的时间来回答大家的提问，并让每位到场的朋友都能顺利跟上节奏。那么，我们就直接切入正题。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nick Nisi</strong>: Hey, welcome. Welcome to Beyond Done. We're going to get started here with this workshop. We got a lot to pack in and we want to make sure that we have time for questions and getting everyone situated. So, we're going to go ahead and get started.</p>
+</details>
+<p><strong>Nick Nisi</strong>：所谓“超越完成”（Beyond Done），究竟意味着什么？直奔主题来说，大家前段时间大概都在 Twitter 上看到过这样一条突发事故推文：某个自主智能体突然开始疯狂删除线上生产数据库，仅仅在短短 9 秒钟之内，所有数据瞬间化为乌有。这正是我们今天在这里想要帮助大家彻底杜绝的问题。与此同时，我们依然希望大家能够充分信任自己的 Agent，而不是被迫去逐行审查代码，甚至不需要逐一审查每一个 PR（Pull Request）。我们认为整个行业的发展趋势正指向这里，但我们究竟该如何达成这一目标？我们如何才能把这一理想变为现实——不再被各种崩溃与意外所折磨，而是让你能够气定神闲，确保一切稳定运转；在某种程度上让你能够信任自己的 Agent，并且随着时间的推移，逐步建立起真正可靠的信任体系。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nick Nisi</strong>: So, what we mean by Beyond Done, just to jump straight into it, you probably saw a tweet about this incident that happened a while back where an agent just started deleting production databases. And in 9 seconds, everything was gone. That is what we want to help you prevent here today while still trusting your agents and not having to look at every line, even look at every PR. Like this is where we think things are going and how do we get there? How do we make this a reality where instead of having that broken piece, we can have you calm, have everything work, and let you to some degree trust your agents, but build that trust over time.</p>
+</details>
+<p><strong>Zach Prosser</strong>：我还想补充一点，这不仅仅关乎防范错误，对吧？今天我们要深入探讨的这些核心方法，同样也是让 Agent 在实际应用中实现真正规模化扩展的坚实基石。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Zach Prosser</strong>: I'd say also that it's not just about preventing errors, right? But this is also what we're going to look at today foundational to achieving true scale with agents as well.</p>
+</details>
+<h3 id="讲师介绍与工作区配置" data-reading-heading="">讲师介绍与工作区配置</h3>
+<p><strong>Nick Nisi</strong>：先做个自我介绍，我是 Nick Nisi，在 WorkOS 担任工程经理（Engineering Manager）。我住在内布拉斯加州的奥马哈，在那里生活了大约两年。我在日常工作中重度使用各类 Agent。事实上，自 2025 年 7 月 30 日以来，我就再也没有亲手写过一行代码了。我之所以对这个日期记得如此清楚，是因为那天我刚参加完 Laracon 开发者大会回来，看到了 PHP 代码，心里立刻下定决心：“再也不手写代码了。”于是我就走到了今天。站在我身边的，是我最好的朋友兼搭档 Zach。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nick Nisi</strong>: So, I'm Nick Nisi. I'm an engineering manager at WorkOS. I live in Omaha, Nebraska and I've been there for about 2 years. And I do a lot with agents. I haven't written code since July 30th, 2025. I know because that's the day I got back from Laracon and I saw PHP and I was like, "Never again." And here I am. And with me is my best friend, Zach.</p>
+</details>
+<p><strong>Zach Prosser</strong>：大家好，我是 Zach Prosser，是 WorkOS 应用 AI（Applied AI）团队的工程师。今天非常激动能够来到纽约和大家聚在一起！</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Zach Prosser</strong>: Hey, I'm Zach Prosser. I'm an engineer on the Applied AI team at WorkOS. Super excited to be here with you all today in New York.</p>
+</details>
+<p><strong>Nick Nisi</strong>：刚才我们屏幕上一直展示着这个页面。这个代码仓库就是大家的实战工作台，本次工作坊的所有幻灯片演示文稿都存放在这个仓库里。大家可以直接从中获取，也可以在浏览器中访问 <code>talks.workos.cloud/beyond-done</code> 查看。我知道这个网址有点长，但下一个二维码应该就会直接带大家访问那里。我特别提一下这个页面，是因为我稍后会切过去给大家看一下：所有幻灯片都已经公开在线上了。上面还有一个专门针对工作坊实战演练的页面，也就是我们接下来要逐项进行的实操练习。针对每一个动手环节，大家都可以顺着步骤操作，无论是现在跟着做，还是活动结束后在自己的时间里随时回顾，这都是一份极为清晰的循序渐进指南。此外，页面上还配备了术语表（Glossary），巨细靡遗地涵盖了所有相关的技术名词，既有大家已经非常熟悉的常规概念，也包含一些可能相对生僻的专有名词。如果你遇到了不理解的概念，可以在这里查阅术语表。页面上甚至还有一个“随心提问”（Ask Anything）按钮，你可以直接与一个专门基于这套演示文稿训练的 RAG（检索增强生成）机器人对话，即时获得解答。当然，你也可以直接与现场的真人交流，随时向我们提问。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nick Nisi</strong>: Now, we had this up before. This repo is your workbench. All of the slides are in this repo. You can get it from here. You can also view it at talks.workos.cloud/beyond-done. I know that's a mouthful, but the next QR code, I believe, will take you there. And I just wanted to call it out because on that, I'll switch to it real quick. All of the slides are out there. There's also a page for the workshops, like the exercises that we're going to go through. And so, for each piece of it, you can go through it. You can go through it on your own time. You can go through it later. This is a step-by-step guide to go through that. There's also a glossary covering all of the terms, big and small, some that you're familiar with. Hopefully most of that you're familiar with, but if there's any that you're not, you can look at the glossary for those terms. There's also an ask anything button, and you can talk to a RAG that's trained on this slide deck, and hopefully get your answers there. But, you can also just talk to a human, us.</p>
+</details>
+<p><strong>Zach Prosser</strong>：确实如此。是的，我们稍后也会把这个界面保留在屏幕上。我们发现很多人心中有疑问但出于各种原因没有当面开口，因此请务必善用这个工具去查阅和探索。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Zach Prosser</strong>: Indeed. Yeah, we'll leave this up as well. We find that a lot of folks want to ask questions and for whatever reason can't, so be sure to check that out and use that.</p>
+</details>
+<h3 id="代码审查的瓶颈与表面验证的陷阱" data-reading-heading="">代码审查的瓶颈与表面验证的陷阱</h3>
+<p><strong>Nick Nisi</strong>：太棒了，再给大家留一秒钟扫码。我看到现场不少镜头正对着二维码拍摄，安全团队要是看到了肯定要抓狂了。好，言归正传。当我们思考什么是“任务完成”——尤其是当 Agent 宣告自己已经搞定工作时，究竟有哪些因素能支撑起我们对它的信任？最显而易见的第一步通常是：这代码写对了吗？这代码是我自己会写出来的样子吗？它是否生成了一个合格的 PR？然后我像一个传统的代码审查者一样，一行行去过代码审查。但这种做法非常耗时耗力。如今这些智能体写代码的速度远远快于人类，如果我们依然过度依赖人工逐行审查，就会陷入信噪比失衡的泥潭，因为摆在面前待审的代码量实在太庞大了。既然我们自己不再亲自动手编写代码，对代码的细节熟悉度就会下降，我们在认知层面上就会离具体的实现越来越疏离。因此，我们必须找到其他途径来达成审查。当然，市面上已经有许多现成手段可供选择，比如利用像 Playwright 这样的浏览器自动化工具。你完全可以说：“嘿，我有一个网站，我提交了一个表单；提交操作成功了，测试断言通过，界面上也确实弹出了成功提示信息。”写出这样的测试当然很好，虽然它本身并没有多少 Agent 特性，但它确实能够作为智能体验证自身工作成果的一种工具。智能体可以自我汇报这些测试结果，在很多时候你确实可以信任它，但并非每一次都靠得住。因此，这正是我们今天想要深入推动的核心议题：我们究竟该如何建立一套机制，才能真正彻底地信任这些汇报？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nick Nisi</strong>: Cool. Give it just another second. I see some cameras pointed at QR codes. Security would be so mad at us. All right. So when we're thinking about being done with work, agents being done, there's lots of things that go into us trusting that. And easily the first one is just is the code right? Is the code what I would have written? Did it generate a good PR? And then I go through that like a normal code reviewer. But that takes a long time. And these agents can write code a lot faster than us, so we don't want to rely on that too much because a signal-to-noise ratio starts coming into play and we just have too much code to review. We're not writing any code anymore. And we're less familiar with that code, so we become further abstracted away from it. So, we need to find other ways to do that. And there's plenty of ways that you can do that as well. There's using browser tools like Playwright for example, to say like, "Hey, I have this website and I submitted a form. The submit worked. I checked that and it showed me a success message." That's a great test to write. Not even really anything agentic about it, but it is something that agents can use to verify their work. And they can self-report that. And you can trust that often times, but not all the time. And so, that's really what we want to drive is like, how do we make it so that we can actually trust these reports?</p>
+</details>
+<p><strong>Zach Prosser</strong>：完全赞同。正如 Nick 所讲，今天在这个工作坊里为大家准备的所有演示与案例，背后都有一个完整的仓库在支撑，而且全部是强交互式的。因此，大家完全可以抓住机会在本地把它实际运行起来、亲自做实验，带走一些可以直接用于实际工作中的思考，或者至少以一种全新的视角来体验这个过程。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Zach Prosser</strong>: Absolutely. So, everything that we've got here for you today in this workshop as Nick mentioned is backed by a repo and it is interactive, so feel free to take an opportunity to actually run this to experiment with it to take something back that you might use at work or at least experience in a different way.</p>
+</details>
+<h3 id="midnight-snack-club看似成功的前端假象" data-reading-heading="">Midnight Snack Club：看似成功的前端假象</h3>
+<p><strong>Nick Nisi</strong>：对。如果你直接进入我们的代码仓库，像我演示的这样输入 <code>pnpm snack</code>——如果我没打错字的话——这就是为什么我平时给所有命令都设置了快捷键，比如用 <code>p</code> 代表 <code>pnpm</code>。运行之后，系统就会弹出一个浏览器窗口，我们可以看到这个我们亲手打造的“Midnight Snack Club”（午夜零食俱乐部）演示应用。大家现在就可以动手把玩一下。我自己先在界面上测试一下，输入我的电子邮箱，或者我先填一个 <code>zach@spamhim.com</code> 吧。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nick Nisi</strong>: Yep. In this so like if you just go into the repo like I'm doing and you do PNPM snack if I can type snack up. This is why I have shortcuts for everything. P is my PNPM. It will pop up the browser and we can look at it and we can see this Midnight Snack Club app that we made. And you can play with it right now and I can test this myself. Let me just put in my email address. I'll put in zach@spamhim.com.</p>
+</details>
+<p><strong>Zach Prosser</strong>：多谢你啊，好哥们。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Zach Prosser</strong>: Thanks, buddy.</p>
+</details>
+<p><strong>Nick Nisi</strong>：不客气。你看，界面提示成功了！邮箱已经被保存，数据显示在列表上了，我亲眼看得到它。如果我此前写了一个端到端测试，专门用来断言这个邮箱是否被正确渲染在页面上，那这个测试毫无悬念会顺利通过。这些示例在视觉上给人的感觉大抵就是这样，你在操作过程中感觉一切正常。但是，只要你把页面刷新一下——就像我现在这样——里面什么都没了！哎呀，我刚才点到哪了，切回浏览器。如果把页面重新加载一遍，你会发现列表空空如也，一个人都没有。看来我连 Chrome 都使不利索了。出现这种现象的原因在于：前端 UI 确实更新了，但它根本没有将数据持久化到任何存储中！我们没有做任何深度的闭环验证，只是浮于表面地检查了 UI 展现，看一看界面是不是产生了变化。是的，它确实在前端视觉上完成了响应，但我们压根没有验证另一半的关键逻辑——底层根本没有写入持久化层，刚才录入的邮箱彻底丢失了。所以抱歉啦 Zach，你实际上根本没报上名。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nick Nisi</strong>: Yep. And look at that, success. It saved the email. The email is here. I can see it. If I had a test that was looking to confirm that the email went on the page it worked great. So, that's what these examples look like. You can kind of see it as you're going. But if you reload that page, just like this, nothing's there. So, even though, oops, what did I do? Switch back. If you reload that, it shows that nobody's here. I can't drive Chrome, apparently. And that's because it did update, but it didn't persist that anywhere. So, we didn't have any kind of verification. We're just checking UI, seeing, oh, did that actually do anything? And yes, it did do something to the UI, but we didn't check the other half, and so it was never persisted, and we lost that email. So, sorry, Zach, you're not signed up.</p>
+</details>
+<h3 id="多智能体并发下的隐蔽缺陷与验证真谛" data-reading-heading="">多智能体并发下的隐蔽缺陷与验证真谛</h3>
+<p><strong>Zach Prosser</strong>：我完全没意见。我觉得这里指出了一个极其致命的关键点。我想先现场调查一下，大家举手示意一下：在座的朋友里，有哪些人平时已经在日常工作中极其重度地使用各类 Agent 来构建系统了？好的，太棒了，超过半数的人都举手了。那么，接下来的问题是：有多少人平时在电脑上同时开着好几个终端标签页、或者维护着多个并发的聊天会话窗口，同时调度多个 Agent 在跑？果不其然，所有刚才举手的人这次全都在举手！这就是我们所有人目前真真切切面临的日常，至少是我和 Nick 每天都在经历的现实。试想一下，如果这是你今天并行推进的第 18 条工作泳道，而你留在它上面的注意力早已被稀释得支离破碎，各种极其隐蔽的 Bug 就会悄无声息地溜进来。因为站在 Agent 的角度，它会振振有词地告诉你：“没错啊，我都按照你的要求做完了，代码看着很工整，编译通过，服务能跑，现有的测试也全绿了。”然而在业务逻辑上，它彻头彻尾是错的。因此，我们在本次工作坊中想要和大家共同探讨与破局的问题是：我们究竟该如何彻底解决这种顽疾？当我们要管理着成群结队、如同发狂的 Token 生成机器一样的 Agent 时，怎样才能让它们真正具备自主审视能力，自己弄明白到底要做什么，并且在自己犯错时能够第一时间自我觉察与纠正？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Zach Prosser</strong>: It's okay with me. Yeah, I think this is a really critical point. So, just show of hands, who in this room is building a ton with agents, just to start with the first question. Okay, awesome, like more than half of the room. How many folks are running multiple terminal tabs or multiple chat sessions or multiple agents, like everybody that put their hands up the first time, right? And so, this is what we're all experiencing, at least what I'm experiencing, what Nick's experiencing. If this is the 18th lane of work that you're driving today, and you have diffracted attention to actually spend on it, these are the subtle bugs that will creep in because the agent's like, yeah, I did what you said, the code looks good, it builds, it runs, the test pass, and it's still wrong. And so, what we're going to ask and explore in this workshop together is, how do we actually fix this problem so that the agents that we're now all managing as like herds of insane token machines can actually figure out what they need to do themselves and when they've made a mistake.</p>
+</details>
+<p><strong>Nick Nisi</strong>：没错。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nick Nisi</strong>: Yep.</p>
+</details>
+<p><strong>Nick Nisi</strong>：大家也会发现，我们在这里根本没有过多地去翻看具体代码。在接下来的环节中，我们也不会去深入抠具体语法细节，正如我之前提到的，我被 PHP 吓退之后，现在对看代码甚至都有点阴影了，所以我们尽量不再死盯着底层代码看。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nick Nisi</strong>: And you'll notice that we aren't really looking at the code for this. We're not really going to look at the code too much for this because, like I said, I saw PHP and I'm scared, so we don't look at code anymore.</p>
+</details>
+<p><strong>Nick Nisi</strong>：这一切都归结到了 X（Twitter）上一位知名博主——网名叫 Lauren 10 的“土豆”头像博主——所发表的一句发人深省的名言。她是这么说的：“如果一个 Agent 无法验证自身的工作，那么其余的一切都毫无意义。”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nick Nisi</strong>: Um, but all of this builds up to this great quote by a famous potato on X, her name is Lauren 10. And she has this quote: "If an agent can't verify its own work, nothing else matters."</p>
+</details>
+<p><strong>Zach Prosser</strong>：换句话说，结合我自身以及业内同行的实践经验来看，大家目前正高度收敛到一个共识上：在当今底层模型能力突飞猛进、日新月异的大背景下，“验证”（Verification）已经成为最核心、最不可或缺的底层基石之一，对吧？它关乎系统的可靠性（Reliability）、严谨的自我验证机制以及系统化的评估（Evals）。尤其是随着我们越来越深刻地认识到……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Zach Prosser</strong>: Yeah, another way to say it is that and I think this is true in my experience and others as well is that we're kind of converging on the point that verification now, especially as model capabilities advance rapidly is one of the key foundational things to focus on, right? It's like reliability and verification and evals. Especially as we're starting to see more and</p>
+</details>
+<!-- chunk 2/8 -->
+<h3 id="自我演进代码库时代的评估基准" data-reading-heading="">自我演进代码库时代的评估基准</h3>
+<p><strong>Zach</strong>：随着越来越多内置了 RSI（递归自我改进，Recursive Self-Improvement）概念的 Agent 运行框架陆续上线，感觉我们最终都在转向这样一个世界：每个人可能都需要维护多个具备自我演进能力的代码库，对吧？而在那个世界里，我们该如何搭建评测（eval）的基础设施，好让 Agent 真正明白“优秀”的标准是什么、能够独立完成那些爬山优化？以及，我们又该如何为 Agent 提供必要的反馈，让它意识到自己在某些地方失败了？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Zach</strong>: more harnesses come online that have the concept of RSI or you know, recursive self-improvement baked into them. It feels like we're shifting to a world where we may all be maintaining multiple self-evolving code bases eventually, right? And in that world, how do we set the eval foundation so that the agent actually knows what good looks like and can do those hill climbs on its own and then how are we going to give the agent the feedback it needs to understand that it's failed something.</p>
+</details>
+<p><strong>Colleague</strong>：没错，在能够解决这个问题之前，我们是没办法真正信任这些 Agent、让它们最大程度地加速我们工作的。因此我们需要分阶段、按不同层次去解决它；这并不是一个非 0 即 1 的跃变，而是一个连续的光谱。逐步向 1 靠近，达到让我们能够完全信任这些 Agent 的状态，这才是我们的终极目标。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Colleague</strong>: Yeah, until we can solve that, we're not going to trust these agents to really accelerate our work to its fullest extent. And so we need to solve that in various degrees and it's not just going from zero to one, but it's a gradient and getting us closer to one to where we can fully trust these agents is is the goal.</p>
+</details>
+<p><strong>Zach</strong>：另外我也想分享一点，这同样是我们所有人在 WorkOS 正在亲身经历的事情。我们有一个应用 AI（Applied AI）团队，正在为其他团队以及我们自己构建大量的工具和项目。当你迭代一个已经建立了评测基础、拥有一个可运行且值得信赖的基准线的代码库时，那种体验完全是天壤之别。我们稍后会深入探讨其中的一些技巧和诀窍，但关键在于——能够像人类开发者那样，切实观察到它到底做对了还是做错了。关于我们所有人正在变成“Agent 框架管理者”（agent harness managers）的隐喻已经被反复讨论过了，而这正是我们确保每一个 Agent 都能切实交付正确成果、避免无谓浪费金钱和时间的根本途径。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Zach</strong>: And I'll also just share that you know, again, anecdotally, this is what we're all experiencing at WorkOS. We've got an applied AI team that's building a ton of different stuff for other teams and for ourselves. And it is just a night and day experience when you are iterating on a code base that has, you know, the foundational eval in place, a baseline that can be run and trusted. You know, we'll get into some of the tips and tricks, but the ability to actually see that it did or did not do something correctly in the same way that we would as human developers, right? So we're, you know, of we've the the metaphor of us all becoming agent harness managers is is, you know, well trod. This is how we ensure that each one of them is actually doing correct work and we're not burning money and time essentially.</p>
+</details>
+<h3 id="闭环验证目标定义与可观察性" data-reading-heading="">闭环验证：目标定义与可观察性</h3>
+<p><strong>Colleague</strong>：是的，这其实就相当于对它说“别犯任何错误”，对吧？如果你想在里面引入验证机制，你就不能凭空去猜它应该是什么样。你必须为它提供清晰、明确的目标，并给它一套能够观察和检验这些目标的方法。如果不这样做，Agent 就会自顾自地执行操作、消耗一些 token，它或许最终能碰巧达成你期望的结果，但没有任何人能打保票。在预期产出以及你实际想要达成的目标上，只要你漏掉任何一个细节，它就会自行推断或者直接胡编乱造；而它做出的那些预设，很可能跟你的预设大相径庭，因为你是一个理性且讲求逻辑的人类，而你们之间当时根本还没有对齐。所以，你必须构建起这样的系统：让它能够观察并理解你想要什么、实地去观察现状、修复问题，然后再重新验证。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Colleague</strong>: Yeah, this is the equivalent of saying like make no mistakes, right? Yeah, if you want to have some verification in there, you can't just like guess at what it needs to be. You need to give it clear, defined goals to get to and give it a way to observe and check those goals. If not, the agent's going to do something and it's going to spend some tokens and it might get to the end that you expect it to, but there's no guarantee of that. Every for every detail that you don't fill in in terms of an outcome and what you actually want to get to, it's just going to infer that or make something up and that assumption that it makes may not be the assumptions that you make or that you were expecting because you're a rational logical human and you were just not aligned on that yet. And so um you need to have these systems in place to allow for it to observe, understand what you want, observe that, repair that and then recheck that.</p>
+</details>
+<p><strong>Zach</strong>：是的，而且我觉得从实际经验来看，大家都在逐渐意识到：以往那种陈旧的做法——搞一个庞大无比的 PR，让一个 Agent 会话连续跑上三四天，然后不断催促它“修这个、修这个、修那个，把它改好”——已经行不通了。真正对大家行之有效、甚至可以说表现近乎完美的模式，是将任务极其干净利落地拆解开来，在每个任务的 prompt 中精准地提供所需信息，让 Agent 确切知道怎样才算真正完成，并具备验证“完成状态”的能力。这种模式运转起来效率极高。在我们的团队里，有人一个月能合并 900 个 PR，期间零故障，而且还不断拉升软件的核心 KPI。因此，单从实践层面来说，这是我们所有人都必须停下来深思的一点：我不再用传统的方式去对待这个代码库了，我几乎是在像打理花园一样培育多个代码库，任由它们自我演进。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Zach</strong>: Yeah, and I think just again, anecdotally like we're all finding that you know, the tired way to do it is to have a giant massive PR and have one agent session that's running for three or four days and say fix this, fix this, fix this, make it better. And what is working, you know, essentially perfectly for folks is decomposing tasks really cleanly, giving the each task an agent in the prompt exactly what it needs to do to know that it is actually done and to verify the state of done. And those will just rip. I mean, we have people on our team that are 900 PR's a month and and no incidents and like improving KPIs for the software. So just anecdotally it is um something that we all kind of have to take a step back and think about. I'm not approaching this code base anymore in the traditional way. I'm almost gardening multiple code bases and letting them self evolve. Yeah.</p>
+</details>
+<h3 id="状态来自记录而非模型陈述" data-reading-heading="">状态来自记录，而非模型陈述</h3>
+<p><strong>Colleague</strong>：这也正是我们亲手打造工具并以此严格要求自己的地方。这也是 Zach 和我在 WorkOS 保持高产并推进各自工作的方式。我们俩都针对这一点构建了自己的范例和探索路径，而我们坚信当下这么做是非常有益的。目前要想给任何模式彻底定性还为时尚早，所以快速实验是关键所在——去寻找那些真正奏效的做法，然后坚定地推进下去。</p>
+<p>我们两人都在全力推进的一个共同点就是验证环节，也就是由验证闭环来驱动整个流程。正如我这里引用的一句话所说：“状态源于客观记录，而非模型的文字陈述”（status comes from records, not model prose）。换句话说，拿证据说话。给我拿出确凿有形的证据，证明它确实完成了我所期望的工作，而不是光在嘴上跟我说“搞定了，一切看起来都没问题”——因为这种空话没有任何依据支撑。我需要看到切实的截图、录屏、测试结果、冒烟测试等等所有这一切，好在不需要亲自肉眼审查代码的前提下，就能向我证明它确实达成了我的目标。因为说到底，我其实并没有那么在乎代码本身，我在乎的是最终结果、它实际产生的效用以及交付的价值。老实说，哪怕代码写得一般，只要能出色交付这个结果也可以；反过来，哪怕代码写得再优雅漂亮，但根本无法给我想要的结果，那也毫无意义。我必须在其中找到正确的平衡，而核心始终是交付我想要的结果，而不是代码本身。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Colleague</strong>: And this is something that we build and we hold our own tools too as well. This is how Zach and I stay productive at Work OS and how we get our own work done. We've each built kind of our own examples of this and our own ways of approaching this. And we really think that that's like a good thing right now. It's too early to really classify on anything, so experimentation is key, finding what sticks and then running with that. And uh one thing that we're both running with is the verification piece or like driving everything from that verification loop. Uh because uh as as it says in this quote here for mine, uh status comes from records, not model pros. Um so it's it's, you know, show me the receipts. Show me the actual tangible proof that it actually did it uh what I expect. Don't just tell me, "Yeah, it passes, it looks good." Um because there's nothing to back that up. I need actual screenshots, videos, test results, smoke tests, um any all of the above to prove to me without me having to look at the code that it's actually doing what I want. Because at the end of the day, I don't care about the code as much. I care about the result and what it's doing and what value it's delivering. And it can have bad code, honestly, and deliver that result pretty well. Uh or it could have really good code that doesn't uh give me that result at all. And I need to find the right balance in there, which is giving me the result that I want, not the code.</p>
+</details>
+<h3 id="工具实践ctx-与-ryker-的集中式验证探索" data-reading-heading="">工具实践：CTX 与 Ryker 的集中式验证探索</h3>
+<p><strong>Zach</strong>：确实如此。我也一直在做这方面的实践。我做了一个名为 context（简称 CTX）的工具。它最初是一个跨 Agent 框架的共享记忆层，因为像大家一样，我当时正在频繁试验 ChatGPT、Claude Code、Pi 等各种工具。我希望它们都能互相读写这套记忆系统，而且初期的效果确实不错。随着我同时运行的 Agent 越来越多——平时每天基本上都是 18 到 30 个终端标签页在跑——我越发意识到：尝试通过一个 Web 服务来集中统一验证的权威性，或许会是一个非常有趣的实验。</p>
+<p>于是 CTX 就成了一个运行在 Cloudflare 上的轻量 Web 应用。它最初是纯靠 vibe coding 搞出来的，但确实能跑通。它最开始只负责记忆存储，能够向 Agent 分发密钥凭证，而 Agent 本身根本看不到明文也拿不到原始凭证，这部分功能也很管用。而现在作为一个额外的探索方向，我正在引入验证器（verifiers）。其运作机制是：正如我们大家通常做的那样，通过 prompt 给 Agent 分配具体任务；Agent 领命去干活，完成后再通过 MCP 连接回调 CTX 并报告说：“这些是我已经完成的内容，请问我可以算交付了吗？请进行验证。”</p>
+<p>举个例子：某项工作流需要验证一个 PR 是否被正确创建了。系统就会在一个已知验证器上运行评估器。起初它可以只是一个简单的 CLI 工具，正如我仓库里最初做的那样；随后它会被打磨加固为一个可反复复用的稳固组件。它会直接调用 GitHub API，去核实那个 PR 是否真的存在、状态是否健康、所有的合并检查是否都已通过。只有当这些条件完全满足时，它才会将工作流中的对应节点标记为达成；否则，它就会将 Agent 重新重定向回去，并明确指出：“目前这些检查项仍然处于失败状态。”</p>
+<p>同样，这目前还是个实验，但这就是我们尝试探索各种模式、观察哪些做法能真正扎根留存的方式。而且在这个时期做 vibe coding 也挺有乐趣的，因为我要求在我所有的应用里都要带点怪异好玩的像素风艺术。正如你在这个案例中看到的，这是一个简单的工作流，其中一道验证门禁要求所有 PR 必须全部被合并。这项验证工作完全由这个中心化服务执行：它调用验证器去检查 API 或相关产物，如果往右侧边栏下方看，它最终会把状态渲染出来，并附上实际被核验的仓库与对应 PR 的链接。这是一个很简单的例子，但你可以想象一下：在组织内部共享一个包含标准化验证器的函数库、skills 或工具链，这将成为你逐步加速 PR 交付、减少人工介入审查的核心途径之一。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Zach</strong>: Yeah, indeed. Uh so I've been doing this as well. I I built a tool that I call context or CTX. It started out as a cross-agent harness memory layer cuz I'm rapidly experimenting, as all of us are, with like ChatGPT, Cloud Code, uh Pi, etc. And I wanted them to all be able to write and read from memories, and that started working. And then the more that I was running more more multiple agents and, you know, average day is like 18 or 30 terminal tabs, the more that I realized uh it might be an interesting experiment to try to centralize authority for verification in a web service. So the CTX is a simple web app that runs on Cloudflare. It was vibe coded initially. It works. Uh it started as memory. It was able to hand out secrets to agents without them ever seeing it or getting the credential. And that worked, too. And then now as an additional experiment, I'm creating verifiers. And the way that that works is the agents are assigned work, as we're all doing with prompts. They go off and do that work. They come back through the MCP connection to CTX and say, "This is what I've completed. Uh am I done? Please verify it. So, let's say in the example of um uh one of the workflows needs to verify that a PR was created correctly. And so, that is going to run an evaluator on a known verifier. That could just be a simple CLI to start with as it is in my repo, and then that becomes a hardened piece that you can reuse again and again. It's going to the GitHub API and verifying that that PR truly does exist and is healthy and that all the merge checks pass. And only then will it mark that node satisfied in the workflow. Otherwise, it will redirect to it will redirect the agent and say, "These are the things that are still failing." Right? And so, again, an experiment, but this is kind of how we've been trying to play around with this and see which patterns are are going to stick and and what works and what not. Um but it's also just kind of a fun time to do that five coding because uh I require uh weird pixel art across all of my apps. So, uh you can see in this case there was a simple workflow. And one of the verification gate is that requires that all pull requests were merged. And so, that work is done by the centralized authority. It goes out and uses its verifier, checks the API or whatever the artifact is, and then finally delivers the status over here on the right sidebar if you go to even down, and references the actual repository checked and the PR, right? So, simple example, but you could imagine having standardized verifiers in a library or in skills or in tooling that you share amongst your your org, and this could be one of the ways that you start to build toward accelerating, you know, PRs and and less and less human oversight.</p>
+</details>
+<p><strong>Colleague</strong>：嗯，确实。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Colleague</strong>: Mhm.</p>
+</details>
+<p><strong>Zach</strong>：另外我做的另一个类似工具叫做 Ryker。它更像是一个面向工程研发的 Grokbot 或 Muse，其核心目标是保持极高的灵活性，便于你向它交接任务；而一旦你把工作交托给它之后，它的职责就是全程照料盯紧进度。因为我可不想还得亲自去照看每一个正在推进成型的 PR，到了某个阶段，我的个人精力和对我正在推进的工作而言，收益递减效应就会非常明显。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Zach</strong>: Uh and then a similar tool uh that I built is called Ryker. This is more like a engineering-focused Grokbot or Muse uh that's trying to be extremely flexible in how you hand work to it, but then once you hand work to it, its job is to babysit it. And so, I don't want to have to babysit all of the PRs that I'm I'm bringing to fruition. At some point there's a like this level of diminishing returns for me and my focus on on the work that I'm doing</p>
+</details>
+<!-- chunk 3/8 -->
+<h3 id="人工保姆与自动化验证交接" data-reading-heading="">人工保姆与自动化验证交接</h3>
+<p><strong>Speaker A</strong>: 因为我最终往往只是在充当 PR 的“全职保姆”——比如去修复测试、处理陆续提进来的各种代码审查意见、审查评语之类的琐事。因此，我希望能把具体的想法明确记录下来：比如我们究竟应该做什么、以及我们如何验证这项工作确实已经完成。随后，我就可以把它直接交接给 Riker。Riker 能够主动去承担这些工作，比如确保代码审查意见得到妥善处理；当它针对 PR 审查意见修复代码时，确保修改后的逻辑依然符合我们构建可用软件的整体目标；然后由它自行完成验证。只有在它确实需要我介入时才向我发出提醒，而不是让我全程像个保姆一样寸步不离地守着它。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Because I end up just babysitting the PR—fixing the tests, fixing the reviews that are coming in, the review comments, and things like that. So, I want to be able to get the idea down of what we should be doing and how we can verify that that work is done, and then I can hand it off to Riker. It can go do the work of making sure that the reviews are done, that when it fixes code from PR reviews that it's still matching our overall goal of working software in some way, and then can just verify that and alert me back when it needs me instead of me having to babysit it.</p>
+</details>
+<p><strong>Speaker A</strong>: 这样一来，它就会自动构建出一套检查逻辑，自行判断需要运行哪些工具，并主动去执行它们；随后验证所有检查是否全部通过，把这些运行证据保存下来并通过不同形式呈现给我，最后由它来决定何时停止。如果它能够成功验证“是的，功能正常运行，例如我们现在已经修复了这个 Bug，把各部分组装在一起依然工作完好”，那么这就真正把我从发布最后 10% 琐碎细节的泥潭中解救了出来。这样我就能把精力集中在作为人类真正有价值的地方：去思考我们为什么要做这项工作，以及在何种程度上应该如何去实现它。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: And so, with that, it just builds a check, it figures out what tools it needs to run, it will run them, verify that they all pass, it'll keep that evidence and show it to me in different ways, and then decide when to stop. So, if it can verify yes, it was working, we've now fixed this bug, for example, we put them together and it works. So, it's really just keeping me out of having to be in the minutia of shipping the final 10% and just focusing on where I'm valuable as a human, which is why we're doing the work and to an extent how we're doing it.</p>
+</details>
+<h3 id="从人类开发者的验证直觉谈起" data-reading-heading="">从人类开发者的验证直觉谈起</h3>
+<p><strong>Speaker B</strong>: 好，那我们不妨来做一个思想实验。大家可以举手示意或者直接大声说出来：回到大语言模型（LLM）出现之前的时代，作为一名人类开发者，当我们想要验证一个 Web 应用程序时，通常会从哪些方面开始着手？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Okay, so maybe just as a mental experiment or a thought experiment, if you will, let's just kind of show of hands like or feel free to shout out like how would we start to think as a human developer of verifying a web app like maybe in the before times before an LLM.</p>
+</details>
+<p><strong>Speaker A</strong>: 对，大家平时都会做哪些操作来进行验证？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Yeah, what are things that you would do to verify?</p>
+</details>
+<p><strong>Speaker B</strong>: 我们可以先抛出几个简单的例子来开个头：比如刷新页面，看看应用程序是否依然能够正常显示渲染，对吧？还有什么？完全正确，没错！比如新开一个标签页，检查服务是否处于健康状态；检查 API 返回的状态码是什么，它们是否符合我们发送请求时的预期？毫无疑问，正是这些。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: And we'll throw some easy ones up here to get it started. So, like refresh the page, is the application still visible, right? What's that? Absolutely, yep. Open a new tab, see if it's healthy, right? What are the response codes I'm getting back from the API? Are they expected based on what I sent it? Absolutely.</p>
+</details>
+<p><strong>Speaker A</strong>: 还有检查 localhost 或者 Local Storage，以某种方式验证数据是否真正持久化存储了；查看控制台日志（Console Logs）等类似的信息；正如你所说的网络请求（Network）；还有实际去查看页面上到底渲染出了什么内容，页面展示的文本和组件是否符合预期……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Local host or local storage, checking persistence in some way, console logs, things like that. Network, like you said. And like reading what's actually on the page. Do the contents of the page actually—</p>
+</details>
+<p><strong>Speaker B</strong>: 以及与页面进行真实的交互，对吧？我们之所以要强调这一点，实际上是为了引出开发范式的转变：过去，我们人类开发者无时无刻不在重复做这些事情。在那个我们纯手工一凿一斧敲代码的年代，这就是我们最核心的职责之一。那么，人类的手动验证与早期大模型时代那种“给你三段提示词文本，去把这些指令执行掉”的方式之间，最大的差距（Delta）究竟是什么？两者之间决定性的鸿沟，就在于智能体（Agent）能否在一个真实运行的应用环境中，自主验证它是否确实完成了你交付的任务，以及它的代码修改是否破坏了现有的任何功能。如果不具备这种闭环验证能力，你得到的就全都是大模型为了讨好用户、顺应文本补全逻辑而凭空编造出来的幻觉。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Interacting with it, right? And the reason we're saying this is like this is really to set up the transition from we were the human developers doing this all the time. This was part of our core responsibility when we're hand chiseling code, if you will. And then, what is the delta between doing this and then in the early stages of LLM time saying, "Here's three paragraphs of text. Go execute these instructions." The delta between those two things is the agent's ability to verify that it actually did what you asked it to do in a real application and that its changes did not break anything. Right? Otherwise, you're just getting the confabulations that LLMs are designed to give you cuz they're trying to process the text. They're trying to make you happy.</p>
+</details>
+<h3 id="从模糊的自然语言提示到确定性的测试脚本" data-reading-heading="">从模糊的自然语言提示到确定性的测试脚本</h3>
+<p><strong>Speaker A</strong>: 智能体光靠呆在一个孤零零的终端里，是根本无法完成上述任何一项验证工作的。它必须借助专门的工具。幸运的是，现在给智能体添加工具已经变得非常轻而易举了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Your agent can't do any of this just in a terminal alone. It needs tools to do that. Fortunately, tools are very easy to add to—</p>
+</details>
+<p><strong>Speaker B</strong>: 现在给智能体配工具非常简单。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: agents now.</p>
+</details>
+<p><strong>Speaker A</strong>: 我们只需要告诉它们如何使用这些工具，并具体指定我们试图证明和验证的是什么。当你编写提示词时，绝不能只写上一大段模糊的话，比如：“嘿，你一定要在浏览器中验证每一次更改。”这种指示究竟意味着什么？太含糊了。“切记要重新加载页面并检查”，这稍微具体了一点点；“检查数据是否持久化，查看控制台是否有报错”，这又具体了一些。但要把所有这类要求全都塞进 Prompt 里面，信息量实在太庞大了。当然，你完全可以这么做，很多 Skills 或者预设 Prompt 也是这么干的。但只要你遗漏了任何一个细节，或者业务逻辑稍有变动，就会给模型留下极大的主观臆测和自由发挥空间。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Um, and we just have to tell them how to use it. We'll tell them specifically what we're trying to prove. When you do that, you don't want it to be just a paragraph of like, "Hey, do this very always verify the change in a browser." Whatever that means, that's pretty vague. "Remember to reload and check." That's a little bit more specific. "Check that the data persists." Look at the console for errors. Getting a little more specific, but like that's a lot to put in there and you can certainly do that. That's what a lot of skills do. That's what what a lot of just like saved prompts do. But if you forget anything or things change, that can leave it up to a lot of interpretation.</p>
+</details>
+<p><strong>Speaker A</strong>: 相比之下，一种好得多的做法是编写一个能够从多个维度切实验证系统的脚本。这样你就可以反反复复去运行它。它针对一系列指标执行的是高度确定性的检查，随后将这些确定性的运行输出直接反馈回智能体。智能体便能精准获知哪里出了问题、以及如何迅速修复。这种方式瞬间闭环了反馈回路，整个迭代过程变得极其迅速；智能体可以不断循环执行：运行脚本、检查验证、再次运行修复，周而复始，直到所有的错误被彻底清除。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: One thing that might be better is to have a script that can prove it out in different ways, so that you can just run that over and over and it's doing more of a deterministic check across a number of things and then it can feed that output back into the agent and it knows exactly what was wrong and how to fix it quickly. And it just closes that loop so that it's a much faster and the agent can just spin that, run it again, check, verify, run again, and just do that over and over until there's no more errors.</p>
+</details>
+<h3 id="确定性验证工具与研发效能的跃迁" data-reading-heading="">确定性验证工具与研发效能的跃迁</h3>
+<p><strong>Speaker B</strong>: 如果你仔细想想，这种机制还带来了极高的统一性和一致性，对吧？众所周知，大语言模型本身是非确定性的（Non-deterministic）。即便你给 30 个智能体输入完全一模一样的 Prompt，最终输出的结果也极有可能存在巨大的方差。而如果你将其严格收敛并锚定到一个由底层 Bash 命令和真实调用支撑的独立脚本命令上，其确定性就会大大增强。从实际案例来看，像 Lauren Tan 等人目前据称每月能够交付数以千计的 PR，构建出以往在同样时间内根本无法想象的庞大项目。他们都曾提到过，这套确定性验证正是他们最初全力攻克、并最终真正彻底解锁研发效能的核心秘诀。因此，举例来说，如果你所在的 Web 应用还没有配套一个定制的专用 CLI 工具，让任何智能体都能无障碍地完整调用并验证你所关心的各项核心功能，那么仅仅依赖自然语言 Prompt 的话，你将会经历一段极其艰难坎坷的摸索；这与直接赋予每个智能体底气去宣布“是的，我确实构建了这个功能，它的性能完全达标，没有引发任何报错，且应用程序的界面与渲染完全正确”相比，完全是天壤之别。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: It's also uniform if you think about it, right? We know that LLMs are non-deterministic, so even giving 30 agents the exact same prompt and you have a potential for variance in your outcomes. And pinning it down to a single command that is backed by actual bash commands and bash calls, right? Like that's significantly more deterministic. And anecdotally, the folks like Lauren Tan and others that are achieving thousands of PRs ostensibly a month and building ambitious products that were not possible to build in that time before have mentioned that this is the first thing that they concentrated on that actually unlocked the velocity, right? So, if your specific web app, for example, does not already have a bespoke CLI that allows any agent to fully flex the functionality that you care about verifying, then you're going to have a much rougher time and an unpaved path if you're using prompts, you know, alone compared to actually, again, giving each agent the ability to say, "Yes, I actually built that feature. It is actually performant. It didn't cause any errors, and the application looks correct."</p>
+</details>
+<h3 id="实战演示snack-专用验证工具剖析" data-reading-heading="">实战演示：Snack 专用验证工具剖析</h3>
+<p><strong>Speaker A</strong>: 因此，专门针对本次工作坊，我们亲手打造了一个轻量级的小工具。我们刚才已经运行过它几次了，它的名字叫 <code>snack</code>。在当前的代码仓库中，你只需要输入 <code>pnpm snack</code> 即可直接运行它。我们设计它的初衷并不是要把它做成一个通用的现成工具，而是作为一种范式模板，向大家展示如何针对自己正在开发的具体应用程序搭建出专用的验证体系，进而以此为桥梁，与那些正在协助你编写该应用的 LLM 智能体无缝对接。</p>
+<p><code>snack</code> 具备好几项核心能力：首先，它可以全面管理应用的健康状态——既能一键启动应用，也能一键关闭应用；它还能运行 <code>doctor</code> 诊断命令，快速检查各项基础设施：例如数据库当前是否正常运行？网络连接是否通畅等等，完成极其迅捷的体检。</p>
+<p>其次，它内置了 <code>drive</code> 驱动模块。你可以命令它去执行用户操作：别忘了，我们演示的案例是一个名为 Midnight Snack 的候补名单系统；所以你可以命令它自动加入候补名单、刷新页面、重置所有数据以模拟空状态等。</p>
+<p>此外，你还可以让它执行各种信息检索与审查：比如截取快照（Snapshot）、检查网络存储、查看控制台日志、读取 Local Storage、截取页面屏幕截图（Screenshot）、运行评估评测（Evals）等等，上述这些检查手段一应俱全。</p>
+<p>最后，它提供了两种维度的证明与校验机制：其一，它可以直接执行 <code>prove</code> 命令，对操作输出进行绝对确定性的断言校验；其二，它配备了一个基于 System 1 快速直觉模型的 <code>judge</code> 裁判机制，用来宏观评估我们的修改方向是否大体正确，而无需在每个细枝末节上都进行刻板的一对一精确匹配。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: So, for this workshop, we made a little tool. We've been running it a couple of times, but it's called snack. And you can just run it with PNPM snack in that repo. It's not meant to be like a reusable tool, but just kind of like a template for how you could set up this specific for the applications that you're working on, and then use that as a way to tie into the LLMs that are actually working on that application with you. And so, snack can do a couple of things. It can manage the health of the application. It can bring it up, it can take it down. It can run a doctor command to see is it actually, you know, is the database running? Does it have network connection? Et cetera. That quick drive or that quick check that it can do. Then it has drive, so you can tell it to join. Remember, this is our our midnight snack waitlist. So, it can join the waitlist. It can reload the page, it can reset all of the data so it can't find it. You can have it look up things, so take a snapshot, look at the network storage, look at console logs, look at local storage, screenshot it, run evals, all of the above. And then finally it can prove it in two ways. It can actually run a prove command where it's checking for deterministic output of that. And a judge, which is using a system one model to get an idea of whether we're going in the right direction without it necessarily matching one to one.</p>
+</details>
+<h3 id="团队维度的复利与验证体系的终极价值" data-reading-heading="">团队维度的复利与验证体系的终极价值</h3>
+<p><strong>Speaker B</strong>: 顺着这个思路进一步推导：当你在一个之前从未有过此类机制的代码仓库中落地了这套验证工具，由此所释放的研发效能加速绝对不仅限于你个人，对吧？它会普惠给团队中后续加入进来的每一个人。他们同样能够以极快的速度、以极高的安全系数提交数量远超以往的高质量 PR。整个团队都会从中切实受益。这也是为什么我们不断反复强调：构建这种确定性的验证层，在当下已经成为不可动摇的基础核心概念。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Just to, like, fully develop this idea, when you do something like this in a repo that you haven't already had something like this before, the velocity gains that you unlock are not solely for you, right? It's for everyone else on your team that then comes along and is also able to issue significantly more PRs significantly faster and significantly safer, right? More safely, so that, you know, everybody on the team actually benefits. And again, that's like where we keep harping on this being like a foundational concept now.</p>
+</details>
+<p><strong>Speaker A</strong>: 没错。仔细想来，这确实是非常关键的一环；在某种程度上，它甚至比你的软件本身、比具体的应用程序更为重要——那就是你验证软件的方式、你测试它的方式，以及你证明它能稳定工作的方式。因为一旦拥有了这套完整的验证能力，就像现在许多人正在做的那样，你甚至可以用它来把整个项目完全重构迁移到 Rust：你可以把你的应用（正如 Bun 团队所做的那样）迁移改写为 Rust、Go、TypeScript，或者从 TypeScript 重写成 Go。虽然他们当时未必得到了如同现在这般高阶的 LLM 辅助，但他们确实也利用了 LLM 来加速该过程。还有比如 Theo 就在上周刚刚又把项目重新改写成了 Rust。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Yeah. And if you think about it, like, that's a really big piece of it it might even be more important than your software, than the actual application is the way that you verify it, the way that you test it, the way that you prove that it works because that is what you could use potentially, like, a lot of people are doing and converting to Rust. You could take your app, like the Bun team did, convert it to Rust, Go, TypeScript, convert it to Go, not necessarily with the same level of LLM help, but they did use LLMs to help with that. And then I think Theo just last week converted it to Rust again, so.</p>
+</details>
+<p><strong>Speaker B</strong>: 是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Yep.</p>
+</details>
+<p><strong>Speaker A</strong>: 当你想要达成这种级别的重构和演进时，如果你手头已经完备地建立起了所有这些验证器……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Uh, when you want that, if you have all of those verifiers in—</p>
+</details>
+<!-- chunk 4/8 -->
+<h3 id="工具为智能体赋予行动实体与验证能力" data-reading-heading="">工具为智能体赋予行动实体与验证能力</h3>
+<p><strong>Speaker A</strong>: ……到位之后，你的源代码就没那么重要了。你可以重写代码，并证明它是正常工作的。请继续。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: ...place, then your source code doesn't matter as much. You can write it again and prove that it works. Keep going.</p>
+</details>
+<p><strong>Speaker B</strong>: 确实如此。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Absolutely.</p>
+</details>
+<p><strong>Speaker A</strong>: 所以，这些工具为你的智能体赋予了双眼。或者如果换个角度思考，智能体所使用的这些工具，赋予了它行动的躯体。大语言模型（LLM）是大脑，而它伸展出去、在你的计算机上进行虚拟物理交互的方式，正是通过这些工具。诸如加入测试流程之类的操作，本质上就是让它去实际运行并执行任务，然后它能够去检查并确认：我刚才的操作到底在某种程度上成功了吗？比如检查存储（check storage）、执行重新加载（run reload）、获取快照（snapshot）等等。</p>
+<p>那么，我们直接运行其中的几个来看看效果。输入 <code>psnack up</code>，这就启动了我们的浏览器。接着我再打开另一个终端——我的终端开得实在太多了——然后运行 <code>psnack snapshot</code>。这就以 JSON 的格式为我们提供了该页面的快照，供我们查看。如果我在里面输入 <code>Zack</code>，邮箱填 <code>zack@zack.zack</code>，并将其添加到页面中。希望能看到刚才添加的 Zack 数据出现在里面。看，出来了！</p>
+<p>这就是我们进行验证的一种方式。我们也可以执行截图命令，让整个过程更直观一些。这应该会弹出一张屏幕截图。没错，就是这样。因此，这让我们不仅能够把内容传给 LLM 让它去进行解读，更关键的是能够向我们提供证明。这才是终极目标，对吧？向人类证明它是正确的。能够截取屏幕截图、录制操作视频，并把它们附加到 Pull Request 上。现在通过 GitHub CLI（gh cli）就能做到这一点。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: And so, these tools give your agents their eyes. Or if you think about it, the tools that your agent uses, that gives it the body. The LLM is the brain and then the way that it reaches out and interacts physically, virtually on your computer is through these tools. And so, things like join is actually having it run and do things and then it can check and see, you know, did that actually succeed in some way? Check storage, run reload, snapshot, etc.</p>
+<p>And so, let's just run a couple of these and see. <code>psnack up</code>. That brought up our browser. And then I'll open up another browser or another terminal. I have too many terminals. And run <code>psnack snapshot</code>. And that gives us a snapshot of the page as JSON that we can see. If I put Zack at <code>zack@zack.zack</code> and add that to the page, hopefully we'll see some Zacks in there. There we go.</p>
+<p>So, that's a way that we can verify. We can also do screenshot to make it a little easier. That should pop up a screenshot. And yeah. So, that gave us the ability to, for example, not just pass this to the LLM and have it do interpretation on it, but proving back to us. That's the end goal, right? Is proving back to the human. Being able to take screenshots, record videos, put those on the pull request. You can do that with the GH CLI now.</p>
+</details>
+<p><strong>Speaker B</strong>: 还有 Chrome 开发者调试工具。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Chrome debug debugging tools.</p>
+</details>
+<p><strong>Speaker A</strong>: 没错，Chrome 调试工具。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Chrome debugging tools, yeah.</p>
+</details>
+<p><strong>Speaker B</strong>: 真正的瓶颈到底在哪里？不要靠猜，也不要在那儿盲目折腾三个小时。去实实在在地找出到底哪一部分导致了渲染缓慢。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Where is the actual bottleneck? Don't guess and, you know, spin your wheels for 3 hours. Like actually figure out which part was causing the render to be slow.</p>
+</details>
+<h3 id="构建端到端闭环反馈与自动化校验" data-reading-heading="">构建端到端闭环反馈与自动化校验</h3>
+<p><strong>Speaker A</strong>: 是的。所以这里的真正关键在于，判断这个应用程序是否运行正确，并不仅仅依赖于你去肉眼查看代码，而是你可以构建一套工具，帮助你证明它正在正确运行，而根本不需要你去读代码。因为我们真正在意的只有这些：这是用户看到的内容吗？它在当前浏览器、当前宽度下，无论在深色模式还是浅色模式下，渲染都正确吗？你可以针对这些运行无数次测试，并在循环中一遍又一遍地运行它们。正如 Zach 所说，这能让你的整个团队行动得更快，因为你同时也赋予了智能体自行执行这些检查的能力。</p>
+<p>所以，如果我们像这样运行，比如运行诊断（doctor），然后添加 <code>ada@example.test</code>，接着检查存储，它就在那里；如果我们检查存储发现它不在，我们就会看到本地存储（local storage）是空的。如果我们重新运行 reload 然后再运行 snapshot，我们就能证实它确实是空的。通过这种方式，工具本身就能在一个循环中运行，检查所有这些环节，并在甚至还没向我们汇报之前就自行确认：“噢，我发现我们其实并没有把这个持久化保存，我刚才忘了做那部分了。”于是智能体就可以直接从那里继续修复并推进。</p>
+<p>稍等一下，如果有问题的话，我们想停下来回答几个问题。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Yeah. So, the real key here is that it's not just code that you can look at to interpret whether this application is running correctly, but you can build tools that will help you prove to you that it's working correctly without you having to read the code at all. Because this is all we care about. Is this what a user sees? Is it correctly rendering in this browser at this width with dark mode, with light mode, etc. And you can run infinite tests on that and run them over and over and over in a loop, which as Zach said unlocks your whole team to move faster because you've given the agent the ability to run those checks itself as well.</p>
+<p>So, if we ran it just like this where we ran the doctor and then we add <code>ada@example.test</code> and then we check the storage, it's there. If we check the storage and it's not there, we would see local storage is empty. And if we rerun reload and then snapshot, we would verify that it is in fact empty. So, this is a way that the tool itself could run in a loop, could check all of these things, and yes, confirm before it even gets back to us: "Oh, I see that we're not actually persisting this. I forgot to do that part." And the agent can just move on from there.</p>
+<p>Real quick, we wanted to stop and take a few questions if there are any.</p>
+</details>
+<p><strong>Speaker B</strong>: 请讲，先生。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Yes, sir.</p>
+</details>
+<h3 id="全栈应用中的评估与确定性保障" data-reading-heading="">全栈应用中的评估与确定性保障</h3>
+<p><strong>Speaker A</strong>: 好的。您的问题是：我们是否在利用模型生成 JSON，借此帮助我们让代码具备确定性，并把确定性拉回到流程中？对我而言，答案是肯定的。我确实在这样用，运行它，然后围绕它使用单元测试通过不同方式进行验证、捕捉边缘边界情况，进而证实这些代码是对我预期从系统 1（System 1）模型获取结果的真实解读或真实表达，以此证明我的方向是正确的。同时保留这些测试，作为另一重检查，确保系统不会随着时间推移产生漂移，或者发生意外变化。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Yeah. So, the question is are we using models to write JSON to then help us to make our code deterministic, to bring that back. The answer for me is yes. I'm using that and I'm running it and then I'll use unit tests around that to verify in different ways, catch edge cases, and then verify that the code is a real interpretation or real representation of what I'm expecting to get back from like a System 1 model, and use that to prove that I'm on the right track. But then keep those as well to kind of have another check to make sure that it doesn't drift over time or things change.</p>
+</details>
+<p><strong>Speaker B</strong>: 你是指我们刚才讨论的整体通用流程吗？是的。就我们团队内部的实践而言，我们构建了大量的内部工具应用，同时也有一些面向客户的应用程序。它们通常基于 TypeScript，并且往往部署在 Cloudflare 上。因此，它们是完整的全栈应用程序。这套方法运作得非常完美。你甚至可以专门针对后端逻辑或数据库操作建立评估（evals）。完全可行，你可以根据需要划分得尽可能细致。但毫无疑问，它是完全支持全栈的。我预计未来我们所有人与软件持续交互的方式，都会类似园丁一样，只是在旁边照料并确保它们在我们自身掌控下正确地演进。是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: The general process that we're talking about? Yeah, so when what I'm talking about, at least on our team, we build a ton of applications that are internal tooling. We have some customer-facing applications as well. They tend to be TypeScript and they tend to be deployed to Cloudflare. So, they're full-stack applications. It works perfectly. You can even have evals that are focused on the back end or database operations. All right, you could get as granular as you want with it. But it's absolutely yeah, it works full-stack and I expect that the way that we're all going to continue interfacing with software in the future is just going to be kind of like the gardeners making sure that they're evolving correctly on our own. Yeah.</p>
+</details>
+<p><strong>Speaker A</strong>: 这也是为什么我们现在没有对外发布一个现成的通用工具，因为目前我们无法提供一个适用于在座各位正在开发的所有不同应用的通用工具。你必须根据自己正在构建的具体应用量身定制对应的工具集，然后把这些工具交给模型，并确保它们懂得如何良好地运行这些工具。作为……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: That's why we're not like giving out a tool because we couldn't give you a tool at this time that works generically for every single application that everyone in this room is working on. You kind of have to build up the tools that fit the app that you're working on and then give that to the models and just make sure that they know how to run them well. As a...</p>
+</details>
+<p><strong>Speaker B</strong>: 我刚才也正想说这个。作为团队、公司或业务部门，你们实际需要或关心的评估指标（evals），会因业务场景而产生巨大的差异。比如室内设计领域的关注点，与那些速度就是唯一生命线的领域相比，完全是两码事。我认为你们的评估体系会有天壤之别，而与团队一起逐步构建出这些评估，本身就具有极高的价值。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: I was also going to say your evals, what you actually need or care about as a team or company or business, are going to wildly differ from, you know, if you're in like the interior design space versus some other place where speed is the only thing that matters. I think you're going to have wildly different evals and there's a value to building those up with your team.</p>
+</details>
+<h3 id="构建可反馈循环与探索多变体实现" data-reading-heading="">构建可反馈循环与探索多变体实现</h3>
+<p><strong>Speaker A</strong>: 没错。而且有许多不同的方式将数据传递给模型，让它能够理解并跟上当前的状态进展。要让模型融入闭环（in the loop）并洞悉系统的运行状况，这是至关重要的一环。AMP 团队有一篇非常棒的博文专门探讨了这点，具体篇名我记不太清了，但我回头会分享出来，好像叫什么“循环驱动开发”之类的，具体名字忘了。但在他们的示例中展示了一个画布，上面画着一个圆圈，还有一个球在圆圈内部弹跳；圆圈上开了一个小口子，如果小球撞击的角度刚好合适，它就会从小缝隙掉出圆圈，此时游戏结束。</p>
+<p>这其中的核心理念就是让事物变得“具备可反馈循环性”（feedback loopable）。这就是关键所在。模型本身无法直接看到正在运行的画布，也看不到各个物体的运动轨迹。但举一个极度简化的例子：如果你把小球在每个时间点的坐标打印出来，当你发现一个 Bug，即小球运行到特定坐标点时突然瞬间跳到了屏幕的另一侧——按常理，如果它在每次循环中移动的距离超过了一个像素，那就很可能出问题了。这就意味着代码里存在 Bug。如果你能把这类坐标数据暴露给模型，它就能帮助你进行调试；即便它并没有眼睛去直接看画布、看不到小球在物理规律上的异常表现，它也能凭借数据完成排查。所以……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Yeah. And there's lots of different ways to get the data to the model in different ways so that it can interpret it and it can keep up. And that's like a huge piece of keeping the model in the loop as to what's going on. The AMP team has a really great post on it. I think it's called—I can't remember the post, but I'll get it out there. I think it's called loop-driven development, I don't know, I can't remember.</p>
+<p>But in the example, they show like a canvas with a circle and a ball bouncing inside of this circle, and then there's a little slit where the ball if it hits just right, it can fall out of the circle and then the game is over. And the whole idea of that is making things feedback loopable. That's what it is. Where the model can't actually see the running canvas and where things are going, but if you, as a very contrived example, just print out the coordinates of that ball at every point, and you see a bug where once it gets to this specific point, it jumps to the other side of the screen. Well, if it's moving more than one pixel at a time per loop, something is wrong, potentially. And so, there's a bug in there. If you can surface that to the model, then it can help you debug it, where it doesn't actually have eyes to see the canvas and see the ball not behaving well, like with physics. So...</p>
+</details>
+<p><strong>Speaker B</strong>: 而且一旦你实现了这一点，你就可以完全自由地派生出 30 种不同的软件实现变体，让它们都去对齐并通过这项评估，然后你只需在其中挑选你最满意的一个版本。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: And also, once you do that, you're also then free to spin up 30 different variants of software that are speaking to that eval, and then pick the one that you want.</p>
+</details>
+<p><strong>Speaker A</strong>: 是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Yeah.</p>
+</details>
+<p><strong>Speaker B</strong>: 这就是它所解锁的另一大能力，对吧？它确实是一项根本性的基础设施，支撑着我们快速推进。特别是当我们预期智能体模型能力会不断提高、Token 成本有望变得越来越低廉时，你可以想象，未来我们完全可能在周一早上一上班就说：“针对这个新功能或新应用，我想要看到 35 个不同版本的实现。”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: So, that's the other thing that it unlocks, right? It's really foundational for just going, and especially if we expect agent models to improve, tokens to get cheaper, potentially, then you can imagine that we're all going to be coming in on Monday and saying like: "I would like to see 35 versions of this new feature or application here."</p>
+</details>
+<p><strong>Speaker A</strong>: 没错。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Yep.</p>
+</details>
+<p><strong>Speaker B</strong>: 然后挑选其中一个即可。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: And pick one.</p>
+</details>
+<p><strong>Speaker A</strong>: 那么，我们实际上该如何运行或编写这种证明呢？在这个案例中，正如我们之前所说，我们无法提供一个放之四海而皆准的通用证明机制，它必须与你的具体应用程序紧密贴合。对于我们的“午夜点心”（midnight snack）页面，证明命令大致就是这样：它基本上是使用像 Playwright 这样的自动化测试工具，去校验当用户加入候补名单时，邮箱地址是否真的被保存了。因此，我们可以首先检查候补名单中没有任何邮箱，接着在下一行填入一个邮箱地址，然后定位按钮并触发点击——也就是“加入候补名单”按钮——最后断言页面上的状态元素中显示了“已加入候补名单”的标记……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: And so, how do we actually run or create that? Well, in this case, like we said, we can't really prove it for everything universally. It really has to be something that's unique to your application. And so, for our midnight snack page, this is what the proof command might look like, where it's basically using a tool like Playwright to check that an email was actually saved when it gets on the waitlist. So, we can check that it doesn't have any emails on the waitlist, then we can fill in an email on the next line, and then we can get the button and click it, the join waitlist button, and then we can expect that the status element on the page has a waitlisted in...</p>
+</details>
+<!-- chunk 5/8 -->
+<h3 id="构建可复现的验证闭环与截图陷阱" data-reading-heading="">构建可复现的验证闭环与截图陷阱</h3>
+<p><strong>Speaker A</strong>: 检查那里的内部文本，看看我们的电子邮件地址是否在里面。这是一种非常简单的实现方式。如果你曾经使用 Playwright 或 React Testing Library 之类的工具写过端到端测试，你肯定接触过这类工具。你可以直接把这些工具交给模型、交给你的 Agent，让它们自行运行。将其作为工具提供给 Agent，它们就能自己去验证并证明结果。这样你就创造了一份可复现的证据；下次再用到它时，或者下次页面发生变动时，Agent 就可以重新运行它，验证没有任何功能被破坏。它起到了防回归测试的作用，让团队中的每个人都能持续向前推进。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: there, uh, and then check the inner text of that to see if our email address is in there. Um, and so, that's one simple way to do it, very easy if you've ever written, uh, an end-to-end test with like playwright or react testing library, any of those, you've definitely used tools like this. You can just give them back to the model to your agent and they can run them. Give it to them as a tool and they can prove it out themselves and you've made this reproducible bit of evidence that then you can use in this one next time you use it next time that page changes it can run it again and verify that nothing broke. It acts as a regression and keeps everyone on the team moving forward.</p>
+</details>
+<p><strong>Speaker B</strong>: 不过这里要提一个提醒：一张成功的截图并不能算作证明。一定要确保它确实展示了你所期望的状态，并且确实运行了达到该状态所需的命令，真正进入了那个状态。否则，它可能只是另一个谎言——你在 PR 上看到了一张截图，心想：“哦对，这是正确的”，但它可能引发了其他副作用，或者走了一条在真实 UI 中根本不可行的路径。因此，你必须确保它真正从头到尾完整运行以进行检验。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: One caution word of caution though, like a successful screenshot isn't proof. Make sure that it's actually showing, you know, the state that you expect it to be in, that it actually like ran the commands to get to that state to actually be in there because otherwise it might just be like another lie, but you're seeing a screenshot on the the PR and thinking, oh yeah, this is this is correct, but it might have be causing different side effects. It might have taken a different path that's not actually possible within the UI. So you want to make sure that it actually like runs start to finish to check that.</p>
+</details>
+<h3 id="自愈循环与精准错误信息的重要性" data-reading-heading="">自愈循环与精准错误信息的重要性</h3>
+<p><strong>Speaker A</strong>: 没错。一旦你建立了这种持久、可靠、可重复且统一的闭环，你所获得的价值或核心优势就在于：失败开始能够驱动后续的工作。如果在某一次循环中 Agent 失败了，而你正忙着在工作中与人沟通，或者开始处理另一项任务，Agent 自己就能判断：“这不太对，让我再试一次。让我现在运行命令重新验证。好了，现在没问题了。”如果你思考一下这在规模化场景下的意义——单个 PR 或一个 Agent（如果你愿意的话可以看作一条独立的工作泳道），Agent 能够自我修复、自我纠正并自主解决问题。这样你就不必在一天工作结束时回过头来看那个特定的 PR，然后感叹：“唉，我还是得自己从头把它弄完。”如果把这个效果成倍放大，这就是我们一再强调的——它是提升速度与效率的基石。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Yeah, and so once you build these loops that are, you know, durable, reliable, repeatable, uniform, the value of what you get or the benefit the main benefit is that a failure starts to drive future work, right? So if in one loop the agent fails, you're busy talking to somebody at work or you're starting yet another task, that agent can determine on its own, this is not quite correct. Let me go take another stab at it. Let me now run the command verify again. Okay, now we're good. If you think about what that means at scale that a single PR or an agent a single lane of work, if you will, and an agent, you know, self heals, self corrects, figures it out on its own, you're not coming back to that particular PR at the end of the day and and then being like, oh, I still have to get this all the way through. And if you just multiply that out, right? That that's that's really where again, we just say this is foundational for speed and velocity. Yep.</p>
+</details>
+<p><strong>Speaker B</strong>: 你们当中有多少人平时会写优质的错误提示信息？请举手看一下。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: And how many of you write good error messages? Show of hands.</p>
+</details>
+<p><strong>Speaker A</strong>: 行了，没人举手，我们早就知道了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Yeah, nobody knows. We already know.</p>
+</details>
+<p><strong>Speaker B</strong>: 这位先生，你的错误信息是什么？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Sir, what's your message?</p>
+</details>
+<p><strong>Speaker A</strong>: 我手太小举不起来。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: I got small hands.</p>
+</details>
+<p><strong>Speaker B</strong>: 明白了，哈哈。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: There you go. Yeah.</p>
+</details>
+<p><strong>Speaker A</strong>: 挺靠谱的理由。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Solid.</p>
+</details>
+<p><strong>Speaker B</strong>: 话说回来，你们确实应该写好错误信息。我认为它们现在比以往任何时候都更重要，因为当你的应用抛出错误时，猜猜谁最擅长解读这个错误并据此继续推进？是 Agent。所以，如果你能让失败原因清晰明确地表达出来，并提供尽可能详尽的上下文说明它是如何进入该故障状态的，那么你的 Agent 就能直接依据这些信息进行自愈。因此，花精力做这件事非常简单，也非常值得。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Um well, you should. Uh I think they're more important than ever because uh when your your uh app throws an error, guess what can interpret and run with that error really well? An agent. So, um if you make it so that your failure is explicit about why it failed and give as much detail as possible about how it got into that state, then uh your agent can just like self-heal from that. So, it's um very easy, very worthwhile to to do that.</p>
+</details>
+<h3 id="目标驱动开发约束即自由" data-reading-heading="">目标驱动开发：约束即自由</h3>
+<p><strong>Speaker A</strong>: 是的。这是我和 Nick 经常探讨的一个概念。听起来我们好像在试图用确定性去死死包裹 LLM，但实际上我们并不想那样做。这也符合 Amp 团队所秉持的理念。Agent 本身是聪明的、有能力的，我们实际上希望它们保持创造力。因为往往只要有了正确的约束，在某种程度上约束就等于自由。在约束之下，它们会提出富有创造力的解决方案，真正解决你提出的问题。这就是为什么你应该给它们指定最终结果（Outcome）。这也正是 Nick 正在实验的项目——“目标驱动开发”（Outcome-Driven Development）。所以，关键不在于过度规定 Agent 达成目标的具体步骤，在某些情况下过度约束反而会导致性能下降；关键在于给它一张地图并告诉它：“你必须到达这里。当这个命令返回该结果时，你就知道自己到了。”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Uh yeah, and so this is a concept that you know, Nick and I talk about, right? And it sounds like we're being uh in some ways we're trying to wrap determinism around LLMs, uh but we actually don't want to do that. And it's also something to the spirit of what the amp team is talking about. Uh the agents are in in intelligent. They're they're capable. We want them to be creative, actually. Because oftentimes if they have the right constraints, and then oftentimes constraints can be can equal freedom, right? In a way. Uh then they will come up with creative solutions and actually solve what you said. That's why you give them the outcome. That's why, you know, Nick's project he's experimenting with is outcome-driven development. Um and so, it's not about over being overly prescriptive in how the agent achieves things. Um that can actually lead to lower performance in some cases. It's more about giving it the map and saying you must get here. You'll know you're here when this command returns this.</p>
+</details>
+<p><strong>Speaker B</strong>: 是的，你没必要去硬性规定它如何到达那里。随着像前沿模型的发展——无论是 Fable、Astra、Saul 6.1 还是 Opus 5.5——这一点每天都在变得越来越明确。它们都非常擅长发挥创造力，至少我是这么形容的。如果你告诉它们“这是我想达到的终点”，而不去硬性规定它们必须走的路线，它们可能会在探索过程中确保覆盖到更多的边界情况。它们可能会自己摸索出某些机制，或者向你提出一个能解开关键卡点的问题。但如果你只是死板地规定“你必须先到这里，再到这里，然后再到这里”，它们就绝不会偏离。而你其实希望它们能有一点自由探索的浮动，同时又能抵达正确的目标终点。正如我所说，这是我们在最新一批前沿模型中才真正体会并欣赏到的特质，在这些模型上它真正变成了现实。展望未来，这只会越来越好。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Yeah. You don't necessarily have to prescribe how it gets there, though. And this is true more and more true every single day with like the frontier models. Fable, Astra, Saul 6.1, uh Opus 5.5. They're all really good at being like you being creative is like the way I I describe that. But, if you give them This is where I want to get to and don't necessarily tell them the path that they need to take, they might wander and make sure that they catch more edge cases. They might figure something out or ask you a question that unlocks something. But, if you're just like you have to get here and then here and then here, they may not sway from that. And you want them to sway a little bit, but get to the right right end goal. And like I said, this is something that we we've only come around to really appreciating in the latest batch of Frontier models. Uh where it's really becoming possible. So, going forward, it's going to just get better.</p>
+</details>
+<p><strong>Speaker A</strong>: 没错。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Yep.</p>
+</details>
+<h3 id="tdd-验证循环与-midnight-snack-实机演示" data-reading-heading="">TDD 验证循环与 Midnight Snack 实机演示</h3>
+<p><strong>Speaker B</strong>: 因此在运行过程中，你需要与你的 Agent 建立起类似传统 TDD 那样的“红-绿-重构”循环。在每一场 AIE 活动中，大家都在谈论循环，这里也不例外。但你可以将它直接运用到验证环节本身：验证这个问题、复现它、展示给我看，修复它，然后向我出示证明。而“你将如何向我出示证明”与“即将合入的代码修复”同样重要，因为正是这种证明能让你放心省心，让你能够信任模型去切实完成工作。当它告诉你“嘿，我搞定了”时，你知道它是真的完成了，因为它已经以某种形式向你证明了这一点。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: So, when it's going, um you want to get into like, you know, the typical TDD like red, green, refactor loop with your agent. Um we've talked You've heard about loops, you know, at every one of these AIE events, and um it's no different here, but you can use that within the verification piece itself. Verify this, reproduce it, show me uh fix it, and then show me the proof of that. And how are you going to show me the proof? That's just as important as the fix that's going to go in, because that's what's going to leave leave you alone and allow you to trust the model to actually do the work. And And then when it says, "Hey, I'm done," you know that it's done because it's proved it to you in some way.</p>
+</details>
+<p><strong>Speaker A</strong>: 完全正确。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Absolutely.</p>
+</details>
+<p><strong>Speaker B</strong>: 在这个示例中，你可以运行 <code>Snack Doctor</code>。我们现在就直接快速运行一下：<code>p Snack Doctor</code>。程序运行完毕，为我们展示了一系列执行过的检查项。它正在检查我们是否安装了 Node、是否安装了 Chromium、会话是否存在、它是否真正处于运行状态，以及是否成功完成了构建。这就是我们运行的快速诊断检查，包含了许多不同的环境检查项。接着我们运行下一条命令：<code>Snack Join Ada at example.test</code>。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: So, in this example, uh you can run Snack Doctor. Let's just go ahead and run that real quick. P Snack Doctor. And so, this uh this ran, and it's showing us um you know, a bunch of checks that it did. So, it's checking that we have Node, that Chromium's installed, uh that our session exists, uh that it's actually running, and that it successfully built. So, that's like what we're running as a quick doctor check, just a bunch of different things. So, then we run the next command, Snack Join Ada at example.test.</p>
+</details>
+<p><strong>Speaker A</strong>: 抱歉，我们现在都不手打命令了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Sorry, we don't type anymore.</p>
+</details>
+<p><strong>Speaker B</strong>: 好的，它给我们返回了结果。查看 <code>Snack storage</code>：存储区是空的。它实际上并没有把 Ada 放进去。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Okay. Gave us the result back. Snack storage. Storage is empty. It didn't actually put Ada in there.</p>
+</details>
+<p><strong>Speaker A</strong>: 在现实场景中，这正是你从整套系统中汲取巨大价值的关键节点——因为就在这一刻，你的 Agent 意识到了：“我还没有完成，我不能把这个半成品丢在一边不管。”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: So, this is the point at which in the real world your agent you've just gotten the value out of this entire system cuz at this moment your agent realizes I am not done and I'm not going to drop this work on the floor.</p>
+</details>
+<p><strong>Speaker B</strong>: 没错。如果你重新加载，再执行一次完全相同的操作，瞧！我们现在给应用装上了眼睛。它能看到这些状态，能执行这些命令，能够理解并改变 Midnight Snack 这个应用的世界，看到由此产生的结果，进而解读接下来的变化。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Yep. And if you reload it, do the same thing one more time. Boom. We have now given our app eyes. It can see this. It can run these. It can make it can make sense and change the world of the application, the Midnight Snack application, and see the results of that and then be able to interpret what happened from there.</p>
+</details>
+<p><strong>Speaker B</strong>: 所以你可以试一试。如果我们为它应用持久化修复并添加正确的文本副本，接着我们就可以运行验证测试。让我们运行一下它。这启动了浏览器，但是失败了。我其实刚才没有真正去执行测试，但如果我们应用了修复，如果我们应用了修复，它就会成功展示出来。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: So, you can try that. You can If we like apply the persistence fix to it and add honest copy to it, then we can um run the proof. Let's run that. And that kicked off a browser and it failed. I didn't actually run the test, but if we had run the fix. If we had run the fix, it would show that.</p>
+</details>
+<h3 id="执行凭证receipts与自进化代码库的数据价值" data-reading-heading="">执行凭证（Receipts）与自进化代码库的数据价值</h3>
+<p><strong>Speaker A</strong>: 好的，我们最近深思熟虑、频繁探讨并正逐步推广到更多应用中的一件事，就是“凭据”（Receipts）这个概念。举个例子，比如工单系统或客户帮助支持系统，人工客服在处理工单时会展现出一定的水准，并将其视为优质的客户响应或服务，而我们希望将这种过程以某种形式留存下来。我们为什么要这样做？原因有很多，稍后我们会深入探讨其中一些。但是再次强调，如果大家或者说许多人都在朝着运行 RSI（递归自我改进）测试架构和自进化代码库的方向迈进，那么我们今天所做的一切、你的 Agent 整天进行的每一次运行，都是极具价值的数据。眼下它就非常宝贵，因为你可以将其输入到 LLM 中以获取所需的修复；而且……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Okay, one of the things that we're we're thinking about a lot lately and talking about and starting to roll out into more applications is this like concept of receipts. Um you know, you can you can take like a ticket like a a help ticket system where it's there's a certain performance the way that a human would answer a ticket and consider it done well as an excellent, you know, customer response or service. And then what does the um like preserving that in some way, for example, right? Uh why do we want to do that? There's a ton of reasons and we'll get into some of them, but again, if you think about if it if we all or if it seems that in some way many many folks are heading towards, you know, running RSI harnesses and self-evolving code bases, everything that we do today, everything that your agent does today, every run all day long, that is very valuable data. It's very valuable data right now because you can feed it into LLMs and and get fixes that you need. It's</p>
+</details>
+<!-- chunk 6/8 -->
+<h3 id="构建评估基准与递归自我改进rsi循环" data-reading-heading="">构建评估基准与递归自我改进（RSI）循环</h3>
+<p><strong>Speaker A</strong>: 未来随着工具链不断完善，搭建递归自我改进（RSI）循环会变得越来越容易，这些数据将展现出难以置信的巨大价值。因为到那时，你就拥有了一套记录系统实际表现的完整数据集。你可以据此构建出极其完备的评估基准（evals），让智能体在其上进行爬山算法（hill climbing）优化——也就是不断循环运行、评估自身表现并持续迭代，直到能力变得越来越强，对吧？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: incredibly valuable data in the future as tooling improves and it gets easier and easier to set up RSI loops because then you've got a data set of exactly how your system performed that you can create, you know, very comprehensive evals for and have agents hill climb on, which means loop and see their performance and then continue going until they get better and better and better, right?</p>
+</details>
+<p><strong>Speaker B</strong>: 没错。到那个阶段，它们就能利用先前运行留下的证据，自主通过测试了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Yep. And at that point they're able to pass on their own using that evidence from the previous runs.</p>
+</details>
+<h3 id="解耦静态断言与引入系统一system-1模型" data-reading-heading="">解耦静态断言与引入系统一（System 1）模型</h3>
+<p><strong>Speaker A</strong>: ［清了清嗓子］所以现在，如果我们修复了那段代码，状态确实持久化了，但它也可能会“说谎”。比如我们刷新页面后，页面文本可能提示还在候补名单中（waitlisted），但实际截屏上显示的却是“您已入选，席位已确认”。这两者并不完全一致，这里可能就会直接判定失败，因为它们不是严格吻合的。</p>
+<p>这其实就是在跳出传统的静态测试思路。我们该如何在不与屏幕具体文本产生极其脆弱、强耦合绑定的前提下，去证明程序确实正常工作了呢？如果直接运行诸如 <code>pnpm snack judge</code> 之类的评测命令，它可能会报错失败；即便程序其实正常工作了、界面也提示我们进去了，但判决模型却没有捕捉到。原因就在于确认提示文本打破了原本约定的契约，二者并非严格一一对应。那么，如何在不对所有流程增加重度紧耦合的前提下解决这个问题？答案就是引入系统一（System 1）模型，我们马上就会深入探讨这一点。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: [clears throat] So now, if we fix that code, it now persists, but it can also lie. So after we reload the page, it could say wait listed, but what the screenshot might actually say is you're in, your seat is confirmed. Those don't exactly match up, and so that might be like a failure right there because they don't exactly match. So this is kind of getting away from the static testing piece of it. Like how do we prove that it worked without having to be like very tightly coupled to the actual text on the screen for a very contrived example. And so if we just run like, you know, P snack, judge, should run that and it failed because even though it worked and it says that we're in, Jev did not the the model did not see that. And it's because the the confirmation text breaks the contract. It's not exactly one-to-one. So how do we fix that without adding a lot of tight coupling to everything that we're doing. The answer is those system one models, which we'll get into here.</p>
+</details>
+<p><strong>Speaker B</strong>: 没错，正是如此。向之前还没听说过这个概念的朋友简单介绍一下，“系统一”与“系统二”的划分其实起源于心理学。它是理解人类大脑运作和思考方式的一个非常实用的模型。系统一是极速做出的直觉决策，完全是自主无意识的。就像开车时有人突然向我别车变道，我完全不假思索地就打方向避让了；或者走着路快要摔倒时，下意识就调整了平衡。而系统二则像是：“我需要搞清楚我的人生到底该干什么”，于是决定去订个爱彼迎（Airbnb）民宿，一个人闭门思考整整三天。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Yeah, absolutely. So, just to introduce it for anyone that hasn't heard of it before, the you know, concept of system one, system two comes from psychology actually. It's like a useful model to think about how the human brain works and how he thinks. So, system one is super fast decisions. It's It's, you know, autonomous. Like, someone swerved at me while I'm driving and I just corrected without even thinking about it kind of thing, right? Some I was about to lose my balance and I I corrected it. And then system two is like I need to figure out what I'm going to do with my life. So, I'm going to go book an Airbnb and like think about it for 3 days.</p>
+</details>
+<p><strong>Speaker A</strong>: ［笑声］把这个逻辑映射到大语言模型领域，我们现在不仅有了 Jev，仅仅两天之后 Cloudflare 又紧接着发布了 Cleft，速度甚至更快。能够探索如何将这些工具组合成新型基础原语，并应用在不断演进的 AI 架构中，确实是一件令人兴奋的事情。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: [laughter] And so, you know, applied to the world of LLMs now we've got Jev and then immediately after we've got Cleft from Cloudflare, you know, 2 days later. That's even faster. And so, there's It's It's a really exciting time to think about all the ways that we can combine these tools together to make the new primitives that we're going to continue to see in evolving AI architectures.</p>
+</details>
+<p><strong>Speaker B</strong>: 对。换个说法，比如那边的那盏灯，如果我问你：“它投射出来的是什么颜色？”你脱口而出就会说是黄色，这就是系统一思考，你瞬间就知道颜色。但如果我问：“它为什么投射出黄色？”那我们就得动脑筋了，这涉及深入思考，比如探讨为什么这种物理机制会辐射出发黄的光线。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Yeah. To get Put it another way, that light right over there, if I said, "What color is that projecting?" Quickly you would say yellow. That's like system one thinking, right? You just You know the color. If I said, "Why is it projecting yellow?" Well, because we're thinking. Now we're thinking, you know, we could go down like a physics of why the light emits yellow.</p>
+</details>
+<p><strong>Speaker A</strong>: 我们为什么会在这里探讨这个？［笑声］</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Why are we here? [laughter]</p>
+</details>
+<p><strong>Speaker B</strong>: 这正是引出我们今天真正想和大家分享的主题的方式。［笑声］</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: That's how we got to really what we want to talk to you about today. [laughter]</p>
+</details>
+<h3 id="实战互动游戏破坏者与侦探" data-reading-heading="">实战互动游戏：破坏者与侦探</h3>
+<p><strong>Speaker A</strong>: 在这里我们准备了另一个可以一起玩的小游戏，一个基于 snack 项目的快速实战游戏。角色分为“破坏者（Saboteur）”和“侦探（Detective）”。破坏者会选定一个 snack 实例，并在里面秘密埋入一个随机缺陷（bug），我们事先并不知道会是哪个 bug，完全是随机注入的。接着由你扮演侦探，仅借助 snack 工具把它揪出来，并确证其存在——不仅要指出 bug 是什么，还要给出你找到它的实证。</p>
+<p>如果你已经把这个网站或代码仓库克隆到了本地，就可以直接在终端运行 <code>pnpm snack up --bug random</code>，让它跑起来，看看能不能找出问题。我们现场试一下，稍等它启动。刚刚的参数是什么来着？<code>--bug</code>？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: So, in this we've got another game that we can play within within this. It's a quick game with the snack. We have saboteur and a detective. And so, in this the the saboteur will pick a snack. It'll put a secret bug in there, randomly putting a bug in there. We don't know which. It'll just be random. And then you, the detective, find it with with snack alone. And then prove what that is. Name the bug and give give proof that you found it. So, this is something that you can do if you've pulled down the website or pulled down the repo, um you can just run pnpm snack up --bug random and uh give it uh let it run and see if you can find it. So, let's try that. We'll just give it some time to go. Uh what was it? --bug</p>
+</details>
+<p><strong>Speaker B</strong>: <code>bug random</code>。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: bug random</p>
+</details>
+<p><strong>Speaker A</strong>: 噢，之前已经有一个在跑了。我先把旧进程杀掉，关掉对应的那个。好了。［清嗓子］在这里它运行起来了，给出了应用的 URL 地址，处于非无头（non-headless）模式，所以我们能在屏幕上直观看到它。提示显示 bug 在服务停止前保持隐藏。我们需要在另一个终端窗口保持它运行，并执行 <code>pnpm snack doctor</code>。我们来运行一下。</p>
+<p>好，整个诊断命令执行完毕了。可以看到 Node 进程在，Chrome 也在，会话已经建立。来看这里的凭据（proof），最后一张凭单显示失败（fail），但这证明的是已经不存在的代码，所以无法提供确证，那是上一次运行的残留记录。我们再跑一次看看，还是一样。有人能看出来这个 bug 是什么吗？有想法吗？是邮箱写错了？对，正是。端口不对？我记得刚才是在 62174 端口跑的。不对，那个端口是对的。我再试一次，我们还剩不到一分钟。针对那个环节，确实需要用到它。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Oh, it's already running. Let me kill that. Kill the right one. Okay. So, [clears throat] in this uh it ran uh it's got the app URL, it's running, it's not headless, so we can see it. The bug uh says hidden until you stop up. Yeah, right. Um leave this running in another terminal, run pnpm snack doctor. So, let's run that. All right, so that ran the whole thing and we can see node's there, chrome's there, it's got a session. The proof here, uh the last receipt says fail, but the source is now uh that proof is for code that no longer exists, so it wasn't able to prove that. That was a previous run. Let's run it again. Same thing. Uh can anyone tell me what the bug is? Any ideas? Wrong email? Yep, exactly. Port's wrong. Uh I think it was running at 62174. No, that was right. Let me try it one more time. We got less than a minute. Uh, for that one, yeah, you do.</p>
+</details>
+<p><strong>Speaker B</strong>: 工具本身把这部分做成了可选配置。即使你没有配置外部服务，也可以跑完所有练习，流程会照常推进；但如果你手里有可用额度，这也是一个极好的实验机会。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: The tools make it optional though, so you can run through all the exercises if you don't have it and it'll just go, but um, it's also good opportunity to experiment with one if you do.</p>
+</details>
+<p><strong>Speaker A</strong>: 是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Yeah.</p>
+</details>
+<p><strong>Speaker B</strong>: 它们的调用开销其实非常便宜。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: They're they're pretty cheap calls.</p>
+</details>
+<p><strong>Speaker A</strong>: 注册时平台就会赠送 5 美元的免费额度，我觉得那些额度足够你用上三年了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Uh, they give you $5 for free when you sign up and I think that'll last you like 3 years.</p>
+</details>
+<p><strong>Speaker B</strong>: 确实。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Yeah.</p>
+</details>
+<p><strong>Speaker A</strong>: 好。［清嗓子］继续吧，下一项。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: All right. So, [clears throat] um, yeah, go ahead. Next one. Yeah.</p>
+</details>
+<h3 id="评测结果判定与验证闭环" data-reading-heading="">评测结果判定与验证闭环</h3>
+<p><strong>Speaker A</strong>: 我们连续跑了几次。刚才的输出可能有点小问题，我稍后排查调试一下。挺有意思的是，连我自己这套特意构造的验证案例本身，竟然也需要写一套验证测试来保障正确性。</p>
+<p>不过大家可以看到，可能出现的几种判定结果包括：结合输出正确指认了具体的 bug；声称系统正常但实际上出了问题；声称系统正常且实际上确实正常；错误指责了一个根本不存在的 bug；或者虽然找到了正确的 bug 但缺乏实证。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Um, so, yeah, we ran it a couple times. I think there was some problem with my output. I'll debug that. Uh, it's funny, I need some verification tests around my verification my contrived verification examples. Um, but the, you know, the the outcomes that could come up are uh, that it named the bug uh, with output, uh, said it works but it didn't, uh, said it works but it did, uh, blamed a bug that wasn't there, um, and then had no, it was the right bug or no evidence.</p>
+</details>
+<p><strong>Speaker B</strong>: 没错。这又回到了我们刚才强调的核心观点：虽然眼前这是一个专门构造的演示案例，但在实际工程中，你的团队可能会采取不同的评分方式，关注不同的评判标准。这套机制具有极高的灵活性。最关键的是迈出第一步，建立起基线评估指标（eval baseline），坚持规范化使用，并与团队一起持续迭代演进。最终要达到的理想状态是：每次代码变更和 PR 提交都会自动跑一遍评估流程，让你清晰明确地知道这次修改究竟是安全合入、确实带来了改善、让系统变得更糟、还是完全没有产生任何实质影响。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Right. And this is just getting back to that point of uh, a contrived example, of course, but your team might score differently or have different criteria that you're looking at. This is super flexible. The most important thing to do is to start and to create one, create an eval baseline and to use it consistently and to evolve it together as a team, and then get to the point where your changes and your PRs automatically flex that eval so that you can get to the point where you know if changes are safe to land or if they're improving things or if they're making things worse or if they're not changing things at all.</p>
+</details>
+<p><strong>Speaker A</strong>: 对。每次运行测试只要出现未命中，就会在链路映射图谱中新增一条记录。这能为我们清晰呈现达到当前状态所经历的各个步骤以及背后的原因。每次遭遇失败，我们就能针对性地修复它，从而让我们离目标更近一步。</p>
+<p>比如第一次排查可能是纯内存存储的问题，数据根本没有持久化；或者是输入了错误的电子邮箱地址；或者是确认凭据丢失了。每一次我们只要能拿出实证证明抓住了问题，后续就不会在同一个坑里跌倒。但对于过度承诺（over-promised）的情况，截屏对比或判决判定可能会误报已经通过，而实际并未通过。控制台报错（console error）也是类似情况：控制台可能干干净净没有任何异常输出，但凭单中记录了故障；或者在异常抛到控制台之前就已经被静默捕获吞掉了。各种边界情况都有可能发生。当然，结果也可能是没有任何异常，所有组件运转如常，这也是一种真实的返回结论。</p>
+<p>当你像我们刚才那样运行 <code>doctor</code> 命令时，它会输出类似的历史案例，甚至会展示对应已不存在代码的旧证明。这是因为从昨天到今天，你的业务代码可能已经发生了翻天覆地的重构，或者遇到了不同的外部触发条件，比如著名的日期解析 bug 等。因此，我们希望把工具构建得足够灵活，避免被诸如此类的干扰因素绊倒。这在本质上其实又回归到了基础的单元测试思想，只是我们正在以一种确定性检查的形式赋予大模型这种能力，使它们能够以此为基础实现自愈与自我持续改进。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Yep. Uh and every time it runs and it misses, um that's a new line that can go in the map. So, it can give us ideas of like the steps that we're getting there, why we're getting there, and kind of like you know, every time it fails, it's getting us one step closer cuz we can fix that. So, the first time uh is memory only, um like it's not storing anywhere but in memory. Uh we're putting in a wrong email address. Uh we've lost our confirmation. Every time we can prove that we've caught that and then we don't run into that again. Um but then the over promised one, uh the screenshot or the judge running uh can tell us that it um it actually did pass when it didn't. Same thing with console error. Uh there might not be anything in the console, um but it's in the receipt or it might not be it might be getting caught um before it gets to the console. Um yeah, anything like that. Or it could just be none. There's nothing to find. Everything works. Um and that's a real answer as well. Um yeah, if you run the doctor, kind of like what we were doing, it was showing this where it was showing the previous uh examples. Um it's showing proof that no longer exists. Uh that's because your code might have changed quite a bit between yesterday and today. Um it might be different circumstances, like a a famous date bug, um for example. It might be a number of different things. So, uh we want to build the tools in such a way that they're flexible enough to uh not get caught by um issues like this. Uh this is all kind of like going back to you know, basic unit testing examples, uh but bringing that kind of like deterministic check to the models in a way that they can self-heal and self-improve from there.</p>
+</details>
+<p><strong>Speaker B</strong>: 毫无疑问。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Absolutely.</p>
+</details>
+<h3 id="回归人类开发者的工程直觉" data-reading-heading="">回归人类开发者的工程直觉</h3>
+<p><strong>Speaker A</strong>: ［清嗓子与咳嗽］好，所以再次把这一点与我们过去作为人类开发者所做的事情联系起来：我们过去能够直观看到什么、我们会怎样对应用程序进行各种压力与边界测试、我们会如何全方位逐项检查校验——这正是我们一直以来探索的核心。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: [clears throat and cough] Okay, so this again to tie it back to what we used to do as human developers, right? What we used to be able to see, how we would flex the application, how we would check everything. Uh, that's really what we've been</p>
+</details>
+<!-- chunk 7/8 -->
+<h3 id="通过确定性-cli-与开发者工具赋能-agent" data-reading-heading="">通过确定性 CLI 与开发者工具赋能 Agent</h3>
+<p><strong>Speaker A</strong>：...讨论并将其沉淀到代码中。因此，通过将其固化为代码，并在确定性的 CLI（命令行界面）中提供出来，我们就能获得与开发者深夜在 Chrome 浏览器中排查和修复问题时完全相同的路径和体验。这才是真正释放交付速度、推动工具演进、提升代码交付规模，并且以更安全的方式完成交付的关键所在。</p>
+<p>再次强调，我们给出的建议是：如果你手头维护着一个 Web 应用，而目前还没有一个定制的校验器 CLI，那么这是你能够为代码库启动的杠杆率最高的事情之一；同时还要构建基础评测（eval），用来定义你的应用中“什么才是合格与优秀的表现”。此外，还要让你的 Agent 有能力洞察性能、网络请求、流量、页面渲染等方方面面的状况。</p>
+<p>因此，如果你身处 Web 应用领域，就为 Agent 配备 Chrome 开发者工具（Chrome DevTools）；如果你交付的是原生客户端，比如 iOS 或 macOS 应用，目前也有替代的开源项目，而且每天都有更多新工具涌现出来，你可以将它们挂接上去。但在所有这些方案中，贯穿始终的共通底座在于：你必须赋予你的 Agent 洞察绝对所有细节的能力，就像你作为一名人类开发者平时所能看到的一切一样。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: ...talking about and moving it into code. So, by moving it into code and making it available in a deterministic CLI, then we can get to the same path and the same experience that we would flex as, you know, developers when in Chrome trying to fix something late at night. And that's really what unlocks the speed and the evolution and the ability to scale up the amount of code that you're delivering and to do that in a more safe way.</p>
+<p>Again, the recommendation is if you have a web app and you don't already have a custom verifier CLI, that's one of the highest leverage things you could start with for your codebase, the foundational eval as well that shows what good looks like in your application. And then also giving your agents the ability to see all aspects of performance and networking and traffic and rendering, etc.</p>
+<p>And so, giving it Chrome DevTools if you're in the web app land. If you're shipping native clients, if shipping iOS or macOS apps, then there's an alternative projects and more coming out every day that you're then going to attach to there. But the common foundation here across all of them is that you need to give your agent the ability to see absolutely everything that you would normally see as a developer.</p>
+</details>
+<p><strong>Speaker B</strong>：没错，你赋予它的能力越多，给它的手臂或眼睛越多，它就越能从你手中接管更多的工作。接着，你只需要培养它的直觉，让它知道什么时候该使用这些工具、如何使用它们。思考一下你自己平时的排查方式：好吧，如果报过来这么一个 bug，我会如何去复现它？好好琢磨这个过程，如果你能把它拆解开来——当然这取决于你的具体应用和所编写的代码类型——你或许就能以一种特定的方式构建它，让它学会思考：“哦，对我们而言，这往往涉及大量登录认证相关的问题。比如，它是否正确设置了 Cookie？Cookie 的过期时间是否合理设置？”等等这一切。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Yeah, the more that you can give it, the more arms or eyes that you can give it, the more it's going to be able to take over from you. And then you just have to give it the intuition about when to use those, how to use those. Think about the way that you decide, okay, if this bug came in, how would I reproduce this? Think about that and if you can break it down and this is dependent on your application and the type of code that you're writing, you might be able to do that in a way where it can like think, "Oh, you know, for us it's a lot of sign-on things. Like, is it properly setting a cookie? Is it setting an expiration in that like all of that?"</p>
+</details>
+<p><strong>Speaker A</strong>：在实际业务工作中正是如此，对吧？这种方法完全可以推广开来，适用于你能想到的任何有软件支撑的领域和行业。但其核心精髓完全在于：“嘿，那个过去我们需要整天纯手工一凿一斧雕琢代码的世界，即使没有彻底翻篇，至少也正在以极快的速度演变。面对现在的变化，我们应该把哪些底层的系统基本功引入进来，从而真正加速软件开发？”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: ...in the job, right? You can go again like this is applicable to every field and industry that you've got software for. But it's really just all about like, "Hey, that world where it made sense for us all to hand-chisel code all the time is at least evolving or at least changing rapidly. What are the foundational—what are the same system fundamentals that we bring to this now so that we can accelerate software development?"</p>
+</details>
+<p><strong>Speaker B</strong>：完全赞同。包括分析开销昂贵的调用栈（call stacks）。但至关重要的一点在于获取那些输出，确保它能为你提供关于发生了什么的详细输出结果、系统的运行时状态等所有细节。这样模型才能对其进行审计；随后你可以再次运行它，让它修复问题，重新运行，并验证这些修改是否真正生效、问题是否确实不复存在。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Yep. Doing expensive call stacks. But the important thing is that getting that output, making sure that it's giving you detailed output about what happened, the state of it, all of that so that it can be audited by the model, and then you can run it again, it can fix it, run it again, and verify that those changes actually took hold, and that there's no longer an issue.</p>
+</details>
+<h3 id="保留凭据receipts与自动化修复-pr" data-reading-heading="">保留凭据（Receipts）与自动化修复 PR</h3>
+<p><strong>Speaker A</strong>：对，再怎么强调“保留凭据（receipts）”的价值都不为过。如果你有历次运行记录，它可以涵盖用户的整个旅程。假设这是一个电商应用：当用户登录、访问页面时，究竟发生了什么？他们的操作流是怎样的？他们是否遭遇了任何报错？他们是否经历了长达 7 秒才看到商品目录渲染呈现？他们是否能成功将商品加入购物车？是否存在弃购现象？</p>
+<p>所以，现在就把这些数据全部保存下来。因为每一个运行记录和凭据都可以喂给大语言模型（LLM）；你甚至可以搭建一套整夜不间断运行的系统，专门监听和检索最新产生的运行凭据，将其聚合起来分析：“嗯，今天我们在缓存模块中观察到了 8 次故障，因此今晚我要针对该问题自动提交一个 PR 来彻底修复它。”接着，“哦，在这个 PR 里，我拥有充足的工具和凭据来证明我试图解决的问题确实已经被修复了。”</p>
+<p>此外，我们从那些能够以极高吞吐量交付 PR 且不引入错误的人那里看到的建议是：他们还能够添加用于人类最终监督与审查的内容。不仅仅是新功能的静态屏幕截图，更是完整的操作录像，展示“我是这样完整走过应用流程的，这是我的操作流，这是我的体验过程，这些是各个界面的状态，并且我成功达成了预期目标”。这样一来，当作为工程师的我早上醒来、需要在清晨快速审阅 15 个关键 PR 时，我可以先看那段录屏，确认流程确实走通且符合预期；然后，如果这是我确实需要人工仔细 review 的代码，我再着手深入查看具体的代码变更。</p>
+<p>随着我们持续见证自演进工具（self-evolving tooling）的发展，我认为所有这些都将展现出巨大的价值。而且你想想这意味着什么：当自演进工具普及成为行业默认标准、人人都开始使用它时，对于那些保存了干净数据集、能够清晰界定“这是我们在此应用中想要达到的状态，并且希望你完整实现并快速迭代改进”的团队来说，将拥有无与伦比的先发竞争优势。如果你的团队没有坐拥这样一座数据宝库，而你的竞对拥有并运行着同类应用，他们在开发迭代周期上的速度将会远远把你甩在身后。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: And yeah, and again can't overemphasize the value of keeping receipts. So, if you have runs, it can be the entire user journey. Let's say it's an e-commerce app. It's like when they log in, they hit the page, what happened, what was their flow? Did they see an error at all? Did they see 7 seconds of time to see your catalog come into view? Were they able to put something in their cart? Was there cart abandonment?</p>
+<p>And so, save that all now because every single one of those runs and receipts can be fed to LLMs, or you can even set up a system that's running all night long and is looking for the latest receipts being produced, and is aggregating them, and saying, "Well, today we saw eight failures in the caching module. So, I'm obviously going to issue a PR tonight to fix that properly." And then, "Oh, I have the tools I need to prove in this PR that the issue I was trying to solve has been fixed."</p>
+<p>And then the recommendations that we're seeing from folks, too, that are achieving like super high scale PR shipping without errors: they're also able to add the stuff that is for us as humans in our oversight still. So, not just screenshots of the feature, but like a recording of "I walked through the app this way. This was my flow. This was my experience. These were the states and I got to the goal." So, that if I'm waking up and trying to rip through 15 important PRs the first thing in the morning, I can first start watching that and make sure okay, it actually got to the end and worked. Then I can start looking at code if it's something that I'm actually going to like human review.</p>
+<p>And again, all of that I think is going to be immensely valuable as we continue to see evolve self-evolving tooling, really. And think about what that means though, because when we get to the point where self-evolving tooling is just like the default and people are using it, there will be a specific advantage for folks that have preserved clean datasets of things that they can say: this is what we are trying to get to in this application and want you to get all the way there and rapidly improve it, right? If you're not sitting on a mountain of that and your competitors are and they have similar apps, they're going to be able to go significantly faster in their development cycle.</p>
+</details>
+<h3 id="构建信任与证据阶梯测试与问答环节" data-reading-heading="">构建信任与证据阶梯：测试与问答环节</h3>
+<p><strong>Speaker B</strong>：是的。这正是在不断建立这种信任，以便我们能够在后续开发中持续改进我们的应用；同时，我们对之前构建的所有功能都有完备的检查机制。我们拥有单元测试，拥有评估基准（evals），拥有冒烟测试（smoke tests），拥有应用所需的一切验证手段；并且我们让模型具备了解读、运行乃至进一步完善这些测试的能力。这样一来，每当我们引入新功能时，就可以运行此前积累的所有测试用例，确保我们没有破坏任何既有功能、没有任何回归缺陷（regressions）。我们就像沿着“证据阶梯”拾级而上，随着推进不断累积确凿证据，确保我们的应用始终完全按预期运行。这最终会演变成体现我们应用全部行为特征的真实规范（spec）。</p>
+<p>好，太棒了。我们还剩下刚刚超过 5 分钟的时间。我先暂停一下，看看现场大家是否还有其他问题。那位先生，请提问。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Yep. And this is just building up that trust so that we can continue to improve upon our app as we go, but we have these checks for everything that came before it. So, we've got unit tests, we've got evals, we've got smoke tests, we've got whatever our application needs and we've got a way for the model to be able to interpret and run those and improve them in such a way that if we add new features in, we can run all of the previous ones and make sure that we didn't actually break anything, no regressions, and we can just mount and climb that evidence ladder, building evidence as we go, and ensure that our app is working exactly as expected. And that really becomes the spec that shows what our app does.</p>
+<p>Okay, cool. So, we've got just over 5 minutes. I'm going to pause and see if there's additional questions. Yes, sir.</p>
+</details>
+<h3 id="提问skills-约束与-ci--hooks-强制执行的权衡" data-reading-heading="">提问：Skills 约束与 CI / Hooks 强制执行的权衡</h3>
+<p><strong>Audience Member</strong>：那么这种规模化……就我个人而言，我很想了解一下你们对此的看法。我个人可能不太倾向于完全依赖 Skills，因为根据我的经验，模型到底会不会严格遵循这条路径并真正使用这些 Skill，很大程度上取决于模型自身的意愿（清了清嗓子）；这相比于直接通过 CI 在流水线中强制执行这些检查命令，确定性要差一些。是的，这也是……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Audience Member</strong>: So, does the scale—I would personally, I'm curious with how you think about it. I would personally almost lean away from skills cuz in my experience it's, you know, up to the model whether or not it's going to actually follow that path and use it versus like having the CI actually enforce that these commands get run as well. Yeah, that's what—</p>
+</details>
+<p><strong>Speaker A</strong>：也就是说，核心问题在于平时应该如何正常且有效地运行这些检查，对吧？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Like the answer or the question is how do you run these checks normally, right? Effectively.</p>
+</details>
+<p><strong>Audience Member</strong>：（清了清嗓子）</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Audience Member</strong>: [clears throat]</p>
+</details>
+<p><strong>Speaker B</strong>：是的。你可以定期运行它们，比如把它们集成到 CI 流水线中作为一部分；也可以把它们配置为各种钩子（hooks），比如 Git hook，尽管那可能是我最后才会考虑采用的方式；或者也可以配置成类似 Claude Code hook 这样的机制。这取决于你的团队在使用什么工具以及具体的协作方式。我自己可能会构建一个完整的 Python 扩展或后台常驻进程，让它在后台默默运行，并在执行过程中不断注入相关上下文信息。</p>
+<p>实现这个目标有很多种不同的方式，但迄今为止在整个团队中最简单、能确保所有人步调一致的做法——我现在可以直接这么讲——就是在你的代码仓库中放一个 <code>AGENTS.md</code>，而不是 <code>CLAUDE.md</code>，并在里面写明类似规范：“在发生代码变更时，请运行此命令进行校验”，或者“每次更改关键逻辑时，或者在发起 PR 之前，执行此操作”。无论你想在里面拟定怎样的措辞，这都是让整个团队达成统一约定的最简便途径，而且 Agent 基本上很难绕过或忽略这条指令。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Yeah, you can run these regularly. You can have them be like part of CI for example. You can have them be various hooks that could be like a git hook although that's probably the last one I would reach for. We could have it be like a Claude Code hook. It depends on what your team is using and how they're doing it. I might build like a full Python extension to keep things running in the background and just kind of like feed in information as it's going.</p>
+<p>There's a number of different ways that you can do that, but the easiest way by far to get everyone across the board—and I can say this now—just put an <code>AGENTS.md</code>, not a <code>CLAUDE.md</code>, in your app, and then have it say like, you know, "On change, verify things by running this," or like, "Every time you change significant things or before you open a PR, do this." Like whatever wording that you want to put in there, and then that's an easy way to get everyone across the board, and they really kind of have to go out of their way to ignore that or avoid it.</p>
+</details>
+<p><strong>Audience Member</strong>：如果是在本地开发，Hooks 同样非常有意义，对吧？因为可以在整个团队中共享这些 Hooks 配置。是的，完全没错。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Audience Member</strong>: Hooks are also relevant too if you're doing the local development, right? For the whole team cuz you can share hooks across the board. Yeah, absolutely. Yeah.</p>
+</details>
+<p><strong>Speaker B</strong>：嗯，我认为 CI 确实是其中的一项特性支持，但它并不是核心工具本身；真正的核心在于你在本地开发中所获得的敏捷迭代能力。因此，当我给 Agent 分配一项任务时，我可以快速运行验证，让 Agent 放手去干。你知道……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Well, CI is a feature of it, but it's not like the actual tool is like the rapid development that you get locally. So, I give my agent a task to do and I can just quickly run, like let the agent go. You know...</p>
+</details>
+<!-- chunk 8/8 -->
+<h3 id="通过-ci-反馈闭环实现多-agent-并行开发" data-reading-heading="">通过 CI 反馈闭环实现多 Agent 并行开发</h3>
+<p><strong>主讲人 A</strong>：我基本上会直接告诉它我最终希望达到的效果。比如我希望候补名单功能是这样的：我能够向候补名单添加一个邮箱地址，随后该数据会被持久化保存下来，并且我可以对此进行验证。具体验证方式比如是写入到了哪张数据库表中等等，诸如此类。</p>
+<p>好的，这个问题提得很好。问的是在 CI 环境中运行相比本地运行有什么优势对吧？其核心优势无疑是能带来更快的反馈闭环，这让我们能够以更快的速度迭代，并让我实现个人的并行化工作。因为我不再需要一次只盯一件事了。就拿现在来说，我手头上就至少有 3 个 Agent 正在同时运行。对我而言这算是极低的工作量了，主要是因为我正在参加技术大会。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: I basically tell it this is where I want to end up. I want the waitlist to be I want to be able to add an email to the waitlist and then it gets persisted and saved and I can verify that. So, this is how you verify it. It goes into this table, blah blah blah. Like whatever it might be.</p>
+<p>Yeah. No, good question. Sure. Yeah, what's the benefit of running it in CI versus like a local Sure. The benefits are definitely like a faster feedback loop, which allows us to run faster and allows me to parallelize myself because I'm no longer working on just one thing at a time. I'm working on at least right now I have three agents running. That's a very low day for me, but I'm at a conference.</p>
+</details>
+<p><em>（现场笑声）</em></p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><em>[laughter]</em></p>
+</details>
+<p><strong>主讲人 A</strong>：平时正常情况下，我通常会同时跑 10 到 15 个 Agent。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Normally, it's like 10 to 15.</p>
+</details>
+<p><strong>主讲人 B</strong>：他今天确实是在偷闲摸鱼了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: He's really taking it easy today.</p>
+</details>
+<p><strong>主讲人 A</strong>：整个工作流的核心思路就是：我把任务派发启动后，绝对不希望它一直在那儿干等着我，等我过来看时才对我说“搞定啦”，结果我跑起来一看，“不对啊，这根本没有做对”。那我岂不是又得重新设置引导它，期间我又会被其他 Agent 分散注意力，陷入无限的上下文切换循环。我整天都在不同项目之间来回切换。</p>
+<p>因此，我希望能赋予 Agent 足够完备的工具链，让它能够向自己证明代码已经按要求完成，并且能够以一种值得信赖的方式向我展示证据。这样一来，无论我是 5 分钟之后、1 小时之后，还是几个小时之后回过头来验收，我都能确信它已经竭尽所能地将任务推进到了真正的完成状态。我可不想一遍又一遍地重新写提示词去重启整个循环，因为那种机械的来回拉扯根本不是我工作中享受的部分。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: And the whole idea is like I'm going to set it off and I don't want it to be waiting on me and saying, "Yep, I did it." and then I go running and it's like, "No, that's not actually correct." and then I have to set it off again and I go get distracted by another agent again and I just continue that loop. I'm just constantly moving between projects. So, I want to give it the tools to where it can prove to itself that it did it and then prove to me that like show me the evidence in a way that I can trust so that when I come back to it it might be in 5 minutes it might be in an hour or a couple of hours I want to know that it has done the best possible job that it can to get done to a state of done so that I'm not just re-prompting it and starting that whole loop again because that's not the fun part of my job.</p>
+</details>
+<p><strong>主讲人 B</strong>：换句话说，尽管我们并不是每天都能完美达成这一状态，但我希望当天为重要上线任务所启动的所有并行开发泳道，在一天结束时我回过头来看时，它们基本上都已经正确无误地完成了。我最不希望看到的情况是，经过一整天的连轴转，让它们在后台默默跑着，而我在处理其他事务、穿梭于各个会议，结果最后回来时，还得逐轮进行微调和提示来推着它们走，那会导致极其严重的效率拖累，彻底阻碍我加快研发节奏。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Yeah, I would say another way to put it is that and we haven't everyday achieved this perfectly but I want to have all of the different lanes that I started that day for stuff that I felt was important to ship that day. I want to come back to them at the end and see them basically correctly done. What I don't want to do is have a whole long day and have them running in the background be doing other stuff and going to meetings and then come back and then actually have to turn by turn nudge any of them because that is like a significant slow down and it prevents me from going faster.</p>
+</details>
+<h3 id="自动化代码审查与减少交互轮次" data-reading-heading="">自动化代码审查与减少交互轮次</h3>
+<p><strong>主讲人 A</strong>：从另一个角度来说，我非常依赖 CI 环境、在 CI 中执行的自动化测试以及自动化代码审查流程。现场有多少人使用过像 Reptile、Code Rabbit、Codo 这类工具来做自动化代码审查的？确实不少。我非常依赖这些工具。我们团队使用的是 Reptile，它会给每次代码提交打出一个 5 分制的分数。如果它给出了满分 5 分，并且我所有的 CI 测试管线全部绿灯通过，那么对于把这批代码部署上线，我就能拥有极强的信心，确信它绝不会破坏生产环境。我们对 Reptile 已经建立了这种程度的信任。而对于这套流程而言，更至关重要的一点是，它能让我以更快的速度达到这个就绪状态，并且……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: And another way to put this is I rely on CI and the tests that are running in CI and the code reviews like how many people do automated code reviews with like Reptile, Code Rabbit, Codo, any of those? Yeah. I rely on those. We use Reptile. Reptile gives me a X out of five score and if it gives me a five out of five and all of my CI is passing I feel extremely confident that I'm not going to break production when this gets shipped. We've gotten to that level of trust with Reptile. The more important thing for this is that I get to that state faster and that...</p>
+</details>
+<p><strong>主讲人 B</strong>：以更少的交互轮次达成目标。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: with less turns</p>
+</details>
+<p><strong>主讲人 A</strong>：没错，用更少的交互轮次。大家知道，如果没有约束，我哪怕塞进去整整 10,000 行纯粹的废代码，什么功能也没有实现，但测试可能依然能绿灯跑通；Reptile 出于某些莫名其妙的原因也给了它 5 分满分，然后这段代码就被发布到了生产环境，它既没有执行任何实际操作，也没有破坏任何东西，结果就平白无故在代码库里多堆了 10,000 行毫无意义的废代码。</p>
+<p>所以，这套体系同样是为了帮助我确保能够极其精确地传达给 Agent 我到底想要什么，让它能够直奔目标，而无需产生一堆多余的代码；确保它始终保持在正确的轨道上，并且在我不盯盘去处理其他事务时，它自己懂得如何纠错以维持在轨道上。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: With less turns, yes. And that you know, I could add 10,000 lines of absolutely nothing and it does nothing and great it passed. Reptile gave it a five out of five for some terrible reason and then it goes into production and it doesn't do anything it doesn't break anything. Now it's just an extra 10,000 lines of nothing. And so this is also to help me make sure that I'm telling the agent like exactly what I want and it gets there without going through a bunch of additional code to stays on track, but it also knows how to fix itself to keep itself on track while I'm off doing something else.</p>
+</details>
+<h3 id="agent-辅助生产发布与全自动金丝雀监控" data-reading-heading="">Agent 辅助生产发布与全自动金丝雀监控</h3>
+<p><strong>主讲人 A</strong>：好的，我们大概还有时间回答最后一个简短的问题，不过时间确实差不多了……请讲，这位先生。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Okay, we might have time for one more quick question, but I think we're Yes, yes, sir.</p>
+</details>
+<p><strong>主讲人 A</strong>：对，完全可以。根据你采用的技术栈不同，现在市面上有很多服务提供商支持先自动部署到预览环境（Preview Environment），并在预览环境中以不同维度进行验证。完成验证之后再推进到生产环境，并且在上线后立即开启实时监控。</p>
+<p>这是我们目前开始观察到的另一个正在兴起的新范式：当一个版本的代码实现绝大部分是由 Agent 自动完成时，往往还会专门配套至少一个专门负责生产环境灰度发布的监控 Agent。它全程紧盯各项指标看板、观察 DataDog 的告警和监控数据、监控功能开关（Feature Flags）的状态，一旦发现任何异常，能够果断作出判断：“线上表现确实变差了，我们立刻执行回滚。”</p>
+<p>所以我非常理解大家在面对这种全自动模式时的忐忑与不安，我们每个人都曾经历或正在面对这种心理门槛。但我确实看到了实现这一目标的可行路径，因为这种演进趋势看起来已经是不可阻挡的历史必然了。是的，确实如此。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Yes. Yes. Yeah. You could also do depending on your stack like there's various providers that you could easily also go to preview first and then verify it there in a different way. So we'll then go to prod and then also immediately monitor. It's another pattern we're starting to see emerge is that when folks have a deployment that was mostly agentically implemented, there's also at least one agent specifically concerned with that production rollout looking for watching all the metrics, watching DataDog, watching feature flags, right? Being able to say this is actually bad and we're reverting it. So I truly understand and get the queasiness around it like we all have or dealing with that, but I do see a path for that because it just seems inevitable. Yeah. Yep.</p>
+</details>
+<h3 id="总结致谢与展台交流邀请" data-reading-heading="">总结致谢与展台交流邀请</h3>
+<p><strong>主讲人 B</strong>：我们今天演讲的时间已经全部用完了。如果大家还有任何问题，我们非常乐意在会后继续交流。我们就在展厅右侧进门处的 6 号展台。欢迎大家随时过来找我们，我们非常乐意与大家深入探讨，向大家展示我们正在研发的产品，畅聊任何大家感兴趣的技术话题。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: That's all the time we have, but if you have more questions we'd be happy to chat. We'll be in the expo hall booth six right to the right when you come in. Come find us. We'd be happy to chat, show you what we're working on and talk to you about anything you'd like.</p>
+</details>
+<p><strong>主讲人 A</strong>：是的，非常感谢大家的到来与悉心聆听！十分感谢大家！</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Yeah. Thank you so much for coming and your attention and everything. Thank you so much.</p>
+</details>
+<p><em>（全场掌声）</em></p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><em>[applause]</em></p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/f7e61ba92eb4b4cef8b4625c069e43457151459aee75f7d3b97b91610bcffe15.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/f7e61ba92eb4b4cef8b4625c069e43457151459aee75f7d3b97b91610bcffe15.md" download=".md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>腾讯混元 Hy3 的 1-bit
+量化：单卡能装下，离好用还有多远</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">腾讯混元 Hy3 的 1-bit
+量化：单卡能装下，离好用还有多远</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-07-16</span>
+    
+
+    <header class="article-header">
+      
+      <h1>腾讯混元 Hy3 的 1-bit
+量化：单卡能装下，离好用还有多远</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/model/">model</a>
+      
+        <a class="tag-link" href="/tags/quantization/">quantization</a>
+      
+        <a class="tag-link" href="/tags/memory/">memory</a>
+      
+        <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章介绍了腾讯混元发布的 Hy3 模型及其量化版本（如 IQ1_M），重点分析了模型压缩（如 1-bit 量化）对显存占用、运行可靠性以及生成速度的影响。核心观点是，虽然量化能显著减少权重文件大小并适应有限的硬件，但它也带来了上下文长度缩短和复杂任务可靠性可能下降的风险，最终建议用户根据实际工作流进行 A/B 测试。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/hy3-one-bit-single-gpu-20260716.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-07-16T00:00:00.000Z">2026-07-16</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>5 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#hy3-%E5%81%9A%E4%BA%86%E6%80%8E%E6%A0%B7%E7%9A%84%E8%83%BD%E5%8A%9B%E5%8F%96%E8%88%8D">Hy3 做了怎样的能力取舍</a></li><li class="outline-h2"><a href="#1-bit-%E5%B9%B6%E4%B8%8D%E6%98%AF%E6%95%B4%E4%B8%AA%E6%96%87%E4%BB%B6%E6%AF%8F%E6%9D%83%E9%87%8D-1">1-bit 并不是整个文件每权重 1</a></li><li class="outline-h2"><a href="#96gb-%E5%8D%95%E5%8D%A1%E8%BF%98%E8%A6%81%E7%BB%99-kv-cache">96GB 单卡还要给 KV cache</a></li><li class="outline-h2"><a href="#%E7%9C%81%E4%B8%8B%E7%9A%84%E6%98%BE%E5%AD%98%E5%8F%AF%E8%83%BD%E7%94%B1%E5%8F%AF%E9%9D%A0%E6%80%A7%E6%9D%A5%E4%BB%98%E8%B4%A6">省下的显存，可能由可靠性来付账</a></li><li class="outline-h2"><a href="#%E9%80%9F%E5%BA%A6%E5%A4%9F%E4%BA%A4%E4%BA%92%E9%95%BF%E4%B8%8A%E4%B8%8B%E6%96%87%E4%BB%8D%E7%84%B6%E8%A6%81%E7%AD%89">速度够交互，长上下文仍然要等</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>7 月 14 日，腾讯混元发布了 Hy3 的 IQ1_M 和 Q4_K_M 官方 GGUF
+量化版本。传播最广的数字是：一个 295B 参数的模型压缩后约为 85.5
+GiB，可以加载进单张 96GB 显卡。</p>
+<p>这个数字没有问题，但它只回答了权重能否装下。模型运行时还需要 KV cache
+和计算缓冲，量化也可能影响复杂任务的可靠性。再加上首字等待和生成速度，单卡能加载与日常好用之间，至少还有三笔账。</p>
+<h2 id="hy3-做了怎样的能力取舍" data-reading-heading="">Hy3 做了怎样的能力取舍</h2>
+<p>Hy3
+是腾讯混元发布的开源纯文本模型，拥有 295B 总参数、21B 激活参数，支持
+256K 上下文，采用 Apache 2.0 许可。它使用 MoE
+架构，每次只调用一部分专家权重。总参数决定模型的容量，21B
+激活参数则控制每一步实际参与计算的规模。</p>
+<p>这种设计带来了清楚的取舍。根据第三方评测机构 Artificial Analysis
+的综合测试，Hy3 与 DeepSeek V4-Pro 处在相近区间，但低于 GLM-5.2。具体到任务，网页搜索、长文检索和工具编排是它的相对强项；仓库级
+coding、终端操作和长程软件工程则弱一些。腾讯混元用较低的激活计算量，换来较宽的
+agent 能力覆盖，没有同时追求最强的 coding 表现。</p>
+<p>同一套综合评测下，Hy3 与 DeepSeek V4-Pro
+接近，但低于 GLM-5.2</p>
+<h2 id="1-bit-并不是整个文件每权重-1" data-reading-heading="">1-bit 并不是整个文件每权重 1</h2>
+<p>bit</p>
+<p>量化会用较低精度保存模型权重，从而减少显存占用。AngelSlim/Hy3-GGUF
+中最受关注的 IQ1_M，通常被称为 1-bit 版本。</p>
+<p>这里的 1-bit 是量化规格的名称。根据 Hugging
+Face 文件元数据，无 MTP 的 Hy3-IQ1_M.gguf 为 83.30
+GiB，完整文件平均每个权重占 2.425 bit，也就是 2.425 BPW；带 MTP 的版本为
+85.45 GiB、2.488 BPW。Q4_K_M 的无 MTP 版本则是 169.81 GiB。</p>
+<p>实际位宽高于名字，是因为官方没有把所有张量压到同一精度。注意力、共享专家、嵌入和输出等关键路径保留了更多信息，缩放参数和文件元数据也会占空间。IQ1_M
+压得最狠的是大量路由专家权重，整个文件仍是一套混合精度配方。</p>
+<h2 id="96gb-单卡还要给-kv-cache" data-reading-heading="">96GB 单卡还要给 KV cache</h2>
+<p>留位置</p>
+<p>权重加载后，模型还要保存自己读过的上下文。KV cache
+就是这些注意力中间结果，输入越长，占用的显存越多。Hy3 使用 q8 KV cache
+时，64K 上下文约需 10.63 GiB。</p>
+<p>把它与权重相加，单卡预算就变得紧张。无 MTP 的 IQ1_M 占 83.30
+GiB，加上 64K q8 KV cache 后达到 93.93 GiB，只剩 2.07 GiB。CUDA
+context、计算缓冲、计算图和显存碎片还没有算进去。官方确实提供了单张 H20
+跑 64K 的配置，并把它标为
+tight，但没有公开这套配置的峰值显存和速度日志。它证明方案可以尝试，不足以说明生产运行会很从容。</p>
+<p>带 MTP 的权重是 85.45 GiB。加上同样的主模型 KV
+cache，算术结果已经达到 96.08 GiB，尚未加入 MTP 自己需要的 draft KV
+cache 和其他运行开销。官方的单卡方案因此推荐无 MTP、64K 上下文和 q8 KV
+cache。Hy3 支持 256K，是模型的架构上限，并不代表单张 96GB
+卡也能使用这么长的上下文。</p>
+<p>Hy3 IQ1_M 在 96 GiB 单卡中的权重与 64K KV
+cache 预算</p>
+<h2 id="省下的显存可能由可靠性来付账" data-reading-heading="">省下的显存，可能由可靠性来付账</h2>
+<p>目前，官方没有公开 BF16、FP8、Q4_K_M 和 IQ1_M
+在同一套评测流程下的完整对照。公开说法是：4-bit 在
+agent、代码、工具调用和长文理解上接近 BF16；1-bit
+的长文理解接近原版，agent 和代码能力有小幅回落。</p>
+<p>问题在于，小幅回落落到多步任务里，未必仍然小。一个 coding agent
+要连续选择工具、填写 JSON
+参数、修改代码、判断测试结果。任何一步出现偏差，后面的动作都可能跟着改变。普通问答看不出明显差异，并不能证明长程任务同样可靠。</p>
+<p>这只是风险机制，不是已经测出的 Hy3 IQ1_M 失败率。Hy3
+的参数规模较大，IQ1_M 又会按权重重要性分配不同精度，实际表现可能比朴素的
+1-bit 直觉更好。答案仍要靠真实工作流的 A/B
+测试，尤其要记录格式错误、无效工具调用、重试次数和完整任务成功率。</p>
+<h2 id="速度够交互长上下文仍然要等" data-reading-heading="">速度够交互，长上下文仍然要等</h2>
+<p>现有性能数据主要来自社区转换版本，不能直接当成官方 IQ1_M 或 Q4_K_M
+的统一实测。社区 GGUF 在 M3 Max 128GB 上大约能生成 23–25 tok/s；社区 MLX
+版本在 M3 Ultra 上约为 27–29 tok/s。这些速度足以进行日常交互。MLX 实测与
+GGUF 实测
+使用了不同量化，数字只能用来判断大致体感。</p>
+<p>生成速度也不是全部。模型先读 prompt 的阶段叫 prefill。M3 Max
+上的社区测试约为 41 tok/s，冷读 8K prompt 粗略需要接近 200
+秒。对于上下文很长的 coding
+agent，真正影响节奏的可能是首字等待，而不是后面每秒生成多少 token。</p>
+<p>两张 H200 运行社区 IQ2_M 的测试为 72.2 tok/s，打开 MTP 后达到 81.5
+tok/s。MTP 会一次预测多个后续 token，再由主模型验证。官方宣称它可以提速
+50%–60%，但社区可审计结果高度依赖置信度门控；这组 H200 测试的提升约为
+13%，Apple Silicon 上则基本没有收益。llama.cpp PR
+#25395记录了这些差异。</p>
+<p>已有 96GB 显卡，可以从无 MTP、16K 或 32K 上下文的 IQ1_M
+开始测试。已有 256GB M3 Ultra，也可以尝试社区 4-bit
+MLX。私有生产部署更适合先评测
+Q4_K_M；使用率不高、数据也不敏感的场景，API 往往更省维护成本。</p>
+<p>Hy3
+展示了大模型压缩已经能做到什么，也把代价一并暴露出来：更低的激活计算量、更小的权重文件、较短的现实上下文，以及尚待验证的复杂任务可靠性。它适合已有硬件的人做实验，还不足以成为单独购买高配
+Mac 或 H20 的理由。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/c06f198b2ddc98f65497862e4d01da3484a9510f220663836c3b3810eb170bb8.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/c06f198b2ddc98f65497862e4d01da3484a9510f220663836c3b3810eb170bb8.md" download="腾讯混元 Hy3 的 1-bit
+量化：单卡能装下，离好用还有多远.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=腾讯混元" class="entity-link company-link">腾讯混元</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Hy3" class="entity-link product-link">Hy3</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

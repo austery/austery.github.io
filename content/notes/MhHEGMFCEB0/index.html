@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenAI Codex 深度解析：从软件工程智能体到亚代理架构</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">OpenAI Codex 深度解析：从软件工程智能体到亚代理架构</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-04-29</span>
+    
+
+    <header class="article-header">
+      
+      <h1>OpenAI Codex 深度解析：从软件工程智能体到亚代理架构</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">openai-codex</span>
+      
+        <span class="tag-pill tag-pill--no-page">software-engineering-agent</span>
+      
+        <span class="tag-pill tag-pill--no-page">sub-agents</span>
+      
+        <span class="tag-pill tag-pill--no-page">mcp-server</span>
+      
+        <a class="tag-link" href="/tags/ai-automation/">ai-automation</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">本篇内容源自 OpenAI 开发体验团队的深度大师课。详细介绍了软件工程智能体 Codex 的演进历程，重点解析了其底层的 GPT-5.4 模型系列、统一智能体框架（Unified Agent Harness）、插件系统以及能够并行处理复杂任务的亚代理（Sub-agents）架构。此外，还通过实战演示展示了 Codex 在自动化工作流、视觉化游戏开发及大规模代码审查中的卓越能力。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=MhHEGMFCEB0" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-04-29T00:00:00.000Z">2026-04-29</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>6 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E6%99%BA%E8%83%BD%E4%BD%93codex-%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%BA%95%E5%B1%82%E6%A8%A1%E5%9E%8B%E6%BC%94%E8%BF%9B">软件工程智能体：Codex 的定义与底层模型演进</a></li><li class="outline-h3"><a href="#%E7%94%9F%E6%80%81%E4%B8%8E%E4%BA%A4%E4%BA%92%E5%A4%9A%E7%AB%AF%E8%A6%86%E7%9B%96%E4%B8%8E%E6%8F%92%E4%BB%B6%E5%8C%96%E5%B7%A5%E4%BD%9C%E6%B5%81">生态与交互：多端覆盖与插件化工作流</a></li><li class="outline-h3"><a href="#%E6%B7%B1%E5%BA%A6%E8%87%AA%E5%8A%A8%E5%8C%96%E4%BB%8E%E6%97%A5%E5%B8%B8%E5%B7%A5%E4%BD%9C%E6%B5%81%E5%88%B0%E8%A7%86%E8%A7%89%E5%8C%96%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91">深度自动化：从日常工作流到视觉化游戏开发</a></li><li class="outline-h3"><a href="#%E5%B7%A5%E7%A8%8B%E8%B4%A8%E6%8E%A7%E5%A4%A7%E8%A7%84%E6%A8%A1%E4%BB%A3%E7%A0%81%E5%AE%A1%E6%9F%A5%E4%B8%8E%E5%86%85%E9%83%A8%E5%AE%9E%E8%B7%B5">工程质控：大规模代码审查与内部实践</a></li><li class="outline-h3"><a href="#%E5%B9%B6%E8%A1%8C%E6%99%BA%E8%83%BD%E4%BA%9A%E4%BB%A3%E7%90%86sub-agents%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%BB%E5%8A%A1%E5%A4%84%E7%90%86">并行智能：亚代理（Sub-agents）架构与分布式任务处理</a></li><li class="outline-h3"><a href="#%E6%A0%B8%E5%BF%83%E5%AE%89%E5%85%A8%E4%B8%8E%E5%89%8D%E6%B2%BF%E6%8E%A2%E7%B4%A2guardian%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BA%91%E7%AB%AF%E6%89%A7%E8%A1%8C">核心安全与前沿探索：Guardian、钩子函数与云端执行</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="软件工程智能体codex-的定义与底层模型演进" data-reading-heading="">软件工程智能体：Codex 的定义与底层模型演进</h3>
+<p><strong>Codex</strong> 并非单纯的“代码助手”，而是一个定位为 <strong>软件工程智能体</strong>（Software Engineering Agent: 能够理解工程语境并执行端到端研发任务的 AI 系统）的综合平台。它不仅能编写代码，更能运行指令、执行测试、探索复杂的代码库，具备软件工程师在日常工作中所承担的各种能力。</p>
+<p>在底层架构上，Codex 建立在 OpenAI 最前沿的模型基础之上。目前的旗舰级模型是 <strong>GPT-5.4</strong>，同时也提供了专为超高速响应设计的 <strong>Spark</strong> 版本。针对不同的任务场景，Codex 还会调用 <strong>GPT-5.4 Mini</strong> 和 <strong>Nano</strong> 模型，用于处理短时任务或作为 <strong>亚代理</strong>（Sub-agents: 在主智能体控制下执行特定子任务的独立智能体线程）运行。</p>
+<p>为了确保这些模型在工程环境中的稳定性与安全性，OpenAI 构建了一个名为 <strong>统一智能体框架</strong>（Unified Agent Harness: 管理智能体行为、工具执行、环境设置及安全防御的封装层）。这一层作为模型之上的包装器，负责评估智能体行为，管理环境初始化，并嵌入了关键的安全防御机制，确保智能体在执行特权指令时始终处于受控状态。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Hi everyone. Thank you for being here. So today we're going to talk about Codex. My name is Katya Gilusman and I'm with VB. We are both working in the developer experience team at OpenAI based in London. And so our role is really to help developers build and get the most out out of our products including Codex.</p>
+<p>To start, just for those who don't know Codex or even if you know it, maybe you don't know it that well, Codex is our software engineering agent. So it's not just a coding agent. It's not just an agent that writes code. It can do much more than that. It can run commands. It can run tests. It can explore code bases. It can really do everything that a software engineer would do. And so it's based on our models as a foundation. For example, GPT 5.3 Codex was our previous ones. We also have the Spark version which is like the super fast model that we have. The state-of-the-art model right now is GPD 5.4. And we also have a mini version that came out last week.</p>
+<p>And you know, every time we make improvements, every time we have better models, Codex benefits from it. But it's not just the models. On top of that foundation, we have what we call a unified agent harness that will manage evaluates the agents' behavior and that is a wrapper for tool execution for environment setup for everything that can let the agent do its work and run smoothly. There's also safety, the safety embedded in that harness. So all of that is Codex.</p>
+<p>We also released GPD 5.4 mini and GPD 5.4 Nano which you can use for short-running tasks and sub-agents which we'll talk about in a bit. One thing that as we pushed on making these models better, we also worked quite a bit on making sure that these models can be served to you as fast as possible. What that means in principle is we introduced something called websockets which allow us to create a connection between your device as well as where the API resides to be able to give you roughly about 1.75x faster tokens without really paying the cost over to you. At the same time we also released a fast mode which allows you to on top of the 1.75x get 2x more faster tokens.</p>
+</details>
+<h3 id="生态与交互多端覆盖与插件化工作流" data-reading-heading="">生态与交互：多端覆盖与插件化工作流</h3>
+<p>用户可以通过多种界面（Surfaces）与 Codex 交互，包括独立的 <strong>Codex App</strong>、IDE 扩展插件、命令行工具（CLI），甚至是 Slack 和 GitHub。在 OpenAI 内部，工程师们习惯于在 Slack 中直接 @Codex 来修复 Bug 或在 GitHub PR 中寻求建议。</p>
+<p>为了让 Codex 完美融入现有的开发堆栈，它支持与 <strong>Figma</strong>、<strong>Linear</strong>、<strong>Notion</strong> 等主流工具集成。这种集成能力主要通过 <strong>插件</strong>（Plugins）实现。一个插件本质上是 <strong>技能</strong>（Skills: 针对特定流程打包的、可重用的指令集与脚本）、应用连接和 <strong>模型控制协议服务器</strong>（MCP Servers: 暴露外部系统工具以扩展智能体能力的标准化协议）的集合。通过插件，开发者无需手动安装多个技能或配置复杂的连接，即可实现如“同步 Google Drive 电子表格与代码库数据”或“使用 Playwright 进行视觉调试”等高级功能。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>And then you can interact with it through different surfaces. So you have the Codex app that we're going to talk about in a few minutes. You can also interact with it through your IDEs with the extension. You can interact with it through the CLI and also through other services like Slack for example. At OpenAI we all the time just like ping Codex in Slack and ask it to fix things or in GitHub as well. And on top of all of that, you can also integrate it with your preferred tools so that it can really work with everything that you're already using. So, you know, you can integrated with Figma, with linear, with notion, all of that combined can let Codex do everything that a software engineer colleague would do.</p>
+<p>Plugins bundle a bunch of things together, like skills, apps, integrations, MCP servers, and they bundle that into reusable workflows. Skills are essentially reusable instructions packaged for specific processes. If you have something that you're doing quite a bit, you can actually create a skill for it so that Codex knows about it. You can give it instructions, you can give it scripts as well, resources and all of that. Apps are connections to other services. The tools that you use every day like Notion, Linear, all of that, you can let Codex connect to it. And MCP servers basically expose tools for Codex to just extend its capabilities further and it's tools from external systems.</p>
+</details>
+<h3 id="深度自动化从日常工作流到视觉化游戏开发" data-reading-heading="">深度自动化：从日常工作流到视觉化游戏开发</h3>
+<p>Codex 的 <strong>自动化</strong>（Automations）功能是其核心亮点之一。它允许用户设置类似 <strong>定时任务</strong>（Cron Jobs: 在特定时间或触发条件下自动执行的任务）的后台进程。例如，你可以设定每天早上 9 点让 Codex 自动梳理 Slack 消息，识别具有时效性或需要紧急回复的任务，并按话题进行归类。</p>
+<p>在更高级的开发场景中，Codex 能够通过 <strong>视觉化反馈循环</strong> 构建应用和游戏。利用 <strong>Playwright Interactive</strong>（Playwright Interactive: 允许智能体在无头浏览器中进行点击、截图及视觉分析的技术）技能，Codex 可以在沙盒浏览器中运行并调试正在开发的应用。配合 <strong>图像生成</strong>（Image Gen）技能，它可以自主生成游戏所需的 <strong>精灵图</strong>（Sprites: 游戏开发中用于角色的 2D 图像资源）。在现场演示中，Codex 仅凭简单的提示词就构建了一个完整的平台跳跃游戏，包括自主生成的关卡资产和经过视觉调试的物理交互。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Automations is one of my favorite things to do with Codex. You can set up automations that run in the background, like a cron job. For example, you can set an automation to run every day at a certain time. I connected Codex to Slack and I'm asking, "Hey, Codex, can you check every day at 9:00 a.m. the messages that I should reply to and flag if it's time sensitive or waiting for an urgent response? Can you also do a summary of all the things that have happened since yesterday on Slack, bucketed per topic?" Another one is connecting Gmail to check if there are emails that I should actually reply to. This is saving me hours per day.</p>
+<p>There's two skills that I want to highlight that are super useful and honestly that are a game changer when you're developing something visual. It's Playwright Interactive and Image Gen. Playwright is essentially like a headless browser, a sandbox browser that Codex can just run and use that to see what it's doing. With the interactive version you can actually click things and navigate your app and take screenshots and analyze those screenshots. Image Gen is a great way to just generate visual assets for your apps and games. I was just like "do a platformer game with platforms made of bricks." That's it. And yeah, it generated everything... literally all the sprites, and I didn't have to do any of that.</p>
+</details>
+<h3 id="工程质控大规模代码审查与内部实践" data-reading-heading="">工程质控：大规模代码审查与内部实践</h3>
+<p>OpenAI 极其重视交付代码的质量，而 Codex 的 <strong>代码审查</strong>（Code Review）能力被公认为行业标杆。通过与 GitHub 集成，开发者可以设置让 Codex 自动审查每一个拉取请求（Pull Request）。它不仅仅是扫描代码差异（Diff），更会结合整个代码库的上下文进行深度分析。</p>
+<p>这种深度审查能够识别出具有 <strong>二阶效应</strong>（Second-order Effects: 修改一处代码导致其他看似无关模块产生连锁反应的后果）的变更。目前，OpenAI 内部 100% 的代码库，包括 Greg Brockman 等核心成员提交的 PR，默认都会经过 Codex 代码审查的首轮过滤。它会将问题标注为 P0、P1、P2 等不同优先级，显著降低了人工审查的负担。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>One thing that you want to be sure of is whatever it is that your agent produces is of the utmost quality. Codex code review is one of the best in the industry right now. You are able to use Codex code review on GitHub. For each and every pull request that you create, you can set it up such that Codex can automatically review each and every pull request. It would contextualize it with everything that is there on the repo itself. A lot of the times Codex code review will find out changes which would have second-order effects which is not limited to just the diff but also to some other modules which you haven't even touched in the pull request itself. This is so effective that 100% of pull requests across all OpenAI repos made by all employees, including Greg, are reviewed by Codex code review by default.</p>
+</details>
+<h3 id="并行智能亚代理sub-agents架构与分布式任务处理" data-reading-heading="">并行智能：亚代理（Sub-agents）架构与分布式任务处理</h3>
+<p>为了处理极其复杂的工程任务，Codex 引入了 <strong>亚代理</strong>（Sub-agents）机制。这是一种将主任务拆解为可分解、可并行且相互独立的子任务，并分发给多个专业智能体的策略。用户可以针对特定任务定义 <strong>自定义亚代理角色</strong>（Custom Personas: 为亚代理预设的模型偏好、沙盒模式及指令集配置文件）。</p>
+<p>例如，在审计一个拥有 50 多个角色的复杂代码库时，主 Codex 智能体会自动切换到 <strong>计划模式</strong>（Plan Mode），将任务切片并派生出 20 个专注于不同维度的“评审智能体”。这些亚代理会在独立的沙盒环境中运行，并在任务完成后自动撤销，最后由主智能体汇整所有反馈。通过 <strong>模型控制协议</strong>（MCP）的权限分配，你可以给不同的亚代理授权：例如给文档智能体授权访问 Notion，给安全智能体授权访问 Sentry。这种分布式架构极大地提升了 Codex 处理大规模工程项目的效率。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Sub-agents is essentially the ability wherein you can spin off a master task into decomposable, parallel and independent tasks which you can hand off to agents which can allow these agents to sort of work independently and then at the end of their run get back to you and give you a response. You can define your own custom sub-agents. For each of these you can define what model you want to use, what reasoning effort, what sandbox mode (read-only or write-access). For a review agent or security assignment, you would almost always 100% want to use it in read-only mode.</p>
+<p>In this case, it essentially created review slices... they would spin up a new Codex environment. They would review those and then at the end Codex will collate all of these and give me back a response. Codex automatically decided that this is potentially a complex task, so it automatically kickstarted the plan mode. It's partitioning all of these persona files and then it's going to spawn 20 sub-agents. You can give these sub-agents more capabilities by giving them MCP access. You can give a sub-agent MCP access to Sentry or one to your Linear backlog so that it can read through all the issues and triage them.</p>
+</details>
+<h3 id="核心安全与前沿探索guardian钩子函数与云端执行" data-reading-heading="">核心安全与前沿探索：Guardian、钩子函数与云端执行</h3>
+<p>在迈向更高自主性的过程中，安全与管控至关重要。Codex 推出了 <strong>Guardian 审批机制</strong>（Guardian Approvals: 一种通过派生专门的安全子智能体来评估并自动批准或拦截特权操作的防御机制）。当 Codex 需要执行删除目录、运行服务器或暴露敏感文件等特权任务时，Guardian 子智能体会根据预设的安全提示词判断是否需要人工干预。这显著减少了因频繁的人工确认而导致的“审批疲劳”。</p>
+<p>此外，Codex 还支持 <strong>钩子函数</strong>（Hooks: 在会话启动、工具使用前后或会话结束时触发自定义逻辑的机制），允许开发者通过 Python 脚本实现“自动拉取最新代码”或“任务未完成时持续重试”等高级逻辑。对于长时运行的大规模任务，用户可以通过 <strong>云端执行</strong>（Cloud Execution）将负载卸载到 OpenAI 的高性能云端沙盒，并利用 <strong>Best of N</strong> 采样技术在多个并行运行的结果中选择最佳方案。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Guardian approvals is an experimental feature. All of us were guilty of using "yolo mode," giving unfettered access to your coding agent. Hence we came up with guardian approval. Whenever Codex needs to run a privileged task—remove a directory, run a server, expose a file—Codex will spin up a new sub-agent which will verify whether or not this needs human interruption. This way we hope to reduce the human fatigue.</p>
+<p>Hooks allow you to programmatically ask Codex to do a thing based on a particular event (after tool use, start of session, stop session). For long-running tasks, I created a hook for "stop" which runs a Python script "keep going UI"—it asks Codex to do one more pass, run one more validating command, and then stop.</p>
+<p>Is there a way to hand off a task to a cloud agent? Yes, definitely. You can select "cloud" directly from the Codex app. You can parallelize—we call that "best of N"—so you can run it four times in the cloud and then just pick the best output. We do want to give you the ability to have your own trusted MCP servers run there or the ability to just have SSH agents that you can spawn off a particular task on a VM.</p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/3dae2f8498f22722046e91815bb8d07e129ef76f8d4363aba257aba8eefb2bb7.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/3dae2f8498f22722046e91815bb8d07e129ef76f8d4363aba257aba8eefb2bb7.md" download="OpenAI Codex 深度解析：从软件工程智能体到亚代理架构.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Codex" class="entity-link product-link">Codex</a>, <a href="/search/?q=GPT-5.4" class="entity-link product-link">GPT-5.4</a>, <a href="/search/?q=GPT-5.4 Mini" class="entity-link product-link">GPT-5.4 Mini</a>, <a href="/search/?q=GPT-5.4 Nano" class="entity-link product-link">GPT-5.4 Nano</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

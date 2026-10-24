@@ -1,0 +1,981 @@
+---
+author: a16z
+date: '2026-10-12'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=3Q1mdn5ZGvM
+speaker: a16z
+tags:
+  - recursive-self-improvement
+  - control-theory
+  - multi-agent-system
+  - scaling-laws
+  - inference-optimization
+title: 递归自我改进（RSI）：超越自动催化与全栈优化的闭环AI进化
+summary: 本期访谈深入探讨了递归自我改进（RSI）的核心本质与工程实现。嘉宾澄清了真正的RSI与人类借助工具的“自动催化”之间的本质区别，从控制论与微分方程角度拆解了分子（性能提升）与分母（成本/能量）的动态关系，并分享了涵盖Prompt、框架底座、权重乃至算力的全栈多智能体闭环优化实践。
+insight: ''
+draft: true
+series: ''
+category: ai-ml
+area: tech-engineering
+project: []
+people: []
+companies_orgs:
+  - DeepMind
+  - MIT Media Lab
+products_models:
+  - GPT-2
+media_books: []
+status: evergreen
+---
+### RSI的核心概念与背景介绍
+
+**嘉宾**: 这里的**核心思想**是构建能够**自我改进**的人工智能，我认为我们正在逐步实现这一目标。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: The fundamental idea here is to build AI that improves itself. And I think we're getting there.
+
+</details>
+
+**嘉宾**: 有史以来第一次，我们可以将**优化器**与**被优化对象**对调，这使得认知能力的提升能够重新再投资到自身之中。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: For the first time, we could swap the optimizer as the optimizee. And this leads to a reinvestment of cognitive improvement into itself.
+
+</details>
+
+**嘉宾**: 你可以在技术栈的许多不同层级上来理解**递归自我改进（RSI）**：**提示词（Prompts）**、**运行底座（Harness）**、**模型权重（Weights）**，甚至一直延伸到底层的**芯片**。我们的目标是优化这整套技术栈的所有层级。我们实现RSI的方法，是让一个**多智能体系统（Multi-Agent System）**协同工作，并让该系统本身被递归地持续改进。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: You can think of RSI at many different levels of the stack, prompts, harness, weights, and you can go all the way to basically chips. Our goal here is to optimize all the levels of the stack. Our approach to RSI is that we have a multi-agent system working together that's been recursively improved.
+
+</details>
+
+**主持人**: 你们对于“模型自我改进”这一构想抱有如此坚定的信念，这让我印象非常深刻——
+
+<details>
+<summary>Original English</summary>
+
+**Host**: I'm so impressed by your belief that like this idea of a model improving itself,
+
+</details>
+
+**嘉宾**: 但这并不是一种单纯的信念。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: but it's not a belief.
+
+</details>
+
+**主持人**: 这是一个非常震撼的论断，我想这是我第一次听你这么明确地说出来。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: It is a dramatic statement, which is I think it's the first time I've heard you say it.
+
+</details>
+
+**嘉宾**: 正是因为我们极其严谨，在我们百分之百确定其正确性之前，我们从不轻易对外发布成果。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Because we have been so thorough, we have not released things until we're super sure it's correct.
+
+</details>
+
+**主持人**: 你是否设想过这样一个系统：随着时间的推移，相对于其获得的性能提升，投入其中的**能量消耗**反而会以某种方式逐渐减少？我们虽然不能透露太多细节，但这确实是我们努力实现的关键目标之一。非常欢迎两位做客。今天我们要探讨的是大家最感兴趣的话题——**RSI（递归自我改进，Recursive Self-Improvement）**。首先，能否请两位先做个自我介绍，聊聊各自的背景，然后我们再探讨你们当下正在做的事情，进而深入挖掘核心内容？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Do you envision a system where the amount of energy that goes into it somehow decreases over time relative to the improvement? We can't share too much, but one of the very important things that we've tried to do. Welcome both of you for joining. We're going to be talking about everybody's favorite topic, which is RSI, recursive self-improvement. Maybe to start, it'd be great to just introduce yourselves and your backgrounds. Then we'll talk a little bit about what you're working on now, and then we'll dig into the content.
+
+</details>
+
+**嘉宾**: 好的。我觉得自己某种程度上像个物理学家，我本科就是学物理的。后来我在**麻省理工学院媒体实验室（MIT Media Lab）**攻读了强化学习方向的博士学位。我非常热衷于亲自动手造东西，现在能和 Owen 以及 Grace 一起创立这家很酷的初创公司，我感到无比兴奋。我叫 Owen，最早是学数学的。直到有一天我意识到所有的数学家本质上都在做定理证明，而当时我正好在上《形式语言与逻辑》这门课，课程展示了如何构建自动定理证明器，我当时就想：如果我能造一台机器替我证明定理，那该有多酷！这就是我进入AI领域的契机。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Yeah, I think of myself as like a physicist of some kind. I studied that. Then I did the PhD in reinforcement learning at the MIT Media Lab. I really like building things and I'm very excited to be building a cool startup with Owen and Grace. My name is Owen. I was first studying math and then one day I realized that all mathematicians are proving theorems and I was taking a class called formal language and logic and they were showing how you can build a theorem prover and I was like oh that would be cool I can just build a machine that prove theorems for me that's how I got into AI
+
+</details>
+
+**主持人**: 太棒了。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: amazing
+
+</details>
+
+### RSI与自动催化的本质界限
+
+**嘉宾**: 后来在读博士期间，我主攻**持续学习（Continual Learning）**和**元学习（Meta-Learning）**，之后在 **DeepMind** 担任了几年研究科学家，如今我正全身心投入于 RSI。我见过大量的创业项目展示，其中很多都在高频使用 RSI 这个词。每当这时我就会问：“那么你们具体在做什么？”他们往往回答：“我们用 AI 来创造 AI。”这听起来确实很有吸引力。可当我追问具体细节时，他们却说：“我们用 AI 来写 GPU 算子内核代码。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: and then for my PhD I worked on continue learning and metal learning then worked for a few years at deep mind at a research scientist now I'm working on RSI I see a lot of pitches come in and a lot of them use the term RSI and I'll be like, "Oh, so what do you do?" And they'll say, "We use AI to create AI. That sounds very interesting. So what do you do?" We use AI to create GPU kernels.
+
+</details>
+
+**主持人**: 这在我看来，根本不符合我对 RSI 的定义。所以，我们能否先从定义开始：在你们看来，究竟什么才算作真正的 RSI？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Which that doesn't to me kind of match the definition of what I would consider to be RSI. So maybe can we start by you defining what you think or what you would include in RSI
+
+</details>
+
+**主持人**: 从定义层面来说呢？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: definitionally?
+
+</details>
+
+**嘉宾**: 是的，我认为 RSI 在当下的语境中绝对是一个被严重滥用的词。很多人嘴里说的 RSI，指涉的内容千差万别。在区分它们时，最关键的问题是要问：**优化器（Optimizer）**是什么，而**被优化对象（Optimizee）**又是什么？当我们在谈论自我改进时，究竟是谁在推动改进？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Yeah, I think RSI is definitely an overloaded term today. Many people when they say RSI they mean different things. So I think the important thing when you are differentiating them is to ask the question what is the optimizer and what is the optimizee like when you're self-improving who is improving right so
+
+</details>
+
+**嘉宾**: 现在有人宣称：“我们在做 RSI，因为我们让人类工程师使用 AI 来研发出更优秀的 AI。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: there are people who saying okay we're doing RSI we have human using AI to develop better AI
+
+</details>
+
+**嘉宾**: 但在我们看来，这仅仅只能被称为**自动催化（Autocatalysis）**。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: but that to us is just autocatalysis
+
+</details>
+
+**嘉宾**: 因为从本质上看，改进的主体依然是人类，只是人类拿到了更强大的工具。哪怕这些工具变得越来越好用，真正的灵感、方案和改进举措依然源于人类的大脑。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: in a sense that the improver is still human with tools even though these tools are getting better and better but the idea and the improvement come from human brains,
+
+</details>
+
+**主持人**: 没错。请允许我插一句，客观来说，人类历史上的绝大多数技术纪元都伴随着自动催化效应，对吧？比如，没有计算机，你根本不可能造出更先进的计算机芯片；你也可以说，互联网之所以发展如此迅猛，是因为地理上分散的人群能够跨地域高效协同；至于蒸汽机，因为有了蒸汽机，采煤运输更快，进而能制造出更强大的蒸汽机。因此，“用旧物件来更快制造新物件”这种理念古已有之，并不是什么新鲜事。所以你们所指的必然是完全不同的东西。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: right? And just I don't mean to interrupt, but to be clear, most technical epochs have had autocatalytic effects, right? Like there's no way you can create a computer chip without a computer, right? You could argue that the internet development was sped up by the fact that people that weren't geographically located could coordinate, right? I mean, the steam engine, you could build better steam engines because you could get coal faster, etc. So, this notion of like using the thing to build the thing faster is not new. And so you're saying something different.
+
+</details>
+
+**嘉宾**: 是的。我们认为，纵观人类文明的发展史，这种自动催化始终存在——人类用计算机设计更好的计算机。然而，驱动变革与性能跃升的源头始终是人脑，而人脑本身从未被当作被优化对象（Optimizee）去直接迭代升级。但现在，我们有史以来第一次能够将**优化器与被优化对象完全对调**。智能体的大脑——也就是大语言模型本身——可以成为直接被优化的客体。这就促成了认知提升向其自身的复利式再投资。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Yes. I think for us in the history right over civilization we have this autocatalysis you know computer using computers to build better computers but the idea for this change for this improvement come from human brain but that human brain was never the improver never the optimizee right whereas when now for the first time we could swap the optimizer as the optimizee so the brain of the agents which is LLM the model can be the thing that you're optimizing and this leads to a compound this reinvestment of cognitive improvement into itself.
+
+</details>
+
+### 控制论视角下的闭环系统与数学模型
+
+**主持人**: 但你们一定有某种深层原因，促使你们去挑战这个硬骨头，而不是像其他人那样只挑选问题的细枝末节来做。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: But there has to be a reason that you decided to take on this hard problem as opposed to what anybody else would do which is like chew off pieces of the problem.
+
+</details>
+
+**嘉宾**: 确实。在回答你这个更核心的问题之前，我选择做这个方向的原因很简单：因为它极难，而挑战最难的问题充满了纯粹的乐趣。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Yeah. I mean I guess to answer before I answer your more important question here. The reason I did this is I think it's a hard problem and it's fun working on the hardest problem and I think
+
+</details>
+
+**主持人**: 但你是否有一种内在直觉，确信这就是唯一正确的终极答案，而不是某种妥协的权宜之计？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: but do you have an intuition that this is is the actual right answer as opposed to like something that's more pragmatic?
+
+</details>
+
+**嘉宾**: 是的，从**控制论（Control Theory）**的务实视角来看，如果系统内部存在断点，你就无法形成**闭环（Closed Loop）**。所谓的自动催化是没有闭环的：无论你改进了什么局部环节，人与系统之间始终存在断层，必须不断由人类介入、灌入外部资源才能维持运转。但如果构建了真正的闭环，虽然你依然需要投入资源，但其边际收益在理想状态下随时间推移要么保持恒定，要么加速递增。这就是最根本的差异。这里的核心区别其实很容易解释。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Yeah, I think a pragmatic thing would be just from a control theory perspective. If you have a gap in the system, you can't have a closed loop and autocatalytic has no closed loop, right? So whatever you improve, there's still like a gap. humans have to come in. You have to pour in other resources to make it work. But if you have a closed loop, it you still have to pour in resources, but the marginal gains ideally get either constant or larger over time. And that's that's the fundamental difference. What's really different here can be explained pretty easily.
+
+</details>
+
+**主持人**: 如果从能力的角度来思考——
+
+<details>
+<summary>Original English</summary>
+
+**Host**: So if you think of capability,
+
+</details>
+
+**嘉宾**: 对。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: yeah,
+
+</details>
+
+**嘉宾**: 我们真正尝试去优化的，是**能力提升的速率**。换句话说，所有人试图提高的，其实是能力对时间的一阶导数（$\frac{dC}{dt}$）。你可以将这个速率看作是由两项驱动的比值：**分子**和**分母**。分子代表**性能收益**。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: what we're trying to do here is we're trying to improve the rate of improvement of capability, right? So like the first derivative of capability with respect to time is the thing that everybody is trying to improve. Yeah. Right. And now you can put that to be equal driven by two things. The nominator and the denominator. The nominator would be performance. Yeah.
+
+</details>
+
+**嘉宾**: 这正是目前全行业都在拼命追求的目标。而分母则是某种**成本**，比如资金成本，或者是问题本身的固有难度。分母的规律非常固定：你的基线能力越高，攻克下一个台阶的边际难度就越大。在蒸汽机这类传统工业形态中，分子往往是恒定的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Which is what everybody is trying to improve. And then the denominator is some kind of cost. Let's say capital, right? Or difficulty. And this one is pretty is pretty set because the higher the capability, the higher the difficulty of the next step. Right now the numerator is the interesting part for things like steam engines and whatnot that was fixed.
+
+</details>
+
+**主持人**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah.
+
+</details>
+
+**嘉宾**: 所以你最终会得到一个非常简单的微分方程，其轨迹必然会走向**增长平台期（Plateau）**。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Right. So then you end up with a very simple differential equation where you basically plateau.
+
+</details>
+
+**主持人**: 没错。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah.
+
+</details>
+
+**嘉宾**: 但假如你拥有一个系统，在这个系统里，被改进的对象同时也是执行改进的主体——
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Right. Now if you have a system where the improver the things being improved is also the thing that's doing the improvement
+
+</details>
+
+**嘉宾**: 你就有了一种全新的思考维度。最简单的情形是：分子项与当前系统的能力正相关。这很符合直觉，因为系统自身的能力越强，它迭代改进自身的能力也就越强。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: you how you now have a new way to think about it and the the simplest case would be that the numerator is also correlated with capability which makes sense right because the better you are the better you are at also improving
+
+</details>
+
+**嘉宾**: 如果达到这种状态，分母中难度递增的影响在数学上被分子抵消，你就会在时间维度上获得恒定速率的持续提升。这是 RSI 的一个层级。而更进阶的一种情形则是——
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: and if you do that the math cancels out and you basically get constant improvement over time that's that could one level of RSI, right? And then there's one more case which is
+
+</details>
+
+**嘉宾**: 分子项可能与系统能力呈现出**高阶幂次相关**。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: now that the the numerator could be correlated with a higher power of capability. Yeah.
+
+</details>
+
+**嘉宾**: 那样的话，你就会迎来**指数级起飞（Exponential Takeoff）**。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: And then you get exponential takeoff.
+
+</details>
+
+### 收敛性质、经验实证与多智能体底座
+
+**主持人**: 我们能否进一步深入探讨一下：闭环控制系统与实际的**收敛性质（Convergence Properties）**之间到底是什么关系？不知道为什么，很多人一看到那种带有闭合反馈箭头的系统示意图，就会立刻断言“要起飞了”。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah. Can we dig in a little bit more between RSIs having closed the loop and actual convergence properties? Like for some reason when people see a a graph where there's like a a circle with an arrow to another circle then and it goes back and they look at that closed control system then they say takeoff [laughter]
+
+</details>
+
+**主持人**: 但如果这是一个非线性控制系统——
+
+<details>
+<summary>Original English</summary>
+
+**Host**: right which I mean if this is a nonlinear control system
+
+</details>
+
+**主持人**: 你根本不可能轻易预测系统内部到底会发生什么剧烈演变。顺便说一句，绝大多数人似乎根本没搞懂这里的本质区别。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: it's very difficult to know what the hell happens by the way most people don't seem to understand this distinction
+
+</details>
+
+**主持人**: 因为每当大家谈论这些话题时，往往会瞬间跳跃到“奇点起飞”、“世界毁灭”这类宏大叙事上。作为一个网络工程背景出身的人，你应该清楚，这完全取决于自引用函数的**幂次指数**。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: because we very quickly go to like takeoff and doom and all that stuff when we talk about these things. Well, as a network guy, you know that it depends on the exponent of, you know, your your function. That's self-referencing.
+
+</details>
+
+**嘉宾**: 我们在实践中发现，脱离实际去空谈猜测各种可能的情形几乎毫无意义，因为这本质上是一个**经验性问题（Empirical Problem）**。要想知道真相，唯一的路径就是进行实证测试。但测试极其困难，**奖励黑客攻击（Reward Hacking）**只是我们必须应对的众多挑战之一。你刚才提出的问题非常依赖实证数据。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: And it's what we found is that it's almost not useful to speculate on what we think could happen because this is really an empirical problem. And the real way to know what's happening is to test things. and testing things is really really hard like reward hacking is one of you know many problems that we have to deal with but the the question you're asking is very empirical and for some
+
+</details>
+
+**主持人**: 这很有意思。我是做网络工程的，这确实是我习惯的思考方式。但我原以为数学家会说：“我们已经建立了这个微分方程，拿出铅笔当场就能写出解析解。”
+
+<details>
+<summary>Original English</summary>
+
+**Host**: interesting so but so I'm a networker that's how I would have answered I would have thought math people would have been like we've got this we've got this differential equation and I took out my pencil and I wrote down the answer
+
+</details>
+
+**嘉宾**: 写出微分方程的形式固然可行，但你依然必须通过实证测量来测定具体的变量和指数。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: I mean it is possible to write down the differential equation but you still have to empirically diff measure the the variable the exponent.
+
+</details>
+
+**主持人**: 所以根本不存在现成的解析解。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: So there's no analytical solution.
+
+</details>
+
+**嘉宾**: 说实话，我们目前甚至连深度学习底层的**学习理论（Learning Theory）**都还没建立起来，我们根本不知道它为什么在底层能发挥作用。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: I mean honestly we don't even have a learning theory of deep learning. We don't know like fundamentally why it works,
+
+</details>
+
+**嘉宾**: 如今我们更是在深度学习之上叠加了五六层抽象，更不可能有现成的理论。我们目前最接近理论指引的，是**缩放定律（Scaling Laws）**，但这同样属于经验法则。人们对我们 RSI 实现路径的一个重大误解是，以为整个系统必须是纯数字、完全自动化的。但如果看我们的数学底层，我们构建的是一个**多智能体系统**，而不是单一的数字智能体。在这个多智能体系统中，**人类研究员和工程师实际上是这群智能体中的特例**。正是这个由多智能体协同工作的混合系统，在经历着递归式的自我改进。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: right? And then now you're like five six layers on top of deep learning and so we don't have a good theory. I think the closest things we have are scaling laws and these are empirical laws. I think one misunderstanding people have about like our approach to RSI is that they think the entire system has to be fully automatic and digital. But actually if you look at our mathematical foundation we have a multi-agent system not just one digital agent. And in this multi-agent system human researchers and engineers are actually special case of these agents and it's this hybrid system of multiple agents working together that's been recursively improved.
+
+</details>
+
+**嘉宾**: 我明白了。我们绝不希望在优化过程中遗漏任何环节。如果模型的某一部分完全有可能被优化，我们为什么不去做呢？把它纳入进来能带来更大的收益。任何被你忽视未被优化的环节，最终都会变成制约系统的**瓶颈（Bottleneck）**。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: I see. And we don't want to leave out any component to not optimize them because like if it's possible to optimize in the model why wouldn't we do that because you will have more gains if you do include those. Anything that you don't optimize will later become your bottleneck.
+
+</details>
+
+### 分子与分母的博弈：研发成本与“失血榜”
+
+**主持人**: 我们在此观察到的一个现象是：业界经常宣称模型迭代速度正在加快，这确实是事实，对吧？如果你去看各个模型的发布周期，间隔确实越来越短。从表面上看，大家可能会觉得我们显然正处于一个突飞猛进的阶段。但如果你把这个速度除以这些公司**实际筹集的资金量**，情况就完全不是这么回事了。大家会发现，也许他们只是融了一大笔钱，然后靠砸钱强行推高了产出。那么，对于正在评估这些宣称或者从事该领域的人，你会如何建议他们避免自欺欺人——不是靠砸更多钱，而是切实证明自己在分母层面做出了有实质意义的优化？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: So one observation that we have made here is there are claims of speed is improving which is actually the case right? Right? So if you look at like the model release time, it is reducing. And so on one hand you can be like okay so clearly we're in some sort of a rapidly improving phase. But if you divide by the actual amount of capital raised by these companies that's no longer the case, right? And so you're like well maybe they just raise a whole bunch of money and then like AI allows you to apply that money. So, how would you, this is not for yourself, but how would you encourage people that are either evaluating claims about this or even working on them to think about not fooling yourself by throwing more money at the problem like you're actually showing that you're making an improvement here that's meaningful with the denominator.
+
+</details>
+
+**嘉宾**: 对我们来说，这里的逻辑非常清晰直接：如果你的性能提升仅仅是通过源源不断地倾倒更多资源砸出来的，那绝不是 RSI。你必须能够为你声称的提升幅度拿出实打实的依据。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: I think for us it's pretty straightforward. It's because if you get improvement and they just come at more and more resources being poured in, it's not RSI. You have to be able to back your claim of how much improvement you're getting.
+
+</details>
+
+**主持人**: 但是否应该把背后投入的所有**工时（Man-hours）**和海量试错实验也一并计算在内？因为在某种程度上，外界往往只谈论实际消耗的算力 FLOPs 和资金，但现实中这往往是第23次实验才跑出来的结果，背后是人类研究员消耗了大量心智资本才摸索出的最终配置。你们是否把这些也计入了分母？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: But do include like all the manhours and experimentation that went into that because I feel like at some level like they'll talk about like the actual flops that go in and money that go in but the reality is this is like the 23rd experiment and it's actually a human burning a lot of mental capital to get to that final configuration like do you actually include that in the denominator?
+
+</details>
+
+**嘉宾**: 我们确实将其计入其中，我认为这是公司内部非常良好的工程纪律。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: I we do and I think it's it's good company discipline to do that.
+
+</details>
+
+**嘉宾**: 是的，从公司创立伊始，我们就非常刻意地建立起追踪一切去向、成本和时间的内部文化。分享一件我们团队内部的趣事：大家通常会讨论用于展示性能跑分的**排行榜（Leaderboard）**——
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Yeah. And we've tried again to very intentionally from the beginning have a culture of tracking where things go cost time all that kind of stuff. I share a funny thing internally we have this thing people talk about leaderboards you know which is like score
+
+</details>
+
+**嘉宾**: 你肯定猜到了，我们内部搞了一个叫**“失血榜”（Bleederboard）**的看板。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: you know what I'm about to say we have something called a bleederboard
+
+</details>
+
+**嘉宾**: 上面会严格追踪每个人在运行实验时所耗费的具体资金成本。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: where we keep track of the cost of experiments of everybody who's running experiments.
+
+</details>
+
+**主持人**: 这太棒了。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: That's awesome.
+
+</details>
+
+**嘉宾**: 每个人都会看到这个数据。现在大家只需要几个小时就能在单张 GPU 上完成训练。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: you know and everybody it's the comp and right now people can train on single GPU within hours and
+
+</details>
+
+**主持人**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah.
+
+</details>
+
+**主持人**: 但这也是两码事，对吧？那可能只是单纯的算力硬件升级？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah. But that's also totally separate, right? Like that's just hardware?
+
+</details>
+
+**嘉宾**: 不，不是的，用的是完全相同的 GPU，硬件根本没变。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: No, no, it's the same GPU. It's the same hardware.
+
+</details>
+
+**嘉宾**: 在完全相同的硬件基础上，你改进了技术方案。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: using the same hardware and then you improve the techniques
+
+</details>
+
+**主持人**: 是这样。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah.
+
+</details>
+
+**主持人**: 这很有意思。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Oh, interesting.
+
+</details>
+
+**嘉宾**: 真正发生质变的是**算法策略**、**数据处理工艺**、底层 **GPU 算子** 等维度的全面突破。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Yeah. What has improved is like algorithmic techniques, data techniques, kernels, all of that kind of stuff.
+
+</details>
+
+**嘉宾**: 你知道当年训练一个 **GPT-2** 需要多少钱吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: you know how much it cost to train GPT2?
+
+</details>
+
+**主持人**: 我记得大概是几百美元？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: I think it's a few hundred.
+
+</details>
+
+**嘉宾**: 只要100美元。相同的 GPU，相同的数据集。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: $100. I just Oh wow. So the same same GPU same GPU same data
+
+</details>
+
+**主持人**: 而这些纯粹来自算法层面的改进。那么这些算法改进是由人类提出来的，还是出自智能体之手？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: and this is just algorithmic and do those come from humans or agents
+
+</details>
+
+**嘉宾**: 很多其实是自动化研究（Auto-research）跑出来的成果。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: a lot of them are auto research results
+
+</details>
+
+**主持人**: 这绝对是在优化分母，也就是降低系统开销。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: but that but that's definitely the denominator that's that's cost.
+
+</details>
+
+### 全栈技术优化：从推理加速到统一数学框架
+
+**嘉宾**: 我认为整个行业最严密守卫的核心机密之一，正是他们在分母优化上的具体成效。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: I think one of the most closely guarded secrets in the industry is how well they're doing on the denominator.
+
+</details>
+
+**主持人**: 确实如此。从某种意义上说，就算你唯一能改进的只有分母，其价值也极其巨大。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah. Because in some sense, even if all you were improving was your denominator, that would still be incredible.
+
+</details>
+
+**嘉宾**: 当然是这样。因为这意味着你现在可以进行规模大得多的采样，从而在相同预算下大幅提升模型上限。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Right. Yeah. Of course. Right. And that means now you can sample that what what you can do at inference time.
+
+</details>
+
+**嘉宾**: 优化分母固然关键，但同时优化分子也同样不可或缺。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: For sure improving the denominator is good. Yeah. For sure. Improving the numerator is good. Yeah,
+
+</details>
+
+**主持人**: 你们能同时观察到这两者改善的曙光，确实非同寻常。然而许多看似精巧的研究虽然听上去很炫酷、能发漂亮顶会论文，但一旦实际落地往往漏洞百出。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: I've yet to see which is great that you have, you know, glimmers of both. They're complicated. this sound cool, they get you a good paper, but they don't actually hold up in practice.
+
+</details>
+
+**嘉宾**: 根本原因在于这个探索空间实在是太庞大了。而且很多时候，当你构建了极其复杂的系统时，人们往往寄希望于奇迹的发生；或者你反其道而行之，耗费大量精力去尝试穷举所有可能性。这两种极端都行不通。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Yeah. And the reason is because this space is so large that it's easy to get lost. And the other reason is that often when you have this really complicated system and you hope that like this this this you know what is it the magic happens. Or you take the other way and you you kind of basically spend all your time trying everything.
+
+</details>
+
+**嘉宾**: 如果你能把底层架构做好，你就能实现真正的规模化扩展。正如理查德·费曼（Richard Feynman）曾说过的，科学研究有两种截然不同的风格：一种是像巴比伦数学家那样，针对每个具体问题积累一堆具体的经验算法；另一种是希腊式的，试图从公理出发推导出一套统一严密的数学大厦。在缺乏统一数学框架的前提下，当前的很多前沿研究都只是盲目地尝试各种技巧拼凑。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Yeah. And if you do that well, you can scale. And I think I think Richard Feynman said once that there are two kind of styles of science. So without a unified math framework, all these research are just randomly trying different things.
+
+</details>
+
+**主持人**: 理解，非常有见地。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Right. I see. I see.
+
+</details>
+
+**嘉宾**: 比如现在有人在做提示词层面的递归优化，有人在做代码级别的自迭代。而我们的目标，是对全栈的每一个层级进行端到端优化：**Prompt、运行环境框架（Harness）、权重（Weights），甚至算力层**。如果仔细剖析，整个体系中真正核心的命题其实并不多，其中至关重要的就是**推理（Inference）问题**。你在推理阶段投入的算力越有效，模型能展现的思考深度就越强。这不仅具有极其重要的技术价值，在商业经济效益上也极为震撼。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: So so for example there are people who are doing recursive improvement of prompts, some on code. And our goal here is to optimize all the levels of the stack: prompts, harness, weights, chips. And if you think about it, there's not that many problems that you really need to solve. And one of those is the inference problem, right? because the more you can spend on the more compute you can give at inference time, the smarter the model becomes. and it's not just for technical reasons but also the most economically valuable thing.
+
+</details>
+
+**主持人**: 这确实非常颠覆认知。这种复合式的自我提升，即便不会带来失控起飞，其影响也足够令人震撼了。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: it kind of breaks the mind right so like just just for everyone listening. And again, that does not necessarily mean takeoff that can still be controlled. But it's just wild to think of this kind of compounding impact.
+
+</details>
+
+**嘉宾**: 是的，我们是一家创业公司，而不是纯学术实验室。大家在业务场景中都渴望用上最新的大模型。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Yeah. Yeah. We're a startup. We're not a research lab. And everybody wants to use the latest model for example
+
+</details>
+
+**主持人**: 假设纯粹为了探讨技术细节：如果我想要改进一套多模型推理系统的服务栈，你们的做法是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: just for the sake of discussion if if I if I wanted to make to improve the serving stack. You mean yeah in our
+
+</details>
+
+**嘉宾**: 我们的系统并非依赖单一的基座模型，而是融合了众多不同的模型。我们在推理端对它们进行差异化调度与优化，尽可能减少人工硬编码干预，让系统自主探索最优路径。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: well our system is not just using one LLM you have many different LLMs. Oh so you're different the inference side for all of them. Yeah, we try to be like as hands off as possible. Let it explore.
+
+</details>
+
+**主持人**: 那么你们系统内部是否存在一个统领一切的“主提示词（Master Prompt）”？比如指令就是“去自我改进”？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Do you have like a single master prompt? Is it like improve yourself?
+
+</details>
+
+**嘉宾**: 实际上，就连这个最高层级的主提示词，本身也在被系统持续自我优化更新。[笑]
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Uh but even that master prompt that has been improving. [laughter]
+
+</details>
+
+**主持人**: 真的吗？系统甚至能主动优化自己的主提示词？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Really? It improves a master prompt.
+
+</details>
+
+**嘉宾**: 没错。而且这并非割裂的独立系统。在数学层面上，我们将其严格定义为一个**全统一系统（Unified System）**，能够将自身能力泛化迁移至你指定的任何问题域。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Yeah. And I mean and it's not one RSI system because you can define it mathematically. Mathematically we have defined it so that it's one system that can work on any problem domain that you point it to.
+
+</details>
+
+### 物理极限与信息论：能量消耗能逆势下降吗？
+
+**主持人**: 这里的“任何问题域”，是指只要给它明确边界的目标，它就能自我优化吗？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: and by everything mean any problem domain that you can point it to?
+
+</details>
+
+**嘉宾**: 理论上是的。但现实中显然存在着**物理极限**与环境约束。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Correct. But then there are physical limits for example and environmental constraints.
+
+</details>
+
+**主持人**: 我们能否至少缩小性能边界？比如，你是否真的设想过，存在某种系统，随着模型能力的提升，其所需输入的**能量开销**反而随时间推移而降低？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Can we at least reduce bounds? So for example, do you envision a system where the amount of energy that goes into it somehow decreases over time relative to the improvement?
+
+</details>
+
+**嘉宾**: 你指的是随着时间推移，消耗更少的能量却能换取更出色的表现？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: So it takes less energy to get better results over time?
+
+</details>
+
+**主持人**: 是的。这难道不违背信息论基本定理和物理热力学定律吗？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah. Do you think there's a universe in which that holds? but it just seems to disobey information theory and the laws of physics.
+
+</details>
+
+**嘉宾**: 从渐进趋势来看，在某一时刻它必然会遭遇**物理渐近线（Asymptote）**。毕竟宇宙中的粒子总数和能量转换是有上限的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Yeah. I mean I think at some point you're going to hit the asymptote so it will asymptote at some point but I think at least you know how many particles are in the universe.
+
+</details>
+
+**主持人**: 我依然由衷钦佩你们对“模型自我改进”的坚定追求。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: I'm so impressed by your your belief that like this idea of a model improving itself,
+
+</details>
+
+**嘉宾**: 再次强调，这真的不是主观信念，而是**客观经验测量（Empirical Measurement）**的结果。我们已经在工程实验中真实观测到了这些现象。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: but it's not a belief. No, it's not belief. It's empirical measurement. But also it's a question of what metric you use to view the progress. It's not a belief that this is happening. I think we're already seeing it.
+
+</details>
+
+**主持人**: 面对如此高维且高度非线性的复杂问题，你们是如何确保测量结果的置信度、避免将系统偶然的“取巧（Reward Hacking）”误判为真实智能跃迁的？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: How do you have confidence in the results given you know like reward hacking where it did hack something and now you have this weird results, right? It's not easy. When dealing with nonlinear multi-dimensional systems, do you have confidence?
+
+</details>
+
+**嘉宾**: 确实非常具有挑战性。系统往往会在某些指标上剧烈振荡——时而表现优异，时而急剧恶化，充斥着大量噪声。我们发现，一个特定的智能体在某个特定基准（Benchmark）上取得的进展，并不能代表通用智能的本质。智能绝对不是一个一维标量。对于数字层面的纯算法与代码逻辑，我们可以进行极限加速和深度优化；但在触碰物理现实时，测量难度呈指数级增加。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: absolutely. meaning like it'll get good and then it'll get bad, absolutely, and then on top of that you have noise. So what we find is that specific agent on a specific benchmark is not the whole story. So from that you could already see that intelligence is not a scalar. Exactly. So the digital part we could optimize and accelerate, but the physical part brings immense complexity.
+
+</details>
+
+### 爱因斯坦、现实摩擦与核心总结
+
+**主持人**: 目前我还未曾见过有谁能真正为智能提升与资源消耗之间的数学关系给出一个严格的上下界。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: What I've yet to see is anybody put a balance on that, like to say in order for me to improve this by X to know the bounds.
+
+</details>
+
+**嘉宾**: 我们公司内部经常开一个玩笑：当年爱因斯坦在提出广义相对论时，他推导出了引力场方程，但他并没有预先给出能够直接指导工程师造出 GPS 卫星导航系统的现成工程参数。如果当年必须让某个倒霉的工程师仅凭相对论去直接搭建 GPS 卫星系统，他一定得往里面人为塞入各种各样的“经验修正系数（Fudge factors）”。真实的工程世界正是如此，现实世界充满了复杂的摩擦与未被数字化的角落。我们开玩笑说，也许真正的决胜场景，隐藏在威斯康星州某家制造花园浇水水管的传统工厂的排产工作流之中。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: One of the internal jokes we have in the company is that Einstein would not have had these laws that tell you how to engineer GPS. And if some unfortunate engineer had to design the GPS system with general relativity, they would have had to add some fudge factors. Exactly, and later people would discover the underlying laws. The complexity of the world is such that the real challenges probably exist in spaces that are not being applied to, like that joke that there is some workflow somewhere in a garden hose company in Wisconsin
+
+</details>
+
+**嘉宾**: 如果我们能解决那种复杂现实场景的问题，我们就能真正实现通用突破。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: that if we solve it we get you know
+
+</details>
+
+**主持人**: 我太喜欢这个比喻了。我想最后快速总结一下：你们正在全力攻坚真正的 RSI。在你们的定义中，这绝非人类借助 AI 工具的“自动催化”，而是**由系统全栈自我改进其整个系统本身**——包含运行底座框架（Harness）与模型权重（Weights）。如果从“分子（能力提升）除以分母（能量与资源成本）”的角度来审视这个问题，你们已经观察到了两者同时持续优化的曙光与实证信号，对吗？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: I love that. I just want to quickly summarize so you're going after RSI in your case this is not autocatalytic effects this is actual RSI where the system improves the full system and for you it's an actual system which includes the harness and the weights. If you think about the problem is you've got a numerator and a denominator. The numerator is like how good the system gets and the denominator is how much energy goes into it. You believe you're seeing glimmers of the sign where both improve at the same time using this type of approach. Is that correct?
+
+</details>
+
+**嘉宾**: 没错。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Yes.
+
+</details>
+
+**主持人**: 外界什么时候能听到你们公布更多的最新进展？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: when can we expect to hear more from you?
+
+</details>
+
+**嘉宾**: 很快就会发布。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Very soon.
+
+</details>
+
+**主持人**: 太棒了。非常感谢两位今天做客与我们分享！
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Amazing. Yeah. Thanks so much both of you for joining.
+
+</details>
+
+**嘉宾**: 谢谢，非常感谢！
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Yeah. Thank you.
+
+</details>

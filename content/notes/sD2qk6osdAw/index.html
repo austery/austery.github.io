@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>拆解爆火的决策模型 Jev：普通开源模型超越它的实测与手机端部署</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">拆解爆火的决策模型 Jev：普通开源模型超越它的实测与手机端部署</span>
+      <span data-pagefind-meta="speaker" style="display:none;">课代表立正</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>课代表立正</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-10</span>
+    
+
+    <header class="article-header">
+      
+      <h1>拆解爆火的决策模型 Jev：普通开源模型超越它的实测与手机端部署</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">decision-model</span>
+      
+        <a class="tag-link" href="/tags/model-distillation/">model-distillation</a>
+      
+        <a class="tag-link" href="/tags/inference-optimization/">inference-optimization</a>
+      
+        <a class="tag-link" href="/tags/edge-ai/">edge-ai</a>
+      
+        <a class="tag-link" href="/tags/llm-evaluation/">llm-evaluation</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">本课深入拆解了爆火的决策大模型 Jev（在 Vercel AI Gateway 首日即有 13% 团队启用）。主讲人 Yen 通过三组严谨的吃豆人（Pac-Man）与基准测试，实测对比了 Jev、Tab、Phi-4-mini、Qwen 等模型；剖析了推理工程中的前缀缓存、批处理与 Logits 读取提速机制；展示了如何通过搜索树与蒸馏训练出仅 0.8B 并可在 iPhone 上离线运行的专用模型，揭示出在延迟、算力与泛化能力之间的工程权衡本质。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ke-dai-biao-li-zheng/">课代表立正</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=sD2qk6osdAw" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-10T00:00:00.000Z">2026-10-10</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>5 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E5%85%89%E7%8E%AF%E8%83%8C%E5%90%8E%E5%86%B3%E7%AD%96%E6%A8%A1%E5%9E%8B-jev-%E7%9A%84%E5%87%BA%E5%9C%88%E7%9C%9F%E7%9B%B8%E4%B8%8E%E8%AF%84%E6%B5%8B%E5%9F%BA%E7%BA%BF">光环背后：决策模型 Jev 的出圈真相与评测基线</a></li><li class="outline-h3"><a href="#%E6%99%AE%E9%80%9A%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%80%86%E8%A2%AD%E5%AE%9E%E6%B5%8B%E5%AF%B9%E6%8A%97%E4%B8%8E%E6%B3%9B%E5%8C%96%E8%83%BD%E5%8A%9B%E7%9A%84%E8%BE%B9%E7%95%8C">普通大模型的逆袭：实测对抗与泛化能力的边界</a></li><li class="outline-h3"><a href="#%E6%8E%A8%E7%90%86%E5%B7%A5%E7%A8%8B%E6%8F%90%E9%80%9F%E4%B8%89%E9%98%B6%E6%B3%95%E4%BB%8E%E6%AF%AB%E7%A7%92%E7%BA%A7%E4%BC%98%E5%8C%96%E5%88%B0%E7%9F%A5%E8%AF%86%E8%92%B8%E9%A6%8F">推理工程提速三阶法：从毫秒级优化到知识蒸馏</a></li><li class="outline-h3"><a href="#%E6%89%8B%E6%9C%BA%E7%AB%AF%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%B7%A5%E7%A8%8B%E6%9D%83%E8%A1%A1%E5%A4%A9%E4%B8%8B%E6%B2%A1%E6%9C%89%E5%85%8D%E8%B4%B9%E7%9A%84%E5%8D%88%E9%A4%90">手机端部署与工程权衡：天下没有免费的午餐</a></li><li class="outline-h3"><a href="#%E5%89%A5%E7%A6%BB%E6%B5%81%E8%A1%8C%E5%8C%85%E8%A3%85%E6%B2%89%E6%B7%80%E7%9C%9F%E6%AD%A3%E7%9A%84%E6%9E%B6%E6%9E%84%E5%88%A4%E6%96%AD%E5%8A%9B">剥离流行包装：沉淀真正的架构判断力</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="光环背后决策模型-jev-的出圈真相与评测基线" data-reading-heading="">光环背后：决策模型 Jev 的出圈真相与评测基线</h3>
+<p>在模型层出不穷的当下，<strong>Jev</strong> 依然引发了巨大的行业关注。在发布首日，<strong>Vercel</strong> 首席执行官透露其 <strong>AI Gateway</strong> 上约有 <strong>13% 的活跃团队</strong>直接启用了 Jev。它被定位为产品的 <strong>系统 1</strong>（System 1: 指代直觉、快速且自动化的反应机制），专为快速、低成本的多选决策设计，例如工单路由分发或请求策略合规检查。通过公网调用，其单次决策延迟约为 <strong>100 毫秒</strong>，玩完一整局吃豆人游戏的 API 成本不足一美分。然而，真正让 Jev 在社交平台上斩获超过 3500 万次曝光的并非工单分类，而是它实时操控未曾见过的游戏画面——这打破了大语言模型（LLM）“反应缓慢、段落冗长”的固有认知。</p>
+<p>为了探究光环背后的底层机制，主讲人 Yen（Superior Academy 联合创始人，曾任职于微软 Bing 图像搜索、Pinterest 及 Samsara 平台架构）遵循“先度量再决策”的原则，设计了严谨的基线测试。系统通过由 Claude Code 编写的适配层将吃豆人的游戏界面转化为约 <strong>380 个 Token</strong> 的结构化环境描述（包含剩余生命、豆子总数、各方向幽灵距离与能量豆位置），并在固定 30 FPS 的真实时钟下进行交互。如果模型响应超时导致吃豆人错过路口，决策便直接作废。在 10 局固定随机种子的基准测试中，Jev 平均每局吃掉 <strong>178 颗豆子</strong>（关卡总计 244 颗），平均单次响应时间为 <strong>115 毫秒</strong>，确立了本次对比的初始性能标尺。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Best alternative. support atm.com and we can get started and hello everyone and thanks for joining here. If you follow AI news at all, you probably already seen Jeff in your feed like people watched a language model playing games it has never seen before live and also fast enough to keep up with it. So today we're going to take that demo apart and we'll do it with three experiments. Every number you will see today comes from the real runs we measured by ourselves unless I tell you otherwise. But before the first game, let me quickly tell you who's running those experiments. That is myself. I am Yen and I am a co-founder of Superior Academy. I have spent many years on both sides of the AI like research and also shipping products. My papers have appeared at venues like uh CBPR, new IPS and KDDD. And on the product side, I laid the the scientific foundation of Samsara's AI platform. And before that I was a key technical contributor to Microsoft Bing image search and Pinterest search. Today I will work as I always do u measure first and then decide because you cannot improve anything you cannot measure. And let's go to the meat. We know that new models launch every week. So why does Jeff deserve a whole lesson? And the answer lies in this number 13%. On launch day, Verso's CEO said that oh about 13% of the active teams on its AI gateway turned Jeff on. And think about what that means. That's a lot of teams putting to work on day one. So what exactly were they turning on? Well, it's a decision model. and more specifically type safeu to make fast and cheap multi- choice decisions practical and they pitch it as a system one for your product. You give it a situation and a few options and it picks one. That's it. Think of routing a support ticket to the right team or checking a request against a policy and honestly it delivers. So a decision comes back in about a 100 milliseconds and that's over the public internet and a whole game of Pac-Man it will cost less than one cent and there's nothing to set up on your side because it's an API so cost alone is no reason to move off GF and let's admit it's it is a solid product but if all it did was just the routing support tickets it won't have gone viral. So, what made it go viral? What made Jeff go viral was actually games. The launch posts passed like 35 million views on X and all the clips people share about Jeff were not like Jeff triaging support tickets. They were Jeff playing games it has never seen. And why is that so interesting? Because it breaks an intuition most of us had. Like we think of language models as slow and chatty. You ask a question, it writes to a paragraph. But a game doesn't wait for you. You miss a turn and the moment is gone. So a language model steering a character live, that's what surprised the people and the clips traveled. And what you are watching here is Jeff playing Pac-Man in our browser and on a real-time clock. We wrote this game ourselves and open sourced it. We'll paste the GitHub link later. So you can we we can read it like the internal state. We can control its clock. We can do experiments. And here we pick Pac-Man because unseen games are Jeff's own showcase. So this is indeed a fair test on his home turf. And now a viral demo turns up to wrap the mechanism in a halo. And how do we look behind this one? And to figure this out, we'll run three experiments and each one built on the one before. First, we'll hook it up. We will show how to connect connect the Jeff to a live Pac-Man game and look at exactly what it reads. And second, we replace it. We swap in an ordinary LM. And to be clear, Jeff is an LM too, but this one has been trained specifically for decisions. And when I say an ordinary LM, I mean this kind of LM you can download today with no decision training at all. And then third, we beat it. Once the model is ours, we will train a small model that plays this SC this game better, even better than Jeff. So experiment one. How do you connect the language model to a game? Here's a setup. So Jeff never sees the screen. It doesn't have multimodality capabilities. Its API takes the situation as data and plus a list of options. And that's true for every model we test today. And then the game keeps asking the model one question. Oh, at the next junction, which way? At the next junction, which way? So something has to turn the picture on the screen into words. And that's what we call the adaption layer. For each direction the Pac-Man could take, it writes down a few facts like is there a ghost that way? How far? How many pallets? How far is the nearest the power pallet? This whole description is about 380 tokens. And honestly, Cloud Code wrote this layer for us. And it's not that hard. And anyone who wires up Jav also has to write one like this too. And for fairness, for all the experiments, every player reads exactly the same input. And now the clock, it's a game because it runs at a fixed 30 FPS and it doesn't wait for anybody. If the answer arrives late and Pac-Man has already passed the junction, that decision will will drop it. So we play play 10 games on fix the seats and each up to five minutes and count the pallets. So what does this text look like from the model side? These are the real decisions from one of Jeff's games logged as uh when it happened. The top half is the game state that Jeff received like the lives, the pallets left and then uh the distance to the next junction and then one line for each direction it can take like every number is a distance in maze tiles. So it's counted from Pac-Man's current position. So, for example, this one says, uh, there is a ghost 6.3 away if Pac-Man turns back. And when does the game ask? As soon as an answer comes back, it ask about the next junction ahead. So, the bottom half, this is Jeff's answer. It picks up one direction plus a probability for each option. And it's often not very sure. And in this first uh decision, the up just wings about half of the probability compared with the second. And on the right, it's the round trip to the hosted model in milliseconds. And for example, uh this is 140 milliseconds for this round run roundtrip call. Um the total cost for this is about 600 input tokens. We mentioned that we had uh 380 tokens for to describe the situation and the extra were added by Jeff itself. It probably it's fixed instructions. So let's watch a few junctions go by. This is where the Pac-Man is. It asks it constructs this and asks Jeff what is the situation and Jeff returned result. based on the result it goes along the way and play the game and we can see that uh essentially Jeff has for the power pallet and then once the ghost turn edible it chase one this is what happened behind the thing and that's the whole world as far as the model knows and no there's no picture no memory so how well does Jeff play from just this and it turns out it's 178 a level has 244 pallets. So 178 pallets is what a typical Jaff game looks like. The Pac-Man would eat this many pallets. And that's the average over 10 uh over 10 games on the real-time clock. At about 115 milliseconds per decision across the the public internet, I would say it's a respectable baseline and it's the bar to beat.</p>
+</details>
+<hr>
+<h3 id="普通大模型的逆袭实测对抗与泛化能力的边界" data-reading-heading="">普通大模型的逆袭：实测对抗与泛化能力的边界</h3>
+<p>在建立起 Jev 的基准后，核心问题随之浮现：<strong>吃豆人这类决策能力是否专属于经过专门决策微调的闭源模型？</strong> 实验选用了五种不同的模型进行横向评测。其中，Together AI 推出的专用决策模型 <strong>Tab</strong>（4B 参数）平均得到 148 颗豆子；而三款完全未经过决策训练的通用开源模型却展现出了意料之外的战斗力：<strong>Qwen2.5-3B</strong> 获得了 197 颗豆子，谷歌的 <strong>Gemma-2-4B</strong> 达到了 230 颗，微软的 <strong>Phi-4-mini</strong>（3.8B 参数）更是拿到了 <strong>232 颗豆子</strong>。在完全相同的随机种子下，凭借通用的 JSON 结构化输出约束，Phi-4-mini 比 Jev 多吃了整整 54 颗豆子。在硬件端，虽然 M3 芯片上的 Phi-4-mini 延迟为 187 毫秒，但在 NVIDIA RTX 5090 显卡上，其读取状态的速度直接提升了约 7 倍，延迟远低于托管 API。更重要的是，在近 6000 次决策交互中，三款普通模型均实现了零格式解析故障。</p>
+<p>然而，在仓促得出“普通模型完胜”的结论之前，必须面对<strong>任务泛化性</strong>的客观差异。开源复现项目 <strong>Sam</strong>（前身为 Open-Jev）利用未经微调的 Qwen2.5-3B 在 Jev 官方公布的 102 项基础判断任务上取得了 <strong>84.5%</strong> 的准确率，与 Jev 的 88.3% 相差无几。但是在包含 220 道高难度逻辑推理题的 <strong>JevBench</strong> 基准上，差距显现无遗：Jev 达到了 <strong>74.1%</strong>，而未微调的开源方案仅得 <strong>59.5%</strong>。这表明，许多场景下单凭未经专门训练的开源模型就足以达成更优性价比，但在严苛的高维判断场景下，专用决策模型依然保有一定优势。因此，在技术选型时，工程师必须以具体业务任务的数据驱动评测为准绳。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>So here's the real question. Is this something only giraffe can do or can an ordinary LM do too? Turns out they can. So we give the exactly the same text to five different models. Two of them are dedicated decision models like together AI. They have a decision model called tab and it has four billion parameters. Um this one gets 148 pallets and Jeff as we saw it's 178. So not too far away. And the other three are ordinary LMS with no decision training. And we tested the coin 3.54 billion. It eats 170 uh 197. And Google's gamma 4 E4B it's uh 230 and Microsoft's 54 mini eats 232. So on this task, nothing here is unique to Jeff. Uh the ordinary LM actually score as well as the decision models and the best one actually score higher. So let's put the best one headto-head with Jeff. This is 54 mini and it's an ordinary 3.8 billion parameter with no decision training. All we added was like JSON constraint pretty much like a JSON mode in in GPT API. So it's answer always come back in the right shape. We can parse it as a regular JSON blob. And on the left, 54 mini averages 232 pilots. And on the right, Jeff achieved 178. But to be fair to Jeff, it's faster. It's indeed faster. It's 100 mill and 15 millisecond per decision. And while uh this 54 uses uh 187 millisecond per decision, but there's a caveat. We measured this on a Mac, M3 Mac. We also tried it out on Nvidia cards like a RTX 5090 and on the Nvidia cards a 4 model reads the same state about seven times faster. So it's actually it could be a lot faster compared with even Jeff. And to be fair, we also paired the game seat by seed. So both players are face exactly the same mazes and matched that way. 54 mini would eat 54 more pallets per game with a standard error bar of 24. But before you rip Jeff out, there are two fair objections. The first objection is reliability. Can an ordinary LM keep its output claim like thousands of times in a row? And here the answer is actually yes. Across nearly 6,000 decisions, three ordinary LMS produces zero invalid outputs. So formatting is no reason to need a special model. And the second objection is the generality. We know that Pac-Man is just a one task and there are millions of different tasks there. So let's look at outside evidence. There is an open source project. Previously it was called open Jeff and then somehow it changes name to Sam SM. U they rebuilt 102 of Jeff's official judgment tasks on top of a regular frozen Quinn 3.5 4B with no training at all. So it's just an ordinary LM as we said with JSON mode. And this mere um Quen 3.5 model scored 84.5%. And Jeff scored 88.3%. So that's pretty close. And no, there is no post training on it. But on there's another side of the story on there are 220 hard questions on a benchmark called Jeff Bench. There is a gap. Jeff scores uh 74.1% and seam only scored 59.5%. So I would say the takeaway is this. Pac-Man is one task. There are a lot of tasks that just a regular untrained open source model would do really well pretty much like Jeff. It could be faster. It could be cheaper. But there are also other tasks that they struggle to match Jeff's performance. So measure on your task before you switch.</p>
+</details>
+<hr>
+<h3 id="推理工程提速三阶法从毫秒级优化到知识蒸馏" data-reading-heading="">推理工程提速三阶法：从毫秒级优化到知识蒸馏</h3>
+<p>掌握了自托管模型的自主权之后，工程落地的关键挑战转向了<strong>推理性能调优</strong>与<strong>精准度突破</strong>。在 Jev 发布后的 72 小时内，开源社区便通过纯粹的<strong>推理工程</strong>（Inference Engineering）复现了极速响应，核心技巧可总结为三项经典策略：</p>
+<ol>
+<li><strong>前缀缓存</strong>（Prefix Caching: 预先缓存并复用输入序列中未发生变动的历史 Token 键值向量）：由于各类判断基于相似的环境描述，缓存共享前缀后，基准测试耗时从 333 秒骤降至 72 秒；</li>
+<li><strong>批处理查询</strong>（Batch Querying）：将针对同一上下文的多个连续判断（例如工单是否紧急、转交团队、是否需人工介入）合并为单次批量请求，测试总耗时缩减至 38.8 秒；</li>
+<li><strong>输出空间压缩</strong>：放弃耗时的逐 Token JSON 生成，仅为每个选项赋予字母标签，直接读取对应 Logits（未归一化概率分布）。该方法将单次决策时间压缩至仅 <strong>1.02 秒</strong>（原本生成完整 JSON 需 5.33 秒）。</li>
+</ol>
+<p>在获得速度优势后，如何让小模型具备大模型的智慧？<strong>搜索策略与模型蒸馏</strong>（Model Distillation: 利用大型教师模型生成高质量决策轨迹，微调紧凑的学生模型）给出了工程答案。大模型在复杂决策树中具有更强的规划深度，但推理速度过慢无法应对实时时钟。利用 <strong>Qwen2.5-32B</strong> 配合前瞻搜索生成涵盖 200 局吃豆人的完美行为轨迹作为标签，以 Qwen2.5-0.8B 作为基础学生模型进行微调。在部署推理时，这个仅有 <strong>0.8B 参数</strong>的学生模型直接读取与其它模型相同的 380 个输入 Token，凭借对高质量搜索策略的内化，最终在实测中交出了平均吃掉 <strong>400 多颗豆子</strong>的惊人成绩，性能达到了 Jev 的两倍以上。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>And now suppose the ordinary LM does pass on your task. What can you do with it that you cannot do with a hosted API and quite a lot actually once the model is yours? You can keep pushing it and first we make it fast. We'll show you how to make it fast and then we'll show you how to make it smarter and then we'll try to get both at once and look at what that costs us. So let's start with the gap we just saw the speed. Jev was faster than the 54 mini. So what does that speed come from? Actually within 72 hours of the launch the open source community already had four working reproductions and they they can to some to quite some extent they can match Jeff's speed and it's inference engineering. So anyone can do it. Remember seam that from a minute ago its authors timed those tricks. They they have a a benchmark with more than 700 decisions and the re recomputing everything from scratch for every question and it would take 333 seconds and how to optimize for that. The first idea is oh every question about this situation it they start with same description and that's the classic use of of a prefixed cache. So they will compute the shared part once and reuse it. That brought down to 72 seconds on the same benchmark. And the second idea is in a real product, you often ask several questions about the same situation like this is a ticket. Is it urgent? Which team should should get it? Does it need a human? So you ask them together instead of one by one and in one batch. That brought down to 38.8 seconds. nearly an order of magnitude faster than where we started. And there is even a third idea that just don't write an answer at all. OM try to ask to to write an answer token by token and that's the time consuming part. What if we just give each option a letter and just ask just give me a letter that's it and then we read which letter the model favors. That could also save a lot of time. That took only 1.02 02 seconds against like 5.33 seconds for writing JSON. And we also pay price for that. It's pretty much the same as uh what Jeff did. It's just a narrow output. So the model can only pick one from your letters, but then the speed is pretty much within reach. So can we also make it play much better with this speed? Probably not with this speed after we achieve this speed. And the answer is yes, but with a bigger model or by letting it think. So we already know that on the real-time clock size already helps. Like TE one at 0.8 billion, it's 69 pallets. The 4B version is 148 and Jeff sits at 178. And now let's go much bigger to quen 3.827 billion. And here's the trick worth knowing. When a model is too slow for the clock or if you want to let it search ahead like looking at several moves into the future, you do that offline. You don't do that when the game is ticking. We let a big model play with search and we collected its decisions from about 200 games. That took a few hours of compute. And now we have a data set of good moves and then we take a small model. Here we took a quen 3.5 0.8 billion. That's a tiny model. We trained it to copy those labels or in machine learning terms to distill them. At play time, it reads only the current state and the same 380 tokens everyone else gets. Actually, you don't need a PhD degree or recipe for this part because more than coding agents already know how to do it. You just tell cloud code, or Codex, or Cursor to train this. It sets up the PyTorch script. It runs it. And at play time, it doesn't search. It just reads the state, takes one forward pass, picks a direction, and on our benchmark, that distilled student model eats over 400 pallets on average.</p>
+</details>
+<hr>
+<h3 id="手机端部署与工程权衡天下没有免费的午餐" data-reading-heading="">手机端部署与工程权衡：天下没有免费的午餐</h3>
+<p>更具实用意愿的是，这个经过蒸馏的 0.8B 模型足够轻巧，能够完全脱离云端数据中心。通过 Claude Code 辅助构建的原生应用，该模型成功部署到了 <strong>iPhone 16 Pro Max</strong> 上，实现了离线本地运行，单次决策延迟控制在约 <strong>0.5 秒</strong>。至此，我们似乎拥有了一个体积轻巧、响应极速且在游戏表现上大幅超越商业基线的方案。但这是否意味着真正的“免费午餐”？</p>
+<p>严苛的技术账单在随后的综合评测中显现。当对这个专精于吃豆人的 0.8B 学生模型施加由 194 道涵盖意图识别、工单分发、合规审核等泛化判断题组成的综合测试时，其得分仅有 <strong>0.53</strong>；相比之下，通用且同尺寸的 Tab-0.8B 得分为 0.66，而 Jev 官方公布的基准分为 0.89。这一鲜明的反差揭示了工程设计的根本法则：<strong>每项技术决策都伴随着确凿的代价</strong>。</p>
+<ul>
+<li>追求极致速度，代价是输出表达空间的收窄；</li>
+<li>追求复杂规划逻辑，代价是推理时钟的等待；</li>
+<li>追求专精轻量模型，代价是广泛任务通用性的丧失。</li>
+</ul>
+<p>因此，技术选型不应盲从降本冲动：如果系统需要开箱即用的大范围通用判断，托管的 Jev 是极其可靠的选择；但当业务对极端超低延迟（如本地 55 毫秒）、边缘设备完全离线运行或垂直场景极端精度有不可妥协的需求时，拥有并微调专属模型才是解法。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>And at play time, it doesn't search. It just reads the state, takes one forward pass, picks a direction, and on our benchmark, that distilled student model eats over 400 pallets on average. That's more than twice of Jeff's 178. And what's better is it's small enough to leave the data center. Like we can deploy it on an iPhone. Here is this video shows it's it's running on my iPhone, iPhone 16 Pro Max. And in app we build, we also ask claw code to do it at about half a second per decision. So it's small, it's fast, it's better at Pac-Man. Looks like a free launch, right? So where's the bill? Here's the bill. We give the student 194 general judgment questions and they cover intent, ticket routing, policy checks, severity, extraction, everything. And there's no Pac-Man in any of them. And here's the score. the same size tab one 08 billion score 0.66 and our the steel the 0.8 billion scores only 0.53 and Jeff they published scores on those questions uh on 0.89 but there's one caveat our student started not from Tav 1 our student uh started from the the regular coin 3.5 0.8 8 billion base. So part of the gap is it never receives the general training uh sorry receives the decision training and another part is it's only good &gt;&gt; and then step back that's the pattern for everything we did. We see trade-offs here. We see speed cost us narrow output. We see intelligence cost us waiting time. And we also see that small specialists cost us breath here. So how do you decide between a hosted model and your own? And my suggestion is start from one row your product can't compromise on. If you want a zero setup, you want broad judgment out of box, hosted Jeff is a perfectly good answer. It's about 100 milliseconds over internet. It's under a sand per game. So please don't switch just to save on price. But switch when one of these rows really bites. Maybe you need a lower latency like the 55 milliseconds of our 0.8. 8 billion on a Mac. Maybe it has to run offline on a device or maybe one task matters far more than others. And owning the model by yourself allows you to move this rows by yourself. And that's the decision for Jeff.</p>
+</details>
+<hr>
+<h3 id="剥离流行包装沉淀真正的架构判断力" data-reading-heading="">剥离流行包装：沉淀真正的架构判断力</h3>
+<p>每一项爆火的 AI 技术，本质上都绑定了两件事：<strong>能够穿越技术周期的真正问题</strong>，以及<strong>属于特定营销时刻的外层包装</strong>。商业宣传热衷于使用“系统 1”或病毒式游戏演示来构筑光环，但工程师必须学会主动拆解两者的界限。真正持久的架构资产包括：产品对低成本、快速决策的核心诉求，通用的前缀缓存与 Logits 判定优化机制，严密控制变量的成对评测流水线，以及产品系统自身的业务状态机。至于品牌代号与包装词汇，明年又会被全新的概念所替代。当面对下一次技术狂潮时，开发者应审视两个根本问题：<strong>“如果底层模型能力提升十倍，这个包装机制是否依然关键？”</strong> 以及 <strong>“它解决的真实痛点究竟是什么？”</strong></p>
+<p>形成这种鉴别判断力，需要脱离简单的看客视角，进入动手实践的闭环。《AI Builders 2027》体系正是围绕这一闭环展开：在第一阶段，由 Eugen 博士与主讲人带领学员从消除信息泡沫入手，将纯文本对话逐步演进为对接真实数据与工具链的生产级工作区；在第二阶段，教学核心聚焦于“在写任何 Prompt 之前先建立评测集、指标与基线”的工程原则。课程包含了五个操作真实人机接口（Web/GUI）的实战项目，并防范 Agent 数据造假等常见工程陷阱。</p>
+<p>学员在专属的学习平台 <strong>AI Builder Space</strong> 上通过单 API 密钥集成各项模型能力，并最终交付毕业项目（Capstone）。例如学员 Yi（一名经济学分析师）为了患有低频听力损失的祖母开发助听应用，在遭遇大模型语音克隆的复杂营销陷阱后，回归基础信号处理，仅用几十行 Python 音调平移代码便成功落地解决问题。这门沉淀了 13 期、保持 5.0 分评价的课程将于 10 月 12 日开放材料预习并提供优惠，其核心主旨不仅在于写代码，更在于培养区分炒作与真实技术价值的工程决断力。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>But here's a bigger lesson that uh even more important than Jeff itself. Every hot technology bundles two things. A problem that lasts and the packaging from its moment. So CHV is just today's hot name. Nobody is going to split that bound for you because splitting it takes off the halo. So let's split it by ourselves. What lasts? Products need fast and cheap decisions. The the tricks that make them fast like reusing the shared prefix or reading answers letters, they work with any model. You measure on your own task with paired wrongs and you know what each trace costs. All of it carries over to the next model. And in your product, your system already holds the state. So you don't need a game engine. And the packaging, a brand name, a system one label, the viral game clips. Next year, there will be a different name. So next time something goes viral, ask yourself two questions. If the model were 10 times better, would this still matter? And what problem is it actually solving? And do I still need to still have it? Making that split is a judgment call. And judgment come from practice with someone checking your work. So let me tell you how to get that practice. Everything you saw today followed one loop. We described the situation to the model. We measured on the real task and we decided what to trade. That loop is simple to describe. But watching us do it once and doing it yourself on your own problem are two very different things. And that's what our course the AI builders 2027 is built for. This course has two live sessions uh two hours each and Dr. Eugen and I would teach half of every session. In the first one, Eugen starts of how to learn AI at all. His answer is to build because a concrete need filters out the hype. Then I will take over with the context. Today the model only knew what our adapter told in. So we start from a plain chat box and build it up live to a workspace where the AI works with your real data and your real skills. And in the second live session, I cover the measuring which is the heart of today's lesson two. We'll build a small product live. And the first thing we build before a single prompt is the evaluation. We need a data set. We need a metric and a baseline. Then EJ will close with a question that connects right back to the day. Once you can build build almost everything how do you decide what's worth building and around the sessions you build five guided projects first then a capstone on a problem from from your own work so what will you actually build here's the path first five guided projects they share one theme getting AI to read and operate things built for humans like web pages and GE why because when you build an AI feature At work, the blocker usually isn't the model. It's getting to the data. And along the way, we show you a very common trap. In one office hour, the the agent probably reported a near perfect scoring a drawing game with a screenshot to prove it. But the screenshot didn't look like the real game. It had made up its own result. So, we we will show you how to spot that and how to set things up so it doesn't happen again. And second, you build on our AI builder space, our platform for students. One API key would give you models, speech recognition, images, search, and when your app works, you deploy to a public link so you can put on your resume. Your coding agents wires up for you. And third, your capstone. You pick a problem for from your own work or life and build an application around it with feedbacks from us along the way. And let me tell you about this one. So one of our student students Y is an economist. She writes code to analyze data but she has never built software. Her grandmother has hearing loss and a hearing test show that oh she can only hear low frequencies. And here's the trap. When you talk to someone who is hard of hearing, you naturally raise your voice and your pitch will also go up which actually make it worse. You can lower your volume but it's very hard for you to lower the pitch. So yeah, I wanted a app like you talk to it and it plays your words back in a low voice. So she asked the AI and it went from the big moves like speech models, voice cloning, every company recommending it own product and hours later still nothing worked. So she comes to us and my advice was you actually don't need an OM for this. there's a standard pitch shift technique doing exactly this and probably in a in a few dozen lines of Python and so that worked. She came back and um with 42 commits and deploy it to AI builder space and her family is using it and her own takeaway was what's valuable is the judgment and that judgment is exactly what we spent on this course building and the next cohort is about to start. Actually the next cohort starts next Monday o October 12th and enrollment closes when it opens. That first week is when you get your materials and your builder space success and started reading. Then we'll meet live on Saturday, October 17th. The second live session is on October 25th with an optional office hour in between where you can bring the parts that didn't work. If you can make a session live, the recording is also there and the live sessions are only part of it. You also get our textbook more than 200 pages with lifetime updates. So you enroll once and you get every future revision. We we have actually already re rewritten several times and we're in the middle of another one right now. And on top of that, you also get a year in our community. Stay super linear. We have refined this course over 13 cohorts and it rated 5.0 from 84 ratings. You can see a few of reviews here from builders at places like OpenAI and Anthropic and they keep pointing to the part is that you can't get from the free lesson. You build real things with feedback. And if you'd like to join, scan a QR code or open the link or we'll paste in Zoom chat as a thank you note for joining live. The code beyond Jeff takes $200 off. The link already has the the code applied. So, you will see the discounted price right away if you scan the QR code and it will also be in the follow-up email. So, thank you for staying with me. I'm happy to take any questions about Jeff, about the experiments, and about the course. And by the way, after the lesson, look out for an email. It will have the slide deck, the recording, the open source code, your coupon, and the signup link.</p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/a0a3185196a6aedf9b3d40af3ef3fd159a8741a5d49c464ebe58fcfa2280bfbd.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/a0a3185196a6aedf9b3d40af3ef3fd159a8741a5d49c464ebe58fcfa2280bfbd.md" download="拆解爆火的决策模型 Jev：普通开源模型超越它的实测与手机端部署.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Vercel" class="entity-link company-link">Vercel</a>, <a href="/search/?q=Together AI" class="entity-link company-link">Together AI</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Phi-4-mini" class="entity-link product-link">Phi-4-mini</a>, <a href="/search/?q=Qwen2.5" class="entity-link product-link">Qwen2.5</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

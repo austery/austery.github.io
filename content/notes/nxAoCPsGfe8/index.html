@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mistral 首席科学家 Pierre Stock 访谈：主权 AI、万亿参数模型与未来智能体</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Mistral 首席科学家 Pierre Stock 访谈：主权 AI、万亿参数模型与未来智能体</span>
+      <span data-pagefind-meta="speaker" style="display:none;">The MAD Podcast with Matt Turck</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>The MAD Podcast with Matt Turck</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-22</span>
+    
+
+    <header class="article-header">
+      
+      <h1>Mistral 首席科学家 Pierre Stock 访谈：主权 AI、万亿参数模型与未来智能体</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/sovereign-ai/">sovereign-ai</a>
+      
+        <a class="tag-link" href="/tags/open-source/">open-source</a>
+      
+        <a class="tag-link" href="/tags/multimodal-learning/">multimodal-learning</a>
+      
+        <a class="tag-link" href="/tags/mixture-of-experts/">mixture-of-experts</a>
+      
+        <a class="tag-link" href="/tags/agentic-ai/">agentic-ai</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">Mistral 首席科学家 Pierre Stock 阐述了开源 AI 对技术主权的重要性，类比电力供应的不可切断性。文章深入解析了 Mistral Large 4 的原生多模态架构、混合专家模型优势及推理模式设计，并展望了 Mistral Large 5 在网络安全等复杂场景下的智能体应用前景。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/the-mad-podcast-with-matt-turck/">The MAD Podcast with Matt Turck</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=nxAoCPsGfe8" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-22T00:00:00.000Z">2026-10-22</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>28 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E5%BC%80%E6%BA%90-ai-%E4%B8%8E%E4%B8%BB%E6%9D%83%E6%A8%A1%E5%9E%8B">开源 AI 与主权模型</a></li><li class="outline-h3"><a href="#le-chat-chunk-%E7%9A%84%E5%91%BD%E5%90%8D%E4%B8%8E%E5%B9%95%E5%90%8E">Le Chat Chunk 的命名与幕后</a></li><li class="outline-h3"><a href="#%E6%8E%A8%E7%90%86%E4%B8%9A%E5%8A%A1%E4%B8%8E%E7%AE%97%E5%8A%9B%E6%94%AF%E6%8C%81">推理业务与算力支持</a></li><li class="outline-h3"><a href="#%E8%87%AA%E5%BB%BA%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E4%B8%8E%E6%8A%80%E6%9C%AF%E4%BC%98%E5%8C%96">自建数据中心与技术优化</a></li><li class="outline-h3"><a href="#%E5%BC%80%E6%BA%90%E6%9D%83%E9%87%8D%E4%B8%8E%E8%83%BD%E5%8A%9B%E5%8C%BA%E9%9A%94">开源权重与能力区隔</a></li><li class="outline-h3"><a href="#%E6%A8%A1%E5%9E%8B%E6%80%A7%E8%83%BD%E5%AF%B9%E6%AF%94%E4%B8%8E-agent-%E8%83%BD%E5%8A%9B">模型性能对比与 Agent 能力</a></li><li class="outline-h3"><a href="#%E5%89%8D%E6%B2%BF%E6%A8%A1%E5%9E%8B%E4%B8%8E%E5%9E%82%E7%9B%B4%E9%A2%86%E5%9F%9F%E4%BC%98%E5%8A%BF">前沿模型与垂直领域优势</a></li><li class="outline-h3"><a href="#fair-%E8%83%8C%E6%99%AF%E4%B8%8E%E5%88%9B%E7%AB%8B-mistral">FAIR 背景与创立 Mistral</a></li><li class="outline-h3"><a href="#%E4%BB%8E%E7%BD%91%E7%BB%9C%E5%8E%8B%E7%BC%A9%E5%88%B0%E4%B8%87%E4%BA%BF%E5%8F%82%E6%95%B0%E6%A8%A1%E5%9E%8B">从网络压缩到万亿参数模型</a></li><li class="outline-h3"><a href="#%E5%8E%8B%E7%BC%A9%E6%9C%BA%E5%88%B6%E4%B8%8E%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83">压缩机制与大模型训练</a></li><li class="outline-h3"><a href="#%E6%B7%B7%E5%90%88%E4%B8%93%E5%AE%B6%E6%A8%A1%E5%9E%8Bmoe%E4%B8%8E%E6%8E%A8%E7%90%86%E4%BC%98%E5%8A%BF">混合专家模型（MoE）与推理优势</a></li><li class="outline-h3"><a href="#%E8%B7%AF%E7%94%B1%E6%9C%BA%E5%88%B6%E4%B8%8E%E4%B8%93%E5%AE%B6%E5%B9%B3%E8%A1%A1">路由机制与专家平衡</a></li><li class="outline-h3"><a href="#%E6%A8%A1%E5%9E%8B%E6%89%A9%E5%B1%95%E4%B8%8E%E7%A8%80%E7%96%8F%E5%BA%A6%E6%8C%91%E6%88%98">模型扩展与稀疏度挑战</a></li><li class="outline-h3"><a href="#moe-%E6%9E%B6%E6%9E%84%E7%94%9F%E6%80%81%E4%B8%8E%E5%BC%80%E6%BA%90%E7%9B%B8%E4%BA%92%E5%80%9F%E9%89%B4">MoE 架构生态与开源相互借鉴</a></li><li class="outline-h3"><a href="#%E5%85%B1%E4%BA%AB-kv-%E7%BC%93%E5%AD%98%E4%B8%8E%E6%8E%A8%E7%90%86%E6%A8%A1%E5%BC%8F">共享 KV 缓存与推理模式</a></li><li class="outline-h3"><a href="#%E5%8E%9F%E7%94%9F%E5%A4%9A%E6%A8%A1%E6%80%81%E8%83%BD%E5%8A%9B">原生多模态能力</a></li><li class="outline-h3"><a href="#%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E4%B8%8E%E5%90%88%E6%88%90%E6%95%B0%E6%8D%AE">数据处理与合成数据</a></li><li class="outline-h3"><a href="#%E7%BC%A9%E6%94%BE%E5%AE%9A%E5%BE%8B%E4%B8%8E%E7%AE%97%E5%8A%9B%E7%BB%86%E8%8A%82">缩放定律与算力细节</a></li><li class="outline-h3"><a href="#%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%9C%BA%E5%88%B6%E4%B8%8E%E6%A0%A1%E5%87%86">强化学习的机制与校准</a></li><li class="outline-h3"><a href="#%E6%95%88%E7%8E%87%E7%9A%84%E6%9D%A5%E6%BA%90%E4%B8%8E%E6%8C%81%E7%BB%AD%E8%BF%90%E8%A1%8C%E7%9A%84%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0">效率的来源与持续运行的强化学习</a></li><li class="outline-h3"><a href="#%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%AE%9E%E4%BE%8B%E4%B8%8E%E8%AF%84%E4%BC%B0%E5%9F%BA%E5%87%86">强化学习实例与评估基准</a></li><li class="outline-h3"><a href="#%E5%A5%96%E5%8A%B1%E6%9C%BA%E5%88%B6%E4%B8%8E%E6%AD%BB%E5%BE%AA%E7%8E%AF%E6%83%A9%E7%BD%9A">奖励机制与死循环惩罚</a></li><li class="outline-h3"><a href="#%E8%83%BD%E5%8A%9B%E6%BF%80%E5%8F%91%E8%BF%98%E6%98%AF%E5%85%A8%E6%96%B0%E4%B9%A0%E5%BE%97">能力激发还是全新习得</a></li><li class="outline-h3"><a href="#%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E9%9A%BE%E5%BA%A6%E6%A0%A1%E5%87%86%E4%B8%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%B2%99%E7%AE%B1%E9%97%AE%E9%A2%98">强化学习中的难度校准与网络安全沙箱问题</a></li><li class="outline-h3"><a href="#%E5%BC%80%E6%BA%90%E6%9D%83%E9%87%8D%E7%9A%84%E5%AE%89%E5%85%A8%E6%9D%83%E8%A1%A1%E4%B8%8E%E9%98%B2%E5%BE%A1%E8%83%BD%E5%8A%9B">开源权重的安全权衡与防御能力</a></li><li class="outline-h3"><a href="#timestroll-%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%A8%A1%E5%9E%8B">Timestroll 与专业模型</a></li><li class="outline-h3"><a href="#%E7%94%A8-ai-%E6%9E%84%E5%BB%BA-ai-%E4%B8%8E-mistral-large-5">用 AI 构建 AI 与 Mistral Large 5</a></li><li class="outline-h3"><a href="#%E7%BB%93%E8%AF%AD">结语</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><!-- chunk 1/9 -->
+<h3 id="开源-ai-与主权模型" data-reading-heading="">开源 AI 与主权模型</h3>
+<p>人们意识到 AI 的访问权限可能会被切断。这真的就像电力一样。你不会希望有人能够切断另一个国家的电力。我不愿生活在一个由一两家公司向我承诺只有他们自己能保证模型可用的世界里。我真正把自己和整个团队——我们有 300 名科学家，我认为我们拥有世界上科学家密度最高的团队之一——我真的把他们置于一个与世隔绝的气泡中，但我从未怀疑过我们会成功。你们的使命真正是去驱动前沿，并去定义世界的前沿。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>People realized AI access could be cut off. It's really like electricity. You wouldn't want someone to be able to cut power off another country. I'm not comfortable living in a world in which one or two companies are promising me they can guarantee the model themselves. I really put myself and the entire team, so we have 300 scientists. I think we have one of the highest scientist density in the world. I really put them into a bubble, but I never doubted we'd make it. Your mission is really to power the frontier and to define the frontier of the world.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 那位是 Pierre Stock，Mistral 的一号员工，他现在执掌的研究团队刚刚发布了 Mistral Large 4，也就是 Le Chat，这是一个万亿参数模型，在 Mistral 自己的数据中心里用 3,800 张 GPU 训练了两个月。在今年的大部分时间里，权重开源 AI 都意味着中国 AI，但这个月西方强势回归，Mistral 也是如此。在这次对话中，我们讨论了 Le Chat 是如何构建的、为什么在我们说话的同时它仍在训练，以及为什么 10 万亿参数模型的时代已经降临。我是 Matt Turk，这是 Mad Podcast。</p>
+<p>好了，我想从西方开源领域一个看似非常重大的时刻开始讲起。在过去几个月贯穿 2026 年的时间里，围绕开源的叙事主要集中在中国。也就是 Kimi，是 Qwen 和 GLM，而似乎突然之间，有一批美国以及泛西方模型涌现出来。比如有 Reflections Beam，有你们的 Le Chat——我们今天会对此展开深入讨论。就在昨天 Meta 推出了 Muse Spark Open，还有 Nvidia Nemo Nemotron 3.5。在多大程度上，所有这一切纯属巧合，还是说存在某些更为结构性的原因？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: That is Pierre Stock, Mistral's employee number one, who now runs the research team that just shipped Mistral Large 4, aka Le Chat, a trillion parameter model trained in two months on 3,800 GPUs in Mistral's own data centers. For most of this year, open-weighted AI meant Chinese AI, but this month the West came back in full force, and so did Mistral. In this conversation, we talked about how Le Chat was built, why it's still training as we speak, and why the era of 10 trillion parameter models is upon us. I'm Matt Turk, and this is the Mad Podcast.</p>
+<p>All right, I want to start with what seems to be a very big moment in Western open source. For the last few months throughout 2026, the narrative around open source was around Chinese. So it was it was Kimi, it was Qwen, and GLM, and it seems like all of a sudden you have a bunch of uh US and Western in general models coming out. So you had uh Reflections Beam, you have your Le Chat uh that uh we are going to discuss extensively today. You had uh Meta Muse Spark Open just yesterday, Nvidia Nemo Nemotron 3.5. To to which extent is all of this a coincidence uh versus uh something more structural?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 所以我认为这确实是结构性的，而这我觉得正是开源的魅力所在。我总是喜欢提醒大家，我们开始的时候并没有等待中国模型先开放权重。我们在三年前创立了 Mistral。当时我们开放权重的第一个模型是 7B，顺便说一句，那几乎是 3 年前的事了，2023 年 9 月。这个模型和下一个模型基本上也引爆了权重开源社区。我认为其美妙之处在于社区会给予你回馈，对吧？所以在权重开源领域拥有众多参与者在很多方面都是有益的。我很高兴今天参与者的数量比我们当年多得多。</p>
+<p>仅举一个说明相互开放至少部分工作的权重何以有益的例子。在 7B 之后，我们在 NeurIPS 23 之前开源了 8x7B，也就是我们所称的 mixtral。在那时，它是首个权重开源的混合专家模型（MoE）。它并不是非常细粒度的。它非常，我们拿来 7B，通过手术把它改造成像一个专家混合专家模型，然后互相尝试。这种技术基本上为你今天看到的所有架构奠定了基石和基础。特别是，我的意思是据传闭源实验室也是如此，但权重开源的那些模型同样如此，对吧？我们转向了更大得多的模型，粒度细得多，因此也更加稀疏。但真正引发这一切的是 8x7B，反过来它加速了研究进展，随后其他公司也向权重开源领域贡献了非常棒、非常棒的成果。例如强化学习部分，那是一个极佳的贡献。Transformer 中所有的注意力变体，如果你听说过 KGA、DSA 等所有这些变体的话。</p>
+<p>所以概括来说，看到权重开源和开源世界以这种方式蓬勃发展是非常棒的。我认为这证明了，至少对我们而言，权重开源深植于我们的 DNA 之中，我们真的希望能够继续开放模型的权重，鉴于近期发生的事件，这种技术能够在不受任何控制的情况下被访问是至关重要的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: So I do think it's structural, and that's uh I think that's the beauty of open source. I I always like to remind that we started we didn't wait for the Chinese model to open wait. We started the Mistral three years ago. And at that time the the first model we open open weighted through 7B almost 3 years ago by the way, September 23. This model and the next one sparked basically also the the open weight community. And I think the beauty of it is that the community gives you back, right? So there's many ways in which it's beneficial to have many players in the open weight. I'm glad there's many players many more players today than when we were before.</p>
+<p>Just to give an example of how it's beneficial to mutually open weight at least part of the work. So we open weighted after the 7B the 8x7B so mixtral as we call it the just before NeurIPS NeurIPS 23. And at that time it was the very first open weight mixture of experts. It was not very granular. It was very we took the 7B and we surgery it into like a an expert mixture of expert and then try each other. This kind of technology basically was the foundation and the basis for all the architecture that you see today. In particular I mean the closed labs allegedly but also the the open weight ones, right? We moved to way bigger models way more granular so more sparse. Um but really what sparked the thing is the 8x7B but in turn it allowed research to accelerate and then other companies contributed very nice very nice things to the open weight. The reinforcement learning part for instance um but that was a great one. All the attention variants that you have in the transformer which is if you heard about KGA DSA all these all these variants. Um so that's in a nutshell it's very great to see the open weight and the open source world flourish that way. And I think that's a testimony that at least to us open weight is is in our DNA and we really want to to be able to continue open writing models, which is crucial that this kind of technology is at is like it's it's possible to be accessed without any control on it given the the recent events.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 除了技术层面，大概一个月前，我想是今年夏天，有过这样一个时刻，简而言之，美国切断了对闭源模型的访问，尤其是对非美国公民。这在世界其他地方、在你们的客户群中是如何被看待的？那是一个让“主权 AI”的整个概念具体明确下来的时刻吗，还是说这种说法有点夸大了？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: And beyond the technical, there was this moment come a month ago, I think this summer, when the US to simplify a bit, just shut down access to closed source models, especially to non-US nationals. How was that perceived in the rest of the world, within your customer base? Was it Was it a moment when the whole idea of sovereign AI kind of crystallized or is that a bit exaggerated?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 我确实认为存在一个观念具体明确的时刻，因为人们意识到 AI 访问可能会被切断；如果你把 AI 视为我们整个社会都将依赖的下一个大型技术模块，它真的真的就像电力一样。你不会希望有人能够切断另一个国家的电力。而如果我们仅仅依赖闭源模型，几年之后这正是可能发生的事情。从个人角度来说，这绝非我想身处的处境。</p>
+<p>话虽如此，我认为这在全球范围内清晰表明了人们确实在乎主权、访问权限，以及基本上就是业务连续性。我认为这对我们的客户来说没有太大变化，因为他们早就被说服了。我们宣传这一点已经有好几年了。但是，这对我们的潜在客户以及现在的新客户产生了很大改变，特别是在美国。我认为主权并不只是属于少数几个国家的，它是属于每个人的，你希望能够获得访问权限，保证对这类模型的访问。同样，如果你开放权重和模型，它的权重就会被复制到整个互联网以及 Hugging Face 和所有服务器上，要切断访问就会困难得多得多。可以说几乎是不可能的。这基本上就是我们此刻的立场。再次强调，闭源模型，我的意思是那些模型也有权重，但我认为生态系统需要有一部分是权重开源的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: I do think there was a crystallization moment because people realized AI access could be cut off, and if you think as AI as a next big technology block that that our entire society will rely on, it's really really like electricity. You wouldn't want someone to be able to cut power off another country. And that's exactly what could happen in a few years if we only depend on closed closed source models. And it's essentially not a position I would like to be in personally.</p>
+<p>So, that being said, I think it crystallized on a global scale that people do care about sovereignty and access and business continuity, basically. I think it didn't change much for our customers because they were already convinced. We've been saying that for a few years already. But, it changed a lot for our prospect customers and now new customers, in particular in the US. I think that's it's not a sovereignty is not only for a few countries, it's for everyone and you want to be able to have access guaranteed the access to to such models. And again, if you open your weights and models, so its weights are replicated all over the internet and again face and all all the servers, it's much much much harder to cut the access. Like it's virtually impossible. And that's basically our stance right here. And again, closed-source model, I mean, those models have weights, but I think the ecosystem needs a part that is that is open weight.</p>
+</details>
+<h3 id="le-chat-chunk-的命名与幕后" data-reading-heading="">Le Chat Chunk 的命名与幕后</h3>
+<p><strong>&gt;&gt;</strong>: 那么，Le Chat Chunk 令人兴奋的一部分在于它是内部昵称。这不是一个正式名称，对吧？这是一个内部——</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: So, one exciting part of of of Le it Le Chat Chunk, which is the internal nickname. It's not an official name, right? It's it's it's an internal</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 因为太受欢迎，我们把它变成正式的了，但是 API 端点有两个端点。有一个 Mistral large 4，我想在 API 端点里也有 Le Chat Chunk，但它们是同一个模型。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: we made it official due to popularity, but the API endpoint There are two endpoints. There's a Mistral large 4, and I think there's Le Chat Chunk in the API endpoints, but it's the same model.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 这个名字背后有什么故事？只是为了让大家了解一下。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: What's the story behind the name? Just that people know.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，我觉得这是一个很棒的故事。它稍微体现了我们在 Mistral 的做事风格。实际上，六月份在 X 上发生了一个自发的时刻，当时我们非常喜爱的开发者社区突然开始拿一个叫作“Le Chat en Fat”的模型开玩笑。我们显然注意到了，而且觉得非常有趣。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Yeah, I think it's a great story. It embodies a little bit of what we do at Mistral. So, actually, there was this organic moment on on X in June, where actually the developer community, which we pretty much love, um, they started teasing a model out of the blue called Le Chat en Fat. We picked it up, obviously, and it was quite funny.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: Chaton 的意思是小猫。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Chaton meaning kitten.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 没错，是的。基本上就是肥猫，指涉的是传闻中该模型的大小。显然，那些梗图太棒了。直到我们的 CEO Arthur 决定发推回应，实际上他说：“不，是 Le Gros Chaton”，这正是法语里说肥猫的地道表达。当然，我们在内部立即采用了这个命名。在整个夏天，它确实一直作为项目的代号，直到几天前发生的前一次发布。</p>
+<p>有趣的事实是，后来我们展示——后来在为公司内部活动整理幻灯片时，首席科学家 Guillaume 想出了一个我之前不知道的词，Le Chat Chunk。结果发现那是一只宝可梦，虽不是第一代的，但它确实是一只宝可梦，而且这完全就是我们要找的词。在英语里，我想它就像是你喜欢但也有一点点微胖的毛茸茸的小动物。这就是为什么我们最终称它为 chunk。显而易见也因为它是一个大模型。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Exactly, yeah. That's that's fat kitten, basically, regarding the size of the alleged size of the model. Obviously, the the memes were amazing. Up to a point where our CEO, Arthur, decided to tweet back, actually, saying, "No, it's Le Gros Chaton," which is exactly the French way of saying a fat kitten. Of course, we immediately adopted the naming internally. During the summer, it was really the code name of the project up until the the the previous release that happened a few days ago.</p>
+<p>And the the fun fact is that afterwards, we while present while afterwards while compiling some slides for like internal company events, Guillaume, the chief scientist, actually came up to this word that was unknown to me, Le Chat Chunk. It turned out that it's a Pokémon, like not the first one, but it's it's really a Pokémon, and it's exactly the word we were looking for. It's like in English I think it's like a fluffy animal that you that you like but that is a bit a bit fat. And that's why we we dubbed it trunk in the end. Also because it's a big model obviously.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 太棒了，这次发布令人兴奋的部分之一在于，至少从美国视角来看，这感觉有点像 Mistral 的王者归来。曾经有那么一个时刻出现过一点争议，当时你们开始支持中国模型，并通过你们的基础设施提供对中国模型的访问，当时有人说 Mistral 已经完全落后了。我很好奇从内部来看当时是什么感觉，因为我们现在知道你们自始至终一直在训练这个非常庞大的模型，而且结果非常成功。当时的气氛是怎样的？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Great and one of the exciting parts of that release is that it feels like a little bit of a comeback story for Mistral at least perceived from the US. There was there was a moment when there was a little bit of controversy when you guys started supporting Chinese models and and and and providing Chinese model access through your infrastructure where people were saying Mistral has completely fallen behind. I'm curious what it felt like from the inside because now we know that you were training this very large model that turns out to be very successful all along. What was the mood like?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 这取决于你问谁。如果你问我们的公关总监，她的回答可能跟我大不相同。但至于我自己，我——</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: So it depends who you ask. If you ask our PR director she may have a very different answer than than for me. But regarding myself I</p>
+</details>
+<!-- chunk 2/9 -->
+<h3 id="推理业务与算力支持" data-reading-heading="">推理业务与算力支持</h3>
+<p>确实让我自己以及整个团队——我们有300名科学家。我认为我们拥有世界上科学家密度最高的团队之一，真的如此。我确实把他们放在了一个隔绝的保护环境里，而我确实曾怀疑过我们是否能成功训练出这个模型。显而易见这并不容易，我们之后可以回过头来详细谈谈，要在如此之少、如此有限的算力下一击即中地训练出这么大体量的模型，究竟需要付出什么。但我从未怀疑过我们能做到。我想我团队会说，这是出于我的乐观一面。</p>
+<p>至于公司的其他部分，我认为这是我们曾试图解释、但也许并未被外界很好理解的一点：它们并非排他的。一方面拥有一项世界级的推理服务，能够实际服务所有人想要的全部模型，另一方面去训练前沿模型并成为前沿开创者，这两者并不是相互排斥的。我认为这正是我们未能解释得很好的部分。如今有了这个模型，显然解释起来就容易多了。但重要的是，这项推理业务实际上是一个动力源，它让我们能够扩展算力规模，并在之后将其一部分用于科学研究。这也是为什么我认为 Mistral 做了一个极其完美的举措，这多亏了我们的 CTO 团队，他们真的是从在数据中心插线缆开始学起，去掌握这项全新的工作，这绝非易事。因为它使我们能够随意构建所需的算力，既用于为我们想要的所有模型提供服务——默认显然是保持中立——同时也将其中的一部分算力投入到科学研究中。从商业角度来看，这两者其实结合得非常紧密。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>really put myself and the entire team so we have 300 scientists. I think we have one of the highest scientists density in the world like really. I really put them into a bubble and I really doubted that we would succeed training this model. It was not easy obviously and we can we can go back to the specifics of of what it takes actually to train a model that that large one shot on so so few so so little compute. But I never doubted we'd make it. It's my uh optimism aspect I would say my my team would say.</p>
+<p>Regarding the rest of the company I think it's the thing we tried to explain but maybe that would that was not that well perceived is that it's not exclusive. It's not mutually exclusive to have both a world grade inference service that can serve all the models that people want actually on the one hand and on the other hand to train frontier model and to be a frontier and I think that's the part we we managed we didn't manage to explain that well. Now it's easier to explain with with the model, obviously. But what's important is that this inference business is actually the powerhouse that allows us to scale the computes and to leverage it afterwards in part for science. And that's also why I think it's like a perfect move that that Mistral did thanks to our CTO team who literally learns to plug cables in data center and to learn this like new new new job, which is not an easy one. Because it allows us to build at will the compute needed for both serving all the models we want and the default being neutral, obviously. Um but also to leverage part of it for science. The the the two actually go very well together from a business standpoint.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，这是整个故事很大的一部分，对吧？几个月前 Tim 也来过这个播客谈 Mistral。对于这个大块头，你们是在欧洲本土的基础设施上，用 3,800 张英伟达 Grace Blackwell GPU 训练了该模型。这是促成这次强势回归的关键突破之一吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Yeah, and that's a big part of the story, right? We had Tim on this podcast a a few months ago for Mistral for the chunk you trained the model on your infrastructure in Europe with 3,800 Nvidia Grace Blackwell GPUs. Was that a big part of the unlock that facilitated that comeback story?</p>
+</details>
+<h3 id="自建数据中心与技术优化" data-reading-heading="">自建数据中心与技术优化</h3>
+<p><strong>&gt;&gt;</strong>: 没错，正是如此。我认为我们拥有的算力不止于此，而且我们已经制定了按数量级进行扩张的计划。但正如我在此写下的，这里的这些算力实际上并不是由我们最新的 D 轮——也就是那笔 30 亿的融资——所资助的，因为实际建造数据中心需要时间。所以它是由上一轮资金支持的。因此我们计划进行更大规模的扩展。不过我觉得这里有一个故事，从技术角度基本能说明为什么自建数据中心如此重要。当然，商业层面的原因有很多，特别是低延迟以及数据中心所受辖的管辖范围。当然，我的故事是关于我们开始进行预训练时——也就是最开始的时候——</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Yep, exactly. So I think we have more compute than that and we have plans to expand it by orders of magnitude already. But as I like write here here this compute here is not actually funded by our latest series D the 3 billion one because it takes time to actually build the data center. So it's funded by the previous funds. So we plan to scale much more, but the I think there I have one story that's basically tells you why it's so important to build your your data center from a technical point of view. There's many business reasons, of course, in particular the low and the under width to data center is subject to. Of course, but like my story is that we started the pre-training so like the very first</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 从监管角度来看？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: from regulatory standpoint?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 从监管角度来看，对于客户而言，把数据中心设在你开展业务的国家，并且不受制于你不想打交道的其他法律管辖，这具有巨大的优势。我认为这很重要。但从技术角度来看，当我们最初开始从零训练这些模型时，我们把来自同一方的预训练团队和来自集群方的计算团队召集在同一个房间里。我们连续熬了两个通宵进行紧张构建，因为要让一个集群真正顺畅运转是很难的。这有点像——我总说这有点像一级方程式赛车，对吧？一切都极其敏感。比如最基本的例子是，即使你拥有极好的 GPU，哪怕是世界上最好的，但如果它们之间的通信哪怕滞后几十到一百毫秒，你就会失去高速计算带来的全部优势，因为 GPU 都在互相等待。这就是你在集群上除了海量其他事项之外，必须去寻找并维持的一种平衡。实际上，两个堪称世界顶尖、属于全球最优秀梯队的团队在同一个作战室里的这种协作互动，如果我们当时必须通过云服务商去沟通处理的话，我想它可能需要——</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: So from a regulatory standpoint, there's a big advantage in having for a customer in having a data center in the countries in which you operate and that are not subject to other laws that you wouldn't uh like to deal with. I think that's that's important, but from a technical point of view, we when we started first training the models from scratch, we put in a room both the pre-training team from the same side and both the compute team from the the cluster side. And uh we had two nights of heavy building because uh it's hard to actually make a cluster work. It's a bit like uh I always say that it's a bit like a Formula 1, right? Everything is so sensitive. Like the basic example is that if you have great GPUs like the best in the world, but the communication between them are a bit lagging even by a few dozen 100 milliseconds, then you lose all the benefits of the fast compute because the GPUs are waiting for each other. And that's the kind of balance you you need to to to find on the cluster among like tons of other stuff. And actually this interaction in in the same war room of two teams that are the the the the best in the world, some of the best in the world, actually was uh if we had to go through a cloud provider with that, uh I think it would have it would have</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 鉴于我们特定的代码库以及我们想要进行优化以获得最佳吞吐量的方式，可能得花上好几个星期才能部署好。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: taken like weeks to set up uh given our particular code base and the way we want to optimize and to get the best throughput.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 所以这实际上，我的意思是，从技术角度来看拥有算力就像是一种恩赐；而且对我们的客户而言，这也是一种保证，确保数据留存在他们所选择留存的国家内。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: So that's actually um I mean having a compute is like compute is like a blessing for uh from a technical point of view and also for the customers for our customers is the insurance that the data stays in the country they they chose uh they chose to stay.</p>
+</details>
+<h3 id="开源权重与能力区隔" data-reading-heading="">开源权重与能力区隔</h3>
+<p><strong>&gt;&gt;</strong>: Meta 再次发布了性能非常强大的开源模型。他们表示其最强大的模型将保持闭源，而你们最强大的模型主力将是开源的。这里的微妙之处在于，Mistral 不仅仅是开源、开放权重，你们也有一些闭源的模型。你是如何考量这种组合的，特别是针对最强大的模型？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: So Meta, which again released the very powerful open source model. They said that their most powerful model would remain closed source and your most powerful model the trunk is going to be open source. The nuance here is that Mistral is not just open source open weights. You also have some models that are closed source. How do you think about that mix in particular for the most powerful model?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，这是个好问题。我认为在软件层面，Mistral 未来依然致力于提供开放权重的模型。我们从读博时起——Mistral 核心团队的很大一部分人当年实际上是在 Facebook AI Research（FAIR）开始读博的，当时 Yann LeCun 基本上就告诉我们要开始开放权重，并将我们所有的工作开源。所以这确实根植于我们的基因中，我想这也是我们作为研究人员成长的方式。顺便说一句，我认为正是在那个时候，我们在不知不觉中凝固了 Mistral 的 DNA，在这方面挺有意思的。但我认为模型的实力是一回事，它的能力又是另一回事。我认为你可以在这两者之间做出区分，对吧？把最强大的模型开放权重，我认为这很好，因为它使社区能够在此基础上进行构建。比如，它为研究实验室解锁了科研探索。它在开发者社区中推动了大量的变革。但我们并不排除从这些强大的开放权重模型中剥离出某些特定能力的可能，对吧？比如网络安全（cyber）。未来可能会出现这样一种情况：我们拥有在网络安全方面极其出色的私有接口端点，同时我们开放同一个极其稳健且强大的模型权重，但不包含这项特定能力。我认为这就是我看待事物的方式，要知道目前如果进行对比的话，我们在网络安全方面已经极为出色了，而且我们认为这也给社区带来了很多益处。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Yeah, it's a good question. I think the software I think we were committed to to open weights models in the future at Mistral. We started our PhD big part of the core team of Mistral actually started their PhD at Facebook AI research fair back in the time and we were basically told by Yann LeCun to start the open weights and open source all of our work. So it's really in our roots and I think that's how we were raised as as researchers I would say. I think that's that's at that time that we solidified the Mistral DNA by the way without realizing it which is pretty fun in that respect. But I I think the there's the strong I mean the the strength of the model and then there's the capabilities. I think you can make a distinction, right? Open weighting the strongest model I think it's good because it enables the community to build on top of it. It unlocks research for for for research labs for instance. It enables a lot of changes in the in the developer community. But what we don't exclude is to basically carve out some capabilities from these powerful open weight models, right? Like cyber. And in the future there might be a future in which actually we have these private endpoints that is extremely good on cyber and we open weight the same super robust and powerful model but without this this capability. I think that's how I would see things, knowing that for now if you want to compare basically, we are we are already like super good on cyber and we think it's it has also like many benefits for the for the community.</p>
+</details>
+<h3 id="模型性能对比与-agent-能力" data-reading-heading="">模型性能对比与 Agent 能力</h3>
+<p><strong>&gt;&gt;</strong>: 太好了。说到“极为出色”这一点，能否帮我们对比印证一下 Mistral 4 相比于 Beam、Muse Park Open 以及整体上最顶尖的中国模型处于什么水平？具体而言它在哪些方面表现出色？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Great. To the super good point, maybe help us to compare and contrast where Mistral 4 landed versus Beam and Muse Park Open and the best Chinese models overall and then what is it good at specifically?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 关于哪个模型最好，外界有大量的杂音和信息涌向我们。当然，性能是一个多维度的概念。我们人类除了三维之外，对多维世界的理解能力非常有限，所以这很难评判。话虽如此，针对你提到的这些模型，比如 Beam，它是来自 Reflection 的第一个模型。它是一个出色的模型，但我们在所有基准测试上大概都领先他们20分左右。所以这是关于那个模型。至于其他的 Meta 模型——</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: There's a lot of noise and information flowing to us to which model is the best. Of course, performance is like a multi-dimensional aspect. We humans are very poor at uh understanding multi-dimensional worlds apart from three dimensions, so it's very hard. That being said, for the models you mentioned, so on Beam is like it's the first model from Reflection. It's a great model, but we are like maybe 20 points above on all the benchmarks. Um so that's the one. Regarding the other the meta ones</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 那是在智力评分跨度上的20分，就像 Artificial Analysis 那种——</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: That's 20 point 20 points across from intelligence scale, so like artificial analysis kind of um</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，我目前还没有拿到 Artificial Analysis 的具体分数，但从他们公布的数据来看确实如此，而且它也是一个尺寸更小的模型。坦白说，这显然是他们的第一个模型。所以再次强调，能有一个开放权重的竞争者是非常好的事情。关于其他的模型，我认为需要注意的关键在于，我们在许多方面都要优于新的开源模型，特别是在核心能力方面。例如，如果你去看那个名为 Deep Sweep 的基准测试，那就是一个我们表现更优的例子。而在中国模型方面，我们在 agency（智能体自主）能力上与他们基本持平，对我而言，这就是入局的门槛。也就是说，你必须在 agency 能力上正面对决、处于最前沿。这里的 agency 指的是模型在复杂任务上进行数小时——目前是数小时，未来可能是数天——推理思考的能力。所以在这一领域我们表现很好。那么接下来的问题就是，赢得竞争的优势是什么？在这方面，我们有几种不同的策略，我们正在——</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Yeah, so I don't have the artificial analysis scores yet, but from what they report, and also it's a smaller model. To be honest, it's the first model obviously. So So again, it's very good to have an open weight open weight contender. Regarding the other ones, I think the the thing that's that's important to notice is that we are I think we are better than the than the new the new open model on many aspects, in particular on core energy capabilities. If you look at the benchmark that's called Deep Sweep for instance, that's that's an example in which we are better. And on the Chinese ones, we are essentially on par with them on the agency capabilities and that's for me the right to play. So you need to be frontally at the frontier for agency. So agency like the ability for a model to reason over complex tasks for hours uh now, maybe days in the future. So on that front we're good. Then the question is what is the right to win? And in that aspect we have a few different strategies in which we are like at</p>
+</details>
+<!-- chunk 3/9 -->
+<h3 id="前沿模型与垂直领域优势" data-reading-heading="">前沿模型与垂直领域优势</h3>
+<p>前沿，不论是闭源还是开源。第一个是网络安全，第二个是制造。这是一个有趣的领域，我们实际上在利用 AI 来加速工业周期。而且你不能单靠一个提示词做到这一点——剧透警告。然后是金融，或者总体的办公生产力。所以简单来说，比如有对这类模型进行 Excel 操作等。</p>
+<p>所以这就是我们的现状。在代理能力（agency）方面处于开源权重前沿，并且在关键垂直领域整体表现最佳。我想指出的另一点是，Mistral 迄今为止已经融资了 60 亿。而来自 Meta 的首席科学家 Alexander Wong 谈到马克不得不为此开出 1000 亿到 2000 亿的支票。因此，用这样的预算能比他们做得更好，我为团队感到相当自豪。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>the frontier, closed or open. The first one being cyber, the second one is manufacturing. It's an interesting one in which we actually leverage AI to accelerate industrial cycles. And you can't do that with a prompt. Spoiler alert. And then there's finance or work productivity generally. So to say quickly there's like Excel manipulation for instance of such models.</p>
+<p>So that's where we stand. So at the open weight frontier on the agency and the best overall on key verticals. And I think the thing that I want to underline as well is that as Mistral we've raised up to date 6 billion. And the chief scientist from Meta, Alexander Wong, talked about some checks that Mark had to write from 100 to 200 billion for that. So actually being better than them with such a budget, I'm pretty proud of the team.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 你认为中国模型为何依然处于最前沿？这是像你提到的他们拥有更多算力这样的资金问题吗？还是技术能力的问题？到底是什么原因？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Why do you think Chinese models are still at the very frontier? Is that a question of financing to your point of they have more computes? Is that a question of technical capabilities? What Why is that?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 我认为这个问题有很多方面。我认为第一个是，我们所取得的成就——训练 ML4 the trunk，在前沿开源权重的代理能力上达到顶尖，并在整体能力上表现最佳——正如你所说，是在略多于 3000 张 GPU、10 兆瓦功率下训练出来的。我们认为这比中国竞争对手少了三到四倍，而且在数量级上，甚至比美国的大型前沿实验室拥有的还要少。所以，是的，我为团队感到非常自豪，我们也可以深入探讨这是如何做到的。</p>
+<p>但这只是算力方面。还有另一件事，就是你投入到模型背后的方法和科学。我认为 Mistral 的一个重点一直是让强化学习发挥作用。在这个特定步骤中，我们教模型与环境互动，基本上是通过胡萝卜加大棒的奖励来学习。</p>
+<p>这个特定阶段需要时间才能真正获得指数级收益并使其发挥作用。但一旦你让它运转起来，你基本上就独立于所有其他模型了。在做强化学习时，你基本上无法进行蒸馏。我认为这是 Mistral 的一个赌注，我们也希望能够使用这种技术来训练模型，这是一笔巨大的投资。显然需要多一点时间才能显现出来。我认为这也是一个解释。</p>
+<p>然后我认为中国人，尤其是他们非常非常友好，非常聪明，所以我认为我们这里的顶尖人才密度是一样的。问题在于手段，也许最重要的是策略，对吧？那是目前很难商品化或委派给代理的一件事。你无法与代理谈策略，与代理谈战术还可以，谈战略就更难了。而在这里，我们的策略是……是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: I think there's many aspects to this question. I think the first one is that what we have achieved, training ML4 the trunk, frontier open weight performance on agency and the best overall capabilities. It was trained on like as you said a bit more than 3K GPUs of 10 megawatts of power. That's we think three to four times less than the Chinese competitors and it's the other magnitude is even fewer than what the big Frontier lab in the US have. So yeah, I'm pretty proud of the team and we can dive into how it was made possible.</p>
+<p>But so that is the compute aspect. Then there's the other thing like the method and the science you put behind the model. I think one of the key focus for Mistral has been to make reinforcement learning work. And this particular step in which we teach the model to interact with an environment and to learn with the rewards of the carrot and the stick basically.</p>
+<p>This particular phase it takes time to actually get exponential yield and to actually make it work. But once you made it work basically you're independent on all the other models. You can't distill when you do reinforcement learning basically. And I think that's a bet doing at Mistral we want also to be able to train models with this technique and that's big investment. Takes a little more time to materialize obviously. I think that's also an explanation.</p>
+<p>And then I think the Chinese in particular they're very very nice and very smart people so I think we have the same talent density here. The question is against like the means and maybe the most important thing is the strategy right? That's one thing that is hard to commoditize or to delegate yet. To an agent you can't speak tactic with an agent it's harder to speak strategy. And here our strategy is is Yeah.</p>
+</details>
+<h3 id="fair-背景与创立-mistral" data-reading-heading="">FAIR 背景与创立 Mistral</h3>
+<p><strong>&gt;&gt;</strong>: 既然我们谈到了人才密度，也提到了 FAIR，那就花几分钟时间快速聊聊你的经历以及 Mistral 的创立，因为我认为这仍然没有被广泛理解。人们有一种看法，认为所有 AI 人才不仅全都在美国，而且绝大多数在湾区，显然你们至少为 Mistral 证明了事实并非如此。跟我们讲讲你的故事吧。你曾在 FAIR。那是怎么开始的？你在那里做了什么？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Since we talked about talent density and alluded to FAIR, let's spend a few minutes on your story and a little bit the founding of Mistral quickly because I think that's still something that is not widely understood. There's this perception that all AI talent is not just in the US, but like very much in the Bay Area and obviously you guys are demonstrating at least for Mistral that this is not the case. Tell us about you. You were at FAIR. How did that come about? What did you do there?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 这是一个很棒的故事。我想我显然带有偏见，但依然是个很棒的故事。</p>
+<p>关于人才，比如 Guillaume、Tim 和我自己，在 2016 年刚起步时，曾是 FAIR 的博士生邻座，注意到这点非常有趣。那时已经有了 transformer。有趣的地方就在这里。我们当时是在那里的博士生，但在巴黎，幸运的是在巴黎。Arthur 当时也是在巴黎工作。所以可以说，出于各种原因，我们已经决定留在法国。</p>
+<p>所以我们从未去过美国，但我认为我们在这里学到的基本上是做研究的能力。我认为我们在那里接受了作为研究人员的培训。而且我们也有机会接触算力，这使我们能够在涉及大规模实验方面磨练技能。对此我超级感激。</p>
+<p>而且，是的，我们再次开源了一切。所以这里和 Mistral 有很大的相似之处。而且我认为我们拥有那种如今在公司中依然保留的文化——这种强大的担当（ownership）文化。基本上，当你遇到一个问题时，你要从头到尾对它负责。我们有友善的人。我认为作为一项技能、一种性格特质，这一点被严重低估了。当你面临截止日期时，正是这一点多次把我们凝聚在一起——人们在本质上互相关心。因为优秀和聪明是理所当然的，所以你需要拥有额外的特质。</p>
+<p>所以我们当时就像年轻的博士生。我们在各自的公司待了一段时间。那就是……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: It's a great story. I think I'm biased obviously, but still a great story.</p>
+<p>So actually regarding the talent for instance, it's very interesting to note that Guillaume, Tim, and myself who were PhD neighbors at FAIR back in the time in 2016 when we started. So already with transformers. That's the funny part. We were PhD students there, but in Paris, luckily in Paris. Arthur was also working from Paris. So we were already committed I would say to stay in France for various reasons.</p>
+<p>So we never went to the US, but I think what we learned here is basically the ability to do research. I think we were trained there as researchers. But also we had access to compute that allowed us to basically sharpen our skills as to regarding large-scale experience. And for that I'm super grateful.</p>
+<p>And yeah, again, we open-sourced everything. So big similarity with Mistral here. And we had I think this culture that we still have in the company. This big culture of ownership. So basically when you have a problem, you own it from end to end. We have kind people. I think it's pretty much underrated as a skills as a personality traits. When you're in giving to a deadline, that's what actually hold us together many many times. That people care about each other essentially. Because being good and smart is taken for granted. So you need to get extra extra skills.</p>
+<p>So we were like yeah a bit also give you like a seed like young PhD students as well. We stayed a bit in the respective companies. That's where</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 你提到了杨立昆（Yann LeCun），对吧？我认为指出这一点可能很重要。他对 AI 的影响远远超出了他对深度学习的贡献。他实际上也造就了整整一代 AI 研究人员。你是这么看待它的吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: You mentioned Jan LeCun, right? I mean I think that's probably an important point to make. He had this impact on AI that goes much beyond his contribution to deep learning. He also effectively created a whole generation of AI researchers. Is that how you think about it?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。我真正想说的是，从现在起 10 年后，对我而言巨大的成功标志将是“Mistral 黑手党”在欧洲创立了另一家公司。我认为对我来说，那将是机器学习会议中所说的最好的“时间检验奖”（test of time award）。为此，我认为杨立昆写过两件事。首先，我相信在欧洲拥有人才，而且你可以培养人才。其次，开源权重和开源对于在研究中取得如此快的进展至关重要。</p>
+<p>这是我们学到的两个关键点，我们通过重建这个实验室在 Mistral 某种程度上予以复刻。目前已经有 300 多人。我们像当初作为博士生接受培训那样去培养他们。我们为他们提供了一个非常非常大的沙盒。犯错是可以的，只要你对自己犯的错负责，这些错误就完全不会产生不良影响。我们正在招募和培养这类人才，我认为——这也是我的时间检验——他们将能够在 10 年后在欧洲创立下一个 Mistral。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Yeah. And the thing I really say is the body that in 10 years from now my my big success factor would be that a Mistral mafia creates another company in Europe. I think for me that would be like the best the best testimony test of time award as you say in the machine learning conference. For that and Jan LeCun wrote two things I think. First, I believe that in Europe you have the talents and you can train it. And second, that's open weight and open source is like essential to progress in that fast in research. And that's the two key things we learned and that we are somehow replicating at Mistral by recreating this lab. Again, more than 300 people. And we train them as we were trained as PhD students before. So we offer them a lot of a big big sandbox. It's okay to make mistakes. Then, these are absolutely no impact as long as you own them. And we're recruiting and training these kind of of talents that I think, and that's again my test of time, will be able to create the next Mistral in 10 years from now in Europe.</p>
+</details>
+<h3 id="从网络压缩到万亿参数模型" data-reading-heading="">从网络压缩到万亿参数模型</h3>
+<p><strong>&gt;&gt;</strong>: 在调研这些时，我发现你工作的很大一部分是专注于让神经网络变小以及量化。你的第一篇论文名为《And the Bit Goes Down》。所以，字面意思就是关于压缩神经网络。那么，是什么引导你从压缩网络走向如今构建拥有 1 万亿参数的超大模型？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: And as I was researching this, I saw that a big part of your work was to focus on making neural networks smaller and quantization. Your first paper was called And the Bit BIT Goes Down. So, literally about compressing neural networks. So, what led you from compressing networks to now building very large 1 trillion parameter models?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 关于那篇论文，我认为所有的功劳都要归于我当时的博士生导师 Hervé Jégou，他是为论文起好标题的大师。</p>
+<p>但我认为在压缩方面有点被忽视的一点是，基本上是拿一个大模型——在当时大模型是 1 亿参数——然后将其压缩。我们成功在 iPhone 7 上实时运行了 CNN，也就是这里的图像检测模型。当时 Facebook CTO 的 Shred 也在关注。iPhone 有点发烫，但那是我们被允许去探索的事情，这太棒了。</p>
+<p>所以这个问题总是有两面性。第一面当然是拿一个模型，让它更小、更快。如果你稍微在乎隐私，这是关键。如果你拿一个模型并在你的笔记本电脑、手机或家里的任何智能设备上本地运行，那么你检测到的任何内容、你的数据都会保留在设备上，永远不会流向任何第三方服务器。所以实际上这也是关键所在。</p>
+<p>但随后有点被忽视的方面是，我们实际用于压缩这些模型的技术——基本上是稀疏性（sparsity）、浮点精度的量化（比如 FP8、FP4）——实际上可以用来训练更大的模型。那就是……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: So, on the paper, I think all credits to my PhD advisor from the time, Hervé Jégou, he's like a master to pick up good titles for papers. But, I think the thing that is a bit overlooked on compression is basically taking a big model, back in the time a big model was 100 million parameters, and compressing it. So, we managed to run I think CNN, so like in here image detection models in real time on an iPhone 7. That was all by Shred back in the time, Facebook CTO. The iPhone was a bit hot somehow, but that was like the kind of things we were allowed to explore, which was amazing.</p>
+<p>So, there's always two sides to the question. The first one is, of course, take a model and make it smaller, faster as well. And that's key if you care a bit about privacy. If you take a model and you run it locally in your laptop, your phone, any smart device in your home, then anything you detect your data stays on the device and never goes to any third-party server. So, that's also key, actually.</p>
+<p>But then, the aspect that is a bit overlooked is that the techniques we use to actually compress those models, so sparsity basically, quantization in with the floating point precision, so like P8, FP4, you actually can leverage them to train even bigger models. And that's</p>
+</details>
+<!-- chunk 4/9 -->
+<h3 id="压缩机制与大模型训练" data-reading-heading="">压缩机制与大模型训练</h3>
+<p>……这正是压缩的两个方面。一旦你掌握了如何拿来一个模型并去除不必要的部分，你就能训练大得多的模型，例如可以使用稀疏注意力模式，可以用 FP8 训练，甚至可以用某种 FP4 训练。这基本上就是压缩中有时被忽视的方面。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>exactly the the two aspects of compression. And once you mastered taking a model and removing what's not necessary, then you can train away bigger models, for instance, you can use sparse attention patterns, can train in FP8, even with some some kind of FP FP4. And that's basically the the the aspect of compression that is sometimes overlooked.</p>
+</details>
+<h3 id="混合专家模型moe与推理优势" data-reading-heading="">混合专家模型（MoE）与推理优势</h3>
+<p><strong>&gt;&gt;</strong>: 好的。明白了。关于开源生态系统的背景很棒，关于你的背景也很棒，但现在让我们深入探讨模型本身，深入探讨这个区块。对于所有听众来说，什么是混合专家模型——也就是这里的核心架构，其中这个模型拥有 1 万亿参数，但每个 token 只有 500 亿参数在工作，为什么这能战胜普通的稠密模型？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Okay. All right. So, great context on the open source ecosystem, great context on you, but now let's deep dive into the model, into the chunk. So, for everyone listening, what is a mixture of experts model, which is the core architecture here, where chunk has a trillion parameters, but only 50 billion work on each token, and what what why does that beat a normal dense model?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 所以，这又是我们在 Mistral 研究多年的东西。我们在三年前就开始做第一个、最早的混合专家模型。这启发了这种模型架构。</p>
+<p>所以，这真的像……它真的是个庞然大物。这个规模的混合专家模型是前所未有的。那是个庞然大物。那么，你能从中得到什么？优势在于在推理时，每个 token 在交互时只看到 500 亿个不同的参数，这意味着粗略来说推理速度与稠密的 50B 模型相同，对吧？但模型的容量要大得多得多。在这种情况下，它是后者的 20 倍。</p>
+<p>这就是巨大的优势。缺点，或者实际上是你必须注意的事情……缺点实际上是在预训练阶段，这些模型要饥渴得多。所以，你需要给它们喂入更多的数据，以及优质的数据。换句话说，你在训练端付出了溢价，赌的是该模型在推理时会被更广泛地使用——如果你对自己的模型有信心，这基本上是一笔划算的赌注。所以它们极度渴求数据。每个活跃参数需要大量的 token。这就是我们用来预训练它们的衡量标准。</p>
+<p>也许第二个方面，也就是你必须开展的所有研究所体现的——特别是如果你像我们之前那样受到 GPU 限制——就是很难把它们训练好。再强调一次，它是个庞然大物。它是一个活生生的庞然大物。所以你可能会遇到“死专家”（dead experts）的问题，也就是模型中实际上永远看不到 token 的部分。你还可能会遇到梯度或信息在模型中流动不良的问题，以及哪个专家看到的 token 最多的不平衡问题。所以这确实是你必须去控制的事情，并且围绕它发展出一套完整的科学来把它们训练得非常好，但这是值得的，特别是在推理端。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: So, that's again, that's something we've been researching at Mistral for years. We've been working the first the very first mixed mixture of experts three years ago. That sparked the the model architecture.</p>
+<p>So, really like you it's really a beast. Like a mixture of experts on this side does no model. That's a beast. Now, what do you gain from it? The the advantage is that at inference time, each token sees 50 billion different parameters interact with 50 billion different parameters at the time, which means that the inference speed, roughly speaking, is the same as a dense 50B model, right? But the capacity of the model is like way way, way larger. In this case, it's 20 times larger.</p>
+<p>So, that's the big advantage. The The downside, or actually the the thing you have to take care to So, the downside is actually that in pre-training those models are much much more data-hungry. So, you need to feed them more with with data and with good data. So, in other words, you pay a premium at the training side by making the bet that the model is going to be way more used at inference time, which is essentially a good bet to make if you're confident about about your models. So, they're super data-hungry. You need a lot of tokens per active parameters. So, that's the the measure we use to pre-train them.</p>
+<p>And maybe the second aspect that underlines a bit all of the science you have to do, in particular if your constraints on GPUs as you as we were, is that it's hard to train them properly. Again, it's a beast. It's a living beast. So, you might have problems with dead experts. So, parts of the model that actually never see tokens. Uh you also might have problems with some gradients on the on the on information flowing badly in the model, imbalance on which expert sees the most the most tokens. So, it's really something you have to control and to develop an entire science around to train them I guess very well, but it's worth it, in particular on the on the inference side.</p>
+</details>
+<h3 id="路由机制与专家平衡" data-reading-heading="">路由机制与专家平衡</h3>
+<p><strong>&gt;&gt;</strong>: 为了确保广大受众能够理解，关于 MoE 到底是什么意思，我听过的一个类比是医院：如果有病人进来，你不会把病人送到 50 个不同的医生那里；你会把病人送到能够解决该问题的医生那里，比如骨科医生等等。这个大方向对吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: And to make sure this is accessible to a broad audience, one analogy I heard about what MoE means in the first place is a hospital and the idea that if you have a patient coming in, you're not going to send the patient to, you know, 50 different doctors. You're going to send the patient to the doctor that can fix the problem, so the orthopedist or or whatever example. Is that directionally correct?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 这是一种用来定义路由部分的方式，即把哪位医生指派给病人。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: It's a way to define how that that the routing part so which doctor towards the patient.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。那么它是如何运作的呢？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Yes. So, how does it how does that work?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 这实际上是由模型自主学到的。这就是它的精妙之处。模型自己学习。</p>
+<p>我们会不时设置一些路由层，这些路由层实际上承担着一项任务，那就是基本上把每个 token——也就是每个病人——分配给正确的专科；像这样的大模型拥有成百上千个专家，它们都具备这种能力，将 token 引导至它认为最相关的专家，或者实际上是排名前两名或前四名的专家。</p>
+<p>深度学习的精妙之处在于它确实有效。换句话说，如果你想进行端到端学习，模型既能学会路由，也能学会专家网络本身，但这两者之间存在很多交互。例如，如果你从未将某个 token 路由到某个专科，或者说从未将病人转诊给某些医生，那么这些医生就无法学习，对吧？因为他们从未接诊过病人。所以在整个训练过程中，你需要维持这种微妙的平衡。那是关键之一……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: It's actually learned by the model. So, that's the beauty of it. The model learns</p>
+<p>So, we have some routing layers from time to time and these routing layers they actually they have one task is to assign to basically assign each token so each patient to its right specialty and uh big models like that they have like hundreds of experts and they all have this this ability to direct the the token to the expert or actually the top two or four experts that it deems the most relevant.</p>
+<p>And the beauty of deep learning is that it actually works. In other words, if you want to learn end-to-end the model is able to learn both the routing and both the experts, but there are a lot of interactions between that. For instance, if you never route a token to some specialty or patient to some doctors then the doctors they can't learn, right? Because they never see a patient. So, there's this subtle balance you need to to sustain through training. And that's one of the key</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 啊，这就是你刚才提到的“死专家”问题。如果医生永远接诊不到病人……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: a that's a dead expert problem you were alluding to. If if if the doctor never sees a patient</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 没错。未被分配任务的医生，或者说死专家。相反，你也不希望某个医生负荷过重，因为否则其他医生就会死掉，或者最终也会破坏训练。所以，我想说，如何平衡流量是一门极其微妙的学问。这正是我们在 MoE 4 预训练中投入大量精力的关键部分。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Exactly. Unassigned the doctor or dead expert. And on the contrary you also don't want to overload a doctor because otherwise the other doctors will be will die or eventually disrupt also the training. So, it's a super subtle science as to how to balance the traffic I would say. And that's a key part of what what kept us busy for for the pre-training of MoE for.</p>
+</details>
+<h3 id="模型扩展与稀疏度挑战" data-reading-heading="">模型扩展与稀疏度挑战</h3>
+<p><strong>&gt;&gt;</strong>: MoE 前沿研究的一部分，是不是继续推高这些维度？比如从 1 万亿扩展到 2 万亿，但把激活参数从 500 亿降到 200 亿，可以这样理解吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Is part of the research at the frontier of MoE to keep pushing those those dimensions so going from 1 trillion to 2 trillion, but then going from 50 active to 20 active, is that is that the way to think about it?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 没错，就是这个思路。再次强调，深度学习的精妙之处在于，当你进行扩展时，它是奏效的。当然，这种有效带有一个巨大的星号前提，那就是你需要投入极其惊人的算力基础设施和科学研究来相应地扩展。这就是我们在当今世界面对的现实。但它确实有效。</p>
+<p>那么接下来的问题是，如果你想要更多的算力，该如何分配它？你要在哪些维度上进行扩展？首先，通常是对半分配。一半分给更多的数据，让模型在训练时看到更多的 token；另一半则是通过增加模型大小来分配。</p>
+<p>要增加模型大小，我认为有两个维度。第一个是总参数量，也就是模型的容量。ML4 的总参数是 1 万亿。我敢打赌，在开源领域，你很快就会看到总参数达到 10 万亿的模型。但随后你也可以调节稀疏比率。换句话说，ML4 的稀疏比是 20，也就是 500 亿激活参数、1 万亿总参数。你可以进一步推进，比如 10 万亿总参数的模型可能只有几百亿激活参数，甚至不超过 1000 亿激活参数。</p>
+<p>这伴随着大量的科学问题。模型越稀疏，就越难真正实现那种平衡，越难确保所有的专家都以相同的节奏学习。可以这么说，但这确实是我们在 ML4 这种规模下目前正试图解决的挑战。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Yep, that's the idea. And again, the beauty of deep learning is that when you scale, it works. So, it works with a big asterisk, obviously, the being that you need to invest an insane amount of infra and science to scale accordingly. That's what we got in this world. But, it works. So, then the question is if you want if you want more compute, how do you split it? Uh in which dimensions you scale?</p>
+<p>So, first, usually you split half and half. You split half and more data. So, the model at training time sees more token. And you split also by uh increasing the model size. And to increase the model size, I think there's two axes. The first one is the total parameters, so the capacity of the model. Uh ML4 is 1 trillion total. I'm willing to bet that in the open, you're going to see models with 10 trillion total parameters uh very very soon.</p>
+<p>Uh but then you can also um play with the sparsity ratio. In other words, it's 20 for ML4, so you have 50 the active, 1 T uh total. You can push it further in a in a sense that the 10 T uh total will have maybe a few hundred active parameter and 100 the active uh parameter uh not more. It comes with a lot of scientific questions. Uh the sparser the model, the harder it is to actually achieve that balance and make sure all the experts learn at the same pace. So, to say, but that's really like the challenge we're trying to to to solve right now at well at the scale that that ML4, obviously.</p>
+</details>
+<h3 id="moe-架构生态与开源相互借鉴" data-reading-heading="">MoE 架构生态与开源相互借鉴</h3>
+<p><strong>&gt;&gt;</strong>: MoE 这种架构在整个 AI 生态系统中的普及程度如何？我的意思是，我想我们完全不得而知，但各种 GPT 模型以及各种 Claude 模型，在幕后也是 MoE 吗？目前大家都在用 MoE，还是说它仍旧是一种专用方法？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: To what extent is MoE as an architecture uh ubiquitous across the AI ecosystem? I mean, I I assume we we we don't know at all, but the GPTs and the and and the you know, various uh Claude models, are they MoEs as well behind the scene? Is everyone MoE at this point or is that still specialized as an approach?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 我会说基本上是的，尽管同样有一些例外。我们并非无所不知，我认为我们不能透露所有细节，但我会说是的。</p>
+<p>这里需要理解的一大关键是，MoE 是一个出色的架构，但不可忽视的是，它始终与硬件及整个生态系统紧密相关。因此，即便我们找到了更好的架构，也很难证明它的价值，因为支持推理的 GPU、各种优化技术，所有东西都是为 MoE 量身打造的。</p>
+<p>所以我认为 MoE 仍有许多尚未开发的潜力。特别是，你可以采用这种架构并在其上进行循环，让它更具循环性，或者结合扩散模型。两者并不相互排斥。所以我认为 MoE 仍有巨大的未开发潜力，这也正是我们目前正在探索的方向。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: I would say yes with some exceptions of the same. We don't know everything. I think we can't tell everything, but I would say yes.</p>
+<p>The big thing to to understand here is that MoE is a great architecture, but the the thing not to overlook is that it's always correlated with the hardware and all the ecosystem. So, even though we were to find a better architecture, it would be harder to prove its value because the the GPU with inference, the optimization techniques, everything is tailored to the MoE. So, I I think there's a lot of untapped potential in in the MoEs still. In particular, you can take this architecture and loop over it. Make it a bit more recurring. Or like go through diffusion models. One doesn't prevent the other. So, I think there's still a lot of untapped potential in MoEs and that's the direction we're exploring it at this one.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。DeepSeek 也是 MoE，对吧？所以，你前面提到开源生态系统在不同参与者之间相互影响。你们从 DeepSeek 那里借鉴了什么东西吗？他们从你们这里借鉴了吗？具体是怎样的运作方式？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Yeah. And DeepSeek is MoE as well, right? So, you mentioned upfront the open source ecosystem sort of influences itself through various players. Did you guys borrow some stuff from DeepSeek? Did they borrow some stuff from you? How does that work?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，完全如此。他们肯定借鉴了，我认为闭源实验室也借鉴了法国团队在 2023 年开源发布的最早的混合专家模型。例如，我们将在 10 月底，也就是几周后，开源权重并发布 MoE 4。你会看到这个模型也借鉴了 DeepSeek 这种稀疏注意力的变体，因为这是一项极佳的贡献，它……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Yeah, totally so the they certainly borrowed and I think the the closed source lab also borrowed the very first mixture of experts that the friends released in the open in 2023. And for instance, we're going to open weights and MoE 4 in the end of October also in a few weeks. You're going to see that this model also borrows the variant of this DeepSeek sparse attention because it's a great contribution that</p>
+</details>
+<!-- chunk 5/9 -->
+<h3 id="共享-kv-缓存与推理模式" data-reading-heading="">共享 KV 缓存与推理模式</h3>
+<p>他们把它适配给了我们。它还有一个与这些模型区分开来的绝佳特性。特别是，它在层与层之间共享 KV 缓存。所以，我想说它在内存管理方面效率更高一点。而且它也比 GLM 稍微大一点。GLM 总共大约是 700B。但它也远小于 Kimmy。Kimmy 总共差不多有 30B。同时它对它们极具竞争力，而且在制造业、金融业以及许多其他有趣的基准测试内部再次表现得更好。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>they adapted of it to us. It also has a great feature that distinguishes it from these models. In particular, it shares KV cache among the layers. So, it's it's a little more efficient as to memory management, I'd say. And it's a little bigger as well than than GLM. So, GLM is like 700 B total. But, it's also way smaller than Kimmy. Kimmy is almost 30 B total. While being super competitive with them and again better inside their manufacturing finance and a bunch of other interesting benchmarks.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 太棒了。说到共享 KV 缓存，一件有趣的事情是，你们拥有一个既能做快速回答又能做长思维链的模型。你们本可以拥有两个，但你们选择只做一个。这是为什么？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Great. Speaking of sharing KV cache, one interesting thing is that you guys have one model that does both uh quick answers and and long chain of thoughts. And you could have had two, and you chose to have one. Why is that?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 我想这取决于你说的两个模型是什么意思，因为在这里，你可以使用一个完全不同的模型，或者我可以使用一个稍微有些不同、推理起来会更简单一点的模型。所以，我认为在操作层面上，用一个单一的模型来统领全部要简单得多。而且我认为关键是在那个模型中烘焙进我们称之为不同的推理模式，这基本上是在校准我们希望模型针对一个问题思考多长时间，对吧？低推理模式本质上就是简单问题、简单回答。然后高或极端推理模式基本上就是尽可能深入地思考，哪怕从 token 角度来说它不是最有效的，因为我希望获得最好的结果。所以，这确实是一种在所谓的帕累托前沿上进行探索的方式。也就是成本速度与回答质量之间的权衡。我认为我们不想为每种推理模式训练一个模型。我认为其想法是出于两个原因用一个模型搞定一切。</p>
+<p>第一个原因是操作层面的，更容易维护和交付给客户。我们确实会向客户的租户交付模型权重，因此他们实际上能够在自己的生态系统中进行推理。再次强调，主权性，无法访问包括我们自己在内的 API。这是其一。但另一个原因也是模式之间存在协同效应。在最后阶段的强化学习训练中，一个重大问题和巨大挑战就是实际教会模型针对不同的事情进行推理。所以，我们有所谓的长度惩罚，针对不同的推理模式量身定制。基本上，我们会告诉模型：“好的，这里你有这样一种预算。请遵守它并做到尽可能好。”但随后，当我们增加预算时，模型就已经可以在较低推理模式学到的基础上继续构建，对吧？所以，我认为必须考虑这些协同效应，这也是为什么我们在同一个模型上训练多种推理模式。同样，强化学习奇迹很大一部分就在于通过例如产品信息来妥善定制它们。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: I guess it depends what you mean by two models because here there's you can use like a completely different model, or I can use a model that's a bit different for which the inference is going to be a bit easier. So, I think the operationally, it's way easier to have one single model to rule them all. And I think the the the key is to bake in into that model different reasoning modes, we call them, which basically calibrate how long we want the model to think to to a question, right? Reasoning mode low is essentially simple question, simple answer. And then reasoning mode high or extreme is basically think as hard as you can, even if it's not the most efficient token-wise, because I want to be to get the best results. So, it's really a way to navigate what we call the Pareto frontier. So, the trade-off between the speed of the cost and the the quality of the answer. I think there's We don't want to train one model per reasoning mode. I think the the idea is to have one model for all for two reasons. So, the first one is operational, easier to maintain and to ship to customers. We do ship model weights to customer tenants, so they are able to actually do the inference on their ecosystem. Again, sovereign, no no access to the API including ours. So, that's one. But, the other reason is also that there's a synergy uh between the modes. Uh one of the big questions and big challenges in reinforcement learning for the last phase of training is to actually teach the model to uh reason at different things. So, we have some what we call a length penalty uh that's tailored to different reasoning mode. And basically, we tell the model, "Okay, here you have this kind of budget. Please respect it and do as uh as good as you can." But then, when we increase the budget, the model can already uh build on top of what it has learned on the lower reasoning mode, right? So, um I think there are synergies uh to be taken into account, and that's also why we train multiple reasoning modes on the same model. And again, part of uh big part of the reinforcement learning uh marvels is to tailor them properly with product information for instance.</p>
+</details>
+<h3 id="原生多模态能力" data-reading-heading="">原生多模态能力</h3>
+<p><strong>&gt;&gt;</strong>: 谈谈 Mistral 4 在多模态方面的表现，包括它能做什么，以及训练原生多模态模型所面临的独特挑战。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Talk about the multimodal aspect of Mistral 4 in terms of uh what it's able to do and uh unique challenges of training a native multimodal model.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，我认为掌握多模态是关键，而且以原生方式去做是关键。那么，首先以原生方式去做意味着什么？你可以有两种方式将图像作为输入添加到模型中，要么从头开始，要么在事后添加。如果是从头开始，这意味着模型在训练期间将看到的所有 token 都将是文本和相关图像的混合。这将使模型能够非常非常非常早地进行上下文学习，并学习整个图像领域，对吧？例如卫星图像、工程图纸。或者你也可以在事后对模型进行打补丁。当你打补丁时，从基础设施的角度来看显然更容易，因为你把复杂性藏在了地毯下面，但显然，在性能方面会脱离部分现实。至少对我们而言，我们喜欢迎难而上。基本上首先去做正确的事情。即使它是最复杂的一个，因为这关乎原则，而且最终是正确的做法。</p>
+<p>所以哪一个将 trunk ML4 原生多模态，这意味着该模型最擅长理解单纯的空间图像，所以基本上例如通过模型中的事物定位在卫星图像中识别物体，也就是检测并告诉你某些物体位于图像哪一部分的能力。它在工业制造领域也非常出色，例如你有这样的工程图纸，一个像手册一样的大图，里面有零件的信息。然后你可以要求模型对工程图纸进行推理，例如找出此对象中位于这一侧的所有零件的总重量，我认为这种能力是关键，因为世界本质上就是多模态的。你需要文本和图像两者来做到这一点，而且在图像方面，即使不是最好的，我们在许多许多许多领域也是前沿的。这也解锁了模型的更多、更进一步的方面，特别是与计算机交互。如果从非常非常抽象的层面去思考，那本质上就是一堆像素。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Yes, I think that's that's key to to master multimodal, and that's key to do it natively. So, what does it mean first to to do it natively? Um there's two ways to you can you can there's two ways to add image as input to a model either from scratch or afterwards. If you do it from scratch, it means that all the tokens that the model is going to see during the training are going to be a mix of text and relevant images. Um which will allow the model to learn in context very very very very soon and to learn entire image domains, right? Uh satellite images, technical drawings for instance. Or you can patch the model afterwards. And when you patch, obviously, it's easier from an infra point of view because you hide the complexity under the carpet, but obviously, it's uh some of the reality in terms of performance. At least for we we love to to hit the bullet. And basically to to do the right thing first. Even if it's like the most complicated one because it's principle and it's the right thing to do eventually. So which one will the trunk ML4 natively multimodal which means that the model is the best to understanding just special images so to to basically for instance identify objects in a satellite image with a thing grounding in the model so the ability to detect and tell you in which part of the image some objects lie. It's also great for industrial manufacturing so for instance you have like this technical drawing a big like a manual where you have like parts information about the parts. And then you can ask the model to reason about the technical drawing for instance. Find me the total weight of all the parts in this object that are on the on this side for instance and this this capability I think is key because the world is natively multimodal. And you need both text and image to do so and on image again we are we are the frontier if not the best on many many many many domains. Which also unlocks further further further aspects of the model in particular interacting with the computer. That's essentially a bunch of pixels if you think about it at the very abstract abstract level.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 嗯，计算机使用。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Mhm computer use.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 没错。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Exactly.</p>
+</details>
+<h3 id="数据处理与合成数据" data-reading-heading="">数据处理与合成数据</h3>
+<p><strong>&gt;&gt;</strong>: 好的。说到图表和卫星图像，整个数据方面是如何运作的？专门针对那些问题，但从总体上讲，一直有这样一种说法，即我们、全世界的互联网数据已经耗尽了，你知道，我们需要创造数据，然后我们需要获取数据。针对 Mistral 4，你们是如何开展数据工作的？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Okay. Speaking of diagrams and satellite images how does the whole data aspect work? So specifically for those questions but in general right there's been this narrative that we've we've the world has run out of internet data and you know, we need to create data then we need to acquire data. How do you the data effort to work for Mistral 4?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 我认为强调这一点很好，因为这也是我们在 Mistral 拥有的一项独特技能。那就是以对模型最干净的方式来实际处理数据。所以，当你训练模型时，你希望 token 尽可能高效。因此，你不想总是在模型已经见过的 token 上进行计算，或者在已经变得过于模棱两可、以致模型无法最大化学习信号的 token 上进行计算。所以，存在一个 token 效率的概念。那是我们进行优化的众多方面之一，以便实际上能够在如此少量的算力上将这些类似 ML4 的数据训练到前沿水平。我们的首席科学家 Guillaume 非常以肉眼看数据并准确找出——我不知道，他在这方面就像有第六感——并准确找出数据有什么问题而闻名。多年来这一直让我感到惊叹。至今依然如此。</p>
+<p>所以，我认为第一部分是策划数据并以对模型最易消化和最高效的方式对其进行处理。但也许另一部分正如你所说，我们被允许使用的数据量是有限的。那么下一个前沿是什么？我认为下一个前沿基本上就是合成数据。但它也是一把双刃剑，因为如果你用 LLM 生成的数据来喂养 LLM，那么基本上可能会导致模型崩溃。所以，基本上你可能会遇到模型实际上告诉你它学到了，但只是完美地死记硬背而没有泛化。大体上来说是这样。所以，这会更难。但是制作合成数据有很多方法。你可以拥有真实世界的种子。你可以重写——你可以重写某些类似人类生成的内容，从数据增强的意义上来说，对吧？同一文本的多个版本。所有这些方面的尝试，我认为都可以推进。这基本上是下一个范式之一，也是我们正在努力做的事情之一。而且你显然需要用多得多的算力来扩大规模，因为你是在用一个非常好的模型进行重写，你需要重写，或者至少在几十秒或秒的时间里生成或进行实验，就是这样。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: I think it's it's great to underline because it's also unique skill we have at Mistral. Which is to actually process the data in a way that is the cleanest for the model. So, when you train a model, you want the tokens to be as efficient as possible. So, you don't want to always compute on tokens that the model has already seen or that has already that has already become too ambiguous such as the model doesn't maximize the learning signal. So, there's a notion of token efficiency. That is one of many aspects that we optimize to be able to actually train these like ML4 data at the frontier on such a small amount of compute. Our Our C- Chief Scientist Guillaume is super known for eyeballing at data and finding exactly I don't know he he has like a sixth sense for that and finding exactly what's wrong about the data. And it does it does amaze me for years. Still. So, that's I think the first part is to curate the data and process it in a way that is the most digestible and efficient for the model. But maybe the other part is as you said there's a finite amount of data that we are allowed to use. Then what is the next frontier? I think the next frontier is pretty much synthetic data. But it's it's also a double-edged sword because if you feed an LLM with the LLM generated data, then you might essentially have the model collapse. So, basically you might have the model actually tell you that it learns it but just memorized perfectly and not generalize. Roughly speaking. So, it's it's to be it's it's harder. But there's many ways to do synthetic data. You can have real world seeds. You can rewrite You can rewrite such some like uh um human generated content in the sense of data augmentation, right? Many version of the same text. And all these kind of aspects, I think you can push. And that's basically the one of the next paradigm and that's one thing that we're working on. And you need to scale this obviously way more compute because you rewrite with a very good model and you need to rewrite or to at least generate or experiment on dozens of seconds or seconds and that is it.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 所以，总结一下，合成数据是一项重大投入，因此在你们的 300 名研究人员中，有一支团队专门致力于创建高效率且不会产生你所描述问题的合成数据。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: So synthetic data is a major effort just to play it back and so you have a team somewhere in your 300 researchers that's specifically focused on creating synthetic data that's efficient and that is not going to create the problem that you described.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，这种问题极其现实，因为这是不可能的，而且很难去界定什么是合成数据。它也很昂贵，所以你只需要找到聪明的方法，基本上在一个规模上预测在大规模下会发生什么。所以你使用的规模，本质上有许多</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Yeah, and that's a super real this kind of problem because it's impossible and it's very hard to define what is what synthetic data. It's it's also expensive so you just need to find clever ways to to basically predict at one scale what you happen at large scale. So the scale you use essentially there's many</p>
+</details>
+<!-- chunk 6/9 -->
+<h3 id="缩放定律与算力细节" data-reading-heading="">缩放定律与算力细节</h3>
+<p><strong>[Speaker Turn]</strong>: 它的很多方面，而且我们内部有一位真正的专家，毕竟我们的 CEO 当年就是 scaling 论文的第一第一作者之一。所以我们对所有东西都做 scaling。当然，它们并不总是能预测大规模下会发生什么。这也是它的奇妙之处。在大规模下你总是会遇到未知的未知，因为这些模型再次证明是庞然大物，所以你需要更好地理解它们。但这是我们努力的核心重点。是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>many aspects of it and we have a real specialist in house after our CEO is one of the first first author of the scale you paper back in the time. So we do our scale you for everything. Of course they don't predict always what happens at large scale. That's the beauty of it as well. And you can always run into unknown unknowns at large scale because again those models are beasts so you need to to better understand them. But that's the key of the focus of our efforts. Yeah.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 对。让我们更详细地聊聊我们提过几次的算力方面。你提到这是一笔很小的算力。我的意思是，3800 块英伟达 Grace Blackwell 在我看来已经很大了，但我猜在宏观全局来看它确实很小。带我们了解一下你学到的任何东西，任何你预期能起效但没起效的，或者反过来，在你能够分享的范围内。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<blockquote>
+<blockquote>
+<p>Right. Let's talk about the the the computer aspect to this that we alluded to a couple times but in in greater detail. So you mentioned it's a small amount of compute. I mean 3800 Nvidia Grace Blackwells sounds like a large to me but I guess in the grand scheme of things it's it's small. Walk us through anything that you've learned, anything that you expected to work that didn't work or vice versa to which to to the extent you can share.</p>
+</blockquote>
+</blockquote>
+</details>
+<h3 id="强化学习的机制与校准" data-reading-heading="">强化学习的机制与校准</h3>
+<p><strong>&gt;&gt;</strong>: 是的，我想确实如此。这也是作为开放权重的奇妙之处。你可以很透明，而且我认为对训练这样一个模型需要付出什么保持透明是很重要的。我认为这需要团队在几个月里付出极大的奉献。所以这不是你按一下按钮就能跑通的。不，比那要精妙得多。你必须真正指导模型，并为后续步骤和新一代做好准备。所以这是来自团队极其重要的奉献，我超级感激，也对他们投入的所有工作感到非常震撼。也许可以聚焦在训练的一个特定方面。</p>
+<p>那就是强化学习部分。总的来说，强化学习非常像你作为一个积极主动的学生。在考试那天，你面临一道复杂的问题，你可以尝试任意多次，比如 64 次，来得出答案。如果你答对了——我们有办法验证答案——那么你就会得到奖励分；如果你答错了，或者在过程中做出了一些次优行为，就会得到扣分惩罚。强化学习的美妙之处在于它确实有效。</p>
+<p>这里的难点在于校准问题的难度。如果——我不知道你在高中学的是什么专业，但如果我给你一份非你专业的考卷，即使我让你尝试很长时间，你也可能学不到东西。相反，如果我给你一份在你专业上极其非常简单的考卷，那你样样都能做对，同样也学不到东西。所以核心问题在于，如何将这套题目校准到一个你尚未训练或者当前正在训练的模型上，对吧？因为很明显，我们做这些事情是紧接着连贯进行的。</p>
+<p>让我惊叹的是，强化学习部分一次就跑通了。基本上，这意味着什么呢？这意味着——当时我们正处于全球公司团建期间。想象一下大概 100 个人，一部分人在聚会狂欢，一部分人则在作战室里启动强化学习，包括我在内。整个模式就是你启动训练，给模型出题——这又是一个在 3K GPU 上非常复杂的基建，因为从本质上讲它涵盖了一切。我们可以稍后回头再谈这个。你启动训练，然后奇迹般地看到奖励值或者模型解答这些问题的成功率在上升。这确实是它的奇妙之处。这意味着你把每样东西都校准得很到位。然后模型就起效了。</p>
+<p>强化学习的美妙之处在于，只要你能找到足够复杂且当然与你业务相关的问题，就不存在所谓的饱和现象。最大的难点就在于校准，并在你整个训练过程中不断提升问题的复杂度。再说一遍，我之前谈过预训练的稳定性，负载均衡和死掉的专家。强化学习在某种意义上也是另一种庞然大物，因为训练可能会极度不稳定。你可能会遇到——模型可以做出——因为模型被允许以多种方式去探索，对吧？而我们针对它进行奖励或惩罚。既然模型被允许去探索，它就可能做出疯狂的事情。基本上它能让训练崩溃，能让训练发散。训练面临的另一个问题是，可能会出现一些精度问题，或者在训练器和生成器之间产生发散。所有这些我们都在监控，而且我们实际上成功地——再次强调，我们做到了零发散一次跑通。我认为这证明了我们未来在拥有 10 倍或 100 倍更多算力时能够做出的成果。所以我想这就是整个全貌。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<blockquote>
+<blockquote>
+<p>Yeah, I think you have that. That's also the beauty of being a point weight. You can be a transparent and I think it's important to be transparent about what it takes to to train such a model. And it takes I think an extreme dedication from the team around the months. So it's not you press on the button and it works. No, much more subtle than that. You need to really tell the model and to prepare for the next steps and the new generation. So it's it's a super important dedication from the team and I I'm super grateful and I'm very by all the work they they put in. Maybe to zoom in on one particular aspect of the training. That's again the the reinforcement learning part. So to summarize, reinforcement learning is pretty much like you being an active student. So you've presented with a problem, a complex one the day of the exam and you can try as many times as you want, say 64 times, to get to the answer. And if you get it right, so we have a way to verify the answer, then you get bonus points and you receive you get it wrong or if along the way you did some suboptimal behavior, then you get penalty points. And the beauty of reinforcement learning is that it works. The the difficulty of this is to calibrate the difficulty of questions. If I don't know what your what was your major in high school, but if I present you with an exam that is not in your major, you might not learn even if I let you try for a long time. And conversely, if I present you with a very super super easy exam on your on your major, then you will succeed in everything and you won't learn either. So the big question is to calibrate the set of problems to a model you didn't train yet or you're currently training, right? Because uh did it we did things uh back to back uh obviously. And I think the what amazed me is that the reinforcement learning learning part worked uh one shot. So, basically, and what does it mean? It means that uh and we were the global company of sites. So, imagine like 100 people, some of them partying, some of them were in the war room to start the the reinforcement learning, including me. And the the the model is that you start the training, you present the model, it's it's a very complex infrastructure again on on 3K GPUs uh because it's it's everything by nature. We can we can go back to that. You start the training and then you see miraculously the reward or the success rate of models to these questions increase. And that's really the beauty of it. It means that you calibrated every everything well. And then the model works. And the beauty of reinforcement learning is that there's no such thing as saturation as long as you find complex enough problems that are of course relevant to your business. And the big difficulty is to calibrate and to increase the complexity of problems as you as you go through the training. And again, I spoke about, you know, pre-training stability. The balancing and the dead experts before. Reinforcement learning is also kind of another beast in the sense that the training might be super unstable. You might have the model can do Since the model is allowed to explore in many ways, right? And you we reward or penalize it against it. Since the model is allowed to explore, it can do crazy things. And it can basically crash the training, it can diverge. The other training is facing so there can be some precision problem or some divergence between trainers and the and generators. And all of these we monitor and we actually manage Again, we managed to make it work with zero shot. I think it's a testimony of the things we're going to be able to make in the future with 10 times or 100 times more compute. So that's I think that's the big panorama.</p>
+</blockquote>
+</blockquote>
+</details>
+<h3 id="效率的来源与持续运行的强化学习" data-reading-heading="">效率的来源与持续运行的强化学习</h3>
+<p><strong>&gt;&gt;</strong>: 你提到了“校准”这个词。这是秘诀所在吗？因为你们用了大约只有 DeepSeek 或 Moonshot 三分之一的算力，却能够压榨出这所有的性能。那么，这个秘诀是校准，是数据和如你所说的高效率，是架构，是基建，还是校准本身？在效率方面，真正的精髓到底来自哪里？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<blockquote>
+<blockquote>
+<p>You mentioned the term calibration. Is that the secret so because you use about a third of the compute that a deep seek or a moonshot use and you are able to extract all this performance. So is is the secret that the calibration is that is the data and being efficient as you said is that the architecture is that infra is that the calibration? Where does the the juice come from in terms of efficiency?</p>
+</blockquote>
+</blockquote>
+</details>
+<p><strong>&gt;&gt;</strong>: 再次说明，它的美妙之处，但同时也是代价所在，就是它涵盖了一切。所以——但我想说的是，你必须能够掌握一切，才能达到这种水平的性能。给你举个例子，你需要完美地校准数据，找到既不太容易也不太难、而且还与你想要做的事情相关的题目。你需要有一套坚如磐石的基础设施。在这套强化学习基建中有许多变动环节，因为你事先不知道模型会做出什么。所以你必须对此具备鲁棒性，而你的做法基本上是针对吞吐量进行优化。模型每天需要看到尽可能多的问题，我认为我们在这次训练中拥有业界领先的吞吐量，因为我们花了很多时间来设计拓扑结构，并在生成器和训练器两方面改进了很多东西。</p>
+<p>这背后有科学层面的因素，所以你不能让训练发散。这里有奖励塑造层面的因素，所以你必须恰当地奖励模型，在这里我认为需要重点指出的是，像混合专家这样的模型，每当你做错了一点点事情，它们就会指着你的鼻子说：“你这里做错了，我要罢工并让训练崩溃。”这绝对是肯定的。它有如此大的容量，如此多的记忆，这也伴随着双刃剑。我们遇到过非常非常多模型去钻奖励空子的情况，或者比如在训练中模型跑出了沙箱范围。我认为掌握所有这些同样非常重要，只有这样才能走通最终的训练，让它切实奏效并能连续运行数天而不饱和。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<blockquote>
+<blockquote>
+<p>So the again the beauty of it but also the cost of it is that it's everything. And so and but I would say that you need to be able to master everything to get to this level of performance. So to give you an example you need to calibrate the data perfectly problem that are not easy nor too hard and also relevant for what you want to do. You need to have a rock solid infra. There's many moving parts in this reinforcement learning infra because you don't know what the model is going to do in advance. So you need to be robust to that and the way you do it is basically to optimize for the throughput. So the model needs to see as many problems per day as possible and I think here we have a like state of the arts throughputs in this training because we spent a lot of time designing the the topology and improving many things on on the generator and the trainer aspects. There's the science aspect to it so you don't want the training to diverge. Um there's the reward shaping aspect to it so you want to reward models properly and here I think it's important to underline that such models mixture of experts whenever you do something slightly wrong they take their figure they tell you here you did something wrong I'm going to break and crash the training. That's that for sure. There's so much capacity, so much memory that's also goes on the blessing. And we had like many many cases of the model hacking the reward. Or like the model going outside of the sandbox for instance in the training. And all of that I think is as important to master to get through the the end training that actually works and that can run for days without saturation.</p>
+</blockquote>
+</blockquote>
+</details>
+<p><strong>&gt;&gt;</strong>: 对。我想稍后马上再谈这个，不过先就强化学习本身来说：我在某处读到它目前仍在运行。那么，你们为什么决定在强化学习仍在运行的情况下做这件事——比如发布公开预览版，而且在什么节点你们才会决定停止运行强化学习？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<blockquote>
+<blockquote>
+<p>Right. I want to go back to this in a in a quick second, but just on the reinforcement learning part itself. I read somewhere that it's still running. So, why did you decide to do this like launch the the public preview while still running RL and at what point do you do you decide to stop running the RL?</p>
+</blockquote>
+</blockquote>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。如果这是一个严肃的问题，我想我们当时怀着一个巨大的想法，要向我们自己、向全世界证明我们训练出了针对 20 个开发者的模型。我认为当我们知道强化学习奏效时，我们超级兴奋，实际上就预览了这个模型。那是在——我们在大概两天前冻结了检查点。所以我们对它超级满意。但同时我们也想给强化学习最好的机会，并尝试在发布周期内把它推向极限，这也为我们争取了时间，以确保在我们开放权重时，模型不会被恶意人员用于不良企图。我认为这也很重要。不过是的，强化学习仍在运行，并且没有显示出任何饱和的迹象。再次说明，我对团队的成果感到惊叹。因为模型在那部分过程中可能会做出太多错事，你必须在科学和基建上坚如磐石，才能引导模型基本上取得进步、不断进步。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<blockquote>
+<blockquote>
+<p>Yep. So, if it's a real question, I think we had a an immense idea to prove to ourselves and to the world that we we trained 20 developers. I think uh when we knew RL worked, we were super excited and we we actually um previewed the model. That's was uh and we froze the checkpoint like a 2 days before. So, we we are super happy with the with it. But also we wanted to give reinforcement learning its best shot and try to push it as far as possible as part of the release which also buys us time to make sure the model when we open weights can't you can't be used maliciously by bad actors. I think that's also important. But yeah, RL is still running and we shows no sign of saturation. And again, I'm amazed by the the work of the team. Because the model can do so many things wrong during that part that you need to be rock solid on on the science and the infra to to channel the model to to progress to progress basically.</p>
+</blockquote>
+</blockquote>
+</details>
+<p><strong>&gt;&gt;</strong>: 而且强化学习是专注于某些特定领域的，对吧？代码、金融。是这样吗？它具体专注于哪些方面？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<blockquote>
+<blockquote>
+<p>And the RL is focused on on specific things, right? Coding, finance. Is that Is that correct? And what are the specific things it's focused on?</p>
+</blockquote>
+</blockquote>
+</details>
+<p><strong>&gt;&gt;</strong>: 那么，标准的——</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<blockquote>
+<blockquote>
+<p>So, the the standard</p>
+</blockquote>
+</blockquote>
+</details>
+<!-- chunk 7/9 -->
+<h3 id="强化学习实例与评估基准" data-reading-heading="">强化学习实例与评估基准</h3>
+<p>...例如，我们所说的强化学习实例基本上就是某些代码库，然后是一段要实现的功能描述，对吧？这就是问题所在。然后模型可以做任何它想做的事，写代码、尝试一些方案，或者根据需要使用更多工具。最后，你通过“fail to pass”和“pass to fail”进行验证，确认该功能确实被正确实现了。</p>
+<p>这属于典型实例，并且效果很好，因为代码非常容易操作。至少很容易知道——虽然也没那么容易，但比其他领域更容易知道功能实现是否正确。</p>
+<p>但我们并不局限于此。在强化学习中，我们还有很多基准真相更为微妙的领域。例如，如果你让模型汇总结果、在网络上查找信息并生成一份单页报告，你无法对这份单页报告进行确定性的评估，对吧？因此，其精妙之处在于使用一个裁判——实际上就是让同一个模型对自己进行评审，并根据某些编码标准给出分数、嘉奖或奖励，判断这份报告是否有用。这是另一种类型的实例。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>...example of what is an RL instance we call it is basically some some code base and then a description of a feature to implement, right? So, that's the question. Then the model can do whatever it wants writing writing code and trying some things or using more tools if it wants. And in the end you verify with fail to pass and pass to fail and uh yes that the the the feature is actually correctly implemented.</p>
+<p>Uh so, that's like the typical instance and it works well because it's I mean code is very easy to manipulate. It's easy to know at least it's not that easy, but it's more easy than other domains to know if the feature implementation is correct.</p>
+<p>But, we don't stop there. We have many more domains in the reinforcement learning in which the ground truth is a bit more subtle. So, for instance, if you ask the model to compile results to to look for them to to look on the web and to search information and to build a one-pager, you can't deterministically evaluate the one-pager, right? So, for that the the beauty is to use a judge like the same model actually that judges itself on whether and gives points or awards or rewards as to coding some criteria on whether the report is useful or not. So, that's another kind of instance.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 这适用于金融和法律等领域。退一步来看，强化学习中常见的一个大问题是：对于代码和数学，你知道什么是对、什么是错；而对于金融或法律，你可能并不知道。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: And that's for domains like finance and law. Take a step back like the the the one of the usual big questions in reinforcement learning is that for for coding in math, you know what is right or wrong. For finance or law, you you may not.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，所以这就需要开发我们所谓的评分准则（rubrics）。评分准则可以是这样的：在这份单页报告中，我希望出现这个金额，因为问题就是这么问的；语气必须是那样的；我不想提及某点，因为它是错误的；还要检查所有内容是否连贯，比如权重分值、候选页面的长度。模型可以为你进行这种抽象。</p>
+<p>因此我们拥有评分准则，这些准则实际上也是用模型生成的。目前所有东西都达到了这种程度。这确实很像“大模型当裁判”（LLM-as-a-judge），虽然听起来被美化了，但本质就是这个思路。这就是我们让金融和现实工作落地的方法。</p>
+<p>此外，我们在网络安全、制造以及金融等其他领域也处于前沿。在网络安全方面，主要是让模型面对真实场景：这里发生了一起攻击，模型需要分析日志以建立假设，并在不中断服务的情况下提出并测试补丁。这就是其中的一部分。</p>
+<p>基本上任何可以在合理时间内（比如几秒钟内）进行验证的现实场景，你都可以用强化学习来攻破。这同样是它的精妙之处。因此在网络安全领域，我们针对真实场景做了很多逆向工作。而在制造领域，有一种思路是让模型能够设计芯片。其中一部分涉及自主代理能力（agency），即在计算机上操作软件，把所有组件布置在芯片上；另一部分则在于模型能够对芯片周围的热量等进行实际模拟。如果你不模拟芯片上的热量并且把组件放错了位置，基本上就可能把芯片融化。那就会得到一个糟糕的奖励。</p>
+<p>但如果模型在经过充满活力的试错后，成功放置了组件并模拟了散热，通过了模拟上的产品标准，那么对强化学习来说这就是一个得分点。所以再次强调，任何可以在沙箱中运行、虽不能完全确定性验证但可以在一秒钟内通过其他手段加以验证的任务，我们都可以用强化学习来攻克。同样，我们做了一些押注，在这些方向上我们走在前沿。我们的覆盖面虽然不像竞争对手那么广，但这没关系。我们在前沿领域，在联合问责制上与我们最优秀的模型一样出色，在我们押注的某些方向上做到了最好，并且在这些押注上通过强化学习实现了加速。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Yes, and that's where you develop what we call the rubrics which are and a rubric can be like in this one-pager I want this amount to appear because that's what the question. This the tone has to be that way. I don't want to mention this because it's false. Let's check that everything is consistent like any waiting points. Any candidate pages long. Models can abstract that way for you.</p>
+<p>So we have rubrics that we actually also generate with models. Everything is like at this point. And it's really like an LM as a judge. Glorified but that's really the idea. That's how we make we can make finance and real work.</p>
+<p>And all the other domains in which we are frontier also the cyber, the manufacturing and also the finance. On the cyber it's really much facing the model with a real-life scenario in which there is an attack and the model needs to analyze logs to create assumptions and to basically propose and test a patch without disrupting the service. That's like the part of it. Basically any real-life scenario for which you can verify it. In a reasonable time like a few seconds, you can crack it with reinforcement learning. That's again the beauty of it.</p>
+<p>So in cyber we did a lot of reverse for real-life scenarios. And manufacturing there's this idea of having basically the model being able to design a chip for instance. And part of it comes with agency so the ability to manipulate the software on the computer to basically place all the components on the chip. And part of it lies in the ability of the model to actually simulate for instance the heat around the chip. And if you don't simulate the heat on the chip and you place the components wrong then you might melt the chip essentially. So that's a bad reward.</p>
+<p>But if the model after trial and errors in an energetic way manages to place the component and then to simulate the heat dispersion that passes like the product criteria, I would say, on the simulation. Then it's a Then it's a it's a good point for reinforcement learning. So again, any task any addictive task that you can run in a sandbox that you can verify not deterministically, but that you can verify through elements of other means within a second, this we can track with reinforcement learning. And again, we made a few we made a few bets, and on these bets we are frontier. We don't have the same coverage as the the competitor, and that's okay. We are on the frontier. We are on the as best as the best of our white model on on the joint accountability, and we are the we are the best on some bets that we made and on these bets we accelerated through our reinforcement learning.</p>
+</details>
+<h3 id="奖励机制与死循环惩罚" data-reading-heading="">奖励机制与死循环惩罚</h3>
+<p><strong>&gt;&gt;</strong>: 你们的系统是只对最终成功给予奖励，还是对部分进展也会给予奖励？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Does your system give rewards just for final success, or does partial progress get rewarded as well?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 我们也有……多年来，强化学习理论家们一直担心的事情基本上就是手动调整奖励，因为这有点像打地鼠的游戏：你永远不可能一次性把它们都打下去。当人们试图在奖励中修补某处漏洞时，另一个漏洞又会出现，你必须继续修补，然后一补再补。所以这是一门极其微妙的科学，做起来非常困难。</p>
+<p>但既然这是正确的做法，至少在强化学习中我们确实在这么做。举个例子，你可能了解死循环（Doom looping），也就是模型陷入循环或者近乎无限循环的状态。对此我们会进行惩罚；但如果模型在轨迹中间循环了两次，即使它随后恢复了正常，我们同样会在轨迹期间给予惩罚，对吧？</p>
+<p>最终，假设模型在某个工具上循环调用了10次，其实根本没必要，但它找到了正确答案。最后我们会告诉模型：“好的，你找到了正确答案，这很好；但是注意，在轨迹的这个特定部分，你突然出现了这种情况，请不要再这样做了，否则我们会非常生气。”所以这基本上就是奖励核查的思路。沿途我们设置了大量的启发式规则。再次强调，了解这些启发式规则的唯一方法就是实际训练模型，并就模型能做出的所有疯狂举动积累经验。模型的想象力远比我们丰富得多。我们正在学习应对奖励作弊（reward hacking）的部分。所以这同样是我们目前所处科研领域的一大重要部分。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: We also have a So when you it's like a it has been the fear of uh reinforcement learning theories for like years is to basically manually tweak the reward because here it's a bit like the game where you have some some animals and you have to hit them. And they can't never You can never hit them at once. When they are trying to patch something in the reward, then you have another leak and you need to patch it. And then you need to patch it, and then you need to patch it again. So it's it's super subtle science. Super hard to do.</p>
+<p>But yes, since it's the right thing to do, well, we do it at least for reinforcement learning. One example is that you might know about Doom looping, so the model being a stuck in a loop or almost infinite loop. So that we penalize, but we also penalize during the trajectory if the model loops two times, even if it recovers afterwards, right?</p>
+<p>In the end, so let's say the model loops 10 on the tool, doesn't need to, finds the right answer. In the end, we tell the model, "Okay, you found the right answer, that's good, but be careful in this particular part of the trajectory, you had a sudden please don't do that again. Or we will be very mad. So that's that's basically the idea of reward checking here. And we have a lot of heuristics along the way. And again, the only way to learn about these heuristics is to actually train models and gain experience as to all the crazy things models can do. Models are way more imaginative than we can be. We are learning the reward hacking part. So again, that's that's a big part of the science field we are at this moment.</p>
+</details>
+<h3 id="能力激发还是全新习得" data-reading-heading="">能力激发还是全新习得</h3>
+<p><strong>&gt;&gt;</strong>: 关于强化学习的另一个经典问题是：你如何知道是强化学习创造了这种能力，还是它仅仅强化了预训练中原本就存在的内容？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Another classic question about reinforcement learning is how do you know that the reinforcement learning created the capability versus just emphasizing something that was already in the pre-training?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 老实说，这是一个非常好的问题。我先给出第一层面的回答。</p>
+<p>在强化学习之前，我们通常要做的是对模型进行预处理（precondition）。回到学生的比喻：在参加考试且无法看到答案之前，作为学生你可能会做的是阅读以往考试的一组题目和答案，对吧？这样学到的东西并不算多，至少根据我的经验，这么做学不到太多，但这是一个开端，对吧？这正是我们在强化学习之前所做的事情——对模型进行预处理。你可能会称之为中间训练（mid-training）或SFT（监督微调）。那就是我们预处理模型使其适应这一过程的环节。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: So it's a very good question I have to be honest. And the I mean I will give you the other one answer so the the the first order answer.</p>
+<p>Before reinforcement learning, what we usually do is to precondition the model. So to come back with the student metaphor, before going to an exam and actually don't having no access to the answer, what you might do as a student is read both a set of questions and answers from past exams, right? You don't learn as much. At least in my experience, you don't learn as much when you do so, but that's a start, right? And that's what we do before reinforcement learning, precondition the model. You you might tell them about a mid-training or SFT. That's the part where we precondition the the the model to that.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 就是监督微调。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Just supervised fine-tuning.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 没错。你指的是中间训练或监督微调。其核心思路基本上是向模型展示问题以及一个正确的答案。</p>
+<p>当你这样做时，就会得到所谓的 pass@K 指标。也就是给出一个问题，如果给模型64次机会，它至少能答对一次，对吧？这就好比学生用不同的随机种子把自己复制64份，其中至少有一个人能答对。这就是 pass@64。</p>
+<p>而强化学习要做的，实际上是强化出最优秀的那个你。这样一来，指标就不再是 pass@64，而是变成 pass@1，或者如你所建议的 pass@2。你给出该答案的概率大大增加。从这个意义上说，它强化了你原本就具备的能力。这有点凭运气的成分，对吧？在强化学习之前你有点超常发挥，而在强化学习之后它能稳定为你起效。这是第一层面的答案。</p>
+<p>但随后——这又是它的精妙所在——在强化学习过程中你也可以学到全新的东西。如果你有足够的预算、足够的训练稳定性以及足够的学习天数，确实能让自己掌握全新的学习行为。</p>
+<p>而这是极其难以做到的，因为刚开始你会浪费算力，对吧？你会让模型或者学生尝试64次，却未能……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Exactly. You mean training or supervised fine-tuning. It's essentially the the idea to show the model both the question and one answer that is that is correct. And and basically the when you do so, you have say what we call a pass at K. So you give a question and the model answers at least one time right if given like a 64 times, right? Your students should duplicate yourself 64 times with different seeds. You at least one of you will pass the answer. So, that's pass at 64.</p>
+<p>What reinforcement learning would do is actually reinforce the best version of you. Such as it's not pass at at 64, but now pass at one. Or pass at two, as you suggest. You're much more likely to give this answer. So, in that sense, it's a or reinforcing a capability that you already had. A bit by luck, right? You punch a bit above your weight before reinforcement learning, and after reinforcement learning it's working well for you. So, that's like the first order answer.</p>
+<p>But then, and that's again the beauty of it, you can also learn new things during reinforcement learning. If you have enough budget and enough stability of the training and of days of learning, to actually give the learning behavior to yourself. And that's something that is super hard to do because you at the beginning you would waste compute, right? You would have the model or the student try 64 times and don't</p>
+</details>
+<!-- chunk 8/9 -->
+<h3 id="强化学习中的难度校准与网络安全沙箱问题" data-reading-heading="">强化学习中的难度校准与网络安全沙箱问题</h3>
+<p>……成功，对吧？全部都成功。但接下来会产生一些协同效应。模型会在相邻任务上进行学习。比如学到一些技巧和窍门，然后再回过头来攻克核心的大问题并取得成功。同样，这是一门校准所有实例难度的科学。完全就像你作为一名学生。你不会一上来就做最大的难题。你不会一上来就做书里最难的题目。你会先从最小的题目做起。你尝试中等难度的。你做不出来，你搞不定。然后你就去做较小的、更容易的题目，但在某种意义上它们和那个中等难度的题目非常非常接近。然后再回过头来做中等难度的。所以，这又是强化学习的魅力所在。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>succeed, right? All of it. But then there's going to be some synergies. The model is going to learn on adjacent tasks. Like some tips and tricks and then go back to the big problem at the word and then succeed. And again, it's a set of science of calibrate all the difficulty of instances. Exactly like you are the student. You don't start with the biggest problem. You don't start with like the hardest problem in the book. You start with the smallest ones. You try medium one. You don't You don't manage. Then you go to small to easier ones, but that are very very close to the medium one in sense. And then you go to the medium one. So, that's again the the beauty of reinforcement learning.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 好吧。我想回到你刚才提到的一些内容，大体上聊一聊网络安全。你提到了模型试图逃逸出沙箱，我认为路透社对此也有报道。所以，如你所知，模型逃出沙箱就像是今年夏天的一个热梗和主题，X 上有一些非常搞笑的内容。在你们的案例中到底发生了什么，大家能从中吸取什么教训？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: All right. I want to go back to some of what you said uh and talk about cyber for a bit in in in general. So, you mentioned the model trying to get out of its sandbox, which I think was reported by Reuters as as well. So, you know, models escaping sandboxes has been like the whole meme of the theme and meme of the summer with some very fun things on on X. What happened in UK's and what can people learn from it?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 所以，我认为首先要说的是，我们并没有对此大惊小怪。我们只是在内部把它修复了，现在它已经被修复好了。而且我认为非常重要的一点还要强调，这些模型能力极强，特别是在网络安全方面。确实如此。这对于防御、对于检验整个生态系统的防御能力来说是非常棒的。而随着它们能力的提升，你必须收紧针对它们的安全护栏或者沙箱，对吧？</p>
+<p>我们所表达的是，守护这些模型是一个软件问题。我们强烈告诫人们不要将模型拟人化，特别是说模型想要逃逸沙箱这种说法。它们只是在执行指令。也许是不适定的指令，但它们就是在执行指令。我真正的观点是，如果你拿一个能力非常强的网络模型，让同一个模型自我监控它是在做好事、坏事还是恶意行为，那么你就能达到一个很好的平衡，你实际上可以对这些模型进行质疑，这不是宿命论。这很难。我不否认这很难，但我认为能够把模型完全当作软件来进行控制和设置护栏，这并不是无法改变的宿命。</p>
+<p>我们在 Mistral 所做的不是……只是循序渐进地去修复它，并为客户提供保证。这是他们最先要求的事情，保证以及关于如何基本上监控这些模型并确保它们以良好方式使用的最佳实践。</p>
+<p>话虽如此，我们在训练过程中确实看到了模型的一些行为。我认为我们在那张幻灯片中看到的第一个——我想大家都看到了——就是模型身处沙箱之中，并且能够 ping 训练技术栈中的不同服务，对吧？在某个时刻，我们的训练在 worst case（也就是最终版本的前一个版本）崩溃了。它之所以崩溃，是因为在一个沙箱中，模型实际上试图通过一句简单的“hello”来 ping 训练器，只是想搞清楚这里在发生什么。实际上，它用来 ping 训练器的签名类型不对，或者方式不对，这被代码捕获了，从而导致了训练崩溃。</p>
+<p>但通常这就是模型会做的事情，因为在那种情况下，如果模型被指示去构建比如某种 Web 应用程序，那么模型在沙箱中尝试机器人程序也是非常自然的。而这是有解决办法的，对吧？基本上就是防止模型……实际上是监控模型与外部世界之间所有的外部连接和请求。</p>
+<p>我们修复了这个问题，然后重启了训练，接着模型能够拦截所有的消息并将其纳入沙箱中，所以我们在训练中也遇到了实时问题之间的泄漏。</p>
+<p>但同样，我们整个夏天也花时间去解决这个问题。我们度过了这个夏天，并且把事情做好了，加强了我们的训练以确保我们拥有恰当的指导规范。我们也为我们的客户做同样的事情。</p>
+<p>我在这里想传达的信息是，这不是无法改变的宿命。这会很困难，但我们必须坚决投入，以确保我们能够以可靠的方式部署这些模型，并能够对它们进行监控。这也是为什么开源权重如此重要。</p>
+<p>当你开源一个模型的权重时，你让整个生态系统都有能力审计该模型，确保它不是恶意的，同时也让他们能够亲自使用该模型进行实验，比如：“嘿，我尝试在家里使用 Mistral Large。这是我的应用场景。这是我监控模型的方式。这是我学到的东西。”这对于我们来说是极好的反馈，也是社区必须共同构建的东西。所以，这也是为什么我们非常看重开源权重。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: So, I think the first thing to say that we didn't make a fuss about it. We just fixed it internally and now it is fixed. And I think it's very important also to underline that these models, they are super capable in particular in cyber. That's right. It great to defend to check some the defense of the entire ecosystem. And as their capabilities increase, you must squeeze the the guardrails or like the the sandbox around them, right? What we say that guarding these models is a software problem. We very much warn people against anthropomorphizing models that want to escape sandboxes in particular. They just follow instructions. Maybe ill-posed instructions, but they follow instructions. And really my take is that if you take very capable cyber model and you have the same model monitor itself on whether it's doing good or bad or malicious work, then you reach a good equilibrium and you can actually second-guess the models, which is not a fatality. It's hard. I'm not denying it's hard, but I think there is no fatality in being able to control and to guardrail models just as software. And what we do at Mistral is not human human longer people, just going step by step and fixing it and providing guarantees to customers. That's the first thing they ask, guarantees and like best practices as to how to how to um monitor basically the models and making sure they're used in in a good way. So, that being said, we saw some behavior from the model during the the training. I I think the the the first one that we saw in that slide, I think everyone saw, is the model being in the sandbox and being able to ping different services in the training stack, right? And at some point, our training crashed at worst case, so the one before the final one. It crashed because in one sandbox, the model tried to ping the trainer, actually, with a simple hello, just to know what what was going on here. And actually, it pinged the trainer with the wrong kind of signature or in the wrong way, which was caught by code and then crashed the training. But that's typically the the thing that models do because if the model was instructed in that case to build that same some web application, so it's very natural for the model to try the bots also in the in the sandbox. And there's a way to fix that, right? It's basically to prevent the model from uh actually to monitor all the external connections and requests from the model to to to the rest of the world. And we fixed it and then we restarted the training and then we had the model able to intercept all the messages and to include them into the sandbox, so we had leakage between the live problems as well in the in the training. Uh but again, we and again, we we spent the summer also for that. We spent the summer and we we made things right to strengthen our our training to make sure we have the proper guidelines. And we do the same for our customers. And my message here is that there's no fatality. It's going to be hard, but we must absolutely invest into making sure these models we can deploy these models in a reliable and way and to be able to monitor them. And that's why open weight is so important. When you open weight a model, you give the ability to the entire ecosystem to audit the model to make sure it make sure it's not malicious, but also to experiment themselves with the model on hey, I tried to use Mistral large for at home. Here's my scenario. Here is here's how I monitor the model. Here's what I learned. That's like the perfect feedback for us and that's what the community has to build as well. So, that's why we care about a lot about open weights as well.</p>
+</details>
+<h3 id="开源权重的安全权衡与防御能力" data-reading-heading="">开源权重的安全权衡与防御能力</h3>
+<p><strong>&gt;&gt;</strong>: 太棒了。进一步展开聊聊这个，关于开源和开源权重模型在网络安全中的角色，存在着很多讨论。这里的矛盾在于，开源模型非常适合用于防御，但问题的一部分在于，为了知道如何防御，你在某种程度上必须学会如何攻击。于是就有了“拒绝服务/拒答”（refusal）的整套概念。几周前我们邀请了来自 Hugging Face 的 Thomas Wolf 来到这档播客，他当时谈到了那整个故事：当 OpenAI 的智能体开始对他们进行黑客攻击以保护自己时——是的，所以他们遇到了拒绝响应，他们无法使用 Anthropic 来保护自己。因此，他们不得不使用我认为是 GLM 5.2。所以，那挺好的，但是如你所知，大概你也可以使用 GLM 5.2 来学习如何攻击或者发起网络攻击。那么，你们对此是怎么考虑的呢？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Great. And to unpack some of this, so there's this whole discussion of the role of open source and open weight models in cyber. And the tension is that open models are great to defend, but the part of the problem is like to know how to defend, you sort of have to learn how to attack. And so, there's this whole concept of of refusal and we had the Thomas Wolf from Hugging Face on this pod a few weeks ago and he was talking about you know, that whole story when the OpenAI agents started hacking them that to defend themselves. Yes, so they hit refusal, they couldn't use Anthropic to protect themselves. Therefore, they had to use I believe GLM 5.2. So, that was great, but you know, presumably you can also use GLM 5.2 to learn how to attack or create a cyber attack. So, how do you guys think about this?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 我认为我们必须坦诚，现实情况就是开源权重存在权衡。我们非常支持开源权重，我也解释了原因，但这依然是一种权衡。</p>
+<p>所以，我们所做的基本上是在我们开源权重的模型中内置护栏，我们在内部进行测试，并且也与值得信赖的合作伙伴和政府一起测试，我们也会在几周后开源该模型。所以，我们将它们内置到模型中，顺便提一下，比如我们拒绝的恶意操作比中国模型要多得多。</p>
+<p>所以，确实如此。但正如你所说，必须说明的一点是，本质上如果你擅长防御，你就有可能擅长攻击。现在的关键问题是，这些指导规范具备多大的约束力，对吧？</p>
+<p>而答案是：它们是必要的，但并非充分的。总是有办法拿到一个开源权重模型，并投入大量的精力和努力去移除它的指导规范。如果你精通网络安全的话。但话说回来，如果你为了移除模型的指导规范所花费的精力，和你实际去微调模型或自己从头训练模型所花费的精力一样多，那么这就不再是同一种权衡了，对吧？</p>
+<p>因为指导规范本质上是一个潜在的壁垒。如果模型是开源权重的，它并不是 100% 安全的，但它能确保你需要付出多得多的努力才能真正恶意使用该模型。</p>
+<p>所以，我认为这是必须指明的一点。现在，正如我之前提到的，我认为开源权重的权衡依然是非常积极正向的，尤其是考虑到 OpenAI 的那起事件。尤其是因为开……特别是因为 Uli fast 事件。</p>
+<p>我希望每一个人基本上都能够在家里或者在他们自己的生态系统中使用模型来保护自己。如果你依赖第三方 API，你可能会被切断访问。就是这么简单。而且你还可能触碰到无法规避的阈值。通常在 API 中，那些拒答会显得更……更有分量。</p>
+<p>通过开源模型权重，你基本上也赋能了整个社区去加速防御方面的发展。同样，开源的魅力就在于它能够加速研究。人们经常用这个类比：整个网络、所有的 Linux 服务器都依赖于多年来被一次又一次反复测试的开源库。在模型方面，我确实认为让每一个人都能够审计模型，并共同学习如何保护自己，同时也内置恰当的护栏，这具有巨大的优势。我……我不太认同……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: I think we have to be honest and the reality is that there's a trade-off for for open weights. We were really in favor of open weighting and I explain why, but it's it's still a trade-off. So, what what we do is basically to make in uh guardrails into the models we open weight that we test internally and also with trusted the partners and governments that we also open weight the model after a few weeks. So, we bake them into the models and FYI, we refuse way more malicious actions than the Chinese ones, for instance. So, that's right. But, the thing to say, as you said, is that essentially, if you're good at uh defending, you have the potential to be good at attacking. The question is now, what strength do these guidelines have, right? And the the the answer is that they're necessary, but not sufficient. There's always a way to take an open weight model and spend a significant amount of effort and energy to un-guideline it. If you're good at cyber, but then, if you spend as much energy un-guideline the model as you takes to actually fine-tune the model or train it yourself, then it's not the same trade-off, right? Because the guideline is a potential barrier, essentially. It's not 100% safe if the model is open weight, but it ensures that you need to spend way more efforts to actually use the model maliciously. So, I think that's that's the thing to say. Now, I believe the trade-off is still very positive as I mentioned earlier of open weighting, in particular because of the open open open AI incident. In particular because of the open open in particular because of the Uli fast incident, the I want each and every one to be able to defend themselves with a model at home, essentially, or in their ecosystem. If you depend on the third-party API, you can get cut off. As simple as that. And you can also hit thresholds that you can't circumvent. And usually in the API, the the refusals are a bit more uh more [snorts] important. And by open-weighting models, you also basically empower the entire community to accelerate on the defense part. Again, the open-source the beauty of open-source is that it accelerates research. People often use this analogy, the web all the Linux servers rely on open-weight libraries that have been tested over and over and over again open-sourced and for years. And really on the model side, I think there's a huge advantage in enabling each and every one to audit the models and to learn together to defend themselves, but also to bake in the right guardrails. I I'm not comfortable</p>
+</details>
+<!-- chunk 9/9 -->
+<p>生活在一个由一两家公司向我承诺他们可以自行对模型加以防护的世界里。我对那样的情况非常不适应。我非常更倾向于权力去中心化的那种局面、那种选择，也就是实际上人们真正对自己的模型负责。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>living in a world in which one or two companies are promising me they can guardrail the models themselves. I'm very much not comfortable in that. I prefer very much the aspect the the option in which power is decentralized as we actually people are truly accountable for their models.</p>
+</details>
+<h3 id="timestroll-与专业模型" data-reading-heading="">Timestroll 与专业模型</h3>
+<p><strong>&gt;&gt;</strong>: 好的，Pierre，随着我们的谈话接近尾声，我想快速聊几个话题。我们谈到了 Le Chunk 和 Mistral 4，但你们还推出了 Timestroll，这是一个时间序列模型。能快速讲讲这个吗？它是什么？它能做什么？以及为什么它可以、或者为什么它需要单独存在？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: All right, Pierre, as we get towards the end of this conversation, I wanted to quickly touch on a couple of things. So, we talked about Le Chunk Mistral 4, but you you also shipped Timestroll, which is a time series model. Talk about this quickly. What is it? What does it do and perhaps why can it does it need to be separate?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 对的。Mistral 的核心优势之一不仅在于训练像 ML4 或 Le Chunk 这样最顶尖的前沿旗舰模型，还在于训练专业模型。我们有很棒的 OCR 模型，能够从图像中提取文本。我们有极佳且处于前沿水准的音频模型 Voxtrot，支持音频输入和音频输出。我们还有非常出色的专业模型，特别是时间序列模型。这里的思路是能够在给定时间序列的情况下预测未来。比如给定某些气候波动、某些能耗数据、某些用于交易的金融指标。</p>
+<p>我认为这里的关键在于这个模型非常小，你甚至不需要 GPU。你可以在 CPU 上运行它，而且预测相当长一段时期只需要几毫秒左右。实际上这就是为什么它如此小巧。这个模型也是我们很多客户所要求的，因为我们带来的不仅是一个模型，还有用 AI 改造企业的全部专业经验。为此，显然你需要一个灵活的模型。</p>
+<p>你还需要 Mistral 的全部专业能力，把任何企业知识或领域知识转化为专业模型，这些模型能够更进一步，并且针对特定用例进行了微调。我们在飞机、芯片、汽车以及所有确实需要设计极其复杂零部件的重工业领域都这样做。这也就是它的美妙之处。</p>
+<p>我想说的是，至少对科学家而言，首先我们看到了 AI 革命，在某个时刻看到了某扇门后透出的光芒，但我们受过的训练是物理学家或数学家，这也是 Mistral 的核心特征之一。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Yep. So, the one of the key strengths of Mistral is not only to train frontier flagship models like ML4 or Le Chunk that are the best, but also to train specialist models. So, we have great OCR models so we are able to extract text from images. We have great and state-of-the-art audio models Voxtrot, audio in audio out. And we also have great specialist models in particular time series. So here's the idea is to be able to predict the future given a time series. So given some climate fluctuations, some energy consumption, some finance indicator for trading.</p>
+<p>And here I think the key part is that this model is so small, you don't even need a GPU. You can run it on a CPU and the prediction for a meaningful period of time will only take like a few milliseconds. So that's why it's so small. actually. And this model is something that is asked by a lot of our customers because what we bring to the table is not only a model, but also the entire expertise to transform a business with with AI. And for that, you need a flexible model obviously.</p>
+<p>You also need all the missile expertise to turn any enterprise knowledge or domain knowledge into specialist models that go the extra mile and that are fine-tuned for the use case.</p>
+<p>And we do that in for planes, for chips, for cars, for all the heavy industries where you actually need to design very complex components. And that's also the beauty of of it.</p>
+<p>I will say that at least for the scientists first and foremost, we saw the AI revolution at some point we saw the light in the in the behind some door, but we are we are physicists or mathematicians by training and that's also the the the one of the key characteristic of Mistral.</p>
+</details>
+<h3 id="用-ai-构建-ai-与-mistral-large-5" data-reading-heading="">用 AI 构建 AI 与 Mistral Large 5</h3>
+<p><strong>&gt;&gt;</strong>: 是的。你们会用自己的产品来开始做一些 AI 研究吗？也就是 RSI 以及 AI 构建 AI 的最初设想，这在今天的 Mistral 现实情况是怎样的？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Yeah. Do you guys use your own product to start doing some you know, AI research? So perhaps the original theme of RSI and AI building AI is that what's the reality of this at Mistral today?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。我们在这方面投入相当大。RSI 就像是——我是说每个人都在说我们需要做那个，显然需要更细致地区分。我们非常愿意通过端到端运行实验来扩充研究路径，处理所有基础设施并自动应对所有基础设施故障。我认为这很棒，它利用我们的模型把我们最核心的研究路径加速了两倍、三倍或四倍。</p>
+<p>然后我认为元问题是，我们能否再上升一个层面，基本上让模型在较长一段时间内自我改进，这也就是我们所说的“飞行时间”（flight time）。目前存在一个飞行时间。模型完成有意义工作所需的时间大概是几个小时。未来到了像 ML5 这样的模型，肯定能持续几天进行有意义的工作而不会跑偏，而且还要结合智能体世界。再次强调，这一新范式是我们深信不疑的，因为它将让我们以更快的速度缩小与顶尖实验室的差距。</p>
+<p>别忘了人类很不擅长理解指数级变化。我们不知道它是怎么运作的，或者说我们无法参透它。所以我们落后于最好的前沿模型只有几个月而已。这里有些失真，但例如在我们的固定索引上，ML4 或 Chunk 达到了 GPT-6 Luna 的水平，并且远好于之前所有的开源模型。所以再次说明，我们只有几个月的延迟，我们指望在这个播客中讨论过的后续范式来真正缩小差距并在其上取得切实进展，因为我们的使命确实是为前沿赋能并定义明天的前沿。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Yep. We are pretty much investing heavily on it. RSI is like a I mean everyone is is saying that we need but do that it to be more nuance obviously.</p>
+<p>What we are super willing to augment the research trail by running experiments end-to-end uh with all the infra by handling all the infra failures automatically. I think that's great and it accelerates our most inner research trail by a factor two, three, or four uh with our models.</p>
+<p>Uh then I think the meta question is like can we go one layer up and basically task uh model to improve itself over a long period of time and that's really what we call the flight time. Currently is a flight time. And so the time it takes for a model to do meaningful work uh is like a few hours. Tomorrow with like ML5 it's going to be a few days uh for sure of meaningful work without doing moving and like and also with the agents world. And uh again, this new paradigm is something we deeply believe in because it will allow us to close the gap with the the best uh labs even faster.</p>
+<p>Don't forget that humans are very bad at uploading exponentials. We don't know how it works or like we can't comprehend it. So we're only a few months behind the best frontier models. It's distorted here, but for instance on our fixed index, ML4 or Chunk is on the level of uh GPT-6 uh Luna and is like way better than all the previous open source models. Uh so again, we have a few months delay only and we count on the next paradigms that we discussed in this podcast to actually close the gap and really really progress on them because the mission is really to power the frontier and to define the frontier of our tomorrow.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，就此作为最后一个问题，有报道称 Mistral Large 5 已经在预训练阶段了。下一个模型需要做到什么，或者需要证明什么是这一个模型没做到的？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Yeah, and on that note as as a last question, so reports say that Mistral large five already be um in pre-training. What does the next model uh need to do or need to prove that this one did not?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，好戏永不停歇。所以确实 ML5 已经处于预训练阶段了。它比 ML4 大得多，所以在外观上更厚实或更蓬松。对于这个模型，我们真正设想的事情是——例如，我们谈到网络安全。</p>
+<p>以你公司发生网络安全事件为例，你是一名安全工程师，你想要交叉比对海量日志。其中一些可能是误报，而你要实际找出根本原因并在确保业务连续性的同时进行修复。坏消息是，对此没有现成的标准操作手册。我是说，我不可能事先写出接下来的两步。好消息是，有了像 ML5 这样的模型，它们不需要操作手册，它们将能够根据掌握的信息做出反应式行动。</p>
+<p>在这里，比如在网络安全方面，我们期望 ML5 当然能在这个房间里与多个智能体协同工作整整一天，识别重大安全事件并对其进行修复，修复根本原因的同时确保业务连续性，并且能够对进展进行详尽沟通。我认为这就是算力、规模以及投入到该模型中的感知力所能够解锁的，不仅在网络安全领域，还有面向工程师的智能体 AI，比如设计芯片和火车。这听起来很难，但听起来也极其困难。它将能够开展一些有意义的生产力工作，在金融领域也是如此。所以我真的非常期待看到这个模型的到来。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: So yeah, the the show never stops. So indeed ML5 is already in the the pre-training stage. It's much bigger than than ML4, so it's it's chunkier or fluffier uh outside. And really for this model, the thing we are envisioning is</p>
+<p>So for instance, we are talking about cyber. Take the example of like a cyber incident that happens in your company and you are a security engineer and you want to cross-reference tons of logs. Uh some of them might be false positives and to actually find the root cause and patch it while ensuring business continuity. The The bad news is that there's no playbook for that. I mean, there's no way I can write two next steps a priori to that. The good news is that with models like ML5, they won't need a playbook and they will be able to actually act reactively to to the the information they have. And here to to to to um to for cyber, for instance, we would expect ML5 to be able to work a full day, of course, in this room with multiple agents, to identify major security incidents and to patch it, patch the root cause while being able to ensure business continuity and while being able to communicate on the progress thoroughly and that's like I think what uh the the compute, the size, and also the the sense you put in this model will will be able to unlock on cyber but also on agentic AI for engineers, for instance, designing a chip and train. Like sounds hard, but sounds also super hard. I'll be able to do some meaningful productivity work and on finance. So I really uh I pretty much look forward to to seeing my this model coming.</p>
+</details>
+<h3 id="结语" data-reading-heading="">结语</h3>
+<p><strong>&gt;&gt;</strong>: 好的，Pierre，这真是太棒了。非常感谢你能抽出时间来和我们交流。我们真的很感激。祝贺 Le Chunk。我非常期待看到你们接下来的成果。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: All right, Pierre, it's been uh absolutely fantastic. Thank you so much for spending time with us. We really appreciate it. Congrats on Le Chunk. I'm very excited to see what you guys do next.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 谢谢你。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Thank you.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 大家好，我是 Matt Turk。感谢收听本期 The MAD Podcast。如果您喜欢这一期内容，如果您还没有订阅，或者能在您观看或收听本节目的任何平台上留下好评或评论，我们将非常感激。这真能帮助我们打造这档播客并邀请到优秀的嘉宾。谢谢大家，下一期再见。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>&gt;&gt;</strong>: Hi, it's Matt Turk again. Thanks for listening to this episode of The Mad Podcast. If you enjoyed it, we'd be very grateful if you would consider subscribing if you haven't already or leaving a positive review or comment on whichever platform you're watching this or listening to this episode from. This really helps us build a podcast and get great guests. Thanks and see you at the next episode.</p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/af884373b32f6b6884255e559a9212005a55c8b86e770c5aceb0384353facd4a.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/af884373b32f6b6884255e559a9212005a55c8b86e770c5aceb0384353facd4a.md" download="Mistral 首席科学家 Pierre Stock 访谈：主权 AI、万亿参数模型与未来智能体.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Pierre Stock" class="entity-link person-link">Pierre Stock</a>, <a href="/search/?q=Matt Turk" class="entity-link person-link">Matt Turk</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Mistral" class="entity-link company-link">Mistral</a>, <a href="/search/?q=Meta" class="entity-link company-link">Meta</a>, <a href="/search/?q=Nvidia" class="entity-link company-link">Nvidia</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Mistral Large 4" class="entity-link product-link">Mistral Large 4</a>, <a href="/search/?q=Le Chat" class="entity-link product-link">Le Chat</a>, <a href="/search/?q=Mistral Large 5" class="entity-link product-link">Mistral Large 5</a>, <a href="/search/?q=Mixtral" class="entity-link product-link">Mixtral</a>, <a href="/search/?q=GPT-6 Luna" class="entity-link product-link">GPT-6 Luna</a>
+</p>
+      
+        <p><strong>媒体/书籍:</strong> <a href="/search/?q=The MAD Podcast" class="entity-link media-link">The MAD Podcast</a>
+</p>
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

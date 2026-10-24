@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qwen-Image-2.1：版本号断裂背后的双线策略，与一个模型接住三件事的野心</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Qwen-Image-2.1：版本号断裂背后的双线策略，与一个模型接住三件事的野心</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-24</span>
+    
+
+    <header class="article-header">
+      
+      <h1>Qwen-Image-2.1：版本号断裂背后的双线策略，与一个模型接住三件事的野心</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">image-generation</span>
+      
+        <a class="tag-link" href="/tags/open-source-model/">open-source-model</a>
+      
+        <span class="tag-pill tag-pill--no-page">alpha-channel</span>
+      
+        <span class="tag-pill tag-pill--no-page">qwen-image</span>
+      
+        <span class="tag-pill tag-pill--no-page">license-policy</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">Qwen-Image-2.1 通过统一管线整合文生图、局部编辑与透明通道生成，采用 7B 架构并开放权重。其版本号回退暗示闭源商业与开源研究的双线策略，同时许可协议收紧引发社区对商用限制的讨论。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/qwen-image-21-two-track-strategy-20260924.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-09-24T00:00:00.000Z">2026-09-24</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>5 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E4%B8%80%E6%AC%A1%E5%8F%91%E5%B8%83%E4%B8%89%E4%B8%AA%E5%B7%A5%E5%85%B7%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%94%B6%E8%BF%9B%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9E%8B">一次发布，三个工具的工作收进一个模型</a></li><li class="outline-h2"><a href="#%E8%BF%99%E6%9D%A1%E4%BA%A7%E5%93%81%E7%BA%BF%E4%BB%8E%E5%93%AA%E6%9D%A5%E4%B8%80%E6%9D%A1%E5%9C%A8">这条产品线从哪来：一条在</a></li><li class="outline-h2"><a href="#%E5%AE%83%E7%9A%84%E5%90%8C%E8%A1%8C%E6%98%AF%E8%B0%81">它的同行是谁</a></li><li class="outline-h2"><a href="#%E8%BE%B9%E7%95%8C%E8%AE%B8%E5%8F%AF%E8%BF%90%E8%A1%8C%E4%B8%8E%E8%B4%A8%E9%87%8F">边界：许可、运行与质量</a></li><li class="outline-h2"><a href="#%E6%96%87%E5%AD%97%E6%B8%B2%E6%9F%93%E8%BF%99%E5%9D%97%E9%95%BF%E6%9D%BF%E7%9A%84%E8%AF%81%E6%8D%AE%E5%8F%98%E5%8C%96">文字渲染：这块长板的证据变化</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>平常如果打算用 AI
+做一张能直接上版的设计素材，手头往往要在两三个软件之间来回倒腾：先在生图工具里跑出画面，再拖进抠图工具把底色去掉，最后还要丢进编辑器修改局部的招牌字样。2026
+年 9 月 20 日，Qwen 团队正式上线了新一代图像生成模型 Qwen-Image-2.1
+并开源了模型权重，它最直接的主张就是把这三项操作收进同一个模型里：负责画面生成的核心部分有
+7B
+参数量，外加一个解析提示词的视觉语言编码器和一个专门处理透明通道的自编码器。但只要扫一眼发布记录，更让人好奇的反而是它的版本号：团队在
+2026 年 2 月推出了 2.0，7 月发布了 3.0，到了 9 月却反常地跳回了
+2.1。</p>
+<p>这个反向跳跃的数字，最可能的解释是一家团队在 2026
+年开始同时经营两条产品线：闭源商业接口在云端往前跑，开源研究分支在本地继续演进。官方没有说明过这层意图，但发布形态的差异摆在那里。这次伴随权重放出的专有研究许可，也把开放权重阵营如何在社区生态与商业防护之间划定界线，平实地摆到了台面上。</p>
+<h2 id="一次发布三个工具的工作收进一个模型" data-reading-heading="">一次发布，三个工具的工作收进一个模型</h2>
+<p>2026 年 9 月 20 日发布的 Qwen-Image-2.1，视觉生成部分采用了 7B
+参数量的单流扩散变换器作为骨干网络。输入端搭配 Qwen3-VL
+解析多模态提示词，输出端则接入了一个 64
+通道的自编码器，专门负责透明通道的编解码。这套架构组合直接改变了本地制图时各道工序的流转方式。</p>
+<p>要理解自编码器带来的变化，得先看一下数字图像的通道机制。平时接触到的普通彩色照片，依靠红、绿、蓝三个基本颜色分量合成画面。如果想让画面的特定区域呈现半透明过渡，或者直接露出镂空的透明底色，像素点就需要增加专门记录不透明度的第四个通道。以往要做一张透明底素材，常见做法是先生成普通图片，再把示意图里那种灰白棋盘格背景单独抠掉；这多出来的一步既费事，遇到毛发这类细碎边缘还容易出瑕疵。</p>
+<p>图形学将红绿蓝三色与透明通道的组合统称为
+RGBA，其中专门记录透明度数值的分量叫做 alpha 通道。Qwen-Image-2.1
+把透明通道融入了底层自编码器的表达空间。扩散网络生成像素颜色的同时，同步输出对应的透明度数值，导出的
+PNG
+自带透明背景，省去了外置抠图软件二次处理的步骤；社区实测者反馈其透明边缘具备可用度。</p>
+<p>在托管于 GitHub
+代码仓库 的统一管线 QwenImage21Pipeline
+中，开发者用同一套调用脚本就能处理三种常见的作图需求。在默认 40
+步推理的基准配置下，官方展示了具体的运行示例。第一项是基础文生图，输入提示词
+A neon shop sign that reads "QWEN IMAGE 2.1", rainy night, reflections on wet pavement，演示雨夜路面积水反光与霓虹招牌文字的渲染效果；第二项是局部编辑任务，输入提示词
+Change the background to a sunset beach，把原图背景替换成了夕阳海滩；第三项是透明生成任务，使用提示词
+This is an RGBA image with transparency. A cute cartoon dragon sticker. The image has alpha channel and the background is transparent.，单次运行就能直接输出一张背景镂空的卡通小龙贴纸
+PNG 文件。</p>
+<p>这套统一接口在编辑能力上也做了一并收拢。输入端除了支持单张原图，还允许传入最多
+10
+张参考图以维系多主体一致性。针对画面局部修改的需求，接口开放了三种区域标注方式，分别是
+circle 圆形框选、painted annotation 涂抹画笔以及 separate mask
+独立掩码。借助这套机制，既可以把普通照片中的主体抽离成透明图层，也可以在维持透明属性的前提下对主体做进一步的局部修改。出图规格上模型原生支持
+2K 分辨率，并预设了从方图到竖屏的 7
+档常用宽高比。为了辅助长难提示词，官方还配套发布了基于 Qwen3.5-VL 9B
+微调的改写模型 PE-T2I 与 PE-I2I，建议先优化提示词再送进主干管线。</p>
+<p>文生图、局部编辑与透明素材三条输出线收进同一条管线，由单个模型统一承接。</p>
+<h2 id="这条产品线从哪来一条在" data-reading-heading="">这条产品线从哪来：一条在</h2>
+<p>2026 年分叉的时间线</p>
+<p>要理清 2.1 这个反常的版本命名，目光需要回到 2025 年 8
+月。从最初上线到 2026
+年秋季，这条产品线在十三个月的时间里完成了八次节点演进，展示了这支团队怎样一边在开源社区里迭代，一边划出专门的商业服务线。</p>
+<p>发布时间</p>
+<p>模型名称</p>
+<p>核心特征与技术规格</p>
+<p>许可协议</p>
+<p>技术报告</p>
+<p>2025-08-04</p>
+<p>Qwen-Image 初代</p>
+<p>20B MMDiT 架构，主打复杂文字渲染与编辑，自建 ChineseWord
+基准，CVTG-2K 英文评测</p>
+<p>Apache 2.0</p>
+<p>arXiv:2508.02324</p>
+<p>2025-08-18</p>
+<p>Qwen-Image-Edit</p>
+<p>指令驱动式图像编辑，支持中英文双语图内文字增删改</p>
+<p>Apache 2.0</p>
+<p>基于初代架构</p>
+<p>2025-09-22</p>
+<p>Edit-2509</p>
+<p>引入多图输入（1 至 3 张），增强人物身份与主体一致性</p>
+<p>Apache 2.0</p>
+<p>invideo
+汇总</p>
+<p>2025-12-23</p>
+<p>Edit-2511</p>
+<p>多图编辑一致性提升，支持多视角生成与空间几何推理</p>
+<p>Apache 2.0</p>
+<p>模型卡更新</p>
+<p>2025-12-31</p>
+<p>Qwen-Image-2512</p>
+<p>文生图分支收尾版本，沿用初代 20B 骨干架构</p>
+<p>Apache 2.0</p>
+<p>社区多源一致</p>
+<p>2026-02-10</p>
+<p>Qwen-Image-2.0</p>
+<p>轻量化架构，主打原生 2K、专业排版与统一生成编辑</p>
+<p>未公开权重</p>
+<p>官方发布技术报告</p>
+<p>2026-07-21</p>
+<p>Qwen-Image-3.0</p>
+<p>4.5K 长指令支持，报纸 PDF 级复杂排版，仅提供闭源商业 API</p>
+<p>闭源商业</p>
+<p>无技术报告</p>
+<p>2026-09-20</p>
+<p>Qwen-Image-2.1</p>
+<p>7B 单流 DiT，内置 RGBA VAE，统一文字、编辑与透明生成，开源权重</p>
+<p>Research License</p>
+<p>无</p>
+<p>演进时间线上 3.0 走向闭源且未披露技术报告，2.1
+回归开源路线但收紧了许可协议。</p>
+<p>从这张时间表里可以看到显眼的版本号断裂：团队在 2026 年 2 月发布了
+2.0，7 月发布了 3.0，到了 9 月却回过头发布了
+2.1。官方从未公开解释过这套命名逻辑。将产品线在 2026
+年划分为闭源商业接口与开源研究分支两条平行路线，是基于发布形态差异所做的推断。</p>
+<p>沿着这个推断视角，2026 年 7 月上线的 3.0
+代表了云端闭源产品线的确立。这个版本只通过商业 API
+开放调用，官方并未提供权重文件下载，同时也打破了初代与 2.0
+伴随发布日同步公开技术报告的既往做法，至今没有披露技术报告。3.0
+的技术侧重点放在长达 4.5K token
+的上下文解析、报纸与杂志级密集图文排版，以及复杂软件界面的生成上。</p>
+<p>9 月面世的 2.1 则回到了开源这条线上。本地工作流工具 ComfyUI 在其 官方博客
+中指出，2.1 运行在优化后的 7B MMDiT 之上，与 2.0 处于同一技术层级。在 第三方对比分析
+中也能看到功能层面的分流：3.0 Pro 的接口文档只开放 1 至 3
+张参考图输入，没有公开基于掩码的编辑工作流，而 2.1
+在本地代码中开放了最多 10
+张参考图与三种掩码标注方式。两套方案面向的使用场景和交付目标不同，推进路线自然分成了两条线。</p>
+<h2 id="它的同行是谁" data-reading-heading="">它的同行是谁</h2>
+<p>要对 Qwen-Image-2.1
+形成务实的判断，需要把它放到当下开放权重图像模型的坐标系里审视。在支持本地部署的模型中，另外两个受到广泛讨论的项目是
+Z-Image Turbo 与 FLUX.2，二者的技术取向与功能边界各有侧重。</p>
+<p>Z-Image Turbo 采用 6B 参数量的蒸馏架构，以宽松的 Apache 2.0
+协议发布。该模型用蒸馏换取生成速度，整体设计偏向写实的人像摄影质感，但在公开的产品与技术文档中
+明确不支持图内文字渲染。如果应用场景需要在海报或插画中排布特定文字，使用者必须在外部借助其他设计软件或排版模型补全。</p>
+<p>另一边的 FLUX.2 拥有成熟的局部图像编辑能力 Kontext
+分支，但模型原生并不具备透明通道的生成逻辑。在许可与分发策略上，FLUX.2
+做了分级切分：轻量化的 klein 4B 版本沿用 Apache 2.0，功能完整的 Dev
+版本则限制商业用途，其 商业 API
+的调用单价在每百万像素 0.003 到 0.08 美元之间。至于图内文字渲染，社区单人测试反馈
+曾记录旧版 2512
+在排布长难词时表现更好，但这一观察来自单人测试，缺乏统一基准的持续印证。</p>
+<p>放眼云端闭源模型阵营，GPT Image 系列、Gemini 图像能力以及 Qwen 自家的
+3.0
+API，都在各自的官方宣传中给出了极高完成度的排版与合成样张。在公开材料里，这几家没有可互相对照的基准成绩，各自只提供自己口径的宣称，目前无法给出权威的跨模型量化对比。</p>
+<p>把这些同行放在一起看，Qwen-Image-2.1
+并没有去争夺单项画质的最高分，而是把实用的几项功能收在了一起。在目前的开放权重阵营里，它是唯一一个把图内文字渲染、原生透明通道输出与多图局部编辑同时装进同一个开源权重模型的方案。</p>
+<h2 id="边界许可运行与质量" data-reading-heading="">边界：许可、运行与质量</h2>
+<p>代码仓库页面虽然在多处提及开源字样，但决定模型实际使用权限的是随代码分发的正式法律文件。Qwen-Image-2.1
+放弃了前代 2511 与 2512 所使用的 Apache 2.0 协议，转而采用专有的 Qwen
+Research License Agreement。协议第 1 条第 (i)
+款逐字规定：Non-Commercial 仅指
+for research or evaluation purposes only；协议第 2 条第 (a)
+款明确限制：FOR NON-COMMERCIAL PURPOSES ONLY；第 2 条第 (b)
+款进一步注明，任何涉及商业化的部署必须单独发邮件至
+[email&nbsp;protected] 取得独立授权。</p>
+<p>在 Reddit
+社区讨论
+中，许多长期跟踪该系列的开发者将这一许可条款视为开源立场的倒退。换一个角度看这次收紧，也可以理解成一种折中：权重继续向公众开放，供研究和评测使用，把商业部署留作需要另行洽谈的授权。社区的失望是真实的，但要求一个团队永远免费开放商用，本身也不是行业通例。</p>
+<p>前代模型适用的 Apache 2.0 允许商用，2.1
+的专有研究许可则要求商业部署另行申请授权。</p>
+<p>在硬件开销与部署门槛上，官方文档并未给出显存配置对照表，目前的运行指标多来自社区开发者的实测。模型完整权重的下载体积约为
+33GB。在轻量化推理工具 stable-diffusion.cpp 上，社区开发者 peri-cl 采用
+Q8 量化后实测整体显存占用约
+15.6GB，并确认了第一时间的运行支持；社区也同步上线了对应的 GGUF
+格式量化版本 Abiray/Qwen-Image-2.1-GGUF，把运行门槛进一步压向消费级配置。出图耗时方面，搭配
+DDR5 内存的笔记本 CPU 生成单张 512×512 图像约需 3 分钟；一位 Reddit
+实测者在 5070 与 5080 这一档桌面 GPU 上、以 25
+步推理生成一张百万像素图像，耗时约 25
+秒。图像编辑任务由于需要编码参考图像特征，参考图数量增加会带来更长的推理延迟。</p>
+<p>围绕该模型的工程适配生态在上线当天迅速铺开。开源库 diffusers
+在发布当天开放了支持 PR #14804；工作流工具 ComfyUI
+推出了官方节点模板；推理加速框架 SGLang 提交了支持 PR #39983；LightX2V
+也跟进完成了适配，而社区测试确认 llama.cpp
+目前阶段暂不支持图像输出。在硬件层面上，FlagOS 宣称已在 8
+款芯片平台上完成了与官方实现的推理精度对齐，不过该结论目前属于厂商单方宣称，公开渠道尚未出现独立的第三方复验报告。</p>
+<p>关于成图质量，社区早期测试给出了分化的反馈。Reddit
+用户 listopalafoto 测试后
+认为其编辑能力树立了新的开源标准，多图参考下人物的一致性表现稳定，输出的透明
+PNG 边缘具备较好的可用度。然而实测者 cgs019283
+指出，在常见构图下生成的部分画面带有合成感与偏黄颗粒，该测试者推测这可能是训练语料中混入了特定风格图片所致，这一成因属于测试者的个人主观推断；同时面对知名公众人物或版权角色，模型往往只能生成泛化面孔。</p>
+<p>在 Hacker News
+社区讨论中，开发者对官方演示用例里的一组聚会合照展开了细节核对，发现画面中的知名演员
+Shelley Long 出现了面孔特征泛化，无法精确维持人物的原貌，详见 HN
+讨论记录。这一案例说明官方演示中的多图一致性属于厂商选例展示效果，并不构成无条件的普遍性能保证。目前行业内尚无独立学术机构对该模型的生成成功率或画质缺陷进行系统性量化统计，海外科技媒体
+the-decoder
+在报道 时同样采用了 claims to beat
+即宣称超越的审慎表述。而在透明图层方面，公开材料中对 alpha
+边缘质量也缺乏独立客观测量。</p>
+<h2 id="文字渲染这块长板的证据变化" data-reading-heading="">文字渲染：这块长板的证据变化</h2>
+<p>文字生成一直是 Qwen 图像模型建立辨识度的核心能力。2025 年 8 月初代
+Qwen-Image 亮相时，研发团队在其 技术报告
+与 博客
+中搭建了一套完整的证据链条。除了采用检验长英文字符排布的 CVTG-2K
+基准，团队还专门自建了收录大量复杂汉字的 ChineseWord
+评测集，以此填补中文排版测试的空白。在当时公布的技术指标中，初代模型在
+LongText-Bench、ChineseWord 与 TextCraft
+等测试集上均取得了突出的评测数据，并展示了对联、牌匾等复杂汉字长文本的渲染实测。</p>
+<p>到了
+Qwen-Image-2.1，官方披露文字能力的方式出现了显著转变。在最新的模型文档中，关于排版能力的陈述缩减为一句简短的
+Improved
+typography。官方未披露新的字符准确率实测数据，也未提供支持语言种类的完整清单，科技分析博客
+kie.ai
+也独立指出了这一证据维度的精简。当前社区流传的渲染对比，多数引用自旧版
+2512 与 FLUX.2 的历史测试，并非针对 2.1 进行的严格对照。</p>
+<p>对于考虑将 Qwen-Image-2.1
+应用于海报宣发、电商主图或招牌设计等文字敏感业务的工程团队，不能简单将初代技术报告的成绩套用到当前版本上。在进入生产链路前，务实的做法是梳理一批贴近自身业务的典型提示词，覆盖中英文混排、差异化字号以及多行密集排版，在本地环境中搭建对照基线，检验文字生成的拼写准确率与成字率。</p>
+<p>后续评估这套模型的演进走势，可以从三个观察维度跟进。其一是云端商业线的技术下放，3.0
+所具备的超长指令解析与期刊级图文排版能力，后续是否会以某种方式裁剪集成进开源研究模型；其二是许可协议的变动可能，团队是否会根据开发者诉求补充商用授权层级；其三则是围绕原生透明生成的评测基准，社区是否会出现针对边缘半透明羽化细节与抠图精度的客观测量方案。</p>
+<p>对于眼下没有私有化部署图像模型需求的技术团队，Qwen-Image-2.1
+的推出依然提供了一个近距离观察多模态架构演进的样本。它展示了生成模型试图把以往松散的多步修图管线收归一体的工程努力，也记录着开源团队在活跃社区生态与守住商业防线之间的实际平衡。</p>
+<p>本帖中的所有图像均由 Qwen-Image-2.1 生成。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/aed25d31a2d0ab432b01b9aaf6b5719caf942941673f2b41aad000256bbb4c6e.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/aed25d31a2d0ab432b01b9aaf6b5719caf942941673f2b41aad000256bbb4c6e.md" download="Qwen-Image-2.1：版本号断裂背后的双线策略，与一个模型接住三件事的野心.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=qwen" class="entity-link company-link">qwen</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=qwen-image-2.1" class="entity-link product-link">qwen-image-2.1</a>, <a href="/search/?q=qwen-image-3.0" class="entity-link product-link">qwen-image-3.0</a>, <a href="/search/?q=flux-2" class="entity-link product-link">flux-2</a>, <a href="/search/?q=z-image-turbo" class="entity-link product-link">z-image-turbo</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

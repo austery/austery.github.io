@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stop Telling Agents How：从提示词到声明式契约驱动的 Multi-Agent 系统</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Stop Telling Agents How：从提示词到声明式契约驱动的 Multi-Agent 系统</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-18</span>
+    
+
+    <header class="article-header">
+      
+      <h1>Stop Telling Agents How：从提示词到声明式契约驱动的 Multi-Agent 系统</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">declarative-programming</span>
+      
+        <a class="tag-link" href="/tags/multi-agent-system/">multi-agent-system</a>
+      
+        <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+      
+        <span class="tag-pill tag-pill--no-page">contract-driven-development</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">OpenProse 创始人团队探讨了 AI Agent 开发范式的根本转变：告别微观指令（How），转向声明式契约与结果规约（What）。通过轻量级 Markdown 内核与子代理组合，构建可自愈、可审计且跨模型执行的高确定性多智能体工作流。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=7T-gldvgfpo" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-18T00:00:00.000Z">2026-10-18</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>6 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E6%84%8F%E5%9B%BE%E4%BC%A0%E8%BE%BE%E9%87%8D%E6%9E%84%E4%BB%8E%E5%91%BD%E4%BB%A4%E5%BC%8F%E6%8F%90%E7%A4%BA%E5%88%B0%E5%A3%B0%E6%98%8E%E5%BC%8F%E5%A5%91%E7%BA%A6">意图传达重构：从命令式提示到声明式契约</a></li><li class="outline-h3"><a href="#openprose-%E6%9E%B6%E6%9E%84%E5%9F%BA%E4%BA%8E-markdown-%E7%9A%84%E5%A3%B0%E6%98%8E%E5%BC%8F%E5%A5%91%E7%BA%A6%E4%B8%8E%E6%89%A7%E8%A1%8C%E7%8E%AF%E5%A2%83">OpenProse 架构：基于 Markdown 的声明式契约与执行环境</a></li><li class="outline-h3"><a href="#web-%E7%AB%AF%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8C%96%E7%94%9F%E6%88%90%E5%A5%91%E7%BA%A6%E9%A9%B1%E5%8A%A8%E7%9A%84%E4%BA%BA%E6%9C%BA%E5%8D%8F%E4%BD%9C%E7%95%8C%E9%9D%A2">Web 端工作流与自动化生成：契约驱动的人机协作界面</a></li><li class="outline-h3"><a href="#%E7%A0%B4%E8%A7%A3%E8%87%AA%E6%88%91%E7%A1%AE%E8%AE%A4%E9%97%AD%E7%8E%AF%E5%AD%90%E4%BB%A3%E7%90%86%E6%9E%B6%E6%9E%84%E4%B8%8E%E7%8B%AC%E7%AB%8B%E8%AF%84%E4%BC%B0%E8%80%85%E8%AE%BE%E8%AE%A1">破解自我确认闭环：子代理架构与独立评估者设计</a></li><li class="outline-h3"><a href="#openprose-kernel%E9%9D%A2%E5%90%91%E6%9C%BA%E5%99%A8%E8%A7%A3%E6%9E%90%E7%9A%84%E8%BD%BB%E9%87%8F%E5%8C%96-markdown-%E5%8E%9F%E8%AF%AD">OpenProse Kernel：面向机器解析的轻量化 Markdown 原语</a></li><li class="outline-h3"><a href="#%E7%BB%84%E5%90%88%E5%BC%8F%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93-dag%E4%BB%8E%E6%8E%A2%E7%B4%A2%E6%80%A7%E5%AF%B9%E8%AF%9D%E8%BF%88%E5%90%91%E7%A1%AE%E5%AE%9A%E6%80%A7%E7%94%9F%E4%BA%A7%E5%B7%A5%E7%A8%8B">组合式多智能体 DAG：从探索性对话迈向确定性生产工程</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="意图传达重构从命令式提示到声明式契约" data-reading-heading="">意图传达重构：从命令式提示到声明式契约</h3>
+<p>在人工智能发展的过去数年中，虽然底层模型基准测试、调度框架与上下文窗口不断迭代，但构建智能系统的核心瓶颈始终未变：<strong>如何精准、低摩擦地将人类大脑中的意图与需求对齐给超级智能</strong>。早期在开源大模型社区（如 <strong>EleutherAI</strong>）中备受推崇的“提示词工程技巧”，本质上是在强行弥补模型理解能力的不足；但随着模型推理能力的几何级跃升，微观层面的语法雕琢与命令式提示（Imperative Prompting）正迅速过时。</p>
+<p>现代 Agent 架构的核心演进方向是从“指导每一步操作细节（How）”转向“严格规约最终目标状态（What）”。如果我们将工作流限定在一步步教导模型点击哪个按钮、编写哪些局部代码，那么只要模型能力稍微提升或底层工具调用发生变更，整套指令系统便会彻底脆化失效。<strong>声明式契约</strong>（Declarative Contract: 仅规定系统必须满足的约束、验收标准与终止状态，将执行路径与工具决策权完全让渡给模型推理器）将目标与实现解耦：更强大的模型能以更少步数、更高质量达成契约，而轻量模型则可自动退化执行分支，从而实现了系统架构的长期鲁棒性。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>[music] &gt;&gt; My name is Dan. I am the creator of Open Pros. This year is Raymond I'm joined by Raymond and Jose two fabulous teammates, co-workers, just phenomenal creators and engineers all around. I'll introduce them a little bit in a bit. Uh just a little bit of background about what we're what we're about to show you here. Uh 5 years ago in April of 2021, I was named the best prompter in the Eleuther AI back rooms Discord, which was a skill at the time that I thought would be tremendously valuable for many years afterward and actually it lasted I think around like two or three years maybe was the lifetime of of that skill. And I say that because a lot obviously, as you all know, has changed in the last 5 years. But one thing has not changed and I've been to a lot of workshops today. We've got a lot of amazing talks coming up. But the one thing that seems to be ever present in in all of the work that we do and and that actually doesn't change with the latest harness or the latest model is we all still need to communicate our intent to the thing and no matter how smart the thing gets, there is still this challenge of how do I get out of my brain the thing that I want and and get it into the super intelligence that is just going to carry it away and and do everything for me. Uh Open Pros is is a is a language, it's a framework, it's a started as a project based on my own love of language and my own strong belief that language is this really powerful force of creation and I mean that like I know that's a little bit cliche, but that's like in the very literal sense now with with the capabilities that we have. You can write a sentence and the things just make that sentence true. And so the question then becomes like what is the sentence that you write now that you have this tremendously powerful machine to make it true. And the skill of prompting from 5 years ago looks very different now. It's not about hacks. It's not about jailbreaks. It's not about any of the funny clever things that people used to do. It's actually now much closer to spec writing. It's much closer to software architecture. It's much closer to English as code or language as code. And that's really what Open Pros is. It's a way of specifying in human language what you want to be true in a way that is structured, that has constraints, that has contracts, that has invariants, and that an agent or a system of agents can go and make true. The difference between an agent and a chatbot is that an agent has an agenda. It has a goal. It has something it is trying to achieve. And the difference between a brittle agent and a robust agent is whether that goal is defined imperatively or declaratively. If you tell an agent do step 1, do step 2, do step 3, do step 4, the moment step 2 fails, the whole thing falls apart. It doesn't know what to do because you've over-specified the how and under-specified the what. If you tell an agent here is the contract, here is the outcome that must be true at the end of this process, and here are the invariant properties that must hold throughout, you don't care how it gets there. A dumber model might take 50 steps. It might try 10 different tools. It might fail 5 times and retry. A smarter model might do it in one shot with a bash command. You don't have to rewrite your program when the model gets smarter. In fact, your program gets faster and cheaper automatically as the models improve because you haven't coupled your specification to the capability level of the model at the time you wrote it. That's the core philosophy. Stop telling agents how to do things. Tell them what must be true. Let them figure out how. A more intelligent model can figure out how to do the thing.</p>
+</details>
+<h3 id="openprose-架构基于-markdown-的声明式契约与执行环境" data-reading-heading="">OpenProse 架构：基于 Markdown 的声明式契约与执行环境</h3>
+<p>基于上述声明式哲学构建的 <strong>OpenProse</strong>（OpenProse: 一种使用结构化 Markdown 定义多智能体程序与契约状态的编排规范），将自然语言直接提升为可执行的工程制品。在传统的软件工程中，系统状态通过类型检查与单元测试进行约束；而在 Agent 系统中，状态约束则被升格为 <strong>运行时契约</strong>（Runtime Contract）。开发者或系统代理仅需在命令行界面（CLI）中通过简单的 <code>prose run</code> 或调用写入函数声明目标，例如指定待生成的组件功能、文档完备性标准及测试覆盖要求。</p>
+<p>在这一底层体系中，Agent 系统具备了自愈（Self-healing）能力与模型无关性。以代码工程场景为例：当一个 Agent 负责构建全栈 Web 应用时，如果它写出的前端代码存在 TypeScript 类型冲突或编译错误，系统并不会依赖人类工程师介入调试，而是依托声明式契约中的不变条件（Invariants），由代码宿主环境或 CI/CD 流水线自动反馈反压（Backpressure）。Agent 面对编译报错直接重新审视契约，在沙箱环境中自主修改并重跑，直至满足所有预设验收契约才提交 Pull Request。这彻底改变了传统工作流对步骤脚本（Playbooks）的高度依赖。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>So it's this idea of write what you want, declare what you want, the outcome, the goal, the end state. We think of that as a contract. And and write it in a way such that you can compose these because when you build a system, when when you build an open framework or open language, composability is everything. You want people to be able to take pieces that other people have built, put them together, combine them with their own pieces, and create something entirely new without having to understand all the implementation details of every single sub-component. So what does Open Prose look like in practice? It's markdown. It's literally just markdown. There's no custom binary compiler, there's no esoteric DSL that you have to learn with a massive grammar specification. If you know how to write markdown, you know how to write an Open Prose program. We use markdown because markdown is already the lingua franca of LLMs. Models are pre-trained on billions of lines of markdown. They understand headings, they understand bullet points, they understand blockquotes, they understand code blocks. They understand the hierarchical structure of a markdown document natively. When you give a model markdown, you are speaking its native language. In our CLI, the primary primitive is the prose write function or prose run. What you or your agent can declare on behalf of you with in the CLI is called the prose write function. In our system, an agent can write a prose program, execute that prose program, inspect the results of that program against the contracts defined inside it, and iterate. And you can do this from your terminal right now. We have an open-source CLI tool that Raymond and Jose have put massive amounts of engineering into. You install it, you point it at your repository, and you say prose run, give it a markdown file, and it starts orchestrating the agents necessary to fulfill that contract. When we build real software with this—and we do, we build Open Prose with Open Prose, our web application is built by agents running prose contracts—the agents that are building this get this backpressure from the app itself through pull requests, through CI failures, through test suites. If an agent writes code that fails the build, that build failure is fed back into the context window as a violation of the completion contract. The agent doesn't stop and ask you 'what should I do?' It looks at the compiler error, looks at the contract, recognizes that the current state does not satisfy the target state, and generates a new solution. The human reviewer only steps in at the very end when all automated contracts have been satisfied. Okay. So, while we transition to this, are there any questions now while we switch over to the web app? &gt;&gt; Please, no question is too silly. Is that a hand or a phone?</p>
+</details>
+<h3 id="web-端工作流与自动化生成契约驱动的人机协作界面" data-reading-heading="">Web 端工作流与自动化生成：契约驱动的人机协作界面</h3>
+<p>为了降低人类直接编写高严格度 Markdown 规约的门槛，系统在 Web 端构建了交互式运行时界面。对于普通用户而言，手动手写符合语法规范的抽象契约往往并不现实；因此，交互界面的首要功能是将用户的非结构化模糊诉求转化为标准化、可审计的 <strong>OpenProse 程序规范</strong>。用户无需关心语法细节，只需提供核心预期，系统内部的规划智能体便会自洽生成对应的目标规范与检查项。</p>
+<p>在这一架构中，Agent 扮演着高度自治的任务调度器角色。以自动化研报生成或社媒内容流水线为例，系统可以注入诸如“具有怀疑精神的技术分析师”等角色性格特征（Persona），但更关键的是它在后台生成的结构化任务流：任务的启动、阶段流转、状态保存与产出物校验全部透明可见。执行过程具备严苛的<strong>可审计性</strong>（Auditability）——每次运行均被完整记录，用户可随时回溯每一步推理所依据的契约规则，从而在享受高自主性带来的效率红利的同时，彻底规避传统“黑盒提示词”不可控的系统性风险。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<blockquote>
+<blockquote>
+<p>I can take a question while Dan plugs in. Yeah, go for it. &gt;&gt; [Audience question: How do you verify that the agent actually met the contract versus just hallucinating that it met the contract?] &gt;&gt; That is a fantastic question and it gets right to the heart of what Jose is about to show in the web interface. The short answer is: you never let the agent grade its own homework. You decouple the generator from the evaluator, and you ground the evaluator in external, deterministic tools whenever possible. If the contract says 'the API must return a 200 with this JSON schema', you don't ask the LLM 'did you make the API return a 200?' You have an evaluation harness execute a curl command or run a Jest test suite, and the output of that deterministic process is what satisfies or fails the contract. For semantic contracts—like 'the prose must be written in the tone of an academic paper'—you use an independent judge model with a dedicated rubric, or a panel of sub-agents with adversarial roles. But let's look at the web app. &gt;&gt; So someone to like learn that syntax and write it from scratch, it's kind of not really the point. And so, what we want to do is make it accessible. So, even though everything that executes this program is here, and in fact, for the real nerds in the audience, you can see that I've taken the framework and exposed the raw contracts in this view. But for most users, you start with a natural description. You tell the UI what you want to build or what workflow you want to run. Let's say we want to create a continuous intelligence monitor for open-source AI repos that flags breaking changes and drafts migration guides. In the web interface, the builder agent takes your intent and scaffolds the full Open Prose specification. It creates the DAG of tasks, it sets the acceptance criteria, and it defines the input and output schemas. Once deployed, it appears in your jobs dashboard. You can see the active runs, the completed contracts, and the audit logs. Here's an example of one running with a persona: we configured this one as a 'Grumpy AI skeptic' who reviews pull requests. And the grumpy one evaluates the diff, looks for hidden technical debt, and refuses to sign off on the contract unless strict architectural invariants are preserved. You see the job status update in real time as intermediary contracts are satisfied.</p>
+</blockquote>
+</blockquote>
+</details>
+<h3 id="破解自我确认闭环子代理架构与独立评估者设计" data-reading-heading="">破解自我确认闭环：子代理架构与独立评估者设计</h3>
+<p>在传统的单体 Agent 或长会话交互中，系统极易陷入<strong>自我确认偏误</strong>（Self-Confidence Bias: 同一个大语言模型在生成代码或文本后，倾向于高估自身产出质量并盲目忽略潜在缺陷）。当模型被要求自我复核时，它往往会沿用生成时的逻辑盲区，输出“代码完全正确”的虚假评估报告。为从系统层面上根除这一致命缺陷，声明式编排强制引入了会话隔离与子代理分权机制。</p>
+<p>通过在运行时动态分派独立的<strong>子智能体</strong>（Sub-agents: 专职于特定技能、工具集合与上下文边界的轻量化代理实例），架构在物理层面上切断了错误假定的传播链条：</p>
+<ul>
+<li><strong>生成端与评估端绝对解耦</strong>：负责实现业务逻辑的 Agent 绝不负责最终的验收裁决；</li>
+<li><strong>瞬态隔离会话</strong>：验证节点会重置上下文上下文窗口，仅装载待测产出物与预设契约；</li>
+<li><strong>确定性环境硬反馈</strong>：针对代码、接口、数据格式等刚性要求，通过真实 CLI 工具、单元测试与编译器报错提供物理反压，完全排除幻觉干扰；</li>
+<li><strong>语义裁判对抗</strong>：针对风格、基调等软性要求，调度专门的审查子代理进行对抗性评分。</li>
+</ul>
+<p>这种设计将 Agent 从自说自话的脆弱循环中解放出来，赋予系统真正的生产级确定性。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>gets the models out of this like self-confidence loop where you don't want the same model checking the thing that was done. So, you're spawning new sessions and and bouncing them off of a contract, which is just a better pattern for for how to do it. Yeah, go ahead. &gt;&gt; Yeah. &gt;&gt; But, doesn't [question from audience about latency and token cost of multi-agent evaluations]? &gt;&gt; Yes, absolutely. It does incur more tokens and higher latency. But you have to ask yourself: what is the cost of incorrect output in production? If an autonomous agent merges bad code or sends an erroneous email to 10,000 customers, the cost of that failure dwarfs the fractions of a cent spent on a secondary evaluation model. Furthermore, this is where model tiering comes into play. You can use a frontier model like Claude 3.5 Sonnet or GPT-4o to do the complex generation, and a fast, cheap model—or even a local fine-tuned SLM—to run the contract verification checks. You don't need a 70B parameter model to verify that a JSON payload contains five required keys. You write a deterministic script or use a tiny evaluator. And because the contract is declarative, you can swap out the evaluation engine without touching the generation logic. I am going to confirm that. And then once this is deployed, it'll go when I go back over to my jobs, it will look exactly like let's see. So, if we just Oops, I did switch that. Once this loads, we should see and the grumpy one is at the top or the bottom. Yeah, here we go. Grumpy AI skeptic. You see it running right now in background isolate containers. Every execution step is bounded by the contract constraints. If the agent attempts an action outside the permitted boundaries, the runtime halts it.</p>
+</details>
+<h3 id="openprose-kernel面向机器解析的轻量化-markdown-原语" data-reading-heading="">OpenProse Kernel：面向机器解析的轻量化 Markdown 原语</h3>
+<p>在技术底层，支持整套编排体系平稳运行的枢纽是 <strong>OpenProse Kernel</strong>（OpenProse 内核: 极简的系统引导规约，用于向通用基础模型注入契约解析、状态机流转与执行协议）。令人意外的是，这一内核并未采用高复杂度的二进制中间表示或晦涩的 DSL，而是一段经过精妙压缩与进化的纯 Markdown 文本。为了规避不同基础模型在理解非结构化指令时的歧义，团队通过遗传演化算法在内部基准上持续裁减核心，保留了最紧凑、最具约束力的语法骨架。</p>
+<p>许多开发者初次接触 Kernel 时会误以为它是写给人类工程师阅读的文档，但实际上它完全面向机器。它利用 Markdown 天生的树状标题与列表结构作为状态机的词法单元，向宿主 Agent 解释如何挂载工具、何时声明任务完成、以及如何处理执行失败时的上下文退避。这种极度透明的设计消除了传统编排框架对黑盒 SDK 的强依赖，任何支持基础 Bash 环境和子代理调度的框架（乃至受控虚拟机沙盒）均可实现“即插即用”，成为跨平台驱动复杂工作流的通用底层协议。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>program itself looks like. Um just go back to Chrome. And then &gt;&gt; Right there. &gt;&gt; It's uh that one. So this is the kernel. Um it's markdown. It's not intended to be read by you which is why it's formatted like this. We originally had it in a nice looking format and people complained. They're like, 'What is this?' It's meant to be read by the LLM. It's the boot kernel that we inject into the system prompt or the harness environment to teach the model how to interpret, execute, and enforce Open Prose programs. It defines the operational semantics of contracts, dependencies, and state transitions. There is an evolution that happens here. We benchmark these kernels internally across hundreds of runs, testing whether various frontier and open-weights models adhere to the constraints under adversarial inputs. We actually run an evolutionary optimization loop where we prune tokens, tighten language, and eliminate ambiguity until we reach a minimal bootloader that achieves near-100% compliance. This means you don't need megabytes of framework code or complex runtime libraries installed inside the environment. The kernel is literally a couple of hundred lines of markdown text. When an LLM ingests this kernel, it instantly acquires the runtime mental model: it understands how to read a prose spec, how to evaluate intermediary invariants, how to branch on failure conditions, and how to exit cleanly. It bridges the gap between raw natural language understanding and strict deterministic execution.</p>
+</details>
+<h3 id="组合式多智能体-dag从探索性对话迈向确定性生产工程" data-reading-heading="">组合式多智能体 DAG：从探索性对话迈向确定性生产工程</h3>
+<p>在应用场景的界定上，必须清晰区分探索性对话与工业级自动化流水线。当用户处于原型调研或思维发散阶段时，普通的单轮或多轮 Chat 界面是最高效的工具；但当业务进入<strong>高重复度、高可靠性与可审计性</strong>（Repeatable, Reliable, Auditable）的生产落地阶段时，传统的无序对话即宣告失效。正如现代声明式框架（如用于结构化微调与提示优化的 <strong>DSPy</strong>）要求工程师必须明确知晓系统输出目标一样，OpenProse 要求团队以工程契约为基石，构建系统化的工作流拓扑。</p>
+<p>通过将一系列细粒度的声明式契约链接为<strong>有向无环图</strong>（Directed Acyclic Graph, DAG），开发者可以像搭建乐高积木一样组合多智能体系统：</p>
+<ul>
+<li><strong>前置条件与中间检查点</strong>（Checkpoints）：每个子节点对应独立的验收契约，仅在前置契约被物理验证后才触发下游计算；</li>
+<li><strong>语义缓存与增量重算</strong>：借助前置状态依赖比对，当上游状态未发生实质变化时复用结果，大幅降低 Token 消耗并加速流水线；</li>
+<li><strong>全流程代码即规范</strong>（Spec-Driven Development）：无需繁复的胶水代码，仅凭百余行 Markdown 规约，便可完整调度包含“网络调研子代理”、“专业写作子代理”与“严谨校对子代理”的复杂团队，实现跨越数小时的长时间自主迭代。</li>
+</ul>
+<p>这种规范驱动的开发范式，正迅速超越传统纯软件工程的狭隘边界，在金融量化模型审查、合规审计、运维保障及产品管理等广泛的知识密集型领域展现出变革性的工业价值。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>don't even know the shape of what you're talking about, or you're not even sure like what it is that you're looking for. Um and like this go I'm like a very old-school DSPy user, and like my my joke about DSPy was like, 'Oh, no, I have to know what I want now, right?' Because like the whole idea of chat is you don't have to know what you want. You just start talking and see what happens. But that's not production engineering. In production, you must know what you need. Um &gt;&gt; And let me let me interject, which is just use cases like we tell people you don't want to use this if if you're doing a one-off, if you are like chat is perfect for that. You're if you're in exploratory mode. What this is good for is something you need to do a lot. It it needs to be reliable, it has to be repeatable, it needs to be auditable. Those types of workflows are what what we're what Open Prose is built for and meant for and so there is an implicit like you do know what you need in in here. &gt;&gt; Oh, we got a question from a real quant. &gt;&gt; And earlier I alluded to and I I wouldn't just call it inheritance, I would call it composition. So, we we in fact a core feature of of the framework and and the the pattern itself is it's built to be composed and so yes, injecting multiple contracts into the same run in in which the agent now has to satisfy many of them is is is a a core piece here. The other half the event-driven half which maybe looks a little bit you might call it inheritance. I I think of it more like um uh I don't know if you're familiar with like React React-style memoization where you have certain components. It's still composition. You have certain components that have upstream dependencies and when the data on on one of them changes, it's of course going to trickle down to everything below it. Um that is another place where Jev is super exciting and and the decision model super exciting because we had built that system and we had agents trying to determine has the state changed and if the state on upstream dependency changes, do we kick off downstream dependency? Uh but that's very expensive to run and Jev becomes suddenly this very cheap like semantic classifier or semantic memoizer, which you could think of it as like a cache and Jev is deciding when something is out of date and now it kicks off everything downstream from that. So, that's another kind of core component of of the framework. Minus the Jev part, we're still working we're still building that part in. Yes, and there is no magic here. It's all just English. It's all just language. Uh yeah, it's but yes, and that's where the composition composability comes in. &gt;&gt; The other piece to your point is like it's not just a template. So, like you could obviously even pre-LLMs, you could have um or very let's say not very early LLMs or even like encoders could like fill a template for you. Like you like prefix the template and like fill the thing. But here it's like, 'Well, what can you template?' And so, you could template the entire multi-agent workflow. So, like this the simple example that I give is you could say like the output that I need is an article. You know, and maybe there's it's got like this type of article, it's going to be this length, whatever, right? Some constraints around that. And the input is like the topic. Like until you've got a good article for me, and the parent agent decides good, it decides when to exit, so that's where you're going to get a better result with a stronger model than a weaker one. I've got a researcher sub-agent. That agent has my access CLI and my access skill on how to use a CLI cuz I don't want it, you know, using any random web search. I've got a writer sub-agent that has my special like here's the last 10 articles I wrote that are really good, and you I want you to write like this. I've got a copy editor sub-agent, and that whole thing is just maybe &gt;&gt; But the really important 100 lines of markdown, and it might take them 10 hours to do it. &gt;&gt; important parts to emphasize there is is the contract composition where so you you you go to like, I mean, these things have been around forever. Any Any Any workflow builder, drag-and-drop workflow builder. That's a different way of thinking about this because when you think about this in terms of that like DAG directed acyclic graph of contracts, you can have intermediary steps that you almost think of them as like checkpoints or like this intermediary step meets the contract, and the thing is going, and it hits this contract and fulfills this one, and then that causes the next one to keep going until it's fulfilled that contract. So, you can you can still in some ways declare the how to get there just by composing these intermediary contracts along the way and still letting the agents be a little bit flexible on on how to do achieve that intermediary step. &gt;&gt; Yeah, and and the shape of it. So, like one one example like when Claude um the dynamic workflows came out, they had this blog post that's like, here's the six types, right? And it's like one of them's like fan out, fan in, and like a map reduce with sub agents. One of them's like a adversarial review, one's like a loop until X condition is met, right? And all of those things you can express in a prose program and then run them on on any agent. So, you can like you can template the shape of the the multi-agent workflow um with no code. Um and again, the whole it's only possible because the the agents are like good at managing themselves and because most harnesses have sub agents. So, like if you're running plain vanilla pie, which has no sub agents at least last time I checked, you're going to want sub agents for it to do that more complex kind of workflow. But, like essentially any harness that has one of the requirements, &gt;&gt; Sub agents. &gt;&gt; sub agents is pretty much the only one for most &gt;&gt; context. &gt;&gt; Yeah, like um like bash and sub agents are actually you don't even need bash. We can run these in VM isolates in code mode, too. So, &gt;&gt; Any other questions? We can give 10 minutes back to everyone. Uh it is based on my many years of engineering experience and dealing with people who sometimes are not very good at expressing requirements and other people who are very good at expressing requirements. And it's also, I mean, we we benchmark these internally and and run them against we we have sort of an evolutionary algorithm where we can shrink the kernel by seeing if if they can conform to that. So, it's based on practice and empirical results. Uh &gt;&gt; Yeah, you can just have that as a spec and you could have like let's say you like um uh Matt Pocock's like uh spec, you know, you like Matt I built a funny one just to like troll him that was like auto Pocock and it basically it was my way of proving that my way of wiring skills in works. So, you basically just he has a workflow that's like grill me, you know, and then you ask all these questions and then it's like TDD and then all these other ones and you can put the whole thing in one prose program and just be like do Matt Pocock's workflow and every sub-agent has to load at every stage of the program you have to load this the next skill in the sequence. Um so yeah, you can absolutely like &gt;&gt; do have people I I wasn't calling it spectrum driven development, but like almost by its very nature it is spectrum driven development. I'd love you to try this out. Try it or come find me after and like whatever spectrum driven development specification you have, we could compose with the boot kernel prose run and then we'll see how it does. I I think it would do quite well actually. That's a good good inspiration. I haven't tried it with the spectrum driven development contracts. Like I'd love to sit down and and and try it and see if it overrides it or if it starts colliding. &gt;&gt; That'd be interesting like um &gt;&gt; Here's Here's one &gt;&gt; See how much different skills like throw it off. &gt;&gt; Here's one thing we do have and software engineers using Open Prose to develop software. Uh more of our users are using Open Prose to do ops and product management and um quant model documentation and non I don't know software engineering stuff. Uh I think it's just the blend of like markdown documentation actually is more interesting to non-engineers um as a result. Yeah. Any other questions? Thank you all. Appreciate your time. &gt;&gt; [applause]</p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/81394ecf606973283fef3cfdc8df1769cf168b0050d1eff48cfb5df3347048d4.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/81394ecf606973283fef3cfdc8df1769cf168b0050d1eff48cfb5df3347048d4.md" download="Stop Telling Agents How：从提示词到声明式契约驱动的 Multi-Agent 系统.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=EleutherAI" class="entity-link company-link">EleutherAI</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=OpenProse" class="entity-link product-link">OpenProse</a>, <a href="/search/?q=DSPy" class="entity-link product-link">DSPy</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>
