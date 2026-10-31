@@ -1,0 +1,886 @@
+---
+author: TED
+date: '2026-10-25'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=46v8M4RsCzg
+speaker: TED
+tags:
+  - urban-planning
+  - walkability
+  - placemaking
+  - community-development
+title: 我们为何应当借鉴迪士尼来设计城市
+summary: 演讲者探讨了为何应将迪士尼主题乐园的设计理念引入城市规划。通过解析密度、多样性、可步行性、主题化与“魔力”五个核心维度，演讲阐述了以人为本的空间设计如何改善公众健康与社区连接，并带来更高的经济与社会效益。
+insight: ''
+draft: true
+series: ''
+category: politics-society
+area: society-thinking
+project: []
+people:
+  - Walt Disney
+companies_orgs: []
+products_models: []
+media_books: []
+status: evergreen
+---
+### 迪士尼乐园带来的设计启示
+
+在疫情期间，我迷上了观看关于迪士尼主题乐园的视频。比如它们是如何建造的、背后的历史、未来的新规划等等。居家办公时，我甚至会在副显示器上播放那些长达数小时的4K乐园漫步视频，让它们作为背景音循环播放，就像一扇通往另一个世界的窗户。
+
+<details>
+<summary>Original English</summary>
+During the pandemic,
+I got really into watching videos
+about Disney theme parks.
+How they're built, their history,
+upcoming developments,
+stuff like that.
+As I worked from home,
+I would even put on these long, 4K
+video walkthroughs of the parks
+up on a second monitor
+and just let them play in the background
+like a window into another world.
+</details>
+
+但吸引我来到这些地方的不仅仅是逃避现实。作为一名艺术家，我认为这些乐园是极为独特的范例，生动展示了当艺术、人类体验和情感在场所设计中被置于最高优先级时会产生怎样的效果。在现实世界中，这些要素通常是预算削减时最先被砍掉的部分；但在迪士尼主题乐园，它们却是必不可少的核心。
+
+<details>
+<summary>Original English</summary>
+But it wasn't just the escapism
+that drew me to these places.
+As an artist, I saw the parks as unique
+studies of what happens when art,
+human experience and emotion
+were the highest priority
+when it came to designing a place.
+In the real world,
+those are usually the first things
+cut from any budget.
+But at Disney theme parks,
+they were essential.
+</details>
+
+正因如此，游客才能够沉浸在奇幻的世界中，跳脱出日常的琐碎常规。他们可以在与亲朋好友创造终身难忘回忆的同时，拥抱惊奇与快乐。对许多人来说，迪士尼主题乐园确实称得上是“地球上最快乐的地方”。
+
+<details>
+<summary>Original English</summary>
+And because of this,
+guests are able to immerse themselves
+in fantastical worlds
+and transcend their daily routines.
+They can embrace feelings
+of wonder and joy
+while creating lifelong memories
+with their family and friends.
+And to many, Disney theme parks
+truly are the happiest place on Earth.
+</details>
+
+### 空间设计与美国城市的演变
+
+要知道，没有什么比空间更能深刻地影响我们的生活了。周围的环境会影响我们的人际关系、情绪、生活习惯，甚至是寿命的长短。因此，如果我们能怀着关怀、明确的目的并以人的体验为中心来设计场所，就能滋养身心健康，激发创造力与创新，并建立更强大、更有韧性的社区。
+
+<details>
+<summary>Original English</summary>
+See, nothing influences
+our lives more than place.
+Our surroundings affect our relationships,
+emotions, habits,
+even how long we'll live.
+So if we design places with care, purpose
+[and] the human experience in mind,
+we can nurture well-being,
+foster creativity and innovation,
+[and] build stronger,
+more resilient communities.
+</details>
+
+尽管在这个国家的各处依然存在着一些极具魅力的优秀场所，但美国的大多数地方看起来都是这样的，或者是这样的，又或者是这样的。这些地方不仅在审美上令人沮丧，更在持续消耗我们的身体、心理以及经济健康。
+
+<details>
+<summary>Original English</summary>
+And while pockets of great
+places exist all over this country,
+most of America looks like this
+or this,
+or this.
+And these places
+aren't just aesthetically bad.
+They’re a drain on our physical,
+mental and economic health.
+</details>
+
+但我们的城市环境过去并非总是如此。20世纪之交的美国城市，是专门为了让人们穿行、体验和理解而设计的。工作场所、食物、学校以及任何你可能需要的东西，都只需短暂步行或乘坐电车即可到达。建筑规划与街道规模更小，人们居住的距离也不像现在这样分散。这意味着你更有可能认识自己的邻居，更积极地参与到社区生活之中。
+
+<details>
+<summary>Original English</summary>
+But our places weren't always like this.
+American cities at the turn
+of the 20th century
+were designed for people to traverse,
+experience and understand.
+Work, food, school,
+whatever you might need
+was only a short walk
+or trolley ride away.
+Developments and streets were smaller
+and folks weren't
+as spread out as they are now.
+And that meant you were more likely
+to know your neighbors
+and be more engaged with what
+was going on in your community.
+</details>
+
+市中心的街道由行人、马车、骑车人和商贩共同分享。随着城市规模的扩大和多元化发展，它们演化出了自身独特的身份与文化，成为每一位以之为家的人的骄傲之源。这并不是什么新鲜事，数千年来跨越各大洲，我们一直都是这样建造城市的。
+
+<details>
+<summary>Original English</summary>
+Downtown streets were shared by people,
+carriages, cyclists and vendors.
+And as they grew larger, more diverse,
+cities would develop their own
+unique identities and cultures
+that became sources of pride
+for anyone that called [them] home.
+And this wasn't like a new thing.
+For thousands of years across continents,
+this is how we built cities.
+</details>
+
+但在20世纪初，我们建造场所的方式，以及建造这些场所所服务的对象与目的，因为一项发明而发生了剧烈改变。从1900年到1915年，美国的汽车保有量从8000辆激增至超过200万辆。起初汽车还是与人共享道路，但没过多久，它们危险的高速行驶和排出的废气就将商贩、骑行者和行人逼退到了人行道上。街道从此完全归汽车所有。
+
+<details>
+<summary>Original English</summary>
+But at the start of the 20th century,
+the way we built our places
+and who or what they were built for
+would change dramatically
+due to one invention.
+From 1900 to 1915,
+the number of automobiles
+in America went from 8,000
+to over two million.
+And while at first cars shared the road,
+it wasn't long before their dangerous
+high speeds and exhaust fumes
+drove vendors, cyclists and people
+back onto the sidewalks.
+The streets now belonged
+solely to the car.
+</details>
+
+但这仅仅是汽车对美国地理风貌带来的第一重改变。就像迪士尼的动画电影《赛车总动员》一样，第二部甚至更糟。
+
+（笑声）
+
+<details>
+<summary>Original English</summary>
+But this would only be the first change
+to the American landscape
+it would be responsible for.
+And just like Disney's "Cars,"
+the second one was even worse.
+(Laughter)
+</details>
+
+二战后美国的经济繁荣引发了一系列灾难性的城市规划实验，其影响至今仍在持续：人们从市中心大规模迁往城市边缘的郊区；限制性的土地用途分区法规将建筑功能生硬割裂，并依据种族或经济阶层实行人群隔离；政府资助的破坏性项目，如高速公路扩建和所谓的“城市更新”，拆毁了历史建筑，抹去了整片整片的城市街区——而这一切通常只是为了给汽车留出更多停车位。
+
+<details>
+<summary>Original English</summary>
+The economic boom in America
+after World War II
+led to a series of disastrous
+experiments in urban planning
+that continue to affect us today:
+the mass exodus of people
+from city centers to the suburbs
+on the edge of town,
+restrictive zoning laws
+that separated building uses,
+segregated people
+based on race or economic level
+and destructive government-funded projects
+like highway expansions and urban renewal
+that demolished historic buildings,
+erased entire city blocks --
+usually just for more places
+to park their cars.
+</details>
+
+结果，我们不再是为“人”设计空间，而是变成了为“车辆”设计空间。这种趋势一直延续到今天，且规模比以往更加庞大。虽然在过去的30年里，我们见证了许多市中心和历史街区的复兴，但我们必须做得更好。零星散布的几个好地方是远远不够的，我认为我们的社区值得拥有更多。
+
+<details>
+<summary>Original English</summary>
+So instead of designing places for people,
+we were now designing them for vehicles.
+And that trend continues to this day,
+on an even larger scale than before.
+And while over the past 30 years,
+we’ve seen the rebirth of many downtowns
+and historic neighborhoods,
+we need to do better.
+Small pockets of great
+places aren't enough.
+And I think our communities deserve more.
+</details>
+
+因此，当我穿着运动裤坐在电脑前，满怀向往地看着屏幕，渴望身处那些美好场所时，我不禁开始思考：为什么我们的城市不能更像这样呢？为什么这样的地方只有在度假时才能体验到？如果我们让普通的商业主街更像迪士尼乐园里的“美国小镇大街”会怎样？
+
+<details>
+<summary>Original English</summary>
+So as I sat in my sweatpants,
+watching my computer monitor longingly,
+wanting to be in these places,
+I started to wonder,
+why can't our cities be more like this?
+Why do these places
+only exist on vacation?
+What if we made our main streets
+more like Main Street, USA?
+</details>
+
+所以我想与大家分享一些借鉴自迪士尼主题乐园的理念、技巧与经验，任何规模的社区都可以运用它们来建设更好的场所。我将这些理念分为了五个不同的类别：**密度**、**多样性**、**可步行性**、**主题化**，当然，还有**魔力**。
+
+<details>
+<summary>Original English</summary>
+So I want to share with you some ideas,
+techniques and lessons
+from Disney theme parks
+that communities of any size
+can use to build better places.
+And so I've broken these ideas up
+into five different categories:
+density, variety, walkability,
+theming and, of course, magic.
+</details>
+
+### 要素一：密度
+
+首先从密度谈起。每个迪士尼主题乐园都挤满了可看可玩的项目。你造访的每一个主题园区都融合了游乐设施、景点、美食——彼此之间仅相距几码远。这不仅让人更容易沉浸在园区的主题氛围中，也有助于营造出更加生动、引人入胜的环境。更高密度的场所为人们的互动和社交提供了更多机会。
+
+<details>
+<summary>Original English</summary>
+But let's start with density.
+Every Disney theme park is jam-packed
+with things to do and see.
+Each land you visit is filled
+with a mix of rides, attractions, food --
+all within a few yards of each other.
+And this makes it easier
+to immerse yourself in the land's theming
+and helps create a more lively,
+engaging environment.
+Higher-density places offer
+greater opportunities for interaction
+and socialization.
+</details>
+
+但密度并不仅仅关乎建立社区联系或结交朋友，完全不只如此。密度更高的地方还能为我们带来更多的收益。由于人流量增加，现有的商业实体不仅能从高密度开发中获益，而且由于土地利用效率更高，城市也能从高密度开发中获得显著更高的投资回报率。
+
+<details>
+<summary>Original English</summary>
+But density isn't just
+about building community
+or making friends [or] any of that.
+No, no, no.
+Denser places also make us more money.
+Not only do existing businesses
+benefit from denser development
+due to higher foot traffic,
+but because of their
+more efficient land use,
+cities see significantly higher return
+on investment from denser development too.
+</details>
+
+来看这个本地的例子。当我们对比 Zandbroz（当地独立书店/商店）和沃尔玛时，第一眼看去，沃尔玛似乎是一笔价值更高的商业开发。但就像我们通过每加仑行驶里程来衡量汽车的价值一样，我们需要审视的是该地块每英亩的产出价值。
+
+<details>
+<summary>Original English</summary>
+Take this local example.
+When we look at Zandbroz and Walmart,
+at first, Walmart seems
+like the more valuable development.
+But just like when we look at a car's
+miles-per-gallon to determine its value,
+we need to look at this
+parcel's value per acre.
+</details>
+
+当我们用这些数据除以服务整个物业所需的街道和市政管网配套成本时，就会发现 Zandbroz 的实际价值是沃尔玛的五倍。如果你绘制出一整座城市的每英亩价值分布图，就会呈现出这样的景象。所有标为绿色的区域，要么城市只能从中赚取极微薄的收入，甚至还在持续亏钱。如你所见，市中心和那些高密度的开发区域，实际上在补贴着城市的其余部分。
+
+<details>
+<summary>Original English</summary>
+So when we divide these numbers
+by the amount of streets and utilities
+it takes to serve the entire property,
+we can see that Zandbroz is actually
+five times more valuable than Walmart.
+And this is what it looks like if you map
+the entire value-per-acre for a city.
+And everything in green,
+the city is either making limited money on
+or even losing money on.
+And as you can see, downtown
+and denser developments
+are actually subsidizing
+the rest of the city.
+</details>
+
+既然我们明确了为什么密度如此重要，那么我们在社区中又该从何处入手、如何推行呢？我们不可能将这些理念均匀地铺开到整座城市，因此，重点聚焦于那些已经运转良好、人们已经在此聚集的区域至关重要。而通常来说，这个区域就是市中心的某处。
+
+<details>
+<summary>Original English</summary>
+So now that we know why density matters,
+where and how do we start applying it
+in our communities?
+It's impossible to spread these ideas
+out evenly across an entire city.
+So it's important to focus on places
+where things are already working,
+where people are already gathering.
+And usually that place
+is somewhere downtown.
+</details>
+
+我们首先需要从填补缝隙开始。闲置的空地、关门的商铺、停车场，它们散布在整个市中心，虽然表面上看起来无伤大雅，但缺乏生机的状态会打消人们继续步行探索的念头。用多功能综合体建筑来填补这些空缺是最理想的首选方案。
+
+<details>
+<summary>Original English</summary>
+So first we need to start
+by filling in the gaps.
+Vacant lots, empty
+storefronts, parking lots.
+They're sprinkled throughout downtowns,
+and while they may seem innocuous enough,
+their lack of life can repel people
+from exploring further on foot.
+And filling in these gaps with mixed-use
+buildings is the ideal first choice.
+</details>
+
+但新建和翻新可能十分昂贵，我知道对于某些社区来说并不总有这样的条件。所以，如果预算是个问题，还有很多花费极少却能产生巨大效果的替代方案。袖珍公园、社区花园、室外露天舞台、餐车，再配合定期的活动安排，都是将空置空间转变为充满生机场所的绝佳方式。
+
+<details>
+<summary>Original English</summary>
+But new construction
+and renovations can be expensive,
+and I know that's not always an option
+for some communities.
+So if money is a concern,
+there are plenty of other options
+that require smaller budgets
+that can make a big impact.
+Parklets, community gardens,
+outdoor stages, food trucks,
+along with regular programming,
+are great ways to take empty spaces
+and turn them into ones filled with life.
+</details>
+
+### 要素二：多样性
+
+常言道“多样性是生活的调味剂”，如果这是真的，那么像这样的地方大概就只配叫作白面粉了。
+
+（笑声）
+
+多样性为建成环境增添了美感、生机与趣味。迪士尼乐园的“美国小镇大街”就是体现多样性的绝佳范例。数十栋风格各异、色彩缤纷的建筑，容纳着不同类型的商业形态，分布在繁华的街道两旁。如果运用得当，多样性能营造出兴奋感，激发人们进一步探索的欲望；如果运用得极其出色，它能让人忍不住想要走到下一个拐角一探究竟。
+
+<details>
+<summary>Original English</summary>
+They say variety is the spice of life,
+and if that's true,
+then places like this would be flour.
+(Laughter)
+Variety adds beauty, vibrancy and interest
+to the built environment.
+Main Street, USA is the perfect
+example of variety.
+Dozens of uniquely styled,
+colorful buildings
+filled with different kinds of businesses
+line the busy streets.
+And when used well,
+variety builds excitement
+and makes people want to explore further.
+And when used really well,
+variety builds excitement,
+makes people want
+to turn that next corner.
+</details>
+
+那么我们该如何为我们的空间增添更多多样性呢？首先，混合用途空间是实现全天候激活街区并保持日间持续活力的最佳途径之一。
+
+<details>
+<summary>Original English</summary>
+So here's how we can add a little
+bit more variety to our places.
+First, mixed-use space
+is one of the best ways
+to activate your neighborhood 24/7
+and keep [it] activated
+throughout the day.
+</details>
+
+其次，这是以前市中心地块的格局样貌，而这是它们现在的样子。过去是由多位建筑师随着时间的推移分别设计这些建筑，现在则是由单个开发商一次性建起整个街区。这不仅将小规模开发商挤出了市场，往往还会让市中心感觉更像是一个办公园区，而不是我们熟知并喜爱的那些迷人小街。
+
+<details>
+<summary>Original English</summary>
+Next, this is what downtown
+parcels used to look like.
+And this is what they look like now.
+Instead of multiple architects
+designing these places over time,
+we now have a single developer
+building entire blocks at a time.
+Not only does this price out
+smaller developers,
+it also tends to make downtown
+feel more like an office park
+rather than the charming main streets
+we all know and love.
+</details>
+
+最后，采用多样化的色彩和风格对于打造吸引人的场所至关重要。当街道两侧排列着像这样千篇一律的单调形制时，人们往往会避而远之，或者只躲在室内。通过对立面外观进行差异化处理，你可以创造出有趣得多的场所。事实上，美国小镇大街在本质上其实更接近条带状商业街（strip mall），而非传统的市中心街道，但从外表上你绝看不出这一点。
+
+<details>
+<summary>Original English</summary>
+Finally, using a variety
+of colors and styles
+is essential to creating engaging places.
+When streets are lined
+with identical forms like this,
+people tend to either
+stay away or stay inside.
+By differentiating
+the look of your facades,
+you can create places
+that are much more interesting.
+In fact, Main Street, USA is actually
+closer to a strip mall
+than it is to a traditional
+downtown street,
+but you'd never know it from the outside.
+</details>
+
+### 要素三：可步行性
+
+迪士尼主题乐园充满了世界上最适合步行探索的人行空间。你可以尽情享受所有这些不同的场所和景点，而完全不必操心把车塞满、在拥堵的车流中穿行、寻找停车位，或者想去别的地方时又得把这一套麻烦重新来过。除了偶尔注意避让巡游花车之外，孩子们能够在这片环境中自由且安全地探索。
+
+<details>
+<summary>Original English</summary>
+So Disney theme parks are full
+of some of the most walkable
+pedestrian places on Earth.
+You're able to enjoy all these
+different places and attractions
+without having to worry
+about loading up your car,
+driving through traffic,
+finding a place to park,
+and then doing it all over again
+when you want to go somewhere else.
+And beyond looking out
+for the occasional parade float,
+children are able to explore
+the environment freely and safely.
+</details>
+
+这引出了我们为什么必须专注于让街道变得更适合步行的关键原因。这张图表展示了行人在被汽车撞击时的生存概率。随着车速提升，死亡概率呈指数级攀升。如果你所爱的人被一辆以每小时40英里速度行驶的汽车撞击，他们的生还几率只有15%。
+
+<details>
+<summary>Original English</summary>
+Which leads me [to] why it’s so important
+that we focus on making
+our streets more walkable.
+This graph shows
+the likelihood of survival
+when a pedestrian is hit by a car.
+As the vehicle speed increases,
+the odds of dying grow exponentially.
+If someone you love is hit
+by a car going 40 miles an hour,
+they only have a 15 percent
+chance of surviving.
+</details>
+
+通过采取“道路瘦身”（road diets）改变街道的几何形态，我们可以打造出自然引导安全驾驶的场所。我们可以从以下几个方面入手：
+
+车道越宽，车速越快。城市范围内的车道宽度不应超过10英尺；而在苏福尔斯（Sioux Falls），车道宽度通常在11英尺。超过这个宽度的任何设计都会助长超速驾驶。
+
+事实证明，将像这样的四车道道路改建为这样的三车道道路，不仅能够改善交通流量，还能减少发生事故的几率。实际上有一项研究表明，实施这种“四改三”工程后，事故率降低了47%。
+
+<details>
+<summary>Original English</summary>
+By changing the geometry
+of the streets through road diets,
+we can create places that naturally
+encourage safer driving.
+Here's where we can start.
+The wider the traffic lane,
+the faster the car.
+Traffic lanes inside city limits
+shouldn’t be wider than 10 feet.
+They're usually 11 in Sioux Falls.
+Anything more than that
+encourages speeding.
+Converting four-lane roads like this one
+into three-lane roads like this
+has been shown to actually
+improve traffic flow
+and reduce the potential for accidents.
+In fact, one study showed
+that when they did this
+four-to-three conversion,
+accidents dropped by 47 percent.
+</details>
+
+施划路边停车位标线可以在视觉上收窄街道，有助于让超速车辆慢下来。几年前，我与苏福尔斯市政府合作，在明尼苏达大道（Minnesota Avenue）与阿维拉医院（Avera Hospital）之间的第18街增设了停车道划线。车辆的平均车速从每小时33英里降到了28英里。这听起来可能不算显著的变化，但联系刚刚的那张图表就会发现，哪怕是极微小的降速，也可能关乎生与死的界限。
+
+<details>
+<summary>Original English</summary>
+Painting your parking lane lines
+can visually shrink the streets
+and help slow speeding traffic.
+A few years ago, I worked
+with the city of Sioux Falls
+to add parking lane lines on 18th Street
+between Minnesota Avenue
+and Avera Hospital.
+And the average speed dropped
+from 33 miles per hour to 28.
+And that might not seem like a lot,
+but when you think about that chart,
+remember that every little bit
+could mean the difference
+between life and death.
+</details>
+
+在主要十字路口增设路沿外挑（bump-outs）并绘制人行横道，可以缩短拐角之间的过街距离，并为行人提供更高的可见度。我还想指出的一点是，更窄的道路意味着冬天需要清理的积雪更少，每年春天需要填补的坑洼也更少——这是一个很值得思考的角度。道路缩窄后，我们就有空间增加更多实用的设施，比如行道树、植被绿化、自行车道，甚至是斜向停车位。
+
+<details>
+<summary>Original English</summary>
+Adding bump-outs and painting crosswalks
+at major intersections
+can shorten crossing distance
+between corners
+and give pedestrians greater visibility.
+I’d also like to point out,
+smaller roads mean less snow to plow
+and fewer potholes to fill each spring.
+Something to think about.
+Now that the roads are smaller,
+we have room to add more
+useful things like street trees,
+plants, bike lanes
+and even angled parking.
+</details>
+
+### 要素四：主题化
+
+现在我们进入了有趣的部分。主题化是一门打造连贯、沉浸式环境的艺术，它能极大地提升游客的体验。主题化对于讲述园区故事、营造环境氛围以及建立独特的场所感起着决定性作用。但我们如何为一座城市做主题化呢？
+
+<details>
+<summary>Original English</summary>
+And now we're getting to the fun stuff.
+Theming is the art of creating a cohesive
+and immersive environment
+that enhances the guest experience.
+Theming is crucial to telling
+a land’s story, setting the mood
+and creating a unique sense of place.
+But how do we theme a city?
+</details>
+
+迪士尼乐园里的每一个园区、每一项游乐设施和每家餐厅都拥有详细的背景故事和设想的历史，并通过空间布局、建筑风格、餐饮特色以及数十个你可能甚至从未注意到的细节传递出来。它们汇聚在一起，共同构成了具有鲜明个性的空间。
+
+保护那些让你的社区成为今天这般模样的历史、建筑与文化，是打造独特场所的核心环节。
+
+<details>
+<summary>Original English</summary>
+Every land, ride and restaurant
+in a Disney theme park
+has a detailed backstory,
+imagined history,
+and it's communicated through its layout,
+its architecture, its food,
+and a dozen other details
+you'll probably never even notice.
+But they all come together
+to form places with distinct identities.
+Preserving the history,
+buildings and culture
+that made your community
+the place it is today
+is an essential part
+of creating unique spaces.
+</details>
+
+我们做到这一点的途径之一是保护现有的场所：周围的房屋、建筑、桥梁、谷仓，甚至树木，共同构成了我们人生故事展开的舞台。随着岁月的流逝，我们与这些事物建立了情感纽带。因此，当它们被拆除时，我们实际上也在斩断人们与自身社区以及过去历史的联系。因此，在开始制造新的空间缝隙之前，请优先填补现有的缝隙。
+
+<details>
+<summary>Original English</summary>
+One way we can do that
+is by preserving our existing places,
+the houses, buildings, bridges, barns,
+even the trees around us create
+the settings for our life stories.
+And as the years go on, we form
+emotional connections with these things.
+So when they're torn down,
+we're also severing people's
+connection to their community
+and to their own past.
+So prioritize filling in
+your existing gaps
+before you start making new ones.
+</details>
+
+迪士尼乐园布满了标志性的建筑与构造，它们充当着园区的象征。凭借巨大的体量和醒目的设计，它们宛如灯塔一般，吸引着游客不断向前探索。华特·迪士尼看到他的小狗总是在他吃热狗时跟着他穿梭于各个房间，受此启发，他把这类视觉焦点建筑称为“维也纳香肠”（weenies，引人注目的视觉地标）。
+
+在苏福尔斯，我们绝不缺少标志性的地标建筑，比如老法院博物馆、大教堂以及“梦想之弧”（The Arc of Dreams）。我们这里甚至还有一座闻名国际的地标——大卫雕像。
+
+（笑声）
+
+<details>
+<summary>Original English</summary>
+Disney parks are full of iconic
+buildings [and] structures,
+and they act as symbols for the parks.
+Due to their size
+and eye-catching designs,
+they act as beacons,
+urging guests forward.
+Inspired by the way his dog
+would follow him from room to room
+whenever he was snacking on a hot dog,
+Walt Disney would refer
+to these buildings as “weenies.”
+And Sioux Falls has no shortage
+of iconic weenies,
+like the old Courthouse Museum,
+the Cathedral, The Arc of Dreams.
+We're also home
+to an internationally famous weenie,
+the Statue of David.
+(Laughter)
+</details>
+
+在乡村城镇，水塔、教堂、筒仓都可以起到同样的作用。比如在南达科他州的福克顿（Faulkton），这幅令人赞叹的壁画从数英里外就能看到，令所有建有筒仓的城镇艳羡不已。
+
+<details>
+<summary>Original English</summary>
+In rural towns, water towers,
+churches, silos,
+they can all act in that same purpose,
+like in Faulkton, South Dakota,
+where this amazing mural
+can be seen from miles away.
+And it's the envy of any town
+with a grain elevator.
+</details>
+
+说到壁画，它们是传递场所特色的绝佳方式。我在南达科他州的多座城市绘制过大量壁画，其中我最喜欢创作的类型之一是明信片式壁画。在创作中，我可以与社区合作，展现那些造就其独特性的历史、地点与人物，比如克利尔莱克（Clear Lake）的牛仔竞技，或者森特维尔（Centerville）的斑马甜甜圈。
+
+城市旗帜能够代表一个地方的历史、文化和抱负，一面设计精良的旗帜可以在当地居民心中唤起自豪感与归属感。而在接纳并热爱自己市旗方面，极少有城市能比得上苏福尔斯。
+
+<details>
+<summary>Original English</summary>
+Speaking of murals, they’re a great way
+to communicate a place’s identity.
+I paint a lot of murals
+in cities across South Dakota,
+and some of my favorite to do
+are these postcard ones
+where I get to work with communities
+to showcase the history, places
+and people that make them unique,
+like the Rodeo in Clear Lake
+or Centerville’s zebra doughnuts.
+City flags can represent a place’s
+history, culture and aspirations,
+and a well-designed flag can evoke
+a sense of pride and belonging
+in the people that live there.
+And there are few cities
+that have embraced their flag more
+than the city of Sioux Falls.
+</details>
+
+城市里充斥着难看的事物。当路灯、扬声器或外部建筑破坏了园区主题的真实感时，迪士尼会使用一种名为“隐形绿”（Go Away Green）的特殊颜色，让该物体融入背景中，在视觉上遁于无形。你可以运用色彩来隐藏事物，或者将它们化为主题的一部分。
+
+你也可以通过将它们变为艺术品来吸引积极的关注。这些是我为所在街区设计的路灯杆包装膜：从远处看，它们仿若苏族石英岩石材，但走近细看，上面布满了孩子们的艺术画作、老房屋的历史旧照以及当地居民的生活肖像。
+
+<details>
+<summary>Original English</summary>
+Cities are filled with ugly stuff.
+When things like lights, speakers,
+or outside buildings break
+the reality of [a] land’s theming,
+Disney uses a color called "Go Away Green"
+to make that item fade
+into the background and disappear.
+And you can use colors to hide things
+or make them part of the theme.
+You can also draw more attention
+to them by making them into artwork.
+These are some light pole wraps
+I designed for my neighborhood
+that are meant to look
+like Sioux Quartzite stone from afar,
+but up close are filled with pictures
+of children's artwork,
+historic photos of homes,
+and pictures of the people
+who live in the neighborhood.
+</details>
+
+### 要素五：魔力
+
+今晚我想探讨的最后一个类别是“魔力”，而这个概念可能稍显抽象、难以定义。迪士尼的魔力是由独特的视觉、声音和气味的结合所创造的，源于对细节的极致关注，以及乐园每个角落所弥漫的充沛活力。魔力正是吸引人们一次又一次重返乐园并深深爱上一个地方的核心所在。
+
+我们可以通过或大或小的方式，让魔力在我们的城市空间中发生。
+
+<details>
+<summary>Original English</summary>
+The last category I want to talk
+about tonight is magic,
+and this one can be
+a little harder to define.
+Disney Magic is created by the combination
+of unique sights, sounds and smells,
+by attention to detail,
+and the energetic atmosphere
+found in every corner of the parks.
+Magic is the thing that keeps people
+coming back for more,
+and makes them fall in love with a place.
+And we can make magic happen
+in our places in big and small ways.
+</details>
+
+公共艺术很棒，但公共艺术绝不仅仅局限于壁画和雕塑。既然你可以把沙滩上的垃圾“喂”给一条名叫“虾虎鱼高比”（Goby）的造型装置，为什么还要摆放一个普通平庸的垃圾桶呢？或者，当你铺设新的人行道时，为什么不镌刻上一些本地诗人的诗句呢？以独特或意想不到的方式融入艺术，能够让平凡的城市变得非凡。
+
+<details>
+<summary>Original English</summary>
+Public art is great,
+but public art isn't just
+murals and statues.
+So why have a normal
+garbage can on the beach
+when you could feed it
+to a fish named Goby?
+Or if you’re pouring a new sidewalk,
+why not add some local poetry?
+Integrating art in a unique
+or unexpected way
+can turn ordinary cities
+into extraordinary ones.
+</details>
+
+“街头氛围”（Streetmosphere）是迪士尼用来形容乐园中各类街头表演者和街头景观的术语。伟大的场所必然拥有充满活力的街道。你可以通过增设户外座椅或露天平台、邀请街头音乐家演奏来让街道更加活跃；也可以为了街区派对、游行或农贸市场等特别活动而封闭街道。
+
+<details>
+<summary>Original English</summary>
+"Streetmosphere" is the term Disney
+uses for the various performers
+and sights you might see at the parks.
+And great places have energetic streets.
+And you can make your streets more active
+by adding outdoor seating or patios,
+hiring street musicians,
+or you can close down streets
+for special events like block parties
+or parades or farmers markets.
+</details>
+
+拥有让几代人熟知并喜爱的标志性装扮角色的地方，并非只有迪士尼。你所在城市的运动队、高中的吉祥物，以及深受喜爱的电视名人，都可以在塑造城市认同感中发挥作用。就像旗帜一样，它们同样能够成为社区自豪感的象征。
+
+在节日和庆典期间，迪士尼在装饰布置、当季角色和限时美食上倾尽全力。在你的社区里，像悬挂彩灯或者在盛大的返校节比赛前举办车尾聚会这样小小的投入，都是向访客以及生活在当地的居民传递信号的方式——表明他们的小镇生机勃勃、饱受热爱。而这正是苏福尔斯做得非常出色的一点：每逢节日，我们绝不含糊。
+
+（笑声）
+
+<details>
+<summary>Original English</summary>
+Disney is not the only home --
+the only place that's home
+to iconic costumed characters
+that generations of people know and love.
+Mascots from your city
+sports teams, and high schools,
+as well as beloved TV personalities,
+can all play a part in developing
+a city's identity.
+And just like flags, they can become
+symbols of pride for communities too.
+Disney goes all out during holidays
+and celebrations with decorations,
+seasonal characters,
+limited-time-only food.
+In your community,
+little efforts like hanging some lights
+or tailgating before the big
+homecoming game
+are ways to communicate to visitors
+and to the people that live there
+that their town is alive and loved.
+And this is another place where
+I get to say Sioux Falls gets it right.
+When it comes to the holidays,
+we don't mess around.
+(Laughter)
+</details>
+
+在迪士尼乐园开放的数年之前，每逢周六，华特都会带着女儿们在城里四处游玩，共度温馨时光。他们会去游乐园、操场、旋转木马，小姑娘们都非常喜欢。但华特往往只能和其他成年人一样，孤零零地坐在公园的长凳上，看着孩子们玩耍。
+
+他暗自思忖：应该建立一个让父母和孩子能够一起享受乐趣的地方。
+
+最终，这个想法演变成为了迪士尼乐园——一个所有年龄段的人都能聚在一起、留下永恒回忆的场所；一个让想象变为现实、让梦想成真的地方。
+
+<details>
+<summary>Original English</summary>
+Years before Disneyland opened,
+every Saturday, Walt would take
+his daughters around town
+for some quality time together.
+They’d visit amusement parks, playgrounds,
+carousels, which the girls loved.
+But Walt would inevitably find
+himself alone on a park bench
+with all the other adults
+watching their kids play.
+And he thought to himself,
+there should be something built
+where parents and children
+could have fun together.
+And eventually, that idea
+evolved into Disneyland,
+a place where people of all ages could
+come together, create lasting memories,
+where imagination could become reality,
+where dreams could come true.
+</details>
+
+但我希望向大家提出一个挑战：拥有比华特·迪士尼更宏大的梦想。这些理念不必仅留在度假胜地。如果我们怀揣关怀、明确的目的并以人为本地设计场所，任何社区都可以成为地球上最快乐的地方。
+
+谢谢你们，苏福尔斯！
+
+（掌声）
+
+<details>
+<summary>Original English</summary>
+But I want to challenge you
+to dream bigger than Walt Disney.
+These ideas don't have
+to stay on vacation.
+If we design places with care,
+purpose and for people,
+any community can become
+the happiest place on Earth.
+Thank you, Sioux Falls.
+(Applause)
+</details>

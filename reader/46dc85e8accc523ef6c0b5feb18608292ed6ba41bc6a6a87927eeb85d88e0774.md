@@ -1,0 +1,162 @@
+---
+author: Joseph Wang
+date: '2026-10-24'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=9EjKDcqBJhs
+speaker: Joseph Wang
+tags:
+  - market-volatility
+  - artificial-intelligence
+  - geopolitics
+  - sovereign-debt
+  - energy-crisis
+title: 市场周报：AI投资分歧、中东局势升级与欧洲主权债务隐忧
+summary: 本期讨论了市场面临的三重挑战：Meta财报后AI产业链融资与回报不确定性增加；中东冲突升级推高油价引发滞胀与衰退担忧；以及法国抗议活动和能源通胀背景下欧洲主权债务风险的再度酝酿。
+insight: ''
+draft: true
+series: ''
+category: investment-assets
+area: finance-wealth
+project: []
+people:
+  - Joe Weisenthal
+  - Robert Pape
+  - Benjamin Netanyahu
+  - Donald Trump
+  - Jean-Luc Mélenchon
+  - Marine Le Pen
+companies_orgs:
+  - Meta
+  - S&P 500
+  - Federal Reserve
+  - ECB
+  - JPMorgan
+  - Anthropic
+  - OpenAI
+  - Nvidia
+products_models: []
+media_books:
+  - Markets Weekly
+  - Financial Times
+status: evergreen
+---
+### 市场波动与三大核心压力
+
+朋友们大家好。今天是10月24日，欢迎收看《Markets Weekly》。好的各位，上周市场上演了激动人心的一周，我推测这只是接下来的第一波，所以请大家系好安全带。上周市场出现了明显波动。标准普尔500指数虽有上涨，但未能收复50日均线，整周实际上收跌1%。不过，它仍位于约7,600点的100日均线之上，且明显高于约7,300点的200日均线。
+
+<details>
+<summary>Original English</summary>
+Hello my friends. Today is October 24th and this is Markets Weekly. All right guys, so last week was an exciting week in markets and I'm guessing it is the first of many. So buckle up. Now last week we had volatility in the markets. The S&P 500 rose but was not able to regain its 50-day moving average and actually ended down 1% on the week. However, it's still above its 100 day moving average at around 7,600 and comfortably above its 200 day moving average at around 7,300.
+</details>
+
+退一步来看，大家可以看到国债收益率出现了大幅回落，部分原因是很多此前做空的人被迫平仓——做空美债原本是一笔不错的交易。但另一部分原因则是切切实实的避险买盘。此外，从波动率指标来看，VIX指数仍然偏高，仅略低于20，且偏度（skew）正在变陡。这意味着更多的人正在进行对冲。市场上洋溢着更为谨慎的情绪，而且我认为这是有充分理由的。目前市场正面临三大似乎不会迅速消散的问题：首先，上周Meta公布财报后，我们在AI交易中看到了日益扩大的裂痕；其次，中东局势似乎面临迫在眉睫的升级，这将进一步推高油价；最后，虽然更偏向于背景因素，但欧洲正在酝酿一场主权债务危机，并随着明年法国大选的临近而持续发酵。
+
+<details>
+<summary>Original English</summary>
+Taking a step back though, you can see that there was a significant decline in treasury yields in part as many people who were short were forced to cover and it was a good trade shorting treasuries. But part of it is a legitimate flight to safety. In addition, looking at the volatility complex, you can see that VIX remains elevated just a little bit below 20 and skew is steepening. So, more people are hedging. There is more of a cautious tone in the markets and I think for good reason. There are three things that are facing the markets that uh don't seem to uh don't seem to dissipate very quickly. First off, we have widening cracks in the AI trade that we saw after Meta reported last week. Secondly, it seems like we're going to have imminent escalation in the Middle East that will further drive up oil prices. And lastly, and this is more in the background, but there is a sovereign debt crisis that's simmering in Europe that will continue to simmer as we approach the French elections next year.
+</details>
+
+### AI产业链裂痕与融资约束
+
+好的，首先来看AI交易。上周我们讨论了AI交易各层级出现的裂痕，从芯片制造商、新型云厂商（Neoclouds）到模型开发者。上周Meta发布了财报，业绩表现当然不错，不仅如此，Meta还告诉我们他们将进一步增加资本支出，越来越深地参与到AI基础设施建设中。有趣的是，在过去，这样的消息本会受到市场的极其热烈的欢迎；市场会为Meta参与AI革命而喝彩，而作为支出接收方的芯片制造商、内存制造商也会为此欢呼。但财报公布后我们看到的却是Meta股价大跌，而那些“卖铲人”公司的股票表现也同样不佳。因此，市场对待这一现象的态度发生了转变。
+
+<details>
+<summary>Original English</summary>
+All right. So, starting with the AI trade. So last week we talked about some cracks at various layers in the I trade from the chip makers to the Neoclouds to the model makers. Last week we had Meta report and the earnings of course were good and not just that Meta told us they're going to further increase their capital expenditures participating more and more in the AI buildout. So what's interesting is that in the past something like this would have been greeted very positively in the market. they would have cheered Meta participating in the AI revolution and the recipients of that spending the chip makers the RAM makers would have also uh cheered it as well but what we saw after the earnings report was that Meta's stock took a dive and the picks and shovels companies they their stock didn't really do well either so there is a change in tone in how the market is treating this
+</details>
+
+退一步审视过去几个季度，市场上的一大核心主线就是那些非常成功、能产生巨额现金流的超大规模云服务商（hyperscalers），基本上把自己所有的自由现金流都砸进了AI基础设施建设中——购买GPU、内存，建造数据中心，甚至收购发电厂；而且在耗尽所有自由现金流后，他们还直接进入市场额外借贷了数千亿美元来推进建设。如果你看Meta的自由现金流图表，就会发现它现在已经是自由现金流为负了。而且有报道显示，他们拥有数千亿美元的表外负债。其中一部分借贷是通过特殊目的实体（SPV）和担保完成的，因此厘清全貌并不直观，但规模庞大，而这完全是因为他们希望进一步扩建自身的AI数据中心能力。
+
+<details>
+<summary>Original English</summary>
+so taking a step back over the last few quarters, one of the big themes in the market is that the hyperscalers who are enormously successful companies generate enormous amounts of cash have been basically plowing all their free cash flow uh into the AI buildout, buying GPUs, RAM, building data centers, buying power plants and after spending all their free cash flow, they went out into the market and bought literally hundreds of billions more to further the buildout. If you look at the free cash flow chart for Meta, you can see that it's free cash flow negative now. And there are reports suggesting they have hundreds of billions of offbalance sheet liabilities. So some of this borrowing is done through SPVS and guarantees. And so it's not straightforward to map out, but it's large and it's all because they wanted to further build out their uh AI data center capabilities.
+</details>
+
+如今，在市场基本消耗完了所有自由现金流、目前正在大举借债之际，你可以看到这实际上也引发了债务市场的担忧。观察不仅是Meta、基本上所有参与AI交易相关公司的信用违约互换（CDS），都可以看到明显上升。当然，没有人真正认为超大规模企业会违约，但这里的风险确实增加了，这也是CDS持续走高的原因。当然，我们上周谈到过的Neoclouds面临的风险则要大得多。
+
+<details>
+<summary>Original English</summary>
+So now that the market has basically kind of uh used up all the free cash flow and is now uh borrowing a lot, you can see that this is actually concerning the debt markets as well. Looking at the CDS of not just Meta but basically everyone involved in the eye trade, you can see that it's resent notably. Now, no one seriously believes that the hyperscalers would default, but there is more risk here and that's why the CDS is ticking higher. And of course, there's substantially more risk in the Neoclouds that we talked about last week.
+</details>
+
+乔·韦森塔尔（Joe Weisenthal）在业绩电话会上指出的一个有趣细节是，Meta提到他们在融资方面遇到了更多困难，因为竞争实在太激烈了。比如Anthropic正在推进IPO，OpenAI可能也是如此，而且所有人都在发行海量债务。这表明AI发展叙事中出现了一个额外的制约因素——即融资约束。因为这些公司基本上耗尽了自身的自由现金流，虽然部分公司采用了股权融资，但现在债务市场正变得更加怀疑，加之美联储正在加息，筹集资金变得更加困难，这也意味着AI的建设步伐可能会放缓。
+
+<details>
+<summary>Original English</summary>
+An interesting note flagged by Joe Weisenthaw in the uh earnings call is that Meta is saying that we're having more difficulty raising financing because there's just so much competition. You have Anthropic doing their IPO, Open AI maybe as well and you have everyone issuing tons of debt. Now that suggests there's an additional constraint in the AI story and that is financing as these guys basically uh used up their free cash flow and some of them used equity financing but now the debt market is becoming more skeptical and the Fed is hiking rates. uh there it's it's more difficult to come up with financing and that means that the AI buildout could be slowing down.
+</details>
+
+请记住，整个AI算力基建本身就是一场极具风险的赌注。企业在债务市场上大举借贷以采购所有这些设备，但从中获得的收入首先是中短期的，并且充满不确定性。举例来说，当你建成了庞大的AI计算中心，对外出售算力所签下的合同也许是一年，也许是两年；如果你的地位极其关键，或许能签下四到五年。然而在那之后，你的算力究竟还能卖出什么价格？这其中存在着巨大的不确定性。比如，算法的改变可能会导致算力需求下降；技术进步也可能发生，比如英伟达或中国公司推出了超高效芯片，从而极大地增加了算力供应；当然，风险投资基金也可能会厌倦持续烧钱，不再愿意补贴对算力的所有这些需求，进而对算力需求造成冲击。从某种意义上说，这有点像“借长贷短”。这与大多数金融机构“借短贷长”的运作模式正好相反。因此，你实际上是将自己暴露在算力现货市场的巨大风险之中。
+
+<details>
+<summary>Original English</summary>
+So recall that this whole AI buildout thing is a really risky venture. Companies are borrowing in the debt markets buying all this equipment but the revenue they make from from this is first off it's short to medium term and is also uncertain. For example, if you build this huge AI center, the contracts that you get to sell this computing, maybe it's one year, maybe it's two years, maybe if you are really important, you can get it for like four to five years. But after that though, what are you able to charge for your compute? There's a significant degree of uncertainty there. Uh you could have for example changes in algorithms that make it such that compute demand goes down. You could have technological advances such that say Nvidia or the Chinese companies come out with superefficient chips that greatly increase the supply of compute and of course you could have venture capital fund guys get tired of burning their money and so they're not willing to subsidize all this demand for compute and so maybe that will impact demand for compute as well. So in a sense it's kind of like you're borrowing long and you're lending short. It's the uh opposite of how most uh financial companies operate you know borrowing short, lending long. So you are exposing yourself to significant risk in the spot market of compute.
+</details>
+
+所以再次说明，如果借贷方对此感到有些不安，是完全可以理解的。随着资金成为制约因素，这构成了AI交易面临的又一逆风。再看这些走势图，目前的AI板块形势确实不容乐观。正如我们之前讨论过的，这一领域此前一直是美国GDP增长的重要引擎，因此市场对此变得日益敏感。一旦AI交易中的裂痕进一步扩大，美国陷入经济衰退的概率将显著上升。
+
+<details>
+<summary>Original English</summary>
+So again it's understandable if lenders would be a bit uneasy about that. So as finance becomes a constraint that's just another headwind to the AI trade. And again looking at these charts it does seem that um now things are not looking good for the AI stuff. Now that as we discussed before has been a big driver of US GDP and so the market is becoming increasingly sensitive to that. Should cracks in the eye trade further widen you have a significant increase in the probability of a US recession.
+</details>
+
+### 中东冲突升级与油价推力
+
+升温的第二大因素是中东局势的演变。就我个人而言，这让我感到意外。中东冲突升级似乎毫无道理可言——毕竟这会导致油价飞涨，伊朗会进行报复，这对任何人都没有好处。不过话说回来，当初卷入战争本身也是毫无道理的。从各方表述来看，总统曾认为战事会在4天内结束：消灭领导层、实现政权更迭、一切宣告收尾。然而事实证明这完全错了。这些人总是做出糟糕的决策，也许是能力不足，也许是情报有误，我也说不清楚。因此目前看来，局势升级的概率很高。上周出现了一些非常令人担忧的新闻报道：首先是《金融时报》报道称，以色列最初曾计划在10月10日对伊朗实施打击，但此地的总统并没有给他们放行。
+
+<details>
+<summary>Original English</summary>
+So the second thing that is heating up is what's happening in the Middle East. Now, I personally am surprised by this. It seems like it would make no sense to be escalating in the Middle East after all. Uh that's going to make oil prices go high. Iran will retaliate and that's just bad for everyone. But again, it also never made sense to enter into the war in the first place. By all accounts, the president thought it would be over in 4 days. He'd kill the leadership. He would have regime change. He would be all over. So, that was wrong. These guys make bad decisions. Maybe they're not smart people. Maybe they have bad information. I don't know. So it looks like uh there is a high degree pro high probability of escalation. So we have some news stories last week that are very concerning. First off, we have reporting from the Financial Times that Israel actually had initially planned to strike Iran on October 10th, but the president here did not give them the okay.
+</details>
+
+随后有报道称，周一以色列在紧邻伊朗边境处举行了一场规模非常宏大的空军演习。这再次敲响了战争的战鼓。在当前节点，如果你是一位担心期中选举的总统，现在采取行动似乎已经太迟了；提前投票已经开始，很多事情恐怕已成定局。就伊朗问题而言，我一直在关注的几个观点来自于罗伯特·佩普（Robert Pape）教授，以及另一个提供高水准内容的机构Policy Tensor。佩普教授表示，在期中选举前发生某种程度升级的概率他认为超过了50%。按照他的逻辑，期中选举之后升级的概率会大幅上升，因为届时总统基本上已经没有什么可以失去的了；但在选举之前，同样可能出现局势升级。需要注意的是，以色列大选就在下周，总理本雅明·内塔尼亚胡在民调中显然处于劣势，他可能会认为——而且我也认为他确实这么想——某种程度的冲突升级将对他有所助益。这也是在事前推动升级的一个原因。总统曾表态称我们在期中选举前不会参战，但话又说回来，他说过的话太多了，老实讲我已经不再关注他的表态，因为根本无法分辨他何时在撒谎。
+
+<details>
+<summary>Original English</summary>
+Then we have reporting that on Monday there was actually a very large air force exercise by Israel right outside of the Iranian border. Again that's be further beating uh the war drums. So at this point it seems like you know if you are president worried about the midterms it's kind of too late for you. Early voting has already started and and things are probably baked into the cake. Now, a couple voices that I've been listening to on the Iran front, of course, were Professor Robert P and this other guy, Policy Tensor, which seems to which actually produces some high quality stuff. Now, Professor Pap is saying that there is a I think higher than 50% chance that we could have some kind of escalation before the midterms. Now according to his logic it's that after the midterms the probability of escalation rises significantly because at that point the president kind of has nothing to lose. But even before the midterms though uh you could have some some escalation as well. One thing to note is that Israeli elections are next week and Prime Minister Benjamin Netanyahu is apparently down on the polls and he might think and I think he does think that some kind of escalation would be helpful to him. So that's one reason for to escalate before uh the president has said that we're not going to fight before the midterms, but again he says many things and honestly I don't actually pay attention to him anymore because I don't know when he's lying.
+</details>
+
+因此佩普教授认为，进入期中选举前存在较高概率，之后概率更甚；而且这种爆发某种军事行动的高概率态势不会结束，直到明年初新一届国会宣誓就职。我们正处于一个总统看似四面楚歌的时期，他正在不断孤注一掷加码下注，因为他身上带有某种赌徒性格。他本就已经没有什么可输的了，也许心想着只要再掷一次骰子，万一就会发生转机并最终对他有利。历史上许多总统显然经常这么做。如果特别看看特朗普总统本人的过往经历，就会发现他作为商业地产人士并经营过多项事业，自然是一个连续创业者——这在某种程度上就等于说是一个连环赌徒，对吧？尝试各种不同的事情，有的成功了，有的没有，因而总是在下注。这是其一。第二点需要注意的是，Policy Tensor强调不仅以色列和美国可能使局势升级，伊朗同样能够升级。从伊朗的角度来看：去年6月他们正在谈判，突然遭到了轰炸；今年早些时候他们正在谈判，又突然遭到轰炸。现在他们坐在家里，看着来自以色列和美国总统的所有升级言论。对他们而言，光坐在那里干等着挨打似乎很愚蠢，先发制人或许才说得通。Policy Tensor指出，他们似乎已经升级了行动，并且正在改变军事学说：过去他们试图通过袭击油轮来阻止船只通过霍尔木兹海峡；现在他们的升级表态则是，如果未经授权试图通过海峡，他们将直接打击美国基地。这构成了美伊冲突的进一步升级。
+
+<details>
+<summary>Original English</summary>
+So, Professor Pipe is saying that you have a high probability heading into the midterms, even higher afterwards. And you know, this high probability of some kind of kinetic action is not going to end until sometime early next year when the new Congress is sworn in. So, we're we're in a period where the president seems to be beleaguered and he's just doubling and tripling down uh because he's kind of a gambler, right? He he already has nothing to lose and you know maybe if he throws the dice one more time maybe just something will happen and it would actually turn out well for him. Apparently, this is something that uh presidents do often in uh history. And if you look at President Trump in particular, his own personal history, you can see that being a commercial real estate guy and of course having many ventures, he is of course someone who is a serial entrepreneur, which is kind of like saying you're a serial gambler, right? You try all these different things. Some of them work out, some of them don't. So, you are also always placing bets. So, that's one thing. The second thing to note is that uh policy intensor is highlighting that it's not just Israel in Iran that could escalate. Uh Israel and the US that can escalate but Iran can escalate as well. So thinking about things from Iran's perspective, they were in negotiations last June, suddenly they got bombed. They were in negotiations earlier in the year, suddenly they got bombed. And now they're just sitting at home and watching all this escalation rhetoric from Israel and from the president. you know, it would seem stupid for them to just sit there and just wait to get punched. Maybe it might make sense for them to strike first. And policy tensor is highlighting that they seem to have escalated and that they're changing the military doctrine such that in the past they were trying to stop uh ships from getting through the Harmus by striking at tankers. Now they're escalating but saying that if you try to get through the straight without authorization, they're going to strike US bases. So that is another further escalation on uh in the US Iran war.
+</details>
+
+如今这一态势正在向原油价格传导。大家可以看到布伦特原油期货正在飙升，仅略低于今年早些时候的水平。摩根大通（JPM）做了一期有趣的播客，试图探讨布伦特油价居高不下的原因，他们的结论是这纯粹是战争溢价。市场参与者担心在中东可能发生变故，为了安全起见，他们正在试图锁定供应，支付着超出基本面所能支撑的价格。此前也有讨论认为这可能是由于运输成本上升造成的。但摩根大通的播客提出了一个非常有趣的观察：这类价格的形成机制通常是沙特阿拉伯参考布伦特或即期布伦特原油作为基准，然后制定自己的官方售价（OSP），该价格可高于或低于基准价。而实际发生的情况是，他们设定的售价实际上低于基准价格。他们之所以这样做，是因为深知油轮运费高昂，因此试图通过向客户提供低于基准的价格来弥补运费，以确保加上运输成本后其报价仍具竞争力。请记住，石油依然是一个竞争激烈的市场，有来自中东的卖家，也有来自美国、非洲等地的卖家，大家都在争夺生意。因此至少到目前为止，油价上涨似乎并非由海运成本所致；航运成本实际上反而在削减中东生产商所能获得的售价。
+
+<details>
+<summary>Original English</summary>
+Now this is reverberating into oil prices. You can see in Brent futures it's just surging just a little bit below where it was earlier in the year. Now there's an interesting podcast from JPM uh trying to discuss trying to figure out why Brent prices are so high and their conclusion is that this is really just war premium. Market participants are worried what might happen in the Middle East since they're trying to secure supplies paying over what fundamentals would justify just to be safe. There's some discussion that this could be due to heightened transport prices. But the JPM podcast made a very interesting observation in that the way that these prices are set is that say Saudi Arabia would look at Brent or dated Brent as a reference and then set their own prices called OSP official selling prices that could be higher or lower than their benchmark. What seems to be happening actually is what they they're actually selling sitting prices that are below benchmark. Uh they're doing this because they know that tinker rates are high and so they're trying to compensate for that by offering their customers prices that are lower than benchmark such that after shipping costs their offer remains competitive. Remember oil is still a competitive market. You have people selling from the Middle East, you got people selling from uh from the US, from Africa and so forth. And so they are competing for business. So so far at least um it doesn't seem like this rise in oil prices is due to shipping. Shipping is actually reducing the prices that producers in the Middle East receive.
+</details>
+
+如果油价继续飙升，这无疑对美国经济构成负面冲击。它会直接抽走消费者的购买力，利率当然也必须维持在高位，这只会使美国经济进一步放缓。在过去，我们看到的是高油价意味着更高利率的联动关系。但油价高到一定程度，其效应就会转为引发衰退。比方说，油价从60美元涨到90美元再到100美元，你可以说这是通胀性的；但假定油价从100美元涨到200美元，那就具有衰退性了。到了那个节点，必然存在某个拐点价格，超过该点后，更高的油价反而会导致收益率下降。我不知道我们现在处于什么位置，我认为115美元还没到那个拐点，但这也是一个需要铭记在心的机制。因此，目前在油价上涨的同时，你实际上并未看到收益率走高。来自AI交易与中东局势的经济衰退担忧，似乎正在发挥更大的主导作用。
+
+<details>
+<summary>Original English</summary>
+Now should oil prices continue to spike, again, this is bad for the US economy. It takes money out of the pockets of consumers. Interest rates of course also have to remain high and so that is just the slowing down of the US economy. So in the past what we saw was a relationship where high oil prices raised meant higher rates. But you know there is a point where oil prices become so high that become recessionary. So let's say going from 60 to 90 to 100 you can say that's inflationary. But let's say oil prices went from 100 to 200. Now that is recessionary. And at that point in time, there is some kind some price where there's an inflection where higher oil prices beyond a certain point will actually lead to lower yields. I'm not I don't know where we are. I don't think 115 is that point, but that's something to keep in mind as well. So, you actually don't see uh yields going higher now with uh higher oil prices. It seems like the recession concerns from the AI trade and from what's happening in the Middle East may be playing a bigger role.
+</details>
+
+### 欧洲主权债务隐忧与法国政局
+
+最后困扰市场的是欧元区正在发生的情况。重新审视法国债务图表——互换利差（Swap Spreads，基本反映了法国10年期国债收益率相对于欧洲央行预期政策路径的高出程度），大家可以看到互换利差正变得更加负值。换言之，法国10年期国债收益率相对于政策预期路径进一步走高。这代表法国面临更多的信用风险，因为就在我们讨论之际，法国国内持续爆发抗议活动。这些抗议非常激烈，有人表示其规模远超以往所见。各类人士试图从各自的政治诉求出发去解读抗议：诚然，部分原因归咎于大规模移民；而且单看照片，抢劫行为中非法国本土人群的比例确实非常显眼；但在生活成本问题上，也确实存在切实的民间不满。正因如此，法国乃至欧洲其他城市发生的危机，开始与中东局势交织在一起。
+
+<details>
+<summary>Original English</summary>
+Now the last thing that that is troubling the market is what's happening in the Euro zone. So revisiting our chart of French debt uh so swap spreads basically how high French tenure is relative to the expected path of ECB policy you can see that the swap spreads are becoming even more negative. That is to say that French tenure yield is rising further relative to the expected path of policy. that's more credit risk with France because as we speak there are ongoing protests that are happening in France. Now these protests are are very wild and some people say that they're very um kind of bigger than uh you usually see. Now there are all sorts of people who try to look at this and just cast their own political grievance on it. Yes, part of it is due to mass migration and yes, if you look at the photos, it does seem a disproportionate amount of looting is done by people who are uh not native French people, but there are also legitimate grievances here when it comes to the cost of living. And so this is where what's happening in France and in other cities in in Europe as well is merging with what's happening in the Middle East.
+</details>
+
+众所周知，生活成本在欧洲是一个严峻的问题，尤其是源于高昂的能源价格。欧洲部分国家过去拥有核能，但像德国等国将其关闭；他们曾依赖俄罗斯天然气，现在不愿再使用；随后他们转而依赖中东能源，而如今中东能源供应面临阻断。因此，石油与天然气价格的上涨对他们造成了沉重打击，严重挤压了欧洲许多民众的预算。而在欧洲，人们税负极重，经济增长又乏力，许多人对能源价格冲击的感受远比美国更为深切。这引发了大量的公众不满，进一步激化了法国乃至全欧洲各地的抗议潮。因此，尽管这一能源冲击目前对市场已有影响，但更大的冲击可能发生在未来数月，因为它会传导并转化为政治影响，助长欧洲各派势力的崛起——这些政党对政府如何运转、欧盟应当扮演何种角色拥有截然不同的构想，这当然构成了极其严重的政治风险。大家可以看到欧元一直承受下行压力。如果回想十年前欧洲主权债务危机期间发生的情形，那是一段典型的避险与通缩时期；因为潜在的结果之一，当然是欧盟对法国这样的国家推行财政紧缩政策，无论其实施难度有多大；而且可能不仅是法国，还会施加给许多处于类似处境的欧洲国家，而这极度不利于经济增长，是一股非常强劲的通缩力量。
+
+<details>
+<summary>Original English</summary>
+So as we all know uh a cost of living is a problem in Europe in particular due to higher energy prices. Europe was you know they had nuclear energy in some countries that like Germany shut it down. They were reliant upon Russian gas now they don't want to use Russian gas. Then they were reliant upon Middle Eastern energy and now Middle Eastern energy is being blocked. So they are being heavily impacted by the rise in oil, by the rise in natural gas and that is squeezing the budgets of many people in Europe. Now in Europe people are highly taxed and they don't have a lot of economic growth. A lot of people are feeling the strain of energy prices more so than in the United States. And that's leading to a lot of public discontent and fueling a lot of the protests in France, not just in France, in all around Europe. So as this energy shock which you know it has an impact on markets right now but the bigger impact could be what happens over the coming months because this will feed into political impacts and that could fuel the rise of I guess different parties in Europe that have a different vision of how the government could operate of what the European Union should do and that of course is serious serious political ical risk. You can see the euro has been under pressure. And if you think back to what happened in during the euro debt sovereign debt crisis a decade ago that was very much a riskoff in a deflationary episode because one of the potential outcomes is of course for the European Union to force austerity on a country like France. However difficult that may be and maybe not just France, maybe upon many other European countries who are in a similar situation and and that it's just really bad for growth in a very strong deflationary force.
+</details>
+
+另一种路径是他们以某种方式试图通过通胀来稀释债务，但我认为这绝非欧盟的首选本能。因此，这是一个缓慢发展的过程，我认为眼下它对市场价格的冲击尚未充分显现，但这是不可避免的，随着明年法国大选的步步临近，我们将逐渐面对这一问题。同样，法国是欧洲的核心，具有“大而不倒”的地位。所以我们将拭目以待。当前流传着一个有趣的阴谋论，称法国目前发生骚乱的部分原因，在于建制派试图借此抹黑极左翼领袖让-吕克·梅朗雄（Jean-Luc Mélenchon），因为他的党派常常与骚乱联系在一起。如果他的党派名声受损，受制于选举制度的特殊机制，他可能无法在首轮投票中出线；而一旦进入第二轮决选，无论哪个中间派政党崛起，都可能击败勒庞（Le Pen）。这只是一种阴谋论，我对此无从得知。但在内部，绝对存在着试图按照自身立场来维护体制的人。好的，这就是我为今天准备的全部内容。下周看来将召开美联储议息会议。我认为不会出现加息，我觉得这不大可能：首先，许多官员已经表示希望跳过本次加息；其次是面临大选；最后，长端收益率的大幅攀升以及股市价格的下挫，均减轻了美联储背负的紧缩压力。会议结束后我会再次回来向大家分享观点。届时再聊。
+
+<details>
+<summary>Original English</summary>
+Alternatively, somehow they could try to inflate it away, but I think that's really not their first instinct in the European Union. So, this is something that is slowmoving. I don't think it's playing a big impact on market prices at the moment. uh but this is inevitable and it's something that we are slowly approaching as we approach the French elections next year. Again, France is core Europe. It is too big to fail. So, we'll see what happens. Uh there was an interesting conspiracy theory that part of the reason why they have riots in France right now uh is that the establishment is trying to discredit uh far-left leader Jean Luke Melon uh because his party is often identified with riots. If his party is tarnished, then maybe uh due to quirks in the election system, he will not survive uh the first election and then when it goes to the second round, whoever centrist party may rise and maybe defeat Le Pen. That's just the conspiracy theory. I have no idea. But uh they are definitely people in there who are trying to uh save the system according to their own perspective. All right, so that's how I prepared for today. It looks like next week we'll have a Fed meeting. I don't think we're going to have a rate hike. Uh I think there is uh I mean I think it's a it's unlikely. First off, of course, many people have said that they're not going to they want to skip. Secondly, it's the election. And and lastly, you have a lot of the higher rise in longer yields that takes pressure off the Fed's back, not to mention declines in equity prices. But I will be back after the Fed meeting to give you my thoughts. Talk to you guys then.
+</details>

@@ -1,0 +1,1451 @@
+---
+author: The Ezra Klein Show
+date: '2026-10-16'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=9GLdGc9OX-A
+speaker: The Ezra Klein Show
+tags: []
+title: ''
+summary: ''
+insight: ''
+draft: true
+series: ''
+category: ''
+area: ''
+project: []
+people: []
+companies_orgs: []
+products_models: []
+media_books: []
+status: evergreen
+---
+<!-- chunk 1/9 -->
+
+### AI 驱动的繁荣与泡沫之争
+
+**主持人**: 目前，人工智能是推动美国股市上涨、带动美国经济增长的核心动力。它吸收了如此多的建设资源，以至于似乎正在挤占住房、制造设施等我们可能需要建造的几乎所有其他基础设施。但即使仅仅从财务角度来看，核心问题在于：这一切真的物有所值吗？所有这些巨额投资最终能够获得回报，还是说 AI 本身就是一个巨大的泡沫？会不会其中某家公司未能达成收益目标，或者信用评级遭到下调，从而导致整个泡沫破裂，进而重创我们所有人的退休投资组合？因此，我希望从两种不同的视角来探讨这个问题。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Right now, AI is the driving force behind the gains in the US stock market, behind US economic growth. It is sucking up so many construction resources it now appears to be crowding out housing, manufacturing facilities, like basically everything else you might need to build. And the question, even just from a financial perspective, is is this all worth it? Is all of this investment going to pay off, or is AI a bubble? And one of these companies is going to miss an earnings target, or get downgraded, and the whole thing is going to pop, taking all of our retirement portfolios with it. So, I wanted to have two different perspectives on this.
+
+</details>
+
+**主持人**: 保罗·凯德罗斯基（Paul Kedrosky）博士是风险投资机构 SK Ventures 的合伙人。他是麻省理工学院（MIT）数字经济倡议的研究员，同时在 paulkedrosky.com 上运营着备受欢迎的通讯刊物；他一直非常明确地公开表示，他认为我们正处于一场 AI 泡沫之中。阿齐姆·阿扎尔（Azeem Azhar）则是一位英国科技创业家、作家兼分析师。他是《Exponential View》的创办人，这不仅是我经常阅读的一份优秀的 Substack 刊物，也是一个研究平台，他们在该平台上创建了用于追踪 AI 行业是否存在财务压力的仪表盘等工具。公平地说，他的看法比保罗的观点要更为乐观一些。因此，我希望邀请他们两位共同探讨，梳理出为什么有人认为我们正处于 AI 泡沫之中，而为什么又有人认为并非如此。保罗·凯德罗斯基、阿齐姆·阿扎尔，欢迎来到我们的节目。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Dr. Paul Kedrosky is a partner at the venture capital firm SK Ventures. He's a fellow at MIT's initiative on the digital economy, his popular newsletter at paulkedrosky.com, and he's been very vocal that he thinks we are in an AI bubble. Azeem Azhar is a British technology entrepreneur, an author, and an analyst. He is a creator of the Exponential View, which is both a great Substack that I read often, and a research platform where, among other things, they've been creating these dashboards tracking whether or not there's financial stress in the AI industry. And his view is somewhat more optimistic, I think it is fair to say, than Paul's. So, I wanted to put the two of them into conversation together to try to see why you might think, and why you might not think, we are in an AI bubble. Paul Kedrosky, Azeem Azhar, welcome to the show.
+
+</details>
+
+**保罗·凯德罗斯基**: 嘿，阿扎尔，很高兴来到这里。
+
+<details>
+<summary>Original English</summary>
+
+**Paul Kedrosky**: Hey, Azhar, good to be here.
+
+</details>
+
+**阿齐姆·阿扎尔**: 很高兴来到这里，谢谢。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem Azhar**: It's good to be here. Thanks.
+
+</details>
+
+### 通用技术的过度建设与历史规律
+
+**主持人**: 保罗，请向我论证为什么说这是一个泡沫。我的意思是，这是一个非常重大的断言，对吧？你的意思是说，所有这些投资者、所有涌入的巨额资金、来自贝莱德（BlackRock）和高盛（Goldman Sachs）等机构的精明分析师，以及像谷歌（Google）和 Meta 这样的超大规模云厂商（Hyperscalers），他们在某种程度上全都看错了，而唯独你没有看错。那么，为什么你认为这是一场泡沫，而他们所有人都是蠢货呢？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Paul, make the case to me this is a bubble. I mean, that's a big it's a big claim, right? You're saying that all these investors, all this money pouring in, all of these sophisticated analysts at BlackRock and Goldman and wherever, and you know, the hyperscalers like Google and Meta, that they're all getting this wrong on some level, and you're not. So, why do you think it's a bubble and they're all idiots?
+
+</details>
+
+**保罗·凯德罗斯基**: 嗯，我不会说得那么过分，把他们全都称为蠢货——虽然事实可能确实如此，但我先暂且收回那句话。那么，这次的情况有什么不同寻常之处？我们先快速厘清一下什么是泡沫。泡沫本质上就是资产价格脱离了任何经济现实的表象。我们目前正经历人类历史上规模最大的竞争性资本支出（CapEx）浪潮之一。在西方经济史上，大约发生过八到九次类似的时期，我们在这些时期集中建设某种通用的通用技术（General Purpose Technology, GPT）——这里指的不是 ChatGPT 意义上的 GPT，而是宏观经济学上的通用目的技术。
+
+<details>
+<summary>Original English</summary>
+
+**Paul Kedrosky**: Well, I wouldn't go quite as far as they're all idiots. That it be true, though. I'll just I'll step back on that one. So, what's unusual about this? What let's just talk about really quickly what a bubble is. A bubble is whenever asset prices detach from any semblance of economic reality. We have one of the largest CapEx competitive CapEx spending waves in history. So, in Western economic history, there've been like eight or nine of these moments where we build out some giant general purpose technology, a GPT, but not not the the ChatGPT kind, but a general purpose technology.
+
+</details>
+
+**保罗·凯德罗斯基**: 当我们像当年建设铁路、电网、运河或州际公路系统那样展开大规模铺设时，历史上的每一个类似时期都无一例外地导致了过度建设。在西方经济史上，没有任何一次重大的经济资本支出狂潮不是以一系列接踵而至的危机、极度虚高的资产价格，以及相应标的的大规模产能过剩告终的，对吧？不管是铁路、光纤，还是其他任何东西，任你挑选。这就是泡沫的本质。所谓泡沫，就是因为资本的大量供给以及资本提供者迫切希望根据对未来需求的预期持续投入建设，导致我们再次对某种基础设施进行了严重的超量供给。
+
+<details>
+<summary>Original English</summary>
+
+**Paul Kedrosky**: And so, when we're building it out like we were the railroads, like we were electrification, like we were the canals, like we were the interstate highways, and every one of those moments has led to overbuild. There isn't a major economic CapEx episode in Western economic history that didn't end in a rolling series of crises, vastly inflated asset prices, and vast oversupply of capacity of whatever the thing was, right? Railroads, fiber, take your pick. And so, that's the bubble. The bubble is, once again, we're vastly oversupplying something because of the availability of capital and the eagerness of the suppliers of the capital to continue building out in anticipation of future demand.
+
+</details>
+
+### 信贷蔓延与全市场的杠杆风险
+
+**保罗·凯德罗斯基**: 我说这些绝不是在贬低 AI，说它微不足道、毫无用处，或者否认它拥有极其丰富且有价值的应用场景。这根本不是讨论的重点，正如当年的铁路一样——铁路极其有用，但这并不妨碍最终修建的所有铁轨里程中，有大约 50% 最终被证明完全多余且毫无用处，对吧？因此，泡沫的核心在于某种基础设施的大规模过剩供给，而如今这种过度供给在很大程度上是由信贷驱动的。这反过来将引发大规模的企业破产与资产减记。而且，所有这些信贷已经深度渗透到了整个宏观经济体系中，存在于保险公司、私人信贷机构和主权财富基金的资产负债表之中。
+
+<details>
+<summary>Original English</summary>
+
+**Paul Kedrosky**: Now, none of this is to say that like AI is frivolous or it doesn't work or that there aren't incredibly useful cases for it. That's not the point anymore than that was the point for railroads, right? Railroads were incredibly useful didn't still ended up where something like 50% of the track miles ever laid turned out to be useless, right? So, the bubble is this vast oversupply of something largely fueled now by credit, which in turn will lead to massive business failures and write down of assets. And all of that credit has spread through the economy. It's inside of insurers, inside of private credit, inside of sovereign wealth funds.
+
+</details>
+
+**保罗·凯德罗斯基**: 我们现在所涉及的资金规模达到了数万亿美元的级别，而且在这个周期结束之前，总投入可能会突破 10 万亿美元。因此，所有这些投资目前都面临着敞口风险，并且遍布于整个经济体；它渗透在各种资产类别中，甚至直接存在于普通人的个人资产中，比如大家的 401(k) 退休账户里，对吧？大家都看到过相应的数据：标准普尔 500 指数中排名前 10 的股票，其市值已经占据了该指数总市值的约 40%。所以，我的朋友，如果你持有一份标普 500 指数基金，你实际上就是在高度做多 AI，对吧？你可能……
+
+<details>
+<summary>Original English</summary>
+
+**Paul Kedrosky**: And we're on the order of, you know, trillions of dollars now, and it's probably going to hit 10 trillion before it's done. So, this all of this investment is at risk and it's across the entire economy and sitting inside of all kinds of but it's even sitting inside of you know your individual you know your 401(k)s, right? I mean we've all seen the data that something like the top 10 stocks in the S&P 500 are like 40% of the market capitalization of the index. So if you're holding an S&P 500 index my friend, you are very very long AI, right? You might
+
+</details>
+
+**主持人**: 快把它从我的投资组合里剔除出去，保罗。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Get that out of my portfolio Paul.
+
+</details>
+
+**保罗·凯德罗斯基**: 没错，“快把那些垃圾从我的投资组合里拿走”。所以你实际上极度重仓了 AI。这正是症结所在：正如人们常说的，这是一个“单因子世界”（one-factor world）。所有资产类别、所有零售投资都在向 AI 加杠杆。最后再给你一组数据，这也是为什么这一现状极其重要的原因：普通公众将净资产配置在股票上的比例达到了历史最高纪录，人们高达 50% 的净资产如今都以股票形式存在。
+
+<details>
+<summary>Original English</summary>
+
+**Paul Kedrosky**: Yeah, get that crap out of my portfolio. So you're very very long AI and this is the problem is the expression you hear all the time it's a one factor world. Everything is leveraged to AI across every asset class across all the retail investing and then the last stat I'll give you and the reason why that matters is we're at record percentages in terms of the percentage of people's net worth that are tied to equity. 50% of people's net worth is now in equity.
+
+</details>
+
+**保罗·凯德罗斯基**: 沿着这个数学逻辑推导下去：如果人们 50% 的净资产都在股票市场，而整个股市又是靠 AI 交易行情在拉动，那么公众在这一单项交易上的杠杆暴露，甚至远超过当年互联网泡沫时期的水平。这造成了极其脆弱的系统性风险。因此，所有这些相互交织的因素共同构成了眼下的泡沫时刻；这与 AI 本身是否有用毫无关系，而完全关乎为什么泡沫的另一面必将伴随一系列连环危机，并可能演变成极具毁灭性的灾难。
+
+<details>
+<summary>Original English</summary>
+
+**Paul Kedrosky**: So follow that math through. If 50% of net worth is in equities and that's driven by the AI trade, people are even more over leveraged to this single trade than they ever were to dot-coms and that creates this incredible fragility. So all of this this this sort of nexus of of factors is what creates this bubblish moment which has nothing to do with whether or not AI is useful but has everything to do with why the other side of this will see you know a rolling series of crises that could potentially become really catastrophic.
+
+</details>
+
+### 囚徒困境与不可避免的军备竞赛
+
+**主持人**: 我想把讨论聚焦片刻在核心参与者的理性逻辑上。那些核心巨头——Meta、Alphabet、OpenAI、Anthropic 等等——他们全部深信，最终的 AI 赢家只会剩下极少数几个。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: I do I want to focus for a minute on the rationality of the core players. Your Metas, your Alphabets, your OpenAIs and Anthropics all of whom believe that there's only going to be a couple AI winners.
+
+</details>
+
+**保罗·凯德罗斯基**: 没错。扎克伯格曾说过一句令人惊叹的名言，他说：如果我们最终多花了几千亿美元，那确实很遗憾；但行动不够激进所带来的风险，要远远高于过度投资的风险。因此，现存的机制让这些大厂认定，未来的市场格局必将高度集中，甚至演变成寡头垄断市场——也许最终是一套大模型统治全行业，或者三套大模型主导一切。正因如此，大家都在疯狂竞速，争抢成为这前三名之一；但这种心态引发了巨大的投资压力，迫使各家公司的投入规模远远超出了市场整体所能承受的健康极限。
+
+<details>
+<summary>Original English</summary>
+
+**Paul Kedrosky**: Right. I mean Zuckerberg gave this amazing quote where he said if we end up misspending a couple hundred billion dollars, that would be unfortunate. But the risk of not acting aggressively enough is considerably higher. And so there is this dynamic where I think they believe this is going to be a highly concentrated or oligopolistic market where maybe it's one model that rules them all or three models that rule them all. And so there is this race to be one of the three, but that creates a kind of pressure to invest way beyond what the market can collectively sustain.
+
+</details>
+
+**保罗·凯德罗斯基**: 没错，这正是历史上所有资本支出狂潮中都存在过的典型竞争动力学。它在修建铁路时就发生过：你承受不起掉队的代价，你必须不断跟进投资。这就是为什么我们最终会在各个城市之间修出多条重复重叠的铁路线。这正是这种竞争机制与某种“囚徒困境”交织后的本质体现：我内心可能很想放慢脚步，但我不能慢下来，因为没有其他人会慢下来。
+
+<details>
+<summary>Original English</summary>
+
+**Paul Kedrosky**: Right. That's the classic competitive dynamic that's existed in every one of these capex build-outs. It existed with the railroads. You could not afford to be left behind. You had to invest in And that's why we ended up with duplicate routes between cities. I mean, that's what That's the essence of the competitive dynamic crossed with a kind of, you know, prisoner's dilemma that I I would like to slow down, but I can't because no one else will.
+
+</details>
+
+**保罗·凯德罗斯基**: 因此，我们所有人都不得不硬着头皮继续卷入这种疯狂的竞争格局之中。这正是我们在现实中所目睹的生动写照。即使在几周前，Anthropic 的达里奥·阿莫代伊（Dario Amodei）还在建议我们必须——虽然这是个荒谬的说辞——我们必须“调整前沿步伐”（pace the frontier），这听起来就像是在为波士顿马拉松配速训练一样；但其核心思想就是我们必须放慢节奏。然而，在这场经典的囚徒困境博弈中，所有人立刻冷笑着回应道：“请便，你去放慢脚步吧，反正我是绝不会减速的。”
+
+<details>
+<summary>Original English</summary>
+
+**Paul Kedrosky**: And so, we have to we all continue on with this frantic competitive dynamic. And so, that's the what we're seeing incarnate there. see that even whenever, I don't know, a couple of weeks ago, Dario Amodei at Anthropic was suggesting that we need to And this is a ridiculous expression, but we need to pace the frontier, which sounds vaguely like we're training for the Boston Marathon. But it's this idea that we need to slow down. Well, of course, everyone in a in a classic prisoner's dilemma thing said, "Go for [snorts] it. You slow down. I'm not slowing down."
+
+</details>
+
+**保罗·凯德罗斯基**: 更糟糕的是，他们还会辩解称：“就算我们美国所有的前沿模型公司全部达成协议放慢速度，中国也不会停下来。”于是话题就不可避免地滑向了关于中国会怎么做的大规模推诿与争论（whataboutery）。这就是症结所在：如今已经形成了一种军备竞赛机制，如果你一旦停下脚步，你就会深陷恐惧——要么害怕竞争对手抢占先机，要么害怕股东在市场上惩罚你。因此，这场竞速只能被迫不断升级。正是这种机制确保了过度建设的必然发生。只要同时具备充足的资本供应和零和竞速的动力，产能过剩就已成定局，就像当年的运河、铁路、电气化工程一样，任选哪一个都是完全相同的历史剧本。
+
+<details>
+<summary>Original English</summary>
+
+**Paul Kedrosky**: And even worse, they said, "Even if we all agree here in the US frontier companies to slow down, China won't." And then you're getting into this terrible discussion with with the whataboutery with respect to what China will do. And so, this is the problem is there's a a race dynamic that's been created that if you stop, there's a fear that either my competitors will gain an advantage or my shareholders will punish me. And so, as a result, the race dynamic continues. And that's what guarantees the overbuild. As long as you have a supply of capital and a race dynamic, you're guaranteed overcapacity, much like whether it's canals, railroads, electrification, take your pick.
+
+</details>
+
+**主持人**: 阿齐姆，在过去的一年到一年半时间里，你和你的团队一直在构建这个仪表盘，试图追踪 AI 行业在财务层面承受了多少压力，并试图梳理出什么样的路径才算是健康的财务发展道路，以及什么样的……
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Azeem, you you and your team over the past year, year and a half, have been building out this dashboard, trying to track how much stress there is in the AI industry financially, trying to think through what it looks like for this to be on a healthy financial path, and what
+
+</details>
+
+<!-- chunk 2/9 -->
+
+### 技术繁荣的双重维度：真实需求与融资机制
+
+**主持人**：……看起来像是一个泡沫。那么，你能不能向我详细阐述一下你的观点，也就是你最密切关注的那些指标，以及为什么你眼下会比 Paul 稍微更乐观一些？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: ...it looks like to be a bubble. So, why don't you walk me through sort of your perspective, the indicators you watch most closely, and why you're a little bit more optimistic right now than Paul is.
+
+</details>
+
+**嘉宾**：当我们审视一场技术繁荣或一个技术周期时，必须兼顾两件事。第一，客户是否觉得它有用？他们是否愿意为其付费？他们付费的意愿和规模是否在不断增长？换言之，需求究竟是真实的、切实存在的吗？
+
+而当你回顾历史上破裂的泡沫时，它们几乎总是与融资机制的问题有关，比如短期债务的再融资出现断裂。一旦在这一环遭遇阻碍，资本就会迅速撤离，随后你便会看到所有那些通常与泡沫破裂联系在一起的惨状。
+
+那么核心问题是：我们今天究竟处于什么阶段？今天的情况是，来自美国本土以及全球企业的需求都极其强劲。目前并没有出现产能过剩，相反，运行 AI 所必需的算力存在着巨大的供给不足。眼下的竞争焦点反而是：在未来两到三年里，我们是否能够获取足够的芯片，并且为这些芯片提供充足的电力，以跟上这种爆发式的需求。
+
+而在融资端，我们固然正在逐渐超出超大规模云厂商（Hyperscalers）过去二十年左右积累的自有现金储备，开始引入债务杠杆，但目前债务水平还远远没有达到你会认为“处于历史高位、结构极为复杂且危险”的地步。因此在我看来，今天的 AI 行业正处于富有成效的建设繁荣期，尽管可能开始略微散发出一点——请原谅我的粗俗——变质的气味。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Well, when we're looking at a technology boom, a technology cycle, we've got to keep into consideration two different things. The first is, are customers finding it useful? Are they paying for it? Are they increasingly paying for it? In other words, is demand real, and is demand there?
+
+And when you look back at bubbles that burst, it is almost always connected to a problem in the financing mechanism, the refinancing of shorter-term debt. It runs into a problem, and the capital goes away, and you see all of the things that we associate with bubbles.
+
+The question is, where are we today? And where we are today is that demand is very strong from American and global enterprises. There is not an overbuild yet. There is vast undersupply of the compute needed for AI. And the race seems to be: can we get enough chips and power enough chips over the next two or three years to keep up with the demand?
+
+And on the financing side, we are certainly moving off the cash that the hyperscalers have earned over the last 20 years or so, and we're bringing debt on board, but it's not yet at the levels at which you would say this is a historically high and complex position. So for me today, it's in that productive boom, with the hints of maybe getting—forgive my French—a little bit stinky.
+
+</details>
+
+### 算力投资的核心逻辑：资产寿命、利用率与代际演进
+
+**主持人**：我想把焦点放在最基础层面的供求关系上。Paul 的核心观点大体上是说：各家公司面临着强大的动力去建造、建造、再建造。但如果你去算一算账，比如把 token 的生产成本与消费成本做个对比，就会发现实际的变现回报其实微乎其微。这是否意味着，大家正在投资建设的基础设施很可能会被闲置？因此，我希望你帮我梳理一下，在你眼中这种需求全景究竟是怎样的？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: So I want to focus on the supply versus demand right at this very simple level. What Paul's basically saying is that there is a strong incentive to build, build, build. But if you actually do the math on the cost to produce tokens versus what's being consumed, there's very little actual monetization that comes back. Is that an asset that people are investing in or not? So, I'd like you to walk me through how that demand picture looks to you.
+
+</details>
+
+**嘉宾**：我们需要从比 token 更底层的物理结构谈起。我们正在投资的底层资产是数据中心，其中 65% 的成本来自于芯片（GPU）或 ASIC。而这些芯片不仅能运行当下这代模型，也能运行下一代模型，甚至再下一代模型。这些 GPU 拥有三到五年的经济寿命。
+
+只要这些 GPU 的利用率能够保持在合理区间——比如 60%、70% 乃至 80%——无论你在上面运行的是训练工作负载还是推理工作负载，它们都能持续创造现金流。而且随着时间推移，你可以把较旧的芯片顺延用于低价值但高频次的工作，比如将前代芯片调去专门做推理，或者处理企业内部的日常检索增强任务。
+
+更关键的是，我们看到企业对算力的承接意愿不仅真实，而且正在向长期合同演进。现在的企业客户不再只是按小时随用随付，他们正在签订长达一到三年、锁定算力容量的长期承诺协议。云服务商也能够以此锁定未来的现金流。所有这一切在我看来，都是市场正在一周接一周、一个季度接一个季度逐步走向成熟的典型标志。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Well, we have to start a layer below the tokens. The asset we're investing in is data centers, 65% of the cost of which is the chip, the GPU, or an ASIC. And those chips can run not just this generation of models, but the next generation of models, and the generation after that. Those GPUs have an economic life of three to five years.
+
+As long as the utilization on those GPUs stays in a reasonable range—say 60%, 70%, 80%—whether you're running training workloads or inference workloads, they generate cash. And over time, you can cascade older chips down to lower-value but high-volume tasks, like moving prior-generation chips into inference or enterprise retrieval tasks.
+
+Crucially, what we see is that enterprise appetite for compute is not only real, but it's maturing into long-term contracts. Enterprises are not just buying on-demand spot instances; they are signing one- to three-year capacity commitments. Hyperscalers and cloud providers can underwrite debt and capital against that visibility. All of that for me is a sign of a market that is maturing week after week, quarter after quarter.
+
+</details>
+
+### 质疑与交锋：Token 消耗现实与宏大叙事的断裂
+
+**主持人**：Paul，你是怎么看这个问题的？你眼中的景象有何不同？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Paul, what do you—how do you see that differently?
+
+</details>
+
+**Paul**：我简直不知道该从何反驳起。首先我想说的是，目前关于这个话题的大量讨论——我是经过深思熟虑才用“讨论”这个词的——都夹杂着太多混淆与虚妄。
+
+大家在谈论 AI 需求时，往往把非常不同的场景混为一谈。有些人描述的场景就像是科幻电影：你对 AI 说一句“哥们，帮我写个健身 App”，转眼之间，这区区七个单词的提示词就演变成了一百万行代码，伴随着极其庞大惊人的 token 吞吐和计算消耗。但这根本不是你我平时使用 AI 的实际方式，也绝不是绝大多数真实业务运作的常态。
+
+普通人和普通企业绝大部分真实的日常使用场景，要远远平淡得多，其输入与输出在量级上其实是接近一对一的……
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: I hardly know where to start. Um so, let me just say like a lot of the discussion, and I use that word advisedly, with respect to how people talk about this... conflates fundamentally different things.
+
+When people talk about AI demand, they often imagine this wild scenario where someone says, "Bro, build me a fitness app." And all of a sudden, seven words turns into a million lines of code. That's not anything like what you and I do for the most part. A lot of what normal people and normal businesses do is closer to kind of a one-to-one...
+
+</details>
+
+<!-- chunk 3/9 -->
+
+### 企业真实需求与“Token狂欢”的终结
+
+**Paul**：关系，甚至是可以被压缩的。比如我会说，我收到了高盛发来的25封电子邮件，唠唠叨叨讲着这事那事。那些内容里有任何值得一读的东西吗？而这是可以压缩的，对吧？因为我把一大堆庞杂的信息拿过来，经过处理并将其精简成体量很小的要点。这让我觉得非常高效。或者类似地，处理其他某些电子邮件、日历安排等等。所以关键在于，这些前沿模型现在试图面向的“普通用户”，根本无法用早期市场里那些用户的行为来代表。因为解码器（解密式工作流）是非常罕见的。
+
+你其实已经看到类似迹象了，比如 Meta 将内部允许使用外部前沿工具的开发者数量直接减半，微软也是如此。你知道，过去那种疯狂刷 Token 的日子——比如你们公司内部还会做图表，比谁是消耗最多 Token 的冠军——那些日子早已一去不复返了。普通企业承受不起这种开销，很多人在短短几个月内就耗尽了整年的预算。所以我的观点是，我们已经在远离早期那种肆无忌惮滥用 Token、人人都试图从巨大的粪堆里找小马驹的时代了。
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: relationship or even compressible. Like I'll say, I got 25 emails from Goldman Sachs babbling about something or another. Are any of those things worth reading? And that's compressible, right? Because I'm taking a whole lot of stuff and producing and turning into something small. And that feels efficient to me. Or similarly, some other email or a calendar or whatever. So, the point being that normals, the people that these frontier models want to sell to now, are not really well represented by what people in the early days of the market were doing. Because decoders are really unusual. And you're already seeing some of that with uh Meta cutting in half the number of developers in-house who are allowed to use external frontier tools, Microsoft the same thing. You know, the days of token maxing where you like had, you know, charts internally that said, you know, who's the winning at using the most tokens. Those are long over. Normal companies can't tolerate that. People were blowing their entire budgets in like months. So, my point is is we're already moving away from this early days of profligate token use and everybody looking for ponies inside of giant piles of manure.
+
+</details>
+
+### 前沿模型与底层算力基础设施的区分
+
+**Host**：Azeem？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Azeem?
+
+</details>
+
+**Azeem**：好的。在他那一堆巨大的粪堆里，Paul 也玩了点障眼法。Paul 刚才谈论的是前沿模型和 Token。而我所谈论的，是我们一直在讨论的资本支出和算力产能，也就是 GPU。我认为这是两码事，值得分别进行讨论。我的意思是，前沿模型实验室（像 OpenAI 和 Anthropic）面临的商业模式困境——系统功能越来越强大，而能用得起的用户群体却可能越来越窄——这与超过万亿美元资本投入数据中心建设的命运是完全不同的问题；美国和全球的企业正开始在这些数据中心上运行越来越多的 AI。
+
+我认为我们必须把这两者区分开来。一个是关于 Anthropic 或 OpenAI 面对 Paul 所指出的压力时，其长期的根本生存能力如何，以及它们会怎么应对；而另一个则是 GPU 以及正在建设的这套全新数字基础设施，是否能找到主要来自企业端的应用场景，当然正如我们确切听到的那样，也包括新闻聚合和其他智能体等消费端应用。我认为这是两个性质不同的问题。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem**: Yeah. In his giant pile of manure, Paul also had some sleight of hand. What Paul talked about was the frontier models and tokens. And what I talked about was the capital expenditure and the capacity we've been talking about, which is the GPUs. And I think that they are two different things that merit two different discussions. I mean, what happens to the frontier model labs, OpenAI and Anthropic, with this business model of ever more powerful AI systems that have a smaller and smaller yet sort of set of users is quite different to the question of what's going to happen with the trillion-plus dollars or so of capital that will go into building data centers upon which American and global businesses will start to run increasing amounts of AI. And I think we need to separate those two out. One is really about like the fundamental viability longer term of of Anthropic or Open AI and what they might do in the face of the pressures that that Paul has articulated. And I think the other is whether the the the GPUs and this new digital infrastructure that's being built out will find uses amongst predominantly enterprises, but of course as we rightly heard consumers through too through things like you know news and other agents. I think those are different questions.
+
+</details>
+
+### 泡沫破裂的传染风险与资本支出变现
+
+**Host**：对于你区分这两个问题，我想说——我也承认这可能是一个非常重要的困惑点需要厘清，因为大家在谈论是否存在泡沫，以及泡沫破裂或萎缩意味着什么时，所指的含义往往大不相同。据我所知，如果事实证明 OpenAI、Anthropic，或者 Alphabet 等等，如果它们的商业模式走不通——大家其实完全乐意花少得多的钱去用来自中国的 DeepSeek，导致 Anthropic 自身崩溃崩塌——这势必会重创整个经济。这在我看来就像是会在股市中引发全面传染一样。我的意思是，我并不一定认为这会把我们直接拖入大萧条，但我认为这会对估值产生极其巨大的冲击，也会严重影响人们未来的放贷意愿。你难道不这么认为吗？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: by you separating these questions. And I recognize it maybe this is an important point of confusion to to untangle because people can mean different things when they talk about whether or not there's a bubble and what it would mean for the bubble to pop or to deflate. As far as I can tell if it turns out that Open AI or Anthropic or for that matter, you know, Alphabet or whoever, that their business model here doesn't work that in fact people are perfectly happy to use Deep Seek from China for a lot less money and Anthropic like collapses in on itself that is going to pop the economy. Like that looks to me like it would become a contagion in the stock market. I mean, I don't necessarily think it throws us into a depression, but I think that would have a very very very big effect on valuations, on what people are willing to lend in the future. Do you not think that?
+
+</details>
+
+**Azeem**：我认为你需要把视角拉远，重新审视基础设施建设中所出现的根本风险究竟是什么：根本风险在于你没有足够的客户去对产品产生需求，并为底层资产支付足够的费用。如果企业转向由超大规模云厂商直接托管运行的开源权重模型，那不过是需求的转移而已。这可能会损害 Anthropic 的利润率，但它依然实现了对底层资本支出的货币化变现。然后另外一点……
+
+<details>
+<summary>Original English</summary>
+
+**Azeem**: Well, I think what you have to do is zoom back out and ask what is the the fundamental risk that emerges with a with a an infrastructure build out, which is you don't have enough customers who are demanding the product and paying enough for that underlying asset. And if people can move enterprises can move to open weight models that are being run directly by a hyper scalar that is just the demand moving. It may hurt Anthropic's margins, but it still monetizes the underlying capital expenditure. And then what one of the things
+
+</details>
+
+**Host**：这些资本支出基本上指的就是芯片吧？数据中心？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Which which are these chips basically? The data centers?
+
+</details>
+
+**Host**：英伟达……Anthropic 可能会倒闭，但英伟达依然会安然无恙。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Nvidia Anthropic might collapse, but Nvidia will be fine.
+
+</details>
+
+**Azeem**：但即便是 Anthropic，它也拥有非常多的自由度。在我看来，就在我们录制节目前过去的 24 到 48 小时里，他们刚刚下调了价格，并发布了更便宜、更高效的轻量级模型。围绕这些模型，他们依然拥有相当不错的产品利润空间。他们会采取软件公司几十年来一直在做的事情，那就是在核心能力之外，努力为你构建必须使用其软件的理由。这就是为什么他们推出了针对团队协作的 Claude Cowork，以及面向律师行业的专用版本。正因如此，如果说“Anthropic 明天一夜之间就会消失”，我实在想象不出在什么样的情况下才会发生这种事。但我想表达的核心是，你已经看到了终端客户的需求，而如果没有终端需求，这一切才会真正走向灾难性的结局。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem**: But but even so, Anthropic has got many many degrees of freedom. I mean, the last 24 hours or 48 hours since before we recorded this, it it cut prices and released even cheaper, more efficient lightweight models. These are still models around which they have a pretty decent margin. They will be doing the things that software companies have done for for decades, which is trying to construct reasons for you to use their software beyond the core capability. That's why they have Claude co-work, and they have Claude for lawyers. And that's why I think this question of if Anthropic disappeared tomorrow overnight, well, I can't quite imagine the circumstances under which that would would happen. But what I'm saying is that you're seeing the end customer demand, and that's the thing without which this will always end horribly.
+
+</details>
+
+### 何谓“泡沫破裂”：历史定义与回报重置
+
+**Host**：我也想顺便问你一下——因为我其实很想向你们两位同时抛出这个问题：在你们看来，到底什么才算得上是“泡沫破裂”？因为存在这样一种可能的情景：比如股市出现巨幅回调，但数据中心依然被充分利用，而在我听来，你似乎认为那并不算泡沫破裂，那只是一次回调之类的现象。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Can I just ask you also to because I want to actually ask you both this question of what for you counts as the bubble popping? Because there's a world here where, you know, you have, say, a giant stock market correction, but the data centers are still being used, and it sounds to me like you're saying that's not a bubble popping. That's just a correction or something.
+
+</details>
+
+**Azeem**：从历史经验来看，泡沫破裂通常会导致两件事：第一，是对该特定资产的投资水平发生断崖式下跌；第二，伴随相关资产市场（无论是股市还是其他资产市场）的严重崩盘。这就是我所采用的检验标准。我认为我们最终可能会面临这样一个世界：信贷基金和超大规模云服务商因为之前的投资决策，不得不面对极低且令人尴尬的微薄回报；但那种程度的痛苦并不是泡沫破裂，那只是有人做了糟糕的投资决策，在应该低价买入时高位接盘罢了。我认为我所依据的是一个非常经典的历史定义，即我们需要看到投资规模骤降 50%，同时在相关市场上看到极其剧烈且通常达到 50% 或更高的资产价格回调。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem**: Well, historically, bubbles, when they've popped, have resulted in two things. One is a huge decline in the level of investment in that particular asset, and they have been accompanied with a significant crash in a relevant asset market, whether it's the stock market or or something else. And that is the test that that I would use. I think we may end up in a world where there are grindingly low and embarrassing returns for credit funds and for hyperscalers because of the investments they've made, but that degree of pain is not a bubble bursting. That is just somebody made some bad investments and they bought high when they should have bought at a lower at a lower price. I mean, I think I would use a very very classic historical definition, which is that we need to see the level of investment drop by 50% and we need to see a really really substantial and typically it's been 50% or more correction in whatever the relevant market is.
+
+</details>
+
+### 股市高杠杆绑定与超度确定的系统性崩溃
+
+**Host**：Paul，同样的问题给你。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Paul, same question to you.
+
+</details>
+
+**Paul**：好的。基本上，我几乎不同意 Azeem 提出的每一个观点。这些所谓的定义都是主观任意的，我觉得我们可以这样来看待：回到我最初的论点上。在美国，大约 50% 的居民净资产目前都与股票市场紧密绑定。而股票市场中绝大部分都是科技股，科技股中绝大部分目前都系于 AI。随着接下来的两个月左右时间里这两起庞然大物般的超级 IPO 走向市场，这种情况只会进一步恶化。
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: I do okay. So, I I sort of disagree on almost every point that Azim is making. These are arbitrary definitions and I think let's just let's put it this way. Okay, so back to my original point. Something like 50% of people's current net worth in the United States is tied in equities. Most of equities is currently tech. Most of tech is currently AI. That's going to only get worse as these two monster IPOs come to market over the next, I don't know, 2 months or whatever.
+
+</details>
+
+**Host**：OpenAI 和 Anthropic？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: OpenAI and Anthropic?
+
+</details>
+
+**Paul**：OpenAI 和 Anthropic。顺便说一句，为了让大家理解背景：OpenAI、Anthropic，再加上 SpaceX（如果你把它也算进来的话），这三家公司的 IPO 规模加在一起，比二战以来所有上市公司的 IPO 规模总和还要庞大。这是一个极其反常的历史时刻。
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: OpenAI and Anthropic. And just to put that in context, by the way, OpenAI, Anthropic, and SpaceX, if you want to include it, combined, those three IPOs are larger than all post-World War II IPOs combined. Like, this is a really unusual moment.
+
+</details>
+
+**Host**：这统计数据太疯狂了。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: That's a crazy stat.
+
+</details>
+
+**Paul**：确实极其疯狂。不仅如此，这些公司的合并估值已经超过了当年纳斯达克在互联网泡沫顶峰时期的总市值。泡沫就明晃晃地摆在所有人眼前，而人们却非要说：“哎呀，我以为你长着金发呢，怎么是棕发。”朋友，仅仅因为它长得不合你的预设，并不代表它的脆弱性会有丝毫减弱。
+
+所以你可以设想一下，姑且为了论证方便假设 Anthropic 的 IPO 被推迟了，没有在今年 11 月发生，而是推迟到了明年。那么它们未来的融资能力将面临剧烈的重新定价和估值下调，连带那些为它们供货的上下游供应商企业也会同样遭殃，因为现在所有的一切，都是建立在这些目前仍处于一级私募市场中的巨额估值之上的高杠杆运作。
+
+所以我常说，这里的失败风险已经是“超度确定”（Overdetermined）的。有太多的诱因足以让整套链条全盘断裂，并且是以极具灾难性的方式崩塌。我再举一个例子：席勒周期调整市盈率（CAPE），这是衡量美股估值处于何种历史水平的一个更长期的指标。而我们当前所处的位置，已经来到了恰恰是 1929 年大崩盘前夕相同的估值水平。我们正站在绝对具有历史性的……
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: It's a crazy stat. And not only that, the combined value of those companies is larger than the value of the Nasdaq market capitalization at its peak. Like, the bubble is sitting right in front of people and they want to say, "Well, I expect you to come with blonde hair, not brown hair." Dude, just because it doesn't look the way you want it to look doesn't make it any less fragile. So, you could imagine, let's say, just for the sake of argument, the Anthropic IPO gets pushed out. It doesn't happen in November, it happens next year. There will be a sharp revaluation in their ability to raise funds, as well as in the companies that are supplying them, because everything is leveraged off the valuation of these companies that are currently sitting in private markets. So, I I like to say this is the failure here is over determined. There's so many ways it can all break and break really catastrophically because I'll give you another example. The the what's called the sick the Schiller cyclically adjusted price earnings multiple, which is a a sort of a longer term measure of where US equities sit. We're sitting at the levels we sat just before the crash of '29. We're sitting at absolutely historically
+
+</details>
+
+<!-- chunk 4/9 -->
+
+### 市场估值与席勒市盈率的分歧
+
+**Paul**: 前所未有的水平，就整个市场的估值而言。这就是问题所在：人们缺乏想象力，而且根本不愿正视世界上正在发生的更广泛的数据，因为他们总说：“嗯，这看起来不像上一次泡沫，所以我们肯定没事。”
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: unprecedented levels in terms of market-wide valuation. And this is the problem is people lack imagination and simply refuse to engage with the broader data about what's actually happening in the world cuz they say, "Well, this doesn't look like the last bubble, so we must be fine."
+
+</details>
+
+**Azeem**: 让我来说两句，不过我想我会直接切入核心。我是觉得，使用非常情绪化的语言是很容易的。我始终很留意……
+
+<details>
+<summary>Original English</summary>
+
+**Azeem**: Well, let me But I think I'm going to I'm just going to come in directly at it. I mean, I I I think that it's very easy to use very colorful language. I'm always mindful of
+
+</details>
+
+**Paul**: 这可都是数据，不是什么修饰性的语言，这确确实实就是数字。这些都是实打实的数字，你对此怎么看？比如就周期调整市盈率（CAPE）而言，我们正处于历史上前所未有的高位。在你的标准里，这算好事吗？
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: Well, this is data. It's not colorful language. It's actually numbers. These are numbers like what's what's your response to like we're sitting at historically unprecedented numbers in terms of like the cyclical price adjusted earnings. Like is that good? Is that good in your book?
+
+</details>
+
+**Azeem**: 关于席勒市盈率（CAPE Shiller），反驳意见之一就是席勒市盈率根本无法指示择时。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem**: Well, one of one of the one of the responses about the Cape Shiller is that Cape Shiller doesn't say anything about timing.
+
+</details>
+
+**Paul**: 那是因为它衡量的是一个经调整的长期时间跨度，并不仅仅是一个短期指标。
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: Well, it's because it's because it's a it's an adjusted long period horizon. It's not just a near term thing.
+
+</details>
+
+**Azeem**: 它是一个回顾历史十年的指标，有时会低估整体经济……
+
+<details>
+<summary>Original English</summary>
+
+**Azeem**: it's a historical 10-year look back that can sometimes understate underlying changes in the regime of the the the economy
+
+</details>
+
+**Paul**: 好吧。
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: Okay.
+
+</details>
+
+**Azeem**: ……以及市场底层机制的根本转变。但这里还发生了另一件事，我认为你所描述的很多情况，Paul，其实早就已经被股市投资者消化在价格中了，而且信贷市场也已经对其进行了定价。就在过去几周我们刚刚亲眼目睹了：澳大利亚一家数据中心公司的 IPO 被撤回了，因为投资者对该公司所承诺的前景并不满意。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem**: and the market. But there's there's something else that's going on, which is I think a lot of what you're describing Paul is already priced by equity investors and it's being priced by the credit markets. We've seen it just in the last few weeks. We've seen an IPO for a data center company Australia get pulled because investors weren't happy with what they were being promised.
+
+</details>
+
+### 数据中心 IPO 撤回的真正原因
+
+**Paul**: 那根本不是它被撤回的原因。
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: That's not why it was pulled.
+
+</details>
+
+**Azeem**: 那你说它为什么被撤回？
+
+<details>
+<summary>Original English</summary>
+
+**Azeem**: Well, why was it pulled then?
+
+</details>
+
+**Paul**: 它被撤回，是因为当前这个前所未有的特殊关口：有两美元规模的超级巨无霸 IPO 正在我们周围盘旋蓄势，等待上市，它们正在把市场上所有的风险资本抽吸殆尽。大家都在想：“对，我们手里这个 IPO 看着确实挺精致小巧，但我们现在根本没有接盘的资金容量。”
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: It's pulled because of this unprecedented moment where $2 IPOs are in orbit around us waiting to come to market, and are sucking all the risk capital out of the market as people say, "Yeah, this looks really cute, this IPO we have, but there's we don't have any capacity to do that right now."
+
+</details>
+
+**主持人**: 好吧，但在某种程度上，我认为这其实更印证了 Azeem 的观点。当你提到这些正在盘旋的大型 IPO 时——我们谈论的是 OpenAI 和 Anthropic，而且 OpenAI 进入公开市场的预期时间似乎又稍微推迟了一点。从“这一切并不纯粹是泡沫”的角度来看，耐人寻味的是，大量真正身家利益攸关的高智商成熟投资者，在深入审视之后都认为这些估值是讲得通的。所以，Paul，当你听到其他人持这种观点时，作为一名同样在思考这些事情的投资者，你认为他们所有人到底犯了什么错误？你说这仅仅是数学，但这显然不只是算术问题，因为其他人也都会算账。归根结底，这是你对这套数学逻辑的解读。那么，你对数据的解读到底和市场的分歧在哪里？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Okay, but I think that in a way actually goes to Azeem's point a bit. When you talk about these massive IPOs that are circling, and we're talking about Open AI and Anthropic, and Open AI's gotten pushed back a little bit for when they seem like they're going to launch actually into the into the public markets. The thing that is interesting about that from, I think, the perspective of it's not all a bubble, is that sophisticated investors in mass numbers who really, really do have skin in the game here, are looking at these and saying they make sense. So, when you hear this from other people, Paul, and you're an investor, and you think about these things, what mistake do you think all these people are making? When you say it's just math, it's clearly not just math, cuz everybody else can do math. It is your interpretation of the math. So, where does your interpretation of the math differ from, you know, the market?
+
+</details>
+
+### IPO 本质：融资扩张还是套现离场
+
+**Paul**: 好的。你必须去思考，为什么这类 IPO 会发生，为什么大家会蜂拥而入。一方面，这确实是因为大家预期这可能会成为拥有长期特许经营权的出色企业，等等等等；但另一方面，也是因为他们认为，等到上市以及锁定期届满时，他们可以把股票抛售给其他同样抱有这种想法的人，对吧？追溯到最开始，IPO 存在的初衷是什么？过去 IPO 的存在，是为了让一家需要扩张发展的企业能够募集到资金。但现在的这些公司根本不是这么回事，对吧？这些企业已经完成了主要的增长阶段。等它们真正上市的时候，年化营收可能都已经达到一千亿美元、或者七百亿美元之类的量级了。所以，这些本质上是变现退出事件（exit events）。是公司内部的持股人在表态：“我不再需要我的股票了，全部给你们吧。”他们之所以把股票卖给场外人士，是因为在当前这种估值水平下，相比于持有 Anthropic 或 OpenAI 的股票，他们更宁愿拿走现金。
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: sure. So, you have to think about why why these kinds of IPOs happen, and why people are piling into them. It's partly in anticipation of what they think could be, you know, a fantastic business with a long-term franchise, da da da da da, but it's also because they think that when it comes time and when the lockup expires, they can sell the stock to someone else who thinks that, right? This is This is the essence of going back to the very beginning of why do IPOs exist? IPOs used to exist to allow you to raise money for a company who needed to grow. These are not that, right? These companies have done their growing. They're probably actually going to be, I don't know, $100 billion in run rate revenues by the time they come out, or $70 billion, or something like this. So, these are exit events. These are people inside the company saying, "I don't need my stock anymore, you can have it." So, they're selling their stock to people on the outside because they let this at this valuation they'd rather have cash than Anthropic stock, or cash than Open AI stock.
+
+</details>
+
+**Azeem**: 换成那样的估值，我也想落袋为安拿现金啊。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem**: valuation, I'd like to have cash, too.
+
+</details>
+
+**Paul**: 对，当然，一点没错，换成我也愿意交出去。但关键在于，这绝不是内部人士在表达“我由衷看好公司未来的发展前景”。届时我们将看到全面的老股东抛售套现，因为这是一场离场套现盛宴，而非资本融资行动。
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: Yeah, sure, absolutely, yeah, I'd hand it over. But, the point being that like this is not a this is not a a gesture where they're saying, you know, I really like the our prospects with the company. There's all there's going to be selling shareholders across the board because this is an exit event, not a financing event.
+
+</details>
+
+**Azeem**: 但这也是其他场外买家在表达“我非常看好你们公司的前景，我渴望成为股东持有它”。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem**: is a gesture where other people are saying, I do like your prospects as a company, and I want to own this.
+
+</details>
+
+### 从 SpaceX 前车之鉴到博傻理论
+
+**Paul**: 当初 SpaceX IPO 预期发酵时，外界说的也是完全一模一样的话，而后来发生了什么我们大家都有目共睹——此前所有的狂热最终演变成了一场轻微过山车式的持续下滑走势。所以我预计，在这里你将看到如出一辙的戏码，因为在市场术语中，这些就是变现退出事件。在锁定期结束后，你会看到大量套现股东蜂拥而至，毫不犹豫地把股票倾倒给任何愿意入场接盘的人。这就是为什么必须看清它的本质：它是一场退出套现事件。人们买入，只是为了盘算着转手卖给你。这就好比牌桌上的老话：如果你在扑克牌桌上不知道谁是那个更大的傻瓜，那那个傻瓜就是你自己。现在的局面就是典型的博傻，我实在不明白为什么大家会视而不见，而这正是让整个局面显得如此前所未见的原因。
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: I the same thing was said in anticipation of the SpaceX IPO, and we've all seen what happened subsequent to that, that all of this fervor before it turned into a, you know, kind of a a sort of a light roller coaster decline. So, my expectation is you'll see the exact same thing cuz these are, in market terms, exit events. You're going to be a wall of selling shareholders showing up post lockup selling into anyone who'll show up and want to and want to take the shares from them. And that's why this needs to be understood for what it is, an exit event. People are buying in anticipation of selling to you. If you want to It's like the old line about the poker table. If you don't know who the greater fool at the table is, it's you. This is that, and I don't understand why people don't see it that way because that's what makes this so unprecedented.
+
+</details>
+
+**Azeem**: 我想针对这一点插一句。我认为 Paul 所描述的情形，其实是多年来许多 IPO 本身的一贯常态。当我们审视 Anthropic 以及它是否能成为一家可持续发展的企业时，我们恐怕需要去查阅它在提交 S-1 招股书时披露的数据——S-1 是核心的法定文件，它本质上定义了你在 IPO 时买入的到底是一家怎样的公司；我们得看它的收入增长轨迹、利润率走向、客户群体的广度、客户留存度如何，以及核心大客户的客单价是否在持续扩大。而不是仅仅依赖坦率讲充斥着拼凑报道和传闻的外部噪音，其中有些属实、有些不准，但没有多少能为我们勾勒出一幅关于公司的清晰画像。我认为这也引出了过去两三年里我们所有人不得不面对的一个巨大痛点：这些公司体量已经变得庞大无比，但它们依然是未上市的私营企业。它们根本不需要对外披露太多信息，甚至可以完全不披露。外界所能获知的无非是一星半点的传言、流言蜚语，以及偶尔有可靠信源的爆料。正因为它们至今构成了整个人工智能交易行情的核心支柱，并由此推高了更广泛市场的估值（目前科技股在市场中的权重已经达到比如 38%），我们却始终无法像平常对待上市公司那样，真正穿透去检验它们内部的真实运营情况。而我认为 IPO 的价值就在于，虽然我们不会得到每一个细节的答案，但至少能获得我们评估这些商业模式所必须掌握的关键信息。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem**: I'll just I'll just come in on that. I mean, I think what Paul describes is really what many IPOs have been like for for many, many years. And when we take a look at Anthropic and whether it can be a sustainable business, we probably need to look at what it will show in its S-1 when it's the S-1 is the document. It's the document essentially for what this company is when you're going to buy it at at IPO, and look at what's happening with its revenue trajectory and its margin trajectory, and the breadth of its customer base, and whether customers are sticking with it, whether those accounts are growing, beyond what has been, frankly, a lot of patchy reporting and leaks, some of which is accurate and some of which is is inaccurate, but not much of which gives us a cleaner picture of of the company. And I think that draws one of the really big issues we've all had to deal with over the last two or three years, which is these companies have got very big, but they are still private companies. They don't really need to disclose much if anything at all. And what comes out is a smattering of rumor, scuttlebutt, and the occasional well-sourced leak. And because they have essentially been structural to the AI trade so far, and they have been as a consequence the thing that has spun valuations of the of the wider market, whatever it is now, 38% tech. But we have not been able to inspect the way we normally can with public companies what's really, really going on. And I think what happens with the IPO is that we we won't get every answer, but we get some of the answers that we need about these these businesses.
+
+</details>
+
+### 客户集中度与爆发式营收
+
+**Paul**: 不过就这一点而言，我们现在其实已经有了一个部分的答案，而且我觉得非常有意思，因为这简直就像恐怖电影里的情节——凶手竟然就潜伏在自家屋子里。前不久 Anthropic 意外泄露了谁是他们最大的客户之一。他们发出了招聘启事，说需要招一名所谓的“超级大客户业务总监”（mega account executive）之类的高管。他们试图招募这样一个人，随后大家很快就意识到，通过公开描述的该客户特征，完全可以交叉印证出这个客户就是 Meta。也就是说，这名大客户总监专门负责对接对这一家单一公司的销售业务。经过推算，仅 Meta 一家就贡献了他们约 10% 的营收。所以这就又回到了……
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: We have a partial answer now though, just on that point though, which I think is amazing because it came from you know, what's that thing with the horror movies with the killers inside the house? This is a little bit of one of those where Anthropic accidentally leaked who their who one of their largest customers was. They said we needed to have What was it called? A mega account executive or something like this. They were trying to hire one, and then they all quickly realized that by saying who their largest customer was, you could triangulate and say that this was for Meta. So this was their account executive to handle sales to a single company. That it worked out that Meta something like 10% of their revenues. And so this goes back to
+
+</details>
+
+**主持人**: Meta 占了 Anthropic 收入的 10%。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Meta is 10% of Anthropic's revenue.
+
+</details>
+
+**Paul**: 没错。
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: That's right.
+
+</details>
+
+**Azeem**: 但那是 2025 年的数据，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Azeem**: But that was in 2025, right?
+
+</details>
+
+**Paul**: 就算是吧。
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: So yeah.
+
+</details>
+
+**Azeem**: 我们必须明确一点。让我们……
+
+<details>
+<summary>Original English</summary>
+
+**Azeem**: And let's just be clear. Let's
+
+</details>
+
+**Paul**: 但必须搞清楚为什么这对他们至关重要。
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: But just to be clear about what why that matters to them.
+
+</details>
+
+**Azeem**: 不，真正重要的是，Anthropic 今年第一季度的营收就已经超过了去年整个日历年的全部总和。所以我们现在的做法，就像是一边盯着后视镜一边喊：“哎呀，我们在 700 码前撞到了一只松鼠。”而我们真正需要做的，是抬头看向前方……
+
+<details>
+<summary>Original English</summary>
+
+**Azeem**: No, but what matters is that Anthropic's revenue in the first quarter of this year was bigger than the entirety of last calendar year. So what we're doing is we're looking at a rearview mirror and saying, "Oh, we hit a squirrel 700 yards ago ago." What we need to look is look out of the
+
+</details>
+
+**主持人**: [笑声]
+
+<details>
+<summary>Original English</summary>
+
+**Host**: [laughter]
+
+</details>
+
+**Azeem**: ……看往前方的挡风玻璃。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem**: you know, the the windscreen.
+
+</details>
+
+**Paul**: 这正是为什么这些公司如此反常。我们从未见过这种体量的企业，在客户数量如此之少的情况下就寻求上市。这……
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: This is why these companies are so unusual. We have never seen companies on this size go public with such a small number of customers. The
+
+</details>
+
+<!-- chunk 5/9 -->
+
+### 客户高度集中：Anthropic 面临的结构性风险
+
+**Paul Kedrosky**：……客户名单的集中度，可能仅仅八家公司就贡献了他们 80% 的营收。这种情况在正常商业中是极不寻常的。多年前我曾担任证券分析师，从分析师的视角来看，这对我而言将是巨大的风险来源。审视这一现状，我会说，对如此少数客户的极端依赖——而且这些客户大多将其用于同一类用途——这种客户集中度在商业史上是空前的。因此，他们无意中泄露的，其实是这家公司在业务上的脆弱性：它的风险敞口不仅在于系于单一客户群体，更在于这些客户都在做同一种老套的事情，那就是编写代码。这正是我想要强调的核心观点，也是让这些案例显得如此反常的原因。
+
+<details>
+<summary>Original English</summary>
+
+**Paul Kedrosky**: ...concentration of their customer list, it might be eight companies that make up 80% of their revenues. That doesn't happen. And so, as a I was an equity analyst years ago, this would be a colossal source of risk for me. I'm looking at it, I'm saying the dependency on such a small number of customers who are mostly using it for the same thing is historically unprecedented to have such customer concentration. So, what they accidentally leaked was the fragility of the business in terms of its exposure not just to a single customer, but to a single customer who was doing that same old thing of writing code. And this is this is the point I want to make. That's what makes these so unusual.
+
+</details>
+
+**Azeem Azhar**：Paul 刚才那番话的绝妙之处在于——如果大约八家客户占据了 80% 的业务份额，那就意味着平均每家客户贡献了 10% 的营收。这种比例必须在上市招股书（S-1 文件）中明确披露。因此，这实际上给我们提供了一个高度可证伪的预测：如果 Anthropic 未来真能成功上市，等到其 S-1 文件公布时，我们便能一探究竟，核实是否真的是八家公司贡献了 80% 的营收。这极具参考价值，因为如果 Paul 的判断属实，那这种财务结构确实显得有些非同寻常且激进了。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem Azhar**: The beauty of what Paul has just said, which is sort of eight customers 80% of the business, is that that's 10% per customer. That would have to be disclosed in the S-1. So, we have actually a very, very falsifiable prediction that we will be able to check when the S-1 comes out if Anthropic does successfully go public and say was it really 80% and eight companies representing 80% of the business. And that's really helpful because if Paul's right, that is a bit—that's a bit exotic, right? It's a bit spicy.
+
+</details>
+
+### 苹果的独特策略：不参与前沿大模型竞赛的赢家？
+
+**Ezra Klein**：如果您还不是《纽约时报》的订阅用户，我们有一个好消息：现在下载《纽约时报》App，首月即可免费畅读全站内容，没有任何付费墙限制。
+
+言归正传，我认为苹果在这里是一家非常值得关注的公司。因为与 Alphabet 旗下的谷歌、Meta 不同——当然 OpenAI 和 Anthropic 本身就是 AI 原生公司；微软曾是 OpenAI 的主要投资方，现在也在尝试研发自己的前沿 AI；甲骨文在算力领域下重注，信用评级如今几乎紧贴着垃圾债门槛——而苹果却断然决定不参与前沿大模型的竞赛。当其竞争对手如今每年斥资 1000 亿、2000 亿甚至 3000 亿美元进行资本支出（capex）时，苹果每年的资本支出大概只有 150 亿美元左右？而今年苹果的股价表现却超越了所有这些竞争对手。苹果作为这里唯一一家选择不参加前沿大模型“奥林匹克竞赛”的主要巨头，却似乎正在成为赢家，这是否说明了什么深层逻辑？
+
+<details>
+<summary>Original English</summary>
+
+**Ezra Klein**: If you're not a subscriber to The New York Times, we have some news for you. You can now explore the Times for free without any paywalls at all during your first month in The New York Times app.
+
+I think Apple is a really interesting company here. Because unlike Alphabet Google, unlike Meta, obviously OpenAI and Anthropic are AI companies. Microsoft was a major OpenAI investor and is now also trying to make its own frontier AI. Oracle is heavily, you know, invested here and is like now just like right above junk bond status. Apple just decided to not compete in making a frontier AI. While their competitors are now spending, you know, 100 to 200 to 300 billion dollars in capex every year, Apple's spending what, 15-ish billion in capex per year? Their stock this year has performed better than any of these other companies' stocks. Does it imply anything that Apple, in being the one major player here, to not try to compete in the frontier model Olympics, seems to be winning that?
+
+</details>
+
+**Paul Kedrosky**：这就是苹果独特的行事风格。让我先从这个核心逻辑讲起。
+
+<details>
+<summary>Original English</summary>
+
+**Paul Kedrosky**: ...the way Apple does it. Let me start with the theme here.
+
+</details>
+
+**Azeem Azhar**：对，没错。我的意思是，苹果的商业模式决定了他们根本不需要自己去运营前沿模型。用户购买他们的 iPhone 手机，购买他们的 MacBook 笔记本电脑，偶尔再订阅一部流媒体电影或类似的服务。因此，无论 AI 的发展走势如何，他们都能稳稳赚钱。
+
+但我同样认为，这其中存在一个极其重要的文化驱动机制：苹果对细节有着极度的执着。我记得关于史蒂夫·乔布斯（Steve Jobs）的一个故事，许多年前当他刚推出 iPhone 时，他曾亲自致电谷歌负责双方合作的高级副总裁，并在电话里痛斥对方，仅仅是因为当时谷歌 Logo 上的黄色色号用错了。苹果非常在乎细节，也在乎对产品的绝对控制权。而大语言模型固然在许多方面强大无比，但它们恰恰是最不受控的，极容易出现各种无能为力或失控混乱的状况。我认为，苹果即便拥有绝佳的定位——拥有硬件设备、掌握隐私入口，完全有机会成为用户的个人智能体代理——却依然选择按兵不动的文化原因在于，他们绝不希望面对大语言模型终将带来的不可控混乱，尤其是在坐拥 10 亿庞大活跃用户群体的情况下。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem Azhar**: Yeah, yeah, sure. Yeah. I mean, Apple has a business model that means they don't need to run a frontier model. We buy their phones, we buy their laptops, and then we might subscribe to the odd movie or something like that. So, they make money regardless of the AI. But I also think there's a really important cultural dynamic, which is Apple cares a lot about detail. I remember this story of Steve Jobs when he was rolling out the iPhone many, many years ago, phones the then senior vice president at Google who's responsible for the partnership, and blasted him out because they'd used the wrong color yellow on the then Google logo. Apple really cares about detail, and they care about control. And large language models are powerful in many ways, but they're not about control. They can get very, very hapless. And I think that one cultural reason why Apple would have held back, even though it's so well positioned to, you know, be the personal agent—it's got the device, it's got the privacy—is that it won't want the mess that a large language model will ultimately deliver if you've got a billion people using it, which is what Apple's estate looks like.
+
+</details>
+
+### 搭便车还是互补品：谁真正从资本狂欢中获益？
+
+**Paul Kedrosky**：是的，我并不觉得苹果在这件事上有多么英明高瞻。我认为他们大部分时间其实是搞砸了，只是运气特别好而已。他们曾多次尝试涉足 AI 领域：组建了团队，随后又解散了团队；一会儿打算把模型深度整合进 Siri，一会儿又放弃整合，始终没有取得实质性突破。
+
+但他们从自身的无所作为中获得了巨大的红利——他们成了典型的“搭便车者”（free rider）。他们得以搭上所有人巨额资本支出的便车，最终毫发无损甚至光彩照人地胜出，因为他们根本不必承担庞大的资本开支，直接调用别人耗巨资构建的成果，端坐在生态顶层即可。
+
+从更广阔的视角来看，我们将看到大量此类现象，因为前沿厂商正在把真金白银堆在营火上熊熊燃烧，而这能够惠及大量其他外围企业。苹果高居其上，无需亲自烧钱训模型。再看像 Cloudflare 这样的公司，作为曾经基本被市场遗忘的底层互联网基础设施企业，其股价在过去大约 18 个月里暴涨了三倍。因为人们突然意识到：“等等，如果网络上到处充斥着各式各样的机器人漫游抓取，这其实构成了一种全新的网络攻击形态，我们必须确保有人能应对这股庞大的新增流量。”
+
+因此，我们所看到的这轮疯狂投资，最终的真正受益者往往是一大批名字既不叫 OpenAI，也不叫 Anthropic 或 Grok 的外围公司。这是一个非常关键的洞察，甚至可以追溯到 1920 年代的全面电气化时代：当公用事业公司在 1929 年大崩盘中纷纷倒闭时，真正的核心受益者是谁？正是制造依赖电力运转的终端产品厂商，比如空调制造商等其他实体企业。所以毫无疑问，未来我们会看到大量这种意外的顺风车和搭便车现象。
+
+<details>
+<summary>Original English</summary>
+
+**Paul Kedrosky**: So, yeah, I don't think Apple was very smart about this. I think they mostly screwed it up and got lucky. Um so, they tried various times to make forays into AI. I mean, they had teams, they disbanded teams, they were going to integrate it with Siri, they weren't going to integrate it with Siri, and they didn't ever get anywhere. And what they benefited from though was by their inaction, they were a classic free rider, right? They got to free ride on everyone else's gigantic expenditures, and they come out the other side smelling like roses because they didn't actually have to make the expenditures, they can use what's being built by others, and sit on top of it.
+
+But, I think writ large, we're going to see a lot of that because people are burning money on a bonfire, which can benefit lots of other companies, you know, so Apple sitting on top of it not having to build models. Uh, look at people like Cloudflare, for example. I mean, here's a company that largely forgotten, was kind of basic internet infrastructure, stock has tripled in the last, what, 18 months because suddenly people like, "Wait a minute. Wait a minute. If we have all these bots ranging around the internet, that's kind of like a new form of attack. That we need to make sure that we have who's out there that they can deal with all of this new traffic." And so a lot of this investment that we've seen out there will turn out to be beneficiary to a whole host of companies whose names are not OpenAI, Anthropic, Grok, or whomever else.
+
+And I think that's a really important point. And that goes back to the, you know, the days of electrification in the 1920s. Like, who were the primary beneficiaries once the utilities all began collapsing in the crash of '29? Well, it was of course the people building things that required electricity, air conditioner manufacturers and others. And so yeah, for sure we'll see a lot of this, you know, accidental piggybacking and free riding on top of this.
+
+</details>
+
+**Azeem Azhar**：但这并不单纯是偶然的搭便车和蹭热度，它是……
+
+<details>
+<summary>Original English</summary>
+
+**Azeem Azhar**: But it's not accidental piggybacking and free riding. It's—
+
+</details>
+
+**Paul Kedrosky**：苹果可没有提前规划过这一切。
+
+<details>
+<summary>Original English</summary>
+
+**Paul Kedrosky**: Apple didn't plan this.
+
+</details>
+
+**Azeem Azhar**：这在经济学上被称为“互补性服务”（complementary services）与“互补性业务”。当经济学家用极其审慎客观的学术语言去描述这一演进过程时，指的就是：一项通用目的技术（GPT）横空出世并不断迭代成熟，随后便会催生出对各类互补性服务的刚性需求，无论是后续的系统维护、安全修复，还是借助该项新技术开拓出的全新商业应用场景。这就是一项通用目的技术的标准演进轨迹：它逐步渗透到各个垂直领域中。在某些情况下，它确实表现为一定程度的搭便车；但在像 Cloudflare 的案例中，现实是全社会跨行业广泛部署了大量自动化 Bot 和 AI 智能体，以至于整个互联网上的企业都不得不求助于 Cloudflare 来寻求安全防护与流量过滤。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem Azhar**: It's called complementary services. That's—and complementary businesses. That's what economists, when they're, you know, being very moderate with their language, just describing the process, which is a general purpose technology shows up, it continuously improves, and then it starts to create the need for complementary services, whether it's maintenance, or whether it is, you know, repair, or whether it's something you can now do with the technology. This is the normal evolution of a general purpose technology. It finds its way in, and in some cases, it's a bit of free riding. In other cases, what's happened with Cloudflare is that we've been able to across the economy automate so many bots and AI agents that businesses on the internet are turning to Cloudflare to try to protect them if they can.
+
+</details>
+
+### 资产负债表与外溢风险：从现金流消耗到债务驱动
+
+**Ezra Klein**：我想就这些科技巨头提出一个在我关注的 AI 泡沫辩论中频繁出现的关键问题。我们这里讨论的大型科技巨头——诸如 Alphabet、Meta 等——它们坐拥极具深度的现金储备，完全是依靠自身极度健康的资产负债表来驱动这一切投资的，这与历史上资金链紧绷的铁路狂热公司截然不同。当马克·扎克伯格表示“哪怕我们错误耗费了数千亿美元会令人遗憾”时，他潜台词其实是在宣告：“即使我们真挥霍了数千亿美元，我们也能安然承受，毫无大碍。”
+
+在许多人看来，社会大众不必对此过度担忧的一个主要论点正是：本轮资本周期是由具备极强自主亏损吸收能力的企业在用自己的资产负债表推动，并不会向整体宏观经济产生连锁传染效应；这绝不同于 2008 年金融危机中那些错综复杂的衍生品雷区。Paul，你对私人信贷领域做过极其深入的思考，而且就目前这些算力资本的融资方式而言，市场上显然已经出现了向发债和债务杠杆倾斜的明显趋势。对于“因为这些科技巨头拥有不可思议的天量资金可以任性亏损，所以广大社会大众就能独善其身、不受波及”这一论调，你究竟怎么看？
+
+<details>
+<summary>Original English</summary>
+
+**Ezra Klein**: Let me ask something actually about these big companies that has come up a lot in the bubble debates I have followed. Which is the major companies we are talking about here, your Alphabets, your Metas, etc., they just have a lot of money. And so they're doing this from a very healthy balance sheet, which is not the case sometimes for these railroad companies, etc. When Zuckerberg says, you know, it would be sad if we misspent hundreds of billions of dollars, what he's also saying is we can misspend hundreds of billions of dollars, it'll be fine.
+
+And one argument I've seen is that one reason you don't really need to worry about this is that it is being driven by companies that can absorb losses on their own balance sheet without contagion in the rest of the economy. You're not dealing with something like, you know, derivatives in the 2008 financial crisis. Paul, you thought a lot about the private credit dimensions. I mean, there has been a movement towards debt in some of the the way this is being financed now. How do you think about the question of are we protected from this, we being broader society, because these companies have ungodly amounts of money to lose if they so choose?
+
+</details>
+
+**Paul Kedrosky**：答案是：我们根本没有受到保护。
+
+这是一件非常讽刺的事情。大约在一年前，不少人劝我闭嘴，叫我别再在这个话题上喋喋不休了。他们的理由是：这些都是世界上最聪明的顶尖企业，它们坐拥惊人的经营现金流，你算什么人，凭什么对它们指手画脚？当时我的反应就好像是：好吧，算你们说得有理，我被你们驳倒了，那我就不再谈这个了吧。
+
+然而仅仅一年过去后的今天，实际数据向我们揭示了什么？资本开支正在迅速从原先完全依赖自由现金流支撑，全面转向大举借债融资。到了这个关口，你不得不举起手打断他们质问：“嘿，等等，先稍等一下！还记得你们一年前拍着胸脯向我保证过的那些话吗？”
+
+<details>
+<summary>Original English</summary>
+
+**Paul Kedrosky**: No, we're not. So, this is a funny thing. So, like a year ago, people told me to stop babbling about this stuff because these are smart companies, they have prodigious cash flows, who are you to tell them what to do? And I was like, oh shucks, you've got me there. So, I'll stop saying this. And then, of course, we're now a year later. What does the data show? Spending is moving away from cash flow to debt. So, you know, you put up your hand and you say, hey, wait a minute, wait a minute. Remember that thing you said—
+
+</details>
+
+<!-- chunk 6/9 -->
+
+### 华尔街的杠杆游戏与科技巨头债务累积
+
+**主持人**: ……去年？但现在这已经不再适用了。那么，我现在该开始担忧了吗？人们却说，不，你现在完全不必担心，因为他们的资产负债表非常健康干净，这些都是资质极佳的信用主体。我当时心想：糟糕，我可能在这个问题上连续两次判断错时机了。但严肃地讲，每当一家公司拥有极为干净健康的资产负债表时，究竟会发生什么？华尔街最擅长的事情，就是让这种干净的资产负债表变得不再干净。因为他们会不断帮你融资，融了一轮又一轮，背后的承销费用极其诱人；而随着他们不断为你举债，你的信用评级就会开始下滑。我们已经在甲骨文（Oracle）身上看到了这一幕，在微软身上也处于这一边缘，其他一些超大规模云服务商（hyperscalers）同样正面临类似境况，因为这就是华尔街的一贯作风。他们看到一张健康的资产负债表，看到一家行业术语中所谓的“无杠杆公司”，就会源源不断地用信贷去给它加杠杆。
+
+为了规避这一点，这些公司开始尝试各种手段——Meta 大概是其中最典型的例子——他们采用更为复杂的特殊结构，好让债务不直接挂在自身的资产负债表上。他们利用所谓的“特殊目的载体”（SPV），利用各种表外融资工具，宣称：“嘿嘿嘿，那可不是我的债务。我知道这归我控制，但它挂在那边那个名字古怪的机构名下——听起来就像新奥尔良的某种百吉饼一样——那是别人的债务。”
+
+所以这完全就是一场障眼法游戏。现实是，将所有这些汇总起来，我们如今已经走到了一个历史性拐点：科技行业以往最核心的优势原本是“高增长、零负债”，对吧？而现在，科技公司已经成为全美最大的投资级债券发行主体。这个行业曾经引以为傲的特质，除了高速增长之外，就是资产负债表相对干净；如今却走向了截然相反的反面。这些公司背负的债务越来越沉重，并且逐渐主导了整个发债市场，其程度甚至已经开始波及主权债务。过去两三周债券市场之所以出现恐慌，原因之一就是超大规模云服务商发行的债券期限与美国10年期国债重叠，在边际上甚至对美债形成了挤出效应，从而倒逼美国10年期国债收益率走高。事情已经疯狂到了这种地步。所以是的，局面已经彻底改变了，而这种债务积压在未来会带来极其深远的后果，变得越来越像1990年左右的日本——所有这些巨头企业的资产负债表上都堆满了沉重的债务，不得不长年累月地艰难去杠杆。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: ...last year? It's no longer true. So, should I worry now? And it's like, no, you don't need to worry now because they have pristine balance sheets. These are great credits. And I'm like, oh, crap, I might just my timing is wrong twice on this. And then, of course, to be serious, what happens whenever you have a pristine balance sheet? What Wall Street is very, very good at is making it less pristine because they'll they'll continue to raise money for you and raise and raise and raise for you because the fees are tremendous and what and as as they do so, your credit rating declines and we're seeing that with Oracle. We're seeing that we're on the cusp of that with Microsoft. We're on the cusp of that with some of the other hyperscalers because that's what Wall Street does. They see a pristine balance sheet, an unlevered company in the terms of the of art of the industry and they'll continue to burden it with credit. 
+
+And so the way that these companies try to get around it, Meta is probably the best example, is they use somewhat more exotic structures so the debt doesn't actually sit on their balance sheet. They use things called special purpose vehicles. They use things that are off-balance sheet financing. They say, "Hey, hey, hey, hey, that's not my debt. I know I control it, but it's over there with that funny named thing that sounds like a sort of a New Orleans bagel. Um that's somebody else's debt. 
+
+And so this is all just a shell game and the reality is it rolled up, we've now at a point where tech, whose main advantage historically was fast growth, no debt, right? Tech is now the largest issuer of investment-grade bonds in the United States. This is an industry whose claim to fame other than growth was that they were relatively clean. They're now the exact opposite. These are hugely debt-encumbered companies increasingly and that are dominating the issuance marketplace to the point that it's even having an impact on sovereigns, right? So one of the reasons why we had the the bond market freak out over the last two, three weeks was because of the role of hyperscalers issuing credit at the same duration as the 10-year in the United States which at the margin was actually outcompeting the US which caused yields to have to go up in the 10-year. So that's how crazy things have become. So yeah, I know it's completely transitioned which is going to have, you know, huge consequences down the road in terms of this debt overhang that starts to look increasingly like, you know, Japan circa 1990. This kind of all these corporations with giant balance sheets loaded with debt that are trying to work it off.
+
+</details>
+
+### 资本与实体资源的挤出效应：从荷兰病到住房危机
+
+**主持人**: 嗯，阿齐姆（Azeem），硬币的另一面在于，被挤出的不仅仅是债务资本——在资金层面上，这些超大规模企业正在与整个经济中的其他所有人争夺资金——而且建筑资源、实际物资同样在被严重挤出。我敢肯定你一定见过最近流传的那些图表，它们明确揭示了现实中的挤出效应正在发生：是的，我们正在大举建设，我们将海量资金砸进 AI 的资本支出（CapEx）中，但在一个住房供应本就严重不足的国家，住宅建设投资却在下滑；制造业厂房和工厂的建设支出也在萎缩，或者至少所占的投资份额在缩减。因此，在建筑施工与资本开支层面，资金似乎确实在从实体经济的其他部门大规模转移到 AI 投资中。我想，如果 AI 最终取得巨大成功，那自然没问题；但如果它没有成功，或者哪怕你只是觉得其他领域被严重低估了——正如我常说的，我认为住房是一项更加稳健的投资，虽然它不会带来像押注英伟达那样的高额回报，但它至关重要，而且我也能更清晰明白地解释为什么多盖房子能让更多人的生活变好。你对这里的挤出效应问题是怎么看的？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Well, the other side of that, Azeem, is that it's not just debt that is being crowded out where these, you know, hyper scalar companies are competing with everybody else for for money, it's also construction, it's also real materials. I mean, I know I'm sure you've seen these charts going around that imply there's real crowd out happening. That yes, we are building, we are pumping money into AI CapEx, but home building in a country that does not have enough homes is going down. Spending on manufacturing plants and factories is going down or at least like the the the sort of share. And so there there does appear to be a movement from investing in other parts of the economy at a construction and CapEx level into investing in AI. I guess if AI works out great, that's fine, but if it doesn't or even if you just think these other things are, you know, underrated as I say, maybe I think for homes, homes are more stable investment. They don't return give you returns like the like investing in an Nvidia does, but they're pretty important and I have like a cleaner way of explaining why more homes would make more people's lives better. How do you think about the the crowd out question here?
+
+</details>
+
+**Azeem Azhar**: 当我们审视投资率时，回顾一年前的2025年夏天，我曾撰文分析如何评估我们究竟是处于繁荣期还是泡沫期。当时我的观察结论之一是：在那个阶段，超大规模企业主要依靠自身的经营现金流和自身资产负债表进行资本支出。一旦这种情况发生改变，他们开始转向外部融资，就会引入巨大的风险。我对风险加剧设立的临界线大约是外部融资占比达到30%左右，而这正是我们在2026年底目前正在逼近的水准。这些指标并非一成不变，但挤出效应确实是一个真实存在的难题，而且是一个极其复杂棘手的议题。
+
+我认为可以参照的一个典型历史案例，是20世纪70年代的荷兰。当时他们在北海发现了储量巨大的天然气田，整个经济随即彻底转向油气开采，从而引发了所谓的“荷兰病”（Dutch disease）——实质上就是经济的这单一板块吸干了其他所有经济活动的人力与资本。而在美国，如果说这种情况尚未全面爆发的话，它同样存在演变成现实的巨大风险。
+
+那么随之而来的问题就是：我们该如何应对？又该如何去适应这种转变？恐怕我唯一的答案是，这需要一定的政策干预，需要某种政策层面的刺激引导，以确保那些民生和传统部门能够获得其生存与发展所需的经济资源，因为我并不相信单靠市场力量本身就能自发解决这个问题。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem Azhar**: Um when we look at uh investment rates, a year ago back in the summer of 2025, I wrote about how I assessed whether we're in a boom or a bubble and one of my observations was that at the moment the hyper scalars are spending out of their own cash flows and their own balance sheets. As soon as that starts to change and they go to external finance, you introduce lots more risk and my thresholds for more risk was a about 30% uh of the uh uh 30%, which is about the level that we we are approaching now at the end of 2026. These things are are not set in stone. 
+
+Uh the crowding out problem is a is a real problem and it's it's it's really uh a complicated and thorny issue. I mean, I think one place to to think about was um what happened in in the Netherlands in the 1970s when they discovered a lot of uh natural gas uh off the North Sea, and uh the entire economy oriented around gas extraction. You got this thing called Dutch disease, where effectively that part of the economy was sucking up all of the activities. And there are, you know, there could be a risk that that will happen in the US if it isn't already happening right now. And and I think then the question is, what do you do about it, and how do you actually uh you know, adapt to that? And I'm afraid my only answer is that it requires something of policy, something of a policy stimulus to make sure that those sectors get the activity that they need, because I'm not persuaded that market forces on their own would would do that.
+
+</details>
+
+**主持人**: 在这样一个时期提出依赖政策干预，似乎是一剂相当难咽的苦药——正如两位所指出的，我们当前的领导层行事极不稳定，而与此同时，在惊人的整体债务规模之下，我们的借贷成本正在急剧攀升。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: That seems like a tough uh prescription at a time when as they both we have very erratic leadership, but our borrowing costs are going pretty high amidst incredible levels of debt.
+
+</details>
+
+**Azeem Azhar**: 呃，你看，政治是你们自己的政治，你知道的，你们每四年有一次投票机会，做出你们自己的选择。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem Azhar**: Well, look, your your politics is your politics, and you know, you get to vote every 4 years and make the choices that that that you make.
+
+</details>
+
+**主持人**: 然后承担其后果。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: And then live with them.
+
+</details>
+
+**Azeem Azhar**: [笑声]
+
+<details>
+<summary>Original English</summary>
+
+**Azeem Azhar**: [laughter]
+
+</details>
+
+**Azeem Azhar**: 没错，然后承担相应的后果。不过，政策并不一定非要涉及直接补贴，对吧？它完全可以采取其他形式的政策干预手段。所以这确实是一个非常棘手的问题。只要其他替代性投资的回报率更高，只要对数据中心的庞大需求持续对电工、建筑工人、暖通空调（HVAC）技术人员以及数据中心所需的一切工种造成供给侧冲击，这种挤出就会持续发生。
+
+但凡事都有其转机，这里确实存在一个转机：那就是伴随着这些建设，整个社会正发生着大规模的技能升级（upskilling）。如今有海量的电工正在接受专业培训，大量的暖通空调工程师正在被系统培养，大批建筑工人也在迅速提升技能；建筑承包企业规模不断扩大，未来它们将逐步释放出富余的产能。虽然我不知道这最终会以何种方式收场，但在未来一年、两年或三年内，这些培育出来的生产能力和专业技能都将沉淀在整体经济当中，并能够被其他行业广泛调用。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem Azhar**: Right, and then live with them. But but it doesn't have to involve subsidies, right? It can involve other types of you know, policy interventions. So, I'm not it's it's a it's a really difficult problem, and it will continue to happen so long as the returns on the other investments are are higher, and so long that that's that that that that is creating a supply shock on electricians and construction workers and HVAC technicians and all the other things that are needed in data centers. 
+
+But but and there is there is a but to all of this, which is that of course, there's a lot of upskilling going on. There are many, many electricians being trained. There are many HVAC engineers being trained. There are many construction workers being trained. There are construction firms who are growing, and who will start to have spare capacity. And I don't know how that ends up, but in a year or two or three years that capacity, those skills will be in the economy and able to be used.
+
+</details>
+
+### AI 落地图景与真实企业生产率变革
+
+**主持人**: 所以，我想换个角度提问，不再从股市和资金流向的框架来谈。我想探究的是：在这样一个企业、个人乃至政府都深度使用 AI，足以使这些庞大投资从大局上看获得回报的真实经济体中，日常经济运转究竟会是什么样子？即便在这场竞逐中，某些企业可能最终无法进入赢家行列，甚至面临倒闭。阿齐姆，你花了很多时间深入思考这个问题。如果让你试着为我描绘一幅景象——在通用电气（GE）、可口可乐这样普通的传统企业里，在 AI 豪赌真正兑现回报的世界中，日常图景会是怎样的？会有哪些变化？如果海量资金都被用于采购 AI 代币（tokens），那么原先的哪些支出会被削减替换？这里正在发生的核心演变究竟是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: So, I want to ask this not in terms of stock markets and financial flows. I want to try to ask what does this economy look like in which companies and people and governments for that matter are using enough AI to make these investments writ large pay off. Even if, you know, some companies may not end up being in the winner's circle here and may may fail. So, Azeem, you spend a lot of time thinking about this. If you were to try to paint me a picture of what things look like at normal companies, your GEs, your Coca-Colas, um in this world where the AI bet pays off, what does it look like? What is different? What are we not What is not being spent on if so much money is being spent on AI tokens? Like, what is happening here?
+
+</details>
+
+**Azeem Azhar**: 你知道，当我与企业高管交谈时——我每年都要与欧洲和美国的几十位企业掌舵人沟通——我听到的基本都是同一套反馈，那就是：“我们在 AI 方面正在取得进展；这比我们预想的要更加艰难；我们会继续推进下去，而且已经开始初见成效。”那些更有信心的企业管理者则表示，他们正在斩获越来越多切实的成果。
+
+但我认为，很大一部分回报——除非企业自身的业务体量能够实现飞速暴增——将来自对离职员工补充招募的逐步缩减。借助 AI 变得越来越高效的企业，其单名员工创造的营收（dollars per employee）将会大幅跃升。而如果企业整体的业务增长速度没有赶上这种生产率的增速，那么他们的员工总人数（headcount）就会开始平稳下降。但我们……
+
+<details>
+<summary>Original English</summary>
+
+**Azeem Azhar**: You know, when I talk to to bosses and I talk to them across Europe and the and the US, dozens every every year, they the the I I hear this the same sort of thing, which is um we're making progress with AI. It's harder than we thought. We're going to keep doing it and we're starting to get results. And the more confident ones say, we're getting more and more results. 
+
+But a large part of it is coming now, I think, will will come unless businesses grow very, very quickly from just a slow reduction in in replacement of of workers. That companies that are getting more productive with AI will be delivering more dollars per employee. And if they're not growing faster than that productivity growth, then their their head counts will will start to to to fall. But we
+
+</details>
+
+<!-- chunk 7/9 -->
+
+### AI 原生企业与全电化历史类比
+
+**Speaker A**：我还想补充一点，其实真正的“AI 原生”（AI native）企业非常少。回想电力的发展历程，所谓的“电力原生企业”，是像福特汽车公司这样建立起端到端装配流水线的企业。但美国大部分地区在那之后又过了十五到二十年才完全实现电气化。我想，在硅谷之外，现在还很难指出任何一家实体主街（Main Street）企业可以说已经真正转型为 AI 原生企业。你所能看到的，充其量只是业务中的某些局部环节似乎在使用大量的 AI。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I should just add that, you know, there are very few AI native companies. When we think about electricity, the electricity native companies were people like the Ford Motor Company with its end-to-end production line. But most of America didn't get fully electrified for another 15 or 20 years after that. And I don't think I can really point to a Main Street firm outside of Silicon Valley that you could say this company has become AI native. What you can see are bits of the business that look like they're using a lot of AI.
+
+</details>
+
+**Speaker B**：好，好。但如果你所说的 AI 原生企业，是指成功用 AI 取代了人类员工的公司——
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Okay. Okay. But if the AI native company that you're talking about is a company where you've managed to replace people with AIs—
+
+</details>
+
+**Speaker A**：是的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah.
+
+</details>
+
+**Speaker B**：那么你似乎正迅速倒向大家普遍担忧的那种前景：AI 在整个经济体层面对就业产生净负面影响。除非你相信会有大量新公司不断涌现，而且它们不知何故仍然属于劳动密集型；然而从理论上讲，新成立的公司反而会更加 AI 原生，因而对人类劳动力的需求会更少。那么这究竟算不算一个良性世界？而且如果真是那样的世界，在人们不断失去工作的情况下，又有谁来消费花钱呢？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: So now you seem to be really quickly tipping into the much worried about world in which AI is net negative for jobs across the economy, unless you believe there are all these new companies starting that are somehow very human labor intensive—even though, in theory, the new companies starting are going to be more AI native, so less human labor intensive. So is that actually a good world? And then if that's the world, who's spending more money in this world where people are losing jobs?
+
+</details>
+
+### 通用技术的劳动力结构转型与时间滞后
+
+**Speaker A**：我认为这里面包含了几种不同的发展动态。其一，依然会有很多事情是 AI 做不到的，那就是需要人类参与的层次：由人类负责审核验证、执行最终把关签署，以及处理模型无法胜任的事务。通常情况下，那些身处这些关键关口环节的人，其报酬反而会因此变得越来越高、越来越好。其二，你将开始看到企业内部涌现出一整类全新的岗位，是目前我们完全无法想象的。就像 1993 年时大家根本不知道什么是“网站管理员”（Webmaster）一样。
+
+其三，这是通用技术（General-purpose technology, GPT）必然伴随的文化维度。正如 Paul 之前对通用技术的描述，它们往往会构建起我们此前无法预见、无法精确指出的全新工作类别与行为模式。想想亨利·福特，因为有了福特，我们有了汽车；因为普及了汽车，人们搬到了郊区居住；郊区化催生了度假出行；而度假又催生了围绕其建立的整个服务业生态。
+
+我对此并不是盲目乐观。我认为真正面临的挑战在于，创造这些全新岗位所需的时间，可能远比技术扩散所发生的其他一切都要漫长。但我的另一个观察是，我对这一过程的时间预期通常是五到十年，而不是一两年或两三年。因为管理团队消化理解如何利用这项技术去重构业务，本身就需要时间。绝不可能出现你拿到 OpenAI 最好的模型，跟它说一句“帮我改造公司”，它就能帮你解决好一切。这些变革都需要时间，这正是我与各家企业管理者交流时的切身感受——无论他们渴望推进得多快，现实中就是需要耗费时间。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Well, I think there are a number of different things going on. You know, one is that there are still things that the AIs won't be able to do, and those will be the layers of humans doing verification, doing the last sign-off, doing the things that the models cannot do well. And what would typically happen is that those people will end up being paid more and better as a consequence of sitting at that choke point.
+
+I think that the second thing that you will start to see is a whole class of roles that we can't imagine within companies. You know, whether it's things like the webmaster, which didn't exist in 1993.
+
+And then I think the third thing is really the cultural dimension of a general purpose technology. This is where Paul was describing the GPT: they tend to construct entire new classes of work and behavior that we hadn't been able to put our fingers on. If you just think about Henry Ford, because of Henry Ford, we ended up with motor cars; because we got motor cars, we ended up with people having suburbs; suburbs led to vacations; vacations led to all the services that sit around there.
+
+Now, I'm not blase about that. I mean, I think the challenge we may find is that it takes longer to create those new roles than anything else that happens. But the other observation I would make is that my time horizon for this runs in 5, 7, 10 years, not one or two, not two or three. Because I do think it just takes time for management teams to absorb what it is they have to do with this technology, and it's just not the case that you get the best model from OpenAI and say, "Fix my company," and it fixes it. These things take time, and that's what I see when I talk to bosses. However fast they want to move, it just takes time.
+
+</details>
+
+**Speaker B**：Paul，你是怎么看这个问题的？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Paul, how do you see this?
+
+</details>
+
+### 劳动力重新定价与岗位替代的冲击速度
+
+**Paul**：呃，我们本质上是在对劳动力进行重新定价，对吧？这是人类历史上普及采用速度最快的一项技术，其核心功能就是对认知劳动力进行重构定价。这是一场深刻的冲突，因为西海岸科技圈对此信奉的教条是：技术创造的就业机会总是多于它消灭的岗位。于是这成了一句被大家反复念诵的口头禅，所有人都在祈祷它能应验成真。
+
+但现实是，我们从未见过任何一种通用技术具备如此广泛的适用性、普及速度如此惊人，并且同时在对劳动力进行剧烈的重新定价。我说“对劳动力重新定价”，意思是以呼叫中心为例，它使得完成这项工作的成本大幅暴跌。其结果就是，在全社会想清楚如何把所有人转变成所谓的“新时代网站管理员”之前很久，这种变革就已经带来了巨大的动荡。
+
+问题就在这里：它的推进速度远快于以往任何通用技术，以至于那些大谈“创造的岗位必将超过消灭岗位”的高谈阔论，完全背离了那些切身受冲击人群的实际生活经历。这种论调很容易沦为一种诡异的洗脑口号，就像在敷衍说：“别为你那颗漂亮的小脑袋操心了，一切都会好起来的。”所以，不，我认为这种颠覆性破坏的速度将远远把我们创造新岗位的速度甩在身后。
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: Uh, we're basically re-pricing labor, right? I mean, this is the fastest adopting technology in history, and its fundamental function is to re-price cognitive labor. And this is the deep struggle, because the article of faith, the West Coast ideology on this stuff, is technology always creates more jobs than it destroys. And so it becomes just a thing that people repeat like a mantra that they hope will become true.
+
+And the reality is we've never seen a general purpose technology that had such broad applicability, was adopted so quickly, and was re-pricing labor at the same time. Because when I say re-pricing labor, I mean it's making it vastly cheaper to do things like call centers, for example. And as a result, this change is going to be destabilizing long before we figure out how to turn them all into—I don't know what the equivalent of webmasters is.
+
+And so this is the problem, right? Is that it's happening so much faster than any prior GPT that these sorts of arm-waving about creating more jobs than it destroys belies the lived experience of people who are affected by this stuff. And so it can quickly become just some kind of strange mantra like, you know, "Don't worry your pretty little head, everything will be fine." So, no, I think the disruption will vastly outpace our ability to create new positions.
+
+</details>
+
+### 行业抵制与监管突变的累积风险
+
+**Speaker B**：这也让我意识到另一种形式的经济风险，不仅针对普通打工人，其实也针对 AI 行业本身，并且可能导致当前泡沫以某种形式破裂或萎缩——如果它真是一个泡沫的话。因为你可以设想这样一个世界：核心矛盾根本不是企业愿不愿意采用 AI。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: This has also struck me as another form of economic risk for not just workers, but actually AI and for, you know, some form of this bubble popping or deflating if it is a bubble. Because you can imagine a world where actually the problem is not whether or not companies are willing to adopt AI.
+
+</details>
+
+**Paul**：[嗤笑]
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: [snorts]
+
+</details>
+
+**Speaker B**：实际情况是，特别是在更大的经济下行压力下——利率居高不下，甚至可能出现某种衰退——各家公司开始极其激进地用 AI 去替代人类劳动力（毕竟人类需要医保、会组织工会、还会有各种意见）。紧接着便会爆发巨大的社会反弹。目前社会上已经存在对 AI 的强烈抵制：已经有人自发组织起来反对兴建数据中心，他们不希望这些设施建在自己社区周边。
+
+而且，如果你对职业准入许可制度、住房建设或其他领域的监管历史有所了解，就会发现群体组织起来反抗其实并不困难。比如，教师们完全可以联合起来宣布：“禁止 AI 进入课堂，教育领域严禁使用 AI”；医生们也可以突然组织起来抵制；或者万一出现几起恶性事件，患者因为 AI 给出的错误诊断而受害，AI 就可能彻底被医院拒之门外。
+
+甚至 Anthropic 在其上市风险提示中都明确表示：“对人类的生存风险可能是本次 IPO 的潜在风险之一”。如果发生某种重大的系统失控事件，比如攻击者不再只是入侵 Hugging Face，而是让 OpenAI 入侵了富国银行（Wells Fargo），甚至渗透了中国的某些系统——
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: That actually, particularly under more economic strain—interest rates keep going higher, maybe there's a recession of some sort—companies begin moving very aggressively to replace human labor (which needs healthcare, unionizes, and has opinions) with AI. And then there's a huge backlash. There's already a huge AI backlash: already people organizing against building data centers; they don't want those where they live.
+
+But if you know anything about the history of occupational licensing or building homes or anything else, it's actually not that difficult for, say, teachers to organize and say, "No AI in the classroom. Actually, education is off-limits for AI." Doctors all of a sudden to organize. Maybe there's a couple of bad events where people are getting bad diagnoses off of AI, and so it's sort of locked out of hospitals.
+
+Anthropic in their risks to their IPO says, "Existential risk to humanity is possibly one of the risks of this IPO." If there's some major control incidents where, instead of hacking Hugging Face, OpenAI hacks Wells Fargo, or it hacks something in China—
+
+</details>
+
+**Paul**：是的。
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: Yeah.
+
+</details>
+
+**Speaker B**：于是转瞬之间，严苛的监管风暴骤然而至——不是温和渐进的，而是一次性全面压制。所有这些在我看来都是真实存在的威胁，即出现断裂式、突变式监管的可能性。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: And all of a sudden regulation comes in, not a little bit, but all at once. All of those things seem like real risk—that the possibility of discontinuous regulation—
+
+</details>
+
+**Paul**：对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: Is that right?
+
+</details>
+
+**Speaker B**：在我看来这比其他风险更为迫切，甚至我不想断言它是不可避免的，但在我看来概率极高。所以我很好奇你是如何看待这一点的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: —to me than elsewhere, and also seems, I don't want to say inevitable to me, but quite likely to me. So I'm curious how you think about that.
+
+</details>
+
+### “未经许可的人体试验”与监管必然性的概率模型
+
+**Paul**：从这些公司推出模型的最初阶段起，这就一直是我的核心批评：他们本质上是在向全公众进行一场未经许可的药物临床试验。从某种意义上说，这些技术具备极其重大的社会后果；倘若他们是一家制药公司，FDA 早就立刻介入调查并严加监管了。然而，仅仅因为它们属于科技公司，就可以随意开展这种超大规模的社会试验。他们还若无其事地说：“顺便提一句，我们打算彻底重塑整个教育体系；我们要推出这些能渗透政府网站及其他系统的东西。”
+
+我们仅仅因为侥幸生活在“迄今为止这些技术尚未杀死我们”的某条时间线上，就认为科技公司可以不受惩罚地任意妄为，这种观念简直荒谬透顶且站不住脚。我认为，我们正不可避免地走向这样一个结局：在发生某种可怕的灾难性事件之后，必定会强行出台某种事后补救型的追溯式监管。但那只有在造成重大实质伤害之后才会降临。
+
+让我给你一个具体的分析角度，这也是我经常向大家解释的方式——因为人们总会问：“到底什么事情会触发那种监管呢？你这不过是自己凭空编造假设罢了。”但你仔细想想：[嗤笑] 我们大概随手就能构想出五种、十种甚至十五种可能导致强力监管的潜在情景，其中每一个单独发生的概率可能都不算高，假设都不超过 5%。
+
+那么做个算术：假设我有六起独立事件，每起事件发生的概率仅为 5%，那么至少有一件发生的概率是多少？大约是 20% 多。如果我有整整一打（12起）这样的潜在恶性情景，每起发生的概率同样不超过 5%，那么其中至少发生一起的概率是多少？已经超过了 50%。而现实中，这类技术可能引发祸端并最终招致铁腕监管的途径，远远不止十二种！因此，从概率统计的角度来看，灾难与监管的降临几乎是必然的。这就好比——
+
+<details>
+<summary>Original English</summary>
+
+**Paul**: This has been my complaint from the very beginning of the process by which these companies have launched models: that they've essentially been conducting unlicensed drug trials on the public, in the sense that these are hugely consequential technologies that are launched in a way that, were they a drug company, you would immediately have the FDA on your back. And yet, because they're technology companies, you can do these mass trials: "Oh, by the way, we're going to transform all of education. We're going to launch these things that can penetrate government websites and other things."
+
+So this idea that you can do this with impunity in technology because we live in the timeline where so far these things haven't killed us is just ridiculous and indefensible. And I think we're inevitably headed towards a world where, after some kind of terrible event, there's going to be some kind of post hoc regulation imposed, but it'll only be after consequential damage.
+
+And I'll give you a specific—this is the way I often try to characterize it to people, because they'll say, "Well, what's going to cause that? You can just come up with this stuff." If you think about it, there's probably 5, 10, 15 different sorts of scenarios we can come up with that might lead to regulation, none of them probably having a probability of more than 5%.
+
+So let's say I have six events, each of which have a 5% chance of happening. What's the likelihood that any one of them happens? It's like 20%. If I have a dozen events—possible scenarios that are all bad, each of which have no more than a 5% chance of happening—what's the likelihood that one of those happens? It's more than 50%. We have way more than a dozen ways that these things could cause trouble and end up requiring regulation. So looking at it that way, it is almost inevitable. So it's like—
+
+</details>
+
+<!-- chunk 8/9 -->
+
+### AI 监管的必然性与社会许可证
+
+**Ezra Klein**：……有 50% 到 60% 的概率会发生某种直接催生监管的事件，然而大家却依然袖手旁观，嘴上说着：“嗯，你知道的，这不太可能发生，或者那种情况不太可能出现。”所以，不，这里的监管是不可避免的。它的形式可能会类似于美国食品药品监督管理局（FDA），或者某种类似于原子能委员会的机构，因为这项技术的影响同样极其重大，而且它们在社会各个层面产生更广泛连锁反应的途径实在是太多了。人们竟然能如此轻描淡写地忽视这一点，着实令我感到震惊。阿齐姆（Azeem），你是如何看待这种政治风险维度的？
+
+<details>
+<summary>Original English</summary>
+
+**Ezra Klein**: a 50-60% chance that something happens that drives regulation, and yet people continue to sit around and say, "Well, you know, this isn't that likely, or that isn't that likely." So, no, regulation here is inevitable. It'll take the form of something like the FDA, maybe some kind of atomic energy board, because it's just as consequential, and because there are so many different ways for them to have broader consequences in society. And it's amazing to me that people sort of glibly pass that off. Azeem, how do you see this political risk dimension?
+
+</details>
+
+**Azeem Azhar**：你看，我认为纵观各大产业，当存在适度监管时，行业往往能发展得相当不错。制药业就是一个极佳的例证。当我们思考究竟该由谁来为此买单时，从基础模型实验室一路到超大规模云服务商（hyperscalers）的这些 AI 公司，未来都将赚得盆满钵满。因此，显而易见，这个系统里充斥着充足的资金，而且也存在有能力承担部分账单的企业。
+
+我认为目前正在发生的、特别是在美国围绕数据中心展开的抗议活动中，真正令人振奋的一点在于：这实际上是普通民众在表达他们对这项技术及其展现方式的不安。理解这种现象的恰当视角是，这是一种民主意愿的表达，对吧？这是民意的表达，也是不确定性的表达。人们希望从这种博弈中最终孕育出的，是一种更好的“社会许可证”（social license），一种能让公众感到越来越安心的契约。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem Azhar**: Well, you know, I think when you look at industries, industries grow quite well when there's a little bit of regulation. As the pharmaceutical industry has, you know, is a great great example. And I think when we think about who's going to pay for this, the AI companies from the model labs through to the hyperscalers are going to be making a lot of money. So, it's fairly clear that there is money in the system, and there are people who firms who can cover some part of the bill. And I think one of the things that's really exciting about the data center protest that you're seeing, particularly in the US, is that actually it is people expressing their sense of unease about this technology, the way it's manifesting itself. And the way to look at that is that that is a democratic expression, right? That is an expression of will, that is an expression of uncertainty. And what you would hope to come out of something like that would be a better social license, which people are more and more comfortable with.
+
+</details>
+
+### 数据中心基建与地方经济的失衡
+
+**Azeem Azhar**：我推测在美国国内，由于各州拥有州级层面的治理权力，其中一部分监管与规范可能会在州一级推行。而在英国目前正在发生的情况则是，政府试图让数据中心开发商将一部分固定收益再投资回当地社区。因为我们很少公开讨论的一个事实是，一座耗资巨大的庞大数据中心，实际上雇佣的员工屈指可数。我的意思是，那可能是一个耗资数十亿美元的项目，但创造的就业岗位却寥寥无几，这根本算不上什么真正的经济拉动……
+
+<details>
+<summary>Original English</summary>
+
+**Azeem Azhar**: Now, you know, I suspect that within the US, because you have state-level governance power, that some of this may be done on a state-wide basis. What's happening in the UK is that there is an attempt to get people developing data centers to reinvest annuities into the local community. Because one of the things that we don't really talk about much is that a huge data center might employ very few people indeed. I mean it may be billions of dollars, but it's a handful of jobs and that's not really—
+
+</details>
+
+**Ezra Klein**：对于一座耗资数十亿美元的设施来说，通常也就两到六个人。
+
+<details>
+<summary>Original English</summary>
+
+**Ezra Klein**: Like two to six people for a multi-billion dollar facility.
+
+</details>
+
+**Azeem Azhar**：如果你去计算每个新增就业岗位的单位成本，其数字往往是惊人的。我最近恰好研究了新墨西哥州的一个项目，即使抛开数据中心本身的建设建造成本不谈，仅算政府提供的税收减免以及为配合其落地而必须对当地公用事业网络进行的升级改造，平均每创造一个就业岗位所耗费的补贴就高达 400 万美元。这些数字简直令人匪夷所思。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem Azhar**: if you do the math in terms of the job cost per jobs created, it's often—I was looking at one in New Mexico recently. It's $4 million in terms of subsidies per job created leaving aside the cost of the center. If you look at the tax abatements and the required improvements to you know, local utilities. The numbers are insane.
+
+</details>
+
+**Ezra Klein**：所以从长远来看，这种模式根本无法持续运转。不过，其中切实有利的一面在于，整个系统内部确实有钱，因为从硬件基础设施到上层应用的整条技术栈上下游都在攫取丰厚利润。人们自然会觉得，理所应当由这些获利者来买单。而这笔账单最终必须兑现——我不认为行业自律能发挥作用，我也完全赞同你的看法：无论是在地方、国家还是国际层面，我们都需要制定切实的规则，来规范这些系统的运作方式，并厘清它们可能带来的伤害与损失。
+
+<details>
+<summary>Original English</summary>
+
+**Ezra Klein**: So none of that works long-term. But the useful thing is that there's money in the system because there are profits being made up and down the stack and you know, one would feel that because of that there's an obvious place for that bill to land and that bill can land through—you know, I don't think self-regulation works and I would agree that we will need to find whether it's local, national, or international real rules about how these systems work and the harms and the damages that they might cause.
+
+</details>
+
+### 从 FDA 到核能：AI 监管的光谱与大众抵触
+
+**Ezra Klein**：不过，对我来说真正耐人寻味的是，监管必然会到来，这一点毋庸置疑。但这种监管最终会落在哪种模式的光谱区间内？
+
+一端是药品监管模式，我们设立监管的初衷是为了让制药公司能够生产出安全有效的药物——尽管有人可能会辩驳说，我们已经把这套流程搞得过于拖沓缓慢了；而光谱的另一端则是核电监管模式，在这种模式下，我们最终在本质上达成的社会共识是：不要再新建任何核电站了。
+
+取决于 AI 接下来的走向，并考虑到公众目前对这项技术已经抱有的负面情绪，这里存在一种极大的可能性：整个社会的态度可能会发生大幅摆动，以至于在诸多问题上的最终答案简单直接就是“不”。我们不希望被机器取代。说实话，当你把这句话大声说出来时，它听起来是再合情合理不过的诉求了，而且这很可能就是人们在民主体制下会表达出的意愿——“不，我们不希望各种智能体爬满整个经济体系的角角落落；不，我们不想作为一家餐馆，整天无休止地接到各种 AI 代理打来的电话，疯狂地试图在所有时段抢订位置，从而彻底搞瘫餐馆安排真人接听电话的能力。”
+
+这种技术的全面无序膨胀正在引发强烈反噬。我认识不少担任各家公司高管的朋友，他们都在抱怨：“突然之间，我整个人都要被 AI 生成的各种报告淹没了。我的电子邮箱塞满了显然是由 AI 撰写的商务问询，这导致我对所有业务的响应速度全面下滑。”我所指的不仅仅是究竟会不会出台监管，我认为真正的风险在于：人们很可能会做出决定，在相当大一部分经济领域中，或者在许多人所设想的那些应用场景中，大家根本就不想要这项技术。约翰·赫尔曼（John Herman）在《纽约》杂志上发表过一篇非常出色的文章，专门探讨了当下许多企业刚刚开始承受的巨大折磨——它们突然之间不得不去消化海量的 AI 智能体发起的各类骚扰问询。我们根本没有做好准备迎接这样的世界：每个人手里都有一个机器人代理在替你四处打电话砍价、抢订餐厅、倒买倒卖演唱会门票，或者做诸如此类的各种事情。大众实际上可能会极度反感这种现实。
+
+<details>
+<summary>Original English</summary>
+
+**Ezra Klein**: Well, but the thing to me that's interesting in that—of course there's going to be regulation. That's clear to me. The range of how that could fall all the way from pharmaceutical regulation where what we want is for pharmaceutical companies to produce safe drugs. Although people may maybe argue, you know, we've made that too slow also. All the way to say nuclear power regulation where fundamentally what we've ended up wanting is no new nuclear power plants. And depending on what happens with AI and given how negative people are on it already, one of the possibilities here is that it could swing such that the answer on a bunch of things is simply no. We don't want to be replaced by robots. Which actually when you say it aloud like that seems like a fairly straightforward thing [snorts] and probably the kind of thing that people are going to express in a democracy or no, we don't want robot agents crawling all over the economy. No, we don't want to be called endlessly as a restaurant by your Muse agent trying to get reservations everywhere because now you've just made it functionally impossible for restaurant to ever answer the phone again with a human being and that the sort of like collective expansion of all this. I mean, I know people who you know are managers of different firms and they're just saying like I'm just drowning in AI produced reports all of a sudden. My email is just full of obviously AI written inquiries, which is making my responsiveness all across the board go down. I'm not just saying will there not be regulation, but I think one risk is that people decide maybe they don't want this in actually fairly large swaths of the economy or used in some of the ways people are expecting. There's a very good piece by John Herman in New York magazine about the sort of beginning agony of companies that all of a sudden are absorbing tremendous amounts of Muse agent inquiry. And like we're not prepared for everybody to have an agent calling you as a robot trying to negotiate down the price or get a reservation or sell a concert ticket or just whatever it might be and people may actually not like it.
+
+</details>
+
+### 显性偏好与技术渗透的矛盾
+
+**Azeem Azhar**：是的，大家确实可能会非常讨厌这种局面。
+
+但这里的棘手之处在于，现实中似乎存在某种“显性偏好”（revealed preference），而这种偏好的图景是极不均衡的。目前，全美只有大约 2.5% 的人愿意为 AI 付费订阅。考虑到这类产品已经面世整整三年，这其实是一个极其缓慢的市场采纳过程。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem Azhar**: Yeah. They might not like it. The trouble is there appears to be some revealed preference here and that picture is not even. So only about 2 and 1/2% of Americans pay for an AI subscription, which is considering they've been available for 3 years is a very slow slow take off.
+
+</details>
+
+**Ezra Klein**：我很喜欢你在近期一期通讯中提到的那个数据统计：在美国，自费购买 GLP-1 减肥药的人数，比花钱订阅 AI 的人数还要多。
+
+<details>
+<summary>Original English</summary>
+
+**Ezra Klein**: I love this stat in one of your newsletters recently that more people pay for GLP-1s—a larger number of Americans paid for a GLP-1 than for AI.
+
+</details>
+
+**Azeem Azhar**：哈哈，确实如此，因为减肥药是真正非常实用的东西，而且你在短短几周内就能切身体会到它的显著效果。但是，全美乃至全世界数以亿计的人，正在通过免费版本使用 AI。当 Meta 这类巨头开始将这些 AI 工具直接强推到你眼前时，我相信人们最终还是会去使用它们——即便他们在社交媒体上发帖抗议、表态投票说自己根本不想要任何 AI。
+
+要么它会变成无处不在、无可逃避的基础设施，要么它会始终附着在他们的手机里被频繁使用。我认为我们必须清醒地面对这种可能性。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem Azhar**: Well, yeah, because one is really quite useful and you feel the impact within a matter of a few weeks. But hundreds of millions of people in America and around the world do use AI through the free version and when companies like Meta start to put these tools in front of you, I'm sure people will end up using them even if they vote with their social media posts saying they don't want any AI. Either it'll become inescapable or they will still have it on their phone and they'll be using it. I think we have to just contend with that possibility.
+
+</details>
+
+### 社会需要摩擦：无摩擦对现代性的拒绝服务攻击
+
+**Azeem Azhar**：我认为我们还必须意识到——这也正是我们反思技术长达四五十年本质的地方——技术一直以来就是一场规模极其庞大、未经许可的全民实验。正如你刚才所描述的：AI 代理疯狂拨打酒店和餐厅电话；或者像我的骨科医生向我抱怨的那样，他现在经常收到病人发来的长达千字、甚至上万字的巨幅长信，而那些病历显然是直接用 ChatGPT 生成的。
+
+不幸的是，这类事情势必会不断涌现，而由此产生的沉重代价现在已经被转嫁给了整个社会系统，我们不得不去艰难摸索应对之道。我现在每个月都会向电信运营商额外支付一小笔费用——虽然不多，大概每月一美元——用来拦截那些本质上全是自动呼叫的伪造骚扰电话。这种情况注定会愈演愈烈，而我们竟然还会把这些因防御和过滤而产生的额外开销计入 GDP。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem Azhar**: I think we also have to realize—and this is where we think about technology as being this gigantic unpermissioned experiment, which it has been for 40 or 50 years, that what you're describing about robo calls from AI agents into hotels and restaurants or as my orthopedic surgeon was telling me, he just gets long thousand words, 10,000 word emails from patients who've clearly chat GPT'd their medical notes. This is unfortunately going to happen and that cost has now been pushed into the system and we're going to have to figure out how to deal with it. I now pay, it's not a lot, I pay about a buck a month to my phone operator to screen out spoof phone calls that are essentially robo calls. And that's what's going to happen and we're going to call that GDP. Those additional costs.
+
+</details>
+
+**Ezra Klein**：但我认为，阿齐姆，你这番话真正提醒我的一点在于：在西方资本主义的传统观念中，我们始终抱有一种根深蒂固的执念，认为一切核心都在于追求极致的效率。然而在某种奇特的方式下，人类社会其实是离不开“摩擦”（frictions）的。
+
+<details>
+<summary>Original English</summary>
+
+**Ezra Klein**: I think though one of the things that's—your comment Ezra really reminded me of this is that society we have this idea in sort of Western capitalism that it's always about efficiency. In a weird way, societies require friction.
+
+</details>
+
+**Azeem Azhar**：嗯，确实如此。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem Azhar**: Mhm.
+
+</details>
+
+**Ezra Klein**：当你把摩擦力彻底消除时，甚至消除掉那些你此前从未意识到其存在价值的摩擦时，顷刻之间就会引发灾难性的连带后果。你看，现实中已经出现了各种案例，比如有人利用大语言模型在小额索赔法庭上批量发起诉讼。我们真的希望消除摩擦吗？我们真的想要更多这样的“无阻力”局面吗？我们真的想看到你刚才举的餐厅被订座代理轰炸的场景吗？
+
+人类社会中原本存在着各种各样润滑与缓冲的摩擦。盲目地将它们全盘剥离，借用科技界的黑话来说，几乎就是在对现代文明发动一场大规模的“分布式拒绝服务攻击”（DDoS，denial of service attack）。顷刻之间，海量的信息流与自动化请求从四面八方向我们狂轰滥炸，这种感觉就像是俄罗斯水军网络机器人在猛烈围攻一座网站，只不过此时此刻，由于各种恶意爬虫、自动化机器人及相关衍生工具的数量呈爆炸式激增，这场攻击正从整个现实世界的每一个角落朝我们席卷而来。我认为……
+
+<details>
+<summary>Original English</summary>
+
+**Ezra Klein**: And when you take away frictions, even frictions that you didn't realize existed, all of a sudden it has consequences. You know, there've been examples of people using large language models to launch claims in small claims court, for example. Do we want to have less friction? Do we want more of that? Do we want this, you know, your example of the restaurants? And we have all of these frictions that exist in society and blindly removing all of them is kind of creating an—in tech parlance—almost a denial of service attack on modernity where all of a sudden we're having stuff launching at us from every angle, almost like, you know, Russian bots attacking a website, except it's coming from all angles because of the increasing numbers of bots and other things. And I think—
+
+</details>
+
+<!-- chunk 9/9 -->
+
+### 技术摩擦消除带来的社会冲击
+
+**主持人**：人们之所以有这种反应，是因为随着所有摩擦消失，产生了一种失控感。突然之间，我获取不到某些资源，或者事情的发展完全不符合我的预期。因此，仅仅是摩擦减少这一件事，就会对整个社会产生巨大的连锁反应。我认为人们正是在对此做出反应。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: That's what people are responding to, is it's this kind of out-of-control feeling as all of the frictions drop away and suddenly, you know, I can't get access to things or nothing works the way I'd expect. So, simply dealing with the reduction in frictions has huge consequences across society. And I think people are reacting to that.
+
+</details>
+
+**主持人**：接下来的局面很可能是两个人工智能系统在那里来回推诿、互相对峙……
+
+<details>
+<summary>Original English</summary>
+
+**Host**: >> going to happen is that it's going to be these two AIs bouncing things back and forth and...
+
+</details>
+
+**阿齐姆·阿扎尔 (Azeem Azhar)**：确实如此。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem Azhar**: Right.
+
+</details>
+
+**主持人**：而且整个经济体验只会变得越来越令人不快，这也是为什么我认为在很大一部分领域里，人们最终会选择说“也许我们不需要这个”。
+
+所以，我想用这个问题来结束今天的讨论：首先问阿齐姆，你需要看到什么样的迹象，才会开始觉得“糟了，现在的泡沫似乎相当大了”？接着问保罗，反过来也是一样：你需要看到什么，才会觉得“也许我的看法是错的，我不应该这么悲观，那些投资者反而是对的，这里面确实蕴藏着巨大的盈利机会”？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: And it's just going to be a more and more and more unpleasant economy, which is why like I do think there are going to be large areas where people will say maybe not. So, I want to end on this question, which is: first for you, Azeem, what would you need to see to start thinking, "Oh no, this is getting pretty bubbly?" And then to you, Paul, the reverse. What would you need to see to think, "Oh, maybe I do have this wrong and these investors have it right and there's a lot of money to be made here"?
+
+</details>
+
+### 泡沫与转折：衡量 AI 真实价值的指标
+
+**阿齐姆·阿扎尔 (Azeem Azhar)**：嗯。我们前面讨论过很多风险，包括整个融资架构中的复杂性与脆弱性。能让这一切保持在健康区间的关键，在于是否有真实客户在花真金白银，并且获得了实实在在的成效。因此，真正会让我感到不安的迹象是：如果我连续几个季度看到，美国企业在人工智能上的支出增速腰斩，比如连续两个季度出现这种情况。那将表明企业的胃口已经饱和，后续将没有足够的收入来支撑整个体系维持在健康状态。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem Azhar**: Mhm. Well, there are so many risks that we have talked about, and there's all the complexity and fragility in the financing. The thing that keeps this on the other side of healthy is whether real customers are spending real money and getting real results. So, the thing that would make me uneasy would be if I saw a couple of quarters where the amount that American enterprises were spending on AI was—the growth rate was halving, say, two quarters in a row. That would suggest that they filled their appetite and there's not going to be the revenue to keep this on the right side of healthy.
+
+</details>
+
+**主持人**：保罗，你的看法呢？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Paul.
+
+</details>
+
+**保罗·凯德罗斯基 (Paul Kedrosky)**：有太多指标可以看了。我的意思是，我向来深信自己在大多数事情上都是错的，所以我总是很乐意发现自己又在哪些方面判断失误。因此，我主要观察宏观经济数据。
+
+如果我们开始看到，比如说，生产率增长幅度远远超出长期趋势水平，那将是非常引人注目的，对吧？到目前为止，就美国生产率增速而言，我们依然停留在长期趋势线附近，根本看不到任何人工智能显著提振生产率的迹象。如果我们看到劳动参与率大幅上升，那也会是一个强有力的信号，能告诉我：“好吧，AI 确实是一项具有普惠包容性的技术，它正在把人们重新带回经济活动中。”这真的会有说服力。再者，如果我们看到 GDP 增长重新突破长期趋势线——目前我们仍徘徊在二战后长期趋势区间的低端。
+
+只要上述任何一种现象出现，更不用说三者同时发生，都会告诉我我的判断错了，这里确实发生了极其重大的变革，就像一场真正的全社会生产率冲击，完全配得上当前的资本开支规模。如果这些生产率数据真的兑现了，那很好，一切逻辑都将被重写。但如果数据迟迟没有体现出来，那么我们所面对的现实，恐怕会更像 20 世纪 30 年代的大萧条时期，而不是像 21 世纪初的那种发展轨迹。
+
+<details>
+<summary>Original English</summary>
+
+**Paul Kedrosky**: Uh, there's so many—I mean, I'm convinced I'm wrong about most things, so I'm always happy to find more things I'm wrong about. So I just look at economic data. So, if we began to see, I don't know, productivity growth go well beyond trend, that would be striking, right? So far, we're sitting at around trend data with respect to US productivity growth. There's no sign of, you know, AI improving productivity. If we saw participation rates sharply increasing, that would be something that would help to tell me, "Okay, AI is an inclusive technology and bringing people back into the economy." That would really help. If we saw GDP growth going back above trend—we're still sitting around the levels of, you know, sort of the post-World War trend at the low end of it. Any of those things would tell me that something big was going on, like a true productivity shock in the economy that warranted the kind of expenditures. So, you know, if any of those—and probably the three of them at once—happened, that would tell me I was wrong. You know, if those productivity numbers come through, then fine, everything changes. But if it doesn't, you're looking at something that looks more like the 1930s than it does like, I don't know, 2000s.
+
+</details>
+
+### 嘉宾书单推荐
+
+**主持人**：好的，我认为这是一个非常适合收尾的节点。接下来是我们节目的保留结语环节：你们会向听众推荐哪三本书？保罗，不如先从你开始？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: All right, I think that's a good place to end. So, always our final question, what are three books you'd recommend to the audience? Paul, why don't we begin with you?
+
+</details>
+
+**保罗·凯德罗斯基 (Paul Kedrosky)**：好的。《米德尔马契》（*Middlemarch*）是我经常重温的书，用来思考当一场重大技术革命降临时，普通人是如何被时代变革的风潮所裹挟前行的。这本书的故事背景恰好设置在工业革命逐渐扎根、全面展开的时期，我认为这是一本描绘那一进程的绝佳之作。
+
+另一本我喜欢推荐的书是艾玛·格里芬（Emma Griffin）写的《自由的黎明》（*Liberty's Dawn*）。这是一部收录了工业革命时期普通工人自传与笔记的合集。它极其生动、精彩地展现了身处那场痛苦转型期中心的人们所经历的真实日常。当人们在宏观层面上高谈阔论经济数据及其他一切时，这本书带你切身感受真正生活在其中的体验：身处其中究竟是何种感受？承受了怎样的痛苦？对未来又怀揣着怎样的希望？这真是一本关于那个时代的不可多得的杰作。
+
+最后一本，我想推荐关于塞缪尔·英萨尔（Samuel Insull）的传记。他现在基本上被世人遗忘了，但曾是 20 世纪 20 年代最重要、最具影响力的企业家之一。他在电力行业建立起的商业帝国清晰地展现了：即使你把商业帝国建立在类似通用技术（GPT）的划时代基石之上，即便你已经取得了极其耀眼的成功，最终依然可能走向全面崩溃和灾难。这是一个极其精彩的故事，书名是弗雷斯特·麦克唐纳（Forrest McDonald）所著的《英萨尔：公用事业巨头的兴衰》（*Insull: The Rise and Fall of a Billionaire Utility Tycoon*）。
+
+<details>
+<summary>Original English</summary>
+
+**Paul Kedrosky**: Sure. Um, *Middlemarch* is sort of my go-to on thinking about normal people being swept along by kind of the winds of change as a major technology revolution taking place. It took place just as the Industrial Revolution was sort of taking hold, and I think it's a tremendous book about that. So, the other one that I like to recommend is *Liberty's Dawn* by Emma Griffin, which is a collection of the average workers' biographies and notes from during the Industrial Revolution. And it's just a wonderful, wonderful look at what it was like in the middle of that wrenching transition. And as people talk about economic data and everything else, what it was like to live through it. What did it feel like? What was the pain I felt? And, you know, what were my hopes for the future? It's just like a wonderful book about that. And the last one that I was going to—Samuel Insull, largely forgotten figure. He was probably one of the most important entrepreneurs of the 1920s, whose empire in electricity shows what happens that you can build—building an empire on top of a GPT and even doing that successfully can still end up in collapse and calamity. But it's a wonderful story. So, *Insull: The Rise and Fall of a Billionaire Utility Tycoon* by Forrest McDonald.
+
+</details>
+
+**主持人**：阿齐姆，你的推荐呢？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Azeem?
+
+</details>
+
+**阿齐姆·阿扎尔 (Azeem Azhar)**：我的三本书是：
+
+第一本是《宇宙改变的那一天》（*The Day the Universe Changed*）。这本书由一位 BBC 科技记者在 80 年代初撰写。我十几岁的时候读过它，最近又重读了一遍。它主要探讨了随着人类发展出新型知识体系，我们是如何开始重新思考自己在世界中的角色、重新审视什么对我们才至关重要，以及这种转变是多么令人动荡不安。作者带领我们回顾了西方和亚洲一千多年的历史演进。
+
+第二本书是屠格涅夫的《父与子》（*Fathers and Sons*），创作于 19 世纪。小说正处于科学与现代性思想涌入俄国的历史时刻，生动展现了老一代传统观念与年轻一代之间的代际冲突；它探讨了究竟是什么纽带维系着他们，以及即便面对最新涌现的科学突破，也无法解答的“人何以为人”的本质问题。我认为这在今天依然高度切题。
+
+最后一本我正在重新温读的书，是伏尔泰的《老实人》（*Candide*）。
+
+<details>
+<summary>Original English</summary>
+
+**Azeem Azhar**: So, my three books. The first is *The Day the Universe Changed*. It's written by a BBC science journalist back in the early '80s. I read it as a teenager and I've just reread it, and it is all about how as we develop new types of knowledge, we start to rethink our role in the world, what matters to us, and how unsettling that is. And he walks us through a thousand years plus of that through Western and Asian history. The second book is *Fathers and Sons* by Turgenev, which is a book written in the 19th century. It's at that moment where the ideas of science and modernity are making their way into Russia and you have the generational conflict between the more traditional generation and the younger generation, and what stays as a bond between them, what even the most recent breakthroughs in science can't tell you about what it is to be human. I think it's very relevant. And then the final one which I'm just rereading again is *Candide* by Voltaire.
+
+</details>
+
+**主持人**：阿齐姆·阿扎尔、保罗·凯德罗斯基，非常感谢你们！
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Azeem Azhar, Paul Kedrosky, thank you very much.
+
+</details>
+
+**阿齐姆·阿扎尔 / 保罗·凯德罗斯基**：非常感谢！
+
+<details>
+<summary>Original English</summary>
+
+**Azeem Azhar / Paul Kedrosky**: Thanks very much.
+
+</details>

@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>从税务工具到AI代理：Town的转型与AI时代商业逻辑的重构</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">从税务工具到AI代理：Town的转型与AI时代商业逻辑的重构</span>
+      <span data-pagefind-meta="speaker" style="display:none;">a16z</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>a16z</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-19</span>
+    
+
+    <header class="article-header">
+      
+      <h1>从税务工具到AI代理：Town的转型与AI时代商业逻辑的重构</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+      
+        <a class="tag-link" href="/tags/workflow-automation/">workflow-automation</a>
+      
+        <span class="tag-pill tag-pill--no-page">personalization</span>
+      
+        <a class="tag-link" href="/tags/business-model/">business-model</a>
+      
+        <a class="tag-link" href="/tags/human-in-the-loop/">human-in-the-loop</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">本文探讨了Town从SMB税务工具转型为通用AI代理的过程，分析了AI如何改变知识工作者工作流，以及AI代理对传统商业模式如供给聚合的冲击，强调了自动化和个性化在AI时代的重要性。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/a16z/">a16z</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=o_5f4N6Nq80" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-19T00:00:00.000Z">2026-10-19</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>35 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E5%BA%8F%E5%B9%95%E4%B8%8E%E6%84%8F%E5%A4%96%E7%9A%84%E5%8F%91%E7%8E%B0">序幕与意外的发现</a></li><li class="outline-h3"><a href="#%E4%BB%8E-plaid-%E5%88%B0%E4%B8%AD%E5%B0%8F%E4%BC%81%E4%B8%9A%E6%8A%A5%E7%A8%8E%E5%88%9B%E4%B8%9A%E5%88%9D%E6%9C%9F%E7%9A%84%E6%8E%A2%E7%B4%A2">从 Plaid 到中小企业报税：创业初期的探索</a></li><li class="outline-h3"><a href="#%E7%A8%8E%E5%8A%A1%E8%B5%9B%E9%81%93%E7%9A%84%E5%B0%9D%E8%AF%95%E4%B8%8E%E5%A4%A9%E8%8A%B1%E6%9D%BF">税务赛道的尝试与天花板</a></li><li class="outline-h3"><a href="#%E4%BD%8E%E9%A2%91%E4%BA%A4%E6%98%93%E4%B8%8E%E4%B8%8D%E5%8F%AF%E9%80%BE%E8%B6%8A%E7%9A%84%E5%91%A8%E6%9C%9F%E6%80%A7%E5%9B%B0%E5%A2%83">低频交易与不可逾越的周期性困境</a></li><li class="outline-h3"><a href="#%E6%9E%9C%E6%96%AD%E8%BD%AC%E5%9E%8B%E7%9A%84%E5%8B%87%E6%B0%94%E4%B8%8E%E5%88%9B%E4%B8%9A%E5%88%9D%E5%BF%83">果断转型的勇气与创业初心</a></li><li class="outline-h3"><a href="#%E6%94%BE%E5%BC%83%E7%A8%8E%E5%8A%A1%E4%B8%9A%E5%8A%A1%E4%B8%8E%E8%89%B0%E9%9A%BE%E6%8A%89%E6%8B%A9">放弃税务业务与艰难抉择</a></li><li class="outline-h3"><a href="#%E4%BB%8E%E5%9B%9B%E4%B8%AA%E5%A4%87%E9%80%89%E6%96%B9%E5%90%91%E5%88%B0%E9%82%AE%E4%BB%B6%E4%B8%8E%E6%97%A5%E5%8E%86-ai">从四个备选方向到邮件与日历 AI</a></li><li class="outline-h3"><a href="#%E7%8B%82%E7%83%AD%E7%9A%84%E7%94%A8%E6%88%B7%E9%9C%80%E6%B1%82%E4%B8%8E%E4%BA%A7%E5%93%81%E6%B7%B1%E5%BA%A6%E7%9A%84%E5%8F%91%E6%8E%98">狂热的用户需求与产品深度的发掘</a></li><li class="outline-h3"><a href="#%E4%BA%A7%E5%93%81%E9%A9%B1%E5%8A%A8%E5%A2%9E%E9%95%BF%E4%B8%8E%E4%BC%81%E4%B8%9A%E7%BA%A7%E4%BD%93%E9%AA%8C%E7%9A%84%E5%85%88%E5%90%8E%E9%A1%BA%E5%BA%8F">产品驱动增长与企业级体验的先后顺序</a></li><li class="outline-h3"><a href="#%E4%BC%81%E4%B8%9A%E7%BA%A7-ai-%E4%BD%93%E9%AA%8C%E4%BB%8E%E4%B8%AA%E4%BA%BA%E6%B6%88%E8%B4%B9%E7%BA%A7%E4%BD%93%E9%AA%8C%E5%88%87%E5%85%A5%E4%BC%81%E4%B8%9A%E5%B8%82%E5%9C%BA">企业级 AI 体验：从个人消费级体验切入企业市场</a></li><li class="outline-h3"><a href="#%E9%BB%91%E8%8E%93%E7%9A%84%E8%A6%86%E7%81%AD%E4%B8%8E-iphone-%E6%97%B6%E5%88%BB%E7%9A%84%E9%87%8D%E6%BC%94">黑莓的覆灭与 iPhone 时刻的重演</a></li><li class="outline-h3"><a href="#%E4%BB%8E-good-technology-%E7%9A%84%E6%95%99%E8%AE%AD%E7%9C%8B%E6%99%BA%E8%83%BD%E4%BD%93%E5%A6%82%E4%BD%95%E6%B8%97%E9%80%8F%E4%BC%81%E4%B8%9A">从 Good Technology 的教训看智能体如何渗透企业</a></li><li class="outline-h3"><a href="#%E5%8A%A9%E7%90%86%E7%A9%BA%E9%97%B4%E7%9A%84%E6%9D%B0%E6%96%87%E6%96%AF%E6%82%96%E8%AE%BA%E4%B8%8E%E7%8E%B0%E5%AE%9E%E5%BA%94%E7%94%A8">助理空间的杰文斯悖论与现实应用</a></li><li class="outline-h3"><a href="#ai-%E5%8A%A9%E6%89%8B%E7%9A%84%E6%9D%B0%E6%96%87%E6%96%AF%E6%82%96%E8%AE%BA%E4%B8%8E%E5%B8%82%E5%9C%BA%E5%AE%9A%E4%BD%8D">AI 助手的杰文斯悖论与市场定位</a></li><li class="outline-h3"><a href="#%E9%95%BF%E5%B0%BE%E4%BB%BB%E5%8A%A1%E6%8C%96%E6%8E%98%E4%BB%8E%E4%BC%9A%E8%AE%AE%E5%87%86%E5%A4%87%E5%88%B0%E4%BE%9B%E5%BA%94%E5%95%86%E6%AF%94%E4%BB%B7">长尾任务挖掘：从会议准备到供应商比价</a></li><li class="outline-h3"><a href="#%E4%BA%A7%E5%93%81%E8%90%A5%E9%94%80%E5%A5%91%E6%9C%BA%E4%B8%8E%E6%A8%AA%E5%90%91%E5%B9%B3%E5%8F%B0%E6%BC%94%E8%BF%9B">产品营销契机与横向平台演进</a></li><li class="outline-h3"><a href="#ai-%E4%BA%A7%E5%93%81%E5%90%8C%E8%B4%A8%E5%8C%96%E4%B8%8E%E6%8A%A4%E5%9F%8E%E6%B2%B3%E9%87%8D%E5%A1%91">AI 产品同质化与护城河重塑</a></li><li class="outline-h3"><a href="#%E8%BD%AF%E4%BB%B6%E4%BB%B7%E5%80%BC%E5%8D%95%E5%85%83%E7%9A%84%E8%B7%83%E8%BF%81%E4%B8%8E%E4%B8%AA%E6%80%A7%E5%8C%96%E5%AE%9A%E5%88%B6">软件价值单元的跃迁与个性化定制</a></li><li class="outline-h3"><a href="#%E7%94%A8%E9%A3%9E%E8%BD%AE%E7%A7%AF%E7%B4%AF%E8%A1%8C%E4%B8%9A%E6%A8%A1%E6%9D%BF%E4%B8%8E%E5%AE%9A%E5%88%B6%E8%BD%AF%E4%BB%B6">用飞轮积累行业模板与定制软件</a></li><li class="outline-h3"><a href="#%E4%BA%A7%E5%93%81%E9%A9%B1%E5%8A%A8%E8%87%AA%E5%8A%A8%E5%8C%96-vs-%E5%89%8D%E7%BA%BF%E9%83%A8%E7%BD%B2%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%A8%A1%E5%BC%8F">产品驱动自动化 vs. 前线部署工程师模式</a></li><li class="outline-h3"><a href="#%E9%9D%A2%E5%AF%B9%E6%A8%A1%E5%9E%8B%E5%8E%82%E5%95%86%E7%9A%84%E4%B8%8B%E5%9C%BA%E7%AB%9E%E4%BA%89town-%E7%9A%84%E5%A3%81%E5%9E%92%E4%BD%95%E5%9C%A8">面对模型厂商的“下场竞争”，Town 的壁垒何在？</a></li><li class="outline-h3"><a href="#%E4%B8%AD%E7%AB%8B%E5%BA%94%E7%94%A8%E5%AE%9A%E4%BD%8D%E4%B8%8E%E6%A8%A1%E5%9E%8B%E9%A3%8E%E9%99%A9%E5%AF%B9%E5%86%B2">中立应用定位与模型风险对冲</a></li><li class="outline-h3"><a href="#%E6%A8%A1%E5%9E%8B%E4%B8%AD%E7%AB%8B%E6%80%A7%E4%B8%8E%E4%BC%81%E4%B8%9A%E4%B8%8A%E4%B8%8B%E6%96%87%E6%95%B0%E6%8D%AE%E6%89%80%E6%9C%89%E6%9D%83">模型中立性与企业上下文数据所有权</a></li><li class="outline-h3"><a href="#%E6%95%B0%E6%8D%AE%E8%AE%AD%E7%BB%83%E8%BE%B9%E7%95%8C%E4%B8%8E%E4%BC%81%E4%B8%9A%E5%86%85%E9%83%A8%E5%8D%8F%E5%90%8C%E6%9E%B6%E6%9E%84">数据训练边界与企业内部协同架构</a></li><li class="outline-h3"><a href="#%E9%87%91%E5%8F%91%E5%A5%B3%E5%AD%A9%E5%8C%BA%E4%B8%8E%E5%9E%82%E7%B1%BB%E8%B5%9B%E9%81%93%E7%9A%84%E6%8A%80%E6%9C%AF%E6%89%A9%E6%95%A3">“金发女孩区”与垂类赛道的技术扩散</a></li><li class="outline-h3"><a href="#ai-%E6%8A%80%E6%9C%AF%E6%99%AE%E5%8F%8A%E7%9A%84%E4%B8%8D%E5%9D%87%E8%A1%A1%E4%B8%8E%E9%95%BF%E5%B0%BE%E7%BB%8F%E6%B5%8E%E7%9A%84%E6%8E%A2%E7%B4%A2">AI 技术普及的不均衡与长尾经济的探索</a></li><li class="outline-h3"><a href="#%E6%8A%98%E8%85%BE%E8%80%85%E5%9B%B0%E5%A2%83%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8C%96%E8%90%BD%E5%9C%B0%E7%9A%84%E7%93%B6%E9%A2%88">折腾者困境与自动化落地的瓶颈</a></li><li class="outline-h3"><a href="#%E8%AE%A4%E7%9F%A5%E5%83%B5%E5%8C%96%E4%B8%8E%E6%97%A9%E6%9C%9F%E4%BD%BF%E7%94%A8%E8%80%85%E7%9A%84%E5%AE%9A%E5%8A%BF%E9%99%B7%E9%98%B1">认知僵化与早期使用者的定势陷阱</a></li><li class="outline-h3"><a href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E4%B8%8E%E4%B8%BB%E5%8A%A8%E5%BC%8F-agent-%E7%9A%84%E4%BA%A7%E5%93%81%E5%BD%A2%E6%80%81">计算机操作与主动式 Agent 的产品形态</a></li><li class="outline-h3"><a href="#ai-%E6%99%BA%E8%83%BD%E4%BD%93%E6%B5%81%E9%87%8F%E7%9A%84%E5%B4%9B%E8%B5%B7%E4%B8%8E%E7%BD%91%E7%BB%9C%E5%A5%91%E7%BA%A6%E7%9A%84%E7%93%A6%E8%A7%A3">AI 智能体流量的崛起与网络契约的瓦解</a></li><li class="outline-h3"><a href="#%E5%88%86%E5%8F%91%E6%B8%A0%E9%81%93%E7%9A%84%E5%8F%98%E9%9D%A9%E6%99%BA%E8%83%BD%E4%BD%93%E4%B8%AD%E7%AB%8B%E6%80%A7%E4%B8%8E%E4%BA%BA%E7%B1%BB%E6%91%A9%E6%93%A6%E5%81%8F%E5%A5%BD">分发渠道的变革、智能体中立性与人类摩擦偏好</a></li><li class="outline-h3"><a href="#%E8%A7%A3%E8%80%A6%E5%95%86%E4%B8%9A%E5%8F%98%E7%8E%B0%E4%B8%8E%E4%BE%9B%E7%BB%99%E8%81%9A%E5%90%88%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%9C%AA%E6%9D%A5%E5%9B%B0%E5%A2%83">解耦商业变现与供给聚合模式的未来困境</a></li><li class="outline-h3"><a href="#%E4%BB%B7%E6%A0%BC%E8%BF%BD%E8%B8%AA%E4%B8%8E%E6%97%B6%E9%97%B4%E7%9A%84%E7%BB%8F%E6%B5%8E%E5%AD%A6">价格追踪与时间的经济学</a></li><li class="outline-h3"><a href="#%E8%A7%84%E5%88%99%E7%9A%84%E9%87%8D%E6%9E%84%E4%B8%8E%E4%BE%9B%E7%BB%99%E8%81%9A%E5%90%88%E7%9A%84%E8%B4%AC%E5%80%BC">规则的重构与供给聚合的贬值</a></li><li class="outline-h3"><a href="#%E5%B0%BE%E5%A3%B0%E4%B8%8E%E8%87%B4%E8%B0%A2">尾声与致谢</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><!-- chunk 1/9 -->
+<h3 id="序幕与意外的发现" data-reading-heading="">序幕与意外的发现</h3>
+<p><strong>Alex Rampell</strong>: 本·霍洛维茨给我发来消息说：“我发现了一个极其惊艳的工具，叫作 Town。它彻底改变了我的生活。”当时我心想：等等，那是让-德尼斯创办的公司啊，但他做的不应该是中小企业（SMB）报税业务吗？这根本说不通啊。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex Rampell</strong>: I get pinged by Ben Horowitz about like, "I found this amazing tool. It's called Town. It like changed my life." I was like, wait, that's Jean-Denis's company. But he does SMB tax. That doesn't make any sense.</p>
+</details>
+<p><strong>Jean-Denis Greze</strong>: 那注定成不了一家具备风险投资规模体量的公司。此前从未有人围绕知识工作者这些极其高频通用的日常工作流打造出真正优秀的 AI 工具，比如开会、会议准备、协助人们为一天的工作做好准备等等。我们正在努力打造一款能与人类协同的产品，不断为他们挖掘更多利用 AI 提升工作表现的机会。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Jean-Denis Greze</strong>: This was not going to be a venture-scale company. No one had built great AI around these very common knowledge worker workflows. Like meetings, meeting prep, getting people to be prepared for their day. We're trying to build a product that works with people to find more and more opportunities for them to deploy AI to be better at their job.</p>
+</details>
+<p><strong>Alex Rampell</strong>: 运行那个东西一个月大概只要花你一美元左右。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex Rampell</strong>: It's going to cost you like a dollar a month to run that thing.</p>
+</details>
+<p><strong>Jean-Denis Greze</strong>: 重点在于，哪怕一年里只有某一个月它发现了某个关键问题，它就能为你省下或找回数百甚至数千美元。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Jean-Denis Greze</strong>: The thing is, the one month out of a year where it finds something, it's going to find like hundreds if not thousands of dollars for you.</p>
+</details>
+<p><strong>Alex Rampell</strong>: 产品的交互体验绝不能仅仅是一个冷冰冰的文本输入框。你必须直接向用户展现它的核心价值主张，并且直接替他们把事情办妥。在特定当下，我们会动态选用我们认为对你而言最优质的模型或供应商。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex Rampell</strong>: The product experience can't just be a text box. You have to just show the value prop to someone and do it for them. We will use whatever supplier we think is the best for you in the moment.</p>
+</details>
+<p><strong>Jean-Denis Greze</strong>: 人类作为任务路由节点的速度是极其缓慢的。确实如此。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Jean-Denis Greze</strong>: Humans are slow routers. That's right.</p>
+</details>
+<p><strong>Alex Rampell</strong>: 我坚信未来的图景中，“人机协同（Human-in-the-loop）”的干预环节会比今天少得多。我认为我们的使命就是……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex Rampell</strong>: And I think the future looks like a lot less human in the loop than we see today. And I think our job is to...</p>
+</details>
+<h3 id="从-plaid-到中小企业报税创业初期的探索" data-reading-heading="">从 Plaid 到中小企业报税：创业初期的探索</h3>
+<p><strong>Alex Rampell</strong>: 大家好，我是安德森·霍洛维茨（a16z）的合伙人 Alex Rampell。今天和我坐在一起的是 Town 的创始人兼 CEO Jean-Denis。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex Rampell</strong>: Hi everyone, I'm Alex Rampell, partner here at Andreessen Horowitz, and I'm here with Jean-Denis, the CEO and founder of Town.</p>
+</details>
+<p><strong>Jean-Denis Greze</strong>: 感谢你的邀请。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Jean-Denis Greze</strong>: Thanks for having me.</p>
+</details>
+<p><strong>Alex Rampell</strong>: 让我觉得特别有意思的是，当年你在 Plaid 担任首席技术官（CTO）时，我们就曾合作过，当时是我主导了 a16z 对 Plaid 的投资。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex Rampell</strong>: So what I find cool is that we worked together when you were the CTO of Plaid and I had led our investment in Plaid here.</p>
+</details>
+<p><strong>Jean-Denis Greze</strong>: 没错。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Jean-Denis Greze</strong>: Yes.</p>
+</details>
+<p><strong>Alex Rampell</strong>: 后来我听说你要离职去自己创业。我还清晰记得，当时你告诉我你正在做一款面向中小企业（SMB）的报税工具。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex Rampell</strong>: And I heard you were leaving and going to start a company. And then I remember you told me you're working on an SMB tax tool.</p>
+</details>
+<p><strong>Jean-Denis Greze</strong>: 是的，我们一起喝了咖啡。我们当时在门洛帕克还是帕洛阿尔托喝的咖啡。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Jean-Denis Greze</strong>: Yes, we had coffee. We had coffee here in Menlo or Palo Alto.</p>
+</details>
+<p><strong>Alex Rampell</strong>: 当时我心里其实有点提不起劲。我原本满心期待，结果一听是“中小企业报税工具”，心想：哎呀，那可太硬了……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex Rampell</strong>: And I got a little not happy about it. I was like, I was so excited and it's like, SMB tax tool. Ooh, that's...</p>
+</details>
+<p><strong>Jean-Denis Greze</strong>: 那确实是一条难走的路。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Jean-Denis Greze</strong>: That's rough.</p>
+</details>
+<p><strong>Alex Rampell</strong>: 现在咱们打开天窗说亮话了，对吧？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex Rampell</strong>: Now you know, all cards on the table, right?</p>
+</details>
+<p><strong>Jean-Denis Greze</strong>: 你当时可完全没这么跟我说。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Jean-Denis Greze</strong>: You didn't tell me that at the moment, you know.</p>
+</details>
+<p><strong>Alex Rampell</strong>: 我知道，我知道。但我当时得始终保持投资人的微笑面孔嘛，毕竟谁也料不准未来。后来事情的发展特别戏剧化，我想你应该很清楚整个来龙去脉：本·霍洛维茨突然联系我说：“我发现了一款特别棒的工具，叫 Town，彻底改变了我的生活，太出色了！”我当时一听，好啊，既然是一款应用软件，那就归我们基金来管。紧接着我一愣：等等，那不是让-德尼斯的公司吗？但他做的不是中小企业税务吗？这完全讲不通啊，我彻底被搞糊涂了。于是我立刻给你发了短信。接下来的故事大家都知道了，仅仅一周后，我们就正式达成了投资合作，这让我感到无比兴奋。不过，也许你可以先跟我们分享一下 Town 究竟是做什么的，以及从最初的源起走到今天，这一路是怎么过来的。从你离开 Plaid 到一头扎进 SMB 报税，请带我们回顾一下这一路的心路历程。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex Rampell</strong>: I know, I know. But I have to maintain a very happy face at all times. You never know. And then, this is what I find so funny about this is that I think you know this whole story. I get pinged by Ben Horowitz about like, "I found this amazing tool. It's called Town. It like changed my life. It's so great." And I'm like, good, right? It's like an app, so therefore it falls under my fund. And I was like, wait, that's Jean-Denis's company. But he does SMB tax. That doesn't make any sense. I'm so confused. And that's what I texted you. And then next thing you know, a week later we became partners, which I'm extremely excited about. But maybe tell us what Town does, and I think it's going to be incredibly interesting for everybody how you got to this point from the origination story. It's like you left Plaid, you started doing SMB tax. Like kind of walk us through the founder's journey from there to here.</p>
+</details>
+<h3 id="税务赛道的尝试与天花板" data-reading-heading="">税务赛道的尝试与天花板</h3>
+<p><strong>Jean-Denis Greze</strong>: 当时我离开 Plaid 之后，先陪家人休了几个月的假，因为我很清楚，一旦再次走上创业之路，在很长一段时间内就休想再有任何休息时间了。之后，我们开始以典型的 B2B 视角去探索：到底有哪些充满潜力的垂直市场，是 AI 能够彻底重构其产品体验的？出于多方面的原因，税务似乎是一个极其理想的切入点。首先，税务领域涉及海量的文本信息，而大语言模型（LLM）最擅长的恰恰就是处理文本；其次，你需要处理大量高度结构化的输入材料，比如财务报表、租赁合同等。当时给人的直觉是，我们可以通过这种技术媒介，把整个中小企业编制企业所得税申报表的过程完全自动化——企业税申报和个人所得税有着天壤之别。</p>
+<p>作为工程师，我们立刻采取了工程师的标准做法：开展技术尽职调查，以自证其技术可行性。我们当时的判断是：没错，在接下来的两年之内，对于一家中小企业而言，从最初提交财务数据、企业运营文件，到最终生成一份完整的纳税申报表，整个全流程完全可以通过 AI 实现自动化。于是，我们整整花了一年的时间去构建这款产品。从产品本身的角度来看，它确实做成功了；但从市场拓展（GTM）的商业逻辑来看，它却行不通。我的意思是，尽管我坚信报税自动化势在必行，但你究竟该如何以高效且低成本的方式触达数百万家企业并把产品卖给他们？这其中存在的问号远远超出了我们最初的预期。</p>
+<p>整整一年之后，我们做出的业务如果放在 AI 爆发之前的时代，可以算得上一门相当不错的生意。如果我给你看第一年的营收和增长数据——收入接近一百万美元，再告诉你我们当时对第二年的预测——我们有信心做到两百五十万到三百万美元的营收规模——在 AI 时代之前，任何投资人听到这样的成绩都会觉得：“这非常合情合理，很扎实。”但是在 AI 爆发后的新范式下，它根本不可能成长为一家具备风险投资体量（Venture scale）的超级企业。</p>
+<p>更关键的一点在于，我们深刻意识到：行业内原有的存量巨头利用这项技术为现有客户实现报税自动化的速度，绝对会比我们抢占市场份额的速度还要快。这是每一位创业者都必须深思的核心命题：作为市场新进入者，你的唯一优势在于行动更敏捷、能够设计出截然不同的创新产品形态、能够采用差异化的市场打法；但你的头顶始终悬着一个倒计时的时钟——在那些拥有巨大分发渠道优势的传统巨头反应过来并迅速抄袭跟进之前，你究竟能以多快的速度建立起真正的口碑裂变、网络效应和市场渗透率？而在税务这个赛道上，因为每家企业每年只需要报一次税，我们根本无法在传统巨头跟进之前冲到数亿美元的营收体量。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Jean-Denis Greze</strong>: I left Plaid. I took a few months off with family cuz I knew that if I was going to be a founder I was going to have no more time off for a while. And then started exploring in the very like B2B way, what would be interesting markets where AI could really change the product experience. And for a variety of reasons tax made a lot of sense. There's a lot of text in tax, and LLMs are very good at text. You deal with a lot of structured formats as inputs, like financials and lease documents, and it just felt like a medium where we could take this process of putting together a business tax return, which is pretty different from a personal tax return, and automate it.</p>
+<p>And I did what engineers do, which is we did technical due diligence to prove to ourselves that it could be done. And the feeling was like, yes, within the next 2 years the process for a small to medium-size business of going from, you know, your financials and a bunch of documents about your business and a finished tax return, that could be automated with AI. And we spent a year building that. And I think it worked from a product perspective, but not from a go-to-market perspective. Meaning even though I have no doubt that tax prep will be automated, how do you reach millions of businesses efficiently and sell that product? That had a lot more question marks than we anticipated.</p>
+<p>And basically after 1 year, we had what I would describe as a good business pre-AI. That is, if I showed you the revenue number and the revenue growth in our first year, like a little bit below a million, and if I showed you what I thought we could do in year two, which is we thought we could get to like two and a half to three million in revenue, I think pre-AI you would have been like, "That makes a ton of sense." But post-AI, this was not going to be a venture scale company.</p>
+<p>And also, I think even more importantly, we realized that the incumbents were going to be able to use the technology to automate tax prep for their existing customers faster than we could grab market share. And that's like a key thing if you're a founder you have to think about. Your advantage if you're a new entrant is you're faster moving, you can build a different product, you can use different go-to-market approaches, but there's a ticking clock on the wall, which is how quickly can you get real word-of-mouth network effects and market penetration before the incumbents who have other advantages—they have distribution advantages, right?—before they can catch up and copy what you're doing effectively enough. And it felt for tax like we wouldn't be able to get to hundreds of millions of revenue before our competitors, the incumbents, could because you can only sell tax once a year.</p>
+</details>
+<h3 id="低频交易与不可逾越的周期性困境" data-reading-heading="">低频交易与不可逾越的周期性困境</h3>
+<p><strong>Alex Rampell</strong>: 不仅仅是一年只能卖一次，更根本的在于日常交互频次。这种产品在底层逻辑上就注定不可能成为一款日活跃用户（DAU）级别的工具。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex Rampell</strong>: And not only they sell it once a year, it's like the interaction. It just fundamentally cannot be a DAU tool.</p>
+</details>
+<p><strong>Jean-Denis Greze</strong>: 一点没错。而且它也几乎无法产生强有力的自发口碑传播，因为极少有人会在日常生活中向朋友吹嘘自己的报税体验有多棒。退一步讲，就算有人真的愿意夸赞推荐，同样也是一年只有一次——通常是在他们刚报完税的那几天。而当他们向周围人称赞自己的报税体验有多省心时，身边的其他人往往并不处于需要寻找新报税员或新会计师的时间窗口。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Jean-Denis Greze</strong>: That's right. And it also doesn't have a ton of word-of-mouth because it is rare for people to brag about their tax prep situation. And when they do, again, they can only do it once a year, after they've done the tax return. And so when you brag about how good your tax prep experience is, usually it is also not the time when people are purchasing, like are looking for a new tax preparer or accountant.</p>
+</details>
+<p><strong>Alex Rampell</strong>: 等到来年真正需要报税的时候，大家早就把这茬给忘得一干二净了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex Rampell</strong>: They're going to forget in the next year.</p>
+</details>
+<p><strong>Jean-Denis Greze</strong>: 毫无疑问。这种在时间维度上的断裂和脱节，使得业务根本无法实现指数级的超级扩张。这正是为什么做税务作为一门风险投资支持的商业模式来说并非绝佳选择。说来也巧，我的一位挚友曾创办过一家很成功的教育科技（EdTech）公司，他过去总跟我抱怨的事情一模一样：教育软件一年当中只能卖两次——一次是在夏季为秋季学期采购，另一次是在秋末冬初新学年到来之前的极短窗口期。全年中只有这两个狭窄的时间段你才能真正把软件卖给学校和学区。他当时就感叹：“正是这种采购周期，极大地限制了我实现超高速扩张的能力。”遗憾的是，当我们刚开始投身税务赛道时，我偏偏把他的这一忠告给选择性遗忘了。</p>
+<p>于是，我们埋头做了一年税务工具。在经历完第一个报税季之后，我和联合创始人连续整整一周，端着咖啡在路上走了无数次，深入反思人生的意义、创业的初衷以及商业的本质。最终我们得出结论：我们必须转向去做别的事情。如果我们真的渴望影响千千万万人的生活，就必须找到一个更具土壤、更肥沃的市场去深耕，实现这一使命肯定有更好的路径。于是我们开始重新思考。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Jean-Denis Greze</strong>: That's right. Those discontinuity make it really difficult to hyper scale. And so, that's why it was not a great idea as a business. And it's funny, one of my best friends has built like a successful EdTech company. And one of the things he always complained about with EdTech, it's the same thing. You can only sell EdTech twice a year: you can sell in the summer for the fall, and then you have a short window where you can sell the end of the fall and winter season before the new year. Those are the only two times where you can really sell software to schools and to school districts. And he was like, "You know, that really limited my ability to hyper-scale." And I chose to forget that when we were doing tax.</p>
+<p>So, yeah, so we built tax. And after one year, after the first tax season, we basically—my co-founder and I—went for a lot of walks, with a lot of coffee, for a week, and really pondered the meaning of life and entrepreneurship and capitalism, and decided we should do something else. Like we need to find a better, a more fruitful market to play if we want to impact millions of people. There are better ways to get at that goal. And we started...</p>
+</details>
+<h3 id="果断转型的勇气与创业初心" data-reading-heading="">果断转型的勇气与创业初心</h3>
+<p><strong>Alex Rampell</strong>: 做出这样的转型决定是需要巨大勇气的。绝大多数团队很可能根本做不到这一点，尤其是当时你们原有的业务并不是做不下去，它明明还在赚钱增长。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex Rampell</strong>: A pretty brave thing to do. Most people probably wouldn't do that, especially because it wasn't not working.</p>
+</details>
+<p><strong>Jean-Denis Greze</strong>: 在身处其中的那一刻，那种感觉确实就跟失败了一模一样，觉得我们搞砸了。但归根结底，你必须问清楚自己创办一家企业的核心动力究竟是什么。作为创始人，你生命中总会出现这样的时刻——而且出现的频率往往比你预期的要高得多——在那些时刻，你必须诚实地拷问自己的内心：“我究竟为什么要干这件事？”而对我们来说，能否真正对这个世界产生广泛而深远的影响，才是我们最在乎的核心所在。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Jean-Denis Greze</strong>: In the moment, it felt like failure, like we were failing. But I think, what are your core motivations for building a business, right? As a founder, there are these moments—they happen more often than you wish they did—where you really ask yourself the question like, "Why am I doing this?" And, you know, for us it was like impacting the world was really, really important.</p>
+</details>
+<!-- chunk 2/9 -->
+<h3 id="放弃税务业务与艰难抉择" data-reading-heading="">放弃税务业务与艰难抉择</h3>
+<p><strong>Founder</strong>: 我们当初由衷地想做一些有意义的事情，去真正帮助大家。然而，我们后来不再相信自己能够产生预期的社会影响力，因为我们感觉自己无法足够快速地将这项业务做大规模。此外，对于我们而言，创立一家公司的第二个重要原因，是非常享受与我们团队共事的时光。但团队中的每个人都是有机会成本的——他们本可以去其他知名企业工作，或者去硅谷许多其他非常优秀的公司。所以，一旦你不再坚信自己能取得巨大的成功，那么每天走进办公室，在面对员工说“嘿，我在这件事上遇到了困难”，或者试图说服一位求职者加入、而你明知对方手握其他公司极具流动性的现金/成熟期期权 Offer 时，你就很难直视他们的眼睛。你会想：“作为一个人，我到底在做什么？我必须对自己保持真诚。”我知道这种痛苦，我亲身经历过。所以综合权衡之后，我们意识到：我们必须做出决断。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder</strong>: We really wanted to build something that mattered and help people. Um so, we stopped believing that we could have as much impact in the world as we ought to have because we didn't feel like we could scale the business quickly enough. And the second reason why I think you build a company, for us, was really enjoy working with our team. But everyone on our team has an opportunity cost. They could be working at Town or they could be working at, you know, a lot of other great companies in the valley. And so if you stop believing that you can have a great outcome, then it's really hard to come into the office every day and look at people in the eye when they tell you like, "Hey, I'm having a hard time with this," or we're trying to convince a candidate to come join your company and you know they have an offer from someone else that's liquid, and you're like, "Oh well, who am I as a human being? Like, you know, I have to believe in myself." I know your pain. I was there. So there's a few things that we looked at that and we were like, well, we got to make the decision.</p>
+</details>
+<p><strong>Founder</strong>: 另一种反对声音可能会说：也许我们本可以找到出路。世事往往没有绝对的确定性，对吧？而且我们都是极具适应力与解决问题能力的人，你大可再去尝试别的途径。但我们当时就是觉得，自己的脑海里并没有一个能够将其打造成突破性业务的明确构想。而且最艰难的部分在于向外界承认自己的失败，以及面对部分员工——比如如果我们公司不再做税务，我们的税务团队在这里可能就没有未来了。直面这些现实时，你首先会想：别人怎么看你又有何关系？无论我是成是败，我的朋友依然是我的朋友。至于员工，我们会竭尽全力帮助他们寻找下一份工作，在离职补偿等方面给予他们优厚优待，妥善安置好一切。接着你就会发现，这个决定其实没有你最初在情绪上反应的那么难受，而且它是一个正确的决定。一旦你建立起这种确信感，你就直接去执行了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder</strong>: You know, the counter on the other side is maybe we would have figured a way, and there's always this thing you never know for sure, right? And we're very resourceful humans. So you can always try something else, but it just felt we didn't have the idea in our brain to make it a really breakthrough business. Um and you know, the hard part of it is admitting to other people that you failed and to some of your employees maybe, like our tax team wasn't going to have a future at the company if we're not going to do tax. And you face that and you're like, first of all, who cares what other people think of you? You know, my friends will still be my friends regardless of whether I succeed or fail. For employees, we'll help them. We can help them find their next gig. We can treat them really well in terms of severance and other things and make it okay. And then you realize it's not as hard a decision as you might have emotionally reacted to initially and it's the right decision. You start to get that conviction and then you just do it.</p>
+</details>
+<p><strong>Founder</strong>: 还有最后一点原因：由于税务业务是按年循环的周期性业务，我认为在那个特定时间节点做决断，是我们唯一可行的窗口。你不可能在4月16日、在向一大批客户承诺了要帮他们报税之后才掉头转型；你也不可能在1月份、在已经与半数合作伙伴签约之后突然转型。从大约10月15日算起，我们大概有一个月左右的时间窗口，可以同时脚踏两个平行世界：一个是我们继续做税务的世界，另一个则是我们可以探索新方向的世界。一旦错过那个窗口，大门就会彻底关闭。所以这种时间压力反倒促使我们更高效地做出了决断。如果你从事的不是强周期的持续性业务，你总会安慰自己说：“不妨再用一个月试试下一个想法，或者未来三周试试另一招，说不定这个能成，说不定那个有效。”但我们当时只有一个非常狭窄的时间窗口来改变方向。一旦窗口关闭，我们就必须立刻抉择，否则一年之后的今天我们依然会困在原地，而到那时，我们手头将不再有支持转型的资本了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder</strong>: One last little bit is because tax is annual, I think making the decision at that point in time, it was the only time we could make the decision. You can't pivot like April 16th after you've told a bunch of people that you're going to do their tax return. You can't pivot in January after you've signed half of your partners, right? We had a window between, let's say, right around October 15th of probably a month where we could live in both universes: the universe where we kept doing tax and the universe where we could [pivot]. And after that, the door was closing. And so, I think that time pressure helped us make the decision more efficiently than otherwise. I think if you're not in a cyclical business, I think you can always tell yourself, "Well, let me try the next idea for a month. Let me try the next thing for the next 3 weeks. Maybe that'll work. Maybe this'll work." We had a short window where we could change the direction potentially. And once the window was gone, it was like, "Hey, we have to decide right now. Otherwise, we're going to be here a year from now. And a year from now, we won't have the capital to make the change."</p>
+</details>
+<h3 id="从四个备选方向到邮件与日历-ai" data-reading-heading="">从四个备选方向到邮件与日历 AI</h3>
+<p><strong>Interviewer</strong>: 那么从那一步起，显然你们的名字并没有改变，依然保留了 Town 这个名字，这是一个极好的域名——Town.com 确实是个极棒的域名。不过，你们究竟是如何从当时的处境一步步走到今天这一步的呢？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Interviewer</strong>: Um so, from there to obviously the name didn't change. It's still Town. It's a good domain. Town.com. It's a very good domain. Uh but how did you get from there to where you are right now?</p>
+</details>
+<p><strong>Founder</strong>: 我们基本上极其认真地探索了大约四个方向，没必要把这四个全都展开细讲。最终引导我们走向现在 Town 的核心，是这样一个问题：“为什么一直没有人围绕电子邮件与日历，打造出一款出色的 AI 工具？”我们之所以开始思考这个问题，一方面是因为当初在开发税务产品时，许多客户都对我们说：“嘿，你们能将税务流程自动化固然很棒，但我平时也花了大量时间在与客户预约会议上；而当我真正开会时，常常又会想不起这场会议的具体议题；客户总是在问我一模一样的税务问题，如果你们能帮我提前草拟好回复邮件，那岂不是太棒了？”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder</strong>: We basically explored about four ideas pretty seriously. And it's not worth going all four. What led us to what became Town was this question, which is why has no one built a great AI that works out of email and calendar. And we started asking that question one because when we're building the tax product, a lot of customers were telling us like, "Hey, it's amazing that you're automating tax, but I also spend a lot of time setting up meetings with my customers. When I go into the meetings, I'm trying to—when I go into the meetings, I forget what the meeting was about. Clients always ask me the same tax questions. Wouldn't it be awesome if you could pre-draft answers for me?"</p>
+</details>
+<p><strong>Founder</strong>: 正是从这些切身需求中，我们意识到这些功能在技术上其实并不繁复，却始终没有人围绕知识工作者日常最普遍的工作流——诸如会议安排、会前准备、会议结论沉淀、回复日常高频简单的往来邮件、以及协助人们有条不紊地开启新的一天——去打造一套卓越的 AI 体验。于是我们便着手深挖这个想法。当时恰逢 Claude Opus 等大模型迭代演进，尤其在代码编写领域，智能体（Agents）已经开始展现出越来越强的自主工作能力。我认为，正是这种极其实在的真实洞察，加上模型智能化水平的突飞猛进，让我们以极快的速度找到了产品市场匹配（Product-Market Fit, PMF）。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder</strong>: And so, we realized from these needs that like these weren't very complicated things to do, but no one had built great AI around these very common knowledge worker workflows like meetings, meeting prep, meeting outcome, answering pretty simple emails that happen all the time, getting people to be prepared for their day. So, we just started exploring that idea and we did it at the time that Opus 45 was happening and agents, at least for coding, were able to do more and more autonomous work. And I would say that very simple insight plus the models suddenly being able to be more agentic meant that we got product market fit very quickly.</p>
+</details>
+<h3 id="狂热的用户需求与产品深度的发掘" data-reading-heading="">狂热的用户需求与产品深度的发掘</h3>
+<p><strong>Founder</strong>: PMF 是一种非常神奇的体验。一旦你真正抓住了它，你就会紧紧抓住不放，顺着这条线索一直深挖下去。因此，我们当时根本没有停下来坐而论道地计算：“这市场的潜在空间（TAM）究竟有多大？”或是“所有人都会需要这个产品吗？”抑或是“什么才叫彻底胜出？”我们的态度很简单：既然感受到了来自用户的强烈拉动，那就让我们集中全力猛攻几个月，在实战中深入了解这个市场，看看真正的机会究竟能延伸到何处。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder</strong>: And you know, product market fit is a magical thing. Once you have it, you kind of want to hang on for dear life and keep pulling at the string forever and ever. And so, we didn't sit back and ask ourselves like, how big could the TAM be? Or like, will everyone want to do this? Or you know, like, what does it mean to win? We were just like, hey, we're getting a ton of pull from users. Let's go after this for a few months really hard and learn about the market and see what the opportunity could look like.</p>
+</details>
+<p><strong>Founder</strong>: 随着我们不断推进，我们开始体会到，绝大多数商业运作实际上都是跑在电子邮件和日历之上的，特别是任何对外的业务角色——比如销售、商务拓展或是招聘——公司之间协同合作的核心载体几乎全都是电子邮件。因此我们意识到，潜在市场规模必然极其庞大，而且这不仅局限于美国本土，而是遍及全球。随着客户不断向我们反馈他们喜欢产品的哪些方面，我们惊觉他们所期盼我们解决的问题其实大有深度。这绝非单纯地将大语言模型（LLM）与邮箱做个接口对接那么简单，想要把这种产品体验打磨得愈发卓越，背后所涉及的系统性工作要深刻得多。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder</strong>: And you know, as we did it, we started to realize, well, most businesses run out of email and their calendar, right? Especially any role at a business that's external, that's like sales or business development or recruiting, you know, the way companies work together is through email, mostly. So, we're like, oh, the TAM's got to be big. And it's not just in the US, it's like everywhere in the world. And then when our customers start telling us what they liked about the product, we realize, oh, there's a depth to what they're asking us to solve for them. It's not—this isn't as simple as just hooking up an LLM to your email. There's a lot more that goes into making this experience better and better.</p>
+</details>
+<p><strong>Founder</strong>: 所以在产品层面上，我不敢说当时我们已经看清了护城河的终局，但其中蕴含的复杂度足以让我们坚信：我们可以沉下心来深耕，打造出无与伦比的产品体验。从去年12月一直到今年4月，我们每一天都在全速推进，产品每天都在保持1%到1.5%的增长节奏。客户不断向我们提出新的功能诉求，产品路线图也愈发清晰。直至最后，那种势头推着我们做出了决定：“是时候结束封闭内测了，我们准备好将这款产品正式推向全世界。”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder</strong>: So, we started feeling like on the product end, I'm not saying necessarily we had a line of sight to a moat, but there was enough complexity that we thought, hey, we could really dig into this and build a great product experience. And basically we did that from December of last year until April and we just kept going every day. Like every day the product grew by a percent or a percent and a half. And our customers kept asking us for more and the road map was very clear and you know, we got pulled onto the point where we were like, "Hey, enough with this closed beta. Like we're ready to launch the product out into the world."</p>
+</details>
+<h3 id="产品驱动增长与企业级体验的先后顺序" data-reading-heading="">产品驱动增长与企业级体验的先后顺序</h3>
+<p><strong>Interviewer</strong>: 我觉得你们身上另一个非常大胆的特质也在于此：你们已经验证了 PMF，但随之而来的抉择是——究竟该走产品驱动增长（PLG），还是转向大客户？因为确实有很多大企业找上门来说：“把你们的产品交给我们，我们想要买。”但你们很清楚地认识到：如果买单的“客户”并非实际的“终端使用者”，即真正签支票的人和每天被迫使用产品的人不是同一个群体，你就极有可能做出极其糟糕的产品体验。因为你所有的努力最终只是在讨好企业信息安全官（CISO），在迎合采购决策者，却完全忽略了终端用户的真实体验。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Interviewer</strong>: And one of the things that I thought was very bold about what you did as well. Um so you have product market fit, but you're also, we talked about this a lot of do you go PLG, right? Or do you go like you have big companies that say, "Hey, give me your product. I want it." But you kind of realized that if the customer is not the user, the customer is the person that writes the check, the user is the person that has to deal with the product. If the customer is not the user, you might end up building a bad product because you're making the CISO happy, you're not actually making the user happy, you're making the customer happy.</p>
+</details>
+<p><strong>Founder</strong>: 是的。我和我的联合创始人以前都在 Dropbox 工作过。我认为在 Dropbox 的经历给我们带来的一大宝贵认知是：你永远可以先做出一款世界顶级的产品体验，然后再去探索如何让它适配企业级的需求。沿着这个方向走是非常顺畅的——更准确地说，这条路虽然也绝不容易，但它是行得通的。相反，如果你把满足合规审计、IT 管控和企业级要求作为原点基线，然后再试图在上面雕琢出令人惊叹的产品体验，这几乎是一件不可能完成的任务。所以，我们……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder</strong>: Yeah, my co-founder and I worked at Dropbox and I think one of the big learnings for us from Dropbox is you can always take a world-class product experience and figure out how it works for the enterprise. It's really easy to go in that direction. I mean, let me rephrase that. It's tough to go in that direction, but it is possible. It is almost impossible to go from an experience that starts from the compliance IT enterprise requirements and then figures out how to make the product experience incredible if you take that as the baseline. So, we we we...</p>
+</details>
+<!-- chunk 3/9 -->
+<h3 id="企业级-ai-体验从个人消费级体验切入企业市场" data-reading-heading="">企业级 AI 体验：从个人消费级体验切入企业市场</h3>
+<p><strong>Speaker A</strong>：当时我们觉得——而且我认为直到现在，或者说直到几个月前——我们始终坚信，单纯把产品本身打磨得更好，这里面就蕴含着巨大的超额价值（alpha），这应当是我们最核心的专注点。增长当时是自然而然发生的。我们的想法是：“如果我们能够把产品体验彻底摸透、做扎实，同时从企业级视角、从数据安全与隐私合规的角度打好底层架构，那么后续我们完全可以再逐步弄清楚如何去雕琢产品的后台管理功能，使其完美契合企业客户的诉求。”我认为对我们来说，这是非常正确的抉择。</p>
+<p>因为我认为，尤其是随着消费者对 AI 能力的期望不断被拔高，这些期望必然是由消费级体验塑造出来的。因此，我们的核心逻辑是：各家企业的 CIO 和 CEO 们一定会对自己说：“嘿，我在个人生活端体验到了如此惊艳的个人助理服务，我也希望我的公司能拥有同样出色的工具。”因此，谁能够提供一种让人感觉宛如消费级体验那般流畅的企业级产品，谁就能建立起赢得市场的巨大优势。我们当时认定：“这就是我们作为一家企业所追求的目标定位。”而且我认为，在很大程度上，我们确实已经成功做到了这一点。</p>
+<p>而现在的问题转变成了：“好的，现在已经有大型企业开始使用我们的产品了。那么，我们该如何从仅仅做下一单企业级交易，跨越到能够高效交付几十家企业客户？我们如何不仅满足两三家客户的数据隐私和安全合规要求，而是让每一个企业级客户的严格标准都能得到满足？”现在的感觉是，这已经变成了一个更加可知、更加有迹可循的问题，我们可以全力以赴去攻坚解决它，因为我们核心的产品体验已经立住了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: felt and I think until now, until maybe a couple months ago, we felt like there was so much alpha in just making the product better, that should be our focus. Growth was just happening naturally. We're like, "If we figure out the product experience and if our foundation from an enterprise perspective, from a data security and privacy perspective is good, we can figure out later how we shape the admin side of the product to be perfect for an enterprise." And I think that was the right call for us.</p>
+<p>Like I think, you know, especially as consumers' expectations around what AI can do, those are going to be consumer grade experiences. And so, our thesis is that CIOs, CEOs of companies are going to tell themselves, "Hey, this amazing personal assistant experience that I get on the personal side of the world, I want that for my company." And so, whoever has an enterprise experience that feels like a consumer experience, like they're going to be set up to win. And we were like, "That's where we want to be as a business." And I think we've mostly actually succeeded in getting there.</p>
+<p>And now the question is, "Okay, like, you know, we first we have large companies that are using the product. So, you know, it's like, 'How do we go from just like one enterprise deal to like being able to do dozens effectively? How do we take the data privacy, security requirements of not just a couple of customers, but, you know, how do we satisfy those for every enterprise company?'" That feels like a much more knowable problem now, and we can go after that with our heart out, because the core product experience is good.</p>
+</details>
+<p><strong>Speaker B</strong>：是的。我很认同这一点。我知道你和我之前也稍微讨论过这个话题，我至今还记得当年用黑莓手机（BlackBerry）的情景。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Yeah. You know, I agreed. And I I know you and I've talked about this a bit where I remember having a BlackBerry.</p>
+</details>
+<p><strong>Speaker A</strong>：是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Yes.</p>
+</details>
+<h3 id="黑莓的覆灭与-iphone-时刻的重演" data-reading-heading="">黑莓的覆灭与 iPhone 时刻的重演</h3>
+<p><strong>Speaker B</strong>：大概在 2007 年，iPhone 横空出世，当时史蒂夫·鲍尔默（Steve Ballmer）还说：“没人会买一部 800 美元的手机，这绝对会彻底失败，简直就是个笑话，巴拉巴拉一堆。”后来大家也知道，微软最终收购了诺基亚。但是，黑莓当时迅速走向消亡，至少按照我的理论来看，是因为那一年圣诞节，几乎所有 CEO 都收到了一部 iPhone 作为礼物，他们用它给自己的孩子拍照，然后猛然发现：“天哪，这东西简直太好用了。我们公司配的那玩意儿根本没法比。嘿，我是老板，你们去给我搞清楚怎么让这台设备接入公司系统。”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: And call it 2007, the iPhone launches, and then Steve Ballmer's like, "Nobody's going to buy an $800 phone. This is going to be a flop. It's such a joke. Blah, blah, blah." You know, eventually Microsoft buys Nokia. But, uh, the BlackBerry died pretty quickly because, uh, my theory on this, at least, is that every CEO got an iPhone for Christmas that year or something, was taking pictures of their kids, and like, "Holy crap, this is really good. This thing's not that good. Hey, I'm the boss. You go figure out how to make this thing work here."</p>
+</details>
+<p><strong>Speaker A</strong>：没错。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Yep.</p>
+</details>
+<p><strong>Speaker B</strong>：对吧？我们现在大概也处于类似的节点。我经常和很多企业高管交流，很有意思的是，那些真正看见未来的人会说：“我必须拥有这个。”但也有一些人会说：“哎呀，AI 根本没那么好用，我之前用过 Watson 之类的。”现在依然充斥着大量这样的怀疑论者。但感觉就像 iPhone 当年一样，人们已经在个人生活场景中切身感受到了 AI 的惊艳魅力，但在工作场景中却还没有普及开来。这背后的原因某种程度上还是一个悬而未决的问题——部分原因在于权限控制体系，但我也很想听听你的看法：你是否认同这种类比框架？以及你认为未来几年面向工作场景的“AI for work”会演变成什么样？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Right? And we're probably I I talked to a lot of enterprise leaders, and it's funny, the ones that have seen the future are like, "I need this." There's some that are like, "Oh, yeah, like, AI doesn't work that well. I use Watson" or something. Like, there are there are still plenty of those where there are skeptics. But, like, it feels like the iPhone has emerged in terms of like people have been exposed to the wonders of AI in a personalized setting, but not in a work setting, and it's kind of an open question as to why. And part of it is the permissioning, part of it, but I I'd love for your thoughts on kind of if if you agree with that framing, and kind of what what the next few years of like AI for work look like.</p>
+</details>
+<h3 id="从-good-technology-的教训看智能体如何渗透企业" data-reading-heading="">从 Good Technology 的教训看智能体如何渗透企业</h3>
+<p><strong>Speaker A</strong>：首先，我完全赞同这个框架。我想插一句题外话，当年有一家公司，我记得好像叫 Good。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: one I agree with the framing. I think a little side note, there was this company, I believe it was called Good.</p>
+</details>
+<p><strong>Speaker B</strong>：对，Good Technology。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Yeah, Good Technologies.</p>
+</details>
+<p><strong>Speaker A</strong>：对，他们做的是一款专为 iPhone 打造的企业级邮件客户端。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Yeah, which was uh it was an enterprise-ready email client for the iPhone.</p>
+</details>
+<p><strong>Speaker B</strong>：那是一个 App，简直是世界上有史以来最难看的软件。是的，我以前用过它。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: was an app. It was like the ugliest thing in the history of the world. Yes, I used to use it.</p>
+</details>
+<p><strong>Speaker A</strong>：之所以提到它，是因为我认为这不仅仅是一个黑莓的故事，我们自己也绝不想沦为当年的 Good，对吧？因为 Good 最终并不是一门好生意，大家会觉得：“是的，没错，你确实在 iPhone 上实现了企业级功能，但你的品质根本没有达到其他 iPhone 应用的标准，对吧？”所以对我们而言，风险不仅在于会不会变成黑莓，也在于千万不能变成 Good——比如大家最终宁愿直接在 iPhone 上使用 Gmail 原生客户端，因为企业真正关心的，始终是极致的便捷性与企业级特性的有机结合。</p>
+<p>所以我经常会思考那些“以人类固有节奏发生的事情”。首先，作为一类产品形态，“助理”（assistant）在当今全球范围内大概也只有几百万人真正深度使用，在技术采纳曲线上目前仍然处于非常早期的阶段。所以我甚至认为，很多 CEO 自己都还没有真正走到这一步。就像当年的 iPhone 一样，绝大多数人可能需要 6 个月、12 个月甚至 18 个月的时间，才会在个人生活中体验到这种神奇之处。</p>
+<p>一旦他们亲身体验到了，接下来的问题就是：你如何在企业内部完成落地采纳？我认为这比当年的 iPhone 还要复杂得多。因为智能体（Agent）的工作机制在于：它们只有在能够访问驱动你业务运转的数据和 API 时，才会变得越来越强大有效。如果它们能在安全且注重隐私保护的前提下接入这些资产，就能为你完成海量的工作；但如果不能接入，它们的能力上限就完全受限于其能触达的数据。</p>
+<p>因此，我们思考这条渗透路径的方式是：第一步，能够进入任何一家企业，哪怕仅仅通过连接几位员工的邮箱和日历——此时先不要触碰核心的业务记录系统（systems of record）——就能让他们真切感受到足够的神奇体验，以至于惊叹：“哇，这会给我的工作带来巨大的价值。”正如我之前所说，对于面向外部的岗位而言，日历和邮箱正是蕴含着如何自动化部分工作的核心洞察源泉。</p>
+<p>于是，你可以带着智能助理出现，对他们说：“我可以帮你做这些会议的会前准备；我可以帮你微调针对该会议的幻灯片，使其更好地契合设计规范，并自动用刚刚发给你的 PDF 里的最新数据进行更新。”仅仅凭借这一点，大家就会开始感受到神奇之处。随后你才可以问自己：“那么，我现在是否有资格请求你连接你们的 CRM 呢？我是否有资格让你去向 IT 团队申请接入所有其他业务工具？”</p>
+<p>我认为这个演进过程必然会以更加符合人类组织适应速度的节奏推进。与此同时，你必须拥有硬币的另一面：你必须具备完善的审计日志（audit logs），具备严密的安全防护姿态来防止特权信息被泄露给智能体；你还需要为 CFO 提供精准的成本管控机制，让他们明白如果整个团队都在 Town 上运转，每一笔钱花在了哪里，Token 是否得到了高效利用。</p>
+<p>正是这些层面的支撑需要更多的人类时间去磨合与适配，因为你毕竟是在向财富 100 强级别的企业进行销售，而这类企业必须以极其严谨的标准来运营。而当你向市场下沉，转向中小企业（SMB）和中端市场企业时，这类门槛要求就会少得多，采纳速度也会快得多。因此，我们当下的策略布局是：在产品体验和自服务增长（self-serve growth）方面，我们全力深耕中小企业与中端市场；而在安全、合规与财务管控能力方面，我们则聚焦于攻克大型企业级需求。我们相信，通过这种方式，我们可以彻底拿下这整个市场版图。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: And I I I the reason cuz I think it's not just a BlackBerry story, like I don't want to be good, right? Because Good eventually is not a good business because people are like, "Yeah, sure, you're enterprise on the iPhone, but you're not at the level of quality of every other iPhone app, right?" And so I think that's the that's the risk for us. It's not just being the BlackBerry, it's also like being good as opposed to hey, people just using like Gmail uh the Gmail app, right? On on on their iPhone because it's both the convenience and the enterprise features that that a business is going to is going to care about.</p>
+<p>Um Yeah, so I often think about this things that happen at the speed of a human, right? And first of all, assistance as a category is used by a few million folks, right? Worldwide today. It's still very early in the adoption curve. So I don't I don't even think all of the CEOs have gone there. And just like the iPhone, it will probably take 6, 12, 18 months for most people to experience this magic even in their personal life. Once they do, then there's the question is how do you adopt that within the company?</p>
+<p>And I think it is more complicated than just the iPhone because the way agents work is they're more and more effective if they have access to the data and the APIs that run your business. If they have access to those things in a secure, privacy-preserving way, then they can do lots of things for you. But, if they don't, right? They're They're only really as smart as the data they have the access to.</p>
+<p>So, you know, I think the the way we think about the journey is first uh be able to go to any company and and get a few people at that business simply by connecting their email and their calendar. So, not the core systems of record yet, to feel enough magic that they're like, "Oh, this is going to bring a lot of mal- value in my work." And as I said, for external-facing roles, the calendar and email are real sources of insight about how you can automate part of someone's work.</p>
+<p>And so, then you can show up with the assistant, you can be like, "I can help prepare you for these meetings. I can tweak the decks for that meeting to use the design language better and to be updated with the latest numbers that are in this in this PDF that was sent to you." And just from that, people will start to feel the magic. And then you ask yourself, "Well, have I earned the right to ask you to connect your CRM? Have I earned the right for you to go to your IT team and ask all these other tools to be connected?"</p>
+<p>And I think that journey will happen more at the speed of humans. And you have to have you have to have the other side of the coin. You have to have the audit logs, you have to have the posture that allows, you know, privileged information not to be shared with the agent. You You need all these You need the cost control for the CFO so that they understand that if their whole team operates on town, they're understanding where money is being spent and that tokens are being used efficiently so that Right, it's all that side of things that will take more human time to adapt cuz you're still selling into, you know, a Fortune 100 company that has to be run with a certain level of diligence.</p>
+<p>As you move down market, right? As you move towards SMBs and mid-market firms, I think you have fewer of those requirements, right? And the adoption will be much faster. And so, our current bet right now is we are really focusing on from a product experience and self-serve growth, the SMB market, the mid-market, and then from a what security, compliance, finance features do we need, focusing on the enterprise. And we think we can knock out that whole part of of the space.</p>
+</details>
+<h3 id="助理空间的杰文斯悖论与现实应用" data-reading-heading="">助理空间的杰文斯悖论与现实应用</h3>
+<p><strong>Speaker B</strong>：是的，我认为如果你深入思考的话，在整个助理领域还存在着一种“杰文斯悖论”（Jevons paradox），对吧？比如，我身边就配有一位行政助理。但即便如此，我的意思是虽然我信任她也喜欢她，但我并不希望她阅读我的每一封邮件。</p>
+<p>实际上前几天刚好发生了一件事。当时我在伦敦，依稀记得自己晚上有一场晚宴要参加，我敢发誓自己绝对收到过相关的邮件确认。于是我给我自己的 Townie（AI 助理）发了短信：“我是不是有一场晚宴要参加？”它立马回复说：“是的，你确实有。”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Yeah, I mean, I think there's also a Jevons paradox to this whole assistant space, if you think about it, right? So, I have an executive assistant in here. Um but still, I don't I mean, I trust her, I like her. I don't want her reading all of my email. Um and actually, this just came up. I was in London. I thought I had a dinner to go to. So, I could have sworn like I got an email about it. I texted Snap, my townie, and I was like, "Don't I have a dinner to go to?" And it like it's like, "Yes, you do." Um you do.</p>
+</details>
+<p><strong>Speaker A</strong>：而且当时这件事并没有记录在你的日历上。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: And it wasn't on your calendar.</p>
+</details>
+<p><strong>Speaker B</strong>：它根本不在我的日历上。这是我的责任，不能怪我的助理。这是我的疏忽，因为我当时没有回复那封邮件。对方发邮件时也没有抄送她，这怪不得别人，纯粹是我的疏漏。但 AI 敏锐地捕捉到了这件事。现在我已经让它自动化处理了，它时刻都在帮我审阅所有的邮件。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: It was not on my calendar. It was my fault, not my assistant's fault. It was my fault because I didn't respond to an email. Um they didn't CC her, that's not their fault, that's my fault. And it caught it, but but now I have it automatically going through like it it reads my email all the time.</p>
+</details>
+<p><strong>Speaker A</strong>：嗯。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Mhm.</p>
+</details>
+<p><strong>Speaker B</strong>：在这一点上，我所在的公司足够慷慨，为我配备了专门的行政助理，但社会上绝大多数人是没有这种待遇的。事实证明，有人可能会说：“好吧，……”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: And that's something where so, I can or my firm is nice enough to give me an executive assistant, there are plenty of people that don't have one. And it turns out, you might just say, "Well,</p>
+</details>
+<!-- chunk 4/9 -->
+<h3 id="ai-助手的杰文斯悖论与市场定位" data-reading-heading="">AI 助手的杰文斯悖论与市场定位</h3>
+<p><strong>Speaker A</strong>: “行政助手的市场其实相当小，因为绝大多数人根本雇不起。”但事实证明，如果能通过芯片硅基算力来提供这种能力，市场空间就会变得极为庞大，进而人们会不断发现新的应用场景。比如，让它全天候阅读并处理我的电子邮件——这在以前我绝不可能雇人去做，不仅出于隐私考虑，而且这里其实存在着一种双重的“杰文斯悖论”（Jevons paradox）。对于不太了解的人来说，杰文斯悖论最初是指：当詹姆斯·瓦特发明了更高效率的蒸汽机后，人们原本以为对煤炭的需求会大幅下降，因为过去需要一磅煤完成的工作现在只需要一盎司；但事实恰恰相反，煤炭消耗量反而暴增了上千倍，因为高效的动力让它被应用到了无数前所未有的场景中。我觉得 AI 助手市场也存在同样的逻辑。不过我想知道，你们是如何定义自身的目标市场的？你们会将其定义为“助手”吗？因为这个词似乎把业务范围框得太窄了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: The market for executive assistants is rather small because most people don't have them." But it turns out if you could actually produce it via silicon, the market's quite large, and then you find things to do. Like, I'm going to have somebody read my email all the time, which I would never do, both from a privacy... It's actually like a twofold Jevons... It's like a Jevons paradox of privacy that... Obviously, for those that don't know, Jevons paradox is about how when the steam engine became more efficient, you know, like James Watt made a more efficient steam engine, and then the assumption is that the demand for coal would go down because what used to take a pound of coal now took an ounce of coal. But actually it turned out that it went up like a thousandfold because now you had something that could do it very efficiently. So, it feels like that probably exists for the assistant market, but I'm wondering how do you define your market? Is it like assistant? Because that seems like it casts too narrow of a brush on it.</p>
+</details>
+<p><strong>Speaker B</strong>: 我对市场的看法是：我们正在努力打造一款能够与人协同工作的软件产品，帮助他们发掘越来越多的场景去部署 AI，从而更好地完成本职工作。从某种意义上来说，我将我们的产品视为一台“Token 分配机”（Token allocation machine）。我们要做的，是向人类用户提供各种可以在何处消耗 Token 的选项，并由人类决定是否需要产出相应的结果。随着 Token 成本越来越低，会出现越来越多在以往昂贵时期绝对不会消耗 Token、更绝不可能雇佣真人去完成的工作场景。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: I think of the market as we're trying to build a product that works with people to find more and more opportunities for them to deploy AI to be better at their job. And I think in some case, so I think of our product as a token allocation machine. We're trying to give options to the human about where they could apply tokens, and then the human can choose whether they want the outcome of that. And I think as the tokens get cheaper, there are more and more places where you would apply tokens where you would never have done it with today's expensive tokens, and you definitely would not have done it with humans before.</p>
+</details>
+<h3 id="长尾任务挖掘从会议准备到供应商比价" data-reading-heading="">长尾任务挖掘：从会议准备到供应商比价</h3>
+<p><strong>Speaker B</strong>: 一个最基础的例子就是为每场参会准备背景材料。即使你配有专属行政助理（EA），他也不可能在你参加的每一场半小时例会前，都专门花时间写出一份尽善尽美的准备简报，这在人力成本上根本不划算。但大语言模型（LLM）做这件事可能只需要一分钱。这样一来，任何人都能享受到为每场会议量身定制的背景简报服务：系统会自动调研参会者的背景，甚至检索他们在 X（Twitter）上过去一周是否发表过与本次议题相关的言论。这类长尾研究任务如今之所以值得去做，纯粹是因为其执行成本变得微不足道。因此，我们的核心职责就是不断发掘类似的机会，并向用户主动提示：“嘿，你想让我们帮你自动处理这件事吗？”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: So, like the very basic example is writing prep notes for every meeting that you walk into. Even if you have an EA, your EA is not spending for every meeting, every 30 minute that you go into writing perfect prep notes. It's just not a good use of time. But an LLM can do that for, I don't know, a penny, right? And so then suddenly for anybody feeling like you have prep notes for every meeting that does some research on who else is in that meeting, have they said anything in X in the last week that might be relevant for the meeting? Like all this long-tail research is now worth it because it's so much cheaper. So, our job is to find things that look like that more and more and to tell you as the user, "Hey, do you want us to do that for you?"</p>
+</details>
+<p><strong>Speaker B</strong>: 我再举一个我最近非常着迷的例子。如果你是一位在美国经营餐馆的小微企业主，你的批发供应商——也就是为你提供制作餐食所需的农产品和原材料的商户——通常每个月或每个季度会通过电子邮件发来一份 Excel 表格或 PDF，里面列有所有库存商品的价格。这通常涉及数千甚至上万种商品，而且价格始终在浮动。如果你作为餐馆老板有一位兼职财务人员，他每季度本该为你做的事情，就是审查价格变动趋势，看看某些原料是否可以换到其他批发商那里采购，或者排查是否存在因为某些商品价格暴涨 20% 到 30% 而被坑、多付了冤枉钱的情况。但现实中大家基本不会去做这件事。因为这种审查频次低，虽然能省钱，但流程极其繁琐且不在日常营运流线内，你也不可能专程雇全职员工来盯这件事。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: So, I'll give you another example that I'm recently pretty infatuated with. It's like if you are a small business owner and you run a restaurant in America, your wholesalers, that is the people that you buy the produce and other things that go into making food at your restaurant, they email you probably once a month, maybe once a quarter, with an Excel spreadsheet or a PDF of the prices for all their inventory. So, like thousands, if not tens of thousands, of items. And the prices are always changing. And if you're a restaurant owner and you have a finance person part-time, what that person should do for you is once a quarter look at how the prices have changed to see if you could order some things from different wholesalers, to see if you're maybe getting ripped off or paying too much because the price of something has gone up 20 or 30%. Mostly you don't do it. Because it's like a rare thing, and even though it could save you money, it's a pain in the ass, it's not part of your operations, you don't have a full-time person to do it.</p>
+</details>
+<p><strong>Speaker B</strong>: 但在 Town 里面，配置一个每月自动运行并执行比价分析的任务，你只需要花 5 分钟写提示词就能让它为你工作。哪怕一年中有 11 个月它什么问题都没发现，运行它的成本每个月可能也就一美元左右。但真正有价值的地方在于：只要有一年中的某一个月它发现了端倪，就能为你挽回数百乃至数千美元的损失。所以这项过去大家犹豫要不要做的事情，现在至少每月都应该运行一次；甚至每当价格发生变动时就该跑一次。如果供应商每天改价，你甚至可以每天跑，尽管现实中并不会这么频繁。不过，我们的工作是向餐馆老板直观地展现这种潜在价值，因为他们原本并不会往这方面想——这绝不是因为他们不够聪明或不懂自己的生意，他们非常精明，只是过去受限于成本习惯，不会觉得这值得专门折腾。因此你只需要告诉他们：“听着，你想不想让我始终帮你盯紧批发商，防止他们的价格变动侵蚀你的利润？”他们自然会说：“好啊，那就办吧。”在此之后，用户其实根本不在乎它跑得有多频繁，他们真正关心的是每隔一段时间能收到一封警报邮件，提醒他们：“嘿，你应该把这几项食材的采购转移到另一家供应商，他们正在打折；或者这家供应商对某些原料大幅提价了，已经变得太贵，你或许应该考虑从菜单中下架这些菜品。”做这件事情在技术上并非高深莫测，关键是必须有一款产品能够主动告知用户这种可能性，并让落地变得轻而易举。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: With a town, having a thing run once a month and do the analysis, like literally you can prompt your way to having that exist for you in 5 minutes. And if it finds nothing 11 out of 12 months that's worth doing, it's going to cost you like a dollar a month to run that thing. But the interesting thing is the one month out of a year where it finds something, it's going to find like hundreds, if not thousands, of dollars for you, right? And so now this thing that may or may not have been worth it, you should do it at least once a month. You should do it whenever there's a change... You maybe you should do it daily if you have a wholesaler that changed prices daily, that doesn't happen. But, you know, our job though is to show that opportunity to the restaurant owner because they won't... It's not that they aren't very smart or don't understand their business very well, they do. They're not going to think that that's valuable. So, we kind of all tell them like, "Hey, listen. You want me to always make sure that your wholesalers aren't changing prices in a way that's negative for your business?" Sure, do that. You don't really care actually after how often it runs. What you care about is once in a while you get an email that tells you like, hey, you should probably move all these things to this other wholesaler. They have a discount or like this one is really raising prices on these things and it's getting a little too expensive. Maybe you should remove those menu items. Like it's not rocket science to do this, right? Um but you have to have a product that tells you that this thing is possible that makes it, you know,</p>
+</details>
+<h3 id="产品营销契机与横向平台演进" data-reading-heading="">产品营销契机与横向平台演进</h3>
+<p><strong>Speaker A</strong>: 围绕这个案例，最有趣的一个关键在于：如果你直接走到一位餐馆老板面前问他：“你需要一位行政助手吗？”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Well, the issue the interesting point around that example is if you went to a restaurant owner and said, "Do you want an executive assistant?"</p>
+</details>
+<p><strong>Speaker B</strong>: 他们完全会摸不着头脑。确实如此。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: They would have no idea. Yeah, yeah.</p>
+</details>
+<p><strong>Speaker A</strong>: 但如果你换一种说法问：“你想不想省钱？”这就像 Geico 保险的经典广告词一样，对吧？“你想不想在现有的开销上节省 15%？比如你想不想在卷心莴苣（iceberg lettuce）的采购上省钱？我可以每年帮你省下 500 美元，而一年只收你 52 美元服务费。”得到的回答必然是肯定的。但你们是如何确定这种切入点的？我的意思是，这其实是一个典型的产品营销（PMM）挑战。我记得我们在最初探讨业务未来的新方向（post-tax 时期）时聊过两件事：一个是产品驱动增长（PLG）与销售驱动增长（sales-led growth）的选择。你当时说的一句话让我印象极深：如果你想打造一款真正为终端用户服务的产品，你就必须从用户本身的诉求出发来构建，而不是为了迎合大企业里高高在上的管理者或法务合规团队。等产品成型后，你完全可以反向切入企业级销售和销售驱动模式。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: Whereas if you said, "Do you want to save" it's it's like Geico, right? It's like, "Do you want to save 15% on your current... Like do you want to save money on iceberg lettuce? And I can save you $500 a year and charge you $52 a year." The answer is yes. But how do you know, I mean this is kind of the product marketing question or challenge because I remember the two things that we talked about when we first talked about this the new direction of the future direction of the business, post-tax, where PLG versus sales-led growth. Um where what you said really stuck with me where it's like if you want to build a product that is designed for the user, you have to build it for the user not for this you know, the corporate overlords, all the lawyers at the company. And eventually you can work your way backwards into into enterprise sales and sales-led growth.</p>
+</details>
+<p><strong>Speaker A</strong>: 而当时讨论的另一件事，就是横向通用工具（Horizontal）与垂直行业工具（Vertical）的抉择。这是许多公司都极度纠结的问题，它实际上也引出了另一个话题——你们如何看待像 Anthropic 或 OpenAI 这样的行业巨头？它们既在构建面向企业端的能力，也在面向消费级市场铺开。但具体到你们自身，你当初是如何考量横向与垂直路线的？因为按照你当时的意思——希望我的理解没有偏差——你们的策略是尽可能先从横向通用平台切入，因为你们不想过早被局限在一个极其狭窄的领域，被外界固化为一家“帮你采购卷心莴苣省钱的公司”。你们希望把通用产品推向市场并从中学习——顺便提一句，我现在向你们的求职候选人兜售公司前景时就是这么说的，希望我没有理解错——你们希望通过数以万计使用你们产品的企业和个人用户来学习积累，随之再顺应市场需求自然延伸出垂直解决方案。你们不会预先假设自己已经洞悉了所谓的“卷心莴苣难题”，直到用户真正下载了 Town、使用 Town，并从他们的 Townie 助手那里获得反馈，平台才能真正识别出哪里蕴藏着垂直化的机会。不过归根结底，你目前究竟是如何权衡垂直与横向路线的？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: But the other thing is this kind of horizontal versus vertical. And this is a question that a lot of companies struggle with a lot. And this kind of actually will bring us to a different point on like what do you think about the big guys, right? Like obviously like Anthropic or OpenAI and everybody else who's kind of building things both for enterprise and for consumer. But how did you kind of think about horizontal versus vertical? Because what you said, hopefully I'm going to capture it correctly, was we're going to start off as horizontal as possible because we don't want to be siloed into something that might be very... We don't want to be siloed and branded as like the save you money on iceberg lettuce company. We want to do that and we're going to learn. This is my sales pitch to your candidates, by the way, now. So hopefully I'm getting this right. We're going to learn from hopefully thousands, tens of thousands of businesses and people that use our product and then eventually we can verticalize from there because we're going to let the market define that and we're not going to presume that we know about the iceberg lettuce problem. We wouldn't know that until somebody actually downloads town uses town they learn from their townie and then we can actually recognize that that can be a vertical but I guess how do you think about vertical versus horizontal?</p>
+</details>
+<h3 id="ai-产品同质化与护城河重塑" data-reading-heading="">AI 产品同质化与护城河重塑</h3>
+<p><strong>Speaker B</strong>: 我目前对大多数 AI 产品的看法是：底层模型与技术架构的能力最终都会趋于高度同质化。也就是说，在具体的工作场景中，绝大多数承载模型与工具调用的框架套件（harnesses）能做的事情大同小异。因此，长期以来硅谷赖以建立壁垒的核心差异化方式——凭借领先于市场的独特产品功能——将变得越来越难以维持长久的竞争优势。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: So the way I think about most AI products today is that the capabilities will be very similar. Meaning most harnesses in the work context will be able to do the same things and so the differentiator like I think what has been the main differentiator in Silicon Valley for a long time which is you have different product features that are ahead of market it's going to be more and more difficult to sustain that kind of an advantage.</p>
+</details>
+<!-- chunk 5/9 -->
+<h3 id="软件价值单元的跃迁与个性化定制" data-reading-heading="">软件价值单元的跃迁与个性化定制</h3>
+<p><strong>Town 创始人</strong>：我们可以先记住这一点，后续可以展开一场非常有趣的探讨。我认为软件中的价值单元已经从单一应用（App）转变为整台计算机。但这究竟意味着什么？它意味着软件的边界已经从某个特定应用，拓展到了人类所能做的任何事情——而人类几乎能用计算机做任何事。因此，我们正在彻底将应用层抽象剥离，我认为应用层的价值将会大幅缩水。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder of Town</strong>: And we can put a pin in this one, we can have an interesting conversation about it. I think the unit of value in software has changed from the app to the computer, but what that really means is it's gone from an app to anything that a human can do—and a human can do almost anything with a computer. So we're abstracting away the app layer totally, and I think the value will drop in the app layer.</p>
+</details>
+<p><strong>Town 创始人</strong>：那么，如果底层模型的能力本身没有本质差异，你该如何建立一家成功的公司？我们对此的看法与押注是：随着 AI 变得越来越强大，它能够更好地为每位用户定制产品，极其精准地契合他们的个性化需求。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder of Town</strong>: So if the capabilities aren't different, then how do you build a successful company? Our take on that is we're betting that as AI gets better, it can better customize the product for each user, like very specifically to their need.</p>
+</details>
+<p><strong>Town 创始人</strong>：这意味着，如果你是一名电工并注册了 Town，在你的新手引导（onboarding）过程中，我们向你推荐的自动化流程都是专门针对电工行业的；如果你是一名风险投资人，推荐的内容就完全针对风险投资；如果你是一名行政助理（EA），它就会专门针对该行业的行政助理，以此类推。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder of Town</strong>: Meaning if you're an electrician that signs up for Town, in your onboarding, the things we recommend to you that we can automate are very specific to electricians. And if you're a venture capitalist, they're very specific to a venture capitalist. And if you're an EA, it's specific to an EA in that industry, and so on and so forth.</p>
+</details>
+<p><strong>Town 创始人</strong>：那么该怎么做到这一点呢？现在的模型其实还不够成熟，如果你直接问模型：“嘿，请给做 VC 的 Alex 推荐一些他可以用 Town 来自动化的事项。”我觉得你只能得到一些相当浮于表面的建议，而缺乏真正深入的洞察。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder of Town</strong>: So how do you do that? Well, the models aren't yet good enough where when you just ask the model, "Hey, recommend for Alex, who's a VC, things that he could automate with Town." I think you get pretty good surface-level suggestions, but not really deep ones.</p>
+</details>
+<p><strong>Town 创始人</strong>：因此我们的做法是——因为我们绝不会去窥探用户数据，对吧？要做到企业级可用（enterprise-ready），底线就是绝不能查看用户数据。所以我们查看的是聚合指标，分析平台目前的核心重度用户（power users）都是谁。然后我们直接去找他们交流。在交流中，他们会告诉我们他们都设置了哪些自动化工作流。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder of Town</strong>: So, what we do—and cuz we don't look at user data, right? Like a part of being enterprise-ready is you can't look at user data. So, what we do is we look at aggregate metrics of who are our power users on the platform today. And then we go talk to them. And when we talk to them, they tell us the kinds of things they've automated.</p>
+</details>
+<h3 id="用飞轮积累行业模板与定制软件" data-reading-heading="">用飞轮积累行业模板与定制软件</h3>
+<p><strong>Town 创始人</strong>：比如，我们可能会访谈 10 位经营餐厅的重度用户。在交流中我们会发现，他们所有人都有 5 个共同的业务环节。接着我们团队内部就会动手构建原型自动化流程——我们称之为“例行程序”（routines）——专门为餐厅老板打造我们认为非常出色的方案，比如关于批发商管理的自动化。我们会把这些作为种子模板。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder of Town</strong>: And so, we might talk to 10 power users that run restaurants. And what we'll see when we talk to them is there's five things in common that they all do. And then we'll sit internally and we'll build prototype automations, we call routines, for restaurant owners that we think are really good, like the one about wholesalers. And we'll use that as the seed, right?</p>
+</details>
+<p><strong>Town 创始人</strong>：这样一来，当新用户加入时，我们通过分析你的邮箱和收件箱便能识别出：“你似乎是一位餐厅经营者。”随后，我们便会展示那些从真实访谈中精心打磨出的模板，包含我们认为针对餐厅老板极佳的痛点问题与潜在解决方案。你注册后就能立即上手使用。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder of Town</strong>: And so, when someone joins, we look at your email and inbox and we're like, "You seem to be a restaurant owner." And then we have templates of what we think really good problems and potential solutions are for restaurant owners that we've kind of hand-carved from those interviews. And we put those in front of you. And you sign up and you start using the product.</p>
+</details>
+<p><strong>Town 创始人</strong>：与此同时，AI 在不断进步，我们也在访谈更多的餐厅老板。现在我们不仅有 5 个解决方案，而是能为餐厅老板提供多达 15 种自动化流程。目前这虽然仍带有一点人工成分，但速度可以大幅提升：你可以全自动安排访谈，向餐厅老板赠送亚马逊礼品卡，并通过 AI 对他们如何使用软件进行自动记录和访谈。你不再受限于人类的运作节奏，而是以 AI 的速度飞速迭代。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder of Town</strong>: And then AI's getting better, and we're talking to more restaurant owners, and now we don't have just five, we have like 15 things that we can do for restaurant owners. Still a bit manual, but you can speed it up. You can schedule interviews automatically. You give the restaurant owners a free Amazon card, and you're doing an AI recorded interview of them and what they do with your piece of software. So, you're no longer operating at the speed of humans, you're operating at the speed of AI.</p>
+</details>
+<p><strong>Town 创始人</strong>：随着这个知识库越来越完善、底层模型能力不断提高，生成推荐时对预设库的依赖就会逐渐降低。我们认为长期来看，通过这种方式，我们能以“八二定律”（二八法则）的高效模式为每个人提供高度定制化的软件。而且未来的每个人都不再局限于单一角色。你是一位餐厅老板，但由于没有专门的财务人员，你同时也负责餐厅的财务；此外你还拥有一套用于短租的度假屋。因此，你真正希望你的虚拟助理 Townie 能够同时精通这三项事务。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder of Town</strong>: And this library is getting better, and then the models get better, and so now the recommendations use the library less. And what we think is over time, through this approach, we'll be able to offer 80/20 very customized software for people. And people aren't just one role in the future. Right? Like, yes, you're a restaurant owner, but also you run finance for your restaurant, too, cuz you don't have a separate person doing that. And also you have a vacation rental that you rent. And so really, you want your Townie to be good at those three things.</p>
+</details>
+<p><strong>Alex</strong>：没错。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: Right.</p>
+</details>
+<h3 id="产品驱动自动化-vs-前线部署工程师模式" data-reading-heading="">产品驱动自动化 vs. 前线部署工程师模式</h3>
+<p><strong>Town 创始人</strong>：而且你家里还有两个正在上学的孩子，它还能帮你安排他们暑期的各种活动日程。所以这是彻头彻尾的定制软件，而我们的信念就是用 AI 来构建它。我认为市场上你能看到的另一种策略——这也是各大模型实验室目前在走的路——是前线部署工程师（FDE）模式。这截然不同。FDE 模式本质上是派出真人员工深入你的企业，搞懂你企业的运作方式，然后利用该实验室的 AI 去构建定制软件来服务你。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder of Town</strong>: And also you have two kids at school, and it can help you like schedule their activities for the summer. So it's custom software all the way through, and our belief is that you can use AI to build that. I think the other strategy that you see in the market, which is what I think what the labs do, is a FDE approach. And this is very different. FDE is like, I have a human go into your business, understand how your business runs, then they'll build custom software with AI that uses my labs AI in order to serve you better.</p>
+</details>
+<p><strong>Town 创始人</strong>：如果你是一家每年愿意掏出 500 万美元付给 OpenAI 雇佣 FDE 的大企业，这种模式眼下看起来确实很不错。但我认为随着时间推移、模型性能逐步提升，FDE 这种纯人力重交付的模式实际上会变得越来越缺乏竞争力；而我们这种高度依赖自动化、利用 AI 自动生成定制软件的方法，扩展性要好得多。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder of Town</strong>: I think the FDE approach, you know, if you're an enterprise that's willing to spend like 5 million a year paying OpenAI for FDEs, like, it looks really good right now, but I think over time, as the models get better, the FDE approach actually gets much worse, and our approach, which is much more around automation and using AI to build the custom software, will scale much better.</p>
+</details>
+<p><strong>Town 创始人</strong>：所以我们押注的策略是：从产品驱动增长（PLG）、中小型企业（SMB）、中端市场以及技术极具前瞻性的企业切入，因为在这些场景下我们的模式具备极致的规模化能力。至于那些需要大量人工作业的定制软件市场，就让其他人在大企业领域里争夺吧。我们坚信，我们在飞轮效应中积累的认知和能力，长期来看会让我们比那些依赖定制人工服务的模式取得更大的成功。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder of Town</strong>: And so the bet we're making is we start with PLG, SMB, mid-market, enterprises that are very tech-forward, because there our approach scales really, really well. We'll let other people fight in the enterprise for this much more like hand-crafted software, and the bet that we're making is the things that we learn in the flywheel that we can get will make us more successful in the long term than these more custom approaches.</p>
+</details>
+<h3 id="面对模型厂商的下场竞争town-的壁垒何在" data-reading-heading="">面对模型厂商的“下场竞争”，Town 的壁垒何在？</h3>
+<p><strong>Alex</strong>：但是，或许你也该界定一下：既然 OpenAI 和 Anthropic 现在也都推出了各种连接器（connectors）——你可以直接把 Slack、LinkedIn 接入进去——Town 到底比它们强在哪里？当然，作为 Town 的投资人兼重度用户，我内心自然有自己的答案，但我很希望听你展开讲讲大家为什么要用 Town。另外，许多正在收听本期播客的创业者可能也在忧虑：“糟了，那些底层巨头是不是要把我吃掉了？”我不是指 Town 会吃掉他们，而是眼下出现了一种奇特的局面：基础设施层正在下场做应用层。以往并非如此——比如 90 年代的 Cisco 和 Akamai 是基础设施公司，而 Amazon 和 eBay 是应用公司，Cisco 无论如何也绝不会说“我们要建一个网上书店、做一个拍卖网站，或者建一个类似雅虎的分类目录跟他们竞争”。他们只要把交换机和负载均衡器卖好就很开心了。所以很好奇，你如何看待 Town 与那些你经常向其购买 Token 的底层模型供应商之间的关系？对于眼下这个“基础设施正在吞噬应用层”的怪异时代，其他创业者又该如何应对？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: But maybe also define why is Town better than OpenAI and Anthropic, that now also have connectors? Like, you can hook up your Slack, you can hook up your LinkedIn. I mean, obviously I believe I'm both an investor and a power user of Town. So I have my answer, but I'd love to have you expand on why use Town. And also just like I mean, so many people that are probably listening to this that might be entrepreneurs are also wondering like, uh-oh, are those guys going to eat my—not you, Town. Like, you have this weird situation where you have the infrastructure layer and you have the application layer. And that's always been the case. Like you know, Cisco and Akamai were infrastructure companies in the '90s and then Amazon and eBay were application companies. But never in a million years did Cisco say, you know what, we're going to build a bookseller. We're going to build an auction website. We're going to build a directory like Yahoo that competes with—no, they were just happy selling their switches and load balancers and everything. So, I'd be curious like, you know, maybe define how you think about Town versus the people that you often buy the tokens from. And then how should others maybe think about this kind of weird time that we're living in where it's like infrastructure is becoming application.</p>
+</details>
+<p><strong>Town 创始人</strong>：我的意思是，去跟自己的供应商直接竞争始终是一件充满风险的事情，对吧？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder of Town</strong>: I mean, it is risky always to be competing with your suppliers, right?</p>
+</details>
+<p><strong>Alex</strong>：而且我们还是在与他们更低的销货成本（COGS）进行竞争，对吧？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: And we are competing against their cheaper cogs, right?</p>
+</details>
+<h3 id="中立应用定位与模型风险对冲" data-reading-heading="">中立应用定位与模型风险对冲</h3>
+<p><strong>Town 创始人</strong>：是的，直面供应商的竞争。因此你必须问自己一个问题：这在商业演进中到底是不是一种自然的、合理的终局状态？一个表层但不够充分的回答是：我们最初在围绕电子邮件和日历的用户体验上，抱有截然不同的产品理念，而不知为何其他大厂目前都并未真正聚焦于此。邮件和日历背后存在极其复杂的业务逻辑，这使得我们在该垂直体验上做得极为出色。但说实话，这只是一个浅层理由，因为 OpenAI、Anthropic 或 Google 的某位负责人随时可能一觉醒来，决定也全力投入做这个方向。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder of Town</strong>: Competing against your suppliers. So, you got to ask yourself, is that naturally the right state of the world? So, the small answer, which is not the good one, is we believe very different things about the experience of the user initially around email and a calendar that for whatever reason none of the other players have really focused on. And there's a lot of complexity to email and calendar, which makes our product much, much better there. But that's a small answer because obviously someone at OpenAI, Anthropic, at Google could wake up and decide to do that.</p>
+</details>
+<p><strong>Town 创始人</strong>：真正更有说服力的回答，实际上是要回归到我们的客户本身以及他们的核心诉求。当我们与中端市场企业——大约拥有 500 到 1,000 名员工的公司——沟通 Town 时，我们常会问他们：“听着，未来 3 到 5 年里，究竟哪家模型厂商能持续保持最强？你对此有把握吗？”他们根本不知道，完全无法预测。于是我们告诉客户：“如果你直接购买 OpenAI 的配套产品，那么你的系统里绑定的将永远只有 OpenAI 的模型。万一在未来的 3 到 5 年内，OpenAI 不再是最顶尖的模型供应商，无法为你提供最前沿的智能能力呢？随着 AI 替你接管的工作越来越多，你很可能会因此陷入竞争劣势。”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder of Town</strong>: So, the better answer actually is to think about our customers and what they want. And when we talk to like a mid-market firm—so that's a firm with like 500 to 1,000 employees—about Town, what we tell them is like, "Hey, listen, do you know which model provider is going to be the best model provider over the next 3 to 5 years? Like, what's your opinion on that?" And they don't know. And you're like, "Well, you know, if you buy the OpenAI product, well then you'll always have OpenAI models in that product. And what if OpenAI is not the best model provider, doesn't have the best intelligence for you for the next 3 to 5 years? Then, as AI does more and more for you, you may be at a competitive disadvantage."</p>
+</details>
+<p><strong>Alex</strong>：或者他们随时可能坐地起价（提高租金）？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: Hike the rent?</p>
+</details>
+<p><strong>Town 创始人</strong>：没错，所有的这些风险都存在。因此最核心的一点在于，我们坦率地告诉客户：“看，我们是一个独立中立的应用层。在任何当下时刻，我们都会为你调用我们认为最优质的模型供应商。”这是极为关键的价值。而且这不仅仅关乎通用智能，更关乎在特定垂直场景下谁的表现更佳——比如此时此刻哪家供应商的语音能力最强、哪家在视频生成上更突出、哪家制作演示文稿（slides）最优秀。我们认为，从所有 AI 能力、前沿闭源模型到开源权重模型中，为你的业务挑选最合适、最优解的技术组合，正是我们的核心职责所在。这样不仅能替企业节省真金白银，更能从根本上帮企业规避押错长期技术合作伙伴的系统性风险。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Founder of Town</strong>: Yeah, all of that. And so, the first thing is we're just like, "Look, we're neutral app. We will use whatever supplier we think is the best for you in the moment." And that's like a big part of it. It's also not just general intelligence, like which supplier is better at voice, is better at video, is better at slides at that time. Like, we feel like it is our job to determine from all the AI capabilities, frontier model, open weight, what is the right thing for you as a business. And I think you can save money there, but also you can de-risk ever having made the wrong partner. And there</p>
+</details>
+<!-- chunk 6/9 -->
+<h3 id="模型中立性与企业上下文数据所有权" data-reading-heading="">模型中立性与企业上下文数据所有权</h3>
+<p><strong>Town 创始人</strong>：很多公司大约两年前选择了 OpenAI。但随后在整整 12 个月里，Anthropic 在代码能力上表现得更加出色。这些公司不得不两家同时使用，因为他们意识到要想保持竞争力就必须引入 Claude，必须使用这些模型。我认为，如果你是一家精明的企业，你一定会深入考虑由谁来为你提供智能、由谁来进行路由的中立性问题。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Town Founder</strong>: ...are companies that picked OpenAI like 2 years ago. And then Anthropic was better at coding for a 12-month period. And those companies had to use both because they realized to be competitive, they needed Claude, right? And they needed those models. And I think if you're a smart business, you really think about the neutrality of who's providing intelligence for you and who's routing.</p>
+</details>
+<p><strong>Town 创始人</strong>：这是第一个原因。我认为第二个极其重要的原因是我们的立场：我们认为，企业在 Town 上所创建的数据、记忆和联系人，必须真正归企业自己所有。在计算机普及之前的旧世界里，企业拥有不同的资产——有实体资产，也有人力资产。而现在，大家越来越常提起所谓的“上下文”（context）。这也是一组核心资产，即 AI 为了帮你高效运营业务所掌握的关于你公司的全部信息。我认为这个完整的数据资产库应当完完全全属于你。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Town Founder</strong>: So, that's like one reason. I think the second reason, which is like very important, is our stance is that you own and truly own as a business the data and memories and contacts that's being created on Town. And so, you know, in the old world, pre-computing, if you're a business, you had different assets. You had physical assets. And you had maybe like human assets, right? And increasingly now, maybe people call it context, but there's the set of assets which is all the things that AI knows about your business to help you run your business effectively. And I think you should own that entire bucket.</p>
+</details>
+<p><strong>Town 创始人</strong>：我认为你对这些资产的所有权应当达到这种程度：假如有朝一日市场上出现了比 Town 更好的解决方案，你切换到那个新方案只需要一天时间。这就是我在推销的核心主张——你理应完全掌控这项资产。反观那些派遣驻场前线工程师（FDE）去为你定制软件的厂商，他们的真实意图其实是想方设法增加你的迁移难度，让你难以转向别家。因此，首先你需要中立的底层模型智能；其次，你必须确保建立在模型之上的应用层是让你安心的、随时可以迁移的。在当今这个新时代，最关键的就是掌握这一上下文层，并由中立的服务商提供给你。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Town Founder</strong>: And I think you should own it so much that if there was ever a better solution than Town, switching to that other solution would take, you know, a day. And that's what I'm selling. I'm selling like you want to own that asset. And I think if you look at anyone who's deploying FDEs to build software for you, they actually—what they're trying to do is they're trying to make it more difficult for you to switch at any point to someone else. So, I think that's the second. First you want neutral intelligence, but I think you also want the app layer on top of the intelligence to be one that you feel comfortable you could move to something else. And in the new world, that's really owning this context layer and having someone who makes it available to you.</p>
+</details>
+<h3 id="数据训练边界与企业内部协同架构" data-reading-heading="">数据训练边界与企业内部协同架构</h3>
+<p><strong>Town 创始人</strong>：当然，这意味着对 Town 而言我承担了一种风险，即我们客户的切换成本更低了。但这恰恰是我的产品卖点。坦白讲，如果我们做不出市面上最好的产品，那输了我也认了。这就是我面对基础大模型实验室时的竞争立场。第三点在于模型训练方面。如果你的公司规模足够大，基础模型实验室或许承诺不用你的数据做训练，但如果你的业务运转模式一旦被吸收到模型的权重中、再被转售给其他人，那实质上就等于把你商业成功的秘诀卖给了别人。你绝不会希望这种事发生。因此在训练层面，我们绝不使用客户数据做训练，这根本不符合我们的商业理念。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Town Founder</strong>: Now, that means Town—the risk that I'm taking is that the switching cost for my customers is easier, right? But that's my selling point. And look, if I can't have the best product in the market, then that's okay. That just means I'll lose. But that's like my competitive stance against the labs. And you know, the third part for me is just on training. And I think if you're a large enough company that labs won't train on you, but it's the way you operate your business—if that ever makes it into the weight of someone that's reselling to someone else, that physically you're selling what makes your business successful to someone else. And you really don't want to do that. So on the training layer, we don't train. That's just not part of our philosophy as a business.</p>
+</details>
+<p><strong>Town 创始人</strong>：关于竞争的最后一点是，我们对世界的认知、对人与 AI 关系的理解与别人不同，我们在这一维度上的前瞻性甚至超过了那些顶尖大模型实验室。举例来说，Town 针对团队（Teams）的产品中有一种模式，本质上是构建一个内部 CRM，我们信赖 Agent 来判断公司内部的哪些信息可以开放给其他同事。设想一下这个场景：你在 Town 里发问：“有谁认识这家潜在客户财务团队里的人吗？”Town 能够与你当前公司其他员工的 Agent 直接沟通，迅速找出谁和你要寻找的销售线索有联系。这是一个极其强大的功能，但从隐私保护的角度来看，你必须在架构设计上下极大的功夫才能跑通。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Town Founder</strong>: And then the final one on competition is we believe different things about the world and about I think the relationship between a human and AI where we are probably more forward-thinking than even the labs are. So, the Teams product for Town has a mode around basically building an internal CRM where we're trusting agents to decide what information at the company is available to other employees at the company. Let me just give you an example: you're in Town and you say, "Does anyone know someone in the finance team at this potential customer?" And Town's able to talk to the agents of other employees at your current company to find someone who's connected to that lead that you want. That's like a really powerful product, but from a privacy perspective you really have to design it really, really well to work.</p>
+</details>
+<p><strong>Town 创始人</strong>：我的思考方式是：我们正在努力让人们以 AI 的速度去协作，而不是受限于人类本身缓慢的节奏。按照以往人类速度的做法，你需要在 Slack 或 Microsoft Teams 发一条消息：“有人认识那个团队的谁吗？”然后全公司的每一个人都得看到这条消息、思考一下，你可能要到整整一天之后才能收到回复。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Town Founder</strong>: And the way I think about that is we are really thinking about how do you get humans to operate at the speed of AI and not at the speed of humans. So, the speed of humans version of that question that I just asked is you would go in Slack or Microsoft Teams and be like, "Does anyone know someone at that team?" And then everyone at your company would have to read that message and think about it and you get an answer like a day later.</p>
+</details>
+<p><strong>投资人</strong>：差不多整整一天后，确实是这样。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Investor</strong>: ...like a day later. Yeah, exactly.</p>
+</details>
+<p><strong>Town 创始人</strong>：而使用我们的产品……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Town Founder</strong>: And with us...</p>
+</details>
+<p><strong>投资人</strong>：人类的信息路由效率太低了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Investor</strong>: Humans are slow routers.</p>
+</details>
+<p><strong>Town 创始人</strong>：没错。如果用我们的产品，你会瞬间得到答案，因为我们决定在这类问题上充分信任 AI，由 AI 在公司内部协调处理安全与隐私边界。我们深信这一类机制能够切实大幅提升企业的运转速度，而目前我还没看到其他人在做同样的事。当你创办一家初创公司时，你必须始终思考未来的形态。我认为在未来的图景中，人类介入（human in the loop）的环节会比今天少得多。我们的使命就是让企业适应并安心融入那个新世界，因为其带来的经济效益将远远超过他们今天所顾虑的任何潜在风险。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Town Founder</strong>: That's right. And for us you're going to get an answer immediately cuz we've decided that for that kind of a question, we will trust AI to mediate the security and privacy of that request within a company. And you know, we believe things like that that can really speed up a company that I'm not seeing anyone else do. And you know, it's like when you're building a startup, you always have to think about like what does the future look like? And I think the future looks like a lot less human in the loop than we see today. And I think our job is to get companies to be comfortable with that universe because the economic benefit for them far outstrips any risks that they would see in that experience today.</p>
+</details>
+<p><strong>Town 创始人</strong>：这些就是我们的差异化壁垒。我认为数据所有权和中立性至关重要。看看现在 Rogo 和 Harvey 的遭遇吧，OpenAI 正在亲自下场构建垂类应用与他们直接竞争。从竞争角度看，大家会觉得“天呐，大模型实验室简直势不可挡”。但如果作为一家中立的企业去挑选技术合作伙伴，你必须深入思考：他们未来究竟会向应用栈上方渗透多远？因此从战略层面上看，绝大多数大公司让自己完全受制于某一家应用其实是行不通的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Town Founder</strong>: So, those are the differentiators. I think that data ownership and neutrality are so important. And you know, look at what's happening to Rogo, what's happening to Harvey, right? If you look in OpenAI, they're building vertical companies that are competing with that. And from a competitive standpoint you're like, "Oh man, those labs are really unstoppable." But if a neutral business choosing who to work with, you got to think about like, well, how far up the stack are they going to go, right? So, I just think strategically it shouldn't make sense for most large companies to really be beholden to any one app.</p>
+</details>
+<h3 id="金发女孩区与垂类赛道的技术扩散" data-reading-heading="">“金发女孩区”与垂类赛道的技术扩散</h3>
+<p><strong>投资人</strong>：这里似乎存在一个业务相关性的“金发女孩区”（Goldilocks zone）。如果你拥有 1 万亿美元的营收，作为股东我当然会欣喜若狂，你作为 CEO 兼联合创始人也会非常开心，但你几乎肯定会成为 OpenAI 和 Anthropic 的头号围剿目标；而如果你只有 0 美元营收、根本没人用你的产品，他们也压根不会在乎你。可以说代码领域正好处在了这个金发女孩区不利的一侧。如果你现在做的是代码 Agent，Anthropic 每周都在这块市场上狂揽数十亿美元，对他们而言代码的关联度实在太高了，他们绝不可能忽视它——换句话说，他们无论如何都必须参与其中。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Investor</strong>: It seems like it's also like there's the Goldilocks zone of relevance here, which is if you had $1 trillion in revenue, I would obviously be very happy as a shareholder, you'd be very happy as a CEO and co-founder, but you'd probably be the number one target for OpenAI and Anthropic. If you have $0 in revenue and nobody uses your product, they just wouldn't care. But this is kind of like coding fell on the wrong side of the Goldilocks zone, arguably. Like if you were a coding agent right now, Anthropic's adding so much—it's so relevant for them. They cannot ignore it.</p>
+</details>
+<p><strong>投资人</strong>：而对于你们正在做的事情，这话听起来可能有点像贬义，但实际上绝无贬义：短期来看这或许不是最紧急的战场。从长远来看它必然是体量最大的，但在当下它不像代码那样紧迫，大厂并不会觉得“天呐，我必须立刻做这个，否则我就出局了”。OpenAI 似乎也从 Anthropic 身上吸取了教训：OpenAI 过去四处撒网做了 50 多个赌注，而 Anthropic 孤注一掷全力押注代码，取得了巨大的成功。所以这里面也有专注度与相关性的考量：比如医疗赛道极其庞大，法律赛道极其庞大，代码赛道也极其庞大，这些巨头几乎不得不去下重注。但像你们这种横向展开、多维度渗透的业务，对他们来说要全力扑上来承诺投入反而更加困难。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Investor</strong>: Whereas for what you're doing—again, this sounds like an insult, it's not, right? It's just like this is probably not the biggest thing. I think it actually is the biggest thing longer term, but short term, it's not coding. Right? It's not like, "Oh my god, I have to do this or else it's game over for me." Because OpenAI, it seems like they learned that lesson from Anthropic, where OpenAI had like 50 bets, and then Anthropic went all in on code, and that did really, really well. So, you know, there's also this element of just kind of like focus and relevance, which it seems like—healthcare, really big; law, really big; coding, really big. These big bets they almost have to make. Whereas these kind of horizontal ones that are spread out, it seems a little bit harder for them to commit to.</p>
+</details>
+<p><strong>Town 创始人</strong>：如果针对中小型企业（SMB）和中端市场，我基本同意你的看法。但放眼整个市场：让 AI 为企业承担更多职能、协助企业取得成功的商业空间，实际上远比单纯的代码开发市场要大得多。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Town Founder</strong>: I think for the SMB and mid-market, I would say I would agree with you. But the market is—look, the market for AI doing more for a business and helping the business be more successful is bigger than the coding market.</p>
+</details>
+<p><strong>投资人</strong>：那是绝对的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Investor</strong>: Oh, for sure.</p>
+</details>
+<p><strong>Town 创始人</strong>：所以对我来说，这只是时间早晚的问题，而不是会不会发生的问题。在当前环境下，这或许还不足以对那些巨头产生决定性的影响，但我认为在 12 个月内它就会成为关键杠杆。整件事情的演进速度将会极其迅猛。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Town Founder</strong>: And so you know, for me it's a question of like when not if, right? I think in the current environment, it's not going to move the needle at those companies, but I think in 12 months it will. And so it's going to move very, very quickly.</p>
+</details>
+<p><strong>投资人</strong>：当下你绝不能缺席——这正是我刚才想表达的核心：你眼下绝不能不在代码市场上有所动作。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Investor</strong>: Right now you cannot not be—this is the one that I was looking for. You cannot not be in the coding market.</p>
+</details>
+<p><strong>Town 创始人</strong>：确实如此。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Town Founder</strong>: Correct.</p>
+</details>
+<p><strong>投资人</strong>：对吧？然而你们做的事情就像当年 iPhone 对决黑莓手机一样，这里存在一个技术扩散的关键临界点。这其实引出了另一个我非常想向你请教的问题。我有一个理论，想看看你是否认同：硅谷目前对 AI 几乎处于一种过度吹捧的状态——如果真有可能被过度吹捧的话；实际上我甚至觉得根本不可能过度吹捧 AI，因为技术每周都在取得实质性进展。而其他……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Investor</strong>: Right? Whereas this is something where it is like the iPhone BlackBerry. There's a diffusion point here. And actually this is another question I'd love to ask you. Like I have a theory I'd love to see if you agree with it. Silicon Valley almost overhypes AI if that's even possible. I don't think it is possible to overhype AI because every week it's better. The rest...</p>
+</details>
+<!-- chunk 7/9 -->
+<h3 id="ai-技术普及的不均衡与长尾经济的探索" data-reading-heading="">AI 技术普及的不均衡与长尾经济的探索</h3>
+<p><strong>主持人</strong>：世界上的其他地方，我认为 AI 几乎是被低估的。我很好奇，你是怎么看待这一点的？人们经常谈论“跨越鸿沟”。但这并不是一个典型的例子，它并不是说这项技术只存在于这里、在世界其他地方完全找不到。事实上，全世界的人都在使用它，只是分布得非常不均匀。但我很好奇你怎么看：我们在哪些地方其实是缺少 AI 的？或者说在经济的哪些角落——不论是按地理区域划分，还是按职业划分——存在着一些特定领域？之所以这么问，是因为拥有一款高度横向的通用产品、一款全球用户都能通过产品驱动增长（PLG）找到 Town 的产品，是一件很酷的事。比如我记得你曾跟我讲过：“哇，我们在日本做得很大。”但这并不是刻意为之的，并不是说“我们计划去日本大干一场”，它就是自然而然在日本火了起来。所以你在世界各地都能看到这种现象。那么，有没有哪些细分领域让你感到非常惊讶？有没有哪些领域让你觉得：“哇，这里实际蕴藏的机会，远比人们想象的要多得多”？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Host</strong>: of the world I think is almost underhyped AI. And I'm kind of curious, how do you think about, you know, this guy People talk about crossing the chasm. But this is not a great example where it's not like this is a technology that only exists here. It's nowhere else in the rest of the world. No, people are using it throughout the world, just not It's not evenly distributed. But I guess how do you think about like where where are we kind of short AI or what pockets of the economy either geographically or by profession or like there's certain areas where like cuz I'm This is the cool thing about having a very horizontal product and having a very horizontal PLG product where people are finding Town from all over the world. Like I remember you told me it's like, "Wow, we're big in Japan." Like that wasn't Intentful. It wasn't like let's go get big in Japan. It just became big in Japan. So you're finding this everywhere. Like are there pockets that have surprised you? And there are pockets where you're like, "Wow, there's actually a lot more opportunity here than people have thought of."</p>
+</details>
+<p><strong>嘉宾（Town 创始人）</strong>：我脑海里浮现出很多个别的趣闻轶事。比如我想起有这么一家小商户，是在一个小岛上向游客出租冲浪板的。他们用 Town 来检查冲浪板和那种海滩越野小车是否有损坏，以此来判断事后是否应该把押金退还给客人。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Guest (Town Founder)</strong>: So I'm thinking I'm thinking about individual anecdotes. Like I'm thinking about this like this business that rents like surfboards on an island to people and then uses Town to inspect like surfboards and and uh little like beach buggies, whether they've been damaged to decide whether afterwards a person should get their deposit back.</p>
+</details>
+<p><strong>主持人</strong>：那真的很酷。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Host</strong>: That's pretty cool.</p>
+</details>
+<h3 id="折腾者困境与自动化落地的瓶颈" data-reading-heading="">折腾者困境与自动化落地的瓶颈</h3>
+<p><strong>嘉宾（Town 创始人）</strong>：确实，但说实话，这完全不在我的预料之中，哪怕在我的 128 乘 128 宫格的宾果卡上也根本找不到这一项，完全没有任何预期。这里真正发生的事情是：在那家小企业里，正好有一个喜欢动手折腾的人（tinkerer）。他们遇到了某个令其烦恼的痛点，然后发现可以通过 Town 把比对前后照片、决定是否退还押金的过程彻底自动化。而让这套方案在那里真正运转起来的核心，正是那个折腾者。</p>
+<p>所以我的回答是：我们其实在经济体系的各种稀奇古怪的角落都看到了 AI 的使用，而真正的破局点在于——那里是否有一个足够懂 AI、愿意为了解决自身问题而动手折腾出一套方案的人。但问题恰恰在于，这个世界上的“折腾者”太少了，或者说没有足够多的人拥有充裕的时间去为了帮助自己的业务而动手折腾。我认为这就是 AI 迟迟未能广泛普及的原因。</p>
+<p>AI 无法普及的根源在于：尽管过去 12 个月里，Claude 或 ChatGPT 中早就具备了许多能帮大量小微企业节省海量时间的功能，但大家并没有真正用起来，而是仅仅把它们当作替代品，或者当作一个“更好用的谷歌搜索”，然后大家还会纳闷这到底是怎么回事。这是因为产品形态绝不能仅仅是一个冷冰冰的文本输入框。我们必须做到的是：你不能指望去教育用户，你必须直接把价值主张呈现在用户面前，并且替他们把事情办妥。我认为这才是真正的破局钥匙。</p>
+<p>所以，无论对于我们自己的产品而言，到底是什么能让用户持续留存并离不开 Town？答案是这样的：他们连接了自己的电子邮件、日历，并且最好连接了一套对他们业务至关重要的核心记录系统（System of Record）。然后，他们构建了一个定制化集成。这意味着他们创造了一个非开箱即用却极其神奇的东西。而我现在正努力把“需要用户自己搞定制集成”这一步彻底消除掉。我想带给每个人的体验是：只要你接入了自己的核心业务记录系统，我能不能立刻以一种极具个性化、真正切中你需求的方式为你交付价值？</p>
+<p>这就是巨大的机遇所在，也是为什么你没有看到 AI 均匀扩散的原因。因为在硅谷，我们都在紧邻工程师的公司里工作，我们离这种与生俱来的解决问题和折腾精神要近得多。在我们的公司里到处都是这种善于动手的人，所以我们的企业能够极其高效地使用 AI。然而世界上绝大多数地方根本不具备这种条件。</p>
+<p>所以这才是真正的死结。如果你能解决这个问题，如果你能让一个不会折腾的普通人，在 AI 的世界里获得与顶级折腾者完全相同的价值，你今天就能做成一家体量极其庞大的商业巨头。因为 AI 已经有能力解决太多的实际商业问题了——我们根本不需要更强的智能底座，智能本身已经摆在那里了，真正的问题只是如何在大规模落地中将它高效部署出去。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Guest (Town Founder)</strong>: Yeah, but it's like it's like I'm like that is not on my bingo card. It's not on my 128 by 128 board bingo card. It's like just nowhere on there. Really what's happening is there is a tinkerer at that at that small business who there was something that was annoying to them and then they figured out with town how they could automate comparing these pictures and deciding whether to release people's deposits and and what makes it work there is the tinkerer. And so my answer to you is actually we're seeing use in all the weird spots of the economy and the the unlock is is there someone over there that gets AI enough to want to tinker a solution to their problem. And the problem with that it is that there aren't enough tinkerers in the world or there aren't enough people that have the time to be tinkerers to help their business. And I think that's why AI is not diffusing. The reason why it's not diffusing is because even though in Claude or in ChatGPT there has existed for the last 12 months features that at a lot of small businesses you could use to save you so much more time. But instead what you're doing is you're using them as a replacement as a like a better Google search and you're like what's happening. And it's because the product experience can't just be a text box. And what we have to do is we have to you can't teach someone. You have to just show the value prop to someone and do it for them. I think that's like the real unlock. And so whenever you know for our product like the what makes someone stick with town? Like it's this. They've connected their email, their calendar and ideally one really important system of record for their business. And then they've built one custom integration. That means they've built one thing that didn't come out of the box that was magical. And I'm trying to just get rid of the custom integration. I'm going to get each person, which is as soon as you connect your system of record, can I deliver value to you in a way that feels very you, that really helps you. And that that's the opportunity and that's why you don't see it spread evenly. It's because in Silicon Valley there's we're all working at companies next to engineers. And so we're we're much closer to this innate problem-solving and tinker. Like we have tinkers everywhere in our firms. So yeah, our firms are using AI effectively. And most of the world just doesn't have that. And so that's the real problem. And if you can fix that, if you can make a non-tinker into getting the same value as a tinker in the AI in the world of AI, like you could be a ginormous business today cuz AI can solve so many business problems. Like you don't need more intelligence. The intelligence is there. It's just how do you deploy it effectively at scale?</p>
+</details>
+<p><strong>主持人</strong>：是的，这感觉就像是一个系统集成的问题，也是一个产品市场化推广（Product Marketing）的问题。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Host</strong>: Yeah, and it feels like it's an integration problem. It's a product marketing problem.</p>
+</details>
+<p><strong>嘉宾（Town 创始人）</strong>：没错。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Guest (Town Founder)</strong>: Yes.</p>
+</details>
+<h3 id="认知僵化与早期使用者的定势陷阱" data-reading-heading="">认知僵化与早期使用者的定势陷阱</h3>
+<p><strong>主持人</strong>：因为每个人……而且我觉得这也是一件对我来说非常有意思的事。我曾遇到过一位哈佛大学的教授，一位非常非常聪明的女性，相当于那里的二把手。我和她聊起 AI，她说：“哦对，几年前我试过这玩意儿，马马虎虎吧，不怎么样。”我对她说：“不不不，它现在真的非常厉害了。”于是我当场用 ChatGPT 重写了她的博士论文——那是她在二十多年前写的，但我让 AI 结合今天的一切最新进展重新梳理了一遍。她看后惊呼：“这太不可思议了！这是什么 AI？”我说：“就是 ChatGPT 啊。”她连连摇头：“不可能，绝对不是。这怎么可能做得到？”</p>
+<p>我说，因为它的进化速度实在太快了。很多时候，人们习惯于以当下的现状去评判一件事物。我觉得硅谷的特别之处在于，这里往往倾向于根据它“未来可能达到的高度”来做判断。这也正是为什么有时硅谷会被人诟病夸大事实、搞现实扭曲场等等；但硅谷确实能看到未来的走向，而其他很多地方的人看到的只是它今天的样子。然而这项技术的演进斜率是如此陡峭，如果你顺着这条曲线看下去——没错，仅凭它今天的表现，很多人确实没有充分利用好它，部分原因恰恰在于他们可以说是“极其讽刺的早期尝鲜者”：他们在两年前尝试过，觉得“这东西尽在胡说八道、错误百出，根本不怎么管用”，随后他们的脑海中便将那个版本的表现固化为了对这项技术的永久认知。如果他们现在重新试一次，结果就会完全不同。这种实验我已经做过差不多十次了，每次对方都会问：“你从哪里搞到的这个 AI？这绝不是我用的那个 AI。”而我的回答总是：“它就是同一个 AI，你只需要重新试一次就好。”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Host</strong>: Because everybody and it's also I think this is really interesting to me as well. I met a professor at Harvard. Very very smart woman. She's like the number two person there and I'm talking to her about AI. She's like, "Yeah, yeah, I tried this a few years ago. It it was okay, not great." And I was like, "No, no, no, it's it's really good now." So I had a I had ChatGPT rewrite her dissertation. Um that she wrote 20-something years ago, but everything is now current. Like take everything today like and she was like, "This is amazing. What AI is this?" And I'm like, "It's ChatGPT." She's like, "No, it's not." She's like, "How is that possible?" It's like because this is moving so quickly. And you know, a lot of people they judge things on the present. I think that's the other thing is like Silicon Valley tends to judge like where it could be. And that's where sometimes you oversell reality and reality distortion field this that and the other, but you see where this could go and a lot of other people it's like they see it as it is today and it's like the slope of this stuff is also such where it's like if you follow this curve I mean yes where it is today it feels like people aren't taking advantage of it partially because they were almost ironically early adopters. They tried something two years ago they're like yeah this hallucinated this kid that it didn't really work that well and then they they're they're they they've kind of ossified that version of of the reality and like if they tried again now it's just I've done this experiment like 10 times like where did you get that AI? Like that's not the AI that I have is like yes it is you just have to try it again.</p>
+</details>
+<h3 id="计算机操作与主动式-agent-的产品形态" data-reading-heading="">计算机操作与主动式 Agent 的产品形态</h3>
+<p><strong>嘉宾（Town 创始人）</strong>：我的意思是，正因为产品领域的进化速度如此迅猛，这种情况还会不断上演，对吧？因此我认为，最终胜出的平台，必然是那个能够不断让业务形态适配最前沿 AI 的平台。核心难题就在这里，因为底层 AI 技术会永远持续不断地迭代、进步、再进步，而大众对于“什么是可能的与不可能的”、“什么是困难的与容易的”心智模型，也必须随之被不断刷新。</p>
+<p>就拿如今的计算机操作（Computer Use）和浏览器操作（Browser Use）来说，在过去的短短两个半月里，AI 助手已经能够完成六个月前几乎不可想象的任务，对吧？而且现在的成功率能达到 90%，而在以前大概只有 30%。绝大多数人根本没有亲身体验过这一点。这也是为什么当你用 Town 做演示时——比如让它替你在线购物，或者直接操作你的软件去完成某项任务，别人会愣住：“等等，干这个难道不需要打开专门的用户界面吗？”人们会惊叹道：“天哪，我完全不知道它居然能做到这种地步。”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Guest (Town Founder)</strong>: I mean because the product space is moving so fast this is going to keep happening right? So I think the winning platform is the one that continues to adapt the business to the best AI. Like that's the problem because the AI will just keep improving and improving and improving and improving forever and people's mental model of what's possible and not possible what's difficult and not difficult will will be updated. I mean just with computer use and browser use today like in the last two and a half months the assistants can do things that were near impossible six months ago right? And they can do them 90% of the time whereas before they were doing it like 30% of the time. Most people don't they've not experienced that and that's why when you do a demo with town of it's shopping for something for you or it's like using your software to to to do something that you're like wait don't you need a UI to do that? People are like wow I had no idea it could do this.</p>
+</details>
+<p><strong>主持人</strong>：确实如此。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Host</strong>: Yeah.</p>
+</details>
+<p><strong>嘉宾（Town 创始人）</strong>：但我并不认为……我不知道你该怎么向普通大众营销这种能力。因为我觉得如果你直接对人们说：“嘿，Town 现在支持计算机操作了”，这在他们听来根本毫无意义。它必须以极其具体的方式落地，比如直接说：“嘿，我可以为这次活动制作宣传海报，风格跟你之前在 Canva 里做的一模一样。而且我可以直接使用你现有的 Canva 付费订阅账号来做，对吧？反正你已经在付订阅费了，要不要我先帮你做一版试试？”用户就会说：“行啊，先出一版看看。”</p>
+<p>五分钟后，它只花了两毛五分钱的成本，就呈现出了极具实用价值的成品。接下来，它应该主动提议：“嘿，以后每次我在你的日历里发现类似这样的活动，要不要我都提前自动帮你做好？”随后，假设你在线下对自己的小店或中型企业进行了品牌视觉风格的升级，系统甚至不需要你主动吩咐，下一次它自动生成传单时，就应该自动适配全新的设计风格，因为它早就为你敏锐地捕捉到了这一变化。再往后，当它能够高效制作视频时，它应该主动问你：“嘿，要不要我顺便生成一些视频素材，好让你发到 Instagram 上做推广？”它必须做到像这样主动提出建议。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Guest (Town Founder)</strong>: Um but I don't think I don't know how you market that to people because I think if you told people like oh town now has computer use you know that doesn't mean anything. It needs to be much more concrete like hey like I can make posters for this event that like look just like the ones that you've been making in Canva. Hey I can do it using your Canva subscription right? Because you're already paying for it and like do you want me to just do that and the person will be like let's like do a pass at that." And then 5 minutes later when first $0.25 it's shown you something that's super valuable, then it needs to go like, "Hey, do you want me to do that before every event like this that I notice in your calendar?" And then what happens is you separately change the design of your small business or your mid-market firm, and then it should be like it you shouldn't even have to ask, but the next time it makes flyers, the flyers should look like the new design. And it cuz it it should have noticed that for you. And you know, next when it can do video effectively, it should be like, "Hey, do you want me to me to make video assets so you can advertise this on Instagram?" It just needs to suggest this</p>
+</details>
+<!-- chunk 8/9 -->
+<h3 id="ai-智能体流量的崛起与网络契约的瓦解" data-reading-heading="">AI 智能体流量的崛起与网络契约的瓦解</h3>
+<p><strong>Speaker A</strong>：这就像许多在今天的技术条件下感觉越来越不可能的事情，但实际上它只是顺应了模型未来能够为你所做事情的发展曲线。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker A</strong>: ...increasing like things that are feel increasingly impossible in today's technology, but really it's just following the curve of what the models will be able to do for you.</p>
+</details>
+<p><strong>Speaker B</strong>：嗯，你可能已经注意到了智能体流量——这在很大程度上还不是指个人助理类的智能体，而是泛指各类智能体流量——它已经大幅超越了人类的真实流量。这是第一点。另外，最近新闻里频繁讨论的，是针对智能体究竟是采取对抗态度，还是采取所谓的协同合作态度。这里指的是新一代的智能体，并非那种比如仅仅在互联网上搜索信息的 ChatGPT，而是真正代表你主动去执行任务的智能体。比如亚马逊显然采取了一定程度的对抗态度，这很合乎逻辑，因为他们本质上是一家广告公司。互联网上长期存在着一种默契与契约：我去雅虎财经查看股票行情，雅虎花钱从纳斯达克获取行情数据源，而我的眼球则会看到一条 E*TRADE 的广告。这种契约的本质就是：“我雅虎为你 Alex 提供免费的股票行情，前提是你把你的眼球注意力交给我。”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Well, you've probably seen it agent traffic, and this is largely not assistant agent, but just kind of agent traffic writ large has vastly surpassed human traffic. So, that's kind of point one. And then the other thing that's been in the news a lot is about this kind of adversarial versus call it maybe synergistic approach to agents. Kind of this new generation of agents, not agents as in like, you know, chat GPT is you know, just searching something on the internet, but actually doing proactively things on your behalf. So, like Amazon has obviously adopted a somewhat adversarial approach, which makes sense because they're an advertising company, and like there is this covenant that existed on the internet for a long time. I go to Yahoo Finance to look up a stock quote. Yahoo pays money to go get a feed of stock quotes from the Nasdaq or something, but my eyeballs then hit an E*TRADE ad. And the covenant is like, "I Yahoo give you Alex free stock quote if you give me your eyeball."</p>
+</details>
+<p><strong>Alex</strong>：没错。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: Yep.</p>
+</details>
+<p><strong>Speaker B</strong>：而如今这份契约已经被打破了。因此，那些遭受契约破裂冲击的人便走向了对抗；但在我看来，这里其实孕育着巨大的协同契机。这就像是“新时代的 SEO”。如果我能够作为智能体流量的接收端而不去屏蔽它，不再去挖空心思思考“我该怎么阻止这种流量”，而是去想“我该如何张开双臂欢迎它”，这在另一端看来也是一个巨大的商业机遇。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: And that covenant has been broken. So, that's So, like people that have kind of hit that broken covenant are adversarial, but it feels like there was a big opportunity to be synergistic. It's like, "Wow, like it's like the new SEO." If if I can be on the receiving end of agent traffic and not block it, not to out how do I stop this, but like how do I welcome it? It seems like a massive opportunity on the other side there, too.</p>
+</details>
+<h3 id="分发渠道的变革智能体中立性与人类摩擦偏好" data-reading-heading="">分发渠道的变革、智能体中立性与人类摩擦偏好</h3>
+<p><strong>Alex</strong>：是的，我的意思是，亚马逊的损失理应成为沃尔玛的收获，对吧？毕竟沃尔玛并没有那么庞大的广告业务，所以他们的利益驱动机制是截然不同的。而且就如你所说，分发渠道已经彻底改变了。顺便说一句，我认为关于智能体最耐人寻味的一点是：如果你不再信任自己的智能体本身在利益上是纯粹客观的，那么分发格局又会发生怎样的变化？这是一个很有意思的疑问，对吧？</p>
+<p>假设你使用的是 Meta 的智能体，而 Meta 吸引了大量广告主。接着比如美联航在 Meta 上投放的广告远多于某个不知名的小航空公司，此时你让智能体帮你预订航班，如果这时你隐约感觉到它给出的不再是中立客观的结果，会发生什么？因为现实就是如此：人类社会始终存在着推销产品和市场营销的利益驱动。那么在一个人类眼球不再直接盯着屏幕浏览的世界里，这种营销格局究竟会演变成什么样？这是一个非常开放、悬而未决的问题。</p>
+<p>我始终坚信一点：你所需要的，必须是一个完全属于你自己的中立智能体，其唯一的资金来源就是作为用户的你的钱包。这样一来，无论开发这款智能体的是谁，其利益诉求都纯粹是为你这个人提供最优质的信息，而不会受到庞大市场营销势力的扭曲。然后，作为人类的你拥有自己的品味，你通过自己所做的选择来展现你的品味。你可以主动问你的智能体：“嘿，Instagram 上大家都在讨论什么？”或者“那上面正在投放什么热门广告？”你可以主动问这类问题，因为在那种情境下，你希望感受广告和营销世界的氛围与灵感。但是重申一遍，你希望你的智能体在面对这些时保持完全中立。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: Yeah, I mean, you know, Amazon's loss should be Walmart's gain, right? I mean, Walmart, you know, the the they don't have the advertising business, and so, you know, their incentives are going to be different. And I think some I mean, to your point, distribution has changed. I think the the part that's interesting about the agent, by the way, is how does distribution change if you no longer trust your agent themselves not being interested in things is like a like a little bit of an interesting question mark, right? So, say you use uh the meta agent, and meta has lured advertisers, and then you ask it and say like United Airlines advertises a lot more on meta than uh than, you know, nobody Airlines, and then you ask it to do a flight. You know, what happens if you feel like it's no longer giving you the neutral thing? Cuz this is the thing is there's always a there's what is there's still human incentives to promote products and and marketing. And so, what does that look like in the world where you the humans' eyeballs are no longer looking at things is a very open question. I'm a firm believer in the like you want a neutral agent that is yours, that you have no you like the only source of money for the agent is your wallet as the user. And then, whoever's creating that agent, their incentive is to give you the best information for you as a human with no distortion in terms of uh the great forces of marketing. And then, you as a human, you have taste, and you express your taste as you make the choices that you do. And you can ask your agent like, "Hey, what are people talking about on Instagram?" Or like, "What's being advertised on it?" You can ask that question, because there you want to be flavored by the world of advertising and marketing. But, again, you want your agent to be neutral vis-a-vis that.</p>
+</details>
+<p><strong>Alex</strong>：你刚才提到了对抗与不对抗，我认为在概念上另一个让我觉得十分有趣的维度，是人类所享受的“有乐趣的摩擦”，与人类深恶痛绝的“无谓摩擦”之间的区别。比如我在纽约苏豪区（SoHo）漫步逛街购物，这种摩擦是我所享受的。我喜欢穿梭于不同店铺之间漫步的过程，我喜欢看到其他人在排队因为我可以观察并参考他们的穿搭风格，我喜欢这种摩擦体验。它是购物乐趣中不可或缺的一部分，我非常享受身在其中。</p>
+<p>然而，也存在着我不喜欢的摩擦。比如我想在家里采购卫生纸，我根本不在意挑选的过程，你懂我意思吧？我只想买我一直复购的那款卫生纸，越快送上门越好，价格越便宜越好。所以我认为，有时候我们在思考智能体时陷得太深，过度执着于消除摩擦、减少繁琐劳动并让所有事情都尽可能极致高效。但人类并非在所有事情上都追求极致效率。</p>
+<p>因此，对我而言亚马逊广告的例子恰恰说明了这一点：实际上当我在亚马逊上为我的孩子们挑选乐高积木时，我确实很乐意看到其他拼插类拼装玩具的广告推荐。因为我可能会因此发现一款非乐高品牌但我此前完全不知道的有趣玩具；接着我会让我的智能体帮我查一下它的评测，我可能会觉得：“这个挺有意思，孩子们喜欢吗？”说不定我就决定买了。在这种体验场景下，我认为亚马逊完全可以赚取巨额收益，对于那些聚合了丰富供给且融入了广告营销的平台而言，其价值依然牢固存在。</p>
+<p>但在很多其他场景下，你是在针对那些你完全不希望存在的摩擦进行优化。如果我是亚马逊，守着每年 700 亿或 800 亿美元的广告业务，我会思考的问题是：“我们不应该去封堵智能体。”因为我认为封堵是徒劳的，甚至可能会诞生出一家体量超越亚马逊的公司——一个“无头化（headless）”的亚马逊聚合形态可能会是一门庞大无比的生意。但这确实倒逼他们去打造一种独立的、截然不同的购物体验，在那种体验中用户是主动欢迎广告的，且体验必须极为出色，让用户觉得单为了这种探索乐趣就值得专门上去逛逛。归根结底，为了那些探索性的需求，我仍然会去亚马逊。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: The other you talk about adversary versus not, I think the other thing that is interesting to me conceptually are like experiences like friction that you enjoy as a human with that friction that you don't. So, me walking around SoHo in New York City shopping, it's friction that I enjoy. I like that I have to walk between stores. I like that there are other humans waiting in line because I can copy their styles. I like the friction. It's an it's a part of that shopping that is enjoyable. I like doing it. Uh then there's friction that I don't enjoy. I want to like order toilet paper at home. I don't I'm not You know what I mean? I just want the same toilet paper that I've been ordering for a while. Like just get it in there as quickly as possible. Like and as cheaply as possible. And so, I think sometimes when we think about agents too much, we think too much about um reducing friction and toil and making thing as efficient as possible, but humans don't always optimize, you know, for efficiency. And so, you know, the the Amazon example for me on the ad is like actually I think there's times when I'm on Amazon like when I'm buying LEGOs for my kids, where I do want ads of other construction uh uh like toys for my son. Because I may realize one I It's not LEGO-branded that I don't know about it and it's interesting and then I want to ask my agent for some reviews of it and I might be like, "That's an interesting. Is it popular with the kids?" and maybe I want to buy it. And in that experience, I think Amazon can make a ton of money and there will still be value for places that are aggregates of supply with advertising and marketing. But I think there's a lot of times where you're optimizing for friction where you don't want that stuff. So, the If I were Amazon and I had the 80 billion or whatever 70 billion-dollar-a-year like advertising business, the question that I would ask is like, "Hey, I should I don't think you want to block agents because I think that is I think there may be a a bigger-than-Amazon company like a headless Amazon could be a huge huge business, right? But I think it puts more pressure on them to create a separate experience where you do want the ads and that's really good. And making that worthwhile to go on for on its own. And I think I would still go to Amazon for those things, you know, at the end of the day.</p>
+</details>
+<h3 id="解耦商业变现与供给聚合模式的未来困境" data-reading-heading="">解耦商业变现与供给聚合模式的未来困境</h3>
+<p><strong>Alex</strong>：但现实是，AI 的演进速度实在太快了，它正在以没有人能够预测胜出平台的惊人速度颠覆分发体系与人类行为习惯。在这场浪潮中，必然会出现惨重的输家，而亚马逊在试图对抗未来趋势的过程中，很可能会损失掉其广告业务的相当大一部分。正是因为他们无法预料在失去既有模式后未来会是怎样。</p>
+<p>我刚才想到的另一个案例就是 Muse。我不知道你有没有关注围绕 Muse 的讨论：它号称是名义上的“免费个人智能体”。很酷对吧？大家会质疑说：“总有一天他们不得不在 Muse 里面插广告。”但实际上，也许他们根本永远都不需要在 Muse 里投放广告。也许 Muse 只是单纯为他们提供数据，使他们能够在 Instagram 上更精准地对你进行广告投放。而当你刷 Instagram 时，你之所以在那里是因为你根本不需要效率，你是为了休闲娱乐，对吧？如果他们能够借助来自 Muse 的画像信息在 Instagram 上实现更精准的投放，Muse 就可以继续保持免费。</p>
+<p>不仅如此，现在你在 Instagram 上看到了心仪的商品，他们还可以直接利用通过 Muse 沉淀的用户钱包和支付信息引导你完成付款；或者 Muse 可以在全网替你比价寻找该商品的不同版本。这是一个非常顺畅的正向飞轮。而这意味着什么？这意味着对于个人应用场景而言，商业变现与智能体本身的产品体验已经被彻底解耦剥离了。</p>
+<p>这就是我认为像亚马逊这样的平台处于劣势的地方：在智能体时代，仅仅充当供给端的聚合平台，可能已经不再是一个好生意了，这种商业模式可能彻底失效了。所以亚马逊面对这种趋势其实无能为力，他们终将面临失利。坦白讲，他们最合理的应对招式，本应是亲自打造一个属于自己的个人智能体。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: But, you know, the AI is moving so fast that it's going to change distribution and human habits at a rate where I don't think anyone can predict what the winning platforms will be in those spaces. And there's going to be huge losers, right? And Amazon might lose a huge chunk of their advertising business trying to fight the future. Be But, because they can't predict what it would look like without like the The other one I was just thinking is Muse for me. I don't know if you've seen the discussion around Muse. It's like free quotes free personal agent. Cool. People like, "Well, one day they're going to have to put ads in Muse." But, actually, if you maybe they never have to put ads in Muse. Maybe Muse just gives them data that allows it to target you better on Instagram. And when you go to Instagram, you're on Instagram cuz you don't want efficiency if you're on Instagram. You want to be entertained, right? And if they can target better on Instagram because of the information from Muse, and Muse is still free. And And on Instagram now, when you see the good that you like, they can also get you to pay for it using a wallet that they've accumulated on you from Muse. Or Muse can look online for different variants of the thing. It's like a really nice flywheel. And what it What it means is that you've divorced the monetization from the agent experience for this personal use case. And that's like a you know, it it's it it's And that's where a property like Amazon is at a disadvantage, I think, is it might be with agents like you you can't having just been the aggregator of supply just may not be a good business model in the world of agents. It just may no longer be. And so, there's really not much they can do about it. They're going to lose. And probably the countermove for them, honestly, is they should have a personal agent.</p>
+</details>
+<p><strong>Speaker B</strong>：对。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Yeah.</p>
+</details>
+<p><strong>Alex</strong>：他们应该拥有一个足以匹敌 Muse 的产品——这才是他们真正的反制措施。重点绝不是去封杀屏蔽 Muse，而是自己拥有一个媲美甚至超越 Muse 的智能体。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: They should have a Muse compa- Like, that's actually the countermove for them. It's not to block Muse. It's to have a Muse.</p>
+</details>
+<p><strong>Speaker B</strong>：拥有一个更加优秀的 Muse。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Have a better Muse.</p>
+</details>
+<p><strong>Alex</strong>：一个……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: A</p>
+</details>
+<p><strong>Alex</strong>：一个属于自己的 Muse，并将其打造为专属的购物入口，寄希望于这种独占性足以形成强大的吸引力，顺便将其打包进 Prime 会员权益中。但是，谁知道呢，我实在不知道他们究竟有没有能力做到这一点。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: a Muse, and have the exclusive on shopping for that and and hope that's enough of an incentive and put it part of prime. But, you know, I I don't know if they're able to do that.</p>
+</details>
+<p><strong>Speaker B</strong>：有趣的是，以亚马逊为例，外面有一个专门为亚马逊做价格追踪的比价网站叫做 CamelCamelCamel。你基本上可以在上面设置：“我想在胡椒博士（Dr. Pepper）降价到……”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Speaker B</strong>: Well, the funny thing is like with Amazon, so they have there's a website called CamelCamelCamel. It's a price engine for Amazon. So, you basically say, "I want to know when Dr. Pepper is...</p>
+</details>
+<!-- chunk 9/9 -->
+<h3 id="价格追踪与时间的经济学" data-reading-heading="">价格追踪与时间的经济学</h3>
+<p><strong>Guest</strong>: ……现在是 8 美元。等它降到 6 美元时通知我。”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Guest</strong>: right now it's $8. Tell me when it's $6."</p>
+</details>
+<p><strong>Alex</strong>: 然后基本上就直接买下来。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: And then buy it basically.</p>
+</details>
+<p><strong>Guest</strong>: 一降到 6 美元就通知。不过它不会替你购买，只是给你发邮件，然后你必须自己去买。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Guest</strong>: The second it's $6. No, it doesn't do the buying. It just emails you and then you have to do the buying.</p>
+</details>
+<p><strong>Alex</strong>: 对。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: Yep.</p>
+</details>
+<p><strong>Guest</strong>: 有 2000 万人在用这个网站。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Guest</strong>: 20 million people use this website.</p>
+</details>
+<p><strong>Alex</strong>: 2000 万人？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: 20 million people?</p>
+</details>
+<p><strong>Guest</strong>: 是的，全美有 2000 万人。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Guest</strong>: Yeah. 20 million people in America.</p>
+</details>
+<p><strong>Alex</strong>: 这仅仅是一个……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: And this is just a</p>
+</details>
+<p><strong>Guest</strong>: 而且它是一个联盟营销网站，已经存在了 18 年。我和贾斯汀（Justin）曾经写过一篇相关的文章，里面提到：预测未来最好的方法就是观察当下。再次回到那个观点——未来已经到来，只是分布不均。这个东西之所以代表了未来，是因为我对 AI Agent 的另一种看法是：世界上有一类人时间比金钱多。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Guest</strong>: And it's an affiliate website and this has been around for 18 years. Justin and I wrote a post about this where the best way to predict the future is to observe the present. Again, going back to it's not evenly distributed and this thing is the future because the other way I think about agents is there are people that have more time than money.</p>
+</details>
+<p><strong>Alex</strong>: 是的，没错。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: Yeah, that's right.</p>
+</details>
+<p><strong>Guest</strong>: 然后还有另一类人，金钱比时间多。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Guest</strong>: And then there are people that have more money than time.</p>
+</details>
+<p><strong>Alex</strong>: 没错。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: Yep.</p>
+</details>
+<p><strong>Guest</strong>: 金钱比时间多的人根本不会去用 CamelCamelCamel；而时间比金钱多的人则会使用它。但是等一下，如果现在你能把所有的工具都交给那些金钱比时间多的人，让 Agent 去替他们完成这些繁琐的操作呢？那他们当然会用，这完全是一个智商测验级的必然选择。所以，这类工具绝对会变得更加无处不在。有时候你甚至不需要去凭空设想未来会发生什么，你只需要看看现实中的优惠券就明白了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Guest</strong>: And people that have more money than time, they're not going to use CamelCamelCamel. People that have more time than money, they are. But wait a minute, what if you now can give everybody who has more money than time, give them all of the tools and the agent does it? Like, of course they're going to use that. It's an IQ test. So, these things are definitely going to be a lot more pervasive and again, sometimes you don't even have to picture what might happen. You just have to look at, you know, coupons.</p>
+</details>
+<p><strong>Alex</strong>: 是啊。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: Yeah.</p>
+</details>
+<h3 id="规则的重构与供给聚合的贬值" data-reading-heading="">规则的重构与供给聚合的贬值</h3>
+<p><strong>Guest</strong>: 比如优惠券，如果你很富有，你就不应该去用优惠券，因为那太费时间了。你可能会花上两个小时到处搜寻合适的优惠券。但猜猜看会怎样？这也是另一个正在被打破的默认契约，因为以往这是一种非常清晰明确的世界划分方式。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Guest</strong>: Coupons like you shouldn't use a coupon if you're wealthy because it takes too much time. You're going to spend like two hours hunting for the right coupon, but guess what? And that's another covenant that's being broken because it was a very neat way of dividing the world.</p>
+</details>
+<p><strong>Alex</strong>: 是啊。我的意思是，像运通（Amex）的高端会员权益也是同样的道理。现在，AI 会直接帮你将所有权益优化到极致……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: Yeah. I mean, Amex premium membership, it's the same way. Now, it'll just optimize</p>
+</details>
+<p><strong>Guest</strong>: 是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Guest</strong>: Yeah.</p>
+</details>
+<p><strong>Alex</strong>: ……榨干你所有的尊享福利。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: all of your premium benefits.</p>
+</details>
+<p><strong>Guest</strong>: 大家都会去最大化薅尽大通（Chase）和运通（Amex）的所有权益福利，然后……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Guest</strong>: all going to abuse all of our Chase and Amex benefits and</p>
+</details>
+<p><strong>Alex</strong>: 然后他们就不得不做出调整改变规则。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: And they're going to have to change it.</p>
+</details>
+<p><strong>Guest</strong>: 因为对我来说这种时间成本已经不复存在了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Guest</strong>: It's not cost-effective for me.</p>
+</details>
+<p><strong>Alex</strong>: 因为接下去就会演变成一种对抗关系。这就是对抗性博弈与协同效应之间的区别。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: Because then it's going to be adversarial. This is kind of the adversarial versus synergistic thing. So,</p>
+</details>
+<p><strong>Guest</strong>: 顺便说一句，贯穿所有这些案例的核心主线在于：我认为供给聚合（supply aggregation）的价值已经大不如前了。过去它非常有价值，是因为人类的注意力是极其有限的；而现在供给聚合的价值之所以大打折扣，是因为人类的注意力已经可以通过自动化被完全替代掉了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Guest</strong>: And by the way, the through line across all of those is I just think supply aggregation is a lot less valuable than it used to be. It used to be very valuable because human attention was limited, and now supply aggregation is a lot less valuable because human attention can be automated away.</p>
+</details>
+<h3 id="尾声与致谢" data-reading-heading="">尾声与致谢</h3>
+<p><strong>Alex</strong>: 是的。今天这是一场非常精彩的对话。再次感谢你今天的到来，也祝你的业务进展顺利！</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: Yeah. This has been an awesome conversation. Thank you again for coming in today and go town.</p>
+</details>
+<p><strong>Guest</strong>: 好的，非常感谢你，Alex。和你交流总是很愉快。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Guest</strong>: Yeah, thanks so much Alex. It's always good to chat.</p>
+</details>
+<p><strong>Alex</strong>: 谢谢。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Alex</strong>: Thank you.</p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/d87799c056039f49a2681fc4066e2dccf1db54a493a888288aa778c5880a9d2c.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/d87799c056039f49a2681fc4066e2dccf1db54a493a888288aa778c5880a9d2c.md" download="从税务工具到AI代理：Town的转型与AI时代商业逻辑的重构.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Alex Rampell" class="entity-link person-link">Alex Rampell</a>, <a href="/search/?q=Jean-Denis Greze" class="entity-link person-link">Jean-Denis Greze</a>, <a href="/search/?q=Ben Horowitz" class="entity-link person-link">Ben Horowitz</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Town" class="entity-link company-link">Town</a>, <a href="/search/?q=Plaid" class="entity-link company-link">Plaid</a>, <a href="/search/?q=Andreessen Horowitz" class="entity-link company-link">Andreessen Horowitz</a>, <a href="/search/?q=Amazon" class="entity-link company-link">Amazon</a>, <a href="/search/?q=CamelCamelCamel" class="entity-link company-link">CamelCamelCamel</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Town" class="entity-link product-link">Town</a>, <a href="/search/?q=Muse" class="entity-link product-link">Muse</a>, <a href="/search/?q=CamelCamelCamel" class="entity-link product-link">CamelCamelCamel</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

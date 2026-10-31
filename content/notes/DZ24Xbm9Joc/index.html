@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>构建跨网络运行的金融浏览器智能体：Browserbase 与 Stagehand 的架构与实践</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">构建跨网络运行的金融浏览器智能体：Browserbase 与 Stagehand 的架构与实践</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-25</span>
+    
+
+    <header class="article-header">
+      
+      <h1>构建跨网络运行的金融浏览器智能体：Browserbase 与 Stagehand 的架构与实践</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">browser-agent</span>
+      
+        <span class="tag-pill tag-pill--no-page">web-automation</span>
+      
+        <span class="tag-pill tag-pill--no-page">headless-browser</span>
+      
+        <span class="tag-pill tag-pill--no-page">financial-agent</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">Browserbase 的 Jay 与 Amarik 介绍了如何构建跨全网运行的金融智能体。针对数据中心无头浏览器易受反爬拦截与指纹识别的难题，团队分叉 Chromium 打造验证浏览器，并开源 Stagehand SDK，结合 DOM 简化与无额外往返延迟架构，实现对多平台登录、发票抓取、KYC 验证及财务数据提取的高效自动化。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=DZ24Xbm9Joc" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-25T00:00:00.000Z">2026-10-25</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>4 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%99%BA%E8%83%BD%E4%BD%93%E4%B8%8E%E9%87%91%E8%9E%8D%E5%9C%BA%E6%99%AF%E7%9A%84%E6%8C%91%E6%88%98">什么是浏览器智能体与金融场景的挑战</a></li><li class="outline-h3"><a href="#%E4%BB%8E%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%88%B0%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83chromium-%E5%88%86%E5%8F%89%E4%B8%8E%E5%8F%8D%E6%8C%87%E7%BA%B9">从笔记本到数据中心：Chromium 分叉与反指纹</a></li><li class="outline-h3"><a href="#%E6%8E%A7%E5%88%B6%E5%B1%82%E9%9D%A2%E5%BC%80%E6%BA%90-sdk-stagehand-%E4%B8%8E-dom-%E9%99%8D%E7%BB%B4">控制层面：开源 SDK Stagehand 与 DOM 降维</a></li><li class="outline-h3"><a href="#stripe-kyc-%E6%A1%88%E4%BE%8B%E4%B8%8E-stagehand-%E4%B8%89%E5%A4%A7%E6%A0%B8%E5%BF%83%E5%8E%9F%E8%AF%AD%E6%BC%94%E7%A4%BA">Stripe KYC 案例与 Stagehand 三大核心原语演示</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="什么是浏览器智能体与金融场景的挑战" data-reading-heading="">什么是浏览器智能体与金融场景的挑战</h3>
+<p><strong>&gt;&gt;</strong>: 大家好。我们今天在这里探讨如何构建能够跨整个网络运行的金融智能体（financial agents）。希望大家今天在纽约过得愉快。我是 Jay。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Hello. Hello everyone. We are here to talk about how to build financial agents that work across the entire web. I hope you've been having a great day so far in New York. I am Jay.
+</details>
+<p><strong>&gt;&gt;</strong>: 我是 Amarik，我认为最适合开始的地方是：究竟什么是浏览器智能体（browser agent），对吧？如果仔细想想——首先如果回到上一张幻灯片，大家快速举个手，今天在场谁正在构建智能体？请举手。好的，我们来对地方了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: I'm Amarik and I think the place to start is what even is a browser agent, right? So if we think about it and first if we want to go back to the previous slide, quick show of hands, who is building agents today? Show of hands. Okay, we're in the right place.
+</details>
+<p><strong>&gt;&gt;</strong>: 那有谁是从事金融运营相关工作的？我听说今天有相关的会议在进行。有做金融的吗？好的，现场多是工程师。如果大家在演讲过程中想向我们提问，可以扫描这个二维码，随时提问。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: And who works on like finance operations? I heard about some conference going on today. Anyone in finance? Okay, couple more engineers. If you also want to ask us any questions throughout, you can scan this QR code and you'll be able to ask away.
+</details>
+<p><strong>&gt;&gt;</strong>: 太棒了。回到正题。那么什么是浏览器智能体？如果你深入思考一下，当一个智能体需要访问网络、与网络互动、从网页读取信息、在网页上执行操作时，它就需要一个浏览器。无论它是订机票、规划你和你妻子的约会之夜，还是获取竞争对手的定价信息，它通常都需要一个浏览器，以便访问那些最难触达、既没有 API 也没有 MCP 的网站。简而言之，只要是需要在网络上完成的任务，你的智能体就应当具备名为“浏览器”的工具。</p>
+<p>举手示意一下，谁知道这三家公司？Ramp、Bill、Stripe。大家熟悉吗？很好。当你思考这三家公司有什么共同点时，首先它们都是金融机构，处理高度敏感的信息；但当你深入考量 Ramp、Bill 和 Stripe 时，这些信息往往存在于网络中最难触及的部分——无论是在需要登录的门户网站背后，还是在受到严密防机器人（antibot）保护的网站上。要获取这些信息极具挑战性，而答案就是使用浏览器智能体。</p>
+<p>我们先从 Ramp 讲起。关于 Ramp，我相信在座各位都很熟悉。我们自己也是 Ramp 的重度用户和忠实拥趸。他们让企业管理开支变得极其轻松。当他们业务不断增长和扩张时，他们开始需要与更多、且难度前所未有的门户网站交互。因此，他们面临的问题或痛点是：我们如何在规模化运作下高效获取这些收据？</p>
+<p>当时他们还不知道浏览器智能体。所以他们的做法是：干脆组建一个人工团队，让他们登录各个门户网站去抓取收据。对于 A 轮或 B 轮公司来说，这种方式或许还行；但当业务开始增长并扩展到 Ramp 如今的大规模体量时，就需要一种更高效的方式。你不可能不断雇人，规模上限必然会成为瓶颈。</p>
+<p>于是，浏览器智能体登场了。再次强调，我们是 Ramp 的深度用户。我来参加这次会议的机票就是用我的 Ramp 卡预订的。用那张 Ramp 卡完成订票后，Ramp 立刻启动了一个浏览器智能体。该智能体前往达美航空（Delta），登录账户，抓取收据，并将其与交易记录进行匹配。一旦他们做到这一点，一切看起来都很美好；但当你进行大规模操作时，必然会遇到防机器人机制。那么，你该如何减少这种摩擦？如何避免被网站拦截？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Cool. Back to the show. So what is a browser agent? An a browser agent if you think about it, if an agent needs to access the web, interact with the web, read information from the web, take action on the web, it needs a browser. Whether it is booking a plane ticket, booking a flight, planning a date night for you and your wife, getting some pricing information on a competitor, it typically needs a browser to be able to access those hardest to reach sites that don't have an API or don't have an MCP. And so in a nutshell, anything that you need to do on the web, your agent should have the tool called the browser.
+<p>Show of hands, who knows these three companies? Ramp, Bill, Stripe. They familiar with the crowd? Cool. When you think about what these three companies have in common, well first they're all financial institutions, they're dealing with highly sensitive information, but when you think about it for like Ramp, Bill, and Stripe, a lot of this information lives on the hardest to reach parts of the web, whether that is behind a portal where you need to log in, whether it's on a website that is heavily protected by antibot. It is extremely challenging to get access to this information, and the answer is using browser agents. So, if we want to start off, we'll go with Ramp first.</p>
+<p>So, Ramp, I'm sure everyone in this room is familiar with Ramp. We actually are big users and fans of Ramp. Uh they make it incredibly easy to for a company to manage spend. When they were growing and scaling, they started having to interact with hardest to reach portals, and more portals than than ever before. And so, the problem or the gap was, how can we fetch these receipts efficiently at scale?</p>
+<p>They didn't know about the browser agent. So, instead, they're like, let's just put together a team of humans, and they will log onto these portals, and they'll go fetch these receipts. Well, that can that can be good for a series A, series B company, but when you start growing and scaling to the to the masses that uh Ramp is at, you need a more efficient way. You can't continue to hire humans. You're just going to be bottlenecked by the limitation of scale.</p>
+<p>So, in comes browser agents. And now, again, we are big users of Ramp. I booked my flight to this conference using my Ramp card. Immediately after booking my flight on that Ramp card, Ramp spins up a browser agent. That browser agent goes to Delta. It logs in. It captures that receipt, and it matches it to the transaction. Um so, once they do that, that's that's all good and dandy, but when you're doing it at scale, you're going to run into things like antibot. So, how do you reduce that friction? How do you eliminate getting blocked?</p>
+</details>
+<h3 id="从笔记本到数据中心chromium-分叉与反指纹" data-reading-heading="">从笔记本到数据中心：Chromium 分叉与反指纹</h3>
+<p><strong>&gt;&gt;</strong>: 为了理解这一点，我想回顾一下浏览器在你的笔记本电脑上是如何工作的。</p>
+<p>想想 Chromium、Safari 等浏览器。Chromium 允许你访问网络，它是一个可执行二进制文件。从幻灯片中可以看到，我们正在预订飞往纽约的航班。而在后台，你的浏览器拥有完整的指纹信息：它知道你的浏览器版本、操作系统、字体、屏幕分辨率，甚至时区。</p>
+<p>网站看到的也是一个熟悉的访客。也许你之前访问过该网站，也许你存有 Cookie，你已经登录过，或者在同一个账户上预订了太多次行程。此外还有熟悉的访问模式：每次请求都会通过网络，你拥有网络声誉；而在所有的页面导航行为中，你都显然是一个真人。</p>
+<p>然而，当你试图把同一版本的 Chromium 放到数据中心时，问题就出现了。</p>
+<p>这就是我们超越单台笔记本进行扩展的时刻。我们需要对其进行复制。对于像 Ramp 这样的公司，他们不可能开着数千台笔记本电脑，分别运行不同的人类版本 Chromium；他们也不可能让一个人用 cron 定时任务来跑这些流程。他们需要规模化的基础设施，以便可靠地访问网站。</p>
+<p>但是，当你把完全相同的 Chromium 放入数据中心时，问题就开始显现了。</p>
+<p>假设我们这么做了，假设我们部署了它。现在的问题在于，当我们在某处的 EC2 实例中启动一个无头浏览器（headless browser）时，每次启动它都会产生不同的指纹；它拥有全新的 Cookie，你可能需要重新登录；还有代理问题，它会明确表明你来自数据中心，而不是家庭宽带 IP。</p>
+<p>当然，你可以通过使用代理服务、切换代理来欺骗网站，这意味着你可能不会遇到那么多验证码（CAPTCHA），或者可以伪造来自数据中心的位置，但这仍然无法改变 Chromium 的底层问题。你使用的依然是笔记本电脑上的那个 Chromium。</p>
+<p>如果我们再往下深入一层，思考一下是什么让 Chromium 如此优秀：如果你查看浏览器进程，在内部你有一个页面引擎——这是高度简化的版本——它渲染内容，处理所有的 HTML 和 JavaScript；然后是你的网络层，如果你以前检查过网络标签页，你可以看到所有进出的请求；接着是设备与图形层。</p>
+<p>这个引擎非常优秀，以至于他们每两周就能发布一次变更；但对于我们这样一家试图进行网页自动化的公司来说，这简直是灾难。</p>
+<p>因此，我们分叉（fork）了它。</p>
+<p>关于我们对 Chromium 二进制文件做了多少修改，我可以说上很久。但总之我们对它进行了分叉，打造了一款我们在数据中心运行的已验证浏览器（verified browser）。我在此分享我们做的三件事：首先，我们移除了自动化标志位（automation flag）。这是显而易见的，对吧？当你通过自动化驱动无头浏览器时，通常会传入 <code>webdriver = true</code>，我们在所有地方都将其改为了 <code>false</code>。</p>
+<p>接着，我们在身份识别上做了对齐。我们不再将其命名为 headless Chrome，而是直接命名为 Chrome。这些听起来可能像是简单的修复，但由于 Chromium 的极其复杂性，这深入到了底层代码，分布在我们需要逐一排查的众多不同地方。而且每两周就有一次更新，这就是为什么我们必须维护自己的版本。</p>
+<p>另外，我们保持进程常驻（keep the process alive）。我的意思是，很多开发者在本地甚至托管基础设施上运行的抓取任务、自动化任务或工作流，都是随起随停的——任务一旦完成，就立刻终止浏览器并杀死 Chromium 进程。而我们则是让 Chromium 保持运行，仅关闭窗口。</p>
+<p>那么，何不实际测试一下？这里有一段代码片段，我想问一下 Aric，我们能启动一个浏览器吗？</p>
+<p>好的。请大家注意，今天的 Wi-Fi 信号一直很糟糕，所以启动和渲染可能需要等一秒钟。我们现在看到的是 BrowserStack 上托管浏览器的实时视图 iframe。这很好。我们可以访问 Rome。好的，没什么特别的。</p>
+<p>让我们停掉它，进入下一张幻灯片。</p>
+<p>我们何不同时启动 100 个浏览器？做完全相同的事情，但并发启动它们。</p>
+<p>好的，进入下一张幻灯片。</p>
+<p>现在后台正在发生的是：我正在用同样的代码并发访问许多不同的网站。Aric 可以滚动浏览其中的一些网站；我们目前没有执行自动化操作，只是以 100 个浏览器的规模去访问这些网站。</p>
+<p>接下来的一分钟我想做个尝试。我刚刚仓促搭建了这个演示，而且现场 Wi-Fi 有点差，整个连接都是通过我笔记本上的 ngrok 隧道传输的。所以如果不成功，我们就继续往下讲。</p>
+<p>我想请大家扫描这个二维码，系统会从这 100 个网站中随机为你分配一个。有谁看到浏览器界面的话请告诉我一声。我想向大家证明，这些浏览器运行在我们的云端，并且你可以直接访问。谁的页面加载完成了请喊一声。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: And to understand this, I really want to go back to how does the browser work on your laptop? Think about Chromium or Safari or dear. Chromium allows you to access the web. It's an executable binary. And right now from this slide we can see that we are booking a flight to New York. And in the background, your browser has an entire fingerprint. It knows your browser version, uh there's OS, there's fonts, there's screen size, and even time zone. The website also sees a familiar visitor. Maybe you visit the site before, maybe you've got some cookies. You've logged in or you've booked too many trips on the same account. There's a familiar pattern as well. Each request will go through a net You've got a network reputation. And all the navigation, you are clearly a human. And now the problem comes when you try and put that same version of Chromium into a data center.
+<p>And that's when we scale beyond the laptop. We need to replicate it. For companies like Ramp, they are not going to have thousands of laptops open running a different human version of Chromium. They're not going to have one person with a cron job running this either. They need scaled infra that lets them get to sites reliably. The problems start to appear though when you put that same Chromium in the data center.</p>
+<p>Um let's say we do this. Let's say we've put that in. The problem now is when we launch a called out browser, that headless browser in an an an EC2 instance somewhere. Every single time we launch it, it's going to have a different fingerprint. It's going to have fresh cookies. You may need to log in again. And proxies. It's going to clear indicator that you are coming from a data center instead of a residential IP. And sure, you could trick the website by using a proxy service and changing your proxy. And that means is you might not be presented as many captures or you can fake your location from that data center, but that still doesn't change the underlying problems with Chromium. You're using that same Chromium on a laptop.</p>
+<p>And if we just step one step down and go a little bit deeper and think about what makes Chromium so good is if you look at the browser process, right? Inside you have a page engine. This is a very simplified version. And where it renders the content and it has all the HTML, JavaScript. Um then you have your network and if you ever like inspected before you go on a network tab and you can see all the requests coming in and out. And you have your device and graphics. The engine is so great that they can make a change every 2 weeks, which makes it terrible for us as a company trying to automate the web.</p>
+<p>So we forked it. And I could go on forever on how many changes we made to the Chromium binary. Um but we forked it and came up with a verified browser that we run in the data center. And what we did with three things I'm going to share now is we first removed the automation flag. An obvious one, right? When you're driving a headless browser um through an automation, you will pass this webdriver equals to true and we just swap that to false everywhere. Then we aligned on the identity. Instead of now being called headless Chrome, we're calling it Chrome. Now these may seem like simple fixes, but because how complicated Chromium is, this goes deep into the code and it's in so many different places that we need to find. And every 2 weeks is a new change. That's why we have our own version. We also [clears throat] keep the process alive. What I mean by that is a lot of scraping jobs or automation jobs or workflows that people are doing as developers locally or even in the hosted infra will start and stop. They kill the browser and they kill a Chromium instantly as soon as the task is done. Instead, we leave chromium running and close the windows out.</p>
+<p>So, why don't we put it to the test? We've got a snippet here and I'm going to ask Aric, can we launch a browser? Okay. And bear in mind the Wi-Fi has been terrible today. So, it's launch is going to take a second to render and we are now looking at an iframe of a live view of a hosted browser on BrowserStack. That's great. We can go to Rome. Okay, nothing special. Let's stop that. And let's go to the next slide. Why don't we launch 100 browsers? Do the exact same thing but we'll launch them concurrently. Okay. And to the next slide. Um now what's going to happen in the background is I'm calling the same thing with a bunch of different websites and you will be able to Aric scroll through the um some of the sites and we're not automating at the moment. We're just going and visiting the sites as 100 browsers.</p>
+<p>Now I'm going to try something for the next minute. Um I set this up very quickly and the Wi-Fi is a little sucks a little bit. And it's all through an Engrok portal on my laptop. So, if it doesn't work, uh we'll move on. Um I want everyone to scan this QR code and you will be able given a random website out of one of these 100. Um someone tell me if they can see a browser. I'm trying to prove to you that these browsers in our cloud and you have access. Someone shout out when they're when it's loaded.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 希望演示之神眷顾我们。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Hopefully the demo gods are with us.
+</details>
+<p><strong>&gt;&gt;</strong>: 看到浏览器了吗？太棒了。还有其他人打开了吗？很好。太酷了。漂亮。实际上你还可以与它交互——通过 iframe，你可以点击、控制、移动并执行各种操作。这引出了我的下一个话题。我先把它停掉。谢谢，Eric。</p>
+<p>这就带出了下一个问题：控制。我们该如何控制这些浏览器？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah, you got a browser? Awesome. Yeah? Got another one? Great. Cool. Sweet. Nice. You can actually interact with this as well. Um through the iframe you can click, control, move and do things. And that takes me on to the next thing. I'm going to uh stop that now. Thanks, Eric. Um Um let's take me on to the next thing is control. How do we control these browsers?
+</details>
+<h3 id="控制层面开源-sdk-stagehand-与-dom-降维" data-reading-heading="">控制层面：开源 SDK Stagehand 与 DOM 降维</h3>
+<p><strong>&gt;&gt;</strong>: 总结一下，Ramp 现在能够部署数千个浏览器智能体。他们节省了超过 30,000 小时以往由人工完成的数据录入工时，这些工作现在全部由智能体接管，而且业务规模提升了 5 倍。仅仅通过从人工切换到智能体，他们就加速了业务发展并省下了大量工时，这些时间现在可以投入到 Ramp 的其他项目中。</p>
+<p>谈到 Bill——Ramp 解决了规模与访问的问题，现在的问题是控制。大家都熟悉 Bill。Bill 处理着跨数千家不同供应商的大量付款业务。当你考虑使用智能体来处理时，最大的挑战是——请翻到下一张幻灯片——每个门户网站都截然不同：结账流程不同，填写付款信息的步骤不同，UI 界面也在变化。所以在现实中，Bill 认为用智能体根本不可能实现自动化，这就是为什么需要组建人工团队代表客户逐个点击门户网站完成操作。</p>
+<p>对此的解决方案依然是能够使用浏览器的智能体。对 Bill 来说，核心概念在于：我们如何构建一个能够与数千个不同门户网站交互并执行操作的单一智能体？一个智能体，数千个不同门户。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: And just to sum this up, Ramp now can deploy thousands of browser agents. They have saved north of 30,000 manual hours in data entry that is done that used to be done by humans that is now done by agents, and their scale has gone up 5x. So, just by switching from humans to agents, they were able to accelerate their business and save a bunch of those hours, which now they can dedicate to other initiatives across Ramp.
+<p>When we talk about Bill, so Ramp scale and access. Now, it's about control. Everyone's familiar with Bill. Um Bill, you know, processes a ton of payments across thousands of different vendors. When you think about using agents to do that, the biggest challenge is well, every portal Next slide, please. Every portal is different. The checkout flow is different. The process to fill out the payment is different. The UI changes. So, in reality, the way Bill thinks about this is it's impossible to automate with agents. That's why we need a team of humans to go click through portals and do this on behalf of our customers. Um and again, the answer to this is an agent that can use a browser. Um and so, for Bill, the notion was how can we build a single agent that can interact and act upon thousands of different portals. One agent, thousands of different portals.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 这就引出了 Stagehand。Stagehand 是我们开源的 SDK，让你能够控制浏览器。可以把它想象成构建在 Playwright 之上的高级工具。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Um that brings us to Stage Hand. Stage Hand is our open-source SDK that lets you control a browser. Think about Playwright, but built way on top of it.
+</details>
+<p><strong>&gt;&gt;</strong>: [发出嗤笑声]</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: [snorts]
+</details>
+<p><strong>&gt;&gt;</strong>: 你的智能体将使用 Stagehand 来控制浏览器。我稍后会向大家展示它是如何工作的。请看下一张幻灯片。</p>
+<p>首先我想重新理解一下 Playwright 存在什么问题。Playwright 很棒。我最初学编程时就是用 Selenium、Beautiful Soup 以及手写 Playwright 脚本。那是 AI 出现之前的事了，现在我已经记不清上次写代码是什么时候了。</p>
+<p>Playwright 的问题在于，一旦目标网站发生变化——按钮移动了位置，输入框从“First Name”变成了仅仅“Name”——在底层，当你在 Playwright 中寻找 XPath，或者尝试点击某个元素或选择器时，你的脚本就会直接崩溃。</p>
+<p>如果你只是处理一次性任务，并且所有代码都在本地运行，那完全没问题；但当你试图达到像 Ramp 或 Bill 这样的公司规模时，你每次都需要绝对的可靠性。我们构建 Stagehand 的原因，就是希望赋予智能体浏览网络并控制浏览器的能力。下一张幻灯片。</p>
+<p>那么它究竟是如何识别的？有何不同之处？</p>
+<p>Stagehand 在某种意义上确实有点像 Playwright：你可以使用确定性规则，执行 <code>page.click</code>，或者编写你在 Playwright 脚本中看到的一切操作。但是，当场景变得更复杂时，你实际上可以发送自然语言提示词去网站上执行操作——比如执行 <code>page.act</code>：“去填写这个表单”、“输入我的姓名”、“输入密码”或“找到红色按钮”。</p>
+<p>Stagehand 会获取网页的 DOM 和无障碍树（accessibility tree）以及它在网站上看到的所有内容，将其传给大语言模型（LLM）或智能体，理解该点击哪里并执行点击。</p>
+<p>大家可能会觉得这会变得非常昂贵，但这就是 Stagehand 背后优秀工程师发挥作用的地方。为了快速展示这一点，Eric，麻烦点击一下那个对比按钮。</p>
+<p>如果你在智能体中使用原生 Playwright，你必须发送左侧显示的所有内容——那是整整 122k 个 token，全是原始 HTML。然后你问智能体：“我应该点击哪里？应该去哪里？”而 Stagehand 在把数据送达智能体之前所做的，是将 DOM 压缩为一个非常出色的无障碍树；在同一个示例中，我们只需要发送大约 4,000 个 token。</p>
+<p>它会直接给出选择器。Stagehand 会指出：“点击那个地方。”这不仅在发送的 token 数量上为你节省了大量资金，同时也缩小了上下文窗口，从而更快获得结果。</p>
+<p>翻到下一页，我们在 Browserbase 中配合使用 Stagehand 的另一个原因，是它减少了往返通信（round trips）。假设我们目前正在数据中心控制一个浏览器，我们必须往返通信，每次都要来回传输 HTML。而我们在 Browserbase 所做的，是将 Stagehand 直接置于浏览器旁边。</p>
+<p>这意味着 Stagehand 作为 Chrome 扩展程序直接运行在托管浏览器上。因此，这些操作变得快得多，在智能体下达“点击哪里”和“下一步去哪里”的动作与指令之间，完全没有往返网络延迟。</p>
+<p>当你把这两者结合起来：浏览器端提供规模化支撑，Stagehand 提供控制能力。接下来我们将向大家展示一个同时运用这两者的例子。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Your agent will sit and use Stage Hand to control the browser. I'm going to show you a little bit how. Go to the next slide.
+<p>I want to start with understanding again what is wrong with Playwright. Playwright's great. I first learned how to code by using Selenium and beautiful soup and writing Playwright scripts by hand. This was before AI. Now, I can't remember last time I coded. And so, with Playwright, what the problem is is as soon as that website changes, the button moves, the text box changes like from first name to just name. In the in the back, like when you're looking for that XPath in Playwright or you're trying to click on an element or a selector, your script's also going to break. And now, that's fine if you're doing one-off tasks and you're running everything locally, but when you try to scale like a company like Ramp or Bill, you need reliability every single time. The reason we like built Stage Hand was because we wanted to give the ability to agents to navigate the web and control them. Next slide.</p>
+<p>So, how does it actually know? What's different? Well, if you play play Sorry. What's different? So, Stage Hand actually works a little bit like Playwright in some sense. You can use deterministic rules and go page.click or everything you'd see in a Playwright script. But, when it gets a little bit more complex, you can actually send natural language prompts to go and do actions on the site. Pay page.click or page.act, go fill out this form, or enter my name, or enter password, find the red button. Stage Hand will then be able to take the DOM and accessibility tree and everything it sees on the website, pass it to an LM, pass it to an agent, and understand where to click and go and click it.</p>
+<p>Now, you may be thinking it might get expensive, but that's where we have our excellent engineers behind Stage Hand. And to demonstrate this quickly, Eric, if you could hit that compare button. If you were to use an agent with playwright, you'd be sending everything on the left. Uh, that's 122k tokens. And that's a raw HTML. And you ask your agent, "Where do I click? Where do I go to?" What Stage Hand does before it hits that agent is it shrinks the DOM to a really cool accessibility tree, where we're only sending like 4,000 tokens for this same example. And it'll give direct selectors. So, Stage Hand will go, "Click that." Save a lot of money on um the amount of tokens that you're sending, but also reduce the context and get quicker results.</p>
+<p>And if we go next, another reason why we use um Stage Hand and with Browser Base is because there's fewer net There's fewer round trips. Let's say we are currently controlling a browser in a data center. We've got to talk back. We send the HTML back and forth every single time. What we do at Browser Base is we put Stage Hand next to the browser. And that What that means is Stage Hand is a Chrome extension on a hosted browser. So, those actions become a whole lot quicker, and there's no round trip latency from those actions and those like instructions from the agent of where to click and where to go next. And so, when you bring these two things together, you need scale from the browsers, Stage Hand gives you the control, and we're going to show you an example that use both.</p>
+</details>
+<h3 id="stripe-kyc-案例与-stagehand-三大核心原语演示" data-reading-heading="">Stripe KYC 案例与 Stagehand 三大核心原语演示</h3>
+<p><strong>&gt;&gt;</strong>: 这是我们的最后一个案例。在 Ramp 的案例中，我们看到浏览器智能体解决了规模化以及访问受严密防护网站的问题；在 Bill 的案例中，体现的是自适应自动化——浏览器智能体如何让你无需维护数千个不同的 Playwright 脚本，就能与数千个不同的门户交互。</p>
+<p>现在看 Stripe。在座的各位对 Stripe 都很熟悉。Stripe 每月、每季度、每年都要入驻数千乃至数万家商户。同样，他们清楚要获取信息以验证这些企业是否真实存在、是否是合规的合作对象，唯一的途径就是通过浏览器。而在浏览器智能体出现之前，他们只能依靠人工团队打开浏览器，逐一访问各州州务卿（Secretary of State）门户网站来获取信息。因此，一个快速的转变就是使用浏览器智能体去自动化执行这一 KYC（了解你的客户）验证流程。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: This is our last example. So, with Ramp, we saw that browser agents solve the issue of scale and access to heavily protected sites. With Bill, it was adaptive automation. How can browser agents enable you to interact with thousands of of different portals with ha- without having to manage thousands of different playwright scripts. Now, with Stripe, everyone's familiar with Stripe in this room. Stripe onboards thousands, tens of thousands of merchants on a monthly, quarterly, quarterly, yearly basis. And again, they knew that the only way to access the information to verify that these businesses were real and they were the right business to work with is through a browser. And this was before the age of browser agents. So, they had a team of humans going on and going to Secretary of State portals and using the browser to get that information. So, a quick switch is being able to use the browser agent to go and automate this KYC verification.
+</details>
+<p><strong>&gt;&gt;</strong>: 我们再深入了解一下 Stagehand。除了像 Bill 那样直接使用完整的智能体，你还可以使用 <code>act</code>、<code>extract</code> 和 <code>observe</code>。这三者是 Stagehand 向开发者开放的关键原语。</p>
+<p>一个是 <code>observe</code>：寻找“了解更多”按钮。</p>
+<p>这是采取行动。下一张幻灯片。<code>act</code>：点击登录按钮。下一张幻灯片。</p>
+<p>然后是 <code>extract</code>。这是我最喜欢的一个功能，因为你可以把任何内容提取为 Zod schema。这对于工程师来说太棒了，因为我们把网络上非常杂乱、非结构化的数据，转换成了极易使用且可读的数据，并将其发送给智能体。</p>
+<p>下一张幻灯片。</p>
+<p>现在我将展示几个更多的演示。我们将从一家公司的网站开始：前往 Chipotle 网站，用 Stagehand 查出它销售什么。</p>
+<p>好的，下一张幻灯片。</p>
+<p>这个浏览器现在会在托管浏览器上启动并浏览页面，它将使用 Stagehand 的 <code>extract</code> 进行提取。</p>
+<p>这就完成了。我们拿到了 Chipotle Mexican Grill，它在卖青柠薯片。很好。我们点击停止。</p>
+<p>接下来更有趣了。我们进入下一个演示。</p>
+<p>现在我们要为 Chipotle 调研四个不同的信息源：我们将访问他们的官方网站、投资者关系页面、SEC 申报文件（SEC filing）以及纽约证券交易所挂牌页面。</p>
+<p>好的，程序正在运行。等它们加载完毕，大家也可以滚动查看。</p>
+<p>太好了。我们在底部看到了 SEC 文件，看到了纽约证券交易所页面；在上方，我想官方网站很快就会显示出来。看，投资者关系页面也出来了。这些操作在后台运行的速度其实比屏幕上显示的还要快；这已经在后台完成了，眼前只是实时流式传输回来的视图。显然，当你大规模运行这么多浏览器时，你不会一直查看实时画面，这更多是用于开发调试。</p>
+<p>好的，很棒。我们停掉它，进入下一个演示。</p>
+<p>现在我们要对 20 家公司执行相同的三个信息源调研，我们点击运行。</p>
+<p>请记住，每个网站上运行的都是同一套代码。</p>
+<p>翻到下一张幻灯片。我们可以看到 Chipotle 出现在最上面，我现在都觉得饿了。</p>
+<p>还有摩根大通（JP Morgan）。好的，继续往下滚。看看还有什么：高盛（Goldman Sachs）。</p>
+<p>在每个网站上执行完全相同的任务，没有任何中断，畅通无阻，全部基于 Stagehand 完成。这真的很酷，因为正如我最开始提到的，这是一个“已验证浏览器”，意味着你不会遇到那么多验证码；即便遇到了，我们也会予以解决。</p>
+<p>Stagehand 让我们无需人工盯盘就能完成导航。</p>
+<p>好的，我们可以在这里停止。我想我们可以在右侧看到一些结果。下一张幻灯片。</p>
+<p>好的，太酷了。我们这里得到了一些结果：SEC 申报数据。继续向下滚动。说实话，我完全不知道这些 SEC 的内容是什么意思，我不是搞金融的；但希望它对大家有用。好的，翻到下一张。</p>
+<p>那个 SEC 模板是我前段时间做的一个东西。如果你想单独获取那个特定的 SEC 模板，可以直接使用。</p>
+<p>但如果你想上手基于浏览器的任何功能，或者尝试我刚才展示的内容，可以访问我们的网站，我们提供了一个提示词副本（copy prompt），你只需把它发送给你的智能体，它也能帮你完成大部分工作。</p>
+<p>下一张幻灯片。</p>
+<p>好的，非常感谢大家。这就是我们的分享。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Um let's dig a bit more into Stage Hand here. Um so, we have instead of using a direct agent like Bill, you could use act, extract, and observe. Those [snorts] are three key primitives that Stage Hand we give we expose to you as developer. Um one is observe, find the learn more button. Um this is taking action. Next slide. Act, click the login button. Next slide. And then the extract. Now, this is my favorite one because you can extract anything into a Zod schema, which is great for engineers because we're taking really messy unstructured data on the web and converting it to a really easy-to-use data and readable and send it to an agent.
+<p>Next slide. Now, I'm going to show a couple more demos. We're going to start with one company website and we're going to go to Chipotle and find out what it sells using Stage Hand. Um and next slide then. Okay. So, this browser will now spin up on a hosted browser and browse page and it's going to use Stage Hand um extract to extract it. And there we go. We've got Chipotle Mexican Grill. Um it's selling some lime chips. Cool. Uh if we press stop. Now, this is where it's going to get fun. Let's go for the next one. And now we're going to research four different sources for Chipotle. We're going to go to their website, investor page, SEC filing, and New York Stock Exchange listing.</p>
+<p>Okay? So, we're running and all right, you can also scroll once they load. Okay, great. So, we've got the SEC filing down at the bottom, and we've got New York Stock Exchange, and up top I think we've got the website that will appear in a second. But, there we go, they got investor relations, as well. So, these are actually happening quicker than they are on the screen. This is already being happened in in the back. It's just the live view that's streaming back to us. And obviously, when you're running so many browsers at scale, you're not always going to be checking the live view. This is more for development.</p>
+<p>Okay, cool. Let's stop that. And let's go to the next one. Now, we're going to do 20 companies for the same three sources. And we're going to hit run. And bear in mind, this is the same code that's running on every single website. Then, we go to the next slide. And we can see Chipotle will come up at the top. I'm getting hungry now. Um JP Morgan. Um there we go. All right, keep on scrolling. Let's see what else is there. Golden Sachs. Going and doing the same tasks across every single site without interruption, unblocked, all using Stage Hand as well. And it's really cool cuz it's a verified browser that I mentioned at the very start, which means that you don't get hit with as many CAPTCHAs. And if you do, we solve them. And the Stage Hand allows us to navigate without anyone looking at this.</p>
+<p>Okay? And we can stop there. And I think we can see some results on the right-hand side. Um next slide. Okay, cool. We've got some of the results here. Um SEC filing data. Keep on scrolling. I honestly have no idea what the SEC stuff means. I'm not a finance guy. But, hopefully it's useful. Cool. Um let's go to the next slide. And so, that SEC template I was something I built a while ago. If you want access to that particular, just the SEC one, you can do. Um, but we also have if you want to get started with anything browser-based or anything I showed, we have if you go to our website, we have a copy prompt which you just send it to your agent and that'll do a lot of the work as well. Uh, next slide. Okay. Thank you so much. That's our talk.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: [掌声]</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: [applause]
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/ea8a5d3146e27a2d95e6d3d9cc5d0ab4727f35eacbd2bfa7db7737ae96d817a8.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/ea8a5d3146e27a2d95e6d3d9cc5d0ab4727f35eacbd2bfa7db7737ae96d817a8.md" download="构建跨网络运行的金融浏览器智能体：Browserbase 与 Stagehand 的架构与实践.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Jay" class="entity-link person-link">Jay</a>, <a href="/search/?q=Amarik" class="entity-link person-link">Amarik</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Browserbase" class="entity-link company-link">Browserbase</a>, <a href="/search/?q=Ramp" class="entity-link company-link">Ramp</a>, <a href="/search/?q=Bill" class="entity-link company-link">Bill</a>, <a href="/search/?q=Stripe" class="entity-link company-link">Stripe</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Stagehand" class="entity-link product-link">Stagehand</a>, <a href="/search/?q=Chromium" class="entity-link product-link">Chromium</a>, <a href="/search/?q=Playwright" class="entity-link product-link">Playwright</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

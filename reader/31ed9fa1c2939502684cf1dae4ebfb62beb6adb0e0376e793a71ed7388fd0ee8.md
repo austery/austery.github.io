@@ -1,0 +1,1145 @@
+---
+author: Bloomberg Podcasts
+date: '2026-10-26'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=NLL0xOFgUDc
+speaker: Bloomberg Podcasts
+tags:
+  - restaurant-industry
+  - business-model
+  - entrepreneurship
+  - shared-kitchen
+  - cost-inflation
+title: 芝加哥餐厅老板 Richard Mott 谈餐饮业的商业现实：从校园咖啡馆、高端餐饮到共享厨房
+summary: 芝加哥餐厅 North Pond 与 Spark Shared Kitchen 创办人 Richard Mott 分享其创业历程与餐饮运营洞察。对话探讨了商学院创业教育的变迁、独立高端餐饮在合规、用工及非理性竞争下的生存压力、酒水消费下滑与成本通胀的挑战，以及共享厨房对小微食品创业者的商业赋能。
+insight: ''
+draft: true
+series: ''
+category: business-entrepreneurship
+area: finance-wealth
+project: []
+people:
+  - Richard Mott
+  - Tracy Alloway
+  - Joe Weisenthal
+companies_orgs:
+  - North Pond
+  - Spark Shared Kitchen
+  - Bloomberg
+products_models: []
+media_books:
+  - Odd Lots
+status: evergreen
+---
+### 播客引言与嘉宾背景
+
+**>>**: 彭博音频工作室。播客、广播、新闻。
+<details><summary>Original English</summary>
+**>>**: Bloomberg Audio Studios. Podcasts, radio, news.
+</details>
+
+**>>**: [音乐]
+<details><summary>Original English</summary>
+**>>**: [music]
+</details>
+
+**>>**: 大家好，欢迎收听新一期的《Odd Lots》播客。我是 Tracy Alloway。
+<details><summary>Original English</summary>
+**>>**: Hello and welcome to another episode of the All Thoughts podcast. I'm Tracy Alloway.
+</details>
+
+**>>**: 我是 Joe Weisenthal。
+<details><summary>Original English</summary>
+**>>**: And I'm Joe Weisenthal.
+</details>
+
+**>>**: Joe，我们又回到芝加哥了。
+<details><summary>Original English</summary>
+**>>**: Joe, we are back in Chicago.
+</details>
+
+**>>**: 我喜欢芝加哥。
+<details><summary>Original English</summary>
+**>>**: I love Chicago.
+</details>
+
+**>>**: 这是一座美丽的城市。我以前住在这儿。每次回来都有一种超现实的感觉，因为基本上它总让我想起初中时代。我们来这里实际上是为了做一场现场秀。
+
+不过，我想我们可以多插播一期节目。这是我们特别喜欢做的一类节目。
+<details><summary>Original English</summary>
+**>>**: It's a beautiful city. I used to live here. It's always kind of surreal coming back cuz it reminds me of middle school, basically. We're actually here for a live show.
+
+But, I thought we would squeeze in one additional episode. It's one of the kind of favorite types of episodes that we like to do.
+</details>
+
+**>>**: 确实。这是一期关于餐饮服务的节目，是我们最喜欢的节目类型之一。我们做过最喜欢的节目之一，就是关于一家芝加哥本地的餐饮实体——那位面包师。还记得他吗？
+<details><summary>Original English</summary>
+**>>**: Totally. It's a food service episode, one of our favorite genres of episode. One of our favorite episodes we ever did was a Chicago-based food service entity, The Baker. Remember him?
+</details>
+
+**>>**: 当然记得。这类节目之所以做起来这么有意思，原因之一在于，你看，我们节目经常请很多经济学家，请很多投资者等等。他们往往从概念层面来谈论商业，但与该领域的实际从业者交流总是格外有趣。而且餐饮这个行业涉及宏观经济的方方面面。你看，有劳动力问题，有供应链问题，我想也有普遍意义上的创业问题。因此，我想我们可以找一位跟那位芝加哥面包师稍微有些不同的人聊聊。我们要聊的这位嘉宾，不仅可以说是拥有金融背景，而且他实际上在本科阶段就离开了金融行业，做出明确决定投身于餐饮和宴会服务领域，成为一名从业者。
+<details><summary>Original English</summary>
+**>>**: Absolutely. And one of the reasons these episodes are so interesting to do is, you know, we have a lot of economists on the show. We have a lot of investors, whoever. And they kind of talk about business in this conceptual way, but it's always interesting talking to actual practitioners in the space. And the thing about food is it touches on so many different aspects of the macroeconomy. You know, you have labor, you have supply chain issues, you have general, I guess, entrepreneurial issues as well. And so, I thought we would talk to someone a little bit different to the Chicago-based baker. We would talk to someone who not only comes from, I guess, sort of a finance background, but someone who actually left finance at an undergraduate level in order he made the conscious decision to become a practitioner in the restaurant and catering space.
+</details>
+
+**>>**: 你知道《经济学人》的巨无霸指数吧？那个概念之所以行得通，是因为巨无霸里面内嵌了劳动力、原材料成本和租金。而这就是一切，对吧？所以，这些特定的行业之所以对我们如此有吸引力，原因正如你所说，所有投入要素都包含在其中了。经济运行中的每一种投入都在某种程度上反映在里面。当然，能采访到一位既懂商业理论背景、又有创业实战背景的人，那绝对是一位绝佳的嘉宾。
+<details><summary>Original English</summary>
+**>>**: You know the Big Mac index, right? The Economist's. The reason why that works as a concept is because embedded within the Big Mac is labor, commodity costs, and rent. And that's everything, right? And so, like, here you get like the reason why these particular businesses are so fascinating to us is because, as you said, like, every input goes into it. Every input in the economy goes into it in some way. And then, of course, the chance to someone who sort of knows business both from a theoretical background and also a entrepreneurial background, that's a good guest.
+</details>
+
+**>>**: 而且他还拥有经营不同类型餐饮业务的经验。所以，这期内容会非常有意思。我很高兴地说，我们请到了最完美的嘉宾。我们今天将与 Richard Mott 对话。他是芝加哥本地 North Pond 餐厅的老板。他也是 Spark Shared Kitchen 的老板，稍后我们会详细介绍那究竟是什么。此外他曾在芝加哥大学学习金融。因此，确实是完美的嘉宾人选。Richard，非常感谢你来到我们节目。
+<details><summary>Original English</summary>
+**>>**: And someone who's had experience running different types of food businesses. So, this will be really interesting. I'm very happy to say we have the perfect guest. We're going to be speaking with Richard Mott. He is the owner of North Pond here in Chicago. He is also the owner of the Spark Shared Kitchen, which we'll get into exactly what that is. And he studied finance at the University of Chicago. So, truly the perfect guest. Richard, thank you so much for coming on.
+</details>
+
+**>>**: 谢谢你们邀请我。很高兴来到这里。
+<details><summary>Original English</summary>
+**>>**: Oh, thank you for having me. I'm glad to be here.
+</details>
+
+### 从商学院到校园餐饮连锁
+
+**>>**: 我刚才提到金融是你本科阶段的专业方向，但也提到你做了决定不想继续留在金融领域。跟我们讲讲你当初到底是怎么进入餐饮行业的吧。
+<details><summary>Original English</summary>
+**>>**: So, I mentioned finance was your undergraduate expertise, but I also said you made a decision that you didn't want to stay in finance. Talk to us about how you actually got into the restaurant business.
+</details>
+
+**>>**: 其实，我本科在水牛城大学（University of Buffalo）主修的是历史、城市研究和政治学。不过我之后读了芝加哥大学的研究生院，在那里我主修的是金融。
+
+我的实习是在前进保险（Progressive Insurance）的财务部门做的，那在当时算是一家年轻且发展迅猛的后起之秀。我是说，那是一家很棒的公司，在那里工作挺好的。但我那个夏天结束时就意识到，我真的不想给别人打工，我想自己创业。所以，在企业办公室呆了三个月，就足以让我余生都远离那个领域了。
+<details><summary>Original English</summary>
+**>>**: Well, actually, I was a history, urban studies, political science majors an undergrad at the University of Buffalo. But I attended both the graduate school at the University of Chicago, where I was a finance major.
+
+And I did my internship I did in the finance department of Progressive Insurance, which at the time was sort of a young, fast-moving upstart. I mean, it's a great company to work work for and everything. But I left that summer with just the realization I really didn't want to work for anyone else, and I wanted to start a a venture on my own. So, 3 months in a corporate office was enough to kick me out of that field for the rest of my life.
+</details>
+
+**>>**: 现如今，如果你去斯坦福商学院或者沃顿商学院，肯定会发现有大量的人去那里是因为想成为创业者。又或者他们想成为风险投资人，或者想搞所谓的搜寻基金（search fund），从朋友那里筹集个两三百万美元，然后收购当地的泳池维修公司之类的。但我猜那算是比较新鲜的现象。在过去，就读这些商学院的人，纯粹就是进入大公司工作的人才输送管道吧。
+<details><summary>Original English</summary>
+**>>**: These days, if you were to like go to Stanford Business School or I Wharton, for sure, you would find tons of people who are there cuz they want to be entrepreneurs. And maybe or maybe they want to be VCs, or they want to have a so-called like search fund where they gather a couple million dollars from their friends and buy some local pool repair companies or whatever. But, I guess like that's sort of novel. And I guess like in the past like uh someone who was at these schools it was just purely a pipeline for working at a big firm.
+</details>
+
+**>>**: 是的，在这方面发生了整整 180 度的彻底大转变。我上学那会儿，根本没有什么创业研究这门学问。没有关于小企业融资的研讨会。完全没有任何人关注这些领域。你接受的培训是为了去大陆银行（Continental Bank）、花旗银行（Citicorp）、麦肯锡（McKinsey）这类公司工作。
+
+而我自己决定单飞并创办一家企业——我在读商学院第二年的时候就已经启动了——嗯，这个决定引来了我一些同学相当多的不解。甚至有人会带着几分嘲讽地问：“哎，怎么了，Rich？你没拿到一份真正的工作录用吗？”诸如此类的话。
+<details><summary>Original English</summary>
+**>>**: Yeah, very complete 180° feet change on this. When I was at school, there was no such thing as entrepreneurial studies. There were no seminars on small business financing. There was absolutely nothing paid attention to any of those fields. You were being trained to work for Continental Bank, your Citycorp, for McKinsey, those types of companies.
+
+And my decision to go off on my own and start start a business, which I had started my second year of business school,
+
+um was sort of met with a lot of bewilderment by some of my classmates. And even to the point where some were like kind of derisively asking questions like, "Oh, what's the matter, Rich? Didn't you get a real job offer?" That kind of thing.
+</details>
+
+**>>**: [笑声]
+<details><summary>Original English</summary>
+**>>**: [laughter]
+</details>
+
+**>>**: 真正讽刺的是，现在布斯商学院（Booth）规模最大的单一专业方向，比市场营销或金融还要大，目前全院规模最大的单一专业方向就是创业研究。它在整个学院的业务中占据了巨大的比重。
+
+他们还以此为基础衍生出了波尔斯基中心（Polsky Center），这是全校范围的创业中心，负责把物理实验室里的技术突破转化为商业成果等等。但这现在已经是学校非常庞大且非常成功的一部分了。如果你去各大顶尖商学院，去沃顿、哈佛、斯坦福、伯克利，它们全都有非常非常活跃的空间、创业孵化基地和课程。现在的环境可以说是极具支持性的。
+<details><summary>Original English</summary>
+**>>**: And the the really ironic thing is that now at Booth, the largest single concentration, larger than marketing or finance, the largest single concentration at the school right now is entrepreneurial studies. And it is a huge part of the business.
+
+And they've also spun off from that the Polsky Center, which is the university-wide center for entrepreneurship and you know, monetizing advances in their physics labs and things like that. But, it is a very big and very successful part of the university now. And if you go to all the top business schools, you go to the Warton's, the Harvard's, the you know, Stanford, Berkeley, they all have very very dynamic spaces, entrepreneurial spaces, and labs, classes. It's an incredibly supportive environment right now.
+</details>
+
+**>>**: 这确实是一个非常有意思的转变。不过，你在读研的时候，我好像读到过你当时竞标了一个学校的项目，真正开办了一家咖啡馆。
+<details><summary>Original English</summary>
+**>>**: That's such an interesting shift. But, when you were at grad school, I think I read that you bid on a school project to actually start a coffee shop.
+</details>
+
+**>>**: 当时商学院地下室有一家咖啡馆，他们每年会允许两三个学生来经营，我便参与了竞标。
+
+我把它从一家单纯的咖啡店改造成——你知道的——哦，我们进点百吉饼吧，做点三明治吧，很快我们就在那里搞出了一个完整的小型午餐食堂。事实证明，这是一个相当成功的小项目。
+
+学校里的另外几个学院也找上门来。于是一件事情促成另一件事情，到了我毕业的时候，我们在校园里已经有了四个网点。
+
+然后我们就把它当作全职事业来做了，并且——
+<details><summary>Original English</summary>
+**>>**: They had a coffee shop in the basement of the business school and they would let a couple students run it every year and I bid on it
+
+and turned it from a coffee shop into, you know, oh, let's get bagels, let's get sandwiches, let's pretty soon we had a whole little lunch room there. Turned out to be quite a successful little venture.
+
+I got approached by a couple other departments of the school. So, one thing led to another and by the time I graduated we had four locations on campus
+
+and started this as a full-time business and
+</details>
+
+**>>**: 哇。
+<details><summary>Original English</summary>
+**>>**: Wow.
+</details>
+
+**>>**: 到了大约八九年后，我们已经拥有了一个由 20 家门店组成的连锁体系。它们都是咖啡兼三明治店，但全都设在教学楼内。所以我们不做大型的包餐计划，也就是康帕斯（Compass）和爱玛客（Aramark）通常做的那种。我们只是在教学楼内部做这些小型的、几乎可以说是定制化运营的网点。
+<details><summary>Original English</summary>
+**>>**: by you know, 8, 9 years later we had a chain of 20 of these and they were all coffee/sandwich shops, but they were all in the the academic building. So, we didn't do the main board plans, you know, what Compass and Aramark typically do. We were just doing these small little almost bespoke operations within the within the academic buildings.
+</details>
+
+**>>**: 咖啡馆的利润你们能留着吗？
+<details><summary>Original English</summary>
+**>>**: Did you get to keep the profit from the coffee shop?
+</details>
+
+**>>**: 那完全是自负盈亏的独立损益核算。我们向他们支付租金，这对我们来说非常划算，因为我们当初谈妥的租金基本上是基于纯咖啡馆业务确定的，而随后我们基本上把营业收入翻了四倍，把它变成了一个真正的午餐食堂，这让我——我是说作为一个本科生——赚到了我有生以来见过最多的一笔钱。我的意思是虽然算不上天文数字，但依然很可观。
+<details><summary>Original English</summary>
+**>>**: That was a complete P&L. We paid them we paid them a rent and it worked out very well for us because we'd reached an agreement on the rent based on basically just being a coffee shop and then kind of quadrupling the revenue and turning it into a real sort of lunch room made it I mean for an undergrad I did more money than I'd ever seen in my life. I mean that wasn't a lot of money, but still.
+</details>
+
+### 早期咖啡业态与管理教训
+
+**>>**: 很有意思，因为我们刚才聊到了商学院的演变，这也许是理解美国经济史的一个视角。其实你大概也可以透过咖啡馆本身来讲述美国经济的历史。
+<details><summary>Original English</summary>
+**>>**: You know, it's funny cuz we're like talking about the evolution of business schools and that's maybe a lens through which to understand the history of the American economy. You could tell probably the history of the American economy through coffee shops themselves.
+</details>
+
+**>>**: 是的。
+<details><summary>Original English</summary>
+**>>**: Yeah.
+</details>
+
+**>>**: 你想想第一代咖啡馆，再想想后来的星巴克，以及现在爆发式的什么“必须喝加了开心果糖浆的抹茶”等等所有这些东西。就像是……
+<details><summary>Original English</summary>
+**>>**: And you think about like first generation coffee shops and then the Starbucks's and then now like the explosion of like oh, you have to have matcha with pistachio syrup and all these things. It's like
+</details>
+
+**>>**: 我……我今天早上就喝了一杯南瓜抹茶奶盖拿铁。别笑话我，我平时一般不喝那个的。
+<details><summary>Original English</summary>
+**>>**: I I a pumpkin matcha cream latte this morning. Don't judge me. I don't normally get that.
+</details>
+
+**>>**: 那杯里面的原料大概多放了两种吧。
+<details><summary>Original English</summary>
+**>>**: There's about two too many ingredients in that one.
+</details>
+
+**>>**: 哎，我平时从来不喝那种东西，但前几天我走在回家路上，看到一个……好像是加了豆蔻的香蕉布丁风味拿铁。那些东西简直是……
+<details><summary>Original English</summary>
+**>>**: Well, I I never drink that stuff, but the other day I was walking home and I saw this uh it was like a banana pudding flavored latte with cardamom. And those are like
+</details>
+
+**>>**: 我真希望我能说那听起来很难喝，但它听起来棒极了。
+<details><summary>Original English</summary>
+**>>**: I wish I could say that sounds bad to me, but it sounds fantastic.
+</details>
+
+**>>**: 太诱人了，但我当时心想，我不能喝。不过说真的，我很好奇那是哪几年，你们当时卖些什么？在那些年份，人们期望咖啡馆提供什么？
+<details><summary>Original English</summary>
+**>>**: so tempted, but I was like, I can't do it. But actually, I am curious like what years were this and what were you serving? What was a coffee shop expected to have in those years?
+</details>
+
+**>>**: 当时的咖啡是一个非常非常不同的行业。你知道，我们提供咖啡、汽水。我们不提供水。那时候根本没有瓶装水这回事。就是咖啡、汽水、三明治、汤，还有很多糕点和烘焙食品。
+<details><summary>Original English</summary>
+**>>**: Coffee was a very, very different industry. You know, we served coffee, soda. We didn't serve water. There wasn't any bottled water back then. It was coffee and soda, sandwiches, soup, a lot of pastries and baked goods.
+</details>
+
+**>>**: 那所谓的咖啡，其实也就是……
+<details><summary>Original English</summary>
+**>>**: And by coffee, there's just like
+</details>
+
+**>>**: 这就是你在海军陆战队军营里会喝到的那种老式咖啡，用那种大型 Bunn 三加仑滴滤壶冲出来的。我自己并不是真正懂咖啡、爱喝咖啡的人，但如果你现在回去尝尝那味道，我敢肯定那简直糟糕透顶。
+<details><summary>Original English</summary>
+**>>**: This was the old one that you would have gotten in the you know, what you would have gotten at a marine barracks with the big the big bun three-gallon pour-over thing. And I'm I'm not I'm not a a real coffee drinker, but if you were to go back and taste it now, I'm sure it would be just wretched.
+</details>
+
+**>>**: 不，我喜欢那种东西。我对工业化咖啡完全没意见。
+<details><summary>Original English</summary>
+**>>**: No, I love that stuff. I'm fine with industrial coffee.
+</details>
+
+**>>**: 挺搞笑的一点是，我们卖咖啡当时只有两种规格。我们有 7 盎司的，那是我们的小杯；还有 10 盎司的，那是大杯咖啡。而现在，如果你去一家咖啡馆，大多数小杯的分量都比我们当年的大杯还要大。
+
+而且我也不会声称自己当年在咖啡市场上有什么远见卓识。我记得我妻子回来——芝加哥是星巴克在西北地区以外开店的第一座城市。我妻子是个咖啡成瘾者，她回来说她去了一家很棒的店。他们卖咖啡，而且店里基本也就只卖咖啡，但咖啡很棒，服务很棒，一切都很好。而我对这一切嗤之以鼻。我当时觉得，呵，一家只卖咖啡的店，是啊，那能维持多久？
+<details><summary>Original English</summary>
+**>>**: thing that's kind of funny is we served coffee. We had two sizes of coffees. We had a 7 oz. That was our small and a 10 oz, which was the large coffee. And now, if you go to a coffee shop, most smalls are larger than the large that we had at the time.
+
+And I don't claim any great foresight in the you know, back then in the coffee market. I remember my wife came back Starbucks Chicago was the first city outside of the uh Northwest that they'd opened in. And my wife, who's a coffee, you know, addict, came back and said she went to this great store. They had coffee and that was pretty much all they served, but it was great coffee and great service and everything. And I just pooh-poohed the whole thing. I was like, oh, a store that just serves coffee, yeah. How long's that going to last?
+</details>
+
+**>>**: [笑声]
+<details><summary>Original English</summary>
+**>>**: [laughter]
+</details>
+
+**>>**: 结果我自己后来开了 20 家咖啡店。
+<details><summary>Original English</summary>
+**>>**: And then I end up opening 20 coffee shops.
+</details>
+
+**>>**: 当时经营那种类型的咖啡店，最具挑战性的方面是什么？
+<details><summary>Original English</summary>
+**>>**: And what was the most challenging aspect of running that type of coffee shop business at the time?
+</details>
+
+**>>**: 顺便问一下，我们说的是哪几年？
+<details><summary>Original English</summary>
+**>>**: By the way, what years are we talking about?
+</details>
+
+**>>**: 哦，我是 1982 年毕业的，所以我是 1981 年开始干这个的。所以，是的，我想星巴克大概是在 80 年代中叶来到芝加哥的，86 年，也可能是 87 年左右。所以在那时，买咖啡依然是买 5 磅一袋的，然后用勺子舀出来；如果到了 6 月底停课放假你还没用完，那些咖啡豆放在一旁，你就直接装进容器里，等到 9 月份继续用。我是说，[笑声] 这种做法在如今会被咖啡爱好者毙了的。所以那纯粹就是……它就是一种热腾腾的棕色饮料，仅此而已。
+<details><summary>Original English</summary>
+**>>**: Oh, I graduated in '82, so I started this in 1981. So, yeah, the very I think Starbucks might have come to Chicago of mid-80s, '86, maybe '87, somewhere around in there. So, this was still you bought the coffee, you bought it in 5-lb bags, and you scooped it out, and that coffee could be sitting around if you didn't use it at the end of June when classes closed, you just put it in a container and use it in September. I mean, [laughter] that kind of things that would get you get you shot by a coffee lover these days. So, it was just a it was a hot brown beverage, is what it was.
+</details>
+
+**>>**: 那当时最大的挑战是什么？最困难的是什么？
+<details><summary>Original English</summary>
+**>>**: And the biggest challenge at that time, what was hardest?
+</details>
+
+**>>**: 对我来说最难的是，我是在完全不知道自己在干什么的情况下开始创业的。如果要我向别人提建议的话，我会建议：先去给别人打工，把业务摸清楚，让他们为你的错误买单。我当时有点太执着于非要为自己工作了。
+
+开了店之后，几乎把所有可能犯的错误都犯了一遍。因为根本没有任何参考依据。我没有同行可以请教，我所做的一切都只是边走边摸索。
+<details><summary>Original English</summary>
+**>>**: Well, the hardest for me is that I had started this business with absolutely no idea what I was doing. If I were to ever, you know, to counsel someone about this, I'd go work for someone else, learn the business, and have them pay for your mistakes. Um I was a little too insistent on working for myself at that time.
+
+Opened the business, and literally made every mistake you possibly could. Cuz there was you know, I had no reference that. I had no no peers to go to, no I was just making everything up as I went along.
+</details>
+
+**>>**: 我们想听听犯了哪些错误。
+<details><summary>Original English</summary>
+**>>**: hear some mistakes.
+</details>
+
+**>>**: 是啊。哦，我签过很糟糕的租约。我是说，天呐。
+
+招聘人员，我认为这可能是招人方面最重要的事情。花了很长时间才真正明白怎样为业务去招聘合适的人，而不是因为你喜欢某个人就去招他，诸如此类。所以人员问题可能是我克服的最大难题。我的意思是，现在你去读商学院，招聘和面试技巧等等这些都是课堂上会教的。而这些东西以前根本不教。我们那时候……
+
+回到刚才关于学校的问题，以及现在和过去的差异：当年 MBA 项目——我仅代表芝加哥大学的角度来说——是一个非常严苛的项目，非常非常注重学术。几乎没有或完全不强调任何商业软技能，比如公开演讲、面试人员等等诸如此类的东西。完全没有，全都是大课堂里的学术演练。而他们现在已经完全摆脱了那种模式。
+
+他们现在的教学体系是一个非常全面的培养方案，旨在培养能够真正运营企业的人才。而且他们拥有完整的配套生态，来支持那些做搜寻基金的人，支持那些通过收购来进行创业（ETA）的人。所以整体氛围已经截然不同了。
+
+如果你在 15 年前——也就是在我开始大量与这些创业初创公司合作之前——问我，我的看法可能会是：商业成功 80% 归功于商业点子。
+
+但现在我会把这种看法彻底颠倒过来：我认为点子只占 20%，团队、所处环境以及你的支持网络才是关键。这些才是让事情取得成功的因素，而不是点子本身。我宁可……
+
+而且举个极好的例子，如果回头谈谈 Home Chef。当初 Pat 找我的时候，我觉得那是一个糟糕透顶的主意：你看，预制净菜包（meal kit），在网上买食物然后寄送过去。这太荒谬了。但我绝对喜欢这个年轻人，事实证明这是成功的。我是说，他在创立那家公司的过程中经历了一段极其辉煌的历程。
+<details><summary>Original English</summary>
+**>>**: Yeah. Oh, I've I've got into bad leases. I I mean, oh boy.
+
+Hiring people, I think that was probably the biggest thing with with with hiring people. It took a long time to really figure out really figure out how to hire people for the business, not hire them because you like them. That kind of thing. So, personnel was probably the biggest problem I overcame. And I mean, now you go to business school and hiring and interviewing skills and things these are they're taught in the school. And and these things were never taught. Ours were
+
+uh going back to the the school question, and you know, the differences between now and then,
+
+back then, the MBA program, and I only speak from the University of Chicago's uh viewpoint, it was uh it was a very rigorous program, very very academic focused. There was little or there was no emphasis on any of the sort of soft skills of business, public speaking, interviewing people, things like this. There was there it was all it was just a a large classroom exercise. And they have completely gotten off of that. Their their program now,
+
+you know, it's a a very holistic approach to educating someone to run a business. And they have this entire environment to support people who are doing the search funds, who are doing the our entrepreneurship through acquisition. So, it's a very very different atmosphere.
+
+And if you were to ask me 15 years ago before I started working a lot with these entrepreneurial startup companies, you know, my take would be, oh, it's the success is it's 80% it's it's the business idea.
+
+And I would flip that on the head now and I would say it's 20% in the idea, it is the team, and it's the your environment and your support network. Those are the things that make it successful, you know, not the business I I'd rather
+
+and and a great example, you know, if we get back we talk about Home Chef. When I was approached by Pat, I thought it was a a horrible idea, you know, you a meal kit, you're going to buy food online and they're going to ship it. It's ridiculous. But I absolutely love this young man and it worked out. I mean, he had an incredibly successful run you know, starting that company.
+</details>
+
+**>>**: [音乐]
+<details><summary>Original English</summary>
+**>>**: [music]
+</details>
+
+### 从公园弃地到高端餐厅 North Pond
+
+**>>**: Tracy 在开场介绍中提到了你历年来的各种尝试。你何不向我们大致概括一下你的业务版图，以及历年来的具体布局，然后我们可以深入探讨这些内容。你的……
+<details><summary>Original English</summary>
+**>>**: Tracy in the introduction mentioned various endeavors that you've had over time. Why don't you give us the sort of broad overview of your like footprint, the various then we can like dive into these things. Your
+</details>
+
+**>>**: 投资组合。
+<details><summary>Original English</summary>
+**>>**: portfolio.
+</details>
+
+**>>**: 好的，好的。
+<details><summary>Original English</summary>
+**>>**: Okay, okay.
+</details>
+
+**>>**: 你历年来的商业组合，方便我们展开讨论。
+<details><summary>Original English</summary>
+**>>**: Your portfolio of businesses over time that so that we could that we could talk about.
+</details>
+
+**>>**: 我起步于咖啡店业务，多年来不断扩张，我们完全面向高校教学楼开设小型咖啡店，拥有 23 家门店的规模，为 5 所大学提供服务。遗憾的是，从餐饮服务市场的整体趋势来看，我们当时可以说是逆流而上。那时候正是大学全面推行综合外包合同模式的开端。高校开始找 Aramark 和 Compass 这样的巨头公司签约，而且不仅仅是签下咖啡店，而是签下全包合同：“你们要负责我们的洗衣项目，要运营我们的学生食堂，要运行我们的校车项目，要管理我们的……”
+<details><summary>Original English</summary>
+**>>**: So, I started the coffee shop business and grew that over the years and we're dealing exclusively with academic locations for small coffee shops and we had portfolio of 23 shops and we had five universities that we worked for. Unfortunately, we were sort of swimming upstream in terms of the, you know, the food service market. That was about the the beginning of the sort of comprehensive contract model with the universities. So, they were going to companies like Aramark and Compass and not signing them just to do the, you know, coffee shop. They're signing them, you're going to run our laundry program, you're going to run our cafeterias, you're going to run our our bus program, you're going to run our
+</details>
+
+**>>**: 是的，大包大揽什么都管。
+<details><summary>Original English</summary>
+**>>**: Yeah, you're going to you're going to run everything and we were just a tiny little, you know, niche company. So, eventually we sort of got swallowed up by that.
+</details>
+
+**>>**: 你们负责所有事情，而我们只是一家微不足道的小众利基公司。所以我们最终在某种程度上被那股浪潮吞没了。
+
+但我们是从咖啡店公司起步的。那是一门季节性极强的生意。因此，我们一直在寻找能平衡 9 月到次年 5 月学期旺季波动的业务，于是开始与芝加哥公园管理局（Chicago Park District）合作，经营了一批特许经营摊位之类的设施。接着在一连串机缘巧合之下，获得了一个场地的竞标机会，那是位于林肯公园（Lincoln Park）、自然博物馆旁边的旧暖房（warming house）。
+
+我的意思是，现在有朋友问我：“哎，你怎么拿到那个合同的？你在市政厅有人脉吗？”我说：“没有，在当时——现在那里是林肯公园最美丽的地方之一，但在当时，那是公园里一个非常被遗忘的荒僻角落。那里是流浪汉的聚居地，周边经常有卖淫活动。他们当时还没整治那个池塘，池塘看起来就像个郊区排水沟。所以真的算不上什么抢手项目，我们之所以拿到合同，基本上是因为没有别人去竞标。”
+
+于是我们开了一家精致餐饮（fine dining）餐厅。这有助于平衡业务——它同样也是极具季节性的生意，但季节性和咖啡店恰好相反。所以二者形成了很好的协同效应。
+
+此外，为了利用咖啡店拓展业务范围并分摊部分设施成本，我们还成立了一家餐饮宴会公司（catering company）和一家自动售货机公司，并负责运营这些业务。
+
+后来作为一种业余爱好，在过去 20 年左右的时间里，我还投资了八九家其他初创企业。纯粹是因为朋友或熟人创业，我投点钱或者做个合伙人等等，但这真的纯粹就是个爱好。
+<details><summary>Original English</summary>
+**>>**: But started with a coffee shop company. That's a that's a very seasonal business. So, we were looking for something to balance the, you know, September to May season, started doing work with the Chicago Park District and it ran a bunch of uh concessions and things like that. And just through weird set of circumstances had the opportunity to bid on a facility with it was the old warming house out in Lincoln Park by the Nature Museum.
+
+And I mean, I've had friends ask me now like, oh, how'd you get that contract? You know someone in city hall and stuff. I was like, no, at the at the at the time, now it's just one of the most beautiful places in Lincoln Park, but at the time, it was a very neglected corner of the park. It was a homeless hangout. There was a lot of prostitution going on in the area. They had not redone the the the pond actually looked like a a drain a suburban drainage ditch at the at the point. So, it really wasn't much of a we got the contract basically cuz no one else bid on it.
+
+So, opened up a fine dining restaurant and that helped balance that's a very seasonal business, too, but the opposite season from the coffee shop. So, there was a nice like synergy on on there.
+
+And then also with the coffee shops to sort of broaden our our region take advantage of some of our facilities, we opened a catering company and a vending company and ran those. And then just as as a hobby, I invested in you know, over the year of the 20 years or so invested in eight or nine other startup businesses. Just you know, friends or an associate starting a business and I'd invest or you know, be a partner or whatever, but it really was just a just a hobby.
+</details>
+
+**>>**: 运营一堆学生咖啡馆、大学咖啡馆，与经营 North Pond 这样的精致餐饮餐厅相比，商业模式和经济特征有什么不同？
+<details><summary>Original English</summary>
+**>>**: What are the difference in economics between running, you know, a bunch of student coffee shops, university coffee shops versus a fine dining restaurant like North Pond?
+</details>
+
+**>>**: 噢，截然不同，完全可以说属于两个完全不同的行业。
+
+高端精致餐饮有这么几个特点：首先，它是高度由主厨驱动的。我们在那里经营了 30 年，总共历经了四位主厨。我们最新的主厨才刚刚上任。前三任主厨全部上过《Food & Wine》杂志的封面，赢过詹姆斯·比尔德奖（James Beard Awards）等。在很大程度上，这是一种名厨文化。没有人会因为在报纸上看到我的照片或名字而跑来餐厅用餐。如果你去查我们的公关宣传，你在谷歌上搜我和这家餐厅，很难找到二者之间有任何公开联系。我们的理念始终是宣传餐厅本身和主厨。
+
+唯一一个会因为我是餐厅老板而光顾的人只有我妈妈，而她早就知道店是我的了。所以完全没必要在公关宣传中提我。因此，这是高度依赖公关声誉的业务。
+
+而且餐厅的受欢迎程度存在很大的不确定性和变数。如果打个比方——谢天谢地我们已经开了 30 年了——但在餐饮界，衡量餐厅寿命用的是“狗年”，而不是人年。我们开了接近 30 年，这对一家餐厅来说太少见了。大多数餐厅，尤其是独立的精致餐饮餐厅，你真的必须把它们看作是一出百老汇戏剧：演出三年，然后就谢幕关门了。偶尔会有一家像 Katz's 这样的店能开上 20 年，但那非常非常罕见。
+
+所以受欢迎程度截然不同。我们在《芝加哥》（Chicago）杂志上拿到一篇好评，接下来整整一个月就会天天订满。
+
+至于校园咖啡店业务，纯粹就是客流量的问题。周二楼里有 400 名学生，我们就能迎来 300 人次光顾；周五只有 200 名学生，我们就会迎来 120 人次光顾。我的意思是，你只要看看课程表，我就能几乎分毫不差地告诉你我们的营业额会是多少。因为咖啡店更像是一种公用事业基础设施，而精致餐饮则是一种奢侈享受。去精致餐饮是因为你要过生日，因为你有特定的活动要庆祝；而去咖啡馆，纯粹是为了填饱肚子。
+<details><summary>Original English</summary>
+**>>**: Oh, completely there I mean you might as well be completely different industries, too.
+
+The fine dining a couple things. The first, it's very chef driven. We've been there 30 years, we've had four chefs. Our newest chef just started. The last three chefs have all been on the cover of Food & Wine, won James Beard Awards, etc. Have all a lot of it is sort of a a celebrity chef culture. Nobody would see my picture or my name in the in the paper and go to the restaurant because of that. And if you look at our PR, you know, you you Google me and the restaurant and you're hard-pressed to find any connection between the two. The idea was always to promote the restaurant, you know, the restaurant and the and the chef.
+
+The only one who was ever going to go to the restaurant because I owned it with my mom and she already knew I owned it. So, there was no sense putting that out in the in the PR. So, it's a very publicity based
+
+and there's a lot of sort of vagaries in the the popularity of restaurants. The analogy and knock on wood we've been 30 been there 30 years, but in restaurants you you measure restaurant lifespans in dog years, not you know, people years. We've been there, oh, yeah, close to 30 years and that's so so unusual for a restaurant. Most particularly fine dining independent restaurants, you really have to look at them as as like a Broadway play. You know, they're there for 3 years and they're you know, then they're gone. Every now and then there's a Katz that's there for 20 years, but that that is very very unusual.
+
+So, the popularity uh very different. We we would get a good review in Chicago magazine and the place would be booked solid for a month.
+
+Uh now, the coffee shop business, it's really just a matter of of traffic. There's 400 students in the building on Tuesday and we get 300 visits. Then there's 200 students on on Friday and we get 120 visits. I mean, you can really kind of just take a look at the class schedule and I can tell you almost exactly what our sales are going to be um cuz it's it's more of a utility where the fine dining that that's that's a luxury. You're going out for your birthday, you're going out you're you're going out for an event. Whereas the coffee shops, you're going to feed yourself.
+</details>
+
+### 从农场到餐桌与主厨迭代
+
+**>>**: 既然我们聊到了 1980 年代的咖啡馆与如今那些庞杂花哨的咖啡馆之间的差异，另一件让我对能维持这么长时间的高端餐厅感到震惊的事是：大众的口味在发生变化。如果我们把你们开业当天的菜单和现在的菜单放在一起对比，哪些保留了下来，哪些改变了？你们是如何调整菜单并保持跟上潮流的？
+<details><summary>Original English</summary>
+**>>**: Since we talked about the difference between coffee shops in the 1980s versus the uh monstrosities that exist in coffee shops today, another thing that just strikes me about uh fine dining restaurant that lasts as long as yours is like tastes change and so forth with people on If we had the menu from the opening day versus now, what's stayed the same and what's different and how do you evolve a menu and how do you maintain stay on trend?
+</details>
+
+**>>**: 我在努力回忆 1980 年代的经典菜式。像马贝拉烤鸡（Chicken Marbella）之类的？或者基辅鸡（Chicken Kiev）？这类菜？
+<details><summary>Original English</summary>
+**>>**: I'm trying to think of like a classic 1980s dish. Like chicken Marbella or something? Chicken Kiev? Something like that?
+</details>
+
+**>>**: 我们是在 1997 年开业的。
+<details><summary>Original English</summary>
+**>>**: when we we opened the restaurant in 1997.
+</details>
+
+**>>**: 好吧，那你当时菜单上大概有青酱（pesto）吧。不，那是我想到 90 年代中期菜肴时脑海里浮现的东西。
+<details><summary>Original English</summary>
+**>>**: Okay. So, you probably had pesto. No, that's what that's what I think of when I think of mid-90s food.
+</details>
+
+**>>**: 我们刚开店的时候，是向芝加哥公园管理局租赁的场地。当时芝加哥公园管理局的思维定式，就是跟那些推着劣质热狗推车、还偷斤少两的特许商打交道。
+
+所以拿着一整套方案跑去跟他们说：“嘿，我们想在你们公园里开一家精致餐饮餐厅，而且我们想申请酒牌销售酒水。”这完全超出了他们的理解范畴。光是拿到许可就耗费了大约两年半的时间，接着又花了一年左右进行装修改造。因为就像我说的，我们拿到了公园内部的第一张酒牌。即便如此，他们当时对我们依然抱有相当大的怀疑。我们不被允许设立酒吧吧台，还必须开设一个外带窗口。我是说，这些要求跟开一家精致餐饮餐厅完全是水火不容的。所以刚开业的时候，我们把它叫作 Northpond Cafe，定位稍显随性。
+
+与公园管理局合作了几年后，他们迎来了一位新的局长，公园管委会主席也是一位非常有前瞻性思维的人。他们逐渐认可了我们所做的事情，于是批准我们对建筑物进行扩建改造，增加了前厅，增设了酒吧吧台，开始把我们当作一家真正的高端精致餐饮餐厅来看待。
+
+那大约也是我们第二任主厨上任的时候。我们的第二任主厨是一个极其出色的年轻人。具有讽刺意味的是，他曾在沃顿商学院主修金融，后来决定不进金融界。
+<details><summary>Original English</summary>
+**>>**: When we first opened it up, we were leasing the building from the Chicago Park District. Now, the Chicago Park District, their paradigm was working with concessionaires who run crappy hot dog carts that steal from us.
+
+So, to go to them with this whole plan of hey, we want to do a fine dining restaurant in your in the park and we want to get a liquor license. Just completely over their heads. It it took a total of about 2 and 1/2 years just to get the permission and then about another year to build the place out. Cuz like I said, we we had the first liquor license that was in the in the park. And even then, they looked at us with quite a deal of skepticism. Uh we were not allowed to have a bar. We had to have a takeout window. I mean, things that were just absolutely incompatible with doing a fine dining restaurant. So, when we first opened it up, we called it Northpond Cafe and it was a little more casual.
+
+After a couple years with the Park District and they also had the new superintendent and the president of the park board were two very forward-thinking individuals. And they kind of recognized what we're doing. So, they gave us permission to remodel the building, add the front room, add a bar, and and started treating us like a like a fine dining restaurant.
+
+And that was about the time our second chef started. And our second chef, absolutely brilliant young man. He had been, ironically enough, he had been a finance major at Wharton and decided not to go into into finance.
+</details>
+
+**>>**: 志同道合的人。
+<details><summary>Original English</summary>
+**>>**: Kindred spirit.
+</details>
+
+**>>**: 是的。而且他是你能遇到的最聪明、最有天赋的主厨之一。
+
+在当时，我们决定把餐厅的核心聚焦在如今大家称之为“从农场到餐桌”（farm-to-table）的概念上。我是说，那个词汇在当年甚至还不存在。我之前去过加州，拜访过 Alice Waters 的餐厅，非常喜欢那里。在林肯公园这种公园环境里，采用那种菜单和餐饮理念似乎能产生强烈的共鸣。
+
+我们对那栋建筑进行了翻建。它原本只是一个非常平淡无奇、几乎像工棚一样的简陋棚屋。我们把它改造成了工艺美术运动（Arts and Crafts）的草原风格建筑。这似乎非常契合我们对食物手作匠心的理念，也符合这栋建筑的历史年代和所处位置。所以我们真正开启了当时所谓的“可持续餐饮”，也就是现在人们常说的农场到餐桌。而在那个年代，大多数人根本不知道该怎么理解它。我们的招牌副标题写着“North Pond 季节性美式餐饮”（North Pond seasonal American dining）。
+
+经常有人打电话来问：“你们什么季节营业啊？”
+
+我们在菜单上开始列出供货农场主的名字，客人们会问：“这个叫 Mickey Clog 的家伙是谁？Mickey Clog 梨又是个什么东西？”诸如此类。
+
+所以，看到如今这一整个运动蓬勃发展，真的让人心里感到温暖。
+<details><summary>Original English</summary>
+**>>**: Yeah. And one of the smartest, most talented chefs you're ever going to you're ever going to run into.
+
+And back then, we decided that the focus for the restaurant was going to be on what now we would would call farm-to-table. I mean, that phrase didn't exist. I had been in California and had visited Alice Waters restaurant. Absolutely loved the place. And it just seemed to resonate that a menu and an approach to food like that in Lincoln Park, you know, just given the the park-like setting.
+
+And we had built the building out. It had been a very workmanlike, just shed almost. We had built it out in the Arts and Crafts Prairie style. Seemed to be, you know, to fit with sort of our idea of the craft approach to food and also the vintage and heritage and location of the building. So, we really started what we called a sustainable dining, but we started what you'd call farm-to-table now. And at the time it was most people didn't kind of know what to do with it. I mean, we would get our sign the tagline in our sign was North Pond seasonal American dining.
+
+And we would get people that would call like, you know, oh, what season are you open?
+
+We started doing on the menu we started listing farmers and people were like, who's this Mickey Clog guy? And what what's a Mickey Clog pear, you know? That kind of thing.
+
+So, that is actually it's really warming to see, you know, how that whole movement has taken off.
+</details>
+
+**>>**: 确实。
+<details><summary>Original English</summary>
+**>>**: Oh, yeah.
+</details>
+
+**>>**: 而且在当时，我们的主厨对这个理念的接纳程度甚至比我最初提议的还要深。他真正全情投入其中，极深地参与到这项运动里。他曾担任慢食协会（Slow Food）的理事，是绿城集市（Green City Market）的联合创始人之一。这起到了极大的帮助，因为我们现在拥有一个由近 100 家本地小型手作农场主和生产者组成的供应网络，包括渔民、奶酪制作者等等。而在当年，这样的供应链网络根本不存在。
+
+这些人可不是爱荷华州拥有 1,200 英亩玉米地、传承了三代的农场主。这位往往是从西北大学社会学系博士项目退学，跑到威斯康星州北部种植有机甜菜的人。
+
+所以这是一个非常有意思的转变运动，也带动了整个农业领域的转型。虽然它在整体农业中仍然只占极小的份额，但当年这些小农户几乎是不存在的。
+
+而我们的主厨曾在法国受训。因此，最初的主题是非常经典的法式烹饪技法结合可持续餐饮的理念。
+
+他在我们这里干了二十多年。在 2019 年 12 月离职，说到这，可真是挑了个好时机。
+<details><summary>Original English</summary>
+**>>**: And at the time, I mean, our our chef was really embraced this even more so than than I had originally proposed. Really embraced it, became very involved in this movement. He was on the, you know, the slow food board. He was one of the founders of the Green City Market. Really helped cuz now we we have we have a network now of close to 100 small local craft farmers and and producers, you know, fishers and cheesemongers and stuff like that. And at the time, that supply network didn't exist.
+
+And these are not the 1,200 acres of corn third generation farmer in Iowa. This is the the guy who got kicked out of the PhD program at North with sociology department at Northwestern and now is farming organic beets in upstate, you know, upstate Wisconsin.
+
+So, it's a really interesting movement, you know, in the whole you know, I'm shifting the whole agricultural industry too. I mean, it's it's still a very tiny part of it, but these farmers pretty much didn't exist.
+
+And our And our chef had He had trained in France. So, the theme originally was a very classic French preparation with this theme of sustainable dining.
+
+And he was with us for 20-something years. Uh left Talk about, you know, good timing. He left in December of '19.
+</details>
+
+**>>**: 呵。
+<details><summary>Original English</summary>
+**>>**: Huh.
+</details>
+
+**>>**: 当时刚出现有人对着蛋花汤咳嗽的苗头，两个月后全世界就停摆封控了。我们聘请的第三任主厨是一个年轻得多的人，具有更多的国际化视野。
+
+过去四五年来，菜单风格变得更加多元融合、更加国际化，不再那么局限于传统法式风格。依然是精致餐饮，但切入角度已经大不相同。
+<details><summary>Original English</summary>
+**>>**: And when there was one guy coughing into his egg drop soup, you know, and 2 months later the whole world shuts down. The third chef we hired is much more of a a younger guy, much more of an international approach.
+
+And the menu for the the last 4 or 5 years has been much more eclectic, much more international, and not as sort of classically French. So, fine dining, but a very a very different take on it.
+</details>
+
+### 高端餐饮的经济学真相与非理性竞争
+
+**>>**: 我想问一个非常直接的问题：高端餐厅的利润率究竟是怎样的？
+<details><summary>Original English</summary>
+**>>**: I'm going to ask a very direct question, but what are the profit margins actually like for a higher-end restaurant?
+</details>
+
+**>>**: 我觉得本周的天气应该会非常不错。
+<details><summary>Original English</summary>
+**>>**: the I think the weather's going to be really good this week.
+</details>
+
+**>>**: [笑声]
+<details><summary>Original English</summary>
+**>>**: [laughter]
+</details>
+
+**>>**: 不是，但我……
+<details><summary>Original English</summary>
+**>>**: No, but like
+</details>
+
+**>>**: 你肯定……
+<details><summary>Original English</summary>
+**>>**: You would
+</details>
+
+**>>**: 我听到了各种截然相反的说法。很多人会说：“千万别开餐厅，因为永远不赚钱。”但随后你又看到纽约那些人气极高爆满的餐厅，顾客支付着令人咋舌的昂贵价格，每晚座无虚席，你难免会觉得他们肯定很赚钱，否则谁会干这个呢？
+<details><summary>Original English</summary>
+**>>**: I get these different senses. So, a lot of people will say like, "Oh, never start a restaurant cuz it never makes money." But then you see these restaurants that are incredibly popular in New York, and people are paying insane prices, and they're all full every night, and you think they must be making money, otherwise no one would do this.
+</details>
+
+**>>**: 从经济回报的角度来看，餐饮业是你能涉足的最糟糕的行业之一。我是说，单从纯商业逻辑来看——我指的是独立的、尤其是高端精致餐饮行业——这是你能进入的最差的行业之一。原因有这么几点：
+
+第一，竞争极其激烈。它没有任何准入门槛，任何人都可以开餐厅。
+
+此外，大量涌入餐饮业的人，往往是那些无法进入金融圈或银行业的人。很多极具才华、极其勤劳的人，比如极其聪明的初代移民，他们没去读过沃顿商学院；但他们聪明有才、吃苦耐劳，就可以去开一家餐厅。所以竞争非常残酷，缺乏护城河，你很难围绕自己的业务构筑壁垒，没有任何技术是具有排他专利性的。
+
+你做出了最新款的可颂甜甜圈组合……
+<details><summary>Original English</summary>
+**>>**: On an economic basis, the restaurant business is one of the worst businesses to ever get in. I mean, just the base economic I'm talking about the independent, particularly fine dining. It's one of the worst industries to ever ever get into. And a couple things.
+
+The first is it's it's hypercompetitive. There's There's no barriers to entry. Anybody can get into it.
+
+It's also there's a lot of entry into the restaurant business from people who don't have access a lot, you know, talented, hard-working people, but who don't have access to the finance uh world or the banking world. You know, someone who's really smart, who's a first-generation immigrant, did not go to, you know, Wharton. And, you know, they're smart, talented, hardworking guy, you can go start a restaurant. So, it's very, very competitive, no barriers to entry, very difficult to build a moat around your business. There's nothing you can do that's proprietary.
+
+You come up with the you know, the latest croissant donut mashup, and
+</details>
+
+**>>**: 然后全世界的店都跟风做出来了。
+<details><summary>Original English</summary>
+**>>**: And everyone has it around the world.
+</details>
+
+**>>**: 大家都照抄了。
+
+最后一点是，如果你一心打算守法经营，你的运营成本就会比所有竞争对手高出 5% 到 10%。也就是说，如果你严格遵守劳动法、移民法、加班法等法规，你相对于行业其他从业者就处于严重的成本劣势。
+
+餐饮行业确实经历了一定程度的整顿清算，但它过去一直是一个薪资克扣、滥用加班等现象极其泛滥的行业。
+
+如果你观察过去四五年间行业的变迁，其中一部分始于类似“Me Too”运动的反思。你去问任何一个在餐饮行业工作过的女性，无论她是前厅还是后厨，是厨师、服务员还是调酒师，我敢保证只要她在这一行干过六个月，就能跟你讲出在这个行业里遭遇骚扰的可怕经历。如今这种情况终于——我绝不敢说彻底消除——但涉事人员终于开始被问责了，你可以看到很多知名大厨因此被解雇。这是一件好事。
+
+违反各项劳动法的情况也是如此。这在很大程度上是因为这个行业充斥着大量非法移民，而这些人是雇主可以肆意盘剥却不受追究的对象，因为他们绝不会跑去劳工委员会投诉。
+
+关于餐饮业为什么难做，最后一点是：当你的竞争对手进入这个行业不是出于经济目的时，你在商业上绝不会想要涉足这门生意。这就像投资体育俱乐部一样。你花 120 亿美元买下道奇队，绝不是因为你看中它充沛的现金流。你花那笔钱是因为你是个亿万富翁，你有着巨大的虚荣心，这是一场击鼓传花的游戏，你希望五年后能把这支球队以更高的估值转手卖给下一个人。
+
+很多人是在其他领域赚了大钱。如果你是一名医生，赚了数百万美元，想找点有趣的事情做，你绝不会琢磨：“哦，我要去买一家汽车拖车维修公司。”
+<details><summary>Original English</summary>
+**>>**: it down.
+
+And then the the last thing is that if you are intent on obeying the law, you're going to operate at a 5, 10% deficit to all your competitors. So, if you're going to pay attention to labor laws, uh immigration laws, overtime laws, things like that, you are operating at a serious deficit to you know, the rest of the field.
+
+And there there has been a little bit of a a reckoning in in in the industry, but it was an industry that uh wage theft, overtime abuse, things like that, were just absolutely rampant.
+
+There has been if you're looking at sort of changes in this business in the last four or five years, there has been And some of it started with sort of the the Me Too movement. You talk to any woman who's ever been in the restaurant business, and I don't care whether she's a front of the house, back of the house, cook, waitress, bartender, whatever, I guarantee you that if she's been in the business for 6 months, she's got horror stories to tell you about, you know, harassment in in the industry. And that is finally I never say it's eliminated, but people are starting to get you know, held to account for that, and you see a lot of high-profile chefs who are getting bounced out of their jobs. And so, that's a good thing. And the same thing with the abuse of all the the the labor laws. And a lot of it was uh predicated on it was an industry that was filled with a lot of illegal immigrants, and these are people that you can abuse and not get called for it cuz they're not going to go to the labor board and complain.
+
+Oh, and then the the final thing about why the restaurant business is tough, you never want to be in a business for economic reasons when you are competing with people who are in there for non-economic reasons. It's the same it would be the equivalent of uh sports franchises. You don't spend 12 billion dollars to buy the Dodgers because you think they have great cash flow. You're spending that money cuz you you're a billionaire and you got huge ego and it's a game of like hot potato. In 5 years, you want to sell that franchise to someone else and the value has gone up.
+
+But there's a lot of people who made money in other fields. And because you like if you're if you're a doctor and you've you're you've made millions of dollars and you're looking for something fun to do, you would never think like, oh, I'm going to go buy uh an an auto uh towing business.
+</details>
+
+**>>**: 是的，因为你对拖车一无所知。
+<details><summary>Original English</summary>
+**>>**: No, cuz you don't know anything about towings.
+</details>
+
+**>>**: 没错。但每个人都觉得，纯粹因为自己平时经常下馆子、在外出就餐时有自己的喜好，就觉得自己能够开餐厅，或者能够开创食品企业。就像“我妈妈做出了世界上最棒的巧克力曲奇食谱，所以我应该开一家巧克力曲奇饼干公司”。
+
+这两者差距极大。人们还有这样一种幻想：我跟朋友聊天，他们脑海中的画面是周六晚上我晃晃悠悠走进餐厅，在吧台边坐着，跟朋友打招呼，请大家喝酒，自己在吧台尽头小酌一杯，然后优哉游哉回家。然而现实恰恰相反。在餐饮业摸爬滚打，意味着周日清晨六点你得亲自去疏通下水道。那才是真实的餐饮业。所以外界普遍抱有一种幻想，觉得它光鲜亮丽、很酷、很有趣。是的，确实可能会有那一星半点的成分，但那只占这门生意微乎其微的一小部分。
+<details><summary>Original English</summary>
+**>>**: You right. But everyone uh everyone thinks that one, you know, just cuz they dine out and have preferences when they dine out, they think they can run a restaurant. A uh or or start up a food business. My my mother's got the greatest you know, chocolate chip cookie recipe, therefore I should have a chocolate chip cookie company.
+
+So it's very different. And also people have this idea I I talked to friends and their their idea is that I go in on Saturday night, I hang out at the bar, greet friends, buy people drinks, have a drink at the end of the bar myself, and then go home. And that's the exact opposite. Running the in the restaurant business is 6:00 on a Sunday morning unclogging the drain. That's the restaurant business. So there's a lot of sort of ideas that it is somehow, you know, glamorous and cool and fun and yeah, there can be parts of that, but that's a pretty small part of the business.
+</details>
+
+**>>**: 这有点像每个人都觉得自己能开餐厅，就好比每个人都觉得自己能做播客一样，因为每个人都有观点。他们心想：“我很有见解，我也能做。”
+<details><summary>Original English</summary>
+**>>**: It's sort of the like of everyone's thinking they could run a restaurant. It's like everyone thinks they could do a podcast cuz they have opinions. They're like, I have takes. I can do that.
+</details>
+
+**>>**: 这个比喻很贴切。
+<details><summary>Original English</summary>
+**>>**: That's a good analogy.
+</details>
+
+**>>**: 人人都能做播客，只是他们做出来的水平可能不怎么样。
+<details><summary>Original English</summary>
+**>>**: Everyone can do a podcast. It's just they might not be very good.
+</details>
+
+**>>**: 没错。他们会觉得：“哦，这看起来很简单嘛，我动动嘴皮子就行。”
+<details><summary>Original English</summary>
+**>>**: Right. Right. They're like, oh, that seems easy. I can run my mouth. You
+</details>
+
+**>>**: 所有这些事实的最好证据，就是统计数据，在这方面有非常详尽的统计。沃顿商学院有很好的统计数据，美国小企业管理局（SBA）也有很好的统计数据。餐饮业的失败率高得吓人。
+<details><summary>Original English</summary>
+**>>**: And and the the the proof of all this is and there's very good statistics on it. Wharton has great statistics. The SBA has great statistics. The failure rate for restaurants is abysmal.
+</details>
+
+**>>**: 是的。
+<details><summary>Original English</summary>
+**>>**: Yeah.
+</details>
+
+**>>**: 我看到的统计数据显示，作为整体，独立精致餐饮行业的综合投资回报率是负数。诚然，确实有人大获成功、赚得盆满钵满；但在餐饮界，每出一个像 Rich Melman 这样赚大钱的巨头，背后就有另外 40 个人是你根本连名字都没听过的，因为他们的餐厅关门大吉，如今他们只能灰溜溜回去继续当牙医，或者干回之前的老本行。
+<details><summary>Original English</summary>
+**>>**: And the figures that I have seen are for the independent fine dining restaurant that as a whole that industry has a negative return. So, yes, there are people who hit it big, make lots of money, and there are for every Rich Melman that's out there that's making, you know, boatloads of money in the in the restaurant business, there's 40 other guys you don't know their names because their restaurant closed and now they're back to being a dentist or whatever they did before.
+</details>
+
+**>>**: [音乐]
+<details><summary>Original English</summary>
+**>>**: [music]
+</details>
+
+### 菜单设计、酒水依赖与代际消费变迁
+
+**>>**: 姑且不谈你们的具体利润率究竟是多少……
+<details><summary>Original English</summary>
+**>>**: Without going into exactly what your profit margins are
+</details>
+
+**>>**: 噢，关于……
+<details><summary>Original English</summary>
+**>>**: Oh, on the
+</details>
+
+**>>**: 但或许你可以谈谈菜单设计的理论。因为外界经常有这种说法，比如“开餐厅全靠酒水赚钱”之类的。
+<details><summary>Original English</summary>
+**>>**: but like maybe you could talk about like theory of menu design cuz there there are these um things that people say, oh, you only make your money on wine or something like that or whatever.
+</details>
+
+**>>**: 这话确实有道理。
+<details><summary>Original English</summary>
+**>>**: There's truth to that.
+</details>
+
+**>>**: 你们构建菜单的具体逻辑是怎样的？设计菜单的核心原则是什么，其中的利润究竟来自菜单的哪些部分？
+<details><summary>Original English</summary>
+**>>**: What is like the sort of like you construct a menu? What are the principles of menu constructing and where do the profits come from on that menu?
+</details>
+
+**>>**: 我们先退一步来看。疫情之后整个餐饮行业的利润率大概严重处于负值区间。你知道，行业经历了大体上人人都在亏损的整整三年，而且即便到了复苏期，状况也并不尽如人意。
+
+但就盈利能力、菜单品类搭配等方面而言，过去二三十年间最大的巨变之一眼下正在发生。
+
+你刚才提到餐厅靠葡萄酒赚钱，这完全是事实。我们提供的是固定价格套餐（prix-fixe），五道菜收费 130 美元。
+
+在周六晚上，厨房和糕点部门有九到十名员工全力备餐。同时还有前厅服务员、助理服务员和传菜员为你提供桌面服务。所有这些人力投入，对应的是这份 130 美元的晚餐。而当你坐在那里用餐时，点了一瓶葡萄酒——我们平均一瓶葡萄酒的价格约为 110 美元。你向我们点一瓶酒，服务员只需要花两分钟走到酒窖，把它拿出来，打开，端到你的餐桌上。那瓶酒的利润率与菜肴的利润率相差无几，却几乎没有任何相关的后厨加工成本。
+
+然而，目前让每一位餐厅经营者都感到极度神经紧张的一点是——我可以用我们自己的数据来作为例证：
+
+我们开店将近 30 年。在最初的 28 年里，我们的酒水销售额——我们店里基本只卖葡萄酒——葡萄酒销售额占总收入的比重一直略高于 33%。几乎每年都像钟表一样精准地维持在 33% 到 34% 之间。
+
+然而在过去的 18 个月里，这一比例已经暴跌至 24%。
+
+这是一件天大的事情，因为那蒸发的 8% 是我们所有销售中利润率最高的业务。
+
+大家就是不再像以前那样饮酒了，尤其是年轻一代的顾客。
+<details><summary>Original English</summary>
+**>>**: Well, let's step back just one second. Is the profit margin for restaurants post pandemic is probably seriously negative. You know, you had 3 years where pretty much everybody lost money, and even the recovery hasn't been been very good.
+
+But in terms of profitability, menu mix, and things like that, there's one of the biggest sea changes in the last like 23 20 30 years is happening right now.
+
+And uh your statement about restaurants making money on wine is absolutely true. We do a pre-fix menu and it's $130, five courses.
+
+And I've got on a Saturday night, I've got nine to 10 guys in the kitchen and the pastry department who are preparing that meal. And we've got waiters, back waiters, and busboys, you know, serving the table. And that's for that $130 dinner. You're sitting at that dinner, now you order our average bottle of wine is about $110. You order a bottle of wine from us, it takes the waiter two minutes to walk over the wine cellar, bring it back, open it, and put it on your table. And the profitability margin on that wine is about the same as as the the food with none of the almost none of the associated costs.
+
+Now, the thing that is kind of got every restaurant tour nervous as hell, and I'll use some, you know, our figures as an example.
+
+We've been in business almost 30 years. For the first 28 years, our liquor wine sales, and we're almost exclusively wine. Our wine sales were just a hair over 33%. So, between 33 to 34% every year like clockwork.
+
+In the last 18 months, that has dropped to 24%.
+
+That is a huge deal because that that 8% was the most profitable sales that we did.
+
+And people just are not drinking like they used to, particularly our younger guests.
+</details>
+
+**>>**: 我正打算问，这就是我们常听到的代际观念转变吗？
+<details><summary>Original English</summary>
+**>>**: I was going to ask is this the generational shift that we hear about?
+</details>
+
+**>>**: 完全是这样。我是说，其中一部分原因纯粹是出于健康考量大家不再喝酒了。另外很大一部分原因在于，整个大麻和 CBD 行业正在崛起，你已经开始看到这些成分进入餐饮菜单。比如今年 Lollapalooza 音乐节就首次推出了含四氢大麻酚（THC）的玛格丽特鸡尾酒。所以你开始看到这类东西出现在菜单上。
+
+我们已经向公园管理局提交了申请，希望在菜单中引入这些饮品，目前尚未获得批准。我们刚刚推出了一套无酒精鸡尾酒菜单。
+
+但大众不喝酒这个事实，对于绝大多数餐厅来说是一个极其棘手的问题。
+<details><summary>Original English</summary>
+**>>**: Absolutely. I mean, some of it is just people, you know, for health they're not drinking. A lot of it also is that people are, you know, there's there's an entire industry, you know, the cannabis CBD industry out there and and you're just starting to see that work into menus with uh Lollapalooza this year for the first year had THC margaritas. So, you're starting to see, you know, things like this uh show up on menus.
+
+We've got a proposal with the park district to add them to our menu. We haven't been approved for it yet. We just put in a a non-alcoholic cocktail menu.
+
+But it it the fact that people aren't drinking is a really big problem for most most restaurants.
+</details>
+
+**>>**: 你看到 GLP-1 类减肥药物带来的冲击了吗？
+<details><summary>Original English</summary>
+**>>**: Do you see any impact from GLP-1s?
+</details>
+
+**>>**: 没有看到特别明确的直接影响，因为很难将它与其他宏观大趋势区分开来。我敢肯定它确实在产生影响。我是说，现在全美有大概 20% 的人在用 GLP-1 吧？具体数字我记不清了，但比例确实相当可观。我实在难以想象，如果你正在使用 GLP-1 药物，你还会愿意跑进来吃上一套五道菜的大餐，吃完再享用我们制作的精美甜品，最后还要喝上一杯波特酒。这听起来有点不太现实。
+<details><summary>Original English</summary>
+**>>**: Not specifically because it's hard to identify that versus more, you know, global, you know, other other sort of mega trends. I'm sure it is is is affecting. I mean, what's it like? 20% of the country's on GLP or I I don't I don't remember the the the number now, but it's a pretty significant amount. And I just can't imagine that you're on a GLP and you want to come in and have five courses and then finish that with these incredible desserts we make and and then also have a, you know, a glass of port. It seems a little
+</details>
+
+**>>**: 也许融入 CBD 的糕点类产品还有发展空间呢，我个人会挺感兴趣的。
+<details><summary>Original English</summary>
+**>>**: Maybe there's still room for a CBD-infused pastry of some sort. I'd be interested.
+</details>
+
+**>>**: 嗯，加入 THC 的——
+<details><summary>Original English</summary>
+**>>**: Well, it's a THC-infused
+</details>
+
+**>>**: 玛格丽特，对。
+<details><summary>Original English</summary>
+**>>**: Margaritas, yeah.
+</details>
+
+**>>**: 哈哈，那会让人们胃口大开、吃得更多。
+<details><summary>Original English</summary>
+**>>**: Well, that gets people eating more.
+</details>
+
+### 通胀环境下的成本压力与定价机制
+
+**>>**: 是啊。那可能会形成正向的正反馈飞轮。好吧，现在是 2026 年 10 月。你能否给我们描绘一下目前的概况，比如你在劳动力供应、食品采购成本等方面观察到的情况？也就是构成餐饮运营的那些基本经济指标。
+<details><summary>Original English</summary>
+**>>**: Yeah. So, that might that might create a positive flywheel. All right, it's October 2026 right now. Would you give us like a little snapshot of what you're seeing in terms of labor availability, food costs, like the sort of like basic like economic measures that would go into it?
+</details>
+
+**>>**: 餐饮业以及你提到的那两项核心要素，所遭受的通胀和资源短缺冲击大概超过了其他任何行业。人工成本已经变得极其夸张。我们现在给初级厨师支付的起薪，比三四年前高出了大约 30%。
+<details><summary>Original English</summary>
+**>>**: The restaurant business and those two particular items have been hit with inflation and scarcity probably more than any other industry. Labor has gotten crazy. We pay about 30% more for starting cooks than we did, you know, 3 4 years ago.
+</details>
+
+**>>**: 呵。
+<details><summary>Original English</summary>
+**>>**: Huh.
+</details>
+
+**>>**: 食品原料成本更是直接飙升到了天花板。你知道，它是整个经济体中通胀率最高的板块之一。
+
+尽管我们受到的冲击没有其他某些餐厅那么严重，因为我们拥有一整套本土小农户和供应商网络，在一定程度上与全球宏观经济波动相脱离。所以当我们采购来自威斯康星州 Joe 农场的有机朝鲜蓟时，这位农户的成本底盘并不会直接受到关税政策或……的影响。
+<details><summary>Original English</summary>
+**>>**: And food costs have just gone through the roof. You know, it's one of the highest you know, highest inflation sectors in the in the economy.
+
+Although we have not had as much of an effect as some other restaurants have had because we have a whole network of suppliers and farmers that to some extent are isolated from the global economy. So, when we're dealing with Joe's organic artichokes from Wisconsin, this man's his cost basis is not being affected by tariffs or uh
+</details>
+
+**>>**: 霍尔木兹海峡局势。
+<details><summary>Original English</summary>
+**>>**: Strait of Hormuz.
+</details>
+
+**>>**: 是的，不受霍尔木兹海峡局势影响，通常也不那么受柴油燃料价格波动的影响。
+
+但这个行业的整体通胀确实令人咋舌。而且在我们的营业收入和采购成本之间没有任何缓冲滞后可言。餐盘里端出的每一件食材，都是我们当周采购回来的。因此只要一发生通胀，我们立刻就能在账面上感受到。我们在过去两年里涨了四次价格，大概每六个月调价一次；而在过去，我们通常是一年才统筹调整一次价格，除非遇到某些特定配额供应的特殊产品，尤其是名庄葡萄酒配额等。但一般来说，以前我们每年审查一次价格；在通胀只有 1% 到 2% 的经济环境下，这根本不是什么大问题。然而当整体面临 3% 到 3.5% 的通胀，而餐饮食品领域的通胀达到 7% 时，你必须对价格保持高度敏锐。
+
+这确实非常艰难。我的意思是，如果你和伴侣一起来 North Pond 享用晚餐，选配了葡萄酒搭餐，两个人一共得花 400 美元。你必须付出极大的努力，才能让顾客觉得在你这里花上 400 美元是物有所值的。所以这逼得我们在各项细节以及接待客人的方式上全面精进业务水准。
+
+这种演变导致的结果是：顾客来 North Pond 吃饭不再是因为肚子饿了，他们来这里是为了体验。
+
+不过我们也观察到一种趋势：来店里的客人中，有越来越高的比例是为了庆祝人生中极为特殊的重大时刻——25 周年结婚纪念日、50 岁大寿、大学毕业典礼等等。我们不再经常看到“嘿，今天是周四晚上，咱们去吃顿好的犒劳一下自己吧”这种日常光顾了。它越来越变成一种纯粹的仪式性活动。
+<details><summary>Original English</summary>
+**>>**: Yeah, Strait of Hormuz or generally, you know, not as affected by things like diesel costs and things like that.
+
+But, the inflation in this industry has been has been incredible. And there's no sort of lag between our sales and our costs. You know, everything that we put on the plate, we bought that week. So, when there's inflation, we see it immediately. We've raised prices four times in the last 2 years, about every 6 months, which we used to sort of balance it out and do it once, you know, once once a year, unless there was a a specific item that might have particularly wine that was on allocation or something like that. But, generally, the prices would would like once a year we'd review it and you know, 1 2% inflation uh economy, that's not a big deal. But, when you have a 3% 3.5% inflation and then 7% inflation in the food business, you really had to stay stay on top of that. And it's it's tough. I mean, going out if you and your partner come out to North Pond for dinner and you have the wine pairing, it's going to be $400 for the two of you. And it's you have to do a lot to justify someone to spend $400 with you. So, it really has forced us to kind of up our game in terms of the things that we do and uh how we treat our guests and
+
+what it has become is um you know, people don't go don't dine at North Pond because they're hungry, they dine because they want the experience.
+
+But, we have seen a little bit of a trend where we're getting more and a higher percentage of our guests are coming in for very special events in their lives, the 25th anniversary, the 50th birthday, the graduated from college, that kind of thing. We don't get as many, "Hey, it's Thursday night. Let's treat ourselves to a really nice meal." It's becoming much more of an uh an event.
+</details>
+
+### 共享厨房模式：Spark Shared Kitchen 与重资产门槛
+
+**>>**: 我想问问关于你的另一项新事业——Spark Shared Kitchen。共享厨房（shared kitchen）和幽灵厨房（ghost kitchen）到底有什么区别？
+<details><summary>Original English</summary>
+**>>**: So, I wanted to ask about your other venture now, which is the the Spark Shared Kitchen. What's the difference between a shared kitchen and a ghost kitchen?
+</details>
+
+**>>**: 好吧。呃……
+<details><summary>Original English</summary>
+**>>**: Okay. Um
+</details>
+
+**>>**: 只是换个说法重新包装吗？
+<details><summary>Original English</summary>
+**>>**: just rebranding?
+</details>
+
+**>>**: 存在一些微妙的差异。共同点在于，它们都是由多家供应商共同使用、通常归第三方所有的厨房物业设施。
+
+幽灵厨房通常是指某个品牌——不管是 Popeyes 炸鸡还是 Joe's Italian Subs——在集中化场所内开设的仅供外卖的小型档口。它的所有设计都是为了极高效率地与 DoorDash 和 Uber Eats 这种外卖配送平台对接。所以它本质上是服务于外卖配送公司的。
+
+而共享厨房模式则有所不同。在共享厨房里，我们搭建好厨房设施，供各类餐饮从业者经营自己的食品业务。
+
+我们最大的客户群体是外烩餐饮承包商（caterers）。如果你经营一家小型餐饮宴会公司，你可以进驻并租用一个厨房。我们提供两种租赁方式：我们有几间设备齐全的共享厨房，你可以按小时计费租用。比如你经营“Tracy's Granola”燕麦坚果碎品牌……
+<details><summary>Original English</summary>
+**>>**: It's uh some subtle changes. The similarity is that they're both kitchen facilities that are used by multiple vendors and typically owned by a third party.
+
+Ghost kitchens are typically thought of as someone has a brand, whether it's Popeyes Chicken or Joe's Italian Subs, and you open a small takeout only location, and it's in a central facility. It's all set up for very easy delivery to the DoorDashes and the Uber Eats of the world. So, it's really for food delivery companies.
+
+Now, the shared kitchen model's a little different. In there, we build out kitchens that people can use for food businesses.
+
+The biggest uh use of them we have is by caterers. So, you have a small catering company, you can come in, and you can run a kitchen. And we have two types of rentals, too. We have a couple fully equipped kitchens. You can come in and rent by the hour. So, if you have a um you know, you have Tracy's granola, and
+</details>
+
+**>>**: 不，我不做燕麦碎。
+<details><summary>Original English</summary>
+**>>**: No, not granola.
+</details>
+
+**>>**: 好吧，那换别的。你会做什么？Tracy，你的特色会是什么？
+<details><summary>Original English</summary>
+**>>**: Yeah. What would be something else? What would you make? What would be your thing, Tracy?
+</details>
+
+**>>**: 回应 Richard 刚才的观点，我大概会做曲奇饼干，因为我先生确实拥有全世界最棒的曲奇食谱。
+<details><summary>Original English</summary>
+**>>**: To Richard's point earlier, I'd probably make cookies, cuz my husband does have the best cookie recipe in the world.
+</details>
+
+**>>**: 如果你想创办曲奇饼干业务，你就可以过来租用我们的厨房。你可能每周只需要用 5 个小时的厨房。你过来租用我们的厨房进行批量生产，你也可以向我们租用一些仓储空间，但你只需要为这 5 个小时向我们支付租金。
+
+另外，我们还提供独立专属厨房租赁：你可以过来长租一间厨房，我们有一些 400 平方英尺的小型空间，也有大到 1,600 平方英尺的。你可以租下那间厨房，享有 24 小时全天候出入权限，配有专属钥匙，里面的一切都是你的。我们为你提供厨房基础硬装，包括抽油烟排风罩、洗涤水槽、专用地面防水、地漏等所有基础设施。你只需要自带你自己的专业设备进驻即可。
+
+这种模式的优势在于：如果你自己单独去外面开一家曲奇饼干店，你必须去寻找并租赁一个带有合法资质的合规场地。
+
+你可能会花上好几个月四处搜寻。房东通常要求签订至少 3 到 5 年的长期租约，你还得缴纳押金，还要走完一整套牌照审批流程。起码得耗费你六个月时间。而共享厨房的绝妙之处在于：你基本上只需要承担原材料采购成本和一张牌照的费用就可以开张做生意。至于牌照，你直接去市政厅申请一张共享厨房使用者牌照（shared kitchen user license），周一去办，当天就能拿到，因为我们本身持有共享厨房运营者牌照。你周一拿到牌照，周二就能正式开门营业。所以这是激发创业活力的一种绝佳途径，也是芝加哥这座城市在过去 5 到 10 年里做得比较出色的举措之一。
+<details><summary>Original English</summary>
+**>>**: You want to start a cookie business, you come in, you rent our kitchen. Uh you only need a kitchen maybe 5 hours a week. You come in, you rent our kitchen, you make your production, you can rent some storage space to us, but you're only paying us for those 5 hours.
+
+You We also have kitchens where you can come in, and you can rent this kitchen, and we've got some small ones that are 400 ft, and they go up to 1,600 ft. You can rent that kitchen. You have access to it 24/7. You've got your own key. Everything in there is yours. And we provide you with a kitchen and the kitchen has the very basics, the hood, the sinks, the flooring, the floor drains, all that stuff. You just have to bring in all all your equipment.
+
+Now, the advantage of that is if you were to go out and open a cookie store, you'd have to go rent a rent a licensed facility.
+
+And, you know, you could spend months looking for that. Landlords typically want a 3 to 5-year minimum rent. Then you're going to have to put a deposit down. You're going to have to go through the whole licensing process. Minimum, it's going to take you 6 months to do it. The great thing about shared kitchens is you can come in and you can open basically for the price of your ingredients and the license. And the license, you can go down to city hall, you get a shared kitchen user license, and you get that on Monday and you can come, cuz we have a shared kitchen operator license. You get the license on Monday and on Tuesday you can be in business. So, it is a great way to encourage entrepreneurship. It's one of the the better things this city has has done over the last like 5 10 years.
+</details>
+
+**>>**: 你知道这让我想起了什么吗，Tracy？
+<details><summary>Original English</summary>
+**>>**: You know what it reminds me of, Tracy?
+</details>
+
+**>>**: 嗯？
+<details><summary>Original English</summary>
+**>>**: Hm?
+</details>
+
+**>>**: 芒特艾里（Mount Airy）的共享日托托儿所空间。你想想看，一个想从事托儿行业的创业者，他们的本意是想照顾好孩子，但他们难道愿意把大把时间花在琢磨合规审批、建筑规范等琐事上吗？所以，让另一个专业机构来包揽所有这些基础合规落地事务，然后创业者就可以专注于做好他们真正热爱的核心业务。
+
+所以，跟我们聊聊这门生意的经济学模型，或者说规模化扩张的过程，招募租户入驻厨房有多容易？
+<details><summary>Original English</summary>
+**>>**: The uh shared child care space in Mount Airy. Where because if you think of like a child care entrepreneur and like, okay, they want to take care of children, but do they want to spend their time thinking about, you know, licensing and like the building codes, etc. So, let another entity just sort of do all the sort of blocking and tackling with like all of that and then just like do the actual business that you uh like.
+
+So, talk to us a little bit of I guess like the economics of that business or like scaling that up or how easy is has it been to get uh tenants into the kitchens?
+</details>
+
+**>>**: 招募租户其实非常容易。这项业务最大的问题在于：它是一个极度资本密集型的重资产行业。搭建合规的商用餐厅厨房，除了建造医院病房之外，按每平方英尺成本计算，大概是你所能做的最昂贵的建设工程了。
+
+但站在用户端来看，它的经济账又是极具吸引力的。给你举个例子：我们有一处 800 平方英尺的小型独立空间，刚刚拿到了营业执照。
+
+这个空间没有安装排风烟罩，是专门为特定需求打造的——之前有三个人找到我，说他们打算创办冰淇淋初创企业。
+
+我们便出资完成了这个场地的施工改造，同样因为没有装烟罩，它的造价没有大多数标准厨房那么昂贵。我们刚刚为它订购了一台价值 2.6 万美元的 5 加仑工业级冰淇淋机。这几位创业者中，有一位打算做特色拉美风味冰淇淋，另一位做亚洲风味冰淇淋。
+
+你一天之内就可以走进来生产出 200 加仑的冰淇淋，放进深度冷冻库里保存。算上你的原料成本，向我们支付大概 1,000 美元左右的费用。而如果靠你自己单打独斗，在没有一整套合规生产设施的情况下，几乎是不可能做到的。你必须自己掏钱去买那台 2 万多美元的专业冰淇淋机；或者买一台 5,000 美元、容量只有 1 加仑的小机器，一天只能做 10 加仑，而不是一天做 50 或 100 加仑。所以这种共享经济模型极具吸引力。凡是前期资本投入高昂、而单个创业者每周可能只需要使用两小时、四小时、六小时或八小时的场景，只要你能聚集三四个乃至更多的人共享使用、形成规模效应，它的效率就是极其惊人的。更不用提所有相关的隐性成本——审批牌照、房产税、找场地的搜寻成本等等。
+
+所以共享厨房确实是推动城市微观经济发展的一个绝佳引擎。
+<details><summary>Original English</summary>
+**>>**: Uh it's been very easy getting tenants. The biggest problem with it, it's a very capital-intensive business. Uh building restaurant kitchens, you know, short of building hospital rooms, they're about the most expensive on a square foot basis thing you can do.
+
+But the economics are so compelling on the other end. Give you one example. We have a small 800 sq ft facility, and we just got it licensed.
+
+And it doesn't have a hood on it. It was made for I had three people approach me. They were going to start ice cream businesses.
+
+We went out, built this facility out, and again doesn't have a hood, so it wasn't as expensive as most kitchens. And we just ordered a $26,000 5-gallon industrial ice cream machine for it. Now, these people who are, you know, doing it one's doing a specialty Hispanic-themed ice cream, and another's doing one with Asian, you know, flavored ice creams.
+
+You can come in in a day, and you can make, you know, 200 gallons of ice cream, put them in the deep freeze. Plus your ingredients, you spend $1,000 with us or something along those lines. Where it would be almost impossible to do that on your own without a complete facility. And you'd have to go buy that $20,000 ice cream machine. Or you'd buy a $5,000 ice cream machine that has 1-gallon capacity, and you can make 10 gallons in a day versus making 50 or 100 gallons in a day. So, the economics are very compelling. If anytime you've got a lot of capital costs, and an individual would use them, you know, two, four, six, eight hours a week, and you can get the scale of having three, four, whatever number of people using them, it's incredibly efficient. And all the the associated costs with it, the licensing, the, you know, the property taxes, the search costs to find a facility.
+
+So, the shared kitchens are it's a great little engine for the the city's economy.
+</details>
+
+**>>**: 顺便快速问一句，理论上它们可以用作幽灵厨房吗？比如有人能不能用来做全套的外卖配送？
+<details><summary>Original English</summary>
+**>>**: Just real quickly, could they theoretically be used as ghost kitchens? Like could someone do all the delivery?
+</details>
+
+**>>**: 好，幽灵厨房与共享厨房的另一个区别在于：幽灵厨房往往面积更小，且位于地段价值高得多的优质核心地段，因为它们需要覆盖 5 分钟外卖半径。比如我住在芝加哥南环区（South Loop），在我们南边大概 3 分钟车程的第 22 街与 Wabash 大道交口就有一家幽灵厨房。他们能在 5 分钟内把外卖送达整个南环区，而南环区居住了 8 万人口。
+
+我们的物业位于布莱顿公园区（Brighton Park）。那是一栋 60,000 平方英尺的工业厂房仓库，位置大概在前往中途机场（Midway Airport）的三分之二路程处。除非你正好在去机场的路上，或者在去机场路上迷路了，否则你根本不会意识到我们在一个重工业厂区里。那里完全无法做幽灵厨房外卖，因为周边根本没有足够密集的公寓楼和居民人口。所以这也是一个核心差异——选址。按每平方英尺价值计算，我们物业的单价大概只有幽灵厨房核心地段物业的三分之一左右。
+<details><summary>Original English</summary>
+**>>**: Okay. The other difference between ghost and shared kitchens, ghost kitchens typically tend to be smaller and in much more desirable real estate cuz they need to be within five like there's one I live in the South Loop. There's one about three minutes south of us 22nd and 22nd and Wabash. Now they can get to the whole South Loop in you know in five minutes and there's 80,000 people living in the South Loop.
+
+Our facility is in Brighton Park. It's a 60,000 square foot warehouse and we're you know 2/3 of the way to Midway Airport and unless you were on the way to the got lost on the way to the airport you'd never realize we're in an industrial area. You could never run a ghost kitchen. There's just not the density of apartments and and residence. So that's that's another one just the the the location. Our building is on a square foot basis is probably a third of the value of what their buildings are.
+</details>
+
+### 市政监管、官僚繁文缛节与创业分工
+
+**>>**: 你刚才提到了共享厨房的牌照审批。我感觉每次我们跟餐饮从业者聊天，与市政当局打交道和应对政府监管似乎总是大家吐槽抱怨的重灾区。是的，共同的创伤记忆。多年来这种情况有所改变吗？这种繁文缛节有改善吗？
+<details><summary>Original English</summary>
+**>>**: You mentioned licensing for the shared kitchen and I feel like whenever we talk to restaurant sharers dealing with the city and regulations always seems to be some form of complaint. Has it changed over the Yeah, trauma. Shared trauma. Has it changed over the years? Has it gotten better the sort of red tape issue?
+</details>
+
+**>>**: 绝对有所改善。
+
+当拉姆·伊曼纽尔（Rahm Emanuel）担任芝加哥市长时，我注意到了实质性的变化。以前大家常开玩笑说，所有办理牌照的八楼其实是“说不部门”（Department of No）。我是说，那些官僚过去简直是变着法儿千方百计找理由驳回你、对你说“绝不可能”，办下一张牌照是一项极其折磨人、令人不堪重负的苦差事。
+
+现在虽然还谈不上真正高效，但已经好太多了。可以说评价从以前的 D- 提高到了现在的 B-。
+
+总体而言，现在你去市政厅，工作人员是在真心实意地设法帮你把业务开办起来。虽然牌照办理过程中依然存在不少含糊多变、令人摸不着头脑的要求。
+
+但当你与他们沟通合作时，整体基调明显更加支持包容，他们是在努力协助你促成企业开业。
+<details><summary>Original English</summary>
+**>>**: Absolutely.
+
+Um
+
+I noticed some real changes when Rahm was mayor. I mean the joke was that eighth floor which is where the all the licensing is eighth floor was the Department of no. I mean they would just go out of their way to find out find reasons to tell you you know no and way and it was just an ungodly burdensome task getting a license.
+
+It is much much better now but it is still not a real efficient process. So it went from a D- now now it's a now it's a a B-
+
+but generally when you go to City Hall now they are trying to help you you know open that business. So there's still a lot of little vagaries in the license thing and things like that.
+
+But the tone when you talk to people and you work with them they're generally much more supportive and they They trying to help get your business open.
+</details>
+
+**>>**: 好的，Richard。非常感谢你做客《Odd Lots》节目。能听到你的真知灼见，我们感到非常荣幸。
+<details><summary>Original English</summary>
+**>>**: All right, Richard. Thank you so much for coming on All Thoughts. Really appreciate getting
+</details>
+
+**>>**: [音乐]
+<details><summary>Original English</summary>
+**>>**: [music]
+</details>
+
+**>>**: 听到你的独到视角。
+<details><summary>Original English</summary>
+**>>**: getting your perspective.
+</details>
+
+**>>**: 很高兴来到这里，聊得很尽兴，非常感谢。
+<details><summary>Original English</summary>
+**>>**: Oh, glad to be here. Glad it was very enjoyable. Thank you.
+</details>
+
+**>>**: [音乐]
+<details><summary>Original English</summary>
+**>>**: [music]
+</details>
+
+### 节目复盘与商业启示
+
+**>>**: Joe，刚才的对话真的太有意思了。
+<details><summary>Original English</summary>
+**>>**: Joe, that was really enjoyable.
+</details>
+
+**>>**: 确实太精彩了。
+<details><summary>Original English</summary>
+**>>**: That was so fun.
+</details>
+
+**>>**: 他关于餐饮是一个高度竞争行业的那些评论——虽然这显而易见，但构筑竞争护城河极其困难这一事实，尤其是考虑到很多当下热门打卡餐厅的爆红往往转瞬即逝，对吧？
+<details><summary>Original English</summary>
+**>>**: I thought the comments about restaurants being a competitive industry, I mean, kind of obvious, but this idea that it's very hard to draw a moat around your business, especially when popularity tends to be fleeting for a lot of the new hot spots, right?
+</details>
+
+**>>**: 没错。而且还有一个事实，虽然也是摆在明面上的，但我之前还真没深入思考过：这个行业里充斥着大量纯粹所谓的“出于对游戏本身的热爱”而入局的人。
+<details><summary>Original English</summary>
+**>>**: Yeah, and the fact, and I guess it's obvious, but I hadn't thought of it, that there are just a lot of people in it, I guess, quote, for the love of the game, unquote.
+</details>
+
+**>>**: 是的，是的。
+<details><summary>Original English</summary>
+**>>**: Yeah, yeah.
+</details>
+
+**>>**: 他们入局并不是为了……
+<details><summary>Original English</summary>
+**>>**: Who are not in it because like
+</details>
+
+**>>**: 玩的不是同一场金钱游戏，对吧？因为他们根本不在乎我能不能盈利。
+<details><summary>Original English</summary>
+**>>**: in the same game, right? Cuz they don't care about me doing well.
+</details>
+
+**>>**: 对，你想想比如某些职业运动员之类的人，他们想要拥有自己的社交俱乐部会所，或者搞一些面子工程性质的项目，心里想着：“反正我亏得起钱。”跟这样的人竞争是极其艰难的。当然还有一点：如果你想严格守法，你就很难保持成本竞争力。我认为这是一个非常严肃的问题。事实就是，如果你严肃对待移民法、规范执行加班补偿等所有法规，如果你真打算规规矩矩办事，你实际上会极大地恶化你自身的经济财务状况。
+<details><summary>Original English</summary>
+**>>**: Yes, you figure like some, you know, athlete or something like that, for example, and people want to have their it's kind of like their clubhouse or something like that, or some of these vanity vanity endeavors, where it's like, "Oh, I'm okay losing money." That's very hard to compete against. And then, of course, the idea, and you know, that it's hard to be competitive if you want to follow the law, which I think is a really big deal, and the fact that like if you're like serious about like, you know, immigration law and all these things, and all proper overtime and all of these things that like if you take these seriously, if you want to do it well, you're really putting you're really worsening your economics.
+</details>
+
+**>>**: 是的。另外，共享厨房的概念也很有意思，因为基本上大家把前期初期投资的所有资本、租赁场地的成本等打包聚集起来，所有人都能从中受益，而不需要每个人自己去租下并装配一整间独立厨房。正如你所说，这跟芒特艾里的那个日托案例非常相似。
+<details><summary>Original English</summary>
+**>>**: Yeah. Also, the shared kitchen idea is an interesting one, because you basically I I guess you pool together all the capital for that initial investment and the cost of the lease and stuff like that, and then everyone can benefit from it, rather than having to go out and purchase their own kitchen. Like you said, it's very similar to the Mount Airy example.
+</details>
+
+**>>**: 确实。比如你想打造自己的曲奇饼干商业帝国……
+<details><summary>Original English</summary>
+**>>**: Totally. Like if you wanted to start your cookie uh empire.
+</details>
+
+**>>**: 郑重声明，我真要做的话大概会做比曲奇饼干更有挑战性的东西，不过我先生的曲奇配方确实惊为天人，而且在我们社区里也是极具轰动话题性的存在。
+<details><summary>Original English</summary>
+**>>**: I would probably do something better than cookies, for the record, but my husband's cookie recipe is phenomenal and also a source of great drama in our community.
+</details>
+
+**>>**: 既然你拥有绝妙的曲奇配方，你何必把时间浪费在各种乱七八糟的琐事上呢，比如审批牌照、卫生检查员核验等，这些事情跟你的曲奇配方到底好不好吃根本毫无干系。
+<details><summary>Original English</summary>
+**>>**: And if you have a great cookie recipe, why do you want to spend your time on random things like licenses and the health inspectors and all that stuff that has nothing to do with whether your cookie recipe is good.
+</details>
+
+**>>**: 确实如此。我认为这类商业模式锁定了核心痛点……
+<details><summary>Original English</summary>
+**>>**: For real. No, I I think these those types of businesses where you like identify, I mean,
+</details>
+
+**>>**: 而且另一方面在于……
+<details><summary>Original English</summary>
+**>>**: Well, the other thing is
+</details>
+
+**>>**: 另一面在于，正如 Richard 刚才所说，对比沃顿商学院毕业生与非沃顿商学院毕业生：一个人的竞争优势可能纯粹在于他是一名极为优秀的厨师，或者对风味有着极其敏锐的直觉；而他在物色商业地产、签署租约、筹集资本等所有其他方面可能一窍不通。换句话说，他可能根本做不来 Excel 表格。因此，如果你能把这些环节进行社会化专业分工……
+<details><summary>Original English</summary>
+**>>**: the other thing is like to Richard's point earlier about, you know, like a Wharton grad versus a non-Wharton grad, one person's competitive advantage might be they're just a really good chef or they just have a really good feel for flavors and actually they suck at maybe identifying residential real estate, signing leases, sourcing capital, and all those other things. Like they suck at Excel basically. And so if you can divide some of that up,
+</details>
+
+**>>**: 是的，是的。
+<details><summary>Original English</summary>
+**>>**: Yeah, yeah.
+</details>
+
+**>>**: 这看起来确实是一个非常有吸引力的价值主张。
+<details><summary>Original English</summary>
+**>>**: seems like an interesting proposition.
+</details>
+
+**>>**: 是的，包含的信息量太大了。现在回想起来，我们其实应该做一期关于商学院到底教什么的专题节目。因为老实说，我根本不知道现在的商学院究竟教些什么。听听现在的教学内容以及它历年来的演变，本身就超级有意思。我们本来完全可以花很长时间跟他探讨这些商学院是如何演变成教人如何创业的孵化器，而不再仅仅是培养去花旗银行做中台办公人员的管道。这期内容实在太丰富了。就像我说的那样，我们本来可以跟他聊上好几个小时的。
+<details><summary>Original English</summary>
+**>>**: No, there's so much in there. Now that I think about it, we should do an episode on what you learn in business school. Cuz actually I have no idea, like really what you learn in business school. And hearing what what you learn and how that's evolved over time, that's super interesting right there. We could have talked for a long time just about the emergence of all these places that become like they teach you how to be an entrepreneur rather than just sort of get, you know, go into middle office at Citigroup or something. There was just a lot in there. Like I said, we could have talked for hours with him.
+</details>
+
+**>>**: 确实如此。今天咱们就先聊到这里吧？
+<details><summary>Original English</summary>
+**>>**: Absolutely. Shall we leave it there for now?
+</details>
+
+**>>**: 好的，今天就先到这里。
+<details><summary>Original English</summary>
+**>>**: Let's leave it there.
+</details>
+
+**>>**: 好的。以上就是本期《Odd Lots》播客节目的全部内容。我是 Tracy Alloway。大家可以在 Twitter 上关注我，账号是 Tracy Alloway。
+<details><summary>Original English</summary>
+**>>**: Okay. This has been another episode of the Odd Lots podcast. I'm Tracy Alloway. You can follow me at Tracy Alloway.
+</details>
+
+**>>**: 我是 Joe Weisenthal。大家可以关注我的账号 the Stalwart。也请关注我们的制作人：Carmen Rodriguez（账号 Carmen Arman）、Bennett（账号 Bennett at Dashbot）、Keil Brooks（账号 Keil Brooks）以及 Kevin Lozano（账号 Kevin Lloyd Lozano）。获取更多《Odd Lots》的精彩内容，欢迎访问 bloomberg.com/odd-lots 阅读每日简报并收听我们所有的往期节目。大家也可以随时加入我们的 Discord 社群，全天候 24 小时讨论所有相关话题。
+<details><summary>Original English</summary>
+**>>**: And I'm Joe Weisenthal. You can follow me at the Stalwart. Follow our producers Carmen Rodriguez at Carmen Arman Dash at Bennett at Dashbot, Keil Brooks at Keil Brooks, and Kevin Lozano at Kevin Lloyd Lozano. And for more Odd Lots content, go to bloomberg.com/odd lots for the daily newsletter and all of our episodes. And you can chat about all these topics 24/7 in our Discord,
+</details>
+
+**>>**: 如果你喜欢这次对话，
+<details><summary>Original English</summary>
+**>>**: And if you enjoyed this conversation,
+</details>
+
+**>>**: [音乐]
+
+如果你喜欢我们与实体经济实际从业者的交流访谈，请在你常用的播客平台上给我们留下好评。[音乐] 另外请记住，如果你是彭博的订阅读者，你可以完全免广告收听我们的所有节目。[音乐] 你只需在 Apple Podcasts 上找到 Bloomberg 频道，按照那里的说明操作即可。感谢大家的收听。
+<details><summary>Original English</summary>
+**>>**: [music]
+
+if you like it when we talk to practitioners of actual business, then please leave us a positive review on your favorite podcast platform. [music] And remember, if you are a Bloomberg subscriber, you can listen to all of our episodes [music] absolutely ad-free. All you need to do is find the Bloomberg channel on Apple Podcasts and follow the instructions there. Thanks for listening.
+</details>
+
+**>>**: [音乐]
+
+[歌声]
+
+[音乐]
+<details><summary>Original English</summary>
+**>>**: [music]
+
+[singing]
+
+[music]
+</details>

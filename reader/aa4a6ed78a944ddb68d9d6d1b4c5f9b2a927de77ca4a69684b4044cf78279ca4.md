@@ -1,0 +1,1540 @@
+---
+author: 北美王路飞
+date: '2026-10-17'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=J8jjo1zhLYY
+speaker: 北美王路飞
+tags:
+  - us-midterm-elections
+  - senate-races
+  - campaign-finance
+  - voter-behavior
+  - political-polarization
+title: 复盘美国中期选举关键战场：四大参议院席位争夺与政治撕裂
+summary: 本期播客由主持人 Bruce 与拥有丰富地方竞选经验的商学院教授 Ron Placone 共同探讨美国中期选举格局。重点深入分析了德克萨斯、密歇根、阿拉斯加与缅因四个核心参议院战场的选情动态、巨额资金与全国性议题对地方选举的侵蚀，以及选民对现任政府经济、关税政策与候选人道德水准的真实反应。
+insight: ''
+draft: true
+series: ''
+category: politics-society
+area: society-thinking
+project: []
+people: []
+companies_orgs: []
+products_models: []
+media_books: []
+status: evergreen
+---
+### 竞选经历与地方选举全国化
+
+**Bruce**: 好的，大家好，欢迎收听今天的播客。今天我们做一期全英文的节目。我正在和 **Ron Placone** 教授一起录制。实际上我之前和你一起录过大概两期播客了，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: All right. Hi everyone. Uh welcome to today's podcast. I'm gonna have an English one. I'm uh recording with uh Professor Ron Pakun. Uh I actually had done previously about two podcasts with you together. Right.
+
+</details>
+
+**Ron Placone**: 没错。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: That's correct.
+
+</details>
+
+**Bruce**: 是的，Ron 是一位在商学院教授沟通学的教授，而且他对**美国大选**非常了解。我想你曾经参与过一些地方选举，对吧？你是竞选策略师还是？
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. So uh Ron is a professor teaching communication in ter business school and uh he's very actually very knowledgeable about the US election. I think you participate in some local elections, right? you were a strategist or
+
+</details>
+
+**Ron Placone**: 是的，我操盘过几次州级竞选。那已经是好些年前的事了，当时我还很年轻。这本身就是年轻人的游戏，不过我确实积累了相当多竞选一线的经验。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Yes, I ran a couple of uh state campaigns. Uh yeah, it's been several years ago. I was quite young at the time. It's a young person's game, but yeah, I do have a lot of uh campaign experience.
+
+</details>
+
+**Bruce**: 那你当时是担任策略顾问，还是主要负责其他方面？
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Are you are you the strategist or you you kind of
+
+</details>
+
+**Ron Placone**: 我撰写竞选文案。在那个时期，我们大量使用宣传手册和直邮广告信件，我就负责写这些材料。我们还会一起制定策略，谋划怎么花掉手里仅有的那点微薄预算，要把大部分时间和精力投放到选区的哪些特定区域。所以里面涉及大量的策略博弈，我很享受那个过程。虽然我并不打算长期以此为业，但你确实能从中学到很多东西。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: I wrote I wrote I wrote materials. I you know I I put together different kinds of in those days we used a lot of brochures, a lot of direct mails and I would write them and you know we would work to strategize where we were going to spend what little money we had, where we going to spend most of our time, what parts of the district. So yeah, there was a lot of strategy in play and and uh yeah, I enjoyed that. I mean, uh, I I didn't want to do it long term, but you learn a lot.
+
+</details>
+
+**Bruce**: 你当时是为民主党候选人服务的，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. You did those for the Democrat representative, right?
+
+</details>
+
+**Ron Placone**: 是的，两次都是。一次是竞选**州众议院**席位，另一次是**州参议院**席位。州参议院那场赢了，州众议院那场输了。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Yeah. In both instances, it was a Democrat uh state house and a Democrat uh state senate race. Won the state senate, lost the state house.
+
+</details>
+
+**Bruce**: 现在的州级地方竞选和全国性竞选相比有多大区别？是不是已经大不相同了？
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: How different is the state campaign compared to the, you know, national campaign? It's just like different.
+
+</details>
+
+**Ron Placone**: 它们现在变得越来越相似了，主要表现在海量的资金正在疯狂涌入。想当年，我们那时候几乎花不了几个钱。而现在部分州参议员的竞选，有的花费动辄高达上百万美元，这在我看来简直令人难以置信。而且现在的竞选焦点全被绑架到了全国性议题上——比如跨性别议题，以及各种我们每天被铺天盖地轰炸的同类话题。在很多地方选举中，核心争论竟然变成了谁是**特朗普（Donald Trump）**的支持者，以及支持他究竟是好事还是坏事。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: They're they're getting more and more similar in that uh tremendous amounts of money are being poured in. I mean, back in the day, we spent barely nothing. And now some of these state senate campaigns, uh, they're spending around a million dollars in some cases. I mean, it's it's unbelievable to me. And also it's they focus on a lot of the national issues uh transgender some of the same things that we see we're bombarded with and and for many of these uh elections it's who's a supporter of Trump and is that a good thing or a bad thing.
+
+</details>
+
+**Bruce**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah.
+
+</details>
+
+**Ron Placone**: 还有这到底会对我们具体的选区带来什么影响。因此随着时间推移，地方选举和全国大选在本质上已经变得极其雷同。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: And what will it mean to our particular district? So I think over time uh these campaigns have become very similar local and national.
+
+</details>
+
+### 竞选资金泛滥与政治制度反思
+
+**Bruce**: 这么多来自外州的资金大肆倾倒进地方选举中，这真的正常吗？
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Is that okay for all the money out of state to be poured into the local campaign?
+
+</details>
+
+**Ron Placone**: 我完全不认为这是件好事。我认为这剥离了地方选区真正该被关注的现实问题，抹杀了地方层面的独特性。本该关注的是和你所处社区切身相关的特定事务，而不是边境安全之类的东西。边境安全这类全国性议题应当放在全国性的公共论坛上去讨论，作为全国大选的基础，它们并不必然是地方层面的核心议题。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: I I don't think so. And I think it it takes away from what real issues are and the uniqueness that you have in a local uh level. about your particular area that attention and it's not about security at the borders and you know these these are national issues that should be discussed in a national forum and serve as the basis for national elections but they're not necessarily local issues.
+
+</details>
+
+**Bruce**: 没错。就像之前有创纪录的资金砸进了 **托马斯·马西（Thomas Massie）** 的地方选区。他当时仅仅是在竞选该选区的国会众议员，结果创纪录的资金砸了进来，最终他还是输了。所以……
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. I mean there are like record-breaking money poured into uh Thomas Massie's uh local district. he's only running for a house member, you know, for that district. And uh there's record money put in and he lost. So
+
+</details>
+
+**Ron Placone**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: yeah,
+
+</details>
+
+**Bruce**: 我完全看不出这怎么可能符合当地选民的利益，因为很明显，所有这些金钱全都是从外州汇聚过来的。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: I I cannot see how it could be be in the interest of the local people there because apparently all this money come from out of state.
+
+</details>
+
+**Ron Placone**: 确实毫无益处。如今超级金主在各处疯狂砸钱，这种局面简直已经失控了。我认为除非我们落实两项改革，否则根本无济于事：第一必须进行**竞选资金改革**，第二必须设定**任期限制**。如果不推行这两项措施，我们眼下目睹的种种荒诞乱象只会愈演愈烈。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: No, I mean it's right now the the money being poured in by mega donors everywhere is just it's crazy. And I think until we do two things, we have to have election uh finance reform and we need term limits. And until we do those two things, I think we're going to just have more and more of the craziness that we are seeing right now.
+
+</details>
+
+**Bruce**: 你觉得美国民众真的在乎这些吗？因为你看托马斯·马西的那场选战，他们甚至连一场辩论都没有举行过，他直接就被金钱攻势给击溃了。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Do you think American people care? because like you know uh when I look at the Thomas Matthews race they don't even have a debate and he's lost by uh you know lost to the money.
+
+</details>
+
+**Ron Placone**: 这是一个非常深刻的问题。我也很想相信大家是在乎的。你看最近盖洛普有一项针对**政治腐败**议题的民调显示，高达 89% 的美国人认为当前的腐败程度极其严重。按理说，这种共识理应投射到人们手中的选票上。我认为这次中期选举将充分检验我们到底有多在乎某些底线原则。如果像 **肯·帕克斯顿（Ken Paxton）** 这样的候选人依然能够当选，对我来说，这就说明我们根本不在乎候选人的人品道德。我们不在乎这个人的内心世界究竟如何、行为操守有多不堪，只要顶着一个政党标签，人们就会盲目投票。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Well that's a very good question. And I I I'd like to think I mean, you know, there was a recent Gallup poll on the issue of corruption and you have 89% of the American people believe that there's that corruption is at an extreme level. You would think that that would then translate into how one votes. And I do think this midterm election is going to say a lot about how much we care about certain things. I mean, if if a candidate like Ken Paxton gets elected, for me, it suggests we do not care about character. Yeah. We do not care about, you know, what what what goes on in that people's that person's mind and in their behavior. we're gonna vote for anyone just because of a party label.
+
+</details>
+
+### 中期选举盘口与国会两院博弈
+
+**Bruce**: 这确实是一个极其耐人寻味的观察点。我和朋友就今天的中期选举打了赌，我们押了 100 美元，我认为**民主党**会拿下众议院。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah, I I think that's actually a very interesting point like uh you know I actually have a bet on the uh today's Midtown election with my friend and we bet $100 and I think uh Democrat will take the house. Uh
+
+</details>
+
+**Ron Placone**: 噢，我也这么认为。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: oh, I think so too.
+
+</details>
+
+**Bruce**: 现在看着预测市场的盘口，我觉得我有 90% 的概率能赢下那 100 块。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Right now looking at the Kashi, I think I'm kind of 90% chance to win that $100.
+
+</details>
+
+**Ron Placone**: 没错。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Oh yeah.
+
+</details>
+
+**Bruce**: 我甚至打算花 10 块钱买共和党赢来做对冲，这样就能稳赚 90 美元。不过这算是一个相当低风险的赌局了对吧？所以今天这期播客，我们主要想聊聊中期选举。两党真正白热化厮杀的核心，正是那四个**关键摇摆州**。这几个州关系到**参议院**席位归属，实际上重要得多。因为共和党基本上已经放弃争夺众议院的控制权了，他们的策略完全转入防守，只要丢失的席位比预期少就算胜利。他们现在的核心诉求是守住参议院，因为保住参议院对于未来任命内阁成员等等至关重要。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: I may spend $10 to buy the Republican win to hedge that. So that will guarantee me $90. Uh but that's a uh you know uh risk pretty bad, right? Yeah. So uh today's podcast we want to talk about the midterm and actually uh the only thing that both party are really fighting hard about is this four battleground state. Uh those are for the Senate seat. uh actually more important because I think Republican basically give up uh trying to take control of the house. Their strategy yeah is on the defense just lose less hot seat than they expected to be. That will be win and then they want to keep the Senate because keeping the Senate will be very important for uh future appointing the you know cabinet members and all the other
+
+</details>
+
+**Ron Placone**: 还有任命**最高法院大法官**，名单可以一直列下去。如果民主党能够同时拿下参众两院，而不是仅仅控制其中一院，情况将产生天壤之别。如果只拿下一个院，基本上就是陷入无休止的政治僵局，我认为什么实质性法案都推不动。即便民主党想要发起对特朗普家族等人的调查，也根本无法形成实质突破，只能在原地打转。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Supreme Court. I mean go down the list. Uh it it will be a big difference if the Democrats are able to take both the House and the Senate instead of just one. One, I think we we just have a lot of stalemate. I don't think we do much of anything. Uh even if they want to go through investigations of the Trump family, etc., they're not going to go anywhere. Just spin their wheels.
+
+</details>
+
+**Bruce**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah.
+
+</details>
+
+**Ron Placone**: 但如果民主党同时掌控了参众两院，那我认为推进实质政策的机会就来了，局势会变得极具看点。不过话虽如此，无论如何他们也不可能拿到三分之二的超级多数，而且参议院里还有个 **约翰·费特曼（John Fetterman）** 效应，你根本捉摸不透他究竟会倒向哪一边。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: If the Democrats take over both the House and the Senate, then I think there may be a chance to do some things and it it could get very interesting. Uh so, but you know, regardless though, they're not going to take over twothirds and then you have the Fedman effect. You just don't know what John Federman's going to do.
+
+</details>
+
+**Bruce**: 哎，我有时候真希望他干脆退休或者辞职算了。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Oh, I just hope he sometimes just like retire resign and then
+
+</details>
+
+**Ron Placone**: 我觉得他不会辞职的。他正充分享受着当下这种万众瞩目的高光时刻，因为他手里那一票是如此关键，所有派系都在拼命拉拢他。特朗普在拉拢他加入共和党这件事上态度已经非常公开了，虽然费特曼嘴上坚称自己毫无兴趣，但当你回看他的投票记录时，他投起票来简直就是一个标准的共和党人。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: I don't I don't think he will. I think he's enjoying this uh this moment in the sun where his vote is so pivotal and everybody's courting him to be part of uh their group. You know, certainly Trump's been very overt about become a Republican and he says he has no interest, but when you look at the votes, well, he's voting like a Republican.
+
+</details>
+
+**Bruce**: 在我眼里他就是一个纯粹的共和党人。他每次上福克斯新闻批判民主党，转头就宣称“我和特朗普站在一起”，疯狂为特朗普辩护对吧？看到那些言论，我心想这家伙为什么不干脆直接转投共和党呢？这样争论就可以尘埃落定了，我们也不用再假装他是个民主党人了。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: He's he's a Republican to me, you know, like he basically every single time he went on Fox News uh talking about Democrat and then he's like, "Oh, I'm I'm with Trump. He's defending Trump, right? All that and that." I was like, "Yeah, why didn't this guy just like convert himself to be a Republican? That would be settled the debate. Like, we don't have to pretend he's a Democrat."
+
+</details>
+
+**Ron Placone**: 说得太对了，Bruce。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Absolutely right, Bruce.
+
+</details>
+
+### 德克萨斯州参议院决战：神童对决争议老手
+
+**Bruce**: 来看这四个关键州。目前霸占各大新闻头条的绝对是**德克萨斯州**。这个席位之所以重要，是因为特朗普当年在德州是以两位数的巨大优势获胜的，这里一直以来都是典型的深红州。如果换作加利福尼亚州可能翻红，民主党人恐怕早就吓疯了，性质完全一样。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. So, looking at this full state, right? though the the race that's on the headlines all the time is Texas. It's so important because like Trump win double digit in that state. It has been a you know typical red state and I will be really freaking out if I'm a Democrat like looking at California potentially turning red, right? Like this is
+
+</details>
+
+**Ron Placone**: 没错，这个类比非常恰当。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: exactly it's a good comparison.
+
+</details>
+
+**Bruce**: 共和党目前陷入被动完全是自作自受，因为他们原本拥有实力极强的候选人，却偏偏挑选了帕克斯顿这样浑身硬伤的人选。他身上充斥着各种黑料丑闻，连他自己的政党之前都试图弹劾他。但最近我看到他的妻子也上了电视，估计是幕后大金主说服她出来站台。她在镜头前表示：“我们投票不仅仅是投候选人本身，更是为了决定谁来掌控国会，我们要捍卫党派立场。”她在发言中甚至刻意避开了帕克斯顿的名字。我想她内心虽然厌恶他，但为了大局依然在竭力维系党派阵线，潜台词无非是“连我都能原谅他，你们也应该包容他”。但即便如此，作为独立选民，我是绝不可能把票投给帕克斯顿这种候选人的，我认为他早该蹲监狱了。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. Republicans are kind of facing because I think like this is their own fault because they have a very strong candidate but they decide to go with Paxton which is a a candidate a flawed candidate uh at least right like he has all kinds of issues like even his wife his own party tried to impeach him and he had all this scandals uh surrounding him but recently I saw his wife kind of went on the television I think somehow the donor convinced her to stand behind him and she say oh We are voting not just like for who is to be the candidate. We're actually voting on like who will take control of the Congress and uh we we want to stand behind the party line basically not mentioning the Paxton's name. I think she hates him but still like trying to work the line. Yeah, even I can forgive him. Uh you should be able to but again I as a independent I cannot vote for a candidate like Paston. He I think he should be put into jail like stuff like
+
+</details>
+
+**Ron Placone**: 德州的许多民众也是这么想的。德州选情之所以陷入白热化，归根结底又回到了特朗普身上。因为当初是他亲自狙击了现任参议员，转而全力背书帕克斯顿，现在这笔政治账必须要还了。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: and that's what a lot of folks in Texas. Yes. Just the fact that Texas is in play and this comes back to Trump because you know he went after the incumbent senator supported Paxton instead and uh now there's a price to be paid.
+
+</details>
+
+**Ron Placone**: 外部资金疯狂注入该州，但民主党候选人 **詹姆斯·泰勒里科（James Talarico）** 依然保持着微弱领先。他是唯一愿意深入一线举行选民市政厅集会的人，也一直积极要求进行公开辩论。然而帕克斯顿对此毫无兴趣。如果由我来给帕克斯顿当谋士，在民调落后的情况下，我一定会建议他站上辩论台。你不能指望仅仅因为身在德州并且头顶共和党光环就理所当然地赢得选举，这次情况大不相同了。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: poured so much money into this state and Telerico still holds a slight lead and he's the only one willing to go on to do the the the town hall meetings. He's the one that keeps pushing for a debate. Paxton has no interest in doing that. Now, if I were advising Paxton and I'm down in the polls, you should be out there debating. You just can't count on you're gonna win this because you're the Republican in Texas this time. Maybe not.
+
+</details>
+
+**Bruce**: 但我认为帕克斯顿在竞选资金上依然占据优势对吧？各种金钱滚滚而来，**埃隆·马斯克（Elon Musk）** 也在大笔砸钱……
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: But I think he still have a money advantage, right? Like pulling all kinds of money. Elon Musk is like throwing
+
+</details>
+
+**Ron Placone**: 埃隆·马斯克确实在幕后提供了极其庞大的资金支持，他在德州砸下了海量真金白银，大金主们的钱包确实彻底敞开了。然而泰勒里科在草根募捐方面做得极为出色，甚至可以说是全美最顶尖的，他真正获得了来自各地的广泛支持。而且这家伙是一个非常强劲的竞争对手，他的宗教背景对德州的部分传统选民具有极强吸引力。尽管帕克斯顿极力给他扣帽子，谎称泰勒里科仇视基督教——对于一个正在攻读长老会牧师学位的人来说，这种抹黑显得荒诞不经——但泰勒里科对于自身施政立场的阐述极具说服力。我真心希望帕克斯顿能和他同台辩论，那绝对是一场极具观赏性的交锋。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Elon Musk's is a lot behind. Elon Musk has put a ton into taxes. Uh yeah, they've been really opening up the big the purses big time. But you know, Teler Rico has done a remarkable job of grassroots fundraising, the best in the country. I mean, he really has support from everywhere. And the guy is a formidable candidate because his his religious background appeals to some voters in Texas. Yeah. Even though, you know, Paxton will try to say that uh he hates Telerico hates Christianity and this bizarre stuff for a guy in Teler Rico that's studying to be a Presbyterian minister, but he's just and he does a good job of articulating his positions. Now, I wish that Paxton would debate him because I think it would be a fun one to watch.
+
+</details>
+
+**Bruce**: 确实如此。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah, definitely.
+
+</details>
+
+**Ron Placone**: 但我看这事悬。我认为帕克斯顿大概率会沿用特朗普的那套套路：拒绝公开辩论，利用海量资金狂轰滥炸，指望那些信息匮乏的选民全盘吞下广告舆论的灌输，最终顺从地把票投给他。这就是全盘计划。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: But I I don't see that happening. I think uh Paxton will probably play, you know, like Trump's playbook, just not not debating and then pouring all kinds of money there and try to hope all the uh poorly informed voters will just bleed all the ads propaganda and then vote for him. I I plan
+
+</details>
+
+**Ron Placone**: 他们用尽了各种下三滥的手段，甚至从男人物理气质的角度去人身攻击对方。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: they're trying everything under the sun from attacking, you know, the guy's masculinity.
+
+</details>
+
+**Bruce**: 是的，还捏造各种荒谬谣言，说什么他住进医院看精神科医生之类的。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. made up all kind of rumors like he's went to the hospital to see a psychiatrist and all the Yeah.
+
+</details>
+
+**Ron Placone**: 你知道最荒唐的是什么吗？这本身就是凭空捏造的故事，但福克斯新闻居然这样报道：“他为什么拖了这么久才把带有时间戳的视频交给《纽约时报》，来证明自己生病期间一直待在家里？”他们反而借此质疑他为什么要拖延。拜托，他在竞选拉锯战中生病缺席了整整九天，肯定有更紧要的事情要处理。他需要重返竞选前线，最不需要做的就是把时间浪费在辟谣那些无稽之谈上。令人悲哀的是，造谣者肆无忌惮地信口开河，却完全不需要承担任何代价。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: And you know what was interesting? U it's bad enough that was just a fabricated story, but now the way Fox News was reporting it, it was well and why did he wait so long to share with the New York Times the the timestamp video that clearly showed that he was sick at his house, you know. So now there's this wondering why he waited. Well, maybe he has other things on his mind as he missed nine days on the campaign trail. He needs to be out there and the last thing he needs to do is to to spend time debunking nonsense that was put out there that it's a shame though how people just make this stuff up and there doesn't seem to be any consequence for it.
+
+</details>
+
+**Bruce**: 共和党人确实在无所不用其极。**斯蒂芬·米勒（Stephen Miller）** 也亲自下场插手了，这简直不可理喻。你身处白宫行政核心，却试图直接干预地方选举的结果。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah, I think uh Republicans are trying everything. Stefan Miller is uh also stepping in. Like that's crazy because you're uh right now in the White House and you try to uh interfere with all the election result.
+
+</details>
+
+**Ron Placone**: 确实如此。我们在此讨论的前提，都是建立在“这是一场公平选举”的假设之上。但我认为，针对选民压制行为的担忧绝非空穴来风。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Oh yeah. I I think that I think a lot of what we'll talk about here is based on the assumption that this will be a fair election. And I do think there is reason to worry about uh voter suppression.
+
+</details>
+
+**Bruce**: 绝对没错。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Oh yeah.
+
+</details>
+
+**Ron Placone**: 以及事后针对邮寄选票可能会做什么手脚。你看特朗普今天又把矛头对准了加利福尼亚州的邮寄选票。我认为共和党人心知肚明这次的选举前景将相当惨烈，所以他们的“B计划”是什么？无非是质疑选票结果，竭尽所能去破坏并阻止他们不愿看到的结果出现。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: what what might happen afterwards to mail in ballots. Uh you can see there's, you know, Trump's going after California today. Yeah. Over mail in ballots. And I just think that I think the Republicans know this is probably going to be rather ugly for them. So what is their plan B? uh to try to uh you know challenge results and to try to do whatever they can to make sure that the uh outcome isn't what they don't want.
+
+</details>
+
+### 特朗普的基本盘松动与分裂投票现象
+
+**Bruce**: 不过对此我倒没那么悲观，因为这次选票上并没有印着特朗普的名字。如果每个选区选票上都有特朗普，那情况确实危急。但特朗普根本不在乎别人的选情，他自己早就稳坐总统宝座了。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: But I think uh I'm less worried about this because Trump is not on the ballot, right? Like if if Trump's name is on every ballot, I think it's highly likely. But like Trump doesn't care like Trump is already in the state.
+
+</details>
+
+**Ron Placone**: 他在某种程度上还是非常在乎的，虽然在某些方面我也赞同你的观点。有时候我也纳闷，他是在故意破坏这场选举吗？他的一些操作确实让人百思不得其解，甚至会让人怀疑他是否真的关心胜负。但他骨子里是极其在意的，因为他心知肚明，如果民主党同时掌控了参众两院，他的日子将会无比艰难。像 **詹姆斯·卡维尔（James Carville）** 这样的人甚至预言，面对这种局面特朗普可能会选择撂挑子甚至提早下台，因为他根本不想应付这一切。谁知道呢？但据说他已经提前拨出专项资金，专门用于在巴伦和梅拉尼娅不可避免地卷入国会调查时为他们进行法律辩护。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: He does care to the extent and I agree with you to some extent. Sometimes I've been wondering, is he trying to sabotage the election? I mean, some of the stuff he has done makes you scratch your head and say he is, does he really care? But he does care and that he knows his life is going to be very difficult if the Democrats take over both the House and the Senate. I mean, people like James Carville have predicted that he may step aside and not even want to deal with it. I mean, who knows? But, uh, and supposedly he has put money aside to essentially defend uh, Baron and Melania should they become part of investigations as they will.
+
+</details>
+
+**Bruce**: 是的。但我认为要对付他依然极具挑战性，因为在特朗普的第二任期里，所有的内阁成员都不再是传统的职业文官，他们清一色是特朗普的绝对死忠派。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. But I I think it's it's going to be very challenging because this year like you know Trump's second term all the cabinet member are not you know traditional uh bureaucrats they are Trump loyalist loyalist right?
+
+</details>
+
+**Ron Placone**: 没错。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Yes,
+
+</details>
+
+**Bruce**: 只要看看**爱泼斯坦案卷宗（Epstein files）**的风波就明白了。司法部长帕姆·邦迪（Pam Bondi）直接拒绝公布完整的卷宗，在面对公众时满嘴谎言，最后她被直接免职。可换上来的新任司法部长，干脆直接就是特朗普的私人律师。所以我认为即便民主党同时赢下了参众两院，特朗普可能根本不放在眼里，因为整个行政分支都被他牢牢握在掌心。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: just look at the Epstein file, right? Like your your attorney general uh Pon Bondi, he basically refused to release all the Epstein file and lied about it and there's nothing her she just she got fired. But like the new uh AG, he's uh Trump's personal lawyer. So I just think like Trump probably doesn't care even though you win like both House and Senate. What can you do? Like all the executive branch all my
+
+</details>
+
+**Ron Placone**: 是的，你说得非常在理。国会的制约权依然非常有限，因为最终无数官司都要打到联邦最高法院。最高法院依然在源源不断地为他背书判定他胜诉，因为他基本把最高法院牢牢装进了自己的口袋里。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Oh yeah, you're you're right. You're still limited because still much goes to the Supreme Court. Yeah. And he's still winning too many things from the Supreme Court because he still pretty much has the Supreme Court in his hip pocket. Yeah.
+
+</details>
+
+**Ron Placone**: 所以你的观点很对。但我仍然认为，他深知自己的日子会变得艰难得多。更何况他整个人极度看重所谓的“个人历史遗产”和外部评价面子。虽然他肯定会找出替罪羊来推卸责任，甚至辩解称“大家依然爱我，只是不爱那些不成器的候选人”。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: So, uh you're you're right, but I just think he knows his life will be made more difficult. Plus, he's all about legacy and how things look and and while he will pick out certain scapegoats as to why and he will plead, hey, people still love me, they just don't love these candidates.
+
+</details>
+
+**Bruce**: 没错，完全就是这样。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah, exactly.
+
+</details>
+
+**Ron Placone**: 但在内心深处，他必然明白这是对自己政治威望的极其糟糕的投射。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: He has to know on some level that this is a pretty bad reflection on him.
+
+</details>
+
+**Bruce**: 毕竟他并不是彻头彻尾的傻子。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: I mean, he he's not totally stupid.
+
+</details>
+
+**Ron Placone**: 他心里跟明镜似的。嘴上无论怎样痛骂民调造假，骨子里他是一个完全被现场集会人数、民调数据、电视收视率和市场占有率所驱使的人。他非常清楚自己身处何种尴尬境地。这种难堪是他无法否认的，虽然他绝不会承认，也绝不会主动担责，但他心知肚明。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: I mean, he does know. I mean, he can say all he wants about fake polls, but this guy is driven by attendance, polling, uh, you know, what what what you get when you have a television show, what what rating, what market share do you get? He knows where he's at. It's not pretty. He'll deny it. He won't own it. He won't acknowledge it, but he knows.
+
+</details>
+
+**Bruce**: 纵观目前这四个州，德克萨斯州确实存在翻盘的机会，即便有海量资金砸进去试图造谣甚至用 AI 换脸视频来抹黑泰勒里科，全力拉拢保守派选民归队投票。但我依然觉得，民主党人想在德州赢得参议院席位实在太艰难了。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: So I think right now looking at this uh four states right like I think Texas really has a has a chance but a lot of money had been porting that state try to uh you know make up stories and make those AI videos about him like and trying to convince those uh Republican voter to vote for the party member. Yeah. I don't know. I I I think it's it's tough to win a Senate seat in Texas like
+
+</details>
+
+**Ron Placone**: 这是毋庸置疑的，毕竟是传统深红州，即便对方选出了浑身破绽的候选人，想要攻下这个堡垒依然难如登天。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Oh, no question. the traditional red state and even though you have a flaw candidate, but like it's such a hard thing to do.
+
+</details>
+
+**Ron Placone**: 但 Bruce，我们目前正在见证一个新趋势的抬头，这在**宾夕法尼亚州**一直很普遍，那就是**分裂投票（Ticket Splitting）**。在宾州，选民经常在选州长时投给一个党，在选参议员时投给另一个党。如今这种交叉分裂投票在全美范围内正变得越来越常见。从德州当下的民调数据来看，似乎就正在发生这种现象：共和党很可能会赢下德州州长席位……
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Well, one of the things we're starting to see though, Bruce, and this is something in the state of Pennsylvania that has always been common, and that is ticket splitting. In in Pennsylvania, often um someone would vote for one candidate uh one party for governor and the other party for Senate. a ticket split that is becoming more common nationally. And it seems like when you're looking at some of the polling in Texas, it appears some of that may be going on and the Republicans may win the governorship
+
+</details>
+
+**Ron Placone**: 但在参议员位置上可能会落败，这里面可能会有足够体量的选民选择分裂投票。另外从审慎乐观的角度来看，特朗普当年之所以能过关，仅仅是因为勉强咬住了**拉美裔**和**年轻选民**的微弱优势，而现在他已经彻底丧失了这部分选民的支持。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: but not the Senate. There may be enough ticket splitting. And I also think in terms of reasons to be optimistic, um, Trump got just enough out of Latinos and young young folks to carry him through and he's lost that support.
+
+</details>
+
+**Bruce**: 是的，现在的政策彻底把他们给激怒了。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Oh, it really pissed them off.
+
+</details>
+
+**Ron Placone**: 确实如此。所以如果这股支持力量能有效倒向泰勒里科并真正转化为投票率——比如像 **贾斯敏·克罗克特（Jasmine Crockett）** 这样的人，就必须全力动员非裔选民的投票率。在民调中表现亮眼是一码事，但关键是必须确保选民在选举日当天亲自走出家门投票，或者切实寄出邮寄选票，民调才有意义。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Definitely. So, if that support goes to Ter and they get out to vote, that's the, you know, Jasmine Croc, she's, you know, she needs to help getting the AfricanAmerican vote out. I mean, it's it's one thing to look good on the poll in the polls, but you've got to get your voters to the polls that day or have them do the mail and ballots for it to mean anything.
+
+</details>
+
+### 密歇根州前线：民生负担、加征关税与极端贴标签
+
+**Bruce**: 完全正确。第二个州是**密歇根州**。我认为这是民主党必须死守的席位，因为这原本就是民主党把持的席位。而且候选人 **阿卜杜勒·埃尔赛义德（Abdul El-Sayed）** 是个极具政治天赋的政治家。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Exactly. Um the second state, Michigan, I think that's a seat a Democrat must held because that's used to be a Democrat seat, right? So, right. Uh I think uh as he is a very talented politician,
+
+</details>
+
+**Ron Placone**: 确实非常有才华。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: yes, he is.
+
+</details>
+
+**Bruce**: 我看他现在的领先优势大概在 2.7 个百分点左右。预测市场给了他大约 68% 的胜率，所以赢面正在逐步走高。如果民主党想要重掌参议院，密歇根是绝不容有失的阵地。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: I think he has a a small lead now like plus 2.7. So uh the prediction prediction market gave him about 60% chance I think. Oh 68% chance. So the odds kind of rising a little bit of winning that seat. So that's a mustwin seat for a Democrat if they want to take control of the Senate.
+
+</details>
+
+**Ron Placone**: 没错。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Yeah.
+
+</details>
+
+**Bruce**: 因为这里本来就是民主党的盘子。而在德州，目前盘口大概是 62 比 38。虽然预测市场上概率差距较大，但实际民调领先幅度其实只有 3 个点左右。不过考虑到特朗普在德州曾赢过两位数，泰勒里科能够抹平这一巨大差距本身就已经非常了不起了。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Because that used to be their seat. So for the Texas uh right now it's about 62 to 38. Um so I I think on the prediction market you have a much bigger probability but again like I think the porting lead is only about like plus three something around that. Uh but again you have to think about Trump is winning like double digit on this uh in this state. So basically Tarico was able to overcome that uh additional right. So uh that's a very strong
+
+</details>
+
+**Ron Placone**: 还要跨越历史惯性的包袱。德州长期以来都有着根深蒂固的保守红州传统，他要对抗的不只是特朗普的阴影，更是长期的宏观历史趋势。当年贝托·奥罗克（Beto O'Rourke）奋力拼搏过，但最终还是折戟沉沙。如果民主党在德州真有历史性的突破契机，那绝对就是眼下。民主党拥有一个优秀的候选人，即便对手百般构陷，但泰勒里科谈吐得体、逻辑清晰；而反观共和党推选出的候选人，正如你刚才所言，身上的黑料包袱恐怕比这届中期选举里的任何人都多，是一个浑身硬伤的烂人选。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: in history. I mean, in a state like Texas, there's just a long history of of being red and you know, he's not just overcoming Trump, he would be overcoming trends. I mean, Better Ror, he tried, he wasn't successful. And so, it's uh but if if ever there is an opportunity for a Democrat to win in Texas, it's now. I think that's the Democrats have a a a candidate even though they label him as teleico and this and that but this guy is articulate and the Republicans have a candidate I think you said earlier I mean this guy has more baggage than than probably any other candidate running in the midterm election. So this is a flawed flawed candidate.
+
+</details>
+
+**Ron Placone**: 密歇根州的情况则略有不同，我认为双方候选人各有长短。埃尔赛义德是一位极其擅长打竞选攻防的实战家，他紧紧咬住民众最为痛心的**生活可负担性（Affordability）**问题，疯狂猛攻。而他的对手 **迈克·罗杰斯（Mike Rogers）** 则是彻头彻尾的特朗普死忠。埃尔赛义德将其定性为：如果你想要一个对特朗普行政命令和**伊朗战争**唯命是从的提线木偶，那就投给罗杰斯；但我绝不会做任何人的傀儡。然而摆在面前的问题随之而来：候选人究竟能“自由派”到什么程度而不至于引起反噬？这正是他眼下正在竭力平衡的挑战。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Michigan's a little different. I mean, I do think both of these candidates have uh their strengths and their their their weaknesses. I mean, I think Alad is a very very good campaigner. He's got the affordability issue on his side and he's hitting hard at it. Yeah. I mean it it you know and um and Rogers as is he's a Trumper and you know and El say's portraying him is if you want a a sock puppet for for the Trump administration and for the Iran war well vote for Rogers. Yeah. But that's not what I'm going to be. But then the question becomes
+
+</details>
+
+**Ron Placone**: 看看现在的民调数据会发现很有意思的一点：虽然自称为自由派的民主党人数量确实比十到十五年前明显增加……
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: how liberal is too much liberal? I mean you know and that's what he's he's fighting. I mean it's here interesting when you look at the polls here where how did the Democrats identify the democrats identify more as liberal than they did 101 15 years ago.
+
+</details>
+
+**Bruce**: 很有意思。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Interesting.
+
+</details>
+
+**Ron Placone**: 但当你追问他们是属于“温和自由派”还是“激进极左派”时，绝大多数人的回答依然是“温和自由派”。若问他们“党派路线是否应该进一步向左倾斜”，大多数人给出的反馈都是“维持在现有位置即可”。因此整体氛围依然偏向中间偏左的温和温和派。右翼媒体正疯狂地把他抹黑成被恐怖组织资助的“圣战分子”，但我阅读对选民的访谈记录后发现，很多选民早已看穿了这套低劣的话术。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: But when you ask them about Z uh are you somewhat liberal or very liberal the majority are going to say somewhat liberal. If you ask them, should the party go further to the left? Most are going to stay stay about where it's at. So, there's still this tendency toward the moderate rep, still on the liberal side, left to center, but uh we'll see. And they're certainly trying to hit him as a you know, a jihadist financed by terror organizations. Uh, but you know, I I think when when I read interviews with people, it seems like a lot of people are looking past that stuff
+
+</details>
+
+**Ron Placone**: 大家正在独立思考：究竟谁能在华盛顿代表我的利益？谁能去抗击如今已经无处不在的系统性腐败？我很希望看到选民能够基于这样的理性判断去投票，而不是人云亦云地被“他是共产党”、“他是某种极端分子”这类恶意标签所裹挟。希望这届选民能够保持理性，全面考量候选人的人品道德、政策主张以及言语的诚信度。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: and are actually thinking on their own as to who might represent me, who might fight some of the corruption that seems to be so widespread now. Yeah. And and and I'd like to think some of the voting is going to be done based on that and not oh well I hear he's a communist or he's a fill in the blank how we want to label people. I think people are going to hopefully be smart in this election and evaluate candidates character positions policies and likelihood they're telling the truth.
+
+</details>
+
+**Bruce**: 是的，右翼势力一直在极力把他塑造成穆斯林共产主义恐怖分子的形象。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. I think like uh the right wing try to picture him as you know uh Muslim communist terrorist.
+
+</details>
+
+**Ron Placone**: 完全就是这样，他们几乎就是把这些词直接挂在嘴边。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Exactly. That's exactly and they pretty much say that.
+
+</details>
+
+**Bruce**: 叫嚣着什么“他仇视美国”那一套陈词滥调。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. Uh you know hates America. You know it's the old hates America. Um
+
+</details>
+
+**Bruce**: 之前他们也试图用同样的套路去抹黑佐兰·马姆达尼（Zohran Mamdani），结果输得极其惨烈。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: I think they tried to do that with uh Zora and Danny but they failed. Uh miserable.
+
+</details>
+
+**Ron Placone**: 一点也没错。这两位候选人之间确实有相似之处，他们都极具个人领袖魅力，深谙社交媒体的传播规律，懂得如何展示自己的观点，并且受过极高的精英教育。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Exactly. And again, there's some similarities in that these are fairly charismatic politicians, uh, know how to use social media, know how to present their Yeah. wellucated.
+
+</details>
+
+**Bruce**: 受教育水平极高。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Well educated. Yeah.
+
+</details>
+
+**Ron Placone**: 对于那些竞选技巧拙劣的对手来说，这类对手是极其可怕的。这已经是我今天第二次提到詹姆斯·卡维尔了，但他对迈克·罗杰斯的评价确实让我拍案叫绝——他说罗杰斯纯粹是“制药巨头的走狗”，整个人彻底被医药资本装进了裤兜里。更何况眼下笼罩全局的还有旷日持久的伊朗战争、特朗普自身的巨大负资产以及腐败议题。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: And, uh, that's very formidable for some of these folks who maybe, uh, aren't as skilled as campaigners. And then you know again in the corporate I mean yeah second time I mentioned James Carville but I just get a got a kick out of how he described Rogers as a a pharma tool that that the pharmaceutical industry pretty much has him in their pocket. Yeah. and and you know that doesn't again I think you you've got the Iran war hovering over things Trump himself hovering over things and the corruption issue
+
+</details>
+
+**Bruce**: 还有那个大型法案直接将无数底层民众一脚踢出了**医疗医保体系**。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: and also like I think the big bill for bill kick a lot of people out of the health care system right
+
+</details>
+
+**Ron Placone**: 毫无疑问。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: no question yeah no question so
+
+</details>
+
+**Ron Placone**: 还有**关税**！肆意加征的关税给包括密歇根在内的众多州造成了极其惨痛的打击。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: and tariff tariffs tariffs have been ugly for so many states including Michigan Yeah, tariffs have not been good for Michigan.
+
+</details>
+
+**Ron Placone**: 关税对密歇根的经济重创尤甚。所以当你逐一审视这些具体的民生痛点，就会发现共和党候选人眼下所背负的巨大政治逆风——无论是伊朗战火还是关税反噬，对于现任共和党人而言都构成了沉重无比的枷锁。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: So again, when you when you look at these individual issues and the headwinds that these Republicans face because of the Iran war, because of tariffs, it's really difficult, I think, for some of these Republicans hero for the Republican incumbent. I think that's uh that's that's a fact.
+
+</details>
+
+### 阿拉斯加与缅因州：独立性传统与边缘博弈
+
+**Bruce**: 阿拉斯加州的选情也显得相当奇特，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: So for the Alaska, I think that looks a little bit interesting, right? So Alaska. Yeah. Yeah.
+
+</details>
+
+**Ron Placone**: 阿拉斯加非常耐人寻味。共和党现任参议员 **丹·沙利文（Dan Sullivan）** 正在谋求他的第三个连任任期。自 1980 年以来，阿拉斯加在总统大选中就从未投给过民主党；自 2008 年以来，他们也再未选出过任何民主党参议员，长期以来清一色是共和党的天下。2024 年特朗普在这里还手握 54% 的高得票率。然而就在两天前，特朗普竟然专程飞了一趟阿拉斯加去救场。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Yeah. I mean, I think Alaska is a very interesting I mean this is a three term Well, he's running for his three third term, the Republican Sullivan. And just the fact I mean, yeah, they haven't voted for a Republican uh or a Democratic in presidential election since 1980. Yeah, it's been 20 I think 2008 since they have elected a Democratic Senate. It's been all Republican. Trump had 54% of the vote in 2024. Yet Trump makes a trip there two days ago. Yeah.
+
+</details>
+
+**Ron Placone**: 因为眼下民调领先的竟然是民主党人 **玛丽·佩尔托拉（Mary Peltola）**！这简直不可思议。但阿拉斯加选民的政治性格本就极其特立独行，骨子里带有一种对体面道德的追求，并且对华盛顿特区深居高位的精英阶层和系统性腐败深恶痛绝。更何况他们对现任政府处理与**加拿大**双边关系的方式极其不满。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Because right now right now the um the Democrat uh Mary Pelo is is leading in the polls. And I mean this is this is amazing. But again, Alaskans, they're very independent. They have a um they have a decency streak and they're very bothered by the the elite and the corruption that is in uh DC. And certainly uh they're not thrilled with how we're dealing with Canada.
+
+</details>
+
+**Bruce**: 是的，与加拿大的**贸易战**。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. And trade war with Canada.
+
+</details>
+
+**Ron Placone**: 这在当地绝对是关乎生计的大事。特朗普现在试图拿石油和天然气钻探大做文章，抛出韩国对阿拉斯加国家天然气项目的巨额投资协议。他在大多数造势集会上都在空头许诺，但经历过 2024 年的大选之后，人们早已对这些虚无缥缈的承诺彻底脱敏了。当他又开始夸夸其谈要给每个人发 5000 美元时，民众心里想的却是：“我连当年承诺的政府效率部（DOGE）支票、关税退税支票的影子都没见到呢。”大家充满怀疑，这种戒备完全是合情合理的。所以虽然对手是一位谋求三连任的建制派巨头，看似十拿九稳，但如今胜负却全然未知。这正是特朗普给共和党造成民意大失血的一个生动微缩缩影。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: That's a big issue. It's a big issue there. Now, Trump, he's trying to, you know, talk about oil and gas drilling and and this this deal, this investment from South Korea uh to go into a national uh gas project in Alaska. So, he's trying to make some of the promises. I mean, at at most of his rallies in these states, he's trying to make some promises, you know, that may or may not happen. And again, I think people are wise to these promises when they look at what was said in 2024. And when he talks about giving us $5,000, you know, they think about, well, gee, I'm still waiting for the Doge check. I'm still waiting for the check from the tariffs. And so people are skeptical and and rightly so. But, you know, I think the Democrat I think she has a a good shot. Even though again, this is someone running for the third term. You would think he would be a shoe in here, but he's not. So, it's a microcosm of how much support Trump has caused the Republican party to lose.
+
+</details>
+
+**Bruce**: 是的，这实质上就是对本届政府的一场**全面公投**。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. I think this is a referendum on the current administration, right?
+
+</details>
+
+**Ron Placone**: 确实如此。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: I do.
+
+</details>
+
+**Bruce**: 最滑稽的是共和党选票上有两个同名同姓的“丹·沙利文”。另一个退学的退休教师也注册成为了候选人。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: The funny thing is like you see like their Republican has two Solivan candidates. So like they they had another like a retired teacher also registered as a
+
+</details>
+
+**Ron Placone**: 又一个沙利文对吧？这在宾夕法尼亚州也曾经发生过，后来当地终于修改了法律。当年在宾州，州长和副州长是分开独立竞选的，导致有一年选出了一名普通教师来当副州长。在斯克兰顿，“凯西（Casey）”这个姓氏向来能拿到海量选票，前不久我们这里还有个联邦参议员鲍勃·凯西（Bob Casey），他的父亲曾经是州长。当年就有一个完全无关的外姓凯西跑出来参选，结果选民闭着眼睛投票，直接把一个中学老师送上了副州长的宝座。这种滑稽的荒唐事屡见不鲜。而阿拉斯加推行的**排序选择投票制（Ranked-Choice Voting）**，直接导致最终决选名单里挤进了两个同名为“丹·沙利文”的候选人。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: oh another Sullivan, right? Yeah. That's that that has happened in Pennsylvania. They changed that law finally. But in Pennsylvania we ended up with a teacher one year as lieutenant governor. Yeah. Because the governor and the lieutenant governor ran separately. Yeah. And there the name Casey uh used to get a lot of votes here from a Scranton family and we just recently had a senator Bob Casey. His father was governor. Yeah. So there was a Casey that ran that was not part of this family. So he got elected lieutenant governor. I think he was a school teacher. So yeah, strange things that have happened. And the way they they do the voting in Alaska Yeah. caused two Dan Sullivans to be in the final four.
+
+</details>
+
+**Bruce**: 最后一个是**缅因州**。现任共和党参议员是 **苏珊·柯林斯（Susan Collins）**。她在州内向来颇有声望，目前正在寻求连任。这是双方差距最小的一场战役，最近的民调显示民主党挑战者 **特洛伊·杰克逊（Troy Jackson）** 微弱领先，预测市场给杰克逊大概开出了 57% 的胜率，这基本上就相当于扔硬币五五开。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. The last one is Maine. So, this is a Republican incumbent Susan Collins, right? Like she's pretty popular in the state and she's running for reelection. Uh this is like the smallest margin. Like the recent poll has a Jackson up a little bit, but like the market kind of give Jackson about 57%. So, it's basically a coin flip. say
+
+</details>
+
+**Ron Placone**: 如果说这四个摇摆州里有哪一个共和党最有希望守住，那我选缅因州。虽然这几个州胜负全都在统计误差范围之内，谁赢都不奇怪，但缅因州确实是柯林斯最有可能勉强涉险过关的地方。虽然她现在因为物价飞涨、3.7% 的通胀率、汽油价格居高不下以及当初盲目支持对伊朗开战而遭到了极为猛烈的政治抨击，这些问题实实在在地挫伤了她的选情。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: if if there's one I think that the Republicans out of these four are most likely to win. I mean, any of these states could go either way. They're all pretty much within margin of error, but Maine is the one where I think there's a chance where Collins hangs on. I mean, she's getting hit hard on rising costs, 3.7 inflation, cost of of gasoline. her initial support of the Iran war. So, there are things that are definitely hurting her campaign, but
+
+</details>
+
+**Ron Placone**: 但是民主党候选人特洛伊·杰克逊对她的攻势异常激进，拼命将她与腐败捆绑在一起。根据外界长期对柯林斯人品的普遍认知来看，其中某些指控未免显得有些过于极端了。因此这场选战注定极其胶着，场面也变得相当丑陋。密歇根已经很丑陋了，缅因同样不堪。泰勒里科那边倒还算体面，但外界扔给他的污泥浊水也是数不胜数——本周甚至连 JD 万斯都跳出来用同性恋污名化词汇去下作攻击他。柯林斯这边则不断要求杰克逊公开道歉，痛骂对方是个彻头彻尾的骗子。整场较量已经演变成了一场肮脏的泥潭战。但我感觉柯林斯最终可能还是能勉强扛住，不过民主党若想全面夺回参议院，缅因是必须拿下的关键一块拼图。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: uh you know, he's been the the the Democrat Detroit Troy Jackson, he's been very aggressive with her, uh tying her with corruption and and some charges maybe have been a a little bit extreme based on how she is uh perceived and understood by others. Uh, so I think this is going to be a real real close one. It's gotten kind of ugly. A number of these have gotten rather ugly. Certainly Michigan is ugly. Maine's pretty ugly. Taller's not been ugly, but I think all the things that's been thrown at him, including this week, uh, Vance, you know, making a a a homosexual slur. Yeah. Caler Rico. But this has been rather ugly. And uh Collins has wanted apologies at times and um she calls him a liar, Jackson. So yeah, it's kind of an ugly race. I think Collins may hang in here though. Uh but if the Democrats are to take over the Senate, I think they're going to need Maine.
+
+</details>
+
+### 数据中心反噬、经济痛感与道德底线的崩溃
+
+**Bruce**: 是的，即便民主党横扫这四个席位——成功翻盘德州、阿拉斯加、缅因并保住密歇根——算下来依然还差一个席位才能达到多数。所以民主党要夺回参议院确实是极其艰巨的任务，但他们这次确实撕开了一道缺口。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah, I I think uh even Democrat win this four seats, right? like Philip, Texas, Alaska and Maine and whole Michigan that's still one seat short. So that's the reason I think uh winning the Senate is really challenging for the Democrats but they they definitely had a shot at it Republican seat.
+
+</details>
+
+**Ron Placone**: 没错。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Yeah.
+
+</details>
+
+**Bruce**: 此外如今很多具体的新兴议题正在全面发酵，比如**AI 数据中心（Data Centers）**已经成为了头号民怨爆发点。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Um but I think a lot of issues nowadays like the data center has become a key issue.
+
+</details>
+
+**Ron Placone**: 天哪，完全没错！
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Oh my god. Right. Like
+
+</details>
+
+**Bruce**: 连州长选情都因此被彻底搅动。现任州长原本是极其亲数据中心的，现在迫于民怨也不得不改口，宣称“我们要对这些项目重新展开严格审查”。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: the the the governor is become uh in play because of that because like the uh the current governor is pro data center but nowadays he started to change his positions. He say oh we're going to put those into review and
+
+</details>
+
+**Ron Placone**: 你是指宾夕法尼亚州吗？
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Oh you mean in Pennsylvania?
+
+</details>
+
+**Bruce**: 不，宾夕法尼亚和德克萨斯都是如此。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: No no in both Pennsylvania and Texas.
+
+</details>
+
+**Ron Placone**: 政客们在这个议题上的立场摇摆简直令人叹为观止。起初一大批政治头面人物都在疯狂力挺，等到看见民意调查结果以及选民的滔天怒火之后，立马全盘倒戈，为了讨好选票争先恐后地向选民献媚：“千万别误会，数据中心简直糟糕透顶，我们这儿绝不欢迎这玩意儿！”两头通吃的投机嘴脸彻底暴露无遗。而在密歇根，对加拿大加征的关税引发了零部件供应链断裂和电费电网账单的狂飙突进。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: I think uh both got there's a lot of flip-fpping on that issue. that you had a lot of uh political leaders who were in favor and then they saw the polls and how people viewed it and all of a sudden they backed off and now I've been trying to uh appeal to the voters by saying, "Oh no, data centers are bad. Not for us." Uh so yeah, they've kind of tried to have it both ways and we've seen a lot of flip-flopping on that one. For Michigan, the Canada tariff is a big part because like all the parts, all the things and power bills.
+
+</details>
+
+**Bruce**: 是的，数据中心的耗能是极其恐怖的。而在阿拉斯加，燃油、渔业和永久基金的分配则是核心矛盾。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. Data centers huge. Alaska, it's uh fuel and fish and the permanent fund all the things. You know, these are the main issues
+
+</details>
+
+**Bruce**: 至于缅因州，则是医疗医保体系改革与对加贸易。很多人对特朗普医疗新政带来的看病医保剧变感到极度愤怒。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: for Maine. Healthcare Canada trade. I think a lot of people are pretty pissed about the healthc care change, you know, like the they're healthcare because of the Trump's new policy.
+
+</details>
+
+**Ron Placone**: 没错。尤其是像密歇根、缅因和阿拉斯加这种临近边境的区域，我们如何与加拿大人打交道关系到最切实的生计。整场无休止的贸易战在普通民众看来完全无法理喻，人们普遍认为这种对抗压根就不该发生，大家现在迫切希望向始作俑者追责。在某种程度上，在位的共和党候选人自然就沦为了承受民意怒火的活靶子。特朗普自己不是反复叫嚣“就当是我在参选”吗？
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Yeah. And this this stuff with Canada though, I I think it is, you know, especially as you get up in places like um Michigan, Maine, Aladd, I mean, this stuff matters how we interact with the Canadians. Mh. And I I think the the this whole uh trade war, people don't understand why. They think it's it should have never happened. And they're looking to hold I think somebody accountable for it. And in some ways, it maybe some of these Republican candidates will be the one. I mean, hey, Trump has said how many times? Pretend I'm on the ballot.
+
+</details>
+
+**Bruce**: 既然他这么说了，选民还真就照着这个逻辑去投票了，而这必然会狠狠重创共和党。问题在于特朗普根本不受欢迎，但他自己却毫无自知之明。我不知道他是不是永远生活在自己的信息茧房里，他的**支持率**早已跌破了他自己创下的历史最低纪录。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. Well, I I I think some people are going to pretend and that may not serve the Republicans well. I think the problem is like he's not popular. He he didn't realize that. I don't know if he living a echo chamber because his approval rating is uh breaking his own record like historic
+
+</details>
+
+**Ron Placone**: 逼近历史冰点。毫无疑问，当下你能想到的每一项民意调查，全都显示他的反对率远远压倒了支持率。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: close historic lows. Uh there's no question uh every poll imaginable uh is showing just very just much higher disapproval than approval rating. You know I
+
+</details>
+
+**Bruce**: 他依然试图掏出过去的陈旧剧本。他在共和党党内确实号召力极强，如果大家为了死守党派阵线，把他想象在选票上或许能巩固党内基本盘；但今年他代表的是执政的现任当局，他的各项政策实实在在地把大量老百姓的生活搞得一团糟。因此我认为许多深感被背叛的边缘选民会借此机会狠狠惩罚他。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: I think he still want to uh you know refer to his old playbook in the past. You know he's very popular in Republican party. Uh so if people want to hold the party line pretending him on the ballot would be probably helpful for that. But again, like this year, he is incumbent. He's on the he's he's a current administration and he his policy basically screw up a lot of people's lives. So, I think a lot of disfranchised uh voters will use this opportunity to really punish him. At least that's what I'm thinking about.
+
+</details>
+
+**Ron Placone**: 我完全同意你的判断。甚至在他的基本盘内部，他也已经流失了相当一部分支持者。固执的极端“MAGA”铁杆自然不会走，但那些处在边缘摇摆位置、或者在 2024 年仅仅因为厌倦了民主党路线而认为特朗普是相对更好选择的选民，如今都在纷纷撤退并痛陈：“这绝不是我当初投票想要的结果。”令人触目惊心的是，当你审视特朗普的各项执政满意度时，他甚至连在向来擅长的**移民议题**上都没能拿到及格分。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: I agree with you. I I do. And even with his base though, he has lost some support and you know, not the diehard Omega, he's not going to lose them. But those that were kind of on the fringes, he's losing a healthy percentage of those. Or those that kind of migrated toward them because they just didn't like the direction of the Democrats and thought he was the better choice in 2024. Many of them are retreating and saying, "You know what? This isn't what I sign." I mean, it's amazing to me that when you look at approval of Trump's performance, he doesn't even get high marks on immigration.
+
+</details>
+
+**Bruce**: 是的，我看过移民执法局在街头残暴殴打甚至致死美国公民的野蛮视频，这绝不可能带来任何民意支持。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. Yeah. I think like uh I see a brutal video of I see killing US citizens on the street is not helping, you know.
+
+</details>
+
+**Ron Placone**: 绝无可能，处理问题自有法度，绝大多数民众都认定眼下这种粗暴野蛮的做法绝非大家心之所向。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: No, no, not at all. there's a way to do things and a lot of people think that the the way that it's been done is not not what we want.
+
+</details>
+
+**Bruce**: 这正是让我深感困惑的地方。早在 2024 年我就清楚预见到了今天这一切，为什么那么多选民当年就视而不见呢？他们难道不了解特朗普是怎样的人吗？看不出他一旦上台会干出什么事吗？我有时候对这种所谓的民主制度感到非常失望。我作为一个把英语当第二语言的外国人，很早以前都能看得一清二楚，我真不想说那句“我早就警告过你们了”。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Uh but again that that actually puzzles me because I can see this coming in 2024. How could all this voter never see this coming? Like they didn't know about Trump like they didn't see what he is planning to do when he get into office. Like I just feel really disappointed in the democracy because like I as a starting here as a foreigner like I can see that coming uh way ahead of time. I don't know like English is not even my first language you know like I but I I see this coming. I I hate to say it but I told you so like when you
+
+</details>
+
+**Ron Placone**: 我太理解你的心情了。大约一年半前我和妻子去意大利和希腊旅行，在当地我们被问到最多的问题就是：“你们怎么可能第二次把他选上去？”大家的意思是：如果说第一次你们被蒙蔽了，误以为他是一股能抽干华盛顿沼泽的清流还情有可原；但在国会山骚乱之后，你们怎么还会再次选他？
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: I hear you. Yeah. I hear you loud and clear. Well, that was, you know, we went uh my wife and I went overseas uh about a year and a half ago and uh when we were there, we were through Italy and Greece and the number one question people had was, "How could you have elected him a second time?" You know, it was almost like, "Okay, the first time you kind of fell for it. You thought it was a fresh refreshing train. He's he's changed. He's going to drain the swamp. But the second time after that insurrection, why would you elect that?
+
+</details>
+
+**Bruce**: 在他那极其糟糕的疫情应对、以及大言不惭宣称“大家可以直接喝消毒水防病毒”的漫天谎言之后，竟然还能选他！
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: After he handled the answer. Yeah. After all, he handled the co he all the lies he talked about like, "Yeah, you can drink all the bleach."
+
+</details>
+
+**Ron Placone**: 确实如此。面对外国朋友的质问，我常常无言以对。正如你所说，我们怎么可能预见不到？有些群体直到今天依然在自欺欺人，但我真诚地寄希望于有足够多的人已经清醒过来，并把这份清醒投射到本次选举的结果上。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Exactly. Yeah. I mean, I don't know the answer. I I didn't know what to say. Just like what you say, it I just I think how could we not have predicted? How could we not have seen it? And for some people, they're still reluctant to see it, but I I'm hoping that enough have that it's going to impact the results of this election.
+
+</details>
+
+### 执政困境再现与激进内阁成员的未来
+
+**Bruce**: 我也由衷地希望如此。这次中期选举将是一次重大的试金石。如果这届中期选举共和党依然能全面把持国会，我未来可能真的不会再去投票了。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. Uh I I I really hope so. Uh I I think like this midterm will be a testing moment for that. Like if if this midterm we still get like Republican control of the I I may not vote again like in the future.
+
+</details>
+
+**Ron Placone**: 我懂你的感受，那确实会令人万念俱灰。但我实在看不出共和党有任何保住众议院的可能。正如你之前所说，无论是众议院还是部分参议院席位，他们在很多选战中早已经战略性放弃撤退了。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: I know it would be very disappointing. I just I can't see the Republicans keeping the house. I I don't like you say there are races they have just backed off of. Yeah. Both in the House and a couple the Senate.
+
+</details>
+
+**Bruce**: 他们放弃了边缘战线，把全部资源集中到了这几个核心战场。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: They give up. They want to concentrate on the resources. Yeah.
+
+</details>
+
+**Ron Placone**: 没错，他们正在收缩战线，我们刚才列举的这四个参议院战场，就是他们眼下拼死防守的重中之重。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Yeah. So they're really channeling in and the states we've listed here are four of the states for Senate that they're really focused on.
+
+</details>
+
+**Bruce**: 此外 AI 议题已经演变为关键竞选分水岭。很多共和党政客之所以极力推动数据中心落地，完全是因为收了科技巨头的大笔政治献金。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Mhm. Well, the AI actually it kind of becomes the main running point. Um a lot of Republican they are pro data center because you know uh the tech billionaire donated money.
+
+</details>
+
+**Ron Placone**: 钱就是这么流动的。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: That's where the money's going.
+
+</details>
+
+**Bruce**: 那些硅谷科技新贵疯狂砸钱，但在选民层面这却是个极其烫手的政治山芋，因为大部分老百姓根本不希望自家后院竖起高耗能的数据中心。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Those tech bros. Uh so it it's a difficult uh election point because uh you know uh a lot of people doesn't want the data center. So
+
+</details>
+
+**Ron Placone**: 三分之二的民众都持坚决反对态度，这甚至不是微弱多数，而是近七成选民明确反对。在经济、通胀、伊朗战争等所有核心议题上，共和党人几乎在每一个点上都处于彻底被动挨打的防守态势，因为公众舆论普遍站在了他们领导层的对立面。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: twoird people don't. Yeah. I mean you're you're talking not just the slight majority you're you're talking close to seven out of every 10. Yeah. The other that's that's a tough cell. I mean, when you look at the issues that we're questioning on, uh, the economy, inflation, the Iran war, I mean, the Republicans are on the defensive almost every one of these because popular opinion is on the other side of where they're at right now. Yeah. Or at least where their leadership's at.
+
+</details>
+
+**Bruce**: 我觉得他们正在重蹈当年拜登政府的覆辙。当时通胀高企，普通工薪阶层的实际生活被压榨得痛苦不堪，但拜登整天挂在嘴边的却是“股市又创新高了”、“看看我们推行了多么宏伟的法案”，完全拒绝正视百姓的真实体感与宏观大内宣之间的巨大鸿沟。特朗普现在面临的阻力甚至更大，因为经济比过去更糟糕，他当年许下的诺言全部化为了泡影。只要稍微关注点时政新闻，任何正常人都会感到怒火中烧；如果还不愤怒，那只能怪你自己麻木不仁、未曾采取任何行动来扭转这种荒局。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: I think they're going over going through the same uh issues Biden administration have. you know at that time the inflation is still high uh and also you know the squeeze on the uh everyday working class is like really tough but Biden want to talk about look at the stock market it's like making new highs look at all the great policies who are doing they just don't want to admit that uh how people feels are quite different from your headlines so I think Trump probably face a bigger hurdle because now the economy is even worse and he promised he want to do all those things but he breaks them all. So I would expect a certain like if you follow the political news you should be pissed. Uh if you're not you should not you have no other people to blame but yourself like you didn't take actions to correct this.
+
+</details>
+
+**Ron Placone**: 我完全同意。在关于经济现状的叙事话术上，2023至2024年的拜登政府与过去一年半的特朗普政府存在着惊人的相似性，尤其是在伊朗战事爆发之后更是如此。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: I agree. No, I yeah, I see a lot of similarities in terms of how the economy is discussed between, you know, Biden administration 2023, 2024 and the last year and a half of the Trump administration. Well, especially since the Iran war.
+
+</details>
+
+**Bruce**: 再次聚焦德克萨斯州。特朗普在 2024 年以 13 个百分点的压倒性优势横扫德州，特德·克鲁兹（Ted Cruz）在参议院选举中也赢了 8 到 9 个点。然而现在泰勒里科竟然反超了 3 个百分点。虽然仍在误差范围之内，但相比当年 13 个点的红海优势，整体选情几乎发生了 17 个百分点的剧烈翻转！共和党踢掉了深耕二十年的现任参议员，硬塞了一个烂泥扶不上墙的候选人。特朗普一个月内专程跑了德州三次，足以证明共和党高层有多么恐慌。泰勒里科在物价民生和宗教信仰上的主张，本身完美切合了传统德州选民的理想画像。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Mhm. So, right now, I want to look at Texas. We already talked about this before and you know, Texas is a tossup. Uh Trump winning this uh handsomely in 2024 by 13 points. So that's a huge win. And Ted Cruz win the Senate by 8 to nine points. So that's still a big margin. Uh but now Tyler Rico is leading plus three. Still within the margin of error, but like that's not a good sign for Republican when Trump win double digits. Like basically you have a much bigger swing than that. Like you know Trump's 13 plus the three. So you have a like I guess almost a 17point swing. Um the other thing we already said like you have a 20-year incumbent candidate. You just dump him and then you got this uh really flawed uh candidate. So Trump already spent three trips in a month like try to visit right uh Texas because I think the Republican are really worried about this uh this race. I think Telerico has a pretty good issue to run on like the you know affordability and religion all the things you know he basically fit in the classical Republican profile for the perfect candidate right like if you tric wrong as a Republican he'll win immediately I think
+
+</details>
+
+**Ron Placone**: 没错，这也是为什么泰勒里科胜算如此之高的核心原因。在如今充斥着负面抹黑和恶意造谣的竞选时代，借用拳击擂台的比喻，优秀的候选人必须具备极强的**防守反击（Counter-Punch）**能力。泰勒里科在这方面堪称大师。对手嘲笑并给他扣上“泰勒包（Teleico）”的绰号，他干脆顺水推舟印制成了竞选文化衫公开售卖，甚至一跃成为最畅销的周边商品；对手造谣说他是个不沾荤腥的素食主义软蛋，他便大方在镜头前享受德州烤肉；对手攻击他的未婚妻曾是他的幕僚团队成员，他也毫不退缩地逐一击碎。最经典的莫过于当对手借口他患流感而要求他提供“存活证明”时，他直接硬核反击要求帕克斯顿提供“脊梁骨证明”并走上辩论台。这种凌厉的反击正是当下选战所迫切需要的特质。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: yeah so that's that's the reason why he has a such a high chance like so I I really want to watch this one live uh when we're cutting. Yeah, me too. Yeah, it's going to be the big one. The other thing about him and and I believe in this day and age where there's so much negative campaigning and madeup stories, you have to be if you think of a a boxing analogy, you have to be able to counter punch. Yeah. Ter Rico is very good at that. uh he's able to bring points back to his message while hitting a I mean instead of um you know he would embraces the Teleico nickname. I mean he's had shirts made and he sells them and that's his biggest selling item. Uh this whole he doesn't eat meat. I mean he's proudly eating barbecue and you know his girlfriend is what a former staffer. Uh, so you know they everything they try to attack him on it doesn't they don't stop but he's punching back and then he I like what he said about when they said we want proof of life you know because he was he had the flu and he said I want proof of spine from Ken Paxton. I want him to debate. So show me proof of spine. Yeah, he is really good. He counter punches well and you need that.
+
+</details>
+
+**Bruce**: 他真是一位极其强悍的候选人。我常常在想，为什么民主党在全国总统大选舞台上就推不出这样极具战斗力的人选呢？
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: He is such a strong candidate. I mean like I just wonder why uh Democrat couldn't have some strong candidate like him in the national stage for the presidency like every time.
+
+</details>
+
+**Ron Placone**: 谁知道呢，未来拭目以待吧。不过今年民主党一个显著的积极转变，就是有更多具有**宗教信仰背景**的候选人站了出来，其中不乏真正的牧师。长期以来共和党一直企图将民主党固化为激进的无神论共产党，而泰勒里科向所有人证明，你既可以是一个坚定的进步派候选人，同时也完全能够打动跨党派、跨信仰的传统选民圈层。即便民主党最终拿下德州，一部分原因是由于帕克斯顿本人的不堪，但更大的原因在于泰勒里科自身的卓越素质。整个民主党阵营都必须从这场战役中汲取深刻教训。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Well, who knows? I mean, we don't know yet. I mean certainly one of the things that we saw as a change for the Democrats is you have more religious types running as uh Democrats this year. There's a number of pastors and so you have people you know because it seemed like um the Republicans had tried to paint the Democrats as as the communist communist party. atheist and and now you have a little bit of swing. And I think Telerico shows that you can be a progressive candidate, but you can also appeal to different different constituencies. I mean, again, this is this if the Democrats win this, part of it will be because of how flawed Paxton was as a candidate, but I think part of it is because of who Tel Rico is as a candidate. And I think there needs to be uh some learning here. Yeah, we need to learn from Democrats need to learn from it.
+
+</details>
+
+**Bruce**: 数据中心问题必然继续重创在任者。所有的审批和建设全是在现任政府眼皮底下批准的，这也是为什么德州州长 **格雷格·阿博特（Greg Abbott）** 也开始恐慌的原因。最近曝光的泄露录音里，帕克斯顿甚至在背后大肆贬损阿博特的支持率。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. Um I think this risk is still uh in play and we'll monitor this uh closely. The data center is definitely a important issue and I think uh as a incumbent you have a problem because like all the data center are built under your watch and you approve them. So uh that's the reason why the government race the governor race become in play like I think the abbot is uh freaking out because of the poor data right. So I I recently saw there's a leaked audio like Paxton was talking about the Abbott's approval.
+
+</details>
+
+**Ron Placone**: 帕克斯顿几乎在向所有人疯狂甩锅，甚至连自己的前妻帮忙做报税申报都要被他拉出来大肆指责一番。目前至少流出了四段极为致命的录音，每一段都把他自私猥琐的嘴脸暴露得淋漓尽致。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: He's been he's been talking about everybody blaming everybody even blaming his wife for doing tax return or his ex-wife for doing tax return. Yeah, this guy Yeah, there's been what at least four uh leaked audios and and he's not looked good in any of them.
+
+</details>
+
+**Bruce**: 所以很可能会出现你提到的分裂投票——阿博特险守州长，但帕克斯顿丢掉参议院席位。至于密歇根州，现任州长 **格雷琴·惠特默（Gretchen Whitmer）** 在州内威望极高，民主党州长候选人乔斯林·本森（Jocelyn Benson）胜算很大。惠特默当年甚至一度被视作竞选总统的热门人选。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Mhm. So I I I think um it's likely to be the situation you mentioned like there may be a split, right? I bet when the governor but Paxton lost the Senate. So that that's kind of interesting scenario to look at. Uh still I think it it's hard to win in Texas as a Democrat. It's a it's a traditional red state. So it's very diff very difficult to change people's mind even though like yeah people for people stay in the party line all their life it's very difficult like they probably just not voting but they ask them to vote for a Democrat that that would be uh very tough um definitely so for the Michigan I think u is very strong candidate and uh it'll be interesting to look at like Michigan used to be like you know it's always a purple state or swing state so right anything could cabin, right? So, let's see. It's always close in Michigan. It is. It's always close to Michigan. Right now, the gap is a little larger than I would have expected. Um, you know, I think I'll say it's going to win this. I I think it's going to probably be closer than what the polls currently indicate. Yeah, I think it's going to be a couple points. Definitely. The next one, the the governor race, uh, it's kind of leaning Democrat. Um but Benson has a very high chance to win like poly market gave him 3% chance. So uh yeah I I think because uh the current governor is very popular in the in the state. So yes yes you're talking yeah Michigan governor.
+
+</details>
+
+**Ron Placone**: 没错，惠特默非常强势。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Yeah. Yeah. Whitmer. Yeah. Yeah. Absolutely. She she's she's been a hey remember she was considered um you know outside chance to run for president. I mean she was popular in Michigan. Yeah.
+
+</details>
+
+**Bruce**: 她作为候选人的个人实力远比卡玛拉·哈里斯要强劲得多。拜登当年画地为牢限定副总统人选，完全是自掘坟墓。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. She's a stronger candidate than uh Kamla Harris. Yeah. Looking back on that one that Yeah. I I just think a lot of time talking about what happened there. Yeah. I I just think uh Biden just shoot himself in the foot. Oh yeah. When he kind of narrow his uh selection for the VP, narrow down that and also limit himself to the limited options. So that's that's Biden's fault. I'm I'm blaming Biden for that. Like uh the last
+
+</details>
+
+**Ron Placone**: 拜登如今几乎成了特朗普政府唯一且永远的政治出气筒。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Hey, we all a Yeah, we What was it in Trump's he's talked about Biden over 400 days in office or something like that? Yeah. Yeah. B B B B B B B B B B B B B B B B B B B B's just the the whipping boy for the Trump administration, you know.
+
+</details>
+
+**Bruce**: 你看到那个视频了吗？特朗普在白宫向外宾展示历任总统肖像，唯独在中间把拜登的画像打上马赛克。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. You saw the video like he showed the tour with President Xi in White House and then he his picture and then the middle of Biden is auto pan like
+
+</details>
+
+**Ron Placone**: 这种言行举止何其下作、何其失礼、何其缺乏教养！一国元首堕落到这种地步，实在令人发指。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Yeah. I mean, how how disgusting, how disrespectful, how uncivil. It's it's just appalling to me that that's the behavior of our president.
+
+</details>
+
+### 道德双标、终局预测与爱泼斯坦卷宗
+
+**Bruce**: 回到缅因州参议院选举，原本初选获胜者因为卷入性侵指控争议而主动退选。你认为民主党是否本该坚持留住他？毕竟他在初选中势头强劲，而反观特朗普身上背负着多项性侵甚至刑事定罪，依然在政坛呼风唤雨。为什么民主党选民一定要做追求道德洁癖的卫道士，而共和党选民却可以毫无底线地拥护任何劣迹斑斑的候选人？
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. So, uh, for Alaska, we already talked about this. Uh, it's it's a tie race, but I think the current, uh, challenger, uh, actually had a good chance. So, she does. I mean, in there, I think it's above a fivepoint uh, lead right now. She seems to be a pretty good campaigner. And, you know, I think Sullivan's just maybe tied too much at the hip to Trump, and that's not playing well in Alaska right now. So the governor race um I think the the JKT he has about 77% chance of winning it. So uh yeah it's kind of interesting because right right now it's three Republican against one Democrat, right? But you're you're voting in a ranked way. So how Yeah, that's that's really interesting. Um, someone say like Alaska's uh voting system is better than the, you know, like winner take all. I don't know. What do you think? Yeah, I hear different arguments on both sides. I'm not sure, you know, whi which is ultimately better, but uh to me it still comes down to you're electing one person and you know, so either way could get you there. And you know, I'm sure there are good arguments on both sides. So for the main uh Senate seat, right, like uh uh Sudan Collins, right now he's facing the challenger uh Troy Jackson. Uh you know, the original uh primary winner Planter, right? He had personal issue, right? Like a sexual assault allegations and he even though he denies it, he quit. Do you think Democrats should just keep him because he is a strong candidate? He win the primary there and you know Trump has a sexual allegations, sexual assocations and even convictions, he still runs.
+
+</details>
+
+**Ron Placone**: 我内心的理想主义洁癖依然坚信，一旦候选人被坐实这类丑闻，就应当立刻被剥夺参选资格，社会必须坚守道德红线。但我能理解你的质问：为什么永远只有一边在单方面遵守道德法则？
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: I know I I you know the purist in me feels like when we know these kind of things about a candidate, it should disqualify them. At some point you have to say
+
+</details>
+
+**Bruce**: 共和党选民根本不在乎这些道德瑕疵。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: but the Democrat you know Republican voter doesn't care like why would that
+
+</details>
+
+**Ron Placone**: 我完全理解你的逻辑，Bruce。虽然从我个人角度而言，我对他的主动出局感到欣慰，但我完全懂你对于这种荒谬双重标准的不解与愤怒。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: yeah I hear you Bruce I do I mean what what you are saying right now makes some sense for me personally I was glad that they pushed him out but I could I understand what you're saying. I do.
+
+</details>
+
+**Bruce**: 我并不是主张违背道德，我只是质疑为什么只有民主党需要充当圣人，而共和党无论做出多么伤天害理的丑事都可以被无原则原谅？整个美国社会的公序良俗正在经历令人绝望的道德大滑坡。在当下这个时代，哪怕水门事件再次上演，恐怕大家也早就见怪不怪了。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. I mean I'm not saying like I I want him to run. I'm just like asking the question because I think No, it's a good question. Yeah. Why why the Democrat need to be the purist and be this moral leader but Republican can do whatever the they want and then still at the the candidate. Yeah. Yeah, you're right. Yeah. I think I think uh there's certainly a moral decline in the general American society like you know someone this this kind of people in the past is unimmanageable but now you know uh even I would say like in Trump's era even watergate happens like nobody would take it as a big deal right
+
+</details>
+
+**Ron Placone**: 完全不可同日而语。正如帕克斯顿的前妻公开宣称的：“即便你们再厌恶这个人，为了国会控制权也必须选他。”但如果我们退化到去无底线拥护这种人，这本质上清晰地揭示了我们自身作为一个社会的堕落。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: yeah you're right I I can't disagree with you again you know going back to Texas I I think that's one of the things that we're going primary example, right? like Pex is is there a point where we say no this person I cannot see and you know see that's what his ex-wife was saying she was saying hey even if you don't like this person we need them to win for control so uh but to me it if we're supporting a person like that that speaks to I think who we are
+
+</details>
+
+**Bruce**: 我完全赞同，政客的个人人品至关重要。一个被赋予了如此庞大国家权力的公仆，如果毫无基本的道德敬畏与操守底线，又怎能指望他不会贪得无厌、滥用职权？
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: yeah I I agree I think character matters like I think the politician need to be a role model because like he's given such important uh power so much so much power right like and he will be representing the voters if he doesn't have a high moral standard like how how would you trust him like yeah he would be crushing as corrupted as hell like this is the current administration you know like
+
+</details>
+
+**Ron Placone**: 确实如此。关于缅因州，最终的胜负完全取决于哪一方能把自己的核心选民最彻底地动员到投票站。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: that's so true yeah so that'll be interesting see to watch Uh but I think uh Susan Collins has a better chance than other candidate, you know, other Republican candidates. I I agree with you. I think she, you know, she's had a decent reputation and um yeah, certainly the initial support of the Iran war hurts her. Uh some of the tariff issues hurt. Um but she's got a shot. It's going to be another close one. It's going to be a close, you know, it comes down to who gets the vote out. who who who gets their vote out and that that will determine.
+
+</details>
+
+**Bruce**: 那么教授，对于这四个关键州，你的最终预测结论是什么？你认为民主党会四战全胜并再下一城逆转参议院吗？
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: So, professor, what's your final verdict on the on this four state? Do you think uh Democrat will win all four of the state and win another state? So, they will take control of the Senate.
+
+</details>
+
+**Ron Placone**: 如果一定要下注，我的预测是民主党拿下四席中的三席。就算四席全赢我也不会感到震惊，要是只赢两席倒会让我有些意外。我认为民主党确实有夺取参议院的现实机会；但正如前面分析的，如果优势极其微弱，导致约翰·费特曼再度成为左右局势的关键摇摆票，那么参议院的实际生态可能依旧不会发生实质性改变。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: If if I had to bet on these four, I would say the Democrats win three out of four. Uh it wouldn't be surprised. I wouldn't be shocked if it was four out of four. won't be shot. Maybe if it's two out of four. Uh but I'm I'm thinking three out of four here. I think the Democrats do have a shot at taking over the Senate, but you know, if it ends up being so close that Federman's somewhat the swing vote that that that maybe doesn't change anything in the Senate.
+
+</details>
+
+**Bruce**: 确实是这样。但无论这次中期选举结局如何，我最大的心愿就是看到小罗伯特·F·肯尼迪（RFK Jr.）被国会弹劾下台。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah, that's true. Uh but again, I think um whatever the outcome of this uh midterm, uh I just want to have RFK Jr. be impeached.
+
+</details>
+
+**Ron Placone**: 我举双手赞成，美国可禁不起麻疹疫情在全国再次大爆发了。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: I can I can take that. Yeah. Hey, we don't need any more measles cases.
+
+</details>
+
+**Bruce**: 他所谓的“让美国再次健康”，简直是让麻疹再度大流行。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. He's like really making me great again, you know, in America. That That's shocking.
+
+</details>
+
+**Ron Placone**: 完全属实，这就是他自吹自擂的“让美国再度健康”。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Yeah, I completely agree. Yeah, he's done wonderful things to make us healthy again. Yeah.
+
+</details>
+
+**Bruce**: 他绝对该被排在弹劾名单的头号顺位，尽管皮特·海格塞斯（Pete Hegseth）和卡什·帕特尔（Kash Patel）那帮人也同样劣迹斑斑。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. I think that he's he's a primary like the the the number one guy they should impeach even though other uh cabinet member are also bad you know
+
+</details>
+
+**Ron Placone**: 他们也都在排队等着被清算呢，名单实际上长得很。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: H he is in the running though too. Yeah. Hex and also like the catch Patel you know those guys. Yeah. There's there's a long list actually.
+
+</details>
+
+**Bruce**: 前阵子海格塞斯甚至丧心病狂地提议向公众现场直播对死刑犯的行刑过程，最后连特朗普都看不下去紧急叫停了。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. But but recently I saw like uh Hex was uh talking about streaming the execution of of a you know uh criminal and I think Trump caught it off. I think that's a good move because it's going to be a disaster. You know like the other countries kind of still do that. Uh yeah absurd disaster you know those countries. Not here. Not here. So even Trump couldn't take it. Uh that that that's
+
+</details>
+
+**Ron Placone**: 这种反人类的荒唐灾难绝不该发生在文明社会的土地上。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: right.
+
+</details>
+
+**Bruce**: 距离选举只剩下最后两周左右了，十一月的第一个星期二，真正的决战时刻马上就要到了。马斯克一个人就砸了近三亿美元给共和党，但他早就彻底绝口不提爱泼斯坦案卷宗了。民主党一旦夺回众议院，必须掘地三尺彻底清算**爱泼斯坦案卷宗**，这是特朗普永远无法洗刷的阿喀琉斯之踵。他的第二任期必须被钉在“包庇恋童癖之任期”的历史耻辱柱上。
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah, I I can't wait. I cannot wait. So, it's about two weeks from now, right? Like uh yeah, it's getting close. It's first first Tuesday of uh November. So, we're getting close. That that'll be really exciting. So, uh I I think those are the risks. Uh we should keep an eye on this four battleground. Republican is pouring lots of money like Elon is uh you know donating Oh yeah.$200 00 million in this like which is about 300 million so far. Yeah. So I I wonder where is Elon's uh American party like last year he was like yeah I'm going to party and well I guess he made up with Trump. I guess he's made up, you know, and he he didn't talk about the Epstein files anymore, you know, like the uh I really think uh when Democrat win back the house, they should make a big deal of this abstin foul. I think they will. This is uh Trump's Achilles heel. So, he apparently doesn't want to talk about it and he won't cover up for it. He'll say it's a dead issue. Yeah, they should ping this forever on him and Trump's second term will be pinged as the abstain term. So, uh I I want the voter remember they elect a pedophile pedophile protector. That's like a more accurate uh definition. It is to the party and uh cover up for those class. Yeah.
+
+</details>
+
+**Ron Placone**: Bruce，我们今天确实深度剖析了极其广泛的核心议题，聊得非常透彻。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Well, Bruce, we covered a lot of ground here, didn't we?
+
+</details>
+
+**Bruce**: 是的，能与你深入对话非常畅快。各位观众如果对深刻的政治洞察以及如何提升职场战略沟通感兴趣，欢迎关注 Ron Placone 教授的专属频道。他在商学院教授 MBA 沟通管理课程，大家务必去看看他的精彩内容。非常感谢你参加今天的播客！
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. Yeah. super excited to have this conversation with you and uh let's just keep eye on this uh midterm elections. Uh sounds good. Yeah. So, if you're interested in uh those political uh takes and also how to communicate better, please uh follow uh Professor Ron Pukun's channel. I'm going to put the handle in the description. No, he teach about the communication, how to communicate as a executive in the business settings and and he's I think you you're still teaching class, right? I am. I I I still teach uh a class for MBA students. Yeah. Yeah. Yeah. So hopefully one day you can put some of your teaching videos. I think it will be beneficial for
+
+</details>
+
+**Ron Placone**: 永远是我的荣幸，Bruce。我在频道上已经发布了大概 120 期关于卓越沟通的教学视频，欢迎大家观看探讨。
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: Yeah. I have about 120 videos now on uh Professor R.J. Plleone on communication excellence. So I hope give it a shot. see what they think. always a pleasure, Bruce.
+
+</details>
+
+**Bruce**: 期待 2028 年大选初选时我们再聚首，继续复盘那些精彩的政治攻防对决！非常感谢教授，保重！
+
+<details>
+<summary>Original English</summary>
+
+**Bruce**: Yeah. Hopefully we can do another one like uh when we get to the 28 election, you know, like the exciting looking at the primaries, you know, like which party will have a strong candidate coming out of the primary.
+
+</details>
+
+**Ron Placone**: 那注定又会是一段跌宕起伏的历程。保重，兄弟，再会！
+
+<details>
+<summary>Original English</summary>
+
+**Ron Placone**: It's going to be an interesting ride. Awesome. Thank you, professor. Talk to you later. Take care, man. Byebye.
+
+</details>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>为什么更大的上下文窗口拯救不了你的 Agent：上下文工程与记忆架构实战</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">为什么更大的上下文窗口拯救不了你的 Agent：上下文工程与记忆架构实战</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-08</span>
+    
+
+    <header class="article-header">
+      
+      <h1>为什么更大的上下文窗口拯救不了你的 Agent：上下文工程与记忆架构实战</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/context-engineering/">context-engineering</a>
+      
+        <a class="tag-link" href="/tags/agentic-architecture/">agentic-architecture</a>
+      
+        <span class="tag-pill tag-pill--no-page">memory-management</span>
+      
+        <span class="tag-pill tag-pill--no-page">llm-reasoning</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">随着 Agent 频繁调用工具产生海量数据，单纯依赖大上下文窗口会导致迷失在中间、推理退化与成本失控。来自 AWS 的 Elizabeth 结合开源框架 Strands，系统性阐述了对话管理、多级记忆架构、内存指针与异步解耦等核心上下文工程策略。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=DrfyORO8RqA" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-08T00:00:00.000Z">2026-10-08</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>6 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E8%AE%A4%E7%9F%A5%E9%87%8D%E5%A1%91%E6%97%A0%E9%99%90%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AA%97%E5%8F%A3%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%B9%BB%E8%B1%A1">认知重塑：无限上下文窗口的工程幻象</a></li><li class="outline-h3"><a href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E7%AD%96%E7%95%A5%E5%9F%BA%E4%BA%8E-strands-%E6%A1%86%E6%9E%B6%E7%9A%84%E8%BD%BB%E9%87%8F%E5%8C%96%E5%BE%AA%E7%8E%AF">上下文管理策略：基于 Strands 框架的轻量化循环</a></li><li class="outline-h3"><a href="#%E5%A4%9A%E5%B1%82%E7%BA%A7%E8%AE%B0%E5%BF%86%E5%B7%A5%E7%A8%8B%E7%9F%AD%E6%9C%9F%E9%95%BF%E6%9C%9F%E4%B8%8E%E5%9B%BE%E5%85%B3%E7%B3%BB%E7%9A%84%E7%B3%BB%E7%BB%9F%E9%97%AD%E7%8E%AF">多层级记忆工程：短期、长期与图关系的系统闭环</a></li><li class="outline-h3"><a href="#%E6%95%B0%E6%8D%AE%E8%A7%A3%E8%80%A6%E4%B8%8E%E5%86%85%E5%AD%98%E6%8C%87%E9%92%88%E6%B2%BB%E7%90%86%E9%87%8D%E8%BD%BD%E5%B7%A5%E5%85%B7%E8%BF%94%E5%9B%9E">数据解耦与内存指针：治理重载工具返回</a></li><li class="outline-h3"><a href="#%E9%B2%81%E6%A3%92%E6%80%A7%E4%B8%8E%E5%BC%82%E6%AD%A5%E8%B0%83%E7%94%A8%E7%AA%81%E7%A0%B4%E6%AD%BB%E5%BE%AA%E7%8E%AF%E4%B8%8E%E7%BD%91%E5%85%B3%E8%B6%85%E6%97%B6">鲁棒性与异步调用：突破死循环与网关超时</a></li><li class="outline-h3"><a href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E5%B7%A5%E7%A8%8B%E7%9A%84%E7%94%9F%E4%BA%A7%E7%BA%A7%E8%AE%BE%E8%AE%A1%E6%B3%95%E5%88%99">上下文工程的生产级设计法则</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="认知重塑无限上下文窗口的工程幻象" data-reading-heading="">认知重塑：无限上下文窗口的工程幻象</h3>
+<p>在大模型 Agent 系统的实际落地中，“无限上下文窗口能够解决一切记忆与推理问题”是一个广泛存在的误解。大约一年前，在 Agent 架构尚未全面爆发的早期阶段，行业普遍认为只要模型原生支持的上下文窗口（Context Window）足够大、Token 容量足够多，所有长期交互问题都将迎刃而解。然而现实表明，当 Agent 系统频繁调用工具（Tools）时，外部数据源往往会返回极其庞大的数据载荷；一旦上下文窗口被这些未经提炼的信息直接填满甚至溢出，Agent 就会迅速出现幻觉，其逻辑推理能力也会呈断崖式下滑。</p>
+<p>导致这一退化的底层机理在于大语言模型的<strong>注意力曲线缺陷</strong>（Attention Curve: 模型在处理超长文本时呈现出的两端关注、中间丢失的“迷失在中间”现象）。当上下文窗口中注入的数据量过大时，底层推理引擎往往只能较好地回忆起输入起始端（System Prompt 及初始设定）和末尾端（最新的交互输入）的信息，而位于上下文窗口中间位置的大量实质性细节则会被模型忽略。此外，过度臃肿的上下文还会增加 Prompt 注入攻击的风险，并带来高昂的计算成本与推理延迟。因此，构建现代 Agent 系统的核心在于<strong>上下文工程</strong>（Context Engineering: 在正确的时机为模型精准提供其执行当前任务所必需的最小充足信息），通过主动的数据分流与窗口优化，在保障推理精度的同时最大化节约系统成本。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Greetings. First, I must say, I am Elizabeth, not Morgan, but on the agenda they never changed it. So we are almost the same, only hair color is different, okay? So everything will be similar. Today I will tell you about why infinite context window is a misconception. Yes, this is because right now agent systems break when tools return large amounts of data. The context window overflows, the agent starts hallucinating, and its reasoning capabilities get worse and worse.</p>
+<p>So now context engineering helps us build a better future for these agentic architectures. We have some methods that allow improving the context in the window for these agent applications. Imagine you have an agent monitoring a program, and this agent must extract logs from that project. Every time the agent receives those logs, it adds that data into the context window. Each time, this context window is growing and growing continuously, because in a session every request pulls in the previous ones since the agent has to remember everything.</p>
+<p>Earlier, about a year ago before the agent era, we thought more tokens would fix everything. They said a bigger context window would solve the problem. But today we know that is not true because of the model's attention curve. What is this? We have a large amount of data, but if there is too much, the engine forgets the middle position of this curve. It only remembers the beginning and the end of what we sent in the context window.</p>
+<p>Context engineering is about providing a model with the necessary information exactly when it needs it. Sometimes it is unnecessary for the model to have all information included in the context window. Sometimes an overflowing context window hurts the model because it can accept prompt injections. Context engineering helps optimize the window for best background results and saves costs.</p>
+</details>
+<h3 id="上下文管理策略基于-strands-框架的轻量化循环" data-reading-heading="">上下文管理策略：基于 Strands 框架的轻量化循环</h3>
+<p>为了系统性治理上下文膨胀，工程上通常需要将治理手段收敛为三大核心抓手：<strong>外部存储与指针化</strong>（将海量原始数据持久化至上下文之外，仅在提示词中保留引用指针）、<strong>相关性选择与压缩</strong>（仅提取当前决策最关键的上下文切片，对冗余内容进行摘要）、以及<strong>上下文隔离</strong>（避免多步骤或多 Agent 间无序共享脏上下文）。在具体工程落地中，我们可以首先从对话管理器（Conversation Manager）的会话控制策略切入。</p>
+<p>在具体实践中，以开源且模型无关的 Agent 框架 <strong>Strands</strong>（Strands: 一种仅需极简代码即可自动构建 Agent 内部工作流循环与工具调用的开源框架）为例，该框架内置了针对上下文窗口的三种标准对话收缩策略：</p>
+<ul>
+<li><strong>滑动窗口策略</strong>（Sliding Window）：仅截取并保留会话序列中最新鲜的几轮消息，直接丢弃超出的历史上下文。</li>
+<li><strong>增量摘要策略</strong>（Summarization）：在框架内部对早期陈旧的历史交互进行语义归纳与摘要提炼，仅全量保留最近的少数交互轮次。</li>
+<li><strong>混合压缩策略</strong>（Hybrid Retention &amp; Summarization）：设定特定的总结比例系数（例如 50% 压缩率），动态保留最近的 4 条原始对话，同时将前序累积的上下文压缩合并为结构化摘要。</li>
+</ul>
+<p>开发者在代码层面通常只需编写一行声明代码，框架即可在底层自动驱动 Agent 循环、系统提示词拼接与工具绑定，并无缝适配 <strong>Amazon Bedrock</strong>、OpenAI、Gemini 或本地 Ollama 等多种后端模型。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Today I will show you several methods that will help improve the use of context windows. I merged these methods into strategies: First, we use external storage to move big data to permanent storage, and you can create memory pointers to store this data. Second is selection: you pull out only what is relevant, squeeze and reduce tokens by summarizing, and return that info. And the last is isolation: you can separate context between agents.</p>
+<p>Let us start with the conversation manager strategy. We have many strategies, but let us start simple inside a framework. Here we will use the agent framework Strands. It is an open-source framework we support, free and completely model-agnostic.</p>
+<p>Inside Strands, you can use three different strategies:</p>
+<ol>
+<li>Sliding window, which allows storing only the latest information.</li>
+<li>Summarization inside the framework, allowing you to generalize older information while keeping the last few messages.</li>
+<li>A combination of the previous two, merging the summary of older things with the last few messages.</li>
+</ol>
+<p>With Strands, you only need one line of code to create a working agent loop. That line creates the entire workflow behind the scenes. You do not need to create nodes or count tokens manually, because Strands does that for you with system prompts and tools. It uses Amazon Bedrock under the hood, but if you want to use Ollama, Gemini, or OpenAI, you just add one line to import and switch the model.</p>
+<p>Returning to our conversation manager strategy: you can specify a summarization ratio, such as 50%, and specify that you want to preserve the last four messages. Every time you invoke this agent in the session, it will maintain your context window this way: preserving the latest four messages and summarizing the remaining 50%.</p>
+</details>
+<h3 id="多层级记忆工程短期长期与图关系的系统闭环" data-reading-heading="">多层级记忆工程：短期、长期与图关系的系统闭环</h3>
+<p>当 Agent 面临更加复杂的工作流时，简单的对话窗口截断会带来信息丢失的隐患。为了兼顾上下文的精简与系统记忆的完整性，必须构建分层的记忆体系。记忆架构在工程上主要解构为三个互补维度：</p>
+<ul>
+<li><strong>短期记忆</strong>（Short-term Memory）：专属于当前会话生命周期，精准保存最近对话上下文和局部工作状态，通常结合上述滑动窗口与摘要机制进行在窗维护。</li>
+<li><strong>长期记忆</strong>（Long-term Memory）：当用户开启新会话或需要跨周期检索时，短期记忆被持久化写入<strong>向量数据库</strong>（Vector Database）。系统利用特定的嵌入与提示词结构，在后续对话中根据语义相似度按需召回所需知识。</li>
+<li><strong>关系图谱记忆</strong>（Graph Memory: 实体间复杂拓扑与跨维度依赖的网络化表达）：针对多实体关联、复杂业务依赖或跨流程实体脉络，引入图数据库（如 <strong>Neo4j</strong>），通过图遍历（Graph Traversal）精准追踪实体间的关联与引用。</li>
+</ul>
+<p>在健壮的生产级 Agent 架构中，推荐采用这三者的融合模式：利用短期记忆处理当前交互上下文，利用长期向量数据库调取跨会话经验，并通过关系图谱快速厘清复杂依赖关系，从而彻底摆脱“将所有历史记忆一股脑塞入上下文窗口”的粗放模式。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>What should you do when you have a lot of memory and you do not want to lose everything in the context window?
+You can use short-term memory, because it preserves recent conversational history in the current session. You can use the summarization and sliding functions I just mentioned for short-term memory.</p>
+<p>But what happens when you start a new session with the agent and do not have that short-term memory? You can have long-term memory and create a vector database for it. You can have different types of vector databases and retrieval prompts that understand your conversation and save everything you need.</p>
+<p>And the third type is relational memory. You can use graph entities—you can look into Neo4j manuals for more details. You can perform graph traversals and link connections.</p>
+<p>As you can see, you can use a combination of all three:</p>
+<ul>
+<li>Use short-term memory for the current session.</li>
+<li>Access long-term memory for past historical records.</li>
+<li>Add graph memory if you have entity connections you want to preserve.</li>
+</ul>
+</details>
+<h3 id="数据解耦与内存指针治理重载工具返回" data-reading-heading="">数据解耦与内存指针：治理重载工具返回</h3>
+<p>在系统监控、代码审查或运维排障场景中，Agent 调用的诊断工具往往会返回动辄数万行的应用系统日志。如果 Agent 直接将这些裸日志写入上下文窗口，窗口会被瞬时击穿。解决此类高负载数据交互的标准模式是<strong>内存指针机制</strong>（Memory Pointer: 在外部持久化沉淀重载载荷，仅向上下文窗口传递唯一轻量标识符的设计模式）。</p>
+<p>其核心交互闭环由以下组件协同实现：</p>
+<ol>
+<li><strong>数据捕获与落地</strong>：当下游工具检索出海量日志时，工具内部将完整数据转存至外部独立存储系统（如 S3 或专用状态存储），并仅返回一个轻量级的记录唯一标识符（Identifier）。</li>
+<li><strong>上下文隔离</strong>：Agent 的上下文窗口中仅记录状态标记与轻量指针（Pointer），极大地降低 Token 开销并保护模型注意力。</li>
+<li><strong>按需代理查询</strong>：当 Agent 确实需要理解或比对部分日志时，它无需读取全文，而是通过专门构建的下游辅助工具传递该标识符，并提出具体问题（例如：“针对该任务标识符对应的日志，请检查第 42 行附近的错误码”），由下游模块负责切片并返回高度精炼的结论。</li>
+</ol>
+<p>当业务复杂度进一步上升、单个 Agent 难以兼顾多重职责时，应推进<strong>多智能体蜂群架构</strong>（Multi-Agent Swarm）。各子 Agent 拥有完全独立的上下文窗口，避免因“上下文公用”而导致无关业务垃圾互相污染；子 Agent 之间仅通过共享调用状态指针（Call State Point）与数据标识符实现协作协同，保持个体上下文的高纯度。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>What should you do if your project generates huge volumes of logs? You don't want to put all these raw logs into the context window every time you call the agent. You can save this using indexed memory and memory pointers.</p>
+<p>How does it work? You have a tool that returns a bunch of logs. You use that tool to fetch logs, save them into external storage, and return an identifier for that entry. Using the agent's state condition, you store that identifier as a memory pointer in the context window. Then you can use another tool that can understand those logs by passing messages like: "Hey, what happened in the logs for this identifier?" You don't need the agent to see all raw records to understand the situation.</p>
+<p>If inspecting everything is strictly necessary, you pass the identifier: "Here is my identifier, please inspect these logs because I need to understand them." In code, inside the agent, you build this architecture using tool decorators. You receive program logs, capture the info, save it, and create an identifier memory pointer stored in the context window.</p>
+<p>If your application is too complex and one tool is not enough, you can use a multi-agent swarm architecture. You create multiple agent instances and split their context windows. You isolate contexts so one agent's garbage doesn't pollute another, because agents don't need all shared information between them. You share state via call state pointers and identifiers across the agent swarm.</p>
+</details>
+<h3 id="鲁棒性与异步调用突破死循环与网关超时" data-reading-heading="">鲁棒性与异步调用：突破死循环与网关超时</h3>
+<p>除了数据载荷本身的体积管理，Agent 调用的行为链路同样对上下文窗口的稳定性具有决定性影响。在生产实践中，最常出现的两个工程痛点是<strong>工具无限递归死循环</strong>与<strong>外部 API 网关超时阻断</strong>。</p>
+<p>针对死循环问题，当工具返回的响应模糊或未直接命中终止条件时，Agent 极易陷入无休止的重复工具调用循环，短时间内即可耗尽上下文 Token 与调用配额。有效的防御策略包括：</p>
+<ul>
+<li><strong>显式返回契约</strong>：工具的输出必须具有确定性与结构化结论，避免输出引起 Agent 歧义的发散文本。</li>
+<li><strong>严格调用频次熔断</strong>：为每项工具（例如航班查询或订单检索）设置硬性单任务最大调用上限（Max Invocation Limits，如最多允许调用 3 次）。一旦达到上限立即强制熔断，防止上下文被死循环日志塞满。</li>
+</ul>
+<p>针对外部 API 延迟，当 Agent 接入 <strong>MCP</strong>（Model Context Protocol: 开放模型上下文协议）工具或高耗时第三方服务时，由于 AWS API Gateway 等云端网关通常存在严格的连接超时限制（例如 29 秒超时），若采用同步等待模式，长任务极易导致整个执行链路异常中断并丢失会话。应对方案在于全面采用<strong>异步轮询解耦架构</strong>（Asynchronous Task Pattern）：</p>
+<ul>
+<li><strong>任务发起</strong>：通过 FastAPI 等框架定义异步任务触发工具，Agent 发起长耗时任务后立即获得任务标识并退出当前等待状态。</li>
+<li><strong>状态轮询</strong>：提供独立的状态检查工具，Agent 可以在后续轮次或异步回调中根据任务 ID 检查执行状态并取回处理结果，从而彻底解耦等待延迟并保护会话上下文的完整性。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Next: what happens when an agent does not want to stop? Sometimes an agent gets trapped in an infinite loop, invoking the same tool again and again, never ending. You can prevent this by placing hard limits on loop calls. When a tool doesn't provide a clear answer, the agent keeps calling. You avoid this by providing explicit answers from tools and limiting the maximum number of tool calls—for instance, allowing a flight search tool to be called at most three times. Once limited, it will never execute that inner infinite loop.</p>
+<p>Lastly, how to handle external integrations: sometimes we call MCP tools or external APIs with long response times. In AWS API Gateway, there is a maximum timeout waiting for a response. If your program doesn't respond within that time, it halts with latency errors. You can avoid this using asynchronous methods.</p>
+<p>In synchronous calls, your runtime waits forever for the MCP response. With asynchronous handlers, you call your external API/MCP, save the task status, and retrieve the result during a subsequent call. For example, using FastAPI you create two tools: one to start the long-running task, and another to verify task status. This asynchronous pattern makes a huge difference; otherwise, while waiting, the agent stops responding and cannot fetch information.</p>
+</details>
+<h3 id="上下文工程的生产级设计法则" data-reading-heading="">上下文工程的生产级设计法则</h3>
+<p>总结构建企业级高可靠 Agent 系统的最佳实践，工程团队应严格践行以下核心守则，在架构设计阶段即遏制上下文溢出：</p>
+<ol>
+<li><strong>坚持最小充足原则（Min-Context Rule）</strong>：绝对不要盲目将全量数据塞入上下文窗口。严格过滤与当前推理无关的冗余字段，仅向 Agent 喂入生成下一步决策所需的最小必要信息。</li>
+<li><strong>警惕过度泛化与摘要丢失（Selective Summarization）</strong>：内置自动摘要机制在缩减上下文的同时，可能会抹去关键的技术参数与事实细节。必须在架构层面区分状态性元数据与临时性闲聊，避免关键指令在无差别摘要中丢失。</li>
+<li><strong>推行外部指针化与数据解耦（External Pointerization）</strong>：面对数据库查询、报表或海量日志等重载数据源，坚决推行“外置存储 + 内存指针”模式，仅在 Prompt 中传递引用句柄，由专用分析工具按需解析。</li>
+<li><strong>实施工具执行约束与异步解耦（Execution Guardrails）</strong>：为所有工具配置严格的并发限流与单会话最大调用阈值；对耗时超过 5 秒的长任务全面采用异步任务提交与状态轮询机制，确保 Agent 会话主循环免受网关超时与同步阻塞的冲击。</li>
+</ol>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>So, what should you avoid?</p>
+<ul>
+<li>Avoid context overflow. Do not include everything there. It is not worth adding everything to the context window because the agent does not need all that information. Only provide what the agent needs to create the response.</li>
+<li>Be careful with built-in summarization: sometimes when summarizing, the agent might forget necessary details. If you summarize blindly, you might lose things required for the agent's answer.</li>
+<li>Avoid passing raw, uncurated data to the agent in full sequence.</li>
+</ul>
+<p>What are the best practices?</p>
+<ul>
+<li>When a tool returns heavy data volumes (large database records, extensive logs), offload it externally and use memory pointers.</li>
+<li>For multiple agents requiring shared heavy data, coordinate state across steps using identifiers.</li>
+<li>Keep agent cycles and tools explicit: ensure tools return distinct, clear answers, enforce tool call limits, and implement asynchronous descriptors.</li>
+</ul>
+<p>Thank you. If you want to know more about agents, we have a booth with specialists and AWS Lego mini-blocks. And remember, I am Elizabeth, not Morgan. Thank you very much!</p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/51848752ee0add6f83186aaeb998f5d949aed4a4c4f13d798328a0666a33666c.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/51848752ee0add6f83186aaeb998f5d949aed4a4c4f13d798328a0666a33666c.md" download="为什么更大的上下文窗口拯救不了你的 Agent：上下文工程与记忆架构实战.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Elizabeth Fuentes Leone" class="entity-link person-link">Elizabeth Fuentes Leone</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Amazon Web Services" class="entity-link company-link">Amazon Web Services</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Amazon Bedrock" class="entity-link product-link">Amazon Bedrock</a>, <a href="/search/?q=Strands" class="entity-link product-link">Strands</a>, <a href="/search/?q=Neo4j" class="entity-link product-link">Neo4j</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

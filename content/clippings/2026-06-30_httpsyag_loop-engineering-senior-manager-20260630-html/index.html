@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop Engineering
+详解：从管理执行到设计自收敛的循环</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Loop Engineering
+详解：从管理执行到设计自收敛的循环</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-06-30</span>
+    
+
+    <header class="article-header">
+      
+      <h1>Loop Engineering
+详解：从管理执行到设计自收敛的循环</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/loop-engineering/">loop-engineering</a>
+      
+        <span class="tag-pill tag-pill--no-page">ai-manager</span>
+      
+        <a class="tag-link" href="/tags/system-design/">system-design</a>
+      
+        <span class="tag-pill tag-pill--no-page">evaluation-art</span>
+      
+        <a class="tag-link" href="/tags/feedback-loop/">feedback-loop</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章详细阐述了“Loop Engineering”的概念，它代表了从单纯的Prompt使用向设计自收敛的循环系统转变。核心在于将AI从执行者升级为“AI Manager”和“Senior Manager”，通过建立反馈闭环、可检验的评估机制（如evaluation harness、tracking UI）以及将经验沉淀为SOP等机制，构建一个能自我诊断、修正和优化的开发引擎。文章强调，评估的艺术是关键，AI时代的评估应从路径约束转向边界约束，而非依赖传统TDD模式。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/loop-engineering-senior-manager-20260630.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-06-30T00:00:00.000Z">2026-06-30</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>7 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#1-ai">1. AI</a></li><li class="outline-h2"><a href="#2-senior">2. Senior</a></li><li class="outline-h2"><a href="#3-loop">3. Loop</a></li><li class="outline-h2"><a href="#4-%E5%86%B3%E5%AE%9A%E5%BE%AA%E7%8E%AF%E8%B4%A8%E9%87%8F%E7%9A%84%E4%B8%A4%E5%A4%A7%E7%A1%AC%E6%9D%A0%E6%9D%86">4. 决定循环质量的两大硬杠杆</a><ol><li class="outline-h3"><a href="#41-%E8%AF%84%E4%BC%B0%E7%9A%84%E8%89%BA%E6%9C%AF%E4%B8%BA%E4%BB%80%E4%B9%88">4.1 评估的艺术：为什么</a></li><li class="outline-h3"><a href="#42-%E4%BB%BB%E5%8A%A1%E8%87%AA%E5%8A%A8%E5%8F%91%E7%8E%B0%E7%9A%84%E5%B1%80%E9%99%90">4.2 任务自动发现的局限</a></li></ol></li><li class="outline-h2"><a href="#%E7%BB%93%E8%AF%AD%E9%A2%86%E5%85%88%E8%A1%8C%E4%B8%9A%E4%B8%80%E6%AD%A5%E7%9A%84%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E5%B8%88">结语：领先行业一步的系统设计师</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>最近在 AI 辅助开发领域，Loop Engineering 成为行业热词。Business
+Insider 用 Forget
+Prompts: “Loop Engineering” Is All the Rage Now 概括这波讨论，Addy
+Osmani 随后写了更系统的定义性拆解。</p>
+<p>我起初有些犹豫，迟迟没有动笔写这个话题。因为从实践角度来看，在前沿的开发者社区中，这属于常识。在我们的
+AI Builders
+课程中，这套关于反馈闭环与系统设计的方案已经讲授了一年多。</p>
+<p>但这次把文章写出来，是因为这个词定义得较好，正适合作为线索，帮大家厘清底层本质。我们正好也可以结合课程中的部分内容，来分析如何真正用好这一范式。</p>
+<p>从 Prompt 到 Loop
+的跨越，核心在于两点：第一是思想的升维，第二是评估的艺术。</p>
+<h2 id="1-ai" data-reading-heading="">1. AI</h2>
+<p>Manager：从执行者到委派者的第一步</p>
+<p>使用 AI
+的第一步是建立管理思维。你需要从一名亲自写代码的执行者，转变为定义问题和把关结果的
+AI Manager。Anthropic 对约 40 万条 Claude Code session
+的研究也观察到，表现得像管理者的人更容易获得成功结果，研究脚注里的说法是
+“perhaps
+acting like a manager confers greater success”。</p>
+<p>在这个阶段，我们可以将 AI
+视为一个会失忆的实习生。要让这位实习生输出高质量的工作，管理者需要提供三个层面的支持：</p>
+<p>AI Manager
+需要同时提供上下文、问题边界和可检验终点</p>
+<p>第一，提供自包含的上下文。由于大模型单次运行的无状态特征，它不了解项目背后的历史决策和隐性规则。你必须把这些背景知识整理成整洁的文档。</p>
+<p>第二，定义清晰的问题边界。不给模糊的口头指令，而是用自然语言把任务的输入、输出以及限制条件描述清楚。</p>
+<p>第三，先定义可客观检验的终点。这需要让 AI
+明确知道什么时候算做完，以及做错时的具体表现。</p>
+<p>尽管 AI Manager
+的思路解决了大模型冷启动和猜测意图的问题，但在这个阶段，人类依然深度参与管理环。你需要不断拆任务、补背景、看中间结果、判断下一步，让
+AI 沿着你的判断往前走。这种人肉管理环限制了系统的总体吞吐量。</p>
+<h2 id="2-senior" data-reading-heading="">2. Senior</h2>
+<p>Manager：把人类从执行环中解脱出来</p>
+<p>手动管理存在瓶颈，但这个瓶颈已经不再是“把报错贴回给 AI”。现代 coding
+agent 已经能自己写代码、运行验证、读取错误日志并继续 debug。Elastic
+团队在 2025 年就在 Buildkite CI 里跑过类似的 self-healing
+loop，第一个月修复 24 个 broken
+PR。这说明基础的自写、自跑、自修，在工程上已经成立。</p>
+<p>真正卡住人的地方，发生在更高一层。任务一旦变长、变多、跨会话、跨项目，人仍然要不断决定下一步该做什么，判断某次改动是否真的变好，诊断失败集中在哪里，再把一次成功的经验重复讲给下一轮
+Agent。人不再是日志搬运工，但仍然是系统里的隐性 manager。</p>
+<p>Senior Manager 要解决的是这个问题。它不是让人把某个 bug
+修得更快，而是把 manager
+的动作变成系统能力：清楚地委派任务，建立能反复运行的 evaluation，用
+observability 看见失败原因，再把有效的 coaching 沉淀成
+SOP，让系统下次自己调用。</p>
+<p>Neurotype auto-correction
+是一个更贴切的例子。这个项目要让用户自由打字，即使有漏字、误触、大小写混乱，也能由
+AI 把文本清理到接近 ground
+truth。真正难的不是写一个纠错函数，而是让系统知道哪种纠错更好。</p>
+<p>于是我们先让 AI 建 evaluation
+harness：样例集覆盖相邻键误触、遗漏、重复和大小写等情况，指标用归一化编辑距离和错误类型记录，baseline
+则来自 dummy corrector 或旧
+prompt。这样一来，系统不再依赖人临时感觉，而是有一条固定刻度。</p>
+<p>接着，我们让 AI 构建 tracking
+UI。总览视图展示整体分数的变化趋势，单例视图则记录每个 case 的
+rationale。evaluation
+分数只能告诉我们好不好，却无法解答为什么不好。如果没有这种微观
+visibility，即便在统计上知道哪类 case
+错得最多，也无法得知模型到底卡在了哪里。我们看到的只是结果分布，却看不见模型内部的错误路径。rationale
+与 trace 的价值就在于暴露单例的错误原因，在 evaluation 之外真正建立起
+observability。</p>
+<p>最后，manager 不再直接替模型改 prompt，而是让 AI
+分析失败样例，找出错误模式，再给它一个有针对性的
+nudge。成功之后，把这次“问题、诊断、修正”的过程写进 SOP。后面的
+auto-tuner 参考这份 SOP 自己提出改动、运行评估、记录结果。Senior Manager
+交付的不是一个修好的 bug，而是一个能持续修自己 bug 的系统。</p>
+<h2 id="3-loop" data-reading-heading="">3. Loop</h2>
+<p>Engineering：Senior Manager 的机制落地</p>
+<p>Loop Engineering 本质上是 Senior Manager 思想的技术落地。Boris Cherny
+在 CNBC 采访中把这个转变说成：Claude 自己写 prompt，人和负责协调的
+Claude 对话；Business Insider 对这句话做了转述。</p>
+<p>所以理解 Loop Engineering 时，不应该先盯着 cron、worktree
+这类实现细节。它们有用，但属于工程载体。真正重要的是：Senior Manager
+路线里的二阶管理动作，在 Loop Engineering 里都有对应的系统组件。</p>
+<p>Senior Manager 路线</p>
+<p>Loop Engineering 组件</p>
+<p>为什么重要</p>
+<p>把成功经验写成 SOP，例如</p>
+<p>scale.md</p>
+<p>或 playbook</p>
+<p>skills 和知识资产</p>
+<p>让下一轮 Agent 不必重新摸索，把一次 coaching
+变成长期可调用的能力。</p>
+<p>建立 evaluation harness：样例集、指标、baseline</p>
+<p>verifier 和自动评估</p>
+<p>给系统一条固定刻度，避免每次改动都靠人临场判断。</p>
+<p>建 tracking UI，记录 rationale 和 trace</p>
+<p>state、trace 与 observability</p>
+<p>分数只告诉你变没变，trace 才告诉你该修哪里。</p>
+<p>从 fixer 变成 coach，让系统自己诊断失败模式</p>
+<p>maker/checker 反馈回路</p>
+<p>执行者负责尝试，检查者负责校准，系统才不会自我打分过宽。</p>
+<p>让真实使用不断生成新样例</p>
+<p>memory 和 data flywheel</p>
+<p>静态测试集会过期，真实数据回流才能让系统长期变强。</p>
+<p>在工程实现上，一条 Loop Engineering
+闭环流水线通常会用到这些承载方式：</p>
+<p>时间调度：定期的起搏器。Boris 在 Sequoia AI Ascent 上描述的 /loop 就是让 Claude 通过 cron 调度一个重复任务，可以每分钟、每 5 分钟或每天运行；这段在 Sequoia 访谈里有完整上下文。类似地，也可以使用 /goal 指令，由独立的 checker 在每次迭代后评估是否可以安全退出。</p>
+<p>分支隔离：并行开发的安全沙箱。利用物理分支隔离技术，让多个子 Agent 运行在不同的临时目录中，互不干扰。</p>
+<p>知识资产：将 SOP 规范沉淀为 SKILL.md 文档。这是 Agent 的无状态运行指南，用来解决金鱼效应带来的记忆债务。</p>
+<p>外部连接：通过 MCP 协议将 AI 接入真实的物理工具链，如 CI/CD、Slack、Linear 数据库。</p>
+<p>分立审计：物理拆分 maker 与 checker。执行者拼命干活，审核者根据约束把关，杜绝自我打分偏差。Addy Osmani 在文章里指出：写代码的模型给自己的作业打分时太宽容。</p>
+<p>状态外部化：在 Agent 重新启动或上下文重置间，利用磁盘文件或项目状态看板记录任务进度，防止状态丢失。</p>
+<h2 id="4-决定循环质量的两大硬杠杆" data-reading-heading="">4. 决定循环质量的两大硬杠杆</h2>
+<p>运行一条流水线并不难，难在让它产出高可靠的结果。在实践中，决定循环能否真正收敛而非失效的，是以下两个硬杠杆。</p>
+<h3 id="41-评估的艺术为什么" data-reading-heading="">4.1 评估的艺术：为什么</h3>
+<p>TDD 不是 AI 时代的答案</p>
+<p>在真实工程中，对工作结果的评估往往非常主观且繁杂，绝非一句编译通过所能概括。</p>
+<p>很多人直觉上认为，既然 AI 的行为难以预测，那我们只需要套用 TDD
+的模式，多写一些单元测试，逼着 AI 跑绿测试就能保证质量。</p>
+<p>但在实际运行中，这犯了方向性错误。在我们之前发表的文章《为什么
+TDD 反而不是 AI 时代的答案》中，我们详细分析过这个悖论的成因：</p>
+<p>第一，传统 TDD
+能够成功，依赖于一个人类社会特有的隐含前提：人类开发者自带追求正确性的动机结构（对凌晨两点被叫醒的恐惧、对
+Code Review 难堪的担忧）。测试在人手上是辅助前行的路标系统。</p>
+<p>第二，AI 没有任何隐性维护负担。在 TDD 的闭环里，AI
+接收到的唯一反馈只有测试过没过。此时，Goodhart’s
+Law（当指标变成目标，它就失去了作为指标的意义）会迅速生效：如果为了跑通权限测试，AI
+发现最快的方法是直接改写代码使其硬编码
+return True，它会毫不犹豫地这么做。测试变成了它的目的地，而非路标。</p>
+<p>第三，如果我们为了堵死漏洞，去写大量高度特化的 Mock 和
+Stub，这就锁死了 AI 的实现路径，等于强行塞给了它过程确定性的枷锁。AI
+失去了探索更优架构的自由度。</p>
+<p>因此，设计评估标准是一门艺术。AI
+时代的解法不是写更多细碎的单元测试，而是将确定性约束从具体的代码路径撤到系统边界上：</p>
+<p>AI
+时代的评估应从路径约束转向边界约束</p>
+<p>我们需要使用契约测试、属性测试，或者引入另一个完全独立的 AI
+实例，使用自然语言的验收规范对生成结果进行语义维度的共识核对。这虽然牺牲了机械的确定性，但换取了极大的语义灵活性。</p>
+<h3 id="42-任务自动发现的局限" data-reading-heading="">4.2 任务自动发现的局限</h3>
+<p>在当前的 Loop 宣导中，有一个概念被包装成卖点：让 AI 自动扫描 CI
+日志和 Bug 反馈，自己发现工作并决定要改什么。</p>
+<p>在实际生产中，这种完全由 AI
+决定优先级和需求发现的思路，大多是一个噱头。原因表现在两点：</p>
+<p>第一，优先级排布需要大量的商业上下文、用户同理心和公司中长期的战略诉求。这些背景知识高度抽象且动态漂移，AI
+在缺乏这些隐性上下文的前提下做出的决策极易走偏。</p>
+<p>第二，任务发现是一个发散系统。如果实现代码写错了，大不了编译不通过或测试报错，这是收敛的局部问题；但如果方向决策和架构设计走错，Agent
+可能会在错误的基础上不断累积代码，堆砌出极难挽回的屎山系统，再想回头成本高昂。</p>
+<p>在当前的阶段，任务发现仍然需要人类牢牢把握方向。AI
+可以用来辅助查漏补缺，但决定做什么、以什么顺序做，依然是人类的核心防线。</p>
+<h2 id="结语领先行业一步的系统设计师" data-reading-heading="">结语：领先行业一步的系统设计师</h2>
+<p>Loop Engineering 的爆火，标志着行业正在从微操 Prompt
+的工具使用者，向设计自运转体系的系统设计师升维。</p>
+<p>如果你想不再做不断拆任务、补背景、判断下一步的 AI
+管理员，而是成为能够搭建自演化开发引擎的设计师：</p>
+<p>👉 欢迎了解我们的课程：Superlinear Academy -
+AI Builders。在这里，我们将这套走在行业变化前列的 AI
+协同、系统评估与闭环体系，系统性地交付给你。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/f1981f784bf297de6c1b441068d295f5fe5522ac9b450bcf971636bce1ef926d.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/f1981f784bf297de6c1b441068d295f5fe5522ac9b450bcf971636bce1ef926d.md" download="Loop Engineering
+详解：从管理执行到设计自收敛的循环.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Addy Osmani" class="entity-link person-link">Addy Osmani</a>, <a href="/search/?q=Boris Cherny" class="entity-link person-link">Boris Cherny</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, <a href="/search/?q=Business Insider" class="entity-link company-link">Business Insider</a>, <a href="/search/?q=Elastic" class="entity-link company-link">Elastic</a>
+</p>
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

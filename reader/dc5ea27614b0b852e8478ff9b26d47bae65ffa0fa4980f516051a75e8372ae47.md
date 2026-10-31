@@ -1,0 +1,1448 @@
+---
+author: TVO Today
+date: '2026-10-29'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=wphx4PbSHG4
+speaker: TVO Today
+tags:
+  - provincial-politics
+  - legislative-session
+  - budget-deficit
+  - trade-dispute
+  - political-scandal
+title: 安省议会复会：秋季政治议程、财政赤字与丑闻争议解析
+summary: 安大略省议会在休会近五个月后复会，会期仅约23天。福特政府主打应对美加贸易争端与精简法规，但同时面临100多亿加元赤字、医疗走廊候诊恶化、教师工会罢工投票以及绿带案与议员报销等丑闻调查。媒体评论员对政府短会期策略与反对党质询成效展开深入探讨。
+insight: ''
+draft: true
+series: ''
+category: geopolitics
+area: geopolitics
+project: []
+people:
+  - Doug Ford
+  - Marit Stiles
+  - Jeyan Jeganathan
+  - John Michael McGrath
+  - Jessica Smith Cross
+  - Richard Southern
+  - Ahmed El-bayoumy
+companies_orgs:
+  - Ontario Legislature
+  - NDP
+  - RCMP
+  - TVO
+products_models: []
+media_books:
+  - The Rundown
+status: evergreen
+---
+### 议会复会首日：反对党抨击与省长回应
+
+>> 在枫叶队比赛中与说客共享包厢席位，用纳税人的钱乘坐私人飞机和住豪华酒店客房。为什么安大略人要一直为此买单？省长的丑闻和幕后交易。
+<details><summary>Original English</summary>
+>> Box seats at Leaf Games with
+lobbyists, private jets and
+luxury hotel rooms on the
+taxpayer's dime.
+Why do Ontarians have to keep
+paying the price for this?
+Premier's scandals and backroom
+deals.
+</details>
+
+>> 没错。安大略省议会复会了。那是新民主党党魁玛丽特·斯泰尔斯（Marit Stiles）昨天在质询时间的发问，这也是自省议会（Queen's Park）21周前休会以来的第一次，道格·福特（Doug Ford）迅速作出了回应。
+<details><summary>Original English</summary>
+>> That's right.
+The Ontario Legislature is back
+in session.
+That was NDP leader Marit Stiles
+during question period
+yesterday, the first since
+Queen's Park went on break 21
+weeks ago, and Doug Ford was
+quick to respond.
+</details>
+
+>> 人们真正看重的是我们在保护社区、保护就业以及对抗那个暴君特朗普总统方面所做的工作。
+<details><summary>Original English</summary>
+>> People really look at what
+we're doing in protecting
+communities, protecting jobs,
+fighting against that tyrant.
+President Trump.
+</details>
+
+>> 在省议员们再次进入冬歇期之前，我们会经常看到这类交锋。毕竟自6月以来发生了很多事情。我们遇到了涉嫌OSAP（安省学生援助计划）欺诈、削减护士岗位，当然还有与美国的贸易战。而且未来还有更多情况：教师工会正准备在下个月进行罢工投票。那么，我们可以预期哪些议题会主导辩论，又可能面临哪些意想不到的变数？随着议会重新开会，我们将为您剖析需要了解的内容。我是杰扬·杰加纳森（Jeyan Jeganathan），这里是《The Rundown》。每当我们谈论省政治时，总喜欢请来我们的常驻专家约翰·迈克尔（John Michael）。我们来聊聊省议会。你认为政府为什么等到快到11月、且在市政选举之后才重返议会？
+<details><summary>Original English</summary>
+>> Now we are going to see a lot
+of this before MPPs break again
+for winter.
+After all, a lot has happened
+since June.
+We've had alleged oSap fraud
+cuts to nursing jobs, and, of
+course, the trade war with the
+US.
+And there's more on the horizon.
+Teachers unions are gearing up
+for strike votes next month.
+So what can we expect to
+dominate debate, and what
+surprises could we be in store
+for?
+We're going to break down what
+you need to know now that the
+legislature is back in session.
+I'm Jeyan Jeganathan, and this
+is The Rundown.
+Whenever we talk provincial
+politics, we always like to
+bring in our resident expert,
+John Michael.
+We're going to talk about
+Queen's Park.
+Why do you think the government
+waited until almost November and
+after municipal elections to
+return to the legislature?
+</details>
+
+### 短会期策略与市选后的政商关系
+
+>> 如你所说，他们是在市政选举之后才让议会复会的。我应该客观看待政府的说法，在正式层面上，他们表示这是为了防止省级事务干扰市政选举的进行。这是一个便利的借口，而且不一定是他们在前几年用过的借口。这届政府非常喜欢缩短立法会期。这是一种赋予政府更多权力的方式，政府当然控制着立法议程。你缩短了辩论重要法案的时间。当然，他们喜欢使用包罗万象的综合法案。他们把尽可能多的措施塞进少数几项非常重要的政府法案中。这确实减少了反对党在审议法案期间质询政府的时间。当然，也减少了在最受关注的质询时间发问的机会。
+<details><summary>Original English</summary>
+>> Well, so as you mentioned,
+they are bringing the
+legislature back after municipal
+elections.
+I should give the government its
+due and say that formally, they
+say this prevents provincial
+affairs from interfering with
+all of the conduct of municipal
+elections.
+That is a convenient excuse and
+not one that they have used in
+prior years, necessarily.
+This government has really
+enjoyed shortened legislative
+sittings.
+It is a way of giving more power
+to the government, which of
+course controls the legislative
+agenda.
+You shorten the amount of time
+that there are for debates of
+important bills.
+They, of course, like to use
+bills that do lots of different
+things.
+They cram as many measures as
+they can into a handful of very
+important government bills.
+And that really does give the
+opposition less time to question
+the government during bills.
+And, of course, gives the fewer
+opportunities at question period
+where most of the attention is
+paid.
+</details>
+
+>> 好，我们稍后再谈反对党。但首先我想了解，你知道道格·福特非常看重与安省各市市长的个人关系，但这次市政选举中爆出了很多冷门。他昨天确实提到，下午打算打电话给其中的一些新市长向他们表示祝贺。本届政府要建立这些新关系需要做多少工作？
+<details><summary>Original English</summary>
+>> Well, talk, to and opposition
+a little later.
+But first, I want to know, you
+know, Doug Ford is really big on
+personal relationships with
+Ontario mayors, but there were a
+lot of upsets in this municipal
+election.
+He did mention yesterday that he
+was going to spend the afternoon
+making some calls to some of
+those new mayors, congratulate
+them.
+How much work does this
+government have to do to build
+those new relationships?
+</details>
+
+>> 你知道，如果是换作另一届政府，我会说这没那么大不了。但这位特别的省长确实是依靠个人关系来开展工作的。你懂的，在人对人、无论男女层面上，远比其他省长更甚。看看多伦多，尽管存在明显的政治分歧，这位省长很明确地表示相比布拉德·布拉德福德（Brad Bradford），他更偏好邹至蕙（Olivia Chow）。
+<details><summary>Original English</summary>
+>> You know, for a different
+government, I would say this
+would not be as big a deal as it
+is.
+But this particular Premier
+really does work with personal
+relationships.
+You know, a man to man or man to
+woman level, much more than
+other premiers have.
+I look at Toronto, where,
+despite the obvious political
+differences, this Premier was
+pretty clear that he preferred
+Olivia Chow to Brad Bradford.
+</details>
+
+>> 也许是竞选期间的一次意外背书。但确实如此。
+<details><summary>Original English</summary>
+>> Perhaps an accident
+endorsement throughout the
+campaign.
+But yes.
+</details>
+
+>> 他的偏好相对明确。我认为安省周围的许多城市也是如此，省长确实与非常具体的某些市长建立了这些个人关系。我们也可以看看温莎（Windsor），德鲁·迪尔肯斯（Drew Dilkens）输掉了选举，而他是省长看好的人选之一。因此现在他不得不去与这些新市长建立新关系。这很重要，对吧？在任何特别大的市镇，市长最终都会成为市政层面与省政府之间的重要纽带。当然，市镇对省里有很多诉求，对吧？如果要建一所学校或一家医院，社区里的任何重大变化，更不用说所有影响他们的省政策了。归根结底，市长才是前往省议会交涉的关键联络人。
+<details><summary>Original English</summary>
+>> Relatively clear what his
+preferences were.
+And I think the same is true in
+a lot of cities around Ontario,
+where the Premier really did
+have these personal
+relationships with very specific
+mayors.
+We could also point to Windsor,
+where Drew Dilkens lost and was
+one of the premiers chosen
+favourites.
+And so now he has to go and
+build new relationships with
+these mayors.
+And it's important, right?
+The mayor, in any particularly
+large municipality ends up being
+a really the conduit between the
+municipal sector and the
+province.
+And of course, municipalities
+have lots of demands of the
+province, right.
+If a school is being built or a
+hospital, any kind of major
+change in that community, not to
+mention all the provincial
+policies that affect them.
+Otherwise, it's the mayor who is
+really the point person who goes
+to Queen's Park.
+</details>
+
+### 秋季财政报告与预算赤字压力
+
+>> 我们来谈谈钱。安省明天将发布秋季财政更新报告。自春季预算以来，安省的财政状况是变好了还是变差了？
+<details><summary>Original English</summary>
+>> Let's talk money.
+Ontario will release its fall
+fiscal update tomorrow.
+Our Ontario's fortunes, better
+or worse since the spring
+budget.
+</details>
+
+>> 可能相比春季预算不会糟糕太多。但春季预算本身就不是什么好消息。政府正面临着持续存在的赤字，大概在100亿到130亿加元之间。我们将通过这次秋季更新看到具体的数字。省政府的惯常运作方式通常是，他们总是给出一个相当严峻的预测，然后在整个财政年度的过程中，数字会稍微好转一点。我们确实知道秋季经济报告中将要宣布的一些措施。财政厅长已经表示，该省将对标联邦法规以激励更多投资。这在五年内将耗资约80亿加元。这是一个相当庞大的承诺。而且你知道，政府在不增税（他们已承诺不增税）且不动医疗支出（他们同样承诺不动）的情况下，将如何为这类措施买单？这仍然是未来几年的大问题，因为如果你排除了增税，又排除了预算中最大的单个支出项，那就意味着任何可能发生的削减都会落在其他可能更显眼的地方。而教育就是其中最大的一个。
+<details><summary>Original English</summary>
+>> Probably not much worse at
+the spring budget.
+But the spring budget wasn't
+great news.
+The government is looking at
+really persistent deficits in
+the, let's say, 10 to $13
+billion range.
+We will see what the specific
+number is with this fall update,
+the way it usually works with
+the provincial government is
+that, you know, they always make
+a pretty grim prediction.
+And then over the course of the
+fiscal year, the numbers get a
+little bit better.
+We do know some of the measures
+that are going to be announced
+in the fall economic statement.
+The finance minister has already
+said that the province will be
+matching the federal rules.
+That will be intended to
+incentivise more investment.
+That's going to cost about $8
+billion over five years.
+That's a pretty big commitment.
+And, you know, the question of
+how the government will pay for
+measures like that while not
+increasing taxes as they have
+promised not to do, and not
+touching health care spending,
+which they have also promised
+not to do.
+That remains the big question of
+the next few years, because if
+you rule out tax increases and
+you rule out the single biggest
+line item in the budget, that
+means that any cuts that do
+occur are going to happen in
+other places that are maybe more
+visible.
+And education is the big one.
+</details>
+
+>> 好，我们来聊聊反对党。你认为玛丽特·斯泰尔斯在本次会期中会重点关注哪些议题？
+<details><summary>Original English</summary>
+>> Okay, let's talk opposition.
+What issues do you think Marit
+Stiles will be focusing on
+during this session?
+</details>
+
+>> 我们已经看到了一场质询。我认为可以公允地说，玛丽特·斯泰尔斯拿出了政府过去几个月里的几大焦点丑闻，也就是说包括省议员费用报销丑闻。还有你知道的，政府普遍存在的涉嫌缺乏问责制的问题，以及私立职业学院的政策——政府暂停了这些学院获取OSAP的所有资格，尽管问题主要集中在相对少数的学院中。这确实给整个行业带来了问题，其影响程度是更精准的政策手段本可以避免的。
+<details><summary>Original English</summary>
+>> Well, we've already seen one
+question period already, and the
+I think it's fair to say that
+Marit Stiles used some of the
+government's greatest hits over
+the last several months, which
+is to say some of the scandals,
+including the the MPP use of
+expenses.
+And, you the government's
+general, let's say the alleged
+lack of accountability and also
+the policy on private career
+colleges where the government
+has halted all OSAP access for
+these colleges, even though the
+problems were concentrated in a
+relatively small number of
+colleges.
+This is really causing problems
+across the sector in a way that
+a more precise policy approach
+probably would not have.
+</details>
+
+>> 反对党要在很短的时间内涵盖很多领域。
+<details><summary>Original English</summary>
+>> A lot of ground to cover for
+the opposition in a very short
+period of time.
+</details>
+
+>> 是的，完全如此。
+<details><summary>Original English</summary>
+>> Yes, absolutely.
+</details>
+
+>> 约翰·迈克尔，非常高兴与你交流。非常感谢。
+<details><summary>Original English</summary>
+>> John.
+Michael, always a pleasure.
+Thank you so much.
+</details>
+
+>> 谢谢。
+<details><summary>Original English</summary>
+>> Thank you.
+</details>
+
+### 圆桌讨论：仅有23天的立法会期与背后动因
+
+>> 很明显，政府有想要重点关注的议题，但新民主党、自由党和绿党也是如此。在这个为期23天的会期中，哪些议题可能会占据主导地位？杰西卡·史密斯·克罗斯（Jessica Smith Cross）、理查德·萨瑟恩（Richard Southern），很高兴你们从多伦多连线加入我们。艾哈迈德·埃尔-巴尤米（Ahmed El-bayoumy），也很高兴你在演播室与我们在一起。我们把省议会的专家们召集到了这里进行梳理。我很兴奋能聊聊这个话题。艾哈迈德，先问你。在昨天之前，政府已经有147天没有在议会开会了，而他们这次只会开大约23天，之后又要休会直到大约3月。请帮我理解一下，你认为政府为什么做出这个决定？
+<details><summary>Original English</summary>
+>> So it's clear the government
+has issues it wants to focus on,
+but so do the NDP, the Liberals
+and the Greens.
+What kinds of things could
+dominate the agenda during this
+23 day session?
+Jessica Smith Cross Richard
+Southern, great to have you
+joining us from Toronto.
+Ahmed El-bayoumy, great to have
+you in our studios as well.
+We've assembled the experts of
+Queen's Park here for the
+rundown.
+So I'm excited to chat about
+this.
+Ahmed, coming to you.
+Before yesterday, the government
+had not sat in the legislature
+for 147 days, and they will only
+sit for about 23 days, after
+which they will break again
+until about March.
+So help me understand, why do
+you think the government's made
+this decision?
+</details>
+
+>> 政府的官方口径是他们试图避免干预市政选举。你知道，省长显然在密西沙加和多伦多的一些选举中表了态，尽管他说他没有在多伦多表态。但他想保持距离。但对这届政府来说，这也是一个非常艰难的夏天。我们知道，省长喜欢在外面跑，而不是待在议会大厦里，而不是出席质询时间。所以我想说，这是一种远离记者、远离反对党的方式，以避免回答关于夏天发生的各种问题的质询，比如酒店报销费用、私人飞机等等。我想说，这就是我们在这届政府身上看到的做法。
+<details><summary>Original English</summary>
+>> Well, the official line from
+the government is that they were
+trying to avoid interfering in
+municipal elections.
+The Premier, you know, obviously
+had weighed in in some elections
+in Mississauga and Toronto,
+although he says that he didn't
+in Toronto.
+But, you know, he wanted to stay
+away.
+But this also had been a very
+difficult summer for this
+government.
+And we know that, you know, the
+Premier likes to be on the road
+rather than being in the House
+rather than, you know, attending
+question period.
+And so I would say it was a way
+to to be far away from
+reporters, be far away from the
+opposition, to avoid the
+questions about, you know, the
+different issues that took place
+over the summer, the hotel
+expenses, the private jet,
+etcetera.
+That's, I would say, what we
+were seeing from from this
+government.
+</details>
+
+>> 杰西卡，我想昨天看到省议员们应该让人耳目一新。那么帮我理解一下，你为什么认为政府做出了这次缩短会期的决定？
+<details><summary>Original English</summary>
+>> Jessica, I'm going to imagine
+it was refreshing to see the
+M.p.p.s yesterday.
+So help me understand, why do
+you think the government made
+that decision to, you know, have
+an abbreviated session this time
+around?
+</details>
+
+>> 是的，完全说在点子上。有很多理由去开更长时间的会，花更长时间来审议他们要通过的法案。政府决定不这么做，因为他们开会时间太短了。如果他们想有所作为，就必须匆忙推进各项事务。这意味着我们可能会再次看到，就像他们过去做的那样，跳过委员会会议，进行深夜开会。这给他们带来过一些麻烦。他们之前不得不重新修改一些办得不太妥当的法案，在我们刚才提到的酒店报销丑闻中，很大程度上就是因为他们计划了所有这些深夜会议试图匆忙通过法案而浮现出来的。因此，为了尽量避开媒体和反对党，他们选择开短会，但这可能会在未来引发一些问题。
+<details><summary>Original English</summary>
+>> Yeah, almost completely right
+there.
+There are lots of reasons to sit
+longer, to take longer to
+consider bills that they're
+going to pass.
+The government has decided to
+not do that because they're
+sitting so briefly.
+They're going to need to rush
+things through if they're going
+to want to get anything done.
+So that means we might see
+again, as they have in the past,
+skipping committee meetings,
+having late night sittings.
+This has caused them some
+trouble.
+They've had to redo some bills
+that they haven't done quite
+right before the hotel expenses
+scandal that we just referred to
+came up in a large part because
+they had all these late night
+sitting sittings planned, trying
+to rush bills through.
+So in an effort to sort of spend
+time where the media isn't and
+where the opposition party
+isn't, they're having a short
+sitting that could cause some
+problems down the road.
+</details>
+
+### 政府优先事项：贸易战、精简法规与生活负担能力
+
+>> 理查德，我们刚才谈了丑闻，但我现在想谈谈施政重点。你是否了解政府在这段短时间内会有哪些优先事项？
+<details><summary>Original English</summary>
+>> Richard, we were talking
+scandals, but I want to talk
+priorities.
+Do you have a sense of what the
+government's priorities will be
+in the short period of time?
+</details>
+
+>> 是的，省长在过去一两周站出来，谈到了他所说的一系列雄心勃勃的立法计划，主要围绕与美国的贸易战，以及保护安省、保护安省工人。这确实是政府一年半来大部分时间一直希望聚焦的信息。我们开始看到那会是什么样子。政府昨天公布了一项旨在加快建设的精简法规（red tape reduction）法案。就在今天早上，他们还在谈论为企业提供一些减税措施，以帮助它们应对这种环境。这是政府想要聚焦的方面。然而反对党却试图打乱这一宣传节奏。他们希望讨论生活负担能力（affordability）。你知道，那是眼下的头号问题。我认为在这个简短的会期中，真正的关键问题将是：政府是否会向安省民众拿出一些举措来帮助解决这个重大的负担能力问题？我是说，他们过去做过一些事，比如削减汽油税，以及通过“一票制（one fare）”让公共交通更实惠一些。但那些都是老措施了，面对去杂货店看到离谱物价的普通安大略人，有什么新举措能帮到他们？所以这将是政府面临的挑战。他们能否在这个会期应对重大的负担能力问题，同时努力保持口径一致并坚持他们的“保护安大略”宣传？这会是一个不小的挑战。
+<details><summary>Original English</summary>
+>> Yeah, the Premier has come
+out in the last week or two and
+has talked about what he says is
+going to be an ambitious slate
+of legislation, really focussed
+around the trade war with the
+United States and, you know,
+protecting Ontario, protecting
+Ontario workers.
+That's really been the message
+the government's been wanting to
+focus on for the better part of
+a year and a half.
+And you we're starting to see
+some of what that's going to
+look like.
+The government yesterday
+unveiled a like a red tape
+reduction bill to help get
+things built faster.
+Just this morning, they're
+talking about some tax cuts for
+for corporations to help them
+amid this environment.
+That's what the government wants
+to focus on.
+The opposition though.
+They're looking to sort of
+derail that message.
+They're looking to talk about
+affordability.
+That's, you know, the number one
+issue right now.
+And I think the real question
+going forward in this short
+session is going to be, is the
+government going to present
+something to Ontarians to to
+help tackle that big issue of
+affordability?
+I mean, they've done things in
+the past, like cut the gas tax
+and, you know, make transit a
+little bit more affordable with
+this one fare.
+But those are like old measures,
+like what's new to help the
+average Ontarian who goes to the
+grocery store and sees these
+insane prices.
+So that's going to be the
+challenge for the government.
+Can they tackle that big
+affordability issue this
+session?
+Well, you know, trying to stay
+on message and on their Protect
+Ontario message, it's going to
+be a bit of a challenge.
+</details>
+
+>> 但要记住，这是一届在上一次选举中凭借“保护安大略”叙事上台的政府。当一个政府进入第三个任期时，要想真正坚持那一信息、坚持当初让他们当选的论调是非常困难的。执政第八年的政府，也是政府开始显现疲态的时候。因此，我认为这也值得关注。我从交谈过的多方消息人士那里获悉，这将是一个平淡的会期。省长虽然声称会雄心勃勃，但这将是一个平淡的会期。他们有三到四个政策重点，我们将在接下来的几周内看到他们匆忙通过，这也是因为正如我们将要讨论的，我认为他们预计教师合同问题会升温，而一个希望把焦点放在关税和贸易战上的政府，并不希望人们把注意力分散到其他地方。
+<details><summary>Original English</summary>
+>> But keep in mind that this is
+a government that came to power
+in in the last election on the
+notion the narrative of protect
+Ontario, and it is very
+difficult when a government is
+in their third term to actually
+stick on that message, to stick
+on the, you know, the the the
+framing in which they were
+elected.
+And eighth year government.
+It's also when governments start
+to wear out.
+And so I think it's also it'll
+be interesting to see, I am told
+from the various sources that
+I've spoken with, that this will
+be a tame session.
+The Premier says it will be
+ambitious, but it will be a tame
+session.
+They have 3 or 4 policy
+priorities that we're going to
+see them rush through over the
+next couple of weeks also,
+because as we're going to talk,
+I believe they're expecting the
+teacher contracts to heat up and
+and a government that wants to
+focus on, you know, the tariffs
+and the trade war doesn't want
+to really, you know, have people
+pay attention elsewhere.
+</details>
+
+>> 好的，杰西卡，我想请你谈谈，会期可能平淡，不过如果你是反对党的话可能并不这么觉得。但当我们谈到政府的施政重点时，是否有理查德和艾哈迈德没有提到的遗漏之处？
+<details><summary>Original English</summary>
+>> All right, Jessica, I want to
+get you in there, tame
+potentially.
+Maybe not if you're the
+opposition here.
+But when we talk about
+government's priorities, is
+there anything that we're
+missing that Richard Ahmed
+haven't mentioned?
+</details>
+
+>> 我们确实有一部重大的精简法规法案。理查德提到了，我们现在正在仔细研究它。这是昨天晚些时候提交的法案，它表明了他们试图一次性完成很多事情。里面有一些很有意思的内容。其中最早见诸报道的一点是，他们正在剥夺市镇反对在其辖区内设立垃圾填埋场的能力，因为我们面临着来自美国的压力——美国将对向其出口垃圾加征关税。因此这符合该政府的口径。他们喜欢谈论对抗唐纳德·特朗普。但我认为，在很多已有填埋场规划但居民不希望建立的地方，这件小事实际上会引发很大争议。没有人希望自己后院有个垃圾填埋场。
+<details><summary>Original English</summary>
+>> We do have a big red tape
+bill.
+Richard mentioned, and we're
+going through it now.
+This was something that was
+tabled late yesterday, and it's
+showing how they're trying to
+get a lot of things done at
+once.
+There's some interesting things
+in it.
+One of the first stories from it
+is they're removing
+municipalities ability to object
+to having like garbage,
+landfills in their area, because
+we have this pressure from the
+US that's going to tariff the
+exporting of garbage to the
+United States.
+So that's something that's on
+message for this government.
+They like to talk about, you
+know, standing up to Donald
+Donald Trump.
+But I think that small thing is
+actually going to be quite
+controversial in a lot of places
+where there have been plans for
+landfill, where people don't
+want them.
+Nobody wants a landfill in their
+backyard.
+</details>
+
+### 市政格局重塑与区域主席任命
+
+>> 理查德，我想稍微谈谈市政选举。当然，许多现任市长在周一的选举中落选了。这在多大程度上会影响政府在未来几个月和几年内推行业务的能力？正如我们所知，这位省长非常看重与市长们的关系。他提到他打电话向市长们表示祝贺。他也失去了一些关键盟友。那么，这会对推行工作产生多大影响？
+<details><summary>Original English</summary>
+>> Richard, I want to talk a
+little bit about the municipal
+election.
+Of course, a lot of incumbent
+mayors lost their election on
+Monday.
+How much of this will influence
+the government's ability to get
+things done in the months and
+years ahead?
+As we know, this Premier loves
+his relations with his his
+mayors.
+He had mentioned that he went
+and called the mayors to
+congratulate them.
+He's lost some, some some key
+allies as well.
+So how much does that play into
+what will get done?
+</details>
+
+>> 我认为这不会阻止福特政府想做的任何事情。我是说，你刚才谈到了把议会推迟到市政选举之后复会的理由，以及政府说“我们不想妨碍选举”。然而，这是一届已经表明非常乐于插手市政事务的政府。它缩减了多伦多市议会的规模；它正在拆除多伦多市的自行车道；它非常乐意对市镇发号施令、横加干涉。所以我认为，一些倒台的市长原本对福特友好，这不会以任何方式破坏政府的议程。不过你不得不怀疑这是否有点像矿井里的金丝雀，许多落选的市长在投票箱前承受了选民对他们处理美加贸易战方式的怒火。你不得不琢磨，选民是否会开始打量省长，并怀疑他那种“保护安大略”的口号和立场是否真的奏效。
+<details><summary>Original English</summary>
+>> I don't think it's going to
+stop.
+Whatever the Ford government
+wants to do.
+I mean, you were talking about,
+you know, rationale for keeping
+the legislature out until after
+the municipal election and the
+government saying, hey, we
+didn't want to get in the way of
+that.
+Well, this is a government that
+has shown that it's more than
+willing to get in the middle of
+municipal affairs.
+It shrunk the size of Toronto
+City Council.
+It's ripping up bike lanes in
+the city of Toronto.
+It's it's more than willing to
+kind of run roughshod over
+municipalities.
+So I don't think some of those
+mayors going down toward
+friendly mayors is going to
+disrupt the government's agenda
+in any way.
+You got to wonder, though, if
+it's kind of a canary in the
+coal mine, where a lot of these
+mayors that did lose were
+feeling the the the heat from
+voters at the ballot box over
+their handling of the trade war
+with the United States.
+And you got to wonder if voters
+might start looking at the the
+Premier and wondering whether
+his sort of protect Ontario
+message and stance is actually
+working.
+</details>
+
+>> 艾哈迈德，我想问你，因为我知道你一直在密切关注皮尔区特别是密西沙加的市长竞选。我们来谈谈区域主席的任命。这是我们可能在未来几天内会听到的消息。我们会看到一些熟悉的面孔出现在这些职位上吗？
+<details><summary>Original English</summary>
+>> Ahmed, I want to come to you
+because I want to talk.
+You had you had close eyes on
+the Peel mayoral race in
+Mississauga, specifically.
+We're going to talk regional and
+chair appointments.
+That's something that we should
+probably be hearing in the next
+couple of days.
+Will we see some familiar faces
+in that?
+</details>
+
+>> 我们拭目以待。住房厅长已经表示，任命将在未来几周内公布，但我认为我们会看到省里试图让亲善面孔担任这些职位，因为请记住，这些职位将拥有巨大的权力。对他友好、对政府友好。他们需要能够推进施政重点、紧缩预算、并作为政府代表留在那里的人。因此我们报道过，《Politicorner》报道称斯科特·艾奇逊（Scott Aitchison）很可能会在马斯科卡（Muskoka）获得任命，他是前任、即将离任的保守党国会议员，是一位大力倡导住房建设的政策极客。但我们还会继续观察。密西沙加的卡罗琳·帕里什（Carolyn Parrish）在市长竞选中失利后表示，她愿意接任皮尔区主席一职。我不知道情况是否会是这样，但这很有意思。我非常想知道政府现在是否在考虑任用那些在选举中落选的、以前友好的候选人或市长，看是否能将他们安排到这些职位上。
+<details><summary>Original English</summary>
+>> Well, we'll see.
+The Premier the Minister of Housing has said that the
+appointments will come within
+the next couple of weeks, but I
+think we are going to see the
+province try to put friendly
+faces in these positions,
+because keep in mind these
+positions will wield significant
+power.
+Friendly to him, friendly to the
+government, friendly to the
+government.
+They want people who are going
+to be there to advance
+priorities to, you know, tighten
+budgets to, you know, be there,
+as you know, a representative
+for the government.
+So we've we've reported
+Policorner reported that Scott
+Aitchison is likely going to get
+the appointment in Muskoka, the
+former soon to be former
+conservative MP, a big housing
+advocate and, you know, policy
+wonk.
+But but we'll see.
+Carolyn Parrish in Mississauga
+has said that she's open to
+taking on the position in peel
+after she lost the mayoral
+contest.
+I don't know if that's going to
+be the case, but it's
+interesting.
+I would be very interested to
+see if the government is now
+looking at possibly, you know,
+the formerly former friendly,
+candidate friendly mayors who
+lost elections to see if they
+can put them in these positions.
+</details>
+
+>> 好，杰西卡，这也是你所关注的吗？当我们谈到未来几天内的这些区域主席任命时。
+<details><summary>Original English</summary>
+>> Okay, Jessica, is that
+something that's on your radar
+as well?
+When we talk about some of these
+regional chair appointments in
+the next couple of days.
+</details>
+
+>> 是的，我的意思是这是一件大事。这与以前的运作方式完全不同。政府不仅是在直接任命所有主席，还赋予了他们“强力主席（strong chair）”权力，使他们能够推翻民选政客的意见。这是一件大事，也是一项有争议的交易。如果他们确实决定做出某些选择，比如任命像卡罗琳·帕里什这样的人，或者本周在选举中落败的其他市长，这对于他们如何看待选民在此表达意愿的机会说明了什么？我认为这将是一个有争议的举动，我不确定他们是否会走这一步。
+<details><summary>Original English</summary>
+>> Yeah, I mean, this is a big
+deal.
+This isn't the way it's really
+worked before.
+The government is isn't just
+pointing all of the chairs.
+They're giving them strong chair
+powers, ways that they can
+override the views of the
+democratically elected
+politicians.
+It's a big deal, and it's a
+controversial deal.
+If they do decide to make some
+choices, like appointing
+somebody such as Carolyn Parrish
+or none of the other mayors who
+was defeated in the elections
+this week, what does that say
+about how they're viewing voters
+chance to express themselves
+here?
+I think it would be a
+controversial move, and I'm not
+sure if they're going to go
+there or not.
+</details>
+
+### 赤字激增与削减开支的隐忧
+
+>> 理查德，我们来谈谈钱。秋季财政更新将于明天发布。在今年春季的2026年预算中，政府预计2028-2029年将有6亿加元的盈余。但那个预测现在看来有点过时了。那么在这次财政更新中，你会关注什么？正如我们所知，今天我们稍微领略了一点预期内容，但你具体会看什么？
+<details><summary>Original English</summary>
+>> Richard, let's talk money.
+The fall fiscal update will be
+released tomorrow in the 2026
+budget this spring, the
+government expected a 600
+million surplus in 2028 2029.
+But that projection seems a bit
+outdated.
+So what will you be looking for
+in this fiscal update?
+As we know today, we got a
+little bit of a taste in terms
+of what we can expect, but what
+are you going to be looking for?
+</details>
+
+>> 是的，资金问题，这是真正有趣的地方。我是说，这届政府在八年多前以承诺解决韦恩（Wynne）政府的过度支出为由上台，但实际上却花得更多。财政厅长在上周稍微透露了我们当前的财政状况。上周他在市中心对商界人士发表讲话时表示，赤字将超过136亿加元。当然，我们已经知道债务正在逼近5000亿加元。你看，这是一届花费了大量金钱的政府，而且这笔钱可以说是捆绑在安省民众尚未看到实际成果的项目中。你知道，他们正在修建安大略线（Ontario Line），这很好，多伦多需要公共交通，但其成本现在已经激增到340亿加元。公路和其他基础设施项目上捆绑了超过300亿加元，仅用于支付债务利息每年就超过170亿加元。他们每年花在偿还债务利息上的钱，比花在教师工资和福利上的钱还要多。因此，现在贸易战来了，也许政府的收入会减少，他们似乎面临着某种财政紧缩。有趣的是，在过去几周里，财政厅长和省长都在暗示我们可能会看到削减支出的举措。我的意思是，他们划定了底线，约翰·迈克尔·麦格拉思也提到了这一点：他们说不会加税，不会削减医疗开支。但这听起来像是除此之外的一切都可以拿出来讨论。财政厅长上周表示，我们将考虑裁减人员，这可能暗示安大略公共部门的公务员会面临裁员，并且可能还会进行一些有针对性的支出削减，因为政府试图控制这种可能有些失控的财政局势。
+<details><summary>Original English</summary>
+>> Yeah, the money thing and
+this is the real interesting
+thing.
+I mean, this is a government
+that was swept to power more
+than eight years ago, promising
+to tackle the spending of the
+wing government, but, you know,
+has gone on to spend way more.
+The finance minister, kind of
+telegraphed a little bit about
+where we are fiscally.
+Last week he was speaking to a
+business crowd downtown, and he
+said the deficit is going to top
+$13.6 billion.
+Of course, we already know the
+the debt is approaching half a
+trillion.
+Look, this is a government that
+has spent a ton of money, and
+it's money that's kind of
+wrapped up in projects that
+Ontarians really haven't seen
+come to fruition yet.
+You know, they're building the
+Ontario line, which is great.
+You know, we need transit in in
+Toronto, but that the cost of
+that has ballooned now to 34
+billion.
+There's more than 30 billion
+wrapped up in highway and other
+infrastructure projects, and
+it's costing more than 17
+billion just to service the
+debt.
+Every year.
+They're spending more to service
+the debt than they are on.
+On teacher salaries and benefits
+every year.
+So, you know, now that the trade
+war has come along and maybe the
+government's going to be taking
+in less money they're facing, it
+seems like a bit of a fiscal
+crunch here.
+And it's interesting to see the
+finance minister out in the last
+couple of weeks in the Premier,
+to kind of signalling what we
+might see as far as cutbacks.
+I mean, they've kind of drawn
+this line in the sand and John
+Michael McGrath alluded to it.
+They say we're not going to hike
+taxes.
+We're not going to cut health
+care spending.
+But it kind of sounds like
+everything else might be on the
+table.
+The finance minister last week
+saying, we're going to take a
+look at headcount reductions,
+maybe signalling layoffs in the
+Ontario public sector, civil
+servants there, and maybe some
+targeted spending cuts, too, as
+the government tries to, you
+know, get a hold of this fiscal
+situation that maybe has gotten
+away from them a little bit.
+</details>
+
+>> 杰西卡。
+<details><summary>Original English</summary>
+>> Jessica.
+</details>
+
+>> 是的。医疗将是预算紧缩的大问题。安大略省护士刚刚站出来发声，谈论所有被裁减的护士以及因此失去的护理工时给患者带来的影响。我们有一篇报道指出“走廊医疗（hallway health care）”——即本应入院但被困在走廊、储藏室或其他非常规空间担架上的病人——多年来一直是安大略省的一个问题。但过去所谓的走廊医疗高峰期，即一年中流感蔓延且情况非常糟糕的时期，现在成了新的常态低谷，情况变得更糟了。政府当初承诺上台解决走廊医疗问题、终结走廊医疗，但现在却更恶化了。但他们面临的现实是，他们在医疗上的投入依然比以前更多，然而人口在增长，人口在老龄化，医疗在某些方面变得昂贵得多。市面上出现了新的极好疗法，对需要它们的患者来说花费巨大。这对他们的预算来说是个问题，对于目前在安大略各地艰难求医的患者来说也是个问题。
+<details><summary>Original English</summary>
+>> Yeah.
+Health care is going to be the
+big budget crunch problem.
+The Ontario nurses were just out
+saying, talking about all the
+nurses that have been cut back
+and lost nursing hours, that
+that has meant for patients.
+We had a story out showing that
+hallway health care.
+So patients who should be
+admitted to the hospital but are
+stuck on stretchers in hallways
+or storage closets or other
+unconventional spaces.
+That's been a problem in Ontario
+for years.
+But what used to be sort of the
+highs of hallway health care,
+the part of the year where
+there's flu going around and
+it's really bad.
+Those are the new lows.
+It's gotten worse.
+The government promised to come
+to power to fix hallway health
+care, to end it and it and it's
+worse.
+But what they're facing is
+they're still spending more
+money on health care than
+before.
+But people the population is
+growing and the population is
+ageing.
+And health care in some ways is
+getting very much more
+expensive.
+There are new wonderful
+treatments out there that cost a
+lot of money for the patients
+who need them.
+It's a problem for their budget,
+and it's a problem for the
+patients who are struggling to
+get care in places in Ontario
+right now.
+</details>
+
+>> 好，艾哈迈德，我们谈了医疗，也谈了支出和长期项目。但在这次财政更新中，你还会关注什么？
+<details><summary>Original English</summary>
+>> All right, Ahmed, we've
+talked health care.
+We've talked about spending and
+long term projects here.
+But what will you be watching
+for in this fiscal update?
+</details>
+
+>> OSAP。这是政府在过去几周不得不处理的一个问题。昨天质询时间结束后，我们看到记者们在向厅长提问。在我看来，OSAP是一个融合了两方面因素的问题，有可能成为本届政府的引雷针：负担能力与问责制。一方面是负担能力。由于该行业少数不良行为者滥用了该计划，这届政府现在取消了私立大专院校获取OSAP的资格。但与此同时，他们正如省长所说，是在因此惩罚“好学生”。而在另一方面，这是一个为什么政府花了这么长时间才发现似乎存在系统性滥用OSAP资金的问题。因此，在负担能力问题——即被承诺获得这笔资金的学生将如何负担得起学费——与问责制——即为什么省里花了这么长时间、为什么他们之前查不出来之间存在疑问。要知道，省里是有办法对这些类型的项目进行审计的。为什么他们花了这么长时间才真正发现存在系统性问题？我会在这个会期关注这一点。
+<details><summary>Original English</summary>
+>> OSAP this has been an issue
+that the government has had to
+deal with over the last couple
+of weeks.
+And yesterday we saw after
+question period, reporters were
+speaking to the minister.
+OSAP is an issue, in my opinion,
+that combines two things that
+has the the potential of
+becoming a lightning rod for
+this government.
+Affordability and
+accountability.
+On one hand, affordability.
+This is a government that is
+now, that has now taken OSAP
+back from private, from private,
+post-secondary, because a few
+bad actors in the sector have
+misused the program.
+But at the same time, they are,
+you know, penalising some you
+know, the Premier said the good
+students for that.
+But on the other hand, this is a
+question of why did the
+government why did it take the
+government so long to find out
+that there was this apparently a
+systemic misuse of of oSap
+funding?
+So so between the question of
+affordability and how students
+will be able to afford students
+who were promised this money
+will be able to afford their
+education and accountability.
+Why the province took so long
+and why they couldn't find it.
+You know, the province has ways
+to, to, to, to, to audit these
+types of programs.
+Why it took them so long to
+actually discover that there was
+a systemic issue.
+I'll be taking a look at that
+this this session.
+</details>
+
+### 教育劳资谈判与教师罢工风险
+
+>> 好。我们来谈谈教育。自8月以来，安省五个省级工会的教师们一直没有合同。关于这些谈判你能告诉我们什么？教师罢工的风险是否在上升？我应该说明，TVO隶属于教育部，但大家是否担心教师会上街设立纠察线？
+<details><summary>Original English</summary>
+>> All right.
+Let's talk education.
+Ontario teachers across five
+provincial unions have been
+without a contract since August.
+What can you tell us about those
+negotiations?
+Whether the risk of teacher
+strike is growing?
+I should mention that TVO is a
+part of the Ministry of
+Education, but is there concern
+that teachers will be hitting
+the picket line?
+</details>
+
+>> 是的，就在几年前，我想我们三个人都在报道安省上一次教师罢工。你看，谈判其实还没有真正开始。他们仍在就谈判的框架参数进行磋商。所以我们还没到那个阶段，目前不会发生迫在眉睫的罢工。但是，所有或大部分教师工会已经投票决定举行罢工授权投票。所以我们很快会看到这些投票举行。这件事可能会在未来几个月达到顶峰。我并不确信我们会重演几年前教师真正离岗罢工的局面。但毫无疑问，这是一届乐于与这些工会正面对抗的政府。因此，看看未来几个月事态如何发展将会很有意思，因为教师们自8月以来就一直没有合同了。
+<details><summary>Original English</summary>
+>> Yeah, it's only a few years
+ago, all three of us, I guess,
+were covering the last teacher
+strike here in Ontario.
+Look, the the negotiations
+really haven't begun yet.
+They're still talking about the
+parameters for them.
+So we're not there yet.
+There's no imminent strike
+happening.
+But, you know, all the teacher
+unions or most of them have
+voted to hold strike votes.
+So we're going to see those
+votes coming up.
+This is something that that
+could come to a head in the next
+couple of months.
+I'm not convinced that we're
+we're going to see the a replay
+of what we saw a few years ago
+with teachers did walk off the
+job.
+But certainly this is a
+government that has been willing
+to go up against these unions.
+So it's going to be interesting
+to see what plays out in the
+next couple of months with this,
+because teachers have been
+without a contract now since
+August.
+</details>
+
+>> 杰西卡，我看到你在点头。你同意理查德的看法。
+<details><summary>Original English</summary>
+>> Jessica, I see you nodding
+your head.
+You agree with Richard.
+There.
+</details>
+
+>> 是的，他完全说对了，我们目前还没到那一步。罢工投票已在计划中，而这之后还在等待一项关于具体谈判内容和谈判地点的裁决。情况有点复杂，但这意味着事情目前处于等待状态。将会有罢工投票，那部分其实某种程度上是常规程序，但目前教育系统承受着巨大压力，我认为这增加了发生混乱的可能性。许多教育局在撤换教育委员方面面临巨大压力；班级规模扩大、特殊需求以及对特殊需求儿童的支持资金不足，都带来了巨大压力。我们的教育厅长一直在外面琢磨对学校如何接纳特殊需求儿童做出重大改变。他一直在琢磨，目前在很多情况下把他们纳入普通班级的方式并没有奏效。那里承受着很大压力。他谈到也许整个系统都需要改变；他谈到如果不起作用，就不想增加更多资金来支持把孩子纳入班级。他正在做出许多重大改变，而这些改变在教师和一些家长看来未必讨好。有些人可能喜欢，但这都意味着局势非常动荡。正在发生很多事情，我认为这增加了复杂性，这使得谈判进程比平时更加艰难，而谈判平时本就不轻松。
+<details><summary>Original English</summary>
+>> Yeah, he's absolutely right
+that we're not there yet.
+So there are strike votes
+planned.
+And this comes after that.
+We're there waiting for a ruling
+on exactly what is going to be
+negotiated, where it's kind of
+complex, but it means that
+things are in a holding pattern
+for now.
+There's going to be a strike
+vote.
+That part is actually kind of
+routine, but there are huge
+pressures on the education
+system right now that I would
+say increase the possibility of
+disruption.
+There's a lot of pressure on the
+the removal of trustees in a lot
+of boards.
+There's a lot of pressure on
+rising class sizes, on
+underfunding for special needs
+and support for kids with
+special needs.
+We've got the education Minister
+out there musing about making
+big changes to how kids with
+special needs are, are
+accommodated in schools.
+He's mused about the way that
+they are currently included in
+classes, in many cases, is not
+working.
+There's a lot of pressure there.
+He's talked about how maybe we
+should like maybe this whole
+system needs changing.
+He's talked about not wanting to
+add more funding to support kids
+being included in classrooms.
+If it isn't working.
+He's making a lot of big changes
+that aren't necessarily going
+over well with teachers and with
+some parents.
+Some may like them, but it all
+means that it's very frothy.
+A lot is going on, and I think
+that increases the possibility
+that where things and it's a
+more difficult negotiation
+process than it usually is, and
+it's not usually.
+</details>
+
+>> 艾哈迈德。
+<details><summary>Original English</summary>
+>> Amit.
+</details>
+
+>> 是的，我认为教师工会会告诉你，这位厅长越来越难打交道，与他们过去与其他厅长的关系截然不同。我不认为他们已经到了要罢工的地步。我也认为罢工始终是教师工会的最后手段，或者他们希望如此，因为罢工往往是公众舆论开始转向的时候。因此我认为我们还没有接近安省学校发生罢工行动的阶段。但我绝对认为这是这些工会会打的一张牌，特别是如果合同谈判陷入僵局的话。
+<details><summary>Original English</summary>
+>> Yeah, I think that teachers
+unions will tell you that this
+has been an increasingly
+difficult minister to deal with,
+different than past
+relationships that they've had
+with other ministers.
+I don't think that they are at a
+point where they will strike.
+I also think that striking is
+always the last resort for
+teachers unions, or they try it.
+They want it to be, because
+that's kind of when public
+sentiment starts to shift.
+So I don't think we're close to,
+you know, labour action in
+Ontario schools.
+But I definitely think that it
+is a card that these unions will
+play, especially if contract
+talks go side sideways.
+</details>
+
+### 绿带丑闻调查与政府廉洁性质疑
+
+>> 杰西卡，你一直在写很多关于绿带（Greenbelt）丑闻的报道。虽然感觉那是很久以前的事了，但档案仍未结案。你能向我们介绍那方面的最新进展吗？
+<details><summary>Original English</summary>
+>> Jessica, you've been writing
+a lot about the greenbelt
+scandal.
+It seems like a long time ago,
+but the file is still open.
+Can you give us the latest
+there?
+</details>
+
+>> 是的，皇家骑警（RCMP）已经调查三年多了。在做了一些报道之后，我们最终获得了一些新信息，有消息源带着一份报告主动找上门来。那是一份调查报告，发现他进行了非法游说，违反了安大略省的游说法律。但报告中包含了一些此前从未公开过的关于绿带土地移出时发生情况的信息。所以一直有一些主要带有花絮性质的信息碎片。我们曾报道过一篇故事，讲的是在内阁签署批准移出绿带的当天，参与绿带移出的政府官员、开发商和说客如何在枫叶队比赛的私人包厢里聚会。我们还掌握了相关信息，显示参与其中的一名资深厅长办公室幕僚在接受廉政专员面谈时所说的一些话，后来被其本人的短信等证据所推翻。我们还有几篇关于此事的报道即将推出，内容挺有料的，但我现在就不提前剧透了。关键在于，这一切仍在继续。皇家骑警调查了三年多仍在进行中。我们日常不再经常谈论它，因为除了我们掌握并正在发布的这部分新信息之外，并没有太多新闻。但是当你与人们谈起这届政府时，它还是会被提及；在反对党试图批评他们时也会被提及。在某个时刻依然存在被提起指控的可能性，或者有一天皇家骑警也可能会站出来说“事实上，此案已结”。
+<details><summary>Original English</summary>
+>> Yeah, it's the RCMP and
+they've been investigating for
+over three years now.
+We ended up in the position of
+getting some new information
+after doing some reporting on
+this, a source came forward with
+a report.
+So this was an investigative
+report on that, found that he'd
+done some illegal lobbying,
+broken, broken.
+The Ontario's lobbying law.
+But it contains some information
+about what happened when the
+greenbelt removals that has
+never been made public before.
+So there's been like tidbits
+that are mostly coloured.
+We had a story about how
+government officials and
+developer and lobbyists who are
+involved in one of the greenbelt
+removals mingled in a private
+box, and they private box at a
+leaf game, Leafs game on the day
+that cabinet signed off on the
+greenbelt removals.
+We've got information about how
+one of the senior ministers
+office staffers involved said
+some things.
+In our interview with the
+Integrity Commissioner that were
+contradicted by evidence, such
+as her own text messages.
+Later on.
+We have a few more stories
+coming out on this that are kind
+of spicy, but I won't spoil
+right here and now.
+The the point is that this is
+all still going on.
+The RCMP are still investigating
+after more than three years.
+We don't talk about it on the
+day to day because aside from
+this new bit of information that
+we get, we've got and are
+putting out there, there hasn't
+been a lot of news, but it does
+come up when you talk to people
+about this government.
+It comes up when the opposition
+is trying to criticise or
+criticise them, and they are
+still the possibility of there
+being charges at some point,
+though, or the possibility that
+one day the RCMP could come out
+and say, actually, case closed.
+</details>
+
+>> 理查德。
+<details><summary>Original English</summary>
+>> Richard.
+</details>
+
+>> 如果我可以插一句的话，有很多事情，有很多事情都在暗中待命。有那项皇家骑警的调查，它会带来什么结果？还有廉政专员正在调查对技能发展基金（Skills Development Fund）的处理。这是政治幕僚涉嫌将这些补助金快速发放给不合格的公司，这些公司与保守党说客有联系，或者涉嫌与当时的劳工厅长戴维·皮奇尼（David Piccini）有联系。那是一份廉政专员随时可能公布的报告，一旦出炉可能会真正破坏政府的宣传基调。因此，这些暗中待命的事情一旦成为现实，真的会损害政府的宣传。
+<details><summary>Original English</summary>
+>> There's a lot of things.
+There's a lot of things.
+If I could just jump in that are
+kind of waiting in the wings
+there, is that RCMP
+investigation, what's going to
+happen with that?
+There's also this the Integrity
+Commissioner is investigating
+the handling of the Skills
+Development Fund.
+You know, this was a political
+staff fast tracking these grants
+to allegedly unqualified
+companies who had ties to
+conservative lobbyists or
+alleged ties to then Labour
+minister David Piccini.
+That's an integrity commissioner
+report that could come out
+literally any day, which could
+really derail the government's
+message.
+So there's these things waiting
+in in the wings that could
+really hurt the government's
+message if and when they come to
+fruition.
+</details>
+
+>> 理查德，我也想迅速再追问一下绿带事件。你认为公众对这件事仍然高度关注，还是大家已经翻篇了？
+<details><summary>Original English</summary>
+>> Richard, I do want to jump
+back quickly on, on the
+greenbelt as well.
+Do you think that's still top of
+mind for, for members of the
+public, or have we moved on
+here?
+</details>
+
+>> 省长认为大家不在意了。每当现在有人问起这件事，他总是说，噢，安大略人不在乎这个，我们的民调显示他们不关心。我是说，问题在于，有任何丑闻能够真正伤到这届政府吗？在过去的几个月里，他们遭遇了许多非常易懂的丑闻。省长花大价钱买了一架私人飞机，他的许多议员住在多伦多却在多伦多住酒店并让纳税人报销。这一切似乎都没有真正对省长造成打击。这也许是反对党的问题：他们真能切实打中要害吗？议会昨天在147天后首次复会，在发生了这么多丑闻的情况下，反对党领袖站起来，首先提出了一个相当泛泛的问题，讲她在全省巡视的经历，然后说“省长，您是不是有点忘记了您一直在为谁而战”，也许缺乏了在当前所有局势下你可能会期待的那种致命一击。因此，真正的问题是，这些丑闻是否正在对政府产生负面影响？你看一些民调数据，它可能表明并没有。
+<details><summary>Original English</summary>
+>> I mean, the Premier doesn't
+think it is.
+Whenever he gets asked about it
+now, he says, oh, Ontarians
+don't care about it.
+Our polling shows they don't
+care about it.
+There are I mean, this is the
+thing.
+Are does any scandal stick to
+this government?
+I mean, just in the last couple
+of months, they faced their
+share of really easy to
+understand scandals.
+The Premier buying a private jet
+for big money, his many of his
+MPs staying in Toronto hotel
+rooms when they live in Toronto
+and billing taxpayers for it.
+None of it seems to really stick
+to the Premier.
+And maybe that's a problem of
+the opposition.
+Can they really land these
+attacks?
+You know, legislature came back
+yesterday for the first time in
+147 days.
+And with all the scandal going
+on, you have the opposition
+leader standing up and leading
+off with kind of a generic
+question, talking about how she
+travelled around the province
+and then saying, Premier, have
+you kind of forgot who you who
+you've been fighting for, maybe
+lacking that, that sort of knock
+out jab that you might expect
+with everything that's going on?
+So the real question is, are
+these scandals sticking to the
+government?
+You look at some of the polling
+numbers, and it might suggest
+they're not.
+</details>
+
+### 反对党发力点与结语
+
+>> 我把最后的发言权留给你。你认为反对党在本次会期会重点关注哪些议题？看来我们已经谈到了几个。还有什么遗漏的吗？
+<details><summary>Original English</summary>
+>> And I'm giving you the last
+word here.
+What issues do you think the
+opposition will focus in on this
+session?
+It seems like we've covered a
+few there.
+Is there anything that's
+missing?
+</details>
+
+>> 是的，我认为包括所有那些。但我只想补充理查德刚才说的话，政府似乎并不认为这些丑闻伤到了他们。其中一个例子就是赵成俊（Stan Cho）。赵成俊此前——省长现在说他因滥用费用被开除出内阁。省议员在夜间开会或出现紧急情况时可以领取酒店津贴，他们被允许使用这些津贴，而赵成俊将其用于他现在所说的“家庭便利目的”。但是你看，赵成俊被逐出内阁后，现在又回来担任议会助理了。随之而来的是加薪。那么这是否表明政府认为人们还在谈论这些丑闻？没有，因为如果人们没有遗忘，他是不会得到加薪的。
+<details><summary>Original English</summary>
+>> Yeah, I think all of those.
+But I just want to add to what
+Richard was saying, the
+government doesn't seem to think
+that they're sticking.
+And an example of that is Stan
+Cho.
+Stan Cho was he was the premier
+now says he was fired from
+cabinet over the misuse of
+expenses or funding that MPPs
+receive in allowance for hotels
+when there are night sittings or
+when there are emergencies,
+they're allowed to use these
+allowances, and Stan Cho misuse
+them for, he now says, family
+convenience purposes.
+But, you know, Stan Show was out
+of cabinet and now he's back as
+a parliamentary assistant.
+And with that comes a pay raise.
+And so does that show that the
+government thinks that, you
+know, people are talking about
+these scandals?
+No, because he would not be
+getting a pay raise if if people
+had forgotten.
+</details>
+
+>> 我应该提一下，赵成俊确实偿还了那些费用。是的，但我们将继续关注这个报道。我想向你们三位表示感谢。很难得也很不容易能请到三位来自省议会的记者坐在一起畅聊，非常感谢你们抽出时间。艾哈迈德、杰西卡、理查德，很高兴你们来到节目中。
+<details><summary>Original English</summary>
+>> I should mention that Stan
+did pay back those fees.
+Yes, but we will continue to
+follow the story.
+I want to thank you all three.
+It's a very rare to and hard to
+get three reporters from Queen's
+Park to sit down together to
+chat, so I appreciate you taking
+the time.
+Ahmed Jessica, Richard, great to
+have you on the program.
+</details>
+
+>> 很高兴来到这里。
+<details><summary>Original English</summary>
+>> Good to be here.
+</details>
+
+>> 感谢邀请我们。
+<details><summary>Original English</summary>
+>> Thanks for having us.
+</details>
+
+>> 那么，你认为安大略省的议员们在12月休会前应该把重点放在什么上？是否有某一个议题应当成为重中之重？请告诉我们。给我们发送电子邮件至 TheRundown@TVO.org。或者像往常一样，可以在我们的YouTube页面上留言。在此之前，我们明天见。
+<details><summary>Original English</summary>
+>> So what do you think Ontario
+legislators should focus on
+before they break in December?
+Is there one issue that should
+be top priority?
+Let us know.
+Send us an email to
+TheRundown@TVO.org.
+Or as always, you can drop us a
+comment on our YouTube page.
+Until then, I will see you
+tomorrow.
+</details>

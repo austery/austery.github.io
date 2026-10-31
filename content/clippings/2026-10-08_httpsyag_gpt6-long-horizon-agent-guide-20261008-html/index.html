@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPT-6 指南读下来：long-horizon agent
+的实现清单，和它们没说的部分</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">GPT-6 指南读下来：long-horizon agent
+的实现清单，和它们没说的部分</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-08</span>
+    
+
+    <header class="article-header">
+      
+      <h1>GPT-6 指南读下来：long-horizon agent
+的实现清单，和它们没说的部分</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">long-horizon-agent</span>
+      
+        <span class="tag-pill tag-pill--no-page">context-compaction</span>
+      
+        <span class="tag-pill tag-pill--no-page">async-tool-calling</span>
+      
+        <a class="tag-link" href="/tags/multi-agent/">multi-agent</a>
+      
+        <span class="tag-pill tag-pill--no-page">human-agent-collaboration</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章解析GPT-6指南，指出长任务挑战从记忆管理转向人机协作。厂商接管记忆压缩，开发者需设计权限边界与异步机制。通过steering、异步调用和多智能体委派实现不中断协作，但需警惕厂商黑盒风险及缺乏独立实测的局限。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/gpt6-long-horizon-agent-guide-20261008.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-08T00:00:00.000Z">2026-10-08</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>4 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E8%BF%87%E5%8E%BB%E7%9A%84%E9%95%BF%E4%BB%BB%E5%8A%A1%E8%A7%A3%E6%B3%95%E5%85%A8%E6%8A%BC%E5%9C%A8%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E4%B8%8A%E8%87%AA%E5%BB%BA%E5%8E%8B%E7%BC%A9%E7%9A%84%E6%94%B6%E7%9B%8A%E8%B6%8A%E5%81%9A%E8%B6%8A%E5%B0%8F">过去的长任务解法全押在上下文管理上：自建压缩的收益越做越小</a></li><li class="outline-h2"><a href="#%E6%8B%89%E5%81%8F%E7%AD%89%E5%BE%85%E5%88%86%E6%B4%BE%E4%B9%8B%E5%A4%96%E6%9D%83%E9%99%90%E6%B8%85%E5%8D%95%E6%98%AF%E7%AC%AC%E5%9B%9B%E4%BB%B6%E4%BA%8B%E5%AE%83%E5%86%B3%E5%AE%9A%E5%89%8D%E9%9D%A2%E4%B8%89%E4%BB%B6%E4%BA%8B%E5%BE%80%E5%93%AA%E9%87%8C%E7%94%A8">拉偏、等待、分派之外，权限清单是第四件事：它决定前面三件事往哪里用</a></li><li class="outline-h2"><a href="#%E8%90%BD%E5%9C%B0%E5%B0%B1%E4%BA%94%E6%AD%A5%E8%AE%B0%E5%BF%86%E4%BA%A4%E7%BB%99%E5%8E%82%E5%95%86%E6%89%98%E7%AE%A1%E9%85%8D%E5%90%88%E6%96%B9%E5%BC%8F%E8%87%AA%E5%B7%B1%E8%AE%BE%E8%AE%A1">落地就五步：记忆交给厂商托管，配合方式自己设计</a></li><li class="outline-h2"><a href="#%E8%BF%99%E5%A5%97%E6%9C%BA%E5%88%B6%E6%B2%A1%E7%BB%8F%E8%BF%87%E7%8B%AC%E7%AB%8B%E5%AE%9E%E6%B5%8B%E5%8E%82%E5%95%86%E7%9A%84%E4%BA%A7%E5%93%81%E6%89%8B%E5%86%8C%E4%B8%8D%E8%83%BD%E7%9B%B4%E6%8E%A5%E5%BD%93%E9%80%9A%E7%94%A8%E6%9E%B6%E6%9E%84%E7%94%A8">这套机制没经过独立实测：厂商的产品手册不能直接当通用架构用</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>如何设计包裹在模型外面的那层工程代码（常见的叫法是harness，为模型递工具，攒历史，执行它吐出的命令，见下文），以前是没有官方说法的。OpenAI的这份《A model
+guide for the GPT-6
+family》和配套的机制文档，第一次成体系地介绍了整个模型家族的这个工程应该如何设计。还有一个变化要单独说，就是agent连跑几个小时的时候最头疼的记忆问题（干过什么，接下来干什么），GPT-6直接做进了API，开发者不用再自己搭工程。开发者真正需要思考的是如何与一个长时间自己干活的agent配合，哪些事情它自主决策，哪些暂停询问。外加三个不打断任务的机制，管理拉偏，等待和分派。</p>
+<p>很多人以前一直以为几个几小时甚至几天这种长任务最关键的挑战是模型的记忆：上下文窗口再大，也装不下几个小时的内容。所以各种额外的方法都试过，滑动窗口，外部向量搜索，让模型自己写总结，来保证agent能记住发生了什么。但从工程上看，手动拼接上下文很难走通。GPT-6官方指南给的方案是，记忆方面的事情由厂商负责：加密的compaction来把太长的历史压小保存，持久推理把模型前面的思考过程留到后面的轮次继续用。steering，异步工具调用，多agent管理的是另一头，在任务不停的情况下纠正，等待和分工。模型，harness，人的责任重新划了一道（async
+tool calling, multi-agent）。</p>
+<p>这篇文章主要想强调，长任务的挑战正在从如何让它记住，转向人和模型如何配合。厂商接管了记忆，但如何防止
+agent
+不停歇的时候跑偏、什么时候放手、什么时候拍板，决定了任务能不能做成。</p>
+<p>旧解法是工程师手工垒方块换来越来越少的收益，新分工是模型管状态、harness
+管调度、人只留边界</p>
+<h2 id="过去的长任务解法全押在上下文管理上自建压缩的收益越做越小" data-reading-heading="">过去的长任务解法全押在上下文管理上：自建压缩的收益越做越小</h2>
+<p>举个例子，一个设计成连续运行几小时的agent任务在实际生产中经常遇到三种情况：上下文长度不够，信息半路截断；中间调用的原始日志塞满窗口，之前的假设无从追溯；不确定分支停机提问没人应答，形成死锁，任务就此搁浅。另一个场景是同步调用一个慢速工具，比如跑个测试或拉个镜像，整个harness卡在这一步，网络一超时就原地空转。这三种情况把大家一次次引向同一个解法思路：把上下文管理做得更深。</p>
+<p>在这种场景下，一个直观的想法是下大力气做上下文管理，用模型之外的方法保存和修剪状态。在《harness
+设计的关键决策：同一个开关，一个模型赚了，一个崩了》（2026 年 9 月
+23 日，下称 9/23 文章）中也做过类似的实验，把 agent
+外层程序的三个模块做成三个开关，在一个代码修复的 benchmark
+和一个终端任务的 benchmark
+上逐个测量。相关的是两方面的发现。第一，文中试了五种上下文管理的策略，分阶段组合（先用规则把历史剪掉，窗口仍然太长时再让模型把旧内容总结成摘要）在所有测试的组合中开销最低（原文第
+47 节）。第二，专门的 readback
+机制（把裁掉的长文本存到外部空间，配一个工具让模型之后有需要时再取回来）的收益几乎是零，甚至平均准确率都是负的（原文第
+49 节）。</p>
+<p>这种保护有多脆弱，两组数据就能说明：上下文管理开与不开的平均成功率差异，在
+32k 小窗口下有 35.7 个百分点，到 128k 窗口只剩 2.7 个百分点（9/23 文章第
+47
+节）。窗口大四倍，保护几乎归零。自建压缩投入的工程随模型代际不断贬值，当年按窗口预算和调用成本定的裁剪深度（9/23
+文章第 65 节），一年后就得重估。</p>
+<p>直到 GPT-6 系列出现，情况才有所改变。OpenAI 的文档提到，带有 GPT-6
+系列的 task 可以跨越几个小时甚至几天。compaction
+这个功能本身出现得早，但厂商这次做的是把它和持久推理一起整合进 Responses
+API：服务端到了阈值自动压缩，压出来的是加密的状态块，声称里面带着继续任务所需的状态和推理。为什么现在敢这么打包，开发者不用管压缩算法怎么写？厂商的说法是模型能力变了：GPT-6
+代际的模型能从一个加密压缩块里接上任务，压缩丢了什么细节也扛得住；模型自己不会跑偏的前提下，压缩才敢做得激进。9/23
+文章的发现在这里反着用了一次：那篇文章里是 harness
+策略迁就模型习惯（弱模型要靠外层喂计划才活得下去）；现在是压缩基础设施赌模型够壮，赌注押在模型能力上，开发者拿到省事的代价是接受厂商的黑盒。长任务失控多半失控在配合流程上：跑偏没人拉、提问没人答、慢操作堵死全程。模型具有了长程续跑能力后，真正要思考的换成了如何在不停止任务的情况下与它协作。</p>
+<h2 id="拉偏等待分派之外权限清单是第四件事它决定前面三件事往哪里用" data-reading-heading="">拉偏、等待、分派之外，权限清单是第四件事：它决定前面三件事往哪里用</h2>
+<p>前面三个机制解决的是如何不停下来，这一节则讨论的是另一面：哪些事情必须停下来。这两者是相互独立且相互补充的：前者掌控节奏，后者掌控方向。清单是模糊的，模型可能会反复询问你是否继续运行，从而把长任务切成许多小段，或者自作主张作出不可逆的修改，直接把任务搞砸。OpenAI
+的指南在第二章介绍了提示词和技能的授权纪律，正是第三章长期任务自主运行的前提。授权白纸黑字地写下来，那三个机制才有安全的用武之地。</p>
+<p>官方指南在定义输出时提到，模型可以自由决定如何组织一个技术摘要，但在修改项目范围前必须先询问人类。类似地，Codex（OpenAI的编码agent）也有明确的分级：在人离开前，指定哪些独立任务继续运行，哪些决策必须停下来等待回复。在模型行为上，GPT-6
+Astra倾向于多提问寻求澄清。官方的模型使用指南提供了现成的提示词来应对这种情况：先推进并完成所有已授权且可复核的步骤，把人工审批作为动作外发的最后一步（官方模型使用指南）。</p>
+<p>厂商在API上提供了三种在不中断任务的前提下实现协调的机制，分别回答一个问题：装上它，哪件事不用停下来等人工。第一种是mid-turn
+steering。它支持宿主程序在模型的推理或工具执行过程中，使用Responses
+WebSocket
+API注入修正指令。OpenAI的解释是，这样的更新会在服务器端排队生效，不会取消正在进行的工具调用，也不会撤销已经完成的操作。排队的优势是，外部监控发现轨迹走偏，插一句话就能纠正，不用重做整个历史。文档也提到了一个物理限制：排队输入只在当前活跃连接上有效，网络断了，未处理的修正指令就会丢失。</p>
+<p>第二种是异步工具调用。这是给harness作者的。如果你使用API请求中声明的tool
+definition来构建一个工具，比如运行一个测试或抓取网页等需要执行几十秒的函数，传统的做法是同步的：模型发起调用，整个响应停在那里，等待你的函数跑完返回结果，模型再继续。而异步的做法则是在tool
+definition中加入一个async: true，模型发起调用后立刻去做别的事情，你的程序在后台执行这个函数，当函数执行完毕后，再把结果发送回去，由模型接着使用。如果想让它自己决定什么时候等待，可以提供一个自定义的wait工具（带有一个任务号注册表，每个后台任务都有一个任务号）。虽然这是配方，但关键变化是这种能力将慢速工具挂起整个循环的故障模式，从harness代码的问题变成了API语法直接消除的问题。（async
+tool calling）</p>
+<p>第三种是多智能体委派。GPT-6.1 Sol还实现了beta版本的Responses
+API的多智能体工作流，提供了包括spawn, send, wait,
+interrupt等六个托管编排动作。主agent可以把一个独立的子任务委派给sub
+agent进行并行处理。官方文档里面提到max_concurrent_subagents的默认并发设置是3，也建议设置成3。委派树的深度和智能体总数没有限制。在多智能体模式里，根agent和各sub
+agent的上下文压缩是相互独立的，子智能体的试错轨迹仅在自身生命周期内可见，不会污染主干上下文。（multi-agent委派）</p>
+<p>成熟的agent行为契约一般是只读和探索性的操作可以放行，写入或者不可逆的改变需要严格审查。厂商在这里做的其实就是把开发者之前在harness里面写的行为契约给实现成标准协议了。</p>
+<p>但这也带来另一个问题。根据文档介绍，GPT-6 Astra
+对于规则文件的字面内容更加敏感，包括skills文件和AGENTS.md（放在代码仓库里、写给agent看的说明书），官方文档专门提醒了这一点。它会读取所有可以加载到上下文中的所有规则文件，如果其中一个含糊或者过于严苛，那它可能会因为这条规则而在中途停止并要求确认，导致任务无法完成。官方在模型使用指南中提供了解决方案，就是在说明书中明确这一点：用户当前的指令比skill规则优先，并且增加一条自查要求，让它中途停下时指出是哪个文件、哪个规则拦的。</p>
+<h2 id="落地就五步记忆交给厂商托管配合方式自己设计" data-reading-heading="">落地就五步：记忆交给厂商托管，配合方式自己设计</h2>
+<p>把这些原则翻译成代码，得到五个步骤，每一步都有厂商托管的默认行为和开发者能自己决定的部分。第一步是按智能和成本选模型档位。
+这一步是财务计算。官方文档把模型选择描述成在智能和成本之间权衡。GPT-6
+Astra（输入 $10.00/百万 token，输出 $50.00，缓存输入
+$1.00）是这个家族中最聪明的模型，适用于最复杂的推理和逻辑决策。GPT-6.1
+Sol 输入 $2.00、输出 $10.00、缓存输入
+$0.10，大约是Astra价格的五分之一，同样聪明，适用于复杂编码、研究，以及computer
+use这种要模型直接操作电脑界面的活。GPT-6 Luna 输入 $0.10、输出
+$0.50、缓存输入
+$0.01，主打速度和低价，例如发票处理，分类和固定格式的摘要，这些都是大规模和频繁重复的任务。</p>
+<p>这个档位决定了模型会进行多少思考： * Low: 适合简单和常规的任务 *
+Medium / High: 适合需要判断力的相对困难的任务 * Extra high / Max:
+实验性，仅在评估性价比合理时启用
+API可以在同一个会话中间动态改变档位，并且不影响已经建立的prompt
+cache，也就是重复前缀享受折扣的那层缓存。一个常见的用法是从默认档位开始，在关键代码或者难题中切换到High，完成后再切换回来。注意API不支持连续两次配置更改，也不支持与自动压缩同时使用（官方reasoning文档）。
+此外，Fast
+mode只有在API中才能使用，响应更快也更平稳，但价格更高。Ultrafast则是通过增加token生成速度来减少延迟（与推理无关），目前只对GPT-6
+Astra有效。</p>
+<p>第二步：用官方压缩，不删历史，缓存内容摆对顺序
+不删历史消息，用官方的
+compaction 系统。可以设 compact_threshold
+自动压，或者在 harness 中用 /responses/compact
+手动压。压缩的结果是一个叫 compaction item
+的东西，一个人完全看不懂的加密块。OpenAI
+说这里面封装了继续这个任务所需要的状态和推理，下次把它发过去就可以接着干。经验法则是：如果要用
+previous_response_id（服务端替你保存对话历史的串联参数）来续调，就不要自己删历史消息，让服务端来删。
+关于缓存，官方宣称用缓存最多可以省95%的钱。编排上把系统提示词、规范、工具接口等放在最前面，具体任务放在最后面；长期预算里也要加入缓存写入和长上下文费用。</p>
+<p>第三步：长操作异步化，或者用wait工具
+几秒以上的操作设为async: true，harness维护一个task_handle注册表（每个后台任务一个task_handle），模型发起调用后立即拿到任务号去做其他事；同时给它一个自定义wait工具，真正需要结果时才等待。后台执行完成后把结果回填到发起时的call_id上，避免同步阻塞（async tool calling的用法见上文链接）。</p>
+<p>第四步：撰写skills和AGENTS.md OpenAI
+开发者体验团队的Provencher发现，模型对指令细节的理解有了明显改进，但有时过于死板的步骤会妨碍结果。可以按《Rethinking
+skills and prompts for GPT-6 Astra》里的四条建议来写： 1.
+skills描述简单明了，只说明何时触发，具体细节按需加载 2.
+AGENTS.md写明何时适用于某个文档/测试，一次性本地数据的安全测试明文免审
+3. 设置明确决策边界，不瞎问 4.
+规定done，也就是什么算做完：改代码、跑环境、查结果、修错，并列出必须人审的事项
+同时，说明优先级：用户指令优于skill规则，不要用一条不起眼的规则拦长任务。</p>
+<p>第五步：生产加必停，走偏用steering纠
+在生产里设必须人工点头的阻塞点（写入、合并、发送），本地探索、写码、测试给一定自由度。发现走偏就WebSocket发steering指令排队纠正，不打断上下文。</p>
+<p>长期任务运行循环的五个节点，steering
+作为独立虚线通道排队生效，不可逆动作单独设停止点</p>
+<h2 id="这套机制没经过独立实测厂商的产品手册不能直接当通用架构用" data-reading-heading="">这套机制没经过独立实测：厂商的产品手册不能直接当通用架构用</h2>
+<p>本文指南中的蓝图是一个与OpenAI
+API紧密结合的产品手册。直接照抄等于把架构决策外包给厂商的销售页面。产品分级的不稳定是第一重风险。在GPT-5.6的时代，官方设置了Sol,
+Terra,
+Luna三个档位，并称这是一个长久的分级策略。但是在GPT-6发布以后，Terra消失了，社区猜测Sol接过了它的位置，但官方没有确认。模型的档位会随着商业战略的变化而调整，因此不能把它当作一个长期语义稳定的系统接口。</p>
+<p>从工程实现的角度来说，有三个细节。第一是steering不持久化，它是一个WebSocket，断了就没有了，官方没有跨连接恢复。第二是在启用多智能体以后，服务端会把/responses/compact端点关掉，把整个对话历史一起压缩和手动精简的入口就没了。第三是一些API参数互斥，比如reasoning.summary（推理摘要开关，输出模型思考过程的概要）和max_tool_calls（单次响应允许的工具调用次数上限）不能同时指定。API会拒绝相邻的configuration_update（会话中途的档位参数更新），配置更新和自动压缩在时序上也是互斥的。</p>
+<p>比档位更关键的是验证：这套机制没有独立的消融实验。9/23
+的文章已经观察到同一个开关在不同模型上方向可以相反。去掉专用文件工具只留命令行，Nemotron-3
+550B 成功率高了、成本降了一半以上，Mistral 却掉了 23.2 个百分点（9/23
+文章第 27 节）。规划开关（9/23
+文章的测法：系统提示词硬性要求先写执行计划，每推进一步就把最新计划重新贴回上下文）让
+30B 小模型的成功率从 13.60% 提到 25.20%，提了 11.6
+个百分点，算它的生存线；放到两个强模型上则完全不提分，只剩控费效果（第
+43、45 节）。这些都在 OpenAI 家族之外测的。GPT-6
+家族这套新机制，目前还没有类似的对照实验。</p>
+<p>所以有三个关键的工程问题留给验证。第一，不中断任务的这套机制，能不能不依赖
+OpenAI 托管的 WebSocket 和加密
+compaction，在开源模型或多云架构里用纯客户端代码实现。第二，加密不透明的
+compaction item 与 9/23
+文章验证过的自建透明组合策略相比，跑几天真实轨迹时证据留住多少、信息失真多少：前者省事但难审计，后者相反，还没有结论（对照数据在
+9/23 文章第 47 节）。第三，GPT-6 家族内部把同样的 harness 用到
+Astra、Sol、Luna 三档上，会不会重演 9/23 文章记录的跨模型性能反转（第 39
+节）。还有个更长期的问题：等未来的模型把真实任务里的配合方式大量训练进去，这些外层协调机制还剩多少要人来设计（9/23
+文章结尾的开放问题，第 71
+节）。这份指南没有回答；它也是这个方向接下来最需要实测数据的地方。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/827cc438ba0e06aaf96faae5ba79f085f4760614499d70595af8d18ba46405a7.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/827cc438ba0e06aaf96faae5ba79f085f4760614499d70595af8d18ba46405a7.md" download="GPT-6 指南读下来：long-horizon agent
+的实现清单，和它们没说的部分.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=GPT-6" class="entity-link product-link">GPT-6</a>, <a href="/search/?q=Codex" class="entity-link product-link">Codex</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

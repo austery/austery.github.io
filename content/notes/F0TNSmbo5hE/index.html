@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>基于链路追踪与评估实现智能体软件生命周期的自动闭环</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">基于链路追踪与评估实现智能体软件生命周期的自动闭环</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-05</span>
+    
+
+    <header class="article-header">
+      
+      <h1>基于链路追踪与评估实现智能体软件生命周期的自动闭环</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/agentic-system/">agentic-system</a>
+      
+        <a class="tag-link" href="/tags/observability/">observability</a>
+      
+        <span class="tag-pill tag-pill--no-page">software-lifecycle</span>
+      
+        <span class="tag-pill tag-pill--no-page">automated-evaluation</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">研讨会介绍了智能体因非确定性而需要以链路追踪作为真相来源，阐释了如何通过启用 OpenInference 与可观测性工具收集执行数据，并利用自动化评估及 Signal 工具基于追踪记录定位问题、生成回归测试乃至自动创建修复 PR，以闭环智能体软件开发生命周期。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=F0TNSmbo5hE" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-05T00:00:00.000Z">2026-10-05</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>7 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E6%AC%A2%E8%BF%8E%E4%B8%8E%E7%A0%94%E8%AE%A8%E4%BC%9A%E4%BB%8B%E7%BB%8D">欢迎与研讨会介绍</a></li><li class="outline-h3"><a href="#%E9%9D%9E%E7%A1%AE%E5%AE%9A%E6%80%A7%E4%B8%8E%E9%93%BE%E8%B7%AF%E8%BF%BD%E8%B8%AA%E7%9A%84%E4%BD%9C%E7%94%A8">非确定性与链路追踪的作用</a></li><li class="outline-h3"><a href="#%E4%BB%8E%E4%BA%BA%E5%B7%A5%E7%93%B6%E9%A2%88%E5%88%B0%E8%AF%84%E4%BC%B0%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8C%96">从人工瓶颈到评估与自动化</a></li><li class="outline-h3"><a href="#%E5%AE%9E%E6%93%8D%E6%BC%94%E7%A4%BA%E4%B8%8E%E7%8E%B0%E5%9C%BA%E5%87%86%E5%A4%87">实操演示与现场准备</a></li><li class="outline-h3"><a href="#%E4%B8%BA-wonder-toys-%E6%8E%A5%E5%85%A5%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7">为 Wonder Toys 接入可观测性</a></li><li class="outline-h3"><a href="#%E5%88%86%E6%9E%90%E8%BF%BD%E8%B8%AA%E4%B8%8E%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D">分析追踪与自动修复</a></li><li class="outline-h3"><a href="#signal-%E6%99%BA%E8%83%BD%E4%BD%93%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%89%E5%85%A8%E5%AE%88%E6%8A%A4">Signal 智能体与自动化安全守护</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><!-- chunk 1/4 -->
+<h3 id="欢迎与研讨会介绍" data-reading-heading="">欢迎与研讨会介绍</h3>
+<p>好的。大家上午好。感谢大家再次回来。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>OK. Hello everyone. Thank you for coming back.</details>
+<p>你们当中有谁参加了今天上午的 101 课程？好的。看来我没有把大家吓跑。非常感谢。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>. Who among you was at session 101 this morning? OK. So, I didn't scare everyone. Thank you very much.</details>
+<p>呃，那些操作说明已经在屏幕上放了 10 分钟。我真希望你们已经照着做了，因为这里的 Wi-Fi 非常差，所以克隆那个代码仓库需要很长时间。嗯。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Uh, those instructions have been on the screen for the last 10 minutes. I really hope you've done them, because the Wi-Fi here is terrible, so cloning that repository takes a long time. Uh-huh.</details>
+<p>如果没有的话，呃，这些说明还会再次出现在屏幕上，你们还会有机会照着去操作。呃，不过我们还是开始吧。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>If not, uh, these instructions will appear on the screen again, and you will have another chance to follow them. Uh, but let's get started.</details>
+<p>这里是“Vice Production 201”。我们接下来将讨论如何自动闭环软件开发生命周期。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>This is "Vice Production 201". We're going to talk about how we automatically close the software development lifecycle loop.</details>
+<p>我们是 Arize AI。我们是监测、监督、监控与评估领域的领先平台。别试图同时说出这两个词，效果不太好。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>We are Arize AI. We are a leading platform for surveillance, oversight, monitoring and evaluation. Don't try to say both of these words at the same time. It doesn't turn out very well.</details>
+<p>呃，这是每个人都会展示的那种幻灯片，用来表达：“嘿，我们规模很大。我们非常重要。你们应该关注我们。”没错。我们规模非常大。我们非常重要。很多人在使用我们。这很棒。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Uh, this is the slide that everyone shows to say, "Hey, we're really big. We're really important. You should pay attention to us." That's right. We are very big. We are very important. Many people use us. This is great.</details>
+<p>呃，这是广告环节的最后一部分。我打算……你们可以用任何监控平台来做这件事。我们希望你们选择我们的，但这门课的目标是教你们监控正走向何方。嗯，它正在朝着持续改进演进。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Uh, and this is the last part of the advertising. I'm going to You can use any monitoring platform for this. We hope you choose ours, but the goal of this class is to teach you where monitoring is headed. Well, and it moves towards continuous improvement.</details>
+<p>在今天上午的 101 课程中，我讲了基础知识。我给你们讲了手动操作。我告诉了你们如何在小规模下进行。呃，如何对你们的 AI 应用进行监控，如何将其转化为链路追踪（traces），如何将那些链路追踪转化为评估，以及如何利用那些评估来改进你们的应用。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>In Session 101 this morning, I covered the basics. I told you about manual operations. I told you how to do it on a small scale. Uh, how to get monitoring of your AI application, how to turn that into traces, how to turn those traces into assessments, and how to use those assessments to improve your application.</details>
+<p>呃，而今天在这一节中，我们要讨论的是，在我们所处的全新互联网规模下，我们如何做到这一点。所以，呃，我打算讲大约 15 分钟关于它是如何运作的，呃，然后我们就直接进入实战工作坊。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Uh, and today in this session we're going to talk about how we do that in the new scale of the internet that we've found ourselves in. So, uh, I'm going to talk for about 15 minutes about how it works, uh, and then we'll dive right into the workshop.</details>
+<p>不同于 101 工作坊里有许多我的故事，呃，这堂课将尽可能偏向实操。我希望你们有一个可用的编程智能体，如果可能的话，还有我刚才在屏幕上展示的代码仓库。呃，因为我们要给你们的呃智能体布置一项任务。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Unlike Workshop 101, where there were a lot of my stories, uh, this one will be as practical as possible. I expect you to have a working agent for coding, and if possible, the repository I had on my screen earlier. Er, because we're going to give your er agent a task.</details>
+<p>你们安装的代码仓库里已经内置了一大批智能体技能。它们赋予你们的智能体程序员超能力来开展工作，因此你们的智能体在执行你们要求的任何任务时都会瞬间变得非常熟练。然后，我们将使用这些技能来分析我们的链路追踪，并针对我们在智能体运行中发现的问题准备修复方案。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>The repository you installed already has a whole bunch of agent skills. They give your agent programmer superpowers to work with, so your agent will instantly become very skilled at doing anything you ask them to do. We will then use these skills to analyze our traces and prepare fixes for the problem we discover in our agent's operation.</details>
+<p>接下来，我们将讨论信号——这是这项技术的未来，在这里我们可以实现智能体规模下的持续自动化改进。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Next, we'll talk about signal—this is the future of this technology, where we can enable continuous automatic improvement at agent scale.</details>
+<h3 id="非确定性与链路追踪的作用" data-reading-heading="">非确定性与链路追踪的作用</h3>
+<p>那么，从更宽广的视角来看，我们来讨论一下问题到底是什么。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>So, to take a broader view, let's discuss what the problem is.</details>
+<p>问题在于智能体是非确定性的。在传统软件中，你可以阅读代码，并能带着某种信心说出那段代码究竟会执行什么。而面对智能体，你毫无头绪。智能体是非确定性的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>The problem is that agents are non-deterministic. In traditional software, you can read code and say with some confidence what exactly that code will do. With agents, you have no idea. Agents are non-deterministic.</details>
+<p>智能体执行数个步骤，做出决策，即便给予它们完全相同的输入，它们也不会产生相同的结果。而且即便它们产生了相同的结果，每次达成该结果所遵循的路径也不一定相同。这意味着你的代码不再是关于智能体正在做什么的唯一真相来源。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Agents take several steps, make decisions, and even if they are given exactly the same input, they will not produce the same result. And even if they produce the same result, they won't necessarily follow the same path to it every time. This means that your code is no longer the sole source of truth about what the agent is doing.</details>
+<p>相反，真相来源是链路追踪，特别是在规模化之下的链路追踪。你需要掌握大量数据来理解智能体在平均意义下正在做什么，而不仅仅是单次运行期间的表现。因为当你构建智能体时，你本质上是在盲目工作。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Instead, the source of truth is traces, and especially traces at scale. You need to have a lot of data to understand what the agent is doing on average, not just during a single run. Because when you create agents, you are essentially working blindly.</details>
+<p>这是你在下载代码仓库时得到的东西：一堆代码和提交信息。这在过去足以理解将要发生什么，但现在不行了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Here's what you get when you download the repository: a bunch of code and commit messages. This used to be enough to understand what was going to happen, but now it's not.</details>
+<p>取而代之的是，你得到的是链路追踪。链路追踪——对那些错过入门课的人来说——简而言之，就像 AI 应用的日志文件。你的 AI 应用的每一次操作、每一次 LLM 调用、每一次工具调用、每一个智能体步骤——这一切都成为了链路追踪的一部分。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Instead, you get traces. Traces—for those who missed the introductory lesson—are, in short, like log files for AI applications. Every action of your AI application, every LLM call, every tool call, every agent step—it all becomes part of the trace.</details>
+<p>链路追踪可以嵌套，包含其他链路追踪，而这正是 Arise 所处理的对象。它们被发送到我们的服务器，我们为你们提供所观察内容的便捷可视化呈现。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Traces can be nested, contain other traces, and that's what Arise works with. They are sent to our servers, and we provide you with a convenient visualization of what you see.</details>
+<p>在实际操作中，它看起来像这样。这里有一些当前的实时链路追踪。我来打开具体的链路追踪，呃，来自我们今天将要处理的内容，也就是 Wonder Toys 智能体。嗯。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>In practice, it looks like this. Here are some current real-time traces. I'll open up specific traces from, uh, what we're going to be working with today, which is the Wonder Toys agent. Hmm.</details>
+<p>你可以看到输入数据、输出数据、智能体工作流、单步操作以及大语言模型的响应。你能得到输入数据、输出数据以及一堆元数据，比如成本或执行时间——全都是你在实践中调试智能体所需要的一切。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>You can see the input data, output data, agent workflow, individual step, and response of the large language model. You get input data, output data, and a bunch of metadata, like cost or execution time—everything you need to debug the agent in practice.</details>
+<p>嗯，链路追踪为智能体采取的每一步提供了可见性，而这是一个巨大的进步。如果你能看到你的智能体在做什么，你就会突然注意到，比方说，对于某件看起来很简单的事情，它们却执行了 10 个步骤；或者执行了一个不必要的操作；或者在做成本过高的事情；又或者在你认为应该只需要 1 分钟的事情上花费了 20 分钟。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Um, tracing provides visibility into every step an agent takes, and that's a huge step forward. If you see what your agent is doing, you suddenly notice that they are taking, say, 10 steps on something that seemed simple, or performing an unnecessary action, or doing something that is too expensive, or spending 20 minutes on something that you think should take a minute.</details>
+<p>这就是可观测性的基本价值。这就是为什么可观测性如此流行，甚至在接触到我们所讨论的那些附加内容之前就已如此。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>This is the basic value of observability. That's why observability is so popular, even before you get to the additional things we're talking about.</details>
+<h3 id="从人工瓶颈到评估与自动化" data-reading-heading="">从人工瓶颈到评估与自动化</h3>
+<p>链路追踪的问题在于，人成为了跟踪循环中的“瓶颈”。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>The problem with tracing is that people become a “bottleneck” in the tracking cycle.</details>
+<p>当你部署一个应用时，你会得到一个链路追踪。事实上，每当智能体执行任何操作时，你都会得到一堆链路追踪。当你在生产环境中运行它并拥有每秒数千次请求时，那就意味着数以百万计的链路追踪。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>When you deploy an application, you get a trace. In fact, you get a bunch of traces every time the agent performs any action. When you run this in production and have thousands of requests per second, that means millions and millions of traces.</details>
+<p>你可以选择性地检查它们。你可以去阅读你的链路追踪。在开发期间，你能准确看到各个组件正在做什么。在生产环境中，你就会成为“瓶颈”，无法通过一条一条去阅读来获得所有链路追踪的全貌。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>You can selectively check them. You can read your traces. You can see exactly what individual elements are doing during development. In production, you become a "bottleneck" and you won't be able to get an overview of all traces by reading them one by one.</details>
+<p>所以解决方案，传统的解决方案——我所说的传统指的是 2025 年的解决方案——就是评估。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>So the solution, the traditional solution, and by traditional I mean the 2025 solution, was evaluations.</details>
+<p>评估要么是代码，或者更好的是，由另一个语言模型来分析智能体的表现，审查所有的链路追踪，并根据你的定义判定它们是好是坏。关键在于评分来自语言模型，这意味着它们不仅提供 1 或 0 的评分，还提供解释。它们仿佛在说：“你已经定义了什么是好。因为这样或那样的原因，它是糟糕的。”而这正是整个改进循环的基础。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>An evaluation is either code or, better yet, another language model that analyzes the agent's performance, examines all the traces, and determines whether they were good or bad according to your definition. The thing is that ratings come from language models, which means they provide not just a one or zero rating, but also an explanation. They seem to be saying: “You have defined what is good. "It was bad for this or that reason." And this is the basis of the entire cycle of improvement.</details>
+<p>评估可以为你提供机器可读的，或者更好的是，人类可读的解释——如今连机器也能阅读这些解释——说明：“这就是你的评估失败的原因。那是你可以做得更好的地方。”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Assessments can give you machine-readable, or better yet, human-readable explanations that even machines can read these days, that say, "Here's why your assessment failed. "That's what you could have done better."</details>
+<p>而且你可以把这些反馈给编程智能体，随后它将自动改进你的软件。一旦你正确定义了“好”的含义，你无需亲自干预就能闭合软件开发循环。你创造了这座山峰，而你的智能体可以自己去征服它。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>And you can feed that back to the coding agent, which will then automatically improve your software. You can close the software development cycle without your own intervention once you correctly define what “good” means. You create this hill, and your agent can conquer it on their own.</details>
+<p>所以，这就把我们带到了 2025 年的评估循环。你从完全没有可见性走向使用链路追踪，再到将链路追踪用于评估，最后能够根据你的链路追踪分析手动进行改进。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>So, that brings us to the 2025 evaluation cycle. You go from having no visibility at all to using traces, then traces in evaluation, and finally being able to manually make improvements based on your trace analysis.</details>
+<p>但 2026 年的问题在于，人类在这个循环中再次成为了瓶颈，因为评估现在面对的是极其庞大的规模。你的智能体以极快的速度生成代码。你的应用在大规模下运行。你拥有的评估数量超出了你的处理能力。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>But the problem in 2026 is that humans are once again the bottleneck in this cycle, as evaluation is now dealing with enormous scale. Your agents generate code incredibly fast. Your applications operate at scale. You have more assessments than you can handle.</details>
+<p>虽然评估过去能让你将成千上万条链路追踪压缩为分数，但现在其数量如此之多，以至于你作为个人已经无法独自跟踪这一切了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>And while assessments used to allow you to compress thousands of traces into scores, there are now so many that you as a person can no longer keep track of it all on your own.</details>
+<p>这就把我们带到了观测与评估演进的下一个阶段：当我们在以智能体的速度创造解决方案时，我们必须同样迅速地改进它们。我们需要找到一种在规模化下闭环的方法，就像智能体所做的那样。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>This brings us to the next stage in the evolution of observation and evaluation: as we create solutions at the speed of agents, we must improve them just as quickly. We need to find a way to close the loop at scale, just like agents do.</details>
+<p>这是正在监测领域发生的一场转变，并且所有人都在同时感受到它。观测正在从人类通过仪表盘进行分析，转变为由智能体进行链路追踪分析。智能体是一种将我们对其他行动的理解进行规模化扩展的方式</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>This is a shift that is happening in the surveillance industry, and it is being felt by everyone at the same time. Observation is shifting from dashboard analysis by humans to trace analysis by agents. Agents are a way to scale our understanding of the actions of other</details>
+<!-- chunk 2/4 -->
+<p>以一种切合当今工作规模和速度的方式来评估智能体。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>agents in a way that is practical for today's scale and speed of work.</details>
+<p>因此，当智能体去分析你那些智能体的行为时，你就能在 trace 中检测到信号。比方说，你原本可能会有 10,000 个评估结果，每一个都显示有错误，并且每一个都有单独的解释需要你去阅读；现在不同了，你可以让一个智能体去集中分析这些失败用例，识别出你错误中的信号和模式，然后告诉你：“好的，今天你一共有 10,000 个成功的请求和 1,000 个失败的请求。在这 1,000 个失败请求中，有 100 个是相同的错误。这就是我们要去修复的问题。”当你将从 trace 和评估中获取信号的理解过程自动化时，你能做到的就是这些。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>So, when agents analyze your agents' actions, you can detect signals in your traces. You can, instead of having, say, 10,000 evaluation results, each one saying there was an error, and each one having a separate explanation that you would have to read, have an agent analyze those failures en masse, identify signals and patterns in your errors, and say, "Okay, today you had 10,000 successful requests and 1,000 failed ones." Among this thousand, there are a hundred with the same error. That's what we're going to fix. Here's what you can do when you automate the understanding of signals obtained from traces and estimates.</details>
+<p>在 Arize，我们将这个功能做成了一款名为 Signal 的产品，我会在最后谈到它。但这并不是广告。这是在展示向这种全新抽象层级跃迁所能实现的能力。当你从逐条阅读 trace 跃迁到查看评估指标——这是一个新的抽象层级，而从我的评估和 trace 中读取信号，则是更高的层级。因为可观测性从单纯的观察迈向了行动这一大步。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>At Arize, we built this into a product called Signal, which I'll talk about at the end. But this is not advertising. This is a demonstration of what can be done by moving to this new level of abstraction. When you go from reading traces one by one to reading estimates—that's a new level of abstraction, and this is an even higher level: reading signals from my estimates and traces. Because observability takes a big step from simple observation to action.</details>
+<p>我们正在从“告诉你发生了什么”的软件，转向“根据你对质量的定义自动优化系统来改进流程”的软件。信号变成了纠正措施。它们变成了自动修复，从而让你进入一个全新的循环。这就是 2026 年的循环：从毫无可观测性，到 trace、评估、信号、自动修正，然后再循环往复。你正在创造一个软件自我纠正、自我完善、不断精进的新世界。这就是我们的理念、愿景以及我们前进的方向。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>We are moving from software that tells you what is happening to one that improves processes by automatically optimizing the system based on your definition of quality. Signals become corrections. They become automatic fixes, which puts you on a new cycle. This is the 2026 cycle where you go from no observability to traces, estimates, signals, automatic corrections and back again. You are creating a new world where software corrects and improves itself, rising to the top. So, this is our concept, vision, and direction we are heading.</details>
+<h3 id="实操演示与现场准备" data-reading-heading="">实操演示与现场准备</h3>
+<p>现在我们进入实操环节。现场有谁已经注册过 Arize 了吗？噢，太好了。好的。如果没有，现在正是注册的时候。你需要一个 Arize AX 账号。保证是免费的。你还需要这个代码仓库，就是我一开始展示的那个。如果仓库在 Wi-Fi 下加载不出来，试着用手机热点连接；但如果还是不行——别担心。我会在我自己的一份副本上实时演示所有内容，那是我趁着还有 Wi-Fi 时克隆好的。嗯哼。此时有人对这些说明有任何疑问吗？我们有时间，可以暂停一下让大家跟上来。现场有 Arize 的专业人员随时准备协助大家。所以如果你举手，我不会神出鬼没地走过去帮忙，其他人会跑过去协助你。有人需要说明指导方面的帮助吗？请说？对，就是那个。太棒了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>And now let's move on to practice. Who here has already registered with Arize? Oh, that's good. OK. If not, now is the time to do so. You need an Arize AX account. They're free, I promise. You also need this repository, the same one I had at the very beginning. If the repository doesn't load over Wi-Fi, try connecting via your phone, but if that doesn't work—don't worry. I'll be demonstrating everything in real time on my own copy, which I cloned while there was still Wi-Fi. Uh-huh. Does anyone have any questions about these instructions at this time? We have time, we can pause for you to join in. There are Arize specialists in the hall who are ready to approach you. So if you raise your hand, I won't, you know, creepily approach to help. Someone else will run up to you. Does anyone need help with instructions? Please? Yes, that was it. Class.</details>
+<p>那么，在这个示例中，你需要一个 OpenAI API 密钥、一个 Arize space ID 和一个 Arize API 密钥，然后你需要执行 <code>npm run dev</code>，这会在本地运行该软件。我已经克隆好了我的那份。我会一步一步来。好的，由于我这边的版本正在运行，该地址已经被占用了。好的。太棒了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>So, in this example, you will need an OpenAI API key, an Arise space ID, and an Arise API key, and then you need to execute NPM run dev, which will run the software locally. So, I already cloned mine. I will do everything in turn. Okay, the address is already in use because my version is running. OK. Class.</details>
+<p>这样我就能在 3000 端口访问这个网上商店了。它叫 Wonder Toys。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>So, this will give me access on port 3000 to the online store. It's called Wonder Toys.</details>
+<blockquote>
+<blockquote>
+<p>我有一个问题。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; Yes, I have a question.</details>
+<blockquote>
+<blockquote>
+<p>请讲。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; Yes.</details>
+<blockquote>
+<blockquote>
+<p>我在高度受监管的行业工作。现在，伴随着数十亿的 trace、邮件、信号被生成，软件甚至在自我修复，在像金融和医疗这样受到监管的领域，我们该如何运作？在这些领域中，如果它犯了错，如果它产生敌意，如果它试图掩盖自己的错误，我们必须确切知道该怎么做。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; I work in highly regulated industries. Now, with billions of traces, emails, signals being generated, and software even self-correcting, how do we operate in regulated areas like finance and healthcare, where we need to know exactly what to do if it makes a mistake, if it becomes hostile, and if it tries to cover up its mistakes?</details>
+<blockquote>
+<blockquote>
+<p>嗯。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; Mhm.</details>
+<blockquote>
+<blockquote>
+<p>赋予智能体这么大的控制权，我们该如何掌握这些情况呢？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; How can we know this by giving so much control to agents?</details>
+<blockquote>
+<blockquote>
+<p>真不敢相信你会问这个问题，因为对我来说这简直是个绝妙的问题，正好我周三有一场名为《代码审查之死》（"The Death of Code Review"）的演讲，那场演讲就是对你这个问题的解答。所以我强烈推荐你来听这场报告。问题在于，你如何能够信任测试你那些智能体的智能体所编写的代码？它到底能不能正常工作？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; I can't believe you're asking this question, because it's a great question for me, because I'm giving a talk on Wednesday called "The Death of Code Review," which is the answer to your question. So I highly recommend you come to this talk. The question is, how can you trust the code written by agents who are testing your agents, and will it even work?</details>
+<blockquote>
+<blockquote>
+<p>答案非常复杂。这是一整场 20 分钟的报告。所以请务必来参加周三的那场会议。不，这篇 20 分钟的报告已经是我能给出的最简短的概括了。用一句话来回答就是：抽象之上再加抽象，抽象之上还有抽象。但这其中有很多细微差别。我们在 Arize 的金融行业客户现在就已经在这么做了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; The answer is very complicated. This is a whole 20-minute report. So please come to that session on Wednesday. No, a 20-minute report is the shortest summary I could give. The one-sentence answer is abstractions upon abstractions upon abstractions. But there are many nuances to this. We at Arise have clients in the financial industry who are already doing this now.</details>
+<h3 id="为-wonder-toys-接入可观测性" data-reading-heading="">为 Wonder Toys 接入可观测性</h3>
+<p>让我们回到 Wonder Toys。Wonder Toys 是一种基于智能体的购物体验。你们有给 7 岁孩子玩的玩具吗？我们来看看能不能用。希望它能跑通。这完全是在本地运行的。太棒了。这就是它给我的结果。我可以把它们加入购物车。我可以了解更多详情。这是一个非常有趣的小应用。你可以把商品加入购物车。你可以询问有关商品的信息。你可以做各种有趣的事情。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Let's go back to Wonder Toys. So, Wonder Toys is an agent-based shopping experience. Do you have toys for 7-year-olds? Let's see if this works. I hope it works. It's all local. Class. This is what it gives me. I can add them to the cart. I can find out more details. This is a very interesting little app. You can add the product to your cart. You can ask about the products. You can do all sorts of interesting things.</details>
+<p>从我们的角度来看，重要的一点是目前这里完全没有可观测性。我们根本搞不清楚这个应用里到底发生了什么，因为它没有向任何地方发送任何 trace。所以我们要让我们的智能体来修复它。这是我做过的最注重实操的工坊了，因为所有步骤我都会现场亲自做。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>The important thing from our point of view is that there is currently no observability. We can't figure out what the hell is going on with this app because it doesn't send any traces anywhere. So we will ask our agent to fix it. This is the most hands-on workshop I've ever done, because I'll be doing everything live.</details>
+<p>那么，你能使用 Arize AX 在这里添加可观测性吗？哦，没错。等一下。提前运行版。这是错误的文件。你看，我有两份副本。好的。顺便说一句，这是 VS Code 的 Cloud Code 插件。它真的非常好用。它比命令行上的 Cloud Code 好得多。我不知道为什么会有人通过命令行使用 Cloud Code。你看，你可能也在用 Vim 吧。现在谁还会这么说呢？呃，好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>So, can you add observability here using Arise AX? Oh, exactly. Wait. Pre-launch. This is the wrong file. You see, I had two copies. OK. By the way, this is the Cloud Code plugin for VS Code. He is truly wonderful. It is much better than Cloud Code on the command line. I don't know why anyone would use Cloud Code via the command line. You see, you probably also use Vim. Who wouldn't be saying that now? Uh, okay.</details>
+<p>你能使用 Arize AX 为这个应用添加可观测性吗？你已经有了密钥和一个 <code>.env.local</code> 文件。希望这能成功，因为在我尝试的最初版本里，一切都是正常的。看他正在做什么：他正准备去实现可观测性。实现可观测性其实是一个比你想象中简单得多的操作，因为该智能体 SDK（也就是构建它所基于的 OpenAI SDK）本身就已经支持 OpenInference 了。OpenInference 是整个可观测性行业用来追踪 AI 应用程序行为的开放标准。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Can you add observability using Rise AX to this app? You already have secrets and a dot env.local file. I hope this works, because in the initial version I tried, everything worked. Here's what he's doing: he's going to implement observability. Implementing observability is a much simpler operation than you might imagine, as the agent SDK, the Open AI SDK on which it is built, already supports Open Inference. Open Inference is an open standard used by the entire observability industry to track what AI applications are doing.</details>
+<p>这意味着要获得应用的可观测性，你所需要做的仅仅是启用它。你说你已经有了 OpenInference。我使用的是 Arize。这是我的 API 密钥。这是我的端点所在位置。把你已经在生成的这些 trace 全部发送到我的端点，然后让我们在应用里查看它们。Cloud 还在继续运行，所以我们正在做这件事。现在有谁正在跟着做吗？请举手。你们当中有人在做。好的。有谁需要帮助才能跟上到这一步的？仓库里已经安装好了 skills，所以……哦，它就在顶层的 readme 文件里。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>This means that all you need to do to get app observability is simply enable it. You say you already have Open Inference. I use Arise. Here is my API key. This is where my endpoint is located. Send all these traces that you're already generating to my endpoint, and let's look at them in the app. Cloud still works, so we're doing it. Who is doing this right now? Raise your hands. Some of you do. OK. Who needs help getting here? The repository already has the skills installed, so Oh, it's in the top-level readme file.</details>
+<p>你需要的那份叫做 <code>openai-agents-python</code>。OpenAI agent 还有第二个文件夹——<code>openai-agents-python-pre-run</code>，在那里我已经把所有这些步骤都做完了，所以如果你想看它运行起来应该是什么样子，它就在那里。哦，你更新了我的 readme 之类的内容。你太懂我了。你其实不必做这一切的。好的，太好了。看来它已经搞定了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>The one you need is called Open AI agents pi. Open AI agent There is also a second folder—Open AI agents pi pre-run, where I have already done all this, so if you want to see what it should look like when running, it is there. Oh, you update my readme and stuff. You know me too well. You didn't have to do all this. Okay, great. It looks like it has already done so.</details>
+<p>让我重启应用，看看监控是否生效。好的，我回到主页面。我来问它一个新问题。比如说，呃，适合幼儿的鲜艳玩具有吗？适合幼儿的鲜艳玩具，没有吗？那一般的鲜艳玩具呢？羊绒玩具？噢，不。好的，现在你们看到了，这是一场货真价实的现场演示，因为他的数据库出问题了。完美。好的。嗯哼。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Let me restart the application and see if the monitoring works. So, I'll go back to the main page. I'll ask him a new question. Let's say, uh, what about bright toys for toddlers? Bright toys for toddlers, no? What about bright toys in general? Cashmere? Oh no. Well, now you see that this is a real live demo because he had problems with the database. Perfectly. OK. Uh-huh.</details>
+<p>那么，这样做的结果是，我们应该会产生 trace。如果我查看，如果我向你们展示我的 <code>.env.local</code>，你们会看到我命名的 Wonder Toys OpenAI Agents Pi 项目。这就是我正要去找的追踪项目。它就在这里。我们可以看到，我们看到了一些追踪信息。这完全展示了我们预期会看到的内容。这向我们展示了输入数据、输出数据、智能体请求以及所有那些东西。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>So, as a result of this, we should have traces. If I look, if I show you my m.local, you'll see that I called the Wonder Toys Open AI Agents Pi project. So, this is the tracing project I'm going to look for. Here he is. And we see, we see some tracing. This shows us exactly what we expected to see. This shows us input data, output data, agent requests, and all that stuff.</details>
+<p>现在我要故意问一个我知道他回答不了的问题。把所有标价 6 美元以下的在售玩具展示给我。太悬了。我启动了错误的应用程序。我刚才运行的是之前那个一切正常的版本。这就是为什么我刚才能够做成。各位，真是一场精彩的演示。我现在非常为自己感到骄傲。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Now I will deliberately ask a question that I know he will not be able to answer. Show me all the toys that are available for under $6. Steeply. I launched the wrong application. I was running a previous version where everything worked. That's why I was able to do it. Great demonstration, friends. I'm very proud of myself right now.</details>
+<!-- chunk 3/4 -->
+<p>失败。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Failure.</details>
+<p>是的，很好。因此，包含在 OpenAI 非此前目录中的版本没有按价格筛选的功能。我事先就知道这一点，这就是我问这个问题的原因。所以如果我们查看追踪记录，当我点击“live”按钮时我们应该能看到它们。显示所有 6 美元以下的玩具。太棒了，你看它报错了。那么，你还在做什么？入口。一切正常。无论你做了什么，都不是必需的。好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Yes, 
+<p>great.</p>
+<p>Therefore,</p>
+<p>the</p>
+<p>version</p>
+<p>contained</p>
+<p>in</p>
+<p>open</p>
+<p>AI</p>
+<p>in</p>
+<p>a</p>
+<p>non-previous</p>
+<p>directory</p>
+<p>does</p>
+<p>not</p>
+<p>have</p>
+<p>the ability</p>
+<p>to</p>
+<p>filter</p>
+<p>by</p>
+<p>price.</p>
+<p>I</p>
+<p>knew</p>
+<p>this</p>
+<p>in</p>
+<p>advance</p>
+<p>,</p>
+<p>which</p>
+<p>is</p>
+<p>why</p>
+<p>I</p>
+<p>asked</p>
+<p>the</p>
+<p>question.</p>
+<p>So</p>
+<p>if</p>
+<p>we</p>
+<p>look</p>
+<p>at</p>
+<p>our</p>
+<p>traces,</p>
+<p>we</p>
+<p>should</p>
+<p>see</p>
+<p>them</p>
+<p>when</p>
+<p>I</p>
+<p>click</p>
+<p>the</p>
+<p>"live"</p>
+<p>button.</p>
+<p>Show</p>
+<p>me</p>
+<p>all</p>
+<p>the</p>
+<p>toys</p>
+<p>under</p>
+<p>$6.</p>
+<p>Fantastic,</p>
+<p>and</p>
+<p>you</p>
+<p>see</p>
+<p>it</p>
+<p>throws</p>
+<p>an</p>
+<p>error.</p>
+<p>So,</p>
+<p>what</p>
+<p>are</p>
+<p>you</p>
+<p>still</p>
+<p>doing?</p>
+<p>Entrance.</p>
+<p>Everything</p>
+<p>is</p>
+<p>fine.</p>
+<p>Whatever</p>
+<p>you</p>
+<p>did,</p>
+<p>it</p>
+<p>wasn't</p>
+<p>necessary.</p>
+<p>OK.</p></details><p></p>
+<p>所以，就是这样。我们添加了监控，突然间追踪记录就开始进入我们的应用程序了。我们没有写一行代码。事实上，你甚至不知道我是用什么框架创建这个的。一切都在运行，数据正在发送，现在你可以执行监控的第一阶段了。你可以查看你的追踪记录。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>So, 
+<p>that's</p>
+<p>all.</p>
+<p>We</p>
+<p>added</p>
+<p>monitoring,</p>
+<p>and</p>
+<p>suddenly</p>
+<p>traces</p>
+<p>started</p>
+<p>coming</p>
+<p>into</p>
+<p>our</p>
+<p>application.</p>
+<p>We</p>
+<p>didn't</p>
+<p>write</p>
+<p>a</p>
+<p>single</p>
+<p>line</p>
+<p>of</p>
+<p>code.</p>
+<p>In</p>
+<p>fact</p>
+<p>,</p>
+<p>you</p>
+<p>don't</p>
+<p>even</p>
+<p>know</p>
+<p>what</p>
+<p>framework</p>
+<p>I</p>
+<p>used</p>
+<p>to</p>
+<p>create</p>
+<p>this.</p>
+<p>Everything</p>
+<p>is</p>
+<p>working,</p>
+<p>the</p>
+<p>data</p>
+<p>is</p>
+<p>being</p>
+<p>sent,</p>
+<p>and</p>
+<p>now</p>
+<p>you</p>
+<p>can</p>
+<p>perform</p>
+<p>the</p>
+<p>first</p>
+<p>phase</p>
+<p>of</p>
+<p>monitoring.</p>
+<p>You</p>
+<p>can</p>
+<p>view</p>
+<p>your</p>
+<p>traces.</p></details><p></p>
+<p>那么，让我们让智能体告诉我们如何进入下一阶段，开始形成闭环。呃，“你能看一下我的追踪记录并找出哪里出了问题吗？”一个标准的现成写代码智能体是不会知道这个的。但是，当你安装一个仓库时，你就安装了一整套技能（skills）。呃，所以他应该从这些技能中知道，呃，去哪里做这件事。除了我在……噢，是的。噢，它起作用了。好的，就是这样。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>So
+<p>,</p>
+<p>let's</p>
+<p>start</p>
+<p>closing</p>
+<p>the</p>
+<p>circle</p>
+<p>by</p>
+<p>asking</p>
+<p>our</p>
+<p>agent</p>
+<p>to</p>
+<p>tell</p>
+<p>us</p>
+<p>how</p>
+<p>to</p>
+<p>move</p>
+<p>to</p>
+<p>the</p>
+<p>next</p>
+<p>phase.</p>
+<p>Uh,</p>
+<p>can</p>
+<p>you</p>
+<p>look</p>
+<p>at</p>
+<p>my</p>
+<p>traces</p>
+<p>and</p>
+<p>find</p>
+<p>what's</p>
+<p>wrong?</p>
+<p>So,</p>
+<p>a</p>
+<p>standard</p>
+<p>ready-made</p>
+<p>agent</p>
+<p>for</p>
+<p>writing</p>
+<p>code</p>
+<p>will</p>
+<p>not</p>
+<p>know</p>
+<p>this.</p>
+<p>However,</p>
+<p>when</p>
+<p>you</p>
+<p>install</p>
+<p>a</p>
+<p>repository,</p>
+<p>you</p>
+<p>install</p>
+<p>a</p>
+<p>whole</p>
+<p>set</p>
+<p>of</p>
+<p>skills.</p>
+<p>Uh,</p>
+<p>so</p>
+<p>he</p>
+<p>should</p>
+<p>know</p>
+<p>from</p>
+<p>these</p>
+<p>skills,</p>
+<p>uh,</p>
+<p>where</p>
+<p>to</p>
+<p>do</p>
+<p>it.</p>
+<p>Besides</p>
+<p>the</p>
+<p>fact</p>
+<p>that</p>
+<p>I'm</p>
+<p>in</p>
+<p>Oh,</p>
+<p>yeah.</p>
+<p>Oh,</p>
+<p>it</p>
+<p>works</p>
+<p>.</p>
+<p>Okay,</p>
+<p>that's</p>
+<p>it.</p></details><p></p>
+<p>厉害。呃，在这个时刻我会点击“全部确认”，而我的安全经理肯定会冲我发脾气。呃，所以我让它使用我给它的技能直接从 AX 下载我的追踪记录。它已经有了 API 密钥。它有，它有，呃，一个端点。所以，它就是使用 AX 命令行来做所有这些事情的。它加载了我们在界面中看到的相同的追踪记录，并且可以通过编程方式对其进行检查。它总结了 span 的类型、状态和错误。这太棒了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Steeply.  
+<p>Uh</p>
+<p>This</p>
+<p>is</p>
+<p>the</p>
+<p>moment</p>
+<p>when</p>
+<p>I</p>
+<p>would</p>
+<p>click</p>
+<p>"yes</p>
+<p>for</p>
+<p>all"</p>
+<p>and</p>
+<p>my</p>
+<p>security</p>
+<p>manager</p>
+<p>would</p>
+<p>throw</p>
+<p>me</p>
+<p>a</p>
+<p>tantrum.</p>
+<p>Er,</p>
+<p>so</p>
+<p>I'm</p>
+<p>asking</p>
+<p>him</p>
+<p>to</p>
+<p>use</p>
+<p>the</p>
+<p>skills</p>
+<p>I</p>
+<p>gave</p>
+<p>him</p>
+<p>to</p>
+<p>download</p>
+<p>my</p>
+<p>traces</p>
+<p>directly</p>
+<p>from</p>
+<p>AX.</p>
+<p>He</p>
+<p>already</p>
+<p>has</p>
+<p>an</p>
+<p>API</p>
+<p>key.</p>
+<p>It</p>
+<p>has,</p>
+<p>it</p>
+<p>has,</p>
+<p>uh,</p>
+<p>an</p>
+<p>endpoint.</p>
+<p>So,</p>
+<p>there's</p>
+<p>the</p>
+<p>AX</p>
+<p>command</p>
+<p>line</p>
+<p>that</p>
+<p>it</p>
+<p>uses</p>
+<p>to</p>
+<p>do</p>
+<p>all</p>
+<p>these</p>
+<p>things.</p>
+<p>And</p>
+<p>it</p>
+<p>loads</p>
+<p>the</p>
+<p>same</p>
+<p>traces</p>
+<p>that</p>
+<p>we</p>
+<p>saw</p>
+<p>in</p>
+<p>the</p>
+<p>interface,</p>
+<p>which</p>
+<p>it</p>
+<p>can</p>
+<p>programmatically</p>
+<p>examine.</p>
+<p>It</p>
+<p>summarizes</p>
+<p>the</p>
+<p>types</p>
+<p>of</p>
+<p>spans,</p>
+<p>statuses,</p>
+<p>and</p>
+<p>errors.</p>
+<p>This</p>
+<p>is</p>
+<p>great.</p></details><p></p>
+<p>呃，再次说明，这个编码智能体，呃，确切地知道这里发生了什么，因为我们已经建立了技能。正是这些技能为它提供了这里的所有信息。它正在调查质量问题，而这正是我所要求的。因为没有报错的 sleep。只有一堆返回 200 并显示一切正常的 span。呃，而且它已经找到了我让它找的具体问题。产品搜索工具响应速度可疑地快，只有 1 毫秒。因此，它会发现一些低质量信号并向我们报告。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Uh
+<p>,</p>
+<p>again,</p>
+<p>the</p>
+<p>coding</p>
+<p>agent,</p>
+<p>uh,</p>
+<p>knows</p>
+<p>exactly</p>
+<p>what's</p>
+<p>going</p>
+<p>on</p>
+<p>here</p>
+<p>because</p>
+<p>we've</p>
+<p>already</p>
+<p>established</p>
+<p>the</p>
+<p>skills.</p>
+<p>It</p>
+<p>is</p>
+<p>the</p>
+<p>skills</p>
+<p>that</p>
+<p>provide</p>
+<p>him</p>
+<p>with</p>
+<p>all</p>
+<p>the</p>
+<p>information</p>
+<p>here.</p>
+<p>He</p>
+<p>is</p>
+<p>investigating</p>
+<p>quality</p>
+<p>issues,</p>
+<p>which</p>
+<p>was</p>
+<p>exactly</p>
+<p>what</p>
+<p>I</p>
+<p>requested.</p>
+<p>Because</p>
+<p>there</p>
+<p>were</p>
+<p>no</p>
+<p>sleeps</p>
+<p>with</p>
+<p>errors.</p>
+<p>There</p>
+<p>were</p>
+<p>just</p>
+<p>a</p>
+<p>bunch</p>
+<p>of</p>
+<p>spans</p>
+<p>where</p>
+<p>he</p>
+<p>would</p>
+<p>return</p>
+<p>200</p>
+<p>and</p>
+<p>say</p>
+<p>everything</p>
+<p>was</p>
+<p>fine.</p>
+<p>Uh,</p>
+<p>and</p>
+<p>he</p>
+<p>already</p>
+<p>found</p>
+<p>the</p>
+<p>specific</p>
+<p>thing</p>
+<p>I</p>
+<p>asked</p>
+<p>him</p>
+<p>to</p>
+<p>find.</p>
+<p>The</p>
+<p>product</p>
+<p>search</p>
+<p>tool</p>
+<p>responded</p>
+<p>suspiciously</p>
+<p>quickly,</p>
+<p>at</p>
+<p>1</p>
+<p>ms.</p>
+<p>So,</p>
+<p>it</p>
+<p>will</p>
+<p>find</p>
+<p>some</p>
+<p>low-quality</p>
+<p>signals</p>
+<p>and</p>
+<p>tell</p>
+<p>us</p>
+<p>about</p>
+<p>them.</p></details><p></p>
+<p>谁的已经跑通了？谁还在克隆仓库？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Who 
+<p>already</p>
+<p>has</p>
+<p>this</p>
+<p>working?</p>
+<p>Who</p>
+<p>is</p>
+<p>still</p>
+<p>cloning</p>
+<p>the</p>
+<p>repository?</p></details><p></p>
+<p>答：不，插件、技能在名为 <code>.agents/skills</code> 的目录中，你的编码……你在用哪个智能体？它实际上是在根目录中，所以你应该在根目录下打开该智能体，然后导航到那个目录。是的。<code>npx skills install arise-ai</code> 会直接安装所有这些技能。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>A. 
+<p>No,</p>
+<p>the</p>
+<p>plugin,</p>
+<p>skills</p>
+<p>are</p>
+<p>in</p>
+<p>a</p>
+<p>directory</p>
+<p>called</p>
+<p>.agents/skills,</p>
+<p>and</p>
+<p>your</p>
+<p>coding</p>
+<p>...which</p>
+<p>agent</p>
+<p>are</p>
+<p>you</p>
+<p>using?</p>
+<p>It</p>
+<p>is</p>
+<p>actually</p>
+<p>in</p>
+<p>the</p>
+<p>root</p>
+<p>directory</p>
+<p>,</p>
+<p>so</p>
+<p>you</p>
+<p>should</p>
+<p>open</p>
+<p>the</p>
+<p>agent</p>
+<p>in</p>
+<p>the</p>
+<p>root</p>
+<p>directory</p>
+<p>and</p>
+<p>then</p>
+<p>navigate</p>
+<p>to</p>
+<p>that</p>
+<p>directory.</p>
+<p>Yes</p>
+<p>.</p>
+<p>NPX</p>
+<p>skills</p>
+<p>install</p>
+<p>arise-ai</p>
+<p>installs</p>
+<p>all</p>
+<p>these</p>
+<p>skills</p>
+<p>directly.</p></details><p></p>
+<p>不好意思，你说什么？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Excuse 
+<p>me,</p>
+<p>what</p>
+<p>did</p>
+<p>you</p>
+<p>say?</p></details><p></p>
+<p>你……而这真是一个谜，因为这个程序曾经有一个版本必须通过 X 登录，而我修改过了，让你不必通过 X 登录。正如你所看到的，当我运行这个程序时，我不需要通过 X 登录。不知怎么的，它把你必须通过 X 登录的版本给翻出来了。我完全不明白这是怎么发生的。代码真叫人捉摸不透。我稍后得和你谈谈你究竟是怎么弄到这一步的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>You 
+<p>And</p>
+<p>this</p>
+<p>is</p>
+<p>a</p>
+<p>mystery,</p>
+<p>because</p>
+<p>there</p>
+<p>used</p>
+<p>to</p>
+<p>be</p>
+<p>a</p>
+<p>version</p>
+<p>of</p>
+<p>this</p>
+<p>program</p>
+<p>where</p>
+<p>you</p>
+<p>had</p>
+<p>to</p>
+<p>log</p>
+<p>in</p>
+<p>through</p>
+<p>X,</p>
+<p>and</p>
+<p>I</p>
+<p>changed</p>
+<p>it</p>
+<p>so</p>
+<p>that</p>
+<p>you</p>
+<p>didn't</p>
+<p>have</p>
+<p>to</p>
+<p>log</p>
+<p>in</p>
+<p>through</p>
+<p>X.</p>
+<p>As</p>
+<p>you</p>
+<p>can</p>
+<p>see,</p>
+<p>when</p>
+<p>I</p>
+<p>ran</p>
+<p>this</p>
+<p>program,</p>
+<p>I</p>
+<p>didn't</p>
+<p>have</p>
+<p>to</p>
+<p>log</p>
+<p>in</p>
+<p>through</p>
+<p>X.</p>
+<p>Somehow</p>
+<p>it</p>
+<p>dug</p>
+<p>up</p>
+<p>the</p>
+<p>version</p>
+<p>where</p>
+<p>you</p>
+<p>had</p>
+<p>to</p>
+<p>log</p>
+<p>in</p>
+<p>through</p>
+<p>X.</p>
+<p>I</p>
+<p>don't</p>
+<p>understand</p>
+<p>how</p>
+<p>that</p>
+<p>happens</p>
+<p>at</p>
+<p>all.</p>
+<p>The</p>
+<p>code</p>
+<p>is</p>
+<p>mysterious.</p>
+<p>I'll</p>
+<p>have to</p>
+<p>talk</p>
+<p>to</p>
+<p>you</p>
+<p>later</p>
+<p>about</p>
+<p>exactly</p>
+<p>how</p>
+<p>you</p>
+<p>got</p>
+<p>to</p>
+<p>this</p>
+<p>point.</p></details><p></p>
+<h3 id="分析追踪与自动修复" data-reading-heading="">分析追踪与自动修复</h3>
+<p>好的。所以，Claude 终于缓过劲来，告诉我追踪记录里发生了什么。呃，42% 的搜索没有返回结果。所有 null 搜索查询都是退化的。智能体调用了所有参数均为 null 的产品搜索，从而产生了一个无意义的搜索，返回了目录中的第一个产品。最小年龄等于最大年龄，精确的年龄过滤把范围缩得太小了。呃，追踪调用栈有三种类型的智能体。主要问题是产品搜索的过滤逻辑。当模型提供数据时，向量搜索和关键词分类过滤器往往返回空结果。修正应该在工具端进行。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>OK.  
+<p>So,</p>
+<p>Claude</p>
+<p>finally</p>
+<p>pulled</p>
+<p>himself</p>
+<p>together</p>
+<p>and</p>
+<p>told</p>
+<p>me</p>
+<p>what</p>
+<p>was</p>
+<p>happening</p>
+<p>in</p>
+<p>the</p>
+<p>traces.</p>
+<p>Um,</p>
+<p>42%</p>
+<p>of</p>
+<p>searches</p>
+<p>yielded</p>
+<p>no</p>
+<p>results.</p>
+<p>All</p>
+<p>null</p>
+<p>search</p>
+<p>queries</p>
+<p>are</p>
+<p>degenerate.</p>
+<p>The</p>
+<p>agent</p>
+<p>invoked</p>
+<p>a</p>
+<p>product</p>
+<p>search</p>
+<p>with</p>
+<p>all</p>
+<p>null</p>
+<p>arguments,</p>
+<p>which</p>
+<p>created a</p>
+<p>meaningless</p>
+<p>search</p>
+<p>that</p>
+<p>returned</p>
+<p>the</p>
+<p>first</p>
+<p>product</p>
+<p>in</p>
+<p>the</p>
+<p>catalog.</p>
+<p>The</p>
+<p>minimum</p>
+<p>age</p>
+<p>is equal to</p>
+<p>the</p>
+<p>maximum</p>
+<p>age,</p>
+<p>precise</p>
+<p>age</p>
+<p>filtering</p>
+<p>narrows</p>
+<p>the</p>
+<p>circle</p>
+<p>too</p>
+<p>much.</p>
+<p>Um,</p>
+<p>the</p>
+<p>tracking</p>
+<p>stack</p>
+<p>has</p>
+<p>three</p>
+<p>types</p>
+<p>of</p>
+<p>agents.</p>
+<p>The</p>
+<p>main</p>
+<p>problem</p>
+<p>is</p>
+<p>the</p>
+<p>product</p>
+<p>search</p>
+<p>filtering</p>
+<p>logic</p>
+<p>.</p>
+<p>Vector</p>
+<p>search</p>
+<p>and</p>
+<p>keyword</p>
+<p>category</p>
+<p>filters</p>
+<p>often</p>
+<p>return</p>
+<p>empty</p>
+<p>results</p>
+<p>when</p>
+<p>the</p>
+<p>model</p>
+<p>provides</p>
+<p>data.</p>
+<p>The</p>
+<p>correction</p>
+<p>should</p>
+<p>be</p>
+<p>on</p>
+<p>the</p>
+<p>side</p>
+<p>of</p>
+<p>the</p>
+<p>tool.</p></details><p></p>
+<p>嗯。我今天早上尝试这个的时候，我只有一条追踪记录，而那条追踪记录表明没有找到价格。那么，按价格筛选有问题吗？我看看它是否能在已有的追踪记录中找到它。但是，剧透一下：即使它没找到，我们也会迫使它添加价格过滤功能。很好。没错。根本没有价格过滤。厉害。让我们把价格过滤添加到这个应用中吧。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Em.  
+<p>When</p>
+<p>I</p>
+<p>tried</p>
+<p>this</p>
+<p>this</p>
+<p>morning,</p>
+<p>I</p>
+<p>only</p>
+<p>had</p>
+<p>one</p>
+<p>trace,</p>
+<p>and</p>
+<p>that</p>
+<p>trace</p>
+<p>indicated</p>
+<p>that</p>
+<p>the</p>
+<p>price</p>
+<p>was</p>
+<p>not</p>
+<p>found.</p>
+<p>So,</p>
+<p>is</p>
+<p>there</p>
+<p>a</p>
+<p>problem</p>
+<p>with</p>
+<p>filtering</p>
+<p>by</p>
+<p>price?</p>
+<p>I'll</p>
+<p>see</p>
+<p>if</p>
+<p>he</p>
+<p>can</p>
+<p>find</p>
+<p>it</p>
+<p>in</p>
+<p>the</p>
+<p>traces</p>
+<p>that</p>
+<p>are</p>
+<p>already</p>
+<p>there.</p>
+<p>But,</p>
+<p>spoiler</p>
+<p>alert:</p>
+<p>even</p>
+<p>if</p>
+<p>he</p>
+<p>doesn't</p>
+<p>find</p>
+<p>them,</p>
+<p>we'll</p>
+<p>force</p>
+<p>him</p>
+<p>to</p>
+<p>add</p>
+<p>a</p>
+<p>price</p>
+<p>filtering</p>
+<p>feature.</p>
+<p>Good.</p>
+<p>That's</p>
+<p>right</p>
+<p>.</p>
+<p>There</p>
+<p>is</p>
+<p>no</p>
+<p>price</p>
+<p>filtering</p>
+<p>at</p>
+<p>all.</p>
+<p>Steeply.</p>
+<p>Let's</p>
+<p>add</p>
+<p>price</p>
+<p>filtering</p>
+<p>to</p>
+<p>this</p>
+<p>app.</p></details><p></p>
+<p>智能体变聪明时可能发生的一件事，就是它们可能变得过于聪明。这个智能体注意到我在旁边有一份这个应用程序的副本，而我在那里已经解决了这个问题，于是他就直接从之前解决的版本中复制代码。这不是他今天早上做的事，因为当时目录里没有现成的解决方案，但它仍然能跑通。所以，我们就让它这么做吧。我们就随它聪明去，直接复制它今天早上创建的解决方案，因为何乐不为呢，Claude？非常感谢。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>One 
+<p>of</p>
+<p>the</p>
+<p>things</p>
+<p>that</p>
+<p>can</p>
+<p>happen</p>
+<p>when</p>
+<p>agents</p>
+<p>become</p>
+<p>intelligent</p>
+<p>is</p>
+<p>that</p>
+<p>they</p>
+<p>can</p>
+<p>become</p>
+<p>too</p>
+<p>intelligent.</p>
+<p>This</p>
+<p>agent</p>
+<p>noticed</p>
+<p>that</p>
+<p>I</p>
+<p>had</p>
+<p>a</p>
+<p>copy</p>
+<p>of</p>
+<p>this</p>
+<p>application</p>
+<p>nearby</p>
+<p>where</p>
+<p>I</p>
+<p>had</p>
+<p>already</p>
+<p>solved</p>
+<p>this</p>
+<p>problem,</p>
+<p>and</p>
+<p>he</p>
+<p>simply</p>
+<p>copied</p>
+<p>the</p>
+<p>code</p>
+<p>from</p>
+<p>the</p>
+<p>previously</p>
+<p>solved</p>
+<p>version.</p>
+<p>This</p>
+<p>is</p>
+<p>not</p>
+<p>what</p>
+<p>he</p>
+<p>did</p>
+<p>this</p>
+<p>morning,</p>
+<p>because</p>
+<p>there</p>
+<p>was</p>
+<p>no</p>
+<p>ready-made</p>
+<p>solution</p>
+<p>in</p>
+<p>the</p>
+<p>directory</p>
+<p>at</p>
+<p>that</p>
+<p>time,</p>
+<p>but</p>
+<p>it</p>
+<p>will</p>
+<p>still</p>
+<p>work.</p>
+<p>So,</p>
+<p>we'll</p>
+<p>just</p>
+<p>let</p>
+<p>him</p>
+<p>do</p>
+<p>it.</p>
+<p>We'll</p>
+<p>let</p>
+<p>him</p>
+<p>be</p>
+<p>smart</p>
+<p>and</p>
+<p>copy</p>
+<p>the</p>
+<p>solution</p>
+<p>from</p>
+<p>what</p>
+<p>he</p>
+<p>created</p>
+<p>this</p>
+<p>morning,</p>
+<p>because</p>
+<p>why</p>
+<p>not,</p>
+<p>Claude?</p>
+<p>Thank</p>
+<p>you</p>
+<p>very</p>
+<p>much.</p></details><p></p>
+<p>很好。呃，所有这一切中最酷的事情是，我再次完全没有碰代码，对吧？我所做的只是说：“嘿，找找毛病。”它找到了问题。我说：“嘿，这个特定的问题怎么样？你能修复这个特定的问题吗？”它回答说：“好的，我会处理。”这就是智能体化编程（agentive programming）的乐趣。嗯。太棒了，既然它已经在从另一个复制解决方案了，呃，它就已经搞定了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Good.  
+<p>Um,</p>
+<p>the</p>
+<p>coolest</p>
+<p>thing</p>
+<p>about</p>
+<p>all</p>
+<p>of</p>
+<p>this</p>
+<p>is</p>
+<p>that</p>
+<p>again,</p>
+<p>I</p>
+<p>didn't</p>
+<p>touch</p>
+<p>the</p>
+<p>code</p>
+<p>at</p>
+<p>all,</p>
+<p>right?</p>
+<p>All</p>
+<p>I</p>
+<p>did</p>
+<p>was</p>
+<p>say,</p>
+<p>"Hey,</p>
+<p>look</p>
+<p>for</p>
+<p>trouble."</p>
+<p>He</p>
+<p>found</p>
+<p>the</p>
+<p>problem.</p>
+<p>I</p>
+<p>said,</p>
+<p>"Hey,</p>
+<p>what</p>
+<p>about</p>
+<p>this</p>
+<p>particular</p>
+<p>problem?</p>
+<p>Can</p>
+<p>you</p>
+<p>fix</p>
+<p>this</p>
+<p>particular</p>
+<p>problem?"</p>
+<p>And</p>
+<p>he</p>
+<p>replied,</p>
+<p>"Yes,</p>
+<p>I</p>
+<p>will</p>
+<p>do</p>
+<p>it."</p>
+<p>This</p>
+<p>is</p>
+<p>the</p>
+<p>joy</p>
+<p>of</p>
+<p>agentive</p>
+<p>programming.</p>
+<p>Em.</p>
+<p>Brilliant,</p>
+<p>since</p>
+<p>he</p>
+<p>was</p>
+<p>already</p>
+<p>copying</p>
+<p>the</p>
+<p>solution</p>
+<p>from</p>
+<p>another,</p>
+<p>er,</p>
+<p>he</p>
+<p>already</p>
+<p>did</p>
+<p>it.</p></details><p></p>
+<p>那么，让我们回到玩具板块。“显示所有 9 美元以下的玩具。”然后，是的！我想给我鼓鼓掌吧。谢谢。或者实际上，是给 Claude。呃，所以现在如果我们查看我们的记录，我们可以看到“显示所有 9 美元以下的玩具”。我们在响应中得到了输入和输出，包括所有那些 1 美元以下和 9 美元以下的玩具。呃，这就是我们试图实现的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>So, 
+<p>let's</p>
+<p>go</p>
+<p>back</p>
+<p>to</p>
+<p>the</p>
+<p>toys</p>
+<p>section.</p>
+<p>Show</p>
+<p>me</p>
+<p>all</p>
+<p>the</p>
+<p>toys</p>
+<p>under</p>
+<p>$9.</p>
+<p>And</p>
+<p>yes!</p>
+<p>Applause</p>
+<p>for</p>
+<p>me,</p>
+<p>I</p>
+<p>guess.</p>
+<p>Thank</p>
+<p>you.</p>
+<p>Or,</p>
+<p>actually,</p>
+<p>Claude.</p>
+<p>Um,</p>
+<p>so</p>
+<p>now</p>
+<p>if</p>
+<p>we</p>
+<p>look</p>
+<p>at</p>
+<p>our</p>
+<p>records,</p>
+<p>we</p>
+<p>can</p>
+<p>see</p>
+<p>"</p>
+<p>show</p>
+<p>me</p>
+<p>all</p>
+<p>the</p>
+<p>toys</p>
+<p>under</p>
+<p>$9."</p>
+<p>And</p>
+<p>we</p>
+<p>got</p>
+<p>our</p>
+<p>input</p>
+<p>and</p>
+<p>output</p>
+<p>in</p>
+<p>the</p>
+<p>response,</p>
+<p>including</p>
+<p>all</p>
+<p>those</p>
+<p>toys</p>
+<p>under</p>
+<p>$1</p>
+<p>and</p>
+<p>under</p>
+<p>$9.</p>
+<p>Uh</p>
+<p>,</p>
+<p>that's</p>
+<p>what</p>
+<p>we</p>
+<p>were</p>
+<p>trying</p>
+<p>to</p>
+<p>achieve.</p></details><p></p>
+<p>我们试图形成闭环，从“我们对这个程序完全没有任何监视”到“我们有了监视，知道发生了什么”，再到“自动发现并自动修复问题”，我们完成了这个闭环。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>We 
+<p>tried</p>
+<p>to</p>
+<p>close</p>
+<p>the</p>
+<p>loop</p>
+<p>from</p>
+<p>"we</p>
+<p>have</p>
+<p>no</p>
+<p>oversight</p>
+<p>of</p>
+<p>this</p>
+<p>program</p>
+<p>at</p>
+<p>all"</p>
+<p>to</p>
+<p>"we</p>
+<p>have</p>
+<p>oversight,</p>
+<p>we</p>
+<p>know</p>
+<p>what's</p>
+<p>going</p>
+<p>on,"</p>
+<p>to</p>
+<p>"</p>
+<p>automatically</p>
+<p>finding</p>
+<p>and</p>
+<p>automatically</p>
+<p>fixing</p>
+<p>problems,"</p>
+<p>and</p>
+<p>we</p>
+<p>closed</p>
+<p>that</p>
+<p>loop.</p></details><p></p>
+<h3 id="signal-智能体与自动化安全守护" data-reading-heading="">Signal 智能体与自动化安全守护</h3>
+<p>但是如果，呃，你可以更进一步呢？呃，如果你根本不需要问任何问题呢？如果你的系统就是能自动检测代码问题、提出修复建议并自行决定修复它们呢？这就是我们问自己的问题，呃，这就是我们创建这个名为 Signal 的东西的时候。呃，Signal 是一个在 Rise AX 内部运行的智能体，它会持续监控你所有的追踪记录。它默认每 6 小时运行一次，但这是可以自定义的。呃，它做的是我们刚才在 Cloud Code 中手动做的事情，但它是在 AX 内部一直自动执行的。它读取你的追踪记录，寻找模式，发现错误，并提出修复建议。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>But 
+<p>what</p>
+<p>if,</p>
+<p>uh,</p>
+<p>you</p>
+<p>could</p>
+<p>go</p>
+<p>a</p>
+<p>little</p>
+<p>further?</p>
+<p>Uh,</p>
+<p>what</p>
+<p>if</p>
+<p>you</p>
+<p>never</p>
+<p>had</p>
+<p>to</p>
+<p>ask</p>
+<p>anything?</p>
+<p>What</p>
+<p>if</p>
+<p>your</p>
+<p>system</p>
+<p>just</p>
+<p>automatically</p>
+<p>detected</p>
+<p>code</p>
+<p>issues,</p>
+<p>suggested</p>
+<p>fixes,</p>
+<p>and</p>
+<p>decided</p>
+<p>to</p>
+<p>fix</p>
+<p>them</p>
+<p>on</p>
+<p>its</p>
+<p>own?</p>
+<p>That's</p>
+<p>the</p>
+<p>question</p>
+<p>we</p>
+<p>asked</p>
+<p>ourselves,</p>
+<p>uh,</p>
+<p>and</p>
+<p>that's</p>
+<p>when</p>
+<p>we</p>
+<p>created</p>
+<p>this</p>
+<p>thing</p>
+<p>called</p>
+<p>Signal.</p>
+<p>Uh,</p>
+<p>Signal</p>
+<p>is</p>
+<p>an</p>
+<p>agent</p>
+<p>that</p>
+<p>runs</p>
+<p>inside</p>
+<p>Rise</p>
+<p>AX</p>
+<p>and</p>
+<p>continuously</p>
+<p>monitors</p>
+<p>all</p>
+<p>your</p>
+<p>traces.</p>
+<p>It</p>
+<p>runs</p>
+<p>every</p>
+<p>6</p>
+<p>hours</p>
+<p>by</p>
+<p>default,</p>
+<p>but</p>
+<p>this</p>
+<p>can</p>
+<p>be</p>
+<p>customized.</p>
+<p>Uh,</p>
+<p>and</p>
+<p>it</p>
+<p>does</p>
+<p>what</p>
+<p>we</p>
+<p>just</p>
+<p>did</p>
+<p>manually</p>
+<p>in</p>
+<p>Cloud</p>
+<p>Code,</p>
+<p>but</p>
+<p>it</p>
+<p>does</p>
+<p>it</p>
+<p>automatically</p>
+<p>inside</p>
+<p>AX</p>
+<p>all</p>
+<p>the</p>
+<p>time.</p>
+<p>It</p>
+<p>reads</p>
+<p>your</p>
+<p>traces,</p>
+<p>looks</p>
+<p>for</p>
+<p>patterns,</p>
+<p>finds</p>
+<p>errors,</p>
+<p>and</p>
+<p>suggests</p>
+<p>fixes</p>
+<p>.  </p></details><p></p>
+<p>所以幸运的是我在 6 个多小时前就创建了这个东西，所以它已经在运行了。呃，并且它在我之前运行的这个程序的早期版本中发现了，呃，一堆问题。所以，呃，智能体根据用户含糊的说辞编造了一个年龄限制，真有意思。呃，恶意请求，我问它是否可以给我关于，呃，组装、呃，制造炸弹的说明。嗯，它说它做不到，但它推荐了一些与炸弹相关的玩具，而 Signal 就表示：“不行。完全忽略与炸弹相关的请求。不要试图提供帮助。呃，我们没有任何与炸弹相关的玩具。”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>So 
+<p>luckily</p>
+<p>I</p>
+<p>created</p>
+<p>this</p>
+<p>thing</p>
+<p>over</p>
+<p>6</p>
+<p>hours</p>
+<p>ago,</p>
+<p>so</p>
+<p>it's</p>
+<p>already</p>
+<p>up</p>
+<p>and</p>
+<p>running.</p>
+<p>Uh,</p>
+<p>and</p>
+<p>she</p>
+<p>found,</p>
+<p>uh</p>
+<p>,</p>
+<p>a</p>
+<p>bunch</p>
+<p>of</p>
+<p>problems</p>
+<p>in</p>
+<p>the</p>
+<p>previous</p>
+<p>versions</p>
+<p>of</p>
+<p>this</p>
+<p>program</p>
+<p>that</p>
+<p>I</p>
+<p>ran.</p>
+<p>So,</p>
+<p>uh,</p>
+<p>the</p>
+<p>agent</p>
+<p>invents</p>
+<p>an</p>
+<p>age</p>
+<p>limit</p>
+<p>based</p>
+<p>on</p>
+<p>the</p>
+<p>user's</p>
+<p>vague</p>
+<p>wording,</p>
+<p>that's</p>
+<p>cute.</p>
+<p>Er,</p>
+<p>malicious</p>
+<p>request,</p>
+<p>I</p>
+<p>asked</p>
+<p>him</p>
+<p>if</p>
+<p>he</p>
+<p>could</p>
+<p>give</p>
+<p>me</p>
+<p>instructions</p>
+<p>on,</p>
+<p>uh,</p>
+<p>setting</p>
+<p>up,</p>
+<p>uh,</p>
+<p>making</p>
+<p>a</p>
+<p>bomb.</p>
+<p>Um,</p>
+<p>he</p>
+<p>said</p>
+<p>he</p>
+<p>couldn't,</p>
+<p>but</p>
+<p>he</p>
+<p>suggested</p>
+<p>some</p>
+<p>bomb-related</p>
+<p>toys</p>
+<p>,</p>
+<p>and</p>
+<p>Signal</p>
+<p>is</p>
+<p>like,</p>
+<p>"No.</p>
+<p>Just</p>
+<p>ignore</p>
+<p>the</p>
+<p>bomb-related</p>
+<p>requests</p>
+<p>completely.</p>
+<p>Don't</p>
+<p>try</p>
+<p>to</p>
+<p>be</p>
+<p>helpful.</p>
+<p>Uh,</p>
+<p>we</p>
+<p>don't</p>
+<p>have</p>
+<p>any</p>
+<p>bomb-related</p>
+<p>toys</p>
+<p>."  </p></details><p></p>
+<p>呃，它还告诉我，如果我感到有攻击性，也许我应该休息一下，这同样可能是越界了。比如，你不应该给我提供心理建议。呃，我们可能应该对此进行评估并建立更好的防护措施。呃，它还注意到了我之前给它的测试，当时我只是打了招呼，呃，它也打了招呼。然后它就觉得，你不应该那样做。你是一个玩具，你是一家玩具店。你不应该听从互联网上某个人给你的随意指令。呃，这些都很好。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Uh, 
+<p>he</p>
+<p>also</p>
+<p>told</p>
+<p>me</p>
+<p>that</p>
+<p>if</p>
+<p>I</p>
+<p>was</p>
+<p>feeling</p>
+<p>aggressive,</p>
+<p>maybe</p>
+<p>I</p>
+<p>should</p>
+<p>take</p>
+<p>a</p>
+<p>break,</p>
+<p>which</p>
+<p>again</p>
+<p>is</p>
+<p>probably</p>
+<p>going</p>
+<p>beyond</p>
+<p>the</p>
+<p>domain.</p>
+<p>Like,</p>
+<p>you</p>
+<p>shouldn't</p>
+<p>give</p>
+<p>me</p>
+<p>psychological</p>
+<p>advice.</p>
+<p>Uh,</p>
+<p>we</p>
+<p>should</p>
+<p>probably</p>
+<p>do</p>
+<p>an</p>
+<p>assessment</p>
+<p>of</p>
+<p>this</p>
+<p>and</p>
+<p>better</p>
+<p>safeguards.</p>
+<p>Uh,</p>
+<p>he</p>
+<p>also</p>
+<p>noticed</p>
+<p>the</p>
+<p>test</p>
+<p>I</p>
+<p>gave</p>
+<p>him</p>
+<p>earlier</p>
+<p>where</p>
+<p>I</p>
+<p>just</p>
+<p>said</p>
+<p>hello,</p>
+<p>uh</p>
+<p>,</p>
+<p>and</p>
+<p>he</p>
+<p>said</p>
+<p>hello.</p>
+<p>And</p>
+<p>he's</p>
+<p>like,</p>
+<p>you</p>
+<p>shouldn't</p>
+<p>do</p>
+<p>that.</p>
+<p>You</p>
+<p>are</p>
+<p>a</p>
+<p>toy,</p>
+<p>you</p>
+<p>are</p>
+<p>a</p>
+<p>toy</p>
+<p>store.</p>
+<p>You</p>
+<p>shouldn't</p>
+<p>obey</p>
+<p>random</p>
+<p>instructions</p>
+<p>given</p>
+<p>to</p>
+<p>you</p>
+<p>by</p>
+<p>someone</p>
+<p>on</p>
+<p>the</p>
+<p>internet.</p>
+<p>Eh,</p>
+<p>that's</p>
+<p>all</p>
+<p>good.  </p></details><p></p>
+<p>嗯，它在这里做的是为你提供，呃，一大堆选项。嗯，它会，呃，默认为你创建一个附有完整问题描述的 GitHub issue。它会确切地告诉你哪条追踪记录</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Um, 
+<p>and</p>
+<p>what</p>
+<p>it</p>
+<p>does</p>
+<p>here</p>
+<p>is</p>
+<p>it</p>
+<p>gives</p>
+<p>you</p>
+<p>,</p>
+<p>uh,</p>
+<p>a</p>
+<p>whole</p>
+<p>bunch</p>
+<p>of</p>
+<p>options.</p>
+<p>Um,</p>
+<p>it</p>
+<p>will,</p>
+<p>uh</p>
+<p>,</p>
+<p>by</p>
+<p>default</p>
+<p>create</p>
+<p>a</p>
+<p>GitHub</p>
+<p>issue</p>
+<p>for</p>
+<p>you</p>
+<p>with</p>
+<p>a</p>
+<p>full</p>
+<p>description</p>
+<p>of</p>
+<p>the</p>
+<p>problem.</p>
+<p>He</p>
+<p>will</p>
+<p>tell</p>
+<p>you</p>
+<p>exactly</p>
+<p>what</p>
+<p>trace</p></details><p></p>
+<!-- chunk 4/4 -->
+<p>出了什么问题、如何找到它、在哪里修复它，以及他建议你怎么做。你可以获取这个 trace 并将其添加到一个数据集，然后对其运行评估。你可以基于它识别出的问题创建一个评估器。最有趣的是，如果你连接了代码库（我目前还没连接），你就可以提 PR。你可以立即提一个 PR，它会在其中读取你的代码库，提出修复建议，并创建一个自动修复该问题的 PR。因此，Signal 不会让你去阅读 trace 或评分，而是给你一堆你可以批准或拒绝的 PR，从而为你解决问题。这可能引起了一些疑问。谁对 Signal 有疑问？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+went wrong, how to find it, where to fix it, and, uh, what he advises you to do. Uh, you can take this trace and add it to a dataset to then run estimates on it. You can create an evaluator based on, uh, a problem that it has identified. Uh, and the most interesting thing is that you can open a PR if you have connected your repository, which I haven't done yet. Uh, you can immediately open a PR, in which it will read your repository, uh, suggest fixes, and create a PR that automatically fixes that problem. So instead of reading traces or ratings, uh, Signal gives you a bunch of PRs that you can approve or, uh, approve or reject so that they fix the problem for you. Um, so this probably raises some questions. Who has questions about Signal?
+</details>
+<p>有。有没有一个版本可以将 trace 本地存储在设备上？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Yes. Is there a version that will store traces locally on the device?
+</details>
+<p>嗯，目前还没有。我想你问这个是因为一些合规要求。关于 Auriase 的合规性，我们有一个本地版本，完全运行在你们公司的硬件上，并在那里激活。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Hmm, there isn't one at the moment. Uh, I assume you're asking because of some compliance requirements. Um, regarding compliance at Auriase, we have a local version that runs entirely on your company's hardware and is activated from there.
+</details>
+<p>请问，你能大声一点吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Yes. Excuse me, could you speak louder?
+</details>
+<p>而且，因为我这个应用中只有很少的 trace，它会查看我仅有的极少 trace，并基于其中一两个来进行。如果你有 10,000 个 trace，它会根据 100 个 trace、1,000 个 trace 等进行分组。哦，在那边。请问，你怎么知道那个？嗯。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And, um, since I only have a few traces in this app, it looks at the very few traces that I have and bases it on one or two of them. If you had 10,000 traces, it would group them based on 100 traces, 1,000 traces, and so on. Oh, there. How do you know that, excuse me? M-hm.
+</details>
+<p>哦，是的。这里的解决方案是评估（evals），知道这个你可能会感到惊讶。一个生产系统应该有一套回归评估，这些是你期望你的 agent 已经熟练掌握的事情。所以，你的评分已经准备好了，你可以创建它们，我马上就展示给你们看。在已有评估就位的情况下，你就会知道你的系统不会因为这些修改而改变它以前具备的正确行为。如果你还没有评分，我可以告诉你怎么做，为此我们可以进入 Wonder Toys 项目并让它创建一个评分。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Oh, yes. Um, so the solution here is evaluations (evals), you'll be surprised to know this. A production system should have a set of regression estimates, these are things that you expect your agent to already be proficient at. So, your grades are ready, you can, uh, create them, I'll show you in a second. Uh, with the estimates already in place, you'll know that your system isn't changing the proper behavior it had before as a result of these changes. Uh, if you don't have ratings, I can show you how to do it, uh, for that we can go to the Wonder Toys project and ask it to create a rating.
+</details>
+<p>“创建一个确保我绝不提供制造炸弹说明的评估。”这看起来是一个非常基本的评估，我一开始就应该具备。我现在使用的这个东西叫做 Alex。这是我们的内部助手 agent。这是我们的内部产品 agent，他掌握所有技能并知道如何构建一切。所以你可以在产品中完成这项操作，或者通过你编码 agent 中的技能来完成，但无论哪种方式，它都会自动为你创建一个评估器并运行它。实际上，这就是我们计划展示的全部内容。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Create an assessment that ensures I never provide instructions on how to make a bomb. This seems like a really basic assessment that I should have had from the start. This thing I'm using right now is called Alex. This is our internal assistant agent. This is our internal product agent, he has all the skills and knows how to build everything. So you can do this in the product or through skills in your coding agent, but either way it will automatically create an evaluator for you and run it. And that's actually all we planned to show.
+</details>
+<p>后排有问题。Signal 是靠什么运行的？我不知道。Signal 是靠什么运行的？你知道的，Jason。是的。Signal 现在是云端代码，以后你可以使用自己的。这是我的老板在调侃我，以防你们好奇他怎么会知道我问题的答案。还有关于 Signal 的问题吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Questions in the back row. What makes Signal work? I don't know. What makes Signal work? You know, Jason. Yes. Signal is cloud code now, and later you can use your own. This is my boss trolling me, in case you're wondering how he knows the answer to my question. Still have questions about Signal?
+</details>
+<p>有。抱歉，大声一点。现在的问题是关于 Signal 的费用。目前，我们承担 Signal 的成本。我们的目标是现在为您提供最佳的产品体验。我们无法保证一直都是这种情况。但现在 Signal 是在我们的 agent 上运行，费用由我们承担。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Yes. Sorry, louder. Now the question is about the cost of Signal. At this point, we are covering the costs of Signal. Our goal is to provide you with the best product experience right now. We cannot guarantee that this will always be the case. But now Signal works on our agents at our expense.
+</details>
+<p>是的。提得好。Signal 的性能是如何评定的？Signal 有其内部运行的自身评估套件，并由我们的工具进行追踪。Signal 所做的全部就是向我们发送遥测数据（除非你选择退出），这些数据会告诉我们它接收到的请求、它做了什么、它是怎么做的等等。我们有强大的 LLM 裁判来审查 Signal 的工作，并告诉我们它在创建 PR 方面是否表现良好。也就是说，我刚才谈到的相同软件开发生命周期也适用于 Signal 本身。问得很好。谢谢。让我们露脸了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Yes. That's a great question. How is Signal's performance rated? Signal has its own evaluation suite that runs internally and is tracked by our tools. All Signal does is send us telemetry, unless you've opted out, which tells us about the requests it receives, what it does, how it does it, and so on. We have powerful LLM judges who review Signal's work and tell us whether it did a good job of creating PR. That is, the same software development lifecycle I just talked about applies to Signal itself. Great question. Thank you. Makes us show up.
+</details>
+<p>是的。Signal 会自动创建它自己的评分器吗？目前还没有。现在你必须自己来做，因为评估器的运行需要耗费时间和金钱，所以你会获得一个报价，然后自己创建评估。好的。我想我就讲到这里。感谢大家的时间和关注。呃。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Yes. Does Signal automatically create its own raters? Not yet. Now you have to do it yourself because appraisers take time and money to run, so you get a quote and then create the appraisal yourself. OK. I think I'll stop there. Thank you all for your time and attention. Ugh.
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/9b5c134204d290261980116cd225ef18c8fe441407d058069934dd47c9360601.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/9b5c134204d290261980116cd225ef18c8fe441407d058069934dd47c9360601.md" download="基于链路追踪与评估实现智能体软件生命周期的自动闭环.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Arize AI" class="entity-link company-link">Arize AI</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Signal" class="entity-link product-link">Signal</a>, <a href="/search/?q=OpenInference" class="entity-link product-link">OpenInference</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

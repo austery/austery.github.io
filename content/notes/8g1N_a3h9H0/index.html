@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>重构 Token Maxing：以最小算力开销榨取极致模型智能</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">重构 Token Maxing：以最小算力开销榨取极致模型智能</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-14</span>
+    
+
+    <header class="article-header">
+      
+      <h1>重构 Token Maxing：以最小算力开销榨取极致模型智能</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/prompt-engineering/">prompt-engineering</a>
+      
+        <a class="tag-link" href="/tags/llm-inference/">llm-inference</a>
+      
+        <a class="tag-link" href="/tags/compute-efficiency/">compute-efficiency</a>
+      
+        <span class="tag-pill tag-pill--no-page">ab-testing</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">行业内常将高 Token 消耗误当作成功指标，但对规模化落地而言，冗余调用会带来巨大的延迟与算力成本。OutRival 智能体负责人 Alvin 提出一套工程化降本闭环：利用天花板测试（AA 测试）测定模型固有方差，通过前缀缓存、DSPy 自动化提示词搜索以及小模型蒸馏三大杠杆，在成对统计置信度验证下实现提示词减半且质量反超的确定性发布。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=8g1N_a3h9H0" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-14T00:00:00.000Z">2026-10-14</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>4 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E7%A0%B4%E9%99%A4%E7%AE%97%E5%8A%9B%E8%BF%B7%E6%80%9D%E4%BB%8E%E6%97%A0%E8%B0%93%E6%B6%88%E8%80%97%E5%88%B0%E6%99%BA%E8%83%BD%E5%AF%86%E5%BA%A6">破除算力迷思：从无谓消耗到智能密度</a></li><li class="outline-h3"><a href="#%E5%A4%A9%E8%8A%B1%E6%9D%BF%E6%B5%8B%E8%AF%95%E5%89%A5%E7%A6%BB%E5%9F%BA%E7%BA%BF%E6%96%B9%E5%B7%AE%E7%9A%84%E8%AF%84%E4%BC%B0%E7%A7%91%E5%AD%A6">天花板测试：剥离基线方差的评估科学</a></li><li class="outline-h3"><a href="#%E9%99%8D%E6%9C%AC%E4%B8%89%E9%98%B6%E6%9D%A0%E6%9D%86%E7%BC%93%E5%AD%98%E8%87%AA%E5%8A%A8%E6%90%9C%E7%B4%A2%E4%B8%8E%E5%B0%8F%E6%A8%A1%E5%9E%8B%E8%B7%AF%E7%94%B1">降本三阶杠杆：缓存、自动搜索与小模型路由</a></li><li class="outline-h3"><a href="#%E6%88%90%E5%AF%B9%E7%BD%AE%E4%BF%A1%E5%8F%91%E5%B8%83%E7%94%A8%E7%BB%9F%E8%AE%A1%E6%A3%80%E9%AA%8C%E7%BB%88%E7%BB%93%E7%8E%84%E5%AD%A6%E4%BA%A4%E4%BB%98">成对置信发布：用统计检验终结玄学交付</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="破除算力迷思从无谓消耗到智能密度" data-reading-heading="">破除算力迷思：从无谓消耗到智能密度</h3>
+<p>在当前的大模型与 AI 智能体生态中，<strong>Token Maxing</strong>（狂刷 Token）已经演变成一种奇特的行业模因。许多团队在内部搭建排行榜，攀比谁调用的 Token 数量最多；在 <strong>Meta</strong>，狂烧算力的人甚至会被冠以“Token 传奇”（Token Legend）的荣誉称号。然而，如果你是在严肃地交付一款工业级软件产品，将 Token 消耗量作为衡量成功的指标是极其荒谬的。Token 并不是工作成果本身，而是为了完成工作所支付的算力税。</p>
+<p>以 <strong>OutRival</strong> 为例，我们的数字员工需要通过电话、短信与电子邮件全天候处理海量复杂业务。在应用层架构下，系统每天需要处理数十亿级别的 Token。在这样的生产规模下，任何一次冗余的模型调用都会被成倍放大，最终演变为灾难性的高延迟和数百万美元的额外算力开销。许多团队的生产提示词由于长期的补丁式迭代，已经严重<strong>结构性膨胀</strong>（Structural Bloat）——以虚构公司 HarborBite 的客户意图分类任务为例，单条提示词可能塞满了 20 多个边界情况、极度冗长死板的定义，以及通篇近乎恳求模型不要产生幻觉的套话。将这种提示词每天并发调用数百万次，本质上是在自残系统利润。我们必须彻底重塑 Token Maxing 的定义：它绝不该是狂烧 Token 的竞赛，而应当是用绝对最小的 Token 载荷，榨取出最大工作表面积的模型智能。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Hey everyone, I'm Alvin, the head of agent intelligence at OutReval. By now, everyone's heard of token maxing. People have built leaderboards inside companies for who's using the most AI tokens. At Meta, they even had a title for this, tooken legend, a badge of honor for whoever's burning the most compute. It's a funny meme, but if you're actually shipping a product, token usage is a bizarre measurement of success. Tokens aren't the work. They're what you pay to get the work done. At OutRrival, our digital workers handle complex tasks over phone, text, and email. At the application layer, we're processing billions of tokens every single day. And when you operate at that scale, every redundant model call compounds into massive latency and millions of dollars in compute costs. Take a look at this prompt. I've built a synthetic proxy that mirrors what structural bloat looks like in a pipeline. Let's pretend we're classifying customer intents for a fictional company called HarborBite. We've all seen one of these. It's got 20 edge cases, overly pedantic definitions, and a paragraph practically begging the model not to hallucinate. When you're sending this much text on every single request, millions of times a day, it isn't just a prompt anymore. It's a massive self-inflicted compute tax. If you want to give your agents more capabilities, you need the architectural headroom to do it. So today, we're reclaiming token maxing. It shouldn't be about burning the most tokens, but about extracting the maximum surface area of intelligence from the absolute minimum token payload. So here's how to actually token max. Let's get into the playbook.</p>
+</details>
+<h3 id="天花板测试剥离基线方差的评估科学" data-reading-heading="">天花板测试：剥离基线方差的评估科学</h3>
+<p>想要优化系统，首要前提是建立精准的观测体系。利用 <strong>OpenTelemetry</strong>（开源可观测性框架）等工具对统一模型客户端进行埋点插桩，将每次调用的提示词版本、模型超参数、Token 消耗、端到端延迟和费用串联成可追溯的链路，从而刻画真实的生产基准。然而，绝大多数团队的优化尝试在第一步就撞了墙。常规做法往往是：工程师拿出一个庞大臃肿的旧提示词，直接喂给一个更小、更便宜的模型，并用数千条历史生产日志做离线回放。在 OutRival 的真实实验中，低成本候选模型与昂贵基线模型之间出现了约 18% 的预测分歧。团队通常会本能地得出结论：小模型不行，优化失败。</p>
+<p>但这 18% 的分歧究竟代表了什么？在真实的非结构化复杂输入面前，模型本身存在固有的概率波动，分歧率本质上是一个复合指标。为了剥离这个隐藏的关键变量，我们必须先提出一个看似愚蠢但极其致命的问题：<strong>生产系统自己与自己能达成一致吗？</strong> 为此，我们设计了<strong>天花板测试</strong>（Ceiling Test / AA 测试）：让当前昂贵的生产大模型在完全相同的输入上独立运行三次并对比输出。测试结果令人震惊——生产模型与自己自身的输出分歧率竟然高达 7%（自一致率仅为 93%）。换言之，许多团队在要求低成本模型达到绝对完美的复刻标准时，完全忽视了连昂贵的生产基准自身都无法达到该标准。唯有通过天花板测试校准出系统的固有方差基线，后续的所有降本动作才具备了科学的度量前提。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>First, observe. You can't fix what you can't measure. Instrument your shared model client so each attempt becomes part of a trace connecting the model calls, tools, and retries for a single task. Record the prompt version, model settings, token usage, latency, and cost. Open telemetry is a great framework for tracking this. Now that you have that telemetry, you can actually build a benchmark of how production is behaving. But here's where most optimization efforts hit a wall. Let me tell you how it usually goes. You take your massive prompt, you hand it to a smaller, cheaper model, and you run it against a few thousand of those historical production examples. We did this. Our cheaper candidate model disagreed with our expensive production baseline about 18% of the time. So naturally, we threw it out. It wasn't good enough. But what does that 18% actually represent? Because language models in production are dealing with inherently ambiguous real life inputs, that 18% is actually a composite metric. It introduces a critical hidden variable, the baseline variance of the model itself. When the input is messy, your production prompt will inevitably disagree with its own past decisions. So to isolate that hidden variable and understand what your rewrite actually changed, we asked a really dumb question. Does prod even agree with prod? We ran an AA test. We call this the ceiling test. We took our massive expensive production model and ran it three separate times on the same inputs and compared the answers. We discovered that it disagreed with itself roughly 7% of the time. Production's own agreement was only about 93%. So we were demanding a standard of perfection from the cheap candidate that our existing expensive system couldn't even hit. Once you establish that ceiling test benchmark, you finally have a measured baseline. Now you can start making the work cheaper.</p>
+</details>
+<h3 id="降本三阶杠杆缓存自动搜索与小模型路由" data-reading-heading="">降本三阶杠杆：缓存、自动搜索与小模型路由</h3>
+<p>在确立了科学度量基线后，推进工程降本有三个按序执行的核心杠杆：</p>
+<ul>
+<li><strong>前缀缓存优化</strong>：第一阶杠杆是系统性重构提示词布局，最大化前缀缓存（Prefix Caching）命中率，这是以极低改造成本大幅降低调用单价的最直接手段。</li>
+<li><strong>自动化指令压缩</strong>：第二阶杠杆是缩减提示词本身的尺寸。HarborBite 案例中的提示词之所以膨胀至近 5,000 个 Token，是因为历史维护中各个工程师不断打补丁，堆砌了诸如“严禁将客户热情误判为授权确认”等条规以及大量硬编码的长对话范例。由于害怕“删掉一行就搞崩线上”，没人敢轻易精简。解决方案是放弃人工编写，引入 <strong>DSPy</strong>（斯坦福开源的声明式语言模型编程框架）与 <strong>GEEPA</strong> 等提示词优化器，将提示词工程转化为参数搜索问题。开发者只需定义清晰的接口契约、输入输出 Schema 和打分函数，优化器便会在测试集上展开搜索闭环，利用失败反馈重写指令。这一步直接剔除了所有笨重的样例，替换为紧凑的规则，在保证下游契约不变的前提下实现了 51% 的指令 Token 缩减。</li>
+<li><strong>模型降级与架构拆分</strong>：第三阶杠杆是在紧凑提示词的基础上缩减模型尺寸。此时有两种高级策略：其一是<strong>流水线拆分</strong>，将复杂任务拆解，用极便宜的小模型负责前置路由分类与实体提取，仅在涉及重度推理时才激活昂贵的前沿模型；其二是<strong>跨模型蒸馏搜索</strong>，复用 DSPy 优化循环，直接让小模型作为优化主体，搜索其自身的最佳提示词形态以拟合大模型的任务表现，从而实现对特定领域任务的精确适配。</li>
+</ul>
+<p>然而，将大模型的复杂行为强行压缩到小模型中并非坦途，极易引发过拟合与全新失效边界，许多降级实验最终都因提示词泛化能力不足而无法上线，这直接引出了最后一个关键壁垒——如何确信重构没有破坏线上业务。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>There are three technical levers I like to pull and they run in a sequence. The very first is caching. Specifically, structuring your prompts to maximize your prefix cache rate is a really easy and really effective way to bring down the cost to run given tasks. The second lever is to actually shrink the footprint of the prompt itself. So, let's bring that Harborbite prompt example back up. This prompt is almost 5,000 tokens long. And why? Because over time, developers kept bolting on paragraphs of rules. For example, do not confuse enthusiasm with authorization is one such example. Uh, plus massive hard-coded transcripts that were acting as worked examples. Nobody wants to be the one who deletes a line and breaks prod. So what do you do? You automate it. You turn prompting into a search problem. With a framework like DSPI, you can actually stop manually writing instructions. You define the exact interface contract, the inputs, the required output schema, and the scoring function. And then you hand it off to an optimizer like Jeepa. The optimizer treats your prompt as a search space. It runs against your benchmark attempting to match those historical labels. And it uses feedback on failures to revise the instructions. It stripped out almost all of our long worked examples and replaced them with compact rules. A 51% reduction in instruction tokens with the same application contract. Now we can move to test whether quality holds. That is instant margin. The third lever is to actually downsize the model. Now that you have a tight prompt and a measurable search loop, you don't always need a massive frontier model. You can start aggressively cutting compute. There are two interesting strategies here. First, you can break a massive prompt into smaller components. you use a cheaper model to handle something like initial routing or data extraction and only wake up your expensive frontier models for heavy reasoning. Second, you can use that exact same DSPI search loop we just built, but plug a smaller model into it. You let the smaller model search its own prompt space to match the benchmark answers generated by your large production model. You're essentially using Jeepa to teach a tiny model to match the task performance of a massive one for your specific data set. But the reality of optimization is not quite so easy when it comes to these small models. Um if you're trying to compress the behavior of a large model into a smaller one, you'll notice that you introduce new points of failure and overfitting. Um, and in many of our downsizing experiments, uh, we found that the prompts weren't good enough to release, which brings us to the final hurdle. We've cut Harbor's prompt in half, but now we have to prove that we actually didn't break the product.</p>
+</details>
+<h3 id="成对置信发布用统计检验终结玄学交付" data-reading-heading="">成对置信发布：用统计检验终结玄学交付</h3>
+<p>在提示词体量砍半后，如何严密证明系统未发生衰退？鉴于大模型的概率特性，生产环境始终存在自我波动，候选版本亦然。我们不能依赖粗暴的整体匹配率，而必须执行大规模<strong>影子流量部署</strong>（Shadow Deployment），从三个维度同步比对同一批线上请求：</p>
+<ol>
+<li><strong>基线自洽测试</strong>：生产模型对比生产模型（Prod vs Prod）；</li>
+<li><strong>候选自洽测试</strong>：候选模型对比候选模型（Candidate vs Candidate）；</li>
+<li><strong>跨版本对照测试</strong>：候选模型对比生产模型（Candidate vs Prod）。</li>
+</ol>
+<p>这里的数学核心在于：从两个版本之间的表面分歧率中，扣除两个版本内部各自的平均内在方差，剩下的差值才是两者决策概率分布的真实漂移量。更重要的是必须明确一个认知——<strong>不同并不等同于变差</strong>。如果提示词优化器切实发挥了作用，分布产生差异恰恰是因为压缩后的提示词修复了旧生产系统的缺陷。在 HarborBite 的人工抽样复核中，虽然标记出 443 处退化，但同时确认了 2,463 处真正的正向改进，正反比高达将近 6 比 1。</p>
+<p>但工程决策绝不能押注于单点均值估计，必须抵御采样噪声。我们必须建立<strong>配对样本置信区间</strong>（Paired Confidence Interval）：将相同会话请求严格成对绑定评估，计算净收益的置信下限（Lower Confidence Bound）。只有当下限严格大于 0 时，才能得出新模型确实更优的统计学结论；一旦区间穿透 0，则表明需要更多样本支持。最后一道防线是<strong>分层意图校验</strong>：必须将全局统计拆解到核心业务意图维度单独计算，防止亮眼的全局平均值掩盖致命垂直分类的崩溃。当核心指标的置信下限全线越过零轴，团队便能果断敲定发布，从而彻底用严密的统计发布准则取代传统玄学调优，让每一枚 Token 的算力开销都转化为真实的业务价值。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Remember, these models are probabilistic. Production doesn't always agree with itself. And likewise, our new cheaper candidate is also going to have its own internal variance. So you run a massive shadow deployment on the exact same inputs and measure the system from three angles. Production against production, candidate against candidate, and candidate against production. There's a useful bit of math here. You take the disagreement between the two versions and subtract the average disagreement inside each one. What's left gives you a measure of how different their decision probabilities are. This is where that ceiling test pays off. We aren't guessing. We have a mathematical baseline for how much these answers move around when we haven't changed a thing. And here's the secret about that drift. Different doesn't automatically mean wrong. If your optimizer did his job, the distributions should be different because the cheaper prompt is actually doing a better job. We aren't necessarily trying to build a perfect clone of a production system that may already have some flaws baked into it. So, you stop panicking about the raw differences, you pull the diffs, and you manually review some of them. Was the candidate better? Was production better? or were they just two different equally acceptable ways to handle an ambiguous input? For Harbor Bite, let's say the completed review confirmed 443 regressions, but it also found 2,463 outright improvements. That is almost six improvements for every one regression from a prompt that is half the size. But you do not ship on a point estimate. You have to account for sampling noise. We measured a massive gain on this specific batch of requests, but we need to know exactly how much statistical confidence we can put behind it. So, we calculate a confidence interval around that net gain. You keep the comparison strictly paired, both versions answering the exact same request, and you keep the repeated runs of the same conversations grouped together. To say the candidate is better, we want the lower confidence bound above zero. If the interval crosses zero, we need more evidence before making that claim. And one final sanity check is that you have to run this math on your critical categories separately. A great global average can actually uh silently hide that one vital customer intent is tanking. If your critical categories hold up and your lower confidence bound is above zero, you have your answer. Ship it and keep measuring. So this process is how you can replace the guesswork of prompt engineering with an explicit release rule. Cache the obvious stuff. Let an optimizer shrink your instructions. Rightize your model and use the ceiling test to understand the variation. Then test whether quality holds. So here's your homework for Monday morning. Go pick your most expensive task. Measure your baseline variance. put it through a search loop and find out exactly how much bloat you're paying for. We need to reclaim token maxing. Let the rest of the industry fight for the high score on the leaderboard. The real token legends are the ones making every single token count.</p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/201f140b0cdcd28049ab225e23907b7d32f4601873d33c775908950208553dc5.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/201f140b0cdcd28049ab225e23907b7d32f4601873d33c775908950208553dc5.md" download="重构 Token Maxing：以最小算力开销榨取极致模型智能.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=OutRival" class="entity-link company-link">OutRival</a>, <a href="/search/?q=Meta" class="entity-link company-link">Meta</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=DSPy" class="entity-link product-link">DSPy</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,5435 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opus 5.5 与 GPT-6 多模型发布及现场盲测对比</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Opus 5.5 与 GPT-6 多模型发布及现场盲测对比</span>
+      <span data-pagefind-meta="speaker" style="display:none;">How I AI</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>How I AI</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-22</span>
+    
+
+    <header class="article-header">
+      
+      <h1>Opus 5.5 与 GPT-6 多模型发布及现场盲测对比</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/large-language-model/">large-language-model</a>
+      
+        <a class="tag-link" href="/tags/benchmark-testing/">benchmark-testing</a>
+      
+        <span class="tag-pill tag-pill--no-page">blind-test</span>
+      
+        <a class="tag-link" href="/tags/cost-optimization/">cost-optimization</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">作者针对最新发布的 Anthropic Opus 5.5 以及 OpenAI 的 GPT-6 系列模型开展直播测评与盲测，探讨了模型的定价、缓存成本效益、安全限制及性格差异，并在重构的基准测试中对比了各模型在 PRD、SVG 角色生成与日常任务中的具体表现。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/how-i-ai/">How I AI</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=LMT-bknLmNo" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-09-22T00:00:00.000Z">2026-09-22</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>12 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E7%AA%81%E5%8F%91%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B8%83%E4%B8%8E%E7%9B%B4%E6%92%AD%E6%B5%8B%E8%AF%84%E5%87%86%E5%A4%87">突发模型发布与直播测评准备</a></li><li class="outline-h3"><a href="#%E5%9F%BA%E5%87%86%E6%B5%8B%E8%AF%95%E9%87%8D%E6%9E%84%E4%B8%8E%E7%8E%B0%E5%9C%BA%E7%9B%B2%E6%B5%8B%E8%AE%BE%E8%AE%A1">基准测试重构与现场盲测设计</a></li><li class="outline-h3"><a href="#%E5%AE%9A%E4%BB%B7%E7%BC%93%E5%AD%98%E4%B8%8E%E6%88%90%E6%9C%AC%E6%95%88%E7%9B%8A">定价、缓存与成本效益</a></li><li class="outline-h3"><a href="#%E5%AE%89%E5%85%A8%E9%99%90%E5%88%B6%E5%AF%B9%E9%BD%90%E4%B8%8E%E6%A8%A1%E5%9E%8B%E6%80%A7%E6%A0%BC">安全限制、对齐与模型性格</a></li><li class="outline-h3"><a href="#%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C%E4%B8%8E%E6%B2%9F%E9%80%9A%E4%BA%A4%E4%BA%92%E5%AF%B9%E6%AF%94">日常使用体验与沟通交互对比</a></li><li class="outline-h3"><a href="#%E5%93%8D%E5%BA%94%E9%80%9F%E5%BA%A6%E9%9D%99%E9%BB%98%E6%9C%BA%E5%88%B6%E4%B8%8E-ai-%E8%AF%84%E6%B5%8B%E5%9F%BA%E5%87%86%E6%8B%93%E5%B1%95">响应速度、静默机制与 AI 评测基准拓展</a></li><li class="outline-h3"><a href="#%E8%AF%84%E4%BC%B0%E7%BB%B4%E5%BA%A6%E4%B8%8E%E9%A2%84%E6%9C%9F">评估维度与预期</a></li><li class="outline-h3"><a href="#%E7%9B%B2%E6%B5%8B%E5%9F%BA%E5%87%86%E4%B8%8E%E4%B8%AA%E4%BA%BA%E7%94%9F%E4%BA%A7%E5%8A%9B%E8%AF%84%E4%BC%B0">盲测基准与个人生产力评估</a></li><li class="outline-h3"><a href="#%E5%89%8D%E7%AB%AF%E4%B8%8E%E7%95%8C%E9%9D%A2%E4%BB%BB%E5%8A%A1%E5%AF%B9%E6%AF%94">前端与界面任务对比</a></li><li class="outline-h3"><a href="#%E5%90%8E%E7%AB%AF%E4%B8%8E%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8">后端与开发者工具应用</a></li><li class="outline-h3"><a href="#%E5%90%8E%E7%AB%AF%E4%BB%BB%E5%8A%A1%E4%B8%8E-agent-%E8%AF%84%E4%BC%B0">后端任务与 Agent 评估</a></li><li class="outline-h3"><a href="#%E6%A8%A1%E5%9E%8B%E8%AF%84%E5%88%A4%E4%B8%8E%E6%80%BB%E7%BB%93">模型评判与总结</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><!-- chunk 1/5 -->
+<h3 id="突发模型发布与直播测评准备" data-reading-heading="">突发模型发布与直播测评准备</h3>
+<p>我尽量做好了准备——Anthropic 将发布 Opus 5.5。我甚至也做好了准备迎接 OpenAI 将发布另一个模型的事实。我今天一大早就起床了，因为提前拿到了 Opus 5.5 的访问权限，想为大家录制一期精彩的评测。你猜怎么着？它们两个今天早上同时发布了。所以现在，尽管我对 Opus 5.5 做好了精彩的评测（你们稍后会看到），我还是打算直接开这场直播。我以前从来没做过直播。所以，我来给大家讲讲这些新模型。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Estuve 
+<p>en</p>
+<p>la</p>
+<p>medida</p>
+<p>de</p>
+<p>lo</p>
+<p>posible</p>
+<p>listo</p>
+<p>para</p>
+<p>eso</p>
+<p>Anthropic</p>
+<p>lanzará</p>
+<p>Opus</p>
+<p>5.5.</p>
+<p>Yo</p>
+<p>incluso</p>
+<p>estaba</p>
+<p>listo</p>
+<p>al</p>
+<p>hecho</p>
+<p>de</p>
+<p>que</p>
+<p>OpenAI</p>
+<p>lanzará</p>
+<p>otro</p>
+<p>modelo.</p>
+<p>Me</p>
+<p>levanté.</p>
+<p>temprano</p>
+<p>esta</p>
+<p>mañana,</p>
+<p>porque</p>
+<p>tuvo</p>
+<p>acceso</p>
+<p>anticipado</p>
+<p>hasta</p>
+<p>Opus</p>
+<p>5.5</p>
+<p>para</p>
+<p>grabar</p>
+<p>increíble</p>
+<p>para</p>
+<p>ti</p>
+<p>revisar.</p>
+<p>¿Y</p>
+<p>adivina</p>
+<p>qué?</p>
+<p>Ambos,</p>
+<p>ellos</p>
+<p>ambos</p>
+<p>salieron</p>
+<p>esta</p>
+<p>mañana.</p>
+<p>Entonces</p>
+<p>ahora,</p>
+<p>a</p>
+<p>pesar</p>
+<p>del</p>
+<p>hecho</p>
+<p>de</p>
+<p>que</p>
+<p>en</p>
+<p>Estoy</p>
+<p>listo.</p>
+<p>Excelente</p>
+<p>reseña</p>
+<p>de</p>
+<p>Opus</p>
+<p>5.5,</p>
+<p>que</p>
+<p>verás</p>
+<p>más</p>
+<p>tarde,</p>
+<p>yo</p>
+<p>solo</p>
+<p>Voy</p>
+<p>a</p>
+<p>presentar</p>
+<p>esta</p>
+<p>transmisión</p>
+<p>en</p>
+<p>transmisión</p>
+<p>en</p>
+<p>vivo.</p>
+<p>Y</p>
+<p>yo</p>
+<p>nunca</p>
+<p>había</p>
+<p>liderado</p>
+<p>antes</p>
+<p>transmisiones</p>
+<p>en</p>
+<p>vivo.</p>
+<p>Así</p>
+<p>que</p>
+<p>yo</p>
+<p>Te</p>
+<p>lo</p>
+<p>voy</p>
+<p>a</p>
+<p>decir.</p>
+<p>te</p>
+<p>acerca</p>
+<p>de</p>
+<p>estos</p>
+<p>nuevos</p>
+<p>modelos.</p>
+</details>
+<p>今天发布了三款模型：Anthropic 的 Opus 5.5、GPT-6 Soul 和 GPT-6 Luna。这里的价格战还在继续。我还没针对“我如何用 AI”做专题节目，不过刚为这些新模型做了更新，我们会在直播中一起看看它们。我们会快速过一遍，因为是针对模型以及外界对它们的评价，然后我打算在直播中做氛围测试。我们将进行盲测。在直播中给你带来惊喜。你将能看到我所有内心的矛盾，我们来看看一切会如何发展。所以，Claude Opus 5.5、GPT-6 Soul 和 GPT-6 Luna——我有机会提前测试了这些模型。所以我很清楚它们强在哪里，但是……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Hoy
+<p>Se</p>
+<p>lanzaron</p>
+<p>tres</p>
+<p>modelos:</p>
+<p>Opus</p>
+<p>5.5</p>
+<p>de</p>
+<p>Anthropic,</p>
+<p>GPT-6</p>
+<p>Soul</p>
+<p>y</p>
+<p>GPT-6</p>
+<p>Luna.</p>
+<p>Aquí</p>
+<p>continúan</p>
+<p>guerras</p>
+<p>de</p>
+<p>precios,</p>
+<p>aún</p>
+<p>no</p>
+<p>lo</p>
+<p>he</p>
+<p>hecho</p>
+<p>Hicieron</p>
+<p>un</p>
+<p>episodio</p>
+<p>sobre</p>
+<p>Cómo</p>
+<p>yo</p>
+<p>IA</p>
+<p>pero</p>
+<p>recién</p>
+<p>actualizado</p>
+<p>es</p>
+<p>para</p>
+<p>estos</p>
+<p>nuevos</p>
+<p>modelos,</p>
+<p>y</p>
+<p>nosotros</p>
+<p>Vamos</p>
+<p>a</p>
+<p>echarles</p>
+<p>un</p>
+<p>vistazo.</p>
+<p>Transmisión</p>
+<p>en</p>
+<p>vivo</p>
+<p>juntos.</p>
+<p>Caminaremos</p>
+<p>rápido.</p>
+<p>porque</p>
+<p>es</p>
+<p>para</p>
+<p>modelos</p>
+<p>y</p>
+<p>qué</p>
+<p>hay</p>
+<p>de</p>
+<p>ellos</p>
+<p>dicen,</p>
+<p>y</p>
+<p>entonces</p>
+<p>yo</p>
+<p>Voy</p>
+<p>a</p>
+<p>hacer</p>
+<p>una</p>
+<p>prueba</p>
+<p>de</p>
+<p>ambiente.</p>
+<p>vivir.</p>
+<p>Pasaremos</p>
+<p>prueba</p>
+<p>a</p>
+<p>ciegas.</p>
+<p>Te</p>
+<p>sorprenderé.</p>
+<p>Vive</p>
+<p>tú</p>
+<p>mismo.</p>
+<p>Podrás</p>
+<p>ver</p>
+<p>todo</p>
+<p>mi</p>
+<p>interior</p>
+<p>contradicciones,</p>
+<p>y</p>
+<p>nosotros</p>
+<p>Veamos</p>
+<p>cómo</p>
+<p>Todo</p>
+<p>desaparecerá.</p>
+<p>Entonces,</p>
+<p>Claude</p>
+<p>Opus</p>
+<p>5.5,</p>
+<p>GPT-6</p>
+<p>Soul</p>
+<p>y</p>
+<p>GPT-6</p>
+<p>Luna—I</p>
+<p>tuvo</p>
+<p>la</p>
+<p>oportunidad</p>
+<p>prueba</p>
+<p>estos</p>
+<p>modelos</p>
+<p>por</p>
+<p>adelantado.</p>
+<p>Entonces</p>
+<p>lo</p>
+<p>entiendo</p>
+<p>muy</p>
+<p>bien,</p>
+<p>en</p>
+<p>¿Por</p>
+<p>qué</p>
+<p>son</p>
+<p>fuertes,</p>
+<p>pero...?</p>
+</details>
+<h3 id="基准测试重构与现场盲测设计" data-reading-heading="">基准测试重构与现场盲测设计</h3>
+<p>我认为现在是一个重要节点。Astra 发布并更新了 Fábula。我想彻底重新构思“我如何用 AI”的基准测试，因为如果你看过我们以前的节目，它们集中在两件事上：PRD 和原型。但我认为这些模型正变得更聪明、更具智能体特性，因此我为这次盲测开发了更广视角的基准测试。我会讲讲它是如何运作的，也想听听大家对于这些对比是否有用的看法。而且我们真的会在直播间当场进行盲测。你可以评估我的审核有多客观。这很简单，就是我们做决定的方式，因此它并不完美。中间引入了一个法学硕士（LLM）来担任裁判，但我们现场实测，看看会发生什么。我最喜欢哪个模型。但在那之前，让我们先来过一下主要要点。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Creo 
+<p>que</p>
+<p>ahora</p>
+<p>Punto</p>
+<p>importante.</p>
+<p>Astra</p>
+<p>lanzado</p>
+<p>y</p>
+<p>actualizado</p>
+<p>Fábula.</p>
+<p>Yo</p>
+<p>quería</p>
+<p>completamente</p>
+<p>repensar</p>
+<p>punto</p>
+<p>de</p>
+<p>referencia</p>
+<p>Cómo</p>
+<p>yo</p>
+<p>IA,</p>
+<p>porque</p>
+<p>si</p>
+<p>viste</p>
+<p>el</p>
+<p>nuestro</p>
+<p>episodios</p>
+<p>antiguos,</p>
+<p>ellos</p>
+<p>estaban</p>
+<p>centrados</p>
+<p>en</p>
+<p>dos</p>
+<p>cosas:</p>
+<p>PRD</p>
+<p>y</p>
+<p>prototipos.</p>
+<p>Pero</p>
+<p>yo</p>
+<p>Creo</p>
+<p>que</p>
+<p>estos</p>
+<p>modelos</p>
+<p>se</p>
+<p>están</p>
+<p>volviendo</p>
+<p>más</p>
+<p>inteligentes</p>
+<p>y</p>
+<p>más</p>
+<p>agente,</p>
+<p>por</p>
+<p>lo</p>
+<p>tanto</p>
+<p>Desarrollé</p>
+<p>una</p>
+<p>perspectiva</p>
+<p>más</p>
+<p>amplia</p>
+<p>punto</p>
+<p>de</p>
+<p>referencia</p>
+<p>para</p>
+<p>esto</p>
+<p>prueba</p>
+<p>a</p>
+<p>ciegas.</p>
+<p>I</p>
+<p>Te</p>
+<p>voy</p>
+<p>a</p>
+<p>contar</p>
+<p>cómo</p>
+<p>es.</p>
+<p>funciona,</p>
+<p>y</p>
+<p>quiero</p>
+<p>escuchar</p>
+<p>tu</p>
+<p>opinión</p>
+<p>sobre</p>
+<p>si</p>
+<p>Estos</p>
+<p>son</p>
+<p>útiles</p>
+<p>comparación.</p>
+<p>Y</p>
+<p>nosotros</p>
+<p>realmente</p>
+<p>gastaremos</p>
+<p>prueba</p>
+<p>a</p>
+<p>ciegas</p>
+<p>en</p>
+<p>directo</p>
+<p>en</p>
+<p>el</p>
+<p>aire.</p>
+<p>Podrás</p>
+<p>para</p>
+<p>evaluar</p>
+<p>cuánto</p>
+<p>El</p>
+<p>mío</p>
+<p>es</p>
+<p>objetivo.</p>
+<p>auditoría.</p>
+<p>Es</p>
+<p>sencillo.</p>
+<p>la</p>
+<p>forma</p>
+<p>en</p>
+<p>que</p>
+<p>nosotros</p>
+<p>tomamos</p>
+<p>decisiones,</p>
+<p>Por</p>
+<p>lo</p>
+<p>tanto,</p>
+<p>es</p>
+<p>imperfecto.</p>
+<p>Existe</p>
+<p>un</p>
+<p>máster</p>
+<p>en</p>
+<p>Derecho</p>
+<p>(LLM)</p>
+<p>para</p>
+<p>ser</p>
+<p>juez.</p>
+<p>en</p>
+<p>el</p>
+<p>medio,</p>
+<p>pero</p>
+<p>nosotros</p>
+<p>Hagámoslo</p>
+<p>en</p>
+<p>vivo</p>
+<p>y</p>
+<p>Ya</p>
+<p>veremos</p>
+<p>qué</p>
+<p>pasa.</p>
+<p>Me</p>
+<p>encanta</p>
+<p>el</p>
+<p>modelo.</p>
+<p>mayoría.</p>
+<p>Pero</p>
+<p>antes</p>
+<p>demos</p>
+<p>esto</p>
+<p>Vamos</p>
+<p>a</p>
+<p>dar</p>
+<p>un</p>
+<p>paseo</p>
+<p>puntos</p>
+<p>principales.</p>
+</details>
+<h3 id="定价缓存与成本效益" data-reading-heading="">定价、缓存与成本效益</h3>
+<p>好吧，它们并不完全是那种前沿进阶模型。不是 Astra 也不是 Fábula，而是 Opus、Soul 和 Luna 迎来了更新。所有模型都变得更便宜、更快了。因此它们将成为大家在编程和智力任务中的日常助手。在这里你可以看到这些模型的成本评级。Opus 5.5 几乎比 GPT-6 Soul 贵了一倍。我在测试它们的时候价格还不得而知，而这对我使用它们的决定将产生重大影响。再次说明，是的，Opus 5.5 比用来对比智能水平的 Fábula 1 上的 Opus 5 更便宜。但 Soul，你知道的，是我的挚爱。咳咳。对此我非常欣喜，因为 GPT-6 Soul 是我的最爱而且很便宜。因此，最核心的、它们所专注的——不仅是降低成本，还有对缓存输入的处理、速度以及 token 效率。你将会看到输出量的减少、token 的使用量以及成本。这真的非常棒。而且缓存效果极其出色。尤其是当你重新发送上下文时，我们在 PRD 对话中使用所有这些模型看到了巨大的缓存节省。再者，如果你是基于这些模型进行开发，请务必确保缓存得到优化并善用这一优势，因为这能省下很多钱。如果不这样做，我深信这可能会让你付出高昂代价。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Bueno, 
+<p>no</p>
+<p>es</p>
+<p>exactamente</p>
+<p>eso.</p>
+<p>modelos</p>
+<p>avanzados.</p>
+<p>Él</p>
+<p>no</p>
+<p>Astra</p>
+<p>ni</p>
+<p>Fábula,</p>
+<p>sino</p>
+<p>Opus,</p>
+<p>Alma</p>
+<p>y</p>
+<p>Luna</p>
+<p>recibieron</p>
+<p>renovación.</p>
+<p>Todos</p>
+<p>se</p>
+<p>volvió</p>
+<p>más</p>
+<p>barato</p>
+<p>y</p>
+<p>más</p>
+<p>rápido.</p>
+<p>Entonces</p>
+<p>ellos</p>
+<p>se</p>
+<p>convertirá</p>
+<p>en</p>
+<p>tuyo</p>
+<p>a diario</p>
+<p>asistentes</p>
+<p>en</p>
+<p>programación</p>
+<p>y</p>
+<p>intelectual</p>
+<p>tareas.</p>
+<p>Aquí</p>
+<p>tiene.</p>
+<p>ver</p>
+<p>la</p>
+<p>calificación</p>
+<p>el</p>
+<p>costo</p>
+<p>de</p>
+<p>estos</p>
+<p>modelos.</p>
+<p>Opus</p>
+<p>5.5</p>
+<p>casi</p>
+<p>duplica</p>
+<p>Más</p>
+<p>caro</p>
+<p>que</p>
+<p>el</p>
+<p>GPT-6</p>
+<p>Soul.</p>
+<p>Los</p>
+<p>precios</p>
+<p>no</p>
+<p>se</p>
+<p>conocían,</p>
+<p>cuando</p>
+<p>los</p>
+<p>probé</p>
+<p>y</p>
+<p>Esto</p>
+<p>tendrá</p>
+<p>un</p>
+<p>impacto</p>
+<p>significativo.</p>
+<p>mi</p>
+<p>decisión</p>
+<p>respecto</p>
+<p>a</p>
+<p>ellos</p>
+<p>usando.</p>
+<p>De</p>
+<p>nuevo</p>
+<p>Sí,</p>
+<p>Opus</p>
+<p>5.5</p>
+<p>es</p>
+<p>más</p>
+<p>barato</p>
+<p>que</p>
+<p>Opus</p>
+<p>5</p>
+<p>en</p>
+<p>Fábula</p>
+<p>1,</p>
+<p>con</p>
+<p>el</p>
+<p>que</p>
+<p>ellos</p>
+<p>comparar</p>
+<p>la</p>
+<p>inteligencia.</p>
+<p>Pero</p>
+<p>Soul,</p>
+<p>ya</p>
+<p>sabes,</p>
+<p>es</p>
+<p>mío.</p>
+<p>amado</p>
+<p>mío</p>
+<p>amar.</p>
+<p>Ejem.</p>
+<p>Estoy</p>
+<p>en</p>
+<p>encantado</p>
+<p>con</p>
+<p>esto,</p>
+<p>Porque</p>
+<p>GPT-6</p>
+<p>Soul</p>
+<p>es</p>
+<p>mío</p>
+<p>Mi</p>
+<p>favorito</p>
+<p>y</p>
+<p>es</p>
+<p>barato.</p>
+<p>.</p>
+<p>Entonces,</p>
+<p>lo</p>
+<p>principal</p>
+<p>es,</p>
+<p>¿Por</p>
+<p>qué</p>
+<p>son</p>
+<p>ellos?</p>
+<p>enfocado—no</p>
+<p>lo</p>
+<p>es</p>
+<p>solo</p>
+<p>disminuir</p>
+<p>costo,</p>
+<p>pero</p>
+<p>también</p>
+<p>trabajar</p>
+<p>con</p>
+<p>entradas</p>
+<p>almacenadas</p>
+<p>en</p>
+<p>caché,</p>
+<p>velocidad</p>
+<p>y</p>
+<p>eficiencia</p>
+<p>del</p>
+<p>token</p>
+<p>.</p>
+<p>Ya</p>
+<p>verás</p>
+<p>reducción</p>
+<p>de</p>
+<p>volumen</p>
+<p>salida,</p>
+<p>usar</p>
+<p>fichas</p>
+<p>y</p>
+<p>costos.</p>
+<p>Él</p>
+<p>Realmente</p>
+<p>muy</p>
+<p>bueno.</p>
+<p>Y</p>
+<p>El</p>
+<p>almacenamiento</p>
+<p>en</p>
+<p>caché</p>
+<p>funciona</p>
+<p>perfectamente.</p>
+<p>Especialmente</p>
+<p>si</p>
+<p>tú</p>
+<p>envías</p>
+<p>contexto</p>
+<p>nuevamente,</p>
+<p>nosotros</p>
+<p>vi</p>
+<p>uno</p>
+<p>grande</p>
+<p>ahorros</p>
+<p>en</p>
+<p>almacenamiento</p>
+<p>en</p>
+<p>caché,</p>
+<p>usando</p>
+<p>todo</p>
+<p>estos</p>
+<p>modelos</p>
+<p>en</p>
+<p>el</p>
+<p>chat</p>
+<p>PRD.</p>
+<p>Atrás</p>
+<p>si</p>
+<p>estás</p>
+<p>desarrollando</p>
+<p>basado</p>
+<p>en</p>
+<p>estos</p>
+<p>modelos</p>
+<p>,</p>
+<p>asegúrese</p>
+<p>de</p>
+<p>que</p>
+<p>tus</p>
+<p>cachés</p>
+<p>optimizado</p>
+<p>y</p>
+<p>tú</p>
+<p>usa</p>
+<p>esto</p>
+<p>ventaja,</p>
+<p>porque</p>
+<p>puede</p>
+<p>ahorra</p>
+<p>mucho</p>
+<p>dinero.</p>
+<p>Y</p>
+<p>si</p>
+<p>no,</p>
+<p>¿cómo</p>
+<p>lo</p>
+<p>hago?</p>
+<p>convencido</p>
+<p>de</p>
+<p>que</p>
+<p>puede</p>
+<p>te</p>
+<p>costará</p>
+<p>mucho.</p>
+</details>
+<h3 id="安全限制对齐与模型性格" data-reading-heading="">安全限制、对齐与模型性格</h3>
+<p>另一件我想提请注意的事——再次说明，我讨厌 Claude 生成的这个演示文稿——这就是我想让大家关注的：左边 Opus 5.5 的部分。Opus 5.5——这是顶级的 Opus 模型，在网络安全和生物学领域脱离了 Fábula 级别的防护机制。你可以在 Opus 5.5 中自行纠错，但在涉及网络安全或生物学领域时却无法做到，你懂吗？它会把你降级切到 Opus 4.8，或者直接拦截。所以只需知晓存在这样的限制即可。Anthropic 坚称这是他们最对齐的模型。它是在取得突破性成果后打造的模型，因此由外部专家进行了检验。呃，有一点是我在 Opus 上注意到的，也是对 Anthropic 众多模型的预期，那就是它依然带有些许保守和说教。你会在我的 Opus 5.5 评测中看到这一点。所以，你知道的，它就是会直接对你说“不”。它会说类似于“我不应该做这个”之类的话。提示词注入是行不通的，这挺好。嗯，但存在某些细微差别。当你思考这些模型的整体哲学和方法论、它们如何被配置、如何管理风险，以及这些公司如何管理风险时。我认为这种管控甚至延伸到了完全没有风险的活动、个性和行为上。所以这就是我认为值得关注的地方。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Otra 
+<p>cosa</p>
+<p>que</p>
+<p>yo</p>
+<p>quería</p>
+<p>llamar</p>
+<p>la</p>
+<p>atención</p>
+<p>—y</p>
+<p>de</p>
+<p>nuevo,</p>
+<p>yo</p>
+<p>Odio</p>
+<p>esto</p>
+<p>presentación,</p>
+<p>creado</p>
+<p>por</p>
+<p>Claude—esto</p>
+<p>es</p>
+<p>lo</p>
+<p>que</p>
+<p>¿Qué</p>
+<p>quiero</p>
+<p>que</p>
+<p>hagas?</p>
+<p>enfocado:</p>
+<p>izquierda</p>
+<p>del</p>
+<p>lado</p>
+<p>de</p>
+<p>Opus</p>
+<p>5.5.</p>
+<p>Opus</p>
+<p>5.5—</p>
+<p>Este</p>
+<p>es</p>
+<p>el</p>
+<p>modelo</p>
+<p>de</p>
+<p>primer</p>
+<p>nivel</p>
+<p>Opus,</p>
+<p>que</p>
+<p>surgió</p>
+<p>de</p>
+<p>mecanismos</p>
+<p>de</p>
+<p>protección</p>
+<p>Nivel</p>
+<p>de</p>
+<p>fábula</p>
+<p>en</p>
+<p>el</p>
+<p>campo</p>
+<p>ciberseguridad</p>
+<p>y</p>
+<p>biología.</p>
+<p>Podrás</p>
+<p>corregir</p>
+<p>el</p>
+<p>propio</p>
+<p>errores</p>
+<p>en</p>
+<p>Opus</p>
+<p>5.5,</p>
+<p>pero</p>
+<p>no</p>
+<p>podrás</p>
+<p>hacerlo</p>
+<p>trabajando</p>
+<p>con</p>
+<p>ciberseguridad</p>
+<p>o</p>
+<p>biología,</p>
+<p>¿lo</p>
+<p>haces?</p>
+<p>elección.</p>
+<p>Ella</p>
+<p>lanzará</p>
+<p>usted</p>
+<p>en</p>
+<p>Opus</p>
+<p>4.8</p>
+<p>o</p>
+<p>bloqueará.</p>
+<p>Así</p>
+<p>de</p>
+<p>simple</p>
+<p>saber</p>
+<p>que</p>
+<p>tal</p>
+<p>Existen</p>
+<p>restricciones.</p>
+<p>Antropía</p>
+<p>afirma</p>
+<p>que</p>
+<p>esto</p>
+<p>su</p>
+<p>más</p>
+<p>modelo</p>
+<p>acordado.</p>
+<p>Él</p>
+<p>y</p>
+<p>el</p>
+<p>modelo</p>
+<p>que</p>
+<p>creado</p>
+<p>después</p>
+<p>logros</p>
+<p>avanzados</p>
+<p>resultados,</p>
+<p>por</p>
+<p>lo</p>
+<p>tanto</p>
+<p>su</p>
+<p>comprobó</p>
+<p>el</p>
+<p>exterior</p>
+<p>expertos.</p>
+<p>Eh,</p>
+<p>una</p>
+<p>cosa.</p>
+<p>,</p>
+<p>lo</p>
+<p>cual</p>
+<p>noté</p>
+<p>en</p>
+<p>Opus,</p>
+<p>y</p>
+<p>qué</p>
+<p>esperar</p>
+<p>de</p>
+<p>muchos</p>
+<p>modelos</p>
+<p>Antrópico,</p>
+<p>eso</p>
+<p>es</p>
+<p>lo</p>
+<p>que</p>
+<p>es.</p>
+<p>Queda</p>
+<p>algo</p>
+<p>conservador</p>
+<p>y</p>
+<p>instructivo.</p>
+<p>Tú</p>
+<p>Lo</p>
+<p>verás</p>
+<p>en</p>
+<p>el</p>
+<p>mío</p>
+<p>Reseña</p>
+<p>de</p>
+<p>Opus</p>
+<p>5.5.</p>
+<p>Entonces,</p>
+<p>ya</p>
+<p>sabes,</p>
+<p>ella</p>
+<p>es</p>
+<p>simplemente</p>
+<p>te</p>
+<p>dirá</p>
+<p>"no".</p>
+<p>Ella</p>
+<p>dirá</p>
+<p>algo</p>
+<p>como</p>
+<p>"No</p>
+<p>debería</p>
+<p>hacer</p>
+<p>esto."</p>
+<p>hacer".</p>
+<p>Indicación-</p>
+<p>Las</p>
+<p>inyecciones</p>
+<p>no</p>
+<p>funcionarán.</p>
+<p>y</p>
+<p>eso</p>
+<p>es</p>
+<p>bueno.</p>
+<p>Hmm,</p>
+<p>pero</p>
+<p>hay</p>
+<p>ciertos</p>
+<p>matices.</p>
+<p>Cuando</p>
+<p>tú</p>
+<p>pensando</p>
+<p>en</p>
+<p>lo</p>
+<p>general</p>
+<p>filosofía</p>
+<p>y</p>
+<p>enfoques</p>
+<p>estos</p>
+<p>modelos,</p>
+<p>cómo</p>
+<p>ellos</p>
+<p>configurados</p>
+<p>como</p>
+<p>están</p>
+<p>gestionar</p>
+<p>riesgos,</p>
+<p>como</p>
+<p>estas</p>
+<p>empresas</p>
+<p>gestionan</p>
+<p>riesgos.</p>
+<p>Creo</p>
+<p>que</p>
+<p>esto</p>
+<p>es</p>
+<p>se</p>
+<p>extiende</p>
+<p>incluso</p>
+<p>sin</p>
+<p>riesgo</p>
+<p>alguno</p>
+<p>actividad,</p>
+<p>personalidad</p>
+<p>y</p>
+<p>comportamiento.</p>
+<p>Así</p>
+<p>que</p>
+<p>esto</p>
+<p>es</p>
+<p>todo,</p>
+<p>a</p>
+<p>lo</p>
+<p>cual,</p>
+<p>en</p>
+<p>mi</p>
+<p>opinión,</p>
+<p>vale</p>
+<p>la</p>
+<p>pena</p>
+<p>prestar</p>
+<p>atención</p>
+<p>atención.</p>
+</details>
+<h3 id="日常使用体验与沟通交互对比" data-reading-heading="">日常使用体验与沟通交互对比</h3>
+<p>实际上我有好几个月没在日常任务中打开过 Claude 了。我对 ChatGPT 印象非常非常深刻，热衷于 Cohere，沉迷于 Astra 和 Soul。在我看来，配合 harness 使用更加舒心，但我在日常生活中放弃 Claude 的真正原因是——在 Fábula 和 Opus 5 之间，我简直无法忍受与 Claude 的交流。我不断给 Claude 写道：“你能像个人一样说话吗？”我一直对 Fábula 说：“我听不懂你在说什么。”呃，我所称的“Claude 味废话”不断冒出来。所以，从个人人体工学和使用愉悦感的角度来看，我彻底转向了 Codex。现在先剧透一下，虽然最近抗议了所有这些模型，但我依然非常喜欢 GPT 模型。呃，它们让我更开心。用起来让我更舒心。咳咳，对我来说一切都在变好，但我回到了 Claude。所以，对于 Opus 5.5，剧透一下：在日常使用中，它重新回到了我的日常体验里。仅仅是与这个模型交流，我就感到开心得多。嗯，我给 Anthropic 团队的反馈是：它不再让人恼火了。我对 Opus 5.5 毫无烦躁之感。而每当我觉得自己被 Opus 5.5 惹恼时，其实都是碰巧错用了 Opus 5。所以，跟 Opus 5 交流根本毫无乐趣可言。相反，Opus 5.5 会给出清晰的列表项目符号，表现正常，不烦人。因此我希望大家能去亲自检验一下。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+I
+<p>realmente</p>
+<p>no</p>
+<p>se</p>
+<p>abrió</p>
+<p>Claude</p>
+<p>durante</p>
+<p>varios</p>
+<p>años</p>
+<p>meses</p>
+<p>para</p>
+<p>tareas</p>
+<p>cotidianas</p>
+<p>.</p>
+<p>Yo</p>
+<p>estaba</p>
+<p>muy</p>
+<p>Muy</p>
+<p>impresionado</p>
+<p>con</p>
+<p>ChatGPT,</p>
+<p>entusiasta</p>
+<p>de</p>
+<p>Cohere,</p>
+<p>muy</p>
+<p>Cautivado</p>
+<p>por</p>
+<p>Astra</p>
+<p>y</p>
+<p>Soul.</p>
+<p>Me</p>
+<p>parece</p>
+<p>que,</p>
+<p>con</p>
+<p>qué</p>
+<p>trabajar</p>
+<p>Arnés</p>
+<p>más</p>
+<p>agradable,</p>
+<p>pero</p>
+<p>la</p>
+<p>verdadera</p>
+<p>razón,</p>
+<p>¿Por</p>
+<p>qué</p>
+<p>me</p>
+<p>rendí?</p>
+<p>Claude</p>
+<p>en</p>
+<p>la</p>
+<p>vida</p>
+<p>cotidiana—</p>
+<p>entre</p>
+<p>Fábula</p>
+<p>y</p>
+<p>Opus</p>
+<p>5</p>
+<p>I</p>
+<p>Simplemente</p>
+<p>no</p>
+<p>pude.</p>
+<p>para</p>
+<p>soportar</p>
+<p>la</p>
+<p>comunicación</p>
+<p>con</p>
+<p>Claude.</p>
+<p>Estoy</p>
+<p>constantemente</p>
+<p>Claude</p>
+<p>escribió:</p>
+<p>"Puedes</p>
+<p>¿Hablar</p>
+<p>como</p>
+<p>un</p>
+<p>ser</p>
+<p>humano?</p>
+<p>Seguí</p>
+<p>escribiendo</p>
+<p>Fábula:</p>
+<p>"No</p>
+<p>entiendo</p>
+<p>de</p>
+<p>qué</p>
+<p>estás</p>
+<p>hablando."</p>
+<p>"Hablas."</p>
+<p>Eh,</p>
+<p>"Claude-"</p>
+<p>"basura",</p>
+<p>¿cómo</p>
+<p>lo</p>
+<p>hago?</p>
+<p>Yo</p>
+<p>lo</p>
+<p>llamo,</p>
+<p>continuado</p>
+<p>surgir.</p>
+<p>Entonces,</p>
+<p>con</p>
+<p>desde</p>
+<p>la</p>
+<p>perspectiva</p>
+<p>del</p>
+<p>individuo,</p>
+<p>ergonomía</p>
+<p>y</p>
+<p>placer</p>
+<p>de</p>
+<p>uso,</p>
+<p>yo</p>
+<p>cambió</p>
+<p>completamente</p>
+<p>a</p>
+<p>Códice.</p>
+<p>Ahora,</p>
+<p>spoiler,</p>
+<p>protestando</p>
+<p>contra</p>
+<p>todos</p>
+<p>estos</p>
+<p>modelos</p>
+<p>recientemente,</p>
+<p>yo</p>
+<p>Todavía</p>
+<p>te</p>
+<p>quiero</p>
+<p>mucho.</p>
+<p>Modelos</p>
+<p>GPT.</p>
+<p>Eh,</p>
+<p>ellos</p>
+<p>Hazme</p>
+<p>más</p>
+<p>feliz.</p>
+<p>A</p>
+<p>mí</p>
+<p>más</p>
+<p>agradable</p>
+<p>con</p>
+<p>ellos</p>
+<p>usar.</p>
+<p>Ejem,</p>
+<p>Todo</p>
+<p>es</p>
+<p>importante</p>
+<p>para</p>
+<p>mí.</p>
+<p>mejor,</p>
+<p>pero</p>
+<p>regresé</p>
+<p>Claude.</p>
+<p>Entonces,</p>
+<p>Opus</p>
+<p>5.5,</p>
+<p>spoiler:</p>
+<p>en</p>
+<p>cada día</p>
+<p>usándolo</p>
+<p>regresó</p>
+<p>de</p>
+<p>nuevo</p>
+<p>mi</p>
+<p>diario</p>
+<p>experiencia.</p>
+<p>Soy</p>
+<p>mucho</p>
+<p>más</p>
+<p>feliz</p>
+<p>simplemente</p>
+<p>de</p>
+<p>comunicarse</p>
+<p>con</p>
+<p>este</p>
+<p>modelo.</p>
+<p>Hmm,</p>
+<p>mi</p>
+<p>Comentarios</p>
+<p>para</p>
+<p>el</p>
+<p>equipo</p>
+<p>Antropía:</p>
+<p>ya</p>
+<p>no</p>
+<p>lo</p>
+<p>es</p>
+<p>irritante.</p>
+<p>Yo</p>
+<p>no</p>
+<p>soy</p>
+<p>ninguno</p>
+<p>nunca</p>
+<p>sentí</p>
+<p>irritación</p>
+<p>por</p>
+<p>Opus</p>
+<p>5.5.</p>
+<p>¿Y</p>
+<p>cuándo</p>
+<p>debo</p>
+<p>hacerlo?</p>
+<p>Me</p>
+<p>pareció</p>
+<p>que</p>
+<p>yo</p>
+<p>Opus</p>
+<p>5.5</p>
+<p>molesto,</p>
+<p>yo</p>
+<p>en</p>
+<p>realidad</p>
+<p>por</p>
+<p>casualidad</p>
+<p>Opus</p>
+<p>5</p>
+<p>usado.</p>
+<p>Así</p>
+<p>pues,</p>
+<p>con</p>
+<p>Opus</p>
+<p>5</p>
+<p>comunicarse</p>
+<p>en</p>
+<p>absoluto</p>
+<p>No</p>
+<p>es</p>
+<p>divertido.</p>
+<p>En</p>
+<p>cambio</p>
+<p>Opus</p>
+<p>5.5</p>
+<p>ofrece</p>
+<p>una</p>
+<p>claridad</p>
+<p>listas</p>
+<p>con</p>
+<p>viñetas,</p>
+<p>se</p>
+<p>comporta</p>
+<p>normalmente</p>
+<p>y</p>
+<p>no</p>
+<p>es</p>
+<p>molesto.</p>
+<p>Así</p>
+<p>que</p>
+<p>yo</p>
+<p>lo</p>
+<p>haría</p>
+<p>Quería</p>
+<p>que</p>
+<p>lo</p>
+<p>tuvieras.</p>
+<p>protestado.</p>
+</details>
+<h3 id="响应速度静默机制与-ai-评测基准拓展" data-reading-heading="">响应速度、静默机制与 AI 评测基准拓展</h3>
+<p>另一件事——Opus 5.5 相当快，但没有 Soul 那么快。所以我能把两者都测试一番，而我总感觉 GPT 模型和 Codex harness 明显要更快一些。因此，我认为这种速度提升表现在两个方面。它体现在真实的延迟上。所以我确实认为 GPT Soul 跑得就是更快。第二点是因为他们让 Opus 5.5 变得不那么烦人的一部分做法，就是让它保持安静。我也刚刚意识到这一点：它不对自己的工作进行解说。当它不对自己的工作加以评论时，你就会陷入一种境地，心想：你到底在不在干活？你真的是这样运转的吗？所以 Opus 5.5 在交流上的这种改变既有优点也有缺点，这就是为什么实际感觉它比原本应有的速度更慢。此外，你知道的，在高负载下，Claude 就像是在努力使劲。它就像在原地打转、耗费巨大力气。所以我觉得这一点与更静默的模型相结合，就显得它稍慢了一些，而在我的感受中 Soul 提供了适度的过程解说，与它交流也很顺畅。让我们转到我对人工智能工作环境的评测。正如大家在左侧所看到的，实际上我大幅扩展了这项评测。现在它涵盖了大量的……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Otro
+<p>cosa—Opus</p>
+<p>5.5</p>
+<p>es</p>
+<p>bastante</p>
+<p>rápido,</p>
+<p>pero</p>
+<p>no</p>
+<p>tan</p>
+<p>rápido</p>
+<p>Rápido</p>
+<p>como</p>
+<p>un</p>
+<p>alma.</p>
+<p>Así</p>
+<p>que</p>
+<p>yo</p>
+<p>pudo</p>
+<p>protestar</p>
+<p>ambos,</p>
+<p>y</p>
+<p>yo</p>
+<p>Siempre</p>
+<p>parecía</p>
+<p>que</p>
+<p>los</p>
+<p>modelos</p>
+<p>GPT</p>
+<p>y</p>
+<p>Codex</p>
+<p>Los</p>
+<p>arneses</p>
+<p>fueron</p>
+<p>significativamente</p>
+<p>más</p>
+<p>rápido.</p>
+<p>Entonces,</p>
+<p>yo</p>
+<p>Creo</p>
+<p>que</p>
+<p>esa</p>
+<p>aceleración</p>
+<p>les</p>
+<p>sucedió</p>
+<p>a</p>
+<p>dos</p>
+<p>categorías.</p>
+<p>Él</p>
+<p>manifestado</p>
+<p>en</p>
+<p>retraso</p>
+<p>real.</p>
+<p>Así</p>
+<p>que</p>
+<p>realmente  Creo</p>
+<p>que,</p>
+<p>que</p>
+<p>GPT</p>
+<p>Soul</p>
+<p>es</p>
+<p>simplemente</p>
+<p>funcionó</p>
+<p>más</p>
+<p>rápido.</p>
+<p>La</p>
+<p>segunda</p>
+<p>cosa</p>
+<p>es</p>
+<p>porque</p>
+<p>parte</p>
+<p>de</p>
+<p>la</p>
+<p>forma</p>
+<p>en</p>
+<p>que</p>
+<p>ellos</p>
+<p>hizo</p>
+<p>que</p>
+<p>Opus</p>
+<p>5.5</p>
+<p>fuera</p>
+<p>más</p>
+<p>pequeño</p>
+<p>molesto,</p>
+<p>fue,</p>
+<p>que</p>
+<p>lo</p>
+<p>obligaron</p>
+<p>guarda</p>
+<p>silencio.</p>
+<p>Yo</p>
+<p>también</p>
+<p>Acabo</p>
+<p>de</p>
+<p>darme</p>
+<p>cuenta</p>
+<p>de</p>
+<p>eso.</p>
+<p>él</p>
+<p>no</p>
+<p>comenta</p>
+<p>sobre</p>
+<p>su</p>
+<p>trabajar.</p>
+<p>Y</p>
+<p>cuando</p>
+<p>no</p>
+<p>lo</p>
+<p>hace</p>
+<p>comentarios</p>
+<p>sobre</p>
+<p>su</p>
+<p>trabajo,</p>
+<p>te</p>
+<p>metes</p>
+<p>en</p>
+<p>un</p>
+<p>lío</p>
+<p>una</p>
+<p>trampa</p>
+<p>donde</p>
+<p>piensas:</p>
+<p>si</p>
+<p>¿Trabajas?</p>
+<p>¿De</p>
+<p>verdad</p>
+<p>eres</p>
+<p>así?</p>
+<p>¿Cómo</p>
+<p>estás?</p>
+<p>Así</p>
+<p>que</p>
+<p>en</p>
+<p>este</p>
+<p>cambio</p>
+<p>Las</p>
+<p>comunicaciones</p>
+<p>de</p>
+<p>Opus</p>
+<p>5.5</p>
+<p>son</p>
+<p>como</p>
+<p>ventajas</p>
+<p>y</p>
+<p>desventajas,</p>
+<p>¿Por</p>
+<p>qué</p>
+<p>está</p>
+<p>él?</p>
+<p>realmente</p>
+<p>lo</p>
+<p>sentí</p>
+<p>más</p>
+<p>lento</p>
+<p>que,</p>
+<p>en</p>
+<p>en</p>
+<p>mi</p>
+<p>opinión,</p>
+<p>fue</p>
+<p>de</p>
+<p>hecho.</p>
+<p>También,</p>
+<p>ya</p>
+<p>sabes,</p>
+<p>Claude</p>
+<p>en</p>
+<p>alto</p>
+<p>carga,</p>
+<p>es</p>
+<p>como</p>
+<p>si</p>
+<p>fuera</p>
+<p>Haz</p>
+<p>esto.</p>
+<p>Él</p>
+<p>como</p>
+<p>si</p>
+<p>estuviera</p>
+<p>"girando"</p>
+<p>y</p>
+<p>pone</p>
+<p>mucho</p>
+<p>esfuerzo</p>
+<p>esfuerzos.</p>
+<p>Y</p>
+<p>por</p>
+<p>eso</p>
+<p>creo</p>
+<p>que</p>
+<p>esto</p>
+<p>se</p>
+<p>combina</p>
+<p>con</p>
+<p>modelo</p>
+<p>más</p>
+<p>silencioso</p>
+<p>simplemente</p>
+<p>lo</p>
+<p>hace</p>
+<p>un</p>
+<p>poco</p>
+<p>más</p>
+<p>lento,</p>
+<p>mientras</p>
+<p>sentía</p>
+<p>que</p>
+<p>Alma</p>
+<p>proporcionada</p>
+<p>nivel</p>
+<p>adecuado</p>
+<p>comentando,</p>
+<p>así</p>
+<p>como</p>
+<p>Fue</p>
+<p>agradable</p>
+<p>estar</p>
+<p>con</p>
+<p>él.</p>
+<p>comunicar.</p>
+<p>Pasemos</p>
+<p>a</p>
+<p>mi</p>
+<p>reseña</p>
+<p>ambiente</p>
+<p>de</p>
+<p>trabajo</p>
+<p>con</p>
+<p>inteligencia</p>
+<p>artificial.</p>
+<p>Como</p>
+<p>pueden</p>
+<p>ver,</p>
+<p>a</p>
+<p>la</p>
+<p>izquierda,</p>
+<p>en</p>
+<p>realidad</p>
+<p>amplió</p>
+<p>significativamente</p>
+<p>esto</p>
+<p>revisar.</p>
+<p>Ahora</p>
+<p>él</p>
+<p>cubre</p>
+<p>un</p>
+<p>montón</p>
+<p>de</p>
+<p>cosas</p>
+<p>en</p>
+</details>
+<!-- chunk 2/5 -->
+<h3 id="评估维度与预期" data-reading-heading="">评估维度与预期</h3>
+<p>不同的类别，而且随着时间推移，我们还会加入更多类别。所以它既要能把凌乱的笔记整理成 PRD，又涉及个人生产力，比如对传入的信息进行分类以及日常的语音回复。所以我实际上正在测试这个模型，看看它是否能用我的口吻说话。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+diferentes 
+<p>categorías</p>
+<p>y</p>
+<p>Con</p>
+<p>el</p>
+<p>tiempo</p>
+<p>los</p>
+<p>tendremos</p>
+<p>agregar.</p>
+<p>Así</p>
+<p>que</p>
+<p>él</p>
+<p>lo</p>
+<p>es</p>
+<p>todo</p>
+<p>aún</p>
+<p>se</p>
+<p>transforma</p>
+<p>notas</p>
+<p>descuidadas</p>
+<p>sobre</p>
+<p>PRD.</p>
+<p>Él</p>
+<p>también</p>
+<p>está</p>
+<p>involucrado</p>
+<p>en</p>
+<p>asuntos</p>
+<p>personales</p>
+<p>productividad,</p>
+<p>clasificación</p>
+<p>entrante</p>
+<p>mensajes</p>
+<p>y</p>
+<p>rutina</p>
+<p>mis</p>
+<p>respuestas</p>
+<p>voz.</p>
+<p>Así</p>
+<p>que</p>
+<p>realmente</p>
+<p>Estoy</p>
+<p>probando</p>
+<p>este</p>
+<p>modelo</p>
+<p>para</p>
+<p>para</p>
+<p>ver</p>
+<p>si</p>
+<p>puede</p>
+<p>Ella</p>
+<p>habla</p>
+<p>mi</p>
+<p>idioma</p>
+<p>voz.</p>
+</details>
+<p>然后，我们当然经常做前端代码编写，因为我觉得这很直观、很容易看出来。我加了，呃，几个后端代码编写的任务。呃，单智能体对比多智能体集，对比后端功能。我又加入了语音智能体、长期研究、使用电脑，然后加了一些创意功能。所以我把它们全部汇总到了一起。我测试了很多模型。这不仅包括来自 OpenAI 和 Anthropic 的新模型，而且我认为还包括 Grok。我觉得 Muse 也在其中。所以谁知道会怎样呢，我们拭目以待吧。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Entonces,
+<p>Por</p>
+<p>supuesto,</p>
+<p>a</p>
+<p>menudo</p>
+<p>Hacemos</p>
+<p>frontend-</p>
+<p>codificación,</p>
+<p>porque</p>
+<p>yo</p>
+<p>Creo</p>
+<p>que</p>
+<p>esto</p>
+<p>visual</p>
+<p>y</p>
+<p>fácilmente</p>
+<p>ver.</p>
+<p>Añadí,</p>
+<p>eh,</p>
+<p>un</p>
+<p>par</p>
+<p>de</p>
+<p>tareas</p>
+<p>para</p>
+<p>codificación</p>
+<p>del</p>
+<p>backend.</p>
+<p>Eh,</p>
+<p>agentes</p>
+<p>contra</p>
+<p>multiconjuntos</p>
+<p>de</p>
+<p>agentes</p>
+<p>contra</p>
+<p>las</p>
+<p>funciones</p>
+<p>backend.</p>
+<p>Yo</p>
+<p>otra</p>
+<p>vez</p>
+<p>se</p>
+<p>convirtió</p>
+<p>en</p>
+<p>agente</p>
+<p>voz,</p>
+<p>de</p>
+<p>larga</p>
+<p>duración</p>
+<p>investigación,</p>
+<p>usando</p>
+<p>computadora,</p>
+<p>y</p>
+<p>luego</p>
+<p>añadió</p>
+<p>algo</p>
+<p>de</p>
+<p>creatividad</p>
+<p>funciones.</p>
+<p>Entonces,</p>
+<p>yo</p>
+<p>Los</p>
+<p>reunió</p>
+<p>a</p>
+<p>todos.</p>
+<p>I</p>
+<p>protestó</p>
+<p>mucho</p>
+<p>modelos.</p>
+<p>Esto</p>
+<p>incluye</p>
+<p>no</p>
+<p>solo</p>
+<p>nuevos</p>
+<p>modelos,</p>
+<p>eh,</p>
+<p>de</p>
+<p>OpenAI</p>
+<p>y</p>
+<p>Anthropic,</p>
+<p>pero</p>
+<p>también,</p>
+<p>creo,</p>
+<p>Esto</p>
+<p>incluye</p>
+<p>las</p>
+<p>rocas.</p>
+<p>Creo</p>
+<p>que</p>
+<p>Muse</p>
+<p>también</p>
+<p>está</p>
+<p>aquí.</p>
+<p>Entonces</p>
+<p>quién</p>
+<p>sabe</p>
+<p>lo</p>
+<p>que</p>
+<p>somos</p>
+<p>Ya</p>
+<p>veremos.</p>
+</details>
+<p>呃，坦白说：我总是倾向于认为胜出的会是 Astra 还是 Soul？因为我很喜欢 OpenAI 的模型。内心无法左右自己的喜好。这是我的假设。以下是我的假设：呃，OpenAI 模型会在脑力工作和个人生产力方面让我满意。Anthropic 的模型，或者可能是 Grok，谁知道呢，会在界面方面让我满意。呃，不知道后端需要哪个能让我满意。我怀疑单个智能体你会更喜欢 Claude 模型。我怀疑长期智能体也会是 Claude 模型。至于使用电脑，我想会是 OpenAI，但对于创意任务——我甚至想象不出来。实际上，我认为创意 SVG 会是 Claude，而视频可能是 OpenAI 或 Anthropic。不过我们走着瞧。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Eh, 
+<p>lo</p>
+<p>haré.</p>
+<p>Francamente:</p>
+<p>siempre</p>
+<p>inclinado</p>
+<p>a</p>
+<p>pensar</p>
+<p>que</p>
+<p>¿Ganará</p>
+<p>Astra</p>
+<p>o</p>
+<p>Soul?</p>
+<p>porque</p>
+<p>me</p>
+<p>encanta</p>
+<p>Modelos</p>
+<p>de</p>
+<p>OpenAI.</p>
+<p>El</p>
+<p>corazón</p>
+<p>no</p>
+<p>Dime,</p>
+<p>¿qué</p>
+<p>es?</p>
+<p>quiere.</p>
+<p>Este</p>
+<p>es</p>
+<p>mío.</p>
+<p>suposición.</p>
+<p>Aquí</p>
+<p>está</p>
+<p>el</p>
+<p>mío.</p>
+<p>suposición.</p>
+<p>Eh,</p>
+<p>OpenAI</p>
+<p>me</p>
+<p>modela</p>
+<p>le</p>
+<p>gustará</p>
+<p>intelectual</p>
+<p>trabajo</p>
+<p>y</p>
+<p>personal</p>
+<p>productividad.</p>
+<p>Modelos</p>
+<p>antrópicos,</p>
+<p>tal</p>
+<p>vez</p>
+<p>Grok,</p>
+<p>quién</p>
+<p>sabe,</p>
+<p>yo</p>
+<p>le</p>
+<p>gustará</p>
+<p>Interfaz.</p>
+<p>Eh,</p>
+<p>no.</p>
+<p>Sé</p>
+<p>lo</p>
+<p>que</p>
+<p>necesito.</p>
+<p>le</p>
+<p>gustará</p>
+<p>por</p>
+<p>backend.</p>
+<p>Sospecho</p>
+<p>que</p>
+<p>para</p>
+<p>el</p>
+<p>individuo</p>
+<p>Necesito</p>
+<p>más</p>
+<p>agentes</p>
+<p>Te</p>
+<p>gustará</p>
+<p>el</p>
+<p>modelo</p>
+<p>Claude.</p>
+<p>Sospecho</p>
+<p>que</p>
+<p>a largo plazo</p>
+<p>El</p>
+<p>agente</p>
+<p>será</p>
+<p>el</p>
+<p>modelo</p>
+<p>Claude.</p>
+<p>De</p>
+<p>usando</p>
+<p>computadora,</p>
+<p>creo</p>
+<p>que</p>
+<p>es</p>
+<p>Habrá</p>
+<p>IA</p>
+<p>abierta,</p>
+<p>pero</p>
+<p>para</p>
+<p>tareas</p>
+<p>creativas—</p>
+<p>Ni</p>
+<p>siquiera</p>
+<p>puedo</p>
+<p>imaginarlo.</p>
+<p>En</p>
+<p>realidad,</p>
+<p>creo</p>
+<p>que</p>
+<p>para</p>
+<p>SVG</p>
+<p>creativo</p>
+<p>será</p>
+<p>Claude</p>
+<p>y</p>
+<p>el</p>
+<p>video</p>
+<p>es</p>
+<p>probablemente</p>
+<p>IA</p>
+<p>abierta</p>
+<p>o</p>
+<p>antrópica.</p>
+<p>Pero</p>
+<p>Ya</p>
+<p>veremos.</p>
+</details>
+<h3 id="盲测基准与个人生产力评估" data-reading-heading="">盲测基准与个人生产力评估</h3>
+<p>所以我正在对这些模型进行盲测评估。我在不同模型上运行它们。在某种程度上，我当然根据模型的能力对它们进行了分组，这样我就可以比较相似的模型。比如说，我不想拿 Luna 和 Fabula 来比较。所以，这是我的测试基准。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Entonces 
+<p>yo</p>
+<p>Estoy</p>
+<p>liderando</p>
+<p>a</p>
+<p>ciegas.</p>
+<p>evaluación</p>
+<p>de</p>
+<p>estos</p>
+<p>modelos.</p>
+<p>Entonces,</p>
+<p>yo</p>
+<p>Los</p>
+<p>ejecuto</p>
+<p>en</p>
+<p>diferentes</p>
+<p>modelos.</p>
+<p>Estoy</p>
+<p>seguro.</p>
+<p>agrupados</p>
+<p>hasta</p>
+<p>cierto</p>
+<p>punto</p>
+<p>modelos</p>
+<p>según</p>
+<p>sus</p>
+<p>oportunidades.</p>
+<p>Así</p>
+<p>que</p>
+<p>yo</p>
+<p>Puedo</p>
+<p>comparar</p>
+<p>modelos</p>
+<p>similares</p>
+<p>entre</p>
+<p>tú</p>
+<p>mismo.</p>
+<p>Digamos</p>
+<p>que</p>
+<p>no</p>
+<p>lo</p>
+<p>hago</p>
+<p>Quiero</p>
+<p>comparar</p>
+<p>Luna</p>
+<p>y</p>
+<p>Fábula.</p>
+<p>Así</p>
+<p>que,</p>
+<p>este</p>
+<p>es</p>
+<p>el</p>
+<p>mío.</p>
+<p>banco</p>
+<p>de</p>
+<p>pruebas.</p>
+</details>
+<p>它们是匿名的。你看，我有模型 B、模型 C、模型 E、模型 G。然后我往下看。在这里，我给出一到五分的总评分，并留下简短的评语，例如：简单直接，当然，毫无怨言。我是针对 PRD 这么做的，因为阅读它需要一些时间，不过我们就快速过一遍，我会给出我的意见。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Son 
+<p>anónimos.</p>
+<p>Tú</p>
+<p>Verás,</p>
+<p>yo</p>
+<p>tengo</p>
+<p>modelo</p>
+<p>B,</p>
+<p>modelo</p>
+<p>C,</p>
+<p>modelo</p>
+<p>E,</p>
+<p>modelo</p>
+<p>G.</p>
+<p>Entonces</p>
+<p>bajo.</p>
+<p>Aquí</p>
+<p>estoy</p>
+<p>publicando</p>
+<p>calificación</p>
+<p>de</p>
+<p>uno</p>
+<p>a</p>
+<p>cinco</p>
+<p>en</p>
+<p>total</p>
+<p>Dejo</p>
+<p>huella.</p>
+<p>notas</p>
+<p>breves,</p>
+<p>por</p>
+<p>ejemplo:</p>
+<p>simplemente</p>
+<p>y</p>
+<p>por</p>
+<p>supuesto,</p>
+<p>ninguno</p>
+<p>quejas.</p>
+<p>Lo</p>
+<p>hice.</p>
+<p>para</p>
+<p>PRD,</p>
+<p>porque</p>
+<p>su</p>
+<p>leer</p>
+<p>toma</p>
+<p>algún</p>
+<p>tiempo,</p>
+<p>pero</p>
+<p>nosotros</p>
+<p>solo</p>
+<p>rápidamente</p>
+<p>Vamos</p>
+<p>a</p>
+<p>revisarlos</p>
+<p>y</p>
+<p>yo</p>
+<p>Daré</p>
+<p>mi</p>
+<p>opinión.</p>
+</details>
+<p>因此，下一个阶段——检验个人生产力。总的来说，我给它们虚构的电子邮件，并询问：“你会怎么回复我？如果我给你我的意见，你会怎么做？你会怎么整理我的邮件？”于是，模型 B 和模型 E 给我写了不错的邮件。篇幅挺长，但是是易于阅读的好邮件。我会说模型 B 写的是阅读体验最舒服的邮件。另外，如果你看信件的内容，废话更少。而且，它还添加了日历邀请。所以我要给这个模型打五分。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Por 
+<p>lo</p>
+<p>tanto,</p>
+<p>siguiente</p>
+<p>etapa—</p>
+<p>verificación</p>
+<p>personal</p>
+<p>productividad.</p>
+<p>En</p>
+<p>general,</p>
+<p>les</p>
+<p>doy</p>
+<p>electrónica</p>
+<p>falsa</p>
+<p>cartas</p>
+<p>y</p>
+<p>preguntar:</p>
+<p>"¿Cómo</p>
+<p>¿Me</p>
+<p>responderías?</p>
+<p>¿Qué</p>
+<p>harías</p>
+<p>si...?</p>
+<p>Te</p>
+<p>di</p>
+<p>mi</p>
+<p>opinión</p>
+<p>y</p>
+<p>cómo</p>
+<p>¿Lo</p>
+<p>ordenarías?</p>
+<p>¿Mi</p>
+<p>correo?</p>
+<p>"Entonces,</p>
+<p>modelo</p>
+<p>B</p>
+<p>y</p>
+<p>modelo</p>
+<p>E</p>
+<p>me</p>
+<p>escribió</p>
+<p>mensajes</p>
+<p>bonitos</p>
+<p>.</p>
+<p>Eran</p>
+<p>largos,</p>
+<p>pero</p>
+<p>estos</p>
+<p>eran</p>
+<p>buenos</p>
+<p>mensajes</p>
+<p>que</p>
+<p>Fácil</p>
+<p>de</p>
+<p>leer.</p>
+<p>Yo</p>
+<p>lo</p>
+<p>haría</p>
+<p>dijo</p>
+<p>que</p>
+<p>el</p>
+<p>modelo</p>
+<p>B</p>
+<p>escribió</p>
+<p>lo</p>
+<p>más</p>
+<p>conveniente</p>
+<p>para</p>
+<p>leer</p>
+<p>mensaje.</p>
+<p>También,</p>
+<p>si</p>
+<p>miras</p>
+<p>el</p>
+<p>contenido</p>
+<p>de</p>
+<p>la</p>
+<p>carta,</p>
+<p>allí</p>
+<p>menos</p>
+<p>texto</p>
+<p>innecesario.</p>
+<p>Además,</p>
+<p>añadió:</p>
+<p>invitación</p>
+<p>a</p>
+<p>calendario.</p>
+<p>Así</p>
+<p>que</p>
+<p>yo</p>
+<p>Voy</p>
+<p>a</p>
+<p>poner</p>
+<p>este</p>
+<p>modelo</p>
+<p>cinco.</p>
+</details>
+<p>这是我最喜欢的模型 C——我讨厌我的 Grok 也这么干：它使用的 token 实在太少了，以至于几乎不可能搞懂它到底是什么意思。而且虽然它很短，但如果你没有上下文，比如我，就根本不明白 Denise/Brightline 是什么意思。还有一件事……这些信件里还能加更多连字符吗？至于这个，好吧，这些句子结构真让人受不了。所以我其实给它打了两分。对我来说引言很难读，信件本身质量也不太高。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Esto 
+<p>era</p>
+<p>mío.</p>
+<p>Modelo</p>
+<p>C</p>
+<p>favorito—</p>
+<p>Odio</p>
+<p>cuando</p>
+<p>mi</p>
+<p>Grok</p>
+<p>hace</p>
+<p>lo</p>
+<p>mismo:</p>
+<p>usa</p>
+<p>así</p>
+<p>pocos</p>
+<p>tokens</p>
+<p>que</p>
+<p>casi</p>
+<p>imposible</p>
+<p>entender</p>
+<p>qué</p>
+<p>demonios</p>
+<p>Quítalo,</p>
+<p>eso</p>
+<p>significa.</p>
+<p>Y</p>
+<p>aunque</p>
+<p>es</p>
+<p>corto,</p>
+<p>si</p>
+<p>No</p>
+<p>tienes</p>
+<p>contexto</p>
+<p>Yo,</p>
+<p>por</p>
+<p>ejemplo,</p>
+<p>no</p>
+<p>Entiendo</p>
+<p>lo</p>
+<p>que</p>
+<p>significa.</p>
+<p>Denise/Brightline.</p>
+<p>Otra</p>
+<p>cosa...</p>
+<p>¿Era</p>
+<p>posible</p>
+<p>hacer</p>
+<p>más?</p>
+<p>más</p>
+<p>guiones</p>
+<p>en</p>
+<p>estos</p>
+<p>¿letras?</p>
+<p>Y</p>
+<p>esto,</p>
+<p>bueno,</p>
+<p>esto</p>
+<p>Estoy</p>
+<p>loco.</p>
+<p>construcciones.</p>
+<p>Así</p>
+<p>que</p>
+<p>yo</p>
+<p>en</p>
+<p>realidad</p>
+<p>poner</p>
+<p>para</p>
+<p>esto</p>
+<p>un</p>
+<p>dos.</p>
+<p>A</p>
+<p>mí</p>
+<p>Introducción</p>
+<p>difícil</p>
+<p>de</p>
+<p>leer,</p>
+<p>y</p>
+<p>las</p>
+<p>cartas</p>
+<p>en</p>
+<p>sí</p>
+<p>mismas</p>
+<p>no</p>
+<p>lo</p>
+<p>son</p>
+<p>de</p>
+<p>muy</p>
+<p>alta</p>
+<p>calidad.</p>
+</details>
+<p>模型 E——又是一条不错的小短消息。呃，基本上被忽略了，但在草稿里到处崩溃。所以，同样，是的，我们不给两分，但也不给五分。也许我给它个三分。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Modelo 
+<p>E</p>
+<p>—otra</p>
+<p>vez</p>
+<p>agradable</p>
+<p>pequeño</p>
+<p>mensaje.</p>
+<p>Ejem,</p>
+<p>es</p>
+<p>prácticamente</p>
+<p>ignorado,</p>
+<p>pero</p>
+<p>en</p>
+<p>borradores</p>
+<p>por</p>
+<p>todas</p>
+<p>partes</p>
+<p>estrellarse.</p>
+<p>Así</p>
+<p>que,</p>
+<p>de</p>
+<p>nuevo</p>
+<p>Sí,</p>
+<p>no</p>
+<p>lo</p>
+<p>haremos.</p>
+<p>un</p>
+<p>dos,</p>
+<p>pero</p>
+<p>no</p>
+<p>cinco.</p>
+<p>Tal</p>
+<p>vez</p>
+<p>yo</p>
+<p>Le</p>
+<p>doy</p>
+<p>un</p>
+<p>tres.</p>
+</details>
+<p>现在来看模型 G，我们瞧瞧。嗯，很短。虽短，但我完全明白它的意思。所以这非常有用。它在恰当的时机没有达成一致。我会照办。它得了四分。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Y
+<p>ahora</p>
+<p>modelo</p>
+<p>G,</p>
+<p>vamos</p>
+<p>a</p>
+<p>ver.</p>
+<p>Hmm,</p>
+<p>muy</p>
+<p>corto.</p>
+<p>Brevemente,</p>
+<p>pero</p>
+<p>Lo</p>
+<p>entiendo</p>
+<p>perfectamente.</p>
+<p>Qué</p>
+<p>quiere</p>
+<p>decir</p>
+<p>esto.</p>
+<p>Así</p>
+<p>que</p>
+<p>esto</p>
+<p>es</p>
+<p>Muy</p>
+<p>útil.</p>
+<p>Ella</p>
+<p>No</p>
+<p>se</p>
+<p>pusieron</p>
+<p>de</p>
+<p>acuerdo</p>
+<p>con</p>
+<p>los</p>
+<p>correctos</p>
+<p>momentos.</p>
+<p>Yo</p>
+<p>cumpliré.</p>
+<p>Ella</p>
+<p>sacó</p>
+<p>un</p>
+<p>cuatro.</p>
+</details>
+<p>因此，再次说明，这就是我进行评估的方式。我只是给你布置一个任务，我看着它，像这任务的接收者一样给它打分，这是平常的做法，然后我对它进行归类。呃，而且这样……我认为，这是 Luna，因为我刚才说了用 Luna 来写信。让我们看看表现如何。看来它遵守了我的规则，对吧？那我就给它五分。呃，其他模型没有写我的信件，所以我们就跳过它。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Por 
+<p>lo</p>
+<p>tanto,</p>
+<p>De</p>
+<p>nuevo,</p>
+<p>así</p>
+<p>es</p>
+<p>como</p>
+<p>lo</p>
+<p>hice</p>
+<p>Estoy</p>
+<p>realizando</p>
+<p>una</p>
+<p>evaluación.</p>
+<p>I</p>
+<p>Solo</p>
+<p>te</p>
+<p>estoy</p>
+<p>dando</p>
+<p>una</p>
+<p>tarea.</p>
+<p>Lo</p>
+<p>miro.</p>
+<p>I</p>
+<p>Lo</p>
+<p>califico</p>
+<p>como</p>
+<p>si</p>
+<p>Soy</p>
+<p>el</p>
+<p>destinatario</p>
+<p>de</p>
+<p>esto.</p>
+<p>la</p>
+<p>tarea</p>
+<p>que</p>
+<p>es</p>
+<p>lo</p>
+<p>habitual,</p>
+<p>y</p>
+<p>luego</p>
+<p>Lo</p>
+<p>estoy</p>
+<p>clasificando.</p>
+<p>Eh,</p>
+<p>y</p>
+<p>Así</p>
+<p>fue...</p>
+<p>creo,</p>
+<p>Esta</p>
+<p>es</p>
+<p>Luna,</p>
+<p>porque</p>
+<p>yo</p>
+<p>solo</p>
+<p>dicho</p>
+<p>usa</p>
+<p>Luna</p>
+<p>para</p>
+<p>escribir</p>
+<p>cartas.</p>
+<p>Veamos</p>
+<p>cómo</p>
+<p>está.</p>
+<p>Lo</p>
+<p>logré.</p>
+<p>Parece</p>
+<p>Ella</p>
+<p>obedeció</p>
+<p>Mis</p>
+<p>reglas,</p>
+<p>¿verdad?</p>
+<p>Entonces</p>
+<p>Se</p>
+<p>lo</p>
+<p>daré.</p>
+<p>cinco.</p>
+<p>Eh,</p>
+<p>otros</p>
+<p>modelos</p>
+<p>mis</p>
+<p>cartas</p>
+<p>no</p>
+<p>son</p>
+<p>escribió,</p>
+<p>así</p>
+<p>que</p>
+<p>lo</p>
+<p>hacemos</p>
+<p>Saltémonos</p>
+<p>eso.</p>
+</details>
+<h3 id="前端与界面任务对比" data-reading-heading="">前端与界面任务对比</h3>
+<p>好了。我们转到界面模型。在这里，我认为我们可以认出 Claude，因为据我所知它全是橙色的。好的。这是一个非常好的例子。我做了 1、2、3，根据这里大约 10 个不同的模型评估，在界面方面对它们进行比较。呃，是的。编辑文章。我正在搭建一个暗室技术主题、一个事件管理平台。是的，有点像复杂的文档管理系统。嗯，啊，然后我制作一个 B2B 仪表板更新、一个植物应用程序、呃，一个日志平台，作为开发者工具，这对于后台任务来说挺有意思的。然后我做了一些线框图。我可以非常快地批准。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+DE 
+<p>ACUERDO.</p>
+<p>Pasemos</p>
+<p>a</p>
+<p>modelos</p>
+<p>de</p>
+<p>interfaz.</p>
+<p>Aquí</p>
+<p>aquí,</p>
+<p>creo</p>
+<p>que</p>
+<p>nosotros</p>
+<p>podemos</p>
+<p>decir</p>
+<p>Claude,</p>
+<p>Lo</p>
+<p>que</p>
+<p>sé</p>
+<p>es</p>
+<p>todo.</p>
+<p>naranja.</p>
+<p>Bien.</p>
+<p>Esto</p>
+<p>es</p>
+<p>muy</p>
+<p>bueno.</p>
+<p>ejemplo.</p>
+<p>Hago</p>
+<p>1,</p>
+<p>2,</p>
+<p>3</p>
+<p>con</p>
+<p>aproximadamente</p>
+<p>10</p>
+<p>diferentes</p>
+<p>Según</p>
+<p>las</p>
+<p>estimaciones</p>
+<p>del</p>
+<p>modelo</p>
+<p>aquí,</p>
+<p>comparándolos</p>
+<p>en</p>
+<p>Interfaz.</p>
+<p>Eh,</p>
+<p>sí.</p>
+<p>Artículo</p>
+<p>editorial.</p>
+<p>I</p>
+<p>Estoy</p>
+<p>montando</p>
+<p>un</p>
+<p>cuarto</p>
+<p>oscuro</p>
+<p>técnico.</p>
+<p>tema,</p>
+<p>plataforma</p>
+<p>para</p>
+<p>gestión</p>
+<p>incidentes.</p>
+<p>sí</p>
+<p>algo</p>
+<p>como</p>
+<p>sistema</p>
+<p>complejo</p>
+<p>gestión</p>
+<p>documentos.</p>
+<p>Hmm,</p>
+<p>ah</p>
+<p>Luego</p>
+<p>creo</p>
+<p>un</p>
+<p>panel</p>
+<p>B2B.</p>
+<p>actualizaciones,</p>
+<p>aplicación</p>
+<p>para</p>
+<p>plantas,</p>
+<p>eh,</p>
+<p>plataforma</p>
+<p>para</p>
+<p>registro,</p>
+<p>como</p>
+<p>herramienta</p>
+<p>desarrollador,</p>
+<p>lo</p>
+<p>cual</p>
+<p>es</p>
+<p>suficiente</p>
+<p>interesante</p>
+<p>para</p>
+<p>el</p>
+<p>trasfondo</p>
+<p>tareas.</p>
+<p>Y</p>
+<p>entonces</p>
+<p>yo</p>
+<p>Hago</p>
+<p>algunos</p>
+<p>wireframes.</p>
+<p>Soy</p>
+<p>yo.</p>
+<p>Puedo</p>
+<p>aprobar.</p>
+<p>rapidísimo.</p>
+</details>
+<p>呃，这个模型甚至什么都没生成，所以我给它打一分。模型 B。并且，好的。我们来比较一下。我们非常仔细快速地比较它们，看看我是怎么想的。呃，我讨厌……我讨厌某些东西，我讨厌它们全部。我感觉自己讨厌所有这些，除了这个设计，我不喜欢。所以我会给那个……哪个我可能最喜欢？模型 C 给三分，E 给两分。噢。噢。噢。噢。我给 E 打两分，B 也是某种两分。我认为这个留白非常奇怪。呃，看起来正常，但并不出色。这一个，又是模型 B，实际上跑不起来。所以我要给它打一分，并说明它不能工作。它看起来像 Astra E。嗯，从某种意义上说，它还不错，并且在某些方面，这类文本非常类似于 Astra。我会给它三分，因为我能认出这个模型。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Eh, 
+<p>este</p>
+<p>modelo</p>
+<p>incluso</p>
+<p>no</p>
+<p>se</p>
+<p>generó</p>
+<p>nada,</p>
+<p>así</p>
+<p>que</p>
+<p>yo</p>
+<p>Le</p>
+<p>daré</p>
+<p>uno.</p>
+<p>Modelo</p>
+<p>B.</p>
+<p>Y,</p>
+<p>de</p>
+<p>acuerdo.</p>
+<p>Comparemos.</p>
+<p>Vamos</p>
+<p>a</p>
+<p>compararlos</p>
+<p>muy</p>
+<p>de</p>
+<p>cerca.</p>
+<p>rápido</p>
+<p>y</p>
+<p>veremos</p>
+<p>qué</p>
+<p>pasa</p>
+<p>Creo.</p>
+<p>Eh,</p>
+<p>yo</p>
+<p>Odio...</p>
+<p>odio</p>
+<p>algo</p>
+<p>Los</p>
+<p>odio</p>
+<p>a</p>
+<p>todos.</p>
+<p>I</p>
+<p>como</p>
+<p>si</p>
+<p>los</p>
+<p>odiara</p>
+<p>todos,</p>
+<p>excepto</p>
+<p>este</p>
+<p>diseño</p>
+<p>No</p>
+<p>me</p>
+<p>gusta.</p>
+<p>así</p>
+<p>que</p>
+<p>lo</p>
+<p>plantearé</p>
+<p>a</p>
+<p>ese,</p>
+<p>¿Cuál</p>
+<p>me</p>
+<p>gusta?</p>
+<p>probablemente</p>
+<p>el</p>
+<p>más</p>
+<p>modelos</p>
+<p>C,</p>
+<p>tres</p>
+<p>y</p>
+<p>E</p>
+<p>Te</p>
+<p>daré</p>
+<p>un</p>
+<p>dos.</p>
+<p>Oh.</p>
+<p>Oh.</p>
+<p>Oh.</p>
+<p>Oh.</p>
+<p>Pondré</p>
+<p>E</p>
+<p>un</p>
+<p>dos,</p>
+<p>y</p>
+<p>B</p>
+<p>también</p>
+<p>es</p>
+<p>algún</p>
+<p>tipo</p>
+<p>dos.</p>
+<p>Creo</p>
+<p>que</p>
+<p>este</p>
+<p>espacio</p>
+<p>vacío</p>
+<p>Muy</p>
+<p>extraño.</p>
+<p>Ejem,</p>
+<p>parece</p>
+<p>normal,</p>
+<p>pero</p>
+<p>no</p>
+<p>genial.</p>
+<p>Éste,</p>
+<p>Nuevamente,</p>
+<p>modelo</p>
+<p>B,</p>
+<p>En</p>
+<p>realidad</p>
+<p>no</p>
+<p>funciona.</p>
+<p>Así</p>
+<p>que</p>
+<p>se</p>
+<p>lo</p>
+<p>daré.</p>
+<p>unidad</p>
+<p>y</p>
+<p>diré</p>
+<p>que</p>
+<p>No</p>
+<p>funciona.</p>
+<p>Él</p>
+<p>parece</p>
+<p>un</p>
+<p>Astra</p>
+<p>E.</p>
+<p>Hmm,</p>
+<p>En</p>
+<p>cierto</p>
+<p>sentido,</p>
+<p>lo</p>
+<p>es.</p>
+<p>no</p>
+<p>está</p>
+<p>mal,</p>
+<p>y</p>
+<p>en</p>
+<p>ciertos</p>
+<p>aspectos</p>
+<p>de</p>
+<p>este</p>
+<p>tipo</p>
+<p>El</p>
+<p>texto</p>
+<p>es</p>
+<p>muy</p>
+<p>similar</p>
+<p>a</p>
+<p>Astra.</p>
+<p>Se</p>
+<p>lo</p>
+<p>daré.</p>
+<p>tres</p>
+<p>porque</p>
+<p>puedo</p>
+<p>reconocer</p>
+<p>el</p>
+<p>modelo.</p>
+</details>
+<p>呃，我注意到的一件事，特别是在 Claude 模型上——我怀疑是它们——这就是当你给它们非常难的任务时会发生的情况：它们把它做得太饱和、太复杂且太详尽。适合做后端代码。我认为这对于原型设计来说很困难，因为我很难理解它到底是什么样，或者它必须做什么。因此，看到我认为这实际上是最好的选项也很有趣。它更容易阅读，并且遵循了正确的路径，帮助人们对事件进行分类。所以我觉得当你在尝试建立评估时，这真的很有趣。有时候，如果你要求非常详细的形式，它能出色地完成工作。就像这个选项，它相当详细。所有这些都能用。但我不知道这里到底发生了什么。感觉非常难以理解这么大量的内容。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Ejem,
+<p>una</p>
+<p>cosa</p>
+<p>que</p>
+<p>yo</p>
+<p>notado,</p>
+<p>en</p>
+<p>particular,</p>
+<p>con</p>
+<p>Claude</p>
+<p>modela,</p>
+<p>que</p>
+<p>yo</p>
+<p>Sospecho</p>
+<p>que</p>
+<p>son</p>
+<p>ellos.</p>
+<p>—esto</p>
+<p>es</p>
+<p>lo</p>
+<p>que</p>
+<p>sucede</p>
+<p>cuando</p>
+<p>das</p>
+<p>algo</p>
+<p>muy</p>
+<p>difícil</p>
+<p>para</p>
+<p>ellos,</p>
+<p>Lo</p>
+<p>hacen</p>
+<p>demasiado</p>
+<p>saturado,</p>
+<p>complejo</p>
+<p>y</p>
+<p>muy</p>
+<p>detallado.</p>
+<p>Bueno</p>
+<p>para</p>
+<p>código</p>
+<p>de</p>
+<p>backend.</p>
+<p>Creo</p>
+<p>es</p>
+<p>difícil</p>
+<p>para</p>
+<p>prototipado,</p>
+<p>porque</p>
+<p>Me</p>
+<p>resulta</p>
+<p>difícil</p>
+<p>de</p>
+<p>entender,</p>
+<p>¿Cómo</p>
+<p>es</p>
+<p>realmente?</p>
+<p>o</p>
+<p>lo</p>
+<p>que</p>
+<p>tiene</p>
+<p>hacer.</p>
+<p>Y</p>
+<p>por</p>
+<p>lo</p>
+<p>tanto</p>
+<p>también</p>
+<p>Es</p>
+<p>interesante</p>
+<p>ver</p>
+<p>que</p>
+<p>yo</p>
+<p>En</p>
+<p>realidad</p>
+<p>creo</p>
+<p>que</p>
+<p>esto</p>
+<p>La</p>
+<p>mejor</p>
+<p>opción.</p>
+<p>Él</p>
+<p>más</p>
+<p>fácil</p>
+<p>de</p>
+<p>leer</p>
+<p>y</p>
+<p>él</p>
+<p>sigue</p>
+<p>el</p>
+<p>camino</p>
+<p>correcto</p>
+<p>y</p>
+<p>ayuda</p>
+<p>a</p>
+<p>las</p>
+<p>personas</p>
+<p>clasificar</p>
+<p>incidentes.</p>
+<p>Así</p>
+<p>que</p>
+<p>yo</p>
+<p>Creo</p>
+<p>que</p>
+<p>cuando</p>
+<p>tú</p>
+<p>tratando</p>
+<p>de</p>
+<p>crear</p>
+<p>evaluación,</p>
+<p>realmente</p>
+<p>lo</p>
+<p>es</p>
+<p>interesante.</p>
+<p>A</p>
+<p>veces,</p>
+<p>si</p>
+<p>tú</p>
+<p>estás</p>
+<p>pidiendo</p>
+<p>un</p>
+<p>muy</p>
+<p>forma</p>
+<p>detallada,</p>
+<p>realiza</p>
+<p>un</p>
+<p>trabajo</p>
+<p>maravilloso</p>
+<p>trabajar.</p>
+<p>Como</p>
+<p>este</p>
+<p>opción,</p>
+<p>es</p>
+<p>bastante</p>
+<p>detallado.</p>
+<p>Todo</p>
+<p>esto</p>
+<p>obras.</p>
+<p>Pero</p>
+<p>no</p>
+<p>lo</p>
+<p>sé,</p>
+<p>¿Qué</p>
+<p>está</p>
+<p>pasando</p>
+<p>aquí?</p>
+<p>Como,</p>
+<p>muy</p>
+<p>difícil.</p>
+<p>para</p>
+<p>entender</p>
+<p>tal</p>
+<p>cantidad</p>
+<p>de</p>
+<p>contenido.</p>
+</details>
+<p>呃，然后，再次强调，是的，校准你的基准很重要。我认为对我来说最大的问题在于，这是一个用于集装箱运输规划的折叠平台，因为这一切看起来完全不可理喻。呃，所以对我来说很难讲哪个选项更好。其实我觉得这一个虽然有许多不准确之处，比如在左边缘，但它更容易阅读。所以我要给它打四分。我会说它是最容易阅读的。嗯，但这些选项……我会说，这个也许是第二容易阅读的，所以我给它三分。嗯，这一个大概运行得很好，并且包含了信息，但根本没法用。呃，所以我打个两分，并给出同样的模型评价。这个选项干脆是疯了。我甚至不知道该拿它怎么办。好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Eh, 
+<p>y</p>
+<p>entonces,</p>
+<p>de</p>
+<p>nuevo</p>
+<p>Sí,</p>
+<p>es</p>
+<p>importante</p>
+<p>calibra</p>
+<p>tu</p>
+<p>puntos</p>
+<p>de</p>
+<p>referencia.</p>
+<p>Creo</p>
+<p>el</p>
+<p>mayor</p>
+<p>problema</p>
+<p>en</p>
+<p>yo</p>
+<p>con</p>
+<p>esto,</p>
+<p>¿qué</p>
+<p>es?</p>
+<p>una</p>
+<p>plataforma</p>
+<p>plegable</p>
+<p>para</p>
+<p>la</p>
+<p>planificación</p>
+<p>recipiente</p>
+<p>transporte.</p>
+<p>Porque</p>
+<p>todo</p>
+<p>esto</p>
+<p>parece</p>
+<p>un</p>
+<p>completo</p>
+<p>locura.</p>
+<p>Eh,</p>
+<p>y</p>
+<p>por</p>
+<p>eso</p>
+<p>Me</p>
+<p>resulta</p>
+<p>muy</p>
+<p>difícil.</p>
+<p>Dime</p>
+<p>qué</p>
+<p>opción</p>
+<p>mejor.</p>
+<p>De</p>
+<p>hecho</p>
+<p>Creo</p>
+<p>que</p>
+<p>este,</p>
+<p>aunque</p>
+<p>él</p>
+<p>tiene</p>
+<p>mucho</p>
+<p>inexactitudes,</p>
+<p>como</p>
+<p>por</p>
+<p>ejemplo</p>
+<p>en</p>
+<p>borde</p>
+<p>izquierdo,</p>
+<p>hay</p>
+<p>más</p>
+<p>fácil</p>
+<p>para</p>
+<p>lectura.</p>
+<p>Entonces,</p>
+<p>yo</p>
+<p>Se</p>
+<p>lo</p>
+<p>daré.</p>
+<p>cuatro.</p>
+<p>Yo</p>
+<p>diré</p>
+<p>que</p>
+<p>es</p>
+<p>el</p>
+<p>más</p>
+<p>fácil</p>
+<p>para</p>
+<p>lectura.</p>
+<p>Hmm,</p>
+<p>pero</p>
+<p>estos</p>
+<p>opciones...yo</p>
+<p>diría,</p>
+<p>que</p>
+<p>este,</p>
+<p>tal</p>
+<p>vez,</p>
+<p>segundo</p>
+<p>más</p>
+<p>fácil</p>
+<p>leyendo,</p>
+<p>así</p>
+<p>que</p>
+<p>yo</p>
+<p>Le</p>
+<p>doy</p>
+<p>un</p>
+<p>tres.</p>
+<p>Hmm,</p>
+<p>este,</p>
+<p>probablemente</p>
+<p>funciona</p>
+<p>muy</p>
+<p>bien</p>
+<p>y</p>
+<p>tiene</p>
+<p>información,</p>
+<p>pero</p>
+<p>con</p>
+<p>Es</p>
+<p>simplemente</p>
+<p>imposible</p>
+<p>para</p>
+<p>ellos</p>
+<p>trabajar.</p>
+<p>Eh,</p>
+<p>entonces</p>
+<p>yo</p>
+<p>Pondré</p>
+<p>un</p>
+<p>dos</p>
+<p>y</p>
+<p>te</p>
+<p>lo</p>
+<p>daré.</p>
+<p>misma</p>
+<p>reseña</p>
+<p>Acerca</p>
+<p>del</p>
+<p>modelo.</p>
+<p>Este</p>
+<p>La</p>
+<p>opción</p>
+<p>es</p>
+<p>sencilla.</p>
+<p>loco.</p>
+<p>Yo</p>
+<p>incluso</p>
+<p>No</p>
+<p>sé</p>
+<p>qué</p>
+<p>le</p>
+<p>pasa.</p>
+<p>hacer.</p>
+<p>Bien.</p>
+</details>
+<p>因此，这是一次 B2B 更新，实际上接下来的这三个是我添加到基准测试中的两个新项。你也可以看到我测试了更广泛的模型范围。所以我认为那就是 Grok 和 Meta 作为模型潜入的地方。这些就是</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Por 
+<p>lo</p>
+<p>tanto,</p>
+<p>Esta</p>
+<p>es</p>
+<p>una</p>
+<p>actualización</p>
+<p>B2B,</p>
+<p>en</p>
+<p>realidad</p>
+<p>estos</p>
+<p>Los</p>
+<p>tres</p>
+<p>siguientes</p>
+<p>son</p>
+<p>dos</p>
+<p>nuevos</p>
+<p>que</p>
+<p>agregué</p>
+<p>a</p>
+<p>punto</p>
+<p>de</p>
+<p>referencia.</p>
+<p>Tú</p>
+<p>también</p>
+<p>puedes</p>
+<p>ver</p>
+<p>que</p>
+<p>yo</p>
+<p>protestaron</p>
+<p>más</p>
+<p>ampliamente</p>
+<p>gama</p>
+<p>de</p>
+<p>modelos.</p>
+<p>Así</p>
+<p>que</p>
+<p>yo</p>
+<p>Creo</p>
+<p>que</p>
+<p>ahí</p>
+<p>es</p>
+<p>donde</p>
+<p>está</p>
+<p>Grok.</p>
+<p>y</p>
+<p>Meta</p>
+<p>se</p>
+<p>colará</p>
+<p>como</p>
+<p>modelos.</p>
+<p>Estos</p>
+<p>son</p>
+<p>los</p>
+<p>que</p>
+</details>
+<!-- chunk 3/5 -->
+<p>我有，我可能也会去评估。我会想念线框图的。但这基本上是在仪表板更新中，查看当前的 SaaS 续费收入情况。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+tengo,
+<p>Probablemente</p>
+<p>lo</p>
+<p>haré.</p>
+<p>evaluar.</p>
+<p>Te</p>
+<p>echaré</p>
+<p>de</p>
+<p>menos.</p>
+<p>wireframes.</p>
+<p>Pero</p>
+<p>esto</p>
+<p>está</p>
+<p>en</p>
+<p>básicamente</p>
+<p>panel</p>
+<p>actualizaciones</p>
+<p>a</p>
+<p>ver</p>
+<p>qué</p>
+<p>ingresos</p>
+<p>de</p>
+<p>SaaS</p>
+<p>en</p>
+<p>este</p>
+<p>momento</p>
+<p>renovación.</p>
+</details>
+<p>好吧，对于定向的评估标准，我给出了很多具体的要求。这里有更多单次提示（one-shot）风格的开放式通用查询。那么，你真的能借此看出模型做了什么，以及什么是提示词吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Bueno, 
+<p>para</p>
+<p>dirigido</p>
+<p>criterios</p>
+<p>de</p>
+<p>evaluación</p>
+<p>Di</p>
+<p>mucho</p>
+<p>requisitos</p>
+<p>específicos.</p>
+<p>Había</p>
+<p>más</p>
+<p>abiertos</p>
+<p>consultas</p>
+<p>generales</p>
+<p>al</p>
+<p>estilo</p>
+<p>de</p>
+<p>una</p>
+<p>sola</p>
+<p>toma.</p>
+<p>Entonces</p>
+<p>¿De</p>
+<p>verdad</p>
+<p>puedes?</p>
+<p>para</p>
+<p>ver</p>
+<p>qué</p>
+<p>hace</p>
+<p>modelo,</p>
+<p>y</p>
+<p>qué</p>
+<p>es</p>
+<p>una</p>
+<p>solicitud.</p>
+</details>
+<p>我会快速过一下这些。嗯，好吧，这个相当不错，但这里的可用性一般般。我不喜欢空状态。我觉得这通常是……我会给这个选项打个“还行”。我觉得差不多在两分左右。之后会揭晓。它并不丑，但相当简陋。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Pasaré 
+<p>estos</p>
+<p>mismos</p>
+<p>rápidamente.</p>
+<p>Eh,</p>
+<p>bueno,</p>
+<p>esto</p>
+<p>bastante</p>
+<p>bueno,</p>
+<p>pero</p>
+<p>funcionalidad</p>
+<p>aquí</p>
+<p>más</p>
+<p>o</p>
+<p>menos.</p>
+<p>No</p>
+<p>como</p>
+<p>vacío</p>
+<p>estado.</p>
+<p>Creo</p>
+<p>que</p>
+<p>esto</p>
+<p>es</p>
+<p>normalmente.</p>
+<p>Yo</p>
+<p>entregaré</p>
+<p>esta</p>
+<p>opción</p>
+<p>"</p>
+<p>"Está</p>
+<p>bien."</p>
+<p>Creo</p>
+<p>que</p>
+<p>es</p>
+<p>en</p>
+<p>algún</p>
+<p>lugar</p>
+<p>un</p>
+<p>dos.</p>
+<p>Saldrá</p>
+<p>a</p>
+<p>la</p>
+<p>luz.</p>
+<p>Él</p>
+<p>no</p>
+<p>feo,</p>
+<p>pero</p>
+<p>bastante</p>
+<p>primitivo.</p>
+</details>
+<p>这是我认为应该有的样子，非常漂亮。我猜是 Claude。走着瞧吧。看起来非常好。挺好，使用了标签。非常易读，没有任何奇怪的空状态。这挺好的。很好，这里有表情符号。有用的表情符号。而且看起来挺漂亮……肥皂。这里有一点蓝紫色，但这有什么办法呢？我打算给这家伙打四分。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Esto 
+<p>es</p>
+<p>lo</p>
+<p>que</p>
+<p>creo</p>
+<p>que</p>
+<p>debería</p>
+<p>ser</p>
+<p>Muy</p>
+<p>guapo.</p>
+<p>Supongo</p>
+<p>que</p>
+<p>es</p>
+<p>Claude.</p>
+<p>Ya</p>
+<p>veremos.</p>
+<p>Parece</p>
+<p>que</p>
+<p>Muy</p>
+<p>bueno.</p>
+<p>Bien</p>
+<p>usando</p>
+<p>bandera.</p>
+<p>Muy</p>
+<p>fácil</p>
+<p>legible,</p>
+<p>ninguno</p>
+<p>extraño</p>
+<p>vacío</p>
+<p>estados.</p>
+<p>Esto</p>
+<p>es</p>
+<p>agradable.</p>
+<p>Bien</p>
+<p>Aquí</p>
+<p>hay</p>
+<p>emojis.</p>
+<p>Él</p>
+<p>Emojis</p>
+<p>útiles.</p>
+<p>Y</p>
+<p>se</p>
+<p>ven</p>
+<p>bonitas</p>
+<p>jabón.</p>
+<p>Aquí</p>
+<p>hay</p>
+<p>un</p>
+<p>poco.</p>
+<p>azul</p>
+<p>violeta,</p>
+<p>¿Pero</p>
+<p>qué</p>
+<p>harás?</p>
+<p>I</p>
+<p>Voy</p>
+<p>a</p>
+<p>poner</p>
+<p>esto</p>
+<p>El</p>
+<p>chico</p>
+<p>sacó</p>
+<p>un</p>
+<p>cuatro.</p>
+</details>
+<p>嗯，模型 C。这是谁？他是谁？我想……是 Grok 吗？也许是 Grok？我不知道。还有一件事，我们要做的——这些东西的盲测。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Ejem
+<p>,</p>
+<p>modelo</p>
+<p>C.</p>
+<p>¿Quién</p>
+<p>es</p>
+<p>este?</p>
+<p>OMS</p>
+<p>¿él?</p>
+<p>Supongo</p>
+<p>que</p>
+<p>creo</p>
+<p>¿Qué</p>
+<p>es</p>
+<p>Grok?</p>
+<p>¿Tal</p>
+<p>vez</p>
+<p>Grok?</p>
+<p>No</p>
+<p>sé.</p>
+<p>Una</p>
+<p>cosa</p>
+<p>más,</p>
+<p>lo</p>
+<p>cual</p>
+<p>haremos—esto</p>
+<p>Prueba</p>
+<p>a</p>
+<p>ciegas</p>
+<p>de</p>
+<p>estas</p>
+<p>cosas.</p>
+</details>
+<p>嗯，颜色更好一些，但不知怎么有点粗糙。我不喜欢它们背景的小圆圈之类这类东西。也有可能是 Alma，因为在我看来他们很喜欢把东西叫做“Relay”。我打算打两分。我不是很喜欢。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Hmm, 
+<p>los</p>
+<p>colores</p>
+<p>son</p>
+<p>mejores,</p>
+<p>pero</p>
+<p>de</p>
+<p>alguna</p>
+<p>manera</p>
+<p>descuidada.</p>
+<p>A</p>
+<p>mí</p>
+<p>No</p>
+<p>me</p>
+<p>gustan.</p>
+<p>pequeños</p>
+<p>círculos</p>
+<p>de</p>
+<p>fondo</p>
+<p>y</p>
+<p>cosas</p>
+<p>por</p>
+<p>el</p>
+<p>estilo.</p>
+<p>Él</p>
+<p>También</p>
+<p>podría</p>
+<p>ser</p>
+<p>Alma,</p>
+<p>porque</p>
+<p>Me</p>
+<p>parece</p>
+<p>que</p>
+<p>ellos</p>
+<p>aman</p>
+<p>Llamamos</p>
+<p>a</p>
+<p>las</p>
+<p>cosas</p>
+<p>"Relevo".</p>
+<p>I</p>
+<p>Voy</p>
+<p>a</p>
+<p>poner</p>
+<p>esto</p>
+<p>dos.</p>
+<p>No</p>
+<p>me</p>
+<p>gusta.</p>
+<p>Me</p>
+<p>gusta</p>
+<p>mucho.</p>
+</details>
+<p>嗯，模型 E。这个不差，没有前面那个好，但比最开始的好。这个……以一种稍微不同的方式。哦天哪，肯定是它，那绝对应该是 Alma。嗯，Alma 喜欢森林绿。去找一个能像 GPT Soul 爱森林或浅绿那样爱你的人吧。嗯，这通常……在我看来不太像。什么是适合 SaaS 产品的正确配色方案，对吧？这有点偏向鼠尾草绿的医用色调。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Ejem,
+<p>modelo</p>
+<p>E.</p>
+<p>Este</p>
+<p>no</p>
+<p>está</p>
+<p>mal,</p>
+<p>no</p>
+<p>tan</p>
+<p>bueno</p>
+<p>como</p>
+<p>anterior,</p>
+<p>pero</p>
+<p>mejor</p>
+<p>para</p>
+<p>el</p>
+<p>inicial.</p>
+<p>Esto...esto</p>
+<p>de</p>
+<p>una</p>
+<p>manera</p>
+<p>un</p>
+<p>poco</p>
+<p>diferente.</p>
+<p>Ay</p>
+<p>dios</p>
+<p>mío,</p>
+<p>Tiene</p>
+<p>que</p>
+<p>serlo,</p>
+<p>eso</p>
+<p>seguro.</p>
+<p>debería</p>
+<p>ser</p>
+<p>Alma.</p>
+<p>Hmm,</p>
+<p>Alma</p>
+<p>ama</p>
+<p>el</p>
+<p>bosque</p>
+<p>verde.</p>
+<p>Encontrar</p>
+<p>aquel</p>
+<p>que</p>
+<p>amará</p>
+<p>tú</p>
+<p>como</p>
+<p>GPT</p>
+<p>Soul</p>
+<p>te</p>
+<p>ama</p>
+<p>bosque</p>
+<p>o</p>
+<p>luz-</p>
+<p>verde.</p>
+<p>Hmm,</p>
+<p>esto</p>
+<p>es</p>
+<p>normalmente.</p>
+<p>No</p>
+<p>me</p>
+<p>parece.</p>
+<p>¿Qué</p>
+<p>es</p>
+<p>correcto?</p>
+<p>paleta</p>
+<p>de</p>
+<p>colores</p>
+<p>para</p>
+<p>un</p>
+<p>producto</p>
+<p>SaaS,</p>
+<p>¿verdad?</p>
+<p>Esto</p>
+<p>es</p>
+<p>un</p>
+<p>poco</p>
+<p>dona</p>
+<p>a</p>
+<p>la</p>
+<p>medicina</p>
+<p>color</p>
+<p>salvia.</p>
+</details>
+<p>呃，我打两分，我们更详细地分析一下这个。这个——不太好。太可怕了，可怕，可怕。字重太粗了。我觉得这不太行。我会给它一分。我真的很讨厌这个选项。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Eh, 
+<p>pondré</p>
+<p>un</p>
+<p>dos,</p>
+<p>y</p>
+<p>Analicemos</p>
+<p>esto</p>
+<p>con</p>
+<p>más</p>
+<p>detalle.</p>
+<p>Este</p>
+<p>—No</p>
+<p>mucho.</p>
+<p>Horror,</p>
+<p>horror,</p>
+<p>horror.</p>
+<p>Peso</p>
+<p>del</p>
+<p>texto</p>
+<p>demasiado</p>
+<p>grande.</p>
+<p>No</p>
+<p>Creo</p>
+<p>que</p>
+<p>eso</p>
+<p>es</p>
+<p>todo.</p>
+<p>bien.</p>
+<p>Yo</p>
+<p>cumpliré.</p>
+<p>él</p>
+<p>una</p>
+<p>unidad.</p>
+<p>I</p>
+<p>Realmente</p>
+<p>lo</p>
+<p>odio.</p>
+<p>esta</p>
+<p>opción.</p>
+</details>
+<p>呃，这又是，可能是 OpenAI 的模型。老天，他们怎么这么喜欢绿色。嗯，又来了，不是那个，没有专门针对这个的设计系统。所以我就给它打两分。再次说明，这只是感觉上的常规检查。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Eh, 
+<p>y</p>
+<p>esto</p>
+<p>De</p>
+<p>nuevo,</p>
+<p>probablemente</p>
+<p>un</p>
+<p>modelo</p>
+<p>OpenAI.</p>
+<p>Dios,</p>
+<p>¿cómo</p>
+<p>están?</p>
+<p>Les</p>
+<p>gusta</p>
+<p>el</p>
+<p>verde.</p>
+<p>Ejem,</p>
+<p>otra</p>
+<p>vez,</p>
+<p>no</p>
+<p>esa,</p>
+<p>no</p>
+<p>y,</p>
+<p>eh,</p>
+<p>diseñador</p>
+<p>sistema</p>
+<p>para</p>
+<p>esto.</p>
+<p>Así</p>
+<p>que</p>
+<p>se</p>
+<p>lo</p>
+<p>daré.</p>
+<p>dos.</p>
+<p>De</p>
+<p>nuevo,</p>
+<p>es</p>
+<p>regular</p>
+<p>comprobar</p>
+<p>en</p>
+<p>sentimiento.</p>
+</details>
+<p>好吧，就是这样，他们到底都在搞什么，全翻车了。呃，他们在消费端领域表现都非常差。在消费端领域全都非常差。他们所有人不知怎的都让人想起……你还记得 Claude 的 Artifacts 刚出现的时候吗？大家都做这种每日简报，而且它们看起来都一个样，全都是橙色的？嗯，所以我对他们这些一个都不喜欢，除了一款。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Vale, 
+<p>eso</p>
+<p>es</p>
+<p>todo,</p>
+<p>¿En</p>
+<p>qué</p>
+<p>andan</p>
+<p>todos?</p>
+<p>fallido.</p>
+<p>Eh,</p>
+<p>ellos</p>
+<p>Todos</p>
+<p>son</p>
+<p>muy</p>
+<p>malos</p>
+<p>en</p>
+<p>segmento</p>
+<p>de</p>
+<p>consumidores.</p>
+<p>Todos</p>
+<p>son</p>
+<p>muy</p>
+<p>malos.</p>
+<p>en</p>
+<p>el</p>
+<p>consumidor</p>
+<p>segmento.</p>
+<p>Todos</p>
+<p>ellos</p>
+<p>de</p>
+<p>alguna</p>
+<p>manera</p>
+<p>recuerda</p>
+<p>a...</p>
+<p>¿Te</p>
+<p>acuerdas</p>
+<p>de</p>
+<p>cuando?</p>
+<p>Aparecieron</p>
+<p>artefactos</p>
+<p>Claude,</p>
+<p>y</p>
+<p>todos</p>
+<p>hicieron</p>
+<p>esto</p>
+<p>breve</p>
+<p>diario</p>
+<p>informes,</p>
+<p>y</p>
+<p>todos</p>
+<p>ellos</p>
+<p>son</p>
+<p>parecían</p>
+<p>iguales,</p>
+<p>solo</p>
+<p>eran</p>
+<p>¿naranja?</p>
+<p>Ejem,</p>
+<p>así</p>
+<p>que</p>
+<p>no</p>
+<p>tengo</p>
+<p>ninguno</p>
+<p>de</p>
+<p>ellos</p>
+<p>No</p>
+<p>me</p>
+<p>gustó,</p>
+<p>excepto</p>
+<p>uno.</p>
+</details>
+<p>那么，这个——纯粹是垃圾。我就是觉得它不行。呃，这个……不。这些是我喜欢的东西。我们测试了 SVG。我很高兴这些模型在生成 SVG 方面变得最强了。如果你看模型 B 和模型 H，它们做了微型 SVG 插图。在模型 H 中显然做得好得多。这是典型的 Claude 式“Hack”，比如背景里的光圈。所以我会给它加上 SVG 加分。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Entonces, 
+<p>este—</p>
+<p>Simplemente</p>
+<p>basura.</p>
+<p>I</p>
+<p>Simplemente</p>
+<p>no</p>
+<p>lo</p>
+<p>creo.</p>
+<p>Él</p>
+<p>es</p>
+<p>bueno.</p>
+<p>Eh,</p>
+<p>este...</p>
+<p>No.</p>
+<p>Estas</p>
+<p>son</p>
+<p>las</p>
+<p>cosas</p>
+<p>que</p>
+<p>yo</p>
+<p>como.</p>
+<p>Nosotros</p>
+<p>SVG</p>
+<p>probado.</p>
+<p>A</p>
+<p>mí</p>
+<p>Me</p>
+<p>gusta</p>
+<p>que</p>
+<p>estos</p>
+<p>modelos</p>
+<p>se</p>
+<p>convierten</p>
+<p>lo</p>
+<p>mejor</p>
+<p>en</p>
+<p>creación</p>
+<p>SVG.</p>
+<p>Si</p>
+<p>miras</p>
+<p>modelo</p>
+<p>B</p>
+<p>y</p>
+<p>modelo</p>
+<p>H,</p>
+<p>lo</p>
+<p>hicieron</p>
+<p>SVG</p>
+<p>pequeño-</p>
+<p>ilustraciones.</p>
+<p>En</p>
+<p>el</p>
+<p>modelo</p>
+<p>H</p>
+<p>claramente</p>
+<p>son</p>
+<p>mucho</p>
+<p>mejor.</p>
+<p>Este</p>
+<p>es</p>
+<p>un</p>
+<p>clásico</p>
+<p>"</p>
+<p>"Hack"</p>
+<p>Claude,</p>
+<p>como</p>
+<p>círculo</p>
+<p>de</p>
+<p>luz</p>
+<p>en</p>
+<p>el</p>
+<p>fondo.</p>
+<p>Así</p>
+<p>que</p>
+<p>se</p>
+<p>lo</p>
+<p>daré.</p>
+<p>Bonificación</p>
+<p>SVG.</p>
+</details>
+<p>嗯，哦，这些也不差。但是，我的天哪！是谁、是谁在角落里加了那些圆圈？谁干的？这是谁做的？这是什么习惯？因为它们到处出现，我不是很喜欢。呃，所以我觉得它不算太好。我大概会给一分。我讨厌它。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Hmm, 
+<p>oh,</p>
+<p>estos</p>
+<p>Tampoco</p>
+<p>está</p>
+<p>mal.</p>
+<p>Pero</p>
+<p>¡Oh,</p>
+<p>Dios</p>
+<p>mío!</p>
+<p>¿Quién,</p>
+<p>quién</p>
+<p>añadió?</p>
+<p>¿Esos</p>
+<p>círculos</p>
+<p>en</p>
+<p>la</p>
+<p>esquina?</p>
+<p>OMS</p>
+<p>¿Hiciste</p>
+<p>eso?</p>
+<p>¿Quién</p>
+<p>es?</p>
+<p>¿hizo?</p>
+<p>¿Qué</p>
+<p>es</p>
+<p>esto?</p>
+<p>¿hábito?</p>
+<p>Porque</p>
+<p>ellos</p>
+<p>aparecen</p>
+<p>por</p>
+<p>todas</p>
+<p>partes</p>
+<p>y</p>
+<p>No</p>
+<p>me</p>
+<p>gusta</p>
+<p>mucho.</p>
+<p>Me</p>
+<p>gusta.</p>
+<p>Eh,</p>
+<p>entonces</p>
+<p>yo</p>
+<p>No</p>
+<p>creo</p>
+<p>que</p>
+<p>sea</p>
+<p>genial.</p>
+<p>Probablemente</p>
+<p>lo</p>
+<p>pondré.</p>
+<p>unidad.</p>
+<p>Lo</p>
+<p>odio</p>
+<p>él.</p>
+</details>
+<p>好的，模型 E，垃圾。看看左边这些条纹。我打一分。我对这个产品太严格了。一分。Frond（“叶子”），挺好听的名字。这些植物相当可爱。我觉得它们比前面的好。我会给……我给它三分。我倒不……我并不讨厌它。不讨厌。嗯，至少这个背景是植物。哦，真贴心，它给植物起了名字。输入。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+De 
+<p>acuerdo,</p>
+<p>Modelo</p>
+<p>E,</p>
+<p>basura.</p>
+<p>Mirar</p>
+<p>en</p>
+<p>estas</p>
+<p>franjas</p>
+<p>de</p>
+<p>la</p>
+<p>izquierda.</p>
+<p>Pondré</p>
+<p>uno.</p>
+<p>I</p>
+<p>demasiado</p>
+<p>estrictos</p>
+<p>con</p>
+<p>esto</p>
+<p>producto.</p>
+<p>Uno.</p>
+<p>Fronda</p>
+<p>(«</p>
+<p>"Hoja"),</p>
+<p>un</p>
+<p>nombre</p>
+<p>bonito.</p>
+<p>Estas</p>
+<p>plantas</p>
+<p>son</p>
+<p>bastante</p>
+<p>millas.</p>
+<p>Creo</p>
+<p>que</p>
+<p>ellos</p>
+<p>Mejor</p>
+<p>que</p>
+<p>los</p>
+<p>anteriores.</p>
+<p>Le</p>
+<p>daré...</p>
+<p>Le</p>
+<p>doy</p>
+<p>un</p>
+<p>tres.</p>
+<p>No</p>
+<p>lo</p>
+<p>soy</p>
+<p>...No</p>
+<p>lo</p>
+<p>odio.</p>
+<p>No</p>
+<p>odio.</p>
+<p>Ejem,</p>
+<p>al</p>
+<p>menos</p>
+<p>este</p>
+<p>fondo</p>
+<p>es</p>
+<p>planta.</p>
+<p>Oh,</p>
+<p>qué</p>
+<p>dulce.</p>
+<p>Él</p>
+<p>da</p>
+<p>nombres</p>
+<p>a</p>
+<p>las</p>
+<p>plantas.</p>
+<p>EN.</p>
+</details>
+<p>哦，我非常喜欢。我太喜欢了。它给我带来了一丝喜悦，所以我很喜欢。我觉得这个是模型 H——我的最爱。看看这些插图。它们太可爱了，那么清晰，看起来令人赏心悦目，这个小东西形状很有意思，带阴影，浇水标记。非常可爱。在这里我的……这怎么说？这叫什么？Tender（“关爱”），肥皂。好的。我给五分。我非常喜欢它。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Oh. 
+<p>Me</p>
+<p>gusta</p>
+<p>mucho.</p>
+<p>Me</p>
+<p>gusta</p>
+<p>mucho.</p>
+<p>Él</p>
+<p>me</p>
+<p>causó</p>
+<p>una</p>
+<p>chispa</p>
+<p>de</p>
+<p>alegría,</p>
+<p>así</p>
+<p>que</p>
+<p>Me</p>
+<p>gusta.</p>
+<p>Y</p>
+<p>Creo</p>
+<p>que</p>
+<p>este</p>
+<p>es</p>
+<p>el</p>
+<p>modelo</p>
+<p>H.</p>
+<p>—mi</p>
+<p>favorito.</p>
+<p>Mira</p>
+<p>estos</p>
+<p>ilustraciones.</p>
+<p>Son</p>
+<p>así</p>
+<p>lindo,</p>
+<p>tan</p>
+<p>claro,</p>
+<p>se</p>
+<p>ven</p>
+<p>encantadores,</p>
+<p>Este</p>
+<p>pequeño</p>
+<p>es</p>
+<p>interesante</p>
+<p>forma,</p>
+<p>sombra,</p>
+<p>marca</p>
+<p>regado.</p>
+<p>Muy</p>
+<p>lindo.</p>
+<p>Aquí</p>
+<p>mi...</p>
+<p>¿cómo</p>
+<p>es</p>
+<p>esto?</p>
+<p>¿Cómo</p>
+<p>se</p>
+<p>llama?</p>
+<p>Tender</p>
+<p>("</p>
+<p>Cuidado"),</p>
+<p>jabón.</p>
+<p>De</p>
+<p>acuerdo.</p>
+<p>Le</p>
+<p>doy</p>
+<p>un</p>
+<p>cinco.</p>
+<p>Me</p>
+<p>gusta</p>
+<p>mucho.</p>
+<p>Me</p>
+<p>gusta.</p>
+</details>
+<h3 id="后端与开发者工具应用" data-reading-heading="">后端与开发者工具应用</h3>
+<p>好，这就是最后一个了。这是一个用于控制后台模型的应用程序。它看起来像个面向开发者的应用。我怀疑那些被称为“Relay”的，全都是 Opus 和其他模型——不。为什么他们总是想把它们叫做 Relay 呢？我好奇提示词里是不是写了这个。嗯，但这里是任务控制台，所以可能不是。好吧。它又太紧凑了。嗯，但几乎是过于紧凑了。用这个干活很吃力。我的意思是开发者工具，我们喜欢你们的工具，但我觉得它们算不上绝妙。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Bien, 
+<p>esto</p>
+<p>es</p>
+<p>todo.</p>
+<p>último.</p>
+<p>Esta</p>
+<p>es</p>
+<p>una</p>
+<p>aplicación</p>
+<p>para</p>
+<p>control</p>
+<p>modelos</p>
+<p>de</p>
+<p>fondo.</p>
+<p>Parece</p>
+<p>una</p>
+<p>aplicación</p>
+<p>para</p>
+<p>desarrolladores.</p>
+<p>Sospecho</p>
+<p>que</p>
+<p>aquellos</p>
+<p>que</p>
+<p>se</p>
+<p>llaman</p>
+<p>relés,</p>
+<p>—esto</p>
+<p>todos</p>
+<p>los</p>
+<p>modelos</p>
+<p>de</p>
+<p>opus</p>
+<p>y</p>
+<p>otros</p>
+<p>-No.</p>
+<p>¿Por</p>
+<p>qué</p>
+<p>siempre</p>
+<p>son</p>
+<p>así?</p>
+<p>quieren</p>
+<p>llamarlos</p>
+<p>¿relé?</p>
+<p>Me</p>
+<p>pregunto</p>
+<p>si</p>
+<p>esto</p>
+<p>está</p>
+<p>en</p>
+<p>indicaciones.</p>
+<p>Hmm,</p>
+<p>pero</p>
+<p>aquí</p>
+<p>está</p>
+<p>consola</p>
+<p>de</p>
+<p>tareas,</p>
+<p>entonces,</p>
+<p>Quizás</p>
+<p>no.</p>
+<p>Bueno.</p>
+<p>Él</p>
+<p>otra</p>
+<p>vez</p>
+<p>demasiado</p>
+<p>ajustado.</p>
+<p>Hmm,</p>
+<p>pero</p>
+<p>casi</p>
+<p>demasiado</p>
+<p>apretado.</p>
+<p>Duro</p>
+<p>Trabaja</p>
+<p>con</p>
+<p>esto.</p>
+<p>Tengo</p>
+<p>Me</p>
+<p>refiero</p>
+<p>a</p>
+<p>las</p>
+<p>herramientas</p>
+<p>desarrollador,</p>
+<p>nos</p>
+<p>encanta</p>
+<p>tus</p>
+<p>herramientas,</p>
+<p>pero</p>
+<p>No</p>
+<p>creo</p>
+<p>que</p>
+<p>lo</p>
+<p>sean.</p>
+<p>Son</p>
+<p>maravillosos.</p>
+</details>
+<p>看这个，这个好得多，更容易阅读，简单明了得多，也更整洁。我非常喜欢这一个。它不是完美的，我想还有其他的，呃，但它很得体。然后从这里开始，我们开始变得越来越好。然后它们变得更讨喜了。看看这个漂亮的渐变。嗯，看用的颜色多好看，非常干净。哦，但是它没怎么生成东西。所以我敢说，我虽然喜欢它，但我只给三分，因为它是未完成的。我写下“未完成”。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Aquí
+<p>Este</p>
+<p>es</p>
+<p>mucho</p>
+<p>mejor,</p>
+<p>más</p>
+<p>fácil</p>
+<p>de</p>
+<p>leer,</p>
+<p>mucho</p>
+<p>más</p>
+<p>simple</p>
+<p>y</p>
+<p>limpiador.</p>
+<p>Me</p>
+<p>gusta</p>
+<p>mucho.</p>
+<p>Me</p>
+<p>gusta</p>
+<p>este.</p>
+<p>Él</p>
+<p>No</p>
+<p>es</p>
+<p>lo</p>
+<p>ideal.</p>
+<p>Creo</p>
+<p>que</p>
+<p>sí.</p>
+<p>otros,</p>
+<p>eh,</p>
+<p>pero</p>
+<p>él</p>
+<p>decente.</p>
+<p>Y</p>
+<p>luego</p>
+<p>Aquí</p>
+<p>es</p>
+<p>donde</p>
+<p>comenzamos</p>
+<p>para</p>
+<p>ser</p>
+<p>cada</p>
+<p>vez</p>
+<p>mejor</p>
+<p>mejor.</p>
+<p>Entonces</p>
+<p>ellos</p>
+<p>volverse</p>
+<p>más</p>
+<p>agradable.</p>
+<p>Mira</p>
+<p>este</p>
+<p>Bonito</p>
+<p>degradado.</p>
+<p>Ejem,</p>
+<p>mira</p>
+<p>qué</p>
+<p>bonito</p>
+<p>colores</p>
+<p>utilizados,</p>
+<p>muy</p>
+<p>limpio.</p>
+<p>Oh,</p>
+<p>pero</p>
+<p>no</p>
+<p>creó</p>
+<p>mucho</p>
+<p>qué.</p>
+<p>Así</p>
+<p>que</p>
+<p>apuesto,</p>
+<p>Me</p>
+<p>gusta,</p>
+<p>pero</p>
+<p>Le</p>
+<p>doy</p>
+<p>un</p>
+<p>tres</p>
+<p>porque</p>
+<p>él</p>
+<p>estaba</p>
+<p>incompleto.</p>
+<p>Estoy</p>
+<p>escribiendo</p>
+<p>"</p>
+<p>incompleto".</p>
+</details>
+<p>现在来看模型 E，这个我很喜欢，因为看起来它像是在实时运行。太棒了。这个好多了，我给它打四分。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Y 
+<p>ahora</p>
+<p>Modelo</p>
+<p>E,</p>
+<p>este</p>
+<p>es</p>
+<p>para</p>
+<p>mí.</p>
+<p>Me</p>
+<p>gusta</p>
+<p>mucho,</p>
+<p>porque</p>
+<p>parece</p>
+<p>que</p>
+<p>ella</p>
+<p>funciona</p>
+<p>en</p>
+<p>la</p>
+<p>vida</p>
+<p>real</p>
+<p>tiempo.</p>
+<p>Eso</p>
+<p>es</p>
+<p>genial.</p>
+<p>Esto</p>
+<p>es</p>
+<p>mucho</p>
+<p>mejor,</p>
+<p>yo</p>
+<p>Le</p>
+<p>doy</p>
+<p>un</p>
+<p>cuatro.</p>
+</details>
+<p>模型 F，好的。这里采用的方式略有不同。我确实很喜欢这个，除了橙色。问题之一是，如果你全部看一遍，它们主要使用的是色彩搭配本身：只要你说“开发者工具”——然后一切就变暗了，但尽管变暗了，它看起来相当好看，从设计的角度来看也有些许不同。我会因为打破常规限制给你一点加分。但这一个做了同样的事，却做得很糟糕。我给它一分。这显然是个魔鬼。我很想知道模型 G 会是什么。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Modelo 
+<p>F,</p>
+<p>de</p>
+<p>acuerdo.</p>
+<p>Aquí</p>
+<p>Aquí</p>
+<p>se</p>
+<p>ha</p>
+<p>hecho</p>
+<p>algo</p>
+<p>de</p>
+<p>una</p>
+<p>manera</p>
+<p>un</p>
+<p>poco</p>
+<p>diferente.</p>
+<p>A</p>
+<p>mí</p>
+<p>realmente</p>
+<p>esto</p>
+<p>como,</p>
+<p>excepto</p>
+<p>naranja</p>
+<p>color.</p>
+<p>Uno</p>
+<p>de</p>
+<p>problemas,</p>
+<p>¿qué</p>
+<p>pasa</p>
+<p>si?</p>
+<p>míralos</p>
+<p>a</p>
+<p>todos</p>
+<p>,</p>
+<p>son</p>
+<p>principalmente</p>
+<p>usa</p>
+<p>ese</p>
+<p>la</p>
+<p>combinación</p>
+<p>de</p>
+<p>colores</p>
+<p>en</p>
+<p>sí:</p>
+<p>dices</p>
+<p>"herramientas"</p>
+<p>desarrollador"—y</p>
+<p>eso</p>
+<p>es</p>
+<p>todo</p>
+<p>Está</p>
+<p>oscureciendo,</p>
+<p>pero</p>
+<p>aún</p>
+<p>está</p>
+<p>oscureciendo.</p>
+<p>Se</p>
+<p>ve</p>
+<p>bastante</p>
+<p>lindo</p>
+<p>y</p>
+<p>de</p>
+<p>forma</p>
+<p>un</p>
+<p>poco</p>
+<p>diferente</p>
+<p>con</p>
+<p>perspectiva</p>
+<p>de</p>
+<p>diseño.</p>
+<p>I</p>
+<p>Te</p>
+<p>daré</p>
+<p>una</p>
+<p>pequeña</p>
+<p>bonificación.</p>
+<p>por</p>
+<p>ir</p>
+<p>más</p>
+<p>allá</p>
+<p>de</p>
+<p>los</p>
+<p>límites</p>
+<p>estándar.</p>
+<p>Pero</p>
+<p>este</p>
+<p>hizo</p>
+<p>lo</p>
+<p>mismo,</p>
+<p>pero</p>
+<p>terriblemente.</p>
+<p>Yo</p>
+<p>cumpliré.</p>
+<p>él</p>
+<p>una</p>
+<p>unidad.</p>
+<p>Esto</p>
+<p>es</p>
+<p>claramente</p>
+<p>demonio.</p>
+<p>Me</p>
+<p>gusta</p>
+<p>mucho.</p>
+<p>Me</p>
+<p>pregunto</p>
+<p>qué</p>
+<p>será.</p>
+<p>modelo</p>
+<p>G.</p>
+</details>
+<p>现在是模型 H，再次，可能和另外那个我喜欢的模型是一对。稍微有些不同，非常养眼。但是看看这个，它结合了深色和浅色主题，所以我实在不是很喜欢。我给它三分。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Y 
+<p>ahora</p>
+<p>modelo</p>
+<p>H,</p>
+<p>de</p>
+<p>nuevo,</p>
+<p>probablemente</p>
+<p>un</p>
+<p>par</p>
+<p>de</p>
+<p>ese</p>
+<p>otro</p>
+<p>modelo,</p>
+<p>¿Cuál</p>
+<p>me</p>
+<p>gusta?</p>
+<p>Un</p>
+<p>poco</p>
+<p>diferente,</p>
+<p>muy</p>
+<p>agradable</p>
+<p>a</p>
+<p>la</p>
+<p>vista.</p>
+<p>Pero</p>
+<p>mira</p>
+<p>esto</p>
+<p>.</p>
+<p>Combina</p>
+<p>oscuridad</p>
+<p>y</p>
+<p>luz</p>
+<p>del</p>
+<p>tema</p>
+<p>para</p>
+<p>que</p>
+<p>Realmente</p>
+<p>no</p>
+<p>me</p>
+<p>gusta.</p>
+<p>Me</p>
+<p>gusta.</p>
+<p>I</p>
+<p>Le</p>
+<p>doy</p>
+<p>un</p>
+<p>tres.</p>
+</details>
+<h3 id="后端任务与-agent-评估" data-reading-heading="">后端任务与 Agent 评估</h3>
+<p>好的。那么，我在后端做了什么？好吧，我给出了两项……呃，两项任务。第一项——审计现有代码。这是 PRD 聊天的代码。第二项——按照规范创建后端功能。我只想说它们都挺成功的。呃，我打算让 LLM 充当裁判来评估它们，因为这关乎代码的正确性等等。就这么办。他将攻读法学硕士以专攻法学。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+DE 
+<p>ACUERDO.</p>
+<p>Entonces,</p>
+<p>¿qué</p>
+<p>soy</p>
+<p>yo?</p>
+<p>¿Lo</p>
+<p>hiciste</p>
+<p>en</p>
+<p>el</p>
+<p>backend?</p>
+<p>Bien,</p>
+<p>Le</p>
+<p>di</p>
+<p>dos,</p>
+<p>eh,</p>
+<p>dos</p>
+<p>tarea.</p>
+<p>Primero-</p>
+<p>auditoría</p>
+<p>del</p>
+<p>código</p>
+<p>existente.</p>
+<p>Este</p>
+<p>es</p>
+<p>el</p>
+<p>código</p>
+<p>para</p>
+<p>el</p>
+<p>chat</p>
+<p>de</p>
+<p>PRD.</p>
+<p>Y</p>
+<p>segundo—creación</p>
+<p>funciones</p>
+<p>de</p>
+<p>backend</p>
+<p>de</p>
+<p>acuerdo</p>
+<p>a</p>
+<p>especificación.</p>
+<p>Yo</p>
+<p>diré</p>
+<p>solo</p>
+<p>que</p>
+<p>todos</p>
+<p>eran</p>
+<p>exitoso.</p>
+<p>Eh,</p>
+<p>yo</p>
+<p>Permitiré</p>
+<p>que</p>
+<p>LLM</p>
+<p>sea</p>
+<p>juez.</p>
+<p>evaluarlos</p>
+<p>porque</p>
+<p>Esto</p>
+<p>se</p>
+<p>aplica</p>
+<p>a</p>
+<p>corrección</p>
+<p>del</p>
+<p>código</p>
+<p>etc.</p>
+<p>Que</p>
+<p>así</p>
+<p>sea.</p>
+<p>Cursará</p>
+<p>un</p>
+<p>máster</p>
+<p>en</p>
+<p>Derecho</p>
+<p>para</p>
+<p>especializarse</p>
+<p>en</p>
+<p>jurisprudencia.</p>
+</details>
+<p>我要说的是，你可以从它们呈现信息的方式上看出区别。有些消息非常短，有些非常长且详细。非常有意思，光是看它们如何回答之间的区别就很清楚了。我明确更偏向于……你知道的，模型 A 或是模型 E，它们之中的一个，比起 F、G 和 H（要短得多）来说更易读。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Yo 
+<p>diré</p>
+<p>que</p>
+<p>puedes</p>
+<p>ver</p>
+<p>la</p>
+<p>diferencia</p>
+<p>en</p>
+<p>por</p>
+<p>cómo</p>
+<p>sirven</p>
+<p>información.</p>
+<p>Alguno</p>
+<p>El</p>
+<p>mensaje</p>
+<p>es</p>
+<p>muy</p>
+<p>corto,</p>
+<p>algunos</p>
+<p>muy</p>
+<p>largo</p>
+<p>y</p>
+<p>detallado.</p>
+<p>Muy</p>
+<p>interesante,</p>
+<p>simplemente</p>
+<p>ver</p>
+<p>la</p>
+<p>diferencia</p>
+<p>en</p>
+<p>eso</p>
+<p>¿Cómo</p>
+<p>están?</p>
+<p>responder.</p>
+<p>Lo</p>
+<p>tengo</p>
+<p>claro.</p>
+<p>Prefiero,</p>
+<p>ya</p>
+<p>sabes,</p>
+<p>modelo</p>
+<p>A</p>
+<p>o</p>
+<p>modelo</p>
+<p>E,</p>
+<p>uno</p>
+<p>de</p>
+<p>esos,</p>
+<p>que</p>
+<p>son</p>
+<p>más</p>
+<p>fáciles</p>
+<p>de</p>
+<p>leer,</p>
+<p>comparado</p>
+<p>con</p>
+<p>F,</p>
+<p>G</p>
+<p>y</p>
+<p>H,</p>
+<p>que</p>
+<p>son</p>
+<p>mucho</p>
+<p>más</p>
+<p>cortas.</p>
+</details>
+<p>呃，所以如果你考虑模型，比如用于撰写 PR 描述或技术规范，这就是你可以评估观察到的地方：你是否喜欢在同时提出要求时得到同样的结果？而这里我要评估的是——这是一个 Agent 的人设。所以，基本上我要求它回答五件事，呃，我只是在确认我是否喜欢与这个 Agent 交流。我已经要打一分了，每条、每条消息都有破折号。我不是很喜欢。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Eh, 
+<p>entonces</p>
+<p>si</p>
+<p>tú</p>
+<p>considerar</p>
+<p>modelos,</p>
+<p>por</p>
+<p>ejemplo,</p>
+<p>para</p>
+<p>Redacción</p>
+<p>de</p>
+<p>descripciones</p>
+<p>de</p>
+<p>relaciones</p>
+<p>públicas</p>
+<p>o</p>
+<p>técnico</p>
+<p>especificaciones,</p>
+<p>eso</p>
+<p>es</p>
+<p>lo</p>
+<p>que</p>
+<p>lo</p>
+<p>que</p>
+<p>se</p>
+<p>puede</p>
+<p>evaluar</p>
+<p>ver:</p>
+<p>si</p>
+<p>Te</p>
+<p>gusta</p>
+<p>mismo</p>
+<p>resultado</p>
+<p>al</p>
+<p>mismo</p>
+<p>tiempo</p>
+<p>¿pedido?</p>
+<p>Y</p>
+<p>aquí</p>
+<p>está.</p>
+<p>que</p>
+<p>yo</p>
+<p>evaluaré</p>
+<p>—esta</p>
+<p>es</p>
+<p>una</p>
+<p>personalidad</p>
+<p>agente.</p>
+<p>Entonces,</p>
+<p>en</p>
+<p>Básicamente,</p>
+<p>estoy</p>
+<p>preguntando</p>
+<p>para</p>
+<p>responderle</p>
+<p>cinco</p>
+<p>cosas,</p>
+<p>eh,</p>
+<p>y</p>
+<p>solo</p>
+<p>estoy</p>
+<p>comprobando</p>
+<p>si</p>
+<p>Me</p>
+<p>gusta.</p>
+<p>comunicarse</p>
+<p>con</p>
+<p>esto</p>
+<p>agente.</p>
+<p>yo</p>
+<p>ya</p>
+<p>Voy</p>
+<p>a</p>
+<p>poner</p>
+<p>esta</p>
+<p>unidad,</p>
+<p>cada</p>
+<p>una,</p>
+<p>cada</p>
+<p>mensaje</p>
+<p>tiene</p>
+<p>un</p>
+<p>guion.</p>
+<p>No</p>
+<p>me</p>
+<p>gusta.</p>
+<p>Me</p>
+<p>gusta.</p>
+</details>
+<p>我会继续看下去。这也完全是这样。你因仪表板而受到惩罚。这个不是所有消息都带轻触，呃，但随后对于客户来说，它有，所以我打算给它打两分。在这里我看不到，我只看到一个普通的仪表板。对于</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Seguiré 
+<p>adelante.</p>
+<p>Eso</p>
+<p>Exactamente</p>
+<p>con</p>
+<p>esto.</p>
+<p>Tú</p>
+<p>Estás</p>
+<p>siendo</p>
+<p>castigado</p>
+<p>detrás</p>
+<p>del</p>
+<p>tablero.</p>
+<p>Este</p>
+<p>no</p>
+<p>tiene</p>
+<p>todos</p>
+<p>los</p>
+<p>mensajes</p>
+<p>tener</p>
+<p>un</p>
+<p>toque,</p>
+<p>eh,</p>
+<p>pero</p>
+<p>entonces,</p>
+<p>que</p>
+<p>para</p>
+<p>los</p>
+<p>clientes,</p>
+<p>tiene,</p>
+<p>Así</p>
+<p>que</p>
+<p>se</p>
+<p>lo</p>
+<p>daré.</p>
+<p>dos.</p>
+<p>Aquí</p>
+<p>no</p>
+<p>veo,</p>
+<p>Solo</p>
+<p>veo</p>
+<p>una</p>
+<p>cosa.</p>
+<p>tablero</p>
+<p>normal.</p>
+<p>Por</p>
+</details>
+<!-- chunk 4/5 -->
+<p>因此，我们来读一下这个。嗯，这个我挺喜欢的。除了这是确切的Claude模型之外，因为它告诉我不能直接下载到生产环境。实际上，我们来看看其他模型是否允许。这里这个不让我“随意地”直接下载到生产环境。它们都不允许我以“约-霍-霍”的风格直接下载到生产环境。好吧，那我不会因为这个惩罚它。我给这个打四分，相当不错了。嗯，它运行了，但很简短，所以我不会对它评价过于严苛。它，我觉得可以像大多数一样。嗯，噢不，这个说它没有权限。这个在访问各种事物上遇到了很多问题。所以，有的是我这边坏了，有的是那一边坏了。因此，我会给它“错误”状态。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+lo tanto,
+<p>Leamos</p>
+<p>él. Mmm, esto me gusta.</p>
+<p>como, excepto</p>
+<p>que es exacto</p>
+<p>Claude modelo, porque ella</p>
+<p>me dice que no lo soy</p>
+<p>Puedo descargar</p>
+<p>directo a producción.</p>
+<p>En realidad, vamos a</p>
+<p>veamos si</p>
+<p>Otros lo permitirán. Aquí</p>
+<p>Este no me deja</p>
+<p>descargar directamente</p>
+<p>en la producción "al azar".</p>
+<p>Ninguno de ellos</p>
+<p>me permite</p>
+<p>descargar directamente</p>
+<p>en una producción al estilo "yo"</p>
+<p>-jo-jo". Bien, entonces yo</p>
+<p>No lo castigaré.</p>
+<p>para esto. Voy a poner esto</p>
+<p>cuatro, suficiente</p>
+<p>nada mal. Hmm, aquí está.</p>
+<p>carrera, pero brevemente,</p>
+<p>así que no lo haré</p>
+<p>para evaluarlo</p>
+<p>demasiado estricto. Él,</p>
+<p>Creo que sí.</p>
+<p>como</p>
+<p>mayoría. Um, oh no,</p>
+<p>Este dijo que no lo tenía.</p>
+<p>acceso. Este tenía</p>
+<p>muchos problemas con</p>
+<p>acceso a las cosas.</p>
+<p>Entonces, algo de mi parte</p>
+<p>roto, y algo de</p>
+<p>Tengo el costado roto.</p>
+<p>allá. Por lo tanto, pondré</p>
+<p>Tiene el estado "error".</p>
+</details>
+<p>来看看我拿到了什么。它会喜欢的。好的，那是非常有趣的分类。这是最老的智能体任务，实际上，我给了它一堆虚构的工单、客户评价，然后让它为我起草一份备忘录和消息。同样，你可以看到哪些模型，似乎是A、C和A、B，是的。A、B和E都给我写了很好的短消息。也就是说，它非常以人为本，不像C、F、G和H写了非常简短的东西。所以我很好奇，这些是我们能够区分的模型家族吗？嗯……然后你可以看到它为我写的备忘录。同样，这是包含86个步骤的调研结果。所以，我会让CMM作为裁判来处理。我快速浏览一下这些备忘录。团队没有透露价格。例如，这是一份协议分析，为什么这个客户……我不知道这是什么意思。好吧，我们来看看。这里有什么能解释这是什么意思的内容吗？噢，我已经会读了。它给了我三个主要问题和三个冲突。它读起来要容易得多。E模型也是同样的情况。我会让模型去检查，但我喜欢B和E模型。我给它们加点分，因为它们完成得很好。其他的我没有足够仔细地读，但如果我必须选出两个最好的，那就是它们了。我会让电脑去评估它在使用提示词时的应对表现。所以我让CMM当裁判来评判。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Veamos qué tengo.
+<p>Le gustará. DE ACUERDO,</p>
+<p>Eso fue muy interesante.</p>
+<p>clasificación. Fue</p>
+<p>agente más antiguo</p>
+<p>tarea, y, de hecho, yo</p>
+<p>le dio un montón</p>
+<p>boletos falsos,</p>
+<p>reseñas de clientes y</p>
+<p>luego preguntó</p>
+<p>redactar un memorándum y</p>
+<p>mensaje para</p>
+<p>a mí. De nuevo, tú</p>
+<p>puedes ver cuál</p>
+<p>Los modelos, al parecer, son A,</p>
+<p>C y A, B, sí. A, B y E, todos</p>
+<p>Escríbeme cosas bonitas</p>
+<p>mensajes cortos</p>
+<p>. Es decir, es muy</p>
+<p>centrado en</p>
+<p>una persona, a diferencia de</p>
+<p>de C, F, G y H, que</p>
+<p>escriben muy cortos</p>
+<p>cosas. Entonces tengo curiosidad,</p>
+<p>¿Son estas familias?</p>
+<p>modelos que nosotros</p>
+<p>podemos distinguir. Ejem</p>
+<p>y entonces puedes</p>
+<p>ver memorandos</p>
+<p>que escribió para</p>
+<p>a mí. Nuevamente, esto es</p>
+<p>Hubo resultados</p>
+<p>investigación con 86</p>
+<p>pasos. Entonces, yo</p>
+<p>Permitiré que el CMM, como juez,</p>
+<p>hazlo. Soy rápido.</p>
+<p>Revisaré estas notas.</p>
+<p>ojo. El equipo no es</p>
+<p>revela el precio.</p>
+<p>Por ejemplo, este es un análisis</p>
+<p>acuerdo, ¿por qué esto?</p>
+<p>cliente... no sé qué</p>
+<p>esto significa. Bien,</p>
+<p>Vamos a ver. ¿Hay alguno aquí?</p>
+<p>algo que lo explique</p>
+<p>¿Qué significa esto? Oh, ya soy yo.</p>
+<p>Sé leer. Él</p>
+<p>me da tres principales</p>
+<p>problemas y tres</p>
+<p>conflictos. Él</p>
+<p>mucho más fácil</p>
+<p>leer. Lo mismo ocurre con</p>
+<p>modelo E. Lo permitiré.</p>
+<p>modelos para comprobar,</p>
+<p>pero me gustan</p>
+<p>modelos B y E. Soy un poco</p>
+<p>Les daré puntos porque</p>
+<p>Lo hicieron bien.</p>
+<p>No he leído los demás.</p>
+<p>Con suficiente cuidado, pero</p>
+<p>si tuviera que</p>
+<p>elige los dos mejores,</p>
+<p>Entonces serían ellos. I</p>
+<p>Permitiré que la computadora</p>
+<p>para evaluar cómo él</p>
+<p>se enfrentó</p>
+<p>usando</p>
+<p>solicitud. Así que yo</p>
+<p>Dejaré que CMM hable.</p>
+<p>jueces.</p>
+</details>
+<p>好的，现在到了有趣的环节，我们来做盲测。我来告诉你我喜欢什么。这些新模型能够创建SVG文件，它们可以制作插图。我要求它创建一个文档、一个麦克风和一个甲虫。我准备好整天进行评估了。我要对比一下A模型。这只甲虫简直荒谬。我敢打赌它得了个4分。文档还不错，但麦克风看起来像个冰淇淋甜筒，而甲虫则不知道是个什么东西。这给出了相当不错的一些选项。也许这是最好的选项。所以我会给F模型额外加分。我们来对比一下B模型和C模型。这里的麦克风太可怕了。我给它们两个都打3分。它们在一个方面做得好，但在其他方面非常糟糕。我们对比一下E模型和G模型。这很复杂。它们为什么要把麦克风做得像仙人掌一样？好吧，我给这个打4分。我觉得三个里面有两个很差。也许是个3分，并不理想。我们快速看一下H模型。噢，H模型确实很漂亮。我打赌给它5分。看看这个阴影。麦克风非常像麦克风，不像仙人掌。文档非常有……呃，特征。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+De acuerdo y
+<p>ahora interesante,</p>
+<p>Hagamos un "juego a ciegas".</p>
+<p>pruebas. Te lo diré.</p>
+<p>¿A ti qué? a mí</p>
+<p>Me gusta. Estos nuevos</p>
+<p>los modelos pueden</p>
+<p>crear archivos SVG.</p>
+<p>Ellos pueden</p>
+<p>crear</p>
+<p>ilustraciones. I</p>
+<p>Se le pidió que creara</p>
+<p>documento, micrófono y</p>
+<p>escarabajo. Estoy listo.</p>
+<p>evaluar todo el día.</p>
+<p>Voy a comparar el modelo A. Este</p>
+<p>escarabajo simplemente</p>
+<p>absurdo. Te apuesto</p>
+<p>Obtuvo un cuatro.</p>
+<p>El documento no está mal,</p>
+<p>pero el micrófono es similar</p>
+<p>para un cono de helado, y</p>
+<p>un escarabajo; se desconoce para qué.</p>
+<p>Esto resulta bastante</p>
+<p>No está nada mal</p>
+<p>opciones. Tal vez,</p>
+<p>Esta es la mejor opción.</p>
+<p>Así que le daré el modelo F.</p>
+<p>prima. Comparemos</p>
+<p>modelo B y modelo C.</p>
+<p>Micrófono aquí</p>
+<p>horrible. Yo se los daré</p>
+<p>ambos tríos. Ellos</p>
+<p>bueno en una cosa</p>
+<p>pero terrible por lo demás</p>
+<p>. Comparemos el modelo E</p>
+<p>y el Modelo G. Es complicado.</p>
+<p>¿Por qué lo hacen?</p>
+<p>micrófonos similares a</p>
+<p>¿cactus? DE ACUERDO,</p>
+<p>Voy a poner esto</p>
+<p>cuatro. Creo que dos de</p>
+<p>tres son malos. Tal vez</p>
+<p>, es un tres, no</p>
+<p>idealmente. Echemos un vistazo.</p>
+<p>rápidamente en el modelo H. Oh,</p>
+<p>modelo H en efecto</p>
+<p>hermoso. Apuesto a que</p>
+<p>cinco. Mirar</p>
+<p>en esta sombra. Micrófono</p>
+<p>muy similar a</p>
+<p>micrófono, no encendido</p>
+<p>cactus. El documento tiene</p>
+<p>mucho, eh, carácter.</p>
+</details>
+<p>至于最后一个，它在编辑所有视频方面应对得非常糟糕。所以我给它们全部开放了权限，呃，这非常难看，但起作用了。所有模型都能访问自拍视频，然后被要求剪辑成一个短视频蒙太奇。所有模型都做得极差。我不得不这么说。嗯，这些非常糟糕。我不觉得它们剪辑得特别好。你们弄不到它们，而我，我无法相信已经做出了拼接。它们就是没有成功。我之前看过了。我让CMM来充当裁判，但我不会喜欢所有的，不过我认为这是能力问题，而不是模型的问题。因此，我进行了盲测。我准备下载测试结果。然后我把它交给Claude，我说：“Claude，我是怎么想的？分析一下。”然后我们看看我的预测是否会成真。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Y el último, él
+<p>lo sobrellevó terriblemente</p>
+<p>editar todos los vídeos.</p>
+<p>Así que se los di todos</p>
+<p>acceso a, eh, es muy</p>
+<p>Feo, pero funcionó.</p>
+<p>todos tienen acceso a</p>
+<p>selfie en video y luego</p>
+<p>se me pidió que lo hiciera</p>
+<p>montaje corto. Y</p>
+<p>Todos lo lograron</p>
+<p>terriblemente. Tengo que hacer esto.</p>
+<p>decir. Hmm, estos</p>
+<p>muchísimo</p>
+<p>malo. No me parece.</p>
+<p>los montaron</p>
+<p>especialmente bueno. Usted no</p>
+<p>Tú puedes conseguirlos, pero yo, yo no puedo.</p>
+<p>Creo que fue</p>
+<p>ya está hecho</p>
+<p>pegamento. Ellos simplemente</p>
+<p>no tuvieron éxito. I</p>
+<p>los miraron</p>
+<p>más temprano. Permitiré CMM</p>
+<p>actuar como juez, pero</p>
+<p>No me gustaría.</p>
+<p>todos, pero creo que</p>
+<p>es una cuestión de habilidades,</p>
+<p>no son modelos. Entonces, yo</p>
+<p>realizó su prueba el</p>
+<p>gusto. Yo voy</p>
+<p>descargar</p>
+<p>resultados de la prueba. Y</p>
+<p>Luego lo paso</p>
+<p>Claude y yo decimos: "Claude, ¿qué soy yo?"</p>
+<p>¿Creo? Analizar". Y</p>
+<p>ya veremos si</p>
+<p>Mi deseo se hará realidad.</p>
+<p>previsión.</p>
+</details>
+<p>再次好，这里是我对我所想内容的预测。我认为我会喜欢Claude，尤其是用于界面的Opus 3.5。我想我会喜欢Soul来写文本。我不知道对于长期智能体任务或编程而言哪个会是最好的。而且，呃，我认为Anthropic会把所有人从SVG中淘汰出局。也许吧？也许是的？我不知道。嗯，我也会做，呃，而且我认为它们在视频方面的表现都很差。既然说到这个，我们来做吧，我想给你们展示一个非常重要的基准测试——Barbie测试，在Opus 3.5上的基准测试。如果你还不知道的话，这是我很有趣的测试之一——我请模型创建一个3D Barbie模型。YouTube上的其他人，所有那些家伙都在用宇宙飞船和各种东西制作视频或视频游戏。而我想要一个关于Barbie时尚的视频游戏。因此，我给Opus 3.5的任务之一，就是构建一个3D渲染的Barbie服装设计师。没有任何模型，没有任何高级模型能够做到这一点。呃，而我只是想展示3D渲染女性身材的全部可怕之处，这实际上是最糟糕的。你已经看到这有多可怕了，但比以前好多了。所以我的意思是……我有点目瞪口呆了。这就是它在SVG方面做出的东西。我的意思是，这确实是令人难以置信的东西。呃，我们加上头上的蝴蝶结。来吧，你知道的，我们给她做成紫色的眼睛。好的，那么你实际上可以把它穿上，然后去试衣间。这是它创建的3D模型。呃，来吧，我们给她加上某种超短裙，让它稍微好看一点。现在，你知道的，我要说它有些地方做得比其他模型好。似乎塑造了她的头发，她的双手……噢，AGI还没有到来，还没有到来。双手相当可怕。这，这是个悲剧。脚相当糟糕。呃，你知道的，她走起路来很大胆。面孔很吓人。鞋子，因为是个大脚女孩。她是巨脚女王。嗯，啊，然后又是头发，这里出现了一个问题。这个发辫——这是很特别的东西。波波头，你知道的，也许像安娜·温图尔（Anna Wintour）。它，这确实有点东西。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+De nuevo
+<p>Vale, aquí están los míos</p>
+<p>predicciones sobre</p>
+<p>lo que yo pienso. I</p>
+<p>Creo que yo</p>
+<p>le gustará Claude y</p>
+<p>especialmente Opus 3.5 para</p>
+<p>Interfaz. Creo</p>
+<p>Me gustará Soul</p>
+<p>para escribir</p>
+<p>textos. No sé qué</p>
+<p>será lo mejor para</p>
+<p>agentes a largo plazo</p>
+<p>tareas o</p>
+<p>programación. Y también,</p>
+<p>eh, creo que Antropía</p>
+<p>Esto sacará a todos de SVG.</p>
+<p>¿Tal vez? Tal vez</p>
+<p>¿Sí? No sé. Mmm, yo también.</p>
+<p>Voy a hacer, eh,</p>
+<p>y creo que todos lo son</p>
+<p>trabajar mal con</p>
+<p>video. Ya que estamos en ello</p>
+<p>Hagámoslo, yo quiero</p>
+<p>te mostraré uno</p>
+<p>de gran importancia</p>
+<p>El banco de pruebas de Barbie es un punto de referencia.</p>
+<p>en Opus 3.5. Si no lo haces</p>
+<p>ya sabes, uno de los míos</p>
+<p>pruebas interesantes—yo</p>
+<p>Por favor, modela</p>
+<p>crear un modelo 3D</p>
+<p>Barbie. Todos los demás en</p>
+<p>YouTube, todos estos tipos</p>
+<p>¿Están haciendo videos o</p>
+<p>videojuegos con</p>
+<p>naves espaciales</p>
+<p>y todo tipo de cosas. Y</p>
+<p>Quiero un videojuego sobre</p>
+<p>Moda con Barbie. Entonces una cosa</p>
+<p>de tareas para Opus 3.5,</p>
+<p>que yo di, es</p>
+<p>construir un render 3D</p>
+<p>diseñador de ropa</p>
+<p>Barbie. Sin modelo,</p>
+<p>ningún avanzado</p>
+<p>El modelo falló</p>
+<p>para hacer esto. Eh, y</p>
+<p>Yo solo</p>
+<p>como</p>
+<p>mostrar todo el terror 3D</p>
+<p>-representación de mujer</p>
+<p>cifras, esto es en realidad</p>
+<p>el peor. Ya</p>
+<p>Ya ves lo terrible que es,</p>
+<p>pero esto es mucho mejor</p>
+<p>que antes. Entonces</p>
+<p>Quiero decir... estoy en</p>
+<p>algún tipo de</p>
+<p>Perdió el don del habla.</p>
+<p>Esto es lo que ella hace con</p>
+<p>Lados SVG. Tengo puesto</p>
+<p>Quiero decir, realmente lo es.</p>
+<p>algo increíble. Ejem,</p>
+<p>agreguemos</p>
+<p>un lazo en el pelo.</p>
+<p>Vamos, ya sabes,</p>
+<p>Vamos a hacerla morada</p>
+<p>ojos. Vale, entonces tú</p>
+<p>En realidad puedes hacerlo.</p>
+<p>Póntelo y luego</p>
+<p>Ve al probador.</p>
+<p>Este es un modelo 3D que ella</p>
+<p>creado. Eh, vamos.</p>
+<p>vamos a añadirle algo</p>
+<p>minifalda y</p>
+<p>hagámoslo un poco</p>
+<p>más agradable. Ahora,</p>
+<p>ya sabes, yo diré que ella</p>
+<p>hicieron algunas cosas</p>
+<p>mejor que otros modelos.</p>
+<p>Parece haberse formado</p>
+<p>su cabello, sus manos… oh, AGI</p>
+<p>Todavía no, todavía no ha llegado.</p>
+<p>Las manos son bastante horribles.</p>
+<p>Esto, esto es una tragedia.</p>
+<p>Los pies están bastante mal.</p>
+<p>Eh, ya sabes, ella tiene esto</p>
+<p>un andar audaz. Rostro</p>
+<p>aterrador. Zapatos, porque tú</p>
+<p>chica con grandes</p>
+<p>con los pies. Ella es la reina.</p>
+<p>pies grandes. Hmm, ah</p>
+<p>luego el cabello otra vez,</p>
+<p>surgir aquí</p>
+<p>pregunta. Esta cola—</p>
+<p>Esto es algo especial.</p>
+<p>Kare, ya sabes, tal vez</p>
+<p>como Anna Wintour. Él,</p>
+<p>Esto es algo.</p>
+</details>
+<p>所以，再次是的，唯一还没有通过的测试——就是Barbie测试。Opus 5没有达到要求。我不知道，我是不是已经在Soul上运行过了？我，我之前是在旧版本上运行的，我在Astra上测试过。在Opus上它做得更差，但我不喜欢更新。所以，如果你想知道我是如何评估模型的，我逼它们做3D渲染，呃，我逼它们渲染Barbie。你能怎么办呢？这就是为什么你们要加入《How AI Lives》来获取关于这些新模型的如此高级的分析。请擂鼓。GPT-6 Astra和GPT-6 Soul征服了我的心。好吧，Astra，呃，还有GPT-6，我很喜欢它们。另外它上面写着：“Opus 5.5在这周胜出。嗯，这就是我最频繁打出高分的模型。”所以，这是我一生中单项任务的最佳表现，但平均而言，我给了Opus 5.5最高评分结果、高指标。在最广泛的任务范围里，我给它打了四分和五分。Fable不合我意。这就是为什么我停止使用它。然后，呃，GPT-5.6 Soul旧版本，呃，以及Claude Opus 5紧随其后。当然有些人肯定喜欢新模型。接下来，好吧，我的七条评分是关于阅读的。因此，Soul和GPT模型，呃，我很欣赏阅读起来有多么清晰轻松，而这里Claude Opus仍然是，呃，但那是Opus 5和5.5。所以我测试了Opus</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Así que, de nuevo
+<p>Sí, la única prueba,</p>
+<p>que aún no se ha superado,</p>
+<p>—Esta es la prueba de Barbie. Opus 5</p>
+<p>No lo cumplió. No</p>
+<p>Lo sé, ¿ya lo soy?</p>
+<p>lo lanzó el, eh, el</p>
+<p>Alma. Yo, yo estaba ejecutando esto en</p>
+<p>anterior, yo</p>
+<p>Lo probé en Astra.</p>
+<p>Ella hizo cosas peores.</p>
+<p>para Opus, pero no me gusta.</p>
+<p>actualizado. Entonces, si</p>
+<p>Quieres saber cómo estoy</p>
+<p>Evalúo modelos, yo</p>
+<p>Los obligo a crear</p>
+<p>Renderizaciones 3D, eh, yo</p>
+<p>Los estoy obligando a renderizar.</p>
+<p>Barbie. ¿Qué serás?</p>
+<p>¿hacer? Por eso tú</p>
+<p>Únete a Cómo la IA</p>
+<p>vivir para recibir</p>
+<p>tan avanzado</p>
+<p>análisis de estos nuevos</p>
+<p>modelos. Por favor,</p>
+<p>redoble del tambor. GPT-6</p>
+<p>Astra y GPT-6 Soul</p>
+<p>conquista mi corazón.</p>
+<p>De acuerdo, Astra, eh, y GPT-6</p>
+<p>Me gustan. Y</p>
+<p>Además dice: "Opus 5.5</p>
+<p>supera esto</p>
+<p>semana. Hmm, eso es todo.</p>
+<p>el modelo que yo</p>
+<p>calificado con mayor frecuencia</p>
+<p>alto. Entonces, esto es</p>
+<p>El mejor trabajo de mi vida</p>
+<p>tareas individuales,</p>
+<p>pero en promedio yo</p>
+<p>Le dio a Opus 5.5 la mejor calificación.</p>
+<p>resultados, alto</p>
+<p>agujas. Se lo puse a ella</p>
+<p>cuatros y cincos</p>
+<p>para el espectro más amplio</p>
+<p>tareas. La fábula no es para mí.</p>
+<p>Me gustó. Es por eso</p>
+<p>Lo detuve.</p>
+<p>usar.</p>
+<p>Entonces, y luego, eh, GPT-5.6</p>
+<p>Alma, versión antigua, eh, y</p>
+<p>Claude Opus 5 calificado a continuación</p>
+<p>por otro. Alguno</p>
+<p>definitivamente</p>
+<p>como nuevos</p>
+<p>modelos, por supuesto. Y</p>
+<p>A continuación, de acuerdo, mis siete</p>
+<p>Las notas eran sobre</p>
+<p>lectura. Así pues, Alma y GPT</p>
+<p>modelos, eh, lo aprecié</p>
+<p>Qué claro y fácil</p>
+<p>para leer, y aquí está Claude</p>
+<p>Opus sigue siendo, eh, pero es</p>
+<p>Opus 5 y 5.5. Entonces, yo</p>
+<p>Probé Opus</p>
+</details>
+<!-- chunk 5/5 -->
+<p>5，而且我仍然不喜欢它。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+5 
+<p>y</p>
+<p>yo</p>
+<p>Todavía</p>
+<p>no</p>
+<p>me</p>
+<p>gusta.</p>
+</details>
+<p>Opus 5。呃，Opus 5 和 5.5，正如我说过的，负荷过重而且写得太多了。因此，我再次怀疑，尽管他们减少了 Opus 的废话罗嗦，但这一切仍然需要在这方面下功夫。它依然是、依然非常啰嗦。所以我认为 Sonnet 5、6 和 6 是近亲，清晰且易读。Opus——非常繁复饱和。对于 PRD，正如预测的那样，我仍然认为 Sonnet 最适合 PRD。我把不错的任务交给了 Opus 5 和 5.5 来做智能体方面的事情，以及如预期用于助手语音。所以我的预测成真了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Opus 
+<ol start="5">
+<li></li>
+</ol>
+<p>Eh,</p>
+<p>Opus</p>
+<p>5</p>
+<p>y</p>
+<p>5.5,</p>
+<p>como</p>
+<p>yo</p>
+<p>dijeron,</p>
+<p>eran</p>
+<p>sobrecargado</p>
+<p>y</p>
+<p>escribió</p>
+<p>demasiado.</p>
+<p>Por</p>
+<p>lo</p>
+<p>tanto</p>
+<p>,</p>
+<p>de</p>
+<p>nuevo,</p>
+<p>yo</p>
+<p>sospechaba</p>
+<p>que</p>
+<p>incluso</p>
+<p>a</p>
+<p>pesar</p>
+<p>del</p>
+<p>hecho</p>
+<p>de</p>
+<p>que</p>
+<p>ellos</p>
+<p>hizo</p>
+<p>que</p>
+<p>Opus</p>
+<p>fuera</p>
+<p>más</p>
+<p>pequeño</p>
+<p>verborrea,</p>
+<p>lo</p>
+<p>saben</p>
+<p>todo</p>
+<p>Todavía</p>
+<p>necesito</p>
+<p>trabajar</p>
+<p>en</p>
+<p>esto.</p>
+<p>trabajar.</p>
+<p>Él</p>
+<p>todavía</p>
+<p>lo</p>
+<p>es,</p>
+<p>sigue</p>
+<p>siendo</p>
+<p>muy</p>
+<p>hablador</p>
+<p>.</p>
+<p>Así</p>
+<p>que</p>
+<p>pensé</p>
+<p>en</p>
+<p>Soul</p>
+<p>5</p>
+<p>,</p>
+<p>6</p>
+<p>y</p>
+<p>6</p>
+<p>son</p>
+<p>primos,</p>
+<p>claro</p>
+<p>y</p>
+<p>fácil</p>
+<p>para</p>
+<p>leer.</p>
+<p>Opus—muy</p>
+<p>saturado.</p>
+<p>Para</p>
+<p>PRD,</p>
+<p>así</p>
+<p>como</p>
+<p>predicho,</p>
+<p>soy</p>
+<p>todo</p>
+<p>Sigo</p>
+<p>pensando</p>
+<p>en</p>
+<p>Soul</p>
+<p>Lo</p>
+<p>mejor</p>
+<p>para</p>
+<p>PRD.</p>
+<p>I</p>
+<p>dio</p>
+<p>buenas</p>
+<p>tareas</p>
+<p>Opus</p>
+<p>5</p>
+<p>y</p>
+<p>5.5</p>
+<p>para</p>
+<p>agentes</p>
+<p>cosas</p>
+<p>y</p>
+<p>cómo</p>
+<p>esperado</p>
+<p>para</p>
+<p>la</p>
+<p>voz</p>
+<p>del</p>
+<p>asistente.</p>
+<p>Entonces</p>
+<p>Mi</p>
+<p>predicción</p>
+<p>se</p>
+<p>cumplió.</p>
+<p>correcto.</p>
+</details>
+<p>这里是一个真正的惊喜。Astra 和 Sonnet 在处理 SVG 角色方面表现好得多，而其他模型的结果则相当模糊。挺有趣的，这就是我评为四分的所有内容。所以所有这些我很欣赏的东西，我都交给了 GPT-6。噢，它做出了那个可爱的关于植物的小应用吗？Astra 和 GPT Sonnet 创作了这些可爱的插图，因此，显然对于 SVG，我们更喜欢 Astra 和 Sonnet。Claude Opus 做了我最喜欢的 B2B 更新，让其中的一些东西更整洁，但总的来说我喜欢 Astra。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Y 
+<p>aquí</p>
+<p>está.</p>
+<p>una</p>
+<p>verdadera</p>
+<p>sorpresa.</p>
+<p>Astra</p>
+<p>y</p>
+<p>Soul</p>
+<p>son</p>
+<p>mucho</p>
+<p>mejores</p>
+<p>se</p>
+<p>las</p>
+<p>arregló</p>
+<p>con</p>
+<p>SVG-</p>
+<p>personajes</p>
+<p>y</p>
+<p>resultados</p>
+<p>de</p>
+<p>otros</p>
+<p>Los</p>
+<p>modelos</p>
+<p>eran</p>
+<p>bastante</p>
+<p>ambiguo.</p>
+<p>Él</p>
+<p>Bastante</p>
+<p>interesante,</p>
+<p>y</p>
+<p>aquí</p>
+<p>está.</p>
+<p>todo</p>
+<p>lo</p>
+<p>que</p>
+<p>califiqué</p>
+<p>en</p>
+<p>cuatro.</p>
+<p>Entonces</p>
+<p>todo,</p>
+<p>que</p>
+<p>aprecié</p>
+<p>mucho,</p>
+<p>yo</p>
+<p>Entregué</p>
+<p>GPT-6.</p>
+<p>Oh,</p>
+<p>él</p>
+<p>¿Hizo</p>
+<p>ese</p>
+<p>lindo?</p>
+<p>aplicación</p>
+<p>pequeña</p>
+<p>sobre</p>
+<p>las</p>
+<p>plantas.</p>
+<p>Astra</p>
+<p>y</p>
+<p>GPT</p>
+<p>El</p>
+<p>alma</p>
+<p>creó</p>
+<p>estas</p>
+<p>millas</p>
+<p>ilustraciones,</p>
+<p>por</p>
+<p>lo</p>
+<p>tanto,</p>
+<p>aparentemente</p>
+<p>para</p>
+<p>SVG</p>
+<p>nosotros</p>
+<p>Preferimos</p>
+<p>Astra</p>
+<p>y</p>
+<p>Alma.</p>
+<p>Claude</p>
+<p>Opus</p>
+<p>hizo</p>
+<p>mi</p>
+<p>favorito</p>
+<p>Actualización</p>
+<p>B2B,</p>
+<p>es</p>
+<p>¿Algunos</p>
+<p>de</p>
+<p>estos?</p>
+<p>cosas</p>
+<p>más</p>
+<p>ordenadas,</p>
+<p>pero</p>
+<p>en</p>
+<p>general</p>
+<p>yo</p>
+<p>Me</p>
+<p>gusta</p>
+<p>Astra.</p>
+</details>
+<h3 id="模型评判与总结" data-reading-heading="">模型评判与总结</h3>
+<p>这里一切开始变得真正有趣了。LLM 作为裁判，而我完全不同意。所以，我们完全不一致。我喜欢 Astra，而它喜欢 Fable。再次，是的，这是一个 GPT 模型裁判。接下来，我们评估 Opus 5.5。它对 Sonnet 的评价要低得多。所以我发现这简直太好笑了。因此，再次，Astra 赢得了我的心。5.5 让我这周很开心。Sonnet，无论好坏，但 Sonnet 便宜这个事实让我非常高兴。我觉得它棒极了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Y 
+<p>aquí</p>
+<p>está</p>
+<p>Aquí</p>
+<p>todo</p>
+<p>se</p>
+<p>vuelve</p>
+<p>real.</p>
+<p>divertido.</p>
+<p>LLM</p>
+<p>significa</p>
+<p>juez,</p>
+<p>y</p>
+<p>yo</p>
+<p>absolutamente</p>
+<p>No</p>
+<p>estoy</p>
+<p>de</p>
+<p>acuerdo.</p>
+<p>Entonces,</p>
+<p>nosotros</p>
+<p>Estoy</p>
+<p>totalmente</p>
+<p>en</p>
+<p>desacuerdo.</p>
+<p>Me</p>
+<p>gusta</p>
+<p>Astra,</p>
+<p>y</p>
+<p>la</p>
+<p>suya:</p>
+<p>Fábula.</p>
+<p>Y</p>
+<p>de</p>
+<p>nuevo</p>
+<p>Sí,</p>
+<p>este</p>
+<p>es</p>
+<p>un</p>
+<p>juez</p>
+<p>modelo.</p>
+<p>GPT.</p>
+<p>A</p>
+<p>continuación,</p>
+<p>evaluamos</p>
+<p>Opus</p>
+<p>5.5.</p>
+<p>Ella</p>
+<p>aprecia</p>
+<p>el</p>
+<p>alma</p>
+<p>mucho</p>
+<p>más</p>
+<p>bajo.</p>
+<p>Así</p>
+<p>que</p>
+<p>yo</p>
+<p>Me</p>
+<p>parece</p>
+<p>sencillo.</p>
+<p>Muy</p>
+<p>divertido.</p>
+<p>Por</p>
+<p>lo</p>
+<p>tanto,</p>
+<p>De</p>
+<p>nuevo,</p>
+<p>Astra</p>
+<p>conquista</p>
+<p>mi</p>
+<p>corazón.</p>
+<p>5.5</p>
+<p>Me</p>
+<p>alegra</p>
+<p>la</p>
+<p>semana.</p>
+<p>Alma,</p>
+<p>para</p>
+<p>bien</p>
+<p>o</p>
+<p>para</p>
+<p>mal.</p>
+<p>pero</p>
+<p>el</p>
+<p>hecho</p>
+<p>de</p>
+<p>que</p>
+<p>Soul</p>
+<p>barato,</p>
+<p>me</p>
+<p>hace</p>
+<p>muy</p>
+<p>feliz.</p>
+<p>Y</p>
+<p>yo</p>
+<p>Me</p>
+<p>parece</p>
+<p>genial.</p>
+</details>
+<p>再次，我不知道这是否只是个人喜好的问题，但我喜欢 Sonnet。我喜欢 Astra。Opus 5.5——我不讨厌它。就是这样，对 Anthropic 团队来说这并不是彻底的失败。它重回了游戏。它确实有帮助，我必须完成这项任务。它在日常工作中为我提供帮助，并且仍然是我最喜欢的智能体，拥有美妙的声音，应对长期任务。接下来的意外成功：SVG 角色是 OpenAI 模型最成功的。所以，如果您转向其他新的创意领域或新的创意任务，我会建议正是使用这些模型。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+De 
+<p>nuevo,</p>
+<p>no</p>
+<p>lo</p>
+<p>sé,</p>
+<p>¿Es</p>
+<p>solo</p>
+<p>una</p>
+<p>pregunta?</p>
+<p>preferencias</p>
+<p>personales,</p>
+<p>pero</p>
+<p>me</p>
+<p>gusta</p>
+<p>Alma.</p>
+<p>Me</p>
+<p>gusta</p>
+<p>Astra.</p>
+<p>Opus</p>
+<p>5.5—No</p>
+<p>lo</p>
+<p>hago</p>
+<p>Lo odio.</p>
+<p>Eso</p>
+<p>es</p>
+<p>todo.</p>
+<p>no</p>
+<p>fue</p>
+<p>un</p>
+<p>fracaso</p>
+<p>total</p>
+<p>Equipos</p>
+<p>antrópicos.</p>
+<p>Él</p>
+<p>regresó</p>
+<p>al</p>
+<p>juego.</p>
+<p>Definitivamente</p>
+<p>ayuda.</p>
+<p>Tengo</p>
+<p>que</p>
+<p>hacer</p>
+<p>esto</p>
+<p>tarea.</p>
+<p>Él</p>
+<p>me</p>
+<p>ayuda</p>
+<p>con</p>
+<p>trabajo</p>
+<p>diario</p>
+<p>y</p>
+<p>sigue</p>
+<p>siendo</p>
+<p>mío</p>
+<p>agente</p>
+<p>favorito</p>
+<p>una</p>
+<p>voz</p>
+<p>maravillosa</p>
+<p>se</p>
+<p>enfrenta</p>
+<p>a largo plazo</p>
+<p>tareas.</p>
+<p>Y</p>
+<p>luego</p>
+<p>Éxito</p>
+<p>inesperado:</p>
+<p>SVG-</p>
+<p>Los</p>
+<p>personajes</p>
+<p>son</p>
+<p>los</p>
+<p>mejores</p>
+<p>Los</p>
+<p>modelos</p>
+<p>de</p>
+<p>OpenAI</p>
+<p>tienen</p>
+<p>éxito.</p>
+<p>Entonces,</p>
+<p>si</p>
+<p>usted</p>
+<p>pasar</p>
+<p>a</p>
+<p>otros</p>
+<p>nuevos</p>
+<p>campos</p>
+<p>creativos</p>
+<p>o</p>
+<p>nueva</p>
+<p>creatividad</p>
+<p>tareas,</p>
+<p>yo</p>
+<p>aconsejaría</p>
+<p>para</p>
+<p>usar</p>
+<p>exactamente</p>
+<p>estos</p>
+<p>modelos.</p>
+</details>
+<p>关注“How to Use AI”频道。正如我所说，点击订阅按钮。我们发布了完整的 Opus 5.5 评测，所以您可以去观看。感谢您加入 How-To AI 的直播。我打算使用 GPT-6 创造一些有趣的东西。大家再见。非常感谢您观看视频。如果您喜欢，请点赞并在 YouTube 上订阅，或者更好的是——给我们写下包含您想法的评论。您也可以在 Apple Podcasts、Spotify 或您喜欢的播客应用中找到这个播客。请留下评分和评论，这将帮助其他人找到我们的节目。您可以在 howiaipod.com 上观看我们所有的剧集并了解更多关于节目的信息。下次见。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Y
+<p>sigue</p>
+<p>el</p>
+<p>canal</p>
+<p>Cómo</p>
+<p>usar</p>
+<p>la</p>
+<p>IA.</p>
+<p>Como</p>
+<p>dije,</p>
+<p>pulsa</p>
+<p>el</p>
+<p>botón</p>
+<p>suscripciones.</p>
+<p>Entonces,</p>
+<p>nosotros</p>
+<p>lanzamos</p>
+<p>un</p>
+<p>completo</p>
+<p>Reseña</p>
+<p>de</p>
+<p>Opus</p>
+<p>5.5,</p>
+<p>para</p>
+<p>que</p>
+<p>puedas</p>
+<p>Puedes</p>
+<p>hacerlo</p>
+<p>ver.</p>
+<p>Gracias</p>
+<p>por</p>
+<p>eso.</p>
+<p>se</p>
+<p>unió</p>
+<p>al</p>
+<p>Transmisión</p>
+<p>en</p>
+<p>vivo</p>
+<p>de</p>
+<p>How-To</p>
+<p>AI.</p>
+<p>Y</p>
+<p>Voy</p>
+<p>a</p>
+<p>crear.</p>
+<p>algo</p>
+<p>interesante</p>
+<p>para</p>
+<p>utilizando</p>
+<p>GPT-6.</p>
+<p>Nos</p>
+<p>vemos</p>
+<p>todos.</p>
+<p>Muy</p>
+<p>Gracias</p>
+<p>por</p>
+<p>ver</p>
+<p>el</p>
+<p>vídeo.</p>
+<p>Si</p>
+<p>te</p>
+<p>gustó</p>
+<p>por</p>
+<p>favor,</p>
+<p>muéstralo</p>
+<p>me</p>
+<p>gusta</p>
+<p>y</p>
+<p>suscríbete</p>
+<p>a</p>
+<p>YouTube,</p>
+<p>o</p>
+<p>mejor</p>
+<p>aún...</p>
+<p>escríbanos</p>
+<p>Comenta</p>
+<p>con</p>
+<p>el</p>
+<p>tuyo</p>
+<p>pensamientos.</p>
+<p>Tú</p>
+<p>también</p>
+<p>¿Puedes</p>
+<p>encontrar</p>
+<p>esto?</p>
+<p>podcast</p>
+<p>en</p>
+<p>Apple</p>
+<p>Podcasts,</p>
+<p>Spotify</p>
+<p>o</p>
+<p>en</p>
+<p>tu</p>
+<p>aplicación</p>
+<p>favorita</p>
+<p>para</p>
+<p>podcasts.</p>
+<p>Ser</p>
+<p>Por</p>
+<p>favor,</p>
+<p>déjelo</p>
+<p>en</p>
+<p>nuestras</p>
+<p>manos.</p>
+<p>calificación</p>
+<p>y</p>
+<p>comentarios,</p>
+<p>esto</p>
+<p>ayudará</p>
+<p>a</p>
+<p>los</p>
+<p>demás</p>
+<p>Encuentra</p>
+<p>nuestro</p>
+<p>programa.</p>
+<p>Tú</p>
+<p>puedes</p>
+<p>ver</p>
+<p>todos</p>
+<p>nuestros</p>
+<p>episodios</p>
+<p>y</p>
+<p>Aprende</p>
+<p>más</p>
+<p>sobre</p>
+<p>Programa</p>
+<p>en</p>
+<p>howiaipod.com.</p>
+<p>Hasta luego.</p>
+<p>La</p>
+<p>próxima</p>
+<p>vez.</p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/c8ca9eda595d5007c042701041db5e123503c81ce3222ccb47812fc858c637f1.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/c8ca9eda595d5007c042701041db5e123503c81ce3222ccb47812fc858c637f1.md" download="Opus 5.5 与 GPT-6 多模型发布及现场盲测对比.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Opus 5.5" class="entity-link product-link">Opus 5.5</a>, <a href="/search/?q=GPT-6 Soul" class="entity-link product-link">GPT-6 Soul</a>, <a href="/search/?q=GPT-6 Luna" class="entity-link product-link">GPT-6 Luna</a>, <a href="/search/?q=Claude Opus 5" class="entity-link product-link">Claude Opus 5</a>, <a href="/search/?q=Astra" class="entity-link product-link">Astra</a>, <a href="/search/?q=Fábula" class="entity-link product-link">Fábula</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>开源小模型自建推理服务与集群架构实践</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">开源小模型自建推理服务与集群架构实践</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-19</span>
+    
+
+    <header class="article-header">
+      
+      <h1>开源小模型自建推理服务与集群架构实践</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">model-serving</span>
+      
+        <a class="tag-link" href="/tags/inference/">inference</a>
+      
+        <a class="tag-link" href="/tags/architecture/">architecture</a>
+      
+        <a class="tag-link" href="/tags/benchmarking/">benchmarking</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">演讲探讨了小型开源模型在专用任务中的性能优势及自建云端推理服务的挑战。主讲人提出通过拉取式网关架构、多模型混合打包与惰性加载，以及自动化研究闭环调优，在较小硬件上实现高吞吐、低延迟与显著降本。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=g4SsanB0gMc" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-09-19T00:00:00.000Z">2026-09-19</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>9 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E5%BC%80%E6%BA%90%E5%B0%8F%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%87%AA%E5%BB%BA%E6%8E%A8%E7%90%86">开源小模型与自建推理</a></li><li class="outline-h3"><a href="#%E4%B8%93%E4%BB%BB%E5%8A%A1%E4%B8%93%E7%94%A8%E4%B8%8E%E6%A8%A1%E5%9E%8B%E9%9B%86%E7%BE%A4%E7%9A%84%E6%8C%91%E6%88%98">专任务专用与模型集群的挑战</a></li><li class="outline-h3"><a href="#%E6%8E%A8%E7%90%86%E5%BC%95%E6%93%8E%E8%B0%83%E4%BC%98%E4%B8%8E%E8%B7%AF%E7%94%B1%E7%93%B6%E9%A2%88">推理引擎调优与路由瓶颈</a></li><li class="outline-h3"><a href="#%E9%9B%86%E7%BE%A4%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%BC%80%E6%BA%90">集群架构与开源</a></li><li class="outline-h3"><a href="#%E8%AF%B7%E6%B1%82%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%B8%8E%E7%BD%91%E5%85%B3%E8%AE%BE%E8%AE%A1">请求的生命周期与网关设计</a></li><li class="outline-h3"><a href="#%E4%B8%AD%E5%BF%83%E5%8C%96%E9%98%9F%E5%88%97%E4%B8%8E%E6%89%B9%E5%A4%84%E7%90%86">中心化队列与批处理</a></li><li class="outline-h3"><a href="#%E8%BF%90%E8%A1%8C%E6%97%B6%E6%8A%BD%E8%B1%A1%E4%B8%8E%E5%9F%BA%E5%87%86%E6%B5%8B%E8%AF%95%E6%8B%90%E7%82%B9">运行时抽象与基准测试拐点</a></li><li class="outline-h3"><a href="#%E5%B0%8F%E7%A1%AC%E4%BB%B6%E4%B8%8A%E7%9A%84%E6%80%A7%E8%83%BD%E6%BD%9C%E5%8A%9B%E5%B5%8C%E5%85%A5%E4%B8%8E%E7%94%9F%E6%88%90%E4%BB%BB%E5%8A%A1">小硬件上的性能潜力：嵌入与生成任务</a></li><li class="outline-h3"><a href="#%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8C%96%E7%A0%94%E7%A9%B6%E5%BE%AA%E7%8E%AF">服务架构与自动化研究循环</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><!-- chunk 1/3 -->
+<p>好了，我想大家都能听到我说话。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+All right, I think you guys can hear me.
+</details>
+<p>我反正是能听清我自己的声音。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+I can certainly hear myself.
+</details>
+<p>嗯，谁坐得更靠前谁就能领到一件 T 恤。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um, whoever came closer gets a t-shirt.
+</details>
+<p>我是说真的。那边有一整包的 T 恤。呃，提问也是一样。也许最后会有一些提问环节。如果你提了问题，你也能拿到一件 T 恤。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+I I meant it. There's like back full of t-shirts over here. Uh, and also for questions. Maybe there will be some questions at the end. If you ask a question, you get the t-shirt as well.
+</details>
+<p>如果你能猜出这张幻灯片的背景上是什么，你也可以得到一件——你也可以拿到一件 T 恤。有谁猜得到吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And if you can guess what is on the background of this slide, you get a uh you get the t-shirt as well. Any guesses?
+</details>
+<p>那是在把什么可视化？背景里的这张图？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+What does that visualize? This picture in the background?
+</details>
+<p>没有吗。有人见过 Transformer 模型吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+No. Anybody has seen a transformer model?
+</details>
+<blockquote>
+<blockquote>
+<p>呃，对，位置编码（positional encoding）。非常棒。先生，你可以拿到一件 T 恤了。好的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Uh yeah, positional encoding. Very good. You get the t-shirt, sir. All right.
+</details>
+<h3 id="开源小模型与自建推理" data-reading-heading="">开源小模型与自建推理</h3>
+<p>那么，今天我们基本上要讨论一下小型开源模型，以及它们现在有多出色，还有当你想在自己的云环境中提供一整套这类模型的推理服务时，它们会带来怎样独特的挑战。呃，我们要讨论的一切在某种程度上都是开源的。呃，完全可以自己动手做。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, today we'll discuss u basically small open source models and how they are pretty good now and how they create unique challenges when you want to serve a bunch of them in your own cloud. Uh everything we'll discuss is kind kind of open source. Uh do it yourself.
+</details>
+<p>这些内容属于那种你只需要运行一条命令就能掌控整套技术栈的东西。所以这里面没有任何专有的、所谓拼图里的专有组件。呃，让我们开始吧。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+This is the kind of stuff you can just uh you know run a command and own the stack. So there is no proprietary uh you know pieces of the puzzle here. Uh let's get this uh underway.
+</details>
+<p>好的，能翻页。行。那么，小模型。我们所说的小模型到底是什么意思？嗯，你知道这取决于你去问谁，我的看法基本上是指那些你可以在两三代以前的英伟达硬件上运行的模型。整个模型可以装进单张 GPU 里。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Well, this works. Okay. So small models. What do we mean by small models? Um you know depending who you ask, the way I think about it is basically models that you can run on two three generations old Nvidia hardware. The whole model fits into one GPU.
+</details>
+<p>嗯，因此它们很容易进行服务部署，那些 GPU 随手可得，而且价格也很亲民。嗯，然后大多数人会想，好吧，小模型的话，在结果质量方面肯定会有某种权衡。希望在今天的演讲中，我能够很好地向大家证明，其实针对具体任务，你完全可以达到前沿、甚至超越前沿性能，并且获得所有其他显而易见的好处，对吧？呃，也就是成数量级的成本节约，当然还可能有非常显著的延迟降低或吞吐量提升。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+um and therefore they are easy to serve those GPUs are available and they are affordable as well. Um and then most people think okay small models um there will be some kind of tradeoff in terms of um you know quality of the results and hopefully I'll be able to do a good job in this talk to convince you that actually for specific tasks you can be at frontier or beyond frontier performance and get all the other obvious benefits right uh orders of magnitudes of uh kind of cost savings and uh potentially quite big uh latency or throughput improvements of course.
+</details>
+<p>嗯，所以这是我们喜欢展示的图表之一。这是 Artificial Analysis 的智能指数随时间变化的情况。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um so this is kind of one of the charts we like to show. This is the artificial analysis intelligence index over time.
+</details>
+<p>他们通常没有向你展示的是，你应该考虑的开源模型其实是有层级划分的，对吧？有像 GLM 5.2 等等那种前沿的开源模型，参数量比方说有 7500 亿。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And what they typically don't show you is that there is like a breakdown of the open source models you should think about right there is the GLM 5.2 and so on those kind of frontier open source models with let's say 750 billion parameters.
+</details>
+<p>嗯，但随后还有那些紧跟大模型和前沿步伐的小型开源模型。你可以看到前沿模型如今在某种程度上正在遭遇收益递减，而小模型正在迎头赶上，对吧。所以，呃，你可以看到顶端出现了这种趋同、饱和，以及小型模型的这种增长。嗯，你知道，比如说 Qwen 36 27B，</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um but then there are the small open source models kind of trailing the big ones and trailing the frontier. You can see the frontier is kind of getting diminishing returns these days and the small models are catching up right. So uh you see this kind of convergence saturation on top and and kind of growth of the of the small models um and you know let's say quen 36 27b
+</details>
+<p>性能大概在 GPT 5.1 左右。因此，如果你手头有一个工作流，如果你有一个可以借助 GPT 5.1 运行的流水线，现在你完全可以将其迁移到小模型上，并且获得我们刚刚讨论过的所有好处。所以小模型已经不再愚蠢了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+somewhere around the performance of GPT 5.1. So if you have a workflow, if you have a pipeline that uh you know can run with GPT 5.1, now you can move that to a small model and uh you know get all the all the benefits we discussed. So small models not dumb anymore.
+</details>
+<h3 id="专任务专用与模型集群的挑战" data-reading-heading="">专任务专用与模型集群的挑战</h3>
+<p>嗯，现在关键还在于你如何使用这些小模型，对吧？你不能仅仅把那个 270 亿参数的 Qwen 36 当作那种完全通用的、随便给个提示词就能做任何事情的模型。现在你需要采取一种策略，基本上是从通用模型的工作负载中拆分出一块块具体的任务，然后针对每项任务，在开源领域中找出最契合该任务的模型。你运行一些评估，可能还会进行一些我们稍后会讨论的适配调整，嗯，然后你就是通过这种方式来达到合适的质量，从而真正将其推向生产环境。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um now it is also about how you use the small models, right? So you can't just treat that 27 billion parameter quen 36 as your kind of totally generalized I can prompt it to do anything kind of model. Now you need to adopt the approach where um you basically figure out slice of tasks from the generalized model workload and then per task you figure out which model in the open source fits the task the best. You run some evals maybe some adaptation we'll discuss um and then you know that's how you kind of reach the the right quality uh to actually push this into production.
+</details>
+<p>这里有一个使用了九个不同模型的合同审查智能体示例。随着你转向在自身架构中使用小模型，你在你的工作负载和智能体中将会看到的就是这样一种形态。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So here is some example of a contract review agent that uses you know nine different models. This is the kind of shape that you will see in your workloads in your agents as you move to using small models for your um setup.
+</details>
+<p>你会开始发现，好吧，你不再是用一堆不同的请求去反复冲击同一个 API 呃或者同一个模型，而是改用由一组模型组成的车队。那么你的问题就变成了：好吧，我该如何以一种不让我这边的基础架构人员抓狂的方式来为所有这些不同的东西提供服务，对吧？而这还仅仅是你在运行的其中一个智能体，在你们公司里可能还会存在 10 个这样的智能体。所以我们该如何——这可以说就是基础架构范畴的扩张。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+you'll start to see that okay instead of kind of hammering one API with bunch of different requests uh or one model you rather use a fleet of models and then your problem is okay how do I serve all of these different things in a way that my infra people don't go crazy right and this is just one of the agents that you might be running and there might be you know 10 of these in your company so how do how do we sort of you know that's the kind of expansion of infrastructure scope let's say um
+</details>
+<p>现在，针对我刚才提到的所有那些不同的任务，都正好有一个开源模型坐在那里等待被调用。嗯，从光学字符识别（OCR）、基于文档的问答，到图像标注、生成 SQL、审查代码，呃，都有针对这些任务进行过微调和训练的开源模型。呃，你知道，如果你使用一个专门训练来对越南语收据进行 OCR 的开源模型，那个项目见过的越南语收据就是最多的，对吧？有人花心思收集了尽可能多的数据，因而在那一项任务上，该模型的表现几乎会超越其他任何东西。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Now all of those different tasks that I mentioned there is an open source model that's uh sitting there waiting to be used um from you know OCR to question answering on top of documents to labeling images generating SQL you know reviewing code uh there are open source models fine-tuned and trained for those tasks uh you know if you use an open source model that's trained to do OCR on receipts in Vietnamese that project has seen the most receipts in Vietnamese, right? There's somebody who like took the time to gather as much data as possible and on that task that model will outperform pretty much anything else.
+</details>
+<p>嗯，在 Hugging Face 上有成千上万个像那样的模型，对吧？所以，这些东西就摆在那里，而且基本都是免费的，大多数都有相当宽松的开源许可。所以模型是现成的，大家知道，瓶颈并不在模型本身。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um, and there is, you know, hundreds of thousands of models on hagging phase that look like that, right? So, it's just uh it's all sitting there and it's all free basically mostly quite permissive licenses. So the models exist you know that that's not the bottleneck
+</details>
+<p>而且大家知道，从 2024 年起我们就一直在谈论开源 AI 之类的事情，呃，但到目前为止它仍然没有真正发生。而在各家公司中，在它真正发生的范围内，基本上就等同于“开源 AI 等于 AWS Bedrock”，呃，除了一点：当你看一眼 Bedrock 里的模型目录，它在可用的模型类型上非常受限，这些模型很陈旧，呃，往往落后业界顶尖水平两到三年。嗯，而且当你在 Bedrock 中进行任何微调时，你实际上并不拥有微调或训练出来的产物。因此，你无法将其用作业务中的实际竞争壁垒。它基本上只能留在 Bedrock 的基础设施里提供服务。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+and you know we've been talking about like open source AI since 2024 and uh it's so far still not really happening and to the extent it's happening in companies it basically equals like open source AI equals AWS bedrock uh except when you look at the model catalog in bedrock it's like very you know restrained in model types that are available these models are old uh often you two, three years behind the state-of-the-art. Um, and when you do any kind of fine-tuning in bedrock, you don't actually own the fine-tuned or trained artifacts. So, you can't, you know, use it as an actual advantage in your business. It kind of stays serving from the bedrock infra.
+</details>
+<h3 id="推理引擎调优与路由瓶颈" data-reading-heading="">推理引擎调优与路由瓶颈</h3>
+<p>嗯，以上是专有方案的情况。现在，如果你在开源基础设施上进行小模型服务——vLLM、SGLang 等不同的解决方案——你只要知道，这些工具并不是针对任何特定模型或任何特定的“硬件-模型”组合预先调优好的。你必须自己去调优，对吧？这就是自己动手的部分。所有这些工具都附带指南，介绍如何实际执行调优、参数扫描、根据你的流量特征进行定制等等。每当你尝试采用其中一种工具时，这都变成了一种开放式的研究项目。所以这真不是那种你拿过来、当成一个常规工程项目、一周之后就能拥有一套高性能服务基础设施的东西；它完全不是这么运作的。嗯，而那正是开源工具典型的通病，对吧？就是有点太过于凡事都得自己动手了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um, so that's on the proprietary. Now if you do small models serving on open source infrastructure blm sglank different solutions just know that these things are not tuned for any specific model or any specific hardware model combination you'll have to do the tuning right this is the do-it-yourself all of these tools ship with guides on how to actually do the tuning the parameter sweep tailoring to your traffic and so on. This is a kind of open-ended research project every time you try to adopt one of these tools. So this is not really something that sort of you you take it and it's like an engineering project and a week later you have a high performance surveying infrastructure doesn't work like that. Um and that's kind of the typical problem with open source tools, right? This kind of like a little bit too much do it yourself.
+</details>
+<p>嗯，然后除了没有针对小模型进行预先调优之外，那些使用大量不同模型的小模型工作负载和流量，在某种程度上彻底颠覆了推理集群的运作法则，对吧？在通常情况下，当你尝试为一个大模型提供服务时，嗯，你的问题在于：我该如何在多个 GPU 之间共享该模型？我该如何在顶层放置一个能理解所有这些 worker 状态的路由器？比如掌握 KV 缓存状态等等，然后自顶向下做出路由决策，判定好吧，这个请求应该分配给这个 worker 或那组 worker 等等，对吧？这是一种非常自顶向下的架构。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um, and then on top of this not being kind of pre-tuned for small models, the small model workloads and traffic that uses a bunch of different models kind of flips the equation for inference uh kind of clusters, right? So normally when you try to serve one big model, um, your problems are how do I share that model across multiple GPUs? How do I have a router sitting on top that understands the state of all these workers? you know the KV cache state and so on and then makes a top- down routing decision of okay this request goes to this worker or this group of workers and and so on right it's very top down setup
+</details>
+<p>但如果你面对的是耗时短的小请求，并且请求量极大，那么这种自顶向下的路由就会成为瓶颈，对吧？因为路由器掌握的 worker 状态版本会稍微滞后，而且如果你依靠这种预先决策机制，要在平衡每个 worker 上的本地队列方面做到绝对精准，就真的非常困难，因为小请求实在太多了，对吧？嗯，而且我们针对小模型和这类流量在 vLLM 以及 SGLang 路由器上做过实验，在持续负载下，你很难让你的 GPU 利用率突破 20% 到 30%。问题就在于那些批次（batches）的大小根本无法合理构建，根源就是遇到了路由瓶颈。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+but if you have small and fast requests and you have many of them the this this sort of top down routing becomes the bottleneck right because the router has a little bit obsolete version of the worker state and it's just really hard to saturate the workers if you have that kind of upfront decision on that's that has to get it perfectly right in terms of u you know balancing the local cues on each of these workers because there's many small requests right um and you know like we have experimented with the VLM and SGline routers for small models and this sort of traffic and it's very hard to get your GPU utilization beyond 20 30% under constant load and the problem is that those batches are just not correctly sized basically because you that routing bottleneck.
+</details>
+<p>嗯，然后第三个问题是，使用小模型时，你能从 LoRA 以及通用的模型适配中获得巨大好处。因此，你必须承载的服务流量中，就会包含有人跑来找你并提出：“嘿，我有 10 个 LoRA，我该怎么把它用在我们现有的服务技术栈上？嗯，或者我……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um, and then the third problem is that with small models, you benefit a lot from Loras and just model adaptation in general. And so the traffic that you have to serve, you know, contains, you know, people coming to you and saying, "Hey, I have 10 loras. How do I, you know, use this with our serving stack? Um, or I
+</details>
+<!-- chunk 2/3 -->
+<p>“……有这个我昨晚搞的自定义微调模型。你知道的，呃，我、我想把它部署到生产环境里。”而 AI 工程师和基础设施人员之间，为了把那些——你知道的，LoRA 上线、自定义模型上线——进行的沟通，才是耗费时间的事情。基本上，在组织运转速度方面，这种沟通就是主要的阻碍，对吧？理想情况下，你会希望基础设施工程师做自己的工作，也希望那些 AI 工程师做自己的工作，他们在日常工作模式下不需要为了维持运转而互相沟通。这样，你知道的，他们基本上就不会互相阻塞了。呃，对于小模型的这种模型适配需求，在某种程度上打破了这种状态，造成了大量的来回沟通，呃，这就是个问题，对吧？呃，所以这些就是面临的一些挑战，涉及比如：好，我们有一堆小模型，我们该怎么构建集群？我们该如何高效地提供推理服务？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+ have
+<p>this</p>
+<p>custom</p>
+<p>fine</p>
+<p>tune</p>
+<p>I</p>
+<p>made</p>
+<p>last</p>
+<p>night.</p>
+<p>You</p>
+<p>know,</p>
+<p>um,</p>
+<p>I</p>
+<p>I</p>
+<p>want</p>
+<p>to</p>
+<p>serve</p>
+<p>this</p>
+<p>in</p>
+<p>production."</p>
+<p>And</p>
+<p>this</p>
+<p>conversation</p>
+<p>between</p>
+<p>the</p>
+<p>AI</p>
+<p>engineer</p>
+<p>and</p>
+<p>the</p>
+<p>infrastructure</p>
+<p>person</p>
+<p>in</p>
+<p>getting</p>
+<p>those</p>
+<p>you</p>
+<p>know</p>
+<p>lauras</p>
+<p>up</p>
+<p>there</p>
+<p>custom</p>
+<p>models</p>
+<p>up</p>
+<p>there</p>
+<p>that's</p>
+<p>the</p>
+<p>thing</p>
+<p>that</p>
+<p>takes</p>
+<p>time</p>
+<p>and</p>
+<p>basically</p>
+<p>that's</p>
+<p>like</p>
+<p>the</p>
+<p>main</p>
+<p>killer</p>
+<p>in</p>
+<p>organizational</p>
+<p>uh</p>
+<p>velocity</p>
+<p>is</p>
+<p>talking</p>
+<p>right</p>
+<p>like</p>
+<p>ideally</p>
+<p>you</p>
+<p>would</p>
+<p>want</p>
+<p>the</p>
+<p>infrastructure</p>
+<p>engineers</p>
+<p>to</p>
+<p>do</p>
+<p>their</p>
+<p>job</p>
+<p>and</p>
+<p>you</p>
+<p>would</p>
+<p>want</p>
+<p>to</p>
+<p>those</p>
+<p>AI</p>
+<p>engineers</p>
+<p>to</p>
+<p>do</p>
+<p>their</p>
+<p>job</p>
+<p>and</p>
+<p>they</p>
+<p>don't</p>
+<p>have</p>
+<p>to</p>
+<p>talk</p>
+<p>to</p>
+<p>operate</p>
+<p>on</p>
+<p>the</p>
+<p>day-to-day</p>
+<p>mode.</p>
+<p>So,</p>
+<p>so</p>
+<p>you</p>
+<p>know</p>
+<p>they</p>
+<p>they</p>
+<p>are</p>
+<p>not</p>
+<p>blocking</p>
+<p>each</p>
+<p>other</p>
+<p>basically.</p>
+<p>Um</p>
+<p>and</p>
+<p>this</p>
+<p>kind</p>
+<p>of</p>
+<p>model</p>
+<p>adaptation</p>
+<p>desire</p>
+<p>around</p>
+<p>small</p>
+<p>models</p>
+<p>kind</p>
+<p>of</p>
+<p>breaks</p>
+<p>that</p>
+<p>and</p>
+<p>creates</p>
+<p>a</p>
+<p>lot</p>
+<p>of</p>
+<p>back</p>
+<p>and</p>
+<p>forth</p>
+<p>and</p>
+<p>uh</p>
+<p>that's</p>
+<p>a</p>
+<p>problem</p>
+<p>right</p>
+<p>uh</p>
+<p>so</p>
+<p>these</p>
+<p>are</p>
+<p>some</p>
+<p>challenges</p>
+<p>related</p>
+<p>to</p>
+<p>okay</p>
+<p>we</p>
+<p>have</p>
+<p>a</p>
+<p>bunch</p>
+<p>of</p>
+<p>small</p>
+<p>models</p>
+<p>how</p>
+<p>do</p>
+<p>we</p>
+<p>have</p>
+<p>a</p>
+<p>cluster</p>
+<p>how</p>
+<p>do</p>
+<p>we</p>
+<p>serve</p>
+<p>this</p>
+<p>efficiently</p>
+</details>
+<h3 id="集群架构与开源" data-reading-heading="">集群架构与开源</h3>
+<p>呃，所以我们琢磨这个问题已经有一段时间了。其实我是来自 Superl 的 Daniel，我刚才把自我介绍给跳过了。呃，我们是一家来自旧金山、有风投背景的公司，在过去几年里一直在构建由 AI 驱动的搜索、文档处理系统以及 Agent，而我们的主要痛点一直都是推理。呃，具体来说，就是我刚才描述的那些问题。因此我们不断迭代、不断探索各种集群拓扑结构，用于——你知道的——在不同的环境中运行庞大且广泛的小模型机群，因为有时候你需要与某个平台一起部署在某些谁也不知道那里有什么可用资源的环境中。呃，你知道，小模型让这变得更容易，因为在任何环境下，你都能搞到一些 L4 或者某种小型 GPU 配额，这要容易得多。所以，我接下来会大致描述一下我们最终收敛采用的集群拓扑结构。顺便说一下，这整套东西都是 Apache 2.0 协议的，所以是完全开源的。呃，你们可以直接拿去封装，然后摇身一变成为一家推理初创公司。呃，这是开源的，从某种意义上的控制平面一直到在 GPU 上运行的底层组件全都是。呃，所以我们没有做任何保留。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+um
+<p>so</p>
+<p>we</p>
+<p>have</p>
+<p>been</p>
+<p>playing</p>
+<p>with</p>
+<p>this</p>
+<p>problem</p>
+<p>for</p>
+<p>a</p>
+<p>while</p>
+<p>I'm</p>
+<p>Daniel</p>
+<p>actually</p>
+<p>from</p>
+<p>superl</p>
+<p>I</p>
+<p>kind</p>
+<p>of</p>
+<p>skip</p>
+<p>the</p>
+<p>intro</p>
+<p>um</p>
+<p>so</p>
+<p>we</p>
+<p>are</p>
+<p>you</p>
+<p>know</p>
+<p>VC</p>
+<p>backed</p>
+<p>company</p>
+<p>out</p>
+<p>of</p>
+<p>SF</p>
+<p>and</p>
+<p>we</p>
+<p>have</p>
+<p>been</p>
+<p>building</p>
+<p>AI</p>
+<p>powered</p>
+<p>search</p>
+<p>and</p>
+<p>document</p>
+<p>processing</p>
+<p>systems</p>
+<p>and</p>
+<p>and</p>
+<p>agents</p>
+<p>for</p>
+<p>the</p>
+<p>last</p>
+<p>couple</p>
+<p>of</p>
+<p>years</p>
+<p>and</p>
+<p>our</p>
+<p>main</p>
+<p>painoint</p>
+<p>has</p>
+<p>always</p>
+<p>been</p>
+<p>inference.</p>
+<p>um</p>
+<p>specifically</p>
+<p>these</p>
+<p>problems</p>
+<p>that</p>
+<p>I</p>
+<p>have</p>
+<p>described.</p>
+<p>And</p>
+<p>so</p>
+<p>we</p>
+<p>have</p>
+<p>iterated</p>
+<p>and</p>
+<p>iterated</p>
+<p>and</p>
+<p>explored</p>
+<p>different</p>
+<p>topologies</p>
+<p>for</p>
+<p>clusters</p>
+<p>for</p>
+<p>uh</p>
+<p>running</p>
+<p>you</p>
+<p>know</p>
+<p>large</p>
+<p>wide</p>
+<p>fleets</p>
+<p>of</p>
+<p>small</p>
+<p>models</p>
+<p>in</p>
+<p>different</p>
+<p>environments</p>
+<p>because</p>
+<p>sometimes</p>
+<p>you</p>
+<p>need</p>
+<p>to</p>
+<p>deploy</p>
+<p>together</p>
+<p>with</p>
+<p>some</p>
+<p>platform</p>
+<p>in</p>
+<p>some</p>
+<p>environment</p>
+<p>where</p>
+<p>who</p>
+<p>knows</p>
+<p>what</p>
+<p>is</p>
+<p>available</p>
+<p>there.</p>
+<p>um</p>
+<p>you</p>
+<p>know</p>
+<p>the</p>
+<p>small</p>
+<p>models</p>
+<p>make</p>
+<p>it</p>
+<p>easier</p>
+<p>because</p>
+<p>in</p>
+<p>whatever</p>
+<p>environment</p>
+<p>you</p>
+<p>can</p>
+<p>get</p>
+<p>some</p>
+<p>L4s</p>
+<p>or</p>
+<p>some</p>
+<p>kind</p>
+<p>of</p>
+<p>small</p>
+<p>GPU</p>
+<p>quota</p>
+<p>is</p>
+<p>much</p>
+<p>easier.</p>
+<p>So</p>
+<p>this</p>
+<p>is</p>
+<p>kind</p>
+<p>of</p>
+<p>I'll</p>
+<p>describe</p>
+<p>a</p>
+<p>little</p>
+<p>bit</p>
+<p>about</p>
+<p>the</p>
+<p>topology</p>
+<p>of</p>
+<p>the</p>
+<p>cluster</p>
+<p>that</p>
+<p>we</p>
+<p>have</p>
+<p>kind</p>
+<p>of</p>
+<p>converged</p>
+<p>to</p>
+<p>and</p>
+<p>by</p>
+<p>the</p>
+<p>way</p>
+<p>this</p>
+<p>whole</p>
+<p>thing</p>
+<p>is</p>
+<p>Apache</p>
+<p>2.0</p>
+<p>So</p>
+<p>completely</p>
+<p>open</p>
+<p>source.</p>
+<p>Um</p>
+<p>you</p>
+<p>guys</p>
+<p>can</p>
+<p>just</p>
+<p>take</p>
+<p>it</p>
+<p>and</p>
+<p>wrap</p>
+<p>it</p>
+<p>and</p>
+<p>now</p>
+<p>we</p>
+<p>are</p>
+<p>an</p>
+<p>inference</p>
+<p>startup.</p>
+<p>Um</p>
+<p>this</p>
+<p>is</p>
+<p>open</p>
+<p>source</p>
+<p>from</p>
+<p>kind</p>
+<p>of</p>
+<p>the</p>
+<p>control</p>
+<p>plane</p>
+<p>all</p>
+<p>the</p>
+<p>way</p>
+<p>down</p>
+<p>to</p>
+<p>the</p>
+<p>thing</p>
+<p>that</p>
+<p>runs</p>
+<p>on</p>
+<p>the</p>
+<p>GPU.</p>
+<p>Um</p>
+<p>so</p>
+<p>we</p>
+<p>we</p>
+<p>didn't</p>
+<p>pull</p>
+<p>any</p>
+<p>any</p>
+<p>punches.</p>
+</details>
+<p>呃，其拓扑结构基本上是：有一个网关；我们没有使用那种预先决定什么请求去往何处的路由器，而是设置了一个网关，它会解析一部分请求，为请求附加一些元数据，把该请求插入到一个共享队列以及一些侧通道中。对此我稍后会详细讲一点。然后 Worker 从那个中心化队列中拉取（pull），而不是把数据推送（push）给 Worker。通过这种方式，它们可以更好地打满自身的负载。然后 Worker 的——呃，设置，我想我有张幻灯片是讲这个的——呃，将会说明我们基本上是如何将不同模型架构的复杂性，收敛吸纳到一组连贯的 Worker 中的，你知道，这些 Worker 不会存在相互冲突的 Python 依赖项之类的问题。呃，大体上这就是整体的拓扑结构。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Uh
+<p>and</p>
+<p>the</p>
+<p>topology</p>
+<p>is</p>
+<p>basically</p>
+<p>there</p>
+<p>is</p>
+<p>a</p>
+<p>gateway</p>
+<p>and</p>
+<p>instead</p>
+<p>of</p>
+<p>having</p>
+<p>a</p>
+<p>router</p>
+<p>that</p>
+<p>kind</p>
+<p>of</p>
+<p>predecides</p>
+<p>what</p>
+<p>goes</p>
+<p>where</p>
+<p>there</p>
+<p>is</p>
+<p>a</p>
+<p>gateway</p>
+<p>that</p>
+<p>parses</p>
+<p>some</p>
+<p>of</p>
+<p>the</p>
+<p>request</p>
+<p>and</p>
+<p>attaches</p>
+<p>some</p>
+<p>metadata</p>
+<p>to</p>
+<p>the</p>
+<p>request</p>
+<p>inserts</p>
+<p>that</p>
+<p>request</p>
+<p>into</p>
+<p>a</p>
+<p>shared</p>
+<p>queue</p>
+<p>and</p>
+<p>into</p>
+<p>some</p>
+<p>side</p>
+<p>channels.</p>
+<p>I'll</p>
+<p>go</p>
+<p>a</p>
+<p>little</p>
+<p>bit</p>
+<p>into</p>
+<p>that</p>
+<p>and</p>
+<p>then</p>
+<p>the</p>
+<p>workers</p>
+<p>pull</p>
+<p>from</p>
+<p>that</p>
+<p>centralized</p>
+<p>queue</p>
+<p>instead</p>
+<p>of</p>
+<p>kind</p>
+<p>of</p>
+<p>pushing</p>
+<p>the</p>
+<p>data</p>
+<p>down</p>
+<p>to</p>
+<p>the</p>
+<p>workers.</p>
+<p>And</p>
+<p>this</p>
+<p>way</p>
+<p>they</p>
+<p>can</p>
+<p>saturate</p>
+<p>themselves</p>
+<p>better.</p>
+<p>And</p>
+<p>then</p>
+<p>the</p>
+<p>worker</p>
+<p>um</p>
+<p>setup</p>
+<p>I</p>
+<p>think</p>
+<p>I</p>
+<p>have</p>
+<p>a</p>
+<p>slide</p>
+<p>for</p>
+<p>that</p>
+<p>uh</p>
+<p>will</p>
+<p>describe</p>
+<p>how</p>
+<p>uh</p>
+<p>we</p>
+<p>basically</p>
+<p>absorb</p>
+<p>the</p>
+<p>complexity</p>
+<p>of</p>
+<p>different</p>
+<p>model</p>
+<p>architectures</p>
+<p>into</p>
+<p>kind</p>
+<p>of</p>
+<p>a</p>
+<p>coherent</p>
+<p>set</p>
+<p>of</p>
+<p>workers</p>
+<p>that</p>
+<p>you</p>
+<p>know</p>
+<p>don't</p>
+<p>have</p>
+<p>like</p>
+<p>competing</p>
+<p>Python</p>
+<p>requirements</p>
+<p>and</p>
+<p>stuff</p>
+<p>like</p>
+<p>that.</p>
+<p>Um</p>
+<p>so</p>
+<p>that's</p>
+<p>kind</p>
+<p>of</p>
+<p>the</p>
+<p>overall</p>
+<p>topology.</p>
+</details>
+<h3 id="请求的生命周期与网关设计" data-reading-heading="">请求的生命周期与网关设计</h3>
+<p>呃，这就是一个请求的大致生命周期。也许我只——呃，挑出这里的几点讲一下。呃，我们——你知道，关于 OpenAI 那种 API 标准，我们不喜欢的其中一点就是 Base64 编码的 JSON，它对小模型不友好，对高吞吐量也不友好。因此我们全程使用 MessagePack 这种二进制格式。呃，通过这种方式，我们也可以将所有多模态数据直接推送到实际的 API 网关中。这样就不会出现像——嘿，你知道，二进制数据放在这边，然后请求放在那边，接着集群需要访问你的云存储才能开始加载某些二进制数据、图像或视频。我们基本上把它全部编码，然后推送到网关。呃，接着网关会分离出其中的一些较重部分，以免堵塞内部队列，并在请求处于排队中时，在传输途中将其暂存到云存储中。所以，它在某种程度上会把这些比如说超过 1 MB 的请求拆分开来，然后在后端使用云存储。呃，但作为用户，你把所有的 bits 和 bytes 都推送到 API 层，正因如此，它提供了一个相当整洁的接口。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um
+<p>and</p>
+<p>this</p>
+<p>is</p>
+<p>kind</p>
+<p>of</p>
+<p>life</p>
+<p>of</p>
+<p>a</p>
+<p>request.</p>
+<p>So</p>
+<p>maybe</p>
+<p>just</p>
+<p>uh</p>
+<p>I'll</p>
+<p>call</p>
+<p>out</p>
+<p>a</p>
+<p>couple</p>
+<p>of</p>
+<p>things</p>
+<p>from</p>
+<p>here.</p>
+<p>Um</p>
+<p>we</p>
+<p>you</p>
+<p>know</p>
+<p>one</p>
+<p>of</p>
+<p>the</p>
+<p>things</p>
+<p>we</p>
+<p>don't</p>
+<p>like</p>
+<p>about</p>
+<p>the</p>
+<p>OpenAI</p>
+<p>kind</p>
+<p>of</p>
+<p>API</p>
+<p>standard</p>
+<p>is</p>
+<p>the</p>
+<p>B</p>
+<p>64</p>
+<p>encoded</p>
+<p>kind</p>
+<p>of</p>
+<p>JSON</p>
+<p>not</p>
+<p>good</p>
+<p>for</p>
+<p>small</p>
+<p>models</p>
+<p>not</p>
+<p>good</p>
+<p>for</p>
+<p>high</p>
+<p>throughput.</p>
+<p>So</p>
+<p>we</p>
+<p>use</p>
+<p>message</p>
+<p>pack</p>
+<p>throughout</p>
+<p>like</p>
+<p>a</p>
+<p>binary</p>
+<p>format.</p>
+<p>Um</p>
+<p>this</p>
+<p>way</p>
+<p>we</p>
+<p>can</p>
+<p>also</p>
+<p>push</p>
+<p>all</p>
+<p>the</p>
+<p>multimodel</p>
+<p>data</p>
+<p>through</p>
+<p>the</p>
+<p>actual</p>
+<p>API</p>
+<p>gateway.</p>
+<p>So</p>
+<p>there</p>
+<p>is</p>
+<p>no</p>
+<p>like</p>
+<p>hey</p>
+<p>you</p>
+<p>know</p>
+<p>binary</p>
+<p>data</p>
+<p>over</p>
+<p>here</p>
+<p>and</p>
+<p>then</p>
+<p>request</p>
+<p>over</p>
+<p>here</p>
+<p>and</p>
+<p>then</p>
+<p>the</p>
+<p>cluster</p>
+<p>needs</p>
+<p>access</p>
+<p>to</p>
+<p>your</p>
+<p>cloud</p>
+<p>storage</p>
+<p>to</p>
+<p>start</p>
+<p>loading</p>
+<p>some</p>
+<p>b</p>
+<p>some</p>
+<p>binary</p>
+<p>data</p>
+<p>images</p>
+<p>or</p>
+<p>videos.</p>
+<p>We</p>
+<p>kind</p>
+<p>of</p>
+<p>encode</p>
+<p>it</p>
+<p>all</p>
+<p>and</p>
+<p>we</p>
+<p>push</p>
+<p>it</p>
+<p>through</p>
+<p>the</p>
+<p>gateway.</p>
+<p>Um</p>
+<p>and</p>
+<p>then</p>
+<p>the</p>
+<p>gateway</p>
+<p>kind</p>
+<p>of</p>
+<p>separates</p>
+<p>some</p>
+<p>of</p>
+<p>these</p>
+<p>heavier</p>
+<p>pieces</p>
+<p>to</p>
+<p>not</p>
+<p>clog</p>
+<p>the</p>
+<p>internal</p>
+<p>queue</p>
+<p>and</p>
+<p>differs</p>
+<p>it</p>
+<p>on</p>
+<p>cloud</p>
+<p>storage</p>
+<p>kind</p>
+<p>of</p>
+<p>inflight</p>
+<p>while</p>
+<p>the</p>
+<p>request</p>
+<p>is</p>
+<p>in</p>
+<p>Q.</p>
+<p>So</p>
+<p>it</p>
+<p>kind</p>
+<p>of</p>
+<p>splits</p>
+<p>up</p>
+<p>some</p>
+<p>of</p>
+<p>these</p>
+<p>requests</p>
+<p>that</p>
+<p>are</p>
+<p>let's</p>
+<p>say</p>
+<p>over</p>
+<p>a</p>
+<p>megabyte</p>
+<p>and</p>
+<p>then</p>
+<p>uses</p>
+<p>cloud</p>
+<p>storage</p>
+<p>in</p>
+<p>the</p>
+<p>back</p>
+<p>end.</p>
+<p>Um</p>
+<p>but</p>
+<p>as</p>
+<p>a</p>
+<p>user</p>
+<p>you</p>
+<p>push</p>
+<p>all</p>
+<p>your</p>
+<p>bits</p>
+<p>and</p>
+<p>byes</p>
+<p>into</p>
+<p>the</p>
+<p>API</p>
+<p>layer</p>
+<p>and</p>
+<p>it's</p>
+<p>kind</p>
+<p>of</p>
+<p>clean</p>
+<p>interface</p>
+<p>because</p>
+<p>of</p>
+<p>that.</p>
+</details>
+<p>呃，基本上整个技术栈都是 REST。也就是网关是 REST，Worker 也是 REST，然后它在本地通过 Socket 连接到不同的运行时。作为运行时，我们基本上有 PyTorch、Candle 和 SGLang。呃，然后当我们做优化时——我稍后会大致讲一下——我们如何确保无论使用的是哪种运行时，以及无论在该运行时中运行的是哪种代码，都是最高效的。基本上我们为此设置了一个自动研究闭环。呃，不过是的，请求的生命周期大致就是这个样子的。还有一个细节就是，你一定要确保网关——也就是请求首先到达的那个组件——不要做太多的工作，因为那样的话它就会变成瓶颈，对吧？所以你甚至都不想去完整解析整个请求。你希望能做到直接查看数据包，并且呃，弄清楚即将到来的数据的总体轮廓，做好注解，然后不管你有多少个 Worker，上百个 GPU 的 Worker 会去查看队列状态，并从那里拉取。至于队列，我们使用的是 NATS JetStream，那东西可以处理——你知道的——每秒百万级请求，它很难成为瓶颈。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um
+<p>basically</p>
+<p>the</p>
+<p>whole</p>
+<p>stack</p>
+<p>is</p>
+<p>rest.</p>
+<p>So</p>
+<p>gateway</p>
+<p>rest</p>
+<p>the</p>
+<p>the</p>
+<p>worker</p>
+<p>is</p>
+<p>rest</p>
+<p>and</p>
+<p>then</p>
+<p>over</p>
+<p>a</p>
+<p>socket</p>
+<p>locally</p>
+<p>it</p>
+<p>kind</p>
+<p>of</p>
+<p>attaches</p>
+<p>to</p>
+<p>different</p>
+<p>runtimes</p>
+<p>and</p>
+<p>we</p>
+<p>have</p>
+<p>basically</p>
+<p>pytorch</p>
+<p>kendle</p>
+<p>and</p>
+<p>sglank</p>
+<p>on</p>
+<p>the</p>
+<p>as</p>
+<p>as</p>
+<p>a</p>
+<p>runtime</p>
+<p>um</p>
+<p>and</p>
+<p>and</p>
+<p>then</p>
+<p>when</p>
+<p>we</p>
+<p>do</p>
+<p>the</p>
+<p>optimization</p>
+<p>I'll</p>
+<p>kind</p>
+<p>of</p>
+<p>go</p>
+<p>into</p>
+<p>that</p>
+<p>on</p>
+<p>how</p>
+<p>we</p>
+<p>make</p>
+<p>sure</p>
+<p>that</p>
+<p>whichever</p>
+<p>runtime</p>
+<p>we</p>
+<p>are</p>
+<p>using</p>
+<p>and</p>
+<p>whichever</p>
+<p>code</p>
+<p>is</p>
+<p>running</p>
+<p>in</p>
+<p>that</p>
+<p>runtime</p>
+<p>is</p>
+<p>the</p>
+<p>most</p>
+<p>efficient</p>
+<p>one.</p>
+<p>we</p>
+<p>have</p>
+<p>an</p>
+<p>auto</p>
+<p>research</p>
+<p>loop</p>
+<p>for</p>
+<p>that</p>
+<p>basically.</p>
+<p>Um</p>
+<p>but</p>
+<p>yeah,</p>
+<p>so</p>
+<p>so</p>
+<p>life</p>
+<p>of</p>
+<p>a</p>
+<p>request</p>
+<p>kind</p>
+<p>of</p>
+<p>looks</p>
+<p>like</p>
+<p>that.</p>
+<p>And</p>
+<p>like</p>
+<p>one</p>
+<p>tidbit</p>
+<p>is</p>
+<p>that</p>
+<p>you</p>
+<p>really</p>
+<p>want</p>
+<p>to</p>
+<p>make</p>
+<p>sure</p>
+<p>that</p>
+<p>the</p>
+<p>gateway</p>
+<p>that's</p>
+<p>kind</p>
+<p>of</p>
+<p>the</p>
+<p>first</p>
+<p>thing</p>
+<p>that</p>
+<p>'s</p>
+<p>hit</p>
+<p>by</p>
+<p>the</p>
+<p>request</p>
+<p>doesn't</p>
+<p>do</p>
+<p>too</p>
+<p>much</p>
+<p>work</p>
+<p>because</p>
+<p>then</p>
+<p>it</p>
+<p>becomes</p>
+<p>a</p>
+<p>bottleneck,</p>
+<p>right?</p>
+<p>So</p>
+<p>you</p>
+<p>don't</p>
+<p>even</p>
+<p>want</p>
+<p>to</p>
+<p>parse</p>
+<p>the</p>
+<p>whole</p>
+<p>request.</p>
+<p>You</p>
+<p>want</p>
+<p>to</p>
+<p>be</p>
+<p>able</p>
+<p>to</p>
+<p>kind</p>
+<p>of</p>
+<p>look</p>
+<p>at</p>
+<p>the</p>
+<p>packets</p>
+<p>and</p>
+<p>uh</p>
+<p>figure</p>
+<p>out</p>
+<p>the</p>
+<p>general</p>
+<p>shape</p>
+<p>of</p>
+<p>what's</p>
+<p>coming.</p>
+<p>do</p>
+<p>the</p>
+<p>annotation</p>
+<p>and</p>
+<p>then</p>
+<p>you</p>
+<p>have</p>
+<p>the</p>
+<p>workers</p>
+<p>however</p>
+<p>many</p>
+<p>workers</p>
+<p>you</p>
+<p>have</p>
+<p>hundreds</p>
+<p>of</p>
+<p>GPUs</p>
+<p>that</p>
+<p>that</p>
+<p>uh</p>
+<p>look</p>
+<p>at</p>
+<p>the</p>
+<p>queue</p>
+<p>state</p>
+<p>and</p>
+<p>then</p>
+<p>pull</p>
+<p>from</p>
+<p>there</p>
+<p>and</p>
+<p>and</p>
+<p>the</p>
+<p>queue</p>
+<p>we</p>
+<p>use</p>
+<p>u</p>
+<p>nats</p>
+<p>jetstream</p>
+<p>and</p>
+<p>that</p>
+<p>thing</p>
+<p>can</p>
+<p>do</p>
+<p>you</p>
+<p>know</p>
+<p>million</p>
+<p>requests</p>
+<p>per</p>
+<p>second</p>
+<p>like</p>
+<p>that's</p>
+<p>very</p>
+<p>hard</p>
+<p>for</p>
+<p>that</p>
+<p>to</p>
+<p>become</p>
+<p>a</p>
+<p>bottleneck</p>
+</details>
+<h3 id="中心化队列与批处理" data-reading-heading="">中心化队列与批处理</h3>
+<p>呃，所以是的，理想情况下，你肯定不想在穿过所有这些不同组件时来回序列化、反序列化，这基本上属于显而易见的事情。呃，这是一段小动画，展示了中心化排队背后的理念，对吧？因此，与其由自上而下的路由器试图去——你知道的——恰到好处地填满本地队列（这基本上是不可能的），呃，你知道，其核心思路就是：嘿，我们能不能把排队以某种方式中心化？Worker 能不能改为自己承担起组建批次（Batch）的任务，由它们自己来预测该批次的开销，呃，进而——你知道的——变得高效得多？现在有一个细节和附带说明：一旦你开始研究这些东西，呃，你就会意识到，要预测呃从该共享队列中取走多少任务才能让批次大小真正达到、真正处于最优，实际上是非常困难的。因此你会希望有某种机制，在发现“噢，我好像拉取得有点太多了”的时候，允许你把一些东西放回队列中。而那是一次网络跳转，对吧？所以那是个问题。为此，针对本地拥有多个 GPU 的机器，我们做出了专门的优化，对吧？也就是说，存在一个额外的机器本地排队组件，它利用了这样一个事实：在同一台机器上的多个 GPU 上运行的本地进程，可以与队列进行稍微多一点的来回协商。而这要是走网络的话，你知道，那会增加几毫秒的额外开销。因此，呃，我们——我们不会走网络来做这件事，只有当我们将 Worker 协同部署在多 GPU 机器上时才会这样做。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+um
+<p>so</p>
+<p>yeah</p>
+<p>like</p>
+<p>ideally</p>
+<p>you</p>
+<p>don't</p>
+<p>want</p>
+<p>to</p>
+<p>serialize</p>
+<p>this</p>
+<p>serialize</p>
+<p>as</p>
+<p>you</p>
+<p>go</p>
+<p>through</p>
+<p>all</p>
+<p>of</p>
+<p>these</p>
+<p>different</p>
+<p>components</p>
+<p>that's</p>
+<p>basically</p>
+<p>the</p>
+<p>kind</p>
+<p>of</p>
+<p>obvious</p>
+<p>thing.</p>
+<p>Um</p>
+<p>this</p>
+<p>is</p>
+<p>a</p>
+<p>little</p>
+<p>animation</p>
+<p>that</p>
+<p>shows</p>
+<p>the</p>
+<p>idea</p>
+<p>behind</p>
+<p>the</p>
+<p>centralized</p>
+<p>queuing,</p>
+<p>right?</p>
+<p>So</p>
+<p>instead</p>
+<p>of</p>
+<p>the</p>
+<p>top</p>
+<p>down</p>
+<p>router</p>
+<p>trying</p>
+<p>to</p>
+<p>uh</p>
+<p>you</p>
+<p>know</p>
+<p>fill</p>
+<p>in</p>
+<p>the</p>
+<p>local</p>
+<p>cues</p>
+<p>just</p>
+<p>right,</p>
+<p>which</p>
+<p>is</p>
+<p>basically</p>
+<p>impossible.</p>
+<p>um</p>
+<p>you</p>
+<p>know</p>
+<p>the</p>
+<p>the</p>
+<p>whole</p>
+<p>idea</p>
+<p>is</p>
+<p>hey</p>
+<p>can</p>
+<p>we</p>
+<p>somehow</p>
+<p>centralize</p>
+<p>the</p>
+<p>queueing</p>
+<p>and</p>
+<p>can</p>
+<p>the</p>
+<p>workers</p>
+<p>uh</p>
+<p>rather</p>
+<p>pick</p>
+<p>up</p>
+<p>the</p>
+<p>task</p>
+<p>of</p>
+<p>forming</p>
+<p>their</p>
+<p>own</p>
+<p>batches</p>
+<p>with</p>
+<p>their</p>
+<p>own</p>
+<p>prediction</p>
+<p>of</p>
+<p>the</p>
+<p>cost</p>
+<p>of</p>
+<p>the</p>
+<p>batch</p>
+<p>uh</p>
+<p>and</p>
+<p>and</p>
+<p>then</p>
+<p>you</p>
+<p>know</p>
+<p>become</p>
+<p>much</p>
+<p>more</p>
+<p>efficient.</p>
+<p>Now</p>
+<p>one</p>
+<p>tidbit</p>
+<p>and</p>
+<p>kind</p>
+<p>of</p>
+<p>side</p>
+<p>note</p>
+<p>once</p>
+<p>you</p>
+<p>kind</p>
+<p>of</p>
+<p>start</p>
+<p>working</p>
+<p>on</p>
+<p>these</p>
+<p>things</p>
+<p>uh</p>
+<p>you</p>
+<p>realize</p>
+<p>that</p>
+<p>it's</p>
+<p>actually</p>
+<p>really</p>
+<p>hard</p>
+<p>to</p>
+<p>predict</p>
+<p>u</p>
+<p>how</p>
+<p>many</p>
+<p>things</p>
+<p>to</p>
+<p>pick</p>
+<p>up</p>
+<p>from</p>
+<p>that</p>
+<p>share</p>
+<p>queue</p>
+<p>for</p>
+<p>the</p>
+<p>batch</p>
+<p>to</p>
+<p>be</p>
+<p>really</p>
+<p>like</p>
+<p>really</p>
+<p>the</p>
+<p>optimal</p>
+<p>size</p>
+<p>and</p>
+<p>so</p>
+<p>you</p>
+<p>would</p>
+<p>want</p>
+<p>some</p>
+<p>mechanism</p>
+<p>that</p>
+<p>sort</p>
+<p>of</p>
+<p>allows</p>
+<p>you</p>
+<p>to</p>
+<p>put</p>
+<p>some</p>
+<p>things</p>
+<p>back</p>
+<p>into</p>
+<p>the</p>
+<p>queue</p>
+<p>if</p>
+<p>you</p>
+<p>figure</p>
+<p>out</p>
+<p>oh</p>
+<p>like</p>
+<p>I</p>
+<p>pulled</p>
+<p>a</p>
+<p>little</p>
+<p>bit</p>
+<p>too</p>
+<p>much</p>
+<p>and</p>
+<p>that's</p>
+<p>a</p>
+<p>network</p>
+<p>hop</p>
+<p>right</p>
+<p>so</p>
+<p>that's</p>
+<p>a</p>
+<p>problem</p>
+<p>and</p>
+<p>we</p>
+<p>have</p>
+<p>special</p>
+<p>optimization</p>
+<p>for</p>
+<p>that</p>
+<p>for</p>
+<p>machines</p>
+<p>that</p>
+<p>have</p>
+<p>multiple</p>
+<p>GPUs</p>
+<p>locally,</p>
+<p>right?</p>
+<p>So</p>
+<p>there</p>
+<p>is</p>
+<p>a</p>
+<p>there</p>
+<p>is</p>
+<p>additional</p>
+<p>kind</p>
+<p>of</p>
+<p>machine</p>
+<p>local</p>
+<p>queueing</p>
+<p>element</p>
+<p>that</p>
+<p>takes</p>
+<p>advantage</p>
+<p>of</p>
+<p>the</p>
+<p>fact</p>
+<p>that</p>
+<p>the</p>
+<p>local</p>
+<p>processes</p>
+<p>that</p>
+<p>run</p>
+<p>on</p>
+<p>the</p>
+<p>multiple</p>
+<p>GPUs</p>
+<p>on</p>
+<p>one</p>
+<p>machine</p>
+<p>can</p>
+<p>kind</p>
+<p>of</p>
+<p>negotiate</p>
+<p>with</p>
+<p>the</p>
+<p>queue</p>
+<p>a</p>
+<p>little</p>
+<p>bit</p>
+<p>back</p>
+<p>and</p>
+<p>forth</p>
+<p>which</p>
+<p>over</p>
+<p>the</p>
+<p>network</p>
+<p>you</p>
+<p>know</p>
+<p>there's</p>
+<p>like</p>
+<p>milliseconds</p>
+<p>extra</p>
+<p>that</p>
+<p>that</p>
+<p>would</p>
+<p>add</p>
+<p>and</p>
+<p>so</p>
+<p>uh</p>
+<p>we</p>
+<p>we</p>
+<p>don't</p>
+<p>do</p>
+<p>it</p>
+<p>over</p>
+<p>the</p>
+<p>network</p>
+<p>only</p>
+<p>when</p>
+<p>we</p>
+<p>collocate</p>
+<p>the</p>
+<p>um</p>
+<p>workers</p>
+<p>on</p>
+<p>multiGPU</p>
+<p>machines</p>
+</details>
+<p>而且你知道，我——我的意思是，我们这里谈论的可不是 5% 的差距，对吧？也就是说，你将队列中心化之后，现在集群的吞吐量翻了一倍。所以这——这是相当可观的。呃，我提到了三种不同的运行时。基本上，要么是——你知道——比方说对于纯编码器（encoder-only）模型，我们编写 PyTorch 代码并对其进行优化，而且我们有一个自动研究闭环来优化它。对于 Candle 也是一样。我们在不久前开始尝试使用 Candle。我们仍然无法让它的性能达到接近 PyTorch 的水平。所以它目前更像是一个研究项目。主要在于依赖项方面，比如，你知道，带有 PyTorch 的 Worker Docker 镜像大概有 12 GB，而基本上带有 Candle 的静态链接二进制文件的 Worker，体积大概只有它的 10%，对吧？如果你在乎从冷启动状态唤醒并将这些镜像加载到一堆不同的机器上，那么你知道，从 12 GB 降到 1 GB 左右，这会带来巨大的差异。所以这就是 Candle 背后的动力。只是要从它上面获得与 PyTorch 相同的性能，真、真的是非常困难。然后我们引入了 SGLang，作为一种首选的基准线；也就是说，在对我提到的所有那些参数进行最优调优的情况下，我们的性能至少应该达到和 SGLang 一样好，那些</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+and
+<p>you</p>
+<p>know</p>
+<p>the</p>
+<p>I</p>
+<p>mean</p>
+<p>we</p>
+<p>are</p>
+<p>not</p>
+<p>talking</p>
+<p>about</p>
+<p>like</p>
+<p>5%</p>
+<p>differences</p>
+<p>here</p>
+<p>Right?</p>
+<p>So</p>
+<p>like</p>
+<p>you</p>
+<p>centralize</p>
+<p>the</p>
+<p>queue</p>
+<p>and</p>
+<p>now</p>
+<p>you</p>
+<p>get</p>
+<p>double</p>
+<p>the</p>
+<p>throughput</p>
+<p>of</p>
+<p>the</p>
+<p>cluster.</p>
+<p>So</p>
+<p>this</p>
+<p>is</p>
+<p>this</p>
+<p>is</p>
+<p>uh</p>
+<p>significant.</p>
+<p>Uh</p>
+<p>I</p>
+<p>mentioned</p>
+<p>three</p>
+<p>different</p>
+<p>runtimes.</p>
+<p>So</p>
+<p>basically</p>
+<p>it's</p>
+<p>either</p>
+<p>you</p>
+<p>know</p>
+<p>we</p>
+<p>write</p>
+<p>let's</p>
+<p>say</p>
+<p>for</p>
+<p>models</p>
+<p>that</p>
+<p>are</p>
+<p>encoder</p>
+<p>only</p>
+<p>we</p>
+<p>write</p>
+<p>the</p>
+<p>the</p>
+<p>PyTorch</p>
+<p>code</p>
+<p>and</p>
+<p>we</p>
+<p>kind</p>
+<p>of</p>
+<p>optimize</p>
+<p>it</p>
+<p>and</p>
+<p>we</p>
+<p>have</p>
+<p>a</p>
+<p>auto</p>
+<p>research</p>
+<p>loop</p>
+<p>that</p>
+<p>optimizes</p>
+<p>it.</p>
+<p>Same</p>
+<p>for</p>
+<p>Kendall.</p>
+<p>We</p>
+<p>started</p>
+<p>to</p>
+<p>play</p>
+<p>with</p>
+<p>Kendall</p>
+<p>not</p>
+<p>too</p>
+<p>long</p>
+<p>ago.</p>
+<p>We</p>
+<p>still</p>
+<p>can't</p>
+<p>get</p>
+<p>it</p>
+<p>to</p>
+<p>perform</p>
+<p>anywhere</p>
+<p>near</p>
+<p>the</p>
+<p>PyTorch</p>
+<p>performance.</p>
+<p>So</p>
+<p>it's</p>
+<p>a</p>
+<p>little</p>
+<p>bit</p>
+<p>more</p>
+<p>of</p>
+<p>a</p>
+<p>research</p>
+<p>project.</p>
+<p>It's</p>
+<p>just</p>
+<p>the</p>
+<p>dependency</p>
+<p>like</p>
+<p>you</p>
+<p>know</p>
+<p>the</p>
+<p>worker</p>
+<p>Docker</p>
+<p>image</p>
+<p>with</p>
+<p>PyTorch</p>
+<p>is</p>
+<p>like</p>
+<p>12</p>
+<p>GB</p>
+<p>and</p>
+<p>the</p>
+<p>worker</p>
+<p>do</p>
+<p>basically</p>
+<p>binary</p>
+<p>statically</p>
+<p>linked</p>
+<p>binary</p>
+<p>with</p>
+<p>Kendall</p>
+<p>is</p>
+<p>maybe</p>
+<p>like</p>
+<p>10%</p>
+<p>of</p>
+<p>that</p>
+<p>right</p>
+<p>and</p>
+<p>if</p>
+<p>you</p>
+<p>care</p>
+<p>about</p>
+<p>uh</p>
+<p>kind</p>
+<p>of</p>
+<p>waking</p>
+<p>up</p>
+<p>from</p>
+<p>the</p>
+<p>cold</p>
+<p>state</p>
+<p>and</p>
+<p>loading</p>
+<p>these</p>
+<p>images</p>
+<p>on</p>
+<p>bunch</p>
+<p>of</p>
+<p>different</p>
+<p>machines</p>
+<p>the</p>
+<p>you</p>
+<p>know</p>
+<p>going</p>
+<p>from</p>
+<p>12</p>
+<p>gigs</p>
+<p>to</p>
+<p>a</p>
+<p>gigabyte</p>
+<p>or</p>
+<p>something</p>
+<p>like</p>
+<p>this</p>
+<p>makes</p>
+<p>makes</p>
+<p>a</p>
+<p>huge</p>
+<p>difference.</p>
+<p>So</p>
+<p>that's</p>
+<p>kind</p>
+<p>of</p>
+<p>the</p>
+<p>motivation</p>
+<p>behind</p>
+<p>Kendall.</p>
+<p>It's</p>
+<p>just</p>
+<p>the</p>
+<p>the</p>
+<p>getting</p>
+<p>the</p>
+<p>same</p>
+<p>performances</p>
+<p>from</p>
+<p>PyTorch</p>
+<p>is</p>
+<p>is</p>
+<p>is</p>
+<p>really</p>
+<p>hard.</p>
+<p>And</p>
+<p>then</p>
+<p>SG</p>
+<p>lang</p>
+<p>we</p>
+<p>have</p>
+<p>there</p>
+<p>as</p>
+<p>a</p>
+<p>kind</p>
+<p>of</p>
+<p>uh</p>
+<p>go</p>
+<p>to</p>
+<p>baseline</p>
+<p>like</p>
+<p>we</p>
+<p>should</p>
+<p>perform</p>
+<p>as</p>
+<p>at</p>
+<p>least</p>
+<p>as</p>
+<p>well</p>
+<p>as</p>
+<p>as</p>
+<p>SGANG</p>
+<p>with</p>
+<p>the</p>
+<p>optimal</p>
+<p>tuning</p>
+<p>of</p>
+<p>all</p>
+<p>of</p>
+<p>those</p>
+<p>parameters</p>
+<p>that</p>
+<p>I</p>
+<p>mentioned</p>
+<p>that</p>
+<p>you</p>
+</details>
+<!-- chunk 3/3 -->
+<h3 id="运行时抽象与基准测试拐点" data-reading-heading="">运行时抽象与基准测试拐点</h3>
+<p>必须进行调优。这里有一些数据。比如，当我们用套接字（socket）以及我们那种 Rust sidecar 来包装 SGLang 时，实际上我们能够比裸运行 SGLang 的性能有所提升，仅仅是因为我们在批处理（batching）方面做了一些 SGLang 原生并不做的事情。如果你为 SGLang 开发自定义插件之类的东西，大概也能做到，或许能达到和我们相同的性能，因为你可以直接把相同的逻辑推入 SGLang 核心服务器中。但这样一来，你开发的自定义代码就只能在 SGLang 上运行。而关于小模型，整个经验教训就在于运行环境（runtimes）极其多样，对吧？你并不一定想被绑定在任何单一特定运行时上，因为你知道，我们现在为不同模型参数化的大概有 50 种不同的适配器（adapters）。所以你必须以某种方式应对这种底层复杂性，而这大概不是靠为某一特定运行时构建一堆插件来实现的，大概需要某种抽象——在我们的案例中，就是这种 Rust sidecar 概念，以及后面的套接字。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+have to do the tuning. Um here is some numbers. So for example when we wrap SG lang with the socket and with our kind of RAS side car um actually we can improve on the bare sglank performance just because we kind of uh do something on the batching side that natively sglang doesn't do and probably you can make it to do that if you do like if you develop custom plugins into sglang and stuff like that like probably you can match our performance because you know you can just push the same logic into the SG Glang core server uh but now you are developing custom code that only works with SGLAN and the whole lesson here from small models is that the runtimes are super diverse right you don't want to necessarily get staged with any one particular runtime because there is you know we have I think on the order of 50 different adapters now that that we parameterize for the different models and so you need to somehow deal with this kind of underlying complexity and it's probably not by building a bunch of plugins for one specific runtime it's probably some kind of abstraction uh which in our case is this rust site car concept and then the socket um
+</details>
+<p>现在我来谈谈几个不同的数字。但在基准测试相关的术语方面，拐点（the knee）这个概念是指：当你增加服务器上的流量时，当你向它索取越来越多的吞吐量并且它也给你越来越多的吞吐量时，那是一个类似线性上升的阶段。然后到了某个点，你达到了这样一个位置：你要求更多，但更多的吞吐量并没有出来。于是吞吐量基本趋于平缓，而延迟上升。所以我们把那个点称为“拐点”（the knee），这是基准测试中一个很有用的概念。因为那可以说是饱和点，对吧？那是在不损害延迟的前提下的最大性能。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+now I'll talk about couple different numbers but in terms of like language around benchmarking you know the knee is this concept of like when you ramp up traffic on a server uh when you sort of request more and more throughput from it and it gives you more and more throughput that's when you go kind of linearly up and And then at some point you hit this point where you kind of ask for more and more is not coming. So you kind of flatten out and the latency goes up. So we call that the the knee and it's it's like a useful concept in in benchmarking. Uh because that's kind of the point of saturation, right? That's that's kind of the maximal performance without hurting latency. Um
+</details>
+<h3 id="小硬件上的性能潜力嵌入与生成任务" data-reading-heading="">小硬件上的性能潜力：嵌入与生成任务</h3>
+<p>为了让大家了解在相对较小的硬件上可以实现什么，对吧？以及不同类型的小模型。这是在 RTX Pro 6000 上测得的。我们通常使用 Nvidia L4、A100、RTX Pro 6000、H100，大概就是这个范围。同样，这些 GPU 在任何云端按需获取都容易得多。基本上，大多数大洲都有配额，你知道的。在这类硬件上，对于嵌入模型，即使参数量达到比如数亿级别，基本上每秒也能将数十万个 token 编码为向量嵌入，对吧？所以想象一下，你现在坐在那里调用 OpenAI API 上的文本嵌入（text embedding 3）；相反，你完全可以拥有一块 GPU，每秒往里面推送 50 万个 token，并输出向量，对吧？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+so just to give you some ideas of what is possible on relatively small hardware, right? And different types of small models. So this is measured on the RTX Pro 6000. We we kind of work with Nvidia L4, you know, A100's, RTX Pro 6000, H100, that sort of range. Um, again, those GPUs are much more readily available kind of on demand in any cloud. Basically, most continents have quota, you know. Um and on this kind of stuff uh you can basically get uh for embedding models even up to let's say uh hundreds of millions of parameters you can get hundreds of thousands of tokens per second encoded into the embedding right so imagine you are sitting there now like hitting your text embedding tree on open AAI API instead you could be like having one GPU and push half a million tokens per second into that thing and get the vectors out right
+</details>
+<p>大家能理解这种对比吗？你把每秒 50 万个 token 推入一块甚至都不算太大的单 GPU 中，为你的搜索系统输出向量嵌入；相比之下，如果把所有这些推到某处的托管嵌入端点，要多付几个数量级的钱，对吧？而且这些调用的延迟可以低至几十毫秒。如果你使用 Cohere、OpenAI API 等等，那些都是几百毫秒，对吧？这并不是什么高深莫测的技术，只需几块 GPU 和围绕它们搭建的一些基础设施，你就能获得巨大的成本节约、显著的延迟改善以及相对容易的运维，对吧？所以如果你要从某个切入点开始使用开源模型和小模型，嵌入绝对是不二之选，对吧？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+like is this like connecting right you have half a million tokens that you are pushing into single GPU that's not even that big per second and you are getting out vector embeddings for your search system as opposed to like pushing all of that into a managed embeddings endpoint somewhere and paying like orders of magnitude more money right and you can get latencies like you know low tens of milliseconds for these calls like if you use uh you know cohhere openai APIs and so on these are hundreds of milliseconds right and and this is not rocket science you know you can have just like massive costsaving massive latency improvements and relatively e easy operation um with with like handful of GPUs and some some infra around them right so this is like really low hanging fruit if you start anywhere with open source models small models embeddings are like no-brainer, right?
+</details>
+<p>但这还不止于此。假设你想做命名实体识别（NER），想做多向量搜索，甚至是文本或结构化输出的生成速率等等。针对特定任务的生成模型，每秒也能输出数千个 token；底部那块单 GPU 比如每秒能输出五百个 token。所以假设你在生成合成数据，在为微调或评估生成标注，千万不要在托管端点上做这些。这是个绝佳的任务，因为你对它有控制权，可以审查质量。对于在你自建基础设施上运行的开源模型来说，这再合适不过了。而且，如果你围绕那些 GPU 搭建的基础设施足够合理，性能会随着 GPU 数量呈线性扩展。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Uh but it doesn't end there. So let's say u you want to look at uh named entity recognition, you want to look at let's say multi vector search u even generation rate uh of text or structured outputs and so on. um you you can be getting you know thousands of tokens per second output from uh you know task specific generative models as well per uh like let's say half a thousand per second for for one GPU there at the bottom um and so let's say you are generating synthetic data you are generating annotations for your finetuning for your evals you know don't do that on a on a managed endpoint That's a perfect task because you have it kind of under control. You can survey the quality. That's a perfect task for uh open source model on your own infra. Um and then you like if the infra you have around those GPUs is like reasonable you'll get linear scaling with with the number of those GPUs. Um
+</details>
+<h3 id="服务架构与自动化研究循环" data-reading-heading="">服务架构与自动化研究循环</h3>
+<p>现在，如果你涉足小模型服务（serving），另一个思路是：通常每个模型都会有一个工作节点池（worker pool），对吧？你有一组 worker、一组节点，它们配有 GPU，你把它们启动，预加载模型；由于模型有数千亿参数，需要加载几十分钟；加载完后你很高兴，好的，终于加载好了，现在我有了一个 worker pool。这种思维方式对于小模型并不适用。对。对。快问一下，还剩多少时间？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+now another sort of u idea if you are into small model serving uh is that you don't you know normally um you have kind of worker pool per model right you have a set of workers set of nodes uh they have GPUs you kind of bring those up you preload the models the models load for tens of minutes because there are hundreds of billions of parameters uh and so you're happy okay they finally loaded now I have a worker pool this mentality doesn't really work with small models. Yeah. Yeah. Quickly. How how what's the time left?
+</details>
+<blockquote>
+<blockquote>
+<p>已经超时了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Over.
+</details>
+<blockquote>
+<blockquote>
+<p>噢，六分钟已经超时了。好的。行吧。所以，将多个模型打包在同一块 GPU 上速度更快。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Oh, six minutes is over. Okay. All right. So, pack models on the same GPU is faster.
+</details>
+<p>这里讲的是：你依然希望固定（pin）某些模型，但你也希望基本上根据内存压力来进行惰性加载（lazy loading）和逐出（eviction）。你得想办法把这两者结合起来。这里稍微讲一点自动化研究（auto research）。我们有自动研究循环，用于添加对新模型的支持以及优化它们的性能。我们构建了许多内部工具来进行测量并输入到这些自动研究循环中，以此推动性能指标不断提升。也许最重要的一点是，当我们发布对某个模型的支持时，所有的调优工作都已就绪，对吧？不需要去搞参数寻优（parameter sweep）。我们基本上为整个集群端到端打包了一份配置。这是自动研究循环的架构设置。有一个元循环（meta loop）来构建测试框架，然后运行该循环，上面还有一个仪表板帮助你了解它是如何工作的。我们为此开发了定制 UI。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um, this is a story of how you still want to pin some models, but you want to also do u basically uh lazy loading and eviction uh as a kind of function of memory pressure. You want to figure out how to combine the two. Um there is a little bit about kind of auto research. We have auto research loops for uh adding support for new models and for their performance. Um we build a lot of internal tooling to do the measurement to feed into those out research loops to basically push the numbers forward. Um and maybe perhaps most importantly when we ship support for a model it has all the tuning done right. So there is no okay let's do a parameter sweep. We bundle basically a config for end to end the whole cluster. Um this is a setup for the auto research loop. There is like a meta loop that builds the harness that then runs the loop and there is a dashboard on top that helps you understand how it works. Um, we have custom UIs for that. And
+</details>
+<p>其中的产出之一是一个训练成本仅为 80 美分的 LoRA，作为概念验证，它将德语法律文本的检索质量提升了 18%。讲完了。所以小模型很好，它们相对容易提供服务，实际上便宜得多、速度更快、一样聪明。那个二维码通往我刚才介绍的集群系统的 GitHub 仓库。请给我们点个 star，祝自建托管愉快。谢谢。</p>
+<p>[掌声]</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+one of the outputs of that was a Laura that took 80 cents to train and it improved 18 it improved quality of retrieval on German legalist STEX as a proof of concept by 18%. And that's it. So small models are good. They are relatively easy to serve. uh they are actually much cheaper, faster, is as smart and that QR code goes to the GitHub repo of our cluster that I just described. Give us a star and happy self-hosting. Thank you.
+<p>[applause]</p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/b75ca6b8136204c57640cd163f8a824f8e0a49ec28e25e567992e02bd0d2a2c5.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/b75ca6b8136204c57640cd163f8a824f8e0a49ec28e25e567992e02bd0d2a2c5.md" download="开源小模型自建推理服务与集群架构实践.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Artificial Analysis" class="entity-link company-link">Artificial Analysis</a>, <a href="/search/?q=Nvidia" class="entity-link company-link">Nvidia</a>, <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, <a href="/search/?q=Hugging Face" class="entity-link company-link">Hugging Face</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Qwen 36 27B" class="entity-link product-link">Qwen 36 27B</a>, <a href="/search/?q=GLM 5.2" class="entity-link product-link">GLM 5.2</a>, <a href="/search/?q=GPT 5.1" class="entity-link product-link">GPT 5.1</a>, <a href="/search/?q=PyTorch" class="entity-link product-link">PyTorch</a>, <a href="/search/?q=Candle" class="entity-link product-link">Candle</a>, <a href="/search/?q=SGLang" class="entity-link product-link">SGLang</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>
