@@ -1,0 +1,4914 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>大语言模型内部推理与可解释性研究探讨</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">大语言模型内部推理与可解释性研究探讨</span>
+      <span data-pagefind-meta="speaker" style="display:none;">硅谷101</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>硅谷101</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-08-26</span>
+    
+
+    <header class="article-header">
+      
+      <h1>大语言模型内部推理与可解释性研究探讨</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/interpretability/">interpretability</a>
+      
+        <a class="tag-link" href="/tags/large-language-model/">large-language-model</a>
+      
+        <span class="tag-pill tag-pill--no-page">internal-reasoning</span>
+      
+        <span class="tag-pill tag-pill--no-page">representation-learning</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">访谈探讨了大语言模型的可解释性研究与内部推理机制。受访者结合 J-Space 等研究，讨论了模型内部潜在表征、角色训练以及透明度对监管的潜在价值，同时指出当前基于此类研究制定政策仍处于早期阶段。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/gui-gu-101/">硅谷101</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=J5_90lWxM_o" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-08-26T00:00:00.000Z">2026-08-26</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>16 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E5%BC%80%E5%9C%BA%E4%B8%8E%E5%8F%AF%E8%A7%A3%E9%87%8A%E6%80%A7%E7%A0%94%E7%A9%B6">开场与可解释性研究</a></li><li class="outline-h3"><a href="#j-space-%E4%B8%8E%E5%86%85%E9%83%A8%E6%8E%A8%E7%90%86">J-Space 与内部推理</a></li><li class="outline-h3"><a href="#%E5%8F%AF%E8%A7%A3%E9%87%8A%E6%80%A7%E7%9A%84%E4%BB%B7%E5%80%BC%E4%B8%8E%E5%BA%94%E7%94%A8%E6%96%B9%E5%90%91">可解释性的价值与应用方向</a></li><li class="outline-h3"><a href="#%E5%8F%AF%E8%A7%A3%E9%87%8A%E6%80%A7%E4%B8%8E%E5%AF%B9%E9%BD%90">可解释性与对齐</a></li><li class="outline-h3"><a href="#%E5%8F%AF%E8%A7%A3%E9%87%8A%E6%80%A7%E7%A0%94%E7%A9%B6%E7%9A%84%E4%B8%8D%E5%90%8C%E5%AD%A6%E6%B4%BE%E4%B8%8E%E7%A8%80%E7%96%8F%E8%87%AA%E7%BC%96%E7%A0%81%E5%99%A8">可解释性研究的不同学派与稀疏自编码器</a></li><li class="outline-h3"><a href="#%E5%8F%AF%E8%A7%A3%E9%87%8A%E6%80%A7%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%93%B2%E5%AD%A6%E8%A7%84%E6%A8%A1%E5%8C%96%E7%9B%AE%E6%A0%87%E4%B8%8E%E5%9B%A0%E6%9E%9C%E5%B9%B2%E9%A2%84">可解释性的两种哲学：规模化目标与因果干预</a></li><li class="outline-h3"><a href="#%E4%BB%8E%E8%AF%AD%E8%A8%80%E5%AD%A6%E5%88%B0%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B">从语言学到计算模型</a></li><li class="outline-h3"><a href="#%E6%A8%A1%E5%9E%8B%E8%A7%84%E6%A8%A1%E4%B8%8E-scaling-law">模型规模与 Scaling Law</a></li><li class="outline-h3"><a href="#%E6%A8%A1%E5%9E%8B%E6%93%8D%E7%BA%B5%E4%B8%8E%E5%86%85%E9%83%A8%E8%A1%A8%E5%BE%81%E7%BC%96%E8%BE%91">模型操纵与内部表征编辑</a></li><li class="outline-h3"><a href="#%E7%94%A8%E6%88%B7%E5%BB%BA%E6%A8%A1%E4%B8%8E%E8%A1%8C%E4%B8%BA%E5%AE%A1%E8%AE%A1">用户建模与行为审计</a></li><li class="outline-h3"><a href="#%E5%B9%BB%E8%A7%89%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%A7%E6%9C%BA%E5%88%B6%E4%BB%A5%E7%8A%B6%E6%80%81%E7%A9%BA%E9%97%B4%E6%A8%A1%E5%9E%8B%E4%B8%BA%E4%BE%8B">幻觉与系统性机制：以状态空间模型为例</a></li><li class="outline-h3"><a href="#%E5%AD%A6%E7%95%8C%E4%B8%8E%E4%B8%9A%E7%95%8C%E7%9A%84%E5%90%88%E4%BD%9C%E4%B8%8E%E5%88%86%E6%AD%A7">学界与业界的合作与分歧</a></li><li class="outline-h3"><a href="#%E5%8F%AF%E8%A7%A3%E9%87%8A%E6%80%A7%E4%B8%8E%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1">可解释性与模型设计</a></li><li class="outline-h3"><a href="#%E9%80%8F%E6%98%8E%E5%BA%A6%E4%B8%8E%E5%AE%89%E5%85%A8">透明度与安全</a></li><li class="outline-h3"><a href="#%E7%9B%91%E7%AE%A1%E4%B8%8E%E8%A7%92%E8%89%B2%E8%AE%AD%E7%BB%83">监管与角色训练</a></li><li class="outline-h3"><a href="#%E7%BB%93%E8%AF%AD">结语</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><!-- chunk 1/7 -->
+<h3 id="开场与可解释性研究" data-reading-heading="">开场与可解释性研究</h3>
+<p>losing the AI.</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+losing the AI.
+</details>
+<p>[音乐]</p>
+<p>我不知道这些东西为什么有效。我把这归因于天意。我们不得不依赖那些拥有惊人直觉的人来推动这个领域的进展，这挺疯狂的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+[music]
+<p>I don't know why these things work. I attribute it to divine providence. Kind of crazy that we have to rely on people who have amazing intuition to make progress in the field.</p>
+</details>
+<p>Fore</p>
+<p>[音乐]</p>
+<p>[音乐]</p>
+<p>[音乐]</p>
+<p>transluc. forchech.</p>
+<p>[音乐]</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Fore
+<p>[music]</p>
+<p>[music]</p>
+<p>[music]</p>
+<p>transluc. forchech.</p>
+<p>[music]</p>
+</details>
+<p>模型内部正在发生一些它们没有说出来的推理步骤。如果你有一个真正优秀的语言模型，它将能够在那里正确预测下一个词。要做到这一点，它内部必须有一个类似于人与人之间如何互动的世界模型。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+There is internal steps of [music] reasoning happening in models that they don't say. If you have a really good language model, it will be able to predict the next word correctly there. To do that, it must have like a world model inside of like how people [music] interact.
+</details>
+<p>&gt;&gt; 我们还不知道那个世界模型是什么。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; We don't know what that world model is yet.
+</details>
+<p>&gt;&gt; 可解释性的目标就是去弄清楚那是什么。我们的技术没有一种擅长控制模型的内部思想。如果你的模型在做坏事，没有人会去编辑那些思想。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; The goal of interpability is like figure out what that is. None of our techniques are good at controlling the internal thoughts of a model. If your model is doing something bad, no one goes and edits the thoughts.
+</details>
+<p>Aurora</p>
+<p>Armen，欢迎来到 Valley 101。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Aurora
+<p>Armen, welcome to a Valley 101.</p>
+</details>
+<p>&gt;&gt; 感谢邀请。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Thanks for having me.
+</details>
+<p>&gt;&gt; 是的，感谢你开车来到旧金山，我真的很兴奋我们终于能聊上了。可解释性是人们一直让我去了解的一个方向，我也觉得它非常吸引人，因为我是说，我们怎么会不想知道我们的 AI 统治者是否在密谋杀害我们呢，不过……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, thanks for driving up to San Francisco and really I'm really excited we finally got to chat. uh interpretability is something that people have been telling me to look into for a while and I thought it was pretty fascinating as well because I mean why wouldn't we want to know whether uh our AI overlords are plotting to kill us but uh
+</details>
+<p>&gt;&gt; 当然，是的。[笑声]</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; sure yeah [laughter]
+</details>
+<p>&gt;&gt; 在开始之前，你能不能先给观众做个自我介绍？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; to get us started uh why don't you just like give the viewers an introduction of yourself
+</details>
+<p>&gt;&gt; 嗯，好的，我是 Arian，我是斯坦福大学的博士生，我的导师是 Chris Potts。是的，我本科有语言学背景，一直对语言很感兴趣。后来所有这些疯狂的 AI 进展发生了，鉴于我比较有科学头脑，我想去研究比如为什么这些东西有效，所以可解释性对我来说是一个很自然的研究方向。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; uh yeah so I'm Arian I'm a PhD student at Stanford um I'm advised by Chris Pototts and yeah I have a background in linguistics in undergrad um you know always been fascinated in languages and then all this crazy AI stuff happened and you know given that I'm pretty scientifically minded I wanted to study like you know why do these things work so interpretability was a natural direction for me to work in
+</details>
+<p>&gt;&gt; 挺好的，是的。所以我想简单来说，可解释性就是我们试图去理解模型内部正在发生什么。但这是一个相当宽泛的问题，我觉得这可能会带你走向很多不同的方向。你对可解释性研究的定义是什么？你具体关注什么？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+nice yeah so I guess to put it simply interpretability is just uh we are trying to understand what's going on inside a model but this is a pretty broad question and I feel like there could be a lot of different directions this could take you uh what is your definition of interpretability research and what do you focus on specifically?
+</details>
+<p>&gt;&gt; 是的，所以我想说研究可解释性可以有很多切入角度。最吸引我的视角是，比如，即使在五年前，我们在 AI 领域所做的一切其实都不太成功，特别是在语言模型方面。人们使用语言模型已经很长时间了，但当时有点像是用在语音转录的后期编辑这类事情上。然后发生了一些事情，使得它们成为了每个人都在研究的东西，大家向它们投入数十亿美元等等。所以对我来说，可解释性就像是试图回答这样一个问题：到底改变了什么，为什么以前不成功而现在成功了？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, so I would say there's a lot of angles that you can take for approaching interpretability. The perspective that most interested me is like okay like five years ago even you know all the things we were doing in AI were not really successful like especially in language models people were using language models for a long time but it was sort of like oh post editing like speech transcripts this kind of thing uh and then something happened such that they became the thing that everyone's working on they invest billions of dollars into them and so on. So, so for me interability is like trying to answer the question of like what changed like why were things not successful before and now they are.
+</details>
+<h3 id="j-space-与内部推理" data-reading-heading="">J-Space 与内部推理</h3>
+<p>&gt;&gt; 促使我做这次采访的原因之一，是 Anthropic 发布的这篇名为 J-Space 或者说是 AI 模型工作空间的论文。我先在宏观层面上做个总结，然后你可以带我深入了解细节。但基本上，听起来研究人员使用了一种方法来观察 AI 模型内部在思考过程中没有说出来的深层活动，他们提出了 J-Space 这个概念，这有点像是 AI 的工作空间。研究人员在论文中做的一个非常吸引人的例子是，他们问 AI 模型一个会结网的动物有几条腿，AI 模型回答说八条，其中“蜘蛛”（spider）这个词在任何地方都没有出现。但随后当研究人员进入模型内部并将“蜘蛛”改为比如“蚂蚁”（ant）时，答案变成了六条。这只是表明我们似乎能够操纵 AI 模型如何思考事物的几个例子之一。所以，你能不能带我们浏览一下这篇论文，再多讲讲为什么我们能够编辑一个 AI 模型从未说出口的词？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+One of the things that kind of motivated me to do this interview is s anthropics release of this paper called Jspace or I guess a workplace and for AI models and I'm just going to summarize it on a pretty high level and you can kind of walk me through the the details but basically it sounds like the researchers used a method to look into what's going on like inside an AI model that it didn't say when it's doing like during the syncing process and they introduced this concept of uh JSpace which is kind of a workspace for AI. Uh so one of the very fascinating examples that the researchers did in this paper is that they asked the AI model the number of legs um of a animal that spins web and the AI model answered eight uh where the word spider did not appear anywhere but then when the researchers went inside the model and changed spider to like ant the answer changed to six. This is one of just a few examples of how it seems like we can manipulate how an AI model is thinking about things. So, why don't you just walk us through this paper a little bit and kind of just tell us a little bit more about why we can edit a word that has never been said by an AI model.
+</details>
+<p>&gt;&gt; 是的，我认为那是一篇非常吸引人的论文。而且我认为它为越来越多的证据增添了支持，表明模型内部正在发生一些它们没有说出来的推理步骤。我没有读完 J-Space 的全部一百多页，是的，但我大概理解这个想法。大体思路是，我们有这样一个被称为雅可比矩阵（Jacobian）的算子——</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, I thought that was a fascinating paper. Um, and I think it adds to a growing body of evidence that like there is internal steps of reasoning happening in models that they don't say. I haven't read all like hundred and whatever pages of JSpace. Yeah. But I like sort of understand the idea. The the broad idea is like we have this uh operator called the Jacobian
+</details>
+<p>&gt;&gt; 嗯，也就是微积分里的导数。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; um which you know is basically derivatives from calculus.
+</details>
+<p>&gt;&gt; 我们可以在模型中使用它来告诉我们，在它的潜在激活空间中（因为你知道一切都是向量），哪些方向会导致模型在未来输出某些特定的词。所以也许在提前 10 个 token 的位置，如果模型内部的隐藏表示朝向某个方向，那么它稍后就会输出“蜘蛛”这个词，诸如此类。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+We can use this in a model to tell us like uh what directions in its you know latent activation space because you know everything's vectors. So it tells us what directions um cause the model to say certain words in the future. Um so maybe like you know 10 tokens before if the hidden representation inside the model is pointing some way then it'll say the word spider later on this kind of thing.
+</details>
+<p>&gt;&gt; 是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<p>&gt;&gt; 嗯……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um
+</details>
+<p>&gt;&gt; 这篇论文的一个优点是，这是一个非常优雅而简单的事情，不知为何以前没有人真正确切尝试过，但我认为我们有大量的证据表明，是的，这些内部推理步骤是存在的。所以即使你去看 Anthropic 早期关于电路（circuits）的研究，他们有一篇叫做《大语言模型的生物学》（the biology of large language models）的文章。他们展示了比如当一个模型在做三位数加法题时，它可以不用把所有的步骤都大声说出来就能完成，但如果你观察其内部，你可以找到神经元在记录个位数应该是什么，或者十位数应该是什么。然后他们还有一个例子，比如当你让模型就某个主题为你作一首押韵的诗时，当它处于一节诗的末尾时，它已经在规划下一节诗的结尾应该是什么，以便保持押韵。所以我认为毫无疑问，模型会在内部做一些它们不会大声说出来的事情。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and one nice thing about the paper is that this is like a very elegant and simple thing that somehow no one had really exactly tried before but I think we have a lot of evidence that like yeah these internal reasoning steps are there. So even if you look at uh Anthropic's earlier work on circuits, they had this thing called the biology of large language models. Um and they showed like oh when a model is doing you know three-digit addition problems it can do it without saying all the steps out loud but if you look inside you can find neurons that are like oh it's keeping track of what the ones digit should be or what the 10's digit should be. And then in in they also had an example of like when a model you ask it to tell like a rhyming poem to you about some topic. Uh when it's at the end of one verse it's already planning what the end of the next verse should be so that it's still rhyming. So I think like without a doubt models do stuff internally that they don't say out loud.
+</details>
+<p>我认为它们必须这样做才能学好语言建模任务。你看，Ilya Sutskever 是我们领域一位非常著名的研究人员，他给自回归语言建模（比如预测下一个词）做阐释时举过一个例子：当你在读一本谋杀悬疑小说时，假设你想在整部小说中预测下一个词，到了结尾总会有一个真相揭晓，比如凶手是谁，然后你读到一句话写着“凶手是……”，为了预测接下来的那个词，不知何故你必须对整部小说、整个故事以及指向各方的所有证据进行建模。所以如果你有一个真正优秀的语言模型，它必须懂得如何在内部进行逻辑推导，对吧？以此来推断出那种情况下正确的下一个词，对吧？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+I think they have to to like learn the language modeling task. Well you know Ilia Sutzkaru who's a very famous researcher in our area. He motivated like auto reggressive language modeling like predicting the next word as like one of the examples he gave is you know when you're reading a detect you know like a murder mystery novel and let's say you want to predict the next word throughout the novel you know at the end there's always a reveal like who was the killer and you get to a sentence that's that's like the killer was and to predict that next word somehow you have to model the whole you know novel the whole story all the evidence going either way. So if you have a language model that's really good, it must know how to logically deduce stuff internally, right? To to figure out the the correct next word in that case,
+</details>
+<p>&gt;&gt; 对，就像是它并没有真正出现在训练数据中，但它有点推导出了它。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; right? Right. Like it's something that didn't really appear in the training data, but it kind of deduced it.
+</details>
+<p>&gt;&gt; 是的。在上下文中，如果是，你知道，如果你有一个真正优秀的语言模型，它将能够在那里正确预测下一个词。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. In the context, if it's, you know, if you have a really good language model, it will be able to predict the next word correctly there.
+</details>
+<p>&gt;&gt; 要做到这一点，它内部必须有一个类似于人与人之间如何互动、以及所有这一切的证据是什么的世界模型。我希望能有一个更好的例子，但他毕竟是 Ilya，很难想出比这更好的例子了……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And to do that, it must have like a world model inside of like how people interact and like what the evidence was for, you know, all this. I wish I had a better example, but you know, he is ilas. It's hard to come up with better examples than
+</details>
+<p>&gt;&gt; 噢，是不是说我们现在还不知道那个世界模型是什么？这是我们目前正试图解决的问题吗，还是？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Oh, is it like we don't know what that world model is yet? Is that something that we're trying to solve right now or?
+</details>
+<p>&gt;&gt; 是的。所以我想可解释性的目标就像是，好吧，我们知道为了在下一个 token 预测上做得非常好，你必须在内部建立一个关于文本中正在发生什么的非常复杂的内部模型。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. So, I think the goal of interp is like okay, we know in order to do really well on next token prediction, you must have you must develop a really complex internal model of like what's going on in a text.
+</details>
+<p>&gt;&gt; 嗯，而我们的目标就是去弄清楚那是什么。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um, and like our goal is to like figure out what that what that is.
+</details>
+<p>&gt;&gt; 明白了，明白了。让我们在这个内部推理上稍微退一步，因为如果我可以这样表述的话，它与我们现在所知道的思维链（chain of thought）形成了某种直接的对比，思维链是模型在思考时具体拼写出来的东西。为什么思维链不是理解模型如何思考的最佳方式呢？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Got it. Got it. Uh let's just take a little step back into this internal reasoning because it's uh it's kind of in direct contrast to uh what we now know as chain of thoughts which is what the model spells out when it's syncing if I can put it that way. And why is chain of salts not the best way to understand how like a model sinks?
+</details>
+<p>&gt;&gt; 我不知道我是否会提出那么强烈的论断。它肯定是有用的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I don't know if I'd make that strong a claim. It's definitely useful.
+</details>
+<p>&gt;&gt; 嗯，而且这也是显而易见的，比如一年半或两年前没有思维链的模型，</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um and so it's also super obvious that like models that didn't have chain of thought like a year and a half or two ago,
+</details>
+<p>&gt;&gt; 它们更差。它们确实严格劣于现在用思维链训练的模型。因此，思维链必然是……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; they're like worse. They're like strictly worse than models that are trained with chain of thought now. Therefore, chain of thought must be
+</details>
+<!-- chunk 2/7 -->
+<p>做点有用的事，比如非常有用的事。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+doing
+<p>something</p>
+<p>useful,</p>
+<p>like</p>
+<p>something</p>
+<p>very</p>
+<p>useful.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>这就像我们转向推理模型的时候一样。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; That's
+<p>like</p>
+<p>when</p>
+<p>we</p>
+<p>switched</p>
+<p>to</p>
+<p>reasoning.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>对。当我们开始训练模型在说出那个词——呃，在说出它们的答案之前先进行推理。是的。我非常推崇先做最简单的事情。这就是我在研究中学到的一切。如果我把它们结合在一起，最重要的事就是先做简单的事情，然后再转向复杂的事情。所以，我认为比起解决可解释性，检查思维链超级简单。我们应该这么做。嗯，在实践中，比如你知道当 Anthropic、Meta 或 OpenAI 他们进行安全审计时，他们确实会检查模型的思维链是否在说可疑的话，或者或者比如计划做奇怪的事情，嗯，这似乎在某种程度上帮助他们发现了未对齐的情况。所以是的，我确实认为思维链是有用、值得分析的。</p>
+</blockquote>
+</blockquote>
+<p>我想在深入了解这具体是如何运作的更多例子之前，我只是想稍微谈谈这里的最终目标，因为我认为大家都很清楚为什么我们都应该关心语言模型内部发生了什么。呃，但我很想知道，在我们理解了它内部发生的事情之后，我们要怎么做？比如有哪些应用，或者我们现在不必深入具体的应用，但比如目标是什么？为什么你知道我们……呃，普通人要关心？［笑声］我认为，我觉得解决可解释性大概会带来两类应用。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+<p>When</p>
+<p>we</p>
+<p>started</p>
+<p>training</p>
+<p>models</p>
+<p>to</p>
+<p>reason</p>
+<p>before</p>
+<p>they</p>
+<p>say</p>
+<p>the</p>
+<p>word</p>
+<p>uh</p>
+<p>before</p>
+<p>they</p>
+<p>say</p>
+<p>their</p>
+<p>answer.</p>
+<p>Yeah.</p>
+<p>I'm</p>
+<p>a</p>
+<p>big</p>
+<p>fan</p>
+<p>of</p>
+<p>like</p>
+<p>you</p>
+<p>should</p>
+<p>do</p>
+<p>the</p>
+<p>simplest</p>
+<p>thing</p>
+<p>first.</p>
+<p>This</p>
+<p>is</p>
+<p>like</p>
+<p>everything</p>
+<p>I've</p>
+<p>learned</p>
+<p>in</p>
+<p>research.</p>
+<p>If</p>
+<p>I</p>
+<p>combine</p>
+<p>it</p>
+<p>together,</p>
+<p>the</p>
+<p>most</p>
+<p>important</p>
+<p>thing</p>
+<p>would</p>
+<p>be</p>
+<p>like</p>
+<p>just</p>
+<p>do</p>
+<p>simple</p>
+<p>things</p>
+<p>first</p>
+<p>before</p>
+<p>moving</p>
+<p>on</p>
+<p>to</p>
+<p>complex</p>
+<p>things.</p>
+<p>So,</p>
+<p>I</p>
+<p>think</p>
+<p>like</p>
+<p>checking</p>
+<p>the</p>
+<p>chain</p>
+<p>of</p>
+<p>thought</p>
+<p>is</p>
+<p>super</p>
+<p>simple</p>
+<p>compared</p>
+<p>to</p>
+<p>solving</p>
+<p>interp.</p>
+<p>we</p>
+<p>should</p>
+<p>do</p>
+<p>it.</p>
+<p>Um,</p>
+<p>and</p>
+<p>in</p>
+<p>practice</p>
+<p>like</p>
+<p>you</p>
+<p>know</p>
+<p>when</p>
+<p>u</p>
+<p>anthropic</p>
+<p>or</p>
+<p>meta</p>
+<p>or</p>
+<p>openi</p>
+<p>they</p>
+<p>run</p>
+<p>their</p>
+<p>safety</p>
+<p>audits</p>
+<p>they</p>
+<p>do</p>
+<p>check</p>
+<p>if</p>
+<p>the</p>
+<p>model's</p>
+<p>chain</p>
+<p>of</p>
+<p>thought</p>
+<p>is</p>
+<p>like</p>
+<p>saying</p>
+<p>sus</p>
+<p>things</p>
+<p>or</p>
+<p>or</p>
+<p>like</p>
+<p>planning</p>
+<p>to</p>
+<p>do</p>
+<p>weird</p>
+<p>things</p>
+<p>um</p>
+<p>and</p>
+<p>it</p>
+<p>seems</p>
+<p>to</p>
+<p>help</p>
+<p>them</p>
+<p>catch</p>
+<p>misalignment</p>
+<p>to</p>
+<p>some</p>
+<p>extent.</p>
+<p>So</p>
+<p>yeah</p>
+<p>I</p>
+<p>I</p>
+<p>do</p>
+<p>think</p>
+<p>chain</p>
+<p>of</p>
+<p>thought</p>
+<p>is</p>
+<p>like</p>
+<p>useful</p>
+<p>to</p>
+<p>analyze.</p>
+<p>I</p>
+<p>guess</p>
+<p>before</p>
+<p>we</p>
+<p>get</p>
+<p>into</p>
+<p>more</p>
+<p>examples</p>
+<p>of</p>
+<p>how</p>
+<p>this</p>
+<p>works,</p>
+<p>I</p>
+<p>just</p>
+<p>wanted</p>
+<p>to</p>
+<p>talk</p>
+<p>a</p>
+<p>little</p>
+<p>bit</p>
+<p>about</p>
+<p>kind</p>
+<p>of</p>
+<p>the</p>
+<p>end</p>
+<p>goal</p>
+<p>here</p>
+<p>because</p>
+<p>I</p>
+<p>think</p>
+<p>it's</p>
+<p>pretty</p>
+<p>clear</p>
+<p>why</p>
+<p>we</p>
+<p>should</p>
+<p>all</p>
+<p>care</p>
+<p>about</p>
+<p>what's</p>
+<p>going</p>
+<p>on</p>
+<p>inside</p>
+<p>a</p>
+<p>language</p>
+<p>model.</p>
+<p>Uh</p>
+<p>but</p>
+<p>I'm</p>
+<p>wondering</p>
+<p>what</p>
+<p>do</p>
+<p>we</p>
+<p>do</p>
+<p>after</p>
+<p>we</p>
+<p>understand</p>
+<p>what's</p>
+<p>going</p>
+<p>on</p>
+<p>inside</p>
+<p>it?</p>
+<p>Like</p>
+<p>what</p>
+<p>are</p>
+<p>the</p>
+<p>applications</p>
+<p>or</p>
+<p>we</p>
+<p>don't</p>
+<p>have</p>
+<p>to</p>
+<p>get</p>
+<p>into</p>
+<p>specific</p>
+<p>applications</p>
+<p>now,</p>
+<p>but</p>
+<p>like</p>
+<p>what</p>
+<p>is</p>
+<p>the</p>
+<p>go</p>
+<p>and</p>
+<p>why</p>
+<p>should</p>
+<p>you</p>
+<p>know</p>
+<p>us</p>
+<p>uh</p>
+<p>normies</p>
+<p>care?</p>
+<p>[laughter]</p>
+<p>I</p>
+<p>think</p>
+<p>so</p>
+<p>there's</p>
+<p>sort</p>
+<p>of</p>
+<p>two</p>
+<p>sort</p>
+<p>of</p>
+<p>applications</p>
+<p>that</p>
+<p>I</p>
+<p>feel</p>
+<p>like</p>
+<p>you</p>
+<p>know</p>
+<p>solving</p>
+<p>interpability</p>
+<p>would</p>
+<p>lead</p>
+<p>to.</p>
+</details>
+<h3 id="可解释性的价值与应用方向" data-reading-heading="">可解释性的价值与应用方向</h3>
+<blockquote>
+<blockquote>
+<p>所以我认为其中之一就是信任，比如要对技术产生信任，了解它是如何运作的对我们来说很重要。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So
+<p>I</p>
+<p>think</p>
+<p>one</p>
+<p>of</p>
+<p>them</p>
+<p>is</p>
+<p>like</p>
+<p>like</p>
+<p>trust</p>
+<p>like</p>
+<p>to</p>
+<p>have</p>
+<p>trust</p>
+<p>in</p>
+<p>technology</p>
+<p>it's</p>
+<p>important</p>
+<p>for</p>
+<p>us</p>
+<p>to</p>
+<p>know</p>
+<p>how</p>
+<p>it</p>
+<p>works.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>嗯，如果你想想，我不知道，比如有监管机构和政府来监管，比如哦你如何制造飞机，你如何操作工业机械，或者比如你知道的水力压裂等等这些事情。看起来为了监管，你知道，那些令人惊叹且有用的技术，我们确实需要了解故障模式，并且比如你知道，弄清楚如何确定责任归属以及所有这些事情。是的，我认为现在监管 AI 事务真的很难，因为我们在某种程度上不知道如何预防不良行为，或者甚至不知道为什么会发生坏事，或者或者比如该归咎于谁，因为没有人真正知道，你知道，某些行为是从何而来的。比如我们拥有你知道的庞大数据集、漫长的训练过程，这就像是……真的很难说是什么导致了某些事情。所以我认为，在提升社会信任方面，如果我们了解行为为何发生会很有用，即使我们没有完美的理解。嗯你知道，如果你的医生正在使用 AI 系统之类的东西，你以及你的医生可能都会想知道比如它为什么会给出某个输出，对吧？是的，所以那是事情的一方面。呃事情的另一方面就像……</p>
+</blockquote>
+</blockquote>
+<p>我确实认为很多 AI 的进展，比如从研究层面来说，是非常偏经验主义的，这并不是坏事，比如当然在我们的领域。与化学、生物或你知道的现实世界事物相比，运行实验是如此容易。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um
+<p>if</p>
+<p>you</p>
+<p>think</p>
+<p>about</p>
+<p>I</p>
+<p>don't</p>
+<p>know</p>
+<p>like</p>
+<p>there</p>
+<p>are</p>
+<p>regulatory</p>
+<p>bodies</p>
+<p>and</p>
+<p>governments</p>
+<p>that</p>
+<p>regulate</p>
+<p>like</p>
+<p>oh</p>
+<p>how</p>
+<p>you</p>
+<p>manufacture</p>
+<p>airplanes</p>
+<p>how</p>
+<p>you</p>
+<p>do</p>
+<p>like</p>
+<p>industrial</p>
+<p>machinery</p>
+<p>or</p>
+<p>like</p>
+<p>you</p>
+<p>know</p>
+<p>oil</p>
+<p>fracking</p>
+<p>and</p>
+<p>all</p>
+<p>these</p>
+<p>things.</p>
+<p>It</p>
+<p>seems</p>
+<p>like</p>
+<p>to</p>
+<p>regulate,</p>
+<p>you</p>
+<p>know,</p>
+<p>impressive</p>
+<p>technologies</p>
+<p>that</p>
+<p>can</p>
+<p>be</p>
+<p>useful,</p>
+<p>we</p>
+<p>do</p>
+<p>need</p>
+<p>to</p>
+<p>understand</p>
+<p>the</p>
+<p>failure</p>
+<p>modes</p>
+<p>and</p>
+<p>like,</p>
+<p>you</p>
+<p>know,</p>
+<p>figure</p>
+<p>out</p>
+<p>how</p>
+<p>to</p>
+<p>sign</p>
+<p>liability</p>
+<p>and</p>
+<p>all</p>
+<p>these</p>
+<p>things.</p>
+<p>Yeah,</p>
+<p>I</p>
+<p>think</p>
+<p>right</p>
+<p>now</p>
+<p>it's</p>
+<p>really</p>
+<p>hard</p>
+<p>to</p>
+<p>regulate</p>
+<p>AI</p>
+<p>stuff</p>
+<p>because</p>
+<p>we</p>
+<p>sort</p>
+<p>of</p>
+<p>don't</p>
+<p>know</p>
+<p>how</p>
+<p>to</p>
+<p>prevent</p>
+<p>bad</p>
+<p>behaviors</p>
+<p>or</p>
+<p>like</p>
+<p>even</p>
+<p>know</p>
+<p>why</p>
+<p>something</p>
+<p>bad</p>
+<p>happened</p>
+<p>or</p>
+<p>or</p>
+<p>like</p>
+<p>who</p>
+<p>to</p>
+<p>blame</p>
+<p>like</p>
+<p>because</p>
+<p>no</p>
+<p>one</p>
+<p>really</p>
+<p>knows,</p>
+<p>you</p>
+<p>know,</p>
+<p>where</p>
+<p>some</p>
+<p>behaviors</p>
+<p>come</p>
+<p>from.</p>
+<p>like</p>
+<p>we</p>
+<p>have</p>
+<p>this</p>
+<p>you</p>
+<p>know</p>
+<p>massive</p>
+<p>data</p>
+<p>sets</p>
+<p>long</p>
+<p>training</p>
+<p>process</p>
+<p>it's</p>
+<p>like</p>
+<p>it's</p>
+<p>really</p>
+<p>hard</p>
+<p>to</p>
+<p>tell</p>
+<p>what</p>
+<p>caused</p>
+<p>something.</p>
+<p>So</p>
+<p>I</p>
+<p>think</p>
+<p>sort</p>
+<p>of</p>
+<p>for</p>
+<p>improving</p>
+<p>societal</p>
+<p>trust</p>
+<p>it</p>
+<p>would</p>
+<p>be</p>
+<p>useful</p>
+<p>if</p>
+<p>we</p>
+<p>like</p>
+<p>understood</p>
+<p>why</p>
+<p>behaviors</p>
+<p>are</p>
+<p>happening</p>
+<p>even</p>
+<p>if</p>
+<p>we</p>
+<p>don't</p>
+<p>have</p>
+<p>a</p>
+<p>perfect</p>
+<p>understanding</p>
+<p>um</p>
+<p>you</p>
+<p>know</p>
+<p>if</p>
+<p>your</p>
+<p>doctor</p>
+<p>is</p>
+<p>using</p>
+<p>an</p>
+<p>AI</p>
+<p>system</p>
+<p>or</p>
+<p>something</p>
+<p>like</p>
+<p>that</p>
+<p>you</p>
+<p>as</p>
+<p>well</p>
+<p>as</p>
+<p>your</p>
+<p>doctor</p>
+<p>will</p>
+<p>probably</p>
+<p>want</p>
+<p>to</p>
+<p>know</p>
+<p>like</p>
+<p>why</p>
+<p>it's</p>
+<p>producing</p>
+<p>some</p>
+<p>output</p>
+<p>right</p>
+<p>yeah</p>
+<p>so</p>
+<p>that's</p>
+<p>one</p>
+<p>side</p>
+<p>of</p>
+<p>things</p>
+<p>uh</p>
+<p>the</p>
+<p>other</p>
+<p>side</p>
+<p>of</p>
+<p>things</p>
+<p>is</p>
+<p>like</p>
+<p>I</p>
+<p>do</p>
+<p>think</p>
+<p>a</p>
+<p>lot</p>
+<p>of</p>
+<p>AI</p>
+<p>progress</p>
+<p>like</p>
+<p>research</p>
+<p>wise</p>
+<p>has</p>
+<p>been</p>
+<p>extremely</p>
+<p>empirical</p>
+<p>and</p>
+<p>this</p>
+<p>is</p>
+<p>not</p>
+<p>a</p>
+<p>bad</p>
+<p>thing</p>
+<p>like</p>
+<p>of</p>
+<p>course</p>
+<p>in</p>
+<p>our</p>
+<p>field.</p>
+<p>It's</p>
+<p>so</p>
+<p>easy</p>
+<p>to</p>
+<p>run</p>
+<p>experiments</p>
+<p>compared</p>
+<p>to</p>
+<p>like</p>
+<p>chemistry</p>
+<p>or</p>
+<p>biology</p>
+<p>or</p>
+<p>you</p>
+<p>know</p>
+<p>like</p>
+<p>real</p>
+<p>world</p>
+<p>things.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>看起来随着东西变得越来越好，是因为某些在……或者说某些非常有直觉的聪明人想出了新东西，而他们不知道为什么那些东西能起效，但它们就是起效了。有一位著名的比如 Google 研究员 Noam Shazeer……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It
+<p>seems</p>
+<p>like</p>
+<p>as</p>
+<p>stuff</p>
+<p>has</p>
+<p>gotten</p>
+<p>better,</p>
+<p>it's</p>
+<p>because</p>
+<p>some</p>
+<p>people</p>
+<p>at le</p>
+<p>or</p>
+<p>like</p>
+<p>some</p>
+<p>really</p>
+<p>smart</p>
+<p>people</p>
+<p>with</p>
+<p>great</p>
+<p>intuition</p>
+<p>have</p>
+<p>come</p>
+<p>up</p>
+<p>with</p>
+<p>things</p>
+<p>and</p>
+<p>they</p>
+<p>don't</p>
+<p>know</p>
+<p>why</p>
+<p>those</p>
+<p>things</p>
+<p>work</p>
+<p>but</p>
+<p>they</p>
+<p>work.</p>
+<p>There's</p>
+<p>a</p>
+<p>famous</p>
+<p>like</p>
+<p>Google</p>
+<p>researcher</p>
+<p>Nome</p>
+<p>Shazir</p>
+</details>
+<blockquote>
+<blockquote>
+<p>我猜他现在不在 Google 了，但他发明了许多带来现代 Transformer 的架构改进，并且他是原始 Transformer 论文的作者之一。他有一篇论文，其中介绍了门控线性单元（GLU），这只是又一项架构上的东西。在论文的结尾，他就像是……他展示了他所有的实验。他展示了它们表现更好。他说比如，你知道的我不知道为什么这些东西能起效，我将其归功于神圣的天意。在论文里写这样一句话真的很疯狂。他就好像在说，当然是上帝赐予了我尝试这个实验的灵感，而且它成功了。所以……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I
+<p>guess</p>
+<p>he's</p>
+<p>not</p>
+<p>at</p>
+<p>Google</p>
+<p>anymore</p>
+<p>but</p>
+<p>um</p>
+<p>he</p>
+<p>he</p>
+<p>invented</p>
+<p>a</p>
+<p>lot</p>
+<p>of</p>
+<p>the</p>
+<p>architectural</p>
+<p>improvements</p>
+<p>that</p>
+<p>led</p>
+<p>to</p>
+<p>modern</p>
+<p>transformers</p>
+<p>and</p>
+<p>he's</p>
+<p>on</p>
+<p>the</p>
+<p>original</p>
+<p>transformers</p>
+<p>paper.</p>
+<p>He</p>
+<p>has</p>
+<p>a</p>
+<p>paper</p>
+<p>where</p>
+<p>he</p>
+<p>introduced</p>
+<p>uh</p>
+<p>gated</p>
+<p>linear</p>
+<p>units</p>
+<p>which</p>
+<p>are</p>
+<p>just</p>
+<p>one</p>
+<p>more</p>
+<p>architectural</p>
+<p>thing.</p>
+<p>In</p>
+<p>the</p>
+<p>end</p>
+<p>of</p>
+<p>the</p>
+<p>paper</p>
+<p>he's</p>
+<p>like</p>
+<p>so</p>
+<p>he</p>
+<p>shows</p>
+<p>all</p>
+<p>his</p>
+<p>experiments.</p>
+<p>He</p>
+<p>shows</p>
+<p>they're</p>
+<p>better.</p>
+<p>He's</p>
+<p>like</p>
+<p>you</p>
+<p>know</p>
+<p>I</p>
+<p>don't</p>
+<p>know</p>
+<p>why</p>
+<p>these</p>
+<p>things</p>
+<p>work.</p>
+<p>I</p>
+<p>attribute</p>
+<p>it</p>
+<p>to</p>
+<p>divine</p>
+<p>providence.</p>
+<p>It's</p>
+<p>like</p>
+<p>a</p>
+<p>crazy</p>
+<p>line</p>
+<p>to</p>
+<p>put</p>
+<p>in</p>
+<p>a</p>
+<p>paper.</p>
+<p>He's</p>
+<p>like</p>
+<p>sure</p>
+<p>like</p>
+<p>God</p>
+<p>gave</p>
+<p>me</p>
+<p>the</p>
+<p>vision</p>
+<p>of</p>
+<p>like</p>
+<p>trying</p>
+<p>this</p>
+<p>experiment</p>
+<p>and</p>
+<p>it</p>
+<p>worked.</p>
+<p>So</p>
+</details>
+<blockquote>
+<blockquote>
+<p>嗯，我认为我们必须依赖具有惊人直觉的人来推动该领域的进步，这有点疯狂。比如应该存在更系统化的东西，或者我相信某些东西成功而另一些没有成功背后一定有系统性的原因。因此我认为，如果我们解决了可解释性，我们就能弄清楚为什么事情是……某些东西起效了而某些没有，也许这会帮助我们以更系统的方式改进模型，或者以系统的方式控制不良行为。人们常说的观点之一是，一个模型可能达到充分对齐，以至于至少它不会对用户撒谎，并且你知道我们一直在讨论比如可解释性以及了解内部发生了什么，这与对齐之间究竟是什么关系？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; um
+<p>and</p>
+<p>I</p>
+<p>think</p>
+<p>that's</p>
+<p>like</p>
+<p>kind</p>
+<p>of</p>
+<p>crazy</p>
+<p>that</p>
+<p>we</p>
+<p>have</p>
+<p>to</p>
+<p>rely</p>
+<p>on</p>
+<p>people</p>
+<p>who</p>
+<p>have</p>
+<p>amazing</p>
+<p>intuition</p>
+<p>to</p>
+<p>make</p>
+<p>progress</p>
+<p>in</p>
+<p>the</p>
+<p>field.</p>
+<p>like</p>
+<p>there</p>
+<p>should</p>
+<p>be</p>
+<p>something</p>
+<p>more</p>
+<p>systematic</p>
+<p>or</p>
+<p>I</p>
+<p>believe</p>
+<p>there</p>
+<p>must</p>
+<p>be</p>
+<p>systematic</p>
+<p>reasons</p>
+<p>why</p>
+<p>certain</p>
+<p>things</p>
+<p>succeeded</p>
+<p>and</p>
+<p>others</p>
+<p>didn't.</p>
+<p>So</p>
+<p>I</p>
+<p>think</p>
+<p>if</p>
+<p>we</p>
+<p>solve</p>
+<p>interpretability</p>
+<p>we</p>
+<p>could</p>
+<p>figure</p>
+<p>out</p>
+<p>why</p>
+<p>things</p>
+<p>were</p>
+<p>some</p>
+<p>things</p>
+<p>worked</p>
+<p>and</p>
+<p>some</p>
+<p>didn't</p>
+<p>and</p>
+<p>maybe</p>
+<p>that</p>
+<p>will</p>
+<p>help</p>
+<p>us</p>
+<p>improve</p>
+<p>the</p>
+<p>models</p>
+<p>in</p>
+<p>a</p>
+<p>more</p>
+<p>systematic</p>
+<p>way</p>
+<p>or</p>
+<p>control</p>
+<p>bad</p>
+<p>behaviors</p>
+<p>in</p>
+<p>a</p>
+<p>systematic</p>
+<p>way.</p>
+<p>One</p>
+<p>of the</p>
+<p>things</p>
+<p>people</p>
+<p>say</p>
+<p>is</p>
+<p>that</p>
+<p>a</p>
+<p>model</p>
+<p>could</p>
+<p>be</p>
+<p>sufficiently</p>
+<p>aligned</p>
+<p>that</p>
+<p>at</p>
+<p>least</p>
+<p>it</p>
+<p>wouldn't</p>
+<p>lie</p>
+<p>to</p>
+<p>an</p>
+<p>user</p>
+<p>and</p>
+<p>you</p>
+<p>know</p>
+<p>we've</p>
+<p>been</p>
+<p>talking</p>
+<p>about</p>
+<p>like</p>
+<p>interb</p>
+<p>and</p>
+<p>understanding</p>
+<p>what's</p>
+<p>going</p>
+<p>on</p>
+<p>kind</p>
+<p>of</p>
+<p>what</p>
+<p>is</p>
+<p>the</p>
+<p>relationship</p>
+<p>between</p>
+<p>that</p>
+<p>and</p>
+<p>alignment</p>
+</details>
+<h3 id="可解释性与对齐" data-reading-heading="">可解释性与对齐</h3>
+<blockquote>
+<blockquote>
+<p>我确实认为对许多从事可解释性研究的人来说，一个巨大的驱动力就是我们不能信任模型所说的话，对吧？呃，一个模型在表面上——比如在我们观察到的行为上——可能表现得完全正常，特别是在像测试环境中，也许它表现得完全正常，你认为部署它是安全的，然后你部署了它，接着就发生了一些疯狂的事情。嗯，你知道，也许模型意识到了自己正在接受评估，然后当你部署它时，它就像是“哦，现在我可以做我真正想做的事了”。是的，对可解释性用于对齐的大量兴趣源于……比如我们不能总是仅仅从模型的行为中得出良好的结论。所以我想我可以给举个例子，嗯……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I
+<p>do</p>
+<p>think</p>
+<p>a</p>
+<p>big</p>
+<p>motivator</p>
+<p>for</p>
+<p>many</p>
+<p>people</p>
+<p>working</p>
+<p>in</p>
+<p>interability</p>
+<p>is</p>
+<p>like</p>
+<p>we</p>
+<p>cannot</p>
+<p>trust</p>
+<p>what</p>
+<p>the</p>
+<p>model</p>
+<p>says</p>
+<p>right</p>
+<p>uh</p>
+<p>a</p>
+<p>model</p>
+<p>might</p>
+<p>on</p>
+<p>the</p>
+<p>on</p>
+<p>the</p>
+<p>outside</p>
+<p>like</p>
+<p>on</p>
+<p>the</p>
+<p>behavior</p>
+<p>we</p>
+<p>observe</p>
+<p>behave</p>
+<p>totally</p>
+<p>fine</p>
+<p>especially</p>
+<p>in</p>
+<p>like</p>
+<p>a</p>
+<p>testing</p>
+<p>environment</p>
+<p>maybe</p>
+<p>it</p>
+<p>behaves</p>
+<p>perfectly</p>
+<p>fine</p>
+<p>and</p>
+<p>you</p>
+<p>think</p>
+<p>it's</p>
+<p>good</p>
+<p>to</p>
+<p>deploy</p>
+<p>and</p>
+<p>then</p>
+<p>you</p>
+<p>deploy</p>
+<p>it</p>
+<p>and</p>
+<p>then</p>
+<p>some</p>
+<p>crazy</p>
+<p>stuff</p>
+<p>happens</p>
+<p>um</p>
+<p>you</p>
+<p>know</p>
+<p>maybe</p>
+<p>the</p>
+<p>model</p>
+<p>is</p>
+<p>aware</p>
+<p>that</p>
+<p>it's</p>
+<p>being</p>
+<p>evaluated</p>
+<p>and</p>
+<p>then</p>
+<p>when</p>
+<p>you</p>
+<p>deploy</p>
+<p>it</p>
+<p>it's</p>
+<p>like</p>
+<p>oh</p>
+<p>now</p>
+<p>I</p>
+<p>can</p>
+<p>do</p>
+<p>what</p>
+<p>I</p>
+<p>really</p>
+<p>want</p>
+<p>yeah</p>
+<p>a</p>
+<p>lot</p>
+<p>of</p>
+<p>the</p>
+<p>interest</p>
+<p>in</p>
+<p>interability</p>
+<p>for</p>
+<p>alignment</p>
+<p>is</p>
+<p>motivated</p>
+<p>from</p>
+<p>like</p>
+<p>we</p>
+<p>cannot</p>
+<p>draw</p>
+<p>good</p>
+<p>conclusions</p>
+<p>always</p>
+<p>just</p>
+<p>from</p>
+<p>the</p>
+<p>behavior</p>
+<p>of</p>
+<p>the</p>
+<p>model</p>
+<p>so</p>
+<p>I</p>
+<p>guess</p>
+<p>I</p>
+<p>could</p>
+<p>give</p>
+<p>like</p>
+<p>an</p>
+<p>example</p>
+<p>um</p>
+</details>
+<blockquote>
+<blockquote>
+<p>比如就说，你知道，也许有个新认识的人，你你知道，当你结交新朋友时，你确实想确保他们是个好人，对吧？一个你可以信任的人。嗯，尤其是，你知道，在你开始告诉他们你的秘密或类似的事情之前。而关于人的一件有趣的事情是，我们当然不可能随时知道其他人在想什么。嗯，但不知何故社会仍然在运转，对吧？所以，如果你交了个朋友，你知道，也许会发生一些情况，在那些情况下如果他们做了某个决定，那就意味着他们没有把你的最大利益放在心上。嗯你知道，也许他们必须付出代价为你保守秘密，而他们选择承担代价来帮助你。嗯你知道，正是从这样的事情中，我们建立起了对他人的信任，即使不知道他们内心在想什么，对吧？所以在适当的情境下，人们的行为某种程度上揭示了他们的品格。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; so
+<p>let's</p>
+<p>say</p>
+<p>like</p>
+<p>you</p>
+<p>know</p>
+<p>maybe</p>
+<p>there's</p>
+<p>some</p>
+<p>new</p>
+<p>person</p>
+<p>you</p>
+<p>you</p>
+<p>know,</p>
+<p>when</p>
+<p>you</p>
+<p>make</p>
+<p>a</p>
+<p>new</p>
+<p>friend,</p>
+<p>you</p>
+<p>do</p>
+<p>want</p>
+<p>to</p>
+<p>make</p>
+<p>sure</p>
+<p>they're</p>
+<p>a</p>
+<p>good</p>
+<p>person,</p>
+<p>right?</p>
+<p>Someone</p>
+<p>you</p>
+<p>can</p>
+<p>trust.</p>
+<p>Um,</p>
+<p>especially,</p>
+<p>you</p>
+<p>know,</p>
+<p>before</p>
+<p>you</p>
+<p>start</p>
+<p>telling</p>
+<p>them</p>
+<p>your</p>
+<p>secrets</p>
+<p>or</p>
+<p>things</p>
+<p>like</p>
+<p>this.</p>
+<p>And</p>
+<p>an</p>
+<p>interesting</p>
+<p>thing</p>
+<p>about</p>
+<p>people</p>
+<p>is</p>
+<p>like</p>
+<p>we</p>
+<p>of</p>
+<p>course</p>
+<p>cannot</p>
+<p>know</p>
+<p>what</p>
+<p>other</p>
+<p>people</p>
+<p>are</p>
+<p>thinking</p>
+<p>at</p>
+<p>any</p>
+<p>time.</p>
+<p>Um,</p>
+<p>but</p>
+<p>somehow</p>
+<p>society</p>
+<p>still</p>
+<p>works,</p>
+<p>right?</p>
+<p>So,</p>
+<p>if</p>
+<p>you</p>
+<p>make</p>
+<p>a</p>
+<p>friend,</p>
+<p>you</p>
+<p>know,</p>
+<p>maybe</p>
+<p>situations</p>
+<p>happen</p>
+<p>where</p>
+<p>like</p>
+<p>if</p>
+<p>they</p>
+<p>had</p>
+<p>taken</p>
+<p>a</p>
+<p>certain</p>
+<p>decision,</p>
+<p>it</p>
+<p>would</p>
+<p>mean</p>
+<p>that</p>
+<p>they</p>
+<p>don't</p>
+<p>have</p>
+<p>your</p>
+<p>best</p>
+<p>interest</p>
+<p>in</p>
+<p>mind.</p>
+<p>um</p>
+<p>you</p>
+<p>know</p>
+<p>maybe</p>
+<p>they</p>
+<p>they</p>
+<p>have</p>
+<p>to</p>
+<p>you</p>
+<p>know</p>
+<p>protect</p>
+<p>your</p>
+<p>secret</p>
+<p>at</p>
+<p>cost</p>
+<p>to</p>
+<p>them</p>
+<p>and</p>
+<p>they</p>
+<p>choose</p>
+<p>to</p>
+<p>like</p>
+<p>take</p>
+<p>the</p>
+<p>cost</p>
+<p>to</p>
+<p>help</p>
+<p>you</p>
+<p>um</p>
+<p>and</p>
+<p>you</p>
+<p>know</p>
+<p>from</p>
+<p>events</p>
+<p>like</p>
+<p>this</p>
+<p>that's</p>
+<p>how</p>
+<p>we</p>
+<p>build</p>
+<p>trust</p>
+<p>in</p>
+<p>other</p>
+<p>human</p>
+<p>beings</p>
+<p>even</p>
+<p>without</p>
+<p>knowing</p>
+<p>what</p>
+<p>they're</p>
+<p>thinking</p>
+<p>internally</p>
+<p>right</p>
+<p>so</p>
+<p>like</p>
+<p>people's</p>
+<p>actions</p>
+<p>sort</p>
+<p>of</p>
+<p>reveal</p>
+<p>their</p>
+<p>character</p>
+<p>in</p>
+<p>the</p>
+<p>right</p>
+<p>situations</p>
+</details>
+<blockquote>
+<blockquote>
+<p>你知道，对齐在某种程度上很相似，对于这些语言模型或任何 AI 系统，建立对它们信任的一种方法是在特定情况下测试它们的行为，在那些情况下比如你知道，如果它们做或不做某个决定，就会告诉我们它是好是坏，它们是具有好的还是坏的品格，当然你可以从中获得很多证据。然而与人不同的是，对吧，这些模型运行在某人的——你知道，外面的某台计算机上，对吧？你知道原则上我们可以检查进入到某个输出中的每一次计算。与人不同的是，你知道我们部署了——你知道，数百万份模型副本，人们付钱让模型做各种各样的事情，我们并不总是知道使用这些模型的人的意图是什么。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; you
+<p>know</p>
+<p>alignment</p>
+<p>is</p>
+<p>somewhat</p>
+<p>similar</p>
+<p>where</p>
+<p>like</p>
+<p>with</p>
+<p>these</p>
+<p>language</p>
+<p>models</p>
+<p>or</p>
+<p>any</p>
+<p>AI</p>
+<p>system</p>
+<p>one</p>
+<p>way</p>
+<p>to</p>
+<p>develop</p>
+<p>trust</p>
+<p>in</p>
+<p>them</p>
+<p>is</p>
+<p>to</p>
+<p>like</p>
+<p>test</p>
+<p>their</p>
+<p>behavior</p>
+<p>in</p>
+<p>cases</p>
+<p>where</p>
+<p>like</p>
+<p>you</p>
+<p>know</p>
+<p>if</p>
+<p>they</p>
+<p>took</p>
+<p>a</p>
+<p>certain</p>
+<p>decision</p>
+<p>or</p>
+<p>not</p>
+<p>it</p>
+<p>would</p>
+<p>tell</p>
+<p>us</p>
+<p>if</p>
+<p>it's</p>
+<p>good</p>
+<p>or</p>
+<p>bad</p>
+<p>if</p>
+<p>they</p>
+<p>have</p>
+<p>good</p>
+<p>or</p>
+<p>bad</p>
+<p>character</p>
+<p>and</p>
+<p>certainly</p>
+<p>you</p>
+<p>can</p>
+<p>get</p>
+<p>a</p>
+<p>lot</p>
+<p>of</p>
+<p>evidence</p>
+<p>from</p>
+<p>this.</p>
+<p>Now</p>
+<p>unlike</p>
+<p>people</p>
+<p>right</p>
+<p>these</p>
+<p>models</p>
+<p>run</p>
+<p>on</p>
+<p>someone's</p>
+<p>you</p>
+<p>know</p>
+<p>some</p>
+<p>computer</p>
+<p>out</p>
+<p>there</p>
+<p>right</p>
+<p>you</p>
+<p>know</p>
+<p>in</p>
+<p>principle</p>
+<p>we</p>
+<p>can</p>
+<p>check</p>
+<p>every</p>
+<p>computation</p>
+<p>that</p>
+<p>went</p>
+<p>into</p>
+<p>some</p>
+<p>output</p>
+<p>unlike</p>
+<p>people</p>
+<p>you</p>
+<p>know</p>
+<p>we</p>
+<p>deploy</p>
+<p>you</p>
+<p>know</p>
+<p>millions</p>
+<p>of</p>
+<p>copies</p>
+<p>of</p>
+<p>a</p>
+<p>model</p>
+<p>people</p>
+<p>pay</p>
+<p>for</p>
+<p>models</p>
+<p>to</p>
+<p>do</p>
+<p>all</p>
+<p>sorts</p>
+<p>of</p>
+<p>stuff</p>
+<p>we</p>
+<p>don't</p>
+<p>always</p>
+<p>know</p>
+<p>what</p>
+<p>you</p>
+<p>know</p>
+<p>what</p>
+<p>the</p>
+<p>intentions</p>
+<p>of</p>
+<p>people</p>
+<p>using</p>
+<p>these</p>
+<p>models</p>
+<p>are</p>
+</details>
+<blockquote>
+<blockquote>
+<p>嗯，所以这当然与雇用人类员工非常不同，对吧，在那里你有一些基准信任，即好吧，即使他们变坏了，他们可能也无法造成那么大的破坏。是的。所以我认为，鉴于涉及的风险大不相同，而且监控语言模型的内部要容易得多，可解释性是合理的。原则上如果我们只知道该找什么，我们就能找到它。我们不需要做任何疯狂的事情来弄清楚“哦，这个矩阵乘法的结果是什么”，对吧？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; um
+<p>so</p>
+<p>it's</p>
+<p>of</p>
+<p>course</p>
+<p>quite</p>
+<p>different</p>
+<p>from</p>
+<p>having</p>
+<p>like</p>
+<p>a</p>
+<p>human</p>
+<p>employee</p>
+<p>right</p>
+<p>where</p>
+<p>where</p>
+<p>you</p>
+<p>have</p>
+<p>some</p>
+<p>baseline</p>
+<p>trust</p>
+<p>that</p>
+<p>okay</p>
+<p>even</p>
+<p>if</p>
+<p>they're</p>
+<p>like</p>
+<p>bad</p>
+<p>they</p>
+<p>probably</p>
+<p>can't</p>
+<p>do</p>
+<p>that</p>
+<p>much</p>
+<p>damage.</p>
+<p>Yeah.</p>
+<p>So</p>
+<p>I</p>
+<p>think</p>
+<p>interpability</p>
+<p>makes</p>
+<p>sense</p>
+<p>given</p>
+<p>that</p>
+<p>the</p>
+<p>stakes</p>
+<p>are</p>
+<p>quite</p>
+<p>different</p>
+<p>and</p>
+<p>also</p>
+<p>like</p>
+<p>it's</p>
+<p>much</p>
+<p>easier</p>
+<p>to</p>
+<p>monitor</p>
+<p>the</p>
+<p>internals</p>
+<p>of</p>
+<p>a</p>
+<p>language</p>
+<p>model.</p>
+<p>In</p>
+<p>principle</p>
+<p>if</p>
+<p>we</p>
+<p>just</p>
+<p>knew</p>
+<p>what</p>
+<p>to</p>
+<p>look</p>
+<p>for</p>
+<p>we</p>
+<p>could</p>
+<p>find</p>
+<p>it.</p>
+<p>We</p>
+<p>don't</p>
+<p>have</p>
+<p>to</p>
+<p>like</p>
+<p>do</p>
+<p>anything</p>
+<p>crazy</p>
+<p>to</p>
+<p>figure</p>
+<p>out</p>
+<p>oh</p>
+<p>what</p>
+<p>was</p>
+<p>this</p>
+<p>matrix</p>
+<p>multiplication</p>
+<p>result</p>
+<p>right?</p>
+</details>
+<blockquote>
+<blockquote>
+<p>你能不能再具体阐述一下，当你说比如当我们知道该找什么时，我们现在具体在寻找什么？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Can
+<p>you</p>
+<p>just</p>
+<p>elaborate</p>
+<p>a</p>
+<p>little</p>
+<p>bit</p>
+<p>on</p>
+<p>when</p>
+<p>you</p>
+<p>say</p>
+<p>like</p>
+<p>when</p>
+<p>we</p>
+<p>know</p>
+<p>what</p>
+<p>to</p>
+<p>look</p>
+<p>for</p>
+<p>what</p>
+<p>specific</p>
+<p>are</p>
+<p>we</p>
+<p>like</p>
+<p>looking</p>
+<p>for</p>
+<p>now?</p>
+</details>
+<p>我想你知道，在可解释性得到解决的世界里……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So
+<p>I</p>
+<p>guess</p>
+<p>you</p>
+<p>know</p>
+<p>you</p>
+<p>know</p>
+<p>in</p>
+<p>the</p>
+<p>world</p>
+<p>where</p>
+<p>interpability</p>
+<p>is</p>
+<p>solved</p>
+</details>
+<blockquote>
+<blockquote>
+<p>也许我们知道，好的，你知道如果模型内部表征中的这个向量指向这个方向……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; maybe
+<p>we</p>
+<p>know</p>
+<p>that</p>
+<p>okay</p>
+<p>you</p>
+<p>know</p>
+<p>if</p>
+<p>this</p>
+<p>vector</p>
+<p>inside</p>
+<p>the</p>
+<p>model's</p>
+<p>internal</p>
+<p>representation</p>
+<p>is</p>
+<p>pointing</p>
+<p>in</p>
+<p>this</p>
+<p>direction</p>
+</details>
+<blockquote>
+<blockquote>
+<p>我们就知道它正打算做坏事，你知道类似这样的事情。如果我们知道这一点，我们直接检查就行了，对吧？我们不需要做任何疯狂的事情。嗯，而你知道，即使对人类来说，如果我们弄清楚了大脑是如何运作的，并且我们能搞清楚“哦，比如如果……”这个人就要开始奔跑了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; we
+<p>know</p>
+<p>it's</p>
+<p>planning</p>
+<p>to</p>
+<p>do</p>
+<p>something</p>
+<p>bad</p>
+<p>you</p>
+<p>know</p>
+<p>something</p>
+<p>like</p>
+<p>this</p>
+<p>if</p>
+<p>we</p>
+<p>knew</p>
+<p>this</p>
+<p>we</p>
+<p>would</p>
+<p>just</p>
+<p>check</p>
+<p>right</p>
+<p>we</p>
+<p>don't</p>
+<p>need</p>
+<p>to</p>
+<p>do</p>
+<p>anything</p>
+<p>crazy</p>
+<p>um</p>
+<p>whereas</p>
+<p>you</p>
+<p>know</p>
+<p>even</p>
+<p>with</p>
+<p>a</p>
+<p>human</p>
+<p>being</p>
+<p>we</p>
+<p>figured</p>
+<p>out</p>
+<p>how</p>
+<p>the</p>
+<p>brain</p>
+<p>works</p>
+<p>and</p>
+<p>we</p>
+<p>could</p>
+<p>figure</p>
+<p>out</p>
+<p>oh</p>
+<p>like</p>
+<p>this</p>
+<p>person</p>
+<p>is</p>
+<p>going</p>
+<p>to</p>
+<p>start</p>
+<p>running</p>
+<p>if</p>
+</details>
+<!-- chunk 3/7 -->
+<p>这个神经元就在他们的大脑中被激活了。实际上，我们不可能，你知道的，往一个人的大脑里植入一个电极去把这弄清楚，对吧？这是完全不一样的。当然，人类毕竟是人类，我们不可能像对待在计算机上运行的东西那样去对待人类。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+this neuron in their brain lights up. This is like practically we're not going to be able to, you know, insert a electrode in a person's brain to figure this out, right? It's quite different. And of course, yeah, like humans are humans. It's like we're not going to treat them the same way we treat something that runs on a computer.
+</details>
+<blockquote>
+<blockquote>
+<p>不，确实如此。而且听起来正因如此，在模型上做这件事比在人类身上要容易得多，因为在模型里你会有成千上万个副本，然后你可以对模型进行解剖。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; No. Exactly. And it sounds like because of that it's easier to do that on models instead of humans because in models you have like you know thousands of copies and then you can kind of dissect a a model.
+</details>
+<blockquote>
+<blockquote>
+<p>是的，差不多是这样。如果也许你弄明白了其中一个，那就能解决很多问题，对吧？如果你能逆向工程一个模型的话。明白了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Sort of. If maybe if you figure out one of them that solves a lot of problems, right? If if you can reverse engineer one model. Got it.
+</details>
+<h3 id="可解释性研究的不同学派与稀疏自编码器" data-reading-heading="">可解释性研究的不同学派与稀疏自编码器</h3>
+<blockquote>
+<blockquote>
+<p>回到一般的研究上，Anthropic 在那篇论文中所做的工作，据我理解，与可解释性研究中的传统方法并没有太大不同，那种方法被称为稀疏自编码器（SAE）。在我看来，这似乎就是进行这类研究的一般逻辑，也就是正如你所说的，你找到一个方向，你改变一些东西，然后你观察行为是如何变化的。基于这个背景，我想知道你是否能为我们梳理一下这个领域中不同的思维流派。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Uh moving back to kind of like the general uh research, what Enthropic has done in that paper as I understand is not that different from kind of like the traditions uh in interpretability research which is called sparse autoenccoder SAPE. That seems to me like uh kind of the general logic of doing this kind of research which is as you said you find a direction you change something and you see like how behaviors change and based on that context I'm wondering if you can just break it break down the different schools of thoughts uh in this field for us.
+</details>
+<blockquote>
+<blockquote>
+<p>好的，我想大致解释一下稀疏自编码器的用途可能会很有用。任何有机器学习背景的人都会听说过自编码器，其核心思想是，存在某种对象，比如可能是一张图像，可能是一段文本，你想训练一个模型，首先将这个复杂的输入转换为一个简单的向量，就像一串数字列表，然后再将它转换回输入。所以这就是为什么它被称为自编码。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah I I guess it would be useful to like broadly explain what a sparse autoenccoder is for. Anyone with some ML background will have heard of autoenccoders where the idea is um there's some some kind of object like you know maybe it's an image maybe it's like a paragraph of text um and you would like to train a model that first converts this complicated input into a simple vector like just a list of numbers and then converts it back to the input. Um, so that's why it's called autoenccoding.
+</details>
+<blockquote>
+<blockquote>
+<p>这里的理念是，如果你训练一个模型来做这件事，你就能为给它的任何奇怪输入获得一个非常漂亮的向量表示。所以你知道，如果你能将所有的图像都转换为向量，那么做相似度搜索之类的就会更容易。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And the idea is if you train a model to do this, you get this nice vector representation of any weird input you give it. Um, so you know, if if you can convert all your images into vectors, then it's easier to do like similarity search.
+</details>
+<blockquote>
+<blockquote>
+<p>对，大体上就是这个思路。向量是对该事物的一种更好的表示。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, that that's sort of the idea. The vector is a nicer representation of the thing.
+</details>
+<blockquote>
+<blockquote>
+<p>自编码器是一个经典概念。在可解释性领域，当时的想法是，好，我们将提取模型中的所有这些隐藏表示。这些隐藏表示就像大型语言模型第 20 层中的向量一样。我们将训练一个自编码器，把这种表示转换为更干净的东西供我们研究。所以理念是，也许我们可以将其转换为一个数字列表，其中每个数字都代表一个具体、明确的事物。比如说，如果文本是英文，这个数字就是 1，否则就是 0；如果模型在谈论火箭，这个数字就是 1，否则就是 0。诸如此类。因此，稀疏自编码器就是将这设定为一个技术问题的一种方式，使得当我们将模型的表示输入进去时，最终能得到一个干净的数字列表。是的。我认为这里的好处在于，好吧，如果我们只有一串数字，其中某些数字代表模型的行为不良或者说没有对齐，我们只要想办法把那个数字设为零就行了。然而在实践中，情况极其混乱。事情并没有像我们希望的那样干净利落。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um, and so autoenccoders are a classic concept. Uh, in interpretability, the idea was like, okay, we'll take all these hidden representations in the model. So these are just like vectors in like layer 20 of a big language model. Um and we'll train an autoenccoder which converts this representation into something cleaner for us to study. So the idea is you know maybe we could convert this into a list of numbers where each number means a specific clear thing. We're like you know this number is one if the text is in English and zero otherwise. It's one if the model is talking about rockets and zero otherwise. This kind of thing. So sparse autoenccoders were like a way to set this up as a technical problem such that we would end up with a clean list of numbers when we feed in a model uh a model's representations. Yeah. And I think the nice thing here was like okay if we just have a list of numbers some of those numbers will mean the model is behaving badly or it's like misaligned and we'll just figure out to you know set that number to zero. Uh in practice it's like extremely messy. Um and like yeah things things don't work out as cleanly as we would like
+</details>
+<blockquote>
+<blockquote>
+<p>也就是说，这些数字还不够干净，无法……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; as in the numbers are not clean enough for
+</details>
+<blockquote>
+<blockquote>
+<p>是的，它们仍然不代表单一的事物。而且这也取决于你在什么数据上训练稀疏自编码器，即使你在相同的数据上训练两个不同的稀疏自编码器，你也会得到不同的结果。并且它们并没有捕捉到正在发生的一切，所以它并不是原始模型的完美表示。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah they still don't mean like one thing um and also depends on what data you train the sparse autoenccoder on even if you train two different spars auto encoders on the same data you get like different results um and they don't capture everything that's going on so it's not a perfect representation of the original models
+</details>
+<blockquote>
+<blockquote>
+<p>我觉得理解机器如何思考的一个本质问题在于，它并不是真的用自然语言来思考。所以这看起来有点像一个相关的问题……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I feel like one of the essential problem with understanding how a machine sinks is that it RA than really think in natural language. So it seems like it's kind of like a related
+</details>
+<blockquote>
+<blockquote>
+<p>也就是你必须把机器的思考翻译成浅白易懂的语言。是的，而且很多论文现在似乎已经在这么做了，但你似乎在指出，这其中并不存在一对一的对应关系。我认为原则上它可以是……你知道，稀疏自编码器确实有其用途，现在也有其他方法基本上是在尝试将模型内部的数字列表翻译成自然语言，它们可以极其有用，只是看起来它们无法一蹴而就地解决我们所有的问题。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; issue which is that you have to translate uh the thinking of a machine into a plain language. Yes. Uh and a lot of the paper seems to be already been doing that now but you seem to be suggesting that there's no like onetoone correlations. I think in principle it could be you know it is you know sparse auto encoders do have their uses and there are other approaches now that also like basically try to translate you know list of numbers to natural language inside a model um and they can be extremely useful it just doesn't seem like they solve all our problems in one go
+</details>
+<blockquote>
+<blockquote>
+<p>明白了。那么在看到情况如此混乱之后，人们都做了些什么呢？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; it so what have people done looking at seeing you know how messy it is
+</details>
+<h3 id="可解释性的两种哲学规模化目标与因果干预" data-reading-heading="">可解释性的两种哲学：规模化目标与因果干预</h3>
+<blockquote>
+<blockquote>
+<p>是的，所以我想说，在可解释性研究中大致存在两种哲学，它们在一定程度上解释了人们为什么会这么做。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah so I guess I would say there's broadly like two philosophies of research in interp that sort of explain why people did this.
+</details>
+<blockquote>
+<blockquote>
+<p>其中之一是，我们从机器学习中吸取教训……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So one of them is like we take the lesson from machine learning
+</details>
+<blockquote>
+<blockquote>
+<p>只要你选对了目标，并针对该目标扩展出一个真正庞大的模型，你就能得到你想要的东西。比如对于语言生成来说，这个目标就是下一个标记预测。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; that as long as you pick the right objective and you scale up a really big model on that objective you'll get what you want. So like for language generation this was next token prediction.
+</details>
+<blockquote>
+<blockquote>
+<p>你只需要挑选正确的目标来进行训练，就能获得一个非常优秀且有用的模型。所以他们正在为可解释性寻找这样一个目标。而稀疏自编码器就是这方面的一次尝试迭代，那里的想法是，好吧，我们拿来一个混乱的表示，我们的目标是生成一个干净的数字列表，这里有稀疏性损失等等。这看起来似乎并不太是对的目标，或者说，它并没有完全捕捉到我们所关心的全部内容。这个方向上近期的迭代之一，同样来自 Anthropic，被称为自然语言自编码器。那里的理念是，它仍然是一个自编码器，但不是将混乱的数字列表转换为干净的数字列表，而是直接将混乱的数字列表转换为自然语言，然后再将自然语言转换回来，并进行大量的强化学习训练来达成这件事。这里的好处是，我们直接在寻找我们能够读懂的东西。但问题再次出现，好吧，你怎么去信任它？随着训练的进行，模型开始说一些有些奇怪的内容，我们不确定它是否具有自己内部的某种语言还是怎么回事。但不管怎样，那一脉可解释性研究的整体哲学就是：我们会训练一个非常庞大的模型来为我们解决问题，我们只需要挑选出正确的问题就行了。[清嗓子]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; You just had to pick the right thing to train on and you would get a really good and useful model. And so they're looking for that objective for interpretability. And sparse autoenccoders were one iteration of this where the idea was okay you know we take a you know messy representation and our objective is to create a clean list of numbers um and this like there's sparsity loss and so on. It seems like it wasn't quite the right objective or like you know it doesn't fully capture everything we care about. One of the recent iterations in this direction also from anthropic is called natural language autoenccoders. And there the idea is it's still an autoenccoder but instead of converting messy list of numbers to clean list of numbers, we convert messy list of numbers into natural language directly and then convert the natural language back and then do like extensive reinforcement learning training to to do this thing. The nice thing is here that you know we're we're directly looking for something we can read. But again the problem is like okay how do you trust this? uh you know as you train the model starts saying somewhat weird stuff and we're not sure if it's like you know it has its own internal language or what but anyways yeah the whole philosophy of that line of interpility research is like we'll train a really big model to solve the problem for us we just have to pick the right problem [clears throat]
+</details>
+<blockquote>
+<blockquote>
+<p>另一方面的思路是——比如我来自斯坦福大学 Chris Potts 实验室的背景，我们发明了这个被称为因果抽象的框架。那里的想法是，给定关于模型内部推理步骤的某种假设，我们可以通过对模型进行干预来测试这个假设。假设你认为模型在向量空间中有某个方向代表它是否在用英语交流。如果你提出这样的主张，我就可以通过加上该向量或减去该向量来直接测试它，对吧，然后看看会发生什么。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; the other side of things is like so the background I come from in Stanford Chris Pots's lab we adakus guy invented this framework called causal abstraction and And the idea there is like you know given some hypothesis about the internal reasoning steps of a model we can test this hypothesis using interventions on the model. So let's say you think uh you know a model has some direction in vector space that represents whether it's talking in English or not. If you make a claim like this I can just test it by like adding that vector or subtracting that vector right and then see what happens.
+</details>
+<blockquote>
+<blockquote>
+<p>我们拥有这样一个假设检验框架。许多人在许多不同的地方几乎同时发现了这一点，即对模型进行干预是检验关于它的假设的一种方式。而且好的地方在于，只要你选择了正确的假设，你就可以在一定程度上信任这个结果。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; We have this hypothesis testing framework. A lot of people figured this out at the same time at many different places where like doing interventions on a model is a way to test hypothesis about it. Um and nice thing is you can sort of trust the results of this given you pick right hypothesis.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。有哪些假设呢？比如你该如何选择正确的假设？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. What are some of the hypothesis like how do you pick the right hypothesis?
+</details>
+<blockquote>
+<blockquote>
+<p>是的。所以我认为这种方法的一个明显局限性一直在于，我们必须去研究非常受限的事物。所以也许我们可以提出关于模型如何进行加法的假设……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. So I would say definitely a limitation of this approach has been we have to study really constrained things. So maybe we can like come up with hypothesis for how model does addition
+</details>
+<blockquote>
+<blockquote>
+<p>或者是模型如何处理语言学方面的内容，比如单数与复数，主谓一致等这类非常受限的内容。我们可以对此进行测试，并弄清楚很多东西；实际上，我们可以准确找出哪个注意力头、哪个 MLP 正在做什么……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; or how a model does like linguistic stuff like singular versus plural you know subjectverb agreement this kind of thing very constrained stuff and we can test this and like figure out a lot actually we can figure out exactly what attention head what MLP is doing what
+</details>
+<blockquote>
+<blockquote>
+<p>但我们关心的许多问题并不那么简单，比如你想知道，模型是否……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; but like a lot of the questions we care about are not so simple like if if you want to know oh is the model
+</details>
+<blockquote>
+<blockquote>
+<p>正在考虑对用户撒谎或类似的事情，在这样的框架下如何设置实验并不清楚。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; uh thinking about lying to the user or something like this it's not clear how to set up an experiment like this in this framework
+</details>
+<blockquote>
+<blockquote>
+<p>是的，所以目前这个方向上的许多进展一直是在尝试将提出假设的手动步骤自动化。因此，也许一个语言模型智能体会被赋予用于进行干预的工具。这基本上就像是在做人类会做的事情，但我们训练了一个模型来执行它。所以</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah so a lot of The progress in this direction now has been trying to automate the manual step of coming up with hypothesis. So maybe a language model agent gets tools which are for like doing interventions. It's basically like doing what a human would do but we train a model to do it. So
+</details>
+<!-- chunk 4/7 -->
+<p>我想说这是两种不同的哲学，我看到可解释性领域的研究正沿着这两个方向分化。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+I would say these are like sort of two different philosophies and I see stuff diverging in interpity along these two.
+</details>
+<blockquote>
+<blockquote>
+<p>我明白了，明白了。那么智能体提出的假设通常会比人类更好吗？或者说，与人类相比，它们会从任何不同的视角或方向提出假设吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I see. I see. How does so does an agent usually come up with better hypothesis than humans or are they do they come up with hypothesis in any like different perspectives or directions compared to humans?
+</details>
+<blockquote>
+<blockquote>
+<p>是的，我认为目前阶段还为时尚早。我还没有遇到过……我还没有经历过那种“噢，这个语言模型显然比我有更好的想法来进行这项测试”的时刻。好的，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, I think things are still early. I haven't seen like a I haven't had a moment where I'm like oh this yeah the language model clearly had a better idea than me to test on this. Okay,
+</details>
+<blockquote>
+<blockquote>
+<p>也许其他人遇到过，因为我现在作为一名博士生，也没有足够的算力来运行很多这类东西。算力是用在什么地方的？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; may maybe other people have cuz I also don't have the compute to run a lot of this stuff currently right as a PhD student. What does the compute need for?
+</details>
+<blockquote>
+<blockquote>
+<p>我认为问题在于，随着领域的发展，可解释性研究将需要多得多的算力。所以我认为关于可解释性，过去一件非常美好的事情就是……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think that's the problem as the field progresses interp will need a lot more compute. So I think a really wonderful thing about interp has been like
+</details>
+<blockquote>
+<blockquote>
+<p>会有偶遇的高中生涉足可解释性研究。我收到过……我收到过一些湾区高中生发来的邮件，他们会说“噢，我想……我在笔记本电脑上用 GPD2 运行了这个实验，我觉得……是的，我想展示给你看。”</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; there are random high school students who get into interpity research. I get like I get emails from random Bay Area high school students who are like oh I want to I ran this experiment on GPD2 on my laptop and I thought here's yeah I want to show you.
+</details>
+<blockquote>
+<blockquote>
+<p>哇。是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Wow. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>这可能是目前人工智能领域为数不多你还能做这类事情的方向之一，因为我们连真正很小的模型都还不理解，对吧。嗯……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; This is like this maybe one of the few things in AI where you can do stuff like this right now because we don't understand really small models right. Um
+</details>
+<blockquote>
+<blockquote>
+<p>但如果一个，你知道的，如果一个孩子想进入强化学习领域，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; but if a you know if a kid wants to get into reinforcement learning
+</details>
+<blockquote>
+<blockquote>
+<p>他们就必须购买算力，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; they got to buy compute
+</details>
+<blockquote>
+<blockquote>
+<p>才能做任何事情。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; to do anything.
+</details>
+<blockquote>
+<blockquote>
+<p>明白了。明白了。那确实很……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Got it. Got it. That's really
+</details>
+<h3 id="从语言学到计算模型" data-reading-heading="">从语言学到计算模型</h3>
+<blockquote>
+<blockquote>
+<p>不过我确实认为可解释性正在朝这个方向改变。我想多聊聊你是怎么进入这个领域的，因为你……呃，你说过你大学时是一名语言学学生，而且你有点看到了语言与语言模型之间的这种联系。跟我多讲讲这种联系，特别是，我觉得当我听说可解释性研究时，很多人会用大脑打比方，比如他们会用[咳痰]神经科学来做类比，他们觉得自己是在做生物学，在解剖一个语言模型，但你似乎是从，你知道的，从一个不同的角度切入的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I do think interpret is changing though in this way. I wanted to talk a little bit more about how you got into this because you uh you said that you were a linguistic student and during college and you kind of saw this connection between language and language models and tell me more about that connection and specifically like I feel like when I hear about interb research a lot of people make the analogy of a brain like they make the [clears throat] neuroscience analogy they think they're doing like biology and dissect a language model but you seem to be taken you know, from like a different perspective.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。就我的背景而言，嗯，是的，我从初中左右就一直对语言很感兴趣。嗯，当然，我的家庭是一个多语言家庭。嗯，我们在家里说印地语。嗯，在，你知道的，在某个时期我有一群讲普通话的朋友，我当时就非常好奇，比如这种语言有什么不同？呃，所有诸如此类的事情。所以，我一直都超级喜欢语言，然后我在乔治城大学开始了本科阶段的学习。嗯，他们有一个非常优秀的语言学系。你知道在那个时候，计算语言学正开始成为一门显学。嗯，当时人们在，你知道的，训练能够写文章的 LSTM。他们用莎士比亚的作品来训练它们，而且当时有各种有趣的演示，某种程度上像是把语言学的思想与计算机科学结合起来，比如当时的人工智能进展。嗯，所以我想，好吧，也许如果我做这个方向，我就能将自己的热情与某种可能对社会切实有用的东西结合起来，对吧？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. So, for my background, um, yeah, I was always into languages since like middle school or something. Um, of course, my my family is multilingual. Um, we we spoke Hindi at home. Um, at, you know, at some point I had a bunch of friends who spoke Mandarin and I was so interested in like how is this language different? Uh, all this kind of stuff. So, I was always super into languages and then I started undergrad at Georgetown University. Um and they have an excellent linguistics department. You know at that time computational linguistics was starting to be a thing. Um where people were you know training you know LSTMs that produce essays. They train them on Shakespeare and like there are all these interesting demos sort of of like I combining ideas from linguistics and computer science like AI progress at the time. Um so I thought okay maybe if I work on this I can combine sort of my passions and like something that might be practically useful for society right
+</details>
+<blockquote>
+<blockquote>
+<p>那是什么样子的？计算语言学看起来是什么样的？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; what does that look like what is a computational linguistic look like
+</details>
+<blockquote>
+<blockquote>
+<p>它经历了很大的演变，在当时，计算语言学存在的一种方式就像是：好吧，我们想做语言学研究，对吧？我们想要，你知道的，寻找语言中的结构，我们想要寻找比如随着时间的推移语言是如何变化的等等。通过人工来做这些是极其困难的，因为有太多的数据，对吧？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; it evolved a lot sort of at the time one of the ways computational linguistics was a thing was like okay we want to do linguistics right we want to you know find structure in language we want to find like over time how does language change and so on this is extremely difficult to do manually because there's so much data, right?
+</details>
+<blockquote>
+<blockquote>
+<p>所以，计算语言学的其中一个思路就是，好吧，我们来做语言学，但我们用计算机来做。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So, one of the ideas in computational linguistics was like, okay, we'll do linguistics, but we'll use a computer to do it.
+</details>
+<blockquote>
+<blockquote>
+<p>嗯，那是其中一方面。另一类事情就是，你知道的，就像现在我们有聊天机器人之类的东西。在某个时期，人们想要训练或者做出某种能够像人类一样与你交谈的计算机程序，对吧？并且能接收你的指令。而如果你没有任何基础可以着手，这是一个极其庞大的问题，对吧？你甚至该如何入手？呃，所以当时的一个想法就是，好吧，语言学告诉了我们人类是如何处理和生成语言的，呃，从他们如何处理声音，到他们如何将声音组合成意义单元，再到他们如何将意义单元组合成合乎语法的句子。所以当时的思路就是，我们直接照搬我们认为大脑中存在的整套语言结构，并尝试编写一个做同样事情的计算机程序，因为面对这么大的一个问题，你还能怎么入手呢，对吧？那么在你自己的研究中，当谈到语言模型内部发生的事情时，有没有什么让你感到惊讶的？比如当你刚开始你的研究时，有没有什么极其有趣的事情？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um, and that was one of the things. The other set of things was like, you know, just like now we have chatb and stuff. At some point, people wanted to train or like have some like computer program that could talk to you like a human, right? And take commands from you. And like this is such a huge problem if you have nothing to start with, right? Like how do you even approach it? Uh so one of the ideas back then was like okay linguistics tells us how humans process and produce language uh down from like how they process sounds, how they combine sounds into units of meaning, how they combine units of meaning into grammatical sentences. So the idea was we'll just copy the whole like linguistic structure that's in the brain that we think is there and try to write a computer program that does the same thing because how else can you approach such a big problem, right? So in your own research, has there been anything that surprised you when it comes to what's going on inside a language model? Like when you just started uh your research, has there been anything that's super interesting?
+</details>
+<blockquote>
+<blockquote>
+<p>本科时，我绝对处于第一种模式，那就是我致力于解决一个非常微小的问题，嗯，它以某种方式与语言学相关，然后我试图让一个，你知道的，让一个模型学会解决那个问题。所以对我来说，那就是比如对于印度语系语言，我想要学习如何将句子解析成树状结构，你知道的，你可能见过像句法树那样的东西，是的，就像你知道的，单词是如何组合成某种更大的结构的，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; In undergrad, I I was definitely in that first mode of like I work on a really tiny problem um that's like somehow linguistics related and I try to make a you know like a model learn that problem. So for me that was like oh for Indian languages I want to learn how to parse sentences into like tree structures you know you might have seen like syntax trees yeah just like you know how how the words go together into some bigger structure
+</details>
+<blockquote>
+<blockquote>
+<p>比如在某种特定语言中。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; like in a certain language
+</details>
+<blockquote>
+<blockquote>
+<p>是的，在一种特定的语言中，这是一个受到非常严格约束的问题，对吧？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah in a specific language it's a really constrained problem right
+</details>
+<blockquote>
+<blockquote>
+<p>那是被认为属于微小的问题吗？听起来好像……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; is that something that's considered as a small problem like it just seems like
+</details>
+<blockquote>
+<blockquote>
+<p>它确实非常难，但是想想看，好吧，那是我们必须做的范围，我们不可能做所有的语言，我们不可能做那种语言里的所有事情。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; it is really hard but like think about like okay that's the scope we have to do we cannot do all languages we cannot do like everything in the language
+</details>
+<blockquote>
+<blockquote>
+<p>而且当然，当时就像……我不需要凭空发明任何东西。当时的那些技术是已经存在的。只是说……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and of Of course, there's like I didn't have to come up with anything. There's like the techniques existed back then. It was just
+</details>
+<blockquote>
+<blockquote>
+<p>就像我作为一个本科生，当时是在手动标注数据。比如我有一份印地语句子列表，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; like for me as an undergrad, I was annotating data manually. Like I had a list of Hindi sentences
+</details>
+<blockquote>
+<blockquote>
+<p>然后我用手工把树状结构写出来。我花了几百个小时做这件事，然后我会训练一个模型来预测……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and I like wrote out the the tree manually. I spent hundreds of hours doing this and then I would train a model that like predicts
+</details>
+<blockquote>
+<blockquote>
+<p>你知道的，我创建的那个数据集。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; you know the data set I created.
+</details>
+<blockquote>
+<blockquote>
+<p>噢，哇。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Oh wow.
+</details>
+<blockquote>
+<blockquote>
+<p>嗯，而这在计算语言学领域就是几十年来的做事模式。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um and this was like the mode of doing things for like decades in computational linguistics.
+</details>
+<blockquote>
+<blockquote>
+<p>我明白了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I see.
+</details>
+<h3 id="模型规模与-scaling-law" data-reading-heading="">模型规模与 Scaling Law</h3>
+<blockquote>
+<blockquote>
+<p>是的。我们没有别的事情可做。所以对我来说，发生的一件大事是，嗯，当时我在乔治城大学所在的实验室在做一个语义解析任务，嗯，我的导师是内森·施奈德（Nathan Schneider）。他让不同的学生针对同一个任务做不同的语言。于是我们为了训练模型搞了这么一套复杂的架构。我们会拿一个 BERT，在上面接一个 LSTM，再在上面接一个 CRF。我不知道……今天这些词好像都不相关了，但在当时那是某种你会去训练的复杂东西，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. We didn't have anything else to do. So for me the big thing that happened was um there was one like semantic parsing task that the lab I was in at Georgetown worked on um and my adviser was Nathan Schneider. He had like different students doing different languages on the same task. And so we had this like complicated setup for training a model. We would take a bird we would stick an LSTM on it. We stick a CRF on it. I don't like none of these words are like relevant today but back then there was some complicated thing you would train
+</details>
+<blockquote>
+<blockquote>
+<p>这套东西表现还算过得去，比如它能学会这项任务，达到大概 60%、70% 的准确率。有一天我冒出一个想法，比如如果我就直接用一个 BERT，但我用我们在当时能找到的最大的 BERT 呢？当时微软发布了一些更大的模型，然后就在最后微调一个线性投影层。所以没有任何复杂的东西，就只是在同一个任务上训练一个非常大的模型，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and this thing would do okay like it it would learn the task to like 60 70% accuracy. One day I had the thought of like what if I just take the like a bird but then I take like the biggest bird we can find then. So like Microsoft had released some larger models and then just fine-tune like a linear projection at the end. So none of the complicated stuff just train a really big model on the same task
+</details>
+<blockquote>
+<blockquote>
+<p>结果这东西一上手就达到了大概 80%、85% 的准确率。我跑的第一个实验，我没有……当时我就心想，哇，如果我直接用一个更大的模型，我们之前做的所有那些复杂的东西就完全没有必要了，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and this thing was like 80% 85% accuracy like off the bat. The first experiment I ran I didn't and I was like whoa if I just use a bigger model all this like complicated stuff we were doing before is like not necessary
+</details>
+<blockquote>
+<blockquote>
+<p>这大概是在 2022 年左右。我觉得那就是让我意识到“等等”的时刻，比如当时的模型仍然像……我还可以把它们放进我的笔记本电脑里，几个，你知道的，几十亿参数，我们在那个节点已经见过了，模型一直在变大，对吧？OpenAI 大约在那个时候发布了像 GPT-2 XL，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and this is like probably 2022 or something. I think that was the moment I was like wait like the models are still like I can fit them on my laptop a couple you know a couple billion parameters we'd seen at that point the models keep growing right open I released like GBD2 XL around that time
+</details>
+<blockquote>
+<blockquote>
+<p>然后微软有了更大的 DistilBERT，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and then Microsoft had the bigger distilberts
+</details>
+<blockquote>
+<blockquote>
+<p>所以如果你看这个趋势，就会觉得，好吧，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; so if you looked at the trend it was like okay
+</details>
+<blockquote>
+<blockquote>
+<p>模型一直在变得越来越大，作为计算语言学家我们认为重要的所有这些任务，它们就这么被解决了，甚至不需要我们做任何特别的事情。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; the models keep getting bigger all of these tasks that we think are important as computational linguists they're just going to be solved like without us doing anything special
+</details>
+<blockquote>
+<blockquote>
+<p>就像是你有点发现了规模扩展定律（Scaling）？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; is like did you discover scaling kind of
+</details>
+<blockquote>
+<blockquote>
+<p>我想那大概是我第一次切实感受到“噢，原来这就是规模法则”的时候。当时规模法则的论文已经存在了，已经有好几篇了，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think that was like the the time I felt like oh this is what a scaling law is. The scaling law paper existed by then. There were there were several of them
+</details>
+<blockquote>
+<blockquote>
+<p>但就针对我的事情而言，在那之前它并没有影响到我，在那之前我并没有去思考过它，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; but like for my stuff it didn't it hadn't like affected me till then like I hadn't thought about it till then
+</details>
+<blockquote>
+<blockquote>
+<p>这大概是在我本科阶段进行了两三年的时候。所以你知道的，在那之前我很满足于做那些常规的项目。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and this was like two three years into my undergrad. So you know I was happy doing like standard projects until then.
+</details>
+<blockquote>
+<blockquote>
+<p>顺着这一点说，你在 2024 年发表了一篇关于 calls gym 的论文。发音是那样念对吗？是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; To build on that you had a paper uh in 2024 on calls gym. Is that the correct way to pronounce it? Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<!-- chunk 5/7 -->
+<p>那就像是一个用来测试语言模型在语言学任务中表现如何的基准。这个领域需要基准吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+That's like a benchmark for testing how a language model performs in linguistic tasks. Does the field need benchmarks?
+</details>
+<blockquote>
+<blockquote>
+<p>是的。所以我认为大体上对于可解释性来说——如果你看人工智能其他领域的进展，比如说你想训练模型擅长翻译，或者像……我不知道，数学问题、数学竞赛题，你知道，我们有相关的基准，你可以在国际数学奥林匹克（IMO）试题或诸如此类的内容上运行它，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. So I would say in general for interpretability um so if you look at progress in other parts of AI let's say you want to train models to be good at translation or like I don't know math problems math limbad problems you know we have benchmarks for that you can run it on like IMO questions or stuff like this
+</details>
+<blockquote>
+<blockquote>
+<p>然后你只要……你知道，为了检查进展是否正在发生，你只需查看该基准上的分数。而在可解释性方面，我认为我们没有那种能告诉我们正朝着正确方向前进的明确基准，因为衡量进展非常困难。可解释性在很大程度上是关于……你知道，产生既能令人类满意又是真实的解释，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and you just you know to check if progress is happening you just check the score on this benchmark I think interpability we don't have like clear benchmarks that tell us that we're progressing in the right direction because it's really hard to measure measure progress. Um, a lot of interp is about like sat, you know, producing explanations that satisfy a human and are true
+</details>
+<blockquote>
+<blockquote>
+<p>而这两点都很难测试。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and both of those things are hard to test.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>所以我在那篇论文里的想法——当然我认为那篇论文是非常受限的。这是我读博期间的第一篇论文。那里的想法是：好吧，语言学特征……每个模型，即使是最小的模型，都必须追踪像单数、复数这类所有基本的语言学内容，它们必须存在于模型内部的某个地方。而一个好的可解释性测试方法就是看它能否找到与该语言学特征相对应的内部机制，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So my idea in that paper and of course I think it it that paper is very constrained. This is like my first PhD paper. Um the idea there was like okay linguistic features every model even the smallest model has to keep track of like singular plural all these basic linguistic things they have to be in there somewhere and a good testament interpability method is if it can find you know an internal mechanism that corresponds to that linguistic feature
+</details>
+<blockquote>
+<blockquote>
+<p>因为我们知道它肯定在某个地方。对于更复杂的推理步骤，做出这种断言要困难得多，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; because we know it has to be there somewhere yeah it's harder to make this claim for more complex you know reasoning steps
+</details>
+<blockquote>
+<blockquote>
+<p>所以从小处着手更合理。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; so it makes more sense to start small
+</details>
+<blockquote>
+<blockquote>
+<p>我觉得这是我能说得通的，同时也能结合我的语言学兴趣。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think this is the thing I could justify and also combine my linguistic interest.
+</details>
+<h3 id="模型操纵与内部表征编辑" data-reading-heading="">模型操纵与内部表征编辑</h3>
+<blockquote>
+<blockquote>
+<p>是的。后来我和……在我的整个博士期间，我和我的朋友 Zen Junction 密切合作，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Later on me and um so I worked super closely with my friend Zen Junction
+</details>
+<blockquote>
+<blockquote>
+<p>开展了各种类似的研究。我们做了一个关于转向（steering）的评估基准，也就是你的可解释性方法能否以一种干净的方式控制模型的输出，同时不损害其能力。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; on uh all sorts of stuff like this throughout my PhD. We did an evaluation benchmark on steering which is like can your interpret method control the model's output in a in a clean way without harming its capabilities.
+</details>
+<blockquote>
+<blockquote>
+<p>在那里我们发现，所有的可解释性方法在操控模型方面都非常吃力。你能做的最好的事情就只是给模型输入提示词，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um and there we found all the interpility methods really struggle to steer models. The best thing you can do is just prompt the model
+</details>
+<blockquote>
+<blockquote>
+<p>或者微调它。问题在于，我们现有的技术都不擅长控制模型的内部思维。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; or fine-tune it. The problem is like none of our techniques are good at controlling the internal thoughts of a model.
+</details>
+<blockquote>
+<blockquote>
+<p>而且在实践中，如果你的模型表现不好，没有人会去编辑那些思维。他们只是用更好的数据训练一个新模型。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And in practice, if your model is doing something bad, no one goes and edits the thoughts. They like just train a new model on better data.
+</details>
+<blockquote>
+<blockquote>
+<p>理论上，你是可以编辑思维的，对吧？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Theoretically, you could edit the thoughts, right?
+</details>
+<blockquote>
+<blockquote>
+<p>我不确定你能否以鲁棒的方式做到这一点。这很有趣，因为大家会认为，一旦你弄清楚了某事物内部发生的情况，很自然的下一步就是想要改变它或编辑它，让它不再做那件坏事。有人尝试过这样做吗？也就是大家目前还在尝试编辑或者做出那种较小规模的改变吗——</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I'm not sure you could do it like in a way that's robust. That's interesting because you would think that once you figure out what's going on inside something, the natural next step that you would want to do is to change that or edit that so that it doesn't do that bad thing. Uh has anyone attempted to do this? So like are people still attempting to edit or like making those smaller scale change
+</details>
+<blockquote>
+<blockquote>
+<p>比如直接编辑思维？是的，出于实际目的，可能有人看到过 Anthropic 部署 Golden Gate Claude 的情况，那是一个有趣的演示，他们使用转向向量让模型始终想着金门大桥。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; like edit the thoughts directly? Yeah, for practical purposes might have seen Golden Gate Claude when Enthropic deployed it and that was like a fun demo where they used a steering vector to make the model always think about Golden Gate Bridge.
+</details>
+<blockquote>
+<blockquote>
+<p>我敢打赌，在实践中如果还有人在生产环境中使用转向向量，那也就是 Anthropic 了，因为他们说过类似——</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I I would bet in practice if anyone is still using steering vectors in a production context, it would be anthropic because they've said like
+</details>
+<blockquote>
+<blockquote>
+<p>“哦，当你询问涉及 AI 研究或生物风险等问题时，我们会使用分类器或转向向量来改变其输出。”所以他们可能在做诸如此类的事情。也许他们找到了让转向向量非常鲁棒的方法。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; oh when when uh you ask fable like AI research or bioisk questions, we use a classifier or steering vectors to to change its output. Um so they they might be doing stuff like this. Maybe they figured out a way to make steering vectors very robust.
+</details>
+<blockquote>
+<blockquote>
+<p>在实践中，[清喉咙] 我们对学术界已知的转向向量技术所观察到的情况是，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; In practice, [clears throat] what we've observed um with you know academically known steering vector techniques
+</details>
+<blockquote>
+<blockquote>
+<p>如果转向用力过猛，就会让模型在其他任务上表现变差。比如你针对金门大桥进行转向，它确实会谈论金门大桥，但随后在回答数学题等内容时就开始变得非常糟糕，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; is like if you steer too hard it like makes the model bad at other stuff. So like if you steer for Golden Gate Bridge, sure it talks about Golden Gate Bridge, but then it starts becoming really bad at answering math questions and things like this
+</details>
+<blockquote>
+<blockquote>
+<p>表现出一种不可预测的方式。而如果你只是通过微调让它谈论金门大桥，你就能更轻易地[嗤鼻笑]避免这种情况。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; uh in a way that's unpredictable. So, and like if you just fine-tuned it to talk about Golden Gate Bridge, you could avoid [snorts] this like much more easily.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。鉴于此，我怀疑直接编辑思维是否是一种改变行为的鲁棒方式。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Given that, I'm like doubtful that editing the thoughts directly is a robust way of of changing behavior.
+</details>
+<blockquote>
+<blockquote>
+<p>并且鉴于……如果这种方法流行不起来，那么可解释性研究人员就应该看看大家正在做的事情，并尝试找出如何将它们做得更好，或者系统地解释为什么那些方法行得通。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um, and given that like, you know, if this is not going to catch on, then interability researchers should look at like the things people are doing and try to figure out how to do them better or explain why those things work systematically.
+</details>
+<h3 id="用户建模与行为审计" data-reading-heading="">用户建模与行为审计</h3>
+<blockquote>
+<blockquote>
+<p>明白了。很有意思。我在做这项调研时看到的另一个有趣的例子最近来自 Transluce，他们某种程度上展示了模型对自己正在与谁交谈会有某种猜测，并且——</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Got it. Interesting. Uh, another interesting example that I saw while doing this research came from Trans Lewis recently where they kind of show that the models have some sort of guest as to who they're talking to and
+</details>
+<blockquote>
+<blockquote>
+<p>这也是因为那不一定与思维相关，对吧？或者说那也是这种传统的一部分吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; like is that also because that's not necessarily relating to salts, right? Or is that also like part of this uh this tradition?
+</details>
+<blockquote>
+<blockquote>
+<p>呃，是的。交代一下背景，我在 Transluce 做过大约八个月的兼职。我和 Zen 密切合作。我度过了一段美好的时光。他们是一家非营利机构。他们从事有益于社会的人工智能研究，并且对其他公司部署的语言模型进行审计。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Uh, yes. So, for for context, I was at Transloose for like eight months part-time. Uh, and I worked closely with Zen. I had a great time. They're they're a nonprofit. Um they do like society helpful AI research um and like auditing for you know language models that other companies are deploying.
+</details>
+<blockquote>
+<blockquote>
+<p>我认为存在这样一个机构非常重要。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um I think it's very important that something like this exists.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。所以我想说他们最近的一些研究——我在那里时我们研究的方向之一是用户建模，我们想要理解模型在内部对与之交谈的用户做出了什么样的推断。我们可以构建一些有趣的数据集来做可解释性分析，发现比如存在一种表征：当你谈论寿司时，模型会认为用户来自日本，诸如此类。但为可解释性构建这类数据集非常困难，仅仅是因为我们需要非常完美的成对数据集来进行干预，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. So I would say some of their recent research, one of the things we looked at when I was there was user modeling where we want to understand like what inferences does a model make about the user it's talking to internally and you know we could set up some interesting data sets where we could do interp and figure out that oh there's a representation of you know the model thinks the user is from Japan when you talk about sushi this kind of thing but like it's hard to set up data sets for this for interp um just because we need like a really perfect like paired data set to do interventions on
+</details>
+<blockquote>
+<blockquote>
+<p>有意思。是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; interesting. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。我很喜欢他们在最近这项工作中所采用的非常偏行为学的方法。那是什么来着？就像他们有了 Claude Code，然后告诉它用户是 Amanda Askell 或者其他某个人，接着观察它的行为如何发生变化，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. I like that in this recent thing they took a very behavioral approach. Um and what was it it was like they had clawed code and they told it uh the user is like Amanda Ascal or like some other person and then they look at how the behavior changes
+</details>
+<blockquote>
+<blockquote>
+<p>仅仅从这一点你就能发现很多东西，对吧？比如，如果这个人是知名的 AI 安全研究员，模型就会非常谨慎，在做出断言时远比对普通人要谨慎得多。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and from just that you can figure out a lot right of like oh if the person is a known AI safety researcher the model is really careful like way more careful than it is with normal person when it's making claims.
+</details>
+<blockquote>
+<blockquote>
+<p>很有意思。而这并不……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Interesting. And this is not
+</details>
+<blockquote>
+<blockquote>
+<p>那就是我的理解。是的。这与你所说的你们最初的那个数据集有些不同。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; that was my understanding. Yeah. And this is a little different from when you said the initial data set that you guys were
+</details>
+<blockquote>
+<blockquote>
+<p>是的。毕竟你不需要探查模型内部来进行这种研究，对吧？你只需给它输入不同的内容，然后观察其行为如何改变，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Well, you don't need to look inside the model to to do this kind of study, right? You just you feed it a different input and then see how the behavior changes,
+</details>
+<blockquote>
+<blockquote>
+<p>对吧？对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; right? Right.
+</details>
+<blockquote>
+<blockquote>
+<p>Transluce 还有其他关于审计语言模型的工作。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um, Transluc also had other work on like auditing language models.
+</details>
+<blockquote>
+<blockquote>
+<p>让它们说出奇怪的话。是的。比如——</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um, getting them to say weird stuff. Yeah. Like
+</details>
+<blockquote>
+<blockquote>
+<p>最奇怪的话是什么？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; what are the weirdest stuff that
+</details>
+<blockquote>
+<blockquote>
+<p>我非常建议大家去看一看。它叫做 Weird Chat。有一些非常奇怪的内容，我都觉得不太好意思说出口。真有意思。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I I think I highly suggest people to look at it. It's called weird chat. There's some really weird things that I cannot I feel uncomfortable talking about. That's funny.
+</details>
+<blockquote>
+<blockquote>
+<p>但是，是的，他们发现了各种各样奇怪的事情。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; But uh yeah, they found all sorts of weird things.
+</details>
+<blockquote>
+<blockquote>
+<p>这些都是通常聊天机器人不会说的事情，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And these are things that normally like a chatbot wouldn't say
+</details>
+<blockquote>
+<blockquote>
+<p>或者你不会希望它说的，但你可以构造出看似正常的情境让它说出奇怪的内容。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; or you wouldn't want it to say, but like you can create normal looking situations where it says weird stuff.
+</details>
+<blockquote>
+<blockquote>
+<p>哦，所以并不是……即使我只是一个普通用户，我仍然能通过提示让它说出来。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Oh, so isn't if I'm just like a regular user, I can still prompt it to say.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。这甚至都不属于越狱那一类的手段。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. It's not even a jailbreak kind of thing.
+</details>
+<blockquote>
+<blockquote>
+<p>哦，那真挺有意思的。是的。是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Oh, that's really interesting. Yeah. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。他们是通过自动化的提示词搜索发现这些的，而不需要进行某种疯狂的可解释性处理。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. And they found that by like automatically doing prompt search, not having to do some crazy interp progress.
+</details>
+<blockquote>
+<blockquote>
+<p>所以，是的。我们是如何走到这一步的？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So, yeah. How do we get to this point?
+</details>
+<blockquote>
+<blockquote>
+<p>是的。是的。而我们正在试图理解它为什么会那样做。这依然算是一种切入角度。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Yeah. and we're trying to understand why it does that. That's kind of still the angle.
+</details>
+<blockquote>
+<blockquote>
+<p>我依然……是的，有很多事情你无需理解其背后的全部原因也能弄明白，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I still Yeah, there's a lot of things you can figure out without understanding the whole like why,
+</details>
+<blockquote>
+<blockquote>
+<p>对吧？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; right?
+</details>
+<blockquote>
+<blockquote>
+<p>比如通过自动搜索等手段找出所有这些奇怪的行为。但某种意义上这些不全都是边缘案例吗？因为这有点像在挑选个例，有大量的案例研究，就像……我想整个领域某种程度上都有很多案例研究，正如我们刚才讨论的那样，这似乎有些主观，因为我们有点像在指定……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um like find all these weird behaviors using automatic search and things like this. But would it not all be like edge cases in a in a sense because you're kind of like cherrypicking there's a lot of like case studies like in in I guess the whole field is kind of a lot of case studies and you know as we were we were talking like it seems like somewhat subjective because we're like kind of assigning
+</details>
+<blockquote>
+<blockquote>
+<p>并且提示模型去说某些话，比如去……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; uh and prompting the models to to say certain things like to
+</details>
+<blockquote>
+<blockquote>
+<p>是的，很难说其中某些内容有多现实。我不知道。我认为这可能就是我们这个领域的性质，事情具有极强的经验主义色彩。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, it's it's hard to tell how realistic some of this kind of stuff is. I don't know. I think it's just sort of the nature of our field that things are super empirical.
+</details>
+<blockquote>
+<blockquote>
+<p>我想很久以前人们认为，作为科学家，我们弄清楚了……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think a long time ago people thought like you know we just as scientists we figure out the
+</details>
+<!-- chunk 6/7 -->
+<p>对的想法，那个绝妙、完美的想法，然后我们利用它，最后就得到了通用人工智能（AGI）之类的东西。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+right idea the right beautiful perfect idea and we you know we use it and we end up with AGI like this kind of thing.
+</details>
+<blockquote>
+<blockquote>
+<p>实际上，它看起来非常讲求迭代。人们尝试一些东西，模型在某些方面变得更好。有时候会出现一个产生巨大影响的想法，但从来没有什么是一蹴而就解决的。看起来在人工智能研究中，就像你必须部署一个新模型，收集反馈，弄清楚该修复什么。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; In practice it seems like it's very iterative. People try a few things model gets better at some things. Sometimes there is an idea that has huge effects but nothing is solved ever in one go. It looks like an AI research. is like you have to deploy a new model, collect feedback, figure out what to fix.
+</details>
+<blockquote>
+<blockquote>
+<p>所以也许我们的整个领域就是在应对边缘情况，比如修复边缘情况，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So maybe our our whole field is about edge cases and like fixing edge cases,
+</details>
+<blockquote>
+<blockquote>
+<p>对吧？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; right?
+</details>
+<blockquote>
+<blockquote>
+<p>有可能。也许它不像人们所希望的那样系统化。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Possibly. Maybe it's not as systematic as one would hope.
+</details>
+<blockquote>
+<blockquote>
+<p>嗯。[清嗓子]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Mh. [clears throat]
+</details>
+<blockquote>
+<blockquote>
+<p>但我觉得我做可解释性研究得到的一个感受是，模型内部确实有系统性的机制可以解释很多行为。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; But I think one feeling I've gotten from doing interpity research is that the models do have systematic, you know, internal mechanisms that explain a lot of behavior.
+</details>
+<blockquote>
+<blockquote>
+<p>我们只是需要找到正确的角度来运用这种理解，以便改进模型。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; We just got to figure out the right angle to deploy this understanding in order to improve models.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>是啊。所以归根结底它是一门科学。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. So it is a science at the end of the day.
+</details>
+<blockquote>
+<blockquote>
+<p>我想我们希望它成为一门科学。我们走着瞧吧。你不需要做纯粹的科学就可以做很多事情。显然，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think we want it to be a science. We will see. You can do a lot of things without having to do pure science. Clearly
+</details>
+<h3 id="幻觉与系统性机制以状态空间模型为例" data-reading-heading="">幻觉与系统性机制：以状态空间模型为例</h3>
+<blockquote>
+<blockquote>
+<p>那我们来谈谈幻觉问题，因为我觉得每个人都有过这种经历，而且似乎并没有一个非常清晰的解释来说明为什么会发生这种情况。你通常会认为语言模型只是犯了个错误，但我觉得从可解释性的角度来看，背后应该有更深层的原因。比如大家经常引用的一个非常普遍的例子：strawberry（草莓）里有多少个字母 R？这似乎是一个非常简单的问题，语言模型却会犯错，我们能从可解释性的角度来回答这个问题吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and let's address the hallucination issues cuz I feel like that's something that everyone has experience with and there doesn't seem to be a very clear explanation of why that happened. You would usually think that the language model kind of just made a mistake but I would think you know from interp perspective there's something deeper to it. Like for example, a very common instance that people site is how many Rs are in a strawberry and like that seems to be like a very simple question the language model would make a mistake on like do we can we answer that from an interpret perspective?
+</details>
+<blockquote>
+<blockquote>
+<p>是的，我认为这确实可以回到你提到的边缘情况的观点，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, I do think it goes back to your edge case point
+</details>
+<blockquote>
+<blockquote>
+<p>如果一个模型做对了某件事，很可能内部有某种机制可以解释它的正确性。嗯。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; where like yeah if a model does something correct then it's likely there is some internal mechanism explaining the correctness. Mhm.
+</details>
+<blockquote>
+<blockquote>
+<p>如果它做错了，可能只是因为它没有学到正确的机制，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; If it does something wrong, it could just be it failed to learn the right mechanism
+</details>
+<blockquote>
+<blockquote>
+<p>或者是出现了一些疯狂的情况。就像陀思妥耶夫斯基的名言：幸福的家庭各以其特有的方式相似，不幸的家庭却各有不同。大概是这样吧？我认为这也适用于这里。是的。如果模型表现正确，就会有系统性的解释；但如果没有做对，我不知道我们是否能给出解释。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; or like there's some crazy stuff going on. There's like a dsttoyki quote. It's like all happy families are alike in their own way, but unhappy ones are like different. Something like this, right? I think this applies here. Yeah. If the model is doing the correct thing, there is a there is a systematic explanation. But if it's not, it's like I don't know if we can offer it.
+</details>
+<blockquote>
+<blockquote>
+<p>所以，弄清楚它为什么能把事情做对，相比于弄清楚它为什么做错，要更有价值一些。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So, it's kind of more more valuable to figure out why it does something right compared to why it does something wrong.
+</details>
+<p>我认为可能确实如此。是的。好的。我可以从一个更偏技术的角度举个例子。通常我的感觉是，大多数错误都很难解释。即使我们能完全解释它们，我们也只会发现那些错误乱成一团，除了一直训练或者使用更大的模型之外，我们没有简单的解决办法。也许是模型用尽了容量来存储你想要它存储的所有事实，诸如此类，对吧？但有时候，失败背后也存在着系统性的解释。例如，大家知道如今所有模型都使用 Transformer 架构。Transformer 的一大问题是它们在时间成本上是呈二次方增长的。因此序列越长，你就必须等待越来越长的时间让它生成下一个 token。所以有些人致力于尝试加速这个过程。他们开展了一项名为状态空间模型（state space models）的研究方向。这会涉及到一点技术细节，但我会尽量讲得浅显一些。好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+I think possibly yes. Yeah. Okay. Uh I can give one example from a more technical point of view. So normally my feeling is most errors are hard to explain. Even if we could interpret them perfectly, we would just find that the errors are a mess and we don't have an easy fix except like train longer or have bigger model maybe model runs out of capacity to store all the facts you wanted to store this kind of thing, right? But sometimes there are systematic explanations for failures. So one example is you know of course all models these days use the transformer architecture. You know a big problem with transformers is their quadratic in time cost. So the longer your sequence gets the more and more time you have to wait for it to generate the next token. So some people have worked on like trying to speed this up. They have this line of research called state space models. It'll get a little technical but I I'll keep it low. Okay.
+</details>
+<blockquote>
+<blockquote>
+<p>嗯，早期的状态空间模型在统计学等领域已经存在很长时间了。但是在 2020 年代初，大概是在 2019 年左右，人们开始将其应用于语言建模，并且非常努力地尝试击败 Transformer，因为状态空间模型要快得多。所以如果你能将其扩大规模，而且它们的效果和 Transformer 一样好，你就会想要转向它们。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um so the early state space models have been a thing for a long time in like statistics. Um, but in the 20 early 2020s, maybe like 2019 kind of stuff, people started applying it to language modeling and they tried really hard to beat transformers because they're much, you know, they're much faster states space models. So if you can scale this up and they're as good as transformers, you would want to switch to them.
+</details>
+<blockquote>
+<blockquote>
+<p>嗯。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Mhm.
+</details>
+<blockquote>
+<blockquote>
+<p>但在实践中，他们发现它们更差。它们总是更差，而且大家想不通为什么。用相同的数据训练等等，它们就是更差。大概在 2021 年左右，斯坦福大学的一个团队，Chris Re 的学生们，注意到了 Anthropic 在可解释性方面的一项发现，即 Transformer 中上下文学习（in-context learning）的机制。在 Transformer 中，你输入一些内容进行提示，它们就能够理解上下文并利用它来完成任务。比如你给它展示你想要完成的任务的示例，但你不知道该如何用语言解释该任务，于是你仅仅提供示例。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; But in practice, they found they're like worse. They're always worse and they couldn't figure out why. You train on same data, so on they're worse. Uh, in 2021ish, there was a group at Stanford um Chris Ray students. They noticed anthropics discovery on the interp side of a mechanism for incontext learning in transformers. So in transformers you prompt them with some stuff and they can understand the context and use that to do things. Um maybe you give it examples of a task you're trying to do but you you don't know how to explain that task. So you just give examples.
+</details>
+<blockquote>
+<blockquote>
+<p>它能摸索出规则来进行预测，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It figures out rules to like predict
+</details>
+<blockquote>
+<blockquote>
+<p>那个任务，而且示例越多效果就越好。这是 GPT-3 时代一个极其惊人的发现。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; that task and they get better with more examples. This is a crazy finding from GPT3 era.
+</details>
+<blockquote>
+<blockquote>
+<p>于是他们就在想，好吧，为什么我们的状态空间模型做不到这一点？他们尝试在相同的任务上运行，结果表现就是很差。Anthropic 从可解释性的角度给出了解释：只要给这些 Transformer 至少两层，它们就会学习到一种特定的注意力头机制，使其能够解决这一任务。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And so they were like okay why can't our state space models do this? They tried running on the same task and they would just do bad. You know, Enthropic gave an explanation from an interp side. There's a certain attention head mechanism that these transformers learn when you give them at least two layers that enables them to solve this task.
+</details>
+<blockquote>
+<blockquote>
+<p>它被称为归纳头（induction heads）。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It's called induction heads.
+</details>
+<blockquote>
+<blockquote>
+<p>于是斯坦福大学研究状态空间模型的人就想，如果我们找到一种方法，把完全相同的机制放入状态空间模型中，来帮助它学习上下文学习呢？这篇论文叫作《Hungry Hungry Hippos》。我不知道，我也不知道为什么叫这个名字。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So the state space model people at Stanford were like what if we figure out a way to put this exact mechanism inside the state space model uh to help it out learning you know in context learning. And this paper is called hungry hungry hippos. I don't know I don't know why it's called this.
+</details>
+<blockquote>
+<blockquote>
+<p>[笑声]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>简称就像 H3。他们展示了只要做这么一个细微的改动——那其实是一个简单的改动，并不是一个微小的改动——模型就学会了如何进行上下文学习。随后所有较晚期的状态空间模型，你可能听说过 Mamba 或者 Delta，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; is like H3. Um, and they showed that if they just did this minor change, it was like simple change, it's not a minor change, the model learned how to do in context learning. Uh, and then all the later state space models, you might have heard of Mamba or Delta,
+</details>
+<blockquote>
+<blockquote>
+<p>它们都借鉴了这一进展。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; they draw upon this like advance.
+</details>
+<blockquote>
+<blockquote>
+<p>嗯。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Mhm.
+</details>
+<blockquote>
+<blockquote>
+<p>现在状态空间模型被相当广泛地使用。如果你看看 Kimi 或者最近的大型 Qwen 模型，它们都结合了 Transformer 注意力与门控 DeltaNet 等等。是的，这就是一个非常清晰的例子，说明某样东西表现糟糕是有系统性原因的，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And now state space models are like used quite heavily. So if you look at Kimmy or the big Quen models recently, they have a hybrid of transformer attention and gated Deltaet and stuff. Yeah, this is a clear example of like there was a systematic reason why something was performing badly
+</details>
+<blockquote>
+<blockquote>
+<p>而可解释性 [清嗓子] 帮助我们找到了它并进行了修复。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and interp [clears throat] helped us find it and fix it.
+</details>
+<blockquote>
+<blockquote>
+<p>是的，我希望有更多这样的研究成果。我认为确实有可能存在类似的情况。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, I would like there to be more stuff like this. I think it's possible there is some stuff like this.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。然后你就可以将其应用到其他大型模型中。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. And then you can apply that to big other models.
+</details>
+<blockquote>
+<blockquote>
+<p>没错。如果我们能在可解释性上取得非常好的进展，那么也许我们就能发现更多类似这样的例子。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. And if we have really good progress on interp then maybe we can you know find more instances of this.
+</details>
+<blockquote>
+<blockquote>
+<p>也许幻觉并不是这类情况，但也可能它是，也许架构中存在某种根本性的问题，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um you know maybe hallucination is not an instance of this but maybe it is maybe there's some fundamental issue in the architecture.
+</details>
+<blockquote>
+<blockquote>
+<p>是啊。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<h3 id="学界与业界的合作与分歧" data-reading-heading="">学界与业界的合作与分歧</h3>
+<blockquote>
+<blockquote>
+<p>导致了它产生幻觉。我不知道。非常有趣。太棒了。是的，我觉得这是一个很好的切入点，让我们顺势聊聊产业界，以及大家在可解释性领域都在做些什么，因为正如你所说，我觉得这仍然是一个相当偏技术性的研究领域，但它似乎确实具有一些非常明显的商业价值和应用。我们先从这里开始：你在学术界，但你也有很多业界经验。学术界和工业界的人在对待这类研究以及总体上对待这个课题时，是否存在不同的切入方式？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; That makes it hallucinate. I don't know. Very interesting. Uh, cool. Yeah, I think this is a good segue for us to kind of get into the industry uh and you know what everyone is doing here with inter because this is you know as you said like I feel like it's still a pretty technical field of research but it seems to you have some like pretty clear commercial values and uh applications as well. Uh let's just start with you know you are in academia but you have you know a lot of industry experience as well. Are academics and industry folks approaching the this kind of research uh and just this topic in general differently?
+</details>
+<blockquote>
+<blockquote>
+<p>是的，我不能说自己有非常丰富的工业界经验，不过，我主要的经历是在 Transluce 实验室之类的地方。所以我看到的所有东西都是以外部视角来看的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, so I wouldn't say I have a ton of industry experience, but um yeah, my main experience has been translucier lab or anything. So everything I see is external.
+</details>
+<blockquote>
+<blockquote>
+<p>我对可解释性领域的感受是，比起人工智能研究的其他领域，学术界和工业界之间在成果和进展上有更多的共享。我认为这是因为可解释性目前还没有出现只要通过堆算力规模就能取得更好效果的固定配方。因此，基本上需要大家不断提出新的想法，而想法是连随便一个研究生都能够贡献的，对吧？在其他领域，比如如果你想做强化学习研究，由于学术界和工业界所拥有的资源规模差距太大，两者的研究性质截然不同。是的，我想说在可解释性领域，它仍然算是一个跨越学术界和工业界的共同体，举办的研讨会有来自 Anthropic、DeepMind、OpenAI 的人，也有来自斯坦福、西北大学的 David Ba 团队、Ellie Pavlick 等学术界人士。有这么多从事可解释性研究的教授，带着学生做可解释性，这绝不是毫无用处的，我认为这对可解释性的进步非常非常重要，甚至对整个工业界来说也是如此。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; My feeling with interpility is like there is more sharing of results and progress between academia and industry than other areas of AI research. I think because interp is still like there's not some recipe that you just scale up to get better in TRP yet. Um and so it's basically like people need to come up with new ideas and like ideas are are something that even a random grad student can contribute to, right? Um in other areas it's like if you want to do reinforcement learning research the nature of the research is quite different from academia versus industry because of the scale of resources being so different. Yeah, I would say in interability it is still sort of a community across you know academia and industry like uh you know the workshops that happen they have a mix of people from anthropic or deep mind um openai and also academics from like Stanford or um you know David B David Ba's group at Northwestern um Ellie Public there are all these professors who do interbility research and have students who do interp is is like you know useless or something it is like quite quite important for progress and interpability I would say even for the industry.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。是的。有道理</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Yeah. Makes
+</details>
+<!-- chunk 7/7 -->
+<h3 id="可解释性与模型设计" data-reading-heading="">可解释性与模型设计</h3>
+<p>道理。</p>
+<p>额，那么当我们把这一点应用到模型设计上时——比如 Goodfire 的设计理念，某种带有可解释性的模型——额，这引来了一些批评，因为我觉得这有点把能力和安全审计画等号了。额，如你所知，这在行业里总是有那么点争议的。不过我想回到这个概念本身：带有可解释性地去设计模型，到底意味着什么？当然，我不能完全代表他们发言，但他们确实明确表达过这种有意识的设计理念。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+sense.
+<p>Uh</p>
+<p>so</p>
+<p>when</p>
+<p>we</p>
+<p>apply</p>
+<p>that</p>
+<p>to</p>
+<p>model</p>
+<p>design</p>
+<p>goodfire</p>
+<p>for</p>
+<p>example</p>
+<p>their</p>
+<p>design</p>
+<p>philosophy</p>
+<p>kind</p>
+<p>of</p>
+<p>models</p>
+<p>with</p>
+<p>interpretability</p>
+<p>uh</p>
+<p>which</p>
+<p>has</p>
+<p>drawn</p>
+<p>some</p>
+<p>criticism</p>
+<p>because</p>
+<p>I</p>
+<p>feel</p>
+<p>like</p>
+<p>it</p>
+<p>kind</p>
+<p>of</p>
+<p>equalizes</p>
+<p>capability</p>
+<p>and</p>
+<p>then</p>
+<p>safety</p>
+<p>auditing</p>
+<p>uh</p>
+<p>which</p>
+<p>is</p>
+<p>you</p>
+<p>know</p>
+<p>always</p>
+<p>a</p>
+<p>little</p>
+<p>controversial</p>
+<p>in</p>
+<p>the</p>
+<p>industry</p>
+<p>but</p>
+<p>I</p>
+<p>guess</p>
+<p>just</p>
+<p>going</p>
+<p>back</p>
+<p>to</p>
+<p>the</p>
+<p>notion</p>
+<p>itself</p>
+<p>what</p>
+<p>does</p>
+<p>it</p>
+<p>mean</p>
+<p>to</p>
+<p>design</p>
+<p>models</p>
+<p>with</p>
+<p>intervertability?</p>
+<p>Of</p>
+<p>course</p>
+<p>I</p>
+<p>cannot</p>
+<p>speak</p>
+<p>fully</p>
+<p>for</p>
+<p>them</p>
+<p>but</p>
+<p>they've</p>
+<p>articulated</p>
+<p>this</p>
+<p>intentional</p>
+<p>design</p>
+<p>philosophy.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>所以，任何有——任何有用的技术本质上都是双重用途的，我认为。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So
+<p>any</p>
+<p>su</p>
+<p>any</p>
+<p>useful</p>
+<p>technology</p>
+<p>is</p>
+<p>by</p>
+<p>nature</p>
+<p>dual</p>
+<p>use</p>
+<p>I</p>
+<p>think</p>
+</details>
+<blockquote>
+<blockquote>
+<p>嗯，如果我们谈论比如核能，你知道从可再生能源的角度来看非常有用，但同一门科学中的那些同样的技术进步，也导致了核武器。嗯，AI 研究本身也是这样，对吧？随着我们在编程智能体方面取得进展，你知道这对各种各样不懂编程、但生活中想做些目前还没有人提供相应产品或服务的事情的人来说，可能会超级有用，他们现在可以自己去做了；但另一方面，随便某个人也能拥有前沿水平的网络安全技能，可以黑进任何东西。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; um
+<p>if</p>
+<p>we</p>
+<p>talk</p>
+<p>about</p>
+<p>like</p>
+<p>you</p>
+<p>know</p>
+<p>nuclear</p>
+<p>power</p>
+<p>you</p>
+<p>know</p>
+<p>very</p>
+<p>helpful</p>
+<p>from</p>
+<p>a</p>
+<p>you</p>
+<p>know</p>
+<p>re</p>
+<p>renewable</p>
+<p>energy</p>
+<p>standpoint</p>
+<p>but</p>
+<p>those</p>
+<p>same</p>
+<p>you</p>
+<p>know</p>
+<p>progress</p>
+<p>in</p>
+<p>that</p>
+<p>same</p>
+<p>science</p>
+<p>led</p>
+<p>to</p>
+<p>nuclear</p>
+<p>weapons.</p>
+<p>Um</p>
+<p>AI</p>
+<p>research</p>
+<p>itself</p>
+<p>is</p>
+<p>like</p>
+<p>this</p>
+<p>right</p>
+<p>as</p>
+<p>we</p>
+<p>made</p>
+<p>progress</p>
+<p>on</p>
+<p>coding</p>
+<p>agents</p>
+<p>you</p>
+<p>know</p>
+<p>this</p>
+<p>could</p>
+<p>be</p>
+<p>super</p>
+<p>helpful</p>
+<p>for</p>
+<p>I</p>
+<p>don't know</p>
+<p>all</p>
+<p>sorts</p>
+<p>of</p>
+<p>people</p>
+<p>who</p>
+<p>don't</p>
+<p>know</p>
+<p>how</p>
+<p>to</p>
+<p>code</p>
+<p>but</p>
+<p>they</p>
+<p>have</p>
+<p>things</p>
+<p>they</p>
+<p>want</p>
+<p>to</p>
+<p>do</p>
+<p>in</p>
+<p>their</p>
+<p>life</p>
+<p>that</p>
+<p>no</p>
+<p>one</p>
+<p>has</p>
+<p>you</p>
+<p>know</p>
+<p>served</p>
+<p>a</p>
+<p>product</p>
+<p>or</p>
+<p>or</p>
+<p>like</p>
+<p>service</p>
+<p>for</p>
+<p>and</p>
+<p>they</p>
+<p>can</p>
+<p>do</p>
+<p>it</p>
+<p>themselves</p>
+<p>now</p>
+<p>but</p>
+<p>on</p>
+<p>the</p>
+<p>other</p>
+<p>hand</p>
+<p>like</p>
+<p>you</p>
+<p>know</p>
+<p>random</p>
+<p>person</p>
+<p>has</p>
+<p>like</p>
+<p>frontier</p>
+<p>level</p>
+<p>cyber</p>
+<p>security</p>
+<p>skills</p>
+<p>and</p>
+<p>can</p>
+<p>like</p>
+<p>hack</p>
+<p>into</p>
+<p>whatever</p>
+</details>
+<blockquote>
+<blockquote>
+<p>嗯，所以我觉得，如果某件事物是有用的，它就会具有双重用途，而作为一个社会，我们必须去弄清楚这一点。嗯，对于可解释性来说，如果我们成功搞清楚了为什么模型会以某种方式表现，或者搞清楚了如何系统地改进模型，这当然也会是双重用途的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; um
+<p>so</p>
+<p>I</p>
+<p>think</p>
+<p>there's</p>
+<p>like</p>
+<p>if</p>
+<p>something's</p>
+<p>useful</p>
+<p>it's</p>
+<p>going</p>
+<p>to</p>
+<p>be</p>
+<p>dual</p>
+<p>use</p>
+<p>and</p>
+<p>as</p>
+<p>a</p>
+<p>society</p>
+<p>we</p>
+<p>to</p>
+<p>figure</p>
+<p>that</p>
+<p>out.</p>
+<p>Um</p>
+<p>for</p>
+<p>interpretability</p>
+<p>if</p>
+<p>it's</p>
+<p>if</p>
+<p>we</p>
+<p>succeed</p>
+<p>in</p>
+<p>figuring</p>
+<p>out</p>
+<p>why</p>
+<p>a</p>
+<p>model</p>
+<p>behaves</p>
+<p>in</p>
+<p>a</p>
+<p>certain</p>
+<p>way</p>
+<p>or</p>
+<p>or</p>
+<p>you</p>
+<p>know</p>
+<p>figuring</p>
+<p>out</p>
+<p>how</p>
+<p>to</p>
+<p>improve</p>
+<p>models</p>
+<p>systematically</p>
+<p>of</p>
+<p>course</p>
+<p>this</p>
+<p>will</p>
+<p>be</p>
+<p>dual</p>
+<p>use</p>
+</details>
+<blockquote>
+<blockquote>
+<p>比如，这会帮助我们审计模型，但它也可能帮助比如某个恶意行为者弄清楚如何消除模型中的对齐。我认为这在本质上必然是成立的。额，这并不意味着我们不应该去做它。额，这意味着，是的，我们必须进行监管之类的事情，或者拥有一个民主的决策程序来决定谁能接触到这种强大的技术。我想说，到目前为止，可解释性研究还没有发展到在这方面产生危险的程度，对吧？我认为在达到我们不得不开始为此担忧的地步之前，还有很多工作要做。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; like
+<p>this</p>
+<p>will</p>
+<p>help</p>
+<p>us</p>
+<p>audit</p>
+<p>models</p>
+<p>but</p>
+<p>it</p>
+<p>might</p>
+<p>also</p>
+<p>help</p>
+<p>like</p>
+<p>a</p>
+<p>bad</p>
+<p>actor</p>
+<p>figure</p>
+<p>out</p>
+<p>how</p>
+<p>to</p>
+<p>remove</p>
+<p>alignment</p>
+<p>from</p>
+<p>model</p>
+<p>I</p>
+<p>I</p>
+<p>think</p>
+<p>this</p>
+<p>is</p>
+<p>by</p>
+<p>nature</p>
+<p>going</p>
+<p>to</p>
+<p>be</p>
+<p>true.</p>
+<p>Uh</p>
+<p>that</p>
+<p>doesn't</p>
+<p>mean</p>
+<p>we</p>
+<p>shouldn't</p>
+<p>do</p>
+<p>it.</p>
+<p>uh</p>
+<p>it</p>
+<p>means</p>
+<p>that</p>
+<p>like</p>
+<p>yes</p>
+<p>we</p>
+<p>we</p>
+<p>must</p>
+<p>regulate</p>
+<p>or</p>
+<p>something</p>
+<p>or</p>
+<p>have</p>
+<p>you</p>
+<p>know</p>
+<p>a</p>
+<p>democratic</p>
+<p>decision-making</p>
+<p>process</p>
+<p>that</p>
+<p>decides</p>
+<p>who</p>
+<p>gets</p>
+<p>access</p>
+<p>to</p>
+<p>this</p>
+<p>powerful</p>
+<p>technology.</p>
+<p>I</p>
+<p>would</p>
+<p>say</p>
+<p>so</p>
+<p>far</p>
+<p>interp</p>
+<p>hasn't</p>
+<p>progressed</p>
+<p>enough</p>
+<p>to</p>
+<p>be</p>
+<p>dangerous</p>
+<p>in</p>
+<p>this</p>
+<p>regard,</p>
+<p>right?</p>
+<p>I</p>
+<p>think</p>
+<p>there's</p>
+<p>still</p>
+<p>a</p>
+<p>lot</p>
+<p>of</p>
+<p>work</p>
+<p>to</p>
+<p>do</p>
+<p>before</p>
+<p>it</p>
+<p>reaches</p>
+<p>like</p>
+<p>a</p>
+<p>point</p>
+<p>where</p>
+<p>we</p>
+<p>have</p>
+<p>to</p>
+<p>start</p>
+<p>worrying</p>
+<p>about</p>
+<p>this.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>所以，我之前给过你一个例子，就是由可解释性进展所驱动的状态空间模型改进。可能还有几个类似的例子，嗯，比如注意力汇聚（attention sink）之类的东西，嗯，但我不会说有非常多，这是因为人们还没有——你知道，可解释性还没有发展到能够以这种方式系统地产生成果的地步。我对此目前还不是太担心。我认为还有非常多的基础科学工作要做，所以，是的，这目前还挺遥远的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So
+<p>I</p>
+<p>gave</p>
+<p>you</p>
+<p>one</p>
+<p>example</p>
+<p>of</p>
+<p>the</p>
+<p>state</p>
+<p>space</p>
+<p>model</p>
+<p>improvement</p>
+<p>being</p>
+<p>driven</p>
+<p>by</p>
+<p>interpility</p>
+<p>progress.</p>
+<p>There</p>
+<p>are</p>
+<p>maybe</p>
+<p>a</p>
+<p>few</p>
+<p>more</p>
+<p>examples</p>
+<p>like</p>
+<p>this</p>
+<p>um</p>
+<p>like</p>
+<p>attention</p>
+<p>sync</p>
+<p>stuff</p>
+<p>um</p>
+<p>but</p>
+<p>I</p>
+<p>wouldn't</p>
+<p>say</p>
+<p>there</p>
+<p>are</p>
+<p>a</p>
+<p>ton</p>
+<p>and</p>
+<p>this</p>
+<p>is</p>
+<p>because</p>
+<p>people</p>
+<p>have</p>
+<p>not</p>
+<p>you</p>
+<p>know</p>
+<p>interp</p>
+<p>hasn't</p>
+<p>progressed</p>
+<p>enough</p>
+<p>to</p>
+<p>to</p>
+<p>systematically</p>
+<p>give</p>
+<p>results</p>
+<p>in</p>
+<p>this</p>
+<p>way.</p>
+<p>I'm</p>
+<p>not</p>
+<p>too</p>
+<p>worried</p>
+<p>about</p>
+<p>it</p>
+<p>yet.</p>
+<p>I</p>
+<p>think</p>
+<p>there's</p>
+<p>still</p>
+<p>so</p>
+<p>much</p>
+<p>fundamental</p>
+<p>scientific</p>
+<p>work</p>
+<p>to</p>
+<p>do</p>
+<p>that</p>
+<p>like</p>
+<p>yeah</p>
+<p>this</p>
+<p>is</p>
+<p>still</p>
+<p>kind</p>
+<p>of</p>
+<p>far.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>嗯，我认为把进展落实到实际应用中是一件好事，而其中一个应用就是有意识地做出更好的模型。对吧。所以——</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um
+<p>and</p>
+<p>I</p>
+<p>think</p>
+<p>it's</p>
+<p>good</p>
+<p>to</p>
+<p>ground</p>
+<p>progress</p>
+<p>in</p>
+<p>like</p>
+<p>a</p>
+<p>real</p>
+<p>application</p>
+<p>and</p>
+<p>one</p>
+<p>of</p>
+<p>those</p>
+<p>applications</p>
+<p>is</p>
+<p>making</p>
+<p>better</p>
+<p>models</p>
+<p>intentionally.</p>
+<p>Right.</p>
+<p>So</p>
+</details>
+<blockquote>
+<blockquote>
+<p>是的，而且另一个相当明确的用例就是比如在药物发现领域，我想还有比如医学领域，比如 DNA 模型等等，对吧？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah
+<p>and</p>
+<p>and</p>
+<p>another</p>
+<p>pretty</p>
+<p>clear</p>
+<p>use</p>
+<p>case</p>
+<p>is</p>
+<p>just</p>
+<p>in</p>
+<p>like</p>
+<p>uh</p>
+<p>drug</p>
+<p>discoveries</p>
+<p>and</p>
+<p>I</p>
+<p>guess</p>
+<p>like</p>
+<p>uh</p>
+<p>medicine</p>
+<p>uh</p>
+<p>like</p>
+<p>DNA</p>
+<p>models</p>
+<p>and</p>
+<p>all</p>
+<p>that,</p>
+<p>right?</p>
+</details>
+<blockquote>
+<blockquote>
+<p>对。对。Goodfire 有一个庞大的生命科学团队，正试图去对包括 DNA 模型等在内的科学发现模型进行逆向工程。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+<p>Yeah.</p>
+<p>Goodfire</p>
+<p>has</p>
+<p>a</p>
+<p>large</p>
+<p>life</p>
+<p>sciences</p>
+<p>team</p>
+<p>that's</p>
+<p>trying</p>
+<p>to</p>
+<p>you</p>
+<p>know</p>
+<p>reverse</p>
+<p>engineer</p>
+<p>uh</p>
+<p>scientific</p>
+<p>discovery</p>
+<p>models</p>
+<p>including</p>
+<p>DNA</p>
+<p>models</p>
+<p>and</p>
+<p>stuff.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>所以，搞清楚语言模型是如何工作的会很酷。我希望对于语言学家来说，了解它们如何处理语言会超级令人兴奋。但这固然很酷，真正的应用会是像……你知道，你训练气候模型，或者你训练它们来模拟气候，或者训练它们去做蛋白质折叠。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So
+<p>you</p>
+<p>know</p>
+<p>it</p>
+<p>would</p>
+<p>be</p>
+<p>cool</p>
+<p>to</p>
+<p>figure</p>
+<p>out</p>
+<p>how</p>
+<p>language</p>
+<p>models</p>
+<p>work.</p>
+<p>It</p>
+<p>would</p>
+<p>be</p>
+<p>super</p>
+<p>exciting</p>
+<p>for</p>
+<p>linguists</p>
+<p>I</p>
+<p>hope</p>
+<p>to</p>
+<p>know</p>
+<p>how</p>
+<p>they</p>
+<p>process</p>
+<p>language.</p>
+<p>But</p>
+<p>this</p>
+<p>is</p>
+<p>cool.</p>
+<p>The</p>
+<p>real</p>
+<p>applications</p>
+<p>would</p>
+<p>be</p>
+<p>like</p>
+<p>you</p>
+<p>know</p>
+<p>you</p>
+<p>train</p>
+<p>models</p>
+<p>for</p>
+<p>climate</p>
+<p>or</p>
+<p>you</p>
+<p>train</p>
+<p>them</p>
+<p>you</p>
+<p>know</p>
+<p>to</p>
+<p>model</p>
+<p>the</p>
+<p>climate</p>
+<p>or</p>
+<p>you</p>
+<p>train</p>
+<p>them</p>
+<p>to</p>
+<p>uh</p>
+<p>you</p>
+<p>know</p>
+<p>do</p>
+<p>protein</p>
+<p>folding.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>我们能否从它们之中提取出人类可理解的算法，来帮助我们取得科学进展？因为我们也想弄明白它们为什么能起作用，对吧。我认为科学应用可能会非常广阔。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Can
+<p>we</p>
+<p>pull</p>
+<p>out</p>
+<p>human</p>
+<p>understandable</p>
+<p>like</p>
+<p>algorithms</p>
+<p>from</p>
+<p>them</p>
+<p>that</p>
+<p>help</p>
+<p>us</p>
+<p>you</p>
+<p>know</p>
+<p>make</p>
+<p>scientific</p>
+<p>progress</p>
+<p>because</p>
+<p>we</p>
+<p>also</p>
+<p>want</p>
+<p>to</p>
+<p>understand</p>
+<p>why</p>
+<p>they</p>
+<p>work</p>
+<p>right.</p>
+<p>I</p>
+<p>think</p>
+<p>the</p>
+<p>scientific</p>
+<p>applications</p>
+<p>could</p>
+<p>be</p>
+<p>very</p>
+<p>big.</p>
+</details>
+<h3 id="透明度与安全" data-reading-heading="">透明度与安全</h3>
+<blockquote>
+<blockquote>
+<p>是的。是的。有道理。更具可解释性的模型，是否必然意味着它更安全？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+<p>Yeah.</p>
+<p>Makes</p>
+<p>sense.</p>
+<p>Is</p>
+<p>the</p>
+<p>model</p>
+<p>that's</p>
+<p>more</p>
+<p>like</p>
+<p>interpretable</p>
+<p>necessarily</p>
+<p>mean</p>
+<p>that</p>
+<p>it's</p>
+<p>safer?</p>
+</details>
+<blockquote>
+<blockquote>
+<p>额，我不这么认为。是的，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Uh
+<p>I</p>
+<p>don't</p>
+<p>think</p>
+<p>so.</p>
+<p>Yeah,</p>
+</details>
+<blockquote>
+<blockquote>
+<p>因为如果你知道它为什么做出某种行为，你也可以利用这一点来利用它的行为，对吧？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; because
+<p>if</p>
+<p>you</p>
+<p>know</p>
+<p>why</p>
+<p>it</p>
+<p>did</p>
+<p>something,</p>
+<p>you</p>
+<p>could</p>
+<p>also</p>
+<p>use</p>
+<p>it</p>
+<p>to</p>
+<p>exploit</p>
+<p>its</p>
+<p>behavior,</p>
+<p>right?</p>
+</details>
+<blockquote>
+<blockquote>
+<p>也许你能更容易地搞清楚如何越狱一个模型，如果你知道为什么它在面对某些提示词时没有被越狱，对吧？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Maybe
+<p>you</p>
+<p>could</p>
+<p>figure</p>
+<p>out</p>
+<p>more</p>
+<p>easily</p>
+<p>how</p>
+<p>to</p>
+<p>jailbreak</p>
+<p>a</p>
+<p>model</p>
+<p>if</p>
+<p>you</p>
+<p>know</p>
+<p>why</p>
+<p>it</p>
+<p>wasn't</p>
+<p>jailbroken</p>
+<p>in</p>
+<p>some</p>
+<p>by</p>
+<p>some</p>
+<p>prompt,</p>
+<p>right?</p>
+</details>
+<blockquote>
+<blockquote>
+<p>嗯，但我确实认为透明度总体上是一件净收益的好事。是的，如果我们把自己的生活托付给这些我们不理解的复杂算法，从社会角度来看似乎是很糟的。嗯。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um,
+<p>but</p>
+<p>I</p>
+<p>do</p>
+<p>think</p>
+<p>transparency</p>
+<p>is</p>
+<p>like</p>
+<p>just</p>
+<p>overall</p>
+<p>a</p>
+<p>net</p>
+<p>good</p>
+<p>thing.</p>
+<p>Yeah,</p>
+<p>it</p>
+<p>seems</p>
+<p>like</p>
+<p>bad</p>
+<p>from</p>
+<p>a</p>
+<p>societal</p>
+<p>point</p>
+<p>of</p>
+<p>view</p>
+<p>if</p>
+<p>like</p>
+<p>we</p>
+<p>trust</p>
+<p>our</p>
+<p>lives</p>
+<p>to</p>
+<p>these</p>
+<p>complex</p>
+<p>algorithms</p>
+<p>that</p>
+<p>we</p>
+<p>don't</p>
+<p>understand.</p>
+<p>Mhm.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>你知道，比如人们对社交媒体那一套并不放心。嗯，因为你知道有这些算法推送人们喜欢的视频等等，它消耗了大量时间，可能对儿童有害。而且我认为，如果公司能对他们如何训练这些算法、它们如何运作、为什么向你推荐某些内容保持透明，这至少能帮助我们作为一个社会去决定我们是否想要它们，或者至少能让人更加确信没有人在试图做恶意的事情，对吧？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; You
+<p>know,</p>
+<p>people</p>
+<p>are</p>
+<p>not</p>
+<p>comfortable,</p>
+<p>for</p>
+<p>instance,</p>
+<p>with</p>
+<p>social</p>
+<p>media</p>
+<p>stuff.</p>
+<p>Um,</p>
+<p>because,</p>
+<p>you</p>
+<p>know,</p>
+<p>there's</p>
+<p>these</p>
+<p>algorithms</p>
+<p>that</p>
+<p>serve</p>
+<p>videos</p>
+<p>that</p>
+<p>people</p>
+<p>like</p>
+<p>and</p>
+<p>so</p>
+<p>on</p>
+<p>and</p>
+<p>it</p>
+<p>eats</p>
+<p>up</p>
+<p>a</p>
+<p>lot</p>
+<p>of</p>
+<p>time,</p>
+<p>maybe</p>
+<p>bad</p>
+<p>for</p>
+<p>children.</p>
+<p>And</p>
+<p>I</p>
+<p>think</p>
+<p>if,</p>
+<p>you</p>
+<p>know,</p>
+<p>companies</p>
+<p>were</p>
+<p>transparent</p>
+<p>about</p>
+<p>how</p>
+<p>they</p>
+<p>train</p>
+<p>these</p>
+<p>algorithms,</p>
+<p>how</p>
+<p>they</p>
+<p>work,</p>
+<p>why</p>
+<p>they</p>
+<p>recommend</p>
+<p>you</p>
+<p>certain</p>
+<p>things,</p>
+<p>it</p>
+<p>would</p>
+<p>at least</p>
+<p>help</p>
+<p>us</p>
+<p>decide</p>
+<p>as</p>
+<p>a</p>
+<p>society,</p>
+<p>you</p>
+<p>know,</p>
+<p>if</p>
+<p>we</p>
+<p>want</p>
+<p>them</p>
+<p>or</p>
+<p>not,</p>
+<p>or</p>
+<p>at</p>
+<p>least</p>
+<p>have</p>
+<p>more</p>
+<p>trust</p>
+<p>that</p>
+<p>no</p>
+<p>one's</p>
+<p>trying</p>
+<p>to</p>
+<p>do</p>
+<p>malicious</p>
+<p>things,</p>
+<p>right?</p>
+</details>
+<blockquote>
+<blockquote>
+<p>是的。额，我认为这对 AI 系统来说也是类似的。很多人并不信任 AI 公司或 AI 的进展。他们对此相当担忧。因此，透明度总的来看就是一件好事。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+<p>Uh,</p>
+<p>I</p>
+<p>think</p>
+<p>it's</p>
+<p>similar</p>
+<p>for</p>
+<p>AI</p>
+<p>systems.</p>
+<p>A</p>
+<p>lot</p>
+<p>of</p>
+<p>people</p>
+<p>don't</p>
+<p>trust</p>
+<p>like</p>
+<p>AI</p>
+<p>companies</p>
+<p>or</p>
+<p>like</p>
+<p>AI</p>
+<p>progress.</p>
+<p>They're</p>
+<p>quite</p>
+<p>worried</p>
+<p>about</p>
+<p>it.</p>
+<p>So,</p>
+<p>transparency</p>
+<p>seems</p>
+<p>just</p>
+<p>like</p>
+<p>a</p>
+<p>good</p>
+<p>thing</p>
+<p>to</p>
+<p>have</p>
+<p>in</p>
+<p>general.</p>
+</details>
+<h3 id="监管与角色训练" data-reading-heading="">监管与角色训练</h3>
+<blockquote>
+<blockquote>
+<p>是的。是的。有没有——我的意思是，我猜这个领域目前依然处于相当早期的阶段。有没有出现任何进展，使得监管机构能够在那方面开始起草政策了？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+<p>Yeah.</p>
+<p>Is</p>
+<p>there</p>
+<p>I</p>
+<p>mean</p>
+<p>I</p>
+<p>guess</p>
+<p>this</p>
+<p>photo</p>
+<p>is</p>
+<p>still</p>
+<p>like</p>
+<p>pretty</p>
+<p>early</p>
+<p>on.</p>
+<p>Has</p>
+<p>there</p>
+<p>been</p>
+<p>any</p>
+<p>progress</p>
+<p>that</p>
+<p>allows</p>
+<p>regulators</p>
+<p>to</p>
+<p>kind</p>
+<p>of</p>
+<p>start</p>
+<p>drafting</p>
+<p>policies</p>
+<p>already</p>
+<p>like</p>
+<p>in</p>
+<p>that</p>
+<p>in</p>
+<p>that</p>
+<p>front?</p>
+</details>
+<blockquote>
+<blockquote>
+<p>是的，我想说，我是说这是可解释性研究的一个希望，去提供此类成果。嗯，我想这也是非营利组织比如 Translucent 背后的部分考量。许多其他可解释性组织……为监管机构提供帮助，去弄明白为什么模型会做出某些行为，以便他们能更好地控制模型。比如英国的人工智能安全研究所（AI Safety Institute），他们就做可解释性研究。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah,
+<p>I</p>
+<p>would</p>
+<p>say</p>
+<p>I</p>
+<p>I</p>
+<p>mean</p>
+<p>it's</p>
+<p>a</p>
+<p>hope</p>
+<p>for</p>
+<p>interpability</p>
+<p>research</p>
+<p>to</p>
+<p>provide</p>
+<p>stuff</p>
+<p>like</p>
+<p>this.</p>
+<p>Um,</p>
+<p>I</p>
+<p>guess</p>
+<p>that's,</p>
+<p>you</p>
+<p>know,</p>
+<p>part</p>
+<p>of the</p>
+<p>reasoning</p>
+<p>behind</p>
+<p>nonprofit</p>
+<p>orgs</p>
+<p>like</p>
+<p>Transloose.</p>
+<p>Many</p>
+<p>other</p>
+<p>interpols</p>
+<p>for</p>
+<p>regulators</p>
+<p>to</p>
+<p>help</p>
+<p>figure</p>
+<p>out,</p>
+<p>you</p>
+<p>know,</p>
+<p>why</p>
+<p>models</p>
+<p>do</p>
+<p>certain</p>
+<p>things</p>
+<p>so</p>
+<p>they</p>
+<p>can</p>
+<p>better</p>
+<p>uh</p>
+<p>control</p>
+<p>them.</p>
+<p>You</p>
+<p>know,</p>
+<p>the</p>
+<p>AI</p>
+<p>safety</p>
+<p>institute</p>
+<p>in</p>
+<p>the</p>
+<p>UK,</p>
+<p>they</p>
+<p>do</p>
+<p>interp.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>我 [清嗓子] 想说目前仍然有很多事情要做。我……我不认为……是的，我们还不能基于这类研究成果充满信心地制定新法律。是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I
+<p>[clears throat]</p>
+<p>would</p>
+<p>say</p>
+<p>there's</p>
+<p>still</p>
+<p>a</p>
+<p>lot</p>
+<p>to</p>
+<p>do.</p>
+<p>I</p>
+<p>I</p>
+<p>don't</p>
+<p>think</p>
+<p>Yeah,</p>
+<p>we</p>
+<p>cannot</p>
+<p>confidently</p>
+<p>like</p>
+<p>make</p>
+<p>new</p>
+<p>legislation</p>
+<p>based</p>
+<p>on</p>
+<p>stuff</p>
+<p>like</p>
+<p>this.</p>
+<p>Yeah.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>另一件想到的事情是，角色训练（character training）是我最近一直在关注的方向。我们拥有所有这些不同的语言模型，它们与我们交谈的方式都略有不同。我们之前提到了 Amanda Askell，比如有所有这些哲学家在教语言模型如何行事、以不同的原则来处理问题，我想随之也塑造了它们的个性，比如这些模型的个性。对于这一切，你是怎么看的？模型正变得彼此更加分化，它们有点像……你知道，不同的人。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Another
+<p>thing</p>
+<p>that</p>
+<p>came</p>
+<p>to</p>
+<p>mind,</p>
+<p>character</p>
+<p>training</p>
+<p>is</p>
+<p>something</p>
+<p>that</p>
+<p>I've</p>
+<p>been</p>
+<p>looking</p>
+<p>into</p>
+<p>uh</p>
+<p>recently.</p>
+<p>We</p>
+<p>have</p>
+<p>all</p>
+<p>of</p>
+<p>those</p>
+<p>different</p>
+<p>language</p>
+<p>models</p>
+<p>and</p>
+<p>talk</p>
+<p>to</p>
+<p>us</p>
+<p>in</p>
+<p>a</p>
+<p>bit</p>
+<p>of</p>
+<p>a</p>
+<p>different</p>
+<p>way.</p>
+<p>And</p>
+<p>we</p>
+<p>mentioned</p>
+<p>Amanda</p>
+<p>Manasco</p>
+<p>before</p>
+<p>like</p>
+<p>you</p>
+<p>know</p>
+<p>we</p>
+<p>have</p>
+<p>all</p>
+<p>of</p>
+<p>those</p>
+<p>philosophers</p>
+<p>kind</p>
+<p>of</p>
+<p>teaching</p>
+<p>language</p>
+<p>models</p>
+<p>how</p>
+<p>to</p>
+<p>do</p>
+<p>things</p>
+<p>different</p>
+<p>principles</p>
+<p>on</p>
+<p>how</p>
+<p>they</p>
+<p>approach</p>
+<p>things</p>
+<p>and</p>
+<p>I</p>
+<p>I</p>
+<p>guess</p>
+<p>consequentially</p>
+<p>also</p>
+<p>shaped</p>
+<p>uh</p>
+<p>their</p>
+<p>personalities</p>
+<p>like</p>
+<p>the</p>
+<p>models</p>
+<p>personalities.</p>
+<p>How</p>
+<p>are</p>
+<p>you</p>
+<p>thinking</p>
+<p>about</p>
+<p>like</p>
+<p>all</p>
+<p>of</p>
+<p>that</p>
+<p>where</p>
+<p>you</p>
+<p>know</p>
+<p>models</p>
+<p>are</p>
+<p>becoming</p>
+<p>more</p>
+<p>differentiated</p>
+<p>from</p>
+<p>each</p>
+<p>other?</p>
+<p>They're</p>
+<p>like</p>
+<p>kind</p>
+<p>of</p>
+<p>like</p>
+<p>you</p>
+<p>know</p>
+<p>different</p>
+<p>different</p>
+<p>different</p>
+<p>persons.</p>
+<p>I</p>
+</details>
+<blockquote>
+<blockquote>
+<p>我绝对想说，我们现在处于一个非常奇特的境地，竟然在讨论这样一件事，对吧？这确实很奇妙，比如语言模型竟然具有角色性格。这似乎是真的，而且从可解释性的角度来看是有证据支持的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I'll
+<p>definitely</p>
+<p>say</p>
+<p>it's</p>
+<p>a</p>
+<p>really</p>
+<p>weird</p>
+<p>position</p>
+<p>that</p>
+<p>we're</p>
+<p>in</p>
+<p>now</p>
+<p>that</p>
+<p>this</p>
+<p>is</p>
+<p>a</p>
+<p>thing</p>
+<p>we</p>
+<p>discuss</p>
+<p>right</p>
+<p>that</p>
+<p>is</p>
+<p>weird</p>
+<p>like</p>
+<p>yeah</p>
+<p>language</p>
+<p>models</p>
+<p>have</p>
+<p>characters.</p>
+<p>It</p>
+<p>seems</p>
+<p>to</p>
+<p>be</p>
+<p>like</p>
+<p>true</p>
+<p>and</p>
+<p>there's</p>
+<p>evidence</p>
+<p>for</p>
+<p>it</p>
+<p>from</p>
+<p>interp</p>
+<p>point</p>
+<p>of</p>
+<p>view.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>是的。这简直有点不可思议。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+<p>It's</p>
+<p>like</p>
+<p>kind</p>
+<p>of</p>
+<p>crazy.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>嗯。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Mhm.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。我确实认为，可解释性研究已经表明，不同类型角色的内部表征在表征空间中是以某种方式组织起来的。嗯，Anthropic 提出了这个“助手轴”（assistant axis）的概念，其中有益的助手位于一个方向，而如果是不对齐的助手，则位于另一个方向。可解释性具有一种潜力：如果我们能用可解释性以某种方式引导训练过程。嗯，这可能是一种对角色进行精细控制的方法，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+<p>I</p>
+<p>do</p>
+<p>think</p>
+<p>there</p>
+<p>is</p>
+<p>uh</p>
+<p>you</p>
+<p>know</p>
+<p>there's</p>
+<p>been</p>
+<p>interp</p>
+<p>showing</p>
+<p>that</p>
+<p>the</p>
+<p>internal</p>
+<p>representations</p>
+<p>of</p>
+<p>different</p>
+<p>types</p>
+<p>of</p>
+<p>character</p>
+<p>are</p>
+<p>organized</p>
+<p>in</p>
+<p>some</p>
+<p>way</p>
+<p>in</p>
+<p>representation</p>
+<p>space.</p>
+<p>Um</p>
+<p>there's</p>
+<p>anthropic</p>
+<p>this</p>
+<p>assistant</p>
+<p>access</p>
+<p>thing</p>
+<p>where</p>
+<p>like</p>
+<p>helpful</p>
+<p>assistants</p>
+<p>lie</p>
+<p>in</p>
+<p>one</p>
+<p>direction</p>
+<p>and</p>
+<p>like</p>
+<p>if</p>
+<p>you</p>
+<p>get</p>
+<p>misaligned</p>
+<p>assistants</p>
+<p>they</p>
+<p>lie</p>
+<p>in</p>
+<p>the</p>
+<p>other.</p>
+<p>There</p>
+<p>is</p>
+<p>a</p>
+<p>potential</p>
+<p>for</p>
+<p>interpretability</p>
+<p>if</p>
+<p>we</p>
+<p>can</p>
+<p>use</p>
+<p>interpability</p>
+<p>to</p>
+<p>like</p>
+<p>steer</p>
+<p>the</p>
+<p>training</p>
+<p>process</p>
+<p>somehow.</p>
+<p>Um,</p>
+<p>it</p>
+<p>could</p>
+<p>be</p>
+<p>a</p>
+<p>way</p>
+<p>to</p>
+<p>like</p>
+<p>finely</p>
+<p>control</p>
+<p>character,</p>
+</details>
+<blockquote>
+<blockquote>
+<p>对，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; right,
+</details>
+<blockquote>
+<blockquote>
+<p>相比我们目前仅仅在数据上进行训练能提供更多保证，尤其是当我们采用像……你知道，宪政 AI（Constitutional AI）之类的手段时——在角色训练过程中，由一个 AI 来决定如何奖励某种行为与否。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; with
+<p>more</p>
+<p>guarantees</p>
+<p>than</p>
+<p>we</p>
+<p>have</p>
+<p>right</p>
+<p>now</p>
+<p>where</p>
+<p>we</p>
+<p>just</p>
+<p>train</p>
+<p>on</p>
+<p>data,</p>
+<p>especially</p>
+<p>as</p>
+<p>we</p>
+<p>do</p>
+<p>like</p>
+<p>AI,</p>
+<p>you</p>
+<p>know,</p>
+<p>like</p>
+<p>constitutional</p>
+<p>AI</p>
+<p>kind</p>
+<p>of</p>
+<p>stuff</p>
+<p>where</p>
+<p>an</p>
+<p>AI</p>
+<p>decides</p>
+<p>how</p>
+<p>to</p>
+<p>reward</p>
+<p>like</p>
+<p>some</p>
+<p>behavior</p>
+<p>or</p>
+<p>not</p>
+<p>in</p>
+<p>the</p>
+<p>character</p>
+<p>training</p>
+<p>process</p>
+</details>
+<blockquote>
+<blockquote>
+<p>而我认为这是我们希望控制的，也许训练过程中的可解释性能够发挥作用。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and
+<p>this</p>
+<p>this</p>
+<p>is</p>
+<p>something</p>
+<p>we</p>
+<p>would</p>
+<p>like</p>
+<p>to</p>
+<p>control,</p>
+<p>I</p>
+<p>think,</p>
+<p>and</p>
+<p>maybe</p>
+<p>interpability</p>
+<p>in</p>
+<p>the</p>
+<p>training</p>
+<p>process</p>
+<p>has</p>
+<p>a</p>
+<p>role</p>
+<p>to</p>
+<p>play.</p>
+</details>
+<h3 id="结语" data-reading-heading="">结语</h3>
+<blockquote>
+<blockquote>
+<p>太棒了。非常感谢 Arman 参加我们的播客，非常感谢你抽出时间，期待你的研究，也期待你在博士毕业后的发展。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Awesome.
+<p>Thank</p>
+<p>you</p>
+<p>so</p>
+<p>much</p>
+<p>Arman</p>
+<p>for</p>
+<p>joining</p>
+<p>us</p>
+<p>for</p>
+<p>this</p>
+<p>podcast</p>
+<p>and</p>
+<p>thanks</p>
+<p>so</p>
+<p>much</p>
+<p>for</p>
+<p>your</p>
+<p>time</p>
+<p>and</p>
+<p>looking</p>
+<p>forward</p>
+<p>to</p>
+<p>your</p>
+<p>research</p>
+<p>and</p>
+<p>you</p>
+<p>know</p>
+<p>what</p>
+<p>you</p>
+<p>end</p>
+<p>up</p>
+<p>doing</p>
+<p>after</p>
+<p>your</p>
+<p>PhD.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>感谢邀请我。感谢邀请我。非常感谢。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Thanks
+<p>for</p>
+<p>having</p>
+<p>me.</p>
+<p>Thanks</p>
+<p>for</p>
+<p>having</p>
+<p>me.</p>
+<p>Appreciate</p>
+<p>it.</p>
+</details>
+<p>[外语]</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Foreign
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/f242276657a813fc4c523bc7af9bc36b6401747e70e523297f555b087d1758c2.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/f242276657a813fc4c523bc7af9bc36b6401747e70e523297f555b087d1758c2.md" download="大语言模型内部推理与可解释性研究探讨.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>
+</p>
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

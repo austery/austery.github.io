@@ -1,0 +1,842 @@
+---
+author: TVO Today
+date: '2026-10-01'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=iTW-FWwaAUE
+speaker: TVO Today
+tags:
+  - truth-and-reconciliation
+  - indigenous-rights
+  - residential-schools
+  - historical-memory
+title: 从橙衫日到失落的墓地：加拿大真相与和解日的历史重述与正义追寻
+summary: 本期节目聚焦加拿大全国真相与和解日（橙衫日）。深入探讨多伦多威斯罗大道原住民古墓遗址发掘引发的管辖权与保护争议；回顾1973年花园河原住民青年在铁路桥刷写“这是印第安人土地”的历史抗争；专访橙衫日联合发起人菲莉丝·韦布斯塔德，回应寄宿学校否定主义浪潮并分享最新回忆录。
+insight: ''
+draft: true
+series: ''
+category: politics-society
+area: society-thinking
+project: []
+people:
+  - Phyllis Webstad
+companies_orgs:
+  - Garden River First Nation
+  - Royal Ontario Museum
+  - Rebel News
+products_models: []
+media_books:
+  - We Are Still Here
+status: evergreen
+---
+### 真相与和解日与橙衫日的渊源
+
+**杰扬·杰加纳森**: 每年9月30日，加拿大都会纪念**全国真相与和解日**（National Day for Truth and Reconciliation）。但你可能更熟悉它的另一个名字——**橙衫日**（Orange Shirt Day）。在它成为联邦法定假日之前，人们就已经这样称呼它了，这源于**菲莉丝·韦布斯塔德**（Phyllis Webstad）在2013年一次活动中讲述的故事——关于她在不列颠哥伦比亚省一所**寄宿学校**（residential school）上学第一天，当时她年仅6岁时所发生的事情。我们采访了她，探讨了一件橙色衬衫是如何引发一场全国运动的，以及这场运动如今在面对**寄宿学校否定主义**（residential school denialism）时所面临的重重挑战。
+
+同时，我们还将深入探讨一个核心问题：我们该如何正视历史及其对**原住民**（Indigenous）社区持续至今的影响？在多伦多，一处原住民古墓葬遗址的发现引发了广泛关注，究竟该如何保护这些遗址？接下来该由谁来决定后续事宜？而在**花园河原住民部落**（Garden River First Nation），我们还将回顾半个世纪前，喷涂在铁路桥上的四个单词是如何成为原住民自豪感的战斗号角与精神象征的。
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Every September 30th, Canada marks a National Day for Truth and Reconciliation. [music] But you may know it better by another name, Orange Shirt Day. And it was called [music] that before there was a federal holiday because of a story Phyllis Webstad told at an event in 2013. About what happened on her first day at a residential school in British Columbia when she was [music] just 6 years old. We talked to her about how an orange shirt sparked a movement and the challenges that movement faces with residential school denialism. [music] We also dig into a question, how do we reckon with history and its ongoing impact on Indigenous [music] communities? Here in Toronto, the discovery of an Indigenous burial ground is raising questions about how these [music] sites should be protected and who should decide what happens next. And in Garden River First Nation, we look at how four words painted on a railway bridge half a century ago became a rallying cry for Indigenous pride.
+
+</details>
+
+### 多伦多威斯罗大道古墓遗址的发掘
+
+**杰扬·杰加纳森**: 我是**杰扬·杰加纳森**（Jeyan Jeganathan），欢迎收看《简报》（The Rundown）。早在2024年，一支在多伦多施工水管的工程队发掘出了一处原住民墓地的遗骸。这一发现叫停了他们的施工作业，但随之引出了一个更为重大的议题：当城市中发掘出原住民墓葬遗址时，究竟由谁来决定后续的处理方案？**加布里埃尔·布兰克曼**（Gabriel Blankman），非常高兴你能做客《简报》。你最近怎么样？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: I'm Jai and Jagannath, welcome to The Rundown. Back in 2024, a construction crew working on a waterline in Toronto uncovered remains from an Indigenous burial ground. The discovery stopped their work, but it raised a much bigger question. When an Indigenous burial site is uncovered in a city, who decides what happens next? Gabriel Blankman, great to have you on The Rundown. How are you doing?
+
+</details>
+
+**加布里埃尔·布兰克曼**: 我挺好的。你怎么样？
+
+<details>
+<summary>Original English</summary>
+
+**Gabriel Blankman**: I'm good. How are you?
+
+</details>
+
+**杰扬·杰加纳森**: 我也很不错。你在网络杂志**《本地》**（The Local）担任了将近一年的新闻研究员。在那段时间里，你投入了大量精力去撰写和调研关于**威斯罗大道**（Withrow Avenue）原住民墓葬遗址的报道——给不太熟悉那里的观众交代一下，该地位于多伦多的东区（East End）。那些古老的人类遗骸最初究竟是如何被发现的？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: I'm doing well. Uh you spent just under a year at The Local, an online magazine, uh as a journalism fellow. And much of that time was spent writing, researching about an Indigenous burial site on Withrow Avenue, that's in Toronto's East End for our viewers who are not familiar with the area. How were the ancient human remains first discovered?
+
+</details>
+
+**加布里埃尔·布兰克曼**: 是的，这其实非常富有戏剧性。一位在附近居住了很多很多年的当地居民，当时正沿着他平时回家的路线步行。他注意到人行道上有一个施工挖掘留下的基坑，于是试图绕过去，结果脚下的泥土发生了塌陷。他掉进了深坑里，在努力爬出来的过程中抓住了旁边的泥土泥壁，结果一块骨头被带了出来，掉落在他身上。当时天色已晚，所以他并不清楚那到底是什么。他以为可能是一根狗骨头之类的东西。于是他把它捡起来带回了家，洗干净并拍照发给了身为生物学家的表亲。对方看了照片后告诉他：“我觉得你最好赶紧报警。”随后警方介入并展开调查，起初他们以为这可能是一桩凶杀案或者失踪人口案，但法医病理学家在几天内就判定，这并非凶杀案遗留物，而是古老的原住民遗骸。
+
+<details>
+<summary>Original English</summary>
+
+**Gabriel Blankman**: Yeah, um it's actually really interesting. So, a local resident who lived in the area for many, many years was just on his regular route home um when he noticed a construction pit in the sidewalk, so he just tried to kind of step around it and the ground gave way. He fell into the pit and as he was trying to scramble out, he grabbed the dirt and kind of a bone fell with him and landed on him. It was dark, so he didn't know what it was. He thought it was maybe a dog bone or something. So, he picked it up and took it home and washed it off and sent a photo to his cousin, who's a biologist. And his cousin was like, "I think you need to call the police." And so, police were called, and an investigation was started. They initially thought it was, you know, a homicide or a missing person. Within a few days, forensic anthropologists determine that it's not a homicide, but it ended up being an ancient indigenous remains.
+
+</details>
+
+**杰扬·杰加纳森**: 据我了解，这并不是该地块第一次发掘出人类遗骸了。
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Now, I understand those are not the first human remains found there.
+
+</details>
+
+**加布里埃尔·布兰克曼**: 确实如此。
+
+<details>
+<summary>Original English</summary>
+
+**Gabriel Blankman**: Mhm.
+
+</details>
+
+**杰扬·杰加纳森**: 我们稍后会具体讨论这次新发现发生后的处理流程，但在早先那些发现发生时，当时的情况又是怎么样的？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: And we're we'll talk a little bit about the process as to what happened with this current sort of discovery, but what happened when those earlier discoveries were made?
+
+</details>
+
+**加布里埃尔·布兰克曼**: 是的，在街对面曾经发掘过一个有详实考古记录的遗址。我记不清具体是哪一年了，但那是很多年前的事了。所以多伦多市政府早就知晓那一带属于考古敏感区域。早在19世纪末，威斯罗公立学校（Withrow Public School）扩建时就挖出了人类骨骼。在1980年代，马路对面的另一处房产在施工时也挖出了遗骸。因此市政府和考古界很清楚这个区域蕴藏着极其密集的古代文物与遗存。
+
+<details>
+<summary>Original English</summary>
+
+**Gabriel Blankman**: Yeah, so across the street, um, there was a pretty well-documented archaeological site that was discovered. Um, I can't quite remember when, but it was it was many years ago. So, the city knew that, um, you know, this was an archaeologically sensitive area. Human bones were found when Withrow Public School was being expanded, I think in the late 1800s. And then in the 1980s, another property across the street found remains during construction. So, the city knew something has, um, a lot of ancient artifacts that have been found in in the in the area, so yeah.
+
+</details>
+
+**杰扬·杰加纳森**: 现在已经是2026年了。威斯罗大道的那个遗址目前现状如何？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Here we are 2026. What does that site look like right now on Withrow?
+
+</details>
+
+**加布里埃尔·布兰克曼**: 我最后一次实地跟进是在今年早些时候做这篇报道的时候，现场看起来仍然和几年前几乎一模一样。从外部看过去，似乎没有任何实质性进展。现场依然被胶合板围挡封锁着，人行道依然被截断关闭，居民们依然得绕道而行。但在幕后，各方其实一直在密集沟通协商。直到去年夏天，他们才开始推进现场勘查与调查工作，目前这项工作仍在持续进行中。
+
+<details>
+<summary>Original English</summary>
+
+**Gabriel Blankman**: Yeah, so the last that I checked in was earlier this year when I was doing my story and it was still like it looked the same as it did a few years ago. So, to the outside looking in, there's not been much movement. There's still plywood blocking the site. The sidewalk is still closed. Residents are still walking around it. But behind the scenes, there's been a lot of conversation happening. And just this past summer, they started moving forward with the investigation, and so they're still working on that.
+
+</details>
+
+### 考古发掘与原住民权益的历史转折
+
+**杰扬·杰加纳森**: 好的，我刚才口误说成了2026年，实际上那处遗址是在2024年被发现的。让我们来回顾一下历史背景，这非常关键。我非常想了解考古界与原住民社区之间的历史关系。在1970年代，**格里姆斯比**（Grimsby）发生了一起标志性事件，成为了这两大群体关系走向的分水岭。能跟我们讲讲具体是怎么回事吗？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Okay. I should correct myself. 2024 is when that site sort of was was discovered there. Let's take a This is an interesting part. I I really want to know the historical relationship between archaeologists and the Indigenous community. There was an event that took place in Grimsby back in the '70s that sort of was a bit of a watershed moment for for for that for those two parties. So, tell me a little bit about that.
+
+</details>
+
+**加布里埃尔·布兰克曼**: 是的。1976年在安大略省的格里姆斯比，**皇家安大略博物馆**（Royal Ontario Museum，简称 ROM）的沃尔特·肯扬（Walter Kenyon）及其团队接到通知，称某处地产上发现了一些人类遗骸。于是他们像往常一样派出了考古队，打算把遗骸发掘出来并运回博物馆进行研究分析。但在当时，来自**六国原住民保留地**（Six Nations）的一群原住民得知了消息并赶到现场，直接围住了发掘坑，强行阻止了发掘工作。原住民明确表示：这是对祖先遗骸的亵渎和侮辱。我认为这是一个极其重要的历史节点。
+
+<details>
+<summary>Original English</summary>
+
+**Gabriel Blankman**: Yeah, so in 1976, in Grimsby, Ontario, Walter Kenyon and a team from the ROM were notified of some remains that were found on a property, and so they sent their team over there, as usual, you know, to excavate and take the remains back to the museum. But a group from Six Nations showed up and protested and physically blocked the excavation from continuing, saying that, you know, to First Nations, it was an indignity to the remains. And so, I think this was a really important moment because
+
+</details>
+
+**杰扬·杰加纳森**: [叹气]
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: [sighs]
+
+</details>
+
+**加布里埃尔·布兰克曼**: 它标志着原住民第一民族绝不再坐视不管，绝不容许他们的先人遗骸在未征得他们充分协商与参与的情况下被肆意挖出并掠走。这彻底改变了安大略省乃至整个加拿大在考古领域的权力格局与行事准则。最终，该遗址的发掘物品由皇家安大略博物馆与第一民族共同分配并妥善安置。
+
+<details>
+<summary>Original English</summary>
+
+**Gabriel Blankman**: it kind of signified that First Nations weren't going to stand by while their ancestors and while their remains were being unmasked and kind of taken without their consultation and without their involvement. And so it changed kind of the way that Ontario moves forward when it comes to archaeology. The findings were split between the ROM and then First Nations. So, that's yeah.
+
+</details>
+
+**杰扬·杰加纳森**: 对于那些不熟悉这一背景的观众，当谈及保护原住民墓葬遗址时，他们应该了解哪些核心知识及其深远意义？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: For viewers not familiar with it, what should they know about it and its significance when we talk about protecting indigenous burial sites?
+
+</details>
+
+**加布里埃尔·布兰克曼**: 我认为这里有几个至关重要的核心点。首先，这是我们重新审视多伦多深厚历史的一个关键窗口，多伦多拥有极其悠久的人类居住史，我认为铭记这一点至关重要。其次，这关乎于**照管义务**（duty of care）。无论何时，当我们发现人类遗骸时，无论他们属于哪一个族群、逝去了多久，都理应享有基本的尊严。在多伦多，很多这类遗骸可以追溯到700多年前。这构成了我们整座城市肌理的一部分。每一天，我们都生活在他们的土地之上，享受着这片土地带来的馈赠。因此，我们必须在日常生活中由衷地予以尊重和铭记，而这也理所当然地必须贯彻到对遗址的调查与处理过程中。
+
+<details>
+<summary>Original English</summary>
+
+**Gabriel Blankman**: I think there's a few important things here. So, first of all, I mean, it is an area we can look at Toronto's history, which I think is really cool, and I think that's always important to um remember that Toronto has a really long history. But the second thing is the duty of care. When we find human remains, no matter who they are, they deserve a level of dignity. And in Toronto, a lot of these remains are 700-plus years old. This is part of our city's fabric. We are living on the land that they lived on, that they took care of, and that provided for them. And we need to try to honor and respect that in our everyday lives, and so um that goes as well for investigations.
+
+</details>
+
+### 跨原住民多方协作与制度空白
+
+**杰扬·杰加纳森**: 你提到了“照管义务”。因此我必须追问，尤其是针对威斯罗大道这一遗址，很多人听说这件事后，难免会对现场迟缓的处理进展感到不解和沮丧。正如你所说，从2024年到现在，外表看起来几乎停滞不前。而之所以如此耗时，是因为有众多的第一民族部族参与其中。你能详细谈谈背后的复杂性吗？这种延误究竟是不是一件坏事？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: You mentioned duty of care, and so I do have to ask uh particularly with this site, I think a lot of people when they hear about it, there is some frustration about the uh the lack of movement as we move forward. You said it was 2024, it looks the same. And it has a lot to do with just the sheer number of First Nations that are involved in it. Can you tell me a little bit about that? But also is the delay necessarily a bad thing?
+
+</details>
+
+**加布里埃尔·布兰克曼**: 是的。面对像这样的遗址，整个流程确实会耗费漫长的时间，因为各个第一民族都是拥有独立主权的实体。在威斯罗大道遗址上，有多达11个第一民族部落参与了协作决策过程。因此，这并不是由某一个人或某一个机构单方面拍板说了算的事，而是必须把这11个第一民族全都召集到同一个圆桌前，共同商议：“我们该如何处理这一处遗址？”而且在现行安大略省的体制下，根本就没有一套标准化的既定流程来指导应对。每次发现这类遗址，各方都不得不从零开始重新摸索、建立应对框架。
+
+多伦多市政府在很大程度上必须主导推动这一进程，但他们也承受着巨大的财政与时间压力，同时也面临着来自社区居民的大量反弹和抱怨。
+
+<details>
+<summary>Original English</summary>
+
+**Gabriel Blankman**: Yeah. Um so with something like this, you know, it takes a long time because First Nations are independent sovereign nations, and on Withrow, we have 11 First Nations that are um involved in collaboration. So, it's not just like one person deciding, it's bringing 11 different First Nations to the table and saying, "How do we want to deal with this site?" And because of the system we have in Ontario, there isn't a standardized process. Every time a site like this is found, it's kind of reinventing the wheel and figuring it out as we go. The city has had to really spearhead this, and it's difficult because it is a lot of money, it is a lot of time, and they've definitely received a lot of backlash.
+
+</details>
+
+**杰扬·杰加纳森**: 为什么这个报道故事对你个人如此重要？你具有多元血统背景，多伦多对你来说未必是从小长大的故乡。你是后来搬到这里的，你在文章中谈到了这座城市层层叠叠的历史记忆。为什么讲述这个故事对你而言有如此非同寻常的分量？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Why is this story so important to you? You're mixed race, Toronto necessarily isn't home for you. Like you you've moved in here, and you talk about the layers of stories here, but why is this so important for you?
+
+</details>
+
+**加布里埃尔·布兰克曼**: 嗯，我认为它极其重要，因为我之前看到了太多新闻报道和各路媒体对这一事件的描绘，很多人都在抱怨我们缺乏制度，但我认为这种漫长的审慎并不是坏事。在多伦多，我们脚下踩着的正是原住民祖先的土地。当你走在威斯罗大道、走在多伦多任何一条街道上时，你脚下都可能埋藏着上千年的原住民记忆。我作为一名混血儿来到多伦多，渴望去理解这座城市的根基。主流社会往往习惯于快刀斩乱麻的行政效率，但在面对原住民先人的安息之地时，给予原住民各部族充分的时间达成共识，正是践行真正和解的必经之路。我希望这篇报道能成为多伦多市民重新理解我们所在城市的一个全新起点。
+
+<details>
+<summary>Original English</summary>
+
+**Gabriel Blankman**: Mhm. Um well, I thought it was really important because I've seen so many news stories and so many um people covering this, and um like I was kind of saying, we don't have a system, but it's not a bad thing that it's taking time. In Toronto, we are on Indigenous land, and when you walk down Withrow Avenue or any street in Toronto, there are layers and layers of history beneath your feet. Coming to Toronto as a mixed-race person, I really wanted to understand the place I'm living in. Often in our society, we want quick answers and quick solutions, but when it comes to human remains and sacred sites, taking the time to consult 11 First Nations and respect their sovereignty is what true reconciliation looks like. I thought it'd be a good starting point for people in Toronto to build a new understanding of our city.
+
+</details>
+
+**杰扬·杰加纳森**: 简要地概括一下，如果你能对安大略省的政策制定者提一条关于如何发掘和保护原住民墓葬遗址的建议，那会是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Very quickly, if you could tell policy policy makers one thing about how Ontario approaches the uncovering and protection of indigenous burials, what would it be?
+
+</details>
+
+**加布里埃尔·布兰克曼**: 我认为应该借鉴**巴比波因特遗产保护区**（Baby Point Heritage District）的做法。我有幸采访了参与制定该保护区规划的市政领导人。那一规划在发掘甚至动工之前，就对具有极高考古潜力的敏感区域进行了主动界定与保护机制设立。与其等到工程队挖出骨头、导致施工瘫痪且伤害社区感情后再仓促被动应对，不如未雨绸缪，在政策前端就确立常态化的原住民协商机制。巴比波因特的探索是一个极佳的范式，指引着我们未来应该如何思考和行动。
+
+<details>
+<summary>Original English</summary>
+
+**Gabriel Blankman**: Mhm. I think um looking at the Bobby Point Heritage District. So I got to speak to uh municipal uh leaders that are kind of working on this particular plan and um it's it's looking at uh archaeological zones before things are uncovered. Instead of reacting after bones are dug up and construction is halted and feelings are hurt, we need proactive policies that designate sensitive areas and build relationships with First Nations beforehand. What they're doing there at Bobby Point, I think is a good way to move forward and how we should be thinking in the future.
+
+</details>
+
+**杰扬·杰加纳森**: 加比，非常感谢你抽出宝贵时间。非常感谢你带来的深刻洞见与精彩报道。
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Gabby, I really appreciate your time. Thank you so much for your insights. Thank you for your story.
+
+</details>
+
+**加布里埃尔·布兰克曼**: 谢谢你，非常感谢你的邀请。
+
+<details>
+<summary>Original English</summary>
+
+**Gabriel Blankman**: Thank you. Thank you for having me.
+
+</details>
+
+### 铁路桥上的红色标语与原住民抗争
+
+**旁白**: 1973年，在苏圣玛丽（Sault Ste. Marie）以东的**花园河原住民部落**（Garden River First Nation），一座铁路桥上赫然出现了一行手写油漆标语。整整50年间，这段标语的真正创作者始终是个未解之谜。但如今，当年的当事人终于打破沉默，站了出来。我们专程前往花园河原住民部落，倾听他们当年的故事。
+
+<details>
+<summary>Original English</summary>
+
+**Narrator**: In 1973, a message turned up painted on a train bridge in Garden River First Nation, just east of Sault Ste. Marie. And for 50 years, the origin was a mystery. But now the men responsible have come forward. We traveled to Garden River First Nation to hear their story.
+
+</details>
+
+**基斯·布瓦索诺**: 那是一个秋天的傍晚，天色渐渐暗了下来，我哥哥突然过来把我们叫醒，说：“我们得干点大事。”他说我们要在桥上立个标志。我们问：“要把标志立在哪儿？”他说：“就在桥上。我们要把它刷在桥身上。一个人坐在木板上悬在外面刷油漆，其余的人在上面拉紧绳子死死拽住他。”
+
+<details>
+<summary>Original English</summary>
+
+**Keith Boissoneau**: One evening, it was fall and it was getting dark when my brother come and woke us up and says we're going to do something. He says we're going to put a sign here. Where are we going to put this sign? He says right on the bridge. We're going to paint it right on the bridge. One will sit on the board and start painting. And the rest of us will hold him.
+
+</details>
+
+**基斯·布瓦索诺**: 当时有**基斯·布瓦索诺**（Keith Boissoneau）、**鲍勃·布瓦索诺**（Bob Boissoneau）、**威利·布瓦索诺**（Willie Boissoneau）、斯科特·勒萨热（Scott LeSage）、安德烈·勒萨热（Andre LeSage），还有拉克·勒萨热（Lucky LeSage）。我们总共有七个人。
+
+<details>
+<summary>Original English</summary>
+
+**Keith Boissoneau**: There was Keith Busno. There was Bob Busno. There was Willie Busno. There was Scott LeSais. There was Andre LeSais. And there was Lucky LeSais. Seven of us.
+
+</details>
+
+**鲍勃·布瓦索诺**: 我们就是当年的原作者。
+
+<details>
+<summary>Original English</summary>
+
+**Bob Boissoneau**: We were the original artists.
+
+</details>
+
+**基斯·布瓦索诺**: 我哥哥对大家说：“好了，伙计们，把我放下去。”
+
+<details>
+<summary>Original English</summary>
+
+**Keith Boissoneau**: So, okay, you guys, he says, "Lower me down."
+
+</details>
+
+**鲍勃·布瓦索诺**: 手死死抓着麻绳，没有任何安全带，没有任何防护设备，整个人就这么直接悬空挂在桥梁外缘。
+
+<details>
+<summary>Original English</summary>
+
+**Bob Boissoneau**: Hand on rope, no safety, no nothing, just over the edge.
+
+</details>
+
+**基斯·布瓦索诺**: 就是一根麻绳，两腿之间夹着一块两寸乘四寸（2x4）的木板。当年他们建造胡佛水坝（Hoover Dam）时就是用这种办法。
+
+<details>
+<summary>Original English</summary>
+
+**Keith Boissoneau**: Just a twine rope with a 2 by 4 between your legs. They built the Hoover Dam like that.
+
+</details>
+
+**鲍勃·布瓦索诺**: 我们到底要写一句什么样的话？我是说，我们手头根本没有在纸上提前写好任何底稿。
+
+<details>
+<summary>Original English</summary>
+
+**Bob Boissoneau**: And what is the statement that we're going to do? I mean, we didn't have nothing written down on paper or anything like that.
+
+</details>
+
+**基斯·布瓦索诺**: 我们花了不少时间才完成。足足耗费了几个小时，因为悬挂在桥梁边缘的外侧半空绝非易事。
+
+<details>
+<summary>Original English</summary>
+
+**Keith Boissoneau**: It just took us a little while to do it. Couple of hours because it's not exactly easy hanging over the edge of a bridge.
+
+</details>
+
+**鲍勃·布瓦索诺**: 从“THIS”（这）这个词开始写起。
+
+<details>
+<summary>Original English</summary>
+
+**Bob Boissoneau**: Starting off with this.
+
+</details>
+
+**基斯·布瓦索诺**: 他写下了“I”、“S”（IS）。然后大家把他拉上来，换下一个人系上绳子吊下去。刷完那个单词后，再把人全部拉上来。接着我们往旁边平移一段距离。威利，我们接着写什么？接下来要写什么内容？他会在上面把字母念出来拼给我们听。
+
+<details>
+<summary>Original English</summary>
+
+**Keith Boissoneau**: And he wrote I S. And then they pull me back up and they put the next guy down. And finish that word, pull everybody up. Okay, now we move over. Willie, we're still doing What are we putting here? I'll spell it out.
+
+</details>
+
+**鲍勃·布瓦索诺**: “INDIAN”（印第安人）。在1973年，那是属于“印第安人”、“红色权力”（Red Power），以及最终“LAND”（土地）的时代。整句话合起来就是：“**这是印第安人的土地**”（THIS IS INDIAN LAND）。
+
+<details>
+<summary>Original English</summary>
+
+**Bob Boissoneau**: Indian. 1973 it was Indian, red power, and finally land.
+
+</details>
+
+**基斯·布瓦索诺**: 我们当时对自己发誓：“千万别跟任何人透露半个字。”
+
+<details>
+<summary>Original English</summary>
+
+**Keith Boissoneau**: And we said to ourselves, "Don't say nothing."
+
+</details>
+
+**鲍勃·布瓦索诺**: 我们把这个秘密足足保守了几十年。
+
+<details>
+<summary>Original English</summary>
+
+**Bob Boissoneau**: We kept it a secret for years.
+
+</details>
+
+### 成长记忆与不公现实的觉醒
+
+**旁白**: 位于安大略省北部的花园河原住民部落是一个**奥吉布瓦**（Ojibwe）族人聚居的社区，其悠久历史可追溯至世代之前。如今，几十年前由这群社区青年创作的这幅艺术标语，依然是这段抗争历史清晰可见的一部分。
+
+<details>
+<summary>Original English</summary>
+
+**Narrator**: Garden River First Nation in Northern Ontario is an Ojibwe community with a history stretching back generations. Today, a piece of art created by a group of community members decades ago remains a visible part of that history.
+
+</details>
+
+**鲍勃·布瓦索诺**: 那是一个探索的时代，也是一个我们在世界上探寻自己真正归属与身份的时期。
+
+<details>
+<summary>Original English</summary>
+
+**Bob Boissoneau**: It was a time of discovery and it was a time of uh finding out uh where we belonged in the world.
+
+</details>
+
+**基斯·布瓦索诺**: 我记得那是一个充满温暖记忆的美好家园，但在那个时候我们自己并没有意识到，我们其实非常贫困。整个保留地上的每一户人家都很穷。
+
+<details>
+<summary>Original English</summary>
+
+**Keith Boissoneau**: I remember it was a great place, but at the time we didn't know it, but we were poor. Everybody on the reserve was poor.
+
+</details>
+
+**鲍勃·布瓦索诺**: 在我们年幼的时候，大家相处得非常融洽。有些人家的日子比别人过得更艰难一些。但每到夏天，我们总会聚在一起。你想去找你的小伙伴玩？只要去那个野外的天然水坑，所有人都在那儿游泳。
+
+<details>
+<summary>Original English</summary>
+
+**Bob Boissoneau**: When we were young, we all got along together. Some people had a little harder than others. We'd always get together, say in summertime there. You want to go visit your friends? You found a swimming hole. They were all there.
+
+</details>
+
+**基斯·布瓦索诺**: 所以我们会一起找乐子。大家聚在一起，要么下河游泳，要么沿着铁轨一路闲逛漫步。
+
+<details>
+<summary>Original English</summary>
+
+**Keith Boissoneau**: So, we'd go and have fun. And we'd all come along together, either with swimming or walk the railroad tracks.
+
+</details>
+
+**旁白**: 作为生活在1960年代末和70年代的孩子，这群青年的成员们就读于全日制寄宿学校（day schools）以及邻近城市里的学校。他们回忆说，从很小的时候起，他们就在那里饱受种族主义和歧视。
+
+<details>
+<summary>Original English</summary>
+
+**Narrator**: As children in the late '60s and '70s, members of the group attended day [music] schools and schools in nearby cities, where they say they experienced racism and discrimination [music] from an early age.
+
+</details>
+
+**基斯·布瓦索诺**: 他们强行把我们带离了原住民部落，用大巴车运到城里的学校去上课。
+
+<details>
+<summary>Original English</summary>
+
+**Keith Boissoneau**: They took us off the First Nation and shipped us to the schools in the city.
+
+</details>
+
+**鲍勃·布瓦索诺**: 在那里，没有人叫我们奥吉布瓦人，也没有人叫我们**克里人**（Cree），所有人只冷冰冰地称呼我们为“印第安人”（Indian）。
+
+<details>
+<summary>Original English</summary>
+
+**Bob Boissoneau**: We weren't called Ojibwe, we weren't [music] called Cree, we were just called Indian.
+
+</details>
+
+**基斯·布瓦索诺**: 后来有一个叫威利·布瓦索诺的年轻人，他比我们要年长几岁。正是他让我们深刻领悟到了我们的族群文化究竟遭遇了什么，以及我们是如何在各个层面遭受系统性歧视的。
+
+<details>
+<summary>Original English</summary>
+
+**Keith Boissoneau**: And this one guy, Willy Bosnell, he was he was older than us. But it gave us more of an insight of what's happening with our culture and how we were being discriminated in certain ways.
+
+</details>
+
+**鲍勃·布瓦索诺**: 威尔弗雷德·布瓦索诺（Wilfred Boissoneau），他是我们的头号领军人物。
+
+<details>
+<summary>Original English</summary>
+
+**Bob Boissoneau**: Wilfred Bosnell. Number one guy.
+
+</details>
+
+### 伤膝河运动的感召与精神觉醒
+
+**旁白**: 威尔弗雷德的社会活动家视野对这群十几岁的青少年产生了深远的影响，将他们切身的遭遇与外部世界正在爆发的原住民权利运动紧密连接在了一起。
+
+<details>
+<summary>Original English</summary>
+
+**Narrator**: Wilfred's activism had a significant influence on the teenagers, connecting their own experiences to indigenous rights movement unfolding elsewhere.
+
+</details>
+
+**基斯·布瓦索诺**: 当时真正牢牢抓住我们全部注意力的核心事件，就是1973年美国爆发的占领**伤膝河**（Wounded Knee）行动。
+
+<details>
+<summary>Original English</summary>
+
+**Keith Boissoneau**: And the one place that really caught our attention was the 1973 occupation Wounded Knee.
+
+</details>
+
+**旁白**: 1973年初，激进组织**美国印第安人运动**（American Indian Movement，简称 AIM）的约200名成员占领了南达科他州的伤膝河镇，以抗议政府腐败、深度贫困以及一再被撕毁的条约承诺。联邦执法部门迅速包围了该镇，由此引发了长达71天的武装对峙。对于花园河社区的这群年轻人来说，美国印第安人运动所发出的大声疾呼，正切中了他们在自己社区内每天面临的严酷现实。
+
+<details>
+<summary>Original English</summary>
+
+**Narrator**: In early 1973, around 200 members of the activist group American Indian Movement occupied the town of Wounded Knee in South Dakota to protest corruption, poverty, and broken treaty promises. Federal law enforcement officers surrounded the town, leading to a 71-day armed standoff. For the young men in Garden River, the rallying cry of the American Indian Movement reflected many of the issues they were confronting in their own community.
+
+</details>
+
+**鲍勃·布瓦索诺**: 我们的语言遭受压制，我们的文化遭受压制，我们的传统遭受压制，我们社区深陷贫困，医疗服务严重匮乏，原住民条约承诺被肆意撕毁。
+
+<details>
+<summary>Original English</summary>
+
+**Bob Boissoneau**: Our language is oppressed, our culture oppressed, our traditions oppressed, the poverty in our communities, inadequate health care, you know, broken treaty promises.
+
+</details>
+
+**基斯·布瓦索诺**: 外面的人随时会冲进来捣毁一切，把所有人都抓走扔进监狱，仅仅是因为我们举行了自己的传统祈祷仪式，属于我们自己的古老仪式。
+
+<details>
+<summary>Original English</summary>
+
+**Keith Boissoneau**: They come and tear everything down and take everybody out and take them to jail just for doing the ceremony, our ceremony.
+
+</details>
+
+**鲍勃·布瓦索诺**: 我们需要体面的就业机会，需要更好的社会公共服务，更需要让世人听到我们的声音。
+
+<details>
+<summary>Original English</summary>
+
+**Bob Boissoneau**: Employment. Better social services. Our voice being heard.
+
+</details>
+
+**基斯·布瓦索诺**: 我们是一个有尊严的民族。我们是印第安人。我们必须有所作为！我们到底能做些什么？就在那时，我哥哥脑海中涌现出了所有这些大胆的想法。
+
+<details>
+<summary>Original English</summary>
+
+**Keith Boissoneau**: We are a national people. We are Indians. We have to do something. What can we do? And that's when my older brother had all these different ideas.
+
+</details>
+
+**鲍勃·布瓦索诺**: 我们毅然决然地决定，必须表明我们的立场，进行坚决的抵抗。
+
+<details>
+<summary>Original English</summary>
+
+**Bob Boissoneau**: We decided to make a stand.
+
+</details>
+
+**基斯·布瓦索诺**: 当时我们年纪还那么小，并未能完全参透这一切背后的全部深意。在那一刻我们并未意识到，但这行标语随着时间的推移，真正成为了震撼人心的历史宣言。
+
+<details>
+<summary>Original English</summary>
+
+**Keith Boissoneau**: Being that young, we didn't fully grasp everything. We didn't realize at the time, but it really did make a statement after a while.
+
+</details>
+
+### 半个世纪的传承：这片土地的尊严
+
+**旁白**: 数十年后，那场带有抗议色彩的青年行动以及它所铸就的视觉图像，不断出现在当代原住民的艺术与公共文化作品中。
+
+<details>
+<summary>Original English</summary>
+
+**Narrator**: Decades later, that act of protest and the image it created continues to appear in contemporary and indigenous [music] art.
+
+</details>
+
+**鲍勃·布瓦索诺**: 我们是由兄长威利·布瓦索诺带领着行动的，但我们更是顺应着伟大神灵的指引在前进，正是祖先的神灵在那天傍晚将我们引向了那座大桥。
+
+<details>
+<summary>Original English</summary>
+
+**Bob Boissoneau**: We were led by our brother Willie Bushel but went by the movement of the spirit and the spirit brought us to the bridge that evening.
+
+</details>
+
+**基斯·布瓦索诺**: 官方后来曾经用黑油漆把桥梁上的标语彻底刷黑覆盖掉。但不久之后，又有其他人重新爬上去，把标语原封不动地重新刷了回去。
+
+<details>
+<summary>Original English</summary>
+
+**Keith Boissoneau**: They repainted it black. And then somebody put the sign back up.
+
+</details>
+
+**鲍勃·布瓦索诺**: 当我看到那行标语再次出现在大桥上时，我内心充满了无可言表的震撼。我们花园河的年轻一代绝不容许它消失，他们要让它永远矗立在那里。
+
+<details>
+<summary>Original English</summary>
+
+**Bob Boissoneau**: I was just absolutely astonished when I seen the go back up on the bridge again. Our guys in Garden River just don't want to see it disappear. They want it on there.
+
+</details>
+
+**旁白**: 今天当人们驱车驶入花园河原住民部落时，这份历史遗泽依然清晰醒目。
+
+<details>
+<summary>Original English</summary>
+
+**Narrator**: Entering Garden River today, that legacy is still visible.
+
+</details>
+
+**基斯·布瓦索诺**: 我认为这行标语深深触动了整个**龟岛**（Turtle Island，北美原住民对美洲大陆的称呼）上的人们。事实上，它影响了全世界。我们对自己当年的所作所为感到无比自豪，我们也无比欣慰这则宣告直至今日依然在回响。
+
+<details>
+<summary>Original English</summary>
+
+**Keith Boissoneau**: I think that it has impacted people right across Turtle Island. In fact, I think the world. We're proud of what we've done and we are grateful that the message continues on today.
+
+</details>
+
+**鲍勃·布瓦索诺**: 我们的族人正是在那个动荡的年代里，历经艰难才真正看清了我们是谁，并开始为自己的身份感到由衷的自豪。
+
+<details>
+<summary>Original English</summary>
+
+**Bob Boissoneau**: It took that time of our people to learn who we are and to be proud of who we are.
+
+</details>
+
+**旁白**: 刷写在那座铁路桥上的词句，是对土地、身份与苦难历程的庄严宣告。而几十年后由另一位原住民分享的私人童年往事，同样演变成了一场受到整个国家认可的宏大运动。这一切，都源于一位名叫**菲莉丝·韦布斯塔德**（Phyllis Webstad）的女性和一件小小的橙色衬衫。
+
+<details>
+<summary>Original English</summary>
+
+**Narrator**: The words painted on that bridge are a statement about land, identity, and experience. Another personal story shared decades later would grow into a movement recognized by a country. And it all started with a woman named Phyllis Webstad and an orange shirt.
+
+</details>
+
+### 橙衫日的诞生与童年创伤
+
+**杰扬·杰加纳森**: 今天是全国真相与和解日，也是橙衫日。菲莉丝，你是橙衫日的联合发起人，也是一名**寄宿学校幸存者**（residential school survivor）。非常感激你能莅临我们《简报》的演播室。你今天状态如何？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: It is a Truth and Reconciliation Day and also Orange Shirt Day. Phyllis, you are the co-founder of Orange Shirt Day and a residential school survivor. I want to say we are grateful to have you here in our rundown studios. How are you doing?
+
+</details>
+
+**菲莉丝·韦布斯塔德**: 挺好的。非常感谢你的邀请。
+
+<details>
+<summary>Original English</summary>
+
+**Phyllis Webstad**: Good. Thank you for having me.
+
+</details>
+
+**杰扬·杰加纳森**: 你的故事追根溯源是从你的祖母开始的。能跟我们讲讲你的祖母，以及你的家族与寄宿学校之间的沉痛经历吗？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Your story truly starts with your grandmother. Can you tell us a little bit about her and your family's experience with the residential schools?
+
+</details>
+
+**菲莉丝·韦布斯塔德**: 在我10岁之前，我一直和祖母一起生活在**狗溪保留地**（Dog Creek Reserve）。后来我姨妈，也就是我母亲的妹妹收养了我。但我的祖母是家族中第一代进入**圣约瑟夫印第安寄宿学校**（St. Joseph Indian Residential School，当地人俗称“教会使命学校”The Mission）的孩子，她从1925年到1935年足足在里面待了10年。随后，祖母的10个子女也全部被迫进入了寄宿学校，其中包括我的母亲；再接着是祖母的长孙，最后是我自己。
+
+<details>
+<summary>Original English</summary>
+
+**Phyllis Webstad**: I lived with my grandmother on the Dog Creek Reserve until I was 10. Then my aunt took me, my mother's sister. But my grandmother was the first generation to attend the St. Joseph Indian Residential School, known as the Mission, from 1925 to 1935 for 10 years. Then my Granny's 10 children attended, who included my mother and Granny's eldest grandchild and then myself.
+
+</details>
+
+**杰扬·杰加纳森**: 我们演播室展示了一张你1973年就读的那所寄宿学校的历史照片。当时你只有6岁，就像所有其他第一次踏入校门的孩子一样兴奋雀跃。能给我们讲讲那件橙色衬衫背后的故事吗？那本质上是祖母为你准备的一份礼物。
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Now, we have a photo of that same residential school that you went to school in 1973. You were excited, first day of school as any other kid would be. Tell me what the story is with the actual orange shirt. This was essentially a gift from your grandmother.
+
+</details>
+
+**菲莉丝·韦布斯塔德**: 嗯，我其实不会把它形容为一份“礼物”。祖母当时是我的监护人，就像世上任何一位父母或监护人照料孩子一样，新学期开学前你会带孩子去镇上采买开学用品。你希望他们穿着体面、看起来精神饱满，在他们人生中重大的第一天上学日感到被爱。当时我们去了威廉斯湖（Williams Lake）的一家百货商店，我一眼相中了一件亮闪闪、鲜艳夺目的橙色衬衫。它领口系着鞋带一样的带子，我特别喜欢它。然而，当我到了寄宿学校后，校方人员粗暴地把我的衣服全扒光了，那件橙色衬衫被硬生生地夺走，我再也没有见到过它。
+
+我在寄宿学校只待了一年，但直到我40岁的时候，我才真正开始理解那件橙色衬衫在我内心深处投下的阴影。这就是我在2013年**真相与和解委员会**（Truth and Reconciliation Commission）来到威廉斯湖时向世人公开讲述的故事。
+
+<details>
+<summary>Original English</summary>
+
+**Phyllis Webstad**: Um I wouldn't say it's a gift. Granny was my caregiver just as any parent caregiver would do for children in their care. You bring them school shopping. You want, you know, them to look their best and and feel loved and cared for on their on a big day in their life, first day of school. And so we went to a department store in Williams Lake, and I picked out this bright and shiny shiny orange shirt. It had lace shoestring laced up in the front and I really loved it. And when I got to the school, I was stripped and it was taken away and I never saw it again. I only went to school for 1 year, and it wasn't until I was in my 40s that I understood the impact of that orange shirt in my life. And so that's the story I told in 2013 when the Truth and Reconciliation Commission came to Williams Lake.
+
+</details>
+
+### 正视寄宿学校否定主义的逆流
+
+**杰扬·杰加纳森**: 这件橙色衬衫深深扎根于你的童年创伤，但如今它已经成为了寄宿学校幸存者的普遍象征与图腾。然而最近，右翼保守派媒体**反叛新闻**（Rebel News）发起了一场“橙衫”营销行动，印制了诸如“调查未经标记的墓穴”（Investigate the unmarked graves）等标语衬衫，公然质疑关于无标记儿童墓穴的历史叙事。当你第一次听说这件事时，你脑海里浮现了什么想法？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: The orange shirt deeply personal to your childhood, but has also become a universal symbol for residential school survivors. Um recently Rebel News launched an orange shirt campaign with phrases like "Investigate the unmarked graves," questioning the narrative around unmarked graves. What went through your head when you first heard about this?
+
+</details>
+
+**菲莉丝·韦布斯塔德**: 是的，那也就是大约十天前的事情，当时我度过了一段极其艰难的时刻。我当时甚至感到胃里一阵翻江倒海，整个人感到恶心、生理不适。当时我正在甘露市（Kamloops）忙于事务，花了很长时间才平复并理清自己的情绪。因为这已经不是单纯在言论上争辩了，这是在对我们的痛苦进行赤裸裸的恶意挑衅与攻击。
+
+他们居然盗用专属于幸存者创伤记忆的橙色衬衫来做这种事，这简直刷新了人性的道德底线。他们根本毫无丝毫人性可言。
+
+<details>
+<summary>Original English</summary>
+
+**Phyllis Webstad**: Mhm. Yeah, that was just like 10 days ago or so and I had a real hard time. I was actually sick to my stomach. I felt ill. And I was busy in Kamloops at the time and it it took me a while to process what was going on. It wasn't just words anymore, it was an attack. It's a personal attack on survivors, on their descendants, and on the memory of the children who never made it home. And for them to take the very symbol of our grief and try to weaponize it, to sell shirts questioning unmarked graves, it's just cruel. To use the orange shirt, which represents our stolen childhoods, for them to have the orange shirts is a an all new low level of humanity. They actually have no humanity.
+
+</details>
+
+**杰扬·杰加纳森**: 像这样公然的否定主义逆流，对你目前正在持续推进的倡导工作造成了怎样的影响？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: How does something like this impact the ongoing work that you were doing?
+
+</details>
+
+**菲莉丝·韦布斯塔德**: 嗯，这反而更加坚定了我坚守立场的决心，让我更加义无反顾地站出来捍卫我所确信的真相。全加拿大各地都有确凿无可辩驳的历史档案与证据，记录着那些死去的孩子。全加拿大曾建立过多达139所由政府资助、教会管理的印第安寄宿学校。成千上万的孩子踏入了那些校门，却再也没能活着回家。
+
+那些试图抹杀历史、贩卖怀疑论调的人，他们根本没有站在道德与事实的制高点上。我毫不畏惧这一点。我随时欢迎任何想要公开辩论这一议题、探讨这一历史真相的人来找我对话。
+
+<details>
+<summary>Original English</summary>
+
+**Phyllis Webstad**: Mhm. It just gives me more resolve to uh stand my ground, to stand up for what I know to be true. There is documented proof of children everywhere, all across Canada. There were 139 residential schools funded by the federal government and run by churches. Thousands of children died and never went home. The Truth and Reconciliation Commission documented this through years of research, looking at church archives, government records, and thousands of survivor testimonies. Denialists try to claim that because every single grave hasn't been exhumed, that it's all a hoax. But the trauma is real, the history is real, and the evidence is there. It just makes me work harder. And I welcome that. I welcome anybody that wants to come and debate this issue and talk about it.
+
+</details>
+
+### 回忆录《我们依然在此》与生命告白
+
+**杰扬·杰加纳森**: 你刚才提到了你的新书。你在这个月出版了一部全新的个人回忆录，书名叫作**《我们依然在此：真相与两界和解的人生》**（We Are Still Here: A Life of Truth and Reconciling Two Worlds）。为什么选择在这个节点出版这部作品？你之前也出版过其他书籍，包括儿童绘本。为什么现在是写下并分享这部长篇自传的最佳时刻？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: You had mentioned your memoir. You have a new memoir out this month. It's called We Are Still Here, a Life of Truth and Reconciling Two Worlds. Why was now the moment for this? You have written other books as well, children's books as well. Why was the moment now to write this story?
+
+</details>
+
+**菲莉丝·韦布斯塔德**: 许多寄宿学校的幸存者直到离开人世、走入坟墓，都没能有机会或者鼓起勇气讲出当年发生在他们身上的悲惨遭遇。哪怕到了今天，我虽然只在教会使命学校待了整整一年，但重提这段往事对我来说依然痛苦万分。而对于那些在里面被迫生活了十年甚至更久的人来说，这种创伤更加深重刻骨。
+
+我感到自己肩负着责任，必须为那些无法发声的人开口，必须让这段残酷的历史始终留存在全体加拿大人的视野之中，确保所有人都清清楚楚地知晓曾经发生过什么，并确保悲剧永远不再重演。
+
+<details>
+<summary>Original English</summary>
+
+**Phyllis Webstad**: Many survivors went to their graves not being able to talk about what happened to them. And even now, I have 1 year at the mission, and it's hard for me. Those that have 10 or more years, it's even harder. I've written children's books because I believe children need to learn this history early, but a memoir allows me to tell the raw, unfiltered truth of my whole life—the intergenerational trauma, the struggles, the healing, and the reconciliation between the Indigenous world and the Western world. I feel an obligation to speak while I still can, to keep this on the radar of Canadians, to make sure that people know what happened and that it doesn't happen again.
+
+</details>
+
+**杰扬·杰加纳森**: 你最希望读者从你的这本回忆录中收获什么？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: What do you hope people take away from your book?
+
+</details>
+
+**菲莉丝·韦布斯塔德**: 当我即将完成整本书的撰写时，我脑海中不断浮现出我的祖母。这正是为什么我用族语词汇写下“我们依然在此”（We are still here）。因为祖母在与我的无数次长谈中经常这样说：“无论他们怎样对待我们，无论他们如何企图消灭我们的语言和文化，孩子，看啊，我们依然站在这里。”
+
+我希望读者能够明白，尽管我们遭受了种族灭绝式的政策重压，但我们并没有被彻底摧毁。我希望我的子孙后代知道，我们在继承祖先的遗志，我们还将在这片土地上繁衍生息成百上千甚至上万年。
+
+<details>
+<summary>Original English</summary>
+
+**Phyllis Webstad**: Mhm. When I was finishing writing the book, I thought of my grandmother, and that's why W E A H N A L I A E, that we are still here, because my grandmother used to say that in our many conversations, you know, "Look at us, we are still here." After everything the government and churches did to try to wipe out who we are, to assimilate us, to take away our children, our culture, our language, we survived. We are resilient. I hope people take away that strength and resilience, and recognize that reconciliation isn't just about acknowledging the past, it's about honoring that survival today. We're carrying on your legacy, and we're going to be here for many, many more years to come, thousands of years.
+
+</details>
+
+**杰扬·杰加纳森**: 在撰写这本回忆录的过程中，是否有一些特别艰难、痛苦的瞬间，至今依然深刻地烙印在你的脑海中？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Were there difficult moments uh when you were writing this memoir that still stuck in your head?
+
+</details>
+
+**菲莉丝·韦布斯塔德**: 是的，写作期间有好几段难熬的时光。在那些时刻，我不得不彻底隔绝外界世界，完全将自己沉浸在过去的痛苦回忆中。正如我所有的创作历程一样，回首审视自己一路走来的坎坷与创伤，需要付出巨大的心理代价。当我不得不重温那些最黑暗的记忆片段时，整个人仿佛被吸回了过去。每当写完那样的一章，我必须在房间里用力拍响双手，把自己的灵魂重新召唤回来，对自己大声说：“好了，我们现在要离开那里，回到现实中了。”正是这样，我才得以带着真实的自己继续前行。
+
+<details>
+<summary>Original English</summary>
+
+**Phyllis Webstad**: Yeah, there was pockets of time and that I had to just forget about the world and just immerse myself and there's as with all of my books, there's a lot of learning and looking back at where I've come from. Revisiting sexual abuse, childhood trauma, teenage pregnancy, alcoholism, and feeling unworthy—writing those details down was terrifying and deeply painful. There were days I couldn't get out of bed. My cultural teachings tell us that when we visit dark places, our spirit can get stuck there. So when I would finish a heavy chapter or session, I would actually clap to bring my spirit back and say, "Okay, we're leaving." And so I take me with me wherever I go.
+
+</details>
+
+**杰扬·杰加纳森**: 菲莉丝，非常感谢你。我真诚地感谢你能抽时间做客我们的演播室。
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Alice, thank you so much. I really appreciate you taking the [music] time.
+
+</details>
+
+**菲莉丝·韦布斯塔德**: 谢谢你的邀请。
+
+<details>
+<summary>Original English</summary>
+
+**Phyllis Webstad**: Thank you for having me.
+
+</details>
+
+### 各方回应与结语
+
+**旁白**: 在本期节目节目录制完成后，**反叛新闻**（Rebel News）对我们的置评请求做出了回应。其创始人**埃兹拉·黎凡特**（Ezra Levant）在回复中部分表示：“橙衫日最初是作为向寄宿学校幸存者致敬的一种方式而创立的，这一宗旨是崇高的。但它如今也已经演变成了一种强迫性言论的政治工具。我理解部分幸存者会觉得相反的声音令人痛苦，我并没有轻视或否定这一感受。但在一个自由的国家，对于一件你不同意的衬衫，解决之道绝不应该是禁止它。要求查验实证绝不是仇恨言论。”
+
+<details>
+<summary>Original English</summary>
+
+**Narrator**: Rebel News responded to our request for comment after this segment had been recorded. Ezra Levant responded in part, "Orange Shirt Day started as a way to honor residential school survivors and that purpose is a noble one. But it has also become an exercise in compelled speech. I understand that some survivors find a contrary message painful and I don't dismiss that. But in a free country, the answer to a shirt you disagree with is not to ban it. Asking to see the evidence is not hate."
+
+</details>
+
+**杰扬·杰加纳森**: 你的社区今天是否以某种形式纪念了橙衫日，抑或是你自己以独特的方式进行了铭记？欢迎在下方评论区留言告诉我们，或者发送电子邮件至 rundown@tvo.org。在此之前，我们明天节目再见。再会。
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Did your community honor Orange Shirt Day or did you mark it in your own way? Let us know in the comments or send us an email to rundown@tvo.org. [music] Until then, I will see you tomorrow. >> Hey.
+
+</details>

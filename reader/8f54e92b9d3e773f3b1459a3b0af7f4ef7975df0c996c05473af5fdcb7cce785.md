@@ -1,0 +1,92 @@
+---
+author: AI Engineer
+date: '2026-10-19'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=J7n3WJnFTto
+speaker: AI Engineer
+tags:
+  - ai-transformation
+  - mergers-and-acquisitions
+  - services-economy
+  - operating-leverage
+  - enterprise-adoption
+title: 收购即落地：以并购战略重塑传统服务业的 AI 商业化新范式
+summary: Long Lake 创始合伙人 Pratik Naidu 剖析了 B2B AI 软件公司在传统企业落地时面临的组织复杂性、长尾场景与价值捕获错配难题。他提出跳出外部供应商视角，通过控股并购优质服务型企业，将 AI 深度注入核心业务流程，利用飞轮效应释放经营杠杆，实现从单纯节省工时到利润表全面重构的商业跃迁。
+insight: ''
+draft: true
+series: ''
+category: ai-application
+area: tech-engineering
+project: []
+people: []
+companies_orgs:
+  - Long Lake
+products_models: []
+media_books: []
+status: evergreen
+---
+### 破局外部交付陷阱：B2B 软件落地痛点与价值捕获错配
+
+在当前的生成式人工智能浪潮中，众多初创团队正经历着高度同质化的商业化阵痛。创业者通常敏锐地捕捉到了某个具体痛点，打造出表现优异的**垂直场景智能体**（AI Agent: 具备自主执行特定工作流能力的软件程序），但在尝试将其销售给传统企业时，往往会遭遇沉重阻力。现实中的企业组织绝非组织架构图上清晰简明的三层汇报链条，而是一个充满非正式沟通、跨部门交叉协调以及严重依赖隐性经验的复杂动态网络。企业级软件落地需要跨越漫长繁琐的安全审查、权限合规验证，以及与运行了二三十年的陈旧**遗留系统**（Legacy Systems: 企业内部久经迭代但难以重构的核心旧系统）深度集成的工程泥潭。即便勉强完成了技术对接，客户团队的实际采纳度仍是难以逾越的壁垒：**隐性知识**（Tacit Knowledge: 员工在长期实践中积累、未被文字化的规则与直觉）和纷繁复杂的业务边缘异常使得标准化的 AI 软件极易出现水土不服。
+
+更为残酷的现实体现在经济价值的分配法则上。在传统的 SaaS 商业模式下，AI 供应商作为外部第三方，即便竭尽全力帮助企业在特定工作流中缩减了 50% 甚至更大幅度的工时，并最终为客户释放出数以千万计的核心运营利润，所能捕获的收入依然极其微薄。软件供应商往往只能按照每用户每月数十美元的固定席位费，或者基于微薄的使用量（API / Token）获得每年十万至数十万美元的经常性收入（ARR）。客户凭借 AI 驱动所新增的经营性收益与企业价值，绝大部分被企业自身留存，而外部技术开发商却承担了极高的工程交付风险与客户成功成本。这种巨大的价值错配引发了一个根本性的战略拷问：面对极其深厚的行业壁垒与复杂的协同场景，AI 团队是否应当放弃由外向内的单薄售卖模式，转而通过资本并购直接**持有资产所有权**，与真实业务深度共生？
+
+<details>
+<summary>Original English Source</summary>
+
+[music] >> Hey everyone. My name is Pratik Naidu. I'm a founding partner at Long Lake and today I'm excited to talk a little bit more about why acquiring businesses is a unique strategy to deploy AI into the real world. So to start out very familiar experience to many of you. Let's say you're building an AI product and now you're trying to sell it into the enterprise. Well, where do you start? You found a pain. You built an agent for it and it works, but for one very narrow use case. It's a great starting point. But now you have to actually get it into production. And that might involve dealing with security review, internal coordination, integrations with 20-year-old systems. It's a lot of hard work and this is typically the first wall in order to deploy AI into an enterprise. But once you get past this, now you have to get the team to use it. So you typically will iterate on the product interface, go through trainings, get feedback from users. And there's a typical question that comes up, which is whose job is it to actually drive up that adoption? Is it yours as an AI vendor or is it the management team's job? And you know, you can typically find a few friendly champions, but getting true adoption across the entire company is really hard. And that's usually the second wall in order to deploy into the enterprise. And so, what does this actually lead to? You'll typically work through a few different questions. You know, how do you handle security permissions? How do you actually get data that is stuck in 20-year-old systems out of it? And the bigger picture question here is as an AI startup deploying into the enterprise, how do you cross this chasm of selling a point solution to actually driving true enterprise transformation? And so, this leads to three different observations of why deploying AI into businesses is challenging. The first is that organizations are incredibly complex. On paper, your org chart might look something on the left. You know, you have your owner, you have teams, managers, and this is a standard team structure. But, the reality is that businesses are complex living organisms. There's unofficial leaders. There's sub-teams that operate on their own rhythms. And these dynamic teams drive how work is actually done. And so, understanding that is critical to getting adoption. The second observation is that workflows are messy. You might start with a very clean, straightforward, documented standard operating procedure. But the reality is that the real work is messy. It's the exceptions, the edge cases, the tacit knowledge, the, you know, quick questions that get asked over Slack or in the office. These are where the true work is done and it's very hard to capture that tacit knowledge from the outside. And the third observation is that, you know, value accrual is deeply misaligned. So, let's say you do all the hard work. You get past that first wall of deploying into production. You cross the second wall of getting adoption. And now, you've saved hundreds of hours for the team. But from a value accrual standpoint, your pricing is probably tied to software seats or usage. And who captures all that value? The business, right? So, let's take a simple example. A services business doing, say, $100 million in revenue with 10% EBITDA margins. So, they're generating $10 million in EBITDA. If you can come in and automate even just a small percentage of their workflows, say, 50% of the back-office or core work, you might be able to double their EBITDA margins to 20%, which means they're now generating $20 million in EBITDA. That's a $10 million increase in recurring earnings to a business with value that you can already reason about. And so, you know, using a, you know, roughly conservative 10x multiple, you can actually generate for your client $50 million in enterprise value, which is really interesting. And so, there's this question here, which is, you know, as a vendor, you did all the work. You built the technology. You had to go through all the work of deploying into the company and getting people to use it. But you captured just a tiny fraction of that value. And why are we giving up all of that value when software vendors created all of that upside? A lot of big questions to answer. And the market reflects this. What we're seeing is that services businesses are now trading at incredible discounts, right? And there's a reason for that, which is they're being priced as though AI is going to disrupt them. But the reality is that AI might actually make them more valuable, not less. And so, there's this question here, which is, you know, why are we capturing so little value and why is the market pricing these businesses so cheaply? And this led us to our core thesis at Long Lake. So instead of being outside in and selling an AI agent to a company or trying to build from scratch, what if you could partner far more closely with incredible businesses that already exist through acquisition?
+
+</details>
+
+### 所有权飞轮效应：深度运营准入与激励机制的完全对齐
+
+在看清外部交付的瓶颈之后，**控股所有权**（Ownership: 通过股权收购获得对目标企业资产与经营的完全控制权）显现出无可比拟的系统级战略优势。首要的红利来自于工程与开发层面的**全流程准入特权**（Access）。在传统的甲乙方采购关系中，AI 工程师与一线业务人员之间始终隔着项目经理、法务合规及漫长的反馈链路；而一旦拥有了公司的所有权，技术团队便能够直接与每天在战壕中处理业务的员工并肩而坐。这种无障碍的观察环境，使工程师能够近距离解构每一个长尾异常、截获分散在沟通软件中的业务诀窍，并针对实际工作流中的细微摩擦快速迭代算法与交互界面，彻底打破了外部黑盒交付的信息屏障。
+
+比技术准入更深远的变革在于**组织激励机制的根本统一**（Alignment）。作为外部软件商，团队常面临员工对被自动化淘汰的本能恐惧与抵触，但在所有权框架下，管理层与工程团队的目标高度一致：双方的利益不再割裂，共同指向整体利润池的扩张与股东价值的放大。此时，数据孤岛的壁垒不复存在，企业数十年来沉淀的核心业务数据、客户历史交互与专家反馈得以无缝注入系统底层，形成一个闭环运转的正向飞轮：
+* **数据注入与模型微调**: 全面调用受保护的内部专有数据进行工作流调优。
+* **业务深度采纳与反馈**: 团队全员协同推进技术融入日常流程，消除部门推诿。
+* **单位经济效益爆发**: 效率提升直接转化为留存利润，并为模型持续迭代反哺资本。
+
+这种基于控股地位构建的复合飞轮，具备极强的复利效应。技术团队不再是被动等待续费的软件供应商，而是企业资产升值的主导者，从而将每一次代码提交和模型调优都沉淀为稳固的资本壁垒。
+
+<details>
+<summary>Original English Source</summary>
+
+And I want to talk a little bit more about why ownership is such an interesting strategy here. Starting with on the engineering side, which is access. The ability to have your team sit down with the people who do work, observe their workflows, see the edge cases in real time, and understand the tacit knowledge that lives inside their heads. That is an unfair engineering advantage that you simply cannot get as an external vendor. The second is data. When you own the company, you own the data. You have complete access to the proprietary training data that has been built over decades of customer interactions, workflows, and edge cases. And that data flywheel can be fed directly back into your models to create something truly differentiated. And the third is alignment. When you're an owner, your incentives are completely aligned with the business. You're not trying to optimize for software seats or usage metrics. You're optimizing for enterprise value and real bottom-line profitability. And that means you can make the right long-term product and architectural decisions that actually move the needle for the business. And this flywheel is really interesting, and it comes with all the elements of ownership to uh you know, power this flywheel from from day one. And, you know, importantly, rather than coming outside-in or building from scratch, ownership has the ability to accelerate your go-to-market by 5 to 10 years, right? You immediately acquire a brand that customers trust, existing distribution, real cash flows, and proprietary data that you can use to build your technology on top of. And so, what's interesting here is that ownership uh can compound rapidly over time.
+
+</details>
+
+### 目标市场筛选法则：知识型服务经济的经营杠杆与筛选金律
+
+明确了控股赋能路径后，核心课题转向了并购标的的选择标准。审视全球商业格局，软件行业每年的整体市场规模约为 6000 亿至 1 万亿美元，然而与之相对的**全球服务经济**（Services Economy: 依靠专业人员与专业知识交付成果的产业集合）体量高达数十万亿美元。在传统模式下，专业服务公司的收入规模与人工成本呈现几乎严格的 1:1 线性正相关：若想将营收从 1000 万美元翻倍至 2000 万美元，公司必须同比扩充一倍的分析师、顾问或操作人员，其利润率始终受困于工时与人力的刚性约束。
+
+AI 技术的注入在根本上扭转了这一传统财务规律，带来了前所未有的**经营杠杆**（Operating Leverage: 营业收入增长率高于营业成本增长率所带来的盈利放大效应）。AI 能够将单位服务的边际生产成本压低数倍，同时借助标准化模型大幅削减人为疏漏，显著提升最终交付成果的一致性与响应质量。当收入持续以陡峭曲线增长而人力成本曲线逐渐走平甚至下移时，企业的 EBITDA（息税折旧摊销前利润）空间将迎来爆发式扩张。在挑选极具改造潜力的服务业标的时，**Long Lake** 总结出三套决定性的评估基准：
+* **交付端到端真实结果的信任基础**: 客户购买的绝非抽象的软件工具，而是具有法律效应、审计责任或合规要求的最终交付成果，且客户对该企业的品牌声誉具备长期的忠诚与依赖。
+* **业务流程重度依赖专业人工判断**: 核心工作并非单纯的机械重复录入，而是涉及大量非结构化逻辑评估、政策解读与专业裁量，这构成了高商业附加值的天然防线。
+* **沉淀了庞大且非公开的专有数据体系**: 目标企业在数十年的深耕中，积淀了未被互联网公开抓取过的领域语料、客户定制化规则及业务处置样本，构成了 AI 差异化调优的护城河。
+
+<details>
+<summary>Original English Source</summary>
+
+So, we talked about why ownership is is really interesting. But what markets are ripe for acquisition, especially in the AI era? I want to start with a broad market observation. This is a global software market. It's about $600 billion to $1 trillion in size. It's a huge market. It's created a lot of incredible software companies over the last couple of decades. But let's zoom out. If you zoom out, this is the global services market. It's tens of trillions of dollars in size. It's massive. It represents a huge portion of the global economy. And the reason it's so large is because most of the work in the world is not done by software. It's done by people. And it's done through services businesses. Everything from accounting, to legal, to compliance, to logistics, to healthcare services. These are all services businesses that are powered by human labor. And the fundamental economic model of a services business is broken. Because revenue scales linearly with headcount. If you want to double your revenue, you have to double your headcount. And that means your gross margins are capped, your operating margins are capped, and your ability to scale is fundamentally constrained by your ability to hire, train, and retain talent. And so, what you end up with is a business that looks like this, where revenue scales proportionally with labor costs. And that's why services businesses trade at 1 to 2x revenue or 5 to 10x EBITDA, whereas software businesses trade at 10 to 20x revenue. But what happens when you introduce AI to this equation? What's interesting here is that AI actually reduces the cost of service while also improving the quality of your service. So, look back at our chart here where revenue scales proportionally to labor costs, but when you deploy AI you can see here that you get actually operating leverage. So, your labor cost no longer scales linearly with revenue. In fact, it flattens out, while your revenue can continue to scale exponentially. And what that means is that your margins expand dramatically. You go from a 10 or 15% EBITDA margin business to a 30, 40, or even 50% EBITDA margin business. And when that happens, the valuation multiple of that business re-rates. It goes from trading like a services business to trading like a software business. And that is where the real value creation happens. But what types of businesses are right for this? Not every services business is created equal. We've spent a lot of time thinking about this at Long Lake, and we've developed a framework for the types of businesses that are most ripe for this kind of transformation. And it starts with a simple observation, which is that intelligence is getting cheaper, right? With every new frontier model, the cost of intelligence is dropping by orders of magnitude. And that trend is only going to continue. So, if intelligence is getting cheap, what remains expensive? We really focus on mission-critical businesses, and it starts with a few key questions that we typically evaluate these companies on. The first is is there a customer base that trust these businesses with real end-to-end outcomes? The second is is there human judgment in the service that's actually being provided? And the third is that are there, you know, rich proprietary workflows and data that exist within that business. So, looking at these three different criteria, we think about businesses that are mission-critical. If the business goes down or if the service fails, it's a catastrophic outcome for the customer. These are things like regulatory compliance, specialized tax, legal services, complex supply chain logistics, back-office operations for healthcare. These are not nice-to-have services. They are must-have services. And customers are willing to pay for certainty and outcomes, not for software. And so, that's what we actually focus on and who we partner with.
+
+</details>
+
+### J 曲线演进路径：从释放产能到重构利润表的系统化跃迁
+
+并购完成并不意味着价值的自然变现，企业进入整合阶段后，往往会经历典型的 **J 曲线效应**（J-Curve Effect: 在技术和流程革新初期，由于研发投入、系统阵痛与组织适应导致短期产出或利润暂时下潜，随后迎来非线性爆发式增长的发展轨迹）。在最初的爬坡阶段，工程团队需要耗费数月甚至更长时间处理极其艰涩的技术脏活与累活：拆解杂乱无章的旧版数据库、理清各级员工间模糊的职责边界、在缺乏统一规范的文档中提取工作流规则。这是一条充满技术阻力的上升陡坡，没有任何侥幸的捷径可走。
+
+一旦克服了最初的摩擦，系统开始稳定释放巨大的内部潜能，通常会呈现出三个梯次递进的跨越阶段：
+1. **产能大释放与工时节约**: 员工在 AI 的辅助下以同等或更少的时间完成原有的业务输出，人均处理通量数倍提升。
+2. **将剩余产能转化为边际增长**: 关键挑战在于避免让产能闲置。企业管理层必须与运营人员重新设计激励体系，将释放出的资深人力重新配置到高净值客户拓展、复杂个案研判与增值产品线交付中。
+3. **利润表（P&L）的根本性重塑**: 公司的商业模式由最初的“计时收费”（Billable Hours）全面升级为“按业务成果定价”（Outcome-based Pricing）。随着运营成本与营收增长彻底脱钩，企业的利润结构实现了根本性重组，原有的传统服务公司蜕变为具备软件级利润率与资本市场估值逻辑的新型智能体企业。
+
+更为关键的是，这种“收购—改造—重构”的整合方法并非孤立个案的特定脚本，而是一套高度模块化、可跨行业广泛复用的规模化落地范式。在全球服务经济面临代际重构的历史拐点上，通过资本所有权掌控业务终局，深度重塑产业价值链，正展现出远超传统 SaaS 模式的巨大生命力。
+
+<details>
+<summary>Original English Source</summary>
+
+Awesome. So, once you've found your business and you've partnered with a company, what does P&L transformation actually look like? And I think a very simple way to explain this is actually through the visual of a J-curve. So, on day one, you make the acquisition, you start deploying your technology. And the first part of this curve is actually really hard. You have to do all that engineering heavy lifting, right? You have to build the integrations, clean up the data, map the workflows, sit down with the teams, and overcome the resistance to change. And that takes time and effort. There's a real upfront investment that has to happen. And this is why most external software vendors fail, because they don't have the patience, the capital, or the access to get through this initial trough of the curve. You have to overcome the messy workflows and data that exist within that business. But once you make it up this hill, you'll start to see folks actually using your product, which is incredibly exciting, and you start to actually unlock a lot of capacity. Time savings, usage is going through the roof. They're producing the same output, fewer hours, and this is where most AI startups stop. They celebrate the time savings. They say, "Look, we saved our customer 50% of their time, or we automated 80% of this task." But time savings alone does not transform a P&L. If you save someone 10 hours a week, but they just spend that 10 hours browsing the web or doing low-value tasks, you haven't actually created enterprise value. And so, you actually have to put that capacity to work. Think about incentive alignment, working very closely with our management teams and trusted operators, to ensure that the capacity you unlock is directly channeled into revenue-generating activities. Can you take on more clients without hiring more people? Can you offer new premium services that you couldn't offer before? Can you deliver a turnaround time that is 10x faster than anyone else in the industry, and therefore win market share and charge a premium? That is how you turn unlocked capacity into real revenue growth and margin expansion. And that is what drives the exponential ascent of that J-curve. And I think what's cool about this is that this isn't just a bespoke playbook that you run once on a single company. If you have the platform and the playbook to do both the AI deployment and the business transformation, you can repeat this across an entire sector. You can acquire a platform company, build out the AI-native operational infrastructure, and then execute add-on acquisitions where you immediately migrate the acquired customer base and volume onto your highly efficient, AI-powered platform. And when you do that, the synergies are not just 10 or 20% cost cuts like in traditional private equity. The synergies are structural, margin-expanding, and transformative. So, we talked a lot about the opportunity, the thesis, and how we actually think about executing on this. But I want to leave you with one final thought, which is that we are at the very beginning of a generational shift in how services are delivered. And if you are an AI builder or an operator, think about that at that J-curve, right? Don't just stop at capacity and time savings. How do you actually ensure that the work you're doing is driving real business impact for the companies that you work with, and delivering a far better client experience uh for the service that you're providing? So, if you're excited about owning outcomes and partnering with uh incredible services businesses, feel free to reach out. Uh we're excited about this thesis. We think there's a lot of opportunity to go continue to build in the services economy, and uh feel free to chat more if there's any questions. Thank you.
+
+</details>

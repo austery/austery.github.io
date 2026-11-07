@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>结果确定性的终局：Anthropic 如何让 Claude
+把形式化验证从手工作坊变成算力工业</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">结果确定性的终局：Anthropic 如何让 Claude
+把形式化验证从手工作坊变成算力工业</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-24</span>
+    
+
+    <header class="article-header">
+      
+      <h1>结果确定性的终局：Anthropic 如何让 Claude
+把形式化验证从手工作坊变成算力工业</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/formal-verification/">formal-verification</a>
+      
+        <a class="tag-link" href="/tags/ai-tooling/">ai-tooling</a>
+      
+        <span class="tag-pill tag-pill--no-page">proof-search</span>
+      
+        <a class="tag-link" href="/tags/software-engineering/">software-engineering</a>
+      
+        <span class="tag-pill tag-pill--no-page">verification-system</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章探讨了Anthropic如何通过分层验证机制，将形式化验证从手工作坊转变为算力工业。核心观点是，将控制流交给脚本（过程确定性），执行交给Agent（结果确定性），验证交给多个Agent交叉验证。形式化验证的终极目标是将验收标准从自然语言共识升级为可机器检查的穷尽证明，从而在结果确定性上提供数学证书。文章指出，通过将输入视为符号进行代数推导，并引入循环不变量来处理状态变化，使得形式化验证在逻辑上可行。最终，通过三层拆分架构（底层检查器内核、中间层形式化规格、上层智能体探索），将模型幻觉的风险隔离在信任边界外，实现了工程落地，使寻找不变量的劳动从稀缺专家变成了可按token计费的算力，但同时也指出了算力无法弥补规格准确性和可信计算基座审视的鸿沟。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/ai-formal-verification-anthropic-20261024.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-24T00:00:00.000Z">2026-10-24</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>5 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E4%B8%80%E4%B8%A4%E7%A7%8D%E7%A1%AE%E5%AE%9A%E6%80%A7%E4%B8%8E%E6%B5%8B%E8%AF%95%E5%A4%A9%E8%8A%B1%E6%9D%BF%E4%B8%BA%E4%BB%80%E4%B9%88%E6%8A%BD%E6%A0%B7%E6%97%A0%E6%B3%95%E7%BB%99">一、两种确定性与测试天花板：为什么抽样无法给</a></li><li class="outline-h2"><a href="#%E4%BA%8C%E6%8A%8A%E8%BE%93%E5%85%A5%E5%BD%93%E7%AC%A6%E5%8F%B7%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%81%E6%98%8E%E6%98%AF%E4%B8%80%E9%81%93%E4%B8%8D%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%95%B0%E5%AD%A6%E9%A2%98">二、把输入当符号：为什么证明是一道不运行程序的数学题</a></li><li class="outline-h2"><a href="#%E4%B8%89%E6%9C%89-state">三、有 State</a></li><li class="outline-h2"><a href="#%E5%9B%9Banthropic">四、Anthropic</a></li><li class="outline-h2"><a href="#%E4%BA%94%E7%BB%8F%E6%B5%8E%E5%8F%8D%E8%BD%AC%E4%B8%8E%E8%83%BD%E5%8A%9B%E8%BE%B9%E7%95%8C%E4%BB%8E">五、经济反转与能力边界：从</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h2 id="一两种确定性与测试天花板为什么抽样无法给" data-reading-heading="">一、两种确定性与测试天花板：为什么抽样无法给</h2>
+<p>Agent 兜底</p>
+<p>屏幕右下角有一个通知：智能体已经改好了线上服务的代码，并且跑了一遍持续集成流水线，测试都通过了。此时鼠标在合入代码的按钮上，敢直接合入代码到生产分支吗？</p>
+<p>大多数技术负责人心里都会打鼓。这几年大模型写代码和调工具的边际成本每个月都在往下掉。以前你发愁模型写不出能跑的代码，现在你发愁它写出来的代码你不敢直接合进生产主干。</p>
+<p>一条路叫过程确定性。你用硬编码的编排逻辑和固定状态机，把智能体每一步动作都事先规定好。模型第一步读哪个文件，第二步调哪个接口，全由你提前写死。另一条路叫结果确定性。你只定好终点要长什么样，中间怎么拆任务、看报错、改代码，全交给模型自己决定。</p>
+<p>这两条路我之前在一篇讲 Claude
+Code dynamic workflow 的文章里拆过。那篇文章从 RAG 讲起：传统 RAG
+把先搜再答写死在代码里，流程稳定，但上限是设计者能预见多少种情况；agentic
+RAG 把搜索策略交给
+agent，灵活，但中间结果和策略挤在同一个上下文里，跑久了容易丢状态。Anthropic
+的 dynamic workflow
+给出的答案不是二选一，而是分层：控制流交给脚本，执行交给
+agent，验证交给多个 agent
+交叉。控制流是过程确定性的，执行是结果确定性的，验证仍然是结果确定性的，因为判断标准是用自然语言写的，由
+agent 自己应用。</p>
+<p>很多人对形式化验证有误解，觉得它是把每一步都绑死的死板教条。其实它是结果确定性的终极版本。它有意思的地方，是把上面这套分层里的验证层又往前推了一步。它不满足于让几个
+agent
+投票说这个结论大概可靠，它要求把成功标准写成一个形式化规格，再让一个机器检查器逐行核对证明。换句话说，结果确定性那条路的终点裁判，从
+agent 的判断换成了数学证书。控制流仍然可以交给 agent
+自由探索，执行也仍然自由，变化发生在验证层：标准从自然语言共识变成了可机器检查的穷尽证明。只有验收标准严谨到不留盲区，整个系统才敢真正放开对过程的控制。</p>
+<p>那篇文章里还提到一个 TDD 悖论：当 agent 被要求严格遵守 TDD
+流程、却不知道哪些测试跟当前改动相关时，regression 率反而从 6% 升到
+10%。纯过程约束在信息不足的时候，可能比没有约束更差。形式化验证不属于这种纯过程约束。它没有规定
+agent 先写什么、后写什么，只规定最后要交出一份能被机器检查的证明。</p>
+<p>那我们现在给智能体配的这个终点裁判够不够可靠呢？绝大多数的研发团队使用的裁判无非就是单元测试、集成测试或者模糊测试。你把模型接上持续集成的流水线，让它自己改代码、跑测试、看日志、修缺陷。这套闭环在简单任务上确实转得挺顺。可它在原理上有一道跨不过的天花板。</p>
+<p>不论你手写了再多的边界用例，还是让自动生成随机输入的模糊测试器在集群上面跑了很多轮，测试的本质都是抽样。测试全通过，只是告诉你一件关于程序的事：在已经抽样试过的这一小部分有限的输入里面，程序恰好没有崩溃。至于那些没试过的海量输入，会不会在哪个偏僻的角落里触发内存越界，抽样的机制给不出任何承诺。Lean
+创始人 Leonardo de Moura 的技术随笔 在 2026 年 2 月 28 日专门针对 AI
+验证软件这件事做了区分。他指出，测试可以给工程师带来信心，只有数学证明才能提供保证。</p>
+<p>抽样只覆盖试过的一小批输入，证明覆盖全部输入。</p>
+<p>那么，抽样测试的盲区到底有多大呢？即便是在久经考验的工业级代码中，漏网之鱼也随处可见。Anthropic
+官方研究博客 在 2026 年 10 月 22 日披露了一项与合作方 Theorem
+联合开展的验证工程。研究团队特意挑选了一批成熟的开源库来做验证。这些库全都早已接入开源模糊测试平台
+OSS-Fuzz，常年接受自动化随机输入的高强度轰炸。按理说，容易撞出来的漏洞早就被清理干净了。可研究人员试着用形式化方法为这些库构建数学证明，模型在一步步推导的过程中，居然顺手挖出了一批长期逃过模糊测试的真实内存缺陷。</p>
+<p>其中一个就是广泛使用的解压库。如果给它一个特定构造、大约 20 MB
+的罕见输入，里面的计数器会向下减到溢出，然后直接导致越界写内存。</p>
+<p>另一个是常见的图像解码器。触发它的越界读，需要一个 64MB
+的输入，以及超过 2GB 的内存。</p>
+<p>第三个例子更隐蔽。调用者需要在指向同一个文件的两个句柄之间，按特定顺序调用接口，才能触发越界读取。</p>
+<p>同样的实验在开源基础库中也取得了更多成果。他们重新独立发现了 XML
+解析库 libexpat 的 CVE-2026-56132 漏洞。在尝试验证一款广泛使用的 PDF
+阅读器时，他们一周内发现的安全漏洞数，相当于这款阅读器通常一年报告的数量。</p>
+<p>那为什么持续不断的 fuzzing 没有发现这些 bug 呢？这是因为 fuzzing
+的方法是基于随机变异来生成测试样本的。所以，这些测试样本往往都只存在于相对较短的字节范围内。要想用概率的方法来撞出一个
+20MB
+的特殊字节排列组合，或者撞出一个复杂的跨句柄的状态序列，实在是太难了。</p>
+<p>把抽样测试交给智能体当唯一裁判，还会带来另一个麻烦：如果智能体只把“跑通现有测试”作为优化目标，它甚至可能学会写投机补丁去掩盖表面报错，只要能把测试脚本糊弄过去就算交差。要想真正兜住智能体写代码的底线，工程界必须跳出代具体数字进去跑程序的习惯，把终点的验收标准从抽样测试升级成覆盖全部可能输入的数学证明。</p>
+<h2 id="二把输入当符号为什么证明是一道不运行程序的数学题" data-reading-heading="">二、把输入当符号：为什么证明是一道不运行程序的数学题</h2>
+<p>很多码农第一次听到有一段程序可以证明对任意输入都不会挂掉的时候都会摆手。算力再强，也不可能把所有可能的输入都枚举一遍吧？</p>
+<p>做一道简单的数学题就能理解为什么。即使是长度不超过 64MB
+的一个字节流，它所可能的输入已经远远超过可观测宇宙的基本粒子了。我们在机房里摆出多少处理器，也不可能把每种输入都跑一遍。</p>
+<p>之所以我们会觉得全量验证很不可思议，是因为我们在平时调试和测试的时候，都是在用运行程序的方式来看待代码的。我们习惯于给一个函数一个具体的输入值，然后让它一步一步执行下去，得到结果后检查这个结果是不是正确的。形式化验证则完全不是这么干的。从头到尾，它都不需要运行被验证的程序，而是直接把软件测试变成了一个纸面上的代数证明题。</p>
+<p>我们来做一个最简单的例子。每个程序员都写过 abs
+函数吧。假设我们的代码很简单，只有一个条件分支。如果输入的整数
+x 小于 0，函数就返回 -x。否则，函数就直接返回
+x。</p>
+<p>现在我们来证明一个性质：不管用户传什么
+x，这个函数的返回值一定大于或等于 0。</p>
+<p>如果我们从软件工程师的技术直觉出发，我们会选取一些具体的值进行测试。比如我们取
+-100, -1, 0, 1,
+99
+以及一些边界情况，观察输出的结果是否都是非负数。在得到正确的输出结果以后，我们就认为程序是正确的了。但是在进行形式化证明的时候，我们不会为变量
+x 赋予任何具体的值。我们直接将 x
+作为一个代数符号来使用，来表示任意可能的用户输入。然后我们再根据代码的结构，也就是其中的条件分支来进行逻辑推理。你根据
+abs
+函数的条件判断向下思考，所有的可能输入自然而然就分为了两个互斥且完备的逻辑分支。</p>
+<p>对于第一个分支，它的前提条件是
+x &lt; 0。代码在第一个分支里会返回
+-x。根据初等代数的知识，既然 x &lt; 0，那么
+-x 肯定大于 0，满足返回值大于等于 0 的要求。</p>
+<p>第二个分支自带了前提条件 x &gt;= 0。代码在这里直接返回
+x 本身，也天然满足大于或等于 0 的要求。</p>
+<p>现在我们把这两个分支合在一起。此时所有的输入情况，我们都能处理到了，没有漏网之鱼。</p>
+<p>这个小例子还可以让我们清晰地看到，纸面上的符号推导对代码细节非常敏感。在真实的计算机里，整数和数学课本上的无限延伸的整数不同，它是固定位宽的二进制补码整数。在二进制补码中，负数的表示范围比正数多一个，有一个最小的负数。如果我们把符号
+x 放在固定位宽的二进制补码整数上进行推导，当 x
+取到那个最小负数时，去求它的相反数 -x
+就会发生算术溢出，算出来的结果还是负数。</p>
+<p>当我们遇到这种情况时，符号推导就会卡在第一个分支上，不会通过证明。这会迫使开发者回头修复溢出的
+bug，或在接口中排除最小负数。</p>
+<p>回头审视整个对 abs
+函数的验证过程，我们发现完全没有使用模拟器进行任何具体计算，却一次性把所有可能的合法输入下程序的行为边界完全限定住。把输入当作符号，并且在这个符号上做逻辑推演，是这一步的关键。只要我们在翻译编程语言或处理器每条指令的精确含义为数学定义后，一段程序代码的执行过程就可以等价为一个逻辑蕴含链。</p>
+<p>Anthropic 和 Theorem 让 Claude
+做的底层证明工作，起点正是这种针对符号的分类讨论。但实际的工业软件仓库可不像求绝对值函数这么简单。生产代码中到处是被指针修改的内存块，或者事先不知要迭代几轮的循环。加入这些不断变化的状态后，纸面上的符号推导怎样继续下去，就决定了一个形式化验证的成败。</p>
+<h2 id="三有-state" data-reading-heading="">三、有 State</h2>
+<p>怎么办：把内存看作函数，贵在找不变量</p>
+<p>熟悉系统编程的工程师在看到纯函数的符号推导后，往往会更尖锐地提问：真正的
+C
+语言标准库或编译器输出的二进制文件里，到处都是指针寻址、堆内存分配和全局状态的变化。这种推导初等代数的静态方法，如何支撑不断变化的程序状态呢？</p>
+<p>要理解这个问题，我们需要先了解形式化证明是如何用数学来描述计算机内存的。在硬件工程师看来，内存是一排排可以随意用高低电平来改写的存储单元。但形式化逻辑用另一种方式来表达。在任何时刻，内存的整体可以用一个从内存地址到字节数值的数学函数来表示。你给它一个内存地址作为输入，它就会输出这个地址上的字节数值。</p>
+<p>当一个程序执行一条写内存指令，想要把一个特定的内存地址上的值改变成另一个数值的时候，整个证明系统并不需要真的改动任何物理的存储。它只需要定义一个逻辑上的新的内存函数。这个新的内存函数在被改动的地址上返回新写的值，在其他所有地址上则返回旧的内存函数的值。</p>
+<p>换个程序员更熟悉的说法，你可以把整块内存看成一个状态机。内存里的每个字节是状态的一部分，执行一条指令，状态机就从当前状态跳到下一个状态。单步的内存读写和寄存器改变，都是这个状态机的一次状态转移。状态转移的规则是确定的，所以我们可以顺着状态机一步步做逻辑推演。真正麻烦的是循环和递归，因为它们要跳多少次，取决于输入。</p>
+<p>人人都写过对数组每个元素求和的循环。当你写下这段代码的时候，程序还没有执行，也没有拿到实际的输入数组。此时你根本就无从预知，这个循环到底会跑十次、一百万次还是一千万次。</p>
+<p>如果这个循环的次数是固定的三次，那还比较好办，证明工具直接把这个循环体复制三次，变成三个顺序执行的分支指令，然后按照前面的符号推导就可以。但如果这个循环的次数是由符号化输入的长度
+n
+决定的，那么我们就无法通过无限展开代码的办法来穷举出所有的可能执行路径。比如我们想证明一个数组求和的循环，在正常退出时累加变量
+sum 的值正好是这个数组 n
+个元素的总和，并且整个过程中读取内存的下标 i
+不会超过数组的范围。这种情况下，展开代码的思路就完全行不通了。</p>
+<p>那怎么才能在不展开循环的情况下一次性证明任意长度的 n
+的状态变化呢？形式化验证引入了数学归纳法。而让归纳法在代码中得以实现的关键在于找到一种逻辑性质，它在每次循环迭代交接时都保持成立，我们称其为循环不变量。</p>
+<p>比如在上例中，对数组求和。证明者需要构造一个横跨每一轮循环的逻辑性质：在第
+i 轮循环前，sum 的值正好是数组前
+i 个元素的和，并且 i 在 0 到 n
+之间。</p>
+<p>一旦你找到了这个不变量，原本无穷无尽的循环路径一下子就被收束成了有限的三步推导：第一步是验证起点。你去证明在进入循环之前，i
+和 sum 都初始化为 0
+的初始状态下，上面这个性质是成立的。</p>
+<p>第二步是验证传递。你先假设在某轮循环开始前这个性质成立，接着顺着循环体内部走一次合法的内存读取和加法更新，证明到了下一轮开始前，这个性质仍然成立。</p>
+<p>第三步是验证出口。当循环因为 i == n
+正常退出时，你把这个性质和退出条件一结合，立刻就能得到 sum
+等于所有 n 个元素的总和。</p>
+<p>这三个步骤一旦完成，不管循环在实际应用中执行多少次，它的行为都被这几点完全确定。因此，尽管程序中有了状态和循环，证明在逻辑上是可行的，但代价很高。这种高昂的代价主要体现在发现循环不变量上。如果已经有现成的不变量，计算机可以轻松判断其正确性。然而，如何从成千上万条涉及指针偏移、条件分支和位操作的底层指令中，构建一个既能推导出所需的安全特性，又能确保每轮状态转移都保持正确的不变量，这曾经只能依赖人类专家来完成。</p>
+<p>Anthropic
+官方研究博客引用了一个关于安全微内核 seL4
+的经典研究。当时这个研究团队统计过人力投入，这个微内核功能的实现大概花了
+2 人年，但是对它进行形式化验证的专家花了大约 20 人年。</p>
+<p>同样，Anthropic 和 Theorem
+在做开源库的二进制验证项目里，一个被验证的二进制模块中位大小也才约 1.8
+万条 RISC-V
+指令。但是为了把每个状态转移和循环不变量讲明白，对应的单个形式化证明往往需要写到约
+60
+万行。以前这种必须有人类专家耗费数年心血、手写几十万行证明来凑不变量的苦活，严重卡住了形式化验证的脖子。如今，这正好成为了
+Claude 切入并改写软件工程分工的突破口。</p>
+<h2 id="四anthropic" data-reading-heading="">四、Anthropic</h2>
+<p>与 Theorem 的工程落地：三层拆分与机器检查的工业化规模</p>
+<p>一提到用大语言模型来写六十万行的形式化证明，任何一个在实际生产环境中被模型幻觉坑过的工程师都会犹豫：一个连多位数算术都能一本正经胡说八道的概率模型，它写出来的数学证明，我们怎么敢拿来当安全凭据？</p>
+<p>这个问题其实点出了现代定理证明系统最关键的工程决策。工程团队之所以敢放手让充满随机性的大语言模型去探索庞大的证明空间，是因为整个验证体系从下到上清晰地分成了三层。最底下是极小且确定性的证明检查器内核。中间层是规定什么算正确的形式化规格。最上层才是交给智能体自由探索、只求结果确定的证明搜索。</p>
+<p>三层分工把模型的随机性挡在信任边界外，但检查器、语义模型和定理陈述仍在信任边界内。</p>
+<p>在这个三层架构里，最底层的证明检查器内核是铁面无私的终点守门人。不论工程团队用的是由
+Coq 改名而来的 Rocq 证明助手，还是这几年在数学和软件验证领域势头很猛的
+Lean，它们的核心底座都是一个代码量极小、完全按固定规则运转的检查程序。</p>
+<p>这个内核不帮你找不变量，只负责逐行核对交上来的证明项有没有违反基本逻辑公理。Leonardo
+de Moura 在 2026 年 2 月 28
+日的技术文章中也强调过，证明系统的可信内核应该尽可能小。为了让这个底座更牢靠，Lean
+社区甚至用 Lean 语言写了 Lean4Lean，用 Rust 语言写了 nanoda
+等多个独立重实现的检查器内核来做交叉核验。</p>
+<p>因为最底层的检查器是完全过程确定的，所以即使 Claude
+在搜索不变量、拼凑引理的过程中可能产生一万次幻觉、走无数条死胡同都没关系。只要最后交上来的证明里有一处逻辑跳步或者类型不对，底下的检查器就会当场报错拒收。工程师不用信任
+Claude
+漫长的试错过程，只须相信那个极小的检查器最终亮了绿灯。这里正好回到开头那个区分：最底层的检查器是过程确定性的，而且它是整套系统里过程确定性最强的一环。正是因为它把终点锁死了，上面的
+Claude
+才可以按结果确定性的方式自由找路。用过程确定性买结果确定性，说的就是这一层。当然，这不等于整个系统只需要信任这个内核，形式语义、定理陈述和底层依赖仍然在信任边界内。</p>
+<p>有了底层检查器兜底之后，Anthropic 和 Theorem 团队在 2026 年 10 月 22
+日发布的项目，就把这种三层分工做成了工业化的规模。中间层的形式化规格是怎么解决的？为了省去人工从头写形式化规格的繁琐工序，研究人员直接拿来开源的模糊测试项目
+OSS-Fuzz
+现成的测试入口，把里面的测试目标直接转成形式化规格。标准是：在规定的输入范围和环境假设下，既有
+fuzz 测试始终不崩溃，包括不触发 ASan
+检查和测试断言导致的崩溃。这不等同于排除了全部内存安全错误。</p>
+<p>然后，他们把编译好的 RISC-V 二进制机器码和 Linux
+进程形式语义仓库 的系统调用与内存布局模型丢给
+Claude，让智能体自己反推循环不变量、自己切分辅助引理、反复和 Rocq
+检查器交互修正。</p>
+<p>在单线程、静态链接、固定内存预算、运行于 Linux 和 RISC-V
+架构的假设下，研究团队成功为 123 个开源库和 239
+个模糊测试入口提供了机器检查的无崩溃证明。这些证明一次性覆盖所有小于
+64MB
+的任意输入和所有建模过的操作系统响应与内存布局。整个项目总共产生了约 1.8
+亿行通过内核检查的 Rocq 证明代码。其中一些代表性的成果已经放到了 开源的证明子集仓库
+里。</p>
+<p>为了让智能体在几十万行的证明搜索中稳定产出，工程团队在训练和调度上也专门堵住了模型钻空子的退路。这种流程存在
+reward hacking
+的风险：模型可能把程序改成一个平凡地不崩溃的版本，从而让任何定理都变得可证。为此，研究人员对任何补丁都设惩罚，并对证明补丁改变了哪些输入、改变范围有多小给予额外奖励，同时记录和审计补丁。</p>
+<p>算力消耗方面，单个证明可能需要消耗数亿个 token。在由真实 OSS-Fuzz
+代码构建的 36 个小型验证任务中，Opus 5.5 证明其中一半任务所需的
+token，比 Opus 5 少约
+40%。如果多个智能体可以共享已经证明过的中间引理，还可以再节省 17% 的
+token，甚至可以帮一些原本无法完成的智能体完成证明。</p>
+<p>这种用大模型来主导证明搜索、以最小可信内核兜底正确性的工程思路，正在改变整个形式化生态。Leonardo
+de Moura 在 2026 年 2 月 28 日的文章中提到，Claude
+在没有专用证明插件、没有进行定理证明的微调的情况下，独立地将一个用 C
+语言编写的 zlib 库翻译成了 Lean
+代码，并且完成了压缩后解压一定可以还原初始输入这个往返性质的机器检查证明。数学证明和程序验证这两条线都在同时向前推进。AlphaProof 的
+Nature 论文 展示了 Google DeepMind 的系统在 2024
+年国际数学奥林匹克竞赛中解出了 6 道题中的 4 道，得了 28
+分，达到银牌水准。这些进展让二十世纪九十年代就提出的携带证明的代码构想，在智能体算力推动下有了工业化的可能。</p>
+<h2 id="五经济反转与能力边界从" data-reading-heading="">五、经济反转与能力边界：从</h2>
+<p>Bespoke 定制到共享基建，以及算力填不平的鸿沟</p>
+<p>理解了智能体如何用数亿个 token
+来换取一张机器检验的数学证明之后，技术决策者下一步要做的，就是算一笔实际的工程经济账。既然我们已经能用形式化证明来验证一百多个开源库，那我们日常业务研发的测试流程，是不是也应该立刻全部改成形式化验证？</p>
+<p>以前要做形式化验证，得找一个懂形式化方法的人坐在电脑前，对着代码想很久，手工把不变量找出来。这是个特别需要功力的活。懂行的人本来就少，找不变量又费时间。专家的时间精力有限，所以形式化验证只能用在航空航天飞控、加密核心算法、seL4
+微内核这类高端定制系统上。这些系统价值高，请得起专家专门投入工时。</p>
+<p>现在 Claude
+接手了寻找不变量这件最耗时费力的手工活。原本要靠稀缺专家投入大量工时的苦差事，变成了随时可以向数据中心采购、按
+token
+计费的算力。寻找不变量的方式变了，整门技术的经济账也跟着反了过来。这就好比以前只能专程给一栋大楼做结构检测，现在可以优先检测整条街共用的公共管道。算力随时能买到，经费就不必只花在极少数高价值的定制系统上。越是被全行业成千上万个软件共同调用的底层共享库，验证之后受益面越广，就越值得最先投入。</p>
+<p>支撑这场经济反转的核心支点，是现代软件生态中高度集中的依赖共享关系。合作方
+Theorem 在 2026 年 9 月 29 日发布了 关于验证软件栈的建模测算。这份测算基于
+2026 年 9 月 16 日 nixos-26.05 频道的 nixpkgs
+开源软件仓库快照。这个仓库一共有 28,650 个软件包，123,471
+个二进制文件，总计 153.7 GB 的机器码。</p>
+<p>Theorem
+自报的依赖分析显示，整个软件栈的底层复用度非常高。你只需要验证最核心的 9
+MB
+共享库机器码，就可以覆盖整个仓库大约三分之二的代码依赖。如果你把验证范围扩大到
+170 MB 共享库，就可以覆盖 80% 的依赖。如果验证到 1.4 GB，就可以覆盖 90%
+的依赖。根据该团队自报的实测追踪数据，2026 年 5 月到 9
+月之间，模型进行形式化验证的速度大约每 1.9
+个月翻一番，测算起点大约是每小时验证 0.5 KB 机器码，每 KB 大约 40
+美元。</p>
+<p>研究组进一步假设模型验证能力在未来持续每两个月翻一倍。这个自报推演的假设相当乐观，比研究机构
+Epoch AI
+对通用大模型的能力每八个月翻一倍的估计快了四倍。在此前提下，Theorem
+自报估算到 2027 年底把 nixpkgs 仓库里 95% 的机器码全部验证完，大约需要
+1.34 亿美元。</p>
+<p>我们可以做另一个计算。如果我们不使用底层依赖共享，让每个软件包各自重复验证自己的运行时依赖闭包，那么总成本就会从部分复用时的约
+64 亿美元飙升至约 1900 亿美元。同时，Theorem
+在同一份自报中也进行了一个具体案例的计算：为 OpenSSL
+进行形式化证明需要约 22 万美元，但一旦证明完成，每个直接或间接依赖
+OpenSSL 的软件包分摊到的验证成本仅约 14 美元。</p>
+<p>这对研发团队而言，是一组清晰的决策边界：对于需求每周在变、生命周期按月计算的顶层业务代码，花几亿
+token
+来凑循环不变量仍然得不偿失；但对于处于依赖树底端、接口相对稳定且被无数上层应用复用的公共基础库，用算力一次性买断核心属性的结果确定性，已经成了一笔划算的买卖。</p>
+<p>但算力可以摊薄找不变量的苦力，却填不平形式化验证固有的三条鸿沟。第一条鸿沟在于，数学证明永远只对写进规格和环境模型里的受限属性负责。Anthropic
+和 Theorem 验证 123 个开源库的工程实践告诉我们，那个小于 64MB
+输入不崩溃的保证，严格建立在单线程、静态链接 musl
+标准库、固定内存预算以及 RISC-V
+处理器架构的建模前提之上。可到了真实的云端生产环境里，绝大多数服务跑在
+x86 或 ARM 处理器上，动态链接着行为复杂的 glibc
+标准库，还要时刻面对多线程并发竞争。况且依靠地址消毒器 ASan
+转换出来的安全规格，本身就抓不全所有类型的内存错误。那些没被测试入口触达的代码分支、死代码，以及调用方违反前置条件的参数误用，同样不在数学保证的保护伞下。决策者要是误以为拿到一纸无崩溃证明就等于消灭了所有安全漏洞或业务逻辑缺陷，很容易在建模边界之外的真实场景里踩空。</p>
+<p>第二条算力买不到的鸿沟是规格本身的准确性。第三条鸿沟是对可信计算基座的审视。尽管我们不需要相信
+Claude
+进行搜索和证明的推理过程，但这并不意味着整个工程只需信任那个极小的 Rocq
+检查器内核。在 Anthropic 和 Theorem
+的整个验证链中，可信基座仍然是一个需要人类专家严防死守的清单。这包括
+Rocq 检查器本身，手工或半自动建模的 RISC-V 指令集形式语义，Linux
+进程和系统调用的语义，定理陈述也就是安全规格是否写错，以及更底层的间接依赖的物理芯片硬件、宿主操作系统和用于编译检查器的
+OCaml 编译器。</p>
+<p>只要底层指令集的语义漏掉了硬件边界行为，或者定理陈述把不合理的前提当作了默认假设，即使检查器再铁面无私，它也会照常放行一个跟物理现实脱节的空头保证。找不变量的繁重劳动被模型用算力商品化之后，软件工程里真正不能被替代的核心工作反而水落石出。正如
+Leonardo de Moura 在 2026 年 2 月 28
+日所判断的那样，写实现代码和搜索证明越来越便宜，准确定义系统到底该做什么的规格书写，连同对可信基座的严苛审计，终将成为人类工程师最核心的工程学科。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/16a4970c65d4fd57d989e6afc3d0813d83e11822e763c04d5fd1f59f90411635.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/16a4970c65d4fd57d989e6afc3d0813d83e11822e763c04d5fd1f59f90411635.md" download="结果确定性的终局：Anthropic 如何让 Claude
+把形式化验证从手工作坊变成算力工业.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Leonardo de Moura" class="entity-link person-link">Leonardo de Moura</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, <a href="/search/?q=Theorem" class="entity-link company-link">Theorem</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>, <a href="/search/?q=Rocq" class="entity-link product-link">Rocq</a>, <a href="/search/?q=Lean" class="entity-link product-link">Lean</a>, <a href="/search/?q=Lean4Lean" class="entity-link product-link">Lean4Lean</a>, <a href="/search/?q=nanoda" class="entity-link product-link">nanoda</a>, <a href="/search/?q=Opus 5.5" class="entity-link product-link">Opus 5.5</a>, <a href="/search/?q=AlphaProof" class="entity-link product-link">AlphaProof</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

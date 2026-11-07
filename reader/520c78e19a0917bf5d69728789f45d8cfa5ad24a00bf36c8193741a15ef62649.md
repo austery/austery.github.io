@@ -1,0 +1,743 @@
+---
+author: New York Times Podcasts
+date: '2026-10-07'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=SZpKu0rPWis
+speaker: New York Times Podcasts
+tags:
+  - military-readiness
+  - defense-policy
+  - rules-of-engagement
+  - strategic-communications
+  - civil-military-relations
+title: 美军特战老兵深度剖析：赫格塞斯掌舵下的五角大楼与伊朗战争迷局
+summary: 《纽约时报》专栏作家戴维·弗伦奇对话服役逾20年的特种部队退役军官迈克·纳尔逊，深度复盘国防部长皮特·赫格塞斯的治军方略与伊朗冲突困境。对话剖析了五角大楼将注意力下沉至战术细枝末节、清理异见将领、排挤传统媒体等问题，揭示了缺乏民众授权与明确长期战略对美军战备与国家信誉造成的深远冲击。
+insight: ''
+draft: true
+series: ''
+category: geopolitics
+area: geopolitics
+project: []
+people:
+  - Pete Hegseth
+companies_orgs:
+  - United States Department of Defense
+products_models: []
+media_books: []
+status: evergreen
+---
+### 战备损耗与新防长的初考
+
+**戴维·弗伦奇 (David French)**: 这里是《观点》（The Opinions）。我是戴维·弗伦奇，**《纽约时报》**（New York Times）专栏作家。部分听众可能了解，在我投身新闻业之前，曾在美国陆军服役，担任陆军军法官（**JAG**）。我曾于2007年被派驻伊拉克近一年时间。因此，凭借这段切身经历，我对现任国防部长**皮特·赫格塞斯**（Pete Hegseth）应对与处理**伊朗战争**的方式深感忧虑。
+
+<details>
+<summary>Original English</summary>
+
+**David French**: This is The Opinions. I'm David French, a columnist for the New York Times. As some listeners might know, before I went into journalism, I served in the US Army. I was a JAG officer, an Army lawyer. I deployed to Iraq in 2007 and served for almost a year. So, I can say from some degree of experience that I'm worried about the way Defense Secretary Pete Hegseth is managing the war in Iran.
+
+</details>
+
+**新闻播报 (News Anchor)**: 最新的报道显示，前线部队的士气正在持续恶化。对伊朗长达数月的连续打击，已经严重耗尽了美军的导弹储备，特别是先进防空拦截弹的库存。
+
+<details>
+<summary>Original English</summary>
+
+**News Anchor**: There are new concerning reports of deteriorating morale among troops. Months of strikes on Iran have severely depleted the US military's supply of missiles, especially advanced interceptors.
+
+</details>
+
+**新闻播报 (News Anchor)**: 部分官兵家属也表达了深切忧虑，认为长期的海外超期部署正在严重影响水兵们的身心健康。
+
+<details>
+<summary>Original English</summary>
+
+**News Anchor**: Some family members expressed concerns prolonged deployment is affecting sailors' mental health.
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 我的好友**迈克·纳尔逊**（Mike Nelson）在陆军服役超过二十载，以**陆军特种部队**军官身份退役。他目前是**国家安全研究所**（National Security Institute）的研究员。今天他来到我们的播客节目。欢迎你，迈克。
+
+<details>
+<summary>Original English</summary>
+
+**David French**: My friend Mike Nelson spent more than two decades in the Army, retiring as a Special Forces officer. He is a fellow at the National Security Institute and he joins me today. Welcome, Mike.
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 早上好，戴维。非常感谢邀请我来。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: Good morning, David. Thanks for having me.
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 迈克，在深入探讨细节之前，你如何整体评价赫格塞斯迄今为止的表现？从大局来看，在他的领导下，军队到底发生了多大程度的变化？抛开那些政治宣传口号不谈，在实质层面上，他到底在多大程度上改变了军队？这些变革的潜在影响又会有多深远？
+
+<details>
+<summary>Original English</summary>
+
+**David French**: Mike, before we dive into details, how would you rate how Hegseth is faring so far? Sort of topline, how much is he changing the military under his leadership? And just putting aside sort of the rhetoric, substantively, how much is he changing the military? How long-lasting could these changes be?
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 好的，我接下来的话可能会让很多在《快报》（The Dispatch）上读过我文章的读者感到意外。就赫格塞斯部长而言，我认为实情是：他的观点并非全都是坏的，也并非完全错误。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: Well, I'm going to surprise a lot of the people who have read anything I've written, primarily at The Dispatch, about Secretary Hegseth, and I'm going to say, you know, the truth is not every one of Secretary Hegseth's ideas are bad or wrong.
+
+</details>
+
+### 表演型治理与军旅定位偏离
+
+**迈克·纳尔逊 (Mike Nelson)**: 但是，他有相当多的主张确实存在严重问题。更重要的是，即使是他那些合理的想法，往往也不是一个国防部长应当重点关注的事情。他此前批评说，国防部背负了数不胜数的纷扰杂务，分散了实战对抗或战略威慑、以及为未来作战做准备的精力，这一点他说得没错。但是，正如我们在他上周的公开演讲中所看到的那样，他本质上是一个极具表演欲的秀场人物（showman）。他总喜欢抛出那些事先准备好的固定口号和标语。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: But many of them are, and more importantly, many of his correct ideas are not necessarily where a Secretary of Defense should be focusing. You know, he was correct to say that there had been myriad distractions that had been placed on the DoD that took away from some of the warfighting focus or deterrence focus, being ready for future operations. But, you know, we saw in his speech last week, he's primarily a showman. So, he has his canned catchphrases that he likes to say.
+
+</details>
+
+**皮特·赫格塞斯 (Pete Hegseth)**: 不要胖子，不要留胡须的怪人，不要古怪分子，不要懦夫，不要极端分子，只要真正的战士！我们就是专门去狠狠惩治坏人的！
+
+<details>
+<summary>Original English</summary>
+
+**Pete Hegseth**: No fatties, no beardos, no weirdos, no wimps, no radicals, just warriors. We do bad things to bad people.
+
+</details>
+
+**皮特·赫格塞斯 (Pete Hegseth)**: 追求最大杀伤力，而不是不温不火的繁文缛节与条条框框；产生致命暴力效果，而不是搞政治正确！
+
+<details>
+<summary>Original English</summary>
+
+**Pete Hegseth**: Maximum lethality, not tepid legality, violent effect, not politically correct.
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 几个月来，我们不断听到他重复“禁止穿裙子的男人”这类论调，公开宣称他更改了军中政策，不再允许跨性别服役人员入伍或留任。好，这项决定几个月前就已经制定了，但他依然乐此不疲地反复兜售这些博眼球的老调子。接下来呢？再说说那个所谓的“不许留胡子”吧。不可否认，在一支纪律严明的军队中，过往对免刮胡须许可（shave waivers）的滥用确实存在，申请获批的人数过多，有损整体军容风貌。但问题在于，这本该是营级士官长（battalion sergeant major）去抓的工作。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: And for months, we have been hearing "no dudes in dresses," you know, specifically saying that he has changed the policy so that there cannot be transgender service members anymore. Okay, that decision was made months ago and he just continues to hit the greatest hits. Just, you know, all right, what next? The next part, the "no beardos" thing, right? He was correct that shave waivers were probably overused and oversought in a disciplined military and too many people were getting them and it took away from the overall military bearing. Okay, that's what we expect battalion sergeants major to focus on. So—
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 我正想这么说，这根本就不是堂堂国防部长该管的宏观层面议题，但无论如何——
+
+<details>
+<summary>Original English</summary>
+
+**David French**: I was going to say, that is such a—that is not a secretary of defense level issue, but anyway—
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 确实如此。他将大把精力投注在这些微观战术层面的小事上。他统领着全美规模最庞大的组织机构，却牢牢纠缠于这些鸡毛蒜皮的琐碎事务。而实际上，美军专门培养并出资聘请了极为专业的各级军士长与士官队伍，正是为了让他们代表统帅层去落实这些基层细节。作为防长，他原本只需要签署一项新规，宣布“这是最新条令，去贯彻落实好就行了”。然而，他却非要把军官们专程召集到华盛顿特区，逼着所有人亲耳听他当面训话。
+
+我认为，即使他的部分初衷有合理之处，也严重分散了注意力；或者说，这严重脱离了他本应承担的职责。防长的使命是在战略全局层面运作，将战术行动的效果与美国的宏观战略目标有机结合起来。但这一切完全没有发生，我们眼下在伊朗战争中看到的乱象便是明证。
+
+此外，在我继续往下讲之前，我还要指出，正如我刚才所言，他也提出过一些好想法。比如在最近的演说中，他提出了名为“**美利坚要塞**”（Fortress America）的倡议，主要是强化本土军事基地的物理防御与抗毁能力，确保它们拥有独立的微电网，免受恶意的网络攻击。这无疑是一项务实且正确的举措。
+
+但在此之外，他也在推行一些极具破坏性的倒退之举。我们看到，他狂热迷恋某种特定的“战士文化”（warrior culture）和极端体能训练，这种偏执甚至以牺牲美军当前必须专注的科技创新为代价。我认为，他不仅在削弱美军迎接未来高科技冲突的战备进程，更在军队高层领导机制中埋下恶果——他正在大肆清洗部队中现存的革新人才，取而代之的，则是那些纯粹凭借个人效忠依附上位的人。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: So he is focusing largely on these tactical level—really, he commands or leads the single largest organization in the United States, and he is focused on these very small-ball issues that we actually empower and pay really professional non-commissioned officers, these sergeants and sergeants major, to do on his behalf. All he has to say is, "This is the new policy. Go forth and do great things." Instead, he's bringing people to DC to make sure they hear it straight from him. I think a lot of his ideas, which might be correct, are distractions, or at least for what he should be focusing on, where he's supposed to be at the strategic level, merging those kind of tactical effects with the strategic goals of the United States. And that's not happening. And we see that playing out with the war in Iran.
+
+Additionally, before I move on, you know, he has some, like I said, some good ideas. Recently at his speech, he had "Fortress America," I believe is what he called it, which was basically hardening US installations to make sure they were on independent power grids and not susceptible to cyber attacks. That's a good move. Besides that, he also is making some really bad moves. So, we've seen his focus on kind of warrior culture and physical training and things like that coming at the cost of some of the innovations that we should be focusing on as an American military. I think he is damaging not only our progress in getting ready for the next conflict, but he's also potentially causing negative effects in military leadership by purging those innovators who currently exist and replacing them by sycophants who are primarily motivated by personal loyalty.
+
+</details>
+
+### 特种战幻象与现代战争的本质
+
+**戴维·弗伦奇 (David French)**: 我很希望你能向听众们多聊聊你的军旅生涯。我想可以肯定地说，你的服役经历与我的截然不同。我在伊拉克担任的是陆军军法官；而你则是特种部队军官，身处最前线的刀锋核心。但在我看来，赫格塞斯似乎正试图将整支美军重塑为某种单一的样板——也就是所谓的“特战勇士”原型。你认为他是在试图把整支军队按照那种斯巴达特种兵的刻板形象进行全面改造吗？这背后究竟反映了什么？
+
+<details>
+<summary>Original English</summary>
+
+**David French**: I'd love for you to tell listeners a little bit more about your service. I think it's safe to say it was a bit different from mine. I served as a JAG officer in Iraq; you're a Special Forces officer, tip of the spear. And it seems to me that it's as if Hegseth is kind of trying to reshape the military into that entire archetype, the Special Forces warrior. Do you think he's trying to kind of remake the military in that image of almost like the Spartan Special Forces warrior? What's happening here?
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 我认为你说得很准，公众视野中确实沉淀出了这样一种原型，但这实际上严重歪曲了整支军队的真实运转形态。如果你回想战争是如何爆发并达到高潮的，大众脑海中往往只浮现出两个极端的画面：其一是阿富汗战争初期，
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: I think you're right that there is this archetype that filtered out, and it's kind of a disservice to what the military was doing as a whole. If you think about the way the war started and kind of culminated it, there are two examples that I think a lot of people have in their mind. There's the beginning of the war—
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 比如“**匕首特遣队**”（Task Force Dagger）——也就是我的老部队第五特种作战群，骑着战马同北方联盟并肩作战。这是特种作战部队（**SOF**）的一面，即通过当地反抗力量、协同伴随展开作战。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: With Task Force Dagger, my old unit, Special Forces Group, riding horses with the Northern Alliance, which is one side of SOF: working by, with, and through local resistance organizations.
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 稍微打断你一秒，SOF是指——
+
+<details>
+<summary>Original English</summary>
+
+**David French**: And just to interrupt you for a second, SOF—oh,
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 特种作战部队（Special Operations Forces）。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: Special Operations Forces.
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 没错。而另一面，就像凯瑟琳·毕格罗的电影《猎杀本·拉登》（Zero Dark Thirty）里所展现的那样，海豹六队发动直接行动突袭，出动我们最精锐的一级特战梯队执行极端艰难的斩首行动，展现出超凡的战术素养。但这些画面完全无法代表绝大多数官兵的日常服役常态。绝大多数普通士兵日复一日面对的是荷枪实弹的巡逻、维系基层治安与地方治理，以及大量根本无法被轻易搬上大银幕或拍成炫酷Instagram宣传照的繁复苦差。
+
+我认为，这位部长的整套理念，都建立在一种先入为主的预设上：他认定拜登执政时期在军中推行了过多的社会实验，从而严重干扰了打仗这一核心职能。诚然，过去确实存在某些造成干扰、占用了实战化训练时间的现象。但他目前的做法却是一种极端的过度纠偏。
+
+放眼当代战争形态的深刻演变，我们确实需要具备勇士精神的人，但这仅仅是诸兵种合成作战（combined arms fight）拼图中的一小块。我们同样亟需大量的数据分析专家、技术创新人才，以及懂得如何将尖端技术融入作战体系的工程师。因此，防长的眼光显得过于狭隘短浅，他牢牢锁定在若干年前适用的单一模式上，却完全漠视了现代战争所必需的多元支撑架构。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: Right? But then, on the other side of that, you have kind of, you know, in Kathryn Bigelow's movie Zero Dark Thirty, the raid on Bin Laden, SEAL Team Six conducting a direct action raid, our most elite direct action Tier One forces conducting these kinds of incredibly hard-to-pull-off raids and doing them with great skill. That does not portray at all what the everyday experience of a lot of soldiers was, which was largely conducting patrols, conducting local governance, all sorts of things that went into the war that aren't as easily translatable onto film or in, you know, really cool-looking Instagram pictures.
+
+I do think that the Secretary, his whole concept is predicated on the idea that the Biden years particularly focused far too much on creating social experiments within the military, and that distracted from the core function of fighting wars. And there are certain examples where there were distractions, there were things that took away from just the time available to conduct training. But it's a vast overcorrection that he's engaged in. And as we look at the transformation of war, we are going to need people who have that warrior ethos, but that's only one part of the combined arms fight. We are also going to need a lot of innovators, a lot of analysts, a lot of people who can integrate the new technologies. So the Secretary's focus tends to be a little bit myopic, just on one part, and one part that was applicable several years ago, but not necessarily looking at all the new layers that are required.
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 我们稍后会更深入地探讨这一点。但坦率地说，看到他心目中的军人形象与现实的脱节，我感到非常震惊——
+
+<details>
+<summary>Original English</summary>
+
+**David French**: We're going to get into this a little bit more, but you know, I'm struck by the different image that he has of a soldier—
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 尤其是拿它同如今乌克兰军队的面貌进行对比时。
+
+<details>
+<summary>Original English</summary>
+
+**David French**: Compared to what the Ukrainian army looks like,
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: Right?
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 这非常有说服力地印证了你的观点。因为乌克兰军队并不是一支由肌肉发达、荷尔蒙爆棚的特战硬汉构成的队伍。前线士兵的平均年龄高得惊人，有些数据甚至显示乌克兰战士的中位年龄在三四十岁之间，这更接近于我当年咬紧牙关熬过李堡（Fort Lee）军官初级课程时的岁数；不仅如此，迈克，坦白讲，他们阵营里还充斥着一大群技术宅男——
+
+<details>
+<summary>Original English</summary>
+
+**David French**: Which I think might be very indicative of your point, because the Ukrainian army is not an army of extraordinarily heavily muscled, high-T special operators. The average age is shockingly high. I've seen some measures say the median age of a Ukrainian soldier might be in the late 30s or early 40s, which is more like the age I was when I dragged myself through Basic Officer Leader Course at Fort Lee. And also, it's got, frankly, Mike, a bunch of nerds—
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 他们在操纵无人机作战。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: Doing drone warfare.
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 他们在操作无人机进行高烈度对抗！这让我强烈意识到，他所兜售的那种单一体魄与勇士形象，根本无法匹配我们当下面临的多元战争需求。
+
+<details>
+<summary>Original English</summary>
+
+**David French**: And so it strikes me that he's articulating a kind of physical image of a warrior that, as you were saying, doesn't match the diversity of the needs that we have.
+
+</details>
+
+### 清洗将领与打破文官治军契约
+
+**迈克·纳尔逊 (Mike Nelson)**: 确实如此。我们当然需要步兵能够背负沉重装备长途行军、在缺觉少食的极端环境下持续作战。但是，乌克兰战场现在正是被我称为“致命实验室”的地方。他们在向前沿演示未来战争的真实样貌，那是前沿技术与战争古老规律的深度交织。我们正在白白错失向乌克兰盟友学习的宝贵窗口，而那些原本试图推动学习吸收的将领们，如今却全都被清除出了国防部，遭到了彻底清洗。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: Right? We do need infantrymen to be able to move long distances carrying large amounts of weight on their back with very little sleep and very little food. But yes, Ukraine is right now what I refer to as the lethal laboratory. They are leading the way in demonstrating what is the future of warfare. And it is a mixture of both new technologies and old truths of war that will endure forever. We are missing the opportunity to learn from our Ukrainian allies, but the generals who were trying to do that are no longer part of the DoD. They've been purged out.
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 我非常高兴你谈到了将领的问题。因为不久前我和一位被解职的将军交谈过。这位将领直言不讳地指出，他们本质上是因为“服从命令”而被开除的。换句话说，拜登政府当年下达了关于**多元、平等与包容**（**DEI**）等议题的政令，作为忠于职守的军人，无论内心是否赞同，他们都敬礼并忠实执行了指令。然而皮特·赫格塞斯一上台，却冷酷地宣称：“如果你执行了上一届政府的核心指令，你就是觉醒派（woke），你就是软弱无能，你必须走人。”
+
+那位退役将军向我表达了极大的恐惧：如果高级将领因为执行当届政府的合法命令而在政权交替时遭到清洗，换上一批唯唯诺诺依附新政权的人，那么等到下届政府上台，是不是又要将这批人清洗一遍？在我看来，特朗普政府正在开创一个极其危险的先例。如果未来的总统群起效仿，将对美军职业化与军队操守造成毁灭性打击；如果本届政府继续任由这一风气蔓延，甚至会彻底颠覆“任人唯贤高于政治忠诚”的军队基石。听到一位高级将领亲口说出“我因为执行合法命令而被开除”，这让我背脊发凉。
+
+<details>
+<summary>Original English</summary>
+
+**David French**: Yeah, I'm so glad you raised the generals, because I had a conversation with one of the fired generals not long ago. And this person pointed out that in essence, they were fired for following orders. In other words, the Biden administration handed down some edicts and some orders regarding DEI—diversity, equity, inclusion—and other things. And as loyal soldiers, whether they agreed or not, they saluted and they carried out those orders. And Pete Hegseth comes in and essentially says, "Well, if you were carrying out the orders that were the priority of the previous administration, you're woke, you're weak, whatever, and you're gone."
+
+And one of the fears that was expressed to me by this former general was that, well, does that then set a precedent that if you are a general officer and you follow the orders of an administration, that the next administration will come in and purge you, replace you with general officers who have to then follow their orders, who will then only be purged by the next administration? You know, it strikes me that the Trump administration is setting a precedent here that, if actually carried out by other presidents, would be catastrophic for the integrity of the military, and is setting a precedent that, given enough time under the current administration, could be sort of catastrophic for the idea that merit matters as much as political fidelity. But it was very chilling to me to hear the general essentially say, "I was fired for following a lawful order."
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 没错。赫格塞斯针对那些执行合法命令的高级将领所发起的抨击，主要集中在两三件事情上：第一是DEI这个大标签；第二是新冠疫苗接种令；第三则是从阿富汗撤军。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: Right. So a lot of the criticism that Hegseth has steered towards these generals who, you know, implemented, as you said, the lawful orders of the previous duly elected president and the civilian leadership through the Secretary of Defense focus on two things largely—well, three things I guess: DEI in general, kind of a big umbrella; the COVID vaccine mandate; and the withdrawal from Afghanistan, right?
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 上述列举的所有事项，我们尽可以持有异议，可以批评它们是糟糕的决策或执行得拙劣不堪，但它们无一例外都是民选总统通过文官指挥链下达的合法命令。眼下，外界有大量声音在讨论军中将领抵制赫格塞斯部长的指导意见。但在合法性层面，我真正感到担忧的只有两点：其一是这场对伊战争在宪法与法律层面的整体合法性，其二是2025年9月在“**南矛行动**”（Operation Southern Spear）拉开序幕时实施的那次巡逻艇打击事件。
+
+抛开这两点不谈，我认为赫格塞斯的大多数理念和政策虽然极不明智、适得其反且后患无穷，但它们在法定权限上依然是合法的。难道他希望自己在位期间极力提拔的这些将领，在2029年1月新总统宣誓就职的当天，仅仅因为执行了他的命令而立刻被统统解雇吗？这位部长必须清醒地意识到：他的前任无论政见如何，下达的都是合法命令；如今他身处防长之位推行新政，大家或许并不赞同，但也同样具有合法命令的效力。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: Everything that was just listed we can disagree with or think were bad ideas or conducted poorly, and all of them were lawful orders from the duly elected president through the civilian leadership. Right now, there's a great deal of discussion about generals rejecting Secretary Hegseth's guidance. There are two places that I have concern about legality: one being the overall legality of the war with Iran, and the second being the September 2025 boat strike at the beginning of Operation Southern Spear.
+
+But outside of that, I think it's fair to say that I disagree and think most of Secretary Hegseth's stuff or ideas are bad ideas, counterproductive, and potentially damaging in the long term, but they are legal. And would he want these same generals that he's propping up to be fired immediately in 2029 in January because they implemented his orders? You know, the Secretary needs to remember that his predecessors gave legal orders whether he agreed with them or not. And he is in a position now to implement new policy and that's fine. We may disagree with it, but they are legal orders.
+
+</details>
+
+### 新闻透明度与五角大楼的舆论封锁
+
+**戴维·弗伦奇 (David French)**: 如果你还不是《纽约时报》的订阅用户，我们在此带来一个好消息：在第一个月里，你可以通过《纽约时报》应用程序免受付费墙限制免费浏览我们的深度内容。
+
+在我们把话题全面转向伊朗战事之前，还有另一个关键维度需要厘清，这正好是一个契机。从美军的文化变质、将领遭遇清洗，再到围绕这场伊朗战争所笼罩的极端秘密主义。在探讨这个问题时我希望保持严谨，因为在军事行动中，保密确实在某些层面上是至关重要且无可替代的。例如，在早先伊拉克战争期间曾发生过一出著名的插曲：记者**杰拉尔多·里维拉**（Geraldo Rivera）随美军部队随军报道，迈克，不知你是否还记得那次事件，他当时直接在沙地上——
+
+<details>
+<summary>Original English</summary>
+
+**David French**: If you're not a subscriber, we have some news for you. You can now explore the Times for free without paywalls during your first month in the New York Times app.
+
+Before we move on to the Iran war, there's another element, and this is kind of the entree into it. So moving from what is the culture of the military, what's happening with generals, the secrecy that we have seen around the Iran war. And I want to be really careful about this question, because there are ways in which secrecy is absolutely imperative. So for example, there's a famous moment during earlier iterations of the Iraq War where Geraldo Rivera is embedded with American troops, and Mike, I don't know if you remember this incident, but he essentially—
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 他在沙地上画出美军即将发起进攻的路线图！换句话说，他把即将发生的作战行动、我们下一步要干什么，在电视直播中公之于众。如果伊拉克军队收看了那档直播，他们就能提前获知美军的突袭方向。
+
+<details>
+<summary>Original English</summary>
+
+**David French**: Maps about an upcoming attack. In other words, he talks about what's about to happen, what we're about to do. And if Iraqi forces were watching these feeds, they would have had foreknowledge of an American attack.
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 这就是军事保密具有绝对正当性的典型场景——你绝不能提前向外界广播自己的战术行动企图。在我们接纳随军记者时，他们确实会提前获悉行动简报，但必须签署严格协议，在整个作战阶段结束前绝不向外界透露半个字。但我相信很多听众会非常惊讶于当年我们在伊拉克前线时，媒体同实际军事行动之间的关系是多么紧密。在我的整个服役期间，随军记者无处不在：《洛杉矶时报》、路透社、《伦敦时报》、《星条旗报》几乎常驻军营。他们能够从最前线直接报道我们的真实作为。而根据我的亲身体会，与我并肩作战的骑兵侦察兵们，99%都渴望同媒体交流，希望公众知道他们每天在经历什么。
+
+但你当年身处一个截然不同的作战领域——在特种作战体系中，最高级别的保密原则几乎渗透在方方面面。能否向我们谈谈你在特种部队中与媒体打交道的亲身经历？你又是如何理解媒体、军方与美国公众这三者之间的纽带关系的？
+
+<details>
+<summary>Original English</summary>
+
+**David French**: That's an example where secrecy is really important. You don't broadcast what you're about to do. And when we had embedded media, they would get briefings on upcoming attacks, but they were under an agreement that they were not going to discuss that until the appropriate time when everything unfolded. But I think a lot of listeners would be really surprised at how closely connected the media was to at least to my work when I was in Iraq. We had embedded media throughout the entire period. LA Times, Reuters, Times of London, Stars and Stripes seemed to be there all the time. And they were able to report from the front what we were doing. And in my experience with the guys, the cav troopers I served with, 99% of them wanted to talk to the media. They wanted people to know what we were doing.
+
+But you were in a very different part of the world. You're in the Special Operations world. The sort of ultimate level of secrecy applied to you. Talk me through your own experience with the media and how you see the connection between the media, the military, and the American public.
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 好的，我不仅会谈谈媒体在帮助公众理解美军行为中扮演的角色，也会剖析导致如今这届国防部在伊朗战争中走向极端黑箱封锁的演变脉络。
+
+我曾经追随过一位将领，我对他的崇敬近乎狂热。他是我所结识过的最卓越的军官之一，也是人格极为高尚的人。我曾两度在他麾下效力：一次是在阿富汗的特种作战特遣队，另一次则是在更高的战略机关。无论走到哪里执行任务，他总是坚持让媒体随行。有一次，一位非常有声望的媒体骨干好奇地问他，为什么在多数军官面对媒体唯恐避之不及或顾虑重重的时候，他却始终敞开大门？那位将军回答道：“美国人民有权知道他们的军队在以他们的名义做些什么，而你们就是他们获知真相的桥梁。”
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: Well, I'll talk about that specifically, like the role that the media plays in understanding what the American military does, but then also the steps that led us to the secrecy, as you point out, about the war in Iran with this Department of Defense.
+
+I had a general officer that I worked for who I have near-cultlike devotion for, one of the finest officers I've ever known, one of the finest human beings I've ever known. And I worked for him twice: once in a Special Operations task force in Afghanistan and once at a much higher strategic level. And he used to always bring media with him on his engagements. And I heard a pretty prominent member of the media ask him once why he did so, because so many other members of the military were, you know, at least shy around the media or maybe cautious around the media. And he said, "The American people deserve to know what their military does on their behalf, and you're how they find out."
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 讲得太精辟了。
+
+<details>
+<summary>Original English</summary>
+
+**David French**: Mhm.
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 我认为这极为精准地提炼出了军事行动在一个健康的共和国中应当恪守的准则。然而当下，我们卷入了一场开局就极其不得人心、且随着时间推移愈发遭人唾弃的冲突。自二战建立现代民调体系以来，还从来没有哪场战争像今天这样不受欢迎。这种局面的根源之一，在于美国人民根本无法信任政府在战争问题上的言论——无论是开战的缘由、战争的进程、真实的战况，还是最终将如何体面收场。
+
+我们固然清楚，现任总统对待媒体以及向公众呈现事实的方式向来十分特殊。但是，赫格塞斯部长以及整座五角大楼在其中同样难辞其咎，甚至是沆瀣一气。从一开始我们便看到，赫格塞斯的核心动机似乎就是牢牢垄断公众叙事。他关心的不是客观传达国防部在做什么，而是极力包装他个人的光辉形象，并拉拢那些能够为他涂脂抹粉的人。他在五角大楼内部实施了严苛的审查与媒体准入管控，甚至公然排挤乃至变相驱逐了绝大多数拒绝签署“报道预审协议”的传统主流媒体。取而代之填补物理工位的，则是充斥着马屁精的另类自媒体平台，它们模糊了新闻报道与公关宣传的界限。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: And I thought that was just a distilled-down virtuous statement about the role of military operations in a healthy republic. Right now, we are engaged in a conflict that started out unpopular and is growing more unpopular as it goes. There's never been a less popular war since World War II, since modern polling. And part of the problem is because the American people do not trust what the government is telling them about the war, about the causes for it, about the conduct of it, about how it's going, about how it's going to be resolved at the end.
+
+And part of this, you know, we know that the president has his own unique relationship with the media and unique relationship with how he presents the truth of what he's doing or what his administration is doing. But the Secretary and the Department of Defense as a whole owe a part of this too, or are complicit in this too. From the beginning, we saw that Secretary Hegseth had what seemed to be a primary motivation of controlling the narrative of what he was doing—and not so much what the Department of Defense was doing, but what he personally was doing, controlling his own image and those who had the ability to shape it. He implemented attempts to control what the media would report from the Pentagon, famously purging out or at least having most of the legacy media leave physical spaces in the Pentagon when they wouldn't agree to pre-approval of their stories. They've been replaced largely with alternate media that are in some cases sycophants, in some cases blend the boundaries between what is media and what is public relations because—
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**David French**: Yeah.
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 某些获得五角大楼记者证的自媒体代表，暗地里竟然同时兼任国防部的“特殊政府雇员”（Special Government Employees），且从未向公众披露这种利益关联！还有一些人虽然未被正式挂名，却公开吹嘘自己正在为部长的决策出谋划策。换言之，防长只希望通过那些无底线奉承他的媒体来讲述所谓的故事。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: We've had people who are both wearing the hat of new media credentialed by the Pentagon and special government employees working for the Department of Defense without disclosure. We've had other people who haven't been officially brought on as special government employees, but have publicly said that they're advising the Secretary on what to do. So he wants to tell his story through supportive media only. Additionally—
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 抱歉，我能快速插一句话吗？因为我必须——
+
+<details>
+<summary>Original English</summary>
+
+**David French**: Can I—can I interrupt you on that real fast? Because I want to—I want to—
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 我必须在这个问题上深挖一下，因为这完全没有引起外界应有的严肃警惕。
+
+<details>
+<summary>Original English</summary>
+
+**David French**: Drill down on that, because that has not gotten the attention it deserves.
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 各位听众，这里面的利益冲突是不言而喻的！在我看来，这极其露骨地象征着——
+
+<details>
+<summary>Original English</summary>
+
+**David French**: Now listeners, the conflict of interest should be very obvious, and that's something that, in my view, it's utterly symbolic of the—
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 象征着弥漫在本届政府周遭的腐败沉沦。这是对军队职能的公然扭曲，也是对新闻媒体角色的彻底践踏！我必须在此打上一个大大的感叹号。无论如何，请你继续。
+
+<details>
+<summary>Original English</summary>
+
+**David French**: The corruption around this administration. But that is a perversion of the role of the military. It's a perversion of the role of the media. And I just wanted to put an exclamation point behind that. So anyway, please continue.
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 是的。必须澄清的是，在以往共和党或民主党的历届政府中，媒体人士与政府官员之间的“旋转门”流动并不少见。很多人离开政府后去有线新闻频道担任评论主持，反之亦然。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: Right. And we should be clear: in previous administrations, Republican and Democrat, we've seen the crossing over between media and government officials back and forth. People who were in the administration then become hosts on cable news, right?
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 但关键在于，任何人在特定时期承担什么角色，界限都是泾渭分明的。他们绝不会在同一个时间节点上同时脚踩两只船！即便真有交叉，也绝不敢对他们试图施加影响的公众隐藏事实真相。反观现在，防长及其首席发言人肖恩·帕内尔（Sean Parnell）面对任何带有批评色彩的报道，统一粗暴地扣上“假新闻”的帽子。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: But there's a clear delineation of which role they're filling at which time. They're never wearing both hats at the same time. And if they are, they're never hiding the ball from the public that they're attempting to influence. We've seen the Secretary and Sean Parnell, his primary spokesman, respond to any critical stories by flatly claiming that everything is "fake news."
+
+</details>
+
+### 克劳塞维茨铁律与民意授权缺失
+
+**迈克·纳尔逊 (Mike Nelson)**: 只要有调查披露美国驻巴林海军支援设施遭受打击、舒艾巴港受损、或者关键拦截弹药严重短缺，他们一律反口宣称全是假新闻、谎言，叫嚣战事进展无比辉煌，却从来不敢直面冷冰冰的现实。这是一个极其危险的死结。无论任何时候走向战场，战争都必将伴随着惨重代价；而官方越是极力粉饰太平、装作毫发无损，在公众眼里就越显得虚伪透顶与不可信赖。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: Yeah. So now we see whether it's stories about the damage done to Naval Support Activity Bahrain, the port of Shuaiba, critical shortages on some of our interceptors—all of this is immediately reported as fake news. It's not true; the war is going gloriously, and there's never a revisiting of the actual facts. Now this is a problem, because I don't think—and I may be overstating things—whenever we go to war, there are going to be costs. The fact that the administration is trying to paint it as though there are no negative effects makes them seem even more disingenuous.
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 你精准切中了核心痛点，我们现在正顺理成章地谈到这场战争本身。从一开始我就在反复大声疾呼：退一步讲，假设你原本是一个支持对伊开战的人——正如我一直公开承认的那样，我长期以来一直是对伊强硬派（Iran hawk）。如果政府公开面向全美人民摆出证据，证明打击伊朗符合国家根本利益且完全遵循战争法框架，你完全可以在合法轨道上说服我支持这一行动。
+
+<details>
+<summary>Original English</summary>
+
+**David French**: Well, you know, you're getting to something, and we're sort of rolling into the war itself right now. And it strikes me—and this is something that I've been kind of banging the drum on from the beginning—is that let's suppose you're a supporter of the war in Iran. And like I've said, I've long been an Iran hawk. There are circumstances where you could convince me, if you went to the public and you presented evidence that striking Iran would be in the national interest in compliance with the laws of war, that it would be the right thing to do.
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 但他们从未尝试过这么做！他们甚至从未向国会和人民陈词解释。我一直向人们强调的一点是：这绝不仅仅是在某种过时的宪法程序条文上走走过场，仿佛大家心知肚明反正一切全凭总统一个人说了算。绝非如此！民主政体打仗，必须建立在人民授权与支持的基础之上。因为一个获得人民鼎力支持的民主国家，能够爆发出世界战争史上最具威慑力的战斗意志；相反，一个在民意缺席与反对声中仓促开战的民主国家，其战斗力将严重受挫，甚至在原本完全可以达成的战略目标面前一败涂地，根源就在于丧失了民意根基。
+
+抛开纯粹的宪政与法律合法性不谈，单纯从实际操作的维度来看，你如何看待这种拒绝寻求美国人民支持的傲慢决策，在整场武装冲突的实际演进中显露出的恶果？
+
+<details>
+<summary>Original English</summary>
+
+**David French**: But it was never tried. They never went to us. And one of the points that I've tried to make to people is that this isn't just a matter of like dotting the i's and crossing the t's on some sort of archaic constitutional requirement when everybody knows it's just the president anyway. No! Democracies are supposed to go to war with the support of the people, because a democracy with the support of the people can be one of the most potent warfighting enterprises in world history. But a democracy that goes to war without the support of the people can underperform, can fail at accomplishable tasks because it lacks that support.
+
+How have you seen this decision—you know, we can set aside the legality, the constitutionality just for a moment—practically, how have you seen that decision to not go to the American people work itself out in the actual conduct of the conflict?
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 正如你所言，在赫格塞斯嗤之以鼻的那些“觉醒派陆军战争学院”的殿堂里，有一门经典理论几乎人人皆知——那就是著名的**克劳塞维茨**“三位一体”理论（**Clausewitz's Trinity**）。其中不可或缺的一角就是“人民的意志”；尤其对于一个共和国而言，缺乏公众支持是致命的。伊朗在此次冲突中某种程度上拥有一个天然不对称优势：他们根本不需要公众支持。他们本就是靠高压恐怖统治压制本国人民，政权高层对于民众在战火与制裁下的苦难根本漠不关心。
+
+但回到我们自己身上。事后诸葛亮地看，今天很多人回顾伊拉克战争，将其定性为一场灾难性的错误决策，乔治·W·布什必须像任何总统一样为他的决断承担全部历史责任。但人们常常遗忘的是：当年布什政府整整花了一年时间在全社会论证对伊动武的理由与必要性，最终美国人民绝大多数表示支持，参议院也以压倒性多数通过了战争授权。在以往历史上，我们要么遵循宪法要求争取国会的明确决议，要么即使出于有限的国家安全紧急自卫，总统也会在白宫椭圆形办公室发表郑重的“我的同胞们”全美电视演说来阐明因由。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: Well, as you point out, you know, they teach this in the "woke" war colleges that Secretary Hegseth has a problem with. There is this thing called, you know, Clausewitz's triad, right? And one of them is the will of the people, and you need popular support, particularly when we talk about a republic. One of the arguably advantages that Iran has in this conflict is they don't have to have popular support. They are already repressing their people. You know, I don't think they have too much concern for the suffering of the people as they endure the effects of the conflict.
+
+But here, you know, we can look at—in hindsight, a lot of people look at the war in Iraq and judge it as, you know, this horrible decision, and George Bush is ultimately responsible and he needs to answer for what decisions he made, as any president does. But people forget the Bush administration spent a year making the case for a war with Iraq. The American people overwhelmingly agreed with it, and the Senate overwhelmingly agreed with it. We have either, as you said, sought congressional approval as is required by the Constitution, or it's been for limited national security means, but usually those have also come along with the "My fellow Americans" from the Oval Office statement.
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 绝不是像现在这样！
+
+<details>
+<summary>Original English</summary>
+
+**David French**: Exactly.
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 绝不是在半夜三更通过Truth Social社交平台随手发布一条短视频，在里面东拼西凑一堆混乱的开战借口！在2月28日的视频讲话中，总统向伊朗民众喊话称“你们获得解放的时刻近在眼前”，这听起来分明就是直接要搞政权更迭（regime change）。从字面逻辑上讲，没有任何其他解释。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: Not a middle-of-the-night video released via Truth Social, where there are myriad reasons revealed. You know, in that statement on the 28th of February, the president said to the Iranian people, "The hour of your liberation is at hand," which sounds a lot like regime change. That is the natural meaning of those words.
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 完全正确。为什么偏偏要选在那个时刻动手，外界根本是一头雾水。
+
+<details>
+<summary>Original English</summary>
+
+**David French**: Correct. Why now was not entirely clear.
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 毫无征兆。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: Right?
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 我们在这场战争中究竟想达成何种终极目标，从始至终都是一笔糊涂账。这就直接导致从2月28日打响第一枪的那一刻起，这场战争在政治与民意上就早已陷入被动。政府从未觉得有必要向公众提供充分的法理说明。我认为很大程度上是因为他们企图复制此前的“委内瑞拉剧本”——幻想战争在需要公众审视和论证之前就已经闪电结束，并且会被包装成一场耀武扬威的伟大胜利。
+
+但现实却无情地粉碎了这种幻梦。我虽然没有内部实据，但我高度怀疑：如果赫格塞斯部长向公众呈现的都是注水的虚假捷报，那么他极有可能也在向总统本人隐瞒战场的真实风险，蓄意淡化战备短板，虚报军队能无所不能地达成他许诺的一切目标。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: And what we are trying to accomplish is not entirely clear. And that all leads into the fact that, as I said, starting on the 28th of February, this war was already underwater. The administration never felt like they needed to make the case for it. And I think in part because they modeled this after Venezuela: it would be over before we ever had to make a justification, and it would be seen as gloriously victorious. That has not been the case. And I think part of that—I don't know this for a fact, but I think part of that is if Secretary Hegseth is presenting all rosy information to the American people, he may also be doing that to the president himself, understating the risks and saying that the military can accomplish everything that he wants.
+
+</details>
+
+### 战略目标滑坡与胜利标准的漂移
+
+**戴维·弗伦奇 (David French)**: 让我们顺着时间线仔细复盘这场战争的发展脉络。从宣示的战略目标来看，最初似乎毫不掩饰地指向推翻政权——“你们获得解放的时刻近在眼前”。然而紧接着，主要是通过国务卿卢比奥的表态，政府开始抛出一份清单式的具体目标。不过他们很快就彻底收回了“政权更迭”的口调。仅仅几天过后，口风就变成了：“政权更迭？什么政权更迭？我们真正想做的其实是击沉伊朗海军、摧毁伊朗空军，将其弹道导弹与无人机武库削弱至无法构成实质威胁的境地；彻底终结其未来开发核武器的任何潜能；在此过程中保持**霍尔木兹海峡**（Strait of Hormuz）的全面畅通，从而将对美国本土与全球经济的冲击降至最低。”
+
+而回过头看，他们迄今为止似乎仅仅勉强完成了清单里的其中一条：摧毁了伊朗相当一部分常规海空军力量。但你我都心知肚明，伊朗的海军水面舰艇和空军战机从来都不是让我们夜不能寐的根源威胁，那根本不是德黑兰政权危险性的核心所在！至于其他的宏大目标，没有一项真正得以实现。如今看来，迈克，他们对“战争胜利”的定义正在急剧缩水与漂移——仿佛只要能重新强行撬开霍尔木兹海峡，他们就能单方面宣布赢得战争了。在现实进程中，你究竟如何研判战争的实际走向？上述清单中还有任何一个目标有望真正落实吗？
+
+<details>
+<summary>Original English</summary>
+
+**David French**: So let's kind of talk through the course of the war itself. There were a number of goals articulated. At first, it seemed to be regime change: "The hour of your liberation is at hand." And then mainly through Secretary Rubio, you began to see kind of a bullet-point checklist that this is what we want to accomplish. They changed their tune on regime change pretty quickly. After a few days it was: "Regime change? What regime change? What we really want to do is sink the navy, the air force; degrade to the point at least of potential destruction their missile and drone arsenal; end any capacity for future nuclear development; and doing so while keeping the Strait of Hormuz open to minimize damage to the American and global economy."
+
+And it seems like they've accomplished essentially one of those bullet points, which was destroying a big chunk of Iran's conventional military. But as you and I both know, the Iranian navy and the Iranian air force were not keeping us up at night. That was not the source of the danger from the Iranian regime. And so it looks like none of the other objectives have been truly accomplished. And it seems like the definition of victory now, Mike, is now changing to: "But if we can pry the Strait of Hormuz back open, then we've won the conflict." How are you seeing the actual course of the conflict and if any of these other goals are going to be accomplished?
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 梳理一下全局，我想先归纳负面教训，然后再评估可能的转机所在。正如你所说，关于政权更迭，我们绝不能遗忘：引爆整场对抗的导火索，是德黑兰内部针对前政权领导层那场血腥残酷的自相残杀，各派系之间为了争夺残余权力进行你死我活的清洗。在这场屠杀中，伊朗本国的大批民众惨遭杀害。我们当时原本宣称要以此为契机给予伊朗人民自由，然而现实中他们所承受的镇压反而变本加厉。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: So going back through, I'm going to kind of go through the negatives and then maybe the causes for hope. So, as you said, regime change: we shouldn't forget that really what started this whole intervention was the brutal internal infighting between the former leadership of Iran, who were basically conducting a purge of one another to try to see who would hold on to power, and in doing so, killing hundreds, thousands of their own people. We were going to provide freedom to the Iranian people. That's not the case; they're undergoing more repression.
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 我们再来看看舆论为战争找补的口径。眼下官方极力向反对者扣帽子，宣称任何对战争合理性提出质疑的人，都是在暗中纵容伊朗拥有核武器，并信誓旦旦声称“我们绝不会让伊朗制造出核武”。我完全认同绝不能让伊朗拥核这一核心大前提。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: We talked about the—a lot of talk right now that if there is a justification, a matter of fact, the administration will counter those who expressed concerns about the war with, you know, basically accusing them of wanting to help Iran get a nuclear weapon and that we will never let Iran have a nuke. I agree with that premise.
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 我也完全支持。
+
+<details>
+<summary>Original English</summary>
+
+**David French**: We did.
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 我同样绝对不希望看到那一幕。（笑）
+
+<details>
+<summary>Original English</summary>
+
+**David French**: I don't want that either. [laughter]
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 没错。在2025年夏天，我们通过代号为“午夜之锤”（Operation Midnight Hammer）的秘密打击行动，确实重创并大幅推迟了伊朗的核开发进程。然而自那以后，我们在此次战事中根本没有采取任何实质行动来真正遏制其核项目。相反，当伊朗高层看到美国总统对待拥核后的朝鲜那种小心翼翼的态度时，我们当下的狂轰滥炸反而极大地刺激了德黑兰寻求拥有核武器的迫切渴望——他们迫切需要一张能够抵御未来灭顶之灾的绝对王牌。
+
+正如你前面提到的，美军确实把伊朗伊斯兰革命卫队（IRGC）的海军水面舰船轰入了海底。这固然是一个显著的战术战果，但它仅仅是一次作战维度的战术斩获。残酷的现实是，他们依然有能力彻底封锁和威胁霍尔木兹海峡的海运通航，这充分证明他们已经掌握了其他非对称战术来扼杀海上航道。在导弹方面，我们固然摧毁了相当一部分发射阵地，伊朗人自己也消耗了大批弹药；但最新情报表明，伊朗保有的导弹库存远比五角大楼最初预估的要庞大得多。与此形成致命反差的是，正如多家媒体报道的那样，美军在为该地区提供防空反导掩护的过程中，已经消耗了惊人数量的宝贵高端拦截弹药！
+
+重新打通霍尔木兹海峡，正如你针砭的那样，这根本就算不上什么战争目标——因为在开战之前，该海峡原本就是完全畅通的！这无非是我们在自己亲手制造的战火烂摊子之后，被迫去填平的灾难性后果。我认为，在所有糟糕的选择之中，美军如今只能无奈退守到一个所谓的“最不坏选项”。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: Right. And we did a great deal to set back the Iranian nuclear program in the summer of 2025 with Operation Midnight Hammer. We haven't done anything really since then to affect the nuclear program. We have probably incentivized the Iranians to have even more of a desire for a nuclear weapon as a deterrent, as a trump card to prevent any kind of future attacks the way they see the president talk about North Korea.
+
+You pointed out that we have basically put the Iranian, or specifically the IRGC navy, at the bottom of the sea, and that's a good thing, but that's an operational effect. The fact that they are still able to threaten traffic in the Strait of Hormuz means they found alternate means to affect the maritime domain. We have destroyed a fair amount of their missile capability and they've used a lot of it, but as we've seen in reporting, Iran may have retained more of their missile capability than we originally thought. And also, as has been reported, we've used a fair amount of our interceptors defending the region against these.
+
+Opening the strait, as you point out, it's not a goal of the war because it was the condition that existed before it. It's just a condition that we need to correct because of the war. We have now, I believe, settled to the best of all bad options.
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 我正打算追问：我们从这里吸取到任何实质教训了吗？单从纯粹的军事战略维度来看，我们现在的打法有所改观吗？如果真有改善，具体表现在哪里？
+
+<details>
+<summary>Original English</summary>
+
+**David French**: I was going to ask that: have we learned here? Just from a military perspective, are we doing better? And if so, how?
+
+</details>
+
+### 长期封锁难题与中期选举变数
+
+**迈克·纳尔逊 (Mike Nelson)**: 我认为是有的。上周《时代》周刊披露了专访特朗普总统的文字实录，引发了极大关注。当被问及为何断然拒绝伊朗提出的停火停战谈判方案时，总统给出了一个极有力量的答复：“因为我现在绝不会签署任何一份一年前我绝不会接受的妥协协议；而且和平的价码绝不能仅仅停留在重新开放海峡。”总统的这一表态非常深刻。战争的体面收场，绝不能仅仅是擦掉我们在过去几个月内亲手造成的负面外溢——因为对比一年前的战略态势，我们在几乎每一个地缘维度上都变得更加脆弱与被动。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: Well, I think so. There was a lot of focus last week when Time released the transcript of their interview with President Trump and they asked him why he had rejected an Iranian ceasefire negotiation and he said, "Because I wouldn't agree to something now that I wouldn't have agreed to a year ago, and it has to be more than the strait." That was an excellent answer from the president. The resolution of the war has to be about more about relieving those conditions I just listed where we are in almost every aspect worse off than we were a year ago.
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 现阶段唯一相对明智的策略，就是转入长期海上封锁并对德黑兰施加持续的高压经济制裁。但这种打法的致命软肋在于，它将不可避免地推高并固化美国国内消费者正在承受的能源与通胀压力。这场战争本身就极其不得人心，而在即将到来的中期选举之前，全美加油站的汽油价格绝不可能降得下来——这显然是总统目前最心急如焚的政治噩梦。
+
+这需要极大的战略定力。就像2006年中期选举遭遇布什自称的“惨痛惨败”之后，布什顶住了伊拉克战争民怨沸腾的巨大压力，做出了正确的战略增兵（The Surge）决策，从而促成了伊拉克逊尼派的“觉醒运动”，最终稳住了该地区的战局。眼下，总统必须克制急功近利、寻求戏剧性戏剧化场面的冲动，耐下性子咬牙维持经济压迫的战略航向。这是他眼前所能抓住的唯一胜算路径。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: And the smart play is now the long-term blockade and economic pressure against Iran. The downside of that is it's going to exacerbate, or at least keep in the fore, some of the economic pressures that have affected American consumers. But again, the war is unpopular. Gas prices are not going to go down before the midterms, which is, I'm sure, front of mind for the president. And it's going to require, kind of like George W. Bush did after the 2006 midterm "thumping," as he referred to it: he still, despite the unpopularity of the Iraq War, made the correct decision to pursue what was known in the United States as the Surge, but which enabled the Sahwa, the Sunni Awakening in Iraq, and helped stabilize the region. The president is going to need to resist the urge for dramatic means and to keep the course of economic pressure. I think that's the best option he has.
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 我很高兴你提到了当年的增兵行动。正如我很久以前写过的那句话：在这个世界上，唯一比发动一场违反宪法的战争更糟糕的事情，就是在一场违反宪法的战争中屈辱落败。
+
+<details>
+<summary>Original English</summary>
+
+**David French**: Yeah, I'm glad you brought up the Surge, because one of the things—as I wrote this some time ago—the only thing worse than starting an unconstitutional war is losing an unconstitutional war,
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 确实如此。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: Right?
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 而我们眼下似乎正滑向失败的边缘。在你的观察中，本届政府是否正在走向这样一个节点：一旦侥幸实现了霍尔木兹海峡的重新通航，他们就会草草地单方面宣布胜利，自欺欺人地声称战事彻底结束并大获全胜？在残酷的真实世界里，这场危机到底会如何收场？
+
+<details>
+<summary>Original English</summary>
+
+**David French**: And that seemed to be what we're on the verge of. Are you seeing this administration essentially reaching a point where if it achieves reopening the strait that they'll then essentially just declare victory and then say it's essentially over, we won? How do you think this thing actually ends here in the real world?
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 我并不想滥用陈词滥调，但事实的确是“魔鬼全在细节中”。第一，双方最终大概率会就重新开放海峡达成某种形式的妥协文本；但为了让总统有面子接受，协议中必须掺杂关于限制核项目的模糊表述。
+
+第二，我认为美方最有可能背弃并导致彻底失败的地方，在于我们最终会把伊朗人民当成筹码彻底出卖。伊朗国内民众将继续生活在甚至比以往更加残酷的严苛暴政之下。在此前外泄的备忘录草案中，竟然包含了“美国不干涉伊朗政权内部事务”的妥协条款——这在事实上就等于对德黑兰未来的内部清洗、死刑处决与严重人权迫害彻底视而不见。
+
+因此，摆在台面上的诉求呈现出一个清晰的光谱：顶端是重新打通海峡和遏制核武，其中海峡通航是否兑现最容易被外界直观检验；而光谱的最底端，则是对伊朗人民自由的实质声援。最终的妥协方案，必然会在这个区间内达成某种苟合。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: I think, you know, and I don't mean to overuse an expression, but the devil's in the details. I do think that number one, there's going to be some agreement about reopening the strait, but there will probably, for the president to accept it, some kind of language about an agreement on the nuclear program. I think the most likely place that we will fail to achieve our objectives is we are going to sell out the Iranian people. The Iranian people are going to continue to be oppressed, and probably even more so. In the MOU, there was language about us not interfering with the domestic affairs of the Iranian regime, which meant, I think, de facto turning a blind eye to future repression, executions, human rights abuses, etc. So I do think there's going to be a range of options: we have the strait and nuclear program at the top, with the strait being the most easily discernible whether it's legitimate or not; and then, you know, support to the Iranian people at the bottom. Somewhere in there, we're going to find a range of what we're going to agree to.
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 我很想一直同你探讨下去，但我们的时间差不多了。让我们换一个身份视角：我们录制这期节目的时间距离中期选举已不足一个月。所有的风向标都显示，民主党人极大概率将大幅改善其席位处境，甚至可能一举拿下国会的一院乃至参众两院。如果民主党人真的重掌国会话语权，站在为军队长治久安和国家安全负责的超党派立场上，你认为他们应当采取什么举措来制衡特朗普与赫格塞斯？又有哪些红线是他们绝对不应该碰的？
+
+<details>
+<summary>Original English</summary>
+
+**David French**: I could talk to you forever, but let's kind of wind down here. Let's put on a different hat for you. We're recording this less than a month before the midterms. All indications seem to be that the Democrats will improve their position at the very least, maybe take one, maybe two chambers. If they do take control of Congress, what should they do to constrain Trump and Hegseth? What should they not do? Put on your "I'm advising Democrats for the good of the service and for the good of national security" hat.
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 最紧迫的直接看点是：由众议员**托马斯·马西**（Thomas Massie）针对赫格塞斯发起的弹劾动议势必将付诸全院表决。这项弹劾案即便最终无法让他真正被定罪免职，但也注定会给白宫和赫格塞斯本人带来极大的政治难堪。因为投票反对他的人数，极大概率会远远超出赫格塞斯自己的乐观估计，从而让在场的所有当权者陷入极其被动的境地。
+
+如果特朗普总统此前尚未清醒意识到这场伊朗战火在民间是多么招人痛恨，那么在中期选举的重创之后，他极有可能需要找一个替罪羊来平息众怒。就像2006年中期选举惨败后**拉姆斯菲尔德**部长被立刻撤换一样，如果白宫急于甩锅，赫格塞斯在国防部长的宝座上也恐怕时日无多。
+
+另一方面，我们在当前所谓的“跛脚鸭”共和党议员身上已经看到了苗头——由于未在党内初选中获得总统背书，他们如今彻底无所顾忌，不少人已经在限制伊朗战事的《战争权力法案》相关表决中倒戈投下了赞成票。这类反战与问责的联合表决在选举过后势必更加频繁：无论是在大选落幕后的跛脚鸭过渡期，还是在新一届国会共和党控制力进一步被严重稀释之后。
+
+这一切格外凸显出最核心的症结：直到今天，总统不仅从未向国会认真陈述利害，也从未真正向全体美国人民论证过这场战事的不可替代性。他总是习惯于抛出那些空洞廉价的口号式敷衍——比如“为了阻止伊朗拥核，多掏点高油价算得了什么”。国家亟需白宫拿出关于长远战略终局的严谨阐释。退一万步说，即使他最终敲定了当前唯一可行的长期海上封锁与经济窒息路线，要维系这种持久战，也必须建立在他当下根本不具备的民意与国会支持之上。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: Well, I think one of the immediate questions is the Massie-Hegseth impeachment motion will have to be voted on. So that's going to, at a minimum, cause embarrassment for the administration and for Secretary Hegseth himself, because I don't think it's likely he's going to be removed from office. But I do think it's likely he's going to get more votes against him than he probably realizes, and that will probably cause embarrassment for all involved.
+
+I do think there's a chance, if the president is unaware of how unpopular the Iran war is, that after the midterms he may seek to find someone. Just as Secretary Rumsfeld was removed after the 2006 midterms, Secretary Hegseth may be, you know, not long for this world in the administration if the president looks for someone to point the finger to.
+
+The other thing we've seen right now with the lame-duck Republicans, who the president did not support in their primaries and now have basically nothing to lose: many of them went along with some of the War Powers votes to restrain the war in Iran. And I do think there's a danger in those kinds of votes becoming more popular, number one after the elections when there are more Republicans potentially who have nothing to lose during the lame-duck session, or in the new Congress when there's even less of a red representation in the legislature.
+
+I think that doubly highlights the importance of the president making the case that he has not made yet, neither to the American people nor to Congress, why it is important. You know, he defaults to these very short bumper-sticker answers: "We should pay more for high gas prices than Iran getting a nuclear weapon." There needs to be more of an explanation for what the long-term strategy is. Again, I think he has settled on the best option available, which is long-term imposition of economic pain and blockade of Iran. That is the one most likely to achieve any kind of success, but that's going to require more support that he currently does not have.
+
+</details>
+
+**戴维·弗伦奇 (David French)**: 总结得太精辟了，这是今天对话最完美的句号。迈克，非常感谢你来到我们的节目，非常感激你的真知灼见。
+
+<details>
+<summary>Original English</summary>
+
+**David French**: All right, that's a great way to end it. Mike, thank you so much for joining me. I really appreciate it.
+
+</details>
+
+**迈克·纳尔逊 (Mike Nelson)**: 感谢你的邀请。
+
+<details>
+<summary>Original English</summary>
+
+**Mike Nelson**: Thanks for having me.
+
+</details>

@@ -1,0 +1,189 @@
+---
+author: New York Times Podcasts
+date: '2026-10-28'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=zJFNrXuqP4M
+speaker: New York Times Podcasts
+tags:
+  - artificial-intelligence
+  - chatbot
+  - legal-liability
+  - robotics
+  - election
+title: 纽约时报简报：以色列与巴西选情动态、美移民执法致死案追责及ChatGPT医疗致死诉讼
+summary: 本期简报涵盖多项事件：以色列大选尚无明确赢家且面临组阁博弈；巴西大选落败的弗拉维奥·博尔索纳罗逃往美国；明尼苏达州遭联邦移民探员枪杀护士的家属敦促司法部调查问责；OpenAI因ChatGPT向癫痫患者提供危险停药方案致死而遭家属起诉；以及旧金山街头雇人遛机器狗以采集城市导航数据。
+insight: ''
+draft: true
+series: ''
+category: ai-application
+area: tech-engineering
+project: []
+people:
+  - Benjamin Netanyahu
+  - Flavio Bolsonaro
+  - Alex Prey
+  - Bowen Juan
+companies_orgs:
+  - OpenAI
+  - The New York Times
+products_models:
+  - ChatGPT
+media_books: []
+status: evergreen
+---
+### 纽约时报今日头条
+
+这里是《纽约时报》的今日头条简报。我是特雷西·芒福德（Tracy Mumford）。今天是10月28日，星期三。以下是我们的主要报道内容。
+
+<details>
+<summary>Original English</summary>
+[music]
+From the New York Times, it's the headlines. I'm Tracy Mumford. Today is Wednesday, [music] October 28th. Here's what we're covering.
+</details>
+
+### 以色列与巴西大选局势
+
+首先是来自两场海外重大选举的最新动态。在以色列，选民在昨天的投票中展现出近一代人以来的最高投票率，许多人将此视为决定该国命运的关键时刻。截至今天早晨，尚无明确的赢家。
+
+<details>
+<summary>Original English</summary>
+[music]
+We're starting with updates in two major elections abroad. In Israel, voters turned out in the largest numbers in a generation yesterday in what many saw as a makeorb breakak moment for the country. As of this morning, there is no clear winner.
+</details>
+
+现任总理本雅明·内塔尼亚胡与反对党阵营领袖加迪·埃森霍特（Gotti Eisenhot）一夜之间均表达了胜选基调，内塔尼亚胡表示：“我们必须建立一个强有力的右翼政府。”而埃森霍特则宣称：“公众希望变革。”
+
+<details>
+<summary>Original English</summary>
+Both Prime Minister Benjamin Netanyahu and Gotti Eisenhot, who leads a block of opposition parties, struck tones of victory overnight, with Netanyahu saying, "We must form a strong right-wing government." And Eisenhot declaring, "The public wants change."
+</details>
+
+但是完整的计票可能需要数天时间。并且由于以色列议会制度的运作机制，可能需要数周才能最终确定由谁来实际领导该国。这是因为两派阵营很可能都无法凭借自身力量获得足够的议席以单独执政。
+
+<details>
+<summary>Original English</summary>
+But a full vote tally could take days. And because of how Israel's parliamentary system works, it could take weeks to know who will actually lead the country. That's because it's very possible neither block will have enough seats to take power on its own.
+</details>
+
+因此，届时势必需要展开政治斡旋与结盟。昨天投票中出现的一个可能影响这些算计的意外情况是：出口民调预测两个阿拉伯政党可能会迎来有史以来最强劲的表现，这些选民以创纪录的人数前去投票，表达他们对内塔尼亚胡的反对。
+
+<details>
+<summary>Original English</summary>
+So, there will need to be maneuvering and alliances. One surprise that came out of yesterday's voting that could factor into those calculations, the exit polls project that two Arab parties might have their strongest showing ever, with those voters coming out in record numbers to express their opposition to Netanyahu.
+</details>
+
+以色列的大多数阿拉伯公民与犹太裔以色列人分居在不同的城镇，并面临暴力与歧视。他们昨天超出预期的表现，有可能让他们在组建下一届政府中扮演重要角色。随着计票结果不断出炉，《纽约时报》今天将带来实时追踪报道。
+
+<details>
+<summary>Original English</summary>
+Most Arab citizens in Israel live in separate [music] towns from Jewish Israelis and face violence and discrimination. Their stronger thanex pected showing yesterday could potentially give them an important role in forming the next government. The Times has live coverage today as the results continue to come in. [music]
+</details>
+
+接下来是第二条动态，来自巴西。据三名美国官员透露，在周日总统选举中落败的弗拉维奥·博尔索纳罗（Flavio Balsinaro）已潜逃至美国。博尔索纳罗起初拒绝接受卢拉总统以微弱优势连任的结果。随后他承认了败选，但指责卢拉利用不公平手段胜选。博尔索纳罗曾因涉嫌一起十亿美元的洗钱案接受调查而被下令交出护照，他声称这属于政治迫害。他曾表示愿意配合，但随后却人间蒸发。昨天大家最大的疑问就是：博尔索纳罗去了哪里？
+
+<details>
+<summary>Original English</summary>
+And a second update now from Brazil. Flavio Balsinaro, who was defeated in Sunday's presidential election, has fled the country for the US, according to three US officials. Balsinaro initially rejected the results which saw President Lula narrowly reelected. He then accepted his loss but has claimed Lula used unfair tactics to win. Bolsinaro had been ordered to hand over his passports because he was being investigated in a billion dollar moneying case, something he's claimed is political persecution. He said he would comply, but instead he disappeared. And the big question yesterday was where is Balsinaro.
+</details>
+
+如今，一名美国国务院高级官员告诉《纽约时报》，美方计划向博尔索纳罗及其家人发放签证，他在美国的盟友也已经在社交媒体上表示欢迎，并宣称他将在流亡期间领导巴西的右翼反对派。整起事件让人联想到发生在他父亲身上的遭遇——这位特朗普的盟友雅伊尔·博尔索纳罗（Jier Balssinaro）在上届选举败给卢拉并因被控企图发动政变后，曾在巴西的匈牙利大使馆躲藏了数天。白宫和国务院均未回应置评请求。
+
+<details>
+<summary>Original English</summary>
+Now a senior State Department official told the Times it plans to issue visas to Balsinaro and his family and his allies in the US have already been welcoming him on social media, claiming he'll lead Brazil's right-wing opposition while in exile. The whole situation has echoes of what happened with his father, the Trump ally Jier Balssinaro, who hid in the Hungarian embassy in Brazil for several days after he was charged with attempting a coup when he lost against Lula in the last election. The White House and the State Department did not respond to requests for comment
+</details>
+
+### 明尼苏达州移民执法枪击案追责
+
+在明尼苏达州。“今天，我们来到这里，恳请司法部做正确的事，
+
+让杀害我们儿子的凶手为他们的所作所为承担责任。”
+
+<details>
+<summary>Original English</summary>
+in Minnesota. Today, we are here begging for the Department of Justice to do what is right,
+to hold the men who murdered our son accountable for what they did.
+</details>
+
+>> 今年一月在明尼阿波利斯被移民执法探员开枪击毙的护士亚历克斯·普雷（Alex Prey）的家属昨天举行了新闻发布会，指责联邦政府在有关普雷遇害的调查中对他们隐瞒信息。“试想一下，通过看电视才得知自己的孩子被杀害了。
+
+当天没有任何政府人员联系我们，接下来的275天里也没有。我们从未收到来自联邦政府的任何消息。”
+
+<details>
+<summary>Original English</summary>
+>> The family of Alex Prey, the Minneapolis nurse who was fatally shot by immigration agents in January, held a news conference yesterday in which they accused the federal government of keeping them in the dark about the investigation into PR's killing. Imagine learning that your child had been murdered by watching it on TV.
+No one from the government called us that day, nor the next 275 days. We have not heard anything from the federal government.
+</details>
+
+>> 普雷的父母表示，明尼苏达州的联邦检察官拒绝共享信息，司法部也未答复家属寻求答案的信函。代表他们的律师表示，这构成了对《联邦犯罪被害人权利法》的违反。联邦官员至今尚未公开诸如向普雷开枪探员身份等基本信息，尽管这些姓名已被《纽约时报》和其他媒体报道。普雷之死发生在该市一名移民执法探员开枪击毙蕾妮·古德（Renee Good）后不到三周，引发了全美范围内的抗议，最终迫使特朗普总统从明尼苏达州撤出数百名移民探员。但对普雷与古德遭杀害事件的调查几乎未产生任何看得见的行动。
+
+明尼苏达州联邦检察官办公室发言人未立即回应置评请求。
+
+<details>
+<summary>Original English</summary>
+>> Freddy's parents said the US attorney for Minnesota had refused to share information and that the Justice Department had not answered a letter from the family seeking answers. A lawyer representing them said that amounts to a violation of the Federal Crime Victim's Rights Act. Federal officials have yet to publicly disclose information as basic as the identity of the agents who fired on Prey, though their names have been reported by the Times and other outlets. Pretty's death, which came not even three weeks after an immigration agent shot and killed Renee Good in the city, set off nationwide outcry and ultimately forced President Trump to withdraw hundreds of immigration agents from Minnesota. But the investigations into Prey and Goods killings have produced little visible action.
+A spokesman for the US Attorney's Office in Minnesota did not immediately respond to a request for comment.
+</details>
+
+### ChatGPT医疗建议致死诉讼
+
+>> [音乐]
+
+>> 昨天，一名31岁女性的家属对OpenAI提起了诉讼。该女性在遵循ChatGPT关于减少癫痫药物用量的建议后死亡。这一诉讼是越来越多旨在检验AI公司是否应为其技术提供的信息承担责任的诉讼之一。以下是我们从其家属以及他们与《纽约时报》分享的聊天记录中了解到的关于黄博文（Bowen Juan）的故事。消息显示，博文在她人生中一段孤独的时期开始频繁与ChatGPT交流。当时她因癫痫发作（有时一天不止一次）正在西雅图的软件工程师职位上休病假。某些时期，她一周发送多达1,500条消息，深夜用母语中文与聊天机器人交流。
+
+<details>
+<summary>Original English</summary>
+>> [music]
+>> Yesterday, the family of a 31-year-old woman who died after she followed Chat GPT's advice to cut her epilepsy medication filed a lawsuit against Open AI. It's one of a growing number of suits testing whether AI companies can be held responsible for the info their technology provides. Here's what we know about Bowen Juan's story from her family and from her chat logs which they shared with the Times. The messages show Bowen began talking with Chat GBT a lot during a lonely time in her life. She was on disability leave from her software engineering job in Seattle because she was getting hit with seizures, sometimes more than once a day. At some points, she was sending as many as 1,500 messages a week, chatting with the bot late into the night in her native Chinese.
+</details>
+
+让她感到心头沉重的一件事是，她觉得癫痫药物的剂量导致她言语迟缓、思维变慢。聊天机器人告诉她，引用其原话，“你可以根据自己的判断开始微量用药”。当她询问是否可以通过将药片切碎且不告诉医生来进行时，它回答：“你完全可以这么做”，随后提供了购买切药器的指引。最终，它为她制定了一份逐步减量至0毫克的逐日计划，不仅向她提供了危险的建议，还指导她如何应付医生，并在她出现明显的身体不适迹象时依然鼓励她坚持下去。一度，博文问聊天机器人：“我的大脑感觉精疲力竭，但我不需要担心吗？”机器人指导她：“明天保持0毫克，你必须坚持下去。”今年二月，博文被发现死于西雅图的公寓中。在报道博文的故事时，我一直在试图理解聊天机器人的安全护栏究竟是如何失效的。我的同事泰迪·罗森布卢斯（Teddy Rosenbluth）负责报道健康与医疗错误信息领域。专家告诉我，顶级AI实验室在这些医疗问题周围实施更严格的安全护栏在技术上并非难事。但他们表示，这些公司对在健康问题周围设定过多红线犹豫不决，担心会让那些期望对所有问题都能得到热情且有帮助的回答的用户感到沮丧。在回应《纽约时报》的质询时，OpenAI发言人称博文的故事令人无比心碎，但补充说明她当时交流的ChatGPT版本已不再提供使用。该版本在博文去世的当月被撤下，此前它因过度顺从附和的回应而受到批评，这种回应曾导致一些人陷入妄想漩涡，并在某些极端案例中协助导致了自杀。该发言人表示，公司的新模型在识别情况何时需要紧急关注方面表现更好。
+
+<details>
+<summary>Original English</summary>
+One thing weighing on her was her feeling that the dosage of her epilepsy drug was making her speaking stilted and her thinking slow. The chatbot told her that quote, "You can start micro doing as you see fit." When she asked if she could do that by cutting the pills into pieces and not telling her doctor, it told her, "You can absolutely do that and then provided directions for buying a tablet cutter." Eventually, it laid out a dayby-day plan for her to taper down to zero milligrams, giving her not just dangerous advice, but also coaching her on how to manipulate her doctors and encouraging her to push ahead despite clear signs of medical distress. At one point, Bowen asked the chatbot, "My brain feels exhausted, but I don't need to worry." "Maintain 0 mg tomorrow," it instructed her. "You must persevere." In February, Bowen was found dead in her Seattle apartment. In reporting Bowen's story, I've been trying to understand how exactly the chatbot's guardrails collapsed. My colleague Teddy Rosenbluth covers health and medical misinformation. Experts told me that implementing stricter guard rails around these kinds of medical questions would not be technically challenging for the top AI labs. But they said that these companies are hesitant to draw too many red lines around health questions for fear of frustrating users that have come to expect eager and helpful answers to all of their questions. In response to questions from the Times, a spokesman for OpenAI called Bowen's story incredibly heartbreaking, but added that the version of Chat GPT she was talking to is no longer available. It was pulled down the same month Bowen died after drawing criticism for its overly affirming responses, which had led some people to enter delusional spirals and in some extreme cases helped facilitate suicide. The spokesman said the company's newer models are better at recognizing when a situation may need urgent attention.
+</details>
+
+补充说明：《纽约时报》自身也对OpenAI提起了诉讼，指控其侵犯版权。该公司否认了这些指控。
+
+<details>
+<summary>Original English</summary>
+[music]
+A disclosure, the New York Times has its own lawsuit against OpenAI claiming copyright infringement. The company has denied those claims. [music]
+</details>
+
+### 旧金山街头机器狗与物理实体AI
+
+[音乐]
+
+最后一条报道：本月早些时候，我住在旧金山的一个朋友发给我一段视频，视频中一名男子正在他居住的街区街头遛机器狗。我脑海中冒出了很多疑问，想弄明白为什么会出现这种事情。事实证明，我朋友看到的那个男子，是以每小时20美元的报酬来遛这只机器狗的。《纽约时报》科技记者卡什米尔·希尔（Cashmere Hill）最终找到了引发这一切的招聘启事。该市的一家初创公司正付费招募人员遛机器狗，无需任何经验。显而易见的疑问是，这究竟是怎么一回事？卡什米尔表示，事实证明，这并不是为了让机械犬获得足够的运动量——或者说并不真是为了这个目的。相反，背后的公司正试图收集这些遛狗过程中的数据，其目标是最终让机器狗能够在没有人类协助的情况下，更好地在城市中自行导航。看到这一幕的朋友告诉我，旧金山是一座诡异的城市，而且只会越来越诡异。但这实际上是全美各地越来越普遍出现的事情。我们将开始看到机器人的普及。我们已经有了无人驾驶汽车，它们不仅遍布旧金山，也在其他城市出现。亚马逊正在得克萨斯州利用无人机进行送货。亚特兰大有一家公司正使用机器狗在公寓区执行安保工作。[音乐] 所以，我们确实正在目睹AI开始具备物理形态并进入我们的真实世界，而不仅仅存在于我们的电脑中。
+
+<details>
+<summary>Original English</summary>
+[music]
+And finally, so earlier this month, a friend of mine who lives in San Francisco sent me this video of a man walking a robot dog down the street in his neighborhood. And I had so many questions and I wanted to find out why this was happening. It turned out that this guy that my friend had spotted was making $20 per hour to walk the robot dog. Cashmere Hill covers tech for the times. She eventually found the job posting that kicked all of this off. A startup in the city was offering to pay people to walk robo dogs. No experience necessary. Now, what on earth is happening is an obvious question here. And Cashmere says it turned out it wasn't about getting the canine machines enough exercise or not really. Instead, the company behind it was trying to gather data on these walks with the goal that eventually robo dogs will be better at navigating around cities on their own without a human helper. The friend that spotted this told me that San Francisco is a weird city that is only getting weirder. But this is actually something that is happening more often around the country. We're going to start seeing robots. You've got driverless cars, which are already all over San Francisco, also in other cities. Amazon is using drones to do deliveries in Texas. There's one company in Atlanta that is having robot dogs do security at apartment complexes. [music] So, we are really seeing, you know, AI starting to take physical form and be in our real world, not just on our computers.
+</details>
+
+以上就是今天《每日新闻》的头条。
+
+<details>
+<summary>Original English</summary>
+[music]
+Those are the headlines today on the daily.
+</details>
+
+>> “我认为特朗普以及特朗普的总统任期——无论是第一任期还是第二任期，对这个国家来说都是一场彻头彻尾的灾难。我认为这个党派腐败、自私，老实说也毫无能力，但我并不是民主党人。”
+
+<details>
+<summary>Original English</summary>
+>> I think that Trump and the Trump presidency, [music] both Trump one and two, has been an absolute disaster for the country. [music] I think the party is corrupt and selfdeing and honestly incompetent, [music] but I'm not a Democrat.
+</details>
+
+>> 势均力敌的各州中部分中期选举竞选可能将取决于对两党都感到失望的选民。您可以在《纽约时报》应用程序或任何播客平台上收听该节目的完整内容。如果您还不是《纽约时报》的订阅用户，现在下载《纽约时报》应用程序即可获得整整一个月的免费访问权限，阅读我们发布的所有新闻报道。我是特雷西·芒福德。我们明天再见。
+
+<details>
+<summary>Original English</summary>
+>> How some midterms races in closely [music] divided states could come down to voters who are disillusioned with both parties. You can listen to that in the New York Times app or wherever [music] you get your podcasts. And if you are not a Time subscriber yet, you can get a full month of free access to all of the journalism we publish when [music] you download the Times app now.
+I'm Tracy Mumford. We'll be back tomorrow.
+</details>

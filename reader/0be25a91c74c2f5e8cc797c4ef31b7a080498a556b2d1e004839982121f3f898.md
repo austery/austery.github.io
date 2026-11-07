@@ -1,0 +1,1567 @@
+---
+author: Dwarkesh Patel
+date: '2026-10-22'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=frYSOKvNiiE
+speaker: Dwarkesh Patel
+tags:
+  - semiconductor-manufacturing
+  - yield-optimization
+  - supply-chain-bottleneck
+  - capital-intensive-industry
+  - process-node-development
+title: 英特尔14A制程研发与AI算力瓶颈：从10纳米教训到晶圆厂经济学重构
+summary: 本文深入探讨英特尔14A制程研发细节及AI算力需求激增带来的挑战。通过回顾10纳米节点延期教训，分析EUV光刻机供应瓶颈，并讨论晶圆厂资本密集特性及未来颠覆性制造模式的可能性。
+insight: ''
+draft: true
+series: ''
+category: ai-ml
+area: tech-engineering
+project: []
+people:
+  - Chris Auth
+  - Jack Kavalieros
+companies_orgs:
+  - Intel
+  - ASML
+  - TSMC
+  - Nvidia
+products_models:
+  - 14A
+  - 10nm
+  - EUV
+  - High-NA EUV
+  - CFET
+media_books: []
+status: evergreen
+---
+<!-- chunk 1/6 -->
+
+### AI需求与前沿算力制造
+
+半导体行业从未经历过像当前人工智能需求激增这样巨大的冲击。人工智能正在推动令人难以置信的算力需求。轻松超出我们最大产能的40%到50%，这在我以前是从未见过的。人工智能的进步一直由成倍增长的算力所驱动。为了维持这一进展，像英特尔这样的晶圆代工厂需要制造多得多的前沿算力，既要生产更多的芯片，也要提升每颗芯片的性能。但这些芯片的生产受到英特尔从供应商处采购的工具的制约。最著名的就是ASML的EUV光刻机。如果他们没有设备，就无法在这里制造芯片。
+
+<details>
+<summary>Original English</summary>
+
+There’s never been as big a shock to the semiconductor industry as the current surge in demand from AI. AI is driving incredible computing demand. Easily 40-50% above our maximum capacity, which I’ve never seen before. Progress in AI has been driven by exponentially increasing compute. To sustain that progress, foundries like Intel will need to manufacture far more leading-edge compute, both by producing more chips and by improving what each chip can do. But the production of these chips is bottlenecked by tools that Intel buys from their suppliers. Most famously, ASML’s EUV machines. If they don’t have the equipment, they can’t make the chips here.
+
+</details>
+
+我花了整整两天时间参观英特尔的晶圆厂，为与管理层的这些采访做准备。我想了解制造世界上最先进的芯片需要付出什么，以及硬件正在如何塑造人工智能的未来。今天与我一同参与的是克里斯·奥斯（Chris Auth），他负责领导目前处于制造阶段的所有制程的开发。
+
+<details>
+<summary>Original English</summary>
+
+I spent two days touring Intel’s fabs to prepare for these interviews with its leadership. I wanted to understand what it takes to manufacture the world’s most advanced chips and how hardware is shaping the future of AI. I’m joined by Chris Auth, who leads development of all the processes that are currently under manufacturing.
+
+</details>
+
+### 14A制程研发与缺陷识别
+
+我想更加具体地了解一个新制程的研发究竟是如何进行的。如果14A要在两三年后推出，那么从现在到那时之间都在发生些什么？我想让你尽可能详细地给我梳理一遍，从“良率是如何提升的？”这种层面，到你们会看什么样的遥测数据？你们会进行什么样的实验？我想尽可能具体地了解未来两年将要发生的事情。
+
+<details>
+<summary>Original English</summary>
+
+The thing I want to understand in more concrete detail is how the development of a new process actually happens. If 14A is going to come out in three years or two years from now, what is happening from now till then? I want you to walk me through as much detail as you can, everything from the level of “how is the yield improving?” to what kind of telemetry you guys look at? What kind of experiments do you guys run? I want to understand what is going to happen over the next two years as concretely as possible.
+
+</details>
+
+14A在这个阶段已经研发了大约三年多，因此为了让它达到目前的阶段，已经做了相当多的前期准备工作。目前，我们非常接近于最终确定这一制程。我们正在最终确定用于制造它的机台设备组，并且正在对每个制程步骤进行微调。在工厂里你必须执行大约2000个步骤。你需要在每一个步骤上做极其精细的工作，以确保它经过了微调、能够投入制造、可以在该制程上每周运行数千片晶圆，并且每一次都具有可重复性。
+
+<details>
+<summary>Original English</summary>
+
+14A has been in development for about three-plus years at this stage, so quite a bit of pre-work has been done to get it to the stage that it’s at right now. Right now, we’re getting very close to where we’re finalizing the process. We’re finalizing the tool sets that it will be manufactured on, and we’re working on the fine-tuning of each of the process steps. There are about 2,000 steps in the factory that you have to go do. You need to do really intricate work at each one of those to make sure it’s fine-tuned, it can go into manufacturing, it can run thousands of wafers a week on this process, and it can be repeatable every single time.
+
+</details>
+
+现在，你们可能拥有一定的良率。请给我讲讲这个良率是如何逐月提升的。有一条正在运行14A的生产线。从现在到下个月之间会发生什么，从而导致良率发生变化？你们如何确定缺陷在哪里？又如何修复它？
+
+<details>
+<summary>Original English</summary>
+
+Right now, you might have a certain yield. Walk me through how that increases month over month. There’s a line running at 14A. What happens from now till next month that will result in the yield changing? How do you identify where the defects are? How do you fix that?
+
+</details>
+
+我们在识别缺陷方面有一个持续进行的过程。我们主要有两种识别缺陷的方式。一是我们有在线量测。我们有能够观察晶圆并说出“啊，那里有一个缺陷，那里有一个缺陷，那里也有一个缺陷”的机台。另外就是在生产线末端，要么进行电学测试，要么进行分选，看看故障出在哪里。我们会确定失效，然后对这些失效进行分析。我们会对其做横截面切片。你昨天在TEM实验室里，亲眼看到了如何获取截面切片。你会得到缺陷的截面切片，根据切片你就能够说：“噢，那个缺陷位于这些层之间，所以它肯定是来自于工艺流程的这一段。噢，我们在那一段有在线量测，并且已经识别出了缺陷。那些就是我们需要去解决的缺陷。”
+
+<details>
+<summary>Original English</summary>
+
+There’s a constant process that we go through in identifying defects. There are two main ways that we’ll identify them. One is we have inline metrology. We have tools that will look at the wafers and say, “Ah, there’s a defect there, there’s a defect there, there’s a defect there.” Then also at the end of line, either electrical test or we sort and see where the fails are. We will identify failures, and then we will get analysis on those failures. We’ll cross-section it. You were in the TEM lab yesterday, and you saw how you can get cross-sections. You’ll get a cross-section of a defect, and from that, you’ll be able to say, “Oh, that defect is between these layers, so it must have come from this section of the flow. Oh, we have inline metrology in that section, which has identified defects. Those are the defects we need to go after.”
+
+</details>
+
+我们吸取的教训是，你不能在一个节点中引入太多创新，因为你引入的创新越多，它就变得越复杂。虽然你最终能让它跑通，但你需要赶上特定的时间表，而这正是你的客户最终所要求的时间表。保持这种可预测的时间表是关键所在。你必须弄清楚可以投入多少创新，以便在客户需要的时间表内满足客户的要求。
+
+<details>
+<summary>Original English</summary>
+
+What we’ve learned is that you don’t want to do too much innovation in one node, because the more innovation that you do, the more complex it becomes. While you’ll be able to get that to work, you need to hit a certain schedule, and that’s the schedule that your customer ultimately wants. Having that predictable schedule is a key piece. You’ve got to figure out how much innovation you can put in in order to meet the customer’s requirements in the timeline that they need it.
+
+</details>
+
+### 10纳米的教训与阶段关卡
+
+英特尔通过其10纳米节点的延期体会到了这种权衡代价有多高昂，该节点原本的目标推出时间是2016年，但直到2018年才开始制造。通常英特尔一直是摩尔定律的守护者，每两年更新一次制造节奏，但他们上一代产品推迟了将近四年。英特尔今天经历了四个月来最糟糕的一天，股价跌幅超过15%。我也想指出，台积电受英特尔利空消息影响上涨了13%。
+
+<details>
+<summary>Original English</summary>
+
+Intel learned how costly that tradeoff can be with delays to its 10 nanometer node, whose original target launch date was 2016, but which didn’t begin manufacturing until 2018. Usually Intel has been the keeper of Moore’s Law, a new cadence of manufacturing every two years, but their last set of products slipped almost four years. Intel today having its worst day in four months, the stock now down more than 15%. I also want to point out Taiwan Semiconductor up 13% off of Intel’s bad news.
+
+</details>
+
+请给我讲讲你认为英特尔从10纳米中吸取了哪些教训。
+
+<details>
+<summary>Original English</summary>
+
+Walk me through what lessons you think Intel has learned from 10 nanometer.
+
+</details>
+
+10纳米是一个很好的例子，当时我们制定了非常激进的目标。我们当时在做所谓的“超大规模微缩”（hyperscaling），所以我们微缩的速度比历史上的做法快得多。为了做到这一点，我们想出了各种创新的点子，试图在没有新设备的情况下实现这一目标，因为那些设备还没准备好。这给制程带来了很大的负担，也给工程师们带来了很大的负担。当然，归根结底，10纳米是一项伟大的技术。它拥有世界一流的良率、世界一流的性能和世界一流的成本，但我们实现它所花的时间比我们预期的要长。因此，我们试图将这一教训带入未来的技术节点中，并说：“嘿，我们需要限制投入其中的创新量，以确保我们能按计划进行。”
+
+<details>
+<summary>Original English</summary>
+
+Ten nanometer was a good example of where we had very aggressive targets. We were doing what was called hyperscaling at the time, so we were scaling much faster than what had been historically done. In order to do that, we came up with all sorts of innovative ideas on how we could achieve that without new tools, because the tools weren’t ready. That put a lot of burden on the process and a lot of burden on the engineers. Now, at the end of the day, 10 nanometer is a great technology. It has world-class yield, it has world-class performance, it has world-class cost, but it took us longer to do that than what we would have liked. So we’ve tried to take that learning into future technology nodes and say, “Hey, we need to limit the amount of innovation we put in there to make sure that we keep it on schedule.”
+
+</details>
+
+你认为本应该留给未来版本的主要技术是什么？
+
+<details>
+<summary>Original English</summary>
+
+What do you think was the main technology that should’ve been saved for a future version?
+
+</details>
+
+EUV可能是最主要的一项。当我们开始定义10纳米时，结论是EUV还没准备就绪。
+
+<details>
+<summary>Original English</summary>
+
+EUV was probably the big thing. When we started to define 10 nanometer, the conclusion was EUV was not ready.
+
+</details>
+
+EUV即极紫外光刻。它使用波长为13.5纳米的光来印制芯片图案，比芯片制造商此前依赖的工具所发出的光短了大约14倍。波长越短，单次曝光所能印制的特征就越精细。但英特尔认定这项技术无法及时准备就绪。台积电转向EUV的时间要早得多。它在2019年将EUV投入大规模量产，并在2020年其5纳米节点上进一步扩大了应用。英特尔的首个EUV制程直到2023年才进入产品阶段，因此台积电对这些机台有多出大约四年的使用经验。
+
+<details>
+<summary>Original English</summary>
+
+EUV is extreme ultraviolet lithography. It prints chip patterns with light at a wavelength of 13.5 nanometers, about 14 times shorter than that emitted by previous tools that chipmakers had relied on. The shorter the wavelength, the finer the features that a single exposure can print. But Intel decided this technology wasn’t going to be ready in time. TSMC transitioned to EUV much sooner. It put EUV into volume manufacturing in 2019 and ramped it up further on its 5nm node in 2020. Intel’s first EUV process did not reach products until 2023, so TSMC had about four more years of experience with these machines.
+
+</details>
+
+昨天我们在研究实验室提前看到了二维材料、CFET和钌互连技术。我很好奇你们是如何决定该技术是否足够成熟并可以用于下一个节点的？
+
+<details>
+<summary>Original English</summary>
+
+Yesterday, we were at the research lab getting a preview of 2D materials and CFET and ruthenium interconnects. I’m curious about how you decide whether that technology is mature enough for the next node.
+
+</details>
+
+10纳米带来的另一件事是，我们开始定义一套成熟度指标。我们在一个称为“阶段关卡”（phase gate）的流程中使用这些成熟度指标，我们会说：“要从技术寻路进入工程开发，这些是我们必须达到的标准。”这里有良率标准、缺陷标准、性能标准，我们必须达到这些标准才能进入流程的下一个阶段。如果有某项技术没有达到要求，那么它就会错过这个节点，并顺延到下一代技术。我们专注于那些已经准备就绪、能够运行并能纳入制程的项目，因为关键原则之一就是保持按计划推进。
+
+<details>
+<summary>Original English</summary>
+
+One thing that did also come out of 10 nanometer is we started to define a set of maturity metrics. We use those maturity metrics in a process which we call phase gate, where we would say, “To go from pathfinding into development, these are the criteria that we need to go hit.” There are yield criteria, defect criteria, performance criteria, and we need to hit those in order to move to the next set of the flow. If there’s something that doesn’t make that, then it misses that, and it goes on to the next technology. We focus on the items that are ready and we can run and put into a process, because one of the key things is staying on schedule.
+
+</details>
+
+### 晶体管的演进：从平面到全环绕栅极
+
+保持按计划推进之所以困难，部分原因在于新的晶体管设计需要数十年的时间才能走向成熟。现代芯片晶体管是从1960年展示的平面MOS晶体管演变而来的。从那时起的晶体管历史，就是从二维向三维发展的历程。克里斯接下来描述的每一项进展，从FinFET到全环绕栅极（gate-all-around），都是这一演进过程中的一步。因此，先了解一下基础晶体管及其部件随时间的变化会有所帮助。
+
+<details>
+<summary>Original English</summary>
+
+Staying on schedule is hard partly because new transistor designs take decades to mature. Modern chip transistors evolved from the planar MOS transistor, demonstrated in 1960. The history of transistors since has been the progression from two dimensions into three. Each development that Chris goes on to describe, from FinFET to gate-all-around, is a step in that progression. So it’ll help to first look at a basic transistor and how its parts have changed over time.
+
+</details>
+
+晶体管本质上是一个开关。当它开启时，它允许电流在其两端流动，这两端被称为源极（source）和漏极（drain）。一个称为栅极（gate）的部件位于源极和漏极之间的硅层上方。给栅极施加正电压会打开开关，因为正电压会将下方硅层中带负电的电子向上拉向栅极。然而，一层薄薄的绝缘层阻止了它们真正接触到栅极。因此，电子聚集在绝缘层正下方，形成了一条从源极通往漏极的导电细通路。这被称为沟道（channel）。撤去电压后，电子消散，沟道消失，开关关闭。
+
+<details>
+<summary>Original English</summary>
+
+A transistor is basically a switch. When it’s turned on, it allows current to flow between its two ends, which are called the source and the drain. A piece called a gate sits on top of the silicon between the source and the drain. Applying a positive voltage to the gate turns the switch on, because the positive voltage pulls negatively charged electrons in the silicon beneath up toward the gate. However, a thin layer of insulation stops them from actually reaching the gate. So the electrons collect just beneath that insulation and form a thin conducting path from the source to the drain. This is called the channel. Remove the voltage and the electrons disperse, the channel disappears, and the switch turns off.
+
+</details>
+
+随着晶体管变小，源极和漏极靠得如此之近，以至于即使在开关本应关闭时，电流也会流过沟道。我们需要一种更好的方法来控制沟道并防止电流泄漏。解决办法是通过从更多面接触沟道，使栅极对沟道拥有更强的掌控力。在最初的平面晶体管中，栅极仅从顶部接触沟道。FinFET晶体管将沟道挤压成垂直的硅薄鳍片。栅极覆盖在鳍片上，因此它从三个面控制沟道。从那里的下一个演变是不仅覆盖沟道的顶部和两侧，而且还覆盖底部。这项技术被称为全环绕栅极（gate-all-around），它将沟道切成薄带状纳米线，每一条都被栅极完全包裹起来。
+
+<details>
+<summary>Original English</summary>
+
+As transistors shrank, the source and the drain got so close together that current could flow through the channel even when the switch was supposed to be off. We needed a better way to control the channel and prevent current from leaking through. The fix was to give the gate a tighter grip on the channel by touching it from more sides. In the original planar transistor, the gate only touches the channel from the top. The FinFET transistor squeezes the channel into a thin vertical fin of silicon. The gate drapes over the fin, so it controls the channel from three sides. The next progression from there was to cover not only the top and the sides of the channel, but also the bottom. This technology is called gate-all-around, and it slices the channel into thin ribbons, each of which gets completely wrapped around by the gate.
+
+</details>
+
+但要让全环绕栅极发挥作用，需要新材料和新的制造步骤。为了构建这些悬浮的硅纳米带，你首先需要将它们夹在交替的临时占位材料层之间，该材料占据了栅极最终所在的空间。我们之所以使用占位物，是因为真正栅极中的材料无法在随后的加工过程中存活下来，其中包括在大约1000摄氏度的高温下对晶圆进行烘烤。一旦这些高温步骤完成，芯片制造商就会蚀刻掉占位物，留下悬浮的纳米带。然后，他们在每根纳米带周围的缝隙中填上一层特殊的绝缘体薄层，称为high-k（高介电常数）材料，其目的是让栅极对沟道产生更强的吸附拉力。然后在这层材料之上，他们再铺设栅极本身的金属。
+
+<details>
+<summary>Original English</summary>
+
+But getting gate-all-around to work required new materials and new manufacturing steps. To build these floating ribbons of silicon, you first sandwich them between alternating layers of a temporary placeholder material, which holds the space where the gate will eventually go. We use a placeholder because the materials in the real gate wouldn’t survive the processing that comes after, which involves baking the wafer at around 1,000 degrees Celsius. Once these hot steps are done, chipmakers etch away the placeholder, leaving the ribbons suspended. Then they fill the gaps around every ribbon with a thin coat of a special insulator called a high-k material, whose purpose is to let the gate pull more strongly on the channel. And then on top of this material, they put the metal of the gate itself.
+
+</details>
+
+FinFET于1989年在实验室中得到论证，并于2011年在英特尔投入大规模量产。全环绕栅极晶体管早在一年前的1988年就已被展示，但三星直到2022年才开始生产全环绕栅极芯片。因此，FinFET和全环绕栅极这两个概念是在差不多的时间被开发出来的，但它们进入量产的时间相差了十年。我想问克里斯，为什么花了这么长时间才走到如今的全环绕栅极技术。
+
+<details>
+<summary>Original English</summary>
+
+FinFET was demonstrated in a lab in 1989 and reached volume production at Intel in 2011. A gate-all-around transistor had been demonstrated a year earlier, in 1988, but Samsung didn’t begin producing gate-all-around chips until 2022. So these ideas, FinFET and gate-all-around, were developed around the same time, but they reached production a decade apart. I wanted to ask Chris why it took so long to get to this current gate-all-around technology.
+
+</details>
+
+也许你可以带我了解一下进入大规模量产的过程。我想具体了解一下，一旦你有了“嘿，我们要把沟道做小，我们要把它包围起来……”的想法之后，所有关于材料科学的其他问题、搞清楚如何不破坏栅极的问题，到底是如何解决的？为什么需要这么长时间？
+
+<details>
+<summary>Original English</summary>
+
+Maybe you can walk me through the process of getting into high-volume manufacturing. I want to understand concretely, once you have an idea that, “Hey, we’re going to make the channel smaller, we’re going to surround it…” All the other problems of material science, figuring out how to not destroy the gate, how do they actually get figured out? Why does it take so long?
+
+</details>
+
+全环绕栅极是一个很好的例子，因为早在90年代我们就知道这个想法了。但我们知道在如何将其投入大规模量产方面会存在这些问题。与此同时，还有其他技术，比如高K金属栅极（high-K metal gate）。有应变硅，也有现成的FinFET。这就变成了一个何时才是解决这些问题的正确时机的问题。你不会想在不得不解决某件事之前就去解决它。如果你有这些其他可以提升性能的手段，你就会先去做那些。所以我们走过了这条路径：我们做了应变硅、高K金属栅极，我们做了FinFET，然后事情变成了，“好吧，我们需要做更进一步的事了。我们该怎么实现？”嗯，全环绕栅极确实是目前终极的晶体管。也许是时候去着手解决你面临的那些问题了。你说得对，现在你必须去研究如何把高K金属栅极与全环绕栅极结合在一起。
+
+<details>
+<summary>Original English</summary>
+
+Gate-all-around’s a good example, because back in the ’90s we knew of this idea. But we knew there were going to be these problems on how you put this into high-volume manufacturing. At the same time, there are other things like high-K metal gate. There’s strained silicon, there’s FinFETs that are out there. It’s a question of when’s the right time to go and tackle those? Well, you don’t want to tackle something before you have to. If you have these other things that can drive performance, you would go and do that. So we went through this path. We did strained silicon, high-K metal gate, we did FinFETs, and then it became, “Well, we need to do things further. How do we get there?” Well, gate-all-around’s really the ultimate transistor out there. Maybe it’s time to go and start tackling some of those issues that you have. You’re right, now you have to look at how do you put high-K metal gate in with gate-all-around.
+
+</details>
+
+<!-- chunk 2/6 -->
+
+### 研发模式的演变与创新
+
+这种创新是需要时间的。有时你需要新材料。有时你需要不同的设备才能完成某些必须做的事情，这就需要设备厂商去发明创造。你必须去找设备厂商说：“我需要一台能做到某某功能的设备。我需要一种能够沉积用于该环节的特定材料的气体。我需要一个具备这种特性的加热吸盘。”所有这些事情都需要时间。有些是迭代式的，你必须去制造一个全环绕栅极晶体管，然后发现：“噢，这行不通。让我弄清楚我的假设出了什么问题，然后换一种结构再试一次。”
+
+<details>
+<summary>Original English</summary>
+
+It’s that innovation that takes time. Sometimes you need new materials. Sometimes you need a different tool in order to be able to do some of the things that you need to go do, and that requires invention from the tool vendors. You have to go to the tool vendor and say, “Hey, I need a tool that can do XYZ. I need a gas that can deposit this particular material that goes into that. I need a heating chuck that has this characteristic to it.” All those things take time. Some of it’s iterative, where you have to run a gate-all-around transistor and say, “Oh, well, that didn’t work. Let me figure out what was wrong with my hypothesis and try it again with some different structure.”
+
+</details>
+
+从仅仅把平面晶体管越做越小并享受登纳德缩放定律红利的时代，到我们今天所处的世界，研发的本质发生了怎样的变化？这完全是一种不同类型的研发流程吗？以前是“让我们把它做得更小、更小、更小”。现在你必须同时兼顾性能的所有其他方面，而且尺寸上的缩减也不再那么容易实现了。能否为我梳理一下，研发流程在当时是否发生了某种关键转变？
+
+<details>
+<summary>Original English</summary>
+
+How has the nature of R&D changed from the era of just making planar transistors smaller and smaller and getting the benefits of Dennard scaling, to the world we’re in today? Is it just a totally different kind of R&D process? Previously it was, “Let’s make things smaller, smaller, smaller.” Now you look at all these other facets of performance at the same time, and improvements in size don’t come as easily. Walk me through whether there was some crucial change in the R&D process at that point.
+
+</details>
+
+如果你回顾80年代和90年代，是的，当时确实是由登纳德缩放定律和光刻技术驱动的。我们只是把东西做得更小，晶体管变得更快、更可靠，而且节奏非常具有可预测性。当我们步入2000年代时，我们发现：“光这样已经不够了。我们必须做出改变。”在我看来，这演变成了一个创新的黄金时代。对于每个技术节点，你打算如何提供更多的缩放？你打算如何提供更高的性能？这催生了应变硅等技术。它催生了高介电常数金属栅极（High-K Metal Gate）。它催生了FinFET。它催生了全环绕栅极（Gate-All-Around）。它催生了背面供电。这些都是你在80年代和90年代会觉得“噢不，我们绝对不碰那些”的东西，因为当时我们只是一直沿用相同的工艺流程。我们只是不断缩小它、缩小它、缩小它。但对于像我这样一个对晶体管极度痴迷的人来说，这太棒了，因为现在的创新玩法彻底放开了。你可以在那里做各种各样的事情。你可以引入新材料。只要看看我们在90年代使用的材料数量与今天使用的材料相比就知道了。可能增加了10倍。这里面有大量的创新。有原子层沉积。你正在按原子逐个控制这些材料。所以它极大地改变了你对待工艺的方式。以前是“尽量什么都别改”。现在则是“拿起大锤把原来的东西砸烂，然后提出全新的想法”。
+
+<details>
+<summary>Original English</summary>
+
+If you look at the ’80s and ’90s, yes, it was driven really by Dennard scaling, lithography. We just made things smaller, transistors got faster, they got more reliable, and it was a very predictable cadence. When we started to hit the 2000s, we saw, “That’s not good enough anymore. We need to do something different.” To me, it became this golden age of innovation. For each technology node, how are you going to provide more scaling? How are you going to provide more performance? It drove things like strained silicon. It drove high-K metal gate. It drove FinFETs. It drove gate-all-around. It drove backside power. These are things that in the ’80s and ’90s you would be like, “Oh no, we’re not touching any of that,” because we just continued to have the same process flow. We just scaled it, scaled it, scaled it. But for somebody like me who’s a transistor junkie, it’s awesome, because now the playbook’s open. You can do all sorts of things out there. You can bring in new materials. Just look at the number of materials we used to use in the ’90s versus the materials today. It’s probably gone up 10X. There’s a lot of innovation. There’s atomic layer deposition. You’re controlling this stuff atom by atom. So it’s changed a lot how you approach the process. Before, it was, “Try to not change anything.” Now it’s, “Take the sledgehammer and start tearing the thing up and come up with some new idea.”
+
+</details>
+
+### 高数值孔径极紫外光刻与背面供电
+
+对于14A工艺，英特尔正在使用一种新型光刻机：高数值孔径极紫外光刻机（High-NA EUV）。它使用与当今极紫外光刻机相同的极紫外光，但改变了光学系统。数值孔径（NA）是衡量光刻机反射镜能将多大锥度的光线聚焦到晶圆上的指标。能够聚焦的锥度越宽，光线所能刻画的光斑就越小。标准极紫外光刻机的NA为0.33。High-NA将其扩大到了0.55。因此，High-NA单次曝光就能打印出大约小1.7倍的特征图形。当特征尺寸小于光刻机能够打印的极限时，芯片制造商不得不将图案拆分成多次曝光，每次打印一组不同的特征。最密集的图案可能需要两次、三次甚至四次曝光。在价值约2亿美元的机器上，每一次额外的曝光都会占用宝贵的时间，并且为缺陷引入了又一次机会。High-NA机器的成本大约是其两倍，但它们可以减少所需的曝光次数。因此，决定其高昂价格是否合理的关键问题在于：它们能节省多少额外的时间，以及能在多大程度上降低缺陷风险。
+
+<details>
+<summary>Original English</summary>
+
+For 14A, Intel is using a new kind of lithography machine: High-NA EUV. It uses the same extreme ultraviolet light as today’s EUV machines, but changes the optics. NA, or numerical aperture, is a measure of how wide a cone of light the machine’s mirrors can focus onto the wafer. The wider the cone you can focus, the smaller the spot that your light can carve. Standard EUV machines have an NA of 0.33. High-NA widens it to 0.55. So High-NA can print features about 1.7 times smaller in a single pass. When features are smaller than the lithography machine can print, chipmakers have to split the pattern across several passes, each printing a different set of features. The most tightly packed patterns can require two, three, or even four passes. Each additional pass takes up valuable time on a machine that costs around $200 million, and it introduces another opportunity for defects. High-NA machines cost about twice as much, but they can reduce the number of passes that are needed. So the question which determines whether they justify their higher price is how much more time they save and how much they reduce the risk of defects.
+
+</details>
+
+现在你们在14A上使用了High-NA EUV设备，而台积电曾表示这些设备对他们而言在经济上尚不合理。你们是如何决定下一代光刻设备是否已经具备采用条件的？
+
+<details>
+<summary>Original English</summary>
+
+Now you guys are using High-NA EUV tools for 14A, whereas TSMC has said that they don’t make economic sense yet for them. How do you decide whether the next litho tool is the one that is ready to adopt or not?
+
+</details>
+
+High-NA是一个很好的例子，说明由于我们与台积电的技术架构不同，面对相同的设备套件，我们会得出不同的结论。我们采用了背面供电技术。这意味着实际上缓解了晶圆正面的间距要求。这使得你能够直接使用High-NA进行打印。台积电由于没有背面供电，必须采用更小的间距，而他们用High-NA无法做到这一点，所以他们必须使用双重图形化极紫外光刻（double patterning EUV）。因此对他们来说，这并没有太大帮助。对我们而言，这非常有帮助。现在在14A上，我们将其作为一个选项保留，这是我们将与客户讨论的事情，因为它具有一定的价值主张，同时也增加了一定的复杂性。
+
+<details>
+<summary>Original English</summary>
+
+High-NA’s a good example of where, because of the architecture of our technology versus TSMC’s, we make different conclusions off of the same tool set. We use backside power. That means that you actually alleviate some of the pitch requirements you have on the front side. That allows you to print that directly with High-NA. TSMC has to run tighter pitches because they don’t have backside power, and they can’t do that with High-NA, so they have to use double patterning EUV. So for them, it’s not very helpful. For us, it is very helpful. Now at 14A, we’ve left it as an option, and it’s something that we’ll have a discussion with the customer on, because there’s some value proposition to it, and there’s some complexity that it adds.
+
+</details>
+
+克里斯（Chris）所指的是一种名为背面供电的特性。芯片有两种不同的走线。电源线为晶体管输送电力，它们需要比较粗。信号线让晶体管相互通信。它们要细得多，但需要保持一定间距，以免一条电线的信号干扰另一条电线的信号。在过去，所有这些电源线和信号线都必须挤在晶体管上方。英特尔最新的工艺将这些电源线移到了晶体管下方，即晶圆的背面。这样就腾出了顶部的空间，因此信号线就不必排列得那么紧密。这种改变使得High-NA对英特尔来说物有所值。如果没有背面供电，走线会非常密集，即使使用High-NA也需要多次曝光才能打印出来。有了背面供电，单次High-NA曝光就足够了。外部公司现在可以委托英特尔制造他们设计的芯片。他们遵循英特尔的工艺设计套件（PDK）：即特定工艺能够制造什么的菜单以及制造它的规则。
+
+<details>
+<summary>Original English</summary>
+
+Chris is referring to a feature called backside power. A chip has two different kinds of wiring. Power lines deliver electricity to the transistors, and they need to be thick. Signal lines let the transistors talk to each other. They’re much thinner, but they need to be spaced apart so that the signal from one wire doesn’t interfere with the signal from another. In the past, all of these power lines and signal lines had to be crammed together on top of the transistors. Intel’s newest process moves these power lines below the transistors, to the back of the wafer. This frees up space on top, so the signal lines don’t have to be packed as tightly. This change makes High-NA worth it for Intel. Without backside power, the wiring is so tight that it would require multiple passes to print, even with High-NA. With backside power, a single High-NA pass is enough. Outside companies can now commission Intel to manufacture chips that they’ve designed. They follow Intel’s process design kit, or PDK: the menu of what a given process can build, and the rules for building it.
+
+</details>
+
+对于计划在14A上进行开发的客户，你们现在需要在PDK中锁定这一点吗？
+
+<details>
+<summary>Original English</summary>
+
+Do you need to lock that into your PDK right now for customers who are planning on developing on 14A?
+
+</details>
+
+目前它是PDK中的一个选项，我们正在视具体客户进行逐一讨论，以确定他们是否希望采用这种方案。
+
+<details>
+<summary>Original English</summary>
+
+It’s an option in the PDK today, and we’re handling it as a customer-by-customer discussion as to whether or not they want to go down that path or not.
+
+</details>
+
+对于18A，有公开报道称其PDK存在延迟或问题，导致某些指令无法运行，人们很难使用你们的晶圆代工厂来制造芯片。请为我讲述一下英特尔转型为晶圆代工厂，并提供其他客户也能用来制造各自芯片的PDK的过程。
+
+<details>
+<summary>Original English</summary>
+
+For 18A, there was public reporting that there were delays in or issues with the PDK, such that some instructions didn’t work, and it was difficult for people to use your foundry to build their chips. Tell me about the process of Intel becoming a foundry and then having a PDK that other customers can use to make whatever chip they’re making as well.
+
+</details>
+
+转型成为一家晶圆代工厂确实存在学习曲线。这也是我们的竞争对手经历过的过程。PDK就是一个很好的例子。几十年来，我们一直是一家IDM（集成器件制造商）。我们过去直接去找我们的产品团队，向他们展示我们的晶体管数据，双方互相共享这些数据，但我们没有建立过正式的PDK类型的流程。所以这是我们在18A上必须实施的新流程。18A最初是没有PDK的。我们确实从客户那里收到了大量反馈，涉及他们对PDK质量和成熟度的期望，以及他们希望在其中看到什么样的数据信息。我们尝试将这些意见整合进去，以确保我们拥有一套能够满足客户需求的PDK。这就是我们目前的进展。我们开始拥有具备这些特性的PDK，而14A从一开始就会具备这一点。它拥有非常高质量的PDK。同样，针对什么是0.5版、0.9版还是1.0版的PDK，都有成熟度指标。我们不断推进，采纳客户反馈，并将其融入到我们PDK的质量中。
+
+<details>
+<summary>Original English</summary>
+
+There’s definitely a learning curve to how you become a foundry. That’s something that our competitors have gone through as well. PDK is a good example of that. For decades, we’ve been an IDM. We’ve gone to our product teams and shown them our transistor data, and we share that data back and forth, and we haven’t had a formal PDK-type process. So that’s a new process that we’ve had to implement on 18A. 18A started out not having a PDK. There’s definitely a lot of feedback we’ve gotten from the customers as to what they expect for quality and maturity of the PDK and what sort of information they want to see in there. We’ve tried to incorporate that into making sure that we have a PDK that meets our customers’ requirements. That’s where we’ve ended up. We’re starting to get PDKs that have this, and 14A will have that from the get-go. It has very high quality PDKs. Again, there are maturity metrics for what is a PDK 0.5 versus a 0.9 versus a 1.0. We’re constantly going through and taking customer feedback and incorporating that into the quality of our PDK.
+
+</details>
+
+在历史上的大部分时间里，英特尔的晶圆厂只生产英特尔自己的芯片。这可能也是让台积电获得优势的部分原因。为众多客户提供服务使台积电拥有更多的晶圆用于吸取经验、获得更多的收入用于再投资，并在按时交付方面面临更大的压力。基本上，所有的企业客户都有着一组共同的产品需求，如果你想开始与他们探讨开展业务，你就必须满足这些要求。这些包括单点登录（SSO）等功能，以便员工可以使用公司账户登录你的应用程序；或者是目录同步，以便在有人离职时能够自动关闭其访问权限。这些功能要做完善比你想象的要困难得多，而且内部自行构建的风险回报比其实并不合算：稍微好一点的SSO版本可能不会加速你的业务增长，但一个出故障的版本绝对会阻碍它的发展。WorkOS让你能够使用所有最常见企业功能经过实战检验的版本——比如SSO、SCIM、基于角色的权限控制（RBAC）、审计日志等。WorkOS还针对智能体推出了专为其打造的这些功能版本，使它们能够登录、获取适当的权限并在你的产品内执行操作。所有这些功能只需几行代码即可接入，因此你可以轻松添加它们并开始向企业客户销售。OpenAI、Anthropic和Thinking Machines——以及超过3000家其他公司——都依靠WorkOS来满足其企业级需求。如果你想加入他们，请访问workos.com，并告诉他们是我推荐的。
+
+<details>
+<summary>Original English</summary>
+
+For most of its history, Intel’s fabs made only Intel’s chips. That could be part of what allowed TSMC to gain an edge. Serving many customers gave TSMC more wafers to learn from, more revenue to reinvest, and more pressure to hit deadlines. Basically, all enterprise customers have a shared set of product requirements that you have to meet if you want to even start talking about doing business with them. These are things like SSO, so employees can log into your app with their company accounts, or directory sync, so that whenever someone leaves, their access gets shut off automatically. These features are harder to get right than you think, and the risk-reward for building them in-house doesn’t really make sense: a slightly better version of SSO probably won’t accelerate your growth, but a broken one will definitely stunt it. WorkOS gives you access to battle-tested versions of all the most common enterprise features—things like SSO, SCIM, RBAC, audit logs, and more. WorkOS also has versions of these features that are purpose-built for agents, so they can log in, grab the right permissions, and take actions within your product. All of these features can be plugged in with just a few lines of code, so you can add them and get started selling to enterprises. OpenAI, Anthropic, and Thinking Machines—as well as more than 3,000 other companies—all rely on WorkOS to meet their enterprise requirements. If you want to join them, go to workos.com and tell them that I sent you.
+
+</details>
+
+### 技术的演进与三维结构
+
+如果一只蝴蝶在60年代扇动翅膀，你能想象这样一个世界吗：全环绕栅极甚至都不是人们听说过的词汇、不是大家熟悉的概念，人们所思考的完全是技术树上一个截然不同的分支？你认为沿着技术树走下去，事情可能会在多大程度上变得彻底不同？有没有可能我们甚至连铜都不用？
+
+<details>
+<summary>Original English</summary>
+
+If a butterfly flapped its wings in the ’60s, could you imagine a world where gate-all-around is not even a word people have heard of, an idea people are familiar with, but people are thinking of an extremely different branch of the tech tree? How far down the tech tree do you think things could be totally different? Could it be that we’re not even using copper?
+
+</details>
+
+如果你看看晶体管和互连线，就我们目前所达到的水平而言，晶体管走向全环绕栅极并使其成为理想的晶体管结构，在某种程度上是必然的。正如我所说，我们在90年代就已经在讨论这类事情了。背面供电，那个确实相当超前。即使在90年代，将整个硅衬底剥离并在背面布置线路的想法，大概也是某种有点超前的事情。铜，铜导线当然是最好的，所以我不知道除了铜之外你还能选择什么。
+
+<details>
+<summary>Original English</summary>
+
+If you look at, say, transistors and interconnects, where we’ve gotten to, as far as the transistor and gate-all-around and it being the ideal transistor structure, was somewhat inevitable. As I said, in the ’90s we were already talking about these types of things. Backside power, that one’s pretty out there. Even in the ’90s, the idea that you’re going to strip off the entire silicon substrate and put lines on the backside, that one is probably something that’s a little bit out there. Copper, of course copper wires are the best, so I don’t know how you would end up somewhere else besides copper.
+
+</details>
+
+但你们正在探索其他——
+
+<details>
+<summary>Original English</summary>
+
+But you guys are exploring other—
+
+</details>
+
+对于一些最紧密的间距，替代铜是必然的。那就是你会引入另一种材料的典型例子。但对于较粗的线条，我认为铜基本是最合适的。一旦你开始采用全环绕栅极晶体管并且采用背面供电，现在你就开始进入一个截然不同的领域。现在你看，它不再是“嘿，只有某个衬底，然后你把所有东西堆在上面”。现在你拥有了一个悬浮在互连层中的晶体管，你就会想：“好吧，那我为什么不能有晶体管、互连层、再来一点晶体管、再来更多互连层？”这就是我们现在通过将独立芯片彼此堆叠来实现的整套3D堆叠技术。现在你会想：“为什么我不能直接构建一个像这样的完整结构？”你在存储器、NAND、DRAM中看到了这种情况。它们有一些不可思议的3D结构。NAND已经做到了，DRAM正在探讨它，但我认为DRAM不可避免地也会朝那个方向发展。很多人说：“噢不，我们不会做这个，因为我们在未来五年内做不到。”好吧，拜托，让我们把时间跨度放得更长远一些。放眼10年、20年。到2045年，你认为自己能做到吗？现在你就会开始说：“噢是的，我能预见到到那时我们会拥有一些相当奇特的结构。”我们把自己的眼界局限在了未来四年内所认为可能的事情上。正如我一直所说的，当人们说，
+
+<details>
+<summary>Original English</summary>
+
+For some of the very tightest pitches, it’s inevitable that you will replace copper. That’s a good example of where you will have another material that will come in there. But for the larger lines, I think copper is about where it’s at. Once you start to do gate-all-around transistors and you do backside power, now you start to enter a very different regime. Now you see it’s not, “Hey, there’s just some substrate and you stack everything on top.” Now you’ve got a transistor which is floating in interconnect, and you’re like, “Okay, well, why don’t I have transistors, interconnect, a little more transistors, more interconnect?” This whole 3D stacking that we now do with just discrete chips that we stack on top of each other. Now you’re like, “Why can’t I just build an entire structure like this?” You see it with memory, NAND, DRAM. They have some incredible 3D structures. NAND already does it, DRAM talks about it, but I think that DRAM inevitably is going to go there too. A lot of people say, “Oh no, we’re not going to do this because we can’t do it in the next five years.” Well, come on, let’s put a larger timescale on this. Let’s put 10 years, 20 years. In 2045, do you think you could do it? Now you start to say, “Oh yeah, I could see us having some pretty exotic structures at that point.” We limit ourselves by what we see as possible in the next four years. As I’ve always said, when people say,
+
+</details>
+
+<!-- chunk 3/6 -->
+
+### 晶体管微缩与散热挑战
+
+“你如何看待技术微缩的前景？”，我们大约有四年的能见度。然后你到了第四年，你就会说：“是的，我认为我们可以在此基础上再做四年。”而当你到了那四年，你又会觉得：“是的，我认为还可以做些什么。”但如果你开始谈论 10 年，那就很难说会变成什么样了。
+
+<details>
+<summary>Original English</summary>
+
+“How do you see technology scaling going?”, we have visibility for about four years. Then you get out to the four years, and you go, “Yeah, I think there’s something we can do another four years out of that.” And you get to that four years, and you’re like, “Yeah, I think you can do something.” But if you start to talk about 10 years, it becomes hard to say what it’s going to be.
+
+</details>
+
+克里斯向上构建的想法可以从晶体管本身开始。芯片使用两种类型的晶体管，分别称为 n 型和 p 型，它们的工作方式相同，只是电荷相反。几乎每个电路都是通过将它们配对来构建的。如今，芯片制造商将它们并排构建。下一步是将它们直接叠放在彼此之上以节省空间。原则上，这样可以在相同面积内容纳两倍数量的晶体管。这种设计被称为 CFET，即互补场效应晶体管（complementary field-effect transistor）的缩写。但是，每一个额外的层都会增加制造步骤和成本，并且还会导致热量积聚，且没有明确的散逸途径。
+
+<details>
+<summary>Original English</summary>
+
+Chris’s idea of building upward could start with the transistors themselves. Chips use two types of transistor, called n-type and p-type, which work the same way, but with the charges reversed. Nearly every circuit is built by pairing them up. Today, chipmakers build them side by side. The next step is to stack them directly on top of each other in order to save space. In principle, that fits twice as many transistors into the same area. This design is called a CFET, short for complementary field-effect transistor. But every extra layer adds manufacturing steps and cost, and also leads to heat building up that doesn’t have a clear way to escape.
+
+</details>
+
+因为逻辑芯片比存储芯片消耗更多功率，由于散热问题，你无法像处理 DRAM 堆叠制造 HBM 或 3D NAND 那样轻松地处理逻辑芯片。从长远来看，这是根本问题吗？你要如何——
+
+<details>
+<summary>Original English</summary>
+
+Because logic consumes more power than memory, you can’t do stacks of DRAM that make HBM or 3D NAND as easily with logic, because of the heat issue. Is that the fundamental issue over the long run? How you—
+
+</details>
+
+热管理。当你试图探讨“嘿，究竟是什么限制了计算？”时，主要有三件事。第一是你进行开关的速度有多快，也就是器件的频率。第二是进行这种开关需要消耗多少功率，也就是它的能效。第三个是，你如何散逸因为进行这种开关而产生的热量？这就是热管理的部分。这些都不是新问题。你可以追溯到 20 年前，你就能看到关于这三件事的文章。问题在于，热管理……你如何应对它，特别是当你开始谈论这些 3D 类型的器件时？确实需要这种系统级的分析和模拟工具。我认为我们正处于起步阶段，因为我们才刚刚开始研究这个。它是一个限制因素，并且将来也会是一个限制因素，但同样，这些是我们能够去解决的问题。
+
+<details>
+<summary>Original English</summary>
+
+Thermals. There are three things you have when you try to say, “Hey, what limits compute?” It’s how fast can you do the switch, so the frequency of the device. How much power does it take in order to do that switch, so the power efficiency of it. The third one is, how do you dissipate the heat that was generated by doing that switch? That’s the thermals piece of it. These are not new problems. You can go back 20 years and you can see articles on these three things. The question is, thermals… how do you deal with that, particularly when you start to talk about these 3D-type devices? There is a need for that sort of system-level analysis and simulation tools. I think we’re in its infancy because we’ve just started to look at this. It is a limiter, and it will be a limiter, but again, these are problems that we can go solve.
+
+</details>
+
+### 热点议题会议与工程决策
+
+这些问题会因付出努力而得到解决，但工程时间是有限的，用于实验的晶圆也是有限的。在成千上万个问题中决定把它们分配到哪里，这本身就是引入新节点中最困难的部分之一。我旁听了英特尔的一场“热点议题”（Hot Topics）会议，那些决定就是在那里制定的。
+
+我正和凯文·费舍尔（Kevin Fischer）在一起，他今天早上在热点议题会议上立下了规矩，当时你们正在讨论如何改进 18A 和 18A-P 技术。人们会带着他们正在进行的不同实验、带着他们关于提高良率和性能的不同想法来找你，然后你和你的整合工程师会告诉他们你需要什么数据、他们应该如何推进、你认为他们怎样才能把事情进展得更快。我想让大家感受一下这些会议的文化。有一点让我觉得很震撼，那就是这件事正在制约你们最先进的节点。你希望进展迅速，所以你有点像在重锤敲定。
+
+<details>
+<summary>Original English</summary>
+
+The problems respond to work, but engineering time is finite, and so are the wafers for experiments. Deciding where they go across thousands of problems is itself one of the hardest parts of bringing up a node. I sat in on one of Intel’s Hot Topics meetings, where those decisions get made. 
+
+I’m here with Kevin Fischer, who was laying down the law this morning at the Hot Topics meeting, where you guys were discussing how you’re improving 18A and 18A-P technologies. People would come to you with different experiments they were running, different ideas they had for improving yield and performance, and then you and your integration engineers would tell them what data you needed, how they should proceed, how you think they could move things faster. I want people to have a sense of the culture at these meetings. One thing I found striking is that this is bottlenecking your most advanced node. You want progress to happen fast, so you kind of lay down the hammer.
+
+</details>
+
+**Kevin Fischer**: 我想说的是，普通工程师并不理解其中的利害关系，也不理解这会对英特尔的底线造成怎样的影响、会对我们的客户造成怎样的影响，以及这种紧迫感。他们对这些问题根本没有能见度。他们通常会有一套自己想要去获取的特定指标。他们会碰到界限，比如“我申请了某样东西，有人说不行，那我就完了。我想我拿不到我申请的这件东西了。”
+
+在这个行业里你学到的一点是，你永远不会拥有完整的数据集。如果你想等待完整的数据集，那你已经等得太久了。那已经太迟了。我在那些会议中最终所做的很多事情，就是决定我们要在某个决策上承担多少风险，或者不承担某种风险。你需要说：“听着，我们现在启动吗？我们开始冒着生产的风险推进吗？”因为你是在拿底线冒险。你是在拿营收冒险。我很担心你会把我描绘成一个食人魔，因为我在对人们施压重锤。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Fischer**: I would say the average engineer doesn’t understand the stakes or the urgency of how this is going to impact Intel’s bottom line, how it’s going to impact our customer. They just have no visibility into those issues. They will typically have a certain set of criteria that they want to go capture. They’ll hit boundaries of, “I asked for something and someone said no, and I’m done. I guess I can’t have this thing that I asked for.” 
+
+One thing you learn in this industry is that you will never have a complete data set. If you want to wait for a complete data set, you’ve waited too long. It’s already too late. A lot of what I end up doing in those meetings is deciding how much risk we’re going to take on a certain decision or not take on a certain decision. You need to say, “Look, do we go now? Do we start risking production?” Because you’re risking the bottom line. You’re risking revenue. I’m worried you’re going to put me in the light of being an ogre because I’m putting the hammer down on people.
+
+</details>
+
+那是种很棒的名声。这实际上是在传达紧迫感。每一天都至关重要。你能带我了解一个可能出现的具体问题吗？
+
+<details>
+<summary>Original English</summary>
+
+That’s a great reputation to have. It’s really conveying urgency. Every day counts. Can you walk me through a particular issue that might come up?
+
+</details>
+
+**Kevin Fischer**: 你今天早上看到的例子之一就是外延结节（epi nodules）。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Fischer**: One of the examples you saw this morning is epi nodules.
+
+</details>
+
+Epi 是外延（epitaxy）的缩写，意思是基于现有材料表面生长出新材料。芯片制造商在加热的晶圆上通入气体，气体会将其原子留在晶圆表面。下方材料的晶体结构充当模板。每个新原子都与下面的原子对齐，新层延续了相同的晶体结构。芯片制造商在制造芯片的几个阶段都会使用外延工艺。在凯文描述的步骤中，他们用它来在栅极两侧将源极和漏极作为微小晶体生长出来。
+
+<details>
+<summary>Original English</summary>
+
+Epi is short for epitaxy, which means growing new material on top of an existing one. Chipmakers flow gases over a heated wafer, and the gases leave atoms on its surface. The crystal structure of the material underneath acts as a template. Each new atom lines up with the atoms below it, and the new layer continues the same crystal. Chipmakers use epitaxy at several stages of making a chip. In the step Kevin describes, they use it to grow the source and the drain as small crystals on either side of the gate.
+
+</details>
+
+**Kevin Fischer**: 在我们外延生长的沉积过程中，我们出现了异常生长，就像肿瘤一样的小东西。它长得极快。这会导致问题，因为一个外延会与错误的外延短路，从而导致晶体管无法工作。然后你就必须缩小范围，确定你打算如何修复它。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Fischer**: During the deposition of our epitaxy, we get abnormal growth, a little thing like a tumor. It’s growing super fast. That causes problems, because one epi will short to the wrong epi and you get transistors not working. Then you’ve got to narrow it down to how you’re going to fix it.
+
+</details>
+
+在过去十年里，英特尔的芯片一直具备一项名为 Processor Trace 的功能。当你开启它时，它会开始记录程序运行的所有代码，并且记录足够详尽的细节，以便你稍后可以回溯并重构每一次函数调用。大多数公司不需要这种精细程度。但简街资本（Jane Street）需要：他们需要调查其交易系统中特定的、转瞬即逝的瞬间——比如对网络数据包的延迟响应。这些事件往往太短暂，大多数调试工具都无法捕获。
+
+因此，当简街资本的一位工程师注意到 Processor Trace 时，他开始把玩这项功能。随后，他和一名暑期实习生将这项探索转化成了一个名为 magic-trace 的新工具。Magic-trace 利用来自 Processor Trace 的输出，为简街资本提供引向特定关注时刻的每一次函数调用的历史记录。这个项目完全是自下而上的——它最初只是某一位工程师认为很有价值的东西。而现在，简街资本各处的交易员和开发人员每天都在使用 magic-trace。如果你想在一个信任你去追求你认为最重要想法的地方工作，简街资本正在招聘研究人员和工程师。前往 janestreet.com/dwarkesh 了解更多信息。
+
+<details>
+<summary>Original English</summary>
+
+For the past decade, Intel’s chips have had this feature called Processor Trace. When you turn it on, it starts recording all the code your program runs, and it captures enough detail that you can go back later and reconstruct every single function call. Most companies don’t need that level of detail. But Jane Street does: they need to investigate specific, fleeting moments in their trading systems—things like a delayed response to a network packet. Those events tend to be too brief for most debugging tools to catch. 
+
+So when one of Jane Street’s engineers noticed Processor Trace, he started playing around with it. And then he and a summer intern turned that exploration into a new tool called magic-trace. Magic-trace leverages the output from Processor Trace to give Jane Street a history of every function call leading up to a specific moment of interest. This project was completely bottom-up—it started just as something that one engineer thought would be valuable. And now, traders and developers across Jane Street use magic-trace every single day. If you want to work somewhere where you’re trusted to pursue the ideas that you think matter most, Jane Street is hiring researchers and engineers. Go to janestreet.com/dwarkesh to learn more.
+
+</details>
+
+### 外延缺陷与晶圆厂优先级
+
+**Kevin Fischer**: 你今天早上观察到的部分之一是我们正在考虑的一种特殊清洗，它可以消除结节。结节沉积下来，然后我们将其去除。另外一些讨论是关于结节的来源。要消除结节的来源。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Fischer**: One of the pieces that you observed this morning was a special clean that we were looking at, which would eliminate the nodule. The nodule would deposit, and then we’d get rid of it. Some of the other discussion was about the source of the nodule. Get rid of the source of the nodule.
+
+</details>
+
+这里有些问题。你们如何决定它的来源是什么？
+
+<details>
+<summary>Original English</summary>
+
+There’s some issue. How do you decide what the source of it is?
+
+</details>
+
+**Kevin Fischer**: 在很大程度上，我们是高度并行工作的。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Fischer**: For the most part, we work highly parallel.
+
+</details>
+
+你们如何决定？
+
+<details>
+<summary>Original English</summary>
+
+How do you decide?
+
+</details>
+
+**Kevin Fischer**: 解决问题的最简单方法并不总是显而易见的，所以你会针对所有潜在的解决方案展开工作。有时候起效的并不是你最初预期的那个。一旦我们将其确定为该技术的主要问题，这正是热点议题会议介入的地方。这就是我们如何将资源向这些工程团队倾斜，以便我们能够加快推进工作。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Fischer**: It’s not always evident what the easiest way to fix the problem is, so you work on all the potential fixes. Sometimes it’s not the one you expect first. Once we’ve identified it as a primary problem for the technology, that’s where this Hot Topics meeting gets involved. That’s how we align the resources into those engineering teams so that we can accelerate the work.
+
+</details>
+
+你说过有一种快速通道流程，如果晶圆成为某些实验的瓶颈，它们可以流转得更快。
+
+<details>
+<summary>Original English</summary>
+
+You said that there’s some fast-track process where wafers can move through faster if they’re bottlenecking some experiment.
+
+</details>
+
+**Kevin Fischer**: 我们在晶圆厂里有一套分级系统，称为“热盒”（hot boxes）。每个等级的热盒速度都会稍微快一些。这完全取决于晶圆厂如何优先处理该特定批次，即在晶圆厂中流转的那批硅片。我们最高等级的热盒，HotBox 1，在晶圆厂中飞速穿梭。它在每一台设备工具前都享有优先级，但这会对整个晶圆厂造成拖累。如果你让一个晶圆厂的人到这里来，他们不喜欢打出这张牌，因为你最终为了能跑得极快而导致设备利用效率低下。把它想象成一条高速公路，你划出了专门用于拼车的车道，本来大家都可以用，但你说：“好吧，这只给拼车用。”这就是我们的 HotBox 1。除了那一个实验之外，所有人都从那条车道让开，那一个实验在高速公路上呼啸而过。
+
+<details>
+<summary>Original English</summary>
+
+**Kevin Fischer**: We have a tiered system of what we call hot boxes in the factory. Every grade of hot box goes a little bit faster. It’s just how the factory prioritizes that particular lot, that block of silicon that’s running through the factory. Our highest grade of hot box, HotBox 1, races through the factory. It gets priority at every single tool, but it’s a drag on the entire factory. If you had a factory person in here, they don’t like playing that card, because you end up using the tools inefficiently so that you can go super fast. Think of it as a highway, and you set aside that one lane for the carpool, which everyone could use, but you’re saying, “Okay, it’s just the carpool.” That’s our HotBox 1. Everyone clear out of that lane except for that one experiment, and that one experiment races down the highway.
+
+</details>
+
+### 互连金属与钌的研究
+
+凯文的工作是决定现在什么可以进入生产线，但在前一天，我和杰克·卡瓦利耶罗斯（Jack Kavalieros）一起去了英特尔的研究实验室，去看那些尚未准备好应用于当前节点的技术构想。我们从布线开始。
+
+晶体管只有在与其它晶体管相连时才有用，而在现代芯片上，这需要堆叠在晶体管上方十几层以上的金属导线，称为互连（interconnect）。这些导线是由铜制成的，随着尺寸缩小，铜开始遇到麻烦。英特尔正在探索一种替代材料：钌（ruthenium）。
+
+钌具有更高的电阻率，那么你们为什么在探索将钌用于未来呢？
+
+<details>
+<summary>Original English</summary>
+
+Kevin’s job is deciding what goes onto the production line now, but the day before, I went to Intel’s research lab with Jack Kavalieros to see ideas that aren’t ready for the node yet. We started with wiring. 
+
+A transistor is only useful once it’s connected to others, and on a modern chip that takes more than a dozen layers of metal wire stacked above the transistors, called interconnect. Those wires are made of copper, and as they shrink, copper starts to run into trouble. Intel is exploring a replacement: ruthenium. 
+
+Ruthenium has higher resistivity, so why are you guys exploring ruthenium for the future?
+
+</details>
+
+**Jack Kavalieros**: 很有意思的是，当你缩减这些铜线的尺寸时，你会遇到挑战。例如，铜通常需要衬垫层（liner）才能沉积铜以填满这些线路。钌在这方面有很大不同，因为它是我们实际上可以进行刻蚀的材料。因此，通过刻蚀它，我们就不需要那个衬垫层了。现在你缩减到那些非常细微的尺寸，如果你能用不加衬垫层来替代那个高阻值的衬垫层，钌就开​​始占据优势了。存在一个交叉点，在该点上钌将具有比铜好得多的导电性、更好的电阻率。那大约在 20 纳米间距（pitch）范围内，这意味着，如果你能想象的话，间距的一半是你的金属线，另一半是隔离它们的介电质。
+
+<details>
+<summary>Original English</summary>
+
+**Jack Kavalieros**: Interestingly enough, as you scale the dimensions of those copper wires, you run into challenges. For example, copper typically requires a liner in order to deposit the copper to fill those lines. Ruthenium is very different in that regard because it’s a material that we can actually etch. As such, by etching it, we don’t need that liner. Now you scale those very fine dimensions, and if you can trade off that resistive liner with no liner, ruthenium starts to win. There is a crossover point where ruthenium will have much better conductivity, better resistivity than copper. That’s roughly in the 20-nanometer pitch range, which means, if you can imagine, half of the pitch is your metal line, and the other half is the dielectric that isolates them.
+
+</details>
+
+那么什么是衬垫层呢？
+
+<details>
+<summary>Original English</summary>
+
+So what is the liner?
+
+</details>
+
+**Jack Kavalieros**: 把它想象成几乎就像是胶水层或过渡层，我们需要它来沉积铜并使其粘附，并让它与下方的铜线形成连接。这些都是相互互连的互锁铜线。但是每次沉积铜时，其下方总是有一个衬垫层。过去，该衬垫层可能占整个导电通路的很大一部分。但随着时间的推移，我们缩小了它，使其变得更薄，因此铜重新成为有力的竞争者。
+
+<details>
+<summary>Original English</summary>
+
+**Jack Kavalieros**: Think of it almost like a glue layer or transition layer that we need in order to deposit the copper and have it stick, and have it make that connection to the copper lines below it. These are all interlocking copper lines that interconnect to each other. But every time you deposit copper, you’ve always had a liner underneath it. In the past, that liner may have been a significant portion of the entirety of that conduction path. But over time, we’ve scaled it, made it thinner, and so copper comes back into play as a contender.
+
+</details>
+
+我很想知道的一点是，你们如何认定一项技术已经成熟并准备好进行大规模量产？在 10 纳米节点上，你提到过你们从铜转向了钴（cobalt），而这带来了一些潜在的问题。你们如何确定这项技术能在大规模量产中奏效？
+
+<details>
+<summary>Original English</summary>
+
+One thing I’d be curious to know is how you decide that a technology is mature and ready for high-volume manufacturing. With 10 nanometer, you were mentioning you guys moved on from copper to cobalt, and there were potential issues with that. How do you decide that this technology is going to work at scale?
+
+</details>
+
+**Jack Kavalieros**: 将这些材料整合到晶体管生态系统这样复杂的系统中涉及到非常多的不同组件。可扩展性是一部分，但它的整合能力是另一部分。在我们决定采用钴的时候，它是遥遥领先的方案。当时的结果更加强劲。但是，随着我们与外部生态系统（即提供这些材料的供应商生态系统以及我们用于整合这些材料的工具设备）开展合作，我们在后续发现了可能让铜重新回到两者中更强地位的解决方案。事实正是如此。我们经历的每一项技术，都会评估多种选项。随着我们越来越接近交付具有制造价值产品的最后期限，我们必须做出决定。当时领先的选项是钴。现在又变成了铜，也许未来会是钌。
+
+<details>
+<summary>Original English</summary>
+
+**Jack Kavalieros**: The integration of these materials into such a complex system as the transistor ecosystem involves many, many different components. The scalability is one part, but its ability to integrate is another. At the time we made a decision for cobalt, it was the forerunner. The results were stronger at the time. But as we work with our ecosystem externally, the vendor ecosystem that provides these materials and the tools that we integrate them with, we find solutions down the road that may bring copper back in line as being the stronger of the two. That’s exactly what happens. Every technology that we go through, we will evaluate multiple options. As we get closer to our time horizon for delivering a manufacturing-worthy product, we have to make a decision. The leading option at the time was cobalt. Now it’s copper again, and perhaps in the future it’ll be ruthenium.
+
+</details>
+
+我很想听听你对 CFET 的看法，基本上就是将晶体管相互堆叠起来。那里的进展如何？你们能不断制作出越来越多的层数吗？就只有两层吗？你们能做到三层、四层吗？你们能堆到多高？
+
+<details>
+<summary>Original English</summary>
+
+I’d love to get your thoughts on CFET, basically stacking the transistors on top of each other. What is progress like there? Can you keep making more and more layers? Is it just two? Can you go three, four? How high can you get?
+
+</details>
+
+<!-- chunk 4/6 -->
+
+### CFET 评估与短环测试载具
+
+对 CFET 的这种评估目前正在进行中。不仅是我们，我们的竞争对手也在做。外部的实验室也在对其进行研究。这是可堆叠性的终极体现。我们正在将此前必须越来越被压缩的晶体管，在某些方面进行放宽，因为我们要把它们堆叠在彼此之上。但堆叠的操作并不意味着它们没有互连。正如我们从新闻稿中所看到的，过去在顶部甚至在底部的连接，现在必须垂直穿插在晶体管之间。这是一个新挑战，因为制造沟槽并填充这些沟槽的深宽比变得越来越困难。这不像单纯堆叠晶体管那么直接，因为你仍然必须考虑将它们互连起来。
+
+<details>
+<summary>Original English</summary>
+
+That evaluation of CFET is currently underway. Not just by us, by our competition. Labs externally are looking at it. It is the ultimate in stackability. We’re taking transistors that had to be compressed more and more, and we’re relaxing that in some ways because we’re going to stack them on top of each other. But the act of stacking does not mean that they’re not interconnected. What used to be connections on the top or even on the bottom, as we’ve seen from our press release, now has to go vertically in between the transistors. That’s a new challenge because the aspect ratio of creating trenches and filling those trenches becomes more and more difficult. It’s not as straightforward as stacking the transistors, because you still have to think about interconnecting them.
+
+</details>
+
+那里的问题是打出那个深孔的刻蚀吗？
+
+<details>
+<summary>Original English</summary>
+
+Is the issue there the etch to get that deep hole?
+
+</details>
+
+刻蚀的深宽比是其中很大一部分。我们正在与供应商合作，在这方面进行演进和改进，但这也取决于你用什么来填充那些极其微小的空间。因为填充有时会留下气隙或从未真正填满的空隙，那并不理想。
+
+<details>
+<summary>Original English</summary>
+
+Aspect ratio for the etches is a big part of it. We’re working with our vendors to evolve on that and to improve that, but it’s also what you fill those very tiny spaces with. Because filling can sometimes leave air gaps or holes that are never really filled, and that’s not ideal.
+
+</details>
+
+我推测在这个实验室内部有一个可以运作的 CFET 版本。目前正在运作的是什么样的晶圆或工艺？然后下一步是什么？在那之后的下一步又是什么，直到它进入完全的高产量工艺？
+
+<details>
+<summary>Original English</summary>
+
+I assume there’s a version of CFET that works inside this lab. What is the kind of wafer or process that is working right now? Then what’s the next step? What’s the next step after that, until it’s inside the full high-volume process?
+
+</details>
+
+演进这些技术——尤其是像架构这样更复杂的东西，不仅仅是基础化学或材料，而是像 CFET 这样完整的架构——其过程的一部分在于我们必须制作能够为我们提供更快周转的短环载具（short-loop vehicles）。常规的制造工艺可能需要一个月或更长时间才能完成它所经历的数千个步骤。我们这里的目标是获取该工艺的单元晶胞并对其进行验证。我们利用短环载具，它们可以为我们提供电学参数、化学参数，从而解决其中一些挑战，即那些减速带。一旦我们解决了它们，我们就会将它们组合成一个更复杂的测试载具。你在这里会发现的东西非常简单。你可能正在制造一个二极管，你可能正在制造一个电容器，它们都是晶体管的组件。随着这些组件不断演进，变得更强、性能更好，你将它们组合起来进入下一个阶段，那可能就是晶体管本身。在 CFET 的例子中，你可能不会选择在四根纳米带之上再做四根纳米带。你可能只是选择一对一地做，因为很自然地，处理高得多的结构时，深宽比会变得越来越具有挑战性。因此我们会有简化版的 CFET，它只有一根用于 NMOS 的线和一根用于 PMOS 的线。这简化了我们的工作，但它仍然有助于我们评估器件的堆叠以及它们将如何互连。
+
+<details>
+<summary>Original English</summary>
+
+Part of the process of evolving these technologies, especially something more complex like an architecture — not just a basic chemistry or a material, but a full architecture like CFET — is that we have to make short-loop vehicles that can give us faster turnaround. The normal manufacturing process can take a month or longer to complete the thousands of steps that it goes through. Our goal here is to take unit cells of that process and qualify them. We take advantage of short-loop vehicles that can give us electrical parameters, chemical parameters that can resolve some of those challenges, those speed bumps. Once we’ve resolved them, then we combine them into a more complex test vehicle. What you would find in here is something very simple. You might be making a diode, you might be making a capacitor, which are components of the transistor. As those evolve and become stronger, better performing, you combine them to make the next stage, which might be the transistor itself. In the CFET example, you might not choose to do four ribbons on top of four ribbons. You might just choose to do one on one, because naturally the aspect ratio of dealing with something that much taller becomes more and more challenging. So we would have a simplified version of a CFET, which has only one wire for the NMOS and one wire for the PMOS. That simplifies our job, but it still helps us evaluate the stacking of devices and how they will interconnect.
+
+</details>
+
+但是这里的特征尺寸有最终它们应有的那么小吗？还是特征尺寸更大一些？
+
+<details>
+<summary>Original English</summary>
+
+But are the feature sizes here as small as they will be eventually? Or are the feature sizes bigger?
+
+</details>
+
+噢，那是绝对的。在某些情况下，至少是一样小。例如，你听说过二维材料，即所谓的过渡层二硫属化物（transition layer dichalcogenides）。它们是非常非常薄的材料。我们处理的基本上是一个原子单层。那些沉积可以在这个实验室里进行。我们可以在电导率、接触它们的能力、调节该电导率的能力（这正是晶体管所做的事情）方面对这些薄膜进行评估。所以是的，我们不仅有能力沉积小到原子尺度并且极薄的薄膜，而且还能印制非常小的特征。我们拥有 EUV 技术或电子束（E-beam）技术，使我们能够印制与我们最终在生产中制造的尺寸相仿的极小特征。
+
+<details>
+<summary>Original English</summary>
+
+Oh, absolutely. In some cases, at least as small. For example, you’ve heard of 2D materials, these transition layer dichalcogenides, as they’re called. They’re very, very thin materials. They’re essentially one monolayer of atoms that we deal with. Those depositions can happen in this lab. We can evaluate those films in terms of conductivity, our ability to contact them, our ability to modulate that conductivity, which is what the transistor does. So yes, we do have the ability to not only deposit films that are very small and thin to the atomic scale, but also print very small features. We have EUV technology, or E-beam technology, that can allow us to print very small features similar to what we will eventually make in production.
+
+</details>
+
+### 从实验室原型到量产落地的周期
+
+我想我从直觉上不太理解，由于缺乏这个工艺的背景：如果你现在就拥有用于可运作的 CFET 的同样微小的特征，为什么它要花 10 年时间才能装进我的手机里？我知道存在一个流程，但为什么它是一个如此漫长的过程？
+
+<details>
+<summary>Original English</summary>
+
+I guess I don’t understand intuitively, lacking the context in this process, if you have the features that are as small for a working CFET right now. Why will it take 10 years for it to be in my phone? I understand that there’s a process, but why is it such a long process?
+
+</details>
+
+当你处理像 CFET 这样的架构与处理一种新型材料时，答案略有不同。材料当然面临着被沉积、刻蚀、去除的挑战。它们与上方和下方其他层的兼容性，所有这些事情在把它们放入生产线之前都必须先进行研究。一种架构可能看起来像是一种简单的演进。“噢，你们正在并排制造纳米带晶体管。直接把它们堆叠起来有什么问题吗？”但是堆叠它们的操作，当然增加了刻蚀、沉积、清洗的深宽比，而技术可能根本还没有准备好。
+
+<details>
+<summary>Original English</summary>
+
+The answer is slightly different when you’re dealing with an architecture like CFET versus a novel material. Materials have, of course, the challenges of being deposited, etched, removed. Their compatibility with other layers above and below, all those things have to be researched first before you put them in a production line. An architecture may seem like a simple evolution. “Oh, you’re making nanoribbon transistors next to each other. What’s wrong with just stacking them?” But the act of stacking them, of course, increases the aspect ratio for etches, depositions, cleans, and the technology may simply not be ready yet.
+
+</details>
+
+但如果你们已经在这里做出来了，就说明存在一个已经准备就绪的技术版本，对吧？
+
+<details>
+<summary>Original English</summary>
+
+But if you’ve already made it here, there’s a version of the technology that’s ready, right?
+
+</details>
+
+没错。我们制作了一个简化版本，它可能相对于我们当前并排纳米带技术没有优势，但我们需要对它进行演进，将其做成也许是两条纳米带，或者添加合适类型的金属和介电质，以便从该器件中榨取最大的性能。
+
+<details>
+<summary>Original English</summary>
+
+Correct. We’ve made a simplified version that may not be an advantage over our current side-by-side technology of nanoribbons, but we need to evolve it to make it maybe two nanoribbons, or to add the right type of metals and dielectrics, in order to extract the maximum performance out of that device.
+
+</details>
+
+明白了。所以这就像是一个长尾的——
+
+<details>
+<summary>Original English</summary>
+
+Got it. So it’s like a long tail of—
+
+</details>
+
+有上千个不同的步骤，所有这些步骤都必须以一种非常独特的方式汇集在一起，才能让性能达到兼容，或者实际上超越先前的技术。
+
+<details>
+<summary>Original English</summary>
+
+There’s a thousand different steps that all have to come together in a very unique way to make the performance compatible or actually supersede the prior technology.
+
+</details>
+
+那些想法通常会在哪里失败？你有 20 个像二维材料这样的想法。你们通过什么样的方式来决定这实际上不值得进一步追求？
+
+<details>
+<summary>Original English</summary>
+
+Where do the ideas tend to fail? You have 20 ideas like 2D materials. What is the way in which you decide this is actually not worth pursuing further?
+
+</details>
+
+有时我们会发现这种材料的一些基本特性，它们将与我们所做的其余工艺不兼容。第一阶段的实验可能只是非常简单的沉积。你会说：“好吧，我可以沉积薄膜，我可以观察它，我可以测量它。但当我试图与它建立接触的那一刻，什么都粘不住。”这可能是像附着力这样基础的问题。工艺中的下一步根本无法附着到该材料上。所以你可能会因为像这样简单的事情而排除一种材料。更复杂的挑战可能是后续的工艺可能与下游步骤产生气体相互作用。例如，我已经沉积了薄膜，我用其他材料封装了它，但它们不是气密的。所以我在工艺中的第三、第四或第五步实际上可能仍然会与它相互作用并改变其性质。这使得它不稳定，现在我们必须为该工艺找到更好的气密密封。如果我们找不到控制它的方法，那么对我们来说这就是一条死胡同。
+
+<details>
+<summary>Original English</summary>
+
+Sometimes we discover fundamentals about the material that will be incompatible with the rest of the processing that we do. The first level of experiments may simply be very simple depositions. You say, “Okay, I can deposit the film, I can look at it, I can measure it. But the moment I try to make a contact to it, nothing sticks.” It could be something as fundamental as the adhesion. The next step in the process simply has no way to adhere to the material. So you may rule out a material because of something as simple as that. More complex challenges might be that the subsequent processing may have gaseous interactions with downstream steps. For example, I’ve deposited the film, I’ve capped it with other materials, but they’re not hermetic. So my third or fourth or fifth step in the process may actually still interact with it and change its properties. That makes it unstable, and now we have to find better hermetic sealing for that process. If we don’t find a way to control it, then it’s a dead end for us.
+
+</details>
+
+### 先进封装与混合键合
+
+堆叠晶体管仍留在研究实验室中。堆叠整颗芯片则已经在生产中，并且它解决了一个不同的问题：分离的芯片之间如何相互通信。现代计算机被划分为多个部分，每个部分都针对不同的任务进行了优化。例如，英伟达的 Blackwell 数据中心 GPU 连接了两个巨大的处理器芯片，并在其周围环绕了八个高带宽内存堆栈。这些芯片必须彼此之间不断来回发送数据。而在 AI 中，该流量的速度，而不是原始计算本身，往往决定了工作负载完成的速度。
+
+<details>
+<summary>Original English</summary>
+
+Stacking transistors is still in the research lab. Stacking whole chips is already in production, and it tackles a different problem: how separate chips communicate with each other. Modern computers are divided into multiple parts, each optimized for a different task. For example, Nvidia’s Blackwell data-center GPU joins two huge processor chips and surrounds them with eight stacks of high-bandwidth memory. These chips have to constantly send data back and forth with each other. And in AI, the speed of that traffic, not the raw computation itself, is often what limits how fast the workload finishes.
+
+</details>
+
+想象两个芯片并排摆放，通过它们相对的边缘进行通信。如果你将每个芯片的宽度和长度增加一倍，你的电路面积将增加到四倍，但用于连接的边缘长度只有两倍。这就是面积与周长问题。随着晶体管变得越来越密集，芯片进行计算的能力的增长速度要快于其移动数据的能力。业界多年来一直知道这个问题，因此发明了多种技术来解决它。
+
+<details>
+<summary>Original English</summary>
+
+Imagine two chips side by side, communicating through their facing edges. If you double each chip’s width and length, you’ll have four times the area for circuitry, but only twice the edge length for connections. This is the area-versus-perimeter problem. As transistors become denser, a chip’s ability to do computations increases faster than its ability to move data around. The industry has known about this problem for years, so multiple technologies have been invented to address it.
+
+</details>
+
+完成后的电路必须经历最后两道操作：键合与封装。一旦芯片制造完成，它仍然必须与其他芯片以及计算机的其余部分连接起来。这一步称为封装，在过去的几十年里它发生了很大的变化。从高层面上看，你可以这样来理解封装的演变：起初，芯片是并排摆放的。连接它们的导线从一个芯片的侧面通向另一个芯片。为了实现更高的通信密度，业界引入了一块共享的硅片，称为中介层（interposer），供多个芯片放置在上面。一个芯片可以通过直接穿过中介层的走线与其他芯片通信。这种类型的封装通常被称为“2.5D”。
+
+<details>
+<summary>Original English</summary>
+
+The completed circuits must undergo two last operations: bonding and packaging. Once a chip is made, it still has to be connected to other chips and to the rest of the computer. That step is called packaging, and it has changed a lot in the last few decades. At a high level, you can think of the evolution of packaging like this: initially, chips were laid out side by side. Wires connecting them went out the side of one chip to another. To allow for more communication density, the industry introduced a shared piece of silicon, called an interposer, for multiple chips to sit on. A chip can talk to other chips through the wiring that runs directly through the interposer. This type of packaging is often called “2.5D”.
+
+</details>
+
+增加连接密度的另一种方法是将芯片直接彼此键合。这使得芯片之间的连接距离更短，但这种想法的早期版本使用的是焊料凸块（solder bumps），它们体积庞大且增加了电阻。更好的做法是省去焊料，直接将两颗芯片的信号线连接融合在一起。这被称为混合键合（hybrid bonding），也是半导体行业投资最多的技术之一。混合键合的原理是对齐一个芯片与另一个芯片的铜互连。然后将这些芯片压合在一起并加热，使它们的互连膨胀并弥合芯片之间的间隙。这个过程还会使铜周围的绝缘表面也结合在一起。因此，通过去除焊料凸块，你最终得到了密集得多的连接。但这项技术直到现在才进入大批量生产的原因，是因为解决它所引入的对准和缺陷挑战花费了一段时间。
+
+<details>
+<summary>Original English</summary>
+
+Another way to increase connection density is to bond chips directly to one another. This allows for shorter connections between chips, but the early versions of this idea used solder bumps, which are bulky and increased resistance. It would be better to skip the solder and fuse the signal wire connections of the two chips directly to each other. This is called hybrid bonding, and it is one of the technologies the semiconductor industry is investing in the most. Hybrid bonding works by aligning the copper interconnects of one chip with those of another. Then these chips are pushed together and heated so their interconnects expand and bridge the gap between the chips. This process makes the insulating surfaces around the copper bond as well. And so by removing the solder bumps, you end up with much denser connections. But the reason this technology is only now entering volume manufacturing is because it took a while to iron out the alignment and defect challenges that it introduced.
+
+</details>
+
+在封装实验室里，我向英特尔先进封装技术开发部门的总监 Tyler Osborn 询问了他们是如何将这付诸实践的。
+
+<details>
+<summary>Original English</summary>
+
+In the packaging lab, I asked Tyler Osborn, a director in Intel’s advanced packaging technology development group, how they put this into practice.
+
+</details>
+
+### Antithesis 与确定性计算
+
+英特尔花了 50 多年时间优化其 CPU 的速度。但许多这些优化——比如缓存、分支预测和推测执行——降低了可预测性。完全相同的指令，一次执行可能需要 4 个周期，下一次则需要 300 个周期。当你将数十亿条指令堆叠在一起并在多个线程和核心之间执行它们时，这些非确定性会复合成为各种难以复现的错误。如果你从事严肃的系统工作，你肯定经历过这种情况。
+
+<details>
+<summary>Original English</summary>
+
+Intel has spent over 50 years optimizing its CPUs for speed. But lots of these optimizations—like caching and branch prediction and speculative execution—reduce predictability. The exact same instructions can take four cycles to execute one time and 300 the next. When you stack billions of instructions together and execute them across multiple threads and cores, these non-determinisms compound into all sorts of hard-to-reproduce bugs. If you work on serious systems, you’ve definitely experienced this.
+
+</details>
+
+Antithesis 通过做一件有点疯狂的事情解决了这个问题：他们构建了一台 100% 确定性的计算机。他们识别出了英特尔 x86 架构中所有可能渗入非确定性的门——网络数据包、磁盘读取、温度传感器，甚至是时间本身。他们要么将这些门全部焊死，要么插入受控的模拟。这台确定性计算机只是一个基础。在此基础之上，Antithesis 构建了一个测试平台，将数年的生产硬化过程压缩至数分钟内。它通过成千上万个平行世界运行你的软件，注入故障并智能地引导每一个世界走向十亿分之一的故障，而那是你自己永远无法测试出来的。这种确定性正是过去几期中我提到的所有其他令人惊叹的 Antithesis 功能背后的基石。它让你能够复现任何 bug 并时间旅行到测试运行中的任何时间点。最重要的是，它让你——或你的代理（agents）——能够将每次失败追溯至其根本原因。访问 antithesis.com/dwarkesh 了解更多信息。
+
+<details>
+<summary>Original English</summary>
+
+Antithesis solved this by doing something a bit crazy: they built a 100% deterministic computer. They identified every single door in Intel’s x86 architecture where non-determinism could leak in—network packets, disk reads, temperature sensors, even time itself. And they either welded each of these shut or slotted in a controlled simulation. This deterministic computer is just a foundation. On top of it, Antithesis built a testing platform that compresses years of production hardening into minutes. It runs your software through thousands of parallel worlds, injecting faults and intelligently steering each one towards a one-in-a-billion failure that you’d never be able to test yourself. This determinism is what’s behind all the other insane Antithesis features that I’ve mentioned over the past few episodes. It’s what lets you reproduce any bug and time travel to any point in the test run. Most importantly, it’s what lets you—or your agents—trace every failure back to its root cause. Go to antithesis.com/dwarkesh to learn more.
+
+</details>
+
+### 混合键合的方式：裸片到晶圆与晶圆到晶圆
+
+进行混合键合有两种不同的方式：裸片到裸片（die to die）以及裸片到晶圆（die to wafer）。也许你可以谈谈两者的优势，以及哪一种在实际中表现更好。
+
+<details>
+<summary>Original English</summary>
+
+Two different ways you could do hybrid bonding: die to die and die to wafer. Maybe you can talk about the advantages of both and which one actually practically works better.
+
+</details>
+
+当然。在英特尔内部，我认为你所说的裸片到裸片，我们通常称之为晶圆到晶圆（wafer to wafer）。我们实际上是拿一整片晶圆和另一片晶圆并将它们键合在一起。这种方法目前在 CMOS 图像传感器行业中非常流行。事实上，它基本上处于主导地位。人们也在研究将其用于其他用途，比如内存堆叠。人们已经发表了各种构想
+
+<details>
+<summary>Original English</summary>
+
+Sure. Around Intel, what I think you’re referring to as die to die, we typically call wafer to wafer. We actually take a full wafer and another wafer and bond them together. That’s an approach that’s really popular right now in the CMOS image sensor industry. In fact, it basically dominates it. It’s being looked at for other things like memory stacking. People have published ideas
+
+</details>
+
+<!-- chunk 5/6 -->
+
+### 晶圆到晶圆与芯片到晶圆混合键合
+
+关于各种各样的事情。
+
+不过，这种方式的挑战之一在于，你需要完全相互匹配、且呈完全左右对称镜像的裸片，因此你必须能够将一个分毫不差地键合到另一个上。一比一的裸片尺寸是个挑战。如果顶部和底部的器件设计不完全相同，那就会成为一个问题。
+
+在晶圆到晶圆（wafer to wafer）的情况下，要确保晶圆在分选（sort）方面非常吻合是极具挑战性的。也就是这里的良品阵列对比那里的良品阵列。如果它们完全吻合——良品裸片和不良品裸片全都一一对应——那么我在那次操作中就能获得良品裸片的100%良率。
+
+但这发生的几率非常低。两者之间必然会存在某种随机分布，而无论这种随机性如何，都会造成良品键合到不良品上的损失。
+
+而在芯片到晶圆（chip to wafer）的情况下，我可以掌握主动权。我可以先进行切割，并在芯片级别进行测试后获得已知良好裸片（known good dies），然后仅将已知良好裸片键合到已知良好的基底位置上。
+
+<details>
+<summary>Original English</summary>
+
+about all kinds of stuff. 
+
+One of the challenges with that, though, is that you need dies that perfectly match each other, and are perfectly left-handed and right-handed, so you have to be able to bond exactly one to the other. One-to-one die size is a challenge. If they’re not the exact same design device on top and bottom, that’s a problem.
+
+With wafer to wafer, it’s challenging to make sure that you have wafers that match really well in terms of the sort. So sort good array here versus sort good array here. If they match exactly — good die and bad die all match — I can get 100% yield of that operation of the good dies.
+
+But the chances of that are very low. There’s going to be some randomization of the two, and whatever that randomization is, will be loss of good bonding to bad.
+
+Whereas with chip to wafer, I can dictate the terms. I can singulate and have known good dies that I’ve tested at the chip level, and then only bond known good to a known good base position.
+
+</details>
+
+那么你认为芯片到晶圆会是你们未来进行混合键合的方式吗？
+
+<details>
+<summary>Original English</summary>
+
+Do you think then chip to wafer is the way that you’ll do hybrid bonding in the future?
+
+</details>
+
+我认为我们两种方式都会采用。我们绝对具备这两种能力。这完全由客户和架构驱动，但当然在逻辑到逻辑（logic-to-logic）领域，芯片到晶圆确实非常合理。
+
+<details>
+<summary>Original English</summary>
+
+I think we’re going to do both. We definitely have the capability to do both. It’s really customer and architecture driven, but certainly chip to wafer in the logic-to-logic space makes a lot of sense.
+
+</details>
+
+### 间距微缩与互连层演进
+
+你刚才解释说，从先进封装过渡到混合键合，引脚间距（pitches）的尺寸正在缩小。这还能进一步缩小到什么程度？
+
+<details>
+<summary>Original English</summary>
+
+You were explaining that going from advanced packaging to hybrid bonding, the size of the pitches is decreasing. How much further could that go?
+
+</details>
+
+这是一个极好的问题。从历史上看，就像我们之前所说的，15年前的一级互连间距是130到150微米。如今在高产量制造（HVM）中，我们在Foveros上做的是25微米间距。在这里我们做的是10微米以下，但相关文献中其实已经有了更进一步的进展。事实上，封装领域每年最大的会议是5月份举办的IEEE ECTC会议。今年那里有一篇论文展示了0.45微米间距混合键合器件的可靠性数据。因此你可以想象，相较于我们目前在HVM中所处的水平，那在密度上又是整整一个数量级的提升。这种可扩展性已经得到了证实。所以我认为在这方面还有很长的演进空间。
+
+<details>
+<summary>Original English</summary>
+
+That’s a wonderful question. Historically, like we were saying, 15 years ago first-level interconnect was 130-150 micrometer pitch. Today in HVM, we’re doing 25 micrometer pitch in Foveros. Here we’re doing sub-10, but there’s already been literature out there. In fact, the biggest conference every year in packaging is the IEEE ECTC conference that happens in May. There was a paper there this year showing reliability data on a 0.45 micron pitch hybrid bonded device. So you can imagine that’s a whole other order of magnitude in density again from where we are right now in HVM. That scalability has already been proven. So I see a long runway there.
+
+</details>
+
+在互连层面，在单个晶圆内部，它们通常相隔多远？
+
+<details>
+<summary>Original English</summary>
+
+Within interconnect, within a single wafer, how far separated are they usually?
+
+</details>
+
+在晶圆厂的后端，你可以想象封装正下方的几层通常尺寸大约在1微米到半微米左右。因此，如果你能将封装推进到0.5微米或更小，你几乎可以考虑剥去裸片顶部的层级，将硅片内部较底层的部分直接连接到另一块硅片内部较底层的部分。这正是混合键合的精妙所在。你可以设想未来甚至减少两侧的互连层，让我们能够把它们键合在一起，并在两个晶体管层之间实现更小的总压降（IR drop）。一旦我们进入那些区域，设想其未来的发展方向确实非常酷。
+
+<details>
+<summary>Original English</summary>
+
+In the back end of the fab, you can imagine the few layers below packaging are typically around one micron to a half micron in size. So if you can push packaging down to 0.5 microns or below, you can almost think about taking layers off the top of the die and connecting a lower layer within the silicon to another lower layer within the silicon. That’s really where the beauty of hybrid bonding happens. You could think someday about even having reduced interconnect layers on both sides that we can bond together and have less total IR drop between the two transistor layers. It’s really cool to think about where that could go once we get into those regimes.
+
+</details>
+
+其实，我非常好奇……对于AI来说，混合键合之所以如此强大是很合理的，因为这样可以获得通往内存的更高带宽。但你之前提到过散热等各种问题。对于非AI应用而言，混合键合的优势是什么？
+
+<details>
+<summary>Original English</summary>
+
+Actually, I am very curious about… For AI, it makes sense why hybrid bonding is so powerful, because then you can get higher bandwidth to the memory. But you were saying there are issues with heat and everything. What is the advantage for non-AI applications of hybrid bonding?
+
+</details>
+
+问得好。业界有些公司正在针对非AI应用对其进行考察，甚至在客户端设备中也是如此。我认为它在那方面能带来的重大帮助，第一显然同样是纯粹的互连密度，特别是在CPU与GPU等部件之间。但另一个优势在于功耗。就像我们之前谈到的，随着互连越来越精细，你可以降低该接口的总功耗，以每比特皮焦耳（picojoules per bit）来衡量。在这些应用中采用混合键合，你可以将其视为封装帮助降低整个系统功耗预算的另一种途径。这会带来诸多好处：在获得相同实际电气性能的前提下，功耗更低、发热更少。
+
+<details>
+<summary>Original English</summary>
+
+Excellent question. There are companies out there that are looking at it for non-AI applications, even in client devices. One of the big things I think it can help with there is, number one, obviously the same raw interconnect density, especially between something like a CPU and a GPU. But the other one is around power. Like we talked about before, as you get to finer and finer interconnects, you can reduce the total power consumption, in picojoules per bit, for that interface. With hybrid bonding in those applications, you could think about that as another way that packaging can help reduce the total system power budget. That gives you lots of benefits: lower power, less heat, for the same benefit in terms of actual electrical performance.
+
+</details>
+
+### 设备供应链短缺与产能瓶颈
+
+到目前为止，讨论的都是制造更好的芯片。问题的另一半在于，如果AI实验室愿意为多得多的芯片买单，整个行业能制造出多少芯片。
+
+我有机会与英特尔的CTO Pushkar Ranade进行交流。
+
+我非常想了解，整个行业不得不依赖相同的供应商这一事实，是如何制约你们扩大生产规模的能力的。对于这种EUV设备，ASML一年的产量不到100台。他们即使到这十年结束时，也不打算每年生产超过100台，或者明显超过这个数字。而这必须由你们、台积电、以及所有正在扩大产能的内存制造商（如SK海力士）分摊。这如何限制了你们扩大规模以满足所有这些需求的能力？
+
+<details>
+<summary>Original English</summary>
+
+So far, this has been about making better chips. The other half of the question is how many chips the industry can make if AI labs are willing to pay for far more of them.
+
+I’m getting a chance to talk to Pushkar Ranade, who is the CTO of Intel.
+
+I’m very interested in understanding how the fact that the entire industry has to rely on the same suppliers bottlenecks your ability to ramp up production. For this EUV tool, ASML produces fewer than 100 of them a year. They don’t plan to produce more than 100 a year, or significantly more, even by the end of the decade. That has to be split between you, between TSMC, between all the memory makers who are ramping up production, like SK Hynix. How does that limit your ability to scale up to all this demand?
+
+</details>
+
+这确实是一个制约因素。我们必须充分利用我们已经安装的产能。我们会尝试提高现有设备机群的产出。但EUV或ASML并不是唯一的瓶颈。它绝对是比其他一些工具更大的瓶颈，但在很大程度上，我们看到所有设备都面临着巨大的供应短缺。即使其他工具有多家供应商，但一旦你锁定在某个工艺流程中——比方说18A，它现在是一个成熟的工艺——我们就需要特定的工具。我们不能为了同一个工艺随意更换并获取不同的工具。因此我们被锁定在那一台工具、一个供应商上，并且依赖于它。
+
+<details>
+<summary>Original English</summary>
+
+It is a limiter. We have to make the most of the capacity that we already have installed. We’ll try to increase the output from our existing fleet of tools. But EUV or ASML is not the only bottleneck. It is definitely a bigger bottleneck than some of the other tools, but to a large extent, we’re seeing all equipment seeing tremendous supply shortage. Even though there are multiple providers of other tools, once you lock into a process flow — let’s say 18A, which is a mature process now — we need a specific tool. We can’t just go and get a different tool for the same process. So we’re locked into that one tool, one supplier, and we rely on that.
+
+</details>
+
+在你们构建它的方式上，这给14A带来了什么经验教训？到2028年，世界将会变得如此疯狂。你们如何构建规划，以确保在产能爬坡时具备灵活性？
+
+<details>
+<summary>Original English</summary>
+
+What lessons does this give for 14A in terms of how you structure it? By 2028, it’s going to be such a crazy world. How do you structure things in such a way that you have flexibility in ramping?
+
+</details>
+
+实现的方法——我们一直在这样做，而且大体上每个人都这样做——就是在从一个节点跨入下一个节点时，尽可能保持设备的可替代通用性（fungibility）。从18A过渡到14A，也许你可以说80%的设备机组是可以重复利用的。然后，14A当然会需要一些新功能，因为它是更密集的几何结构，所以它会需要一些专用的工具。
+
+<details>
+<summary>Original English</summary>
+
+The way to do it — and we’ve been doing it, and generally everybody does it — is you try to maintain as much fungibility as possible going from one node to the next node. Going from 18A to 14A, maybe you would say 80% of the tool set can be reused. Then, of course, 14A would require some new capabilities because it’s a denser geometry, so it would require some unique tools.
+
+</details>
+
+对于你们一个月能生产多少晶圆的终极瓶颈，即便你们决定投入无限资金来进行资本支出，你是否有所概念？
+
+<details>
+<summary>Original English</summary>
+
+Do you have a sense of what the ultimate bottleneck is on how many wafers you guys could produce a month, even if you were to decide to invest infinity money into doing CapEx?
+
+</details>
+
+考虑到现有的限制条件，假设我们必须在给定的设备占地面积内最大化产出，那么我认为增长是渐进微幅的，因为今天的工艺良率已经相当高了。如果你的良率已经相当高，要再多争取1%的良率都是极其困难的，因为这已经是一个经过极其精细调校的工艺了。
+
+<details>
+<summary>Original English</summary>
+
+Are there enough tools in the world so you could 10X the amount of wafers you’re producing at the leading edge?
+
+</details>
+
+世界上是否有足够的工具，能让你们在前沿节点生产的晶圆数量增加10倍？
+
+<details>
+<summary>Original English</summary>
+
+Not 10X, but probably 2X, yes.
+
+</details>
+
+达不到10倍，但大概能达到2倍，是的。
+
+<details>
+<summary>Original English</summary>
+
+That’s quite interesting, because the AI industry for a decade has been 3Xing compute year over year. You’re saying that just can’t continue.
+
+</details>
+
+这相当有意思，因为AI行业十年来每年的算力都在增长3倍。你的意思是这种情况根本无法持续。
+
+<details>
+<summary>Original English</summary>
+
+Unless the entire supply chain — starting from the equipment suppliers, their suppliers, their sub-suppliers — unless everybody produces more, you can’t increase the output.
+
+</details>
+
+除非整个供应链——从设备供应商、他们的供应商、他们的次级供应商开始——除非所有人都生产得更多，否则你无法提高产出。
+
+<details>
+<summary>Original English</summary>
+
+Just to give the audience a sense of how big the AI demand is and how well it monetizes the products you guys are producing: you can crunch the numbers, and the numbers seem to suggest that just a couple billion dollars of CapEx on Intel’s account results in enough chips — or the logic for enough chips — to produce, say, $100 billion of revenue for the AI model companies. Of course, there are so many other players within that stack. There’s also memory and other things. But it’s crazy that a couple billion dollars of CapEx, which can be amortized over many different years, produces $100 billion of revenue every single year. That seems to suggest that at some point that should percolate down. At some point, the AI labs could just say, “We’ll just buy everything. Produce as much as you can. We’ll guarantee future income streams.”
+
+</details>
+
+### 垂直整合与规模经济
+
+只是为了让观众体会到AI需求有多大，以及它将你们生产的产品变现得有多充分：你可以去算算这笔账，数据似乎表明，仅在英特尔账目上的几十亿美元资本支出，就能产出足够的芯片——或者足够芯片的逻辑部分——为AI模型公司创造例如1000亿美元的收入。当然，在这个技术栈中还有很多其他参与者。还有内存和其他组件。但令人惊叹的是，几年的几十亿美元资本支出可以在很多年里摊销，却每年都能产生1000亿美元的收入。这似乎表明，在某个时刻这种收益应该向下传导。在某个时刻，AI实验室可以直接说：“我们把一切全包了。你们能生产多少就生产多少。我们来担保未来的收入流。”
+
+<details>
+<summary>Original English</summary>
+
+There are early signs that could actually be happening already. The demand signals are just so high. But I think you were alluding to how the value is accumulating at the top of the technology stack. What is essentially happening is we moved from a fully vertically integrated industry 30-40 years ago, maybe longer, to a very horizontal industry, where you have foundries, you have equipment makers, you have their suppliers. Today, every hyperscaler is designing their own chips, and the scale of the hyperscalers is so large. Some of the model companies, for example, their demand is so high they could easily consume an entire fab’s worth of silicon on their own, or multiple fabs’ worth, and they definitely have the capital to fund that. So in some sense, we are moving from a horizontal world again to a pseudo-vertical world. It’s not monolithically vertically integrated, but it’s kind of virtually vertically integrated.
+
+</details>
+
+已经有一些早期迹象表明这可能已经在发生了。需求信号就是如此之强。但我认为你刚才暗指的是价值是如何在技术栈顶端积聚的。实质上正在发生的情况是，我们在30至40年前、或许更久以前，是从一个完全垂直整合的行业走向了一个非常水平分工的行业，在水平体系里有代工厂，有设备制造商，有他们的供应商。今天，每一个超大规模云厂商都在自行设计芯片，而且这些超大规模厂商的体量极其庞大。例如一些模型公司，它们的需求是如此之高，完全可以凭自身力量消耗掉一整座晶圆厂的硅片产出，甚至是多座晶圆厂的量，并且它们绝对拥有为此提供资金的资本。所以在某种意义上，我们正再次从一个水平的世界走向一个伪垂直的世界。它不是单一的单体垂直整合，而是在某种程度上处于一种虚拟的垂直整合状态。
+
+<details>
+<summary>Original English</summary>
+
+What is the nature of economies of scale in this business? If you look at how many wafers at the leading edge TSMC versus Intel is shipping, it’s upwards of 3X for TSMC. What kinds of advantages do you get at this point from economies of scale? Or is it that once you reach a certain point, the economies of scale get weaker?
+
+</details>
+
+这个行业的规模经济本质是什么？如果你看看台积电对比英特尔在前沿节点出货的晶圆数量，台积电达到了3倍以上。在当前这一点上，你们能从规模经济中获得什么样的优势？或者说，一旦达到某个特定阶段，规模经济就会变弱吗？
+
+<details>
+<summary>Original English</summary>
+
+That’s a very important question. This entire business just relies on economies of scale. If you look at all the advanced manufacturing companies out there, in semiconductor foundries the scale economics is probably the purest. The reason for that is the fixed cost is just so incredibly high. Once you build a fab, like 80% of your cost structure is fixed. What that means is every extra percentage of utilization is adding far more in revenue. So it’s extremely important. We’ll fight for every extra percent of fab utilization, but also every extra percentage of fab output. Let’s say I’m making some wafers today and the yield is 60%. If I improve the process and the die yield becomes 65% or 70%, it’s not a linear advantage. I’m getting way more output for the given footprint. So there’s always room to improve the economies of scale. That’s one of the reasons why you’re seeing so much consolidation in this business. There are only three foundries left at the advanced node for that exact reason. Along the way, many companies just stopped manufacturing. I don’t know if you’ve seen… There’s a chart where 40 years ago there were like 20 foundries. Over time the number of foundries kept diminishing until today there are only three.
+
+</details>
+
+这是一个非常重要的问题。整个行业完全依赖于规模经济。如果你审视市面上所有的先进制造企业，半导体代工厂的规模经济可能是最纯粹的。原因在于固定成本高得令人难以置信。一旦你建好一座晶圆厂，你的成本结构中大约80%都是固定的。这意味着产能利用率每提高一个百分点，带来的收入增幅都要大得多。因此这极其关键。我们不仅会为晶圆厂利用率的每一个额外百分点而战，也会为晶圆厂产出的每一个额外百分点而战。比方说我今天在制造一些晶圆，良率是60%。如果我改进工艺，裸片良率变成了65%或70%，这带来的不是线性的优势。在给定的占地面积下，我获得的产出要多得多。因此规模经济总有提升的空间。这也是你看到这个行业出现如此多整合的原因之一。正是由于这个原因，在前沿节点目前只剩下三家代工厂了。在此过程中，许多公司直接退出了制造。我不知道你是否见过……有一张图表显示，40年前大约有20家代工厂。随着时间的推移，代工厂的数量不断减少，直到今天只剩下三家。
+
+<details>
+<summary>Original English</summary>
+
+What is then the concrete master plan to catch up to TSMC? Even though TSMC is ahead, there’s so much overflow demand at their leading edge, where N3 is now majority AI accelerators and maybe majority Nvidia alone. There’s all this demand for CPUs, for other things, which are also, by the way, needed for AI. There’s this humongous influx in demand for CPUs because of AI. How do you see this opportunity right now, where Intel’s a few years behind, while TSMC is just way oversaturated?
+
+</details>
+
+### 追赶台积电的规划与技术对标
+
+那么追赶台积电的具体总体规划是什么？尽管台积电处于领先地位，但其前沿节点存在如此巨大的溢出需求，其N3工艺现在大部分都被AI加速器占据，甚至可能大部分都被英伟达一家包揽。还有对CPU及其他器件的全部这些需求，顺便说一句，这些对于AI来说同样必不可少。由于AI的存在，涌入了极其庞大的CPU需求。在英特尔落后几年、而台积电又处于严重过度饱和的当下，你如何看待眼前这个机遇？
+
+<details>
+<summary>Original English</summary>
+
+Catching up to TSMC has multiple facets. The catch-up that we need to do is in scale. Like you said, they’re just a much larger wafer manufacturer today than we are, and even bigger than what Samsung is. Catching up in scale will be a gradual process. If you meant catching up in terms of just the technology, I think we’re already there. We might be a few percent off on performance or power or area density. But this sort of benchmarking, where one foundry is ahead or one foundry is behind, makes sense when you’re a whole generation behind or two generations behind or ahead. That’s when it makes a meaningful difference in your die output or your die area or functionality like power. But if you’re within a few percent, you’re splitting hairs at that point in
+
+</details>
+
+追赶台积电包含多个层面。我们需要完成的追赶是在规模上。正如你所说，他们如今是比我们大得多的晶圆制造商，甚至比三星还要大。在规模上的追赶将是一个循序渐进的过程。如果你指的是仅在技术层面上的追赶，我认为我们已经做到了。我们在性能、功耗或面积密度上可能存在几个百分点的差距。但这种某家代工厂领先或落后的基准对比，只有在你落后或领先整整一代或两代时才有意义。只有到了那个阶段，它才会对你的裸片产出、裸片面积或功耗等功能特性产生实质性的差异。但如果你只是在几个百分点的范围内，到了那个程度你只是在吹毛求疵，在
+
+<details>
+<summary>Original English</summary>
+
+Catching up to TSMC has multiple facets. The catch-up that we need to do is in scale. Like you said, they’re just a much larger wafer manufacturer today than we are, and even bigger than what Samsung is. Catching up in scale will be a gradual process. If you meant catching up in terms of just the technology, I think we’re already there. We might be a few percent off on performance or power or area density. But this sort of benchmarking, where one foundry is ahead or one foundry is behind, makes sense when you’re a whole generation behind or two generations behind or ahead. That’s when it makes a meaningful difference in your die output or your die area or functionality like power. But if you’re within a few percent, you’re splitting hairs at that point in
+
+</details>
+
+<!-- chunk 6/6 -->
+
+### 衡量技术竞争力与资本支出
+
+时间，因为这并不是非常单一维度的。这不仅关乎密度，也不仅关乎纯粹的性能。不同的应用需要不同的维度。你可以有几个百分点的偏差，但你必须准时。你的执行力必须达到良率极高的水平，以支持非常庞大且极为迅速的产能爬坡。这实际上比在性能或面积上追赶几个百分点更为重要。
+
+<details>
+<summary>Original English</summary>
+
+time, because it’s not very unidimensional. 
+
+It’s not just about density, it’s not just about raw performance. 
+
+Different applications require different vectors.
+
+You can be off by a few percent, but you need to be on time.
+
+Your execution needs to be such that your yields are very high to support very large and very rapid ramps. 
+
+That actually is more important than catching up on a few percent in performance or area.
+
+</details>
+
+我之前看了一些 SemiAnalysis 的数据，似乎显示就晶体管密度而言，将于 2028 年推出的 14A 将与 N2 相当。
+
+<details>
+<summary>Original English</summary>
+
+I was looking at some SemiAnalysis numbers that seem to suggest that in terms of transistor density, 14A — which will come out in 2028 — would be comparable to N2.
+
+</details>
+
+首先，我对你的基准测试存疑。但正如我所说，大致处于正确的区间并且具备极高的可预测性是很重要的。此外，这并不是单维度的。我们制造的并不是单一类型的晶体管，比如 14A 或 18A。你会制造几种不同类型的晶体管。有低漏电晶体管，有高性能、高驱动电流的晶体管。你在制造 SRAM。有高密度 SRAM，也有高性能 SRAM。还有很多其他功能模块，比如模拟电路、射频电路。所有这些的总和才决定了一项技术的竞争力。
+
+<details>
+<summary>Original English</summary>
+
+First of all, I would dispute your benchmarking. 
+
+But like I said, it’s important to be generally in the right ballpark and be very predictable. 
+
+Also, it’s not unidimensional.
+
+We don’t build one type of transistor, let’s say 14A or 18A.
+
+You build a few different types of transistors. 
+
+There’s a low-leakage transistor, there’s a high-performance, high drive current transistor. 
+
+You’re building SRAMs. There’s a high-density SRAM, there’s a high-performance SRAM. 
+
+There are many other functionalities like analog circuits, RF circuits. 
+
+It’s the sum of all of those that makes a technology competitive.
+
+</details>
+
+我想这让你们目前的资本支出显得更为关键。台积电今年的资本支出有望达到约 500 亿美元。你们大约在 200 亿美元左右。如果你们目前采购的设备将决定未来谁能满足所有这些即将到来的疯狂 AI 需求，这会让眼下资本支出的差距显得更为关键，无论是对美国还是对其他国家而言。
+
+<details>
+<summary>Original English</summary>
+
+I guess that makes the CapEx you do right now even more important. 
+
+TSMC is on track to do around $50 billion in CapEx this year. 
+
+You’re on track to do around $20 billion.
+
+If the tools you’re buying right now will determine who can service all this crazy AI demand that’s coming up, it makes the difference in CapEx right now even more important, or for the US versus other countries.
+
+</details>
+
+是的，非常关键。现在将我们与台积电做比较稍微有点不太公平，仅仅是因为如今他们基本上是面向所有人的晶圆代工厂，而我们很大程度上还是英特尔的代工厂。我们将成为面向其他客户的代工厂。在适当的时候，我们的资本支出也会增长。
+
+<details>
+<summary>Original English</summary>
+
+Yes, very much. It’s a little bit of an unfair comparison between us and TSMC today, just because today they’re a foundry for basically everybody and we’re largely a foundry for Intel. 
+
+We’ll become a foundry for others.
+
+In due course, our CapEx will also grow.
+
+</details>
+
+### 内存业务与产能预测
+
+英特尔在 60 年代末是从 DRAM 业务起步的。你们以前生产 DRAM，后来卖掉了。几年前，你们卖掉了闪存业务。对此你怎么看？为观众补充点背景，这些行业现在都已经是数万亿美元规模的产业，因为 AI 需求而彻底爆发了。
+
+<details>
+<summary>Original English</summary>
+
+Intel started as a DRAM business in the late ’60s.
+
+You guys were producing DRAM, which you sold off. 
+
+A couple years ago, you sold off your flash business. 
+
+Thoughts on that? For context for the audience, these are now multi-trillion-dollar industries because they’ve just exploded as a result of AI demand.
+
+</details>
+
+显然，事后来看，当时卖掉闪存业务可能并不是最明智的时机。我们在那个时候这么做是有充分理由的。很明显，当时没有人能预见到如此巨大的需求。但今天，这个世界能生产出多少算力就会吞下多少算力，能生产出多少内存就会吞下多少内存。我认为如今内存面临的供应紧张程度要比算力更大。
+
+<details>
+<summary>Original English</summary>
+
+Clearly, in hindsight, probably not the smartest time to sell off a flash memory business. 
+
+There were good reasons why we did that when we did. 
+
+Clearly, nobody could see this enormous demand.
+
+But today, the world will eat up as much compute as can possibly be made, and it’ll eat up as much memory as can possibly be made. 
+
+I would argue that the supply crunch is larger for memory today than it is for compute.
+
+</details>
+
+我可以总结一下我理解的从你的预测中得出的结论吗？你可以告诉我这是否正确。那就是边际产量实际上可以在 12 个月的尺度上快速增加，但到本年代末为止的增量是极其有限的。明年的产量可能会高于人们的预期，但 2030 年的产量并不会显著高于人们目前的预测。
+
+<details>
+<summary>Original English</summary>
+
+Can I summarize what seems to me the takeaways from your projections? 
+
+You can tell me if that’s correct. 
+
+That marginal production can increase actually very fast — on the scale of 12 months — but the amount of increase up till the end of the decade is extremely limited. 
+
+Production could be higher next year than what people are forecasting, but production in 2030 is not going to be significantly higher than what people are forecasting.
+
+</details>
+
+除非整个供应链非常迅速地提升产量。我们现在已经在 2026 年年中了，所以距离本年代末没有多少年了。考虑到交付周期……假设你今天下了一笔巨大的设备订单，你要等上 18 个月才能拿到这些设备。那就基本上进入 2028 年了。从那时起，如果你必须建一个新的厂房外壳、建一座新的晶圆厂，你基本上就要看到本年代末了。
+
+<details>
+<summary>Original English</summary>
+
+Unless the entire supply chain ramps up production very quickly. 
+
+We’re already in the middle of ’26, so there’s not that many years until the end of the decade. 
+
+Given the lead times…
+
+Let’s say you place an enormous order for tools today, and you’re looking at 18 months to get those tools. 
+
+You’re already into basically ’28.
+
+From that point on, if you have to build a new shell, build a new fab, you’re basically looking at the end of the decade.
+
+</details>
+
+### 与埃隆合作的 Terafab
+
+我觉得讨论一下你们和埃隆在 Terafab 上的合作会很有意思。那边的进展如何？
+
+<details>
+<summary>Original English</summary>
+
+I think it’ll be interesting to discuss the partnership you guys have with Elon on Terafab. 
+
+What’s going on there?
+
+</details>
+
+嗯，埃隆曾公开谈论过他建造晶圆厂的愿望。我们要么建造 Terafab，要么就拿不到芯片。而我们需要芯片，所以我们要建 Terafab。大致就是这种想法。他看到了对硅片、对算力和内存的巨大需求增长。我认为他得出的结论是，他自己的业务将需要大量的硅芯片。他当时想也许应该全部自己来做。但与造车不同，例如，这是一项如此精密复杂的流程，所以我们认为我们可以合作，以帮助加速他建起他的晶圆厂。
+
+<details>
+<summary>Original English</summary>
+
+Well, Elon’s publicly talked about his desire to build a fab.
+
+We either build the Terafab or we don’t have the chips.
+
+And we need the chips, so we’re going to build the Terafab.
+
+Sort of the same thinking. 
+
+He’s seeing just an enormous increase in demand for silicon, for compute and for memory. 
+
+I think he came to the conclusion that his own businesses are going to require a lot of silicon. 
+
+He thought maybe he should just do it all on his own. 
+
+But unlike building a car, for example, this is such an intricate and complicated process that we thought we could work together to help accelerate his bringing up his fab.
+
+</details>
+
+但是由于设备层面的瓶颈，全球硅芯片的净总量似乎并不会增加。只是说如果有人开设一座新的晶圆厂，他们可能会获得有保证的供应，而如果他们与其他人的代工厂合作，就无法以这种方式获得保障。
+
+<details>
+<summary>Original English</summary>
+
+But because of the bottleneck at the tool level, it seems like the net amount of silicon in the world won’t increase.
+
+It’s just that maybe if somebody were to start a new fab, they would get access to guaranteed supply in a way that they wouldn’t have if they’re working with another person’s foundry.
+
+</details>
+
+这不仅仅是设备的问题。一座晶圆厂确实需要大量的电力、大量的水、大量的耗材。还有许多其他的投入变量。
+
+<details>
+<summary>Original English</summary>
+
+It’s not just tools. 
+
+A fab does require a lot of power, a lot of water, a lot of consumables. 
+
+There are many other input variables as well.
+
+</details>
+
+但那些是可以以设备无法达到的方式去扩产的。
+
+<details>
+<summary>Original English</summary>
+
+But those can be scaled in the way that tools cannot.
+
+</details>
+
+有些更容易扩产，但也确实如此。从某种意义上说，是的，我们需要更多的设备。但也确实，我们同样需要大量更多的基础晶圆厂空间、基础洁净室产能。
+
+<details>
+<summary>Original English</summary>
+
+Some more than others, but yes. 
+
+In one sense, yes, we need a lot more equipment.
+
+But it is true, we also just need a lot more raw fab space, raw clean room capacity.
+
+</details>
+
+### 晶圆厂经济学与颠覆性重构
+
+如果考虑像英特尔这样的代工厂，必须建造这些昂贵的设施并采购昂贵的设备，我想知道你认为这在根本上的经济模型会是怎样的，它是否能变得更具经济效益，是否能以更快的速度扩产。
+
+<details>
+<summary>Original English</summary>
+
+If you think of a foundry like Intel, which has to build these expensive facilities and buy expensive tools, I wonder what you think the economics of that fundamentally could look like, whether it could get more economical, whether it could scale faster.
+
+</details>
+
+就像我之前描述的那样，这是一个资本极度密集的行业。如果你画一张过去 20、30、40 年间建造一座晶圆厂的成本曲线，我认为它是每 4 到 5 年翻一番。即使在晶圆厂内部，如果你看光刻的成本——这是最昂贵的模块，也就是图形化——单单它的翻倍速度就超过了这个比例。如今，一台高数值孔径 EUV 光刻机及其所有配套设备的成本约为 4 亿美元。那么这意味着什么？如果这种速率持续下去，如果你直接顺着画线，这是否意味着四年后图形化的成本将达到大约 8 亿美元？这根本说不通。
+
+<details>
+<summary>Original English</summary>
+
+Like I described earlier, this is an extremely capital-heavy business.
+
+If you just plot how much it costs to build a fab over the last 20, 30, 40 years, I think it’s doubling every 4-5 years. 
+
+Even inside the fab, if you look at the cost to do lithography, which is the most expensive module — just patterning — that itself is doubling at more than that rate. 
+
+Today, a High-NA EUV scanner and all its associated equipment costs like $400 million. 
+
+So what does that mean?
+
+If that rate were to continue, if you just draw the line, does that mean four years from now the cost of patterning is going to be like $800 million?
+
+It doesn’t really make sense.
+
+</details>
+
+一个非常有趣的思维实验是问：今天是否有我们可以采取的彻底不同的做法，而这些做法也许是 20 年前我们做不到的？出于非常充分的理由，正因如此，这是一个极度厌恶风险的行业。你投入了数百亿美元，你真的不想承担任何风险。你想继续按照几十年来一直在做的方式去做事。不仅半导体是这样，实际上万事万物皆是如此。如果你几十年如一日地这么做，你就会被思维定式束缚。英特尔可能有一些新进来的工程师，他们刚进来时被教导说：“晶圆厂就是这样运行的，这就是工艺流程。”他们就将其奉为圭臬。事情就是这么做的。但这真的是如今制造芯片的最佳方式吗？这是一个非常值得探讨的问题。
+
+<details>
+<summary>Original English</summary>
+
+A very interesting thought exercise is to ask, are there things that could be just very radically different that we could do today that we perhaps couldn’t do 20 years ago? 
+
+This is a very risk-averse industry for very good reason, for exactly that reason. 
+
+You put in tens of billions of dollars, and you really don’t want to take any risks. 
+
+You want to keep doing things the way they’ve been done for literally decades. 
+
+This is not just true of semiconductors, but everything really. 
+
+If you’ve just kept on doing that for decade upon decade, you just become indoctrinated. 
+
+There are engineers who probably work at Intel who are new, who come in and they’re taught, “This is how the fab works, this is the process flow.”
+
+They just take that as gospel. 
+
+That’s just how it is done.
+
+But is that really the best way to build a chip today?
+
+It’s a really valid question.
+
+</details>
+
+我很好奇你在暗示什么，因为这可以是从想办法减少光刻曝光次数并在这项昂贵组件上节约成本，到也许我们需要重新构想晶体管。这到底处于哪种层面的——
+
+<details>
+<summary>Original English</summary>
+
+I’m very curious what you’re hinting at, because it could be anything from figuring out ways to use fewer litho passes and economize on this expensive component, to maybe we need to rethink the transistor.
+
+What is the level of—
+
+</details>
+
+以上所有。晶体管架构正在演进。单就硅晶体管而言，它在过去 30、40 年中持续演进，而且这一趋势还将继续。你已经看到了从平面晶体管到 FinFET 再到现在的全环绕栅极晶体管的演进。未来还会有更多。那个路线图是存在的，定义得相当明确，有很多人正在致力于此。但是还有诸如……你今天真的需要洁净室吗？你需要基础设施像今天这样尖端、复杂吗？当然有人可以在研发晶圆厂里做个实验，让人一边吃汉堡抽雪茄，一边看看良率会发生什么变化。那将是一个绝佳的实验，但没有一家老牌厂商——无论是英特尔、台积电还是三星——会愿意自愿去做这件事。我指的就是这个。出于充分的理由，这是一个极度规避风险的行业。每损失一天的生产力，就是……我不知道是多少美元。
+
+<details>
+<summary>Original English</summary>
+
+All of the above.
+
+Transistor architecture is evolving. 
+
+Just the silicon transistor has continued to evolve over 30, 40 years, and that will continue. 
+
+You’ve seen the evolution from the planar transistor to FinFETs to now gate-all-around transistors.
+
+There’ll be more. That roadmap exists, it’s pretty well defined, with a lot of people working on it.
+
+But there are things like… 
+
+Do you really need a clean room today?
+
+Do you need the infrastructure to be as sophisticated, as complex as it is today?
+
+Surely one can run an experiment where you have people eating hamburgers and smoking cigars in the research fab and see what happens to yield. 
+
+That would be a great experiment to run, but no incumbent — Intel or TSMC or Samsung — would want to willingly do that.
+
+That’s what I meant by this. 
+
+It’s a very risk-averse business, for good reason.
+
+Every one day lost in productivity is… 
+
+I don’t know how many dollars.
+
+</details>
+
+但未来你如果不用建洁净室，就能省下巨额资金。
+
+<details>
+<summary>Original English</summary>
+
+But you save so much money in not having to build clean rooms in the future.
+
+</details>
+
+但这确实是风险所在，是对未知的恐惧。没有人会自愿去冒这个险。这就是为什么我认为有时从白纸一张开始重新思考一切是件好事。顺便说一句，同样的情况也适用于芯片设计。我们在 CPU 设计方面的许多做法可能早在 30 年前就定型了。这是否意味着今天仍然以同样的方式去做是明智的？可能不是。但这确实是一个非常复杂的问题。在芯片设计领域，我想承担风险的能力可能还高一些。而这一个，则低得多。但考虑到如今的经济状况，我认为提出这个问题非常合理。也许有更聪明的办法来做这件事。
+
+<details>
+<summary>Original English</summary>
+
+But it’s really the risk, the fear of the unknown. 
+
+Nobody is going to willingly take that risk.
+
+That’s why I think sometimes it’s good to just start with a clean slate and rethink everything.
+
+The same thing applies to chip design, by the way. 
+
+Many of the ways we do CPU design were probably locked in 30 years ago. 
+
+Does that mean it’s smart to still do it the same way? 
+
+Probably not. But this is a very complex problem.
+
+In chip design, I guess the capacity to take risk is maybe higher.
+
+This one, less so. 
+
+But given where the economics is today, I think it’s a very valid question to ask. 
+
+Maybe there’s a smarter way to do this.
+
+</details>
+
+### 应对 AI 需求的资本投入
+
+最后，也许我们可以回到采访开始时的同一个问题，那就是，英特尔如何应对这股即将到来且已经到来的疯狂 AI 需求？如果最终的瓶颈在于你们已经拥有这些代工厂，你们已经具备扩建这些代工厂的能力，但你们最终缺乏的是来自供应链上游的设备，那么英特尔应该做的似乎就是现在尽可能多地募集资本。就像据报道英伟达通过做出数百亿美元价值的承诺锁定了内存和其他组件一样，英特尔或许也应该做同样的事情：做出所有这些承诺，从而在未来几年里，让美国处于有利地位，让绝大部分最先进水平的半导体制造都在本土发生。
+
+<details>
+<summary>Original English</summary>
+
+To close out, maybe we’ll start off at the same question we began the interview with, which is, how does Intel respond to this crazy AI demand that’s incoming and has already arrived?
+
+It sounds like what Intel ought to do — if the ultimate bottleneck is that you guys already have these foundries, you already have the ability to expand these foundries, but what you will eventually lack is the tools from upstream in the supply chain — is to just raise as much capital as possible right now. 
+
+The same way that Nvidia has locked down memory and other components for reportedly hundreds of billions of dollars worth of commitments that it’s made, Intel should maybe do the same thing: make all these commitments so that over the coming years, the US is in good position to have the bulk of semiconductor manufacturing at the most advanced levels happening here.
+
+</details>
+
+你的意思是说我们应该采购更多的设备，对吧？
+
+<details>
+<summary>Original English</summary>
+
+You’re suggesting we should be buying a lot more tools, right?
+
+</details>
+
+是的，因为听起来如果不这样，几年后你就会陷入这样一种境地，你会感叹：“哎呀，我们本来现在能赚数万亿美元的，但是所有的设备都在台湾。”
+
+<details>
+<summary>Original English</summary>
+
+Yeah, because it sounds like otherwise in a couple years you’d just be in a position where you’re like, “Oh man, we could be making trillions of dollars right now, but all the tools are in Taiwan.”
+
+</details>
+
+是的，这是一个非常值得探讨的问题。如果我们早知道今天所掌握的信息，我们大概在一年前就会投入更多。知道了我们现在所知道的，我认为我们会投入更多。
+
+<details>
+<summary>Original English</summary>
+
+Yes, that’s a very valid question. 
+
+Had we known what we know today, we would have invested more like a year ago. 
+
+Knowing what we know now, I think we’ll be investing more.
+
+</details>

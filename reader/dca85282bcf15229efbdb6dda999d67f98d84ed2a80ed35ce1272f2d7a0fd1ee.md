@@ -1,0 +1,1276 @@
+---
+author: The MAD Podcast with Matt Turck
+date: '2026-10-15'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=9YsM1LPPz-A
+speaker: The MAD Podcast with Matt Turck
+tags: []
+title: ''
+summary: ''
+insight: ''
+draft: true
+series: ''
+category: ''
+area: ''
+project: []
+people: []
+companies_orgs: []
+products_models: []
+media_books: []
+status: evergreen
+---
+<!-- chunk 1/8 -->
+
+### 片头集锦：95% 的爱因斯坦与 5% 的憨豆先生
+
+**Diogo Almeida**: 95% 的爱因斯坦，加上 5% 的憨豆先生。如果它连自己什么时候表现得像憨豆先生都无法告诉你，那你还怎么去实现自动化？我在 OpenAI 时就写过一份文档。我们去年本就可以拥有 AGI，直到现在我依然坚信这一点。预训练就是一场浪费资源的巨大灾难。当我刚开始做这个项目时，我真的以为只要一周就能搞定。现在你可以表达以前在软件中根本无法表达的东西了。我认为未来将会充满难以置信的科幻色彩。
+
+<details>
+<summary>Original English</summary>
+
+**Diogo Almeida**: 95% Einstein, 5% Mr. Bean. And if it doesn't tell you when it's the Mr. Bean, then how are you going to automate anything? I wrote a document at OpenAI. We could have had AGI last year, and I still believe that to be true. Pre-training is a giant dumpster fire of wasting resources. When I first started this project, I literally thought it would take a week. You can now express things that you couldn't express in software before. I think that the future will be unbelievably sci-fi.
+
+</details>
+
+**Matt Turk**: 我们是在做实际产品，而不是在造神。确实如此。
+
+<details>
+<summary>Original English</summary>
+
+**Matt Turk**: We're building prod not god. Absolutely.
+
+</details>
+
+### 开场介绍：横空出世的 Jev 与 Typesafe
+
+**Matt Turk**: 刚刚说话的是 Diogo Almeida，Typesafe 的首席执行官，也是 Jev 背后的研发公司。一个月前，根本没人听说过 Jev。随后它正式发布，瞬间击中了 AI 领域的痛点，并迅速成为 AI 领域被模仿抄袭最多的模型。Jev 既令人着迷又让人困惑。它是一种全新类型的模型，显然意义重大。然而，即便是某些 AI 业内人士也难以准确解释它究竟是什么，而另一些人则不屑一顾地认为它不过是一个分类器。因此，我们找到了源头，请 Diogo 用通俗易懂的语言为我们拆解 Jev。它到底是什么、未来走向何方，以及为什么抄袭者根本没有领会其核心精髓。我是 Matt Turk，这里是 MAD Podcast。Diogo，欢迎你。
+
+<details>
+<summary>Original English</summary>
+
+**Matt Turk**: That is Diogo Almeida, CEO of Typesafe, the company behind Jev. A month ago, nobody had heard of Jev. Then it launched, hit a nerve in the AI world, and quickly became the most copied model in AI. Jev is both fascinating and perplexing. It's a new kind of model, and it's clearly a big deal. Yet, even some AI insiders struggle to explain what it is, while others dismiss it as just a classifier. So, we went to the source and asked Diogo to walk us through Jev in plain English. What it is, where it's going, and why copycats are missing the point. I'm Matt Turk, and this is the MAD Podcast. Diogo, welcome.
+
+</details>
+
+**Diogo Almeida**: 谢谢，非常感谢。大家好。
+
+<details>
+<summary>Original English</summary>
+
+**Diogo Almeida**: Thank you. Thank you. Hey, yeah.
+
+</details>
+
+### 狂飙的三周：每美元智能才是未来
+
+**Matt Turk**: 好的，现在进行这次对话真的是太有趣了，部分原因就在于，我想就在昨天我们录制这期节目的时候，你们刚刚公布了巨额的 A 轮融资——以 75 亿美元的估值完成了 8.7 亿美元的 A 轮融资。回顾过去疯狂的三周，仅看数据就极其震撼：你们的发布视频获得了 4000 万次观看；有人提到每天有 100 万用户、每天处理 1 万亿个 token，财富 500 强企业中有三分之一都在使用，而这一切仅仅发生在短短几周之内。所以，这听起来你们确实正在掀起所谓的“J 革命”（Jevolution）。我很喜欢这个词。我很好奇从你们内部视角来看，这是怎样的一种感受？
+
+<details>
+<summary>Original English</summary>
+
+**Matt Turk**: All right, this is a super fun time to be doing this conversation, in part because just yesterday, I believe, as we were recording this, you guys announced your gigantic Series A, 870 million Series A at a 7.5 billion valuation. So, it's been a wild 3 weeks just looking at some stats. You launched video at 40 million views. You talked to somebody talked about a million users a day, a trillion tokens a day, a third of the Fortune 500, all of this in in in just a few weeks. So, it it sounds like you're indeed building what you call the Jevolution. I love the term. I'm just curious what it feels like from the inside.
+
+</details>
+
+**Diogo Almeida**: 该从何说起呢？我想说的是，对于我心目中的“J 革命”而言，很多这类统计数据其实并没那么重要。对我来说，我知道它真正发生的那一刻，是当构建者们开始动手摆弄它、做各种奇思妙想的探索之时。尤其是当人们开始去制作那些以前或许能做、但因为 AI 成本太高而懒得去做的应用时。要知道，我们推进了“每秒智能”（intelligence per second）的极限，但我认为未来根本上将属于“每美元智能”（intelligence per dollar）。我认为，真正让人们切身体会到“每美元智能的成本下降了两个数量级”这个概念，才是让 J 革命势不可挡的根本力量，这与企业采纳度、用户量或各项指标都无关。对我而言，核心在于人们开始去探索尝试，并开始——我想不出一个不俗套的词来表达——但确实是在亲手构建未来。那种能量是势不可挡的，不管最初的雪球有多大，它终将变得无比庞大。所以，我为这件事大概已经庆祝了两周半了。我甚至经历了一番深刻的内心探索，因为我觉得我人生的一大目标已经实现了。当然，那些统计数据显然非常棒，飞速增长显然也很棒，我也很高兴我们获得了原本以为要两年后才能具备的传播与分发能力，而且速度远超预期。这些显然都是极其非凡的事。但所有这一切的先行指标，永远是构建者们受到了启发去创造前所未有的新事物。
+
+<details>
+<summary>Original English</summary>
+
+**Diogo Almeida**: Where do I start? I will say that a lot of those stats don't really matter for what I feel like is the J evolution. To me I knew it would be happening when builders started playing with it and doing the weird stuff. And especially when people were starting to make apps that they maybe could have done before, but didn't bother with because AI was so expensive. You know, we pushed the boundaries of intelligence per second, but I think the future is going to be intelligence per dollar primarily. And I think really getting people to play with the idea that intelligence per dollar has dropped two orders of magnitude is what will make the J evolution unstoppable independent of enterprise adoption, users, stats, whatever. To me it's about people playing around with things and starting to I can't think of a non-corny way to say it, but like build the future, you know? That could be used the unstoppable energy and no matter how big that initial snowball is, it will become gigantic. So, I've been celebrating this for something like two and a half weeks now. I've actually had to do soul-searching because I think one of my big life goals has been achieved. And yeah, the stats are obviously great. Growing fast is obviously great. I love that we are also getting a lot of the distribution that we knew we would get in two years, but much faster than we thought. These are all obviously phenomenal things. But the leading indicator of it all is builders being inspired to do new things.
+
+</details>
+
+### 隐身研发两年：反其道而行之的克制
+
+**Matt Turk**: 我想顺便问几个关于创业方面的问题。你们此前隐身潜行（in stealth）研发了两年。我很想知道，在一个大家恨不得每隔两分钟就要在 X 上发点什么大谈特谈的世界里，你们当时是怎么权衡并决定保持隐身状态的？
+
+<details>
+<summary>Original English</summary>
+
+**Matt Turk**: And just to ask a couple like startup-related questions. So, you guys were in stealth for two years. I'm curious how you thought about it in a world where like everybody's on X every two minutes to talk about something. Why did you decide to be in stealth?
+
+</details>
+
+**Diogo Almeida**: 从没有人问过我这个问题，这挺有意思的。我想说的是，我的思考方式非常逆向。我认为整个 AI 行业存在着极其严重的“过度承诺却交付不足”的问题，而我认为人们在我们的发布中切实看到了不一样的风格。比如当我们最初发布视频时，大家都说：“噢，那是假的吧。看着挺有意思，但绝对不可能是真的。”这场发布真正爆发，是当大家真正上手试用并晒出各自的成果之后。我认为，我们发布时所展现的“低调承诺、超预期交付”（under-promise over-deliver），才是让它真正一飞冲天的原因。自 ChatGPT 问世以来，在整个 AI 领域我都想不出还有哪次发布能做到低调承诺而超预期交付。所以，这可能正是它引发轰动的原因。我并不是什么社会心理学方面的专家。因此，无论好坏，我都会选择屏蔽行业内的各种噪音，把精力高度聚焦在那些我认为最核心的事情上。而且我根本就不买账所谓“AI 正在解决所有问题”的说辞。因为如果你真正去审视所有的现实证据，就会发现 AI 既不可思议，又极其平庸令人失望。而看清这一点，让我能够彻底忽视市场上所有的喧嚣噪音。
+
+<details>
+<summary>Original English</summary>
+
+**Diogo Almeida**: No one's asked me that, so that's fun. I would say I think quite contrarianly. And I think that this whole AI has a gigantic over-promise under-deliver issue and you know, I think people really saw that with our launch. Like when we first launched the video, people were like, "Oh, that's fake. It's kind of interesting, but like there's no way it's true." The launch really picked up when people started playing with it and showing their results. And I think that under-promise over-deliver of our launch is what really made it take off. And I can't think of a launch in AI that has been under-promise over-deliver since ChatGPT. So, that might be why it took off. I'm not an expert in like social dynamics. So, I really, you know, for better or for worse, I ignore the noise in the field and really focus on what I think is most important. And I just did not buy the story at all that AI was solving all sorts of problems. Because if you actually look at all the evidence, it's AI is incredible and also incredibly underwhelming. And that allowed me to really ignore all of the noise in the market.
+
+</details>
+
+### 在默默无闻中坚守：团队的驱动力与使命感
+
+**Matt Turk**: 但是在完全默默无闻中埋头苦干，而身边的所有人都在被聚光灯捧上天，在根本无人知晓的情况下，你是如何保持团队的士气，并让自己始终充满干劲去打造产品的呢？
+
+<details>
+<summary>Original English</summary>
+
+**Matt Turk**: But doing this in obscurity while everybody's getting celebrated, how do you keep a team energized and keep yourself energized building something sort of without anyone really knowing?
+
+</details>
+
+**Diogo Almeida**: 我觉得，也许过去几周经历的一切改变了我，我希望没有吧。我并不觉得自己会被外界的赞誉和吹捧所激励。事实上，我此前还做了很多心理疏导，才勉强接受在我们的发布视频中露脸出镜。因为在经历这一切之前，我非常享受默默无闻的状态。骨子里，我认为自己始终是一个纯粹的技术人员。真正激励我做这件事的动力，在于当时摆在眼前存在着一道巨大的技术鸿沟，而且非常明显没有任何人在着手解决它。这就是我的信念，我从未产生过丝毫怀疑。甚至早在创立这家公司很久之前，我刚萌生这个想法时，我就在 OpenAI 写过一份文档。我们去年本就可以拥有 AGI，直到现在我依然坚信这一点，因为按照 OpenAI 对 AGI 的定义，那其实是一个非常低的门槛，而且模型已经极其聪明了。只是大家并没有把这些事实真正结合起来。而很多热衷于对这个领域评头论足的人只会说：“噢，这只是个渠道分发问题。”如果你关注过任何现实世界的真实情况，就会明白那显然不是事实。因此，我几乎没有任何疑虑。我认为我们成功组建了一支特别的团队，我们团队显然不在乎这些浮华。也许每个人程度不同，但我们团队同样不会被炒作周期所驱动，因为如果他们追逐炒作，当初根本就不会加入我们。我认为他们是发自内心地坚信我们的使命；即使有些非技术人员可能并不理解这个模型的深层技术原理，但他们由衷相信我们拥有一群极其聪明的人，他们的感觉是：“天哪，这帮家伙正在捣腾真正硬核的东西，这绝对值得押注。”所以，我认为团队并不会受到外界喧嚣的太大影响。
+
+<details>
+<summary>Original English</summary>
+
+**Diogo Almeida**: I don't think that maybe the last couple of weeks have changed me. I hope not. I don't think I get really motivated by being celebrated and all that. I actually had to do a lot of therapy just to be okay with being in our launch video. Because I actually before all of this enjoyed being in obscurity. Like I'm a technologist through and through, I think. And what really motivated me for this is that there was clearly a gigantic technological gap. And it was clearly obvious no one was addressing it. So, that was my I never had any doubt. Even when I first had this idea long before I started the company, I wrote a document at OpenAI. We could have had AGI last year, and I still believe that to be true because AGI how OpenAI defines AGI is a very low bar, and the models are super smart. Like we're not really putting those facts together, and I think a lot of the people who like to commentate on the field just say like, "Oh, it's a distribution problem." Well, like that's obviously not the case if you pay attention to any like real-world stuff. So, I have very little doubts. I think that we managed to get a team like, you know, our team obviously doesn't care about you know, maybe there's a spectrum, but like our team is not driven by the hype cycles as well because if they were, they wouldn't have joined us. I think they really believed in our mission, or if they didn't, you know, we had non-technical people on the team, they really believed we had a bunch of like super smart people. Maybe they don't understand what the model is for, but they're like, "Holy crap, these guys are cooking. This is worth a bet." So, I don't think the team is that affected by it.
+
+</details>
+
+### 产品即营销：真实与反套路的发布风格
+
+**Matt Turk**: 听到这些非常有意思。但同时令人着迷的是，你们表现得就像是天生的营销高手——我确信你听到这个词可能会感到尴尬不适——但你们写的内容、发出的推文都极其高效有力。听起来你们完全是出于真诚，因为被自身的使命所鼓舞，其余的一切水到渠成。我想为那些希望在发布时获得哪怕只有 Jev 一小部分成功的创业者提炼一些经验。
+
+<details>
+<summary>Original English</summary>
+
+**Matt Turk**: What what's funny is that I hear all of this, and what's fascinating at the same time is that you guys need to seem to be kind of like natural-born marketers, and I'm sure you you'll cringe at the term, but you know, you you you're writing, you're tweeting very effectively. It sounds like you're doing this out of authenticity because you're so inspired by the mission, and the rest follows. I'm trying to tease out lessons for for others that would love to have, you know, a fraction of the success that Jev had at launch.
+
+</details>
+
+**Diogo Almeida**: 首先第一点，我认为我们根本不懂营销。直到现在我们都还没有设立专门的市场营销团队。而且我坚决认为，并不是我们有什么营销天赋，我的论点是：它之所以奏效，纯粹是因为我们的产品太棒了。因此，尽管外界议论纷纷，我依然认为是产品本身撑起了所有的营销。或许你可以把我们所做的事情称为某种反套路的做法，我们只是想自得其乐。比如昨天那篇博客文章是一份融资公告，团队里有人先拿了一份草稿给我看，我看了之后直言：“这是我读过最无聊透顶的东西了，但如果你想发那就发吧，反正我平时也根本不会去读任何融资公告。所以你爱写什么就写什么，我无所谓。”他们就劝我说：“如果能用你的语气写出来，效果会更好。”而我的反应则是：“我绝不可能……为什么会有人在乎这种东西？产品本身才是一切，融资不过是……”
+
+<details>
+<summary>Original English</summary>
+
+**Diogo Almeida**: It's a number one, I don't think we know about marketing. We still do not have like a marketing team. And I would actually argue that it's not like we're geniuses at marketing. My argument is that it works because our product is awesome. So, actually I think our product is carrying the marketing despite what people say. And like you could call what we are doing off into CP perhaps like we are just trying to have a good time. Like our blog post yesterday was a fundraising announcement. Someone in our team gave me a draft and I was like this is the most boring thing I've ever read but if you want you can ship it because I would never read a fundraising announcement anyway. So you could actually put whatever you want. I don't care and they were just like it'd be nicer if it was in your voice and I was just like I would never I would like why does anyone care about this? The product is the thing. The fundraising is
+
+</details>
+
+<!-- chunk 2/8 -->
+
+### 融资背后的现实与产品驱动战略
+
+**嘉宾**：……往往会变成一场虚荣与自尊的游戏，他们会说：“你看，企业客户会觉得你更值得信赖；应聘者也会觉得你们是一家更正规、更靠谱的公司。”但我们当时的想法是，为什么我们不直接把话挑明呢？嘿，各位求职者，我们是一家实打实的公司，我们会长期深耕下去；嘿，各大企业客户，我们正在全力构建这套企业级平台，我们也绝不会半途而废。看看是谁在给我们投资，你们完全可以信任我们。我觉得，或许正是我对这种虚头巴脑之事的零容忍帮到了我们。
+
+不过我深信，这种方式并不是一种可以被随意复制的策略。我可以分享一个融资过程中的趣事：当时有投资人对我说：“天哪，这是我们听过最棒的创业路演！”而我直接告诉他们：“我可不信你们这话。因为过去几年里我讲的一直是完全一模一样的路演内容，但在我们取得绝对顶级的‘产品市场契合度’（PMF）之前，根本没人当回事。直到有了这种市场表现，他们才逼着自己去搞懂我们在做什么，否则我觉得他们根本听不懂这个路演。”
+
+所以，我相信现在是产品在扛着一切向前推进，而这对我来说再完美不过了，因为这本就是我的做事风格。我们早就知道，与当今主流的“大模型/大型AI”（Big AI）相比，这将会带来技术层面的震撼与震慑（shock and awe），而这大概也就是我们在战略上打算继续坚持做下去的事情。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: ...tends to be like an ego game and they're like oh you know enterprises will see you as more trustworthy. Recruits will see you as a more like legit thing and we're like I was like why don't we just say that to directly? Hey recruits, we're a real company. We're here to stay. Hey big companies, we are going to be building out this enterprise platform. We are also here to stay. Look at who is investing us. You should trust us. And I think that maybe my intolerance for [it] is helpful there.
+
+Um but I truly believe that it is not a replicable strategy. I'll I'll give a fun side story about the fund raise. Some investors said something like holy [crap] that was the greatest pitch we've ever heard and I just told them I don't believe you because I've been giving the exact same pitch for years and no one cared until we had you know absolutely world topping product market fit and then they forced themselves to understand it because I don't think they would have gotten the pitch otherwise.
+
+So um I believe the product is carrying everything right now and that's perfect for me because that's my style. Um we knew this would be technological shock and awe compared to what big AI does and that is probably what we intend to keep doing strategically.
+
+</details>
+
+**主持人**：我现在很想花点时间，用最基础、最通俗易懂的语言来聊聊 Jeb。很多人都听说过它，但几乎很少有人能够真正说清楚它究竟是什么。所以，我想从最顶层的问题开始聊起，或许可以从“系统一”（System 1）这个概念切入。这是一个引申自某处的概念，能否请你解释一下它到底指什么？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: What I love to do now for for bit um is a very basic plain English version of Jeb. There's a lot of people that have heard of it, but like very few people are able to actually articulate what it is. So, I'd love to start from the top and, um, maybe start with this whole concept of system one. Uh, it's it's a reference to something. Explain what it is.
+
+</details>
+
+### 从“机器原生 AI”理解新范式
+
+**嘉宾**：其实相比于“系统一”，我更想探讨的是“机器原生 AI”（machine-native AI）。我甚至认为“系统一”更多只是实现机器原生 AI 的一个底层技术细节而已。
+
+在我看来，如今绝大多数人对 AI 的理解都局限在一种非常特定的思维定势里：AI 似乎永远就是挂在屏幕侧边栏的一个聊天框，在它自己自导自演的小剧场里充当主角，因为它根本无法与传统的软件系统融洽协同。我认为人们首先要建立的认知是：这绝不是什么“ChatGPT++”。这是一种完全面向全新使用场景的 AI，也是我会采取的构建方式。
+
+我们甚至可以拿分类器（classifiers）来打个比方。我认为被人称作“分类器”其实是一种赞美。虽然我们并不局限于分类器，但理解分类器的精妙之处，是理解为什么我们所做的事情极具价值的必经之路。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: I would actually like to talk about is um, machine native AI rather than system one. I actually think that system one is more of an implementation detail to machine native AI. And I actually think most people today think of AI in a very particular way. Like AI is always like the chat box to the side that happens to be the main character in its own little show because it doesn't play nicely with software. And I think step one for people is like this is not, you know, chat to GPT plus plus. This is like AI for a completely different use case. And it's how I would do it. And I would talk about, um, you know, even the analogy to classifiers. I think being called a classifier is a compliment. Um, we are not limited to classifiers, but understanding the beauty of classifiers, I think is a necessity to understanding why what we're doing is very valuable.
+
+</details>
+
+**主持人**：明白了。所以机器原生智能是最终目标，“系统一”只是一个实现细节。不过说到“系统一”与“系统二”（System 2），这个概念出自《思考，快与慢》（Thinking, Fast and Slow）这本书。其核心思想在于：有些类型的决策你可以凭借直觉快速完成，这就是系统一；而有些决策则需要经过深思熟虑、复杂严密的推导，这就是系统二。如果把 Jeb 在行业中的生态定位归入“系统一”的世界，而像经典的 LLM（大语言模型，姑且简称为 ChatGPT）则属于“系统二”，这样的划分在大方向上是准确的吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: All right. So, mission intelligence is the goal. System one is an implementation detail. But like system one versus system two, uh, that's from the book Thinking Fast and Slow. And the whole idea is that, uh, there are certain type of decisions, uh, that you can make intuitively and quickly, uh, which is system one. And, uh, there are certain decisions that require elaborate thinking, and that's system two. Is an accurate categorization of where Jeb falls in the world that Jeb would be in the system one kind of world, whereas your classic LLM, let's call it chat GPT for just as a as a shorthand, would fall in uh system two. Is that directionally correct?
+
+</details>
+
+**嘉宾**：方向上是大体正确的。但我还想补充一点细微但至关重要的差别：我认为那些没有经过显式潜在推理（latent reasoning，也就是那种拥有隐藏思考链）训练的模型，往往本质上就是“系统一”模型。总体而言，AI 在卡尼曼定义的“系统一”层面上是非常强大的；正是推理训练赋予了它们处理“系统二”任务的能力，但在执行系统二任务时，它们往往极为脆弱、容易出错。
+
+我的核心论点在于：AI 本身就极其擅长系统一，而单单做好系统一，其价值就已经无法估量了。而且据我所知，我们至今还远远没有解决系统二那种断断续续、不平滑且脆弱的表现（jaggedness）。要是因此觉得“要么完全拿下系统二，要么一无是处”，那无异于把婴儿和洗澡水一起倒掉了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: It is directionally correct. I would actually add the nuance that I think that uh models not trained with like the the latent reasoning, you know, like the reasoning where they where they keep hidden, um tend to be system one models, and AI is very strong at system one in general, a system one in the Kahneman sense, and it is the reasoning training that makes them capable of doing system two tasks, but they are always fragile at system two tasks. And my claim is that AI is just good at system one, and that is extremely valuable on its own. And as far as I can tell, we have not come even close to solving the jaggedness of system two. And I I In In In it would be throwing out the baby with the bathwater to say it's system two or bust.
+
+</details>
+
+### 可组合性：软件构建的基石与 AI 的未来
+
+**主持人**：好的，太棒了。如果说确实需要一种能够把“系统一”做到极致的 AI（也就是 Jeb 所专注的领域），这是否意味着，在企业乃至现实世界中，有大量的决策本质上其实是相对简单的？这是我们理解这一问题的正确起点吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Okay, great. If uh there is a need for an AI that can do system one particularly well, which is which is a job world, uh it means that uh there's a number of um decisions in the world of enterprise or otherwise that are actually pretty simple decisions. Is that is that the right starting point?
+
+</details>
+
+**嘉宾**：是的，确实如此。不过如果可以的话，我现在还想借机深入探讨一下关于软件本身、机器原生性以及分类器的话题。现在切入这个题外话可以吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Th- That yes. Though, I would go into like a big aside about software as well and machine nativeness and a little bit on classifiers, if I could, right now. Does that sound like an okay aside to jump into?
+
+</details>
+
+**主持人**：当然可以。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Sure.
+
+</details>
+
+**嘉宾**：我想表达的并不是说企业运营中只存在那些需要处理的系统一决策。虽然我认为事情确实会从那里起步，但我更想探讨的是软件凭借其最基础的逻辑门到底能做到多少事情。软件在这个世界上能完成的事情简直不可胜数。从 1980 年到 2020 年，几乎整个人类科技的发展都是由软件驱动的。这或许有些夸张，但作为一个软件工程师，我的直观感受就是这样，也许我带有些许职业偏见吧。
+
+令人惊叹的是，仅仅依靠这些在比特层面上做“与”（AND）和“或”（OR）的基础逻辑门，你就能实现如此庞大复杂的体系。软件之所以变得无所不能、极其强大，并不是因为人们生硬地去对应业务：“哦，这里的业务需要一个‘与’操作，那里需要一个‘或’操作”；而是因为软件能够把一个最小工作单元（unit of work）执行得如此可靠，以至于这个单元可以被抽象成一个更大的模块，然后再将它们一层层组合在一起。
+
+我认为，AI 真正释放巨大价值的地方，绝不是由人类巨细靡遗地去画出所有工作流程：“看，这是某项具体工作，这是其中的系统一决策，我们来做个工作流自动化”。我觉得那只是最初级的起点。AI 真正迎来爆发性应用的关键，在于人们能够把这些工作流封装进一个个黑盒子，然后开发者直接去调用这些更高层级的黑盒子。这才是软件哲学的精髓所在。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: I would talk about not that in business that there's specifically system one decisions that they need to be made. Like, yes, I think that that's how it'll start, but like I would talk about like how much software can do with its basic logic gates. Like, software can do so many things in the world, so many things, like basically all of technology from like what, 1980 to 2020 was driven by software. Maybe that's an exaggeration, but it feels like that to me as a software engineer, so maybe I'm biased. Um and you can do so many things with like these simple logic gates that just do like ands and ors on bits. That's kind of crazy. And software becomes big and powerful not by saying like there's an end here or an or here in a business. It's by doing like a unit of work um so reliably that it can become like a bigger thing and then composing it together. And my claim is where AI will get incredibly valuable is not people mapping out explicitly like here is work, you know, here's a job. Here's the system one decisions. Let's like do a workflow automation on that. I think that's how it'll start, but I think that AI will explode in usage once people start taking these, you know, these workflows, putting them into like a box, and then now people call the higher level boxes. And [snorts] that is what software is all about.
+
+</details>
+
+**主持人**：因为那个盒子已经被彻底解决，变得安全且极其可靠了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Because that box will be solved and safe and reliable.
+
+</details>
+
+**嘉宾**：一点没错。这就需要大量的模块积累，也就是我所说的“可组合性”（composability）。软件最迷人的魅力就在于：一旦你前期投入精力把这些标准盒子打造完成，你就可以瞬间无限次地复制它们。软件简直酷到令人难以置信。想象一下，你拥有一套乐高积木，你不仅可以用积木搭建出更高阶的复杂结构，而且这些高阶结构你想要多少就能随心所欲复制粘贴多少次——这就是软件在自动化领域的本质威力，我认为这也是系统获得越来越强大能力的必然路径。
+
+因此，我们的模型并没有将“系统二”任务完全排除在外。我们只是坚信，系统二任务应当由更基础、更底层的构建积木组合而成；这些基础积木必须足够可靠，才足以让人放心地在它们之上构建更高层级的应用。然而到目前为止，现有的 AI 在可组合性方面表现得极其糟糕，除了和其他 AI 打交道之外，它跟任何现有软件都无法良好协作，这真的是一件挺悲哀的事情。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Exactly. And you need so many that is what I describe as composability. And and the beauty of software is like once you spend the effort up front to making these boxes, you can instantly replicate them, right? Like software is so unbelievably cool. Like imagine you have LEGO sets where you can build up higher level things, but you can copy paste them as many times as you want. That is what software kind of is for automation. And that I think is how you get more and more powerful properties. So, system two tasks are not off the table for our models. We just believe that system two tasks should be composed from simpler building blocks that are so reliable that they can be trusted to be built on top of, which AI so far has been incredibly non-composable. Like it's plays nicely with nothing except other AI. And that's that's kind of tragic. Yeah.
+
+</details>
+
+### 实际案例对比：大模型在基础执行上的困境
+
+**主持人**：太精彩了。既然长远方向是这样，那我们不妨回到最现实、最基础的层面上来：你或你的团队之前提到过的一个典型使用场景是客户支持。你们的观点是，当前使用大语言模型（LLM）来处理客户支持的方式并没有达到预期的效率。
+
+我们来举一个具体的场景：假设我发了一封电子邮件，写着“我被重复扣款了，我现在非常生气”。我把这封邮件发送给一个基于传统 LLM 的系统，这是情景一；而在情景二中，我把它发送给一个由 Jeb 驱动的系统。这两种情况下分别会发生什么？能否对两者进行对比和剖析？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Amazing. All right. So, this is where this is going in terms of where we're starting at a super practical basic level. Uh one of the use cases that you mentioned or the team mentioned is customer support. Which And the claim is that the current ways it's handled with LLMs has not been as efficient as it could. Let's take the example of I'm sending an email. I'm saying I got charged twice and I'm very angry and I send that email to an LLM-based system. Uh scenario one and then scenario two, I'm sending this to a Jev powered system. What happens? Compare and contrast.
+
+</details>
+
+**嘉宾**：我能不能换一个更简单的例子？因为客户服务实际上涉及的链路非常复杂。我想用一个跟客户服务非常类似、但理解起来要直观得多的场景来解释。
+
+比如，想象一个为你处理电子邮件的执行助理（Executive Assistant）。它跟客户服务很像，但涉及的操作空间要简单得多。据我目前的观察（我也可能说错），像日常日程排期助理（scheduling assistant）这样的问题，至今仍未被完全解决。我日常给很多人发过邮件，但并没有看到真正普及的自动化排期助理。这其实非常奇怪，因为从表面上看，排期这种任务理应是大语言模型最擅长解决的事情，对吧？人们多年来也一直在试图用 LLM 来做这件事。
+
+如果你用传统的 LLM 来实现，通常的做法是：你会编写一段极其庞大的系统提示词（system message），把你的所有偏好等等巨细靡遗地写进去。在文风和语调上，它确实可以模仿得极其逼真，读起来永远都像是一篇文笔流畅的专业邮件。但它往往会在细微之处犯下致命错误——这些错误无关语言风格，也无关所谓的迎合与阿谀（sycophancy），我不知道……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Can I do an easier example than customer service is actually quite complicated. Um let me do something that is very similar to customer service but is a lot easier to think about. Like imagine an executive assistant for your email. It's kind of like customer service but the amount of things you can do is way simpler. And as far as I can tell, I could be wrong, that like a scheduling assistant is still not solved. I, you know, I have emailed a lot of people. I don't see automated scheduling assistants. And like that's kind of weird because it really looks like LLMs should solve this. Right? So, people have been trying for years for this. And how you do it in an LLM is you would, you know, make a big system message write-up of all of your preferences, blah blah blah, and they would be incredibly good at stylistically being accurate. Like it'll never not look like a well-written thing. But it will often make subtle mistakes, not in the style, not in the psychofancy or psychofancy, I don't know
+
+</details>
+
+<!-- chunk 3/8 -->
+
+### 自然语言系统提示词的局限与不可控性
+
+**Speaker A**: ……知道该怎么读那个词。大模型总是会表现出讨好人的倾向，因为它们太擅长顺应用户了，但这并不意味着它能做出正确的决策。于是人们通常的做法就是不断往系统提示词里写逻辑，比如：“请执行这个操作；如果是投资人，就那样处理；如果是外部来信，就这么处理”，等等诸如此类。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: ...how to pronounce that word. Like it'll always be people-pleasing because LLMs are so good at being people-pleasing, but it may not make the right decisions. And what people will do is they will keep programming their system prompt. Like please do this. If it's an investor, do that. If it's an inbound email, do this, blah, blah, blah.
+
+</details>
+
+**Speaker A**: 最终的结果就是，你实际上是在用自然语言编写一个极其庞大的系统提示词。随着系统复杂度的攀升，错误率也会变得越来越高，因为你只能在心里祈祷：“模型啊，求求你千万别犯那些错。”而往往一旦出错，场面就会非常尴尬，或者带来高昂的代价——比如你可能漏掉了与某位重要投资人的日程安排。到那个时候，你就不得不把整套系统彻底推倒废弃，换回人工来处理，因为人工知道显而易见的合理做法，而且在不确定的时候还能随时向你请示。所以据我所知，大语言模型目前依然没有解决这个问题。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: So what ends up happening is you're basically programming in natural language this giant system prompt. And as the complexity rises, the error rates get higher and higher and higher because you're just praying, "Model, please don't make those mistakes." And what tends to happen is it's embarrassing when those mistakes are made or it's costly. You may not have scheduled something with an important investor or something like that. And then you need to rip the system out and toss it away and just use a human because it's just obvious what to do there and they can ask you when they're uncertain or whatever else. So, LLMs to my understanding still have not solved this problem.
+
+</details>
+
+### 用代码与独立分类器构建确定性系统
+
+**Speaker A**: 我不知道目前是否有人用类似 Jev 的系统彻底解决了这个问题，但我可以对比一下两者的差异。设想一下，我们不再用自然语言去描述“如果重要就如何、如果发件人是谁就怎样、如果是外部邮件又该如何”，而是为其中的每一个具体条件构建独立的分类器。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I don't know if anyone has solved this with a Jev-like system yet, but I can compare and contrast the differences of it. So, what you can imagine instead of programming in natural language, like describing like if it's important, blah, blah, blah; if it's from this, blah, blah, blah; if it's inbound, blah, blah, blah. You can actually make individual classifiers for each of these things.
+
+</details>
+
+**Speaker A**: 这就像是智能的条件判断语句（if statements）。你现在可以用软件来表达以前根本无法表达的事物，因为传统的位比较操作怎么可能判断出一封邮件是否属于外部来信呢？这种意图需要对自然语言具有常识性的理解。核心思路在于，你可以为所有这些场景构建分类器，从而打造出一个极具可解释性和可观测性（legible）的系统。在这个系统里，你不仅能度量每一个条件判断是否准确，而且能确信没有任何一条判断逻辑会被模型意外遗忘。一旦出现错误，由于系统结构非常清晰，你可以直接将该用例添加进评测集（eval）中。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Like smart if statements. You can now express things that you couldn't express in software before, because how can these bit comparisons figure out if it's inbound or not, right? That's an intention and it requires natural language common understandings. And the idea is you can classifiers for all of these things and you have this legible system where not only can you measure if every if statement is accurate, you know that none of those if statements will be forgotten. And if ever a mistake is made, you can add it to an eval because the system is very legible.
+
+</details>
+
+**Speaker A**: 这种方案在刚开始时可能不如基于纯文本提示词的系统好用，因为纯文本系统内置了大量的合理默认行为，表面看起来非常自然，毕竟它的训练目标就是讨好人类。但纯文本系统并没有真正具备你所看重的行为逻辑，你也根本无法对其进行掌控。对于任何希望构建能在后台稳定无人值守运行的系统的人来说，这是一个核心痛点——他们希望系统运行省心、可控，并且有把握不会彻底失控偏离轨道。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: So, it'll probably start out less good than the text-based system because the text-based system has a lot of sane defaults. You know, it looks very reasonable because that's what it's trained to do. It's just trained to look human pleasing, but it actually doesn't have any of the actual behavior you truly care about, and you don't have the control over that. And that is a major problem for anyone who wants to truly have something run in the background. They want to not worry about it, and they want to have control, and they want to have some idea that it's not going to just go completely off the rails.
+
+</details>
+
+**Speaker A**: 将类似系统一（System 1）的模型与确定性代码结合，正是实现这一目标的关键。代码就像是过山车的轨道，能防止系统越轨；同样地，类型安全也是系统一模型所具备的特性，这些机制共同确保了系统绝不脱轨。正因为整个架构高度可读可解释，构建此类系统也会变得容易得多，你完全可以放心让它们在后台自动化运行。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: And that is what combining like a System 1 models with code will enable you to do. Cuz code is kind of like the roller coaster tracks. You don't go off the rails. Code prevents that from happening. And similar to that, type safety, that is what the property that the System 1 models have, and these things also prevent going off the rails. And because they're very legible, it becomes way easier to build these systems. You can just trust that they can run in the background.
+
+</details>
+
+### 任务拆解与基于概率的分数输出
+
+**Speaker B**: 那么在个人助手的例子中，其基本原理是：Jev 接收输入（可能是数据、指令或两者兼有），然后并不会像传统语言模型那样直接输出一段文本，而是将其转化为一组概率值。比如它会输出：“是否紧急：是或否；是否上报：是或否；如果上报，是移交给 A 部门还是 B 部门”，对吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: So, in that example of the personal assistant, the fundamental basic concept is that Jave is going to take the input, which could be data and or instructions, and will translate this not into text, which is what your language model does, but into a set of probabilities. So, they will say, "This is urgent, yes or no. Escalate, yes or no. And if you escalate, send this to this department or that department." Right? Is that...
+
+</details>
+
+**Speaker A**: 没错，但这里还有一个非常有趣的细微差别：你不能直接去问系统“我该不该上报？”因为这是一个非常高维、宏观的决策。判断是否需要上报往往依赖于丰富的经验以及人与人共事之间建立的信任。核心理念在于，你需要把问题层层拆解到最基础的原子层级。我们完全有能力将其细化拆解，比如：“我想过滤掉收件箱里所有外部销售邮件，可能还想过滤掉招聘人员发来的邮件，因为针对这类邮件我们专门设有对应的邮件组列表。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yes, and also there's like interesting nuance here, where you don't just ask Jave, "Should I escalate?" Because that's a very high-level decision. It requires experience and trust with working with someone to know if you should escalate or not. The idea is that you can keep on decomposing your questions into like the lowest level. We have the ability to break it down. Like, "Oh, I want to filter out all inbound sales from my inbox and I want to maybe filter out like recruits emailing me, right? Because we have a specific email list for that."
+
+</details>
+
+**Speaker A**: 这样做很有道理，但现实中可能会出现误判，比如：“糟糕，我把一封不该过滤的邮件给漏掉了。”这时你就可以加入新的规则行为。例如：如果邮件抄送了其他人，那我大概就不需要介入；但如果正文中明确写道“Diego，你能看一下这个吗？”，那我突然间就必须看到这封邮件了。这类细致、智能的逻辑处理，需要有清晰认知的人去推演和定义。因此，无论如何系统都需要被赋予具体的逻辑规程，要么是通过自然语言，要么是通过代码；但如果选择用代码来实现，它的运行成本更低、速度更快，并且执行具有确定性保障。你可以随着对业务场景理解的加深，不断向下深挖并精确定义期望的行为，逐步优化系统；而在纯大模型中，你能获得的控制力是非常有限的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Like that might make sense, but there might be a world like oh, I filtered out the wrong email. Let me add new behavior. An example is if someone else is on an email, I probably shouldn't be on that email. But if they say, "Diego, can you look at this?" Maybe I should all of a sudden see that. And this is like nuanced smart behavior that requires like a smart person to think about that behavior. So either way a system is getting programmed either by natural language or code, but if you do it by code, it's cheaper, faster, and guaranteed to run. And the idea is you can keep on like drilling down into the behavior you want as you make it more and more and more great for your use case rather than with LLMs, there's only so much control you have.
+
+</details>
+
+### 精细控制：概率阈值与业务容错调优
+
+**Speaker B**: 而且开发者针对当前关注的每一个微小逻辑单元，都会收到模型返回的一个量化分数值。比如针对“这封邮件语气是否愤怒”，返回一个 0.85 的分值。如果分数高于 0.9，就触发对应的动作；如果低于该阈值，则不触发动作。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: And the developer gets a score back for whatever little sort of unit they're focusing on. Is that email angry or not angry? 0.85. And if it's above 0.9, then trigger this action. If it's below, don't trigger that action.
+
+</details>
+
+**Speaker A**: 确实如此。你提到概率输出这一点非常关键，我们之所以这样做是有深层原因的，这是我们历经波折换来的教训。比如当我们最初对外发布 OpenAI 相关模型能力时，它们并不具备这种细粒度的控制能力。其导致的直接后果，拿最直观的“拒绝回答（refusals）”来打个比方……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah. Yes, and also actually your note on the probabilities is also really really great. There's a reason why we do that and we learned this the hard way. Like when we shipped the OpenAI models, they don't have fine-grained controls and what ends up happening is I'll use the simplest analogy which is refusals, right? Like how does it make sense that you have a response...
+
+</details>
+
+**Speaker B**: 也就是模型直接拒绝回答用户的问题。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: ...is when the model refuses to answer.
+
+</details>
+
+**Speaker A**: 是的，比如弹出“很抱歉，我无法协助处理该请求”。荒谬的是，针对同一类请求，有时候刷新一下它就拒绝回答，再刷新一次它又能正常作答了，这种随机不可测的表现十分离谱。另外，基于大模型做二次开发的各家企业，对于“拒绝”的容忍阈值是截然不同的。如果你是迪士尼，你对模型拒答的敏感阈值肯定与 Character.AI 大不相同。Character.AI 主打角色扮演等开放式互动，而迪士尼则对其旗下的角色形象和知识产权保护有着严苛的要求。因此，直接由模型给出一个非黑即白的离散决策是毫无道理的。赋能开发者最高效的做法，是尽可能向其返回最详尽的底层信息，让他们能够依据自身具体的业务场景灵活设定判定阈值。例如，一旦我不小心把某位极其重要的投资人的邮件给误分类了，我就可以主动调低该分类的触发阈值，因为在这种场景下我宁可承担一些假阳性（误报），也绝不能容忍任何假阴性（漏报）。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yes, "I'm sorry, I can't do that." And it's kind of crazy that for some responses, you just refresh it and sometimes it refuses, sometimes it doesn't. Like that's insane behavior. And also, if you're building on top of this, your threshold for refusals might be very different, right? Like if you are Disney, you probably have an extremely different threshold for refusals than if you are Character AI, right? Like Character AI likes to do role play and stuff. Disney is very protective of their characters and IP. It doesn't make sense to just have a discrete decision. The most powerful way to empower developers is to give them back as much information as you can, so they can then choose for their application what is the threshold. Like, oh, I accidentally misclassified an email from an extremely important investor. Let me tune that threshold lower because I'm okay with false positives. I really can't stand false negatives.
+
+</details>
+
+### 摆脱自回归生成：速度、成本与高密度认知提取
+
+**Speaker B**: 这也就是 Jev 运行速度更快、成本更低的原因所在。我知道速度和成本只是其优势的一部分，你们更宏大的愿景是实现“智能无处不在”（intelligence everywhere）。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: And the reason why Jev is much faster and much cheaper—and I know that's only part of the claim and that the bigger claim is intelligence everywhere.
+
+</details>
+
+**Speaker A**: 谢谢你，你确实认真听进去了我的观点，太棒了！
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Thank you. You listened to me. Hell yeah. Hell yeah.
+
+</details>
+
+**Speaker B**: 这种技术范式迁移已经拉开序幕。那么它究竟为何能做到更快、更廉价呢？是因为它只截取了问题的一个子集去求解，还是因为它无需像常规大语言模型那样经历完整的自回归下词预测（next-token generation）流程？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: The devolution is in motion. So, why is it able to be faster and cheaper? Is that because it's taking a subset of the problem or is that because it doesn't have to go through the whole next token generation than an LLM would otherwise do?
+
+</details>
+
+**Speaker A**: 实际上，如果脱离了智能本身，就无法孤立地探讨速度与成本。假如我仅仅是想要一个更快的模型，直接砍掉神经网络的一半参数就行了，那样速度立刻翻倍，成本也能减半。因此单聊速度是没有意义的，必须结合它所承载的智能来看。毫无疑问，我们在速度上实现了质的跃迁，这正是因为我们彻底剥离了文本生成中最缓慢且极其昂贵的部分。正如我们之前讨论过的，我们显然不采用自回归生成架构，而是更推崇这种并行的、逐步探索收敛出正确解的处理方式。但我认为很多人并未真正领悟到的是：这绝不仅仅是一个显而易见的工程优化问题——不只是简单地把运行慢的部件砍掉那么简单，更关键的是“你优化什么，就会得到什么”。我们的目标是以最佳、最丰富、最致密的方式，从 AI 现已具备的精妙认知核心中直接萃取智能。在我们这项技术发布之前，整个领域的痛点恰恰在于：AI 的能力显而易见地令人惊叹，但在绝大多数实际业务场景中却几乎派不上用场。这不仅仅是因为我们给它加上了一个接口插头……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I actually can't talk about that without the intelligence. If I wanted a faster model, I could just chop half the network out, right? And then you have something twice as fast, or twice as cheap or whatever else. So, it's very hard to talk about that without intelligence on its own. Like obviously we're in a new quantum of speed because we toss out the very slow, expensive part of text generation. So we've talked about that. We are obviously not autoregressive. We much prefer this parallel, gradual discovery of what the right thing is, but what I think people don't really realize is not to just like the obvious engineering part, like chopping off parts that are slow. But, the you get what you optimize for part. And we want to extract intelligence in the best, richest, most dense way out of these beautiful cognitive cores that AI already is. So, I think the tragedy before our launch was that AI is so clearly unbelievable, but so useless for most things. And it's not just that we put a plug on...
+
+</details>
+
+<!-- chunk 4/8 -->
+
+### 分类任务与 AI 完全性：并非狭隘专用的智能形态
+
+**Speaker B**：这不仅仅是剔除糟糕的部分，更像是理顺智能本身，并尽可能让它变得稳健，以便将那种智能充分展现出来。而且，这绝不能脱离开其他内容孤立地谈论。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: It's not just like tossing out the bad part, but also like smoothing out the intelligence and making it as robust as it can be to surface that intelligence. And it can't be talked about without the other stuff.
+
+</details>
+
+**Speaker A**：所以，复述你到目前为止所说的内容会更快、成本也更低，因为你们去除了某些部分，并对剩余的部分进行了打磨。因此，你们拿掉的那部分，使得你们最终能够更快地完成这项非常具体的任务——这是一项非常重要且无处不在的工作，但依然是一项具体的任务——因为在某些层面上，它针对该任务进行了专门的优化。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: So, it's faster and cheaper to play back what you've said so far because you've removed certain parts and you polished the rest. So, the part that you removed enabled you to do this ultimately very specific job, very important and very ubiquitous kind of job, but specific job faster because in some ways it's specialized for that job.
+
+</details>
+
+**Speaker B**：这里其实含有一点……天哪，我又开始抠细节了，不过我挺享受这一点的。我其实想争辩的是，它并不是狭隘和具体的。确实，你可以通过微调小语言模型使其变得狭隘而特定，但我认为分类任务是“AI 完全”（AI complete）的。
+
+学术界对此已经讨论了很长时间。一个通用的全能验证器或分类器绝对是 AI 完全的，因为很容易将其转变为——即使你想要输出文本（尽管我认为这对于一个系统来说相对少见），只要它足够完美，你完全可以将其转化为那样的系统。所以我认为它并不是狭隘或具体的，它只是一种不同形态的智能。
+
+这本身就是一个庞大的通用分支，而且这个分支下面还将孕育出许多非常优美的小分支。你看，我们目前拥有三种类型，但未来我们还会拥有更多，我们也将向全世界展示为什么我们当初没有把它们命名为“决策模型”。对我而言，这关乎于我们如何尽可能高效地利用这些对人类智能令人难以置信的压缩成果，是的，这远远超越了仅仅去除表面上显而易见的迟缓部分。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: There's a bit of an implicat— Oh, man, I get into my nuance and I love it. I would actually argue that it is not narrow and specific. Like, you could fine-tune small language models to be narrow and specific, but I would argue that classification is AI complete. And like, you know, the field has talked about this for a long time. Like, a general-purpose universal verifier or classifier is absolutely AI complete because it's easy to turn this thing into—like, even if you wanted text out, which I think is somewhat rare for a system, you could turn it into that if it was perfect. So, I would argue that it's not like narrow and specific, it's just a different shape of intelligence. And that is, you know, it's its own big general branch, and there's going to be so many beautiful sub-branches of this. You know, we have three types right now, but we are going to have so many more and we're going to show the world why we didn't call them decision models. Um, so to me it's about like how do we use these incredible compressions of human intelligence as effectively as possible and uh yeah, it's beyond just removing the obvious slow parts.
+
+</details>
+
+### 解构 RLHF：从对齐初衷到格式与风格的局限
+
+**Speaker A**：好的，太棒了。那我们来谈谈为什么现有的语言模型无法做到这一点，以及为什么需要发明一整个全新的模型家族来完成这项任务。据我的理解，问题的根源之一就在于 RLHF（基于人类反馈的强化学习）。你是它的共同发明者之一。就其原本的设计目的而言，它的效果极其出色；然而，它也带来了一系列副作用，尤其是这些副作用对我们眼下的使命而言是非常不利的。
+
+为了让更多人容易理解，我们不妨从最基础的地方重新开始：最简单地讲，RLHF 到底是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Okay, great. Let's talk about why language models are not able to do this and why a whole new family needs to be invented to do this. And so my understanding is that part of the root of the problem is RLHF, which you're one of the co-inventors of, which served its purpose incredibly well for what it was supposed to do, however, comes with a set of side problems which in particular are bad for the mission at hand. So, maybe let's start again in an effort to make this approachable by a bunch of people. What is RLHF at the simplest level?
+
+</details>
+
+**Speaker B**：这个嘛……我会将 RLHF 描述为：让模型学会对话，并且让模型在对话中讨人喜欢。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Ooh. I would describe as RLHF as making models chat and making models pleasing for chat.
+
+</details>
+
+**Speaker A**：因为模型本身是经过预训练的，所以它们掌握了世界上所有的知识。然而，要将它们转变为能够进行日常对话的东西，需要它们在与人类互动的某些特定方式上表达出特定偏好，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Because models are pre-trained so they have all the knowledge in the world. However, turning them into something that can converse requires them expressing certain type of preference in certain ways of interacting with human, right?
+
+</details>
+
+**Speaker B**：而且包含了大量的文风风格设定。事实上，现在回过头来看，我认为 RLHF 的许多优化在很大程度上都极其偏向于风格化，而不是真正让模型更擅长深入到其神经网络的底层去挖掘事实。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: And lots of stylistic stuff. Actually, I think a lot of the optimization for RLHF in hindsight looks extremely stylistic rather than is it about, you know, like being better at like tapping into its facts deep into its network.
+
+</details>
+
+### RLHF 的诞生探索与任务定义的艰难历程
+
+**Speaker A**：RLHF 代表基于人类反馈的强化学习（Reinforcement Learning from Human Feedback）。那么，最初你们在做这项工作时，人类是如何参与进来的？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: RLHF stands for reinforcement learning from human feedback. So, how are humans involved initially when you guys did that?
+
+</details>
+
+**Speaker B**：其实 RLHF 包含很多不同的环节。我想我大概是在 2020 年底开始从事这项研究的，不过需要明确说明的是，在此之前已经存在一些先驱性的工作，我必须向它们致敬。我认为我们是站在巨人的肩膀上，前人的很多成果也可以被称为 RLHF。如果需要的话，我随时可以列举并引用它们，但我现在就不一一展开了，我在其他场合已经引用过了。
+
+在我看来，让 RLHF 真正确立为 RLHF 的核心在于其“任务本身”：这个任务旨在针对人类偏好进行优化，其形态表现为在面对任意指令时实现“文本输入、文本输出”。我认为这就是最初 RLHF 的本质所在。在那个时候，我们仍在摸索这种形态。事后回想起来，这一切似乎理所当然，但在当时却充满了巨大的不确定性。
+
+在 OpenAI 内部，我们当时有点像是被冷落的“异类”（black sheep）。没有人喜欢把成本高昂的人工标注置于迭代闭环中，因为那样很难快速迭代推进。我们当时一直在努力摸索：嘿，这套方案真的行得通吗？因为当我们在各种问题之间拆东墙补西墙、忙着“打地鼠”时，新问题总是层出不穷，我们必须不断去解决它们，直到最终把它做得非常通用、令人愉悦且性能优良。
+
+我坚信，在人工智能领域开辟一个全新方向最困难的部分，往往就在于如何定义这项任务。如果我们能事后诸葛亮般提前知晓任务就应该被设计成这种形态，我们在这个过程中的进展很可能会快得多得多。但正是由于那种不确定性，摸索过程才变得更加艰难，比如去弄清楚：是的，实现它的途径在于数据，要构建多样化的数据，甚至包括为标注人员编写详细的规范说明——比如指导他们“这里应该如何标注这些内容，因为这正是我们想要得到的输出”。这些都是我们当时根本不知道的事情。后来所有模仿我们的人都不需要再去摸索这些，因为我们已经完成了那段艰难迭代的全部苦活累活，并将其发表在论文中。
+
+我绝不是要故意抨击他们，但我确实想强调，探索与发现才是这其中最艰难的部分；我认为这正是我们在 Type-Safe 所面临的大量核心难点所在。
+
+因此，我们尽可能地去逼近并优化人类偏好，这也正是为什么你如今几乎永远不会看到那些表面上一眼就能看出很糟糕的输出——尽管它们的实际糟糕程度可能跟一个纯粹答错的回答没有区别，但在如今的模型中，你几乎绝不会看到这样的输出。即便模型经常犯错，你也绝不会看到那种你一眼看过去就会脱口而出“这简直就是垃圾”的输出。这是因为这类显而易见的错误受到了极大的惩罚，而这极大地扭曲了这些模型的概率空间。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: So, actually there's many different parts of RLHF. I think I started working on it perhaps end of 2020, but there was like predecessor work to be clear that I would want to call out. So, I think that we built on top of the shoulders of giants and many of those predecessor works could be called RLHF as well. I'm happy to cite them now, but I'm not going to do it right now. I've cited them in other spots. The thing that made RLHF RLHF in my opinion is about the task. The task about optimizing for human preference and the shape of it as being text in text out on arbitrary instructions. That to me is the root of what originally RLHF was. At the time we were still trying to figure out this shape. I think it's very obvious in hindsight, but there was a lot of uncertainty. We were kind of like the black sheep of OpenAI. And like no one likes putting expensive humans in loop because it's very hard to iterate on it. And we were really trying to figure out like, hey, will this work? Because when we were playing whack-a-mole with the issues, like things kept coming up and we kept having to solve them until we made it like really general and pleasing and good. I believe that the hardest part of creating a new direction in AI is even knowing the task. So, if we knew in hindsight the task should be shaped this way, it would have been way way faster at this. But because of that uncertainty, it was a little bit harder to figure out like, yes, the way to do this is data, make this diverse data, and also like even the specification for labelers, like here is how to label these things because this is the thing we want out. These are things that we didn't know at the time, which everyone who copied us didn't have to figure out because we had done all of the hard work of that iteration and then published it in a paper. Not to have a stab at them, but I do want to call out that a lot of the hard part is the discovery here and I think that that's a lot of our hard part with Type-Safe. So, we are to our best proxy optimizing for human preferences and that is why you never get outputs that obviously look bad, even though they might be equivalently bad to one that is just wrong, but you never have models where you never have outputs these days, even though the models are wrong all the time, where you can just look at it and be like, this is clearly crap. Because that's punished so hard and this like really warps the probability space for these models.
+
+</details>
+
+### RLHF 的代价：阿谀奉承、过度拒答与模式坍缩
+
+**Speaker A**：是的。我们讨论这一切，是因为这恰恰触及了问题的核心。因为模型在经过训练后要去迎合人类，并在这一 RLHF 过程中表现得非常自信，从而导致了你之前提到的阿谀奉承（sycophancy）和过度拒答（over-refusal）等一系列问题。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yep. So, and we're talking about all of this because again, that's sort of the heart of the problem. So, because the models were trained to please humans and sound confident as part of that process of RLHF, then that's why you end up with issues like sycophancy, over-refusal that you alluded to.
+
+</details>
+
+**Speaker B**：不仅如此，还有模式坍缩（mode dropping）。经过 RLHF 调整的模型在文风上具有高度的重复性。它们各自以不同的方式表现出重复性，但如果你频繁使用某个模型，你就会明显感觉到：“天哪，它总是反复说那一套话。”这就是 RLHF 的副作用，因为 RLHF 极大地促使模型始终固守在它们那套固定的风格路线上，因为这是避免遭受惩罚的安全路径。
+
+这导致了创造力的缺失，而这种创造力是预训练模型原本具备的。预训练模型曾经是充满野性、富有创意且奇特莫测的；它们内部包罗了互联网上形形色色的文风，有时甚至会彻底脱离常规轨道，这本身非常迷人，而且它们没有这种人们在如今的大语言模型中普遍感到厌烦的特定毛病。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: And also like mode dropping. The RLHF models are very stylistically repetitive. You know, they're all like repetitive in different ways, but you can kind of get a sense if you use a model a lot, like, wow, it keeps saying this thing, you know, and that is a side effect of RLHF because RLHF heavily encourages the models to stay on their stylistic lane because that's the safe path to not get punished. And this results in like a lack of creativity that pre-trained models didn't have. Pre-trained models were like wild and creative and weird and they have like all of the styles in the internet inside of them and they sometimes just go completely off the rails, which is beautiful and they didn't have this particular problem that I think people are from what I've seen kind of dislike in LLMs.
+
+</details>
+
+**Speaker A**：没错。所以说，RLHF 对于让我们所有人通过聊天界面体验并探索生成式 AI 的强大能力非常有效；但对于分类任务而言却非常糟糕，因为你会遇到过度拒答、阿谀奉承，并且还要承担我们之前提到的延迟和性能开销问题——因为模型试图进行文本到文本的转换，它必须自回归地逐行生成文字，并且在此过程中表现得极度自信。如果你只是想判断“客户生气了还是没生气”或者“是否存在问题：是或否”，这种生成机制根本毫无帮助。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Great. So, again, all RLHF great for all of us to discover the power of generative AI through a chat experience, but bad for the problem of classification because you have over refusal, you have sequency, then you also have the latency and overhead problem that we alluded to that because the model was trying to do text-to-text, then it needs to autoregressively generate prose line by line and sound very confident doing it, which is not helpful if you're trying to say customer angry not angry or problem yes yes or no.
+
+</details>
+
+### 预期脱节的隐忧：人类感知与真实能力的割裂
+
+**Speaker B**：我完全赞同这些观点。不过，我还想重点强调一点：我确实认为，在做决策这件事情上，RLHF 实际上让模型比预训练模型稍显迟钝了（轻哼）。
+
+在我看来，问题的核心根源在于 RLHF 极大拉高了人们的预期。如果你对比一下人类感知的模型能力与现实中模型的真实水平，就会发现 RLHF 极大地扭曲了这种认知。因为转瞬之间，大家都在惊呼：“天呐，这些模型真是太聪明了，我们能用它们做各种各样的事情！”
+
+而在我看来，这种认知与现实之间的割裂对整个世界是相当有害的。这正是我在此处最大的担忧所在。所以，如你所知，以往人们对预训练模型的预期截然不同；但正因为经过 RLHF 的模型极具讨好人类的特质，而且看起来无比聪慧，以至于让人们产生了一种想法，觉得：“天呐，很多事情……”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: I agree with all of that. Though, I will emphasize that I do believe RLHF makes the models slightly [snorts] dumber at decisions than the pre-trained models. The root of the problem to me is that RLHF actually greatly increased expectations. So, if you imagine like how good the models are from human perception versus reality, RLHF really warped that because all of a sudden people were like, "Holy smokes, these models are really really smart. We can do all sorts of stuff with them." And that decoupling is I think quite harmful to the world. And that to me is was my biggest worry here. So, like you know, the expectations for pre-trained models were very different, but because RLHF models are so pleasing to humans and they seem so smart, it makes people think like, "Holy smokes, a lot of stuff—"
+
+</details>
+
+<!-- chunk 5/8 -->
+
+### RLVR 的机制与局限性
+
+**客座嘉宾**：……能够被自动化。”但这在经验层面上并没有发生。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: can be automated." And that empirically did not happen.
+
+</details>
+
+**主持人**：这就是强化学习人类反馈（RLHF），它是后训练（post-training）的一个关键组成部分。大家可能也听说过后训练的其他组成部分，特别是基于可验证奖励的强化学习（RLVR）。模型正是通过这种方法在数学或编程领域变得非常出色。或许你可以先简要定义一下它到底是什么，然后解释一下为什么它无法解决你们目前试图解决的问题？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: So, that's RLHF, which is a key part of post-training. People may have heard of other parts of post-training, RLVR in in particular, which is how models have gotten very good at at math or or coding. Maybe define very quickly what it is and then explain why it's not solving the problem you're trying to solve using
+
+</details>
+
+**客座嘉宾**：好的。RLVR 是“基于可验证奖励的强化学习”（Reinforcement Learning from Verifiable Rewards）的缩写——或者类似的表述，具体全称我也不太确定。但它的核心理念是针对容易评估的测试用例，比如数学题、定理证明之类有确定答案的任务；或者比如你希望通过单元测试。模型是否可以在输入和输出之间做大量的事情，写出能够通过那些单元测试的代码，或者写出推导数学步骤以获得最终答案？
+
+而且 RLVR 非常关键的一部分并不仅仅在于可验证的奖励本身，因为早在 RLVR 诞生之前，人们就已经尝试在可验证奖励上做强化学习很多年了，只是当时碰巧一直行不通。比如 OpenAI 的代码生成团队尝试了相当长一段时间，却始终没有真正成功。因为你实际上需要在中间引入这种推理链（reasoning chain），在中间进行各种富有创造性的尝试，这样你才能得出可以通过单元测试、解决数学问题等各项任务的答案。
+
+因此，RLVR 本质上也意味着针对推理能力的训练。也就是说，通过中间的这种过程机制，模型有时可以执行任意复杂的推导。所以 RLVR 很大程度上是为了通过那些容易评估的检验。而且，RLHF 过去曾引发了严重的“过度承诺却未能兑现”，这是建立在人类对 AI 的主观感受之上的，但 RLHF 后来在基准测试（benchmarks）上实际上已经开始进入平台期了。然而 RLVR 在基准测试上完全没有遇到瓶颈，RLVR 几乎横扫了每一个基准测试，因为从构造方式来看，如果你想刷爆基准测试，RLVR 的形式本身就是为这类任务量身定做的。基准测试从本质上讲就是那些容易评估的东西，与它的形态完美契合，但这又引发了另一种形式的“过度承诺与未能兑现”。不可否认，其他那些东西显然非常非常酷，实际上我认为 RLHF 也非常酷。但我只是对缺乏真正的自动化能力感到担忧，而经验表明，RLVR 并没有真正改变自动化的现状。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Ooh. So, RLVR is short for reinforcement learning from verifiable rewards or for I I don't actually know that one, but the idea is for simply evaluatable test cases, kind of like a math problem or like a proof or something like that where you you know an answer. Or like you want to pass the unit tests. Can you do a lot of stuff in between to write code to pass those unit tests or to write math to to get that final answer. And a really key part of RLVR is not just the verifiable rewards because people have been trying to do RL on verifiable rewards for many years before RLVR was created. It just so happened that it didn't work. So, the code gen team at OpenAI was trying for quite a while and it just never really worked because you actually needed like this reasoning chain in the middle to do all sorts of creative stuff in between so that you could get answers that like pass the unit tests and the math and all of that stuff. So, RLVR also means like the training for reasoning. You know, with this like stuff in between in the middle where you can do arbitrarily complicated stuff sometimes. So, RLVR is a lot about passing simply evaluatable checks and RLVR you know, RLHF caused a massive over promise under deliver based on like human feel of AI, but RLHF actually started plateauing on benchmarks. But RLVR does not plateau on benchmarks at all. Like RLVR crushes every benchmark because by construction RLVR is kind of the shape of the task if you wanted to crush benchmarks. You know, like benchmarks are by construction the simply evaluate all things that is just perfectly matches the shape of it and it causes a different type of over promise under deliver. They're all the others obviously very very cool though. I think actually I think RLHF is very cool too. But I just worry about the lack of automation and empirically RLVR hasn't really changed automation.
+
+</details>
+
+**主持人**：是的，所以 RLVR 并不能帮助我们解决正在讨论的问题，因为它只专注于对最终解进行奖励，而我们这里真正想要实现的是概率与理解，以及这类能力……
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah, so RLVR doesn't help us in the problem we're discussing uh because it focuses on rewarding the final solution whereas what we're trying to do here is probability uh and understanding uh and this thing
+
+</details>
+
+### 不均衡能力与校准问题
+
+**客座嘉宾**：它引入了随机性，而且表现得不可靠。我认为大家喜欢用“参差不齐”（jagged）这个词来形容。它有时候极其聪明，我常用的比喻是“95% 的爱因斯坦加上 5% 的憨豆先生”。如果模型不能清楚地告诉你它什么时候变成了憨豆先生，那你怎么可能实现任何自动化呢？所以这种能力的参差不齐和缺乏鲁棒性，我认为才是真正的核心问题。尽管它在回答简单的分类任务上也表现优异，但如果它无法稳定可靠地输出结果，你从一开始又该如何去实现自动化？这正是模型校准（calibration）发挥作用的地方，而现有的模型在这方面依然做得很不好。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: It takes the stochastic. It's also like unreliable and like um it it I think people like the word jagged. Um you know, like it is sometimes incredibly smart. Like the way I like to describe it is 95% Einstein, 5% Mr. Bean. And if it doesn't tell you when it's the Mr. Bean, then how are you going to automate anything? You know? So it's jaggedness and you know, non-robustness I think is the real issue with it because it's very good at answering like simple classifications too. But if it doesn't do it reliably, how do you automate anything in the first place? And that's kind of where calibration comes in and the models are still not very good at that.
+
+</details>
+
+### 新训练范式：超越后训练概念
+
+**主持人**：太棒了。好的，所以 RLHF 某种程度上制造了问题，而 RLVR 又无济于事。因此你们不得不发明一种新的后训练方法，你们称之为 RLCD（在提问中提及为 RL STDY）。这么说是正确的吗？如果是的话，能否在你能分享的范围内，尽量向我们解释一下它到底是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Okay, great. All right. So RLHF kind of creates the problem. RLVR doesn't help us. So therefore you guys had to invent a new post training method that you call RL STDY. Is that uh correct? And if so, just explain as much as you can share what it is.
+
+</details>
+
+**客座嘉宾**：我不知道自己是否会把它称为一种后训练方法。因为当年我们创造 RLHF 时，“后训练”这个概念根本就不存在。你固然可以把 RLHF 称为一种微调（fine-tuning）方法，但这大大低估了你对整个流程所带来的变革程度。所以没有人会仅仅把它叫做微调，哪怕在某种技术严谨的层面上这么说可能有 80% 的准确度。因此，我并不倾向于把我们正在做的事情称为后训练。
+
+我认为我们做了很多非同寻常的尝试。强化学习（RL）本身往往只是整个任务的一个实现细节。以 RLHF 为例，这项任务绝不仅仅是在 PPO 或其他算法上做强化学习，它的核心在于弄清楚输入和输出应该是什么形态、如何指导人类标注者去完成这一过程、我们的“北极星”目标是什么，以及如何平衡各个数据集以训练出一个真正优秀的模型。对于 RLVR 来说也是类似的，如果没有潜在推理机制（也就是那些推理链），RLVR 就什么都不是。而这种机制让你可以引入全新的数据集配比，如何构建数据集甚至你需要什么难度级别的数据集，都会随着基础模型的形态而彻底改变。因此，强化学习往往只是整个任务蛋糕中很小的一块切片。
+
+确实，我们必须打造一种全新类型的训练方式，我们确实将其称为 RLCD，因为此前从来没有人做过任何事情来针对机器原生智能（machine native intelligence）进行优化。但我只是不希望给大家造成一种印象，好像只要找到了正确的强化学习算法，所有问题就会奇迹般地迎刃而解——因为除了单纯的强化学习算法之外，还有太多至关重要的因素参与其中。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: I don't know if I would call it a post training method because like you know, when we made RLHF, the concept of post training did not exist. And you could call RLHF a fine-tuning method, but that undersells how much change you did to the whole process. So, like no one would just call it fine-tuning even though it maybe there's some technically correct way where like that's 80% accurate. So, I wouldn't necessarily call what we're doing post-training. Um I think we do a lot of weird stuff. Um I think that RL tends to be again a implementation detail of the whole task. You know, for RLHF, the task was not just doing RL on PPO and whatever. It's about figuring out here's what the inputs and outputs should look like and here's how you instruct people to do that and here's what our North Star is and here's how we balance the data sets to get a really good model for this thing. And for RLVR, you have similar stuff. RLVR is nothing without its like latent reasoning, you know, it's reasoning chains. And then this enables you to have like a new mixture of data sets, how you construct the data sets or even what difficulty of data set you want completely changes with your base models in shape and all of that. So, uh the RL tends to be like a like a small slice of the whole task pie. Um and, you know, we did have to make a new type of training, you know, that we do call RLCD because no one has done anything to optimize for machine native intelligence. But I just I don't want it to sound like if you found the right RL algorithm, it just magically gets solved because so many things go into it beyond just the RL.
+
+</details>
+
+### 数据来源与任务定义的本质
+
+**主持人**：所以，为了能够进行训练，你需要大量的数据。而在你们正在开创的这一全新范式中，这些数据针对的是一种非常特定的任务类型。那么这些数据究竟是从何而来的？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: So, to be able to do training, you need to a bunch of data. This is data for a very specific kind of task in the new paradigm that you're inventing. Where does that data come from?
+
+</details>
+
+**客座嘉宾**：我打算用历史上的类比来说明，因为我认为这是回答这个问题的有效方式。在我们把“指令遵循”（instruction following）变成现实之前，世界上根本就不存在用于指令遵循的数据。从来没有人记录过人类如何回答简单的字符串问题，也没有人收集过针对大语言模型输出的偏好对比数据以判断哪一个回答更好。所以这类数据在世界上完完全全是不存在的。在定义和开创这项任务的过程中，我们必须去创造数据的形态、不断对其进行迭代，并且亲自收集那些数据。
+
+同样地，对于 RLVR 而言，RLVR 中的数据往往体现为环境对吧？也就是这些强化学习环境，比如沙箱、各种工具等等，让你可以在其中尝试各种操作。在 RLVR 出现之前，这些环境其实在某种程度上就已经存在了，但它们毫无用处，而且由于当时没有人能够基于它们进行训练，这些数据集根本没有市场。
+
+类似地，对我们而言，我们也需要创造一种全新类型的数据、全新形态的数据，对其反复迭代，然后再实际把数据本身生产出来。从构造上讲，对于所有这些探索，它们始终必须由内部自主构建，而且始终始于团队内部，因为只有这样你才能够去思考数据的形态并展开迭代。因此，我们所有的数据全都是在内部自主完成的。就我所见，这种情况在相当长的一段时间内都将保持不变，因为整个外部世界目前完全不知道该怎么做，而全球在这个领域的专家全都在我们团队。所以我们完全由自己来构建。我们显然不需要用户数据，历史上这些范式从来都不需要。它始终需要对任务本身的极其细致的打磨，并深刻理解什么是真正的北极星。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: So, I'm going to use the analogies in the past cuz I think that that's an effective way to answer this. Before we made instruction following a thing, the data for instruction following literally did not exist in the world. Like no one had like here's a human answering simple strings. No one had preference data from like outputs of LLMs to see like which one is better. So, this straight up did not exist in the world and in creating the task, we had to create the shape of the data, iterate on it, and also collect that data. Similarly for RLVR, um the data in RLVR tends to be environments, right? Like these RL environments to like like try stuff with like sandboxes and tools and whatever else. And those environments kind of existed before RLVR was created, but they were not useful and there was no market for all of those data sets because no one could train on them. Um so, similarly for us, we needed to like create a new type of data, a new shape of data, iterate on that, and then actually create the data itself. So, by construction for all of these things, these always need to be made in-house and they always start in-house because that is how you even iterate and think about the shape of it. So, we have done all of it in-house and that as far as I can tell is going to stay the case for quite a long while um because uh you know, the world has no idea what it's doing right now and all the world experts are our team. So, um you we just make it ourselves. We obviously don't need user data. None of those things do. It's It always requires a lot of care for the task and really understanding what the North Star is.
+
+</details>
+
+### 最痛苦的教训与任务定义
+
+**主持人**：你最近写了一篇非常出色的文章，标题叫做《最痛苦的教训》（The Bitterest Lesson），它是针对理查德·萨顿（Rich Sutton）那篇极其著名的论文而写的。能否带我们梳理一下那篇文章的核心内容是什么，以及 RLCD 在其中处于什么位置？你是倾向于数据、算力还是算法？你真正的主张是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: You had a a great post uh recently called the bitterest lesson in um in relation to uh Rich Sutton's uh you know, uh extremely famous um essay uh walk us through through what that is and uh where RLCD fits. Uh are you you know, you data, compute, algorithm? Where where where what do you actually
+
+</details>
+
+**客座嘉宾**：我认为所有伟大的训练方法都以完全相同的方式发挥作用，那就是它们本身都是开创性的新任务（novel tasks）。不过我先带你梳理一下背景。萨顿的“苦涩的教训”（The Bitter Lesson）大致概括起来就是：算力与规模缩放（scaling）比算法本身更为重要。因此，当人们信奉“苦涩教训派”或“缩放定律派”时，往往意味着他们认为：“我们采用什么算法有什么要紧的？只要把规模扩大、把更多算力砸在问题上就行了。”
+
+但我认为这是一种过度简化，尤其是针对萨顿当时所研究的那类强化学习环境而言。他所做的强化学习通常是在游戏环境中进行的，而在游戏中，任务和数据根本不成问题，因为它们本质上都是算力的函数。但在现实世界中，如果没有数据，光有算力你实际上什么也做不了。比如你不可能继续在整个互联网数据上盲目扩展预训练，因为我们已经把互联网上的数据消耗殆尽了。显然，数据在其中是最为关键的要素。但是，为了能够知道数据究竟应该是什么形态，你首先必须确立任务本身。也就是说，你必须清楚任务的轮廓与形态……
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: argue that all of the great methods of training fit in the exact same way, which is they are novel tasks. I'll walk you through it first though. So, Sutton's bitter lesson roughly paraphrased is that compute and scaling matters more than algorithms. So, when people are like bitter lesson build, scaling law build, etc. This often means like why does it matter what algorithms we do? Let's just scale it up and throw more compute at the problem. I would argue that this is an oversimplification specifically for the kinds of RL environments that Sutton used to work on at the time. He's RL is often done in games and in games there's no question about task and data cuz these are all functions of compute. But in the real world, you can't really do anything with compute without the data. You know, like you can't continue to scale pre-training on the internet cuz we've run out of internet data. And data is like obviously the most important thing there. But in order to even know what the data should look like is you need the task. You know, you need to know the shape of the
+
+</details>
+
+<!-- chunk 6/8 -->
+
+### 优化目标与“机器原生智能”
+
+**Speaker B**：……这项任务，你必须真正理解它。这项任务必须与现实世界中具有实际价值的事情挂钩，最简单的解释方式就是：你优化什么，就会得到什么。除了机器学习研究人员之外，似乎所有人都能直觉性地理解这一点，因为研究人员不喜欢去思考这个问题。
+
+但事实就是你优化什么就会得到什么，而且你必须明确自己的优化目标。一旦明确了这一点，你接下来才能去制作数据、扩展算力并采用更精巧的算法。所以对我而言，RLHF本身就是一项任务。让模型在对话中擅长遵循指令，这本身就是一项具体任务。它有着自己独特形态的数据、独特的算法、独特的算力配置等等。但你所能获得的最高回报，永远源自于一开始就把这项任务的本质琢磨清楚。从预训练模型到ChatGPT的跃迁，是聊天机器人智能史上最大的一次飞跃，因为那感觉就像是一个成年人在对抗蹒跚学步的幼童，不是吗？我不知道你是否也有同感。你看，Q*和o1在当时就像是独成一档的存在，对吧？虽然它们并没有真正应用在现实世界的实际用途中，但在基准测试成绩上，它们确实遥遥领先。这太不可思议了。这就像是成年人对上幼儿的巨大差距。同样地，正因为我们是唯一一家致力于优化“机器原生智能”的团队，所有的探索都在正确的路径上。这也是一种类似成年人对幼儿的降维局面，在构建可靠的机器原生智能方面，我们独成一档，因为我们是唯一一家从头到尾贯穿整个流程的团队。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: ...task, you need to understand it. This task needs to be linked to valuable things in the real world and the simple way of explaining it is you get what you optimize for. Everyone seems to intuitively understand this except for machine learning researchers because they don't like to think about that.
+
+Um but you get what you optimize for and you need to know what you optimize for. And once you do know that, you can then make data, scale compute, and have fancier algorithms. So, for RLHF is to me a task. You know, like making models good at instruction following in chat is a task itself. It has its own shape of data, its own algorithms, its own compute, etc. But the biggest bang you get is always from even figuring out the task in the first place. You know, chat to GPT to pre-chat GPT was the largest jump in chatbot intelligence ever because it was kind of like an adult, you know, battling toddlers, right? I don't know if you are too. You know, Q-star and O1 were like on a league of their own, right? Like it wasn't They weren't really used for anything useful in the world, but they were truly in a league of their own in terms of benchmarks, right? That's incredible. It was like the equivalent of like the adults to the toddlers. And similarly, because we're the only ones optimizing for a machine native intelligence, it is all of them are the right path. It is kind of like the adult versus toddler situation where we're in a league of our own, at least from like a reliable machine native intelligence perspective, because we're the only ones doing the whole thing.
+
+</details>
+
+### 开源模型与后训练的“百宝箱拼装”
+
+**Speaker A**：但你们自己并不做预训练，对吧？那么Jeff的基础究竟是什么？你们使用的是开源权重模型吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: And you you don't do pre-training, though, right? Like do you Where where What is the basis for Jeff? Like do you use like open weights models?
+
+</details>
+
+**Speaker B**：我们确实结合使用了多种模型。预训练模型内部其实蕴含着大量经过高度压缩的智能。不过它们的形态非常偏向自然语言文本，所以为了达到目的，我们需要对其做一些非常“粗暴残忍”的改造处理。这也是为什么我不倾向于把我们所做的事情称为传统意义上的“后训练”（post-training）——因为正如刚才所说，以一个喜爱正统后训练的人的视角来看，我们做的这些粗暴手段根本算不上标准的后训练，甚至可以算是一种对后训练的“离经叛道”。我想正统的后训练研究者大概不会愿意和我们干的这些可怕手段扯上任何关系。
+
+但市面上各类开源权重模型中确实蕴藏着巨大的智能潜力，我们可以把它们串联整合、以类似马盖先（MacGyver）拼装工具的方式拼凑组合成一套极其强大的智能体。我们确实利用了这一点。大家都知道，直到最近之前，我们的融资总额还不足4000万美元。所以要么我们在预训练领域取得了某种惊天动地的大突破，要么就是我们比其他人更懂得善用现有资源。我认为显然是后者。我们根本不做预训练，坦白说，我认为从头搞预训练就是一场浪费资源的巨大灾难。因此我希望永远都不要去碰预训练，不过谁知道未来会发生什么呢。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: We do use a combination of models. It's like pre-trained models have a lot of like compressed intelligence in them. They're very text-shaped, so we need to do like some disgusting things for it. That's why I don't say what we do is post-training per se, because again, these disgusting things um I wouldn't call it post-training as a person who likes post-training. It's kind of a bastardization of post-training. I don't think post-training people would want to be associated with the terrible terrible things we do.
+
+But um there's just a lot of intelligence like in the variety of open weight models that we can, you know, link up and MacGyver into this great intelligence. Um So, we do use that. Um you know, everyone knows that we raised less than $40 million until recently. So, it's either we've had like an absolutely tremendous breakthrough in in pre-training or we just are more resourceful than other people. I think it's the latter. Uh but uh we did not do pre-training, and honestly, I think pre-training is a giant dumpster fire of wasting resources. So, I hope to never do so, but who knows what the future will bring.
+
+</details>
+
+### 分类器：软件智能的控制分支接口
+
+**Speaker A**：利用预训练模型这一现状，正好切入到了你刚才提到的关于“分类器”的讨论。当Jeff发布时，有很多人评价说：“哎呀，这不就是一个分类器吗？”为了交代一下背景：分类器本质上是一种更老派的机器学习形式，在生成式AI出现之前就已经广泛应用，比如XGBoost这类算法，多年来一直被用于垃圾邮件分类等场景。在某种程度上，我知道你是欣然接受“你们确实属于分类器”这一说法的。那么，从哪些维度来看你们确实是分类器？而那些贬低说“你们只不过是分类器”的人，又究竟错失了什么根本重点？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: So, the existence of that pre-trained model um is it segue into the whole uh classifier conversation that you alluded to earlier? There's is of people when Jeff came out that said, well, it's just a classifier. And for context, a classifier being effectively an older form of machine learning, you know, pre-generative AI, things like XGBoost that have been used for many, many years for things like email spam classification. In what way, and I know you embrace the fact that you're in some ways a classifier. So, in what way are you a classifier? And in what way do people that say that you're a classifier miss the entire point?
+
+</details>
+
+**Speaker B**：做机器学习的人，尤其是学术研究人员，至今仍然完全没有意识到Jeff的真正价值所在。这对我们反倒是一件大好事，因为我们做的并不是那种花哨玄乎的机器学习。而在我看来，“它只不过是个分类器”简直是最愚蠢的批评之一。因为分类器根本就不是老掉牙机器学习的代名词。不好意思把话挑得这么直白，分类器实际上是一种接口，它是将智能以行之有效的方式注入软件系统的组织形态。不是吗？想想看：Facebook的推荐流底层靠什么运行？分类器。TikTok靠什么运行？分类器。Google搜索靠什么运行？分类器。
+
+这根本就不是什么低级落后的坏东西。要想让软件功能更加强大，软件本身凭借简单的位运算和条件比较就能做很多事情，但如果你想实现高度复杂的逻辑行为，你就需要把智能注入到代码的分支跳转中去。而要做到这一点，方法正是借助“智能”来引导这些分支走向——这恰恰就是分类器在本质上所做的工作。所以，我们所做的事情绝不仅仅是分类器，但我们之所以从分类器切入，是因为它们极其有用。说它是一个分类器，实际上是极其崇高的赞誉。
+
+其实客观来说，如果说“拥有Jeff就相当于直接配备了一整支2019年水平的20人机器学习工程团队，能够根据你的任何想法随时随地、瞬时构建出你所需的任何功能”，用这句话来形容Jeff都未免有些过誉。但实际上Jeff比这更聪明，因为我们今天掌握的模型远比那时先进得多。虽然我不敢断言我们目前是否已经完全达到这一终极境界，但这无疑是一个巨大的极高褒奖。而做机器学习的人往往理解不了这一点，因为他们太忙于去搞整个“苦涩教训”（The Bitter Lesson）中最无价值的那部分——也就是算法本身。他们整天试图在数据中心里闭门造“神”，却不去解决现实世界中的真正问题，也不去看看现实中真正被自动化解决的事情究竟少得有多可怜。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: ML people, uh especially researchers, really miss the value of Jeff still. Um and that's a really good for us because it's not fancy ML. And "It's just a classifier" is among the dumbest um criticisms, in my opinion, because classifiers again uh classifiers are not a form of old-school machine learning. You know, sorry to dive the path for you, but classifiers are an interface. They are the shape of putting intelligence into software systems that's useful. Right? Like, how does Facebook work? Classifiers. How does TikTok work? Classifiers. How does Google work? Classifiers.
+
+It's not like a bad thing at all, because in order to make software more powerful, software can do so much with its like it's like dumb little bit comparisons, is you want to put your intelligence into branching in your code in order to do complex behaviors. And the way to do that is to influence the branching via you know, intelligence, which is what classifiers literally are. So, classifiers what we do think you is not only classifiers, but we've started with classifiers because they are super duper useful. You know, it's a it's an incredible compliment to say it's a classifier.
+
+And actually, this would be a not a fair way to describe Jeff because it's too much of a compliment if we said that Jeff was equivalent to anyone having like a 20-person machine learning engineering team from 2019 to build every single thing you think about on the fly and it's instantly done. But actually it's smarter than that because we have better models today than we did then. And like like I I don't know if we're there yet, but that's a hugely awesome compliment and machine learning people don't get that because they're too busy like trying to do like the the the least valuable part Bitwise lesson, which is algorithms and they keep trying to like build their god in a data center rather than solving real problems and see the real world and see how little automation truly is getting done.
+
+</details>
+
+### 造可用工程，而非造虚拟之神
+
+**Speaker A**：关于你提到的“造神”这一点，你有一句非常精彩的名言，甚至还印在了你们发布视频的T恤上，叫做“造产线，不造神”（Prod not God）。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: And uh to the god point you have like this awesome saying which was actually also on the t-shirt of your launch video saying prod not not god, which uh
+
+</details>
+
+**Speaker B**：没错，我们要打造的是工业级的生产工具，而不是虚无缥缈的神明，绝对如此。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: We're we're building prod not god, absolutely.
+
+</details>
+
+**Speaker A**：是的，这种表达非常精辟传神。顺着这个思路进一步剖析：2019年典型的传统分类器通常只能专注于某一个极其狭窄的特定任务；而按照你的说法，因为现在的方案是构建在已经掌握了全世界知识的预训练模型之上，所以你们实际上能够将这种分类能力应用到几乎任何任务中。是这样吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah, a a a fabulous way of of of putting it. Um and to unpack some of this, so your typical classifier from 2019 was also focused on a very narrow task and what you're saying is that effectively because this sits on top of a pre-trained model that has all the knowledge in the world, you're basically able to apply classification to any task. Is that is that
+
+</details>
+
+**Speaker B**：任何大语言模型能够胜任的任务都包含在内，对吧？这就是为什么我们称它们为“系统一”（System 1）模型，因为它们非常擅长处理直觉型、启发式的系统一任务，或者是紧密相关的周边任务。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Any task any task that the LLMs can do, right? And that's why we call them system one models because they are good at system one tasks, you know, or they're adjacent to that.
+
+</details>
+
+**Speaker A**：所以你不再需要专门去训练一个垃圾邮件分类器，因为底层的预训练模型早已拥有了关于各类电子邮件的全部背景知识。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: But you don't need to train a an email spam classifier because the the pre-trained model has all the knowledge in the world about about emails.
+
+</details>
+
+### 可编程性与极度科幻的软件未来
+
+**Speaker B**：完全正确。而且通过任务拆解，你甚至可能根本不想要一个千人一面的通用垃圾邮件分类器。你可能会希望定制专属于你个人的逻辑，例如：“来自我的参谋长的邮件，哪怕她写得再像AI生成的，也必须标记为正常邮件而非垃圾邮件。”所以关键就在于这种可编程性。我认为这种可编程性解锁了海量的全新应用场景，这甚至超越了让每位软件工程师都配备一整组机器学习工程师团队为其定制分类器的效果。因此，这种通用性与可编程性之间，蕴含着一种非常真实而动人的美感。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yes, and you know, with a decomposition, like you you might not even want a spam classifier because that'll be the same for everyone. You might want like your own thing where I want to say emails from my chief of staff, even if she writes like AI, should be marked as not spam. So, it's like the programmability I think this unlocks so many more use cases, even if you had the equivalent of every engineer having a team of MLEs, machine learning engineers, like making classifiers for them. So, I think that there's like a real real beauty to the generality and programmability of it.
+
+</details>
+
+**Speaker A**：是的。为了确保我们充分涵盖整个讨论中最关键的核心，你刚才强调了可编程性，此前你也提到了可组合性，同时我们还探讨了推理成本与响应速度。所以本质上，这里最核心的主张在于：如果这一切成立并真正落地——而你们也正在全力将其变为现实——那么智能就能够如毛细血管般无处不在地渗透进所有现代软件之中。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yes. And to make sure we cover this very very important part of the the whole discussion, you mentioned programmability, uh you mentioned composability earlier. We talked about price and speed. Uh and basically the the the the fundamental claim is that if all of this is is is true and happens and you guys are very much building it, then it can be ubiquitous across software.
+
+</details>
+
+**Speaker B**：这正是我们的终极梦想。天呐，我对此抱有极大的宏伟期望，而且我认为这些设想并不脱离实际。我认为软件行业将会发生翻天覆地的深刻变革。你看，仅仅依赖简单的二进制位比较，人类就已经创造出了何等庞大的成就。我们一直以来构建了那么多极具价值、令人叹为观止的优秀系统。回看2019年的软件生态，我认为它已经让这个世界变得美好了许多；虽然其中难免也有差强人意的地方，但通过那些原始简陋的逻辑比较规则，我们已经成功实现了无数领域的自动化。
+
+那么试想一下，如果我们能在此基础上无限拓展这种能力呢？我相信我们能够将难以计数的极其强大的功能彻底实现自动化。我相信未来的科技形态将具有令人难以置信的科幻感，而我们目前正在竭尽所能去发掘足够鲁棒健壮的智能系统，让那个未来变得更加充满科幻色彩。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: That is the dream. I hope for Oh, man. I have grand hopes that I think are not even that unrealistic. I think that so much could change in software. Like, you know, look at how much was done with bit comparisons. You know, we have been building like so much valuable sick stuff. Like, you know, just look at 2019 software has like I think made the world a lot better. Like, sure there were some misses, but like we've automated so many things via these simple like sticks and stones comparisons. And imagine if we can just expand that more more more more more. I think that I think that like we'll be able to automate so many freaking awesome things. I think that the future will be unbelievably sci-fi, and we're going to do whatever we can to like unearth the intelligence that is like robust enough to make it even more sci-fi.
+
+</details>
+
+**Speaker A**：这也就意味着——借用你的逻辑复述一遍——它可能是在软件的每一行或每一列中都嵌入智能……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: And that's means again like to play it back, it could be it could be intelligence like in every row or column of a
+
+</details>
+
+<!-- chunk 7/8 -->
+
+### 嵌入式智能与软件层级
+
+**主持人**: ……数据库，对吧？所以，它其实就是将智能深度嵌入到所有软件事物当中。
+
+<details>
+<summary>Original English</summary>
+
+**Interviewer**: ...database, right? So, it's it's just embedded intelligence across all things software.
+
+</details>
+
+**嘉宾**: 确实如此。而且是贯穿在软件的所有层级之中。我认为伴随这种分层堆叠，当你打造出这样一个非常有价值的模块盒子，然后去复制它；如果你能把它做得足够快、足够便宜，那么其他模块盒子就可以调用它上百次。这样一来，你就能执行层级越来越高的认知自动化工作。谁也无法预料这些最终会演变成什么形态，但我认为其中会孕育出许多极其酷炫的成果。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Absolutely. Across all levels of software, too. And I think that with this stacking, as you make, you know, like this valuable box and then replicate it, and if you make it fast and cheap enough, now some other box can call this thing 100 times, and now you can do higher and higher units of cognitive automation work, and who knows what those things are going to be, but I think that there can be like a lot of insanely cool things.
+
+</details>
+
+**主持人**: 没错。某种程度上，这颠覆了我以往在软件和 AI 领域的全部认知，或者说是对其形成了一种互补，对吧？以往像 Cursor 或者 Cognition（Devin）这类工具，非常擅长加快软件构建的节奏、降低编写软件的门槛。但你所阐述的逻辑完全不同，你强调的是直接将智能嵌入到软件本体之中。
+
+<details>
+<summary>Original English</summary>
+
+**Interviewer**: Yeah. And that's flipping on its head or in some ways a complement to everything that I've been doing in software and AI to date, right? So, the the Cursors or the Cognitions have been very good at accelerating the pace and the how easy it is to create software, but what you're saying is is different. It's that you can embed intelligence in software.
+
+</details>
+
+**嘉宾**: 没错。这是一个非常好的观察。像 Cursor 和 Cognition 这些工具，它们的重心在于把软件本身写得更快、成本大概也更低。而我们想要扮演的角色，与其说是像他们那样去扮演一名软件工程师，不如说我们想成为底层的逻辑门（logic gate）。我们希望置身于软件系统内部，去拓展软件工程师能够创造的可能性边界，而不是去替代软件工程师或做类似的事情。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Exactly. So, great question. The Cursors and Cognitions focus more on writing the software itself faster and cheaper, presumably. While what we want to be, instead of kind of being like a—so, what they're doing is being kind of like a software engineer, but what we are trying to be is more like a logic gate. You know, like we want to be inside of the software that expands the possibilities that software engineers can make, rather than, you know, replacing the software engineers or anything like that.
+
+</details>
+
+### 应对行业模仿者与表面接口封装
+
+**主持人**: 太棒了。那我们来聊聊那些所谓的“模仿者”吧，因为这在 X（Twitter）等社交平台上绝对是一个大家非常关注的热门话题。给那些没关注前因后果的人介绍一下背景：你们结束隐形研发状态才刚刚三周；而在这短短三周里，几乎所有大厂和同行都纷纷推出了竞品——从 Cloudflare 到 Databricks，我记得就在昨晚微软的萨提亚（Satya Nadella）也刚刚发布了一个基于决策（decision）的品类。对此你怎么看？面对那些唱衰者，你有什么想说的？
+
+<details>
+<summary>Original English</summary>
+
+**Interviewer**: Great. Let's talk about all the copycats, quote and unquote, because that's, you know, a topic that's top of mind on X and everything. So, for anybody that hasn't followed, so you guys have been out of stealth for 3 weeks, and then in the 3 weeks you've had basically everybody and their brother come up with something, from Cloudflare to Databricks to I think Microsoft just last night Satya announced a decision-one category. What do you make of that, and what do you say to the naysayers?
+
+</details>
+
+**主持人**: 那些唱衰你们的人？
+
+<details>
+<summary>Original English</summary>
+
+**Interviewer**: The naysayers of us?
+
+</details>
+
+**主持人**: 是的，就是那些认为你们在三周之内就被所有人彻底抄光了、因此已经毫无护城河可言的人。虽然这显然不是事实，但我很好奇你会如何定位和回应这个局面。
+
+<details>
+<summary>Original English</summary>
+
+**Interviewer**: Yeah, the the people that think that you were just completely copied by everyone in 3 weeks and therefore there's nothing left, which obviously is not the narrative, but I'm curious like how you position it.
+
+</details>
+
+**嘉宾**: 我觉得时间会证明一切。我不想表现得居高临下或者踩别人，但我很愿意分享我对这件事情的真实看法。刚启动这个项目时，我真的一度以为只需要一周就能做完。当时我做出的东西，跟现在大家拿出来的那些方案非常类似。但核心问题在于：那东西极度不可靠，完全经不起推敲。而鲁棒性问题，正是我多年来一直苦苦思索和攻克的难题。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: I think we'll really see. Like I don't want to punch down too much, but I would like to describe my take of things. When I first started this project, I literally thought it would take a week. Like I ended up with something very similar to what people are doing, but the problem is it was really, really clearly not robust. And that was something that has like plagued me for years.
+
+</details>
+
+**嘉宾**: 我能感觉到这也是很多人正在经历的状态。需要说清楚的是，我自己本身就是个机器学习研究员，所以我所有这些自嘲式的评价，首先适用于我自己。我曾经也是个傲慢的人，以为靠算法就能搞定一切，想着“我只要自己搞搞这些模型旋转变换（shape rotations），就能把这做出来”。所以在这个项目启动的第一周，我就做出了类似他们现在发布的东西。但至少以我当时的经历来说，那套东西笨拙得令人尴尬。比如把一个功能的外形轮廓套出来、直接照搬已有的接口，这其实是非常非常容易的。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: And I get the sense that this is a thing that—to be clear, I'm a machine learning researcher, so all my self-deprecating comments apply to me. I was an arrogant person who thought algorithms are the way to go and like, "Oh yeah, I can just, you know, do these shape rotations myself and make this happen." So I was able to make things like this in the first week of this project as well, and the problem was, at least in my experience at the time, is it was so unbelievably dumb that it was embarrassing. Like getting the shape of something and copying existing interface is very, very easy.
+
+</details>
+
+**嘉宾**: 这就像当年 RLHF 兴起时谷歌做 FLAN 一样。其实在我们之前，他们就已经发布过一个早期 Alpha 版本了，他们搞出了一个类似形态的版本，但那个版本不仅效果糟糕，甚至比什么都不做还要差。类似的事情在行业里无时无刻不在发生。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Similar to what Google did with Flan back in the days of like RLHF. Like we actually had an early alpha they actually published before us. They made like a version of it, and it was not just bad, it was worse than nothing. So things like this can happen all the time.
+
+</details>
+
+**嘉宾**: 从纯求知的学术角度来看，我也很好奇去客观评估他们这些产品到底有多强。就我从目前公开行业信息来看，在实际的可靠性（reliability）指标上，他们大概落后我们整整几年的差距。不过，在我公开对外界下这个结论之前，我一定要先通过严谨的测试去量化测量这一点。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: And I'm curious about measuring how good they actually are from like an intellectual perspective. As far as I can tell from the field, they probably are the equivalent of years behind us in terms of like actual reliability, but I want to measure this before I like say that to anyone else.
+
+</details>
+
+### 基准测试的误导性与真实可靠性
+
+**主持人**: 而且对于用基准测试（benchmark）去衡量模型这种事，你本身也不是很推崇，对吧？你之前发的那篇博文是怎么说的来着？“基准测试、谎言与基准测试”？
+
+<details>
+<summary>Original English</summary>
+
+**Interviewer**: And you're not a fan of a benchmark either in terms of like measuring the—but—what was your post again? "Benchmarks, lies, and benchmarks?"
+
+</details>
+
+**嘉宾**: 对，大概是“谎言、该死的谎言与基准测试”之类的意思。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: And benchmarks or something like that.
+
+</details>
+
+**主持人**: 没错。
+
+<details>
+<summary>Original English</summary>
+
+**Interviewer**: Yeah.
+
+</details>
+
+**嘉宾**: 基准测试真的会对用户造成极大的伤害。而且它们伤害最深的，恰恰是那些原本最寄希望于基准测试提供参考的用户——也就是那些根本没有时间亲自逐个测试工具的用户。因为正是这部分用户最容易被这些分数所误导。我的感觉是，其他人目前基本上都在全方位为了刷基准测试而优化。在我看来，这很可能是一个错误的策略。不过话说回来，我们掌握了更好的智能评测方法，所以我们也打算去进行客观评测。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: So, benchmarks really, really hurt users. And they actually hurt most the users who they think they're meant to help, which is the users who do not have the time to play with things themselves, because they are the ones who are most misled by these. So, I get the sense that everyone else is really optimizing for benchmarks. And that is, I believe, probably a bad strategy, but again, we have better ways of measuring intelligence, so we plan to do this.
+
+</details>
+
+**嘉宾**: 我目前的推测是，他们的产品还比较笨拙、缺乏鲁棒性，但对某些人的工作流来说，也许这已经够用了。如果这些工具真能帮人们解决问题，我也非常为他们高兴。坦白讲，能切实解决用户的问题是我最大的动力来源。我唯一的担忧在于：这些刷榜行为和基准测试灌水，可能会让大家误以为这一整个模型品类根本行不通——因为用户误用了某个笨拙的模型，而不是我们的模型。因此，我对大家的唯一请求就是：你们不必盲信我们，但至少请把我们的模型也一并测测看，然后坚持选择真正对你有效的那个。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: My guess is that they are dumb and non-robust, but maybe that will be sufficient for some people's works. And if they solve people's problems, I am super jazzed for that. Like actually, I'm inspired by solving people's problems. My only fear from this and benchmark maxing is that it might convince people that this entire category of models doesn't work because they use one of the dumb models instead of our model. And my request for people is that you don't have to believe in us. Just try our model too at least and stick with what works.
+
+</details>
+
+**嘉宾**: 因为要让智能变得真正稳定可靠，背后有海量极其微妙的工程细节。那些急于争夺荣誉、追逐名利的传统机器学习研究人员，往往根本无法理解这些工程精微之处。这也是为什么我们团队坚决不招这类研究员的原因。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Because there's like a lot of nuance to making intelligence reliable that machine learning researcher types who really want credit and all of that truly do not understand. And that's why we don't hire those types.
+
+</details>
+
+### 表层适配与底层范式创新的差异
+
+**主持人**: 是的，我在脑海里复盘我们整场对话，业内确实有很多非常聪明的人。我刚才提到了几家大公司，显然 OpenAI 就在几天前刚刚发布了他们名为 Decisions 的产品。但我脑海里回顾我们的对话时，感觉你们正在做的事情是非常底层的根本性创新。比如我们之前聊到的整个 RLHF 机制，深入分析了为什么它会引发缺陷、你们是如何剔除它并换上新架构的、你们的 LCD 原理，以及为此所需的专用数据支撑——这背后需要巨大的工作量投入。那么在这两周时间里，其他人到底做了什么？照你的说法，他们所谓的接口，难道只是把常规大语言模型（NL）的输出结果拦截掉文本，强行将其塞入某种概率值格式里？
+
+<details>
+<summary>Original English</summary>
+
+**Interviewer**: Yeah, playing back this conversation in my mind, there's a lot of smart people in the community for sure. You know, I mentioned certain companies. Obviously, OpenAI released their own product called Decisions just a few days ago, but playing back this conversation in my mind, it seems that what you guys are doing is very fundamental. You know, this whole discussion we had around RLHF and why that created problem and how you removed it and replaced it with something, and your LCD, and you need specific data for that. That seems like a lot of work. So, what did people do then in these two weeks? When you say interface, they just took the results of a regular NL and removed the text and forced it into some kind of probability.
+
+</details>
+
+**嘉宾**: 一点没错。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Exactly.
+
+</details>
+
+**主持人**: 但他们并没有做底层该下的深桥硬马功夫。他们只是把输出文本剥离掉……
+
+<details>
+<summary>Original English</summary>
+
+**Interviewer**: But they didn't do the work to get there. They just removed the—
+
+</details>
+
+**嘉宾**: 没有去真正实现系统的稳定可靠。不过，如果这样做确实能解决一部分人的问题，我也打心底里感到高兴。其实我在这里特别想为 OpenAI 的 Decision API 点个赞。不论外界怎么评判，他们至少没有附带那些虚幻的基准测试，就凭这一点，在我眼里他们就已经比其他所有人强得多了。在理想的世界里，没有任何人会去试图误导用户；但现实中有些公司确实需要博取眼球，希望这不会带来过多的行业信任透支与负面怨气。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Or to get it to be reliable. And if this solves people's problems, I am super duper just for that. And actually I do want to shout out OpenAI's decision API. For better or for worse, they did not include benchmarks, so they are a lot better than everyone else in my books. So, in ideal world, no one tries to mislead users, but some companies need the attention and hopefully they don't create too much ill will.
+
+</details>
+
+**嘉宾**: 用户至少也去测试一下我们的模型，这样才能亲自找出真正契合自己业务需求的东西。但如果我们的高智能和极致可靠性对你的业务来说并非刚需，我认为完全可以直接选用其他家的模型。这没有任何问题。我由衷希望问题能被解决，希望自动化能在各个领域真正落地。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: And at the very least people try our models as well so that they can figure out what actually works for them. But if the intelligence and reliability that we have is not necessary, I think use the other models. That's great. You know, like I want problems solved and I want automation to occur.
+
+</details>
+
+### 开源权重、API 策略与开发者工具
+
+**主持人**: Cloudflare 的版本是开源的。开源这件事情，你们团队是否也在考虑？
+
+<details>
+<summary>Original English</summary>
+
+**Interviewer**: Cloudflare's version is open source. Is that something that you guys are thinking about?
+
+</details>
+
+**嘉宾**: 我们确实在考虑，内部针对这个问题有过非常多次的辩论。但目前的核心问题在于：就我们所见，我们的模型是遥遥领先、最为出色的，但距离我们心目中那种能够从容应对一切场景的终极成熟状态，依然有很长的路要走。我们坚信，通过 API 的形式能够以极高的频率快速迭代演进，从而更优质地满足用户的实际需求。所以，我们确实讨论过开源，也认真权衡过。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: We are thinking about it. We've had this debate a lot. The issue is that, so far as we can tell, our model is by far the best. We think it's very far from where we think is like totally ready for everything. And we think that having an API to iterate much, much, much faster and serve people's needs way better. So, we have talked about it. We have thought about it.
+
+</details>
+
+**嘉宾**: 目前我们还没有对外做出任何确定的承诺，但我认为未来完全有可能会走这条路，尤其是当我们未来将模型做得更小、走向端侧本地运行（on-device）等等阶段的时候。我由衷希望可靠的智能能够无处不在。大家都非常热爱开放权重（open weights），我也同样喜欢开放权重；但客观事实是，开放权重并不是让智能最容易普及到每个角落的方式，相比之下 API 部署要便捷得多。而且通过 API，我们可以更容易地把那些用户自以为不需要、但其实不可或缺的“营养维他命”递送到他们手中。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: We've not really committed to anything, but I think something like that could definitely be in the cards in the future, especially as we go into smaller and all on-device and all of those things. Like I just want reliable intelligence everywhere. And I just think that open source people love open weights. I love open weights, too, but it's not the easiest to get everywhere versus an API is. And then API is way easier to give people the vitamins that they don't think they need.
+
+</details>
+
+**嘉宾**: 另外据我的观察，开源在短期内往往容易成为很多人搬起石头砸自己脚的工具（foot gun）。当然，我也并不介意给某些人提供这种可能造成反噬的灵活武器，毕竟有些软件工程师就是对这种能随意折腾的工具乐此不疲。我们在设计产品时，花了大量精力去思考：作为工程师，如果让我们来选，在掌握目前所有已知技术认知的前提下，我们究竟希望被一家怎样的公司所服务？而直接开源在当前这个阶段，确实还不合时宜。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: And as far as I can tell, open source, at least in the short term, will be a foot gun for people. And I'm down to give some people foot guns. Some, you know, software engineers love foot guns. We think a lot about how we would want a company to serve us as engineers and given all that we know. And that is just not in cards right now. Yeah.
+
+</details>
+
+**主持人**: 好的，太棒了，这非常发人深省。接下来我们聊聊 TypeSafe 这家公司本身吧。那么在关于……
+
+<details>
+<summary>Original English</summary>
+
+**Interviewer**: Okay, great. Fascinating. Let's talk about Type Safe, the company. So, in terms of what...
+
+</details>
+
+<!-- chunk 8/8 -->
+
+### 杰文斯悖论与系统一模型的独立市场
+
+**Matt Turck**: ……你们正在构建的内容，未来的路线图究竟是什么，诸如此类的所有事情。首先，意识到你们目前显然处于构建阶段，但与此同时，你们正在产生非常可观的收入。我在某处读到过这样一种说法：你们并不打算占领整个大语言模型（LLM）市场，而是去获取其中的一小部分；而且这种判断很大程度上是基于杰文斯悖论（Jevons paradox）——顺便提一句，这也是你们公司名字“Jev”的由来。你能为我们深入拆解一下这个逻辑吗？比如，你是如何看待公司的经济现实的？你们接下来打算走向何方？
+
+<details>
+<summary>Original English</summary>
+
+**Matt Turck**: ...you're building and what the roadmap is and all the things. So, first of all, and realizing that, you know, you're very much in the building phase, at the same time you're generating tremendous revenue. I read somewhere that the claim is that you're not going to capture all of the LLM market, but you're going to capture a fraction of it, and that this is very much based on the Jevons paradox, which by the way is the origin of the name. Do you want to unpack that for us? Like, how do you view the sort of economic reality of the company? How do you go from here?
+
+</details>
+
+**Speaker B**: 在某种程度上，我把它们看作完全不同的市场。我认为在短期内，市场上可能会存在一些重叠，这是因为此前并没有针对工作流自动化的通用分类器形态，因此每个人都在用大语言模型来做这件事情。所以，我们目前的很多用量其实是用户直接切换过来的。但这在最初根本就不该属于大语言模型的市场。这其实很无奈，纯粹是因为当时只有这一个工具可用。
+
+因此，我认为将会出现一个本质上的“系统一”（System 1）模型市场，它会持续增长并做出非常出色的成果，而这将与大语言模型市场彻底分离开来。大语言模型将继续被用于生成文本、生成代码以及所有这些上层任务。随着未来新突破的出现，它的表现会不会经历起起伏伏？那是绝对会的。我非常期待能涌现出大量新的突破，尤其是在 Token 效率领域；但这只是我作为一个局外人、站在场边为科学的进步加油喝彩罢了。我确实希望这些技术进展能够发生。但我始终认为，“让软件变得无比强大”和大语言模型完全是两码事，因为大语言模型在嵌入到软件内部运行这方面，表现实在太糟糕了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: I see them as completely different markets, kind of. I think in the short term, maybe there's like some overlap in market because there wasn't really a shape of general classifier for workflow automation. So, everyone was using LLMs for that. So, a lot of our usage right now is people just switching over, but that really shouldn't have been LLMs' markets in the first place. You know, it is just tragic because that was the only tool available.
+
+So, there's going to be like an intrinsically system one model market that I think will continue to grow doing awesome stuff, which will be completely separate from the LLM market. So, I think that LLMs will continue to be used for generating text, generating code, all of the above. Like will it go up and down over time as new breakthroughs emerge? Absolutely. I hope there's lots of new breakthroughs, especially on the realm of token efficiency, but that is me from like the outside and the sidelines and just cheering on science's progress. So, I hope that stuff occurs. But I just think that this whole make software really powerful is a completely different market than LLMs because LLMs are just so bad at being inside software.
+
+</details>
+
+### 智能的“逻辑门”时刻与降本带来的需求爆发
+
+**Speaker B**: 而且我显然认为这个市场的规模会非常巨大，因为在我看来，将其类比为逻辑门（logic gates）让我感觉到，我们这种特定形态的智能将会触发杰文斯悖论。而且我认为它引发杰文斯悖论的方式，会远比天然气等能源更为剧烈，更类似于半导体和硅芯片在过去乃至当下所展现出的轨迹。随着我们发现越来越多稳健的自动化应用场景，不断取得落地成果并推向部署，大家就会惊呼：“天呐，这里简直是一座金矿！我们要加大投入，做更多、更多的事情。”
+
+而且随着我们把成本做得越来越低，人们又会感叹：“太不可思议了，现在这个原本就在创造价值的老业务，我们完全可以给它外面再套一层 for 循环，让它多运行 10 到 100 倍，并以此为整个世界创造出各种各样的全新价值。”所以，对于这个前景，我感到无比兴奋。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: And I obviously think that that market will be huge because I think that, you know, the analogy to logic gates makes me feel like our particular flavor of intelligence will Jevons paradox. And I think it will Jevons paradox a lot more like semiconductors and silicon did and continues to do, more than for example like gas does. You know, I think as we find more and more stately use cases to automate stuff and like get successes and deploy it, people are like, "Holy crap, there's a gold mine here. Let's do more and more and more." And as we make it cheaper and cheaper, people are like, "Holy smokes, now this old thing that was producing value, we can, you know, wrap it in another for loop, run it 10 to 100 times more, and create all sorts of value for the world in that way." So, I'm so excited about that.
+
+</details>
+
+### 反思递归自我改进与 AI 寒冬的真正含义
+
+**Matt Turck**: 我很想在结束前探讨一个更偏宏观的话题。你持有两个非常独特的观点，并不是每个人都赞同。其一，你认为我们目前并没有走在通往“递归自我改进”（Recursive Self-Improvement, RSI）的道路上，也就是 AI 自我改进的路径，我们并没有在这条轨道上。但另一方面，你又表示 AI 现在已经避免了你此前认为可能会发生的“AI 寒冬”。能否请你为我们逐一梳理一下这两点，分享一下你最初对世界在未来一到两年走向的看法？
+
+<details>
+<summary>Original English</summary>
+
+**Matt Turck**: I'd love to finish on a sort of like high-level note. So, you hold two unusual positions that not everybody holds. One is that we are not on the path to RSI, so AI improving itself, so we're not on that path. But on the other hand, you said that AI has now averted the winter that you thought might happen. So, walk us through each and your original take for where the world is going in the next whatever year or two.
+
+</details>
+
+**Speaker B**: 谈到递归自我改进（RSI）这个话题，我想这是因为我入行时间足够久了，见过这种戏剧性的循环反复上演过太多次。人们看到微小的百分比收益，然后就直接把它外推到了无以复加的天际；而现实中，阿姆达尔定律（Amdahl's law）必然会起作用。以前在神经架构搜索（NAS）盛行的年代，人们也讲过一模一样的 RSI 故事。当时大家用神经网络去设计更好的模型架构，然后兴奋地喊道：“天哪，它的效率提升了 10%！如果这个更高效的模型接着发现下一个架构，然后我们不断循环往复，直到得到令人难以置信的超高效架构呢？”结果，整个领域最后都被扔进了垃圾桶，因为它根本没有实际用处。
+
+很多人并不理解现实世界中存在着收益递减规律，依我看，当今的模型瓶颈也将面临类似的情况。显然，我自己的预测也存在误差范围，但不管怎么说，尽管这行业里总有一些相对年轻的新人会为了初尝“自我改进”的甜头而兴奋不已，类似的循环却始终在重复上演。
+
+因此，结合我所看到的证据以及我对该领域发展方向的判断，我认为那种 RSI 并没有真正发生。不过，我确实认为人工智能是一项不可思议的技术，而我们目前对其潜力的利用还远远不足，甚至低估到了极度不可思议的程度。我认为这完全属于一条截然不同的发展分支。
+
+至于 AI 寒冬，从某种意义上说它可能仍然会发生——比如那些科技巨头、超大规模云厂商（hyperscalers）等的股票价格可能会大幅崩盘。需要说清楚的是，我不认为超大规模云厂商会倒下，但我认为市场上可能会出现一定程度的估值回调，因为大家现在都在把某种近乎“神明降临”的奇点时刻计入预期中。所以，金融层面的调整是有可能发生的。
+
+我并不是这方面的权威，但我真正担心的那种“AI 寒冬”，是 AI 在自动化领域持续表现得如此令人难以置信地无用——而我认为这种情况不会再继续下去了。需要澄清的是，我认为 AI 过去依然非常有价值，只是唯独在自动化这件事上不行。我自己非常喜欢 ChatGPT，非常喜欢 Claude Code 和 Codex。即便如此，鉴于 AI 本身是如此惊艳的一项技术，我依然认为仅仅做到这种程度是远远不够的。而且我认为几乎所有人在内心深处都有同感：聊天机器人确实让人感觉很神奇，但奇怪的是，它们对现实世界的实际改变竟然如此有限。
+
+按理说，如果你把这种智慧封装起来并让它变得极其廉价，你本该能把它应用到无处不在的场景中。然而现实却是，每年你总能看到某家知名公司试图实现汽车穿梭餐厅（drive-thru）自动化却惨遭失败的经典新闻，原因仅仅是聊天机器人根本不够可靠。这真是一个极其诡异的现状。而在我看来，这一困境很快就将被彻底解决。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Following the RSI comment, I think I've just been in the field long enough to see this dance happen many, many times. People see small percentage gains and then they extrapolate it to like the absolute moon when the reality is Amdahl's law occurs. People used to give the exact same story of RSI during the neural architecture search days. This is when you use neural networks to make better architectures and they're like, "Holy crap, it's 10% more efficient. What if that more efficient thing then like discovers the next thing and then we repeat it until we get unbelievably more efficient architectures." And that entire field ended up getting thrown in the trash cuz it was never useful.
+
+People don't understand diminishing returns in the real world and I think that it's going to be a similar thing for the bottles of today as far as I can tell. Obviously, I have error bars in my predictions, but this keeps on happening despite, you know, people relatively young to the field getting jazzed about their first taste of self-improvement.
+
+So, I don't think that that's really happening based on the evidence I've seen and based on my sense of where the field is going. I do think that AI is an incredible technology and we are like under-leveraging it to absolutely insane degrees and I just think that this is like a completely different branch and I think that AI winter may still happen in the sense that, you know, the stock prices of the giant companies and the hyperscalers whatever might crash down. I don't think the hyperscalers will just to be clear, but I think that there could be some market correction because everyone is pricing in some sort of God moment.
+
+So, that could be happening. I'm not an expert at this, but the AI winter I'm worried about is AI continuing to be so unbelievably useless at automation, and I just think that that's not going to happen anymore. And to be clear, I think that AI was still valuable, but just not at automation. Love ChatGPT, love Claude Code and Codex. And still I don't think that that is enough given how incredible AI is, and I think almost everyone deep down feels this way. Like chatbots are kind of feel magical, and it's kind of weird how little they've changed the world. So, you'd expect, you know, if you bottled up this intelligence and made it super cheap, you could put it everywhere. Yet, somehow every single year you get like a famous failure of a company failing to automate a drive-thru because the chatbots are not reliable enough. Like that's kind of like a wild state of affairs, and that is going to be addressed quite quickly in my opinion.
+
+</details>
+
+### 拒绝 996 标签与对早期支持者的感谢
+
+**Matt Turck**: 太棒了。这真是一场精彩的对话。我知道你最近工作强度极大、工作时间极长。顺便提一下，我们录制播客的时间是在周六，我猜在 996 的世界里，周六也只不过是又一个普通的工作日罢了。
+
+<details>
+<summary>Original English</summary>
+
+**Matt Turck**: Okay, wonderful. It's been amazing. I know you're working insane hours. By the way, we're recording this on a Saturday, which I guess is just another day in the 996 world.
+
+</details>
+
+**Speaker B**: 我想澄清一下，我并不认为我们是一家搞 996 的公司。眼下单纯只是处于一段极其特殊的忙碌时期。我认为作为一家公司，我们其实相当成熟、非常讲道理。而且我们的北极星目标与 996 截然不同。我绝不会倡导那种文化，最近这段时间真的只是一个特殊的节点。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: I will say that I don't consider us a 996 company. It's just a kind of a crazy time. I think that we are as a company quite adult and reasonable. And we have a very different North Star than that. And I just wouldn't—it's just a crazy time these days.
+
+</details>
+
+**Matt Turck**: 在当下的世界里能听到这样理智克制的声音，感觉真是太好了。非常感谢你能来，真的很感激。祝贺你们开启了 J 革命，也期待看到你们接下来打造出的全新成果。非常感谢！
+
+<details>
+<summary>Original English</summary>
+
+**Matt Turck**: Fantastic to hear a voice of measure in this world. So, thank you so much. Really appreciate it. Congratulations on starting the J evolution, and excited to see what you guys build next. Thank you so much.
+
+</details>
+
+**Speaker B**: 好的，也谢谢你邀请我参与！另外，我想向所有早期就信任我们的人致谢。在节目的尾声，我一定要把这些话说出来，因为此前我们根本没有意识到，世界上居然有这么多人和我们面临着一模一样的困扰。
+
+我认为直到现在，大部分听说过我们产品的人其实依然没搞懂它到底是什么。但这没关系，因为真正需要了解它的人自然会心领神会——那些真正懂它的人，已经在社交媒体上、在他们的朋友圈子和私聊群里为之欢呼雀跃，庆祝 AI 终于变得更加务实和合乎常理了。因此，向这群支持者致敬！我们 Type Safe 的全体团队对大家永远心怀感激。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yes, and thank you for being part of it. Thank you to all the people who are early believers. I will say this at the end of everything because we just didn't realize there were so many people who had the same kinds of problems as us, and I think that still most of the people who've heard of GIF don't get it. And that's okay because the people who really need to know about it know about it because the people who do get it were like screaming in joy on, you know, social media and to their friend groups and private chats and everything that like AI is finally a little bit more sensible. So, shout outs to those people and we at Type Safe are eternally grateful to y'all.
+
+</details>
+
+**Matt Turck**: 太棒了，谢谢你！
+
+大家好，我是 Matt Turck。感谢大家收听本期 MAD Podcast。如果你喜欢这期内容，无论你是在哪个平台收看或收听本期节目，若能考虑订阅频道、留下好评或写下留言，我们将不胜感激。这对我们打造这档播客并邀请到卓越的嘉宾真的非常有帮助。谢谢大家，我们下期节目再见！
+
+<details>
+<summary>Original English</summary>
+
+**Matt Turck**: Amazing. Thank you.
+
+Hi, it's Matt Turck again. Thanks for listening to this episode of the MAD Podcast. If you enjoyed it, we'd be very grateful if you would consider subscribing if you haven't already or leaving a positive review or comment on whichever platform you're watching this or listening to this episode from. This really helps us build a podcast and get great guests. Thanks and see you at the next episode.
+
+</details>

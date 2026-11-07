@@ -1,0 +1,185 @@
+---
+author: AI Engineer
+date: '2026-10-05'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=wzWNYDY7toc
+speaker: AI Engineer
+tags:
+  - data-curation
+  - rag-optimization
+  - unstructured-data
+  - vector-database
+  - context-engineering
+title: 从停滞的 POC 到生产环境：利用非结构化数据治理构建高质量企业级 AI 智能体
+summary: Collibra（前 DZee Labs）专家深入探讨企业在将 GenAI 和 RAG 项目从概念验证（POC）推向生产环境时面临的核心瓶颈：非结构化数据的筛选与质量治理。通过制造巨头 North River 的法律聊天机器人案例，展示了如何自动化标签分类、敏感信息过滤、冲突与重复数据清洗，以及基于上下文构建高质量数据切片，显著提升大模型检索召回率与准确率。
+insight: ''
+draft: true
+series: ''
+category: ai-application
+area: tech-engineering
+project: []
+people: []
+companies_orgs:
+  - Collibra
+  - DZee Labs
+products_models: []
+media_books: []
+status: evergreen
+---
+### 破冰开场与背景介绍
+
+**杰夫·卡尔 (Jeff Carr)**: 好的。大家好，我们正式开始吧。大家都能听到我说话吗？一切正常吗？太棒了。我的名字是 **Jeff Carr**，我是 **DZee Labs** 的全职客户服务工程师。正如大家在幻灯片上看到的，本场演讲是由 **Collibra** 为大家带来的。Collibra 在去年夏天收购了 DZee Labs。Collibra 本身更偏向于针对结构化数据智能体和基于 AI 的模型的数据管理工具。因此，Collibra 原本的空白在于缺乏非结构化数据处理能力，而这正是 DZee 大放异彩的地方。今天和我在一起的是 **Leo Platzer**。
+
+<details>
+<summary>Original English</summary>
+
+**Jeff Carr**: OK. Hey guys, let's get started. Can everyone hear me? Is everything okay? Perfectly. My name is Jeff Carr. I am a full-time customer service engineer at DZee Labs. As you can see on the slide, it says that this is provided to you by Collibra. Collibra acquired DZee Labs last summer. Collibra is more of a data management tool for structured agents and AI-based models. So, the gap with Collibra was that we didn't have unstructured data, and that's where DZee shines. So, today I have Leo Platzer with me.
+
+</details>
+
+**利奥·普拉泽 (Leo Platzer)**: 是的。大家好，我是 **Leo**。我之前是 DZee Labs 的首席技术官（CTO），正如 Jeff 刚才提到的，DZee Labs 去年被 Collibra 收购了。大家可以看到，我们俩今天穿得就像双胞胎一样。我们展位上还在赠送专属帽子，欢迎大家随时过去领取，先到先得。今天我们要讨论的主题是：**如何通过 DZee 的数据治理（Data Curation），将 AI 项目从停滞不前的概念验证（POC）推进到生产环境**。我们真正专注于**非结构化数据**。
+
+<details>
+<summary>Original English</summary>
+
+**Leo Platzer**: Yes. Hello everyone. I am Leo. I was previously the CTO at DZee Labs, which, as Jeff mentioned, was acquired by Collibra last year. And as you can see, we are both twins. We also have our own hats that we are giving away at our booth, so come on in and get them. Whoever came first was served. So today we’re talking about how we can move from stagnant POC to production with DZee data curation. So we really focus on unstructured data.
+
+</details>
+
+### 企业级 AI 面临的现实困境：从 40 个文件到 8 万个文件
+
+**杰夫·卡尔 (Jeff Carr)**: 我经常用来举例的演示场景是一家名为 **North River Manufacturing** 的制造企业。大家可以看到，这家公司拥有 **40,000 名员工**，业务遍及全球 20 个不同国家。事实上，他们积累在 **SharePoint** 中的文档多达数百万份。这些文档积累了多年，现在他们迫切需要搞清楚哪些文件对其聊天机器人是有价值的。
+
+他们在人工智能领域投入巨资以提升运营效率，而今年的核心目标是打造一个专门处理**法律事务与交易**的 AI 聊天机器人。他们希望帮助法务和采购团队实时解答有关供应商合同和合作协议的疑问。比如团队经常需要解答以下问题：某家特定供应商的终止合作条款是什么？本季度有哪些交易即将到期？下季度有哪些协议终止？哪些合作伙伴协议中包含排他性条款？
+
+在与我们合作的客户团队中，有几位关键角色：首先是 **Sarah**，她是数据与人工智能部门负责人，全面负责系统的准确率；还有 **Jim**，作为 AI 工程师，他迫切需要知道：“在 SharePoint 数以万计的文件中，我到底该抓取哪些文件？我必须精准找出相关的文档，同时绝对不能掺杂任何敏感数据。”
+
+此外，知识管理部门主管 **Priya** 需要确保机密信息绝不外泄，一旦涉及涉密或敏感数据，必须完成脱敏处理；法务运营总监 **Michael** 则代表业务端，他要求聊天机器人必须给团队提供精准可靠的答案；最后是企业转型负责人 **Jackson**，法律机器人是他的旗舰级用例，但他手头还有 15 个其他用例需要推进。他需要一套标准化、可复用的成功流程，而不是做一次性买卖。
+
+<details>
+<summary>Original English</summary>
+
+**Jeff Carr**: Our demo scenario, which I usually talk about, is the manufacturing company North River Manufacturing. You can see that there are 40,000 employees there. They operate in 20 different countries. In fact, they are trying to have millions of documents in SharePoint. They've been accumulating them for years, and they need to figure out which ones are relevant for their chatbot. They are investing heavily in artificial intelligence to improve operational efficiency. And their main goal this year is to create an artificial intelligence chatbot for legal transactions. Now they want to help legal and procurement teams answer questions about supplier contracts, partnership agreements, and it needs to happen in real time. So, some of the questions they're trying to answer are: what are the termination provisions for a particular vendor, what deals are ending this quarter, what deals are ending next quarter, and what partnerships have, um, exclusivity terms. So, among the people on the teams we worked with is, um, Sarah. She is the head of the data and artificial intelligence department. So she is responsible for accuracy. There is also Jim. He is an artificial intelligence engineer. He just needs to know what files I need. I have thousands and thousands of files in SharePoint. I need to find only the relevant ones, without sensitive information. Priya is the head of the knowledge management department. She wants to make sure that no confidential information is leaked, and to make sure that if there is any data that is, um, classified, that is also redacted. Then there's Michael. He is the director of legal operations. He needs a chatbot to provide accurate answers to his team. So he's from business. And finally, there's Jackson. So Jackson, the head of enterprise transformation, and this is his flagship use case, but he also has 15 other use cases that he needs to deal with, right? So he wants to have a structure, a repeatable, successful process. He doesn't want to do it just once. He wants to do this for several different use cases.
+
+</details>
+
+**杰夫·卡尔 (Jeff Carr)**: 他们最初能够跑通的，只是挑出大约 **40 份预先挑选好的文档**，搭了一个小型的 POC 试点项目：对这 40 个文件进行文本解析、分块切片（Fragmentation）、光学字符识别（OCR）、向量嵌入（Embedding），然后灌入向量数据库和知识图谱。当时的测试效果看起来非常不错，对吧？面对 40 个文件时一切都很简单。
+
+然而，当他们试图将规模扩大到海量文件——面对超过 **80,000 份文件**时，局势瞬间变得异常棘手。他们面临的痛点包括：工程师根本找不到所需的文件；不知道敏感数据分散在 SharePoint 的什么角落；也无法信任数据质量。
+
+我之前在 **Informatica** 和 **Databricks** 都工作过。在传统的结构化数据世界里，数据质量通常由完整性、相关性、准确性等六个维度来衡量。但是当你面对非结构化文档时，情况完全变了：你必须查明是否存在重复内容、事实冲突。Leo 稍后会专门展示一张非常精彩的幻灯片，深入剖析为什么消除冲突事实如此重要。
+
+此外，还有数据的**时效性（Freshness）**与**上下文（Context）**问题。当我们给文档打上元数据标签时，我们希望将这些元数据直接输入给聊天机器人与底层数据库，从而提升检索相关性与回答精准度。大家可以看到真实世界的惨痛教训：机器人给出错误答案、泄露机密信息，团队把大量宝贵时间浪费在人肉找文件上，而不是写代码做真正有价值的事，导致项目迟迟无法上线。我合作过的另一家电信公司，配备了六七名领域专家，试图手动梳理 20,000 份 HTML 文件，结果完全跟不上进度，流程脆弱且难以为继。而我们带来的解决方案，正是将这整套数据治理流程实现自动化。
+
+<details>
+<summary>Original English</summary>
+
+**Jeff Carr**: So what they've been able to do so far is take 40, about 40 different files, pre-selected files, and create a little mini-pilot project where they can do parsing, fragmentation, optical character recognition (OCR), embedding, and then put that into a vector database and a knowledge graph, and they've gotten pretty good answers, right? Seems pretty simple. You can do this with 40 files. But when they try to do this with many, many different files, with over 80,000 files, right? Now suddenly it gets a little more complicated. And so some of the difficulties they faced was that I couldn't find the files I needed. I don't know where my sensitive data is located in SharePoint. I can't trust the quality of the data. So, my experience...I've worked at both Informatica and Databricks. So for me, data quality usually consists of six different dimensions: data quality, completeness, relevance, accuracy. But when you're dealing with documents, it's a little different. I want to see if there are duplicates of information, conflicting facts, right? Leo will talk about this, he has a very good slide that shows why this is so important. And also about the freshness of the data. And also, everyone talks about context, right? So when we want to tag metadata, we want to use it in our chatbot, directly in the database, to make it more relevant, to have better accuracy in the chatbot. So you can see some of the problems they faced, right? They get the wrong answers. Chatbots are leaking confidential information. It takes a long time to go to production because they can't find the files. They spend too much time searching for files instead of writing code and doing what they really enjoy, right? This is difficult to maintain. I work with another telecommunications company and they have six or seven different SMEs and they're trying to process 20,000 HTML files but they can't keep up, right? So it's very fragile, very difficult. And we provide the opportunity to automate this entire process.
+
+</details>
+
+### 产品实操演示：分类体系构建与敏感数据识别
+
+**杰夫·卡尔 (Jeff Carr)**: 让我们来看一下具体的能力。客户希望从 40 个文件一跃扩展到 80,000 多个文档。他们必须筛选出与聊天机器人高度相关的高质量文件，剔除过期作废的旧合同，并利用结构化标签丰富元数据，同时绝对不能引入敏感数据。我们可以直接接入底层数据源，理解数据内容，判定文件相关性，并执行 OCR、文本分块等处理。
+
+现在让我为大家做一个快速演示。大家在屏幕上看到的是一个 SharePoint 站点，与 North River 的环境非常相似：里面充斥着通话录音听翻转录稿、PDF、Excel 表格、Word 文档，谁也说不清哪些与法务合同相关。
+
+打开 DZee 平台后，我这里已经载入了 **339 份文件**。在系统里，我不仅能在文件级别查看信息，还能直接下钻到页面级和片段级（Fragment-level）。接下来就是核心概念——**分类体系（Taxonomy）**。分类体系本质上是一组标签或标签树。面对这 339 个文件，我既可以手动创建自定义标签，也可以直接复用标签库中的成熟标签，或者直接借助 AI 自动推荐当前场景最需要的标签。
+
+我只需输入标签名称，比如“文档分类”，并输入一段提示查询（Query），这段查询就会发送给大语言模型（LLM），用来判定该文件应当如何归类。如果我们心中已有明确的标准，可以填入分类可选值；当然也可以直接让 AI 推荐，或者通过 CSV 文件批量上传成熟的分类标准。
+
+<details>
+<summary>Original English</summary>
+
+**Jeff Carr**: So here you can see what they want, they want to try to access and use over 80,000 different files. So they went from 40 files to over 80,000. And they really want to find which files are relevant to their chatbot, which are high quality, which are relevant in terms of knowledge. They don't want to use a version where the contract is old and expired, right? And they want to enrich their chatbot with metadata that they have tagged. And of course, they don't want any sensitive data. So, we're providing an opportunity to do that here, right? We can access the data, um, here. We can understand what this data is. We can determine which files are relevant, perform optical character recognition, fragmentation, etc. So let me show you a quick demonstration. So here you see SharePoint, very similar to what North River has. They have a whole SharePoint site full of different, you know, there are call transcripts, there are PDFs, there are Excel, there are Word documents. And I don't know which ones are relevant, which ones focus on legal topics. Now, when we look at Daisy, we've already opened the program right here, and I see that I've already uploaded 339 files. And now I see both the page level or the fragment level and the file level. I see all the information right here. And then there's this thing we call taxonomy. A taxonomy is a grouping of tags or a tag tree. So I got 339 files and now I can either manually create a custom tag. I can use reusable tags from my tag library, or I can use AI to automatically suggest which tags I should have in the first place, right? I can use artificial intelligence to tell you that these tags are relevant. So here I just enter my tag name, data, document categorization, give a query, and this query is what we're going to send to LLM to determine if this file, how should we tag this file? Now, if I know what I'm looking for, I can enter the classification value. This is optional. And again, if I can use artificial intelligence to automatically suggest all of these tags for me. Now, it should also be noted that if I have my taxonomy here, my valid values ​​already, I can upload them via CSV. And so, once we do that, I see that I've started to build this tag tree.
+
+</details>
+
+**杰夫·卡尔 (Jeff Carr)**: 更强大的是，我们可以在标签树中设置**条件分支**。记得我们之前说过，当前用例只需要法律与合同相关文档吗？在“法律与合同文档”这个主分支下，我可以设置子标签，进一步按合同类型提取信息：这是一份供应商合同？还是一份保密协议（NDA）？或者是工料结算（Time and Materials）合同？随着这些条件的加入，标签树就生长出清晰的层级分支。同时我们也可以设置无条件的全局标签。
+
+设置完成后，我们点击“生成元数据（Generate Metadata）”，系统开始执行，结果即刻呈现在界面上。此时将光标悬停在文档分类上，可以看到有工程文档，也有合同与法务文档——筛选出了 68 份相关文件。点击任意一项，系统会自动过滤展示。最重要的是，我们能看到 **AI 判定的证据链（Evidence）**：AI 为什么打这个标签？它在文档的具体哪一页、哪一段找到了支撑这是一份法务合同的证据？用户还可以点击“点赞”或“点踩”，进行持续的人在回路（Human-in-the-Loop）强化调优。通过多重条件过滤，我们将文件池迅速从 339 份精准收缩至 20 份。
+
+接下来是敏感信息扫描。无论是个人身份信息（PII）还是受保护健康信息（PHI），系统都能全面覆盖。几个月前我在伦敦参加 Gartner 大会时，有几位来自芬兰的客户询问：“你们能否识别芬兰的国民身份证号？”我并不懂芬兰语，但在演示现场，我们不仅支持纯 AI 识别，还支持带上下文的正则与模式匹配（Patterns with Context）。我迅速配置了正则表达式，并补充了几个与芬兰身份证相关的上下文词汇，直接实现了超低误报率的精准识别。
+
+<details>
+<summary>Original English</summary>
+
+**Jeff Carr**: Now, another thing I can do is have conditions for my tag tree. So, remember I said I only needed legal and contractual documents? This is what they are looking for. Now I can have subtags. So, just legal and contract files, I want to pull more data by contract type. Is this a supplier contract? Is this part of a non-disclosure agreement? Right? Is this a materials and time contract? And now that we're adding this, you can see that we have different branches in our tag tree. And I can also have unconditional tags. I can have any number of different tags. Now we are going to generate metadata. So, I choose which files I want. I can choose which tags I want. I can say "generate metadata," and we'll run it, and you'll see the results here. So now I see the document category. I can hover the mouse cursor. There are engineering documents. I have my contracts and legal documents, right? I have 68 different files. And if I click on any of them, it automatically filters me. Now I can see the evidence too. Why did the AI tag this? Where in the document did he find evidence that this was a legal contract, right? And I can also use "thumbs up" and "thumbs down", so there's little step-by-step learning here. So I can give an example if I want. Now, as you can notice, I also have filters, meaning I have two different filters. I quickly reduced the number of files from 339 to 20. So we also have the ability to scan for sensitivity. So, whether it's PII, PHI, um, it could be anything. I was in London at the Gartner conference, um, a few months ago, and some people from Finland came in and wanted to know if we could find a Finnish national ID card? I don't speak Finnish, so I put it there. I did this demo, and we can work not only on the basis of artificial intelligence, we can work on the basis of patterns with context, and as a result I was able to figure out the syntax of the regular expression um, but also added some Finnish words that I think are probably related to the Finnish national ID card. So, there will be fewer false positives.
+
+</details>
+
+### 数据质量管理与可信 AI 数据产品
+
+**杰夫·卡尔 (Jeff Carr)**: 接下来谈谈数据质量治理。系统提供了专属的数据质量仪表盘，可以自动聚类并标识出**重复文档**以及**存在冲突信息的事实**，由 AI 自动给出建议保留哪一份的决策。针对数据时效性，我们可以设置策略：“仅包含最近 N 天之内或特定日期范围内的文件”。
+
+最后，基于核心所需的元数据切片，系统能够从初始的 339 个文件中，精炼出真正具备高价值的约 200 个文件，进而封装成一个**数据切片（Data Slice）**。在切片中，我们填入当前用例的具体业务描述，系统会自动根据文件实际内容建议最佳的标签与分类。人依然在循环中审核确认，但绝大部分繁重工作已经全自动完成。生成元数据时，我们能清楚看到每一处机密信息分布，审查文件级与片段级的证据支撑，以及置信度指标（Reliability Indicator）——模型是 100% 确信还是 95% 确信一目了然，无需任何盲目猜测。这样团队对交付给 AI 的数据产品拥有绝对的信心。
+
+更关键的是交付与持续服务机制。通过数据切片技术，我们可以配置自动化调度工作流，实现**定时自动刷新**，彻底杜绝聊天机器人知识库过时的问题。一旦 SharePoint 中有新文件增添或删除，工作流会自动捕获更新并同步至数据切片；随后我们的 SDK 会直接将更新拉取至聊天机器人和向量数据库，保证元数据时刻保持最新。
+
+这对 North River 意味着什么？本质上，他们将数据准备周期从 **4 个月缩短至短短数天**；大幅提高了可用于 AI 的有效数据量；显著提升了机器人的问答准确率——因为他们不仅能定位正确文件，还能将丰富的高质量元数据通过 SDK 注入到检索与推理流程中；同时将合规风险降到最低，所有敏感数据都被严格识别并排除在切片之外。接下来，把麦克风交给我异父异母的兄弟 Leo，由他为大家深入讲解技术背景与原理。
+
+<details>
+<summary>Original English</summary>
+
+**Jeff Carr**: Okay, let me continue. So, another thing we can do is address quality. So, again, there's a quality dashboard for us where we can look and see different groups for um for duplication, for conflicting information, uh, and then we'll use artificial intelligence to automatically suggest which ones to keep. Now, another thing we can also do is again for freshness, we can say, "I only need files within a certain number of days or within a certain date range." And the last thing we can do for data quality is, you know, the metadata snippets that I absolutely need, and then we figure out, you know, out of 339 files, maybe you really need 200 files. And then from there you can create a slice of the data. And then we can also give it context. Here it is. So, I'll watch another video. And we also have a live demo for you that Leo will do in a second. So, in this case, I can now use a data slice. So my data slice can be filtered based on certain criteria that I want. So, in this case I have 14 files. These are only files that relate to legal information. And now I'm copying my use case description. What I can do is say, here's what I'm trying to build, and I can either do a flat taxonomy or multiple levels in my tag tree. And then when I launch it, it will automatically suggest those tags to me. A person participates in the cycle, so I can choose which ones I like, which ones I want, which ones are relevant. But again, it's all done for me based on what I'm trying to do. We also gave it context based on the content of the files themselves. And then here he even creates a classification meaning for me. And then, if we want, when we run, when we generate metadata, we're in the process of working, now we can see this confidential information. Okay, here's all the different information we have. And again, I can see evidence at the file level and at the fragment level. I can see the reliability indicator. So, coming back from artificial intelligence, what did the model return? I don't need to guess, you know, if it's 100% certain, 95% certain, that's why. So, you can be very confident in the AI-ready data product that you guys are going to create. Good. And finally, what we can do for delivery and service, so you know, another thing that's really important is that with our data slice technology, we have workflows that we can put on a set schedule so that they automatically refresh. So you want to make sure your chatbot never gets outdated. So if there are new records or, excuse me, new files that are added to SharePoint or deleted, we automatically pick them up and add them on a set schedule to my data slice or to my AI-ready data product. And then our SDK will pick that up in the chatbot, and then when we load the vector database, you'll always have the most up-to-date metadata. So what does this mean for North River? So, essentially, they were able to reduce data preparation time from 4 months to a few days. They were able to increase the use of data for AI. They improved the accuracy of their chatbots because they were able to not only identify which files to use, but also the metadata from the files, they were able to insert it and use it through our SDK in their chatbot, right? And they also reduced the risk of non-compliance. They knew where all the sensitive data was and made sure it wasn't part of their data slice, it wasn't filtered out in their data slice. Okay, so I'll pass this on to my brother from another mother, Leo, and he'll give you the context.
+
+</details>
+
+### 底层深度剖析：向量检索中的事实衰减与冗余危机
+
+**利奥·普拉泽 (Leo Platzer)**: 大家好。我刚才一直在思考一个核心问题：“那又如何（So what）？”从技术角度来看，你对数据进行了去重，缩小了搜索空间，清洗了脏数据，刷新了视图，但这对生产系统究竟意味着什么？
+
+让我们看看**向量空间（Vector Space）**的实际运作机制。当用户提出一个问题时，查询向量进入向量库。如果你的知识库中充斥着包含相同信息的重复数据，或者同一份文档的不同历史版本记录着彼此冲突的事实——就像大家在 Slack 中的聊天记录一样，某人今天说这套方案行得通，明天又推翻说了另一套，**事实的真相是随着时间演变而不断变化的**。如果这些矛盾的内容全部留在你的检索搜索空间中，那么在 RAG 检索中返回的 **Top-K 召回结果，几乎全都会被毫无价值或自相矛盾的信息占满**！
+
+在 DZee 中，被判定为重复项的内容要么被赋予新的上下文演进关系，要么直接判定为冗余并从知识库中剔除。更严重的是**陈旧信息（Stale Data）**。如果你突然在让智能体处理 2000 年代以前的数据，或者处理上周还有效、这周早已作废的业务规则，在最严苛的生产级智能体场景中，这会带来灾难性的幻觉与错误后果。
+
+<details>
+<summary>Original English</summary>
+
+**Leo Platzer**: Yes. Hello everyone. I just wanted to say, so what, right? Technically, you deduplicate your data, you reduce the search space, right? You clean them, you have a fresh look. What does this really mean? Yes? So if we look at a vector space, right? When you ask a question, it comes in and you have duplicate data with the same information or maybe even a different version of the document with conflicting information, right? Remember your messages in Slack. Today a person says this, tomorrow a person says that, right? The truth changes over time. If it changes, if it stays in your knowledge base, in your search base, your top-K will always be full of practically irrelevant information, right? So, for example, in Deezy, something that is considered a duplicate is either another piece of context, like your database has changed and I can use it, or it's just redundant and we'll remove it from the knowledge base. The second fragment is the same as before. If your information is old, right? If you're suddenly working with data from before the 2000s, if you're working with information that was relevant only last week and is irrelevant this week, then in the future, some use cases, when agents actually go into production, let's call it, for the most difficult use cases, it has negative consequences.
+
+</details>
+
+**利奥·普拉泽 (Leo Platzer)**: 我们针对“保持非结构化数据质量、维护一致性并以确定性方式处理数据”对系统效果的影响，进行了大量深入评估。评测结果非常惊人：假设你的原始语料库有一千份文件，其中仅仅有 **30% 的文件存在陈旧过时或内容重复**；在实际运行中，**智能体用于回答问题所检索到的实际上下文，竟有多达 80% 会被这些过时和重复的信息所填满！** 这意味着大语言模型宝贵的上下文窗口中，有 80% 充斥着完全多余、毫无价值的噪音。
+
+这种情况必须被严格管理。我们对相同的评测任务进行了对照实验——这是一个多步骤的 RAG 问答评估体系（Multi-step RAG Benchmark）。测试结果显示，通过数据治理，系统的 **Top-1 召回率直接翻倍，整体端到端准确率提升了 10% 到 15%**！
+
+为什么这一点如此具有普适性？因为这一规律**与你具体的业务用例完全无关**。无论你把这些数据用于什么下游任务，重复与陈旧带来的破坏力都是绝对客观存在的。只要你清晰定义了下游用途，就可以叠加相关性及各项数据质量指标，但消除重复与保持新鲜度始终是不可妥协的基础底座。
+
+<details>
+<summary>Original English</summary>
+
+**Leo Platzer**: And we've done a lot of evaluations on what the impact is of ensuring that the quality of your unstructured data is maintained, is consistent, and is always processed deterministically the same way, right? And we actually see that if your raw corpus is okay, imagine you have a thousand files, and 30% of your files are outdated or duplicated, it could be that up to 80% of your actual context that your agent uses to answer the question is filled with outdated information, meaning that it was actually using 80% of completely redundant, unnecessary information and knowledge. And this needs to be managed. We saw that by running the same tasks, i.e. this is a chatbot for a rack, it wasn't running a real, say, cloud code task or codebase for a coding task, it was just a multi-step rack assessment. And we saw that if we look at the recall of one, I mean, we practically double the recall and overall improve our accuracy on these kinds of tasks by 10 to 15%. And why is this so important? This is so important because it has nothing to do with the use case you are working with. This is true regardless of what you actually use the data for, right? Because if you really know what you want to use your data for, you can apply relevance and all the other data quality metrics, that's right. But duplication and freshness are true regardless of the circumstances.
+
+</details>
+
+### 实机演示：利用 SDK 实时构建上下文感知索引与总结收尾
+
+**利奥·普拉泽 (Leo Platzer)**: 接下来，我想花两分钟非常快速地为大家现场演示一下：如何使用 **DZee SDK** 实时准备并构建一个上下文知识仓库。我会在终端里实时运行它。
+
+这段代码的底层逻辑是：首先提取我们拥有的关于特定 SharePoint 站点的所有元数据；接着，它会对该 SharePoint 站点下的**每一个文件夹进行上下文建模（Contextualize）**，并为所有文件夹生成全局索引。这样一来，你的企业级智能体或代码分析工具（例如 Cloud Code），甚至根本不需要翻阅每个单独的文件去猜测应该找什么，只需要读取我们生成的上下文 Markdown 文件（`contextual.md`）即可。
+
+大家在屏幕上看到的，就是通过 DZee 整理出的上下文文件：它能直接让你看清每个文件夹的具体用途是什么、里面到底存放了什么文档、何时该检索该文件夹。它如实反映了 SharePoint 的目录结构，但现在你无需打开里面的 23 个分散文件逐一甄别，就能精准获知文件类型、核心主题、适用场景以及示例查询问题。这正是当今现代化 AI 用例应当具备的架构范式：以极低的门槛大幅提升大模型性能，同时成倍**降低智能体的 Token 消耗成本**。
+
+好了，我把时间重新交还给 Jeff 为本场分享做总结。
+
+<details>
+<summary>Original English</summary>
+
+**Leo Platzer**: And yesterday, right? There are many contextual topics here, many contextual flags. Hmm, I would like to demonstrate very, very quickly how you would use DCS DK to prepare a context repository. And I'm going to run this in real time. So this essentially gets all the metadata that we have about a particular SharePoint site. We then contextualize each folder on that SharePoint site, and also create an index for all the folders, so that your cloud code, for example, or your codebase doesn't even need to look at individual files to figure out what to look for, but just looks at the contextual MD file. So what you see here is essentially, with DC you can curate contextual files where you know directly what exactly is in each folder, right? What is its purpose? Right? When do you want to use it? For example, this is an unambiguous reflection of what I actually have in SharePoint. But now, instead of looking at those 23 files to figure out if I should even look at that folder, I know exactly what types of documents I have, what they're about, what the key topics are, when to use that folder, and what sample questions. So, that's what all these use cases look like today, right? How can you leverage simple use cases like your in-app chatbot, or leverage simple options to actually improve performance and reduce, for example, the token cost for your agents. Hmm, but yeah, basically, I'll turn it over to Jeff again to summarize this whole presentation.
+
+</details>
+
+**杰夫·卡尔 (Jeff Carr)**: 非常感谢 Leo。好的各位，我们的演讲时间所剩无几了。我们的展台位于第二展区后方，欢迎大家随时前来与我们交流！带上你们在实际业务中遇到的各类复杂用例、具体文件和非结构化文档难题，我们非常乐意与大家深入探讨，并进行现场实时演示。
+
+在结束之前，我还想告诉大家，我们**每周都会开展针对客户具体场景的 POC 试点活动**。非常欢迎大家带上你们正在尝试用 AI 解决的业务挑战和脱敏样本数据。我们可以现场为你们的每份文件生成元数据，输出关于**数据隐私**与**数据质量**的完整诊断报告，并展示如何针对你们的具体用例和业务文件量身定制一整套完备的分类体系（Taxonomy）。
+
+非常感谢大家抽出宝贵的时间与我们交流。最后提醒一句，我们展台专属的纪念帽子只剩最后一箱了，想拿的朋友请尽快到后方展位找我们。再次感谢大家！
+
+<details>
+<summary>Original English</summary>
+
+**Jeff Carr**: Thank you, Leo. Good. So guys, we're almost out of time. Our stand is far behind in the second stage. Please come in. Bring any different uses you have. Hmm, we're happy to have discussions, do live demonstrations, talk about your problems with unstructured documents. Before we go, I want to let you guys know that we have weekly POCs. So we are happy to demonstrate our technology. Again, you know, you guys bring in your business problems that you're trying to solve with AI, bring in some sample data, a bunch of different files, and then we can generate metadata for each individual file. We can get a full report on your data privacy, a data quality report, as well. And then we'll show you how we can create a complete taxonomy based on your specific use cases, your specific files. So, I appreciate you all spending time with us. And finally, we only have one box of these hats left, so come in and get them. We will be at the back. Thanks, guys. Thank you.
+
+</details>

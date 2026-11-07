@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent 占用软件的三个阶段与现实边界</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Agent 占用软件的三个阶段与现实边界</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-07</span>
+    
+
+    <header class="article-header">
+      
+      <h1>Agent 占用软件的三个阶段与现实边界</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+      
+        <span class="tag-pill tag-pill--no-page">software-design</span>
+      
+        <span class="tag-pill tag-pill--no-page">machine-identity</span>
+      
+        <span class="tag-pill tag-pill--no-page">developer-infrastructure</span>
+      
+        <span class="tag-pill tag-pill--no-page">security-boundary</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章指出AI Agent正通过流量、工作量及设计顺序三阶段逐步主导软件生态，但受限于商业付费门槛与安全信任机制。开发者需重构产品逻辑，优先支持机器调用，同时建立严格的权限与风控防线。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/agent-occupying-software-three-stages-20261004.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-07T00:00:00.000Z">2026-10-07</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>5 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%E6%B5%81%E9%87%8F%E6%9C%BA%E5%99%A8%E5%8F%91%E5%87%BA%E7%9A%84%E8%AF%B7%E6%B1%82%E8%B6%85%E8%BF%87%E4%BA%86%E4%B8%80%E5%8D%8A">第一阶段：流量，机器发出的请求超过了一半</a></li><li class="outline-h2"><a href="#%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%E5%B7%A5%E4%BD%9C%E9%87%8F%E9%83%A8%E5%88%86%E7%94%9F%E4%BA%A7%E4%BB%BB%E5%8A%A1%E9%87%8C%E6%9C%BA%E5%99%A8%E5%B7%B2%E7%BB%8F%E8%BF%87%E5%8D%8A">第二阶段：工作量，部分生产任务里机器已经过半</a></li><li class="outline-h2"><a href="#%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%E8%AE%BE%E8%AE%A1%E9%A1%BA%E5%BA%8F%E4%BA%A7%E5%93%81%E4%BB%8E%E7%AC%AC%E4%B8%80%E5%A4%A9%E8%B5%B7%E5%85%88%E4%B8%BA%E6%9C%BA%E5%99%A8%E8%AE%BE%E8%AE%A1">第三阶段：设计顺序，产品从第一天起先为机器设计</a></li><li class="outline-h2"><a href="#%E7%8E%B0%E5%AE%9E%E8%BE%B9%E7%95%8C%E8%BF%98%E6%B2%A1%E6%9C%89%E8%B6%85%E8%BF%87%E4%BA%BA%E7%B1%BB%E7%9A%84%E5%9C%B0%E6%96%B9">现实边界：还没有超过人类的地方</a></li><li class="outline-h2"><a href="#%E8%BF%99%E4%B8%89%E4%B8%AA%E9%98%B6%E6%AE%B5%E6%80%8E%E4%B9%88%E8%AF%BB">这三个阶段怎么读</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>据安全厂商 Palo
+Alto Networks 2026 年年度调查，企业里机器身份（包括 AI
+agent）与人类身份的数量比达到 109 比 1；CyberArk 2024
+年的同系列调查测出的比值还是 45 比
+1（这组连续年度调查的统计口径逐年有调整）。微软在 2026 年 4
+月做了对应的制度安排：Microsoft
+Entra Agent ID 平台正式可用，agent
+成为微软企业目录里与员工并列的一级身份；担保人离职时，名下 agent
+的管理自动移交其管理者。</p>
+<p>这些变化提供了三个层面的证据，指向同一个进程：agent
+占用软件的程度正在三个阶段相继超过人类。第一阶段是流量，网络请求里机器发出的已经过半；第二阶段是工作量，Neon
+的新建数据库事件里 agent 占比已经超过人类，GitHub 和 Linear 的数据也显示
+agent
+的代码贡献和工单工作量在快速增长；第三阶段出现得最晚也走得最深，2026
+年的新产品开始从立项第一天起先为 agent
+设计，给人看的界面成了附属品，产品为谁设计这件事本身被倒转了。读完本文你能回答一个之前只能靠预测回答的问题：agent
+到底在多大程度上占用了软件，占用到了哪一层。</p>
+<p>本文引用的所有数据都标明测量者与统计口径，厂商自报的数据加注厂商口径。</p>
+<h2 id="第一阶段流量机器发出的请求超过了一半" data-reading-heading="">第一阶段：流量，机器发出的请求超过了一半</h2>
+<p>机器占用软件的三个阶段：请求流量过半、生产产出过半、设计顺序倒转</p>
+<p>2026年6月3日，网络基础设施服务商Cloudflare的首席执行官Matthew
+Prince公布了一组网络监测数据，NBC
+News在6月4日跟进报道。根据Cloudflare的流量监测产品Cloudflare
+Radar的数据，自动化程序发出的HTML请求占到了57.5%，而人类发出的请求则占42.5%。这一统计抽样的范围大约覆盖了全球五分之一的网站，数据来源为第三方转述。这个
+57.5% 不仅包括 AI
+agent，还包括所有的自动化程序，比如传统的搜索爬虫和监控脚本。</p>
+<p>AI
+程序的快速扩张是主要驱动力。详细来看，在抓取请求的细分类别中，用于大模型训练的数据抓取占所有爬虫请求的比例从
+2025 年春季的 22% 迅速攀升至 2026 年 6 月的 52%。Cloudflare 在 2026 年 7
+月 1 日发布的一周年报告称，互联网上超过一半的流量现在来自非人类实体。根据
+Cloudflare
+Radar 2025 年度回顾，2025 年除 Googlebot 以外的所有 AI 访问只占全局
+HTML 请求的 4.2%，但在同一年里，代表用户操作意图的抓取行为同比暴涨了 15
+倍以上。HUMAN
+Security 在 2026 年 5
+月的监测数据显示，狭义的自主代理流量的月环比增幅为 5.26%，其中 Comet 和
+Atlas 这两款自主浏览工具占据了 70% 的份额，并且有 8.2%
+的请求被网站部署的防御规则直接拦截。</p>
+<p>上网这件事，机器发出的请求已经比人多了。</p>
+<h2 id="第二阶段工作量部分生产任务里机器已经过半" data-reading-heading="">第二阶段：工作量，部分生产任务里机器已经过半</h2>
+<p>在软件开发的流水线内部，变化发生在具体任务的产出比例上。部分平台已经观测到
+agent 工作量的显著增长，Neon
+的新建数据库事件里，机器的占比超过了人类。</p>
+<p>一个典型的例子是 Neon，这是一个无服务器的数据库服务提供商。在 2025 年
+5 月 14 日，Databricks 宣布以大约 10 亿美元的价格收购
+Neon（根据媒体报道）。官方的收购公告里提到一个内部遥测数据，显示在
+Neon 上超过 80% 的新建数据库是由 AI agent
+自动配置生成的，而不是人类创建的。Databricks 的首席执行官 Ali Ghodsi
+也确认了这一点，指出每五个新建数据库中有四个是由代码拉起的。不过 80%
+指的是平台内遥测的新建数据库事件，而不是数据库的绝对数量。再看 2024 年
+10 月平台商用时，官方博客记录的比例约为
+30%（该博客原链已失效，数字出自搜索摘要及业内转述）。因此，在半年多的时间里，这个比例从
+30% 上升到了 80%。</p>
+<p>类似的，项目管理工具 Linear
+也给出了同样的观察。2026 年 3 月 24 日，公司 CEO Karri Saarinen
+通过公开信透露，超过 75% 的企业工作区安装了编程
+agent，仅三个月的时间，机器完成的工作量增长了 5 倍，近 25% 的新工单由
+agent 撰写。同一天，Linear 也推出了自家的 agent 产品，并在 6 月 11
+日支持了自动代码编写会话功能。</p>
+<p>代码托管平台 GitHub 的变化更为直观。根据 Octoverse
+2025 年度开发者报告，据 GitHub 厂商口径，2025 年 5 月至 9
+月间，公开仓库中由 agent 撰写的 pull request 超过 100
+万个。在代码审查方面，GitHub 官方于 2026 年 3 月 5 日宣布，平台上的自动化助手已完成累计
+6000 万次的审查，占平台审查总量的五分之一以上。支付服务商 Stripe 在 2026
+年 6 月 11日的技术复盘里披露，据其厂商口径，agent
+流量约占文档流量的 40%，新增 Stripe CLI 用户的 API 资源请求中有 70% 来自
+agent。</p>
+<p>在新建数据库这类特定任务上，部分平台的 agent
+工作量已经超过人类；在编写和审查代码方面，现有数据证明了快速增长，不同平台的占比各不相同。</p>
+<h2 id="第三阶段设计顺序产品从第一天起先为机器设计" data-reading-heading="">第三阶段：设计顺序，产品从第一天起先为机器设计</h2>
+<p>如果流量的增长和工作量的上升仅仅是数量上的改变，那在软件设计的最前沿，整个工程的设计顺序已经倒过来了。2026年10月1日，邮件服务商Resend创始人Zeno
+Rocha在社交网络发布动态，宣布推出面向人类和agent的收件箱产品Inboxes。但试图了解
+Inboxes
+时会发现，官网没有产品介绍页，没有宣传博客，在发布日志里也没有条目。</p>
+<p>目前公开的产品信息主要来自一份带有测试警告的官方
+API
+文档，文档附有早期访问申请入口。文档注明功能仍处于私有测试阶段，仅限有限用户访问，正式发布的返回格式可能有所调整。在代码分发网络上，配套的预览开发包版本为
+[email&nbsp;protected]，文档示例最早可追溯到 2026
+年 8 月 5 日。</p>
+<p>在深入分析 Inboxes
+提供的具体功能后，可以发现其所有功能都倾向于程序化操作，而非适合人类阅读。例如，邮件生命周期的
+15 种 webhook
+事件覆盖收件箱、邮件线程、邮件收发和草稿生命周期；线程事件包括创建、文件夹变更、分配及标签更新。管理邮件线程时，内置了面向多
+agent
+协作的分配字段。生成回复草稿时，采用了幂等设计，重复创建同一回复草稿会返回
+200
+成功状态码，避免重复创建草稿。指定转发选项时，平台会代为配置收信地址，省去
+MX
+记录配置。搜索接口仅支持对主题和标签进行不区分大小写的子串匹配。回复接口的收件人自动取自被回复消息，cc
+和 bcc 可自行指定，全部收件人合计不超过 50 人；webhook
+事件回调中还提供附件的元数据。</p>
+<p>Inboxes 不是一个孤例。2026 年 9 月 22 日，Resend 发布其无界面控制台计划，理念是让控制台在网页上能做到的每一件事，都能通过代码完成。他们承诺未来推出的每一个功能都将提供无界面运行能力，让人类和
+agent 都能平等访问，让开发者站在操作者的位置上。</p>
+<p>在 9 月 14 日至 21 日期间，Resend 密集推出了 9 个此前仅存在于控制台的
+API，包括指标查询、无界面回调、取消广播、分享邮件、复制自动化、更新分群、点击链接列表、修改密钥名称和复制广播，并预告下一阶段将开放动态发
+key 和事件过滤。同日，Resend 也在官方更新日志上线了与
+Stripe Projects 的集成，开发者不再需要手动登录网页绑卡拷 key，agent
+只需运行命令
+stripe projects add resend/email，后台便会自动关联账户、生成
+key 写入环境变量文件、安装技能包；新建账号的账单通过 Stripe
+管理（连接已有且持有团队的 Resend 账号时，账单仍留在 Resend）。Resend
+的一系列动作指向同一个变化。</p>
+<p>以前写软件，先画原型图、做 UI、写控制台让人类点来点去，成熟了再封装成
+API。现在从立项第一天就想好机器怎么调，先定标准协议、结构化响应、事件推送、幂等，给人看的网页控制台不是往后排就是变成查错的辅助界面。</p>
+<p>这种设计顺序的改变正在成为新一代开发者基础设施的共同规范。Stripe Projects 联合 60
+多家服务商制定协议，主张过去开发者用包管理器安装代码包，现在用一行命令接入云服务，无需控制台与配置文件，官方文档首节直接引导开发者从编程
+agent 开始构建。</p>
+<p>E2B 号称给每个 agent 一个虚拟机，拿到2100
+万美元 A 轮；据其官网自报，沙箱启动累计超过 10 亿次，财富百强中有 94
+家已注册，网站首页的核心位置就是一个终端命令。Firecrawl 号称给 agent
+提供干净的数据，拿到 7500
+万美元融资，官网页脚专门设置了面向机器的入口，直接指向技能配置文件
+SKILL.md。Cloudflare 在 2026 年 4 月 16 日也推出了面向 agent
+的邮件服务，支持免密钥绑定、MCP 服务和命令行工具，官方指出邮件正成为
+agent 的核心交互界面。</p>
+<p>这批产品还有一个共同点：主要入口不是给人用的网页界面。</p>
+<p>上一代产品的界面是搜索框，这一代 agent
+工具的界面是命令行</p>
+<p>上一代搜索的样板是
+Google，一个搜索框，人打几个字，结果排好队出现，这个界面就是产品本身。做了同类事情的
+Firecrawl 和 Exa 走的是另一条路：入口是 API
+文档和一行命令，人想亲自试用，得打开终端调接口。CLI
+严格说也能用，但这两家的公开定位都写着面向 AI
+的程序化调用，设计清单上排在第一位的客户不是坐在浏览器前的人。</p>
+<p>软件的规则发生了变化，产品从立项开始就首先针对机器调用，网页是给人类浏览的附属品。</p>
+<h2 id="现实边界还没有超过人类的地方" data-reading-heading="">现实边界：还没有超过人类的地方</h2>
+<p>同一个 AI agent
+在两扇门前得到不同待遇：基础设施的门发牌，安全防御的门拦截</p>
+<p>看完了流量过半、产出倍增和设计顺序颠倒，可能会觉得机器会在所有方面都取代人类。但只要你把目光转向商业交换和安全对抗，就会立刻发现情况完全不是这样。</p>
+<p>而现实边界指的是两个非常具体的客观限制：一个是价格限制，一个是信任限制。在这些方面，agent不仅没有超越人类，反而处处受到比人类更为严格的限制。</p>
+<p>首先，价格上，软件平台对agent没有任何技术先进性的补贴，试图用机器扩大吞吐立刻就会碰到付费门槛和配额。比如OpenAI在2025年7月17日推出的代理功能仅限付费用户，Pro用户每月限额400条，其他付费档位仅40条。GitHub则将每次机器会话折算成一次高级请求进行计费，并宣布Copilot代码审查自2026年6月1日起消耗Actions运行分钟数，占用了共享额度。模型厂商更为严厉，自2026年4月4日起，Anthropic
+禁止 Claude Pro/Max 订阅额度接入 OpenClaw 等第三方 agent
+框架，相关使用须走按量付费。</p>
+<p>成本敏感也体现在邮件服务上。Resend 官方定价条款写明，每一封接收到的邮件都会算进现有的交易邮件配额里；现有邮件服务的
+Free、Pro、Scale 档数据保留期均为 30 天，Enterprise
+可灵活约定，而收件箱功能的单独定价和长期存储方案至今未公布。这不难理解，因为机器可以全天候、不间断地接收和解析邮件，没有配额或留存限制，海量的入站流量就会打爆服务商的基础设施成本。</p>
+<p>然而，更深层的边界在于，机器尚未跑通商业闭环。一个典型例子是，2025 年
+9 月 29 日 Stripe 和 OpenAI 共同推出即时结账功能，让 AI
+在对话中完成下单；2026 年 1 月媒体报道，通过 ChatGPT checkout 成交的
+Shopify 商户须向 OpenAI 支付 4% 成交费。上线约六个月后，OpenAI 于 2026
+年 3 月 24 日宣布收缩该功能，回归传统应用模式。据媒体报道，实际接入该功能的商户仅有
+12 家。</p>
+<p>咨询公司的宏观预测同样水分不小：麦肯锡预测 2030 年代理商业达 3 至 5
+万亿美元，eMarketer 预测仅 1440 亿美元；据第三方对各家预测的整理，麦肯锡
+5 万亿美元的预测上限约为 eMarketer 数字的 35
+倍，分歧源于各家对代理商业的定义不同：麦肯锡算的是 agent
+影响或参与编排的消费，把相关的人类消费也算在内。至今没有任何官方数据证明
+agent 独立完成了多少交易金额，这个统计空白本身划出了现实边界。</p>
+<p>第二个现实边界是信任约束。自动化程序在网络安全方面从未受到正常用户待遇，通常被视为潜在恶意攻击者、作弊者。Cloudflare
+做了很多工作，比如 2025 年 5 月 15 日提出 Web Bot Auth
+提案，通过密码学签名验证机器人身份；2025 年 7 月 1 日推出按次付费的爬取计费测试，当天将默认拦截未授权的
+AI 爬虫设为标准策略；蜜罐系统 2026 年 8
+月加入投毒功能，向违规机器人返回造假数据；9 月 30 日内测 agent
+付费墙网关产品。</p>
+<p>司法手段也在跟进。亚马逊 2025 年 11 月对 Perplexity 的购物 agent
+提诉，指控它隐瞒机器人身份，违反平台条款，法院签发了初步禁令，目前第九巡回上诉法院正在审理，案号
+26-1444。风控系统也不断发出警报：据 Stripe Sessions 2026
+的厂商口径，Stripe 平台上 AI
+服务的注册尝试有六分之一来自恶意行为者；其风控系统 Radar
+在报告所述的上一个月，为八家高增长 AI 业务拦截了超过 330
+万次高风险注册。</p>
+<p>在技术圈之外，在谈钱和谈信任的现实世界里，机器仍然是可疑对象，该给的钱一分不能少。</p>
+<h2 id="这三个阶段怎么读" data-reading-heading="">这三个阶段怎么读</h2>
+<p>从流量、工作量到设计顺序，技术的演变轨迹一目了然：流量过半，是机器占了网络通道的大头；工作量过半，发生在部分平台的特定任务上，比如
+Neon
+的新建数据库事件；设计顺序颠倒，则是新产品从第一天起就默认面向机器。流量与局部工作量有平台统计支撑；设计顺序的变化，则有
+Stripe Projects、Resend 等产品的公开接口与发布动作作为证据。</p>
+<p>但理解这三个阶段，必须紧跟着一个现实边界。现实边界来自整个社会的经济契约和法律责任。创造价值、承担风险的主体仍然是人。程序拉起数据库、发信，云厂商按资源收费；程序抓取数据，安全防线当它是隐患。亚马逊与
+Perplexity 的诉讼也表明，agent
+的平台访问争议仍由背后的人类组织在现有法律框架内处理。这是既激进又受限的局面，它给现在的系统开发者和产品构建者带来三条判断依据。</p>
+<p>第一，审视产品程序化可用性。如果一个产品的交互逻辑仍然封装在控制台里，用户的外部调用必须依赖人工点击确认，那么它正在迅速失去与主流生态的对接。</p>
+<p>第二，在项目的第一个工作日就定义强类型接口、事件推送、幂等控制和元数据。让控制台退居次席，仅作调试之用。</p>
+<p>第三，在现实边界处筑牢防线。评估额度、计费与权限风险，缺乏配额上限、签名验证与恶意流量防御的系统，会在高频运转冲击下付出惨痛代价。</p>
+<p>承认机器在流量、产出和系统设计上已成为主角，同时看清其在金钱和信任上的边界，这是今天我们对软件的真实认知。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/20a9e8e0a0e26fd7e29eb41bd1fdc25c5bd176cf940d60b5258c5463b3ceaf00.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/20a9e8e0a0e26fd7e29eb41bd1fdc25c5bd176cf940d60b5258c5463b3ceaf00.md" download="Agent 占用软件的三个阶段与现实边界.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=matthew-prince" class="entity-link person-link">matthew-prince</a>, <a href="/search/?q=ali-ghodsi" class="entity-link person-link">ali-ghodsi</a>, <a href="/search/?q=karri-saarinen" class="entity-link person-link">karri-saarinen</a>, <a href="/search/?q=zeno-rocha" class="entity-link person-link">zeno-rocha</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=cloudflare" class="entity-link company-link">cloudflare</a>, <a href="/search/?q=microsoft" class="entity-link company-link">microsoft</a>, <a href="/search/?q=databricks" class="entity-link company-link">databricks</a>, <a href="/search/?q=neon" class="entity-link company-link">neon</a>, <a href="/search/?q=linear" class="entity-link company-link">linear</a>, <a href="/search/?q=github" class="entity-link company-link">github</a>, <a href="/search/?q=stripe" class="entity-link company-link">stripe</a>, <a href="/search/?q=resend" class="entity-link company-link">resend</a>, <a href="/search/?q=openai" class="entity-link company-link">openai</a>, <a href="/search/?q=anthropic" class="entity-link company-link">anthropic</a>, <a href="/search/?q=amazon" class="entity-link company-link">amazon</a>, <a href="/search/?q=perplexity" class="entity-link company-link">perplexity</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=cloudflare-radar" class="entity-link product-link">cloudflare-radar</a>, <a href="/search/?q=microsoft-entra-agent-id" class="entity-link product-link">microsoft-entra-agent-id</a>, <a href="/search/?q=neon-database" class="entity-link product-link">neon-database</a>, <a href="/search/?q=linear" class="entity-link product-link">linear</a>, <a href="/search/?q=github-copilot" class="entity-link product-link">github-copilot</a>, <a href="/search/?q=resend-inboxes" class="entity-link product-link">resend-inboxes</a>, <a href="/search/?q=stripe-projects" class="entity-link product-link">stripe-projects</a>, <a href="/search/?q=e2b" class="entity-link product-link">e2b</a>, <a href="/search/?q=firecrawl" class="entity-link product-link">firecrawl</a>, <a href="/search/?q=exa" class="entity-link product-link">exa</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

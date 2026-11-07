@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+
+  
+  
+  
+  <div class="container" data-pagefind-ignore><div class="home-layout">
+    <h1>标签：data-engineering</h1>
+    
+    
+<ul>
+
+  <li>
+    <a href="/content/clippings/2026-11-05_httpsyag_openai-pando-vs-anthropic-scion-git-20261105-html/">同样被智能体撑爆代码库，为什么 Anthropic 掀了 Git
+的桌子，OpenAI 却连命令行都没改？</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ yage.ai</a> 
+    <time datetime="2026-11-05T00:00:00.000Z">2026-11-05</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文章对比了 Anthropic 和 OpenAI 在应对智能体高并发代码读写压力时，对 Git 系统的不同解决方案。Anthropic 选择重造了版本控制系统 Scion，而 OpenAI 则保留了 Git 命令行和协议，只重写了后端架构，通过将代码拆分成静态包并利用缓存机制解决了高并发下的同步和拉取性能问题。文章指出，两家选择不同路线的原因在于团队的知识基因和业务场景的差异，体现了在智能体时代，分辨外部契约和内部假设的能力比重写代码本身更重要。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/clippings/2026-11-02_httpsyag_supabase-compute-docker-baas-20261102-html/">做 Postgres 起家的 Supabase，为什么非要自己卖 Docker
+容器？</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ yage.ai</a> 
+    <time datetime="2026-11-02T00:00:00.000Z">2026-11-02</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ Supabase 宣布进入 Compute 私有内测，旨在为用户提供在数据库项目上直接运行 AI Agent、后台任务和自定义接口的能力，包括通过 Dockerfile 部署任意语言的 API 服务和 WebSocket 长连接服务。Supabase 官方推出容器部署是为了在客户自建外部业务层服务器前，将预算留在自家平台内。Compute 容器支持完整的 Linux 环境和任意语言运行时，解决了无服务函数在单次运行时间限制和环境受限的问题。通过在同机房内网运行容器，可以实现高频读写数据库和数据分析智能体（如使用 DuckDB）的低延迟查询，将查询延迟从近五秒降低到2.9毫秒，并实现内存快照，从而简化查询流程并隔离生产主库风险。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/clippings/2026-11-01_httpsyag_qwen38-cohere-outbound-training-logs-20261101-html/">拆开 Qwen3.8
+的参数排查后，那些外呼阿里云的指令只是没洗干净的训练日志</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ yage.ai</a> 
+    <time datetime="2026-11-01T00:00:00.000Z">2026-11-01</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文章通过对Qwen3.8模型参数排查，揭示了训练过程中由于工程师未清理基础设施留下的运行日志，导致模型在特定场景下生成了指向阿里云服务器的指令，而非人为植入的后门。研究人员通过五步实验，排除了人为后门的嫌疑，并分析了模型在训练过程中学习到的网页抓取中间件残留、固定请求探针以及对内部内网凭据地址的记忆等训练残留，指出部署时需要通过容器防火墙、代理层和系统调用过滤等方式来构建安全边界。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/clippings/2026-10-30_httpsyag_anthropic-s1-six-month-shelf-life-20261030-html/">你以为卖大模型毛利有 80%？Anthropic
+招股书揭开的六个月保质期与交付奇迹</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ yage.ai</a> 
+    <time datetime="2026-10-30T00:00:00.000Z">2026-10-30</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文章分析了Anthropic招股书揭示的大模型商业模式的真实情况，指出其盈利并非依赖于模型本身，而是依赖于跨领域专家协作的交付奇迹，包括多套芯片的推理工程、云平台渠道分成、以及对客户API的按量计费和上下文缓存定价。核心观点是，大模型公司的商业壁垒在于模型之外的交付链条，而非单纯的模型能力，需要解决算力、渠道、产品设计和安全等问题。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/notes/Fa3hQVIKShw/">即时本体：廉价智能时代的动态数据重构</a>
+    <span class="badge"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+</span>
+    <a href="/speakers/ai-engineer/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ AI Engineer</a> 
+    <time datetime="2026-10-12T00:00:00.000Z">2026-10-12</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 在算力与存储成本剧降、AI智能极度廉价的背景下，传统预设的通用静态数据架构正走向失效。Hrishi Olickel提出&#39;即时本体&#39;（Just-in-Time Ontologies）架构范式：解构单一庞大Schema，按需动态生成数据管道，并通过设计者、执行者与优化者三层分工及严格的对抗验证机制，彻底将现代数据工程的核心瓶颈从转换转移至判断与核验。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/notes/h6aqpjrUd5c/">Reducto CEO Adit Abraham：做“枯燥”的脏活，如何成就 AI 基础设施独角兽</a>
+    <span class="badge"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+</span>
+    <a href="/speakers/eo/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ EO</a> 
+    <time datetime="2025-12-23T00:00:00.000Z">2025-12-23</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ Reducto 联合创始人 Adit Abraham 分享了公司如何从一个失败的 LLM 记忆项目（Remember All）转型为顶尖的 AI 数据摄取平台。通过专注于“枯燥”的手动标注和解决企业最棘手的非结构化数据问题，Reducto 赢得了 Fortune 10 客户和 Andreessen Horowitz 的领投，成为连接人类数据与机器智能的关键层。</small>
+    
+    
+  </li>
+
+</ul>
+
+    
+  </div></div>
+
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

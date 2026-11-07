@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>一张草稿纸，一个 Controller：重新理解大模型推理</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">一张草稿纸，一个 Controller：重新理解大模型推理</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-08-01</span>
+    
+
+    <header class="article-header">
+      
+      <h1>一张草稿纸，一个 Controller：重新理解大模型推理</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/chain-of-thought/">chain-of-thought</a>
+      
+        <span class="tag-pill tag-pill--no-page">controller</span>
+      
+        <span class="tag-pill tag-pill--no-page">self-consistency</span>
+      
+        <span class="tag-pill tag-pill--no-page">workspace</span>
+      
+        <span class="tag-pill tag-pill--no-page">reasoning-model</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章探讨了大模型推理能力的演进，认为推理革命并非模型突然获得新大脑，而是通过将自回归上下文转化为可回看的草稿纸（Context）和训练一个能调度、检查、回退的策略中心（Controller）的工程进化。它对比了OpenAI o1和DeepSeek-R1的贡献，指出o1侧重于系统工程和产品化（如推理Token的计费创新），而DeepSeek-R1则侧重于工程的公开化和开源扩散。最终结论是推理系统的演进方向是从内部CoT走向外部Workspace，即Controller在文本、代码执行器和外部状态管理之间进行可靠调度。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/reasoning-scratchpad-controller-20260801.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-08-01T00:00:00.000Z">2026-08-01</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>9 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E8%87%AA%E5%9B%9E%E5%BD%92-context">自回归 Context</a></li><li class="outline-h2"><a href="#%E5%8E%86%E5%8F%B2%E6%BC%94%E8%BF%9B%E5%AD%A6%E6%9C%AF%E7%95%8C%E5%A6%82%E4%BD%95%E4%B8%80%E6%AD%A5%E6%AD%A5%E6%8B%BC%E5%87%BA%E8%8D%89%E7%A8%BF%E7%BA%B8%E4%B8%8E">历史演进：学术界如何一步步拼出草稿纸与</a></li><li class="outline-h2"><a href="#%E8%BE%B9%E7%95%8C%E6%A3%80%E9%AA%8C%E8%8D%89%E7%A8%BF%E7%BA%B8%E4%B8%8E">边界检验：草稿纸与</a><ol><li class="outline-h3"><a href="#%E4%B8%80%E6%A3%80%E9%AA%8C-controller">一、检验 Controller</a></li><li class="outline-h3"><a href="#%E4%BA%8C%E6%A3%80%E9%AA%8C%E8%8D%89%E7%A8%BF%E7%BA%B8%E7%9A%84%E7%89%A9%E7%90%86%E8%BE%B9%E7%95%8C%E5%AE%9E%E9%AA%8C%E4%B8%89">二、检验草稿纸的物理边界（实验三）</a></li></ol></li><li class="outline-h2"><a href="#%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%8F%8D%E6%80%9Dopenai-o1">定位与反思：OpenAI o1</a><ol><li class="outline-h3"><a href="#openai">OpenAI</a></li><li class="outline-h3"><a href="#deepseek-r1%E5%B7%A5%E7%A8%8B%E5%85%AC%E5%BC%80%E5%8C%96%E5%BC%80%E6%BA%90%E8%A7%A3%E5%AF%86%E4%B8%8E%E7%94%9F%E6%80%81%E6%89%A9%E6%95%A3">DeepSeek-R1：工程公开化、开源解密与生态扩散</a></li></ol></li><li class="outline-h2"><a href="#%E7%BB%88%E5%B1%80%E8%A7%86%E8%A7%92%E4%BB%8E%E5%86%85%E9%83%A8%E8%8D%89%E7%A8%BF%E5%88%B0%E5%A4%96%E9%83%A8">终局视角：从内部草稿到外部</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>在 2024 年 9 月 12 日 OpenAI 发布 o1 之前，大家用 ChatGPT
+的习惯都很简单：输入一行提示词，屏幕上立刻像喷水一样一字字吐出回答。但
+o1
+出现的那个晚上，交互模式发生了清晰的改变。聊天框里第一次多出了一个显眼的思考折叠栏，模型不再急着回答，而是默默沉吟了十几秒，在后台跑出了成千上万个你看不到的中间符号。随后公布的测试成绩，在数学和编程竞赛题上展现出了显著的提升。到了
+2025 年 1 月，DeepSeek-R1 的开源更是让这种长思考变成了整个 AI
+社区的热议话题。</p>
+<p>在上一篇 《推理模型四年史：你以为的石破天惊，其实早有暗线》
+中，我们一起梳理过从 2021 年 Scratchpad 到 o1 和 DeepSeek-R1
+的四年技术演进。当时我们得出的一个核心判断是：推理能力并不是一夜之间突然爆发的基因突变，它在商业和工程上的真正分水岭，在于厂商第一次把测试时的思考时间，重构成为了可以灵活调度、可以独立计费的算力资源。如果说上一篇文章解答了这场推理革命在历史上是如何被一步步组装出来的，那么这一篇我们想和上篇做一次补充。我们不再停留在宏观的时间线，而是把镜头切到模型内部的计算机制：自回归
+Transformer
+在打草稿时到底发生了什么？为什么把模型输出拉长并不等于让它变聪明？强化学习在模型的权重深处究竟重排了什么？</p>
+<p>我们的结论非常直白：Reasoning model
+并不是突然长出了一颗会思考的新大脑。Chain of Thought (CoT) 先给
+Transformer 一张可回看的 append-only
+草稿纸，让它能写下中间状态，并用新文字在语义上推翻旧结论；reasoning
+post-training 再训练一个会分配草稿、检查、回退、换路和停止的
+controller。o1 把这条连续路线规模化并产品化，R1
+把它公开化并大规模扩散；两者都重要，但都不是这条思想史的起点。</p>
+<h2 id="自回归-context" data-reading-heading="">自回归 Context</h2>
+<p>的机械本质：草稿纸与 Controller</p>
+<p>要理解推理模型的本质，我们首先得搞清楚一个非常容易让人困惑的问题：如果看自回归的公式
+x→s1→[x,s1]→s2x \xrightarrow{} s_1 \xrightarrow{} [x,s_1] \xrightarrow{} s_2，CoT
+用的不就是标准的自回归解码吗？现在普通的 LLM
+生成文本不也是这么一个字字往外吐的过程吗？它到底改了什么？答案是：在物理解码算子上，CoT
+确实 100% 就是标准的自回归。它没有修改 Transformer
+的基础架构，也没有发明什么神秘的新算子。它改变的，是
+计算在空间（网络隐层）与时间（上下文序列）上的平摊方式。</p>
+<p>大家知道，大语言模型每预测下一个 Token，都要让这个新 Token
+从神经网络的第一层走到最后一层。实际部署会用 KV cache 缓存此前 Token
+的注意力键和值，不必重新计算整段历史，但新 Token
+仍然要经过固定层数的前向传播。这里藏着一个常常被忽略的物理限制：模型的层数是固定的，每一次预测下一个字所能调用的计算深度也是固定的。如果一道题目需要做
+20
+步逻辑转换，而我们要求模型不能写任何中间步骤、第一字就要吐出最终答案，这实际上是在强制神经网络在单次前向传播的隐层空间里，把
+20
+步心算一次性压完。当推导复杂度超过神经网络固定的计算深度时，隐空间就被撑爆了，模型只能盲猜答案。</p>
+<p>Chain of Thought (CoT)
+机制改变了这种单步前向传播的计算拓扑。它的本质，是把原本试图在单次前向传播中完成的隐层心算，拆解成了一个不断往复的状态循环：</p>
+<p>Input→s1→[Input,s1]→s2→[Input,s1,s2]→…→Output\text{Input} \xrightarrow{} s_1 \xrightarrow{} [\text{Input}, s_1] \xrightarrow{} s_2 \xrightarrow{} [\text{Input}, s_1, s_2] \xrightarrow{} \dots \xrightarrow{} \text{Output}</p>
+<p>在这个循环里，Transformer
+的自回归上下文窗口充当了一张可以回头看的草稿纸。模型在第
+tt
+步写下的中间推演字符
+sts_t（比如第一步计算结果为
+42），在第
+t+1t+1
+步会被重新喂回模型当作静态输入。这意味着，复杂的计算被平摊到了几十个甚至上百个自回归时间步中。每一次生成新的
+Token，都在把上一步的中间变量固化在 Context
+里。在下一步生成时，注意力机制可以直接显式检索
+42，而不需要在隐层里重新计算第一步。CoT
+把隐层深度的计算瓶颈，转嫁为了上下文序列的时间平摊。</p>
+<p>从物理特性来看，自回归 Context
+这张草稿纸有一个非常特殊的性质：它只许往后写，不许往回擦的 append-only
+属性。因为 Transformer 的自回归机制一旦把 Token
+生成出来，它就固化在上下文里了，模型无法像人类一样拿橡皮擦把写错的那一行抹掉。不过，模型有一种很有意思的纠错方式，可以理解为语义覆盖。当模型发现前面推导出问题时，它不需要擦掉前文，只需要在后面追加一段自然的反思沉吟——例如写入：等等，这里算错了。42
+乘以 7 应该等于 294，而不是
+284。前面的假设成立不了，得从公式二重新算……——后续 Token
+就可以把这段新判断作为条件继续推导，让旧错误在语义上被后文覆盖。这并不是自动保证：旧内容仍然留在
+Context 中，也可能继续干扰后续生成。</p>
+<p>但我们必须搞清楚：草稿纸本身是没有智商的，它只是提供了一块用来存中间状态的空间。如果我们强行在
+Context
+里让模型打印一串与解题无关的空字符或者点号，模型的推理能力并不会自动提升。消融实验告诉我们，草稿纸之所以管用，是因为上面写下的每一个字承载了结构化的有效语义状态。</p>
+<p>那么，普通提示词诱导的 CoT（比如在 prompt 里加逐步思考的提示示例）和
+o1 / R1 这种推理模型又有什么区别呢？普通的提示词 CoT
+只是利用预训练习惯顺着往后写，它依然很容易顺着单一路径错到底，一旦写错一步就一路错到底，不懂得中途核对。而
+o1 和 DeepSeek-R1
+跑的推理后训练，训练的是策略中心：Controller。草稿纸本身不会思考，后训练训练出来的
+Controller，决定了模型在自回归吐字时应当往草稿纸的哪个方向书写、何时停下来检查先前的推导、何时识别出当前路径已经走进了死胡同并执行回退换路，以及在什么节点确认推导已经完备从而发出终止信号。</p>
+<p>自回归 Context
+是只增不删的草稿纸，Controller 负责分配、检查、回退与停止</p>
+<h2 id="历史演进学术界如何一步步拼出草稿纸与" data-reading-heading="">历史演进：学术界如何一步步拼出草稿纸与</h2>
+<p>Controller</p>
+<p>如果回顾过去四年学术界的里程碑，你会发现大家并不是在无头苍蝇式地尝试各种提示词，而是在一步步验证、完善并固化上面这套草稿纸与
+Controller的心智模型。</p>
+<p>首先是 草稿纸形态的诞生。早在 2021 年，Nye et al.&nbsp;在
+Scratchpad
+研究中做出了关键突破：他们第一次发现，只要让模型在给出答案前把加法进位、变量变化的中间过程显式打印在上下文里，模型处理长位数计算的能力就会大幅提升。这第一次用实验证实了把隐层计算写落为静态
+Context 符号的巨大价值。紧接着在 2022 年，Wei et al.&nbsp;提出了 Chain of Thought
+(CoT)，进一步证明自然语言本身就可以作为通用的草稿纸，甚至不需要微调，仅仅通过少样本提示就能激活模型的打草稿能力。</p>
+<p>其次是 对 Controller
+策略的早期探索。有了草稿纸后，大家立刻发现单靠一条粗糙的草稿很容易走偏。于是研究者们开始探索如何更好地操控打草稿的策略：</p>
+<ul>
+<li>Wang et al.&nbsp;(2022) 提出了 Self-Consistency，既然一张草稿纸可能算错，那就让模型同时在多张草稿纸上计算不同路径，取多数投票的结果。</li>
+<li>Zelikman et al.&nbsp;(2022) 提出了 STaR (Self-Taught
+Reasoner)，让模型自己尝试解题、按正确答案筛选出合格的草稿，再用这些优质草稿反过来微调自己，初步形成了
+Controller 自我集成的循环。 - Yao et al.&nbsp;(2022) 提出了 ReAct
+框架，把草稿纸连到了外部环境，使 Controller
+不仅能在内部打草稿，还能写出调用外部工具的动作指令 Action并读取观察结果
+Observation。</li>
+</ul>
+<p>最后是 Controller
+评估与测试时算力调度的基础设施构建。到了 2022 至 2024
+年，研究焦点转向了如何给草稿质量做精细打分以及如何分配计算预算。Lightman
+et al.&nbsp;(2023) 在 PRM800K
+以及 Uesato et al.&nbsp;(2022) 的 过程与终值反馈对比
+中表明，给草稿里的每一步单独打分（过程奖励模型
+PRM），比只看最后答案对不对要精确得多。而 Snell et al.&nbsp;(24) 在 Scaling LLM Test-Time Compute
+Optimally
+中则给出了量化证明：在推导阶段动态分配更多思考算力，能击败参数量大得多的模型。</p>
+<p>到了 2024 至 2025 年，OpenAI o1 与 DeepSeek-R1
+相继登场。这两个里程碑真正的突破，在于它们不再把草稿纸、打分评估和算力调度当成零散的学术实验，而是用大规模强化学习，把这四年摸索出来的技术拼图缝合在一起。它们第一次训练出了一个能在模型内部自动调度、核对检查并分配算力的成熟
+Controller，完成了从学术探讨到工业级产品化的关键跃迁。</p>
+<h2 id="边界检验草稿纸与" data-reading-heading="">边界检验：草稿纸与</h2>
+<p>Controller 的三组消融实验</p>
+<p>到了这里，我们建立了一套完整的心智模型：大模型的推理能力并非源于大脑质变，而是依赖
+自回归草稿纸（存储状态）与 Controller（调度策略）
+的协同。</p>
+<p>但要验证这套心智模型究竟抓住了底层的真实物理，还是一种套用名词的过度简化，我们就必须针对Controller
+与草稿纸这两个核心组件分别建立可证伪的因果检验。学术界近年来的三组不平凡的消融实验，正好精准地回应了这两个核心组件的物理边界：</p>
+<h3 id="一检验-controller" data-reading-heading="">一、检验 Controller</h3>
+<p>的本质（实验一与实验二）</p>
+<p>关于 Controller，业界最容易产生的误解是：后训练（SFT +
+RL）似乎在模型权重深处创造了一套全新的解题算法。学术界独立完成的两项关键实验，分别从策略与权重两个维度给出了回答：</p>
+<h4 id="实验一s1">实验一：s1</h4>
+<p>的 Wait 字符 —— 强行追加控制词，是在创造新能力还是释放已有预算？</p>
+<p>在 Muennighoff et al.&nbsp;(2025) 的 s1
+实验中，研究人员尝试在模型输出结尾强行插一个 Wait
+字符逼模型继续写，使 AIME 测试准确率从 50.0% 提升到了
+56.7%。但关键前提在于：这个结果来自已经用 1,000 条 long-CoT
+样本做过监督微调的
+s1-32B，而不是未经这一步训练的基座模型。论文也观察到，反复压制停止 Token
+会让模型逐渐陷入重复循环。这说明 Wait
+并不是一个对任意模型都有效的通用反思开关；它更像是对 已有
+Controller 策略做了一次思考预算的强制释放 Budget Forcing。</p>
+<h4 id="实验二rlvr">实验二：RLVR</h4>
+<p>与 pass@k 衰减 —— 强化学习究竟是在发明新算法，还是在重排概率？</p>
+<p>在权重关卡上，Sea AI 的 Liu et al.&nbsp;(2025) Understanding R1-Zero-Like
+Training 与清华-上交 Yue et al.&nbsp;(2025) Does Reinforcement Learning
+Really Incentivize Reasoning Capacity
+测试了模型在不同采样次数下的成功率（pass@k）：当采样次数
+k=1k=1
+时，RL 后的模型优势巨大；但当采样次数扩展到
+k=256k=256
+时，未跑过 RL 的原始基座模型准确率快速上升，追平甚至反超了 RL
+模型。这证实了 Controller 的核心机制主要在于
+概率重排——它重新加权了基座原本具备但概率极低的路径，让模型在试一次（pass@1）时就能大概率选中。当然，Liu
+et al.&nbsp;(2025) 的 ProRL
+也补充表明，长时间 RL 能在有限采样预算下扩展实用的解题边界。</p>
+<h3 id="二检验草稿纸的物理边界实验三" data-reading-heading="">二、检验草稿纸的物理边界（实验三）</h3>
+<p>在厘清了 Controller
+的策略重排本质后，我们再来检验第二个核心组件：自回归 Context
+这张草稿纸。文本草稿纸是万能的吗？如果自回归草稿纸存在局限，它的物理天花板在哪里？</p>
+<h4 id="实验三纯文本草稿的物理极限与">实验三：纯文本草稿的物理极限与</h4>
+<p>PoT 工具替代 —— 文字草稿能解决一切问题吗？</p>
+<p>Apple 团队 Shojaee et al.&nbsp;(2025) 在 The Illusion of Thinking
+中针对草稿纸做了一项严谨的边界测试：让推理模型在纯文本 Context
+里求解复杂的汉诺塔盘片移动。结果发现，面对高度依赖精确机械状态追踪的任务，纯文本
+CoT 会随着输出字数的拉长而产生自回归误差累积，导致推理链失真。</p>
+<p>但在续作 Thinking Isn’t an
+Illusion 以及 Program of Thoughts (PoT)
+实验中，研究者做了一个改变：不再让模型在草稿纸上用文字死磕盘片位置，而是让模型生成一段精简的代码，交给
+Python 解释器去执行。结果模型在汉诺塔任务上恢复到了 100%
+的求解准确率。</p>
+<p>这一实验精准证明了草稿纸的物理边界：纯文本自回归草稿在处理机械状态追踪时天生脆弱。一个成熟的
+Controller，不仅要学会如何在内部草稿纸上写字，更要学会
+何时将脆弱的文本推演剥离给确定性的外部代码执行器。这也为推理模型的架构演进指明了下一个方向。</p>
+<h2 id="定位与反思openai-o1" data-reading-heading="">定位与反思：OpenAI o1</h2>
+<p>与 DeepSeek-R1 的真实贡献</p>
+<p>在厘清了草稿纸、Controller 与消融实验的逻辑链后，我们可以对 OpenAI o1
+与 DeepSeek-R1 这两大里程碑建立更加客观、理性的评估。</p>
+<h3 id="openai" data-reading-heading="">OpenAI</h3>
+<p>o1：规模化、产品化与品类定义</p>
+<p>OpenAI o1
+的关键价值不在于它发明的学术理论，而在于优秀的系统工程与产品封装： 1.
+系统级工程集成：OpenAI 在 Learning
+to Reason With LLMs
+中把大规模推理强化学习、推断期思考算力和前沿模型能力融合在一起，在 AIME
+和 Codeforces 上打出了极高的水准； 2.
+产品形态与计费创新：o1 创造了
+reasoning token
+概念，把思考过程变成了可以被系统调度、被用户感知、被 API
+计费的算力资源，定义了全新的产品品类。</p>
+<p>同时我们需要明确边界：OpenAI 至今没有公开 o1 的 Base
+模型、训练数据与搜索细节，我们不能把开源社区的实现简单套用为 o1
+的内部做法。</p>
+<h3 id="deepseek-r1工程公开化开源解密与生态扩散" data-reading-heading="">DeepSeek-R1：工程公开化、开源解密与生态扩散</h3>
+<p>评估 DeepSeek 时，需要区分两个形态： -
+DeepSeek-R1-Zero：在
+DeepSeek-V3-Base（671B MoE，激活 37B，预训练 14.8T
+Tokens）上直接跑纯强化学习，只给格式引导和终值规则奖励，没有前置 SFT。 -
+正式 DeepSeek-R1：在 DeepSeek-R1 技术报告
+中详细披露了冷启动 SFT
+→\rightarrow
+第一轮 Reasoning RL
+→\rightarrow
+拒绝采样生成 800K 数据二次 SFT
+→\rightarrow
+混合 RL 的四阶段管线。</p>
+<p>DeepSeek-R1 的价值不是重新发明推理能力，因为
+DeepSeek-V3-Base
+预训练语料里本身就有海量数学与代码。它的真正贡献在于： 1.
+透明化训练管线：证明了不用昂贵的过程标注
+PRM和复杂的树搜索，靠强 Base、GRPO
+算法和终值奖励就能稳健训练出长思考能力； 2.
+开源扩散：把 R1-Zero、R1
+和蒸馏出的六个小模型权重完全开放，让全球开发者都能研究和部署前沿推理体系。</p>
+<h2 id="终局视角从内部草稿到外部" data-reading-heading="">终局视角：从内部草稿到外部</h2>
+<p>Workspace</p>
+<p>站在当下，大模型推理的演进显然不会停留在把内部 CoT
+拉得更长这一条路上。Zhang et al.&nbsp;(2025) 在 Recursive Language Models
+(RLM) 中展示了另一种思路：不强行把超长推导塞在内部 Context
+里，而是把状态保存在外部环境。根模型通过 Python REPL
+接口递归调用子模型来解决局部问题。在 OOLONG-Pairs
+等长任务上，递归深度提高到 3 时，模型表现比 depth 1 大幅提升（76.0 vs
+58.0）。</p>
+<p>这标志着推理框架的演进正在迈向更全局的系统架构：问题的关键不再是大模型是否有思维链或者思考时间的长短，而是：</p>
+<blockquote>
+<p>系统把推理状态放在哪里？哪些脆弱的机械推导应当交给确定性执行器？Controller是否学会了在内部草稿纸、外部文件系统、代码解释器以及协同子模型之间进行可靠而高效的调度？</p>
+</blockquote>
+<p>推理系统从内部 CoT 走向外部 Workspace，由
+Controller 在文本
+Context、代码执行器、文件记忆与子模型之间调度</p>
+<p>大模型并没有突然长出新大脑。所谓的推理革命，是一场将自回归上下文转化为草稿纸、将神经网络后训练打造为
+Controller、并将外部工具与状态管理融入系统调度的工程进化。历史真正奖励的，从来不是某一个戏剧性的名词，而是那些把朴素直觉一步步转化为可靠系统的人。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/da2721ac53c070bda139aefb7ae1fcabce921c8a5c6ea8f64cfa7700f90f2985.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/da2721ac53c070bda139aefb7ae1fcabce921c8a5c6ea8f64cfa7700f90f2985.md" download="一张草稿纸，一个 Controller：重新理解大模型推理.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Nye et al." class="entity-link person-link">Nye et al.</a>, <a href="/search/?q=Wei et al." class="entity-link person-link">Wei et al.</a>, <a href="/search/?q=Wang et al." class="entity-link person-link">Wang et al.</a>, <a href="/search/?q=Zelikman et al." class="entity-link person-link">Zelikman et al.</a>, <a href="/search/?q=Yao et al." class="entity-link person-link">Yao et al.</a>, <a href="/search/?q=Lightman et al." class="entity-link person-link">Lightman et al.</a>, <a href="/search/?q=Shojaee et al." class="entity-link person-link">Shojaee et al.</a>, <a href="/search/?q=Liu et al." class="entity-link person-link">Liu et al.</a>, <a href="/search/?q=Yue et al." class="entity-link person-link">Yue et al.</a>, <a href="/search/?q=Zhang et al." class="entity-link person-link">Zhang et al.</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, <a href="/search/?q=DeepSeek" class="entity-link company-link">DeepSeek</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=o1" class="entity-link product-link">o1</a>, <a href="/search/?q=DeepSeek-R1" class="entity-link product-link">DeepSeek-R1</a>, <a href="/search/?q=ChatGPT" class="entity-link product-link">ChatGPT</a>, <a href="/search/?q=DeepSeek-V3-Base" class="entity-link product-link">DeepSeek-V3-Base</a>, <a href="/search/?q=PRM800K" class="entity-link product-link">PRM800K</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

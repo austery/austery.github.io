@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用 Harbor 在真实任务与沙箱环境中评估 AI Agent</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">使用 Harbor 在真实任务与沙箱环境中评估 AI Agent</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-26</span>
+    
+
+    <header class="article-header">
+      
+      <h1>使用 Harbor 在真实任务与沙箱环境中评估 AI Agent</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/agent-evaluation/">agent-evaluation</a>
+      
+        <a class="tag-link" href="/tags/sandboxing/">sandboxing</a>
+      
+        <a class="tag-link" href="/tags/observability/">observability</a>
+      
+        <span class="tag-pill tag-pill--no-page">integration-testing</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">Arize AI 工程师 Xander Song 介绍了开源 Agent 评估框架 Harbor 的架构与实践。Harbor 在独立 Docker 沙箱中运行任务并由验证器生成反馈，Arize 团队将其与 Phoenix 及 OpenInference 结合，用于测试优化包含 MCP 服务、CLI 和提示词的复合 Agent 体验。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=kRJjSOYqW0I" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-26T00:00:00.000Z">2026-10-26</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>12 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E5%BC%80%E5%9C%BA%E4%BB%8B%E7%BB%8D%E4%B8%8E-harbor-%E6%A6%82%E8%BF%B0">开场介绍与 Harbor 概述</a></li><li class="outline-h3"><a href="#harbor-%E7%9A%84%E6%A0%B8%E5%BF%83%E8%BF%90%E4%BD%9C%E6%9C%BA%E5%88%B6">Harbor 的核心运作机制</a></li><li class="outline-h3"><a href="#harbor-%E7%9A%84%E6%9E%B6%E6%9E%84%E4%B8%8E%E7%BB%84%E4%BB%B6%E4%BB%BB%E5%8A%A1%E8%AF%95%E9%AA%8C%E4%B8%8E-oracle">Harbor 的架构与组件：任务、试验与 Oracle</a></li><li class="outline-h3"><a href="#%E5%85%B7%E4%BD%93%E4%BB%BB%E5%8A%A1%E6%8B%86%E8%A7%A3%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB%E4%BF%AE%E5%A4%8D%E4%B8%8E%E9%BB%91%E7%9B%92%E9%AA%8C%E8%AF%81">具体任务拆解：数据库迁移修复与黑盒验证</a></li><li class="outline-h3"><a href="#%E6%A8%AA%E5%90%91%E6%89%A9%E5%B1%95%E4%B8%8E%E8%81%9A%E5%90%88%E6%8C%87%E6%A0%87">横向扩展与聚合指标</a></li><li class="outline-h3"><a href="#%E4%B8%8E-phoenix-%E5%8F%8A-openinference-%E7%9A%84%E9%9B%86%E6%88%90">与 Phoenix 及 OpenInference 的集成</a></li><li class="outline-h3"><a href="#phoenix-%E7%9A%84%E5%86%85%E9%83%A8%E6%9E%B6%E6%9E%84%E4%B8%8E%E4%B8%89%E7%A7%8D-agent-%E4%BA%A4%E4%BA%92%E5%BD%A2%E6%80%81">Phoenix 的内部架构与三种 Agent 交互形态</a></li><li class="outline-h3"><a href="#%E9%97%AE%E7%AD%94harbor-%E7%9A%84%E5%AE%BF%E4%B8%BB%E7%BC%96%E6%8E%92%E6%9C%BA%E5%88%B6%E4%B8%8E%E5%A4%8D%E6%9D%82%E7%B3%BB%E7%BB%9F%E6%B5%8B%E8%AF%95">问答：Harbor 的宿主编排机制与复杂系统测试</a></li><li class="outline-h3"><a href="#%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E8%81%9A%E5%90%88%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96%E4%B8%8E-prompt-%E8%B0%83%E4%BC%98">实战案例：聚合查询优化与 Prompt 调优</a></li><li class="outline-h3"><a href="#%E9%BB%91%E7%9B%92%E4%B8%8E%E7%99%BD%E7%9B%92%E6%B5%8B%E8%AF%95%E7%9A%84%E6%9D%83%E8%A1%A1">黑盒与白盒测试的权衡</a></li><li class="outline-h3"><a href="#phoenix-%E5%8A%9F%E8%83%BD%E6%BC%94%E7%A4%BA%E4%BD%9C%E4%B8%9A%E6%AF%94%E5%AF%B9%E4%B8%8E%E8%BD%A8%E8%BF%B9%E8%BF%BD%E8%B8%AA">Phoenix 功能演示：作业比对与轨迹追踪</a></li><li class="outline-h3"><a href="#skills-%E6%B5%8B%E8%AF%95%E5%9B%9E%E5%BD%92%E4%BF%9D%E9%9A%9C%E4%B8%8E%E8%AF%84%E4%BC%B0%E5%AF%B9%E8%B1%A1%E5%AE%9A%E4%B9%89">Skills 测试、回归保障与评估对象定义</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="开场介绍与-harbor-概述" data-reading-heading="">开场介绍与 Harbor 概述</h3>
+<p>我直接开始了。我叫 Xander Song。我是 Arize AI 的一名工程师，在团队负责我们的开源可观测性、实验与评估平台 Phoenix。今天我将向大家介绍 Harbor，这是一个开源框架，用于在隔离的沙箱环境中使用真实数据和真实任务来评估智能体（Agents）。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+[music]
+<p>I'll go ahead and get started. Uh, my name is Xander Song. I'm an engineer at AriseAI where I work on Phoenix, our open-source observability experimentation and evaluation platform. And today I'm going to introduce you to Harbor, which is an open- source framework for evaluating agents on real tasks with real data in isolated sandboxed environments.</p>
+</details>
+<p>今天演讲的主题是“基于事实证据而非凭感觉发布”。我的目标是向大家对 Harbor 作为一个框架的工作原理进行概念性概述，并分享我的团队如何使用 Harbor 更快、更有信心地在我们的智能体、测试套件（harnesses）、技能（skills）、提示词（prompts）和工具（tools）上进行迭代。本次演讲更倾向于讨论而非互动工作坊。但我希望大家离开时，能够对 Harbor 的工作机制有一个切实的认识，并了解如何在日常工作中应用它来让你的工作和智能体变得更好一些。在开始前先做个免责声明：我不是 Harbor 的维护者。不过，我认为自己目前算得上是一个狂热的高级用户。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The theme of today's talk is shipping based on evidence rather than vibes. And my goal is to give you a conceptual overview of how Harbor works as a framework and to share some of the ways in which my team is using Harbor to iterate more quickly and with more confidence on our agents, harnesses, skills, prompts, and tools. This talk is going to be a discussion rather than a interactive workshop. But my hope is that you walk away with a concrete sense of how Harbor works as a framework and also a sense of how you might use it in your day-to-day work to make your life and your agents a little bit better. A disclaimer before I begin. I am not a maintainer of Harbor. Um I do however consider myself to be an avid power user at this point.
+</details>
+<h3 id="harbor-的核心运作机制" data-reading-heading="">Harbor 的核心运作机制</h3>
+<p>那么，什么是 Harbor？从高层视角来看，Harbor 是一个允许你以自然语言指令形式向智能体定义现实任务的框架。这些任务是你希望智能体能够去完成的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, so what is harbor? At a high level, Harbor is a framework that allows you to define realistic tasks in the form of natural language instructions to an agent. These are tasks that you would like your agent to be able to accomplish.
+</details>
+<p>Harbor 会把这些任务提供给运行在全新沙箱环境中的智能体，沙箱中配备了与该任务相关的真实数据。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Harbor feeds those tasks to your agent running in a fresh sandboxed environment with real data relevant to the given task.
+</details>
+<p>然后，它允许你定义所谓的验证器（verifiers）。这些验证器针对具体每个任务，它们的作用就是检查智能体是否在环境内部产生了预期的副作用。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And then it enables you to define what are called verifiers. These verifiers are specific to each task and they just check that your agent produced the intended side effects inside of the environment.
+</details>
+<p>验证器会生成奖励（rewards）。奖励的示例包括二进制分数，比如 0 或 1，或是 pass/fail。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Verifiers produce rewards. Examples of rewards are binary scores such as zero or one or pass fail.
+</details>
+<p>这张图看起来非常非常简单，对吧？但我想花点时间体会一下它为什么很强大。因为如果我的任务和数据是贴近现实的，而且我做好了验证器的定义，能够准确描述该任务下什么是成功或失败，这就意味着我可以保持任务和验证器不变，同时去修改智能体的内部实现。仅通过完整执行这个流水线，我就能快速高效地获得一个信号，告诉我针对这个特定任务，我对智能体所做的更改到底是带来了提升还是退步。不仅如此，我还可以更进一步：我不仅可以整理一个任务，还可以整理许多任务，覆盖智能体能力的广泛范畴。这让我能够闭环这个流程，从而能够带着某种确定性开始迭代，而不是在仅凭感觉发布时面临的那种不确定性。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So this picture is like really really simple, right? But I want to just take a moment to appreciate why it's powerful. Because if my task and my data are realistic and if I've done a good job of defining verifiers that accurately describe what constitutes success or failure on the given task, what that means is that I can hold my task and my verifier constant while I change the implementation of my agent. And by simply executing this pipeline from start to finish, I can quickly and efficiently gain a signal telling me whether or not the change I made to my agent produced an improvement or a regression for this particular task. Um, and not only that, I can take it a step further. I can compile not just one task, but many tasks that cover the broad surface area of the capabilities of my agent. And this lets me close the loop here. So that now I'm actually able to start iterating with a degree of confidence that I might not be able to um if I was shipping based on vibes alone.
+</details>
+<p>这就是 Harbor 简而言之的核心理念。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So that's really the idea of harbor in a nutshell.
+</details>
+<h3 id="harbor-的架构与组件任务试验与-oracle" data-reading-heading="">Harbor 的架构与组件：任务、试验与 Oracle</h3>
+<p>让我们进一步拆解一下。我来谈谈 Harbor 工作机制的架构细节。在这张幻灯片上，展示了我前一张幻灯片提到的任务。每个任务都以 Markdown 文件的形式指定一组指令。再次强调，那只是一段你将输入给智能体的自然语言。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Let's break it down a little bit further. I'm going to talk about like the architectural details of how Harbor works. So on this slide here, I have the task that I was talking about on the previous slide. Each task specifies a set of instructions in the form of a markdown file. And once again, that is just a piece of natural language that you're going to feed to your agent.
+</details>
+<p>任务还描述了智能体将在其中运行的环境，这通常采用 Dockerfile 的形式。该 Dockerfile 通常包含与当前任务相关的数据。我们稍后会举例说明。但这里需要认识到的是，Harbor 在提供何种数据方面实际上是完全无关的（agnostic）。比如可以是 SQLite 文件，对于代码类智能体，非常常见的例子则是处于特定提交状态的 Git 仓库。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The task also describes an environment in which the agent will run. And that typically takes the form of a Docker file. And that Docker file typically contains data that is relevant to your task at hand. And we'll give examples of this in just a minute. But the thing to realize here is that um Harbor's actually agnostic with respect to what kind of data you give it. So some examples could be like a SQL light file. A very common example for coding agents would be like a git repository at a particular commit.
+</details>
+<p>Harbor 还允许你在 test 目录下定义一组验证器。正如我所说，验证器其实就是脚本。它们只是在智能体运行完毕后在环境中运行的脚本，用于验证预期的副作用是否已经发生。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And Harbor also lets you define a set of verifiers inside of a test directory. And as I said, verifiers are just scripts. They're just scripts that run on your environment after your agent is done running that verify that the intended side effect took place.
+</details>
+<p>就像我提到的，通常我们不只有单一任务，而是将许多任务汇集在一起，形成所谓的数据集（dataset）。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And like I said, typically we don't have just one task, but we have many collected together in what is called a data set.
+</details>
+<p>对于数据集中的每个任务，Harbor 允许你运行可配置次数的试验（trials）。这些试验只是任务的独立执行，用来应对大语言模型和智能体具有随机性这一事实。它们并不是每次行为都完全一致。因此，每次试验都会以一个全新的 Docker 容器构建出一个全新环境，并注入我们刚刚讨论过的数据。Harbor 会将你选定的智能体放入该环境中，向其传入说明性的 Markdown 文件，并让其运行。当然，受测智能体通常会在环境中产生副作用。如果是代码编写智能体，它会修改源文件；如果环境里配置了数据库，它可能会更改数据库；它可以做很多事情，对吧？智能体执行完毕后，</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And for each task in the data set, Harbor allows you to run a configurable number of trials. These trials are just independent executions of the task to account for the fact that LLMs are stochastic. Agents are stochastic. They don't behave the same every time. So each trial is going to build a fresh environment in the form of a brand new Docker container seated with that data we were just talking about. Harbor is going to drop your agent of choice into this environment. It's going to feed it the instruction markdown file and it's going to let it do its thing. And of course, the agent under test is going to produce side effects in the environment usually. So if it's a coding agent, it's going to make changes to source files. Um, it might make changes to a database if you put it in there. It could do any number of things, right? And after the agent finishes,
+</details>
+<p>验证器将在环境中运行。再次强调，验证器就是一个检查环境的脚本。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+the verifiers are going to run on the environment. And again, a verifier is just a script that checks the environment.
+</details>
+<p>这些验证器会生成奖励，并写入到 <code>reward.txt</code> 文件中。如果你什么都没记住，记住这点最重要。这就是 Harbor 的架构工作方式。另外还有一件可选的事情可以做，你可以配置智能体以 ATIF 格式输出所谓的轨迹（trajectories）。ATIF 代表智能体轨迹交换格式（Agent Trajectory Interchange Format）。ATIF 是 Harbor 提出的一种基于 JSON 的追踪格式规范，它基本上能让你深入观察智能体在系统上产生副作用所采取的内部细节和执行步骤。因此它主要用于调试、日志记录等目的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Those verifiers produce rewards which get written to a reward.ext file and that that's the most important thing if you take away nothing else. This is like the architecture of how harbor works. There's another thing which is kind of an additional optional thing you can do which is you can configure your agents to emit so-called trajectories in the form of ATIF. ATIF stands for agent trajectory interchange format. ATIF is Harbor's specification for a JSON based tracing format which basically lets you peer into the internal details and the internal steps that your agent took to produce the side effect on the system. So it's basically there for debugging purposes and for logs and and recording and all that.
+</details>
+<p>将数据集中的所有任务取出来、针对这些任务运行一定数量的试验、运行验证器生成奖励并收集轨迹，这一整套端到端执行的流程，在 Harbor 中被称为一个作业（job）。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+this whole pipeline executing end to end where we take all the tasks in a data set run a certain number of trials for those tasks run our verifiers to produce rewards and collect trajectories this whole thing all taking together is what Harper calls a job
+</details>
+<p>在这张幻灯片上我还想指出一点，你会注意到这里我写的是 <code>agent/oracle</code>。Harbor 也有 Oracle（标准参考解）的概念。你不仅可以将智能体放入环境中，还可以放入 Oracle。Oracle 就是你任务的一个解法，一个能解决你任务的脚本。我们稍后会更详细地讨论 Oracle，但事实证明 Oracle 是极其有用的东西，因为 Oracle 基本能让你在把智能体引入流水线之前，把流水线中所有的故障环节全部排查清楚。它能让你确保数据完好、环境配置正确、验证器按预期工作，而这一切都可以在为你给智能体消耗任何 Token 花费费用之前完成。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+and there's one more thing I want to point out while I'm on this slide which is you'll notice right here um I said I said agent/oracle um so Harbor also has this notion of an oracle you can drop not only an agent agent into the environment, but also an oracle. And an oracle is just a solution to your task. It's just a script that solves your task. And we'll talk about oracles more in a minute, but oracles turn out to be like this really useful thing because oracles basically let you work out all the the the kinks in your pipeline before you ever throw an agent into the mix. It lets you make sure that your data is good, that your environment is configured properly, that your verifiers work as expected, and you get to do all that before you spend any money on tokens for an agent.
+</details>
+<h3 id="具体任务拆解数据库迁移修复与黑盒验证" data-reading-heading="">具体任务拆解：数据库迁移修复与黑盒验证</h3>
+<p>好，这就是宏观层面的介绍。在暂停回答问题之前，我先继续讲一小会儿，用一个具体例子来说明。我来拆解一个具体的任务。假设我们关注的智能体是一个代码编写智能体，或者是一个具备特定技能集、或是配置了我们运行的自定义 MCP 服务器的代码编写智能体。假设任务是修复一个失败的数据库迁移。如果是这样，指令 Markdown 文件就会是作为用户传递给代码智能体的一组指令。比如上面可能会写：“嘿，我注意到这个迁移失败了，能否请你尝试修复它？”对吧？而在环境中，环境内部可能包含一个实际的 SQL 文件，可能包含一些 DDL，可能包含带有向上迁移（up migration）的源代码。我们已经注入了数据，使得该向上迁移执行失败。此外，我们会有测试。同样地，测试可以只是运行向上迁移并确保该迁移退出状态码为 0 的脚本。然后它也许会检查某些数据表，确保我们预期的列、预期的索引都在，以确认迁移确实对系统产生了预期的副作用。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+All right, so that is like the high level. Um, before I pause for questions, I will I will just continue on for just a second to kind of illustrate it with a concrete example. So, I'm going to break down a concrete task. Let's suppose that our agent that we care about is a coding agent um or a coding agent with a particular set of skills or a coding agent configured with [clears throat] like a custom MCP server that we're running. And let's suppose that the task is to fix a failing migration. So if that's the case, the instruction markdown file would you know it would it would be some set of instructions that you would pass to the coding agent as a user. So it might say, "Hey, I'm noticing that this migration is failing. Could you please try to fix it?" Right? And in the environment, the environment would contain perhaps an actual um SQL file. Maybe it would contain some DDL. Um and maybe it would contain some source code containing an up migration. And we've, you know, we've seated the data so that the up migration fails. Um in addition, we'll have our tests. And again, the tests, they could be just scripts that run the up migration that ensures that the up migration exit with status code zero. And then it maybe it checks like some tables. Maybe it just checks the tables to make sure that the columns are there that we expect, the indexes are there that we expect to make sure that the um migration has actually had the intended side effects on the system.
+</details>
+<p>你还会注意到这里有一个可选的 solution（解法），对吧？这个解法就是一个字面上的解法，一个你可以运行用来修复迁移的具体脚本。为什么你要费心做这件事呢？原因依然是，它能让你快速而自信地确立信心，确认系统已经搭建就绪、验证器是正确的，这在一定程度上能让你对系统更有感觉，因为你无需逐行审查验证器，就能对验证器建立相当程度的信心。至少这是我的使用体验。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And you'll also notice that here optionally we have the solution, right? So the solution is just going to be the literal solution, the literal uh script that you could run um that would fix the the migration. And again, why would why would you go through the trouble of doing this? Um, the reason again is it kind of lets you quickly and confidently build a little bit of assurance that you've got your system set up, that your verifiers are correct, and you can it kind of lets you um vibe a little harder, I think, with the system because you can gain a certain amount of confidence in your verifiers without necessarily like reviewing them line by line. At least that's my experience with it.
+</details>
+<p>在智能体于环境中执行任务之后，它会去编辑那个损坏的迁移文件，在文件系统上留下几处修改，然后验证器开始运行。通常如果你是在 Docker 中运行 Harbor（这是默认的本地运行设置），那些验证器会在智能体执行完成后挂载到 Docker 容器中。这是为了防止智能体作弊。这样智能体在实际执行期间就无法接触到验证器和参考解法。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And so after the the agent runs the task in the environment, um it's going to edit that broken migration file, it's going to leave a couple modifications on the file system and then the verifiers are going to run. And typically if you're running um Harbor in Docker, which is like the default local setting, those verifiers are going to mount in the Docker container after the agent finishes. And that's to prevent the agent from cheating. So the the agent doesn't have access to the verifiers and the solutions um during the actual execution.
+</details>
+<p>这些验证器将执行我们讨论过的各种检查。也许它直接运行向上迁移，也许它会检查表、检查索引。我认为从这张幻灯片中最需要领会的一点是：验证器与智能体的内部实现是解耦无关的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Those verifiers are going to run the sort of checks that we talked about. Maybe it literally runs the up migration. Maybe it um you know checks the tables, checks the indexes. And I think the thing to really take away from this slide is um the verifiers are agnostic of the implementation of your agent.
+</details>
+<p>它们实际上对智能体内部一无所知。它们关心的只是智能体在环境中留下的结果。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+They actually don't know anything about the agent at all. All they care about is what the agent leaves behind.
+</details>
+<p>虽然也可以编写一些不那么典型的验证器，比如去窥探 ATIF 轨迹、观察智能体的内部实现或执行细节并以此进行评估，但那并非标准的验证器形态。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So it is possible to like write some verifiers that are not like that that peak into the ATIF trajectory that kind of look at the implementation or the execution of the agent and evaluate it that way. But that's not really the canonical kind of verifier.
+</details>
+<p>常规情况下，验证器将智能体视为某种黑盒，仅根据其在环境中的副作用和输出来对其进行评分，而不是根据产生这些副作用与结果的具体方式。这与集成测试存在天然的相似之处。你可以想象，如果你为某个接口或 API 编写了集成测试，只要这些测试写得足够好，它们应当与该接口或 API 背后的具体实现无关。同理，如果我们有非常优质的验证器，它们描述的是我们期望智能体做什么、期望它在环境中产生何种副作用，并且是以与实现解耦的方式来描述的。对于一套测试而言，这是非常优秀的特性，因为它允许你在“绿灯”状态下进行重构。例如，它允许你保持任务不变，同时彻底重构智能体的内部实现，然后迅速触发这条流水线，以弄清楚一切是否依然正常工作。这正是我们所说的快速迭代并带着信心发布。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The verifiers, you know, canonically treat the agent as a little bit of a black box and they're grading the agent solely based on its side effects and its output in the environment rather than the exact manner in which it produced those side effects and outcome. And there's kind of a natural parallel here with integration tests because you can imagine that if you have some integration tests for an interface or an API, those integration tests um if they're really well written are hopefully agnostic of the implementation that is behind that interface or API. And in the same way, if we have really good verifiers, our verifiers are kind of describing what we expect the agent to do, the side effects we expected to produce in the environment. And they're doing so in a way that is decoupled from the implementation. And that's a really nice feature to have for a set of tests because it allows you to refactor under green, for example. It allows you to hold your tasks constant while you like completely change the implementation of your agent and then it allows you to like fire this pipeline really quickly to figure out if everything still works. That's kind of what we're talking about when we're talking about iterating quickly um and shipping confidently.
+</details>
+<p>在继续之前，我先在这里停下来，看看大家有没有问题或评论。好的，先停一下。对，它就是一个 Docker 容器，你想放什么进去都可以，对吧？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So before I go any further, let me just pause right here for questions or comments or um Yeah, let me just pause before I go any further. Yeah. Yeah. Yeah. You just Yeah. Again, it's just a Docker container. So, you just pop whatever you want in there, right?
+</details>
+<p>[笑声]</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+[laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>你提出的是一种原语。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It's a primitive that you're you're proposing.
+</details>
+<blockquote>
+<blockquote>
+<p>是的，它可以是任何框架、任何语言、任何代码片段或可执行文件。具体来说，我给大家剧透一点：比如我们需要更换工具、调整提示词。我现在正在经历一个试图整合我们技能（skills）的过程。我们尝试支持几种不同的智能体体验，它们之间有很多重叠，但也有某些差异。我们正试图让我们的技能变得通用可复用，并且与智能体接入的具体方式无关——无论它是通过 MCP、CLI 还是我们自己的服务端智能体。我们希望做到解耦。这种情况下，能够指定一组完全独立于底层实现的测试就会非常有帮助。我们也是在经历了另一种方式的痛苦之后才体会到这点的：之前我们有一套紧密耦合的测试，维护变得非常困难，因为当我更改一个工具时，测试就会挂掉，即便智能体的真实功能其实完好无损。我们稍后在结尾会聊到更多类似的内容。在继续之前还有别的问题吗？好的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. So, you know, it could be it could be any framework, right? Uh it could be any language. It could be any piece of code, any executable. Concretely, like, you know, I'll give you a little sneak sneak peek or sneak preview, right? Like, we've had to like change tools like um you know, adjust adjust prompts, right? Um, I'm going through a process right now where I'm trying to consolidate our skills, for example. So, we kind of have like uh several different agent experiences that we try to support. Um, there's a lot of overlap and then there's like certain differences and we're trying to like basically get our skills all kind of like reusable, right? Um, and agnostic of the particular like direction that the agent is coming from, whether it's MCP or a CLI or via like our our own like server side agent. we're trying to get it agnostic and and so those are the kinds of things where it kind of helps to be able to specify this set of tests that is like completely agnostic of the underlying implementation, you know, and we we kind of we came to this like maybe um through the pain of doing it the other way where we were like kind of like had a set of tests that were um that were coupled and it was becoming difficult to maintain because you know I would change a tool and the tests would break right even though the not even though the true functionality of the agent was still intact, right? Things like that. Um, we'll get to more of these, right? We'll get to more of these at the end. Um, any other questions before I go on? Okay.
+</details>
+<h3 id="横向扩展与聚合指标" data-reading-heading="">横向扩展与聚合指标</h3>
+<p>好，这张幻灯片要讨论规模化扩展。正如我们之前谈到的，每个任务和每次试验都是独立的，运行在各自的环境和 Docker 容器中。这使得整条流水线具备完全的水平扩展能力。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Okay. So, uh, this this slide is going to talk about scale. Um, so as we as we already talked about, right, each task and each trial, uh, is independent, runs in its own environment, its own docker container. Um, and that makes this whole pipeline completely horizontally scalable.
+</details>
+<p>这意味着它非常适合与沙箱服务提供商配合使用，比如 Daytona、Modal、E2B 等。这意味着如果你愿意，你可以非常迅速地扫过这些测试。在这张图中，垂直排列着数据集中的四个任务，包括我们刚刚设想的“修复迁移”任务。我们有几个想要测试的不同代码编写智能体：带有 Opus 5 的 Claude Code、带有 GPT-5 的 Codex。然后我们配置了多次试验，假设针对 k = 1, 2, 3 进行了三次试验。再次强调，这样做的目的主要是应对模型具有随机性且并非完美、每次行为不完全一致的情况。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And that means that it's very compatible with a sandbox provider such as Daytona or Modal or E2B or any of those. Um, and it means you can kind of rip through these tests like really fast if you want to, which is kind of fun. So in this diagram arrayed vertically, we have a set of four tasks in a data set, including the fixed migration task that we were just imagining. Um, we've got a couple of different coding agents that we might want to test out. claude code with opus 5 codeex with gbt5 and then we've got um a couple of different trials. Let's suppose that we're doing three trials for k equals 1 2 3. Again, the point of that is just to kind of handle the handle the fact that these things are stocastic and they they're not perfect. They don't behave the same every time.
+</details>
+<p>因为所有这些试验都是相互独立的，所以你可以在这些沙箱提供商上全部并行运行。我们使用的是 Daytona，在 200 个并发 Worker 下运行得非常快。因此，即使你有一套庞大的测试套件，也能迅速执行完毕。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um so because all these are independent um you can run them all in parallel on these sandbox providers. So we use Daytona um and it runs quite fast with like 200 concurrent workers. So even if you have a large test suite you can rip through it quickly. Um
+</details>
+<p>从这些单独的试验中，你可以计算出你所关心的聚合指标。例如，你可以计算 pass@k 指标，它表示在对该任务尝试 k 次后是否成功。我可以直观看到：对于修复迁移这个特定任务，我的两个智能体都在 pass@3 上通过了；而对于另一个任务，两个智能体中只有一个在三次尝试后通过。你甚至可以在整个数据集上计算这类聚合指标。这为你提供了一个关于改动表现的快速全貌，因为只要你的数据集很好地覆盖了关心的功能范围，你就能迅速获得这些聚合指标。请讲。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+and then from these individual trials you are able to compute aggregate metrics for the kinds of things that you care about. So for example you could compute a pass at Kmetric that just tells you in this case did I pass after three attempts at the at the task. And so I can see that oh for like this particular task the fixed migration task both of my agents like passed at K right passed at three uh for this one only one of my two agents passed at three. You can actually also compute those kind of aggregate metrics over the entire data set right and so this kind of like gives you this very quick picture of how your change is performing because again if you have like a a good data set that covers the set of functionality that you care about you can get these aggregate metrics pretty pretty rapidly. Yeah. Go ahead.
+</details>
+<p>问得很好。这里是非常关键的一点：图中的每一个方框都是完全独立的 Docker 容器。刚开始时它们完全一致，随后你将不同的智能体放入各自容器中，让它们开始执行，它们会产生不同的行为。每一个都是完全独立且相互隔离的。它们是同一个智能体对同一任务进行的多次独立试验。这就好比你运行了三次 Claude Code，让它尝试修复这个迁移，然后观察三次尝试后 Claude Code 是否修复了该问题。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Each Yeah, that's a great question. So, this is a really important point, right? Is each of these boxes is a totally separate Docker container, identical in the beginning, but then you you put an agent, a separate agent into each one, and you let it go and do its thing, and they do different things, right? Um, so each one is totally independent. They're completely isolated, right? They're independent trials of the same task with the same agent. Um you're basically run yeah you're basically running claude code three times and saying hey try to fix this migration and then you're saying oh after three tries did claude code fix the migration.
+</details>
+<h3 id="与-phoenix-及-openinference-的集成" data-reading-heading="">与 Phoenix 及 OpenInference 的集成</h3>
+<p>好，现在我们已经在宏观层面上讨论了 Harbor。接下来我想换个方向，谈谈 Harbor 如何接入 Phoenix。再次声明，我不是 Harbor 的维护者，我只是它的粉丝。但我确实是 Phoenix 的维护者，这是 Arize 的开源 AI 可观测性工具。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Okay so now now I've now we've talked about harbor at a at a high level. Um but I want to switch gears and I want to talk about how Harbor plugs into Phoenix. So again I'm not a maintainer of Harbor. Um I'm just a fan. Uh but I am a maintainer of of Phoenix uh which is our which is ARIS's open source AI observability tool.
+</details>
+<p>这张幻灯片的目的主要是说明，我们在 Phoenix 中针对 Harbor 的各种原语都有相对应的概念。我们能够将你的数据集映射到我们的数据集概念上；我们能够跟踪你的实验；我们能够记录你的试验；我们能够将你的 rewards 转换为我们称为 evaluation（评估）的概念。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And the point of this slide is just to basically convey that we have analogous concepts for the primitives in Harbor. So we're able to map your data sets to our notion of a data set. We're able to track your experiments. We're able to um record your trials. Uh we're able to convert your rewards into our notion of reward which we call an evaluation. Um,
+</details>
+<p>另外我还希望大家了解的是，我们会将前面提到的那些轨迹转换为所谓的 OpenInference 格式。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+and I guess the other thing I I want to take away from this slide is also we we do something where we convert those trajectories that I talked about into so-called open inference format. Um
+</details>
+<p>OpenInference 是一套开源的语义规范标准，构建在 OpenTelemetry 之上；OpenTelemetry 是一套用于日志、指标和链路追踪等遥测数据的开源框架。这些语义规范定义了 AI 应用可以产生的数据结构，下游消费者（如 Phoenix）可以摄取这些数据，并利用它们构建出一些没有这些规范就无法实现的 UI 体验和工作流。事先声明，我也是 OpenInference 的维护者。我们最近将该规范捐赠给了云原生计算基金会（Cloud Native）及 OpenTelemetry 工作组。因此它在 Arize 之外也获得了一定的关注。这也是你可能会考虑使用 OpenInference 的一个原因。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+so open inference is a open standard of semantic conventions so-called semantic conventions which is built on top of open telemetry which is an open source framework for telemetry data such as logs metrics and traces and these conventions basically define data structures that uh your AI I application can emit which then downstream consumers such as Phoenix can ingest and we can use those to build certain kinds of UI experiences and workflows that wouldn't otherwise be possible. So full disclosure, I am a maintainer of both imprints. Um we recently donated this the spec to cloud native, right? Um and to the hotel working group. So it has some traction outside of arise. And so that's maybe a reason you might want to um use open inference. Um
+</details>
+<p>在左边的图中，你可以看到针对修复迁移任务的 ATIF 轨迹。你可以看到智能体执行的各个具体步骤，包括 LLM 调用和工具调用。而在右边，则是它最终在 OpenInference 中的表现形式。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+so this diagram on the left, you can see the ATIF trajectory for that fixed migration task. you can see the individual steps that the agent might take um including an LLM call and including a tool call. And over on the right, uh this is kind of what it winds up looking like in open inference.
+</details>
+<p>正如我所说，在产品内部，OpenInference 让我们能够构建出大家在这里看到的具有特定设计倾向的 UI 和工作流。我们可以针对 LLM 和工具，使用专门优化的 UI 来呈现你的轨迹。我们可以对你的任务和数据集进行版本控制，以便你在任何时候都能确切知道 Harbor 中某个特定作业对应的任务是什么样的。我们跟踪你的实验，帮助你在迭代过程中将指标和奖励可视化。在这个案例中，你可以将奖励想象为 pass/fail、0 或 1。你可以运行一系列实验，并观察随着时间推移，你的奖励指标是否在朝着正确的方向发展。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And in the product, like I said, open inference allows us to build out the kinds of opinionated UIs and workflows that you see here. So we can do things like we can render your trajectories with some opinionated UI, some specialized UI for LLMs and tools. We can version your tasks and your data sets so that at any given time you know exactly what the task look like for a particular job in Harbor. We track your experiments and we help you visualize metrics and rewards as you iterate. So in this case the reward you could imagine it being pass fail um zero or one and you can run a sequence of experiments and you can kind of see over time is my reward moving in the right direction.
+</details>
+<p>我们还提供了 Skills、CLI 和 MCP 服务器，以便 Claude、Codex 和 Cursor 能够轻松访问这些数据。在此我想说明的是，Harbor 本身拥有自己的开源 UI，可以在本地机器上运行，它也提供托管的 Web 服务。因此使用 Harbor 绝对不强制依赖 Phoenix。但如果你对我刚才提到的一些特性感兴趣，那可以尝试一下 Phoenix。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+We also have skills CLIs and an MCP server so that claude and codecs and cursor can easily get access to this data. [clears throat] And at this point I do want to note that Harbor does have its own open- source UI um that you can run locally on your machine. It also has a hosted web service. Um, so you you definitely don't have to use Phoenix to use Harbor. Um, but if you're interested in some of the features I just mentioned, that would be a reason to give Phoenix a try.
+</details>
+<h3 id="phoenix-的内部架构与三种-agent-交互形态" data-reading-heading="">Phoenix 的内部架构与三种 Agent 交互形态</h3>
+<p>好，希望到目前为止我已经让大家对整体运作有了一个全局认知。现在我想谈谈我们团队使用 Harbor 的一些具体方式。希望能借此回答刚才关于获取具体例子的提问。为此，我想先从高层介绍一下我们的架构是如何运作的。这是 Phoenix 的架构，是我们团队日常处理的具体内容。在左边，是最终用户的 AI 应用或智能体。该应用已使用 OpenTelemetry 和 OpenInference 进行了插桩埋点，并通过 OTLP（OpenTelemetry 协议）将链路追踪导出并发送给 Phoenix 服务器。它基本上就是在向 Phoenix 发送数据，说明：“我正在执行这个操作，这是我为了完成任务所执行的步骤序列。”这可以是一个生产环境应用，也可以是一个处于测试中的应用。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Okay, so hopefully at this point I've given you kind of a bird's eye view of how everything works. Now I want to talk about some of the ways in which our team has been using Harbor. And hopefully this answers um answers your point over here just around getting some concrete examples. Um so in order to do that I just want to give kind of this high level of like what our architecture works with. So again this is the Phoenix architecture. This is particular to our team right this is the this is what our team is kind of like dealing with on a day-to-day basis. Um on the left here you have an enduser's AI application or agent. And again this application is going to have been instrumented with open telemetry and open inference. And it's going to be exporting and emitting traces to the Phoenix server over OTLP, which is the open telemetry protocol. So, it's basically sending data to Phoenix, right? Saying, "Hey, I'm doing this and this is like what my these are the sequence of steps that I did to accomplish this task. This could be like a production application. It could be an application that you're testing out.
+</details>
+<p>这些链路被 Phoenix 摄取后写入后端的 SQL 数据库（SQLite 或 Postgres）。数据进入系统后，我们有一套核心服务来处理 traces、spans、sessions、datasets、experiments 和 evaluations 等内容。这些核心服务通过 REST 或 GraphQL 等多种 API 对外暴露。但我们的目标不仅是提供这些程序化接口，还要让最终用户、他们的代码编写智能体以及其他类型的智能体能够轻松访问和使用这些数据。因此我们支持几种不同的智能体交互形态。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Those traces are ingested by Phoenix and they are written to one of our SQL backends, either SQLite or Postgres. And once the data is in the system, we have a set of core services for things like traces, spans, sessions, data sets, experiments, and evaluations. And these core services are exposed via various kinds of APIs, REST or GraphQL. But our goal is not only to like make those programmatic interfaces, but it's also to make it easy for our end users and for their coding agents and other kinds of agents to get access to the data and use the data. And so we support several different kinds of agent experiences.
+</details>
+<p>第一种是代码编写智能体。对于代码编写智能体，我们提供了一个可以使用的 CLI，它会调用 REST 或 GraphQL。我们还提供了一个 MCP 服务器，你可以配置代码编写智能体去使用它，执行相同操作。我们团队还维护了第三种智能体接口，这是一个名为 Pixie 的服务端智能体，它同样可以访问 MCP 服务器，从而可以访问 REST 和 GraphQL。它还配备了 Bash 模拟器。因此它有点类似于在服务端运行的代码编写智能体。这三种形态就是我们希望支持、必须进行测试并确保正常工作的交互界面：带 CLI 的代码智能体、带 MCP 服务器的代码智能体，以及作为我们自己 Harness 的服务端智能体。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um the first of which are coding agents. So for coding agents, we have a CLI that the coding agent can use which will invoke REST or it will invoke GraphQL. We also have an MCP server that you can configure your coding agent to use um which is going to do the same things. And we have a third agent interface that we maintain for the team which is a server side agent that we call Pixie which also has access to the MCP server and therefore has access to REST and GraphQL. Um it also has like a bash emulator. So it's it's kind of like a coding agent but running server side. Um so these are the three surfaces that we that we want to support and that we have to test and ensure are working. the coding agent with the CLI, the coding agent with an MCP server, and a server side agent, which is our own harness.
+</details>
+<p>当需要实际对所有这些进行测试时，我们在架构上有一个很大的优势：这个服务器运行在单节点上，结构有点类似于 Grafana。这意味着它非常容易进行容器化。你直接把整套东西塞进一个 Docker 容器里。我们的做法是取一个包含我们测试过的真实数据的 SQLite 文件，用一个测试客户端替代浏览器，直接放入 Docker 中。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And when it comes time to actually like test all of this out, architecturally, we have a pretty big advantage. We have this really nice feature, which is that this server runs on a single node. It's kind of like a graphana- like architecture. Um, and that means it's very easy to dockerize. So, you just pop the whole thing in a Docker container. What we do is we just take a SQLite file which contains some realistic data that we've tested on. Um we replace the browser with a test client. Um and we just put it in Docker.
+</details>
+<p>一旦放入 Docker，我们就可以开始在 Harbor 中使用它。我们可以向系统输入我们特定用户关心的各类任务。例如，我们的特定用户可能会向代码智能体或 Pixie 服务端智能体询问：“从我过去一周的 Traces 中找出一些出现幻觉的 LLM 调用，并将它们添加到一个数据集中。”这是我们用户可能提出的一个真实查询。我们可以让这三种智能体中的任意一种在这个环境中去自由执行。最后，我们运行验证器。在这个特定设置下，我们能运行的验证器非常简单，因为容器内部就运行着包含该 SQLite 文件的服务器。我们既可以请求 REST 端点来验证预期的副作用是否发生，也可以直接查询该 SQLite 文件，验证例如该数据集表格中的特定元组是否已按预期写入。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And once it's in Docker, we can start using it in Harbor. So we can feed the system the kinds of tasks that our particular users care about. So, our particular users might ask a coding agent or they might ask our Pixie server agent, find some hallucinated LLM calls from the last week of my traces and add them to a data set. That's a realistic query that one of our users might ask. And we can go ahead and let any of these three kinds of agents go wild inside of this environment. And at the end, we can run our verifiers. And the kinds of verifiers that we can run for us in this particular setup are really quite simple because we have a server running inside of here with the SQL life file. So we could either hit a rest endpoint to verify that the intended side effect has changed or we could literally like query the SQL life file if we wanted to because it's just in the container. Um and just verify for example that the particular tupil for this data sets table has been written in the way that we expect.
+</details>
+<h3 id="问答harbor-的宿主编排机制与复杂系统测试" data-reading-heading="">问答：Harbor 的宿主编排机制与复杂系统测试</h3>
+<blockquote>
+<blockquote>
+<p>感谢打断我，因为这张幻灯片内容确实很多。在继续之前我先确认大家是否理解清楚。这里似乎有几个问题，我来尝试回答一下。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Yeah. No, thanks for stopping me because I think there's a lot going on on this slide. So maybe I should pause and and kind of like make sure it's clear before I go on. Right. Um, so I think there were a couple of questions there and I'll I'll try and address address them. Um,
+</details>
+<p>在这张幻灯片上展示了三种不同的智能体，但在任何一次单独试验中，我只会测试其中的一种。可以想象，也许我只测试带 CLI 的 Claude Code，或者只测试带 MCP 的 Claude Code，亦或只测试我们的 Pixie 服务端智能体。每次只针对一个。关于 Harbor 如何向其提供 Prompt：这里可能有一个我之前没细说的细节。Harbor 本身是一个命令行程序，它本身并不直接运行在 Docker 环境内部。它运行在宿主机器上——如果你在本地运行，那就是你的笔记本电脑；如果你在 CI 中运行，那就是 GitHub Actions Runner。在本地，环境默认以 Docker 容器运行；但如果你需要更大的扩展规模，通常会在沙箱提供商上运行，例如运行在 Daytona 上。Harbor 作为运行在宿主机或 GitHub Actions 上的编排器，负责启动运行并通知启动智能体。它实现的方式是依赖脚本：Harbor 要求为任务编写特定的脚本，整个过程完全由脚本驱动。在配置 Harbor 时，你需要确保所有这些脚本都放在 Docker 镜像中的正确位置。会有一个脚本用于启动任务，一个脚本用于运行验证器，一个脚本用于运行 Oracle。脚本存在于 Docker 容器中，而 Harbor 本身是留在宿主机上的程序，负责进行编排调度。为了让镜像顺利运行，所必须遵守的“契约”基本上就是脚本是否放置在了正确的路径下。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+so in this slide there are three different agents in in any given trial. I would only be testing one of them if that makes sense. So you could imagine maybe I'm only testing Claude code with the CLI, maybe I'm only testing Claude code with MCP or maybe I'm only testing you know our Pixie server server agent. So just may let's imagine like it's just one at a time in terms of how does harbor feed at the prompt. Harbor and this is maybe a nuance that I haven't really talked about, right? Harbor itself um does not Harbor is a program. It's a command line tool. Um and it doesn't actually run in the environment per se in the Docker environment per se. It runs on a host machine which could be your laptop if you're running it locally or it runs in like a GitHub action runner, you know, if you're running it in CI. Um, and you can run the environment in a Docker container locally. That's like the default behavior. But if you're trying to do something more scalable, you would be running it on a sandbox provider in all likelihood. Um, so you'd be running it on Daytona. And so Harbor is this orchestrator um which is running on your laptop or running in GitHub actions which is um kicking off the run. It's basically saying, you know, hey, start start the agent, right? Um, and the way it does that is, and I can show you what this looks like on the file system, but it basically, you know, um, expects a particular script. Harbor expects a particular script to be written for the task, right? It's all driven via scripts. So, you like when you're when you're setting up Harbor, you have to kind of make sure that all these scripts are in the right place in the Docker image. Um, so there's going to be a script to start the task. There's going to be a script to run the verifiers. There's going to be a script to run the oracles. It's all driven by scripts. So the scripts are in the Docker container. Um, but doc but Harborself is a program that lives on a on a host machine and just kind of orchestrates things and kicks things off. That's right. And the interf Yeah. So maybe I'll just repeat what he what you just said because I think it's well put is like Harbor is a CLI um and it has certain conventions for if you like make your docker container or your docker image look this way it will be able to run it um and those conventions are almost all like is there a script in the right place so that's kind of like the contract right if there was a a contract that you had to honor with harbor so that your your image would run it would be like did I put my scripts in the right place right That's kind of the contract.
+</details>
+<blockquote>
+<blockquote>
+<p>明白了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Got it.
+</details>
+<blockquote>
+<blockquote>
+<p>讲清楚了吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Does that Does that clarify?
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes.
+</details>
+<blockquote>
+<blockquote>
+<p>好的。这张幻灯片的核心要点是：在定制 Harbor 环境时，你拥有极大的自由度和灵活性。人们最常接触的简单示例是针对 Git 仓库操作的代码编写智能体。但这个例子截然不同：我把 SQLite 文件中的真实数据放了进去，把包含 API 和服务端智能体的整个应用程序放了进去，它是 Docker 容器中一个实际运行的服务器；环境中还有一个 CLI，甚至文件系统中还放置了一套智能体可以访问的 Skills。这一切说明你在搭建环境时有很大的灵活性。只要能装进 Docker 镜像中，基本上 Harbor 就能运行它。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Okay. Yeah. So again on this one on this slide, right? Basically I think the takeaway is um the takeaway on this slide is like you have a great deal of freedom um and flexibility when it comes to customizing your harbor environment, right? Um the the simplest like the simplest example that people always get started with is the example of a coding agent operating on a git repo. But this example is different, right? This example is like I literally put some data from a SQL life file in there. I threw my whole application in there with it along with its APIs along with its own serverside agent. It's all it's a running server in the environment in the Docker container. Um something you know there's a CLI in the environment. So what's not even included here is like there's actually a set of skills literally in the environment on the file system that the agent has access to. Um, so all that is to say is like you have a lot of flexibility in setting up your environment. Um, you know, it has to fit in a Docker image, but if you can fit it in a Docker image, um, you know, you can you can make Harbor run it basically.
+</details>
+<p>在进入下一部分前还有其他问题吗？这张幻灯片确实展示的是我们特定项目的架构，如果你的项目不是单节点服务器，情况可能不同。这是个很好的问题，我之前还没遇到过这种问题，需要深入思考：如果系统不是单节点，无法直接塞入一个 SQLite 文件，而是一个包含 S3 等外部依赖的分布式系统，该如何用 Harbor 进行测试？坦白说，这确实更难。在这种情况下，我最初的想法是，你可能需要将智能体做进一步的抽象解耦。在我们这里，将整个应用放入 Docker 容器很简单，所以我们就这么做了；如果行不通，你可以尝试将智能体模块化，将其实现隐藏在某个相对稳定的 API 边界或接口之后，保证输入给智能体的数据格式是稳定的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+All right. And now any other any other questions before I move on? Maybe because this is a complex slide. I think this is and and you know this is like again this slide is very much like particular to to our project right this is like what our project looks like your project may not look like this right if you if you're not running like a single node server or something but yeah I mean that's such a good question and I haven't had to deal with that problem so it would require a lot of thought I think right but basically the question is like my system is not a single node it's not a single you know I can't just like throw in a SQL single SQLite file I have like you know, some distributed system with like S3 and all this other stuff that I'm trying to maintain. How would I test harbor out with that? The answer is like that's probably harder. Yeah, that's probably harder. So, in that case, in that case, my initial thought is like, you know, you have to perhaps carve out your agent a little more, right? So, here we've had this advantage where like it's simple for us to throw the whole damn thing in there in the Docker container. And so, we did. If that wasn't simple to do, if you can modularize your agent somehow into some kind of like interface, hide hide the implementation behind an interface um and if you can like if there's some like stable API boundary or interface that is relatively stable, right? Where you know um I'm feeding like this agent data in this format, right? Whatever that format may be, like eventually this agent has access to data in this format, right?
+</details>
+<p>我知道这取决于你的具体架构，可能不是一个令人满意的答案。因为如果智能体真的直接查询 S3，你要 Mock 所有的 S3 调用吗？一旦开始进行 Mock，你又回到了 Mock 的泥潭中，而这正是我们试图通过 Harbor 极力摆脱的。因此我目前并没有确切答案，因为还没探索过这个场景。不过 Harbor 具备运行多个 Docker 镜像、启动多个组件的能力，或许可以考虑能否以此封装整个系统。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um, that would be one approach, right? Um, and I realize that that is maybe not a satisfactory answer depending on what your exact setup looks like because maybe your agent like literally queries S3 and then like what are you to do, right? Are you going to mock out all those S3 calls? And then once you start mocking out S3 calls, you're kind of in a world of pain because now you're in the world of mocking stuff again, right? And and that's really like what we're trying to get away from with Harbor. We were trying to get away from that world. Um, so I don't know that there's like I actually don't know because I haven't had to explore this problem yet. Um, I do know that you know I've been kind of like eliding this particular feature of Harbor, but Harbor does have the ability to um like run multiple Docker images, right? Spin up multiple things. So like you could you could wonder I would wonder about that is like oh is there a way where I could somehow encapsulate my application or something?
+</details>
+<p>关于评估所用数据规模的问题：如果有庞大的 SQLite 文件或海量 Traces，是否直接在全量数据上评估？我们目前没有这么做，虽然这样做可能也可行。目前我们的模式是：我有一批数据，让 Claude 帮我针对特定任务集合做一些精简清洗。Harbor 的优点在于你可以为多个不同任务复用同一批数据，但并非必须如此。如果某个具体问题只需要一小部分数据就能解答，你不必上传全部数据。当然，这也取决于你想测试什么：如果你测试的是数据库接近饱和时智能体的性能表现，那么放入大量数据完全是合理的。我们目前还没做过这种测试。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Yeah, go ahead. The question was like what scale do you use? Right? if you have some massive SQL life file or some you know really large set of traces do you like actually evaluate on the whole thing we don't currently do that and I think it would probably be okay for us to do that um right now we you know right now the kind of format is like oh like we have some data here I'm going to have Claude kind of help me clean it up a little bit for this particular set of tasks and again the kind of the nice thing about Harbor is you know you you can um use the exact same data for many different tasks but you don't have to. Um, and so if there's a particular question that you care about and it only requires a small subset of the data to answer, you don't have to like upload all of the data to answer that particular question. Um, but yeah, I mean it it just depends too like on what you're trying to test, I think, right? If part of what you were trying to test was the performance of your agent when the system is full, when the database is like quite full, then I think it would totally make sense to um put in a lot of data. We we haven't done that yet.
+</details>
+<p>关于“为什么不直接单用 Harbor，配合 Phoenix 能带来什么”：答案是你完全可以只使用 Harbor。稍后我会演示一些功能，我认为我们在数据集版本控制、实验对比、可视化、快速检查与深挖分析方面具备非常独特的能力。我们解决这类问题已有数年经验，UI 在这方面打磨得很成熟。演示后你可以看看我是否回答了这个问题。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Well, I tried to Yeah, that's such a good question. I think the question is like what is what what do you get by using Phoenix with Harbor? Why not just use Harbor maybe? Um and the answer is like you totally can use just Harbor, right? I'll I'll give you a little demo um in just a second where hopefully some of some of what we offer is is on display, right? Because I I do think that there are some genuinely unique things around like data set versioning, around the experiments, around the visualizations, around the the agent experiences that you get. um the ability to like actually inspect and drill down quickly, right? So, we've been we've been solving those kinds of problems um for several years and and our UI is like really dialed in for that sort of thing. And I'll give you a demo in just a sec. Yeah. And then you can ask me again, see if I answered the question. All right. Uh
+</details>
+<h3 id="实战案例聚合查询优化与-prompt-调优" data-reading-heading="">实战案例：聚合查询优化与 Prompt 调优</h3>
+<p>好，来看下一个具体案例，这是我们最近遇到的一个问题。在我们之前的架构图中，提到了 REST 和 GraphQL。我们的 MCP 服务器和 CLI 都可以访问这些 API，但我们发现用户经常提出一些无法通过 REST 或 GraphQL 轻易回答的问题。比如聚合类问题：“过去几个月里我最忙碌的一天是哪天？那天有多少 Traces？”或者是成本类问题：“我在各个模型上分别花费了多少？哪一个模型在所有 LLM 调用中实际花费最高？”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+All right. I'm going to go to the next slide. Right. So this particular example that we're going to think about is um this problem that we encountered recently. Uh the problem was you know in this picture that I've shown you I talked about rest and I talked about GraphQL. So our MCP server our CLIs they had access to these APIs but we found that people were asking questions that are not easily answerable via REST or GraphQL. So they were asking aggregate kind of questions, right? They were asking, you know, what was the busiest day that I had in the last few months or something, right? Um how many traces did I get on that day? Or they were asking questions like how much am I spending on uh each of these models, right? Like which model is actually costing me the most out of all my LLM calls, right? Where am I spending the most?
+</details>
+<p>智能体遇到这种情况时，会尝试寻找 REST 路由或 GraphQL 解析器，但这些并不是聚合解析器。于是智能体就试图进行分页遍历，在客户端自行进行聚合计算。正如你所料，这会导致严重问题：如果数据量足够大，就会产生大量的分页遍历和大量的工具调用。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um and so what the agents would try to do is they would uh you know when possible they would uh look for the the rest route or the uh the GraphQL resolver. Um but these were not aggregate resolvers. So they would try to like basically pageionate through stuff and and do the aggregation themselves. And as you can imagine that results in a problem because if there's enough data you wind up uh you wind up doing a lot of a lot of pageionations right and a lot of tool calls.
+</details>
+<p>因此我们做了一项工作，在图中加了这条线：这代表我们在 MCP 服务器中新增的一个工具，允许智能体编写只读 SQL 查询并在数据库上直接执行。实现这个工具包含很多细节，但即便添加了该工具，我们发现智能体有时依然不会调用正确的工具。智能体面临着新的困惑：它手头有 REST、GraphQL 和 SQL，究竟该使用哪一个？智能体并不确定。因此很自然地，我们需要更新 Prompt 来指导它。但在修改了 Prompt 之后，你如何验证它真的在按预期执行？修改 Prompt 是一回事，但我们希望基于证据而非感觉来发布。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um, and so part of what we did was we actually added this this line right here. So this line uh is meant to represent a tool that we added to our MCP server um, which basically allows the agent to write a readonly SQL query and execute it against the database. Um, and a lot went into making that tool. I won't really go into the implementation details but the thing that we noticed even after we made that tool was that oh sometimes sometimes the agent isn't calling the right tool because now the agent has this other problem right now the agent is here and it's like well I got rest I got graphql and I got SQL which one which one should I be using the agent doesn't really know and so we realized oh yeah well naturally we have to like somehow update a prompt we got to tell it what to do right um but even after you tell it what to do how do you verify that it's actually doing it Okay. Um, you know, it's one thing to change the prompt, but again, we're trying to like ship based on some evidence, right? And not just on vibes.
+</details>
+<p>这就是我们最终测试的改动，只是对 Prompt 做了一处微调。此前它只提到了 GraphQL，修改后提示它：“如果你处理的是计数或分组等聚合操作，为什么不优先使用我们的 SQL 工具，而不是先用 GraphQL 呢？”为了验证这一点，最重要的首先是真实数据。我们放入了一个半真实的 SQLite 文件，这是我们在开发和自身使用（吃狗粮）过程中积累的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um, so this is this is the change that we we wound up testing out. It's like a small little tweak to a to a prompt, right? So before it it only mentioned uh GraphQL, but after it says, "Hey, if you're dealing with like a some kind of aggregate like a count or group, um why don't you use our SQL tool rather than reaching for GraphQL first?" Right? Um, and of course the most important the most important thing that we need in order to answer this question is first of all some like realistic data. So we throw in a you know semi-realistic um SQL life file that we've been kind of just like collecting as we develop ourselves as we work ourselves and like dog food the product ourselves.
+</details>
+<p>接下来是我觉得 Harbor 非常酷、非常新颖的部分：我直接让 Claude 查看我们应用的业务领域（Traces、Spans、Datasets、Experiments），让它头脑风暴出一份用户查询列表，其中一部分是聚合查询，一部分是非聚合查询；然后让它为这些查询编写 Oracle 参考解（Oracle 解法就是一个 REST 请求或一条数据库查询），代码智能体便直接完成了这些工作。我们就这样生成了一份合成问题的数据集。我对这些问题进行了抽样检查以确保合乎逻辑。对于在环境中运行的验证器脚本，我拥有一定程度的信心；因为这些验证器能通过 Oracle 参考解的检验，所以让我对它们有了相当的信心。部分验证器采用了 LLM-as-a-judge，部分是 SQL 查询或 REST 调用。在智能体真正接触系统之前能够排除这些故障，带来了高度的信心。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um, but then here's the really the part that I found quite cool or novel about Harbor, which is like um I literally just asked Claude like can you look at like the domains of my application, you know, traces, spans, um, data sets, experiments. Can you look at all these domains? Can you brainstorm a list of user queries, some of which would be aggregate, some of which would not be aggregate, right? And then can you write an Oracle solution to those queries, right? Um the Oracle solution literally just being a REST call or perhaps a database query and the coding agent will just do that. So we generated just this data set of synthetic questions. Um I spot check the questions, right? Just to make sure they sort of make sense. Um and I have a certain degree of confidence in the actual verifiers which again are just scripts that are that are running in the environment. But because those verifiers um are passing against an oracle again those verifiers are just like you know kind of passing against this oracle I have a certain amount of confidence in them right some of them were LLM as a judge some of them were SQL queries or or REST calls themselves but you know just the ability to kind of work out those kinks before the agent ever gets to the system it gives you a certain level of confidence
+</details>
+<p>随后我测试了这个具体的 Prompt 改动。正如预期的那样，这种修改促使系统更频繁、更主动地使用 SQL，这正是我的目标——宁愿它过度使用 SQL 也不希望使用不足，因为我不希望它去分页处理聚合查询。另一个有趣的现象是，仅通过修改这一处 Prompt，平均每个轨迹中的工具调用次数明显下降。减少工具调用本就是我们的初衷。而且由于这个数据集并不大，分页压力有限，这些适度的降幅其实还低估了问题的实际收益。现在我带大家看看这在 Phoenix 中呈现的样子。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+um and then you know I was able to test out this particular change and I was able to see like, oh, you know, as you might expect, making a change like this, it causes the system to use SQL more frequently and more aggressively, which is what I wanted it to do, right? I wanted to overuse SQL rather than underuse it because I don't want it to like start trying to pageionate through trying to do like aggregate queries. That would be bad. And then the other interesting thing is just by changing this one prompt I can also see the number of tool calls in each in each uh trajectory the average number of tool calls dropping which again is like also you know the reason that we did this in the first place is I wanted to reduce the number of tool calls and this data set it wasn't even like a big data it wasn't a big data set so it didn't have to do a lot of pageionations I think it these numbers like these modest drops they kind of understate the issue because the data was not large and So let me let me show you now what this looks like inside of Phoenix.
+</details>
+<p>首先，这里看到的是数据集中的任务示例。这些示例均带有版本控制，每次发生变更都会记录完整的版本历史。我们可以检查其中一些内容。例如这是一个我关注的聚合查询：“按总成本计算最昂贵的三个模型是什么？各自的花费是多少？”通过 SQL 回答这个问题远比通过 REST API 分页遍历轻松得多。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So the first thing that you can see here um are the examples in our data set, the tasks in our data set. And again, these are versioned. So we actually have a whole version history here every time there's a change. Um and we can inspect what some of these look like. So again, some of these are aggregate queries, some of them are not. So here's an example of an aggregate query that I might care about. What are the three most expensive models by total cost? How much does each cost? So this question is more easily answered with a SQL than than by pageionating through like a REST API.
+</details>
+<p>在下方你可以看到答案，该答案来自 Oracle。这正是我信任它的原因之一，因为它直接来自针对具体数据执行的 SQL 查询。对于这个特定示例我不需要费力核对，因为答案是确定性的，我对 Claude 编写出正确 SQL 查询具备一定信任。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And down here you can see the answer and again this answer um it comes from an oracle. Um and so that's part of why I have a certain level of faith in it is because it's it's coming from a SQL query run against a concrete set of data. It's not something that I feel um a strong need to check actually for this particular example because the answer is deterministic and I'm I'm sort of allow I'm I'm placing a certain amount of trust in Claude I guess to like write a good SQL query. Um
+</details>
+<p>这里列出了所有任务示例，紧接着是我们的实验（也就是 Harbor 中的 Job）。我为了这次演讲运行了很多 Job。这些图表展示了各类关心的指标，如成本、运行延迟。对于该任务，奖励得分一直很高，因为我所做的改动并没有破坏核心功能，系统从一开始就能获得正确答案。这更多是一项优化工作而非正确性修复。此外你还可以观察工具调用次数、是否使用了 SQL 等。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+so we got all our examples here and then we got our um we got our experiments and our notion of an experiment that's that's what I've been calling a job in Harvard. So just imagine this to be all the jobs that we've run. I've run a lot of jobs in preparation for this talk. Um, these charts show you the kinds of metrics that you might care about, whether those are cost or run latency. Uh, the reward, as you can see, for this particular task is quite high. Um, and that's because I haven't really done anything that's going to like hopefully break the system. It's not like something was truly genuinely broken. The system was getting the right answer in the beginning. So, the reward was always high. Um, it's just that it was just taking too many tool calls, right? So this was more of an optimization rather than a correctness fix. You can see tool call count. You can see um whether or not we use SQL.
+</details>
+<blockquote>
+<blockquote>
+<p>奖励是如何计算的？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; How do you calculate the reward?
+</details>
+<blockquote>
+<blockquote>
+<p>回到之前的幻灯片，奖励直接来自验证器，而验证器完全由作为用户的你来掌控。在定义每个任务时，你可以编写一个脚本来声明什么是成功、什么是失败。该脚本会输出 0 或 1、pass 或 fail。你可以自定义奖励名称，它不一定非要叫 pass/fail。这就是奖励的本质：作为开发者或维护者，你结合具体任务，思考成功与失败的定义，以及如何通过检查文件系统或数据库文件等环境副作用来判断智能体是否成功。在这个视图中，我们跟踪的正是整个 Job 的聚合奖励指标。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So the reward if we go back in the slide, the reward is just coming from the verifier. And the verifier is something that you the user have in your control. Right? So when you're defining your task, for each task, you get to write a script that says what constitutes success or failure. And that script is going to emit a zero or a one, a pass or a fail. You get to name the reward, right? So the reward could have a different name other than pass fail. Um that's all a reward is though. you as the developer, you as the maintainer, you think about for this particular task, what what does it mean to succeed and what does it mean to fail? How could I figure out just by looking at the side effects in the environment, looking at the file system or database file for example, how could I figure out whether the agent succeeded and that's what the reward is and so that's what we're tracking over time. There are the aggregate rewards for the entire job. That's what we're tracking in this view. Yeah, go ahead.
+</details>
+<h3 id="黑盒与白盒测试的权衡" data-reading-heading="">黑盒与白盒测试的权衡</h3>
+<blockquote>
+<blockquote>
+<p>这个问题切中了关于 Harbor 核心用途的大局思考。提问是：“你提到验证器通常与智能体的轨迹或执行路径解耦无关，但这里的某些验证器似乎在窥探智能体是否使用了 SQL，这算不算‘作弊’？”答案是：确实算。在最纯粹的形式下，验证器完全独立、不看轨迹、仅关注文件系统副作用，那种场景主要适用于你只关注最终正确性的情况。我们在其他回归测试中就是这样做的：验证器非常纯粹，只检查最终是否得出了正确答案。但对于当前这个特定问题，我的目标略有不同：我不仅是在追求正确答案，而是在尝试优化特定指标，尤其是优化工具调用。Harbor 可以用于多种目的：可以用于集成测试、端到端测试、确保正确性、在 CI 中运行；也可以用于解决特定痛点，比如针对聚合查询表现不佳的问题，以一种快速直接的方式验证它是否在按预期执行。有时窥探轨迹内部是有价值的，尽管这可能会降低测试对变动的鲁棒性。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I mean this is such a good question, right? I kind of get it kind of like gets to one of these big big qu big big picture questions about like what do you use Harbor for? Actually the question was around like well hey you said that you know typically your verifiers are agnostic with respect to the the trajectory or the execution path of the agent but hey like look some of your verifiers actually like kind of it looks like they're peeking in to see whether the agent use SQL. Isn't that cheating? Um the answer is yes. So it's not I think the times when you would do what I said in the purest form of like your verifiers are truly agnostic and they really don't look at the trajectory and they really just look at the file system you know or the the side effects the situation for that is really like um when you care about correctness right so may you know one of the other things that I'm not showing here which is a different example that we've done is like we've worked on some regression tests and those tests are really like does it get to the right answer in the end and for Those tests I think our verifiers are quite pure. They don't really look at the trajectory. They just look at like oh did it get the right answer right? For this one for this particular problem I was concerned with something maybe subtly different. Like I wasn't really just trying to get the right answer. I was trying to optimize a metric. Right? I was trying to optimize tool calling in particular tool calls. Harbor is one of these things where you can use it for many things. You could use it for uh you know I I talked about integration testing. You can use it for like kind of endto-end testing um for assuring correctness um for running in CI right or you could also use it because you're like oh right now I'm trying to solve a really particular problem which is like oh I kind of noticed that it sucks on these aggregate queries like how can I make it better how could I in a quick and dirty way kind of convince myself that it's actually doing what I hope it's doing right um so like at least for for us like what I found so far is it just depends on what you're trying to do um sometimes sometimes it is worth peing inside the trajectory I think you know
+</details>
+<p>[笑声]</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+[laughter]
+</details>
+<p>提问关于在更大团队中如何协作处理这些问题。我的团队规模很小，主要是我和少数几个人在做，因此难以谈太多大型团队的亲身经验。不过使用 Phoenix 这类工具的一个优势在于它支持跨数据源共享与整理数据、将 Traces 添加到数据集、存储在外部文件中并通过 Upsert 写入数据库运行。这些能力有助于应对团队协作中的流程问题。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+yeah even though even though it makes the test less robust to change perhaps that that's a really good question you know my team is so small I don't know that we can I can really speak from personal experience um that being said like one of the reasons that you you might use a tool like Phoenix is because it allows you know it has like the ability to share data right to curate data from different sources to add it you know to to like add traces to a data set um it has the ability to like store data as a you know in an external file and like upsert it to the database and then run it has those kinds of abilities. So like that might help you in terms of the the uh logistics of like you know actually like dealing with this in a larger team. I I don't I don't know because really it is just me and a handful of people working on this right now. All right, I'm going to show you one last little demo and then I'll just take questions. I think we got only a handful of minutes here left.
+</details>
+<h3 id="phoenix-功能演示作业比对与轨迹追踪" data-reading-heading="">Phoenix 功能演示：作业比对与轨迹追踪</h3>
+<p>回到 Phoenix 带来的核心价值，其中一个重要能力是在任务级别对比不同 Job。这里我选中了两个 Job：分别代表修改单一 Prompt 之前和之后的 Opus 5。顶部的指标显示了微调 Prompt 后整体聚合层面的变化：GraphQL 工具调用减少了，奖励分数保持一致（说明全部通过），SQL 调用增加，总工具调用次数减少，智能体的轮次（turns）减少（因为使用 SQL 将原本的多轮交互合并为了单轮）。这些顶层指标从整体上印证了这项改动的有效性。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So you know back to back to your question around like what are some of the things that you might get out of Phoenix. I think this is like kind of the the one of the bigger ones, right? Is like the ability to compare individual jobs at the task level, right? So right here I have two two particular jobs selected. I have opus 5 before and after making that single prompt change. This column is opus 5 before. This column is opus 5 after these these metrics at the top. They're telling me in aggregate how did these like metrics that I care about, how did these rewards change after I made this tweak to the prompt, right? And I can see that like GraphQL tool calls went down. So it's calling GraphQL in aggre in it's calling GraphQL less than it was. Um the reward is staying the same which means everything is still passing. Right? SQL calls are going up. Tool counts are going down. The number of turns the agent is taking is going down because it's encapsulating a lot of that a lot of those turns that would have been multi-turn steps into a single turn because it's using SQL. uh it's using more SQL, it's using less GraphQL, right? So you get those kind of like top level metrics which are the ones that in my mind verify, okay, this is a decent change.
+</details>
+<p>在下面的表格中，我们可以查看具体任务的执行情况。比如刚刚看过的“按总成本计算最昂贵的三个模型”，我能看到预期答案、每个 Job 中的实际答案，以及指标的演变情况。在这个任务中，工具调用次数和交互轮次都下降了，有趣的是 SQL 调用次数也下降了。我们还可以针对这些数据进行过滤筛选。比如 Miko 最近实现的一个特性：用自然语言表达“展示第二个实验中工具调用次数少于第一个实验的运行”，浏览器内的本地模型会尝试将这段自然语言解析为查询 DSL。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um and then I'm able to see in this table like four particular tasks, right? Here's the here's that one we looked at like what are the three most expensive models by by total cost. I'm able to see what I expected the answer to be, right? I'm able to see the actual answer in each job. I'm able to see the metrics and how they changed. So for this one um yeah for this one the number of tools went down the number of turns went down interestingly enough the number of SQL calls actually went down too which is kind of unexpected and I can do things like I can I can filter by these right so I can here's a fun little feature that Miko built recently um which is I can say show me the runs where the second experiment had um where the second experiment ment had lower tool call count and I'll use the exact the exact metric to help it out. Lower tool count than the first experiment. We'll see if this works. So, what this is doing is it's actually running a a local model in the browser to convert that piece of natural language into a query DSL.
+</details>
+<p>这里解析似乎出现了一点偏差，需要更强大的模型。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+I think it messed that up though. We gota we got to use a more powerful one.
+</details>
+<blockquote>
+<blockquote>
+<p>Prompt API 稍微有点……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; The prompt API is a little bit
+</details>
+<blockquote>
+<blockquote>
+<p>我直接粘贴正确的表达式。这样我们就能筛选出表现提升的行，观察之前未使用 SQL 而现在使用 SQL 的任务。我们可以进入具体的 Traces 深入查看：从 ATIF 转换为 OpenInference 的 Traces 显示，先前它在底层通过 Bash 模拟器调用了 GraphQL；而在第二个 Job 的相应 Trace 中，它直接向数据库执行了 SQL 查询。这让我们能够直观审查并在具体用例中确认智能体做出了正确决策。我们甚至可以直接询问智能体本身，让它分析某组实验并在特定任务上阐明发生了什么。这也是我们获取部分初始数据并借助智能体实现自身迭代的方式。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I'll just I'll just copy in what I know to be the correct uh correct expression here. So I'm able to filter down. So now I'm just looking at the um now I'm looking at the rows where it improved basically like I'm looking at the ones where it didn't use SQL before where now it's using SQL. Um and you can see here this one used SQL it went up by one and if we actually like look at the uh look at the trace we can actually see that right so those ATIF trajectories that get converted into open inference traces here you can see it you can see it was using bash before um and when it's using bash under the hood it is actually using graphql it's calling has a bash emulator which is calling graphql underneath the hood right so I'm able to see that right here I'm able to see in the second job the same trace or the analogous trace and I'm able to see oh instead of instead of calling bash and using graphql here it actually issued a SQL query directly to the database so I'm able to like visually inspect and say oh okay in this particular example it did the right thing um and I can even I can even ask you know the agent itself so this is kind of like what we do um you know I can literally ask the agent itself like hey look at a particular um set of experiments, you know, look at this particular task and it will tell me exactly what happened. And so this is kind of like how we get some of our data in the first place is we're kind of like using using the agent um recording its traces uh getting its data and using the agent to like iterate on itself.
+</details>
+<h3 id="skills-测试回归保障与评估对象定义" data-reading-heading="">Skills 测试、回归保障与评估对象定义</h3>
+<p>关于回归测试，我们还处于非常初期的阶段，主要是想跑通 Happy Path。我们的结构是围绕 Skills 展开的。在某种程度上，这些回归测试类似于包含智能体和 LLM 调用的端到端 Playwright 测试。Skills 描述了工作流程（“如果遇到此情况则执行该步骤”），我们目前正致力于在我们最重要的 Skills 上确立 Happy Path，并确保它在我们要支持的各种模型和供应商之间都能通过。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, I'd say with respect to the regression stuff, we're still really early days. I mean, we're trying to get like happy paths going, I would say. Um, and I think like the way that the way that we're structuring it is is around skills because I think in my mind when you're doing those regression tests, they are sort of analogous to like playright in a certain way where it's like an endto-end thing and it just includes like an agent in the loop. It includes like LLM calls in the loop. Um, and so I think skills are a really good like thing to write those kinds of tests for because at least in our case like the skills are describing workflows. They're saying, "Oh, if this happens to this, if that happens to this, right? It's describing a workflow that you want to have happen and and so right now we're just kind of in the process of trying to nail down happy paths on our most important skills. um and ensure that the happy path passes across like the the broad array of like models and providers that we're trying to support.
+</details>
+<p>关于“你创建了一个绝佳的 Skill，但如果其他人写的另一个 Skill 在 frontmatter 描述上与其冲突，导致你的 Skill 不再被触发该怎么办”：这个问题有多种应对思路。一种思路是：只要有完备的测试，并且知道如果该 Skill 未触发就无法通过该测试，那么你可能并不关心最终触发的是哪一个。另一种做法则是如前文所说，在验证器中适度深入轨迹，检查针对该问题是否调用了特定 Skill。我们确实写过这类测试。难点在于可维护性：如果修改了 Skill 名称，测试可能会产生 Flake。但如果只测试单轮交互中是否触发了正确的 Skill，这类测试编写起来并不复杂，甚至不需要准备复杂的真实数据，只需输入问题并检查该 Skill 是否被触发。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Right. Right. Right. Yeah. So this this particular comment is around like the ability of uh you could make the the greatest skill in the world, but like if somebody else makes another skill that kind of like where the front matter of the skill kind of treads on your feet a little bit, it's going to it may not fire anymore, right? And then it's no good if it never fires. Um, and for that sort of thing, it's an interesting question, right? It's like there's multiple ways of approaching it, right? Like one thing that you could do would you you could just say, well, I don't care which one fired as long as I have a good test and I know that like, oh well, like if this skill didn't fire, it's probably not going to pass this test, right? Um, that would be one approach. Another thing you can do and maybe this is the appropriate thing right is you can always as we said reach into the trajectory with your verifiers you can always look in you can always peek you know you can cheat a little bit you can say oh well like given this question did it call this particular skill and we have had tests like that um I think the challenge is maintainability right it's always around maintainability um if you change the skill name or something the test is going to flake um but we've had tests where the thing we were trying to test was skillfiring, right? And those tests are not they're not the hardest to write, right? I mean, don't even because if if you're only testing one turn and all you want to know is like, did the right skill fire? Um, you don't even really need great data for that. You just ask it a question and and see did the skillfire.
+</details>
+<blockquote>
+<blockquote>
+<p>这种测试介于完全与实现解耦和紧密耦合之间，偏向于稍微耦合，但依然很有实用价值。关键在于对核心关注点建立广泛的覆盖。我们在生产环境中收集 Traces：在生产部署时，Traces 从插桩应用进入系统并写入数据库。而在 Harbor 中运行时，这一链路以及终端用户的智能体就剥离掉了，我们直接向数据库注入数据。在 Harbor 中评估时，我们并不模拟终端用户应用，而是假定该应用已经运行并将数据沉淀在了 SQLite 文件中。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um, and like you can totally, you know, maintain a suite of tests that that do that, right? And and you know, then it becomes less of a end to end test. it becomes more of like a almost like it's like almost like you know on the spectrum between you know fully decoupled from the implementation and coupled to the implementation is a little bit more coupled um and yet it could still be useful to you right um so there's no reason to not write a test like that um there's no reason to not write a test like that I think so it really just depends on like you know getting getting a broad level of coverage um on the things that you care about. We are collecting traces in production. So when you deploy Phoenix in production, this is the picture. The traces are coming into the system from an instrumented application or agent. We're collecting those traces and we're writing them to the database. When we're running things in harbor, you can see [clears throat] that this this thing disappears, right? the OTOP ingest, the AI agent, which is the user's agent, those disappear and we just seed the database with data. So when you're running when we evaluate in harbor, um we don't we don't pretend or emulate an end user's application. Um we assume that the end user's application exists and has resulted in the data in the in the SQL life file. Yeah. So the question is around um
+</details>
+<p>Harbor 的标准用法是评估代码编写智能体。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Harbor is canonically used for evaluating coding agents.
+</details>
+<blockquote>
+<blockquote>
+<p>这是标准场景。我们在某种程度上也在做类似的事，但我们评估的单元并不是孤立的代码编写智能体，因为我们并不直接开发或调优 Claude Code 或 Codex。我们试图优化的目标是一个复合系统：包括 Claude Code 配合我们定制的 MCP 服务器、或配合我们维护的 Skills、CLI 以及与我们 API 的交互。我们试图优化的是这个复合实体——它包含代码智能体本身，更包含围绕代码智能体由我们维护的所有支撑基础设施，以帮助它更好地与我们的产品交互。这就是我们把所有这些内容一起放入同一环境的原因，因为它们作为一个整体需要协同迭代并共同接受评估。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; That's the canonical use case and we're doing something similar on the one hand but the unit that we're trying to evaluation to to evaluate here is not the coding agent in isolation because we don't work on cloud code, right? We don't we don't tweak cloud code. Uh we don't tweak codecs, right? The thing that we're trying to optimize for is this hybrid system which is cloud code plus our particular bespoke MCP server or cloud code plus our particular bespoke set of skills that we maintain or cloud code plus our um cloud code plus uh our CLI or cloud code um interacting with our APIs. And that is a different problem, right? And the fact that that is the thing that we're trying to optimize this hybrid entity which includes cloud code, it includes the coding agent, but it's more than just the coding agent. It's all of the um supporting infrastructure around the coding agent which we maintain which helps cloud code be better at interacting with our product. Um, that's the reason that we've shoved all of this stuff into an environment together is because all of that stuff has to change um and be evaluated together um as a unit.
+</details>
+<p>在概念上理解 Harbor 并形成这套方案确实花了一些时间，但随后搭建起来并不算太久。正如我提到的，这得益于 Phoenix 可以在单节点上运行并易于容器化；而对于分布式系统，搭建过程会更为复杂。此外，Harbor 的约定完全基于特定目录下的脚本（任务初始化脚本、验证器脚本等），目前没有 Linter 能供代码智能体依赖来确保配置正确。目前最好的辅助手段是下载 Harbor 的 Skills 来帮助正确搭建项目。关于“SQLite 文件放在何处”的提问：目前这属于单次流程，我们有一批通用数据，如果适用于手头任务就直接复用；如果不需要全量数据，我会让 Claude 帮忙裁剪不需要的部分并上传到云存储。获取贴近现实的数据始终是这些任务中最具挑战性的环节，但数据越真实，系统运行与发现真实问题的效果就越好。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+I think it took a second to kind of conceptually land on and understand Harbor well enough to land on this picture. Um, and then it took a second. it didn't take super long and again like I think part of that is part of that is due to our advantage which I mentioned which is that Phoenix runs on a single node um and that makes it easy to dockerize right and so as as some of these other folks suggested it's like you know if you're working on a distributed system you know it's it's tougher your your life is going to be a little tougher right and so we had a certain advantage that made it easier for us to set this picture up um but I would say like the coding agents are Um, Harbor's tough in the sense that like there's no because the contract that Harbor tries to honor is all based on like scripts in certain directories. You know, I need to put my my task my task initiation script here. I need to put my verifier script here. Um, there's no like llinters that the coding agents can rely on to make sure that that works. Um, the best that you can do uh is you can download Harbor's skills. Um and those will help you set up your project correctly. Yeah. So the question is uh I have a SQLite file here. Where do I put it? Right. Um cloud storage. Yeah. So basically um it's kind of a one-off process right now. It's like we have a collection of data that we generally use and if that thing works for the task at hand, I tend to reuse that file. And if it if I don't need the whole file, I'll say Claude, can you clean this up?
+</details>
+<p>[笑声]</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>“能否帮我裁掉不需要的数据并上传到云存储？”准备数据永远是最难的部分。对于任何这类任务，获取数据都是难点。你的数据越贴近真实，系统运行效果就越好，也越能为你揭示贴近现实的问题。因此，获取数据始终是最困难的环节。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; can you can you cut out the stuff I don't need um and push it to cloud storage for me? Um that data though, the data is the hard part, right? I think the data getting the data is the hard part um for for any of these tasks. And the more realistic your data, the better the system is going to run uh the better it's going to like uncover realistic issues for you. So it's always the hard part getting data
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/ebd3e446394eb06a517a0b73982440d23afdbc3d27952915682cbd00217c3f30.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/ebd3e446394eb06a517a0b73982440d23afdbc3d27952915682cbd00217c3f30.md" download="使用 Harbor 在真实任务与沙箱环境中评估 AI Agent.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Xander Song" class="entity-link person-link">Xander Song</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Arize AI" class="entity-link company-link">Arize AI</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Harbor" class="entity-link product-link">Harbor</a>, <a href="/search/?q=Phoenix" class="entity-link product-link">Phoenix</a>, <a href="/search/?q=OpenInference" class="entity-link product-link">OpenInference</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>
