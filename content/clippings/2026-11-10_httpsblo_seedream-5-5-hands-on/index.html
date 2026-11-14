@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>字节Seedream 5.5 实测，GPT Image 2.6 都包浆了，它一点不崩，这模型有点顶！ · 乔木博客</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">字节Seedream 5.5 实测，GPT Image 2.6 都包浆了，它一点不崩，这模型有点顶！ · 乔木博客</span>
+      <span data-pagefind-meta="speaker" style="display:none;">向阳乔木</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>向阳乔木</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-11-10</span>
+    
+
+    <header class="article-header">
+      
+      <h1>字节Seedream 5.5 实测，GPT Image 2.6 都包浆了，它一点不崩，这模型有点顶！ · 乔木博客</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">seedream-5-5</span>
+      
+        <a class="tag-link" href="/tags/image-generation/">image-generation</a>
+      
+        <span class="tag-pill tag-pill--no-page">multi-turn-editing</span>
+      
+        <a class="tag-link" href="/tags/prompt-engineering/">prompt-engineering</a>
+      
+        <span class="tag-pill tag-pill--no-page">text-rendering</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章对字节Seedream 5.5模型进行了实测，指出其在多轮编辑一致性、真实性提升以及文本渲染方面取得了突破，多轮编辑一致性达到SOTA水平，且中文字符生成质量显著提高，整体能力跃升。同时，模型支持透明图编辑和图层分离等工具，对电商、影视创作等行业具有实用价值。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/xiang-yang-qiao-mu/">向阳乔木</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://blog.qiaomu.ai/seedream-5-5-hands-on" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-11-10T00:00:00.000Z">2026-11-10</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>6 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E5%A4%9A%E8%BD%AE%E7%BC%96%E8%BE%91%E4%B8%80%E8%87%B4%E6%80%A7">多轮编辑一致性</a></li><li class="outline-h2"><a href="#%E7%9C%9F%E5%AE%9E%E6%80%A7%E6%8F%90%E5%8D%87">真实性提升</a></li><li class="outline-h2"><a href="#%E9%80%8F%E6%98%8E%E5%9B%BE%E7%BC%96%E8%BE%91">透明图编辑</a></li><li class="outline-h2"><a href="#%E5%8F%82%E8%80%83%E5%9B%BE%E7%94%9F%E6%88%90">参考图生成</a></li><li class="outline-h2"><a href="#%E6%96%87%E6%9C%AC%E6%B8%B2%E6%9F%93">文本渲染</a></li><li class="outline-h2"><a href="#%E5%86%99%E5%9C%A8%E5%90%8E%E9%9D%A2">写在后面</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>字节Seedream 5.5 实测，GPT Image 2.6 都包浆了，它一点不崩，这模型有点顶！ · 乔木博客</p>
+<p>乔木博客</p>
+<p>全部</p>
+<p>AI工具</p>
+<p>AI教程</p>
+<p>AI生成</p>
+<p>AI资讯</p>
+<p>健脑房</p>
+<p>播客解读</p>
+<p>论文学习</p>
+<h1 id="字节seedream-55-实测gpt-image-26-都包浆了它一点不崩这模型有点顶">字节Seedream 5.5 实测，GPT Image 2.6 都包浆了，它一点不崩，这模型有点顶！</h1>
+<p>AI工具</p>
+<p>·</p>
+<p>2026年11月10日</p>
+<p>·</p>
+<p>62 次阅读</p>
+<p>·</p>
+<p>约 11 分钟</p>
+<p>© 2026</p>
+<p>·</p>
+<p>向阳乔木</p>
+<p>昨天看到小互、宝玉等朋友评测 Seedream 5.5 ，都提到多轮编辑稳定性超牛逼。</p>
+<p>今天 X 刷到个对比测试视频，才发现是真强！</p>
+<p>对比的是 GPT Image 2.5和2.6，每次生图基于上一张，预测下一秒样子，迭代100 轮。</p>
+<p>没想刚过 10 轮，Image 2.5 和 2.6 生图已经开始包浆了...</p>
+<p>Seedream 5.5 只有手表走秒，其他画面一点没动，看下面视频，更直观。</p>
+<p>您的浏览器不支持视频播放</p>
+<p>小互的测试也很直观，GPT Image 给模特换装，也是 10 轮后脸就开始崩坏。</p>
+<p>而 Seedream 5.5 在几十轮编辑后，人物主体形象几乎没有任何变化。</p>
+<p>还有个豆姐的Seedream 5.5 官方宣传视频。</p>
+<p>您的浏览器不支持视频播放</p>
+<p>这次模型更新这么强？ 我也来试试，哈哈哈。</p>
+<h2 id="多轮编辑一致性" data-reading-heading="">多轮编辑一致性</h2>
+<p>小互推荐用即梦画布模式体验，非常爽，我主打一个听劝。</p>
+<p>体验入口：打开即梦官网-&gt;创作-&gt;画布</p>
+<p>输入提示词</p>
+<blockquote>
+<p>一个长黑发的年轻漂亮北京摇滚圈妹子，在电梯镜子前自拍。穿黑色骷髅印花露肩超短上衣，露出肚脐和细腰，配低腰破洞牛仔裤和马丁靴，表情超酷。右手举手机挡着半张脸。皮肤白皙自然，手机随手拍，竖构图，人像模式，真实感强。</p>
+</blockquote>
+<p>妹子都挺好看的，但后两张空间狭窄，选第一张输入提示词，比如“形态不动，换一套衣服” 和“主体不动，换一套差异大的衣服”。</p>
+<p>合成 gif 动画如下，除个别服装画面抖动外，人脸和背景几乎不动，多轮编辑一致性真的非常好。</p>
+<p>老黄最近在风口浪尖，一提到就想到皮衣形象，也给他换几套衣服。</p>
+<p>看看不同装扮的老黄，会不会比一直穿皮衣更帅。</p>
+<p>以前觉得图片生成模型总在卷真实性、美感、4K 高清输出。</p>
+<p>一直没有解决可控编辑、多轮编辑一致性这个最大的痛点。</p>
+<p>Seedream 5.5 这次更新，竟一下攻克了，进步巨大，多轮编辑一致性达到 SOTA 。</p>
+<blockquote>
+<p>SOTA 是 State of the Art 的缩写，直译为“艺术的巅峰”或“最高水平”，在人工智能、机器学习、计算机视觉及各类科研技术领域中，意为“当前最佳的”、“最先进的”。</p>
+</blockquote>
+<p>这个能力对电商、短剧、影视和商业广告相当实用。</p>
+<p>保持局部不变，像手术刀一样精准修改，搁两年前真的不敢想，AI 发展速度果然是指数级的。</p>
+<h2 id="真实性提升" data-reading-heading="">真实性提升</h2>
+<p>除了连续编辑一致性，真实性也很关键，尤因为生图是制作视频的基础。</p>
+<p>现在大家都爱看红果短剧，除了《持械入宋》、《归墟》等AI 短剧追求真实感，其他还是漫剧居多。</p>
+<p>是不想吗？我感觉还是技术问题，生图的真实性、物理合理性还不太够。</p>
+<p>哪怕大家一致好评的《持械入宋》，有些人物角色也有明显有塑料感，只是剧情、台词、场面精彩，被大家慢慢忽略了。</p>
+<p>所以，生图真实性改善，对 AI 短剧创作、影视、广告行业也大有裨益。</p>
+<p>随便测试了几张图，感觉是有明显提升。</p>
+<p>最近北京和天津都下雪了，雪景会让人心情愉悦，试着生成一张老北京胡同的雪景：</p>
+<blockquote>
+<p>手机随手拍，超真实，北京一个胡同，下雪了</p>
+</blockquote>
+<p>画面能看到细碎的正在下落的雪花，北京常见的塑料垃圾桶、老旧房外加装的管道、摆在外面的凳子，相当逼真。</p>
+<p>尤其垃圾桶，演的好！</p>
+<p>再来个提示词：手机随手拍，北京五环外，环卫工人在扫雪，超真实</p>
+<p>远处看不清的公司招牌，下雪后车辆压过的路面，扬起来的雪。不说的话，还以为是北京电视台拍的新闻照片...</p>
+<p>前天回天津，也下雪了，生成一张海河边的雪景。</p>
+<blockquote>
+<p>手机随手拍，超真实，天津海河边，下雪了</p>
+</blockquote>
+<p>只说海河边，Seedream 5.5 竟给画面加上了天津的标志建筑之一：天津之眼。</p>
+<p>我怕它骗我，从维基百科找了一张实拍照片，发现造型跟真的几乎完全一样，震惊！</p>
+<p>小互猜 Seedream 5.5 的基础模型绝对升级了。</p>
+<p>我感觉也是，如果没有丰富的世界知识，不可能只提天津，就能把天津之眼生成的这么真实。</p>
+<p>现在生图模型都会对原始提示词做 PE 加工（Prompt Enginering）。</p>
+<p>GPT 和 Gemini 系列也是，生成过程都有推理，理解你实际想要什么，加工提示词后给模型生成。</p>
+<p>这就很考验语言基模能力，如果是真的，那么意味着字节豆包大模型也有显著进步？</p>
+<h2 id="透明图编辑" data-reading-heading="">透明图编辑</h2>
+<p>最近乔帮主开发了一个录屏软件叫 Capwise，想平替每年 108 美元订阅费的 Screen Studio。</p>
+<p>开源后，得到不少好评，想好好打磨下。</p>
+<p>比如，现在软件 Logo 是用 lucide 图标让 AI 调整生成的。</p>
+<p>我感觉倒还行，但评论区有人说跟他的软件 Logo 长的一模一样，估计 Codex 偷懒找了一样的图标，哈哈哈！</p>
+<p>上传原 Logo 图，输入提示词： 为我们录屏软件设计 10 种不同风格的 icon</p>
+<p>上面有几个我觉得不错，但为了增加选择，不给参考图，也生成 10 个：</p>
+<blockquote>
+<p>为一款名叫 Capwise 的录屏软件设计 10 种不同风格的 icon，扁平风格，顶级水平</p>
+</blockquote>
+<p>像素风和透明玻璃风格，看起来都很有趣。</p>
+<p>这里有个小技巧， 用即梦 Seedream 5.5 生图，可选择“透明背景”，直接生成透明图。</p>
+<p>不是透明图，也能图层拆分取出一张图中的多个图标，图标设计筛选效率大大提升。</p>
+<p>任意一张图标集，点图层分离，每个 icon 会被分离出来成为透明图层，操作演示如下。</p>
+<p>如果觉得图标不够大，用扩图功能提升就行。</p>
+<p>这个用法可以迁移到更多场景，一次性出多个设计方案比较，非常直观。</p>
+<p>选中某个方案，只需拆出透明图，就能继续加工或导入 PS 深度编辑。</p>
+<h2 id="参考图生成" data-reading-heading="">参考图生成</h2>
+<p>实在是太喜欢《持械入宋》这个 AI 短剧了，第四季 50 集后渐入佳境。</p>
+<p>里面人物形象都很有辨识度，AI 建模也很用心。</p>
+<p>比如有个角色叫“李清棠”，是参考史上著名女词人李清照的画像艺术加工出来的。</p>
+<p>好奇搜下了下李清照画像如下：</p>
+<p>以这张图为参考图，输入提示词：生成正面真人图</p>
+<p>和剧照对比下，果然有几分神似。</p>
+<p>终极挑战来了，搜罗剧中角色不同分辨率形象，让它参考姿势图生成一个杀青合照。</p>
+<p>姿势参考到位，但是发现人物形象多了以后，面部多少还是有一些飘移。</p>
+<p>如果做 AI 短剧，还是要尽量控制场景中主角数量，避免过多依赖参考生图。</p>
+<h2 id="文本渲染" data-reading-heading="">文本渲染</h2>
+<p>听好友玉伯说，他们的产品 Youmind ，很多人每周做很多图片PPT 和信息图。</p>
+<p>一开始他以为这些用户职业需要经常汇报，访谈用户后才发现，很多人就是为了自己阅读学习方便。</p>
+<p>果然一图胜千言啊！</p>
+<p>最早带来这个玩法可能性的是谷歌。</p>
+<p>从 Nano Banana 1.5 开始，模型就能生文字了，但主要是英文，中文基本不太行，经常画鬼符。</p>
+<p>直到 GPT Image 2.0 中文质量开始变好，2.5 就更没问题了。</p>
+<p>那时，跟橘子、归藏等几个朋友聊天感慨，为啥生成中文质量最好的反而是海外的模型。</p>
+<p>直到这次Seedream 5.5更新，中文字生成终于问题不大了，连小字生成的都很不错。</p>
+<p>质量碾压 Nano Banana 2.1，和GPT Image 2.6 最好的Sunburst模型不相上下。</p>
+<p>提示词：生成一张高信息密度的中文信息图，介绍李清照</p>
+<p>左图是 Seedream 5.5，右图是GPT Image 2.6 Sunburst</p>
+<p>从信息密度看，Seedream 5.5 更高，且版式 AI 味更小。</p>
+<p>GPT Image 2.6 Sunburst 中文字偏大沾了光，只有“凄凄惨惨戚戚”的这句戚戚看不是很清楚。</p>
+<p>而 Seedream 5.5 放大 3 倍查看，除“戚戚”不是很清晰外，“只恐双溪舴艋舟，载不动许多愁”中的“舴艋”也不清楚。</p>
+<p>不过，能达到这种质量已经相当不易，必须鼓掌。</p>
+<p>再比下谷歌目前最好的生图模型，左图是 Seedream 5.5，右图是谷歌 Nano Banana 2.1</p>
+<p>都不用放大，一眼看谷歌的生图文本就不行，太拉胯了。</p>
+<p>修改提示词生成英文信息图，左为 Seedream 5.5 ，右边是 GPT Image 2.6 Sunburst</p>
+<p>不知道是模型偷懒还是怎么回事，GPT Image 的文本内容更少了。</p>
+<p>Seedream 5.5 生图放大后，让谷歌翻译：Be a hero in life, a mighty soul in death。</p>
+<p>没错！就是 “生当为人杰，死亦为鬼雄。”</p>
+<p>可惜，我手头没 GPT Image 2.5 Sunburst 模型对比。</p>
+<p>不过从小互、宝玉等朋友测试看， 都是 Seedream 5.5 中文小字出错率更小。</p>
+<p>字节官方博客说，严重文字错误率从上一代的 2.8% 降到 0.4%，也与其他生图模型做了对比，详见：</p>
+<blockquote>
+<p>https://seed.bytedance.com/zh/blog/more-realistic-images-more-stable-editing-across-100-rounds-introducing-seedream-5-5</p>
+</blockquote>
+<h2 id="写在后面" data-reading-heading="">写在后面</h2>
+<p>Seedream 5.5 昨天已经全量开放。</p>
+<p>即梦、豆包或者豆包工作都能选择 Seedream 5.5 生图了，朋友们赶紧体验。</p>
+<p>测评下来，有点超出预期。</p>
+<p>原以为只是一次常规迭代，没想到多轮编辑一致性这个难题，竟然直接打穿解决了。</p>
+<p>透明图支持、图层分离都是实在的提效工具，普通小白不也不用 PS 抠图了，利好电商、游戏、影视创作等很多行业。</p>
+<p>文本渲染把文本转换成图片 PPT 或信息图，成了一种相当便捷的学习工具。</p>
+<p>总的来说，Seedream 5.5 这次更新，在几个生图模型关键维度上都有突破：</p>
+<p>多轮编辑一致性达到 SOTA，真实性和文本渲染也达到业界顶流水平，整体能力跃上了一个新台阶。</p>
+<p>我现在很期待 API 在火山引擎上线，第一时间接入我的 Obsidian 插件中。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/3f1c5d25d3963d03eda35f2d92d565ff7f0472ad58fdb8c0b6068eba11107673.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/3f1c5d25d3963d03eda35f2d92d565ff7f0472ad58fdb8c0b6068eba11107673.md" download="字节Seedream 5.5 实测，GPT Image 2.6 都包浆了，它一点不崩，这模型有点顶！ · 乔木博客.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=向阳乔木" class="entity-link person-link">向阳乔木</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=字节" class="entity-link company-link">字节</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Seedream 5.5" class="entity-link product-link">Seedream 5.5</a>, <a href="/search/?q=GPT Image 2.6" class="entity-link product-link">GPT Image 2.6</a>, <a href="/search/?q=GPT Image 2.5" class="entity-link product-link">GPT Image 2.5</a>, <a href="/search/?q=Seedream 5.5" class="entity-link product-link">Seedream 5.5</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

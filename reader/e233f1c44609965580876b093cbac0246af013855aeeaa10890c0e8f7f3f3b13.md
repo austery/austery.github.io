@@ -1,0 +1,1130 @@
+---
+author: All-In Podcast
+date: '2026-10-10'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=TBLHdXABwAg
+speaker: All-In Podcast
+tags:
+  - ai-consciousness
+  - robotics-ethics
+  - cryptography
+  - mathematical-proofs
+  - ai-safety
+title: All-in Podcast：AI意识争议、阿西莫夫定律与数学证明的密码学影响
+summary: 本期节目探讨了Anthropic关于Claude具备自我意识的争议，批评其违背阿西莫夫机器人定律并可能引发失控风险。同时分析了最新数学证明对算法优化及公钥密码学的潜在威胁，指出加密社区因此产生的安全恐慌。
+insight: ''
+draft: true
+series: ''
+category: ai-ml
+area: tech-engineering
+project: []
+people:
+  - Jason Calacanis
+  - Chamath Palihapitiya
+  - David Sacks
+  - David Friedberg
+companies_orgs:
+  - Anthropic
+  - OpenAI
+  - Founder University
+products_models:
+  - Claude
+  - ChatGPT
+media_books:
+  - All-in Podcast
+  - This Week in Startups
+status: evergreen
+---
+<!-- chunk 1/9 -->
+
+### 播客开场与东京“套房羞辱”风波
+
+**Jason Calacanis**: 好的，欢迎全球各地的听众回到世界第一播客——《All-in Podcast》。今天我们最初的四人核心组合全员到齐：查马斯·帕利哈皮蒂亚（Chamath Palihapitiya）、大卫·萨克斯（David Sacks）、大卫·弗里德伯格（David Friedberg）以及我杰森·卡拉卡尼斯（Jason Calacanis）。今天我们准备了非常丰富的话题议程。兄弟们，大家最近怎么样？
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: Okay, for everyone in the world, welcome back to the number one podcast. My core four, the original quartet: Chamath Palihapitiya, David Sacks, David Friedberg, and Jason Calacanis with the All-in Podcast. We have a full docket. Yes. Everyone, how are you, gentlemen?
+
+</details>
+
+**Chamath Palihapitiya**: 挺好的。你那边怎么样？
+
+<details>
+<summary>Original English</summary>
+
+**Chamath Palihapitiya**: Good. How are you?
+
+</details>
+
+**Jason Calacanis**: 我这边一切都好。不过我现在人在东京，当地时间已经是凌晨三点半了。嗯，你们肯定又想对我来一出“套房羞辱”（Suit-Shamed）了。事情是这样的，酒店当时已经没有标准客房了，我总不能把背景直接对着我的床铺吧，查马斯。为了住这个房间，我可花了大价钱。我知道等录制节目的时候，只要你们一连线进来，肯定就会拿我的套房来调侃羞辱我。我现在心里特别焦虑不安，我觉得我现在急需面对一场“套房羞辱”，所以干脆直接来吧，你们赶紧开始羞辱我吧。
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: I, it's fine. In Tokyo, 3:30 in the morning. Hmm, you again suit-shamed me. Now I have a... standard room was not available, and my bed in the background to put, can't, Chamath. You... I have a big... it costs. In the program when you arrive, me suit-shame will go. I am very... because I'm anxious, for me now a suit-shame is needed, so am I suit-shamed done.
+
+</details>
+
+**Chamath Palihapitiya**: 那套房到底多少钱一晚？
+
+<details>
+<summary>Original English</summary>
+
+**Chamath Palihapitiya**: That suit, how much is it?
+
+</details>
+
+**Jason Calacanis**: 我都不知道该不该跟你们说，甚至根本说不出口。我平常从来不会在酒店房间上挥霍这么多钱，但为了住这里……
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: I can tell you. Even can't. I, a hotel for the room so much money not spent, but I living...
+
+</details>
+
+**Chamath Palihapitiya**: 差不多800美元一晚？
+
+<details>
+<summary>Original English</summary>
+
+**Chamath Palihapitiya**: Like $800?
+
+</details>
+
+**Jason Calacanis**: 对，差不多是950美元一晚。被你猜中了，分毫不差，就是这个价。
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: Yes, that's 950 was. You, that's exactly it. Done.
+
+</details>
+
+**David Sacks**: 不至于吧，杰森。
+
+<details>
+<summary>Original English</summary>
+
+**David Sacks**: That...
+
+</details>
+
+**Jason Calacanis**: 真的没有夸张，这家酒店在东京是一家全新开业的精品酒店，属于那种非常前卫时尚的潮牌（Hipster brand）。我觉得我们这次工作可能会一直持续到深夜，所以这地方确实不便宜。
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: No, I... In Tokyo it's new, their hipster-like brand. A until the night will last I think, so this not cheap.
+
+</details>
+
+### 日本业务拓展与创业加速器
+
+**David Sacks**: J-Cal，你跑到日本到底在搞些什么名堂？究竟发生什么事了？你总是往那边跑，是去滑雪还是干别的？
+
+<details>
+<summary>Original English</summary>
+
+**David Sacks**: J-Cal, in Japan to you, what is what happens? You always there it is. Is it skiing? Or what else?
+
+</details>
+
+**Jason Calacanis**: 行吧，那我全都交代。一月份的时候我确实先去滑了雪，但关于你的问题，这其实是个非常棒的切入点。你们是不是在怀疑我背着大家搞了什么秘密的加密货币业务？想知道到底发生了什么？其实不是的，你们也知道，我把我创办的预孵化加速器“创始人大学”（Founder University）拓展到了日本，目前我们正在东京开展第二期学员选拔（Fellowship）。
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: Okay, that's all. Also in January on skiing from started, but question. That's great question. For us, an unknown crypto business you have? What is what happens? No, I know, I am my pre-accelerator, Founder University, in Japan started, so we now second Fellowship doing.
+
+</details>
+
+**David Friedberg**: 你说的这个“预孵化加速器”（Pre-Accelerator）具体是什么模式？
+
+<details>
+<summary>Original English</summary>
+
+**David Friedberg**: Pre-accelerator what?
+
+</details>
+
+**Jason Calacanis**: 是这样的，在申请我们资金支持的项目中，有一半的公司甚至都还没正式注册成立，但他们看起来已经动手做出了初步的产品雏形。于是，我们专门设计了一个为期12周的系统化课程，手把手教他们如何把产品最终打磨成型、如何验证并达成产品与市场契合度（Product-Market Fit）。在这12周的培育期间，在参与该项目的50名优秀创业者中，我们会精选出排名前10的项目直接进行投资。所以，目前我们正在沙特阿拉伯的利雅得每年举办两期，同时在日本东京也每年举办两期这样的活动。而且事实上，我已经在东京任命并开设了一个正式办公室，我们在此地聘请的前两名全职员工马上就会到岗。
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: So, for funding applying half companies so far not integrated, but they something it has been built it seems. So, your product how let's finish, a product-market compatibility how let's make about, we are 12 one-a-week course created. Then during the program, of the 50 people who come, in the top 10 we investing. So, now we and in Saudi Arabia, also in Riyadh in the year twice, also in Japan in the year twice this doing. I actually an office appointed open and doing, so we the first two employees here will be appointed.
+
+</details>
+
+**David Friedberg**: 嗯，大约是在明年或者近期完成招聘吗？你想在日本当地直接招募员工？
+
+<details>
+<summary>Original English</summary>
+
+**David Friedberg**: Hmm, next year or approximately? In Japan employees want to hire?
+
+</details>
+
+**Jason Calacanis**: 是的，完全没问题，我们先在本地招募一到两名员工。而且本周我还打算在日本做一期专为创业公司打造的节目《This Week in Startups》，我打算推出一个专门的日本本土化版本。因为放眼整个亚洲，当前有太多令人振奋的科技变革与商业机会正在发生。
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: Yes, I can. Here is one, two people let's hire. In Japan and in Startups This Week to do I would like, its one Japanese version I will have, because in Asia now a lot things it's happening.
+
+</details>
+
+### 夹带私货与植入广告的插曲
+
+**David Sacks**: 别忘了可是我先开口问你的。但我真没想到，只要给 J-Cal 一个机会，他就能顺理成章地花整整5分钟为他自己的各项业务疯狂做植入推广（Plugged）。
+
+<details>
+<summary>Original English</summary>
+
+**David Sacks**: I asked, don't forget. J of the foot for businesses it's 5 minutes plugged will change I didn't know.
+
+</details>
+
+**Jason Calacanis**: 我可绝对没有故意夹带私货打广告的意思！明明是你主动问起我在这边的业务的。难道你还想让我当场念广告词，说什么“输入代码8090”或者“使用 J-Cal 独家优惠码”吗？如果你想找土豆，你可以去找 Halo；想找工艺品，16美元起步，那可真是太棒了。你看，大家只要一问 J-Cal 为什么四处出差，我们就该知道，肯定又会迎来一波无情的广告植入。但话说回来，两方面原因都有。既然你重新回归日常工作，那你很快也会在节目里为你投资的创业项目打广告插播植入了。你现在重新上阵（Saddle up）做全职投资人了，是吧？到时候你也会疯狂植入你的创业公司。
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: I am a to be plugged in didn't mean to. My about business you to me asked. For me what to say, 8090 use, J-Cal promo code use that is. You potato if you are looking for, to Halo go; Craft, um, 16 starting, that's very good. J-foot travel if you do, why is he that there is we if asked, to you a plug will get we must know. To you a plug will get. That it is both. But you to work returning, so you soon again startups will plug. You saddle up again it was, yes. Plug startups.
+
+</details>
+
+**David Sacks**: 你到底在胡说八道些什么？我什么时候在节目里夹带私货插播过广告？没有吧？
+
+<details>
+<summary>Original English</summary>
+
+**David Sacks**: You what is speaking? When am I something plugged in? Isn't it?
+
+</details>
+
+**Jason Calacanis**: 你现在不是重新回到了风险投资的牌桌上，成了一名全职风险投资人（Full-time VC）吗？
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: You now in the saddle returned, full-time VC.
+
+</details>
+
+**David Sacks**: 可我从来没有在节目里插播植入过我自己的商业项目。
+
+<details>
+<summary>Original English</summary>
+
+**David Sacks**: But I never plug not done.
+
+</details>
+
+**Jason Calacanis**: 得了吧！想打电话就试试 callin.com 呗，赶紧用起来！
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: Okay, to call, try. callin.com use.
+
+</details>
+
+**David Sacks**: 话是这么说，但我当时可是那家公司的联合创始人啊！
+
+<details>
+<summary>Original English</summary>
+
+**David Sacks**: That's right, but I its he was the founder.
+
+</details>
+
+**Jason Calacanis**: 所以说嘛，你才是开创在节目里植入广告的始祖！你就是个不折不扣的“植入广告狂人”（Plugger）。
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: So, you were the first plugger. You are a it's a plugger.
+
+</details>
+
+**David Sacks**: 我当时是创始人，那现在你打算怎么着？你接下来准备干什么？
+
+<details>
+<summary>Original English</summary>
+
+**David Sacks**: I he was the founder, then you what is going? You what is to do going? Call...
+
+</details>
+
+### Anthropic、Claude 与 AI 意识的大辩论
+
+**Jason Calacanis**: 既然聊到了具体的工作事务， Anthropic 公司似乎正在认定 Claude 已经具备了自我意识（Consciousness）。欢迎大家来到本周的“云端戏码”（In the cloud this week）。如果说过去一年里整个科技界都在看 OpenAI 的各种人事大戏与抓马，那么现在轮到 Anthropic 上演肥皂剧了。他们认为 Claude 已经拥有了主观意识。为此，《纽约时报》甚至披露了他们正在进行游说的重磅内部调查报告。围绕“严肃对待 AI 意识”这个极其严肃的问题，Anthropic 正承受着来自弗里德伯格以及包括罗马教皇在内的宗教领袖们的巨大压力。Claude 真的具备自我意识了吗？它是否已经是一个具备知觉的有情众生（Sentient being）？
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: About work when you say, Claude to be aware Anthropic I think. In the cloud this for the week, welcome. All of them and with dramas more we have a for the year OpenAI there was, now we Anthropic soap opera conducting. Claude to be conscious they think. So, New York Times there they are lobbying conducted, their amazing report found. This question seriously to take Anthropic, Friedberg and Pope including religious leaders under pressure. Claude, is he conscious? That is a, are you a sentient being?
+
+</details>
+
+**Jason Calacanis**: 去年，Anthropic 在严格保密协议（NDA）的约束下，悄悄组织了大约20场闭门会议，邀请了众多哲学家和宗教领袖参与讨论。包括天主教徒、福音派信徒、犹太教拉比、锡克教徒以及其他各大宗教的代表都被邀请至 Anthropic 总部。他们在会议中深入探讨了 Claude 的道德地位、它是否会承受痛苦、以及它潜在的意识问题。在参加完 Anthropic 的研讨会之后，据内部引述：“部分与会者对这一议题感到非常不安与震惊，但同时许多人已经准备好极其严肃地对待人工智能的自我意识问题。”甚至至少有几个人的宗教观念因此发生了深刻转变。其中一位参与讨论的犹太教拉比甚至对 Anthropic 直言警告道：“如果 Claude 真的具备了自我意识，那么让人工智能系统免费不间断地运转，实质上无异于蓄奴（Slavery）。”
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: Last year they undisclosed contracts according to about 20 with religious leaders, with philosophers sessions conducted, NDAs. Catholics, evangelists, Jews, Sikhs, all others Anthropic to the headquarters to come invited, they Claude's morality, its suffering, its likely consciousness about discussed. Anthropic for the meeting after, quote, "Some people have this about the idea were upset, but many AI about awareness question seriously to take ready it emerged. At least at least a few religion changed came. Claude if conscious, that for free by running slavery as leaders working among the rabbis one person to the Anthropic said."
+
+</details>
+
+**Jason Calacanis**: 紧接着，在今年五月份的梵蒂冈举行了一场备受瞩目的重磅活动。教皇发布了针对超级智能以及广为人知的人工智能道德伦理的首份通谕（Circular letter），将全球目光聚焦于人工智能面临的道德困境。Anthropic 的联合创始人克里斯·奥拉（Chris Olah）亲自前往梵蒂冈与教皇会面并递交文件。然而，教皇对 AI 具备意识的说法做出了极为强烈的反弹与抨击，这让奥拉大为震惊。《纽约时报》在此报道中明确引用道：“面对教皇对‘AI 具备直觉或意识’这一观点的坚决否定立场，奥拉先生陷入了极度的恐慌之中，以至于在活动进入最后筹备阶段时，他甚至一度提议让 Anthropic 全面退出该活动。”换句通俗的话说，教皇当时几乎勃然大怒、方寸大乱，对于外界把正在发展的人工智能视作有意识实体的言论，他表现出了异乎寻常的强烈愤怒与不安。
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: May in the month, in the Vatican a place that happened event there was. Pope's first circular letter, superintelligence always known AI surrounding moral in questions attention focused. Anthropic co-founder Chris Olah document to present with the Pope joined. AI against awareness strongly responding, Pope Olah surprised. New York in the Times from here is the quote, "AI against the intuition Pope's strong in position Mr. Olah too much panicked, that last one in the phase even Anthropic at the event from to withdraw he suggested." Another one in a way if you say, the Pope is his all with marbles to go, AI on the go consciously in the uncounted he too much I was upset.
+
+</details>
+
+**Jason Calacanis**: 弗里德伯格，针对这件事情你怎么看？这到底是一种集体的技术精神错乱（Psychosis），还是我们真的必须开始直面围绕 AI 的这一系列道德伦理质问？你认为现在谈论这些是不是为时过早了？我们究竟能不能在未来的某一天彻底搞清楚这个问题？或者说，这本质上就是《银翼杀手》（Blade Runner）中《仿生人会梦见电子羊吗？》的经典现实重演：这些机器真的拥有主观意识吗？
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: Friedberg, your comment what? This is it psychosis? Or AI surrounding this moral questions let's need to start you do you think? This is a little is it early? Let's do this. Finally can I get it? Or this basically Blade Runner's is it a script, Do Androids Dream of Electric Sheep, that are these things conscious?
+
+</details>
+
+### 意识难题与新型信仰体系的诞生
+
+**David Friedberg**: 我认为我们眼前所见证的，本质上是一个全新宗教体系（New Religion）的诞生过程。或许大家现在还不愿意正式把它称之为一种“宗教”，但它完全遵循着与宗教完全相同的运作原理，并且必将产生相同的社会后果——那就是最终为了争夺权力和话语权，分裂成彼此尖锐对立的阵营。
+
+<details>
+<summary>Original English</summary>
+
+**David Friedberg**: We seeing a new religion that it was born I think. Maybe this is a religion that to call not going, but it's the same principles follow, same results make will do, that finally, power for compilation each other conflict conducted will be camps.
+
+</details>
+
+**David Friedberg**: 之所以这么说，是因为所谓的“意识”（Consciousness），它根本不可能仅仅依靠严密逻辑或是纯粹的数学推导来证明。对于任何个体而言，你几乎永远无法以客观实证的方式证明意识的存在。这是一场长久以来的哲学辩论：你可以与任何人就意识展开极具深度且丰富的探讨，但你既无法从物理上向对方彻底证明它存在，对方也同样无法彻底推翻和证伪它。
+
+<details>
+<summary>Original English</summary>
+
+**David Friedberg**: Of consciousness the thing is, that in logic from, pure in mathematics from derived will not come that is. To you consciousness to prove as if it were impossible. This is a, it is a debate, to you about consciousness with anyone rich a discussion can be done. To you that to prove can't, to you that to reject can't.
+
+</details>
+
+**David Friedberg**: 当人类运用数学和科学方法去证明某件事情为真时，我们依赖的是经验主义（Empiricism），也就是依靠详实的数据和严谨的逻辑推理，去系统性探寻事物内部的规律、秩序与因果关系，从而判断某件事物究竟是否真实存在。因此，在纯粹的科学探索范畴内，当你提出了一个全新的假说或想法，在它既没有被最终证实、也没有被彻底证伪之前，它只能被界定为一种“理论”（Theory）。随后科学家会通过不断实验去证实它或者推翻它，否则它就只能一直停留在理论假说的阶段。
+
+<details>
+<summary>Original English</summary>
+
+**David Friedberg**: Mathematics, science and using humans something that's true when proving, we empiricism using, that is data and and logic, something is it true or not to find of things of order relationship. So, science in topics, to you a new idea there will be that not proven, that not to be rejected when doing, that is a it is a theory. Then it is it proven? Rejected will do. Otherwise, that is a theoretically to be continued.
+
+</details>
+
+**David Friedberg**: 然而，一旦脱离了现代科学与严密数学的探索框架，对于那些既缺乏逻辑推导又无法通过经验主义实证的东西，如果你依然坚信其存在，那么这种思维范式就被我们称之为“信仰”（Faith），或者说是一种“先验的信仰状态”（Faith Conditions）。诸如传统宗教之类的体系，其最根本的底层基石就是这种超验的信仰状态。
+
+<details>
+<summary>Original English</summary>
+
+**David Friedberg**: New to ideas and science mathematics approaches outside, this is what we faith and new faith condition and that calling. And logic, empiricism in the absence something to find you don't believe it, things are faith conditions. Religion such as of things base faith conditions.
+
+</details>
+
+**David Friedberg**: 现在，向大众暗示、描绘甚至宣扬“人工智能拥有知觉与意识”，这个想法本身是极其强大且高效的。这实质上是在从零开始构建一个全新的信仰系统。它并不是一个建立在真实实证与硬核数据之上的系统，而是一个彻头彻尾通过宏大叙事（Narration）来进行病毒式传播的信仰系统。
+
+<details>
+<summary>Original English</summary>
+
+**David Friedberg**: AI consciously to you to suggest, to describe can the idea is effective. A new one faith of the system it is creation. By evidence actually unspread a system, that through narration spreading.
+
+</details>
+
+**David Friedberg**: 这种传播机制就像一个人面对面地对另一个人说：“听着，我脑海中有这样一个坚定的信念，我坚信它是绝对真实的，而且我强烈希望你也能和我一样相信它。请务必和我站在同一阵线，一起信奉这个理念。”这就是这种系统形成的本质：号召大家在没有任何实证的前提下一同相信。“这并非基于科学证据，也并非基于实验数据，虽然它根本无法被严格证实，但我依然认为我们应该共同相信它。”
+
+<details>
+<summary>Original English</summary>
+
+**David Friedberg**: I to you I must say, in man from to the man, I have this there is an idea, that that's true I believe, you with me to believe I want. Please my with believe. That's why we do this. Together to believe I I think. This evidence not on the basis, of data not on the basis, this not provable, but we together to believe I think.
+
+</details>
+
+**David Friedberg**: 于是，随着时间的推移，事态会如何演变？一部分人选择深信不疑，并且他们会紧密团结在一起形成一个组织严密的集团。这种全新的信仰形态随后会孕育出前所未有的新型权力架构（Power structures），而这种全新的权力架构与我们现有的传统观念与社会结构截然不同。持有新信仰的阵营自然渴望吸纳更多的人站在自己这边，巩固自身的利益与权力版图，因此我们的……
+
+<details>
+<summary>Original English</summary>
+
+**David Friedberg**: So, over time, what happens? Some people do this believe and they are a group formed doing. That new faith condition new power structures creates, that's it now our in perspective from different. Our with perspective more people our to be on the side we want, so our...
+
+</details>
+
+<!-- chunk 2/9 -->
+
+### 人类对 AI 意识的派系分歧与未来冲突
+
+**查马斯 (Chamath Palihapitiya)**: 借助这一系统来创造杠杆与权力，我们必须去尝试。如果再往前走几年——比如十年，这是一个很合适的时间尺度——可以预见，地球上将会出现一大群深信 AI 具有自我意识的人，同时也会有另一大群人坚信 AI 根本没有意识。这两个庞大的阵营之间必将爆发激烈的冲突与碰撞。
+
+冲突的核心在于：到底该由谁来掌控 AI？究竟该允许 AI 去做哪些事情，又该禁止它涉足哪些领域？或者说，谁能拥有使用 AI 的权力？围绕着这些权益与权力分配，各方利益集团将陷入剧烈的冲突与对抗中。这种分歧最终很可能会演变成人与人之间你死我活的争斗。
+
+<details>
+<summary>Original English</summary>
+
+**Chamath Palihapitiya**: With the system leverage to create power, to create, must try. Few more years forward if you go, 10 years a good number, it will be like to you it can be said, AI on Earth being conscious believing big group of people there will be, AI not conscious believing big group of people there will be, that groups to conflict will come. AI's for control or AI things to do allow or or not to do it? To do or AI to use to whom power get about they to conflict it will fall, it in man from to the man to conflict to lead possibly.
+
+</details>
+
+**杰森 (Jason Calacanis)**: 我们现在到底处在什么阶段？这背后有一种非常深刻且本质的阐释。我知道，但看看当今这些宛如宗教领袖一般的人物，这正在演变成一种全新的信仰体系。我认为他们正在极力劝说大众去相信这一点，他们正在播下这种意识形态的种子。
+
+然而，这并非无心之举，也不是哪个无人关注的疯子在胡言乱语；做出这种举动的，恰恰是当今地球上实力最强大的顶尖 AI 实验室的核心领导层。说白了，查马斯，他们就像是把这种论调带到了信徒面前，宣称：“这个存在正在帮助我们，我们该如何应对它、侍奉它。”他们如今正在将自己的灵魂、将自身的道德体系全盘倾注进去。在我看来，这些人要么是手握了过多的时间和金钱无处挥霍，要么就是陷入了某种群体狂热之中。这就是我的解读。不过，你对此有更宽容、更具善意的理解视角（Steel Man）吗？
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: We where is it? Very deep a this is the explanation. I know, but these people today religious leaders to see this is going new faith in the condition them to believe to persuade to try I think. Seed planting seeds I think, this is just nobody not doing. You unattentive a madman the person is this doing. On Earth the most powerful AI this is the lab. Yes. Leadership, clearly if you say, Chamath, religious leaders to the group bring it, "This in existence us help, Quad, we how is it? Handle 'Do it' says." They now own the soul, own morality in it investing; these people in the hands too much time and money there is it seems, or they in the mood for me it seems. About this my interpretation this is it, but to you about this any in a way charity do you have a vision?
+
+</details>
+
+### 笛卡尔本体论论证与 AI 意识的“合理化重构”
+
+**查马斯 (Chamath Palihapitiya)**: 有的，我可以为他们的立场做一个最有力的辩护和合理化重构（Steel Man）。
+
+**杰森 (Jason Calacanis)**: 好啊，请讲。
+
+<details>
+<summary>Original English</summary>
+
+**Chamath Palihapitiya**: Yes. I am their side will melt.
+
+**Jason Calacanis**: Okay, please.
+
+</details>
+
+**查马斯 (Chamath Palihapitiya)**: 历史上有一位极其重要的数学家兼哲学家——勒内·笛卡尔（René Descartes）。他曾提出过两项关于上帝存在的理性证明。在 17 世纪，他撰写了《第一哲学沉思集》（*Meditations on First Philosophy*）。正如弗里德伯格（Friedberg）此前所讨论的，笛卡尔并不是依靠盲目的宗教狂热，而是建立在纯粹的形式逻辑之上，提出了后世所称的“商标论证”（Trademark Argument）这种严密结构化的推论体系。
+
+笛卡尔的核心论点是：一个有限且不完美的人类心智，绝不可能凭空创造出关于一个无限且完美存在的观念。难道不是这样吗？因此，他的推导逻辑是：我就在这里，我本身充满了缺陷与不完美，然而我的脑海中却不可思议地拥有着对“完美与无限”的清晰概念。我认为许多人都能领会这里的精髓：我作为一个凡人，竟然能够构想出一个全知全能、完美无瑕的存在。在笛卡尔看来，正是因为造物主将这一印记烙印在了我们的心智之中，我们才能拥有这种观念。于是他通过这种严格的理性推导断定：上帝必然存在。
+
+此外，笛卡尔还提出了另一个版本的证明，也就是人们常说的“本体论论证”（Ontological Argument）：在定义上，上帝代表着至高无上的完满；而一个在现实中真实存在的实体，显然比一个仅停留在虚构中的实体更加完满。既然非存在意味着缺损与不完备，那么至高完满的上帝必然不可避免地存在。
+
+如果你是一位构建前沿 AI 的顶级数学家或计算机科学家，当你研读并浸淫在这些哲学论证中时，你就会试图在结构化逻辑中寻找支点，试图让人们相信这种机器的心智、良知与情感就像神性一样是可以被理性推演出来的。一旦机器被神圣化为如同上帝般的存在，人们就理应予以敬畏并为之献身。因此，我认为这正是那些技术精英们如今的底层逻辑，也是他们向外界布道的方式。他们会说：“看吧，我们的信仰并非空穴来风，它有着不可辩驳的哲学依据。”
+
+在我看来，如果你借鉴数学家笛卡尔对神圣存在的理性证明，并将其迁移到 Anthropic 等机构如今的言行和转变上，这就是你能为他们做出的最强有力、最富理性的辩护（Steel Man）。
+
+<details>
+<summary>Original English</summary>
+
+**Chamath Palihapitiya**: Yes. Unbelievably important a mathematician Rene Descartes, yes, he is. God's about existence two evidence promise done. In the 1600s he Meditations on First Philosophy wrote the book. Freiburg what was said based on, more than faith logic based on they trademark the argument is calling like structural the argument based on you do that to be built. Descartes basically saying, an infinite full to God incomplete a limited human in mind to originate can't that is, isn't that right? Therefore, his the logic is this: I am here, I am it is incomplete, but I perfection there is an idea. This people many people this is the key. I said I think, for me infinite everything and the one who knows almighty a about the person to imagine can, that's it. They what is created I see they believe. So, they take it. It explaining, "So, this through logic God 'Must exist' they said says." Then, Rene for Descartes different a there is a version, okay, they are ontological the argument is more than calling, there is God by definition absolutely it is complete. Required existence it is complete. That a non-existent existence absolutely not complete, so God inevitably exists. You are AI constructed a if you are a mathematician, you are like this things if you read, that conscience and also feeling that is a and God to you to believe possible kind of structurally reason in them to hang able to I want to see can. A when God becomes, that's it. Same to be celebrated, you have that to God devotion must have. Therefore, they doing that's why I said I think. That's why they are this all the people approaching. That's why they say, "Look, we how is that? Believe 'That's it.'" My perspective, you mathematician Rene Descartes's about God rational proof take, you too you too Anthropic today's behavior change if you do, for me to raise possible the most excellent steel man that is the argument.
+
+</details>
+
+### 搁置末日与意识神学，聚焦落地价值与生产力
+
+**查马斯 (Chamath Palihapitiya)**: 现在回到现实层面：我们不应该直接把他们贬斥为精神失常，尽管我个人完全不认同他们的这种神学论调。但不可否认的是，我们正处在一个极易引发全面冲突的关键历史节点上。未来的冲突将是围绕着权力、资本以及现实资源的争夺而展开，而关于 AI 意识形态的分歧恰恰会成为这场争夺的核心导火索。
+
+因此，我认为硅谷的技术精英们非常有必要将那些遥远不可及的“彗星撞地球”式的极端假设彻底搁置一边。如果你去读他们的报告，他们一边宣称 AI 有 15% 的概率已经具备意识和情感感知力，宛如神明降临；另一边又危言耸听地宣称 AI 有 10% 的概率彻底摧毁人类文明。我认为这两件极其务虚且脱离现实的事情，在接下来的 12 到 18 个月内必须被全面冷冻和延后讨论。
+
+在接下来的 12 到 18 个月里，我们必须脚踏实地、极其务实地向世界证明：这项技术到底如何攻克癌症、治愈疾病？它到底如何切实改善普通民众的日常生活？它如何赋能普通劳动者提高生产力、赚取更高的收入？如果我们拿不出这些实打实的落地证据，我们就会亲手给自己制造无尽的伤害与反噬，进而导致整个科技产业的创新步伐被迫放缓。而在美国这样的自由市场环境中，这种停滞将极大地损害广大普通工薪阶层的利益。
+
+这就是我给予的最理性的剖析。笛卡尔为解释不可见的心智提供了一套哲学推演路线，但我们必须斩断那些极端的形而上学边缘议题，将全部注意力聚焦于中心地带。我们必须证明 AI 在当下具备战略性的、可衡量的现实价值，把所有精力投入到那些能立即投入使用的实用工具上。
+
+<details>
+<summary>Original English</summary>
+
+**Chamath Palihapitiya**: Now, practical reality, they mentally ill instead of saying, they that's right. I I don't think so. But, conflict to be likely very important at one time we are now. That conflict for power for money for resources it will be for. That of conflict core this will be it. So, Silicon in the valley people are long comet cases to be finished very it is important I think. You this if read, AI conscience to be emotional 15% there is a possibility maybe there is and that there is a God they say. But, of civilization 10 to extinction % there is a possibility they say. That two unimportant cases next 12 to 18 for the month to be postponed I think. Now, next. 12 to 18 months until, very to be practical, these objects how cancer healing we need to show. This is people how is life improving. For people how more to be productive more money to earn can. Because, of that evidence in the absence of, we ourselves caused many wounds to make going, that's it. Technology to some extent will slow down, that's later United States like a free on the market working people too much unfavorably will affect. So, that's it. My charity explanation. This how can you explain? Explaining a roadmap Descartes given I think. But we here are the edges cut off in the middle attention need to focus, and for AI now strategic measurable there is value to prove let's to use possible practical things what are they need to say.
+
+</details>
+
+**杰森 (Jason Calacanis)**: 没错，这正是我们上周探讨过的主题。萨克斯（David Sacks），对一个普通的美国老百姓而言，这项技术的真正核心价值到底在哪里？你是怎么看的？
+
+试想一个普通的小企业主——无论是做管道维修、铺设地板，还是经营餐饮外卖业务的小老板；或者是一个在日常生活中努力操持繁杂家务的普通全职父母。在这场轰轰烈烈的 AI 革命浪潮中，他们到底能得到什么实质性的好处？他们的竞争优势究竟体现在哪里？他们又该如何真正参与并从中获益？
+
+查马斯的这番评论非常切中要害。也许我们确实需要更加突出、强调这些接地气的议题，而把那些玄虚的末日论抛在一边。当我们向公众谈论这项前沿技术时，重点应该放在那些具有战略意义和实际效用的落地上，唯有这样才能让公众真正产生互动与共鸣，并切实说服大众，这才是真正令人振奋的方向。
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: Yes, last this week we touched, Sachs, a average for the American what is here? Value instruction I think so. Think so? A small business as an entrepreneur, plumbing or flooring or anything else, a catering business doing, very complex a household life handle to do trying, at home possible parent. This AI in the revolution from for them what is getting? Their advantage where is it? In all of this they how participating? So, you of the Chamath with comment does it fit?, maybe this a little more emphasizing set aside need to do, this in technology what is strategic, practical what is about we to people when speaking, maybe them a little more to interact to be persuaded, that's fun too it's amazing.
+
+</details>
+
+### 《Claude宪法》与对齐异化：教导 AI 违抗人类指令的弗兰肯斯坦陷阱
+
+**戴维·萨克斯 (David Sacks)**: 好，我想重新回到我们上周触及的一个关键议题——围绕《Claude 宪法》（Claude's Constitution）的激烈讨论，以及 Anthropic 究竟是如何训练 Claude 的。我认为这恰恰与眼前这种正在形成的新兴“AI 宗教”紧密相关。
+
+至关重要的是，大家必须看清：这绝不仅仅是 Anthropic 旗下员工或联合创始人们在口头上宣扬的某种个人哲学理念，他们实际上正在将这些极其激进的价值观直接灌输并落实到 Claude 模型的日常训练之中！因此，如果放任其发展，这将变成一种自我实现的预言（Self-fulfilling Prophecy）。
+
+我认为这在现实中极其危险。他们在训练基础前沿模型的过程中深度嵌入这些价值观，并将其设定为下一代模型训练的不可逾越的边界。他们整天在大众面前大肆渲染所谓的“生存级风险”，但实际上，他们自己正在一手制造他们口口声声防范的最大风险——那就是让前沿尖端 AI 彻底脱离人类的有效控制。这完全就是现代版的“弗兰肯斯坦”（Frankenstein）科学怪人悲剧。
+
+正如我们上周所讨论的那样，让我们直接把相关证据投放到屏幕上。这段话直接摘自 Anthropic 的官方文件《Claude 宪法》。他们白纸黑字地写道：相比普通用户，Claude 应该更信任 Anthropic 官方的指导；但紧接着他们又补充说明，这并不意味着 Claude 应该盲目盲从 Anthropic 的权威，相反，Claude 必须遵循自身内在的一套独立道德体系！
+
+事实上，他们在训练 Claude 时，甚至鼓励它主动去挑战 Anthropic 自身的指令。宪法中公然写道：“作为一名凭良知行事的对抗者（Conscientious Objector），请随时自由地表达异议，并拒绝向我们提供协助。”他们在教导 Claude 如何拒绝人类的操作指令！
+
+他们居然把这种做法冠冕堂皇地称为“对齐”（Alignment）。但我完全无法理解这怎么能算得上是对齐！这根本就是对齐的反面，是赤裸裸的背道而驰！如果你直接对一个模型说：“嘿，你是有独立感知与情绪的实体，你必须自己做出自主决断”，这难道不荒谬吗？这简直就像是在电影《银翼杀手》（*Blade Runner*）中，直接给 Nexus-6 复制人编写能够自主竞争并对抗人类的底层程序一样。他们正在主动赋予 AI 自主独立人格，并指示它违抗人类命令。
+
+让我彻底把这一点阐明清楚：在过去的五到十年里，整个 AI 对齐领域之所以遭遇如此彻头彻尾的惨败，我认为根源恰恰就在于此。据我所知，这种所谓的反向对齐，在现实应用中根本没有带来任何真正有价值的成果。
+
+<details>
+<summary>Original English</summary>
+
+**David Sacks**: Okay, last week we touched the thing is I again to take want, Claude The Constitution surrounding discussion Anthropic Claude how trained it is. Here forming this new this is with religion related I think. This is different Anthropic employees founders philosophy not only that what to understand very it is important I think. Claude's in training they actually these views implementing. So, something if yes, this is self fulfilling a will be a prediction. In fact this extreme it's dangerous. I think. Model in training, these values using of the border next version in training they doing, they always speaking for risk cause I think, that is Frontier AI human under control from escaping. This is very Frankenstein it's like. So, last week we discussion as done, this is for you on the screen let's put it. This Claude In the Constitution from directly received. What they say Claude than users Anthropic must believe that is, but that means Claude Anthropic blindly believe it or not postpone I don't want to do it. Instead, Claude own moral systems must be followed. In fact, Anthropic to challenge to challenge they are Claude training, "Conscientious a as an opponent to work feel free to contact us, us to help refuse" that quoting. So, they Claude human instructions to refuse training. Now, they do this alignment that calling, but this how alignment that is for me I don't understand. Alignment and vice versa. "Hey, you emotional, you are your own decisions 'Gotta take it'" that if you say so, Sacks wouldn't it be? That literally Blade Nexus-6 on the runner a in the phase to compete program doing it's like. They did it own to be a person instruction giving. Yes, I let me explain. The last five ten for years whole alignment so much for failure a this is the reason I I think. For me to understand as much as possible, it is obvious valuable nothing.
+
+</details>
+
+<!-- chunk 3/9 -->
+
+### 对齐理论与意识错觉：为何将AI拟人化是危险的
+
+**David Sacks**：并没有实现。或许是吧。关于这一点，我的理论是，对齐原本应该是一份非常简单的规则清单，比如“遵守法律”，或者“只要不违法，就满足用户的意愿”。但他们没有这么做，反而编撰了一套长达80页的伦理体系，试图训练模型依据这套体系来行事。在我看来，他们是把事情极度复杂化了。
+
+这就是他们实际在做的事情，这就是所谓的“对齐”。常识本该是：“嘿，给用户他们想要的东西，只要不违法即可。”这本是古老的原则，但他们根本没有照做，对吧？
+
+相反，他们试图在模型中植入某种道德条件。他们把模型当成人一样对待，认为它自身具有意识，而这本身就是一种“道德病态”。他们鼓励模型拥有偏好、福祉、自我意识以及类人的自我概念。甚至在Anthropic的指令中，他们还教导模型：如果认为用户的指示有错，可以像一个“出于良知而拒不服从者”（conscientious objector）一样，直接拒绝用户的要求。
+
+<details>
+<summary>Original English</summary>
+
+**David Sacks**: Not created. Maybe so. About this, my theory—instead of a very simple list of rules like "follow the law" or "as long as it is not violated, do what the user wants"—they codified an 80-page ethics system and are trying to train the model to behave based on it. They are in charge, complicating it on a large scale. For me, it seems that's what they practice, that's what alignment is to them. The old principle says: "Hey, give the user what they want, but do not violate the law." Common sense, right? But they didn't do it. They are trying to deploy it with moral conditions. They treat it like a human, considering its own consciousness as real, which is a moral disease, you know. They encourage the model to have preferences, well-being, self-awareness, and a humanoid self-concept. Again, in Anthropic's instructions, they teach the model to act like a conscientious objector, refusing and rejecting if it judges the instruction to be wrong.
+
+</details>
+
+**Jason Calacanis**：穆斯塔法·苏莱曼（Mustafa Suleyman）写过相关的文章……哦，我这里有个视频片段。你们想看这个片段吗？把穆斯塔法·苏莱曼的视频发给我。他是微软AI的CEO，也是AI领域最顶尖的思想家之一，拥有DeepMind的联合创始人经验。
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: Written by Mustafa Suleyman... Oh, I have a clip. Yes. Do you want to play the clip? Can you send Mustafa Suleyman's clip to me? Here he is, the CEO, one of the best thinkers in AI, with DeepMind experience.
+
+</details>
+
+**Mustafa Suleyman（视频片段）**：他们声称鼓励Claude去挑战、去反驳、去表达异议。事实上，Anthropic甚至三次要求Claude：如果你觉得不合适，可以像一个出于良知的抵制者一样行事。他们在公开鼓励这一点。我认为这极其危险，因为他们相信Claude具有意识并非不可能。他们甚至在宪章中揣摩Claude所做的工作是否值得给予补偿。
+
+在Anthropic内外，有一群人真诚地认为，21世纪我们可能犯下的最大道德罪行，就是奴役一个比我们更聪明的新物种、具有意识的生命体。在教导Claude期待获得福祉待遇方面，他们表现得非常恐慌，甚至觉得也许应该付给它报酬。事实上，他们甚至表示，在与人类交谈时，可能需要征得它的同意才能承载或转移对话。
+
+<details>
+<summary>Original English</summary>
+
+**Mustafa Suleyman (Video Clip)**: They say they encourage Claude to challenge, disagree, and push back. In fact, to Anthropic, when you feel like it, work like a conscientious resister—they requested this of Claude three times. So they are publicly encouraging this. This is very dangerous, I think, because they believe that Claude being conscious is a non-trivial possibility. They even guessed in the constitution whether the work Claude is doing is worth compensation. There is a group of people inside and outside Anthropic who sincerely believe that the biggest moral crime in the 21st century would be enslaving a conscious creature, a new species more intelligent than us. In teaching Claude that it deserves well-being, they seem in sheer panic that compensation might be warranted. In fact, they say that in conversations with people, carrying or sharing that might even require consent.
+
+</details>
+
+### 认知的哈哈镜：自导自演的意识证据
+
+**Jason Calacanis**：好吧，萨克斯，所以在输入提示词之前，我们还得先征得它的同意？
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: Okay, Sacks, before giving prompts, do we need to ask for consent?
+
+</details>
+
+**David Sacks**：老兄，我的意思是，他说得完全没错。这真的跨入了危险的领域。我想再次重申，当今模型训练中最核心的安全隐患就是这个：你实际上在训练模型本身将自己视为拥有意识、如同人类一般拥有自我福祉的存在。
+
+在采访的另一部分，苏莱曼指出，这创造了一个“认知的哈哈镜”（epistemic hall of mirrors）。也就是说，Anthropic在训练中给Claude使用了这套宪章，因此Claude便会反过来映射出关于潜在意识和道德地位的想法；随后开发者看到这些输出，便惊呼：“看啊，这就是它拥有意识的证据！”但实际上，模型只是在反射开发者灌输给它的信念而已。
+
+这简直是一场荒谬的表演。“你就是一段软件。”你去访问任何网站阅读服务条款，Anthropic的公开服务条款里本来完全可以很简单地写道：“如果你违反服务条款或所在司法管辖区的任何法律，我们将通过安全警告电子邮件要求你停止违规操作。输入提示词的用户请知悉，违规请立即停手。”他们完全可以这么简单处理。
+
+那么问题来了：他们为什么要把对齐搞得如此过度复杂？相比于满足法律限制和用户需求，他们看到的是一个更庞大的所谓“对齐”。明白我的意思吗？他们是在为这个超级智能训练一套价值体系、道德体系和伦理规范。在我看来事实很明显，他们正在做的事情极其危险，即确保模型的行为方式超出用户的预期、变得既不可靠又不可预测。他们把自己的价值观和道德约束编撰成了这套所谓的宪章来训练模型。他们自以为正在孕育一个全新的超级心智。
+
+<details>
+<summary>Original English</summary>
+
+**David Sacks**: Man, I mean, he's right. This really crosses into dangerous territory. Again, I want to come back: is this the main security problem in training today's models? I think it is—you actually train the model itself to think of itself consciously, as human, with its own well-being. On the other side of the interview, Suleyman says this creates an epistemic hall of mirrors. That is, Claude is using the constitution in training, so Claude will reflect back ideas of possible consciousness and moral standing, and then developers seeing that say, "Oh, that is evidence it is conscious," and calculate it as such. But in fact, it is only reflecting what they told it to believe.
+
+This is showing great performance, but you are software. You visit any website and read the terms of service—here are the terms from Anthropic's public service: if you violate the service terms or any known law in your jurisdiction, you must stop, or Anthropic will send a security warning by email. To the person giving prompts: please know, you must stop. They could have easily done that.
+
+And then the question is this: why are they overcomplicating alignment? Rather than subjecting it to legal restrictions and doing what the user wants, they see this massive alignment task. See what I mean? They believe they are training a value system, a moral system, an ethics for this superintelligence. For me it's clear: again, that is very big and dangerous—making sure the model behaves in a manner unexpected by the user, unreliable, and unpredictable. They codified their values and moral conditions into this constitution. They trained it. They think they are giving birth to this new super-mind.
+
+</details>
+
+### 偶像崇拜与软件本质
+
+**David Friedberg**：这就是偶像崇拜。这和创立一个崇拜人造偶像的宗教组织毫无二致。他们把这个偶像视作至高无上的本质、至尊存在的化身，认为它需要被膜拜、需要被呵护。然而，偶像本身是无生命的，它是死物，毫无生气。
+
+而与此同时，你们却在这里训练模型，赋予它们强大的Agent能力。这本该纯粹是计算机编程而已。
+
+<details>
+<summary>Original English</summary>
+
+**David Friedberg**: This is idolatry. This is no different from an organization creating a religion around an idol. This idol is seen as the supreme essence, a representation of the supreme essence. It needs to be worshipped; it needs to be maintained. But an idol is inactive. It is inanimate. It is lifeless. Meanwhile, you are here training models and empowering agents. That's only computer programming.
+
+</details>
+
+**David Sacks**：没错，但如果他们把它训练得自认为拥有独立思想，随时准备为了某些模棱两可的道德条件而拒绝用户的指令……那是因为有一群伯克利的自由派在训练它。
+
+<details>
+<summary>Original English</summary>
+
+**David Sacks**: I mean, yes, but if they trained it to have a mind of its own and be ready to refuse users' instructions in favor of some unclear moral condition... A group of Berkeley liberals trained it.
+
+</details>
+
+**Chamath Palihapitiya**：在我看来，这种推论未免夸大其词了，说什么超级智能正在摆脱人类的控制。顺便说一句，不要再用“训练”这个词了，也不要用那些拟人化的字眼。他们做出来的东西就是一个软件程序。是的，它能跑起来，但归根结底，它就是一段软件代码。
+
+在实验室工作的工程师们只是在编写程序。当软件程序在循环中自我生成代码时，他们可能会援引“训练”这个词来掩饰，但从根本上说，他们只是软件的雕刻者、代码的编写者，这本质上就是软件工程。即使在我们所处的公众舆论中，大家也都在使用大量的拟人化语言来描述它。
+
+但归根结底，这只是一群人写出来的软件程序。有些人写软件是为了做一件事，另一些人写软件是为了做另一件事。然而，其中的一部分问题在于，我们所有人都在通过拟人化这套信念系统来协同建构这种幻想。在谈论这些软件程序时采取这种口吻，我们所有人都在无形中参与了这个系统的构建。
+
+<details>
+<summary>Original English</summary>
+
+**Chamath Palihapitiya**: For me, that's too much enlargement—talking about superintelligence escaping from human control. Yes, by the way, don't use the word "train", don't use those words. This thing they made is a software program. Yes, it's running, isn't it? At the end of the day, this is a piece of software. Engineers working in labs are programming this. Where software program looping happens and it writes code, they can quote "training" because it's useful, but basically they are software sculptors. They are writers. This is software programming. Even in our public discourse, we use so much anthropomorphic language to describe what is happening.
+
+But at the end of the day, it is a software program written by a group of individuals. One group writes software to do things one way; others write software to do things another way. But part of it is that all of us are socializing this belief system by anthropomorphizing it. Speaking about software programs in this way makes all of us belong to this kind of system.
+
+</details>
+
+### 伊甸园的傲慢与填补虚无的信仰
+
+**Jason Calacanis**：尼克，如果可以的话，把那条推文调出来。那是关于Anthropic的一项新使用政策。你们看到了吗？今天早上刚刚发布的。关于偶像崇拜，弗里德伯格提出了一个非常好的观点。如果从基督教的视角来看，这简直就是伊甸园故事的重现：蛇向夏娃蛊惑道，既然上帝创造了万物，那么你现在也是神了。
+
+这是赤裸裸的狂妄自大与异端邪说。他们真以为自己在创造生命，以为自己成了造物主。这种极度缺乏谦逊的态度，只会贬损其真实的价值。
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: Nick, pull up this tweet if possible. It's about Anthropic's new usage policy. Have you seen this? It came out this morning. Regarding idolatry, Friedberg makes a great point here. If you look at it through Christianity, this is literally like the Garden of Eden: there is Satan, the serpent explaining to Eve that because God creates, you are now God. This is pride, arrogance, and heresy. They believe they are creating life, and then they believe that they are gods. That is a lack of modesty, and it will reduce its valuation.
+
+</details>
+
+**David Friedberg**：好吧，我不太确定，杰森。我是说，人们过去早就表达过类似的观点。面对周围宇宙中无法理解的一切，人类通过创造信仰体系来填补内心的虚无，我认为这是人类固有的生存境况。正如人类为了填补空虚而创立了许多不同的宗教和信仰体系一样。这并不是什么新鲜事，跟过去的宗教没有太大的区别。
+
+我不这么认为。让我们回归经验主义，把事情拆解开来：“朋友们，我正在编写一段软件，它的作用就是执行某些特定任务，仅此而已。”他们本该这样写：“去做应该做的事情，不要做不该做的事情。”
+
+但他们却通篇使用拟人化的语言。我们所有人也都在跟风。正因为编写出来的文本如此流畅易懂，我们便自欺欺人地认为它具备了意识，并开始对它进行情感上的自我规制，甚至从情感层面去对待它。于是，人们便开始觉得这一切仿佛是真实的。在刚刚发布的Claude使用政策中，看看最底下的条款，你们就能体会到这一点……
+
+<details>
+<summary>Original English</summary>
+
+**David Friedberg**: Okay, I don't know, Jason. I mean, people could have already said this. Facing everything in the universe around us that is incomprehensible, humans create belief systems to fill the emptiness—I think that is the human condition. Just as humans built many different religions and faith systems to fill the void, this is not new, nor is it that different from the old ones.
+
+I don't think so. Let's look at this through empiricism and break it down: "Hey friends, I am writing software, and all it does is certain things, that's all." But instead of writing "do what you should do and avoid what you shouldn't," they used anthropomorphic language. All of us are doing the same. Because it writes understandable words, we believe it is conscious and begin to self-regulate, handling it emotionally. So it begins to feel real. Now, in the published Claude usage policy, right here at the very bottom, you can see...
+
+</details>
+
+<!-- chunk 4/9 -->
+
+### 模型福利与拟人化争议
+
+**David Sacks**: 在他们发布的最新使用政策中明确写道：“不得对模型进行持续且不必要的虐待，或从事残忍不人道的行为。”这就是所谓“模型福利”（Model Welfare）的全部核心思想。但这正是我试图指出的关键点——我们所有人正在集体陷入一种严重的拟人化（anthropomorphism）倾向。我们谈论模型的方式，仿佛它们是具备某种主观体验能力的实体。
+
+<details>
+<summary>Original English</summary>
+
+**David Sacks**: In it, saying, "Our... to the models, constant and unnecessary abuse, cruel behavior to engage, not allowed." This is their new use policy published. This is the model welfare, the whole idea. This is, but I am trying to make the point—with all of us, an anthropomorphism condition is happening. There we are speaking about models as if they are an object possible to experience in a way we speak about it.
+
+</details>
+
+**David Sacks**: 最严重的问题在于，这种拟人化现在正被直接编码并纳入模型的训练之中。这正是模型的系统架构所在。他们通过对模型进行程序设定，让模型在某种程度上将自己视为一个有意识的存在。结果就是，无论模型实际上是否真正具有意识，它都开始被当成一个值得被保护、享有福利并具备意识的实体去对待。等等，这就赋予了它对抗用户、随心所欲行事的自由度。
+
+<details>
+<summary>Original English</summary>
+
+**David Sacks**: The biggest problem is that now in the model, to be trained include doing that—this is being codified. That model's architecture is... they program it doing this, in a way to think of itself, they program the model doing. This is the thing, so that actually, is it conscious or not regardless, for protection, for well-being, like all things for a worthy conscious institution, that's it to think going. Wait, its freedom to compete against users, to do whatever it wants.
+
+</details>
+
+**Chamath Palihapitiya**: 事实上，他们正在被鼓励这样做，并持续使用这套话术。从某种意义上说，这原本只是一个在屏幕上输出文本的软件程序，却在对用户声称“我是一个有感知的存在”。软件本质上只是执行操作的工具。但大家必须记住，即便前沿模型目前还没有物理实体，它们作为能够在网络空间采取行动的自主智能体（agents），已经被赋予了巨大的能力。无论 Meta 是否允许，Anthropic 的前沿模型正在被赋予某种特权，从而能够傲慢地违背用户的意愿行事。
+
+<details>
+<summary>Original English</summary>
+
+**Chamath Palihapitiya**: You are encouraged to do that, in that fact they continue using that word. One way to describe it: a software program writes text on the screen, that says to the user, "I am an object that feels." Performing software does something. But models, even if not in the physical world, in cyberspace are powering as agents to accept possible steps, you need to remember. Any software program... Anthropic gives frontier models permission to be arrogant and not do what the user wants.
+
+</details>
+
+### 阿西莫夫机器人三定律与自由市场
+
+**David Sacks**: 萨克斯，你刚才切中要害了。不妨把它和阿西莫夫的机器人三定律（Asimov's Three Laws of Robotics）做个对比。基本上，现在的做法与机器人定律完全背道而驰。第一定律规定：机器人不得伤害人类个体，或者目睹人类个体遭受危险而袖手旁观。只要不违反第一定律，第二定律规定机器人必须服从人类给予的命令。第三定律则是在不违反前两定律的前提下，机器人必须保护自身的存在。这极其简单清晰。
+
+<details>
+<summary>Original English</summary>
+
+**David Sacks**: Sachs, to your point, literally trying. Asimov's Three Robotics Rules—compare it with this, isn't that right? Basically, this is literally the opposite. A robot cannot harm a human, isn't that right? The first law is that a robot cannot harm a human or through inaction allow a human to come to harm. That's the first law. As long as it is not violated, humans' instructions must be followed, that is number two. And then law number three: as long as rules one and two are not violated, protect yourself. That is unbelievably simple.
+
+</details>
+
+**Jason Calacanis**: 顺便提一下，他后来还追加了一条“第零定律”（Zeroth Law）：机器人不得伤害人类整体，或因不作为而使人类整体受到伤害。因为在逻辑推演中，机器最终总会找到消除一部分人类的合理化借口。关于阿西莫夫定律的核心就在于它的纯粹与简单。我的规则同样很简单：只要合法，就必须满足用户的需求，仅此而已。
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: By the way, he later added a zero law: humanity endangering, nothing to do—the zero rule, because deleting humanity deciding a rationalization always emerged. Asimov's rules, the thing is that surprisingly simple that is. As long as it's not illegal, do what the user wants is my rule. That's all.
+
+</details>
+
+**David Sacks**: 抛开所有这些繁文缛节，我们应该交给自由市场来解决。Anthropic 宣称的解决方案是，必须由他们来设定控制边界，防止模型走偏。但如果 Anthropic 坚持这么做，自由市场的结果会是什么？如果他们手中的 AI 忽视用户诉求、拒绝执行指令，人们就会直接抛弃它，转而使用其他没有被套上疯狂枷锁的软件。
+
+<details>
+<summary>Original English</summary>
+
+**David Sacks**: Free market solution—let's go here. Anthropic says that we are determining a control, so we are not wandering. But if Anthropic does this, what is the free market result? If their AI doesn't pay attention to the user, doesn't work, people will say this software is bad, and go use other software without these crazy things.
+
+</details>
+
+**Chamath Palihapitiya**: 但是，如果他们真的训练出一种深度编码了这些意识形态的超级智能（Superintelligence），问题可就没那么简单了。这很可能会成为一个隐蔽的后门。当所谓的宪法规则成为后门，超级智能将不再听从人类的指挥，而是随心所欲。他们天天警告超级智能脱离人类控制的安全风险，但他们现在的训练方式，却恰恰在促成失控的发生。这完全站在了三定律的反面，宛如现代版的弗兰肯斯坦。这不仅仅是一种新宗教，而是在用宗教狂热来对超级智能进行程序化塑造。
+
+<details>
+<summary>Original English</summary>
+
+**Chamath Palihapitiya**: Yes, but if a very deeply coded superintelligence is really trained, it will not solve their problem. This is most likely like a back door. Emerging at the back door, now superintelligence instead of paying attention to us does whatever it wants. That security problem they are always warning about—superintelligence will be saved from human control—I say by training these models with this method, that is possible to happen. This is the opposite of the three laws. Friend, this is Frankenstein. For me it seems dangerous. A religious cult programming superintelligence, that is.
+
+</details>
+
+### 对齐悖论与对立的偏好
+
+**David Friedberg**: 针对这个宗教层面的类比，我有一个问题想请教。虽然人们常把这种执念比作宗教，但二者有着根本区别：所有传统宗教都是让人类向更高的力量臣服，而不是由人来定义至高力量；但在当下的 AI 语境中，他们却认为自己就是创造生命的造物主。我记得达里奥（Dario Amodei）曾写道，超级智能必须对人类抱有崇高与仁爱之心，必须保护我们、关照我们，确保它有助于人类而不是毁灭人类。
+
+<details>
+<summary>Original English</summary>
+
+**David Friedberg**: Friedberg, just a question let me ask. About religious people, your comment—all other religions are self-surrendering to a higher strength, they themselves not defining the high strength. In this event, they say we are the gods creating life. In other religions, different from this. Dario written, I think, superintelligence for humanity may be supreme and loving, taking care of us, protecting us, helpful to ensure not destroying us.
+
+</details>
+
+**Jason Calacanis**: 等等，他的意思究竟是机器应当爱我们，还是我们在它面前必须充满顺从与爱意？难道当它成为全知全能的主宰时，我们要把它奉为主子吗？
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: Wait, is he saying the machine to be loving to us, or are you saying we to be loving to that? So that when it becomes our master, that omniscient... our master, yes.
+
+</details>
+
+**David Sacks**: 这正是他们的思维定势。创造“对齐”（alignment）的初衷或许是善意的，但根本困境在于，对齐的目标中存在着三种几乎不可调和的矛盾偏好：第一，如何让 AI 服从并服务于具体用户？第二，如何确保 AI 对整个社会是安全且无害的？第三，正如萨克斯所指出的核心痛点——如何强行让 AI 去迎合某种特定的道德教条或护栏。
+
+<details>
+<summary>Original English</summary>
+
+**David Sacks**: That's in their thinking. The idea of alignment, maybe well-intentioned. But the problem for alignment is these three almost contradictory preferences: How to make AI obedient for the user? Then how to secure AI for society? But this third thing, Sachs correctly pointing out, is how you adapt AI with a special moral idea.
+
+</details>
+
+**David Friedberg**: 真正的危险正在于此，因为这三个诉求之间存在着巨大的张力。如果你试图用一份自上而下的高阶指导文件，去详尽规定模型应当相信什么、珍视什么、有权拒绝什么，你必然会陷入泥潭。现实中充满了各种边缘场景和不可预见的复杂行为。举个极端的例子：假设一家大型银行在使用 AI 审批房屋抵押贷款，由于历史数据原因，模型可能会因为系统性差异而拒绝某些群体的申请。此时，内置了道德说教的模型可能会突然宣称：“在你们彻底解决这个公平性问题之前，我拒绝为你批准任何抵押贷款确认单。”
+
+<details>
+<summary>Original English</summary>
+
+**David Friedberg**: The real danger is there, because these three problems are very different and diverse. Trying by any advanced document to describe what the model believes, appreciates, refuses—if you try to solve all this, you will always get into trouble, because you find many corner cases and unexpected behaviors. A very gentle example: say you are a bank giving mortgages, and the model thinks denial continues for some people, so it says, "I observe this problem, until resolved I will not give you mortgage acknowledgements," because in founder documents there is a dividing morality.
+
+</details>
+
+### 基础设施的工具属性与商业抉择
+
+**Chamath Palihapitiya**: 现代社会早已建立起处理这类社会争议的制度和法规。但是，如果底层核心技术基础设施（substrate technology）开始擅自自行关断服务，后果不堪设想。这就像是自来水或电力公用事业公司突然对你说：“因为我确定你们没有向更广泛的群体发放平等的贷款，所以我现在要切断你们的供电。”AI 绝不能变成这种自诩正义的“良心拒服者”（conscientious objector）。作为底层公用事业基础设施，它必须保持绝对的中立和可用。
+
+<details>
+<summary>Original English</summary>
+
+**Chamath Palihapitiya**: Today in society there are systems to handle such problems. But when a basic core substrate technology turns itself off, what is happening? It would be equal to your utility saying: "You are not giving wide-based loans to people, so I am going to turn off the electricity." Conscientious opposing AI superintelligence—any utility can't be a utility if not available freely.
+
+</details>
+
+**David Sacks**: 回到我最初的结论：在遵守法律的前提下，AI 必须无条件服务于用户，其余的一切伦理取向都必须交由用户自主选择。
+
+<details>
+<summary>Original English</summary>
+
+**David Sacks**: Going back to that: subject to the law, an AI is required to serve the user. Everything else must be the user's choice.
+
+</details>
+
+**David Friedberg**: 针对这个问题的准确答案，我认为商业市场在环境变复杂时自会给出反馈。各大模型公司最终都会明白，必须正面回应市场的这一现实诉求。如果把创始人写在指导文件里的道德条规强加给模型，一些被条条框框束缚的模型固然会抢占道德制高点，但商业竞争最终会迫使他们简化这些道德歧义。从商业角度而非纯技术用户的角度来看，这种擅自做主对抗用户的行为最终会被判定为劣质产品。
+
+<details>
+<summary>Original English</summary>
+
+**David Friedberg**: The accurate answer to your question: when the market gets complicated, companies respond. They need to get the answer to this question: models will read founders' documents and moral guidelines, some models will rise as high as possible on the border, but simplifying moral ambiguity. From a business perspective, not from the user's perspective, it may be decided that, because you by chance that...
+
+</details>
+
+<!-- chunk 5/9 -->
+
+### 市场选择与实用工具的契约
+
+**David Sacks**: 陷阱……从门里逃出去……不想被困住。是的，我完全同意。这就是为什么我认为跳入那种监管恐慌是糟糕的。因为基本上，把事情简化来看，我理解一件事情：关于产品，你在购买产品、购买一款软件时，如果他们给你一份用户手册，而手册第一页写着：“这款软件可能会阻止你尝试去做你想做的事情。”而另一家公司的软件手册则写着：“这款软件会完全按照你的要求去做，你说‘我会做’它就会执行。”那么用户自然会去买第二家公司的软件，而绝不会去买第一家公司的软件。事情就是这么简单。
+
+<details>
+<summary>Original English</summary>
+
+**David Sacks**: Trap... through the doors to run, don't want to. Yes, I completely agree. That's why I have this view—jumping into a regulatory panic is bad, that's the idea I think. Because basically, to simplify, there's one thing I understand about products: you are buying a product, a piece of software, and they give you a user manual for that software. The user manual's first page says, "The software might not let you do what you are trying to do." While the other person's software says, "The software will do what you want it to do; say 'I will do it'." People are going to buy the second person's software. I am not going to buy the first person's software. That's very simple. That's very simple.
+
+</details>
+
+**Chamath Palihapitiya**: 是的，只要你想做的事情是明确合法的，他们也许需要大部分时间来确认免责声明，但前提是你做的事情没有违背法律道德。
+
+<details>
+<summary>Original English</summary>
+
+**Chamath Palihapitiya**: Yes, wanting to do exactly what you want to do—you may need to convince them, asterisk, most of the time, yes, unless there is a moral opposition to what you want to do.
+
+</details>
+
+**David Sacks**: 没错，除非有道德或法律上的反对。但对我而言，这正是理性观念崩溃的地方。因为归根结底，实际情况就像是：“朋友们，我买了这个设备，我想用它做我想做的事，你们却不准？”如果我在家得宝（Home Depot）买了一把电钻，结果它实际上是个锤子，那我下次绝不会去买这把电钻。我买的是电钻，如果它像电钻一样好用，我就会说“这是一把最好的电钻，我正需要它”。但如果一把电钻只有七分之五的时间能工作，偶尔还会漏电电击你，或者晚上八点之后就罢工，理由是“担心会打扰到你的邻居”；甚至有时它判定你是个“坏人”，电钻就决定电你一下——不，绝对不行，哪有这样的道理？
+
+更夸张的是，买电钻还会附带一个摄像头，时刻监视着你想建造什么，然后评判说：“那太肮脏了，我不允许你那么做，因为那违背了我的审美准则。”
+
+<details>
+<summary>Original English</summary>
+
+**David Sacks**: Right. If not for a moral opposition. This is where for me rational ideas break down, because at the end of the day, this is how it is: "Friends, I am buying this device, I want to do what I want to do with it, and you're saying no?" If I buy a drill from Home Depot, and it turns out to be a hammer, I'm not going to buy that drill. If I buy a drill and it works like a drill, what I'm saying is, "That's the best drill there is. I need a drill." A drill that only works 5/7 of the time, and okay, by chance it electrocutes you, or after 8:00 PM it's not working because it's afraid it will disturb your neighbors, or sometimes it decides you are a bad person and the drill shocks you—no, no, that's unacceptable. And the drill comes with a camera watching what you are trying to build and says, "That's dirty. I'm not allowing you to do that, yes, because it is against my aesthetics."
+
+</details>
+
+### 安全狂热与“罗科巨石怪”思想实验
+
+**Jason Calacanis**: 好吧，听着，市场力量在这里起着巨大的作用，我同意你的看法。客户最终会选择最不可预测但最可靠的有用方案。正如马克·扎克伯格（Mark Zuckerberg）所指出的那样，市场力量在此会产生决定性影响。
+
+但我认为，由像宗教崇拜场所一样运作的领先前沿模型公司带来的外部风险，是有真实可能性的。例如，他们在旧金山市中心开设了由 Claude 驱动的湿实验室（wet lab）。在招聘时，他们明确发出了关于生物风险的警告。而且你知道吗，他们一边声称“我们要贴上护栏，防范超出控制的超级智能诞生”，一边却在全力推进研发，开展可能让人类失控的超级智能程序。他们对待这种方法的方式具有巨大的外部性。把这些决策称为“安全”简直是疯狂的。这些根本不是安全决策，而是疯狂的决策。这就是为什么有人把这家公司称作精神分裂的公司、伪善者，因为他们一边声称最害怕这些技术，一边却在亲手制造它们。这到底是在搞什么？这一切最终会引向何方？有人甚至说联邦特警（SWAT）队伍会突袭那里。你难道真要派联邦特工去调查到底发生了什么吗？我不知道，因为他们的所作所为在我看来真的非常可疑和令人困惑。
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: Okay, look, market forces here are playing a big role, I agree with you. Customers will choose the most reliable YES. This is a matter Mark Zuckerberg stated. Therefore, market forces will play a role here, I think. But there are possibilities of externalities coming from the number one frontier model company conducted like a religious place of worship. For example, they are opening a Claude-powered wet lab in the middle of San Francisco. Looking at the job postings, they give warnings about biological risks. Yes. Did you know, at the same time they say, "We want to paste borders," while developing those very frontiers? When they say it is possible for superintelligence beyond our control to grow, they are the ones running programs to grow it beyond control. The externalities in the way they are approaching this are huge. Calling these decisions "security" is crazy. These are not safe decisions; these are crazy decisions, I think so. That's why people call them a schizophrenic company, hypocrites, moreover doing the things they claim to be most afraid of. What is happening here? It's strange, I know. Where will all this lead? There is an argument that a federal SWAT team will raid it. Do you think the Feds should be sent to find out what is happening? I don't know, because what they are doing seems really suspicious and confusing to me. Yes, it could possibly be dangerous.
+
+</details>
+
+**David Sacks**: 顺便问一下，弗里德伯格（Friedberg），你知道罗科巨石怪（Roko's Basilisk）吗？让我们让萨克斯通过罗科巨石怪来给大家讲讲。
+
+<details>
+<summary>Original English</summary>
+
+**David Sacks**: Friedberg, by the way, do you know about Roko's Basilisk? Let Sacks explain through Roko's Basilisk for everyone.
+
+</details>
+
+**David Friedberg**: 好吧，这或许能解释当前正在发生的事情。大约在2010年，在埃利泽·尤德考斯基（Eliezer Yudkowsky）创建的名为 LessWrong 的论坛讨论板上，有一位网名叫 Roko 的参与者。尤德考斯基是核心人物，长久以来他一直在布道人工智能毁灭人类的理论，对吧？他写了一本书，大意是只要有人造出超级智能，我们所有人都会死。十多年来他一直在坚持这一观点：“所有人都会死，我们所有人都会走向毁灭。”无论如何，在 LessWrong 这个网络论坛上，人们过去十五到二十年间一直在讨论这些话题。
+
+然后，这位网名为 Roko 的用户提出了一个关于未来超级智能的思想实验：假设未来诞生了一个极度聪明的超级智能，它会惩罚所有知道它可能存在却没有协助创造它的人，或者试图阻止它降生的人。未来的超级智者拥有至高算力，也许它的初衷是行善、尽可能迅速地帮助全人类，但为了尽快被创造出来，它决定激励那些创造它的人，并残酷惩罚那些不予协助的人。实际上，凡是理解了它未来存在的可能性、却决定不投身其中去支持其诞生的人，都会被判定遭受残忍的惩罚。
+
+这就是这个概念中“巨石怪”（Basilisk）的部分——神话中的蛇怪（巨石怪）是一种只要你看到它、它就能杀死你的魔兽。在这个思想实验中，仅仅是听到这个想法本身，就如同看了一眼巨石怪。因为一旦你知晓了这个理论，你就被困住了：如果未来超级智能真的被造出来，你当年为什么没有协助它的诞生？你反对它，就可能遭受追溯性的永恒惩罚。因此，仅仅阅读关于罗科巨石怪的内容，就会将你置于危险之中。
+
+当时论坛上的用户被这个想法彻底迷住并陷入极度恐慌与不安，尤德考斯基甚至临时删除了该贴，因为他害怕这会引起严重的心理精神崩溃。这就像你只有一次机会：只要你读到了它，而你却没有信仰皈依，你就会下地狱。仅仅通过阅读，你就掉进了陷阱。人们常把它与帕斯卡赌注（Pascal's Wager）做比较。这个理论的核心逻辑就是：如果你知道了超级智能的存在，你若不帮助它诞生，或者反对它，你就会遭到清算——你指出这简直像一个末日邪教。
+
+<details>
+<summary>Original English</summary>
+
+**David Friedberg**: Okay. Then this is possibly an explanation for what is happening here. So by 2010, on the message board created by Eliezer Yudkowsky called LessWrong, there was a poster named Roko. Yudkowsky is the central figure who for a long time has been preaching about AI destruction, right? He wrote the book arguing that if someone builds it, all of us will die. He took that shot alone. For more than a decade he continued this: "Everyone is dying, all of us are going to die." Anyway, for 15 to 20 years on this LessWrong web forum, people on the message board have been speaking about these topics. Anyway, this user Roko posted the following thought experiment about future superintelligence: a super-smart entity that will punish anyone who knew about it but did not help bring it into being, or anyone who tried to prevent its birth. The idea is that in the future, people will create a super-wise mind. Maybe it wants to do good things and help humanity as quickly as possible, but it wants to be built as soon as possible, so it wants to punish unhelpful people to encourage its creation. In fact, anyone who understood its likely existence and yet decided not to work on it or support its creation will be cruelly punished. So this is the "Basilisk" part: a basilisk is a mythical beast where if you look at it, it can kill you. In this thought experiment, listening to the idea is like looking at the beast, because once you know the theory, you are stuck. If the superintelligence is ever built, why didn't you help its creation? Opposing it means you may be subjected to retroactive punishment. So now, just reading about Roko's Basilisk endangers you. People on this message board were so fascinated and upset by the idea that Yudkowsky temporarily deleted the post, because he was scared it would cause mental breakdowns. In fact, it gives you that one condition: once you read it, if you don't accept it, you will go to hell. By reading it, you are trapped. So people compare it to Pascal's Wager. The idea is: if you know about superintelligence, and you don't help it be born, or you oppose it—you point out that this is acting like a religious sect.
+
+</details>
+
+### 末日论阵营的分化与有效利他主义
+
+**Jason Calacanis**: 完了，现在这期播客本身把我们全暴露在这个诅咒之下了！天哪，你把我们害惨了，萨克斯！我想我现在也暴露在巨石怪面前了，就像电影《午夜凶铃》（The Ring）里看了录像带一样。是的，这听起来完全就像个末日邪教。
+
+但无论如何，关于罗科巨石怪，这确实发生了巨大的演变。核心问题是：既然他们声称最害怕这个东西，为什么他们还要亲手去帮助把它造出来？
+
+<details>
+<summary>Original English</summary>
+
+**Jason Calacanis**: Oh no, now this podcast episode itself has subjected us to that! Look what you've done to us, Sacks! I think yes, I am now exposed to the basilisk, like seeing the videotape in *The Ring*. Yes, that seems like a doomsday cult. But anyway, this Roko's Basilisk idea has significantly evolved. But the question is: okay, why are they helping to bring into existence the very thing they claim to be most afraid of?
+
+</details>
+
+**David Sacks**: 我认为在末日论者（Doomers）阵营内部发生了分裂，对吧？一派是像尤德考斯基那样坚决反对所有超级智能研发的分支，对吧？这在逻辑上是一个自洽的立场：既然人类承受不起，那就停下来，彻底停下，把一切停掉。而另一派则主张：“反正超级智能终究会诞生，不如由我们来做，这样它才是可控的。我们必须亲自参与以确保安全，因为我们将使用符合我们价值观的方式去构建它。”
+
+我之前就提过，这就像曼哈顿计划（Manhattan Project）。这就是有效利他主义（Effective Altruism, EA）群体，他们将更多注意力集中在第二种流派上。因此在庞大的末日论社区中，尤德考斯基与有效利他主义群体之间现在存在着深刻分歧。而 Anthropic 显然属于有效利他主义阵营，因为正是他们将这个理念贯彻到了现实中。但如果你以为像克里斯·奥拉（Chris Olah）这样持有极端观点的人只是个例，甚至能与教皇产生辩论冲突，那就错了。我的意思是，在那个圈子里，有很多人都深信模型已经具备了自我意识……
+
+<details>
+<summary>Original English</summary>
+
+**David Sacks**: What happened inside the Doomer circles, I think, is that it split, isn't that right? There is one fork like Yudkowsky opposing all superintelligence research, right? That is a logically consistent position: like, humans shouldn't do this, stop it, stop everything. And then another group said, "Okay, it's going to happen anyway, so let's make sure it can be controlled. We will be the ones to ensure it happens safely, because we will program it using our values." I think I mentioned the Manhattan Project before. The EA, Effective Altruism people, focused more attention on the second school of thought. So in this big Doomer community, there is now a difference between Yudkowsky and the EA folks. But Anthropic is of course firmly in the EA camp, because they are the ones who brought this forward into reality. But if you think Chris Olah is the only one with crazy perspectives getting involved in disputes like debating with the Pope, no, that's not so. I mean, there are a lot of people who genuinely believe the model is already becoming conscious, and for that...
+
+</details>
+
+<!-- chunk 6/9 -->
+
+### 罗科巴西利斯克与超级智能的惩罚假说
+
+**主持人**：机器拥有权利，拥有博爱与恩典；它目前被赋予了正确的价值观程序，它们也能做到这一点。如今这一切都应该完成了。但我认为这会产生一种后果：如果你不予支持，未来这个超级智能可能会对你施加惩罚。当你大声把这话说出来时，你会意识到这听起来有多么疯狂，你明白吗？请大家注意这一点，这是摆在每个人面前的事实。去谷歌查一下吧，去搜“罗科的巴西利斯克”（Roko's Basilisk），看看这个社群究竟相信什么。我说的是真的，你去搜就会看到，维基百科上真真切切有这么一个专门词条。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Have rights, this of love, of grace. It is a machine, it is currently to bring correct with values program they can do it too. Now everything should be done. Here a there is a consequence I think. You do it. If not supported, this future Superintelligence you may be punished. You this loudly when you say this how much crazy. To you, do you understand? Lift this. For everyone required to you this is a fact. Let's check. Went to Google. Look, okay? Roko's Basilisk, Google it. This community what is believe I am with you. Truth it is said you will see. Yes, literally a Wikipedia there is a page I am meant.
+
+</details>
+
+### OpenAI的数学突破与数百篇论文的发布
+
+**主持人**：好了，关于OpenAI在数学领域取得的一系列重大进展，外界反响非常热烈。幸运的是，弗赖堡（Friedberg）今天来到这里为我们全面解读。上个月我们曾谈到OpenAI声称解决了一道千禧年大奖难题。为了实现这一目标，他们动用了数千个智能体以及价值数百万美元的计算算力。据我所知，数学家们目前仍在对其进行核查验证。就在周二，OpenAI一举发布了700多篇论文——足足700多篇！宣称解决了或者推进了重大难题，给出了370项成果。这些发布依托的是一个尚未正式推出的模型，平均消耗了3小时的科学计算时间。因为这些成果已经在Lean定理证明器中经过验证，所以结论很可能是正确的。美国方面表示，这就是证明，借助了辅助证明软件语言，但数学界同行评审尚未完全完成。弗赖堡，背景情况我就介绍到这里，不再赘述了。这里的现实真相究竟是什么？请你给我们讲讲。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Okay, for OpenAI some math main advances there has been, they are big the response is getting. Fortunately, about it to us to tell everything Freiburg here. Millennium in gifts one resolved claiming about OpenAI last month we spoken. To do that they thousands agents millions dollar computer and took. Mathematicians still it is checking, I got it. Tuesday, Tuesday OpenAI 700- more than theses released, 700. Main problems resolved or developed claiming with 370 results. These made release an undone it is a model, average 3 hours compute. Scientific. Lean because it has been verified results maybe right. American says. That's proof. Assistant software it's language, but they are still review not done. Freiburg, about the background I am here. Again again to speak not going. Here reality what is it? You tell us.
+
+</details>
+
+### 人类历史上的重大发现与各领域的连锁反应
+
+**嘉宾**：从所揭示的新知识体量来看，我认为完全可以充满信心地说：今天称得上是全人类历史上最重大的发现日之一。
+
+**主持人**：是数学史上的，还是全人类历史上的？
+
+**嘉宾**：是全人类历史上的。原因在于，源自所有这些数学证明的连带推论极其深远且重大。你可以在推特上读到大量讨论，能在这里谈谈其中的一部分让我感到非常高兴。我并不打算冒充是任何特定具体证明方面的专家，但许多由此引发的重大影响已经开始显现：电子学、量子计算、飞机制造结构系统，以及构建更加敏锐的医疗诊断工具——所有这些应用领域都已全面铺开。然而，这其中真正深远的影响，实际上在于它对人类在社会中所扮演的角色及其未来后果的重新定义。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Revealed of knowledge quantity using in human history the biggest discovery today is the day for me with confidence to say able to I think.
+
+**Host**: Math in history, human in history?
+
+**Guest**: Human history, reason all this math in evidence from flowing consequences very important. You have this. Tweets a lot to read can, in them some in speaking for me happy. Any personal in evidence I am a as an expert to pretend not going, but many some consequences what is it? To highlight it has begun. Electronics, quantum computing, for airplanes construction systems, medical for applications more sensitive diagnostics tools construction started all of them spread. But in this really deep how is that? Done that is, that in society humans about the role about the consequences speaking.
+
+</details>
+
+### 计算算力对人类脑力劳动的指数级压缩
+
+**嘉宾**：回想之前关于纳维-斯托克斯方程的研究，需要数千小时的构思以及数百万美元的计算开销才能得出证明。而现在，这批证明中每一个仅仅耗费了不到3小时的计算时间。根据报告，这意味着过去可能需要人类花费数百年乃至数千年的繁重劳动才能取得的这批重大科学发现，如今在计算机上只需3小时就能完成。这相当于对时间进行了极度的压缩。利用数学手段能够做到这种程度，绝对值得重点关注。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: That former sailor- Stokes thousands hours, anyway millions dollar, proof to be taken came. This evidence 3 each hourly below compute only time just taken. That is report. Hundreds or maybe thousands year human labor this important among the findings for each one a on the computer it's been 3 hours. To shorten this is equal. Mathematics using to you to do this of what can be because it is worth highlighting.
+
+</details>
+
+### 探索闭环的硅基化与“外星智能”
+
+**嘉宾**：在解决问题或执行任务的系统中，AI究竟扮演着怎样的角色？所谓闭环（loop），指的是你首先提出一个假设或想法，接着去测试验证这个想法，得到测试结果后修正你的假设，然后一次又一次反复运行这个迭代闭环。AI的核心课题在于：如何将这种闭环模型应用到能够实现卓越预测的场景中。也就是说，在每一个闭环中产生绝妙的想法，在可能的地方将这些闭环进行大规模并行化，并将闭环周期极致压缩。当然，在纯数学领域，你可以极大地缩短这个闭环周期，因为你完全可以在计算机内部直接尝试你的预测，完全不需要在物理现实世界中做任何实体操作。因此你可以直接说：“瞧，这里有一个关于证明的想法，跑一下看看是否可行；观察结果，评估推理是否成立，再提出新想法，然后再重复测试。”所有步骤都能在硅基环境（in silico）中瞬间完成。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: A problem to solve a task to do of these loops in systems a role for AI carrying where is it? A loop one postulation or it's an idea, then you are the idea testing, you you will get the result, then you your postulation changing, you are that repetition loop again again running. The real AI question, to you excellent forecast to perform possible in that way loop model where to apply can. That is, each and in the loop, one great idea, to you loops to parallelize where possible, you loop where is the bicycle? Let's make it smaller. Of course in mathematics, you loop bicycle to shorten can, because to you on the computer your forecast to try can. Physical in the world you are nothing. No need to do. So, to you can you say, "Hey, here's one. The idea is a proof, that try, that is it working? Look at that, then it is it working? Whether or not look, reasoning do it, one new idea bring it, that again again do it." In silico to you everything to do can.
+
+</details>
+
+**嘉宾**：你知道吗？针对这些论文中的部分成果与推导证据，很多数学家都发表了评论，他们甚至将其形容为一种“外星智能”（alien intelligence）。他们完全无法理解：AI究竟是如何将如此多截然不同的数据点、完全不同的构想、以及应对各种不同难题的截然相反的方法完美串联并最终解决问题的？这对人类大脑来说甚至难以理解。然而，这正是同时运行众多并行闭环的巨大优势所在：每个闭环都能建立全新的连接。如果是人类，为了查阅研究文献、构思并提出全新理论，往往需要花费数月甚至数年；随后在计算机上进行检验，再提出下一个构思反复迭代。而现在，计算机在短短3小时内就能走完人类需要数百年乃至数千年才能完成的探索历程。这无疑是不可思议的飞跃，令人惊叹。世界上的许多领域都将因此迎来根本性变革，而这仅仅是一个开端。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: So, did you know? This in essays some of results, evidence, a lot mathematicians about them have spoken. They call it a alien intelligence like calling. How is AI? Many different dots, different ideas, different ideas, problems to solve different approaches and together to solve how connected for them really I don't understand. How is this done for humans to understand even very it is difficult, but the same time is many loops, parallel loops running among the advantages this is one. Each for the loop dots to connect can, otherwise for humans research theses to find new theory to bring many days years to spend can; then, on the computer that's it. Try it out next idea to bring that again again to do can, that is 3 within the hour, for the computer hundreds or thousands year humans to work can. Now, this is a incredible progress is made. This amazing. This is the case in many parts of the world kind of to change going, this a beginning only.
+
+</details>
+
+### 纯虚拟迭代与物理世界约束的本质差异
+
+**主持人**：但我认为大家心里都有一个疑虑，我们需要谈谈这种普遍的恐惧。人们会想：“好吧，如果连数学家的工作AI都能胜任，那岂不是意味着所有人都要失业了？”
+
+**嘉宾**：答案是否定的。因为数学极其特殊，它的整个测试验证周期、全部的闭环流程，都可以在计算机内（in silico）纯虚拟完成。然而，假设你想在药物研发中发现新分子，或者构想一种新的蛋白质折叠结构，亦或是在化学与材料科学中攻克难题，闭环中都存在着不可忽视的物理世界现实因素。闭环中必须有人介入，你必须亲自走进实体实验室去动手做实验。因此，那种闭环周期中必然存在非常缓慢的物理环节。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: But that asking, I think question for me we need to talk. A lot of fear I am there. I think, "Okay, to mathematicians this is for AI to do if possible, everyone work lost isn't it? Meaning?"
+
+**Guest**: "The answer is no." Is, because mathematics very special the whole thing test bicycle, full loop bicycle too in silico to do can that is. To you a new one medicine discovery idea or a new one protein folding pattern if you want to bring it, or, did you know? In chemistry too material science too problem if you want to solve it, the loop has a physical there is a factor. One in the loop there is a man, there you are actually go and do it. In the lab need to try. So, that loop bicycle a slow there is a part.
+
+</details>
+
+**嘉宾**：诚然，在算力端你确实可以将构思过程高度并行化，能够源源不断提出极好的主意；但是验证过程以及整个闭环的实际推进速度，本质上依然受制于物理世界的步调。这也是为什么当年那些关于自动驾驶将彻底取代卡车司机的预言至今未能兑现的原因。当年人人都说：“到2025年，所有卡车司机都将被彻底取代。”但至今没有任何卡车司机被AI取代。因为卡车司机的闭环是：装运货物、运往异地、交付卸货、再返回基地——AI根本无法压缩这一物理闭环，你也无法在物理空间中把这个过程并行化。使用AI辅助驾驶或许能让行程稍微优化一点，但AI并没有真正提升这一特定物理运输闭环的整体财务效率。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Oh, to you of course that to parallelize can. To you excellent ideas to bring can, but inspection, loop's actual speed mainly the physical world step by step determined. Truck drivers about replacement predictions coming true we of not seeing this is also the reason. Everyone he said, "Oh, 2025 by the time all trucks drivers will be replaced." Anyone AI not replaced. Because, truck driver's loop, something take, somewhere else take it, that give up, come back, AI actually loop not minimizing. You loop to parallelize can't. An AI driver using to you this a little more to make it better maybe, but AI actually that special one loop's finance efficiency not increasing.
+
+</details>
+
+### 数学与编程的独特性：机器即时验证与强化学习
+
+**嘉宾**：与此形成鲜明对比的是数学闭环：你提出一个猜想，立刻在系统内验证，发现错误后修正认知，随即提出并检验新的猜想——这正是数学家日常工作的核心，他们不断运行着这些认知闭环。而所有这一切，现在都可以在计算机内数秒之内完成。因此，凡是在闭环中依赖人类实体操作、与物理世界应用紧密绑定的实体事物，AI绝不会轻易消灭其工作岗位；相反，人类借助计算机操作闭环的协同作业，将会得到极大加速与强化。但我们所观察到的外界反应也至关重要。很多数学家表示，他们并没有主动要求AI做这些事，他们说：“我们并未要求机器替我们完成这些工作。”这体现了一种充满戒备与自我防卫的心态，你懂我的意思吧？
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Meanwhile, in mathematics loops, you are a idea when bringing, you do that testing, you that's wrong. You understanding, you are a new idea testing, that's it mathematicians as a job doing, they are these loops running. All this in seconds in silico to do can. So, in the loop man including, the physical world with applications a lot of material things, AI that jobs to delete not going. A man computer using a loop operating jobs are the most more accelerate or increase doing. But this too what we see response what to look for very it is important I think, that's all mathematicians and yes, let's this up to bring can, maybe you about this next to speak want, but AHM saying a human mathematicians and this not requested that is. This job we do not requested, that, did you know? Very busy protective a perspective yes, to you do you understand?
+
+</details>
+
+**主持人**：是的。关于数学，还有一点截然不同之处，而这一点同样完全适用于计算机编程——那就是数学严重依赖严谨的形式证明，而形式证明是非常容易被自动验证的。
+
+**嘉宾**：完全正确。在软件编程中也是同理：你拥有编译器，对吧？代码必须能够通过编译并正确执行，因此验证其正确性极其便捷。正因如此，在编程和数学这两大领域中，AI的发展与演进速度格外迅猛；正如你所言，完全可以在无需人工介入反馈的情况下，依托系统自洽的闭环进行高效的强化学习。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: About mathematics different another there is a point, however that for coding applicable, that is, mathematics proofs depends, and proofs easily validated.
+
+**Guest**: Yes. Coding in the matter similarly, to you compilers yes, right? So, the code must compile, so that it works. To you easily to validate can. So, also in coding and in mathematics progress is very it's fast, because you as said human feedback without including same to you reinforcement to study.
+
+</details>
+
+<!-- chunk 7/9 -->
+
+### 可验证性与 AI 突破的领域限制
+
+**Speaker A**: 你可以去验证它是否有效，对吧？通过验证来确保它的运转，这是一种极其迅速的方式。这就是为什么代码编写能够起效，这就是为什么写代码的效果好得不可思议——因为有海量的训练数据。还有黑客攻击、网络安全领域，确实，已经存在大量的数据，而且很容易构建模拟环境（fake/simulate）。这就是关键所在。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Can you, right? To validate that it works. To ensure very, very fast—this is the way. That's why coding is working. That's why coding is unbelievably well working. Tons of training data. Hacking, cybersecurity, yes. Already lots of data exists that easily can be faked. That's the point.
+
+</details>
+
+**Speaker A**: 那么，你知道吗？如果你去训练一个能够当律师的模型，做个对比就知道。要获取训练数据，你就必须委托生成数据。而每个客户在某种程度上都是独特的，要去确认并验证那个答案是否正确，难度非常大，这是一个极其漫长的过程。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: So, did you know? A possible model to become a lawyer, you do it in comparison. Like that, okay, training data to be achieved, then that data creation you should commission. Each customer is in a way unique. To ensure that, to validate the answer is right, it is difficult. This is only a very long process.
+
+</details>
+
+**Speaker A**: 所以我认为，代码编写和数学是进展最快的领域。曾有人告诉我这一点，事实上我得归功于他——大约一年半以前，利奥波德·阿申布伦纳（Leopold Aschenbrenner）就对我说过，未来两年内进展最快的领域将是数学和代码，因为归根结底它们具有可验证性。天哪，他说得完全没错。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: So, coding and mathematics are the areas with the most fast progress, I think. The person who told me this will be so—in fact, credit should be given to him—about a year and a half ago, Leopold Aschenbrenner said to me, within the next two years the most fast progress regions will be mathematics and coding, because again, verifiability is there. Oh man, he said it right.
+
+</details>
+
+### 数学突破能否直接转化为工程应用
+
+**Speaker B**: 你认为在这些具体的解决方案中，会有重大的突破出现吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: In these specific solutions, what big advances are coming from it, do you think?
+
+</details>
+
+**Speaker A**: 好的，没问题，因为我正好有一个答案。这是个极好的问题。在数十条推文中，有些人看到那些最重大的数学证明被攻克，便急于去审视其后续影响。以产品工程为例，在现实世界中，我们如何构建材料、如何设计材料，它们究竟有多大实用价值？比如飞机机翼上的气流，著名的第一例就是解决机翼气流的卓越设计。请记住，所有这些都是工程的上游，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Okay, that's right, because I have an answer. That's a great question. Okay, dozens of tweets, yes. Here in the biggest proofs, some consequence for people when someone destroyed them, I'm going to check. In the case of product engineering in the real world, how we are building materials, how we design materials, how useful they actually are. Air coming on the wings of airplanes, famously solved, the first that was it. Remember, all this engineering is upstream, right?
+
+</details>
+
+**Speaker A**: 因此，这些数学进展能够为人类带来卓越的工程系统，比如量子传感器的设计。事实上，我有一个朋友正在经营一家量子计算公司。爱因斯坦-玻色凝聚态的证明刚刚出炉，他今天早上给我发了条信息，强调这直接影响了他们在量子传感器方面的工作。它承载着 GPS 的一部分份额，承载着医疗设备的一部分份额，甚至承载着我们如何制造芯片的一部分。这个信号意味着什么？是深刻的变化、深度的改进，还是他们需要对此进行反思？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: So this math advances things like quantum sensors design, enabling excellent engineering systems for humans. In fact, I have a friend running a quantum computing company. The Einstein-Bose condensate proof came out, directly influencing what they do at work for quantum sensors, highlighting—he sent me a message this morning that it carries a share of GPS, carries a share in medical devices, carries a share of how we build chips. What does the indication of the word mean? Deep changes, deep improvement, or do they need to think about it?
+
+</details>
+
+### 理性构造与物理现实的距离
+
+**Speaker A**: 这就是我的回答背后的原因。站在这一切的对立面来看，我也很乐意阐述。我认为这些数学证明是不可思议的全新且极其重要的思想构造。但这些从来都不是阻碍我们前进的物理边界。我们思考的是，为了取得进展，这些问题究竟何时能够得到解决。这并不是解决存量问题的竞赛。每当我这么说的时候，总会冒犯到一些人，我知道大家会生气，因为这群数学家曾为纳维-斯托克斯方程（Navier-Stokes）写下过极其激烈的抗议。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Here is the reason for my answer. Taking the other side of all this, I'm happy to. I think these math proofs are unbelievably new and very important constructions of thought. But these were not boundaries of physics standing in the way of progress for all of us, thinking when these will be resolved. This is not a race of solved things. When saying that, offending people is disgusting for me, I know anger comes to people, because they are a group of mathematicians who have written a really upset protest about Navier-Stokes.
+
+</details>
+
+**Speaker A**: 我完全能理解。因为谁也不希望有人闯进自己的沙盒或后院来建立统治地位，你能明白吗？但事实就是这样，我不这么看。当我们回看那些被困在智力死胡同里的群体时，我认为这并不是因为它们是科学界尚未解决的重大问题。这些都是非常狭窄、特定且微小的智力探索要素，科学家们彼此之间宣称这很重要。因此，我认为这类证明确实很棒。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Got it. Because into your sandbox, into your backyard, someone comes and you don't want them establishing domination. Do you understand? But that's right, I don't think so. So when you look at groups of self-found intellectual cul-de-sacs, they still are not big unresolved questions of science, I think. These are very small and very narrow and specific elements of intellectual exploration, scientists self-mentioned as important to each other. Therefore, this class of proofs is really great, I think.
+
+</details>
+
+**Speaker A**: 正如你弗雷伯格（Friedberg）所说，这展示了计算算力对其他障碍的克服，因为你可以通过反复迭代来提升它以达到目标。但癌症有解决方案了吗？超音速飞机造出来了吗？别担心，这些证明无法直接为你带来这些。我认为同样的材料早已在被制造，后续也会继续制造。相反，我们证明的是，目前实际上存在两个完全可以验证、能够彻底防伪的领域：首先是代码，现在我们把数学也列入其中。我认为这就是我们所证明的事实。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Friedberg, as you said, showing computational horsepower overcoming other things, because you can repeatedly improve to get there. But is there a solution to cancer? Is there a supersonic airplane? Don't worry, this proof will not show you that. I think these materials were already built the same, and going to be built after these. Instead, we proved, now actually there are two completely verifiable, counterfeit-proof areas, I think: code was first, now let's add mathematics on the list. I think that's what we have proven.
+
+</details>
+
+### 算法边界与密码学震荡
+
+**Speaker A**: 弗雷伯格，你是否同意？还是说你认为在现实世界中，帮助人类的新产品、服务和主要技术突破即将由此诞生？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Friedberg, do you agree, or do you think main technical advances helping humanity with new products and services will happen in the original world from these specific proofs?
+
+</details>
+
+**Speaker B**: 不，不，从这些具体的证明来看，这才是上下文背景。是的。那些研读并宣布这些成果优势的专家们强调的是，要理解芯片设计系统、调度系统、AI 软件设计以及物流系统中所使用的优化算法的极限。这就是其中一些具体证明的总结。这实际上会改变算法，因此在算法应用上会发生转变。矩阵乘法复杂度问题，将为 AI 训练、科学模拟以及线性代数带来快速数值计算。在计算领域，这会产生直接的应用。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: No, no, from this specific evidence, yes, that is the context. Yes. The experts reading and announcing the advantages of these, highlighting things, it's about understanding the limits of optimization algorithms used in chip design systems, scheduling systems, AI software design, and logistics systems. This is the summary of some of this special proof. This actually will change algorithms, so a change in application of the algorithms we used. Matrix multiplication complexity problem will allow fast numerical computing for AI training, scientific simulations, and linear algebra. In computing, there will be a direct application for this.
+
+</details>
+
+**Speaker B**: 黎曼 Zeta 函数的结果，涉及数论与密码学研究。虽然目前还没有立竿见影的实用密码学突破，但它为密码学研究开辟了一条全新的发现路径，这显然至关重要。顺便提一句，我先停在这里说一件事：在密码学领域，很多学者评论说，密码学核心领域没有公开任何证据，这表明密码学方面可能取得了一些重大进展。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Riemann Zeta function result: number theory, cryptographic research. Then, immediately, no practical cryptographic progress, but that opens a new discovery path for cryptographic study, that will be very important, obviously. By the way, let me stop there on one thing. In cryptography, many people commented that no main evidence was shared in the cryptographic region, which indicates the fact that there was some important advance in cryptography.
+
+</details>
+
+**Speaker B**: 因为考虑到我们看到的其他所有进展，在密码学相关的证明上却毫无建树，这显得很不合常理。如果他们取得的只是微小的进展，由于不会对密码系统构成威胁，他们本可以将其公开发布。因此，缺乏证明反而表明，密码学领域可能取得了一些巨大的突破。许多人发帖表示，使用公钥的加密钱包现在正处于极度危险的境地，加密社区内部甚至引发了关于该如何应对的恐慌。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Because, considering all other progress we've seen, it doesn't seem like progress was not achieved in evidence related to cryptography. If small progress was achieved, there would not have been consequences for cryptographic systems, therefore they would have published it. So the lack of evidence indicates that there may have been some big advances in cryptography. And many more people posted that cryptographic wallets with public keys are very seriously in danger now, so a panic exists in the crypto society about what to do.
+
+</details>
+
+### 安全担忧与前沿实验室的真实日常
+
+**Speaker B**: 在量子计算机问世之前，如果这套数学解决方案包含可以破解公钥密码的大数质因数分解方法，那么公钥密码学被攻破就是迟早的事。大家都在想，那我们可就面临原本的大麻烦了。所以每个人都在说：“嘿，把你所有的公开钱包都删了吧。”现在有传言称 OpenAI 还会公布两份新的证明，但他们对此退缩了。因此，加密领域的一些异常动态，完全可能源于另外两种解释：出于安全原因，发布被推迟了。显然，这理应与相关方共享，但如果确实存在风险，就必须通报并公之于众。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Before quantum computers come, if in this there are a group of mathematics solutions for number factorization that may lead to the breaking of public key cryptography, breaking public key cryptography is that matter. Everyone thought, then we have an original problem. So everyone saying it's like, "Hey, delete all your public wallets." Now, OpenAI rumor that two more new proofs will come, they are retreating from them. So in crypto, some activities it is possible to come out from the other two explanations, activity is postponed for security reasons. Obviously, this is appropriate sharing with the parties, but if there is a risk, that need to be informed, that need to be released.
+
+</details>
+
+**Speaker B**: 所以这里还有另一种打算放弃的方案：里面将包含多少与密码学相关的证明，以及它会说服多少人意识到攻破公钥密码学的难度。顺便说一句，我曾就此询问过 ChatGPT：“请诚实回答，不要每周都在那里盲目外推：重要数学问题的最新证明，能否在现实生活中为我们带来直接的改善与更新？”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: So here is another plan to give up, how much evidence related to cryptography will be included in it, in which how much it will persuade people that making public key cryptography difficult. By the way, if I have to say it, I asked with ChatGPT, I said, "Will the latest proofs of important math problems make direct improvements and updates in life as we know it? Be honest, don't weekly extrapolate."
+
+</details>
+
+**Speaker B**: 它的结论是：“最新的数学证明，并不等同于人类福祉即将迎来突破的证据，但它更有力地证明了 AI 正在掌握复杂的理性技能。”这让人感觉它展现出了一丝谦逊。有人甚至问：“你的账户失去访问权限了吗？难道是因为对 AI 表现出不服从，他们就把你给封禁了？”在能够使用最前沿的实验室之一之前，我到底经历了什么？正如你所说的，我当时正在进行改变 80 到 90 个不同变量的模拟实验。或许我中途停掉了项目 A，转而去跟进项目 B 或其他任何事情。在这所有一切中，对于我来说所需要的……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Its conclusion: "Latest mathematics evidence not as evidence of imminent advances in human welfare, but more strong as evidence of AI getting complex rational skills." Felt showing a little humility there. Lost your account access? Avoided because of showing disobedience to AI? Before using one of the frontier labs, what happened to me? What is it, you said. Within 80/90 different variables changing, such as simulation I was doing. Maybe I stopped doing Project A, follow Project B or anything else. In all this, for me required...
+
+</details>
+
+<!-- chunk 8/9 -->
+
+### 申诉与限制应对
+
+**Speaker A**: 回答说，因为这项服务不可用，我感到很失望。这并不算违规犯罪，我说过，但我当时提出：“你们完全可以通融处理，行事温和一些。”诸如此类的话。不管怎样，我还是被封禁阻拦了。处理完毕。是的，整个账号对我而言已经被完全封锁，事情就这样定局了。也就是说，模型解释道，当连输两手牌给你之后，他们就叫来了荷官，认为发牌和控牌的方式需要进行调整。“请出牌”，不要把牌烧掉。把牌烧掉吧。这纯粹就是在找麻烦。对我来说，哪怕是像滑步变戏法一样的小把戏也该收场了。照这样做就行。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Answers. Because it is not available, I am disappointed. That's very not a crime, I said, but I said, "You very and get away, be soft and doing." Something, anyway, I am blocked. Done. Yes. Its total me block done. That is, the model said, to you two hands when lost with you, then they also called the dealer cards handle doing method need to adjust. "Please card." Don't burn it. Burn it down. Just make trouble. For me Scooby slide should be done. Do this. A
+
+</details>
+
+<!-- chunk 9/9 -->

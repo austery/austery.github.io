@@ -1,0 +1,2053 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revolut 如何通过自建开源模型降低 90% AI 编码成本</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Revolut 如何通过自建开源模型降低 90% AI 编码成本</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-29</span>
+    
+
+    <header class="article-header">
+      
+      <h1>Revolut 如何通过自建开源模型降低 90% AI 编码成本</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">self-hosting</span>
+      
+        <a class="tag-link" href="/tags/open-source-model/">open-source-model</a>
+      
+        <a class="tag-link" href="/tags/llm-inference/">llm-inference</a>
+      
+        <a class="tag-link" href="/tags/cost-optimization/">cost-optimization</a>
+      
+        <a class="tag-link" href="/tags/developer-productivity/">developer-productivity</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">Revolut 的 David 介绍了其团队为 2,000 名工程师自建开源模型（如 GLM）的实践经验。通过在 56 张 B200 上部署并在参数与上下文等方面进行精细调优，交付周期缩短 70%、编码时间缩短 60%，Token 综合成本降至每百万 30 美分，达到商业 API 费用的十分之一；同时通过沙箱机制与合规控制满足欧盟银行业监管要求。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=Ok6QdZHCcI8" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-29T00:00:00.000Z">2026-10-29</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>6 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#revolut-%E8%83%8C%E6%99%AF%E4%B8%8E%E5%B7%A5%E7%A8%8B%E6%95%88%E8%83%BD">Revolut 背景与工程效能</a></li><li class="outline-h3"><a href="#ai-%E5%BC%95%E5%85%A5%E5%8E%86%E5%8F%B2%E4%B8%8E%E5%BC%80%E6%BA%90%E8%87%AA%E5%BB%BA%E5%86%B3%E7%AD%96">AI 引入历史与开源自建决策</a></li><li class="outline-h3"><a href="#%E8%87%AA%E5%BB%BA-glm-%E5%B8%A6%E6%9D%A5%E7%9A%84%E6%95%88%E8%83%BD%E7%AA%81%E7%A0%B4%E4%B8%8E%E6%88%90%E6%9C%AC%E4%BC%98%E5%8A%BF">自建 GLM 带来的效能突破与成本优势</a></li><li class="outline-h3"><a href="#%E6%8E%A8%E7%90%86%E8%B0%83%E4%BC%98%E4%B8%8E%E6%A0%B8%E5%BF%83%E5%8F%82%E6%95%B0%E5%AE%9E%E8%B7%B5">推理调优与核心参数实践</a></li><li class="outline-h3"><a href="#%E7%94%9F%E4%BA%A7%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%A4%9A%E6%A8%A1%E6%80%81%E8%B7%AF%E7%94%B1">生产架构与多模态路由</a></li><li class="outline-h3"><a href="#%E5%90%88%E8%A7%84%E5%AE%89%E5%85%A8%E4%B8%8E%E6%95%B0%E6%8D%AE%E9%9A%90%E7%A7%81">合规、安全与数据隐私</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="revolut-背景与工程效能" data-reading-heading="">Revolut 背景与工程效能</h3>
+<p>[music]</p>
+<blockquote>
+<blockquote>
+<p>我叫 David。我在一家叫 Revolut 的公司负责 AI 运营。今天我们有 50 分钟时间。我们将讨论高性能工程，以及在专用 GPU 上自建开源模型。听起来怎么样？太棒了。所以这会是一场偏技术的分享，请多担待。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+[music]
+<blockquote>
+<blockquote>
+<p>My
+name
+is
+David.</p>
+</blockquote>
+</blockquote>
+<p>I
+lead
+AI
+operations
+at
+a
+company
+called</p>
+<p>Revolut.</p>
+<p>We
+have
+50
+minutes
+today
+together.</p>
+<p>We'll
+talk
+about
+high-performance</p>
+<p>engineering
+and</p>
+<p>self-hosting
+open-source
+model
+on</p>
+<p>dedicated
+GPU.
+How's
+that
+sound?</p>
+<p>Cool.
+So,
+it's
+going
+to
+be
+a
+technical</p>
+<p>one,
+so
+bear
+with
+me.</p>
+</details>
+<p>首先简单介绍一下我们公司，因为我知道这是在美国，大家可能不了解 Revolut。简单说几句：我们是欧洲的一家数字银行，拥有 8,000 万客户，业务遍布 45 个市场。去年我们是欧洲下载量最大的金融类 App。截至 7 月，我们是欧洲最大的私营企业。所以，我们发展得还可以。Revolut 的重心在于持续推出大量产品，因此公司高度重视工程文化以及该领域的卓越表现。我们接下来就聊聊这个。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um
+ so,
+ maybe
+ to
+ start
+ off
+ because
+ I
+ know
+<p>this
+is
+the
+US
+and
+you
+may
+not
+know</p>
+<p>Revolut.</p>
+<p>Uh
+quick
+words
+about
+our
+company.</p>
+<p>We're
+a
+digital
+bank
+in
+Europe.
+We
+have</p>
+<p>80
+million
+customers.</p>
+<p>We're
+live
+in
+45
+markets.</p>
+<p>With
+the
+most
+downloaded
+financial
+app</p>
+<p>in
+Europe
+for
+the
+last
+year.</p>
+<p>And
+as
+of
+July,
+we're
+Europe's
+largest</p>
+<p>private
+company.</p>
+<p>Um</p>
+<p>So,
+we're
+doing
+okay.</p>
+<p>The</p>
+<p>the
+emphasis
+of
+Revolut
+is,
+you
+know,</p>
+<p>shipping
+a
+lot
+of
+product
+and
+so
+there's</p>
+<p>a
+high
+focus
+on
+engineering
+culture
+and</p>
+<p>uh</p>
+<p>excellence
+on
+that
+domain.</p>
+<p>And
+so,
+we'll
+talk
+about
+that.</p>
+</details>
+<h3 id="ai-引入历史与开源自建决策" data-reading-heading="">AI 引入历史与开源自建决策</h3>
+<p>那么，我们来谈谈 AI。这里有一张图表，大家会看到两条线。这是过去一年中 2,000 名工程师绩效的样本数据。绿线代表交付周期（lead time），即从工程师接手一个功能，到该功能合并并准备部署的时间。蓝线代表编码时间（coding time）。绿线的单位是天，蓝线的单位是小时。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So,
+ let's
+ talk
+ about
+ some
+ AI.
+<p>We
+have
+a
+chart
+here.
+I
+going
+to
+see
+two</p>
+<p>lines.
+This
+is
+a
+sample
+of</p>
+<p>2,000
+engineers
+performance
+over
+the</p>
+<p>last
+year.</p>
+<p>So,
+the
+green
+line
+is
+going
+to
+be
+lead</p>
+<p>time.
+So,
+it's
+going
+to
+be</p>
+<p>when
+engineer
+picks
+up
+a
+feature
+until
+a</p>
+<p>feature
+is
+merged
+and
+ready
+to
+be</p>
+<p>deployed.</p>
+<p>The
+blue
+line
+is
+going
+to
+be
+coding</p>
+<p>time.
+So,
+the
+green
+line
+is
+in
+days.
+The</p>
+<p>blue
+line
+is
+in
+hours.</p>
+</details>
+<p>为了防止大家遗忘，我们重新梳理一下时间线，因为 AI 的发展非常快。Cloud code 大约是在 2025 年 2 月推出的，对吧？那是 Cloud Code Sonnet 3.7，就是会删掉你生产数据库的那个版本，对吧？可不是我们今天拥有的安全的 Cloud 和 Codex。所以，在我们谈论普及度时请记住这一点。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Just
+ to
+ reset
+ the
+ timeline
+ in
+ case
+<p>people
+forget
+because
+AI
+moves
+really</p>
+<p>fast.</p>
+<p>Cloud
+code
+came
+out</p>
+<p>around
+February
+2025,
+right?
+And
+that's</p>
+<p>the
+Cloud
+Code
+Sonnet
+3.7,
+the
+one
+would</p>
+<p>delete
+your
+prod
+database,
+right?
+Not</p>
+<p>the
+safe
+Cloud
+and
+Codex
+that
+we
+have</p>
+<p>today.</p>
+<p>So,
+bear
+in
+mind
+when
+we
+talk
+about</p>
+<p>adoption.</p>
+</details>
+<p>从图表上可以看到，25 年 1 月，公司首次引入了 AI，也就是 Gemini。那是大家第一次能在 AI 中使用私有数据。大约在 2 月，我们开始尝试 Cloud Code。然后在 1 月是我们首次规模化上线 Cloud Code。可以看到，Gemini 带来了 10% 的交付周期缩减和 20% 的编码时间缩减，这意味着人们不再需要去查 Stack Overflow 或阅读文档了。但是当时的 Cloud Code 并没有产生那么大的影响。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So,
+ what
+ you
+ see
+ here
+ on
+ this
+ chart
+ is
+<p>January
+25th,
+first
+introduced
+AI
+in
+the</p>
+<p>company,
+right?
+Gemini.</p>
+<p>First
+time
+people
+were
+able
+to
+use</p>
+<p>private
+data
+within
+AI.</p>
+<p>Around
+February,
+we
+start
+playing
+around</p>
+<p>with
+Cloud
+Code.</p>
+<p>And
+then
+January
+is
+when
+we
+first</p>
+<p>launched
+Cloud
+Code
+at
+scale.</p>
+<p>What
+you
+see
+is</p>
+<p>Gemini
+had
+10%
+improvement
+in
+lead
+time,</p>
+<p>20%
+improvement
+in
+coding
+time,
+so</p>
+<p>that's
+people</p>
+<p>no
+longer
+needed
+to
+look
+Stack
+Overflow</p>
+<p>and
+read
+documentation.</p>
+<p>But
+then
+Cloud
+Code</p>
+<p>not
+so
+much
+impact
+at
+the
+time.</p>
+</details>
+<p>所以刚推出时，我们对 AI 的成本持高度怀疑态度。我们看到工程师每个月花费 1,000 美元甚至 10,000 美元，但投资回报率却不高。因此在推出时，我们设置了严格的预算上限。接着我们开始寻找下一个方案：如何能以极低的部分成本，向工程师提供无限量的 Token，让他们可以毫无负罪感地使用 AI？于是，我们把目光投向了开源。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So,
+ when
+ we
+ launched
+ it,
+ we
+ were
+ highly
+<p>skeptical
+about</p>
+<p>the
+cost
+of
+AI.
+We
+were
+seeing
+engineers</p>
+<p>spend
+a
+thousand
+a
+month,
+ten
+thousand
+a</p>
+<p>month
+with
+not
+so
+much
+ROI.</p>
+<p>And
+so,
+when
+we
+launched
+it,
+we
+launched</p>
+<p>it
+with</p>
+<p>strict
+budget
+limits.</p>
+<p>And
+so,
+we're
+looking
+at
+the
+next
+thing,</p>
+<p>right?
+So,
+how
+can
+we
+provide</p>
+<p>unlimited
+tokens
+to
+engineers
+so
+they</p>
+<p>can
+use
+AI
+guilt-free</p>
+<p>for
+a
+fraction
+of
+the
+cost.
+And
+so,
+we</p>
+<p>looked
+into
+open
+source.</p>
+</details>
+<h3 id="自建-glm-带来的效能突破与成本优势" data-reading-heading="">自建 GLM 带来的效能突破与成本优势</h3>
+<p>大约在 26 年 4 月，我们开始自建开源模型。我们非常喜欢用 GLM 来写代码。大家可以看到，大约在那个时候，也就是 4 月 26 日上线 GLM 51 后，我们观察到编码时间改善了 60%，交付周期改善了 70%。影响极其显著。我们从中获得了什么启示呢？交付周期的改善幅度要大于编码时间，这说明工程的瓶颈并不一定在于编码本身。不再需要去翻收件箱，或者不再需要在 Jira 和 Confluence 上折腾，就能节省大量时间。因此，拥有了无限量的 Token，大家就可以自由地去做这些事，不再需要把 Token 攒到季度末或留给最困难的任务去用了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So,
+ around
+ April
+ 26th
+ is
+ when
+ we
+ started
+<p>self-hosting
+open
+source
+model.
+We're
+a</p>
+<p>big
+fan
+of
+GLM
+for
+coding.</p>
+<p>So,
+around
+that
+time
+what
+you
+see,
+April</p>
+<p>26th,
+GLM
+51</p>
+<p>we
+see
+60%
+improvement
+in
+coding
+time,</p>
+<p>70%
+improvement
+in
+lead
+time.
+So,</p>
+<p>dramatic
+impact.</p>
+<p>What
+do
+we
+learn
+from
+this?
+Well,</p>
+<p>there's
+more
+impact
+on
+the
+lead
+time</p>
+<p>than
+on
+the
+coding
+time,
+so</p>
+<p>what
+we
+find
+is
+the
+bottleneck
+for</p>
+<p>engineering
+is
+not
+necessarily
+coding.</p>
+<p>You
+can
+save
+a
+lot
+of
+time
+not
+having
+to</p>
+<p>dig
+through
+your
+inbox
+or</p>
+<p>messing
+with
+Jira
+and
+Confluence.
+And</p>
+<p>so,
+when
+you
+have
+unlimited
+token,</p>
+<p>you're
+free
+to
+do
+that.</p>
+<p>You
+no
+longer
+have
+to
+save
+your
+tokens</p>
+<p>for</p>
+<p>end
+of
+the
+quarter
+or
+the
+most
+difficult</p>
+<p>task.</p>
+</details>
+<p>那么我们目前的现状是怎样的？开源现在是 Revolut 的优先策略，而且经济效益非常良好。账单是固定的，月底不会再有账单惊吓。前沿闭源模型只是特例。当然，我们依然在继续使用 CodeX 和 code code。最新的模型非常棒，Gemini 也运转得非常好。但我们只把它们保留作为特例使用。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So,
+ where
+ do
+ we
+ stand?
+<p>Well,
+open
+source
+is
+now
+a
+priority
+at</p>
+<p>Revolut
+and
+yet
+the
+economics
+are</p>
+<p>favorable.</p>
+<p>The
+billing
+is
+flat,
+we
+don't
+have
+any</p>
+<p>bill
+shock
+at
+the
+end
+of
+the
+month.</p>
+<p>And
+the
+French
+here
+is
+the
+exception.</p>
+<p>So,
+obviously,
+we
+keep
+using
+CodeX
+code</p>
+<p>code.</p>
+<p>The
+latest
+models
+are
+fantastic.
+Uh</p>
+<p>Jimmy
+and
+I
+are
+going
+very
+well
+as
+very</p>
+<p>good
+as
+well.</p>
+<p>But,
+um
+we
+keep
+them
+as
+exception.</p>
+</details>
+<p>我们是如何做到这一步的？来看一些自建模型时至关重要的指标。为了支撑 2,000 名工程师，我们大致需要 56 张 B200。这是为了承载 GLM-53。GLM 是一个大模型，拥有 8,000 亿参数。你的目标应当设定为首字延迟（time to first token）低于 3 秒。这是经验得出的结论：只要超过 5 秒，我的 Slack 收件箱就会被各种反馈挤爆，所以我们知道这就是极限。在吞吐量方面，它其实没有那么关键，就交互性而言，我们提供每秒 200 个 Token 的服务。大家都觉得挺好，不需要更高了。人们的工作方式已经改变，大家不再盯着看流式输出的思考过程 Token，而是并行运行任务，等任务完成后再去查看。但如果你想要高吞吐量，作为 Revolut 的工程师，你只要在下午 5 点之后连上去，那时候没有人在占 GPU，你就能获得 800 TPS 的速度，体验就像做梦一样好。在成本和成效方面，自建 GLM 之后，我们的 Token 综合成本是每百万 30 美分。因此，我们现在的开销账单只有过去付给 Anthropic 和 OpenAI 的十分之一。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So,
+ how
+ do
+ we
+ get
+ there?
+<p>Some
+metrics
+that
+matter
+when
+you're</p>
+<p>self-hosting
+model.</p>
+<p>So,
+to
+serve
+2,000
+engineers,
+we
+roughly</p>
+<p>need
+56
+B200.</p>
+<p>And
+that's
+to
+uh
+host
+GLM-53.
+GLM
+is
+a</p>
+<p>big
+model,
+right?
+800
+billion</p>
+<p>parameters.</p>
+<p>What
+you
+want
+to
+aim
+for
+is
+sub-3
+second</p>
+<p>time
+to
+first
+token.</p>
+<p>This
+is
+empirical
+evidence.
+As
+soon
+as</p>
+<p>you
+exceed
+5
+seconds,</p>
+<p>my
+Slack
+inbox
+starts
+to
+blow
+up
+and
+so</p>
+<p>we
+know
+that's
+the
+limit.</p>
+<p>In
+terms
+of
+throughput,
+it
+doesn't</p>
+<p>really
+matter
+as
+much,
+right?
+So,
+we</p>
+<p>serve
+in
+terms
+of
+interactivity,</p>
+<p>200
+tokens
+per
+second.</p>
+<p>People
+are
+fine,
+you
+don't
+need
+to
+go</p>
+<p>higher.</p>
+<p>Um
+the
+way
+people
+work
+has
+changed,
+we</p>
+<p>no
+longer
+look
+at
+the
+stream
+of
+thinking</p>
+<p>tokens,
+people
+run
+tasks
+in
+parallel
+and</p>
+<p>check
+in
+when
+the
+task
+is
+done.</p>
+<p>But,
+if
+you
+want
+to
+have
+high</p>
+<p>throughputs,
+when
+you're
+an
+engineer
+at</p>
+<p>Revolut,
+you
+just
+connect
+after
+5:00</p>
+<p>p.m.
+when
+no
+one
+is
+on
+GPU
+and
+you
+can</p>
+<p>get
+800
+TPS
+and
+then,</p>
+<p>you
+know,
+it's
+a
+dream.</p>
+<p>In
+terms
+of
+cost,
+in
+terms
+of
+impact,
+uh</p>
+<p>self-hosting
+GLM,
+our
+blended
+cost
+of</p>
+<p>token
+is
+30
+cents
+per
+million.</p>
+<p>And
+so,
+our
+invoice
+is
+1/10
+of
+what
+we</p>
+<p>were
+spending
+on</p>
+<p>Anthropic
+and
+um</p>
+<p>OpenAI.</p>
+</details>
+<h3 id="推理调优与核心参数实践" data-reading-heading="">推理调优与核心参数实践</h3>
+<p>运行开源模型需要做大量的调优工作。如果只是拿到 GPU、把权重加载到 GPU 上就开始做推理，你得到的性能会非常糟糕。因为你的工作负载将极度依赖于你所设置的各项参数。如果看这张图表的最左侧，蓝线代表需求，也就是每秒请求数（RPS）。这将是影响 GPU 延迟的瓶颈所在。红线是我们正在优化的目标，即首字延迟。当我们 4 月刚起步时，可以看到每秒请求数在 3 左右，虽然高但也没那么高。而首字延迟超过了 10 秒，非常慢。大家看到的所有数据都是基于相同数量的 GPU，我们并没有增加 GPU 数量，依然是 56 张。到了 8 月底，每秒请求数超过了 7，首字延迟降到了 1.6 秒左右。也就是说，在需求增长 76% 的情况下，我们实现了 88% 的性能提升。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So,
+ there's
+ a
+ lot
+ of
+ tuning
+ that
+ goes
+<p>into
+running
+open
+source
+models.</p>
+<p>If
+you</p>
+<p>just
+get
+GPUs
+and
+upload</p>
+<p>weights
+on
+a
+GPU
+and</p>
+<p>you
+start
+doing
+some
+inference,
+you're</p>
+<p>going
+to
+get
+terrible
+performance.
+It's</p>
+<p>because
+your
+workload
+is
+going
+to
+be</p>
+<p>very
+dependent</p>
+<p>um
+on
+the
+parameters
+that
+you
+set.</p>
+<p>So,
+if
+you
+look
+all
+the
+way
+to
+the
+left</p>
+<p>of
+that
+chart,
+the
+blue
+line
+is
+going
+to</p>
+<p>be
+demand,
+so
+that's
+request
+per
+second.</p>
+<p>That's
+going
+to
+be
+what's
+going
+to
+be</p>
+<p>the
+bottleneck
+for
+your
+latency
+for
+your</p>
+<p>GPUs.</p>
+<p>And
+the
+red
+line
+is
+what
+we're</p>
+<p>optimizing
+for,
+that's
+the
+time
+to
+first</p>
+<p>token.</p>
+<p>So,
+when
+we
+started</p>
+<p>back
+in
+April,
+you
+could
+see</p>
+<p>request
+per
+second
+around
+three,
+which</p>
+<p>is
+high
+but
+not
+so
+high.</p>
+<p>And
+time
+to
+first
+token
+over
+10
+second,</p>
+<p>which
+is
+very
+slow.</p>
+<p>All
+of
+the
+data
+that
+you
+see
+is
+the
+same</p>
+<p>number
+of
+GPU.
+We
+didn't
+increase
+GPU</p>
+<p>count,
+we're
+still
+at
+56.</p>
+<p>And
+by
+the
+end,
+you
+see
+in
+August</p>
+<p>request
+per
+second,
+we're
+about
+over</p>
+<p>seven,
+and
+time
+to
+first
+token
+we're</p>
+<p>around
+1.6.
+So,
+we've
+had</p>
+<p>88%
+improvement
+in
+performance
+for
+76%</p>
+<p>increased
+demand.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>[嗤笑声]</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>所以从中得到的经验是，有很多参数可以进行优化，如果你打算部署并为某些模型提供服务，你确实需要在扩容时认真做好这些。那么我们来聊聊参数。虽然没有秘密配方，但需要考量的有以下几点：</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; [snorts]
+<blockquote>
+<blockquote>
+<p>So,
+the
+learning
+from
+this
+is
+there's
+a</p>
+</blockquote>
+</blockquote>
+<p>lot
+of
+parameters
+that
+you
+can</p>
+<p>improve
+on,
+and
+you
+really
+need
+to</p>
+<p>really
+scaling
+if
+you're
+looking
+to</p>
+<p>serve
+for
+some
+model.</p>
+<p>So,
+let's
+talk
+parameters.</p>
+<p>There's
+no
+secret
+recipe,
+but
+the
+things</p>
+<p>to
+consider</p>
+<p>are
+the
+following.</p>
+</details>
+<p>第一点，长上下文是个骗局。你必须清楚意识到，即便你能提供 100 万 Token 的上下文，256（即 256k）才真正是你所需要的。关于量化，如果运行在 Blackwell 代际的 GPU 上，你绝不会想运行高于 FP4 的规格。NVFP4 是最好的。大体上从 FP8 降到 FP4，可以在完全不损失精度的情况下，节省 40% 的 GPU 占用空间。其他需要考量的参数包括张量并行（tensor parallelism）：尽管 GLM 可以在 TP4 上放得下，但你没有足够的 KV cache，所以根据你的工作负载规模，TP8 可能会表现更好。还有一些更深度的技术：检查你的缓存命中率，代码任务的缓存命中率需要达到 90% 以上。此外，你还可以探索优化推测解码（speculative decoding）、顺序预填充（sequential pre-fill）、以及 PGD 等技术。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+First
+ one,
+<p>long
+context
+is
+a
+scam.</p>
+<p>You
+really
+need
+to
+be
+mindful
+that
+even</p>
+<p>though
+you
+can
+serve
+1
+million
+token,</p>
+<p>256
+256
+is
+really
+what
+you
+need.</p>
+<p>Quantization,
+if
+you're
+running</p>
+<p>Blackwell
+generation
+GPU,</p>
+<p>you
+don't
+want
+to
+run
+anything
+higher</p>
+<p>than
+FP4.</p>
+<p>And
+VFP4
+is
+best.
+Roughly
+going
+from
+FP4</p>
+<p>to
+FP8</p>
+<p>is
+a
+40%
+saving
+in
+GPU
+footprint
+for</p>
+<p>zero
+loss
+in</p>
+<p>uh,
+precision.</p>
+<p>Other
+parameters
+to
+consider,
+tensor</p>
+<p>parallelism,
+even
+though
+GLM
+fits
+on
+uh,</p>
+<p>TP4,</p>
+<p>you
+don't
+have
+enough
+KV
+cache,
+and
+so</p>
+<p>maybe
+a
+TP8
+works
+better
+depending
+on</p>
+<p>how
+large
+your
+workload
+is.</p>
+<p>And
+then
+the
+more
+esoteric,</p>
+<p>check
+your
+cache
+hit.
+Coding
+test
+needs</p>
+<p>to
+be
+above
+90%
+uh,
+cache
+hit.</p>
+<p>And
+you
+can
+look
+into
+optimize</p>
+<p>spec
+decoding,
+uh,
+sequential
+pre-fill,</p>
+<p>PGD
+zag,
+all
+of
+these.</p>
+</details>
+<h3 id="生产架构与多模态路由" data-reading-heading="">生产架构与多模态路由</h3>
+<p>很好。现在我们来讨论生产架构部署。GLM 显然是一个纯文本模型，这对某些人来说是个限制。我想说，我们每次都会做出的权衡取舍是：选用更聪明的模型，然后通过其他方式来解决图像识别问题。你可以很容易地搭建一个本地路由器，Open Codex 就是其中一种，你可以把所有图像识别请求路由到 Gemini 或其他视觉模型，而把主要任务保留给核心模型。如果你确实需要视觉模型，GLM-4V Flash 表现就非常不错。我们的 UI 设计师对其利用得很好，UI 产品的交付效率有了极其显著的提升。最后一点是关于测试运行框架（harness）。所有这些端点都将是兼具响应功能的 OpenAI 兼容 API，因此你可以在 Open Code、Codex 以及 Codex 应用程序内部直接使用它们。运转得非常良好，这也是我们所推荐的方案。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Cool.
+ So,
+ now
+ let's
+ talk
+ about
+<p>production
+setup.</p>
+<p>Gnome
+obviously
+is
+a
+text-only
+model,</p>
+<p>which
+is
+a
+limitation
+for
+some
+people.</p>
+<p>The
+trade-off
+I
+would
+say
+we
+would
+make</p>
+<p>every
+time
+is
+get
+the
+smarter
+model
+and</p>
+<p>figure
+out
+how
+to
+do
+image
+recognition</p>
+<p>another
+way.</p>
+<p>You
+can
+easily
+have
+a
+local
+router.
+Open</p>
+<p>Codex
+is
+one</p>
+<p>where
+you
+would
+route
+any
+image</p>
+<p>recognition
+to</p>
+<p>Gemini
+or
+Luna</p>
+<p>and
+keep
+Gemini
+for
+the
+main
+task.</p>
+<p>If
+you
+really
+need
+some
+vision
+model,</p>
+<p>Gnome
+5G
+flash</p>
+<p>works
+really
+well.
+We
+have
+our
+UI</p>
+<p>designer</p>
+<p>making
+great
+use
+of
+it.</p>
+<p>Turnaround
+for</p>
+<p>UI
+product
+has
+gone
+a
+really,
+really</p>
+<p>long
+way.</p>
+<p>And
+then
+the
+last
+one
+is
+going
+to
+be</p>
+<p>about
+the
+harness.</p>
+<p>So,
+all
+of
+these
+endpoints
+are
+going
+to</p>
+<p>be
+OpenAI
+compatible
+API
+with
+response</p>
+<p>API
+and
+so
+you
+can
+use
+them</p>
+<p>inside
+Open
+Code</p>
+<p>Codex</p>
+<p>Codex
+app
+as
+well.
+Works
+really
+well.</p>
+<p>And
+so,
+that's
+what
+we
+we
+recommend.</p>
+</details>
+<h3 id="合规安全与数据隐私" data-reading-heading="">合规、安全与数据隐私</h3>
+<p>最后一条信息，这是留给在场的首席信息官（CIO）们的。关于使用源自中国的开源模型，过去存在许多顾虑与负面看法。需要考虑的是，你并不是在调用直连中国的专用推理端点。你只是获取模型权重，并将它们部署在美国本土的服务器上。因此在数据共享层面，这完全没有问题。Revolut 的情况尤为特殊，因为我们是一家受欧盟监管的银行，遵从合规方面最严格的监管机制。我们发现切实可行的做法是：所有这些编码任务都不被视作自主 Agent。它们始终处于人机协同（human in the loop）的状态。那么，你该如何向监管机构证明有人在回路中监督呢？首先要建立一个能确保这一点的沙箱。这个沙箱意味着——如果大家用过 Codex code 的话，它提供了各类“需我审批”的功能。你只需要针对那些不允许的操作制定规则即可。例如，你可以允许 grep 命令，但不允许执行 Gradle。这能给监管机构带来信心，证明这不是需要接受不同监管规则的自主 Agent。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And
+ then
+<p>last
+message,
+this
+one
+is
+for
+the
+CIO
+in</p>
+<p>the
+room.</p>
+<p>There's
+been
+a
+lot
+of
+stigma
+in
+using</p>
+<p>Chinese
+open
+source
+model.</p>
+<p>So,
+the
+thing
+to
+consider
+is
+you're
+not</p>
+<p>using</p>
+<p>the
+inference
+dedicated
+endpoint
+that</p>
+<p>goes
+to
+China.
+You
+just
+getting
+the</p>
+<p>weights
+and
+putting
+them
+on
+a
+US-based</p>
+<p>service.</p>
+<p>So,
+for
+data
+sharing
+side,
+this
+is</p>
+<p>totally
+fine.</p>
+<p>Revolut
+in
+particular,
+because
+we're
+a</p>
+<p>EU
+regulated
+bank,
+we
+fall
+under
+the</p>
+<p>most</p>
+<p>strict
+regime
+in
+terms
+of
+compliance.</p>
+<p>And
+so,
+what
+we
+find
+that
+works</p>
+<p>is</p>
+<p>all
+of
+these
+coding
+tasks
+are
+not</p>
+<p>considered
+autonomous
+agents.</p>
+<p>They're
+always
+with
+a
+human
+in
+the
+loop.</p>
+<p>And
+so,
+how
+do
+you
+give
+uh
+reassurance</p>
+<p>that
+you
+have
+a
+human
+in
+the
+loop?</p>
+<p>You
+start
+by
+creating
+a
+sandbox
+that</p>
+<p>guarantees
+that.
+And
+the
+sandbox
+means</p>
+<p>now,
+if
+you've
+used
+Codex
+code,
+it
+has</p>
+<p>all
+of
+these
+features
+of
+approve
+for
+me.</p>
+<p>You
+just
+have
+to
+set
+the
+rules
+for
+the</p>
+<p>operations
+that
+you
+don't
+want
+to
+allow.</p>
+<p>So,
+you
+can
+allow
+grab
+but
+not
+Gradle,</p>
+<p>for
+instance.</p>
+<p>And
+that's
+going
+to
+give
+confidence
+uh</p>
+<p>to
+your
+regulator
+that</p>
+<p>this
+is
+not
+an
+autonomous
+agent
+that</p>
+<p>needs
+different
+uh
+supervision.</p>
+</details>
+<p>沙箱同样可以保护你免受内部恶意行为的侵害，对吧？公司内部可能会有不良行为者，你需要为此进行防范。大公司里能发现些什么往往会出乎你的意料。最后一点是提示词注入。鉴于现在的模型非常聪明，这虽然不再是一个大问题，但它始终是一个隐患。在数据隐私方面，前面我们已经谈到过。只要数据存放在符合数据等效性框架的国家或地区内——即美国、欧盟、英国、以色列——就完全没有问题，你就可以在那里使用数据。所有你的推理提供商或 GPU 提供商默认都会实施零数据留存政策。最后，你还需要一套非常强大的 OpenTelemetry 可观测性系统，这样一旦发生事故，你必须能够深入查看日志。它同时也能为你提供相关的分析数据。好的，谢谢大家。以上就是我的全部演讲内容。</p>
+<blockquote>
+<blockquote>
+<p>[掌声]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The
+ sandbox
+ also
+ protects
+ you
+ from
+ uh
+<p>rogue
+use,
+right?
+You
+may
+have
+bad
+actor</p>
+<p>inside
+your
+company,
+and
+you
+want
+to</p>
+<p>shield
+uh
+for
+that.</p>
+<p>You
+'d
+be
+surprised
+what
+you
+find
+in
+a</p>
+<p>large
+company.</p>
+<p>And
+then,
+the
+last
+one
+is
+prompt</p>
+<p>injection.
+Not
+not
+so
+much
+a
+thing
+uh</p>
+<p>now
+given
+how
+smart
+models
+are,
+but</p>
+<p>always
+a
+thing.</p>
+<p>In
+terms
+of
+data
+privacy,
+we
+spoke
+about</p>
+<p>it.
+So,
+as
+long
+as
+the
+data
+sits</p>
+<p>in
+one
+of
+the
+countries
+that
+are
+in
+the</p>
+<p>data
+equivalency
+framework,
+so
+US,
+EU,</p>
+<p>UK,
+Israel,</p>
+<p>you're
+fine.
+You
+can
+get
+your
+data
+to
+be</p>
+<p>used
+there.</p>
+<p>All
+of
+your
+inference
+provider
+or
+GPT</p>
+<p>provider
+are
+going
+to
+have</p>
+<p>zero
+data
+retention
+by
+default.</p>
+<p>And
+then,
+the
+last
+thing
+you
+need
+is
+a
+very
+strong
+uh
+open
+telemetry
+so
+that
+if</p>
+<p>you
+ever
+have
+an
+incident,
+um
+you
+need</p>
+<p>to
+be
+able
+to
+go
+deep
+uh
+and
+look
+at
+the</p>
+<p>logs.</p>
+<p>Also
+gives
+you
+some
+uh
+yeah,
+analytics.</p>
+<p>All
+right.
+Thanks,
+everyone.
+That
+was</p>
+<p>all
+for
+my
+talk.</p>
+<blockquote>
+<blockquote>
+<p>[applause]</p>
+</blockquote>
+</blockquote>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/017a670165f91cee7ce72915f085e0a5ae19c524de8d33c7fc3885d6c297d27c.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/017a670165f91cee7ce72915f085e0a5ae19c524de8d33c7fc3885d6c297d27c.md" download="Revolut 如何通过自建开源模型降低 90% AI 编码成本.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=David" class="entity-link person-link">David</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Revolut" class="entity-link company-link">Revolut</a>, <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=GLM" class="entity-link product-link">GLM</a>, <a href="/search/?q=Gemini" class="entity-link product-link">Gemini</a>, <a href="/search/?q=B200" class="entity-link product-link">B200</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

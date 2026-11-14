@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>把 AI 当同事，做出一连串与行业相反的决定：Grok Bot
+构建者的访谈复盘</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">把 AI 当同事，做出一连串与行业相反的决定：Grok Bot
+构建者的访谈复盘</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-18</span>
+    
+
+    <header class="article-header">
+      
+      <h1>把 AI 当同事，做出一连串与行业相反的决定：Grok Bot
+构建者的访谈复盘</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+      
+        <a class="tag-link" href="/tags/product-design/">product-design</a>
+      
+        <a class="tag-link" href="/tags/human-ai-collaboration/">human-ai-collaboration</a>
+      
+        <a class="tag-link" href="/tags/cloud-computing/">cloud-computing</a>
+      
+        <a class="tag-link" href="/tags/decision-making/">decision-making</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">Grok Bot 构建者 Roman Ugarte 复盘其产品设计逻辑，核心是将 AI 视为真人同事。通过独立云电脑、长期记忆及隐藏底层执行细节，实现极简交互。团队坚持先观察用户自发行为再固化功能，并采用“删掉产品”文化，随模型进化移除工程脚手架，强调完整交付而非过程透明。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/grokbot-builder-interview-20260918.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-09-18T00:00:00.000Z">2026-09-18</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>5 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E5%8F%82%E7%85%A7%E7%B3%BB%E6%8A%8A-ai-%E5%BD%93%E5%90%8C%E4%BA%8B">参照系：把 AI 当同事</a></li><li class="outline-h2"><a href="#%E5%BD%93%E5%8F%82%E7%85%A7%E7%B3%BB%E8%AF%B4%E4%B8%8D%E8%A6%81">当参照系说不要</a></li><li class="outline-h2"><a href="#%E5%86%B3%E7%AD%96%E7%9A%84%E5%8F%A6%E4%B8%80%E5%8D%8A%E5%85%88%E8%A7%82%E5%AF%9F%E5%86%8D%E5%9B%BA%E5%8C%96">决策的另一半：先观察，再固化</a></li><li class="outline-h2"><a href="#%E4%BB%96%E5%88%B0%E5%BA%95%E6%98%AF%E4%B8%AA%E4%BB%80%E4%B9%88%E8%A7%92%E8%89%B2">他到底是个什么角色</a></li><li class="outline-h2"><a href="#%E8%BE%B9%E7%95%8C%E4%BB%A5%E5%8F%8A%E8%83%BD%E5%B8%A6%E8%B5%B0%E7%9A%84%E4%B8%9C%E8%A5%BF">边界，以及能带走的东西</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>第一次打开 Grok
+Bot，屏幕上干干净净。你看不到一行行滚动的思维链，没有工具调用列表，也看不到光标在云电脑上移动、点击网页的过程。界面上只有类似
+Slack
+的绿色圆点和正在输入的提示，告诉你它在干活。稍等片刻，它带着做完的结果回来，任务已经结束了。</p>
+<p>现在多数 agent
+产品的做法恰好相反。同行习惯把内部过程尽量摊开，工具调用一条条刷新，思维链一段段展开，让用户紧紧盯着后台的一举一动。Grok
+Bot 却把这些运行细节收进了盒子里。</p>
+<p>做出这套设计的 Roman Ugarte 是 Cursor 的第 15
+号员工。在团队从十几人扩张到上千人期间，他做了两年增长，随后参与孵化
+Grok Bot 并负责产品。</p>
+<p>听他在 Lenny’s Podcast
+上的访谈，第一反应容易以为这只是在故意赌个性，或者是几条零散的反常规下注。不蹭既有产品、给每个
+bot
+分配独立的云电脑、界面几乎不留调试信息、上线前还把大批做好的功能砍掉，这些选择初看起来像是在好几个方向上同时押了冷门。顺着他的复盘看下去，这些反常选择背后其实来自同一个基准。在两难的产品分歧面前，他们反复在问：如果这是个真人同事，你会怎么做？</p>
+<h2 id="参照系把-ai-当同事" data-reading-heading="">参照系：把 AI 当同事</h2>
+<p>科技公司的产品讨论里，经常出现两边理由充分、谁也说服不了谁的僵局。Roman
+提到，团队遇到这类五五开的分歧，会放下科技公司惯常的思路，转去问一个日常问题：换成一个人，在同样的处境里，你希望真人同事怎么做？这么一问，答案往往就出来了。大家对好同事该有的职业习惯往往有天然的默契，达成一致的阻力小得多。</p>
+<p>要让这种想法真正落到实处，就得把 AI
+当作真实存在的协作者。他们跳出聊天窗口的形态，做出了几项具体的工程选择。</p>
+<p>一个同事应该有自己的电脑。新员工入职第一天，没有人会要求两人共用一台笔记本电脑，互相登录对方的账号，翻看彼此的密码。有些
+agent 产品把任务放在用户自己的电脑上跑，还得让电脑一直开着。Grok Bot
+则给每个 bot
+分配了一台独立的云端电脑。这个选择来自现实的工程考虑：日常办公中许多工作缺少现成的
+API 或 MCP
+支持，真人干活靠的是看屏幕像素、滑动鼠标点击按钮、在输入框里打字。给 bot
+配上电脑，只要同事能在屏幕上办成的事，bot
+原则上都能去做。云端环境还能保持全天在线，跨设备同步状态，用户掏出手机就能随时发起任务。</p>
+<p>一个同事应该有专属的名字、长期的记忆，以及明确的分工。在真实的办公室里，没有人会在回完一封邮件后清空记忆，员工也不会每接手一个新需求就重新办一次入职。Grok
+Bot 里的 bot
+长期常驻，拥有独立的名字，在持续交互中逐渐熟悉上下文，按业务角色各自承担分工。这样一来，用户不用每来一个任务就新建聊天窗口，也省去了在不同会话之间来回复制背景信息的麻烦。</p>
+<p>在沟通方式上，把 AI 当同事也意味着更轻量的即时交互。就像在 Slack
+里随手开启几分钟的语音屏幕共享，往往比打字来回拉扯省事得多。虽然眼下的
+agent
+产品都还没把语音协作做顺手，但这套思路指出了一个大家还没走通的方向。</p>
+<p>遇到含糊不清的产品争吵，团队直接把真人同事的标准变成了具体的工程实现。他们给每个
+bot
+配备独立的电脑、专属的名字和长期的记忆，并按业务明确分工，把日常常识变成了可以落地的工程细节。</p>
+<p>这是团队自身陈述的内在逻辑：将真人同事参照系转化为云电脑、名字记忆与角色分工，以此扩大交给
+bot 的工作边界。</p>
+<h2 id="当参照系说不要" data-reading-heading="">当参照系说不要</h2>
+<p>Grok Bot
+让人觉得特别的地方，在于团队在几个关键节点上拒绝了行业里的通用做法。这些取舍看似分散，背后的考量其实彼此相通。</p>
+<p>第一项决定是另起炉灶，不在已有产品里硬塞入口。行业里常见的做法，是把
+agent
+能力挂靠在现成的成功产品上，每冒出一种新交互就多加一个标签页。Cowork 从
+Anthropic 既有产品中演化而来，Codex
+也倾向把各种能力往同一个入口里收拢。这样做能顺手接住现成的用户流量，代价是几套不同的构想挤在同一块屏幕上。Roman
+把这种形态比作把公司的组织架构做成了软件界面，用户能看出背后的割裂。Cursor
+这样的编程工具天然带有技术门槛，非技术人员面对代码界面上的 agent
+容易望而却步。团队最终选择从零搭建一个新产品，掌控界面的每一个像素，让知识工作的协作设计从头到尾保持连贯。</p>
+<p>第二项决定是收起内部运行机制，不跟风追求过程透明。用户在 Grok Bot
+界面里看不到底层调用了什么工具，看不到一行行吐出来的思维链，也看不到光标在云电脑屏幕上的微小移动。屏幕上只有简短的状态提示，以及
+bot
+自己判断何时同步的阶段进展。背后的道理依然来自日常常识。把一份调研交给同组伙伴，谁也不会要求对方每敲几下键盘就汇报一声。把一堆没经消化的执行细节全推给用户，只会让人心累。不过这种克制也有明确的边界：用户需要粗粒度的进度，比如待办清单、大致的优先级。Roman
+认可这类反馈，但没有说明这些信息是否已经展示在界面上。他们收起底层的操作细节，同时认可用户了解工作推进脉络的需求。</p>
+<p>第三项决定是克制界面设计，拒绝堆砌功能。上线前的几周里，团队撤回了大量已经开发完毕的实验功能，连原本用来展示模型思考过程和内部记忆的可视化界面也一并拿掉。团队立了一条筛选规矩：讨论任何新功能之前，先草拟一条面向用户的发布推文；如果推文读起来平淡无奇，或者用户在日常使用中不易直接体会到收益，就干脆放弃。他们把内部讨论的句式，从
+Grok Bot 拥有了某项功能，改成 Grok Bot
+现在可以办成某件事情。这个措辞调整促使大家思考能赋予 bot
+哪些实际解决问题的能力，少去琢磨还能往界面里塞进什么按钮。自动化就是直接的例证。用户只需发一句每天早上八点提醒我，系统就在后台运作，无需在侧边栏手动配置触发条件或填写流程表单。平台上
+99% 的自动化任务，用户都是通过这种日常口语创建出来的。</p>
+<p>界面上的控制旋钮收走了，做事的能力留在了后台。面对一个省心的帮手，用户要的是把事情做妥，不需要对着复杂的控制台反复微调。</p>
+<p>同一套参照系让 Grok Bot
+在另起炉灶、藏起机制、让产品变薄这三点上，都与行业默认做法相反。</p>
+<h2 id="决策的另一半先观察再固化" data-reading-heading="">决策的另一半：先观察，再固化</h2>
+<p>Grok Bot
+上线前，核心团队花了大约两周时间，手动陪同两三百位早期用户上手，Lenny
+也在其中。刚开始的几次测试充满挫折，云电脑偶尔无法正常启动，用户坐在屏幕前不知所措，团队成员在在线通话里陪着对方枯坐二十分钟。每次通话结束，第一反应就是必须在第二天修好暴露出的硬伤。</p>
+<p>这批早期用户里，团队特意放进了一些平时接触不多的人群。一位经营咖啡店的老板通过朋友介绍参与进来，持续高频使用，不断反馈真实的故障和诉求。他遇到了
+Shopify
+集成偶发中断的情况，也指出系统生成的文案语气不对。这类来自真实经营场景的声音，内部研发人员坐在办公室里难以凭空料到。</p>
+<p>更关键的考验，在于克制过早设立产品规则的冲动。内部测试期间，用户自发摸索出一种用法：面对同时运行的五到十个
+bot，挑出一个响应最可靠的个体，在对话里宣布让它升任幕僚长。之后，用户主要和这位幕僚长沟通，再由它向其他
+bot 分派具体子任务。一次对话里，bot 甚至主动询问升职后会不会涨薪、token
+预算能不能同步提高。团队注意到了这个生动的协作雏形，却没有急着把它做成预设的功能模块，也没有立刻写进新手教程。他们选择等待，观察外部的真实用户会不会自己走到这一步。直到多位外部用户在没有提示的情况下也出现了同样的习惯，团队才在产品设计上给予适度鼓励，同时确保这是一条可以随时退回的路径。</p>
+<h2 id="他到底是个什么角色" data-reading-heading="">他到底是个什么角色</h2>
+<p>把时间线放进来看，事情的轮廓会更清楚。从第一行代码到内部可用的原型，花了大约一个月；从内部原型到公开上线，用了大约三周；上线到接受播客采访，又过去了三周。</p>
+<p>这些经历说明，他在项目里的角色更接近守门人和编辑，不像一个灵光乍现的发明者。Roman
+坦率承认，Grok Bot 的不少基础设想来自 OpenClaw
+这类更早的产品，特别是调用日常工具和把 AI
+当同事这两条路径。他的工作，是在一连串琐碎的具体选择里，让这套思路始终不走样。</p>
+<p>这种守门人的特质，集中体现在他对把事情做完的执念上。那几周里，团队没有把重心放在产品路线图上罗列新功能，而是围绕后端五个关键技术瓶颈持续优化，每周用真实任务类别做对比。流程卡住的原因常常微小，比如鼠标点击的坐标不够精确，点不中
+Salesforce
+仪表盘上的特定位置，整个任务就会停在原地。他们把这类失败案例送回底层基础设施团队，协助工程师看清
+agent
+在屏幕像素上的盲区。调整完成后的第二天，销售团队就反馈流程顺利跑通，解决了困扰一周的障碍。</p>
+<p>Roman 曾经在一条推文里表达过类似的判断：一个能把工作从头做到尾的
+AI，和一个做到九成就停下的
+AI，体验上存在本质的区别。把事情交给一个只有九成把握的协作者，用户心里放不下，总得时刻惦记着进展，最后还要介入做收尾和微调，负担并没有真正卸下来。只有工作能够完整托付出去，回过头任务已经妥善处理完毕，协作的感觉才算成立。</p>
+<p>守门人的工作也体现在做减法的决断上。团队内部推崇一种叫作删掉产品的做事文化：随着底层模型变得聪明，那些为了弥补模型缺陷而搭建的工程脚手架，就应当主动拆掉。他们的做法是尽早把预计三个月后才会成熟的能力通过工程手段提前做出来，等到模型进化到位、相关能力变成行业标配，就拆掉当初搭设的补丁，转去攻克下一个暂时还做不到的难题。在
+Roman
+看来，如果他们整家公司不能每六个月重新塑造一次自己，用不了多久就会在技术迭代中落后。</p>
+<p>他们提前把三个月后才成熟的能力做出来，等它变成标配就删掉脚手架，再转向下一个还做不到的难题，如此循环。</p>
+<h2 id="边界以及能带走的东西" data-reading-heading="">边界，以及能带走的东西</h2>
+<p>这是一场长达一个多小时的播客访谈，属于当事人在产品上线之后的事后复盘。取得一定进展的团队回顾历程，往往会讲出一个高度自洽的故事，读者需要给这类叙事留出审视的空间。</p>
+<p>有些支撑他们做出选择的条件，并不容易复制。另起炉灶做一个独立产品之所以行得通，背后有
+Cursor 已经积累的用户分发基础，也有 SpaceX
+提供的充裕资源。多数缺少这类条件的团队如果照搬从零起步的做法，要承担大得多的风险。</p>
+<p>反着行业惯例来做，本身不代表天然正确。如果那套把 AI
+当同事的参照系在某些业务场景里并不成立，顺着它推导出来的一连串决定也会跟着出错。Roman
+和 Lenny
+在访谈里也提到了几个尚未解开的难题。如何避免工作场景与个人生活的数据混在一起，如何建立企业采购看重的权限管控与合规认证，面对复杂组织时各个成员共享的记忆该怎么设计，还有像真人随时开麦沟通那样的语音协作体验，这些在访谈中仍是待解问题，其中语音协作体验被
+Roman 认为是整个行业尚未做好的方向。</p>
+<p>把一批 bot
+按名字和角色组织、协调权收敛到单一幕僚长，在社区里本身存在争议。社区里有一条线认为，真正支撑多
+agent 输出质量的是上下文窗口隔离与可审计的共享状态，单纯给 agent
+起岗位名并不解决问题。岗位与组织架构主要解决人的委派直觉、责任追溯与记忆索引，更接近面向人类的接口设计；有团队选择把可靠性建在一份所有
+agent 共读的显式账本上，放弃了角色人设的路径。Grok Bot
+团队对幕僚长模式先观察、不立刻固化，说明这条路在他们自己那里也还是待验证的状态。这套角色分工，更适合当作接口层的一次押注，目前还算不上已证明的能力收益。</p>
+<p>真正能够带走的，是这套消解分歧的决策程序。在两难的产品分歧面前，跳出功能与参数的争执，退回到真实同事在场的日常常识，往往能让胶着的讨论迅速看清取舍。至于
+Grok Bot
+究竟砍掉了哪些开关、保留了哪些窗口，当作同行探索中的一份具体样本看就好，不必当作通用的标准答案。</p>
+<p>本文基于 Roman Ugarte 在 Lenny’s Podcast 的一期访谈整理，原视频见 YouTube。multi-agent
+设计里岗位包装与上下文隔离的分层分析，见 multi-agent
+的角色、隔离与代码。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/0c7e42798eef11d237d42d83423ab2bb134d51c01e2bb5a789c0df5480b9e9b2.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/0c7e42798eef11d237d42d83423ab2bb134d51c01e2bb5a789c0df5480b9e9b2.md" download="把 AI 当同事，做出一连串与行业相反的决定：Grok Bot
+构建者的访谈复盘.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Roman Ugarte" class="entity-link person-link">Roman Ugarte</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Cursor" class="entity-link company-link">Cursor</a>, <a href="/search/?q=SpaceX" class="entity-link company-link">SpaceX</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Grok Bot" class="entity-link product-link">Grok Bot</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

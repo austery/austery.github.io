@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>H-JEPA分层世界模型：Yann LeCun团队架构、实验与技术路线解析</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">H-JEPA分层世界模型：Yann LeCun团队架构、实验与技术路线解析</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Best Partners TV</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>Best Partners TV</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-18</span>
+    
+
+    <header class="article-header">
+      
+      <h1>H-JEPA分层世界模型：Yann LeCun团队架构、实验与技术路线解析</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/world-model/">world-model</a>
+      
+        <span class="tag-pill tag-pill--no-page">hierarchical-planning</span>
+      
+        <a class="tag-link" href="/tags/representation-learning/">representation-learning</a>
+      
+        <a class="tag-link" href="/tags/robotics/">robotics</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">影片介绍Yann LeCun创立的AMI公司发布的H-JEPA分层世界模型论文及开源成果。实验显示三层结构在蚂蚁迷宫任务中成功率达73.3%，大幅优于单层模型的18%，并降低了计算量。文章分析了独立表征空间、逆动力学解决特征坍塌等机制，并对比了世界模型与LLM及其他3D/像素级生成路线的差异与未决挑战。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/best-partners-tv/">Best Partners TV</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=6eHi1hGKw_k" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-18T00:00:00.000Z">2026-10-18</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>13 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E8%BF%B7%E5%AE%AE%E5%B0%8E%E8%88%AA%E8%88%87-h-jepa-%E7%9A%84%E6%8F%90%E5%87%BA">迷宮導航與 H-JEPA 的提出</a></li><li class="outline-h3"><a href="#%E5%88%86%E5%B1%A4%E8%A6%8F%E5%8A%83%E8%88%87%E5%A4%9A%E6%99%82%E9%96%93%E5%B0%BA%E5%BA%A6%E8%A1%A8%E7%A4%BA">分層規劃與多時間尺度表示</a></li><li class="outline-h3"><a href="#%E7%8F%BE%E6%9C%89-jepa-%E7%9A%84%E7%BC%BA%E9%99%B7%E8%88%87%E7%8D%A8%E7%AB%8B%E8%A1%A8%E7%A4%BA%E7%A9%BA%E9%96%93">現有 JEPA 的缺陷與獨立表示空間</a></li><li class="outline-h3"><a href="#h-jepa-%E6%9E%B6%E6%A7%8B%E8%88%87%E7%AB%AF%E5%88%B0%E7%AB%AF%E8%A8%93%E7%B7%B4">H-JEPA 架構與端到端訓練</a></li><li class="outline-h3"><a href="#%E8%87%AA%E9%A0%82%E5%90%91%E4%B8%8B%E7%9A%84%E8%A6%8F%E5%8A%83%E6%A9%9F%E5%88%B6">自頂向下的規劃機制</a></li><li class="outline-h3"><a href="#%E5%AF%A6%E9%A9%97%E9%A9%97%E8%AD%89%E8%88%87%E9%81%B8%E6%93%87%E6%80%A7%E6%8A%BD%E8%B1%A1">實驗驗證與選擇性抽象</a></li><li class="outline-h3"><a href="#%E6%B6%88%E8%9E%8D%E5%AF%A6%E9%A9%97%E6%90%9C%E5%B0%8B%E5%88%86%E8%A7%A3%E8%88%87%E7%9B%AE%E6%A8%99%E7%A9%BA%E9%96%93">消融實驗：搜尋分解與目標空間</a></li><li class="outline-h3"><a href="#%E7%9C%9F%E5%AF%A6%E4%B8%96%E7%95%8C%E6%95%B8%E6%93%9A%E8%88%87%E7%89%B9%E5%BE%B5%E5%9D%8D%E5%A1%8C%E6%8C%91%E6%88%B0">真實世界數據與特徵坍塌挑戰</a></li><li class="outline-h3"><a href="#%E5%B1%80%E9%99%90%E6%80%A7%E8%88%87%E6%9C%AA%E6%B1%BA%E5%95%8F%E9%A1%8C">局限性與未決問題</a></li><li class="outline-h3"><a href="#%E4%B8%96%E7%95%8C%E6%A8%A1%E5%9E%8B%E8%88%87-llm-%E7%9A%84%E5%93%B2%E5%AD%B8%E5%88%86%E6%AD%A7">世界模型與 LLM 的哲學分歧</a></li><li class="outline-h3"><a href="#2026-%E4%B8%96%E7%95%8C%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%B8%89%E6%A2%9D%E6%8A%80%E8%A1%93%E8%B7%AF%E5%BE%91">2026 世界模型的三條技術路徑</a></li><li class="outline-h3"><a href="#ami-%E8%9E%8D%E8%B3%87%E8%88%87%E7%94%A2%E6%A5%AD%E8%90%BD%E5%9C%B0%E5%B1%95%E6%9C%9B">AMI 融資與產業落地展望</a></li><li class="outline-h3"><a href="#%E7%B5%90%E8%AA%9E">結語</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>大家好，這裡是最佳夥伴，我是大飛。</p>
+<h3 id="迷宮導航與-h-jepa-的提出" data-reading-heading="">迷宮導航與 H-JEPA 的提出</h3>
+<p>同樣的迷宮導航任務，單層世界模型的成功率為 18%，但切換到三層結構後，成功率提高到 73.3%，同時規劃所需的計算量更少。任務沒有改變，資料也沒有改變，改變的只是模型內部的組織方式。</p>
+<p>這是圖靈獎得主 Yann LeCun 提交的最新作品，他離開 Meta 創立了 AIaphase (AMI) 公司。該公司最近發表了 H-JEPA 論文，H-JEPA 代表分層聯合嵌入預測架構；程式碼和預訓練模型都是開源的，因此研究人員可以下載並載入它們來運行實驗。</p>
+<p>73.3% 這個數字背後，是 Yann LeCun 對整個人工智慧產業的押注。他一直認為，大型模型這條路走不通，人類的智慧水平無法達到人類的水平，而世界模型才是前進的方向；本文首次將他長期以來的想法變成了第一個完整、實用、可複現且可下載的系統。今天，我們來談談這篇論文。</p>
+<h3 id="分層規劃與多時間尺度表示" data-reading-heading="">分層規劃與多時間尺度表示</h3>
+<p>他究竟為什麼堅持要建構一個等級森嚴的世界模型？這可以追溯到 2022 年，當時他還是 Meta 的首席人工智慧科學家，並首次提出了分層 JEPA 的概念，允許模型在不同的抽象層級和時間尺度上進行預測，然後使用分層規劃將複雜的目標分解為具體的行動。</p>
+<p>這聽起來有點抽象，但他舉了一個非常生動的例子：想像你坐在紐約大學的辦公室裡，計劃去巴黎旅行；你會考慮目的地、航班和行程安排，而不是辦公室樓梯的每一級台階有多高。一旦你離開辦公室，開始走下樓梯，你的注意力就會轉移到你面前的地面和階梯上，以及先邁哪隻腳。規劃行程時，階梯的高度並不重要，但走下階梯時，這個細節會直接決定你每一步的走法。</p>
+<p>人類不斷地在這些不同的時間尺度之間切換，機器人也面臨著同樣的問題：高層規劃需要理解任務目標、環境關係和未來方向，而低層控制需要掌握具體的動作和物理細節；兩者所需的資訊本質上是不同的。因此，問題變成了如何讓模型的不同層次學習適合自身的表示，然後逐層實現高層計劃。這正是 H-JEPA 所要解答的問題。</p>
+<h3 id="現有-jepa-的缺陷與獨立表示空間" data-reading-heading="">現有 JEPA 的缺陷與獨立表示空間</h3>
+<p>在解釋其工作原理之前，我們必須先解決這些模型中存在的一個共同缺陷：目前的 JPA 世界模型大多在單一潛在空間和單一時間尺度內進行預測和規劃。這會造成兩個問題。</p>
+<p>一個是經典問題：對於長期任務，透過許多細粒度的步驟進行預測會導致誤差累積，動作搜尋空間也會隨之擴大。</p>
+<p>另一個問題則更為根本：同一個潛在空間必須同時處理兩件不同的事情——低層次的動態和高層次的目標匹配。充滿快速變化細節的潛在空間非常適合對動態進行建模，但如果你用它來衡量你離目標有多遠，它的表現就會很差，尤其是當目標比狀態更抽象時，這會讓模型感到困惑。例如，如果任務是讓機器人到達特定位置而不是擺出特定姿勢，即使四足機器人已經到達目的地，如果腿部姿勢與目標圖像不匹配，模型仍然可能認為它離目標很遠。</p>
+<p>事實上，等級制度的概念並不新鮮；LeCun 的團隊在 4 月發表了一篇 HWM 論文，該論文透過潛在目標連結高低水平，實現了時間尺度的解耦。在真正的 Franka 機器人上，分層任務的成功率為 70%，而單層模式的成功率為 0%。然而，那篇論文包含一個隱藏的前提：所有層級必須共享同一個表示空間。所以，雖然它解決了時間解耦的問題，但並沒有解決表示問題。H-JEPA 專門透過讓每個層級發展自己的表示空間來解決這個問題，這樣上層級就可以合理地丟棄他們無法預測的細節。</p>
+<h3 id="h-jepa-架構與端到端訓練" data-reading-heading="">H-JEPA 架構與端到端訓練</h3>
+<p>但它的實際結構是怎麼樣的呢？該論文為每一層提供了三個組成部分：</p>
+<ul>
+<li>首先是狀態編碼器，負責擷取環境表徵；底層直接讀取影像，而高層則忽略像素，處理下層的潛在狀態，只保留對該時間尺度重要的資訊。</li>
+<li>接下來是動作編碼器，負責描述動作引起的變化；底層使用具體操作，而高層則將一系列操作壓縮成更粗略的變化。</li>
+<li>此外，還有一個預測器，它結合當前狀態和行動來預測未來狀態。</li>
+</ul>
+<p>層級之間的步長加倍，這意味著一個高層級步驟對應於兩個低層級步驟。</p>
+<p>訓練是端到端的，每一層都在其自身的潛在空間中進行預測，來自上層的梯度會一直反向傳播到下層的編碼器。這裡值得一提的是：上層要求下層提供可預測的特徵，這不是手動設計的，而是由漸變本身強制實現的。</p>
+<p>訓練世界模型仍然面臨一個經典的難題，稱為表徵崩潰。如果機器將所有輸入壓縮成同一個向量，預測器只需要輸出這個常數就能達到非常低的預測誤差，但實際上模型卻什麼也沒學到。楊立昆團隊在 JEPA 上提出的方法將嵌入分佈推向各向同性高斯分佈，從而限制了表示的坍縮。然而，這種方法本身也有缺陷。當表示開始崩潰時，梯度也會相應衰減。崩盤越嚴重，修正訊號就越弱。因此，防崩潰機制本身仍是一個未解之謎。</p>
+<h3 id="自頂向下的規劃機制" data-reading-heading="">自頂向下的規劃機制</h3>
+<p>那麼，在建築物建成之後，規劃是如何進行的呢？答案是自上而下，就像接力賽一樣。</p>
+<p>當前觀測結果和目標場景由所有層進行編碼。頂層首先優化宏觀動作，確保其預測的最終狀態最接近目標。頂層預測的中間狀態作為子目標向下傳遞。下一層會優化實現這些子目標的行動，逐層改進，直到第一層輸出可以直接執行的行動。</p>
+<p>在閉環控制中，每一層只針對其預測的第一個子目標，執行一小段動作，重新觀察環境，然後再次進行規劃。這樣做的好處是，每一層只需要負責力所能及的短期目標，而長期一致性則自上而下地保持。</p>
+<p>順便一提，這種結構與大腦皮質很相似。神經科學研究表明，皮層區域根據內在時間尺度分層組織，較高層的表徵變化較慢。本文以此作為設計基礎，而非僅是隨意類比。</p>
+<h3 id="實驗驗證與選擇性抽象" data-reading-heading="">實驗驗證與選擇性抽象</h3>
+<p>那麼，它的實際效果如何呢？研究團隊在四個模擬環境中測試了該模型：兩個導航任務和兩個操作任務。主戰場名為「螞蟻迷宮」，讓四足機器人導航迷宮，得出了我們開頭提到的那些數字。在 50 項任務的評估中，三層 JEPA 的成功率為 73.3%，而單層平面模型的成功率僅為 18%。此外，從每回合的計算負載來看，分層模型實際上具有更低的規劃開銷。</p>
+<p>比數字本身更有趣的是模型內部發生的變化。研究人員將每一層的內在表徵重建成影像，並觀察到一個清晰的模式：層數越高，螞蟻腿部姿勢的表徵就越模糊。到了第二層和第三層，螞蟻快速變化的姿態已經無法恢復，但螞蟻在迷宮中的整體座標在每一層都保持清晰。</p>
+<p>在另一個導航環境中，新增了一個干擾項目：一個會在迷宮中自行移動並偶爾瞬移的小藍點。隨著層級的增加，這種干擾因素在表徵中變得越來越模糊，直到幾乎消失，而模型對機器人本身的感知則始終保持穩定。</p>
+<p>換句話說，模型自發性地學會如何確定優先級，忽略應該忽略的內容，保留應該保留的內容。這結果並非人為設計的特徵所選擇的結果，而是隨著預測範圍的擴大而自然形成的結構。</p>
+<p>該論文還提供了量化方法，將數據中變化最快的成分與變化最慢的成分的比率定義為「時間頻率間隙」，發現明顯的選擇性抽象只出現在間隙較大的環境中。對於間隙小於 2 的環境，例如操作任務，高層基本上不會丟棄任何東西。</p>
+<h3 id="消融實驗搜尋分解與目標空間" data-reading-heading="">消融實驗：搜尋分解與目標空間</h3>
+<p>高分究竟來自哪裡？本文最紮實的部分在於它如何剖析這個問題：分層規劃實際上同時實現了兩件事——在時間上分解搜索，並在更抽象的空間中對候選未來進行評分。</p>
+<p>論文設計了一個非常簡潔的消融實驗：完全保持第一層世界模型和規劃者不變，只改變用於計算到目標距離的空間。預測值和目標值都透過上層編碼器來測量距離，無需進行任何分層規劃，只需改變測量空間即可。結果有些出乎意料：光是這一步驟就將迷宮任務的表現從 18% 提高到 20.7% 到 31.3% 之間，最優投影規劃器在每個深度都超過了單獨訓練的單層模型的極限。</p>
+<p>換句話說，雖然許多人認為分層規劃的好處來自於分解搜索，但實際上很大一部分好處來自於改變目標函數的空間。前者是演算法工程，後者是表徵學習，而後者才是真正讓這種方法有前景的地方。</p>
+<p>時間分解的作用也得到了單獨驗證；作者測量了專家軌跡上的成本曲線的單調性，在四個環境中，子目標單調性達到了 0.89 到 1.0。然而，當直接使用最終目標距離作為成本時，單調性僅為 0.48 到 0.75。這種差異意味著後者的訊號本質上是雜訊較大的，容易陷入停滯，而將其分解為子目標則使其成為一條真正向下發展的路徑。</p>
+<h3 id="真實世界數據與特徵坍塌挑戰" data-reading-heading="">真實世界數據與特徵坍塌挑戰</h3>
+<p>到目前為止，這些都是對此方法論的積極發現。接下來的部分是我認為整篇文章中最有趣、最尖銳的部分；該團隊將模型遷移到名為 ID 的真實世界機器人資料集上進行離線評估。此資料集包含人類遠端控制真實機械手臂的操作影片。每個系列作品的場景、燈光和被操控的物體都各不相同，而問題也正是從這裡開始的。</p>
+<p>在一段影片中，房間背景比機器人穩定得多。如果訓練只需要模型預測後續表徵，同時保持它們之間的差異，那麼模型就會找到捷徑，例如記住廚房、辦公室或工作台，來區分大量的影片。如果同一影片中的背景變化不大，那麼下一刻的描述就比較容易猜測。至於機器人如何移動或夾爪如何接近物體，這些真正重要的細節卻被捨棄了。</p>
+<p>這種現象稱為「特徵坍塌」。請注意，這種「折疊」並不意味著影像被壓縮成相同的數字；該模型仍然可以區分許多場景，但它已經失去了執行動作所需的資訊。這相當於模型記住了機器人所在的房間，但沒有記住機器人該做什麼。</p>
+<p>論文的附錄甚至提供了一個構造性的證明：只要正規化項只考慮嵌入的邊緣分佈，這種簡單的解決方案就總是可行的。數據也證實了這一點，ID 中 75% 的潛在差異來自不同輪次之間——換句話說，是場景差異。相較之下，對於固定攝影機和固定場景的任務，這個比例只有 28%，因此不會受到這種影響。</p>
+<p>解決方案是添加逆動力學損失，迫使模型根據執行動作前後的兩個狀態來推斷執行的動作。為了使模型能夠正確識別機器人的運動方式，它必須保留與該動作相關的資訊。此術語不需要人工標註，但要求訓練資料包含動作資訊。加上這個限制後，單層模型從幾乎無效變為一個不錯的基準，而第二層又進一步改進了模型的性能。</p>
+<p>值得一提的是，原始資料大約有 5.5 TB，因此重複訓練是不切實際的。瓶頸不在於 GPU，而在於視訊解碼，因此該團隊重建了一個資料集，將其壓縮到 127.6 GB 和 74,530 輪，約為原始大小的 1/45，解碼速度提高了 17.9 倍，並將其與構建腳本一起開源。</p>
+<h3 id="局限性與未決問題" data-reading-heading="">局限性與未決問題</h3>
+<p>當然，本文並非沒有不足之處，還有一些要點需要澄清。</p>
+<p>首先，關於層數，並非越多越好；在 T 型塊推動任務中，兩層模型表現良好，但添加第三層實際上導致了退步。原因很可能出在數據層面。訓練環節必須包含在同一集內；PT 階段太短，與單層模型相比，三層模型每個週期只能利用 58% 的訓練遷移，而其他環境可以保留高達 88% 的遷移。該蛋雞喜歡吃較長的肉塊；如果數據不完整，就無法很好地學習。</p>
+<p>讓我們再提一個容易被忽略的點：預測的難易度並不等於任務的重要性。忽略不可預測的細節有時可以使長期計劃更有效，但短暫的接觸可能會直接決定任務的成敗，而靜態的背景則可預測地毫不費力。如何劃定這條界線還沒有徹底解決，關於實際機器閉環控制的論文只是被列入了未來的計劃。</p>
+<p>學術界也存在反對的聲音。有些研究人員從哲學角度批評統計預測，認為統計預測無法產生真正的理解；學習到的抽象狀態軌跡可以規劃路徑，但它永遠無法真正理解。它獲得的是一組有用的操作表示，而不是對物理障礙的語義理解。這些批評並不能否定其工程價值，但它們確實扮演了一種提醒作用。預測潛在空間中的未來和理解世界為何如此運作是兩個不同層次的問題。</p>
+<h3 id="世界模型與-llm-的哲學分歧" data-reading-heading="">世界模型與 LLM 的哲學分歧</h3>
+<p>好了，技術部分我們已經講完了；讓我們拉開鏡頭，看看這項實驗背後真正的爭論。</p>
+<p>過去一年來，Yann LeCun 對大型語言模式的看法基本上沒有改變。今年九月在瑞典馬爾默舉行的歐洲電腦視覺會議上，他的簡報中再次出現了這句話：如果你對人類層級的人工智慧感興趣，就不要攻讀法學碩士學位（LLM）。當這張投影片在社交平台上傳播開來時，有些人懷疑它是假的；他回答說，這確實是真的。</p>
+<p>他隨後補充說，基於 LLM 的 AI 工具非常有用，每個人都在使用它們，但他認為僅靠 LLM 無法達到人類水平的智慧。他的邏輯是這樣的：大型語言模型執行插值，本質上是在重現訓練資料中的統計模式；它們的核心任務是模仿，而世界模型則進行預測，需要判斷在未知環境中行動的物理後果。語言是人類智慧的輸出接口，而不是智能本身。人類透過具有多種尺度和時間跨度的內部模型來理解世界，而不是透過邊走邊預測下一個詞。</p>
+<p>從本質上講，這種分歧是兩種世界觀的碰撞。LLM 的基本假設是世界知識可以完全序列化和壓縮成序列，而 JEPA 假設物理世界包含大量不可序列化的結構、空間關係、因果動態和連續時間中的多尺度依賴性，這些都必須在潛在空間中直接建模。至於何為真正的理解，雙方給了不同的答案。</p>
+<p>此外，這不僅是 Yann LeCun 的個人執念。2025 年的一項人工智慧調查顯示，76% 的人工智慧研究人員認為，僅依靠擴大 LLM 的規模不太可能實現通用人工智慧 (AGI)。這個數字並沒有否定 LLM 的價值，而是對「規模全能性」理論的一種修正。</p>
+<h3 id="2026-世界模型的三條技術路徑" data-reading-heading="">2026 世界模型的三條技術路徑</h3>
+<p>從整個領域來看，2026 年世界模型的研究熱潮已經發展出三個不同的技術路徑：</p>
+<ol>
+<li><strong>H-JEPA 代表抽象預測路徑</strong>：它不追求像素級重建，而是在一個緊湊的潛在空間中學習世界的因果結構，從而提供高計算效率，並自然地適用於規劃和控制。</li>
+<li><strong>李飛飛的世界實驗室（World Labs）走的是結構化 3D 重建之路</strong>：創造幾何精確且可編輯的 3D 空間，但它本質上仍然是靜態的，缺乏固有的物理模擬能力。</li>
+<li><strong>Google DeepMind 的 Genie 3 可在像素空間中進行預測</strong>：能夠以每秒 24 幀的速度實時生成高保真度的交互式 3D 環境；Waymo 已經將其用於自動駕駛模擬，但計算成本很高，場景一致性只能維持幾分鐘。</li>
+</ol>
+<p>這三條路徑之間的分工很明確：世界實驗室回答世界是什麼樣子，Genie 3 展示世界是如何變化的，而 JEPA 思考世界的結構是什麼。它們並非彼此的替代品，而是從不同的角度實現相同目標。</p>
+<p>Yann LeCun 的目標是讓智能體真正理解物理世界並進行長期規劃，其中結構比像素更為根本。73% 對 18% 是支持此賭注的第一個可量化證據。</p>
+<h3 id="ami-融資與產業落地展望" data-reading-heading="">AMI 融資與產業落地展望</h3>
+<p>最後，我們來談談公司本身；Yann LeCun 於 2025 年 11 月離開 Meta。2026 年 3 月，AMI 融資 10.3 億美元，融資後估值達 35 億美元，據報導是歐洲史上規模最大的種子輪融資。投資者包括英偉達、三星、戴姆勒和豐田創投。</p>
+<p>該公司由 Yann LeCun 擔任董事長，Alexandre Lebrun 擔任首席執行官，謝寧擔任首席科學家，馮負責研發和創新，Mickaël Chen 領導世界模型——他也是這篇 H-JEPA 論文的合著者之一。</p>
+<p>客觀來說，研究成果是一回事，但大眾對人工智慧的期望是產品。至少從他們目前的官方網站來看，它展示了技術方向、團隊和招聘訊息，但沒有向公眾展示任何產品。</p>
+<p>然而，行動已經開始。醫療人工智慧公司 N 宣布與 AMI 建立獨家策略合作夥伴關係，優先獲得世界模型技術，以探索能夠理解工作流程和預測結果的醫療代理。結合這篇專注於真實機器閉環驗證的論文，這家公司的發展方向其實非常明確。</p>
+<h3 id="結語" data-reading-heading="">結語</h3>
+<p>回顧這篇論文，它是一個端到端訓練的分層世界模型，其中每一層都有自己的表示，規劃是自頂向下的。成功率從 18% 躍升至 73%，而計算負載實際上有所下降，並且焦點被拆分為兩個可單獨衡量的來源。</p>
+<p>對於具有複雜場景的真實世界數據，該團隊坦誠地展示了他們的方法可能會遇到的缺陷，並提供了補救計劃。缺點也明確地指出了出來，包括如何確定層數、如何處理資料以及在實際機器閉環中如何運作——這些都還是未解決的問題。</p>
+<p>乍一看，這份文件裡沒有一句口號；全部都包括消融表、成本曲線和重新編碼的資料清單。Yann LeCun 曾多次表示，理解世界、預測行動後果和進行計劃是高智商的基本能力。將口號轉化為其他人可以下載、複製和在此基礎上進行的實驗，可能比口號本身更有說服力。</p>
+<p>這條道路能否在幾年內撼動大型模型的統治地位，現在還很難說。但答案並不取決於任何人的預測；這取決於有多少研究人員會載入這些權重、進行實驗並決定下一步。</p>
+<p>你認為世界模型和大型語言模型這兩條路徑最終會趨於一致，還是漸行漸遠？歡迎在評論區留下您的想法。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/2ea9ead5df8dfa777ecf4136c99a198f9ccf15f5f2a7ccbd2bd54c126aa4d472.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/2ea9ead5df8dfa777ecf4136c99a198f9ccf15f5f2a7ccbd2bd54c126aa4d472.md" download="H-JEPA分层世界模型：Yann LeCun团队架构、实验与技术路线解析.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Yann LeCun" class="entity-link person-link">Yann LeCun</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=AMI" class="entity-link company-link">AMI</a>, <a href="/search/?q=Meta" class="entity-link company-link">Meta</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=H-JEPA" class="entity-link product-link">H-JEPA</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

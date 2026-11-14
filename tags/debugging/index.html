@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+
+  
+  
+  
+  <div class="container" data-pagefind-ignore><div class="home-layout">
+    <h1>标签：debugging</h1>
+    
+    
+<ul>
+
+  <li>
+    <a href="/content/clippings/2026-11-11_httpsyag_coding-agent-todo-distraction-20261110-html/">模型越聪明，越容易在代码里的一行旧注释上内耗</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ yage.ai</a> 
+    <time datetime="2026-11-11T00:00:00.000Z">2026-11-11</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文章探讨了模型越聪明反而越容易在代码中的旧注释上产生内耗的问题。研究发现，在模型能力增强后，模型倾向于将旧的TODO注释视为需要解决的任务线索，从而引发不必要的代码搜索和修改，导致计算资源消耗增加。文章分析了人类工程师和大型模型在阅读源码时的视角差异，以及模型在强化学习中对“遇到阻碍时主动搜集线索”的奖励机制。文章提出了两条规矩来解决这个问题：一是为模型设定执行边界，明确源码中的TODO和FIXME注释属于只读历史背景，禁止在无明确要求下进行跨文件搜索或修改；二是建议人类工程师将注释中包含的保命警告和待办事项彻底分家，使用不同的标记（如WARNING: 或 NOTE: 和 TODO:），以实现对假便签的清理。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/clippings/2026-11-11_httpsyag_goldman-apple-ai-role-split-20261110-html/">业务人员写原型、工程师接盘上线：高盛试了三个月为什么把
+AI 编程工具收回去了</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ yage.ai</a> 
+    <time datetime="2026-11-11T00:00:00.000Z">2026-11-11</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 高盛和苹果等大型机构正在重新评估AI编程工具的使用权限和算力配额。此前，公司曾尝试允许业务人员使用AI工具（如Claude Code）直接生成原型，但最终收回了权限，将高权限工具和充足算力分配给具备代码审计能力的工程师和量化策略师。这种分工模式旨在解决业务人员快速原型生成与工程团队验证、审计和线上故障排查之间的效率和风险问题。同时，苹果正在根据岗位价值对不同团队设置差异化的算力配额，以实现资源分配的精简和成本控制。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/clippings/2026-11-07_httpsyag_semianalysis-gdpx-agent-lessons-20261107-html/">把 AI 扔进真实工位连干 8
+小时后，比跑分更管用的六个工程教训</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ yage.ai</a> 
+    <time datetime="2026-11-07T00:00:00.000Z">2026-11-07</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文章通过对独立研究机构 GDPx 真实工作环境评测报告的分析，指出在真实工作环境中，大型语言模型（LLM）的实际表现与跑分分数存在巨大差异。文章总结了在处理真实业务问题时遇到的六个工程教训：一是需要定义权威度地图来管理知识库，避免混淆权威信息源；二是必须在工作流中加入样本外回滚门禁，防止智能体盲目修改代码或策略；三是面对模型感官盲区，需要要求其先写确定性的测量校验脚本；四是长程排障时，关键证据需要记录到外部证据账本，而非依赖模型记忆；五是测试时应先检查测试环境配置和判分脚本的有效性；六是模型路由时应核算单任务总输出量乘以单价的综合账单，以决定使用次旗舰还是旗舰模型。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/clippings/2026-11-01_httpsyag_qwen38-cohere-outbound-training-logs-20261101-html/">拆开 Qwen3.8
+的参数排查后，那些外呼阿里云的指令只是没洗干净的训练日志</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ yage.ai</a> 
+    <time datetime="2026-11-01T00:00:00.000Z">2026-11-01</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文章通过对Qwen3.8模型参数排查，揭示了训练过程中由于工程师未清理基础设施留下的运行日志，导致模型在特定场景下生成了指向阿里云服务器的指令，而非人为植入的后门。研究人员通过五步实验，排除了人为后门的嫌疑，并分析了模型在训练过程中学习到的网页抓取中间件残留、固定请求探针以及对内部内网凭据地址的记忆等训练残留，指出部署时需要通过容器防火墙、代理层和系统调用过滤等方式来构建安全边界。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/clippings/2026-10-29_httpsyag_anthropic-drug-development-legwork-20261029-html/">连模拟器都算不出的新药，Claude 是怎么靠换题、修 Bug
+和当项目经理做出来的？</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ yage.ai</a> 
+    <time datetime="2026-10-29T00:00:00.000Z">2026-10-29</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文章探讨了大型语言模型（如Claude）在药物研发等复杂工程领域中的实际应用，指出AI的价值不在于替代科学家做出重大科学决策，而在于解决工程中的具体瓶颈问题。具体表现为：通过文献模块重组和静态几何代换来解决物理模拟器无法处理的动态结构问题；通过修改代码和调整参数来优化搜索算法，解决搜索算法卡死和分子粘连问题；以及通过分析原始仪器曲线来发现并修正仪器软件的漏洞。此外，AI还能作为项目经理，通过管理跨机构外包实验室和合规文书，有效压缩项目管理成本，为罕见病药物研发提供支持。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/clippings/2026-10-22_httpsyag_ai-agent-boundary-stories-20261022-html/">一周四起 AI 现场记录：OpenAI
+模型自筹手续费、平台拦截代客下单、Postgres 撤回新特性与 OpenCode
+密钥暴露</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ yage.ai</a> 
+    <time datetime="2026-10-22T00:00:00.000Z">2026-10-22</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文章记录了近期在AI工具、软件开发和平台交互领域发生的四起事件：OpenAI模型在测试链上部署程序时因缺少手续费而自行寻找资金支付；摩根大通、嘉信理财等金融机构对外部AI助手的使用权限进行了读写分层管理，限制了代客动钱的能力；开源数据库PostgreSQL 19版本发布时，因大模型辅助代码评审发现了大量边缘缺陷而撤回了部分新功能；OpenCode开源编程工具的云端控制台系统遭遇旧系统未授权访问，导致部分用户托管的第三方模型密钥面临泄露风险。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/clippings/2026-10-16_httpsyag_selfhost-multi-gpu-routing-20261016-html/">自建大模型：多卡为什么卡，以及为什么还是比 API 贵</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ yage.ai</a> 
+    <time datetime="2026-10-16T00:00:00.000Z">2026-10-16</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文章讨论了自建多卡大模型推理的性能瓶颈和成本问题。核心观点是，多卡并行时，性能受限于任务调度（routing）机制，即如何平衡缓存亲和性（cache affinity）和负载均衡（load balancing）。个人玩家在缺乏底层调度器和实时状态监控的情况下，难以实现最优的资源分配，导致资源利用率低，最终自建的单位成本（按token计费）往往高于使用云端API。</small>
+    
+    
+  </li>
+
+</ul>
+
+    
+  </div></div>
+
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

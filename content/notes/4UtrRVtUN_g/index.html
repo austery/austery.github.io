@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>构建高质量 AI 代码审查 Agent 的核心方法与架构</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">构建高质量 AI 代码审查 Agent 的核心方法与架构</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-26</span>
+    
+
+    <header class="article-header">
+      
+      <h1>构建高质量 AI 代码审查 Agent 的核心方法与架构</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/code-review/">code-review</a>
+      
+        <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+      
+        <a class="tag-link" href="/tags/prompt-engineering/">prompt-engineering</a>
+      
+        <span class="tag-pill tag-pill--no-page">software-testing</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">Greptile 联合创始人 Dax 分享了构建 AI 代码审查 Agent 的核心经验。演讲涵盖针对代码库上下文索引、历史 PR 数据集微调提示词、模型反转策略以弥补不同大模型的盲点、沙箱环境端到端自动化测试，以及多模型分级推理预算分配以平衡审查成本与质量。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=4UtrRVtUN_g" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-26T00:00:00.000Z">2026-10-26</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>9 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#greptile-%E8%83%8C%E6%99%AF%E4%B8%8E%E6%9E%84%E5%BB%BA%E5%AE%A1%E6%9F%A5-agent-%E7%9A%84%E5%88%9D%E8%A1%B7">Greptile 背景与构建审查 Agent 的初衷</a></li><li class="outline-h3"><a href="#griptile-%E7%9A%84%E4%B8%89%E5%A4%A7%E6%A0%B8%E5%BF%83%E4%BC%98%E5%8A%BF">Griptile 的三大核心优势</a></li><li class="outline-h3"><a href="#%E6%9E%84%E5%BB%BA%E5%9F%BA%E7%A1%80%E5%AE%A1%E6%9F%A5-agent-%E4%B8%8E%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98">构建基础审查 Agent 与常见问题</a></li><li class="outline-h3"><a href="#%E4%BC%98%E5%8C%96%E6%96%B9%E5%90%91%E4%B8%80%E4%BC%98%E5%8C%96%E6%8F%90%E7%A4%BA%E8%AF%8D%E4%B8%8E%E8%A7%84%E9%81%BF%E7%BB%86%E6%9E%9D%E6%9C%AB%E8%8A%82">优化方向一：优化提示词与规避细枝末节</a></li><li class="outline-h3"><a href="#%E4%BC%98%E5%8C%96%E6%96%B9%E5%90%91%E4%BA%8C%E6%9E%84%E5%BB%BA%E5%8E%86%E5%8F%B2-pr-%E6%95%B0%E6%8D%AE%E9%9B%86%E4%B8%8E%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0">优化方向二：构建历史 PR 数据集与持续更新</a></li><li class="outline-h3"><a href="#%E4%BC%98%E5%8C%96%E6%96%B9%E5%90%91%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%8F%8D%E8%BD%AC%E7%AD%96%E7%95%A5model-inversion">优化方向三：模型反转策略（Model Inversion）</a></li><li class="outline-h3"><a href="#%E4%BC%98%E5%8C%96%E6%96%B9%E5%90%91%E5%9B%9B%E6%B7%B1%E5%B1%82%E4%BB%A3%E7%A0%81%E5%BA%93%E4%B8%8A%E4%B8%8B%E6%96%87%E4%B8%8E%E6%B4%BB%E7%BB%B4%E5%9F%BAliving-wiki">优化方向四：深层代码库上下文与活维基（Living Wiki）</a></li><li class="outline-h3"><a href="#%E4%BC%98%E5%8C%96%E6%96%B9%E5%90%91%E4%BA%94%E7%AB%AF%E5%88%B0%E7%AB%AF%E8%87%AA%E4%B8%BB%E6%B5%8B%E8%AF%95%E4%B8%8E%E7%8E%AF%E5%A2%83%E6%9E%84%E5%BB%BA">优化方向五：端到端自主测试与环境构建</a></li><li class="outline-h3"><a href="#%E4%BC%98%E5%8C%96%E6%96%B9%E5%90%91%E5%85%AD%E5%88%86%E7%BA%A7%E6%8E%A8%E7%90%86%E9%A2%84%E7%AE%97%E4%B8%8E%E9%99%8D%E4%BD%8E%E5%AE%A1%E6%9F%A5%E6%88%90%E6%9C%AC">优化方向六：分级推理预算与降低审查成本</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="greptile-背景与构建审查-agent-的初衷" data-reading-heading="">Greptile 背景与构建审查 Agent 的初衷</h3>
+<blockquote>
+<blockquote>
+<p>嗯，大家好，我叫 Dax。我是名为 Griptile 的公司的联合创始人之一，我们构建的 Agent 能够在拥有完整代码库上下文的前提下审查和测试拉取请求（PR）。通过审查和测试这些 PR，我们揭示主要来自 AI 生成代码中的 Bug、逻辑错误以及代码质量问题。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um all right, my name is Dax. I am one of the co-founders of a company called Griptile and we build agents that review and test pull requests with the full context of the code base. And by reviewing and testing these pull requests, we reveal bugs, logical errors, code quality concerns, primarily from the AI-generated code.
+</details>
+<p>现在，给大家一个规模概念：每天有成千上万家公司使用 Griptile。GitHub 上约有 1% 的 PR 会经过我们，涉及多种不同类型的代码库，无论是 Nvidia 的 CUDA 代码库，还是 Coinbase 的钱包代码库，以及许多其他代码库。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Now, to give you a sense of scale, many thousands of companies use Griptile every day. About 1% of all pull requests on GitHub go through us and a variety of many different types of code bases, whether it's the CUDA code base at Nvidia or the wallet code base at Coinbase and many, many others.
+</details>
+<p>偶尔，我们也会遇到一些公司，对于它们来说我们其实并不是合适的代码审查或代码测试产品。它们的需求非常特殊、非常深奥，以至于自己构建反而更有利。每当发生这种情况时，我们往往会免费为它们提供帮助。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And every now and then, we meet a company where we're actually not the right code review or code testing product for them. Their needs are so specialized and so esoteric that it's actually beneficial for them to build their own. And when that happens, we tend to help them for free.
+</details>
+<p>这有两个原因：第一，关于如何将这件事情做得非常非常出色，我们拥有大量的专业知识；第二，我们能学到很多关于未来如何更好地服务这类客户的经验。在本次演讲中，我想告诉大家我们平时告诉他们的内容，也就是如何自己构建一个真正优秀的 AI 代码审查 Agent。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+There's two reasons for this. One, we have a lot of specialized knowledge about how to do this really, really well. And second, we get to learn a lot about how we can serve customers like those in the future. And in this presentation, I want to tell you what we tell them, which is how to build a really great AI code review agent yourself.
+</details>
+<h3 id="griptile-的三大核心优势" data-reading-heading="">Griptile 的三大核心优势</h3>
+<p>大家喜欢 Griptile 的点大致有三处，我接下来会逐一讲解如何自己实现它们。第一点是<strong>代码库上下文</strong>。当客户在他们的 PR 上使用 Griptile 时，他们会发现它确实理解他们的代码库。事实上，在成为代码验证公司之前，我们是一家做代码库上下文的公司。早在 2023 年，我们就在教语言模型如何理解非常庞大的代码库，因此我们变得非常擅长为代码建立索引。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Now, there's kind of three things that people like about Griptile and I'm going to talk through how to implement those yourself. The first one is code base context. When customers use Griptile on their pull requests, they find that it really understands their code base. As a matter of fact, before we were a code validation company, we were a code base context company. We were teaching language models from 2023 how to understand the very large code bases and as a result of that, we got very good at indexing code.
+</details>
+<p>大家喜欢 Griptile 的第二点是它会运行你的代码：它会在一个加载了完整丰富依赖项的沙箱中启动你的技术栈，并使用计算机操作（computer use）到处点击、通过对 API 端点进行压力测试等手段来进行测试。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Uh the second thing that people like about Griptile is that it runs your code in the sense that spins up your stack in a fully loaded dependency-rich sandbox and it clicks around and tests things using computer user through pressure testing API endpoints and so on.
+</details>
+<p>第三点是，我们在推理资源的分配上实际上非常高效。我们会为审查和验证过程中的每个子任务挑选合适的模型和适当的推理预算。因此，我们能够比内部自研工具或任何竞争对手获得高得多的性价比（performance per dollar）。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And the third thing is we're actually very efficient allocators of inference. We pick the right model, the right quantity of inference budget for each subtask in the review and validation process. As a result of that, we're able to get a lot more performance per dollar than an internal tool could or any competitor could.
+</details>
+<p>所以，听这个演讲大致有两个理由：第一，你想自己构建审查 Agent；第二点稍微微妙一些，如果你正在为公司物色审查或测试 Agent，你想了解究竟是什么造就了一个优秀的、乃至卓越的 Agent。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, there's kind of two reasons that you would want this presentation. Uh the first one is you want to build your own review agent. And the second reason, which is a bit more subtle, is if you're trying to pick a review or testing agent for your company and you want to understand what makes a good one and what makes a great one.
+</details>
+<h3 id="构建基础审查-agent-与常见问题" data-reading-heading="">构建基础审查 Agent 与常见问题</h3>
+<p>好，那我们就直接开始。现在是一张白纸：你是公司平台团队的一员，或者你只是团队里那个对 AI 着魔的成员，你想为公司构建一个审查验证器。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+All right. So, let's start right in. Now, blank slate. You are part of the platform team at your company or you're just the uh local uh AI psychotic member of your team and you want to build the review validator of your company.
+</details>
+<p>如今各家公司都在写大量的代码，大家都在进行“氛围编程”（vibe coding）。当然，工程师在 vibe coding，其中有些人离太阳太近了（过于激进）；市场营销人员也在写代码。新的问题随之而来，那就是审查瓶颈、验证瓶颈。这就是你想要解决的问题。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um Companies are writing lots of code. People are vibe coding. Uh you have, of course, engineers vibe coding. Some of them are a little too close to the sun. Uh you have marketing people writing code. And uh the new problem is the review bottleneck, the validation bottleneck. And so, that's what you want to address.
+</details>
+<p>你应该做的第一件事是给自己搞一个沙箱。这里有很多公司会向你兜售沙箱；你也可以直接使用 Firecracker 之类的工具。然后你需要把一个 Agent 放进沙箱里。这个 Agent 可以是 Codex 或 Claude Code。个人而言，我建议保持模型独立性，具体原因我稍后会讲，所以你可以使用像 Open Code 或 Pi 这样的开源框架作为你的 Harness。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The first thing that you should do is you should get yourself a sandbox. There's many, many companies here that will sell you a sandbox. Uh you can also just use firecracker or something like that. And you'll want to put an agent in that sandbox. Uh the agent can be Code X or Cloud Code. Personally, I recommend going model independent for reasons that I will get into, so you can use something like Open Code or Pi as your harness. Those are both open source.
+</details>
+<p>然后你需要连接你的 GitHub 或 GitLab，配置 PR Webhook，让它在有任何 PR 创建时将拉取请求的内容发送给它。Agent 可以配置类似这样的提示词：“嘿，审查这个 PR 并返回一些反馈。”接着你可以使用 GitHub 的 Review API 将结果接驳回去。非常简单。事实上，许多人认为构建一个审查 Agent 仅此而已。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And uh you will need to then connect your GitHub or your GitLab. Have a PR webhook send it the contents of a pull request to any pull requests that are opened. The agent can have some type of prompt that just says, "Hey, review this and send back some feedback." And then you can wire that back using GitHub's review APIs. Very simple. In fact, many people think that's actually all it takes to build a review agent.
+</details>
+<p>当你开始使用它时，会有几个地方出问题。不过实际流程确实会跑通：PR 发起，内容送给 Agent，大约 5 分钟后你就会在 PR 上收到一些反馈。但在你构建这个系统的过程中，以下几个问题将会浮现：</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+There's a few things that are going to go wrong when you start using this. But what will happen is you will, in fact, have a pull request go live. The contents will go to an agent and about 5 minutes later you will get some feedback on your pull request. But here's what's going to go wrong in the time that it takes you to build this.
+</details>
+<p>第一个问题是你将漏掉大量的 Bug。事实证明，Bug 的体量实际上极其庞大。甚至不久前我看到一条推文说 Bug 是“分形无限”的（fractally infinite）。所以特定的一段代码里的 Bug 永远找不完。这就是第一个会出问题的地方：漏报 Bug。当然，你的系统最核心的任务，就是至少要防止极度灾难性的宕机和事故。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The first one is you're going to miss a lot of bugs. As it turns out that actually bugs are interactively large. They're In fact, I saw a a tweet not very long ago that said that bugs are fractally infinite. So you will never run out of a of bugs in a particular piece of code. That's the first thing that's going to go wrong is you're going to miss bugs. Of course, that's the one thing that your system needs to do is to prevent at least very catastrophic outages and incidents.
+</details>
+<p>第二个问题是它会缺失上下文，并且会误解代码库某些部分的工作原理。它可能无法理解你的代码库未来要往什么方向走，无法理解某个具体部分是如何工作的，或者无法理解你其中一个库是如何运行的。可能你们公司经历了 2010 年代的微服务末日浩劫后至今没有缓过来，因此手头有成千上万个代码仓库，必须拥有所有仓库的上下文才能开展工作。这就是第二个会出问题的地方。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Second thing that's going to happen is it's going to miss context and it's it's going to misunderstand parts of how your code base works. It maybe won't understand where you're going with your code base. It won't understand how a specific part of it works. It maybe will not understand how one of your libraries works. It's possible you're one of those companies that never recovered from the microservices apocalypse of the 2010s and so you just have thousands and thousands of repos and you have to have context of all of them to be able to operate. So that's the second thing that's going to go wrong.
+</details>
+<p>第三个问题是它会非常昂贵。我认为人们对这一点会感到非常惊讶。通常从那些尝试做这件事的人身上可以看到，他们会发现使用 Coding Agent 审查单个 PR 的成本在 3 美元到高达 25 美元之间。这些 Token 累计起来极其迅速，悄无声息地就变得极其昂贵。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The third thing is it'll be very expensive. I think people are very surprised by this. So generally from people who have seen try to do this, they'll find that they're spending between $3 and up to $25 per pull request on reviewing it using coding agents. These tokens can add up really really fast. Very quietly they got very expensive.
+</details>
+<p>他们会发现的第四个问题是吹毛求疵的评论（nitpicky comments）。这一点的重要性可能超出你的想象。吹毛求疵的评论是指那些技术上正确但过于死板苛刻的评论。出现这类评论会导致两方面的严重问题：如果你是一个阅读这些评论的人类，它们会非常恼人，就像狼来了的故事一样。你会看到密密麻麻的大量评论，不得不逐条阅读并判断哪些只是细微的代码风格抱怨，哪些才真正是灾难性的严重问题，这非常折磨人。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The fourth problem they'll find is nitpicky comments. Now this matters more than you might think. Nitpicky comments are comments that are technically correct but overly pedantic. There's two things that go wrong when you have nitpicky comments. If you are a as a human reading those comments, they're very annoying. They're like a boy that cries wolf. You'll just see lots and lots of comments and it'll be kind of annoying for you to just read through them and figure out which ones are just minor stylistic complaints and which ones are actually catastrophic problems.
+</details>
+<p>第二个危害是它们会毁掉你的代码库。因为通常审查 Agent 的工作机制是在 GitHub 上留下评论，然后你的 Coding Agent 会获取并解决这些评论。而 Coding Agent 是不加甄别的，它们看到审查评论就会全盘照办，最后你就会得到极其繁琐、防御性过度的代码，而我们发现 Coding Agent 在编写这种防御性代码方面格外擅长。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The second thing that will go wrong is they will wreck your code base because typically the way the review agents work is they'll leave comments on GitHub and your coding agent picks them up and resolves them. And coding agents are not discerning. They're going to look at review comments and just address all of them and you'll end up with extremely painfully defensive code as we found the coding agents are particularly astute at writing.
+</details>
+<p>接下来的问题是，每次你在同一个 PR 上运行审查 Agent，总会莫名其妙地发现新的 Bug，也就是说它会在 PR 中没完没了地抓出新东西，非常恼人。正如我刚才所说，Bug 似乎是分形无限的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The next thing that go wrong is that every time you run a review agent on the same pull request, you will somehow find new bugs in the sense that it will keep catching new things in the pull request very annoyingly, and you will And like I said, bugs will appear to be fractally infinite.
+</details>
+<h3 id="优化方向一优化提示词与规避细枝末节" data-reading-heading="">优化方向一：优化提示词与规避细枝末节</h3>
+<p>因此，你要做的第一件事，也就是最立竿见影的低垂果实，就是优化提示词。你一开始用的是非常简单的提示词，比如“审查此 PR 并按 GitHub API 模式格式输出评论”。一般来说，围绕 Bug 有两个主题：<strong>寻找特定类型的 Bug</strong>，以及第二点，<strong>跳过琐碎的挑刺</strong>。这就是你的提示词需要重点围绕的方向。你需要明确指定具体的 Bug 类型，你可以针对代码库中过去发生过的宕机和事故做一些内部数据分析，找出你们最容易产生哪些类型的 Bug，建立一个分类目录，然后让提示词去寻找那些特定类型的 Bug。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, the first thing that you want to do, the lowest hanging fruit, what is you want to optimize the prompt. You started with a very simple prompt, something like review this PR and then output the comments in GitHub's API schema format. Generally, there's two themes within the bugs. Look for specific bug types, and second, skip the nitpicks. And that's what you want to orient your prompt around. You'll want to ask for specific bug types, and you can kind of do some internal data science on existing outages and incidents that have happened in your code base and figure out what types of bugs you have the highest propensity to produce. Create a catalog of them, and then have your prompt look for those specific bug types.
+</details>
+<p>第二点是，你必须明确告知它什么是琐碎挑刺（nitpick），并要求不要去寻找它们。挑刺可以是任何琐事，比如质疑为什么在某个特定地方没有加三层防御，或者为什么错误处理写得略显粗糙。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The second is you'll need to expressly tell it what a nitpick is and not to look for them. And nitpicks can be anything from asking why there isn't three layers of defense on this particular thing, or why error handling is done in this slightly shoddy way.
+</details>
+<p>当你修改这些提示词时会遇到的情况是，仅仅修改提示词中很小的一点，就会对 Agent 在 PR 上编写的评论数量产生异乎寻常的巨大影响。这相当吓人，因为这意味着你根本不知道它是否遗漏了 Bug，你不知道反事实情况（counterfactual）。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Now, the thing that you'll run into when you change these prompts is when you change a small thing in the prompt, it'll have a weirdly big impact on the number of comments that your agent is writing on your pull request. This is quite scary because it means you don't really know if it's missing a bug or not. You don't know the counterfactual.
+</details>
+<p>验证 Agent，或者实际上任何审查者或测试工具，都能够告诉你 Bug 的存在，但遗憾的是无法证明 Bug 的不存在。这在某种程度上是该模式的局限性。而使这一问题尤为棘手的，是那些极其罕见且日益稀少的 Bug。事实上，根据我们掌握的数据分析，大约每一千个 PR 中才会出现一个通常意义上的灾难性 Bug，或者说每一千行代码中可能才有一个灾难性 Bug。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The validation agents, or really any reviewer or tester, can can tell you about the presence of bugs, but it fortunately can't tell you about the absence of bugs. That's that's sort of a a limitation of the format. And what makes this particularly difficult are bugs that are extraordinarily rare and getting rarer by the day. In fact, according to our data science, only about one out of every thousand pull requests has a generally catastrophic bug in it. Or maybe one out of every thousand lines of code has a catastrophic bug in it.
+</details>
+<p>正因这类 Bug 非常罕见，你可能发布了一个自认为非常优秀的 Agent 版本，但它却暗中漏掉了 PR 里的灾难性 Bug，而你很长时间都不会察觉，因为你们本就不常产生那种 Bug。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And so, because these bugs are very rare, you might release a version of your agent that you think is very good, but it secretly misses a catastrophic bug in a pull request, and you wouldn't know for a long time because you don't produce those bugs very often.
+</details>
+<h3 id="优化方向二构建历史-pr-数据集与持续更新" data-reading-heading="">优化方向二：构建历史 PR 数据集与持续更新</h3>
+<p>这就引出了第二项改进：你需要一个<strong>历史 PR 数据集</strong>。如果你们公司习惯良好、每次代码库出现问题都会详细记录归档，那做起来相对容易。如果具备这一点，你就会有一份以往导致过宕机和事故的 PR 列表。你需要对它们进行编目，然后基本上让审查 Agent 的各个版本都在这些 PR 上跑一遍，看看它能以多高的频率捕获这些 Bug。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And so that brings us to the second improvement. You will want a data set of historical PRs. This is relatively easy if you're one of those companies that very nicely catalogs every time something goes wrong in your code base. If you have that, then you'll have a list of pull requests that have caused outages and incidents in the past. You'll want to catalog them and then essentially have any version of your review agent run through those and see with what frequency it can catch those bugs.
+</details>
+<p>这能让你更有底气地去微调提示词。但与此同时，Bug 的有趣之处在于，在不断变化的世界中，Bug 的拓扑结构和本体结构是随时间演变的。因此你需要一个实时更新的数据集。这非常棘手，因为除非你拥有数以百万计的 PR，否则实际上很难在 Bug 类型上获得相当高的覆盖率。诚然，大约 80% 到 90% 的 Bug 只是过去错误的重蹈覆辙，但随着 Coding Agent 越来越强，它们会开始犯下全新的错误。它们会以我们此前未曾预料到的全新方式失效。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Now, this will allow you to tune the prompt a little bit more confidently. But at the same time, the interesting thing about bugs is in a changing world, the topology and ontology of bugs changes over time. And so you'll need to have a real-time updating data set. And this is tricky because unless you have millions and millions of pull requests, it's actually hard to have reasonably high coverage of bug types. It's true that about 80 or 90% of your bugs will be just repeats of prior mistakes, but increasingly as code agents get good, they're going to start making novel mistakes. They'll fail in new ways that we've not anticipated before.
+</details>
+<p>而这正是你开始遭遇局限的地方。顺便插一句，这正是我们在 Griptile 所做的事情，不同之处在于我们实际拥有来自众多不同公司的大量代码，可以在极大规模的 PR 语料库上进行测试，因此能够非常自信地改进我们的 Agent。这也是为什么我们能够在边际上榨取少量性能优势，而内部自研审查 Agent 却做不到的原因之一。不过，特别是针对你所在公司的特定场景，利用内部数据做到这一步也能走得相当远了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And so this is where you will start to hit limitations. Now, quick side note, this is kind of what we do at Reptile, except we actually have a lot of code from a lot of different companies and we can test across a very, very large corpus of pull requests and therefore improve our agent very confidently. It's one of the reasons why we're able to eke out little bits of performance on the margins in ways that internal review agents can't. But you can get decently far, especially for your particular company, to do this with your internal data.
+</details>
+<h3 id="优化方向三模型反转策略model-inversion" data-reading-heading="">优化方向三：模型反转策略（Model Inversion）</h3>
+<p>接下来要做的是<strong>模型反转</strong>（Model Inversion）。如果在座有人参加了我今年早些时候在旧金山 AI Engineer 大会上的演讲，我当时详细讨论了 Coding Agent 失效的各种方式。通过那项研究，我发现了一个有趣的规律：Claude 模型或 Codex 模型所产生的 Bug 类型彼此之间其实大不相同，在许多方面都存在差异。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The next thing you want to do is model inversion. So, for in case anyone was at my talk earlier this year in San Francisco at AI Engineer, I talked a lot about the ways in which coding agents fail. And I discovered an interesting pattern through that research, which is that the types of bugs produced by Claude models or Codex models are actually quite different from each other. And they're different in a number of ways.
+</details>
+<p>举个例子，Claude 模型产生差一错误（off-by-one errors）的概率大约是 GPT 模型的三倍；而另一方面，GPT 模型出现身份鉴权绕过（auth bypasses）的可能性要明显高于 Claude 模型。据我所知，这些完全只是后训练（post-training）带来的副产物。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+As an example, Claude models are something like three times more likely to produce one-off errors than GPT models. GPT models, on the other hand, are significantly more likely to produce auth bypasses than Claude models. And these are all just artifacts of the post-training, as far as I understand.
+</details>
+<p>为了防止这种情况，你会发现如果用相同的模型去审查由该模型编写的代码，捕获到的 Bug 实际上会相对较少，因为它们在审查时的失效模式与生成代码时如出一辙。因此你需要将模型反转：如果你用 Claude Code 编写了代码，就要使用 GPT 模型来审查；以此类推。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Now, to prevent this, you'll find that if you're using the same model to review the code written by the same model, um you'll actually have relatively fewer bugs caught because they fail in the same ways during review that they do during code generation. And so you'll want to invert the model. If you've used Claude code to write the code, you'll want to use a GPT model to review it and so on.
+</details>
+<p>要做到这一点，前 80% 的场景相对直接，但剩下的 20% 却相当棘手。如果你使用 Coding Agent，会注意到它们通常会留下某种指纹，告诉你特定 PR 使用了哪种 Coding Agent。例如，Codex 会采用 <code>codex/分支名</code> 的格式命名分支；或者 Claude 会在 PR 描述和提交信息中写上 <code>co-authored by Claude</code>。大约 80% 的情况下确实如此。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Now, doing this is somewhat straightforward for the 80th percentile and quite tricky for the last 20. So, if you're using coding agents, you'll notice they leave some type of fingerprint to tell you what coding agent was used for a particular pull request. For instance, Codex will name branches in a codex/branch name format. Or Claude is going to write a co-authored by Claude in the PR description and commit message. And about 80% of the time, this will be true.
+</details>
+<p>但在最后的 20% 中，当你碰巧手动创建了分支名，或者因为其他原因可能使用了不同的 Coding Agent 时，想要查明生成过程中使用了哪个模型就困难得多。你必须制定某种启发式规则来推断所用模型的特征。通常你可能拥有一个内部编目，由大家上报当下正在使用哪些 Coding Agent，或者收集来自开发机器和工程师电脑的某种遥测数据。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+In the final 20, when you happen to manually create a branch name or there was some other reason that a different coding agent was perhaps used, it's significantly harder to figure out which model was used during generation. And you have to develop some type of heuristics to figure out what are the signatures of models being used. Often you might have an internal catalog where people report what coding agents are using these days or have some type of telemetry that's coming out of your dev machines and and your engineers' computers.
+</details>
+<p>我们发现，如果进行模型反转，捕获率会提高 10%。这听起来可能很小，但你必须明白，就事故和宕机而言，10% 实际上是相当大的差距。这意味着如果你不采用模型反转，出问题的概率要高出 10%，这可能是极具毁灭性的。因此我们强烈建议在流程中采用某种形式的模型反转。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+We found that there's a 10% higher catch rate if you flip models. And this might sound very small, but you have to know that 10% is in terms of incidents and outages is actually quite a lot. It means that there's a 10% higher chance that something will go wrong if you're not using model inversion, which can be quite catastrophic. And so we highly recommend that you use some type of model inversion in your process.
+</details>
+<h3 id="优化方向四深层代码库上下文与活维基living-wiki" data-reading-heading="">优化方向四：深层代码库上下文与活维基（Living Wiki）</h3>
+<p>第三项改进是<strong>代码库上下文</strong>。这是我非常关心的事情。在我们做代码验证之前，我们就在做代码库上下文。我们当时试图寻找在超大代码库上进行 RAG 的更好方法。甚至直到今天，人们还认为 grep 实际上已经解决了代码库上下文的所有问题。我个人认为这并不符合事实，原因有二：第一，grep 极其不精准；第二，它非常昂贵。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The third improvement is code base context. Now, this is something that I care a lot about. Before we were doing code validation, we were doing code base context. Uh we were trying to figure out better ways to do rag over very large code bases. And even today, people consider grep to effectively solved all of code base context. I actually think that's not true for a number of reasons. One, grep is extremely imprecise. And second, it's very expensive.
+</details>
+<p>给大家一个数量级概念：去年 GDP 增长中有几个百分点来自于推理；而在推理中，非常大的一部分比例来自 Coding Agent。如果你去观察 Coding Agent 的执行追踪轨迹，会发现 Coding Agent 消耗的大部分 Token 全是一回事：grep、读文件、将文件内容写入缓存。这意味着 GDP 增长中有相当大的一部分比例就是“grep、读文件、写缓存”。这非常糟糕。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+To give you some sense of scale, single-digit percentage points of GDP growth last year were inference. A very large percentage of inference was coding agents. And if you actually look at a coding agent trace, the vast majority of tokens used by coding agents are all the same. grep, file read, cache write for the file contents. That means a non-trivial percentage of GDP growth is grep, file read, cache write. That's very bad.
+</details>
+<p>这是因为 grep 极其不精准，它会读取巨量的文件；我不知道，按 Token 收费的公司或许存在某种不良动机去变着法子多烧 Token。但即便如此，你会发现必须采用更精准的手术式方法来确定应该读取何处。我们的做法是构建一个内部知识库：我们基本上会检查整个代码库的所有不同组成部分，对它们进行编目和索引，标明：“好，这里是鉴权模块。它的工作机制是这样的，数据流是这样的，这是流程图，这是所涉及的每一个文件。”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And this is because grep is very imprecise. It's reading files in very large quantities, and I don't know, there's perhaps some adverse incentives for companies paid by the token to figure out ways to burn more tokens. But even so, you'll find that you'll need to use slightly more surgical methods of figuring out where you should be reading. And the way we do this is we produce an internal knowledge base where we essentially check across the entire code base all the different parts, catalog them, and then index saying, "Okay, well, this is authentication. Here's how it works. Here are the flows. Here's a diagram of the flows. Here's every file that's involved."
+</details>
+<p>代码库上下文之所以至关重要，举个例子，比如当你试图捕获鉴权绕过缺陷时：要查明是否存在鉴权绕过实际上非常困难，因为你需要非常明确地了解当你处于代码库该特定区域时，当前究竟是否处于已鉴权的环境中。这非常棘手。因此你会发现必须拥有某种代码库上下文才能胜任这项工作。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+One example of where code base context matters is, for instance, when you're trying to catch an off bypass. It's actually very difficult to figure out if an off bypass has occurred because you need to have a pretty concrete understanding of whether you're in an authenticated environment when you're in that part of the code base or not. And that's very tricky. And so, you'll find that you will need some type of uh of sort of code base context to be able to do this.
+</details>
+<p>虽然我一直围绕 Bug 这个概念展开，但即便代码没有 Bug，它也可能非常非常糟糕。一方面它的质量可能极其低劣，另一方面它可能完全没有实现作者明示的意图。最近我看到一个帖子说大家越来越把 Slack 当成 IDE 来用。我觉得这有点滑稽，但与此同时，一条 Slack 消息里包含的明示意图并不多。你可能顶多说上一两句话，要求 Agent 去修个东西，这意味着你的指令存在巨大的模糊性。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Now, I've been very centered around the concept of bugs, but code can be very, very bad even if it's not buggy. For one, it can be terrible quality, but second, it can just not fulfill the expressed intent of the author. Recently, I saw a post that said that people were increasingly using Slack as their IDE. Now, I think that's a little funny, but at the same time, there's not that much ex- expressed intent in a Slack message. You're only saying maybe a sentence or two, if even, asking an agent to go and fix something, which means the there's a lot of ambiguity in your instruction.
+</details>
+<p>导致的结果就是，你可能会发现 Coding Agent 要么曲解了你的指令，要么纯粹因为指令过于含糊而不知道具体该做什么。因此，你写出的代码即便在逻辑上正确无误，实际上也可能完全南辕北辙。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+As a result of this, you might find that the coding agent has either misinterpreted your instructions or just it was too ambiguous and it didn't know exactly what to do. And so, your correct code can actually still be quite wrong.
+</details>
+<p>我们对抗这一问题的手段之一，就是给 Agent 提供越来越多的上下文。我们发现最重要的两类上下文是<strong>文档和工单</strong>（docs and tickets），当然还有来自代码库索引器或知识库的代码库本身。如果你给它接入 Jira、Linear，以及 Confluence、Notion 或任何你存放文档的地方，效果就会显著提升。你会发现潜意识中有大量的团队内部隐性知识（tribal knowledge）在帮助你编写出更出色的代码。而当让 Agent 去做同样的事情时，感觉就像它们完全不知道发生了什么，这是因为你低估了自己所拥有的知识深度。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Now, one of the ways in which we fight this is by giving agents increasingly more context. And we find that the two types of context that matter most are docs and tickets, and then of course, the code base from your code base indexer or knowledge base. You can get remarkably far if you give it access to your Jira and Linear, and then your Confluence or Notion or whatever it is that you store your docs. You'll find that there's a lot of tribal knowledge that is subconsciously helping you produce better code. And when you have agents do the same thing, it feels like they just don't know what's happening. And because you you underestimate how much depth of knowledge you yourself have.
+</details>
+<p>Griptile 解决这一问题的方法是利用一个<strong>活维基</strong>（living wiki）对所有这些上下文源进行中介整合。这个维基实质上构成了你所在公司运作方式的某种“世界模型”。它涵盖了关于代码库已知的一切、通过生产遥测和日志所了解到的关于应用程序的一切，以及从文档和 Linear 工单等渠道获悉的关于路线图的一切。它利用这个维基来提供上下文，既增强了 Agent 的上下文感知能力，又让代码搜索变得极其精确，因为它绝不会去读取无需读取的文件。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Now, the way that Reptile approaches this problem is we actually disintermediate all of these context sources with a living wiki. This wiki is essentially a sort of world model of how your company works. It's everything that it knows about your code base, everything it knows about your application through production telemetry, through logs, everything it knows about your road map from your documentation and your linear tickets and so on and so forth. And it uses this wiki to supply context both making the agent more context aware and making its code searches significantly more precise because it will never read a file that it didn't need to read.
+</details>
+<h3 id="优化方向五端到端自主测试与环境构建" data-reading-heading="">优化方向五：端到端自主测试与环境构建</h3>
+<p>你应该做的下一件事——这可能是五点里的第四点——是<strong>自主测试</strong>（autonomous testing）。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The last thing that you should do, or this might be four out of five. The next thing that you should do is autonomous testing.
+</details>
+<blockquote>
+<blockquote>
+<p>[清了清嗓子]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; [clears throat]
+</details>
+<blockquote>
+<blockquote>
+<p>我们经常思考的一点是，以 UI 变更违例：你通读 React 代码中改动的一堆文件后，可能会得出结论说代码毫无问题。但事实上，当你把它渲染出来时，它在 iPhone 上可能处于遮挡隐藏状态。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; One of the things that we think about a lot is that for instance, for UI changes, you might be able to read through a bunch of changed files for React code and conclude that there's nothing wrong with the code. But in fact, when you render it, it might be, for instance, hidden on an iPhone.
+</details>
+<p>这是技术上最难解决的问题之一。我们在 Griptile 的应对方案是构建这些依赖丰富的沙箱，它们是完全可配置的虚拟机；我们与客户合作，在这些沙箱中把他们的技术栈启动起来。然后 Griptile 的 Agent 使用计算机视觉来进行端到端的测试。如果你之前没太留意，计算机视觉现在已经变得非常强大，在新一代的 GPT 模型和 Opus 模型中，它比上一代要出色得多。我认为端到端 QA 第一次可以说是基本解决了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Now, this is one of the more technically difficult problems to solve. The way that we approach this at Reptile is we essentially build these dependency-rich sandboxes, which are completely configurable virtual machines, and we have customers, we work with them to essentially spin up their stack in these sandboxes. And then Reptile's agent uses computer vision to test them end to end. If you haven't been paying attention, computer vision has gotten very good, and it's like far better in these new generation of GPT models and Opus models than it was in the previous. For the first time, I think end to end QA is nearly solved.
+</details>
+<p>然而你需要做的是：第一，必须把贯穿应用程序的所有业务流程记录成文档；第二，构建脚本必须足够简单，以便 Agent 能够在你的环境中启动技术栈。我们有一支由前置部署工程师（forward deployed engineers）组成的团队专门协助企业做这件事。我们发现这是比较棘手的环节之一——当然，除非你们已经拥有非常优秀的开发环境机器（dev boxes），若是这样，恭喜你在 Stripe 工作。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The thing that you need to do though is you need to document all the flows through your application. And second, you need to be able to have a sufficiently simple build script so that the agent can spin up your stack in your environments. We have a team of forward deployed engineers that help companies do this. We found that it's one of the trickier parts. Unless of course, you have very good dev boxes already, in which case congratulations on working at Stripe.
+</details>
+<p>这是我打算展示给你们的图表。是的，你需要一个开发容器环境（dev box），需要运行应用程序所需的 PR 分支依赖项，还需要某种流程图谱指明：“这是鉴权代码，然后这是注册流程”等等。借助这些，你的 Agent 现在就可以端到端地测试你的代码，并利用视觉模型指出：“哦，这个按钮理论上渲染出来了，但实际在 iPhone 上被遮挡了，或者在双屏设备的首屏折叠区域之外等等。”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, oh, I This is the diagram I'm going to show you. But yes, you will need a dev box, you will need PR branch dependencies where you're running the app, and you'll need some type of flow map that says, "This is the auth code and then this is the sign-up flow." and so on. And using this, your agent can now test your code end-to-end and use vision models to say, "Oh, like this button technically appears, but it actually is hidden on iPhones, or it's not in the first fold on the iPhone duo, etc."
+</details>
+<h3 id="优化方向六分级推理预算与降低审查成本" data-reading-heading="">优化方向六：分级推理预算与降低审查成本</h3>
+<p>即便把上面这些全都做到了，你会发现成本依然居高不下。完成单个 PR 审查的费用从 3 美元、15 美元到 20 美元不等。你现在需要解决的问题，就是在某些任务上改用更便宜的模型。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Now, if you do all of this, you'll find that the costs are still quite high. It can cost you anywhere from three bucks to 15 to 20 to do a single pull request review. And the thing you'll want to solve for now is to use cheaper models for some things.
+</details>
+<p>在我看来，通常而言，前沿模型（frontier models）依然比开源模型更具能力。尽管差距正在收窄，但这在一段时间内依然是事实。因此，我们如今在最关键的任务上大约分配 20% 的前沿模型；而对于长尾的 Token 消耗，例如探索性搜索、文件读取等，我们则使用各种较小的模型。这样做能够大幅降低运行审查 Agent 的成本。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Now, to me, frontier models are still generally speaking more capable than open source models. This has been true for some time, even though the rubber band is tightening. So, our share today is about 20% frontier models for the most critical tasks. And then the long tail of tokens, which is exploratory, file reads, and so on, we use a variety of smaller models. And so, if you do this, you can actually reduce the cost of running your review agent quite drastically.
+</details>
+<p>这是我们做法的一个直观示例：我们会使用小型模型来查找上下文，使用非常轻量级的计算机操作模型来测试用户操作流程，而在分析 Bug、执行审查流程和初次提交时则使用前沿模型。在实践中，我们实际上细分了 20 个不同的子任务，针对每个子任务我们都指定了一套非常具体的模型组合。我们有一个小型研究团队在持续迭代哪项任务究竟该使用什么模型。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, this is sort of a illustrative example of what we do, which is we'll use a small model for our finding context, we'll use a very lightweight computer use model for testing user flows, and we use a frontier model for things like analyzing bugs, applying the review process, and first submission. In practice, we have actually 20 different subtasks, and each of them has a very specific set of models that we use for each of them. And we have a small research team that is constantly iterating exactly what models we use for what task.
+</details>
+<p>如果你采用类似方案，只需将非常简单的任务替换为非常简单的模型，大概就能达到 70% 到 80% 的成效。而这也是拥有超大规模数据集能够提供巨大帮助的另一个典型案例。如果你没有良好的数据集，你可能会贸然将许多子 Agent 替换为体积更小、速度更快的模型，却浑然不知该 Agent 捕捉 Bug 的能力其实已经大幅退步，直到它漏掉了导致重大事故或宕机的严重 Bug 时你才会察觉。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+You can probably get 70 to 80% of the way there using something of this kind where you just swap out very simple tasks with very simple models. Now, this is another example of where it really helps to have a very large data set. If you don't have a good data set, you might be able to have trigger happily replace a lot of different sub agents with smaller, faster models, and you won't know that it's this agent is actually now quite a bit worse at catching bugs, and you would only find out when it misses something that then causes an outage or incident.
+</details>
+<p>此外你还会发现，你可以使用一个廉价模型来对抗频繁读取文件的问题：让它专门巡检所有的上下文片段，判断哪些内容才真正应该被纳入进来。理论上你可以使用一个决策模型来做这件事，比如 Java 或者 Decisions API，对所有不同内容进行有效的重排序，并决定哪些该载入前沿模型的缓存中，哪些不该载入——毕竟从某种意义上说，前沿模型的缓存是你最昂贵、最稀缺的资源。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And you will also find that you can kind of combat this problem of overactive file reads using a cheap model that essentially looks through all of your context pieces and figures out which ones actually should be included. In theory, you should be able to use a decision model for this, something like Java, or the Decisions API, to do effective re-ranking on all of the different things, and deciding what should be and shouldn't be loaded into Frontier Model Cache, which is in some ways your most expensive and most scarce resource.
+</details>
+<p>如果你把所有这些事情都落实到位，在自己构建审查 Agent 的道路上就能走得相当远了。如果你做成了，请一定告诉我，我的邮箱是 daksh@prod.com，我很乐意提供帮助。如果你决定不自己做，也可以直接使用我们的产品，相比之下它还更划算。非常感谢大家！</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+If you do all of these things, you might be able to actually get quite far in building your own review agent. And if you do, please let me know. My email is daksh@prod.com. I'd love to help you. And uh if you choose not to build it, then you can also just use our product, um which is free in comparison. But, uh thank you so [snorts] much.
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/575de348240c9a35d8596619d0dcabeaadb45da286a1bdfccf34d1d1cf484672.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/575de348240c9a35d8596619d0dcabeaadb45da286a1bdfccf34d1d1cf484672.md" download="构建高质量 AI 代码审查 Agent 的核心方法与架构.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Dax" class="entity-link person-link">Dax</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Greptile" class="entity-link company-link">Greptile</a>, <a href="/search/?q=GitHub" class="entity-link company-link">GitHub</a>, <a href="/search/?q=Nvidia" class="entity-link company-link">Nvidia</a>, <a href="/search/?q=Coinbase" class="entity-link company-link">Coinbase</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>, <a href="/search/?q=GPT" class="entity-link product-link">GPT</a>, <a href="/search/?q=Codex" class="entity-link product-link">Codex</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

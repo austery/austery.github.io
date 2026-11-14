@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenAI全新Agent架构剖析：Computer Use、Decisions API与超低延迟推理</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">OpenAI全新Agent架构剖析：Computer Use、Decisions API与超低延迟推理</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Latent Space</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>Latent Space</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-30</span>
+    
+
+    <header class="article-header">
+      
+      <h1>OpenAI全新Agent架构剖析：Computer Use、Decisions API与超低延迟推理</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/computer-use/">computer-use</a>
+      
+        <a class="tag-link" href="/tags/agentic-workflow/">agentic-workflow</a>
+      
+        <a class="tag-link" href="/tags/prompt-caching/">prompt-caching</a>
+      
+        <span class="tag-pill tag-pill--no-page">context-compression</span>
+      
+        <span class="tag-pill tag-pill--no-page">function-calling</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">在OpenAI开发者日特别对话中，Ari Weinstein与Nikunj Handa深入揭秘了最新推出的智能体技术栈。核心涵盖云端原生Linux环境下的Computer Use能力演进、基于结构化推理与极速TTFT的Decisions API、支持双向异步与消息注入的Responses/WebSocket架构，以及多层次提示词缓存与上下文压缩机制，展示了AI从辅助生成迈向自主操作系统的全新范式。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/latent-space/">Latent Space</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=z9OkBD2-MDU" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-09-30T00:00:00.000Z">2026-09-30</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>14 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E5%BC%80%E7%AF%87%E5%BC%95%E8%A8%80%E8%B6%85%E4%BA%BA%E7%BA%A7%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E4%B8%8E%E9%BB%91%E5%AE%A2%E6%96%87%E5%8C%96">开篇引言：超人级计算机操作与黑客文化</a></li><li class="outline-h3"><a href="#computer-use-%E9%87%8D%E7%A3%85%E5%8F%91%E5%B8%83%E4%BB%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B2%99%E7%AE%B1%E5%88%B0%E5%AE%8C%E6%95%B4%E4%BA%91%E7%AB%AF-linux">Computer Use 重磅发布：从浏览器沙箱到完整云端 Linux</a></li><li class="outline-h3"><a href="#%E4%BB%8E%E8%AE%A2%E9%A4%90%E5%88%B0-youtube%E7%8E%B0%E5%AE%9E%E5%9C%BA%E6%99%AF%E4%B8%AD%E7%9A%84%E6%95%88%E7%8E%87%E8%B7%83%E8%BF%81">从订餐到 YouTube：现实场景中的效率跃迁</a></li><li class="outline-h3"><a href="#%E7%A0%B4%E9%99%A4%E5%81%9C%E6%BB%9E%E8%AE%BA%E8%B0%83%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%B6%E6%9E%84%E7%9A%84%E6%BC%94%E8%BF%9B%E8%B7%AF%E7%BA%BF">破除停滞论调：自动化架构的演进路线</a></li><li class="outline-h3"><a href="#%E8%AF%84%E6%B5%8B%E5%9F%BA%E5%87%86%E4%B8%8E%E5%A4%9A%E6%A8%A1%E6%80%81%E6%84%9F%E7%9F%A5%E4%B8%8D%E4%BB%85%E6%98%AF%E6%88%AA%E5%9B%BE%E6%9B%B4%E6%98%AF%E8%AF%AD%E4%B9%89%E6%A0%91">评测基准与多模态感知：不仅是截图，更是语义树</a></li><li class="outline-h3"><a href="#appshots-%E6%9C%BA%E5%88%B6%E4%B8%8E%E7%AB%AF%E5%88%B0%E7%AB%AF%E7%B3%BB%E7%BB%9F%E7%93%B6%E9%A2%88">AppShots 机制与端到端系统瓶颈</a></li><li class="outline-h3"><a href="#%E5%BC%80%E5%8F%91%E8%80%85%E5%AE%9E%E8%B7%B5%E5%AE%89%E5%85%A8%E7%BA%A2%E7%BA%BF%E4%B8%8E%E8%87%AA%E4%B8%BB%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B">开发者实践、安全红线与自主软件工程</a></li><li class="outline-h3"><a href="#api-%E6%9E%B6%E6%9E%84%E8%B7%83%E8%BF%81%E5%BC%82%E6%AD%A5%E5%B7%A5%E5%85%B7%E8%B0%83%E7%94%A8%E4%B8%8E%E6%B6%88%E6%81%AF%E6%B3%A8%E5%85%A5">API 架构跃迁：异步工具调用与消息注入</a></li><li class="outline-h3"><a href="#websocket-%E6%9E%B6%E6%9E%84%E4%B8%8E%E6%9E%81%E9%80%9F%E6%8E%A8%E7%90%86%E9%80%9A%E9%81%93">WebSocket 架构与极速推理通道</a></li><li class="outline-h3"><a href="#%E6%8F%AD%E7%A7%98-decisions-api%E4%B8%93%E4%B8%BA%E9%AB%98%E9%A2%91%E5%88%86%E7%B1%BB%E4%B8%8E%E5%86%B3%E7%AD%96%E8%80%8C%E7%94%9F">揭秘 Decisions API：专为高频分类与决策而生</a></li><li class="outline-h3"><a href="#agency-api-%E4%B8%8E%E7%AC%AC%E4%B8%80%E6%96%B9%E4%BA%A7%E5%93%81%E7%94%9F%E6%80%81%E5%AE%9E%E8%B7%B5">Agency API 与第一方产品生态实践</a></li><li class="outline-h3"><a href="#%E7%BC%93%E5%AD%98%E4%BD%93%E7%B3%BB%E6%BC%94%E8%BF%9B%E4%BB%8E-30-%E5%88%86%E9%92%9F%E9%BB%98%E8%AE%A4%E5%88%B0-12-%E5%B0%8F%E6%97%B6%E9%95%BF%E6%95%88%E4%BF%9D%E9%9A%9C">缓存体系演进：从 30 分钟默认到 12 小时长效保障</a></li><li class="outline-h3"><a href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E6%9E%81%E9%99%90%E4%B8%8E%E5%8E%8B%E7%BC%A9%E7%AD%96%E7%95%A5%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%89%98%E7%AE%A1%E4%B8%8E%E6%89%8B%E5%8A%A8%E7%B4%A7%E7%BC%A9">上下文极限与压缩策略：服务端托管与手动紧缩</a></li><li class="outline-h3"><a href="#%E6%80%BB%E7%BB%93%E5%B1%95%E6%9C%9B%E6%9E%84%E5%BB%BA%E5%8E%9F%E7%94%9F-ai-%E4%BA%91%E8%AE%A1%E7%AE%97%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD">总结展望：构建原生 AI 云计算基础设施</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="开篇引言超人级计算机操作与黑客文化" data-reading-heading="">开篇引言：超人级计算机操作与黑客文化</h3>
+<p><strong>主持人</strong>: 如今电脑的运行速度越来越快，而在完成日常任务方面，普通用户在大多数情况下可能已经习惯了现有的交互方式。但我认为下一个前沿挑战在于：计算机能否展现出超人般的能力来提供服务？不仅速度极快，甚至能超越经验丰富的资深用户操作软件的效率。如果这一愿景得以实现，那将是一件意义深远且令人无比振奋的事情，因为我们将突然进入一个能够构建全新实时交互体验的时代。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Host</strong>: Computers today are getting faster at completing tasks, and for average humans, that might often be enough. But I think the next frontier challenge is for computers to provide superhuman service—running software just as fast, or even faster, than experienced power users like us. If that happens, it will be profoundly significant and exciting, because we will suddenly be able to build products that offer true real-time experiences.</p>
+</details>
+<p><strong>主持人</strong>: 仅仅四周之前，情况还完全不是这样。外界甚至有人质疑计算机自动化的进展停滞不前。然而就在最近，开源社区和产业界涌现的创新极大地激励了团队。可以说，先锋实验室的探索被迅速吸收并迭代。我强烈感觉到 <strong>OpenAI</strong> 内部依然葆有极为纯粹的黑客文化，工程师们对技术突破充满执着与激情。面对新型推理范式的挑战，基础设施团队直呼“这太不可思议了，我们必须全力攻克它”，随即几天内就构建出了运行良好的原型。现在团队全力以赴优化延迟，力求在最短时间内将这一突破推向市场。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Host</strong>: Just four weeks ago, this was not the case. But recent breakthroughs energized us. OpenAI still maintains an incredibly intense hacker culture where people are deeply passionate about everything. When this new reasoning type emerged, someone from the infrastructure team said, "This is insane. We have to be there and hack on this." They built a functional prototype, and now the focus is entirely on slashing latency and bringing it to market as quickly as possible.</p>
+</details>
+<h3 id="computer-use-重磅发布从浏览器沙箱到完整云端-linux" data-reading-heading="">Computer Use 重磅发布：从浏览器沙箱到完整云端 Linux</h3>
+<p><strong>主持人</strong>: 欢迎大家收看 OpenAI 开发者日（DevDay）特别播客节目。今天我们非常荣幸邀请到了负责产品与计算机使用代理（Computer-Using Agent）团队的 <strong>Ari Weinstein</strong>。Ari，能不能先向大家概括一下，今天围绕 Computer Use 都有哪些重磅发布？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Host</strong>: Welcome to this OpenAI DevDay special edition podcast. We have Ari here, who leads product for the computer-using agent team. Ari, could you briefly summarize what was announced today regarding Computer Use?</p>
+</details>
+<p><strong>Ari Weinstein</strong>: 今天的发布会简直太令人兴奋了！如果你听了早上的主题演讲，就会发现我们推出了一系列关于 Computer Use 的全新能力。与市场上其他同类产品或以往方案相比，最根本的区别在于：过去的工具通常只能让模型操作一个受限的无头浏览器沙箱，或者在本地权限受限的环境中打转；而现在，开发者和用户可以直接在云端获得一台由 Agent 完全掌控的完整 <strong>Linux</strong> 计算机环境。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Ari Weinstein</strong>: Yes, it has been absolutely thrilling! We just finished the keynote announcements. The fundamental difference from traditional approaches or other products is that instead of just getting a sandboxed cloud browser, you now receive a dedicated, full Linux computer in the cloud.</p>
+</details>
+<p><strong>Ari Weinstein</strong>: 这意味着 Agent 不仅可以浏览网页，还能直接启动并操控完整的桌面原生图形界面应用程序，运行本地编译器、终端命令行以及各类复杂的生产力软件。之所以让我对 Computer Use 感到如此兴奋，是因为世界上绝大多数软件最初都是专为人类交互界面设计的。当 Agent 能够像人类一样看懂屏幕、移动鼠标、敲击键盘时，它就能够无缝接管并使用这世上已有的全部软件生态，替你处理任何繁琐的日常事务。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Ari Weinstein</strong>: This means the agent can execute complete desktop applications alongside a web browser. The immense power of Computer Use—and what excites me most—is that virtually all software in the world was built for human interfaces. Now, agents can utilize the exact same software stack, allowing you to delegate virtually any task on your computer.</p>
+</details>
+<h3 id="从订餐到-youtube现实场景中的效率跃迁" data-reading-heading="">从订餐到 YouTube：现实场景中的效率跃迁</h3>
+<p><strong>主持人</strong>: 这确实打开了无限的想象空间。日常生活中，很多人都在思考自己把时间耗费在哪些重复性劳动上，以及如何将这些繁杂事务托付给 Agent。从预订机票、网购比价，再到玩游戏或数据收集，只要能自动化，就能释放巨大的精力。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Host</strong>: It truly opens up endless possibilities. People spend hours on repetitive digital chores. Delegating flight bookings, online shopping, or even routine gaming and data tasks to an agent can save enormous personal bandwidth.</p>
+</details>
+<p><strong>Ari Weinstein</strong>: 没错。分享一个我自己生活中的真实案例：我最近订购了健康餐食定制服务，为了搭配合理的健身营养比例，我需要精确计算每顿餐食中鸡肉、碳水化合物和蔬菜的克数。但那家服务的网页点单系统交互极其反人类，调整一次菜单往往要手动点击耗费近两个小时。后来我直接把这个任务交给了 Computer Use Agent，它自主打开页面、逐项核对并调整克数配置，仅仅用了 15 分钟就全部搞定，帮我硬生生节省了接近两个小时的时间。而且它前后帮我调整了八次，准确率甚至比我自己手动点选还要高。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Ari Weinstein</strong>: Exactly. A personal example: I subscribe to a meal preparation delivery service to manage my diet. Adjusting the exact grams of chicken and carbs across meals used to take me two hours of tedious clicking because of their complex interface. I finally had a computer-using agent handle it; it finished the entire task in 15 minutes. It saved me two hours each time, performed it eight times, and was faster and more accurate than me doing it manually.</p>
+</details>
+<p><strong>主持人</strong>: 作为内容创作者，我深有同感。我最刚需的场景之一就是 <strong>YouTube</strong> 后台的自动化运营。YouTube 的很多功能并没有开放公开的 REST API，例如后台特定格式的视频 A/B 测试、创作者社区动态的批量分发等，开发者只能被迫在虚拟机里手动点击网页。而借助 Computer Use，这些完全缺乏 API 支持的平台瞬间具备了完全自动化的可能。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Host</strong>: As a content creator, my number-one use case is automating YouTube creator workflows. YouTube offers very limited APIs for things like multi-variant thumbnail A/B testing or community tab interactions. Without public APIs, having an agent operate the web UI directly in a virtual environment bridges that massive gap.</p>
+</details>
+<h3 id="破除停滞论调自动化架构的演进路线" data-reading-heading="">破除停滞论调：自动化架构的演进路线</h3>
+<p><strong>主持人</strong>: 坊间甚至有某些知名 AI 播客曾断言，过去两三年里计算机视觉控制与 GUI 自动化技术几乎原地踏步。作为业内深耕此领域的专家，你怎么看待这种论调？回顾你从开发 <strong>Workflow</strong> 捷径工具被 <strong>Apple</strong> 收购，再到创立 Sky，最终加入 OpenAI 的历程，是什么驱动了这一轮技术的质变？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Host</strong>: Some popular AI podcasts argued that computer use hadn't made meaningful progress over the last two years. Having spent years in this domain—from building Workflow, joining Apple, founding Sky, and now leading this at OpenAI—how do you see the evolution? What drove this massive leap?</p>
+</details>
+<p><strong>Ari Weinstein</strong>: 我想那些认为技术停滞的人如果看到现在的进展，一定会发生 180 度的态度转变。计算机自动化是我毕生的热情所在。过去在编写脚本或开发规则引擎时，我们必须提前穷举界面的所有状态分支；后来在大模型早期，虽然可以让模型看截图点击，但模型的规划深度和推理可靠性极低，只要遇到弹窗或加载延迟就会彻底卡死崩溃。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Ari Weinstein</strong>: I believe anyone claiming stagnation would change their perspective 180 degrees seeing where we are today. Early models could initiate tasks but failed brittlely whenever an unexpected modal or latency hiccup appeared. They lacked self-debugging capabilities.</p>
+</details>
+<p><strong>Ari Weinstein</strong>: 而在过去这一年里，底层基础模型发生了根本性的蜕变。最大的质变在于：现代前沿模型不仅能稳定启动复杂任务，更具备了强大的自主调试与反思修正能力。当一次点击未达预期时，它能主动分析失败原因并尝试备选路径。此外，在交互机制上，我们不再仅仅让模型单步输出坐标并盲目点击，而是将 Computer Use 提升为代码级调度——模型能够直接在沙箱环境中编写并执行结构化的 JavaScript 与 <strong>Playwright</strong> 脚本，在一个执行周期内批量完成数十个状态操作，运行效率与容错率呈指数级提升。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Ari Weinstein</strong>: Over the past year, models developed profound debugging capabilities. When something fails, they can diagnose why and try alternative strategies. Furthermore, instead of sequential single-action mouse clicks, the agent can write and execute JavaScript and Playwright scripts directly in the environment, bundling multi-step actions into a single cycle, which dramatically accelerates execution.</p>
+</details>
+<h3 id="评测基准与多模态感知不仅是截图更是语义树" data-reading-heading="">评测基准与多模态感知：不仅是截图，更是语义树</h3>
+<p><strong>主持人</strong>: 主题演讲中提到，全新模型的运行速度提升了整整七倍，在各类自动化基准评测中均取得了重大突破。在 OpenAI 内部，你们是如何量化评估 Computer Use 性能提升的？这主要归功于模型能力还是系统调度线束（Harness）的优化？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Host</strong>: The keynote highlighted a 7x speedup and major benchmark leaps. Internally, how do you measure these improvements? Is the gain primarily coming from the model itself, or from the harness surrounding it?</p>
+</details>
+<p><strong>Ari Weinstein</strong>: 评估这一能力极其复杂，因为生产级产品中包含了动态的安全拦截与验证机制。我们通过大量真实场景的排列组合进行闭环测试。结论是：性能跃迁既来自于模型权重的智力增强，也来自于外围线束工程的巨大突破。例如在成本效益方面，新一代模型相比以往方案不仅吞吐翻倍，推理成本更是大幅下降，帕累托前沿曲线显著外推。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Ari Weinstein</strong>: It's a combination of both. In our benchmarks, we see steady compounding gains from both the raw model intelligence and the surrounding harness architecture. The Pareto frontier has shifted dramatically, offering substantially higher success rates at significantly reduced token cost.</p>
+</details>
+<p><strong>Ari Weinstein</strong>: 过去系统最大的顿悟时刻之一，就是摆脱了对纯像素视觉截屏的单一依赖。以前的 Agent 浏览网页，需要截一张图、分析、下滑滚动、再截一张图，整个过程充斥着无谓的网络 I/O 和延迟。而现在，我们打通了多模态辅助功能树（Accessibility Tree）和 DOM 结构树，Agent 可以同时获取全页面的语义元数据，直接定位深层元素，并结合视线截图辅助确认，大幅消除信息死角。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Ari Weinstein</strong>: A major breakthrough was moving beyond pure pixel screenshots. Previously, an agent had to screenshot, inspect, scroll, screenshot again, and repeat. By integrating Accessibility APIs and direct DOM tree access, the model perceives the full structured context of an application alongside visual cues, eliminating massive amounts of latency.</p>
+</details>
+<h3 id="appshots-机制与端到端系统瓶颈" data-reading-heading="">AppShots 机制与端到端系统瓶颈</h3>
+<p><strong>主持人</strong>: 这就像我们在 <strong>macOS</strong> 上的 <strong>Codex</strong> 或 <strong>ChatGPT</strong> 桌面端双击 Command 键触发的应用快照（AppShots）功能一样。很多普通用户误以为那只是一张普通的屏幕截图，实际上它底层捕获了全部无障碍语义节点与元数据？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Host</strong>: That resembles the AppShots feature in Codex and the macOS desktop app when you double-press Command. Users often assume it's a basic screenshot, but under the hood, it captures the entire accessibility tree and structural metadata, right?</p>
+</details>
+<p><strong>Ari Weinstein</strong>: 完全正确。如果只传一张截图，模型根本无法感知那些被遮挡的超链接目标、隐藏字段或日历中被截断的会议全名。而 AppShots 提取了系统底层的可访问性语义表示。我们团队投入了大量心血对这些语义文本进行了极致的 Token 压缩，既保留了精准的层次关系，又避免了上下文窗口的过度膨胀。这也是计算机辅助技术对 AI 发展反哺的一个绝佳案例。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Ari Weinstein</strong>: Exactly. A visual screenshot alone cannot reveal target URLs of buttons or clipped text in a calendar invite. AppShots extracts the structural accessibility representation. We spent extensive engineering effort optimizing token efficiency so that this rich context fits compactly into the model's prompt.</p>
+</details>
+<p><strong>主持人</strong>: 展望未来两到三年，Computer Use 走向真正自主代理的核心瓶颈到底在哪里？究竟是模型推理智力的限制，还是物理环境加载与执行工具的延迟？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Host</strong>: Looking ahead two to three years, where are the primary bottlenecks holding back fully autonomous computer agents? Is it model intelligence, or the physical latency of environments and application loading?</p>
+</details>
+<p><strong>Ari Weinstein</strong>: 随着模型推理速度的狂飙，我们越来越明显地观察到：瓶颈正从模型端转移到外部应用本身。例如在自动化基准测试中，Agent 执行一个外卖订餐任务，超过 80% 的时间其实是在干等网页资源和第三方脚本的加载。因此，如何构建事件驱动（Event-Driven）的响应架构，而非简单的静态轮询（Polling），让模型在页面状态变更的毫秒级瞬间做出下一步反应，是未来必须攻克的工程高地。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Ari Weinstein</strong>: As models become faster, the execution environment increasingly becomes the bottleneck. In tasks like ordering food on DoorDash, the agent spends most of its time waiting for web pages and network assets to load. Shifting from synchronous polling to event-driven architectures where the agent reacts instantly to DOM mutation events is crucial for closing this gap.</p>
+</details>
+<h3 id="开发者实践安全红线与自主软件工程" data-reading-heading="">开发者实践、安全红线与自主软件工程</h3>
+<p><strong>主持人</strong>: 面对已经开放的 API，你对广大开发者有哪些避坑建议？在给予 Agent 如此强大的系统操控权时，该如何权衡生产安全与用户信任？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Host</strong>: For developers building on this newly released API, what pitfalls should they avoid? How should they balance expansive agent capabilities with safety boundaries and user trust?</p>
+</details>
+<p><strong>Ari Weinstein</strong>: 首先，必须坚持“关键决策引入人类确认（Human-in-the-Loop）”的原则。对于敏感操作，例如大额支付、不可逆的系统设置更改或涉及隐私凭据的操作，必须强制弹出授权请求。其次是最小权限原则，开发者应严格限定 Agent 可访问的域名白名单和应用目录，绝不能在无沙箱隔离的环境下赋予其全局根权限。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Ari Weinstein</strong>: First, maintain human-in-the-loop safeguards for high-stakes actions like financial transactions or destructive data modifications. Second, enforce least-privilege scoping: sandbox the agent's environment and restrict network access strictly to the domain whitelist required for the designated task.</p>
+</details>
+<p><strong>Ari Weinstein</strong>: 另外，我个人最痴迷的一个用例是“Agent 闭环软件工程”。在以前，开发者用 Codex 生成代码后，必须自己充当 QA 人工测试并排错；而现在，我们可以让一个 Agent 负责编写代码，另一个 Computer Use Agent 负责拉起真实浏览器或桌面客户端进行端到端视觉与功能测试，并自动截屏反馈缺陷报告。这种多 Agent 协作将彻底重塑软件开发生命周期。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Ari Weinstein</strong>: One of my absolute favorite use cases is closed-loop software engineering. Previously, engineers generated code with Codex and manually tested the UI. Now, a coding agent can build a feature, while a computer-using agent launches the application, runs end-to-end tests, inspects UI regressions, and reports back fixes, completely automating the development feedback loop.</p>
+</details>
+<h3 id="api-架构跃迁异步工具调用与消息注入" data-reading-heading="">API 架构跃迁：异步工具调用与消息注入</h3>
+<p><strong>主持人</strong>: 非常感谢 Ari 的精彩分享！接下来让我们欢迎掌管 OpenAI API 产品线负责人 <strong>Nikunj Handa</strong>。Nikunj，你好！能否先向大家介绍一下你在团队中的职责，以及本次 API 层面有哪些核心架构升级？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Host</strong>: Thank you so much, Ari! Next, let's welcome Nikunj Handa, Head of API Products at OpenAI. Nikunj, could you introduce yourself and walk us through the major architectural advancements introduced in the API today?</p>
+</details>
+<p><strong>Nikunj Handa</strong>: 大家好，我叫 Nikunj，在 OpenAI 负责 API 产品团队已经近三年了。我们的核心职责就是紧密对接后训练（Post-Training）和研究团队，将最前沿的模型能力以最低延迟、最高可靠性的工业级接口开放给全球开发者。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nikunj Handa</strong>: Great to be here! I'm Nikunj and I lead the API product team at OpenAI. Our mission is to bridge post-training research breakthroughs into robust, low-latency, scalable developer primitives.</p>
+</details>
+<p><strong>Nikunj Handa</strong>: 本次底层架构最核心的演进之一，就是推出了原生的**异步函数调用（Asynchronous Function Calling）<strong>与</strong>运行中消息注入（Steering / Message Injection）**机制。以往的工具调用是严格阻塞的：模型触发工具后必须暂停生成，等待外部系统返回结果后再继续。但在复杂的 Agent 任务中，某些工具执行耗时极长。现在，开发者可以发起异步工具调用，让后台长时间运行，同时模型可以继续执行其他子任务；在工具返回前，开发者甚至能动态向流式会话中注入控制指令（Steering Instructions），动态调整模型的执行轨迹，极大增强了系统的灵活性与可控性。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nikunj Handa</strong>: One of the biggest architectural upgrades is native asynchronous tool calling and mid-stream steering. Previously, function calling was strictly synchronous and blocking. Now, models can dispatch long-running asynchronous tasks while continuing reasoning, and developers can inject steering instructions into the active trajectory to correct or pivot agent behavior dynamically.</p>
+</details>
+<h3 id="websocket-架构与极速推理通道" data-reading-heading="">WebSocket 架构与极速推理通道</h3>
+<p><strong>主持人</strong>: 这背后的通信协议支撑必然经过了重构。是不是全面依赖了 <strong>WebSocket</strong> 双向通道？这与大家热议的超高速推理模型有何关联？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Host</strong>: This must require major communication protocol changes. Is this built entirely on bidirectional WebSockets, and how does it relate to the ultrafast reasoning capabilities being discussed?</p>
+</details>
+<p><strong>Nikunj Handa</strong>: 没错。早先我们在实时语音产品中引入了 WebSocket，而现在我们将其作为通用 Agent 交互的基石架构。基于全双工连接，客户端与服务端能够以微秒级延迟完成消息收发、事件通知与中断信号传递，这使得模型交互具备了近乎实时的顺畅感。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nikunj Handa</strong>: Exactly. We leveraged our WebSocket foundation from real-time audio to create a unified duplex transport for agentic APIs. Full-duplex connections allow bidirectional streaming of tool outputs, interrupts, and steering tokens with minimal transport overhead.</p>
+</details>
+<p><strong>Nikunj Handa</strong>: 尤其是在配合超低延迟模型运行时，WebSocket 的优势体现得淋漓尽致。为了让 Agent 做出决策的速度媲美人类神经反射，推理团队在架构层面对 首字延迟（TTFT, Time To First Token）进行了极限压榨，让前沿模型的推理吞吐迈入全新量级。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nikunj Handa</strong>: This becomes indispensable when paired with our ultrafast inference stacks. By aggressively optimizing Time To First Token (TTFT), the model can produce tactical decisions almost instantly, matching human conversational and operational cadence.</p>
+</details>
+<h3 id="揭秘-decisions-api专为高频分类与决策而生" data-reading-heading="">揭秘 Decisions API：专为高频分类与决策而生</h3>
+<p><strong>主持人</strong>: 聊到极速推理，就不得不提今天备受瞩目的 <strong>Decisions API</strong>。最近两周开源社区对类似高速决策架构的讨论甚嚣尘上。请问 Decisions API 诞生的背景是什么？它到底是不是一个全新的独立预训练模型？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Host</strong>: Speaking of speed, let's address the elephant in the room: the Decisions API. The community has seen a massive surge of interest around fast decision models. What was the genesis of Decisions API, and is it a completely new foundation model?</p>
+</details>
+<p><strong>Nikunj Handa</strong>: 首先必须向开源先锋团队致敬，社区的敏捷探索极大地启发了行业。大约几周前，我们内部运维与客户支持团队急需一个能够以极限速度对海量工单进行实时高精度分类的系统。基础设施团队迅速介入，验证了在保留前沿大模型核心权重的前提下，通过专有推理优化实现超高速确定性输出的可行性。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nikunj Handa</strong>: Credit to the open-source community for pioneering incredible ideas in this space. Internally, our customer operations team needed ultra-low-latency ticket triage. Our infrastructure engineers realized we could optimize our frontier reasoning weights to serve rapid, deterministic classification tasks at breakthrough speeds.</p>
+</details>
+<p><strong>Nikunj Handa</strong>: 需要澄清的是：Decisions API 在第一版中并不是一个从头全新预训练的模型，它直接复用了我们前沿核心模型的知识底座，但通过深度重构推理管线，剔除了冗余参数评估逻辑，专门为**结构化输出（Structured Outputs）**进行了硬件级优化。结合并行推理解码技术，将 TTFT 压缩到了极致，使开发者能够在数十毫秒内获得确定的枚举判断或路由决策。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nikunj Handa</strong>: To clarify: version one is not a ground-up pre-trained model. It leverages our proven frontier weights, but strips away decoding overhead and heavily optimizes the inference stack specifically for structured outputs. This delivers deterministic categorization decisions within tens of milliseconds.</p>
+</details>
+<h3 id="agency-api-与第一方产品生态实践" data-reading-heading="">Agency API 与第一方产品生态实践</h3>
+<p><strong>主持人</strong>: 在实际业务中，开发者该如何将 Decisions API 与更高阶的 <strong>Agency API</strong> 结合使用？你们内部有哪些典型的落地实践？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Host</strong>: How should developers architect solutions using Decisions API alongside the higher-level Agency API? What are the prominent internal use cases at OpenAI?</p>
+</details>
+<p><strong>Nikunj Handa</strong>: 内部最直接的应用就是高吞吐路由与自动化安全合规审查。以往的大模型作为仲裁者（LLM-as-a-Judge）成本高且响应慢，而在 Decisions API 加持下，实时流审查变得切实可行。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nikunj Handa</strong>: The most immediate application is high-throughput routing, automated triage, and real-time safety classification. Traditionally, using an LLM as a judge incurred significant latency and token costs. Decisions API turns real-time moderation and arbitration into a zero-latency utility.</p>
+</details>
+<p><strong>Nikunj Handa</strong>: 与此同时，我们发布了全新的 Agency API。实际上，OpenAI 最近亮相的一系列第一方高级智能体产品——例如可自主加入 Zoom 会议生成交互式摘要的智能日程助手、以及深度协作画布工具——全部是直接构建在 Agency API 之上的。它原生封装了长程记忆检索、沙箱隔离执行与环境交互协议，开发者完全可以复用这些经过海量生产验证的基础构件。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nikunj Handa</strong>: Furthermore, our newly released Agency API serves as the underlying backbone for OpenAI's own first-party agent products, including our interactive meeting assistants and collaborative editing tools. It natively encapsulates long-term thread state, sandboxed runtime management, and tool routing.</p>
+</details>
+<h3 id="缓存体系演进从-30-分钟默认到-12-小时长效保障" data-reading-heading="">缓存体系演进：从 30 分钟默认到 12 小时长效保障</h3>
+<p><strong>主持人</strong>: Agent 在连续多轮对话中会频繁携带庞大的历史上下文。面对由此带来的延迟与 Token 账单痛点，底层 Responses API 在缓存（Prompt Caching）方面有哪些重大改进？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Host</strong>: Agents inherently generate massive historical context over prolonged trajectories. How does the Responses API evolve its Prompt Caching infrastructure to mitigate cost and latency?</p>
+</details>
+<p><strong>Nikunj Handa</strong>: 缓存对于长程 Agent 来说就是生命线。我们在 Responses API 栈中全面重写了上下文调度逻辑。除了现有的自动缓存匹配外，我们正式推出了长效缓存保障机制：标准缓存提供约 30 分钟的高速命中，而针对高频会话与生产级服务，我们开放了最长达 <strong>12 小时的长效缓存保障（12-Hour Cache Guarantee）</strong>。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nikunj Handa</strong>: Prompt caching is existential for long-running agents. We completely re-architected the caching layer in Responses API. Beyond our standard 30-minute transient cache, we are introducing an extended 12-hour cache SLA for enterprise workloads.</p>
+</details>
+<p><strong>Nikunj Handa</strong>: 不仅如此，我们还上线了<strong>缓存预热 API（Cache Warmup API）</strong>。如果开发者预知未来数小时内将发起密集批处理或交互式会话，可以提前以极低费用触发预热，确保后续调用 100% 命中缓存。结合最新推出的高性价比模型，提示词读取费用直降 95%，为极大规模上下文的持续运行提供了坚实的经济可行性。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nikunj Handa</strong>: We also added a Cache Warmup API. If you anticipate a traffic burst or an intensive agent session, you can pre-warm the prompt cache ahead of time. Coupled with our new efficient model variants, cache read costs drop by up to 95%, making large-context deployments economically viable.</p>
+</details>
+<h3 id="上下文极限与压缩策略服务端托管与手动紧缩" data-reading-heading="">上下文极限与压缩策略：服务端托管与手动紧缩</h3>
+<p><strong>主持人</strong>: 尽管百万级 Token 上下文窗口已经普及，但面对长达数天甚至数周的自主任务，上下文依然不可避免地会触及物理上限。目前行业最佳实践中的上下文压缩（Context Compression）是如何设计的？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Host</strong>: Even with million-token context windows, long-horizon agents running over days will eventually exhaust context limits. What is the current state-of-the-art methodology for context compression?</p>
+</details>
+<p><strong>Nikunj Handa</strong>: 我们在 API 层面提供了两种主流解决方案。第一种是<strong>服务端全托管自动压缩</strong>：当会话上下文逼近安全阈值时，Responses API 会在服务端自动触发语义摘要与关键状态剪枝，平滑释放上下文空间，对上层逻辑完全透明。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nikunj Handa</strong>: We support two primary paradigms. The first is server-managed automatic compaction: when the trajectory nears context thresholds, Responses API automatically executes background semantic pruning and summarization transparently.</p>
+</details>
+<p><strong>Nikunj Handa</strong>: 第二种则是面向追求极致控制力的大型机构的<strong>显式手动压缩（<code>/compact</code> 接口）</strong>。正如大家在开源的 <strong>Codex-Harness</strong> 中看到的那样，许多高阶团队更倾向于自主掌控压缩触发时机，结合专用算法与文件系统挂载状态来精确保留关键变量。我们正在持续探索基于分布式文件状态的上下文卸载技术，未来将为开发者提供更加模块化的压缩原语。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nikunj Handa</strong>: The second approach is manual compaction via explicit endpoints like <code>/compact</code>, mirroring the design in our open-source Codex-Harness. Advanced engineering organizations often prefer programmatic control over compaction policies, preserving key architectural state while pruning redundant trajectory history.</p>
+</details>
+<h3 id="总结展望构建原生-ai-云计算基础设施" data-reading-heading="">总结展望：构建原生 AI 云计算基础设施</h3>
+<p><strong>主持人</strong>: 节目的最后，回望整个平台的发展，这不仅是发布了几个孤立的模型或接口，而是如同一年前所预示的那样：OpenAI 正在搭建一套完整的原生 AI 云基础设施。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Host</strong>: Looking at the broader picture, this is not just about isolated model releases. It aligns with the long-term vision: OpenAI is methodically constructing an AI-native cloud computing platform.</p>
+</details>
+<p><strong>Nikunj Handa</strong>: 正是如此。正如几十年前 AWS 定义了云计算的 <strong>EC2</strong> 计算实例与 <strong>S3</strong> 存储桶一样，今天我们在 AI 原生时代，也在定义属于智能体的基础算子——从底层的 Decisions API 快速仲裁、Responses 异步双向连接、到长效缓存与云端原生 Computer Use 运行环境。这些积木正在快速成熟，我们热切期待与全球开发者共同定义智能体计算的未来！</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p><strong>Nikunj Handa</strong>: Exactly. Just as AWS pioneered EC2 and S3 for internet-scale compute and storage, we are defining the foundational primitives for the agentic era—Decisions API for instantaneous control flow, Responses for duplex streaming, and hosted Computer Use environments. We invite developers worldwide to build this future alongside us.</p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/19c26a4a162c0e489eda8defec5b23ec7299b13d8418cd425a5aeacfb8b568cb.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/19c26a4a162c0e489eda8defec5b23ec7299b13d8418cd425a5aeacfb8b568cb.md" download="OpenAI全新Agent架构剖析：Computer Use、Decisions API与超低延迟推理.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Ari Weinstein" class="entity-link person-link">Ari Weinstein</a>, <a href="/search/?q=Nikunj Handa" class="entity-link person-link">Nikunj Handa</a>, <a href="/search/?q=Sam Altman" class="entity-link person-link">Sam Altman</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, <a href="/search/?q=Apple" class="entity-link company-link">Apple</a>, <a href="/search/?q=Stripe" class="entity-link company-link">Stripe</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=GPT-4o" class="entity-link product-link">GPT-4o</a>, <a href="/search/?q=Codex" class="entity-link product-link">Codex</a>, <a href="/search/?q=ChatGPT" class="entity-link product-link">ChatGPT</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

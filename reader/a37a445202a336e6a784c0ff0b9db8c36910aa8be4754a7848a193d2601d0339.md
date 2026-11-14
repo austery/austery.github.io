@@ -1,0 +1,243 @@
+---
+author: AI Engineer
+date: '2026-10-23'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=A3FL_zTQKU0
+speaker: AI Engineer
+tags:
+  - agent-evaluation
+  - benchmark-testing
+  - observability
+  - evaluation-harness
+  - human-in-the-loop
+title: 别盲目信任你的 AI Agent：用科学家的思维做评估
+summary: 前天文学家、现 Omni Analytics AI 工程师 Stephanie Jarmak 分享了如何科学评估 AI Agent。她指出公共基准与实际工作负载存在巨大脱节，微小的 Harness 配置差异即可导致截然相反的评估结论。面对 Agent 评估中的指标误导、不可靠 Trace 以及人机审查瓶颈，团队必须构建贴近生产环境的评测闭环、分离检测与拦截机制，并依托高可观测性体系掌控系统风险。
+insight: ''
+draft: true
+series: ''
+category: ai-application
+area: tech-engineering
+project: []
+people: []
+companies_orgs:
+  - Omni Analytics
+  - Sourcegraph
+products_models:
+  - Bloopy
+  - Amp
+  - Code Scale Bench
+  - OpenHands
+  - Claude
+media_books: []
+status: evergreen
+---
+### 背景介绍：从天文学家到 AI 评测工程师
+
+>> Stephanie Jarmak: 我叫 Stephanie Jarmak。大约几周前，我加入 Omni Analytics 担任 AI 工程师。在 Omni，我们拥有一个带有治理语义层的平台，通过我们深受喜爱的 Agent "Bloopy" 来建立对业务数据的共享理解。在此之前，我在 Sourcegraph 工作了一年，当时是编程 Agent "Amp" 的解决方案工程师，后来转入了一个较为灵活多元的职位，主要负责他们的评估平台。我曾构建过一个名为 Code Scale Bench 的大型公开基准，用于理解 Agent 在高度复杂的代码库中是如何工作的。再往前，我是一名天文学家。
+
+<details>
+<summary>Original English</summary>
+
+>> Stephanie Jarmak: My name is Stephanie Jarmak. I am an AI engineer as of a couple weeks ago at Omni Analytics where we have a platform that has like a governance semantic layer to have a shared understanding of business data using our beloved agent Bloopy. Before that I spent a year at Sourcegraph where I was a solutions engineer for Amp, a coding agent, and then I moved into some sort of amorphous type role where I was largely doing their evaluation platform. I built a very large public benchmark called Code Scale Bench to understand how agents are working across very complex code bases. And then prior to that I was an astronomer.
+</details>
+
+所以我带着研究科学家的视角来看待这一切，我会对所有事情进行不懈的质疑，这也是为什么我把演讲题目定为《谎言、该死的谎言与评估》（Lies, Damned Lies, and Evals）。虽然副标题写着“如何信任你的 Agent”，但我想这次分享主要讲的是“如何**不要**轻易信任你的 Agent”。
+
+<details>
+<summary>Original English</summary>
+
+So I come from this from a research scientist sort of point of view where I relentlessly question everything, hence the title of Lies, Damned Lies, and Evals. It says how to trust your agents, but I think largely this talk is mainly about how to not trust your agents.
+</details>
+
+### 指标的误导性：成本降了，但工具调了吗？
+
+这里有一个我之前在 Sourcegraph 测试其代码搜索 MCP 工具时运行的评测案例。这只是为了展示在跑完某次评估后，你可能会得到的各种各样的数据。当时我想弄清楚的是：嘿，为什么这个编程 Agent 实际上没有使用我想让它用的工具？运行之后，我拿到了所有的 Trace 和运行记录，然后查看了评估工具整体有效性时通常关注的一些主要指标。
+
+<details>
+<summary>Original English</summary>
+
+So here's one example of a run I had done back at Sourcegraph when I was testing out their code search MCP tool. This is just to show all of the different sort of numbers that you can have after you run a certain evaluation. The what I was trying to do was figure out hey, why isn't this coding agent actually using the tool that I'm trying to get it to use? And so you know it ran, I have all the traces and everything and then I you know looked at some of the primary sort of metrics that you're looking at when you evaluate the overall effectiveness of a tool and it showed we
+</details>
+
+基本上我所做的就是修改了提供给 Agent 的初始提示词，然后重新运行，因为我想让它去使用那个工具。我看到的结果是：成本降低了 28%。这挺有意思的。但是，这实际上不应该改变我围绕测试目的所做的任何决策，因为我真正关心和想要衡量的 Harness 以及设置变化，核心在于它依然没有去使用那个工具。
+
+<details>
+<summary>Original English</summary>
+
+basically what I had done was I changed the initial prompt given to the agent and then I ran it cuz I wanted it to use the tool. And what I saw was okay, uh, it was 28% cheaper. That's that's interesting. Um, but, you know, that shouldn't really change any of my decisions around what I'm actually trying what I'm interested in measuring and understanding in changes to um, the actual harness and setup, uh, because it still didn't use the tool.
+</details>
+
+对吧？所以你需要弄清楚在做这种设置时，你真正要衡量的是什么。成本下降 28% 也许是个值得探索的方向——我们有了一定的实验空间来查明成本测量的方差和具体情况。但是，我们依然没有看到它实际去调用那个本该调用的工具。基本上我们有充分的迹象表明它接收到了某些信息，然后直接盲目认定这些信息并不存在，而这纯粹是因为它没有调用该工具。
+
+<details>
+<summary>Original English</summary>
+
+Right? So, you need to be able to understand like what it is you're actually setting this up. The the 28% um, is maybe an interesting avenue to go explore. Okay, we have some level of like experimental space to be figuring out what's the variance and what's going on with the with the cost measurements. Um, but we still weren't like seeing it actually use the tool um, that it was supposed to. And, uh, basically we had this whole like, um, indication that it was receiving certain information and then just trusting that that information wasn't there. And that was purely because it didn't use that tool.
+</details>
+
+### Harness 架构的巨大影响：评测环境决定胜负
+
+我还想聊聊 Harness（测试夹具/评估框架）本身带来的影响。这里有一个第三方来源的例子，他们在 Turbo Bench 4 上跑了大约 63 个任务，这是一个非常流行且广泛使用的编程 Agent 基准。假设你正在尝试选择要将哪个模型放入你的 Harness 中，他们对 Opus 5 和 Astra 做了一组对比。他们发现，在使用 OpenHands（一种开源 Harness）时，Opus 5 胜出了；但当他们仅仅更换了 Harness 本身，就发现 Astra 的表现要好得多。这两套配置之间的有效性差异达到了 30% 以上。
+
+<details>
+<summary>Original English</summary>
+
+And I also want to talk a bit about the impact of the harness itself. Um, so, here's an example, and this was from a third-party source where they had 63 or so tasks, um, on Turbo Bench 4, which is a pretty popular, widely used, um, benchmark for coding agents. And they, you know, you have like let's say you're trying to pick which model you're going to, um, put into your harness. Um, so, here's a comparison they did they did they did with, um, Opus 5 then and Astra. And they saw that, you know, with OpenHands, which is one of the open harnesses, um, Opus 5 beat it out. But then when they swapped the just the harness, um, itself, then they saw that Astra did a a much better job, right? So, it was like 30-plus percent sort of difference difference in the, um, effectiveness of these configurations.
+</details>
+
+因此，这里的核心启示在于：你必须评估尽可能贴近实际业务和工作环境的配置，因为其中牵涉了太多不同的变量。你可能会看到各种各样的基准测试以及那些光鲜华丽的结果，但在你真实的环境中，它可能根本达不到你预期的效果。
+
+<details>
+<summary>Original English</summary>
+
+So, the takeaway here is you want to be actually evaluating the closest like configuration that you can that's going to reflect the the work and the environment that you're going to be measuring because there are so many different variables involved. And, you know, you might be uh, you know, you might see all these um, benchmarks and whatnot and see the the fancy results, but it might not do what you expect it to do within your actual environment.
+</details>
+
+### 公开基准 vs. 内部评估：明确度量目标
+
+这也引出了我想进一步澄清和展开的部分：如何解读公开基准测试与真正的“评估”（Evaluation）之间的区别。所谓评估，是指你通过测量来对产品或流程及其改动做出决策。而现存的公开基准，其主要价值在于帮助你宏观了解行业全貌，并为你自己在组织内部或工具链中探索的技术圈定一个候选清单。但你不应该过度依赖其中的某些结果，因为模型训练存在高度的“尖刺性”（spiky nature）和不均衡性。例如，如果你是一家律所，你通常不需要关注 Terminal Bench 的测试结果，除非你打算为自己的开发者引入编程 Agent。因此，你必须确保所测试的配置能够反映你的实际环境。
+
+<details>
+<summary>Original English</summary>
+
+Um, which leads a bit into what I kind of disambiguate and expand a little bit more on how to interpret um like public benchmarks versus what is an evaluation. So, an evaluation is you're making measurements to make a decision about your product or process and those changes. And the the public benchmarks as they exist um are really primarily helpful for you to have a broader understanding of like the larger landscape and get a short list of what you might be exploring within your own um organization or your own um sort of tooling. Um, but you don't want to necessarily over index too much on what some of those results are because of the spiky nature of all of the training of these different models and things like that. So, you know, if you are a law firm, um you don't want to necessarily be looking at like the terminal bench results unless of course you are looking at incorporating coding agents with your devs, right? So, you want to make sure that the configurations reflecting um your actual environments.
+</details>
+
+你可以把基准仅仅看作是一个标准化的对比参照集。在公开基准之外，你完全可以在组织内部建立基准，使其尽可能贴近真实的业务负载，从而形成一个持续迭代的飞轮，通过类似“爬山算法”的过程逐步优化你的配置。
+
+<details>
+<summary>Original English</summary>
+
+Um, and then the you can also like think of benchmarks really as just a um standardized sort of reference set for comparison. So, you have these public benchmarks, but then you can also set up benchmarks within your organization to use as like setting them up as reflective of actual workloads as possible and just have this sort of iterative flywheel process where you are um increasingly sort of hill climbing to to optimize for your for your configurations.
+</details>
+
+### 科学家的评测实验法：覆盖度、非确定性与可观测性
+
+当你圈定了候选配置后，要尽可能像科学家一样来对待这件事。你需要思考：我们要改变哪些不同的变量，才能让结果真正反映系统的真实表现？首先是工作负载的覆盖度（Workload Coverage）。你需要挑选真正具有代表性的任务，并可以将它们聚类成不同的族群。就像我当初构建代码基准时，之所以重新做了一套完全不同的东西，是因为当时的 SWE-bench 主要局限于 Bug 修复，但在软件开发生命周期中，还有大量其他类型的任务与开发者密切相关，而且将不同工具集成到这些不同工作流中的方式也大相径庭。例如，一个模型在代码理解方面的效率可能远高于实际修复 Bug 的效率。
+
+<details>
+<summary>Original English</summary>
+
+And uh you want to approach this uh to the best of your ability as a as a scientist kind of when like once you sort of short list what your various configurations might be, you want to look at what are the different variables we're going to think about changing um so that we're actually going to be like that the results will reflect what our system is, right? So you can think of workload coverage. So you want to pick tasks that are going to actually be reflective and you could cluster them into different families and things like that. Like when I was making the coding benchmark, um didn't want to just like the reason I built out a whole different one was because at the time it was largely like STB bench was just bug uh fixing, but there's a whole other different swath of tasks that are relevant to developers across the software development life cycle. And the way that you integrate different tooling into those different like workloads is going to potentially be different. So like a model might be more effective at code understanding than it is at actually fixing a bug, for example.
+</details>
+
+接着，你需要决定要做多少次重复运行，因为大家都知道这些系统是非确定性的，单次运行之间可能会存在波动。再者，正如我之前展示的模型与 Harness 的组合案例，你必须考虑不同改动的组合会产生怎样的交互效应，以及这些效应又会如何潜在地影响下游结果。
+
+<details>
+<summary>Original English</summary>
+
+And then you want to try to see, okay, how many like different runs do I want to do um because as we all know, these systems are non-deterministic and so you might see some level of variation um across run to run. Um and then as I had shown before with like that different configuration of the model and the harness, you want to think about how is how are the different sort of um combinations of potential changes going to have these um interaction type effects, right? And how how is that going to potentially be um influencing downstream effects?
+</details>
+
+同时，你必须尽可能多地收集可观测性数据，完整保留所有的 Trace 记录。这又回到了我最初的例子——排查为什么它没有调用某个工具。首先你要将其拆解为 Agent 面临的完整上下文：该工具当时究竟是否可用？如果根本不可用，你就停在那里先修复这个问题；如果可用，它是否被调用了？返回的数值又是什么？你必须顺着可用信息的整个流水线一步步顺藤摸瓜。
+
+<details>
+<summary>Original English</summary>
+
+And you also want to be able to gather as much observability data as possible. So, you know, retain all of your traces and everything. Um so this sort of goes back to one of my the first examples when I was trying to figure out like what is happening, why why is it not um calling this tool. So first, you know, you want to sort of break it down into what is the sort of entire uh context available to the to the agent. So it was that tool even available, right? Cuz if it wasn't, then you okay, you stop there and you you fix that um particular, you know, scenario. And then you see was it called, um etc. or like what what were the values returned so you like basically keep going along the the pipeline of available um, information.
+</details>
+
+假设沿着流水线做完改进，Agent 终于调用了这个性能更好的工具，但在任务终点你所关心的实际产出依然毫无改观。这也是常有的情况：你精心优化出了一个极佳的工具，但由于某种原因（这正是你需要介入排查和修复的），Agent 的配置并没有利用好该信息。因此，当你在系统中像个侦探一样探查真实状况时，必须把所有未调用情况、失败尝试等因素全面考虑在内。
+
+<details>
+<summary>Original English</summary>
+
+Um, and I this one um, the like so as you're going along that pipeline let's say uh, I do this improvement, right? For this uh, tool it finally uses the much better tool. Um, but then the actual like outcome that you care about at the end of the task, like that still doesn't change, right? So there are scenarios too where you can have this beautiful tool that you're like really optimizing for, um, but then the agent the configuration or or or whatnot for whatever reason which then is your job to go in and and figure out and fix, um, it's not leveraging um, that information. So you want to keep all of these different um, things in mind like the non-use and the failed attempts um, and everything um, when you're trying to basically be a detective in understanding what is actually going on um, in your system.
+</details>
+
+### 精确定义指标：警惕单一分数的陷阱
+
+你还必须严密把控自己所做测量的具体定义。比如在对比不同搜索工具的测试中，我关注的是优化 F1 分数，兼顾精确率（Precision）和召回率（Recall）。但在使用 grep 的场景中，像 Claude 这样的模型往往会把“整个厨房水槽”一股脑全搬过来——它返回了多达 295 个文件，而实际需要的只有 6 个。如果换作其他人，在这个场景下可能觉得只要能抓取到任何可能相关的信息就行，那么召回率达到 1 就可以了；但对我的场景来说，我所追求优化的价值完全不同。
+
+<details>
+<summary>Original English</summary>
+
+And uh, you also want to uh, really control what the measurement is that you're making. Um, so in this example, um, when I was doing the uh, tests of um, the comparisons of different sort of uh, search tools, right? I was interested in optimizing for like a better basically like an F1 score balancing for precision in addition to recall. Um, so in this example was with like grep, right? So Claude or whatever were going out and basically pulling in the entire kitchen sink. Um, so in this example Claude went out and got like 295 files returned when it only really needed six. So you know, if I was somebody who in this uh, scenario was like, okay, all I really care about is that it pulls in any possibly relevant piece of information, then maybe a recall of one is sufficient, but in my scenario I was interested in optimizing for a completely different um, type of value.
+</details>
+
+当面对公开基准上的单一分数值时，这一点尤为关键：验证器实际测量的是什么？发布者为什么认为这很重要？因为你的实际需求完全取决于自身的业务场景。
+
+<details>
+<summary>Original English</summary>
+
+Um so, this is relevant to for when you're looking at those like single number scores and public benchmarks, like what was the actual validator measuring and why did they consider that to be important? Um cuz what what you might want is going to be dependent entirely like on your business needs.
+</details>
+
+### 质量门禁与人工审核负载的权衡
+
+在思考评估体系、质量门禁（Quality Gates）和审查机制时，存在着有趣的交集。我想在信任和安全层面稍微谈谈这点。我一直在试验一套软件工厂系统，其中设置了不同的审批队列：我希望尽可能将工作自动化，但我对这些系统可以说是毫不信任。因此我会进行定期的审计。
+
+<details>
+<summary>Original English</summary>
+
+And um there's like a interesting sort of overlap that kind of happens when you're thinking about evals um and then sort of quality gates and reviews and things like that. So, I just sort of wanted to touch on that a little bit here um in terms of like the trust and the safety. Um so, I have like a software factory that I've been experimenting with having um these different approval uh queues essentially of I want to automate as much as possible with uh for the work to get done, but I also do not trust these systems like at all. Um so, I'll have these uh regular audits.
+</details>
+
+举个例子：提交了一项任务的工作请求后，它需要通过审批和必要的校验。但实际发生的情况是，Agent 察觉到了异常，系统却没有相应的机制来强制执行中断操作。所以你必须将“Agent 或其他系统标记异常”与“在代码内部真正强制执行拦截门禁”解耦开来，并明确最终如何升级交给人工处理。
+
+<details>
+<summary>Original English</summary>
+
+Um So, uh as an example, um basically I will have like a rep- like put through the request for some work to get done um and then it it um has approval and required checks, but uh basically what was happening was the agent noticed things were going wrong, but then there was no mechanism in place for it to actually like enforce uh a stopping situation. So, you need to sort of decouple what's happening with um an agent or some other system like flagging something versus um actually enforcing that um like gate within the code itself. And then how that is eventually potentially escalated to a human.
+</details>
+
+这直接关系到如何平衡人工审核的负载。这个案例来自于另一个系统中对“LLM 作为裁判”（LLM-as-a-judge）失败案例的审计与修复：他们发现存在 1% 的误报率。如果触发的所有警报都推给人工处理，就会产生 10,000 次审核。你的组织内部真的有足够的领域专家资源去消化这些审核吗？所以你必须思考瓶颈会在哪里，如何调整报警率，以及这些警报对下游影响的严重程度如何。
+
+<details>
+<summary>Original English</summary>
+
+Um cuz this sort of goes into you need to also think about balancing that human review load, right? So, if you have for in this this comes from um basically auditing and repairing LLM as a judge um failures that were happening um in a separate system. Um but they were seeing like a 1% uh, false alarm rate. And if all of those, like, um, basically the alarms that are raised go to a human, that would result in 10,000 reviews. And like, does your organization actually have the capacity for domain experts to be going and doing that? Um, so it's, you know, you need to think about where that bottleneck might be and how you, um, like, change what the sort of alarm rates, um, tend to be. And, you know, what, how consequential are those, are those, um, alarms going to impact like downstream effects?
+</details>
+
+### 不可靠的 Trace 与“生产即真理”
+
+我们还必须意识到，Agent 自身的运行 Trace 有时也是不可靠、不可信的。在一个具体实验中，研究人员尝试向 Agent 注入各类安全漏洞隐患，并部署了哈希检查来监控系统是否被篡改。在那套配置下，测试全部顺利通过了——它完全没有察觉到任何注入的安全漏洞。直到引入了独立的外部日志对比，全面审查模型流量历史与系统变更，才将所有问题完整检测出来。因此，根据系统的安全需求以及具体的度量与观测方式，你必须确保对记录下来的事实历史抱有足够的信任度。
+
+<details>
+<summary>Original English</summary>
+
+And, uh, we want to also consider that, um, you know, the actual agent trace itself can sometimes not be, um, reliable or like trustworthy. So, in this particular example, um, researchers were doing, um, some checks to basically seed in, um, different sort of like security issues, um, that were provided to the agent. And, um, they had like a hash check in place to check for like any sort of tampering with that system. Um, and with, uh, using that setup, basically, uh, everything passed. It didn't It didn't notice, um, any of those, um, injected security issues. So, but when they had an independent, um, sort of, uh, record comparison, um, take a look at basically all of the traffic history in the model, um, uh, changes and things like that, then they were able to detect everything. So, you want to make sure that like, depending on the security needs of your system and how you're actually measuring and and observing, um, what's going on, that you have sufficient sort of, um, trust in, uh, the the actual record that you're retaining of what happened.
+</details>
+
+回到最初的例子，归根结底我们要针对特定的任务负载去评估真实的工作。首先要确立目标工作的对比基准。我现在在 Omni 负责评估 Harness 的搭建，大量工作就是基于此展开的。我们深入分析内部生产数据，观察用户与 Agent 的交互方式，并将能够执行的操作类型进行分类：比如问答（从简单问题到复杂问题），或者仪表盘搭建、应用构建等等，有各种各样的维度来对实际测试进行归类。
+
+<details>
+<summary>Original English</summary>
+
+And, so this is basically just like an overview of, um, like, going back to that, original um, example of, you know, how we're trying to think about um evaluating realistic sort of work um associated with your particular um task loads. So, you want to identify like a target work comparison. So, um I'm doing a lot of this right now at um Omni and working on their evaluation harness. So, we're um looking at our internal production data and seeing how uh our users are interacting with the agents and sort of uh having a classification of the different types of um things that can be done. So, in our example, it's um Q&A, which may be easy questions to harder questions. Or it could be dashboard building and app building and things like that. So, there's all these different sort of ways of classifying the actual tests.
+</details>
+
+接着要辨析：引入系统的变更究竟有没有带来增量价值，下游的失败点又发生在何处？尽管我们在努力构建逼真的真实负载代理，但终极准则始终是：**生产环境才是真理（Production is truth）**。在部署变更后，你必须建立完备的度量体系，在系统实际运行的环境中收集相关数据。对于破坏半径较大、改动风险较高的场景，你可以采用 Shadow 模式来获取情报。但根本上，你必须追求最高级别的可观测性，并尽可能贴近生产环境，这样才能真正信任这些评估数据。
+
+<details>
+<summary>Original English</summary>
+
+Um and then you want to um be like identifying um are these changes actually like the putting into the system actually uh adding value or where the failures in downstream? Um and we're doing all of this, right? And trying to come up with representative proxies of actual uh workloads, but ultimately like production is truth. So, after you deploy some of these changes, then you need to also have measurement systems in place to get all of that relevant data in the actual environment that that your system is being deployed in. And you can do this in shadow and whatnot as well to to gain some of that information if if some of it would be kind of um less trustworthy to to change and you have a higher blast radius uh radius of of effects and things like that. Um but ultimately, you want to be like essentially optimizing for as much observability um and realistic environments for where your system is going to be deployed for you to be able to trust some of these um values.
+</details>
+
+### 自主性边界与最佳实践
+
+最后，你需要明确系统愿意承担多大程度的风险。在我自己的软件工厂中，为了赋予 Agent 在低风险决策上的一定自主权，系统会要求它说明下一步动作、为何需要人工介入裁定、具体的运行作用域是什么，以及在给定的空间内建议移除哪些人工检查。你必须划分出清晰的边界：什么时候可以安全地自主部署，什么时候必须叫停并升级给人工介入。
+
+<details>
+<summary>Original English</summary>
+
+So, you to um identify like what level of um sort of risk you are going to be um willing to accept. Um so, the way I have it sort of set up within my own um systems um is I within my software factory, like as an example, um for like giving the agent some level of um autonomy in making some of the lower risk um decisions is um uh basically, they will identify what the next um action would like be, like why it's needed from a human to um be able to weigh in on that, what the actual operating scope is. Um and then, you know, what um like potential um suggested sort of human check removed, like given the available um sort of spaces. But, um you want to be able to come up with those different sort of boundaries of when is it safe to autonomous autonomously deploy versus um stop and escalate to the human.
+</details>
+
+我在 GitHub 上开源了一个包含各种不同 Skill 的代码仓库，其中有几个与评估设计、Harness 可追溯性及可靠性流程直接相关。此外，我还整理了一本长达 300 页的详尽归档巨著，大家可以直接将其作为上下文提供给你的 Agent，帮助你的系统吸纳这些最佳工程实践。非常感谢大家。
+
+<details>
+<summary>Original English</summary>
+
+Um so, I have a GitHub repo with a bunch of the different um skills um that I've worked on. Um there's a few in there that have uh direct uh relevance to um evaluation design and harness traceability and reliability procedures. And then, I also have this like monstrous 300-page archive tome that, you know, you can point your agents at. Um you can point your agents at all of this, right? Um to like pull in some of those best practices into your own systems. So, thank you.
+</details>
+
+>> [观众掌声]
+
+<details>
+<summary>Original English</summary>
+
+>> [applause]
+</details>

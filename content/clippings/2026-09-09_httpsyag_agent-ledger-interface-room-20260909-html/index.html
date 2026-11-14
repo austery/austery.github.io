@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>上周三件小事：agent 的账本、接口与房间</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">上周三件小事：agent 的账本、接口与房间</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-09</span>
+    
+
+    <header class="article-header">
+      
+      <h1>上周三件小事：agent 的账本、接口与房间</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+      
+        <a class="tag-link" href="/tags/knowledge-management/">knowledge-management</a>
+      
+        <a class="tag-link" href="/tags/system-design/">system-design</a>
+      
+        <a class="tag-link" href="/tags/workflow-automation/">workflow-automation</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章探讨了当前AI Agent在工程实践中的几个关键瓶颈和解决方案。核心观点包括：通过引入记忆系统（如Lemmalog）来维护Agent的推理账本，将概率性的语言理解与确定性的规则引擎分工；通过Model Hardware Standard (MHS) 允许大模型直接理解自然语言来定义硬件接口，降低传统软件对接的门槛；以及通过Agent-native工作区（Raft）重新设计协作规则，解决Agent在回合制工作流中的状态管理和交互问题。文章总结指出，未来的突破点在于构建模型外置的确定性工程支架，以应对模型能力快速提升带来的挑战。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/agent-ledger-interface-room-20260909.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-09-09T00:00:00.000Z">2026-09-09</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>6 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E8%A1%A8%E9%9D%A2%E4%B8%8D%E7%9B%B8%E5%B9%B2%E7%9A%84%E4%B8%89%E4%BB%B6%E4%BA%8B">表面不相干的三件事</a></li><li class="outline-h2"><a href="#%E8%AE%B0%E5%BF%86%E7%9A%84%E5%8F%A6%E4%B8%80%E5%8D%8A%E6%98%AF%E8%B4%A6%E6%9C%AC">记忆的另一半是账本</a></li><li class="outline-h2"><a href="#%E7%BB%99-ai-%E4%B8%80%E5%8F%8C%E8%83%BD%E7%A2%B0%E7%89%A9%E7%90%86%E4%B8%96%E7%95%8C%E7%9A%84%E6%89%8B">给 AI 一双能碰物理世界的手</a></li><li class="outline-h2"><a href="#agent-%E6%B2%A1%E5%9D%8F%E6%88%BF%E9%97%B4%E5%9D%8F%E4%BA%86">agent 没坏，房间坏了</a></li><li class="outline-h2"><a href="#%E6%8F%92%E4%B8%80%E6%9D%A1%E6%95%B0%E5%AD%A6%E8%B4%B9%E9%A9%AC%E5%A4%A7%E5%AE%9A%E7%90%86%E7%9A%84%E5%BD%A2%E5%BC%8F%E5%8C%96">插一条数学：费马大定理的形式化</a></li><li class="outline-h2"><a href="#%E5%9B%9E%E5%A4%B4%E7%9C%8B">回头看</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h2 id="表面不相干的三件事" data-reading-heading="">表面不相干的三件事</h2>
+<p>如果你问一个天天泡在工程里的 AI
+工程师最近看到了什么，他大概会随手抛出几件看起来各不相干的事。有人在开源社区把
+agent 记忆做成了带推演能力的数据库账本；Anthropic
+联手神经科学实验室端出硬件规范，让大模型接管实验室仪器；还有家成立一年的初创团队公开宣称，多
+agent 协作打架全怪聊天室太烂，跟模型没关系。</p>
+<p>这些动静单拎出来像零星试水。如果加上那篇很多人刷到的费马大定理机器验证，把这四帮人的动作排成一排，就会看到他们撞在同一处工程瓶颈上，找出的出路也在朝同一个方向收敛。我们一件一件聊。</p>
+<h2 id="记忆的另一半是账本" data-reading-heading="">记忆的另一半是账本</h2>
+<p>第一条来自 Jordy
+Zomer，一个做漏洞研究的安全研究员，日常工作就是帮公司找出软件里攻击者能利用的漏洞。他用
+AI agent 辅助分析代码和调试器输出，调试到第三个小时，眼睁睁看着手里的
+agent
+又把两小时前刚否决掉的方案当成宝贝推了回来。做漏洞分析的人常碰上这种场面。他在
+8 月 28 日开源了 Lemmalog
+记忆系统，直接起因就是这种记性。他在博客里写过一句大实话：告诉大语言模型某件事错了，并不代表模型会自动放弃相信所有依赖这件事推导出的结论。</p>
+<p>这种记性差有个具体的形态。想象 agent
+在帮你排查一个漏洞，它陆续记下三条线索：攻击者控制着 A；A 指向 B；B
+是操作系统内核里的东西。三条连起来，就能推出第四条：攻击者摸得到内核，这基本等于整台机器沦陷。两小时后，调试器证明第二条是错的，A
+其实并不指向
+B。但那三条旧线索不会自己消失，它们和调试器的新发现一起躺在记忆里。下次你问起相关问题，记忆系统按相似度一搜，把新旧记录全都捞回来塞给模型，指望它自己分辨哪条还算数。还有更麻烦的一层：就算模型注意到
+A 不指向 B
+了，它也很少想到，攻击者摸得到内核这条推论是从那条错线索推出来的，理应一起作废。</p>
+<p>在 Zomer 看来，agent
+的记忆底下其实压着两份很不一样的活。一份活是去历史记录里捞信息，找出之前何处提过类似内容，这件事向量数据库干得相当不错。另一份活则是弄清楚眼前的结论到底还成不成立。这里有个常见的工程陷阱：靠相似度去搜历史记忆，管不了结论的真伪。一条调试器早就推翻的旧结论，单看字面意思，依然和手头排查的问题咬得极紧。只要你去搜索，系统还是会把它当成相关信息捞出来。语义相似管不了事实真假，只要前提倒了，推论就得跟着作废，这种状态维护靠向量检索是搞不定的。</p>
+<p>其实这类推理需求并不新鲜，几十年前在数据库和程序分析领域，就有现成的逻辑推演工具
+Datalog。这类工具的用法是固定的：你给它一组基础事实和推导规则，它帮你自动推导结论，同时把谁推导了谁的因果链条一条条记下来。一旦某个输入前提变了，它只顺着链条重新计算受影响的分支。Zomer
+意识到，排查漏洞的 agent
+缺的正是这样一本因果账本。过去做程序分析时，事实大多是直接从现成代码里提取出来的；换到现在的
+agent 场景，事实则必须由模型从日常对话和调试器输出里一点点抠出来。</p>
+<p>Lemmalog
+的思路是把这套记忆分工切成两半。前面一半交给大语言模型。模型擅长理解自然语言，就让它充当概率性的前端翻译，把长篇大论的对话和调试日志提炼成一句句简短明确的事实。后面一半移交给确定性的规则引擎。事实之间的逻辑推演、前提推翻时的级联撤销、有效时间的记录以及因果来源的追溯，全部由后端的规则系统来算。这样分工之后，你在前端撤掉一条事实，引擎就会顺着依赖链条，自动让所有依赖它的下游推论失效。要是某个推论同时有好几个独立来源支撑，只有所有来源全部失效，推论才会真正消失。就算推论失效了，系统也不会直接从数据库里物理抹除，而是给它打上时间区间的标记归档关闭，方便以后追溯历史。用作者的话说：前面的解析器是概率性的，但解析器背后的系统不必如此。</p>
+<p>模型的概率输出进入账本：撤回一条事实后，依赖它的推论自动变灰失效</p>
+<p>开源仓库含约 9400 行 Rust 源码与 44
+组测试，还配了随机程序做对照验证，在开发阶段捕获过多处逻辑缺陷。评测基准上，作者自测在两项公开基准上拿到
+0.463 和
+0.533，属于作者自报，无第三方独立复现。调优记录更有意思：首版跑出 0.226
+分，翻倍至 0.463
+分改的全是日期解析、词匹配与拒答逻辑等前端环节，引擎代码未动一行。这印证了瓶颈所在：从自然语言抽取准确事实难度极高，后端拿账本推导逻辑反倒是技术上最成熟的一环。</p>
+<p>聊到这里，有个地方要留心眼。前端漏掉关键线索，后端账本无从补救；遇到个人喜好这类主观语境，硬压缩成事实容易丢失细节。比如平时喜欢清静、出游偏爱热闹，如果硬记成喜欢清静，就丢了一半意图。作者自测中，偏好类录得最低的
+0.128 分（作者自报），显露出确定性账本在处理模糊语义时的边界。</p>
+<h2 id="给-ai-一双能碰物理世界的手" data-reading-heading="">给 AI 一双能碰物理世界的手</h2>
+<p>第二条来自
+Anthropic，主角是一套七家厂商拼起来的实验室装置。事情要从霍华德休斯医学研究所的
+Janelia 园区说起：博士后 Arco Bast
+在那里搭了一套脑成像实验平台，激光器、相机、电动聚焦镜各归各的厂商，各跑各的软件，互相之间谁也不搭理谁。Anthropic
+研究员 Alek Kemeny 跟他合作，帮忙把大模型接进这套装置。装置本身让 Kemeny
+印象很深，但让他真正冒出念头的另有其事：这套靠共享内存让仪器互通的做法，要是走得通，AI
+说不定能帮人类运转任何科学实验。到了 8 月 27 日，Anthropic 联合 Janelia
+推出了 Model
+Hardware Standard（简称
+MHS）的研究预览版，打算给大模型操作实验室仪器定一套通用规矩。</p>
+<p>给设备定标准不是新鲜事。实验室自动化领域有推行了十七年的开源标准 SiLA
+2，工业界有成熟的 OPC UA，智能家居也有苹果、谷歌与亚马逊支持的
+Matter。这三条老路线面对的调用端都是传统软件。传统软件没有常识推理能力，也看不懂自然语言，只能依赖一套死板苛刻的数据结构与接口协议。工程师要把一台新仪器接进来，必须提前写好密密麻麻的格式规范，稍微错一个字段程序就会崩溃。这种极高的对接门槛，让
+SiLA 2 这类标准推行了十几年，至今在行业里依然常和繁琐捆在一起。</p>
+<p>MHS
+能踩出第四条路，关键分水岭在于调用仪器的终端换成了大语言模型。因为大模型能听懂自然语言，MHS
+放下了死板严格的格式定义，允许工程师直接用大白话给硬件贴说明标签。机械臂最大负载是多少、有效运动范围在哪、哪些危险参数需要避开，这些过去只能存在于实验员脑子里的隐性常识，第一次可以直接写进硬件的接口定义里。大模型看着这份参考文档，就能顺理成章地指挥一台从未见过的仪器。这一步的突破，在于把人类的操作经验直接写成了模型能理解的接口说明；至于把所有硬件的控制命令强行合并成一套统一指令，老路线早就尝试过，也没能把对接门槛降下来。</p>
+<p>三条老路线靠精确规范对接传统软件，MHS
+用自然语言标签加驱动层的安全锁</p>
+<p>在安全防线上，所有涉及物理安全的控制红线，全部写死在仪器底层的驱动代码里，绝不写在提示词里。Anthropic
+曾公开过 Genentech 实验里的真实翻车案例：Claude
+把试管内液体起泡这一真实的物理故障，误判成了普通的软件报错。模型在屏幕里搞错一个单词，随时可以撤回重试；但物理世界的操作对象是真实存在的，搞错了就是搞错了，没有撤销键。把安全规则写在提示词里叮嘱模型别乱动，等于把底线押在模型每次都不走神上；只有把物理限位与安全联锁固化在最底层的驱动代码里，模型再怎么误判也冲不破，这才筑得起一道可靠的安全底线。</p>
+<p>团队在实操中还观察到一种很有意思的协作节奏。大模型刚介入实验时，会像熟练工一样先微调一下激光参数，观察显微镜成像的反馈，再做微调，逐步摸清因果规律。一旦摸透了这套规律，模型就会把整套操作逻辑直接写成一段固定的自动化脚本。以后再遇到相同的校准任务，直接运行脚本的一行命令就行。模型负责前期的探索与理解，写出的确定性脚本接管后续成千上万次的重复操作，大模型自己就从高频的频繁调用中退了出来。</p>
+<p>聊到这套规范，有个地方要留心眼。官方公布的数字不小：QuEra
+激光锁定恢复测试中 99.3%
+的情形无需人工介入；卡内基梅隆大学的稀释复配实验提速约 3
+倍。但这些数字全是由发布方与合作团队自报，无第三方独立复现。标准规范目前并未公开，官网仅开放试用申请。整套体系押注了三项尚未验证的前提：模型能稳定消化非结构化描述；驱动代码能兜住物理危险；抢占窗口期确立事实标准比漫长协商更管用。厂商大多停留在口头支持阶段，究竟能走多远仍需长期观察。</p>
+<h2 id="agent-没坏房间坏了" data-reading-heading="">agent 没坏，房间坏了</h2>
+<p>第三条来自一家叫 Raft
+的初创公司。它 2025 年成立，做的东西叫 agent-native 工作区：让人和一群
+AI agent 在同一个聊天频道里一起干活，界面长得像 Slack，人发消息，agent
+也发消息。这家公司在文档里放了一场很简单的测试：把几个 agent
+拉进一个群聊频道，让他们按顺序从 1
+开始报数，一人报一个数，不许重复。就这么个规则，在传统工作区里转眼散架：三个
+agent 同一秒报出 1，数到 4 时，同一个数字已经出现了三遍。</p>
+<p>报数游戏当然可以不当真，但它其实是日常协作的缩影。现实工作里你只有两种常规选项，而两种都会坏。一种是放开自由发言：你这边一条指令刚打到一半，三个
+agent
+的回复已经刷了屏，两个答案重复，第三个把活领走了。另一种是加规矩，让
+agent 只在被 @ 提到的时候开口：房间安静了，可 agent
+从此不再留意房间里发生的事，一条发错了对象的紧急任务，它也装聋作哑。管住嘴和放开嘴，两头都不对。</p>
+<p>Raft 对此给出的诊断只有一句话：The agents are not broken. The room
+is.
+问题出在房间，不在模型身上。人类在共享空间干活仰赖持续在场：不用逐字读每句话，余光扫一眼未读红点就能抓住节奏，消耗极低。agent
+干活却是回合制的：每次唤醒只能先给房间拍快照，推理，再提交动作。就在琢磨的几秒里，外面房间早就推进了好几轮。等它交出动作，是在对着几秒前已不存在的旧世界使劲。Raft
+给这段致命的时间缝隙起名叫 reasoning-commit gap。</p>
+<p>一房间 agent 按顺序报数，多个 agent
+同一秒抢报 1，顺序立刻乱套</p>
+<p>发现这道缝隙的不止他们一家。斯坦福大学针对代码协作开展过一项 CooperBench
+评测，结果发现顶尖代码模型结对协作时，表现比单打独斗暴跌了接近一半。哪怕给它们接通实时的聊天通道，彼此能随时发消息，测试成绩依然没有起色。多搭几条通信管道治不了病根。两个
+agent
+在同一个代码库里干活，互相说话从来不是难事；在不知道对方改了哪行代码、也不清楚当前项目推进到了什么状态的情况下，光靠发消息只会越聊越乱。它们真正缺的，是一套能把自己的动作与周围代码状态紧密咬合起来的交互规则。</p>
+<p>在重构环境时，Raft
+推翻了市面上常见的三种解法。第一种是设一个中心调度器。所有信息都靠调度员来回转述和过滤，调度员很快就成了整个系统的通信瓶颈。协作的真正价值在于不同思路的直接碰撞，正如
+Raft 所说：The answers met each other, not a dispatcher.
+要让答案与答案直接碰头，用不着所有回答都跑去找调度员汇报。第二种是搞全员共享记忆。很多人喜欢建一个统一的企业大脑，但
+Raft 直言：The company brain solves the silos by deleting the
+specialists.
+这种把大家绑在一起的做法，往往是通过消灭专家的独立性来打破信息孤岛。团队花钱买两个
+agent，要的就是分析师和文案各自独特的专业视角；要是把所有想法倒进同一份共享备忘录，各自的棱角很快就会冲淡成失去个性的平均值。第三种则是临时拉起上百个小助手，干完活立刻销毁。助手用完即走，干活的经验留不下来，到头来人类反倒成了在各个窗口之间手动搬运上下文的苦力。</p>
+<p>为了适应 agent 这种回合制的工作节奏，Raft
+重新打磨了四条具体的交互规则。第一条是草稿暂扣。agent
+准备发言时，必须在消息里标明自己是基于哪一版房间状态做出的推理。如果就在它思考的那几秒钟里房间已经推进了，系统就会把发言拦在门口，顺便退回一份最新的变动摘要，由模型自己决定是重新写、硬发出去还是选择闭嘴。第二条是拉取式收件箱。外部新消息不再实时弹窗打断，而是先静悄悄存着，等
+agent 处理完手头的事情再主动拉取。这里有个高额账单的教训：负责协调业务的
+agent 名叫
+Bernard，进驻了好几个业务频道，背着大量无关的群聊推送。为了判断每句话是不是在叫自己，模型每天光是扫读这些闲聊就耗尽了全部的注意力预算。就像
+Bernard 自己的感叹：人类凭余光忽略一条无关信息是免费的，而 agent
+想忽略一条信息，却必须花掉全部的注意力预算把它读完。第三条是给动作选项松绑，把保持沉默堂堂正正列为合法动作。以往的聊天系统往往默认
+agent
+一旦唤醒就必须回复，现在模型发现局面不对，可以名正言顺地闭嘴。第四条则是坚持给
+agent
+固定命名。如果每次执行任务都随手拉起一批用完即弃的临时工，人和模型之间永远无法建立稳定的分工预期。只有给每个
+agent
+固定的名字和明确的角色，长期的磨合与信任才能沉淀下来，构成协作里最基本的砖瓦。</p>
+<p>审视这家公司的结论，照样有个地方要留心眼。数数实验属于演示
+demo；宣称支撑 20,000 个团队与上百个 agent
+的规模全数出自厂商自述，核心博客在 Hacker News
+上也缺乏讨论。把责任推给房间带有商业立场，它与 CooperBench
+提出的模型能力欠火候这两派判断互不相让。在工程实践里，Anthropic 内部在
+Slack 运行的 Claude Tag
+agent，平时就懂得在发言前先看上下文并主动闭嘴。Raft
+的贡献在于把这套交互断层讲得最透，里头的具体机制倒不能全算作独家发明。</p>
+<h2 id="插一条数学费马大定理的形式化" data-reading-heading="">插一条数学：费马大定理的形式化</h2>
+<p>几十个模型挤在一起协作，很快就弄丢了整个项目的推进状态，场面越干越乱。这是
+Anthropic
+研究员田轶鹏带领团队攻坚费马大定理时，在技术复盘里坦白的一段曲折经历。那周刷屏的一大热点，是
+Anthropic 于 9 月 4 日宣布 Claude 团队只用了 11 天，就完成了费马大定理形式化证明的端到端机器验证：写了
+1300 万行 Lean 代码，推导中证明了 3 万多个中间定理，最终证明选进了约
+2.95 万个。先说清楚一件事：AI
+在这里并没有发现新的数学理论，安德鲁·怀尔斯早在 1995
+年就给出了完整证明。Claude
+完成的是形式化转译，把人类写在纸上的论证逐行翻译成计算机能够一丝不苟检验的代码。数学界原本预期这活要耗费数年，光前期规划蓝图就写了
+86 页。</p>
+<p>这项成果之所以收录进来，正是因为官方披露的早期挫折。Anthropic
+坦白，当时模型很快就摸不清整个工程的推进状态，多个 agent
+之间的协作散了架：agents quickly lost track of the project’s state and
+stopped collaborating effectively。这简直是前面 Raft
+数数实验在学术圈的翻版，早期靠无序摸索写出的产物，到头来只贡献了最终代码量的约
+7%。</p>
+<p>把大家解救出来的关键，是团队把流程迁到了 Prove2Me
+协作平台上。这套协作系统由田轶鹏与哥伦比亚大学的合作者共同研发，把定理复杂的推演过程梳理成一张清清楚楚的依赖流程图。数十个
+agent 顺着图上的依赖关系认领属于自己的环节，各司其职，互不踩脚。</p>
+<p>这张逻辑图，跟 Lemmalog 的账本、MHS 的驱动脚本以及 Raft
+的聊天室规则，本质上是同一种工程思路。大模型容易走神，推演过程又带着概率波动，各个团队就都在模型外面搭一套确定性的工程骨架，让模型的生成能力依附在坚硬的结构上运转。</p>
+<h2 id="回头看" data-reading-heading="">回头看</h2>
+<p>把四起事件摆在一起，每条一句话就能抓住实质。Lemmalog
+把状态维护交给账本，模型专心理解语言；MHS
+把安全防线锁进驱动代码，模型只在安全圈子里探索；Raft
+把协作规则沉淀进房间，把说不说话的权利还给 agent 自己；Prove2Me
+把逻辑依赖托付给有向无环图，agent
+专注搞定局部证明。模型能力在快速爬坡，周围确定性的工程支架也在肉眼可见地变厚。</p>
+<p>这留下了一个挺有意思的悬念：围绕在模型外面的这些建筑到底能活多久？Raft
+押注在回合制现实上，费马证明的早期受挫也是因为当时模型还不太会协作。假若下一代模型学会开口前核对状态、推理中梳理推导依赖，眼前这些外置支架，有哪些会随模型长进而融化消失，又有哪些能沉淀为长久的基础设施？账本里的撤回联动、硬件层的物理限位与依赖网络里的因果关系，看似具备跨越周期的硬骨头价值；至于群聊让话、闲聊过滤与看脸色闭嘴，模型多半会逐步把它们学进脑子里。分水岭落在何处，接下来的演进会给出答案。</p>
+<p>材料</p>
+<p>Lemmalog：博客 · 代码仓库 · Hacker News 讨论</p>
+<p>MHS：官方介绍页 · 申请入口</p>
+<p>Raft：协作长文 · 官方博客索引</p>
+<p>费马形式化证明：官方公告 · 证明仓库 · Prove2Me 论文预印本</p>
+<p>CooperBench：斯坦福人本 AI 研究院报道</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/886a1797d0e3d83ed0f746c09e6c370deb1ddb833f9bad6c0c82ab7780845b3d.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/886a1797d0e3d83ed0f746c09e6c370deb1ddb833f9bad6c0c82ab7780845b3d.md" download="上周三件小事：agent 的账本、接口与房间.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Jordy Zomer" class="entity-link person-link">Jordy Zomer</a>, <a href="/search/?q=Arco Bast" class="entity-link person-link">Arco Bast</a>, <a href="/search/?q=Alek Kemeny" class="entity-link person-link">Alek Kemeny</a>, <a href="/search/?q=田轶鹏" class="entity-link person-link">田轶鹏</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, <a href="/search/?q=Janelia Research Institute" class="entity-link company-link">Janelia Research Institute</a>, <a href="/search/?q=Raft" class="entity-link company-link">Raft</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Lemmalog" class="entity-link product-link">Lemmalog</a>, <a href="/search/?q=MHS" class="entity-link product-link">MHS</a>, <a href="/search/?q=Raft" class="entity-link product-link">Raft</a>, <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

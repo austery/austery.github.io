@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>基于大语言模型与边缘交付的敏捷站点超个性化构建</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">基于大语言模型与边缘交付的敏捷站点超个性化构建</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-08-29</span>
+    
+
+    <header class="article-header">
+      
+      <h1>基于大语言模型与边缘交付的敏捷站点超个性化构建</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">hyper-personalization</span>
+      
+        <a class="tag-link" href="/tags/retrieval-augmented-generation/">retrieval-augmented-generation</a>
+      
+        <a class="tag-link" href="/tags/web-development/">web-development</a>
+      
+        <a class="tag-link" href="/tags/edge-computing/">edge-computing</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">演讲者介绍了利用 Adobe Experience Manager 边缘交付与大语言模型构建超个性化敏捷站点的实践，通过将整个网站作为语料库构建 RAG，实现实时模块级定制与快速页面生成，并探讨了评估与智能体生成工具。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=jebp4V0vh30" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-08-29T00:00:00.000Z">2026-08-29</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>8 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E5%BC%95%E8%A8%80%E4%B8%8E%E6%95%8F%E6%8D%B7%E7%AB%99%E7%82%B9%E6%A6%82%E5%BF%B5">引言与敏捷站点概念</a></li><li class="outline-h3"><a href="#%E6%8A%80%E6%9C%AF%E6%A0%88%E4%B8%8E%E5%9F%BA%E4%BA%8E%E6%A8%A1%E5%9D%97%E7%9A%84%E4%B8%AA%E6%80%A7%E5%8C%96">技术栈与基于模块的个性化</a></li><li class="outline-h3"><a href="#%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E6%80%A7%E8%83%BD%E8%80%83%E9%87%8F">模型评估与性能考量</a></li><li class="outline-h3"><a href="#%E4%B8%AA%E6%80%A7%E5%8C%96%E6%9C%BA%E5%88%B6%E4%B8%8E%E6%8E%A8%E8%8D%90%E5%AE%9E%E7%8E%B0">个性化机制与推荐实现</a></li><li class="outline-h3"><a href="#%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84">技术架构</a></li><li class="outline-h3"><a href="#%E5%8D%95%E4%BA%BA%E5%8F%97%E4%BC%97%E6%BC%94%E7%A4%BA%E4%B8%8E%E5%AE%9E%E6%97%B6%E7%94%9F%E6%88%90">单人受众演示与实时生成</a></li><li class="outline-h3"><a href="#ofonelabs-%E4%B8%8E%E6%99%BA%E8%83%BD%E4%BD%93%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90">OfOneLabs 与智能体网站生成</a></li><li class="outline-h3"><a href="#%E6%9C%AA%E6%9D%A5%E5%B1%95%E6%9C%9B%E4%B8%8E%E5%A4%9A%E7%AB%AF%E4%BD%93%E9%AA%8C">未来展望与多端体验</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><!-- chunk 1/2 -->
+<h3 id="引言与敏捷站点概念" data-reading-heading="">引言与敏捷站点概念</h3>
+<blockquote>
+<blockquote>
+<p>大家好。感谢各位的光临。嗯，我今天想和大家聊聊敏捷站点（Agility Sites），也就是我们所说的构建超个性化网站。我不只是要聊这个，我还打算向大家展示我们正在构建的东西。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<blockquote>
+<blockquote>
+<p>Hello. Thank you for coming. Um I'm going to talk to you about Agility Sites, how we call it as building hyper-personalized websites. I'm not going to just talk about it. I'm going to show you what we're building.</p>
+</blockquote>
+</blockquote>
+</details>
+<p>嗯，我从事这个项目已经有一段时间了，我们将尝试向大家展示今天借助人工智能可以做到什么。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Um I've been working on on this project for for a bit now, and we'll try to show you what is possible today with with AI.</p>
+</details>
+<p>呃，我在 Adobe 工作，我是 Adobe Experience Manager 也就是内容管理这一产品的主任科学家，知道这款产品的人可能不多。我们为许多大品牌运营着大量的网站资产，而我的背景是在开源领域，呃，为许多基金会和项目做过贡献。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Uh I work at Adobe at a I'm a principal scientist at a product that not many people know, Adobe Experience Manager, content management. We run a lot of uh website properties for big brands, and my background is in in open source, uh contributing to to a lot of foundations and projects.</p>
+</details>
+<p>什么是敏捷站点？我们又是如何构建它的？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>What are Agility Sites, and how are we building this thing?</p>
+</details>
+<p>所以，我们正在寻找能够察觉正在浏览的用户意图的站点。用户在做什么？用户试图达到什么目的？最终目标是为当前浏览的用户个性化这些页面，从而最终呃促成更高的参与度或呃转化率，无论营销团队希望达成什么。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>So, we're looking for sites that are uh looking at the what intent the user browsing uh has. What is the user doing? What is the user trying to achieve? And the end goal is to personalize these pages for the for the current user browsing, so that eventually this uh drives uh higher engagement or uh conversions, whatever the marketing teams want to want to achieve.</p>
+</details>
+<p>这些页面是根据正在访问该网站的用户以及用户在做什么进行实时个性化的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>And these pages are personalized in real time based on the on the user that is uh accessing the site, and what is the what is the user doing.</p>
+</details>
+<h3 id="技术栈与基于模块的个性化" data-reading-heading="">技术栈与基于模块的个性化</h3>
+<p>我们使用的技术栈是 AEM 边缘交付（AEM edge delivery）。这是我们拥有的产品部分，呃所有内容都部署在边缘，然后我们有一个后端服务，通过不同的大语言模型提供商或大语言模型服务来支持这种体验。我们使用 Cerebras 来实现快速推理，或者也可以使用，我们也尝试过 Bedrock 以及很多其他的。今天我将展示 Cerebras，大家会看到其中的原因。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>The stack we're using is AMH delivery. So, this is the part of the product we we have, uh where all the content is on the edge and then we have back end service that powers this experience with different LLM providers LLM services we use Cerebras for fast inference or we can use also we tried bedrock and and a bunch of others. I'll be showing Cerebras today and you will see the reason why.</p>
+</details>
+<p>对这些内容进行个性化的引擎使用的是富内容和模块（blocks）。网站上的不同模块会根据用户的用户画像进行定制。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>The the engine that is personalizing this this bits is using the rich content and blocks. So different blocks on the site are customized depending on on what the user persona is.</p>
+</details>
+<p>我们不希望整个网站都是生成的。我的意思是，如果你和营销人员交谈，他们有非常严格的品牌规范。你不能直接凭空捏造或者出现幻觉。所以个性化的是网站的不同部分，我们把整个网站作为语料库。我们基于整个网站构建了一个 RAG。因此生成的内容是以现有网站为依据的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>We don't want the the whole site to be generated. I mean if you talk to marketing people they they have a very strict brand guidelines. You don't want to just come up with our have some hallucinations there. So the what is personalized is different sections of the site and we use the whole site as a corpus. We built a rack from the whole site. So what is generated is grounded on on the existing site.</p>
+</details>
+<p>我们试图解决千篇一律的问题。我们希望实现超个性化的体验。此外，我们也希望帮助我们的客户进行更多的自动创作。不必去创建网站的成千上万种不同变体，而是借助 AI 来完成这项工作，然后再进行多层次的个性化。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>We tried to solve the problem where one size fits all. We want hyper-personalized experiences. Also we want to help our customers to do more automatic authoring. So not having to create thousands of different variations of the site but use AI for this and then do these multiple layers of of personalization.</p>
+</details>
+<p>我们正在做的一些事情的例子，我会在演示中展示。比如即时用户画像适配、查询生成——当用户在网站上搜索内容时，结果页面会为他们进行定制，还有呃推荐之类的功能，在您浏览网站一段时间后，我们可以创建一个页面，根据我们认为您在寻找的内容来推荐一些东西。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Some examples of what we're doing or I'll show in the demo. It's instant persona adaptation, query generation when the user search for something on the site, the page with the results is customized for them and also uh, something like recommendations where after you browse the site for a period of time, we we can create a page that recommends something based on on on what you are what we think you are looking for.</p>
+</details>
+<p>对于营销人员而言，呃他们可以用自然语言来定义这种策略，并且他们可以使用分析数据来驱动个性化闭环，以及最终目标是什么，这又如何反过来进行调整以适配个性化并改进那整个循环。在这次大会上大家都在讨论闭环，这就是其中的一个循环。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>For marketers, uh, they can define this strategy on natural language, and they can use analytics to to drive the loop of personalization, and what is the end goal, and how this goes back again to change to adapt the personalization to improve that uh, whole cycle. Everybody's talking about loops in this conference, so that's that's one of the loops there.</p>
+</details>
+<p>架构是什么样的呢？它是一个动态的前端加上一些模块，就是我之前提到的，结合呃边缘交付服务，基本上就是将这些模块组合起来，呃它们通过 AI 实时进行更新。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>How the architecture look like? So, it's a dynamic front end with some blocks, what I mentioned before, and with uh, edge delivery services is basically you compose these blocks, and uh, they are updated on on real time through with the AI.</p>
+</details>
+<h3 id="模型评估与性能考量" data-reading-heading="">模型评估与性能考量</h3>
+<p>在后端，呃我们进行模型和提供商的评估，我们意识到的一点是，这在很大程度上取决于具体的网站。因此，我们准备了一系列提示词，我们针对种类极其丰富的模型和提供商运行这些提示词，然后查看准确率，查看速度，但这将高度取决于网站的类型，比如网站有多大，网站面向的不同领域是什么，它属于什么类型的商业模式等等。所以我们持续运行这种评估。我们使用 Promptfoo。呃有人听说过 Promptfoo 吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>The back end, uh, we we do the um, evaluation of the models and the providers, and one thing we realized is is that this is very dependent on the site. So, we have a bunch of prompts, and we look uh, we run it across a huge variety of uh, models and providers, and then we look at the accuracy, we look at the speed, but this is going to depend highly on what type of site, like how big is the site, how I don't know, what different what different um, area is the site targeting, what what type of commerce it is, and so on. So, we we run this this um, evaluation continuously. We use uh, Promptfoo. Uh, anybody heard about Promptfoo?</p>
+</details>
+<p>好的，有几个人。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Okay, some people.</p>
+</details>
+<p>Promptfoo 允许您针对多个模型和提供商来评估模型提示词，您可以使用本地模型以及许多兼容 OpenAI 的提供商等等，基本上支持很多。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>So, Promptfoo allows you to evaluate models um, prompts against my multiple models, providers, and you can do local models and any of the a bunch of open AI compatible uh providers and and uh a lot of them, basically.</p>
+</details>
+<p>我们关注两件事。为什么？准确率。那通常是人们所追求的，但同时我们也追求速度，因为我们不希望网站生成需要超过 1 到 2 秒的时间，对吧？因为人们呃这已经被证实了，网站速度越快，产生的转化率就越高，或者对用户来说体验就越好。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>We look for two things. Why? Accuracy. That's that's typically what people look for, but also we want the speed because we don't want the site generation to take more than 1 or 2 seconds, right? Because people uh this is already uh proven that people want the the faster the site, the more conversions it it generates or the the better the experience it is for the user.</p>
+</details>
+<p>嗯是的，我提到过不同的网站可能有不同的需求。呃所以，您可能需要根据具体的网站来运行这种模型的评估。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Um yeah, what I mentioned is different sites may have different requirements. Uh so, you may have to run this uh evaluation of models depending on the site.</p>
+</details>
+<p>这是一个示例，呃我们为这个示例网站固定了其中的一些查询，因此我们有 15 个提示词。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>This is a an ex uh we we secured this some of these queries, so we have a 15 prompts for this example site.</p>
+</details>
+<p>嗯在顶部大家可以看到，使用基于 Cerebras 运行的上周刚刚发布的 Gemma 4 模型，我们在生成页面时可以获得 1.1 秒的平均延迟。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Um we have uh at the top you can see with Cerebras on the Gemma 4 model that was announced last last week, we can get an average latency of 1.1 seconds generating a page.</p>
+</details>
+<p>您可以将它与第二名相比，第二名是 4.6 秒，对吧？所以差距是非常巨大的。这也是为什么呃我们在这种用例中使用 Cerebras。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>You you can compare that to the second one, which is 4.6 seconds, right? So, the difference is huge. And that's why uh we use Cerebras for for this use case.</p>
+</details>
+<p>而且呃大家可以看到，不同的提供商、不同的模型具有不同的速度。这里是呃让我，我可以向大家展示这里的完整内容。不是这个，是这个，对吧？在底部我们有其他任务。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>And uh you can see that different providers, different models have different um different speeds. And here is uh let me I can show you the whole thing here. Not this one, this one, right? So, at the at the bottom we have other other tasks.</p>
+</details>
+<p>有时呃其中一些可能表现不错。它们不需要做到完美，只要足够快，就已经足够好了。因此，这正是大家需要做出的决策类型，去权衡模型对您的用例来说是否足够好。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Sometimes uh maybe some of them may be good. They don't need to be perfect, but they're good enough if they're fast enough. So, that's going to be the the kind of decisions that you need to make on whether the model is good enough for your use case or not.</p>
+</details>
+<p>是的，我们关注的是，是的，平均 1.1 秒。而接下来的几个则从 4 秒往上递增。而且您不需要一个庞大的大语言模型来做这类工作，因为您是在生成文本、决定把模块放在哪里以及如何组织网站，完成这些并不需要大量的信息。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Yeah, we're looking Yeah, average 1.1 seconds. And then the the next ones are going from 4 seconds higher. And you don't need a huge LLM to do this sort of work because you are generating text, you are deciding where to put blocks and how to organize the website, you don't need a lots of information for that.</p>
+</details>
+<h3 id="个性化机制与推荐实现" data-reading-heading="">个性化机制与推荐实现</h3>
+<p>因此，这些浏览行为和查询呃正在被记录下来。这些就是我们从用户那里收集的指标或数据，并被输入到大语言模型中以实现网站的个性化。在这个示例中，我们根据用户画像对主推卡片（hero card）、产品、博客信息流以及导航进行了个性化。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>So, this browsing and the queries uh is are being recorded. So, these are the metrics or the the the data we gather from the user, and this is fed into the LLM to personalize the site. And then in this example, we personalize the hero card, the products, the blog feeds, and and the navigation based based on the persona.</p>
+</details>
+<p>此外，包括一些按钮，比如我们的号召性用语（call to action）导航，也同样可以个性化。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Also, what are some of the buttons like our call to action navigation, you can also we can also personalize those.</p>
+</details>
+<p>我们创建了一个“为你推荐”（for you）页面，我稍后会向大家展示，这是一个推荐页面。这是一个很有意思的场景，因为这个页面是您可以预先生成的，对吧？当用户浏览您的网站时，您收集这些信号，并可以持续在后台生成。因此在这种情况下，您就不需要那么高的速度了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>We we create and I'll show you the a for you page, which is a recommendation. And this is a interesting one because this you could pre-generate, right? As the user browses your site, you gather these signals, and you could keep generating in this. So, in this case, you wouldn't need so such a big speed.</p>
+</details>
+<p>但那很有趣，因为如果用户想要购买某种东西，您可以直接显示：“好的，为你推荐这三款产品，或者类似的内容。”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>But but that's interesting because it it would be if a user wanted to buy something, you could just say, "Okay, for you, I will recommend these three products or or something like that."</p>
+</details>
+<p>嗯是的，随后他们就能看到这个推荐，如果他们点击过去，那部分内容可以已经为他们预取完毕了。当然，随着用户在网站各处浏览等等，您必须保持更新。所以这也是进行多次生成、多次调用大语言模型时需要考虑的成本影响因素。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Um Yeah, and then they can see this recommendation, and if they go there, that that could be pre-fetched for them. And obviously, you have to keep updating it as the user navigates around the site and and so on. So that that's also something to consider on the cost cost implications of doing multiple generations, multiple LLM calls.</p>
+</details>
+<p>当用户执行查询时，系统会向他们展示动态个性化的页面。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>When when the user runs a query, dynamic personalized page is shown to them.</p>
+</details>
+<p>这些查询也会被归类到不同的人群画像或意图类型中。这个人试图在网站上做什么？是试图买东西？还是仅仅为了获取信息？因此可以让营销人员来决定划分什么类型的群体、设置多少个群体以及希望如何与客户打交道。AI 则会为这些人群选择相应的模块和建议。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>When the these queries are also grouped into personas or intent types. So what is this guy what is this guy trying to do in the site? Is trying to buy something? Is trying to just get information? So you can get marketers to decide what type of groups, how many groups you want to have, how you want to deal with with customers. And the AI will choose the the blocks and the suggestions for for those groups of people.</p>
+</details>
+<p>嗯，而且我们可以适配，是的，不同的模块、模块的顺序以及媒体内容。您也可以处理媒体内容。我们考虑的事情之一是，今天或昨天刚发布了一个模型，nano banana light。所以</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Um And we can adopt yes, the the different blocks, the the the sequence of the blocks and media. You could also do media. One of the things we consider is there was some a model announced today or yesterday the the nano banana light. So</p>
+</details>
+<!-- chunk 2/2 -->
+<p>你甚至可以非常快速地即时生成图像。显然没有文本那么快，但这同样也是……我不知道像营销人员这样的人是否会想要生成图像。这在很大程度上取决于质量，是否符合品牌调性。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+ you
+<p>could</p>
+<p>even</p>
+<p>generate</p>
+<p>images</p>
+<p>very</p>
+<p>fast</p>
+<p>on</p>
+<p>the</p>
+<p>fly.</p>
+<p>Obviously</p>
+<p>not</p>
+<p>as</p>
+<p>fast</p>
+<p>as</p>
+<p>text,</p>
+<p>but</p>
+<p>that's</p>
+<p>also</p>
+<p>something</p>
+<p>that</p>
+<p>would</p>
+<p>be</p>
+<p>I</p>
+<p>don't</p>
+<p>I</p>
+<p>don't</p>
+<p>know</p>
+<p>if</p>
+<p>it's</p>
+<p>that</p>
+<p>something</p>
+<p>like</p>
+<p>marketing</p>
+<p>people</p>
+<p>would</p>
+<p>want</p>
+<p>to</p>
+<p>have</p>
+<p>generated</p>
+<p>images.</p>
+<p>That</p>
+<p>depends</p>
+<p>on</p>
+<p>on</p>
+<p>the</p>
+<p>quality</p>
+<p>a</p>
+<p>lot</p>
+<p>if</p>
+<p>it's</p>
+<p>on</p>
+<p>brand.</p>
+</details>
+<p>在这个示例中，我们有一个产品网站，然后有指南、体验、版块，LLM 的整个回复都基于此进行溯源。而且还有对比。我们可以对定制的产品进行对比，产品页面也可以为用户进行定制。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And
+<p>the</p>
+<p>site</p>
+<p>in</p>
+<p>this</p>
+<p>example</p>
+<p>we</p>
+<p>have</p>
+<p>a</p>
+<p>a</p>
+<p>product</p>
+<p>site</p>
+<p>and</p>
+<p>then</p>
+<p>we</p>
+<p>have</p>
+<p>guides,</p>
+<p>experiences,</p>
+<p>blocks</p>
+<p>and</p>
+<p>the</p>
+<p>whole</p>
+<p>response</p>
+<p>of</p>
+<p>the</p>
+<p>LLM</p>
+<p>is</p>
+<p>grounded</p>
+<p>there.</p>
+<p>And</p>
+<p>there's</p>
+<p>comparisons.</p>
+<p>We</p>
+<p>can</p>
+<p>do</p>
+<p>comparisons</p>
+<p>between</p>
+<p>products</p>
+<p>that</p>
+<p>are</p>
+<p>tailor</p>
+<p>and</p>
+<p>the</p>
+<p>product</p>
+<p>pages</p>
+<p>can</p>
+<p>be</p>
+<p>tailored</p>
+<p>for</p>
+<p>the</p>
+<p>for</p>
+<p>the</p>
+<p>user.</p>
+</details>
+<h3 id="技术架构" data-reading-heading="">技术架构</h3>
+<p>好的，这是技术栈的一些情况。我不打算在这里花太多时间，但是在浏览器端，你有几个层级。在浏览器端，来自……我得到……我得到……我得到，从用户那里获取信号，然后我们有后端。我们可以有后端，我们把其中一些运行在 Google，一些运行在我们的 Cloudflare。所以，后端基本上只是调用 LLM，并使用在站点上构建的 RAG 进行一些推理，以完成生成。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Okay,
+<p>this</p>
+<p>is</p>
+<p>this</p>
+<p>is</p>
+<p>a</p>
+<p>bit</p>
+<p>of</p>
+<p>the</p>
+<p>stack.</p>
+<p>Um</p>
+<p>not</p>
+<p>going</p>
+<p>to</p>
+<p>spend</p>
+<p>too</p>
+<p>much</p>
+<p>time</p>
+<p>here,</p>
+<p>but</p>
+<p>the</p>
+<p>browser</p>
+<p>you</p>
+<p>have</p>
+<p>some</p>
+<p>layers.</p>
+<p>You</p>
+<p>have</p>
+<p>the</p>
+<p>browser</p>
+<p>where</p>
+<p>the</p>
+<p>signals</p>
+<p>get</p>
+<p>get</p>
+<p>uh</p>
+<p>from</p>
+<p>I</p>
+<p>got</p>
+<p>I</p>
+<p>got</p>
+<p>I</p>
+<p>got</p>
+<p>so</p>
+<p>I</p>
+<p>got</p>
+<p>from</p>
+<p>the</p>
+<p>from</p>
+<p>the</p>
+<p>user</p>
+<p>and</p>
+<p>then</p>
+<p>we</p>
+<p>have</p>
+<p>the</p>
+<p>back</p>
+<p>end.</p>
+<p>Uh</p>
+<p>we</p>
+<p>can</p>
+<p>have</p>
+<p>the</p>
+<p>back</p>
+<p>end.</p>
+<p>We</p>
+<p>run</p>
+<p>this</p>
+<p>some</p>
+<p>of</p>
+<p>these</p>
+<p>in</p>
+<p>in</p>
+<p>Google.</p>
+<p>Some</p>
+<p>of</p>
+<p>these</p>
+<p>are</p>
+<p>in</p>
+<p>our</p>
+<p>Cloudflare.</p>
+<p>So,</p>
+<p>the</p>
+<p>back</p>
+<p>end</p>
+<p>is</p>
+<p>basically</p>
+<p>just</p>
+<p>calling</p>
+<p>the</p>
+<p>LLM</p>
+<p>and</p>
+<p>doing</p>
+<p>some</p>
+<p>reasoning</p>
+<p>using</p>
+<p>the</p>
+<p>rack</p>
+<p>that</p>
+<p>is</p>
+<p>built</p>
+<p>on</p>
+<p>on</p>
+<p>the</p>
+<p>site</p>
+<p>to</p>
+<p>do</p>
+<p>the</p>
+<p>generation.</p>
+</details>
+<p>显然你必须有向量数据库、推理机制，而那显然的业务管理器正在提供……在边缘提供页面和静态内容的服务。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And
+<p>you</p>
+<p>have</p>
+<p>obviously</p>
+<p>you</p>
+<p>have</p>
+<p>to</p>
+<p>have</p>
+<p>the</p>
+<p>vector</p>
+<p>database,</p>
+<p>the</p>
+<p>inference</p>
+<p>uh</p>
+<p>machinery</p>
+<p>and</p>
+<p>uh</p>
+<p>that</p>
+<p>obvious</p>
+<p>business</p>
+<p>manager</p>
+<p>is</p>
+<p>doing</p>
+<p>the</p>
+<p>serving</p>
+<p>the</p>
+<p>the</p>
+<p>at</p>
+<p>the</p>
+<p>edge</p>
+<p>is</p>
+<p>serving</p>
+<p>the</p>
+<p>the</p>
+<p>pages</p>
+<p>and</p>
+<p>the</p>
+<p>static</p>
+<p>content.</p>
+</details>
+<h3 id="单人受众演示与实时生成" data-reading-heading="">单人受众演示与实时生成</h3>
+<p>所以，让我展示给你们看，因为我觉得这……我们称之为“单人受众”，因为在营销领域，他们总是梦想着能够为每个个体实现个性化。所以，是的，我们称之为单人受众。我手上有这个网站。这是一个完全生成的示例网站。它是一个咖啡设备网站。所以我可以去阅读一些故事，也可以去浏览一些产品。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So,
+<p>let</p>
+<p>me</p>
+<p>show</p>
+<p>you</p>
+<p>because</p>
+<p>I</p>
+<p>think</p>
+<p>this</p>
+<p>is</p>
+<p>uh</p>
+<p>so,</p>
+<p>we</p>
+<p>call</p>
+<p>this</p>
+<p>uh</p>
+<p>audience</p>
+<p>of</p>
+<p>one</p>
+<p>because</p>
+<p>the</p>
+<p>idea</p>
+<p>of</p>
+<p>in</p>
+<p>marketing</p>
+<p>they</p>
+<p>they</p>
+<p>always</p>
+<p>dream</p>
+<p>on</p>
+<p>being</p>
+<p>able</p>
+<p>to</p>
+<p>personalize</p>
+<p>things</p>
+<p>for</p>
+<p>each</p>
+<p>individual.</p>
+<p>So,</p>
+<p>we</p>
+<p>call</p>
+<p>it</p>
+<p>yeah</p>
+<p>audience</p>
+<p>of</p>
+<p>one.</p>
+<p>So,</p>
+<p>I</p>
+<p>have</p>
+<p>this</p>
+<p>this</p>
+<p>site.</p>
+<p>Uh</p>
+<p>this</p>
+<p>is</p>
+<p>a</p>
+<p>site</p>
+<p>that</p>
+<p>is</p>
+<p>absolutely</p>
+<p>generated</p>
+<p>uh</p>
+<p>example</p>
+<p>site.</p>
+<p>It's</p>
+<p>a</p>
+<p>coffee</p>
+<p>uh</p>
+<p>machinery.</p>
+<p>So,</p>
+<p>I</p>
+<p>can</p>
+<p>go</p>
+<p>and</p>
+<p>and</p>
+<p>read</p>
+<p>some</p>
+<p>stories</p>
+<p>and</p>
+<p>I</p>
+<p>can</p>
+<p>go</p>
+<p>and</p>
+<p>look</p>
+<p>at</p>
+<p>some</p>
+<p>products.</p>
+</details>
+<p>让我们来看看这款产品。我可以在这里待上一段时间。让我们点击这里。好的，我在网站上四处浏览，我有这个调试工具，它……让我到这里来，我想。看看。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Let's
+<p>go</p>
+<p>and</p>
+<p>look</p>
+<p>at</p>
+<p>this</p>
+<p>product.</p>
+<p>I</p>
+<p>can</p>
+<p>spend</p>
+<p>some</p>
+<p>time</p>
+<p>here.</p>
+<p>Uh</p>
+<p>let's</p>
+<p>go</p>
+<p>and</p>
+<p>click</p>
+<p>here.</p>
+<p>Okay,</p>
+<p>so</p>
+<p>I'm</p>
+<p>I'm</p>
+<p>browsing</p>
+<p>around</p>
+<p>the</p>
+<p>site</p>
+<p>and</p>
+<p>I</p>
+<p>have</p>
+<p>this</p>
+<p>debugging</p>
+<p>tool</p>
+<p>thing</p>
+<p>uh</p>
+<p>which</p>
+<p>Uh</p>
+<p>let</p>
+<p>me</p>
+<p>go</p>
+<p>here,</p>
+<p>I</p>
+<p>think.</p>
+<p>Let's</p>
+<p>see.</p>
+</details>
+<p>下面是浏览行为提供给我们的信号。我不知道你们能不能看清楚，因为我自己看不太清楚。所以，用户被归入“探索”类别。我们有访问过的页面，然后有在每个页面上花费的时间。所有这些数据现在都可以供 LLM 使用。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So,
+<p>down</p>
+<p>there</p>
+<p>is</p>
+<p>the</p>
+<p>signals</p>
+<p>that</p>
+<p>the</p>
+<p>that</p>
+<p>the</p>
+<p>browsing</p>
+<p>is</p>
+<p>giving</p>
+<p>us.</p>
+<p>So,</p>
+<p>I</p>
+<p>don't</p>
+<p>know</p>
+<p>if</p>
+<p>you</p>
+<p>can</p>
+<p>see</p>
+<p>it</p>
+<p>much</p>
+<p>because</p>
+<p>I</p>
+<p>cannot</p>
+<p>see</p>
+<p>it</p>
+<p>much.</p>
+<p>The</p>
+<p>So,</p>
+<p>the</p>
+<p>user</p>
+<p>is</p>
+<p>bucketed</p>
+<p>into</p>
+<p>the</p>
+<p>exploring</p>
+<p>category.</p>
+<p>We</p>
+<p>have</p>
+<p>the</p>
+<p>pages</p>
+<p>that</p>
+<p>have</p>
+<p>have</p>
+<p>visited,</p>
+<p>and</p>
+<p>then</p>
+<p>we</p>
+<p>have</p>
+<p>how</p>
+<p>much</p>
+<p>time</p>
+<p>is</p>
+<p>spending</p>
+<p>on</p>
+<p>each</p>
+<p>page.</p>
+<p>All</p>
+<p>of</p>
+<p>this</p>
+<p>data</p>
+<p>is</p>
+<p>now</p>
+<p>available</p>
+<p>for</p>
+<p>the</p>
+<p>LLM.</p>
+</details>
+<p>所以，如果我转到这里，我已经有了一个基于我的浏览器为我生成的“为你推荐”页面。你不会注意到它与其它所有内容略有不同，但如果我来到这里并运行一个查询，比如我想……我正在寻找一台露营时冲泡咖啡的咖啡机。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So,
+<p>if</p>
+<p>I</p>
+<p>go</p>
+<p>here,</p>
+<p>I</p>
+<p>already</p>
+<p>have</p>
+<p>a</p>
+<p>for</p>
+<p>you</p>
+<p>page</p>
+<p>that</p>
+<p>was</p>
+<p>generated</p>
+<p>for</p>
+<p>me</p>
+<p>and</p>
+<p>based</p>
+<p>on</p>
+<p>my</p>
+<p>browser.</p>
+<p>And</p>
+<p>you</p>
+<p>will</p>
+<p>not</p>
+<p>notice</p>
+<p>that</p>
+<p>it's</p>
+<p>slightly</p>
+<p>different</p>
+<p>than</p>
+<p>everything</p>
+<p>else,</p>
+<p>but</p>
+<p>if</p>
+<p>I</p>
+<p>go</p>
+<p>here</p>
+<p>and</p>
+<p>I</p>
+<p>run</p>
+<p>a</p>
+<p>query</p>
+<p>like</p>
+<p>I</p>
+<p>want</p>
+<p>I'm</p>
+<p>looking</p>
+<p>for</p>
+<p>a</p>
+<p>coffee</p>
+<p>machine</p>
+<p>to</p>
+<p>uh</p>
+<p>prepare</p>
+<p>coffee</p>
+<p>while</p>
+<p>camping.</p>
+</details>
+<p>这个网站……这是刚刚为我生成的。然后你会看到一些东西，比如文本是定制的：“露营不应该意味着妥协你的……”随便什么习惯。露营咖啡小贴士，被推荐的设备是 coffee agile 以及 nano，这些都很适合露营旅行，对吧？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The
+<p>site</p>
+<p>is</p>
+<p>this</p>
+<p>was</p>
+<p>just</p>
+<p>generated</p>
+<p>for</p>
+<p>me.</p>
+<p>And</p>
+<p>then</p>
+<p>you're</p>
+<p>going</p>
+<p>to</p>
+<p>see</p>
+<p>some</p>
+<p>things</p>
+<p>like</p>
+<p>the</p>
+<p>text</p>
+<p>is</p>
+<p>customized.</p>
+<p>Camping</p>
+<p>shouldn't</p>
+<p>mean</p>
+<p>compromising</p>
+<p>on</p>
+<p>your</p>
+<p>uh</p>
+<p>whatever</p>
+<p>routine.</p>
+<p>Uh</p>
+<p>the</p>
+<p>coffee</p>
+<p>tips</p>
+<p>for</p>
+<p>camping</p>
+<p>um</p>
+<p>machinery</p>
+<p>that</p>
+<p>are</p>
+<p>being</p>
+<p>recommended</p>
+<p>are</p>
+<p>coffee</p>
+<p>agile</p>
+<p>and</p>
+<p>um</p>
+<p>or</p>
+<p>the</p>
+<p>nano,</p>
+<p>which</p>
+<p>are</p>
+<p>good</p>
+<p>for</p>
+<p>for</p>
+<p>the</p>
+<p>for</p>
+<p>a</p>
+<p>camping</p>
+<p>trip,</p>
+<p>right?</p>
+</details>
+<p>所以，你们看到了这有多快。我要在这里运行一个类似的、我刚才在这里展示的内容，而且我可以在这里的调试模式下运行它。你们会看到，我们把这个放大一点。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So,
+<p>you</p>
+<p>saw</p>
+<p>how</p>
+<p>fast</p>
+<p>this</p>
+<p>was.</p>
+<p>I'm</p>
+<p>going</p>
+<p>to</p>
+<p>run</p>
+<p>it</p>
+<p>here</p>
+<p>something</p>
+<p>similar</p>
+<p>that</p>
+<p>I</p>
+<p>had</p>
+<p>here</p>
+<p>and</p>
+<p>I</p>
+<p>can</p>
+<p>run</p>
+<p>it</p>
+<p>on</p>
+<p>the</p>
+<p>debug</p>
+<p>mode</p>
+<p>here.</p>
+<p>And</p>
+<p>you</p>
+<p>will</p>
+<p>see,</p>
+<p>let's</p>
+<p>make</p>
+<p>this</p>
+<p>bigger.</p>
+</details>
+<p>生成该页面总共耗时 164 秒。这包括了一次去往 LLM 的往返请求。这是使用运行在 Cerebras 上的 Gemma 4。也就是来自 Google 的 Gemma 模型，运行在 Cerebras 极速芯片之上。我们达到了每秒 2,300 个 token。我会说，这还不错。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Total
+<p>time</p>
+<p>164</p>
+<p>seconds</p>
+<p>to</p>
+<p>generate</p>
+<p>the</p>
+<p>page.</p>
+<p>So,</p>
+<p>this</p>
+<p>includes</p>
+<p>a</p>
+<p>round</p>
+<p>trip</p>
+<p>to</p>
+<p>the</p>
+<p>LLM.</p>
+<p>This</p>
+<p>is</p>
+<p>using</p>
+<p>Cerebras</p>
+<p>Gemma</p>
+<ol start="4">
+<li></li>
+</ol>
+<p>So,</p>
+<p>the</p>
+<p>the</p>
+<p>Gemma</p>
+<p>model</p>
+<p>from</p>
+<p>Google</p>
+<p>running</p>
+<p>on</p>
+<p>Cerebras</p>
+<p>on</p>
+<p>their</p>
+<p>very</p>
+<p>fast</p>
+<p>chips.</p>
+<p>Uh</p>
+<p>we</p>
+<p>get</p>
+<p>2,300</p>
+<p>tokens</p>
+<p>per</p>
+<p>second.</p>
+<p>Which</p>
+<p>is</p>
+<p>not</p>
+<p>bad.</p>
+<p>I</p>
+<p>would</p>
+<p>say.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>[哼笑声]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; [snorts]
+</details>
+<blockquote>
+<blockquote>
+<p>如果我再运行一次，大概也是类似的情况。LLM 耗时是 1 秒。同样是每秒 2,200 个 token。这在以前是我们只能梦想的事情。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And
+<p>if</p>
+<p>I</p>
+<p>run</p>
+<p>it</p>
+<p>again,</p>
+<p>uh</p>
+<p>probably</p>
+<p>something</p>
+<p>like</p>
+<p>that.</p>
+<p>Uh</p>
+<p>the</p>
+<p>LLM</p>
+<p>time</p>
+<p>is</p>
+<p>1</p>
+<p>second.</p>
+<p>And</p>
+<p>again,</p>
+<p>2,200</p>
+<p>tokens</p>
+<p>per</p>
+<p>second.</p>
+<p>This</p>
+<p>is</p>
+<p>something</p>
+<p>that</p>
+<p>we</p>
+<p>only</p>
+<p>dreamed</p>
+<p>about</p>
+<p>before.</p>
+</details>
+<p>在这个示例网站上，我们还有一些其他选项。因为我们一直在向客户展示这个，所以我们有能力更改不同的模型、温度、token 数等等。我们可以展示并尝试不同的模型，看看它们的表现如何。除了使用 Prompt Full 进行自动化测试之外，我们还可以手动过来点击各种选项，看看它是如何工作的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+On
+<p>the</p>
+<p>on</p>
+<p>this</p>
+<p>site</p>
+<p>example</p>
+<p>site,</p>
+<p>we</p>
+<p>have</p>
+<p>some</p>
+<p>other</p>
+<p>options.</p>
+<p>Uh</p>
+<p>so,</p>
+<p>because</p>
+<p>we</p>
+<p>we've</p>
+<p>been</p>
+<p>showing</p>
+<p>this</p>
+<p>to</p>
+<p>customers,</p>
+<p>so</p>
+<p>we</p>
+<p>have</p>
+<p>the</p>
+<p>the</p>
+<p>ability</p>
+<p>to</p>
+<p>change</p>
+<p>the</p>
+<p>different</p>
+<p>models,</p>
+<p>temper</p>
+<p>temperature,</p>
+<p>tokens,</p>
+<p>and</p>
+<p>so</p>
+<p>on.</p>
+<p>And</p>
+<p>we</p>
+<p>can</p>
+<p>uh</p>
+<p>we</p>
+<p>can</p>
+<p>show</p>
+<p>uh</p>
+<p>and</p>
+<p>try</p>
+<p>the</p>
+<p>different</p>
+<p>models</p>
+<p>and</p>
+<p>see</p>
+<p>how</p>
+<p>they</p>
+<p>behave.</p>
+<p>Besides</p>
+<p>the</p>
+<p>automatic</p>
+<p>test</p>
+<p>with</p>
+<p>Prompt</p>
+<p>Full,</p>
+<p>then</p>
+<p>we</p>
+<p>can</p>
+<p>uh</p>
+<p>manually</p>
+<p>come</p>
+<p>and</p>
+<p>and</p>
+<p>click</p>
+<p>things</p>
+<p>and</p>
+<p>see</p>
+<p>and</p>
+<p>see</p>
+<p>how</p>
+<p>that</p>
+<p>how</p>
+<p>that</p>
+<p>works.</p>
+</details>
+<h3 id="ofonelabs-与智能体网站生成" data-reading-heading="">OfOneLabs 与智能体网站生成</h3>
+<p>而且我们还有 OfOneLabs。我们构建了这个工具，可以为我们想要的任何网站生成一个智能体网站。如果有人想为客户做演示，只需来到这里输入 URL。在不到一个小时的时间内，你就拥有了一个智能体网站。我上周对 AI engineering 网站就这么做过。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And
+<p>uh</p>
+<p>we</p>
+<p>also</p>
+<p>have</p>
+<p>uh</p>
+<p>OfOneLabs.</p>
+<p>So,</p>
+<p>we</p>
+<p>have</p>
+<p>we</p>
+<p>build</p>
+<p>this</p>
+<p>tool</p>
+<p>that</p>
+<p>generates</p>
+<p>an</p>
+<p>agentic</p>
+<p>site</p>
+<p>for</p>
+<p>any</p>
+<p>site</p>
+<p>we</p>
+<p>want.</p>
+<p>So,</p>
+<p>if</p>
+<p>somebody</p>
+<p>wants</p>
+<p>to</p>
+<p>have</p>
+<p>a</p>
+<p>demo</p>
+<p>for</p>
+<p>a</p>
+<p>customer,</p>
+<p>come</p>
+<p>here</p>
+<p>and</p>
+<p>enter</p>
+<p>the</p>
+<p>URL.</p>
+<p>In</p>
+<p>less</p>
+<p>than</p>
+<p>an</p>
+<p>hour,</p>
+<p>you</p>
+<p>have</p>
+<p>an</p>
+<p>agentic</p>
+<p>site.</p>
+<p>I</p>
+<p>did</p>
+<p>this</p>
+<p>last</p>
+<p>week</p>
+<p>with</p>
+<p>the</p>
+<p>AI</p>
+<p>engineering</p>
+<p>site.</p>
+</details>
+<p>我得到了这个只有一个搜索框和一些其他内容的网站。让我在完整页面中打开它。不是这个。对，好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And
+<p>I</p>
+<p>got</p>
+<p>this</p>
+<p>site</p>
+<p>that</p>
+<p>is</p>
+<p>just</p>
+<p>a</p>
+<p>search</p>
+<p>box</p>
+<p>and</p>
+<p>a</p>
+<p>few</p>
+<p>things.</p>
+<p>And</p>
+<p>let</p>
+<p>me</p>
+<p>open</p>
+<p>it</p>
+<p>here,</p>
+<p>the</p>
+<p>full</p>
+<p>page.</p>
+<p>Not</p>
+<p>this</p>
+<p>one.</p>
+<p>Yeah,</p>
+<p>okay.</p>
+</details>
+<p>我可以输入“欧洲 AI 会议”。这些建议也是 AI 生成的。然后我得到了一个更加侧重于……它应该更加侧重于这些欧洲会议的页面。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So,
+<p>I</p>
+<p>could</p>
+<p>say</p>
+<p>Europe</p>
+<p>AI</p>
+<p>conferences.</p>
+<p>So,</p>
+<p>these</p>
+<p>suggestions</p>
+<p>are</p>
+<p>also</p>
+<p>AI</p>
+<p>generated.</p>
+<p>And</p>
+<p>I</p>
+<p>get</p>
+<p>a</p>
+<p>page</p>
+<p>that</p>
+<p>is</p>
+<p>more</p>
+<p>focused</p>
+<p>on</p>
+<p>It</p>
+<p>should</p>
+<p>be</p>
+<p>more</p>
+<p>focused</p>
+<p>on</p>
+<p>on</p>
+<p>the</p>
+<p>on</p>
+<p>this</p>
+<p>European</p>
+<p>conferences.</p>
+</details>
+<p>如果我回去，我刚才回去了吗？我可以像之前对 Arco 那样搜索任何内容。作为一个具体……之前有一个生成了很好的并排对比。让我看看是不是这个。好的，这里，这个。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+If
+<p>I</p>
+<p>go</p>
+<p>back,</p>
+<p>did</p>
+<p>I</p>
+<p>go</p>
+<p>I</p>
+<p>can</p>
+<p>search</p>
+<p>for</p>
+<p>anything</p>
+<p>the</p>
+<p>same</p>
+<p>way</p>
+<p>I</p>
+<p>did</p>
+<p>with</p>
+<p>with</p>
+<p>the</p>
+<p>Arco.</p>
+<p>So,</p>
+<p>I</p>
+<p>as</p>
+<p>a</p>
+<p>specific</p>
+<p>There</p>
+<p>was</p>
+<p>someone</p>
+<p>that</p>
+<p>was</p>
+<p>generating</p>
+<p>a</p>
+<p>good</p>
+<p>comparison</p>
+<p>side</p>
+<p>to</p>
+<p>side.</p>
+<p>Let</p>
+<p>me</p>
+<p>see</p>
+<p>if</p>
+<p>this</p>
+<p>one.</p>
+<p>Okay,</p>
+<p>here.</p>
+<p>This</p>
+<p>one.</p>
+</details>
+<p>我去查看，这里生成了一个具有相当不错对比的页面。如果我正在看两场会议，需要做出决定，如果我们弄清楚用户想要这样做，这非常棒，因为这可以在线即时为他们提供并排对比。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+I
+<p>went</p>
+<p>and</p>
+<p>this</p>
+<p>generated</p>
+<p>a</p>
+<p>page</p>
+<p>with</p>
+<p>a</p>
+<p>pretty</p>
+<p>good</p>
+<p>comparison.</p>
+<p>If</p>
+<p>I'm</p>
+<p>looking</p>
+<p>at</p>
+<p>two</p>
+<p>conferences</p>
+<p>and</p>
+<p>I</p>
+<p>need</p>
+<p>to</p>
+<p>decide,</p>
+<p>if</p>
+<p>I</p>
+<p>figure</p>
+<p>out</p>
+<p>that</p>
+<p>the</p>
+<p>user</p>
+<p>wants</p>
+<p>to</p>
+<p>do</p>
+<p>that,</p>
+<p>this</p>
+<p>is</p>
+<p>great</p>
+<p>because</p>
+<p>that</p>
+<p>gives</p>
+<p>them</p>
+<p>a</p>
+<p>side-by-side</p>
+<p>comparison</p>
+<p>on</p>
+<p>the</p>
+<p>fly.</p>
+</details>
+<h3 id="未来展望与多端体验" data-reading-heading="">未来展望与多端体验</h3>
+<p>现在，我觉得这已经很酷了，但接着我们……我有了这个想法。很多人都在讨论：网络是否……网络仍然是未来吗等等。没有人知道。但我们也可以利用这种单人受众、这些生成式网站来做一些事情。设想一下你拥有你的个人助理，你通过……在这个例子中是通过 Google 提出一个查询，你说“我想买……”我不记得具体的查询语句是什么了。大概类似于“我想买一台机器”，然后我在我的 Google TV 上得到了这个结果。对吧？所以这是完全根据我的查询进行个性化定制的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Now,
+<p>this</p>
+<p>this</p>
+<p>is</p>
+<p>I</p>
+<p>think</p>
+<p>this</p>
+<p>is</p>
+<p>cool</p>
+<p>already,</p>
+<p>but</p>
+<p>then</p>
+<p>we</p>
+<p>have</p>
+<p>I</p>
+<p>have</p>
+<p>this</p>
+<p>idea</p>
+<p>that</p>
+<p>probably</p>
+<p>the</p>
+<p>I'm</p>
+<p>a</p>
+<p>bunch</p>
+<p>of</p>
+<p>people</p>
+<p>are</p>
+<p>we</p>
+<p>are</p>
+<p>talking</p>
+<p>about</p>
+<p>is</p>
+<p>the</p>
+<p>web</p>
+<p>that</p>
+<p>is</p>
+<p>is</p>
+<p>the</p>
+<p>web</p>
+<p>the</p>
+<p>future</p>
+<p>still</p>
+<p>and</p>
+<p>so</p>
+<p>on.</p>
+<p>Nobody</p>
+<p>knows.</p>
+<p>But</p>
+<p>we</p>
+<p>can</p>
+<p>also</p>
+<p>do</p>
+<p>something</p>
+<p>with</p>
+<p>this</p>
+<p>with</p>
+<p>this</p>
+<p>audience</p>
+<p>of</p>
+<p>one,</p>
+<p>this</p>
+<p>generative</p>
+<p>sites.</p>
+<p>So,</p>
+<p>imagine</p>
+<p>you</p>
+<p>have</p>
+<p>you</p>
+<p>have</p>
+<p>your</p>
+<p>personal</p>
+<p>assistant</p>
+<p>and</p>
+<p>you</p>
+<p>ask</p>
+<p>a</p>
+<p>query</p>
+<p>through</p>
+<p>in</p>
+<p>this</p>
+<p>case</p>
+<p>through</p>
+<p>Google</p>
+<p>and</p>
+<p>you</p>
+<p>say</p>
+<p>I</p>
+<p>want</p>
+<p>to</p>
+<p>buy</p>
+<p>I</p>
+<p>don't</p>
+<p>remember</p>
+<p>what</p>
+<p>the</p>
+<p>query</p>
+<p>said.</p>
+<p>It</p>
+<p>was</p>
+<p>something</p>
+<p>like</p>
+<p>I</p>
+<p>want</p>
+<p>to</p>
+<p>buy</p>
+<p>a</p>
+<p>machine</p>
+<p>and</p>
+<p>I</p>
+<p>get</p>
+<p>this</p>
+<p>on</p>
+<p>my</p>
+<p>Google</p>
+<p>TV.</p>
+<p>Right?</p>
+<p>So,</p>
+<p>this</p>
+<p>is</p>
+<p>absolutely</p>
+<p>personalized</p>
+<p>to</p>
+<p>my</p>
+<p>query.</p>
+</details>
+<p>好吗？不，退回。这完全是根据我的查询定制的。我就在我的客厅里。我不需要手机，不需要电脑，什么都不需要，只需要我的声音，以及某种可以向我展示完全为我个人定制的内容的设备。好的，就是那个。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Okay?
+<p>No,</p>
+<p>go</p>
+<p>back.</p>
+<p>This</p>
+<p>is</p>
+<p>absolutely</p>
+<p>personalized</p>
+<p>to</p>
+<p>my</p>
+<p>query.</p>
+<p>So,</p>
+<p>I'm</p>
+<p>there</p>
+<p>in</p>
+<p>my</p>
+<p>living</p>
+<p>room.</p>
+<p>I</p>
+<p>don't</p>
+<p>need</p>
+<p>a</p>
+<p>phone,</p>
+<p>I</p>
+<p>don't</p>
+<p>need</p>
+<p>a</p>
+<p>computer,</p>
+<p>I</p>
+<p>don't</p>
+<p>need</p>
+<p>anything,</p>
+<p>just</p>
+<p>my</p>
+<p>voice</p>
+<p>and</p>
+<p>something</p>
+<p>that</p>
+<p>will</p>
+<p>kind</p>
+<p>of</p>
+<p>show</p>
+<p>me</p>
+<p>something</p>
+<p>that</p>
+<p>is</p>
+<p>absolutely</p>
+<p>personalized</p>
+<p>to</p>
+<p>to</p>
+<p>me.</p>
+<p>Okay,</p>
+<p>so</p>
+<p>that</p>
+<p>one.</p>
+</details>
+<p>所以，我刚才尝试展示的，也希望大家能从本次活动中记住的，就是这现在已经成为可能。从现在开始，它只会变得更好。它只会变得更便宜，只会变得更快。你们将能够为网站和其他事物获得巨大的个性化定制选项。你们可以通过意图驱动来实现这一点。“我的用户想要做什么？我的用户想买什么？”这类问题。你们可以专门为他们拼装出一个页面。你们还可以通过多种模型来做到这一点，最终它只会越来越快，对吧？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So,
+<p>what</p>
+<p>I</p>
+<p>was</p>
+<p>trying</p>
+<p>to</p>
+<p>show</p>
+<p>and</p>
+<p>hopefully</p>
+<p>you</p>
+<p>remember</p>
+<p>from</p>
+<p>this</p>
+<p>session</p>
+<p>is</p>
+<p>that</p>
+<p>this</p>
+<p>is</p>
+<p>now</p>
+<p>possible.</p>
+<p>It's</p>
+<p>only</p>
+<p>going</p>
+<p>to</p>
+<p>get</p>
+<p>better</p>
+<p>from</p>
+<p>here</p>
+<p>on.</p>
+<p>It's</p>
+<p>only</p>
+<p>going</p>
+<p>to</p>
+<p>get</p>
+<p>cheaper,</p>
+<p>it's</p>
+<p>only</p>
+<p>going</p>
+<p>to</p>
+<p>get</p>
+<p>faster.</p>
+<p>And</p>
+<p>you</p>
+<p>will</p>
+<p>uh</p>
+<p>be</p>
+<p>able</p>
+<p>to</p>
+<p>have</p>
+<p>uh</p>
+<p>huge</p>
+<p>personalization</p>
+<p>options</p>
+<p>for</p>
+<p>sites</p>
+<p>and</p>
+<p>for</p>
+<p>other</p>
+<p>things.</p>
+<p>And</p>
+<p>you</p>
+<p>can</p>
+<p>do</p>
+<p>this</p>
+<p>with</p>
+<p>intent</p>
+<p>driven.</p>
+<p>So,</p>
+<p>what</p>
+<p>is</p>
+<p>the</p>
+<p>what</p>
+<p>is</p>
+<p>my</p>
+<p>user</p>
+<p>trying</p>
+<p>to</p>
+<p>do?</p>
+<p>What</p>
+<p>does</p>
+<p>my</p>
+<p>user</p>
+<p>want</p>
+<p>to</p>
+<p>buy?</p>
+<p>These</p>
+<p>sort</p>
+<p>of</p>
+<p>questions.</p>
+<p>And</p>
+<p>you</p>
+<p>can</p>
+<p>uh</p>
+<p>assemble</p>
+<p>a</p>
+<p>page</p>
+<p>just</p>
+<p>for</p>
+<p>them.</p>
+<p>And</p>
+<p>you</p>
+<p>can</p>
+<p>also</p>
+<p>do</p>
+<p>this</p>
+<p>with</p>
+<p>uh</p>
+<p>multiple</p>
+<p>models</p>
+<p>and</p>
+<p>and</p>
+<p>eventually</p>
+<p>it's</p>
+<p>just</p>
+<p>going</p>
+<p>to</p>
+<p>be</p>
+<p>faster</p>
+<p>and</p>
+<p>faster,</p>
+<p>right?</p>
+</details>
+<p>那么，就是这样。谢谢大家的到来，希望你们领会到了这个思路。谢谢。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So,
+<p>that's</p>
+<p>it.</p>
+<p>Um</p>
+<p>thank</p>
+<p>you</p>
+<p>for</p>
+<p>coming</p>
+<p>and</p>
+<p>I</p>
+<p>hope</p>
+<p>you</p>
+<p>you</p>
+<p>got</p>
+<p>the</p>
+<p>idea.</p>
+<p>Thanks.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>[掌声]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; [applause]
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/d8ecce5d273a592f12e8c273d987a7fcbb08eb4a31aafca7e41c88fe321f13cd.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/d8ecce5d273a592f12e8c273d987a7fcbb08eb4a31aafca7e41c88fe321f13cd.md" download="基于大语言模型与边缘交付的敏捷站点超个性化构建.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Adobe" class="entity-link company-link">Adobe</a>, <a href="/search/?q=Cerebras" class="entity-link company-link">Cerebras</a>, <a href="/search/?q=Google" class="entity-link company-link">Google</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Adobe Experience Manager" class="entity-link product-link">Adobe Experience Manager</a>, <a href="/search/?q=Gemma 4" class="entity-link product-link">Gemma 4</a>, <a href="/search/?q=Promptfoo" class="entity-link product-link">Promptfoo</a>, <a href="/search/?q=OfOneLabs" class="entity-link product-link">OfOneLabs</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

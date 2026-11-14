@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>给 Agent 选搜索 API：Firecrawl 和 Tavily
+的差别到底在哪里</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">给 Agent 选搜索 API：Firecrawl 和 Tavily
+的差别到底在哪里</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-09</span>
+    
+
+    <header class="article-header">
+      
+      <h1>给 Agent 选搜索 API：Firecrawl 和 Tavily
+的差别到底在哪里</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">search-api</span>
+      
+        <span class="tag-pill tag-pill--no-page">firecrawl</span>
+      
+        <span class="tag-pill tag-pill--no-page">tavily</span>
+      
+        <a class="tag-link" href="/tags/cost-analysis/">cost-analysis</a>
+      
+        <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章对比了 Firecrawl 和 Tavily 两款搜索 API 的计费逻辑与适用场景。Firecrawl 按内容逐页计费，适合标准网页抓取；Tavily 按请求次数计费，适合长文档与社交媒体。选型需结合业务负载类型及下游清洗成本，而非仅看单价。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/agent-search-api-firecrawl-tavily-20261009.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-09T00:00:00.000Z">2026-10-09</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>7 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E7%BB%99-agent-%E9%85%8D%E4%B8%80%E4%B8%AA%E6%90%9C%E7%B4%A2-api">给 Agent 配一个搜索 API</a></li><li class="outline-h2"><a href="#%E5%90%8C%E4%B8%80%E4%B8%AA%E6%9F%A5%E8%AF%A2%E7%A7%AF%E5%88%86%E6%B6%88%E8%80%97%E8%83%BD%E5%B7%AE-61">同一个查询，积分消耗能差 61</a></li><li class="outline-h2"><a href="#%E4%B8%A4%E5%AE%B6%E4%B8%8D%E6%98%AF%E5%90%8C%E4%B8%80%E7%A7%8D%E8%AE%A1%E4%BB%B7%E6%96%B9%E5%BC%8F">两家不是同一种计价方式</a></li><li class="outline-h2"><a href="#firecrawl">Firecrawl</a></li><li class="outline-h2"><a href="#%E7%9C%9F%E5%AE%9E%E8%B4%9F%E8%BD%BD%E4%BA%A4%E5%8F%89%E5%9B%9E%E6%94%BE%E5%B9%B3%E5%9D%87%E8%B7%91%E4%B8%8B%E6%9D%A5%E8%B0%81%E6%9B%B4%E5%88%92%E7%AE%97">真实负载交叉回放：平均跑下来谁更划算</a></li><li class="outline-h2"><a href="#%E6%8C%89%E7%85%A7%E5%86%85%E5%AE%B9%E5%BD%A2%E6%80%81%E4%B8%8E%E6%B8%85%E6%B4%97%E5%AE%B9%E5%BF%8D%E5%BA%A6%E5%81%9A%E9%80%89%E5%9E%8B">按照内容形态与清洗容忍度做选型</a></li><li class="outline-h2"><a href="#%E8%B4%A6%E5%8D%95%E8%83%BD%E4%B8%8D%E8%83%BD%E8%87%AA%E8%A7%A3%E9%87%8A%E4%B9%9F%E6%98%AF%E9%80%89%E5%9E%8B%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86">账单能不能自解释，也是选型的一部分</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h2 id="给-agent-配一个搜索-api" data-reading-heading="">给 Agent 配一个搜索 API</h2>
+<p>如果想让手里的 AI Agent
+回答今天刚发生的事，或者查阅特定领域的实时资料，光靠模型自带的训练数据肯定不够。要让
+Agent 具备实时的信息获取能力，通常的做法是给它接一个搜索
+API。它的工作是：把 Agent
+给出的查询词发出去，去网上检索相关网页，抓取正文并清洗，再整理成结构整齐的内容喂回给模型。</p>
+<p>在这条路线上，Firecrawl 和 Tavily
+是目前比较主流的两个选择。两家都按调用量收费，计量单位叫
+credit（中文常称作积分，口语里也简称点）；很多人第一次看到它们，下意识会去翻定价表，算算每次请求或者每个积分对应几分钱，觉得哪家单价更低就选哪家。</p>
+<p>我最初也是这么想的。但在真实环境里把它们接进系统、跑了一批实际任务之后，最终账单给我的反馈却完全打破了这种预想。给
+Agent
+选搜索工具，实际花销远不止看单价这么简单；同样的查询任务，两家最后结算出来的账单可能差得很远。</p>
+<h2 id="同一个查询积分消耗能差-61" data-reading-heading="">同一个查询，积分消耗能差 61</h2>
+<p>倍</p>
+<p>直到我做了一次针对社交媒体的端到端测试，同样的查询，Firecrawl 扣了
+122 个点，Tavily 只扣了 2
+个点，整整差了六十多倍。后来我把生产环境的大批真实调用放进两家的规则里重算，结果又拐了个弯：在以常规网页为主的日常流量里，Firecrawl
+换算成钱反而更省。单次消耗差几十倍、平均下来反而更省，造成这种反差的根本原因，在于两笔钱买到的东西其实并不相同。</p>
+<p>当时查的是一个发在 x.com 上的产品发布推文。Firecrawl 命中推文后直接走
+Grok，每条推文算 30 个点，光这一项就占了大头。</p>
+<p>高溢价换来的是能直接落库的结构化字段。Firecrawl 用 Grok
+直接拿到了发帖作者、发布时间戳、点赞与转发互动量，以及完整的回帖楼层，页面里没有多余的杂质。Tavily
+只花了 2
+点积分，拿回来的是抓取到的原始网页文本。它也拿到了推文正文与回复，没有彻底栽在登录墙上，但大半结果是空页面（列表页或他人主页），有内容的文本还混着登录与注册界面的导航噪声。单看单价根本算不清账，两家服务的计费逻辑处在完全不同的维度上，一个积分在两边代表的工程交付物截然不同。</p>
+<h2 id="两家不是同一种计价方式" data-reading-heading="">两家不是同一种计价方式</h2>
+<p>选择困难症的根源是两家的计费模型完全不在一个频道上：Tavily
+按请求次数收费，Firecrawl
+按返回的内容逐页计价。这种底层设计差异决定了它们对同一抓取任务的报价完全不同。</p>
+<p>Tavily
+只认请求类型：不管是基础搜索还是高级搜索，按预置操作扣固定点数，网页抽取也是按批打包计费。哪怕抓回来的是一篇短博客、一份上百页的研报，还是一条推文，扣费只看发了什么操作，和内容形态无关。</p>
+<p>相比之下，Firecrawl 是内容驱动的逐页计费。Firecrawl
+计费文档显示它的起步门槛很低，搜索只按结果数量收取少许基础积分。但一旦接口返回了文档，就会按抓到的形态逐页累加费用：常规网页按页计费，哪怕撞上
+403、404 这类错误页，只要接口返回了文档就算进账单；遇到长篇 PDF
+会按页加收，处理 X/Twitter 内容走 Grok
+更是单条收取高额溢价，部分大模型解析选项还会继续累加点数。</p>
+<p>计费维度</p>
+<p>Tavily 机制</p>
+<p>Firecrawl 机制</p>
+<p>计费核心</p>
+<p>按发起的 API 操作类型扣费</p>
+<p>基础调用费叠加返回内容逐页计费</p>
+<p>搜索调用</p>
+<p>基础搜索 1 点，高级搜索固定 2 点</p>
+<p>每 10 个搜索结果收取 2 点基础积分</p>
+<p>网页抽取</p>
+<p>每 5 个成功网页扣除 1 至 2 点</p>
+<p>返回文档每页扣除 1 点积分</p>
+<p>长篇 PDF</p>
+<p>不加价，计入常规搜索或抽取配额</p>
+<p>每页在基础费用上额外加收 1 点</p>
+<p>X/Twitter 内容</p>
+<p>不加价，返回包含页面噪声的原始文本</p>
+<p>经由 Grok 提取结构化字段，单条计 30 点</p>
+<p>两家搜索 API 的两种计费模型：Tavily
+像一张固定票价的地铁通票，按发出的请求收费；Firecrawl
+像按盘称重的自助餐厅，按返回内容的形态逐页加价。</p>
+<p>相比之下，Tavily
+更像一张固定票价的地铁通票，刷卡进站之后不论拎几重行李都不会加收额外费用；Firecrawl
+则像按盘算钱的自助餐厅，入门费很低，但盘子里每夹一块肉都会单独上秤。如果直接用
+Tavily 的积分单价去乘 Firecrawl
+的调用量，从算式建立的那一刻起就已经失真了。</p>
+<h2 id="firecrawl" data-reading-heading="">Firecrawl</h2>
+<p>的隐性成本藏在内容类型里</p>
+<p>按内容点菜的时候，长文档和社交媒体是吃掉 Firecrawl
+积分的两大杀手锏。很多开发者在估算成本时只盯着基础搜索，却忘了这两类内容才是真正吞掉调用量的主力军。</p>
+<p>首先是多页PDF。Firecrawl对PDF解析完全按页数收费。我之前测试过Visa支付网络的商户争议处理规范，Firecrawl返回了两份PDF，其中一份长达67页，加上基础费用，单次查询扣了将近80点积分。同样的查询扔给Tavily，只花了固定的2点，而且同样完整返回了长文档文本。</p>
+<p>如果你经常抓取行业白皮书、财报或学术文献，每篇动辄几十页甚至上百页。在
+Firecrawl
+里拉取几篇完整研报，花掉的积分可能比你做一百次普通网页搜索还多。</p>
+<p>社交媒体是另一个成本高峰。Firecrawl 在处理 x.com 内容时必须使用
+Grok，未启用结构化 JSON 抽取时，每条请求固定 30 个积分，启用则为
+34。因此，只要搜索结果里命中若干相关推文，单次调用的积分就会迅速冲到上百点。</p>
+<p>这种高溢价购买的是清洗工时。Grok
+返回的结果直接剥离了网页杂质，省去写正则表达式、剔除登录浮层、对抗反爬虫这类工作，喂给下游大模型时占用的上下文窗口也更小。Tavily
+单次只需固定低点数，但拿回来的原始文本混着大量界面文字，下游管道得自己过滤和重试。如果系统本身已经有了完善的本地文档解析和社交媒体清洗逻辑，为
+Firecrawl 的逐页解析与 Grok
+字段付费，等于重复购买清洗能力；如果希望抓回来的数据直接组装进大模型上下文，这笔溢价买到的则是更短的开发链路。</p>
+<h2 id="真实负载交叉回放平均跑下来谁更划算" data-reading-heading="">真实负载交叉回放：平均跑下来谁更划算</h2>
+<p>单次的极限测试可以展示二者的边界，但评估月度预算要回到混合负载的真实调用。我调取了截至
+2026 年 10 月 3
+日过去一周生产环境的真实记录，把双方的实际任务互换计费规则交叉测算。这批负载横跨常规
+HTML
+网页、社交媒体推文和技术文档。结果呈现出明确的方向：日常网页为主的负载里，Firecrawl
+换算成钱更省；长文档和社交动态的占比一旦上去，Tavily
+会反超。把两组真实流量放到对方平台重算，账单走向直观反映了这种差异：</p>
+<p>负载来源</p>
+<p>实际任务量</p>
+<p>原平台实际账单</p>
+<p>交叉换算到对方平台账单</p>
+<p>Firecrawl 生产流量</p>
+<p>406 次搜索，342 次抽取（搜索结果 90% 以上为普通网页）</p>
+<p>10,129 点积分（折合 Standard 档 $8.41 / Scale 档 $6.07）</p>
+<p>折算 Tavily 为 1,508 点积分（折合 Bootstrap 档 $10.05 / Growth 档
+$7.54）</p>
+<p>Tavily 生产流量</p>
+<p>121 次搜索，36 次抽取</p>
+<p>282 点积分（折合 Bootstrap 档 $1.88 / Growth 档 $1.41）</p>
+<p>折算 Firecrawl 为 1,284 点积分（折合 Standard 档 $1.07 / Scale 档
+$0.77）</p>
+<p>表中 Firecrawl 按年付套餐单价折算；Tavily 流量换算到 Firecrawl
+时，PDF 按每份 30 页估算。在这批以普通网页为主的任务里，Firecrawl
+换算成钱比 Tavily 便宜 16% 到 20%。</p>
+<p>但在 Tavily 接的那些任务里，即使调用量小，折合成 Firecrawl
+的积分也会成倍增多。一旦长文档或社交动态的占比足够高，Firecrawl
+每页、每条的附加费就会盖过它的低价优势。所以到底谁更省钱，完全看业务管线抓取的文档类型。</p>
+<h2 id="按照内容形态与清洗容忍度做选型" data-reading-heading="">按照内容形态与清洗容忍度做选型</h2>
+<p>在理解实际计费规则后，选型主要看两点：一是每天抓取的内容类型，二是下游对数据质量的敏感度。单纯比价并不准确，要结合业务场景。</p>
+<p>优先选用 Firecrawl 的场景： 1.
+抓取对象主要是标准网页，尤其是大规模抓取文章、博客和技术文档。在这种情况下，基础低价版本可以发挥最大价值。
+2. 需要频繁抓取社交媒体，且下游系统不愿意额外投入开发抓取规则。此时用
+Grok
+可直接获取作者、互动量、整理好的回帖楼层，能省下清洗流程和清洗提示词的开销。</p>
+<p>优先选用 Tavily 的场景： 1. 抓取对象经常是几十页、几百页的长
+PDF、论文或政府财报。Tavily
+的固定价格能完全抹平长文档带来的页数膨胀，避免一次查询扣掉几十上百点积分的极端账单。
+2.
+对社交媒体仅做粗粒度热度扫描和线索监控，下游管线有基础的文本过滤能力，可以容忍抓取结果中夹杂登录界面和空页面。</p>
+<p>选型决策时，必须把下游大模型消耗的 Token
+数量和清洗管道的运维时间一并计入。只看 API
+账单的数字常常会漏掉这些隐蔽且昂贵的工程成本。</p>
+<p>按内容构成选搜索
+API：负载以普通网页为主时选 Firecrawl，长文档与社交动态占比高时选
+Tavily。</p>
+<h2 id="账单能不能自解释也是选型的一部分" data-reading-heading="">账单能不能自解释，也是选型的一部分</h2>
+<p>按量计费的 API，账单不仅要算得准，还要看得懂。Firecrawl
+的单次扣费恰好能在本地完全复现：照官方文档搭一个计费规则模型，把本地日志里数百次搜索和抽取调用逐条验算，算出的积分和每条记录里返回的消耗完全吻合。底层的单次扣费是确定的。</p>
+<p>文中所有事实都来自 2026 年 10 月的实测，依据是 Firecrawl 与 Tavily
+的官方计费文档，以及本地工作区里数千个近期调用日志，计费推演与对比都可在日志中复现。一个外部
+API
+的总账如果在控制台里无法自圆其说，即便它在价格表上看起来便宜，系统上线之前也必须在本地把请求日志记录焊死，并为对不齐的账目预留额外的工程防御预算。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/a7801c6c69bb8721497220e26482d7148b08884b7de345dd094b61826f83a78f.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/a7801c6c69bb8721497220e26482d7148b08884b7de345dd094b61826f83a78f.md" download="给 Agent 选搜索 API：Firecrawl 和 Tavily
+的差别到底在哪里.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=firecrawl" class="entity-link company-link">firecrawl</a>, <a href="/search/?q=tavily" class="entity-link company-link">tavily</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=grok" class="entity-link product-link">grok</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

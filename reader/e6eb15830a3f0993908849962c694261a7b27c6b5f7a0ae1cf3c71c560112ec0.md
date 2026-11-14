@@ -1,0 +1,924 @@
+---
+author: New York Times Podcasts
+date: '2026-10-06'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=eITWvkTQo38
+speaker: New York Times Podcasts
+tags:
+  - ai-agent
+  - autonomous-agent
+  - personal-assistant
+  - privacy-security
+  - human-computer-interaction
+title: 呼叫我的AI智能体：Meta Muse与全面接管生活的个人助理时代
+summary: 本期播客探讨了以Meta最新推出的AI智能体Muse为代表的自主化助手技术。记者Eli Tan亲身测试将生活、财务、订餐及客服交由Muse接管的经历，深入剖析了AI智能体如何从被动对话走向主动操作，以及这种极度便利背后所交出的大量个人隐私与潜在认知依赖风险。
+insight: ''
+draft: true
+series: ''
+category: ai-application
+area: tech-engineering
+project: []
+people:
+  - Mark Zuckerberg
+companies_orgs:
+  - Meta
+  - The New York Times
+products_models:
+  - Muse
+  - OpenClaw
+media_books: []
+status: evergreen
+---
+### AI智能体的崛起与生活实验
+
+**娜塔莉·基特罗夫**: 这里是《纽约时报》的《The Daily》节目，我是**娜塔莉·基特罗夫**（Natalie Kitroof）。在过去的几个星期里，数以百万计的人争相下载一种全新且强大的AI应用，它们被称为**智能体**（agents）。它们非常实用，说实话外观甚至有点可爱，而它们工作所需要的，仅仅是你最敏感的个人隐私信息。今天，我的同事**埃利·坦**（Eli Tan）将为我们讲述，为什么他和许许多多美国人正将自己的全盘生活向一项我们才刚刚开始理解的技术敞开大门。今天是10月6日，星期二。埃利·坦，这是你第一次来《The Daily》，我们非常高兴你能来到节目中。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: From the New York Times, I'm Natalie Kitroof. This is the daily. Over the last few weeks, millions of people have rushed to download a new class of powerful AI apps called agents. They're incredibly useful. They're honestly kind of cute, and all they need to work is your most sensitive personal information. Today, my colleague Eli Tan on why he and so many Americans are opening up their entire lives to technology that we're just beginning to understand. It's Tuesday, October 6th. Eli Tan, first time on the Daily and we are very happy to have you on the show.
+
+</details>
+
+**埃利·坦**: 很高兴来到这里。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: Happy to be here.
+
+</details>
+
+**娜塔莉·基特罗夫**: 好的，我们最近在《The Daily》上聊了很多关于人工智能失控、AI偏离正轨、做出不该做的事、侵入不该侵入的领域，也就是AI表现恶劣、做出让很多人感到害怕的事情。但埃利，你一直关注的则是AI截然不同的一面，是这项技术潜在非常有用的一种形态。我们想聊聊这究竟是什么样子。来吧，告诉我们你最近都在忙些什么。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Okay, so we've been talking a lot here recently on the daily about artificial intelligence gone ary, AIs going rogue, doing things they shouldn't, hacking into places they shouldn't, aka AI behaving badly, doing things that feel scary to a lot of people. But you, Eli, have been focusing on a very different side of AI, a potentially very helpful version of this technology. and we want to talk about what exactly that has looked like. So, just tell us what you've been up to.
+
+</details>
+
+**埃利·坦**: 在过去的几周里，我把自己的生活全盘交托给了一款名为**Muse**的应用。这是由**Meta**公司开发的一个**AI智能体**，也是首个面向公众发布的此类智能体。你可以把AI智能体想象成一个拥有专属电脑的聊天机器人，它能使用显示器、键盘和鼠标。所以，它不再仅仅像人类一样跟你聊天，而是能真正上网为你处理任务，并在后台自主运行数小时之久。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: For the past few weeks, I've given my life over to this app called Muse, which is an AI agent created by the company Meta. And it's really the first agent of its kind that's been released to the public. Think of an AI agent as a chatbot that has access to its own computer where it can use a monitor and a keyboard and a mouse. So instead of just conversing with you like a person, it can actually go online and do tasks for you and work on its own autonomously in the background for hours at a time.
+
+</details>
+
+**娜塔莉·基特罗夫**: 基本上，它能充当你的个人助理，对吧？由AI驱动，但不是传统的AI聊天机器人，而是一个AI智能体。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Basically, it can be your personal assistant, right? Powered by AI and not in this case an AI chatbot, but an AI agent.
+
+</details>
+
+**埃利·坦**: 没错。个人助理正是Meta对它的称呼。而在AI领域，这些智能体相比目前主要驱动聊天机器人的技术而言，确实是一次真正的飞跃。智能体可以操作软件、操作应用程序、登录你的各种账户。这里的愿景是，在未来，你只要对它说：“嘿，帮我订一张下周去亚特兰大的机票，价格要最便宜的”，然后它就会自行在浏览器中打开Expedia或达美航空的网站，替你完成订票。所以，它从根本上消除了人类使用电脑时所需的一切繁琐操作。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: Exactly. A personal assistant is what Meta is calling it. And in the world of AI, these agents are a real leap forward in the kind of technology that right now mostly powers chat bots. Agents can operate software, they can operate apps, they can sign into your accounts. And the hope here is that in the future, you can just say, "Hey, book me a flight to Atlanta next week for the cheapest price," and it'll just go into Expedia or Delta on a browser and it will book that flight for you. So it fundamentally takes out the leg work of you having to use a computer.
+
+</details>
+
+### 实测：让AI替我点一份午餐沙拉
+
+**娜塔莉·基特罗夫**: 天哪，听起来真是让人难以置信。我想亲自见识一下。你现在把你的智能体带来了吗？我们能现场试用一下吗？
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Wow, that sounds incredible. And I want to see this in action. Do you have your agent with you right now? Can we take this for a spin?
+
+</details>
+
+**埃利·坦**: 当然可以。你想让它做什么？
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: Yeah. I mean, what do we wanna what do we want to do? Like,
+
+</details>
+
+**娜塔莉·基特罗夫**: 嗯，我想吃午饭了，想要一份带蛋白质的沙拉之类的东西。它能做到吗？它能帮我点外卖吗？
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: uh, I have a desire for lunch, a sort of salad like thing with protein. Um, can you do that? Can it order food?
+
+</details>
+
+**埃利·坦**: 它可以。我现在就吩咐它。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: It can. Let me ask it right now.
+
+</details>
+
+**娜塔莉·基特罗夫**: 好的。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Okay.
+
+</details>
+
+**埃利·坦**: 好的，我对它说：“我的同事娜塔莉饿了，想吃午饭。她想吃某种沙拉。你能给我们办公室订一份沙拉吗？”
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: Okay. I'm saying my colleague Natalie is hungry for lunch. She wants some kind of salad. Can you order a salad to our office?
+
+</details>
+
+**娜塔莉·基特罗夫**: 好的，这钱我会转账还你的。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Okay, I'll pay you back.
+
+</details>
+
+**埃利·坦**: 如果你不还我，我会让它在一周后给你发一封电子邮件提醒，还会自动向你的**Venmo**发起收款请求。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: And if you don't pay me back, I'll have it uh send you an email reminder uh in one week and it'll charge your Venmo.
+
+</details>
+
+**娜塔莉·基特罗夫**: 哇，好吧，这可真能追责。明白了。等等，为了弄清楚，它是有你外卖平台的账户信息吗？
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Wow. Okay, so this is a real accountability thing. Got it. And so wait, like just so I'm clear, so it has your information to a delivery service that you have as well?
+
+</details>
+
+**埃利·坦**: 是的，它已经登录了我的**DoorDash**账户。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: Yes, it's also signed into my Door Dash account.
+
+</details>
+
+**娜塔莉·基特罗夫**: 明白了。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Got it.
+
+</details>
+
+**埃利·坦**: 它现在回复说：“很高兴为您点午餐。”它正请求我确认这是不是合适的午餐。它推荐了来自**Sweetgreen**的**丰收碗**（Harvest Bowl）。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: And it says happy to order the lunch. I'm being asked just to approve that this is the right lunch. And it suggested a harvest bowl from Sweet Green.
+
+</details>
+
+**娜塔莉·基特罗夫**: 好的。不可思议的是，那正好是我在Sweetgreen最喜欢点的餐品。所以我现在有点被吓到了。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Okay. Unfortunately, that is actually my favorite order from Sweet Green. So, I'm getting a little freaked out.
+
+</details>
+
+**埃利·坦**: 那也是我最喜欢点的，也许这就是原因吧。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: It's my favorite order, too. Maybe that's why.
+
+</details>
+
+**娜塔莉·基特罗夫**: 哦，有意思。好的，所以它默认我们的口味是一样的。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Oh, interesting. Okay. So, it assumes we have the same taste.
+
+</details>
+
+**埃利·坦**: 是的。接着它提示“正在下单”。现在我其实可以在屏幕上看到它的一举一动，光标在屏幕上移动，点击着各个不同的按钮。就……
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: Yes. And then it says placing the order. And right now I can actually watch it do this, moving the cursor across the screen clicking on the different buttons. Just
+
+</details>
+
+**娜塔莉·基特罗夫**: 你现在正在看着它操作吗？
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Are you watching it right now?
+
+</details>
+
+**埃利·坦**: 是的，就在这儿。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: I am. Yeah, I have it.
+
+</details>
+
+**娜塔莉·基特罗夫**: 我能看看吗？
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Can I see it?
+
+</details>
+
+**埃利·坦**: 就在这里。看，它正在输入我们办公室的地址。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: So here it is. It's typing the address of the office.
+
+</details>
+
+**娜塔莉·基特罗夫**: 我的天哪。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Oh my lord.
+
+</details>
+
+**埃利·坦**: 并且提交了订单。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: And and putting in the order.
+
+</details>
+
+**娜塔莉·基特罗夫**: 这太疯狂了。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: This is nuts.
+
+</details>
+
+**埃利·坦**: 午餐已经上路了。好的，所以这种服务长期以来一直是硅谷梦寐以求的圣杯，对吧？能够让电脑为你跑腿办杂事。那么Meta是如何走到这一步并开发出这个产品的呢？因为坦白讲，在AI竞赛中，他们之前并不总是处于领跑梯队。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: Lunch is on the web. All right. So this thing, this service, this has long been the holy grail of Silicon Valley, right? Being able to have a computer run your errands for you. So how does Meta get here to building this? Because frankly, they haven't always been at the front of the pack in terms of the AI race.
+
+</details>
+
+### 从OpenClaw到Meta的消费级战略
+
+**娜塔莉·基特罗夫**: 确实如此。大约一年前，Meta在AI竞赛中落后了。他们当时开发的是所谓的底层大型语言模型，也就是驱动AI聊天机器人的技术底座。而**马克·扎克伯格**（Mark Zuckerberg）显然对落后感到非常厌倦。因此，在一次全员大会上，他告诉公司员工，他们需要将重点完全转移到构建消费级AI产品上。当时他在公司内部提到，他们应该专注于打造即使是他妈妈也能轻松上手的AI产品。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Exactly. About a year ago, Meta had fallen behind in the AI race. They were developing what were called models, essentially the underlying technology that powers AI chatbots. And Mark Zuckerberg had apparently grown tired of falling behind. And so at an all hands meeting, he told the company that they needed to shift their focus entirely to building consumer AI products. And something he was saying inside the company at the time was that they should focus on building AI products that even his mom could use.
+
+</details>
+
+**埃利·坦**: 那意味着什么？他是如何设想这一目标落地的？马克·扎克伯格的妈妈并不是什么科技专家，她是一名精神科医生。她并不是很懂技术，实际上对AI了解也不多。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: And what did that mean? Like how did he envision that actually occurring? So Mark Zuckerberg's mom isn't a tech person. She's a psychiatrist. She's not really techsavvy or actually know much about AI.
+
+</details>
+
+**娜塔莉·基特罗夫**: 基本上就是“傻瓜式AI”。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: AI for dummies basically.
+
+</details>
+
+**埃利·坦**: 确实是傻瓜式AI。而就在那段时间，一款名为**OpenClaw**的开源应用问世，并在开发者社区引发了轰动，所有技术人员都开始使用它。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: AI for dummies. Exactly. And around this time, this app comes out that becomes a viral hit. It's called Open Claw. And this is essentially an open source version of an agent. It catches fire in the developer community and everyone starts using it.
+
+</details>
+
+**娜塔莉·基特罗夫**: 人们可以把自己的电脑控制权交给它，它能执行各种各样此前需要人类手动完成的任务。那么当时科技圈的人们究竟在用这个开源应用做什么呢？
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: People can give over their computers to it and it can do all sorts of tasks that previously required human beings. And what were people in tech and the app actually doing with it at this point?
+
+</details>
+
+**埃利·坦**: 很多人用它来写代码。这样你就不用整天坐在电脑前写代码，而是可以直接告诉智能体：“嘿，去帮我写个应用”，它就会自动去写。但我采访过的一位开发者，他用它来管理自己的全天日程。智能体会查看他的日历，提醒他该去开会了。他甚至还在家里安装了一个摄像头，智能体会通过摄像头观察他，每当他喝水时，智能体就会对他说：“干得漂亮。”
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: A lot of them are using it to write code. So instead of having to sit at your computer coding all day, you could just tell the agent, "Hey, go make an app for me," and it would do it. But another developer I talked to, he used it to run his entire day. It would look at his calendar, it would tell him it was time to go to a meeting. He even rigged a camera up in his house so the agent was watching him and every time he drank water, it could see him drinking a glass of water and it would say, "Good job."
+
+</details>
+
+**娜塔莉·基特罗夫**: 哇。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Wow.
+
+</details>
+
+**埃利·坦**: 他甚至把智能体连接到了他的**特斯拉**汽车上。有一次，车子直接将他重新导航到了**Whole Foods**超市，智能体告诉他：“你的血液检测报告显示你缺镁，你应该补充镁元素。”于是他就照做了。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: He even connected it to his Tesla and at one point it rerouted him to Whole Foods and it said, "You got a blood test that said you're low on magnesium. You need to be taking this magnesium." And he did it.
+
+</details>
+
+**娜塔莉·基特罗夫**: 好吧。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Okay.
+
+</details>
+
+**埃利·坦**: 关键在于，OpenClaw是首个真正展现出AI智能体巨大潜力的工具。然而它非常极客，非常难用。你需要懂得如何使用终端，知道如何自行设置环境变量。它并不是为大众准备的产品。但Meta注意到了这一点，并且认识到，如果能把这种能力包装成一个极其简单的消费级应用，让任何人都能在手机上直接下载使用，这完全可能成为首个爆款AI消费级产品。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: Now, the thing about OpenClaw is that it was the first tool to really show what was possible with these agents. But it was very geeky. It was very hard to use. You had to know how to use the terminal. You had to know how to set it up. It wasn't something that was going to work for normal people. But Meta was looking at this and thinking, this could be the thing that if we package it into an app that's really simple that anyone can just download on their phone, this could really be the first big AI product hit.
+
+</details>
+
+**娜塔莉·基特罗夫**: 他们基本上是在审视这个现状并思考：我们能把它变成一款消费级产品，一款普通人真正在日常生活中使用的东西。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: They're basically looking at this and thinking, we can turn this into a consumer app, something that normal people would actually use in their day-to-day life.
+
+</details>
+
+**埃利·坦**: 没错。他们认为，凭借Meta所拥有的庞大资源，自己能够成为第一家将这种智能体带给大众的公司。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: Yes. And they were thinking we can be the first company because of all the resources that we have to bring an agent like this into the masses.
+
+</details>
+
+**娜塔莉·基特罗夫**: 当我们谈到Meta拥有的资源时，我们谈论的是所有这些金钱，还有他们制作人们每天都在使用的产品方面的专长。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: And when we're talking about the resources that Meta has, we're talking about all this money, but also their expertise in making things that people use every single day.
+
+</details>
+
+**埃利·坦**: 完全正确。虽然在打造最前沿、最具实验性的模型方面，他们的历史可能不如某些竞争对手悠久，但他们知道如何打造人们乐于使用的软件。这也是为什么目前全球有35亿用户每天都在使用Meta旗下的某款产品。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: That is right. While they don't have as long of a history of making the most cutting edge, experimental models, they know how to make software that people like using. That's why there are 3.5 billion users that are on one of Meta's products.
+
+</details>
+
+**娜塔莉·基特罗夫**: 是的，35亿人每天花费数小时沉浸在Meta的产品中。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Yes. Three and a half billion people that already use Meta's products for hours and hours every day.
+
+</details>
+
+**埃利·坦**: 嗯哼。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: Mhm.
+
+</details>
+
+**娜塔莉·基特罗夫**: 于是到了四月份，他们拿出了一个版本，在OpenClaw擅长的事情上表现得相当不错，比如编码、安排日程和订餐。但在外观和交互上，它被设计得让任何拥有智能手机的人都能轻松使用。紧接着到了上个月，他们正式向公众发布了这个应用，并且完全免费。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: So by April, they had a version of this that was pretty good at all the things that OpenClaw was good at, coding and scheduling and ordering food. But it looked like something anyone with a smartphone could use. And then last month, they released it to the public and they make it free to use.
+
+</details>
+
+**埃利·坦**: 好的。再跟我聊聊他们决定免费提供的考量。显而易见，免费能吸引大量用户下载。但对Meta来说，这需要投入惊人的计算成本。那么他们为什么要这么做呢？这显然是为了尽可能快地把产品普及到尽可能多的人手中。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: Okay. And talk to me about the decision to make it free. Obviously that gets a lot of downloads. But that costs a crazy amount of computing power for Meta. So why did they do that? It's clearly about getting this in the hands of as many people as they can.
+
+</details>
+
+**娜塔莉·基特罗夫**: 那么目前的成效如何？
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: And how's that going?
+
+</details>
+
+### 隐私赌注：将所有个人数字生活托付给AI
+
+**埃利·坦**: 到目前为止，这可以说取得了早期的成功。Muse迅速登顶了App Store排行榜，数以百万计的人已经下载了它。在很多方面，它确实兑现了马克·扎克伯格最初的设想。但在我的实际测试中，为了真正发挥它的作用，你必须迈出非常重要的一步：你必须向这个AI敞开你的全部生活，彻底让它进入你的私人世界。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: So far, it's been a bit of an early success. Muse shot up the App Store rankings, millions of people have downloaded it. And in a lot of ways, it's delivered on what Mark Zuckerberg originally envisioned. But in my experience of using it, in order for it to be useful, you have to take this really big step, which is you have to give your life over to this AI and fully let it in.
+
+</details>
+
+**娜塔莉·基特罗夫**: 确实。为了让这款应用真正起效，你必须交出自己生活的方方面面，而不仅仅是你的DoorDash登录凭证。那么你具体交出了什么？那是一种怎样的过程？带我还原一下当时的细节。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Yes. In order for this app to actually be useful, you have to give over all aspects of your life, not just your Door Dash login. And what did you give over? What did that look like? Walk me through it.
+
+</details>
+
+**埃利·坦**: 我最先做的事情之一，就是登录了我的信用卡和银行账户。我把我的社保账号密码、健康保险密码交给了它。我让它完全访问我的联系人列表，并且给了它我女朋友的邮箱和家庭住址。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: One of the first things I did was I signed into my credit cards, my bank accounts. I gave it my Social Security password, my health insurance password. I gave it access to my contacts and I gave it my girlfriend's email and her address.
+
+</details>
+
+**娜塔莉·基特罗夫**: 天哪。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Oh my.
+
+</details>
+
+**埃利·坦**: 这是以防我想给女朋友寄点什么东西。是的，我想遍了自己所拥有的所有敏感个人信息，然后把它们一股脑全给了Muse。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: In case I wanted to send her something. Yeah. I thought of all the possible personal sensitive pieces of information that I have and I I gave it all to Muse.
+
+</details>
+
+**娜塔莉·基特罗夫**: 哇，好吧。那有没有让你犹豫停顿？你在这么做的时候感到紧张害怕吗？
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Wow. Okay. And did that give you pause? Were you nervous about doing that?
+
+</details>
+
+**埃利·坦**: 确实很紧张。即使像Instagram这样的应用感觉已经对我了如指掌、掌握了我所有的偏好，但直接把密码交给一个机器人，还是让人感到心理上有很大一道坎。然而这也是唯一的办法。如果它不能登录我的账户，它就无法替我买东西，也无法替我去处理那些繁琐杂事。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: I was. Yeah, even though Instagram I feel like it it knows so much about me and it knows all my preferences, to actually give your passwords to a bot, it feels like a really big step. But it was also the only way it was gonna work. If it can't sign into my accounts, it can't buy things for me. It can't do the things that I want it to do.
+
+</details>
+
+**娜塔莉·基特罗夫**: 确实如此。尤其是Meta过去在隐私方面有过严重的历史污点，比如**剑桥分析**（Cambridge Analytica）丑闻，以及泄露数以千万计用户个人信息的各种事件。你当时在想这些事吗？
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Absolutely. Yeah, Meta has had a ton of issues with privacy in the past. Obviously Cambridge Analytica and leaking the personal information of tens of millions of users in the past. Were you thinking about that?
+
+</details>
+
+**埃利·坦**: 当然想到了。Meta在数据安全方面有着非常糟糕的黑历史。不过在交出这些信息时，我其实是建立了一个独立的假测试环境。我没有使用自己真实的日常银行主账户，而是使用了一个只有少量资金的测试账户。对我来说，直接把能支配我全副身家的真实主银行账户交出去，依然是一条我不愿意跨越的底线。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: Absolutely. Yeah, Meta has had a ton of issues. It's been an important part of the conversation around privacy and data. But when I was doing this, I actually set up an isolated sandbox. I wasn't using my real main bank accounts, I used dummy accounts with small amounts of money. Because for me, giving over my real life savings was still a line that I wasn't willing to cross.
+
+</details>
+
+### 从神级客服代打到令人尴尬的翻车
+
+**娜塔莉·基特罗夫**: 好吧，那么一旦你全面拥抱了Muse，你的实际使用体验到底如何？描述一下那是一种怎样的经历。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Okay. So once you openly embrace Muse, how did it go for you? I mean just describe the experience of it.
+
+</details>
+
+**埃利·坦**: 刚开始的时候顺利得出奇。我先是交给它最基本的任务，比如“给这个联系人发一条短信”，或者“帮我看看日历，今天下午我有没有空”。它都能完美执行，几乎完全按计划进行。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: It went surprisingly well in the beginning. I started giving it the most basic tasks, like "Send a text to this person" or "Check my calendar and see if I'm free this afternoon." And it would pretty much do them all as planned. Hm.
+
+</details>
+
+**娜塔莉·基特罗夫**: 嗯。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Mhm.
+
+</details>
+
+**埃利·坦**: 随后我开始向它下达更复杂的任务指令。而正是在这个阶段，我发现事情开始变得复杂起来，它在面对更棘手、更复杂的任务时开始掉链子。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: Then I gave it instructions to do more complex tasks. And this was a time when I started to notice things getting a bit hairy, where it would get tripped up with the more complicated stuff.
+
+</details>
+
+**娜塔莉·基特罗夫**: 那些更复杂的任务是指什么？
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: And what was that more complicated stuff?
+
+</details>
+
+**埃利·坦**: 比如让它给我的牙科保险公司打电话，询问一笔理赔款的报销进度。保险公司通常会让你在线等待一个小时以上。而智能体直接拨打了电话，听着电话转接菜单，一路按键选择，甚至跟AI客服对话，成功穿透了迷宫般的语音导航，在电话线上一直替我排队等待，直到真正找到对应的人工客服接通。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: Telling it to call my dental insurance and ask for the status of a reimbursement check. With dental insurance, you're usually waiting on hold for over an hour. And the agent actually made the call, navigated the phone trees, talked to the voice bot on the other end, and waited on hold until it had the exact right person on the line.
+
+</details>
+
+**娜塔莉·基特罗夫**: 什么？这太不可思议了。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: What? This is crazy.
+
+</details>
+
+**埃利·坦**: 在这个保险理赔的案例中，我后来查看了通话记录转写。它找到了我的会员ID，当电话系统提示“请回答以下问题以验证身份”时，它全部回答正确，顺利通过了旨在确认真人身份的所有人机验证问题。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: So for this insurance case, I looked at the transcript and it had found my member ID, and when the phone tree said, "Answer these questions to confirm your identity," it got through all of the CAPTCHA questions that are meant to make sure that I'm human.
+
+</details>
+
+**娜塔莉·基特罗夫**: 我的天哪。在线排队等待客服接听，正是我梦寐以求希望AI替我做的事情！我能不能说，这体验简直太棒了。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Oh my god. Waiting on hold is the exact use case that I want AI for. Can I just say like that's good.
+
+</details>
+
+**埃利·坦**: 我也是这么想的。在它能做的所有事情中，如果它仅仅只能替我在电话里排队等候客服，我都愿意为此付费。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: Me too. of all the things that it can do. If all it could do is just wait on hold for me, I would pay for that.
+
+</details>
+
+**娜塔莉·基特罗夫**: 那么在处理这些更复杂的任务时，它是一直都这么出色吗？
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: And was it always that good at these more complex tasks?
+
+</details>
+
+**埃利·坦**: 不，并非总是这么顺畅。那大概是表现最好的一个例子。很多时候情况其实非常糟糕。比如有一次，我让它帮我制作一份个性化的早间新闻播客，内容要涵盖我关注的科技和体育动态。结果它生成出来的播客音质极差，语调毫无起伏，听起来极其枯燥乏味。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: No, it wasn't always that smooth. That was probably the best example. A lot of times it was pretty awful. Like I tried to have it make a custom morning podcast for me about the news that I care about in tech and sports, and I listened to it on the way to work. No, Eli,
+
+</details>
+
+**娜塔莉·基特罗夫**: 不会吧，埃利。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: No, Eli,
+
+</details>
+
+**埃利·坦**: 听感简直可怕至极。那个AI主播语调平淡得像机器人，极其无聊，我听了五分钟就不得不关掉了。自那次实验结束后，我再也没听过它生成的任何一期播客。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: it was pretty awful. The host, you know, they were monotone and it was boring and I had to turn it off after 5 minutes. I haven't listened to an episode since ending the experiment.
+
+</details>
+
+**娜塔莉·基特罗夫**: 是的，我一直以为播客主持人的独特魅力是绝对不可能被AI颠覆的。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Yeah, I I was under the impression you could not replace the indisputable charm of a human host and that podcast hosts were immune to AI disruption.
+
+</details>
+
+**埃利·坦**: 他们确实免疫AI的颠覆，任何试图这么做的公司都应该趁早放弃，因为效果实在是太灾难了。还有另一次，我让智能体帮我管理我的梦幻橄榄球联盟球队。结果它完全搞砸了阵容配置，让我派上了一名已经受伤报销的球员，直接导致我输掉了那周的比赛。可以说这是我今年在梦幻橄榄球联盟里遭遇的最惨痛失利。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: They are immune to AI disruption, and any company trying should just give up because it's just so bad. And then there were other times where I asked it to manage my fantasy football team. And it totally blew it. It made these terrible roster decisions, benching players that were healthy and starting players that were injured. It basically cost me my matchup that week. It's been the worst loss of my fantasy football league so far this year.
+
+</details>
+
+### 人类认知的让渡与毛茸茸的情感伪装
+
+**娜塔莉·基特罗夫**: 好吧。撇开智能体给出的具体建议质量不谈，听到这里，我不禁想问：你为什么要把那些事情外包给它呢？比如梦幻橄榄球，玩这个的全部乐趣不就在于自己去研究、自己做决定吗？向我解释一下，埃利，把这些事情交给AI的意义究竟在哪里？
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Okay. Just setting aside the quality of the advice that the agent was giving you, hearing this makes me think, why did you outsource that stuff anyway? Like fantasy football, isn't the whole point of that the fun of doing it yourself and making the decisions? Explain that to me, Eli. What is the point?
+
+</details>
+
+**埃利·坦**: 是的，这其实是我对Muse以及AI智能体最大的反思与批评所在：那就是在这个过程中被剥夺的偶然性与人际连接。比如我让它帮我买一本书，它确实在网上帮我买了。但我平时常去那家独立书店，我很喜欢和那里的店员聊天交流。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: Yes. This is actually my biggest criticism of Muse and AI agents, which is that you lose the serendipity and you lose the human connection. Like I had it order a book for me, and it did, but I love going to my local bookstore. There's a guy at the bookstore who I enjoy talking to
+
+</details>
+
+**娜塔莉·基特罗夫**: 而你本可以直接拿起电话订购，或者天哪，亲自走到书店去面对面和他交谈，顺便浏览一下书架。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: and I would have rather just either picked up the phone or god forbid go to the store and talk to him in person and and browse the shelves.
+
+</details>
+
+**埃利·坦**: 如果你明明很享受那些真实的人际互动，你又何必把这些事情外包给一个机器人呢？其实刚开始使用Muse时，我以为自己只会用它来做某些特定事情，比如仅仅用来给保险公司打电话或者偶尔点餐。但我很快发现，我最终在所有事情上都开始依赖它。在很多时候，我不再自己动脑思考，而是本能地第一反应就是打开Muse去问它。甚至有一次，我掏出手机想让Muse帮我预热烤箱，好用来做晚餐——而做晚餐的所有食材，原本也是它帮我买好送来的。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: And why did you outsource that stuff to a robot if you actually enjoy those human interactions? Well, when I first started using Muse, I thought I might just use it for certain things, like just calling my insurance or just ordering food. But what I found was that I ended up relying on it for everything. And instead of a lot of times just thinking for myself, my first instinct was to go to Muse and ask it instead. At one point, I pulled out my phone to ask Muse to preheat the oven to make the dinner that I was making with all the ingredients and bought me
+
+</details>
+
+**娜塔莉·基特罗夫**: 埃利，这听起来就像你把自己的全部认知能力都直接移交给了这个机器。这实在令人担忧。就像它彻底接管了你的大脑一样。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Eli. It's like I had just given over all my cognitive ability to this thing and it was concerning like I really felt like you know it had taken over my brain and I think that takeover is really what the companies imagine all of us to be using these kind of agents for. That's the vision that they have.
+
+</details>
+
+**埃利·坦**: 我认为这种接管，恰恰是科技公司设想中我们所有人使用这类智能体的方式。这就是他们构建的宏伟蓝图。而且在设计上，他们用了一种非常讨巧的心理包装。这些智能体在形象上被赋予了可爱的小化身，就像**Labubu**盲盒娃娃一样。当你下载这个应用时，每个人的初始头像都叫Muse，但它首先要求你给它重新起个名字，并赋予它独特的个性。我的智能体叫**Ren**。Ren是一只小鸟，一只长着浅褐色羽毛的小鸟。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: It's like I had just given over all my cognitive ability to this thing and it was concerning like I really felt like you know it had taken over my brain and I think that takeover is really what the companies imagine all of us to be using these kind of agents for. That's the vision that they have. And the design of it, they are little Labubu characters. So when you download the app, everyone has an avatar named Muse, but then the first thing it does is it asks you to name it and give it its own personality. My avatar, it name is Ren. Ren's a bird, so it's a little a little bird with these little brown feathers. Okay,
+
+</details>
+
+**娜塔莉·基特罗夫**: 所以这些虚拟头像是讨人喜欢的、毛茸茸的。他们的设计逻辑大概是：面对这么一个小家伙，你有什么好担心的呢？它只是一个毛茸茸的小可爱，把你的个人隐私信息全交给它完全没问题，因为它绝不会心怀不轨，也绝对不会失控反叛。哦等等，前台发来提示，你在Sweetgreen点的餐已经送到大堂了！刚才的手机震动就是因为这个。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: so these avatars, they're cuddly, they're furry, and the thinking I think is that why would you be worried? It's just a little guy. It's just a little fuzzy guy. It's totally okay if he has your information because he's he's not nefarious. He's not going to go rogue. Oh, this the sweet green order is is ready for you in the lobby. That's what the buzzing was.
+
+</details>
+
+### 外卖送达：智能体落地的惊艳与未来的代价
+
+**埃利·坦**: 天哪，我的订单送到了。现在我需要一个具备实体的人形机器人下楼去帮我取外卖，因为我依然得肉身走下楼去取东西。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: Oh my god, my order is here. I need a humanoid robot to go pick it up because I'm still the one who's going to have to physically go and pick something up.
+
+</details>
+
+**娜塔莉·基特罗夫**: 好的。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Okay.
+
+</details>
+
+**埃利·坦**: 嗨，你是送给娜塔莉的吗？哦，是送给埃利的。好的，非常感谢！哇。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: Hi. Are you here for Natalie? Oh, for Eli. Yes. Thank you so much. Wow.
+
+</details>
+
+**娜塔莉·基特罗夫**: 一份丰收碗沙拉！谢谢你，天哪。好的，我们拿到了。我是说，它真的成功了！
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: A harvest full. Thank you. Oh my goodness. All right, we got it. I mean, it worked.
+
+</details>
+
+**埃利·坦**: 是的，它确实成功了。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: Yeah, it did.
+
+</details>
+
+**娜塔莉·基特罗夫**: 我并不是怀疑你，但亲手拿到一个完全由AI在后台自主打通、从头到尾完成订购的包裹，感觉还是非常奇妙。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: I didn't doubt you, but there's something about just receiving a package that was completely ordered by an AI that feels different. Like I saw the video of you picking it up, so I knew.
+
+</details>
+
+**埃利·坦**: 不。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: No,
+
+</details>
+
+**娜塔莉·基特罗夫**: 我知道它成功运行了。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: I knew it had worked.
+
+</details>
+
+**埃利·坦**: 天哪，好的。我检查过了，这确实是一份丰收碗沙拉。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: Oh my god. Okay. I mean, I checked. It is in fact a harvest bowl.
+
+</details>
+
+**娜塔莉·基特罗夫**: 里面有蛋白质吗？它满足我们所有的定制要求了吗？
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Does it have protein in it? Did it Did it meet all the requirements?
+
+</details>
+
+**埃利·坦**: 里面确实有蛋白质。这太疯狂了。整个体验正如宣传的那样神乎其神。埃利，假设在未来的某个世界里，所有人每天都在持续经历这样的体验，AI个人助理真正迎来了全面普惠和普及。退一步来看，你认为这将如何改变我们与技术之间的关系，以及技术公司在我们生活中的角色？
+
+在某些方面，我认为它会让我们更加习惯技术所能带来的便利。但我认为这里隐藏着一个巨大的风险，那就是我们将自己最宝贵的人类经验外包出去。如果AI接管了所有的杂事，它同时也接管了所有的决定。我们会慢慢失去独立做决定的能力，也会失去与现实世界中其他人偶遇和连接的机会。当我们在日常生活的方方面面都依赖像Meta这样的公司时，我们实际上是把自己的整个人生交给了科技巨头。我们已经看到了社交媒体给人们心理健康带来的负面影响，比如Instagram Reels，常常让我们感到与真实世界脱节，而不是与世界建立更紧密的联系。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: It does. And it's crazy. The experience is crazy as advertised. Eli, let's just say there is a universe in which everyone starts to have these kinds of experiences all the time where there is truly widespread adoption of these AI assistants. Just to step back, how do you think that would change the way we interact with technology and the role that these tech companies play in our lives? In some ways, I think it makes us even more comfortable with the convenience that technology can offer. But I think the big risk is that we are outsourcing what makes us human. If AI is taking over all the chores, it's also taking over all the decisions. We lose the ability to make decisions for ourselves, and we lose those serendipitous moments with other people in the physical world. And when we rely on a company like Meta for every facet of our daily life, we are essentially giving our entire lives over to big tech. We've already seen how their products, like Instagram reels, for instance, can make us feel like we're detaching from reality instead of connecting more with it.
+
+</details>
+
+**娜塔莉·基特罗夫**: 好的。不管怎么说，现在能吃到我的沙拉我已经很开心了，埃利。别担心，我这就用Venmo把钱转给你，你用不着派出你的AI智能体来向我讨债催收。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Okay. Well, for now, I'm just going to be happy to have my salad, Eli. And don't worry, I'm going to Venmo you. You don't have to send your AI agent after me.
+
+</details>
+
+**埃利·坦**: 我其实已经吩咐过它盯紧你的Venmo还款记录了。所以如果钱没到账，你很快就会收到它的催款通知。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: Well, I already told it to to look out for your Venmo. So, if if it doesn't come through, you'll be hearing from it.
+
+</details>
+
+**娜塔莉·基特罗夫**: 太棒了。埃利，非常感谢你做客我们的节目。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Perfect. Eli, thanks for coming on the show.
+
+</details>
+
+### 今日新闻要闻与制作团队名单
+
+**埃利·坦**: 非常感谢你的邀请。观众朋友们可以在《纽约时报》的科技播客《Hard Fork》中收听更多来自我们科技记者的深度报道，《Hard Fork》刚刚迎来了新客座主持人马克斯·里德（Max Reed）。节目每周五更新，大家可以在各大播客平台或《纽约时报》App上收听。我们稍后回来。
+
+<details>
+<summary>Original English</summary>
+
+**Eli Tan**: Thanks so much for having me. You can hear more from our tech journalists on the Times podcast Hard Fork, which just returned with a new guest host, Max Reed. Episodes drop every Friday, so check them out wherever you get your podcasts or on the New York Times app. We'll be right back.
+
+</details>
+
+**娜塔莉·基特罗夫**: 以下是今天你需要了解的其他重要新闻。在周一，特朗普总统改变了态度，宣布他的超级政治行动委员会（Super PAC）将全额承担此前在全国范围内播出的、被指动用纳税人税款为他进行宣传的电视广告费用。自九月以来，已有超过1000万美元由纳税人资助的广告播出，这笔费用最初是通过国土安全部（DHS）的一项合同支付的。其中至少有一则广告使用了最初出现在特朗普竞选活动宣传片中的镜头画面。民主党人以及部分共和党人此前猛烈抨击这些广告可能违反了禁止动用公共资金进行政治宣传的联邦法律。特朗普在周一的社交媒体发文中声称，这些广告是“对我们伟大美利坚合众国的正面积极宣传”，并辩解称这是一种“相当标准的惯常做法”。
+
+本期节目的制作人是斯特拉·坦（Stella Tan）与卡洛斯·普列托（Carlos Prieto）。编辑是马克·乔治（Mark George），并得到了迈克尔·伯努瓦（Michael Benois）的协助。节目的配乐来自丹·鲍威尔（Dan Powell）与玛丽安·洛萨诺（Marian Lozano），声音工程由克里斯·伍德（Chris Wood）完成。我们的主题音乐由Wonderland制作。《The Daily》今天的内容就到这里。我是娜塔莉·基特罗夫，我们明天再会。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroof**: Here's what else you need to know today. On Monday, President Trump reversed course and announced that his super PAC would now pay for nationwide TV ads that have been promoting him at taxpayer expense. More than $10 million in taxpayer funded ads have run since September, paid for through a contract that used funds from the Department of Homeland Security. At least one of the ads featured footage that originally appeared in a Trump campaign video. Democrats and some Republicans had criticized the ads as a possible violation of federal laws for using public funds for propaganda. Trump said in a social media post on Monday that the ads were quote positive promotion for our great USA and defended them as quote a rather standard thing to do. Today's episode was produced by Stella Tan and Carlos Prito. It was edited by Mark George with help from Michael Benois, contains music by Dan Pal and Marian Lozano and was engineered by Chris Wood. Our theme music is by Wonderland. That's it for the daily. I'm Natalie Kitroth. See you tomorrow.
+
+</details>

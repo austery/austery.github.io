@@ -1,0 +1,32 @@
+/* Only Latin glyphs are adjusted; system CJK glyph widths remain unchanged. */
+@font-face {
+  font-family: 'Reading Latin';
+  src: local('Barlow'), local('Arial');
+  size-adjust: 106%;
+  unicode-range: U+0000-024F;
+  font-display: swap;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { font-family: var(--font-body); font-size: 100%; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+body { margin: 0; background: var(--theme-surface-page); color: var(--theme-text-primary); min-height: 100vh; }
+body::before {
+  content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: .028;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+[data-theme^="steel"] body::before { display: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 600; }
+h1 { font-size: 2rem; line-height: 1.35; }
+h2 { font-size: 1.4375rem; line-height: 1.5; }
+h3 { font-size: 1.1875rem; line-height: 1.6; }
+a { color: var(--theme-accent); text-decoration: none; }
+a:hover { color: var(--theme-accent-hover); text-decoration: underline; text-underline-offset: 3px; }
+strong, b { color: var(--theme-bold); font-weight: 600; }
+time, code, .date, .mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+button, input, select { font: inherit; }
+button, summary { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--theme-accent); outline-offset: 2px; }
+[hidden] { display: none !important; }
+::selection { background: var(--theme-accent-tint); color: var(--theme-accent-hover); }
+.icon { width: 1.125rem; height: 1.125rem; vertical-align: -.2rem; flex-shrink: 0; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+img, video { max-width: 100%; height: auto; }

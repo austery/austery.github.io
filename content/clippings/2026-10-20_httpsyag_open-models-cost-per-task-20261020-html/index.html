@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>开放模型算起了每任务账单：为什么更省 Token
+的模型反而更贵？</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">开放模型算起了每任务账单：为什么更省 Token
+的模型反而更贵？</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-20</span>
+    
+
+    <header class="article-header">
+      
+      <h1>开放模型算起了每任务账单：为什么更省 Token
+的模型反而更贵？</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">model-cost-analysis</span>
+      
+        <a class="tag-link" href="/tags/token-efficiency/">token-efficiency</a>
+      
+        <span class="tag-pill tag-pill--no-page">open-model-comparison</span>
+      
+        <a class="tag-link" href="/tags/inference-optimization/">inference-optimization</a>
+      
+        <a class="tag-link" href="/tags/agent-workflow/">agent-workflow</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章探讨了开放模型在不同架构和推理策略下，如何通过优化Token消耗和单价来影响实际任务成本。研究发现，单纯看每百万Token的挂牌价无法准确评估多步推理任务的实际成本，需要引入“每任务账单”的计算方法。不同模型采取了不同的策略：有的通过减少推理思维链长度（如Beam），有的通过优化底层架构以降低每个Token的单价（如DeepSeek），有的则优先保留复杂推理能力（如Muse）。最终，实际生产成本还需考虑私有化部署的硬件摊销和Agent任务失败重试带来的成功率分母，这使得模型选择的决策顺序应是先验证成功率，再对成本进行对齐。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/open-models-cost-per-task-20261020.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-20T00:00:00.000Z">2026-10-20</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>4 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E4%BB%8E%E6%AF%8F%E7%99%BE%E4%B8%87">从每百万</a></li><li class="outline-h2"><a href="#%E4%B8%80%E5%BC%A0%E5%9B%BE%E7%9C%8B%E6%B8%85%E4%BB%B7%E6%A0%BC%E5%B8%A6%E4%B8%8E%E5%8F%8D%E5%B8%B8%E7%82%B9%E5%BC%80%E6%94%BE%E6%A8%A1%E5%9E%8B%E5%90%91%E4%B8%80%E7%BE%8E%E5%85%83%E4%BB%A5%E4%B8%8B%E6%8A%98%E5%8F%A0%E5%86%85%E9%83%A8%E5%8D%B4%E8%B5%B0%E5%87%BA%E4%B8%8D%E5%90%8C%E6%96%B9%E5%90%91">一张图看清价格带与反常点：开放模型向一美元以下折叠，内部却走出不同方向</a></li><li class="outline-h2"><a href="#%E5%B0%91%E5%90%90">少吐</a></li><li class="outline-h2"><a href="#%E8%AF%84%E6%B5%8B%E8%A1%A8%E5%A4%96%E7%9A%84%E4%B8%A4%E7%AC%94%E7%9C%9F%E5%AE%9E%E7%94%9F%E4%BA%A7%E8%B4%A6%E7%A7%81%E6%9C%89%E5%8C%96%E8%87%AA%E5%BB%BA%E9%97%A8%E6%A7%9B%E4%B8%8E">评测表外的两笔真实生产账：私有化自建门槛与</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h2 id="从每百万" data-reading-heading="">从每百万</h2>
+<p>Token 挂牌价到每任务账单：少用一半 Token 为什么反而贵了三倍</p>
+<p>二〇二六年十月，Reflection AI的Beam、DeepSeek
+V4.1 Flash、NVIDIA
+Nemotron 3.5 Super VL和Meta的Muse
+Spark
+Open等一大批开放权重的模型发布。在过去两年中，大家都在比较模型的性价比，习惯查看每百万输入和输出token的价格。然而，随着多步推理和Agent工作流的普及，执行一个任务可能需要多次调用工具或进行思考修正，仅凭单价无法准确估算实际生产环境的月度成本。因此，这些十月份发布的新模型开始采用新的方法，通过计算完成整个任务所需费用来比较性价比。</p>
+<p>第三方评测机构 Artificial Analysis (AA) 在其 Reflection
+Beam 评测页面 中也提供了统一的 Cost per Task
+计算方法。他们通过让模型完成整个 Intelligence Index
+的测试题，计算包括输入、缓存、推理思维链和最终答案在内的所有 token
+费用，然后根据题目权重和任务量进行加权平均得出每个任务的平均成本。虽然这个计算方法还不是行业标准，并且只考虑了每次评测运行的
+token
+消耗，但它是第一次将各种不同架构和推理方式的模型放在同一个任务成本上进行比较，从而为工程团队提供了直接的横向对比。</p>
+<p>摊开这张任务总账单，工程直觉里”谁话多谁就贵”的判断就不灵了。AA
+的实测显示，Meta 发布的 Muse Spark
+Open 与 DeepSeek
+评测页 都拿到了 39 分的综合成绩。Muse
+在整个测试过程中写得相当克制，吐出的 token 总量不足 DeepSeek
+的一半。但一旦算出单次任务账单，少吐一半多 token 的 Muse 平均每单要花
+0.84 美元，反倒是全场最话密的 DeepSeek 凭着低廉的每 token
+单价，把每单成本压到了 0.27 美元——更省 token
+的模型跑完单个任务反而贵了三倍多。</p>
+<p>如果把头部闭源的旗舰也带进来比较的话，跨档位的价差就更直观了。拿全场最高的闭源旗舰Claude
+Opus评测页来说，它跑完整轮评测吐出的 token 总量和 DeepSeek
+其实差不多，但每单的平均账单高达 5.98
+美元，两边输出规模相近，账单却差出了二十二倍。另一款高分闭源旗舰GPT
+Astra评测页在测试里惜墨如金，整轮输出量只有前者的零头，可高昂的每
+token 挂牌单价照样把它的单任务平均账单推到了 3.26 美元。</p>
+<h2 id="一张图看清价格带与反常点开放模型向一美元以下折叠内部却走出不同方向" data-reading-heading="">一张图看清价格带与反常点：开放模型向一美元以下折叠，内部却走出不同方向</h2>
+<p>把参评模型的综合得分和单任务平均账单放到同一个二维图里，市场很自然地被一条
+1
+美元的分界线割成左右两个阵营。分界线右侧是闭源旗舰/次旗舰把守的高价带，除了停留在三到六美元区间的
+Opus 和 Astra，四十几分的中高端 Kimi 评测页 和
+Gemini
+Flash 评测页
+的单任务账单也分别落在两美元和一美元出头，都落在右上角区域。</p>
+<p>Artificial Analysis
+综合得分与单任务平均成本分布：闭源旗舰位于右上高价区，2026 年 10
+月开放模型压向 1 美元以下但内部显著分化。</p>
+<p>跨过分界线往左看，十月发布的四款稀疏开放模型并没有排成越贵越强的斜线，反而在得分和账单两个维度上出现了倒挂。除了
+Muse 与 DeepSeek 在同分线上的三倍多价差，主打压缩推理思维链长度的 Beam
+单任务账单落在 0.57 美元，综合得分停在 30
+分，在能力和单次开销两头都没算过全场话最多的
+DeepSeek。至于把单任务账单压到全场最低 0.19 美元的 Nemotron
+评测页，综合得分也跟着掉到了图表左下角。</p>
+<p>在这群低成本稀疏模型旁边，千问与同档模型对比页
+里的 Qwen3.8 27B
+恰好落在分界线的外侧。作为一个紧凑的稠密模型，它在公有云的按 token
+计费规则里没能挤进左边的低价区，却正好引出公有云 API
+账单之外另一笔关于私有化机房显存摊销的硬账。</p>
+<h2 id="少吐" data-reading-heading="">少吐</h2>
+<p>Token 还是压低单价：四个开放模型在架构与训练上各自拿什么换什么</p>
+<p>单任务的总账单，本质上就是一个乘法：模型跑完这个任务吐了多少 token ×
+每 token
+的执行单价。要把总账单打下去，一条路是在训练时让模型少吐字，一条路是把每个
+token
+的计算成本做便宜。这四款开放权重的模型，各自盯住了不同的乘数下手，也在模型结构、后训练投入和能力上限上做出了不同取舍。</p>
+<p>四款 10 月开放模型每百万 Token
+单价与单任务平均账单对比：压低底层执行单价的路线在总账单上胜过单纯压缩输出长度。</p>
+<p>Reflection AI 给 Beam
+选择的路线是直接砍第一个乘数——减少推理思维链中的冗余步骤。根据Beam官方发布的博客和Beam模型卡的介绍，这款五千亿级总参数的稀疏模型在后训练阶段用了上万张英伟达的新型显卡进行大规模强化学习，在奖励函数里加入了长度惩罚，官方声称在相同质量下把推理思维链的长度缩短了大约三倍。在AA实测中确实看到了效果，把单任务平均输出降低到了26k
+tokens。但遗憾的是它的每个token的挂牌价格并不便宜，所以单任务账单依然接近六毛钱，而且因为相对严格的长度惩罚，综合得分只有30分。</p>
+<p>DeepSeek 则选了另一条路，不硬刚字数上限，而是改底层架构来压低每个
+token 的单价。从 DeepSeek
+模型仓库 的技术细节和我们此前的架构解析看，这款稀疏模型用了因果式编码器和解码器架构，把输入处理和文本生成两个阶段的激活参数拆开，长上下文输入的预填充阶段只激活
+8B 参数，到了逐词生成的解码阶段才激活 16B
+参数。很多场景都需要在上下文里插入大量背景文档，把预填充激活参数砍一半，直接帮服务商省了长输入的算力开销，连带把输入和输出的单价都打到了低位。尽管
+AA
+评测页指出它是参评样本里最话密的模型之一，但轻量化的预填充和低廉的单价，还是让单任务的账单被按在两毛多钱。</p>
+<p>Nvidia 的 Nemotron 则从每 token
+单价入手，把模型体量做小，再用全栈推理优化提升单卡吞吐。根据 Nvidia 技术博客
+的介绍，这个模型用 120B 总参和 12B
+激活参，基于混合状态空间和混合专家架构，并在训练和部署上加入了低比特量化、蒸馏、投机解码等加速。全栈优化把它的单任务账单拉到全场最低的一毛九分钱。但
+AA 的实测也指出它的单次任务 token
+消耗仍然偏高，没进入词元效率第一梯队，综合得分明显下降，同时整套推理加速高度依赖
+Nvidia 的软硬件环境。</p>
+<p>相比之下，Meta 发布的 Muse
+模型仓库
+走的是另一条路。它没有死磕降低价格，而是优先考虑保留多模态与复杂推理的能力上限。Muse
+是四个开放模型中总参数量最大的 816B 总参数和 42B
+激活参数，原生支持多模态输入，且默认把推理强度设为最高档，从一开始就不以极限压缩输出长度作为卖点。每个
+token
+要激活四百多亿参数，执行单价自然水涨船高。即便它在整轮评测中把输出量控制得很克制，算出来的单任务账单也比同分的
+DeepSeek
+贵了三倍以上。但好处也很清楚，需要高强度多模态推理的业务在开放权重模型里依然能找到高分、扛得住复杂任务的基础。</p>
+<h2 id="评测表外的两笔真实生产账私有化自建门槛与" data-reading-heading="">评测表外的两笔真实生产账：私有化自建门槛与</h2>
+<p>Agent 失败重试分母</p>
+<p>在算清公有云 API
+口径的单次任务账单之后，工程组如果要把模型接入生产环境，还要接着算另外两笔藏在评测表外面的硬账。一笔是私有化自建机房的硬件显存摊销，另一笔是多步
+Agent 任务失败重跑带来的成功率分母。</p>
+<p>上面介绍的四个便宜的开放模型虽然都有公开的权重，但动辄上千亿到八千多亿的参数，如果要自己部署在机房里还是需要多卡的集群和复杂的分布式推理栈。这也是为什么能看到千问模型仓库里，采用Apache
+开源许可的千问模型采取了 27B
+的稠密模型+长上下文+原生视觉的思路。它在 AA 主页上算出的 1.01
+美元单任务账单之所以看着反常，一方面是因为稠密架构每生成一个 token
+都要激活全部参数、在最高推理档位下思维链又偏长，另一方面是因为 AA
+默认采用了阿里云官方偏高的第一方挂牌价，换成 DeepInfra
+等第三方托管商
+单任务账单其实能降回五毛钱左右。更重要的是在私有化的机房中，这种紧凑的稠密模型可以大幅减少显存的占用和日常维护的难度，对于一些数据要求严格的组来说，也能大幅降低
+GPU 集群的采购和摊销成本。</p>
+<p>比硬件门槛更隐蔽的一笔账是，AA 的单任务成本只算了单次评测运行的 token
+费用，没把生产环境里任务跑挂后的重试开销、Agent
+循环空转以及工程师人工兜底排查算进去。在考察复杂终端多步执行能力的基准测试
+Terminal-Bench 上，结合 AA 关于
+Beam 的深度分析 与模型对比数据来看，单次账单只有五毛多钱的 Beam
+过线率只有 3.0%，反观单次账单更贵的千问稠密模型拿到了 5.6%，Muse
+则拿到了
+8.1%。要是把模型塞进容错率很低的多步终端自动化工作流，过低的过线率会触发大量失败重试和上下文反复堆积，重跑循环很快就会把单次调用省下的几毛钱全部吃掉。</p>
+<p>对于技术团队而言，在选择这些以单任务账单为卖点的模型时，有一个正确的决策顺序：工程选型应该先用公司最复杂的实际任务来验证成功率，筛掉过不了线的模型，再在过线候选里和自家系统的具体瓶颈对齐。如果日常负载以海量文档输入和高频上下文预填充为主，DeepSeek
+的轻量预填充就能有效压低账单；如果任务对多模态理解和长链路高复杂度执行依赖强，Muse、Kimi
+甚至 Gemini Flash、Astra 和 Opus
+仍然是绕不开的兜底选项。遇到边界清晰且容错高的固定短任务，可以考虑用
+Nemotron 或 Beam
+压一下单次开支；但一旦要考虑私有化机房的固定卡时摊销，像千问稠密模型这样能装进小规模显存的紧凑底座，在算总账的时候常常比账面
+API 单价更低的超大稀疏模型更划算。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/7ae2b0ddcd791e130e8afa10cf5c784c6e658aa81c47f0b851f668ba23402449.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/7ae2b0ddcd791e130e8afa10cf5c784c6e658aa81c47f0b851f668ba23402449.md" download="开放模型算起了每任务账单：为什么更省 Token
+的模型反而更贵？.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Reflection AI" class="entity-link company-link">Reflection AI</a>, <a href="/search/?q=DeepSeek" class="entity-link company-link">DeepSeek</a>, <a href="/search/?q=NVIDIA" class="entity-link company-link">NVIDIA</a>, <a href="/search/?q=Meta" class="entity-link company-link">Meta</a>, <a href="/search/?q=Claude" class="entity-link company-link">Claude</a>, <a href="/search/?q=GPT" class="entity-link company-link">GPT</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Beam" class="entity-link product-link">Beam</a>, <a href="/search/?q=DeepSeek V4.1 Flash" class="entity-link product-link">DeepSeek V4.1 Flash</a>, <a href="/search/?q=Nemotron 3.5 Super VL" class="entity-link product-link">Nemotron 3.5 Super VL</a>, <a href="/search/?q=Muse Spark" class="entity-link product-link">Muse Spark</a>, <a href="/search/?q=Claude Opus" class="entity-link product-link">Claude Opus</a>, <a href="/search/?q=GPT Astra" class="entity-link product-link">GPT Astra</a>, <a href="/search/?q=Kimi" class="entity-link product-link">Kimi</a>, <a href="/search/?q=Qwen3.8 27B" class="entity-link product-link">Qwen3.8 27B</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

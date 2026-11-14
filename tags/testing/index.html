@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+
+  
+  
+  
+  <div class="container" data-pagefind-ignore><div class="home-layout">
+    <h1>标签：testing</h1>
+    
+    
+<ul>
+
+  <li>
+    <a href="/content/clippings/2026-11-09_httpsyag_agent-harness-tricks-benchmark-20261109-html/">现在的 Agent Harness
+越来越复杂，哪些技巧在跑分里真正管用</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ yage.ai</a> 
+    <time datetime="2026-11-09T00:00:00.000Z">2026-11-09</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文章讨论了当前 Agent Harness 的复杂性，以及在工程评测中哪些技巧真正有效。研究通过对比不同方案，发现派多代理开会（如 Compound Engineering 插件）的成本极高，而调高单个模型的思考档位或在主循环中设置“先写失败测试”和“回合末目标核对”这两个小关卡，能以更低的成本获得显著的性能提升。此外，通过对底层框架进行改造（如慢命令转后台、长输出写文件留预览、追加式摘要保缓存）和编写单元测试，可以有效解决长程任务中的卡死和上下文压缩问题，从而提升最终得分。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/clippings/2026-11-07_httpsyag_semianalysis-gdpx-agent-lessons-20261107-html/">把 AI 扔进真实工位连干 8
+小时后，比跑分更管用的六个工程教训</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ yage.ai</a> 
+    <time datetime="2026-11-07T00:00:00.000Z">2026-11-07</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文章通过对独立研究机构 GDPx 真实工作环境评测报告的分析，指出在真实工作环境中，大型语言模型（LLM）的实际表现与跑分分数存在巨大差异。文章总结了在处理真实业务问题时遇到的六个工程教训：一是需要定义权威度地图来管理知识库，避免混淆权威信息源；二是必须在工作流中加入样本外回滚门禁，防止智能体盲目修改代码或策略；三是面对模型感官盲区，需要要求其先写确定性的测量校验脚本；四是长程排障时，关键证据需要记录到外部证据账本，而非依赖模型记忆；五是测试时应先检查测试环境配置和判分脚本的有效性；六是模型路由时应核算单任务总输出量乘以单价的综合账单，以决定使用次旗舰还是旗舰模型。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/clippings/2026-10-19_httpsyag_ai-code-review-attention-bottleneck-20261019-html/">当 AI 写得比人读得快，Code Review 还剩什么？</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ yage.ai</a> 
+    <time datetime="2026-10-19T00:00:00.000Z">2026-10-19</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文章探讨了在AI代码评审（如Claude Code）普及后，传统代码评审的价值和流程的转变。随着AI代码生成速度的提升，代码审查的瓶颈从“写代码”转移到了“工程师的专注力”和“责任的把控”。作者提出了将代码评审分流为“本地自证与复审”、“并行发现与收敛投票”和“合并口的风险分流与强制签字”的三道工序，强调机器负责局部缺陷过滤，而人类的注意力则应集中在理解代码意图、业务假设和最终的责任绑定上，而非逐行精读代码。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/clippings/2026-09-08_https168_fiona/">Fiona：下一批贏家藏在這三個板塊 - by 168X and Mr. Z - 168X</a>
+    
+    <a href="/speakers/168xclub/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ 168xclub</a> 
+    <time datetime="2026-09-08T00:00:00.000Z">2026-09-08</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ Fiona分析了近期市场波动，指出网络安全是AI时代受益的板塊，并重点讨论了AI对旧护城河的瓦解，以及检测从抽检向全检转变的趋势。她认为，AI正在改变软件和信息产业，并强调投资者应尊重市场而非盲目看好绝对的AI，同时建议关注消费股和生活中的消费机会。在宏观层面，她认为AI需求本身强劲，市场波动更多是由于市场和流动的因素，而非基本面问题。她对加密货币持谨慎态度，只保留BTC和HYPE两个仓位，并强调术业有专攻，不宜进行币股双修。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/clippings/2026-08-17_httpsyag_small-models-real-work-20260817-html/">每天一千万次调用的 GPT-4o mini，不聊天也不写代码</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ yage.ai</a> 
+    <time datetime="2026-08-17T00:00:00.000Z">2026-08-17</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文章分析了 GPT-4o mini 在 OpenRouter 平台上的调用数据，揭示了其在工程流水线中扮演的角色。该模型主要处理低吞吐量、短输出的任务，如数据分拣、结构化字段抽取等，而非复杂的多步代码生成或长文本对话。文章探讨了轻量模型在工程实践中作为特定分工的工具，其适用性取决于任务的输出结构和对长程规划的需求。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/clippings/2026-08-16_httpsyag_alarm-acceptance-maintenance-20260816-html/">一个闹钟，一份验收，就能养一个代码库</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ yage.ai</a> 
+    <time datetime="2026-08-16T00:00:00.000Z">2026-08-16</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文章探讨了如何通过设置定时任务和明确的验收标准，将重复性的代码维护任务从依赖于过程确定性的死脚本或人工会话，转变为依赖于结果确定性的智能基础设施。核心观点是，基础设施应轻量化，通过唤醒机制、日志埋点、上下文外部化以及清晰的完工边界来构建，从而让代理能够自主决定下一步行动，而不是被复杂的流程图所束缚。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/clippings/2026-07-17_httpsyag_backendforge-adaptive-benchmark-20260717-html/">BackendForge：AI 已经能写完整
+App，评测也得学会追问</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ yage.ai</a> 
+    <time datetime="2026-07-17T00:00:00.000Z">2026-07-17</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文章探讨了 AI 在编写完整应用代码后，如何通过改进评测机制来发现和解决测试覆盖率的漏洞。核心思想是引入 &#39;BackendForge&#39; 这种迭代式追问流程（co-evolution），让 Agent 不仅生成代码，还能主动寻找现有测试集中的遗漏点，从而使基准测试从单一函数扩展到完整应用级别。</small>
+    
+    
+  </li>
+
+</ul>
+
+    
+  </div></div>
+
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>在大模型上 build：三家大公司替你踩过的坑</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">在大模型上 build：三家大公司替你踩过的坑</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-06</span>
+    
+
+    <header class="article-header">
+      
+      <h1>在大模型上 build：三家大公司替你踩过的坑</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">llm-adoption</span>
+      
+        <a class="tag-link" href="/tags/cost-management/">cost-management</a>
+      
+        <a class="tag-link" href="/tags/model-routing/">model-routing</a>
+      
+        <a class="tag-link" href="/tags/enterprise-ai/">enterprise-ai</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章基于开利、合众银行及仲量联行高管观点，指出企业应将大模型视为消耗品而非自建资产。提出四项工程实践：设计模型可替换性、建立内部计费系统、以用户手感优先于评测分数、将失败率纳入预算，强调在模型之上构建路由与计费系统以沉淀工程资产。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/build-vs-buy-enterprise-ai-lessons-20261005.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-06T00:00:00.000Z">2026-10-06</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>6 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E4%BB%96%E4%BB%AC%E8%8A%B1%E7%9A%84%E9%92%B1%E6%9C%80%E5%A4%9A%E5%BB%BA%E7%9A%84%E5%8D%B4%E4%B8%8D%E6%98%AF%E6%A8%A1%E5%9E%8B">他们花的钱最多，建的却不是模型</a></li><li class="outline-h2"><a href="#%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%BD%9C%E4%B8%9A%E6%8A%8A%E6%8D%A2%E6%A8%A1%E5%9E%8B%E5%BD%93%E5%BF%85%E7%84%B6%E4%BA%8B%E4%BB%B6%E6%9D%A5%E8%AE%BE%E8%AE%A1">第一个作业：把换模型当必然事件来设计</a></li><li class="outline-h2"><a href="#%E7%AC%AC%E4%BA%8C%E4%B8%AA%E4%BD%9C%E4%B8%9A%E5%85%88%E8%A3%85%E8%AE%A1%E8%B4%B9%E7%B3%BB%E7%BB%9F%E5%86%8D%E8%B0%88%E9%87%87%E7%94%A8">第二个作业：先装计费系统，再谈采用</a></li><li class="outline-h2"><a href="#%E7%AC%AC%E4%B8%89%E4%B8%AA%E4%BD%9C%E4%B8%9A%E7%94%A8%E6%88%B7%E6%89%8B%E6%84%9F%E4%BC%98%E5%85%88%E4%BA%8E%E8%AF%84%E6%B5%8B%E5%88%86%E6%95%B0">第三个作业：用户手感优先于评测分数</a></li><li class="outline-h2"><a href="#%E7%AC%AC%E5%9B%9B%E4%B8%AA%E4%BD%9C%E4%B8%9A%E6%8A%8A%E5%A4%B1%E8%B4%A5%E7%8E%87%E5%86%99%E8%BF%9B%E9%A2%84%E7%AE%97">第四个作业：把失败率写进预算</a></li><li class="outline-h2"><a href="#%E8%BF%99%E5%AE%B6%E5%85%AC%E5%8F%B8%E7%9A%84%E8%AF%9D%E8%A6%81%E6%89%93%E4%B8%AA%E6%8A%98%E5%86%8D%E5%90%AC">这家公司的话，要打个折再听</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h2 id="他们花的钱最多建的却不是模型" data-reading-heading="">他们花的钱最多，建的却不是模型</h2>
+<p>开利是一家历史悠久的美国工业公司，专注于暖通空调领域已经有 110
+年的历史。它拥有约 50,000 名员工。今年 9
+月，在一个行业基础设施会议的圆桌（视频）上，三家大公司坐到一起，这家公司的首席数据与
+AI 官 Arun Nandi 报了个数：2026 年 1 月至 7 月期间，全公司的 token
+账单增至原来的 8
+倍。这些支出主要用于服务自家产品的边缘设施、软件和数据团队。Arun
+强调账单涨成这样出自刻意安排，那是探索的账单（that is the bill for
+discovery… for innovation.）。</p>
+<p>开利买的是模型本身，训练基座这件事，三家谁都没做。稍大一些的是合众银行，全美第五大，70,000
+名员工。有人问首席 AI 官 Prashant Mehrotra
+会不会预训练自己的基座模型，他说不会说死，但今天没有（never say never.
+It’s not there today.）。110,000
+名员工的商业地产服务机构仲量联行（JLL），其基座模型也完全外包。</p>
+<p>这并不是这三家公司的怪癖。Menlo
+Ventures 在 2025 年 11 月做了一个调查，采访了 495
+位美国企业的决策者。数据显示，2024 年企业 AI 项目中有 47%
+是自己搭建，但现在已经变成了 76% 直接采购。在企业大模型 API
+的使用量中，Anthropic、OpenAI 和 Google 占据了
+88%。这批人把底层模型当作日常消耗品，工程力气花在模型之上的那一层。仔细梳理他们在实践中趟出来的路子，主要有四条可以直接对照着抄的作业。</p>
+<p>占位：自建与采购的分界线不在用不用
+API，而在模型层作为消耗品采购、工程资产沉淀在模型之上的路由与计费系统</p>
+<h2 id="第一个作业把换模型当必然事件来设计" data-reading-heading="">第一个作业：把换模型当必然事件来设计</h2>
+<p>传统企业软件采购，评估时默认一套系统能用上三到五年。可现在头部 AI
+实验室两到四周就推一个新模型，合众银行的采购思路随之调整。Prashant
+Mehrotra 说，现在用一个东西的前提是知道能在 12 到 18
+个月窗口期里换掉它（we can have it replaced in a 12 to 18 month
+window.）</p>
+<p>这种替换不是纸上谈兵，合众银行内部已经有多个业务项目在半途换掉了整个模型家族。Mehrotra
+认为，基础设施就应该像道路、供水、电力一样天然存在，企业只管在上面盖房子，模型只是新接的水电。开利的
+Arun Nandi
+也提醒了另一个更糟的现实风险：新模型可能因为完全不在你控制之内的原因下架，有时甚至不在你这个国家的控制之内。Nandi
+的原文只一句：can be pulled for reasons completely out of your
+control。既然外部供应随时可能发生变动，随时可替换就成了实实在在的风险对冲。写提示词和评测集，就按着下季度要换一家的假设来设计。</p>
+<h2 id="第二个作业先装计费系统再谈采用" data-reading-heading="">第二个作业：先装计费系统，再谈采用</h2>
+<p>当模型变成日常消耗品，企业内部紧接着要面对的就是内部账单如何分摊。合众银行的做法是把
+token 成本记到每个员工名下，让他们自己弄清楚该买哪种模型（everybody is
+paying for the token internally… so they know which ones to
+buy）。光有账单还不够，他们还同步在内部做技能培训，教大家什么任务该配什么规格的模型。Mehrotra
+提醒过，给客户或员工回答一个简单问题，用不着万亿 token 的大模型。</p>
+<p>仲量联行是最明显展示这种思路落地的公司。这家 11
+万员工的公司，技术人员只占约 3,000 人。CTO Yao Morin
+的策略是先给员工很大的 token
+配额，再砍下去。员工一开始不少人抱怨配额少了没法干活，后来自己摸索出了很多省钱的技巧，比如不用一遍遍重传同样的数据。Morin
+的结论是，给约束会让人的创造力冒出来（Human ingenuity is amazing when
+you give them constraints.）。开利的 Nandi
+对成本的看法也类似：成本不该按 token
+单价算，而该按每个任务带来的业务价值算。所以从一开始就要按任务归因，不要把成本账做糊涂。</p>
+<h2 id="第三个作业用户手感优先于评测分数" data-reading-heading="">第三个作业：用户手感优先于评测分数</h2>
+<p>选模型时，最顺手的依据是各种公开评测的排行榜。但在开利，Arun Nandi
+发现过去八个月到一年中，某些岗位的员工对特定模型家族形成了忠诚度，这和公开评测的结果对不太上，也和
+token 价格没有关系（slightly different from what we’ve seen from evals…
+devoid of all of the cost per
+token.）。评测替代不了用户在实际使用中的感受。</p>
+<p>开利的策略是，给不同岗位分流：多步推理用尖端模型，例行问题走便宜的主力模型，开源权重就行。合众银行对同一语音通道给客户的和给员工的延迟、成本都分开；仲量联行则直接做成统一网关，Yao
+Morin
+的关键设计是把响应时限作为独立变量：有些后台任务不需要实时响应，可以拖到算力便宜的时段跑，成本再降一截。Morin
+提醒过，很多前沿厂商没有给企业的 SLA
+承诺，找他们要五个九的可用性，他们会当场笑出来。在真正承流量的路由层，调度决策的依据，正是这些沉淀下来的用户手感。</p>
+<h2 id="第四个作业把失败率写进预算" data-reading-heading="">第四个作业：把失败率写进预算</h2>
+<p>企业在 AI 上大量投入，同时也会经历很多失败。Arun Nandi
+说，他管理这些创新项目的心态更像管基金：组合里两三个高绩效项目，抵得过
+95 个不成功的，少数赢家 offset 掉全部输家。</p>
+<p>Gartner
+在 2026 年 1 月的更新指出，截至 2025 年底，至少有 50% 的 GenAI
+项目已在概念验证后终止，无法进入生产。451
+Research（属于标普全球）对 1,006
+位欧美企业从业者调查，发现企业明确放弃多数 AI 倡议的比例从 17% 升至
+42%。面对如此高的失败率，开利不去写大段立项文档，而是直接收原型代码做快速分诊。中小团队可以照抄，预设清晰的中止条件，数据不达预期果断砍。</p>
+<h2 id="这家公司的话要打个折再听" data-reading-heading="">这家公司的话，要打个折再听</h2>
+<p>上面这些做法的出处，也需要交代清楚。这个圆桌讨论是在第三方会议机构
+Kisaco Research 举办的 AI Infra Summit
+上进行的，时间是 2026 年 9 月 16 日。Lambda
+作为算力供应商是会议的白金赞助商，圆桌的主持人是它的首席商业官。目前公开的视频是
+41 分钟的版本，由 Lambda 频道在 9 月 25
+日剪辑发布，现场的原版全场录像则看不到。</p>
+<p>Lambda 作为算力供应商，80% 的收入来自大云厂商和头部实验室（他本人在访谈里的说法），这一点也是需要注意的。它的官方博客把自建画成硬件地狱，把只买
+API
+的路线说成给供应商绑架，推荐的出路全是自家的预留算力。连词也有故事，Mehrotra
+在台上首先说出了 valuemaxxing（先找准价值点，再决定钱花在哪），Lambda
+官方帖随后宣称这个词诞生于自家圆桌。但在 IBM
+的科技专栏里可以发现，早在圆桌三个月前就已经白纸黑字记载过这个词的发明人是
+Lambda 的直接竞争对手 Nebius 的首席营收官 Marc Boroditsky。</p>
+<p>抛开商业动机，只看三位高管在各自公司里做的事，他们的做法站得住脚。台上的说法，多数在公开材料里能找到证据（8
+倍账单这类自报数字除外）。比如 Mehrotra 在另一次访谈里明确说过，银行的天平已经倒向租用模型。开利的
+CTO Markus Klausner 在接受 Fortune
+采访时也证实了，公司的模型策略是所有都要，走前沿商业 API
+加微调开源。仲量联行的模型与公有云架构，在官方新闻稿和
+Microsoft
+的客户案例里都有说明。真正可以放心照抄的，就是前面这四条工程作业。需要打折看待的，只是
+Lambda 替它们包装的概念和结论。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/683da174732adcfc5e3597a58c2d875e8508160473670671ab58a137e1cb460c.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/683da174732adcfc5e3597a58c2d875e8508160473670671ab58a137e1cb460c.md" download="在大模型上 build：三家大公司替你踩过的坑.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Arun Nandi" class="entity-link person-link">Arun Nandi</a>, <a href="/search/?q=Prashant Mehrotra" class="entity-link person-link">Prashant Mehrotra</a>, <a href="/search/?q=Yao Morin" class="entity-link person-link">Yao Morin</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Carrier" class="entity-link company-link">Carrier</a>, <a href="/search/?q=U.S. Bank" class="entity-link company-link">U.S. Bank</a>, <a href="/search/?q=JLL" class="entity-link company-link">JLL</a>, <a href="/search/?q=Lambda" class="entity-link company-link">Lambda</a>
+</p>
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

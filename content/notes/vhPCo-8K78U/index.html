@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>预测量环境中的 AI 科学家评估：Leash Bio 基于密集实验空间的智能体探索与决策</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">预测量环境中的 AI 科学家评估：Leash Bio 基于密集实验空间的智能体探索与决策</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Latent Space</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>Latent Space</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-26</span>
+    
+
+    <header class="article-header">
+      
+      <h1>预测量环境中的 AI 科学家评估：Leash Bio 基于密集实验空间的智能体探索与决策</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+      
+        <a class="tag-link" href="/tags/drug-discovery/">drug-discovery</a>
+      
+        <span class="tag-pill tag-pill--no-page">structure-activity-relationship</span>
+      
+        <a class="tag-link" href="/tags/reinforcement-learning/">reinforcement-learning</a>
+      
+        <span class="tag-pill tag-pill--no-page">scientific-reasoning</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">Leash Bio 的 Ian Quigley 介绍了利用海量高通量分子筛选数据构建的智能体沙盒环境。通过在预先测量的密集景观中分配有限分子预算，该系统不仅能作为评估基准，还能直接比对全局真实结果，以检验模型在药物化学构效关系（SAR）探索中的科学决策与探索折舍能力。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/latent-space/">Latent Space</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=vhPCo-8K78U" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-26T00:00:00.000Z">2026-10-26</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>5 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E8%8D%AF%E7%89%A9%E5%8C%96%E5%AD%A6%E6%8E%A2%E7%B4%A2%E6%B2%99%E7%9B%92%E4%B8%8E%E9%A2%84%E6%B5%8B%E9%87%8F%E7%8E%AF%E5%A2%83">药物化学探索沙盒与预测量环境</a></li><li class="outline-h3"><a href="#%E6%A8%A1%E5%9E%8B%E8%AF%84%E6%B5%8B%E4%B8%8E%E6%8E%A2%E7%B4%A2%E8%A1%8C%E4%B8%BA%E5%B7%AE%E5%BC%82">模型评测与探索行为差异</a></li><li class="outline-h3"><a href="#%E6%8E%A8%E7%90%86%E5%8F%99%E4%BA%8B%E4%B8%8E%E4%BA%BA%E7%B1%BB%E8%8D%AF%E5%8C%96%E4%B8%93%E5%AE%B6%E7%9A%84%E6%AF%94%E5%AF%B9">推理叙事与人类药化专家的比对</a></li><li class="outline-h3"><a href="#%E5%89%8D%E6%B2%BF%E4%B8%8E%E5%BC%80%E6%BA%90%E6%A8%A1%E5%9E%8B%E6%A8%AA%E5%90%91%E5%AF%B9%E6%AF%94%E5%8F%8A-smiles-%E8%A1%A8%E5%BE%81">前沿与开源模型横向对比及 SMILES 表征</a></li><li class="outline-h3"><a href="#%E6%91%8A%E9%94%80%E5%BB%B6%E8%BF%9F%E7%9A%84%E9%97%AD%E7%8E%AF%E5%AE%9E%E9%AA%8C%E5%AE%A4%E4%B8%8E%E6%9C%AA%E6%9D%A5%E6%89%A9%E5%B1%95">摊销延迟的闭环实验室与未来扩展</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="药物化学探索沙盒与预测量环境" data-reading-heading="">药物化学探索沙盒与预测量环境</h3>
+<p><strong>Brandon and RJ</strong>: 大家好，欢迎收听《Lab and Space Science》。我是 Brandon 和 RJ，今天与我们在一起的是来自 Leash Bio 的 Ian Quigley。今年夏天早些时候，我们和 Ian 录制了一期节目，他在节目中谈到了 Leash 在 DNA 编码化合物库方面所做的出色工作，以及他们如何能够以高通量的方式针对数千种蛋白质筛选数百万种化合物。大约在那个时候，Ian 意识到他们可以用这些数据做些有趣的事情。这实际上让他们能够创建一个虚拟沙盒，智能体可以在其中像药物化学家一样实时探索和做出决策，并获得即时反馈，但同时拥有海量的探索性 rollout。从那期节目之后，Ian 和 Leash 更加充分地拓展了这个想法，他们现在正在发布一篇论文、一个数据集以及一篇博文，配合我们刚发布的这期播客。我们想和 Ian 坐下来聊聊他所做的事情，听听最新的进展。无论如何，欢迎来到播客。谢谢你，Ian。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**Brandon and RJ**: Hey there, welcome to Lab and Space Science. This is Brandon and RJ joined with Ian Quigley from Leash Bio. We recorded an episode earlier this summer with Ian where he talked about the cool things Leash is doing with DNA encoded libraries and how they could screen millions of compounds against thousands of proteins in a high-throughput way. Around this time Ian realized that they could do fun things with this data. It essentially allows them to create like a virtual sandbox where agents can explore and make decisions in real time as if they were medicinal chemists and get instant feedback but with like a huge amount of exploratory rollouts. Since that episode Ian has and Leash have developed this idea much more fully and since then they have and they're now releasing a paper and a dataset and a blog post along with the episode that we just released. We wanted to sit down with Ian talk a bit more about what he's done and you know, hear about the updates. Anyway, welcome to the podcast. Thank you, Ian.
+</details>
+<p><strong>Brandon and RJ</strong>: 是的，上次我们和 Ian 聊天时，你说你有几个智能体在沙盒里探索，你当时觉得，噢，这只是个好玩的想法，我们不知道能用它做什么，但这是个有意思的想法。我想从那以后，你已经把它扩充成了一个供智能体探索、可能用于科学推理强化学习的完整环境。你能多谈谈这个吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**Brandon and RJ**: Yeah, so last time we talked to Ian you were saying that you had some agents exploring a sandbox and you're like, oh, this is just a fun idea. We don't we don't know what we can do with it but it's an interesting idea. I think you've since fleshed this out into a full environment for agents to explore, maybe do RL on, you know, scientific reasoning. Can you talk a bit more about that?
+</details>
+<blockquote>
+<blockquote>
+<p><strong>Ian Quigley</strong>: 是的，我上次谈到的就是这个想法，我们拥有这些庞大的筛选集合，它们构成了足够大的环境，并且在反事实层面上足够密集，以至于你可以把智能体放进去并给它们分配任务，然后它们就可以在有限的预算下，在我们已经完全测量的这个景观中去执行这些任务。因此，我们在过去几个月里花费大量时间的旗舰问题是一个构效关系（SAR）问题。这里的核心想法是：好的，我有一些分子，我知道它们能够结合，也许能结合到我希望的目标蛋白上。那我该如何改变它们以使它们变得更好？这是药物化学家非常普遍的一项任务。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes, so the thing that I talked about last time was this idea that we had these large collections of screens and that they were big enough environments and counterfactually dense enough that you could take agents and drop them in there and then give them tasks and they could go do those tasks on a limited budget in this landscape that we had measured completely. And so the flagship problem that we spent a lot of time over the past couple months on is a structure activity relationship problem. And the idea there is like, okay, I've got some molecules and I know that they bind maybe they bind to this protein that I want them to. How do I change them to make them better? This is a very common task for medicinal chemists to do.
+</details>
+<blockquote>
+<blockquote>
+<p><strong>Ian Quigley</strong>: 而 SAR（通常简称为 SAR）还包含其他内容，比如某些类药特性，比如它是否会被代谢等等。我们目前没有涉及这些。我们目前只关注：我们能否找到与我们感兴趣的目标结合得更好的分子？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And SAR, as it's sort of abbreviated to, also includes other stuff like certain drug-like properties, you know, does it get metabolized? All these things. We're not doing those right now. We're just doing, can we find molecules that bind better to the thing that we're interested in?
+</details>
+<blockquote>
+<blockquote>
+<p><strong>Ian Quigley</strong>: 我们的做法是：我们引入模型，引入一个像语言模型这样的智能体，然后对它说：这里有一个你可以查看的目录。你的预算是 100 个分子。除了靶点之外，我们不会告诉你任何其他信息，去尽可能找到最好的结合分子吧。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And so what we do is we take model we take an agent like a language model and then we say, here's a catalog that you could look at. You have a budget of 100 molecules. We're not going to tell you anything except the target and go find the best binder you can.
+</details>
+<blockquote>
+<blockquote>
+<p><strong>Ian Quigley</strong>: 于是不同的智能体尝试了不同的方法。它们有不同的搜索策略，有着分配预算的不同方式。它们会做的是用可读的语言提出 SAR 假设，阐述它们为什么认为这些分子起效或不起效。接着，凭借这个有限的实验预算，它们会去检验这些假设。因为所有数据都是预先测量的，所以你可以跑大量的 rollout。我们目前已经累积进行了大约 90,000 次。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And so different agents tried different stuff. They have different search policies. They have different ways of wanting to spend their budgets. And what they'll do is they'll put out in readable language SAR hypothesis about why they think these molecules are working or not working. Uh and then they'll go in and with this limited experimental budget, they'll test this hypothesis. And because it's all pre-measured, you can roll out a lot of these. We're up to about 90,000.
+</details>
+<h3 id="模型评测与探索行为差异" data-reading-heading="">模型评测与探索行为差异</h3>
+<blockquote>
+<blockquote>
+<p>所以你们开始在基座模型上做这些。我想你们现在已经有了一篇论文，或者预印本之类的可以分享。你想分享一下或者聊聊它吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So you started doing these on foundation models. I think you have like a paper or a little a preprint or something at this point that you can uh share. Do you want to share that or talk about it?
+</details>
+<blockquote>
+<blockquote>
+<p>是的，预印本大概会在这期播客上线的同一时间发布。它已经准备得相当充分了。我们在其中展示的是，我们在不同模型家族、不同水平的智能体之间获得了极佳的区分度。但另一个非常有趣的地方在于，我们不仅拥有可用作评估智能体工作表现的结果，还知道整个测量景观或世界的全局结果。这样你就可以开始探究：智能体在做出科学决策方面的水平究竟如何？因为也许它最终找到的结果，其结合效果只有整个环境中最佳结果的一半好。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, so the preprint will probably be out at the same time that this episode comes out. It is pretty ready. And uh what we what we show in there is uh that we get great separation uh agents across uh model families and that kind of levels and that kind of stuff. But the another thing that's really interesting is because we have not just the results that you could use as a eval for how the agents are doing the job, we also know the results of the entire measured landscape or world. And so then you can start to interrogate how good is the agent at making scientific decisions. Because maybe it only got to like the thing that's half as good as the best thing in the entire environment.
+</details>
+<blockquote>
+<blockquote>
+<p>在那里我们看到了各种有趣的行为，比如有些智能体会过早放弃，有的会找到与自己其余假设不相符的分子，有的尽管预算有限，却不断重复测试完全相同的分子。此外还有在何时应该探索（explore）与利用（exploit）的问题。事实证明，性能更高的模型在放弃无产出的邻域方面表现得要好得多。对我们来说，这确实是一个非常有趣的意外收获。是的，当论文发布时，我们将把其中的一堆环境作为 Harper 软件包发布，并附带数以万计的运行记录（transcripts），供人们把玩并观察它们的科学研究做得如何。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And so there we see all kinds of interesting behaviors like agents that give up early, ones find molecules that don't agree with the rest of their hypotheses, ones that keep retesting the same molecules over and over despite having a limited budget. And also when it's good to explore versus exploit. And it turns out that more performant models are much better at abandoning a kind of unproductive neighborhoods. And that was actually a really interesting surprise for us. Yeah, and so when the paper comes out, we're going to release a bunch of these environments as Harper packages and then many thousands of transcripts for people to go play with and go see how these are being, you know, how they're how their science is doing.
+</details>
+<blockquote>
+<blockquote>
+<p>这太酷了。那么你是否能感觉到，为什么更聪明的模型能够意识到自己身处糟糕的景观区域并及时离开呢？或者说身处景观中糟糕的部分并转移？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; That's super cool. So do you have a feel for why the smarter models are able to figure out that they're in a bad landscape and move? Or bad part of the landscape and move?
+</details>
+<blockquote>
+<blockquote>
+<p>我们目前完全不清楚原因。我们所知道的只是它们更快地放弃了这些糟糕的邻域。我们确实看到了一种演进趋势，即整体上更优秀的模型更愿意在空间中跳转，而且它们尤其能快速离开那些糟糕的地方。而真正较弱的模型则会一直在原地纠缠。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; We don't know that at all yet. All we know is that they're they're abandoning these crappy neighborhoods more quickly. And we definitely see a progression of the like a a more willingness to jump around overall for more performant models, but they especially abandon the the lousy places fast. And then the really poor ones stick around.
+</details>
+<blockquote>
+<blockquote>
+<p>这不仅仅是它们跳得更多，而是实际上它们发现了一些东西，并意识到：“嘿，这里不行，我们离开这里吧。”</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It's not just that they jump more, it's that actually they're some they're figuring something out and saying, "Hey, this is not good. Let's get out of here."
+</details>
+<blockquote>
+<blockquote>
+<p>没错。正是这样。较弱的模型通常会做的是，不断在那些永远不会有结果的分子上进行细微修改。对吧？就像是说：“噢，这两个分数的得分很低，但我对它们感觉良好，所以我打算继续尝试。”而更聪明的模型则会直接放弃整个方向，转向别处。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Exactly. Exactly. Yeah, and what happens with the the dumber models is that they'll just keep running little subtle changes on molecules that aren't ever going to go anywhere. Right? Like, "Oh, these two, they have a low score, but I feel good about them." And so I'm going to keep trying stuff. And then and then the smarter models will abandon the entire process. We're going to go somewhere.
+</details>
+<h3 id="推理叙事与人类药化专家的比对" data-reading-heading="">推理叙事与人类药化专家的比对</h3>
+<blockquote>
+<blockquote>
+<p>你们查看过那些 rollout 记录，看看它在具体思考什么吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Have you looked at the rollouts to see if it's thinking about whatever?
+</details>
+<blockquote>
+<blockquote>
+<p>是的，它们什么都会思考。它们会说——等我们发布所有这些 transcripts 时，每个人都该看看——我最喜欢做的事情之一就是把大量的 transcripts 直接倒进大语言模型里，去观察各种失败模式之类的情况。但你会看到它们会说：“我认为这个环结构很好，我认为这个特定的氮原子是有害的”，诸如此类，它们会说出这些话，而且它们是非常合理的药物化学叙事。所以这非常、非常有趣。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, they think about all kinds of stuff. They'll say, "You know, when when we release all these transcripts, like everyone should look at one of my favorite things to do is just take, you know, large numbers of transcripts and just dump them into LLMs and just have have a look at the different failure modes and stuff like that. But you'll see, yeah, I think that this ring is good and I think that this particular nitrogen is painful or you know, whatever and they'll they'll say these things and then they're very plausible, you know, medicinal chemistry narratives. So, it's it's pretty it's pretty fun.
+</details>
+<blockquote>
+<blockquote>
+<p>是啊，太不可思议了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, that's amazing.
+</details>
+<blockquote>
+<blockquote>
+<p>我很好奇，你们向人类提出过同样的问题吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I'm curious, have you given humans these same questions?
+</details>
+<blockquote>
+<blockquote>
+<p>我让人们看过来进行评估，数量不算很多，因为我们手头有大量的案例。但当我们让药物化学家看这些内容时，他们会觉得：是的，对于如何开展这部分特定的 SAR 研究而言，这些是非常合理的思路。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I have to have them look and evaluate it like you know, not a ton, but because you know, we have we have a large number of them, but when we get medicinal chemists to look at it, they're like, yeah, no, those are very plausible thoughts about, you know, how to conduct this particular part of the SAR campaign.
+</details>
+<blockquote>
+<blockquote>
+<p>我不知道，也许我想多了。你能把它做成一个游戏吗？这有点像个游戏，对吧？药物化学电子游戏，然后你可以把人放到这些环境里，给他们……对。去做药物化学验证码（CAPTCHA）。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I don't know, maybe I'm I'm overthinking. Could you make a game out of this? Is it sort of a game, right? And then the medicinal chemistry the video game and then you can put people in these environments and give them yeah. Do do the medicinal chemistry capture.
+</details>
+<blockquote>
+<blockquote>
+<p>[笑声]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>对，这就是你的商业模式。我喜欢这个计划。我们之前确实针对“猜化学家名字”做过类似的小游戏。对于这个，我们可能必须对其进行浓缩，使构建模块的数量变得更小。因为现在如果要让化学家进入其中，你可以想象，如果你是一名药物化学家，你可能有一整套随着时间推移想要尝试的操作，比如在这里加一个甲基，或者把这个基团移一下；而当我们面对这些预先测量的环境时，我们将受限于我们实际测量过的那些东西。因此我们不得不对药物化学家说：噢，你不能随心所欲做任何想做的事，你只能做很多特定的事情。并且要想办法……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, that's your business model. I like this plan. We did do a game a little bit like this for name that chemist. We would have to probably boil it down to have a smaller number of building blocks. Because right now to have a chemist go in there, you can imagine that if you're a medicinal chemist, you might have this suite of things that you might want to try over time like put a methyl here, like move this around and when we have these pre-measured environments, we are going to be restricted to the things that we did actually measure. And so then we would have to be asking the medicinal chemist, oh well, you can't do whatever you want. You can just do a lot of stuff. And and figure out a way
+</details>
+<blockquote>
+<blockquote>
+<p>他们必须知道有哪些东西可用。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And they have to know what stuff
+</details>
+<blockquote>
+<blockquote>
+<p>他们必须知道这些东西是什么，是的。所以我们必须想办法以有意义的方式将它呈现给他们，但我挺喜欢你这个思路的方向。是的，比如我们可以把它缩减为较少数量的选项。所以……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; They have to know what the stuff is, yeah. So, we'd have to figure out a way to surface it to them in a meaningful way, but I kind of like where you're going with this. Yeah, like we could do shrink it down to a smaller number of options. So.
+</details>
+<h3 id="前沿与开源模型横向对比及-smiles-表征" data-reading-heading="">前沿与开源模型横向对比及 SMILES 表征</h3>
+<blockquote>
+<blockquote>
+<p>哪个模型表现最好？在前沿模型中，哪些是最好的？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; What model is best? Of the frontier models, what are the best ones?
+</details>
+<blockquote>
+<blockquote>
+<p>让我想想。我刚才还在看图表，挺尴尬的我居然转头就忘了。目前冠军是 after six。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Let's see. I was looking at the plot a minute ago. It's it's kind of embarrassing I forgot already. Right now, the champion is after six.
+</details>
+<blockquote>
+<blockquote>
+<p>很好，很好。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Nice, nice.
+</details>
+<blockquote>
+<blockquote>
+<p>并不让人感到意外。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Not not a big shock.
+</details>
+<blockquote>
+<blockquote>
+<p>不算大意外。Sonnet 55 实际上也相当不错。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Not a big shock. Sonnet 55 is actually pretty good, too.
+</details>
+<blockquote>
+<blockquote>
+<p>好的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Okay.
+</details>
+<blockquote>
+<blockquote>
+<p>是的，Sol 61 也相当不错。而所有 5 的模型就像是个 racing pilot 陷阱，对吧？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, and and Sol 61 is also pretty good. So and everything five is just a racing pilot trap, right?
+</details>
+<blockquote>
+<blockquote>
+<p>[笑声]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>是的，所以那个 5 既非常昂贵而且性能也不太好。对，对。但我认为 5 将长期被视作 Anthropic 的一个大失误。8.5 相当不错。是的。你有 plus 5.5 吗？我们现在还没有。没有，这一点——问得好——其实有点令人抓狂，你们也能理解。两个月前我们聊过之后，我们开始做这些 rollout 看看会发生什么，结果大概每 11 天就会发布一个新的前沿模型。11 天，是的。所以每次我想着“噢，我们要发布这个了，我们需要把这些公开资料发出来”，结果马上又冒出来一个愚蠢的新模型，让人觉得……是的，它们发版的速度比 Anthropic 还快。哈哈。[笑声]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, so that five is both very expensive and not very performant. Yeah, yeah. But yeah, I think five will be long considered a big mistake by Entropic. 8.5 are pretty good. Yeah. Yeah, no. Do you have a plus 5.5? We don't yet. No, that's that's one thing that ask you has actually been a little infuriating as you guys can appreciate. So when we talked last two months ago, we started these rollouts to see what happened and then there's been a new frontier model drop what like once every 11 days. 11 days, yeah. Yeah, so like every time I'm oh, we're going to ship this. We need to drop this public stuff and like so now that a new stupid model shows up and like uh Yeah, they ship faster than Entropic. Yeah, yeah. [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>祝你好运，Ian。所以，是的，我们很兴奋能把更多的东西放进去，而且我们也测试了大量的开源模型。我们在里面扔进了一堆较小的 Qwen、GLM、Kitty 和 DeepSeek 之类的模型。所以这里面有很多。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Right, good good luck Ian. So yes, so we are excited to put in more in here and we also have run a large number of of the open source ones as well. So we've thrown a bunch of smaller quins in there and GLMs and Kitty and Deep Seeks and that kind of stuff. So there's a lot of these.
+</details>
+<blockquote>
+<blockquote>
+<p>它们表现如何？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; How do they do?
+</details>
+<blockquote>
+<blockquote>
+<p>它们不是……DeepSeek V4 flash 相当不错。没那么糟糕。是的，也许我应该把整个进展图表发给你们看看。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; They're not Deep Seek V4 flash is pretty good. Not that bad. Yeah, maybe I should just send you guys like the full chart of how things are going and look at it.
+</details>
+<blockquote>
+<blockquote>
+<p>好啊，我们可以直接把它加进去展示。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, we can just put it in pick it up there.
+</details>
+<blockquote>
+<blockquote>
+<p>我可以说，它看起来有点像 ARC-AGI 2 的图表。其中有一些很糟糕的模型。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I can say I can say it kind of looks a little bit like you know, like the Arc AGI 2 plots. Where you've got some crappy models.
+</details>
+<blockquote>
+<blockquote>
+<p>对，对。它看起来确实有点像那样，这也是为什么我们把它做成了那个样子。然后我认为之前提到的一点对我们非常有启发：大约在去年夏天的这个时候，我们启动了一个内部项目，对其中一些语言模型进行监督微调（SFT），以让它们理解 SMILES。因为现有的前沿模型没有一个擅长这个。当时无论是 Anthropic 还是 OpenAI 的模型，甚至都无法非常有效地将 SMILES 转换为非规范 SMILES。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Right, right. It does it does kind of look like that and that's kind of why we made it like that. And then I think one thing I mentioned earlier that has been very interesting to us is about this time last summer. We had started an internal project to do supervised fine tuning on some of these language models to get them to understand smiles. Because none of the existing frontier models were any good at it. So like none of the Entropic or or Open AI models at the time could even convert smiles to non-canonical smiles very effectively.
+</details>
+<blockquote>
+<blockquote>
+<p>针对非化学专业的人解释一下，SMILES 是一种你可以使用的语言，一种用来精确描述化学物质的字符串语言，对吧？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So just for non-chemists, smiles is a language that you can use, string language that you can use to describe accurately a chemical, right?
+</details>
+<blockquote>
+<blockquote>
+<p>是的，完全正确。我想上次录音时我们稍微提到过，它是一个字符串，分子可以有分支，或者成环，或者两者兼具，对吧？有这些不同的形态。因此 SMILES 本质上是对分子的图遍历（graph traversal），被写成了一维字符串。你可以想象从分子的不同位点开始进行图遍历。因此，表示同一个分子可以有多种 SMILES 方式。所以如果能熟练地在它们之间进行转换是很有用的。这是一个非常简易的过程，人们会使用一些开源软件包（如 RDKit）来做这件事。但我们当时希望语言模型自己能做到这一点，单纯是因为这样速度更快，而且当时它们还不擅长独立使用工具。那时没有任何模型能做到这一点。然后大约在今年二月份，就像很多其他事情一样，很明显它们开始能够以有意义的方式处理化学问题了，这也是我们开始朝这个方向探索的一个原因。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes. Yes, that's right. I think we mentioned it a little earlier when we recorded last, but it's a string and molecules can be forked or or circles or or both put together, right? These different things. And so a smiles is basically a graph traversal across the molecule written down into a one-dimensional string. And so you can imagine starting the graph traversal at a different point in the molecule. And so there's multiple smiles ways of representing the same molecule. And so you it's nice to be fluent in transferring from one to the other. It's a pretty easy There's a couple open-source packages people use like RDKit to do this. But we wanted the language models to do it just cuz it would go faster and they weren't just good at using tools on their own back then. And nobody could do it. And then around February, like a lot of other things, it became clear that they could start to actually work with chemistry in a meaningful way, which is a reason we started going in this direction.
+</details>
+<blockquote>
+<blockquote>
+<p>这真的很有意思，因为这意味着它正在内化对分子物理本质的一定理解。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; That's really interesting because that means that it's internalizing some understanding of the the physical nature of molecules.
+</details>
+<blockquote>
+<blockquote>
+<p>我想是有那么一点的。是的。就像我们现在让它们执行的这些任务一样，它们是迭代式的任务，智能体观察分子，学习关于这些分子的一些信息，以便做出选择来在下一步生成更好的分子。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think a little bit. Yep. Like these are the tasks that we're having these things do right now. Like they're iterative tasks where they're looking at molecules and they are learning something about those molecules to make choices to make better molecules next.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>当我们移除关于分子的信息时，这些决策表现就会急剧下滑。所以它们确实在学习某些东西。这非常有趣。或者至少它们在使用这些信息。我想这么说更准确——我们在这里没有改变模型权重，但它们绝对在利用这些信息来指导未来的选择。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And we remove the information about the molecules, like these decisions really suffer. So they're they're learning something. This is very interesting. Or at least they're using it. I guess that's a better We're not We're not changing weights here, but they're definitely using the information just to make future choices.
+</details>
+<h3 id="摊销延迟的闭环实验室与未来扩展" data-reading-heading="">摊销延迟的闭环实验室与未来扩展</h3>
+<blockquote>
+<blockquote>
+<p>你提到了所有这些尝试过的小模型。所以我想问，你们是否直接用过某种贝叶斯超参数算法，来作为该问题的一个确定性基准（baseline）？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; You mentioned all these this little models, right? That are you tried. So I wanted to ask, have you just used like one of these Bayesian hyperparameter algorithms to to as like a deterministic baseline for your problem?
+</details>
+<blockquote>
+<blockquote>
+<p>我们认为这个景观过于尖锐（spiky），而且维度非常高。我们并没有真正那样做，但我们主要认为它不太可能起效。我想这是官方说法。是的，我知道。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; We think it's too spiky of a landscape and it's very high-dimensional. We're not really We don't do that, but we mostly think it's not going to work. I think it's the party line. Yeah, I know.
+</details>
+<blockquote>
+<blockquote>
+<p>你们打算把这些全部发布出来，所以我想我们会在……等等，你们具体发布哪些内容？你说你准备发布一篇预印本、博文，然后是一些数据 rollout 和所有内容，所以我们可以把这些全部放到节目说明里。还有别的内容吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; You plan on releasing all this, so I guess we'll put the use Wait, what are you releasing? You said you're you're going to have a preprint blog and then some data rollouts and everything, so we can put all this in the show notes. Is there anything else?
+</details>
+<blockquote>
+<blockquote>
+<p>是的，就这些。对，我觉得这是核心内容，这大概更接近于……我想我大概会说，我们构建了这样一个系统：如果你拥有科学智能体，并且想知道它们如何表现、可能犯哪些错误、如何从物理反馈中学习，或者新的训练配方是否能改善科学决策，我们具备大规模衡量这些指标的能力。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, that's it. Yeah, I think I think that's the big thing and that's probably something closer to like I guess I guess what I would probably say is we have built this thing where we if you've got scientific agents and you want to know how they're behaving, what mistakes they might make, what how they might learn from physical feedback, you know, if a new training recipe improves scientific decision-making. We've got the capabilities to measure these things at scale.
+</details>
+<blockquote>
+<blockquote>
+<p>是的，那真的很酷。你们有针对同样这类问题的其他类似计划吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, that's really cool. Do you have plans for other similar problems for this same kind of thing?
+</details>
+<blockquote>
+<blockquote>
+<p>我们确实有，是的。大体上，我们对这件事的思考方式是：它是一个摊销了延迟的闭环实验室（lab in the loop with amortized latency）。也就是你去实地记录一次数据，然后就可以基于那个记录进行海量的 rollout，实际上是无限次的 rollout。我们正在深入思考有哪些其他类型的生物学或科学问题可以转化为这类环境。因为如果你进行常规的人在回路/闭环实验室实验，确实需要耗费很长时间；而且因为这些实验本身预算有限，它们在反事实层面上并不密集。所以你必须不断运行它，在每次 rollout 中做出不同的选择，才能让智能体学到东西。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; We do, yes. We have Broadly, the way that we think about this is it is a lab in the loop with amortized latency. So, it's like go out, you record the thing once, and then you can have a huge number of rollouts through that thing, effectively infinite rollouts. And it we are thinking hard about other types of biological or scientific questions that you could transmute into these kinds of environments. Because if you're doing conventional lab in the loop, it does take a long time and and it and and because those things themselves have limited budgets, it's also not counterfactually dense. So, like you got to keep running it and do different choices with every rollout to make the things to make the agents learn.
+</details>
+<blockquote>
+<blockquote>
+<p>对，但凭借你们的多路复用（multiplexed）策略，你们就可以实现摊销。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Right, but with your your multiplexed strategy, then that then you can just amortize.
+</details>
+<blockquote>
+<blockquote>
+<p>就可以直接摊销。因此，说它是零延迟的闭环实验室并不完全准确，但已经非常接近了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; You can just amortize. So, it's it's it's not quite accurate to say it's a lab in the loop with zero latency, but it's pretty close.
+</details>
+<blockquote>
+<blockquote>
+<p>这和 Lyra 正在做的是同一件事。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; This is the same thing that Lyra's doing.
+</details>
+<blockquote>
+<blockquote>
+<p>没错。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yep.
+</details>
+<blockquote>
+<blockquote>
+<p>我的意思是，并不完全一样，但他们也做实验……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I mean, it's not the same thing, but they also do experiments
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes.
+</details>
+<blockquote>
+<blockquote>
+<p>……然后他们在 rollout 中使用实验结果，但他们不是实时进行的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and then they use that in their rollout, but they're not doing them live.
+</details>
+<blockquote>
+<blockquote>
+<p>没错。对。在 rollout 中一步一步实时进行能提供大得多的自由度，因为你几乎可以选择任何操作。而在这里，你受限于我们在预先测量环境时所做出的选择数量。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Right. Right. They are they are doing it doing it in the rollout one step at a time offers a lot more freedom because you can choose almost anything. And here you're restricted to the number of choices that we made when we pre-measured the environment.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>确实是这样。但这仍然是一个相当庞大的选择数量。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; That's definitely true. Um but it's like it's still a pretty big a number of choices.
+</details>
+<blockquote>
+<blockquote>
+<p>确实。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>是的，自我们创办 Leash 以来，目前针对几种化学库筛选了大约一千种蛋白质，并且我们将开始扩大这个规模。我认为我们打算尝试达到每天新增约 20 个这类新环境。这是我们争取在 26 年或 27 年初实现的目标。我们现在每天能做两个。是的，我认为我们大概可以在不用付出过大代价的情况下做到每天 20 个。所以我们会全力推进，看看能不能做到。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And yeah, and then we have right now we're we have we screened about a thousand proteins uh against a couple of these chemical libraries since we started Leash, and we're going to start to grow that. I think we're going to try to get to maybe 20 of these new environments a day. That's a plan for us to try to get to the beginning of maybe 26 or 27. We can we're doing two a day right now. Uh yeah, I think we could probably get to 20 a day without too much lifting. So, we'll we're pushing. We'll see if we can do it.
+</details>
+<blockquote>
+<blockquote>
+<p>哇。这样一来，你们将拥有这个庞大的强化学习环境。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Wow. And so, you're going to have this huge RL environment.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>[笑声]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>这似乎是顺理成章该做的事。非正式地讲，在许多这类智能体取得最好、最快进展的地方，往往都存在即时且高度可扩展的反馈。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It seemed like it seemed like the thing to do. I mean, kind of informally it seemed like where a lot of these agents are making the best and the fastest progress is where there's instant feedback that's very scalable.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>在物理世界中做到这一点非常困难，但我们认为大概有少数生物学问题可以通过这种方式重建并加以攻克。是的，我们目前还不知道是否能够将在这些环境中取得的强化学习进展迁移到新的生物学领域中，但是，你知道，我们正在尝试，我们会弄清楚的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It's really hard to do that in the physical world, um but we think that there's probably a handful of biological questions that you could re-rebuild in this way uh go after them. And even at Yeah, and then we don't yet know if we're able to take reinforcement learning progress from these kinds of environments and move on to new biology yet, uh but you know, like we're trying. We're going to find out.
+</details>
+<blockquote>
+<blockquote>
+<p>这显然是最终目标。也就是这如何迁移到其他生物学领域？你可以想象，如果你们为某种覆盖集（covering set）构建了环境，对吧？你或许能够覆盖它们之间的中间地带，从而实现相当好的迁移。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; That's that's the obvious goal. Like how how does this transfer to other biology? You can imagine if you did it for some sort of covering set, right? That you might be able to get things in between though that you could transfer to pretty well.
+</details>
+<blockquote>
+<blockquote>
+<p>没错。正是。另外我需要做的一件事是去和更多研究决策的人交流，因为这很大程度上关于你如何分配有限的实验预算，以及你能做些什么来在这方面表现得更好？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yep. Yep. And then also one thing that I need to do is talk to some more decision people because a lot of this is about how do you spend a limited experimental budget and then what can you do to do better at that?
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>是的，超越单纯的药物化学，对吧？就像是：我什么时候该坚持？什么时候该离开？我该如何在这方面做得更好？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, beyond just medicinal chemistry, right? Just like yeah, when do I stay? When do I go? How do I how do I get better at that?
+</details>
+<blockquote>
+<blockquote>
+<p>很有意思。是的，你可以设想，如果它知道如何把那个节点的决策与自身拥有的知识联系起来，它就可以把这种技能学习并应用到其他问题上。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Interesting. Yeah, you can imagine it if it knows how to connect a decision at that point to a knowledge that it has, then it could learn that skill for other problems.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。是的。你看，我们也在将越来越多的结构化工具调用（structural tool calls）等功能融入其中。所以现在确实是一个非常有趣的时期。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes. Yes. See, we are we are incorporating more and more structural tool calls and things like that with this as well. So, it's it's it's a pretty fun time right now.
+</details>
+<blockquote>
+<blockquote>
+<p>是的，我们一定会把你们即将推出的所有这些酷东西附上链接。谢谢你抽时间来聊天。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, we'll be sure to link to all that cool stuff you have coming out and yeah, thanks for taking the time to chat.
+</details>
+<blockquote>
+<blockquote>
+<p>太棒了，太棒了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Cool. Cool.
+</details>
+<blockquote>
+<blockquote>
+<p>是的，感谢你抽时间进行跟进交流。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, or thanks for taking the time for a follow-up chat.
+</details>
+<blockquote>
+<blockquote>
+<p>好的。好的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>我想这部分实际上会直接紧接着……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think this will actually appear back-to-back
+</details>
+<blockquote>
+<blockquote>
+<p>……本集的其余部分播出。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; with the rest of the episode.
+</details>
+<blockquote>
+<blockquote>
+<p>好的，太棒了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Okay. This was great.
+</details>
+<blockquote>
+<blockquote>
+<p>好的，伙计们。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; All right, guys.
+</details>
+<blockquote>
+<blockquote>
+<p>好的，再见。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; All right. See you.
+</details>
+<blockquote>
+<blockquote>
+<p>总是这么有趣。是的，回头见。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Always fun. Yeah, we'll see you later.
+</details>
+<blockquote>
+<blockquote>
+<p>[音乐]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; [music]
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/b20737aa2cbaecc51f3b3aed7d4621f15a9ad594c30d0f3497ad30facddbb79f.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/b20737aa2cbaecc51f3b3aed7d4621f15a9ad594c30d0f3497ad30facddbb79f.md" download="预测量环境中的 AI 科学家评估：Leash Bio 基于密集实验空间的智能体探索与决策.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Ian Quigley" class="entity-link person-link">Ian Quigley</a>, <a href="/search/?q=Brandon" class="entity-link person-link">Brandon</a>, <a href="/search/?q=RJ" class="entity-link person-link">RJ</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Leash Bio" class="entity-link company-link">Leash Bio</a>
+</p>
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X 阅读</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+<div class="x-reading" data-pagefind-ignore>
+  <header class="x-heading"><h1>X 阅读</h1><p>按原发时间浏览 · 时间显示为 Toronto 当地时间</p></header>
+  <nav class="x-authors" aria-label="X 来源"><a href="/x/" aria-current="page">全部来源</a>
+    <a href="/x/authors/890076269580341248/" >宏观边际MacroMargin（675）</a><a href="/x/authors/2058239737522204672/" >美研芒格君（519）</a><a href="/x/authors/1620475218627121153/" >投资TALK君（1067）</a><a href="/x/authors/858124064476479488/" >Herman Jin（2011）</a><a href="/x/authors/809013582/" >Tigris | 会讲课教授是好老师（1101）</a>
+  </nav>
+  
+  <p class="x-status">保存说明：除条目另有标注外，正文尚未人工核对 · 图片未保存 · 引用或对话上下文可能不完整。</p>
+
+  <p><a href="/x/">最近一天</a> · <a href="/x/archive/">历史记录（含日期未知）</a></p>
+  
+<article class="x-entry" data-author="2058239737522204672" data-long="true" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-10-09T16:54:44.000Z">2026-10-09 12:54</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2108602073784983705" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">我在硅谷看得最清楚的一件事情，就是软件开发已经被 AI 蚕食得差不多了。如果让我选择当前最有价值的一个方向，那就是去做后训练算法或者数据，不论是学习，还是投资，后训练都值得你了解和认识
+
+我们理解大模型的后训练，如果只学一个算法，我希望你了解的是 GRPO，现在是工业界最主流的 LLM 强化学习方式之一
+
+这个方法是 DeepSeek 团队在 2024 年提出的。用大白话说，就是让模型对同一道题自己尝试多次，再比较这些尝试的结果，通过更新模型参数，让表现更好的生成行为更容易出现。
+论文：https://t.co/lSnJWsRyD7
+
+看完这个帖子，你会明白，那这个“自己学”，到底是怎么发生的？模型做错了一个问题，下一次怎样才有机会写得更好？为什么这个过程非常消耗算力？
+
+1/ 先让模型自己尝试
+我们先准备好任务，以及判断结果好坏的评分规则。这里还是用写代码为例，市面上的所有任务，无论是文科还是理科，都是这个道理
+
+举个假设的例子：亚马逊购物车为空时，程序会报错，现在让模型修好这个 bug。
+
+把同一道任务交给同一个版本的模型，让模型尝试 8 次。每一次都去读代码、修改、检查结果，可能产生不同的解决过程。你可以认为模型在某些情况下总会蒙对几次
+
+2/ 把这 8 次尝试放在一起比较
+继续用假设来讲，评分程序按测试结果打分：通过得 1 分，失败得 0 分。
+
+假设最后有 3 次通过、5 次失败，那么这组的平均分就是：
+3÷8＝0.375
+
+得 1 分的尝试，高于本组平均；得 0 分的尝试，低于本组平均。
+GRPO 就利用这种组内差异，产生学习信号。
+
+这里的 1 分和 0 分只是为了简化，实际上各种任务我们都可以有不同的 rubrics 去评判、打分
+
+3/ 训练程序根据差异，真正去改模型
+到了这一步，训练程序会计算损失和梯度，再更新模型参数。
+训练目标是让高于本组均值的尝试中，那些生成行为更容易出现；低于均值的则受到抑制，那更新完参数后的模型，就更容易产生我们认为好的答案
+
+更新完，再拿一批任务让模型尝试，继续比较、继续学习
+
+这就是这里说的“模型自己学”：模型负责尝试，评分规则负责衡量结果，训练程序负责更新参数。 任务怎么选、什么结果值得奖励，仍然需要训练者设计。
+
+4/ 最后看模型有没有真的进步
+我举一个具体的例子，用 500 道软件工程任务，对 Qwen3.8-27B-Medium 做了 15 次训练更新后，模型在 DeepSWE 上的平均单次成功率，从 27.8% 提高到 39.1%，增加 11.3 个百分点。1
+
+我觉得这件事值得关注的地方，是模型自己尝试产生的结果，可以继续用来训练模型。其次，在强化学习的过程中，模型要不断地去推理、尝试，每一次都是一次训练的消耗
+
+但做强化学习，人类的工作也正在这里非常重要：要让模型有值得尝试的任务，再让尝试的结果变成有用的反馈。任务和奖励怎么设计，直接关系到模型最后在学什么。短期之内，我觉得人类还无法被替代，特别是在 rubrics 和 alignment 这块儿</div><a href="/content/clippings/x/posts/2108602073784983705/#x-post-2108602073784983705">保存的原文 · 长文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="/content/clippings/x/posts/2107138447664349370/#x-post-2107138447664349370">引用原帖（已保存）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2108602073784983705<br>保存时间：2026-10-10T00:30:13.142Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved
+Provider results do not establish exhaustive archive coverage</p><p>QUOTES: x:post:2107138447664349370 · /content/clippings/x/posts/2107138447664349370/</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@ShanghaoJin</span>
+    <div  class="x-post-heading"><time datetime="2026-10-09T16:19:47.000Z">2026-10-09 12:19</time></div>
+    <a class="x-outbound" href="https://x.com/ShanghaoJin/status/2108593276458848652" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">@Chat_Invest 动能多空而已</div><a href="/content/clippings/x/daily/858124064476479488/2026-10-09/#x-post-2108593276458848652">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2108520074139308482">回复的原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2108593276458848652<br>保存时间：2026-10-13T00:47:34.473Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved
+Provider results do not establish exhaustive archive coverage</p><p>REPLY_TO: x:post:2108520074139308482 · https://x.com/i/status/2108520074139308482</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="809013582" data-long="false" >
+  
+  <header><a href="/x/authors/809013582/"><strong>Tigris | 会讲课教授是好老师</strong></a> <span class="x-muted">@tig88411109</span>
+    <div  class="x-post-heading"><time datetime="2026-10-09T15:55:54.000Z">2026-10-09 11:55</time></div>
+    <a class="x-outbound" href="https://x.com/tig88411109/status/2108587265580822556" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">$LITE继续大涨历史新高，从7月底部上涨80%，财报后40%。都是遥遥领先的认知差分享。不用看什么财经账号马后炮解读。今天新高因为CEO说了上调对公司景气周期，供不应求。公司业务增长时间更清晰但是70%产能缺口即是利好也是增长上限，当前价位对比看看我的估值区间上限赔率降低，如何投资策略见⬇️。</div><a href="/content/clippings/x/daily/809013582/2026-10-09/#x-post-2108587265580822556">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="/content/clippings/x/daily/809013582/2026-10-01/#x-post-2105674547945165094">引用原帖（已保存）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2108587265580822556<br>保存时间：2026-10-10T00:32:46.231Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved
+Provider results do not establish exhaustive archive coverage</p><p>QUOTES: x:post:2105674547945165094 · /content/clippings/x/daily/809013582/2026-10-01/#x-post-2105674547945165094</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="809013582" data-long="false" >
+  
+  <header><a href="/x/authors/809013582/"><strong>Tigris | 会讲课教授是好老师</strong></a> <span class="x-muted">@tig88411109</span>
+    <div  class="x-post-heading"><time datetime="2026-10-09T15:09:33.000Z">2026-10-09 11:09</time></div>
+    <a class="x-outbound" href="https://x.com/tig88411109/status/2108575599757603223" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">@wangmingzhuback @meiniangyyds 有啊 “负荆请罪” ，标题党写得好不好看“水平”</div><a href="/content/clippings/x/daily/809013582/2026-10-09/#x-post-2108575599757603223">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2108574819558322477">回复的原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2108575599757603223<br>保存时间：2026-10-12T13:24:36.880Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved
+Provider results do not establish exhaustive archive coverage</p><p>REPLY_TO: x:post:2108574819558322477 · https://x.com/i/status/2108574819558322477</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="809013582" data-long="false" >
+  
+  <header><a href="/x/authors/809013582/"><strong>Tigris | 会讲课教授是好老师</strong></a> <span class="x-muted">@tig88411109</span>
+    <div  class="x-post-heading"><time datetime="2026-10-09T14:54:11.000Z">2026-10-09 10:54</time></div>
+    <a class="x-outbound" href="https://x.com/tig88411109/status/2108571735444656302" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">@baerduomeiluo @AIInvestHK 一看就是AI自动回复 高什么手</div><a href="/content/clippings/x/daily/809013582/2026-10-09/#x-post-2108571735444656302">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2108459715646964203">回复的原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2108571735444656302<br>保存时间：2026-10-12T13:24:36.880Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved
+Provider results do not establish exhaustive archive coverage</p><p>REPLY_TO: x:post:2108459715646964203 · https://x.com/i/status/2108459715646964203</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="1620475218627121153" data-long="false" >
+  
+  <header><a href="/x/authors/1620475218627121153/"><strong>投资TALK君</strong></a> <span class="x-muted">@TJ_Research</span>
+    <div  class="x-post-heading"><time datetime="2026-10-09T13:13:28.000Z">2026-10-09 09:13</time></div>
+    <a class="x-outbound" href="https://x.com/TJ_Research/status/2108546389990887730" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">@iiiinvest 是这样的，我以前也试过，后来导致自己操作变形，并吃力不讨好，就算了，何必呢。</div><a href="/content/clippings/x/daily/1620475218627121153/2026-10-09/#x-post-2108546389990887730">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2108449123280241011">回复的原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2108546389990887730<br>保存时间：2026-10-12T13:24:34.679Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved
+Provider results do not establish exhaustive archive coverage</p><p>REPLY_TO: x:post:2108449123280241011 · https://x.com/i/status/2108449123280241011</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@ShanghaoJin</span>
+    <div  class="x-post-heading"><time datetime="2026-10-09T11:04:49.000Z">2026-10-09 07:04</time></div>
+    <a class="x-outbound" href="https://x.com/ShanghaoJin/status/2108514011398775229" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">@BabybusFL crwv nbis纯粹是leather jacket送钱的生意，你理他干嘛</div><a href="/content/clippings/x/daily/858124064476479488/2026-10-09/#x-post-2108514011398775229">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2108285929572200449">回复的原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2108514011398775229<br>保存时间：2026-10-13T00:47:34.473Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved
+Provider results do not establish exhaustive archive coverage</p><p>REPLY_TO: x:post:2108285929572200449 · https://x.com/i/status/2108285929572200449</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@ShanghaoJin</span>
+    <div  class="x-post-heading"><time datetime="2026-10-09T09:56:30.000Z">2026-10-09 05:56</time></div>
+    <a class="x-outbound" href="https://x.com/ShanghaoJin/status/2108496819861004405" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">@Dabaojian_A 感谢🙏</div><a href="/content/clippings/x/daily/858124064476479488/2026-10-09/#x-post-2108496819861004405">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2108491930711757308">回复的原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2108496819861004405<br>保存时间：2026-10-13T00:47:34.473Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved
+Provider results do not establish exhaustive archive coverage</p><p>REPLY_TO: x:post:2108491930711757308 · https://x.com/i/status/2108491930711757308</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@ShanghaoJin</span>
+    <div  class="x-post-heading"><time datetime="2026-10-09T09:56:04.000Z">2026-10-09 05:56</time></div>
+    <a class="x-outbound" href="https://x.com/shanghaojin/status/2108496710645543187" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">我觉得欧洲sovereign debt crisis与当时不同，不是一个独立事件
+
+这次更像是联动了IG/HY credit、EM FX carry，本身是一个IR 波动率导致的极短期流动性shock
+
+美国股市resilient的程度其实已经超出我意料了。本质上还是仓位不重，早就都在躲FOMC躲中期、躲伊朗。而且马上业绩要出业绩</div><a href="/content/clippings/x/daily/858124064476479488/2026-10-09/#x-post-2108496710645543187">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2108227942400901510">引用原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2108496710645543187<br>保存时间：2026-10-10T00:29:21.991Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved
+Provider results do not establish exhaustive archive coverage</p><p>QUOTES: x:post:2108227942400901510 · https://x.com/i/status/2108227942400901510</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="890076269580341248" data-long="false" >
+  
+  <header><a href="/x/authors/890076269580341248/"><strong>宏观边际MacroMargin</strong></a> <span class="x-muted">@MacroMargin</span>
+    <div  class="x-post-heading"><time datetime="2026-10-09T08:56:20.000Z">2026-10-09 04:56</time></div>
+    <a class="x-outbound" href="https://x.com/macromargin/status/2108481676519321963" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">财政的小增量政策也出了：财政部近日安排使用地方政府债务结存限额5500亿元，
+
+和之前结构性降息、房贷贴息一样，都属于为了稳住Q4经济拟定的“一批增量政策”的范畴，符合之前分析。
+
+后面应该还有个财政小增量，此前的前瞻文章也有写到，即提前下达明年的新增地方政府债务限额，最快11月份可能落地</div><a href="/content/clippings/x/daily/890076269580341248/2026-10-09/#x-post-2108481676519321963">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="/content/clippings/x/daily/890076269580341248/2026-09-29/#x-post-2104883668410106339">引用原帖（已保存）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2108481676519321963<br>保存时间：2026-10-10T00:26:48.005Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved
+Provider results do not establish exhaustive archive coverage</p><p>QUOTES: x:post:2104883668410106339 · /content/clippings/x/daily/890076269580341248/2026-09-29/#x-post-2104883668410106339</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@ShanghaoJin</span>
+    <div  class="x-post-heading"><time datetime="2026-10-09T08:35:52.000Z">2026-10-09 04:35</time></div>
+    <a class="x-outbound" href="https://x.com/ShanghaoJin/status/2108476526262182365" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">@togicvgak 敢让子弹飞就是操作呀
+
+是飞一下，还是直接灭火
+
+竹知了也是
+
+所以说中宣的操作走位绝对一流</div><a href="/content/clippings/x/daily/858124064476479488/2026-10-09/#x-post-2108476526262182365">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2108474362164834455">回复的原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2108476526262182365<br>保存时间：2026-10-13T00:47:34.473Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved
+Provider results do not establish exhaustive archive coverage</p><p>REPLY_TO: x:post:2108474362164834455 · https://x.com/i/status/2108474362164834455</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@ShanghaoJin</span>
+    <div  class="x-post-heading"><time datetime="2026-10-09T08:33:17.000Z">2026-10-09 04:33</time></div>
+    <a class="x-outbound" href="https://x.com/ShanghaoJin/status/2108475877919191389" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">@gxd92743348 Thanks for this, really nice work.</div><a href="/content/clippings/x/daily/858124064476479488/2026-10-09/#x-post-2108475877919191389">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2108472248776700337">回复的原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2108475877919191389<br>保存时间：2026-10-13T00:47:34.473Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved
+Provider results do not establish exhaustive archive coverage</p><p>REPLY_TO: x:post:2108472248776700337 · https://x.com/i/status/2108472248776700337</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@ShanghaoJin</span>
+    <div  class="x-post-heading"><time datetime="2026-10-09T08:21:51.000Z">2026-10-09 04:21</time></div>
+    <a class="x-outbound" href="https://x.com/ShanghaoJin/status/2108473001104871835" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">@togicvgak 当时视频引发争议后迅速被下架
+
+接着主管部门约谈、实验室还拒接后续委托，灭火速度一流
+
+哪像这次铺天盖地，觉得没有中宣点头怎么可能有这流量？</div><a href="/content/clippings/x/daily/858124064476479488/2026-10-09/#x-post-2108473001104871835">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2108436505647804768">回复的原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2108473001104871835<br>保存时间：2026-10-13T00:47:34.473Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved
+Provider results do not establish exhaustive archive coverage</p><p>REPLY_TO: x:post:2108436505647804768 · https://x.com/i/status/2108436505647804768</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@ShanghaoJin</span>
+    <div  class="x-post-heading"><time datetime="2026-10-09T05:39:51.000Z">2026-10-09 01:39</time></div>
+    <a class="x-outbound" href="https://x.com/shanghaojin/status/2108432231949807707" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">关于某司刹车问题，我得看法是：
+
+永远～永远～都不要低估中宣团队的敏感度
+
+这些人走位、意识、操作都是尖尖上的尖尖</div><a href="/content/clippings/x/daily/858124064476479488/2026-10-09/#x-post-2108432231949807707">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="/content/clippings/x/daily/858124064476479488/2026-10-09/#x-post-2108409404345471058">引用原帖（已保存）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2108432231949807707<br>保存时间：2026-10-10T00:29:21.991Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved
+Provider results do not establish exhaustive archive coverage</p><p>QUOTES: x:post:2108409404345471058 · /content/clippings/x/daily/858124064476479488/2026-10-09/#x-post-2108409404345471058</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@ShanghaoJin</span>
+    <div  class="x-post-heading"><time datetime="2026-10-09T04:34:19.000Z">2026-10-09 00:34</time></div>
+    <a class="x-outbound" href="https://x.com/ShanghaoJin/status/2108415737891303833" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">@haliluya8911 在早期的时候，老美把老蒋的靶向药给停了</div><a href="/content/clippings/x/daily/858124064476479488/2026-10-09/#x-post-2108415737891303833">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2108415311993356537">回复的原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2108415737891303833<br>保存时间：2026-10-13T00:47:34.473Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved
+Provider results do not establish exhaustive archive coverage</p><p>REPLY_TO: x:post:2108415311993356537 · https://x.com/i/status/2108415311993356537</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@ShanghaoJin</span>
+    <div  class="x-post-heading"><time datetime="2026-10-09T04:33:11.000Z">2026-10-09 00:33</time></div>
+    <a class="x-outbound" href="https://x.com/ShanghaoJin/status/2108415454532550950" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">@vR6G6tXPHS114kd 算是海权圈对原来扩展太快的一次反思</div><a href="/content/clippings/x/daily/858124064476479488/2026-10-09/#x-post-2108415454532550950">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2108414669811560879">回复的原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2108415454532550950<br>保存时间：2026-10-13T00:47:34.473Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved
+Provider results do not establish exhaustive archive coverage</p><p>REPLY_TO: x:post:2108414669811560879 · https://x.com/i/status/2108414669811560879</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@ShanghaoJin</span>
+    <div  class="x-post-heading"><time datetime="2026-10-09T04:28:41.000Z">2026-10-09 00:28</time></div>
+    <a class="x-outbound" href="https://x.com/shanghaojin/status/2108414321537769611" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">我其实也算买了，我跟人已经赌了5顿饭了</div><a href="/content/clippings/x/daily/858124064476479488/2026-10-09/#x-post-2108414321537769611">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2108413778249543791">引用原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2108414321537769611<br>保存时间：2026-10-10T00:29:21.991Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved
+Provider results do not establish exhaustive archive coverage</p><p>QUOTES: x:post:2108413778249543791 · https://x.com/i/status/2108413778249543791</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@ShanghaoJin</span>
+    <div  class="x-post-heading"><time datetime="2026-10-09T04:26:03.000Z">2026-10-09 00:26</time></div>
+    <a class="x-outbound" href="https://x.com/ShanghaoJin/status/2108413657524920405" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">@Dr_Rick6 还没买 😂</div><a href="/content/clippings/x/daily/858124064476479488/2026-10-09/#x-post-2108413657524920405">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2108410281613471789">回复的原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2108413657524920405<br>保存时间：2026-10-13T00:48:37.296Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved
+Provider results do not establish exhaustive archive coverage</p><p>REPLY_TO: x:post:2108410281613471789 · https://x.com/i/status/2108410281613471789</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="2058239737522204672" data-long="false" >
+  
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div  class="x-post-heading"><time datetime="2026-10-09T04:10:57.000Z">2026-10-09 00:10</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2108409858487882066" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">今天微软被暂停 PERM 的消息，对还在等这一步的打工人来说，真的是一声噩耗！
+
+很多人可能不知道，PERM 对在美国打工的人意味着什么
+
+对走常规雇主担保绿卡流程的人来说，PERM 是申请 I-140 前必须过的一关。如果这一步停住，连还能在美国工作多久，都成了问题。
+
+工作做得再认真，也可能因为一个自己参与不了的决定，打乱未来几年的生活
+
+有时候，命运真的不掌握在自己手里。
+
+现在还有哪些公司在正常办 PERM？大家可以在评论区分享一下，最好带上最近确认的时间。互通消息，也互相取暖</div><a href="/content/clippings/x/daily/2058239737522204672/2026-10-09/#x-post-2108409858487882066">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2108215063702036519">引用原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2108409858487882066<br>保存时间：2026-10-10T00:30:13.142Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved
+Provider results do not establish exhaustive archive coverage</p><p>QUOTES: x:post:2108215063702036519 · https://x.com/i/status/2108215063702036519</p></details>
+    </footer>
+  </div>
+</article>
+
+<article class="x-entry" data-author="858124064476479488" data-long="false" >
+  
+  <header><a href="/x/authors/858124064476479488/"><strong>Herman Jin</strong></a> <span class="x-muted">@ShanghaoJin</span>
+    <div  class="x-post-heading"><time datetime="2026-10-09T04:09:09.000Z">2026-10-09 00:09</time></div>
+    <a class="x-outbound" href="https://x.com/shanghaojin/status/2108409404345471058" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text x-preview-text">港股一方面对全球流动性紧缩更加敏感
+
+另一方面，似乎国内政策似乎开始更偏向基本面，对高科技倾斜不那么激进了
+
+这个你们可以从华为汽车刹车问题看出端倪——放一年前这消息能铺天盖地，“造谣者”早就被拿下了
+
+A股港股对“政策”趋势很敏感的</div><a href="/content/clippings/x/daily/858124064476479488/2026-10-09/#x-post-2108409404345471058">保存的原文</a>
+    
+    <footer>
+      
+      <div class="x-related"><a href="https://x.com/i/status/2108394505779220962">引用原帖（查看来源）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2108409404345471058<br>保存时间：2026-10-10T00:29:21.991Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved
+Provider results do not establish exhaustive archive coverage</p><p>QUOTES: x:post:2108394505779220962 · https://x.com/i/status/2108394505779220962</p></details>
+    </footer>
+  </div>
+</article>
+
+  <nav class="x-pagination" aria-label="帖子分页"><a href="/x/page/88/">上一页</a> <a href="/x/page/90/">下一页</a></nav>
+</div>
+
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

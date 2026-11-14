@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>换 GPT-4o 只多 5.8 分，训练 7B 却多了 17.2 分</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">换 GPT-4o 只多 5.8 分，训练 7B 却多了 17.2 分</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-04</span>
+    
+
+    <header class="article-header">
+      
+      <h1>换 GPT-4o 只多 5.8 分，训练 7B 却多了 17.2 分</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">agent-flow</span>
+      
+        <a class="tag-link" href="/tags/model-training/">model-training</a>
+      
+        <a class="tag-link" href="/tags/ai-tooling/">ai-tooling</a>
+      
+        <a class="tag-link" href="/tags/workflow-automation/">workflow-automation</a>
+      
+        <span class="tag-pill tag-pill--no-page">open-weight-models</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章探讨了在构建 Agent 时，将模型作为静态组件与外部编排系统分离的传统模式，以及通过在工作流的决策节点上进行在线训练（如使用 Flow-GRPO 机制）来优化模型性能的思路。研究发现，将冻结模型替换为更强大的模型（如 GPT-4o）仅带来有限的性能提升，而让模型在真实工具反馈中持续学习，可以在决策节点上带来显著的性能增益（如 17.2 分）。文章还提出了引入训练的四道门槛（任务高频复用、成败自动判定、错误瓶颈集中在决策节点、环境支持安全重置），并指出了从现有代码叠加训练接口或接入解耦训练框架等具体的技术路径。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/agentflow-trainable-decision-node-20260904.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-09-04T00:00:00.000Z">2026-09-04</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>6 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E7%BC%96%E6%8E%92%E7%9A%84%E6%94%B6%E7%9B%8A%E5%BC%80%E5%A7%8B%E9%80%92%E5%87%8F%E4%B9%8B%E5%90%8E%E8%BF%98%E8%83%BD%E4%BC%98%E5%8C%96%E4%BB%80%E4%B9%88">编排的收益开始递减之后，还能优化什么</a></li><li class="outline-h2"><a href="#%E8%BF%99%E8%AE%AD%E7%BB%83%E6%98%AF%E4%BB%80%E4%B9%88%E8%AE%A9%E5%86%B3%E7%AD%96%E8%8A%82%E7%82%B9%E8%BE%B9%E8%B7%91%E8%BE%B9%E5%AD%A6">这训练是什么：让决策节点边跑边学</a></li><li class="outline-h2"><a href="#%E6%95%88%E6%9E%9C%E6%9C%89%E5%A4%9A%E5%A4%A7%E5%90%8C%E4%B8%80%E5%A5%97%E9%AA%A8%E6%9E%B6%E7%9A%84%E4%B8%89%E7%A7%8D%E6%94%B9%E6%B3%95">效果有多大：同一套骨架的三种改法</a></li><li class="outline-h2"><a href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%BD%AE%E5%88%B0%E8%AE%AD%E7%BB%83%E5%9B%9B%E9%81%93%E9%97%A8">什么时候轮到训练：四道门</a></li><li class="outline-h2"><a href="#%E5%A6%82%E6%9E%9C%E8%BF%87%E4%BA%86%E9%97%A8%E4%BB%8E%E5%93%AA%E5%BC%80%E5%A7%8B">如果过了门，从哪开始</a></li><li class="outline-h2"><a href="#%E6%80%A7%E8%83%BD%E6%9C%BA%E4%BC%9A%E6%88%90%E7%AB%8B%E6%88%90%E6%9C%AC%E6%95%85%E4%BA%8B%E8%BF%98%E6%B2%A1%E6%9C%89%E7%AE%97%E6%B8%85">性能机会成立，成本故事还没有算清</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>做 agent
+编排这一年多，我脑子里一直有个默认设定：模型是块焊死在电路板上的芯片。提示词怎么写、检索召回怎么调、工具给几样、上下文窗口塞多满，所有优化动作都发生在模型外面。闭源
+API
+占主导的阶段，这个设定符合工程现实。供应商把模型封装成黑盒，开发者能碰的只有外围管道。</p>
+<p>最近读 Stanford 几个组合作的 AgentFlow
+论文，这块铁板出现了一条缝。论文最吸睛的标语是 7B 模型打过
+GPT-4o，但同一套编排系统里藏着另一组更关键的对照。在负责规划与工具调用的决策节点上，把冻结的
+Qwen2.5-7B 换成 GPT-4o，平均只多 5.8 分；让 7B
+决策节点从真实工具反馈里持续学习，平均多了 17.2
+分。差距并不来自模型体积，一个在持续吸收反馈，另一个停在原地，这才是分水岭。</p>
+<p>开放权重模型给系统架构提供了一个新选项：工作流里的决策节点，可以放回真实执行闭环里训练。这篇文章梳理我复盘这套思路的过程，说明它能够走通的边界，以及它在哪里必须停下来。</p>
+<h2 id="编排的收益开始递减之后还能优化什么" data-reading-heading="">编排的收益开始递减之后，还能优化什么</h2>
+<p>做 agent
+系统的开发者最近多少都有体会：外部编排的红利在变薄。同一个任务，今天用
+Claude Code，明天换 Codex，后天再试
+DSH，来回折腾一圈后发现，顺手调调提示词和工具描述，差距往往就能抹平。继续堆上下文、加工具、精调检索，收益曲线越来越平缓。外部能换的工具都换过一圈，每一套里的模型依然是那块动不了的常量。</p>
+<p>这个局面有它的商业逻辑。闭源 API 的交付形态天然是静态的：开发者按
+token
+付费租用黑盒，厂商在出厂前完成训练，调用方能干预的只有输入的组织形式。久而久之，模型不可变动从现实约束变成了系统设计的默认前提。很少有人再追问一句：决策逻辑只能靠外部规则硬编吗？</p>
+<p>开放权重的演进在打破这个前提。Qwen、DeepSeek、GLM
+这类模型的权重可以自由下载和调整，微调工具链也早已不属于少数科研机构。WebRL
+是个更早的先例：Llama-3.1-8B 经过自演进训练，在 WebArena-Lite
+上的成功率从 4.8% 提到 42.4%，超过了同期的
+GPT-4o。用训练让小模型在特定场景追平在役大模型，此前已有验证。现在的分水岭在于改哪些部件、投入是否合算。AgentFlow
+给出的解法，是把训练聚焦在工作流的决策节点上。</p>
+<h2 id="这训练是什么让决策节点边跑边学" data-reading-heading="">这训练是什么：让决策节点边跑边学</h2>
+<p>训练改的范围很窄。AgentFlow 包含四个功能模块：Planner
+负责分解目标与挑选工具，也就是前文说的决策节点；Executor
+执行工具调用，Verifier 评估证据是否充分，Generator
+汇总生成最终答案。核心实验中，四个模块统一采用
+Qwen2.5-7B-Instruct，挂载默认推理引擎、Python 代码执行、Google
+搜索、维基百科搜索和网页检索五个工具。系统的四模块协作机制、内部记忆格式、可用工具列表以及模块之间的流转逻辑，从始至终由架构师预先确立，训练全程未做任何改动。发生变化的只有一个局部：Planner
+内部决定分解子目标与调用工具的策略。论文也把扩展其他模块的学习能力列为后续研究，系统中大部分组件并未参与训练。</p>
+<p>从工程实现来看，这套训练机制的运转逻辑并不复杂。面对同一个输入问题，系统并发运行
+8 条真实的探索路径，每条路径都会实际触发搜索引擎、运行 Python
+脚本并校验输出。任务执行完毕后，系统根据最终解答的成败给出整条路径的分数，路径上的每一个决策步骤共享这份结果信号。8
+条路径的得分放在一起相互参照，表现优于均值的动作获得正向强化，落后于均值的动作受到抑制。论文把这套机制命名为
+Flow-GRPO，用整条路径共用最终成败的粗粒度信号换取了训练收敛的稳定性。</p>
+<p>判断训练是否真正起效，看行为变化比看总分更可靠。MedQA
+医学问答基准提供了清晰的微观证据：训练前，决策节点有 66.2%
+的调用集中在通用 Google 搜索上；训练后，Google 搜索的调用比例下降至
+10.9%，模型自主转向了专业性更高的维基百科搜索（从 0 升到
+59.8%）以及针对性更强的网页检索（从 0 升到
+19.5%）。没有任何人工规则硬性规定它切换工具，是真实反馈重塑了它的默认行为倾向。模型并没有记住更多医学事实，它学会的是遇到医学问题先伸手抓专业工具的偏好。做编排的都碰过这种脾气，同一个工具挂在系统里，有的模型怎么写提示词都不肯调，改了几版
+prompt
+也压不住它的默认倾向。面对闭源模型只能忍着，因为模型动不了；开放权重加上这套训练闭环，才让这股脾气与个性第一次变得可调。在
+GAIA 测试集中，工具调用错误率最高下降了
+28.4%，表明模型不仅学会了挑选工具，也学会了如何正确组装调用参数。</p>
+<p>训练改动的是决策节点的选择策略，工作流的拓扑结构保持原样。系统的骨架，包括模块流转、上下文管理规则与工具调用规范，依然建立在工程师前期的编排之上。没有这些确定性的状态记录、清晰的工具接口和可靠的验证标准，训练就缺少可信的成败信号。在我看来，这件事顺应了系统一直以来的分工原则：动态变化、需要随时引用与修正的事实留在模型外部，稳定、高频且能够客观评分的行为则吸收进权重。过去依靠提示词规则和
+few-shot 示例硬塞在 harness
+里的调用行为，一旦验证稳定就能沉淀进参数，harness
+也不用在每次请求中重复背负这些样板逻辑。</p>
+<h2 id="效果有多大同一套骨架的三种改法" data-reading-heading="">效果有多大：同一套骨架的三种改法</h2>
+<p>在完全相同的系统骨架下，论文比较了决策节点的三种改法，这是全文最有参考价值的一组对照（Table 3）。基线是冻结的
+Qwen2.5-7B 担任决策节点，六个基准平均 38.5
+分。第一种改法是升级模型：把决策节点换成 GPT-4o，平均 44.3 分，多了 5.8
+分。第二种改法是照抄：采集 GPT-4o 成功的操作轨迹，用监督微调（SFT）让 7B
+模仿这些步骤，平均得分掉到 19.5 分，反而少了 19
+分。第三种改法是在线训练：让 7B 决策节点在真实运行环境里边跑边学，平均
+55.7 分，多出 17.2 分。</p>
+<p>这三种尝试给出了截然不同的结果。换更强大的通用模型，它并不会天然契合这套特定工作流，增益止步于
+5.8
+分。照抄成功轨迹的监督微调出现了严重的性能滑坡，这个结果初看反常，实则符合动态系统的规律：agent
+的每一个动作都建立在刚刚引发的新状态之上，直接模仿别人的动作序列，模型并未学会处理属于自己的意外工具返回。论文里这组
+SFT
+崩溃针对的是长程规划决策的蒸馏；交互步骤短、结果边界清晰的任务上，SFT
+依然有效，后面讨论技术选型会用到这条边界。真正拉开差距的是第三条路径：同一个模型，放进正确的反馈闭环里训练，多出了
+17.2 分。</p>
+<p>标题那句 7B 打过 GPT-4o
+也需要校准。它出自论文的主表实验：带完整工具的 7B
+四模块系统对比不带任何工具的裸 GPT-4o，在四个领域高出 8.2 到 18
+分，这种系统层面对单体模型的胜出不能过度解读。其余边界也应当清楚记录：实验对照用的是
+2024 年中的 GPT-4o，基准多数只随机抽取 100 道题（AIME24 仅 30
+题），且所有数据属于作者论文自评，目前尚无独立的第三方复现。</p>
+<p>同一套编排下，换 GPT-4o 只多 5.8 分，训练
+7B 节点多出 17.2 分</p>
+<h2 id="什么时候轮到训练四道门" data-reading-heading="">什么时候轮到训练：四道门</h2>
+<p>读到这里，不少开发者会考虑给自己的业务 agent
+引入训练。进入工程实施之前，先过四道门，全部通过训练才有现实可行性。</p>
+<p>第一道门：任务反复发生。训练决策节点需要前期的研发投入以及长期的运行维护。任务一周只触发几次，算力与工程成本很难摊平。调用量大、业务形态稳定、长期运行的高频负载，才有必要考虑训练。</p>
+<p>第二道门：成败能自动判定。数学题对答案，代码跑测试，业务系统验证数据库状态变更。这些场景天然有可信的判分标尺。开放式的写作和调研没有标准答案，人工打分成本高昂且难以规模化，交给大模型裁判又容易引入判分偏置。AgentFlow
+选择的搜索、数学、科学问答全落在自动判分容易的区间，这种任务选择是方法能够成立的前提。</p>
+<p>第三道门：错误瓶颈集中在决策节点。训练能改善的是分解目标、挑选工具、判断何时终止的逻辑。如果复盘失败日志，发现症结出在检索召回不足、第三方
+API
+频繁报错或者上下文窗口管理失误，训练决策模型解决不了这些问题，应当优化的是外部工程设施。</p>
+<p>第四道门：环境支持安全重置。在线训练依赖成千上万次真实调用交互，必然伴随大量失败尝试。调用的工具会不会产生不可逆的副作用，失败的成本由谁承担，都是必须考虑的问题。没有隔离、可重复、可快速复原的沙箱环境，训练开销容易失控，模型还可能学会钻判分规则的漏洞。</p>
+<p>训练前先过四道门：高频复用、自动判分、决策瓶颈、可重置环境</p>
+<p>四道门过完，还有一个无需动用 GPU 的最小验证动作：从现有 agent
+的历史运行日志中抽取一批真实失败样本，人工归纳失败原因（区分知识缺失、工具故障、格式错误、决策失误），同步确认成败能否自动判分，最后让小模型和大模型在相同的工具与调用预算下各跑一轮确立基线。归因与基线做完，训练该不该推进，答案通常自然浮现。</p>
+<h2 id="如果过了门从哪开始" data-reading-heading="">如果过了门，从哪开始</h2>
+<p>AgentFlow 原生方案是典型的实验室级配置：8 张 A100、每个样本并发 8
+条探索路径、同步等待工具执行并由 GPT-4o 实时裁判（训练配置）。普通工程团队不必复刻这套重型架构，现阶段的技术栈提供了门槛更低的进入路径。</p>
+<p>第一条路径：在现有 agent 代码上叠加训练接口。Unsloth 配合 OpenPipe 的
+ART
+是当前摩擦较小的组合（官方主张）。业务代码不用重构，接入轨迹采集和判分函数即可，训练后端可在本地
+24GB 显存显卡、租用单张 A100、或 W&amp;B 的 Serverless RL
+之间切换（预览阶段训练免费，正式定价待公布）。OpenPipe
+创始人分享过一个案例：14B 参数的邮件检索 agent，单张 A100 训完准确率达到
+96%（半独立实践）。社区也有开发者用 RTX 4090 一小时教会一个 8B
+开源模型基础的工具调用（独立实践）。这些实践数据指向同一个方向：起步门槛比预想更低。</p>
+<p>第二条路径：接入解耦训练框架 Agent Lightning（官方主张）。它与
+AgentFlow 有直接生态关系，AgentFlow
+本身就是它官方收录的社区项目。核心思路是将训练引擎与 agent
+运行时解耦，现有 agent 代码零改动接入。官方案例里一个 9B 模型用 6000
+条训练样本把 SWE-bench Verified 解题率从 41.8% 提到 56.4%（论文，官方主张）。它还支持
+Thinking Machines 的 Tinker 作为训练后端，属于按量付费的 API
+模式，完全不需要本地 GPU，具体定价需要自行核实。</p>
+<p>第三条路径：从两阶段轻量微调切入。先用 LoRA
+在消费级显卡上过夜运行监督微调（租卡成本大约 5 到 30
+美元），目标是内化工具调用的输入输出格式，不让模型过早承担长程规划。这方面的扎实证据来自
+SWE-Gym：491 条严格过滤的交互轨迹，让 Qwen2.5-Coder-32B 在 SWE-bench
+Verified 上绝对提升 12 到 14 个百分点（ICML 2025
+同行评审）。结合前文对照实验梳理的边界：SFT
+固化短程可靠性行为有效，长程决策蒸馏则容易失效。把它当作第一级杠杆，格式与调用稳定性达标后，再视业务需要升级到在线训练。</p>
+<p>这些路径的共同前置条件依然是四道门。门槛未满足前，先打磨检索质量与工具生态；门槛满足后，从判分最硬的局部业务模块开始试验。</p>
+<h2 id="性能机会成立成本故事还没有算清" data-reading-heading="">性能机会成立，成本故事还没有算清</h2>
+<p>性能方面，即便扣除外部工具加成与测试口径的折损，同等系统架构下在线训练带来
+17.2 分的净增益依然站得住。成本方面，账目目前远没有算清。论文只披露了 8
+张 A100，没有公布训练总时长、同步等待工具执行的闲置时间、GPT-4o
+裁判调用的累积账单，以及上线后单次任务成本相对直接调用商业 API
+节省了多少。近年商业 API
+价格持续下行，托管开源模型的推理成本也在走低。自建训练体系省下的 token
+差价，需要先覆盖数据构建、环境搭建、反复训练评测与长期维护的全生命周期开销，经济账才有说服力。调用量大的稳定业务流或许算得过来，低频多变的长尾场景几乎注定不划算。</p>
+<p>开放权重的核心增量，在于给工程系统补上了过去长期锁死的策略优化层，而不只是更便宜的部署选项。外部编排负责确定性的骨架，涵盖状态流转、工具权限、记忆存储与终点验证；训练接管那些难以用硬编码规则穷尽的决策节点。规划自己的
+agent
+系统，若发现某个核心节点调用高频、判分客观且瓶颈卡在决策逻辑，可以把它选作第一个试验对象。在此之前，先把状态追踪与自动化判分做扎实，再谈训练。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/19421c80ab48b165327690d9c98b7fdaaf2f1523b5bf4840e7a7e00284d8e05b.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/19421c80ab48b165327690d9c98b7fdaaf2f1523b5bf4840e7a7e00284d8e05b.md" download="换 GPT-4o 只多 5.8 分，训练 7B 却多了 17.2 分.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=GPT-4o" class="entity-link product-link">GPT-4o</a>, <a href="/search/?q=Qwen2.5-7B" class="entity-link product-link">Qwen2.5-7B</a>, <a href="/search/?q=Claude Code" class="entity-link product-link">Claude Code</a>, <a href="/search/?q=Codex" class="entity-link product-link">Codex</a>, <a href="/search/?q=Llama-3.1-8B" class="entity-link product-link">Llama-3.1-8B</a>, <a href="/search/?q=Qwen2.5-7B-Instruct" class="entity-link product-link">Qwen2.5-7B-Instruct</a>, <a href="/search/?q=SWE-bench" class="entity-link product-link">SWE-bench</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

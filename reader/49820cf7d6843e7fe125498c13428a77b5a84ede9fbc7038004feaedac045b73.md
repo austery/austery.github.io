@@ -1,0 +1,301 @@
+---
+author: AI Engineer
+date: '2026-10-24'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=v5tm5EAzsAs
+speaker: AI Engineer
+tags:
+  - agent-observability
+  - regression-testing
+  - llm-as-a-judge
+  - ci-cd
+  - self-improvement
+title: 基于可观测性构建 AI Agent 的回归测试与自我修复闭环
+summary: Arize 前线部署工程师 Sophia Yakoubovitch 探讨了 AI Agent 回归测试的难点。Agent 往往在运行时而非代码层面出错，单行 Prompt 修改可能改善某项指标却导致任务完成率下降。演讲提出了结合生产链路追踪的五步回归闭环，并展望了从人工介入转向由 Agent 自主排查、修复与演进的未来趋势。
+insight: ''
+draft: true
+series: ''
+category: ai-application
+area: tech-engineering
+project: []
+people:
+  - Sophia Yakoubovitch
+companies_orgs:
+  - Arize
+products_models: []
+media_books: []
+status: evergreen
+---
+### Agent 可观测性与回归风险
+
+大家好，我是 Sophia Yakoubovitch，Arize 的一名客满/前线部署工程师（forward deployed engineer）。对于不熟悉 Arize 的朋友，Arize 是一个旨在让 AI 真正起效的可观测性后端。那么，这意味着什么呢？
+
+<details>
+<summary>Original English</summary>
+[music]
+
+>> Hello everyone. My name is Sophia Yakoubovitch. I'm a forward deployed engineer at Arize, and for those who aren't familiar, Arize is an observability backend that is designed to make AI work. Now, what does that mean?
+</details>
+
+在某种意义上，构建 AI 系统可以是非常直观的，尤其是当许多底层编程细节被抽象进入 Agent 的“心智”之后。然而遗憾的是，这个“心智”在一定程度上可能是一个黑盒。
+
+<details>
+<summary>Original English</summary>
+Building AI systems can be inherently intuitive in some sense, especially when a lot of that low-level abstraction is a low-level programming is abstracted into the mind of an agent. Unfortunately though, that mind can be a bit of a black box.
+</details>
+
+当黑盒难以理解时，它就难以预测，进而难以调试。而这正是可观测性变得不可或缺的地方。可观测性帮助你理解系统实际上在做什么，本质上就是在黑盒中照亮一束光。一旦你一步步搞清楚系统在做什么，你就能对其进行评估，运行评估指标来追踪其性能，并利用这些数据随着时间推移对 Agent 进行迭代与改进。
+
+<details>
+<summary>Original English</summary>
+When that black box is difficult to understand, it's difficult to predict, and therefore difficult to debug. And that's where observability becomes essential. Observability helps you understand what your systems are actually doing. It's essentially shining a light in the black box. And once you understand what the system is doing step-by-step, you can then evaluate it. Run evaluation metrics to track its performance, and then use that data to iterate and improve your agents over time.
+</details>
+
+但我想更进一步，因为最大的挑战并不在于确定究竟是什么坏了，最大的挑战在于，当你提交修复时，你希望确保不会顺带破坏其他 10 样东西。如果大家以前遇到过完全相同的问题，请举手。你推了一次代码……
+
+<details>
+<summary>Original English</summary>
+But I want to take this one step further, because the biggest challenge isn't determining what broke, the biggest challenge is that when you do submit a fix, you want to make sure that you don't break 10 other things along the way. Now, raise your hand if you've had that exact issue before. You push
+</details>
+
+是的，看到很多手举起来了。你推送了一个简单的修改，心想这应该很容易，不会出问题，紧接着下一秒，到处都乱套了。
+
+<details>
+<summary>Original English</summary>
+Yep, seeing a lot of hands. You push a simple change, you know, should be a should be easy, no issues, and next thing you know, everything's on fire.
+</details>
+
+所以，今天我们将讨论如何利用可观测性来构建稳健的回归测试流程。这不仅是工程师可以做的事情，更是一个能够整合进 CI/CD 的自动化流程。
+
+<details>
+<summary>Original English</summary>
+So, today we're going to discuss how you can use your observability as a way to build a robust regression process. Not only something that your engineers can do, but an automatic process that feeds into your CI/CD.
+</details>
+
+我们将把这分为三个部分。首先，我们将探讨为什么 Agent 回归如此不同且难以察觉，其中我们要触及的第一点是：Agent 不会在代码层失败，它们是在运行时失败。接着我们将以此为前提构建回归闭环，这是一个五步流程。我们会先进行高层级概述，然后进入 Arize 平台展示今天具体该怎么做。最后，我们将以 Agent 级的速度闭合这一回归循环来结束本次分享，并探讨我们所看到的 Agent 可观测性下一前沿领域。如果大家坚持到最后，我将介绍一个希望大家都会感兴趣的范式转变。
+
+<details>
+<summary>Original English</summary>
+We're going to break this down to three parts. First, we'll discuss why agent regression is so different and difficult to detect. And the first thing we're going to touch on is that agents don't fail at the code level, they fail at runtime. We're then going to use this premise to build out our regression loop. It's going to be a five-step process. We'll touch on it at a high-level overview, and then we'll move on to the Arize platform and show you exactly how you can do it today. Then, we'll close off the session by closing that regression loop at agentic speed and touching on where we're seeing the next frontier of agent observability move to. And if you stick with me till the end, I'll introduce a paradigm shift that I hope you'll all find interesting.
+</details>
+
+### 单行提示词修改带来的隐性回归
+
+那么，我们从一个具体的例子开始。
+
+<details>
+<summary>Original English</summary>
+So, let's get started. First, with a concrete example.
+</details>
+
+想象一下，你有一个客服支持 Agent，一位安全工程师找到了你。这位安全工程师审查了该支持 Agent 的策略，决定给你的 Agent 添加一行简单的内容：要求 Agent 在采取任何操作之前先进行确认。
+
+<details>
+<summary>Original English</summary>
+So, imagine with me that you have a support agent, and you have a security engineer that has approached you. And that security engineer has reviewed the policy of your support agent and determined that he wants to add one line, a simple one line to your agent that will ask your agent to confirm before it takes any action.
+</details>
+
+听起来很简单，听起来毫无危害。你的安全工程师说他凭直觉判断，而我们往往也很快就做出了这一修改。我甚至都不用问大家以前是否这样做过，因为我知道每个人都曾推送过单行 Prompt 修改，并想当然地以为一切都会顺畅运行。我们之所以做出这种假设，是因为我们觉得既然它是用自然语言写成的，我们对这些 Agent 的表现就拥有直觉认知。
+
+<details>
+<summary>Original English</summary>
+Sounds simple. Sounds harmless. Your security engineer says he has the intuition, and oftentimes we're quick to make this change. I'm not even going to ask if you've done this before cuz I know everyone has pushed a one-line prompt change and just assumed everything will go well. And the reason we make that assumption is because we think that because it's written in natural language, that we have this intuition on how these agents are performing.
+</details>
+
+我们其实是在凭感觉写代码，但这并不是我们想要的方式。我们希望能够依靠基于数值评估套件支持的数据来写代码。我们希望拥有分数来证明这些修改确实产生了积极影响，而不是仅仅在那祈祷。但假设在这个场景中，你确实推送了那单行修改，并在提交一周后基于生产数据运行了评估。
+
+<details>
+<summary>Original English</summary>
+We're really coding on vibes, and we don't want to be. We want to be able to code with a numeric evaluation suite backed data. We want to have scores that prove that these changes are actually making a positive impact and not just crossing our fingers. But let's say in the scenario you did push that one-line change, and now you are running your evaluations on your production data a week after it's been submitted.
+</details>
+
+你注意到的第一件事是，在“操作安全性（action safety）”上实际提升了 17 个点。因此，你的安全工程师是对的，要求 Agent 在采取任何操作前进行确认确实提高了其整体安全性。但你的可观测性工程师继续评估，他们又检查了“任务完成度（task completion）”，却发现指标下降了 17 个点。
+
+<details>
+<summary>Original English</summary>
+And the first thing you notice is that you actually have a 17-point improvement on a action safety. So, your security engineer was correct. It asking the agent to confirm before taking any action does improve its overall safety. But your observability engineers are continuing to evaluate, and they also check for task completion and they notice a 17-point degradation.
+</details>
+
+这种情况之所以发生，是因为如果一个 Agent 在采取每一步操作之前都要确认，现在任务就变成了未完成状态。如果用户离开会话，该会话就永远不会完成到底，从而留下了未完成的任务，你就看到了这样一个始料未及的结果。
+
+<details>
+<summary>Original English</summary>
+Now, this is occurring because if you have an agent that's confirming before every single action it's taking, now tasks are being uncompleted. If a user leaves the session, that session is never completed to the end and I have incomplete task and you see this unlikely result.
+</details>
+
+你在最初思考这个项目时可能并没有察觉到这点，但你的评估套件捕捉到了它。讽刺的是，两者的整体平均值相抵为零。我希望大家从这里记住的是：仅仅因为你改善了 Agent 某一个维度的表现，并不意味着你提升了 Agent 的整体能力。
+
+<details>
+<summary>Original English</summary>
+You may not have caught this initially when you were thinking about the project, but your evaluation suite has caught this. And ironically enough, the overall average of both is net zero. And what I want you to take away from here is just because you improve the dimension of one agent does not mean that you're improving the agent as a whole.
+</details>
+
+我想问大家的是：换作是你，你会发布这个变更吗？在有评估测试之前，我们很多人可能就已经发布了。这就是为什么获取这些数值化结果如此重要，这样我们才不会凭感觉上线，而是基于数据支持进行发布。
+
+<details>
+<summary>Original English</summary>
+The question I have for you is, would you have shipped this change? Many of us would have before the evaluation test. And this is why it's so important that we get these numeric results so that we're not shipping on vibes, we're shipping with backed data.
+</details>
+
+### 代码与运行时的脱节：Trace 成为新的事实来源
+
+为了弄清我们错在哪里，在于我们做出了一个不切实际的假设：假设错误会发生在代码层面。但错误极少发生在代码层，相反，这些 Agent 是在运行时发生故障的。
+
+<details>
+<summary>Original English</summary>
+So, to understand where the mistake that we made is is we made an unrealistic assumption. And that assumption is that the error is going to occur at the code, but the error rarely occurs at the code level. Instead, these agents are failing at runtime.
+</details>
+
+代码审查人员看到的是左侧显示的内容：系统提示词 Markdown 文件中的单行更改。
+
+<details>
+<summary>Original English</summary>
+What the code reviewer saw is here on the left-hand side. It was a one-line change in the system prompt markdown file.
+</details>
+
+改动很容易，理解很简单，审批很轻松。但在现实中，该代码修改虽然是局部的，其行为层面的变化却发生在生产环境和运行时。这简简单单的一行，改变了 Agent 的运行机制：它增加了额外的步骤，改变了 Agent 与其他子 Agent 的协作方式，改变了 Agent 调用工具的方式。所有这些可能多达数千种的潜在执行轨迹（trajectories），都不在你的静态代码中，它们只存在于你的可观测性后端，只存在于你的链路追踪（traces）里。因此我们说：**diff 告诉你改动了什么，但 trace 告诉你实际发生了什么**。这里发生了一个转变，即 trace 正在成为新的事实来源。关于 Agent 实际在做什么的结构化日志，才真正代表了这些系统在运行时的状态。在传统软件中，逻辑被写入代码，在推向生产环境之前很容易确定运行时行为；但现在，逻辑只存在于运行时。当我们看待回归测试时，可观测性就变得必不可少。书写内容与实际发生之间的这一鸿沟，充斥着无声的错误。因此，为了捕捉这些错误，我们需要从审查 trace 开始进行回归测试。
+
+<details>
+<summary>Original English</summary>
+Easy change, simple to understand, simple to approve. But in reality, this code change was local, but the behavioral changes of this code change was in production. It was in the runtime. This one simple line has shifted how the agent operates. It's adding additional steps. It's changing how the agent works with other sub-agents. It's changing how the agent calls tools. All of these different trajectories, which could be thousands of possible trajectories, are not in your static code. They're only in your observability back end. They're only in your traces. And so, what we are saying here is that the diff tells you what changed, but the trace tells you what actually happened. And there's a shift here, that traces are becoming the new source of truth. These structured logs of what your agents are actually doing actually is what truly represents what these systems are doing. In traditional software, logic was written down. It was very clear to determine what that runtime was before you ever pushed production. But now the logic only exists at runtime. The observability becomes essential when we're looking at regression testing. This gap between what was written and what actually happens is filled with silent errors. So to capture that, we need to start our regression testing by looking at our traces.
+</details>
+
+### 构建五步回归闭环
+
+那么让我们一起构建这个回归闭环。这是一个五步流程：我们将从生产 traces 出发，构建评估项（evals），运行实验，最后将其收敛为 CI 中的自动门禁。首先我将进行五步的高层级概览，然后我们进入实际产品，展示你如何亲自操作。
+
+<details>
+<summary>Original English</summary>
+So let's build out this regression loop together. It's a five-step process. We're going to start with our production traces. We're going to build evals, run experiments, and then close it all up to be an automatic gate at CI. First, I'm going to do a five-step high-level overview. And then we're going to go into the actual product and show you how you can do it yourself.
+</details>
+
+第一步是**选择数据集**。这听起来很简单：我们要提取真实的生产 traces。既然我们已经拥有真实用户的查询、真实输入和真实工具调用，就不需要合成数据，直接从中拉取即可。重要的一点是，我们的数据集要能够代表用户输入我们系统的平均工作流；但同样重要的是，我们要捕捉**已知失败**。把常常出错、常常在评估指标上失败的时刻过滤并收录进数据集中。你还需要捕捉**边界情况**，它们可能不常见，但同等重要。此外，我们经常看到用户遗漏的一点是，捕捉我们想要保护的**成功工作流**。因为再次强调，我们不仅要确保修复能起效，还要测试我们没有破坏原本正常运转的功能。因此，在数据集中涵盖这全部四项至关重要。拥有了这个生产数据集后，我们就可以构建回归测试套件的其余部分了。
+
+<details>
+<summary>Original English</summary>
+So step one is we're going to select a data set. Seems simple enough. We want to pull real production traces. We don't need to synthesize data. If we already have real user queries, real inputs, real tool calls, we're pulling from that directly. It's important that our data set is a representative work is representative of the average workflow that our users are going to be pushing into our systems. But it's also important that we capture known failures. We filter out com moments where often errors, often fails at eval metrics. Capture those into your data data sets. You also want to capture edge cases. Maybe not as common, but just as important. And one thing that we often see users forget is capturing successful workflows that we want to protect. Because again, we're not just trying to make sure that the fix is going to work, but we also want to test that we're not going to break something that was already working. So it's important that we capture all four of these in our data set. Once we have this production data set, we can then build out the rest of our regression testing suite.
+</details>
+
+第二步是**建立评分机制**，这就是引入评估器（evaluators）的地方。现场举手示意一下，有多少人熟悉评估 Agent 的概念？很高兴看到这么多双手，这是 Agent 工程的核心基石部分。
+
+<details>
+<summary>Original English</summary>
+The second step is we want to have a scoring mechanism. And this is where we bring in evaluators. Now, show of hands, how many here are familiar with the concept of evaluating agents? I'm so happy to see so many hands. This is a core foundational part of agentic engineering.
+</details>
+
+评估器让我们可以提取对工程师和产品团队至关重要的指标和维度，并将其实际量化。这是什么意思？以一些对 Agent 很重要的指标为例，比如幻觉、准确性、工具调用轨迹、步骤效率。所有这些指标在本质上都是主观的。你可能会让人工来审查它们，并潜在地判断某件事是否存在幻觉、是否采取了最高效的路径。但我们希望能够自动化这一过程，将主观指标转化为数值分数。我们通过利用 LLM 来做到这一点：采用“LLM as a judge”的概念，让 LLM 对 span、trace 或某些日志数据进行判定。LLM 拥有一套特定的指南来判定某件事是幻觉还是事实、是高效还是低效。现在，我们基本上完成了一个二元分类。在右上角这个示例中，你可以看到一个任务完成度评估，其中作为裁判的 LLM 负责判断某件事是完成还是未完成。
+
+<details>
+<summary>Original English</summary>
+Evaluators allow us to take metrics and dimensions that are important to your engineers, your product team, and actually quantify them. What do I mean by that? Let's take some metrics that are important for your agents, things like hallucination, accuracy, tool trajectory, step efficiency. All of these metrics are subjective in nature. And you may have a human that reviews them and can potentially determine whether or not something was hallucinated, whether or not the most efficient pathway was taken. But we want to be able to automate this process. We want to turn a subjective metric into a numeric score. And we do this by leveraging LLMs. We use a concept of LM as a judge, where we judge a span, a trace, some log data against an LM. The LM has a particular guide of how it determines whether or not something was hallucinated or factual, something was efficient or not efficient. And now we've done essentially a binary classification. In this example at the top right corner, you could see a task completion eval, where the LM as a judge is has a task of determining whether or not something was complete or incomplete.
+</details>
+
+现在，我们把一个主观指标基本上转化为了 0、1 的二元分数。你可以将分数映射到 0 到 5，也可以设置多个不同的标签，但你现在已经将一个主观衡量转变为了可以据此评估的定性分数。你不仅限于使用 LLM 裁判，还可以根据具体指标使用基于代码的评估器或基于机器学习模型的评估器。基于代码的评估器非常适合确定性检查，而 LLM 裁判则适合非确定性检查。一旦我们整理出所有关键指标的清单，就针对每一项构建评估器。现在我们就有了一个可供比对的测试套件。
+
+<details>
+<summary>Original English</summary>
+Now we've taken a subjective metric and we've essentially turned it into a binary score, 0 1. You can translate the score across 0 to 5. You can have multiple different labels. But you've now turned a quantitative measurement into a qualitative score that you can measure against. You're not limited to LM as a judge, you can also use code-based evals or ML-based evals as well, determine based on what that metric is. A code evaluator is great for your deterministic checks, but an LM as a judge is good for your non-deterministic checks. So, once we have a list of all of our metrics that are important to us, we build evals for each of them. Now, we have a testing suite that we can go against.
+</details>
+
+第三步是**运行基线实验**。这个实验的做法是：我们将 Agent 拿来，针对所有生产 traces、所有生产数据集运行。在获得那些生产数据集的输出之后，我们在其之上运行评估测试套件，这就是我们的基线。你可以在 SDK 中做到这一点，只需调用 `run experiment`，传入数据集、传入任务、传入评估套件，就能获得这些结果。我们稍后会讨论如何在 UI 中实现，以及如何通过编码 Agent 来完成。
+
+<details>
+<summary>Original English</summary>
+Step three is we're going to run our baseline experiment. And what this experiment is is we're going to take our agent and run it against all of our production traces, um all of our production data sets. We're after we get the output of those production data production data sets, we're then going to run our eval testing suite on top of that. And that's what's going to be our baseline. Now, you can do this in the SDK, it's just run experiment. You'll pass in that data set, pass in that task, pass in your evaluation suite, and you'll get those results. We're going to touch on how you can do this in the UI, as well as how you can do this with your coding agents.
+</details>
+
+一旦有了基线实验，你就加入那单项修改：修改策略，重新运行评估，查看评估结果。这是一个简单的流程。现在你可以快速迭代，不仅可以测试单次策略变更，还可以在 Prompt 中测试多种修改，测试多种模型。如果团队跑来对你说：“我们想切换到传说中的新模型，它贵了 5 倍。”在证明能获得良好的投资回报率（ROI）之前，你不会贸然切换。这就是你用一组数值测量来证明切换到更昂贵模型是否真能提升投资回报的方式。你可以调整策略、重跑并对比；重跑并对比更改 Prompt、更改交接（handoffs）、更改工具、更改模型会对整体输出产生怎样的影响——所有这一切都无需部署到生产环境。
+
+<details>
+<summary>Original English</summary>
+But, once you have that baseline experiment, you're then going to add your one change. Change that policy, rerun the evaluation, what are the eval results? A simple process. Now that you can quickly iterate on, and not just with one policy change, but test multiple changes within your prompts. Test multiple models. If your team comes with you comes to you and says, "We want to switch the new fable model, it's five times more expensive." You're not going to switch without proving that you're going to get a good ROI. This is how you can prove that with a numeric set of measurements to determine whether or not it actually is improving your investment to switch to a more expensive model. And you can adjust this policy, rerun, and compare. Rerun and compare how changing the prompt, changing handoffs, changing tools, changing models is all going to affect your overall output. All without having to deploy to production.
+</details>
+
+随后我们可以将其自动化：将此实验推送到 CI 中以完成自动化闭环。现在，每当有 Pull Request 时——比如你在 GitHub Actions 中配置好——每个 PR 都会针对团队认为关键的评估指标运行一遍实验工作流。在满足所列出的所有回归指标之前，不得合并。此时你不再是凭感觉推送，而是满怀信心地推送，确信改动确实对性能产生了积极影响；如果结果是负面的，就退回、测试并再次迭代。
+
+<details>
+<summary>Original English</summary>
+And then we can automate this. We push this experiment into CI to complete this automation. Now, each time that you have a pull request, let's say you set this up in GitHub actions, for example, each pull request each PR is run through an experiment workflow against the evaluations that your team has deemed important. And you don't merge until it meets all of the regression criteria that you have listed. Now, you're no longer pushing on vibes, you're pushing with confidence that you actually do have a positive impact on your performance. And if it is negative, you go back, you test, and you reiterate.
+</details>
+
+### 在 Arize 平台进行实操演示
+
+现在我们来实际展示如何在平台上操作。让我切换过去。这里是 Arize 平台，我正在展示刚才提到的那个退款 Agent。在基线实验中可以看到我们的得分，然后可以看到操作安全性提升了 17 分，而任务完成度下降了 17 分。这里的每一个条目都是我使用不同 Prompt 改动或可能不同的模型改动所运行的不同测试，我对每一项进行评估，以寻找哪一个能在达成最终目标的过程中取得最佳权衡。我可以看到整体上操作安全性提升了 18 分，任务完成度提升了 6 分。
+
+<details>
+<summary>Original English</summary>
+So, let's actually show how to do this in the platform. Let me switch over. Um here we have Here we have the Arize platform, and I'm showcasing this exact refund agent. You can see in our baseline experiment what our scores were, and then you can see that plus 17 points on action safety and minus 17 points on task completion. Each one of these points Each one of these line items here is a different test that I ran with different prompt changes, potentially different model changes, and I'm evaluating each one of them to see which one has the best trade-off to get to where my end goal is. And I can see that overall I'm going to have a plus 18 18 points on action safety and plus six on task completion.
+</details>
+
+那么，我们如何构建这些单独的测试点呢？有几种方法。我们先在 UI 中演示。我将进入这里的 Playground，新建一个 Playground。我们先从 Prompt Playground 开始测试单个 Agent，我们将其命名为 AIE NYC。太好了。进入 Prompt Playground 后，这里就可以测试单个 Agent。单个 Agent 本质上就是一个挂载了一组工具的单条 Prompt、模型以及 LLM 配置，因此我们在这里复刻它。现在我已经在 Prompt Hub 中存储了 Prompt，可以直接提取出来；我拿到了第一版，接着调出数据集。我已经选定了一个可以在这里使用的数据集，我已经梳理过并提取了那些边界情况、已知失败以及我想要保护的成功工作流，全部列在这个包含 100 行记录的数据集里。
+
+<details>
+<summary>Original English</summary>
+Now, how can we build these individual points? Well, there's a couple ways. We'll do this first in the UI. I'm going to jump into the playground here. I'm going to create a new playground. We're going to start with the prompt playground to test a single agent. Let's call this AIE NYC. Perfect. Once I'm in the prompt playground, here is where I can test a single agent. An agent A single agent all is essentially just a single prompt with a set of tools attached to it, a model LLM configurations, and so we're going to replicate that here. Now, I've already stored my prompt in my prompt hub, so I can pull it right here. I've got version one, and then I can pull up my data set. I've already selected a data set that I can use here and that I've gone through and pulled out those edge cases, those known failures, and those successful workflows that I want to protect, all listed in this 100-row data set.
+</details>
+
+我可以现在就测试这一个，也可以同时测试多个 Prompt。所以实际上我要复制一份，可以直接在里面修改某一条内容，也可以直接在此处加载单独的版本进行并排对比测试，这样我就能看到这两个 Prompt 受影响的情况。当然，我们必须加入评分机制，也就是我们的评估器。我点击这里，加入“任务完成度”，接着加入“操作安全性”。大家可以看到，这里有大量其他预构建的评估器可供选择，例如幻觉、用户挫败感；我们还有一些代码模板、安全检查等等，并且你随时可以自定义评估器。
+
+<details>
+<summary>Original English</summary>
+I can test this right now, or I can test multiple prompts at the same time. So, I'm actually going to duplicate this, and I can change a line item directly in here, or I can load up a separate version right here and test side by side. So, I can see just how quick just how both of these prompts are affected. Now, of course, we have to add our scoring mechanism. So, that's going to be our evals. I'm going to click here. I'm going to add in my task completion, and then I'm also going to add in my action safety. And you can see here that there's a ton of other pre-built halluc pre-built evaluators you can select from, hallucination, user frustration. And we've got some code templates, security checks, etc. And you always have the ability to customize your own.
+</details>
+
+一旦运行，它将针对每条记录执行，然后提取出那些评估分数。当我进入这里的数据集，进入实验运行流，它也会出现在下面。我可以调出所有对我很关键的指标：查看延迟、查看评估结果、查看总成本和错误率，并随时间进行追踪。因此，我可以针对 PR 变更或 Playground 运行来查看这些指标。
+
+<details>
+<summary>Original English</summary>
+Once I run this, it's going to run on every single record, and then it's going to pull out those eval scores. And then when I go into my data sets here, go into my experiment run flow, it'll pop up under here as well. And I can pull up all those metrics that are important for me. I can look at latency, I can look at my evals, I can look at my total cost and error rates, and track that over time. So, I can look this for PR changes, for playground runs.
+</details>
+
+还有一个选项我也想展示一下。如果我进入 Playground，点击这里，选择 Agent Playground，将其命名为 AIE——好了。Agent Playground 不仅允许你在单 Agent 层级进行评估，还可以在多 Agent 层级进行评估。如果你向我们开放远程连接 Agent 的权限（例如通过 HTTP 调用），如果我进入这里的 Remote Agents，你可以直接在此连接远程 Agent，这样你就可以在代码库中直接更改不同子 Agent 之间的通信方式，然后我们就可以发起调用。数据集中的每条记录都将向你的 Agent 发起调用、测试、获取输出、运行评估，然后以相同的机制进行评分。
+
+<details>
+<summary>Original English</summary>
+And there's one more other option that I want to show here, too. And that's if I go into playground, click here, and I do agent playground. Call this AIE. Oh. There we go. Agent playground allows you to not only evaluate at a single agent, but at multiple agent levels. If you give us access to connect to your agent remotely, for example, through a HTTP call. If I go into remote agents here, you can connect your remote agent directly here, so that you can change how different sub sub agents communicate with each other, all directly in your code base, and then we can call that. So, each record in your data set will call against your agent, will test, will get the output, will run those evals, and then score it in the same mechanism.
+</details>
+
+因此，在 UI 中运行这些实验有两种方式：可以在 Prompt Playground 中测试单个 Agent，也可以在 Agent Playground 中测试非常复杂的多 Agent 系统。
+
+<details>
+<summary>Original English</summary>
+So, you have two ways of running play running these experiments within the UI. You can run them in the prompt playground testing a single agent or run them in the agent playground and test a very complicated multi-agentic system.
+</details>
+
+### 闭合回归回路：从人工干预到 Agent 自我修复
+
+这是在 UI 中的操作方式，当然你也可以使用 SDK、REST 或 CI、CLI 通过编程方式完成。但我最喜欢的做法实际上是使用编码 Agent。大家对“Agent Skills”这一概念熟悉程度如何？看到有人说属于进阶领域，我很高兴。Agent Skills 允许你将编码 Agent 与外部数据库和高级上下文连接起来。Arize 拥有一个公开的 Skills 仓库，允许你对接 Arize UI 中提供的所有功能。这意味着你可以在编码 Agent 于 IDE 中生成的代码，与可观测性后端中实际发生的情况之间建立闭环。
+
+<details>
+<summary>Original English</summary>
+Now, this is in the UI, but of course you can do this programmatically with the SDK, rest, or CI or CLI, but my favorite method to do this is actually with coding agents. How familiar is this group with the concept of agent skills? Ah, I love to see when people are saying advanced. Agent skills allows you to connect your coding agents with external databases and advanced contexts. Arize has a public repository of skills that allows you to connect to every feature available in the Arize UI. This means that you can close the loop between what your coding agents are producing in your IDE, the code that they're producing, with what is actually happening in your observability back end. So, let's actually touch more on that closing the loop.
+</details>
+
+那么我们如何以 Agent 的速度闭合这个回路呢？我们拥有相同的闭环，但不再由人工操作，而是希望由 Agent 来运行。现在我要强调两个核心要点，我们这里只剩 2 分钟了。我想触及的第一个核心要点是工程师目前在做什么。今天，工程师是负责闭环的人。总结一下这个闭环就是：首先是可观测性。也就是说，当你的系统运行时，我们提取那些日志数据、追踪数据，并在生产环境中追踪每一次运行。接着我们提取这些数据进行评估，获得分数；然后我们可以实施改动，可能是 Prompt、模型、工具规模或策略的变更。随后我们测试该改动，利用实验工作流对其进行迭代。最后，我们进行改进。如果通过测试，太棒了，直接发布；但如果失败，我们闭合回路：提取那些失败案例并带回可观测性层。这些失败的全新生产 traces 随后成为我们回归测试套件中的新案例。这就是第一个收获：**每一次失败都应该变成一个测试案例**，每一次失败都应该让你的 Agent 更健壮、更不易被破坏。一旦你拥有了这些不断自增的回归测试套件，你就拥有了一种持续迭代和改进的更稳健方法。这是第一点。
+
+<details>
+<summary>Original English</summary>
+So, how we're going to close this loop at agent speed. We've got the same loop, but instead of running it by people, we want to run it by agents. Now, I'm going to highlight two key takeaways. We only have 2 minutes left here. And the first key takeaway I want to touch on is what the engineers are doing. Today, engineers are the ones that are closing the loop. And to summarize what that loop is, is we have observability first. That is as your systems are running, we are taking that log data, that tracing data, and we are tracking it for every run in production. We then take that, evaluate it, get those scores, then we can implement a change at that could be a prompt change, model tool scale policy change. And then we test that change. We iterate on it with the experiments workflow. Finally, we improve it. If it passes, great, ship it. But if it fails, we close the loop. We take those failed cases and we bring it back to the observability layer. These new production traces that failed then become new cases in our regression testing suite. And that's the first takeaway here, is that every failure should become a test. Every failure should make your agents stronger and harder to break. Once you have these regression tests that are regression test suites that are constantly building on themselves, you have a more robust method of continuously iterating and improving. That's takeaway number one.
+</details>
+
+现在来看第二个要点。回到那个闭环，我想问现场大家一个问题：如果由 Agent 来负责调查并提出修复方案呢？因为在目前，人工调查正是瓶颈所在，人成为了这里的瓶颈。因此，我们看到的是从“可观测性”向“自我改进”的转变。这里的人工瓶颈在于人类仍在查看仪表盘，仍在分诊、发布修复并审查那些 PR，这就是终极瓶颈。所以我们不仅要闭合这个回路，还要以 Agent 级的速度来闭合它。我们不想仅仅赋予人类调试 Agent 的能力，我们希望赋予 Agent 自行调试和理解自身的能力。
+
+<details>
+<summary>Original English</summary>
+Now, takeaway number two, going back to that loop, I have a question for the group and that is, what if an agent could do the investigation and propose a fix? Because right now, the manual investigation is that that's the bottleneck. Humans are the bottleneck here. So, what we're seeing is a shift from observability to self-improvement. The manual bottleneck here is that humans are still reviewing dashboards. They're still triaging and shipping those fixes and reviewing those PRs and that is the ultimate bottleneck. So, we want to not only close this loop, but we want to close it at agentic speeds. We don't want to just give humans the ability to debug agents. We want to give agents the ability to debug and understand themselves.
+</details>
+
+这就是我们在可观测性领域看到的转变：可观测性不再只是让人类理解 Agent，而是关乎 Agent 理解自身，关乎 Agent 拥有自我提升的工具，关乎 Agent 拥有具备问责性的工具。记住我们一开始谈到的内容：trace 才是真正的运行时所在，才是真正的逻辑存储之处。如果你的编码 Agent 正在推送 PR（我知道它们确实在推），它们推送 PR 时其实并不知道生产环境中发生了什么，这意味着它们是在盲目提交 PR。它们依赖静态代码，不知道生产环境中到底在发生什么。通过闭合这一回路，通过将你的编码框架、编码 Agent 与生产数据库中实际发生的事情连接起来，你就赋予了 Agent 充分理解这些变更实际带来了什么影响的能力。
+
+<details>
+<summary>Original English</summary>
+And that's the shift that we're seeing in observability. Is observability is no longer about humans understanding agents, it's about agents understanding themselves. Agents having the tools to improve themselves. Agents having the tools to be accountable. Remember what we talked about in the very beginning. That is that traces is where the real runtime is. That's where the real logic is stored. If your coding agents are pushing PRs and I know they are, they're pushing PRs without actually knowing what's happening in production. That means they're pushing PRs blind. They're reliant on the static code. They don't know what's actually happening in production. By closing that loop, by connecting your coding harnesses, your coding agents with what is actually happening happening in your production database, you are giving your agents the full understanding of what these changes are actually making.
+</details>
+
+这就是第二个也是最后的要点：最出色的 Agent 不仅仅从失败中吸取教训，最出色的 Agent 会自我修复。这就是我们所看到的可观测性的未来——Agent 不仅能够看见，还能自行对其自身进行评估与改进。谢谢大家。
+
+<details>
+<summary>Original English</summary>
+And that is the second and final takeaway. That is that the best agents don't just learn from failures. The best agents fix themselves. And that's the future of observability that we're seeing is that agents can not only see, but they can evaluate and improve themselves on their own. Thank you.
+</details>

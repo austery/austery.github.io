@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>从上下文到持久记忆：构建真正可扩展的 AI 智能体记忆系统架构</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">从上下文到持久记忆：构建真正可扩展的 AI 智能体记忆系统架构</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-09</span>
+    
+
+    <header class="article-header">
+      
+      <h1>从上下文到持久记忆：构建真正可扩展的 AI 智能体记忆系统架构</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">agentic-memory</span>
+      
+        <span class="tag-pill tag-pill--no-page">hybrid-search</span>
+      
+        <span class="tag-pill tag-pill--no-page">context-drift</span>
+      
+        <a class="tag-link" href="/tags/knowledge-graph/">knowledge-graph</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">深入剖析 AI 智能体在处理长期任务时因缺乏持久记忆所面临的重复计算、幻觉激增与上下文漂移问题。系统性阐述情景、语义、程序与工作记忆四层模型，解构基于多模态数据库的混合检索路由与实体图谱，并提出涵盖脱敏过滤、冲突仲裁、生命周期老化及闭环反馈评估的生产级治理方案。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=BIhiYL4U9_M" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-09T00:00:00.000Z">2026-10-09</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>5 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AA%97%E5%8F%A3%E7%9A%84%E8%AE%A4%E7%9F%A5%E5%B1%80%E9%99%90%E4%B8%8E%E6%8C%81%E4%B9%85%E8%AE%B0%E5%BF%86%E5%B1%82%E6%9E%B6%E6%9E%84%E9%87%8D%E5%A1%91">上下文窗口的认知局限与持久记忆层架构重塑</a></li><li class="outline-h3"><a href="#%E4%BA%BA%E7%B1%BB%E8%AE%A4%E7%9F%A5%E6%98%A0%E5%B0%84%E6%99%BA%E8%83%BD%E4%BD%93%E5%A4%9A%E5%B1%82%E8%AE%B0%E5%BF%86%E5%88%86%E7%B1%BB%E4%BD%93%E7%B3%BB">人类认知映射：智能体多层记忆分类体系</a></li><li class="outline-h3"><a href="#%E5%A4%9A%E6%A8%A1%E6%80%81%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BA%95%E5%BA%A7%E4%B8%8E%E5%A4%8D%E5%90%88%E5%8A%A0%E6%9D%83%E6%B7%B7%E5%90%88%E6%A3%80%E7%B4%A2">多模态数据库底座与复合加权混合检索</a></li><li class="outline-h3"><a href="#%E5%AE%89%E5%85%A8%E9%98%B2%E7%BA%BF%E5%86%B2%E7%AA%81%E8%A3%81%E5%86%B3%E4%B8%8E%E8%AE%B0%E5%BF%86%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%B2%BB%E7%90%86">安全防线、冲突裁决与记忆生命周期治理</a></li><li class="outline-h3"><a href="#%E9%97%AD%E7%8E%AF%E5%8F%8D%E9%A6%88%E6%BC%94%E5%8C%96%E8%B5%B0%E5%90%91%E8%87%AA%E9%80%82%E5%BA%94%E7%94%9F%E4%BA%A7%E7%BA%A7%E6%99%BA%E8%83%BD%E4%BD%93%E5%B7%A5%E7%A8%8B">闭环反馈演化：走向自适应生产级智能体工程</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="上下文窗口的认知局限与持久记忆层架构重塑" data-reading-heading="">上下文窗口的认知局限与持久记忆层架构重塑</h3>
+<p>在当前大语言模型与自主智能体的发展中，开发者普遍面临一个<strong>系统性认知瓶颈</strong>：误将<strong>上下文窗口</strong>（Context Window: 模型单次会话能够接收并处理的最大 Token 容量）等同于系统记忆。从工程本质来看，上下文窗口仅代表当前推理会话的瞬时工作区，一旦执行会话终结，智能体在处理工单、扫描代码库、排查根因以及合成修复脚本时所产生的高价值认知沉淀，便会随着进程退出而被彻底丢弃。当下一次面对同类甚至完全相同的任务时，诸如 <strong>Claude Code</strong> 或 <strong>Codex</strong> 等智能体被迫从零开始重新读取原始文件、发送相同查询并重复走通整条推理链。这种无状态设计不仅极大消耗算力与 Token 预算，更在无形中成倍增加了模型产生幻觉与决策偏差的概率。</p>
+<p>为解决这一问题，部分团队试图通过简单拼接 <strong>Markdown 文件</strong>（Markdown Files: 用于离线存储上下文文档的轻量级文本层）或建立庞大的本地 Wiki 目录来模拟记忆，甚至借助系统原生检索工具（如 Grep）进行全文扫描。然而，随着协作主体与业务复杂度上升，基于离散纯文本文件的方案既无法承载高并发读写，也无法实现复杂的语义与图结构混合关联，其最终走向依然会逼近自研数据库的死胡同。真正的解法在于构建一套<strong>企业级受控记忆层</strong>（Governed Memory Layer: 具备生命周期管理、安全隔离、混合检索与反馈演化的持久化认知中枢），将智能体在任务中所沉淀的有效经验转化为结构化事实，形成可追溯、可审计且持续进化的持久知识闭环。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Hola, soy Anders. I abogado promotor para la base de datos Oracle AI, y te diré cómo lo hicimos podemos acercarnos La memoria de los agentes como antes problema sistémico, cómo convertir contexto a la realidad el nivel de memoria que ayudará a su agentes para trabajar mejor. Cuando nosotros hablar de la memoria agentes, tenemos en significado del diseño recuperación de la memoria, formación de la memoria y almacenamiento permanente que proporciona trabajo estos recuerdos. Definitivamente , todos ya usado por diversos agentes, como Claude Code o Códice, y vi cómo ellos están trabajando en tarea, releyendo los mismos los archivos mismos de nuevo y de nuevo. Esto se debe a que no tienen conocimiento acerca de tuvo lugar en pasado. Contextual Las ventanas no son memoria. Esta es la entrada para sesión actual y No es una experiencia permanente. Digamos que tengo sesión del agente que funciona con entradas atención al cliente: Lee mucho documentos, realiza consultas, juegos error, encuentra causa raíz y realiza todo esto maravilloso trabajo, síntesis procedimiento útil. Qué está sucediendo ¿Al final de la sesión? Él simplemente desechado. Y esto porque no hay constancia. A través de mucho tiempo aparece otro agente, trabajando en tareas similares y obligado a repetir Todo el trabajo es el mismo. Está mirando de nuevo. documentos, realiza solicitudes, y esto es más oportunidades para delirios, alucinaciones y, en última instancia, más pequeños precisión. La memoria no es puede comenzar mientras esta útil experiencia Los agentes no lo son se convertirá en estado controlado. Aumento ventanas de contexto tampoco es una solución. Simplemente gastamos cada vez más fichas. La sesión se convierte en más tiempo, sucede compresión de datos. Señal útil para nuestros agentes se pierde entre la multitud irrelevante información. Asimismo " "borradores"—esto es solo Desvíos. Por ejemplo, archivos Markdown : comenzamos construir grande jerarquías de archivos, wikis , indicaciones. Él Ayuda, pero no lo es. revisado reproducción de datos. Los archivos no son escalado en grande multijugador entornos. Herramientas en como grep muy útil para buscar, pero son malos escalable y no proporcionar híbrido complejo retiro. A mí parece que si nosotros lo traeremos a conclusión lógica intentar construir nivel de memoria superior archivos, finalmente Vamos a crear nuestra propia base de datos datos. Pero puedes solo usa base de datos. En este presentaciones que Analicemos las lecciones que nos dimos cuenta proveedor de bases de datos datos, trabajando con clientes que desarrollar la memoria para agentes, resolver real problemas y necesidad oportunidades reproducción de datos.</p>
+</details>
+<h3 id="人类认知映射智能体多层记忆分类体系" data-reading-heading="">人类认知映射：智能体多层记忆分类体系</h3>
+<p>为了让沉淀下来的经验在架构中具备明确边界，现代记忆系统借鉴了认知心理学原理，将异构知识抽象为相互配合的四级认知模型。粗暴地将运行时的对话原始记录（Raw Transcripts）直接堆入数据库不仅会导致知识库充斥着杂乱碎片，更会严重污染推理链路。真正的记忆形成必须是一个高度提炼、结构化事实化的蒸馏过程。</p>
+<ul>
+<li><strong>情景记忆</strong>（Episodic Memory: 记录特定任务时间节点、执行轨迹与历史会话片段的原始经验记录）：捕获过往发生的特定事件，便于溯源智能体曾经历的交互上下文。</li>
+<li><strong>语义记忆</strong>（Semantic Memory: 抽象沉淀的客观事实、实体属性、用户偏好与业务规则知识）：脱离具体时空背景的确定性知识网络，构成智能体跨任务执行的核心认知库。</li>
+<li><strong>程序记忆</strong>（Procedural Memory: 固化下来的标准作业流程、步骤规范与可复用决策逻辑）：定义“如何完成某项特定任务”的操作规范，使智能体遭遇重复场景时无需重新规划即可调用成熟工作流。</li>
+<li><strong>工作状态/工作记忆</strong>（Working Memory: 仅在当前子任务生命周期内有效的高频暂存状态）：维系当前正在处理的瞬时上下文，任务结束或经过预设时间衰减后，适时归档并转入其他长期记忆分类。</li>
+</ul>
+<p>在物理存储层面，单纯的向量集合已无法承载上述多维关系。一套严谨的记忆存储模式由<strong>类型化记忆对象</strong>（Typed Memory Objects）与复合寻址路由共同构成。每个记忆实体均需包含主键标识、文本正文、JSON 属性元数据、高维向量表示、全文倒排索引节点，以及连接上下文关联实体的<strong>知识图谱边</strong>（Graph Edges）。通过将时间戳元数据、审计事件（包含创建者身份、调用场景与关联日志）与实体图谱紧密绑定，系统才能够在检索阶段顺着图关系与时间窗口提取出高度精确的上下文关联网。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Sistemas modernos memoria del agente convergen hacia un cierto modelo, que proporciona formación, reproducción, desarrollo y evaluación de la memoria. Entonces, cuando nosotros formamos recuerdos, esto se destilan experiencias, hechos estructurados. No es fácil. descarga sin procesar transcripciones. Cuando nosotros recreando recuerdos, La búsqueda híbrida se convierte en método dominante. Este es un formulario de búsqueda que combina sus diversos tipos. Este es un vector buscar similitudes, búsqueda léxica, buscar entidades por relacional objetos, derivar gráficos y varios señales de tiempo datos, relevancia y comentario. También necesitamos consolidación en estos sistemas. Después de todo, pueden Aparecen duplicados. Necesitamos resolver conflictos . El sistema debe desarrollarse con el tiempo. De lo contrario quedará obsoleto. se volverá irrelevante y inútil. Memorias se necesita un elemento temporario accesorios. Por lo tanto, ¿Cuándo se creó esto? ¿ ¿Cuándo fue antes? ¿Accedido? Como ¿Cuánto dura? ¿válido? Tal vez esto realmente solo durante cierto tiempo ventanas. Y todo esto tiene ser parte de regular retroalimentación y evaluaciones. Si no lo hago medir el uso y no hago reembolsos conexión a nivel de memoria, Todo esto fracasará. . Otro importante parte—este es el medio control control. Entonces, secretos, información personal —debería ser editado a entrando en el nivel memoria. Los derechos tienen estar limitado: para agente, para el trabajador proceso, equipo o usuario. Él especialmente importante en multiusuario entornos. A nosotros se necesitan los apropiados administrativo aprobación, verificación y oportunidad eliminando obsoleto o dañado datos. Cuando nosotros pasar por un ciclo memoria, agente celebra una sesión, Sí funciona, lee documentos, lanzamientos consultas, sintetiza datos útiles. Después o durante este Se crea la sesión hecho. Estamos grabando este hecho por edición, enriquecimiento y almacenamiento en nivel persistencia. Y entonces, cuando comienza otro sesión con el apropiado contexto, puede Extraer este hecho y úsalo para reconstrucción mapa de contexto. Entonces, él utiliza el hecho de trabajos anteriores, para hacerlo más fácil Siguiente tarea. Él reduce la cantidad de trabajo para el próximo agente. Y si esto agente con éxito utiliza el hecho, nosotros podemos añadir puntos comentarios a de este recuerdo. Entonces, nosotros nos adaptamos al ritmo tiempo. Nosotros obtenemos datos relacionados y reloj nuevo bienes parafernales. Estamos de nuevo nos volvemos hacia él y hacemos algo con ello. Ahora el recuerdo llamado como entorno de función Ejecución del agente. Por lo tanto, ella necesita niveles de lectura y escritura y almacenamiento. Su entorno de ejecución agente puede nivel de llamada memoria a través de ganchos, MCP, habilidades u otras métodos. API de nivel A La memoria se abre acceso a la API de lectura, grabación, reversa comunicación y administración y luego interactúa con almacenamiento o bases de datos datos. Respecto a la elección bases de datos, creo bases de datos multimodelos datos especialmente útil porque ellos permiten trabajar con líneas, columnas, vectorial representaciones, texto completo búsqueda, relacional objetos, gráficos, episodios y hechos en un solo lugar. Entonces tu memoria puede para ser almacenado en consolidado en un lugar con uno Conectando con la base de datos datos. Puedo realizar varios tipos de híbridos buscar y regresar datos recibidos. Como ¿Qué aspecto tiene este recuerdo? Ella estará escribió, y usted podría ver esto modelo en diferentes presentaciones o en de alguna forma. Esto es aproximadamente tomado de memoria humana y tal vez aplicado a agentes. Entonces, tenemos memoria episódica. Estos son pasados ​​ específicos eventos o fragmentos transcripciones, sobre que ellos trabajaron agentes. Tenemos memoria semántica. Estos son hechos concretos. Acerca de nuestros trabajadores procesos, preferencias usuarios y otros esencia. Tenemos memoria procedimental. Así es como lo hacemos realizó una cierta tarea o rutina, por ejemplo, paso colecciones. Estas son las reglas reutilizable utiliza que Los agentes serán llama de nuevo y de nuevo, si ellos repetir uno similar trabajar. Y tenemos estado de funcionamiento. Laboral estado—es como memoria a corto plazo. En esto estamos trabajando. estamos trabajando en el presente momento, y estos datos temporales puede ser válido solo durante un cierto lapso de tiempo, después de lo cual podemos moverlos a otro tipo de memoria. Esto nos ayuda. distribuir datos por diferentes categorías, y podemos aplicar diferentes técnicas de búsqueda para este tipo de memoria. Qué esquema de almacenamiento ¿memoria? La memoria es objetos tipificados más ruta de búsqueda. Entonces, nuestro objeto tendrá memoria identificador, por ejemplo, primaria llave. Contendrá contenido de texto, JSON- etiquetas y datos documento. Él tendrá vector representación. Nosotros creamos un vector en basado en el contenido de índice del vector buscar semejanza. Idealmente también tendremos índice de texto para alivio texto completo búsqueda por palabras clave palabras. Cual combinado con búsqueda vectorial. Nosotros podemos tener un gráfico conexiones con varios costillas. Memorias puede estar relacionado a través del grafo de entidades. Es decir, este recuerdo conectado a eso un recuerdo que conectado a otro recuerdo. Él contexto adicional, que podemos extraer durante la etapa buscar. Nosotros también podemos tener hechos temporales. A ¿En qué punto es esto? ¿Es válido el recuerdo? ¿Cuándo fue la última vez que lo vimos? ¿usado? Y, lo cual es extraordinario importante, auditoría eventos. ¿Quién lo creó? ¿Este recuerdo? ¿Para qué? se utilizó ¿ Un diario de cómo él se utilizó y metadatos relevantes. Todo está como debe estar. parte de su plan almacenamiento cuando nosotros Trabajamos con la memoria.</p>
+</details>
+<h3 id="多模态数据库底座与复合加权混合检索" data-reading-heading="">多模态数据库底座与复合加权混合检索</h3>
+<p>当智能体在运行时环境（Agent Execution Runtime）中通过协议（如 <strong>MCP</strong>（Model Context Protocol: 开放智能体上下文协议）或自定义技能钩子）调用记忆层时，底层基础设施必须支撑起高度复杂的复合查询。采用割裂的技术栈（例如将向量库、图数据库、关系型数据库分立搭建）会引入巨大的分布式同步开销与事务脆弱性。相比之下，采用<strong>多模态数据库</strong>（Multi-Model Database: 在统一存储引擎中集成关系表、JSON、向量检索与图遍历能力的架构，如 <strong>Oracle AI 向量数据库</strong>）能够允许单个统一连接完成异构数据的跨模态处理。</p>
+<p>在构建记忆检索流时，单一检索策略均存在严重缺陷：纯向量相似度检索虽然善于捕捉模糊语义，但在精确术语、代码符号或产品型号上极易出现语义偏差；纯词法匹配则缺乏泛化能力。因此，生产级智能体必须依赖<strong>混合检索</strong>（Hybrid Search: 结合语义向量、关键字词法、关系约束与图跳跃的复合召回引擎）：</p>
+<ol>
+<li><strong>向量距离匹配</strong>：通过密集向量嵌入捕捉概念近似性；</li>
+<li><strong>倒排词法检索</strong>：利用精确匹配算子快速筛选特定标识符与短语；</li>
+<li><strong>图谱关系扩展</strong>：通过实体节点间的边关系抽取邻域关键背景；</li>
+<li><strong>时效性与权重重排序</strong>：结合最后访问时间、创建窗口衰减因子与系统历史置信度，为各分支检索结果赋予加权得分。</li>
+</ol>
+<p>最终，系统将多条分支的分值统一归一化并合成总评分，截取 <strong>Top-K 最优候选结果</strong>，作为精准上下文切片注入到当前智能体的提示词空间中。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Cuando creamos recuerdos, queremos darles forma conscientemente. Bien recuerdos mucho útil. Por lo tanto, necesitamos determinar lo vital ciclo, volumen, varios conexiones y metadatos asociados. Cuando el entorno ejecución del agente decide crear memoria, debemos Comienza a editar. La edición es muy lo primero importante paso a paso, porque antes para realizar incrustaciones o enriquecimiento, quiero eliminar personal datos. No quiero eso. secretos o inapropiados información extraña alcanzó el nivel memoria. Esta es una receta desastres. Por lo tanto nosotros primero realizamos edición. Entonces nosotros podemos enriquecer memoria. Con qué esto está relacionado ¿memoria? ¿Qué metadatos? ¿Este recuerdo? Nosotros podemos aplicar a ello el ámbito de acción. ¿Qué agente funcionó? ¿Sobre este recuerdo? Qué ¿Esto es un equipo? ¿Qué es esto? ¿organización? Él ayuda a agrupar datos para que yo no recibido de otros sesiones de recuerdos, relacionado con otros agentes o trabajadores procesos que contribuyen confusión. Podemos para incrustar, es decir, crear vector de contenido. Y entonces podemos para formarse así llamado episodio. Él fragmentos transcripción, de la cual Se creó un recuerdo. Esto es útil para controles de origen y adicional contexto. Cualquier específico para organizaciones políticas también es posible Solicita aquí. Todo, ¿Qué necesitas para? su específico caso de uso . Y entonces podremos guardar datos en nivel persistencia. Cuando nosotros llamamos al nivel memoria, nuestro la búsqueda híbrida se hace realidad. Híbrido la búsqueda es una combinación diferentes tecnologías de búsqueda, que le permite encontrar más resultados precisos. Entonces, ¿cómo podemos nosotros aplicar búsqueda híbrida? En primer lugar, podemos usar búsqueda vectorial, para encontrar semánticamente similar recuerdos. Entonces podemos agregar búsqueda léxica, para encontrar coincidencias exactas palabras clave. Y luego podemos agregar búsqueda en el gráfico, para encontrar entidades relacionadas y conexiones. También podemos usar tiempo y relevancia datos, para que usted pueda dar prioridad a los nuevos o recuerdos más relevantes. Y entonces nosotros aplicamos pesos a cada uno de estos tipos de búsqueda, para obtener una calificación compartida. Esto nos da la oportunidad configurar la búsqueda bajo su específico necesidades. Por ejemplo, si nosotros Estamos buscando un código específico, tal vez nosotros Queremos darle más peso búsqueda léxica y menos vector. Y si nosotros Buscamos conceptos abstractos, podemos dar más peso vector búsqueda y ligeramente inferior en léxico. Él origen de la memoria, ¿De dónde vino ella y cómo lo conseguimos. Él También es importante. Cuando estamos considerando búsqueda híbrida: distancia vectorial útil para semánticamente similar cosas operador " contiene"—ideal para búsqueda léxica, más gráficos tablas, datos de tiempo etc. Tomamos estos sucursales y solicitar pesos para ellos. Podemos asignar pesos dependiendo de las necesidades. Esto es lo que es posible. configurado en su algoritmo híbrido buscar. Resultados están unidos en puntuación total de diferentes ramas de consultas, y entonces podemos tomar top-K resultados, de modo que diga: aquí hay tres mejores resultados nuestro híbrido buscar. Aproximadamente así se puede implementar búsqueda híbrida en base de datos multimodelo datos que son capaces de proporcionar todos estos métodos de búsqueda con una interfaz.</p>
+</details>
+<h3 id="安全防线冲突裁决与记忆生命周期治理" data-reading-heading="">安全防线、冲突裁决与记忆生命周期治理</h3>
+<p>记忆层不仅是静态的读写存储器，更是充满动态风险的运行系统。未经清洗和治理的数据会导致系统迅速劣化。生产级记忆治理必须建立从写入前审查到失效淘汰的完整防护闭环：</p>
+<ul>
+<li><strong>数据脱敏与写入过滤</strong>（Sanitization &amp; Redaction: 阻止敏感数据进入长期存储的合规过滤机制）：在计算向量嵌入或持久化前，必须强制剥离 API 密钥、个人身份识别信息（PII）以及不相关的会话噪声。</li>
+<li><strong>租户隔离与权限划界</strong>（Demarcation &amp; Tenancy Scope: 防止跨用户、团队或智能体越权访问的隔离边界）：严格限定单条记忆所属的智能体、团队或用户域。缺乏清晰划分会导致灾难性的数据越权泄露，如同普通用户直接读取到其他账号的对话历史。</li>
+<li><strong>记忆投毒防御</strong>（Memory Poisoning Prevention: 拦截恶意提示注入与不可信指令固化的防护屏障）：防范不可信数据源诱导注入破坏性指令并被记忆层固化为长期规则。必须引入严格的熔断机制、合规审查与可信度评分。</li>
+<li><strong>冲突检测与裁决</strong>（Memory Conflict Resolution: 针对互相矛盾的事实所执行的版本与真值仲裁）：当不同记忆片段给出互相矛盾的指令时，智能体会陷入认知死锁。系统必须通过冲突识别、版本控制与置信度权重进行优先级裁定。</li>
+<li><strong>过载抑制与陈旧衰减</strong>（Context Drift &amp; Over-emission Management: 应对认知漂移与无用信息泛滥的淘汰机制）：随着知识库规模从几千条膨胀至数十万乃至数百万条，弱相关记忆与陈旧技术配置（例如项目已从 <strong>npm</strong> 迁移，但旧构建指令仍在库中）会充斥检索通道。系统必须引入时间窗口淘汰机制，配合生命周期管理淘汰死数据。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>La memoria no es simple el almacenamiento donde nosotros grabamos y desde dónde Leímos los datos. Eso ser cierto útil, la memoria tiene desarrollarse con el tiempo. Nosotros tampoco queremos constantemente descargar todo datos, de lo contrario vamos a conseguir un montón memoria basura. Aquí podemos cerrar el bucle de memoria mediante consolidación y manejo de errores. Memoria obsoleta puede aparecer cuando, Digamos que mi proyecto usó NPM y Entonces decidimos cambiar a otro sistema de ensamblaje. Qué Esto le sucederá a todo el mundo. memoria asociada con ¿NPM? Si el agente se volverá hacia ella, esto será problemático y él puede intentarlo hacer algo malo. El sistema debe esperar la aparición datos desactualizados a través de la deriva contexto cuando mencionado. Equivocado el contexto puede surgen cuando nosotros incorrectamente limitamos los límites memoria. Es como si tú Inicia sesión en tu cuenta ChatGPT y vi historial de mensajes otra persona. Ejem, si no lo haces aplicar lo apropiado demarcación, tú puedes obtener filtraciones graves datos. Entonces, esto tiene ocurrirá durante grabación y durante leer. Envenenamiento memoria—es entonces fuente poco fiable lugares peligrosos instrucciones en su niveles de memoria. ¿Es esto o No es lo peor escenario: sucedió solicitud de inyección, en Tú no estabas allí. fusibles, debida diligencia, censura o control memoria, y allí Ocurrió algo muy malo. peligroso, por qué Todos tus datos han sido filtrados. . Así que sea muy cuidado de evitar similares cosas gracias a adecuado fusibles y administrativo comportamiento. Conflicto memoria—es cuando en Tengo dos diferentes. fragmentos de memoria. Uno dice: "Oye, nosotros estamos realizando tareas "Como esto." Y otro dice: "Bueno, en realidad nosotros "Lo hacemos así." Dado que ambos relacionarse con uno y el mismo la misma tarea, ellos tendrán alta calificación en buscar. Entonces tú, probablemente lo conseguirás estos mismos conflictos en su contexto tarjeta. Y cuando el agente Esto se lee, es así: " Bueno, me lo dijiste, que el restaurante está a la derecha, pero de hecho él izquierda. No sé qué. para hacer". Así que detección y La verificación aquí es muy importante para resolución de conflictos . Demarcación también. A veces hay diferentes maneras ejecución de uno y la misma tarea. Emisión excesiva y irrelevancia surgir como tu crecimiento sistemas de memoria. Si Nosotros solo hacemos cosas todos los datos allí, no Pensándolo bien, lo que escribimos, podemos para meterse en una situación emisión excesiva, cuando tenemos tantos partidos débiles que están desbordados tarjeta de contexto. Él el mismo problema que con un muy grande ventana de contexto, donde estamos intentando Aprieta todo lo que puedas más datos. Él Es simplemente confuso. La irrelevancia es semánticamente cercano recuerdos que son altamente están clasificados como híbridos buscar, pero no precisamente relacionado con la tarea. Acaban de llegar alta calificación. Por lo tanto Estos son problemas gestión y configurar su algoritmo de búsqueda . Una fuga de datos es cuando extraño, inesperado Entrada de datos sistema de memoria. Él versión menos seria envenenamiento de la memoria. Enriquecimiento adecuado y filtración entradas de memoria en tiempo de grabación: este es el camino resolver el problema fuga. Con el tiempo, nosotros También obtenemos deriva oculta. Él cuando el sistema de memoria está creciendo. Tal vez funcione. simplemente genial en miles de registros. Pero entonces cuando los tenga 50 mil, un millón o más, lo entiendo todo estos extraños resultados, y ella no lo es en absoluto obras. Así que, mucho, muy importante aplicar contramedidas apropiadas: edición anterior grabación, comprobación área de visibilidad, ciclo de vida y qué lo más importante, comentario.</p>
+</details>
+<h3 id="闭环反馈演化走向自适应生产级智能体工程" data-reading-heading="">闭环反馈演化：走向自适应生产级智能体工程</h3>
+<p>构建记忆基础设施的终极闭环在于<strong>反馈驱动的质量演化</strong>（Feedback Loop Evolution: 依据下游实际执行成败动态调整记忆权重的强化学习机制）。记忆的实用价值必须具备可度量性：当智能体检索并调用某一记忆片段后，若任务成功解决，该条记忆的置信度评分应获得正向强化；相反，若该记忆诱导了执行故障或异常，其权重与召回排名将立即被降级惩罚，甚至直接触发审查或归档。</p>
+<p>没有持久受控记忆支撑的智能体，本质上是在无休止的“薛定谔循环”中低效运转——重复解析相同代码库、重新发起相同网络探测、不断在早已解决的技术坑洼中重犯相同错误。通过在底层引入多模态数据库底座，配合官方开源的 <strong>Python SDK</strong> 与预置的工程用例，开发者能够快速将多模态数据原语装配为工业级记忆系统。将智能体从瞬时上下文的牢笼中解放出来，使其能够在前序经验的稳固台阶上继续推进工作，是真正迈向低成本、高可靠、自主进化的智能系统的必由之路。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Comentario- Esto es lo que cierra el círculo. memoria. Calidad La memoria debería ser mensurable. A nosotros Se requiere corrección adquisición de datos. Nosotros debe tenerse en cuenta obsoleto o recuerdos dañinos y, en última instancia, utilidad sistemas para procesos adicionales. Esto debería afectar decisión sobre ciclo vital categoría. Entonces, si el agente recibe memoria potencial, él utilizará o rechazarlo. Tal vez si él lo usaré, todo saldrá mal y El sistema fallará. Este reverso La conexión debe volver. Y si el recuerdo era evaluación perjudicial comentario debería disminuir. Si él era útil, tal vez podamos recaudar su calificación. Así que esto es No es solo un almacén. Debe conservarlo. Tu nivel de memoria debe conservar información sobre si había recuerdos útil, anticuado, irrelevante, dañino, etc. Nosotros Realmente queremos diseñar mesurado reproducción de datos de controlable formación de la memoria, construido sobre multimodal plataforma de almacenamiento . Sin memoria estos agentes con más probabilidad se reiniciará lo mismo tarea. Ellos serán para crear todo de nuevo y otra vez. Ellos serán leer los mismos archivos. Ellos serán hacer lo mismo peticiones. Ellos gastará mucho tiempo, un montón de fichas, funcionará mucho más lento y habrá mucho más propenso a errores. Ellos serán repite los mismos errores. Si el agente no sabe nada experiencia previa, él hará lo mismo de nuevo. Y si esta acción estaba equivocado, él Volveré a equivocarme y otra vez. Y con un control agentes de memoria puede continuar trabajar desde ese lugar, ¿Dónde se detuvieron? Ellos poder para usar eso, lo que les precedió, y, eventualmente, reducir número Fracasos repetidos. Este es el verdadero objetivo. grabación, recepción, gestión y evolución. Queremos elevar el nivel éxito. Queremos Hazlo más rápido. Nosotros queremos hacer esto más económico. Queremos Hazlo mejor. Si usted prefiere en la práctica, yo recomiendo Conozca nuestros SDK de Python para memoria agentes. Este código te guiará por enlace a GitHub con portátil Python, donde se muestra cómo es hacer con la ayuda de nuestro SDK. Este SDK construido sobre la base de primitivas básicas datos. Todo de lo que estamos hablando Aquí estamos hablando de, existe en base de datos. Tenemos También está nuestro centro desarrolladores. Si usted ingeniero de IA o desarrollador y tú interesante, qué moderno base multimodal Los datos encajan en desarrollo de artificial ¿inteligencia? Es lo mismo. un lugar donde puedes ver nuestro ejemplos, ver, lo que es posible y, tal vez , incluso inspírate crear algo genial con la ayuda de Excelente base de datos. HAY, Una vez más, soy Anders, eh, Anders Svensson. Si Quieres para charlar o Contáctame, yo Estaré en el stand de Oracle. Bueno, muchas gracias. Espero que eso haya sido todo. es bueno para ti, y, eh, te ayudó en creando cosas maravillosas cosas. Muchas gracias.</p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/b2902f15480bfc04ea4c6daf6763055a853a7eddda8be845f70768636f7f0dc3.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/b2902f15480bfc04ea4c6daf6763055a853a7eddda8be845f70768636f7f0dc3.md" download="从上下文到持久记忆：构建真正可扩展的 AI 智能体记忆系统架构.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Oracle" class="entity-link company-link">Oracle</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Claude Code" class="entity-link product-link">Claude Code</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

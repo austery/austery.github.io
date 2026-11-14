@@ -1,0 +1,2886 @@
+---
+author: Latent Space
+date: '2026-10-13'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=BHiYomkfoGQ
+speaker: Latent Space
+tags:
+  - world-model
+  - robotics
+  - embodied-ai
+  - action-model
+  - scalability
+title: Dinno Robotics 发布 Dina 2 世界动作模型：从单点试点到规模化商业落地
+summary: Dinno Robotics 推出基于 100 万小时数据训练的世界动作模型 Dina 2，通过预测未来视频状态指导机器人动作。文章展示了其在鼎泰丰等场景的规模化部署，强调通用机器人在处理可变形物体及端到端任务中的优势，实现了从概念验证到商业价值验证的突破。
+insight: ''
+draft: true
+series: ''
+category: ai-ml
+area: tech-engineering
+project: []
+people:
+  - Jason Ma
+  - George
+  - Chad
+companies_orgs:
+  - Dinno Robotics
+  - Din Tai Fung
+products_models:
+  - Dina 2
+  - Dyna 2.1
+media_books: []
+status: evergreen
+---
+<!-- chunk 1/11 -->
+
+### 机器人新任务学习与规模化落地
+
+**Jason Ma**：是的。因此，如果我们希望机器人学会一项全新的任务，基本上只需要进行少量的机器人真机数据采集，随后模型就能开始进行适应与学习……
+
+<details>
+<summary>Original English</summary>
+
+**Jason Ma**: Yeah. So if we want to learn a new task, uh you know, we basically do a little bit of robot data collection, then the model these...
+
+</details>
+
+**主持人**：所谓“少量”具体大概是多久？
+
+<details>
+<summary>Original English</summary>
+
+**主持人**: What is a little bit like?
+
+</details>
+
+**Jason Ma**：嗯，大概就是几个小时左右。
+
+<details>
+<summary>Original English</summary>
+
+**Jason Ma**: Yeah. Like couple hours.
+
+</details>
+
+**主持人**：几个小时。
+
+<details>
+<summary>Original English</summary>
+
+**主持人**: Couple hours.
+
+</details>
+
+**Jason Ma**：对。而在某些特定任务中，甚至只需要几十分钟，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Jason Ma**: Yeah. Where in some of the task, like just tens of minutes, right?
+
+</details>
+
+**主持人**：对，然后……
+
+<details>
+<summary>Original English</summary>
+
+**主持人**: Yeah. And then...
+
+</details>
+
+**Jason Ma**：比如切菜那个任务的数据采集只用了45分钟。是的。
+
+<details>
+<summary>Original English</summary>
+
+**Jason Ma**: The chopping one was 45 minutes. Yeah.
+
+</details>
+
+**Jason Ma**：打开冰箱那个任务是在面试中现场完成的，那其实就像是给你们新入职工程师准备的一项入职考核任务。如今我们的机器人每天都在为遍布全美各地的众多不同门店折叠数以千计的餐巾纸。这实际上是我们目前规模最大的量产落地客户，对吧？因此我想在这里做一个非常明确的区分。如今行业里有大量的具身机器人公司都在大谈特谈实际部署、大谈试点项目，但真正困难的绝非仅仅把机器人放进某一个特定网点，或者完成一次短期概念验证试点。真正困难的是让客户切实相信并验证你的机器人能够创造出足够显著的商业价值，以至于他们愿意将你的机器人全面铺开、部署到旗下的众多经营门店中。这正是我们与鼎泰丰合作时所取得的扎实进展，据我所知，在其他研发类似通用具身机器人的公司中，目前还没有哪家真正做到了这一点。在鼎泰丰，我们的机器人每天要折叠数千张餐巾纸。
+
+<details>
+<summary>Original English</summary>
+
+**Jason Ma**: The open the fridge was on and that's an interview. That's like an onboarding task for one of your engineers. Our robots today fold thousands of napkins for many many different locations, many different gent locations in the United States. So that's actually our biggest scaled customer, right? So I want to make a distinction here. Uh today there's a lot of robotics companies talking about deployments, talking about pilots, but what's really hard is not putting your robot in one location or doing a pilot. What's really hard is that the customers believe or validate that your robot creates enough value that they want to deploy your robots across many of their sites. So that's what's happened for us with Dintyong which to the best of my knowledge hasn't really happened for other companies doing similar like general purpose robots. So at Dentyon our robots fold thousands of napkins per day.
+
+</details>
+
+### 节目开场与探访 Dinno Robotics
+
+**主持人**：在进入今天的正式节目之前，我想先对广大听众说几句心里话。非常感谢大家！如果我们没有看到大家如此明确地点击进来、持续收听收看我们关于人工智能工程、前沿科学与科技娱乐的内容，我们是绝对不可能把这些优质内容持续带给各位的。几乎每天都有赞助商找上门来想做商业广告投放，但非常幸运的是，你们当中有足够多的人选择订阅并支持我们，才让我们能够在完全没有赞助广告的情况下维持节目的长久运转，我们也十分希望能够将这种无广告的形式一直保持下去。不过，我在这里只有一个小小的请求想拜托大家：大家能够为我们做到的最有力、而且完全免费的一件事，就是顺手点击一下那个订阅按钮。这是我唯一会向大家请求的事。对于我以及每周全力以赴为大家制作《The Inside Space》的整个团队来说，你们的订阅意味着一切。只要大家愿意订阅支持，我向大家保证，我们绝不会停止努力，一定会把节目越做越好。好的，话不多说，让我们立刻进入正题！今天我们来到了现场，与 Dinno Robotics 的联合创始人兼首席科学家 Jason Ma 面对面交流。非常感谢你邀请我们来到你们的实验室！
+
+<details>
+<summary>Original English</summary>
+
+**主持人**: Before we get into today's episode I just have a small message for listeners. Thank you. We would not be able to bring you the AI engineering, science, and entertainment content that you so clearly want if you didn't choose to also click in and tune into our content. We've been approached by sponsors on an almost daily basis. But fortunately, enough of you actually subscribe to us to keep all this sustainable without ads and we want to keep it that way. But I just have one favor to ask all of you. The single most powerful, completely free thing you can do is to click that subscribe button. It's the only thing I'll ever ask of you. And it means absolutely everything to me and my team that works so hard to bring the Inspace to you each and every week. If you do it, I promise you we'll never stop working to make the show even better. Now, let's get into it. All right, we're here on site with Jason Ma, uh, co-founder, chief scientist of Dino Robotics. Thanks for having us in your...
+
+</details>
+
+**Jason Ma**：哪里哪里，非常感谢你们的到来！
+
+<details>
+<summary>Original English</summary>
+
+**Jason Ma**: Of course. Thank you for coming.
+
+</details>
+
+**主持人**：太棒了，这真是一次令人大开眼界的体验！我们在现场亲眼目睹了许多精彩画面，稍后大家也会在节目的花絮镜头中看到很多细节——我们看到了机器人倒饮料、现场进行的各种评测，还第一次看到了拿着刀具操作的机器人。而在这一切令人惊叹的表现背后，你们的核心技术底层是一个“世界动作模型”（World Action Model）。究竟什么是世界动作模型？
+
+<details>
+<summary>Original English</summary>
+
+**主持人**: Yeah, it's been a blast. So, we got to see, you'll see a lot of B-roll, but we got to see uh drinks being pulled, a lot of evils, robots with knives for the first time. Uh, so under the hood of all this, you have a world action model. What is that?
+
+</details>
+
+### 什么是世界动作模型（WAM）？
+
+**Jason Ma**：是的。上个月我们刚刚正式发布了名为 Dina 2 的世界动作模型。这是全球首个在超过100万小时真实数据上训练出来的世界动作模型。回到你的第一个问题，所谓世界动作模型，本质上是一个能够预测未来视频画面、预测未来世界物理状态的模型，因此它得名“世界模型”。但除此之外至关重要的一点是，你还可以直接利用这种面向未来的预测生成能力，去输出能够在物理世界中由硬件执行的实际控制动作，从而完成对机器人本体的控制。我们为什么要采用这种架构呢？这是一种极为强大的架构设计。如果你仔细思考人类在物理世界中是如何展开行动的，在人类的大脑中，我们实际上一直在内隐地、下意识地预判世界将如何随着我们自身的动作而演变。现在，我们拥有了一种完全具备类似能力的模型架构，能够利用对未来的物理演化推演来指导机器人的实际动作。我们发现，通过这种方式，机器人模型展现出了极高水平的灵活性、强大的鲁棒性，以及泛化到此前从未见过的全新未知环境与复杂场景中的超强能力。
+
+<details>
+<summary>Original English</summary>
+
+**Jason Ma**: Yeah, so last month we released our world action model called Dina 2. So, it's the first world action model trained on more than 1 million hours of data. So going back to your question first, world action model is a model that's able to predict the future video, the future state of the world. So hence the name world model. But in addition, you could also use that future generation to also produce actions robots can execute in the physical world to control the robot. So why do we do that? It's a very powerful architecture because if you think about how humans act in the physical world in our brain, we are implicitly thinking about how the world will evolve based on our actions. So now we have a model architecture that's able to do that to guide robot actions. So what we find is that by doing so the model is much more dextrous, much more robust and much more capable of generalizing to environments to scenarios is never seen before.
+
+</details>
+
+**主持人**：是的。
+
+<details>
+<summary>Original English</summary>
+
+**主持人**: Yeah.
+
+</details>
+
+**Jason Ma**：对。
+
+<details>
+<summary>Original English</summary>
+
+**Jason Ma**: Yeah.
+
+</details>
+
+**主持人**：我想在这个问题上进一步深入追问一下。因为我觉得很多听到“世界模型”这个词的人，脑海中浮现的通常是输出一段视频、模拟整个虚拟世界或者输出某种三维空间状态。而你们不仅预测世界，还能直接输出物理动作。我想绝大多数大众其实并不了解具身机器人背后的模型底层到底是如何运转的。所以，它的输入和输出具体分别是什么？它的训练数据包含哪些成分？它的整体网络架构又是怎样的？能不能把所有这些底层细节彻底给我们剖析一下？
+
+<details>
+<summary>Original English</summary>
+
+**主持人**: Uh I want to prompt this question a bit. I think a lot of people hear world model and they think you're outputting video or world or 3D state. Um you're also doing action. I think most people don't understand what models are under the hood of robotics. So what is input output? What's the training data? What is the architecture? Give us all the details.
+
+</details>
+
+### 世界动作模型的输入、输出与视觉思维链
+
+**Jason Ma**：好的，没问题。首先在输入端，最核心、最重要的输入就是视频，对吧？你可以把它理解为机器人通过自带的摄像头传感器实时捕捉采集到的视频画面，也就是过去若干秒之内的连续视频帧或连续图像，这就是最基础的视觉输入。但是对于机器人来说，极具独特性和趣味性的一点在于，机器人自身还配备了大量的执行器（actuator）和关节编码器（joint encoders）。这意味着机器人随时能够精准知晓自身各个机械关节的实时转动角度与空间位姿。因此，这些本体感觉数据（proprioception）也可以直接作为世界模型的输入特征。这显然与单纯只看外部视频画面的纯视频生成模型截然不同，对吧？这就是多模态状态输入的维度。此外，针对通用机器人，你肯定希望能够直接用自然语言与它对话，下达各种各样的任务指令让它去执行。因此，你还可以向模型喂入人类的自然语言指令。在我看来，这些构成了进入包括世界动作模型在内的任何具身机器人模型的最基本输入集合。
+
+一旦输入了这些多模态信息，在输出端，最基础的层面上，它必须输出机器人硬件能够在物理现实中直接执行的动作控制指令。然而，在世界动作模型中，最为巧妙和令人兴奋的一点在于：除了输出具体的物理动作之外，你还可以让模型同时输出未来的视频预测画面！这意味着你基本上可以先让模型生成未来的物理视频画面（或者某种隐空间表征），然后利用这个对未来物理世界的想象与推演，来反过来精准指导机器人的物理动作。我个人对这一机制的理解方式是：这在本质上非常类似于大语言模型中的“思维链”（Chain of Thought, CoT）。也就是说，机器人模型首先在视觉与物理规律的空间维度内进行严密的思考与推演，然后再据此输出最终的操作动作。这就是世界动作模型的输出与其他传统机器人模型输出之间的核心本质区别。
+
+<details>
+<summary>Original English</summary>
+
+**Jason Ma**: Yeah. Yeah. So uh for inputs the most important input is video, right? You know, you can think about videos that the robot is capturing with its cameras, right? So video or images of the, you know, past many seconds. That's the input. But for robots, what's really interesting is that robot also has a lot of actuator, a lot of joint encoders on itself. So the robot also knows, you know, the angles of its joints. So those can also be inputs to these world model. That's something that's very different from just a pure video model that's only looking at videos, right? So that's the input. And additionally for robots you want to be able to talk to it to instruct it to do different tasks right. So you can also feed it like language instruction. So those are what I consider the basic set of inputs that go into any robotics models including world action models. And once we have that the output at the uh basic level it needs to output actions the robots can execute on the hardware. But in the case of world action model, what's really interesting is that in addition to the actions, you can also output future video, right? So basically you can almost output the future video or some representation of it first and then use that to guide robot actions. So the way I think about is like this is kind of analogous to you know chain of thought you know basically the robots the models are reasoning in the visual the physics space and then outputting actions. So that's the key difference between world action models outputs versus other kind of models, robot models outputs.
+
+</details>
+
+### 机器人基座模型架构：Diffusion Transformer 与 流匹配
+
+**主持人**：你们之前就这款模型发布了一篇极具深度的技术博客文章。如今很多人对于大语言模型或 Transformer 作为“下一个词元预测器”（Next-Token Predictor）的工作原理已经相当熟悉了。而在你们的模型中，你分享了非常丰富的硬核细节，比如结合了扩散机制（Diffusion）与流匹配（Flow Matching），在预测下一个物理世界状态的同时预测控制动作。你在文章中特别提到了100万小时这一数据规模。那么，你们是如何确定最终的模型架构的？在架构选型上有哪些权衡与选择？它的具体网络架构到底长什么样？我感觉在当今的大语言模型领域，大家很大程度上可以直接采用现成的标准架构，抓取数万亿的文本 Token，做预训练、有监督微调（SFT）和强化学习（RL），就能训练出一个成熟的模型。但机器人领域呢？你们是如何从零起步一步步构建出自己的模型的？这里面是否存在类似可以直接开箱即用的标准“Vanilla”架构？所有这些架构细节都是你们自主决定的吗？目前具身领域的最新前沿现状又是怎样的？
+
+<details>
+<summary>Original English</summary>
+
+**主持人**: Um you put out a good blog post around your model. I think a lot of people understand language models or transformers next token predictors. In this case you shared quite a bit. There's like diffusion flow matching. You're predicting next world state plus action. Um one thing you say is a million hours. How do you determine the architecture? Like what are the choices there? What is the architecture? I feel like in language models there's a lot of take something off the shelf, take trillions of tokens, do prediction SFT, RL and you have a model. What about this? How do you go from nothing to your model? Is there vanilla architecture off the shelf? Do you determine all this and what's what is the current state?
+
+</details>
+
+**Jason Ma**：是的，我认为思考如何构建机器人模型的核心底层认知框架，基本上可以拆解为几个关键维度：其一是数据，其二则是我们如何设计模型，使其能够从这些海量数据中尽可能最大化地吸取物理先验与技能知识。所以我们先从模型本身的技术细节聊起。我们在技术博客中公开展示的正是我们的 D2 世界动作模型。在其底层引擎中，它采用的是 Diffusion Transformer（DiT，扩散 Transformer）架构。这里的 Transformer 本质上就类似于大家熟知的大语言模型中的架构，属于典型的序列到序列自回归或纯解码器（Decoder-only）范式。但极其有意思的现象出现在视觉领域：如果你仔细观察当今的图像生成与视频生成技术，以及在具身机器人场景中让机器人观察图像进而生成物理操作动作的过程，学术界和工业界普遍发现“扩散”（Diffusion）这一类的架构表现极其出色。
+
+那么，究竟什么是扩散模型呢？扩散模型是一种从纯粹的随机高斯噪声出发，通过多轮迭代式的去噪计算过程，逐步从无序的噪声中还原出高维、高度结构化且具有极精细特征内容的模型。试想一下图像生成的场景：你希望画面拥有清晰锐利的边缘线条、分明的棱角细节以及鲜明的色彩对比度。而在具身机器人领域，虽然你不是在生成一张静态图片，但你生成的控制动作同样需要达到极高的精度、极其平滑且符合物理惯性。因此，它在数学约束和动力学诉求上与图像生成面临着完全相同的物理考量与期望特征（desiderata）。正因如此，从第一性原理出发，不仅仅是我们团队，整个具身智能与机器人前沿领域如今都在广泛采用这种 Diffusion Transformer（DiT）架构来训练机器人的基座大模型（Foundation Models）。你之所以绝对不可或缺 Transformer 模块，是因为 Transformer 是目前已知能够吞吐消化最大规模海量数据并进行深度表征学习的终极利器；而扩散机制则能够进一步在细粒度动作层面持续精炼生成结果，确保最终输出的动作具备平滑、精准且细腻的微操控制力，从而能够直接部署在机械硬件本体上执行。这正是支撑我们近期一系列重大技术突破背后的核心模型架构。
+
+<details>
+<summary>Original English</summary>
+
+**Jason Ma**: Yeah, I think yeah, so the mental framework to think about how do we build models for robotics is that there are essentially a couple things to look at. one's data and the second is like how do we make a model learn as much as possible from that data. So let's first talk about the model actually right. So the blog post we released is our D2 word action model. So under the hood it's a diffusion transformer. So transformer is essentially like the language model you know uh uh sequence sequence match decoder only. Yeah. But what's really interesting is that in visual domains right if you think about generating images generating videos and in this case robots looking at images to generate actions people have found the diffusion kind of architecture to work really well. So what is a diffusion model? A diffusion model is a model that takes some random noise and through iterative computation can go from noise to something that's really highdimensional. something really highly like defined and have very fine grain feature. If you think about generating images, right, you want sharp edges, sharp corners, color contrast. And for robotics, even though you're not generating image, you're generating actions that needs to be very precise, very like smooth, right? So it has kind of the same kind of uh consideration of the sidora as generating image. So that's why from first principle you know the whole field not just us have been using this kind of diffusion transformer architecture to train robotics foundation models you need the transformer aspect because transformer is the thing that can just ingest the most amount of data can learn then diffusion helps you to refine the outcome to get to the smooth precise fine grain motion you need to actually execute on the robot. So that's the architecture that goes behind a lot of our recent breakthroughs.
+
+</details>
+
+**主持人**：而且我们之前也在播客节目中详细探讨过流匹配（Flow Matching）技术。它在很大程度上主要带来了极高的推理效率提升与采样速度加速。比方说，传统扩散模型通常可能需要进行40到100步的迭代去噪计算，而通过流匹配，你可以直接将其大幅压缩减少到仅仅需要4步。
+
+<details>
+<summary>Original English</summary>
+
+**主持人**: And we and we've covered flow matching before on the podcast. It is mostly an efficiency speed up. Like let's say you normally would take 40 to 100 diffusion steps, you can reduce it to four.
+
+</details>
+
+**Jason Ma**：是的，完全正确。在扩散模型中，有一个非常关键的特性就是……
+
+<details>
+<summary>Original English</summary>
+
+**Jason Ma**: Yeah, that's right. So with a uh diffusion model, one thing that's really...
+
+</details>
+
+<!-- chunk 2/11 -->
+
+### 流匹配与扩散模型在机器人动作生成中的应用
+
+**Speaker B**: 在实际应用中，扩散模型比较棘手的地方在于你必须仔细调优调度器（scheduler），比如控制初始输入噪声转化为最终输出的调整幅度与转换过程。因此，流匹配（Flow Matching）可以说是扩散模型的一种特例，它让这种转换过程变得更加简洁直接。在实践中，你无需进行那么多调优，而且它的效果同样出色。我认为这也是为什么大约两三年前，图像和视频领域的大多数生成模型都从扩散模型转向了流匹配模型。不过两者的核心概念是一致的，流匹配只是扩散模型中一种形式更简单、更容易调优的变体。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: What's hard in practice is that you need to tune the scheduler, like by how much you're tuning or converting the initial noise input into the final output. So flow matching is kind of like a special case of diffusion that makes the transformation much simpler. In practice, you don't have to tune as much and it works just as well. That is why I think about two to three years ago most generative modeling for image and video has shifted from a diffusion model to a flow matching model. But the concept is the same, and flow matching is just a special, simpler-to-tune variant of diffusion.
+
+</details>
+
+**Speaker A**: 是的，这确实让我想到，流匹配在生成质量上显然也存在一些权衡。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah, it actually makes me think that so flow matching obviously has trade-offs in quality.
+
+</details>
+
+**Speaker B**: 没错。但事实上，它非常适合动作扩散（action diffusion）以及机器人领域，因为在机器人任务中你需要进行实时重新评估与推断。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. But actually, it's very suited for action diffusion and robotics because you get to re-evaluate in real time.
+
+</details>
+
+**Speaker A**: 而在图像生成中，基本都是单次生成的（one-shot）。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Whereas in images, it's basically one-shot.
+
+</details>
+
+**Speaker B**: 对，正是这样。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: That's right.
+
+</details>
+
+### 通用基础模型与任务微调泛化
+
+**Speaker A**: 这确实很有意思。我们之前体验了叠衣服机器人，比如故意扔进去一条没见过的毛巾，模型也能自适应调整，对吧？我认为你们模型的一个核心特征在于它们被设计成了通用模型——也就是构建一个统一的基础模型，然后对其进行广泛的适配。这背后的机制是怎样的？比如只需要 45 分钟的映射数据，就能泛化到新任务上，我们之前就看到过一个从冰箱里拿饮料的例子。你们采用这种单一通用模型的思维模式是什么？之后又是如何适配到不同任务的？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Which is pretty fun. We got to mess with the laundry folding robot, like you know throw a random towel in. The models adapt, right? I think one key thing about your models is that they're made to be generalist. So one foundation model and you adapt them a lot. How does that work? Basically in 45 minutes of mapped data you can generalize towards—we saw an example of pulling drinks out of a fridge. What's the mindset there of one general model, and then how do you adapt to different tasks?
+
+</details>
+
+**Speaker B**: 好的。我们思考这个问题的方式是：对于机器人技术而言，我们首先需要构建一个非常通用且强大的基础模型。如果你思考一下人类在物理世界中是如何互动和行动的就会明白，人类拥有非常强大的基础常识与认知，我们随时可以直接完成大量日常任务；但如果你想成为某项具体任务的专家，仍然需要接受一定程度的针对性训练。要训练一个像我们正在构建的这种通用机器人，必须遵循同样的底层原则。因此，我们的方法是首先训练一个通用模型，尽可能多地吸收我们能够找到的所有数据。比如在我们的 DINO 报告中提到，我们的模型最初是以超过 100 万小时的人类活动数据为基础起点进行预训练的。在拥有了如此坚实的基础之后，我们发现只需极少量的微调，就能够快速让机器人或模型执行许多截然不同的任务——只需向模型说明“这是我希望你完成的任务”，并提供极少量的示范样本，模型就能迅速上手完成你们在办公室里看到的许多任务。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. So the way we think about it is that for robotics we need to build a very general, strong base model. Because if you think about how a human interacts and behaves in the physical world, we have very strong base knowledge, we can just readily do a lot of tasks. But if you want to become an expert at any given task, there's some amount of training that needs to happen. And I think to train general-purpose robots like the one we're building here, the same principle has to apply. So our approach is to first train a general model that's training on as much data as we can find. When our DINO report came out, our model is trained over a million hours of human data as a starting point. And then given that strong foundation, what we found is we can quickly make the robot or make the model do many, many different tasks with a very minimal amount of fine-tuning, to just tell the model: "Here's the task I want it to do, and here's a very few amount of demonstrations," and the model can readily do a bunch of the tasks that you have seen in the office.
+
+</details>
+
+### 机器人数据的非平稳性与多层级数据策略
+
+**Speaker A**: 实际上我们这里有不少从事数据交易、专门出售数据的人。那么对你们来说，什么是好数据？什么是劣质数据？你们目前希望采购什么样的数据？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: We actually have quite a few people who deal in data, who sell data. What is good data? What is bad data? What do you want to buy?
+
+</details>
+
+**Speaker B**: 好的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah.
+
+</details>
+
+**Speaker A**: 我认为这些都是悬而未决的开放问题。显而易见，最重要的数据之一是人类执行各项任务的第一人称视角（第一视角/自我中心，egocentric）数据。关于这个基本判断，你还有什么需要补充或修正的吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I think that these are all open questions. Obviously, I think the top important thing is egocentric data of humans doing tasks. What else would you modify on that basic statement?
+
+</details>
+
+**Speaker B**: 是的，我认为数据绝对是当今机器人领域中最关键的要素。因为与语言模型不同，物理世界的数据并没有一个现成的“互联网”可以直接抓取，对吧？因此，每一家正在构建机器人模型或机器人硬件的公司，都必须深入思考数据问题。在这方面大致有几种不同的运作方式：其一，你可以完全由自己采集大量数据，这正是我们目前在做的事情之一。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. So I think data is the most important thing in robotics today because unlike language models, there is no internet, right? So every company that's building models, building hardware, has to think about data. So there's roughly a couple different ways of operating here. One is that you can collect a lot of data yourself, which is what we are doing as well.
+
+</details>
+
+**Speaker A**: 你们办公室里到处都有员工在做数据采集。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: You have employees here doing that.
+
+</details>
+
+**Speaker B**: 我的意思是，办公室里到处都是机器人，对吧？但是如果你思考一下构建一个机器人基础模型究竟需要多么庞大的数据量，就会发现任何单家公司仅凭自身力量所能采集的数据，都远远达不到充足的标准。这有点像你想通过仅抓取 Reddit 或仅抓取 Facebook 来构建整个互联网一样——这些确实是极其优秀的网站，拥有庞大的用户体量，但仅靠它们是远远不够的。因此，当我们规划数据时，必然需要进行某种形式的数据外部获取：去购买数据，去发掘市面上现有的数据。
+
+而且数据本身存在许多不同的层级。你刚才提到了数据质量，我认为机器人领域的数据质量其实是一个“非平稳问题”（non-stationary problem）。所谓非平稳，是指对你的模型而言，究竟什么才算高质量数据，会随着时间推移不断发生变化。比如当你的模型还一无所知、处于从零开始的初始阶段时，任何数据都是有价值的，你可以直接引入海量的视频数据。以第一视角数据为例，我认为它实际上是机器人预训练极其优异的途径，因为人类数据的多样性极为丰富，几乎涵盖了你所能想象到的每一种物理活动。这能赋予机器人模型关于“世界在一个实体行动者（人类）周围如何演变与交互”的极强先验知识。
+
+但人类数据存在的问题在于：除非你的机器人硬件外观、形态和自由度与真正的人类完全一致，否则人类动作与机器人机械动作之间必然存在一定的具身鸿沟（embodiment gap）。因此在现阶段，仅靠人类数据进行训练，模型很难直接精准执行机器人端的具体动作。你仍然需要利用机器人自身的本体数据进行一定程度的适配微调。
+
+然而，直接在机器人本体上采集的数据成本要高昂得多，采集难度也大得多。所以我们正在探索的配方思路是：如何利用我们目前所能获取的最大规模数据源（例如人类第一视角数据），让模型对物理操作领域所涵盖的一切建立起强大的基础认知先验，然后再结合少量的机器人本体高质量数据，使机器人精通我们关注的特定任务。因此，在机器人领域，数据质量与数据获取确实是一个极其引人入胜且多维复杂的问题。现实情况是，这里不存在单一的致胜策略——并不是说“只要认准某一种特定数据全力采集，就能直接收获一个强大的基础模型”。你必须清晰地规划：这部分人类数据负责覆盖机器人的哪一部分通用认知，而那部分机器人本体数据则负责覆盖机器人同样必备的低层级反射（low-level reflex）和精细操作灵巧度（dexterity），并将它们统一整合到一个模型中。我认为只有这样，最终才能孕育出一个兼具高度自适应能力与强大泛化性能的机器人模型。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: I mean robots everywhere in the office, right? But if you think about how much data you need for a robotic foundation model, I think the amount of data any individual company can collect by themselves is just nowhere near sufficient, right? It's kind of like you're trying to build an internet by just having Reddit or just having Facebook. There are great websites, a lot of users, but it's not enough, right? So, when we think about data, there has to be some sort of data acquisition happening, right? You buy data, you look at data that's already out there. And then there's many different tiers, right? You mentioned data quality. I think data quality in robotics is a non-stationary problem in the sense that what is high quality data for your model changes over time. Like when your model doesn't know anything, when it's zero, any data is useful, right? You can use a lot of video data. In the case of egocentric data, I think it's actually a very good way of pre-training robots because human data is so diverse—like it covers every single physical activity you can possibly imagine, and that gives the robot model such a strong prior on how things, how the world can evolve around an embodied actor, human. But the issue with human data is that before your robot looks exactly like a human, there's going to be some gap between human actions and the robot actions, right? So just by training on human data today, it's not very likely you can just execute robot actions directly. So you still need some amount of adaptation using robots's own data, right? But the robot's own data collected on a robot is going to be much more expensive and much harder to collect. So the kind of recipe we're thinking about is like how do we take the largest source of data we have today, like egocentric data, to give the model a strong prior over everything physical manipulation can cover, and then combine that with a small amount of robotics data to make the robot master whatever task we're interested in. So data quality and getting data in robotics is really, I think it's a fascinating, multifaceted problem, but the reality is that there's not a single winning strategy like: "Oh, here's one kind of data, I'm only going to collect on that which will give you a strong foundation model." You really need to think about: this human data covers this part of robot cognition, and I need robot data that covers low-level reflex, dexterity the robot also needs, and put them into one model. And I think that's what gives a really adaptable, really strong model at the end.
+
+</details>
+
+### 数据供应商合作需求与垂直细分场景数据
+
+**Speaker A**: 明白。我想借此机会替正在收听本期节目且希望与你们开展合作的听众追问一下：你们究竟需要什么样的数据供应商？这可以说是你们的数据征集令（call for data）。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah. I'll prompt you just again for the people listening who want to work with you. What data vendors do you want? This is your call for data. What—
+
+</details>
+
+**Speaker B**: 好的，这是一个非常棒的问题。我们在 DINO 2 的技术博客结尾处，专门附上了一个合作邮箱：data-partnerships@dina.co。如果你是一家拥有大量高质量数据的数据供应商，无论是第一视角数据、机器人本体数据、操作视频数据，还是任何你认为有助于机器人学习的数据，都可以发送邮件给我们。我们的团队会认真评估并予以回复。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah, no, that's a great question. In our DINO 2 blog, at the end we actually have an email address called data-partnerships@dina.co. Okay, so if you're a data vendor that has a lot of high quality, let it be egocentric data, robot data, video data, or anything you think could help robots, send it to the email. Our team will take a look and we'll get back to you.
+
+</details>
+
+**Speaker A**: 明白。不过在你们现阶段，可能已经不需要再去大量采购通用的现成第一视角数据了吧？你们可能更倾向于明确提出“这是我目前所急需的具体内容”。目前是否存在某些明显匮乏的垂直细分领域？比如大家可能需要类似 Scale AI 这样的专业标注与定制采集服务。那些在机器人行业之外的企业可能会想：某些特定的细分工厂场景——例如你之前展示过的把试管插进架子的精细操作——市面上这类数据非常有限。这种高度定制化的垂直场景数据会对你们有很大帮助吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah. But like at your stage, you're probably not buying any more egocentric data off the shelf, right? You probably want to be like, "Here's what I need." Is there a niche that's lacking? You need a Scale AI, you need a core for doing this. The custom that don't work in robotics are probably thinking like, okay, some niche factory, like you showed putting tubes in, there's only so much data you'll find about that. But would a lot of that help you?
+
+</details>
+
+**Speaker B**: 是的，毫无疑问。如果你真想把某项具体任务做到极致，拥有该任务专项领域的数据绝对会带来巨大帮助。对我们而言，我们依然认为仅仅 100 万小时的数据量是远远不够的，这仅仅只是个开端。我们展示了在百万小时规模上训练的第一个模型，但未来所需的规模远不止于此。因此，一方面我们仍在持续搜寻可以获取的大量原始、多样化数据；另一方面，我们也在深入探索如何获取更多的定制化专业数据——无论是通过内部自建团队采集，还是与外部合作伙伴针对特定垂直任务展开专项采集。因为要达到任何模型在物理世界中真正落地实用所需的卓越水准，这种专业数据依然不可或缺。这就像人类一样，如果让我或者肖恩（Sean）明天去瑰丽酒店（Rosewood Hotel）上班铺床，在没有经过系统培训的情况下，我们也根本无法按照酒店严苛的专业标准把床铺好，我们同样需要大量针对性训练。因此这类专门的定制数据，类似于当前 Mark C 等人在语言模型领域所做的高质量专业数据工程，我认为对机器人领域同样具有极其巨大的价值。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah, no, I mean if you really want to nail a task, having data from that task will certainly help you a lot, right? So for us, it's like we still think just a million hours of data is not enough, it's just the beginning. Like we show the first model on a million-hour scale, but we need more than that, right? So we're still looking at a lot of just raw diverse data that we can get, but we're also thinking about how do we get more custom data, either collected in-house or by our partner for really specific niche tasks. Because I think you still need that to get to excellence that any model needs to actually be useful in the physical world, right? It's kind of like humans, if Sean or me go work at Rosewood Hotel tomorrow, we're not going to be able to make the bed the way they want, right? We need a lot of training. So that kind of special data, it's kind of like what Mark C is doing today for language model, I think will be very, very valuable for robotics as well.
+
+</details>
+
+**Speaker A**: 确实如此。所以酒店行业的人，完全可以在员工头上绑上 GoPro 相机来进行日常工作数据采集……我们之前讨论过的另一件事是关于……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah. So hotels, you know, strap a GoPro on your employees' heads... And there's probably more... So one thing that we discussed is like the—
+
+</details>
+
+<!-- chunk 3/11 -->
+
+### 合成数据与前沿模型：缩小 Sim-to-Real 差距
+
+**Speaker A**: ……缩小虚实差距（Sim-to-Real）。而且非常有趣的是，现在基本上可以实时动态构建仿真环境了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: ...the closing the sim to real. And what's very interesting is like now you can basically fabricate environments on the fly.
+
+</details>
+
+**Speaker B**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yes.
+
+</details>
+
+**Speaker A**: 你们有没有用前沿大模型做过这方面的尝试？实际体验如何，效果足够好吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Have you tried that with the frontier models? What's your experience? Are they good enough?
+
+</details>
+
+**Speaker A**: 你们目前是否有使用世界模型，或者与研发机器人世界模型的公司合作来生成这些环境并在其中训练？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Are you using any world model robotic—like world model companies to generate these and train on them?
+
+</details>
+
+**Speaker B**: 是的。我认为生成合成环境、合成数据以及机器人仿真数据，将成为下一个关键前沿之一。因为如今人们关注的主要是第一人称视角（egocentric）数据和真实机器人采集数据，这些数据确实在不断扩展（scaling），但我认为合成数据将成为扩展定律的一个全新维度。
+
+回到你的问题，是的，我们一直在探索利用前沿大模型，基于我们关注的数据和场景，来为我们自动生成合成环境。令人惊讶的是，这项技术现在已经成熟到了一个非常值得深入钻研的节点。
+
+提供一些背景信息：在我攻读博士学位期间，我的研究重心主要是基于仿真的机器人训练。当时仿真技术本身还不成熟，但我们发表了一篇名为《Eureka》的论文，那是首篇利用大型语言模型（当时是 GPT-4）进行自我生成环境、为强化学习编写奖励函数、并在仿真环境中自主执行探索的研究。最后我们做出了一个非常惊艳的演示：机器人自主学会了转笔。在当时这确实很酷，但在那个时期局限性仍然极大，因为当时的大模型还不具备优秀的视觉感知能力，缺乏先天的 3D 空间理解。所以它本质上只是在生成代码，并依靠极其有限的文本反馈去尝试搭建新的仿真环境。
+
+但放眼今天，前沿模型的视觉理解能力已经极其强大。它们能做到从真实场景到仿真资产的逆向 CAD 建模（real-to-sim CADding），还有成熟的 3D 重建等能力。我认为现在已经来到了拐点，这项技术真的能够极大地加速机器人学的发展。对我们而言，我们把它视作加速内部研发进度的一种方式，因为我们既在研发模型，也在打造硬件。如果前沿模型能以这种方式为我们提供更多数据，生成高度定制化的专有数据，对我们来说将具有巨大的价值。
+
+另外我们还在探索的一个方向是：除了利用现成的通用前沿模型生成 3D 环境之外，我们还直接利用了我们自己的世界模型。也就是我之前提到的“世界-动作模型”（World-Action Model）。因为这个模型不仅能预测并输出动作，还能生成未来视频预测，所以它完全有能力自我生成训练数据。这就形成了一个自我强化的飞轮闭环，我认为这同样极其强大。因此总体而言，我对这个方向感到非常兴奋。虽然我们已经扩展到了上百万小时的真实数据，部署了大量机器人，并且机器人已经开始完成许多非常酷的任务，但这仅仅是冰山一角，未来的发展空间不可限量。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. So I think generating synthetic environments, synthetic data, simulation data for robotics is going to be one of the next frontiers, right? Because today people have looked at egocentric data, robot data, you know, those are scaling, but I think synthetic data will be a new dimension of scaling.
+
+So going back to your question, yeah, we have been exploring using frontier models to generate synthetic environments for us on our data, on our environments that we care about. And surprisingly, I think now it's at a point where this technology is actually very much worth going really, really deep into.
+
+So for some context: in my PhD, I primarily focused on simulation-based training for robotics. Back then, simulation wasn't ready, but we had this paper called Eureka, which was the first paper taking a large language model—at the time it was GPT-4—which just had to self-generate environments, generate reward functions for reinforcement learning, and just do things in simulation. And at the end, I think we had this really nice demo of the robot spinning pencils, right? That was really cool at the time. But that kind of thing was still very limited at the time, because back then the model didn't really have good vision capability, didn't have an innate 3D understanding, right? So it was basically just generating code and using very limited feedback from text to try to come up with new simulation environments.
+
+But today, the vision capability of these frontier models are crazy. They can do like real-to-sim CADding, there's 3D reconstruction, all of that. I think now it's at a tipping point where this technology could really accelerate robotics. And for us, right, we think about that as a way to accelerate our internal progress, right? Because we're building models, we're building hardware. So if a frontier model can give us more data that way, like generate really tailored data for ourselves, that's extremely useful for us.
+
+And another thing we've been thinking about is instead of using these models to generate like 3D environments, we have also used our own world model, right? The world action model I was telling you about. Because the model not only generates action, it can also generate videos; the model can also generate its own training data. So that becomes a self-fulfilling flywheel that I think will also be powerful. So overall, I'm just really excited about this direction, because I think even though we have scaled to a million hours of data, we are deploying a bunch of robots, and the robots are actually already starting to do very cool things, we're just at the beginning—just the tip of the iceberg for what is there to come. Yeah.
+
+</details>
+
+### 端侧推理延迟与大模型蒸馏
+
+**Speaker A**: 对于关注前沿研究的听众来说，我们最近刚在播客里采访了 Runway。他们的研发方向之一就是机器人世界模型，也在往这个领域倾斜，因此这也是大家接下来可以关注的方向。关于你们自己构建模型，我很好奇的一个问题是：你们是在怎样的软硬件约束条件下运作的？类比于语言模型，像开源的 20B 模型非常适合在普通的 MacBook 上跑，也有更大的模型适合单张 GPU 部署。你们是在端侧设备、云端还是混合架构的约束下运行机器人模型？这种部署约束又如何反过来影响你们在数据扩展定律上的考量？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: For those on the research side, we recently had Runway on the podcast. One of their things is robotic world models, shifting a little towards there. So, you know, next people to look at it. One of the questions I have about you making your own models is what is the constraints you operate in? So, if you draw a parallel to language models, you see like Gemma/GPOSS 20B is very fit for your average MacBook. Then there's a larger one that's fit for a single GPU. Do you work in the constraints of model on device, in cloud, a hybrid, and then how does that affect your scaling law of data?
+
+</details>
+
+**Speaker B**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah.
+
+</details>
+
+**Speaker A**: 拥有上百万小时的数据固然很好，但我们能直接无脑堆大参数量和数据规模吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: You know a million hours is great, but like do we just scale up parameters and data?
+
+</details>
+
+**Speaker B**: 这是一个极好的问题。我认为机器人与语言模型以及其他应用最核心的本质区别，在于对延迟的容忍度。对于代码智能体或语言模型，哪怕存在几秒钟的延迟，用户也是完全可以接受的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. No, that's a great question. So I think what's really different about robots versus language model and other applications is that for coding agents, language model, it's okay if it has latency, right?
+
+</details>
+
+**Speaker B**: 比如在日常使用中，每当我向 ChatGPT 提问时，它通常都要反应几秒钟才会开始吐字。但对于机器人来说，推理延迟必须被压缩到极短的毫秒级。机器人必须即刻做出动作，它绝不可能在手里拿着一把刀的时候僵在原地三秒钟没有任何反应，那样绝对会把人吓坏的。（笑）
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Well, like you know today whenever I ask ChatGPT, it takes like couple seconds before it spits out anything. But for robots, like the inference latency has to be like very short. Like the robot needs to act—it can't just hold a knife and not do anything for three seconds, that's going to freak people out, right? [laughter]
+
+</details>
+
+**Speaker A**: 确实，我们刚才就看到有人把真手伸进去了……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah, we saw someone put their real hand and...
+
+</details>
+
+**Speaker B**: 我们的模型相当聪明，所以刚才应对得很好。但总的来说，如果你考虑极度动态的高频任务，例如你希望机器人拿着网球拍去连续颠球，这种交互是非常动态、强实时的。物理规律和重力可不会站在原地等你计算。出于这个硬性原因，机器人策略模型必须拥有极快的推理速度。而要实现最极致的速度，唯一的路径就是本地化私有部署，直接在本体设备上运行推理。因为一旦把模型调用放在云端……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Our model's pretty smart, so that's okay. But in general, like if you think about very dynamic task, like for example you want your robot to hold a tennis racket and juggle the ball, right? This is very dynamic, very reactive. Physics and gravity doesn't wait for you, right? So for that reason, robotics model needs to be able to inference very fast. And the fastest way to do that is by serving on-prem, like on device, right? Because if you call a model...
+
+</details>
+
+**Speaker A**: 走网络通信……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Network...
+
+</details>
+
+**Speaker A**: 根本无法提供确定性保障，就像自动驾驶汽车一样。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: There's no guarantee, drive a car.
+
+</details>
+
+**Speaker B**: 完全没有任何确定性保证，对吧？基于这个根本原因，最终部署到实体机器人上的模型必须具备合理的尺寸，以确保能够在本地算力上高效运行。但这并不意味着你最初训练的底座模型也必须很小，这就像在语言模型领域一样……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: There's no guarantee, right? So for that reason, the model that gets deployed eventually has to be of reasonable size that can be served locally. But that doesn't mean that the initial model you train also has to be small, right? Like in language models...
+
+</details>
+
+**Speaker A**: 可以进行知识蒸馏……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Can distill...
+
+</details>
+
+**Speaker A**: 先拥有一个超大模型……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: You have a large...
+
+</details>
+
+**Speaker B**: 大家都会做模型蒸馏。让一个小模型变得极其聪明的最佳路径……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: People do distillation, right? Like the best way to make a small model very smart...
+
+</details>
+
+**Speaker B**: 就是通过知识蒸馏。你先训练能力上限最强的大模型，然后再将其蒸馏到轻量模型中。我认为在具身智能和机器人领域，行业正在步入这个阶段，这也是大家最终必然会收敛趋同的技术路线。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: ...is by doing distillation, right? You train the biggest model then you distill, right? So I think in robotics we're getting there, but I think that's what people are going to converge on, yeah.
+
+</details>
+
+### 自研推理引擎与全栈硬件控制
+
+**Speaker A**: 在推理方面呢？你们是构建了自己的专有推理技术栈，还是大量使用了现有的开源架构（比如提取自扩散模型等架构）？我猜想很多模块是可以直接利用现有生态的。这方面有什么可以分享的吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: How about like inference? Do you have your own inference stack, or a lot of this is architecture you've pulled—diffusion and whatnot? I'm guessing you can pull off of something. Anything you want to share?
+
+</details>
+
+**Speaker B**: 是的，针对我们要部署的任何模型，我们都构建了完全自研的推理技术栈。正如我刚才强调的，延迟对机器人来说是生死攸关的指标，因此对整个技术栈拥有端到端的控制权在机器人领域尤为关键。你必须针对当前所跑的特定模型结构，把推理执行速度优化到极限，这背后包含着大量的工程积累。所以我们选择自研这套体系。
+
+正如你所看到的，我们确实走的是彻底的全栈路线，从执行器关节一直到工业设计（ID，我以前甚至不知道这个缩写代表工业设计），再到算法模型与数据流水线，全部深度自研。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah, so we build our own inference stack for whatever model we deploy, because like I was saying, latency is so important. So owning the whole stack is extremely important for robotics, right? You want to optimize the inference speed for the kind of model you're running, and there's a lot of work in there. So that's what we do. Yeah, you're really full stack, like everything from the actuators all the way to the industrial design—ID, which I didn't really know as an acronym—obviously to the models and data as well.
+
+</details>
+
+**Speaker A**: 我很好奇，这些电机和执行器是你们自己研发的吗？或者说整个硬件系统中有多少是自研的？当然外观设计显而易见是专有的，并不是双足人形……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I'm curious, like are these your own actuators or how much of this is your own? Like of course the design—you know it's not a humanoid, but...
+
+</details>
+
+**Speaker A**: 比如执行器部件，你们在机器人硬件栈上究竟下潜到了多深的底层？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: ...actuators, like how far down the robotic stack?
+
+</details>
+
+**Speaker B**: 是的。我们在权衡“哪些必须自研”与“哪些可以直接采购”时，核心考量逻辑是：如果一个组件的输入、输出以及接口定义非常清晰明确，并且市场上已经存在极其成熟稳定的现成解决方案，那就完全没有必要闭门造车从头自研。比如在眼前这台机器人身上，你能看到激光雷达（LiDAR），也就是那些黑色的圆圈，它们的作用是协助机器人感知障碍物并在环境中定位导航。这是一项非常成熟的技术，在自动驾驶汽车上已经应用了数十年。因此我们不需要从零去造激光雷达，部分摄像头传感器同理。
+
+但对于任何我们认为对系统最终全局性能至关重要的核心环节，我们的愿景都是必须完全掌控并自研。其中一个核心部件就是你刚才提到的执行器。这是我们正在大力攻关并将全面自研自制的核心硬件。原因在于，执行器的制造品质与机械设计，直接决定了你在物理建模和系统辨识中能达到的精度上限。执行器是驱动机器人物理运动的根基。为了能在高保真仿真环境中极其精确地对机器人进行建模，或者开展任何精准的动力学建模，你必须选拔并设计出性能优异、且在物理特性上极易被精确建模的执行器。这是我们最终极其看重的能力，因此我们一定要自研。
+
+同样的逻辑也体现在机器人的身体比例设计上。这台机器人的机械比例是我们对照着真实人类体态精确测绘设计的。我们为什么要这么做？因为我们的模型在大规模人类行为数据上进行预训练。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. So the way we think about what we need to own versus what we can buy is like: if the input, output of a component is very, very clear and there's already extremely good, mature solution, then there's no point to building in-house. Like for example on this robot, you see the LiDARs, right? Those black circles—those are LiDARs to help the robot detect obstacles, navigate surroundings. So that's a very mature technology that people have been using for now decades; it's on self-driving cars. So we don't need to build LiDAR from scratch, right? Same goes with some cameras.
+
+But for anything that we think is extremely crucial for the whole system's performance at the end, our vision is to be able to own that and build that ourselves. So one thing is—you mentioned actuator. So that's something we're working on and we're going to own ourselves. The reason is that like the quality and how you design the actuator really matters for how well you can model the robot, right? Actuator is what drives the robot. To be able to model your robot very well in simulation or to do any kind of modeling, you need to select actuator that's very good, that you know can actually be easily modelable. So that's what we care about eventually. So we're going to own that.
+
+Same thing with, you know, the robot's proportion. This robot's proportion is like—we measured against real people. Why do we do that? Because we're pre-training on human data.
+
+</details>
+
+**Speaker A**: 原来如此。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Oh yeah.
+
+</details>
+
+**Speaker B**: 这样能带来最佳的具身动作迁移效果，对吧？所以在硬件研发中凝聚了大量类似的深层决策，它们与智能化目标紧密绑定。因为说到底，硬件是承载智能的物理载体。智能才是至高无上的核心，我们必须确保所有硬件架构都无条件为智能服务。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Best transfer, right? So there's a lot of these kind of decisions that go into hardware that's very much tied to like—because eventually, you know, it's hardware that carries intelligence. Intelligence is the extremely important thing. We want to make sure the hardware serves for that.
+
+</details>
+
+**Speaker A**: 确实是这样。我想强调一点，我不知道这是否与……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah. Yeah. I'll just highlight—I don't know if this is relevant to...
+
+</details>
+
+<!-- chunk 4/11 -->
+
+### 机器人硬件供应链的隐形瓶颈：从执行器与磁铁谈起
+
+**主持人**：但是话说回来，我经历过最耐人寻味的机器人相关探讨之一，是遇到过一位对执行器——尤其是磁铁问题感到极其焦虑的人。因为很显然，美国本土并不生产磁铁。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: You, but uh, one of the most interesting robotics discussions I've had is someone who was very stressed out about actuators and specifically magnets because apparently we don't make magnets in the US.
+
+</details>
+
+**嘉宾**：确实，我们不造磁铁。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: No, we don't.
+
+</details>
+
+**主持人**：而且全世界只有两个国家能生产磁铁。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: And there's only two countries that make magnets.
+
+</details>
+
+**嘉宾**：这主要受制于稀土原材料。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Uh, rare earth material.
+
+</details>
+
+**主持人**：没错。虽然我也说不清具体的化学元素或原材料到底是什么，但事实确实如此。所以，如果有谁对这个领域感兴趣，这显然是我们面临的一大供应链瓶颈。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah. Right. I don't know what the what's the chem what's the material? I don't know what the thing is, but yeah. Uh, so yeah, if anyone's interested in that, that's apparently a bottleneck that we have.
+
+</details>
+
+**嘉宾**：确实是这样。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: No. Yes.
+
+</details>
+
+### 全栈自研 vs 纯模型路线：掌控硬件与制造现实
+
+**主持人**：那么，我们该如何应对？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: So, what do we do?
+
+</details>
+
+**嘉宾**：问得好。虽然现在关于把制造业回流美国的讨论非常热烈，但对于机器人产业而言，实际落地难度要比表面看起来艰巨得多。甚至可以说，目前全美还没有任何一家公司能真正做到在美国本土从零开始自研制造所有组件。即便有些公司声称他们在本土组装机器人、在本土完成制造，但底层原材料依然是从世界其他地区采购的。作为机器人研发人员，必须清醒地认识到这一点。作为一家全栈机器人公司，我们深知整条供应链有多漫长，攻克这整套难题究竟有多极端困难。现在业界的讨论大多集中在机器人基础模型和模型数据上，但硬件本身、以及打造优秀硬件的极端难度，却被严重低估了。我认为——
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah, I mean I mean it's a good question, right? I think there's a lot of uh exciting discussions on bringing manufacturing back to the US, but you know for robots especially that's actually much harder than uh than what it seems. And I would say even now there isn't a company in the US that's truly building everything from scratch in the US, right? like even when they say they assemble robot, they build whatever actually in the US, they're still sourcing the raw materials from other places in the world. And I think that's something to really be aware of as a robot builder, right? Like I think uh like as a full stack robotics company, we realize just how long the supply chain is and how long the whole problem is is actually extremely hard. And I think these days a lot of the discussion centers around a robot foundation model, model data. But I think hardware and just how hard it is to build good hardware is very undermphasized. But I think
+
+</details>
+
+**主持人**：这至关重要。这是一个本体平台，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: That's going to be extremely important. This is a platform, right?
+
+</details>
+
+**嘉宾**：实际上就是个本体平台。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Actually platform.
+
+</details>
+
+**主持人**：是的。有些公司选择走所谓的“无平台”路线，他们只做模型，并宣称可以部署在任何平台上，比如部署在 Optimus 上，或者各种现成的商用机器人硬件上。所以这是一种战略选择。显然你们掌控了软硬件全部环节，因此能够做到端到端整合。那么，你认为未来你们会更多在美国本土制造，还是会构建属于自己的全球供应链？哪种方向更有可能发生？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah. There there's some companies that choose to be let's call it platformless. They only do the model and you'll say we deploy on any platform. We deploy on Optimus, offtheshelf robotics. Uh and so it's a choice, right? like obviously you you you own everything so you can do that. Uh do you see yourself building more in the US or do you see building your own global supply chain? What what's the direction that is likely?
+
+</details>
+
+**嘉宾**：我们目前正在探索多种不同的路径。因为依赖全球供应链，就会涉及地缘政治因素——
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah. So we are currently exploring many different options right because with global supply chain then there is some you know geopolitical things
+
+</details>
+
+**主持人**：还有海运物流。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Shipping
+
+</details>
+
+**嘉宾**：对，海运以及航运延误等各种现实问题。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Shipping also shipping delays and all that stuff
+
+</details>
+
+**主持人**：字面意义上需要用货轮来运送机器人。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Literal ships for robots.
+
+</details>
+
+**嘉宾**：没错。而在美国本土，从零起步建立工业能力确实需要相当长的时间。所以我们正在思考一种既能让我们在美国本土承担更多制造工作，同时又能充分借助全球供应链优势的解决方案。不过回到你刚才提到的问题——有些公司选择只做模型，而我们选择全栈自研。我认为把这一点想透彻至关重要。我一直觉得，机器人领域最难的地方在于打造整套系统，以及整合构建系统所需的各项要素。我此前先后在 DeepMind 和 Nvidia 工作过，当时主要就是做模型研发，那段经历让我亲眼看到了当你不掌控硬件、无法针对硬件进行协同优化时，整个系统所能达到的上限有多受限。因为从机器人的价值创造本质来看，机器人的终极目标是提供现实服务、解决物理层面的实际任务。如果想在物理世界解决任务，你就必须能够对系统的每一个环节进行全局端到端优化，这一点是至关重要的。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah. and uh in the US you know it's just that going from zero to one will take some time right so we're trying to think about a solution that can both allow us to build more in the US while leveraging global supply chain right but I do think uh going back to your previous question on like some companies choose to just build model we build everything I think I think it's very important to get this right I feel that for robotics the hard thing is uh like building the whole system the necessary things to build a whole system like previously I was at deep mind I was at Nvidia primarily just building models and I saw the upper bound of the system when you don't control the hardware when you don't get to optimize that right because if you think about the value creation for robots eventually robots are here to deliver service to solve some physical tasks so if you want to solve physical task you want to be able to optimize everything and that's important
+
+</details>
+
+### 半人型轮式本体设计：实用性与自由度的工程取舍
+
+**主持人**：机器人都摆在眼前了，你必须跟我们好好讲讲。好吧，谈谈你们自己定制的这款硬件平台，你们怎么称呼它？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: I mean we have the robot you got to tell us about the Fine. Um your own custom platform. What do you call this?
+
+</details>
+
+**嘉宾**：我们叫它什么呢？
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: What do we call it?
+
+</details>
+
+**主持人**：对。它并不是双足人形机器人，外观非常流畅平滑。不过那个旋转臂结构到底是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah. So it's not humanoid. Um it's very smooth, but what's the what's the rotating arm?
+
+</details>
+
+**嘉宾**：我们通常把它归类为“半人形机器人”（semi-humanoid）。也就是说，它的上半身具备完全类似人形的结构，拥有肩膀、机械臂，腰部还配备了四个自由度。因此人类上半身能做出的所有动作姿态，它基本全都能做到。之所以称为半人形，是因为它的下半身采用了轮式底盘。我们为什么选用轮式底盘？因为这关乎实用性与性能之间最佳的工程权衡取舍。如果采用双足行走，机器人的能耗会大幅飙升，整机的稳定性会差很多，而安全保障更是极难实现。就目前的双足人形机器人而言，实际上没有任何机制能够确保机器人可以自始至终稳稳站立而不失去平衡。相信大家都看过很多机器人跳舞的视频，看似灵活，但其实极其容易摔倒。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah. So we think of this is generally like a semihumanoid. So basically the upper body is you know like a humanoid. It's got you know of course shoulder got arms. It also got like four degrees of freedom on the waist. So you can basically do all the upper body motion that a human can do. But it's a semihumanoid because the lower body is wheels, right? So why do we choose wheels? Because I think there's a difference. There's a you know optimal like practicality versus performance trade-off. I think with legs the energy the energy consumption will be a lot higher. You'll be a lot more unstable. You know safety will be extremely extremely hard to guarantee. So right now for legged robots, there's actually no guarantee that the robot will stay upright, balanced the entire time. I'm sure you guys have seen a lot of those robot dancing videos like like the robot dancing. Yeah, they are they fall over very easily.
+
+</details>
+
+**主持人**：确实，大家在不少明显不是量产级别的演示视频里，看到有人跟机器人打拳击、用力推搡它，机器人表现确实不错，但那台机器人充其量只是擅长保持动态平衡而已，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: No, but you also see the demos that you can tell are not production where you can box the robot and you can push it over and it's very good, but that robot is just good at balance, right? Like
+
+</details>
+
+**嘉宾**：这里面存在着很大的——
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: there's a
+
+</details>
+
+**主持人**：我认为你们所创新的更具价值的地方在于躯干的活动能力。比如我们这里摆着的一台早期原型机 Mewtwo，它就在后面。这台原型机只有一个垂直上下的升降轴，而你们后来选择转向了现在这种设计：它具备俯仰和倾斜的能力。稍后我们还会展示洗衣服的演示，在那个场景中，机器人必须俯身探进洗衣机内部。这赋予了它额外的自由度，我甚至一时都找不到精确的工程术语来描述它——它既不是单纯的俯仰（pitch），也不是单纯的偏航（yaw）。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: I think I think the more interesting thing that you guys have innovated so like we have one of the prototypes uh which is the Mewtwo. Yeah. Back here. This is this is just like an up down uh axis and you've chosen to then move towards something like this which um has the the ability to lean and we're going to show the laundry demo where you have to lean into machines. Right. That's another degree of freedom that I don't even have the words for it. It's not pitch. It's not yaw.
+
+</details>
+
+**嘉宾**：没错。我们当初是怎么构思这一点的呢？这其实是一次非常有启发性的类比体会。两年前我在健身的时候，不小心拉伤了肌肉。相信大家都有过类似的体验：接下来的几天里你整个人几乎无法动弹；或者睡觉姿势不对落枕了，脖子变得异常僵硬。当我们经历那种身体受限的状态时，才会猛然意识到：天哪，我们在日常生活中动用了那么多肌肉群和自由度，平日里却往往觉得理所当然。可一旦其中某些活动度受阻，哪怕做一些原本觉得极其自然的动作，整个人都会变得笨拙别扭无比。我们在设计机器人时也是这样思考的。如果是单纯类似升降机的机构，只能机械地上下移动。但实际上人类躯干的运动极其丰富，我们在日常物理活动中非常高频地依赖腰部和背部动作。就比如我现在想去拿面前这个水瓶，我绝不可能只单单挪动整条手臂。如果要我刻意固定住整个上半身不动去拿，那姿势会极其怪异。正常情况下，我必然会很自然地稍微俯身倾斜把手伸过去，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah. Yeah. So yeah, how did we think about that, right? like uh so actually it's very useful exercise like you know I think sometimes a couple years ago when I was exercising I accidentally like you know like pull a muscle right I'm sure you guys have that experience too right then the next few days like you just couldn't move or like you pull where you slept in the wrong position so your neck is very stiff we have all experienced that and then whenever you experience that you kind of realize wow so many muscles so many degrees of freedom that we use in our daily life that we take for granted But when it's disabled like it's very awkward for you to do some task that you feel are very natural. Right? So that's also how we think about like when we design robots when you have like a this kind of design which is this purely elevator could only go up and down. We realize a lot of the like human torso movement like we use our like you know waist back a lot for like day-to-day physical activity right even like if I want to get this bottle like I'm not just moving my arms. It's actually very strange for me if I I have to intentionally think about fixing my upper body. I would always like do this, right?
+
+</details>
+
+**嘉宾**：人类日常移动身体的方式蕴含着大量潜意识的协同动作，如果机器人拥有相应的躯干自由度，同样会极其受用。而且进一步思考：如果我们的终极目标是让模型从人类数据中学习，而人类在现实中无时无刻不在活动自己的躯干，你就必须让模型能够吸收这些人类躯干动作并映射去控制机器人本体。如果硬件形态本身不支持这些自由度，那么人类动作向机器人的迁移泛化能力就会大打折扣，机器人操作起来就会缺乏灵巧度，动作也会显得异常僵硬不自然。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: So there's just a lot of like subconscious way that humans move their body that I think will be equally useful if robot has a degree of freedom. And if you further think about okay, we want to learn from human data. The humans are moving their torso all the time. You want to be able to like ingest that into the model to control the robot. But if you have a form factor that doesn't allow for that, then the transfer becomes less and the robot becomes less stressous and it's just more awkward.
+
+</details>
+
+### 人类数据预训练与跨形态动作迁移
+
+**主持人**：那在这套流程里，数据标注是怎么运作的？大家常看到有人进行遥操作。这属于最后阶段针对机器人实际运行工时进行的遥操作或远程动作映射微调吗？还是说模型本身已经具备了一定的跨硬件泛化能力？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: What's the data labeling side of this? Like I, you know, you've seen people um is this the last like post-training fine-tuning side of actually the hour of using the roboty operated or remote controlled mapping motion or like does some of it generalize over?
+
+</details>
+
+**嘉宾**：你所说的“数据标注”具体是指哪一部分？
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Uh when you say labeling you mean
+
+</details>
+
+**主持人**：指的是把你们训练出的状态预测模型，映射迁移到你们特定的定制硬件平台上。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: like taking the model you have that predict state Yeah. to mapping it to your specific hardware.
+
+</details>
+
+**嘉宾**：明白！实际上模型的泛化效果极其出色。我给你们展示的所有关于这台新机器人的演示中——因为这台新硬件才刚刚造出来不久，所以比起之前向大家展示过的那台拥有海量采集数据的固定机械臂，新硬件本身积累的本体数据可以说少之又少。但是对于新机器人而言，即使模型在预训练阶段从未见过它的本体形态，它依然能够飞快学会刚才演示中的那些技能。这在很大程度上要归功于我们从一开始就确立的研发策略：甚至在硬件彻底定型之前，我们就坚决投入到基于人类动作数据的预训练中。因为我们坚信，未来的机器人本体终将具备类似人体的运动机理。在硬件研发迭代的同时，你可以先行一步在模型训练侧建立先发优势。如今我们清晰地看到，这种跨形态的表征迁移是切实存在的，而且带来了非常显著的赋能效果。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Oh yeah. Yeah. It generates this very well. So for all the demos that I have shown you on the new robot cuz the new robot we you know it got ready not so long ago. So we quite literally do not have a lot of data compared to the stationary arms we showed you which had much more data. Right. But a new robot, the model has not seen this in pre-training in some of our pre-trained model. It's able to learn the task that you saw like very quickly. And I credit a lot of that to like you know like even before the hardware is ready, we already committed to pre-training on humans because we knew at some point our robots will be like human. You can get ahead on the training side while hardware is getting ready. And I think now we're seeing that like the transfer is actually there and is actually very helpful.
+
+</details>
+
+**主持人**：再聊聊评估（Eval）环节吧。模型能够给出动作预测，指挥硬件去完成任务，但我们时不时也会看到它在某些动作上出现失误。你们也会在极其小众垂直的细分场景下进行压力测试，比如往药瓶里装药丸……
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Talk about the eval side of this. So you can have predictions, you can have it do stuff and you know every now and then we see it miss stuff. You test on very niche things as well like filling a pill bottle. Um
+
+</details>
+
+<!-- chunk 5/11 -->
+
+### 新任务的学习、实机评测与快速迭代
+
+**Host**: 这个过程大概需要多长时间？你们是如何考虑在实际中部署新任务、进行评估和快速迭代这一整个流程的？具体看起来是怎样的？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: How long does that process take? How do you think about the aspect of actually deploying on a new task, evaling, iterating? What does that look like?
+
+</details>
+
+**Guest**: 如果我们想要让机器人学习一项新任务，基本上只需要进行少量的机器人数据采集，然后模型……
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah. So if we want to learn a new task, you know, we basically do a little bit of robot data collection, then the model...
+
+</details>
+
+**Host**: 你说的“少量”大概是指多久？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: What is a little bit like?
+
+</details>
+
+**Guest**: 大概几个小时吧，两三个小时左右。在某些特定任务上，甚至只需要几十分钟，对吧？然后……
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah, like a couple hours, couple hours. Yeah, we're in some of the tasks like just tens of minutes, right? Yeah. And then...
+
+</details>
+
+**Host**: 切菜那个任务采集了45分钟。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: The chopping one was 45 minutes. Yeah.
+
+</details>
+
+**Guest**: 开冰箱那个任务也是。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: The open the fridge was on...
+
+</details>
+
+**Host**: 而且那还是个面试环节。那就像是你们招聘工程师时的一项入职考核任务。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: And that's an interview. That's like an onboarding task for one of your engineers.
+
+</details>
+
+**Guest**: 对，没错，是这样。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah. Yeah. Yeah. So, uh...
+
+</details>
+
+**Host**: 如果你想来这里工作，这可是个很有趣的考验。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Fun, fun thing if you want to work here, you know.
+
+</details>
+
+**Host**: 找一个任务，然后让机器人把它完成。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Find the task, have the robot do it.
+
+</details>
+
+**Guest**: 没错。只要向我提议一项新任务，然后来办公室……
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah. Yeah. Pitch me a new task and I'll come to the office...
+
+</details>
+
+**Guest**: 采集一些数据，训练并测试一个模型，看看效果如何。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: You know, collect some data, try a model and see what happens.
+
+</details>
+
+**Host**: 比如系鞋带。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Tie your shoes.
+
+</details>
+
+**Guest**: 系鞋带挺累人的。不过那确实会很酷。但总之，只需采集少量的数据，训练模型，然后我们就直接把模型部署到真实世界中，观察它的实际表现。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Julie is tiring. Yeah, that'll be cool. But yeah, so you know, a little small amount of data collected, train a model, then we just deploy the model in the real world and then we look at the performance then...
+
+</details>
+
+**Host**: 补充说明一下，这里说的“采集数据”，是指实际上由人工通过遥控来操作机器人，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: To to fill in, collected means like you are you have a person actually operating remote control,
+
+</details>
+
+**Guest**: 就是遥控操作机器人做一会儿任务，
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Doing the task for a bit,
+
+</details>
+
+**Host**: 然后你们拿这些数据去训练模型。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: And then you train,
+
+</details>
+
+**Host**: 如果模型表现还可以，你们要如何去提升？又是如何进行量化评估的？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: And it does okay, you improve. How do you measure?
+
+</details>
+
+### 机器人领域的RLHF与通用平台愿景
+
+**Guest**: 在训练模型阶段，确实有一些常规指标可以参考，对吧？比如观察模型是否能够良好收敛。但在今天的人形机器人领域，关键在于训练完之后，我们会直接在真实世界中运行模型——也就是在采集数据的相同环境设置下部署，看看模型的实际表现。有时模型开箱即用、效果极佳，你基本上不需要再做什么；但当模型的表现大概只有70%或80%时，你就可以仔细观察它的行为模式，找出它究竟不擅长哪些环节。接着你就可以针对性地再采集一点数据，然后进行迭代。我认为这有点类似于机器人领域的“基于人类反馈的强化学习”（RLHF）。机器人自主运行，你可以给它的表现打分：好、坏或者一般，接着这些机器人自身产生的真实经验数据就可以拿来进一步微调训练模型。当然，你也可以自己手动采集更多数据来扩充训练集。最终，我们的长期目标是将这台机器人打造成一个通用平台，任何人都应该能够在其上训练自己的任务。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah, yeah. So when you're training the model, there's certain metrics you can look at, right? Just like actual model, it converges nicely. Now after that, for robotics today, we just run the model in the real world, right on the you know same setup that the data is collected to see how the model does. Sometimes the model just works great out of the box, right? You don't really need to do much more. But when the model's, you know, like maybe like 70% 80% there, then you see how the model behaves. You figure out what it's not good at. Then you can like collect a bit more data, then iterate, right? I think of this as like the robotics version of like reinforcement learning from human feedback, right? The robot rolls out, you can score it good, bad, somewhat good, and then that data, the robot's own experience, can be used to train the model. And you can also just collect more data yourself to train a model, right? Eventually, you know, our goal is like, you know, this robot is going to be our platform. Anyone should be able to train tasks on it.
+
+</details>
+
+### 长程任务的挑战：硬件瓶颈与多模态感知缺失
+
+**Host**: 我想听听你对未来的预测和时间线展望。目前来看，这些测试任务相对还是比较简单的，比如从洗衣机里取出衣物——那是一条毛巾，你不用担心把它压碎坏掉；
+
+<details>
+<summary>Original English</summary>
+
+**Host**: I want to get a bit of a prediction and like timeline to where that goes. Right now, the tests are somewhat simple, like take laundry out. It's a towel. You can't crush it. Um...
+
+</details>
+
+**Guest**: 或者切切食物。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Chop some food.
+
+</details>
+
+**Host**: 对。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah.
+
+</details>
+
+**Host**: 但另一类场景比如搭建一个摄影演播室，需要搬动各类器材、搬桌子、布置灯光；
+
+<details>
+<summary>Original English</summary>
+
+**Host**: There's also the side of like, okay, set up this filming studio, right? Move stuff around. Um bring a table, set up lights, I think.
+
+</details>
+
+**Guest**: 管理我的数据中心。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Manage my data center.
+
+</details>
+
+**Host**: 对，插拔各种线缆和设备；
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah. Yeah. Plug in stuff. Um...
+
+</details>
+
+**Guest**: 还有给另一台机器人充电。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: And and also like recharge another robot.
+
+</details>
+
+**Host**: 是的。那我们什么时候才能看到机器人在工厂里大规模落地？要实现这种规模化扩展，我们到底还需要突破什么？是算法模型的问题，还是所有环节都需要提升？看起来你们的硬件平台已经准备好了，但究竟什么时候我们才能从“仅仅切一种食材”跨越到“给你一份食谱，你就能全程自主完成料理”的水平？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah. Yeah. But when do we see the factory or like what do we need to scale up? Um is it model? Is it everything? It seems like your hardware is set for that, but where do we see it go to a point where I can go from instead of just cut one thing to you know, okay, here's a recipe like full send or...
+
+</details>
+
+**Guest**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah.
+
+</details>
+
+**Guest**: 我认为，要达到真正意义上的通用机器人——也就是基本上可以处理任何任务的机器人或模型……
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah. I would say to get to truly general purpose robots, like basically a robot or a model that does anything like...
+
+</details>
+
+**Host**: 倒也不必立刻谈完全通用，我们尽量保持在技术层面的现实探讨：
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Not not that. Like okay, so to keep it somewhat grounded on a technical level, like...
+
+</details>
+
+**Host**: 我们什么时候能开始推进那种长程任务的闭环？不再是简单的切菜，而是进行一个持续5到10分钟的操作序列。在长序列任务中，评估阶段出现断点和失败的概率大大增加；又或者不再只是往一个药瓶里装药，而是连续将10种不同的药片按顺序准确分装。目前限制我们的核心瓶颈是什么？我们正在攻克的方向又是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: When do we start to see us pushing that feedback, right? So instead of very simple chopping, maybe a 5 to 10 minute sequence, right? Where now the eval step, it can break at many more points. Instead of just fill one pill bottle, 10 different pills all in a sequence, right? What's limiting us? What are we pushing on?
+
+</details>
+
+**Guest**: 我认为有几个关键维度。首先，比如大家看到的洗衣演示，机器人完成整整一套完整闭环大概需要1个小时。也就是说，机器人完成一项完整长程任务的最长持续时间，目前其实已经达到了小时级别。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah, I think a couple of things. And one is that like the laundry demo that you have seen, it's going to be like 1 hour to finish a whole loop, right? So the longest duration that a robot can do like a full job is already in the hour range,
+
+</details>
+
+**Host**: 太棒了。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Nice.
+
+</details>
+
+**Guest**: 对吧？但是要想让机器人对任意任务都能达到这种表现，瓶颈归根结底又回到了数据和硬件上。以某些任务为例，比如布置一个空间，你可能需要超越普通的双指平形夹爪，你需要更灵巧的操作机构，比如像人类的手一样灵巧的手。然而，一旦你想在灵巧手上训练模型，你就会受到硬件稳定性的严峻制约。目前世界上最顶尖的灵巧手，其耐用性依然远远不够，运行时间稍微长一点就会迅速过热，这就成了致命瓶颈。有时候我们甚至夸张到必须在灵巧手上绑个冰袋来降温。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Right? But you know, to be able to do that for any task, I think the bottleneck is coming back to data and hardware. Right, so for some of the tasks, for example setting up the space, you might need more than like a parallel jaw gripper, right? You might need something more dextrous like a hand, like a human hand, right? But then if you want to train a model on the hand, then you're bottlenecked by the hardware stability. Like hand today, the best hands, dextrous hands are still not durable enough. They overheat pretty quickly, right? So that becomes a bottleneck, right? You quite literally have to put an ice bag...
+
+</details>
+
+**Host**: 所以我们并不仅仅是在做自动化研究、训练出更好的模型，我们前面还有一道实打实的硬件物理极限。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: To we're not just auto researching make better model. We have hardware limit.
+
+</details>
+
+**Guest**: 没错。硬件限制是一个巨大的制约因素；而且硬件一旦受限，它会拖慢整体的研发节奏。因为要验证你在某项任务上是否取得进展，你最终必须在真实硬件上做评测。如果无法做到高频、自发、快速的实机评测，你的科研迭代速度就会被大幅压缩。再者，我们该如何采集到正确有效的数据？比如要想完成像“布置演播室”这种极其复杂的任务，该如何采集高保真数据？你可以想象，目前绝大部分数据都基于视觉——也就是视频流以及手部或关节运动状态的编码。但人类在现实世界中拥有的感知维度要丰富得多：我们能听见声音、能感知触觉与阻力……
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah. So hardware limitation is a big thing. But then if hardware is limited, then that will slow down everything, right? Because to know that you're making progress on any task, you eventually have to eval on the hardware, right? So then without the eval being very spontaneous, very fast, that also limits your research progress, right? Because then how do we collect the right data? I think how do we collect the right data to do extremely complex tasks like setting up this studio? Because you can imagine like today most of the data is vision based, right? It's like video streams and some encoding of your hand motion where the robots have joints. But humans have a lot more sensors. You know, we hear things, we feel things,
+
+</details>
+
+**Host**: 还有嗅觉。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Smell.
+
+</details>
+
+**Guest**: 对，还有嗅觉。我们在潜意识中调用了所有这些感知模态，才让我们在物理世界的交互和操控中如此游刃有余。然而今天，如果你完全没有采集到这些维度的感知信息，哪怕你把视频数据规模堆到数百万小时，你依然缺少了任务中至关重要的关键维度，从而永远无法彻底攻克该任务。所以在我看来，正是这些因素在拉长研发与落地的时间线。但是，针对那些在当前技术条件下就已经能够高保真采集数据的任务或工作流，我认为并不存在根本性的阻碍。就像我们本周向公众展示的那样，我们有一个物理具身智能体，能够像人类一样完整自主地完成整套洗衣流程。因为对于这项任务，我们并不需要超越平形夹爪的极限，也不需要目前无法获取的特殊传感模态。因此，我认为通往更通用机器人形态的最大瓶颈，依然在于硬件和数据。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah, you smell things, right? So we subconsciously use all of those to help us be so good at manipulating the physical world. But today, if you're not capturing that at all, then even when we scale to millions of hours, you might just be missing critical dimensions of the task. So you'll never be able to solve the task, right? So I think those are like what I consider what's dragging out the timeline. But for tasks or for workflows that you can collect data today to high fidelity, then I don't necessarily think there's a fundamental bottleneck, right? Just like what we are demonstrating to the public this week: we have a physical agent that can do the entire laundry workflow as a human would, right? Because for that task, we don't really have like, oh, you actually need more than a parallel jaw, or you actually need some sensing modality that's just not available today, right? So I do think the biggest bottleneck to have a much more general thing is still hardware and data.
+
+</details>
+
+### 商业落地与规模化部署：从酒店布草到鼎泰丰餐巾折叠
+
+**Host**: 是的。我也想借此机会让你聊聊并夸夸你们现有的客户与合作伙伴。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah. I want to take this chance to let you brag about your customers and partners. Yeah.
+
+</details>
+
+**Host**: 你们已经公开了一些合作关系。我们可以先从贝斯特韦斯特（Best Western）酒店开始聊起，然后谈谈其他一些让你引以为傲的合作，
+
+<details>
+<summary>Original English</summary>
+
+**Host**: You have some announced relationships. We can start with Best Western and then maybe some of the others that you're proud of,
+
+</details>
+
+**Host**: 比如一些有趣的落地故事等等。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Cool stories, anything like that.
+
+</details>
+
+**Guest**: 好的。我们在官网上专门发布了一篇关于实际落地的博客文章，里面有非常详尽的介绍。我强烈推荐大家看看附带的视频，因为我觉得那个视频……
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah. So we have a deployment blog post on our website that goes into much more detail. I really recommend watching the video, because I think the video is...
+
+</details>
+
+**Host**: 是专门针对贝斯特韦斯特的那条视频吗？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Do you want the Best Western one?
+
+</details>
+
+**Guest**: 不，我们制作了一个汇总视频，涵盖了所有正在合作的客户。视频拍得非常棒，生动展示了我们正在做的事情，我认为效果特别好。客户方面，贝斯特韦斯特酒店属于酒店业态，我们为他们折叠了大量的布草毛巾。实际上，每家酒店都需要这个功能，每个健身房、每家健身中心也都需要。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: No. We have like one video for all the customers we're working with. It's a really really nice video. Shows what we're doing and yeah, I think it's great. But yeah, we have customers, you know, Best Western that's in the hotel space. We fold a lot of laundry like towels for them. Every hotel needs it. Every gym needs it. Every fitness center needs it.
+
+</details>
+
+**Host**: 目前在各处的落地部署情况是怎样的？如果我想亲眼去看看，可以去哪家贝斯特韦斯特酒店？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: What's the deployment so far? Where can I go to? Which Best Western do I go to to see it?
+
+</details>
+
+**Guest**: 如果你想去现场看实物，我其实更推荐去我们合作的另一处落地地点——鼎泰丰（Din Tai Fung）。你们去过鼎泰丰吗？
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah. So if you want to go somewhere, I actually recommend going to our other deployment, Din Tai Fung. Have you guys been to...
+
+</details>
+
+**Host**: 去过，当然去过。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yes. Yes.
+
+</details>
+
+**Guest**: 大家都知道他们家最好吃的是……
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah. You know the best...
+
+</details>
+
+**Host**: 皮非常薄的小笼包。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Very thin wrapper.
+
+</details>
+
+**Guest**: 对，非常薄。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah. Very...
+
+</details>
+
+**Host**: 我们当时应该直接把采访演播室搬到鼎泰丰去拍的。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: We should have filmed there.
+
+</details>
+
+**Guest**: 哈哈，对，我们真应该直接在那里录制。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah. We should have [laughter] just done there.
+
+</details>
+
+**Guest**: 如果你去鼎泰丰或者其他中高档餐厅用餐，餐桌上通常都会摆放折叠整齐的餐巾，对吧？如今我们的机器人每天都在为全美各地的众多鼎泰丰门店折叠成千上万条餐巾。这实际上是我们目前规模最大的规模化商业落地客户。因此我想在这里做一个区分：如今有很多机器人公司都在谈论……
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah. But in Din Tai Fung, if you go to Din Tai Fung or other like upscale restaurants, there's napkins on your table, right? So our robots today fold thousands of napkins for many many different locations, many different Din Tai Fung locations in the United States. So that's actually our biggest scaled customer, right? So I want to make a distinction here: today there's a lot of robotics companies talking about...
+
+</details>
+
+<!-- chunk 6/11 -->
+
+### 通用机器人真正的落地挑战：从单点试点到跨门店规模化部署
+
+**Speaker A**: 部署……大家都在谈论试点项目，但真正困难的并不是把机器人放到一个地点或者做一个试点项目。真正困难的是让客户切实相信并验证你的机器人创造了足够的价值，以至于他们愿意将你的机器人部署到其旗下的众多门店内。
+
+这就是我们与鼎泰丰（Din Tai Fung）合作中发生的事情。据我所知，对于其他研发类似通用机器人的公司来说，这种跨门店规模化落地基本上还没有真正发生过。在鼎泰丰，我们的机器人每天要折叠数千张餐巾纸。他们的质量标准极其严苛——比如他们要求餐巾纸的第二道向前折痕距离收纳袋边缘只能差几厘米，甚至只有特定距离，这样你才能把筷子恰好插进去。所以这实际上是非常细致、高精度的工作。我可以给你展示一下……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: deployments, talking about pilots, but what's really hard is not putting your robot in one location or doing a pilot. What's really hard is that the customers believe or validate that your robot creates enough value that they want to deploy your robots across many of their sites. So that's what's happened for us with Din Tai Fung, which to the best of my knowledge hasn't really happened for other companies doing similar like general purpose robots. So at Din Tai Fung, our robots fold thousands of napkins per day. The quality standard is extremely high, you know, cuz they want like okay the second forward seam of the napkin is only like a couple centimeters below the, I don't even know how you call it, the pocket so you can stick the chopsticks in. So it's actually very fine-grain, high precision. I can show you...
+
+</details>
+
+**Speaker B**: 从某种层面来说，这正是机器人技术所擅长的，也是机器人存在的意义，对吧？人类往往很难做到始终如一。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> at some level that's what robotics are good for. Robots are good for too, right? Humans are not the most consistent.
+
+</details>
+
+**Speaker A**: 没错。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> Yes,
+
+</details>
+
+**Speaker B**: 特别是在细微的细节上，而机器人却能够在某种程度上做到完美无瑕。不过，你拿这个作为通用机器人的落地案例，而不是专用机械……这挺有意思的。从某种层面看，人们通常会认为你可以搞一个专用机械来折餐巾纸，能精确到毫米级完美折叠，而不一定需要这种通用型机器人。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> especially on small details whereas a robot can somewhat do it perfectly. It's interesting that's the example you bring for general purpose robotics versus... at some level I think people would assume you can have a specialized robot that will fold napkins perfectly to the exact you know millimeter as opposed to something like this, but...
+
+</details>
+
+### 可变形物体的操作难题与通用模型的演进优势
+
+**Speaker A**: 是的，我敢说也许确实能做出来专用机械。但在操作可变形物体（比如餐巾纸、毛巾等各类柔软易变形的东西）时，难点在于它们拥有无穷无尽的可能形态与构型配置。因此，对于一台专用机械来说，要处理这些其实是非常困难的。
+
+而我们的发现是：通过先开发通用的机器人基座模型，再将其快速微调适配到这些具体的使用场景中，你反而能够更快地达到生产级的作业品质。而且非常令人欣喜的是，既然鼎泰丰现在扩大了规模，与我们签订了规模大得多的合同，他们现在不仅希望我们的机器人折餐巾纸，还希望机器人去处理其他任务，比如切食材。这也正是我们展示切菜示例的原因。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> yeah I'm sure maybe you can, right, but the hard thing about manipulating deformable objects, right, like napkins, towels, everything is deformable, there are just infinitely many possible configurations. So that's really hard for a specialized robot, right? And what we find is that by developing a general purpose model in a robot and adapting it to these use cases, you can actually get to a production quality faster. And what's really nice is that now that Din Tai Fung has scaled, has signed a much bigger contract with us, they not only want our robots to fold napkins, now they want our robots, you know, like cut... you know, that's why we had the example to cut food too.
+
+</details>
+
+**Speaker B**: 这实际上是第二个落地用例吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> Is that actually the second use case?
+
+</details>
+
+**Speaker A**: 那是他们目前正在考量的使用场景之一。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> That's one of the use case they're thinking.
+
+</details>
+
+**Speaker B**: 哇。我觉得就凭鼎泰丰每天要切那么大体量的蔬菜，这就很刚需了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> Oh, wow. I think that point needs to cut so many vegetables per day.
+
+</details>
+
+**Speaker A**: 他们还需要包小笼包呢。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> They need to do the dumplings.
+
+</details>
+
+**Speaker B**: 确实。完成全套工序，那才是终极关卡，最终的大 Boss。［笑］
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> Exactly. Do the full. That's the final boss. That's the final. [laughter] Uh...
+
+</details>
+
+**Speaker A**: 我认为完全可行。我认为你们拥有的灵巧度与精密控制能力是足以胜任这项工作的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> I think you can. I think you have the dexterity and precision to do this.
+
+</details>
+
+**Speaker B**: 没错。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> Yeah,
+
+</details>
+
+**Speaker A**: 就像轻轻捏起褶子一样。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> you have little poll.
+
+</details>
+
+**Speaker B**: 但前提是绝不能把小笼包给掐破了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> But like I know don't break the dumplings.
+
+</details>
+
+### 通用硬件与权重跨店同步：速度与一致性
+
+**Speaker A**: 是啊，确实如此。通用机器人最显而易见的好处就在于它能够不断适应新的工种。而且我认为你刚才真正切中要害的一点就是开发速度。为了做一台能折特定层数或特定折法的定制折餐巾机……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> Yeah. Yeah. I mean that's the obvious benefit is you can adapt them anymore. I think the other thing you really touch on is the speed, right? To make a custom napkin folding with the exact ply, whatever.
+
+</details>
+
+**Speaker B**: 你就必须从零去设计制造整台机器，这根本不可能直接从亚马逊上买现成的。但通用机器人却能非常迅速地完成这些任务，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> You have to make the machine. You can't just Amazon this. Yeah. But this can do it pretty fast, right?
+
+</details>
+
+**Speaker A**: 没错，它可以做得非常快。而且现在它实际上已经达到了人类水平的速度与表现。要知道，机器人不知疲倦，不需要休息。而且我非常赞同你提到的“一致性”这一点。比如鼎泰丰面临的一个痛点就是：洛杉矶店、纽约店和西雅图店，不同店里的员工折餐巾纸的样式可能略有差异；但站在品牌的角度来看，他们需要的是高度的标准化与一致性。
+
+这恰恰是这些神经网络模型最擅长的事情。因为模型本质上就是一组权重参数，你可以把同一套权重无缝部署到跨区域的所有不同机器人身上，而且还可以通过 OTA（空中下载技术）进行同步更新。你一次性就能把全网所有机器人的模型全部更新完毕。一旦这一套机制跑通，我认为那真的是极其震撼的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> Yeah. This can do it very fast. And now it's actually it's at human parity. You know, and this robot doesn't get tired, doesn't need to uh you know... and I think I really like the fact that you mentioned consistency, right? Like one issue with Din Tai Fung is like you know their LA location with New York location, Seattle location, they fold napkin slightly differently. But from their perspective they want consistency. But you know that's exactly what these models are good at because models are just it's a set of weights. You can just like put the weights in the different robots across the... can OTA update them as well. Yeah, you can just update all of them at once, you know. It just once it works, I think it's truly like incredible.
+
+</details>
+
+**Speaker B**: 餐饮自动化的终极大 Boss 恐怕得是芝士蛋糕工厂（Cheesecake Factory）了。如果你了解他们的故事，他们所有菜品全是从零现场制作的，一切都有着极高的一致性，甚至精确到克数。每一道酱汁在全世界任何一家门店做出来的风味都分毫不差。懂的人自然懂。不过这正是乐趣所在。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> Final boss is Cheesecake Factory. If you know the story there, they're there from scratch. Everything is very consistent down to the measured gram. Every sauce is made like anywhere you go in the world, you'll have the exact same thing. If you don't know, you don't know. But, you know, that's the fun.
+
+</details>
+
+### 机器人领域的“苦涩教训”：数据规模与先验偏差
+
+**Speaker A**: 不管怎样，脑海中浮现的一个词是“机器人领域的苦涩教训”（Bitter Lesson for Robotics）。工业工程界过去常常为单一任务制造专用的定制机械，而现在的逻辑则是构建一个通用平台，能够完成最后的微调并胜任所有这些工作。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> Anyway, the term that comes to mind is like sort of like bitter lesson for robotics, right? Uh instead of the specialized robots which is a lot of uh industrial engineering, you build a generalized platform that can uh do a last-mile tuning and do all those things.
+
+</details>
+
+**Speaker B**: 作为行业专家，抛开常规认知，在你看来，机器人领域更深层次的“苦涩教训”到底是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> Give the expert add-on outside of your... what is what is more bitter lesson in robotics?
+
+</details>
+
+**Speaker A**: 是的，我认为在机器人领域有几个苦涩的教训。
+
+其一，机器人技术终将和其他已经被机器学习解决的领域一样，遵循规模扩展（Scaling）的规律。这意味着什么？这意味着尽可能拥有海量的数据。但在机器人领域，有一件事要棘手得多：搞清楚什么才是“正确的数据”，这比其他任何领域都要难得多。在自然语言领域，数据就是文本；在电子游戏领域，数据就是游戏运行数据；但在机器人领域，你选用的传感器直接决定了你拥有什么形态的数据。不过，只要你选对了传感器组合，并持续扩大这套数据的规模，我认为就能在模型性能上获得可预测的回报。从这个角度来看，机器人技术与其他 AI 领域并没有本质的不同。
+
+作为推论，伴随而来的另一个苦涩教训是：以往机器人领域有大量的学术研究致力于引入非常具体的“人类先验”（priors）。例如大家认为“我们必须让机器人认出物体的原本几何样貌、给物体画上包围框（Bounding Box），这样才能给机器人提供更好的感知能力”。但这里的苦涩教训告诉我们：只要保持算法架构更加纯粹简单，并扩大正确类型的数据集规模，泛化性能和更优异的行为就会自然涌现（emerge）。这一点与大语言模型的规律如出一辙。
+
+我认为最核心的苦涩教训归结为一点：最终 Scaling 必然有效；但在机器人领域，要扩展什么以及如何扩展却困难得多。因为现实世界里没有现成的互联网供你直接爬取数据，你必须自己研发硬件、自己配置传感器，把这一切全部调优跑通，然后再去堆叠扩展。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> Yeah, I think there's several bitter lessons for robotics. One is that robotics is going to scale just like any other domains that machine learning has solved. Right? So what does that mean? That means have as much data as possible. But in robotics, the one thing that's a lot harder is like what is the right data is much harder to figure out than other domains. Right? In language is text. In video games, just video game data, but for robotics like what sensors you choose determine what kind of data you have, right? But if you have the right set of sensors and just scale that data, I think you'll get predictable return on model performance. So in that way, robotics isn't so different. So that's the bitter lesson.
+
+As a corollary of that is that like there's a lot of research in robotics that's coming up with like very specific priors. Like for example, we need to make the robot see objects as they are, draw some boxes that will give robot better perception, right? But I think the bitter lesson here is that just keep the algorithm simpler and scale the right kind of data, then generalization, better behavior will emerge, so that's not so different. And the second, I think that's the main bitter lesson, which is like at the end of the day scaling will work, but in robotics to scale and how to scale just much harder because there is no internet. You have to come up with your hardware, come up with the sensors, get all of those right, and then scale. Then I think...
+
+</details>
+
+### 人形构型的终极形态与渐进迭代路线
+
+**Speaker B**: 我的意思是，一直有一种论调认为：既然现实物理世界完全是按照人类的尺度与结构来构建的，那么机器人最终理所当然应该具备人形，对吧？尽管硬件层面的挑战极其艰巨，但设想 10 年、20 年、100 年甚至 200 年后，我们能否制造出一个高效率的人形机器人？但在当下，我们必须根据手头现有的技术条件讲求务实，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> I mean there's the argument that, you know, the world is very made for humans, it should be a human, right? As hard of a hardware problem that is, think 10, 20, 100, 200 years down the line, can we make a really efficient human? But you have to be practical with what we have now, right?
+
+</details>
+
+**Speaker A**: 没错，我对这个问题的思考方式是：是的，最终机器人的形态确实理应如此。如果你想要打造一台通用机器人——一台能够适配尽可能多使用场景的机器——我认为人形构型（human form factor）最终会是最佳方案，因为整个人类社会的物理环境在漫长岁月里就是完全围绕人体工学打造的。
+
+然而，我认为真正打造出人形机器人的最佳路径，是采取渐进式迭代的方法。因为机器人技术太难了，整个软硬件系统技术栈极长，你很难在没有实践反馈的前提下先验地知道到底什么决定才是正确的。而且，硬件研发决策的试错成本极其高昂，硬件迭代周期也远远慢于软件。
+
+因此，你真正需要的是采取渐进迭代路线，而不是一开始就试图一步登天、直接做最终形态的人形机器人。否则你憋出来的一整套硬件很可能根本无法在真实业务中维持下去，性能也达不到要求，最终只能全部推倒重来。
+
+正如外界公开所见，特斯拉的 Optimus 已经经历了许多轮大改版，他们中途不得不推翻推倒许多设计。我认为，先以准人形（semi-humanoid）构型展开迭代，将其真正推向真实客户现场，完成模型的实际落地部署，你才能获得宝贵的闭环反馈回路。这种真实的反馈回路，如果你只是在实验室闭门造车五到十年试图搞出一台仓储人形机器人，是绝对无法获得的。这种持续迭代的务实路径，反而能让我们更快地逼近最终形态的通用机器人。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> Yeah. Yeah. So the way I think about it is like yes, eventually the robot should... if you want to build a general purpose robot, right? Like a machine that can be adapted to as many use cases as possible. I think human form factor will be the best one just because that's what we have been doing for ages, right? But I think the best way to actually build a human robot is to take an iterative approach because robotics is so hard. The whole problem, the whole stack is so long, it's really hard to know a priori what's the right decision to make, right? And because hardware decision is much more expensive, much more costly, just because hardware iteration is a lot slower, you actually want to take a incremental iterative approach, not going all the way to the final form factor because the chances that the thing you build actually doesn't last. It's not good enough. So, you just end up scratching it anyway.
+
+You know, like it's public news, like you know Optimus you know already gone through many, many iterations and they had to scratch their designs, right? And I think by iterating with a semihuman form factor and actually putting them out to real customers or and getting models really deployed, you get that feedback loop that you wouldn't get if you're just trying to build like, you know, warehouse humanoid and you spend like 5, 10 years building it. I think the iterative approach will actually get us closer to the final robot faster.
+
+</details>
+
+### 高维连续动作空间与机器人的流畅运动
+
+**Speaker B**: 而且我想对那些只听播客而没看视频画面的听众说明一下：这可能是我见过动作最平滑、最流畅的机器人了。我们以往见到的几乎所有人形机器人，动作都非常……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> And I will say, you know, for those listening and not watching, it's probably the smoothest robot we've seen. Like every humanoid you've seen is...
+
+</details>
+
+**Speaker A**: 生硬顿挫、一卡一卡的。甚至人类自己走路有时都不如它流畅。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> jerky and even humans don't walk as smooth as...
+
+</details>
+
+**Speaker B**: 因为……是的，它的模型可以同时协同驱动每一个关节电机。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> because Yeah. The model is can can move every single motor at once.
+
+</details>
+
+**Speaker A**: 是的，整体高度协同协调。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> Yeah. More than two cohort. Yeah.
+
+</details>
+
+**Speaker B**: 没错，但这实际上是一个极其困难的技术挑战。因为如果你深入思考一下模型的底层输出：模型是在输出具体的动作指令，这里涉及到动作空间的维度。动作空间的维度越高，模型去拟合数据的难度就呈指数级上升。在这台机器人上，动作空间的维度其实相当庞大，但我们在算法与工程上做到了极其出色的拟合，确保模型能够充分学习数据分布，从而呈现出如丝般顺滑的运动质感。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> Yeah. Yeah. And that's actually a very hard problem because if you just think about like the model, you know it's outputting action, there's an action dimension, right? The bigger the dimension is, the harder to fit the model to the data. But here the action space is quite large, but we did very good job to make sure the model fits well and gives you a smooth...
+
+</details>
+
+**Speaker A**: 你能大致界定一下这个动作空间维度的数量级吗？还是说这属于保密信息？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> can you bound the order of magnitude of the action space or is that...
+
+</details>
+
+**Speaker B**: 可以，它的数量级大约在 100 个动作维度左右。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> yeah so it's in the orders of like uh you know about a 100 action dimensions.
+
+</details>
+
+**Speaker A**: 明白，而且这全都是连续控制维度，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> yeah and these are all you continuous, right?
+
+</details>
+
+<!-- chunk 7/11 -->
+
+### 连续动作预测与时序上下文的重要性
+
+**Speaker A**: 它是连续的，对吧？所以模型基本上是在以非常高的频率进行预测，比如每秒预测 10 到 20 次至少 50 维的向量，以此来获得平滑的连续动作。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Continuous, right? So, the model is just basically predicting at very high frequency, you know, like tens like at least 50 dimensional vector like 10 20 times a second to get that continuous motion
+
+</details>
+
+**Speaker B**: 而且还可能会向前预测一到两秒。这样算下来，可能又要预测接下来的 100 帧左右。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: and potentially predicting one to two seconds out. So, that is another 100 frames or whatever.
+
+</details>
+
+**Speaker A**: 我猜这里也有一定的历史信息，类似于前序状态的上下文（context）。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: There's a bit of a history um similar to context of previous state I guess.
+
+</details>
+
+**Speaker B**: 没错，在机器人领域，上下文是极其关键的一环。因为如果你单纯只根据当前的单帧观测做决策，有时候你根本无法判断下一步该做什么。举个例子，比如打开微波炉，当动作进行到中间阶段时，单看那一刻的画面，你很难分辨到底是在关门还是在试图开门。所以，上下文信息在其中扮演着不可或缺的角色。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: So, context is a very important thing in robotics, right? Because otherwise if you're just making decision based on the current observation sometimes it's really hard to tell like what to do next right for example like if you think about opening a microwave like in the middle part it's unclear whether or not you're composer or trying to open it right so like context is also really important
+
+</details>
+
+### 从底层世界动作模型到分层 Agentic Harness
+
+**Speaker A**: 是的。我手上有一张冰箱演示的截图，里面展示了智能体规划（agentic planning）、工具调用（tool calling）等机制。我们可以把这张图展示给观众看。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: yeah and I I have a screenshot of the the fridge demo where is there's aentic planning and two hauling and all those things so we can show that for listeners
+
+</details>
+
+**Speaker B**: 我觉得这是模型之外一个非常有趣的维度。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: I think that's an interesting side after the model
+
+</details>
+
+**Speaker A**: 你们是如何将它封装进一个智能体运行时框架（agentic harness）里的？这背后具体的架构是什么样的？比如内核部署、时钟 UI 等等。你们做了很多非常酷的界面，但在把模型输出转化为最终执行动作的过程中，底层到底包含了哪些封装？这是针对每个应用场景专门定制的，还是说你们有一套通用的自研 SDK？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: how do to wrap it around into aentic harness like what is kernel deployment clock UI you have a lot of cool UIs u but you know what what goes into wrapping model output towards final thing is this custom per use case is it you have your own SDK
+
+</details>
+
+**Speaker B**: 是的，最终我们肯定会推出自己的 SDK。但从目前的思考逻辑来看，我们希望为机器人基础模型打造一个通用的 Agentic Harness 层。现阶段它运行的是我们自研的基础模型。我是这样看待这个问题的：在物理世界中执行任何真实的、长程（long-horizon）的任务，你必须做出大量的宏观决策。这不能仅仅依赖机器人在动作层面以连续轨迹的方式去推理物理世界，因为那些只是非常底层的、在物理环境中真正执行的具体动作，它们并不是高阶的意图。
+
+就像我们人类做决策时一样，我们会思考食谱的步骤，我们会想：“我已经完成了这一步，接下来该做那一步；在等待这一步完成的间隙，我需要去别的地方把另一件事办了。”这其中包含着大量的宏观认知与统筹决策。我认为，机器人哪怕只是处理我们演示过的洗衣服任务，它也必须具备这种认知能力。它需要能够推理出：既然洗衣机正在运转，那我就应该趁着等待的空档去干别的事情；一旦洗衣机洗完了，我就必须立刻把毛巾从洗衣机拿出来放进烘干机里。因为如果不及时拿出来，这里就会变成整个工作流的瓶颈。
+
+因此，机器人的运作需要大量的逻辑推理。理论上，你也许可以尝试直接用一个纯输出底层动作的端到端模型去硬学这些逻辑，但那样做效率会极其低下。这就是为什么必须采用分层架构——通过在我们研发的世界动作模型（world action model）外层构建一个 Agentic Harness 智能体系统，模型才能自由编排组合不同的能力和技能，进而去解决跨度长得多的长时程任务。
+
+这其实与大语言模型的发展轨迹非常相似：两三年前，模型还只擅长做文本自动补全，人类工程师必须不断按 Tab 键让它一点点把代码吐出来；而今天，智能体系统已经能够端到端地独立承揽复杂任务了。我认为这一点在机器人领域同样至关重要。目前行业内大部分人思考自主性（autonomy）时，依然停留在非常单薄的任务切片上，比如做个 30 秒或 1 分钟的微任务。但真正的商业价值，在于那些能够脱离人类监管、自主持续运行数小时的工作流。这正是我们努力构建的目标。因此，我们不把机器人仅仅视作一个算法建模问题，而是将其视作一个系统工程问题——你需要优秀的智能体编排、出色的 Harness 工程工程架构、优秀的基础模型，以及扎实的硬件底座，所有这些结合在一起，才是我们认为解决通用机器人（general-purpose robots）的正确路径。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: yeah yeah so I mean eventually we will have our own SDK but uh the way the way we think about is we want a general like harness layer for robotics foundation model today that is our own model right the way I think about is like for any like real task long task in the physical world there's a lot of like highle decision- making you have to do right it's not just like robot you know only reasoning about the physical world in the action continuous trajectories right because that's like very like low-level the thing you're actually executing the physical world but that's not the intent that you know like when we are doing decision making we think about steps of a recipe we think about oh like I finished this I need to do that while I'm waiting for this part to finish I need to go somewhere else to do something else there's a lot of high level cognition decision making that's happening and I think for robots to handle even you know the laundry task we are showing you it has to have that capability because you know it needs to reason that okay the washer is running so I should go do something else while the washer is finishing but now the washer is done I should take I should take the towels from the washer and put it in dryer immediately Right? Because if not, then that becomes a bottleneck in the whole workflow. Right? So, there's a lot of reasoning that needs to happen for robotics. And I think in theory, you could just, you know, try to learn that with a, you know, low-level model that's outputting actions, but it would be extremely inefficient. So that is why having a hierarchical system like putting a harness like a agentic system around our world action model is what allow the model to compose different capabilities different skills to solve a much longer horizon task. It's very much like in language model, right? Like two years ago, three years ago, the model was only good at autocomplete. Like humans have to like tap tap tap to get the model to keep spitting out code. But today, just like agentic system just carries the end to end task and that's and I think that's important because I think today in robotics people are still thinking about autonomy at the very task level like a one minute 30 second task. But really the value is about tasks or like workflows that go on like unsupervised for hours and that's what we're building towards and that's why I thinking about the robotics problem not just as a modeling problem but rather as a system problem you need good agent good harness engineer good model good hardware everything it's like how we think general purpose robots ought to be solved
+
+</details>
+
+### AI 编码工具与公司黑客松
+
+**Speaker A**: 你们有没有从越来越强的大语言模型编程工具中直接获益？比如新的 Opus 55 或者新的 Astra。你们的 Agentic Harness 内部是否接入了大语言模型？语言模型领域的 AGI 演进对你们产生了怎样的影响？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: do you guys see benefits from language model coding tools getting better So new Opus 55, new Astra. Um, do you have language models in your agent harness? How does AGI being developed in language model space affect you guys?
+
+</details>
+
+**Speaker B**: 不，这确实是，它在许多方面对我们产生了非常深远的影响。首先，我们是一家极其 AI-Native 的公司。编程智能体这类工具已经成为我们日常研发中不可或缺的基石，我们对所有新进展都持完全开放接纳的态度。每当市面上发布新的大模型，我们基本上都是第一批去测试的。比如 GPT-6 发布的那周，我们就在全公司范围内举办了一场黑客松（hackathon）。我们工程师在短短几天内做出的东西令人难以置信，其中很多功能甚至已经合并进主分支并直接上线到了生产环境。所以，我们确实非常重度地依赖编程智能体来加速我们的研发进程。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: No. No. Yeah. No, absolutely. Like it affects us very deeply in many ways. One is that like we're extremely AI native company, right? Like coding agents, all of that is a very fundamental part of our work and then we're very welcoming of that. Like whenever there's a new model, we're the first one to test it, right? Like we didn't like when GBD6 came out, we had like a companywide hackathon the same week and the thing that our engineers built was incredible and many of them are many of the features we built is already in main in production. Right. So we really like using coding agents to accelerate our work.
+
+</details>
+
+**Speaker A**: 针对感兴趣的朋友，你在体验 GPT-6 时，有没有发现什么特别令人惊喜的地方？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Uh just for people interested, uh anything surprising in GPC6 that you found?
+
+</details>
+
+**Speaker B**: 有的，我认为最惊艳的是它构建虚拟环境（virtual environments）并将其转化为仿真模拟的能力。我们在大概 20 分钟前也聊到过这一点，我觉得这个方向非常令人兴奋。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah, I think uh it's about the ability for it to like construct virtual environments, right? Turns into simulation. We talked that uh 20 minutes ago. I think that's really exciting.
+
+</details>
+
+**Speaker A**: 确实很有意思，当时涌现出很多像 CAD、Zillow 转 3D 这类项目。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: It's interesting. There were so many like CAD Zillow to 3Dish.
+
+</details>
+
+**Speaker B**: 他在那场黑客松里输给了一个 CAD 项目。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: He lost the hackathon to a CAD. Uh
+
+</details>
+
+**Speaker A**: 我赢了，那个 CAD 项目是我做的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I won I did the CAD
+
+</details>
+
+**Speaker B**: 搞反了，搞反了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: other way. Other way. No. Oh,
+
+</details>
+
+**Speaker A**: 那是我纯粹为了好玩去参加的一场 GPT 黑客松。当时我想着自己对 CAD 一窍不通，但既然每一个 Demo 都在搞这个，不如我也上手玩玩看。我本来以为做出来的东西肯定是一堆垃圾，结果发现它居然生成得相当扎实，效果出奇地好。不过当然，那纯粹是黑客松阶段的探索性项目。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: that was I won a GPT hackathon just for fun. I was like I know nothing CAD. um might as well play around with it cuz every demo is doing it. I'm like it's going to be garbage and I'm like it's kind of grounded. It's kind of good but it's just hackathon stuff.
+
+</details>
+
+**Speaker B**: 明白了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah.
+
+</details>
+
+### 落地部署时间表与垂直场景切入
+
+**Speaker A**: 太酷了。我原本打算先收尾探讨完一些具体落地案例，然后再聊聊公司的文化和你的个人背景。不过在此之前，我还有两个具体的技术问题。第一个问题是：对于机器人未来能够达到的里程碑，你们自己是否设定过一些明确的目标？比如在 6 个月、1 年、2 年的时间线上，你们期望机器人能够自主搞定哪些具体的任务？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Um cool. I I I was going to round out uh some of the use cases and then go into a little bit of company culture and your personal background. Yeah. I have two uh two technical questions. Uh, one is are there any like goals you want to set for yourself like 6 months, 1 year, 2 year timeline that you see robot should be able to do fill in the blank that you're kind of working towards?
+
+</details>
+
+**Speaker B**: 在 6 个月到 1 年的时间框架内，我们的核心目标毫无疑问是扩大机器人和模型的规模（scaling up），并真正将它们推向实际的现场部署。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah, I mean in the 6 months to one year frame, our goal is definitely like scaling up our robots and our model and truly getting them to deploy.
+
+</details>
+
+**Speaker A**: 我指的是具体的任务类型——比如现阶段是切菜或者打开冰箱。你们内部是否设立过类似“为了保持节奏，到某个时间节点前必须能够完成某项任务”的标准？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I mean like a task like uh right now it's cutting or opening a fridge. Is there like do you set yourself to by this timeline we should to stay on track be able to do whatever?
+
+</details>
+
+**Speaker B**: 在具体部署方面，我们目前正在多个不同的行业中进行探索，并没有认定哪一个特定的任务是我们必须拿下的。因为我们的终极目标是构建通用模型和通用平台，我们把每一个具体的细分任务都看作是对我们底层平台能力的验证，看作是我们摸索如何把全套系统做得更好的切入点（wedge）。目前我们大量落地在洗衣房和餐厅场景中，现场已经部署了数十台机器人，而我们明年的目标则是将总体部署规模扩大到数百台。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah I think uh in terms of deployments we're exploring many different industries there isn't a particular task we think we have to nail right because our goal is to build a general model a general platform and we think of each different task as like validation of our platform as a way as a wedge for us to figure out how to build everything better. So today we're doing a lot of that in laundry in restaurants. Uh we have already deployed tens of robots but our goal next year is like overall just deploying hundreds of robots.
+
+</details>
+
+### 具身智能行业路线与世界模型的技术图景
+
+**Speaker A**: 我最后一个技术问题的第二部分是：你如何看待行业内的其他玩家？能否为大家梳理一下，目前其他团队在做世界模型时都采取了哪些路径？你认为他们的思路有哪些局限？同时，他们的方案中又有哪些不同但值得肯定之处？在这个领域里，机器人世界模型的整体格局究竟是怎样的？你们又是如何最终确立现在的路线的？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Uh my part two on the last technical question is how do you see the rest of the industry? So fill in for people what other approaches are people taking to world models? Why are they wrong? Um what is different but good about their approaches as well? just what is the landscape of robotic world models in this space and why how have you come to your current
+
+</details>
+
+**Speaker B**: 这是一个非常棒的问题。我认为机器人学是当今最令人兴奋的领域，赛道里有许多我发自内心尊重的优秀公司，他们和我们一样都在从事着伟大的前沿探索，这种百花齐放的状态非常振奋人心。
+
+在我们看来，行业内目前对于如何攻克机器人问题仍然存在着多种截然不同的路径。就我们自身而言，我们坚信硬件必须全栈自研，我们必须牢牢掌控整个软硬件闭环；同时，我们坚信对高质量人类操作数据的规模化采集是重中之重。但行业里也有不少公司将赌注完全押在规模化采集真机机器人自身的数据上，或者押注在利用某种过渡性质的数据采集外设设备上。所有这些技术路径目前都在赛场上角逐。我认为这是不同的尝试路线，大家且看后续的发展。
+
+就现阶段而言，要妄下定论说哪条路绝对正确还为时过早。但我们对自己的构建方式非常有信心，因为从公司的文化和使命出发，我们绝不仅仅是为了训出一个模型而存在，我们的使命是真正让机器人走进现实并大规模部署。因此，我们尽可能多地把机器人推向真实场景去部署，专挑最硬的骨头啃。这样做能让我们在极早的阶段就把隐藏的问题暴露出来，从而极其精准地锁定整个链路中真正的瓶颈所在并加以解决。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: yeah no that's a great question so I think robotics is the most exciting space today and there's just so many uh uh you know amazing companies that I truly respect you know they've been doing great frontier work like us and uh it's very exciting and I think what we are seeing today is that there's still many different approaches to robotics like we believe that hardware needs to be built in-house. We need to own the whole uh chain. Uh we believe that scaling human data is extremely important. But there are companies that's betting on just scaling robots data. We're scaling some sort of intermediate like data collection devices, right? All of them are in play and uh I think it's different approaches. We'll just see what happens. I think right now uh it's still a bit early to tell, but we feel pretty good about the way we're building things just because like we as a company culture-wise, mission wise, we're not here to just build a model. We're here to truly get robots deployed. So we deploy as much as possible, work on the hard problem. So we identify problems much earlier on. So then I think that really helps us identify what is the true bottleneck and then solve it. And I think for uh folks for people
+
+</details>
+
+<!-- chunk 8/11 -->
+
+### 机器人公司的迷雾与真实需求
+
+**Guest**: 对于那些只专注于问题其中一个环节的人来说，这种情况有点像战争迷雾。你无法真正看清全貌，最终可能会造出某种在技术上极其酷炫、但归根结底却不是人们所需或想要的东西，对吧？我认为机器人领域已经倒下了一大批公司，它们每一家当时都拥有非常闪亮、非常酷炫的机器人。然而，弄清楚人们究竟想要什么，虽然嘴上说“做出人们想要的东西”很容易——大家都这么说——但对一家机器人公司而言，实际执行起来却非常困难。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: ...who are only working at one part of the problem, it's kind of like fog of war. You don't really see the whole picture and you might be building something that's extremely cool technologically but may not be what people need or want at the end, right? I think there's a whole graveyard of robotics company and I think all of them had very shiny, very cool robots, but you know just figuring out what people actually want is actually is very easy to say you know like build something people want. You know everyone says that but it's actually really hard to execute [for a robotics] company.
+
+</details>
+
+### 世界动作模型与技术路线之争
+
+**Host**: 从技术层面来看，你们拥有自己的“世界动作模型”（World Action Model）。这在整个行业里算是一种标准路线吗？大家是否还在探索其他方向？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: On the technical side. You have your world action model. Is that standard across industry? Is there other directions people are taking?
+
+</details>
+
+**Guest**: 是的，我想说这目前也绝非行业标准。我们是在世界模型（World Model）的基础之上构建世界动作模型。现在有许多公司都在构建世界模型。正如你提到的 Runway，他们也正开始转向适配视频世界模型。
+
+此外，也有些公司在构建视觉-语言-动作模型（VLA, Vision Language Action Model）。这种路线基本上是将视觉语言模型直接适配迁移到机器人领域。所以在我看来，通往目标的路径有很多种。但归根结底，我们给模型赋予什么称谓并不重要，重要的是从第一性原理出发，我们认为模型究竟需要具备什么样的核心能力。我想就此稍微展开说明一下。
+
+我认为对于机器人技术而言，最核心的事情在于你必须能够预测未来，对吧？机器人学乃至任何物理系统，其本质都是基于你当前以及过去所获得的所有信息，去判断下一步应该做什么。因此，它的核心就在于预测接下来会发生什么。预测机器人的动作，本质上就是预测机器人下一步应该采取什么行动。但如果你深入思考就会发现，机器人仅仅是世界的一部分，对吧？机器人固然会影响外部世界，但外部世界同样制约并决定着机器人在该环境中应当如何行动。
+
+如果从这个角度去审视，那么你能采取的最符合第一性原理的做法，就是去尽可能全面地预测这个世界中一切可预测的内容。正因如此，我们坚信对未来的预测极其重要。在今天，这一思想的具象化落地就是世界动作模型。而 VLA 往往只预测机器人的动作，或者是对世界做某种更为抽象的表征预测；然而一旦你去预测抽象表征，你实际上就已经把自身的人为偏见编码进了“什么才是值得预测的内容”之中。“苦涩的教训”（The Bitter Lesson）告诉我们，应该尽可能剔除人类偏见，直接采用最原始的表征——也就是摄像头的输入画面——去完整预测所有的一切。这就是我目前对机器人建模所持有的思考方式。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah, I would say that's also not standard. So we're building world action model on top of world model. So there's many companies building world model. You know you mentioned Runway they're also getting to adapt video world models.
+
+There are also companies building vision language action model. So that's like taking vision language models and adapting them to robotics. So I think there's many different ways to go about it. But I think at the end of the day like what we call the models is less important than what we like believe the model needs to be able to do at a first principle level. So I want to explain that a bit.
+
+I think for robotics the most important thing is that you need to be able to predict the future. Right. Right. Robotics, any physical system is fundamentally about based on the information you have at the present moment and before what should you do next. So it's really about predicting what comes next. So predicting robot action is like predicting what the robot should do next. But if you think about it, robot is just a part of the world, right? Robot influences the world, but the world also influences how the robot should behave in that environment.
+
+So if you think about it this way then the maximal the most first principle thing you can do just predict as much of the world that you can possibly predict right so that's why we believe predicting the future is extremely important and today the instantiation is world action model and VLA only predicts robot actions where some more abstract representation of the world but whenever you're predicting abstract representation of the world you're encoding your own bias into what's important to predict and The Bitter Lesson tells you let's remove human biases let's just take the most raw representation the camera inputs and just predict all of that right so that's how I think about modeling for robotics today.
+
+</details>
+
+### 方案的反思与潜在的破局方向
+
+**Host**: 那我想就这一点稍作追问：你基本上是在表达你们的方法比 VLA 更好，因为你们强调了对世界的预测能力。我完全认可这一点，你已经彻底说服我了。
+
+但如果你判断错了呢？最有可能成为第二名的备选方案会是什么？（笑）如果有其他人另辟蹊径，那会是个很有意思的问题。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: So just to press you a little bit on this you're you're basically you're saying your approach is better than the VLA right because you're you're you're you're emphasizing prediction I fully buy that I like you've sold me on it.
+
+If you were wrong what is the most likely be number two. [laughter] So, someone else is doing interesting question.
+
+</details>
+
+**Guest**: 是的。我刚才说的那些确实存在一个限制条件，而我认为那恰恰可能是我犯错的地方。没错，我刚才说必须尽可能多地去预测外部世界，但这其中没有说明的是：你的传感器是否已经采集到了你预测这个世界所必需的一切信息？
+
+我想我之前稍微触及过这一点。如果你训练一个完全基于视频的世界模型，它固然会是一个极其强大的世界模型，但它可能并不具备足够的丰富度，因为你错失了外部世界的关键维度，比如声音和触觉。因此我认为我们可能犯错的地方在于：好，我现在拥有了基于视觉的最佳世界模型，但明天可能有人推出了“视觉+触觉”的世界模型，其数据效率可能直接高出 100 倍。这是因为视觉输入的信息冗余度极高，相邻像素之间的变化其实没那么大，你即便没有完美的视觉也一样能理解世界；然而触觉或其他模态的信息密度可能会大得多。也许引入触觉预测能够让你大幅减少对视觉数据的依赖，从而用少得多的算力和少得多的数据达到同等性能。不过……
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah. So, yeah, there's a caveat in what I've said before and I think that's where I could be wrong. Right. Well, I said that you need to predict the world as much as possible, right? But what that doesn't say is that does your sensor have everything about the world that you need to predict?
+
+I think I touched on this a little bit, right? Like if you train a world model that's purely based on videos, I think it'll be a very powerful world model, but it may not be a sufficiently rich enough world model because you're missing critical aspects of the world like sound like touch, right? So I think what where we could be wrong is like okay I have the best world model on vision vision based world model but tomorrow someone else comes out with a vision plus tactile world model that just like 100x more data efficient just because you know vision is a very high information or like a highly redundant you know input because you know every other pixel they don't change that much you can see you can understand the world without perfect vision but tactile you know other modality might be much denser in information right so maybe having that predicting that would just allow you to use much less vision so you can get to the same performance with much less compute with much less data right but
+
+</details>
+
+**Host**: 但我认为你们应该能够非常轻松地适应过去。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: I think you'll be able to adapt very easy.
+
+</details>
+
+**Guest**: 不，完全没错。这还涉及到需要多少数据量的问题。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: No exactly there's also the level of how much data.
+
+</details>
+
+**Guest**: 我之所以提起这个，是因为我认为如果“视觉+触觉”世界模型，或者“视觉+触觉+音频”世界模型最终成为攻克机器人难题的终极解法，那么机器人本土公司做这个肯定会比试图转型做机器人的视频生成公司做得更好。原因在于，理解多模态感知其实极其复杂，我们从创立公司第一天起就在做这方面的积累，所以我们清楚瓶颈何在，也知道该如何将它们融合在一起。但对于那些试图把纯视频生成模型迁移到机器人动作领域的团队来说，如果视频模型本身不够用，他们根本没有让触觉系统良好运转起来的技术诀窍，而我们拥有这项储备。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Right so the reason why I bring this up is because I think if vision tactile world model or vision tactile audio whatever world model is the final thing that solves robotics then I think robotics companies will be able to do that better than video generation companies is trying to pivot to robotics. The reason is like to understand sensing is actually very complicated like we've been building that since the company started so we know the bottleneck we know how to combine them but for if you're just trying to adapt the video model to robotics action they're like you know if you were wrong if you know video model is not enough they're You don't really have the knowhow to get tactile to work very well, but we have that.
+
+</details>
+
+### 多模态传感器与纯算法的界限
+
+**Host**: 这是一个题外话，不过我觉得能很快聊完：热量感知似乎也很重要。对你来说，红外线只相当于另一种颜色，还是……？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: This is a side question, but I think it's a quick one. Uh, heat seems very important. Is infrared just another color to you or is that a—
+
+</details>
+
+**Guest**: 没错，它可以算作另一种颜色、另一种输入模态。是的。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah, it could be another could be another color, another input. Yeah.
+
+</details>
+
+**Host**: 作为模型的另一种输入。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: To the model.
+
+</details>
+
+**Guest**: 实际上它完全可以用在烹饪场景中。我就知道有公司正在利用红外线来判断食物的熟度，因为这种状态很难单纯通过 RGB 相机识别出来。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Could be used in in cooking scenario actually. Like I know companies that's using infrared to like know how cooked their food is cuz that's really hard to tell from RGB camera.
+
+</details>
+
+**Host**: 好的。针对你刚才最后那点，我提出一个非常幼稚的反驳：也许我们根本不需要搞懂硬件，Claude Code 或者 Codec 这类工具直接在虚拟环境里写写代码就能搞定。就算不去深入理解硬件底层，你也能做成很多事，当然……
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Right. My uh very naive push back on your last point is uh maybe we don't need to understand hardware cloud code or codecs can just you know v code it in uh there's a lot you can do without understanding but of course—
+
+</details>
+
+**Guest**: 那只是因为这完全不在其数据分布之内。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: It's just not in the distribution.
+
+</details>
+
+### 个人成长脉络：从 AlphaGo 到宾大 GRASP 实验室
+
+**Host**: 好的，那我想把话题稍微转向你的个人经历和背景。我们都曾就读于宾夕法尼亚大学（Penn）。我之前倒还不知道……
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Uh so so I wanted to bring it a little bit to your personal story or your background. Um we both went to Penn. I did not—
+
+</details>
+
+**Guest**: 我也是今天刚得知的。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: I just found out today.
+
+</details>
+
+**Host**: 确实如此。我个人最大的遗憾，就是当年没有参加 DARPA 无人驾驶挑战赛。如果参加了，那我可能很早就加入 Waymo 之类的团队了。而你曾在宾大的 GRASP 实验室待过，随后也在谷歌和英伟达工作过。
+
+从学术界到谷歌，再到英伟达，这几处的关注重点分别有什么不同？你体验过所有这些顶尖平台，对吧？然后显然是这些经历促使你做出决定：“去他的，我要自己单干”，对吧？毕竟你原本完全可以选择加入 OpenAI 的机器人团队。
+
+你能按时间顺序给我们讲讲这段历程吗？同时也聊聊你从每一个阶段学到的一件重要事情。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Uh yes. Yes. Uh I don't know my my big regret is I didn't join the self the DARPA challenge. Okay. Which uh and then I could have been like early Waymo or something. Um you were at GRASP and then you you've also worked at uh Google and Nvidia.
+
+What are the different focuses of let's say academia versus Google versus Nvidia? You've seen all these places, right? And then like that obviously caused you to say like screw all that. I'm going to do my own thing, right? You could have joined OpenAI robotics.
+
+Yeah. Uh so can you just take us through chronologically but also like one thing you learned from each.
+
+</details>
+
+**Guest**: 好的。如果按时间先后来说，也许先聊聊我最初是如何接触并走入 AI 领域的会很有帮助。小时候我曾在中国和日本生活过，从小就一直练习围棋——就是 AlphaGo 里的那个围棋。当 AlphaGo 横空出世时，我正好在上高三，整个人被彻底震撼了。因为我已经下了很多年围棋，深知这个游戏是何等复杂。在 AlphaGo 问世之前，大家都认为围棋是 AI 永远不可能攻克的棋类项目，它的搜索空间比全世界所有原子的总数还要庞大，人类怎么可能在这样的空间里搜索到解法？然而，强化学习（RL）硬生生把它给攻克了。
+
+我认为那正是我最初投身 AI 的契机。我当时对能够自主进化的模型、系统或智能体产生了极其浓厚的兴趣。因此当我来到宾大攻读博士学位时，我一心只想专注于强化学习。当时我有两位共同导师，其中一位当时更偏向机器人方向，他曾在伯克利机器人实验室做过博士后。正因如此，我在宾大开始涉足机器人研究。大家都知道宾大有 GRASP 实验室，堪称全球研究机器人最好的殿堂之一。这就是我博士期间投身于机器人强化学习的渊源。
+
+在那之后，我开展了大量研究，探讨如何将强化学习与人类数据结合起来，以及如何以严谨的理论方式构建强化学习。随后我去了英伟达，当时正好碰上 GPT-4 发布。那时我们非常着迷于去攻克转笔（pen spinning）这项任务。我也不知道为什么，就像……
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah. So chronologically, yeah, maybe it's useful to talk about how I got into AI in the beginning, right? So, uh, as a kid, so I spent time in Japan and China. I grew up playing Go, you know, the Go in AlphaGo. So when AlphaGo came out, I was a senior in high school and I was mind blown because I've been playing this game for many, many years. It's so complicated. Like I think before AlphaGo came out, people were like, "Okay, Go is one of the game that AI will never solve. The search space is like larger than the total number of atoms in the world. How could you possibly search for solutions in that?" Then like you know RL, reinforcement learning, just like cracked it, right? And I think that was how I got into AI initially. Like I was just really interested in like models or systems, agents that can self-improve, right?
+
+So when I got to Penn as a PhD student I just really wanted to work on reinforcement learning so I'm co-advised, both my advisers were interested in—at the time one of my adviser was more in robotics, he did a postdoc at Berkeley robotics lab. So that's how I got into robots. At Penn, you know, we have GRASP Lab, I think one of the best places to do robotics, and so that's how I got into doing RL for robotics in my PhD. And then, yeah, I did a bunch of research thinking about how to connect reinforcement learning with human data, how to do reinforcement learning theory in a very rigorous way. And then I went to Nvidia. That's when GPT-4 came out. At the time we were very interested in just solving pen spinning task. I don't know why, like...
+
+</details>
+
+**Host**: 那是灵巧手极限操作的代表，对吧？我的意思是，大家能解魔方，然后紧接着……
+
+<details>
+<summary>Original English</summary>
+
+**Host**: It's the dexterity limit, right? I mean you can solve Rubik's Cubes and then—
+
+</details>
+
+**Guest**: 当时我正……
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: ...time I was—
+
+</details>
+
+<!-- chunk 9/11 -->
+
+### 从 Eureka 到现实世界：创办 Physical Intelligence (Pi)
+
+**Lirui Wang**: 当时我和 Jim Fan（范麟熙）一起工作，大家可能也知道他。我们当时想：“好吧，让我们来尝试用灵巧手转笔。”最初的想法是直接从人类视频中学习这项技能。
+
+<details>
+<summary>Original English</summary>
+
+**Lirui Wang**: ...working with, uh, Jim Fan, which you guys probably also know. Like, yeah, we were just like, "Okay, let's try to do dexterous pen spinning." The initial idea was like learning it from human videos.
+
+</details>
+
+**Host**: 对，你们试图通过观察人类是如何操作的来进行学习。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Right, we were trying to watch humans do it.
+
+</details>
+
+**Lirui Wang**: 但随后我意识到，今天我们根本就没有能够转铅笔的灵巧手硬件，那么即使从人类视频学习的方法完全行得通，我又该如何去评测这个算法呢？于是我说，好，我们必须先在模拟仿真环境中尝试。然而，一旦我尝试为带有笔的机械手搭建仿真环境，我立刻就发现了问题所在。问题在于，如果让我人工去设计这个仿真环境，要写出一个让强化学习能够解决转笔任务的奖励函数（reward function），这几乎是不可能的。我不可能凭空想出所有必要的奖励项，来引导强化学习学出正确的行为。
+
+然后我就在想，如果让一个能够编写代码的模型来做这件事会怎样？这就是 Eureka 项目的由来了。可以说，在我看来，我们制造出了第一个在仿真中实现递归自我改进的机器人智能体（recursive self-improving robotic agent），因为我们确实用它解决了一项前所未有的新任务。这也让我看到了利用语言模型、利用代码模型来真正加速机器人技术发展的巨大潜力。
+
+随后我去了 Google DeepMind，因为在当时，哪怕到今天，他们都拥有最前沿的大模型之一——Gemini。所以我一直在探索如何将 Gemini 应用于机器人领域。
+
+<details>
+<summary>Original English</summary>
+
+**Lirui Wang**: But then I realized, okay, today we don't have a dexterous hand that can spin pencil at all, so how would I even be able to evaluate the algorithm even if learning from human worked at all? So I said, okay, we need to first try this in simulation. Then as soon as I try to set up a simulated environment for a robot hand with a pen, I immediately saw what the issue is. The issue is like, if I had to come up with this simulation environment, the reward function for reinforcement learning to solve pen spinning, that's impossible. Like I wouldn't be able to come up with all the terms that you need to get RL to learn the right behavior.
+
+And then I was just thinking, what if a model that can write code can do that? That's what became the Eureka project, right? We basically like, in my opinion, we had the first recursive self-improving robotic agent in simulation because we really used that to solve a new task that no one has demonstrated before. And that allowed me to see the potential of using language model, using coding models to really accelerate robotics.
+
+So then I went to Google DeepMind because at the time, you know, I mean even today, they have one of the frontier models in Gemini, right? So I was looking at how to use Gemini for robotics.
+
+</details>
+
+**Lirui Wang**: 但最终我意识到，做学术研究固然非常有趣，但在我脑海深处始终盘旋着一个疑问：“所有这些真的有意义吗？”你知道，当你在实验室里做这类研究时，比如你刚才问我怎么能想出那么多既有趣又好玩的任务，本质上你就是在自己出题自己做评测，自己批改自己的作业。我想要做一些更真实、更切合实际的事情。我想要做出能真正被世界上数百万人所使用的东西。我觉得2024年——我们在2024年底创立了公司——正是把其中一些技术真正推向现实世界的绝佳时机。这就是为什么我和 Karol Hausman、Lachy Groom 等人一起创办了公司。转眼两年过去了，我们打造了自己的平台、自己的模型，我们的机器人也在运转。你们可以亲自去看看，去体验一下，这一路走来真是一段不可思议的历程。
+
+而依然让我感到无比兴奋的是，有些在当初创办公司时被我暂时搁置的想法——因为你知道，创办一家公司必须非常务实，我觉得仿真技术在2024年时还没完全准备好——但现在随着最新的前沿大模型问世，以及我们在内部所观察到的进展，情况可能正在发生改变，这真的令人非常振奋。
+
+<details>
+<summary>Original English</summary>
+
+**Lirui Wang**: But eventually I realized, like I had a lot of fun doing academic research, but there was always a question in the back of my mind, like, does any of this matter? You know, like when you're working on this kind of thing in the lab, like, you know, you ask me how do we come up with so many interesting, fun tasks, you're basically doing your own eval, you're grading your own homework. Like I wanted something more real. I wanted something that could actually be used by millions of people in the world. And I felt 2024 was when we started—like end of 2024—that was the right time that we can take some of these technology to actually putting them out in the real world. So that's why I started the company with Karol, Lachy in New York, and fast forward two years, we built our platform, our model, our robots are in downtown. Go check it out and go eat. Yeah, go eat. It's been a journey.
+
+And, but what still gets me really excited is, you know, like some of—a lot of the ideas that I temporarily abandoned when we started because, you know, to build a company have to be very practical. Like I think simulation wasn't ready in 2024, but now with, you know, like the new frontier models and what we're seeing internally, like this might change. And that's very exciting.
+
+</details>
+
+### 公司文化与双轮驱动模式
+
+**Host**: 是的。那我们接着来聊聊公司文化吧。你在打造这家公司时秉持着哪些原则？显然你负责着公司的科学研究方向与技术议程。我们接触到你们的工程师时，能明显感觉到他们非常专注投入，拥有极其强烈的主人翁意识与驱动力。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah. And so then also let's talk about company culture. Yeah. What principles you're building with the company with? Obviously you're responsible for the science and the research agenda. And it just seems like when we meet the engineers, they're very engaged and they have a lot of ownership. They have a lot of motivations.
+
+</details>
+
+**Speaker B**: 我得说，看到大家自发去做的业余项目数量之多，真的非常有趣。我们看到的不少演示项目，其实仅仅是因为负责开发的工程师觉得“这看起来挺有意思，不妨顺手做一下”。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: I'll say it's interesting to see how many side projects people just work on. So some of the demos we've seen, it's just the engineers that work on it were like, "Yeah, this seems fun, might as well do it." Yeah.
+
+</details>
+
+**Host**: 说到你刚才提到的好玩评测，就在摄像机后面两英尺远的地方……
+
+<details>
+<summary>Original English</summary>
+
+**Host**: To your point on fun evals, right here like 2 feet behind the camera...
+
+</details>
+
+**Lirui Wang**: 那个现在可不能讲。
+
+<details>
+<summary>Original English</summary>
+
+**Lirui Wang**: Can't talk about that.
+
+</details>
+
+**Host**: 不，我的意思是，那个评测项目就是拿橡皮筋把几支荧光笔绑在一起，对吧？大家会想，到底是谁想出来的点子，觉得“没错，我们需要测试给荧光笔套橡皮筋”？但这就是好玩的文具测试。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: No, I mean the thing is just the eval is just there's highlighters—highlighters being rubber-banded together, right? It's like who comes up with, "Ah yes, we need to test putting rubber bands on highlighters." It's just stationary...
+
+</details>
+
+**Speaker B**: 很有趣的内容。这里的大家都特别有创意，这是一个非常棒的空间。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: ...fun stuff. People are very, you know, creative here. It's a beautiful space.
+
+</details>
+
+**Lirui Wang**: 是的。关于公司文化，我们首先来谈谈我们是如何运营这家公司的。我们把自己的终极定位看作是一家“研究+产品”并重的公司。这有点类似于 OpenAI，你既要做最前沿的科学探索，但最终所有的前沿研究成果都会转化并沉淀到类似 Codex、ChatGPT 这样的具体产品中。我们也是这样看待自身发展的。我们来这里并不是为了随心所欲地去探索当下碰巧感兴趣的、漫无边际的方向。我们始终是以产品为导向的——比如我们希望将机器人和通用平台部署到新的客户现场。
+
+那么为了实现这个目标，我们需要攻克哪些硬核技术难题呢？我们必须解决泛化能力（generalization）；我们必须解决全身协同控制（whole-body control）；我们必须解决如何让系统快速适应新环境；我们必须解决如何让机器人准确理解并遵循人类语言指令；我们还必须攻克灵巧操作（dexterity）的难题。
+
+因此，一旦这些顶层需要攻坚的目标界定得非常清晰，我们的工程师又非常优秀聪明，他们就会主动去构建具体的任务实例，去创造能够对这些核心能力进行全面压力测试的严苛任务。比如抓取饮料的任务，本质上就是我们测试模型语言指令跟随能力的一种手段——你只需下达指令说出你想要什么，如果模型能够理解意图并严格遵循指令，它就应该能够完成操作。
+
+所以我们的管理思路是：在最高层面上，我们负责梳理并确立必须要攻克的核心难题；然后，团队内部会涌现出大量的自下而上的项目，真正驱动执行来把难题逐个击破。只要你招募到了对的人，而且这里的每个人都对机器人怀有极大的热情——很多人在这个领域深耕已久，打心底里热爱它——我们只需营造出一个让创新自然发生的土壤和文化。在这里工作确实是一件充满乐趣的事情。
+
+<details>
+<summary>Original English</summary>
+
+**Lirui Wang**: Yeah. I think culture. Yeah. So let's first talk about, you know, how we run a company, right? Like we think of ourselves as like a—eventually like a research plus product company. It's kind of like OpenAI, where you do frontier research, but eventually all of them make their way into Codex, to ChatGPT. That's how we think about it too. We're not here to just do open-ended, like whatever thing that interests us at the time. We're always product-driven. Like we want to deploy our robots, our platform to a new customer. What are the technical problems we have to solve, right? We have to solve generalization. We have to solve whole body control. We have to solve how to adapt quickly. We have to solve how to make the robots follow language. We have to solve dexterity.
+
+So once all those problems are very clear, then like, I mean, our engineers are very capable, they're very smart. So they just create instances of the task. They create tasks that would stress test those capabilities, right? Like the grabbing and drink task is just how we test language following, right? You can just specify what you want. If the model follows intent, follows instruction, you should be able to do it.
+
+So that's how we think about like, at the top level we identify what are the things we have to solve. Then we have a lot of bottoms-up project to like actually drive execution to solve them. And you know, you hire the right people, and everyone here is super passionate about robots. You know, they've been doing this for a long time. They love it, and we just create a culture where it just naturally happens. And it's a really fun place to work.
+
+</details>
+
+### 团队架构与创始人视角的蜕变
+
+**Host**: 公司在技术研究、软件开发与硬件工程之间的人员比例大致是怎样的？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: What's the split between like technical research software versus hardware side of the company?
+
+</details>
+
+**Lirui Wang**: 我们最近扩张非常迅速，所以我手头没有完全精确的数字。但我可以说，硬件团队大概占到整体的 30% 到 40% 左右。这是因为硬件研发天然需要更多的人手投入。然后，我们有大约 10 个人专注于大模型研发，其余还有软件工程师、机器人系统工程师，同时在业务拓展端我们也拥有许多非常优秀的人才。
+
+你知道，创办一家机器人公司最有趣的地方在于，你能看到这世上的一切——所有在阳光下可能带来帮助的领域与知识，最终都会派上用场。因此你能够获得极大的视野拓展，与来自各种不同背景、但都对机器人充满热忱的人一起共事。
+
+对于我个人而言，作为一名创始人，这段经历简直让我大开眼界。以前我在实验室当研究员或者读博士时，每天交流的对象全部都是学术圈的研究人员，那固然很好，我也非常享受那种纯粹的研究生活，而且现在我依然每天在做这些研究。但现在的不同之处在于，我还能向来自各行各业、拥有完全不同人生经历的人学习。比如我们负责数据采集的部分同事，他们之前完全没有机器人背景，可能在做零售或者从事其他完全不相干的工作，但来到这里之后，他们也接受了系统严谨的培训，在机器人数据与操作方面变得非常专业。看到这样的转变过程，我觉得非常不可思议。
+
+我也始终认为自己一直处于学习的状态中。即便在机器人领域，我也觉得自己永远是一个初学者。我现在的学习节奏和吸收的信息量，比以往任何时候都要多。尽管从身份上看，我不再是一个学生，而是在这里掌舵一家公司、管理很多复杂事务，但我依然觉得每天的认知都在飞速增长。
+
+<details>
+<summary>Original English</summary>
+
+**Lirui Wang**: Yeah, you know, we recently grew so much. So I don't have the perfect number, but I would say on the hardware side we have—I would say probably like 30%, 40% of hardware, just because hardware you need a lot more people. And then like, you know, we have like around 10 people working on models, then we have like software engineers, robotics engineer. We have a lot of very talented people on the business side.
+
+You know, the most fun thing about building a robotics company is like you see everything, you know, everything under the sun that could possibly be helpful will be helpful, right? And so you just get so much exposure working with so many different people from many different backgrounds who are all very passionate about robots.
+
+And I think it just—it's just been really eye-opening for me as a founder because when I was a researcher at a lab or like a PhD student, you know, I was talking to researchers every day and that was great. That was really good. I still get to do that every day. But now I also get to learn like just from so many different people from different walks of life. Like some of our people who collect data, they had no robotics experience. They were working retail, working in some other jobs, and they came here, you know, they also became very well trained in robotics. And I think that's just pretty amazing things—amazing to see.
+
+And I think of myself as like—I'm still learning, you know. I think of myself as just always learning in the robotic space, and I haven't learned so much as I am now. You know, even though, you know, you think about me now, I'm not a student anymore. I'm here like running a company, managing a lot of things, but I still feel like the day-to-day learning is like just so much.
+
+</details>
+
+### 未来愿景与命名背后的渊源
+
+**Host**: 在结束之前，能否聊聊公司的未来走向？展望未来两年到五年，你们的宏大愿景是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: And then just to close off, where is the company going? Two years, five years, what's the vision?
+
+</details>
+
+**Lirui Wang**: 我们的最高使命和核心愿景，是真正把机器人与智能带入物理实体世界。具体来说，就是真正看到我们的机器人被部署到数以千计的客户那里，进而推动数以百万计的智能机器人走入实际应用，这就是我们全力以赴想要达成的目标。
+
+<details>
+<summary>Original English</summary>
+
+**Lirui Wang**: Yeah, I think our vision is to truly—the high-level mission is truly bring, you know, robots and intelligence right into the physical world. Like actually that means like actually seeing our robots deployed like thousands of customers, even more, millions of robots, that's what we want to get to.
+
+</details>
+
+**Host**: 顺便问一下，公司名字有什么特殊的来源吗？是来自于 Dynamic（动态）？这背后有什么故事吗？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: What's the name from? Dynamic? Is there a story?
+
+</details>
+
+**Lirui Wang**: 是的，这里面其实有很多渊源。公司的名字是我起的。当时内部确实有过很多激烈的讨论和不同的备选方案……
+
+<details>
+<summary>Original English</summary>
+
+**Lirui Wang**: Yeah, there's many stories. So I named it. There was a lot of...
+
+</details>
+
+**Host**: 把这功劳揽下来！（笑声）
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Take the credit. [laughter]
+
+</details>
+
+**Lirui Wang**: 内部当时有很多不同选项。但这个名字的真正诞生主要源于两个契机：其一，图灵奖得主理查德·萨顿（Richard Sutton）——他是强化学习领域的泰斗先驱——早在很多很多年前就写过一篇著名的论文，提出了“Dyna”架构。这个架构的核心概念，本质上就是一个在世界模型（world model）中进行自我进化的智能体。而且我觉得，即使在我们刚创办公司的那会儿，我们甚至还没有……
+
+<details>
+<summary>Original English</summary>
+
+**Lirui Wang**: ...internal different options. But how the name came to be was there are two things. One is, so Turing Award winner Richard Sutton, who's like the pioneer reinforcement, wrote a paper called Dyna many, many, many years ago. It's about basically an agent that self-improves in a world model, and I felt even when we started the company like we weren't...
+
+</details>
+
+<!-- chunk 10/11 -->
+
+### 命名灵感与向 Richard Sutton 致敬
+
+**受访者**：……做世界模型，但我觉得这就是机器人技术最终被攻克的方式。而现在，我们的技术方向也正在向这个目标收敛，所以我觉得这是一个非常绝妙的灵感来源。另外，因为我之前做过强化学习方向的研究，所以对 Richard（Sutton）怀有崇高的敬意。第二点则稍微带点个人色彩，我是在日本长大的，我出生的那一年正好有一部特摄动画片——不知道你们有没有看过《奥特曼》。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**：...doing world model yet, but I felt that's how robotics will get solved. And now our technology direction is like converging to that, so I felt that was a really neat inspiration. Also because I worked in reinforcement learning, I have a lot of respect for Richard. The second thing is that it's a bit more personal, like I grew up in Japan and the year I was born there was just like a cartoon show. I don't know if you guys have seen like Ultra Man.
+
+</details>
+
+**主持人**：是的，当然看过。
+
+<details>
+<summary>Original English</summary>
+
+**Host**：Yeah, of course.
+
+</details>
+
+**受访者**：对，那一年的奥特曼叫作戴拿（Dyna）。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**：Yeah, the Ultra Man that year was called Dyna.
+
+</details>
+
+**主持人**：哦！
+
+<details>
+<summary>Original English</summary>
+
+**Host**：Oh,
+
+</details>
+
+**受访者**：是的。所以，这是个非常微妙的双关，知道的人不多，但我想现在大家都要知道了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**：Yeah. So, yeah, it's a very subtle thing. Not people know, but I guess now everyone will.
+
+</details>
+
+**主持人**：哈哈，团队里的成员也是刚知道吧。
+
+<details>
+<summary>Original English</summary>
+
+**Host**：Yeah, the team is finding out too.
+
+</details>
+
+**受访者**：对。[笑]
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**：Yeah. [laughter]
+
+</details>
+
+**主持人**：不过我觉得 Richard 会很欣赏这个的。不知道你有没有跟他聊过？
+
+<details>
+<summary>Original English</summary>
+
+**Host**：But like I think Richard would appreciate. I don't know if you ever talked to him, but...
+
+</details>
+
+**受访者**：还没有，我只在强化学习学术会议上见过他。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**：No, I've seen him at RL conferences.
+
+</details>
+
+**主持人**：你应该直接跟他说：“嘿，我们这家公司……”
+
+<details>
+<summary>Original English</summary>
+
+**Host**：You should just be like, "Hey, this company..."
+
+</details>
+
+**受访者**：好啊，我会邀请他的，请他来看看。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**：Yeah, I'll invite him. "Come to you."
+
+</details>
+
+**主持人**：大家都因为《苦涩的教训》（The Bitter Lesson）而熟知 Richard，但你看，这同样也是苦涩的教训。
+
+<details>
+<summary>Original English</summary>
+
+**Host**：Everyone knows Richard for Bitter Lesson, but you know. Yeah. Yeah. Also Bitter Lesson.
+
+</details>
+
+**受访者**：是的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**：Yeah.
+
+</details>
+
+**主持人**：没错。
+
+<details>
+<summary>Original English</summary>
+
+**Host**：Yeah.
+
+</details>
+
+### 行业呼吁与现场探访的意义
+
+**主持人**：好的。最后你还有什么总结想法，或者呼吁大家行动的建议吗？
+
+<details>
+<summary>Original English</summary>
+
+**Host**：Okay. Any parting thoughts or calls to action?
+
+</details>
+
+**受访者**：呼吁行动，是的。我觉得就整个行业而言，机器人领域目前依然非常以“Demo 演示”为导向。我自己过去在实验室里也做过很多演示，甚至在这里我们也必须展示一些 Demo。但我认为我们需要更多真正以使命为导向的人，愿意不惜一切代价将机器人落地部署，让机器人基座模型真正与硬件深度融合，并切实在客户现场运行起来。我认为我们在这方面是先驱，我也希望在这个领域看到更多探索。对于正在收看的观众来说，如果你被这一使命所感召，如果解决当今最棘手的问题能够成为你每天清晨醒来的动力，并且你渴望参与贡献，我们一直在招贤纳士，非常期待大家加入。我觉得……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**：Calls to action. Yeah. I think I do feel like as an industry robotics is still very demo oriented. Like I have done a lot of demos in the past in my lab. You know, even here like we had to show some demos. I think we need more people that's truly mission focused on doing whatever it takes to get robots deployed, get robotic foundation models truly integrated with hardware and seeing them at real customer sites. I think we are a pioneer on this regard and I want to see more in this field. And for the audiences watching, if this mission inspires you, if you know solving the hardest problems today is what makes you wake up every day and you want to contribute, you know we're always hiring, and yeah, looking forward to that. But I think just...
+
+</details>
+
+**主持人**：目前是在湾区，还是其他地方也有？
+
+<details>
+<summary>Original English</summary>
+
+**Host**：Bay Area anywhere else?
+
+</details>
+
+**受访者**：目前主要在湾区，但随着公司不断发展，未来绝不排除开设其他地点的可能。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**：Yes, just Bay Area today, but you know, as company grows, never say never to other locations.
+
+</details>
+
+**受访者**：是的，这就是我想说的，我希望在这个世界上看到更多机器人。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**：Yeah, but that's what I want to say, and I wanted to see more robots in the world.
+
+</details>
+
+**主持人**：太棒了。祝贺你们取得的所有成果！我是说，仅仅两年时间就取得这样的进展，真是令人难以置信。
+
+<details>
+<summary>Original English</summary>
+
+**Host**：Yeah. Cool. Congrats on everything. I mean this is incredible progress for two years.
+
+</details>
+
+**受访者**：确实非常惊人。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**：Yeah, amazing.
+
+</details>
+
+**受访者**：真的非常感谢。感谢你们前来拜访，希望你们觉得这一趟很有趣。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**：Yeah, I really appreciate it. Thank you for visiting us. I hope it's been fun, and...
+
+</details>
+
+**主持人**：我想说，我完全不后悔亲自跑来实地录制。
+
+<details>
+<summary>Original English</summary>
+
+**Host**：Yeah, I would say like, yeah, I don't regret doing this onsite.
+
+</details>
+
+**主持人**：平时我们很多节目都是在演播室里录的。
+
+<details>
+<summary>Original English</summary>
+
+**Host**：Yeah, we do a lot of in our studio.
+
+</details>
+
+**受访者**：是的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**：Yeah.
+
+</details>
+
+**主持人**：但这次实地探访绝对超值。
+
+<details>
+<summary>Original English</summary>
+
+**Host**：Like this was worth it.
+
+</details>
+
+**受访者**：是的，对于机器人项目，必须亲自到现场看。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**：Yeah. Yeah. I think for robotics got to do it on site. It just...
+
+</details>
+
+**主持人**：对于正在收听音频的听众，大家一定要去看看视频版本，我们拍摄了非常精彩的现场花絮 B-roll。
+
+<details>
+<summary>Original English</summary>
+
+**Host**：For people listening in, you know, watch the video version, and we have fun B-roll.
+
+</details>
+
+### Dyna 2.1 全流程酒店洗衣演示
+
+**受访者**：这就是 Dyna 2.1，这是我们全新的硬件平台，它围绕世界动作模型 Dyno 2 构建了一个具身智能体控制架构。Dyna 2.1 能够实现的能力，是在真实物理工业场景中将一整套端到端工作流完全自动化。在这里我们所展示的，是在一家酒店的真实洗衣房里执行端到端的洗衣任务。我身后的这几位是该项目的研究人员，他们将为大家带来一段非常精彩的快速演示，并讲解实现这一切背后的技术细节。接下来把时间交给 George。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**：This is Dina 2.1, our brand new hardware with a physical agentic harness around the world action model Dino 2. So what Dina 2.1 can do is to automate a entire end to end workflow in a real physical industry. So here what we're demonstrating is end to end laundry task in a real laundry room in a hotel. And behind me these are the researchers for work project. They're going to show you something really cool, a quick demo, and going to explain some of the technical details behind what made this possible. So, I'll pass it to George.
+
+</details>
+
+**George**：好的。我来展示整套洗衣工作流中的几个关键步骤。我现在启动机器人，这项任务是将毛巾从洗衣机转移到烘干机中。大家一起来看。这项任务实际上极其艰难，因为如你所见，机器人必须精细调整自己的全身姿态，把机械臂探进去抓取所有毛巾，同时绝对不能撞到舱门，对吧？但你看这里，它的操作非常灵巧，而且运动极其流畅，因为控制身体每个关节的完全是同一个单一模型。因此它不存在那种把规划与执行割裂开来的传统架构，而那种割裂往往会导致运动不够平滑。
+
+<details>
+<summary>Original English</summary>
+
+**George**：All right. I'm just going to show some quick steps in the entire laundry workflow. Just going to start the robot. This will be the task of transferring towels from the washer into the dryer. Let's take a look. Yeah. So, this is actually an extremely hard task because you saw the robot has to like really maneuver its body to stick the arms in to grab all the towels without colliding with the doors, right? But you see right here, it actually has to be very dextrous and the motion is very smooth because it's a single model that's controlling every single joint in the body. So there isn't like a classical planning versus acting separation that makes the motion less smooth,
+
+</details>
+
+**主持人**：对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Host**：Right?
+
+</details>
+
+**George**：好的，太棒了。我们也可以——你想模拟意外情况吗？好的，我们还可以模拟机器人察觉毛巾掉落的情景。我现在把一条毛巾扔在地上，我们来看看它是如何察觉毛巾掉落并把它捡起来的。当它把手头的毛巾放进烘干机后，我们来看看——它同时还意识到这条掉在地上的毛巾变脏了，所以它会走过去把这条毛巾扔进脏衣篓里。
+
+<details>
+<summary>Original English</summary>
+
+**George**：Okay, cool. We can also Do you want to simulate it? Okay, we can also simulate the robot realizing a drop towel. So I'm just going to drop my towel here. We'll see that how it is able to see that the towel is dropped and then pick it up. So after it's done putting the towel in the dryer, we'll see and it also realizes that this towel is now dirty. So it goes and puts the towel in the dirty basket.
+
+</details>
+
+**受访者**：我认为这是一个绝佳的范例，充分展示了我们为什么需要打造这样一台全身协同的机器人。这样它就能够触及工作空间中的各个角落，能够完成人类工人能做的一切事情。接下来，它会关上烘干机的门并启动机器。而且它们还能根据触觉感知去推理应该设置哪种烘干模式。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**：I think this is a perfect case to showcase why we need to build a whole body robot like this, right? So it can access different parts all of the corners of the workspace that it can do everything that a human worker can do. Next, it will close the dryer door and turn it on. And they can also reason based on the tactile in terms of what drying mode to put in.
+
+</details>
+
+**主持人**：对。对我来说最震撼的部分其实是转动旋钮这个动作，就像真正的人类那样去操作一台机器。是的，这里也许值得拍个特写镜头，确认选对了模式，然后按下按钮启动烘干机，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Host**：Yeah. The most impressive part to me is actually this part of turning the knob, you know, like actually operating a machine like a human would. And yeah, maybe it's worth getting a close shot, right? and making sure it's on the right mode and pressing a button to start the dryer. Right?
+
+</details>
+
+**George**：有一点也很关键，那就是要意识到这是数字化显示屏。所以系统确实需要结合更多的上下文信息来判断，因为在用相机拍摄画面时，LED 屏幕是会闪烁的。正因如此，机器人懂得如何启动，并能确认烘干机是否已经真正启动，这一点非常关键，真的特别酷。
+
+<details>
+<summary>Original English</summary>
+
+**George**：It's also important to realize that this is digital frames. So, you really need more context to realize because when you capture an image, the LED screen also blinks. So, that's why it's important to realize that the robot knows how to start and realizing when the dryer has started. So, it's pretty cool.
+
+</details>
+
+**受访者**：对。这仅仅是整个洗衣工作流中的一个环节。周二我们将正式发布整个端到端完整工作流的视频。大家可以想象，整套工作流耗时相当长，所以……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**：Yeah. So, this is just one part of the whole laundry workflow. On Tuesday, we're going to drop the entire workflow. The whole workflow will take quite some time as you can imagine. So you know for this...
+
+</details>
+
+**受访者**：没错，包括折叠、叠放、搬运篮子等所有环节，对吧？Dyna 2.1 的核心意义，在于让机器人有史以来第一次像工作场所中的一名完整全职员工一样，把所有事情一手包办。根本不需要人类或者其他机器给它喂物料，或者帮它完成任务中的某个中间步骤。它会独立接管整个任务并端到端完成。我认为这是一项重大突破，因为在传统认知里我们总把机器人当成死板的机器，但这是我们第一次真正见证机器人与人类并肩工作，从而切实提升整个现实物理世界的生产力。所以我们对此感到无比激动。请继续。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**：Yeah, folding, stacking, transferring basket, everything, right? Really like Dina 2.1 is about like a robot for the first time becoming like a whole employee at a workplace doing everything. There's no need for human or for any other machine to feed it items or help it with certain step of the task. It's just going to take the whole thing and do it end to end. And I think that's a big breakthrough because historically we think about robots as machine, right? But this is for the first time like I think we can really see like working alongside humans to really like improve and increase productivity, physical productivity in the world. Yeah. So we're super excited about it. Yeah. Go ahead.
+
+</details>
+
+**George**：这将是目前持续时间最长的高灵巧度全身协同精细操作（dextrous manipulation）演示。对于我们所完成的这项工作，我们感到非常自豪，真的非常令人兴奋。
+
+<details>
+<summary>Original English</summary>
+
+**George**：It will be the longest local dextrous manipulation demo. So quite proud of the work that we have done and yeah, exciting.
+
+</details>
+
+### 自主取饮品与双模型分层架构
+
+**受访者**：好的。这是我们基于 Dyna 2.1 准备的另一个演示。在这个演示中，搭载我们硬件的具身智能体将根据你在屏幕上选取的饮品，为你去拿取相应的饮料。负责该项目的研究员们将为大家进行现场演示。在这次演示中，他们选择了香草奶昔，机器人此时已经接收到了指令。接下来它将走向冰箱，调用控制全身的 Dyno 2 世界动作模型去为你准确拿取饮品并取出来。这里非常有趣的一点是，它充分展现了智能体（agent）的核心能力：模型不仅仅是在机械地执行动作，还能非常忠实地遵循自然语言指令，并且能自主导航返回到你的面前来交付订单。好的，它拿到了正确的饮品，现在正贴心地把冰箱门关好。接下来它开始切换模式……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**：Yeah. So here's another demo we put using Dynet 2.1. So here the physical agent with our hardware is going to grab a drink for you based on whatever drink you select on this screen. So our researchers who led the project will just give you a quick demo. So in this case they selected vanilla shake drink and the robot has received a command. So, it's going to go to the fridge and then now use the world action model Dino 2 that's controlling the whole robot to get the right drink for you and then retrieve it. And what's really interesting here is this is really to showcase the agent capability. So, the model is not just like doing actions, it's also following language commands very faithfully and can also navigate back to you to fulfill the order. So, all right. So, got the right drink. It's going to nicely close the door, and I think it's switching...
+
+</details>
+
+**研究员**：噢，是的，步态切换。
+
+<details>
+<summary>Original English</summary>
+
+**Researcher**：Oh, yes. Gaits.
+
+</details>
+
+**受访者**：是的，切换运行模式，因为接下来是导航环节，导航任务我们可以直接交由另一个高层推理模型来完成，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**：Yeah. Switching mode because here is the navigation part which we can just have another high-level reasoning model to do, right? Also.
+
+</details>
+
+**主持人**：明白了。
+
+<details>
+<summary>Original English</summary>
+
+**Host**：Yeah.
+
+</details>
+
+**受访者**：是的。关于正在发生的事情，你们有什么想补充的吗？有什么酷炫的亮点想向大家指出来的？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**：Yeah. Anything you guys want to add on what's happening? Anything cool you want to point out?
+
+</details>
+
+**研究员**：好的。这个系统其实包含了一个推理层和一个动作层，也就是一套双模型架构。在底层，我们向推理模型输入自然语言提示，基本上就是几句话组成的指令。接着推理模型会一步一步规划出需要执行的流程：首先走向冰箱并抓取物品，然后返回，并按顺序将其递交给人类，同时对整个执行过程进行全程监督。而底层的动作模型则专门负责执行具体的操作和高灵巧度任务。
+
+<details>
+<summary>Original English</summary>
+
+**Researcher**：Yeah. So, this one has a reasoning layer and an action layer. So, it's a two model architecture. Underneath we are sending language prompts, basically a few sentence instruction to the reasoning model. And then the reasoning model is planning out what it needs to step by step: first go into the fridge and grab something and then come back and then hand it off to a human in sequence and oversee the whole execution. And the lower level action model is responsible for performing the manipulation and the dextrous task.
+
+</details>
+
+**研究员**：是的。在动作模型这一层，它还需要具备可引导性（steerable）。也就是说，你需要告诉它在六种不同的饮料中具体去抓取哪一种，然后我们的……
+
+<details>
+<summary>Original English</summary>
+
+**Researcher**：Yeah. On the action model side, it also needs to be steerable. So you're telling it which of the six drinks you want to pick up, and then like our the...
+
+</details>
+
+<!-- chunk 11/11 -->
+
+### 视频动作模型与灵巧操作控制
+
+**Chad**：视频动作模型有助于理解你的意图并在脑海中构建画面。你可以想象一下，当这个机器人去拿一杯饮料时会是什么样子。这有助于它真正遵循你的指令去执行。
+
+此外，这其中还涉及一些时机把握的细节。机器人需要准确识别出你何时已经接过了饮料，并且恰好在那个时间点松手。你肯定不希望出现误判，更不想把饮料摔在地上。因此，要让这样一个演示顺利运作，必须在各种细节上格外小心。
+
+<details>
+<summary>Original English</summary>
+
+**Chad**: Video action model sort of helps with imagining, like understanding your intent. So you can imagine like what does it look like when this robot grabs a drink. And that sort of helps it really follow what you tell it to do.
+
+And then there's also some timing aspects to this. It needs to recognize when you've grabbed the drink and then release at exactly that point. And you don't want false positives. You don't want to drop a drink on the ground. So, there's all sorts of little things you just have to be careful about to get a demo like this working.
+
+</details>
+
+**Speaker B**：是的。该模型非常擅长这种灵巧的操作，而且极其稳健。正如 Chad 刚才所说，它能够准确识别，并在心中勾勒出精准抓取那杯正确饮料时的样子，随后付诸执行。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. And the model is quite good at this kind of dexterity and very robust. So, like Chad was saying, it's able to just recognize and kind of imagine what it's going to look like if it grabs the right drink and then execute.
+
+</details>
